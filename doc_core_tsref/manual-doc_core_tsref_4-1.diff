@@ -1,0 +1,854 @@
+--- manual-doc_core_tsref_4-0.txt	2007-02-21 04:27:50.000000000 +0100
++++ manual-doc_core_tsref_4-1.txt	2007-02-21 04:27:50.000000000 +0100
+@@ -6,7 +6,7 @@
+ 
+ TSref
+ Extension Key: doc_core_tsref
+-Copyright 2000-2006, kasperYYYY@typo3.com, <kasperYYYY@typo3.com>
++Copyright 2000-2007, kasperYYYY@typo3.com, <kasperYYYY@typo3.com>
+ 
+ This document is published under the Open Content License
+ available from http://www.opencontent.org/opl.shtml
+@@ -15,7 +15,7 @@
+ - a GNU/GPL CMS/Framework available from www.typo3.com
+ 
+ 
+-Revised for TYPO3 3.8
++Revised for TYPO3 4.1, February 2007
+ 
+ Table of Contents
+ Table of Contents
+@@ -26,138 +26,138 @@
+ Data types4
+ Introduction4
+ Datatype reference4
+-Data types: Object types8
+-Objects and properties9
+-Introduction9
+-Reference to objects:9
+-Calculating values (+calc):9
+-"... /stdWrap":9
+-optionSplit:9
+-Conditions12
+-Condition reference: 12
+-browser12
+-version13
+-system13
+-device13
+-useragent 14
+-language15
+-IP15
+-hostname15
+-hour16
+-minute16
+-dayofweek16
+-dayofmonth16
+-month16
+-usergroup17
+-loginUser17
+-treeLevel17
+-PIDinRootline17
+-PIDupinRootline18
+-compatVersion18
+-globalVars:18
+-globalString:18
+-userFunc:19
+-Functions:21
+-stdWrap:21
+-imgResource:27
+-imageLinkWrap:29
+-numRows:30
+-select:30
+-split:31
+-if:32
+-typolink:33
+-textStyle36
+-encapsLines37
+-tableStyle39
+-addParams39
+-filelink40
+-parseFunc:42
+-makelinks:44
+-tags:45
+-HTMLparser:45
+-HTMLparser_tags:46
+-Constants48
+-What are constants?48
+-Inserting constants48
+-Setup:50
+-Toplevel objects:50
+-The plugin TLO:50
+-"CONFIG":51
+-"CONSTANTS":62
+-"PAGE":62
+-"FE_DATA":65
+-"FE_TABLE":65
+-"FRAMESET":66
+-"FRAME":66
+-"META":66
+-"CARRAY":67
+-Content Objects (cObject)68
+-PHP-information: 68
+-HTML:69
+-TEXT:69
+-COBJ_ARRAY (COA, COA_INT):70
+-FILE:71
+-IMAGE:71
+-IMG_RESOURCE:71
+-CLEARGIF:72
+-CONTENT:72
+-RECORDS:74
+-HMENU:75
+-CTABLE:81
+-OTABLE: 82
+-COLUMNS:82
+-HRULER:83
+-IMGTEXT:83
+-CASE:87
+-LOAD_REGISTER:87
+-RESTORE_REGISTER:88
+-FORM:88
+-SEARCHRESULT:93
+-USER and USER_INT:94
+-PHP_SCRIPT:95
+-PHP_SCRIPT_INT:95
+-PHP_SCRIPT_EXT:96
+-TEMPLATE:97
+-MULTIMEDIA:98
+-EDITPANEL:99
+-GIFBUILDER101
+-GIFBUILDER:101
+-Objectnames in this section:102
+-NON-GifBuilderObj: 107
+-MENU Objects109
+-Common properties:109
+-Common item states for TMENU, GMENU and IMGMENU series:111
+-[menuObj].sectionIndex112
+-GMENU:112
+-GMENU_LAYERS / TMENU_LAYERS:114
+-GMENU_FOLDOUT:117
+-TMENU:119
+-TMENUITEM:119
+-IMGMENU:121
+-IMGMENUITEM:121
+-JSMENU:122
+-JSMENUITEM:122
+-media/scripts/ Plugins124
+-media/scripts/ in general124
+-About ?example templates?124
+-fe_adminLib.inc125
+-tipafriendLib.inc133
+-plaintextLib.inc134
+-Standard Templates137
+-static_template137
+-Media137
+-PHP include scripts138
+-Introduction138
+-Including your script138
+-Casestory:140
+-Storing user-data or session-data141
+-Using the built in "shopping basket"142
+-index.php143
+-Introduction143
+-Submitting data to index.php143
+-Search:143
+-Emailforms:144
+-Database-submit144
++Data types: Object types9
++Objects and properties10
++Introduction10
++Reference to objects:10
++Calculating values (+calc):10
++"... /stdWrap":10
++optionSplit:10
++Conditions13
++Condition reference: 13
++browser13
++version14
++system14
++device14
++useragent 15
++language16
++IP16
++hostname17
++hour17
++minute17
++dayofweek17
++dayofmonth17
++month18
++usergroup18
++loginUser18
++treeLevel18
++PIDinRootline19
++PIDupinRootline19
++compatVersion19
++globalVars:19
++globalString:19
++userFunc:20
++Functions:22
++stdWrap:22
++imgResource:28
++imageLinkWrap:30
++numRows:31
++select:31
++split:32
++if:33
++typolink:34
++textStyle38
++encapsLines39
++tableStyle41
++addParams41
++filelink42
++parseFunc:44
++makelinks:46
++tags:48
++HTMLparser:48
++HTMLparser_tags:49
++Constants51
++What are constants?51
++Inserting constants51
++Setup:53
++Toplevel objects:53
++The plugin TLO:53
++"CONFIG":54
++"CONSTANTS":66
++"PAGE":66
++"FE_DATA":70
++"FE_TABLE":70
++"FRAMESET":71
++"FRAME":71
++"META":71
++"CARRAY":72
++Content Objects (cObject)73
++PHP-information: 73
++HTML:74
++TEXT:74
++COBJ_ARRAY (COA, COA_INT):75
++FILE:76
++IMAGE:76
++IMG_RESOURCE:76
++CLEARGIF:77
++CONTENT:77
++RECORDS:79
++HMENU:80
++CTABLE:87
++OTABLE: 88
++COLUMNS:88
++HRULER:88
++IMGTEXT:88
++CASE:92
++LOAD_REGISTER:93
++RESTORE_REGISTER:93
++FORM:93
++SEARCHRESULT:99
++USER and USER_INT:100
++PHP_SCRIPT:101
++PHP_SCRIPT_INT:101
++PHP_SCRIPT_EXT:102
++TEMPLATE:103
++MULTIMEDIA:104
++EDITPANEL:105
++GIFBUILDER107
++GIFBUILDER:107
++Objectnames in this section:108
++NON-GifBuilderObj: 114
++MENU Objects115
++Common properties:115
++Common item states for TMENU, GMENU and IMGMENU series:117
++[menuObj].sectionIndex118
++GMENU:119
++GMENU_LAYERS / TMENU_LAYERS:120
++GMENU_FOLDOUT:123
++TMENU:126
++TMENUITEM:126
++IMGMENU:128
++IMGMENUITEM:129
++JSMENU:129
++JSMENUITEM:130
++media/scripts/ Plugins131
++media/scripts/ in general131
++About ?example templates?131
++fe_adminLib.inc132
++tipafriendLib.inc141
++plaintextLib.inc142
++Standard Templates145
++static_template145
++Media145
++PHP include scripts146
++Introduction146
++Including your script146
++Casestory:148
++Storing user-data or session-data149
++Using the built in "shopping basket"150
++index.php151
++Introduction151
++Submitting data to index.php151
++Search:151
++Emailforms:152
++Database-submit152
+ 
+ IntroductionWarning
+ This document is a reference - it does not intend to guide you step by step into TYPO3 or TypoScript. So you should know what you are looking for when coming to this document and then let tutorials do the explanatory work for you.General information
+@@ -1385,7 +1385,7 @@
+ 
+ wrapAlign
+ align /stdWrap
+-Wraps content with <DIV align=[value]> | </DIV> if align is set
++Wraps content with <div style=text-align:[value];> | </div> if align is set
+ 
+ typolink
+ ->typolink
+@@ -1470,7 +1470,7 @@
+ x,y
+ This wraps the input in a table with columns to the left and top that offsets the content by the values of x,y. Based on the cObject OTABLE.
+ 
+-.tableParams / .tdParams +stdWrap
++.tableParams / .tdParams /stdWrap
+ - used to manipulate tableParams/tdParams (default width=99%) of the offset. Default: See OTABLE.
+ 
+ .stdWrap
+@@ -1572,8 +1572,7 @@
+ Description:
+ Default:
+ ext
+-imageExtension /
+-stdWrap
++imageExtension /stdWrap
+ 
+ web
+ width
+@@ -2021,6 +2020,10 @@
+ Add the QUERY_STRING to the start of the link. Notice that this does not check for any duplicate parameters! This is not a problem (only the last parameter of the same name will be applied), but enable "config.uniqueLinkVars" if you still don?t like it.
+ 
+ .method: If set to to GET or POST then then the parsed query arguments (GET or POST data) will be used. This settings are useful if you use URL processing extensions like Real URL, which translate part of the path into query arguments.
++It?s also possible to get both, POST and GET data, on setting this to
++"POST,GET" or "GET,POST". The last method in this sequence takes
++precedence and overwrites the parts that are also present for the first
++method.
+ 
+ .exclude: List of query arguments to exclude from the link (eg L or cHash).
+ 
+@@ -2057,6 +2060,7 @@
+ 
+ Now the input can be an alias or page-id. If the input is an integer it?s a page-id, if it?s two comma separated integers, it?s a id/type pair, else it?s an alias. For page-id?s or aliases you can prepend a "#" mark with a number indication tt_content record number on the page to jump to! (if .section-property is present, it overrides this).
+ If you insert only "#234" where "234" is the tt_content record number, it links to the current page-id
++Notice: The parameter can contain a keyword that hands over link generation to an external function. See example below this table!
+ 
+ Target
+ Target is normally defined by the "extTarget" and "target" properties of typolink. But you may override this target by adding the new target after the parameter separated by a whitespace. Thus the target becomes the second parameter.
+@@ -2081,7 +2085,6 @@
+ 
+ <A href=?id=51 target=_blank class=blueLink>
+ 
+-
+ title
+ string /stdWrap
+ Sets the title parameter of the A-tag.
+@@ -2117,12 +2120,40 @@
+ TAG is the full <A>-tag as generated and ready from the typolink function.
+ The latter three is combined into the ?TAG? value after this formula:
+ 
+-<A HREF="?.$finalTagParts["url"].?"?.$finalTagParts["targetParams"].$finalTagParts["aTagParams"].?>
++<a href="?.$finalTagParts[?url?].?"?.
++$finalTagParts[?targetParams?].
++$finalTagParts[?aTagParams?].?>
+ 
+ The userfunction must return an <A>-tag.
+ 
+ [tsref:->typolink]
+-textStyle
++Using link handlers
++A feature (added in TYPO3 4.1) allows you to register a link handler for a keyword you define. For example, you can link to a page with id 34 with <link 34> in a typical bodytext field which converts <link> tags with ->typolink. But what if you have an extension, pressrelease, and wanted to link to a press release item displayed by a plugin on some page you don?t remember? With this feature its possible to create the logic for this in that extension.
++So, in a link field (the parameter value for ->typolink) you could enter pressrelease:123:
++
++
++Some TypoScript will usually transfer this value to the parameter attribute of the ->typolink call. When pressrelease:123 enters ->typolink as the parameter it will be checked if pressrelease is a keyword with which a link handler is associated and if so, that handler is allowed to create the link.
++Registering the handler for keyword pressrelease is done like this:
++$TYPO3_CONF_VARS[?SC_OPTIONS?][?tslib/class.tslib_content.php?][?typolinkLinkHandler?][?pressrelease?] = ?EXT:pressrelease/class.linkHandler.php&tx_linkHandler?;
++
++The class file pressrelease/class.linkHandler.php contains the class tx_linkHandler which could look like this:
++
++class tx_linkHandler {
++function main($linktxt, $conf, $linkHandlerKeyword, $linkHandlerValue, $link_param, &$pObj) {
++$lconf = array();
++$lconf[?useCacheHash?] = 1;
++$lconf[?parameter?] = 34;
++$lconf[?additionalParams?] = ?&tx_pressrelease[showUid]=?.rawurlencode($linkHandlerValue);
++
++return $pObj->typoLink($linktxt, $lconf);
++}
++}
++
++In this function, the value part after the keyword is set as the value of a GET parameter, &tx_pressrelease[showUid] and the parameter value of a new ->typolink call is set to 34 which assumes that on page ID 34 a plugin is put that will display pressrelease 123 when called with &tx_pressrelease[showUid]=123. In addition you can see the userCacheHash attribute for the typolink function used in order to produce a cached display. 
++The link that results from this operation will look like this:
++<a href="index.php?id=34&amp;tx_pressrelease[showUid]=123%3A456&amp;cHash=c0551fead6" >
++
++The link would be encoded with RealURL and respect config.linkVars as long as ->typolink is used to generate the final URL.textStyle
+ This is used to style text with a bunch of standard options + some site-specific.
+ Property:
+ Data type:
+@@ -2304,7 +2335,7 @@
+ ([tagname] is in uppercase.)
+ 
+ defaultAlign
+-string / ->stdWrap
++string /stdWrap
+ If set, this value is set as the default align value of the wrapping tags, both from .encapsTagList, .bypassEncapsTagList and .nonWrappedTag
+ 
+ nonWrappedTag
+@@ -2467,7 +2498,7 @@
+ If the icon should be linked also
+ 
+ labelStdWrap
+--> stdWrap
++->stdWrap
+ stdWrap options for the label (by default the label is the filename) before being wrapped with the A-tags.
+ Use this to eg. import another label from a database field or such.
+ 
+@@ -2480,7 +2511,7 @@
+ If set, the link is first wrapped with ".wrap" and then the <A>-tag.
+ 
+ file
+--> stdWrap
++->stdWrap
+ stdWrap of the label (by default the label is the filename) after having been wrapped with A-tag!
+ 
+ size
+@@ -3095,19 +3126,29 @@
+ Default:
+ linkVars
+ list
+-HTTP_GET_VARS, which should be passed on with links in Typo. This is compiled into a string stored in $GLOBALS["TSFE"]->linkVars
++HTTP_GET_VARS, which should be passed on with links in TYPO3. This is compiled into a string stored in $GLOBALS["TSFE"]->linkVars
++
++The values are rawurlencoded in PHP.
++
++You can specify a range of valid values by appending a () after each value. If this range does not match, the variable won?t be appended to links. This is very important to prevent that the cache system gets flooded with forged values.
++
++The range may containing one of these values:
++[a]-[b] - A range of allowed integer values
++int - Only integer values are allowed
++[a]|[b]|[c] - A list of allowed strings (whitespaces will be removed)
++/[regex]/ - Match against a regular expression (PCRE style)
+ 
+ Example:
+-config.linkVars = noframes, print
++config.linkVars = L, print
++This will add "&L=[L-value]&print=[print-value]" to all links in TYPO3.
++
++config.linkVars = L(1-3), print
++Same as above, but &L=[L-value] will only be added if the current value is 1, 2 or 3.
+ 
+-This will add "&noframes=[noframes-value]&print=[print-value]" to all links in TYPO3.
+-The values are rawurlencoded in PHP.
+ 
+ uniqueLinkVars
+ boolean
+-It might happen that TYPO3 generates links with the same parameter twice or 
+-more. This is no problem because only the last parameter is used, thus the 
+-problem is just a cosmetical one.
++It might happen that TYPO3 generates links with the same parameter twice or more. This is no problem because only the last parameter is used, thus the problem is just a cosmetical one.
+ 0
+ MP_defaults
+ string
+@@ -3318,11 +3359,15 @@
+ 
+ removeDefaultJS
+ boolean / string
+-if set, the default JavaScript in the header will be removed.
++If set, the default JavaScript in the header will be removed.
+ The default JavaScript is the blurLink function and browser detection variables.
+ 
+ Special case: if the value is "external" then the default JavaScript is written to a temporary file and included from that file. See "inlineStyle2TempFile" below.
+ 
++Depends on the compatibility mode (see Tools>Install>Update wizard):
++compatibility mode < 4.0: 0
++compatibility mode >= 4.0: 1
++
+ Example:
+ config.removeDefaultJS = external
+ config.removeDefaultJS = 1
+@@ -3332,6 +3377,10 @@
+ If set, the inline styles TYPO3 controls in the core are written to a file, typo3temp/stylesheet_[hashstring].css, and the header will only contain the link to the stylesheet.
+ The file hash is based solely on the content of the styles.
+ 
++Depends on the compatibility mode (see Tools>Install>Update wizard):
++compatibility mode < 4.0: 0
++compatibility mode >= 4.0: 1
++
+ Example:
+ config.inlineStyle2TempFile = 1
+ 
+@@ -3593,8 +3642,11 @@
+ If true the HTTP_HOST is - if available - NOT inserted instead of the IP-address
+ 
+ stat_apache_niceTitle
+-boolean
+-If set, the URL will be transliterated from the renderCharset to ASCII (eg ä => ae, à => a, &#945; "alpha" => a), which yields nice and readabe page titles in the log. All non-ASCII characters that cannot be converted will be changed to underscores.
++boolean / string
++If set, the URL will be transliterated from the renderCharset to ASCII (eg ä => ae, à => a, &#945; "alpha" => a), which yields nice and readable page titles in the log. All non-ASCII characters that cannot be converted will be changed to underscores.
++
++If set to utf-8, the page title will be converted to UTF-8 which results 
++in even more readable titles, if your log analyzing software supports it.
+ 
+ stat_apache_noRoot
+ boolean
+@@ -3602,8 +3654,12 @@
+ 
+ stat_titleLen
+ int 1-100
+-The lenght of the page names in the path written to logfile/database
++The length of the page names in the path written to logfile/database
+ 20
++stat_pageLen
++int 1-100
++The length of the page name (at the end of the path) written to the logfile/database.
++30
+ simulateStaticDocuments
+ boolean /
+ string
+@@ -3660,8 +3716,8 @@
+ hyphen, this option allows search engines to index keywords in URLs. Before TYPO3 4.0 this character was hard-coded to underscore.
+ 
+ Depends on the compatibility mode (see Tools>Install>Update wizard):
+-compatibility mode < 4.0.0: underscore _
+-compatibility mode >= 4.0.0: hyphen -
++compatibility mode < 4.0: underscore _
++compatibility mode >= 4.0: hyphen -
+ 
+ simulateStaticDocuments_dontRedirectPathInfoError
+ boolean
+@@ -3787,6 +3843,12 @@
+ 
+ This setting means that the header and image field of content elements will be used from the translation only if they had a non-blank value. For the image field this might be very practical because it means that the image(s) from the default translation will be used unless other images are inserted!
+ 
++sys_language_softExclude
++string
++Setting additional "exclude" flags for l10n_mode in TCA for frontend rendering. Works exactly like sys_language_softMergeIfNotBlank (see that for details - same Syntax!).
++
++Fields set in this property will override if the same field is set for "sys_language_softMergeIfNotBlank".
++
+ typolinkCheckRootline
+ boolean
+ If set, then every typolink is checked whether it?s linking to a page within the current rootline of the site.
+@@ -3912,7 +3974,7 @@
+ 
+ baseURL
+ string
+-This writes the <base> tag in the header of the document. Set this to the value that is expected to be the URL.
++This writes the <base> tag in the header of the document. Set this to the value that is expected to be the URL, and append a / to the end of the string.
+ 
+ Example:
+ config.baseURL = http://typo3.org/sub_dir/
+@@ -4589,6 +4651,7 @@
+ 10.params = hspace=5
+ 10.wrap = |<BR>IMG_RESOURCE:
+ Returns only the image-reference, possibly wrapped with stdWrap. May be used for putting background images in tables or table-rows or to import a image in your own include-scripts.
++The array $GLOBALS["TSFE"]->lastImgResourceInfo is set with the info-array of the resulting image resource (if any) and contains width, height and so on.
+ Property:
+ Data type:
+ Description:
+@@ -4823,7 +4886,9 @@
+ For these options to make sense, they should only be used when config.sys_language_mode is not set to content_fallback.
+ 
+ addQueryString
++string
+ see typolink.addQueryString
++
+ Notice: This works only for special=language.
+ 
+ if
+@@ -4973,7 +5038,7 @@
+ .mode: Which field in the pages-table to use for sorting. Default is "SYS_LASTCHANGED" (which is updated when a page is generated to the youngest tstamp of the records on the page), "manual" or lastUpdated will use the field "lastUpdated" (set manually in the page-record) and "tstamp" will use the "tstamp"-field of the pagerecord, which is set automatically when the record is changed. "crdate" will use "crdate"-field of the pagerecord. starttime will use the starttime field.
+ .entryLevel = where in the rootline the search begins. Standard rootline syntax (-x to x)
+ .depth, .limit, .excludeNoSearchPages, .beginAtLevel (like "updated" menu)
+-.setKeywords (+stdWrap) = lets you define the keywords manually by defining them as a commaseparated list. If this property is defined, it overrides the default, which is the keywords of the current page.
++.setKeywords (/stdWrap) = lets you define the keywords manually by defining them as a commaseparated list. If this property is defined, it overrides the default, which is the keywords of the current page.
+ .keywordsField = defines the field in the pages-table in which to search for the keywords. Default is the fieldname keyword. No check is done to see if the field you enter here exists, so enter an existing field, OK?!
+ .keywordsField.sourceField = defines the field from the current page from which to take the keywords being matched. The default is keyword. (Notice that .keywordsField is only setting the page-record field to search in !)
+ 
+@@ -5441,7 +5506,7 @@
+ captionSplit
+ boolean
+ If this is set, the caption text is split by the character (or string) from ".token" , and every item is displayed under an image each in the image block.
+-.token = (string/stdWrap) Character to split the caption elements (default is chr(10))
++.token = (string /stdWrap) Character to split the caption elements (default is chr(10))
+ .cObject = cObject, used to fetch the caption for the split
+ .stdWrap = stdWrap properties used to render the caption.
+ 
+@@ -5603,22 +5668,6 @@
+ NOTE: This cancels the jpg-quality settings sent as ordinary ".params" to the imgResource. In addition the output of this operation will always be jpg or gif!
+ NOTE: Works ONLY if IMAGE-obj is NOT GIFBUILDER
+ 
+-netprintApplicationLink
+-boolean /+properties
+-Set true, if you would like to enable the netprint feature. 
+-Netprint is a TYPO3 application which is still in development. ?Netprint? allows film development stores to offer online submission of Photos to a TYPO3 / Netprint server in-house from which the store offer enlargements of digital photos on eg Kodak Royal paper.
+-The application will be released under GNU/GPL sometime in 2002.
+-?Netprint? offers a feature to fetch images from peoples online fotoalbums. This property enables links from your site images to a Netprint server.
+-
+-Properties:
+-.url = Url of the Netprint site page, eg. http://netprint.photo.com/?id=999&type=2
+-.thisUrl = Url of this site, eg. http://mysite.com/typo3site/ (default is calculated from HTTP_HOST)
+-.cObject = (cObject) The link content
+-.ATagParams = <A>-tag parameters /stdWrap
+-.outerStdWrap = (->stdWrap) stdWrap of the total linked cObject.
+-.before = (boolean) If the link code should be inserted before the image (default is after)
+-.linkOnlyPixelsAbove = (int) If set, only images with a total number of pixels greater than this number will be linked. This secures that small images will not be linked. Eg. if images above 640x480 is supposed to be linked, the limit should be approx. 300000
+-
+ editIcons
+ string
+ (See stdWrap.editIcons)
+@@ -5791,7 +5840,7 @@
+ Description:
+ Default:
+ data
+-string /->stdWrap
++string /stdWrap
+ This is the data that sets up the form. See above.
+ "||" can be used instead of linebreaks
+ 
+@@ -5860,11 +5909,12 @@
+ Type (action="" of the form):
+ 
+ Integer: this is regarded to be a page in TYPO3
+-String: this is regarded to be a normal url (eg. "formmail.php" or "fe_tce_db.php")
+-Empty; the current page is chosen.
++String: this is regarded to be a normal URL (eg. "formmail.php" or "fe_tce_db.php")
++Empty: the current page is chosen.
++
+ NOTE: If type is integer/empty the form will be submitted to a page in TYPO3 and if this page has a value for target/no_cache, then this will be used instead of the default target/no_cache below.
+ 
+-NOTE: If the redirect-value is set, the redirect-target overriddens the target set by the action-url
++NOTE: If the redirect-value is set, the redirect-target overrides the target set by the action-url
+ 
+ NOTE: May be overridden by the property override feature of the formdata (see above)
+ 
+@@ -5903,7 +5953,7 @@
+ 
+ redirect
+ string /stdWrap
+-url to redirect to (generates the hiddenfield "redirect")
++URL to redirect to (generates the hidden field "redirect")
+ 
+ Integer: this is regarded to be a page in TYPO3
+ String: this is regarded to be a normal url
+@@ -6095,7 +6145,7 @@
+ - "NAME" is required (the asterisk, *) and the fieldname will be "the_name". A default value is set ("Enter your...")
+ - "Email" is also required, the name will be "email" (which it should always be for the address to shown up properly in the real email!) and theres no default value here.
+ - "Like TV" is a checkbox. Default is "unchecked".
+-- "formtype_mail" is the name of the submit-button. And it should be if you use the build-in formmail of TYPO3. Then this var makes TYPO3 react on the input at interpret it as formmail-input!
++- "formtype_mail" is the name of the submit-button. And it should be if you use the build-in formmail of TYPO3. Then this var makes TYPO3 react on the input and interpret it as formmail-input!
+ - "html_enabled" will let the mail be rendered in nice HTML
+ - "use_base64" will send the mail encoded as base64 instead of quoted-printable
+ - "subject": Enter the subject of your mail
+@@ -6710,7 +6760,7 @@
+ 
+ backColor
+ GraphicColor 
+-+stdWrap
++/stdWrap
+ Background color for the gif
+ white
+ offset
+@@ -6827,7 +6877,7 @@
+ imgMap
+ ->IMGMAP
+ 
+-+ stdWrap properties for "altText" and "titleText" in this case.
++->stdWrap properties for "altText" and "titleText" in this case
+ 
+ 
+ niceText
+@@ -7494,6 +7544,20 @@
+ int
+ If set, the &type parameter of the link is forced to this value regardless of target. Overrides the global equivalent in ?config? if set.
+ 
++stdWrap
++->stdWrap
++Wraps the whole item using stdWrap
++
++Example:
++2 = TMENU
++2 {
++stdWrap.dataWrap = <ul class={register :
++parentProperty}> | </ul>
++NO {
++...
++}
++}
++
+ wrap
+ wrap
+ Wraps only if there were items in the menu!
+@@ -7586,20 +7650,26 @@
+ imgResouce
+ Defines an alternative image to use. If an image returns here, it will override any GIFBUILDER configuration.
+ 
++ATagParams
++string
++Additional parameters
++
+ ATagTitle
+ string /stdWrap
+ which defines the title attribute of the a-tag. (See TMENUITEM also)
+ 
+-ATagParams
+-string
+-Additional parameters
++additionalParams
++string /stdWrap
++Define parameters that are added to the end of the URL. This must be code ready to insert after the last parameter.
++
++For details, see typolink->additionalParams
+ 
+ wrap
+ wrap
+ Wrap of the menu item
+ 
+-allWrap /+stdWrap
+-wrap
++allWrap
++wrap /stdWrap
+ Wraps the whole item
+ 
+ subst_elementUid
+@@ -7607,7 +7677,7 @@
+ If set, "{elementUid}" is substituted with the item uid.
+ 
+ allStdWrap
+-/->stdWrap
++->stdWrap
+ stdWrap of the whole item
+ 
+ [tsref:(cObject).HMENU.(mObj).GMENU.(itemState)]GMENU_LAYERS / TMENU_LAYERS:
+@@ -7941,15 +8011,19 @@
+ Description:
+ Default:
+ expAll
+-Boolean
++boolean
+ If this is true, the menu will always show the menu on the level underneath the menuitem. This corresponds to a situation where a user has clicked a menuitem and the menu folds out the next level. This can enable that to happen on all items as default.
+ 
+ collapse
+-Boolean
++boolean
+ If set, "active" menuitems that has expanded the next level on the menu will now collapse that menu again.
+ 
++accessKey
++boolean
++If set access-keys are set on the menu-links
++
+ noBlur
+-Boolean
++boolean
+ Normally links are "blurred" if the browser is MSIE. Blurring removes the ugly box around a clicked link. 
+ If this property is set, the link is NOT blurred (browser-default) with "onFocus".
+ 
+@@ -7961,6 +8035,12 @@
+ int
+ If set, the &type parameter of the link is forced to this value regardless of target.
+ 
++stdWrap
++->stdWrap
++Wraps the whole item using stdWrap
++
++Example: see GMENU.stdWrap
++
+ wrap
+ wrap
+ Wraps only if there were items in the menu!
+@@ -7983,8 +8063,8 @@
+ Data type:
+ Description:
+ Default:
+-allWrap /+stdWrap
+-wrap
++allWrap
++wrap /stdWrap
+ Wraps the whole item
+ 
+ wrapItemAndSub 
+@@ -8019,7 +8099,7 @@
+ This example will start out with the table cells in #eeeeee and change them to #cccccc (and back) when rolled over. The 1tmenu string is a unique id for the menu items. You may not need it (unless the same menu items are more than once on a page), but the important thing is that the id of the table cell has the exact same label before the {elementUid} (red marks). The other important thing is that you DO set a default background color for the cell with the style-attribute (blue marking). If you do not, Mozilla browsers will behave a little strange by not capturing the mouseout event the first time it?s triggered. 
+ 
+ before
+-HTML +stdWrap
++HTML /stdWrap
+ 
+ 
+ beforeImg
+@@ -8047,7 +8127,7 @@
+ 
+ 
+ stdWrap
+-stdWrap-options
++->stdWrap
+ stdWrap to the link-text! 
+ 
+ ATagBeforeWrap
+@@ -8070,6 +8150,12 @@
+ 
+ This would use the abstract or description field for the <a title=""> attribute.
+ 
++additionalParams
++string /stdWrap
++Define parameters that are added to the end of the URL. This must be code ready to insert after the last parameter.
++
++For details, see typolink->additionalParams
++
+ doNotLinkIt
+ boolean
+ if set, the linktext are not linked at all!
+@@ -8079,7 +8165,7 @@
+ if set, the text will not be shown at all (smart with spacers)
+ 
+ stdWrap2
+-wrap /+stdWrap
++wrap /stdWrap
+ stdWrap to the total link-text and ATag. (Notice that the plain default value passed to stdWrap function is |.)
+ | 
+ RO
+@@ -8095,7 +8181,7 @@
+ Alternative target overriding the target property of the TMENU if set.
+ 
+ allStdWrap
+-/->stdWrap
++->stdWrap
+ stdWrap of the whole item
+ 
+ [tsref:(cObject).HMENU.(mObj).TMENUITEM]IMGMENU:
+@@ -8552,14 +8638,14 @@
+ then you can include this cObject in most of the templates through a marker named ###CE_myHeader### or ###PCE_myHeader### (see below for details on the difference).
+ 
+ wrap1
+--> stdWrap
++->stdWrap
+ Global Wrap 1. This will be splitted into the markers ###GW1B### and ###GW1E###. Don?t change the input value by the settings, only wrap it in something.
+ 
+ Example:
+ wrap1.wrap = <b> |</B>
+ 
+ wrap2
+--> stdWrap
++->stdWrap
+ Global Wrap 2 (see above)
+ 
+ color1
+@@ -8765,14 +8851,14 @@
+ The default code (see above) if the value is empty. By default it?s not set and a help screen will appear
+ 
+ wrap1
+--> stdWrap
++->stdWrap
+ Global Wrap 1. This will be splitted into the markers ###GW1B### and ###GW1E###. Don?t change the input value by the settings, only wrap it in something.
+ 
+ Example:
+ wrap1.wrap = <B> |</B>
+ 
+ wrap2
+--> stdWrap
++->stdWrap
+ Global Wrap 2 (see above)
+ 
+ color1
