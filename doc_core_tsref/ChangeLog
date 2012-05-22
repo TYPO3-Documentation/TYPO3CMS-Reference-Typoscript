@@ -1,17 +1,102 @@
+2010-06-11  Francois Suter  <francois@typo3.org>
+
+	* Fixed bug #6465: CASE description is broken
+
+2010-06-10  Francois Suter  <francois@typo3.org>
+
+	* Fixed bug #6461: TSref description for typolink is very unclear and incomplete
+
+2010-06-08  Francois Suter  <francois@typo3.org>
+
+	* Fixed bug #7961: Description of meaningfulTempFilePrefix is slightly wrong / incomplete
+
+2010-06-07  Francois Suter  <francois@typo3.org>
+
+	* Improved description of config.tx_(plugin)
+	* Fixed bug #6671: PAGE object: add "other" section after "CSS Stylesheets" section
+
+2010-06-04  Francois Suter  <francois@typo3.org>
+
+	* Made a number of small language improvements
+	* Updated references to "media/scripts" folder (now in "typo3/sysext/cms/tslib/media/scripts")
+	* Removed some references to the "test site", which doesn't exist anymore
+	* Improved description of config.additionalHeaders
+	* Renamed the SXW file to manual.sxw to comply with extension structure
+
+2010-02-12  Francois Suter  <francois@typo3.org>
+
+	* Released version 4.3.1 to TER
+
+2010-01-23  Francois Suter  <francois@typo3.org>
+
+	* Fixed bug #13023: Data type 'typeNumber' is not defined in TSref (thanks to Thomas Lange)
+
+2010-01-17  Francois Suter  <francois@typo3.org>
+
+	* Corrected order of cropHTML property in stdWrap and improved property description (thanks to Ernesto Baschny)
+
+2009-11-30  Francois Suter  <francois@typo3.org>
+
+	* Corrected some small bugs in new TYPO3 4.3 features, after review
+	* Fixed bug #12707: Undocumented: USER_INT function calls only works with Prefix "user_"
+	* Fixed bug #6015: Bad example for globalString condition
+	* Fixed bug #11463: Missing Information in TSref regarding typolink functions (thanks to Jo Hasenau)
+	* Fixed bug #7653: HMENU.includeNotInMenu descriptions needs update
+	* Fixed bug #3675: Error in code example for TEMPLATE.wraps
+	* Fixed bug #2318: In "stat_apache_logfile": Option "lockRootDir" should be "lockRootPath"
+	* Released version 4.3.0 to TER
+
+2009-11-29  Francois Suter  <francois@typo3.org>
+
+	* Added all remaining new features and changes for TYPO3 4.3 from the pending documentation page
+
+2009-11-27  Francois Suter  <francois@typo3.org>
+
+	* Moved chapter about constants to doc_core_ts
+	* Improved some wordings in the introduction
+	* Added missing emptyTitleHandling property for object type IMAGE, FILE and IMGTEXT, as well as function filelink (thanks to Yannick Pavard)
+	* Improved mailform example (thanks to Sonja Scholz)
+	* Added a first batch of new features for TYPO3 4.3 from the pending documentation page
+
+2009-11-20  Francois Suter  <francois@typo3.org>
+
+	* Fixed bug #11261: RECORDS.source says "appended" instead of "prepended" (thanks to Benni Mack)
+	* Minor text corrections
+
+2009-09-20  Francois Suter  <francois@typo3.org>
+
+	* Corrected "childs" to "children"
+
+2009-07-11  Francois Suter  <francois@typo3.org>
+
+	* Improved the layout of the getText data type description
+	* Improved the descriptions of some of the getText properties
+	* Added some missing properties of getText
+	* Replaced example for stdWrap.dataWrap to avoid using a deprecated property of getText
+
+2009-05-15  Francois Suter  <francois@typo3.org>
+
+	* Added a reference to doc_core_ts for syntax in the conditions chapter
+	* Fixed bug #9609:TSref: page.includeJS seems to work only for files on current server, not documented
+
 2009-05-13  Francois Suter  <francois@typo3.org>
 
 	* Split getText datatype description into 2 cells, because overflow was hidden from view
 	* Updated table of contents
-	* Released to TER as version 4.2.1
+
+2009-02-27  Francois Suter  <francois@typo3.org>
+
+	* Fixed bug #10516: Typos in the Core: change "accesible" to "accessible" (thanks to Daniel Krupke)
+	* Corrected a number of other typos in the description of the same property (absRefPrefix)
+
+2009-02-19  Michael Stucki  <michael@typo3.org>
+
+	* Fix #10481: Misspelled "gamma" in GIFBUILDER example (thanks to Christian Wolff)
 
 2008-10-08  Francois Suter  <francois@typo3.org>
 
 	* Added missing stdWrap property for RECORDS object
 	* Rearranged order of dontCheckPid property for RECORDS object
-
-2008-10-08  Francois Suter  <francois@typo3.org>
-
-	* Removed erroneous stdWrap data type from doNotShowLink and doNotLinkIt properties
 
 2008-12-01  Michael Stucki  <michael@typo3.org>
 
