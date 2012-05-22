@@ -1,3 +1,128 @@
+2011-09-05  Christopher  <chrissitopher@gmx.de>
+
+	* Fixed bug #28755: List of allowed tables in the cObject CONTENT is incomplete
+	* Released version 4.5.1 to TER
+
+2011-06-13  Christopher  <chrissitopher@gmx.de>
+
+	* Fixed bug #27341: Condition Reference should explain general Condition syntax
+	* Fixed bug #26872: Remove references to PHP_SCRIPT* cObjects
+	* Fixed bug #26537: filelink: Property icon_thumbSize is not documented
+	* Fixed bug #26507: Each cObj should have a short introduction of what it does
+
+2011-06-03  Christopher  <chrissitopher@gmx.de>
+
+	* Added description of #26483: Add stdWrap for excludeUidList for HMENU
+
+2011-05-16  Francois Suter  <francois.suter@typo3.org>
+
+	* Follow-up to #26543: Reinstated PHP_SCRIPT* objects description into Appendix C
+	* Fixed bug #22220: Removed erroneous mention of ADMPANEL properties
+	* Released version 4.5.0 to TER
+
+2011-05-15  Francois Suter  <francois.suter@typo3.org>
+
+	* Fixed bug #26543: Removed description of PHP_SCRIPT* objects
+	* Fixed bug #10885: Changed "filename" to "file name" and similar issues
+
+2011-05-11  Francois Suter  <francois.suter@typo3.org>
+
+	* Fixed bug #26522: Document "printBeforeContent" for cObject EDITPANEL
+
+2011-05-05  Christopher  <chrissitopher@gmx.de>
+
+	* Fixed bug #13697: Update screenshots for TYPO3 4.5
+	* Fixed bug #22493: Update description of page.inlineJS (which has been removed)
+	* Fixed bug #13698: Create a manual version for TYPO3 4.5
+
+2011-05-01  Christopher  <chrissitopher@gmx.de>
+
+	* Added description of #24089: Optimize stdWrap usage for tslib_content
+	* Added description of #23677: Add SVG support for all browsers by adding a SVG content element
+	* Added description of #24065: Optimize stdWrap usage for TypoScript content element SVG
+	* Fixed bug #26541: Improve description of cObject TEMPLATE
+	* Added description of #23744: A new TypoScript cObject: FLUIDTEMPLATE
+	* Added description of #23897: Optimize stdWrap usage for TypoScript content element FLUIDTEMPLATE
+
+2011-04-28  Christopher  <chrissitopher@gmx.de>
+
+	* Added description of #23528: Allow easy use of lightbox style image enlargement in the frontend
+	* Added description of #23533: Implement conditions for current page
+	* Added description of #25317: Do not include the "type" parameter in the linkVars list
+	* Added description of #23760: Let typolink honour secure filelink configuration
+	* Added description of #23921: Optimize stdWrap usage for TypoScript content element HTML
+	* Added description of #24063: Optimize stdWrap usage for TypoScript content element TEXT
+	* Added description of #23891: Optimize stdWrap usage for TypoScript content element COA
+	* Added description of #23892: Optimize stdWrap usage for TypoScript content element COA_INT
+	* Added description of #23896: Optimize stdWrap usage for TypoScript content element FILE
+	* Added description of #23888: Optimize stdWrap usage for TypoScript content element CLEARGIF
+	* Added description of #23890: Optimize stdWrap usage for TypoScript content element CONTENT
+	* Added description of #23972: Optimize stdWrap usage for TypoScript content element RECORDS
+	* Added description of #23898: Optimize stdWrap usage for TypoScript content element HMENU
+	* Added description of #23895: Optimize stdWrap usage for TypoScript content element CTABLE
+	* Added description of #24050: Optimize stdWrap usage for TypoScript content element OTABLE
+	* Added description of #23889: Optimize stdWrap usage for TypoScript content element COLUMNS
+	* Added description of #23920: Optimize stdWrap usage for TypoScript content element HRULER
+	* Added description of #23974: Optimize stdWrap usage for TypoScript content element IMGTEXT
+	* Added description of #23981: Optimize stdWrap usage for TypoScript content element FORM
+	* Added description of #24069: Optimize stdWrap usage for TypoScript content element SEARCHRESULT
+	* Added description of #24062: Optimize stdWrap usage for TypoScript content element USER_INT
+	* Added description of #24051: Optimize stdWrap usage for TypoScript content element PHP_SCRIPT
+	* Added description of #24052: Optimize stdWrap usage for TypoScript content element PHP_SCRIPT_INT and PHP_SCRIPT_EXT 
+	* Added description of #24064: Optimize stdWrap usage for TypoScript content element TEMPLATE
+	* Added description of #24048: Optimize stdWrap usage for TypoScript content element MULTIMEDIA
+	* Added description of #24032: Optimize stdWrap usage for TypoScript content element EDITPANEL
+	* Added description of #24090: Optimize stdWrap usage for GIFBUILDER
+
+2011-04-20  Christopher  <chrissitopher@gmx.de>
+
+	* Added description of #22279: Add .numberFormat function to stdWrap
+	* Added description of #23844: No possibility to completely disable the preview info box -> introduce new config setting
+	* Fixed bug #26160: Improve documentation of .numberFormat
+	* Added description of #24443: getBrowserInfo should recognize iOS and android for easier mobile optimization
+	* Added description of #16209: additional wrap for mailform.radio
+	* Added description of #20497: New option noScale for getImgResource()
+
+2011-04-19  Christopher  <chrissitopher@gmx.de>
+
+	* Added description of #14894: stdWrap.age should differenciate between singular/plural
+
+2011-04-18  Christopher  <chrissitopher@gmx.de>
+
+	* Added description of #24059: Add basic support for RDFa in core (semantic web)
+
+2011-04-17  Christopher  <chrissitopher@gmx.de>
+
+	* Fixed bug #13724: Some GIFBUILDER objects are poorly documented
+	* Added description of #15288: Ellipse Gifbuilder Function
+	* Fixed bug #18128: special in general: Wrong note on .entryLevel (thanks to Uschi Renziehausen)
+	* Fixed bug #18132: special.list: Description of .value is unclear (thanks to Uschi Renziehausen)
+	* Fixed bug #18133: special.updated: Improve descriptions of .mode and .excludeNoSearchPages (thanks to Uschi Renziehausen)
+	* Fixed bug #18134: special.rootline: Add an accessible example
+	* Fixed bug #18135: special.browse: Several improvements for that section (thanks to Uschi Renziehausen)
+	* Fixed bug #18137: special.keywords: Improve description of some properties (thanks to Uschi Renziehausen)
+	* Added description of #24545: Rename config.doctype value "html_5" to "html5"
+
+2011-04-16  Christopher  <chrissitopher@gmx.de>
+
+	* Fixed bug #9229: config.minifyJS description incomplete
+	* Fixed bug #9230: config.minifyCSS is not documented
+	* Fixed bug #26037: config.concatenateJsAndCss is not documented
+	* Fixed bug #26034: layout parameter of FORM object should be marked as required (thanks to Patrick Rodacker)
+
+2011-04-15  Christopher  <chrissitopher@gmx.de>
+
+	* Fixed bug #10385: Documentation about Conditions (time) is incomplete
+	* Fixed bug #25969: Correct meaning of comma in the condition globalVar
+	
+2011-04-13  Christopher  <chrissitopher@gmx.de>
+
+	* Fixed bug #11085: Add l10n-hint to selectFields (thanks to Tolleiv Nietsch)
+	* Fixed bug #13936: Improve description of property page.javascriptLibs (thanks to Björn Pedersen)
+	* Fixed task #10612: Transformed unrelated chapters into appendices
+	* Fixed bug #11057: Property wrapItemAndSub for GMENU is in wrong place (thanks to Riccardo De Contardi)
+	* Fixed bug #8889: Description of config.pageTitleFirst is unclear
+
 2011-04-10  Francois Suter  <francois.suter@typo3.org>
 
 	* Released version 4.4.0 to TER
