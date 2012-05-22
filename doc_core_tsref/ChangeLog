@@ -1,0 +1,211 @@
+2009-05-13  Francois Suter  <francois@typo3.org>
+
+	* Split getText datatype description into 2 cells, because overflow was hidden from view
+	* Updated table of contents
+	* Released to TER as version 4.2.1
+
+2008-10-08  Francois Suter  <francois@typo3.org>
+
+	* Added missing stdWrap property for RECORDS object
+	* Rearranged order of dontCheckPid property for RECORDS object
+
+2008-10-08  Francois Suter  <francois@typo3.org>
+
+	* Removed erroneous stdWrap data type from doNotShowLink and doNotLinkIt properties
+
+2008-12-01  Michael Stucki  <michael@typo3.org>
+
+	* Release of CoreDocs for TYPO3 4.2
+
+2008-10-08  Francois Suter  <francois@typo3.org>
+
+	* Cleaned up some remaining old font styles
+
+2008-10-08  Michael Stucki  <michael@typo3.org>
+
+	* Applying new document layout
+
+2008-09-11  Francois Suter  <francois@typo3.org>
+
+	* Updated table of contents
+
+2008-08-29  Francois Suter  <francois@typo3.org>
+
+	* Updated with all the new (4.2) features documented in the wiki's pending documentation page
+	* Corrected error in property naming PAGE.includeJS.style => PAGE.includeJS.type
+
+2008-02-06  Michael Stucki  <michael@typo3.org>
+
+	* Separation of HMENU "special" properties, by Uschi Renziehausen
+	* Improve description of typolink->jumpurl
+
+2007-04-27  Michael Stucki  <michael@typo3.org>
+
+	* Release of CoreDocs for TYPO3 4.1
+
+2007-03-20  Michael Stucki  <michael@typo3.org>
+
+	* Removed stdWrap screenshot on request by core team
+	* Changed description for "config.stat_apache_logfile", explain feature to use dynamic logfile names (feature was introduced by Martin Kutschker some time ago)
+
+2007-02-21  Michael Stucki  <michael@typo3.org>
+
+	* Change description for "config.linkVars", add range description and example
+	* Add "additionalParams" property to GMENU/TMENU items
+
+2007-01-24  Michael Stucki  <michael@typo3.org>
+
+	* Added "stdWrap" to "GMENU" and "TMENU" sections (by Oliver Hader, see bug #4780)
+	* Changed description for the ".method" subproperty of typolink.addQueryString (by Oliver Hader, see bug #4790)
+
+2007-01-23  Michael Stucki  <michael@typo3.org>
+
+	* Changed little detail about stdWrap: "wrapAlign" property whose output has slightly changed
+	* !!! Removed description for "netprintApplicationLink" from IMGTEXT objects (function has been removed completely)
+
+2007-01-21  Michael Stucki  <michael@typo3.org>
+
+	* Update copyright information
+	* Set version information to TYPO3 4.1
+	* Clarify that "config.baseURL" must end with a slash "/"
+
+2007-01-19  Michael Stucki  <michael@typo3.org>
+
+	* Added comment to IMG_RESOURCE description based on change of bug #4006 (thanks Dmitry)
+	* Added config.sys_language_exclude property description (see bug #4656, thanks Kasper and Andreas Otto)
+	* Added config.stat_pageLen and modified config.stat_apache_niceTitle according to utf-8 improvement by Martin Kutschker
+
+2006-11-29  Kasper Skaarhoj  <kasperYYYY@typo3.com>
+
+	* Added information about 4.1 feature which is link handlers in the ->typolink function. There is a nice little section explaining how to use this hook.
+
+2006-08-21  Michael Stucki  <michael@typo3.org>
+
+	* Changed revision number to 4.0
+	* Added "accesskey" attribute to "TMENU" section
+
+2006-08-17  Michael Stucki  <michael@typo3.org>
+
+	* Extended config.removeDefaultJS and config.inlineStyle2TempFile with information about new default values when using compatVersion=4.0
+
+2006-07-26  Michael Stucki  <michael@typo3.org>
+
+	* Added "ATagParams" to "GMENU" section (see bug #3811)
+	* Added "JSwindow.altUrl_noDefaultParams" to "imageLinkWrap" section (see bug #1153)
+	* Exchanged the TYPO3 logo in the document footer
+	* Changed description of "accessibility" flag of FORM cObjects
+	* Added "formName" description to FORM cObjects
+	* Added "fieldPrefix" description to FORM cObjects
+	* Added "dontMd5FieldNames" description to FORM cObjects
+	* Slightly changed the description of "cropscale" feature in "imgResource" section (thanks Stefan Geith)
+
+2006-07-01  Michael Stucki  <michael@typo3.org>
+
+	* Changed config.spamProtectEmailAddresses range from "boolean / ascii / -5 to 1" to "ascii / -10 to 10"
+	* Fixed a typo in "GMENU_LAYERS / TMENU_LAYERS" introduction
+
+2006-04-18  Michael Stucki  <michael@typo3.org>
+
+	* Completition of config.stat_apache_niceTitle
+
+2006-04-17  Michael Stucki  <michael@typo3.org>
+
+	* Updated some stdWrap descriptions
+	* Updated description of FORM => "accessibility"
+	* Added FORM => "noWrapAttr"
+
+2006-04-16  Michael Stucki  <michael@typo3.org>
+
+	* Added stdWrap properties to GIFBUILDER => TEXT "fontColor" property
+	* Fixed all "depreciated" => "deprecated"
+	* Added description of new content sliding properties to CONTENT cObject
+	* Added config.stat_apache_niceTitle and config.stat_apache_noRoot descriptions
+	* Replaced some tslib/ with typo3/sysext/cms/tslib/
+	* Small changes to config.xmlprologue
+	* Added "current" shortkey to HMENU => "excludeUidList"
+	* Added cropscale description to imgResource => "width"
+	* Added "method" and "exclude" subproperties to typolink.addQueryString
+	* Added HMENU => "addQueryString" (refers to typolink.addQueryString)
+	* Added "ifBlank" to stdWrap function
+	* Minor change to TEMPLATE => "relPathPrefix"
+
+2006-04-10  Michael Stucki  <michael@typo3.org>
+
+	* Removed section "Preparing pages for Direct Mail sending". It has moved to the direct_mail manual.
+	* Removed section "Preparing pages for indexing". It has moved to the indexed_search manual.
+	* Removed the "Tips" section completely because it was empty after removing the sections above.
+	* Changed config.baseURL from "int/string" to "string" only. (Feature was removed for security reasons.)
+	* Added "formurl" property to "fe_adminLib.inc properties" section
+	* Removed "no_cache" property from "fe_adminLib.inc properties" section (Though it is still available to keep backwards compatibility. However, typolink will be preferred.)
+
+2006-03-22  Michael Stucki  <michael@typo3.org>
+
+	* Changed note about regular expressions in globalString match
+	* Added note about combining conditions to TSref.
+
+2006-02-14  Michael Stucki  <michael@typo3.org>
+
+	* Merged all changes below into Kaspers document version
+	* Moving this document to Sourceforge CVS
+
+2006-02-10  Michael Stucki  <michael@typo3.org>
+
+	* Corrected description of "listNum" in section "stdWrap"
+	* Changed datatype of "[imgResource].params" from "" to "string"
+	* Added new "stdWrap" property "TCAselectItem"
+
+2006-02-08  Michael Stucki  <michael@typo3.org>
+
+	* Added new property "includeJS" to "PAGE"
+	* Added new property "newRecordInPid" to "EDITPANEL"
+
+2006-01-29  Michael Stucki  <michael@typo3.org>
+
+	* Default encoding of "config.notification_email_encoding" is now "quoted-printable"
+	* Added "use_base64" to the list of formmail keywords
+
+2006-01-19  Michael Stucki  <michael@typo3.org>
+
+	* Added description for "config.simulateStaticDocuments_replacementChar"
+	* Added information about how to get array/object values using getText
+
+2006-01-18  Michael Stucki  <michael@typo3.org>
+
+	* Changed all "/ stdWrap" to "/stdWrap" (it's a subfunction, not an alternative)
+	* Added "/stdWrap" possibility to all "ATagParams" properties (except config.ATagParams)
+
+2006-01-14  Michael Stucki  <michael@typo3.org>
+
+	* Added "ignore" property to "config.sys_language_mode"
+
+2006-01-08  Michael Stucki  <michael@typo3.org>
+
+	* Added "mdate" to stdWrap "filelist:sorting" property
+
+2005-12-26  Michael Stucki  <michael@typo3.org>
+
+	* Change description for "globalString" conditions (RegExp support, wildcard change)
+	* Added description for the "compatVersion" condition
+
+2005-12-19  Michael Stucki  <michael@typo3.org>
+
+	* Added description for support of objects in conditions
+
+2005-12-16  Michael Stucki  <michael@typo3.org>
+
+	* Improved description of getText "cObj:parentRecordNumber" property
+	* Added description of "returnKey" for the split function
+	* Added a note that typolink.addQueryString will fail with RealURL
+	* Added description of "title" for the typolink.parameter property
+
+2005-12-10  Michael Stucki  <michael@typo3.org>
+
+	* Fixed a graphic in section "MENU Objects" (was placed over the text before)
+	* Removed "The logfile also must exist." at "config.stat_apache_logfile"
+	* Changed "config.doctype" description as proposed by Masi
+	* Added description for "config.xhtmlDoctype"
+	* Changed description of "config.message_page_is_being_generated"
+
+2005-05-23  Michael Stucki  <michael@typo3.org>
+
+	* Release of TYPO3 3.8.0

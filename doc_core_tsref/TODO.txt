@@ -1,0 +1,57 @@
+****************************
+TODO:
+****************************
+
+Intro (things to tell):
+- TypoScript syntax and TypoScript templates (Andet dokument)
+- TypoScript and PHP arrays (Anden dokument)
+- Objects, properties and sub-properties - what they are called (Anden dokument)
+- debugging TypoScript with Admin Panel
+- breakpoints with Template Analyser
+
+General:
+- GMENU_LAYERS: add a comment in TSref stating that the X-Level menus won't work with NC4 in vertical alignment.
+- Generally create an overview of TypoScript, properties, how it all relate to each other etc.
+
+Concepts to explain?:
+- stdWrap
+- CSS usage
+- USER_INT
+
+
+
+****************************
+TODO: DATA TYPES
+****************************
+- review the data type names, the relations between things and consider how it all works best with the TS browser.
+- Consistent data types... [value] / ->[properties]
+Formats: 
+
+[datatype] - for a value string, possibly with properties if found, eg. cObject
+	Example: 	int
+
+[datatype] / ->[object] - "object" can be a) any of the "functions" or b) a content objects name.
+	Example:	int / ->stdWrap
+	Example:	->stdWrap
+
+"string"  - adhoc datatype obvious from the content of the quoted string
+	Example: 	"x,y,z"
+
+'[list of]' + datatype	- a comma list of values for the data type, normally with no space between.
+	Example: 	[list of] int
+
+[datatype] '[.....]' - additional information to the data type, like a range for values.
+	Example: 	int [1-100]
+	Example:	string [divided by "|"]
+
+[datatype] '[or]' [datatype]
+	Example:	boolean [or] string
+
+
+'[array of strings]' + datatype - 
+	Example: 	[array of strings]
+'[array of]' + datatype - 
+
+
+
+
