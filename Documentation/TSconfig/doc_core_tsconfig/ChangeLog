@@ -1,3 +1,49 @@
+2010-02-12  Francois Suter  <francois@typo3.org>
+
+	* Corrected wrong usage of setup.defaults instead of setup.default in User TSconfig (thanks to Chris Müller)
+	* Improved description of property edit_showFieldHelp (thanks to Yannick Pavard)
+	* Added description of user setup properties for mass file uploader and resizable text areas (thanks to Chris Müller)
+	* Fixed bug #13385: mod.web_list.[tablename].hideTable wrongly documented (thanks to Calderini Daniel)
+	* Released version 4.3.2 to TER
+
+2009-12-18  Francois Suter  <francois@typo3.org>
+
+	* Released version 4.3.1 to TER
+
+2009-12-15  Francois Suter  <francois@typo3.org>
+
+	* Corrected title level errors in OO document
+
+2009-12-14  Francois Suter  <francois@typo3.org>
+
+	* Corrected the layout and updated the table of contents
+	* Updated the PDF version
+	* Released version 4.3.0 to TER
+
+2009-12-07  Francois Suter  <francois@typo3.org>
+
+	* Clarified description of some old properties (disableCacheSelector)
+	* Added chapter of conditions
+
+2009-12-05  Francois Suter  <francois@typo3.org>
+
+	* Finished updating screenshots
+	* Marked one old property as unused anymore (disableCacheSelector)
+	* Optimized page layout and updated table of contents
+
+2009-12-04  Francois Suter  <francois@typo3.org>
+
+	* Added all the new features from TYPO3 4.3, except conditions
+	* Updated most screenshots (thanks to Martin Holtz for the shots)
+
+2009-05-15  Francois Suter  <francois@typo3.org>
+
+	* Updated naming of User > Setup module (to User tools > User settings)
+
+2009-02-02  Michael Stucki  <michael@typo3.org>
+
+	* Add options.view.languageOrder property to UserTSconfig
+
 2008-12-01  Michael Stucki  <michael@typo3.org>
 
 	* Release of CoreDocs for TYPO3 4.2
