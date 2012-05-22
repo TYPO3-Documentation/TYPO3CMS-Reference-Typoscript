@@ -1,5 +1,47 @@
-2011-12-09 Martin Holtz <typo3@martinholtz.de>
-    * Added description of #32414: added .GMT as property of strftime 
+2012-04-23  Christopher  <chrissitopher@gmx.de>
+
+	* Fixed task #35279: Prepare release of TSref 4.7.0
+	* Fixed task #35279: Regenerated the PDF file
+	* Released version 4.7.0 to TER
+
+2012-04-22  Christopher  <chrissitopher@gmx.de>
+
+	* Fixed task #36416: Add note on deprecation of the cObject HTML
+	* Fixed task #36422: Add note on removal of value "html_5" for config.doctype
+
+2012-04-20  Martin Holtz  <typo3@martinholtz.de>
+
+	* Fixed bug #36375: added property .GMT to stdWrap.date
+
+2012-04-16  Christopher  <chrissitopher@gmx.de>
+
+	* Fixed task #35445: Add information about in which major version new features were added
+
+2012-03-30  Francois Suter  <francois.suter@typo3.org>
+
+	* Fixed bug #35397: TSref must use Share font for headings
+
+2012-03-26  Christopher  <chrissitopher@gmx.de>
+
+	* Fixed task #31938: Add META.<key>.httpEquivalent property
+	* Fixed task #33724: Add conditions as page.includeCSS.if and page.includeJS*.if
+	* Fixed task #32662: New config.stat_* options to allow anonymized storage of statistic log information
+	* Fixed task #33715: Document orderedStdWrap
+	* Fixed task #34307: Add documentation for stdWrap function "cache"
+	* Fixed task #35279: Prepare release of TSref 4.7.0
+
+2012-03-25  Christopher  <chrissitopher@gmx.de>
+
+	* Fixed bug #34472: Rule 3 of the optionSplit description is incorrect (thanks to Jochen Weiland and Steffen Ritter)
+	* Fixed task #32671: Add stdWrap for HMENU: maxItems, minItems & begin
+	* Fixed task #32347: Add documentation for new sub-properties of filelink.icon
+	* Fixed task #32320: Add documentation of config.pageTitleSeparator
+	* Fixed task #31768: New property config.htmlTag_stdWrap
+	* Fixed task #34297: Update references to $TYPO3_CONF_VARS['BE']['forceCharset']
+
+2011-12-09  Martin Holtz  <typo3@martinholtz.de>
+
+	* Added description of #32414: added .GMT as property of strftime
 
 2011-12-01  Christopher  <chrissitopher@gmx.de>
 

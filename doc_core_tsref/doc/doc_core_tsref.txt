@@ -1,9 +1,9 @@
-TypoScript Reference
+﻿TypoScript Reference
 Extension Key: doc_core_tsref
 Language: en
-Version: 4.6.0
+Version: 4.7.0
 Keywords: forAdmins, forIntermediates
-Copyright 2000-2011, Documentation Team, <documentation@typo3.org>
+Copyright 2000-2012, Documentation Team, <documentation@typo3.org>
 
 This document is published under the Open Content License
 available from http://www.opencontent.org/opl.shtml
@@ -28,7 +28,7 @@ About this document	4
 What's new	4
 Credits	4
 Feedback	4
-General information	5
+General information	4
 Data types	6
 Introduction	6
 Data types reference	6
@@ -38,130 +38,130 @@ Conditions	18
 Condition reference	18
 Functions	32
 stdWrap	32
-imgResource	41
-imageLinkWrap	42
-numRows	44
-select	44
-split	45
-replacement	46
-if	47
-typolink	48
-textStyle	53
-encapsLines	54
-tableStyle	56
-addParams	57
-filelink	57
-round	59
-numberFormat	59
-parseFunc	60
-makelinks	63
-tags	64
-HTMLparser	65
-HTMLparser_tags	65
-Setup	67
-Top-level objects	67
-The "plugin" TLO	68
-"CONFIG"	69
-"CONSTANTS"	92
-"PAGE"	92
-"FE_DATA"	97
-"FE_TABLE"	98
-"FRAMESET"	99
-"FRAME"	99
-"META"	100
-"CARRAY"	100
-Content Objects (cObject)	102
-HTML	104
-TEXT	104
-COBJ_ARRAY (COA, COA_INT)	104
-FILE	105
-IMAGE	106
-IMG_RESOURCE	107
-CLEARGIF	107
-CONTENT	107
-RECORDS	109
-HMENU	110
-CTABLE	121
-OTABLE	122
-COLUMNS	123
-HRULER	123
-IMGTEXT	123
-CASE	128
-LOAD_REGISTER	128
-RESTORE_REGISTER	129
-FORM	129
-SEARCHRESULT	136
-USER and USER_INT	139
-TEMPLATE	140
-FLUIDTEMPLATE	143
-MEDIA	144
-SWFOBJECT	146
-QTOBJECT	147
-MULTIMEDIA	148
-SVG	149
-EDITPANEL	150
-GIFBUILDER	152
-GIFBUILDER	152
-Object names in this section	154
-NON-GifBuilderObj	162
-MENU Objects	163
-Common properties	163
-Common item states for TMENU, GMENU and IMGMENU series:	166
-[menuObj].sectionIndex	167
-GMENU	168
-GMENU_LAYERS / TMENU_LAYERS	170
-GMENU_FOLDOUT	173
-TMENU	176
-TMENUITEM	177
-IMGMENU	178
-IMGMENUITEM	180
-JSMENU	180
-JSMENUITEM	181
-Appendix A ? media/scripts/  Plugins	182
-media/scripts/ in general	182
-fe_adminLib.inc	182
-tipafriendLib.inc	192
-plaintextLib.inc	193
-Appendix B ? Standard Templates	196
-static_template	196
-Media	196
-Appendix C ? PHP include scripts	197
-Introduction	197
-TypoScript Configuration	197
-Including your script	199
-Case story	201
-Storing user-data or session-data	202
-Using the built in "shopping basket"	203
-Appendix D ? index.php	205
-Introduction	205
-Submitting data to index.php	205
-Search	205
-Emailforms	206
-Database-submit	206
+imgResource	42
+imageLinkWrap	44
+numRows	45
+select	45
+split	47
+replacement	48
+if	49
+typolink	50
+textStyle	55
+encapsLines	56
+tableStyle	58
+addParams	58
+filelink	59
+round	61
+numberFormat	61
+parseFunc	62
+makelinks	65
+tags	66
+HTMLparser	67
+HTMLparser_tags	67
+cache	68
+Setup	70
+Top-level objects	70
+The "plugin" TLO	71
+"CONFIG"	72
+"CONSTANTS"	96
+"PAGE"	96
+"FE_DATA"	102
+"FE_TABLE"	102
+"FRAMESET"	103
+"FRAME"	103
+"META"	104
+"CARRAY"	104
+Content Objects (cObject)	106
+HTML	108
+TEXT	108
+COBJ_ARRAY (COA, COA_INT)	109
+FILE	109
+IMAGE	110
+IMG_RESOURCE	111
+CLEARGIF	111
+CONTENT	111
+RECORDS	113
+HMENU	114
+CTABLE	125
+OTABLE	126
+COLUMNS	126
+HRULER	127
+IMGTEXT	127
+CASE	131
+LOAD_REGISTER	132
+RESTORE_REGISTER	132
+FORM	133
+SEARCHRESULT	140
+USER and USER_INT	142
+TEMPLATE	143
+FLUIDTEMPLATE	147
+MEDIA	148
+SWFOBJECT	150
+QTOBJECT	151
+MULTIMEDIA	152
+SVG	153
+EDITPANEL	154
+GIFBUILDER	156
+GIFBUILDER	156
+Object names in this section	158
+NON-GifBuilderObj	166
+MENU Objects	167
+Common properties	167
+Common item states for TMENU, GMENU and IMGMENU series:	170
+[menuObj].sectionIndex	171
+GMENU	172
+GMENU_LAYERS / TMENU_LAYERS	174
+GMENU_FOLDOUT	177
+TMENU	180
+TMENUITEM	180
+IMGMENU	182
+IMGMENUITEM	184
+JSMENU	184
+JSMENUITEM	185
+Appendix A – media/scripts/  Plugins	186
+media/scripts/ in general	186
+fe_adminLib.inc	186
+tipafriendLib.inc	196
+plaintextLib.inc	197
+Appendix B – Standard Templates	200
+static_template	200
+Media	200
+Appendix C – PHP include scripts	201
+Introduction	201
+TypoScript Configuration	201
+Including your script	203
+Case story	205
+Storing user-data or session-data	206
+Using the built in "shopping basket"	207
+Appendix D – index.php	209
+Introduction	209
+Submitting data to index.php	209
+Search	209
+Emailforms	210
+Database-submit	210
 
 
 Introduction
 About this document
 This document is a complete reference to all objects and properties of TypoScript as used in TYPO3 templates (and not in TSconfig).
 For explanations about the syntax of TypoScript itself, please refer to the "TypoScript Syntax and In-Depth Study" manual.
-This version is updated for TYPO3 version 4.6.
+This version is updated for TYPO3 version 4.7.
 What's new
-The main changes include the integration of the documentation of the content objects MEDIA, SWFOBJECT and QTOBJECT. 
-The new stdWrap properties "hash", "round" and "replacement" were added. stdWrap has been added to IMAGE.file.params and to all properties of the select object. The "case" property of stdWrap now has the new values "capitalize", "ucfirst" and "lcfirst". 
-The property config.minifyJS has been replaced by config.compressJs and config.minifyCSS has been replaced by config.compressCss. config.concatenateJsAndCss is now deprecated and has been replaced by two separate properties: config.concatenateJs and config.concatenateCss. 
-config.includeJSlibs, config.includeJS and config.includeCSS now offer additional subproperties in regards to compression. 
-The property config.cache, which can influence the cache lifetime of pages, has been appended.
+The main changes include new config.stat_* options which allow anonymized storage of log information. For page.includeCSS and page.includeJS* conditions are now available. 
+The new stdWrap properties "cache" and "orderedStdWrap" were added. stdWrap has been added to the HMENU options "maxItems", "minItems" and "begin". The option config.htmlTag_stdWrap, which makes more modifications of the html tag possible, has been appended. 
+New properties of filelink.icon were appended. The option config.pageTitleSeparator has been added allowing further customizations of the website title. The meta object now offers the new subproperty "httpEquivalent", which makes handling of meta tags more flexible.
 Additionally various descriptions were improved and many smaller mistakes were fixed. 
 For more details about changes in the various TYPO3 versions please refer to the links below.
 
 More information about changed properties
-You can find a list of changes for more recent TYPO3 versions in the wiki: 
-http://wiki.typo3.org/Documentation_changes_in_4.2 
-http://wiki.typo3.org/Documentation_changes_in_4.3 
-http://wiki.typo3.org/Documentation_changes_in_4.4_and_4.5 
-http://wiki.typo3.org/Documentation_changes_in_4.6 
+You can find a list of changes for more recent TYPO3 versions here: 
+TYPO3 4.2: http://wiki.typo3.org/Documentation_changes_in_4.2 
+TYPO3 4.3: http://wiki.typo3.org/Documentation_changes_in_4.3 
+TYPO3 4.4 and 4.5: http://wiki.typo3.org/Documentation_changes_in_4.4_and_4.5 
+TYPO3 4.6: http://wiki.typo3.org/Documentation_changes_in_4.6 
+TYPO3 4.7: http://forge.typo3.org/projects/typo3v4-doc_core_tsref/versions/1454 
 Credits
-The manual was originally written by Kasper Sk?rh?j. Over the years it has been maintained and updated successively by Michael Stucki, Fran?ois Suter and Christopher Stelmaszyk.
+The manual was originally written by Kasper Skårhøj. Over the years it has been maintained and updated successively by Michael Stucki, François Suter and Christopher Stelmaszyk.
 Feedback
 For general questions about the documentation get in touch by writing to documentation@typo3.org.
 If you find a bug in this manual, please file an issue in this manual's bug tracker: http://forge.typo3.org/projects/typo3v4-doc_core_tsref/issues
@@ -169,15 +169,17 @@ Maintaining quality documentation is hard work and the Documentation Team is alw
 General information
 Case sensitivity
 All names and references in TypoScript are case sensitive! This is very important to notice. That means that:
-myObject = HTML
-myObject.value = <strong> HTML - code </strong>
+myObject = TEXT
+myObject.value = <strong>Some HTML code</strong>
 
 is not the same as
-myObject = html
-myObject.Value = <strong> HTML - code </strong>
+myObject = text
+myObject.Value = <strong>Some HTML code</strong>
 
-While the first will be recognized as the content-object "HTML" and will produce the desired output, the latter will not be recognized and will not output anything. Even if you wrote "HTML" in uppercase in the second example, it would still not work, because the property "value" is misspelled. 
+While the first will be recognized as the content-object "TEXT" and will produce the desired output, the latter will not be recognized and will not output anything. Even if you wrote "TEXT" in uppercase in the second example, it would still not work, because the property "value" is misspelled. 
 Always remember: In this manual the case of objects is important.
+Version numbers
+For new features TSref includes a note in which TYPO3 version the feature was added. If such a note is missing, the feature is part of TYPO3 since version 4.5 at least.
 Data types
 Introduction
 The values you assign to properties in TypoScript are often of a specific format. The following table describes these formats. 
@@ -361,9 +363,9 @@ Case-conversion.
 Possible keywords:
 upper: Convert all letters of the string to uppercase. 
 lower: Convert all letters of the string to lowercase. 
-capitalize: Uppercase the first character of each word in the string. 
-ucfirst: Convert the first letter of the string to uppercase. 
-lcfirst: Convert the first letter of the string to lowercase. 
+capitalize: (Since TYPO3 4.6) Uppercase the first character of each word in the string. 
+ucfirst: (Since TYPO3 4.6) Convert the first letter of the string to uppercase. 
+lcfirst: (Since TYPO3 4.6) Convert the first letter of the string to lowercase. 
 
 space
 5 | 5
@@ -672,7 +674,7 @@ cObject
 "cObjects" are also called "Content Objects". See the section "Content Objects" later in this manual.
 
 Examples:
-HTML / TEXT / IMAGE .... 
+TEXT / IMAGE / MEDIA .... 
 frameObj
 FRAMESET / FRAME
 menuObj
@@ -691,12 +693,12 @@ Introduction
 Reference to objects
 Whenever you see ->[objectname] in the tables it means that the property is an object "objectname" with properties from object objectname. You don't need to define the objecttype. 
 Calculating values (+calc)
-Sometimes a datatype is set to "something +calc". "+calc" indicates that the value is calculated with "+-/*". Be aware that the operators have no "weight". The calculation is just done from left to right.
+Sometimes a data type is set to "something +calc". "+calc" indicates that the value is calculated with "+-/*". Be aware that the operators have no "weight". The calculation is just done from left to right.
 Example:
 45 + 34 * 2 = 158		(which is the same as this in ordinary arithmetic: (45+34)*2=158)
 
 "... /stdWrap"
-When a datatype is set to "type /stdWrap" it means that the value is parsed through the stdWrap function with the properties of the value as parameters.
+When a data type is set to "type /stdWrap" it means that the value is parsed through the stdWrap function with the properties of the value as parameters.
 Example:
 pixels /stdWrap:	Here the value should be set to pixels and parsed through stdWrap.
 In a real application we could do like this:
@@ -705,13 +707,13 @@ In a real application we could do like this:
 
 This example imports the value from the field "imagewidth" of the current $cObj->data-array. But we don't trust the result to be an integer so we parse it through the the intval()-function.
 optionSplit
-optionSplit is a very tricky function. It's primarily used in the menu-objects where you define properties of a whole bunch of items at once. Here the value of properties would be parsed through this function an depending on your setup you could e.g. let the last menu-item appear with another color than the other.
+optionSplit is a very tricky function. It's primarily used in the menu-objects where you define properties of a whole bunch of items at once. Here the value of properties would be parsed through this function and depending on your setup you could e.g. let the last menu-item appear with another color than the others.
 The syntax is like this:
 |*|	- splits the value in parts first, middle, last.
 ||	- splits each of the first, middle, last in subparts
 1. The priority is last, first, middle.
 2. If the middle-value is empty (""), the last part of the first-value is repeated.
-3. If the first- or middle value is empty, the first part of the last-value is repeated before the last value
+3. If the first- and middle value are empty, the first part of the last-value is repeated before the last value
 4. The middle value is rotated.
 
 ex: first1 || first2 |*| middle1 || middle2 || middle3 |*| last1 || last 2
@@ -809,9 +811,9 @@ TS:	backColor = red || yellow |*||*| blue || olive
 	Contact		(blue)		last, subpart 1
 	Links		(olive)		last, subpart 2
 
-"3: If the first- or middle value is empty, the first part of the last-value is repeated before the last value"
+"3: If the first- and middle value are empty, the first part of the last-value is repeated before the last value"
 Example:
-The middle-value and first-value is left out now. Then the subpart 1 of the last value is repeated. Please observe that no space must exist between the two |*||*|!
+The middle-value and first-value are left out now. Then the subpart 1 of the last value is repeated. Please observe that no space must exist between the two |*||*|!
 TS:	backColor = |*||*| blue || olive
 
 	Introduction		(blue)		last, subpart 1 (repeated)
@@ -858,8 +860,8 @@ This condition will match if the visitor opens the website with Internet Explore
 This will match with either Opera or Firefox browsers
 [browser = opera] || [browser = firefox]
 
-This will match with either Firefox or Internet Explorer. In case of Internet Explorer, the version must be above 6.
-[browser = firefox] || [browser = msie] && [version => 6]
+This will match with either Firefox or Internet Explorer. In case of Internet Explorer, the version must be above 8.
+[browser = firefox] || [browser = msie] && [version => 8]
 
 For full explanations about conditions, please refer to "TypoScript Syntax and In-depth Study".
 
@@ -912,7 +914,7 @@ unknown
 
 The condition works with the user agent string. The user agent is parsed with a regular expression, which searches the string for matches with the identifications named above. If there are multiple matches, the rightmost match is finally used, because it mostly is the most correct one.
 An example user agent could look like this:
-Mozilla/5.0 (Windows; U; Windows NT 5.1; de; rv:1.9.2.15) Gecko/20110303 Firefox/3.6.15
+Mozilla/5.0 (Windows NT 5.1; rv:11.0) Gecko/20100101 Firefox/11.0
 
 This string contains the identifications "Gecko" and "Firefox". The condition
 [browser = firefox]
@@ -1411,18 +1413,19 @@ This condition will return true if the remote address contains "192.168" - which
 Functions
 stdWrap
 This function is often added as a property to values in TypoScript. 
-Example with the property "value" of the content-object, "HTML":
-10 = HTML
+Example with the property "value" of the content-object, "TEXT":
+10 = TEXT
 10.value = some text
-10.value.case = upper
+10.case = upper
 Here the content of the object "10" is uppercased before it's returned.
 stdWrap properties are executed in the order they appear in the table below. If you want to study this further please refer to typo3/sysext/cms/tslib/class.tslib_content.php, where you will find the function stdWrap() and the array $stdWrapOrder, which represents the exact order of execution.
+Note that the stdWrap property "orderedStdWrap" allows you to execute multiple stdWrap functions in a freely selectable order.
 Content-supplying properties of stdWrap
 The properties in this table are parsed in the listed order. The properties "data", "field", "current", "cObject" (in that order!) are special as they are used to import content from variables or arrays. The above example could be rewritten to this:
-10 = HTML
+10 = TEXT
 10.value = some text
-10.value.case = upper
-10.value.field = header
+10.case = upper
+10.field = header
 
 Now the line "10.value = some text" is obsolete, because the whole value is "imported" from the field called "header" from the $cObj->data-array.
 Property:
@@ -1517,7 +1520,7 @@ Explodes the content with "," (comma) and the content is set to the item[value].
 
 Special keyword: "last" is set to the last element of the array!
 
-Special keyword: "rand" returns a random item out of a list.
+(Since TYPO3 4.6) Special keyword: "rand" returns a random item out of a list.
 
 .splitChar (string):
 Defines the string used to explode the value. If splitChar is an integer, the character with that number is used (eg. "10" to split lines...).
@@ -1528,7 +1531,7 @@ stdWrap properties of the listNum...
 Examples:
 We have a value of "item 1, item 2, item 3, item 4":
 This would return "item 3":
-.listNum = last ? 1
+.listNum = last – 1
 
 That way the subtitle field to be displayed is chosen randomly upon every reload:
 page.5 = COA_INT
@@ -1588,7 +1591,7 @@ split
 
 replacement
 ->replacement
-Performs an ordered search/replace on the current content with the possibility of using PCRE regular expressions. An array with numeric indexes defines the order of actions and thus allows multiple replacements at once.
+(Since TYPO3 4.6) Performs an ordered search/replace on the current content with the possibility of using PCRE regular expressions. An array with numeric indices defines the order of actions and thus allows multiple replacements at once.
 
 prioriCalc
 boolean
@@ -1619,7 +1622,7 @@ PHP: $content = intval($content);
 
 hash
 string /stdWrap
-Returns a hashed value of the current content. Set to one of the algorithms which are available in PHP. For a list of supported algorithms see http://www.php.net/manual/en/function.hash-algos.php.
+(Since TYPO3 4.6) Returns a hashed value of the current content. Set to one of the algorithms which are available in PHP. For a list of supported algorithms see http://www.php.net/manual/en/function.hash-algos.php.
 
 Example:
 
@@ -1632,7 +1635,7 @@ page.10 {
 
 round
 ->round
-Round the value with the selected method to the given number of decimals.
+(Since TYPO3 4.6) Round the value with the selected method to the given number of decimals.
 
 numberFormat
 ->numberFormat
@@ -1642,6 +1645,9 @@ date
 date-conf
 The content should be data-type "UNIX-time". Returns the content formatted as a date.
 PHP: $content = date($conf['date'], $content);
+
+Properties:
+.GMT: If set, the PHP function gmdate() will be used instead of date().
 
 Example where a timestamp is imported:
 .value.field = tstamp
@@ -1654,7 +1660,7 @@ This formatting is useful if the locale is set in advance in the CONFIG-object. 
 
 Properties:
 .charset: Can be set to the charset of the output string if you need to convert it to renderCharset. Default is to take the intelligently guessed charset from t3lib_cs.
-.GMT: If set PHP-function gmstrftime instead of stftime is used.
+.GMT: If set, the PHP function gmstrftime() will be used instead of strftime().
 
 age
 boolean or string
@@ -1853,6 +1859,25 @@ wrap3
 wrap /+.splitChar
 same as .wrap (but watch the order in which they are executed)
 
+orderedStdWrap
+Array of numeric keys with /stdWrap each
+(Since TYPO3 4.7) Execute multiple stdWrap statements in a freely selectable order. The order is determined by the numeric order of the keys. This allows to use multiple stdWrap statements without having to remember the rather complex sorting order in which the stdWrap functions are executed. 
+
+Example:
+10 = TEXT
+10.value = a
+10.orderedStdWrap {
+  30.wrap = |.
+
+  10.wrap = is | working
+  10.innerWrap = &nbsp;|&nbsp;
+
+  20.wrap = This|solution
+  20.stdWrap.wrap = &nbsp;|&nbsp;
+}
+In this example orderedStdWrap is executed on the value "a". 10.innerWrap is executed first, followed by 10.wrap. Then the next key is processed which is 20. Afterwards 30.wrap is executed on what already was created. 
+This results in "This is a working solution."
+
 outerWrap
 wrap /stdWrap
 Wraps the complete content
@@ -1945,6 +1970,10 @@ editPanel
 boolean / editPanel
 See cObject EDITPANEL.
 
+cache
+->cache
+(Since TYPO3 4.7) Caches rendered content in the caching framework.
+
 debug
 boolean
 Prints content with HTMLSpecialChars() and <PRE></PRE>: Useful for debugging which value stdWrap actually ends up with, if you're constructing a website with TypoScript. 
@@ -2005,7 +2034,8 @@ pixels /stdWrap
 see ".width"
 
 params
-string /stdWrap
+Until TYPO3 4.5: string
+Since TYPO3 4.6: string /stdWrap
 ImageMagick command-line:
 fx. "-rotate 90" or "-negate"
 
@@ -2239,7 +2269,8 @@ Data type:
 Description:
 Default:
 uidInList
-list of page_id /stdWrap
+Until TYPO3 4.5: list of page_id 
+Since TYPO3 4.6: list of page_id /stdWrap
 
 
 pidInList
@@ -2247,7 +2278,8 @@ list of page_id /stdWrap
 
 this
 recursive
-int /stdWrap
+Until TYPO3 4.5: int 
+Since TYPO3 4.6: int /stdWrap
 Recursive levels for the pidInList
 0
 orderBy
@@ -2261,7 +2293,10 @@ SQL-groupBy
 Without "group by"! E.g. "CType"
 
 max
-int 
+Until TYPO3 4.5: int 
++calc
++"total"
+Since TYPO3 4.6: int 
 +calc
 +"total" /stdWrap
 Max records
@@ -2269,7 +2304,10 @@ Max records
 Special keyword: "total" is substituted with count(*)
 
 begin
-int 
+Until TYPO3 4.5: int 
++calc 
++"total"
+Since TYPO3 4.6: int 
 +calc 
 +"total" /stdWrap
 Begin with record number value
@@ -2277,7 +2315,8 @@ Begin with record number value
 Special keyword: "total" is substituted with count(*)
 
 where
-SQL-where /stdWrap
+Until TYPO3 4.5: SQL-where
+Since TYPO3 4.6: SQL-where /stdWrap
 Without "where"!, E.g. " (title LIKE '%SOMETHING%' AND NOT doktype) "
 
 andWhere
@@ -2285,18 +2324,21 @@ SQL-where /stdWrap
 Without "AND"!, E.g. "NOT doktype".
 
 languageField
-string /stdWrap
+Until TYPO3 4.5: string
+Since TYPO3 4.6: string /stdWrap
 If set, this points to the field in the record which holds a reference to a record in sys_language table. And if set, the records returned by the select-function will be selected only if the value of this field matches the $GLOBALS['TSFE']->sys_language_uid (which is set by the config.sys_language_uid option)
 
 selectFields
-string /stdWrap
+Until TYPO3 4.5: string
+Since TYPO3 4.6: string /stdWrap
 List of fields to select, or "count(*)".
 If the records need to be localized, please include the relevant localization-fields (uid,pid,languageField,transOrigPointerField). Otherwise the TYPO3 internal localization will not succeed.
 *
 join
 leftjoin
 rightjoin
-string /stdWrap
+Until TYPO3 4.5: string
+Since TYPO3 4.6: string /stdWrap
 Enter tablename for JOIN , LEFT OUTER JOIN and RIGHT OUTER JOIN respectively.
 
 markers
@@ -2396,7 +2438,7 @@ Defines a wrap for each item.
 
 [tsref:->split]
 replacement
-This object performs an ordered search and replace operation on the current content with the possibility of using PCRE regular expressions. An array with numeric indexes defines the order of actions and thus allows multiple replacements at once.
+(Since TYPO3 4.6) This object performs an ordered search and replace operation on the current content with the possibility of using PCRE regular expressions. An array with numeric indices defines the order of actions and thus allows multiple replacements at once.
 Property:
 Data type:
 Description:
@@ -2520,7 +2562,7 @@ This is a GIFBUILDER object that will write "NEW" on a menu-item if the field "n
     isLessThan.field = newUntil
     negate = 1
   }
-?
+…
 typolink
 Wraps the incoming value with link.
 If this is used from parseFunc the $cObj->parameters-array is loaded with the link-parameters (lowercased)!
@@ -2558,7 +2600,7 @@ Example:
 '&sword_list[]=word1&sword_list[]=word2'
 
 Applications:
-This is very useful ? for example ? when linking to pages from a search result. The search words are stored in the register-key SWORD_PARAMS and can be insert directly like this:
+This is very useful – for example – when linking to pages from a search result. The search words are stored in the register-key SWORD_PARAMS and can be insert directly like this:
 .additionalParams.data = register:SWORD_PARAMS
 
 NOTE: This is only active for internal links!
@@ -2578,7 +2620,7 @@ method.
 jumpurl
 boolean
 Decides if the link should call the script with the jumpurl parameter in order to register any clicks in the statistics. 
-This works the same way as "filelink.jumpurl" does ? for more details see the description there.
+This works the same way as "filelink.jumpurl" does – for more details see the description there.
 
 Example:
 
@@ -3057,15 +3099,15 @@ If the returned value is a blank string (but not zero!) then the existing (if an
 
 [tsref:->addParams]
 Example:
-page.13 = HTML
+page.13 = TEXT
 page.13.value = <tr><td valign=top>
-page.13.value.addParams.bgcolor = {$menuCol.bgColor}
-page.13.value.addParams._offset = -1 
+page.13.addParams.bgcolor = {$menuCol.bgColor}
+page.13.addParams._offset = -1 
 
 Result example:
 <tr><td valign="top" bgcolor="white">
 
-(This example adds the 'bgColor' property to the value of the HTML cObject, if the content is not "". (zero counts as a value here!))
+(This example adds the 'bgColor' property to the value of the TEXT cObject, if the content is not "". (zero counts as a value here!))
 filelink
 Input is a filename in the path "path".
 icon, size and file are rendered in the listed order.
@@ -3080,7 +3122,17 @@ path = "uploads/media/"
 
 icon
 boolean /stdWrap
-Set if icon should be shown
+Set, if an icon should be shown. 
+
+The filename of the icon used is the one of the filetype of the file given in "path" (see above) plus extension (by default gif). E.g. for CSS files the icon file "css.gif" will be used by default.
+If for a certain filetype no icon file is found in icon.path, the file "default" plus extension (e.g. "default.gif") will be used.
+
+Since TYPO3 4.7 the following sub-properties are available:
+path: Path to the icon set (default: typo3/sysext/cms/tslib/media/fileicons/)
+ext: File extension of icons (default: gif)
+widthAttribute: Width of the icons in pixels (default: 18)
+heightAttribute: Height of the icons in pixels (default: 16)
+These sub-properties all have stdWrap available.
 
 icon_image_ext_list
 list of image extensions /stdWrap
@@ -3151,7 +3203,7 @@ jumpurl.secure = 1
 jumpurl.secure.mimeTypes = pdf=application/pdf, doc=application/msword
 
 target
-target
+target /stdWrap
 
 
 stdWrap
@@ -3202,7 +3254,7 @@ Example:
     }
 
 round
-With this property you can round the value up, down or to a certain number of decimals. For each roundType the according PHP function will be used.
+(Since TYPO3 4.6) With this property you can round the value up, down or to a certain number of decimals. For each roundType the according PHP function will be used.
 The value will be converted to a float value before applying the selected round method. 
 Property:
 Data type:
@@ -3265,7 +3317,7 @@ lib.myPrice {
   }
   noTrimWrap = || &euro;|
 }
-# Will basically result in "0.80 ?", but for German in "0,80 ?".
+# Will basically result in "0.80 €", but for German in "0,80 €".
 
 lib.carViews = CONTENT
 lib.carViews {
@@ -3682,6 +3734,52 @@ nesting
 If set true, then this tag must have starting and ending tags in the correct order. Any tags not in this order will be discarded. Thus '</B><B><I></B></I></B>' will be converted to '<B><I></B></I>'. 
 Is the value "global" then true nesting in relation to other tags marked for "global" nesting control is preserved. This means that if <B> and <I> are set for global nesting then this string '</B><B><I></B></I></B>' is converted to '<B></B>'
 [page:->HTMLparser_tags; tsref:->HTMLparser_tags]
+cache
+(Since TYPO3 4.7) Stores the rendered content into the caching framework and reads it from there. This allows you to reuse this content without prior rendering. The presence of "cache.key" will trigger this feature. It is evaluated twice: 
+Content is read from cache directly after the stdWrapPreProcess hook and before "setContentToCurrent". If there is a cache entry for the given cache key, stdWrap processing will stop and the cached content will be returned. If no cache content is found for this key, the stdWrap processing continues as usual.
+Writing to cache happens at the end of rendering, directly before the stdWrapPostProcess hook is called and before the "debug*" functions. The rendered content will be stored in the cache, if cache.key was set. The configuration options cache.tags and cache.lifetime allow to control the caching. 
+Note: This feature relies on the caching framework, which needs to be enabled for this feature to work. Otherwise content will not be cached, but rendered on every call. 
+Property:
+Data type:
+Description:
+Default:
+key
+string /stdWrap
+The cache identifier that is used to store the rendered content into the cache and to read it from there.
+
+Note: Make sure to use a valid cache identifier. Also take care to choose a cache key that is accurate enough to distinguish different versions of the rendered content while being generic enough to stay efficient.
+
+lifetime
+mixed /stdWrap
+Lifetime of the content in cache.
+Allows you to determine the lifetime of the cached object independently of the lifetime of the cached version of the page on which it is used.
+
+Possible values are any positive integer and the keywords "unlimited" and "default":
+integer: Lifetime in seconds.
+"unlimited": Cached content will not expire unless actively purged by id or by tag or if the complete cache is flushed.
+"default": The default cache lifetime as configured in config.cache_period is used.
+default
+tags
+string /stdWrap
+Can hold a comma-separated list of tags. These tags will be attached to the cached content into the cache_hash storage (not into cache_pages) and can be used to purge the cached content.
+
+[tsref:->cache]
+Examples:
+5 = TEXT
+5 {
+  cache.key = mycurrenttimestamp
+  cache.tags = tag_a,tag_b,tag_c
+  cache.lifetime = 3600
+  data = date : U
+  strftime = %H:%M:%S
+}
+In the above example the current time will be cached with the key "mycurrenttimestamp". This key is fixed and does not take the current page id into account. So if you add this to your TypoScript, the cObject will be cached and reused on all pages (showing you the same timestamp). 
+5 = TEXT
+5 {
+  cache.key = mycurrenttimestamp_{page:id}_{TSFE:sys_language_uid}
+  cache.key.insertData = 1
+}
+Here a dynamic key is used. It takes the page id and the language uid into account making the object page and language specific.
 Setup
 Top-level objects
 Property:
@@ -3855,22 +3953,25 @@ If set, the typolink function will not try to find the closest MP value for the 
 
 renderCharset
 string
-Charset used for rendering internally of the page content. It is highly recommended that this value is the same as the charset of the content coming from the main data source (eg. the database). Thus you don't need to do any other conversion.
+Charset used for the internal rendering of the page content. It is highly recommended that this value is the same as the charset of the content coming from the main data source (eg. the database). Thus you don't need to do any other conversion.
 All strings from locallang files and locale strings are (and should be) converted to "renderCharset" during rendering. 
 
 If you need another output charset than the render charset, see "metaCharset" below. 
 
-If you set $TYPO3_CONF_VARS['BE']['forceCharset'] that value is used by default for "renderCharset". It is highly recommended to use $TYPO3_CONF_VARS['BE']['forceCharset'] for multilingual websites in TYPO3. If you set that you don't have to worry about renderCharset and metaCharset - the same charset is used in the whole system.
-$TYPO3_CONF_VARS['BE']['forceCharset'] if found, otherwise
+Until TYPO3 4.7 you can set $TYPO3_CONF_VARS['BE']['forceCharset']. If you do, its value is used for "renderCharset" by default. It is highly recommended to use $TYPO3_CONF_VARS['BE']['forceCharset'] = "utf-8" for multilingual websites in TYPO3. If you set this, you don't have to worry about renderCharset and metaCharset - the same charset is used in the whole system.
+
+Note: In TYPO3 4.7 $TYPO3_CONF_VARS['BE']['forceCharset'] has been removed. Since this version TYPO3 internally always uses UTF-8 by default. 
+Until TYPO3 4.7: The value of $TYPO3_CONF_VARS['BE']['forceCharset'] if set, otherwise 
 "iso-8859-1"
+Since TYPO3 4.7: "utf-8"
 metaCharset
 string
 Charset used for the output document. For example in the meta tag:
-<meta http-equiv="Content-Type" content="text/html; charset=...>
+<meta charset=... />
 
-Is used for a) HTML meta-tag, b) HTTP header (unless disabled with .disableCharsetHeader) and c) xhtml prologues (if available)
+It is used for a) HTML meta tag, b) HTTP header (unless disabled with .disableCharsetHeader) and c) xhtml prologues (if available).
 
-If renderCharset and metaCharset are different the output content is automatically converted to metaCharset before output and likewise are values posted back to the page converted from metaCharset to renderCharset for internal processing. This conversion takes time of course so there is another good reason to use the same charset for both.
+If renderCharset and metaCharset are different, the output content is automatically converted to metaCharset before output and likewise are values posted back to the page converted from metaCharset to renderCharset for internal processing. This conversion takes time of course so there is another good reason to use the same charset for both.
 value of ".renderCharset"
 disableCharsetHeader
 boolean
@@ -3946,7 +4047,7 @@ If set, then a document type declaration (and an XML prologue) will be generated
 "html5" for the HTML5 doctype.
 "none" for NO doctype at all.
 
-Note: In TYPO3 4.4 the keyword for HTML5 is "html_5". This spelling is deprecated since TYPO3 4.5.
+Note: In TYPO3 4.4 the keyword for HTML5 was "html_5". This spelling was deprecated since TYPO3 4.5 and has been removed in TYPO3 4.7.
 
 Note that the keywords also change the way TYPO3 generates some of the XHTML tags to ensure valid XML. If you set doctype to a string, then you must also set config.xhtmlDoctype (see below).
 
@@ -4021,6 +4122,10 @@ Special: If you set it to "none" then no attributes will be set at any event.
 Example:
 config.htmlTag_setParams = xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US"
 
+htmlTag_stdWrap
+->stdWrap
+(Since TYPO3 4.7) Modify the whole <html> tag with stdWrap functionality. This can be used to extend or override this tag.
+
 namespaces
 array of strings
 This property enables you to add xml namespaces (xmlns) to the <html> tag. This is especially useful if you want to add RDFa or microformats to your html.
@@ -4092,7 +4197,7 @@ config.removeDefaultJS = 1
 
 removeDefaultCss
 boolean
-Remove CSS generated by _CSS_DEFAULT_STYLE configuration of extensions.
+(Since TYPO3 4.6) Remove CSS generated by _CSS_DEFAULT_STYLE configuration of extensions.
 
 minifyJS
 boolean
@@ -4110,11 +4215,11 @@ Note: JavaScript in external files in the FE will only be minified, if a compres
 Example:
 $GLOBALS['TYPO3_CONF_VARS']['FE']['jsCompressHandler'] = t3lib_extMgm::extPath($_EXTKEY) . 'Classes/class.tx_myext_jsCompressHandler.php:tx_myext_jsCompressHandler->minifyJs';
 
-Note: This property is deprecated and will be removed with TYPO3 4.8! Use config.compressJs instead.
+Note: This property is deprecated and will be removed with TYPO3 6.0! Use config.compressJs instead.
 
 compressJs
 boolean
-Enabling this option together with $TYPO3_CONF_VARS['FE']['compressionLevel'] in the Install Tool delivers Frontend JavaScript files using GZIP compression.
+(Since TYPO3 4.6) Enabling this option together with $TYPO3_CONF_VARS['FE']['compressionLevel'] in the Install Tool delivers Frontend JavaScript files using GZIP compression.
 
 This can significantly reduce file sizes of linked JavaScript files and thus decrease loading times.
 
@@ -4140,11 +4245,11 @@ Note: CSS in external files in the FE will only be minified, if a compression ha
 Example:
 $GLOBALS['TYPO3_CONF_VARS']['FE']['cssCompressHandler'] = t3lib_extMgm::extPath($_EXTKEY) . 'Classes/class.tx_myext_cssCompressHandler.php:tx_myext_cssCompressHandler->minifyCss';
 
-Note: This property is deprecated and will be removed with TYPO3 4.8! Use config.compressCss instead.
+Note: This property is deprecated and will be removed with TYPO3 6.0! Use config.compressCss instead.
 
 compressCss
 boolean
-If set, CSS files will be minified and compressed.
+(Since TYPO3 4.6) If set, CSS files will be minified and compressed.
 
 Minification will remove all excess space. The more significant compression step (using gzip compression) requires $TYPO3_CONF_VARS['FE']['compressionLevel'] to be enabled in the Install Tool. For this to work you also need to activate the gzip-related compressionLevel options in .htaccess, as otherwise the compressed files will not be readable by the user agent.
 
@@ -4168,11 +4273,11 @@ Note: There are no default concatenation handlers, which could do the concatenat
 Example:
 $GLOBALS['TYPO3_CONF_VARS']['FE']['concatenateHandler'] = t3lib_extMgm::extPath($_EXTKEY) . 'Classes/class.tx_myext_concatenateHandler.php:tx_myext_concatenateHandler->concatenateFiles';
 
-Note: This property is deprecated and will be removed with TYPO3 4.8! Use config.concatenateJs and config.concatenateCss instead.
+Note: This property is deprecated and will be removed with TYPO3 6.0! Use config.concatenateJs and config.concatenateCss instead.
 0
 concatenateJs
 boolean
-Setting config.concatenateJs merges JavaScript files referenced in the Frontend together.
+(Since TYPO3 4.6) Setting config.concatenateJs merges JavaScript files referenced in the Frontend together.
 
 Example:
 config.concatenateJs = 1
@@ -4184,7 +4289,7 @@ $GLOBALS['TYPO3_CONF_VARS']['FE']['jsConcatenateHandler'] = t3lib_extMgm::extPat
 
 concatenateCss
 boolean
-Setting config.concatenateCss merges Stylesheet files referenced in the Frontend together.
+(Since TYPO3 4.6) Setting config.concatenateCss merges Stylesheet files referenced in the Frontend together.
 
 Example:
 config.concatenateCss = 1
@@ -4308,7 +4413,7 @@ If you set this value to a number, then the encryption is simply an
 offset of character values. If you set this value to "-2" then all 
 characters will have their ASCII value offset by "-2". To make this 
 possible, a little JavaScript code is added to every generated web page!
-(It is recommended to set the value in the range from -5 to 1 since setting it to >= 2 means a "z" is converted to "|" which is a special character in TYPO3 tables syntax ? and that might confuse columns in tables. Now hardcoded range)
+(It is recommended to set the value in the range from -5 to 1 since setting it to >= 2 means a "z" is converted to "|" which is a special character in TYPO3 tables syntax – and that might confuse columns in tables. Now hardcoded range)
 
 Alternatively you can set this value to the keyword "ascii". This way every 
 character of the "mailto:" address will be translated to a Unicode HTML 
@@ -4392,7 +4497,7 @@ This value is overridden by the value set in the page-record (field="cache_timeo
 86400 (=24H)
 cache
 array
-Determine the maximum cache lifetime of a page.
+(Since TYPO3 4.6) Determine the maximum cache lifetime of a page.
 
 The maximum cache lifetime of a page can not only be determined by the start and stop times of content elements on the page itself, but also by arbitrary records on any other page. However, the page has to be configured so that TYPO3 knows the start and stop times of which records to include. Otherwise, the cache entry will be used although a start/stop date already passed by.
 
@@ -4491,7 +4596,7 @@ If true the HTTP_HOST is - if available - NOT inserted instead of the IP-address
 
 stat_apache_niceTitle
 boolean / string
-If set, the URL will be transliterated from the renderCharset to ASCII (e.g ? => ae, ? => a, &#945; "alpha" => a), which yields nice and readable page titles in the log. All non-ASCII characters that cannot be converted will be changed to underscores.
+If set, the URL will be transliterated from the renderCharset to ASCII (e.g ä => ae, à => a, &#945; "alpha" => a), which yields nice and readable page titles in the log. All non-ASCII characters that cannot be converted will be changed to underscores.
 
 If set to "utf-8", the page title will be converted to UTF-8 which results 
 in even more readable titles, if your log analyzing software supports it.
@@ -4508,6 +4613,26 @@ stat_pageLen
 int 1-100
 The length of the page name (at the end of the path) written to the log file/database.
 30
+stat_IP_anonymize
+boolean
+(Since TYPO3 4.7) Set to 1 to activate anonymized logging. Setting this to 1 will log an empty hostname and will enable anonymization of IP addresses.
+0
+stat_IP_anonymize_mask_ipv4
+int
+(Since TYPO3 4.7) Prefix-mask 0..32 to use for anonymisation of IP addresses (IPv4). Only used, if stat_IP_anonymize is set to 1.
+Recommendation for Germany: 
+config.stat_IP_anonymize_ipv4 = 24
+24
+stat_IP_anonymize_mask_ipv6
+int
+(Since TYPO3 4.7) Prefix-mask 0..128 to use for anonymisation of IP addresses (IPv6). Only used, if stat_IP_anonymize is set to 1.
+Recommendation for Germany: 
+config.stat_IP_anonymize_ipv6 = 64
+64
+stat_logUser
+boolean
+(Since TYPO3 4.7) Configure whether to log the username of the Frontend user, if the user is logged in in the FE currently. Setting this to 0 allows to anonymize the username.
+1
 simulateStaticDocuments
 boolean /
 string
@@ -4619,13 +4744,17 @@ pageRendererTemplateFile = fileadmin/test_pagerender.html
 noPageTitle
 integer
 If you only want to have the site name (from the template record) in your <title> tag, set this to 1. If the value is 2 then the <title> tag is not printed at all.
-Please take note that this tag is required for XHTML compliant output, so you should only disable this tag if you generate it manually already.
+Please take note that this tag is required for (X)HTML compliant output, so you should only disable this tag if you generate it manually already.
 0
 pageTitleFirst
 boolean
 TYPO3 by default prints a title tag in the format "website: page title". 
 If pageTitleFirst is set (and if the page title is printed), then the page title will be printed IN FRONT OF the template title. So it will look like "page title: website". 
 0
+pageTitleSeparator
+string
+(Since TYPO3 4.7) The signs which should be printed in the title tag between the website name and the page title. 
+: 
 titleTagFunction 
 function name
 Passes the default <title> tag content to this function. No TypoScript parameters are passed though.
@@ -4765,7 +4894,8 @@ quoted-printable
 notification_email_charset
 string
 Alternative charset for the notification mails.
-ISO-8859-1
+Until TYPO3 4.7: ISO-8859-1
+Since TYPO3 4.7: utf-8
 admPanel
 boolean
 If set, the admin panel appears in the bottom of pages.
@@ -4852,7 +4982,7 @@ config.baseURL = http://typo3.org/sub_dir/
 
 tx_[extension key with no underscores]_[*]
 -
-Configuration space for extensions. This can be used ? for example ? by plugins that need some TypoScript configuration, but that don't actually display anything in the frontend (i.e. don't receive their configuration as an argument  from the frontend rendering process).
+Configuration space for extensions. This can be used – for example – by plugins that need some TypoScript configuration, but that don't actually display anything in the frontend (i.e. don't receive their configuration as an argument  from the frontend rendering process).
 
 Example:
 config.tx_realurl_enable = 1
@@ -5002,7 +5132,7 @@ javascriptLibs {
      # include default theme
    ExtJs.theme = 1
     # load specific adapter (jquery|prototype|yui)
-   ExtJs.adapter = ?
+   ExtJs.adapter = …
      # initialize QuickTips
    ExtJs.quickTips = 1
      # includes ExtJS debug file (uncompressed)
@@ -5068,10 +5198,11 @@ The file definition must be a valid "resource" data type, otherwise nothing is i
 
 Each file has optional properties:
 .allWrap - wraps the complete tag, useful for conditional comments.
-.disableCompression - If config.compressJs is enabled, this disables the compression of this file.
-.excludeFromConcatenation - If config.concatenateJs is enabled, this prevents the file from being concatenated.
+.disableCompression - (Since TYPO3 4.6) If config.compressJs is enabled, this disables the compression of this file.
+.excludeFromConcatenation - (Since TYPO3 4.6) If config.concatenateJs is enabled, this prevents the file from being concatenated.
 .external - If set, there is no file existence check. Useful for inclusion of external files.
 .forceOnTop - boolean flag. If set, this file will be added on top of all other files.
+.if - (Since TYPO3 4.7) Allows to define conditions, which must evaluate to TRUE for the file to be included. If they do not evaluate to TRUE, the file will not be included. Extensive usage might cause huge numbers of temporary files to be created. See ->if for details.
 
 Example:
 includeJSlibs.twitter = http://twitter.com/javascripts/blogger.js
@@ -5089,17 +5220,20 @@ The file definition must be a valid "resource" data type, otherwise nothing is i
 
 Each file has optional properties:
 .allWrap - wraps the complete tag, useful for conditional comments.
-.disableCompression - If config.compressJs is enabled, this disables the compression of this file.
-.excludeFromConcatenation - If config.concatenateJs is enabled, this prevents the file from being concatenated.
+.disableCompression - (Since TYPO3 4.6) If config.compressJs is enabled, this disables the compression of this file.
+.excludeFromConcatenation - (Since TYPO3 4.6) If config.concatenateJs is enabled, this prevents the file from being concatenated.
 .external - If set, there is no file existence check. Useful for inclusion of external files.
 .forceOnTop - boolean flag. If set, this file will be added on top of all other files.
+.if - (Since TYPO3 4.7) Allows to define conditions, which must evaluate to TRUE for the file to be included. If they do not evaluate to TRUE, the file will not be included. Extensive usage might cause huge numbers of temporary files to be created. See ->if for details.
 .type - setting the MIME type of the script (default: text/javascript).
 
 Example:
 includeJS {
   file1 = fileadmin/helloworld.js
   file1.type = application/x-javascript
+  # Include a second file, but only if myConstant is set in the TS constants field.
   file2 = javascript_uploaded_to_template*.js
+  file2.if.isTrue = {$myConstant}
 }
 
 includeJSFooter.[array]
@@ -5153,9 +5287,10 @@ The file definition must be a valid "resource" data type, otherwise nothing is i
 Each file has optional properties:
 .allWrap - wraps the complete tag, useful for conditional comments.
 .alternate - If set (boolean) then the rel-attribute will be "alternate stylesheet".
-.disableCompression - If config.compressCss is enabled, this disables the compression of this file.
-.excludeFromConcatenation - If config.concatenateCss is enabled, this prevents the file from being concatenated.
+.disableCompression - (Since TYPO3 4.6) If config.compressCss is enabled, this disables the compression of this file.
+.excludeFromConcatenation - (Since TYPO3 4.6) If config.concatenateCss is enabled, this prevents the file from being concatenated.
 .external - If set, there is no file existence check. Useful for inclusion of external files.
+.if – (Since TYPO3 4.7) Allows to define conditions, which must evaluate to TRUE for the file to be included. If they do not evaluate to TRUE, the file will not be included. Extensive usage might cause huge numbers of temporary files to be created. See ->if for details.
 .import - If set (boolean) then the @import way of including a stylesheet is used instead of <link>
 .media - setting the media attribute of the <style> tag.
 .title - setting the title of the <style> tag.
@@ -5400,14 +5535,24 @@ Description:
 Default:
 Array...
 string /stdWrap
-Metatags
-If value is empty (after trimming) the metatag is not generated.
-If the "key" (eg. "REFRESH" or "DESCRIPTION") is "REFRESH" (caseinsensitive), then the "http-equiv"-attribute is used in the metatag instead of "name".
+Allows you to define meta tags.
+
+Use the scheme meta.key = value.
+The "key" can be the name of any meta tag, e.g. "description" or "keywords". If the key is "refresh" (case insensitive), then the "http-equiv" attribute is used in the meta tag instead of the "name" attribute.
+If the "value" is empty (after trimming), the meta tag is not generated.
 
 Examples:
-.REFRESH = [sec]; [url, leave blank for same page]
-.DESCRIPTION = This is the description of the content in this document
-.KEYWORDS = These are the keywords...
+meta.description = This is the description of the content in this document.
+meta.keywords = These are the keywords.
+meta.refresh = [seconds]; [url, leave blank for same page]
+
+For each key the following sub-property is available:
+httpEquivalent: (Since TYPO3 4.7) If set to 1, the http-equiv attribute is used in the meta tag instead of the "name" attribute. Default: 0.
+
+Example:
+meta.X-UA-Compatible = IE=edge,chrome=1
+meta.X-UA-Compatible.httpEquivalent = 1
+This results in <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">. 
 
 [tsref:->META]
 
@@ -5427,12 +5572,12 @@ NOTE: This applies ONLY if "CARRAY /stdWrap" is set to be data type
 If you specify any non-integer properties to a CARRAY, stdWrap will be invoked with all properties of the CARRAY.
 
 Example:
-This will return '<B>This will be rendered before "10"testing</B>'
+This will return '<b>This will be rendered before "10"testing</b>'
 10 = TEXT
 10.value = testing
-5 = HTML
+5 = TEXT
 5.value = This will be rendered before "10"
-wrap = <B> |</B>
+wrap = <b>|</b>
 
 (TDParams)
 <TD>-params
@@ -5515,6 +5660,7 @@ Notice that .value was not cleared (the red line), because it's simply two array
 So hence the red line in the above example is useless.
 HTML
 The content object "HTML" can be used to output static text or html. stdWrap is available for the cObject itself and for the property "value". See the examples.
+Note: This content object is deprecated since TYPO3 4.6 and will be removed in TYPO3 6.0. Use the content object "TEXT" instead!
 Property:
 Data type:
 Description:
@@ -5542,17 +5688,17 @@ Example:
 10.stdWrap.wrap = <strong>|</strong>
 
 TEXT
-TEXT is very similar to the cObject "HTML". But the stdWrap is on the very rootlevel of the object. This is non-standard. Check the example.
+The content object "TEXT" can be used to output static text or html. So it is very similar to the cObject "HTML". Note that the stdWrap properties are not available under the property "stdWrap" (as they are for the other cObjects), but on the very rootlevel of the object. This is non-standard! Check the examples.
 Property:
 Data type:
 Description:
 Default:
 value
 value /stdWrap
-text, wrap with stdWrap properties
+Text, which you want to output. 
 
 (stdWrap properties...)
-
+->stdWrap
 
 
 [tsref:(cObject).TEXT]
@@ -5564,6 +5710,11 @@ Example:
 10 = TEXT
 10.field = bodytext
 10.br = 1
+Example:
+10 = TEXT
+10.field = title
+10.wrap = <strong>|</strong>
+
 
 COBJ_ARRAY (COA, COA_INT)
 This is a cObject, in which you can place several other cObjects using numbers to enumerate them.
@@ -5599,8 +5750,8 @@ This is possible to do because any include-files will be known before the script
 Example:
 temp.menutable = COBJ_ARRAY
 temp.menutable {
-  10 = HTML
-  10.value = <table border=0 cellpadding=0 cellspacing=0>
+  10 = TEXT
+  10.value = <table border="0" cellpadding="0" cellspacing="0">
 
   20 = HMENU
   20.entryLevel = 0
@@ -5619,7 +5770,7 @@ temp.menutable {
     }
   }
   
-  30 = HTML
+  30 = TEXT
   30.value = </table>
 }
 
@@ -5698,7 +5849,7 @@ string /stdWrap
 If no alt text is specified, an empty alt text will be used.
 
 
-("alttext" is the old spelling of this attribute. It was deprecated since TYPO3 4.3 and was used only if "altText" did not specify a value or properties. Since TYPO3 4.6 "alttext" has been removed.)
+("alttext" is the old spelling of this attribute. It was deprecated since TYPO3 4.3 and was used only if "altText" did not specify a value or properties. In TYPO3 4.6 "alttext" has been removed.)
 
 emptyTitleHandling
 string /stdWrap
@@ -5940,19 +6091,22 @@ list of page-uid's /stdWrap
 See above
 
 minItems
-int
+Until TYPO3 4.6: int 
+Since TYPO3 4.7: int /stdWrap
 The minimum items in the menu. If the number of pages does not reach this level, a dummy-page with the title "..." and uid=[currentpage_id] is inserted.
 
 Notice: Affects all sub menus as well. To set the value for each menu level individually, set the properties in the menu objects (see "Common properties" table).
 
 maxItems
-int
+Until TYPO3 4.6: int 
+Since TYPO3 4.7: int /stdWrap
 The maximum items in the menu. More items will be ignored.
 
 Notice: Affects all sub menus as well. (See "minItems" for notice)
 
 begin
-int +calc
+Until TYPO3 4.6: int +calc
+Since TYPO3 4.7: int /stdWrap +calc
 The first item in the menu. 
 
 Example:
@@ -6258,8 +6412,8 @@ string
 Override field "field name" in pagerecord.
 
 Example:
-This gives the link to the previous page the linktext "? zur?ck".
-prev.fields.title = ? zur?ck
+This gives the link to the previous page the linktext "« zurück".
+prev.fields.title = « zurück
 
 [tsref:(cObject).HMENU.special.browse]
 special.keywords
@@ -7054,7 +7208,7 @@ tt_content.textpic.default {
     rowSpace = 10
     textMargin = 10
   }
-  30 = HTML
+  30 = TEXT
   30.value = <br>
 }
 CASE
@@ -7133,7 +7287,7 @@ Internally this works like a stack where the original register is saved when LOA
 RESTORE_REGISTER has no properties.
 FORM
 Note
-The following only applies, if the system extension "form" (which is new in TYPO3 4.6) is not installed. If it is, things work as described in the documentation inside the system extension.
+The following only applies, if the system extension "form" (which comes with TYPO3 since version 4.6) is not installed. If it is, things work as described in the documentation inside the system extension.
 This object provides a way to create forms:
 textarea:	Label | [* = required][field name =] textarea[,cols,rows,"wrap= [eg. "OFF"]"] | [defaultdata] | Special evaluation configuration (see note below)
 input:		Label | [* = required][field name =] input[,size,max] | [defaultdata] | Special evaluation configuration (see note below)
@@ -7250,10 +7404,10 @@ Or translating the form to danish (setting config.language to 'dk'):
 dataArray {
   10.label.lang.dk = Navn:
   10.value.lang.dk = [Indtast dit navn]
-  20.label.lang.dk = ?jenfarve
+  20.label.lang.dk = Øjenfarve
   20.valueArray {
-    10.label.lang.dk = Bl?
-    20.label.lang.dk = R?d
+    10.label.lang.dk = Blå
+    20.label.lang.dk = Rød
   }
   40.value.lang.dk = Send
 }
@@ -7919,7 +8073,7 @@ If one of the existing renderTypes does not meet your needs, new renderTypes can
 The Media content element contains the following 3rd party files in typo3/contrib/flashmedia:
  qtobject/qtobject.js  (JavaScript for QTOBJECT)
  swfobject/swfobject.js  (JavaScript for SWFOBJECT)
- swfobject/expressInstall.swf  (This is displayed if the client?s Flash version is too low)
+ swfobject/expressInstall.swf  (This is displayed if the client’s Flash version is too low)
  flvplayer.swf  (TYPO3 video player for flv, swf, mp4, m4u etc)
  player.swf  (Audio player from 1pixelout)
  player.txt  (License for the audio player)
@@ -8647,7 +8801,7 @@ Sets the maximum width in pixels, the text must be. Reduces the fontSize if the 
 
 Does not support setting alternative fontSizes in splitRendering options.
 
-(By Ren? Fritz <r.fritz@colorcube.de>)
+(By René Fritz <r.fritz@colorcube.de>)
 
 doNotStripHTML
 boolean
@@ -10331,7 +10485,7 @@ page.10 < temp.jsmenu
 
 This draws a menu with two selector boxes.
 
-Appendix A ? media/scripts/  Plugins
+Appendix A – media/scripts/  Plugins
 media/scripts/ in general
 The directory typo3/sysext/cms/tslib/media/scripts (in older versions just media/scripts) primarily contains php-scripts which are meant as 'external modules' as opposed to features included in the typo3/sysext/cms/tslib/ libraries. Although they are distributed with TYPO3 just like the rest of tslib/ they form a basis for externally developed frontend functionality. So for most of these scripts, be inspired by them to write your own code. Notice the word 'most'; because some are written long time ago and do not represent the state-of-the-day to do it.
 About 'example templates'
@@ -10473,7 +10627,7 @@ There is a special "field name" you can use, which is '_FIELDLIST" and that lets
 Example:
 This is a common configuration of the email-properties with a simple setfixed setting:
 email.from = kasper@typo3.com
-email.fromName = Kasper Sk?rh?j
+email.fromName = Kasper Skårhøj
 email.admin = kasper@typo3.com
 setfixed.approve {
   hidden = 0
@@ -11067,13 +11221,13 @@ lib.renderObj {
   }
 }
 
-Appendix B ? Standard Templates
+Appendix B – Standard Templates
 static_template
 This section of the TypoScript reference is used to introduce the standard templates that come with TYPO3 in the static table "static_template". 
 In newer versions of TYPO3 the static templates are an own system extension. Old records in the database table static_template are NOT changed from version to version! Still changes may appear!
 Media
 The standard templates use some standard media-files, like gif-images and fonts. These are situated in the folder "typo3/sysext/cms/tslib/media/" (in older versions in "media/") relative to the root of the TYPO3-website.
-Appendix C ? PHP include scripts
+Appendix C – PHP include scripts
 Introduction
 Although you can do very much with TypoScript itself, it can sometimes be a much more flexible solution to include a PHP-script you write on your own. But you must understand and respect some circumstances. For example the caching system: When a page is shown with TYPO3 it's normally cached afterwards in the SQL-database. This is done to ensure a high performance when delivering the same page the next time. But this also means that you can only make custom code from your include files if you differ your output based on the same conditions that the template may include! For example you cannot just return browser-specific code to TypoScript if not the template also distinguishes between the actual browsers. If you do, the cache will cache the page with the browser-specific HTML-code and the next hit by another browser will trigger the cache to return a wrong page. If the condition is correctly setup "another browser"-hit will instead render another page (which will also be cached but tagged with the other browser!) and the two browsers will receive different pages but still the pages will be cached.
 TypoScript Configuration
@@ -11392,7 +11546,7 @@ Clearing the "basket"
 This will clear the basket:
  <INPUT type="hidden" name="recs[clear_all]" value="1">
 
-Appendix D ? index.php
+Appendix D – index.php
 Introduction
 index.php is the main script for showing pages with TYPO3 / TypoScript. This page provides some information about this script and how to use it.
 
