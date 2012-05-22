@@ -1,3 +1,47 @@
+2011-12-01  Christopher  <chrissitopher@gmx.de>
+
+	* Fixed bug #31385: Fix description of FlexForm configuration keys
+
+2011-10-26  Christopher  <chrissitopher@gmx.de>
+
+	* Fixed bug #28364: Some FlexForm configuration keys are not described (thanks to Stig Nørgaard Færch)
+	* Fixed bug #26652: Information on how to configure TCA markers is missing
+	* Followup to #30266: Language labels and normal text can be used here; no need to say it is "language split"
+	* Fixed bug #31346: Fix formal issues
+	* Fixed task #31351: Prepare release of TSconfig for TYPO3 4.6
+	* Released version 4.6.0 to TER
+
+2011-10-25  Christian  <petapico@hotmail.de>
+
+ 	* Corrected description according to task #31133: Documentation for #24616 needs an update
+
+2011-10-25  Christian  <petapico@hotmail.de>
+
+ 	* Fixed bug #30266: Wrong key for FF sheet titles (thanks to  Andreas Wolf)
+ 	* Added description according to #26771: Core - Flexform sheet description should be editable via TSConfig (thanks to Kai Vogel)  	
+
+2011-10-19  Christian  <petapico@hotmail.de>
+
+ 	* Added description mod.web_list.hideTranslations (thanks to Francois Suter)
+ 	* Fixed bug #24616: New page links in new record wizards are not configurable
+        	
+2011-10-18  Christian  <petapico@hotmail.de>
+
+ 	* Modified description mod.web_list.hideTranslations
+
+2011-10-16  Christian  <petapico@hotmail.de>
+
+ 	* Added description mod.web_list.hideTranslations (thanks to Stefan Geith/Steffen Gebert)
+	* Fixed bug #23198: Its not possible to hide translated records from listview
+
+2011-10-02  Christian  <petapico@hotmail.de>
+
+	* Added description of #25705: Add option to hide BE search box in list module
+
+2011-10-01  Christian  <petapico@hotmail.de>
+
+	* Fixed bug #28365: table.[tablename].hideTable - wrong description
+
 2011-09-05  Christopher  <chrissitopher@gmx.de>
 
 	* Released version 4.5.2 to TER
