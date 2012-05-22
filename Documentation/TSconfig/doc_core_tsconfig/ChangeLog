@@ -1,3 +1,33 @@
+2010-12-30  Francois Suter  <francois@typo3.org>
+
+	* Released version 4.4.0 to TER
+
+2010-12-22  Christopher  <chrissitopher@gmx.de>
+
+	* Followup to #11388: Move to new documentation template
+	* Fixed bug #11423: Create a manual version for TYPO3 4.4
+
+2010-12-20  Christopher  <chrissitopher@gmx.de>
+
+	* Fixed bug #11593: Increase verbosity of notificationEmail_subject and notificationEmail_body
+	* Followup to #9199: Some shortcut options must be updated (thanks to Steffen Gebert)
+
+2010-12-15  Christopher  <chrissitopher@gmx.de>
+
+	* Fixed bug #8885: Broken link to Core API Documentation (thanks to Stefano Kowalke)
+	* Fixed bug #11497: Fix quotation marks
+	* Followup to #11388: Move to new documentation template
+
+2010-12-13  Christopher  <chrissitopher@gmx.de>
+
+	* Followup to #11388: Move to new documentation template
+	* Fixed bug #9199: Some shortcut options must be updated (thanks to Steffen Gebert)
+
+2010-12-10  Christopher  <chrissitopher@gmx.de>
+
+	* Fixed bug #11388: Move to new documentation template
+	* Fixed mantis bug 15705: Links in section "ChangeLog" do not work (thanks to Stefan Frömken)
+
 2010-02-12  Francois Suter  <francois@typo3.org>
 
 	* Corrected wrong usage of setup.defaults instead of setup.default in User TSconfig (thanks to Chris Müller)
