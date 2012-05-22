@@ -1,3 +1,38 @@
+2011-12-09 Martin Holtz <typo3@martinholtz.de>
+    * Added description of #32414: added .GMT as property of strftime 
+
+2011-12-01  Christopher  <chrissitopher@gmx.de>
+
+	* Added description of #27694: Speedup backend and allow compression in frontend
+	* Fixed task #32227: Prepare release of TSref 4.6.0
+	* Fixed task #32227: Regenerated the PDF file
+	* Released version 4.6.0 to TER
+
+2011-11-30  Christopher  <chrissitopher@gmx.de>
+
+	* Added description of #17634: Remove default CSS
+	* Added description of #20473: Starttime/endtime is not taken into account when caching
+	* Added description of #28095: Add hashing algorithms to stdWrap
+	* Added description of #28027: Add rounding functions to stdWrap
+	* Added description of #19347: Integrate string replacement to stdWrap
+	* Added description of #16180: Add random functionality to listNum
+
+2011-11-28  Christopher  <chrissitopher@gmx.de>
+
+	* Fixed some wording in the new texts, fixed cover page and TOC
+	* Fixed task #29472: Add notes on removal of properties (alttext and special.userdefined)
+	* Fixed task #30443: Add a note on the new FORM object
+	* Fixed bug #31782: Fix typo in description of optionSplit for HMENU.(mObj).TMENU
+	* Added description of #28032: Add stdWrap for IMAGE.file.params
+	* Added description of #17881: Enable stdWrap for select.where
+	* Added description of #18822: Add stdWrap to each of the properties of TypoScript "select"
+	* Added description of #28018: Add ucfirst and lcfirst to stdWrap
+	* Added description of #17896: Capitalizing with stdWrap
+
+2011-11-24  Martin Holtz  <typo3@martinholtz.de>
+
+	* Added documentation for the cObjects MEDIA, SWFOBJECT, QTOBJECT 
+
 2011-09-05  Christopher  <chrissitopher@gmx.de>
 
 	* Fixed bug #28755: List of allowed tables in the cObject CONTENT is incomplete
