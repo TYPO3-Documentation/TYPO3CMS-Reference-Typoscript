@@ -1,4 +1,73 @@
-2010-12-30  Francois Suter  <francois@typo3.org>
+2011-09-05  Christopher  <chrissitopher@gmx.de>
+
+	* Released version 4.5.2 to TER
+
+2011-06-13  Christopher  <chrissitopher@gmx.de>
+
+	* Fixed bug #27158: Description of mod.web_layout.disableAdvanced is incomplete
+
+2011-05-05  Christopher  <chrissitopher@gmx.de>
+
+	* Fixed bug #12818: Update description of mod.web_list.alternateBgColors
+
+2011-04-09  Francois Suter  <francois.suter@typo3.org>
+
+	* Released version 4.5.1 to TER
+
+2011-04-07  Christopher  <chrissitopher@gmx.de>
+
+	* Added description of setup.fields.<fieldname>.disabled (thanks to Søren Malling)
+	* Fixed bug #13437: Give an example for property mod.SHARED.defaultLanguageFlag
+
+2011-02-18  Christopher  <chrissitopher@gmx.de>
+
+	* Fixed bug #13150: Wrong data type for property "title" in #24006: Make FlexForms editable via TSconfig and group access lists
+
+2011-02-11  Francois Suter  <francois.suter@typo3.org>
+
+	* Removed mention of advanced page type, resolves #12969
+	* Improved description of workspaces.considerReferences option
+	* Made some minor corrections, adjusted layout, regenerated TOC and PDF version, references #11426
+	* Released version 4.5.0 to TER
+
+2011-02-06  Christopher  <chrissitopher@gmx.de>
+
+	* Fixed bug #11398: Update screenshots for TYPO3 4.5 (part 2)
+	* Fixed bug #11426: Create a manual version for TYPO3 4.5
+
+2011-02-04  Christopher  <chrissitopher@gmx.de>
+
+	* Fixed bug #11398: Update screenshots for TYPO3 4.5 (part 1)
+
+2011-02-02  Christopher  <chrissitopher@gmx.de>
+
+	* Added description of #24041: Implement Inline Relational Record Editing (IRRE) in Workspaces
+	* Followup to #24041: In fact the default value is "1", see sysext/workspaces/ext_localconf.php
+	* Added description of #24006: Make FlexForms editable via TSconfig and group access lists
+
+2011-01-30  Christopher  <chrissitopher@gmx.de>
+
+	* Fixed bug #11450: Removed the "Version" field from the document's custom properties
+
+2011-01-27  Christopher  <chrissitopher@gmx.de>
+
+	* Fixed bug #12143: "SysFolder" is called "Folder" now
+	* Fixed bug #11656: history.keepEntries is no longer part of the documentation
+	* Fixed bug #11607: notificationEmail_subject and notificationEmail_body are deprecated
+	* Updated descriptions for #23182: Context menu icons are on the right side
+	* Updated descriptions for #24004: navFrameWidth and navFrameResizable are not respected any more
+
+2011-01-10  Christopher  <chrissitopher@gmx.de>
+
+	* Updated descriptions for #23433 and #23943: Options containing the word "Shortcut" now use the word "Bookmark" instead.
+
+2011-01-05  Christopher  <chrissitopher@gmx.de>
+
+	* Added description of #22266: enableShowPalettes for User TSconfig
+	* Added description of #23506: file_list.enableDisplayBigControlPanel, file_list.enableDisplayThumbnails and file_list.enableClipBoard for User TSconfig
+	* Added description of #23506: enableDisplayBigControlPanel, enableClipBoard and enableLocalizationView for Page TSconfig
+
+2010-12-30  Francois Suter  <francois.suter@typo3.org>
 
 	* Released version 4.4.0 to TER
 
@@ -26,14 +95,14 @@
 2010-12-10  Christopher  <chrissitopher@gmx.de>
 
 	* Fixed bug #11388: Move to new documentation template
-	* Fixed mantis bug 15705: Links in section "ChangeLog" do not work (thanks to Stefan Frömken)
+	* Fixed bug #23538: Links in section "ChangeLog" do not work (thanks to Stefan Frömken)
 
 2010-02-12  Francois Suter  <francois@typo3.org>
 
 	* Corrected wrong usage of setup.defaults instead of setup.default in User TSconfig (thanks to Chris Müller)
 	* Improved description of property edit_showFieldHelp (thanks to Yannick Pavard)
 	* Added description of user setup properties for mass file uploader and resizable text areas (thanks to Chris Müller)
-	* Fixed bug #13385: mod.web_list.[tablename].hideTable wrongly documented (thanks to Calderini Daniel)
+	* Fixed bug #22036: mod.web_list.[tablename].hideTable wrongly documented (thanks to Calderini Daniel)
 	* Released version 4.3.2 to TER
 
 2009-12-18  Francois Suter  <francois@typo3.org>
@@ -117,7 +186,7 @@
 
 	* Update copyright information
 	* Set version information to TYPO3 4.1
-	* Added "hideTable" description to "mod.web_list" section (feature by Bernhard Kraft, see bug #2695)
+	* Added "hideTable" description to "mod.web_list" section (feature by Bernhard Kraft, see bug #15721)
 
 2006-11-28  Kasper Skaarhoj  <kasperYYYY@typo3.com>
 
@@ -126,7 +195,7 @@
 2006-09-11  Michael Stucki  <michael@typo3.org>
 
 	* Added "beuser:options.pageTree.showDomainNameWithTitle"
-        * Changed revision number to 4.0
+	* Changed revision number to 4.0
 
 2006-07-26  Michael Stucki  <michael@typo3.org>
 
