@@ -1,7 +1,7 @@
 ﻿TSconfig Reference
 Extension Key: doc_core_tsconfig
 Language: en
-Version: 4.5.2
+Version: 4.6.0
 Keywords: tsconfig, typoscript, reference, forDevelopers, forAdvanced
 Copyright 2000-2011, Documentation Team, <documentation@typo3.org>
 
@@ -39,10 +39,10 @@ Top Level Objects	6
 Page TSconfig	20
 Top Level Objects	21
 ->MOD	22
-->TCEMAIN	37
-->TCEFORM	42
-->TSFE	50
-Next steps	52
+->TCEMAIN	38
+->TCEFORM	43
+->TSFE	53
+Next steps	55
 
 
 Introduction
@@ -50,9 +50,8 @@ About this document
 TypoScript can be used to create templates for the TYPO3 frontend, but also to configure the TYPO3 backend. In this case, it is called "TSconfig". TSconfig is divided into configuration for pages ("Page TSconfig") and configuration for users and groups ("User TSconfig"). Each variant is further detailed in its own chapter. TSconfig offers vast possibilities of customizing the TYPO3 backend. 
 For details about the nature of TypoScript as a syntax, please read the document "TypoScript Syntax & In-depth Study". 
 What's new
-This version of the TSconfig Reference was updated for TYPO3 version 4.5. 
-For TYPO3 4.5 some settings concerning TCEforms were added. FlexForms are editable via TSconfig and group access lists now. TYPO3 4.5 comes with a new task center - the related documentation was added. Some checkboxes at the bottom of modules can be hidden now. This applies to the options at the bottom of the list and the file list module as well as to the checkbox "Show secondary options". Another important change is that beginning with TYPO3 4.5 the word "shortcut" is only used for a shortcut to another page and no longer where "bookmark" was meant. Therefore the related options were renamed. So for example "enableShortcuts" is now called "enableBookmarks" and so on. 
-All screenshots were refreshed. 
+This version of the TSconfig Reference was updated for TYPO3 version 4.6. 
+For TYPO3 4.6 some settings in the list module have been added: The search box there can now be hidden as well as records in additional website languages. FlexForm sheet descriptions now are editable via TSconfig. Another important change is that the links to add new pages in the new record wizard can now be hidden. 
 The description of some properties has been added or updated. 
 
 More information about changed properties
@@ -60,8 +59,9 @@ You can find a list of changes for more recent TYPO3 versions in the wiki:
 http://wiki.typo3.org/Documentation_changes_in_4.2 
 http://wiki.typo3.org/Documentation_changes_in_4.3 
 http://wiki.typo3.org/Documentation_changes_in_4.4_and_4.5 
+http://wiki.typo3.org/Documentation_changes_in_4.6 
 Credits
-This document was originally written by Kasper Skårhøj. It has since then been maintained successively by Michael Stucki, François Suter and Christopher Stelmaszyk.
+This document was originally written by Kasper Skårhøj. It has since then been maintained successively by Michael Stucki, François Suter, Christopher Stelmaszyk and Christian Wöbbeking.
 Feedback
 For general questions about the documentation get in touch by writing to documentation@typo3.org.
 If you find a bug in this manual, please file an issue in the bug tracker of this manual: http://forge.typo3.org/projects/typo3v4-doc_core_tsconfig/issues
@@ -1303,12 +1303,25 @@ Hide these tables in record listings (comma-separated)
 
 table.[tablename].hideTable
 boolean
-If set to non-zero, the table is hidden. If it is zero, table is shown if table name is not listed in "hideTables" list.
+If set to non-zero, the table is hidden. If it is zero, table is shown no matter if table name is listed in "hideTables" list.
 
 Example:
 
 mod.web_list.table.tt_content.hideTable = 1
 
+hideTranslations
+list of table names
+For tables in this list all their records in additional website languages will be hidden in the List module. Only records in default website languages are visible.
+Use "*" to hide all records of additional website languages in all tables or choose tables by comma-separated list.
+Example:
+mod.web_list.hideTranslations = *
+or
+mod.web_list.hideTranslations = tt_content,tt_news
+
+disableSearchBox
+boolean
+Disables the search box located below the clipboard
+0
 allowedNewTables
 list of table names
 If this list is set, then only tables listed here will have a link to "create new" in the page and subpages.
@@ -1417,6 +1430,25 @@ Property:
 Data type:
 Description:
 Default:
+pages
+boolean
+Use the following sub-properties to show or hide the specified links.
+
+Available sub-properties:
+show.pageAfter = Show or hide the link to create new pages after the selected page.
+show.pageInside = Show or hide the link to create new pages inside the selected page.
+show.pageSelectPosition = Show or hide the link to create new pages at a selected position.
+
+Setting any of these properties to 0 will hide the corresponding link, but setting to 1 will leave it visible.
+
+Example:
+mod.wizards.newRecord.pages.show {
+	pageInside = 0
+}
+
+Hides the "Page (inside)" link.
+
+1
 order
 list of values
 Define an alternate order for the groups of records in the new records wizard. Pages and content elements will always be on top, but the order of other record groups can be changed.
@@ -1829,6 +1861,11 @@ Configuration for the suggest wizard for field [field] in table [tablename]
 
 [tablename].[field].suggest.[queryTable]
 Configuration for the suggest wizard for field [field] in table [tablename] listing records from [queryTable]
+[tablename].[field].[dataStructKey]
+->TCEFORM_flexform
+Properties for the TCEFORM FlexForm meta configuration.
+
+FlexForms have a built in possibility to use different field configuration for multiple languages. The handling of this multi-language behavior is configurable in the meta settings of a FlexForm.
 [tablename].[field].[dataStructKey].[flexSheet]
 ->TCEFORM_flexformSheet
 Configuration for the data structure of a sheet with type "flex".
@@ -2017,17 +2054,41 @@ PAGE_TSCONFIG_ID
 integer
 (applies to select-types with foreign table)
 
-When the select-types are used with foreign-table the where-query has four markers (see description of $TCA in the "Inside TYPO3" document.) The value of three of these markers may be set from Page TSconfig.
+When the select-types are used with foreign-table, the where-query has four markers (see description of $TCA in the "Inside TYPO3" document). The value of three of these markers may be set from Page TSconfig.
+
+Examples:
+
+TCEFORM.tt_content.pi_flexform.PAGE_TSCONFIG_ID = 22
+In this example, the value will substitute the marker in a plugin FlexForm. 
+
+TCEFORM.tx_myext.myfield.PAGE_TSCONFIG_ID = 22
+This example might be used for a record in an extension. It refers to a table called "tx_myext" and the field "myfield". Here the marker will be substituted by the value "22". 
 PAGE_TSCONFIG_IDLIST
 comma list of integers
 (applies to select-types with foreign table)
 
-See above
+See above.
+
+Examples:
+
+TCEFORM.tt_content.pi_flexform.PAGE_TSCONFIG_IDLIST = 20,21,22
+In this example, the value will substitute the marker in a plugin FlexForm. 
+
+TCEFORM.tx_myext.myfield.PAGE_TSCONFIG_IDLIST = 20,21,22
+This example might be used for a record in an extension. It refers to a table called "tx_myext" and the field "myfield". Here the marker will be substituted by the list of integers. 
 PAGE_TSCONFIG_STR
 string
 (applies to select-types with foreign table)
 
-See above
+See above.
+
+Examples:
+
+TCEFORM.tt_content.pi_flexform.PAGE_TSCONFIG_STR = %hello%
+In this example, the value will substitute the marker in a plugin FlexForm. 
+
+TCEFORM.tx_myext.myfield.PAGE_TSCONFIG_STR = %hello%
+This example might be used for a record in an extension. It refers to a table called "tx_myext" and the field "myfield". Here the marker will be substituted by the given value. 
 itemsProcFunc.[...]
 (custom)
 (applies to select-types with itemsProcFunc)
@@ -2057,6 +2118,29 @@ The result is that the label for the title field will be a link:
 Clicking the link brings you to a form where only this field is shown:
 
 [page:TCEFORM.(tablename).(field)/TCEFORM.(tablename).(field).types.(type)]
+->TCEFORM_flexform
+Properties for the TCEFORM FlexForm configuration object.
+Property:
+Data type:
+Description:
+Default:
+langDisable
+boolean
+If set, then handling of localizations is disabled. Otherwise FlexForms will not only allow editing the default language, but also additional languages  according to "sys_languages" table contents.
+
+langChildren
+boolean
+If set, then localizations are bound to the default values 1-1 ("value" level). Otherwise localizations are handled on "structure level".
+
+Example:
+
+TCEFORM.tt_content.pi_flexform.login {
+  # Language settings plug-in configuration
+  langDisable  = 1
+  langChildren = 0
+}
+
+[page:TCEFORM.[tablename].[field].[dataStructKey]]
 ->TCEFORM_flexformSheet
 The following options were introduced in TYPO3 4.5. These are the properties for the TCEFORM FlexForm sheet configuration object (see ->TCEFORM section above).
 Property:
@@ -2074,7 +2158,7 @@ TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF {
   disabled = 1
 }
 
-title
+sheetTitle
 string / getText
 Set the title of the tab in FlexForm plug-in configuration.
 
@@ -2082,8 +2166,16 @@ Example:
 
 TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF {
   # Rename the first tab of the FlexForm plug-in configuration
-  title = LLL:fileadmin/locallang.xml:tt_content.pi_flexform.my_ext_pi1.sDEF
+  sheetTitle = LLL:fileadmin/locallang.xml:tt_content.pi_flexform.my_ext_pi1.sDEF
 }
+
+sheetDescription
+string / getText
+Specifies a description for the sheet shown in the FlexForm.
+
+sheetShortDescr
+string / getText
+Specifies a short description of the sheet used as link title in the tab-menu.
 
 [page:TCEFORM.[tablename].[field].[dataStructKey].[flexSheet]]
 ->TCEFORM_suggest
