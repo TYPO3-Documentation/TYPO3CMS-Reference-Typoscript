@@ -1,9 +1,9 @@
 ﻿TSconfig Reference
 Extension Key: doc_core_tsconfig
 Language: en
-Version: 4.6.0
+Version: 4.7.0
 Keywords: tsconfig, typoscript, reference, forDevelopers, forAdvanced
-Copyright 2000-2011, Documentation Team, <documentation@typo3.org>
+Copyright 2000-2012, Documentation Team, <documentation@typo3.org>
 
 This document is published under the Open Content License
 available from http://www.opencontent.org/opl.shtml
@@ -28,6 +28,7 @@ About this document	3
 What's new	3
 Credits	3
 Feedback	3
+Version numbers	3
 Conditions	4
 Differences to conditions in TypoScript templates	4
 References	4
@@ -40,9 +41,9 @@ Page TSconfig	20
 Top Level Objects	21
 ->MOD	22
 ->TCEMAIN	38
-->TCEFORM	43
-->TSFE	53
-Next steps	55
+->TCEFORM	42
+->TSFE	52
+Next steps	54
 
 
 Introduction
@@ -50,23 +51,25 @@ About this document
 TypoScript can be used to create templates for the TYPO3 frontend, but also to configure the TYPO3 backend. In this case, it is called "TSconfig". TSconfig is divided into configuration for pages ("Page TSconfig") and configuration for users and groups ("User TSconfig"). Each variant is further detailed in its own chapter. TSconfig offers vast possibilities of customizing the TYPO3 backend. 
 For details about the nature of TypoScript as a syntax, please read the document "TypoScript Syntax & In-depth Study". 
 What's new
-This version of the TSconfig Reference was updated for TYPO3 version 4.6. 
-For TYPO3 4.6 some settings in the list module have been added: The search box there can now be hidden as well as records in additional website languages. FlexForm sheet descriptions now are editable via TSconfig. Another important change is that the links to add new pages in the new record wizard can now be hidden. 
+This version of the TSconfig Reference was updated for TYPO3 version 4.7. 
+For TYPO3 4.7 a setting in the page module has been added: The item "Page Information" in the drop down box can now be hidden. 
 The description of some properties has been added or updated. 
 
 More information about changed properties
 You can find a list of changes for more recent TYPO3 versions in the wiki: 
-http://wiki.typo3.org/Documentation_changes_in_4.2 
-http://wiki.typo3.org/Documentation_changes_in_4.3 
-http://wiki.typo3.org/Documentation_changes_in_4.4_and_4.5 
-http://wiki.typo3.org/Documentation_changes_in_4.6 
+TYPO3 4.2: http://wiki.typo3.org/Documentation_changes_in_4.2 
+TYPO3 4.3: http://wiki.typo3.org/Documentation_changes_in_4.3 
+TYPO3 4.4 and 4.5: http://wiki.typo3.org/Documentation_changes_in_4.4_and_4.5 
+TYPO3 4.6: http://wiki.typo3.org/Documentation_changes_in_4.6 
+TYPO3 4.7: http://forge.typo3.org/projects/typo3v4-doc_core_tsconfig/versions/1428 
 Credits
 This document was originally written by Kasper Skårhøj. It has since then been maintained successively by Michael Stucki, François Suter, Christopher Stelmaszyk and Christian Wöbbeking.
 Feedback
 For general questions about the documentation get in touch by writing to documentation@typo3.org.
 If you find a bug in this manual, please file an issue in the bug tracker of this manual: http://forge.typo3.org/projects/typo3v4-doc_core_tsconfig/issues
 Maintaining quality documentation is hard work and the Documentation Team is always looking for volunteers. If you feel like helping please join the documentation mailing list (typo3.projects.documentation on lists.typo3.org).
-
+Version numbers
+For new features TSconfig includes a note in which TYPO3 version the feature was added. If such a note is missing, the feature is part of TYPO3 since version 4.5 at least.
 Conditions
 As of TYPO3 4.3 it is possible to use TypoScript conditions in both User TSconfig and Page TSconfig, just as it is done in TypoScript for templates. 
 Example:
@@ -1239,6 +1242,11 @@ disableIconToolbar
 boolean
 Disables the topmost icon toolbar with the "view"-Icon and the icon toolbar below.
 
+disablePageInformation
+boolean
+(Since TYPO3 4.7) Hide the menu item "Page information" in the drop down box.
+Use this option instead of removing page information completely.
+0
 [page:mod.web_layout; beuser:mod.web_layout]
 Web > List (mod.web_list):
 Property:
@@ -1311,7 +1319,7 @@ mod.web_list.table.tt_content.hideTable = 1
 
 hideTranslations
 list of table names
-For tables in this list all their records in additional website languages will be hidden in the List module. Only records in default website languages are visible.
+(Since TYPO3 4.6) For tables in this list all their records in additional website languages will be hidden in the List module. Only records in default website languages are visible.
 Use "*" to hide all records of additional website languages in all tables or choose tables by comma-separated list.
 Example:
 mod.web_list.hideTranslations = *
@@ -1320,7 +1328,7 @@ mod.web_list.hideTranslations = tt_content,tt_news
 
 disableSearchBox
 boolean
-Disables the search box located below the clipboard
+(Since TYPO3 4.6) Disables the search box located below the clipboard
 0
 allowedNewTables
 list of table names
@@ -1432,7 +1440,7 @@ Description:
 Default:
 pages
 boolean
-Use the following sub-properties to show or hide the specified links.
+(Since TYPO3 4.6) Use the following sub-properties to show or hide the specified links.
 
 Available sub-properties:
 show.pageAfter = Show or hide the link to create new pages after the selected page.
@@ -1863,7 +1871,7 @@ Configuration for the suggest wizard for field [field] in table [tablename]
 Configuration for the suggest wizard for field [field] in table [tablename] listing records from [queryTable]
 [tablename].[field].[dataStructKey]
 ->TCEFORM_flexform
-Properties for the TCEFORM FlexForm meta configuration.
+(Since TYPO3 4.6) Properties for the TCEFORM FlexForm meta configuration.
 
 FlexForms have a built in possibility to use different field configuration for multiple languages. The handling of this multi-language behavior is configurable in the meta settings of a FlexForm.
 [tablename].[field].[dataStructKey].[flexSheet]
@@ -2119,7 +2127,7 @@ Clicking the link brings you to a form where only this field is shown:
 
 [page:TCEFORM.(tablename).(field)/TCEFORM.(tablename).(field).types.(type)]
 ->TCEFORM_flexform
-Properties for the TCEFORM FlexForm configuration object.
+(Since TYPO3 4.6) Properties for the TCEFORM FlexForm configuration object.
 Property:
 Data type:
 Description:
@@ -2171,11 +2179,11 @@ TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF {
 
 sheetDescription
 string / getText
-Specifies a description for the sheet shown in the FlexForm.
+(Since TYPO3 4.6) Specifies a description for the sheet shown in the FlexForm.
 
 sheetShortDescr
 string / getText
-Specifies a short description of the sheet used as link title in the tab-menu.
+(Since TYPO3 4.6) Specifies a short description of the sheet used as link title in the tab-menu.
 
 [page:TCEFORM.[tablename].[field].[dataStructKey].[flexSheet]]
 ->TCEFORM_suggest

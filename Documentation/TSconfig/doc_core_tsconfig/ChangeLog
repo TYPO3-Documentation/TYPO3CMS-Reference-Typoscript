@@ -1,3 +1,20 @@
+2012-04-23  Christopher  <chrissitopher@gmx.de>
+
+	* Fixed task #35280: Prepare release of TSconfig 4.7.0
+	* Fixed task #35280: Regenerated the PDF file
+	* Released version 4.7.0 to TER
+
+2012-04-20  Christopher  <chrissitopher@gmx.de>
+
+	* Fixed bug #36366: TSconfig must use Share font for headings
+	* Fixed bug #36367: Fix internal format of nine screenshots
+	* Fixed task #35446: Add information about in which major version new features were added
+	* Fixed task #35280: Prepare release of TSconfig 4.7.0
+
+2012-04-19  Christian  <petapico@hotmail.de>
+
+	* Fixed bug #32678: Add description of disablePageInformation for the page module (thanks to Felix Kopp)
+
 2011-12-01  Christopher  <chrissitopher@gmx.de>
 
 	* Fixed bug #31385: Fix description of FlexForm configuration keys
