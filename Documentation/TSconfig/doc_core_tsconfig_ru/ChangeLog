@@ -1,0 +1,13 @@
+2011-09-02  Christopher  <chrissitopher@gmx.de>
+
+	* Update ext_emconf.php
+	* Release Russian version 4.5.2
+
+2011-09-02  aksenovaa  <aksenovaa@bk.ru>
+
+	* Fixed bug #12818: Update description of mod.web_list.alternateBgColors
+	* Fixed bug #27158: Description of mod.web_layout.disableAdvanced is incomplete
+
+2011-04-13  aksenovaa  <aksenovaa@bk.ru>
+
+	* Translation to Russian based on the English version 4.5.1
