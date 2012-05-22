@@ -1,0 +1,1323 @@
+﻿
+TSConfig
+Extension Key: doc_core_tsconfig
+Copyright 2000-2004, Kasper Skårhøj, <kasper@typo3.com>
+
+This document is published under the Open Content License
+available from http://www.opencontent.org/opl.shtml
+
+The content of this document is related to TYPO3 
+- a GNU/GPL CMS/Framework available from www.typo3.com
+
+Revised for TYPO3 3.7, may 2004
+All options tested.
+
+Table of Contents
+TSConfig	1
+Introduction	2
+Syntax	2
+User TSconfig	3
+Top Level Objects	4
+->ADMPANEL	4
+->OPTIONS	6
+->SETUP	7
+Page TSconfig	10
+Top Level Objects	11
+->MOD	11
+->TCEMAIN	19
+->TCEFORM	21
+->TSFE	25
+
+
+Introduction
+TypoScript is mainly known as the means to configure Templates Records for TYPO3 based websites. However TypoScript itself is basically a way to define values in a hierarchy. And so TypoScript is also used to make detailed configuration of the backend, both regarding users and groups and the way modules are working in branches of the Page Tree. This is done through the 'TSconfig' which is found for both the backend and frontend users/groups in addition to the pages. This is often referred to as “User TSconfig” and “Page TSconfig”.
+Page TSconfig / User TSconfig
+This document deals with the options you can set for “Page TSconfig” and “User TSconfig”. Notice that because TypoScript is a 'declarational' language (that is, it's mere "configuration") it does not in inself carry out a sequence of actions. The reason why the TypoScript Templates used for the frontend seems to work a like this is because those values are interpreted into PHP function calls which constructs a page. In the case where TypoScript is used for configuration like here it's clearly more like the Registration Database in Windows: The values configure how the application works.
+For details about the nature of TypoScript as a syntax, please read the document “TypoScript Syntax”.
+Syntax
+The syntax is as usual TypoScript, only difference is that you cannot use any Constants or Conditions. 
+User TSconfig
+You can enter TSconfig for both backend users and groups. The resulting TSconfig for a certain backend user is the accumulated TSconfig for all the backend groups he's a member of. Thus you can override formerly set options from the user groups by entering another configuration in the TSconfig field of the user himself.
+The "TSconfig" field
+This is how the TSconfig for users is entered in the backend user records:
+
+
+Verifying the final configuration
+It's vital to check the resulting configuration of the users. You can do that in the Tools>User Admin (extension: beuser) module by clicking a username. Then you'll see the TSconfig tree among other information. Here's an example:
+
+
+This configuration could be set by entering this value in the TSconfig field of the backend user:
+options.clearCache.all = 1
+TCAdefaults.tt_content {
+  hidden = 1
+  header = 234
+}
+
+Overriding previously set options
+Now, lets say the user is a member of a usergroup with this configuration:
+TCAdefaults.tt_content {
+  hidden = 1
+  header = Hello!
+}
+
+Then setting these values in the TSconfig field of the user himself, would override the default value of the header (marked red) and add clear cache option (marked blue). The default value of the hidden field is not changed and simply inherited directly from the group:
+options.clearCache.all = 1
+TCAdefaults.tt_content.header = 234
+Setting default User TSconfig
+User TSconfig is designed to be individual for users or groups of users. However it can be very handy to set global values that will be initialized for all users.
+In extensions this is easily done by the extension API function, t3lib_extMgm::addUserTSConfig(). In the (ext_)localconf.php file you can call it like this to set default configuration:
+
+/**
+ * Adding the admin panel to users by default and forcing the display of the edit-icons
+ */
+t3lib_extMgm::addUserTSConfig('
+admPanel {
+  enable.edit = 1
+  module.edit.forceNoPopup = 1
+  module.edit.forceDisplayFieldIcons = 1
+  module.edit.forceDisplayIcons = 0
+  hide = 1
+}
+options.shortcutFrame = 1
+');
+This API function simply adds the content to $TYPO3_CONF_VARS[BE]['defaultUserTSconfig']
+Top Level Objects
+This is the User TSconfig Top Level Objects (TLOs):
+Property:
+Data type:
+Description:
+Default:
+admPanel
+->ADMPANEL
+Options regarding the front-end admin panel
+
+options
+->OPTIONS
+Options for the user, various
+
+mod
+(see ->MOD of Page TSconfig)
+Overriding values for the backend modules
+
+setup.defaults
+setup.override
+->SETUP
+Default values and override values for the user settings known from the setup module.
+
+Notice:
+There is a tricky aspect to these settings; If first you have set a value by setup.override and then removes it again you will experience that the value persists to exist. This is because it is saved in the backend users profile. Therefore, if you have once set a value, do not remove it again by rather set it blank if you want to disable the effect again!
+
+TCAdefaults.[tablename].[field]
+string
+Sets default values for records. The order of default values when creating new records in the backend is this:
+Value from $TCA
+Value from User TSconfig (these settings)
+Value from “defVals” GET vars (see alt_doc.php)
+Value from previous record based on 'useColumnsForDefaultValues'
+
+However the order for default values used by tcemain.php if a certain field is not granted access to for user will be:
+Value from $TCA
+Value from User TSconfig (these settings)
+
+So these values will be authoritative if the user has no access to the field anyway.
+
+Example:
+This sets the default hidden flag for pages to “clear”
+
+TCAdefaults.pages.hidden = 0
+
+user
+
+This is for custom purposes. 
+Deprecated, use "tx_*" below from extensions
+
+auth
+
+Configuration for authentication services. Currently these are the options:
+
+auth.BE.redirectToURL
+Specifies a URL to redirect to after login is performed in the backend login form.
+
+tx_[extension key with no underscore]
+
+This is reserved space for extensions.
+
+[beuser]
+->ADMPANEL
+Configuration of the Admin Panel in the Frontend for the user.
+Property:
+Data type:
+Description:
+Default:
+enable
+[object]
+Used to enable the various parts of the panel for users.
+All values are 0/1 booleans.
+
+General:
+.all: enables all modules
+
+Modules:
+.preview
+.cache
+.publish
+.edit
+.tsdebug
+.info
+(For admin-users, all = 1 is default! Hardcoded in class)
+hide
+boolean
+If set, the panel will not display in the bottom of the page. This has only a visual effect. 
+
+module.edit	
+[object]
+.forceDisplayIcons (boolean):
+Forces edit-panels to appear regardless of the selectorbox.
+.forceDisplayFieldIcons (boolean):
+Forces edit-icons to appear regardless of the selectorbox.
+.forceNoPopup (boolean):
+Forces edit-forms to open in same window - not pop up window.
+
+Example, that forces the display of the edit icons without displaying the admin-panel itself:
+
+admPanel {
+  enable.edit = 1
+  module.edit.forceDisplayFieldIcons = 1
+  hide = 1
+}
+
+[beuser:admPanel]
+Tip:
+If you want to link to the login-screen of the backend, but wishes that the user should return to the front-end for editing, you do it by this link, sending the “redirect_url” parameter to the login-screen. In that case the backend interface is not started. 
+<a href="typo3/index.php?redirect_url=../">Backend login returning to front-end</a>
+
+This is how the admin panel looks. Notice the fact that the visibility of the admin panel is ultimately depending on being configured in your TypoScript template for the website! This is easily done by inserting this string in the TypoScript Template:
+	config.admPanel = 1
+
+or if you use frames, this is probably better:
+	page.config.admPanel = 1
+
+
+->OPTIONS
+Various options for the user affecting the core at various points.
+Property:
+Data type:
+Description:
+Default:
+dontMountAdminMounts
+boolean
+This options prevents the root to be mounted for an admin user.
+
+NOTE: Only for admin-users. For other users it has no effect.
+
+RTEkeyList
+[list of keywords]
+This is a list of the Rich Text Editor buttons the user may see displayed. The user will not see any buttons not listed here.
+
+Either enter a comma list of button keywords  (see “TYPO3 Core API / RTE section”) or specify all with a wildcard “*” for everything.
+*
+(If value is not set at all, *, is default)
+clearCache.pages
+boolean
+This will allow a user to clear the whole page cache.
+
+clearCache.all
+boolean
+This will allow a user to clear all cache (that is everything including templates)
+
+lockToIP
+string
+List of IP-numbers with wildcards. 
+
+Note: This option is enabled only if the TYPO3_CONF_VARS[BE][enabledBeUserIPLock] configuration is true.
+
+Examples:
+192.168.*.*    
+- will allow all from 192.168-network
+
+192.168.*.*, 212.22.33.44    
+- will allow all from 192.168-network plus all from REMOTE_ADDR  212.22.33.44
+
+192.168, 212.22.33.44    
+- the same as the previous. Leaving out parts of the IP address is the same as wild cards...
+
+saveClipboard
+boolean
+If set, the clipboard content will be preserved for the next login. Normally the clipboard content lasts only during the session.
+
+clipboardNumberPads
+int (0-20)
+This allows you to enter how many pads you want on the clipboard.
+3
+disableDocModuleInAB
+boolean
+If set, the doc module is not displayed in the backend even if enabled in general.
+
+shortcutFrame
+boolean
+If set, the shortcut frame in the bottom of the window appears.
+
+shortcutGroups
+Array of integers
+Setting which shared shortCutGroups are loaded for the user.
+
+Example:
+shortcutGroups {
+  1=1
+  2=1
+  3=
+}
+
+Shared shortcut group 1 and 2 is loaded, but 3 is not loaded
+
+shortcut_onEditId_dontSetPageTree
+boolean
+If set, the page tree is not opened to the page being edited when an id number is entered in the “Edit Id” box
+
+shortcut_onEditId_keepExistingExpanded
+boolean
+If set, the existing expanded pages in the page tree are not collapsed when an id is entered in the “Edit Id” box.
+(provided .shortcut_onEditId_dontSetPageTree is not set!)
+
+mayNotCreateEditShortcuts
+boolean
+If set, then the user cannot create or edit shortcuts. Depends on .shortcutFrame being set.
+
+createFoldersInEB
+boolean
+If set, a createFolders option appears in the element browser (for admin-users this is always enabled).
+
+noThumbsInEB
+boolean
+If set, then image thumbnails are not shown in the element browser.
+
+noThumbsInRTEimageSelect
+boolean
+As  .noThumbsInEB but for the Rich Text Editor image selector.
+
+uploadFieldsInTopOfEB
+boolean
+If set, the upload-fields in the element browser are put in the top of the window.
+
+saveDocNew
+saveDocNew.[table]
+boolean / “top”
+If set, a button “Save and create new” will appear in TCEFORMs. 
+Any value set for a single table will override the default value set to the object “saveDocNew”.
+
+Example:
+In this example the button is disabled for all tables, except tt_content where it will appear, and in addition create the records in the top of the page (default is after instead of top).
+
+options.saveDocNew = 0
+options.saveDocNew.tt_content = top
+
+disableDelete
+disableDelete.[table]
+
+Disables the “Delete” button in TCEFORMs. 
+Overriding for single tables works like “saveDocNew” above.
+
+showHistory
+showHistory.[table]
+
+Shows link to the history for the record in TCEFORMs.
+Overriding for single tables works like “saveDocNew” above.
+
+pageTree.disableIconLinkToContextmenu
+folderTree.disableIconLinkToContextmenu
+boolean / “titlelink”
+If set, the page/folder-icons in the page/folder tree will not activate the clickmenu. 
+If the value is set “titlelink” then the icon will instead be wrapped with the same link as the title.
+
+pageTree.disableTitleHighlight
+boolean
+If set, the page titles in the page tree will not be highlighted when clicked.
+
+pageTree.showPageIdWithTitle
+boolean
+If set, the titles in the page navigation tree will have their ID numbers printed before the clickable title.
+
+pageTree.onlineWorkspaceInfo
+boolean
+If set, the workspace info box will also be shown in the page tree even in online mode. Recommended when working with workspaces a lot.
+
+contextMenu.[key].disableItems
+list of items
+List of context menu (“clickmenu”) items to disable.
+“key” points to which kind of icon that brings up the menu, and possible options are “pageTree”, “pageList”, “folderTree”, “folderList”. “page” and “folder” obviously points to either the Web og File main module. “Tree” and “List” points to whether the menu is activated from the page/folder tree or the listing of records/files
+Items to disable are (for “page” type - that is database records):
+
+view,edit,hide,new,info,copy,cut,paste,delete,move_wizard,
+history,perms,new_wizard,hide,edit_access,edit_pageheader,db_list
+
+Items to disable are (for “folder” type - that is files/folders):
+edit,upload,rename,new,info,copy,cut,paste,delete
+
+contextMenu.options.leftIcons
+boolean
+If set, the icons in the clickmenu appear to the left instead of right
+
+contextMenu.options.clickMenuTimeOut
+int, 1-100
+Number of seconds the click menu is visible in the top frame before it disappears by it self.
+5
+contextMenu.options.alwaysShowClickMenuInTopFrame
+boolean
+If set, then the clickmenu in the top frame is always shown. Default is that it's shown only if the pop-up menus are disabled by user or by browser.
+
+overridePageModule
+string
+By this value you can substitute the default “Web > Page” module key (“web_layout”) with another backend module key.
+
+Example:
+options.overridePageModule = web_txtemplavoilaM1
+This will enable TemplaVoila page module as default page module.
+
+moduleMenuCollapsable
+boolean
+If set, the user can collapse main modules in the left menu.
+1
+[beuser:options]
+->SETUP
+Default values and overriding values for the “User > Setup” module.
+Notice: the User > Setup module only represents a subset of the options from the table below.
+
+Default values are set by 'setup.default' while overriding values are set by 'setup.override'. Overriding values will be impossible for the user to change himself and no matter the current value the overriding value will overrule. The default values are used for new users or if the setup is re-initialized.
+NOTICE: If you have first set a value (by override eg) and then REMOVE that value from being set, the value is NOT restored to the original default but is kept at the current value! Therefore setting a value and later removing that value would require the users preferences to be reset (you can do that from the Install Tool > Database Analyser > Reset user preferences) OR better, don't remove the value, just change the value of it! (eg. to a blank string if you wish to “reset” the value).
+This table shows the keys for both defaults and override values:
+Property:
+Data type:
+Description:
+Default:
+thumbnailsByDefault
+boolean
+Show Thumbnails by default
+
+emailMeAtLogin
+boolean
+Notify me by email, when somebody logs in from my account
+
+startInTaskCenter
+boolean
+If set, then the backend will start up in the task center (task center should be enabled for the user)
+
+helpText
+boolean
+Show help text when applicable
+
+titleLen
+int+
+Max. Title Length
+
+edit_wideDocument
+boolean
+Wide document background
+
+edit_RTE
+boolean
+Enable Rich Text Editor
+
+edit_docModuleUpload
+boolean
+File upload directly in Doc. module
+
+edit_showFieldHelp
+string
+Keywords: “”, “icon” or “text”
+Determines the type of help text mode for TCA form fields.
+
+navFrameWidth
+int+
+The width in pixels of the navigation frame in the Page and File main modules
+245 pixels
+navFrameResizable
+boolean
+If set, the frameset modules will have the border between the navigation and list frame resizable. 
+
+lang
+language-key
+One of the language-keys. See t3lib/config_default.php for current options. Eg. “dk”, “de”, “es” etc.
+
+copyLevels
+int+
+Recursive Copy: Enter the number of page sublevels to include, when a page is copied
+
+recursiveDelete
+boolean
+Recursive Delete(!): Allow ALL subpages to be deleted when deleting a page
+
+allSaveFunctions
+boolean
+Display all save functions in Doc-module menu
+
+neverHideAtCopy
+boolean
+If set, then the hideAtCopy feature for records in TCE will not be used.
+
+condensedMode
+boolean
+If set, the backend will not load the Web-submodules and File-submodules in a frameset but allow the page and folder trees to load the submodule in its own frame. This allows for a better display on small screens.
+
+noMenuMode
+boolean / string
+If set, the backend will not load the left menu frame but rather put a selector-box menu in the topframe. This saves a lot of space on small screens. Also icons will not be displayed in the clickmenu panel in the top.
+
+Value “icons”: 
+Setting noMenuMode to “icons” will still remove the menu, but instead of the selectorbox menu you will have the whole clickmenu panel as a menu with the icons only as the hidden state of the clickmenu panel. This is extremely nice (in my opinion) for experienced users who know the icons of the modules.
+
+classicPageEditMode
+boolean
+Setting this option will not open the Web>Page module but rather load the content elements (normal column/default language) together with the page header in one big form when a page is edited (clicking a page icon in the page tree). This simulates the old behaviour in Classic Backend
+
+hideSubmoduleIcons
+boolean
+If set then submodule icons will not be shown in the left menu of the backend.
+
+noOnChangeAlertInTypeFields
+boolean
+When a record field is changed and that field would affect the layout of the form, a message normally pops up, saying that one should save now. If this flag is set, no message pops up.
+
+dontShowPalettesOnFocusInAB
+boolean
+If set, palettes are not activated in the TCEFORMs when focus is moved to a field.
+
+[beuser:setup.default/setup.override]
+
+Don't use any other properties than the ones listed in the table above. 
+
+Page TSconfig
+The Page TSconfig primarily concerns configuration of the modules in the TYPO3 backend. It may also relate to values in the frontend display occasionally.
+The Page TSconfig for a page is accumulated from the root and extends to cover the whole branch of subpages as well (unless values are overridden further out).
+The "TSconfig" field
+This is an example of the TSconfig field with a snippet of configuration for the Rich Text Editor. Precisely the Rich Text Editor is quite a good example of the usefulness of 'Page TSconfig'. The reason is that you may need the RTE to work differently in different parts of the website. For instance you might need to offer other style-classes in certain parts of the website. Or some options might need to be removed in other parts. The 'Page TSconfig' is used to configure this.
+The "TSconfig" field here is available in the page headers:
+
+
+Verifying the final configuration
+If you need to check out the actual configuration for a certain branch in the website, use the 'Web>Info' module (extension "info_pagetsconfig"):
+
+
+Setting default Page TSconfig
+Page TSconfig is designed to be individual for branches of the page tree. However it can be very handy to set global values that will be initialized from the root of the tree.
+In extensions this is easily done by the extension API function, t3lib_extMgm::addPageTSConfig(). In the (ext_)localconf.php file you can call it like this to set default configuration:
+
+t3lib_extMgm::addPageTSConfig('
+    RTE.default {
+        proc.preserveTables = 1
+        showButtons = cut,copy,paste,fontstyle,fontsize,textcolor
+        hideButtons = class,user,chMode
+    }
+');
+
+This API function simply adds the content to $TYPO3_CONF_VARS[BE]['defaultPageTSconfig']
+
+Top Level Objects
+This is the Page TSconfig Top Level Objects (TLOs):
+Property:
+Data type:
+Description:
+Default:
+mod
+->MOD
+Options for the backend modules.
+
+Notice that these options are merged with settings from User TSconfig (TLO: mod) which takes precedence.
+
+RTE
+->RTE
+This defines configuration for the Rich Text Editor.
+
+Please refer to the RTE section in the "TYPO3 Core API" document.
+
+TCEMAIN
+->TCEMAIN
+Configuration for the TYPO3 Core Engine (TCEmain)
+
+TCEFORM
+->TCEFORM
+Extra configuration for the form fields rendered by the TCEforms-class in general.
+
+TSFE
+->TSFE
+Options for the TSFE front end object.
+
+user
+
+This is for custom purposes. 
+Deprecated, use "tx_*" below from extensions
+
+tx_[extension key with no underscore]
+
+This is reserved space for extensions.
+
+[page]
+
+->MOD
+Configuration for backend modules. Generally the syntax is [module_name].[property]. The module name is defined in the conf.php files for the module.
+Blinding Function Menu options in Backend Modules
+Most of the modules in TYPO3 has a "function menu" selector box and this menu is usually configurable so you are able to remove menu items in specific sections of the page tree (or by overriding via User TSconfig, you could disable an option totally for a specific user/group).
+In this case the main menu of the Web>Info module looks like this:
+
+
+By adding this Page TSconfig we can remove the "Page TSconfig" item:
+mod.web_info.menu.function {
+  tx_infopagetsconfig_webinfo = 0
+}
+The function menu will now look like this:
+
+
+The 'Page TSconfig' option is simply disabled by setting this Page TSconfig!
+
+All you need to know in order to disable function menu items in the backend modules is, which modules support it and what the key of the menu item is (in the above example it was 'tx_infopagetsconfig_webinfo'). Modules extending the class "t3lib_SCbase" will most likely provide this out-of-the-box since it's a part of the base class in t3lib_SCbase::menuConfig().
+
+Examples from the TYPO3 core is listed in the table below (Testsite package):
+
+Property:
+-
+Description:
+web_layout.menu.function
+
+Web > Page module
+
+
+
+Option tags:
+
+<select name="SET[function]">
+    <option value="1">Columns</option>
+    <option value="0">QuickEdit</option>
+    <option value="2">Languages</option>
+    <option value="3">Page information</option>
+</select>
+Example:
+
+  # Disables all items except the "QuickEdit" item:
+mod.web_layout.menu.function {
+  1 = 0
+  2 = 0
+  3 = 0
+}
+web_info.menu.function
+
+Web > Info module
+
+
+Option tags:
+
+<select name="SET[function]">
+    <option value="tx_cms_webinfo_page">Pagetree overview</option>
+    <option value="tx_belog_webinfo">Log</option>
+    <option value="tx_infopagetsconfig_webinfo">Page TSconfig</option>
+    <option value="tx_cms_webinfo_hits">Hit Statistics</option>
+    <option value="tx_indexedsearch_modfunc1">Indexed search</option>
+</select>
+Example:
+
+  # Disables the item "Hit Statistics":
+mod.web_info.menu.function {
+  tx_cms_webinfo_hits = 0
+}
+web_func.menu.function
+
+Web > Functions module
+
+
+Option tags:
+
+<select name="SET[function]">
+    <option value="tx_funcwizards_webfunc">Wizards</option>
+</select>
+web_func.menu.wiz
+
+Web > Functions module, Wizards sub module
+This is the 2nd-level Function Menu in the Web > Functions module. Instead of the "function" key of the main menu it just uses the key "wiz" instead.
+
+
+Option tags:
+
+<select name="SET[wiz]">
+    <option value="tx_wizardcrpages_webfunc_2">Create multiple pages</option>
+    <option value="tx_wizardsortpages_webfunc_2">Sort pages</option>
+</select>
+Example:
+
+  # Disables the sub-item "Create multiple pages":
+mod.web_func.menu.wiz {
+  tx_wizardcrpages_webfunc_2 = 0
+}
+web_ts.menu.function
+
+Web > Template module
+
+
+
+Option tags:
+
+<select name="SET[function]">
+    <option value="tx_tstemplateceditor">Constant Editor</option>
+    <option value="tx_tstemplateinfo">Info/Modify</option>
+    <option value="tx_tstemplateobjbrowser">TypoScript Object Browser</option>
+    <option value="tx_tstemplateanalyzer">Template Analyzer</option>
+    <option value="tx_tstemplatestyler_modfunc1">CSS Styler</option>
+</select>
+user_task.menu.function
+
+User > Task Center
+This is slightly different because the Task Center does not provide a selector box function menu. But behind the scene it uses the same functionality of saving "states" and therefore you can also blind items in the Task Center.
+There is one tricky thing thought: The Task Center is not depending on a page in the page tree! So you either have to set default Page TSconfig or User TSconfig to blind options here!
+
+
+
+Keys are:
+
+tx_sysnotepad = Quick Note
+tx_taskcenterrecent = Recent Pages
+tx_taskcenterrootlist = Web>List module / root
+tx_taskcentermodules = Plugins
+tx_sysaction = Actions
+tx_systodos = Tasks
+
+Example:
+Set this as User TSconfig:
+
+  # Task Center configuration:
+mod.user_task.menu.function {
+    # Disable "Recent Pages" display:
+  tx_taskcenterrecent  = 0
+    # Disable "Action" list
+  tx_sysaction = 0
+}
+[page:mod; beuser:mod]
+
+
+Since function menu items can be provided from extensions it is not possible to create a complete list of menu keys. (The list in the table above is what is installed by default in the Testsite package.)
+Therefore, if you want to blind a menu item the only sure way of doing it is to look in the HTML source of the backend module and find the selector box with the function menu and extract the key from the <option> tags. This listing is a cleaned-up version of a function menu. The keys are the values of the option tags:
+
+<select>
+    <option value="tx_cms_webinfo_page">Pagetree overview</option>
+    <option value="tx_belog_webinfo">Log</option>
+    <option value="tx_infopagetsconfig_webinfo">Page TSconfig</option>
+</select>
+As you can see this is where the key for the example before was found:
+mod.web_info.menu.function {
+  tx_infopagetsconfig_webinfo = 0
+}
+
+WARNING:
+Blinding Function Menu items is not hardcore access control! All it does is to hide the possibility of accessing that module functionality from the interface. It might be possible for users to hack their way around it and access the functionality anyways. You should use the option of blinding elements mostly to remove otherwise distracting options.
+Overriding Page TSconfig with User TSconfig
+In all standard modules the Page TSconfig values of the “mod.” branch may be overridden by the same branch of values set for the backend user.
+To illustrate this feature lets consider the case from above where a menu item in the Web>Info module was disabled in the Page TSconfig by this value:
+mod.web_info.menu.function {
+  tsconf = 0
+}
+If however we set this configuration in the TSconfig of a certain backend user (eg. the admin user), that user would still be able to select this menu item because the value of his User TSconfig overrides the same value set in the Page TSconfig:
+mod.web_info.menu.function {
+  tsconf = 1
+}
+Here's another example where the value 'mod.web_layout.editFieldsAtATime' has been overridden by User TSconfig to the value '5' instead of '1'. The image shows you how to check the Page TSconfig (the upper image) and also see if User TSconfig of the current user (the logged in user) has altered anything from this configuration (lower image):
+
+
+
+Shared options for modules (mod.SHARED):
+Property:
+Data type:
+Description:
+Default:
+colPos_list
+(list of integers, blank = don't do anything.)
+This option lets you specify which columns of tt_content elements should be displayed in the 'Columns' view of the modules, in particular Web>Page. 
+By default there are four columns, Left, Normal, Right, Border. However most websites use only the Normal column, maybe another also. In that case the remaining columns are not needed. By this option you can specify exactly which of the columns you want to display.
+Each column has a number which ultimately comes from the configuration of the table tt_content, field 'colPos' found in the tables.php file. This is the values of the four default columns:
+Left: 1
+Normal: 0
+Right: 2
+Border: 3
+
+Example:
+This results in only the Normal and Border column being displayed:
+
+mod.SHARED.colPos_list = 0,3
+
+defaultLanguageLabel
+string
+Alternative label for "Default" when language labels are shown in the interface.
+
+defaultLanguageFlag
+string
+Flag icon filename from gfx/flags/ for default language
+
+[page:mod.SHARED; beuser:mod.SHARED]
+
+Web>Page (mod.web_layout):
+Property:
+Data type:
+Description:
+Default:
+tt_content.colPos_list
+(list of integers, blank = don't do anything.)
+See mod.SHARED.colPos_list for details.
+If non-blank, this list will override the one set by  mod.SHARED.colPos_list.
+
+Example:
+This results in only the Normal and Border column being displayed:
+
+mod.web_layout.tt_content.colPos_list = 0,3
+
+tt_content.fieldOrder
+list of field names from tt_content table
+This allows you to specify (and thereby overrule) the preferred order of the fieldnames of the "Quick Edit" editing forms of the tt_content table (Content Elements). Just specify the list of fields, separated by comma. Then these fields will be listed first and all remaining fields thereafter in their original order.
+
+Example:
+This results in the 'Text' field and thereafter 'Header' field being display as the very first fields instead of the 'Type' field. 
+
+mod.web_layout.tt_content {
+  fieldOrder = bodytext, header
+}
+
+editFieldsAtATime
+int+
+Specifies the number of subsequent content elements to load in the editform when clicking the editicon of a content element in the 'Columns' view of the module. 
+
+Example:
+
+mod.web_layout {
+  editFieldsAtATime = 2
+}
+1
+noCreateRecordsLink
+boolean
+If set, the link in the bottom of the page, "Create new record", is hidden.
+
+QEisDefault
+boolean
+If set, then the QuickEditor is the first element in the Function Menu in the top of the menu in Web>Page
+
+disableSearchBox
+boolean
+Disables the search box in Columns view.
+
+disableBigButtons
+boolean
+Disables the large buttons in top of the Columns view.
+
+These are the buttons that are hidden by this option:
+
+
+
+disableAdvanced
+boolean
+Disables the clear cache advanced function  in the bottom of the page in the module, including the "Create new record" link.
+
+disableNewContentElementWizard
+boolean
+Disables the fact that the new-content-element icons links to the content element wizard and not directly to a blank “NEW” form.
+
+defaultLanguageLabel
+string
+Alternative label for "Default" when language labels are shown in the interface.
+
+Overrides the same property from mod.SHARED if set. 
+
+defLangBinding
+boolean
+If set, translations of content elements are bound to the default record in the display. This means that within each column with content elements any translation found for exactly the shown default content element will be shown in the language column next to.
+
+This display mode should be used depending on how the frontend is configured to display localization. The frontend must display localized pages by selecting the default content elements and for each one overlay with a possible translation if found.
+
+[page:mod.web_layout; beuser:mod.web_layout]
+
+Web>List (mod.web_list):
+Property:
+Data type:
+Description:
+Default:
+noCreateRecordsLink
+boolean
+If set, the link in the bottom of the page, "Create new record", is hidden.
+
+Example:
+
+mod.web_list {
+  noCreateRecordsLink = 1
+}
+
+alternateBgColors
+boolean
+If set, the background colors of elements will alternate.
+
+Example:
+
+mod.web_list {
+  alternateBgColors = 1
+}
+The result is alternating background colors for each element:
+
+
+
+disableSingleTableView
+boolean
+If set, then the links on the table titles which shows a single table listing only will not be available (including sorting links on columns titles, because these links jumps to the table-only view).
+
+listOnlyInSingleTableView
+boolean
+If set, then records will be listed only when the single table view is enabled. This is very practical for pages containing many records from many tables!
+
+Example:
+
+mod.web_list {
+  listOnlyInSingleTableView = 1
+}
+The result will be that records from tables are listed only in the single-table mode and the default view will just show number of table records in page and the table description if available:
+
+
+allowedNewTables
+list of tablenames
+If this list is set, then only tables listed here will have a link to “create new” in the page and subpages.
+
+This also affects "db_new.php" (the display of “Create new record”)
+Note: Technically records can be created (eg. by copying/moving), so this is "pseudo security". The point is to reduce the number of options for new records visually.
+
+Example:
+
+mod.web_list {
+  allowedNewTables = pages, tt_news
+}
+Only pages and tt_news  table elements will be linked to in the New record screen:
+
+
+
+newWizards
+boolean
+If set, then the new-link over the control panel of the pages and tt_content listings in the List module will link to the wizards and not create a record in the top of the list.
+
+showClipControlPanelsDespiteOfCMlayers
+boolean
+If set, then the control- and clipboard panels of the module is shown even if the context-popups (ClickMenu) are available. Normally the control- and clipboard panels are disabled (unless extended mode is set) in order to save bandwidth.
+
+newPageWiz.overrideWithExtension
+newContentWiz.overrideWithExtension
+string
+If set to an extension key, (eg. “templavoila”) then the “mod1/index.php” file of that extension will be used for creating new elements on the page. "newContentWiz" will likewise use the "mod1/db_new_content_el.php" for creating new content elements.
+
+Also see “options.overridePageModule”
+
+clickTitleMode
+string
+Keyword which defines what happens when a user clicks the title in the list.
+
+Default is that pages will go one level down while other records have no link at all.
+
+Keywords:
+edit = Edits record
+info = Shows information
+show = Shows page/content element in frontend
+
+[page:mod.web_list; beuser:mod.web_list]
+
+Web>View (mod.web_view):
+Property:
+Data type:
+Description:
+Default:
+type
+int+
+Enter the value of the &type parameter passed to the webpage.
+
+Example:
+By this configuration frontend pages will be shown with "index.php?id=123&type=1" from the Web > View module:
+
+mod.web_view {
+  type = 1
+}
+
+[page:mod.web_view; beuser:mod.web_view]
+
+Tools>Extension Manager (mod.tools_em):
+Property:
+Data type:
+Description:
+Default:
+allowTVlisting
+boolean
+If set the Technical and Validation listings are available in the EM. Those will evaluate ALL available extensions and that can take many seconds (up to 30) depending on number of extensions. 
+
+Example:
+
+mod.tools_em.allowTVlisting = 1
+Enables these options in the Extension Manager:
+
+
+
+[beuser:mod.tools_em]
+
+Edit document 'module' (mod.xMOD_alt_doc):
+Property:
+Data type:
+Description:
+Default:
+disableDocSelector
+boolean
+If set, the document selector is disabled
+
+Example:
+
+mod.xMOD_alt_doc {
+  disableDocSelector = 1
+  disableCacheSelector = 1
+}
+The result is that both the document and cache action selector is hidden in the form page:
+
+
+(The interesting part is what is missing...)
+
+disableCacheSelector
+boolean
+If set, the cache/save/close selector is disabled.
+
+See example above.
+
+[page:mod.xMOD_alt_doc; beuser:mod.xMOD_alt_doc]
+
+->TCEMAIN
+Property:
+Data type:
+Description:
+table.[tablename]
+default
+->TCEMAIN_tables
+Options for each table.
+permissions.userid
+permissions.groupid
+int+
+Hardcodes the default owner Backend User / Group UID of new and copied pages.
+
+(The default owner is the backend user that creates / copies the record. The default user group is the "main group" of the backend user - the group in the very top of the users group-list.)
+
+Example:
+
+TCEMAIN {
+    # Owner be_users UID for new pages:
+  permissions.userid = 2
+    # Owner be_groups UID for new pages:
+  permissions.groupid = 3
+}
+Backend User with UID 2 is "test" and the Backend Group with UID 3 is "test_group". With the configuration above a new page would be created with this user/group setting instead of the defaults:
+
+
+permissions.user
+permissions.group
+permissions.everybody
+list of string/int[0-31]
+Default permissions set for owner-user, owner-group and everybody.
+
+Keylist: show,edit,delete,new,editcontent
+Alternatively you can specify an integer from 0 to 31 indicating which bits corresponding to the keylist should be set. (Bits in keylist: show=1,edit=2,delete=4,new=8,editcontent=16)
+
+Defaults from $TYPO3_CONF_VARS:
+"user" => "show,edit,delete,new,editcontent",
+“group" => "show,edit,new,editcontent",
+"everybody" => ""
+
+Example:
+
+TCEMAIN.permissions {
+    # User can do anything (default):
+  user = 31
+    # Group can do anything 
+    # (normally "delete" is disabled)
+  group = 31
+    # Everybody can at least see the page
+    # (normally everybody can do nothing)
+  everybody = show
+}
+The page "Test (copy 3)" was created with the settings above for permissions. Compared to the two other pages created with default permissions you can see the effect: The Backend Group can now also delete the page by default and Everybody has read access:
+
+
+clearCacheCmd
+List of values (integers, "all", "pages")
+This can allow you to have the cache for additional pages cleared when saving to some page or branch of the page tree.
+
+Examples:
+
+  # Will clear the cache for page ID 12 and 23 
+  # when saving a record in this page:
+TCEMAIN.clearCacheCmd = 12,23
+
+  # Will clear all pages cache:
+TCEMAIN.clearCacheCmd = pages
+
+  # Will clear ALL cache:
+TCEMAIN.clearCacheCmd = all
+clearCache_pageSiblingChildren
+boolean
+If set, then children of all siblings of a page being edited will have the page cache cleared.
+(Default is that when a page record is edited, the cache for itself and siblings (same level) is cleared.)
+clearCache_pageGrandParent
+boolean
+If set, then the grand parent of a page being edited will have the page cache cleared.
+clearCache_disable
+boolean
+If set, then the automatic clearing of page cache when records are edited etc. is disabled. This also disables the significance of the two "clearCache_page*" options listed above.
+[page:TCEMAIN]
+->TCEMAIN_tables
+Processing options for a $TCA configured table.
+Property:
+Data type:
+Description:
+history.keepEntries
+int+
+Max entries in the sys_history for this table. Range 0-200. Zero turns the history of.
+
+Example:
+
+TCEMAIN {
+    # Default for all tables is 10 entries:
+  default.history.keepEntries = 10
+    # But the Content Elements will have 20 levels:
+  table.tt_content.history.keepEntries = 20
+}
+history.maxAgeDays
+int+
+The number of days elements are in the history at most. Takes precedence over keepEntries.
+Default is 7 days. Range 0-200. Zero turns the magAgeDays of.
+disablePrependAtCopy
+boolean
+Disables the “prependAtCopy” feature (if configured for table in $TCA)
+
+(The word "prepend" is misguiding - the "(copy)" label is appended  to (put after) the record title! Sorry for that mistake, it isn't the only time I have made that.)
+
+Example:
+
+TCEMAIN.table.pages {
+    # Pages will NOT have "(copy)" appended:
+  disablePrependAtCopy = 1
+    # Pages will NOT be hidden upon copy:
+  disableHideAtCopy = 1
+}
+These settings means that a page copied (say, the last page in this tree, labeled "Test") will neither have "(copy X)" appended nor be hidden. 
+This effect is shown in the first sub page here, labeled "Test". It appears exactly like the third page that was copied. 
+The page in the middle, labeled "Test (copy 3)" is the default mode where the page is hidden and the "(copy X)" suffix is added if another page with the same named existed already.
+
+
+disableHideAtCopy
+boolean
+Disables the “hideAtCopy” feature (if configured for table in $TCA)
+
+For example, see "disablePrependAtCopy" above.
+[page:TCEMAIN.default/TCEMAIN.table.(tablename)/->TCEMAIN_tables]
+->TCEFORM
+Allows detailed configuration of how TCEforms are rendered for a page tree branch and for individual tables if you like. You can enable and disable options, blind options in selector boxes etc.
+Property:
+Data type:
+Description:
+[tablename].[field]
+[tablename].[field].types.[type]
+->TCEFORM_confObj
+These objects contain additional configuration of the TCEFORM interface.  For the properties available, refer to the table below. This is a description of how you can customize in general and override for specific types.
+
+TCEFORM.[tablename].[field] -  configures the field in TCEFORM for all types.
+
+TCEFORM.[tablename].[field].types.[type] - configures the field in TCEFORM in case the 'type'-value of the field matches type.
+[page:TCEFORM]
+
+->TCEFORM_confObj
+Properties for the TCEFORM configuration object (see introduction above).
+Property:
+Data type:
+Description:
+disabled
+boolean
+If set, the field is not rendered.
+
+Example:
+
+TCEFORM.pages.title {
+    # You cannot edit the Page title field now:
+  disabled = 1
+}
+removeItems
+list of values
+(applies to select-types only)
+
+This removes the items from the list which has a value found in this comma list of values.
+
+Example:
+
+TCEFORM.pages.doktype {
+    # Remove the "Recycler" and "Spacer" page type options:
+  removeItems = 199, 255
+}
+addItems.[itemValue]
+string (label, LS)
+(applies to select-types only)
+
+This will add elements to the list. Notice that the added elements might be removed if the selector represents records. In that case only still existing records will be preserved.
+
+Example:
+
+TCEFORM.pages.doktype {
+    # Creates a new page type option:
+  addItems.123 = New Page type!
+
+    # Creates yet a page type with "locallang" title:
+  addItems.124 = LLL:EXT:lang/locallang_tca.php:title
+}
+This example extends the options for Page types with two new items:
+
+
+Warning: This example shows the principle of adding adhoc-items to a selector box in TYPO3 but you should not add new page types or Content Element types this way!
+disableNoMatchingValueElement
+boolean
+(applies to select-types only)
+
+If set, the element "CURRENT VALUE IS NOT AVAILABLE" will not be added to the list.
+
+Example:
+
+If a selector box value is not available among the options in the box the default behavior of TYPO3 is to preserve the value and show a label that warns about this special state:
+
+
+Setting this option disables that behavior:
+
+TCEFORM.pages.doktype {
+    # "CURRENT VALUE IS NOT ..." label will never show up:
+  disableNoMatchingValueElement = 1
+}
+... and the selector box will default to the first element in the selector box:
+
+
+noMatchingValue_label
+string (LS)
+(applies to select-types only)
+
+Allows for an alternative label the “noMatchingValue” element. 
+You can insert the placeholder "%s" to insert the value.
+If you supply a blank value the label will be blank.
+
+Example:
+
+TCEFORM.pages.doktype {
+    # Alternative "CURRENT VALUE IS NOT ..." label:
+  noMatchingValue_label = VALUE "%s" was not available!
+}
+The result will be:
+
+
+altLabels.[item_value]
+string (LS)
+(applies to select-types only)
+
+This allows you to enter alternative labels for the items in the list. 
+
+Example:
+
+TCEFORM.pages.doktype {
+    # Setting alternative labels:
+  altLabels.1 = STANDARD page type
+  altLabels.2 = ADVANCED page type
+  altLabels.254 = System Folder (for various elements)
+    # Sets the default labels for Recycler (via "locallang"):
+  altLabels.255 = LLL:EXT:lang/locallang_tca.php:doktype.I.2
+}
+Result will be:
+
+
+PAGE_TSCONFIG_ID
+integer
+(applies to select-types with foreign table)
+
+When the select-types are used with foreign-table the where-query has four markers (see description of $TCA in the “Inside TYPO3” document.) The value of three of these markers may be set from Page TSconfig.
+PAGE_TSCONFIG_IDLIST
+comma list of integers
+(applies to select-types with foreign table)
+
+See above
+PAGE_TSCONFIG_STR
+string
+(applies to select-types with foreign table)
+
+See above
+itemsProcFunc.[...]
+(custom)
+(applies to select-types with itemsProcFunc)
+
+The properties of this key is passed on to the itemsProcFunc in the parameter array by the key “TSconfig”.
+RTEfullScreenWidth
+int+/%
+(applies for RTE text fields only with the RTE wizard configured)
+
+The width of the RTE full screen display. If nothing is set, the whole width is used which means “100%”. If you set an integer value, that indicates the pixels width.
+linkTitleToSelf
+boolean
+(all fields)
+
+If set, then the title of the field in the forms links to alt_doc.php editing ONLY that field. 
+Works for existing records only - not new records.
+
+Extra property:
+.returnUrl = boolean; if set, then the return URL is also set.
+
+Example:
+
+TCEFORM.pages.title {
+    # The label for the "title" field will link itself
+  linkTitleToSelf = 1
+    # From the form with "title", return to full form:
+  linkTitleToSelf.returnUrl = 1
+}
+The result is that the label for the title field will be a link:
+
+
+Clicking the link brings you to a form where only this field is shown:
+
+
+[page:TCEFORM.(tablename).(field)/TCEFORM.(tablename).(field).types.(type)]
+
+->TSFE
+Property:
+Data type:
+Description:
+Default:
+jumpUrl_transferSession
+boolean
+If set, the jumpUrl redirection to the URL will be prepended with a parameter that transfers the current fe_users session to that URL. This URL should be the TYPO3 frontend in the same database, just at another domain (else it makes no sense).
+
+You can implement it in your own links if you like. This is how you do:
+You must send the parameter 'FE_SESSION_KEY' as GET or POST. The parameter looks like this: [fe_user-session-id]-[a hash made to prevent misuse]
+The parameter can be calculated like this:
+
+$param = '&FE_SESSION_KEY='.rawurlencode(
+   $GLOBALS['TSFE']->fe_user->id.'-'.
+   md5(
+     $GLOBALS['TSFE']->fe_user->id.'/'.
+     $GLOBALS['TYPO3_CONF_VARS']['SYS']['encryptionKey']
+   )
+);
+
+constants
+[TypoScript Frontend Constants defaults]
+Defaults for TypoScript Template constants!
+
+This features allows you to pass some amount of information (in the form of TypoScript Template constants) to the frontend. 
+The specific use of this should be information which you want to configure for both frontend and backend. For instance you could have a backend module which should act in a certain way depending on in which branch of the page tree it operates. The change of behavior is set by Page TSconfig as always but since you need the same setting applied somewhere in the frontend you don't want the redundancy of specifying the value twice. In such a case you can use this feature. 
+
+Example:
+
+TSFE.constants.websiteConfig.id = 123
+
+In the TypoScript templates you can now insert this constant as {$websiteConfig.id}
+
+
+
+In the backend module (in the Web main module) you can reach the value by a few codelines like these:
+
+$PageTSconfig = 
+    t3lib_BEfunc::getPagesTSconfig($this->pObj->id);
+$websiteID = 
+    $PageTSconfig['TSFE.']['constants.']['websiteConfig.']['id'];
+Notice: In the frontend the setting of default constants will only apply to a branch of the tree if a template record is found on that page (or if a template record is set for “next level”). In other words: If you want the Page TSconfig constant defaults to affect only a certain branch of the page tree, make sure to create a template record (a blank one will do) on the page that carries the Page TSconfig information.
+
+[page:TSFE]
+
+

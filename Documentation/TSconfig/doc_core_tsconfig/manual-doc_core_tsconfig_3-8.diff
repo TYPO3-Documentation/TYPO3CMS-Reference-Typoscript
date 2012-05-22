@@ -1,0 +1,93 @@
+diff -ru manual-doc_core_tsconfig-03-06-2004_10-41-18/content.txt manual/content.txt
+--- manual-doc_core_tsconfig-03-06-2004_10-41-18/content.txt	2005-12-25 22:16:34.000000000 +0100
++++ manual/content.txt	2005-12-25 22:15:13.000000000 +0100
+@@ -123,6 +123,13 @@
+ This is for custom purposes. 
+ Deprecated, use "tx_*" below from extensions
+ 
++auth
++
++Configuration for authentication services. Currently these are the options:
++
++auth.BE.redirectToURL
++Specifies a URL to redirect to after login is performed in the backend login form.
++
+ tx_[extension key with no underscore]
+ 
+ This is reserved space for extensions.
+@@ -319,6 +326,10 @@
+ boolean
+ If set, the titles in the page navigation tree will have their ID numbers printed before the clickable title.
+ 
++pageTree.onlineWorkspaceInfo
++boolean
++If set, the workspace info box will also be shown in the page tree even in online mode. Recommended when working with workspaces a lot.
++
+ contextMenu.[key].disableItems
+ list of items
+ List of context menu (clickmenu) items to disable.
+@@ -351,6 +362,10 @@
+ options.overridePageModule = web_txtemplavoilaM1
+ This will enable TemplaVoila page module as default page module.
+ 
++moduleMenuCollapsable
++boolean
++If set, the user can collapse main modules in the left menu.
++1
+ [beuser:options]->SETUP
+ Default values and overriding values for the User > Setup module.
+ Notice: the User > Setup module only represents a subset of the options from the table below.
+@@ -429,7 +444,7 @@
+ 
+ condensedMode
+ boolean
+-If set, the backend will not load the Web-submodules and File-submodules in a frameset but allow the page and folder trees to load the submodule in it?s own frame. This allows for a better display on small screens.
++If set, the backend will not load the Web-submodules and File-submodules in a frameset but allow the page and folder trees to load the submodule in its own frame. This allows for a better display on small screens.
+ 
+ noMenuMode
+ boolean / string
+@@ -698,6 +713,14 @@
+ 
+ mod.SHARED.colPos_list = 0,3
+ 
++defaultLanguageLabel
++string
++Alternative label for "Default" when language labels are shown in the interface.
++
++defaultLanguageFlag
++string
++Flag icon filename from gfx/flags/ for default language
++
+ [page:mod.SHARED; beuser:mod.SHARED]
+ Web>Page (mod.web_layout):
+ Property:
+@@ -763,6 +786,18 @@
+ boolean
+ Disables the fact that the new-content-element icons links to the content element wizard and not directly to a blank NEW form.
+ 
++defaultLanguageLabel
++string
++Alternative label for "Default" when language labels are shown in the interface.
++
++Overrides the same property from mod.SHARED if set. 
++
++defLangBinding
++boolean
++If set, translations of content elements are bound to the default record in the display. This means that within each column with content elements any translation found for exactly the shown default content element will be shown in the language column next to.
++
++This display mode should be used depending on how the frontend is configured to display localization. The frontend must display localized pages by selecting the default content elements and for each one overlay with a possible translation if found.
++
+ [page:mod.web_layout; beuser:mod.web_layout]
+ Web>List (mod.web_list):
+ Property:
+@@ -833,8 +868,9 @@
+ If set, then the control- and clipboard panels of the module is shown even if the context-popups (ClickMenu) are available. Normally the control- and clipboard panels are disabled (unless extended mode is set) in order to save bandwidth.
+ 
+ newPageWiz.overrideWithExtension
++newContentWiz.overrideWithExtension
+ string
+-If set to an extension key, (eg. templavoila) then the mod1/index.php file of that extension will be used for creating new elements on the page.
++If set to an extension key, (eg. templavoila) then the mod1/index.php file of that extension will be used for creating new elements on the page. "newContentWiz" will likewise use the "mod1/db_new_content_el.php" for creating new content elements.
+ 
+ Also see options.overridePageModule
+ 
