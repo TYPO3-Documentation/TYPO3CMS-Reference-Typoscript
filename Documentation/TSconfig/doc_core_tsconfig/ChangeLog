@@ -1,0 +1,102 @@
+2008-12-01  Michael Stucki  <michael@typo3.org>
+
+	* Release of CoreDocs for TYPO3 4.2
+
+2008-11-21  Michael Stucki  <michael@typo3.org>
+
+	* Applying new document layout
+
+2008-10-07  Francois Suter  <francois@typo3.org>
+
+	* Removed notes about read-only tree for folderTree.altElementBrowserMountPoints, since bug #9320 was fixed in TYPO3 4.2.2
+
+2008-09-11  Francois Suter  <francois@typo3.org>
+
+	* Enhanced description of properties pageTree.altElementBrowserMountPoints and folderTree.altElementBrowserMountPoints
+	* Updated table of contents
+
+2008-08-29  Francois Suter  <francois@typo3.org>
+
+	* Updated with all the new (4.2) features documented in the wiki's pending documentation page
+	* Added setup.default.startModule property
+
+2008-01-31  Kasper Skaarhoj  <kasper2008@typo3.com>
+
+	* Documented new feature for configuration of notification messages in workspaces. 
+
+2007-10-28	Kasper Skaarhoj  <kasper2008@typo3.com>
+	
+	* Added documentation for options.pageTree.altElementBrowserMountPoints and options.folderTree.altElementBrowserMountPoints
+
+2007-08-28	Kasper Skaarhoj  <kasper2008@typo3.com>
+
+	* Added documentation for options pageTree.hideFilter, pageTree.dontSeparateNotinmenuPages, pageTree.dontAlphasortNotinmenuPages
+
+2007-02-21  Michael Stucki  <michael@typo3.org>
+
+	* Release of CoreDocs for TYPO3 4.1
+	* Add new main property [tablename].[field].config.[type] to TCEFORM (responsible: Oliver Hader)
+
+2007-01-23  Michael Stucki  <michael@typo3.org>
+
+	* Update copyright information
+	* Set version information to TYPO3 4.1
+	* Added "hideTable" description to "mod.web_list" section (feature by Bernhard Kraft, see bug #2695)
+
+2006-11-28  Kasper Skaarhoj  <kasperYYYY@typo3.com>
+
+	* Added "options.additionalPreviewLanguages"
+
+2006-09-11  Michael Stucki  <michael@typo3.org>
+
+	* Added "beuser:options.pageTree.showDomainNameWithTitle"
+        * Changed revision number to 4.0
+
+2006-07-26  Michael Stucki  <michael@typo3.org>
+
+	* Exchanged the TYPO3 logo in the document footer
+
+2006-04-16  Michael Stucki  <michael@typo3.org>
+
+	* Fixed all "depreciated" => "deprecated"
+	* Added new "page" TLO to user TSconfig
+
+2006-03-22  Kasper Skaarhoj  <kasperYYYY@typo3.com>
+
+	* Some TemplaVoila related changes
+
+2006-02-14  Michael Stucki  <michael@typo3.org>
+
+	* Added "beuser:options.hideRecords"
+	* Merged all changes below into Kaspers document version
+	* Moving this document to Sourceforge CVS
+
+2006-01-26  Michael Stucki  <michael@typo3.org>
+
+	* Added "beuser:options.defaultFileUploads"
+	* Added "beuser:admPanel.override"
+	* Marked "beuser:admPanel.modules.edit" as deprecated
+
+2006-01-19  Michael Stucki  <michael@typo3.org>
+
+	* Removed history.keepEntries from "TCEMAIN_tables" (Sebastians new history/undelete feature doesn't use it anymore)
+
+2006-01-14  Michael Stucki  <michael@typo3.org>
+
+	* Added "TCEMAIN.translateToMessage"
+
+2005-12-26  Michael Stucki  <michael@typo3.org>
+
+	* Added "mod.web_layout.disableIconToolbar"
+	* Removed non-existing option "beuser:options.noOnChangeAlertInTypeFields"
+	* Added "beuser:setup.disableCMlayers"
+	* Added "beuser:setup.disableTabInTextarea"
+	* Changed "beuser:options.shortcutGroups"
+
+2005-12-25  Michael Stucki  <michael@typo3.org>
+
+	* Added "beuser:options.alertPopups"
+
+2005-05-23  Michael Stucki  <michael@typo3.org>
+
+	* Release of TYPO3 3.8.0

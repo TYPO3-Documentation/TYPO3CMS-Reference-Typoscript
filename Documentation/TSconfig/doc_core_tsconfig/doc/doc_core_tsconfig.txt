@@ -1,33 +1,31 @@
 ﻿
-TSconfig
+TSconfig Reference
 Extension Key: doc_core_tsconfig
-Copyright 2000-2007, Kasper Skårhøj, <kasperYYYY@typo3.com>
+Language: en
+Keywords: tsconfig, typoscript, reference, forDevelopers, forAdvanced
+Copyright 2000-2008, , <info@typo3.org>
 
 This document is published under the Open Content License
 available from http://www.opencontent.org/opl.shtml
 
 The content of this document is related to TYPO3 
-- a GNU/GPL CMS/Framework available from www.typo3.com
+- a GNU/GPL CMS/Framework available from www.typo3.org
 
-Revised for TYPO3 4.1, February 2007
-All options tested.
-
+Revised for TYPO3 4.2, November 2008
 Table of Contents
-TSconfig	1
-Introduction	2
-Syntax	2
-User TSconfig	3
-Top Level Objects	4
-->ADMPANEL	5
-->OPTIONS	6
-->SETUP	8
-Page TSconfig	11
-Top Level Objects	12
-->MOD	12
-->TCEMAIN	21
-->TCEFORM	23
-->TSFE	27
-
+TSconfig Reference	1
+Introduction	3
+User TSconfig	4
+Top Level Objects	5
+->ADMPANEL	6
+->OPTIONS	7
+->SETUP	11
+Page TSconfig	13
+Top Level Objects	14
+->MOD	14
+->TCEMAIN	23
+->TCEFORM	26
+->TSFE	30
 
 Introduction
 TypoScript is mainly known as the means to configure Templates Records for TYPO3 based websites. However TypoScript itself is basically a way to define values in a hierarchy. And so TypoScript is also used to make detailed configuration of the backend, both regarding users and groups and the way modules are working in branches of the Page Tree. This is done through the 'TSconfig' which is found for both the backend and frontend users/groups in addition to the pages. This is often referred to as “User TSconfig” and “Page TSconfig”.
@@ -111,14 +109,15 @@ There is a tricky aspect to these settings; If first you have set a value by set
 TCAdefaults.[tablename].[field]
 string
 Sets default values for records. The order of default values when creating new records in the backend is this:
-Value from $TCA
-Value from User TSconfig (these settings)
-Value from “defVals” GET vars (see alt_doc.php)
-Value from previous record based on 'useColumnsForDefaultValues'
+1.Value from $TCA
+2.Value from User TSconfig (these settings)
+3.Value from Page TSconfig
+4.Value from “defVals” GET vars (see alt_doc.php)
+5.Value from previous record based on 'useColumnsForDefaultValues'
 
 However the order for default values used by tcemain.php if a certain field is not granted access to for user will be:
-Value from $TCA
-Value from User TSconfig (these settings)
+1.Value from $TCA
+2.Value from User TSconfig (these settings)
 
 So these values will be authoritative if the user has no access to the field anyway.
 
@@ -287,10 +286,6 @@ clipboardNumberPads
 int (0-20)
 This allows you to enter how many pads you want on the clipboard.
 3
-disableDocModuleInAB
-boolean
-If set, the doc module is not displayed in the backend even if enabled in general.
-
 shortcutFrame
 boolean
 If set, the shortcut frame in the bottom of the window appears.
@@ -392,9 +387,45 @@ If set, the domain name will be appended to the page title for
 pages that have "Is root of web site?" checked in the page properties.
 Useful if there are several domains in one page tree.
 
+pageTree.showNavTitle
+boolean
+If set, the navigation title is displayed in the page navigation tree instead of the normal page title. The page title is showed in a tooltip if the mouse hovers the navigation title.
+
 pageTree.onlineWorkspaceInfo
 boolean
 If set, the workspace info box will also be shown in the page tree even in online mode. Recommended when working with workspaces a lot.
+
+pageTree.hideFilter
+boolean
+If set, the filter-box in the top of the page tree will be hidden.
+
+pageTree.separateNotinmenuPages
+boolean
+If set, not in menu and special pages are separated in the page tree from standard pages.
+
+pageTree.alphasortNotinmenuPages
+boolean
+If set and pageTree.seperateNotinmenuPages=1, separated pages are sorted alphabetically.
+
+pageTree.altElementBrowserMountPoints
+list of integers
+Sets alternative webmounts for use in the Element Browser. You separate page ids by a comma. Non-existing page ids are ignored. If you insert a non-integer it will evaluate to "0" (zero) and the root of the page tree is mounted. Effective in workspaces too.
+
+These alternative webmounts replace configured DB Mountpoints.
+
+Example: 
+
+options.pageTree.altElementBrowserMountPoints = 34,123
+
+folderTree.altElementBrowserMountPoints
+list of foldernames
+Sets alternative filemounts for use in the Element Browser. The folders you specify here must exist within the fileadmin/ folder. You separate folders by a comma. If a folder you specify does not exist it will not get mounted. Effective in workspaces too.
+
+The alternative filemounts are added to the existing Filemounts.
+
+Example: 
+
+options.folderTree.altElementBrowserMountPoints = _temp_/, templates
 
 contextMenu.[key].disableItems
 list of items
@@ -469,6 +500,26 @@ additionalPreviewLanguages
 [list of sys_language record uids]
 The user will see these additional languages when localizing stuff in TCEforms. The list are uid numbers of sys_language records.
 
+workspaces.previewLinkTTLHours
+integer
+Number of hours for expiry of preview links to workspaces. Default is 48 hours.
+
+workspaces.swapMode
+string
+Possible values are:
+
+"any" - if page or element (meaning any record on the page) is published, all content elements on the page and page itself will be published regardless of the current editing stage.
+
+"page" - if page is published, all content elements on the page will be published as well. If element is published, its publishing does not affect other elements or page.
+normal behavior (same as in 4.0)
+workspaces.changeStageMode
+string
+Possible values are:
+
+"any" - if page or element (meaning any record on the page) stage is changed (for example, from "editing" to "review"), all content elements on the page and page will change to that new stage as well (possibly bypassing intermediate stages).
+
+"page" - if page stage is changed (for example, from "editing" to "review"), all content elements on the page will change stage as well (possibly bypassing intermediate stages). If stage is changed for element, all other elements on the page and page itself remain in the previous stage.
+normal behavior (same as in 4.0)
 [beuser:options]
 ->SETUP
 Default values and overriding values for the “User > Setup” module.
@@ -549,6 +600,10 @@ If set, then the hideAtCopy feature for records in TCE will not be used.
 condensedMode
 boolean
 If set, the backend will not load the Web-submodules and File-submodules in a frameset but allow the page and folder trees to load the submodule in its own frame. This allows for a better display on small screens.
+
+startModule
+string
+Name of the module that is called when the user logs into the Backend
 
 noMenuMode
 boolean / string
@@ -980,6 +1035,27 @@ hideTables
 list of table names
 Hide these tables in record listings (comma-separated)
 
+[tablename].hideTable
+boolean
+If set to non-zero, the table is hidden. If it is zero, table is shown if table name is not listed in "hideTables" list.
+
+Example:
+
+mod.web_list.tt_content.hideTable = 1
+
+deniedNewTables
+list of tablenames
+If this list is set, then the tables listed here won't have a link to "create news" in the page and subpages. This also affects "db_new.php" (the display of "Create new record").
+
+This is the opposite of the previous property "allowedNewTables".
+If allowedNewTables and deniedNewTables contain a common subset, deniedNewTables takes precedence.
+
+Example:
+
+mod.web_list {
+  deniedNewTables = tt_news,tt_content
+}
+
 allowedNewTables
 list of tablenames
 If this list is set, then only tables listed here will have a link to “create new” in the page and subpages.
@@ -1181,6 +1257,12 @@ TCEMAIN {
     # Set a German label:
   translateToMessage = Bitte in "%s" übersetzen:
 }
+notificationEmail_body
+string
+
+notificationEmail_subject
+string
+
 [page:TCEMAIN]
 ->TCEMAIN_tables
 Processing options for a $TCA configured table.
@@ -1231,14 +1313,14 @@ TCEFORM.[tablename].[field] -  configures the field in TCEFORM for all types.
 TCEFORM.[tablename].[field].types.[type] - configures the field in TCEFORM in case the 'type'-value of the field matches type.
 [tablename].[field].config.[key]
 string / array
-This setting allows to override TCA field configuration and offers a flexible opportunity to reuse tables and TCA definitions but adept it to individual demands. So this will influence configuration settings in $TCA[<tablename>]['columns'][<field>]['config'][<key>].
+This setting allows to override TCA field configuration and offers a flexible opportunity to reuse tables and TCA definitions but adapt them to individual demands. So this will influence configuration settings in $TCA[<tablename>]['columns'][<field>]['config'][<key>].
 
 Depending on the $TCA type of the field, the allowed keys are:
 input - size, max
 text - cols, rows, wrap
 check - cols, showIfRTE
 select - size, autoSizeMax, maxitems, minitems
-group - size, autoSizeMax, max_size, show_thumbs, maxitems, minitems
+group - size, autoSizeMax, max_size, show_thumbs, maxitems, minitems, disable_controls
 inline - appearance, foreign_label, foreign_selector, foreign_unique, maxitems, minitems, size, autoSizeMax, symmetric_label
 [page:TCEFORM]
 
@@ -1256,6 +1338,17 @@ Example:
 TCEFORM.pages.title {
     # You cannot edit the Page title field now:
   disabled = 1
+}
+label
+string (LS)
+This allows you to enter alternative labels for any field.
+
+Example:
+
+TCEFORM.pages.title {
+  label = LLL:EXT:my_ext/locallang_db.xml:table.column
+  label.default = New Label
+  label.de = Neuer Feldname 
 }
 removeItems
 list of values
@@ -1376,17 +1469,13 @@ boolean
 If set, then the title of the field in the forms links to alt_doc.php editing ONLY that field. 
 Works for existing records only - not new records.
 
-Extra property:
-.returnUrl = boolean; if set, then the return URL is also set.
-
 Example:
 
 TCEFORM.pages.title {
     # The label for the "title" field will link itself
   linkTitleToSelf = 1
-    # From the form with "title", return to full form:
-  linkTitleToSelf.returnUrl = 1
 }
+
 The result is that the label for the title field will be a link:
 
 
@@ -1416,6 +1505,10 @@ $param = '&FE_SESSION_KEY='.rawurlencode(
    )
 );
 
+
+
+
+
 constants
 [TypoScript Frontend Constants defaults]
 Defaults for TypoScript Template constants!
@@ -1440,5 +1533,4 @@ $websiteID =
 Notice: In the frontend the setting of default constants will only apply to a branch of the tree if a template record is found on that page (or if a template record is set for “next level”). In other words: If you want the Page TSconfig constant defaults to affect only a certain branch of the page tree, make sure to create a template record (a blank one will do) on the page that carries the Page TSconfig information.
 
 [page:TSFE]
-
 
