@@ -1,0 +1,145 @@
+﻿
+
+.. ==================================================
+.. FOR YOUR INFORMATION
+.. --------------------------------------------------
+.. -*- coding: utf-8 -*- with BOM.
+
+.. ==================================================
+.. DEFINE SOME TEXTROLES
+.. --------------------------------------------------
+.. role::   underline
+.. role::   typoscript(code)
+.. role::   ts(typoscript)
+   :class:  typoscript
+.. role::   php(code)
+
+
+NON-GifBuilderObj
+^^^^^^^^^^^^^^^^^
+
+
+IMGMAP
+""""""
+
+This is used by the GifBuilderObj "TEXT" to create an image-map for
+the gif-file. This is especially used with the IMGMENU menuobject.
+
+.. ### BEGIN~OF~TABLE ###
+
+.. container:: table-row
+
+   Property
+         Property:
+   
+   Data type
+         Data type:
+   
+   Description
+         Description:
+   
+   Default
+         Default:
+
+
+.. container:: table-row
+
+   Property
+         url
+   
+   Data type
+         url
+   
+   Description
+         url to link
+   
+   Default
+         For IMGMENU menu objects provided automatically
+
+
+.. container:: table-row
+
+   Property
+         target
+   
+   Data type
+         target
+   
+   Description
+         target for link
+   
+   Default
+         For IMGMENU menu objects provided automatically
+
+
+.. container:: table-row
+
+   Property
+         noBlur
+   
+   Data type
+         Boolean
+   
+   Description
+         Normally graphical links are "blurred" if the browser is MSIE. This
+         removes the ugly box around a link.
+         
+         If this property is set, the link is NOT blurred with "onFocus".
+   
+   Default
+         For IMGMENU menu objects provided automatically
+
+
+.. container:: table-row
+
+   Property
+         explode
+   
+   Data type
+         x,y
+   
+   Description
+         This "explodes" or "implodes" the image-map. Useful to let the hot
+         area cover a little more than just the letters of the text.
+   
+   Default
+
+
+.. container:: table-row
+
+   Property
+         altText
+   
+   Data type
+         string
+   
+   Description
+         Value of the alt-attribute.
+         
+         (Used from TEXT Gifbuilding objects, this has stdWrap properties.
+         Otherwise not)
+   
+   Default
+
+
+.. container:: table-row
+
+   Property
+         titleText
+   
+   Data type
+         string
+   
+   Description
+         Value of the title attribute.
+         
+         (Used from TEXT Gifbuilding objects, this has stdWrap properties.
+         Otherwise not)
+   
+   Default
+
+
+.. ###### END~OF~TABLE ######
+
+[tsref:->IMGMAP]
+

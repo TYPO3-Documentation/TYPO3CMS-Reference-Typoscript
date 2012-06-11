@@ -1,0 +1,45 @@
+﻿
+
+.. ==================================================
+.. FOR YOUR INFORMATION
+.. --------------------------------------------------
+.. -*- coding: utf-8 -*- with BOM.
+
+.. ==================================================
+.. DEFINE SOME TEXTROLES
+.. --------------------------------------------------
+.. role::   underline
+.. role::   typoscript(code)
+.. role::   ts(typoscript)
+   :class:  typoscript
+.. role::   php(code)
+
+
+media/scripts/ in general
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The directory typo3/sysext/cms/tslib/media/scripts (in older versions
+just media/scripts) primarily contains php-scripts which are meant as
+'external modules' as opposed to features included in the
+typo3/sysext/cms/tslib/ libraries. Although they are distributed with
+TYPO3 just like the rest of tslib/ they form a basis for externally
+developed frontend functionality. So for most of these scripts, be
+inspired by them to write your own code. Notice the word 'most';
+because some are written long time ago and do not represent the state-
+of-the-day to do it.
+
+
+About 'example templates'
+"""""""""""""""""""""""""
+
+For each plugin script there is one or more example templates. These
+templates are a part of the documentation of the features in the
+plugin because they describe the features of the markers and subparts
+and present an example to learn from. Therefore the example templates
+may be changed e.g. when new features come along.
+
+You should therefore  *not* rely on using the default templates unless
+you'll accept the fact that they may change in the future! So make a
+copy, modify it for your own purpose if needed and set up the
+TypoScript of the plugin to use your own template file!
+

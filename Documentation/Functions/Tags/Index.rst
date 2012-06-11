@@ -1,0 +1,153 @@
+﻿
+
+.. ==================================================
+.. FOR YOUR INFORMATION
+.. --------------------------------------------------
+.. -*- coding: utf-8 -*- with BOM.
+
+.. ==================================================
+.. DEFINE SOME TEXTROLES
+.. --------------------------------------------------
+.. role::   underline
+.. role::   typoscript(code)
+.. role::   ts(typoscript)
+   :class:  typoscript
+.. role::   php(code)
+
+
+tags
+^^^^
+
+Used to create custom tags and define how they should be parsed. This
+is used in conjunction with  *parseFunc* .
+
+
+.. ### BEGIN~OF~TABLE ###
+
+.. container:: table-row
+
+   Property
+         Property:
+   
+   Data type
+         Data type:
+   
+   Description
+         Description:
+   
+   Default
+         Default:
+
+
+.. container:: table-row
+
+   Property
+         Array...
+   
+   Data type
+         cObject  *+stripNL*
+         
+         *+ breakoutTypoTagContent*
+   
+   Description
+         Every entry in the  *Array...* corresponds to a tag, that will be
+         parsed. The elements MUST be in lowercase.
+         
+         Every entry must be set to a content-object.
+         
+         "current" is set to the content of the tag, eg <TAG>content</TAG>:
+         here "current" is set to "content".
+         
+         **Parameters:**
+         
+         Parameters of the tag is set in $cObj->parameters (key is lowercased):
+         
+         <TAG COLOR="red">content</TAG>
+         
+         => $cObj->parameters[color] = red
+         
+         **Special added properties to the content-object:**
+         
+         $cObj->parameters[allParams]: this is automatically set to the whole
+         parameter-string of the tag, eg ' color="red"'
+         
+         [cObject].stripNL: is a boolean option, which tells  *parseFunc* that
+         NewLines before and after content of the tag should be stripped.
+         
+         [cObject].breakoutTypoTagContent: is a boolean option, which tells
+         parseFunc that this block of content is breaking up the nonTypoTag
+         content and that the content after this must be re-wrapped.
+         
+         **Examples:**
+         
+         ::
+         
+            tags.bold = TEXT
+            tags.bold {
+              current = 1
+              wrap = <B> | </B>
+            }
+            tags.bold.stripNL = 1
+   
+   Default
+
+
+.. ###### END~OF~TABLE ######
+
+
+[tsref:->tags]
+
+
+((generated))
+"""""""""""""
+
+Example:
+~~~~~~~~
+
+This example creates 4 custom tags. The <LINK>-, <TYPOLIST>-,
+<GRAFIX>- and <PIC>-tags
+
+<LINK> is made into a typolink and provides an easy way of creating
+links in text
+
+<TYPOLIST> is used to create bullet-lists
+
+<GRAFIX> will create a gif-file 90x10 pixels where the text is the
+content of the tag.
+
+<PIC> lets us place an image in the text. The content of the tag
+should be the image-reference in "fileadmin/"
+
+::
+
+       tags {
+         link = TEXT
+         link {
+           current = 1
+           typolink.extTarget = _blank
+           typolink.target={$cLinkTagTarget} 
+           typolink.wrap = <B><FONT color=red>|</FONT></B>
+           typolink.parameter.data = parameters : allParams
+         }
+   
+         typolist < tt_content.bullets.default.20
+         typolist.trim = 1
+         typolist.field >
+         typolist.current = 1
+   
+         grafix = IMAGE 
+         grafix {
+           file = GIFBUILDER
+           file {
+             XY = 90,10
+             100 = TEXT
+             100.text.current = 1
+             100.offset = 5,10
+             100.nicetext = 1
+           }
+         }
+         pic = IMAGE
+         pic.file.import = fileadmin/
+         pic.file.import.current = 1
+       }
+

@@ -1,0 +1,7 @@
+﻿.. |img-11|     image:: ../../Images/manual_html_m172a4e16.png
+   :height: 305
+   :width: 201
+.. :align: bottom
+.. :border: 0
+.. :name: Graphic5
+

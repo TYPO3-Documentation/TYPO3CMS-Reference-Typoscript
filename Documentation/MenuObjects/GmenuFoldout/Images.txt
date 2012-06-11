@@ -1,0 +1,7 @@
+﻿.. |img-12|     image:: ../../Images/manual_html_3168c5c2.png
+   :height: 260
+   :width: 184
+.. :align: left
+.. :border: 0
+.. :name: Grafik16
+

@@ -1,0 +1,7 @@
+﻿.. |img-5|      image:: ../../Images/manual_html_m24a0c6dd.png
+   :height: 50
+   :width: 519
+.. :align: left
+.. :border: 0
+.. :name: Grafik2
+
