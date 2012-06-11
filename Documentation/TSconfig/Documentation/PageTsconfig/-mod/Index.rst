@@ -1,0 +1,1799 @@
+﻿.. include:: Images.txt
+
+.. ==================================================
+.. FOR YOUR INFORMATION
+.. --------------------------------------------------
+.. -*- coding: utf-8 -*- with BOM.
+
+.. ==================================================
+.. DEFINE SOME TEXTROLES
+.. --------------------------------------------------
+.. role::   underline
+.. role::   typoscript(code)
+.. role::   ts(typoscript)
+   :class:  typoscript
+.. role::   php(code)
+
+
+->MOD
+^^^^^
+
+Configuration for backend modules. Generally the syntax is
+*[module\_name].[property]* . The module name is defined in the
+conf.phpfiles for the module.
+
+
+Blinding Function Menu options in Backend Modules
+"""""""""""""""""""""""""""""""""""""""""""""""""
+
+Most of the modules in TYPO3 have a "function menu" selector box and
+this menu is usually configurable so you are able to remove menu items
+in specific sections of the page tree (or by overriding via User
+TSconfig, you could disable an option totally for a specific
+user/group).
+
+In this case the main menu of the Web > Info module looks like this:
+
+|img-13| By adding this Page TSconfig we can remove the "Page TSconfig" item:
+
+::
+
+   mod.web_info.menu.function {
+     tx_infopagetsconfig_webinfo = 0
+   }
+
+The function menu will now look like this:
+
+|img-14| The 'Page TSconfig' option is simply disabled by setting this Page
+TSconfig!
+
+All you need to know in order to disable function menu items in the
+backend modules is,  *which* modules support it and what the  *key* of
+the menu item is (in the above example it was
+'tx\_infopagetsconfig\_webinfo'). Modules extending the class
+"t3lib\_SCbase" will most likely provide this out-of-the-box since
+it's a part of the base class in t3lib\_SCbase::menuConfig().
+
+Examples from the TYPO3 core are listed in the table below:
+
+.. ### BEGIN~OF~TABLE ###
+
+.. container:: table-row
+
+   Property
+         Property:
+   
+   Description
+         Description:
+
+
+.. container:: table-row
+
+   Property
+         web\_layout.menu.function
+   
+   Description
+         **Web > Page module**
+         
+         |img-15|
+         
+         **Option tags:**
+         
+         ::
+         
+            <select name="SET[function]">
+                <option value="1">Columns</option>
+                <option value="0">QuickEdit</option>
+                <option value="2">Languages</option>
+                <option value="3">Page information</option>
+                <option value="4">Grid-View</option>
+            </select>
+         
+         **Example:**
+         
+         ::
+         
+              # Disables all items except the "QuickEdit" item:
+            mod.web_layout.menu.function {
+              1 = 0
+              2 = 0
+              3 = 0
+              4 = 0
+            }
+
+
+.. container:: table-row
+
+   Property
+         web\_info.menu.function
+   
+   Description
+         **Web > Info module**
+         
+         |img-16|
+         
+         **Option tags:**
+         
+         ::
+         
+            <select name="SET[function]">
+                <option value="tx_cms_webinfo_page">Pagetree Overview</option>
+                <option value="tx_cms_webinfo_lang">Localization Overview</option>
+                <option value="tx_belog_webinfo">Log</option>
+                <option value="tx_infopagetsconfig_webinfo">Page TSconfig</option>
+                <option value="tx_linkvalidator_ModFuncReport">Linkvalidator</option>
+                <option value="tx_realurl_modfunc1">Speaking Url Management</option>
+                <option value="tx_indexedsearch_modfunc1">Indexed search</option>
+                <option value="tx_indexedsearch_modfunc2">Indexed search statistics</option>
+            </select>
+         
+         Note: The Module "Speaking Url Management" is provided by the
+         extension RealURL, which is not part of the TYPO3 Core.
+         
+         **Example:**
+         
+         ::
+         
+              # Disables the item "Indexed search statistics":
+            mod.web_info.menu.function {
+              tx_indexedsearch_modfunc2 = 0
+            }
+
+
+.. container:: table-row
+
+   Property
+         web\_func.menu.function
+   
+   Description
+         **Web > Functions module**
+         
+         |img-17|
+         
+         **Option tags:**
+         
+         ::
+         
+            <select name="SET[function]">
+                <option value="tx_funcwizards_webfunc">Wizards</option>
+            </select>
+
+
+.. container:: table-row
+
+   Property
+         web\_func.menu.wiz
+   
+   Description
+         **Web > Functions module, Wizards sub module**
+         
+         This is the 2nd-level Function Menu in the Web > Functions module.
+         Instead of the "function" key of the main menu it just uses the key
+         "wiz" instead.
+         
+         |img-18|
+         
+         **Option tags:**
+         
+         ::
+         
+            <select name="SET[wiz]">
+                <option value="tx_wizardcrpages_webfunc_2">Create multiple pages</option>
+                <option value="tx_wizardsortpages_webfunc_2">Sort pages</option>
+            </select>
+         
+         **Example:**
+         
+         ::
+         
+              # Disables the sub-item "Create multiple pages":
+            mod.web_func.menu.wiz {
+              tx_wizardcrpages_webfunc_2 = 0
+            }
+
+
+.. container:: table-row
+
+   Property
+         web\_ts.menu.function
+   
+   Description
+         **Web > Template module**
+         
+         |img-19|
+         
+         **Option tags:**
+         
+         ::
+         
+            <select name="SET[function]">
+                <option value="tx_tstemplateceditor">Constant Editor</option>
+                <option value="tx_tstemplateinfo">Info/Modify</option>
+                <option value="tx_tstemplateobjbrowser">TypoScript Object Browser</option>
+                <option value="tx_tstemplateanalyzer">Template Analyzer</option>
+            </select>
+
+
+.. container:: table-row
+
+   Property
+         user\_task.menu.function
+   
+   Description
+         **User > Task Center**
+         
+         Prior to TYPO3 4.5 the Task Center worked the following way:
+         
+         The Task Center does not provide a selector box function menu. But
+         behind the scenes it uses the same functionality of saving "states"
+         and therefore you can also blind items in the Task Center.
+         
+         There is one tricky thing though: The Task Center is not depending on
+         a page in the page tree! So you either have to set default Page
+         TSconfig or User TSconfig to blind options here!
+         
+         |img-20|
+         
+         **Keys are:**
+         
+         tx\_sysnotepad = Quick Notetx\_taskcenterrecent = Recent
+         Pagestx\_taskcenterrootlist = Web > List module /
+         roottx\_taskcentermodules = Pluginstx\_sysaction = Actionstx\_systodos
+         = Tasks
+         
+         **Example:**
+         
+         Set this as  *User TSconfig* :
+         
+         ::
+         
+              # Task Center configuration:
+            mod.user_task.menu.function {
+                # Disable "Recent Pages" display:
+              tx_taskcenterrecent = 0
+                # Disable "Action" list
+              tx_sysaction = 0
+            }
+
+
+.. ###### END~OF~TABLE ######
+
+[page:mod; beuser:mod]
+
+.. ### BEGIN~OF~TABLE ###
+
+.. container:: table-row
+
+   Property
+         Property:
+   
+   Description
+         Description:
+
+
+.. container:: table-row
+
+   Property
+         taskcenter
+   
+   Description
+         **User > Task Center**
+         
+         In TYPO3 4.5 and newer the Task Center can be configured as follows:
+         
+         The Task Center does not provide a selector box function menu holding
+         the different tasks. But behind the scenes it uses the same
+         functionality of saving "states" and therefore you can also blind
+         items in the Task Center.
+         
+         There is one tricky thing though: The Task Center is not depending on
+         a page in the page tree! So you have to set User TSconfig to blind
+         options here!
+         
+         |img-21|
+         
+         You can hide a task by using the following syntax in User TSconfig:
+         
+         ::
+         
+            taskcenter {
+              <extension-key>.<task-class> = 0
+            }
+         
+         Be aware that <extension-key> needs to be replaced by the actual
+         extension key and <task-class> by the class name of the PHP class
+         providing the task.
+         
+         **Example:**
+         
+         Set this as  *User TSconfig* :
+         
+         ::
+         
+              # Task Center configuration:
+            taskcenter {
+                # Disable "Quick Note":
+              sys_notepad.tx_sysnotepad_task = 0
+                # Disable "Action":
+              sys_action.tx_sysaction_task = 0
+                # Disable "Import/Export":
+              impexp.tx_impexp_task = 0
+            }
+
+
+.. ###### END~OF~TABLE ######
+
+[beuser]
+
+Since function menu items can be provided by extensions it is not
+possible to create a complete list of menu keys. The list above
+represents a typical installation of the TYPO3 Core with the
+Introduction Package. Therefore the listing includes options from
+system extensions and some additional ones.
+
+Therefore, if you want to blind a menu item, the only safe way of
+doing it, is to look at the HTML source of the backend module, to find
+the selector box with the function menu and to extract the key from
+the <option> tags. This listing is a cleaned-up version of a function
+menu. The keys are the values of the option tags:
+
+::
+
+   <select>
+       <option value="tx_cms_webinfo_page">Pagetree overview</option>
+       <option value="tx_belog_webinfo">Log</option>
+       <option value="tx_infopagetsconfig_webinfo">Page TSconfig</option>
+   </select>
+
+As you can see, this is where the key for the example before was
+found:
+
+::
+
+   mod.web_info.menu.function {
+          tx_infopagetsconfig_webinfo = 0
+   } |img-22| 
+
+**Warning**
+
+Blinding Function Menu items is not hardcore access control! All it
+does is to hide the possibility of accessing that module functionality
+from the interface. It might be possible for users to hack their way
+around it and access the functionality anyways. You should use the
+option of blinding elements mostly to remove otherwise distracting
+options.
+
+
+Overriding Page TSconfig with User TSconfig
+"""""""""""""""""""""""""""""""""""""""""""
+
+In all standard modules the Page TSconfig values of the "mod." branch
+may be overridden by the same branch of values set for the backend
+user.
+
+To illustrate this feature let's consider the case from above where a
+menu item in the Web > Info module was disabled in the Page TSconfig
+with this value:
+
+::
+
+   mod.web_info.menu.function {
+     tsconf = 0
+   }
+
+If however we activate this configuration in the TSconfig of a certain
+backend user (e.g. the admin user), that user would still be able to
+select this menu item because the value of his User TSconfig overrides
+the same value set in the Page TSconfig:
+
+::
+
+   mod.web_info.menu.function {
+     tsconf = 1
+   } |img-23| 
+   
+
+Here is another example: The value of
+'mod.web\_layout.editFieldsAtATime' has been set to '1' in Page
+TSconfig. Additionally it is also set in the User TSconfig of the
+user, who is currently logged in, but there to the value '5'. The
+upper image shows you how to check the Page TSconfig. In the lower
+image you see the result of this user's User TSconfig: It overrides
+the Page TSconfig and alters the configuration:
+
+|img-24| 
+**Shared options for modules (mod.SHARED)** :
+"""""""""""""""""""""""""""""""""""""""""""""
+
+.. ### BEGIN~OF~TABLE ###
+
+.. container:: table-row
+
+   Property
+         Property:
+   
+   Data type
+         Data type:
+   
+   Description
+         Description:
+   
+   Default
+         Default:
+
+
+.. container:: table-row
+
+   Property
+         colPos\_list
+   
+   Data type
+         (list of integers, blank = don't do anything.)
+   
+   Description
+         This option lets you specify which columns of tt\_content elements
+         should be displayed in the 'Columns' view of the modules, in
+         particular Web > Page.
+         
+         By default there are four columns, Left, Normal, Right, Border.
+         However most websites use only the Normal column, maybe another also.
+         In that case the remaining columns are not needed. By this option you
+         can specify exactly which of the columns you want to display.
+         
+         Each column has a number which ultimately comes from the configuration
+         of the table tt\_content, field 'colPos' found in the tables.php file.
+         This is the values of the four default columns:
+         
+         Left: 1
+         
+         Normal: 0
+         
+         Right: 2
+         
+         Border:3
+         
+         **Example:**
+         
+         This results in only the Normal and Border column being displayed:
+         
+         ::
+         
+            mod.SHARED.colPos_list = 0,3
+   
+   Default
+
+
+.. container:: table-row
+
+   Property
+         defaultLanguageLabel
+   
+   Data type
+         string
+   
+   Description
+         Alternative label for "Default" when language labels are shown in the
+         interface.
+         
+         Used in Web > List, Web > Page and TemplaVoilà page module.
+   
+   Default
+
+
+.. container:: table-row
+
+   Property
+         defaultLanguageFlag
+   
+   Data type
+         string
+   
+   Description
+         Filename of the file with the flag icon for the default language. Do
+         not use the complete filename, but only the name without dot and
+         extension. The file will be taken from typo3/gfx/flags/.
+         
+         Used in Web > List and TemplaVoilà page module.
+         
+         **Example:**
+         
+         This will show the German flag.
+         
+         ::
+         
+            mod.SHARED {
+              defaultLanguageFlag = de
+              defaultLanguageLabel = deutsch
+            }
+         
+         **Note:**
+         
+         Prior to TYPO3 4.5 you had to set the complete filename as
+         defaultLanguageFlag, e.g. "de.gif" to get the German flag. In TYPO3
+         4.5 and newer you must use the name without dot and extension.
+   
+   Default
+
+
+.. container:: table-row
+
+   Property
+         disableLanguages
+   
+   Data type
+         string
+   
+   Description
+         Comma-separated list of language UID which will be disabled in the
+         given page tree.
+   
+   Default
+
+
+.. ###### END~OF~TABLE ######
+
+[page:mod.SHARED; beuser:mod.SHARED]
+
+
+**Web > Page (mod.web\_layout)** :
+""""""""""""""""""""""""""""""""""
+
+.. ### BEGIN~OF~TABLE ###
+
+.. container:: table-row
+
+   Property
+         Property:
+   
+   Data type
+         Data type:
+   
+   Description
+         Description:
+   
+   Default
+         Default:
+
+
+.. container:: table-row
+
+   Property
+         tt\_content.colPos\_list
+   
+   Data type
+         (list of integers, blank = don't do anything.)
+   
+   Description
+         See mod.SHARED.colPos\_list for details.
+         
+         If non-blank, this list will override the one set by
+         mod.SHARED.colPos\_list.
+         
+         **Example:**
+         
+         This results in only the Normal and Border column being displayed:
+         
+         ::
+         
+            mod.web_layout.tt_content.colPos_list = 0,3
+   
+   Default
+
+
+.. container:: table-row
+
+   Property
+         tt\_content.fieldOrder
+   
+   Data type
+         list of field names from tt\_content table
+   
+   Description
+         This allows you to specify (and thereby overrule) the preferred order
+         of the field names of the "Quick Edit" editing forms of the
+         tt\_content table (Content Elements). Just specify the list of fields,
+         separated by comma. Then these fields will be listed first and all
+         remaining fields thereafter in their original order.
+         
+         **Example:**
+         
+         This results in the 'Text' field and thereafter 'Header' field being
+         display as the very first fields instead of the 'Type' field.
+         
+         ::
+         
+            mod.web_layout.tt_content {
+              fieldOrder = bodytext, header
+            }
+   
+   Default
+
+
+.. container:: table-row
+
+   Property
+         editFieldsAtATime
+   
+   Data type
+         int+
+   
+   Description
+         Specifies the number of subsequent content elements to load in the
+         edit form when clicking the edit icon of a content element in the
+         'Columns' view of the module.
+         
+         **Example:**
+         
+         ::
+         
+            mod.web_layout {
+              editFieldsAtATime = 2
+            }
+   
+   Default
+         1
+
+
+.. container:: table-row
+
+   Property
+         noCreateRecordsLink
+   
+   Data type
+         boolean
+   
+   Description
+         If set, the link in the bottom of the page, "Create new record", is
+         hidden.
+   
+   Default
+
+
+.. container:: table-row
+
+   Property
+         QEisDefault
+   
+   Data type
+         boolean
+   
+   Description
+         If set, then the QuickEditor is the first element in the Function Menu
+         in the top of the menu in Web > Page
+   
+   Default
+
+
+.. container:: table-row
+
+   Property
+         disableSearchBox
+   
+   Data type
+         boolean
+   
+   Description
+         Disables the search box in Columns view.
+   
+   Default
+
+
+.. container:: table-row
+
+   Property
+         disableBigButtons
+   
+   Data type
+         boolean
+   
+   Description
+         Disables the large buttons in top of the Columns view.
+         
+         These are the buttons that are hidden with this option:
+         
+         |img-25|
+   
+   Default
+         1
+
+
+.. container:: table-row
+
+   Property
+         disableAdvanced
+   
+   Data type
+         boolean
+   
+   Description
+         Disables the clear cache advanced function in the bottom of the page
+         in the module, including the "Create new record" link. As well removes
+         the "Clear cache for this page" icon in the right top of the page
+         module.
+   
+   Default
+         0
+
+
+.. container:: table-row
+
+   Property
+         disableNewContentElementWizard
+   
+   Data type
+         boolean
+   
+   Description
+         Disables the fact that the new-content-element icons links to the
+         content element wizard and not directly to a blank "NEW" form.
+   
+   Default
+
+
+.. container:: table-row
+
+   Property
+         defaultLanguageLabel
+   
+   Data type
+         string
+   
+   Description
+         Alternative label for "Default" when language labels are shown in the
+         interface.
+         
+         Overrides the same property from mod.SHARED if set.
+   
+   Default
+
+
+.. container:: table-row
+
+   Property
+         defLangBinding
+   
+   Data type
+         boolean
+   
+   Description
+         If set, translations of content elements are bound to the default
+         record in the display. This means that within each column with content
+         elements any translation found for exactly the shown default content
+         element will be shown in the language column next to.
+         
+         This display mode should be used depending on how the frontend is
+         configured to display localization. The frontend must display
+         localized pages by selecting the default content elements and for each
+         one overlay with a possible translation if found.
+   
+   Default
+
+
+.. container:: table-row
+
+   Property
+         disableIconToolbar
+   
+   Data type
+         boolean
+   
+   Description
+         Disables the topmost icon toolbar with the "view"-Icon and the icon
+         toolbar below.
+   
+   Default
+
+
+.. container:: table-row
+
+   Property
+         disablePageInformation
+   
+   Data type
+         boolean
+   
+   Description
+         (Since TYPO3 4.7) Hide the menu item "Page information" in the drop
+         down box.
+         
+         Use this option instead of removing page information completely.
+   
+   Default
+         0
+
+
+.. ###### END~OF~TABLE ######
+
+[page:mod.web\_layout; beuser:mod.web\_layout]
+
+
+**Web > List (mod.web\_list)** :
+""""""""""""""""""""""""""""""""
+
+.. ### BEGIN~OF~TABLE ###
+
+.. container:: table-row
+
+   Property
+         Property:
+   
+   Data type
+         Data type:
+   
+   Description
+         Description:
+   
+   Default
+         Default:
+
+
+.. container:: table-row
+
+   Property
+         noCreateRecordsLink
+   
+   Data type
+         boolean
+   
+   Description
+         If set, the link in the bottom of the page, "Create new record", is
+         hidden.
+         
+         **Example:**
+         
+         ::
+         
+            mod.web_list {
+                    noCreateRecordsLink = 1
+            }
+   
+   Default
+
+
+.. container:: table-row
+
+   Property
+         alternateBgColors
+   
+   Data type
+         boolean
+   
+   Description
+         If set, the background colors of rows in the lists will alternate.
+         
+         **Example:**
+         
+         ::
+         
+            mod.web_list {
+                    alternateBgColors = 0
+            }
+         
+         The result is the deactivation of alternating background colors for
+         each element:
+         
+         |img-26|  **Note** : This option has been removed in TYPO3 4.5 and the
+         background colors are always alternating.
+   
+   Default
+
+
+.. container:: table-row
+
+   Property
+         disableSingleTableView
+   
+   Data type
+         boolean
+   
+   Description
+         If set, then the links on the table titles which shows a single table
+         listing only will not be available (including sorting links on columns
+         titles, because these links jumps to the table-only view).
+   
+   Default
+
+
+.. container:: table-row
+
+   Property
+         listOnlyInSingleTableView
+   
+   Data type
+         boolean
+   
+   Description
+         If set, the default view will not show the single records inside a
+         table anymore, but only the available tables and the number of records
+         in these tables. The individual records will only be listed in the
+         single table view, that means when a table has been clicked. This is
+         very practical for pages containing many records from many tables!
+         
+         **Example:**
+         
+         ::
+         
+            mod.web_list {
+                    listOnlyInSingleTableView = 1
+            }
+         
+         The result will be that records from tables are only listed in the
+         single-table mode:
+         
+         |img-27|
+   
+   Default
+         0
+
+
+.. container:: table-row
+
+   Property
+         itemsLimitSingleTable
+   
+   Data type
+         int+
+   
+   Description
+         Set the default maximum number of items to show in single table view.
+   
+   Default
+         100
+
+
+.. container:: table-row
+
+   Property
+         itemsLimitPerTable
+   
+   Data type
+         int+
+   
+   Description
+         Set the default maximum number of items to show per table.
+   
+   Default
+         20
+
+
+.. container:: table-row
+
+   Property
+         noViewWithDokTypes
+   
+   Data type
+         string
+   
+   Description
+         Hide view icon for the defined doktypes (comma-separated)
+   
+   Default
+         254,255
+
+
+.. container:: table-row
+
+   Property
+         hideTables
+   
+   Data type
+         *list of table names*
+   
+   Description
+         Hide these tables in record listings (comma-separated)
+   
+   Default
+
+
+.. container:: table-row
+
+   Property
+         table.[ *tablename* ].hideTable
+   
+   Data type
+         boolean
+   
+   Description
+         If set to non-zero, the table is hidden. If it is zero, table is shown
+         no matter if table name is listed in "hideTables" list.
+         
+         **Example:**
+         
+         ::
+         
+            mod.web_list.table.tt_content.hideTable = 1
+   
+   Default
+
+
+.. container:: table-row
+
+   Property
+         hideTranslations
+   
+   Data type
+         list of table names
+   
+   Description
+         (Since TYPO3 4.6) For tables in this list all their records in
+         additional website languages will be hidden in the List module. Only
+         records in default website languages are visible.
+         
+         Use "\*" to hide all records of additional website languages in all
+         tables or choose tables by comma-separated list.
+         
+         **Example:**
+         
+         ::
+         
+            mod.web_list.hideTranslations = *
+         
+         or
+         
+         ::
+         
+            mod.web_list.hideTranslations = tt_content,tt_news
+   
+   Default
+
+
+.. container:: table-row
+
+   Property
+         disableSearchBox
+   
+   Data type
+         boolean
+   
+   Description
+         (Since TYPO3 4.6) Disables the search box located below the clipboard
+   
+   Default
+         0
+
+
+.. container:: table-row
+
+   Property
+         allowedNewTables
+   
+   Data type
+         *list of table names*
+   
+   Description
+         If this list is set, then only tables listed here will have a link to
+         "create new" in the page and subpages.
+         
+         This also affects "db\_new.php" (the display of "Create new record")
+         
+         **Note:** Technically records can be created (e.g. by copying/moving),
+         so this is "pseudo security". The point is to reduce the number of
+         options for new records visually.
+         
+         **Example:**
+         
+         ::
+         
+            mod.web_list {
+              allowedNewTables = pages, tt_news
+            }
+         
+         Only pages and tt\_news table elements will be linked to in the New
+         record screen:
+         
+         |img-28|
+   
+   Default
+
+
+.. container:: table-row
+
+   Property
+         deniedNewTables
+   
+   Data type
+         *list of table names*
+   
+   Description
+         If this list is set, then the tables listed here won't have a link to
+         "create news" in the page and subpages. This also affects
+         "db\_new.php" (the display of "Create new record").
+         
+         This is the opposite of the previous property "allowedNewTables".
+         
+         If allowedNewTables and deniedNewTables contain a common subset,
+         deniedNewTables takes precedence.
+         
+         **Example:**
+         
+         ::
+         
+            mod.web_list {
+              deniedNewTables = tt_news,tt_content
+            }
+   
+   Default
+
+
+.. container:: table-row
+
+   Property
+         newWizards
+   
+   Data type
+         boolean
+   
+   Description
+         If set, then the new-link over the control panel of the pages and
+         tt\_content listings in the List module will link to the wizards and
+         not create a record in the top of the list.
+   
+   Default
+
+
+.. container:: table-row
+
+   Property
+         showClipControlPanelsDespiteOfCMlayers
+   
+   Data type
+         boolean
+   
+   Description
+         If set, then the control- and clipboard panels of the module is shown
+         even if the context-popups (ClickMenu) are available. Normally the
+         control- and clipboard panels are disabled (unless extended mode is
+         set) in order to save bandwidth.
+   
+   Default
+
+
+.. container:: table-row
+
+   Property
+         enableDisplayBigControlPanel
+   
+   Data type
+         list of keywords
+   
+   Description
+         Determines whether the checkbox "Extended view" in the list module is
+         shown or hidden. If it is hidden, you can predefine it to be always
+         activated or always deactivated.
+         
+         |img-29|
+         
+         The following values are possible:
+         
+         \- activated: The option is activated and the checkbox is hidden.
+         
+         \- deactivated: The option is deactivated and the checkbox is hidden.
+         
+         \- selectable: The checkbox is shown so that the option can be
+         selected by the user.
+   
+   Default
+         selectable
+
+
+.. container:: table-row
+
+   Property
+         enableClipBoard
+   
+   Data type
+         list of keywords
+   
+   Description
+         Determines whether the checkbox "Show clipboard" in the list module is
+         shown or hidden. If it is hidden, you can predefine it to be always
+         activated or always deactivated.
+         
+         The following values are possible:
+         
+         \- activated: The option is activated and the checkbox is hidden.
+         
+         \- deactivated: The option is deactivated and the checkbox is hidden.
+         
+         \- selectable: The checkbox is shown so that the option can be
+         selected by the user.
+   
+   Default
+         selectable
+
+
+.. container:: table-row
+
+   Property
+         enableLocalizationView
+   
+   Data type
+         list of keywords
+   
+   Description
+         Determines whether the checkbox "Localization view" in the list module
+         is shown or hidden. If it is hidden, you can predefine it to be always
+         activated or always deactivated.
+         
+         The following values are possible:
+         
+         \- activated: The option is activated and the checkbox is hidden.
+         
+         \- deactivated: The option is deactivated and the checkbox is hidden.
+         
+         \- selectable: The checkbox is shown so that the option can be
+         selected by the user.
+   
+   Default
+         selectable
+
+
+.. container:: table-row
+
+   Property
+         newPageWiz.overrideWithExtension
+         
+         newContentWiz.overrideWithExtension
+   
+   Data type
+         string
+   
+   Description
+         If set to an extension key, (eg. "templavoila") then the
+         "mod1/index.php" file of that extension will be used for creating new
+         elements on the page. "newContentWiz" will likewise use the
+         "mod1/db\_new\_content\_el.php" for creating new content elements.
+         
+         Also see "options.overridePageModule"
+   
+   Default
+
+
+.. container:: table-row
+
+   Property
+         clickTitleMode
+   
+   Data type
+         string
+   
+   Description
+         Keyword which defines what happens when a user clicks the title in the
+         list.
+         
+         Default is that pages will go one level down while other records have
+         no link at all.
+         
+         Keywords:
+         
+         **edit** = Edits record
+         
+         **info** = Shows information
+         
+         **show** = Shows page/content element in frontend
+   
+   Default
+
+
+.. ###### END~OF~TABLE ######
+
+[page:mod.web\_list; beuser:mod.web\_list]
+
+
+**Web > View (mod.web\_view)**
+""""""""""""""""""""""""""""""
+
+.. ### BEGIN~OF~TABLE ###
+
+.. container:: table-row
+
+   Property
+         Property:
+   
+   Data type
+         Data type:
+   
+   Description
+         Description:
+   
+   Default
+         Default:
+
+
+.. container:: table-row
+
+   Property
+         type
+   
+   Data type
+         int+
+   
+   Description
+         Enter the value of the &type parameter passed to the webpage.
+         
+         **Example:**
+         
+         By this configuration frontend pages will be shown with
+         "index.php?id=123&type=1" from the Web > View module:
+         
+         ::
+         
+            mod.web_view {
+                    type = 1
+            }
+   
+   Default
+
+
+.. ###### END~OF~TABLE ######
+
+[page:mod.web\_view; beuser:mod.web\_view]
+
+
+**Wizards (mod.wizards)**
+"""""""""""""""""""""""""
+
+The configuration for wizards was introduced in TYPO3 4.3. Wizards
+make it possible to customize the new record wizard or the new content
+element wizard, for example.
+
+
+**New record wizard (mod.wizards.newRecord)**
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. ### BEGIN~OF~TABLE ###
+
+.. container:: table-row
+
+   Property
+         Property:
+   
+   Data type
+         Data type:
+   
+   Description
+         Description:
+   
+   Default
+         Default:
+
+
+.. container:: table-row
+
+   Property
+         pages
+   
+   Data type
+         *boolean*
+   
+   Description
+         (Since TYPO3 4.6) Use the following sub-properties to show or hide the
+         specified links.
+         
+         **Available sub-properties:**
+         
+         **show.pageAfter** =Show or hide the link to create new pages after
+         the selected page.
+         
+         **show.pageInside** =Show or hide the link to create new pages inside
+         the selected page.
+         
+         **show.pageSelectPosition** =Show or hide the link to create new pages
+         at a selected position.
+         
+         Setting any of these properties to 0 will hide the corresponding link,
+         but setting to 1 will leave it visible.
+         
+         **Example:**
+         
+         ::
+         
+            mod.wizards.newRecord.pages.show {
+                    pageInside = 0
+            }
+         
+         Hides the "Page (inside)" link.
+         
+         |img-30|
+   
+   Default
+         1
+
+
+.. container:: table-row
+
+   Property
+         order
+   
+   Data type
+         *list of values*
+   
+   Description
+         Define an alternate order for the groups of records in the new records
+         wizard. Pages and content elements will always be on top, but the
+         order of other record groups can be changed.
+         
+         Records are grouped by extension keys, plus the special key "system"
+         for records provided by the TYPO3 Core.
+         
+         **Example:**
+         
+         ::
+         
+            mod.wizards.newRecord.order = tt_news
+         
+         This places the tt\_news group at the top (after pages and content
+         elements). The other groups follow unchanged:
+         
+         |img-31|
+   
+   Default
+
+
+.. ###### END~OF~TABLE ######
+
+[page:mod.wizards.newRecord; beuser:page.mod.wizards.newRecord]
+
+
+**New content element wizard (mod.wizards.newContentElement)**
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. ### BEGIN~OF~TABLE ###
+
+.. container:: table-row
+
+   Property
+         Property:
+   
+   Data type
+         Data type:
+   
+   Description
+         Description:
+   
+   Default
+         Default:
+
+
+.. container:: table-row
+
+   Property
+         renderMode
+   
+   Data type
+         string
+   
+   Description
+         Alternative rendering mode; set to "tabs", if you want tabs.
+         
+         **Example:**
+         
+         ::
+         
+            mod.wizards.newContentElement.renderMode = tabs
+         
+         |img-32|
+   
+   Default
+
+
+.. container:: table-row
+
+   Property
+         wizardItems.[group]
+   
+   Data type
+         array
+   
+   Description
+         In the new content element wizard, content element types are grouped
+         together by type. Each such group can be configured independently. The
+         four default groups are: "common", "special", "forms" and "plugins".
+         
+         The configuration options below apply to any group.
+   
+   Default
+
+
+.. container:: table-row
+
+   Property
+         wizardItems.[group].header
+   
+   Data type
+         string (localized)
+   
+   Description
+         Name of the group.
+   
+   Default
+
+
+.. container:: table-row
+
+   Property
+         wizardItems.[group].show
+   
+   Data type
+         string
+   
+   Description
+         Comma-separated list of items to show in the group. Use "\*" to show
+         all.
+         
+         **Example:**
+         
+         ::
+         
+              # Hide bulletList
+            mod.wizards.newContentElement.wizardItems.common.show := removeFromList(bullets)
+            
+              # Only show text and textpic in common
+            mod.wizards.newContentElement.wizardItems.common.show = text,textpic
+   
+   Default
+
+
+.. container:: table-row
+
+   Property
+         wizardItems.[group].elements
+   
+   Data type
+         array
+   
+   Description
+         List of items in the group.
+   
+   Default
+
+
+.. container:: table-row
+
+   Property
+         wizardItems.[group].elements.[name]
+   
+   Data type
+         array
+   
+   Description
+         Configuration for a single item.
+   
+   Default
+
+
+.. container:: table-row
+
+   Property
+         wizardItems.[group].elements.[name].icon
+   
+   Data type
+         resource
+   
+   Description
+         Path to the icon.
+   
+   Default
+
+
+.. container:: table-row
+
+   Property
+         wizardItems.[group].elements.[name].title
+   
+   Data type
+         string (localized)
+   
+   Description
+         Name of the item.
+   
+   Default
+
+
+.. container:: table-row
+
+   Property
+         wizardItems.[group].elements.[name].description
+   
+   Data type
+         string (localized)
+   
+   Description
+         Description text for the item.
+   
+   Default
+
+
+.. container:: table-row
+
+   Property
+         wizardItems.[group].elements.[name].tt\_content\_defValues
+   
+   Data type
+         array
+   
+   Description
+         Default values for tt\_content fields.
+   
+   Default
+
+
+.. ###### END~OF~TABLE ######
+
+[page:mod.wizards.newContentElement;
+beuser:mod.wizards.newContentElement]
+
+
+Example 1:
+~~~~~~~~~~
+
+Add a new element (header) to the "common" group:
+
+::
+
+   mod.wizards.newContentElement.wizardItems.common.elements.header {
+           icon = gfx/c_wiz/regular_text.gif
+           title = Header
+           description = Adds a header element only
+           tt_content_defValues {
+                   CType = header
+           }
+   }
+   mod.wizards.newContentElement.wizardItems.common.show := addToList(header)
+
+
+Example 2:
+~~~~~~~~~~
+
+Create a new group and add a (pre-filled) element to it:
+
+::
+
+   mod.wizards.newContentElement.wizardItems.myGroup {
+           header = LLL:EXT:cms/layout/locallang.xml:advancedFunctions
+           elements.customText {
+                   icon = gfx/c_wiz/regular_text.gif
+                   title = Introductory text for national startpage
+                   description = Use this element for all national startpages 
+                   tt_content_defValues {
+                           CType = text
+                           bodytext ( 
+   <h2>Section Header</h2>
+   <p class="bodytext">Lorem ipsum dolor sit amet, consectetur, sadipisci velit ...</p>
+                           )
+                           header = Section Header
+                           header_layout = 100
+                   }
+           }
+   }
+   mod.wizards.newContentElement.wizardItems.myGroup.show = customText
+
+This will add the following at the bottom of the new content element
+wizard:
+
+|img-33| 
+**Tools > Extension Manager (mod.tools\_em)**
+"""""""""""""""""""""""""""""""""""""""""""""
+
+.. ### BEGIN~OF~TABLE ###
+
+.. container:: table-row
+
+   Property
+         Property:
+   
+   Data type
+         Data type:
+   
+   Description
+         Description:
+   
+   Default
+         Default:
+
+
+.. container:: table-row
+
+   Property
+         allowTVlisting
+   
+   Data type
+         boolean
+   
+   Description
+         If set, the listings "Technical", "Validation" and "Changed" are
+         available in the Extension Manager. Those will evaluate ALL available
+         extensions. That can take many seconds (up to 30) depending on the
+         number of extensions.
+         
+         **Example:**
+         
+         ::
+         
+            mod.tools_em.allowTVlisting = 1
+         
+         Enables these options in the Extension Manager:
+         
+         |img-34|
+         
+         **Note** : This setting does not influence the new Extension Manager
+         which comes with TYPO3 4.5 and newer.
+   
+   Default
+         0
+
+
+.. ###### END~OF~TABLE ######
+
+[beuser:mod.tools\_em]
+
+
+**Edit document 'module' (mod.xMOD\_alt\_doc)** :
+"""""""""""""""""""""""""""""""""""""""""""""""""
+
+.. ### BEGIN~OF~TABLE ###
+
+.. container:: table-row
+
+   Property
+         Property:
+   
+   Data type
+         Data type:
+   
+   Description
+         Description:
+   
+   Default
+         Default:
+
+
+.. container:: table-row
+
+   Property
+         disableDocSelector
+   
+   Data type
+         boolean
+   
+   Description
+         If set, the document selector is disabled.
+         
+         **Example:**
+         
+         ::
+         
+            mod.xMOD_alt_doc {
+              disableDocSelector = 1
+              disableCacheSelector = 1
+            }
+         
+         |img-35|  **Note:** As of TYPO3 4.2 this has been replaced by the
+         "opendocs" extension, on which this setting has no effect anymore. The
+         above screenshot comes from TYPO3 4.1.
+   
+   Default
+
+
+.. container:: table-row
+
+   Property
+         disableCacheSelector
+   
+   Data type
+         boolean
+   
+   Description
+         If set, the cache/save/close selector is disabled.
+         
+         *See example above.*
+         
+         **Note:** As of TYPO3 4.2 this menu does not exist anymore.
+   
+   Default
+
+
+.. ###### END~OF~TABLE ######
+
+[page:mod.xMOD\_alt\_doc; beuser:mod.xMOD\_alt\_doc]
+
