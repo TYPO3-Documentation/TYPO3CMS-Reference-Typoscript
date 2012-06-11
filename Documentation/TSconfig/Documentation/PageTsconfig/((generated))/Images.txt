@@ -1,0 +1,15 @@
+﻿.. |img-11|     image:: ../../Images/manual_html_1194c6cf.png
+   :height: 611
+   :width: 552
+.. :align: left
+.. :border: 0
+.. :name: Grafik12
+
+.. |img-12|     image:: ../../Images/manual_html_m7ed27f1e.png
+   :height: 331
+   :width: 587
+.. :align: left
+.. :border: 0
+.. :name: Grafik11
+.. :vspace: 2
+
