@@ -3215,8 +3215,8 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          in links prefixed with the path of the script. Basically this means
          that <a href="#"> will be transformed to <a
          href="path/path/script?params#">. This procedure is necessary if the
-         <base> tag is set in the script (eg. if "realurl" extension is used to
-         produce Speaking URLs).
+         <base> tag is set (eg. if "realurl" extension is used to produce
+         Speaking URLs) (see property "config.baseURL").
          
          Keywords are the same as for "xhtml\_cleaning", see above.
    
@@ -3251,6 +3251,8 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          This writes the <base> tag in the header of the document. Set this to
          the value that is expected to be the URL and append a "/" to the end
          of the string.
+         
+         If this is set, make sure that "prefixLocalAnchors" is set to "all"
          
          **Example:**
          
