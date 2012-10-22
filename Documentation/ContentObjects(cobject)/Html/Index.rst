@@ -22,8 +22,8 @@ The content object "HTML" can be used to output static text or html.
 stdWrap is available for the cObject itself and for the property
 "value". See the examples.
 
-**Note** : This content object is deprecated since TYPO3 4.6 and will
-be removed in TYPO3 6.0. Use the content object "TEXT" instead!
+**Note** : This content object was deprecated since TYPO3 4.6 and has
+been removed in TYPO3 6.0. Use the content object "TEXT" instead!
 
 .. ### BEGIN~OF~TABLE ###
 
