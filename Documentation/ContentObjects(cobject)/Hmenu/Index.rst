@@ -863,7 +863,6 @@ have the image appended.
    
    20 {
      1 = TMENU
-     1.noBlur = 1
    
      1.NO.wrapItemAndSub = <li>|</li>
      1.NO.ATagTitle.field = description // subtitle // title

@@ -83,7 +83,10 @@ GIFBUILDER-objects for each item (NO, ACT, SPC... and so on).
          
          If this property is set, the link is NOT blurred (browser-default)
          with "onFocus".
-   
+
+         **Note** : This option and the JavaScript for blurring have been
+         removed in TYPO3 6.0.
+
    Default
 
 
