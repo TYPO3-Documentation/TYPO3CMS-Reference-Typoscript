@@ -251,10 +251,10 @@ icon, size and file are rendered in the listed order.
    
    Description
          Decides if the link should call the script with the jumpurl parameter
-         in order to register any clicks in the stat.
-         
-         This has the advantage that any clicks on the file will register in
-         the stat.
+         in order to be able to register any clicks in statistics.
+
+         This has the advantage that any clicks on the file can be registered
+         in statistics.
          
          The disadvantage is, that users cant right-click and select "Save
          Target As" in the browser.

@@ -196,7 +196,7 @@ with the link-parameters (lowercased)!
    
    Description
          Decides if the link should call the script with the jumpurl parameter
-         in order to register any clicks in the statistics.
+         in order to register any clicks in statistics.
          
          This works the same way as "filelink.jumpurl" does – for more details
          see the description there.

@@ -1551,9 +1551,8 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    
    Description
          jumpUrl is a concept where external links are redirected from the
-         index\_ts.php script, which first logs the URL. This feature is only
-         interesting if "config.sys\_stat" is used.
-   
+         index\_ts.php script, which first logs the URL.
+
    Default
          0
 
@@ -1858,7 +1857,11 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    
    Description
          Enable stat logging at all.
-   
+
+         **Note** : All statistics related options including this one have
+         been removed in TYPO3 6.0. Use other well known tools like Google
+         Analytics or Piwik instead.
+
    Default
          true
 
@@ -1879,7 +1882,9 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          
          Default is "0,1" which normally logs all hits on framesets and hits on
          content keeping pages. Of course this depends on the template design.
-   
+
+         **Note** : This option has been removed in TYPO3 6.0.
+
    Default
          0,1
 
@@ -1894,7 +1899,9 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    
    Description
          If set a page hit is not logged if a user is logged in into TYPO3.
-   
+
+         **Note** : This option has been removed in TYPO3 6.0.
+
    Default
          false
 
@@ -1912,7 +1919,9 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          logged.
          
          Can use wildcard, e.g. "192.168.1.\*"
-   
+
+         **Note** : This option has been removed in TYPO3 6.0.
+
    Default
 
 
@@ -1925,8 +1934,10 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          boolean
    
    Description
-         Enable logging to the MySQL table sys\_stat.
-   
+         Enable logging to the database table sys\_stat.
+
+         **Note** : This option has been removed in TYPO3 6.0.
+
    Default
          false
 
@@ -1940,8 +1951,10 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          boolean
    
    Description
-         Enable logging to the log file "stat\_apache\_logfile"
-   
+         Enable logging to the log file "stat\_apache\_logfile".
+
+         **Note** : This option has been removed in TYPO3 6.0.
+
    Default
          false
 
@@ -1974,7 +1987,9 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
             config.stat_apache_logfile = typo3_%Y%m%d.log
          
          This will create daily log files (e.g. typo3\_20060321.log).
-   
+
+         **Note** : This option has been removed in TYPO3 6.0.
+
    Default
 
 
@@ -2006,7 +2021,9 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          
          [request\_uri] = inserts the REQUEST\_URI server value (useful with
          RealUrl for example)
-   
+
+         **Note** : This option has been removed in TYPO3 6.0.
+
    Default
 
 
@@ -2019,8 +2036,10 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          boolean
    
    Description
-         If true the log file is NOT written in Apache extended format
-   
+         If true the log file is NOT written in Apache extended format.
+
+         **Note** : This option has been removed in TYPO3 6.0.
+
    Default
 
 
@@ -2034,8 +2053,10 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    
    Description
          If true the HTTP\_HOST is - if available - NOT inserted instead of the
-         IP-address
-   
+         IP-address.
+
+         **Note** : This option has been removed in TYPO3 6.0.
+
    Default
 
 
@@ -2054,11 +2075,11 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          be converted will be changed to underscores.
          
          If set to "utf-8", the page title will be converted to UTF-8 which
-         results
-         
-         in even more readable titles, if your log analyzing software supports
-         it.
-   
+         results in even more readable titles, if your log analyzing software
+         supports it.
+
+         **Note** : This option has been removed in TYPO3 6.0.
+
    Default
 
 
@@ -2074,7 +2095,9 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          If set, the root part (level 0) of the path will be removed from the
          path. This makes a shorter name in case you have only a redundant part
          like "home" or "my site".
-   
+
+         **Note** : This option has been removed in TYPO3 6.0.
+
    Default
 
 
@@ -2087,8 +2110,10 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          int 1-100
    
    Description
-         The length of the page names in the path written to log file/database
-   
+         The length of the page names in the path written to log file/database.
+
+         **Note** : This option has been removed in TYPO3 6.0.
+
    Default
          20
 
@@ -2104,7 +2129,9 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    Description
          The length of the page name (at the end of the path) written to the
          log file/database.
-   
+
+         **Note** : This option has been removed in TYPO3 6.0.
+
    Default
          30
 
@@ -2118,10 +2145,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          boolean
    
    Description
-         (Since TYPO3 4.7)Set to 1 to activate anonymized logging. Setting this
+         (Since TYPO3 4.7) Set to 1 to activate anonymized logging. Setting this
          to 1 will log an empty hostname and will enable anonymization of IP
          addresses.
-   
+
+         **Note** : This option has been removed in TYPO3 6.0.
+
    Default
          0
 
@@ -2135,7 +2164,7 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          int
    
    Description
-         (Since TYPO3 4.7)Prefix-mask 0..32 to use for anonymisation of IP
+         (Since TYPO3 4.7) Prefix-mask 0..32 to use for anonymisation of IP
          addresses (IPv4). Only used, if stat\_IP\_anonymize is set to 1.
          
          Recommendation for Germany:
@@ -2143,7 +2172,9 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          ::
          
             config.stat_IP_anonymize_ipv4 = 24
-   
+
+         **Note** : This option has been removed in TYPO3 6.0.
+
    Default
          24
 
@@ -2157,7 +2188,7 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          int
    
    Description
-         (Since TYPO3 4.7)Prefix-mask 0..128 to use for anonymisation of IP
+         (Since TYPO3 4.7) Prefix-mask 0..128 to use for anonymisation of IP
          addresses (IPv6). Only used, if stat\_IP\_anonymize is set to 1.
          
          Recommendation for Germany:
@@ -2165,7 +2196,9 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          ::
          
             config.stat_IP_anonymize_ipv6 = 64
-   
+
+         **Note** : This option has been removed in TYPO3 6.0.
+
    Default
          64
 
@@ -2179,10 +2212,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          boolean
    
    Description
-         (Since TYPO3 4.7)Configure whether to log the username of the Frontend
+         (Since TYPO3 4.7) Configure whether to log the username of the Frontend
          user, if the user is logged in in the FE currently. Setting this to 0
          allows to anonymize the username.
-   
+
+         **Note** : This option has been removed in TYPO3 6.0.
+
    Default
          1
 
