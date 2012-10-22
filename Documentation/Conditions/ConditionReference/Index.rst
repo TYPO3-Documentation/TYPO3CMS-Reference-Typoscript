@@ -306,7 +306,7 @@ An example user agent could look like this:
 
 ::
 
-   Mozilla/5.0 (Windows NT 5.1; rv:11.0) Gecko/20100101 Firefox/11.0
+   Mozilla/5.0 (Windows NT 5.1; rv:17.0) Gecko/20100101 Firefox/17.0
 
 This string contains the identifications "Gecko" and "Firefox". The
 condition
@@ -1204,7 +1204,10 @@ true, when  *one or more* of its operands are true.
          [none]
    
    Function
-         Requires an exact match with the value.
+         Requires an exact match with the value. Since TYPO3 6.0
+         comparison with a list of values is possible as well. The
+         condition then returns true, if the value is in the list.
+         Values must then be separated by "|".
 
 
 .. container:: table-row
@@ -1249,7 +1252,10 @@ true, when  *one or more* of its operands are true.
          !=
    
    Function
-         The hour must be not equal to the value.
+         The hour must be not equal to the value. Since TYPO3 6.0
+         comparison with a list of values is possible as well. The
+         condition then returns true, if the value is not in the list.
+         Values must then be separated by "|".
 
 
 .. ###### END~OF~TABLE ######
@@ -1264,6 +1270,12 @@ server time):
 ::
 
    [hour = 9]
+
+This will match, if it is not between 8 and 11 o'clock:
+
+::
+
+   [hour = != 8|9|10]
 
 This will match, if it is before 7 o'clock:
 
@@ -1699,7 +1711,10 @@ operands are true.
          =
    
    Function
-         Requires an exact match.
+         Requires an exact match with the value. Since TYPO3 6.0
+         comparison with a list of values is possible as well. The
+         condition then returns true, if the value is in the list.
+         Values must then be separated by "|".
 
 
 .. container:: table-row
@@ -1744,7 +1759,10 @@ operands are true.
          !=
    
    Function
-         The var must be not equal to the value.
+         The var must be not equal to the value. Since TYPO3 6.0
+         comparison with a list of values is possible as well. The
+         condition then returns true, if the value is not in the list.
+         Values must then be separated by "|".
 
 
 .. ###### END~OF~TABLE ######
@@ -1758,6 +1776,18 @@ This will match with a URL like "...&print=1":
 ::
 
    [globalVar = GP:print > 0]
+
+This will match, if the page-id is equal to either 10, 12 or 15:
+
+::
+
+   [globalVar = TSFE:id = 10|12|15]
+
+This will match, if the page-id is not equal to 10, 12 and 15:
+
+::
+
+   [globalVar = TSFE:id != 10|12|15]
 
 This will match, if the page-id is higher than or equal to 10:
 
