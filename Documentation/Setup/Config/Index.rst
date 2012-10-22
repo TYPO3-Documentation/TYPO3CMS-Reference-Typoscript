@@ -881,7 +881,7 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          
             $GLOBALS['TYPO3_CONF_VARS']['FE']['jsCompressHandler'] = t3lib_extMgm::extPath($_EXTKEY) . 'Classes/class.tx_myext_jsCompressHandler.php:tx_myext_jsCompressHandler->minifyJs';
          
-         **Note:** This property is deprecated and will be removed with TYPO3
+         **Note:** This property was deprecated and has been removed in TYPO3
          6.0! Use config.compressJs instead.
    
    Default
@@ -953,10 +953,10 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          ::
          
             $GLOBALS['TYPO3_CONF_VARS']['FE']['cssCompressHandler'] = t3lib_extMgm::extPath($_EXTKEY) . 'Classes/class.tx_myext_cssCompressHandler.php:tx_myext_cssCompressHandler->minifyCss';
-         
-         **Note:** This property is deprecated and will be removed with TYPO3
-         6.0! Use config.compressCss instead.
-   
+
+         **Note:** This property was deprecated and has been removed in TYPO3
+         6.0. Use config.compressCss instead.
+
    Default
 
 
@@ -1581,14 +1581,15 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          double
    
    Description
-         this floating point value will be used by the FORMS cObject to
+         This floating point value will be used by the FORMS cObject to
          compensate the length of the form fields text and input.
-         
-         This feature is useful, if the page-option "smallFormFields" is set.
-         In that case Netscape renders form fields much longer than IE. If you
-         want the two browsers to display the same size form fields, use a
-         value of approx "0.6" for netscape-browsers.
-         
+
+         This feature was useful, if the page-option "smallFormFields" 
+         (removed in TYPO3 6.0) was set. In that case Netscape rendered
+         form fields much longer than IE. If you wanted the two browsers
+         to display the same size form fields, you could use a value of
+         approx "0.6" for netscape-browsers.
+
          **Example:**
          
          ::

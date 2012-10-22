@@ -673,11 +673,12 @@ Most of this codes is executed in the PHP-script
          
          **Note:**
          
-         with config.removeDefaultJS = external, the inlineJS is moved to
-         external file.
-         
-         with config.minifyJS = 1, the jsInline will be minified as well.
-   
+         With config.removeDefaultJS = external, the inlineJS is moved to
+         an external file.
+
+         With config.minifyJS = 1 (removed in TYPO3 6.0) the inlineJS was
+         minified as well.
+
    Default
 
 
@@ -715,14 +716,15 @@ Most of this codes is executed in the PHP-script
             page.inlineJS.10 = TEXT
             page.inlineJS.10.value = function a(val) { alert(val); }
          
-         with config.removeDefaultJS = external the inlineJS is moved to
+         With config.removeDefaultJS = external the inlineJS is moved to
          external file.
-         
-         with config.minifyJS = 1 the inlineJS will be minified as well.
-         
+
+         With config.minifyJS = 1 (removed in TYPO3 6.0) the inlineJS was
+         minified as well.
+
          **Note** : This option was deprecated and has been removed in TYPO3
          4.3. Use jsInline instead.
-   
+
    Default
 
 
@@ -892,9 +894,10 @@ Most of this codes is executed in the PHP-script
    
    Description
          Disables link-underlining. Uses in-document stylesheet.
-         
-         *Deprecated. Use stylesheet instead.*
-   
+
+         **Note** : This option was deprecated and has been removed in
+         TYPO3 6.0. Use stylesheets instead.
+
    Default
 
 
@@ -909,9 +912,10 @@ Most of this codes is executed in the PHP-script
    Description
          The color of a link when the mouse moves over it! (only MSIE). Uses
          in-document stylesheet.
-         
-         *Deprecated. Use stylesheet instead.*
-   
+
+         **Note** : This option was deprecated and has been removed in
+         TYPO3 6.0. Use stylesheets instead.
+
    Default
 
 
@@ -931,9 +935,10 @@ Most of this codes is executed in the PHP-script
          ::
          
             page.hoverStyle = font: bold; text-decoration: none;
-         
-         *Deprecated. Use stylesheet instead.*
-   
+
+         **Note** : This option was deprecated and has been removed in
+         TYPO3 6.0. Use stylesheets instead.
+
    Default
 
 
@@ -956,9 +961,10 @@ Most of this codes is executed in the PHP-script
          Use this together with the config-option "compensateFieldWidth" set to
          "0.6" for netscape-browsers in order to render the small form fields
          in the same width!
-         
-         *Deprecated. Use stylesheet instead.*
-   
+
+         **Note** : This option was deprecated and has been removed in
+         TYPO3 6.0. Use stylesheets instead.
+
    Default
 
 
