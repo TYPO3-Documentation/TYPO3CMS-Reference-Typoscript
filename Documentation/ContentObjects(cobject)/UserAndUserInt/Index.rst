@@ -115,6 +115,20 @@ outside the main page-rendering.
    Default
 
 
+.. container:: table-row
+
+   Property
+         stdWrap
+
+   Data type
+         ->stdWrap
+
+   Description
+
+
+   Default
+
+
 .. ###### END~OF~TABLE ######
 
 [tsref:(cObject).USER/(cObject).USER\_INT]
