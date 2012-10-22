@@ -18,12 +18,12 @@
 [menuObj].sectionIndex
 ^^^^^^^^^^^^^^^^^^^^^^
 
-This is a property that all menuObj's share. If it's set, then the
+This is a property that all menuObj's share. If it is set, then the
 menu will not consist of links to pages on the "next level" but rather
-links to the parent page to the menu, but in addition "#"-links to the
-cObjects rendered on the page. In other words, the menu items will be
-links to the content elements (with colPos=0!) on the page. A section
-index.
+of links to the parent page to the menu, but in addition "#"-links to
+the cObjects rendered on the page. In other words, the menu items will
+be a section index with links to the content elements on the page (by
+default with colPos=0!).
 
 .sectionIndex = [boolean]
 
@@ -35,13 +35,29 @@ index" is selected as type.
 .sectionIndex.type = "all" / "header"
 
 If you set this additional property to "all", then the
-"Index"-checkbox is not considered and all content elements with
-colPos=0 is selected.
+"Index"-checkbox is not considered and all content elements - by
+default with colPos=0 - are selected.
 
 If this property is "header" then only content elements with a visible
 header-layout (and a non-empty 'header'-field!) is selected. In other
 words, if the header layout of an element is set to "Hidden" then the
 page will not appear in the menu.
+
+.sectionIndex.useColPos = [integer /stdWrap]
+
+(Since TYPO3 6.0) This property allows you to set the colPos which
+should be used in the where clause of the query. Possible values
+are integers, default is "0".
+
+Any positive integer and 0 will lead to a where clause containing
+"colPos=x" with x being the aforementioned integer. A negative value
+drops the filter "colPos=x" completely.
+
+**Example:**
+
+::
+
+   tt_content.menu.20.3.1.sectionIndex.useColPos = -1
 
 
 The data-record /Behind the scene
@@ -49,11 +65,11 @@ The data-record /Behind the scene
 
 When the menu-records are selected it works like this: The parent page
 record is used as the "base" for the menu-record. That means that any
-"no\_cache" or "target"-properties of the parent page is used for the
+"no\_cache" or "target"-properties of the parent page are used for the
 whole menu.
 
 But of course some fields from the tt\_content records are
-transferred. This is how it mapped:
+transferred. This is how it is mapped:
 
 ::
 
