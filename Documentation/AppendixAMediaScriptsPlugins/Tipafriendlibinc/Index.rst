@@ -99,9 +99,7 @@ tipafriendLib.inc properties
    
    Description
          The template-file.
-         
-         See example in 'media/scripts/tipafriend\_template.tmpl'
-   
+
    Default
 
 

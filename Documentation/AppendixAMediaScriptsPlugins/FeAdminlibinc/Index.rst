@@ -217,9 +217,8 @@ fe\_adminLib.inc properties
          resource
    
    Description
-         The template file, see examples in
-         typo3/sysext/cms/tslib/media/scripts/fe\_user\_admin.tmpl
-   
+         The template file.
+
    Default
 
 

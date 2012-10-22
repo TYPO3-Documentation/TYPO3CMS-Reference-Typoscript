@@ -78,7 +78,7 @@ icon, size and file are rendered in the listed order.
          Since TYPO3 4.7 the following sub-properties are available:
          
          **path** : Path to the icon set (default:
-         typo3/sysext/cms/tslib/media/fileicons/)
+         typo3/gfx/fileicons/)
          
          **ext** : File extension of icons (default: gif)
          

@@ -745,7 +745,7 @@ See code examples.
          ::
          
             1 {
-              mask = media/uploads/darkroom1_mask.jpg
+              mask = fileadmin/darkroom1_mask.jpg
               bgImg = GIFBUILDER
               bgImg {
                 XY = 100,100
@@ -756,7 +756,7 @@ See code examples.
                 XY = 100,100
                 backColor = black
               }
-              bottomImg_mask = media/uploads/darkroom1_bottom.jpg
+              bottomImg_mask = fileadmin/darkroom1_bottom.jpg
             }
          
          **NOTE:** This cancels the jpg-quality settings sent as ordinary

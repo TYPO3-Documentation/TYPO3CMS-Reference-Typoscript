@@ -375,7 +375,7 @@ graphical navigation, where each link is a separate gif-file.
          Thus you may modify this if you need to.
          
          See example in
-         typo3/sysext/cms/tslib/media/scripts/example\_itemArrayProcFunc.php
+         typo3/sysext/statictemplates/media/scripts/example\_itemArrayProcFunc.php
    
    Default
 

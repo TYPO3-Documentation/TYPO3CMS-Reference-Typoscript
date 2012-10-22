@@ -390,7 +390,7 @@ Example:
    temp.sidemenu.1 = TMENU
    temp.sidemenu.1 {
      target = page
-     NO.afterImg = media/bullets/dots2.gif |*||*| _
+     NO.afterImg = typo3/sysext/statictemplates/media/bullets/dots2.gif |*||*| _
      NO.afterImgTagParams = hspace="4"
      NO.linkWrap = {$fontTag}
      NO.ATagBeforeWrap = 1
@@ -1380,7 +1380,7 @@ Creates a language menu with flags (notice that some lines break):
      XY = [5.w]+4, [5.h]+4
      backColor = white
      5 = IMAGE
-     5.file = typo3/sysext/cms/tslib/media/flags/flag_uk.gif  || typo3/sysext/cms/tslib/media/flags/flag_fr.gif  || typo3/sysext/cms/tslib/media/flags/flag_es.gif
+     5.file = typo3/sysext/statictemplates/media/flags/flag_uk.gif  || typo3/sysext/statictemplates/media/flags/flag_fr.gif  || typo3/sysext/statictemplates/media/flags/flag_es.gif
      5.offset = 2,2
    }
    
@@ -1390,7 +1390,7 @@ Creates a language menu with flags (notice that some lines break):
    
    lib.langMenu.1.USERDEF1 < lib.langMenu.1.NO
    lib.langMenu.1.USERDEF1 = 1
-   lib.langMenu.1.USERDEF1.5.file = typo3/sysext/cms/tslib/media/flags/flag_uk_d.gif  || typo3/sysext/cms/tslib/media/flags/flag_fr_d.gif  || typo3/sysext/cms/tslib/media/flags/flag_es_d.gif
+   lib.langMenu.1.USERDEF1.5.file = typo3/sysext/statictemplates/media/flags/flag_uk_d.gif  || typo3/sysext/statictemplates/media/flags/flag_fr_d.gif  || typo3/sysext/statictemplates/media/flags/flag_es_d.gif
    lib.langMenu.1.USERDEF1.noLink = 1
 
 

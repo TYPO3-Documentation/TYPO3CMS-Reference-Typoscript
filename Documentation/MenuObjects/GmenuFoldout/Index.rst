@@ -30,7 +30,7 @@ is responsible for this, but the submenu on the next level (referred
 to as 2nd level) can be both TMENU and another GMENU.
 
 **NOTE:** You must include the library
-"typo3/sysext/cms/tslib/media/scripts/gmenu\_foldout.php".
+"typo3/sysext/statictemplates/media/scripts/gmenu\_foldout.php".
 
 The script implemented is taken from
 http://www9.ewebcity.com/skripts/foldoutmenu\_move.htm
@@ -362,7 +362,7 @@ Example:
 ::
 
    ## GMENU_FOLDOUT
-   includeLibs.gmenu_foldout = typo3/sysext/cms/tslib/media/scripts/gmenu_foldout.php
+   includeLibs.gmenu_foldout = typo3/sysext/statictemplates/media/scripts/gmenu_foldout.php
    
    temp.foldoutMenu = HMENU
    temp.foldoutMenu.1 = GMENU_FOLDOUT
@@ -398,8 +398,8 @@ Example:
      bottomBackColor = silver
      menuWidth = 170
      
-     arrowNO = typo3/sysext/cms/tslib/media/bullets/arrow_no.gif
-     arrowACT = typo3/sysext/cms/tslib/media/bullets/arrow_act.gif
+     arrowNO = typo3/sysext/statictemplates/media/bullets/arrow_no.gif
+     arrowACT = typo3/sysext/statictemplates/media/bullets/arrow_act.gif
      arrowImgParams = hspace=4 align=top
    
      bottomContent = TEXT

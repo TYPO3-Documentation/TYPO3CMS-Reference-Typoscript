@@ -154,7 +154,7 @@ Example:
        20  = TEXT
        20 {
          text.field = title
-         fontFile = media/fonts/hatten.ttf
+         fontFile = fileadmin/fonts/hatten.ttf
          fontSize = 23
          fontColor = {$menuCol}
          offset = |*| 5,18 || 25,18

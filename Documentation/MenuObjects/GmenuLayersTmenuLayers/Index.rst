@@ -28,9 +28,9 @@ with modern browsers including Netscape, Microsoft Internet Explorer,
 Mozilla, Konqueror and Opera. You can cascade the menus as you like.
 
 **Note:** You must include the library
-"typo3/sysext/cms/tslib/media/scripts/gmenu\_layers.php" (for
+"typo3/sysext/statictemplates/media/scripts/gmenu\_layers.php" (for
 GMENU\_LAYERS) and/or
-"typo3/sysext/cms/tslib/media/scripts/tmenu\_layers.php" (for
+"typo3/sysext/statictemplates/media/scripts/tmenu\_layers.php" (for
 TMENU\_LAYERS) and you must also expand the xMENU\_LAYERS to the next
 for the menu to make sense (use the expAll-flag).
 
@@ -547,7 +547,7 @@ Example:
 
 ::
 
-   page.includeLibs.gmenu_layers = media/scripts/gmenu_layers.php
+   page.includeLibs.gmenu_layers = typo3/sysext/statictemplates/media/scripts/gmenu_layers.php
    page.10 = HMENU
    page.10.1 = GMENU_LAYERS
    page.10.1 {

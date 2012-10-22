@@ -192,9 +192,8 @@
          properties above depend on how you write your script to process data
          and put it in the database.
          
-         A very good example is to look at "media/scripts/guest\_submit.inc",
-         included from static\_template "plugin.tt\_guest" (Used for the
-         default guestbook feature)
+         A very good example is to look at "pi/guest\_submit.php",
+         included in the extension "tt\_guest" (used for a guestbook feature)
    
    Default
 

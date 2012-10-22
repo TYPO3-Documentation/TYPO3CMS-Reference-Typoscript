@@ -1515,7 +1515,7 @@ value is "imported" from the field called "header" from the $cObj
          
             page = PAGE
             page.typeNum=0
-            includeLibs.something = media/scripts/example_callfunction.php
+            includeLibs.something = typo3/sysext/statictemplates/media/scripts/example_callfunction.php
             
             page.10 = TEXT
             page.10 {

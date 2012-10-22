@@ -28,7 +28,7 @@ An important thing to know is that if you call a method in a class
 (which is of course instantiated as an object) the internal variable
 'cObj' of that class is set with a  *reference* to the parent cObj.
 See the file
-typo3/sysext/cms/tslib/media/scripts/example\_callfunction.php for an
+typo3/sysext/statictemplates/media/scripts/example\_callfunction.php for an
 example of how this may be useful for you. Basically it offers you an
 API of functions which are more or less relevant for you. Refer to the
 appendix "PHP include scripts" at the end of this document.
@@ -74,13 +74,13 @@ outside the main page-rendering.
          
          This TypoScript will display all content element headers of a page in
          reversed order. Please take a look at
-         typo3/sysext/cms/tslib/media/scripts/example\_callfunction.php!
+         typo3/sysext/statictemplates/media/scripts/example\_callfunction.php!
          
          ::
          
             page = PAGE
             page.typeNum=0
-            includeLibs.something = typo3/sysext/cms/tslib/media/scripts/example_callfunction.php
+            includeLibs.something = typo3/sysext/statictemplates/media/scripts/example_callfunction.php
             
             page.30 = USER
             page.30 {
