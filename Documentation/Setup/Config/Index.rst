@@ -18,8 +18,8 @@
 "CONFIG"
 ^^^^^^^^
 
-In typo3/sysext/cms/tslib/ this is known as
-$GLOBALS['TSFE']->config['config'], thus the property "debug" below is
+In typo3/sysext/frontend/Classes/ (typo3/sysext/cms/tslib/) this is known
+as $GLOBALS['TSFE']->config['config'], thus the property "debug" below is
 accessible as $GLOBALS['TSFE']->config['config']['debug'].
 
 .. ### BEGIN~OF~TABLE ###
@@ -177,7 +177,8 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          
          The result is used just like MP\_defaults are used to find MP-vars if
          none has been specified prior to the call to
-         t3lib\_tstemplate::linkData().
+         TYPO3\CMS\Core\TypoScript\TemplateService::linkData()
+         (t3lib\_tstemplate::linkData()).
          
          You can specify "root" as a special keyword in the list of IDs and
          that will create a map-tree for the whole site (but this may be VERY
@@ -922,6 +923,10 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          
          ::
          
+            $GLOBALS['TYPO3_CONF_VARS']['FE']['jsCompressHandler'] = TYPO3\CMS\Core\Extension\ExtensionManager::extPath($_EXTKEY) . 'Classes/class.tx_myext_jsCompressHandler.php:tx_myext_jsCompressHandler->compressJs';
+
+            or before TYPO3 6.0:
+
             $GLOBALS['TYPO3_CONF_VARS']['FE']['jsCompressHandler'] = t3lib_extMgm::extPath($_EXTKEY) . 'Classes/class.tx_myext_jsCompressHandler.php:tx_myext_jsCompressHandler->compressJs';
    
    Default
@@ -992,6 +997,10 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          
          ::
          
+            $GLOBALS['TYPO3_CONF_VARS']['FE']['cssCompressHandler'] = TYPO3\CMS\Core\Extension\ExtensionManager::extPath($_EXTKEY) . 'Classes/class.tx_myext_cssCompressHandler.php:tx_myext_cssCompressHandler->compressCss';
+
+            or before TYPO3 6.0:
+
             $GLOBALS['TYPO3_CONF_VARS']['FE']['cssCompressHandler'] = t3lib_extMgm::extPath($_EXTKEY) . 'Classes/class.tx_myext_cssCompressHandler.php:tx_myext_cssCompressHandler->compressCss';
    
    Default
@@ -1058,6 +1067,10 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          
          ::
          
+            $GLOBALS['TYPO3_CONF_VARS']['FE']['jsConcatenateHandler'] = TYPO3\CMS\Core\Extension\ExtensionManager::extPath($_EXTKEY) . 'Classes/class.tx_myext_jsConcatenateHandler.php:tx_myext_jsConcatenateHandler->concatenateJs';
+
+            or before TYPO3 6.0:
+
             $GLOBALS['TYPO3_CONF_VARS']['FE']['jsConcatenateHandler'] = t3lib_extMgm::extPath($_EXTKEY) . 'Classes/class.tx_myext_jsConcatenateHandler.php:tx_myext_jsConcatenateHandler->concatenateJs';
    
    Default
@@ -1089,6 +1102,10 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          
          ::
          
+            $GLOBALS['TYPO3_CONF_VARS']['FE']['cssConcatenateHandler'] = TYPO3\CMS\Core\Extension\ExtensionManager::extPath($_EXTKEY) . 'Classes/class.tx_myext_cssConcatenateHandler.php:tx_myext_cssConcatenateHandler->concatenateCss';
+
+            or before TYPO3 6.0:
+
             $GLOBALS['TYPO3_CONF_VARS']['FE']['cssConcatenateHandler'] = t3lib_extMgm::extPath($_EXTKEY) . 'Classes/class.tx_myext_cssConcatenateHandler.php:tx_myext_cssConcatenateHandler->concatenateCss';
    
    Default
@@ -1210,18 +1227,25 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          
          Remember not to output anything from such an included script.  **All
          content must be set into $TSFE->content.** Take a look at
-         typo3/sysext/cms/tslib/pagegen.php
+         typo3/sysext/cms/tslib/pagegen.php.
          
          **NOTE:** This option is ignored if
-         
+
          ::
-         
+
+            ['FE']['noPHPscriptInclude'] => 1;
+
+         is set in LocalConfiguration.php or respectively
+
+         ::
+
             $TYPO3_CONF_VARS['FE']['noPHPscriptInclude'] = 1;
-         
+
          is set in localconf.php.
-   
+
    Default
-         typo3/sysext/cms/tslib/pagegen.php
+         typo3/sysext/frontend/Classes/Page/PageGenerator.php
+         (typo3/sysext/cms/tslib/class.tslib\_pagegen.php)
 
 
 .. container:: table-row
@@ -1663,7 +1687,8 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          
          If this property is set, images are  **not** allowed to be scaled up
          in size. This parameter clears the $this->mayScaleUp var of the class
-         t3lib\_stdgraphics (often "gifbuilder").
+         TYPO3\CMS\Core\Imaging\GraphicalFunctions (t3lib\_stdgraphics, often
+         referred to as "gifbuilder").
    
    Default
 
@@ -2234,8 +2259,9 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          string
    
    Description
-         If set TYPO3 makes all links in another way than usual. This can be
-         used with  **Apache compiled with mod\_rewrite and configured in
+         If set TYPO3 makes all links in another way than usual. This
+         affects all sites in the database. This option can be used
+         with  **Apache compiled with mod\_rewrite and configured in
          httpd.conf for use of this in the ".htaccess"-files.**
          
          Include this in the .htaccess file
@@ -2248,8 +2274,8 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          This means that any "\*.html"-documents should be handled by
          index.php.
          
-         Now if is done, TYPO3 will interpret the url of the html-document like
-         this:
+         Now if this is done, TYPO3 will interpret the url of the html-document
+         like this:
          
          [title].[id].[type].html
          
@@ -2259,7 +2285,7 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          
          **Example:**
          
-         TYPO3 will interpret this as page with uid=23 and type=1 :
+         TYPO3 will interpret this as page with uid=23 and type=1:
          
          ::
          
@@ -2272,7 +2298,7 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          
             start.html
          
-         **Alternative option (PATH\_INFO):**
+         **Alternative value (PATH\_INFO):**
          
          Instead of using the rewrite-module in apache (eg. if you're running
          Windows!) you can use the PATH\_INFO variable from PHP.
@@ -2289,13 +2315,10 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
             config.simulateStaticDocuments = PATH_INFO
    
    Default
-         default is defined by a configuration option in localconf.php. It's
-         
-         $TYPO3\_CONF\_VARS['FE']['simulateStaticDocuments'] = 1;
-         
-         This affects all sites in the database.
-         
-         You can also set this value to the string "PATH\_INFO"
+         The default is defined by the configuration option
+         ['FE']['simulateStaticDocuments'] in LocalConfiguration.php, which
+         defaults to 1 ($TYPO3\_CONF\_VARS['FE']['simulateStaticDocuments'] = 1
+         in localconf.php)
 
 
 .. container:: table-row
@@ -2525,7 +2548,8 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          string
    
    Description
-         Sets the template for page renderer class (t3lib\_PageRenderer).
+         Sets the template for page renderer class
+         (TYPO3\CMS\Core\Page\PageRenderer t3lib\_PageRenderer).
          
          **Example:**
          
@@ -3071,7 +3095,7 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    
    Description
          If set and REMOTE\_ADDR matches one of the listed IP-numbers (Wild-
-         card, \*, allowed) then a link to the typo3/ login scrip with redirect
+         card, \*, allowed) then a link to the typo3/ login script with redirect
          pointing back to the page is shown.
          
          **NOTE:** beLoginLinkIPList\_login and/or beLoginLinkIPList\_logout
@@ -3224,9 +3248,10 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          
          \- Minimized values not allowed: Must do this: selected="selected"
          
-         Please see the class t3lib\_parsehtml for details.
-         
-         You can enable this function by the following values:
+         Please see the class TYPO3\CMS\Core\Html\HtmlParser
+         (t3lib\_parsehtml) for details.
+
+         You can enable this function with the following values:
          
          **all** = the content is always processed before it may be stored in
          cache.

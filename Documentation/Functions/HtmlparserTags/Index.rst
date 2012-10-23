@@ -202,13 +202,15 @@ HTMLparser\_tags
    Description
          If the first char is a "#" character (anchor of fx. <a> tags) this
          will prefix either a relative or absolute path.
-         
+
          If the value is "1" you will get the absolute path
-         (t3lib\_div::getIndpEnv('TYPO3\_REQUEST\_URL'))
-         
+         (TYPO3\CMS\Core\Utility\GeneralUtility::getIndpEnv('TYPO3\_REQUEST\_URL')
+         or t3lib\_div::getIndpEnv('TYPO3\_REQUEST\_URL')).
+
          If the value is "2" you will get the relative path (stripping of
-         t3lib\_div::getIndpEnv('TYPO3\_SITE\_URL'))
-         
+         TYPO3\CMS\Core\Utility\GeneralUtility::getIndpEnv('TYPO3\_SITE\_URL')
+         or t3lib\_div::getIndpEnv('TYPO3\_SITE\_URL')).
+
          **Example:**
          
          ::
@@ -226,7 +228,7 @@ HTMLparser\_tags
    
    Description
          If the value of the attribute seems to be a relative URL (no scheme
-         like "http" and no "/" as first char) then that value of this property
+         like "http" and no "/" as first char) then the value of this property
          will be prefixed the attribute.
          
          **Example:**

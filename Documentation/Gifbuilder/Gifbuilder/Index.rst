@@ -133,8 +133,8 @@ match the basename of the main font face with an alternative font.
          off. This is done to make matching easier and avoid problems when font
          files might move to other locations in extensions etc.
          
-         So if you use the font file "EXT:myext/fonts/arial.ttf" or
-         "t3lib/fonts/arial.ttf" both of them will match with this
+         So if you use the font file "EXT:myext/fonts/vera.ttf" or
+         "t3lib/fonts/vera.ttf" both of them will match with this
          configuration.
          
          **The key:**
@@ -153,7 +153,7 @@ match the basename of the main font face with an alternative font.
          ::
          
             _GIFBUILDER.charRangeMap {
-              123 = arial.ttf
+              123 = vera.ttf
             ....
    
    Default

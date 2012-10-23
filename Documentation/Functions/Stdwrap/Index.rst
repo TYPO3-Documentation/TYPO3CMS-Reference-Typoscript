@@ -33,7 +33,8 @@ returned.
 
 stdWrap properties are executed in the order they appear in the table
 below. If you want to study this further please refer to
-typo3/sysext/cms/tslib/class.tslib\_content.php, where you will find
+typo3/sysext/frontend/Classes/ContentObject/ContentObjectRenderer.php
+(typo3/sysext/cms/tslib/class.tslib\_content.php), where you will find
 the function stdWrap() and the array $stdWrapOrder, which represents
 the exact order of execution.
 
@@ -751,7 +752,8 @@ value is "imported" from the field called "header" from the $cObj
          
          **.charset** : Can be set to the charset of the output string if you
          need to convert it to renderCharset. Default is to take the
-         intelligently guessed charset from t3lib\_cs.
+         intelligently guessed charset from
+         TYPO3\CMS\Core\Charset\CharsetConverter (t3lib\_cs).
          
          **.GMT** : If set, the PHP function gmstrftime() will be used instead
          of strftime().
@@ -1593,10 +1595,11 @@ value is "imported" from the field called "header" from the $cObj
          string
    
    Description
-         If not empty, then insert an icon linking to the typo3/alt\_doc.php
-         with some parameters to build and backend user edit form for certain
-         fields.
-         
+         If not empty, then insert an icon linking to
+         typo3/sysext/backend/Classes/Controller/EditDocumentController.php
+         (typo3/alt\_doc.php) with some parameters to build and backend user
+         edit form for certain fields.
+
          The value of this property is a list of fields from a table to edit.
          It's assumed that the current record of the cObj is the record to be
          edited.

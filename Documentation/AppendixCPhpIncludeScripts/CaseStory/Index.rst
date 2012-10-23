@@ -32,7 +32,9 @@ template:
    config.includeLibrary = fileadmin/scripts/include.inc
 
 The file  **include.inc** is now included (in
-typo3/sysext/cms/tslib/pagegen.php). In this case it looks like this:
+typo3/sysext/frontend/Classes/Page/PageGenerator.php, in older
+versions in typo3/sysext/cms/tslib/class.tslib\_pagegen.php). In this
+case it looks like this:
 
 file: fileadmin/scripts/include.inc
 

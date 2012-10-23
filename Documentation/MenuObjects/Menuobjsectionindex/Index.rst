@@ -98,9 +98,11 @@ tt\_content are mapped to the same fields in a pages-record.
 non-existing fields in the page-record
 
 \- a new field, "sectionIndex\_uid" is introduced in the page record
-which is detected by the function t3lib\_tstemplate->linkData(). If
-this field is present in a page record, the linkData()-function will
-prepend a hash-mark and the number of the field.
+which is detected by the function
+TYPO3\CMS\Core\TypoScript\TemplateService->linkData()
+(t3lib\_tstemplate->linkData()). If  this field is present in a page
+record, the linkData()-function will prepend a hash-mark and the
+number of the field.
 
 **Note:**
 

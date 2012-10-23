@@ -581,8 +581,10 @@ fe\_adminLib.inc properties
          **Advice:**
          
          If you want to generate authCodes compatible with the standard
-         authCodes (used by the direct mailer by t3lib\_div::stdAuthCode()),
-         please set $TYPO3\_CONF\_VARS['SYS']['encryptionKey'] to a unique and
+         authCodes (used by the direct mailer by
+         TYPO3\CMS\Core\Utility\GeneralUtility::stdAuthCode() or
+         t3lib\_div::stdAuthCode()), please set
+         $TYPO3\_CONF\_VARS['SYS']['encryptionKey'] to a unique and
          secret key (like you should in any case) and add "uid" as
          authcodeField ONLY. This is secure enough.
    
@@ -1056,7 +1058,8 @@ These are subparts that should exist in any template.
 
 All email subparts can be sent as HTML. This is done if the first and
 last word of the templates is <html> and </html> respectively. In
-addition the t3lib\_htmlmail class must be loaded.
+addition the Swiftmailer (in older versions of TYPO3 the t3lib\_htmlmail
+class) must be loaded.
 
 .. ### BEGIN~OF~TABLE ###
 
@@ -1278,7 +1281,9 @@ Common markers
          ###THIS\_URL###
    
    Description
-         Set to the current script url as obtained by t3lib\_div::getThisUrl().
+         Set to the current script url as obtained by
+         TYPO3\CMS\Core\Utility\GeneralUtility::getThisUrl()
+         (t3lib\_div::getThisUrl()).
 
 
 .. container:: table-row
@@ -1522,13 +1527,13 @@ Uploading files
 
 fe\_adminLib is able to receive files in the forms. However there
 currently are heavy restrictions on how that is handled. Ideally the
-proces would be handled by the t3lib\_tcemain class used in the
-backend. In fact this could have been deployed but is not at this
-stage. The good thing about tcemain.php is that it perfectly handles
-the copying/deletion of files which goes into a certain field and even
-handles it independent of the storing method be it a list of filenames
-or use MM-relations to records (see tables.php section in 'Inside
-TYPO3').
+proces would be handled by the TYPO3\CMS\Core\DataHandler\DataHandler
+(t3lib\_tcemain) class used in the backend. In fact this could have
+been deployed but is not at this stage. The good thing about
+DataHandler.php is that it perfectly handles the copying/deletion of
+files which goes into a certain field and even handles it independent
+of the storing method be it a list of filenames or use MM-relations to
+records (see tables.php section in 'Inside TYPO3').
 
 This is how files are handled by fe\_adminLib and the restrictions
 that apply currently:

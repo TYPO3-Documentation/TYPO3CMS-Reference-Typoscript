@@ -1888,7 +1888,8 @@ distribution) for details.
 
 Caring about this means that you would get values like HTTP\_HOST by
 getenv() and you would retrieve GET/POST values with
-t3lib\_div::\_GP(). Finally a lot of values from the TSFE object are
+TYPO3\CMS\Core\Utility\GeneralUtility::\_GP() (t3lib\_div::\_GP()).
+Finally a lot of values from the TSFE object are
 useful. In order to get those values for comparison with "globalVar"
 and "globalString" conditions, you prefix that variable's name with
 either "IENV:"/"ENV:" , "GP:", "TSFE:" or "LIT:" respectively.Still
@@ -1898,9 +1899,10 @@ returned as the value (without being divided by "\|" or anything)
 
 **Notice:** Using the "IENV:" prefix is highly recommended to get
 server/environment variables which are system-independent. Basically
-this will get the value using t3lib\_div::getIndpEnv(). With "ENV:"
-you get the raw output from getenv() which is NOT always the same on
-all systems!
+this will get the value using
+TYPO3\CMS\Core\Utility\GeneralUtility::getIndpEnv()
+(t3lib\_div::getIndpEnv()). With "ENV:" you get the raw output from
+getenv() which is NOT always the same on all systems!
 
 
 Examples:
@@ -1942,7 +1944,8 @@ Function result is evaluated as true/false.
 Example:
 ~~~~~~~~
 
-Put this function in your localconf.php file:
+Put this function in your AdditionalConfiguration.php
+(localconf.php) file:
 
 ::
 

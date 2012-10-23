@@ -942,7 +942,8 @@ Data types reference
          
          **getenv:** Value from environment variables
          
-         **getIndpEnv:** Value from t3lib\_div::getIndpEnv()
+         **getIndpEnv:** Value from
+         TYPO3\CMS\Core\Utility\GeneralUtility::getIndpEnv() (t3lib\_div::getIndpEnv())
          
          **DB:** Value from database, syntax is [table name] : [uid] : [field].
          Any record from a table in TCA can be selected here. Only marked-

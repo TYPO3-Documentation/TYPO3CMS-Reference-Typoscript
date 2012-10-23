@@ -185,12 +185,12 @@
    Description
          Include-script to be used for processing of incoming data to the
          table. The script is included from a function in the class
-         tslib\_fetce
-         
-         This is the really important option, because whether or not you are
+         tslib\_feTCE.
+
+         This is a really important option, because whether or not you are
          going to utilize the "cleaning"/"authorization" features of the
-         properties above depend on how you write your script to process data
-         and put it in the database.
+         properties above depends on how you write your script to process
+         data and put it in the database.
          
          A very good example is to look at "pi/guest\_submit.php",
          included in the extension "tt\_guest" (used for a guestbook feature)

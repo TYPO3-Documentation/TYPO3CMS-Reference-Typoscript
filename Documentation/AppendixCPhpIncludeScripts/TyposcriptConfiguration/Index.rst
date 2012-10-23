@@ -29,9 +29,9 @@ This includes a PHP-script. You should not name the script ".php" but
 rather ".inc" as it's meant to be included and not executed on it's
 own.
 
-NOTE: This option is ignored if
-$TYPO3\_CONF\_VARS['FE']['noPHPscriptInclude']=1; is set in
-localconf.php.
+NOTE: This option is ignored if ['FE']['noPHPscriptInclude'] => 1;
+is set in LocalConfiguration.php
+($TYPO3\_CONF\_VARS['FE']['noPHPscriptInclude'] = 1; in localconf.php).
 
 .. ### BEGIN~OF~TABLE ###
 
@@ -158,10 +158,11 @@ PHP\_SCRIPT\_INT
          is included, which initializes all the classes, objects and so. What
          you gain here is an environment for your script almost exactly the
          same as PHP\_SCRIPT because your script is called from inside a class
-         tslib\_cObj object. You can work with all functions of the tslib
-         \_cObj-class. But still all the "static" page content is only
-         generated once, cached and only your script is dynamically rendered.
-         
+         ContentObjectRenderer (tslib\_cObj) object. You can work with all
+         functions of the ContentObjectRenderer (tslib\_cObj) class. But still
+         all the "static" page content is only generated once, cached and only
+         your script is dynamically rendered.
+
          **Rules:**
          
          \- calls to $GLOBALS['TSFE']->set\_no\_cache()and

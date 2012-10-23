@@ -19,11 +19,13 @@ Including your script
 ^^^^^^^^^^^^^^^^^^^^^
 
 Your script is included by a function, PHP\_SCRIPT, inside the class
-"tslib\_cObj" in the "tslib\_content.php" script. Thereby your file is
-a part of this object (tslib\_cObj) and function. This is why you must
-return all content in the variable "$content" and any TypoScript-
-configuration is available from the array "$conf" (it may not be set
-at all though so check it with is\_array()!)
+"ContentObjectRenderer" (tslib\_cObj) in the
+typo3/sysext/frontend/Classes/ContentObject/ContentObjectRenderer.php
+(tslib\_content.php) script. Thereby your file is a part of this object
+(ContentObjectRenderer, respectively tslib\_cObj) and function. This is
+why you must return all content in the variable "$content" and any
+TypoScript-configuration is available from the array "$conf" (it may
+not be set at all though so check it with is\_array()!)
 
 
 $conf
@@ -114,7 +116,8 @@ Internal Vars in the main frontend object, TSFE (TypoScript Front End)
 
 There are some variables in the global object, TSFE, you might need to
 know about. These ARE ALL READ-ONLY!! (Read: Don't change them!) See
-the class tslib\_fe for the full descriptions.
+the class TypoScriptFrontendController (tslib\_fe) for the full
+descriptions.
 
 If you for instance want to access the variable "id", you can do so by
 writing: $GLOBALS['TSFE']->id
@@ -233,7 +236,9 @@ writing: $GLOBALS['TSFE']->id
          object
    
    Description
-         The object with pagefunctions (object) See t3lib/page.php
+         The object with pagefunctions (object) See
+         typo3/sysext/frontend/Classes/Page/PageRepository.php
+         (t3lib/class.t3lib_page.php).
    
    Default
 

@@ -21,12 +21,13 @@ media/scripts/ in general
 The directory typo3/sysext/statictemplates/media/scripts (in older
 versions typo3/sysext/cms/tslib/media/scripts or just media/scripts)
 primarily contains PHP scripts which are meant as 'external modules'
-as opposed to features included in the typo3/sysext/cms/tslib/
-libraries. They are distributed with TYPO3 as part of the sysext
-statictemplates and form a basis for externally developed frontend
-functionality. So for most of these scripts, be inspired by them to
-write your own code. Notice the word 'most'; because some are written
-long time ago and do not represent the state-of-the-day to do it.
+as opposed to features included in the typo3/sysext/frontend/Classes/
+(typo3/sysext/cms/tslib/) libraries. They are distributed with TYPO3
+as part of the sysext statictemplates and form a basis for externally
+developed frontend functionality. So for most of these scripts, be
+inspired by them to write your own code. Notice the word 'most';
+because some are written long time ago and do not represent the
+state-of-the-day to do it.
 
 
 About 'example templates'

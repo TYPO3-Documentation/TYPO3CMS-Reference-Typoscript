@@ -22,7 +22,8 @@ Returns an image tag with the image file defined in the property
 "file" and processed according to the properties set.
 
 Defined as PHP function cImage() in
-/typo3/sysext/cms/tslib/class.tslib\_content.php.
+typo3/sysext/frontend/Classes/ContentObject/ContentObjectRenderer.php
+(/typo3/sysext/cms/tslib/class.tslib\_content.php).
 
 The array $GLOBALS['TSFE']->lastImageInfo is set with the info-array
 of the returning image (if any) and contains width, height and so on.

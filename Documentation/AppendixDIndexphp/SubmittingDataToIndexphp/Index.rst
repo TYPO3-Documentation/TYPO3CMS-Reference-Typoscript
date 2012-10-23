@@ -25,8 +25,9 @@ standard features included in the script:
 Login/Logout:
 """""""""""""
 
-Detected by class "t3lib\_userauth" looking for the var "logintype".
-If this is set, authentication is done.
+Detected by class "TYPO3\CMS\Core\Authentication\AbstractUserAuthentication"
+(t3lib\_userauth) looking for the var "logintype". If this is set,
+authentication is done.
 
 Input may be of both GET and POST method.
 

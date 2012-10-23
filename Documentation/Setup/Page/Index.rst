@@ -37,8 +37,9 @@ frames. With no-frames sites type is normally zero.
 Another good habit is to use "page" as the top-level object name for
 the content-page on a website.
 
-Most of this codes is executed in the PHP-script
-*typo3/sysext/cms/tslib/class.tslib\_pagegen.php.*
+Most of this code is executed in the PHP-script
+*typo3/sysext/frontend/Classes/Page/PageGenerator.php*
+(typo3/sysext/cms/tslib/class.tslib\_pagegen.php).
 
 .. ### BEGIN~OF~TABLE ###
 
