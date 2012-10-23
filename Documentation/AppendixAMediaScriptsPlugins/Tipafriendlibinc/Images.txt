@@ -1,6 +1,6 @@
 ﻿.. |img-13|     image:: ../../Images/manual_html_m44349614.png
-   :height: 400
-   :width: 535
+.. :height: 400
+.. :width: 535
 .. :align: left
 .. :border: 0
 .. :name: Grafik30
