@@ -18,6 +18,9 @@
 "FE\_TABLE"
 ^^^^^^^^^^^
 
+**Note** : These options were deprecated since TYPO3 4.6 and have
+been removed in TYPO3 6.0.
+
 .. ### BEGIN~OF~TABLE ###
 
 .. container:: table-row
