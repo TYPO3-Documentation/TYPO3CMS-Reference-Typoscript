@@ -1650,8 +1650,11 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          boolean
    
    Description
-         Include t3lib/class.t3lib\_htmlmail.php
-   
+         Include t3lib/class.t3lib\_htmlmail.php.
+
+         **Note** : This option was deprecated since TYPO3 4.5 and has
+         been removed in TYPO3 6.0.
+
    Default
 
 
@@ -2689,11 +2692,13 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          
          etc...
          
-         Value must correspond with the key used for backend system language if
-         there is one. See inside config\_default.php or look at the
-         translation page on TYPO3.org for the official 2-byte key for a given
-         language. Notice that selecting the official key is important if you
-         want labels in the correct language from "locallang" files.
+         The value must correspond to the key used for the backend system language if
+         there is one. See inside typo3/sysext/core/Classes/Localization/Locales.php
+         (in TYPO3 4.7 and 4.6 in t3lib/l10n/class.t3lib_l10n_locales.php and until
+         TYPO3 4.5 in t3lib/config\_default.php) or look at the translation page
+         on typo3.org for the official 2-byte key for a given language. Notice that
+         selecting the official key is important if you want to get labels in the
+         correct language from "locallang" files.
          
          If the language you need is not yet a system language in TYPO3 you can
          use an artificial string of your choice and provide values for it via
