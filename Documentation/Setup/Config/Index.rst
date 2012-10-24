@@ -1034,7 +1034,7 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          
             $GLOBALS['TYPO3_CONF_VARS']['FE']['concatenateHandler'] = t3lib_extMgm::extPath($_EXTKEY) . 'Classes/class.tx_myext_concatenateHandler.php:tx_myext_concatenateHandler->concatenateFiles';
          
-         **Note:** This property is deprecated and will be removed with TYPO3
+         **Note:** This property was deprecated and has been removed with TYPO3
          6.0! Use config.concatenateJs and config.concatenateCss instead.
    
    Default
