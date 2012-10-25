@@ -19,7 +19,7 @@ TypoScript Reference
       doc_core_tsref
 
 :Version:
-      4.7.0
+      4.7.0-dev (upcoming 6.0)
 
 :Language:
       en
