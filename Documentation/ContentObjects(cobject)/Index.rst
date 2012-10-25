@@ -20,6 +20,7 @@ Content Objects (cObject)
    Text/Index
    CobjArray(coaCoaInt)/Index
    File/Index
+   Files/Index
    Image/Index
    ImgResource/Index
    Cleargif/Index

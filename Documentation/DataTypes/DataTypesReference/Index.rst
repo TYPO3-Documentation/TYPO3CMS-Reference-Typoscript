@@ -926,6 +926,22 @@ Data types reference
                 deleted records does not return a value here.
 
           - :dt:
+                **= file : 17 : size**
+
+                *(Since TYPO3 6.0) get the file size of the file with the
+                sys\_file UID 17.*
+
+            :dd:
+                **file:** syntax is [uid] : [property]. Retrieves a property from a
+                file object (FAL) by identifying it through its sys\_file UID. Note
+                that during execution of the FILES cObject, you can also reference the
+                current file with "current" as UID like "file : current : size".
+
+                These properties are available:
+
+                name, size, sha1, extension, mimetype, contents, publicUrl, localPath
+
+          - :dt:
                 **= fullRootLine : -1, title**
 
                 *get the title of the page right before the start of the current
@@ -952,12 +968,12 @@ Data types reference
                 above.
 
           - :dt:
-                **= LLL:EXT:css\_styled\_content/pi1/locallang.x:login.logout**
+                **= LLL:EXT:css\_styled\_content/pi1/locallang.xlf:login.logout**
 
                 *get localized label for logout button*
 
             :dd:
-                **LLL:** Reference to a locallang (php or xml) label. Reference
+                **LLL:** Reference to a locallang (xlf, xml or php) label. Reference
                 consists of [fileref]:[labelkey]
 
           - :dt:

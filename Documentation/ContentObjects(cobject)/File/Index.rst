@@ -16,6 +16,9 @@ It is defined as PHP function fileResource() in
 typo3/sysext/frontend/Classes/ContentObject/ContentObjectRenderer.php
 (/typo3/sysext/cms/tslib/class.tslib\_content.php).
 
+**Note** : Do not mix this up with the cObject FILES; both are
+different cObjects.
+
 
 .. ### BEGIN~OF~TABLE ###
 
