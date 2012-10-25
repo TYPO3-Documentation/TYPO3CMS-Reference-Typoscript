@@ -1,18 +1,9 @@
-﻿
-
 .. ==================================================
 .. FOR YOUR INFORMATION
 .. --------------------------------------------------
 .. -*- coding: utf-8 -*- with BOM.
 
-.. ==================================================
-.. DEFINE SOME TEXTROLES
-.. --------------------------------------------------
-.. role::   underline
-.. role::   typoscript(code)
-.. role::   ts(typoscript)
-   :class:  typoscript
-.. role::   php(code)
+.. include:: ../../Includes.txt
 
 
 replacement
@@ -29,13 +20,13 @@ of actions and thus allows multiple replacements at once.
 
    Property
          Property:
-   
+
    Data type
          Data type:
-   
+
    Description
          Description:
-   
+
    Default
          Default:
 
@@ -44,13 +35,13 @@ of actions and thus allows multiple replacements at once.
 
    Property
          search
-   
+
    Data type
          string /stdWrap
-   
+
    Description
          Defines the string that shall be replaced.
-   
+
    Default
 
 
@@ -58,13 +49,13 @@ of actions and thus allows multiple replacements at once.
 
    Property
          replace
-   
+
    Data type
          string /stdWrap
-   
+
    Description
          Defines the string to be used for the replacement.
-   
+
    Default
 
 
@@ -72,24 +63,22 @@ of actions and thus allows multiple replacements at once.
 
    Property
          useRegExp
-   
+
    Data type
          boolean /stdWrap
-   
+
    Description
          Defines that the search and replace strings are considered as PCRE
          regular expressions.
-         
-         **Example:**
-         
-         ::
-         
+
+         **Example:** ::
+
             10 {
               search = #(a )CAT#i
               replace = \1cat
               useRegExp = 1
             }
-   
+
    Default
          0
 

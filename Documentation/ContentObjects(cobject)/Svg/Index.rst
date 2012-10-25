@@ -1,18 +1,9 @@
-﻿
-
 .. ==================================================
 .. FOR YOUR INFORMATION
 .. --------------------------------------------------
 .. -*- coding: utf-8 -*- with BOM.
 
-.. ==================================================
-.. DEFINE SOME TEXTROLES
-.. --------------------------------------------------
-.. role::   underline
-.. role::   typoscript(code)
-.. role::   ts(typoscript)
-   :class:  typoscript
-.. role::   php(code)
+.. include:: ../../Includes.txt
 
 
 SVG
@@ -29,13 +20,13 @@ do not have native SVG support, so that it also works in e.g. IE
 
    Property
          Property:
-   
+
    Data type
          Data type:
-   
+
    Description
          Description:
-   
+
    Default
          Default:
 
@@ -44,13 +35,13 @@ do not have native SVG support, so that it also works in e.g. IE
 
    Property
          width
-   
+
    Data type
          integer /stdWrap
-   
+
    Description
          Width of the SVG.
-   
+
    Default
          600
 
@@ -59,13 +50,13 @@ do not have native SVG support, so that it also works in e.g. IE
 
    Property
          height
-   
+
    Data type
          integer /stdWrap
-   
+
    Description
          Height of the SVG.
-   
+
    Default
          400
 
@@ -74,19 +65,17 @@ do not have native SVG support, so that it also works in e.g. IE
 
    Property
          src
-   
+
    Data type
          file resource /stdWrap
-   
+
    Description
          SVG file resource.
-         
-         **Example:**
-         
-         ::
-         
+
+         **Example:** ::
+
             src = fileadmin/svg/tiger.svg
-   
+
    Default
 
 
@@ -94,15 +83,15 @@ do not have native SVG support, so that it also works in e.g. IE
 
    Property
          value
-   
+
    Data type
          XML /stdWrap
-   
+
    Description
          Raw XML data for the SVG.
-         
+
          Will be ignored, if "src" is defined.
-   
+
    Default
 
 
@@ -110,13 +99,13 @@ do not have native SVG support, so that it also works in e.g. IE
 
    Property
          noscript
-   
+
    Data type
          string/stdWrap
-   
+
    Description
          Output, if SVG output is not possible.
-   
+
    Default
 
 
@@ -124,13 +113,13 @@ do not have native SVG support, so that it also works in e.g. IE
 
    Property
          stdWrap
-   
+
    Data type
          ->stdWrap
-   
+
    Description
-   
-   
+
+
    Default
 
 

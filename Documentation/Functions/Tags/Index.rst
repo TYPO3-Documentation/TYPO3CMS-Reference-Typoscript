@@ -1,18 +1,9 @@
-﻿
-
 .. ==================================================
 .. FOR YOUR INFORMATION
 .. --------------------------------------------------
 .. -*- coding: utf-8 -*- with BOM.
 
-.. ==================================================
-.. DEFINE SOME TEXTROLES
-.. --------------------------------------------------
-.. role::   underline
-.. role::   typoscript(code)
-.. role::   ts(typoscript)
-   :class:  typoscript
-.. role::   php(code)
+.. include:: ../../Includes.txt
 
 
 tags
@@ -28,13 +19,13 @@ is used in conjunction with  *parseFunc* .
 
    Property
          Property:
-   
+
    Data type
          Data type:
-   
+
    Description
          Description:
-   
+
    Default
          Default:
 
@@ -43,52 +34,50 @@ is used in conjunction with  *parseFunc* .
 
    Property
          Array...
-   
+
    Data type
          cObject  *+stripNL*
-         
+
          *+ breakoutTypoTagContent*
-   
+
    Description
          Every entry in the  *Array...* corresponds to a tag, that will be
          parsed. The elements MUST be in lowercase.
-         
+
          Every entry must be set to a content-object.
-         
+
          "current" is set to the content of the tag, eg <TAG>content</TAG>:
          here "current" is set to "content".
-         
+
          **Parameters:**
-         
+
          Parameters of the tag is set in $cObj->parameters (key is lowercased):
-         
+
          <TAG COLOR="red">content</TAG>
-         
+
          => $cObj->parameters[color] = red
-         
+
          **Special added properties to the content-object:**
-         
+
          $cObj->parameters[allParams]: this is automatically set to the whole
          parameter-string of the tag, eg ' color="red"'
-         
+
          [cObject].stripNL: is a boolean option, which tells  *parseFunc* that
          NewLines before and after content of the tag should be stripped.
-         
+
          [cObject].breakoutTypoTagContent: is a boolean option, which tells
          parseFunc that this block of content is breaking up the nonTypoTag
          content and that the content after this must be re-wrapped.
-         
-         **Examples:**
-         
-         ::
-         
+
+         **Examples:** ::
+
             tags.bold = TEXT
             tags.bold {
               current = 1
               wrap = <B> | </B>
             }
             tags.bold.stripNL = 1
-   
+
    Default
 
 
@@ -116,26 +105,24 @@ links in text
 content of the tag.
 
 <PIC> lets us place an image in the text. The content of the tag
-should be the image-reference in "fileadmin/"
-
-::
+should be the image-reference in "fileadmin/" ::
 
        tags {
          link = TEXT
          link {
            current = 1
            typolink.extTarget = _blank
-           typolink.target={$cLinkTagTarget} 
+           typolink.target={$cLinkTagTarget}
            typolink.wrap = <B><FONT color=red>|</FONT></B>
            typolink.parameter.data = parameters : allParams
          }
-   
+
          typolist < tt_content.bullets.default.20
          typolist.trim = 1
          typolist.field >
          typolist.current = 1
-   
-         grafix = IMAGE 
+
+         grafix = IMAGE
          grafix {
            file = GIFBUILDER
            file {

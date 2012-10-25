@@ -1,18 +1,9 @@
-﻿
-
 .. ==================================================
 .. FOR YOUR INFORMATION
 .. --------------------------------------------------
 .. -*- coding: utf-8 -*- with BOM.
 
-.. ==================================================
-.. DEFINE SOME TEXTROLES
-.. --------------------------------------------------
-.. role::   underline
-.. role::   typoscript(code)
-.. role::   ts(typoscript)
-   :class:  typoscript
-.. role::   php(code)
+.. include:: ../../Includes.txt
 
 
 [menuObj].sectionIndex
@@ -53,9 +44,7 @@ Any positive integer and 0 will lead to a where clause containing
 "colPos=x" with x being the aforementioned integer. A negative value
 drops the filter "colPos=x" completely.
 
-**Example:**
-
-::
+**Example:** ::
 
    tt_content.menu.20.3.1.sectionIndex.useColPos = -1
 
@@ -69,9 +58,7 @@ record is used as the "base" for the menu-record. That means that any
 whole menu.
 
 But of course some fields from the tt\_content records are
-transferred. This is how it is mapped:
-
-::
+transferred. This is how it is mapped::
 
    $temp[$row[uid]]=$basePageRow;
    $temp[$row[uid]]['title']=$row['header'];

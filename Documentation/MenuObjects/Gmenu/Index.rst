@@ -1,18 +1,9 @@
-﻿
-
 .. ==================================================
 .. FOR YOUR INFORMATION
 .. --------------------------------------------------
 .. -*- coding: utf-8 -*- with BOM.
 
-.. ==================================================
-.. DEFINE SOME TEXTROLES
-.. --------------------------------------------------
-.. role::   underline
-.. role::   typoscript(code)
-.. role::   ts(typoscript)
-   :class:  typoscript
-.. role::   php(code)
+.. include:: ../../Includes.txt
 
 
 GMENU
@@ -27,13 +18,13 @@ graphical navigation, where each link is a separate gif-file.
 
    Property
          Property:
-   
+
    Data type
          Data type:
-   
+
    Description
          Description:
-   
+
    Default
          Default:
 
@@ -42,16 +33,16 @@ graphical navigation, where each link is a separate gif-file.
 
    Property
          RO
-   
+
    Data type
          Boolean
-   
+
    Description
          RollOver configuration enabled / disabled.
-         
+
          If this is true, RO becomes a GIFBUILDER-object defining the layout of
          the menu item when the mouse rolls over it
-   
+
    Default
          0
 
@@ -60,16 +51,16 @@ graphical navigation, where each link is a separate gif-file.
 
    Property
          expAll
-   
+
    Data type
          Boolean
-   
+
    Description
          If this is true, the menu will always show the menu on the level
          underneath the menu item. This corresponds to a situation where a user
          has clicked a menu item and the menu folds out the next level. This
          can enable that to happen on all items as default.
-   
+
    Default
 
 
@@ -77,14 +68,14 @@ graphical navigation, where each link is a separate gif-file.
 
    Property
          collapse
-   
+
    Data type
          Boolean
-   
+
    Description
          If set, "active" menu items that has expanded the next level on the
          menu will now collapse that menu again.
-   
+
    Default
 
 
@@ -92,13 +83,13 @@ graphical navigation, where each link is a separate gif-file.
 
    Property
          accessKey
-   
+
    Data type
          Boolean
-   
+
    Description
          If set access-keys are set on the menu-links
-   
+
    Default
 
 
@@ -106,14 +97,14 @@ graphical navigation, where each link is a separate gif-file.
 
    Property
          noBlur
-   
+
    Data type
          Boolean
-   
+
    Description
          Normally graphical links are "blurred" if the browser is MSIE.
          Blurring removes the ugly box around a clicked link.
-         
+
          If this property is set, the link is NOT blurred (browser-default)
          with "onFocus".
 
@@ -127,13 +118,13 @@ graphical navigation, where each link is a separate gif-file.
 
    Property
          target
-   
+
    Data type
          target
-   
+
    Description
          Target of the menu links
-   
+
    Default
          self
 
@@ -142,15 +133,15 @@ graphical navigation, where each link is a separate gif-file.
 
    Property
          forceTypeValue
-   
+
    Data type
          int
-   
+
    Description
          If set, the &type parameter of the link is forced to this value
          regardless of target. Overrides the global equivalent in 'config' if
          set.
-   
+
    Default
 
 
@@ -158,17 +149,15 @@ graphical navigation, where each link is a separate gif-file.
 
    Property
          stdWrap
-   
+
    Data type
          ->stdWrap
-   
+
    Description
          Wraps the whole item using stdWrap
-         
-         **Example:**
-         
-         ::
-         
+
+         **Example:** ::
+
             2 = TMENU
             2 {
               stdWrap.dataWrap = <ul class="{register :
@@ -177,7 +166,7 @@ graphical navigation, where each link is a separate gif-file.
                 ...
               }
             }
-   
+
    Default
 
 
@@ -185,13 +174,13 @@ graphical navigation, where each link is a separate gif-file.
 
    Property
          wrap
-   
+
    Data type
          wrap
-   
+
    Description
          Wraps only if there were items in the menu!
-   
+
    Default
 
 
@@ -199,23 +188,23 @@ graphical navigation, where each link is a separate gif-file.
 
    Property
          applyTotalH
-   
+
    Data type
          objNumsList (offset)
-   
+
    Description
          This adds the total height of the previously generated menu items to
          the offset of the GifBuilderObj's mentioned in this list.
-         
+
          **Example:**
-         
+
          This is useful it you want to create a menu with individual items but
          a common background image that extends to the whole area behind the
          menu. Then you should setup the background image in each GIFBUILDER-
          object and include the object-number in this list.
-         
+
          Look at the implementation in static\_template "styles.gmenu.bug"
-   
+
    Default
 
 
@@ -223,14 +212,14 @@ graphical navigation, where each link is a separate gif-file.
 
    Property
          applyTotalW
-   
+
    Data type
          objNumsList (offset)
-   
+
    Description
          This adds the total width of the previously generated menu items to
          the offset of the GifBuilderObj's mentioned in this list.
-   
+
    Default
 
 
@@ -238,13 +227,13 @@ graphical navigation, where each link is a separate gif-file.
 
    Property
          min
-   
+
    Data type
          x,y (calcInt)
-   
+
    Description
          Forces the menu as a whole to these minimum dimensions
-   
+
    Default
 
 
@@ -252,13 +241,13 @@ graphical navigation, where each link is a separate gif-file.
 
    Property
          max
-   
+
    Data type
          x,y (calcInt)
-   
+
    Description
          Forces the menu as a whole to these maximum dimensions
-   
+
    Default
 
 
@@ -266,14 +255,14 @@ graphical navigation, where each link is a separate gif-file.
 
    Property
          useLargestItemX
-   
+
    Data type
          boolean
-   
+
    Description
          If set, then the width of all menu items will be equal to the largest
          of them all.
-   
+
    Default
 
 
@@ -281,14 +270,14 @@ graphical navigation, where each link is a separate gif-file.
 
    Property
          useLargestItemY
-   
+
    Data type
          boolean
-   
+
    Description
          If set, then the height of all menu items will be equal to the largest
          of them all.
-   
+
    Default
 
 
@@ -296,17 +285,17 @@ graphical navigation, where each link is a separate gif-file.
 
    Property
          distributeX
-   
+
    Data type
          int+
-   
+
    Description
          If set, the total width of all the menu items will be equal to this
          number of pixels by adding/subtracting an equal amount of pixels to
          each menu items width.
-         
+
          Will overrule any setting for ".useLargestItemX"
-   
+
    Default
 
 
@@ -314,17 +303,17 @@ graphical navigation, where each link is a separate gif-file.
 
    Property
          distributeY
-   
+
    Data type
          int+
-   
+
    Description
          If set, the total height of all the menu items will be equal to this
          number of pixels by adding/subtracting an equal amount of pixels to
          each menu items height.
-         
+
          Will overrule any setting for ".useLargestItemY"
-   
+
    Default
 
 
@@ -332,16 +321,16 @@ graphical navigation, where each link is a separate gif-file.
 
    Property
          removeObjectsOfDummy
-   
+
    Data type
          objNumsList
-   
+
    Description
          If the menu is forced to a certain minimum dimension, this is a list
          of objects in the gifbuilder-object that is removed for this last
          item. This is important to do if the menu items has elements that
          should only be applied if the item is actually a menu item!!
-   
+
    Default
 
 
@@ -349,14 +338,14 @@ graphical navigation, where each link is a separate gif-file.
 
    Property
          disableAltText
-   
+
    Data type
          boolean
-   
+
    Description
          If set, the alt-parameter of the images are not set. You can do it
          manually by "imgParams" (see below)
-   
+
    Default
 
 
@@ -364,19 +353,19 @@ graphical navigation, where each link is a separate gif-file.
 
    Property
          IProcFunc
-   
+
    Data type
          function name
-   
+
    Description
          The internal array "I" is passed to this function and expected
          returned as well. Subsequent to this function call the menu item is
          compiled by implode()'ing the array $I[parts] in the passed array.
          Thus you may modify this if you need to.
-         
+
          See example in
          typo3/sysext/statictemplates/media/scripts/example\_itemArrayProcFunc.php
-   
+
    Default
 
 
@@ -384,30 +373,30 @@ graphical navigation, where each link is a separate gif-file.
 
    Property
          [Common Item States, see above]
-         
+
          \+ rollover version for all, except SPC
-   
+
    Data type
          ->GIFBUILDER
-         
+
          \+ Additional properties! See table below
-   
+
    Description
          This is the GIFBUILDER-options for each category of menu item that can
          be generated.
-         
+
          **Note:** For the GMENU series you can also define the RollOver
          configuration for the item states. This means that you define the
          GIFBUILDER object for the 'Active' state by ACT and the RollOver
          GIFBUILDER object for the 'Active' state by ACTRO.
-         
+
          This pattern goes for ALL the states except the SPC state.
-         
+
          **SPECIAL:**
-         
+
          The ->OptionSplit function is run on the whole GIFBUILDER-
          configuration before the items are generated.
-   
+
    Default
 
 
@@ -433,13 +422,13 @@ been for a long time.
 
    Property
          Property:
-   
+
    Data type
          Data type:
-   
+
    Description
          Description:
-   
+
    Default
          Default:
 
@@ -448,13 +437,13 @@ been for a long time.
 
    Property
          noLink
-   
+
    Data type
          boolean
-   
+
    Description
          If set, the item is NOT linked!
-   
+
    Default
 
 
@@ -462,13 +451,13 @@ been for a long time.
 
    Property
          imgParams
-   
+
    Data type
          params
-   
+
    Description
          Parameters for the <img>-tag
-   
+
    Default
 
 
@@ -476,13 +465,13 @@ been for a long time.
 
    Property
          altTarget
-   
+
    Data type
          string
-   
+
    Description
          Alternative target which overrides the target defined for the GMENU
-   
+
    Default
 
 
@@ -490,14 +479,14 @@ been for a long time.
 
    Property
          altImgResource
-   
+
    Data type
          imgResouce
-   
+
    Description
          Defines an alternative image to use. If an image returns here, it will
          override any GIFBUILDER configuration.
-   
+
    Default
 
 
@@ -505,13 +494,13 @@ been for a long time.
 
    Property
          ATagParams
-   
+
    Data type
          string /stdWrap
-   
+
    Description
          Additional parameters
-   
+
    Default
 
 
@@ -519,13 +508,13 @@ been for a long time.
 
    Property
          ATagTitle
-   
+
    Data type
          string /stdWrap
-   
+
    Description
          which defines the title attribute of the a-tag. (See TMENUITEM also)
-   
+
    Default
 
 
@@ -533,16 +522,16 @@ been for a long time.
 
    Property
          additionalParams
-   
+
    Data type
          string /stdWrap
-   
+
    Description
          Define parameters that are added to the end of the URL. This must be
          code ready to insert after the last parameter.
-         
+
          For details, see typolink->additionalParams
-   
+
    Default
 
 
@@ -550,13 +539,13 @@ been for a long time.
 
    Property
          wrap
-   
+
    Data type
          wrap
-   
+
    Description
          Wrap of the menu item.
-   
+
    Default
 
 
@@ -564,13 +553,13 @@ been for a long time.
 
    Property
          allWrap
-   
+
    Data type
          wrap /stdWrap
-   
+
    Description
          Wraps the whole item.
-   
+
    Default
 
 
@@ -578,13 +567,13 @@ been for a long time.
 
    Property
          wrapItemAndSub
-   
+
    Data type
          wrap /stdWrap
-   
+
    Description
          Wraps the whole item and any submenu concatenated to it.
-   
+
    Default
 
 
@@ -592,13 +581,13 @@ been for a long time.
 
    Property
          subst\_elementUid
-   
+
    Data type
          boolean
-   
+
    Description
          If set, "{elementUid}" is substituted with the item uid.
-   
+
    Default
 
 
@@ -606,13 +595,13 @@ been for a long time.
 
    Property
          allStdWrap
-   
+
    Data type
          ->stdWrap
-   
+
    Description
          stdWrap of the whole item
-   
+
    Default
 
 

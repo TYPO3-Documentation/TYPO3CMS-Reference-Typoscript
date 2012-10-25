@@ -1,18 +1,9 @@
-﻿
-
 .. ==================================================
 .. FOR YOUR INFORMATION
 .. --------------------------------------------------
 .. -*- coding: utf-8 -*- with BOM.
 
-.. ==================================================
-.. DEFINE SOME TEXTROLES
-.. --------------------------------------------------
-.. role::   underline
-.. role::   typoscript(code)
-.. role::   ts(typoscript)
-   :class:  typoscript
-.. role::   php(code)
+.. include:: ../../Includes.txt
 
 
 HRULER
@@ -27,13 +18,13 @@ divider.
 
    Property
          Property:
-   
+
    Data type
          Data type:
-   
+
    Description
          Description:
-   
+
    Default
          Default:
 
@@ -42,13 +33,13 @@ divider.
 
    Property
          lineThickness
-   
+
    Data type
          integer /stdWrap
-   
+
    Description
          Range: 1-50
-   
+
    Default
          1
 
@@ -57,13 +48,13 @@ divider.
 
    Property
          lineColor
-   
+
    Data type
          HTML-color /stdWrap
-   
+
    Description
          The color of the ruler.
-   
+
    Default
          black
 
@@ -72,13 +63,13 @@ divider.
 
    Property
          spaceLeft
-   
+
    Data type
          pixels /stdWrap
-   
+
    Description
          Space before the line (to the left).
-   
+
    Default
 
 
@@ -86,13 +77,13 @@ divider.
 
    Property
          spaceRight
-   
+
    Data type
          pixels /stdWrap
-   
+
    Description
          Space after the line (to the right).
-   
+
    Default
 
 
@@ -100,13 +91,13 @@ divider.
 
    Property
          tableWidth
-   
+
    Data type
          string /stdWrap
-   
+
    Description
          Width of the ruler ("width" attribute in a table).
-   
+
    Default
          99%
 
@@ -115,13 +106,13 @@ divider.
 
    Property
          stdWrap
-   
+
    Data type
          ->stdWrap
-   
+
    Description
-   
-   
+
+
    Default
 
 

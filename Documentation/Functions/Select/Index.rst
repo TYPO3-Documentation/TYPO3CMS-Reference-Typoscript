@@ -1,18 +1,9 @@
-﻿
-
 .. ==================================================
 .. FOR YOUR INFORMATION
 .. --------------------------------------------------
 .. -*- coding: utf-8 -*- with BOM.
 
-.. ==================================================
-.. DEFINE SOME TEXTROLES
-.. --------------------------------------------------
-.. role::   underline
-.. role::   typoscript(code)
-.. role::   ts(typoscript)
-   :class:  typoscript
-.. role::   php(code)
+.. include:: ../../Includes.txt
 
 
 select
@@ -41,13 +32,13 @@ Always secure input from outside, for example with intval.
 
    Property
          Property:
-   
+
    Data type
          Data type:
-   
+
    Description
          Description:
-   
+
    Default
          Default:
 
@@ -56,15 +47,15 @@ Always secure input from outside, for example with intval.
 
    Property
          uidInList
-   
+
    Data type
          Until TYPO3 4.5: *list of page\_id*
-         
+
          Since TYPO3 4.6: *list of page\_id* /stdWrap
-   
+
    Description
-   
-   
+
+
    Default
 
 
@@ -72,13 +63,13 @@ Always secure input from outside, for example with intval.
 
    Property
          pidInList
-   
+
    Data type
          *list of page\_id* /stdWrap
-   
+
    Description
-   
-   
+
+
    Default
          this
 
@@ -87,15 +78,15 @@ Always secure input from outside, for example with intval.
 
    Property
          recursive
-   
+
    Data type
          Until TYPO3 4.5:int
-         
+
          Since TYPO3 4.6: int /stdWrap
-   
+
    Description
          Recursive levels for the pidInList
-   
+
    Default
          0
 
@@ -104,15 +95,15 @@ Always secure input from outside, for example with intval.
 
    Property
          orderBy
-   
+
    Data type
          *SQL-orderBy*
-         
+
          /stdWrap
-   
+
    Description
          Without "order by"! E.g. "sorting, title"
-   
+
    Default
 
 
@@ -120,15 +111,15 @@ Always secure input from outside, for example with intval.
 
    Property
          groupBy
-   
+
    Data type
          *SQL-groupBy*
-         
+
          /stdWrap
-   
+
    Description
          Without "group by"! E.g. "CType"
-   
+
    Default
 
 
@@ -136,25 +127,25 @@ Always secure input from outside, for example with intval.
 
    Property
          max
-   
+
    Data type
          Until TYPO3 4.5: int
-         
+
          +calc
-         
+
          +"total"
-         
+
          Since TYPO3 4.6: int
-         
+
          +calc
-         
+
          +"total" /stdWrap
-   
+
    Description
          Max records
-         
+
          **Special keyword:** "total" is substituted with count(\*)
-   
+
    Default
 
 
@@ -162,25 +153,25 @@ Always secure input from outside, for example with intval.
 
    Property
          begin
-   
+
    Data type
          Until TYPO3 4.5: int
-         
+
          +calc
-         
+
          +"total"
-         
+
          Since TYPO3 4.6: int
-         
+
          +calc
-         
+
          +"total" /stdWrap
-   
+
    Description
          Begin with record number  *value*
-         
+
          **Special keyword:** "total" is substituted with count(\*)
-   
+
    Default
 
 
@@ -188,15 +179,15 @@ Always secure input from outside, for example with intval.
 
    Property
          where
-   
+
    Data type
          Until TYPO3 4.5:  *SQL-where*
-         
+
          Since TYPO3 4.6: *SQL-where* /stdWrap
-   
+
    Description
          Without "where"!, E.g. " (title LIKE '%SOMETHING%' AND NOT doktype) "
-   
+
    Default
 
 
@@ -204,13 +195,13 @@ Always secure input from outside, for example with intval.
 
    Property
          andWhere
-   
+
    Data type
          *SQL-where* /stdWrap
-   
+
    Description
          Without "AND"!, E.g. "NOT doktype".
-   
+
    Default
 
 
@@ -218,19 +209,19 @@ Always secure input from outside, for example with intval.
 
    Property
          languageField
-   
+
    Data type
          Until TYPO3 4.5: string
-         
+
          Since TYPO3 4.6: string /stdWrap
-   
+
    Description
          If set, this points to the field in the record which holds a reference
          to a record in sys\_language table. And if set, the records returned
          by the select-function will be selected only if the value of this
          field matches the $GLOBALS['TSFE']->sys\_language\_uid (which is set
          by the config.sys\_language\_uid option)
-   
+
    Default
 
 
@@ -238,20 +229,20 @@ Always secure input from outside, for example with intval.
 
    Property
          selectFields
-   
+
    Data type
          Until TYPO3 4.5: string
-         
+
          Since TYPO3 4.6: string /stdWrap
-   
+
    Description
          List of fields to select, or "count(\*)".
-         
+
          :code:`If the records need to be localized, please include the
          relevant localization-fields
          (uid,pid,languageField,transOrigPointerField). Otherwise the TYPO3
          internal localization will not succeed.`
-   
+
    Default
          \*
 
@@ -260,20 +251,20 @@ Always secure input from outside, for example with intval.
 
    Property
          join
-         
+
          leftjoin
-         
+
          rightjoin
-   
+
    Data type
          Until TYPO3 4.5: string
-         
+
          Since TYPO3 4.6: string /stdWrap
-   
+
    Description
          Enter tablename for JOIN , LEFT OUTER JOIN and RIGHT OUTER JOIN
          respectively.
-   
+
    Default
 
 
@@ -281,34 +272,32 @@ Always secure input from outside, for example with intval.
 
    Property
          markers
-   
+
    Data type
          array of markers
-   
+
    Description
          The markers defined in this section can be used, wrapped in the usual
          ###markername### way, in any other property of select. Each value is
          properly escaped and quoted to prevent SQL injection problems. This
          provides a way to safely use external data (e.g. database fields,
          GET/POST parameters) in a query.
-         
+
          <markername>.value (value)
-         
+
          Sets the value directly.
-         
+
          <markername>.commaSeparatedList (bool)
-         
+
          If set, the value is interpreted as a comma-separated list of values.
          Each value in the list is individually escaped and quoted.
-         
+
          (stdWrap properties ...)
-         
+
          All stdWrap properties can be used for each markername.
-         
-         **Example:**
-         
-         ::
-         
+
+         **Example:** ::
+
             page.60 = CONTENT
             page.60 {
               table = tt_content
@@ -323,7 +312,7 @@ Always secure input from outside, for example with intval.
                 }
               }
             }
-   
+
    Default
 
 

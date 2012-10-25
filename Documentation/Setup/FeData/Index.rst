@@ -1,18 +1,9 @@
-﻿
-
 .. ==================================================
 .. FOR YOUR INFORMATION
 .. --------------------------------------------------
 .. -*- coding: utf-8 -*- with BOM.
 
-.. ==================================================
-.. DEFINE SOME TEXTROLES
-.. --------------------------------------------------
-.. role::   underline
-.. role::   typoscript(code)
-.. role::   ts(typoscript)
-   :class:  typoscript
-.. role::   php(code)
+.. include:: ../../Includes.txt
 
 
 "FE\_DATA"
@@ -27,13 +18,13 @@ been removed in TYPO3 6.0.
 
    Property
          Property:
-   
+
    Data type
          Data type:
-   
+
    Description
          Description:
-   
+
    Default
          Default:
 
@@ -42,13 +33,13 @@ been removed in TYPO3 6.0.
 
    Property
          array of tableNames
-   
+
    Data type
          ->FE\_TABLE
-   
+
    Description
-   
-   
+
+
    Default
 
 

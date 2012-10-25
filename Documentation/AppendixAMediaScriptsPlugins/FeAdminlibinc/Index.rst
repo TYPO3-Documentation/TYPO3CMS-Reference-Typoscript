@@ -1,18 +1,9 @@
-﻿
-
 .. ==================================================
 .. FOR YOUR INFORMATION
 .. --------------------------------------------------
 .. -*- coding: utf-8 -*- with BOM.
 
-.. ==================================================
-.. DEFINE SOME TEXTROLES
-.. --------------------------------------------------
-.. role::   underline
-.. role::   typoscript(code)
-.. role::   ts(typoscript)
-   :class:  typoscript
-.. role::   php(code)
+.. include:: ../../Includes.txt
 
 
 fe\_adminLib.inc
@@ -28,7 +19,7 @@ Files:
 
    File
          File:
-   
+
    Description
          Description:
 
@@ -37,13 +28,13 @@ Files:
 
    File
          fe\_adminLib.inc
-   
+
    Description
          Main class used to display the frontend administration forms.
-         
+
          Call it from a USER\_INT cObject with 'userFunc =
          user\_feAdmin->init'. See the static\_templates for examples.
-         
+
          **Note:** Using the USER\_INT cObject allows the script to work
          regardless of the page-cache which is necessary!!
 
@@ -52,7 +43,7 @@ Files:
 
    File
          fe\_admin\_dmailsubscrip.tmpl
-   
+
    Description
          Example template file for subscription to newsletters of users to the
          tt\_address table. This template is used by the static\_template
@@ -63,7 +54,7 @@ Files:
 
    File
          fe\_admin\_fe\_users.tmpl
-   
+
    Description
          Example template file for creating new frontend users (fe\_users).
          This template is used by the static\_template
@@ -116,7 +107,7 @@ Incoming GET or POST vars:
 
    Name
          Name:
-   
+
    Description
          Description:
 
@@ -125,7 +116,7 @@ Incoming GET or POST vars:
 
    Name
          cmd
-   
+
    Description
          Command.
 
@@ -134,7 +125,7 @@ Incoming GET or POST vars:
 
    Name
          preview
-   
+
    Description
          Preview flag.
 
@@ -143,7 +134,7 @@ Incoming GET or POST vars:
 
    Name
          backURL
-   
+
    Description
          Back URL.
 
@@ -152,7 +143,7 @@ Incoming GET or POST vars:
 
    Name
          rU
-   
+
    Description
          Record UID.
 
@@ -161,7 +152,7 @@ Incoming GET or POST vars:
 
    Name
          aC
-   
+
    Description
          Authentication Code.
 
@@ -170,7 +161,7 @@ Incoming GET or POST vars:
 
    Name
          fD
-   
+
    Description
          Fixed Data (array of fields)
 
@@ -179,7 +170,7 @@ Incoming GET or POST vars:
 
    Name
          FE
-   
+
    Description
          Frontend Edit data array, syntax, FE[ *tablename* ][ *field name* ] =
          value
@@ -197,13 +188,13 @@ fe\_adminLib.inc properties
 
    Property
          Property:
-   
+
    Data type
          Data type:
-   
+
    Description
          Description:
-   
+
    Default
          Default:
 
@@ -212,10 +203,10 @@ fe\_adminLib.inc properties
 
    Property
          templateFile
-   
+
    Data type
          resource
-   
+
    Description
          The template file.
 
@@ -226,14 +217,14 @@ fe\_adminLib.inc properties
 
    Property
          templateContent
-   
+
    Data type
          string
-   
+
    Description
          Alternatively you can set this property directly to the value of the
          template.
-   
+
    Default
 
 
@@ -241,18 +232,18 @@ fe\_adminLib.inc properties
 
    Property
          table
-   
+
    Data type
          tablename
-   
+
    Description
          The table to edit.
-         
+
          Notice: The ultimate lsit of fields allowed to be edited for the table
          is defined in TCA with the key ["feInterface"]["fe\_admin\_fieldList"]
          for each table in question. For an example, see the table definition
          for fe\_users which is a good example.
-   
+
    Default
 
 
@@ -260,14 +251,14 @@ fe\_adminLib.inc properties
 
    Property
          defaultCmd
-   
+
    Data type
          string
-   
+
    Description
          Defines which action should be default (if &cmd= is not set when
          calling the page)
-   
+
    Default
 
 
@@ -275,14 +266,14 @@ fe\_adminLib.inc properties
 
    Property
          clearCacheOfPages
-   
+
    Data type
          *[list of integers]*
-   
+
    Description
          This is a list of page-ids for which to clear the cache on any
          successful operation be it EDIT, CREATE or DELETE.
-   
+
    Default
 
 
@@ -290,14 +281,14 @@ fe\_adminLib.inc properties
 
    Property
          debug
-   
+
    Data type
          boolean
-   
+
    Description
          If set, debug information will be output from fe\_adminLib which helps
          to track errors.
-   
+
    Default
 
 
@@ -311,20 +302,20 @@ fe\_adminLib.inc properties
 
    Property
          edit
-   
+
    Data type
          boolean /actionObject
-   
+
    Description
          If set, editing is basically allowed.
-         
+
          But you need to specify:
-         
+
          **.fields** (list of field names) which determines the fields allowed
          for editing. Every field in this list must be found as well in the
          ["feInterface"]["fe\_admin\_fieldList"] found in the TCA array which
          ultimately determines which fields can be edited by the fe\_adminLib.
-         
+
          **.overrideValues.[field name]** (value string) defines values for
          specific fields which will override ANY input from the form.
          Overriding values happens after the outside values has been parsed by
@@ -332,28 +323,28 @@ fe\_adminLib.inc properties
          .required and .evalValues below. For example this may be useful if you
          wish to hide a record which is being edited, because you want to
          preview it first.
-         
+
          **.required** (list of field names, subset of .fields) which
          determines which fields are required to return a true value. The valid
          fields entered here will have the subpart ###SUB\_REQUIRED\_FIELD\_
          *[field name]* ### removed from the templates if they evaluates to
          being true and thereby OK. See below for information about this
          subpart.
-         
+
          **.evalValues.[field name]** (list of eval-codes) defines specific
          evaluation forms for the individual fiels of the form. See below.
-         
+
          **.preview** (boolean) will enable the form submitted to be previewed
          first. This requires a template for preview to be found in the
          template file. See below for subpart marker names.
-         
+
          **.menuLockPid** (boolean will force the menu of editable items to be
          locked to the .pid (edit only)
-         
+
          **.userFunc\_afterSave** (function name) is called after the record is
          saved. The content passed is an array with the current (and previous)
          record in.
-   
+
    Default
 
 
@@ -361,22 +352,22 @@ fe\_adminLib.inc properties
 
    Property
          create
-   
+
    Data type
          boolean /actionObject
-   
+
    Description
          The same as .edit above except where otherwise stated.
-         
+
          Plus there is these additional properties:
-         
+
          **.noSpecialLoginForm** (boolean) - if set, fe\_adminLib does NOT look
          for the subpart marker TEMPLATE\_CREATE\_LOGIN but always for
          TEMPLATE\_CREATE
-         
+
          **.defaultValues.[field name]** (value string); Like .overrideValues
          but this sets the default values the first time the form is displayed.
-   
+
    Default
 
 
@@ -384,15 +375,15 @@ fe\_adminLib.inc properties
 
    Property
          delete
-   
+
    Data type
          boolean
-   
+
    Description
          Whether or not records may be deleted. Still regular authentication
          (ownership or email authCode) is required. Setting the var "preview"
          lets you make a delete-preview before actually deleting the record.
-   
+
    Default
 
 
@@ -400,20 +391,20 @@ fe\_adminLib.inc properties
 
    Property
          infomail
-   
+
    Data type
          boolean
-   
+
    Description
          Infomails are plaintext mails based on templates found in the template
          file. They may be used for such as sending a forgotten password to a
          user, but what goes into the infomail is totally up to your design of
          the template.
-         
+
          Normally you may have only a default infomail (infomail.default) for
          instance for sending the password. But you can use other keys also.
          See below.
-   
+
    Default
 
 
@@ -421,28 +412,28 @@ fe\_adminLib.inc properties
 
    Property
          infomail.[key]
-   
+
    Data type
          (configuration of infomail properties)
-   
+
    Description
          In order to make fe\_adminLib send an infomail, you must specify these
          vars in your GET vars or HTML-form.
-         
+
          **fetch** - if integer, it searches for the uid being the value of
          'fetch'. If not, it searches for the email-field (defined by a
          property of fe\_adminLib, see below).
-         
+
          **key** - points to the infomail.[key] configuration to use
-         
+
          **Properties:**
-         
+
          **.dontLockPid** (boolean) - selects only records from the .pid of
          fe\_adminLib.
-         
+
          **.label** (string) - The suffix for the markers, see 'Email Markers'
          beneath.
-   
+
    Default
 
 
@@ -450,32 +441,32 @@ fe\_adminLib.inc properties
 
    Property
          setfixed
-   
+
    Data type
          boolean /properties
-   
+
    Description
          Allows set-fixed input, probably coming from a link in an infomail or
          notification mail.
-         
+
          **Syntax:**
-         
+
          **.[fix**  ***key***  **].[**  ***field name***  **] =**
          ***fieldvalue*** - is used to setup a setfixed-link insertable in the
          infomail by the SYS\_SETFIXED\_\*-markers. See above (setfixed-
          property of fe\_adminLib).
-         
+
          Special fixkey 'DELETE' is just a boolean.
-         
+
          **.userFunc\_afterSave** (function name) is called after the record is
          saved. The content passed is an array with the current (and previous)
          record in.
-         
+
          **Concept:**
-         
+
          The 'setfixed' concept is best explained by describing a typical
          scenario - in fact the most common situation of its use:
-         
+
          Imagine you have some users submitting information on your website.
          But before that information enters the database, you would like to
          moderate it - simply preview it and then either delete it or approve
@@ -490,21 +481,19 @@ fe\_adminLib.inc properties
          single click of a link in a notification mail sent to an admin -
          enable the record! Or of course a similar link with a cmd=delete link
          will delete it...
-         
+
          There is a special "field name" you can use, which is '\_FIELDLIST"
          and that lets you specify a list of fields in the record to base the
          auth-code on. If nothing is specifyed the md5-hash is based on the
          whole record which means that any changes will disable the setfixed
          link. If on the other hand, you set \_FIELDLIST = uid,pid then that
          record will be editable as long as the uid and pid values are intact.
-         
+
          **Example:**
-         
+
          This is a common configuration of the email-properties with a simple
-         setfixed setting:
-         
-         ::
-         
+         setfixed setting::
+
             email.from = kasper@typo3.com
             email.fromName = Kasper Skårhøj
             email.admin = kasper@typo3.com
@@ -514,32 +503,24 @@ fe\_adminLib.inc properties
             }
             setfixed.DELETE = 1
             setfixed.DELETE._FIELDLIST = uid
-         
-         Now, if you insert this marker in your email template
-         
-         ::
-         
+
+         Now, if you insert this marker in your email template ::
+
             ###SYS_SETFIXED_approve###
-         
-         it will get substituted with something like these parameters:
-         
-         ::
-         
-            &cmd=setfixed&rU=9&fD[hidden]=0&aC=5c403d90 
-         
+
+         it will get substituted with something like these parameters::
+
+            &cmd=setfixed&rU=9&fD[hidden]=0&aC=5c403d90
+
          Now, all you need is to point that to the correct url (where
-         fe\_adminLib is invoked!), e.g.:
-         
-         ::
-         
+         fe\_adminLib is invoked!), e.g.::
+
             ###THIS_URL######FORM_URL######SYS_SETFIXED_approve###
-         
-         and for deletion:
-         
-         ::
-         
+
+         and for deletion::
+
             ...###SYS_SETFIXED_DELETE###
-   
+
    Default
 
 
@@ -553,33 +534,33 @@ fe\_adminLib.inc properties
 
    Property
          authcodeFields
-   
+
    Data type
          *[list of fields]*
-   
+
    Description
          Comma separated list of fields to base the authCode generation on.
          Basically this list would include "uid" only in most cases. If the
          list includes more fields, you should be aware that the authCode will
          change when the value of that field changes. And then the user will
          have to re-send an email to himself with a new code.
-         
+
          **.addKey** (string) adds the string to the md5-hash of the authCode.
          Just enter any random string here. Point is that people from outside
          doesn't know this code and therefore are not able to reconstruct the
          md5-hash solely based on the uid
-         
+
          **.addDate** (date-config) You can use this to make the code time-
          disabled. Say if you enter "d-m-Y" here as value, the code will work
          until midnight and then a new code will be valid.
-         
+
          **.codeLength** (int) Defines how long the authentication code should
          be. Default is 8 characters.
-         
+
          In any case $TYPO3\_CONF\_VARS['SYS']['encryptionKey'] is prepended.
-         
+
          **Advice:**
-         
+
          If you want to generate authCodes compatible with the standard
          authCodes (used by the direct mailer by
          TYPO3\CMS\Core\Utility\GeneralUtility::stdAuthCode() or
@@ -587,7 +568,7 @@ fe\_adminLib.inc properties
          $TYPO3\_CONF\_VARS['SYS']['encryptionKey'] to a unique and
          secret key (like you should in any case) and add "uid" as
          authcodeField ONLY. This is secure enough.
-   
+
    Default
 
 
@@ -595,26 +576,26 @@ fe\_adminLib.inc properties
 
    Property
          email
-   
+
    Data type
-   
-   
+
+
    Description
          **.from** (string, email) Defines the sender email address of mails
          sent out
-         
+
          **.fromName** (string) Defines the name of the sender. If set, this
          will be used on the form NAME <EMAIL>
-         
+
          **.admin** Email address of the administrator which is notified of
          changes.
-         
+
          **.field** (string/integer) Defines the field name of the record where
          the email address to send to is found. If the field content happens to
          be an integer, this is assumed to be the uid of the fe\_user owning
          the record and the email address of that user is fetched for the
          purpose instead.
-   
+
    Default
 
 
@@ -622,13 +603,13 @@ fe\_adminLib.inc properties
 
    Property
          pid
-   
+
    Data type
          int+
-   
+
    Description
          The pid in which to store/get the records.
-   
+
    Default
          Current page
 
@@ -637,19 +618,19 @@ fe\_adminLib.inc properties
 
    Property
          fe\_userOwnSelf
-   
+
    Data type
          boolean
-   
+
    Description
          If set, fe\_users created by this module has their fe\_cruser\_id-
          field set to their own uid which means they 'own' their own record and
          can thus edit their own data.
-         
+
          All other tables which has a fe\_cruser\_id field configured in the
          'ctrl' section of their $TCA-configuration will automatically get this
          field set to the current fe\_user id.
-   
+
    Default
 
 
@@ -657,14 +638,14 @@ fe\_adminLib.inc properties
 
    Property
          fe\_userEditSelf
-   
+
    Data type
          boolean
-   
+
    Description
          If set, fe\_users - regardless of whether they own themselves or not -
          will be allowed to edit himself.
-   
+
    Default
 
 
@@ -672,15 +653,15 @@ fe\_adminLib.inc properties
 
    Property
          allowedGroups
-   
+
    Data type
          [list of integers]
-   
+
    Description
          List of fe\_groups uid numbers which are allowed to edit the records
          through this form. Normally only the owner fe\_user is allowed to do
          that.
-   
+
    Default
 
 
@@ -688,19 +669,19 @@ fe\_adminLib.inc properties
 
    Property
          evalFunc
-   
+
    Data type
          function name
-   
+
    Description
          Function by which you can manipulate the dataArray before it's saved.
-         
+
          The dataArray is passed to the function as $content and MUST be
          returned again from the function.
-         
+
          The property "parentObj" is a hardcoded reference to the fe\_adminLib
          object.
-   
+
    Default
 
 
@@ -708,13 +689,13 @@ fe\_adminLib.inc properties
 
    Property
          formurl
-   
+
    Data type
          ->typolink
-   
+
    Description
          Contains typolink properties for the URL (action tag) of the form.
-   
+
    Default
 
 
@@ -722,50 +703,50 @@ fe\_adminLib.inc properties
 
    Property
          parseValues.[field]
-   
+
    Data type
          [list of parseCodes]
-   
+
    Description
          **ParseCodes:**
-         
+
          **int** - returns the integer value of the input
-         
+
          **lower** - returns lowercase version of the input
-         
+
          **upper** - returns uppercase version of the input
-         
+
          **nospace** - strips all space
-         
+
          **alpha, num, alphanum, alphanum\_x** - only alphabetic (a-z) and/or
          numeric chars. alphanum\_x also allows \_ and -
-         
+
          **trim** - trims whitespace in the ends of the string
-         
+
          **setEmptyIfAbsent** - will make sure the field is set to empty if the
          value is not submitted. This ensures a field to be updated an is handy
          with checkboxes
-         
+
          **random[x]** - Returns a random number between 0 and x
-         
+
          **files[semicolon-list(!) of extensions, none=all][maxsize in kb,
          none=no limit]** - Defining the field to hold files. See below for
          details!
-         
+
          **multiple** - Set this, if the input comes from a multiple-selector
          box (remember to add ...[] to the field name so the values come in an
          array!)
-         
+
          **checkArray** - Set this, if you want several checkboxes to set bits
          in a single field. In that case you must prepend every checkbox with
          [x] where x is the bitnumber to set starting with zero. The default
          values of the checkbox form elements must be false.
-         
+
          **uniqueHashInt[semicolon-list(!) of other fields]** - This makes a
          unique hash (32 bit integer) of the content in the specified fields.
          The values of those fields are first converted to lowercase and only
          alphanum chars are preserved.
-   
+
    Default
 
 
@@ -773,15 +754,15 @@ fe\_adminLib.inc properties
 
    Property
          userFunc\_updateArray
-   
+
    Data type
          function name
-   
+
    Description
          Points to a user function which will have the value-array passed to it
          before the value array is used to construct the update-JavaScript
          statements.
-   
+
    Default
 
 
@@ -789,17 +770,17 @@ fe\_adminLib.inc properties
 
    Property
          evalErrors.[field].[evalCode]
-   
+
    Data type
-   
-   
+
+
    Description
          This lets you specify the error messages inserted in the
          ###EVAL\_ERROR\_FIELD\_[field name]### markers upon an evaluation
          error.
-         
+
          See description of evaluation below.
-   
+
    Default
 
 
@@ -807,26 +788,24 @@ fe\_adminLib.inc properties
 
    Property
          cObjects.[marker\_name]
-   
+
    Data type
          cObject
-   
+
    Description
          This is cObjects you can insert by markers in the template.
-         
+
          **Example:**
-         
-         Say, you set up a cObject like this:
-         
-         ::
-         
+
+         Say, you set up a cObject like this::
+
             cObject.myHeader = TEXT
             cObject.myHeader.value = This is my header
-         
+
          then you can include this cObject in most of the templates through a
          marker named ###CE\_myHeader### or ###PCE\_myHeader### (see below for
          details on the difference).
-   
+
    Default
 
 
@@ -834,21 +813,19 @@ fe\_adminLib.inc properties
 
    Property
          wrap1
-   
+
    Data type
          ->stdWrap
-   
+
    Description
          Global Wrap 1. This will be split into the markers ###GW1B### and
          ###GW1E###. Don't change the input value by the settings, only wrap it
          in something.
-         
-         **Example:**
-         
-         ::
-         
+
+         **Example:** ::
+
             wrap1.wrap = <b> |</b>
-   
+
    Default
 
 
@@ -856,13 +833,13 @@ fe\_adminLib.inc properties
 
    Property
          wrap2
-   
+
    Data type
          ->stdWrap
-   
+
    Description
          Global Wrap 2 (see above)
-   
+
    Default
 
 
@@ -870,13 +847,13 @@ fe\_adminLib.inc properties
 
    Property
          color1
-   
+
    Data type
          string /stdWrap
-   
+
    Description
          Value for ###GC1### marker (Global color 1)
-   
+
    Default
 
 
@@ -884,13 +861,13 @@ fe\_adminLib.inc properties
 
    Property
          color2
-   
+
    Data type
          string /stdWrap
-   
+
    Description
          Value for ###GC2### marker (Global color 2)
-   
+
    Default
 
 
@@ -898,13 +875,13 @@ fe\_adminLib.inc properties
 
    Property
          color3
-   
+
    Data type
          string /stdWrap
-   
+
    Description
          Value for ###GC3### marker (Global color 3)
-   
+
    Default
 
 
@@ -927,7 +904,7 @@ on the cmd value.
 
    Subpart marker
          Subpart marker:
-   
+
    Description
          Description:
 
@@ -936,7 +913,7 @@ on the cmd value.
 
    Subpart marker
          ###TEMPLATE\_ *[action]* \_SAVED###
-   
+
    Description
          Used for HTML output
 
@@ -945,9 +922,9 @@ on the cmd value.
 
    Subpart marker
          ###TEMPLATE\_SETFIXED\_OK### (general)
-         
+
          ###TEMPLATE\_SETFIXED\_OK\_[ *fixkey* ]###
-   
+
    Description
          Used for a successful setfixed-link.
 
@@ -956,7 +933,7 @@ on the cmd value.
 
    Subpart marker
          ###TEMPLATE\_SETFIXED\_FAILED###
-   
+
    Description
          Used for an unsuccessful setfixed-link. Notice that if you click a
          setfixed link twice, the second time it will fail. This is because the
@@ -968,7 +945,7 @@ on the cmd value.
 
    Subpart marker
          ###EMAIL\_TEMPLATE\_ *[action]* \_SAVED###
-   
+
    Description
          Used for an email message sent to the website user
 
@@ -977,7 +954,7 @@ on the cmd value.
 
    Subpart marker
          ###EMAIL\_TEMPLATE\_ *[action]* \_SAVED-ADMIN###
-   
+
    Description
          Used for an email message sent to the admin
 
@@ -986,7 +963,7 @@ on the cmd value.
 
    Subpart marker
          ###EMAIL\_TEMPLATE\_SETFIXED\_ *[fixkey]* ###
-   
+
    Description
          Used for notification messages in the event of successful setfixed
          operations.
@@ -996,7 +973,7 @@ on the cmd value.
 
    Subpart marker
          ###EMAIL\_TEMPLATE\_SETFIXED\_ *[fixkey]-ADMIN* ###
-   
+
    Description
          Ditto, for admin email
 
@@ -1023,7 +1000,7 @@ These are subparts that should exist in any template.
 
    Subpart marker
          Subpart marker:
-   
+
    Description
          Description:
 
@@ -1032,7 +1009,7 @@ These are subparts that should exist in any template.
 
    Subpart marker
          ###TEMPLATE\_AUTH###
-   
+
    Description
          Displayed if the authentication - either of fe\_user or email
          authentication code - failed. You must design the error display to
@@ -1043,7 +1020,7 @@ These are subparts that should exist in any template.
 
    Subpart marker
          ###TEMPLATE\_NO\_PERMISSIONS###
-   
+
    Description
          This error message is displayed if you were authenticated but did not
          posses the right to edit or delete a record due to other reasons (like
@@ -1067,7 +1044,7 @@ class) must be loaded.
 
    Subpart
          Subpart:
-   
+
    Description
          Description:
 
@@ -1076,7 +1053,7 @@ class) must be loaded.
 
    Subpart
          ###EMAIL\_TEMPLATE\_NORECORD###
-   
+
    Description
 
 
@@ -1084,7 +1061,7 @@ class) must be loaded.
 
    Subpart
          ###EMAIL\_TEMPLATE\_[ *infomail\_key* ]###
-   
+
    Description
 
 
@@ -1092,7 +1069,7 @@ class) must be loaded.
 
    Subpart
          ###SUB\_RECORD###
-   
+
    Description
 
 
@@ -1108,7 +1085,7 @@ class) must be loaded.
 
    Marker
          Marker:
-   
+
    Description
          Description:
 
@@ -1117,7 +1094,7 @@ class) must be loaded.
 
    Marker
          ###SYS\_AUTHCODE###
-   
+
    Description
 
 
@@ -1125,7 +1102,7 @@ class) must be loaded.
 
    Marker
          ###SYS\_SETFIXED\_[ *fixkey* ]###
-   
+
    Description
 
 
@@ -1137,18 +1114,14 @@ FORM conventions
 
 The forms used with fe\_adminLib should be named after the table they
 are supposed to edit. For instance if you are going to edit records in
-the table 'fe\_users' you must use a FORM-tag like this:
-
-::
+the table 'fe\_users' you must use a FORM-tag like this::
 
    <FORM name="fe_users_form" method="POST" action="....">
 
 The fields used to submit data for the records has this syntax: FE[
 *tablename* ][ *field name* ]. This means, if you want to edit the
 'city' field of a tt\_address record, you could use a form element
-like this:
-
-::
+like this::
 
    <INPUT name="FE[tt_address][city]">
 
@@ -1167,7 +1140,7 @@ Common markers
 
    Marker
          Marker:
-   
+
    Description
          Description:
 
@@ -1176,7 +1149,7 @@ Common markers
 
    Marker
          ###GW1B### / ###GW1E###
-   
+
    Description
          Global wrap 1, begin and end (headers).
 
@@ -1185,7 +1158,7 @@ Common markers
 
    Marker
          ###GW2B### / ###GW2E###
-   
+
    Description
          Global wrap 2, begin and end (bodytext).
 
@@ -1194,7 +1167,7 @@ Common markers
 
    Marker
          ###GC1### / ###GC2### / ###GC3###
-   
+
    Description
          Global color 1 through 3.
 
@@ -1203,12 +1176,10 @@ Common markers
 
    Marker
          ###FORM\_URL###
-   
+
    Description
-         The url used in the forms:
-         
-         ::
-         
+         The url used in the forms::
+
             index.php?id=page-id&type=page-type
 
 
@@ -1216,7 +1187,7 @@ Common markers
 
    Marker
          ###FORM\_URL\_ENC###
-   
+
    Description
          As above, but rawurlencoded.
 
@@ -1225,7 +1196,7 @@ Common markers
 
    Marker
          ###BACK\_URL###
-   
+
    Description
          The backUrl value. Set to the value of incoming "backURL" var.
 
@@ -1234,7 +1205,7 @@ Common markers
 
    Marker
          ###BACK\_URL\_ENC###
-   
+
    Description
          As above, but rawurlencoded.
 
@@ -1243,7 +1214,7 @@ Common markers
 
    Marker
          ###REC\_UID###
-   
+
    Description
          The UID of the record edited. Set to the value of incoming "rU" var.
 
@@ -1252,7 +1223,7 @@ Common markers
 
    Marker
          ###AUTH\_CODE###
-   
+
    Description
          The "aC" incoming var.
 
@@ -1261,7 +1232,7 @@ Common markers
 
    Marker
          ###THE\_PID###
-   
+
    Description
          The "thePid" value - where the records are stored.
 
@@ -1270,7 +1241,7 @@ Common markers
 
    Marker
          ###THIS\_ID###
-   
+
    Description
          Set to the current page id.
 
@@ -1279,7 +1250,7 @@ Common markers
 
    Marker
          ###THIS\_URL###
-   
+
    Description
          Set to the current script url as obtained by
          TYPO3\CMS\Core\Utility\GeneralUtility::getThisUrl()
@@ -1290,7 +1261,7 @@ Common markers
 
    Marker
          ###HIDDENFIELDS###
-   
+
    Description
          A bunch of hiddenfields which are required to be inserted in the
          forms. These by default include 'cmd', 'aC' and 'backURL'.
@@ -1298,9 +1269,7 @@ Common markers
 
 .. ###### END~OF~TABLE ######
 
-In addition you can in most cases use markers like this
-
-::
+In addition you can in most cases use markers like this ::
 
    ###FIELD_[field name]###
 
@@ -1308,9 +1277,7 @@ where [field name] is the name of a field from the record. All fields
 in the record are used.
 
 Finally you can insert cObjects defined in TypoScript with this series
-of markers (see .cObject property in table above):
-
-::
+of markers (see .cObject property in table above)::
 
    ###CE_[cObjectName]###
    ###PCE_[cObjectName]###
@@ -1330,15 +1297,11 @@ Evaluation of the form fields
 
 Printing error messages for REQUIRED fields
 
-When a form template is displayed all subparts with the markers
-
-::
+When a form template is displayed all subparts with the markers ::
 
    ###SUB_REQUIRED_FIELDS_WARNING###
 
-and
-
-::
+and ::
 
    ###SUB_REQUIRED_FIELD_[field name]###
 
@@ -1347,9 +1310,7 @@ filled in) then the SUB\_REQUIRED\_FIELDS\_WARNING is not removed and
 thus the error message contained herein is shown.
 
 Let's say that more specifically it's the 'email' field in a form
-which is not filled in. Then you can put in a subpart named
-
-::
+which is not filled in. Then you can put in a subpart named ::
 
    ###SUB_REQUIRED_FIELD_email###
 
@@ -1370,17 +1331,13 @@ which will be inserted as the marker named ###EVAL\_ERROR\_FIELD\_
 Lets say that you have put the code 'uniqueLocal' in the list of
 evaluation code for the email field. You would do that if you want to
 make sure that no email address is put into the database twice. Then
-you may specify that as:
-
-::
+you may specify that as::
 
    create.evalValues {
      email = uniqueLocal, email
    }
 
-Then you set the evaluation error messages like this:
-
-::
+Then you set the evaluation error messages like this::
 
    evalErrors.email {
      uniqueLocal = Apparently you're already registered with this email address!
@@ -1398,9 +1355,7 @@ Passing default values to a form
 
 You can pass default values to a form by the same syntax as you use in
 the forms. For instance this would set the name and email address by
-default:
-
-::
+default::
 
    ...?FE[tt_address][name]=Mike%20Tyson&FE[tt_address][email]=mike@trex.us&doNotSave=1&noWarnings=1
 
@@ -1420,7 +1375,7 @@ List of eval-codes
 
    Eval-code
          Eval-code:
-   
+
    Description
          Description:
 
@@ -1429,7 +1384,7 @@ List of eval-codes
 
    Eval-code
          uniqueGlobal
-   
+
    Description
          This requires the value of the field to be globally unique, which
          means it must not exist in the same field of any other record in the
@@ -1440,7 +1395,7 @@ List of eval-codes
 
    Eval-code
          uniqueLocal
-   
+
    Description
          This is like uniqueGlobal, but the value is required to be unique
          *only* in the PID of the record. Thus if two records has different pid
@@ -1451,7 +1406,7 @@ List of eval-codes
 
    Eval-code
          twice
-   
+
    Description
          This requires the value of the field to match the value of a secondary
          field name [field name]\_again sent in the incoming formdata. This is
@@ -1464,7 +1419,7 @@ List of eval-codes
 
    Eval-code
          email
-   
+
    Description
          Requires the field value to be an email address at least on the form
          [name]@\*[domain].[tld]
@@ -1474,7 +1429,7 @@ List of eval-codes
 
    Eval-code
          required
-   
+
    Description
          Just simple required (trimmed value). 0 (zero) will evaluate to false!
 
@@ -1483,12 +1438,12 @@ List of eval-codes
 
    Eval-code
          atLeast
-         
+
          atMost
-   
+
    Description
          Specifies a minimum / maximum of characters to enter in the fields.
-         
+
          **Example** , that requires at least 5 characters: atleast [5]
 
 
@@ -1496,12 +1451,12 @@ List of eval-codes
 
    Eval-code
          inBranch
-   
+
    Description
          inBranch requires the value (typically of a pid-field) to be among a
          list of page-id's (pid's) specified with the inBranch parameters. The
          parameters are given like  *[root\_pid; depth; beginAt]*
-         
+
          **Example** , which will return a list of pids one level deep from
          page 4 (included): inBranch [4;1]
 
@@ -1510,7 +1465,7 @@ List of eval-codes
 
    Eval-code
          unsetEmpty
-   
+
    Description
          This evaluation does not result in any error code. Only it simply
          unsets the field if the value of the field is empty. Thus it'll not
@@ -1575,16 +1530,12 @@ broken.
 field names for files
 
 Lets say you have a field named "picture" of a table name
-"user\_cars", the form-element should look like this:
-
-::
+"user\_cars", the form-element should look like this::
 
    <input type="file" name="FE[user_cars][picture][]">
 
 If you wish to upload multiple files to that field, the form-elements
-should look like:
-
-::
+should look like::
 
    <input type="file" name="FE[user_cars][picture][]">
    <input type="file" name="FE[user_cars][picture][]">

@@ -1,18 +1,10 @@
-﻿.. include:: Images.txt
-
 .. ==================================================
 .. FOR YOUR INFORMATION
 .. --------------------------------------------------
 .. -*- coding: utf-8 -*- with BOM.
 
-.. ==================================================
-.. DEFINE SOME TEXTROLES
-.. --------------------------------------------------
-.. role::   underline
-.. role::   typoscript(code)
-.. role::   ts(typoscript)
-   :class:  typoscript
-.. role::   php(code)
+.. include:: ../../Includes.txt
+.. include:: Images.txt
 
 
 Condition reference
@@ -63,22 +55,16 @@ Examples:
 ~~~~~~~~~
 
 This condition will match if the visitor opens the website with
-Internet Explorer on Windows (but not on Mac)
-
-::
+Internet Explorer on Windows (but not on Mac) ::
 
    [browser = msie] && [system = win]
 
-This will match with either Opera or Firefox browsers
-
-::
+This will match with either Opera or Firefox browsers ::
 
    [browser = opera] || [browser = firefox]
 
 This will match with either Firefox or Internet Explorer. In case of
-Internet Explorer, the version must be above 8.
-
-::
+Internet Explorer, the version must be above 8. ::
 
    [browser = firefox] || [browser = msie] && [version => 8]
 
@@ -108,7 +94,7 @@ Values and comparison:
 
    Browser
          Browser:
-   
+
    Identification
          Identification:
 
@@ -117,7 +103,7 @@ Values and comparison:
 
    Browser
          Amaya
-   
+
    Identification
          amaya
 
@@ -126,7 +112,7 @@ Values and comparison:
 
    Browser
          AOL
-   
+
    Identification
          aol
 
@@ -135,7 +121,7 @@ Values and comparison:
 
    Browser
          Avant
-   
+
    Identification
          avant
 
@@ -144,7 +130,7 @@ Values and comparison:
 
    Browser
          Camino
-   
+
    Identification
          camino
 
@@ -153,7 +139,7 @@ Values and comparison:
 
    Browser
          Google Chrome
-   
+
    Identification
          chrome
 
@@ -162,7 +148,7 @@ Values and comparison:
 
    Browser
          Mozilla Firefox
-   
+
    Identification
          firefox
 
@@ -171,7 +157,7 @@ Values and comparison:
 
    Browser
          Flock
-   
+
    Identification
          flock
 
@@ -180,7 +166,7 @@ Values and comparison:
 
    Browser
          Gecko
-   
+
    Identification
          gecko
 
@@ -189,7 +175,7 @@ Values and comparison:
 
    Browser
          Konqueror
-   
+
    Identification
          konqueror
 
@@ -198,7 +184,7 @@ Values and comparison:
 
    Browser
          Lynx
-   
+
    Identification
          lynx
 
@@ -207,7 +193,7 @@ Values and comparison:
 
    Browser
          NCSA Mosaic
-   
+
    Identification
          mosaic
 
@@ -216,7 +202,7 @@ Values and comparison:
 
    Browser
          Microsoft Internet Explorer
-   
+
    Identification
          msie
 
@@ -225,7 +211,7 @@ Values and comparison:
 
    Browser
          Navigator
-   
+
    Identification
          navigator
 
@@ -234,7 +220,7 @@ Values and comparison:
 
    Browser
          Netscape Communicator
-   
+
    Identification
          netscape
 
@@ -243,7 +229,7 @@ Values and comparison:
 
    Browser
          OmniWeb
-   
+
    Identification
          omniweb
 
@@ -252,7 +238,7 @@ Values and comparison:
 
    Browser
          Opera
-   
+
    Identification
          opera
 
@@ -261,7 +247,7 @@ Values and comparison:
 
    Browser
          Safari
-   
+
    Identification
          safari
 
@@ -270,7 +256,7 @@ Values and comparison:
 
    Browser
          SeaMonkey
-   
+
    Identification
          seamonkey
 
@@ -279,7 +265,7 @@ Values and comparison:
 
    Browser
          Webkit
-   
+
    Identification
          webkit
 
@@ -288,7 +274,7 @@ Values and comparison:
 
    Browser
          ?? (if none of the above was found in the user agent)
-   
+
    Identification
          unknown
 
@@ -302,16 +288,12 @@ matches with the identifications named above. If there are multiple
 matches, the rightmost match is finally used, because it mostly is the
 most correct one.
 
-An example user agent could look like this:
-
-::
+An example user agent could look like this::
 
    Mozilla/5.0 (Windows NT 5.1; rv:17.0) Gecko/20100101 Firefox/17.0
 
 This string contains the identifications "Gecko" and "Firefox". The
-condition
-
-::
+condition ::
 
    [browser = firefox]
 
@@ -333,9 +315,7 @@ above.
 Examples:
 ~~~~~~~~~
 
-This will match with Chrome and Opera-browsers:
-
-::
+This will match with Chrome and Opera-browsers::
 
    [browser = chrome, opera]
 
@@ -366,7 +346,7 @@ The values may be preceded by three operators:
 
    Operator
          Operator:
-   
+
    Function
          Function:
 
@@ -375,12 +355,12 @@ The values may be preceded by three operators:
 
    Operator
          [nothing]
-   
+
    Function
          The value must be part of the beginning of the version as a string.
          This means that if the version is "4.72" and the value is "4" or "4.7"
          it matches. But "4.73" does not match.
-         
+
          Example from syntax: "value1"
 
 
@@ -388,7 +368,7 @@ The values may be preceded by three operators:
 
    Operator
          =
-   
+
    Function
          The value must match exactly. Version "4.72" matches only with a value
          of "4.72"
@@ -398,7 +378,7 @@ The values may be preceded by three operators:
 
    Operator
          >
-   
+
    Function
          The version must be greater than the value
 
@@ -407,7 +387,7 @@ The values may be preceded by three operators:
 
    Operator
          <
-   
+
    Function
          The version must be less than the value
 
@@ -418,15 +398,11 @@ The values may be preceded by three operators:
 Examples:
 ~~~~~~~~~
 
-This matches with exactly "4.03" browsers
-
-::
+This matches with exactly "4.03" browsers ::
 
    [version=  =4.03]
 
-This matches with all 4+ browsers and Netscape 3 browsers
-
-::
+This matches with all 4+ browsers and Netscape 3 browsers ::
 
    [version=  >4][browser= netscape3]
 
@@ -453,7 +429,7 @@ Values and comparison:
 
    System
          System:
-   
+
    Identification
          Identification:
 
@@ -462,7 +438,7 @@ Values and comparison:
 
    System
          Linux
-   
+
    Identification
          linux
 
@@ -471,7 +447,7 @@ Values and comparison:
 
    System
          Android
-   
+
    Identification
          android
 
@@ -480,7 +456,7 @@ Values and comparison:
 
    System
          OpenBSD/NetBSD/FreeBSD
-   
+
    Identification
          unix\_bsd
 
@@ -489,7 +465,7 @@ Values and comparison:
 
    System
          SGI / IRIX
-   
+
    Identification
          unix\_sgi
 
@@ -498,7 +474,7 @@ Values and comparison:
 
    System
          SunOS
-   
+
    Identification
          unix\_sun
 
@@ -507,7 +483,7 @@ Values and comparison:
 
    System
          HP-UX
-   
+
    Identification
          unix\_hp
 
@@ -516,7 +492,7 @@ Values and comparison:
 
    System
          Chrome OS
-   
+
    Identification
          chrome
 
@@ -525,7 +501,7 @@ Values and comparison:
 
    System
          iOS
-   
+
    Identification
          iOS
 
@@ -534,7 +510,7 @@ Values and comparison:
 
    System
          Macintosh
-   
+
    Identification
          mac
 
@@ -543,7 +519,7 @@ Values and comparison:
 
    System
          Windows 7
-   
+
    Identification
          win7
 
@@ -552,7 +528,7 @@ Values and comparison:
 
    System
          Windows Vista
-   
+
    Identification
          winVista
 
@@ -561,7 +537,7 @@ Values and comparison:
 
    System
          Windows XP
-   
+
    Identification
          winXP
 
@@ -570,7 +546,7 @@ Values and comparison:
 
    System
          Windows 2000
-   
+
    Identification
          win2k
 
@@ -579,7 +555,7 @@ Values and comparison:
 
    System
          Windows NT
-   
+
    Identification
          winNT
 
@@ -588,7 +564,7 @@ Values and comparison:
 
    System
          Windows 98
-   
+
    Identification
          win98
 
@@ -597,7 +573,7 @@ Values and comparison:
 
    System
          Windows 95
-   
+
    Identification
          win95
 
@@ -606,7 +582,7 @@ Values and comparison:
 
    System
          Windows 3.11
-   
+
    Identification
          win311
 
@@ -615,7 +591,7 @@ Values and comparison:
 
    System
          Amiga
-   
+
    Identification
          amiga
 
@@ -636,9 +612,7 @@ For example if the value is "win9" this will match with "win95" and
 Examples:
 ~~~~~~~~~
 
-This will match with windows and mac -systems only
-
-::
+This will match with windows and mac -systems only ::
 
    [system= win,mac]
 
@@ -660,7 +634,7 @@ following are valid, too:
 
    System
          System:
-   
+
    Generic identification
          Generic identification:
 
@@ -669,7 +643,7 @@ following are valid, too:
 
    System
          Android
-   
+
    Generic identification
          linux
 
@@ -678,7 +652,7 @@ following are valid, too:
 
    System
          Chrome OS
-   
+
    Generic identification
          linux
 
@@ -687,7 +661,7 @@ following are valid, too:
 
    System
          iOS
-   
+
    Generic identification
          mac
 
@@ -696,7 +670,7 @@ following are valid, too:
 
    System
          Windows 7
-   
+
    Generic identification
          winNT
 
@@ -705,7 +679,7 @@ following are valid, too:
 
    System
          Windows Vista
-   
+
    Generic identification
          winNT
 
@@ -714,7 +688,7 @@ following are valid, too:
 
    System
          Windows XP
-   
+
    Generic identification
          winNT
 
@@ -723,7 +697,7 @@ following are valid, too:
 
    System
          Windows 2000
-   
+
    Generic identification
          winNT
 
@@ -753,7 +727,7 @@ Values and comparison:
 
    Device
          Device:
-   
+
    Identification
          Identification:
 
@@ -762,7 +736,7 @@ Values and comparison:
 
    Device
          HandHeld
-   
+
    Identification
          pda
 
@@ -771,7 +745,7 @@ Values and comparison:
 
    Device
          WAP phones
-   
+
    Identification
          wap
 
@@ -780,7 +754,7 @@ Values and comparison:
 
    Device
          Grabbers:
-   
+
    Identification
          grabber
 
@@ -789,7 +763,7 @@ Values and comparison:
 
    Device
          Indexing robots:
-   
+
    Identification
          robot
 
@@ -804,9 +778,7 @@ the type of device
 Examples:
 ~~~~~~~~~
 
-This will match WAP-phones and PDA's
-
-::
+This will match WAP-phones and PDA's ::
 
    [device = wap, pda]
 
@@ -837,15 +809,11 @@ Examples:
 ~~~~~~~~~
 
 If the HTTP\_USER\_AGENT is "Mozilla/4.0 (compatible; Lotus-Notes/5.0;
-Windows-NT)" this will match with it:
-
-::
+Windows-NT)" this will match with it::
 
    [useragent = Mozilla/4.0 (compatible; Lotus-Notes/5.0; Windows-NT)]
 
-This will also match with it:
-
-::
+This will also match with it::
 
    [useragent = *Lotus-Notes*]
 
@@ -861,10 +829,10 @@ A short list of user-agent strings and a proper match:
 
    HTTP\_USER\_AGENT
          HTTP\_USER\_AGENT:
-   
+
    Agent description
          Agent description:
-   
+
    Matching condition
          Matching condition:
 
@@ -873,10 +841,10 @@ A short list of user-agent strings and a proper match:
 
    HTTP\_USER\_AGENT
          Nokia7110/1.0+(04.77)
-   
+
    Agent description
          Nokia 7110 WAP phone
-   
+
    Matching condition
          [useragent= Nokia7110\*]
 
@@ -885,10 +853,10 @@ A short list of user-agent strings and a proper match:
 
    HTTP\_USER\_AGENT
          Lotus-Notes/4.5 ( Windows-NT )
-   
+
    Agent description
          Lotus-Notes browser
-   
+
    Matching condition
          [useragent= Lotus-Notes\*]
 
@@ -897,10 +865,10 @@ A short list of user-agent strings and a proper match:
 
    HTTP\_USER\_AGENT
          Mozilla/3.0 (compatible; AvantGo 3.2)
-   
+
    Agent description
          AvantGo browser
-   
+
    Matching condition
          [useragent= \*AvantGo\*]
 
@@ -909,10 +877,10 @@ A short list of user-agent strings and a proper match:
 
    HTTP\_USER\_AGENT
          Mozilla/3.0 (compatible; WebCapture 1.0; Auto; Windows)
-   
+
    Agent description
          Adobe Acrobat 4.0
-   
+
    Matching condition
          [useragent= \*WebCapture\*]
 
@@ -932,7 +900,7 @@ These are some of the known WAP agents:
 
    HTTP\_USER\_AGENT
          HTTP\_USER\_AGENT:
-   
+
    HTTP\_USER\_AGENT (continued)
          HTTP\_USER\_AGENT (continued):
 
@@ -941,126 +909,126 @@ These are some of the known WAP agents:
 
    HTTP\_USER\_AGENT
          ALAV UP/4.0.7
-         
+
          Alcatel-BE3/1.0 UP/4.0.6c
-         
+
          AUR PALM WAPPER
-         
+
          Device V1.12
-         
+
          EricssonR320/R1A
-         
+
          fetchpage.cgi/0.53
-         
+
          Java1.1.8
-         
+
          Java1.2.2
-         
+
          m-crawler/1.0 WAP
-         
+
          Materna-WAPPreview/1.1.3
-         
+
          MC218 2.0 WAP1.1
-         
+
          Mitsu/1.1.A
-         
+
          MOT-CB/0.0.19 UP/4.0.5j
-         
+
          MOT-CB/0.0.21 UP/4.0.5m
-         
+
          Nokia-WAP-Toolkit/1.2
-         
+
          Nokia-WAP-Toolkit/1.3beta
-         
+
          Nokia7110/1.0 ()
-         
+
          Nokia7110/1.0 (04.67)
-         
+
          Nokia7110/1.0 (04.67)
-         
+
          Nokia7110/1.0 (04.69)
-         
+
          Nokia7110/1.0 (04.70)
-         
+
          Nokia7110/1.0 (04.71)
-         
+
          Nokia7110/1.0 (04.73)
-         
+
          Nokia7110/1.0 (04.74)
-         
+
          Nokia7110/1.0 (04.76)
-         
+
          Nokia7110/1.0 (04.77)
-         
+
          Nokia7110/1.0 (04.80)
-         
+
          Nokia7110/1.0 (30.05)
-         
+
          Nokia7110/1.0
-   
+
    HTTP\_USER\_AGENT (continued)
          PLM's WapBrowser
-         
+
          QWAPPER/1.0
-         
+
          R380 2.0 WAP1.1
-         
+
          SIE-IC35/1.0
-         
+
          SIE-P35/1.0 UP/4.1.2a
-         
+
          SIE-P35/1.0 UP/4.1.2a
-         
+
          UP.Browser/3.01-IG01
-         
+
          UP.Browser/3.01-QC31
-         
+
          UP.Browser/3.02-MC01
-         
+
          UP.Browser/3.02-SY01
-         
+
          UP.Browser/3.1-UPG1
-         
+
          UP.Browser/4.1.2a-XXXX
-         
+
          UPG1 UP/4.0.7
-         
+
          Wapalizer/1.0
-         
+
          Wapalizer/1.1
-         
+
          WapIDE-SDK/2.0; (R320s (Arial))
-         
+
          WAPJAG Virtual WAP
-         
+
          WAPJAG Virtual WAP
-         
+
          WAPman Version 1.1 beta:Build W2000020401
-         
+
          WAPman Version 1.1
-         
+
          Waptor 1.0
-         
+
          WapView 0.00
-         
+
          WapView 0.20371
-         
+
          WapView 0.28
-         
+
          WapView 0.37
-         
+
          WapView 0.46
-         
+
          WapView 0.47
-         
+
          WinWAP 2.2 WML 1.1
-         
+
          wmlb
-         
+
          YourWap/0.91
-         
+
          YourWap/1.16
-         
+
          Zetor
 
 
@@ -1116,22 +1084,16 @@ tested.
 Examples:
 ~~~~~~~~~
 
-These examples will match any IP-address starting with "123":
-
-::
+These examples will match any IP-address starting with "123"::
 
    [IP = 123.*.*.*]
 
-or
-
-::
+or ::
 
    [IP = 123]
 
 These examples will match any IP-address ending with "123" or being
-"192.168.1.34":
-
-::
+"192.168.1.34"::
 
    [IP = *.*.*.123][IP = 192.168.1.34]
 
@@ -1193,7 +1155,7 @@ true, when  *one or more* of its operands are true.
 
    Operator
          Operator:
-   
+
    Function
          Function:
 
@@ -1202,7 +1164,7 @@ true, when  *one or more* of its operands are true.
 
    Operator
          [none]
-   
+
    Function
          Requires an exact match with the value. Since TYPO3 6.0
          comparison with a list of values is possible as well. The
@@ -1214,7 +1176,7 @@ true, when  *one or more* of its operands are true.
 
    Operator
          >
-   
+
    Function
          The hour must be greater than the value.
 
@@ -1223,7 +1185,7 @@ true, when  *one or more* of its operands are true.
 
    Operator
          <
-   
+
    Function
          The hour must be less than the value.
 
@@ -1232,7 +1194,7 @@ true, when  *one or more* of its operands are true.
 
    Operator
          <=
-   
+
    Function
          The hour must be less than or equal to the value.
 
@@ -1241,7 +1203,7 @@ true, when  *one or more* of its operands are true.
 
    Operator
          >=
-   
+
    Function
          The hour must be greater than or equal to the value.
 
@@ -1250,7 +1212,7 @@ true, when  *one or more* of its operands are true.
 
    Operator
          !=
-   
+
    Function
          The hour must be not equal to the value. Since TYPO3 6.0
          comparison with a list of values is possible as well. The
@@ -1265,27 +1227,19 @@ Examples:
 ~~~~~~~~~
 
 This will match, if it is between 9 and 10 o'clock (according to the
-server time):
-
-::
+server time)::
 
    [hour = 9]
 
-This will match, if it is not between 8 and 11 o'clock:
-
-::
+This will match, if it is not between 8 and 11 o'clock::
 
    [hour = != 8|9|10]
 
-This will match, if it is before 7 o'clock:
-
-::
+This will match, if it is before 7 o'clock::
 
    [hour = < 7]
 
-This will match, if it is before 15 o'clock:
-
-::
+This will match, if it is before 15 o'clock::
 
    [hour = <= 14]
 
@@ -1293,22 +1247,16 @@ The following examples will demonstrate the usage of the comma inside
 the condition:
 
 This will match, if it is between 8 and 9 o'clock (the hour equals 8)
-or after 16 o'clock (the hour is bigger than or equal to 16):
-
-::
+or after 16 o'clock (the hour is bigger than or equal to 16)::
 
    [hour = 8, >= 16]
 
 This will match between 16 and 8 o'clock (remember that the comma acts
-as an OR):
-
-::
+as an OR)::
 
    [hour = > 15, < 8]
 
-In contrast a condition matching for 8 until 16 o'clock would be:
-
-::
+In contrast a condition matching for 8 until 16 o'clock would be::
 
    [hour = > 7] && [hour = < 16]
 
@@ -1480,16 +1428,12 @@ The values must either exists in the grouplist OR the value must be a
 Example:
 ~~~~~~~~
 
-This matches all logins:
-
-::
+This matches all logins::
 
    [usergroup = *]
 
 This matches logins from users members of groups with uid's 1 and/or
-2:
-
-::
+2::
 
    [usergroup = 1,2]
 
@@ -1517,9 +1461,7 @@ Example:
 ~~~~~~~~
 
 This matches any login (use this instead of "[usergroup = \*]" to
-match when a user is logged in!):
-
-::
+match when a user is logged in!)::
 
    [loginUser = *]
 
@@ -1529,9 +1471,7 @@ Additionally it is possible to check if no FE user is logged in.
 Example:
 ~~~~~~~~
 
-This matches when no user is logged in:
-
-::
+This matches when no user is logged in::
 
    [loginUser = ]
 
@@ -1559,9 +1499,7 @@ condition is usable in both frontend and backend.
 Example:
 ~~~~~~~~
 
-This condition matches, if the layout field is set to 1:
-
-::
+This condition matches, if the layout field is set to 1::
 
    [page|layout = 1]
 
@@ -1590,9 +1528,7 @@ Example:
 ~~~~~~~~
 
 This changes something with the template, if the page viewed is on
-level either level 0 (basic) or on level 2
-
-::
+level either level 0 (basic) or on level 2 ::
 
    [treeLevel = 0,2]
 
@@ -1620,9 +1556,7 @@ Example:
 ~~~~~~~~
 
 This changes something with the template, if the page viewed is or is
-a subpage to page 34 or page 36
-
-::
+a subpage to page 34 or page 36 ::
 
    [PIDinRootline = 34,36]
 
@@ -1700,7 +1634,7 @@ operands are true.
 
    Operator
          Operator:
-   
+
    Function
          Function:
 
@@ -1709,7 +1643,7 @@ operands are true.
 
    Operator
          =
-   
+
    Function
          Requires an exact match with the value. Since TYPO3 6.0
          comparison with a list of values is possible as well. The
@@ -1721,7 +1655,7 @@ operands are true.
 
    Operator
          >
-   
+
    Function
          The var must be greater than the value.
 
@@ -1730,7 +1664,7 @@ operands are true.
 
    Operator
          <
-   
+
    Function
          The var must be less than the value.
 
@@ -1739,7 +1673,7 @@ operands are true.
 
    Operator
          <=
-   
+
    Function
          The var must be less than or equal to the value.
 
@@ -1748,7 +1682,7 @@ operands are true.
 
    Operator
          >=
-   
+
    Function
          The var mast be greater than or equal to the value.
 
@@ -1757,7 +1691,7 @@ operands are true.
 
    Operator
          !=
-   
+
    Function
          The var must be not equal to the value. Since TYPO3 6.0
          comparison with a list of values is possible as well. The
@@ -1771,60 +1705,42 @@ operands are true.
 Examples:
 ~~~~~~~~~
 
-This will match with a URL like "...&print=1":
-
-::
+This will match with a URL like "...&print=1"::
 
    [globalVar = GP:print > 0]
 
-This will match, if the page-id is equal to either 10, 12 or 15:
-
-::
+This will match, if the page-id is equal to either 10, 12 or 15::
 
    [globalVar = TSFE:id = 10|12|15]
 
-This will match, if the page-id is not equal to 10, 12 and 15:
-
-::
+This will match, if the page-id is not equal to 10, 12 and 15::
 
    [globalVar = TSFE:id != 10|12|15]
 
-This will match, if the page-id is higher than or equal to 10:
+This will match, if the page-id is higher than or equal to 10::
 
-::
+   [globalVar = TSFE:id >= 10]
 
-   [globalVar = TSFE:id >= 10] 
+This will match, if the page-id is not equal to 316::
 
-This will match, if the page-id is not equal to 316:
+   [globalVar = TSFE:id != 316]
 
-::
-
-   [globalVar = TSFE:id != 316] 
-
-This will match the non-existing GET/POST variable "style":
-
-::
+This will match the non-existing GET/POST variable "style"::
 
    [globalVar = GP:style = ]
 
 This will match, if the GET/POST variable "L" equals 8 or the GET/POST
-variable "M" equals 2 or both:
-
-::
+variable "M" equals 2 or both::
 
    [globalVar = GP:L = 8, GP:M = 2]
 
 This will match with the pages having the layout field set to "Layout
-1":
-
-::
+1"::
 
    [globalVar = TSFE:page|layout = 1]
 
 If the constant {$constant\_to\_turnSomethingOn} is "1" then this
-matches:
-
-::
+matches::
 
    [globalVar = LIT:1 = {$constant_to_turnSomethingOn}]
 
@@ -1853,15 +1769,11 @@ style regular expression (must be wrapped in "/") to the value.
 Examples:
 ~~~~~~~~~
 
-If the HTTP\_HOST is "www.typo3.com" this will match with:
-
-::
+If the HTTP\_HOST is "www.typo3.com" this will match with::
 
    [globalString = IENV:HTTP_HOST = www.typo3.com]
 
-This will also match with it:
-
-::
+This will also match with it::
 
    [globalString = IENV:HTTP_HOST = *typo3.com]
 
@@ -1908,15 +1820,11 @@ getenv() which is NOT always the same on all systems!
 Examples:
 ~~~~~~~~~
 
-This will match with a remote-addr beginning with "192.168."
-
-::
+This will match with a remote-addr beginning with "192.168." ::
 
    [globalString = IENV:REMOTE_ADDR = 192.168.*]
 
-This will match with the user whose username is "test":
-
-::
+This will match with the user whose username is "test"::
 
    [globalString = TSFE:fe_user|user|username = test]
 
@@ -1945,9 +1853,7 @@ Example:
 ~~~~~~~~
 
 Put this function in your AdditionalConfiguration.php
-(localconf.php) file:
-
-::
+(localconf.php) file::
 
    function user_match($cmd) {
            switch($cmd) {
@@ -1963,9 +1869,7 @@ Put this function in your AdditionalConfiguration.php
    }
 
 This condition will return true if the remote address contains
-"192.168" - which is what your function finds out.
-
-::
+"192.168" - which is what your function finds out. ::
 
    [userFunc = user_match(checkLocalIP)]
 

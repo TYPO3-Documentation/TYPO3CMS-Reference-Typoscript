@@ -1,18 +1,10 @@
-﻿.. include:: Images.txt
-
 .. ==================================================
 .. FOR YOUR INFORMATION
 .. --------------------------------------------------
 .. -*- coding: utf-8 -*- with BOM.
 
-.. ==================================================
-.. DEFINE SOME TEXTROLES
-.. --------------------------------------------------
-.. role::   underline
-.. role::   typoscript(code)
-.. role::   ts(typoscript)
-   :class:  typoscript
-.. role::   php(code)
+.. include:: ../../Includes.txt
+.. include:: Images.txt
 
 
 FLUIDTEMPLATE
@@ -34,13 +26,13 @@ work.
 
    Property
          Property:
-   
+
    Data type
          Data type:
-   
+
    Description
          Description:
-   
+
    Default
          Default:
 
@@ -49,13 +41,13 @@ work.
 
    Property
          file
-   
+
    Data type
          string /stdWrap
-   
+
    Description
          The fluid template file.
-   
+
    Default
 
 
@@ -63,14 +55,14 @@ work.
 
    Property
          layoutRootPath
-   
+
    Data type
          filepath /stdWrap
-   
+
    Description
          Sets a specific layout path; usually it is Layouts/ underneath the
          template file.
-   
+
    Default
 
 
@@ -78,14 +70,14 @@ work.
 
    Property
          partialRootPath
-   
+
    Data type
          filepath /stdWrap
-   
+
    Description
          Sets a specific partials path; usually it is Partials/ underneath the
          template file.
-   
+
    Default
 
 
@@ -93,13 +85,13 @@ work.
 
    Property
          format
-   
+
    Data type
          keyword /stdWrap
-   
+
    Description
          Sets the format of the current request.
-   
+
    Default
          html
 
@@ -108,13 +100,13 @@ work.
 
    Property
          extbase.pluginName
-   
+
    Data type
          string /stdWrap
-   
+
    Description
          Sets variables for initializing extbase.
-   
+
    Default
 
 
@@ -122,13 +114,13 @@ work.
 
    Property
          extbase.controllerExtensionName
-   
+
    Data type
          string /stdWrap
-   
+
    Description
          Sets the extension name of the controller.
-   
+
    Default
 
 
@@ -136,13 +128,13 @@ work.
 
    Property
          extbase.controllerName
-   
+
    Data type
          string /stdWrap
-   
+
    Description
          Sets the name of the controller.
-   
+
    Default
 
 
@@ -150,13 +142,13 @@ work.
 
    Property
          extbase.controllerActionName
-   
+
    Data type
          string /stdWrap
-   
+
    Description
          Sets the name of the action.
-   
+
    Default
 
 
@@ -164,19 +156,19 @@ work.
 
    Property
          variables
-   
+
    Data type
          *Array... of*
-         
+
          cObjects
-   
+
    Description
          Sets variables that should be available in the fluid template. The
          keys are the variable names in Fluid.
-         
+
          Reserved variables are "data" and "current", which are filled
          automatically with the current data set.
-   
+
    Default
 
 
@@ -184,13 +176,13 @@ work.
 
    Property
          stdWrap
-   
+
    Data type
          ->stdWrap
-   
+
    Description
-   
-   
+
+
    Default
 
 
@@ -206,17 +198,13 @@ Example:
 ~~~~~~~~
 
 The Fluid template (in fileadmin/templates/MyTemplate.html) could look
-like this:
-
-::
+like this::
 
    <h1>{data.title}<f:if condition="{data.subtitle}">, {data.subtitle}</f:if></h1>
    <h3>{mylabel}</h3>
    <f:format.html>{data.bodytext}</f:format.html>
 
-You could use it with a TypoScript code like this:
-
-::
+You could use it with a TypoScript code like this::
 
    page = PAGE
    page.10 = FLUIDTEMPLATE

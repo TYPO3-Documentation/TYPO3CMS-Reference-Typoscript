@@ -1,18 +1,9 @@
-﻿
-
 .. ==================================================
 .. FOR YOUR INFORMATION
 .. --------------------------------------------------
 .. -*- coding: utf-8 -*- with BOM.
 
-.. ==================================================
-.. DEFINE SOME TEXTROLES
-.. --------------------------------------------------
-.. role::   underline
-.. role::   typoscript(code)
-.. role::   ts(typoscript)
-   :class:  typoscript
-.. role::   php(code)
+.. include:: ../../Includes.txt
 
 
 numRows
@@ -27,13 +18,13 @@ This object returns the number of rows.
 
    Property
          Property:
-   
+
    Data type
          Data type:
-   
+
    Description
          Description:
-   
+
    Default
          Default:
 
@@ -42,13 +33,13 @@ This object returns the number of rows.
 
    Property
          table
-   
+
    Data type
          Table name
-   
+
    Description
-   
-   
+
+
    Default
 
 
@@ -56,15 +47,15 @@ This object returns the number of rows.
 
    Property
          select
-   
+
    Data type
          ->select
-   
+
    Description
          Select query for the operation.
-         
+
          The property "selectFields" is overridden internally with "count(\*)".
-   
+
    Default
 
 

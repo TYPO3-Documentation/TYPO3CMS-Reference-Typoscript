@@ -1,18 +1,9 @@
-﻿
-
 .. ==================================================
 .. FOR YOUR INFORMATION
 .. --------------------------------------------------
 .. -*- coding: utf-8 -*- with BOM.
 
-.. ==================================================
-.. DEFINE SOME TEXTROLES
-.. --------------------------------------------------
-.. role::   underline
-.. role::   typoscript(code)
-.. role::   ts(typoscript)
-   :class:  typoscript
-.. role::   php(code)
+.. include:: ../../Includes.txt
 
 
 if
@@ -31,13 +22,13 @@ The returned value may still be negated by the ".negate"-property.
 
    Property
          Property:
-   
+
    Data type
          Data type:
-   
+
    Description
          Description:
-   
+
    Default
          Default:
 
@@ -46,13 +37,13 @@ The returned value may still be negated by the ".negate"-property.
 
    Property
          isTrue
-   
+
    Data type
          str /stdWrap
-   
+
    Description
          If the content is "true".... (not empty string and not zero)
-   
+
    Default
 
 
@@ -60,13 +51,13 @@ The returned value may still be negated by the ".negate"-property.
 
    Property
          isFalse
-   
+
    Data type
          str /stdWrap
-   
+
    Description
          If the content is "false"... (empty or zero)
-   
+
    Default
 
 
@@ -74,15 +65,15 @@ The returned value may still be negated by the ".negate"-property.
 
    Property
          isPositive
-   
+
    Data type
          int /stdWrap
-         
+
          \+ calc
-   
+
    Description
          returns false if content is not positive
-   
+
    Default
 
 
@@ -90,13 +81,13 @@ The returned value may still be negated by the ".negate"-property.
 
    Property
          isGreaterThan
-   
+
    Data type
          value /stdWrap
-   
+
    Description
          returns false if content is not greater than ".value"
-   
+
    Default
 
 
@@ -104,13 +95,13 @@ The returned value may still be negated by the ".negate"-property.
 
    Property
          isLessThan
-   
+
    Data type
          value /stdWrap
-   
+
    Description
          returns false if content is not less than ".value"
-   
+
    Default
 
 
@@ -118,13 +109,13 @@ The returned value may still be negated by the ".negate"-property.
 
    Property
          equals
-   
+
    Data type
          value /stdWrap
-   
+
    Description
          returns false if content does not equal ".value"
-   
+
    Default
 
 
@@ -132,15 +123,15 @@ The returned value may still be negated by the ".negate"-property.
 
    Property
          isInList
-   
+
    Data type
          value /stdWrap
-   
+
    Description
          returns false if content is not in the comma-separated list ".value".
-         
+
          The list in ".value" may not have spaces between elements!!
-   
+
    Default
 
 
@@ -148,13 +139,13 @@ The returned value may still be negated by the ".negate"-property.
 
    Property
          value
-   
+
    Data type
          value /stdWrap
-   
+
    Description
          "value" (the comparison value mentioned above)
-   
+
    Default
 
 
@@ -162,14 +153,14 @@ The returned value may still be negated by the ".negate"-property.
 
    Property
          negate
-   
+
    Data type
          boolean
-   
+
    Description
          This negates the result just before it exits. So if anything above
          returns true the overall returns ends up returning false!!
-   
+
    Default
 
 
@@ -177,14 +168,14 @@ The returned value may still be negated by the ".negate"-property.
 
    Property
          directReturn
-   
+
    Data type
          boolean
-   
+
    Description
          If this property exists the true/false of this value is returned.
          Could be used to set true/false by TypoScript constant
-   
+
    Default
 
 
@@ -211,9 +202,7 @@ depends on the properties of this function. Say if you set "isTrue =
 function returns true if the field "header" in $cObj->data is set!
 
 If you want to compare values, you must load a base-value in the
-".value"-property. Example:
-
-::
+".value"-property. Example::
 
    .value = 10
    .isGreaterThan = 11
@@ -221,9 +210,7 @@ If you want to compare values, you must load a base-value in the
 This would return true because the value of ".isGreaterThan" is
 greater than 10, which is the base-value.
 
-More complex is this:
-
-::
+More complex is this::
 
    .value = 10
    .isGreaterThan = 11
@@ -239,9 +226,7 @@ Example:
 ~~~~~~~~
 
 This is a GIFBUILDER object that will write "NEW" on a menu-item if
-the field "newUntil" has a date less than the current date!
-
-::
+the field "newUntil" has a date less than the current date! ::
 
    ...
      30 = TEXT

@@ -1,18 +1,9 @@
-﻿
-
 .. ==================================================
 .. FOR YOUR INFORMATION
 .. --------------------------------------------------
 .. -*- coding: utf-8 -*- with BOM.
 
-.. ==================================================
-.. DEFINE SOME TEXTROLES
-.. --------------------------------------------------
-.. role::   underline
-.. role::   typoscript(code)
-.. role::   ts(typoscript)
-   :class:  typoscript
-.. role::   php(code)
+.. include:: ../../Includes.txt
 
 
 JSMENU
@@ -24,13 +15,13 @@ JSMENU
 
    Property
          Property:
-   
+
    Data type
          Data type:
-   
+
    Description
          Description:
-   
+
    Default
          Default:
 
@@ -39,13 +30,13 @@ JSMENU
 
    Property
          levels
-   
+
    Data type
          int, 1-5
-   
+
    Description
          How many levels there are
-   
+
    Default
          1
 
@@ -54,16 +45,16 @@ JSMENU
 
    Property
          menuName
-   
+
    Data type
          string
-   
+
    Description
          JavaScript menu name.
-         
+
          If you have more than one JSMENU on the page, you should set this
          value for each one.
-   
+
    Default
 
 
@@ -71,13 +62,13 @@ JSMENU
 
    Property
          target
-   
+
    Data type
          target
-   
+
    Description
          Decides target of the menu-links
-   
+
    Default
 
 
@@ -85,14 +76,14 @@ JSMENU
 
    Property
          forceTypeValue
-   
+
    Data type
          int
-   
+
    Description
          If set, the &type parameter of the link is forced to this value
          regardless of target.
-   
+
    Default
 
 
@@ -100,13 +91,13 @@ JSMENU
 
    Property
          1,2,3,4...
-   
+
    Data type
          JSMENUITEM
-   
+
    Description
          levels-config
-   
+
    Default
 
 
@@ -114,13 +105,13 @@ JSMENU
 
    Property
          wrap
-   
+
    Data type
          wrap
-   
+
    Description
          wrap around the selector-boxes
-   
+
    Default
 
 
@@ -128,13 +119,13 @@ JSMENU
 
    Property
          wrapAfterTags
-   
+
    Data type
          wrap
-   
+
    Description
          wrap around the selector-boxes with wrap and form-tags og JS-code.
-   
+
    Default
 
 
@@ -142,14 +133,14 @@ JSMENU
 
    Property
          firstLabelGeneral
-   
+
    Data type
          string
-   
+
    Description
          General first label. May be overridden by the one set in each
          JSMENUITEM
-   
+
    Default
 
 
@@ -157,13 +148,13 @@ JSMENU
 
    Property
          SPC
-   
+
    Data type
          boolean
-   
+
    Description
          If set, spacer can go into the menu, else not.
-   
+
    Default
 
 

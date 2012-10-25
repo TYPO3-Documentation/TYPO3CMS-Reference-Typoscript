@@ -1,18 +1,9 @@
-﻿
-
 .. ==================================================
 .. FOR YOUR INFORMATION
 .. --------------------------------------------------
 .. -*- coding: utf-8 -*- with BOM.
 
-.. ==================================================
-.. DEFINE SOME TEXTROLES
-.. --------------------------------------------------
-.. role::   underline
-.. role::   typoscript(code)
-.. role::   ts(typoscript)
-   :class:  typoscript
-.. role::   php(code)
+.. include:: ../../Includes.txt
 
 
 SEARCHRESULT
@@ -45,13 +36,13 @@ SEARCHRESULT returns results only from pages with of doktype
 
    Property
          Property:
-   
+
    Data type
          Data type:
-   
+
    Description
          Description:
-   
+
    Default
          Default:
 
@@ -60,19 +51,17 @@ SEARCHRESULT returns results only from pages with of doktype
 
    Property
          allowedCols
-   
+
    Data type
          string
-   
+
    Description
          List (separated by ":") of allowed table-cols.
-         
-         **Example:**
-         
-         ::
-         
+
+         **Example:** ::
+
             pages.title:tt_content.bodytext
-   
+
    Default
 
 
@@ -80,26 +69,24 @@ SEARCHRESULT returns results only from pages with of doktype
 
    Property
          layout
-   
+
    Data type
          string
-   
+
    Description
          This defines how the search content is shown.
-         
+
          **Example:**
-         
-         This substitutes the following fields:
-         
-         ::
-         
+
+         This substitutes the following fields::
+
             ###RANGELOW###:        The low result range, eg. "1"
             ###RANGEHIGH###:        The high result range, eg. "10"
             ###TOTAL###:    The total results
             ###RESULT###:   The result itself
             ###NEXT###:            The next-button
             ###PREV###:             The prev-button
-   
+
    Default
 
 
@@ -107,14 +94,14 @@ SEARCHRESULT returns results only from pages with of doktype
 
    Property
          next
-   
+
    Data type
          cObject
-   
+
    Description
          This cObject will be wrapped by a link to the next search result. This
          is the code substituting the "###NEXT###"-mark
-   
+
    Default
 
 
@@ -122,14 +109,14 @@ SEARCHRESULT returns results only from pages with of doktype
 
    Property
          prev
-   
+
    Data type
          cObject
-   
+
    Description
          This cObject will be wrapped by a link to the prev search result. This
          is the code substituting the "###PREV###"-mark
-   
+
    Default
 
 
@@ -137,13 +124,13 @@ SEARCHRESULT returns results only from pages with of doktype
 
    Property
          target
-   
+
    Data type
          target /stdWrap
-   
+
    Description
          target til next/prev links!
-   
+
    Default
 
 
@@ -151,13 +138,13 @@ SEARCHRESULT returns results only from pages with of doktype
 
    Property
          range
-   
+
    Data type
          integer /stdWrap
-   
+
    Description
          The number of results at a time!
-   
+
    Default
          20
 
@@ -166,24 +153,22 @@ SEARCHRESULT returns results only from pages with of doktype
 
    Property
          renderObj
-   
+
    Data type
          cObject
-   
+
    Description
          The cObject to render the search results
-         
+
          $cObj->data array is set to the resulting record from the search.
-         
+
          Please note, that in all fields are named [tablename]\_[fieldnam].
          Thus the page title is in the field "pages\_title".
-         
-         Apart from this, these fields from the pages-table are also present:
-         
-         ::
-         
+
+         Apart from this, these fields from the pages-table are also present::
+
                    uid
-   
+
    Default
 
 
@@ -191,13 +176,13 @@ SEARCHRESULT returns results only from pages with of doktype
 
    Property
          renderWrap
-   
+
    Data type
          wrap /stdWrap
-   
+
    Description
-   
-   
+
+
    Default
 
 
@@ -205,13 +190,13 @@ SEARCHRESULT returns results only from pages with of doktype
 
    Property
          resultObj
-   
+
    Data type
          cObject
-   
+
    Description
          The cObject prepended in the search results returns rows
-   
+
    Default
 
 
@@ -219,13 +204,13 @@ SEARCHRESULT returns results only from pages with of doktype
 
    Property
          noResultObj
-   
+
    Data type
          cObject
-   
+
    Description
          The cObject used if the search results in no rows.
-   
+
    Default
 
 
@@ -233,14 +218,14 @@ SEARCHRESULT returns results only from pages with of doktype
 
    Property
          noOrderBy
-   
+
    Data type
          boolean /stdWrap
-   
+
    Description
          If this is set, the result is NOT sorted after lastUpdated, tstamp for
          the pages-table.
-   
+
    Default
 
 
@@ -248,13 +233,13 @@ SEARCHRESULT returns results only from pages with of doktype
 
    Property
          wrap
-   
+
    Data type
          wrap /stdWrap
-   
+
    Description
          Wrap the whole content...
-   
+
    Default
 
 
@@ -262,13 +247,13 @@ SEARCHRESULT returns results only from pages with of doktype
 
    Property
          stdWrap
-   
+
    Data type
          ->stdWrap
-   
+
    Description
          Wrap the whole content...
-   
+
    Default
 
 
@@ -276,20 +261,20 @@ SEARCHRESULT returns results only from pages with of doktype
 
    Property
          addExtUrlsAndShortCuts
-   
+
    Data type
          boolean
-   
+
    Description
          If set, then the doktypes 3 and 4 (External URLS and Shortcuts) are
          added to the doktypes being searched.
-         
+
          However at this point in time, no pages will be select if they do not
          have at least one tt\_content record on them! That is because the
          pages and tt\_content (or other) table is joined. So there must at
          least be one occurrence of a tt\_content element on an External URL /
          Shortcut page for them to show up.
-   
+
    Default
 
 
@@ -297,20 +282,18 @@ SEARCHRESULT returns results only from pages with of doktype
 
    Property
          languageField.[2nd table]
-   
+
    Data type
          string
-   
+
    Description
          Setting a field name to filter language on. This works like the
          "languageField" setting in ->select
-         
-         **Example:**
-         
-         ::
-         
+
+         **Example:** ::
+
             languageField.tt_content = sys_language_uid
-   
+
    Default
 
 
@@ -393,9 +376,7 @@ In this case "pagecontent" is chosen as the fields to search. That
 includes  *tt\_content.header* ,  *tt\_content.bodytext* and
 *tt\_content.imagecaption.*
 
-Prefixed to these queries is this:
-
-::
+Prefixed to these queries is this::
 
    SELECT pages.title AS pages_title, pages.subtitle AS pages_subtitle, pages.keywords AS pages_keywords, pages.description AS pages_description, pages.uid, tt_content.header AS tt_content_header, tt_content.bodytext AS tt_content_bodytext, tt_content.imagecaption AS tt_content_imagecaption
    FROM pages, tt_content
@@ -407,19 +388,19 @@ in the website-branch of the pagetree and confines the search to that
 branch and not the whole page-table.
 
 #. ::
-   
+
       ... AND ((tt_content.header LIKE '%menu%' OR tt_content.bodytext LIKE '%menu%' OR tt_content.imagecaption LIKE '%menu%') AND (tt_content.header LIKE '%backend%' OR tt_content.bodytext LIKE '%backend%' OR tt_content.imagecaption LIKE '%backend%')) GROUP BY pages.uid
 
 #. ::
-   
+
       ... AND ((tt_content.header LIKE '%menu backend%' OR tt_content.bodytext LIKE '%menu backend%' OR tt_content.imagecaption LIKE '%menu backend%')) GROUP BY pages.uid
 
 #. ::
-   
+
       ... AND ((tt_content.header LIKE '%menu%' OR tt_content.bodytext LIKE '%menu%' OR tt_content.imagecaption LIKE '%menu%') OR (tt_content.header LIKE '%backend%' OR tt_content.bodytext LIKE '%backend%' OR tt_content.imagecaption LIKE '%backend%')) GROUP BY pages.uid
 
 #. ::
-   
+
       ... AND ((tt_content.header LIKE '%menu%' OR tt_content.bodytext LIKE '%menu%' OR tt_content.imagecaption LIKE '%menu%') OR (tt_content.header LIKE '%backend%' OR tt_content.bodytext LIKE '%backend%' OR tt_content.imagecaption LIKE '%backend%') AND NOT (tt_content.header LIKE '%content%' OR tt_content.bodytext LIKE '%content%' OR tt_content.imagecaption LIKE '%content%')) GROUP BY pages.uid
 
 Notice that upper and lowercase does not matter. Also 'menu' as

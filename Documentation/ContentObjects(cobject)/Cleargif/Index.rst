@@ -1,18 +1,9 @@
-﻿
-
 .. ==================================================
 .. FOR YOUR INFORMATION
 .. --------------------------------------------------
 .. -*- coding: utf-8 -*- with BOM.
 
-.. ==================================================
-.. DEFINE SOME TEXTROLES
-.. --------------------------------------------------
-.. role::   underline
-.. role::   typoscript(code)
-.. role::   ts(typoscript)
-   :class:  typoscript
-.. role::   php(code)
+.. include:: ../../Includes.txt
 
 
 CLEARGIF
@@ -26,13 +17,13 @@ Inserts a transparent gif-file.
 
    Property
          Property:
-   
+
    Data type
          Data type:
-   
+
    Description
          Description:
-   
+
    Default
          Default:
 
@@ -41,13 +32,13 @@ Inserts a transparent gif-file.
 
    Property
          height
-   
+
    Data type
          *<img>-data:height* /stdWrap
-   
+
    Description
          Height of the image.
-   
+
    Default
          1
 
@@ -56,13 +47,13 @@ Inserts a transparent gif-file.
 
    Property
          width
-   
+
    Data type
          *<img>-data:width* /stdWrap
-   
+
    Description
          Width of the image.
-   
+
    Default
          1
 
@@ -71,13 +62,13 @@ Inserts a transparent gif-file.
 
    Property
          wrap
-   
+
    Data type
          wrap /stdWrap
-   
+
    Description
-   
-   
+
+
    Default
          \|<br />
 
@@ -86,13 +77,13 @@ Inserts a transparent gif-file.
 
    Property
          stdWrap
-   
+
    Data type
          ->stdWrap
-   
+
    Description
          (Executed after ".wrap".)
-   
+
    Default
 
 

@@ -1,18 +1,10 @@
-﻿.. include:: Images.txt
-
 .. ==================================================
 .. FOR YOUR INFORMATION
 .. --------------------------------------------------
 .. -*- coding: utf-8 -*- with BOM.
 
-.. ==================================================
-.. DEFINE SOME TEXTROLES
-.. --------------------------------------------------
-.. role::   underline
-.. role::   typoscript(code)
-.. role::   ts(typoscript)
-   :class:  typoscript
-.. role::   php(code)
+.. include:: ../../Includes.txt
+.. include:: Images.txt
 
 
 GMENU\_FOLDOUT
@@ -43,13 +35,13 @@ http://www9.ewebcity.com/skripts/foldoutmenu\_move.htm
 
    Property
          Property:
-   
+
    Data type
          Data type:
-   
+
    Description
          Description:
-   
+
    Default
          Default:
 
@@ -58,14 +50,14 @@ http://www9.ewebcity.com/skripts/foldoutmenu\_move.htm
 
    Property
          dontLinkIfSubmenu
-   
+
    Data type
          boolean
-   
+
    Description
          If set, items that has a submenu is not linked. Items without a
          submenu are always linked in the regular ways.
-   
+
    Default
 
 
@@ -73,13 +65,13 @@ http://www9.ewebcity.com/skripts/foldoutmenu\_move.htm
 
    Property
          foldTimer
-   
+
    Data type
          int
-   
+
    Description
          The timeout in the animation, these are milliseconds.
-   
+
    Default
          40
 
@@ -88,13 +80,13 @@ http://www9.ewebcity.com/skripts/foldoutmenu\_move.htm
 
    Property
          foldSpeed
-   
+
    Data type
          int, range 1-100
-   
+
    Description
          How many steps in an animation? Choose 1 for no animation.
-   
+
    Default
          1
 
@@ -103,13 +95,13 @@ http://www9.ewebcity.com/skripts/foldoutmenu\_move.htm
 
    Property
          stayFolded
-   
+
    Data type
          boolean
-   
+
    Description
          Stay open when you click a new toplink? (Level 1)
-   
+
    Default
 
 
@@ -117,15 +109,15 @@ http://www9.ewebcity.com/skripts/foldoutmenu\_move.htm
 
    Property
          bottomHeight
-   
+
    Data type
          int, pixels
-   
+
    Description
          Sets the height of the bottom layer. Is important if the bottom layer
          contains either content or a background color: Else the layer will be
          clipped.
-   
+
    Default
          100
 
@@ -134,15 +126,15 @@ http://www9.ewebcity.com/skripts/foldoutmenu\_move.htm
 
    Property
          menuWidth
-   
+
    Data type
          int, pixels
-   
+
    Description
          Width of the whole menu main layer. Important to set, especially for
          the bottom layer as it is clipped by this value. Always try to set
          this to the width in pixels of the menu.
-   
+
    Default
          170
 
@@ -151,13 +143,13 @@ http://www9.ewebcity.com/skripts/foldoutmenu\_move.htm
 
    Property
          menuHeight
-   
+
    Data type
          int
-   
+
    Description
          Height of the whole menu layer. Seems not to be not that important.
-   
+
    Default
          400
 
@@ -166,15 +158,15 @@ http://www9.ewebcity.com/skripts/foldoutmenu\_move.htm
 
    Property
          subMenuOffset
-   
+
    Data type
          x,y
-   
+
    Description
          Offset of the submenu for each menu item. This is important because if
          you don't set this value the items will appear on top of their
          "parent".
-   
+
    Default
 
 
@@ -182,13 +174,13 @@ http://www9.ewebcity.com/skripts/foldoutmenu\_move.htm
 
    Property
          menuOffset
-   
+
    Data type
          x,y
-   
+
    Description
          Offset of the menu main layer on the page. From upper left corner
-   
+
    Default
 
 
@@ -196,15 +188,15 @@ http://www9.ewebcity.com/skripts/foldoutmenu\_move.htm
 
    Property
          menuBackColor
-   
+
    Data type
          HTML-color
-   
+
    Description
          Background color behind menu. If not set, transparent (which will not
          work very well in case .foldSpeed is set to something else than 1. But
          see for yourself)
-   
+
    Default
 
 
@@ -212,25 +204,25 @@ http://www9.ewebcity.com/skripts/foldoutmenu\_move.htm
 
    Property
          dontWrapInTable
-   
+
    Data type
          boolean
-   
+
    Description
          By default every menu item on the first level is wrapped in a table:
-         
+
          <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0><TR><TD>
-         
+
          [menu item HTML here..]
-         
+
          </TD></TR></TABLE>
-         
+
          Doing this ensures that the layers renders equally in the supported
          browsers. However you might need to disable that which is what you can
          do by setting this flag.
-         
+
          **Note:** Using <TBODY> in this tables seems to break Netscape 4+
-   
+
    Default
          0
 
@@ -239,13 +231,13 @@ http://www9.ewebcity.com/skripts/foldoutmenu\_move.htm
 
    Property
          bottomContent
-   
+
    Data type
          cObject
-   
+
    Description
          Content for the bottom layer that covers the end of the menu.
-   
+
    Default
 
 
@@ -253,23 +245,21 @@ http://www9.ewebcity.com/skripts/foldoutmenu\_move.htm
 
    Property
          adjustItemsH
-   
+
    Data type
          int
-   
+
    Description
          Adjusts the height calculation of the menulayers of the first level
          (called Top)
-         
-         **Example:**
-         
-         ::
-         
+
+         **Example:** ::
+
             -10
-         
+
          This value will substract 10 pixels from the height of the layer in
          calculations.
-   
+
    Default
 
 
@@ -277,16 +267,16 @@ http://www9.ewebcity.com/skripts/foldoutmenu\_move.htm
 
    Property
          adjustSubItemsH
-   
+
    Data type
          int
-   
+
    Description
          Adjusts the height calculation of the menu layers of the second level
          (subitems, called Sub)
-         
+
          See above
-   
+
    Default
 
 
@@ -294,23 +284,23 @@ http://www9.ewebcity.com/skripts/foldoutmenu\_move.htm
 
    Property
          arrowNO
-         
+
          arrowACT
-   
+
    Data type
          imgResource
-   
+
    Description
          If both arrowNO and arrowACT is defined and valid imgResources then
          these images are use as "traditional arrows" that indicates whether an
          item is expanded (active) or not.
-         
+
          NO is normal, ACT is expanded
-         
+
          The image is inserted just before the menu item. If you want to change
          the position, put the marker ###ARROW\_IMAGE### into the wrap of the
          item and the image will be put there instead.
-   
+
    Default
 
 
@@ -318,19 +308,17 @@ http://www9.ewebcity.com/skripts/foldoutmenu\_move.htm
 
    Property
          arrowImgParams
-   
+
    Data type
          <img> params
-   
+
    Description
          Parameters to the arrow-image.
-         
-         **Example:**
-         
-         ::
-         
+
+         **Example:** ::
+
             hspace=5 vspace=7
-   
+
    Default
 
 
@@ -338,13 +326,13 @@ http://www9.ewebcity.com/skripts/foldoutmenu\_move.htm
 
    Property
          displayActiveOnLoad
-   
+
    Data type
          boolean
-   
+
    Description
          If set, the active menu items will fold out "onLoad".
-   
+
    Default
 
 
@@ -363,7 +351,7 @@ Example:
 
    ## GMENU_FOLDOUT
    includeLibs.gmenu_foldout = typo3/sysext/statictemplates/media/scripts/gmenu_foldout.php
-   
+
    temp.foldoutMenu = HMENU
    temp.foldoutMenu.1 = GMENU_FOLDOUT
    temp.foldoutMenu.1.expAll = 1
@@ -371,7 +359,7 @@ Example:
      wrap = | <br>
      XY = 150,20
      backColor = silver
-   
+
      10 = TEXT
      10.text.field = title
      10.fontSize = 12
@@ -397,18 +385,16 @@ Example:
      menuBackColor = silver
      bottomBackColor = silver
      menuWidth = 170
-     
+
      arrowNO = typo3/sysext/statictemplates/media/bullets/arrow_no.gif
      arrowACT = typo3/sysext/statictemplates/media/bullets/arrow_act.gif
      arrowImgParams = hspace=4 align=top
-   
+
      bottomContent = TEXT
      bottomContent.value = Hello World! Here is some content!
    }
 
-|img-12| This creates a menu like this (above). One important point is the line
-
-::
+|img-12| This creates a menu like this (above). One important point is the line ::
 
    temp.foldoutMenu.1.expAll = 1
 

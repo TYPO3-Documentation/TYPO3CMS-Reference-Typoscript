@@ -1,18 +1,9 @@
-﻿
-
 .. ==================================================
 .. FOR YOUR INFORMATION
 .. --------------------------------------------------
 .. -*- coding: utf-8 -*- with BOM.
 
-.. ==================================================
-.. DEFINE SOME TEXTROLES
-.. --------------------------------------------------
-.. role::   underline
-.. role::   typoscript(code)
-.. role::   ts(typoscript)
-   :class:  typoscript
-.. role::   php(code)
+.. include:: ../../Includes.txt
 
 
 round
@@ -32,13 +23,13 @@ selected round method.
 
    Property
          Property:
-   
+
    Data type
          Data type:
-   
+
    Description
          Description:
-   
+
    Default
          Default:
 
@@ -47,21 +38,21 @@ selected round method.
 
    Property
          roundType
-   
+
    Data type
          string /stdWrap
-   
+
    Description
          Round method which should be used.
-         
+
          Possible keywords:
-         
+
          \-  **ceil** : Round the value up to the next integer.
-         
+
          \-  **floor** : Round the value down to the previous integer.
-         
+
          \-  **round** : Round the value to the specified number of decimals.
-   
+
    Default
          round
 
@@ -70,15 +61,15 @@ selected round method.
 
    Property
          decimals
-   
+
    Data type
          integer /stdWrap
-   
+
    Description
          Number of decimals the rounded value will have. Only used with the
          roundType "round". Defaults to 0, so that your input will in that case
          be rounded up or down to the next integer.
-   
+
    Default
          0
 

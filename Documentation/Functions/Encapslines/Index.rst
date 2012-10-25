@@ -1,18 +1,9 @@
-﻿
-
 .. ==================================================
 .. FOR YOUR INFORMATION
 .. --------------------------------------------------
 .. -*- coding: utf-8 -*- with BOM.
 
-.. ==================================================
-.. DEFINE SOME TEXTROLES
-.. --------------------------------------------------
-.. role::   underline
-.. role::   typoscript(code)
-.. role::   ts(typoscript)
-   :class:  typoscript
-.. role::   php(code)
+.. include:: ../../Includes.txt
 
 
 encapsLines
@@ -24,13 +15,13 @@ encapsLines
 
    Property
          Property:
-   
+
    Data type
          Data type:
-   
+
    Description
          Description:
-   
+
    Default
          Default:
 
@@ -39,29 +30,25 @@ encapsLines
 
    Property
          encapsTagList
-   
+
    Data type
          list of strings
-   
+
    Description
          List of tags which qualify as encapsulating tags. Must be lowercase.
-         
-         **Example:**
-         
-         ::
-         
+
+         **Example:** ::
+
             encapsTagList = div, p
-         
-         This setting will recognize the red line below as encapsulated lines:
-         
-         ::
-         
+
+         This setting will recognize the red line below as encapsulated lines::
+
             First line of text
             Some <div>text</div>
             <p>Some text</p>
             <div>Some text</div>
             <B>Some text</B>
-   
+
    Default
 
 
@@ -69,30 +56,26 @@ encapsLines
 
    Property
          remapTag.[ *tagname* ]
-   
+
    Data type
          string
-   
+
    Description
          Enter a new tag name here if you wish the tagname of any encapsulation
          to be unified to a single tag name.
-         
-         For instance, setting this value to "remapTags.P=DIV" would convert:
-         
-         ::
-         
+
+         For instance, setting this value to "remapTags.P=DIV" would convert::
+
             <p>Some text</p>
             <div>Some text</div>
-         
-         to
-         
-         ::
-         
+
+         to ::
+
             <div>Some text</div>
             <div>Some text</div>
-         
+
          ([ *tagname* ] is in uppercase.)
-   
+
    Default
 
 
@@ -100,36 +83,32 @@ encapsLines
 
    Property
          addAttributes.[ *tagname* ]
-   
+
    Data type
          array of strings
-   
+
    Description
          Attributes to set in the encapsulation tag.
-         
-         **Example:**
-         
-         ::
-         
+
+         **Example:** ::
+
             addAttributes.P {
               style=padding-bottom:0px; margin-top:1px; margin-bottom:1px;
               align=center
             }
-         
-         ([ *tagname* ] is in uppercase.)
-         
-         ::
-         
-            .setOnly = 
-         
+
+         ([ *tagname* ] is in uppercase.) ::
+
+            .setOnly =
+
          exists : This will set the value ONLY if the property does not already
          exist
-         
+
          blank : This will set the value ONLY if the property does not already
          exist OR is blank ("")
-         
+
          Default is to always override/set the attributes value.
-   
+
    Default
 
 
@@ -137,33 +116,29 @@ encapsLines
 
    Property
          removeWrapping
-   
+
    Data type
          boolean
-   
+
    Description
          If set, then all existing wrapping will be removed.
-         
-         This:
-         
-         ::
-         
+
+         This::
+
             First line of text
             Some <div>text</div>
             <p>Some text</p>
             <div>Some text</div>
             <B>Some text</B>
-         
-         becomes this:
-         
-         ::
-         
+
+         becomes this::
+
             First line of text
             Some <div>text</div>
             Some text
             Some text
             <B>Some text</B>
-   
+
    Default
 
 
@@ -171,33 +146,27 @@ encapsLines
 
    Property
          wrapNonWrappedLines
-   
+
    Data type
          wrap
-   
+
    Description
          Wrapping for non-encapsulated lines
-         
-         **Example:**
-         
-         ::
-         
+
+         **Example:** ::
+
             .wrapNonWrappedLines = <P>|</P>
-         
-         This:
-         
-         ::
-         
+
+         This::
+
             First line of text
             <p>Some text</p>
-         
-         becomes this:
-         
-         ::
-         
+
+         becomes this::
+
             <P>First line of text</P>
             <p>Some text</p>
-   
+
    Default
 
 
@@ -205,14 +174,14 @@ encapsLines
 
    Property
          innerStdWrap\_all
-   
+
    Data type
          ->stdWrap
-   
+
    Description
          Wraps the content inside all lines, whether they are encapsulated or
          not.
-   
+
    Default
 
 
@@ -220,15 +189,15 @@ encapsLines
 
    Property
          encapsLinesStdWrap.[ *tagname* ]
-   
+
    Data type
          ->stdWrap
-   
+
    Description
          Wraps the content inside all encapsulated lines.
-         
+
          ([ *tagname* ] is in uppercase.)
-   
+
    Default
 
 
@@ -236,15 +205,15 @@ encapsLines
 
    Property
          defaultAlign
-   
+
    Data type
          string /stdWrap
-   
+
    Description
          If set, this value is set as the default "align" value of the wrapping
          tags, both from .encapsTagList, .bypassEncapsTagList and
          .nonWrappedTag
-   
+
    Default
 
 
@@ -252,17 +221,17 @@ encapsLines
 
    Property
          nonWrappedTag
-   
+
    Data type
          tagname
-   
+
    Description
          For all non-wrapped lines, you can set here which tag it should be
          wrapped in. Example would be "P". This is an alternative to
          .wrapNonWrappedLines and has the advantage that it's attributes are
          set by .addAttributes as well as defaultAlign. Thus you can easier
          match the wrapping tags used for non-wrapped and wrapped lines.
-   
+
    Default
 
 
@@ -289,24 +258,20 @@ Example:
 This example shows how to handle content rendered by TYPO3 and
 stylesheets where the <P> tag is used to encapsulate each line.
 
-Say, you have made this content with the Rich Text Editor:
+Say, you have made this content with the Rich Text Editor::
 
-::
+   This is line # 1
 
-   This is line # 1 
-   
-   [Above is an empty line!] 
+   [Above is an empty line!]
    <DIV align=right>This line is right-aligned</DIV>
 
 After being processed by encapsLines with the above configuration, the
-content looks like this:
-
-::
+content looks like this::
 
    <P>This is line # 1 </P>
    <P>&nbsp;</P>
    <P>[Above is an empty line!] </P>
-   <P align="right">This line is right-aligned</P> 
+   <P align="right">This line is right-aligned</P>
 
 Each line is nicely wrapped with <P> tags. The line from the database
 which was  *already* wrapped (but in <DIV>-tags) has been converted to
@@ -332,7 +297,7 @@ Example:
      encapsTagList = div,p
      remapTag.DIV = P
      wrapNonWrappedLines = <P style="margin:0 0 0;">|</P>
-   
+
      # Forcing these attributes onto the encapsulation-tags if any
      addAttributes.P {
        style=margin:0 0 0;

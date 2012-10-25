@@ -1,18 +1,9 @@
-﻿
-
 .. ==================================================
 .. FOR YOUR INFORMATION
 .. --------------------------------------------------
 .. -*- coding: utf-8 -*- with BOM.
 
-.. ==================================================
-.. DEFINE SOME TEXTROLES
-.. --------------------------------------------------
-.. role::   underline
-.. role::   typoscript(code)
-.. role::   ts(typoscript)
-   :class:  typoscript
-.. role::   php(code)
+.. include:: ../../Includes.txt
 
 
 numberFormat
@@ -36,13 +27,13 @@ for that function. Consult the PHP manual, if unsure.
 
    Property
          Property:
-   
+
    Data type
          Data type:
-   
+
    Description
          Description:
-   
+
    Default
          Default:
 
@@ -51,15 +42,15 @@ for that function. Consult the PHP manual, if unsure.
 
    Property
          decimals
-   
+
    Data type
          integer /stdWrap
-   
+
    Description
          Number of decimals the formatted number will have. Defaults to 0, so
          that your input will in that case be rounded up or down to the next
          integer.
-   
+
    Default
          0
 
@@ -68,14 +59,14 @@ for that function. Consult the PHP manual, if unsure.
 
    Property
          dec\_point
-   
+
    Data type
          string /stdWrap
-   
+
    Description
          Character that divides the decimals from the rest of the number.
          Defaults to ".".
-   
+
    Default
          .
 
@@ -84,14 +75,14 @@ for that function. Consult the PHP manual, if unsure.
 
    Property
          thousands\_sep
-   
+
    Data type
          string /stdWrap
-   
+
    Description
          Character that divides the thousands of the number. Defaults to ",";
          set an empty value to have no thousands separator.
-   
+
    Default
          ,
 
@@ -124,7 +115,7 @@ Examples:
      noTrimWrap = || &euro;|
    }
    # Will basically result in "0.80 €", but for German in "0,80 €".
-   
+
    lib.carViews = CONTENT
    lib.carViews {
      table = tx_mycarext_car

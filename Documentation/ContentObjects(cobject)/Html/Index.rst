@@ -1,18 +1,9 @@
-﻿
-
 .. ==================================================
 .. FOR YOUR INFORMATION
 .. --------------------------------------------------
 .. -*- coding: utf-8 -*- with BOM.
 
-.. ==================================================
-.. DEFINE SOME TEXTROLES
-.. --------------------------------------------------
-.. role::   underline
-.. role::   typoscript(code)
-.. role::   ts(typoscript)
-   :class:  typoscript
-.. role::   php(code)
+.. include:: ../../Includes.txt
 
 
 HTML
@@ -31,13 +22,13 @@ been removed in TYPO3 6.0. Use the content object "TEXT" instead!
 
    Property
          Property:
-   
+
    Data type
          Data type:
-   
+
    Description
          Description:
-   
+
    Default
          Default:
 
@@ -46,13 +37,13 @@ been removed in TYPO3 6.0. Use the content object "TEXT" instead!
 
    Property
          value
-   
+
    Data type
          HTML /stdWrap
-   
+
    Description
          Raw HTML-code.
-   
+
    Default
 
 
@@ -60,13 +51,13 @@ been removed in TYPO3 6.0. Use the content object "TEXT" instead!
 
    Property
          stdWrap
-   
+
    Data type
          ->stdWrap
-   
+
    Description
          (Executed after the stdWrap for the property ".value".)
-   
+
    Default
 
 

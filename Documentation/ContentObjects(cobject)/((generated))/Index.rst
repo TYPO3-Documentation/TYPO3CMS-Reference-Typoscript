@@ -1,18 +1,10 @@
-﻿.. include:: Images.txt
-
 .. ==================================================
 .. FOR YOUR INFORMATION
 .. --------------------------------------------------
 .. -*- coding: utf-8 -*- with BOM.
 
-.. ==================================================
-.. DEFINE SOME TEXTROLES
-.. --------------------------------------------------
-.. role::   underline
-.. role::   typoscript(code)
-.. role::   ts(typoscript)
-   :class:  typoscript
-.. role::   php(code)
+.. include:: ../../Includes.txt
+.. include:: Images.txt
 
 
 ((generated))
@@ -45,9 +37,7 @@ the advantage of minimizing the size of the cached template. But on
 the other hand it doesn't give you the flexibility of overriding
 values.
 
-This example will show you how it works:
-
-::
+This example will show you how it works::
 
    #
    # Temporary objects are defined:
@@ -57,15 +47,15 @@ This example will show you how it works:
      stdWrap.wrapAlign.field = header_position
      stdWrap.typolink.parameter.field = header_link
      stdWrap.fieldRequired = header
-   
+
      1 = TEXT
      1.current = 1
      1.fontTag = {$content.wrap.header1}
-   
+
      stdWrap.space = {$content.headerSpace}
    }
-   
-   
+
+
    #
    # CType: header
    #
@@ -73,13 +63,13 @@ This example will show you how it works:
    tt_content.header {
      10 < lib.stdheader
      10.stdWrap.space >
-   
+
      20 = TEXT
      20.field = subheader
      20.fontTag = {$content.wrap.subheader1}
    }
-   
-   
+
+
    #
    # CType: bullet
    #
@@ -132,7 +122,7 @@ Example:
    page.10 = TEXT
    page.10.value = kasper
    page.10.case = upper
-   
+
    page.20 = < page.10
    page.20.case = lower
    page.20.value >

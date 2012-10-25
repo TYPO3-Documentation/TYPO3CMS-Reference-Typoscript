@@ -1,18 +1,9 @@
-﻿
-
 .. ==================================================
 .. FOR YOUR INFORMATION
 .. --------------------------------------------------
 .. -*- coding: utf-8 -*- with BOM.
 
-.. ==================================================
-.. DEFINE SOME TEXTROLES
-.. --------------------------------------------------
-.. role::   underline
-.. role::   typoscript(code)
-.. role::   ts(typoscript)
-   :class:  typoscript
-.. role::   php(code)
+.. include:: ../../Includes.txt
 
 
 RECORDS
@@ -36,13 +27,13 @@ with the "dontCheckPid"-option.
 
    Property
          Property:
-   
+
    Data type
          Data type:
-   
+
    Description
          Description:
-   
+
    Default
          Default:
 
@@ -51,19 +42,17 @@ with the "dontCheckPid"-option.
 
    Property
          source
-   
+
    Data type
          *records-list* /stdWrap
-   
+
    Description
          List of record-id's, optionally with prepended table-names.
-         
-         **Example:**
-         
-         ::
-         
+
+         **Example:** ::
+
             source = tt_content_34, 45, tt_links_56
-   
+
    Default
 
 
@@ -71,28 +60,26 @@ with the "dontCheckPid"-option.
 
    Property
          tables
-   
+
    Data type
          *list of tables* /stdWrap
-   
+
    Description
          List of accepted tables. If any items in the ".source"-list are not
          prepended with a table name, the first table in this list is assumed
          to be the table for such records.
-         
+
          Also table names configured in .conf are allowed.
-         
-         **Example:**
-         
-         ::
-         
+
+         **Example:** ::
+
             tables = tt_content, tt_address, tt_links
             conf.tx_myexttable = TEXT
             conf.tx_myexttable.value = Hello world
-         
+
          This adds the tables tt\_content, tt\_address, tt\_links and
          tx\_myexttable.
-   
+
    Default
 
 
@@ -100,13 +87,13 @@ with the "dontCheckPid"-option.
 
    Property
          conf.[ *tablename* ]
-   
+
    Data type
          cObject
-   
+
    Description
          Config-array which renders records from table  *tablename*
-   
+
    Default
          If this is NOT defined, the rendering of the records is done with the
          toplevel-object [tablename] - just like the cObject, CONTENT!
@@ -116,14 +103,14 @@ with the "dontCheckPid"-option.
 
    Property
          dontCheckPid
-   
+
    Data type
          boolean /stdWrap
-   
+
    Description
          Normally a record cannot be selected, if its parent page (pid) is not
          accessible for the website user. This option disables that check.
-   
+
    Default
 
 
@@ -131,13 +118,13 @@ with the "dontCheckPid"-option.
 
    Property
          wrap
-   
+
    Data type
          wrap /stdWrap
-   
+
    Description
-   
-   
+
+
    Default
 
 
@@ -145,13 +132,13 @@ with the "dontCheckPid"-option.
 
    Property
          stdWrap
-   
+
    Data type
          ->stdWrap
-   
+
    Description
          (Executed after ".wrap".)
-   
+
    Default
 
 

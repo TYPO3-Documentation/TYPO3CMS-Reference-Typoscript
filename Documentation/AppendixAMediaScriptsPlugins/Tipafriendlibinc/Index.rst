@@ -1,24 +1,16 @@
-﻿.. include:: Images.txt
-
 .. ==================================================
 .. FOR YOUR INFORMATION
 .. --------------------------------------------------
 .. -*- coding: utf-8 -*- with BOM.
 
-.. ==================================================
-.. DEFINE SOME TEXTROLES
-.. --------------------------------------------------
-.. role::   underline
-.. role::   typoscript(code)
-.. role::   ts(typoscript)
-   :class:  typoscript
-.. role::   php(code)
+.. include:: ../../Includes.txt
+.. include:: Images.txt
 
 
 tipafriendLib.inc
 ^^^^^^^^^^^^^^^^^
 
-|img-13| 
+|img-13|
 Files:
 """"""
 
@@ -28,7 +20,7 @@ Files:
 
    File
          File:
-   
+
    Description
          Description:
 
@@ -37,10 +29,10 @@ Files:
 
    File
          tipafriendLib.inc
-   
+
    Description
          Main class used to display the Tip-a-Friend form.
-         
+
          Call it from a USER cObject with 'userFunc =
          user\_tipafriend->main\_tipafriend'
 
@@ -49,7 +41,7 @@ Files:
 
    File
          tipafriend\_template.tmpl
-   
+
    Description
          Example template file.
 
@@ -78,13 +70,13 @@ tipafriendLib.inc properties
 
    Property
          Property:
-   
+
    Data type
          Data type:
-   
+
    Description
          Description:
-   
+
    Default
          Default:
 
@@ -93,10 +85,10 @@ tipafriendLib.inc properties
 
    Property
          templateFile
-   
+
    Data type
          resource
-   
+
    Description
          The template-file.
 
@@ -107,13 +99,13 @@ tipafriendLib.inc properties
 
    Property
          code
-   
+
    Data type
          string /stdWrap
-   
+
    Description
          Code to define, what the script does. Case sensitive.
-   
+
    Default
 
 
@@ -121,14 +113,14 @@ tipafriendLib.inc properties
 
    Property
          defaultCode
-   
+
    Data type
          string
-   
+
    Description
          The default code (see above) if the value is empty. By default it's
          not set and a help screen will appear
-   
+
    Default
 
 
@@ -136,21 +128,19 @@ tipafriendLib.inc properties
 
    Property
          wrap1
-   
+
    Data type
          ->stdWrap
-   
+
    Description
          Global Wrap 1. This will be split into the markers ###GW1B### and
          ###GW1E###. Don't change the input value by the settings, only wrap it
          in something.
-         
-         **Example:**
-         
-         ::
-         
+
+         **Example:** ::
+
             wrap1.wrap = <b> | </b>
-   
+
    Default
 
 
@@ -158,13 +148,13 @@ tipafriendLib.inc properties
 
    Property
          wrap2
-   
+
    Data type
          ->stdWrap
-   
+
    Description
          Global Wrap 2 (see above)
-   
+
    Default
 
 
@@ -172,13 +162,13 @@ tipafriendLib.inc properties
 
    Property
          color1
-   
+
    Data type
          string /stdWrap
-   
+
    Description
          Value for ###GC1### marker (Global color 1)
-   
+
    Default
 
 
@@ -186,13 +176,13 @@ tipafriendLib.inc properties
 
    Property
          color2
-   
+
    Data type
          string /stdWrap
-   
+
    Description
          Value for ###GC2### marker (Global color 2)
-   
+
    Default
 
 
@@ -200,13 +190,13 @@ tipafriendLib.inc properties
 
    Property
          color3
-   
+
    Data type
          string /stdWrap
-   
+
    Description
          Value for ###GC3### marker (Global color 3)
-   
+
    Default
 
 
@@ -214,14 +204,14 @@ tipafriendLib.inc properties
 
    Property
          typolink
-   
+
    Data type
          ->typolink
-   
+
    Description
          TypoLink configuration for the TIPLINK to the TIPFORM page.
          .additionalParams is added the parameter "&tipUrl="
-   
+
    Default
 
 
@@ -229,14 +219,14 @@ tipafriendLib.inc properties
 
    Property
          htmlmail
-   
+
    Data type
          boolean
-   
+
    Description
          If set, the page is fetched as HTML and send in HTML (a plain text
          version is sent as well).
-   
+
    Default
 
 

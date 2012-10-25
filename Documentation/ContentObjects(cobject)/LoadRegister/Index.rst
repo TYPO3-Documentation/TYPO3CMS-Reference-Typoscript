@@ -1,18 +1,9 @@
-﻿
-
 .. ==================================================
 .. FOR YOUR INFORMATION
 .. --------------------------------------------------
 .. -*- coding: utf-8 -*- with BOM.
 
-.. ==================================================
-.. DEFINE SOME TEXTROLES
-.. --------------------------------------------------
-.. role::   underline
-.. role::   typoscript(code)
-.. role::   ts(typoscript)
-   :class:  typoscript
-.. role::   php(code)
+.. include:: ../../Includes.txt
 
 
 LOAD\_REGISTER
@@ -30,13 +21,13 @@ register can change during the page-rendering.
 
    Property
          Property:
-   
+
    Data type
          Data type:
-   
+
    Description
          Description:
-   
+
    Default
          Default:
 
@@ -45,29 +36,27 @@ register can change during the page-rendering.
 
    Property
          Array...
-         
+
          [field name]
-   
+
    Data type
          string /stdWrap
-   
+
    Description
          **Example:**
-         
-         (This sets "contentWidth", "label" and "head")
-         
-         ::
-         
+
+         (This sets "contentWidth", "label" and "head") ::
+
             page.27 = LOAD_REGISTER
             page.27 {
               contentWidth = 500
-            
+
               label.field = header
-            
+
               head = some text
               head.wrap = <b> | </b>
             }
-   
+
    Default
 
 

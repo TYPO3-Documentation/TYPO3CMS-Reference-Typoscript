@@ -1,18 +1,10 @@
-﻿.. include:: Images.txt
-
 .. ==================================================
 .. FOR YOUR INFORMATION
 .. --------------------------------------------------
 .. -*- coding: utf-8 -*- with BOM.
 
-.. ==================================================
-.. DEFINE SOME TEXTROLES
-.. --------------------------------------------------
-.. role::   underline
-.. role::   typoscript(code)
-.. role::   ts(typoscript)
-   :class:  typoscript
-.. role::   php(code)
+.. include:: ../../Includes.txt
+.. include:: Images.txt
 
 
 HMENU
@@ -27,13 +19,13 @@ Generates hierarchical menus.
 
    Property
          Property:
-   
+
    Data type
          Data type:
-   
+
    Description
          Description:
-   
+
    Default
          Default:
 
@@ -42,26 +34,24 @@ Generates hierarchical menus.
 
    Property
          (1 / 2 / 3 /...)
-   
+
    Data type
          menuObj
-   
+
    Description
          **Required!**
-         
+
          Defines which menuObj that should render the menu items on the various
          levels.
-         
+
          1 is the first level, 2 is the second level, 3 is the third level, 4
          is ....
-         
-         **Example:**
-         
-         ::
-         
+
+         **Example:** ::
+
             temp.sidemenu = HMENU
             temp.sidemenu.1 = GMENU
-   
+
    Default
          (no menu)
 
@@ -70,20 +60,20 @@ Generates hierarchical menus.
 
    Property
          cache\_period
-   
+
    Data type
          int
-   
+
    Description
          The number of seconds a menu may remain in cache. If this value is not
          set, the first available value of the following will be used:
-         
+
          1) cache\_timeout of the current page
-         
+
          2) config.cache\_period defined globally
-         
+
          3) 86400 (= 1 day)
-   
+
    Default
 
 
@@ -91,20 +81,20 @@ Generates hierarchical menus.
 
    Property
          entryLevel
-   
+
    Data type
          int /stdWrap
-   
+
    Description
          Defines at which level in the rootLine the menu should start.
-         
+
          Default is "0" which gives us a menu of the very first pages on the
          site.
-         
+
          If the value is < 0, entryLevel is chosen from "behind" in the
          rootLine. Thus "-1" is a menu with items from the outermost level,
          "-2" is the level before the outermost...
-   
+
    Default
          0
 
@@ -113,14 +103,14 @@ Generates hierarchical menus.
 
    Property
          special
-   
+
    Data type
          *"directory" / "list" / "updated" / "browse" / "rootline" / "keywords"
          / "language"*
-   
+
    Description
          *See section "The .special property" and the according tables below.*
-   
+
    Default
 
 
@@ -128,13 +118,13 @@ Generates hierarchical menus.
 
    Property
          special.value
-   
+
    Data type
          *list of page-uid's* /stdWrap
-   
+
    Description
          See above
-   
+
    Default
 
 
@@ -142,21 +132,21 @@ Generates hierarchical menus.
 
    Property
          minItems
-   
+
    Data type
          Until TYPO3 4.6: int
-         
+
          Since TYPO3 4.7: int /stdWrap
-   
+
    Description
          The minimum items in the menu. If the number of pages does not reach
          this level, a dummy-page with the title "..." and
          uid=[currentpage\_id] is inserted.
-         
+
          **Notice:** Affects all sub menus as well. To set the value for each
          menu level individually, set the properties in the menu objects (see
          "Common properties" table).
-   
+
    Default
 
 
@@ -164,17 +154,17 @@ Generates hierarchical menus.
 
    Property
          maxItems
-   
+
    Data type
          Until TYPO3 4.6: int
-         
+
          Since TYPO3 4.7: int /stdWrap
-   
+
    Description
          The maximum items in the menu. More items will be ignored.
-         
+
          **Notice:** Affects all sub menus as well. (See "minItems" for notice)
-   
+
    Default
 
 
@@ -182,26 +172,24 @@ Generates hierarchical menus.
 
    Property
          begin
-   
+
    Data type
          Until TYPO3 4.6: int +calc
-         
+
          Since TYPO3 4.7: int /stdWrap +calc
-   
+
    Description
          The first item in the menu.
-         
+
          **Example:**
-         
+
          This results in a menu, where the first two items are skipped starting
-         with item number 3:
-         
-         ::
-         
+         with item number 3::
+
             begin = 3
-         
+
          **Notice:** Affects all sub menus as well. (See "minItems" for notice)
-   
+
    Default
 
 
@@ -209,24 +197,22 @@ Generates hierarchical menus.
 
    Property
          excludeUidList
-   
+
    Data type
          list of integers /stdWrap
-   
+
    Description
          This is a list of page uid's to exclude when the select statement is
          done. Comma-separated. You may add "current" to the list to exclude
          the current page.
-         
+
          **Example:**
-         
+
          The pages with these uid-number will NOT be within the menu!!
-         Additionally the current page is always excluded too.
-         
-         ::
-         
+         Additionally the current page is always excluded too. ::
+
             excludeUidList = 34,2,current
-   
+
    Default
 
 
@@ -234,15 +220,15 @@ Generates hierarchical menus.
 
    Property
          excludeDoktypes
-   
+
    Data type
          list of integers
-   
+
    Description
          Enter the list of page document types (doktype) to exclude from menus.
          By default pages that are "not in menu" (5) are excluded and those
          marked for backend user access only (6).
-   
+
    Default
          5,6
 
@@ -251,14 +237,14 @@ Generates hierarchical menus.
 
    Property
          includeNotInMenu
-   
+
    Data type
          boolean
-   
+
    Description
          If set, pages with the checkbox "Not in menu" checked will be included
          in menus.
-   
+
    Default
 
 
@@ -266,15 +252,15 @@ Generates hierarchical menus.
 
    Property
          alwaysActivePIDlist
-   
+
    Data type
          list of integers /stdWrap
-   
+
    Description
          This is a list of page UID numbers that will always be regarded as
          active menu items and thereby automatically opened regardless of the
          rootline.
-   
+
    Default
 
 
@@ -282,10 +268,10 @@ Generates hierarchical menus.
 
    Property
          protectLvar
-   
+
    Data type
          boolean / keyword
-   
+
    Description
          If set, then for each page in the menu it will be checked if an
          Alternative Page Language record for the language defined in
@@ -297,19 +283,19 @@ Generates hierarchical menus.
          that situation by simply adding "&L=0" for such pages, meaning that
          they will switch to the default language rather than keeping the
          current language.
-         
+
          The check is only carried out if a translation is requested
          ("config.sys\_language\_uid" is not zero).
-         
+
          **Keyword: "all"**
-         
+
          When set to "all" the same check is carried out but it will not look
          if "Hide page if no translation for current language exists" is set -
          it always reverts to default language if no translation is found.
-         
+
          For these options to make sense, they should only be used when
          "config.sys\_language\_mode" is not set to "content\_fallback".
-   
+
    Default
 
 
@@ -317,15 +303,15 @@ Generates hierarchical menus.
 
    Property
          addQueryString
-   
+
    Data type
          string
-   
+
    Description
          *see typolink.addQueryString*
-         
+
          **Notice:** This works only for  *special=language* .
-   
+
    Default
 
 
@@ -333,13 +319,13 @@ Generates hierarchical menus.
 
    Property
          if
-   
+
    Data type
          ->if
-   
+
    Description
          If "if" returns false, the menu is not generated
-   
+
    Default
 
 
@@ -347,13 +333,13 @@ Generates hierarchical menus.
 
    Property
          wrap
-   
+
    Data type
          wrap /stdWrap
-   
+
    Description
-   
-   
+
+
    Default
 
 
@@ -361,13 +347,13 @@ Generates hierarchical menus.
 
    Property
          stdWrap
-   
+
    Data type
          ->stdWrap
-   
+
    Description
          (Executed after ".wrap".)
-   
+
    Default
 
 
@@ -394,7 +380,7 @@ Example:
      NO.afterImgTagParams = hspace="4"
      NO.linkWrap = {$fontTag}
      NO.ATagBeforeWrap = 1
-   
+
      ACT < .NO
      ACT = 1
      ACT.linkWrap = <b>{$fontTag}</b>
@@ -431,13 +417,13 @@ Mount pages are supported.
 
    Property
          Property:
-   
+
    Data type
          Data type:
-   
+
    Description
          Description:
-   
+
    Default
          Default:
 
@@ -446,19 +432,17 @@ Mount pages are supported.
 
    Property
          value
-   
+
    Data type
          list of page ids /stdWrap
-   
+
    Description
-         This will generate a menu of all pages with pid = 35 and pid = 56.
-         
-         ::
-         
+         This will generate a menu of all pages with pid = 35 and pid = 56. ::
+
             20 = HMENU
             20.special = directory
             20.special.value = 35, 56
-   
+
    Default
          current page id
 
@@ -482,13 +466,13 @@ Mount pages are supported.
 
    Property
          Property:
-   
+
    Data type
          Data type:
-   
+
    Description
          Description:
-   
+
    Default
          Default:
 
@@ -497,23 +481,21 @@ Mount pages are supported.
 
    Property
          value
-   
+
    Data type
          list of page ids /stdWrap
-   
+
    Description
          This will generate a menu with the two pages (uid=35 and uid=56)
-         listed:
-         
-         ::
-         
+         listed::
+
             20 = HMENU
             20.special = list
             20.special.value = 35, 56
-         
+
          If .value is not set, the default uid is 0, so that only your homepage
          will be listed.
-   
+
    Default
          0
 
@@ -542,13 +524,13 @@ Mount pages are supported.
 
    Property
          Property:
-   
+
    Data type
          Data type:
-   
+
    Description
          Description:
-   
+
    Default
          Default:
 
@@ -557,21 +539,19 @@ Mount pages are supported.
 
    Property
          value
-   
+
    Data type
          list of page ids /stdWrap
-   
+
    Description
          This will generate a menu of the most recently updated pages from the
          branches in the tree starting with the uid's (uid=35 and uid=56)
-         listed.
-         
-         ::
-         
+         listed. ::
+
             20 = HMENU
             20.special = updated
             20.special.value = 35, 56
-   
+
    Default
 
 
@@ -579,31 +559,31 @@ Mount pages are supported.
 
    Property
          mode
-   
+
    Data type
          string
-   
+
    Description
          The field in the database which should be used to get the information
          about the last update from.
-         
+
          The following values are possible:
-         
+
          **- SYS\_LASTCHANGED** : Is updated to the youngest tstamp of the
          records on the page when a page is generated.
-         
+
          **- crdate:** Uses the "crdate"-field of the pagerecord.
-         
+
          **- tstamp:** Uses the "tstamp"-field of the pagerecord, which is set
          automatically when the record is changed.
-         
+
          \- **manual** or  **lastUpdated:** Use the field "lastUpdated", which
          can be set manually in the page-record.
-         
+
          **- starttime:** Uses the starttime field.
-         
+
          Fields with empty values are generally not selected.
-   
+
    Default
          SYS\_LASTCHANGED
 
@@ -612,20 +592,20 @@ Mount pages are supported.
 
    Property
          depth
-   
+
    Data type
          int
-   
+
    Description
          Defines the tree depth.
-         
+
          The allowed range is 1-20.
-         
+
          A depth of 1 means only the start id, depth of 2 means start-id +
          first level.
-         
+
          **Notice** : "depth" is relative to "beginAtLevel".
-   
+
    Default
          20
 
@@ -634,22 +614,22 @@ Mount pages are supported.
 
    Property
          beginAtLevel
-   
+
    Data type
          int
-   
+
    Description
          Determines starting level for the page trees generated based on .value
          and .depth.
-         
+
          0 is default and includes the start id.
-         
+
          1 starts with the first row of subpages,
-         
+
          2 starts with the second row of subpages.
-         
+
          **Notice:** "depth" is relative to this property.
-   
+
    Default
          0
 
@@ -658,15 +638,15 @@ Mount pages are supported.
 
    Property
          maxAge
-   
+
    Data type
          int (seconds) +calc
-   
+
    Description
          Pages with update-dates older than the current time minus this number
          of seconds will not be shown in the menu no matter what. Default is
          "not used". You may use +-\*/ for calculations.
-   
+
    Default
 
 
@@ -674,13 +654,13 @@ Mount pages are supported.
 
    Property
          limit
-   
+
    Data type
          int
-   
+
    Description
          Maximal number of items in the menu. Default is 10, max is 100.
-   
+
    Default
          10
 
@@ -689,13 +669,13 @@ Mount pages are supported.
 
    Property
          excludeNoSearchPages
-   
+
    Data type
          boolean
-   
+
    Description
          If set, pages marked "No search" are not included.
-   
+
    Default
          0
 
@@ -713,9 +693,7 @@ updated pages from the branches in the tree starting with the uid's
 (uid=35 and uid=56) listed. Furthermore the field "tstamp" is used
 (default is SYS\_LASTCHANGED) and the tree depth is 2 levels. Also a
 maximum of 8 pages will be shown and they must have been updated
-within the last three days (3600\*24\*3):
-
-::
+within the last three days (3600\*24\*3)::
 
    20 = HMENU
    20.special = updated
@@ -753,13 +731,13 @@ Mount pages are supported.
 
    Property
          Property:
-   
+
    Data type
          Data type:
-   
+
    Description
          Description:
-   
+
    Default
          Default:
 
@@ -768,21 +746,19 @@ Mount pages are supported.
 
    Property
          range
-   
+
    Data type
          string /stdWrap
-   
+
    Description
          [begin-level] \| [end-level] (same way as you reference the
          .entryLevel for an HMENU). The following example will start at level 1
-         and not show the page the user is currently on:
-         
-         ::
-         
+         and not show the page the user is currently on::
+
             temp.breadcrumbs = HMENU
             temp.breadcrumbs.special = rootline
             temp.breadcrumbs.special.range = 1|-2
-   
+
    Default
 
 
@@ -790,14 +766,14 @@ Mount pages are supported.
 
    Property
          reverseOrder
-   
+
    Data type
          boolean
-   
+
    Description
          If set to true, the order of the rootline menu elements will be
          reversed.
-   
+
    Default
          false
 
@@ -806,22 +782,20 @@ Mount pages are supported.
 
    Property
          targets.[level number]
-   
+
    Data type
          string
-   
+
    Description
          For framesets. You can set a default target and a target for each
          level by using the level number as sub-property.
-         
+
          **Example:**
-         
+
          Here the links to pages on level 3 will have target="page", while all
          other levels will have target="\_top" as defined for the TMENU
-         property .target.
-         
-         ::
-         
+         property .target. ::
+
             page.2 = HMENU
             page.2.special = rootline
             page.2.special.range = 1|-2
@@ -830,9 +804,9 @@ Mount pages are supported.
             page.2.1.target = _top
             page.2.1.wrap = <HR> | <HR>
             page.2.1.NO {
-              linkWrap = | > 
+              linkWrap = | >
             }
-   
+
    Default
 
 
@@ -852,22 +826,20 @@ website. The last page in the menu is the current page.
 After each link there is an image, which could contain a small arrow.
 
 The current page is not linked, but wrapped in em tags. It does not
-have the image appended.
-
-::
+have the image appended. ::
 
    20 = HMENU
    20.wrap = <ul>|</ul>
    20.special = rootline
    20.special.range = 1|-1
-   
+
    20 {
      1 = TMENU
-   
+
      1.NO.wrapItemAndSub = <li>|</li>
      1.NO.ATagTitle.field = description // subtitle // title
      1.NO.afterImg = fileadmin/arrow.jpg
-   
+
      1.CUR = 1
      1.CUR < .1.NO
      1.CUR.doNotLinkIt = 1
@@ -892,13 +864,13 @@ list from the property ".items".
 
    Property
          Property:
-   
+
    Data type
          Data type:
-   
+
    Description
          Description:
-   
+
    Default
          Default:
 
@@ -907,15 +879,15 @@ list from the property ".items".
 
    Property
          value
-   
+
    Data type
          int/stdWrap
-   
+
    Description
          Default is the current page id. Seldom you might want to override this
          value with another page-uid which will then act as the base point for
          the menu and the predefined items.
-   
+
    Default
          current page id
 
@@ -924,64 +896,62 @@ list from the property ".items".
 
    Property
          items
-   
+
    Data type
          list of item names separated by "\|"
-   
+
    Description
          Each element in the list (separated by "\|") is either a reserved item
          name (see list) with a predefined function, or a user-defined name
          which you can assign a link to any page. Note that the current page
          cannot be the root-page of a site.
-         
+
          *Reserved item names:*
-         
+
          **next** /  **prev** : Links to the next page / the previous page.
          Next and previous pages are from the same "pid" as the current page id
          (or "value") - that is the next item in a menu with the current page.
          Also referred to as current level.
-         
+
          If ".prevnextToSection" is set then next/prev will link to the first
          page of the next section / to the last page of the previous section,
          too.
-         
+
          **nextsection** /  **prevsection** : Links to the next section / the
          previous section. A section is defined as the subpages of a page on
          the same level as the parent (pid) page of the current page. Will not
          work if the parent page of the current page is the root page of the
          site.
-         
+
          |img-8|  **nextsection\_last** / **prevsection\_last** : Where
          nextsection/prevsection links to the first page in a section, these
          link to the last pages. If there is only one page in thesection that
          will be both first and last.Will not work if the parent page of the
          current page is the root page of the site.
-         
+
          **first** / **last** : First / last page on the current level. If
          there isonly one page on the current level that page will be both
          first and last.
-         
+
          **up** : Links to the parent (pid) page of the current page (up 1
          level). Will always be available.
-         
+
          **index** : Links to the parent of the parent pageof the current
          page(up 2 levels). May not be available, if that page is out of the
          rootline.
-         
+
          **Examples:**
-         
+
          If id=20 is the current page then:
-         
+
          21= prev and first, 19 = next, 18 = last, 17 = up, 1=index, 10 =
          nextsection, 11 = nextsection\_last
-         
+
          prevsection and prevsection\_last is not present because id=3 has no
          subpages!
-         
-         **TypoScript (only "browse"-part, needs also TMENU/GMENU):**
-         
-         ::
-         
+
+         **TypoScript (only "browse"-part, needs also TMENU/GMENU):** ::
+
             xxx = HMENU
             xxx.special = browse
             xxx.special {
@@ -991,7 +961,7 @@ list from the property ".items".
               index.fields.title = INDEX
               index.uid = 8
             }
-   
+
    Default
 
 
@@ -999,16 +969,16 @@ list from the property ".items".
 
    Property
          items.prevnextToSection
-   
+
    Data type
          boolean
-   
+
    Description
          If set, the "prev" and "next" navigation will jump to the next section
          when it reaches the end of pages in the current section. That way
          "prev" and "next" will also link to the first page of the next section
          / to the last page of the previous section.
-   
+
    Default
 
 
@@ -1016,13 +986,13 @@ list from the property ".items".
 
    Property
          [itemname].target
-   
+
    Data type
          string
-   
+
    Description
          Optional/alternative target of the item.
-   
+
    Default
 
 
@@ -1030,13 +1000,13 @@ list from the property ".items".
 
    Property
          [itemname].uid
-   
+
    Data type
          int
-   
+
    Description
          (uid of page) - optional/alternative page-uid to link to.
-   
+
    Default
 
 
@@ -1044,21 +1014,19 @@ list from the property ".items".
 
    Property
          [itemname].fields.[field name]
-   
+
    Data type
          string
-   
+
    Description
          Override field "field name" in pagerecord.
-         
+
          **Example:**
-         
-         This gives the link to the previous page the linktext "« zurück".
-         
-         ::
-         
+
+         This gives the link to the previous page the linktext "« zurück". ::
+
             prev.fields.title = « zurück
-   
+
    Default
 
 
@@ -1085,13 +1053,13 @@ Mount pages are supported.
 
    Property
          Property:
-   
+
    Data type
          Data type:
-   
+
    Description
          Description:
-   
+
    Default
          Default:
 
@@ -1100,17 +1068,15 @@ Mount pages are supported.
 
    Property
          value
-   
+
    Data type
          int/stdWrap
-   
+
    Description
          Page for which keywords to find similar pages
-         
-         **Example:**
-         
-         ::
-         
+
+         **Example:** ::
+
             20 = HMENU
             20.special = keywords
             20.special {
@@ -1122,7 +1088,7 @@ Mount pages are supported.
             20.1.NO {
               ...
             }
-   
+
    Default
 
 
@@ -1130,28 +1096,28 @@ Mount pages are supported.
 
    Property
          mode
-   
+
    Data type
          string
-   
+
    Description
          Which field in the pages-table to use for sorting.
-         
+
          Possible values are:
-         
+
          **- SYS\_LASTCHANGED:** Is updated to the youngest tstamp of the
          records on the page when a page is generated.
-         
+
          **- manual** or  **lastUpdated:** Use the field "lastUpdated", which
          can be set manually in the page-record.
-         
+
          **- tstamp:** Uses the "tstamp"-field of the pagerecord, which is set
          automatically when the record is changed.
-         
+
          **- crdate:** Uses the "crdate"-field of the pagerecord.
-         
+
          **- starttime:** Uses the starttime field.
-   
+
    Default
          SYS\_LASTCHANGED
 
@@ -1160,15 +1126,15 @@ Mount pages are supported.
 
    Property
          entryLevel
-   
+
    Data type
          int
-   
+
    Description
          Where in the rootline the search begins.
-         
+
          *Seeproperty entryLevel in the section "HMENU" above.*
-   
+
    Default
 
 
@@ -1176,13 +1142,13 @@ Mount pages are supported.
 
    Property
          depth
-   
+
    Data type
          int
-   
+
    Description
          (same as in section "special.updated")
-   
+
    Default
          20
 
@@ -1191,13 +1157,13 @@ Mount pages are supported.
 
    Property
          limit
-   
+
    Data type
          int
-   
+
    Description
          (same as in section "special.updated")
-   
+
    Default
          10
 
@@ -1206,13 +1172,13 @@ Mount pages are supported.
 
    Property
          excludeNoSearchPages
-   
+
    Data type
          boolean
-   
+
    Description
          (same as in section "special.updated")
-   
+
    Default
 
 
@@ -1220,13 +1186,13 @@ Mount pages are supported.
 
    Property
          begin
-   
+
    Data type
          boolean
-   
+
    Description
          (same as in section "special.updated")
-   
+
    Default
 
 
@@ -1234,15 +1200,15 @@ Mount pages are supported.
 
    Property
          setKeywords
-   
+
    Data type
          string/stdWrap
-   
+
    Description
          Lets you define the keywords manually by defining them as a comma-
          separated list. If this property is defined, it overrides the default,
          which is the keywords of the current page.
-   
+
    Default
 
 
@@ -1250,15 +1216,15 @@ Mount pages are supported.
 
    Property
          keywordsField
-   
+
    Data type
          string
-   
+
    Description
          Defines the field in the pages-table in which to search for the
          keywords. Default is the field name "keyword". No check is done to see
          if the field you enter here exists, so enter an existing field, OK?!
-   
+
    Default
          keywords
 
@@ -1267,16 +1233,16 @@ Mount pages are supported.
 
    Property
          keywordsField.sourceField
-   
+
    Data type
          string
-   
+
    Description
          Defines the field from the current page from which to take the
          keywords being matched. The default is "keyword". (Notice that
          ".keywordsField" is only setting the page-record field to  *search in*
          !)
-   
+
    Default
          keywords
 
@@ -1319,13 +1285,13 @@ error if tried accessed (depending on site configuration).
 
    Property
          Property:
-   
+
    Data type
          Data type:
-   
+
    Description
          Description:
-   
+
    Default
          Default:
 
@@ -1334,14 +1300,14 @@ error if tried accessed (depending on site configuration).
 
    Property
          value
-   
+
    Data type
          comma list of sys\_language uids/stdWrap
-   
+
    Description
          The number of elements in this list determines the number of menu
          items.
-   
+
    Default
 
 
@@ -1349,14 +1315,14 @@ error if tried accessed (depending on site configuration).
 
    Property
          normalWhenNoLanguage
-   
+
    Data type
          boolean
-   
+
    Description
          If set to 1 the button for a language will ve rendered as a non-
          disabled button even if no translation is found for the language.
-   
+
    Default
 
 
@@ -1383,11 +1349,11 @@ Creates a language menu with flags (notice that some lines break):
      5.file = typo3/sysext/statictemplates/media/flags/flag_uk.gif  || typo3/sysext/statictemplates/media/flags/flag_fr.gif  || typo3/sysext/statictemplates/media/flags/flag_es.gif
      5.offset = 2,2
    }
-   
+
    lib.langMenu.1.ACT < lib.langMenu.1.NO
    lib.langMenu.1.ACT = 1
    lib.langMenu.1.ACT.backColor = black
-   
+
    lib.langMenu.1.USERDEF1 < lib.langMenu.1.NO
    lib.langMenu.1.USERDEF1 = 1
    lib.langMenu.1.USERDEF1.5.file = typo3/sysext/statictemplates/media/flags/flag_uk_d.gif  || typo3/sysext/statictemplates/media/flags/flag_fr_d.gif  || typo3/sysext/statictemplates/media/flags/flag_es_d.gif
@@ -1406,13 +1372,13 @@ menu items.
 
    Property
          Property:
-   
+
    Data type
          Data type:
-   
+
    Description
          Description:
-   
+
    Default
          Default:
 
@@ -1421,13 +1387,13 @@ menu items.
 
    Property
          file
-   
+
    Data type
          resource
-   
+
    Description
          Filename of the php-file to include. (Just like cObject PHP\_SCRIPT)
-   
+
    Default
 
 
@@ -1435,14 +1401,14 @@ menu items.
 
    Property
          [any other key]
-   
+
    Data type
-   
-   
+
+
    Description
          Your own variables to your script. They are all accessible in the
          array $conf in your script.
-   
+
    Default
 
 
@@ -1460,9 +1426,7 @@ How-to:
 You must populate an array called $menuItemsArray with page-records of
 the menu items you want to be in the menu.
 
-It works like this:
-
-::
+It works like this::
 
    $menuItemsArray[] = pageRow1;
    $menuItemsArray[] = pageRow2;
@@ -1524,13 +1488,13 @@ menu.
 
    Property
          Property:
-   
+
    Data type
          Data type:
-   
+
    Description
          Description:
-   
+
    Default
          Default:
 
@@ -1539,13 +1503,13 @@ menu.
 
    Property
          userFunc
-   
+
    Data type
          string
-   
+
    Description
          Name of the function
-   
+
    Default
 
 
@@ -1570,9 +1534,7 @@ the same page id in TYPO3 but where the difference would be in some
 parameter value.
 
 First, this listing creates a menu in three levels where the first two
-are graphical items:
-
-::
+are graphical items::
 
       0: # ************************
       1: # MENU LEFT
@@ -1634,9 +1596,7 @@ The menu looks like this on a web page:
 |img-10| The TypoScript code above generates this menu, but the items do not
 link straight to pages as usual. This is because the  *whole* menu is
 generated from this array, which was returned from the function
-"menuMenuArray" called in TypoScript line 4+5
-
-::
+"menuMenuArray" called in TypoScript line 4+5 ::
 
       1:     function makeMenuArray($content, $conf) {
       2:         return array(

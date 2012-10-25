@@ -1,18 +1,9 @@
-﻿
-
 .. ==================================================
 .. FOR YOUR INFORMATION
 .. --------------------------------------------------
 .. -*- coding: utf-8 -*- with BOM.
 
-.. ==================================================
-.. DEFINE SOME TEXTROLES
-.. --------------------------------------------------
-.. role::   underline
-.. role::   typoscript(code)
-.. role::   ts(typoscript)
-   :class:  typoscript
-.. role::   php(code)
+.. include:: ../../Includes.txt
 
 
 Case story
@@ -25,9 +16,7 @@ not part of TYPO3. Therefore we use the feature of including a library
 at the very beginning of the page-parsing.
 
 First we put this TypoScript line in the "Setup"-field of the
-template:
-
-::
+template::
 
    config.includeLibrary = fileadmin/scripts/include.inc
 
@@ -36,9 +25,7 @@ typo3/sysext/frontend/Classes/Page/PageGenerator.php, in older
 versions in typo3/sysext/cms/tslib/class.tslib\_pagegen.php). In this
 case it looks like this:
 
-file: fileadmin/scripts/include.inc
-
-::
+file: fileadmin/scripts/include.inc ::
 
    <?
            ...
@@ -52,9 +39,7 @@ other libraries too!
 
 The file  **hello\_world.inc** looks like this:
 
-file: fileadmin/scripts/hello\_world.inc
-
-::
+file: fileadmin/scripts/hello\_world.inc ::
 
    <?
    class hello_world {
@@ -69,18 +54,14 @@ for use.
 
 Now we need to use the outcome of the class hello\_world somewhere on
 a page. So in the TypoScript code we setup a content-object that
-includes the third script:
-
-::
+includes the third script::
 
    page.100 = PHP_SCRIPT
    page.100.file = fileadmin/scripts/surprise.inc
 
 **surprise.inc** looks like this:
 
-file: fileadmin/scripts/surprise.inc
-
-::
+file: fileadmin/scripts/surprise.inc ::
 
    <?
            $hello_world_object = new hello_world;             // New instance is created
@@ -101,22 +82,16 @@ Line 4: Finally the content is stdWrap'ed with the properties of
 
 The output:
 
-With this configuration -
-
-::
+With this configuration - ::
 
    page.100 = PHP_SCRIPT
    page.100.file = fileadmin/scripts/surprise.inc
 
-\- the output will look like this:
-
-::
+\- the output will look like this::
 
    Hello World
 
-With this configuration -
-
-::
+With this configuration - ::
 
    page.100 = PHP_SCRIPT
    page.100 {
@@ -125,15 +100,11 @@ With this configuration -
            cObj.value = Joe says:&nbsp;
    }
 
-\- the output will look like this:
-
-::
+\- the output will look like this::
 
     Joe says: Hello World
 
-With this configuration -
-
-::
+With this configuration - ::
 
    page.100 = PHP_SCRIPT
    page.100 {
@@ -144,9 +115,7 @@ With this configuration -
            stdWrap.case = upper
    }
 
-\- the output will look like this:
-
-::
+\- the output will look like this::
 
    JOE SAYS: HELLO WORLD
 

@@ -1,18 +1,9 @@
-﻿
-
 .. ==================================================
 .. FOR YOUR INFORMATION
 .. --------------------------------------------------
 .. -*- coding: utf-8 -*- with BOM.
 
-.. ==================================================
-.. DEFINE SOME TEXTROLES
-.. --------------------------------------------------
-.. role::   underline
-.. role::   typoscript(code)
-.. role::   ts(typoscript)
-   :class:  typoscript
-.. role::   php(code)
+.. include:: ../../Includes.txt
 
 
 Including your script
@@ -128,13 +119,13 @@ writing: $GLOBALS['TSFE']->id
 
    Var
          Var:
-   
+
    PHP-Type
          PHP-Type:
-   
+
    Description
          Description:
-   
+
    Default
          Default:
 
@@ -143,13 +134,13 @@ writing: $GLOBALS['TSFE']->id
 
    Var
          id
-   
+
    PHP-Type
          int
-   
+
    Description
          The page id
-   
+
    Default
 
 
@@ -157,13 +148,13 @@ writing: $GLOBALS['TSFE']->id
 
    Var
          type
-   
+
    PHP-Type
          int
-   
+
    Description
          The type
-   
+
    Default
 
 
@@ -171,13 +162,13 @@ writing: $GLOBALS['TSFE']->id
 
    Var
          page
-   
+
    PHP-Type
          array
-   
+
    Description
          The pagerecord
-   
+
    Default
 
 
@@ -185,15 +176,15 @@ writing: $GLOBALS['TSFE']->id
 
    Var
          fe\_user
-   
+
    PHP-Type
          object
-   
+
    Description
          The current front-end user.
-         
+
          Userrecord in $GLOBALS['TSFE']->fe\_user->user, if any login.
-   
+
    Default
 
 
@@ -201,13 +192,13 @@ writing: $GLOBALS['TSFE']->id
 
    Var
          loginUser
-   
+
    PHP-Type
          boolean
-   
+
    Description
          Flag indicating that a front-end user is logged in.
-   
+
    Default
          0
 
@@ -216,14 +207,14 @@ writing: $GLOBALS['TSFE']->id
 
    Var
          rootLine
-   
+
    PHP-Type
          array
-   
+
    Description
          The rootLine (all the way to tree root, not only the current site!).
          Current site root line is in $GLOBALS['TSFE']->tmpl->rootLine
-   
+
    Default
 
 
@@ -231,15 +222,15 @@ writing: $GLOBALS['TSFE']->id
 
    Var
          sys\_page
-   
+
    PHP-Type
          object
-   
+
    Description
          The object with pagefunctions (object) See
          typo3/sysext/frontend/Classes/Page/PageRepository.php
          (t3lib/class.t3lib_page.php).
-   
+
    Default
 
 
@@ -247,13 +238,13 @@ writing: $GLOBALS['TSFE']->id
 
    Var
          gr\_list
-   
+
    PHP-Type
          string (list)
-   
+
    Description
          The group list, sorted numerically. Group -1 = no login
-   
+
    Default
 
 
@@ -261,13 +252,13 @@ writing: $GLOBALS['TSFE']->id
 
    Var
          beUserLogin
-   
+
    PHP-Type
          boolean
-   
+
    Description
          Flag that indicates if a Backend user is logged in!
-   
+
    Default
          0
 
@@ -284,13 +275,13 @@ Global vars
 
    Var
          Var:
-   
+
    PHP-Type
          PHP-Type:
-   
+
    Description
          Description:
-   
+
    Default
          Default:
 
@@ -299,13 +290,13 @@ Global vars
 
    Var
          BE\_USER
-   
+
    PHP-Type
          object
-   
+
    Description
          The back-end user object (if any).
-   
+
    Default
          not set
 
@@ -314,13 +305,13 @@ Global vars
 
    Var
          TYPO3\_CONF\_VARS
-   
+
    PHP-Type
          array
-   
+
    Description
          TYPO3 Configuration.
-   
+
    Default
 
 
@@ -328,13 +319,13 @@ Global vars
 
    Var
          TSFE
-   
+
    PHP-Type
          object
-   
+
    Description
          Main frontend object.
-   
+
    Default
 
 

@@ -1,18 +1,9 @@
-﻿
-
 .. ==================================================
 .. FOR YOUR INFORMATION
 .. --------------------------------------------------
 .. -*- coding: utf-8 -*- with BOM.
 
-.. ==================================================
-.. DEFINE SOME TEXTROLES
-.. --------------------------------------------------
-.. role::   underline
-.. role::   typoscript(code)
-.. role::   ts(typoscript)
-   :class:  typoscript
-.. role::   php(code)
+.. include:: ../../Includes.txt
 
 
 Using the built in "shopping basket"
@@ -24,9 +15,7 @@ When you submit data from forms (or by querystring) (post/get-method)
 in the array "recs" it's stored in the session-data under the key
 recs.
 
-The syntax is like this:
-
-::
+The syntax is like this::
 
    recs[table_name][uid_of_record]
 
@@ -41,9 +30,7 @@ This form-element will change the registered value of record with
 uid=345 from the "tt\_products" table in typo3. Please note, that the
 record itself is NOT in any way modified, only the "counter" in the
 session-data indicating the "number of items" from the table is
-modified.
-
-::
+modified. ::
 
    <input name="recs[tt_products][345]">
 
@@ -67,9 +54,7 @@ Example:
 **Clearing the "basket"**
 """""""""""""""""""""""""
 
-This will clear the basket:
-
-::
+This will clear the basket::
 
     <INPUT type="hidden" name="recs[clear_all]" value="1">
 

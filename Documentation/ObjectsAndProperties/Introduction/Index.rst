@@ -1,18 +1,9 @@
-﻿
-
 .. ==================================================
 .. FOR YOUR INFORMATION
 .. --------------------------------------------------
 .. -*- coding: utf-8 -*- with BOM.
 
-.. ==================================================
-.. DEFINE SOME TEXTROLES
-.. --------------------------------------------------
-.. role::   underline
-.. role::   typoscript(code)
-.. role::   ts(typoscript)
-   :class:  typoscript
-.. role::   php(code)
+.. include:: ../../Includes.txt
 
 
 Introduction
@@ -58,9 +49,7 @@ Example:
 pixels /stdWrap: Here the value should be set to pixels and parsed
 through stdWrap.
 
-In a real application we could do like this:
-
-::
+In a real application we could do like this::
 
    .pixels.field = imagewidth
    .pixels.intval = 1
@@ -118,9 +107,7 @@ Contact
 Links
 
 ... and a configuration like this (taken from the example-code on the
-first pages):
-
-::
+first pages)::
 
    temp.topmenu.1.NO {
      backColor = red
@@ -142,9 +129,7 @@ Example:
 ~~~~~~~~
 
 All items take on the same value. Only the  *first* -part is defined
-and thus it's repeated to all elements
-
-::
+and thus it's repeated to all elements ::
 
    TS:        backColor = red
 
@@ -163,9 +148,7 @@ Example:
 ~~~~~~~~
 
 Here the  *first-* part is split into subparts. The third subpart is
-repeated because the menu has five items.
-
-::
+repeated because the menu has five items. ::
 
    TS:        backColor = red || yellow || green
 
@@ -188,9 +171,7 @@ Example:
 ~~~~~~~~
 
 Now a *middle* -value is also defined (" *white* "). This means that
-after the first two menu-items the *middle* -value is used.
-
-::
+after the first two menu-items the *middle* -value is used. ::
 
    TS:        backColor = red || yellow |*| white
 
@@ -209,9 +190,7 @@ Example:
 ~~~~~~~~
 
 Now a *last* -value is also defined (" *blue \|\| olive"* ). This
-means that after the first two menu-items the *middle* -value is used.
-
-::
+means that after the first two menu-items the *middle* -value is used. ::
 
    TS:        backColor = red || yellow |*| white |*| blue || olive
 
@@ -284,9 +263,7 @@ Example:
 
 The  *middle* -value is left out now. Then subpart 2 of the first
 value is repeated.  *Please observe that no space must exist between
-the two \|\*\|\|\*\|!*
-
-::
+the two \|\*\|\|\*\|!* ::
 
    TS:        backColor = red || yellow |*||*| blue || olive
 
@@ -310,9 +287,7 @@ Example:
 
 The  *middle* -value and  *first* -value are left out now. Then the
 subpart 1 of the last value is repeated.  *Please observe that no
-space must exist between the two \|\*\|\|\*\|!*
-
-::
+space must exist between the two \|\*\|\|\*\|!* ::
 
    TS:        backColor = |*||*| blue || olive
 
@@ -336,7 +311,7 @@ Example:
 
 ::
 
-   TS:        backColor = red |*| yellow || green |*| 
+   TS:        backColor = red |*| yellow || green |*|
 
 **Introduction** (red) first
 

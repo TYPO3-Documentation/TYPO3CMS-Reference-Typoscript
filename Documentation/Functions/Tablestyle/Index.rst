@@ -1,18 +1,9 @@
-﻿
-
 .. ==================================================
 .. FOR YOUR INFORMATION
 .. --------------------------------------------------
 .. -*- coding: utf-8 -*- with BOM.
 
-.. ==================================================
-.. DEFINE SOME TEXTROLES
-.. --------------------------------------------------
-.. role::   underline
-.. role::   typoscript(code)
-.. role::   ts(typoscript)
-   :class:  typoscript
-.. role::   php(code)
+.. include:: ../../Includes.txt
 
 
 tableStyle
@@ -27,13 +18,13 @@ tag
 
    Property
          Property:
-   
+
    Data type
          Data type:
-   
+
    Description
          Description:
-   
+
    Default
          Default:
 
@@ -42,13 +33,13 @@ tag
 
    Property
          align
-   
+
    Data type
          align /stdWrap
-   
+
    Description
-   
-   
+
+
    Default
 
 
@@ -56,13 +47,13 @@ tag
 
    Property
          border
-   
+
    Data type
          int /stdWrap
-   
+
    Description
-   
-   
+
+
    Default
 
 
@@ -70,13 +61,13 @@ tag
 
    Property
          cellspacing
-   
+
    Data type
          int /stdWrap
-   
+
    Description
-   
-   
+
+
    Default
 
 
@@ -84,13 +75,13 @@ tag
 
    Property
          cellpadding
-   
+
    Data type
          int /stdWrap
-   
+
    Description
-   
-   
+
+
    Default
 
 
@@ -98,13 +89,13 @@ tag
 
    Property
          color.field
-   
+
    Data type
          string
-   
+
    Description
          Set to field name from the $cObj->data-array
-   
+
    Default
 
 
@@ -112,17 +103,17 @@ tag
 
    Property
          color.default
-         
+
          color.1
-         
+
          color.2
-   
+
    Data type
          string
-   
+
    Description
          [default],[1],[2] = User defined
-   
+
    Default
 
 
@@ -130,13 +121,13 @@ tag
 
    Property
          params
-   
+
    Data type
          <TABLE>-params
-   
+
    Description
-   
-   
+
+
    Default
 
 
@@ -158,7 +149,7 @@ Example:
      border.field = table_border
      cellspacing.field = table_cellspacing
      cellpadding = 1
-   
+
      color.field = table_bgColor
      color.default = {$styles.content.tableStyle.color}
      color.1 = {$styles.content.tableStyle.color1}

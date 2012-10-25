@@ -1,18 +1,9 @@
-﻿
-
 .. ==================================================
 .. FOR YOUR INFORMATION
 .. --------------------------------------------------
 .. -*- coding: utf-8 -*- with BOM.
 
-.. ==================================================
-.. DEFINE SOME TEXTROLES
-.. --------------------------------------------------
-.. role::   underline
-.. role::   typoscript(code)
-.. role::   ts(typoscript)
-   :class:  typoscript
-.. role::   php(code)
+.. include:: ../../Includes.txt
 
 
 COLUMNS
@@ -27,13 +18,13 @@ tag can be defined with the according options.
 
    Property
          Property:
-   
+
    Data type
          Data type:
-   
+
    Description
          Description:
-   
+
    Default
          Default:
 
@@ -42,13 +33,13 @@ tag can be defined with the according options.
 
    Property
          tableParams
-   
+
    Data type
          <TABLE>-params /stdWrap
-   
+
    Description
          Attributes of the table tag.
-   
+
    Default
          border="0" cellspacing="0" cellpadding="0"
 
@@ -57,13 +48,13 @@ tag can be defined with the according options.
 
    Property
          TDparams
-   
+
    Data type
          <TD>-params /stdWrap
-   
+
    Description
          Attributes of the td tags.
-   
+
    Default
          valign="top"
 
@@ -72,13 +63,13 @@ tag can be defined with the according options.
 
    Property
          rows
-   
+
    Data type
          integer (Range: 2-20) /stdWrap
-   
+
    Description
          The number of rows in the columns.
-   
+
    Default
          2
 
@@ -87,13 +78,13 @@ tag can be defined with the according options.
 
    Property
          totalWidth
-   
+
    Data type
          integer /stdWrap
-   
+
    Description
          The total-width of the columns+gaps.
-   
+
    Default
 
 
@@ -101,17 +92,17 @@ tag can be defined with the according options.
 
    Property
          gapWidth
-   
+
    Data type
          integer /stdWrap
-         
+
          +optionSplit
-   
+
    Description
          Width of the gap between columns.
-         
+
          0 = no gap
-   
+
    Default
 
 
@@ -119,15 +110,15 @@ tag can be defined with the according options.
 
    Property
          gapBgCol
-   
+
    Data type
          HTML-color /stdWrap
-         
+
          +optionSplit
-   
+
    Description
          Background-color for the gap-tablecells.
-   
+
    Default
 
 
@@ -135,17 +126,17 @@ tag can be defined with the according options.
 
    Property
          gapLineThickness
-   
+
    Data type
          integer /stdWrap
-         
+
          +optionSplit
-   
+
    Description
          Thickness of the divider line in the gap between cells.
-         
+
          0 = no line
-   
+
    Default
 
 
@@ -153,15 +144,15 @@ tag can be defined with the according options.
 
    Property
          gapLineCol
-   
+
    Data type
          HTML-color /stdWrap
-         
+
          +optionSplit
-   
+
    Description
          Line color of the divider line.
-   
+
    Default
          black
 
@@ -170,15 +161,15 @@ tag can be defined with the according options.
 
    Property
          [column-number]
-         
+
          1,2,3,4...
-   
+
    Data type
          cObject
-   
+
    Description
          This is the content-object for each column!!
-   
+
    Default
 
 
@@ -186,13 +177,13 @@ tag can be defined with the according options.
 
    Property
          after
-   
+
    Data type
          cObject
-   
+
    Description
          This is a cObject placed after the columns-table!!
-   
+
    Default
 
 
@@ -200,13 +191,13 @@ tag can be defined with the according options.
 
    Property
          if
-   
+
    Data type
          ->if
-   
+
    Description
          If "if" returns false, the columns are not rendered!
-   
+
    Default
 
 
@@ -214,13 +205,13 @@ tag can be defined with the according options.
 
    Property
          stdWrap
-   
+
    Data type
          ->stdWrap
-   
+
    Description
-   
-   
+
+
    Default
 
 

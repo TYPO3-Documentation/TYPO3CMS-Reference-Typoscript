@@ -1,18 +1,9 @@
-﻿
-
 .. ==================================================
 .. FOR YOUR INFORMATION
 .. --------------------------------------------------
 .. -*- coding: utf-8 -*- with BOM.
 
-.. ==================================================
-.. DEFINE SOME TEXTROLES
-.. --------------------------------------------------
-.. role::   underline
-.. role::   typoscript(code)
-.. role::   ts(typoscript)
-   :class:  typoscript
-.. role::   php(code)
+.. include:: ../../Includes.txt
 
 
 split
@@ -37,9 +28,7 @@ split by the linebreak-character (ln 4). The items should all be
 treated with a stdWrap (ln 5) which imports the value of the item (ln
 6). This value is wrapped in a tablerow where the first column is a
 bullet-gif (ln 7). Finally the whole thing is wrapped in the proper
-table-tags (ln 9)
-
-::
+table-tags (ln 9) ::
 
    1    20 = TEXT
    2         20.field = bodytext
@@ -57,13 +46,13 @@ table-tags (ln 9)
 
    Property
          Property:
-   
+
    Data type
          Data type:
-   
+
    Description
          Description:
-   
+
    Default
          Default:
 
@@ -72,13 +61,13 @@ table-tags (ln 9)
 
    Property
          token
-   
+
    Data type
          str /stdWrap
-   
+
    Description
          string or character (token) used to split the value
-   
+
    Default
 
 
@@ -86,13 +75,13 @@ table-tags (ln 9)
 
    Property
          max
-   
+
    Data type
          int /stdWrap
-   
+
    Description
          max number of splits
-   
+
    Default
 
 
@@ -100,13 +89,13 @@ table-tags (ln 9)
 
    Property
          min
-   
+
    Data type
          int /stdWrap
-   
+
    Description
          min number of splits.
-   
+
    Default
 
 
@@ -114,14 +103,14 @@ table-tags (ln 9)
 
    Property
          returnKey
-   
+
    Data type
          int /stdWrap
-   
+
    Description
          Instead of parsing the split result, just return this element of the
          index immediately.
-   
+
    Default
 
 
@@ -129,18 +118,18 @@ table-tags (ln 9)
 
    Property
          cObjNum
-   
+
    Data type
          *cObjNum*
-         
+
          +optionSplit
-         
+
          /stdWrap
-   
+
    Description
          This is a pointer the array of this object ("1,2,3,4"), that should
          treat the items, resulting from the split.
-   
+
    Default
 
 
@@ -148,27 +137,23 @@ table-tags (ln 9)
 
    Property
          1,2,3,4
-   
+
    Data type
          ->CARRAY /stdWrap
-   
+
    Description
          The object that should treat the value.
-         
+
          **NOTE:** The "current"-value is set to the value of current item,
          when the objects are called. See "stdWrap" / current.
-         
-         **Example (stdWrap used):**
-         
-         ::
-         
+
+         **Example (stdWrap used):** ::
+
             1.current = 1
             1.wrap = <B> | </B>
-         
-         **Example (CARRAY used):**
-         
-         ::
-         
+
+         **Example (CARRAY used):** ::
+
             1 {
               10 = TEXT
               10.current = 1
@@ -176,7 +161,7 @@ table-tags (ln 9)
               20 = CLEARGIF
               20.height = 20
             }
-   
+
    Default
 
 
@@ -184,17 +169,17 @@ table-tags (ln 9)
 
    Property
          wrap
-   
+
    Data type
          wrap
-         
+
          +optionSplit
-         
+
          /stdWrap
-   
+
    Description
          Defines a wrap for each item.
-   
+
    Default
 
 

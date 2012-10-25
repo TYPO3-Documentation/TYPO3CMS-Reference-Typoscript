@@ -1,18 +1,10 @@
-﻿.. include:: Images.txt
-
 .. ==================================================
 .. FOR YOUR INFORMATION
 .. --------------------------------------------------
 .. -*- coding: utf-8 -*- with BOM.
 
-.. ==================================================
-.. DEFINE SOME TEXTROLES
-.. --------------------------------------------------
-.. role::   underline
-.. role::   typoscript(code)
-.. role::   ts(typoscript)
-   :class:  typoscript
-.. role::   php(code)
+.. include:: ../../Includes.txt
+.. include:: Images.txt
 
 
 MEDIA
@@ -65,13 +57,13 @@ automatically.
 
    Property
          Property:
-   
+
    Data type
          Data type:
-   
+
    Description
          Description:
-   
+
    Default
          Default:
 
@@ -80,13 +72,13 @@ automatically.
 
    Property
          flexParams
-   
+
    Data type
          string /stdWrap
-   
+
    Description
          Used for Flexform configuration of the content element
-   
+
    Default
          flexParams.field = pi\_flexform
 
@@ -95,15 +87,15 @@ automatically.
 
    Property
          alternativeContent
-   
+
    Data type
          stdWrap
-   
+
    Description
          Alternative content, which is printed out, if the client deactivated
          JavaScript or has no Flash. Otherwise, the media will replace this
          content.
-   
+
    Default
          alternativeContent.field = bodytext
 
@@ -112,13 +104,13 @@ automatically.
 
    Property
          type
-   
+
    Data type
          string /stdWrap
-   
+
    Description
          Defines media type: "video" or "audio".
-   
+
    Default
          video
 
@@ -127,23 +119,23 @@ automatically.
 
    Property
          renderType
-   
+
    Data type
          string /stdWrap
-   
+
    Description
          Used to select the render object.
-         
+
          Possible values are: auto, swf, qt, embed.
-         
+
          Extensions may add a custom renderType as well.
-         
+
          swf will be used, if renderType is "auto".
-         
+
          **Note:** renderType embed will be rendered by the cObject MULTIMEDIA,
          swf by SWFOBJECT and qt by QTOBJECT. For the according documentation
          see the sections on these cObjects.
-   
+
    Default
          auto
 
@@ -152,16 +144,16 @@ automatically.
 
    Property
          allowEmptyUrl
-   
+
    Data type
          boolean
-   
+
    Description
          If set to 0, you see a warning if no file/URL is configured. If you do
          some advanced setup such as configuring a JavaScript-driven player
          with a playlist, you may use the object without a URL and need to set
          the value to 1.
-   
+
    Default
          0
 
@@ -170,20 +162,18 @@ automatically.
 
    Property
          fileExtHandler
-   
+
    Data type
          array
-   
+
    Description
          The mappings between file extensions and render types can be
          configured here and will be used when renderType = auto.
-         
+
          Possible values are MEDIA, SWF, QT.
-         
-         **Example:**
-         
-         ::
-         
+
+         **Example:** ::
+
             fileExtHandler {
               default = MEDIA
               mp3 = SWF
@@ -195,7 +185,7 @@ automatically.
               class = MEDIA
               swa = SWF
             }
-   
+
    Default
 
 
@@ -203,25 +193,23 @@ automatically.
 
    Property
          mimeConf.swfobject
-         
+
          mimeConf.qtobject
-   
+
    Data type
          array
-   
+
    Description
          Configuration for a specific renderType. For each media type you can
          set default values.
-         
-         **Example:**
-         
-         ::
-         
+
+         **Example:** ::
+
             mimeConf.swfobject.audio {
               defaultWidth = 100
               defaultHeight = 50
             }
-   
+
    Default
 
 
@@ -229,13 +217,13 @@ automatically.
 
    Property
          file
-   
+
    Data type
          string /stdWrap
-   
+
    Description
          URL of the media file.
-   
+
    Default
 
 
@@ -243,33 +231,33 @@ automatically.
 
    Property
          parameter
-   
+
    Data type
          array
-   
+
    Description
          There are some configuration values which are set via the media
          content element. They are used to override the default settings. It is
          not expected to use them directly via TypoScript.
-         
+
          parameter {
-         
+
          mmFilemmRenderType
-         
+
          mmforcePlayer
-         
+
          mmType
-         
+
          mmWidth
-         
+
          mmHeight
-         
+
          mmMediaOptions
-         
+
          mmMediaOptionsContainer
-         
+
          }
-   
+
    Default
 
 
@@ -277,14 +265,14 @@ automatically.
 
    Property
          forcePlayer
-   
+
    Data type
          string /stdWrap
-   
+
    Description
          If the file is a URL and forcePlayer is not set, the URL will be
          called directly instead of using a player.
-   
+
    Default
 
 
@@ -292,13 +280,13 @@ automatically.
 
    Property
          width
-   
+
    Data type
          int /stdWrap
-   
+
    Description
          Media width, will be overridden by parameter.mmWidth.
-   
+
    Default
 
 
@@ -306,13 +294,13 @@ automatically.
 
    Property
          height
-   
+
    Data type
          int /stdWrap
-   
+
    Description
          Media height, will be overridden by parameter.mmHeight.
-   
+
    Default
 
 
@@ -320,13 +308,13 @@ automatically.
 
    Property
          stdWrap
-   
+
    Data type
          ->stdWrap
-   
+
    Description
-   
-   
+
+
    Default
 
 

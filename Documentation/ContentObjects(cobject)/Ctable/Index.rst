@@ -1,18 +1,9 @@
-﻿
-
 .. ==================================================
 .. FOR YOUR INFORMATION
 .. --------------------------------------------------
 .. -*- coding: utf-8 -*- with BOM.
 
-.. ==================================================
-.. DEFINE SOME TEXTROLES
-.. --------------------------------------------------
-.. role::   underline
-.. role::   typoscript(code)
-.. role::   ts(typoscript)
-   :class:  typoscript
-.. role::   php(code)
+.. include:: ../../Includes.txt
 
 
 CTABLE
@@ -31,13 +22,13 @@ useful for putting menus into them.
 
    Property
          Property:
-   
+
    Data type
          Data type:
-   
+
    Description
          Description:
-   
+
    Default
          Default:
 
@@ -46,13 +37,13 @@ useful for putting menus into them.
 
    Property
          offset
-   
+
    Data type
          x,y /stdWrap
-   
+
    Description
          Offset from upper left corner.
-   
+
    Default
          0,0
 
@@ -61,17 +52,17 @@ useful for putting menus into them.
 
    Property
          tm
-   
+
    Data type
          ->CARRAY +TDParams /stdWrap
-   
+
    Description
          TopMenu
-         
+
          The default value of TDParams is: valign="top".
-         
+
          stdWrap is available for the property TDParams.
-   
+
    Default
 
 
@@ -79,17 +70,17 @@ useful for putting menus into them.
 
    Property
          lm
-   
+
    Data type
          ->CARRAY +TDParams /stdWrap
-   
+
    Description
          LeftMenu
-         
+
          The default value of TDParams is: valign="top".
-         
+
          stdWrap is available for the property TDParams.
-   
+
    Default
 
 
@@ -97,17 +88,17 @@ useful for putting menus into them.
 
    Property
          rm
-   
+
    Data type
          ->CARRAY +TDParams /stdWrap
-   
+
    Description
          RightMenu
-         
+
          The default value of TDParams is: valign="top".
-         
+
          stdWrap is available for the property TDParams.
-   
+
    Default
 
 
@@ -115,17 +106,17 @@ useful for putting menus into them.
 
    Property
          bm
-   
+
    Data type
          ->CARRAY +TDParams /stdWrap
-   
+
    Description
          BottomMenu
-         
+
          The default value of TDParams is: valign="top".
-         
+
          stdWrap is available for the property TDParams.
-   
+
    Default
 
 
@@ -133,17 +124,17 @@ useful for putting menus into them.
 
    Property
          c
-   
+
    Data type
          ->CARRAY +TDParams /stdWrap
-   
+
    Description
          Content-cell
-         
+
          The default value of TDParams is: valign="top".
-         
+
          stdWrap is available for the property TDParams.
-   
+
    Default
 
 
@@ -151,13 +142,13 @@ useful for putting menus into them.
 
    Property
          cMargins
-   
+
    Data type
          margins /stdWrap
-   
+
    Description
          Distance around the content-cell "c".
-   
+
    Default
          0,0,0,0
 
@@ -166,13 +157,13 @@ useful for putting menus into them.
 
    Property
          cWidth
-   
+
    Data type
          pixels /stdWrap
-   
+
    Description
          Width of the content-cell "c".
-   
+
    Default
 
 
@@ -180,13 +171,13 @@ useful for putting menus into them.
 
    Property
          tableParams
-   
+
    Data type
          <TABLE>-params /stdWrap
-   
+
    Description
          Attributes of the table tag.
-   
+
    Default
          border="0" cellspacing="0" cellpadding="0"
 
@@ -195,13 +186,13 @@ useful for putting menus into them.
 
    Property
          stdWrap
-   
+
    Data type
          ->stdWrap
-   
+
    Description
-   
-   
+
+
    Default
 
 
@@ -229,10 +220,10 @@ Example:
        pidInList = this
        orderBy = sorting
      }
-   
+
      tm.10 < temp.sidemenu
      tm.TDParams = valign=top
-   
+
      stdWrap.wrap = <div id="mytable">|</div>
    }
 

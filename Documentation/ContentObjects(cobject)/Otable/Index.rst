@@ -1,18 +1,9 @@
-﻿
-
 .. ==================================================
 .. FOR YOUR INFORMATION
 .. --------------------------------------------------
 .. -*- coding: utf-8 -*- with BOM.
 
-.. ==================================================
-.. DEFINE SOME TEXTROLES
-.. --------------------------------------------------
-.. role::   underline
-.. role::   typoscript(code)
-.. role::   ts(typoscript)
-   :class:  typoscript
-.. role::   php(code)
+.. include:: ../../Includes.txt
 
 
 OTABLE
@@ -27,13 +18,13 @@ the table tag.
 
    Property
          Property:
-   
+
    Data type
          Data type:
-   
+
    Description
          Description:
-   
+
    Default
          Default:
 
@@ -42,27 +33,27 @@ the table tag.
 
    Property
          offset
-   
+
    Data type
          x,y /stdWrap
-   
+
    Description
          Offset from upper left corner.
-         
+
          **Note:**
-         
+
          Actually the data type is "x,y,r,b,w,h" and stdWrap:
-         
+
          x,y is the offset from upper left corner.
-         
+
          r,b is the offset (margin) to right and bottom.
-         
+
          w is the required width of the content field.
-         
+
          h is the required height of the content field.
-         
+
          All measures are in pixels.
-   
+
    Default
 
 
@@ -70,13 +61,13 @@ the table tag.
 
    Property
          1,2,3,4...
-   
+
    Data type
          cObject
-   
+
    Description
-   
-   
+
+
    Default
 
 
@@ -84,13 +75,13 @@ the table tag.
 
    Property
          tableParams
-   
+
    Data type
          <TABLE>-params /stdWrap
-   
+
    Description
          Attributes of the table tag.
-   
+
    Default
          border="0" cellspacing="0" cellpadding="0"
 
@@ -99,13 +90,13 @@ the table tag.
 
    Property
          stdWrap
-   
+
    Data type
          ->stdWrap
-   
+
    Description
-   
-   
+
+
    Default
 
 

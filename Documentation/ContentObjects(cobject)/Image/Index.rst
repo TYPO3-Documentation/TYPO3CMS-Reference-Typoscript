@@ -1,18 +1,9 @@
-﻿
-
 .. ==================================================
 .. FOR YOUR INFORMATION
 .. --------------------------------------------------
 .. -*- coding: utf-8 -*- with BOM.
 
-.. ==================================================
-.. DEFINE SOME TEXTROLES
-.. --------------------------------------------------
-.. role::   underline
-.. role::   typoscript(code)
-.. role::   ts(typoscript)
-   :class:  typoscript
-.. role::   php(code)
+.. include:: ../../Includes.txt
 
 
 IMAGE
@@ -35,13 +26,13 @@ of the returning image (if any) and contains width, height and so on.
 
    Property
          Property:
-   
+
    Data type
          Data type:
-   
+
    Description
          Description:
-   
+
    Default
          Default:
 
@@ -50,13 +41,13 @@ of the returning image (if any) and contains width, height and so on.
 
    Property
          file
-   
+
    Data type
          imgResource
-   
+
    Description
-   
-   
+
+
    Default
 
 
@@ -64,13 +55,13 @@ of the returning image (if any) and contains width, height and so on.
 
    Property
          params
-   
+
    Data type
          <IMG>-params /stdWrap
-   
+
    Description
-   
-   
+
+
    Default
 
 
@@ -78,13 +69,13 @@ of the returning image (if any) and contains width, height and so on.
 
    Property
          border
-   
+
    Data type
          integer
-   
+
    Description
          Value of the "border" attribute of the image tag.
-   
+
    Default
          0
 
@@ -93,21 +84,21 @@ of the returning image (if any) and contains width, height and so on.
 
    Property
          altText
-         
+
          titleText
-         
+
          (alttext)
-   
+
    Data type
          string /stdWrap
-   
+
    Description
          If no alt text is specified, an empty alt text will be used.
-         
+
          ("alttext" is the old spelling of this attribute. It was deprecated
          since TYPO3 4.3 and was used only if "altText" did not specify a value
          or properties. In TYPO3 4.6 "alttext" has been removed.)
-   
+
    Default
 
 
@@ -115,14 +106,14 @@ of the returning image (if any) and contains width, height and so on.
 
    Property
          emptyTitleHandling
-   
+
    Data type
          string /stdWrap
-   
+
    Description
          Value can be "keepEmpty" to preserve an empty title attribute, or
          "useAlt" to use the alt attribute instead.
-   
+
    Default
          useAlt
 
@@ -131,14 +122,14 @@ of the returning image (if any) and contains width, height and so on.
 
    Property
          longdescURL
-   
+
    Data type
          string /stdWrap
-   
+
    Description
          "longdesc" attribute (URL pointing to document with extensive details
          about image).
-   
+
    Default
 
 
@@ -146,13 +137,13 @@ of the returning image (if any) and contains width, height and so on.
 
    Property
          linkWrap
-   
+
    Data type
          linkWrap /stdWrap
-   
+
    Description
          (before ".wrap")
-   
+
    Default
 
 
@@ -160,16 +151,16 @@ of the returning image (if any) and contains width, height and so on.
 
    Property
          imageLinkWrap
-   
+
    Data type
          boolean/
-         
+
          ->imageLinkWrap
-   
+
    Description
          **NOTE:** ONLY active if linkWrap is NOT set and file is NOT
          GIFBUILDER (as it works with the original imagefile)
-   
+
    Default
 
 
@@ -177,13 +168,13 @@ of the returning image (if any) and contains width, height and so on.
 
    Property
          if
-   
+
    Data type
          ->if
-   
+
    Description
          if "if" returns false the image is not shown!
-   
+
    Default
 
 
@@ -191,13 +182,13 @@ of the returning image (if any) and contains width, height and so on.
 
    Property
          wrap
-   
+
    Data type
          wrap /stdWrap
-   
+
    Description
-   
-   
+
+
    Default
 
 
@@ -205,13 +196,13 @@ of the returning image (if any) and contains width, height and so on.
 
    Property
          stdWrap
-   
+
    Data type
          ->stdWrap
-   
+
    Description
-   
-   
+
+
    Default
 
 
@@ -229,7 +220,7 @@ Example:
 
 ::
 
-       10 = IMAGE 
+       10 = IMAGE
        10.file = toplogo*.gif
        10.params = hspace=5
        10.wrap = |<BR>

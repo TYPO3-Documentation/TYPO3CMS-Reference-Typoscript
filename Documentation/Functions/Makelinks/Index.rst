@@ -1,18 +1,9 @@
-﻿
-
 .. ==================================================
 .. FOR YOUR INFORMATION
 .. --------------------------------------------------
 .. -*- coding: utf-8 -*- with BOM.
 
-.. ==================================================
-.. DEFINE SOME TEXTROLES
-.. --------------------------------------------------
-.. role::   underline
-.. role::   typoscript(code)
-.. role::   ts(typoscript)
-   :class:  typoscript
-.. role::   php(code)
+.. include:: ../../Includes.txt
 
 
 makelinks
@@ -33,13 +24,13 @@ mailto:name@email.rld
 
    Property
          Property:
-   
+
    Data type
          Data type:
-   
+
    Description
          Description:
-   
+
    Default
          Default:
 
@@ -48,13 +39,13 @@ mailto:name@email.rld
 
    Property
          http.extTarget
-   
+
    Data type
          target
-   
+
    Description
          The target of the link
-   
+
    Default
          \_top
 
@@ -63,13 +54,13 @@ mailto:name@email.rld
 
    Property
          http.wrap
-   
+
    Data type
          wrap /stdWrap
-   
+
    Description
          wrap around the link
-   
+
    Default
 
 
@@ -77,14 +68,14 @@ mailto:name@email.rld
 
    Property
          http.ATagBeforeWrap
-   
+
    Data type
          boolean
-   
+
    Description
          If set, the link is first wrapped with  *http.wrap* and then the
          <A>-tag.
-   
+
    Default
 
 
@@ -92,23 +83,21 @@ mailto:name@email.rld
 
    Property
          http.keep
-   
+
    Data type
          list: "scheme","path","query"
-   
+
    Description
          As default the link-text will be the full domain-name of the link.
-         
-         **Examples** :
-         
-         ::
-         
-            http://www.webaddress.rld/test/doc.php?id=3 
+
+         **Examples** ::
+
+            http://www.webaddress.rld/test/doc.php?id=3
             "":           www.webaddress.rld
             "scheme":             http://www.webaddress.rld
             "scheme,path":        http://www.webaddress.rld/test/doc.php
             "scheme,path,query": http://www.webaddress.rld/test/doc.php?id=3
-   
+
    Default
 
 
@@ -116,19 +105,17 @@ mailto:name@email.rld
 
    Property
          http.ATagParams
-   
+
    Data type
          <A>-params /stdWrap
-   
+
    Description
          Additional parameters
-         
-         **Example:**
-         
-         ::
-         
+
+         **Example:** ::
+
             class="board"
-   
+
    Default
 
 
@@ -136,13 +123,13 @@ mailto:name@email.rld
 
    Property
          mailto.wrap
-   
+
    Data type
          wrap /stdWrap
-   
+
    Description
          wrap around the link
-   
+
    Default
 
 
@@ -150,14 +137,14 @@ mailto:name@email.rld
 
    Property
          mailto.ATagBeforeWrap
-   
+
    Data type
          boolean
-   
+
    Description
          If set, the link is first wrapped with mailto *.wrap* and then the
          <A>-tag.
-   
+
    Default
 
 
@@ -165,19 +152,17 @@ mailto:name@email.rld
 
    Property
          mailto.ATagParams
-   
+
    Data type
          <A>-params /stdWrap
-   
+
    Description
          Additional parameters
-         
-         **Example:**
-         
-         ::
-         
+
+         **Example:** ::
+
             class="board"
-   
+
    Default
 
 

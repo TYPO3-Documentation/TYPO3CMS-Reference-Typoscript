@@ -1,18 +1,9 @@
-﻿
-
 .. ==================================================
 .. FOR YOUR INFORMATION
 .. --------------------------------------------------
 .. -*- coding: utf-8 -*- with BOM.
 
-.. ==================================================
-.. DEFINE SOME TEXTROLES
-.. --------------------------------------------------
-.. role::   underline
-.. role::   typoscript(code)
-.. role::   ts(typoscript)
-   :class:  typoscript
-.. role::   php(code)
+.. include:: ../../Includes.txt
 
 
 imageLinkWrap
@@ -39,13 +30,13 @@ a short instruction.
 
    Property
          Property:
-   
+
    Data type
          Data type:
-   
+
    Description
          Description:
-   
+
    Default
          Default:
 
@@ -54,13 +45,13 @@ a short instruction.
 
    Property
          file
-   
+
    Data type
          stdWrap
-   
+
    Description
          Override the path of the image which is displayed
-   
+
    Default
 
 
@@ -68,14 +59,14 @@ a short instruction.
 
    Property
          width
-   
+
    Data type
          int (1-1000) /stdWrap
-   
+
    Description
          If you add "m" to either the width or height, the image will be held
          in proportions and width/height works as max-dimensions
-   
+
    Default
 
 
@@ -83,13 +74,13 @@ a short instruction.
 
    Property
          height
-   
+
    Data type
          int (1-1000) /stdWrap
-   
+
    Description
          see ".width"
-   
+
    Default
 
 
@@ -97,19 +88,17 @@ a short instruction.
 
    Property
          effects
-   
+
    Data type
          see GIFBUILDER / effects. (from stdgraphics-library)
-         
+
          /stdWrap
-   
+
    Description
-         **Example:**
-         
-         ::
-         
+         **Example:** ::
+
             gamma=1.3 | sharpen=80 | solarize=70
-   
+
    Default
 
 
@@ -117,14 +106,14 @@ a short instruction.
 
    Property
          sample
-   
+
    Data type
          boolean /stdWrap
-   
+
    Description
          If set, -sample is used to scale images instead of -geometry. Sample
          does not use antialiasing and is therefore much faster.
-   
+
    Default
 
 
@@ -132,14 +121,14 @@ a short instruction.
 
    Property
          alternativeTempPath
-   
+
    Data type
          path /stdWrap
-   
+
    Description
          Enter an alternative path to use for temp images. Must be found in the
          list in $TYPO3\_CONF\_VARS['FE']['allowedTempPaths'].
-   
+
    Default
 
 
@@ -147,13 +136,13 @@ a short instruction.
 
    Property
          title
-   
+
    Data type
          string /stdWrap
-   
+
    Description
          page title of the new window (HTML)
-   
+
    Default
 
 
@@ -161,13 +150,13 @@ a short instruction.
 
    Property
          bodyTag
-   
+
    Data type
          <tag> /stdWrap
-   
+
    Description
          Body tag of the new window
-   
+
    Default
 
 
@@ -175,13 +164,13 @@ a short instruction.
 
    Property
          wrap
-   
+
    Data type
          wrap /stdWrap
-   
+
    Description
          Wrap of the image, which is output between the body-tags
-   
+
    Default
 
 
@@ -189,13 +178,13 @@ a short instruction.
 
    Property
          target
-   
+
    Data type
          <A>-data:target /stdWrap
-   
+
    Description
          NOTE: Only if ".JSwindow" is set
-   
+
    Default
 
 
@@ -203,16 +192,16 @@ a short instruction.
 
    Property
          JSwindow
-   
+
    Data type
          boolean /stdWrap
-   
+
    Description
          If set to "1", the image will be opened in a new window which is
          fitted to the dimensions of the image!
-         
+
          You can also use stdWrap here.
-   
+
    Default
 
 
@@ -220,13 +209,13 @@ a short instruction.
 
    Property
          JSwindow.expand
-   
+
    Data type
          x,y /stdWrap
-   
+
    Description
          x and y is added to the window dimensions.
-   
+
    Default
 
 
@@ -234,13 +223,13 @@ a short instruction.
 
    Property
          JSwindow.newWindow
-   
+
    Data type
          boolean /stdWrap
-   
+
    Description
          Each picture will open in a new window!
-   
+
    Default
 
 
@@ -248,14 +237,14 @@ a short instruction.
 
    Property
          JSwindow.altUrl
-   
+
    Data type
          string /stdWrap
-   
+
    Description
          If this returns anything, the URL shown in the JS-window is NOT
          tx\_cms\_showpic but the url given here!
-   
+
    Default
 
 
@@ -263,18 +252,18 @@ a short instruction.
 
    Property
          JSwindow.altUrl\_noDefaultParams
-   
+
    Data type
          boolean
-   
+
    Description
          If this is set, the image parameters are not appended to the altUrl
-         
+
          automatically. This is useful if you want to create them with a user
          function
-         
+
          instead.
-   
+
    Default
 
 
@@ -282,13 +271,13 @@ a short instruction.
 
    Property
          typolink
-   
+
    Data type
          ->typolink
-   
+
    Description
          NOTE: This overrides the imageLinkWrap if it returns anything!!
-   
+
    Default
 
 
@@ -296,14 +285,14 @@ a short instruction.
 
    Property
          directImageLink
-   
+
    Data type
          boolean /stdWrap
-   
+
    Description
          If true, a link to the generated image file will be returned directly
          (which means that showpic.php will not be used).
-   
+
    Default
          0
 
@@ -312,27 +301,25 @@ a short instruction.
 
    Property
          linkParams
-   
+
    Data type
          ->typolink
-   
+
    Description
          Allows manipulation of the generated typolink, if JSwindow is not
          used.
-         
-         **Example:**
-         
-         ::
-         
+
+         **Example:** ::
+
             JSwindow = 0
             directImageLink = 1
             linkParams.ATagParams.dataWrap = class="{$styles.content.imgtext.linkWrap.lightboxCssClass}" rel="{$styles.content.imgtext.linkWrap.lightboxRelAttribute}"
-         
+
          With these options it is easy to use a lightbox of your choice to
          display resizable images in the frontend: You only need to integrate
          the lightbox by including its JS and CSS files and to activate it for
          certain links (e.g. for links with the class "lightbox").
-   
+
    Default
 
 
@@ -340,13 +327,13 @@ a short instruction.
 
    Property
          stdWrap
-   
+
    Data type
          ->stdWrap
-   
+
    Description
          Enable stdWrap for the image
-   
+
    Default
 
 
@@ -354,13 +341,13 @@ a short instruction.
 
    Property
          enable
-   
+
    Data type
          boolean /stdWrap
-   
+
    Description
          **The image is linked ONLY if this is true!!**
-   
+
    Default
          0
 
@@ -386,7 +373,7 @@ Example:
            wrap = <A href="javascript:close();"> | </A>
            width = 800m
            height = 600
-   
+
            JSwindow = 1
            JSwindow.newWindow = 1
            JSwindow.expand = 17,20

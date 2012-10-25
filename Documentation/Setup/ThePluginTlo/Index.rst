@@ -1,18 +1,9 @@
-﻿
-
 .. ==================================================
 .. FOR YOUR INFORMATION
 .. --------------------------------------------------
 .. -*- coding: utf-8 -*- with BOM.
 
-.. ==================================================
-.. DEFINE SOME TEXTROLES
-.. --------------------------------------------------
-.. role::   underline
-.. role::   typoscript(code)
-.. role::   ts(typoscript)
-   :class:  typoscript
-.. role::   php(code)
+.. include:: ../../Includes.txt
 
 
 The "plugin" TLO
@@ -36,13 +27,13 @@ prefixed with an underscore:
 
    Property
          Property:
-   
+
    Data type
          Data type:
-   
+
    Description
          Description:
-   
+
    Default
          Default:
 
@@ -51,13 +42,13 @@ prefixed with an underscore:
 
    Property
          *userFunc*
-   
+
    Data type
-   
-   
+
+
    Description
          *Property setting up the USER / USER\_INT object of the plugin*
-   
+
    Default
 
 
@@ -65,13 +56,13 @@ prefixed with an underscore:
 
    Property
          *includeLibs*
-   
+
    Data type
-   
-   
+
+
    Description
          *Property setting up the USER / USER\_INT object of the plugin*
-   
+
    Default
 
 
@@ -79,19 +70,19 @@ prefixed with an underscore:
 
    Property
          \_CSS\_DEFAULT\_STYLE
-   
+
    Data type
          string
-   
+
    Description
          Use this to have some default CSS styles inserted in the header
          section of the document. Most likely this will provide a default
          acceptable display from the plugin, but should ideally be cleared and
          moved to an external stylesheet.
-         
+
          This value is for all plugins read by the pagegen script when making
          the header of the document.
-   
+
    Default
 
 
@@ -99,16 +90,16 @@ prefixed with an underscore:
 
    Property
          \_DEFAULT\_PI\_VARS.[piVar-key]
-   
+
    Data type
          string
-   
+
    Description
          Allows you to set default values of the piVars array which most
          plugins are using (and should use) for data exchange with themselves.
-         
+
          This works only if the plugin calls $this->pi\_setPiVarDefaults().
-   
+
    Default
 
 
@@ -116,13 +107,13 @@ prefixed with an underscore:
 
    Property
          \_LOCAL\_LANG.[lang-key].[label-key]
-   
+
    Data type
          string
-   
+
    Description
          Can be used to override the default locallang labels for the plugin.
-   
+
    Default
 
 

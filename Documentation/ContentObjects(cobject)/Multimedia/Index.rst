@@ -1,18 +1,9 @@
-﻿
-
 .. ==================================================
 .. FOR YOUR INFORMATION
 .. --------------------------------------------------
 .. -*- coding: utf-8 -*- with BOM.
 
-.. ==================================================
-.. DEFINE SOME TEXTROLES
-.. --------------------------------------------------
-.. role::   underline
-.. role::   typoscript(code)
-.. role::   ts(typoscript)
-   :class:  typoscript
-.. role::   php(code)
+.. include:: ../../Includes.txt
 
 
 MULTIMEDIA
@@ -28,13 +19,13 @@ used.
 
    Property
          Property:
-   
+
    Data type
          Data type:
-   
+
    Description
          Description:
-   
+
    Default
          Default:
 
@@ -43,26 +34,26 @@ used.
 
    Property
          file
-   
+
    Data type
          resource /stdWrap
-   
+
    Description
          The multimedia file. Possible file types are:
-         
+
          **txt, html, htm** : Will be inserted directly, of the following
          properties only ".stdWrap" can be used.
-         
+
          **class** : Java-applet.
-         
+
          **swf** : Flash animation.
-         
+
          **swa, dcr** : ShockWave Animation.
-         
+
          **au, wav, mp3** : Sound.
-         
+
          **avi, mov, asf, mpg, wmv** : Movies (AVI, QuickTime, MPEG4).
-   
+
    Default
 
 
@@ -70,47 +61,41 @@ used.
 
    Property
          params
-   
+
    Data type
          string /stdWrap
-   
+
    Description
          These are parameters for the multimedia-objects. Use this to enter
          stuff like autostart, type, width, height and so on. For each file
          type several parameters make sense. For an incomplete list see below
          this table.
-         
-         **Example:**
-         
-         ::
-         
+
+         **Example:** ::
+
             params (
               type = application/x-shockwave-flash
               width = 200
               height = 300
             )
-         
-         This will generate a tag like
-         
-         ::
-         
+
+         This will generate a tag like ::
+
             <embed .... type="application/x-shockwave-flash" width="200" height="300">
-         
+
          For parameters which are set by default (see tables below) an empty
          string will remove the parameter from the embed-tag.
-         
-         **Example:**
-         
-         ::
-         
+
+         **Example:** ::
+
             params (
               height =
             )
-         
+
          **Note** : If you set a width or a height here, this will overwrite
          the width or the height which have been set using ".width" and
          ".height".
-   
+
    Default
 
 
@@ -118,15 +103,15 @@ used.
 
    Property
          width
-   
+
    Data type
          integer /stdWrap
-   
+
    Description
          Width attribute of the embed tag.
-         
+
          Not used for txt, html, htm and sound files.
-   
+
    Default
          200
 
@@ -135,15 +120,15 @@ used.
 
    Property
          height
-   
+
    Data type
          integer /stdWrap
-   
+
    Description
          Height attribute of the embed tag.
-         
+
          Not used for txt, html, htm and sound files.
-   
+
    Default
          200
 
@@ -152,13 +137,13 @@ used.
 
    Property
          stdWrap
-   
+
    Data type
          ->stdWrap
-   
+
    Description
-   
-   
+
+
    Default
 
 
@@ -184,10 +169,10 @@ au, wav, mp3:
 
    Parameter
          Parameter:
-   
+
    Description
          Description:
-   
+
    Default
          Default:
 
@@ -196,10 +181,10 @@ au, wav, mp3:
 
    Parameter
          width
-   
+
    Description
          Width of the controls. If not set, the browser defaults to 200.
-   
+
    Default
 
 
@@ -207,10 +192,10 @@ au, wav, mp3:
 
    Parameter
          height
-   
+
    Description
          Height of the controls. If not set, the browser defaults to 16.
-   
+
    Default
 
 
@@ -218,10 +203,10 @@ au, wav, mp3:
 
    Parameter
          loop
-   
+
    Description
          Repeat the sound, when playing finished. Set to true or false.
-   
+
    Default
 
 
@@ -229,10 +214,10 @@ au, wav, mp3:
 
    Parameter
          autostart
-   
+
    Description
          Automatically start the sound. Set to true or false.
-   
+
    Default
 
 
@@ -249,10 +234,10 @@ avi, mov, asf, mpg, wmv:
 
    Parameter
          Parameter:
-   
+
    Description
          Description:
-   
+
    Default
          Default:
 
@@ -261,10 +246,10 @@ avi, mov, asf, mpg, wmv:
 
    Parameter
          width
-   
+
    Description
          Width of the movie.
-   
+
    Default
          200
 
@@ -273,10 +258,10 @@ avi, mov, asf, mpg, wmv:
 
    Parameter
          height
-   
+
    Description
          Height of the movie.
-   
+
    Default
          200
 
@@ -285,13 +270,13 @@ avi, mov, asf, mpg, wmv:
 
    Parameter
          autostart
-   
+
    Description
          Automatically start the video. Set to true or false.
-         
+
          **Note** : Not for "mov", there the parameter is called "autostart".
          See example below.
-   
+
    Default
 
 
@@ -308,10 +293,10 @@ swf, swa, dcr:
 
    Parameter
          Parameter:
-   
+
    Description
          Description:
-   
+
    Default
          Default:
 
@@ -320,10 +305,10 @@ swf, swa, dcr:
 
    Parameter
          width
-   
+
    Description
          Width of the object. If not set, the browser defaults to approx. 200.
-   
+
    Default
          200
 
@@ -332,10 +317,10 @@ swf, swa, dcr:
 
    Parameter
          height
-   
+
    Description
          Height of the object. If not set, the browser defaults to approx. 200.
-   
+
    Default
          200
 
@@ -344,10 +329,10 @@ swf, swa, dcr:
 
    Parameter
          quality
-   
+
    Description
          Quality of the video.
-   
+
    Default
          high
 
@@ -365,10 +350,10 @@ class:
 
    Parameter
          Parameter:
-   
+
    Description
          Description:
-   
+
    Default
          Default:
 
@@ -377,10 +362,10 @@ class:
 
    Parameter
          width
-   
+
    Description
          Width of the object.
-   
+
    Default
          200
 
@@ -389,10 +374,10 @@ class:
 
    Parameter
          height
-   
+
    Description
          Height of the object.
-   
+
    Default
          200
 

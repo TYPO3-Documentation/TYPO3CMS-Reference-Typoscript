@@ -1,18 +1,9 @@
-﻿
-
 .. ==================================================
 .. FOR YOUR INFORMATION
 .. --------------------------------------------------
 .. -*- coding: utf-8 -*- with BOM.
 
-.. ==================================================
-.. DEFINE SOME TEXTROLES
-.. --------------------------------------------------
-.. role::   underline
-.. role::   typoscript(code)
-.. role::   ts(typoscript)
-   :class:  typoscript
-.. role::   php(code)
+.. include:: ../../Includes.txt
 
 
 General information
@@ -23,16 +14,12 @@ Case sensitivity
 """"""""""""""""
 
 All names and references in TypoScript are  **case sensitive!** This
-is very important to notice. That means that:
-
-::
+is very important to notice. That means that::
 
    myObject = TEXT
    myObject.value = <strong>Some HTML code</strong>
 
-is not the same as
-
-::
+is not the same as ::
 
    myObject = text
    myObject.Value = <strong>Some HTML code</strong>

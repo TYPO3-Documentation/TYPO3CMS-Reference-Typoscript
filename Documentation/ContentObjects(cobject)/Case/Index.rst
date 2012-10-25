@@ -1,18 +1,9 @@
-﻿
-
 .. ==================================================
 .. FOR YOUR INFORMATION
 .. --------------------------------------------------
 .. -*- coding: utf-8 -*- with BOM.
 
-.. ==================================================
-.. DEFINE SOME TEXTROLES
-.. --------------------------------------------------
-.. role::   underline
-.. role::   typoscript(code)
-.. role::   ts(typoscript)
-   :class:  typoscript
-.. role::   php(code)
+.. include:: ../../Includes.txt
 
 
 CASE
@@ -34,13 +25,13 @@ another property. So the forbidden values are: "setCurrent", "key",
 
    Property
          Property:
-   
+
    Data type
          Data type:
-   
+
    Description
          Description:
-   
+
    Default
          Default:
 
@@ -49,13 +40,13 @@ another property. So the forbidden values are: "setCurrent", "key",
 
    Property
          setCurrent
-   
+
    Data type
          string /stdWrap
-   
+
    Description
          Sets the "current"-value.
-   
+
    Default
 
 
@@ -63,17 +54,17 @@ another property. So the forbidden values are: "setCurrent", "key",
 
    Property
          key
-   
+
    Data type
          string /stdWrap
-   
+
    Description
          This is used to define the source of the value that will be matched
          against the values of "Array". It will generally not be a simple
          string, but use its stdWrap properties to retrieve a dynamic value
          from some specific source, typically a field of the current record
          (see example below).
-   
+
    Default
          default
 
@@ -82,14 +73,14 @@ another property. So the forbidden values are: "setCurrent", "key",
 
    Property
          default
-   
+
    Data type
          cObject
-   
+
    Description
          Defines the rendering for all values of "key" that don't match any of
          the values of "Array".
-   
+
    Default
 
 
@@ -97,13 +88,13 @@ another property. So the forbidden values are: "setCurrent", "key",
 
    Property
          Array...
-   
+
    Data type
          cObject
-   
+
    Description
          Defines the rendering for a number of values.
-   
+
    Default
 
 
@@ -111,14 +102,14 @@ another property. So the forbidden values are: "setCurrent", "key",
 
    Property
          stdWrap
-   
+
    Data type
          ->stdWrap
-   
+
    Description
          stdWrap around any object that was rendered no matter what the "key"
          value is.
-   
+
    Default
 
 
@@ -126,13 +117,13 @@ another property. So the forbidden values are: "setCurrent", "key",
 
    Property
          if
-   
+
    Data type
          ->if
-   
+
    Description
          If "if" returns false, nothing is returned.
-   
+
    Default
 
 
@@ -151,15 +142,13 @@ This example chooses between two different renderings of some content
 depending on whether the field "layout" is "1" or not ("default"). The
 result is in either case wrapped with "\|<br />". If the field
 "header" turns out not to be set ("false") an empty string is returned
-anyway.
-
-::
+anyway. ::
 
    stuff = CASE
    stuff.key.field = layout
    stuff.if.isTrue.field = header
    stuff.stdWrap.wrap = |<br />
-   
+
    stuff.default = TEXT
    stuff.default {
      ....

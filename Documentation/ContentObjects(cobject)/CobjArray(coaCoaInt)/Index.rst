@@ -1,18 +1,9 @@
-﻿
-
 .. ==================================================
 .. FOR YOUR INFORMATION
 .. --------------------------------------------------
 .. -*- coding: utf-8 -*- with BOM.
 
-.. ==================================================
-.. DEFINE SOME TEXTROLES
-.. --------------------------------------------------
-.. role::   underline
-.. role::   typoscript(code)
-.. role::   ts(typoscript)
-   :class:  typoscript
-.. role::   php(code)
+.. include:: ../../Includes.txt
 
 
 COBJ\_ARRAY (COA, COA\_INT)
@@ -36,13 +27,13 @@ cObjects but with any cObject.
 
    Property
          Property:
-   
+
    Data type
          Data type:
-   
+
    Description
          Description:
-   
+
    Default
          Default:
 
@@ -51,13 +42,13 @@ cObjects but with any cObject.
 
    Property
          1,2,3,4...
-   
+
    Data type
          cObject
-   
+
    Description
-   
-   
+
+
    Default
 
 
@@ -65,13 +56,13 @@ cObjects but with any cObject.
 
    Property
          if
-   
+
    Data type
          ->if
-   
+
    Description
          if "if" returns false the COA is NOT rendered
-   
+
    Default
 
 
@@ -79,13 +70,13 @@ cObjects but with any cObject.
 
    Property
          wrap
-   
+
    Data type
          wrap /stdWrap
-   
+
    Description
-   
-   
+
+
    Default
 
 
@@ -93,13 +84,13 @@ cObjects but with any cObject.
 
    Property
          stdWrap
-   
+
    Data type
          ->stdWrap
-   
+
    Description
-   
-   
+
+
    Default
 
 
@@ -107,21 +98,21 @@ cObjects but with any cObject.
 
    Property
          includeLibs
-   
+
    Data type
          *list of* resource /stdWrap
-   
+
    Description
          **(This property is used only if the object is COA\_INT!, See
          introduction.)**
-         
+
          This is a comma-separated list of resources that are included as PHP-
          scripts (with include\_once() function) if this script is included.
-         
+
          This is possible to do because any include-files will be known before
          the scripts are included. That's not the case with the regular
          PHP\_SCRIPT cObject.
-   
+
    Default
 
 
@@ -143,7 +134,7 @@ Example:
    temp.menutable {
      10 = TEXT
      10.value = <table border="0" cellpadding="0" cellspacing="0">
-   
+
      20 = HMENU
      20.entryLevel = 0
      20.1 = GMENU
@@ -160,7 +151,7 @@ Example:
          offset = |*| 5,18 || 25,18
        }
      }
-     
+
      30 = TEXT
      30.value = </table>
    }

@@ -1,18 +1,9 @@
-﻿
-
 .. ==================================================
 .. FOR YOUR INFORMATION
 .. --------------------------------------------------
 .. -*- coding: utf-8 -*- with BOM.
 
-.. ==================================================
-.. DEFINE SOME TEXTROLES
-.. --------------------------------------------------
-.. role::   underline
-.. role::   typoscript(code)
-.. role::   ts(typoscript)
-   :class:  typoscript
-.. role::   php(code)
+.. include:: ../../Includes.txt
 
 
 USER and USER\_INT
@@ -42,13 +33,13 @@ outside the main page-rendering.
 
    Property
          Property:
-   
+
    Data type
          Data type:
-   
+
    Description
          Description:
-   
+
    Default
          Default:
 
@@ -57,41 +48,39 @@ outside the main page-rendering.
 
    Property
          userFunc
-   
+
    Data type
          function name
-   
+
    Description
          The name of the function. If you specify the name with a '->' in, it's
          interpreted as a call to a method in a class.
-         
+
          Two parameters are sent: A content variable (which is empty in this
          case, but not when used from stdWrap function .postUserFunc and
          .preUserFunc)and the second parameter is an array with the properties
          of this cObject if any.
-         
+
          **Example:**
-         
+
          This TypoScript will display all content element headers of a page in
          reversed order. Please take a look at
-         typo3/sysext/statictemplates/media/scripts/example\_callfunction.php!
-         
-         ::
-         
+         typo3/sysext/statictemplates/media/scripts/example\_callfunction.php! ::
+
             page = PAGE
             page.typeNum=0
             includeLibs.something = typo3/sysext/statictemplates/media/scripts/example_callfunction.php
-            
+
             page.30 = USER
             page.30 {
               userFunc = user_various->listContentRecordsOnPage
               reverseOrder = 1
             }
-         
+
          **NOTE:** When using a function, the name of the function has to start
          with "user\_". When using a class, the name of the class must start
          with "user\_" (there are no conditions on the name of the method).
-   
+
    Default
 
 
@@ -99,19 +88,19 @@ outside the main page-rendering.
 
    Property
          includeLibs
-   
+
    Data type
          *list of* resource /stdWrap
-   
+
    Description
          **This property applies only if the object is created as USER\_INT.**
-         
+
          This is a comma-separated list of resources that are included as PHP-
          scripts (with include\_once() function) if this script is included.
-         
+
          This is possible to do because any include-files will be known before
          the scripts are included.
-   
+
    Default
 
 
