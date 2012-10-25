@@ -16,9 +16,7 @@ inside templates.
 PHP\_SCRIPT
 """""""""""
 
-This includes a PHP-script. You should not name the script ".php" but
-rather ".inc" as it's meant to be included and not executed on it's
-own.
+This includes a PHP-script.
 
 NOTE: This option is ignored if ['FE']['noPHPscriptInclude'] => 1;
 is set in LocalConfiguration.php

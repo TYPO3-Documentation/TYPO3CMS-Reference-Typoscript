@@ -18,28 +18,28 @@ at the very beginning of the page-parsing.
 First we put this TypoScript line in the "Setup"-field of the
 template::
 
-   config.includeLibrary = fileadmin/scripts/include.inc
+   config.includeLibrary = fileadmin/scripts/include.php
 
-The file  **include.inc** is now included (in
+The file  **include.php** is now included (in
 typo3/sysext/frontend/Classes/Page/PageGenerator.php, in older
 versions in typo3/sysext/cms/tslib/class.tslib\_pagegen.php). In this
 case it looks like this:
 
-file: fileadmin/scripts/include.inc ::
+file: fileadmin/scripts/include.php ::
 
    <?
            ...
-           include('fileadmin/scripts/hello_world.inc');
-           include('fileadmin/scripts/other_library.inc');
+           include('fileadmin/scripts/hello_world.php');
+           include('fileadmin/scripts/other_library.php');
            ...
    ?>
 
 As you can see, this file includes our library "hello\_world" and some
 other libraries too!
 
-The file  **hello\_world.inc** looks like this:
+The file  **hello\_world.php** looks like this:
 
-file: fileadmin/scripts/hello\_world.inc ::
+file: fileadmin/scripts/hello\_world.php ::
 
    <?
    class hello_world {
@@ -57,11 +57,11 @@ a page. So in the TypoScript code we setup a content-object that
 includes the third script::
 
    page.100 = PHP_SCRIPT
-   page.100.file = fileadmin/scripts/surprise.inc
+   page.100.file = fileadmin/scripts/surprise.php
 
-**surprise.inc** looks like this:
+**surprise.php** looks like this:
 
-file: fileadmin/scripts/surprise.inc ::
+file: fileadmin/scripts/surprise.php ::
 
    <?
            $hello_world_object = new hello_world;             // New instance is created
@@ -85,7 +85,7 @@ The output:
 With this configuration - ::
 
    page.100 = PHP_SCRIPT
-   page.100.file = fileadmin/scripts/surprise.inc
+   page.100.file = fileadmin/scripts/surprise.php
 
 \- the output will look like this::
 
@@ -95,7 +95,7 @@ With this configuration - ::
 
    page.100 = PHP_SCRIPT
    page.100 {
-           file = fileadmin/scripts/surprise.inc
+           file = fileadmin/scripts/surprise.php
            cObj = TEXT
            cObj.value = Joe says:&nbsp;
    }
@@ -108,7 +108,7 @@ With this configuration - ::
 
    page.100 = PHP_SCRIPT
    page.100 {
-           file = fileadmin/scripts/surprise.inc
+           file = fileadmin/scripts/surprise.php
            cObj = TEXT
            cObj.value = Joe says:&nbsp;
            stdWrap.wrap = <font color="red"> | </font>
