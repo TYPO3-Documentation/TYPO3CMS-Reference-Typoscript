@@ -15,21 +15,6 @@ Data types reference
 .. container:: table-row
 
    Data type
-         Data type:
-
-   Examples
-         Examples:
-
-   Comment
-         Comment:
-
-   Default
-         Default:
-
-
-.. container:: table-row
-
-   Data type
          <tag>
 
    Examples
@@ -767,215 +752,264 @@ Data types reference
          getText
 
    Examples
-         **= field : header**
+         .. for help about t3-field-list-table see http://mbless.de/4us/typo3-oo2rest/06-The-%5Bfield-list-table%5D-directive/1-demo.rst.html
 
-         *get content from the $cObj->data-array[ **header** ]*
+         .. t3-field-list-table::
+          :header-rows: 1
 
-         **= parameters : color**
+          - :dt:
+                Example
 
-         *get content from the $cObj->parameters-array[ **color** ]*
+            :dd:
+                Comment
 
-         **= register : color**
+          - :dt:
+            :dd:
+                This returns a value from somewhere in a PHP-array, as defined by the
+                type. The syntax is "type : pointer". The type is case-insensitive.
 
-         *get content from the $GLOBALS['TSFE']->register[ **color** ]*
+          - :dt:
+               **= field : header**
 
-         **= leveltitle : 1**
+               *get content from the $cObj->data-array[ **header** ]*
 
-         *get the title of the page on the first level of the rootline*
+            :dd:
+                **field:** [field name from the current  *$cObj* ->data-array in the
+                cObj.]
 
-         **= leveltitle : -2 , slide**
+                As default the  *$cObj* ->data-array is $GLOBALS['TSFE']->page (record
+                of the current page!)
 
-         *get the title of the page on the level right below the current page
-         AND if that is not present, walt to the bottom of the rootline until
-         there's a title*
+                In TMENU:  *$cObj* ->data is set to the page-record for each menu
+                item.
 
-         **= leveluid : 0**
+                In CONTENT/RECORDS  *$cObj* ->data is set to the actual record
 
-         *get the id of the root-page of the website (level zero)*
+                In GIFBUILDER  *$cObj* ->data is set to the data GIFBUILDER is
+                supplied with.
 
-         **= levelfield : -1 , user\_myExtField , slide**
+          - :dt:
+                **= parameters : color**
 
-         *get the value of the user defined field "user\_myExtField" in the
-         root line (requires additional configuration in $TYPO3\_CONF\_VARS to
-         include field!)*
+                *get content from the $cObj->parameters-array[ **color** ]*
 
-         **= global : HTTP\_COOKIE\_VARS \| some\_cookie**
+            :dd:
+                **parameters:** [field name from the current  *$cObj* ->parameters-
+                array in the cObj.]
 
-         *get the env variable $HTTP\_COOKIE\_VARS[some\_cookie]*
+                See ->parseFunc!
 
-         **= date : d-m-y**
+          - :dt:
+                **= register : color**
 
-         *get the current time formatted dd-mm-yy*
+                *get content from the $GLOBALS['TSFE']->register[ **color** ]*
 
-         **= page : title**
+            :dd:
+                **register:** [field name from the $GLOBALS['TSFE']->register]
 
-         *get the current page-title*
+                See cObject "LOAD\_REGISTER"
 
-         **= current : 1**
+          - :dt:
+                **= leveltitle : 1**
 
-         *get the current value*
+                *get the title of the page on the first level of the rootline*
 
-         **= level : 1**
+                **= leveltitle : -2 , slide**
 
-         *get the rootline level of the current page*
+                *get the title of the page on the level right below the current page
+                AND if that is not present, walt to the bottom of the rootline until
+                there's a title*
 
-         **= GP : stuff**
+                **= leveluid : 0**
 
-         *get input value from query string, (&stuff=)*
+                *get the id of the root-page of the website (level zero)*
 
-         **= GP : stuff \| key**
+            :dd:
+                **leveltitle, leveluid, levelmedia:** [levelTitle, uid or media in
+                rootLine, 0- , negative = from behind, " , slide" parameter forces a
+                walk to the bottom of the rootline until there's a "true" value to
+                return. Useful with levelmedia.]
 
-         *get input value from query string, (&stuff[key]=)*
+          - :dt:
+                **= levelfield : -1 , user\_myExtField , slide**
 
-         **= getenv : HTTP\_REFERER**
+                *get the value of the user defined field "user\_myExtField" in the
+                root line (requires additional configuration in $TYPO3\_CONF\_VARS to
+                include field!)*
 
-         *get the env var HTTP\_REFERER*
+            :dd:
+                **levelfield:** Like "leveltitle" et al. but where the second
+                parameter is the rootLine field you want to fetch. Syntax: [pointer,
+                integer], [field name], ["slide"]
 
-         **= getIndpEnv : REMOTE\_ADDR**
+          - :dt:
+                **= global : HTTP\_COOKIE\_VARS \| some\_cookie**
 
-         *get the client IP*
+                *get the env variable $HTTP\_COOKIE\_VARS[some\_cookie]*
 
-         **= DB : tt\_content:234:header**
+            :dd:
+                **global:** [GLOBAL-var, split with \| if you want to get from an
+                array! DEPRECATED, use GP, TSFE or getenv]
 
-         *get the value of the header of record with uid 234 from table
-         tt\_content*
+          - :dt:
+                **= date : d-m-y**
 
-         **= fullRootLine : -1, title**
+                *get the current time formatted dd-mm-yy*
 
-         *get the title of the page right before the start of the current
-         website*
+            :dd:
+                **date:** [date-conf]
 
-         **= LLL:EXT:css\_styled\_content/pi1/locallang.x:login.logout**
+          - :dt:
+                **= page : title**
 
-         *get localized label for logout button*
+                *get the current page-title*
 
-         **= path:EXT:ie7/js/ie7-standard.js**
+            :dd:
+                **page:** [current page record]
 
-         *get path to file relative to siteroot possibly placed in an
-         extension*
+          - :dt:
+                **= current : 1**
 
-         **= cObj : parentRecordNumber**
+                *get the current value*
 
-         *get the number of the current cObject record*
+            :dd:
+                **current: 1** (gets 'current' value)
 
-         **= debug : rootLine**
+          - :dt:
+                **= level : 1**
 
-         *output the current root-line visually in HTML*
+                *get the rootline level of the current page*
 
-   Comment
-         This returns a value from somewhere in a PHP-array, as defined by the
-         type. The syntax is "type : pointer". The type is case-insensitive.
+            :dd:
+                **level: 1** (gets the rootline level of the current page)
 
-         **field:** [field name from the current  *$cObj* ->data-array in the
-         cObj.]
+          - :dt:
+                **= GP : stuff**
 
-         As default the  *$cObj* ->data-array is $GLOBALS['TSFE']->page (record
-         of the current page!)
+                *get input value from query string, (&stuff=)*
 
-         In TMENU:  *$cObj* ->data is set to the page-record for each menu
-         item.
+                **= GP : stuff \| key**
 
-         In CONTENT/RECORDS  *$cObj* ->data is set to the actual record
+                *get input value from query string, (&stuff[key]=)*
 
-         In GIFBUILDER  *$cObj* ->data is set to the data GIFBUILDER is
-         supplied with.
+            :dd:
+                **GP:** Value from GET or POST method. Use this instead of global
 
-         **parameters:** [field name from the current  *$cObj* ->parameters-
-         array in the cObj.]
+                **GPvar:**  **usage of "GPvar" is deprecated. Use "GP" instead**
 
-         See ->parseFunc!
+          - :dt:
+                **= getenv : HTTP\_REFERER**
 
-         **register:** [field name from the $GLOBALS['TSFE']->register]
+                *get the env var HTTP\_REFERER*
 
-         See cObject "LOAD\_REGISTER"
+            :dd:
+                **getenv:** Value from environment variables
 
-         **leveltitle, leveluid, levelmedia:** [levelTitle, uid or media in
-         rootLine, 0- , negative = from behind, " , slide" parameter forces a
-         walk to the bottom of the rootline until there's a "true" value to
-         return. Useful with levelmedia.]
+          - :dt:
+                **= getIndpEnv : REMOTE\_ADDR**
 
-         **levelfield:** Like "leveltitle" et al. but where the second
-         parameter is the rootLine field you want to fetch. Syntax: [pointer,
-         integer], [field name], ["slide"]
+                *get the client IP*
 
-         **global:** [GLOBAL-var, split with \| if you want to get from an
-         array! DEPRECATED, use GP, TSFE or getenv]
+            :dd:
+                **getIndpEnv:** Value from
+                TYPO3\CMS\Core\Utility\GeneralUtility::getIndpEnv() (t3lib\_div::getIndpEnv())
 
-         **date:** [date-conf]
+          - :dt:
+                **= DB : tt\_content:234:header**
 
-         **page:** [current page record]
+                *get the value of the header of record with uid 234 from table
+                tt\_content*
 
-         **current: 1** (gets 'current' value)
+            :dd:
+                **DB:** Value from database, syntax is [table name] : [uid] : [field].
+                Any record from a table in TCA can be selected here. Only marked-
+                deleted records does not return a value here.
 
-         **level: 1** (gets the rootline level of the current page)
+          - :dt:
+                **= fullRootLine : -1, title**
 
-         **GP:** Value from GET or POST method. Use this instead of global
+                *get the title of the page right before the start of the current
+                website*
 
-         **GPvar:**  **usage of "GPvar" is deprecated. Use "GP" instead**
+            :dd:
+                **fullRootLine:** syntax is [pointer, integer], [field name],
+                ["slide"]
 
-         **getenv:** Value from environment variables
+                This property can be used to retrieve values from "above" the current
+                page's root. Take the below page tree and assume that we are on the
+                page "Here you are!". Using the "levelfield" propertydescribed above,
+                it is possible to goup only to the page "Site root", because it is the
+                root of a new (sub-)site. With "fullRootLine" it is possible to go all
+                the way up to page tree root. The numbers between square brackets
+                indicate to which page each value of *pointer* would point to::
 
-         **getIndpEnv:** Value from
-         TYPO3\CMS\Core\Utility\GeneralUtility::getIndpEnv() (t3lib\_div::getIndpEnv())
+                  - Page tree root [-2]
+                    |- 1. page before [-1]
+                      |- Site root (root template here!) [0]
+                        |- Here you are! [1]
 
-         **DB:** Value from database, syntax is [table name] : [uid] : [field].
-         Any record from a table in TCA can be selected here. Only marked-
-         deleted records does not return a value here.
+                A "slide" parameter can be added just as for the "levelfield" property
+                above.
 
-         **fullRootLine:** syntax is [pointer, integer], [field name],
-         ["slide"]
+          - :dt:
+                **= LLL:EXT:css\_styled\_content/pi1/locallang.x:login.logout**
 
-         This property can be used to retrieve values from "above" the current
-         page's root. Take the below page tree and assume that we are on the
-         page "Here you are!". Using the "levelfield" propertydescribed above,
-         it is possible to goup only to the page "Site root", because it is the
-         root of a new (sub-)site. With "fullRootLine" it is possible to go all
-         the way up to page tree root. The numbers between square brackets
-         indicate to which page each value of *pointer* would point to:
+                *get localized label for logout button*
 
-         \- Page tree root [-2]
+            :dd:
+                **LLL:** Reference to a locallang (php or xml) label. Reference
+                consists of [fileref]:[labelkey]
 
-         \|- 1. page before [-1]
+          - :dt:
+                **= path:EXT:ie7/js/ie7-standard.js**
 
-         \|- Site root (root template here!) [0]
+                *get path to file relative to siteroot possibly placed in an
+                extension*
 
-         \|- Here you are! [1]
+            :dd:
+                **path:** path to a file, possibly placed in an extension, returns
+                empty if the file doesn't exist.
 
-         A "slide" parameter can be added just as for the "levelfield" property
-         above.
+          - :dt:
+                **= cObj : parentRecordNumber**
 
-         **LLL:** Reference to a locallang (php or xml) label. Reference
-         consists of [fileref]:[labelkey]
+                *get the number of the current cObject record*
 
-         **path:** path to a file, possibly placed in an extension, returns
-         empty if the file doesn't exist.
+            :dd:
+                **cObj:** [internal variable from list: "parentRecordNumber"]: For
+                CONTENT and RECORDS cObjects that are returned
 
-         **cObj:** [internal variable from list: "parentRecordNumber"]: For
-         CONTENT and RECORDS cObjects that are returned
+                by a select query, this returns the row number (1,2,3,...) of the
+                current cObject record.
 
-         by a select query, this returns the row number (1,2,3,...) of the
-         current cObject record.
+          - :dt:
+                **= debug : rootLine**
 
-         **debug:** Returns HTML formatted content of PHP variable defined by
-         keyword. Available keys are "rootLine", "fullRootLine", "data"
+                *output the current root-line visually in HTML*
 
-         **Getting array/object elements**
+            :dd:
+                **debug:** Returns HTML formatted content of PHP variable defined by
+                keyword. Available keys are "rootLine", "fullRootLine", "data"
 
-         You can fetch the value of an array/object by splitting it with a pipe
-         "\|".Example:=  *TSFE:fe\_user\|user\|username*
+          - :dd:
+                **Getting array/object elements**
 
-         **Getting more values**
+                You can fetch the value of an array/object by splitting it with a pipe
+                "\|".Example::
 
-         By separating the value of getText with "//" (double slash) you let
-         getText fetch the first value. If it appears empty ("" or zero) the
-         next value is fetched and so on. Example:
+                   = TSFE:fe_user|user|username
 
-         =  *field:header // field:title // field:uid*
+          - :dd:
+                **Getting more values**
 
-         This gets "title" if "header" is empty. If "title" is also empty it
-         gets field "uid"
+                By separating the value of getText with "//" (double slash) you let
+                getText fetch the first value. If it appears empty ("" or zero) the
+                next value is fetched and so on. Example::
 
-   Default
+                   = field:header // field:title // field:uid
+
+                This gets "title" if "header" is empty. If "title" is also empty it
+                gets field "uid"
 
 
 .. container:: table-row
