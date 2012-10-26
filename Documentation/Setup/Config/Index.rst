@@ -1112,7 +1112,7 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          going to grab your site!**
 
          **You should not set this feature if you want search-engines to index
-         your site (in conjunction with the simulateStaticDocuments feature!)**
+         your site.**
 
          You can also ignore this feature if you're certain, website users will
          use cookies.
@@ -2218,6 +2218,11 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
 
             config.simulateStaticDocuments = PATH_INFO
 
+         **Note** : Since TYPO3 4.3 the system extension "simulatestatic" had
+         to be installed to be able to activate this functionality. Since TYPO3
+         6.0 the extension simulatestatic no longer is part of the TYPO3 Core.
+         Instead it needs to be installed from TER.
+
    Default
          The default is defined by the configuration option
          ['FE']['simulateStaticDocuments'] in LocalConfiguration.php, which
@@ -2425,12 +2430,8 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          prepended with this string. Used to convert relative paths to absolute
          paths.
 
-         **Note:** This values is automatically set to the dirname of the
-         index.php script in case simulateStaticDocuments is set to
-         "PATH\_INFO".
-
-         If you're working on a server where you have both internal and
-         external access, you might do yourself a favor and set the
+         **Note:** If you're working on a server where you have both internal
+         and external access, you might do yourself a favor and set the
          absRefPrefix to the url and path of you site, e.g.
          http://www.typo3.com/. If you do not, you risk to render pages to
          cache from the internal network and thereby prefix image-references
@@ -2820,15 +2821,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          If this option is not set, then all cross-domain links will be
          generated as
 
-         "http://domain.tld/index.php?id=12345" (where 12345 is page id). If
-         this option is set and current site uses, for example, simulateStatic,
-         then links will be generated as
-         "http://domain.tld/PageTitle.12345.html" (includes RTE links too).
+         "http://domain.tld/index.php?id=12345" (where 12345 is page id).
          Setting this option requires that domains, where pages are linked,
          have the same configuration for:
 
-         \- linking scheme (i.e. all use simulateStatic or RealURL or CoolURI
-         but not any mixture)
+         \- linking scheme (i.e. all use RealURL or CoolURI but not any
+         mixture)
 
          \- all domains have identical localization settings
          (config.sys\_language\_XXX directives)
