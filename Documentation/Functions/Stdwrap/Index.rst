@@ -888,14 +888,15 @@ value is "imported" from the field called "header" from the $cObj
          **Examples:**
 
          20 \| ... => max 20 characters. If more, the value will be truncated
-         to first 20 chars and prepended with "..."
+         to the first 20 chars and prepended with "..."
 
          -20 \| ... => max 20 characters. If more, the value will be truncated
-         to last 20 chars and appended with "..."
+         to the last 20 chars and appended with "..."
 
          20 \| ... \| 1 => max 20 characters. If more, the value will be
-         truncated to last 20 chars and appended with "...". If the division is
-         in the middle of a word, the remains of that word is removed.
+         truncated to the first 20 chars and prepended with "...". If the
+         division is in the middle of a word, the remains of that word is
+         removed.
 
          Uses "renderCharset" for the operation.
 
