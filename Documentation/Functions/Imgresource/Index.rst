@@ -74,9 +74,9 @@ This scales the image toplogo.gif to the width of 200 pixels. ::
          If both the width and the height are set and at least one of the
          numbers is appended by a "c", crop-scaling will be enabled. This means
          that the proportions will be preserved and the image will be scaled to
-         fit :underline:`around` a rectangle with width/height dimensions.
-         Then, a centered portion from :underline:`inside` of the image (size
-         defined by width/height) will be cut out.
+         fit **around** a rectangle with width/height dimensions. Then, a
+         centered portion from **inside** of the image (size defined by
+         width/height) will be cut out.
 
          The "c" can have a percentage value (-100 ... +100) after it, which
          defines how much the cropping will be moved off the center to the

@@ -304,10 +304,10 @@ otherwise noted!
 
          **Note:**
 
-         .parentObj property is :underline:`hardcoded` to be a reference to the
-         calling typo3/sysext/frontend/Classes/ContentObject/Menu/ (tslib\_menu)
-         object. Here you'll find e.g. ->id to be the uid of the menu item
-         generating a submenu and such.
+         .parentObj property is **hardcoded** to be a reference to the calling
+         typo3/sysext/frontend/Classes/ContentObject/Menu/ (tslib\_menu) object.
+         Here you'll find e.g. ->id to be the uid of the menu item generating a
+         submenu and such.
 
          **Presetting element state**
 
