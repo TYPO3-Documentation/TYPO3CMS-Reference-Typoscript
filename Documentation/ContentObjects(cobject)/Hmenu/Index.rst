@@ -1338,7 +1338,7 @@ Example:
 
 Creates a language menu with flags (notice that some lines break):
 
-.. figure:: ContentObjectsHmenuFlags.png
+.. figure:: ../../Images/ContentObjectsHmenuFlags.png
    :alt: Output of the language menu with flags.
 
 ::
