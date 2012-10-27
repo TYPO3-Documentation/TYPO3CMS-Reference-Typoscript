@@ -4,7 +4,6 @@
 .. -*- coding: utf-8 -*- with BOM.
 
 .. include:: ../../Includes.txt
-.. include:: Images.txt
 
 
 EDITPANEL
@@ -44,7 +43,10 @@ Example
 In such a case, there's nothing to edit in the FE, but the panel can
 be used to create new records, for example.
 
-|img-4| **Note**
+.. figure:: ../../Images/icon_note.png
+   :alt: Note
+
+**Note**
 
 The extension "feedit" needs to be installed for this to work.
 

@@ -4,13 +4,14 @@
 .. -*- coding: utf-8 -*- with BOM.
 
 .. include:: ../../Includes.txt
-.. include:: Images.txt
 
 
 tipafriendLib.inc
 ^^^^^^^^^^^^^^^^^
 
-|img-13|
+.. figure:: ../../Images/TipAFriend.png
+   :alt: This is what the form can look like.
+
 Files:
 """"""
 

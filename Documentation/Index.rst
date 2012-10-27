@@ -5,10 +5,6 @@
 
 .. include:: Includes.txt
 
-
-.. include:: Includes.txt
-.. include:: Images.txt
-
 .. _start:
 
 ====================

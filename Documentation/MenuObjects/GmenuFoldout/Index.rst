@@ -4,7 +4,6 @@
 .. -*- coding: utf-8 -*- with BOM.
 
 .. include:: ../../Includes.txt
-.. include:: Images.txt
 
 
 GMENU\_FOLDOUT
@@ -394,7 +393,10 @@ Example:
      bottomContent.value = Hello World! Here is some content!
    }
 
-|img-12| This creates a menu like this (above). One important point is the line ::
+.. figure:: ../../Images/GmenuFoldout.png
+   :alt: Example of this menu.
+
+This creates a menu like this (above). One important point is the line ::
 
    temp.foldoutMenu.1.expAll = 1
 

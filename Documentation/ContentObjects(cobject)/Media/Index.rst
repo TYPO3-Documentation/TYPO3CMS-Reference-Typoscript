@@ -4,7 +4,6 @@
 .. -*- coding: utf-8 -*- with BOM.
 
 .. include:: ../../Includes.txt
-.. include:: Images.txt
 
 
 MEDIA
@@ -44,7 +43,10 @@ files in typo3/contrib/flashmedia:
 If you want to use a different player, it can be configured via
 TypoScript.
 
-|img-4| **Note**
+.. figure:: ../../Images/icon_note.png
+   :alt: Note
+
+**Note**
 
 Files are treated as URLs. You need to set fully qualified URLs. Use
 config.baseURL and/or config.absRefPrefix to get fully qualified URLs

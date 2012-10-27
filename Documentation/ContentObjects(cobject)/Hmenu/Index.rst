@@ -4,7 +4,6 @@
 .. -*- coding: utf-8 -*- with BOM.
 
 .. include:: ../../Includes.txt
-.. include:: Images.txt
 
 
 HMENU
@@ -923,7 +922,10 @@ list from the property ".items".
          work if the parent page of the current page is the root page of the
          site.
 
-         |img-8|  **nextsection\_last** / **prevsection\_last** : Where
+         .. figure:: ../../Images/ContentObjectsHmenuSpecialBrowse.png
+            :alt: Example for the usage of the property "items".
+
+         **nextsection\_last** / **prevsection\_last** : Where
          nextsection/prevsection links to the first page in a section, these
          link to the last pages. If there is only one page in thesection that
          will be both first and last.Will not work if the parent page of the
@@ -1336,7 +1338,10 @@ Example:
 
 Creates a language menu with flags (notice that some lines break):
 
-|img-9| ::
+.. figure:: ContentObjectsHmenuFlags.png
+   :alt: Output of the language menu with flags.
+
+::
 
    lib.langMenu = HMENU
    lib.langMenu.special = language
@@ -1593,7 +1598,10 @@ are graphical items::
 
 The menu looks like this on a web page:
 
-|img-10| The TypoScript code above generates this menu, but the items do not
+.. figure:: ../../Images/ContentObjectsHmenuExampleMenu.png
+   :alt: Output of the example menu.
+
+The TypoScript code above generates this menu, but the items do not
 link straight to pages as usual. This is because the  *whole* menu is
 generated from this array, which was returned from the function
 "menuMenuArray" called in TypoScript line 4+5 ::

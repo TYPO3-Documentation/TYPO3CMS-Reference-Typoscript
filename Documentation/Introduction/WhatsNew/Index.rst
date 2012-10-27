@@ -4,7 +4,6 @@
 .. -*- coding: utf-8 -*- with BOM.
 
 .. include:: ../../Includes.txt
-.. include:: Images.txt
 
 
 What's new
@@ -31,7 +30,10 @@ mistakes were fixed.
 For more details about changes in the various TYPO3 versions please
 refer to the links below.
 
-|img-3| **More information about changed properties**
+.. figure:: ../../Images/icon_internet.png
+   :alt: More information are available on these webpages.
+
+**More information about changed properties**
 
 You can find a list of changes for more recent TYPO3 versions here:
 

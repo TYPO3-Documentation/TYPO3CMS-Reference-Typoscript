@@ -4,7 +4,6 @@
 .. -*- coding: utf-8 -*- with BOM.
 
 .. include:: ../../Includes.txt
-.. include:: Images.txt
 
 
 Common properties
@@ -363,10 +362,10 @@ otherwise noted!
               2b.NO.allWrap = <div style="background:green;">|</div>
             }
 
-         The result can be seen in the image below (applied on the testsite
-         package):
+         The result can be seen in the image below:
 
-         |img-11|
+         .. figure:: ../../Images/MenuObjectsCommonPropertiesSubmenuObjSuffixes.png
+            :alt: Output of the above example.
 
          Applies to GMENU, TMENU, GMENU\_LAYERS, TMENU\_LAYERS and
          GMENU\_FOLDOUT on >= 2 :sup:`nd` level in a menu.

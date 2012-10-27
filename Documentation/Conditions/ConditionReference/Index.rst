@@ -4,7 +4,6 @@
 .. -*- coding: utf-8 -*- with BOM.
 
 .. include:: ../../Includes.txt
-.. include:: Images.txt
 
 
 Condition reference
@@ -299,7 +298,10 @@ condition ::
 
 evaluates to true.
 
-|img-4| **Older TYPO3 versions**
+.. figure:: ../../Images/icon_note.png
+   :alt: Note
+
+**Older TYPO3 versions**
 
 Until TYPO3 4.2 the user agent was determined differently: Each value
 was compared with the ($browsername.$browserversion, e.g.
@@ -616,7 +618,10 @@ This will match with windows and mac -systems only ::
 
    [system= win,mac]
 
-|img-4| **Older TYPO3 versions and backwards compatibility**
+.. figure:: ../../Images/icon_note.png
+   :alt: Note
+
+**Older TYPO3 versions and backwards compatibility**
 
 TYPO3 version 4.4 or older does not detect all the systems listed
 above.

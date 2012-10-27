@@ -4,7 +4,6 @@
 .. -*- coding: utf-8 -*- with BOM.
 
 .. include:: ../../Includes.txt
-.. include:: Images.txt
 
 
 ((generated))
@@ -130,8 +129,14 @@ Example:
 
 The result is this config:
 
-|img-6| Notice that .value was not cleared (the red line), because it's simply
+.. figure:: ../../Images/ContentObjectsExampleMerge1.png
+   :alt: Resulting configuration.
+
+Notice that .value was not cleared (the red line), because it's simply
 two arrays which are joined:
 
-|img-7| So hence the red line in the above example is useless.
+.. figure:: ../../Images/ContentObjectsExampleMerge2.png
+   :alt: The arrays, which are merged.
+
+So hence the red line in the above example is useless.
 

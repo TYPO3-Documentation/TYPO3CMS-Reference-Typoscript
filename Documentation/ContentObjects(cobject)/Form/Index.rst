@@ -4,13 +4,15 @@
 .. -*- coding: utf-8 -*- with BOM.
 
 .. include:: ../../Includes.txt
-.. include:: Images.txt
 
 
 FORM
 ^^^^
 
-|img-4| **Note**
+.. figure:: ../../Images/icon_note.png
+   :alt: Note
+
+**Note**
 
 The following only applies, if the system extension "form" (which
 comes with TYPO3 since version 4.6) is notinstalled. If it is, things

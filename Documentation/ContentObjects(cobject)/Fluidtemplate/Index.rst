@@ -4,7 +4,6 @@
 .. -*- coding: utf-8 -*- with BOM.
 
 .. include:: ../../Includes.txt
-.. include:: Images.txt
 
 
 FLUIDTEMPLATE
@@ -15,7 +14,10 @@ regular "marker"-based TEMPLATE object. However, it does not use
 markers or subparts, but allows Fluid-style variables with curly
 braces.
 
-|img-4| **Note**
+.. figure:: ../../Images/icon_note.png
+   :alt: Note
+
+**Note**
 
 The extensions "fluid" and "extbase" need to be installed for this to
 work.

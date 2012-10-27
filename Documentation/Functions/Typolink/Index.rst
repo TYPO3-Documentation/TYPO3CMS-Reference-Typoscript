@@ -4,7 +4,6 @@
 .. -*- coding: utf-8 -*- with BOM.
 
 .. include:: ../../Includes.txt
-.. include:: Images.txt
 
 
 typolink
@@ -554,7 +553,10 @@ possible to create the logic for this in that extension.
 So, in a link field (the "parameter" value for ->typolink) you could
 enter "pressrelease:123":
 
-|img-5| Some TypoScript will usually transfer this value to the "parameter"
+.. figure:: ../../Images/LinkHandler.png
+   :alt: Screenshot of the "link" field in the TYPO3 Backend.
+
+Some TypoScript will usually transfer this value to the "parameter"
 attribute of the ->typolink call. When "pressrelease:123" enters
 ->typolink as the "parameter" it will be checked if "pressrelease" is
 a keyword with which a link handler is associated and if so, that
