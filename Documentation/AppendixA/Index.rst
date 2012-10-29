@@ -15,8 +15,8 @@ Appendix A – media/scripts/ Plugins
    :titlesonly:
    :glob:
 
-   MediaScriptsInGeneral/Index
-   FeAdminlibinc/Index
-   Tipafriendlibinc/Index
-   Plaintextlibinc/Index
+   MediaScripts/Index
+   FeAdminlib/Index
+   Tipafriendlib/Index
+   Plaintextlib/Index
 

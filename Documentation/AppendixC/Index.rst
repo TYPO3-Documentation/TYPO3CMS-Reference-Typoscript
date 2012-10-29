@@ -6,8 +6,8 @@
 .. include:: ../Includes.txt
 
 
-Appendix D – index.php
-----------------------
+Appendix C – PHP include scripts
+--------------------------------
 
 
 .. toctree::
@@ -16,8 +16,9 @@ Appendix D – index.php
    :glob:
 
    Introduction/Index
-   SubmittingDataToIndexphp/Index
-   Search/Index
-   Emailforms/Index
-   Database-submit/Index
+   TyposcriptConfiguration/Index
+   IncludingYourScript/Index
+   CaseStory/Index
+   StoringData/Index
+   ShoppingBasket/Index
 

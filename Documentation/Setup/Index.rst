@@ -16,7 +16,7 @@ Setup
    :glob:
 
    Top-levelObjects/Index
-   ThePluginTlo/Index
+   Plugin/Index
    Config/Index
    Constants/Index
    Page/Index

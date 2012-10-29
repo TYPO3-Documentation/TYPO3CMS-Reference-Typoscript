@@ -6,8 +6,8 @@
 .. include:: ../../Includes.txt
 
 
-((generated))
-^^^^^^^^^^^^^
+General information
+^^^^^^^^^^^^^^^^^^^
 
 PHP information
 """""""""""""""

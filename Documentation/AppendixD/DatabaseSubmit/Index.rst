@@ -6,11 +6,11 @@
 .. include:: ../../Includes.txt
 
 
-Database-submit
+Database Submit
 ^^^^^^^^^^^^^^^
 
 Detected by the mainscript "index.php" looking for the var
-"formtype\_db" to be set. (could be the submit-button)
+"formtype\_db" to be set (could be the submit-button).
 
 Input MUST be POST method. And the REFERER and HTTP\_HOST must match.
 To setup a script to handle the input, refer to the FE\_DATA object.

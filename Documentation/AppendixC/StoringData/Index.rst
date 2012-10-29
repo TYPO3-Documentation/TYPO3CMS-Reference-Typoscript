@@ -6,7 +6,7 @@
 .. include:: ../../Includes.txt
 
 
-Storing user-data or session-data
+Storing user data or session data
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Doing so is quite simple with TYPO3.

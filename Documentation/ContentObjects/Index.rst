@@ -15,10 +15,10 @@ Content Objects (cObject)
    :titlesonly:
    :glob:
 
-   ((generated))/Index
+   GeneralInformation/Index
    Html/Index
    Text/Index
-   CobjArray(coaCoaInt)/Index
+   CoaAndCoaInt/Index
    File/Index
    Files/Index
    Image/Index

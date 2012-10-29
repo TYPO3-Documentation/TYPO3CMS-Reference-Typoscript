@@ -15,5 +15,5 @@ Conditions
    :titlesonly:
    :glob:
 
-   ConditionReference/Index
+   Reference/Index
 

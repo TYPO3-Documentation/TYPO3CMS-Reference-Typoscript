@@ -16,6 +16,6 @@ GIFBUILDER
    :glob:
 
    Gifbuilder/Index
-   ObjectNamesInThisSection/Index
-   Non-gifbuilderobj/Index
+   ObjectNames/Index
+   NonGifbuilderObject/Index
 

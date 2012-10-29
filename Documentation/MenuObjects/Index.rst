@@ -16,8 +16,8 @@ MENU Objects
    :glob:
 
    CommonProperties/Index
-   CommonItemStatesForTmenuGmenuAndImgmenuSeries/Index
-   Menuobjsectionindex/Index
+   CommonItemStates/Index
+   Sectionindex/Index
    Gmenu/Index
    GmenuLayersTmenuLayers/Index
    GmenuFoldout/Index

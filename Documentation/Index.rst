@@ -82,11 +82,11 @@ address the task at hand.
    Conditions/Index
    Functions/Index
    Setup/Index
-   ContentObjects(cobject)/Index
+   ContentObjects/Index
    Gifbuilder/Index
    MenuObjects/Index
-   AppendixAMediaScriptsPlugins/Index
-   AppendixBStandardTemplates/Index
-   AppendixCPhpIncludeScripts/Index
-   AppendixDIndexphp/Index
+   AppendixA/Index
+   AppendixB/Index
+   AppendixC/Index
+   AppendixD/Index
 
