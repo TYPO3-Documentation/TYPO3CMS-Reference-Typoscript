@@ -1,4 +1,4 @@
-.. ==================================================
+ï»¿.. ==================================================
 .. FOR YOUR INFORMATION
 .. --------------------------------------------------
 .. -*- coding: utf-8 -*- with BOM.
@@ -45,7 +45,7 @@ mistakes were fixed.
 For more details about changes in the various TYPO3 versions please
 refer to the links below.
 
-.. figure:: ../../Images/icon_internet.png
+.. figure:: ../Images/icon_internet.png
    :alt: More information are available on these webpages.
 
 **More information about changed properties**
@@ -73,9 +73,9 @@ ersions/1454>`_
 Credits
 ^^^^^^^
 
-The manual was originally written by Kasper Skårhøj. Over the years it
+The manual was originally written by Kasper SkÃ¥rhÃ¸j. Over the years it
 has been maintained and updated successively by Michael Stucki,
-François Suter and Christopher Stelmaszyk.
+FranÃ§ois Suter and Christopher Stelmaszyk.
 
 
 Feedback

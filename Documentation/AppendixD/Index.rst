@@ -19,5 +19,5 @@ Appendix D – index.php
    SubmittingData/Index
    Search/Index
    Emailforms/Index
-   Database-submit/Index
+   DatabaseSubmit/Index
 
