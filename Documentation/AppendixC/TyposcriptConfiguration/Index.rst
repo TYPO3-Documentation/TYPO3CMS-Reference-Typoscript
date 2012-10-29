@@ -12,6 +12,9 @@ TypoScript Configuration
 The following objects are related to the direct inclusion of PHP code
 inside templates.
 
+**Note** : These content objects were deprecated since TYPO3 4.5 and have
+been removed in TYPO3 6.0. Use the content object "USER" instead!
+
 
 PHP\_SCRIPT
 """""""""""
