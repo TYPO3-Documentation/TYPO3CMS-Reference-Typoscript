@@ -1,4 +1,4 @@
-﻿.. include:: Images.txt
+.. include:: Images.txt
 
 .. ==================================================
 .. FOR YOUR INFORMATION
@@ -85,8 +85,7 @@ Examples from the TYPO3 core are listed in the table below:
                 <option value="1">Columns</option>
                 <option value="0">QuickEdit</option>
                 <option value="2">Languages</option>
-                <option value="3">Page information</option>
-                <option value="4">Grid-View</option>
+                <option value="3">Grid-View</option>
             </select>
          
          **Example:**
@@ -98,7 +97,6 @@ Examples from the TYPO3 core are listed in the table below:
               1 = 0
               2 = 0
               3 = 0
-              4 = 0
             }
 
 
@@ -797,6 +795,8 @@ the Page TSconfig and alters the configuration:
          down box.
          
          Use this option instead of removing page information completely.
+
+         **Note** : This option and the item "Page Information" have been removed in TYPO3 6.0.
    
    Default
          0
