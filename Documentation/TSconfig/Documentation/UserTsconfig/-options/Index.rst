@@ -1,4 +1,4 @@
-﻿.. include:: Images.txt
+.. include:: Images.txt
 
 .. ==================================================
 .. FOR YOUR INFORMATION
@@ -589,6 +589,35 @@ Various options for the user affecting the core at various points.
          
          Overriding for single tables works like "saveDocNew" above.
    
+   Default
+
+
+.. container:: table-row
+
+   Property
+         pageTree.backgroundColor
+
+   Data type
+         string
+
+   Description
+         Set background colors for tree branches.
+
+         Color can be any valid CSS color value. The best results can be
+         achieved by using rgba values.
+
+         The syntax is: options.pageTree.backgroundColor.<pageId> = <color>
+
+         **Examples:**
+
+         ::
+
+            options.pageTree.backgroundColor.2 = red
+            options.pageTree.backgroundColor.3 = #00FFFF
+            options.pageTree.backgroundColor.4 = rgba(0, 255, 0, 0.1)
+
+         |img-100|
+
    Default
 
 
