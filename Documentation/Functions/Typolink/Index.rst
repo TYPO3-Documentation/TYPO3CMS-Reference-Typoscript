@@ -6,10 +6,12 @@
 .. include:: ../../Includes.txt
 
 
+.. _typolink:
+
 typolink
 ^^^^^^^^
 
-Wraps the incoming value with link.
+Wraps the incoming value with a link.
 
 If this is used from parseFunc the $cObj->parameters-array is loaded
 with the link-parameters (lowercased)!
@@ -538,6 +540,9 @@ with the link-parameters (lowercased)!
 
 [tsref:->typolink]
 
+
+.. _typolink-link-handler:
+.. _link-handler:
 
 Using link handlers
 """""""""""""""""""

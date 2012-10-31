@@ -6,6 +6,8 @@
 .. include:: ../../Includes.txt
 
 
+.. _cobj-html:
+
 HTML
 ^^^^
 
@@ -65,6 +67,8 @@ been removed in TYPO3 6.0. Use the content object "TEXT" instead!
 
 [tsref:(cObject).HTML]
 
+
+.. _cobj-html-examples:
 
 ((generated))
 """""""""""""

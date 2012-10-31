@@ -6,6 +6,8 @@
 .. include:: ../../Includes.txt
 
 
+.. _fe-table:
+
 "FE\_TABLE"
 ^^^^^^^^^^^
 

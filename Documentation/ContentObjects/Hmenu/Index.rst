@@ -6,6 +6,8 @@
 .. include:: ../../Includes.txt
 
 
+.. _cobj-hmenu:
+
 HMENU
 ^^^^^
 
@@ -32,6 +34,9 @@ Generates hierarchical menus.
 .. container:: table-row
 
    Property
+
+         .. _hmenu-number:
+
          (1 / 2 / 3 /...)
 
    Data type
@@ -58,6 +63,9 @@ Generates hierarchical menus.
 .. container:: table-row
 
    Property
+
+         .. _hmenu-cache-period:
+
          cache\_period
 
    Data type
@@ -79,6 +87,9 @@ Generates hierarchical menus.
 .. container:: table-row
 
    Property
+
+         .. _hmenu-entrylevel:
+
          entryLevel
 
    Data type
@@ -101,6 +112,9 @@ Generates hierarchical menus.
 .. container:: table-row
 
    Property
+
+         .. _hmenu-special:
+
          special
 
    Data type
@@ -116,6 +130,9 @@ Generates hierarchical menus.
 .. container:: table-row
 
    Property
+
+         .. _hmenu-special-value:
+
          special.value
 
    Data type
@@ -130,6 +147,9 @@ Generates hierarchical menus.
 .. container:: table-row
 
    Property
+
+         .. _hmenu-minitems:
+
          minItems
 
    Data type
@@ -152,6 +172,9 @@ Generates hierarchical menus.
 .. container:: table-row
 
    Property
+
+         .. _hmenu-maxitems:
+
          maxItems
 
    Data type
@@ -170,6 +193,9 @@ Generates hierarchical menus.
 .. container:: table-row
 
    Property
+
+         .. _hmenu-begin:
+
          begin
 
    Data type
@@ -195,6 +221,9 @@ Generates hierarchical menus.
 .. container:: table-row
 
    Property
+
+         .. _hmenu-ecludeuidlist:
+
          excludeUidList
 
    Data type
@@ -218,6 +247,9 @@ Generates hierarchical menus.
 .. container:: table-row
 
    Property
+
+         .. _hmenu-excludedoktypes:
+
          excludeDoktypes
 
    Data type
@@ -235,6 +267,9 @@ Generates hierarchical menus.
 .. container:: table-row
 
    Property
+
+         .. _hmenu-includenotinmenu:
+
          includeNotInMenu
 
    Data type
@@ -250,6 +285,9 @@ Generates hierarchical menus.
 .. container:: table-row
 
    Property
+
+         .. _hmenu-alwaysactivepidlist:
+
          alwaysActivePIDlist
 
    Data type
@@ -266,6 +304,9 @@ Generates hierarchical menus.
 .. container:: table-row
 
    Property
+
+         .. _hmenu-protectlvar:
+
          protectLvar
 
    Data type
@@ -301,6 +342,9 @@ Generates hierarchical menus.
 .. container:: table-row
 
    Property
+
+         .. _hmenu-addquerystring:
+
          addQueryString
 
    Data type
@@ -317,13 +361,16 @@ Generates hierarchical menus.
 .. container:: table-row
 
    Property
+
+         .. _hmenu-if:
+
          if
 
    Data type
          ->if
 
    Description
-         If "if" returns false, the menu is not generated
+         If "if" returns false, the menu is not generated.
 
    Default
 
@@ -331,6 +378,9 @@ Generates hierarchical menus.
 .. container:: table-row
 
    Property
+
+         .. _hmenu-wrap:
+
          wrap
 
    Data type
@@ -345,6 +395,9 @@ Generates hierarchical menus.
 .. container:: table-row
 
    Property
+
+         .. _hmenu-stdwrap:
+
          stdWrap
 
    Data type
@@ -361,6 +414,8 @@ Generates hierarchical menus.
 
 [tsref:(cObject).HMENU]
 
+
+.. _hmenu-examples:
 
 ((generated))
 """""""""""""
@@ -386,6 +441,8 @@ Example:
    }
 
 
+.. _hmenu-special:
+
 The .special property
 """""""""""""""""""""
 
@@ -401,6 +458,8 @@ Also be aware that this property selects pages for the first level in
 the menu. Submenus by menuObjects 2+ will be created as usual.
 
 
+.. _hmenu-special-directory:
+
 special.directory
 ~~~~~~~~~~~~~~~~~
 
@@ -415,6 +474,7 @@ Mount pages are supported.
 .. container:: table-row
 
    Property
+
          Property:
 
    Data type
@@ -430,6 +490,9 @@ Mount pages are supported.
 .. container:: table-row
 
    Property
+
+         .. _hmenu-special-directory-value:
+
          value
 
    Data type
@@ -450,6 +513,8 @@ Mount pages are supported.
 
 [tsref:(cObject).HMENU.special.directory]
 
+
+.. _hmenu-special-list:
 
 special.list
 ~~~~~~~~~~~~
@@ -479,6 +544,9 @@ Mount pages are supported.
 .. container:: table-row
 
    Property
+
+         .. _hmenu-special-list-value:
+
          value
 
    Data type
@@ -503,6 +571,8 @@ Mount pages are supported.
 
 [tsref:(cObject).HMENU.special.list]
 
+
+.. _hmenu-special-updated:
 
 special.updated
 ~~~~~~~~~~~~~~~
@@ -537,6 +607,9 @@ Mount pages are supported.
 .. container:: table-row
 
    Property
+
+         .. _hmenu-special-updated-value:
+
          value
 
    Data type
@@ -557,6 +630,9 @@ Mount pages are supported.
 .. container:: table-row
 
    Property
+
+         .. _hmenu-special-updated-mode:
+
          mode
 
    Data type
@@ -590,6 +666,9 @@ Mount pages are supported.
 .. container:: table-row
 
    Property
+
+         .. _hmenu-special-updated-depth:
+
          depth
 
    Data type
@@ -612,6 +691,9 @@ Mount pages are supported.
 .. container:: table-row
 
    Property
+
+         .. _hmenu-special-updated-beginatlevel:
+
          beginAtLevel
 
    Data type
@@ -636,6 +718,9 @@ Mount pages are supported.
 .. container:: table-row
 
    Property
+
+         .. _hmenu-special-updated-maxage:
+
          maxAge
 
    Data type
@@ -652,6 +737,9 @@ Mount pages are supported.
 .. container:: table-row
 
    Property
+
+         .. _hmenu-special-updated-limit:
+
          limit
 
    Data type
@@ -667,6 +755,9 @@ Mount pages are supported.
 .. container:: table-row
 
    Property
+
+         .. _hmenu-special-updated-excludenosearchpages:
+
          excludeNoSearchPages
 
    Data type
@@ -683,6 +774,8 @@ Mount pages are supported.
 
 [tsref:(cObject).HMENU.special.updated]
 
+
+.. _hmenu-special-updated-examples:
 
 Example for special = updated:
 ''''''''''''''''''''''''''''''
@@ -705,6 +798,8 @@ within the last three days (3600\*24\*3)::
    }
 
 
+.. _hmenu-special-rootline:
+
 special.rootline
 ~~~~~~~~~~~~~~~~
 
@@ -714,7 +809,7 @@ tree is called "rootline".
 A rootline menu is a menu which shows you these pages one by one in
 their hierarchical order.
 
-An HMENU with the property special = rootlinecreates a rootline menu
+An HMENU with the property special = rootline creates a rootline menu
 (also known as "breadcrumb trail") that could look like this:
 
 Page level 1 > Page level 2 > Page level 3 >  *Current page*
@@ -744,6 +839,9 @@ Mount pages are supported.
 .. container:: table-row
 
    Property
+
+         .. _hmenu-special-rootline-range:
+
          range
 
    Data type
@@ -764,6 +862,9 @@ Mount pages are supported.
 .. container:: table-row
 
    Property
+
+         .. _hmenu-special-rootline-reverseorder:
+
          reverseOrder
 
    Data type
@@ -780,6 +881,9 @@ Mount pages are supported.
 .. container:: table-row
 
    Property
+
+         .. _hmenu-special-rootline-targets:
+
          targets.[level number]
 
    Data type
@@ -814,6 +918,8 @@ Mount pages are supported.
 [tsref:(cObject).HMENU.special.rootline]
 
 
+.. _hmenu-special-rootline-examples:
+
 Example for special = rootline:
 '''''''''''''''''''''''''''''''
 
@@ -847,6 +953,8 @@ have the image appended. ::
    }
 
 
+.. _hmenu-special-browse:
+
 special.browse
 ~~~~~~~~~~~~~~
 
@@ -877,6 +985,9 @@ list from the property ".items".
 .. container:: table-row
 
    Property
+
+         .. _hmenu-special-browse-value:
+
          value
 
    Data type
@@ -894,6 +1005,9 @@ list from the property ".items".
 .. container:: table-row
 
    Property
+
+         .. _hmenu-special-browse-items:
+
          items
 
    Data type
@@ -970,6 +1084,9 @@ list from the property ".items".
 .. container:: table-row
 
    Property
+
+         .. _hmenu-special-browse-prevnexttosection:
+
          items.prevnextToSection
 
    Data type
@@ -987,6 +1104,9 @@ list from the property ".items".
 .. container:: table-row
 
    Property
+
+         .. _hmenu-special-browse-target:
+
          [itemname].target
 
    Data type
@@ -1001,6 +1121,9 @@ list from the property ".items".
 .. container:: table-row
 
    Property
+
+         .. _hmenu-special-browse-uid:
+
          [itemname].uid
 
    Data type
@@ -1015,6 +1138,9 @@ list from the property ".items".
 .. container:: table-row
 
    Property
+
+         .. _hmenu-special-browse-fields:
+
          [itemname].fields.[field name]
 
    Data type
@@ -1036,6 +1162,8 @@ list from the property ".items".
 
 [tsref:(cObject).HMENU.special.browse]
 
+
+.. _hmenu-special-keywords:
 
 special.keywords
 ~~~~~~~~~~~~~~~~
@@ -1069,10 +1197,13 @@ Mount pages are supported.
 .. container:: table-row
 
    Property
+
+         .. _hmenu-special-keywords-value:
+
          value
 
    Data type
-         int/stdWrap
+         int /stdWrap
 
    Description
          Page for which keywords to find similar pages
@@ -1097,6 +1228,9 @@ Mount pages are supported.
 .. container:: table-row
 
    Property
+
+         .. _hmenu-special-keywords-mode:
+
          mode
 
    Data type
@@ -1127,6 +1261,9 @@ Mount pages are supported.
 .. container:: table-row
 
    Property
+
+         .. _hmenu-special-keywords-entrylevel:
+
          entryLevel
 
    Data type
@@ -1143,6 +1280,9 @@ Mount pages are supported.
 .. container:: table-row
 
    Property
+
+         .. _hmenu-special-keywords-depth:
+
          depth
 
    Data type
@@ -1158,6 +1298,9 @@ Mount pages are supported.
 .. container:: table-row
 
    Property
+
+         .. _hmenu-special-keywords-limit:
+
          limit
 
    Data type
@@ -1173,6 +1316,9 @@ Mount pages are supported.
 .. container:: table-row
 
    Property
+
+         .. _hmenu-special-keywords-excludenosearchpages:
+
          excludeNoSearchPages
 
    Data type
@@ -1187,6 +1333,9 @@ Mount pages are supported.
 .. container:: table-row
 
    Property
+
+         .. _hmenu-special-keywords-begin:
+
          begin
 
    Data type
@@ -1201,6 +1350,9 @@ Mount pages are supported.
 .. container:: table-row
 
    Property
+
+         .. _hmenu-special-keywords-setkeywords:
+
          setKeywords
 
    Data type
@@ -1217,6 +1369,9 @@ Mount pages are supported.
 .. container:: table-row
 
    Property
+
+         .. _hmenu-special-keywords-keywordsfield:
+
          keywordsField
 
    Data type
@@ -1234,6 +1389,9 @@ Mount pages are supported.
 .. container:: table-row
 
    Property
+
+         .. _hmenu-special-keywords-sourcefield:
+
          keywordsField.sourceField
 
    Data type
@@ -1253,6 +1411,8 @@ Mount pages are supported.
 
 [tsref:(cObject).HMENU.special.keywords]
 
+
+.. _hmenu-special-language:
 
 special.language
 ~~~~~~~~~~~~~~~~
@@ -1301,6 +1461,9 @@ error if tried accessed (depending on site configuration).
 .. container:: table-row
 
    Property
+
+         .. _hmenu-special-language-value:
+
          value
 
    Data type
@@ -1316,6 +1479,9 @@ error if tried accessed (depending on site configuration).
 .. container:: table-row
 
    Property
+
+         .. _hmenu-special-language-normalwhennolanguage:
+
          normalWhenNoLanguage
 
    Data type
@@ -1332,6 +1498,8 @@ error if tried accessed (depending on site configuration).
 
 [tsref:(cObject).HMENU.special.language]
 
+
+.. _hmenu-special-language-examples:
 
 Example:
 ''''''''
@@ -1351,7 +1519,7 @@ Creates a language menu with flags (notice that some lines break):
      XY = [5.w]+4, [5.h]+4
      backColor = white
      5 = IMAGE
-     5.file = typo3/sysext/statictemplates/media/flags/flag_uk.gif  || typo3/sysext/statictemplates/media/flags/flag_fr.gif  || typo3/sysext/statictemplates/media/flags/flag_es.gif
+     5.file = typo3/sysext/statictemplates/media/flags/flag_uk.gif || typo3/sysext/statictemplates/media/flags/flag_fr.gif || typo3/sysext/statictemplates/media/flags/flag_es.gif
      5.offset = 2,2
    }
 
@@ -1365,11 +1533,16 @@ Creates a language menu with flags (notice that some lines break):
    lib.langMenu.1.USERDEF1.noLink = 1
 
 
+.. _hmenu-special-userdefined:
+
 special.userdefined
 ~~~~~~~~~~~~~~~~~~~
 
 Lets you write your own little PHP-script that generates the array of
 menu items.
+
+**Note:** The special type "userdefined" has been removed in TYPO3
+4.6. Use the special type "userfunction" instead.
 
 .. ### BEGIN~OF~TABLE ###
 
@@ -1391,13 +1564,16 @@ menu items.
 .. container:: table-row
 
    Property
+
+         .. _hmenu-special-userdefined-file:
+
          file
 
    Data type
          resource
 
    Description
-         Filename of the php-file to include. (Just like cObject PHP\_SCRIPT)
+         Filename of the php file to include.
 
    Default
 
@@ -1405,6 +1581,9 @@ menu items.
 .. container:: table-row
 
    Property
+
+         .. _hmenu-special-userdefined-other:
+
          [any other key]
 
    Data type
@@ -1421,9 +1600,8 @@ menu items.
 
 [tsref:(cObject).HMENU.special.userdefined]
 
-**Note:** The special type "userdefined" has been removed in TYPO3
-4.6. Use the special type "userfunction" instead.
 
+.. _hmenu-special-userdefined-examples:
 
 How-to:
 '''''''
@@ -1480,6 +1658,8 @@ these values in the key "ITEM\_STATE" of the page record. This setting
 will override the natural state-evaluation.
 
 
+.. _hmenu-special-userfunction:
+
 special.userfunction
 ~~~~~~~~~~~~~~~~~~~~
 
@@ -1507,6 +1687,9 @@ menu.
 .. container:: table-row
 
    Property
+
+         .. _hmenu-special-userfunction-userfunc:
+
          userFunc
 
    Data type
@@ -1522,6 +1705,8 @@ menu.
 
 [tsref:(cObject).HMENU.special.userfunction]
 
+
+.. _hmenu-special-userfunction-examples:
 
 Example: Creating hierarchical menus of custom links
 ''''''''''''''''''''''''''''''''''''''''''''''''''''

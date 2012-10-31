@@ -16,6 +16,9 @@ inside templates.
 been removed in TYPO3 6.0. Use the content object "USER" instead!
 
 
+.. _cobj-php-script:
+.. _appendix-php-script:
+
 PHP\_SCRIPT
 """""""""""
 
@@ -96,6 +99,9 @@ is set in LocalConfiguration.php
 
 [tsref:(cObject).PHP\_SCRIPT]
 
+
+.. _cobj-php-script-int:
+.. _appendix-php-script-int:
 
 PHP\_SCRIPT\_INT
 """"""""""""""""
@@ -215,6 +221,9 @@ PHP\_SCRIPT\_INT
 
 [tsref:(cObject).PHP\_SCRIPT\_INT]
 
+
+.. _cobj-php-script-ext:
+.. _appendix-php-script-ext:
 
 PHP\_SCRIPT\_EXT
 """"""""""""""""

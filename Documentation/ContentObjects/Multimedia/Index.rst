@@ -6,6 +6,8 @@
 .. include:: ../../Includes.txt
 
 
+.. _cobj-multimedia:
+
 MULTIMEDIA
 ^^^^^^^^^^
 
@@ -151,6 +153,8 @@ used.
 
 [tsref:(cObject).MULTIMEDIA]
 
+
+.. _cobj-multimedia-params:
 
 Meaningful parameters for .params
 """""""""""""""""""""""""""""""""

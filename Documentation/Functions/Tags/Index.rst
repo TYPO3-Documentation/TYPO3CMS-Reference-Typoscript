@@ -6,6 +6,8 @@
 .. include:: ../../Includes.txt
 
 
+.. _tags:
+
 tags
 ^^^^
 
@@ -86,6 +88,8 @@ is used in conjunction with  *parseFunc* .
 
 [tsref:->tags]
 
+
+.. _tags-examples:
 
 ((generated))
 """""""""""""

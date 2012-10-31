@@ -6,6 +6,9 @@
 .. include:: ../../Includes.txt
 
 
+.. _gmenulayers:
+.. _tmenulayers:
+
 GMENU\_LAYERS / TMENU\_LAYERS
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 

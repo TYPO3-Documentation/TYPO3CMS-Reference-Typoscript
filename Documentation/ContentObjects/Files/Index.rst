@@ -6,6 +6,8 @@
 .. include:: ../../Includes.txt
 
 
+.. _cobj-files:
+
 FILES
 ^^^^^
 
@@ -200,6 +202,8 @@ different cObjects.
 [tsref:(cObject).FILES]
 
 
+.. _cobj-files-references:
+
 Special key: "references"
 """""""""""""""""""""""""
 
@@ -267,6 +271,8 @@ Special key: "references"
 
 [tsref:(cObject).FILES.references]
 
+
+.. _cobj-files-examples:
 
 Example:
 ~~~~~~~~

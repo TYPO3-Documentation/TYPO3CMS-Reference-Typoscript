@@ -6,6 +6,8 @@
 .. include:: ../../Includes.txt
 
 
+.. _cobj-image:
+
 IMAGE
 ^^^^^
 
@@ -212,6 +214,8 @@ of the returning image (if any) and contains width, height and so on.
 [tsref:(cObject).IMAGE]
 
 
+.. _cobj-image-examples:
+
 ((generated))
 """""""""""""
 
@@ -223,5 +227,5 @@ Example:
        10 = IMAGE
        10.file = toplogo*.gif
        10.params = hspace=5
-       10.wrap = |<BR>
+       10.wrap = |<br>
 

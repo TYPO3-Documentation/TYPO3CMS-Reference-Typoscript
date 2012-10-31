@@ -6,6 +6,9 @@
 .. include:: ../../Includes.txt
 
 
+.. _cobj-user:
+.. _cobj-user-int:
+
 USER and USER\_INT
 ^^^^^^^^^^^^^^^^^^
 

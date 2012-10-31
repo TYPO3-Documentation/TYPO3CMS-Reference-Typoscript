@@ -6,6 +6,8 @@
 .. include:: ../../Includes.txt
 
 
+.. _appendix-storing-data:
+
 Storing user data or session data
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 

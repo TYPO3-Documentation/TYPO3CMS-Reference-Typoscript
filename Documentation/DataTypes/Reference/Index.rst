@@ -6,6 +6,8 @@
 .. include:: ../../Includes.txt
 
 
+.. _data-types-reference:
+
 Data types reference
 ^^^^^^^^^^^^^^^^^^^^
 
@@ -15,12 +17,15 @@ Data types reference
 .. container:: table-row
 
    Data type
+
+         .. _data-type-tag:
+
          <tag>
 
    Examples
          ::
 
-            <BODY bgcolor="red">
+            <body bgcolor="red">
 
    Comment
 
@@ -31,6 +36,9 @@ Data types reference
 .. container:: table-row
 
    Data type
+
+         .. _data-type-align:
+
          align
 
    Examples
@@ -48,6 +56,9 @@ Data types reference
 .. container:: table-row
 
    Data type
+
+         .. _data-type-vhalign:
+
          VHalign
 
    Examples
@@ -74,6 +85,9 @@ Data types reference
 .. container:: table-row
 
    Data type
+
+         .. _data-type-resource:
+
          resource
 
    Examples
@@ -86,7 +100,7 @@ Data types reference
             fileadmin/picture.gif
 
    Comment
-         #. A reference to a file from the resource-field in the template.You can
+         #. A reference to a file from the resource-field in the template. You can
             write the exact filename or you can include an asterisk (\*) as
             wildcard.It's recommended to include a "\*" before the file extension
             (see example to the left). This will ensure that the file is still
@@ -103,6 +117,9 @@ Data types reference
 .. container:: table-row
 
    Data type
+
+         .. _data-type-imgresource:
+
          imgResource
 
    Examples
@@ -120,10 +137,11 @@ Data types reference
 
    Comment
          #. A "resource" (see above) + imgResource-properties (see example to the
-            left and object-reference below)Filetypes can be anything among the
-            allowed types defined in the configuration
-            variable$TYPO3\_CONF\_VARS['GFX']['imagefile\_ext']. Standard is pdf,
-            gif, jpg, jpeg, tif, bmp, ai, pcx, tga, png.
+            left and object-reference below).
+
+            Filetypes can be anything among the allowed types defined in the
+            configuration variable $TYPO3\_CONF\_VARS['GFX']['imagefile\_ext'].
+            Standard is pdf, gif, jpg, jpeg, tif, bmp, ai, pcx, tga, png.
 
          #. GIFBUILDER-object
 
@@ -133,6 +151,9 @@ Data types reference
 .. container:: table-row
 
    Data type
+
+         .. _data-type-html-code:
+
          HTML-code
 
    Examples
@@ -149,6 +170,9 @@ Data types reference
 .. container:: table-row
 
    Data type
+
+         .. _data-type-target:
+
          target
 
    Examples
@@ -159,7 +183,7 @@ Data types reference
          content
 
    Comment
-         target in <A>-tag.
+         Target in an <a>-tag.
 
          This is normally the same value as the name of the root-level object
          that defines the frame.
@@ -170,6 +194,9 @@ Data types reference
 .. container:: table-row
 
    Data type
+
+         .. _data-type-imageextension:
+
          imageExtension
 
    Examples
@@ -192,6 +219,9 @@ Data types reference
 .. container:: table-row
 
    Data type
+
+         .. _data-type-degree:
+
          degree
 
    Examples
@@ -206,6 +236,10 @@ Data types reference
 .. container:: table-row
 
    Data type
+
+         .. _data-type-posint:
+         .. _data-type-intplus:
+
          posint / int+
 
    Examples
@@ -220,6 +254,9 @@ Data types reference
 .. container:: table-row
 
    Data type
+
+         .. _data-type-int:
+
          int
 
    Examples
@@ -237,6 +274,11 @@ Data types reference
 .. container:: table-row
 
    Data type
+
+         .. _data-type-str:
+         .. _data-type-string:
+         .. _data-type-value:
+
          str / string / value
 
    Examples
@@ -254,6 +296,9 @@ Data types reference
 .. container:: table-row
 
    Data type
+
+         .. _data-type-boolean:
+
          boolean
 
    Examples
@@ -270,6 +315,9 @@ Data types reference
 .. container:: table-row
 
    Data type
+
+         .. _data-type-rotation:
+
          rotation
 
    Examples
@@ -284,6 +332,9 @@ Data types reference
 .. container:: table-row
 
    Data type
+
+         .. _data-type-xywh:
+
          x,y,w,h
 
    Examples
@@ -300,6 +351,9 @@ Data types reference
 .. container:: table-row
 
    Data type
+
+         .. _data-type-html-color:
+
          HTML-color
 
    Examples
@@ -348,6 +402,9 @@ Data types reference
 .. container:: table-row
 
    Data type
+
+         .. _data-type-graphiccolor:
+
          GraphicColor
 
    Examples
@@ -384,6 +441,9 @@ Data types reference
 .. container:: table-row
 
    Data type
+
+         .. _data-type-page-id:
+
          page\_id
 
    Examples
@@ -400,6 +460,9 @@ Data types reference
 .. container:: table-row
 
    Data type
+
+         .. _data-type-pixels:
+
          pixels
 
    Examples
@@ -414,6 +477,9 @@ Data types reference
 .. container:: table-row
 
    Data type
+
+         .. _data-type-list:
+
          list
 
    Examples
@@ -428,6 +494,9 @@ Data types reference
 .. container:: table-row
 
    Data type
+
+         .. _data-type-margins:
+
          margins
 
    Examples
@@ -447,13 +516,16 @@ Data types reference
 .. container:: table-row
 
    Data type
+
+         .. _data-type-wrap:
+
          wrap
 
    Examples
-         *This will cause the value to be wrapped in a font-tag coloring the
+         *This will cause the value to be wrapped in a p-tag coloring the
          value red:* ::
 
-            <font color="red"> | </font>
+            <p style="color: red;"> | </p>
 
    Comment
          <...> \| </...>
@@ -467,6 +539,9 @@ Data types reference
 .. container:: table-row
 
    Data type
+
+         .. _data-type-linkwrap:
+
          linkWrap
 
    Examples
@@ -492,6 +567,9 @@ Data types reference
 .. container:: table-row
 
    Data type
+
+         .. _data-type-case:
+
          case
 
    Examples
@@ -521,6 +599,9 @@ Data types reference
 .. container:: table-row
 
    Data type
+
+         .. _data-type-space:
+
          space
 
    Examples
@@ -537,6 +618,9 @@ Data types reference
 .. container:: table-row
 
    Data type
+
+         .. _data-type-date-conf:
+
          date-conf
 
    Examples
@@ -589,6 +673,9 @@ Data types reference
 .. container:: table-row
 
    Data type
+
+         .. _data-type-strftime-conf:
+
          strftime-conf
 
    Examples
@@ -687,6 +774,9 @@ Data types reference
 .. container:: table-row
 
    Data type
+
+         .. _data-type-unix-time:
+
          UNIX-time
 
    Examples
@@ -703,6 +793,9 @@ Data types reference
 .. container:: table-row
 
    Data type
+
+         .. _data-type-path:
+
          path
 
    Examples
@@ -717,6 +810,9 @@ Data types reference
 .. container:: table-row
 
    Data type
+
+         .. _data-type-tag-data:
+
          < *tag* >-data
 
    Examples
@@ -733,6 +829,9 @@ Data types reference
 .. container:: table-row
 
    Data type
+
+         .. _data-type-tag-params:
+
          < *tag* >-params
 
    Examples
@@ -749,6 +848,9 @@ Data types reference
 .. container:: table-row
 
    Data type
+
+         .. _data-type-gettext:
+
          getText
 
    Examples
@@ -1031,6 +1133,9 @@ Data types reference
 .. container:: table-row
 
    Data type
+
+         .. _data-type-dir:
+
          dir
 
    Examples
@@ -1058,6 +1163,9 @@ Data types reference
 .. container:: table-row
 
    Data type
+
+         .. _data-type-function-name:
+
          function name
 
    Examples
@@ -1077,14 +1185,14 @@ Data types reference
          Depending on implementation the class or function name (but not the
          method name) should probably be prefixed with "user\_". This can be
          changed in the $TYPO3\_CONF\_VARS config though. Also the function /
-         method is normally called with 2 parameters, $conf (TS config) and
-         $content (some content to be processed and returned)
+         method is normally called with 2 parameters, $conf (TS configuration)
+         and $content (some content to be processed and returned).
 
          Also if you call a method in a class, it is checked (when using the
          USER/USER\_INT objects) whether a class with the same name, but
          prefixed with "ux\_" is present and if so, this class is instantiated
-         instead. See "Inside TYPO3" document for more information on extending
-         the classes in TYPO3!
+         instead. See the document "Inside TYPO3" for more information on
+         extending the classes in TYPO3!
 
    Default
 
@@ -1095,10 +1203,12 @@ Data types reference
 [tsref:(datatypes)]
 
 
+.. _data-types-object-types:
+
 Data types: Object types
 """"""""""""""""""""""""
 
-These are some "data-types" that might be mentioned and valid values
+These are some "data types" that might be mentioned and valid values
 are shown here below:
 
 
@@ -1116,6 +1226,9 @@ are shown here below:
 .. container:: table-row
 
    Data type
+
+         .. _data-type-cobject:
+
          cObject
 
    Comment
@@ -1130,6 +1243,9 @@ are shown here below:
 .. container:: table-row
 
    Data type
+
+         .. _data-type-frameobj:
+
          frameObj
 
    Comment
@@ -1139,6 +1255,9 @@ are shown here below:
 .. container:: table-row
 
    Data type
+
+         .. _data-type-menuobj:
+
          menuObj
 
    Comment
@@ -1152,6 +1271,9 @@ are shown here below:
 .. container:: table-row
 
    Data type
+
+         .. _data-type-gifbuilderobj:
+
          GifBuilderObj
 
    Comment

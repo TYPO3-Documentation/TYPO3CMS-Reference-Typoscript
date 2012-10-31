@@ -6,6 +6,8 @@
 .. include:: ../Includes.txt
 
 
+.. _appendix-a:
+
 Appendix A – media/scripts/ Plugins
 -----------------------------------
 

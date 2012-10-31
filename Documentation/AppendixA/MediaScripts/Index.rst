@@ -6,6 +6,8 @@
 .. include:: ../../Includes.txt
 
 
+.. _appendix-media-scripts:
+
 media/scripts/ in general
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -20,6 +22,8 @@ inspired by them to write your own code. Notice the word 'most';
 because some are written long time ago and do not represent the
 state-of-the-day to do it.
 
+
+.. _appendix-example-templates:
 
 About 'example templates'
 """""""""""""""""""""""""

@@ -6,6 +6,10 @@
 .. include:: ../../Includes.txt
 
 
+.. _cobj-cobj-array:
+.. _cobj-coa:
+.. _cobj-coa-int:
+
 COBJ\_ARRAY (COA, COA\_INT)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -121,6 +125,10 @@ cObjects but with any cObject.
 
 [tsref:(cObject).COA/(cObject).COA\_INT/(cObject).COBJ\_ARRAY]
 
+
+.. _cobj-cobj-array-examples:
+.. _cobj-coa-examples:
+.. _cobj-coa-int-examples:
 
 ((generated))
 """""""""""""

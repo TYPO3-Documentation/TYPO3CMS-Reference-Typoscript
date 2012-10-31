@@ -6,6 +6,8 @@
 .. include:: ../../Includes.txt
 
 
+.. _gifbuilder-object-names:
+
 Object names in this section
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -245,6 +247,8 @@ from the previous section. Confusion could happen, because both
 
 [tsref:->GIFBUILDER]
 
+
+.. _gifbuilder-text:
 
 TEXT
 """"
@@ -755,6 +759,8 @@ TEXT
 [tsref:->GIFBUILDER.(GBObj).TEXT]
 
 
+.. _gifbuilder-shadow:
+
 SHADOW
 """"""
 
@@ -878,6 +884,8 @@ SHADOW
 
 [tsref:->GIFBUILDER.(GBObj).SHADOW]
 
+
+.. _gifbuilder-emboss:
 
 EMBOSS
 """"""
@@ -1015,6 +1023,8 @@ text.
 [tsref:->GIFBUILDER.(GBObj).EMBOSS]
 
 
+.. _gifbuilder-outline:
+
 OUTLINE
 """""""
 
@@ -1090,6 +1100,8 @@ high intensity. That works better!
 
 [tsref:->GIFBUILDER.(GBObj).OUTLINE]
 
+
+.. _gifbuilder-box:
 
 BOX
 """
@@ -1193,6 +1205,8 @@ BOX
 [tsref:->GIFBUILDER.(GBObj).BOX]
 
 
+.. _gifbuilder-ellipse:
+
 ELLIPSE
 """""""
 
@@ -1263,6 +1277,8 @@ ELLIPSE
 
 [tsref:->GIFBUILDER.(GBObj).ELLIPSE]
 
+
+.. _gifbuilder-image:
 
 IMAGE
 """""
@@ -1363,6 +1379,8 @@ IMAGE
 
 [tsref:->GIFBUILDER.(GBObj).IMAGE]
 
+
+.. _gifbuilder-effect:
 
 EFFECT
 """"""
@@ -1666,6 +1684,8 @@ Example:
 [tsref:->GIFBUILDER.(GBObj).EFFECT]
 
 
+.. _gifbuilder-workarea:
+
 WORKAREA
 """"""""
 
@@ -1729,6 +1749,8 @@ Sets another workarea.
 
 [tsref:->GIFBUILDER.(GBObj).WORKAREA]
 
+
+.. _gifbuilder-crop:
 
 CROP
 """"
@@ -1810,6 +1832,8 @@ image!
 [tsref:->GIFBUILDER.(GBObj).CROP]
 
 
+.. _gifbuilder-scale:
+
 SCALE
 """""
 
@@ -1879,6 +1903,8 @@ image!
 
 [tsref:->GIFBUILDER.(GBObj).SCALE]
 
+
+.. _gifbuilder-adjust:
 
 ADJUST
 """"""

@@ -6,6 +6,8 @@
 .. include:: ../../Includes.txt
 
 
+.. _cobj-otable:
+
 OTABLE
 ^^^^^^
 
@@ -104,6 +106,8 @@ the table tag.
 
 [tsref:(cObject).OTABLE]
 
+
+.. _cobj-otable-examples:
 
 ((generated))
 """""""""""""

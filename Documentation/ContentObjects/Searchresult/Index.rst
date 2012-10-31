@@ -6,6 +6,8 @@
 .. include:: ../../Includes.txt
 
 
+.. _cobj-searchresult:
+
 SEARCHRESULT
 ^^^^^^^^^^^^
 
@@ -14,6 +16,8 @@ This object can be used to display search results.
 Search words are loaded into the register in a form ready for linking
 to pages:
 
+
+.. _cobj-searchresult-examples:
 
 ((generated))
 """""""""""""
@@ -301,6 +305,9 @@ SEARCHRESULT returns results only from pages with of doktype
 
 [tsref:(cObject).SEARCHRESULT]
 
+
+.. _cobj-searchresult-notes:
+
 **NOTE:** "sword" and "scols" MUST be set in order for the search to
 be engaged.
 
@@ -340,6 +347,8 @@ sites (defined by the "root" setting of an active template.)
 var "depth": The depth
 
 
+.. _cobj-searchresult-syntax:
+
 Search syntax
 """""""""""""
 
@@ -368,6 +377,8 @@ Examples:
 #. *menu or backend not content* - will find pages with either 'menu' or
    'backend' but not 'content'
 
+
+.. _cobj-searchresult-example-queries:
 
 Queries to the examples
 """""""""""""""""""""""

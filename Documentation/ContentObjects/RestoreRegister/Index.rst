@@ -6,6 +6,8 @@
 .. include:: ../../Includes.txt
 
 
+.. _cobj-restore-register:
+
 RESTORE\_REGISTER
 ^^^^^^^^^^^^^^^^^
 

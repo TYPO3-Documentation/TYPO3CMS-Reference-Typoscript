@@ -6,6 +6,8 @@
 .. include:: ../../Includes.txt
 
 
+.. _cobj-form:
+
 FORM
 ^^^^
 
@@ -15,7 +17,7 @@ FORM
 **Note**
 
 The following only applies, if the system extension "form" (which
-comes with TYPO3 since version 4.6) is notinstalled. If it is, things
+comes with TYPO3 since version 4.6) is *not* installed. If it is, things
 work as described in the documentation inside the system extension.
 
 This object provides a way to create forms::
@@ -33,8 +35,8 @@ This object provides a way to create forms::
    label:          Label | label | Label value
    property:               [Internal, see below]
 
-------------------
 
+.. _cobj-form-preselected-item:
 
 Preselected item with type "select" and "radio":
 """"""""""""""""""""""""""""""""""""""""""""""""
@@ -47,6 +49,8 @@ selector box::
 You can enter multiple items to be preselected by placing an asterisk
 in front of each preselected item.
 
+
+.. _cobj-form-property-override:
 
 Property override:
 """"""""""""""""""
@@ -66,6 +70,8 @@ names:
 
 *attachment, attachment1, ... , attachment10*
 
+
+.. _cobj-form-displaying-the-form:
 
 Displaying the form:
 """"""""""""""""""""
@@ -98,6 +104,8 @@ Example:
    }
 
 
+.. _cobj-form-return-email:
+
 Correct return-email:
 """""""""""""""""""""
 
@@ -106,6 +114,8 @@ people that submits the mails, please use the field name "email", e.g::
 
    Email: | *email=input |
 
+
+.. _cobj-form-evaluation:
 
 Special evaluation
 """"""""""""""""""
@@ -955,6 +965,8 @@ Examples:
 
 [tsref:(cObject).FORM]
 
+
+.. _cobj-form-examples:
 
 Example: Login
 ~~~~~~~~~~~~~~

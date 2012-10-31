@@ -6,9 +6,13 @@
 .. include:: ../../Includes.txt
 
 
+.. _gifbuilder-non-gifbuilder:
+
 NON-GifBuilderObj
 ^^^^^^^^^^^^^^^^^
 
+
+.. _gifbuilder-imgmap:
 
 IMGMAP
 """"""

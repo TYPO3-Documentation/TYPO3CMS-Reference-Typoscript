@@ -6,6 +6,8 @@
 .. include:: ../../Includes.txt
 
 
+.. _cobj-imgtext:
+
 IMGTEXT
 ^^^^^^^
 
@@ -802,6 +804,8 @@ See code examples.
 
 [tsref:(cObject).IMGTEXT]
 
+
+.. _cobj-imgtext-examples:
 
 ((generated))
 """""""""""""

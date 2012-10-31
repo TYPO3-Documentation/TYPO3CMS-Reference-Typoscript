@@ -6,6 +6,8 @@
 .. include:: ../../Includes.txt
 
 
+.. _cobj-template:
+
 TEMPLATE
 ^^^^^^^^
 
@@ -321,6 +323,8 @@ content by TYPO3.
 
 [tsref:(cObject).TEMPLATE]
 
+
+.. _cobj-template-examples:
 
 ((generated))
 """""""""""""

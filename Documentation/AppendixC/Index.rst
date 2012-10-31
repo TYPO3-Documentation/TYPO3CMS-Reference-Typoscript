@@ -6,6 +6,8 @@
 .. include:: ../Includes.txt
 
 
+.. _appendix-c:
+
 Appendix C – PHP include scripts
 --------------------------------
 

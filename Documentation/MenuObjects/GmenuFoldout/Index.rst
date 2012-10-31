@@ -6,6 +6,8 @@
 .. include:: ../../Includes.txt
 
 
+.. _gmenu-foldout:
+
 GMENU\_FOLDOUT
 ^^^^^^^^^^^^^^
 

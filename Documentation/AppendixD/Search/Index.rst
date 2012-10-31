@@ -6,12 +6,14 @@
 .. include:: ../../Includes.txt
 
 
+.. _appendix-search:
+
 Search
 ^^^^^^
 
 Detected by the cObject SEARCHRESULT, which proceeds with a search if
-"sword" && "scols" are set. The search MUST submit to a page with such
-a content-object on it!
+"sword" && "scols" are set. The search **must*** submit to a page with
+such a content-object on it!
 
 Input may be of both GET and POST method.
 

@@ -6,6 +6,8 @@
 .. include:: ../../Includes.txt
 
 
+.. _appendix-include-scripts:
+
 Including your script
 ^^^^^^^^^^^^^^^^^^^^^
 
@@ -19,12 +21,16 @@ TypoScript-configuration is available from the array "$conf" (it may
 not be set at all though so check it with is\_array()!)
 
 
+.. _appendix-include-conf:
+
 $conf
 """""
 
 The array $confcontains the configuration for the PHP\_SCRIPT cObject.
 Try debug($conf) to see the content printed out for debugging!
 
+
+.. _appendix-include-content:
 
 $content
 """"""""
@@ -34,6 +40,8 @@ Return all content in this variable.
 Remember, don't output anything (but debug code) in your script!
 
 
+.. _appendix-include-white-spaces:
+
 White spaces
 """"""""""""
 
@@ -42,6 +50,8 @@ rendered and returned to index\_ts.php which originally set of the
 rendering process, you must ensure that there's no whitespace before
 and after your <?...?> tags in your include- or library-scripts!
 
+
+.. _appendix-include-tsfe:
 
 $GLOBALS['TSFE']->set\_no\_cache()
 """"""""""""""""""""""""""""""""""
@@ -66,6 +76,8 @@ Example:
    $GLOBALS['TSFE']->set_no_cache();
 
 
+.. _appendix-include-cobjgetsingle:
+
 $this->cObjGetSingle( value , properties )
 """"""""""""""""""""""""""""""""""""""""""
 
@@ -84,6 +96,8 @@ This would return any IMAGE-cObject at the property "image" of the
 conf-array for the include-script!
 
 
+.. _appendix-include-stdwrap:
+
 $this->stdWrap( value, properties )
 """""""""""""""""""""""""""""""""""
 
@@ -101,6 +115,8 @@ Example:
 This will stdWrap the content with the properties of ".stdWrap" of the
 $conf-array!
 
+
+.. _appendix-include-internal-vars:
 
 Internal Vars in the main frontend object, TSFE (TypoScript Front End)
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -265,6 +281,8 @@ writing: $GLOBALS['TSFE']->id
 
 .. ###### END~OF~TABLE ######
 
+
+.. _appendix-include-global-vars:
 
 Global vars
 """""""""""

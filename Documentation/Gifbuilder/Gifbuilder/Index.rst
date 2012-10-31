@@ -6,6 +6,8 @@
 .. include:: ../../Includes.txt
 
 
+.. _gifbuilder:
+
 GIFBUILDER
 ^^^^^^^^^^
 
@@ -21,6 +23,8 @@ The name "GIFBUILDER" comes from the time where GIF was the only file
 format supported. PNG and JPG are just as well to create today
 (configured with $TYPO3\_CONF\_VARS['GFX']).
 
+
+.. _gifbuilder-calc:
 
 NOTE (+calc)
 """"""""""""
@@ -66,6 +70,8 @@ As you see, the gif-image has a width defined as the width of the text
 printed onto it + 10 pixels. The height is fixed by the value of the
 constant {$styles.header.gfx1.itemH}
 
+
+.. _gifbuilder-top-level-object:
 
 The "\_GIFBUILDER" Top Level Object
 """""""""""""""""""""""""""""""""""

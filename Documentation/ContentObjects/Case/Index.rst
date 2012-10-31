@@ -6,6 +6,8 @@
 .. include:: ../../Includes.txt
 
 
+.. _cobj-case:
+
 CASE
 ^^^^
 
@@ -131,6 +133,8 @@ another property. So the forbidden values are: "setCurrent", "key",
 
 [tsref:(cObject).CASE]
 
+
+.. _cobj-case-examples:
 
 ((generated))
 """""""""""""

@@ -6,6 +6,8 @@
 .. include:: ../../Includes.txt
 
 
+.. _appendix-submitting-data:
+
 Submitting data to index.php
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 

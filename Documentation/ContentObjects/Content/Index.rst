@@ -6,6 +6,8 @@
 .. include:: ../../Includes.txt
 
 
+.. _cobj-content:
+
 CONTENT
 ^^^^^^^
 
@@ -146,6 +148,8 @@ the records selected which has a higher value than the current.
 
 [tsref:(cObject).CONTENT]
 
+
+.. _cobj-content-examples:
 
 ((generated))
 """""""""""""

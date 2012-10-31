@@ -6,8 +6,12 @@
 .. include:: ../../Includes.txt
 
 
+.. _cobjects-general-information:
+
 General information
 ^^^^^^^^^^^^^^^^^^^
+
+.. _cobjects-php:
 
 PHP information
 """""""""""""""
@@ -26,6 +30,8 @@ depending on the situation. Say if you are creating a menu it's often
 loaded with the page-record of the actual menuitem or if it's about
 content-rendering it'll be the content-record.
 
+
+.. _reusing-cobjects:
 
 REUSING cOBJECTS
 """"""""""""""""
@@ -95,6 +101,8 @@ that it's needed to unset ".stdWrap.space" inside the cObject
 where only a pointer is created.
 
 
+.. _reusing-cobjects-temp-objects:
+
 **NOTE:**
 ~~~~~~~~~
 
@@ -113,6 +121,8 @@ operators and all) the properties of the object which has the
 reference will be merged with the configuration of the reference.
 
 
+.. _reusing-cobjects-examples:
+
 Example:
 ~~~~~~~~
 
@@ -127,7 +137,7 @@ Example:
    page.20.value >
    page.20.field = pages
 
-The result is this config:
+The result is this configuration:
 
 .. figure:: ../../Images/ContentObjectsExampleMerge1.png
    :alt: Resulting configuration.

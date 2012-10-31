@@ -6,6 +6,8 @@
 .. include:: ../../Includes.txt
 
 
+.. _cobj-ctable:
+
 CTABLE
 ^^^^^^
 
@@ -201,6 +203,8 @@ useful for putting menus into them.
 [tsref:(cObject).CTABLE]
 
 
+.. _cobj-ctable-examples:
+
 ((generated))
 """""""""""""
 
@@ -222,7 +226,7 @@ Example:
      }
 
      tm.10 < temp.sidemenu
-     tm.TDParams = valign=top
+     tm.TDParams = valign="top"
 
      stdWrap.wrap = <div id="mytable">|</div>
    }

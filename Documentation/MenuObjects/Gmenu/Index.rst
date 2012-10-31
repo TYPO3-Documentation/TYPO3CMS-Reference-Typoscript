@@ -6,6 +6,8 @@
 .. include:: ../../Includes.txt
 
 
+.. _gmenu:
+
 GMENU
 ^^^^^
 
@@ -404,6 +406,8 @@ graphical navigation, where each link is a separate gif-file.
 
 [tsref:(cObject).HMENU.(mObj).GMENU
 
+
+.. _gmenu-additional-properties:
 
 Additional properties for Menu item states
 """"""""""""""""""""""""""""""""""""""""""

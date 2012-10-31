@@ -6,14 +6,15 @@
 .. include:: ../../Includes.txt
 
 
+.. _cobj-text:
+
 TEXT
 ^^^^
 
 The content object "TEXT" can be used to output static text or html.
-So it is very similar to the cObject "HTML". Note that the stdWrap
-properties are not available under the property "stdWrap" (as they are
-for the other cObjects), but on the very rootlevel of the object. This
-is non-standard! Check the examples.
+Note that the stdWrap properties are not available under the property
+"stdWrap" (as they are for the other cObjects), but on the very
+rootlevel of the object. This is non-standard! Check the examples.
 
 .. ### BEGIN~OF~TABLE ###
 

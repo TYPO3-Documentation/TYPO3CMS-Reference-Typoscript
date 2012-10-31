@@ -6,6 +6,8 @@
 .. include:: ../../Includes.txt
 
 
+.. _cobj-svg:
+
 SVG
 ^^^
 
@@ -127,6 +129,8 @@ do not have native SVG support, so that it also works in e.g. IE
 
 [tsref:(cObject).SVG]
 
+
+.. _cobj-svg-examples:
 
 ((generated))
 """""""""""""

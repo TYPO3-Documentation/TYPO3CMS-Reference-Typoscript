@@ -6,6 +6,8 @@
 .. include:: ../../Includes.txt
 
 
+.. _cobj-img-resource:
+
 IMG\_RESOURCE
 ^^^^^^^^^^^^^
 

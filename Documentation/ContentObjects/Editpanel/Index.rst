@@ -6,6 +6,8 @@
 .. include:: ../../Includes.txt
 
 
+.. _cobj-editpanel:
+
 EDITPANEL
 ^^^^^^^^^
 
@@ -25,6 +27,8 @@ In conjunction with css\_styled\_content, an EDITPANEL will appear for
 each content element on the page. It is also possible to insert an
 EDITPANEL as cObject in the template, using TypoScript.
 
+
+.. _cobj-editpanel-examples:
 
 ((generated))
 """""""""""""

@@ -6,10 +6,12 @@
 .. include:: ../../Includes.txt
 
 
-Emailforms
-^^^^^^^^^^
+.. _appendix-enail-forms:
 
-Detected by the mainscript "index.php" looking for the var
+Email forms
+^^^^^^^^^^^
+
+Detected by the mainscript "index.php" looking for the variable
 "formtype\_mail" to be set (could be the submit-button).
 
 Input MUST be POST method. And the REFERER and HTTP\_HOST must match.

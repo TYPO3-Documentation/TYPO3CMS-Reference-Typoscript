@@ -6,6 +6,8 @@
 .. include:: ../../Includes.txt
 
 
+.. _cobj-load-register:
+
 LOAD\_REGISTER
 ^^^^^^^^^^^^^^
 

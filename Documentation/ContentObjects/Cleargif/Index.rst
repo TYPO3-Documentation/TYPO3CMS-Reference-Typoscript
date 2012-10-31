@@ -6,6 +6,8 @@
 .. include:: ../../Includes.txt
 
 
+.. _cobj-cleargif:
+
 CLEARGIF
 ^^^^^^^^
 
@@ -91,6 +93,8 @@ Inserts a transparent gif-file.
 
 [tsref:(cObject).CLEARGIF]
 
+
+.. _cobj-cleargif-examples:
 
 ((generated))
 """""""""""""

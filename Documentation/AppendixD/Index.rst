@@ -6,6 +6,8 @@
 .. include:: ../Includes.txt
 
 
+.. _appendix-d:
+
 Appendix D – index.php
 ----------------------
 

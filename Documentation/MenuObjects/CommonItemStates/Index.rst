@@ -6,6 +6,8 @@
 .. include:: ../../Includes.txt
 
 
+.. _tmenu-gmenu-imgmenu-common-properties:
+
 Common item states for TMENU, GMENU and IMGMENU series:
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 

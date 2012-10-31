@@ -6,9 +6,13 @@
 .. include:: ../../Includes.txt
 
 
+.. _condition-reference:
+
 Condition reference
 ^^^^^^^^^^^^^^^^^^^
 
+
+.. _condition-syntax:
 
 General syntax
 """"""""""""""
@@ -33,6 +37,8 @@ Example:
      # TypoScript Code for users of other browsers.
    [GLOBAL]
 
+
+.. _condition-general-notes:
 
 General notes
 """""""""""""
@@ -70,6 +76,8 @@ Internet Explorer, the version must be above 8. ::
 For full explanations about conditions, please refer to "TypoScript
 Syntax and In-depth Study".
 
+
+.. _condition-browser:
 
 browser
 """""""
@@ -322,6 +330,8 @@ This will match with Chrome and Opera-browsers::
    [browser = chrome, opera]
 
 
+.. _condition-version:
+
 version
 """""""
 
@@ -408,6 +418,8 @@ This matches with all 4+ browsers and Netscape 3 browsers ::
 
    [version=  >4][browser= netscape3]
 
+
+.. _condition-system:
 
 system
 """"""
@@ -710,6 +722,8 @@ following are valid, too:
 .. ###### END~OF~TABLE ######
 
 
+.. _condition-device:
+
 device
 """"""
 
@@ -787,6 +801,8 @@ This will match WAP-phones and PDA's ::
 
    [device = wap, pda]
 
+
+.. _condition-useragent:
 
 useragent
 """""""""
@@ -1040,6 +1056,8 @@ These are some of the known WAP agents:
 .. ###### END~OF~TABLE ######
 
 
+.. _condition-language:
+
 language
 """"""""
 
@@ -1063,6 +1081,8 @@ with any of those parts of the string. Such a string normally looks
 like "de,en-us;q=0.7,en;q=0.3" and "\*en-us\*" would match with this
 string.
 
+
+.. _condition-ip:
 
 IP
 ""
@@ -1103,6 +1123,8 @@ These examples will match any IP-address ending with "123" or being
    [IP = *.*.*.123][IP = 192.168.1.34]
 
 
+.. _condition-hostname:
+
 hostname
 """"""""
 
@@ -1125,6 +1147,8 @@ Value is comma-list of domain names to match with. \*-wildcard allowed
 but cannot be part of a string, so it must match the full host name
 (eg. myhost.\*.com => correct, myhost.\*domain.com => wrong)
 
+
+.. _condition-hour:
 
 hour
 """"
@@ -1266,6 +1290,8 @@ In contrast a condition matching for 8 until 16 o'clock would be::
    [hour = > 7] && [hour = < 16]
 
 
+.. _condition-minute:
+
 minute
 """"""
 
@@ -1289,6 +1315,8 @@ Apart from that this condition uses the same way of comparison as
 hour.
 
 
+.. _condition-month:
+
 month
 """""
 
@@ -1311,6 +1339,8 @@ Month, from January being 1 until December being 12.
 Apart from that this condition uses the same way of comparison as
 hour.
 
+
+.. _condition-year:
 
 year
 """"
@@ -1336,6 +1366,8 @@ Apart from that this condition uses the same way of comparison as
 hour.
 
 
+.. _condition-dayofweek:
+
 dayofweek
 """""""""
 
@@ -1359,6 +1391,8 @@ Apart from that this condition uses the same way of comparison as
 hour.
 
 
+.. _condition-dayofmonth:
+
 dayofmonth
 """"""""""
 
@@ -1381,6 +1415,8 @@ Day of month, possible values are 1-31.
 Apart from that this condition uses the same way of comparison as
 hour.
 
+
+.. _condition-dayofyear:
 
 dayofyear
 """""""""
@@ -1407,6 +1443,8 @@ with 0 for the first day of the year means that e.g. [dayofyear =
 Apart from that this condition uses the same way of comparison as
 hour.
 
+
+.. _condition-usergroup:
 
 usergroup
 """""""""
@@ -1442,6 +1480,8 @@ This matches logins from users members of groups with uid's 1 and/or
 
    [usergroup = 1,2]
 
+
+.. _condition-loginuser:
 
 loginUser
 """""""""
@@ -1481,6 +1521,8 @@ This matches when no user is logged in::
    [loginUser = ]
 
 
+.. _condition-page:
+
 page
 """"
 
@@ -1508,6 +1550,8 @@ This condition matches, if the layout field is set to 1::
 
    [page|layout = 1]
 
+
+.. _condition-treelevel:
 
 treeLevel
 """""""""
@@ -1538,6 +1582,8 @@ level either level 0 (basic) or on level 2 ::
    [treeLevel = 0,2]
 
 
+.. _condition-pidinrootline:
+
 PIDinRootline
 """""""""""""
 
@@ -1566,6 +1612,8 @@ a subpage to page 34 or page 36 ::
    [PIDinRootline = 34,36]
 
 
+.. _condition-pidupinrootline:
+
 PIDupinRootline
 """""""""""""""
 
@@ -1584,6 +1632,8 @@ Comparison:
 Do the same as PIDinRootline, except the current page-uid is excluded
 from check.
 
+
+.. _condition-compatversion:
 
 compatVersion
 """""""""""""
@@ -1608,6 +1658,8 @@ changed in the Upgrade Wizard of the Install Tool.
 default settings but keep the backwards compatibility for old versions
 of TYPO3.
 
+
+.. _condition-globalvar:
 
 globalVar
 """""""""
@@ -1750,6 +1802,8 @@ matches::
    [globalVar = LIT:1 = {$constant_to_turnSomethingOn}]
 
 
+.. _condition-globalstring:
+
 globalString
 """"""""""""
 
@@ -1833,6 +1887,8 @@ This will match with the user whose username is "test"::
 
    [globalString = TSFE:fe_user|user|username = test]
 
+
+.. _condition-userfunc:
 
 userFunc
 """"""""

@@ -6,6 +6,8 @@
 .. include:: ../../Includes.txt
 
 
+.. _cobj-media:
+
 MEDIA
 ^^^^^
 
@@ -52,6 +54,8 @@ Files are treated as URLs. You need to set fully qualified URLs. Use
 config.baseURL and/or config.absRefPrefix to get fully qualified URLs
 automatically.
 
+
+.. _cobj-media-table:
 
 .. ### BEGIN~OF~TABLE ###
 

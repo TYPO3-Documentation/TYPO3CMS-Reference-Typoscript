@@ -6,8 +6,12 @@
 .. include:: ../Includes.txt
 
 
+.. _introduction:
+
 Introduction
 ------------
+
+.. _about-tsref:
 
 About this document
 ^^^^^^^^^^^^^^^^^^^
@@ -20,6 +24,8 @@ to the "TypoScript Syntax and In-Depth Study" manual.
 
 This version is updated for TYPO3 version 4.7.
 
+
+.. _what-s-new:
 
 What's new
 ^^^^^^^^^^
@@ -70,6 +76,8 @@ ersions/1454 <http://forge.typo3.org/projects/typo3v4-doc_core_tsref/v
 ersions/1454>`_
 
 
+.. _credits:
+
 Credits
 ^^^^^^^
 
@@ -77,6 +85,8 @@ The manual was originally written by Kasper Skårhøj. Over the years it
 has been maintained and updated successively by Michael Stucki,
 François Suter and Christopher Stelmaszyk.
 
+
+.. _feedback:
 
 Feedback
 ^^^^^^^^
@@ -95,8 +105,12 @@ join the documentation mailing list (typo3.projects.documentation on
 lists.typo3.org).
 
 
+.. _general-information:
+
 General information
 ^^^^^^^^^^^^^^^^^^^
+
+.. _case-sensitivity:
 
 Case sensitivity
 """"""""""""""""
@@ -118,8 +132,10 @@ will not output anything. Even if you wrote "TEXT" in uppercase in the
 second example, it would still not work, because the property "value"
 is misspelled.
 
-Always remember: In this manual the case of objects is important.
+Always remember: In this manual the case of objects **is** important.
 
+
+.. _version-numbers:
 
 Version numbers
 """""""""""""""

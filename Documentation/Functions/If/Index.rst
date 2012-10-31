@@ -6,6 +6,8 @@
 .. include:: ../../Includes.txt
 
 
+.. _if:
+
 if
 ^^
 
@@ -184,6 +186,8 @@ The returned value may still be negated by the ".negate"-property.
 
 [tsref:->if]
 
+
+.. _if-explanation:
 
 Explanation
 """""""""""

@@ -6,6 +6,8 @@
 .. include:: ../../Includes.txt
 
 
+.. _cobj-records:
+
 RECORDS
 ^^^^^^^
 
@@ -146,6 +148,8 @@ with the "dontCheckPid"-option.
 
 [tsref:(cObject).RECORDS]
 
+
+.. _cobj-records-examples:
 
 ((generated))
 """""""""""""

@@ -6,6 +6,8 @@
 .. include:: ../../Includes.txt
 
 
+.. _filelink:
+
 filelink
 ^^^^^^^^
 
@@ -396,6 +398,8 @@ icon, size and file are rendered in the listed order.
 
 [tsref:->filelink]
 
+
+.. _filelink-examples:
 
 ((generated))
 """""""""""""

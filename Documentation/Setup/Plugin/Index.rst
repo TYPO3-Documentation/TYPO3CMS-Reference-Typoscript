@@ -6,6 +6,8 @@
 .. include:: ../../Includes.txt
 
 
+.. _plugin:
+
 The "plugin" TLO
 ^^^^^^^^^^^^^^^^
 

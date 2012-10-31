@@ -6,13 +6,19 @@
 .. include:: ../Includes.txt
 
 
+.. _objects-and-properties:
+
 Objects and properties
 ----------------------
 
 
+.. _objects-introduction:
+
 Introduction
 ^^^^^^^^^^^^
 
+
+.. _objects-referencing:
 
 Reference to objects
 """"""""""""""""""""
@@ -21,6 +27,8 @@ Whenever you see  *->[objectname]* in the tables it means that the
 property is an object " *objectname* " with properties from object
 *objectname.* You don't need to define the objecttype.
 
+
+.. _objects-calc:
 
 Calculating values (+calc)
 """"""""""""""""""""""""""
@@ -38,6 +46,8 @@ Example:
 
    45 + 34 * 2 = 158          (which is the same as this in ordinary arithmetic: (45+34)*2=158)
 
+
+.. _objects-stdwrap:
 
 "... /stdWrap"
 """"""""""""""
@@ -62,6 +72,8 @@ This example imports the value from the field "imagewidth" of the
 current $cObj->data-array. But we don't trust the result to be an
 integer so we parse it through the the intval()-function.
 
+
+.. _objects-optionsplit:
 
 optionSplit
 """""""""""

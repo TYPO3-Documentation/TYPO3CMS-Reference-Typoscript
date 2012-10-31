@@ -6,6 +6,8 @@
 .. include:: ../../Includes.txt
 
 
+.. _appendix-fe-adminlib:
+
 fe\_adminLib.inc
 ^^^^^^^^^^^^^^^^
 
@@ -64,6 +66,8 @@ Files:
 .. ###### END~OF~TABLE ######
 
 
+.. _appendix-fe-adminlib-description:
+
 Description
 """""""""""
 
@@ -92,11 +96,15 @@ See static\_templates 'plugin.feadmin.\*' for various examples. Test
 them configured on the TYPO3 test site.
 
 
+.. _appendix-fe-adminlib-template:
+
 Static template
 """""""""""""""
 
 plugin.feadmin.\*
 
+
+.. _appendix-fe-adminlib-get-post:
 
 Incoming GET or POST vars:
 """"""""""""""""""""""""""
@@ -178,6 +186,8 @@ Incoming GET or POST vars:
 
 .. ###### END~OF~TABLE ######
 
+
+.. _appendix-fe-adminlib-properties:
 
 fe\_adminLib.inc properties
 """""""""""""""""""""""""""
@@ -890,6 +900,8 @@ fe\_adminLib.inc properties
 [tsref:(script).fe\_adminLib]
 
 
+.. _appendix-fe-admin-subparts:
+
 Main subparts
 """""""""""""
 
@@ -990,6 +1002,9 @@ CREATE): ###TEMPLATE\_ *[action]\_LOGIN* ###
 
 ###TEMPLATE\_ *[action]\_PREVIEW* ###
 
+
+.. _appendix-fe-adminlib-must-have:
+
 Must-have subparts:
 
 These are subparts that should exist in any template.
@@ -1029,6 +1044,8 @@ These are subparts that should exist in any template.
 
 .. ###### END~OF~TABLE ######
 
+
+.. _appendix-fe-adminlib-email:
 
 'infomail' Email subparts
 """""""""""""""""""""""""
@@ -1109,6 +1126,8 @@ class) must be loaded.
 .. ###### END~OF~TABLE ######
 
 
+.. _appendix-fe-admin-form:
+
 FORM conventions
 """"""""""""""""
 
@@ -1130,6 +1149,8 @@ Submit buttons can be named as you like except using the name
 Cancel button, please resort to JavaScript in an onClick even to
 change document.location.
 
+
+.. _appendix-fe-adminlib-common-markers:
 
 Common markers
 """"""""""""""
@@ -1292,6 +1313,8 @@ available records) by prefixing the marker with 'ITEM\_', e.g.
 ###ITEM\_PCE\_[cObjectName]###
 
 
+.. _appendix-fe-adminlib-evaluation:
+
 Evaluation of the form fields
 """""""""""""""""""""""""""""
 
@@ -1350,6 +1373,8 @@ error message "Apparently you're already registered with this email
 address!".
 
 
+.. _appendix-fe-adminlib-default-values:
+
 Passing default values to a form
 """"""""""""""""""""""""""""""""
 
@@ -1365,6 +1390,8 @@ red values are necessary if you want to NOT save the record by this
 action and NOT to display error messages if some fields which are
 required is not passed any value.
 
+
+.. _appendix-fe-adminlib-eval:
 
 List of eval-codes
 """"""""""""""""""
@@ -1476,6 +1503,8 @@ List of eval-codes
 
 [tsref:(script).fe\_adminLib.evalErrors.(field).(evalCode)]
 
+
+.. _appendix-fe-adminlib-file-uploads:
 
 Uploading files
 """""""""""""""

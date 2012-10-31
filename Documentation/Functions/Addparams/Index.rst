@@ -6,6 +6,8 @@
 .. include:: ../../Includes.txt
 
 
+.. _addparams:
+
 addParams
 ^^^^^^^^^
 
@@ -68,6 +70,8 @@ addParams
 
 [tsref:->addParams]
 
+
+.. _addparams-example:
 
 ((generated))
 """""""""""""

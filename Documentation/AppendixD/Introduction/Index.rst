@@ -6,6 +6,8 @@
 .. include:: ../../Includes.txt
 
 
+.. _appendix-index.php:
+
 Introduction
 ^^^^^^^^^^^^
 

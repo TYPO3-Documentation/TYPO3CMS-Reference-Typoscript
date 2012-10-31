@@ -6,6 +6,8 @@
 .. include:: ../../Includes.txt
 
 
+.. _htmlparser-tags:
+
 HTMLparser\_tags
 ^^^^^^^^^^^^^^^^
 

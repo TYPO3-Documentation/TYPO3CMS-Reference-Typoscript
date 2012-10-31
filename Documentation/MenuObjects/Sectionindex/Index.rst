@@ -6,6 +6,8 @@
 .. include:: ../../Includes.txt
 
 
+.. _section-index:
+
 [menuObj].sectionIndex
 ^^^^^^^^^^^^^^^^^^^^^^
 

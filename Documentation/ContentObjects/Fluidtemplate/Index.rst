@@ -6,6 +6,8 @@
 .. include:: ../../Includes.txt
 
 
+.. _cobj-fluidtemplate:
+
 FLUIDTEMPLATE
 ^^^^^^^^^^^^^
 
@@ -192,6 +194,8 @@ work.
 
 [tsref:(cObject).FLUIDTEMPLATE]
 
+
+.. _cobj-fluidtemplate-examples:
 
 ((generated))
 """""""""""""

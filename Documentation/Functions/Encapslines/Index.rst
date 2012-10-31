@@ -6,6 +6,8 @@
 .. include:: ../../Includes.txt
 
 
+.. _encapslines:
+
 encapsLines
 ^^^^^^^^^^^
 
@@ -239,6 +241,8 @@ encapsLines
 
 [tsref:->encapsLines]
 
+
+.. _encapslines-examples:
 
 ((generated))
 """""""""""""

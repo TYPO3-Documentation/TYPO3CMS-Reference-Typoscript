@@ -6,11 +6,16 @@
 .. include:: ../../Includes.txt
 
 
+.. _appendix-tipafriendlib:
+
 tipafriendLib.inc
 ^^^^^^^^^^^^^^^^^
 
 .. figure:: ../../Images/TipAFriend.png
    :alt: This is what the form can look like.
+
+
+.. _appendix-tipafriendlib-files:
 
 Files:
 """"""
@@ -56,11 +61,15 @@ Example:
 (See static\_template 'plugin.tipafriend' for a working configuration)
 
 
+.. _appendix-tipafriendlib-template:
+
 Static template
 """""""""""""""
 
 plugin.tipafriend
 
+
+.. _appendix-tipafriendlib-properties:
 
 tipafriendLib.inc properties
 """"""""""""""""""""""""""""

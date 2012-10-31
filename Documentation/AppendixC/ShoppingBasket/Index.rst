@@ -6,6 +6,8 @@
 .. include:: ../../Includes.txt
 
 
+.. _appendix-shopping-basket:
+
 Using the built in "shopping basket"
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 

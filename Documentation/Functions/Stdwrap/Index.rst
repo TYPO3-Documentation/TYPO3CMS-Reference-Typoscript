@@ -6,6 +6,8 @@
 .. include:: ../../Includes.txt
 
 
+.. _stdwrap:
+
 stdWrap
 ^^^^^^^
 
@@ -30,6 +32,8 @@ the exact order of execution.
 Note that the stdWrap property "orderedStdWrap" allows you to execute
 multiple stdWrap functions in a freely selectable order.
 
+
+.. _stdwrap-content-supplying:
 
 Content-supplying properties of stdWrap
 """""""""""""""""""""""""""""""""""""""
@@ -69,12 +73,18 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
+
+         .. _stdwrap-get-data:
+
          Get data:
 
 
 .. container:: table-row
 
    Property
+
+         .. _stdwrap-setcontenttocurrent:
+
          setContentToCurrent
 
    Data type
@@ -89,6 +99,9 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
+
+         .. _stdwrap-setcurrent:
+
          setCurrent
 
    Data type
@@ -104,6 +117,9 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
+
+         .. _stdwrap-lang:
+
          lang
 
    Data type
@@ -131,6 +147,9 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
+
+         .. _stdwrap-data:
+
          data
 
    Data type
@@ -145,6 +164,9 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
+
+         .. _stdwrap-field:
+
          field
 
    Data type
@@ -170,6 +192,9 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
+
+         .. _stdwrap-current:
+
          current
 
    Data type
@@ -184,6 +209,9 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
+
+         .. _stdwrap-cobject:
+
          cObject
 
    Data type
@@ -198,6 +226,9 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
+
+         .. _stdwrap-numrows:
+
          numRows
 
    Data type
@@ -212,6 +243,9 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
+
+         .. _stdwrap-filelist:
+
          filelist
 
    Data type
@@ -240,6 +274,9 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
+
+         .. _stdwrap-preuserfunc:
+
          preUserFunc
 
    Data type
@@ -258,6 +295,10 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
+
+         .. _stdwrap-override:
+         .. _stdwrap-conditions:
+
          Override / Conditions:
 
 
@@ -279,6 +320,9 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
+
+         .. _stdwrap-preifemptylistnum:
+
          preIfEmptyListNum
 
    Data type
@@ -293,6 +337,9 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
+
+         .. _stdwrap-ifempty:
+
          ifEmpty
 
    Data type
@@ -308,6 +355,9 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
+
+         .. _stdwrap-ifblank:
+
          ifBlank
 
    Data type
@@ -322,6 +372,9 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
+
+         .. _stdwrap-listnum:
+
          listNum
 
    Data type
@@ -380,13 +433,16 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
+
+         .. _stdwrap-trim:
+
          trim
 
    Data type
 
 
    Description
-         PHP-function trim(); Removes whitespace around value
+         PHP-function trim(); removes whitespaces around the value.
 
    Default
 
@@ -394,13 +450,16 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
+
+         .. _stdwrap-stdwrap:
+
          stdWrap
 
    Data type
          ->stdWrap
 
    Description
-         Recursive call to stdWrap function
+         Recursive call to the stdWrap function.
 
    Default
 
@@ -408,6 +467,9 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
+
+         .. _stdwrap-required:
+
          required
 
    Data type
@@ -419,7 +481,7 @@ value is "imported" from the field called "header" from the $cObj
          field, current, listNum, trim). Zero is NOT regarded as empty! Use
          "if" instead!
 
-         If the content i empty, "" is returned immediately.
+         If the content is empty, "" is returned immediately.
 
    Default
 
@@ -427,13 +489,16 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
+
+         .. _stdwrap-if:
+
          if
 
    Data type
          ->if
 
    Description
-         If the if-object returns false, stdWrap returns "" immediately
+         If the if-object returns false, stdWrap returns "" immediately.
 
    Default
 
@@ -441,6 +506,9 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
+
+         .. _stdwrap-fieldrequired:
+
          fieldRequired
 
    Data type
@@ -455,12 +523,18 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
+
+         .. _stdwrap-parsedata:
+
          Parse data:
 
 
 .. container:: table-row
 
    Property
+
+         .. _stdwrap-csconv:
+
          csConv
 
    Data type
@@ -476,6 +550,9 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
+
+         .. _stdwrap-parsefunc:
+
          parseFunc
 
    Data type
@@ -502,6 +579,9 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
+
+         .. _stdwrap-htmlparser:
+
          HTMLparser
 
    Data type
@@ -521,6 +601,9 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
+
+         .. _stdwrap-split:
+
          split
 
    Data type
@@ -535,6 +618,9 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
+
+         .. _stdwrap-replacement:
+
          replacement
 
    Data type
@@ -552,6 +638,9 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
+
+         .. _stdwrap-prioricalc:
+
          prioriCalc
 
    Data type
@@ -588,6 +677,9 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
+
+         .. _stdwrap-char:
+
          char
 
    Data type
@@ -596,7 +688,7 @@ value is "imported" from the field called "header" from the $cObj
    Description
          Content is set to the chr( *value* ). ::
 
-            PHP: $content = chr(intval($conf['char']);
+            $content = chr(intval($conf['char']));
 
    Default
 
@@ -604,15 +696,18 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
+
+         .. _stdwrap-intval:
+
          intval
 
    Data type
          boolean
 
    Description
-         PHP function intval(); Returns an integer. ::
+         PHP function intval(); returns an integer. ::
 
-            PHP: $content = intval($content);
+            $content = intval($content);
 
    Default
 
@@ -620,6 +715,9 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
+
+         .. _stdwrap-hash:
+
          hash
 
    Data type
@@ -646,6 +744,9 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
+
+         .. _stdwrap-round:
+
          round
 
    Data type
@@ -661,6 +762,9 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
+
+         .. _stdwrap-numberformat:
+
          numberFormat
 
    Data type
@@ -676,6 +780,9 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
+
+         .. _stdwrap-date:
+
          date
 
    Data type
@@ -685,7 +792,7 @@ value is "imported" from the field called "header" from the $cObj
          The content should be data-type "UNIX-time". Returns the content
          formatted as a date. ::
 
-            PHP: $content = date($conf['date'], $content);
+            $content = date($conf['date'], $content);
 
          Properties:
 
@@ -703,13 +810,16 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
+
+         .. _stdwrap-strftime:
+
          strftime
 
    Data type
          strftime-conf
 
    Description
-         Exactly like "date" above. See the PHP-manual (strftime) for the
+         Exactly like "date" above. See the PHP manual (strftime) for the
          codes, or datatype "strftime-conf".
 
          This formatting is useful if the locale is set in advance in the
@@ -731,6 +841,9 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
+
+         .. _stdwrap-age:
+
          age
 
    Data type
@@ -769,6 +882,9 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
+
+         .. _stdwrap-case:
+
          case
 
    Data type
@@ -785,6 +901,9 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
+
+         .. _stdwrap-bytes:
+
          bytes
 
    Data type
@@ -808,6 +927,9 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
+
+         .. _stdwrap-substring:
+
          substring
 
    Data type
@@ -825,6 +947,9 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
+
+         .. _stdwrap-removebadhtml:
+
          removeBadHTML
 
    Data type
@@ -840,6 +965,9 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
+
+         .. _stdwrap-crophtml:
+
          cropHTML
 
    Data type
@@ -860,6 +988,9 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
+
+         .. _stdwrap-striphtml:
+
          stripHtml
 
    Data type
@@ -874,6 +1005,9 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
+
+         .. _stdwrap-crop:
+
          crop
 
    Data type
@@ -882,20 +1016,36 @@ value is "imported" from the field called "header" from the $cObj
    Description
          Crops the content to a certain length.
 
-         Syntax: +/- (chars) = from left / from right \| [string] \| [boolean:
-         keep whole words]
+         You can define up to three parameters, of which the third is
+         optional. The syntax is:
+         [numbers of characters to keep] \| [ellipsis] \| [keep whole words]
+
+         numbers of characters to keep (integer): Define the number of characters
+         you want to keep. For positive numbers, the first characters from the
+         beginning of the string will be kept, for negative numbers the last
+         cahracters from the end will be kept.
+
+         ellipsis (string): The signs to be added instead of the part, which was
+         cropped of. If the number of characters was positive, the string will
+         be *prepended* with the ellipsis, if it was negative, the string will
+         be *appended* with the ellipsis.
+
+         keep whole words (boolean): If set to 0 (default), the string is always
+         cropped directly after the defined number of characters. If set to 1,
+         only complete words are kept. Then a word, which would normally be cut
+         in the middle, is removed completely.
 
          **Examples:**
 
          20 \| ... => max 20 characters. If more, the value will be truncated
-         to the first 20 chars and prepended with "..."
+         to the first 20 characters and prepended with "..."
 
          -20 \| ... => max 20 characters. If more, the value will be truncated
-         to the last 20 chars and appended with "..."
+         to the last 20 characters and appended with "..."
 
          20 \| ... \| 1 => max 20 characters. If more, the value will be
-         truncated to the first 20 chars and prepended with "...". If the
-         division is in the middle of a word, the remains of that word is
+         truncated to the first 20 characters and prepended with "...". If
+         the division is in the middle of a word, the remains of that word is
          removed.
 
          Uses "renderCharset" for the operation.
@@ -906,6 +1056,9 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
+
+         .. _stdwrap-rawurlencode:
+
          rawUrlEncode
 
    Data type
@@ -920,16 +1073,19 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
+
+         .. _stdwrap-htmlspecialchars:
+
          htmlSpecialChars
 
    Data type
          boolean
 
    Description
-         Passes the content through htmlspecialchars()-PHP-function.
+         Passes the content through the PHP function htmlspecialchars().
 
          Additional property ".preserveEntities" will preserve entities so only
-         non-entity chars are affected.
+         non-entity characters are affected.
 
    Default
 
@@ -937,6 +1093,9 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
+
+         .. _stdwrap-doublebrtag:
+
          doubleBrTag
 
    Data type
@@ -951,13 +1110,17 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
+
+         .. _stdwrap-br:
+
          br
 
    Data type
          boolean
 
    Description
-         PHP function nl2br(); converts line breaks to <br />-tags.
+         Pass the value through the PHP function nl2br(). This
+         converts line breaks to <br /> tags.
 
    Default
 
@@ -965,6 +1128,9 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
+
+         .. _stdwrap-brtag:
+
          brTag
 
    Data type
@@ -979,6 +1145,9 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
+
+         .. _stdwrap-encapslines:
+
          encapsLines
 
    Data type
@@ -994,6 +1163,9 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
+
+         .. _stdwrap-keywords:
+
          keywords
 
    Data type
@@ -1009,6 +1181,9 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
+
+         .. _stdwrap-innerwrap:
+
          innerWrap
 
    Data type
@@ -1023,6 +1198,8 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
+         .. _stdwrap-innerwrap2:
+
          innerWrap2
 
    Data type
@@ -1037,6 +1214,9 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
+
+         .. _stdwrap-fonttag:
+
          fontTag
 
    Data type
@@ -1051,13 +1231,16 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
+
+         .. _stdwrap-addparams:
+
          addParams
 
    Data type
          ->addParams
 
    Description
-         Lets you add tag-parameters to the content  *if* the content is a tag!
+         Lets you add tag parameters to the content  *if* the content is a tag!
 
    Default
 
@@ -1065,13 +1248,16 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
+
+         .. _stdwrap-textstyle:
+
          textStyle
 
    Data type
          ->textStyle
 
    Description
-         Wraps content in font-tags
+         Wraps the content in font-tags.
 
    Default
 
@@ -1079,13 +1265,16 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
+
+         .. _stdwrap-tablestyle:
+
          tableStyle
 
    Data type
          ->tableStyle
 
    Description
-         Wraps content with table-tags
+         Wraps content with table-tags.
 
    Default
 
@@ -1093,6 +1282,9 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
+
+         .. _stdwrap-filelink:
+
          filelink
 
    Data type
@@ -1107,13 +1299,16 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
+
+         .. _stdwrap-precobject:
+
          preCObject
 
    Data type
          cObject
 
    Description
-         cObject prepended the content
+         cObject prepended the content.
 
    Default
 
@@ -1121,13 +1316,16 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
+
+         .. _stdwrap-postcobject:
+
          postCObject
 
    Data type
          cObject
 
    Description
-         cObject appended the content
+         cObject appended the content.
 
    Default
 
@@ -1135,6 +1333,9 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
+
+         .. _stdwrap-wrapalign:
+
          wrapAlign
 
    Data type
@@ -1142,7 +1343,7 @@ value is "imported" from the field called "header" from the $cObj
 
    Description
          Wraps content with <div style=text-align:[ *value* ];"> \| </div>
-         *if* align is set
+         *if* align is set.
 
    Default
 
@@ -1150,13 +1351,16 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
+
+         .. _stdwrap-typolink:
+
          typolink
 
    Data type
          ->typolink
 
    Description
-         Wraps the content with a link-tag
+         Wraps the content with a link-tag.
 
    Default
 
@@ -1164,6 +1368,9 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
+
+         .. _stdwrap-tcaselectitem:
+
          TCAselectItem
 
    Data type
@@ -1189,13 +1396,16 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
+
+         .. _stdwrap-spacebefore:
+
          spaceBefore
 
    Data type
          int /stdWrap
 
    Description
-         Pixels space before. Done with a clear-gif; <img ...><BR>
+         Pixels space before. Done with a clear-gif; <img ...><br>.
 
    Default
 
@@ -1203,13 +1413,16 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
+
+         .. _stdwrap-spaceafter:
+
          spaceAfter
 
    Data type
          int /stdWrap
 
    Description
-         Pixels space after. Done with a clear-gif; <img ...><BR>
+         Pixels space after. Done with a clear-gif; <img ...><br>.
 
    Default
 
@@ -1217,6 +1430,9 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
+
+         .. _stdwrap-space:
+
          space
 
    Data type
@@ -1239,6 +1455,9 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
+
+         .. _stdwrap-wrap:
+
          wrap
 
    Data type
@@ -1254,6 +1473,9 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
+
+         .. _stdwrap-notrimwrap:
+
          noTrimWrap
 
    Data type
@@ -1275,6 +1497,9 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
+
+         .. _stdwrap-wrap2:
+
          wrap2
 
    Data type
@@ -1289,6 +1514,9 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
+
+         .. _stdwrap-datawrap:
+
          dataWrap
 
    Data type
@@ -1311,6 +1539,9 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
+
+         .. _stdwrap-prepend:
+
          prepend
 
    Data type
@@ -1325,6 +1556,9 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
+
+         .. _stdwrap-append:
+
          append
 
    Data type
@@ -1339,6 +1573,9 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
+
+         .. _stdwrap-wrap3:
+
          wrap3
 
    Data type
@@ -1353,6 +1590,9 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
+
+         .. _stdwrap-orderedstdwrap:
+
          orderedStdWrap
 
    Data type
@@ -1392,6 +1632,9 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
+
+         .. _stdwrap-outerwrap:
+
          outerWrap
 
    Data type
@@ -1406,6 +1649,9 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
+
+         .. _stdwrap-insertdata:
+
          insertData
 
    Data type
@@ -1428,6 +1674,9 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
+
+         .. _stdwrap-offsetwrap:
+
          offsetWrap
 
    Data type
@@ -1452,15 +1701,18 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
+
+         .. _stdwrap-postuserfunc:
+
          postUserFunc
 
    Data type
          function name
 
    Description
-         Calling a PHP-function or method in a class, passing the current
+         Calling a PHP function or method in a class, passing the current
          content to the function as first parameter and any properties as
-         second parameter.Please see the description of the cObject USER for
+         second parameter. Please see the description of the cObject USER for
          in-depth information.
 
          **Example:**
@@ -1468,7 +1720,7 @@ value is "imported" from the field called "header" from the $cObj
          You can paste this example directly into a new template record. ::
 
             page = PAGE
-            page.typeNum=0
+            page.typeNum = 0
             includeLibs.something = typo3/sysext/statictemplates/media/scripts/example_callfunction.php
 
             page.10 = TEXT
@@ -1492,13 +1744,16 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
+
+         .. _stdwrap-postuserfuncint:
+
          postUserFuncInt
 
    Data type
          function name
 
    Description
-         Calling a PHP-function or method in a class, passing the current
+         Calling a PHP function or method in a class, passing the current
          content to the function as first parameter and any properties as
          second parameter. The result will be rendered non-cached, outside the
          main page-rendering. Please see the description of the cObject
@@ -1513,6 +1768,9 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
+
+         .. _stdwrap-preficomment:
+
          prefixComment
 
    Data type
@@ -1539,6 +1797,9 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
+
+         .. _stdwrap-editicons:
+
          editIcons
 
    Data type
@@ -1594,6 +1855,9 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
+
+         .. _stdwrap-editpanel:
+
          editPanel
 
    Data type
@@ -1608,13 +1872,16 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
+
+         .. _stdwrap-cache:
+
          cache
 
    Data type
          ->cache
 
    Description
-         (Since TYPO3 4.7)Caches rendered content in the caching framework.
+         (Since TYPO3 4.7) Caches rendered content in the caching framework.
 
    Default
 
@@ -1622,14 +1889,17 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
+
+         .. _stdwrap-debug:
+
          debug
 
    Data type
          boolean
 
    Description
-         Prints content with HTMLSpecialChars() and <PRE></PRE>: Useful for
-         debugging which value stdWrap actually ends up with, if you're
+         Prints content with HTMLSpecialChars() and <pre></pre>: Useful for
+         debugging which value stdWrap actually ends up with, if you are
          constructing a website with TypoScript.
 
          Should be used under construction only.
@@ -1640,6 +1910,9 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
+
+         .. _stdwrap-debugfunc:
+
          debugFunc
 
    Data type
@@ -1658,6 +1931,9 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
+
+         .. _stdwrap-debugdata:
+
          debugData
 
    Data type

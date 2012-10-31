@@ -6,9 +6,13 @@
 .. include:: ../../Includes.txt
 
 
+.. _appendix-plaintextlib:
+
 plaintextLib.inc
 ^^^^^^^^^^^^^^^^
 
+
+.. _appendix-plaintextlib-files:
 
 Files:
 """"""
@@ -55,11 +59,15 @@ Example:
 configuration)
 
 
+.. _appendix-plaintextlib-template:
+
 Static template
 """""""""""""""
 
 plugin.alt.plaintext
 
+
+.. _appendix-plaintextlib-properties:
 
 plaintextLib.inc properties
 """""""""""""""""""""""""""
@@ -474,10 +482,15 @@ plaintextLib.inc properties
 
 [tsref:(script).plaintextLib]
 
+
+.. _appendix-plaintextlib-untrimmed-string:
+
 Datatype 'untrimmed string' means that you can enter a string as
 usual, but if you enter a value between two vertical lines, that value
 will be used and NOT trimmed. Normally values are trimmed.
 
+
+.. _appendix-plaintextlib-examples:
 
 Example:
 ~~~~~~~~

@@ -6,6 +6,8 @@
 .. include:: ../Includes.txt
 
 
+.. _appendix-b:
+
 Appendix B – Standard Templates
 -------------------------------
 

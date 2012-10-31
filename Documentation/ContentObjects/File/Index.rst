@@ -6,6 +6,8 @@
 .. include:: ../../Includes.txt
 
 
+.. _cobj-file:
+
 FILE
 ^^^^
 
@@ -156,6 +158,8 @@ different cObjects.
 
 [tsref:(cObject).FILE]
 
+
+.. _cobj-file-examples:
 
 ((generated))
 """""""""""""
