@@ -132,11 +132,8 @@ do not have native SVG support, so that it also works in e.g. IE
 
 .. _cobj-svg-examples:
 
-((generated))
-"""""""""""""
-
 Example:
-~~~~~~~~
+""""""""
 
 ::
 

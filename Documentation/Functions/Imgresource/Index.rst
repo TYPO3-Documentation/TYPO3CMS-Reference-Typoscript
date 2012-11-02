@@ -15,18 +15,6 @@ imgResource contains the properties that are used with the data type
 imgResource.
 
 
-((generated))
-"""""""""""""
-
-Example:
-~~~~~~~~
-
-This scales the image toplogo.gif to the width of 200 pixels. ::
-
-   file = toplogo.gif
-   file.width = 200
-
-
 .. ### BEGIN~OF~TABLE ###
 
 .. container:: table-row
@@ -150,7 +138,7 @@ This scales the image toplogo.gif to the width of 200 pixels. ::
 
    Description
          If set, -sample is used to scale images instead of -geometry. Sample
-         does not use antialiasing and is therefore much faster.
+         does not use anti-aliasing and is therefore much faster.
 
    Default
 
@@ -342,7 +330,7 @@ This scales the image toplogo.gif to the width of 200 pixels. ::
          The mask by which the image is masked onto "m.bgImg". Both "m.mask"
          and "m.bgImg"  **is scaled to fit** the size of the imgResource image!
 
-         **NOTE:** Both "m.mask" and "m.bgImg" must be valid images.
+         **Note:** Both "m.mask" and "m.bgImg" must be valid images.
 
    Default
 
@@ -356,7 +344,7 @@ This scales the image toplogo.gif to the width of 200 pixels. ::
          imgResource
 
    Description
-         **NOTE:** Both "m.mask" and "m.bgImg" must be valid images.
+         **Note:** Both "m.mask" and "m.bgImg" must be valid images.
 
    Default
 
@@ -378,7 +366,7 @@ This scales the image toplogo.gif to the width of 200 pixels. ::
 
          This is most often used to create an underlay for the imgResource.
 
-         **NOTE:** Both "m.bottomImg" and "m.bottomImg\_mask" must be valid
+         **Note:** Both "m.bottomImg" and "m.bottomImg\_mask" must be valid
          images.
 
    Default
@@ -395,7 +383,7 @@ This scales the image toplogo.gif to the width of 200 pixels. ::
    Description
          (optional)
 
-         **NOTE:** Both "m.bottomImg" and "m.bottomImg\_mask" must be valid
+         **Note:** Both "m.bottomImg" and "m.bottomImg\_mask" must be valid
          images.
 
    Default
@@ -405,4 +393,15 @@ This scales the image toplogo.gif to the width of 200 pixels. ::
 
 
 [tsref:->imgResource]
+
+
+.. _imgresource-examples:
+
+Example:
+""""""""
+
+This scales the image toplogo.gif to the width of 200 pixels. ::
+
+   file = toplogo.gif
+   file.width = 200
 

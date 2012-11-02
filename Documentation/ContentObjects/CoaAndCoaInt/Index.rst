@@ -130,11 +130,8 @@ cObjects but with any cObject.
 .. _cobj-coa-examples:
 .. _cobj-coa-int-examples:
 
-((generated))
-"""""""""""""
-
 Example:
-~~~~~~~~
+""""""""
 
 ::
 

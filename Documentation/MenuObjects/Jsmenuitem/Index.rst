@@ -173,11 +173,8 @@ JSMENUITEM
 [tsref:(cObject).HMENU.(mObj).JSMENUITEM]
 
 
-((generated))
-"""""""""""""
-
 Example:
-~~~~~~~~
+""""""""
 
 ::
 

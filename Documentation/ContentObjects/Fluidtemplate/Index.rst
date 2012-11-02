@@ -197,11 +197,8 @@ work.
 
 .. _cobj-fluidtemplate-examples:
 
-((generated))
-"""""""""""""
-
 Example:
-~~~~~~~~
+""""""""
 
 The Fluid template (in fileadmin/templates/MyTemplate.html) could look
 like this::

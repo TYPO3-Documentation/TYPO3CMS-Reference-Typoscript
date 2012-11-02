@@ -95,11 +95,10 @@ for that function. Consult the PHP manual, if unsure.
 [tsref:->numberFormat]
 
 
-((generated))
-"""""""""""""
+.. _numberformat-examples:
 
 Examples:
-~~~~~~~~~
+"""""""""
 
 ::
 

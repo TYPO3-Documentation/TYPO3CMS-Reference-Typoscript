@@ -18,7 +18,7 @@ fine selections of records (it has no "select" property)
 The register-key SYS\_LASTCHANGED is updated with the tstamp-field of
 the records selected which has a higher value than the current.
 
-**NOTE:** Records with parent ids (pid's) for non-accessible pages
+**Note:** Records with parent ids (pid's) for non-accessible pages
 (that is hidden, timed or access-protected pages) are normally not
 selected. Pages may be of any type, except recycler. Disable the check
 with the "dontCheckPid"-option.
@@ -151,11 +151,8 @@ with the "dontCheckPid"-option.
 
 .. _cobj-records-examples:
 
-((generated))
-"""""""""""""
-
 Example:
-~~~~~~~~
+""""""""
 
 ::
 

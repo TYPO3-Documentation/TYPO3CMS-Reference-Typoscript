@@ -96,11 +96,8 @@ Inserts a transparent gif-file.
 
 .. _cobj-cleargif-examples:
 
-((generated))
-"""""""""""""
-
 Example:
-~~~~~~~~
+""""""""
 
 ::
 

@@ -66,7 +66,7 @@ encapsLines
          Enter a new tag name here if you wish the tagname of any encapsulation
          to be unified to a single tag name.
 
-         For instance, setting this value to "remapTags.P=DIV" would convert::
+         For instance, setting this value to "remapTag.P=DIV" would convert::
 
             <p>Some text</p>
             <div>Some text</div>
@@ -95,7 +95,7 @@ encapsLines
          **Example:** ::
 
             addAttributes.P {
-              style=padding-bottom:0px; margin-top:1px; margin-bottom:1px;
+              style=padding-bottom: 0px; margin-top: 1px; margin-bottom: 1px;
               align=center
             }
 
@@ -131,7 +131,7 @@ encapsLines
             Some <div>text</div>
             <p>Some text</p>
             <div>Some text</div>
-            <B>Some text</B>
+            <b>Some text</b>
 
          becomes this::
 
@@ -139,7 +139,7 @@ encapsLines
             Some <div>text</div>
             Some text
             Some text
-            <B>Some text</B>
+            <b>Some text</b>
 
    Default
 
@@ -157,7 +157,7 @@ encapsLines
 
          **Example:** ::
 
-            .wrapNonWrappedLines = <P>|</P>
+            .wrapNonWrappedLines = <p>|</p>
 
          This::
 
@@ -228,11 +228,11 @@ encapsLines
          tagname
 
    Description
-         For all non-wrapped lines, you can set here which tag it should be
-         wrapped in. Example would be "P". This is an alternative to
-         .wrapNonWrappedLines and has the advantage that it's attributes are
-         set by .addAttributes as well as defaultAlign. Thus you can easier
-         match the wrapping tags used for non-wrapped and wrapped lines.
+         For all non-wrapped lines, you can here set a tag in which they
+         should be wrapped. Example would be "p". This is an alternative to
+         .wrapNonWrappedLines and has the advantage that its attributes are
+         set by .addAttributes as well as defaultAlign. Thus you can match
+         the wrapping tags used for non-wrapped and wrapped lines more easily.
 
    Default
 
@@ -244,78 +244,75 @@ encapsLines
 
 .. _encapslines-examples:
 
-((generated))
-"""""""""""""
-
 Example:
-~~~~~~~~
+""""""""
 
 ::
 
    encapsLines {
      encapsTagList = div,p
      remapTag.DIV = P
-     wrapNonWrappedLines = <P>|</P>
+     wrapNonWrappedLines = <p>|</p>
      innerStdWrap_all.ifEmpty = &nbsp;
    }
 
 This example shows how to handle content rendered by TYPO3 and
-stylesheets where the <P> tag is used to encapsulate each line.
+stylesheets where the <p> tag is used to encapsulate each line.
 
 Say, you have made this content with the Rich Text Editor::
 
    This is line # 1
 
    [Above is an empty line!]
-   <DIV align=right>This line is right-aligned</DIV>
+   <div style="text-align: right;">This line is right-aligned.</div>
 
 After being processed by encapsLines with the above configuration, the
 content looks like this::
 
-   <P>This is line # 1 </P>
-   <P>&nbsp;</P>
-   <P>[Above is an empty line!] </P>
-   <P align="right">This line is right-aligned</P>
+   <p>This is line # 1 </p>
+   <p>&nbsp;</p>
+   <p>[Above is an empty line!] </p>
+   <p style="text-align: right;">This line is right-aligned.</p>
 
-Each line is nicely wrapped with <P> tags. The line from the database
-which was  *already* wrapped (but in <DIV>-tags) has been converted to
-<P>, but keeps it's alignment. Overall, notice that the Rich Text
+Each line is nicely wrapped with <p> tags. The line from the database
+which was  *already* wrapped (but in <div>-tags) has been converted to
+<p>, but keeps it's alignment. Overall, notice that the Rich Text
 Editor ONLY stored the line which was in fact right-aligned - every
 other line from the RTE was stored without any wrapping tags, so that
 the content in the database remains as human readable as possible.
 
 
 Example:
-~~~~~~~~
+""""""""
 
 ::
 
    # Make sure nonTypoTagStdWrap operates on content outside <typolist> and <typohead> only:
    tt_content.text.20.parseFunc.tags.typolist.breakoutTypoTagContent = 1
    tt_content.text.20.parseFunc.tags.typohead.breakoutTypoTagContent = 1
-   # ... and no <BR> before typohead.
+   # ... and no <br> before typohead.
    tt_content.text.20.parseFunc.tags.typohead.stdWrap.wrap >
-   # Setting up nonTypoTagStdWrap to wrap the text with P-tags
+   # Setting up nonTypoTagStdWrap to wrap the text with p-tags
    tt_content.text.20.parseFunc.nonTypoTagStdWrap >
    tt_content.text.20.parseFunc.nonTypoTagStdWrap.encapsLines {
      encapsTagList = div,p
      remapTag.DIV = P
-     wrapNonWrappedLines = <P style="margin:0 0 0;">|</P>
+     wrapNonWrappedLines = <p style="margin: 0 0 0;">|</p>
 
      # Forcing these attributes onto the encapsulation-tags if any
-     addAttributes.P {
-       style=margin:0 0 0;
+     addAttributes.p {
+       style=margin: 0 0 0;
      }
      innerStdWrap_all.ifEmpty = &nbsp;
      innerStdWrap_all.textStyle < tt_content.text.20.textStyle
    }
-   # finally removing the old textstyle formatting on the whole bodytext part.
+   # Finally removing the old textstyle formatting on the whole bodytext part.
    tt_content.text.20.textStyle >
-   # ... and <BR>-tag after the content is not needed either...
+   # ... and <br>-tag after the content is not needed either...
    tt_content.text.20.wrap >
 
 This is an example of how to wrap traditional tt\_content bodytext
-with <P> tags, setting the line-distances to regular space like that
-generated by a <BR> tag, but staying compatible with the RTE features
+with <p> tags, setting the line-distances to regular space like that
+generated by a <br> tag, but staying compatible with the RTE features
 such as assigning classes and alignment to paragraphs.
 

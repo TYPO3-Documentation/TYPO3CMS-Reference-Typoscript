@@ -118,15 +118,13 @@ cached, but rendered on every call.
 
 .. ###### END~OF~TABLE ######
 
-
 [tsref:->cache]
 
 
-((generated))
-"""""""""""""
+.. _cache-examples:
 
 Examples:
-~~~~~~~~~
+"""""""""
 
 ::
 

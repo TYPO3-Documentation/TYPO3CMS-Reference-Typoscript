@@ -109,11 +109,8 @@ the table tag.
 
 .. _cobj-otable-examples:
 
-((generated))
-"""""""""""""
-
 Example:
-~~~~~~~~
+""""""""
 
 ::
 

@@ -91,11 +91,8 @@ is used in conjunction with  *parseFunc* .
 
 .. _tags-examples:
 
-((generated))
-"""""""""""""
-
 Example:
-~~~~~~~~
+""""""""
 
 This example creates 4 custom tags. The <LINK>-, <TYPOLIST>-,
 <GRAFIX>- and <PIC>-tags

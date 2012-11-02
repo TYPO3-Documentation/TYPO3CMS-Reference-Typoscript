@@ -15,45 +15,6 @@ This object is used to parse some content for stuff like special typo
 tags, the "makeLinks"-things and so on...
 
 
-((generated))
-"""""""""""""
-
-Example:
-~~~~~~~~
-
-This example takes the content of the field "bodytext" and parses it
-through the makelinks-functions and substitutes all <LINK> and
-<TYPOLIST>-tags with something else. ::
-
-   tt_content.text.default {
-     20 = TEXT
-     20.field = bodytext
-     20.wrap = | <BR>
-     20.brTag = <br>
-     20.parseFunc {
-       makelinks = 1
-       makelinks.http.keep = path
-       makelinks.http.extTarget = _blank
-       makelinks.mailto.keep = path
-       tags {
-         link = TEXT
-         link {
-           current = 1
-           typolink.extTarget = _blank
-           typolink.target={$cLinkTagTarget}
-           typolink.wrap = <B><FONT color=red>|</FONT></B>
-           typolink.parameter.data = parameters : allParams
-         }
-
-         typolist < tt_content.bullets.default.20
-         typolist.trim = 1
-         typolist.field >
-         typolist.current = 1
-       }
-     }
-   }
-
-
 .. ### BEGIN~OF~TABLE ###
 
 .. container:: table-row
@@ -156,9 +117,9 @@ through the makelinks-functions and substitutes all <LINK> and
               table.stripNL=1
               table.stdWrap.HTMLparser = 1
               table.stdWrap.HTMLparser {
-                tags.table.overrideAttribs = border=0 cellpadding=2 cellspacing=1 style="margin-top: 10px; margin-bottom: 10px;"
+                tags.table.overrideAttribs = border="0" cellpadding="2" cellspacing="1" style="margin-top: 10px; margin-bottom: 10px;"
                 tags.tr.allowedAttribs=0
-                tags.td.overrideAttribs = valign="top" bgcolor="#eeeeee" style="font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; font-size: 10px;"
+                tags.td.overrideAttribs = valign="top" style="background-color: #eeeeee; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; font-size: 10px;"
               }
             }
 
@@ -389,4 +350,42 @@ through the makelinks-functions and substitutes all <LINK> and
 
 
 [tsref:->parseFunc]
+
+
+.. _parsefunc-examples:
+
+Example:
+""""""""
+
+This example takes the content of the field "bodytext" and parses it
+through the makelinks-functions and substitutes all <LINK> and
+<TYPOLIST>-tags with something else. ::
+
+   tt_content.text.default {
+     20 = TEXT
+     20.field = bodytext
+     20.wrap = | <br>
+     20.brTag = <br>
+     20.parseFunc {
+       makelinks = 1
+       makelinks.http.keep = path
+       makelinks.http.extTarget = _blank
+       makelinks.mailto.keep = path
+       tags {
+         link = TEXT
+         link {
+           current = 1
+           typolink.extTarget = _blank
+           typolink.target = {$cLinkTagTarget}
+           typolink.wrap = <p style="color: red; font-weight: bold;">|</p>
+           typolink.parameter.data = parameters : allParams
+         }
+
+         typolist < tt_content.bullets.default.20
+         typolist.trim = 1
+         typolist.field >
+         typolist.current = 1
+       }
+     }
+   }
 

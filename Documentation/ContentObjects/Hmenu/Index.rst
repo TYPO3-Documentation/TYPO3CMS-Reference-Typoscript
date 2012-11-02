@@ -34,7 +34,6 @@ Generates hierarchical menus.
 .. container:: table-row
 
    Property
-
          .. _hmenu-number:
 
          (1 / 2 / 3 /...)
@@ -63,7 +62,6 @@ Generates hierarchical menus.
 .. container:: table-row
 
    Property
-
          .. _hmenu-cache-period:
 
          cache\_period
@@ -87,7 +85,6 @@ Generates hierarchical menus.
 .. container:: table-row
 
    Property
-
          .. _hmenu-entrylevel:
 
          entryLevel
@@ -112,7 +109,6 @@ Generates hierarchical menus.
 .. container:: table-row
 
    Property
-
          .. _hmenu-special:
 
          special
@@ -130,7 +126,6 @@ Generates hierarchical menus.
 .. container:: table-row
 
    Property
-
          .. _hmenu-special-value:
 
          special.value
@@ -147,7 +142,6 @@ Generates hierarchical menus.
 .. container:: table-row
 
    Property
-
          .. _hmenu-minitems:
 
          minItems
@@ -172,7 +166,6 @@ Generates hierarchical menus.
 .. container:: table-row
 
    Property
-
          .. _hmenu-maxitems:
 
          maxItems
@@ -193,7 +186,6 @@ Generates hierarchical menus.
 .. container:: table-row
 
    Property
-
          .. _hmenu-begin:
 
          begin
@@ -221,7 +213,6 @@ Generates hierarchical menus.
 .. container:: table-row
 
    Property
-
          .. _hmenu-ecludeuidlist:
 
          excludeUidList
@@ -247,7 +238,6 @@ Generates hierarchical menus.
 .. container:: table-row
 
    Property
-
          .. _hmenu-excludedoktypes:
 
          excludeDoktypes
@@ -267,7 +257,6 @@ Generates hierarchical menus.
 .. container:: table-row
 
    Property
-
          .. _hmenu-includenotinmenu:
 
          includeNotInMenu
@@ -285,7 +274,6 @@ Generates hierarchical menus.
 .. container:: table-row
 
    Property
-
          .. _hmenu-alwaysactivepidlist:
 
          alwaysActivePIDlist
@@ -304,7 +292,6 @@ Generates hierarchical menus.
 .. container:: table-row
 
    Property
-
          .. _hmenu-protectlvar:
 
          protectLvar
@@ -342,7 +329,6 @@ Generates hierarchical menus.
 .. container:: table-row
 
    Property
-
          .. _hmenu-addquerystring:
 
          addQueryString
@@ -361,7 +347,6 @@ Generates hierarchical menus.
 .. container:: table-row
 
    Property
-
          .. _hmenu-if:
 
          if
@@ -378,7 +363,6 @@ Generates hierarchical menus.
 .. container:: table-row
 
    Property
-
          .. _hmenu-wrap:
 
          wrap
@@ -395,7 +379,6 @@ Generates hierarchical menus.
 .. container:: table-row
 
    Property
-
          .. _hmenu-stdwrap:
 
          stdWrap
@@ -417,11 +400,8 @@ Generates hierarchical menus.
 
 .. _hmenu-examples:
 
-((generated))
-"""""""""""""
-
 Example:
-~~~~~~~~
+""""""""
 
 ::
 
@@ -431,7 +411,7 @@ Example:
    temp.sidemenu.1 {
      target = page
      NO.afterImg = typo3/sysext/statictemplates/media/bullets/dots2.gif |*||*| _
-     NO.afterImgTagParams = hspace="4"
+     NO.afterImgTagParams = style="margin: 0px 20px;"
      NO.linkWrap = {$fontTag}
      NO.ATagBeforeWrap = 1
 
@@ -441,7 +421,7 @@ Example:
    }
 
 
-.. _hmenu-special:
+.. _hmenu-special-property:
 
 The .special property
 """""""""""""""""""""
@@ -490,7 +470,6 @@ Mount pages are supported.
 .. container:: table-row
 
    Property
-
          .. _hmenu-special-directory-value:
 
          value
@@ -544,7 +523,6 @@ Mount pages are supported.
 .. container:: table-row
 
    Property
-
          .. _hmenu-special-list-value:
 
          value
@@ -607,7 +585,6 @@ Mount pages are supported.
 .. container:: table-row
 
    Property
-
          .. _hmenu-special-updated-value:
 
          value
@@ -630,7 +607,6 @@ Mount pages are supported.
 .. container:: table-row
 
    Property
-
          .. _hmenu-special-updated-mode:
 
          mode
@@ -666,7 +642,6 @@ Mount pages are supported.
 .. container:: table-row
 
    Property
-
          .. _hmenu-special-updated-depth:
 
          depth
@@ -691,7 +666,6 @@ Mount pages are supported.
 .. container:: table-row
 
    Property
-
          .. _hmenu-special-updated-beginatlevel:
 
          beginAtLevel
@@ -718,7 +692,6 @@ Mount pages are supported.
 .. container:: table-row
 
    Property
-
          .. _hmenu-special-updated-maxage:
 
          maxAge
@@ -737,7 +710,6 @@ Mount pages are supported.
 .. container:: table-row
 
    Property
-
          .. _hmenu-special-updated-limit:
 
          limit
@@ -755,7 +727,6 @@ Mount pages are supported.
 .. container:: table-row
 
    Property
-
          .. _hmenu-special-updated-excludenosearchpages:
 
          excludeNoSearchPages
@@ -839,7 +810,6 @@ Mount pages are supported.
 .. container:: table-row
 
    Property
-
          .. _hmenu-special-rootline-range:
 
          range
@@ -862,7 +832,6 @@ Mount pages are supported.
 .. container:: table-row
 
    Property
-
          .. _hmenu-special-rootline-reverseorder:
 
          reverseOrder
@@ -881,7 +850,6 @@ Mount pages are supported.
 .. container:: table-row
 
    Property
-
          .. _hmenu-special-rootline-targets:
 
          targets.[level number]
@@ -985,7 +953,6 @@ list from the property ".items".
 .. container:: table-row
 
    Property
-
          .. _hmenu-special-browse-value:
 
          value
@@ -1005,7 +972,6 @@ list from the property ".items".
 .. container:: table-row
 
    Property
-
          .. _hmenu-special-browse-items:
 
          items
@@ -1084,7 +1050,6 @@ list from the property ".items".
 .. container:: table-row
 
    Property
-
          .. _hmenu-special-browse-prevnexttosection:
 
          items.prevnextToSection
@@ -1104,7 +1069,6 @@ list from the property ".items".
 .. container:: table-row
 
    Property
-
          .. _hmenu-special-browse-target:
 
          [itemname].target
@@ -1121,7 +1085,6 @@ list from the property ".items".
 .. container:: table-row
 
    Property
-
          .. _hmenu-special-browse-uid:
 
          [itemname].uid
@@ -1138,7 +1101,6 @@ list from the property ".items".
 .. container:: table-row
 
    Property
-
          .. _hmenu-special-browse-fields:
 
          [itemname].fields.[field name]
@@ -1197,7 +1159,6 @@ Mount pages are supported.
 .. container:: table-row
 
    Property
-
          .. _hmenu-special-keywords-value:
 
          value
@@ -1228,7 +1189,6 @@ Mount pages are supported.
 .. container:: table-row
 
    Property
-
          .. _hmenu-special-keywords-mode:
 
          mode
@@ -1261,7 +1221,6 @@ Mount pages are supported.
 .. container:: table-row
 
    Property
-
          .. _hmenu-special-keywords-entrylevel:
 
          entryLevel
@@ -1280,7 +1239,6 @@ Mount pages are supported.
 .. container:: table-row
 
    Property
-
          .. _hmenu-special-keywords-depth:
 
          depth
@@ -1298,7 +1256,6 @@ Mount pages are supported.
 .. container:: table-row
 
    Property
-
          .. _hmenu-special-keywords-limit:
 
          limit
@@ -1316,7 +1273,6 @@ Mount pages are supported.
 .. container:: table-row
 
    Property
-
          .. _hmenu-special-keywords-excludenosearchpages:
 
          excludeNoSearchPages
@@ -1333,7 +1289,6 @@ Mount pages are supported.
 .. container:: table-row
 
    Property
-
          .. _hmenu-special-keywords-begin:
 
          begin
@@ -1350,7 +1305,6 @@ Mount pages are supported.
 .. container:: table-row
 
    Property
-
          .. _hmenu-special-keywords-setkeywords:
 
          setKeywords
@@ -1369,7 +1323,6 @@ Mount pages are supported.
 .. container:: table-row
 
    Property
-
          .. _hmenu-special-keywords-keywordsfield:
 
          keywordsField
@@ -1389,7 +1342,6 @@ Mount pages are supported.
 .. container:: table-row
 
    Property
-
          .. _hmenu-special-keywords-sourcefield:
 
          keywordsField.sourceField
@@ -1461,7 +1413,6 @@ error if tried accessed (depending on site configuration).
 .. container:: table-row
 
    Property
-
          .. _hmenu-special-language-value:
 
          value
@@ -1479,7 +1430,6 @@ error if tried accessed (depending on site configuration).
 .. container:: table-row
 
    Property
-
          .. _hmenu-special-language-normalwhennolanguage:
 
          normalWhenNoLanguage
@@ -1564,7 +1514,6 @@ menu items.
 .. container:: table-row
 
    Property
-
          .. _hmenu-special-userdefined-file:
 
          file
@@ -1581,7 +1530,6 @@ menu items.
 .. container:: table-row
 
    Property
-
          .. _hmenu-special-userdefined-other:
 
          [any other key]
@@ -1687,7 +1635,6 @@ menu.
 .. container:: table-row
 
    Property
-
          .. _hmenu-special-userfunction-userfunc:
 
          userFunc

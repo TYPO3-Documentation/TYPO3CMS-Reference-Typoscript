@@ -17,7 +17,7 @@ things as the size of the image, the background color of the new
 window and so on.
 
 An md5-hash of the parameters is generated. The hash is also generated
-in the "tx\_cms\_showpic" script and the hashes MUST match in order
+in the "tx\_cms\_showpic" script and the hashes **must** match in order
 for the image to be shown. This is a safety feature in order to
 prevent users from changing the parameters in the URL themselves.
 
@@ -360,19 +360,18 @@ a short instruction.
 [tsref:->imageLinkWrap]
 
 
-((generated))
-"""""""""""""
+.. _imagelinkwrap-examples:
 
 Example:
-~~~~~~~~
+""""""""
 
 ::
 
    1.imageLinkWrap = 1
    1.imageLinkWrap {
            enable = 1
-           bodyTag = <BODY bgColor=black>
-           wrap = <A href="javascript:close();"> | </A>
+           bodyTag = <body style="background-color: black;">
+           wrap = <a href="javascript:close();"> | </a>
            width = 800m
            height = 600
 

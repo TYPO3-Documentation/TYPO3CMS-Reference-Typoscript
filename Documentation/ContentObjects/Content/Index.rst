@@ -151,13 +151,10 @@ the records selected which has a higher value than the current.
 
 .. _cobj-content-examples:
 
-((generated))
-"""""""""""""
+Example:
+""""""""
 
-Example (of the CONTENT-obj):
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-::
+Here is an example of the CONTENT-obj::
 
      1 = CONTENT
      1.table = tt_content
@@ -167,10 +164,10 @@ Example (of the CONTENT-obj):
      }
 
 
-Example (of record-renderObj's):
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Example:
+""""""""
 
-::
+Here is an example of record-renderObj's::
 
    // Configuration for records with the typeField-value (often "CType") set to "header"
    tt_content.header.default {

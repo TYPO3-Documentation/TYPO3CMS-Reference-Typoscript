@@ -82,11 +82,10 @@ selected round method.
 [tsref:->round]
 
 
-((generated))
-"""""""""""""
+.. _round-examples:
 
 Examples:
-~~~~~~~~~
+"""""""""
 
 ::
 

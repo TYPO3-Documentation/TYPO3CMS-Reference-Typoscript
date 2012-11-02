@@ -205,18 +205,15 @@ useful for putting menus into them.
 
 .. _cobj-ctable-examples:
 
-((generated))
-"""""""""""""
-
 Example:
-~~~~~~~~
+""""""""
 
 ::
 
    page.10 = CTABLE
    page.10 {
      offset = 5, 0
-     tableParams = border="0" width="400"
+     tableParams = style="border-width: 0px; width: 400px;"
      cWidth = 400
      c.1 = CONTENT
      c.1.table = tt_content

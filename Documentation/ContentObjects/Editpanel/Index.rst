@@ -28,31 +28,13 @@ each content element on the page. It is also possible to insert an
 EDITPANEL as cObject in the template, using TypoScript.
 
 
-.. _cobj-editpanel-examples:
-
-((generated))
-"""""""""""""
-
-Example
-~~~~~~~
-
-::
-
-   page = PAGE
-   page.10 = EDITPANEL
-   page.10 {
-     ...
-   }
-
-In such a case, there's nothing to edit in the FE, but the panel can
-be used to create new records, for example.
-
 .. figure:: ../../Images/icon_note.png
    :alt: Note
 
 **Note**
 
 The extension "feedit" needs to be installed for this to work.
+
 
 .. ### BEGIN~OF~TABLE ###
 
@@ -296,4 +278,22 @@ The extension "feedit" needs to be installed for this to work.
 .. ###### END~OF~TABLE ######
 
 [tsref:(cObject).EDITPANEL]
+
+
+.. _cobj-editpanel-examples:
+
+Example:
+""""""""
+
+::
+
+   page = PAGE
+   page.10 = EDITPANEL
+   page.10 {
+     ...
+   }
+
+Here the edit panel is inserted as a cObject. In such a case, there is
+nothing to edit in the FE, but the panel can be used to create new
+records, for example.
 

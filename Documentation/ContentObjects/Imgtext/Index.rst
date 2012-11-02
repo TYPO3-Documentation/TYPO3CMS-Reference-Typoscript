@@ -807,11 +807,8 @@ See code examples.
 
 .. _cobj-imgtext-examples:
 
-((generated))
-"""""""""""""
-
 Example:
-~~~~~~~~
+""""""""
 
 ::
 
@@ -828,8 +825,8 @@ Example:
           file.width.field = imagewidth
           imageLinkWrap = 1
           imageLinkWrap {
-            bodyTag = <BODY bgColor=black>
-            wrap = <A href="javascript:close();"> | </A>
+            bodyTag = <body style="background-color: black;">
+            wrap = <a href="javascript:close();"> | </A>
             width = 800m
             height = 600m
             JSwindow = 1
@@ -844,7 +841,7 @@ Example:
        caption {
          1 = TEXT
          1.field = imagecaption
-         1.wrap = <font size="1"> |</font>
+         1.wrap = <p style="font-size: 12px;"> |</p>
          1.wrap2 = {$cBodyTextWrap}
        }
        borderThick = 2

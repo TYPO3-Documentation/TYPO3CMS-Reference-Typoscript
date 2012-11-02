@@ -70,11 +70,8 @@ been removed in TYPO3 6.0. Use the content object "TEXT" instead!
 
 .. _cobj-html-examples:
 
-((generated))
-"""""""""""""
-
 Example:
-~~~~~~~~
+""""""""
 
 ::
 
@@ -84,7 +81,7 @@ Example:
 
 
 Example:
-~~~~~~~~
+""""""""
 
 ::
 
@@ -94,7 +91,7 @@ Example:
 
 
 Example:
-~~~~~~~~
+""""""""
 
 ::
 

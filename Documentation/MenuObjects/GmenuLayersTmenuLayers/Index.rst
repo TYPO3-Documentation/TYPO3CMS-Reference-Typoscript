@@ -533,11 +533,8 @@ for the menu to make sense (use the expAll-flag).
 (cObject).HMENU.(mObj).TMENU\_LAYERS]
 
 
-((generated))
-"""""""""""""
-
 Example:
-~~~~~~~~
+""""""""
 
 ::
 

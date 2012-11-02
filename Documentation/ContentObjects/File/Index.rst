@@ -161,15 +161,14 @@ different cObjects.
 
 .. _cobj-file-examples:
 
-((generated))
-"""""""""""""
-
 Example:
-~~~~~~~~
+""""""""
 
 In this example a page is defined, but the content between the body-
 tags comes directly from the file "gs.html"::
 
+   page = PAGE
+   page.typeNum = 0
    page.10 = FILE
    page.10.file = fileadmin/gs/gs.html
 

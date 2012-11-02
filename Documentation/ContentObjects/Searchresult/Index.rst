@@ -11,28 +11,13 @@
 SEARCHRESULT
 ^^^^^^^^^^^^
 
-This object can be used to display search results.
+This object can be used to display search results. SEARCHRESULT only
+returns results from pages with of doktype "Standard" (1),
+"Advanced" (2) and "Not in menu" (5).
 
 Search words are loaded into the register in a form ready for linking
-to pages:
+to pages.
 
-
-.. _cobj-searchresult-examples:
-
-((generated))
-"""""""""""""
-
-Example:
-~~~~~~~~
-
-::
-
-   register:SWORD_PARAMS = '&sword_list[]=word1&sword_list[]=word2 .....'
-
-See typolink for more info!
-
-SEARCHRESULT returns results only from pages with of doktype
-"Standard" (1), "Advanced" (2) and "Not in menu" (5)
 
 .. ### BEGIN~OF~TABLE ###
 
@@ -306,10 +291,24 @@ SEARCHRESULT returns results only from pages with of doktype
 [tsref:(cObject).SEARCHRESULT]
 
 
+.. _cobj-searchresult-examples:
+
+Example:
+""""""""
+
+::
+
+   register:SWORD_PARAMS = '&sword_list[]=word1&sword_list[]=word2 .....'
+
+See typolink for more info!
+
+
 .. _cobj-searchresult-notes:
 
-**NOTE:** "sword" and "scols" MUST be set in order for the search to
-be engaged.
+Notes:
+""""""
+
+"sword" and "scols" MUST be set in order for the search to be engaged.
 
 var "sword" = search word(s)
 
@@ -414,6 +413,6 @@ branch and not the whole page-table.
 
       ... AND ((tt_content.header LIKE '%menu%' OR tt_content.bodytext LIKE '%menu%' OR tt_content.imagecaption LIKE '%menu%') OR (tt_content.header LIKE '%backend%' OR tt_content.bodytext LIKE '%backend%' OR tt_content.imagecaption LIKE '%backend%') AND NOT (tt_content.header LIKE '%content%' OR tt_content.bodytext LIKE '%content%' OR tt_content.imagecaption LIKE '%content%')) GROUP BY pages.uid
 
-Notice that upper and lowercase does not matter. Also 'menu' as
+Notice that upper and lowercase do not matter. Also 'menu' as
 searchword will find 'menu', 'menus', 'menuitems' etc.
 

@@ -11,6 +11,8 @@
 addParams
 ^^^^^^^^^
 
+Adds parameters to an HTML tag.
+
 .. ### BEGIN~OF~TABLE ###
 
 .. container:: table-row
@@ -60,8 +62,8 @@ addParams
          If there is a tag-property with this name already (case-sensitive!)
          that property will be overridden!
 
-         If the returned value is a blank string (but not zero!) then the
-         existing (if any) property will not be overridden.
+         If the returned value is a blank string (but not zero!), then the
+         existing property (if any) will not be overridden.
 
    Default
 
@@ -71,18 +73,15 @@ addParams
 [tsref:->addParams]
 
 
-.. _addparams-example:
-
-((generated))
-"""""""""""""
+.. _addparams-examples:
 
 Example:
-~~~~~~~~
+""""""""
 
 ::
 
    page.13 = TEXT
-   page.13.value = <tr><td valign=top>
+   page.13.value = <tr><td valign="top">
    page.13.addParams.bgcolor = {$menuCol.bgColor}
    page.13.addParams._offset = -1
 
@@ -91,5 +90,5 @@ Result example::
    <tr><td valign="top" bgcolor="white">
 
 (This example adds the 'bgColor' property to the value of the TEXT
-cObject, if the content is not "". (zero counts as a value here!))
+cObject, if the content is not "" (zero counts as a value here!).)
 

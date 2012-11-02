@@ -136,11 +136,8 @@ another property. So the forbidden values are: "setCurrent", "key",
 
 .. _cobj-case-examples:
 
-((generated))
-"""""""""""""
-
 Example:
-~~~~~~~~
+""""""""
 
 This example chooses between two different renderings of some content
 depending on whether the field "layout" is "1" or not ("default"). The

@@ -17,7 +17,6 @@ Data types reference
 .. container:: table-row
 
    Data type
-
          .. _data-type-tag:
 
          <tag>
@@ -36,7 +35,6 @@ Data types reference
 .. container:: table-row
 
    Data type
-
          .. _data-type-align:
 
          align
@@ -56,7 +54,6 @@ Data types reference
 .. container:: table-row
 
    Data type
-
          .. _data-type-vhalign:
 
          VHalign
@@ -85,7 +82,6 @@ Data types reference
 .. container:: table-row
 
    Data type
-
          .. _data-type-resource:
 
          resource
@@ -117,7 +113,6 @@ Data types reference
 .. container:: table-row
 
    Data type
-
          .. _data-type-imgresource:
 
          imgResource
@@ -151,7 +146,6 @@ Data types reference
 .. container:: table-row
 
    Data type
-
          .. _data-type-html-code:
 
          HTML-code
@@ -170,7 +164,6 @@ Data types reference
 .. container:: table-row
 
    Data type
-
          .. _data-type-target:
 
          target
@@ -194,7 +187,6 @@ Data types reference
 .. container:: table-row
 
    Data type
-
          .. _data-type-imageextension:
 
          imageExtension
@@ -219,7 +211,6 @@ Data types reference
 .. container:: table-row
 
    Data type
-
          .. _data-type-degree:
 
          degree
@@ -236,7 +227,6 @@ Data types reference
 .. container:: table-row
 
    Data type
-
          .. _data-type-posint:
          .. _data-type-intplus:
 
@@ -254,7 +244,6 @@ Data types reference
 .. container:: table-row
 
    Data type
-
          .. _data-type-int:
 
          int
@@ -274,7 +263,6 @@ Data types reference
 .. container:: table-row
 
    Data type
-
          .. _data-type-str:
          .. _data-type-string:
          .. _data-type-value:
@@ -296,7 +284,6 @@ Data types reference
 .. container:: table-row
 
    Data type
-
          .. _data-type-boolean:
 
          boolean
@@ -315,7 +302,6 @@ Data types reference
 .. container:: table-row
 
    Data type
-
          .. _data-type-rotation:
 
          rotation
@@ -332,7 +318,6 @@ Data types reference
 .. container:: table-row
 
    Data type
-
          .. _data-type-xywh:
 
          x,y,w,h
@@ -351,7 +336,6 @@ Data types reference
 .. container:: table-row
 
    Data type
-
          .. _data-type-html-color:
 
          HTML-color
@@ -402,7 +386,6 @@ Data types reference
 .. container:: table-row
 
    Data type
-
          .. _data-type-graphiccolor:
 
          GraphicColor
@@ -441,7 +424,6 @@ Data types reference
 .. container:: table-row
 
    Data type
-
          .. _data-type-page-id:
 
          page\_id
@@ -460,7 +442,6 @@ Data types reference
 .. container:: table-row
 
    Data type
-
          .. _data-type-pixels:
 
          pixels
@@ -477,7 +458,6 @@ Data types reference
 .. container:: table-row
 
    Data type
-
          .. _data-type-list:
 
          list
@@ -494,7 +474,6 @@ Data types reference
 .. container:: table-row
 
    Data type
-
          .. _data-type-margins:
 
          margins
@@ -516,7 +495,6 @@ Data types reference
 .. container:: table-row
 
    Data type
-
          .. _data-type-wrap:
 
          wrap
@@ -539,7 +517,6 @@ Data types reference
 .. container:: table-row
 
    Data type
-
          .. _data-type-linkwrap:
 
          linkWrap
@@ -567,7 +544,6 @@ Data types reference
 .. container:: table-row
 
    Data type
-
          .. _data-type-case:
 
          case
@@ -599,7 +575,6 @@ Data types reference
 .. container:: table-row
 
    Data type
-
          .. _data-type-space:
 
          space
@@ -618,7 +593,6 @@ Data types reference
 .. container:: table-row
 
    Data type
-
          .. _data-type-date-conf:
 
          date-conf
@@ -673,7 +647,6 @@ Data types reference
 .. container:: table-row
 
    Data type
-
          .. _data-type-strftime-conf:
 
          strftime-conf
@@ -774,7 +747,6 @@ Data types reference
 .. container:: table-row
 
    Data type
-
          .. _data-type-unix-time:
 
          UNIX-time
@@ -793,7 +765,6 @@ Data types reference
 .. container:: table-row
 
    Data type
-
          .. _data-type-path:
 
          path
@@ -810,7 +781,6 @@ Data types reference
 .. container:: table-row
 
    Data type
-
          .. _data-type-tag-data:
 
          < *tag* >-data
@@ -829,7 +799,6 @@ Data types reference
 .. container:: table-row
 
    Data type
-
          .. _data-type-tag-params:
 
          < *tag* >-params
@@ -848,7 +817,6 @@ Data types reference
 .. container:: table-row
 
    Data type
-
          .. _data-type-gettext:
 
          getText
@@ -1133,7 +1101,6 @@ Data types reference
 .. container:: table-row
 
    Data type
-
          .. _data-type-dir:
 
          dir
@@ -1163,7 +1130,6 @@ Data types reference
 .. container:: table-row
 
    Data type
-
          .. _data-type-function-name:
 
          function name
@@ -1226,7 +1192,6 @@ are shown here below:
 .. container:: table-row
 
    Data type
-
          .. _data-type-cobject:
 
          cObject
@@ -1243,7 +1208,6 @@ are shown here below:
 .. container:: table-row
 
    Data type
-
          .. _data-type-frameobj:
 
          frameObj
@@ -1255,7 +1219,6 @@ are shown here below:
 .. container:: table-row
 
    Data type
-
          .. _data-type-menuobj:
 
          menuObj
@@ -1271,7 +1234,6 @@ are shown here below:
 .. container:: table-row
 
    Data type
-
          .. _data-type-gifbuilderobj:
 
          GifBuilderObj

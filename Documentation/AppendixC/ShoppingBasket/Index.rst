@@ -22,11 +22,8 @@ The syntax is like this::
    recs[table_name][uid_of_record]
 
 
-((generated))
-"""""""""""""
-
 Example:
-~~~~~~~~
+""""""""
 
 This form-element will change the registered value of record with
 uid=345 from the "tt\_products" table in typo3. Please note, that the
@@ -45,12 +42,12 @@ formfield of the same name just before the checkbox!
 
 
 Example:
-~~~~~~~~
+""""""""
 
 ::
 
-   <INPUT type="hidden" name="recs[tt_content][345]" value="0">
-   <INPUT type="checkbox" name="recs[tt_content][345]" value="1">
+   <input type="hidden" name="recs[tt_content][345]" value="0">
+   <input type="checkbox" name="recs[tt_content][345]" value="1">
 
 
 **Clearing the "basket"**
@@ -58,5 +55,5 @@ Example:
 
 This will clear the basket::
 
-    <INPUT type="hidden" name="recs[clear_all]" value="1">
+    <input type="hidden" name="recs[clear_all]" value="1">
 

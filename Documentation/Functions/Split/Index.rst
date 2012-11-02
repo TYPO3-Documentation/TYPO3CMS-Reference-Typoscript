@@ -18,30 +18,6 @@ For each iteration the split index starting with 0 (zero) is stored in
 the register key SPLIT\_COUNT.
 
 
-((generated))
-"""""""""""""
-
-Example:
-~~~~~~~~
-
-This is an example of TypoScript-code that imports the content of
-field "bodytext" from the $cObj->data-array (ln 2). The content is
-split by the linebreak-character (ln 4). The items should all be
-treated with a stdWrap (ln 5) which imports the value of the item (ln
-6). This value is wrapped in a tablerow where the first column is a
-bullet-gif (ln 7). Finally the whole thing is wrapped in the proper
-table-tags (ln 9) ::
-
-   1    20 = TEXT
-   2         20.field = bodytext
-   3         20.split {
-   4           token.char = 10
-   5           cObjNum = 1
-   6           1.current = 1
-   7           1.wrap = <TR><TD valign="top"><IMG src="dot.gif"></TD><TD valign="top"> | </TD></TR>
-   8         }
-   9         20.wrap = <TABLE border="0" cellpadding="0" cellspacing="3" width="368"> | </TABLE><BR>
-
 .. ### BEGIN~OF~TABLE ###
 
 .. container:: table-row
@@ -188,4 +164,28 @@ table-tags (ln 9) ::
 .. ###### END~OF~TABLE ######
 
 [tsref:->split]
+
+
+.. _split-examples:
+
+Example:
+""""""""
+
+This is an example of TypoScript-code that imports the content of
+field "bodytext" from the $cObj->data-array (ln 2). The content is
+split by the linebreak-character (ln 4). The items should all be
+treated with a stdWrap (ln 5) which imports the value of the item (ln
+6). This value is wrapped in a tablerow where the first column is a
+bullet-gif (ln 7). Finally the whole thing is wrapped in the proper
+table-tags (ln 9) ::
+
+   1    20 = TEXT
+   2         20.field = bodytext
+   3         20.split {
+   4           token.char = 10
+   5           cObjNum = 1
+   6           1.current = 1
+   7           1.wrap = <tr><td valign="top"><img src="dot.gif"></td><td valign="top"> | </td></tr>
+   8         }
+   9         20.wrap = <table border="0" cellpadding="0" cellspacing="3" width="368"> | </table><br>
 

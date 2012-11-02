@@ -11,7 +11,7 @@
 filelink
 ^^^^^^^^
 
-Input is a filename in the path "path".
+Creates a list of file links. Input is a filename in the path "path".
 
 icon, size and file are rendered in the listed order.
 
@@ -401,11 +401,8 @@ icon, size and file are rendered in the listed order.
 
 .. _filelink-examples:
 
-((generated))
-"""""""""""""
-
 Example:
-~~~~~~~~
+""""""""
 
 ::
 

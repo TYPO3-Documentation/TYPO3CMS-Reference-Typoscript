@@ -123,13 +123,10 @@
 [tsref:(page).frameSet.(number)/->FRAMESET.(number)]
 
 
-((generated))
-"""""""""""""
+Example:
+""""""""
 
-Example of a simple frameset with a topframe and content-frame:
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-::
+This produces a simple frameset with a topframe and content-frame::
 
    frameset = PAGE
    frameset.typeNum = 0

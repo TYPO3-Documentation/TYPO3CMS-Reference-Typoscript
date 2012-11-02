@@ -90,11 +90,10 @@ of actions and thus allows multiple replacements at once.
 [tsref:->replacement]
 
 
-((generated))
-"""""""""""""
+.. _replacement-examples:
 
 Example:
-~~~~~~~~
+""""""""
 
 ::
 

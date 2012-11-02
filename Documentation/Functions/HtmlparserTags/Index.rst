@@ -277,7 +277,7 @@ HTMLparser\_tags
          boolean
 
    Description
-         If set, then the tag is removed if no attributes happend to be there.
+         If set, then the tag is removed if no attributes happened to be there.
 
 
 .. container:: table-row

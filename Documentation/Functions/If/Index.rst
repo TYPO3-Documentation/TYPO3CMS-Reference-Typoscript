@@ -12,11 +12,12 @@ if
 ^^
 
 This function returns true if ALL of the present conditions are met
-(they are AND'ed). If a single condition is false, the value returned
-is false.
+(they are connected with an "AND", a logical conjunction). If a
+single condition is false, the value returned is false.
 
 The returned value may still be negated by the ".negate"-property.
 
+Also check the explanations and the examples further below!
 
 .. ### BEGIN~OF~TABLE ###
 
@@ -195,14 +196,14 @@ Explanation
 The "if"-function is a very odd way of returning true or false!
 Beware!
 
-"if" is normally used to decide whether to render an object or return
-a value (see the cObjects and stdWrap)
+"if" is normally used to decide whether to render an object or to return
+a value (see the cObjects and stdWrap).
 
 Here is how it works:
 
 The function returns true or false. Whether it returns true or false
 depends on the properties of this function. Say if you set "isTrue =
-1" then result is true. If you set "isTrue.field = header" the
+1" then the result is true. If you set "isTrue.field = header", the
 function returns true if the field "header" in $cObj->data is set!
 
 If you want to compare values, you must load a base-value in the
@@ -222,9 +223,12 @@ More complex is this::
    .negate = 1
 
 There are two conditions - isGreaterThan and isTrue. If they are both
-true, the total is true (AND) BUT(!) the result if the function in
-total is false because the ".negate"-flag inverts the result!
+true, the total is true (both are connected with an AND). BUT(!) then
+the result if the function in total would be false because the
+".negate"-flag inverts the result!
 
+
+.. _if-examples:
 
 Example:
 ~~~~~~~~

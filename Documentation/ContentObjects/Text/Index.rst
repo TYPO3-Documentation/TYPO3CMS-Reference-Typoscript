@@ -66,11 +66,8 @@ rootlevel of the object. This is non-standard! Check the examples.
 [tsref:(cObject).TEXT]
 
 
-((generated))
-"""""""""""""
-
 Example:
-~~~~~~~~
+""""""""
 
 ::
 
@@ -80,7 +77,7 @@ Example:
 
 
 Example:
-~~~~~~~~
+""""""""
 
 ::
 
@@ -90,7 +87,7 @@ Example:
 
 
 Example:
-~~~~~~~~
+""""""""
 
 ::
 

@@ -12,7 +12,7 @@ tableStyle
 ^^^^^^^^^^
 
 This is used to style a table-tag. The input is wrapped by this table-
-tag
+tag.
 
 .. ### BEGIN~OF~TABLE ###
 
@@ -125,7 +125,7 @@ tag
          params
 
    Data type
-         <TABLE>-params
+         <table>-params
 
    Description
 
@@ -138,11 +138,10 @@ tag
 [tsref:->tableStyle]
 
 
-((generated))
-"""""""""""""
+.. _tablestyle-examples:
 
 Example:
-~~~~~~~~
+""""""""
 
 ::
 

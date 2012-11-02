@@ -13,13 +13,15 @@ stdWrap
 
 This function is often added as a property to values in TypoScript.
 
+.. _stdwrap-examples:
+
 Example with the property "value" of the content-object, "TEXT"::
 
    10 = TEXT
    10.value = some text
    10.case = upper
 
-Here the content of the object "10" is uppercased before it's
+Here the content of the object "10" is uppercased before it is
 returned.
 
 stdWrap properties are executed in the order they appear in the table
@@ -73,7 +75,6 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
-
          .. _stdwrap-get-data:
 
          Get data:
@@ -82,7 +83,6 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
-
          .. _stdwrap-setcontenttocurrent:
 
          setContentToCurrent
@@ -99,7 +99,6 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
-
          .. _stdwrap-setcurrent:
 
          setCurrent
@@ -117,7 +116,6 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
-
          .. _stdwrap-lang:
 
          lang
@@ -147,7 +145,6 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
-
          .. _stdwrap-data:
 
          data
@@ -164,7 +161,6 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
-
          .. _stdwrap-field:
 
          field
@@ -192,7 +188,6 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
-
          .. _stdwrap-current:
 
          current
@@ -209,7 +204,6 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
-
          .. _stdwrap-cobject:
 
          cObject
@@ -226,7 +220,6 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
-
          .. _stdwrap-numrows:
 
          numRows
@@ -243,7 +236,6 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
-
          .. _stdwrap-filelist:
 
          filelist
@@ -274,7 +266,6 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
-
          .. _stdwrap-preuserfunc:
 
          preUserFunc
@@ -295,7 +286,6 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
-
          .. _stdwrap-override:
          .. _stdwrap-conditions:
 
@@ -320,7 +310,6 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
-
          .. _stdwrap-preifemptylistnum:
 
          preIfEmptyListNum
@@ -337,7 +326,6 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
-
          .. _stdwrap-ifempty:
 
          ifEmpty
@@ -355,7 +343,6 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
-
          .. _stdwrap-ifblank:
 
          ifBlank
@@ -372,7 +359,6 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
-
          .. _stdwrap-listnum:
 
          listNum
@@ -433,7 +419,6 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
-
          .. _stdwrap-trim:
 
          trim
@@ -450,7 +435,6 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
-
          .. _stdwrap-stdwrap:
 
          stdWrap
@@ -467,7 +451,6 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
-
          .. _stdwrap-required:
 
          required
@@ -489,7 +472,6 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
-
          .. _stdwrap-if:
 
          if
@@ -506,7 +488,6 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
-
          .. _stdwrap-fieldrequired:
 
          fieldRequired
@@ -523,7 +504,6 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
-
          .. _stdwrap-parsedata:
 
          Parse data:
@@ -532,7 +512,6 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
-
          .. _stdwrap-csconv:
 
          csConv
@@ -550,7 +529,6 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
-
          .. _stdwrap-parsefunc:
 
          parseFunc
@@ -579,7 +557,6 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
-
          .. _stdwrap-htmlparser:
 
          HTMLparser
@@ -601,7 +578,6 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
-
          .. _stdwrap-split:
 
          split
@@ -618,7 +594,6 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
-
          .. _stdwrap-replacement:
 
          replacement
@@ -638,7 +613,6 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
-
          .. _stdwrap-prioricalc:
 
          prioriCalc
@@ -677,7 +651,6 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
-
          .. _stdwrap-char:
 
          char
@@ -696,7 +669,6 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
-
          .. _stdwrap-intval:
 
          intval
@@ -715,7 +687,6 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
-
          .. _stdwrap-hash:
 
          hash
@@ -744,7 +715,6 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
-
          .. _stdwrap-round:
 
          round
@@ -762,7 +732,6 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
-
          .. _stdwrap-numberformat:
 
          numberFormat
@@ -780,7 +749,6 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
-
          .. _stdwrap-date:
 
          date
@@ -810,7 +778,6 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
-
          .. _stdwrap-strftime:
 
          strftime
@@ -841,7 +808,6 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
-
          .. _stdwrap-age:
 
          age
@@ -882,7 +848,6 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
-
          .. _stdwrap-case:
 
          case
@@ -901,7 +866,6 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
-
          .. _stdwrap-bytes:
 
          bytes
@@ -927,7 +891,6 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
-
          .. _stdwrap-substring:
 
          substring
@@ -947,7 +910,6 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
-
          .. _stdwrap-removebadhtml:
 
          removeBadHTML
@@ -965,7 +927,6 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
-
          .. _stdwrap-crophtml:
 
          cropHTML
@@ -988,7 +949,6 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
-
          .. _stdwrap-striphtml:
 
          stripHtml
@@ -1005,7 +965,6 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
-
          .. _stdwrap-crop:
 
          crop
@@ -1056,7 +1015,6 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
-
          .. _stdwrap-rawurlencode:
 
          rawUrlEncode
@@ -1073,7 +1031,6 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
-
          .. _stdwrap-htmlspecialchars:
 
          htmlSpecialChars
@@ -1093,7 +1050,6 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
-
          .. _stdwrap-doublebrtag:
 
          doubleBrTag
@@ -1110,7 +1066,6 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
-
          .. _stdwrap-br:
 
          br
@@ -1128,7 +1083,6 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
-
          .. _stdwrap-brtag:
 
          brTag
@@ -1145,7 +1099,6 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
-
          .. _stdwrap-encapslines:
 
          encapsLines
@@ -1163,7 +1116,6 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
-
          .. _stdwrap-keywords:
 
          keywords
@@ -1181,7 +1133,6 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
-
          .. _stdwrap-innerwrap:
 
          innerWrap
@@ -1214,7 +1165,6 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
-
          .. _stdwrap-fonttag:
 
          fontTag
@@ -1231,7 +1181,6 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
-
          .. _stdwrap-addparams:
 
          addParams
@@ -1248,7 +1197,6 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
-
          .. _stdwrap-textstyle:
 
          textStyle
@@ -1265,7 +1213,6 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
-
          .. _stdwrap-tablestyle:
 
          tableStyle
@@ -1282,7 +1229,6 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
-
          .. _stdwrap-filelink:
 
          filelink
@@ -1299,7 +1245,6 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
-
          .. _stdwrap-precobject:
 
          preCObject
@@ -1316,7 +1261,6 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
-
          .. _stdwrap-postcobject:
 
          postCObject
@@ -1333,7 +1277,6 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
-
          .. _stdwrap-wrapalign:
 
          wrapAlign
@@ -1351,7 +1294,6 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
-
          .. _stdwrap-typolink:
 
          typolink
@@ -1368,7 +1310,6 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
-
          .. _stdwrap-tcaselectitem:
 
          TCAselectItem
@@ -1396,7 +1337,6 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
-
          .. _stdwrap-spacebefore:
 
          spaceBefore
@@ -1413,7 +1353,6 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
-
          .. _stdwrap-spaceafter:
 
          spaceAfter
@@ -1430,7 +1369,6 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
-
          .. _stdwrap-space:
 
          space
@@ -1455,7 +1393,6 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
-
          .. _stdwrap-wrap:
 
          wrap
@@ -1473,7 +1410,6 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
-
          .. _stdwrap-notrimwrap:
 
          noTrimWrap
@@ -1497,7 +1433,6 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
-
          .. _stdwrap-wrap2:
 
          wrap2
@@ -1514,7 +1449,6 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
-
          .. _stdwrap-datawrap:
 
          dataWrap
@@ -1539,7 +1473,6 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
-
          .. _stdwrap-prepend:
 
          prepend
@@ -1556,7 +1489,6 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
-
          .. _stdwrap-append:
 
          append
@@ -1573,7 +1505,6 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
-
          .. _stdwrap-wrap3:
 
          wrap3
@@ -1590,7 +1521,6 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
-
          .. _stdwrap-orderedstdwrap:
 
          orderedStdWrap
@@ -1632,7 +1562,6 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
-
          .. _stdwrap-outerwrap:
 
          outerWrap
@@ -1649,7 +1578,6 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
-
          .. _stdwrap-insertdata:
 
          insertData
@@ -1674,7 +1602,6 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
-
          .. _stdwrap-offsetwrap:
 
          offsetWrap
@@ -1701,7 +1628,6 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
-
          .. _stdwrap-postuserfunc:
 
          postUserFunc
@@ -1744,7 +1670,6 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
-
          .. _stdwrap-postuserfuncint:
 
          postUserFuncInt
@@ -1768,7 +1693,6 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
-
          .. _stdwrap-preficomment:
 
          prefixComment
@@ -1797,7 +1721,6 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
-
          .. _stdwrap-editicons:
 
          editIcons
@@ -1855,7 +1778,6 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
-
          .. _stdwrap-editpanel:
 
          editPanel
@@ -1872,7 +1794,6 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
-
          .. _stdwrap-cache:
 
          cache
@@ -1889,7 +1810,6 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
-
          .. _stdwrap-debug:
 
          debug
@@ -1910,7 +1830,6 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
-
          .. _stdwrap-debugfunc:
 
          debugFunc
@@ -1931,7 +1850,6 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
-
          .. _stdwrap-debugdata:
 
          debugData
@@ -1949,7 +1867,6 @@ value is "imported" from the field called "header" from the $cObj
 
 
 .. ###### END~OF~TABLE ######
-
 
 [tsref:->stdWrap]
 

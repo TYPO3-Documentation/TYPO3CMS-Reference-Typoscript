@@ -160,8 +160,8 @@ of the returning image (if any) and contains width, height and so on.
          ->imageLinkWrap
 
    Description
-         **NOTE:** ONLY active if linkWrap is NOT set and file is NOT
-         GIFBUILDER (as it works with the original imagefile)
+         **Note:** ONLY active if linkWrap is NOT set and file is NOT
+         GIFBUILDER (as it works with the original imagefile).
 
    Default
 
@@ -216,16 +216,13 @@ of the returning image (if any) and contains width, height and so on.
 
 .. _cobj-image-examples:
 
-((generated))
-"""""""""""""
-
 Example:
-~~~~~~~~
+""""""""
 
 ::
 
        10 = IMAGE
        10.file = toplogo*.gif
-       10.params = hspace=5
+       10.params = style="margin: 0px 20px;"
        10.wrap = |<br>
 

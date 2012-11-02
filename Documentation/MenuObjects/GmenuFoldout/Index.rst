@@ -342,11 +342,8 @@ http://www9.ewebcity.com/skripts/foldoutmenu\_move.htm
 [tsref:(cObject).HMENU.(mObj).GMENU\_FOLDOUT]
 
 
-((generated))
-"""""""""""""
-
 Example:
-~~~~~~~~
+""""""""
 
 ::
 

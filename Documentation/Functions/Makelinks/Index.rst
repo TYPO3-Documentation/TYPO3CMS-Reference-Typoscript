@@ -17,7 +17,7 @@ http://www.webaddress.rld
 
 mailto:name@email.rld
 
-... to a real linktag.
+... with a real link-tag.
 
 
 .. ### BEGIN~OF~TABLE ###
