@@ -93,4 +93,5 @@ address the task at hand.
    AppendixB/Index
    AppendixC/Index
    AppendixD/Index
+   Targets
 
