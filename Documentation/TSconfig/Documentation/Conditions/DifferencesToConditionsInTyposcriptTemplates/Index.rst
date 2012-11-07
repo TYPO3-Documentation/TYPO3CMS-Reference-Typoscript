@@ -1,18 +1,9 @@
-﻿
-
 .. ==================================================
 .. FOR YOUR INFORMATION
 .. --------------------------------------------------
 .. -*- coding: utf-8 -*- with BOM.
 
-.. ==================================================
-.. DEFINE SOME TEXTROLES
-.. --------------------------------------------------
-.. role::   underline
-.. role::   typoscript(code)
-.. role::   ts(typoscript)
-   :class:  typoscript
-.. role::   php(code)
+.. include:: ../../Includes.txt
 
 
 Differences to conditions in TypoScript templates
@@ -58,9 +49,7 @@ if the user is an admin, 0 if he is not.
 Example:
 ~~~~~~~~
 
-The following condition will apply only if the BE user is an admin.
-
-::
+The following condition will apply only if the BE user is an admin. ::
 
    [adminUser = 1]
 

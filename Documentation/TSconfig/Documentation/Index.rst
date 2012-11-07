@@ -1,18 +1,11 @@
-﻿.. include:: Images.txt
-
 .. ==================================================
 .. FOR YOUR INFORMATION
 .. --------------------------------------------------
 .. -*- coding: utf-8 -*- with BOM.
 
-.. ==================================================
-.. DEFINE SOME TEXTROLES
-.. --------------------------------------------------
-.. role::   underline
-.. role::   typoscript(code)
-.. role::   ts(typoscript)
-   :class:  typoscript
-.. role::   php(code)
+.. include:: Includes.txt
+.. include:: Images.txt
+
 
 ==================
 TSconfig Reference
@@ -22,7 +15,7 @@ TSconfig Reference
       doc_core_tsconfig
 
 :Version:
-      4.7.0
+      4.7.0-dev (upcoming 6.0)
 
 :Language:
       en
@@ -45,6 +38,9 @@ TSconfig Reference
 :License:
       Open Content License available from `www.opencontent.org/opl.shtml
       <http://www.opencontent.org/opl.shtml>`_
+
+:Rendered:
+      |today|
 
 The content of this document is related to TYPO3,
 
@@ -88,4 +84,5 @@ address the task at hand.
    UserTsconfig/Index
    PageTsconfig/Index
    NextSteps/Index
+   Targets
 
