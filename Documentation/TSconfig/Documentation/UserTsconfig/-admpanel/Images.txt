@@ -1,13 +1,13 @@
 ﻿.. |img-6|      image:: ../../Images/manual_html_m43fb96d.png
-   :height: 31
-   :width: 31
+.. :height: 31
+.. :width: 31
 .. :align: left
 .. :border: 0
 .. :name: Grafik8
 
 .. |img-7|      image:: ../../Images/manual_html_639a5d8e.png
-   :height: 545
-   :width: 272
+.. :height: 545
+.. :width: 272
 .. :align: left
 .. :border: 0
 .. :name: Grafik2

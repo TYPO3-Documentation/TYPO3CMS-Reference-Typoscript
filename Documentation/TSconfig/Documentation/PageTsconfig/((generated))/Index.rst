@@ -1,18 +1,10 @@
-﻿.. include:: Images.txt
-
 .. ==================================================
 .. FOR YOUR INFORMATION
 .. --------------------------------------------------
 .. -*- coding: utf-8 -*- with BOM.
 
-.. ==================================================
-.. DEFINE SOME TEXTROLES
-.. --------------------------------------------------
-.. role::   underline
-.. role::   typoscript(code)
-.. role::   ts(typoscript)
-   :class:  typoscript
-.. role::   php(code)
+.. include:: ../../Includes.txt
+.. include:: Images.txt
 
 
 ((generated))
@@ -32,7 +24,7 @@ configure this.
 
 The "TSconfig" field here is available in the tab called "Resources":
 
-|img-11| 
+|img-11|
 Verifying the final configuration
 """""""""""""""""""""""""""""""""
 
@@ -40,7 +32,7 @@ If you need to check out the actual configuration for a certain branch
 in the website, use the 'Web > Info' module (provided by the extension
 "info\_pagetsconfig"):
 
-|img-12| 
+|img-12|
 Setting default Page TSconfig
 """""""""""""""""""""""""""""
 
@@ -50,9 +42,7 @@ initialized from the root of the tree.
 
 In extensions this is easily done by the extension API function,
 t3lib\_extMgm::addPageTSConfig(). In the (ext\_)localconf.phpfile you
-can call it like this to set default configuration:
-
-::
+can call it like this to set default configuration::
 
    t3lib_extMgm::addPageTSConfig('
        RTE.default {

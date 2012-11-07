@@ -1,18 +1,10 @@
-﻿.. include:: Images.txt
-
 .. ==================================================
 .. FOR YOUR INFORMATION
 .. --------------------------------------------------
 .. -*- coding: utf-8 -*- with BOM.
 
-.. ==================================================
-.. DEFINE SOME TEXTROLES
-.. --------------------------------------------------
-.. role::   underline
-.. role::   typoscript(code)
-.. role::   ts(typoscript)
-   :class:  typoscript
-.. role::   php(code)
+.. include:: ../../Includes.txt
+.. include:: Images.txt
 
 
 ->SETUP
@@ -48,13 +40,13 @@ This table shows the keys for both defaults and override values:
 
    Property
          Property:
-   
+
    Data type
          Data type:
-   
+
    Description
          Description:
-   
+
    Default
          Default:
 
@@ -63,13 +55,13 @@ This table shows the keys for both defaults and override values:
 
    Property
          thumbnailsByDefault
-   
+
    Data type
          boolean
-   
+
    Description
          Show Thumbnails by default
-   
+
    Default
 
 
@@ -77,13 +69,13 @@ This table shows the keys for both defaults and override values:
 
    Property
          emailMeAtLogin
-   
+
    Data type
          boolean
-   
+
    Description
          Notify me by email, when somebody logs in from my account
-   
+
    Default
 
 
@@ -91,17 +83,17 @@ This table shows the keys for both defaults and override values:
 
    Property
          startInTaskCenter
-   
+
    Data type
          boolean
-   
+
    Description
          If set, then the backend will start up in the task center (task center
          should be enabled for the user).
-         
+
          This is an old property. Rather look at startModule below instead, as
          it provides more flexibility.
-   
+
    Default
 
 
@@ -109,13 +101,13 @@ This table shows the keys for both defaults and override values:
 
    Property
          helpText
-   
+
    Data type
          boolean
-   
+
    Description
          Show help text when applicable
-   
+
    Default
 
 
@@ -123,13 +115,13 @@ This table shows the keys for both defaults and override values:
 
    Property
          titleLen
-   
+
    Data type
          int+
-   
+
    Description
          Max. Title Length
-   
+
    Default
 
 
@@ -137,13 +129,13 @@ This table shows the keys for both defaults and override values:
 
    Property
          edit\_wideDocument
-   
+
    Data type
          boolean
-   
+
    Description
          Wide document background
-   
+
    Default
 
 
@@ -151,13 +143,13 @@ This table shows the keys for both defaults and override values:
 
    Property
          edit\_RTE
-   
+
    Data type
          boolean
-   
+
    Description
          Enable Rich Text Editor
-   
+
    Default
 
 
@@ -165,13 +157,13 @@ This table shows the keys for both defaults and override values:
 
    Property
          edit\_docModuleUpload
-   
+
    Data type
          boolean
-   
+
    Description
          File upload directly in Doc. module
-   
+
    Default
 
 
@@ -179,15 +171,15 @@ This table shows the keys for both defaults and override values:
 
    Property
          edit\_showFieldHelp
-   
+
    Data type
          string
-   
+
    Description
          Keywords: "" (empty string), "icon" or "text"
-         
+
          Determines the type of help text mode for TCA form fields.
-   
+
    Default
 
 
@@ -195,17 +187,17 @@ This table shows the keys for both defaults and override values:
 
    Property
          navFrameWidth
-   
+
    Data type
          int+
-   
+
    Description
          The width in pixels of the navigation frame in the Page and File main
          modules.
-         
+
          **Note** : This option became superfluous in TYPO3 4.5 and has been
          removed in TYPO3 4.5.
-   
+
    Default
          245
 
@@ -214,17 +206,17 @@ This table shows the keys for both defaults and override values:
 
    Property
          navFrameResizable
-   
+
    Data type
          boolean
-   
+
    Description
          If set, the frameset modules will have the border between the
          navigation and list frame resizable.
-         
+
          **Note** : This option became superfluous in TYPO3 4.5 and has been
          removed in TYPO3 4.5.
-   
+
    Default
 
 
@@ -232,14 +224,14 @@ This table shows the keys for both defaults and override values:
 
    Property
          lang
-   
+
    Data type
          language-key
-   
+
    Description
          One of the language-keys. See t3lib/config\_default.php for current
          options. E.g. "dk", "de", "es" etc.
-   
+
    Default
 
 
@@ -247,14 +239,14 @@ This table shows the keys for both defaults and override values:
 
    Property
          copyLevels
-   
+
    Data type
          int+
-   
+
    Description
          Recursive Copy: Enter the number of page sub-levels to include, when a
          page is copied
-   
+
    Default
 
 
@@ -262,14 +254,14 @@ This table shows the keys for both defaults and override values:
 
    Property
          recursiveDelete
-   
+
    Data type
          boolean
-   
+
    Description
          Recursive Delete(!): Allow ALL subpages to be deleted when deleting a
          page
-   
+
    Default
 
 
@@ -277,13 +269,13 @@ This table shows the keys for both defaults and override values:
 
    Property
          allSaveFunctions
-   
+
    Data type
          boolean
-   
+
    Description
          Display all save functions in Doc-module menu
-   
+
    Default
 
 
@@ -291,14 +283,14 @@ This table shows the keys for both defaults and override values:
 
    Property
          neverHideAtCopy
-   
+
    Data type
          boolean
-   
+
    Description
          If set, then the hideAtCopy feature for records in TCE will not be
          used.
-   
+
    Default
 
 
@@ -306,16 +298,16 @@ This table shows the keys for both defaults and override values:
 
    Property
          condensedMode
-   
+
    Data type
          boolean
-   
+
    Description
          If set, the backend will not load the Web-submodules and File-
          submodules in a frameset but allow the page and folder trees to load
          the submodule in its own frame. This allows for a better display on
          small screens.
-   
+
    Default
 
 
@@ -323,13 +315,13 @@ This table shows the keys for both defaults and override values:
 
    Property
          startModule
-   
+
    Data type
          string
-   
+
    Description
          Name of the module that is called when the user logs into the Backend
-   
+
    Default
 
 
@@ -337,24 +329,24 @@ This table shows the keys for both defaults and override values:
 
    Property
          noMenuMode
-   
+
    Data type
          boolean / string
-   
+
    Description
          If set, the backend will not load the left menu frame but rather put a
          selector-box menu in the top frame. This saves a lot of space on small
          screens. Also icons will not be displayed in the clickmenu panel in
          the top.
-         
+
          **Value "icons":**
-         
+
          Setting noMenuMode to "icons" will still remove the menu, but instead
          of the selector box menu you will have the whole clickmenu panel as a
          menu with the icons only as the hidden state of the clickmenu panel.
          This is extremely nice (in my opinion) for experienced users who know
          the icons of the modules.
-   
+
    Default
 
 
@@ -362,17 +354,17 @@ This table shows the keys for both defaults and override values:
 
    Property
          classicPageEditMode
-   
+
    Data type
          boolean
-   
+
    Description
          Setting this option will not open the Web>Page module but rather load
          the content elements (normal column/default language) together with
          the page header in one big form when a page is edited (clicking a page
          icon in the page tree). This simulates the old behaviourin Classic
          Backend
-   
+
    Default
 
 
@@ -380,14 +372,14 @@ This table shows the keys for both defaults and override values:
 
    Property
          hideSubmoduleIcons
-   
+
    Data type
          boolean
-   
+
    Description
          If set then submodule icons will not be shown in the left menu of the
          backend.
-   
+
    Default
 
 
@@ -395,14 +387,14 @@ This table shows the keys for both defaults and override values:
 
    Property
          dontShowPalettesOnFocusInAB
-   
+
    Data type
          boolean
-   
+
    Description
          If set, palettes are not activated in the TCEFORMs when focus is moved
          to a field.
-   
+
    Default
 
 
@@ -410,13 +402,13 @@ This table shows the keys for both defaults and override values:
 
    Property
          disableCMlayers
-   
+
    Data type
          boolean
-   
+
    Description
          Disable the context menu layers in the backend.
-   
+
    Default
 
 
@@ -424,15 +416,15 @@ This table shows the keys for both defaults and override values:
 
    Property
          disableTabInTextarea
-   
+
    Data type
          boolean
-   
+
    Description
          If you are using IE or Mozilla, TYPO3 will load a little JavaScript
          file that makes it possible to use the <tab> key in textareas. If you
          don't like the feature for some reason, you can disable it here.
-   
+
    Default
 
 
@@ -440,15 +432,15 @@ This table shows the keys for both defaults and override values:
 
    Property
          resizeTextareas
-   
+
    Data type
          boolean
-   
+
    Description
          This option makes textareas resizable. When moving towards the right
          or bottom border of the textarea, the mouse cursor changes to a resize
          cursor. This is active by default.
-   
+
    Default
          1
 
@@ -457,13 +449,13 @@ This table shows the keys for both defaults and override values:
 
    Property
          resizeTextareas\_MaxHeight
-   
+
    Data type
          int+
-   
+
    Description
          Defines the maximal height of textarea (in pixels).
-   
+
    Default
          600
 
@@ -472,15 +464,15 @@ This table shows the keys for both defaults and override values:
 
    Property
          resizeTextareas\_Flexible
-   
+
    Data type
          boolean
-   
+
    Description
          This option makes textareas flexible, which means that their height
          grows automatically while typing. Limit is the maximal height set.
          This is active by default.
-   
+
    Default
          1
 
@@ -489,15 +481,15 @@ This table shows the keys for both defaults and override values:
 
    Property
          enableFlashUploader
-   
+
    Data type
          boolean
-   
+
    Description
          This option enables the Flash-based uploader in the File module, which
          allows to select multiple files at once when uploading files. It
          requires to have the Flash plugin installed (Flash 9 or higher).
-   
+
    Default
 
 
@@ -522,13 +514,13 @@ The table below describes the related option:
 
    Property
          Property:
-   
+
    Data type
          Data type:
-   
+
    Description
          Description:
-   
+
    Default
          Default:
 
@@ -537,38 +529,34 @@ The table below describes the related option:
 
    Property
          <fieldname>.disabled
-   
+
    Data type
          boolean
-   
+
    Description
          This setting hides the option with the name <fieldname> in the module
          User Settings.
-         
+
          You can find the names of the fields in the Module "Configuration".
          Just browse through the "User Settings" array.
-         
-         **Example:**
-         
-         ::
-         
+
+         **Example:** ::
+
             setup.fields.emailMeAtLogin.disabled = 1
-         
+
          With this example, we hide the "E-mail me when I login" checkbox.
-         
+
          You can also combinesetup.fields.<fieldname>.disabled and
          setup.override.<fieldname>.
-         
-         **Example:**
-         
-         ::
-         
+
+         **Example:** ::
+
             setup.fields.emailMeAtLogin.disabled = 1
             setup.override.emailMeAtLogin = 1
-         
+
          Now the "Email me when i login" field is removed, but the user will
          still receive an email when he logs in.
-   
+
    Default
          0
 

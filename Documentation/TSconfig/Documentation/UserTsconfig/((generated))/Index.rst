@@ -1,18 +1,10 @@
-﻿.. include:: Images.txt
-
 .. ==================================================
 .. FOR YOUR INFORMATION
 .. --------------------------------------------------
 .. -*- coding: utf-8 -*- with BOM.
 
-.. ==================================================
-.. DEFINE SOME TEXTROLES
-.. --------------------------------------------------
-.. role::   underline
-.. role::   typoscript(code)
-.. role::   ts(typoscript)
-   :class:  typoscript
-.. role::   php(code)
+.. include:: ../../Includes.txt
+.. include:: Images.txt
 
 
 ((generated))
@@ -24,7 +16,7 @@ The "TSconfig" field
 This is how the TSconfig for users is entered in the backend user
 records:
 
-|img-4| 
+|img-4|
 Verifying the final configuration
 """""""""""""""""""""""""""""""""
 
@@ -33,14 +25,12 @@ do that in the Tools > User Admin module (which is provided by the
 extension "beuser") by clicking a username. Then you'll see the
 TSconfig tree among other information. Here's an example:
 
-|img-5| 
+|img-5|
 Overriding previously set options
 """""""""""""""""""""""""""""""""
 
 Now, lets say the user is a member of a  *usergroup* with this
-configuration:
-
-::
+configuration::
 
    TCAdefaults.tt_content {
      hidden = 1
@@ -50,9 +40,7 @@ configuration:
 Then setting these values in the TSconfig field of the user himself,
 would override the default value of the header (marked red) and add
 the clear cache option (marked blue). The default value of the hidden
-field is not changed and simply inherited directly from the group:
-
-::
+field is not changed and simply inherited directly from the group::
 
    TCAdefaults.tt_content.header = 234
    options.clearCache.all = 1
@@ -67,9 +55,7 @@ initialized for all users.
 
 In extensions this is easily done by the extension API function,
 t3lib\_extMgm::addUserTSConfig(). In the (ext\_)localconf.phpfile you
-can call it like this to set default configuration:
-
-::
+can call it like this to set default configuration::
 
    /**
     * Adding the admin panel to users by default and forcing the display of the edit-icons
