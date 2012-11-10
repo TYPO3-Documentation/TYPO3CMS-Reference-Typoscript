@@ -49,9 +49,7 @@ different cObjects.
          Comma separated list of sys_file UIDs, which are loaded
          into the FILES object.
 
-         **Example:**
-
-         ::
+         **Example:** ::
 
             page.10 = FILES
             page.10.files = 12,15,16
@@ -76,16 +74,12 @@ different cObjects.
          "references". See further documentation of these
          subproperties in the table below.
 
-         **Examples:**
-
-         ::
+         **Examples:** ::
 
             references = 27,28
 
          This will get the items from the database table
-         sys_file_reference with the UIDs 27 and 28.
-
-         ::
+         sys_file_reference with the UIDs 27 and 28. ::
 
             references {
               table = tt_content
@@ -94,9 +88,7 @@ different cObjects.
             }
 
          This will fetch all relations to the image field of the
-         tt_content record "256".
-
-         ::
+         tt_content record "256". ::
 
             references {
               table = pages
@@ -144,9 +136,7 @@ different cObjects.
          folder is often equivalent to the relative path of the
          folder.
 
-         **Example:**
-
-         ::
+         **Example:** ::
 
             page.10 = FILES
             page.10.folders = 2:mypics/,4:myimages/
@@ -168,9 +158,7 @@ different cObjects.
          find information about the current file using the getText
          property "file" with the "current" keyword.
 
-         **Example:**
-
-         ::
+         **Example:** ::
 
             page.10.renderObj = TEXT
             page.10.renderObj {
@@ -275,14 +263,12 @@ Special key: "references"
 .. _cobj-files-examples:
 
 Example:
-~~~~~~~~
+""""""""
 
 In this example, we first load files using all of the methods to load
 files explained above (using sys_file UIDs, collection UIDs, and folders).
 Then we use the TEXT cObject as renderObj to output the file size of all
-files that were found.
-
-::
+files that were found. ::
 
    page.10 = FILES
 
