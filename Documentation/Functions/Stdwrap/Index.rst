@@ -975,14 +975,14 @@ value is "imported" from the field called "header" from the $cObj
    Description
          Crops the content to a certain length.
 
-         You can define up to three parameters, of which the third is
+         You can define up to three parameters, of which the third one is
          optional. The syntax is:
          [numbers of characters to keep] \| [ellipsis] \| [keep whole words]
 
          numbers of characters to keep (integer): Define the number of characters
          you want to keep. For positive numbers, the first characters from the
          beginning of the string will be kept, for negative numbers the last
-         cahracters from the end will be kept.
+         characters from the end will be kept.
 
          ellipsis (string): The signs to be added instead of the part, which was
          cropped of. If the number of characters was positive, the string will

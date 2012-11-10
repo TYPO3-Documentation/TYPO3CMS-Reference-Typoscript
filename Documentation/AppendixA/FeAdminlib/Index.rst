@@ -72,7 +72,7 @@ Description
 """""""""""
 
 This class is used to create forms for database-administration in the
-frontend  *independently of the backend (TBE).* Thus you may want to
+frontend  *independently of the backend (BE).* Thus you may want to
 use this, if you like frontend users to edit database content.
 
 Authentication either goes through fe\_user login in which case you
@@ -900,7 +900,7 @@ fe\_adminLib.inc properties
 [tsref:(script).fe\_adminLib]
 
 
-.. _appendix-fe-admin-subparts:
+.. _appendix-fe-adminlib-subparts:
 
 Main subparts
 """""""""""""
@@ -1126,7 +1126,7 @@ class) must be loaded.
 .. ###### END~OF~TABLE ######
 
 
-.. _appendix-fe-admin-form:
+.. _appendix-fe-adminlib-form:
 
 FORM conventions
 """"""""""""""""
