@@ -15,23 +15,19 @@ fe\_adminLib.inc
 Files:
 """"""
 
-.. ### BEGIN~OF~TABLE ###
+.. t3-field-list-table::
+ :header-rows: 1
 
-.. container:: table-row
+ - :File:
+         File
 
-   File
-         File:
+   :Description:
+         Description
 
-   Description
-         Description:
-
-
-.. container:: table-row
-
-   File
+ - :File:
          fe\_adminLib.inc
 
-   Description
+   :Description:
          Main class used to display the frontend administration forms.
 
          Call it from a USER\_INT cObject with 'userFunc =
@@ -40,30 +36,21 @@ Files:
          **Note:** Using the USER\_INT cObject allows the script to work
          regardless of the page-cache which is necessary!!
 
-
-.. container:: table-row
-
-   File
+ - :File:
          fe\_admin\_dmailsubscrip.tmpl
 
-   Description
+   :Description:
          Example template file for subscription to newsletters of users to the
          tt\_address table. This template is used by the static\_template
          'plugin.feadmin.dmailsubscription'.
 
-
-.. container:: table-row
-
-   File
+ - :File:
          fe\_admin\_fe\_users.tmpl
 
-   Description
+   :Description:
          Example template file for creating new frontend users (fe\_users).
          This template is used by the static\_template
          'plugin.feadmin.fe\_users'.
-
-
-.. ###### END~OF~TABLE ######
 
 
 .. _appendix-fe-adminlib-description:
@@ -109,82 +96,17 @@ plugin.feadmin.\*
 Incoming GET or POST vars:
 """"""""""""""""""""""""""
 
-.. ### BEGIN~OF~TABLE ###
-
-.. container:: table-row
-
-   Name
-         Name:
-
-   Description
-         Description:
-
-
-.. container:: table-row
-
-   Name
-         cmd
-
-   Description
-         Command.
-
-
-.. container:: table-row
-
-   Name
-         preview
-
-   Description
-         Preview flag.
-
-
-.. container:: table-row
-
-   Name
-         backURL
-
-   Description
-         Back URL.
-
-
-.. container:: table-row
-
-   Name
-         rU
-
-   Description
-         Record UID.
-
-
-.. container:: table-row
-
-   Name
-         aC
-
-   Description
-         Authentication Code.
-
-
-.. container:: table-row
-
-   Name
-         fD
-
-   Description
-         Fixed Data (array of fields)
-
-
-.. container:: table-row
-
-   Name
-         FE
-
-   Description
-         Frontend Edit data array, syntax, FE[ *tablename* ][ *field name* ] =
-         value
-
-
-.. ###### END~OF~TABLE ######
+============  ===================
+   Name:         Description:
+============  ===================
+   cmd           Command
+   preview       Preview flag
+   backURL       Back URL
+   rU            Record UID
+   aC            Authentication Code
+   fD            Fixed Data (array of fields)
+   FE            Frontend Edit data array, syntax, FE[ *tablename* ][ *field name* ] = value
+============  ===================
 
 
 .. _appendix-fe-adminlib-properties:
@@ -910,87 +832,63 @@ template file. The markers below are used when an action results in
 "saving". The  *[action]* code may be DELETE, EDIT or CREATE depending
 on the cmd value.
 
-.. ### BEGIN~OF~TABLE ###
+.. t3-field-list-table::
+ :header-rows: 1
 
-.. container:: table-row
-
-   Subpart marker
+ - :Subpart marker:
          Subpart marker:
 
-   Description
+   :Description:
          Description:
 
-
-.. container:: table-row
-
-   Subpart marker
+ - :Subpart marker:
          ###TEMPLATE\_ *[action]* \_SAVED###
 
-   Description
+   :Description:
          Used for HTML output
 
-
-.. container:: table-row
-
-   Subpart marker
+ - :Subpart marker:
          ###TEMPLATE\_SETFIXED\_OK### (general)
 
          ###TEMPLATE\_SETFIXED\_OK\_[ *fixkey* ]###
 
-   Description
+   :Description:
          Used for a successful setfixed-link.
 
-
-.. container:: table-row
-
-   Subpart marker
+ - :Subpart marker:
          ###TEMPLATE\_SETFIXED\_FAILED###
 
-   Description
+   :Description:
          Used for an unsuccessful setfixed-link. Notice that if you click a
          setfixed link twice, the second time it will fail. This is because the
          setfixed link is bound to the original record and if that changes in
          any way the authentication code will be invalid!
 
-
-.. container:: table-row
-
-   Subpart marker
+ - :Subpart marker:
          ###EMAIL\_TEMPLATE\_ *[action]* \_SAVED###
 
-   Description
+   :Description:
          Used for an email message sent to the website user
 
-
-.. container:: table-row
-
-   Subpart marker
+ - :Subpart marker:
          ###EMAIL\_TEMPLATE\_ *[action]* \_SAVED-ADMIN###
 
-   Description
+   :Description:
          Used for an email message sent to the admin
 
-
-.. container:: table-row
-
-   Subpart marker
+ - :Subpart marker:
          ###EMAIL\_TEMPLATE\_SETFIXED\_ *[fixkey]* ###
 
-   Description
+   :Description:
          Used for notification messages in the event of successful setfixed
          operations.
 
-
-.. container:: table-row
-
-   Subpart marker
+ - :Subpart marker:
          ###EMAIL\_TEMPLATE\_SETFIXED\_ *[fixkey]-ADMIN* ###
 
-   Description
+   :Description:
          Ditto, for admin email
 
-
-.. ###### END~OF~TABLE ######
 
 Likewise there is a system in the subpart markers used for the EDIT
 and CREATE actions to display the initial forms:
@@ -1009,40 +907,31 @@ Must-have subparts:
 
 These are subparts that should exist in any template.
 
-.. ### BEGIN~OF~TABLE ###
+.. t3-field-list-table::
+ :header-rows: 1
 
-.. container:: table-row
-
-   Subpart marker
+ - :Subpart marker:
          Subpart marker:
 
-   Description
+   :Description:
          Description:
 
-
-.. container:: table-row
-
-   Subpart marker
+ - :Subpart marker:
          ###TEMPLATE\_AUTH###
 
-   Description
+   :Description:
          Displayed if the authentication - either of fe\_user or email
          authentication code - failed. You must design the error display to
          correctly reflect the problem!
 
-
-.. container:: table-row
-
-   Subpart marker
+ - :Subpart marker:
          ###TEMPLATE\_NO\_PERMISSIONS###
 
-   Description
+   :Description:
          This error message is displayed if you were authenticated but did not
          posses the right to edit or delete a record due to other reasons (like
          wrong fe\_user/group ownership).
 
-
-.. ###### END~OF~TABLE ######
 
 
 .. _appendix-fe-adminlib-email:
@@ -1055,78 +944,56 @@ last word of the templates is <html> and </html> respectively. In
 addition the Swiftmailer (in older versions of TYPO3 the t3lib\_htmlmail
 class) must be loaded.
 
-.. ### BEGIN~OF~TABLE ###
+.. t3-field-list-table::
+ :header-rows: 1
 
-.. container:: table-row
-
-   Subpart
+ - :Subpart:
          Subpart:
 
-   Description
+   :Description:
          Description:
 
-
-.. container:: table-row
-
-   Subpart
+ - :Subpart:
          ###EMAIL\_TEMPLATE\_NORECORD###
 
-   Description
+   :Description:
 
-
-.. container:: table-row
-
-   Subpart
+ - :Subpart:
          ###EMAIL\_TEMPLATE\_[ *infomail\_key* ]###
 
-   Description
+   :Description:
 
-
-.. container:: table-row
-
-   Subpart
+ - :Subpart:
          ###SUB\_RECORD###
 
-   Description
+   :Description:
 
-
-.. ###### END~OF~TABLE ######
 
 
 'infomail' Email markers
 """"""""""""""""""""""""
 
-.. ### BEGIN~OF~TABLE ###
+.. t3-field-list-table::
+ :header-rows: 1
 
-.. container:: table-row
-
-   Marker
+ - :Marker:
          Marker:
 
-   Description
+   :Description:
          Description:
 
-
-.. container:: table-row
-
-   Marker
+ - :Marker:
          ###SYS\_AUTHCODE###
 
-   Description
+   :Description:
 
-
-.. container:: table-row
-
-   Marker
+ - :Marker:
          ###SYS\_SETFIXED\_[ *fixkey* ]###
 
-   Description
+   :Description:
 
 
-.. ###### END~OF~TABLE ######
-
-
-.. _appendix-fe-adminlib-form:
+.. _appendix-fe-admin-form:
 
 FORM conventions
 """"""""""""""""
@@ -1155,142 +1022,100 @@ change document.location.
 Common markers
 """"""""""""""
 
-.. ### BEGIN~OF~TABLE ###
+.. t3-field-list-table::
+ :header-rows: 1
 
-.. container:: table-row
-
-   Marker
+ - :Marker:
          Marker:
 
-   Description
+   :Description:
          Description:
 
-
-.. container:: table-row
-
-   Marker
+ - :Marker:
          ###GW1B### / ###GW1E###
 
-   Description
+   :Description:
          Global wrap 1, begin and end (headers).
 
-
-.. container:: table-row
-
-   Marker
+ - :Marker:
          ###GW2B### / ###GW2E###
 
-   Description
+   :Description:
          Global wrap 2, begin and end (bodytext).
 
-
-.. container:: table-row
-
-   Marker
+ - :Marker:
          ###GC1### / ###GC2### / ###GC3###
 
-   Description
+   :Description:
          Global color 1 through 3.
 
-
-.. container:: table-row
-
-   Marker
+ - :Marker:
          ###FORM\_URL###
 
-   Description
+   :Description:
          The url used in the forms::
 
             index.php?id=page-id&type=page-type
 
-
-.. container:: table-row
-
-   Marker
+ - :Marker:
          ###FORM\_URL\_ENC###
 
-   Description
+   :Description:
          As above, but rawurlencoded.
 
-
-.. container:: table-row
-
-   Marker
+ - :Marker:
          ###BACK\_URL###
 
-   Description
+   :Description:
          The backUrl value. Set to the value of incoming "backURL" var.
 
-
-.. container:: table-row
-
-   Marker
+ - :Marker:
          ###BACK\_URL\_ENC###
 
-   Description
+   :Description:
          As above, but rawurlencoded.
 
-
-.. container:: table-row
-
-   Marker
+ - :Marker:
          ###REC\_UID###
 
-   Description
+   :Description:
          The UID of the record edited. Set to the value of incoming "rU" var.
 
-
-.. container:: table-row
-
-   Marker
+ - :Marker:
          ###AUTH\_CODE###
 
-   Description
+   :Description:
          The "aC" incoming var.
 
-
-.. container:: table-row
-
-   Marker
+ - :Marker:
          ###THE\_PID###
 
-   Description
+   :Description:
          The "thePid" value - where the records are stored.
 
-
-.. container:: table-row
-
-   Marker
+ - :Marker:
          ###THIS\_ID###
 
-   Description
+   :Description:
          Set to the current page id.
 
-
-.. container:: table-row
-
-   Marker
+ - :Marker:
          ###THIS\_URL###
 
-   Description
+   :Description:
          Set to the current script url as obtained by
          TYPO3\CMS\Core\Utility\GeneralUtility::getThisUrl()
          (t3lib\_div::getThisUrl()).
 
-
-.. container:: table-row
-
-   Marker
+ - :Marker:
          ###HIDDENFIELDS###
 
-   Description
+   :Description:
          A bunch of hiddenfields which are required to be inserted in the
          forms. These by default include 'cmd', 'aC' and 'backURL'.
 
 
-.. ###### END~OF~TABLE ######
-
-In addition you can in most cases use markers like this ::
+In addition you can in most cases use markers like this::
 
    ###FIELD_[field name]###
 
@@ -1396,90 +1221,68 @@ required is not passed any value.
 List of eval-codes
 """"""""""""""""""
 
-.. ### BEGIN~OF~TABLE ###
+.. t3-field-list-table::
+ :header-rows: 1
 
-.. container:: table-row
-
-   Eval-code
+ - :Eval-code:
          Eval-code:
 
-   Description
+   :Description:
          Description:
 
-
-.. container:: table-row
-
-   Eval-code
+ - :Eval-code:
          uniqueGlobal
 
-   Description
+   :Description:
          This requires the value of the field to be globally unique, which
          means it must not exist in the same field of any other record in the
          current table.
 
-
-.. container:: table-row
-
-   Eval-code
+ - :Eval-code:
          uniqueLocal
 
-   Description
+   :Description:
          This is like uniqueGlobal, but the value is required to be unique
          *only* in the PID of the record. Thus if two records has different pid
          values, they may have the same value of this field.
 
-
-.. container:: table-row
-
-   Eval-code
+ - :Eval-code:
          twice
 
-   Description
+   :Description:
          This requires the value of the field to match the value of a secondary
          field name [field name]\_again sent in the incoming formdata. This is
          useful for entering password. Then if your password field is name
          "user\_pass" then you simple add a second field name
          "user\_pass\_again" and then set the 'twice' eval code.
 
-
-.. container:: table-row
-
-   Eval-code
+ - :Eval-code:
          email
 
-   Description
+   :Description:
          Requires the field value to be an email address at least on the form
          [name]@\*[domain].[tld]
 
-
-.. container:: table-row
-
-   Eval-code
+ - :Eval-code:
          required
 
-   Description
+   :Description:
          Just simple required (trimmed value). 0 (zero) will evaluate to false!
 
-
-.. container:: table-row
-
-   Eval-code
+ - :Eval-code:
          atLeast
 
          atMost
 
-   Description
+   :Description:
          Specifies a minimum / maximum of characters to enter in the fields.
 
          **Example** , that requires at least 5 characters: atleast [5]
 
-
-.. container:: table-row
-
-   Eval-code
+ - :Eval-code:
          inBranch
 
-   Description
+   :Description:
          inBranch requires the value (typically of a pid-field) to be among a
          list of page-id's (pid's) specified with the inBranch parameters. The
          parameters are given like  *[root\_pid; depth; beginAt]*
@@ -1487,19 +1290,14 @@ List of eval-codes
          **Example** , which will return a list of pids one level deep from
          page 4 (included): inBranch [4;1]
 
-
-.. container:: table-row
-
-   Eval-code
+ - :Eval-code:
          unsetEmpty
 
-   Description
+   :Description:
          This evaluation does not result in any error code. Only it simply
          unsets the field if the value of the field is empty. Thus it'll not
          override any current value if the field value is not set.
 
-
-.. ###### END~OF~TABLE ######
 
 [tsref:(script).fe\_adminLib.evalErrors.(field).(evalCode)]
 
