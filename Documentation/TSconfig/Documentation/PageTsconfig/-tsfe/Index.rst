@@ -90,7 +90,8 @@
          In the TypoScript templates you can now insert this constant as
          {$websiteConfig.id}
 
-         |img-47|
+         .. figure:: ../../Images/manual_html_me910706.png
+            :alt: Showing TS constants with the TypoScript Object Browser
 
          In the backend module (in the Web main module) you can reach the value
          by a few lines of code like these::
@@ -114,4 +115,3 @@
 .. ###### END~OF~TABLE ######
 
 [page:TSFE]
-

@@ -171,7 +171,10 @@ Configuration of the Admin Panel in the Frontend for the user.
 
 [beuser:admPanel]
 
-|img-6| **Tip**
+.. figure:: ../../Images/manual_html_m43fb96d.png
+   :alt: TIP
+
+**Tip**
 
 If you want to link to the login-screen of the backend, but wish that
 the user should return to the frontend for editing, you do that with
@@ -182,7 +185,10 @@ In that case the backend interface is not started. ::
                            Backend login returning to frontend
                    </a>
 
-|img-7| This is what the admin panel looks like. Notice the fact that the
+.. figure:: ../../Images/manual_html_639a5d8e.png
+   :alt: The TYPO3 ADMIN PANEL
+
+This is what the admin panel looks like. Notice the fact that the
 visibility of the admin panel is ultimately depending on being
 configured in your TypoScript template for the website! This is easily
 done by inserting this string in the TypoScript Template::
@@ -192,4 +198,3 @@ done by inserting this string in the TypoScript Template::
 Or if you use frames, this is probably better::
 
       page.config.admPanel = 1
-

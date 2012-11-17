@@ -16,7 +16,9 @@ The "TSconfig" field
 This is how the TSconfig for users is entered in the backend user
 records:
 
-|img-4|
+.. figure:: ../../Images/manual_html_m2a166eee.png
+   :alt: The TSconfig inside the backend user or backend group properties
+
 Verifying the final configuration
 """""""""""""""""""""""""""""""""
 
@@ -25,7 +27,9 @@ do that in the Tools > User Admin module (which is provided by the
 extension "beuser") by clicking a username. Then you'll see the
 TSconfig tree among other information. Here's an example:
 
-|img-5|
+.. figure:: ../../Images/manual_html_464ee54.png
+   :alt: Comparing backend user or backend group settings with the User Admin module
+
 Overriding previously set options
 """""""""""""""""""""""""""""""""
 

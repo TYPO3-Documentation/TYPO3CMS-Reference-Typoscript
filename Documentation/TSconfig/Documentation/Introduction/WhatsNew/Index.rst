@@ -18,7 +18,10 @@ For TYPO3 4.7 a setting in the page module has been added: The item
 
 The description of some properties has been added or updated.
 
-|img-3| **More information about changed properties**
+.. figure:: ../../Images/manual_html_m3858f798.png
+   alt: Blue world icon
+
+**More information about changed properties**
 
 You can find a list of changes for more recent TYPO3 versions in the
 wiki:

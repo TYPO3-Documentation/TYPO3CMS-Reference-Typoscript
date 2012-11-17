@@ -184,7 +184,10 @@ Various options for the user affecting the core at various points.
          boolean
 
    Description
-         |img-8| If true, the checkbox "Show secondary options (palettes)" is
+         .. figure:: ../../Images/manual_html_2f9c146a.png
+            :alt: Shown secondary options (palettes) in the content editing forms
+
+         If true, the checkbox "Show secondary options (palettes)" is
          displayed in content editing forms.
 
    Default
@@ -600,7 +603,8 @@ Various options for the user affecting the core at various points.
             options.pageTree.backgroundColor.3 = #00FFFF
             options.pageTree.backgroundColor.4 = rgba(0, 255, 0, 0.1)
 
-         |img-100|
+         .. figure:: ../../Images/options.pageTree.backgroundColor.png
+            :alt: Tree branches with configured background colors
 
    Default
 
@@ -1178,7 +1182,8 @@ Various options for the user affecting the core at various points.
          is shown or hidden. If it is hidden, you can predefine it to be always
          activated or always deactivated.
 
-         |img-9|
+         .. figure:: ../../Images/manual_html_704dc544.png
+            :alt: Checkbox "Extended view" in the filelist module
 
          The following values are possible:
 
@@ -1249,4 +1254,6 @@ Various options for the user affecting the core at various points.
 
 
 [beuser:options]
+
+
 

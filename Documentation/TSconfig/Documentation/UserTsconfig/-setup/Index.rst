@@ -16,7 +16,10 @@ settings" module.
 **Notice** : The "User tools > User settings" module only represents a
 subset of the options from the table below.
 
-|img-10| Default values are set by 'setup.default' while overriding values are
+.. figure:  ../../Images/manual_html_6ed6f97c.png
+   :alt: Default values and overriding values for the "User tools > User settings" module
+
+Default values are set by 'setup.default' while overriding values are
 set by 'setup.override'. Overriding values will be impossible for the
 user to change himself and no matter what the current value is, the
 overriding value will overrule it. The default values are used for new
