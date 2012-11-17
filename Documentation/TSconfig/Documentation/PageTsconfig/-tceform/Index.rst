@@ -100,7 +100,8 @@ disable options, blind options in selector boxes etc.
    Description
          Configuration for the "suggest" wizard.
 
-         |img-39|
+         .. figure:: ../../Images/manual_html_m4f51d09f.png
+            :alt: Configured "suggest" wizard
 
          Each level of the configuration overwrites the values of the level
          below it:
@@ -394,7 +395,10 @@ above).
 
          This example extends the options for Page types with two new items:
 
-         |img-40|  **Warning:** This example shows the principle of adding
+         .. figure:: ../../Images/manual_html_32b14869.png
+            :alt: The Page types are extended by two new items
+
+         **Warning:** This example shows the principle of adding
          adhoc-items to a selector box in TYPO3, but you  *should not* add new
          *page types* or Content Element types this way!
 
@@ -414,7 +418,8 @@ above).
          the default behavior of TYPO3 is to preserve the value and to show a
          label which warns about this special state:
 
-         |img-41|
+         .. figure:: ../../Images/manual_html_m78bf4baf.png
+            :alt: A missing selector box value is indicated by a warning message
 
          If disableNoMatchingValueElement is set, the element "INVALID VALUE"
          will not be added to the list.
@@ -429,7 +434,8 @@ above).
          Now the selector box will default to the first element in the selector
          box:
 
-         |img-42|
+         .. figure:: ../../Images/manual_html_m47a63dda.png
+            :alt: Instead of show a warning message the system choose the first element in the selector box
 
 
 .. container:: table-row
@@ -458,7 +464,8 @@ above).
 
          The result will be:
 
-         |img-43|
+         .. figure:: ../../Images/manual_html_m54280068.png
+            :alt:  A invalid selector box value is indicated by a warning message
 
 
 .. container:: table-row
@@ -486,7 +493,8 @@ above).
 
          Result will be:
 
-         |img-44|
+         .. figure:: ../../Images/manual_html_430ba952.png
+            :alt: The Page types with modified labels
 
 
 .. container:: table-row
@@ -628,11 +636,13 @@ above).
 
          The result is that the label for the title field will be a link:
 
-         |img-45|
+         .. figure:: ../../Images/manual_html_m156d544f.png
+            :alt: The label for the title field turns into a link
 
          Clicking the link brings you to a form where only this field is shown:
 
-         |img-46|
+         .. figure:: ../../Images/manual_html_62e7bc5f.png
+            :alt: The Edit Page screen after clicking the link
 
 
 .. ###### END~OF~TABLE ######

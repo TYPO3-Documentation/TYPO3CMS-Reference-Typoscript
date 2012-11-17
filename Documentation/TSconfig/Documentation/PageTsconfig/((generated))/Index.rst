@@ -24,7 +24,9 @@ configure this.
 
 The "TSconfig" field here is available in the tab called "Resources":
 
-|img-11|
+.. figure:: ../../Images/manual_html_1194c6cf.png
+   :alt: The Page TSconfig field inside the page properties
+
 Verifying the final configuration
 """""""""""""""""""""""""""""""""
 
@@ -32,7 +34,9 @@ If you need to check out the actual configuration for a certain branch
 in the website, use the 'Web > Info' module (provided by the extension
 "info\_pagetsconfig"):
 
-|img-12|
+.. figure:: ../../Images/manual_html_m7ed27f1e.png
+   :alt: The Page TSconfig configuration for a page when using the Info module
+
 Setting default Page TSconfig
 """""""""""""""""""""""""""""
 
@@ -54,4 +58,3 @@ can call it like this to set default configuration::
 
 This API function simply adds the content to
 $TYPO3\_CONF\_VARS['BE']['defaultPageTSconfig'].
-

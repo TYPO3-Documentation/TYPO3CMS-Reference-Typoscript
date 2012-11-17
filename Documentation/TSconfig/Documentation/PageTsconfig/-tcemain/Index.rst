@@ -69,7 +69,8 @@
          "test\_group". With the configuration above a new page would be
          created with this user/group setting instead of the defaults:
 
-         |img-36|
+         .. figure:: ../../Images/manual_html_63233290.png
+            :alt: Page with altered permissions for backend users and groups
 
 
 .. container:: table-row
@@ -117,7 +118,8 @@
          permissions you can see the effect: The Backend Group can now also
          delete the page by default and Everybody has read access:
 
-         |img-37|
+         .. figure:: ../../Images/manual_html_23d64d7b.png
+            :alt: Page with altered permissions for backend users, groups and everybody
 
 
 .. container:: table-row
@@ -426,8 +428,8 @@ Processing options for a $TCA configured table.
          default mode: The page is hidden and the "(copy X)" suffix is added,
          if another page with the same named existed already.
 
-         |img-38|
-
+         .. figure:: ../../Images/manual_html_m5a1cc22d.png
+            :alt: Hidden page with added suffx after copying its orignal page
 
 .. container:: table-row
 
@@ -447,4 +449,3 @@ Processing options for a $TCA configured table.
 .. ###### END~OF~TABLE ######
 
 [page:TCEMAIN.default/TCEMAIN.table.(tablename)/->TCEMAIN\_tables]
-

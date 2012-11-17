@@ -26,7 +26,10 @@ user/group).
 
 In this case the main menu of the Web > Info module looks like this:
 
-|img-13| By adding this Page TSconfig we can remove the "Page TSconfig" item::
+.. figure:: ../../Images/manual_html_m615ff10e.png
+   :alt: The original function menu inside the info module
+
+By adding this Page TSconfig we can remove the "Page TSconfig" item::
 
    mod.web_info.menu.function {
      tx_infopagetsconfig_webinfo = 0
@@ -34,7 +37,10 @@ In this case the main menu of the Web > Info module looks like this:
 
 The function menu will now look like this:
 
-|img-14| The 'Page TSconfig' option is simply disabled by setting this Page
+.. figure:: ../../Images/manual_html_10bf0f2e.png
+   :alt: The function menu inside the info module without Page TSconfig
+
+The 'Page TSconfig' option is simply disabled by setting this Page
 TSconfig!
 
 All you need to know in order to disable function menu items in the
@@ -65,7 +71,8 @@ Examples from the TYPO3 core are listed in the table below:
    Description
          **Web > Page module**
 
-         |img-15|
+         .. figure:: ../../Images/manual_html_5268c65f.png
+            :alt: The original layout menu inside the page module
 
          **Option tags:** ::
 
@@ -94,7 +101,8 @@ Examples from the TYPO3 core are listed in the table below:
    Description
          **Web > Info module**
 
-         |img-16|
+         .. figure:: ../../Images/manual_html_4c191623.png
+            :alt: The original function menu inside the info module
 
          **Option tags:** ::
 
@@ -128,7 +136,8 @@ Examples from the TYPO3 core are listed in the table below:
    Description
          **Web > Functions module**
 
-         |img-17|
+         .. figure:: ../../Images/manual_html_4570ee97.png
+            :alt: The original function menu inside the functions module
 
          **Option tags:** ::
 
@@ -143,13 +152,14 @@ Examples from the TYPO3 core are listed in the table below:
          web\_func.menu.wiz
 
    Description
-         **Web > Functions module, Wizards sub module**
+         **Web > Functions module, Wizards submodule**
 
          This is the 2nd-level Function Menu in the Web > Functions module.
          Instead of the "function" key of the main menu it just uses the key
          "wiz" instead.
 
-         |img-18|
+         .. figure:: ../../Images/manual_html_601b8e77.png
+            :alt: Wizards submodules of the function menu inside the functions module
 
          **Option tags:** ::
 
@@ -174,7 +184,8 @@ Examples from the TYPO3 core are listed in the table below:
    Description
          **Web > Template module**
 
-         |img-19|
+         .. figure:: ../../Images/manual_html_38b1b9c9.png
+            :alt: The original function menu from the template module
 
          **Option tags:** ::
 
@@ -204,7 +215,8 @@ Examples from the TYPO3 core are listed in the table below:
          a page in the page tree! So you either have to set default Page
          TSconfig or User TSconfig to blind options here!
 
-         |img-20|
+         .. figure:: ../../Images/manual_html_1d084bf7.png
+            :alt: The TYPO3 taskcenter
 
          **Keys are:**
 
@@ -260,7 +272,8 @@ Examples from the TYPO3 core are listed in the table below:
          a page in the page tree! So you have to set User TSconfig to blind
          options here!
 
-         |img-21|
+         .. figure:: ../../Images/manual_html_m44e31433.png
+            :alt: Configuring the TYPO3 Taskcenter
 
          You can hide a task by using the following syntax in User TSconfig::
 
@@ -314,9 +327,12 @@ found::
 
    mod.web_info.menu.function {
           tx_infopagetsconfig_webinfo = 0
-   } |img-22|
+   }
 
-**Warning**
+.. figure:: ../../Images/manual_html_3cd9b3b7.png
+   :alt: Warning
+
+   **Warning**
 
 Blinding Function Menu items is not hardcore access control! All it
 does is to hide the possibility of accessing that module functionality
@@ -348,7 +364,10 @@ the same value set in the Page TSconfig::
 
    mod.web_info.menu.function {
      tsconf = 1
-   } |img-23|
+   }
+
+.. figure:: ../../Images/manual_html_m6b2884ce.png
+   :alt: Example 1: Overriding the Page TSconfig menu function
 
 
 Here is another example: The value of
@@ -359,7 +378,9 @@ upper image shows you how to check the Page TSconfig. In the lower
 image you see the result of this user's User TSconfig: It overrides
 the Page TSconfig and alters the configuration:
 
-|img-24|
+.. figure:: ../../Images/manual_html_748558d0.png
+   :alt: Example 2: Overriding the Page TSconfig menu function
+
 **Shared options for modules (mod.SHARED)** :
 """""""""""""""""""""""""""""""""""""""""""""
 
@@ -639,7 +660,8 @@ the Page TSconfig and alters the configuration:
 
          These are the buttons that are hidden with this option:
 
-         |img-25|
+         .. figure:: ../../Images/manual_html_7e6b718a.png
+            :alt: Large buttons in top of the columns view
 
    Default
          1
@@ -818,7 +840,10 @@ the Page TSconfig and alters the configuration:
          The result is the deactivation of alternating background colors for
          each element:
 
-         |img-26|  **Note** : This option has been removed in TYPO3 4.5 and the
+         .. figure:: ../../Images/manual_html_7dbda7e7.png
+            :alt: The list module after deactivation the alternating background colors
+
+         **Note** : This option has been removed in TYPO3 4.5 and the
          background colors are always alternating.
 
    Default
@@ -864,7 +889,8 @@ the Page TSconfig and alters the configuration:
          The result will be that records from tables are only listed in the
          single-table mode:
 
-         |img-27|
+         .. figure:: ../../Images/manual_html_165a5551.png
+            :alt: The list module after activating the single-table mode
 
    Default
          0
@@ -1017,7 +1043,8 @@ the Page TSconfig and alters the configuration:
          Only pages and tt\_news table elements will be linked to in the New
          record screen:
 
-         |img-28|
+         .. figure:: ../../Images/manual_html_6d60e8b.png
+            :alt: The New record screen after modifying the allowed elements
 
    Default
 
@@ -1095,7 +1122,8 @@ the Page TSconfig and alters the configuration:
          shown or hidden. If it is hidden, you can predefine it to be always
          activated or always deactivated.
 
-         |img-29|
+         .. figure:: ../../Images/manual_html_74103dfb.png
+            :alt: "Extended view" is shown in the list module
 
          The following values are possible:
 
@@ -1324,7 +1352,8 @@ element wizard, for example.
 
          Hides the "Page (inside)" link.
 
-         |img-30|
+         .. figure:: ../../Images/manual_html_44865d7b.png
+            :alt: The modified New record screen without Page (inside)
 
    Default
          1
@@ -1353,7 +1382,8 @@ element wizard, for example.
          This places the tt\_news group at the top (after pages and content
          elements). The other groups follow unchanged:
 
-         |img-31|
+         .. figure:: ../../Images/manual_html_1c6e46bb.png
+            :alt: The position of News changed after modifying the New record screen
 
    Default
 
@@ -1398,7 +1428,8 @@ element wizard, for example.
 
             mod.wizards.newContentElement.renderMode = tabs
 
-         |img-32|
+         .. figure:: ../../Images/manual_html_56794b6d.png
+            :alt: The New content element screen with tabs
 
    Default
 
@@ -1591,7 +1622,9 @@ Create a new group and add a (pre-filled) element to it::
 This will add the following at the bottom of the new content element
 wizard:
 
-|img-33|
+.. figure:: ../../Images/manual_html_73b37d4e.png
+   :alt: Added entry in the new content element wizard
+
 **Tools > Extension Manager (mod.tools\_em)**
 """""""""""""""""""""""""""""""""""""""""""""
 
@@ -1632,7 +1665,8 @@ wizard:
 
          Enables these options in the Extension Manager:
 
-         |img-34|
+         .. figure:: ../../Images/manual_html_3fa38a1.png
+            :alt: The Extension Manager with additional options
 
          **Note** : This setting does not influence the new Extension Manager
          which comes with TYPO3 4.5 and newer.
@@ -1684,7 +1718,10 @@ wizard:
               disableCacheSelector = 1
             }
 
-         |img-35|  **Note:** As of TYPO3 4.2 this has been replaced by the
+         .. figure:: ../../Images/manual_html_2a6f6c3a.png
+            :alt: Effect if document selector is disabled
+
+         **Note:** As of TYPO3 4.2 this has been replaced by the
          "opendocs" extension, on which this setting has no effect anymore. The
          above screenshot comes from TYPO3 4.1.
 
@@ -1712,4 +1749,3 @@ wizard:
 .. ###### END~OF~TABLE ######
 
 [page:mod.xMOD\_alt\_doc; beuser:mod.xMOD\_alt\_doc]
-
