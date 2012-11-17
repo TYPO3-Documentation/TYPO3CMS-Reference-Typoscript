@@ -1178,73 +1178,43 @@ These are some "data types" that might be mentioned and valid values
 are shown here below:
 
 
-.. ### BEGIN~OF~TABLE ###
+.. ### BEGIN~OF~SIMPLE~TABLE ###
 
-.. container:: table-row
+.. Note: Labels cannot be put in the first column of a simple table; they
+   would be rendered as an empty row there. So I put them in the second column.
 
-   Data type
-         Data type:
+=============================   ========================================================================
+Data type:                      Comment:
+=============================   ========================================================================
+cObject                         .. _data-type-cobject:
 
-   Comment
-         Comment:
+                                "cObjects" are also called "Content Objects". See the section "Content
+                                Objects" later in this manual.
 
+                                **Examples:** ::
 
-.. container:: table-row
+                                   TEXT / IMAGE / MEDIA ....
 
-   Data type
-         .. _data-type-cobject:
+frameObj                        .. _data-type-frameobj:
 
-         cObject
+                                FRAMESET / FRAME
 
-   Comment
-         "cObjects" are also called "Content Objects". See the section "Content
-         Objects" later in this manual.
+menuObj                         .. _data-type-menuobj:
 
-         **Examples:** ::
+                                See the section "Menu Objects" later in this manual.
 
-            TEXT / IMAGE / MEDIA ....
+                                **Examples:** ::
 
+                                   GMENU / TMENU / IMGMENU / JSMENU
 
-.. container:: table-row
+GifBuilderObj                   .. _data-type-gifbuilderobj:
 
-   Data type
-         .. _data-type-frameobj:
+                                See the section "GIFBUILDER" later in this manual.
 
-         frameObj
+                                **Examples:** ::
 
-   Comment
-         FRAMESET / FRAME
+                                   TEXT / SHADOW / OUTLINE / EMBOSS / BOX / IMAGE / EFFECT
+=============================   ========================================================================
 
-
-.. container:: table-row
-
-   Data type
-         .. _data-type-menuobj:
-
-         menuObj
-
-   Comment
-         See the section "Menu Objects" later in this manual.
-
-         **Examples:** ::
-
-            GMENU / TMENU / IMGMENU / JSMENU
-
-
-.. container:: table-row
-
-   Data type
-         .. _data-type-gifbuilderobj:
-
-         GifBuilderObj
-
-   Comment
-         See the section "GIFBUILDER" later in this manual.
-
-         **Examples:** ::
-
-            TEXT / SHADOW / OUTLINE / EMBOSS / BOX / IMAGE / EFFECT
-
-
-.. ###### END~OF~TABLE ######
+.. ###### END~OF~SIMPLE~TABLE ######
 

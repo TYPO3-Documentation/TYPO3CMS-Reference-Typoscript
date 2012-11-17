@@ -52,7 +52,7 @@ You may combine several conditions with two operators: && (and), \|\|
 (or)
 
 Alternatively you may use "AND" and "OR" instead of "&&" and "\|\|".
-The AND operator has always higher precedence over OR. If no operator
+The AND operator always takes higher precedence over OR. If no operator
 has been specified, it will default to OR.
 
 
@@ -95,198 +95,37 @@ Values and comparison:
 ''''''''''''''''''''''
 
 
-.. ### BEGIN~OF~TABLE ###
-
-.. container:: table-row
-
-   Browser
-         Browser:
-
-   Identification
-         Identification:
-
-
-.. container:: table-row
-
-   Browser
-         Amaya
-
-   Identification
-         amaya
-
-
-.. container:: table-row
-
-   Browser
-         AOL
-
-   Identification
-         aol
-
-
-.. container:: table-row
-
-   Browser
-         Avant
-
-   Identification
-         avant
-
-
-.. container:: table-row
-
-   Browser
-         Camino
-
-   Identification
-         camino
-
-
-.. container:: table-row
-
-   Browser
-         Google Chrome
-
-   Identification
-         chrome
-
-
-.. container:: table-row
-
-   Browser
-         Mozilla Firefox
-
-   Identification
-         firefox
-
-
-.. container:: table-row
-
-   Browser
-         Flock
-
-   Identification
-         flock
-
-
-.. container:: table-row
-
-   Browser
-         Gecko
-
-   Identification
-         gecko
-
-
-.. container:: table-row
-
-   Browser
-         Konqueror
-
-   Identification
-         konqueror
-
-
-.. container:: table-row
-
-   Browser
-         Lynx
-
-   Identification
-         lynx
-
-
-.. container:: table-row
-
-   Browser
-         NCSA Mosaic
-
-   Identification
-         mosaic
-
-
-.. container:: table-row
-
-   Browser
-         Microsoft Internet Explorer
-
-   Identification
-         msie
-
-
-.. container:: table-row
-
-   Browser
-         Navigator
-
-   Identification
-         navigator
-
-
-.. container:: table-row
-
-   Browser
-         Netscape Communicator
-
-   Identification
-         netscape
-
-
-.. container:: table-row
-
-   Browser
-         OmniWeb
-
-   Identification
-         omniweb
-
-
-.. container:: table-row
-
-   Browser
-         Opera
-
-   Identification
-         opera
-
-
-.. container:: table-row
-
-   Browser
-         Safari
-
-   Identification
-         safari
-
-
-.. container:: table-row
-
-   Browser
-         SeaMonkey
-
-   Identification
-         seamonkey
-
-
-.. container:: table-row
-
-   Browser
-         Webkit
-
-   Identification
-         webkit
-
-
-.. container:: table-row
-
-   Browser
-         ?? (if none of the above was found in the user agent)
-
-   Identification
-         unknown
-
-
-.. ###### END~OF~TABLE ######
+.. ### BEGIN~OF~SIMPLE~TABLE ###
+
+.. Note: The first row cannot be smaller, as ReST does not allow a
+   linebreak in the first column of a simple table.
+
+========================================================   ===========================
+Browser:                                                   Identification:
+========================================================   ===========================
+Amaya                                                      amaya
+AOL                                                        aol
+Avant                                                      avant
+Camino                                                     camino
+Google Chrome                                              chrome
+Mozilla Firefox                                            firefox
+Flock                                                      flock
+Gecko                                                      gecko
+Konqueror                                                  konqueror
+Lynx                                                       lynx
+NCSA Mosaic                                                mosaic
+Microsoft Internet Explorer                                msie
+Navigator                                                  navigator
+Netscape Communicator                                      netscape
+OmniWeb                                                    omniweb
+Opera                                                      opera
+Safari                                                     safari
+SeaMonkey                                                  seamonkey
+Webkit                                                     webkit
+?? (if none of the above was found in the user agent)      unknown
+========================================================   ===========================
+
+.. ###### END~OF~SIMPLE~TABLE ######
 
 
 The condition works with the user agent string. The user agent is
@@ -352,59 +191,26 @@ Values are floating-point numbers with "." as the decimal separator.
 The values may be preceded by three operators:
 
 
-.. ### BEGIN~OF~TABLE ###
+.. ### BEGIN~OF~SIMPLE~TABLE ###
 
-.. container:: table-row
+============   =======================================================================
+Operator:      Function:
+============   =======================================================================
+[nothing]      The value must be part of the beginning of the version as a string.
+               This means that if the version is "4.72" and the value is "4" or "4.7"
+               it matches. But "4.73" does not match.
 
-   Operator
-         Operator:
+               Example from syntax: "value1"
 
-   Function
-         Function:
+=              The value must match exactly. Version "4.72" matches only with a value
+               of "4.72"
 
+>              The version must be greater than the value
 
-.. container:: table-row
+<              The version must be less than the value
+============   =======================================================================
 
-   Operator
-         [nothing]
-
-   Function
-         The value must be part of the beginning of the version as a string.
-         This means that if the version is "4.72" and the value is "4" or "4.7"
-         it matches. But "4.73" does not match.
-
-         Example from syntax: "value1"
-
-
-.. container:: table-row
-
-   Operator
-         =
-
-   Function
-         The value must match exactly. Version "4.72" matches only with a value
-         of "4.72"
-
-
-.. container:: table-row
-
-   Operator
-         >
-
-   Function
-         The version must be greater than the value
-
-
-.. container:: table-row
-
-   Operator
-         <
-
-   Function
-         The version must be less than the value
-
-
-.. ###### END~OF~TABLE ######
+.. ###### END~OF~SIMPLE~TABLE ######
 
 
 Examples:
@@ -430,187 +236,39 @@ Syntax:
 
 ::
 
-   [system= system1,system2]
+   [system = system1,system2]
 
 
 Values and comparison:
 ''''''''''''''''''''''
 
 
-.. ### BEGIN~OF~TABLE ###
-
-.. container:: table-row
-
-   System
-         System:
-
-   Identification
-         Identification:
-
-
-.. container:: table-row
-
-   System
-         Linux
-
-   Identification
-         linux
-
-
-.. container:: table-row
-
-   System
-         Android
-
-   Identification
-         android
-
-
-.. container:: table-row
-
-   System
-         OpenBSD/NetBSD/FreeBSD
-
-   Identification
-         unix\_bsd
-
-
-.. container:: table-row
-
-   System
-         SGI / IRIX
-
-   Identification
-         unix\_sgi
-
-
-.. container:: table-row
-
-   System
-         SunOS
-
-   Identification
-         unix\_sun
-
-
-.. container:: table-row
-
-   System
-         HP-UX
-
-   Identification
-         unix\_hp
-
-
-.. container:: table-row
-
-   System
-         Chrome OS
-
-   Identification
-         chrome
-
-
-.. container:: table-row
-
-   System
-         iOS
-
-   Identification
-         iOS
-
-
-.. container:: table-row
-
-   System
-         Macintosh
-
-   Identification
-         mac
-
-
-.. container:: table-row
-
-   System
-         Windows 7
-
-   Identification
-         win7
-
-
-.. container:: table-row
-
-   System
-         Windows Vista
-
-   Identification
-         winVista
-
-
-.. container:: table-row
-
-   System
-         Windows XP
-
-   Identification
-         winXP
-
-
-.. container:: table-row
-
-   System
-         Windows 2000
-
-   Identification
-         win2k
-
-
-.. container:: table-row
-
-   System
-         Windows NT
-
-   Identification
-         winNT
-
-
-.. container:: table-row
-
-   System
-         Windows 98
-
-   Identification
-         win98
-
-
-.. container:: table-row
-
-   System
-         Windows 95
-
-   Identification
-         win95
-
-
-.. container:: table-row
-
-   System
-         Windows 3.11
-
-   Identification
-         win311
-
-
-.. container:: table-row
-
-   System
-         Amiga
-
-   Identification
-         amiga
-
-
-.. ###### END~OF~TABLE ######
+.. ### BEGIN~OF~SIMPLE~TABLE ###
+
+========================   ================================
+System:                    Identification:
+========================   ================================
+Linux                      linux
+Android                    android
+OpenBSD/NetBSD/FreeBSD     unix\_bsd
+SGI / IRIX                 unix\_sgi
+SunOS                      unix\_sun
+HP-UX                      unix\_hp
+Chrome OS                  chrome
+iOS                        iOS
+Macintosh                  mac
+Windows 7                  win7
+Windows Vista              winVista
+Windows XP                 winXP
+Windows 2000               win2k
+Windows NT                 winNT
+Windows 98                 win98
+Windows 95                 win95
+Windows 3.11               win311
+Amiga                      amiga
+========================   ================================
+
+.. ###### END~OF~SIMPLE~TABLE ######
 
 
 Comparison with the operating system, which the website visitor uses.
@@ -645,81 +303,21 @@ It is recommended to use the new identifiers documented above, but the
 following are valid, too:
 
 
-.. ### BEGIN~OF~TABLE ###
+.. ### BEGIN~OF~SIMPLE~TABLE ###
 
-.. container:: table-row
+====================   =======================================
+System:                Generic identification:
+====================   =======================================
+Android                linux
+Chrome OS              linux
+iOS                    mac
+Windows 7              winNT
+Windows Vista          winNT
+Windows XP             winNT
+Windows 2000           winNT
+====================   =======================================
 
-   System
-         System:
-
-   Generic identification
-         Generic identification:
-
-
-.. container:: table-row
-
-   System
-         Android
-
-   Generic identification
-         linux
-
-
-.. container:: table-row
-
-   System
-         Chrome OS
-
-   Generic identification
-         linux
-
-
-.. container:: table-row
-
-   System
-         iOS
-
-   Generic identification
-         mac
-
-
-.. container:: table-row
-
-   System
-         Windows 7
-
-   Generic identification
-         winNT
-
-
-.. container:: table-row
-
-   System
-         Windows Vista
-
-   Generic identification
-         winNT
-
-
-.. container:: table-row
-
-   System
-         Windows XP
-
-   Generic identification
-         winNT
-
-
-.. container:: table-row
-
-   System
-         Windows 2000
-
-   Generic identification
-         winNT
-
-
-.. ###### END~OF~TABLE ######
+.. ###### END~OF~SIMPLE~TABLE ######
 
 
 .. _condition-device:
@@ -740,54 +338,18 @@ Values and comparison:
 ''''''''''''''''''''''
 
 
-.. ### BEGIN~OF~TABLE ###
+.. ### BEGIN~OF~SIMPLE~TABLE ###
 
-.. container:: table-row
+==================  ====================
+Device:             Identification:
+==================  ====================
+HandHeld            pda
+WAP phones          wap
+Grabbers            grabber
+Indexing robots     robot
+==================  ====================
 
-   Device
-         Device:
-
-   Identification
-         Identification:
-
-
-.. container:: table-row
-
-   Device
-         HandHeld
-
-   Identification
-         pda
-
-
-.. container:: table-row
-
-   Device
-         WAP phones
-
-   Identification
-         wap
-
-
-.. container:: table-row
-
-   Device
-         Grabbers:
-
-   Identification
-         grabber
-
-
-.. container:: table-row
-
-   Device
-         Indexing robots:
-
-   Identification
-         robot
-
-
-.. ###### END~OF~TABLE ######
+.. ###### END~OF~SIMPLE~TABLE ######
 
 
 Values are strings and a match happens if one of these strings equals
@@ -844,69 +406,18 @@ Notes/4.5 ( Windows-NT )"
 A short list of user-agent strings and a proper match:
 
 
-.. ### BEGIN~OF~TABLE ###
+.. ### BEGIN~OF~SIMPLE~TABLE ###
 
-.. container:: table-row
+===========================================================   ======================   =============================
+HTTP\_USER\_AGENT:                                            Agent description:       Matching condition:
+===========================================================   ======================   =============================
+Nokia7110/1.0+(04.77)                                         Nokia 7110 WAP phone     [useragent= Nokia7110\*]
+Lotus-Notes/4.5 ( Windows-NT )                                Lotus-Notes browser      [useragent= Lotus-Notes\*]
+Mozilla/3.0 (compatible; AvantGo 3.2)                         AvantGo browser          [useragent= \*AvantGo\*]
+Mozilla/3.0 (compatible; WebCapture 1.0; Auto; Windows)       Adobe Acrobat 4.0        [useragent= \*WebCapture\*]
+===========================================================   ======================   =============================
 
-   HTTP\_USER\_AGENT
-         HTTP\_USER\_AGENT:
-
-   Agent description
-         Agent description:
-
-   Matching condition
-         Matching condition:
-
-
-.. container:: table-row
-
-   HTTP\_USER\_AGENT
-         Nokia7110/1.0+(04.77)
-
-   Agent description
-         Nokia 7110 WAP phone
-
-   Matching condition
-         [useragent= Nokia7110\*]
-
-
-.. container:: table-row
-
-   HTTP\_USER\_AGENT
-         Lotus-Notes/4.5 ( Windows-NT )
-
-   Agent description
-         Lotus-Notes browser
-
-   Matching condition
-         [useragent= Lotus-Notes\*]
-
-
-.. container:: table-row
-
-   HTTP\_USER\_AGENT
-         Mozilla/3.0 (compatible; AvantGo 3.2)
-
-   Agent description
-         AvantGo browser
-
-   Matching condition
-         [useragent= \*AvantGo\*]
-
-
-.. container:: table-row
-
-   HTTP\_USER\_AGENT
-         Mozilla/3.0 (compatible; WebCapture 1.0; Auto; Windows)
-
-   Agent description
-         Adobe Acrobat 4.0
-
-   Matching condition
-         [useragent= \*WebCapture\*]
-
-
-.. ###### END~OF~TABLE ######
+.. ###### END~OF~SIMPLE~TABLE ######
 
 
 WAP-agents:
@@ -915,145 +426,49 @@ WAP-agents:
 These are some of the known WAP agents:
 
 
-.. ### BEGIN~OF~TABLE ###
-
-.. container:: table-row
-
-   HTTP\_USER\_AGENT
-         HTTP\_USER\_AGENT:
-
-   HTTP\_USER\_AGENT (continued)
-         HTTP\_USER\_AGENT (continued):
-
-
-.. container:: table-row
-
-   HTTP\_USER\_AGENT
-         ALAV UP/4.0.7
-
-         Alcatel-BE3/1.0 UP/4.0.6c
-
-         AUR PALM WAPPER
-
-         Device V1.12
-
-         EricssonR320/R1A
-
-         fetchpage.cgi/0.53
-
-         Java1.1.8
-
-         Java1.2.2
-
-         m-crawler/1.0 WAP
-
-         Materna-WAPPreview/1.1.3
-
-         MC218 2.0 WAP1.1
-
-         Mitsu/1.1.A
-
-         MOT-CB/0.0.19 UP/4.0.5j
-
-         MOT-CB/0.0.21 UP/4.0.5m
-
-         Nokia-WAP-Toolkit/1.2
-
-         Nokia-WAP-Toolkit/1.3beta
-
-         Nokia7110/1.0 ()
-
-         Nokia7110/1.0 (04.67)
-
-         Nokia7110/1.0 (04.67)
-
-         Nokia7110/1.0 (04.69)
-
-         Nokia7110/1.0 (04.70)
-
-         Nokia7110/1.0 (04.71)
-
-         Nokia7110/1.0 (04.73)
-
-         Nokia7110/1.0 (04.74)
-
-         Nokia7110/1.0 (04.76)
-
-         Nokia7110/1.0 (04.77)
-
-         Nokia7110/1.0 (04.80)
-
-         Nokia7110/1.0 (30.05)
-
-         Nokia7110/1.0
-
-   HTTP\_USER\_AGENT (continued)
-         PLM's WapBrowser
-
-         QWAPPER/1.0
-
-         R380 2.0 WAP1.1
-
-         SIE-IC35/1.0
-
-         SIE-P35/1.0 UP/4.1.2a
-
-         SIE-P35/1.0 UP/4.1.2a
-
-         UP.Browser/3.01-IG01
-
-         UP.Browser/3.01-QC31
-
-         UP.Browser/3.02-MC01
-
-         UP.Browser/3.02-SY01
-
-         UP.Browser/3.1-UPG1
-
-         UP.Browser/4.1.2a-XXXX
-
-         UPG1 UP/4.0.7
-
-         Wapalizer/1.0
-
-         Wapalizer/1.1
-
-         WapIDE-SDK/2.0; (R320s (Arial))
-
-         WAPJAG Virtual WAP
-
-         WAPJAG Virtual WAP
-
-         WAPman Version 1.1 beta:Build W2000020401
-
-         WAPman Version 1.1
-
-         Waptor 1.0
-
-         WapView 0.00
-
-         WapView 0.20371
-
-         WapView 0.28
-
-         WapView 0.37
-
-         WapView 0.46
-
-         WapView 0.47
-
-         WinWAP 2.2 WML 1.1
-
-         wmlb
-
-         YourWap/0.91
-
-         YourWap/1.16
-
-         Zetor
-
-
-.. ###### END~OF~TABLE ######
+.. ### BEGIN~OF~SIMPLE~TABLE ###
+
+==============================  ==============================
+HTTP\_USER\_AGENT:              .. invisible comment
+==============================  ==============================
+ALAV UP/4.0.7                   PLM's WapBrowser
+Alcatel-BE3/1.0 UP/4.0.6c       QWAPPER/1.0
+AUR PALM WAPPER                 R380 2.0 WAP1.1
+Device V1.12                    SIE-IC35/1.0
+EricssonR320/R1A                SIE-P35/1.0 UP/4.1.2a
+fetchpage.cgi/0.53              SIE-P35/1.0 UP/4.1.2a
+Java1.1.8                       UP.Browser/3.01-IG01
+Java1.2.2                       UP.Browser/3.01-QC31
+m-crawler/1.0 WAP               UP.Browser/3.02-MC01
+Materna-WAPPreview/1.1.3        UP.Browser/3.02-SY01
+MC218 2.0 WAP1.1                UP.Browser/3.1-UPG1
+Mitsu/1.1.A                     UP.Browser/4.1.2a-XXXX
+MOT-CB/0.0.19 UP/4.0.5j         UPG1 UP/4.0.7
+MOT-CB/0.0.21 UP/4.0.5m         Wapalizer/1.0
+Nokia-WAP-Toolkit/1.2           Wapalizer/1.1
+Nokia-WAP-Toolkit/1.3beta       WapIDE-SDK/2.0; (R320s (Arial))
+Nokia7110/1.0 ()                WAPJAG Virtual WAP
+Nokia7110/1.0 (04.67)           WAPJAG Virtual WAP
+Nokia7110/1.0 (04.67)           WAPman Version 1.1 beta:Build W2000020401
+Nokia7110/1.0 (04.69)           WAPman Version 1.1
+Nokia7110/1.0 (04.70)           Waptor 1.0
+Nokia7110/1.0 (04.71)           WapView 0.00
+Nokia7110/1.0 (04.73)           WapView 0.20371
+Nokia7110/1.0 (04.74)           WapView 0.28
+Nokia7110/1.0 (04.76)           WapView 0.37
+Nokia7110/1.0 (04.77)           WapView 0.46
+Nokia7110/1.0 (04.80)           WapView 0.47
+Nokia7110/1.0 (30.05)           WinWAP 2.2 WML 1.1
+Nokia7110/1.0                   wmlb
+
+                                YourWap/0.91
+
+                                YourWap/1.16
+
+                                Zetor
+==============================  ==============================
+
+.. ###### END~OF~SIMPLE~TABLE ######
 
 
 .. _condition-language:
@@ -1178,78 +593,31 @@ a logical disjunction (OR), that means the whole condition will be
 true, when  *one or more* of its operands are true.
 
 
-.. ### BEGIN~OF~TABLE ###
+.. ### BEGIN~OF~SIMPLE~TABLE ###
 
-.. container:: table-row
+=============   ==============================================================
+Operator:       Function:
+=============   ==============================================================
+[none]          Requires an exact match with the value. Since TYPO3 6.0
+                comparison with a list of values is possible as well. The
+                condition then returns true, if the value is in the list.
+                Values must then be separated by "|".
 
-   Operator
-         Operator:
+>               The hour must be greater than the value.
 
-   Function
-         Function:
+<               The hour must be less than the value.
 
+<=              The hour must be less than or equal to the value.
 
-.. container:: table-row
+>=              The hour must be greater than or equal to the value.
 
-   Operator
-         [none]
+!=              The hour must be not equal to the value. Since TYPO3 6.0
+                comparison with a list of values is possible as well. The
+                condition then returns true, if the value is not in the list.
+                Values must then be separated by "|".
+=============   ==============================================================
 
-   Function
-         Requires an exact match with the value. Since TYPO3 6.0
-         comparison with a list of values is possible as well. The
-         condition then returns true, if the value is in the list.
-         Values must then be separated by "|".
-
-
-.. container:: table-row
-
-   Operator
-         >
-
-   Function
-         The hour must be greater than the value.
-
-
-.. container:: table-row
-
-   Operator
-         <
-
-   Function
-         The hour must be less than the value.
-
-
-.. container:: table-row
-
-   Operator
-         <=
-
-   Function
-         The hour must be less than or equal to the value.
-
-
-.. container:: table-row
-
-   Operator
-         >=
-
-   Function
-         The hour must be greater than or equal to the value.
-
-
-.. container:: table-row
-
-   Operator
-         !=
-
-   Function
-         The hour must be not equal to the value. Since TYPO3 6.0
-         comparison with a list of values is possible as well. The
-         condition then returns true, if the value is not in the list.
-         Values must then be separated by "|".
-
-
-.. ###### END~OF~TABLE ######
+.. ###### END~OF~SIMPLE~TABLE ######
 
 
 Examples:
@@ -1685,78 +1053,31 @@ whole condition evaluates to true,whenever *one or more* of its
 operands are true.
 
 
-.. ### BEGIN~OF~TABLE ###
+.. ### BEGIN~OF~SIMPLE~TABLE ###
 
-.. container:: table-row
+=============   ==============================================================
+Operator:       Function:
+=============   ==============================================================
+=               Requires an exact match with the value. Since TYPO3 6.0
+                comparison with a list of values is possible as well. The
+                condition then returns true, if the value is in the list.
+                Values must then be separated by "|".
 
-   Operator
-         Operator:
+>               The var must be greater than the value.
 
-   Function
-         Function:
+<               The var must be less than the value.
 
+<=              The var must be less than or equal to the value.
 
-.. container:: table-row
+>=              The var mast be greater than or equal to the value.
 
-   Operator
-         =
+!=              The var must be not equal to the value. Since TYPO3 6.0
+                comparison with a list of values is possible as well. The
+                condition then returns true, if the value is not in the list.
+                Values must then be separated by "|".
+=============   ==============================================================
 
-   Function
-         Requires an exact match with the value. Since TYPO3 6.0
-         comparison with a list of values is possible as well. The
-         condition then returns true, if the value is in the list.
-         Values must then be separated by "|".
-
-
-.. container:: table-row
-
-   Operator
-         >
-
-   Function
-         The var must be greater than the value.
-
-
-.. container:: table-row
-
-   Operator
-         <
-
-   Function
-         The var must be less than the value.
-
-
-.. container:: table-row
-
-   Operator
-         <=
-
-   Function
-         The var must be less than or equal to the value.
-
-
-.. container:: table-row
-
-   Operator
-         >=
-
-   Function
-         The var mast be greater than or equal to the value.
-
-
-.. container:: table-row
-
-   Operator
-         !=
-
-   Function
-         The var must be not equal to the value. Since TYPO3 6.0
-         comparison with a list of values is possible as well. The
-         condition then returns true, if the value is not in the list.
-         Values must then be separated by "|".
-
-
-.. ###### END~OF~TABLE ######
+.. ###### END~OF~SIMPLE~TABLE ######
 
 
 Examples:

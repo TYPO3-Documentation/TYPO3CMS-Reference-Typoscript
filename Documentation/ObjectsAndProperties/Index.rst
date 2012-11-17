@@ -96,7 +96,7 @@ The syntax is like this:
    value is repeated.
 
 #. If the  *first* - and  *middle* value are empty, the first part of the
-   last-value is repeated before the last value
+   last-value is repeated before the last value.
 
 #. The  *middle* value is rotated.
 
@@ -112,15 +112,15 @@ But it's actually useful.
 
 Now consider a menu with five items:
 
-Introduction
+   Introduction
 
-Who are we?
+   Who are we?
 
-Business
+   Business
 
-Contact
+   Contact
 
-Links
+   Links
 
 ... and a configuration like this (taken from the example-code on the
 first pages)::
@@ -149,15 +149,17 @@ and thus it's repeated to all elements ::
 
    TS:        backColor = red
 
-Introduction (red)
+..
 
-Who are we? (red)
+   Introduction (red)
 
-Business (red)
+   Who are we? (red)
 
-Contact (red)
+   Business (red)
 
-Links (red)
+   Contact (red)
+
+   Links (red)
 
 
 Example:
@@ -168,15 +170,17 @@ repeated because the menu has five items. ::
 
    TS:        backColor = red || yellow || green
 
-**Introduction** (red)first, subpart 1
+..
 
-Who are we? (yellow) first, subpart 2
+   **Introduction** (red)first, subpart 1
 
-Business (green) first, subpart 3
+   Who are we? (yellow) first, subpart 2
 
-Contact (green) first, subpart 3 (repeated)
+   Business (green) first, subpart 3
 
-Links (green) first, subpart 3 (repeated)
+   Contact (green) first, subpart 3 (repeated)
+
+   Links (green) first, subpart 3 (repeated)
 
 
 Parts \|\*\|
@@ -191,15 +195,17 @@ after the first two menu-items the *middle* -value is used. ::
 
    TS:        backColor = red || yellow |*| white
 
-Introduction (red) first, subpart 1
+..
 
-Who are we? (yellow) first, subpart 2
+   Introduction (red) first, subpart 1
 
-**Business** (white) middle
+   Who are we? (yellow) first, subpart 2
 
-Contact (white) middle
+   **Business** (white) middle
 
-Links (white) middle
+   Contact (white) middle
+
+   Links (white) middle
 
 
 Example:
@@ -210,56 +216,58 @@ means that after the first two menu-items the *middle* -value is used. ::
 
    TS:        backColor = red || yellow |*| white |*| blue || olive
 
-Introduction (red) first, subpart 1
+..
 
-Who are we? (yellow) first, subpart 2
+   Introduction (red) first, subpart 1
 
-**Business** (white) middle
+   Who are we? (yellow) first, subpart 2
 
-Contact (blue) last, subpart 1
+   **Business** (white) middle
 
-Links (olive) last, subpart 2
+   Contact (blue) last, subpart 1
+
+   Links (olive) last, subpart 2
 
 ... and if we expand the menu a bit ( *middle* -value is repeated!)
 
-Introduction (red) first, subpart 1
+   Introduction (red) first, subpart 1
 
-Who are we? (yellow) first, subpart 2
+   Who are we? (yellow) first, subpart 2
 
-**Business** (white) middle
+   **Business** (white) middle
 
-.... (white) middle
+   .... (white) middle
 
-.... (white) middle
+   .... (white) middle
 
-.... (white) middle
+   .... (white) middle
 
-.... (white) middle
+   .... (white) middle
 
-Contact (blue) last, subpart 1
+   Contact (blue) last, subpart 1
 
-Links (olive) last, subpart 2
+   Links (olive) last, subpart 2
 
 ... and if we contract the menu to only four items (the  *middle*
 -value is discarded as it's priority is the least)
 
-Introduction (red) first, subpart 1
+   Introduction (red) first, subpart 1
 
-Who are we? (yellow) first, subpart 2
+   Who are we? (yellow) first, subpart 2
 
-Contact (blue) last, subpart 1
+   Contact (blue) last, subpart 1
 
-Links (olive) last, subpart 2
+   Links (olive) last, subpart 2
 
 ... and if we contract the menu to only 3 items (the last subpart of
 the  *first* -value is discarded as it's priority is less than the
 *last* -value)
 
-Introduction (red) first, subpart 1
+   Introduction (red) first, subpart 1
 
-Contact (blue) last, subpart 1
+   Contact (blue) last, subpart 1
 
-Links (olive) last, subpart 2
+   Links (olive) last, subpart 2
 
 
 "1: The priority is  *last, first, middle* "
@@ -283,15 +291,17 @@ the two \|\*\|\|\*\|!* ::
 
    TS:        backColor = red || yellow |*||*| blue || olive
 
-Introduction (red) first, subpart 1
+..
 
-Who are we? (yellow) first, subpart 2
+   Introduction (red) first, subpart 1
 
-**Business** (yellow) first, subpart 2 (repeated)
+   Who are we? (yellow) first, subpart 2
 
-Contact (blue) last, subpart 1
+   **Business** (yellow) first, subpart 2 (repeated)
 
-Links (olive) last, subpart 2
+   Contact (blue) last, subpart 1
+
+   Links (olive) last, subpart 2
 
 
 "3: If the  *first* - and  *middle* value are empty, the first part of the last-value is repeated before the last value"
@@ -307,15 +317,17 @@ space must exist between the two \|\*\|\|\*\|!* ::
 
    TS:        backColor = |*||*| blue || olive
 
-Introduction (blue) last, subpart 1 (repeated)
+..
 
-Who are we? (blue) last, subpart 1 (repeated)
+   Introduction (blue) last, subpart 1 (repeated)
 
-**Business** (blue) last, subpart 1 (repeated)
+   Who are we? (blue) last, subpart 1 (repeated)
 
-Contact (blue) last, subpart 1
+   **Business** (blue) last, subpart 1 (repeated)
 
-Links (olive) last, subpart 2
+   Contact (blue) last, subpart 1
+
+   Links (olive) last, subpart 2
 
 
 "4: The  *middle* value is rotated"
@@ -329,21 +341,23 @@ Example:
 
    TS:        backColor = red |*| yellow || green |*|
 
-**Introduction** (red) first
+..
 
-Who are we? (yellow) middle, subpart 1
+   **Introduction** (red) first
 
-**Business** (green) middle, subpart 2
+   Who are we? (yellow) middle, subpart 1
 
-.... (yellow) middle, subpart 1
+   **Business** (green) middle, subpart 2
 
-.... (green) middle, subpart 2
+   .... (yellow) middle, subpart 1
 
-.... (yellow) middle, subpart 1
+   .... (green) middle, subpart 2
 
-.... (green) middle, subpart 2
+   .... (yellow) middle, subpart 1
 
-**Contact** (yellow) middle, subpart 1
+   .... (green) middle, subpart 2
 
-**Links** (green) middle, subpart 2
+   **Contact** (yellow) middle, subpart 1
+
+   **Links** (green) middle, subpart 2
 

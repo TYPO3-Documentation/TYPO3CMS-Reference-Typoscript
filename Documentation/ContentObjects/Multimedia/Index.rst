@@ -167,226 +167,71 @@ au, wav, mp3:
 ~~~~~~~~~~~~~
 
 
-.. ### BEGIN~OF~TABLE ###
+.. ### BEGIN~OF~SIMPLE~TABLE ###
 
-.. container:: table-row
+================   ======================================================================   ============
+Parameter:         Description:                                                             Default:
+================   ======================================================================   ============
+width              Width of the controls. If not set, the browser defaults to 200.
+height             Height of the controls. If not set, the browser defaults to 16.
+loop               Repeat the sound, when playing finished. Set to true or false.
+autostart          Automatically start the sound. Set to true or false.
+================   ======================================================================   ============
 
-   Parameter
-         Parameter:
-
-   Description
-         Description:
-
-   Default
-         Default:
-
-
-.. container:: table-row
-
-   Parameter
-         width
-
-   Description
-         Width of the controls. If not set, the browser defaults to 200.
-
-   Default
-
-
-.. container:: table-row
-
-   Parameter
-         height
-
-   Description
-         Height of the controls. If not set, the browser defaults to 16.
-
-   Default
-
-
-.. container:: table-row
-
-   Parameter
-         loop
-
-   Description
-         Repeat the sound, when playing finished. Set to true or false.
-
-   Default
-
-
-.. container:: table-row
-
-   Parameter
-         autostart
-
-   Description
-         Automatically start the sound. Set to true or false.
-
-   Default
-
-
-.. ###### END~OF~TABLE ######
+.. ###### END~OF~SIMPLE~TABLE ######
 
 
 avi, mov, asf, mpg, wmv:
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-.. ### BEGIN~OF~TABLE ###
+.. ### BEGIN~OF~SIMPLE~TABLE ###
 
-.. container:: table-row
+================   ======================================================================   ============
+Parameter:         Description:                                                             Default:
+================   ======================================================================   ============
+width              Width of the movie.                                                      200
+height             Height of the movie.                                                     200
+autostart          Automatically start the video. Set to true or false.
 
-   Parameter
-         Parameter:
+                   **Note**: Not for "mov", there the parameter is called "autostart".
+                   See example below.
+================   ======================================================================   ============
 
-   Description
-         Description:
-
-   Default
-         Default:
-
-
-.. container:: table-row
-
-   Parameter
-         width
-
-   Description
-         Width of the movie.
-
-   Default
-         200
-
-
-.. container:: table-row
-
-   Parameter
-         height
-
-   Description
-         Height of the movie.
-
-   Default
-         200
-
-
-.. container:: table-row
-
-   Parameter
-         autostart
-
-   Description
-         Automatically start the video. Set to true or false.
-
-         **Note** : Not for "mov", there the parameter is called "autostart".
-         See example below.
-
-   Default
-
-
-.. ###### END~OF~TABLE ######
+.. ###### END~OF~SIMPLE~TABLE ######
 
 
 swf, swa, dcr:
 ~~~~~~~~~~~~~~
 
 
-.. ### BEGIN~OF~TABLE ###
+.. ### BEGIN~OF~SIMPLE~TABLE ###
 
-.. container:: table-row
+================   ======================================================================   ============
+Parameter:         Description:                                                             Default:
+================   ======================================================================   ============
+width              Width of the object. If not set, the browser defaults to approx. 200.    200
+height             Height of the object. If not set, the browser defaults to approx. 200.   200
+quality            Quality of the video.                                                    high
+================   ======================================================================   ============
 
-   Parameter
-         Parameter:
-
-   Description
-         Description:
-
-   Default
-         Default:
-
-
-.. container:: table-row
-
-   Parameter
-         width
-
-   Description
-         Width of the object. If not set, the browser defaults to approx. 200.
-
-   Default
-         200
-
-
-.. container:: table-row
-
-   Parameter
-         height
-
-   Description
-         Height of the object. If not set, the browser defaults to approx. 200.
-
-   Default
-         200
-
-
-.. container:: table-row
-
-   Parameter
-         quality
-
-   Description
-         Quality of the video.
-
-   Default
-         high
-
-
-.. ###### END~OF~TABLE ######
+.. ###### END~OF~SIMPLE~TABLE ######
 
 
 class:
 ~~~~~~
 
 
-.. ### BEGIN~OF~TABLE ###
+.. ### BEGIN~OF~SIMPLE~TABLE ###
 
-.. container:: table-row
+================   ======================================================================   ============
+Parameter:         Description:                                                             Default:
+================   ======================================================================   ============
+width              Width of the object.                                                     200
+height             Height of the object.                                                    200
+================   ======================================================================   ============
 
-   Parameter
-         Parameter:
-
-   Description
-         Description:
-
-   Default
-         Default:
-
-
-.. container:: table-row
-
-   Parameter
-         width
-
-   Description
-         Width of the object.
-
-   Default
-         200
-
-
-.. container:: table-row
-
-   Parameter
-         height
-
-   Description
-         Height of the object.
-
-   Default
-         200
-
-
-.. ###### END~OF~TABLE ######
+.. ###### END~OF~SIMPLE~TABLE ######
 
 
 Example for QuickTime (mov):

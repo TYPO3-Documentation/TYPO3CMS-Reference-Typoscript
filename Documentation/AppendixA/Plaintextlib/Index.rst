@@ -17,39 +17,20 @@ plaintextLib.inc
 Files:
 """"""
 
-.. ### BEGIN~OF~TABLE ###
+.. ### BEGIN~OF~SIMPLE~TABLE ###
 
-.. container:: table-row
+=========================   ===============================================
+File:                       Description:
+=========================   ===============================================
+plaintextLib.inc            Main class used to display plain text content.
 
-   File
-         File:
+                            Call it from a USER cObject with 'userFunc =
+                            user\_plaintext->main\_plaintext'
 
-   Description
-         Description:
+plaintext\_content.tmpl     Example template file.
+=========================   ===============================================
 
-
-.. container:: table-row
-
-   File
-         plaintextLib.inc
-
-   Description
-         Main class used to display plain text content.
-
-         Call it from a USER cObject with 'userFunc =
-         user\_plaintext->main\_plaintext'
-
-
-.. container:: table-row
-
-   File
-         plaintext\_content.tmpl
-
-   Description
-         Example template file.
-
-
-.. ###### END~OF~TABLE ######
+.. ###### END~OF~SIMPLE~TABLE ######
 
 
 Example:

@@ -96,6 +96,8 @@ plugin.feadmin.\*
 Incoming GET or POST vars:
 """"""""""""""""""""""""""
 
+.. ### BEGIN~OF~SIMPLE~TABLE ###
+
 ============  ===================
    Name:         Description:
 ============  ===================
@@ -107,6 +109,8 @@ Incoming GET or POST vars:
    fD            Fixed Data (array of fields)
    FE            Frontend Edit data array, syntax, FE[ *tablename* ][ *field name* ] = value
 ============  ===================
+
+.. ###### END~OF~SIMPLE~TABLE ######
 
 
 .. _appendix-fe-adminlib-properties:
