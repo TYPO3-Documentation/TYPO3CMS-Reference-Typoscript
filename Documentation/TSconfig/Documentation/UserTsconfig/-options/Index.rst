@@ -693,6 +693,46 @@ Various options for the user affecting the core at various points.
    Default
 
 
+ .. container:: table-row
+
+   Property
+         pageTree.showPathAboveMounts
+
+   Data type
+         boolean
+
+   Description
+          If set, the user db mount path above the mount itself is shown.
+
+          .. figure:: ../../Images/PanelUserDB.png
+             :alt: Active user db mount
+
+          This is useful if you work a lot with user db mounts.
+
+   Default
+
+ .. container:: table-row
+
+   Property
+         pageTree.doktypesToShowInNewPageDragArea
+
+   Data type
+         string
+
+   Description
+          If set, the node top panel feature can be configured by a comma-separated list.
+          Each number stands for a doctype id that should be added to the node top panel.
+
+          .. figure:: ../../Images/PanelNormal.png
+             :alt: Top panel in normal mode
+
+          .. figure:: ../../Images/PanelModified.png
+             :alt: Top panel modified
+
+   Default
+         1,6,4,7,3,254,255,199
+
+
 .. container:: table-row
 
    Property
@@ -706,7 +746,6 @@ Various options for the user affecting the core at various points.
          even in online mode. Recommended when working with workspaces a lot.
 
    Default
-
 
 .. container:: table-row
 
