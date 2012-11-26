@@ -232,8 +232,11 @@ This table shows the keys for both defaults and override values:
          language-key
 
    Description
-         One of the language-keys. See t3lib/config\_default.php for current
-         options. E.g. "dk", "de", "es" etc.
+         One of the language-keys. For current options see
+         typo3/sysext/core/Classes/Localization/Locales.php.
+         (For TYPO3 4.7 and 4.6 see t3lib/l10n/class.t3lib_l10n_locales.php and
+         for TYPO3 4.5 see t3lib/config_default.php).
+         E.g. "dk", "de", "es" etc.
 
    Default
 
