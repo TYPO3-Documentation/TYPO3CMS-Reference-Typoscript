@@ -326,6 +326,23 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
+         .. _stdwrap-ifnull:
+
+         ifNull
+
+   Data type
+         string /stdWrap
+
+   Description
+         If the content is null (NULL type in PHP), the content is overridden
+         with the value defined here.
+
+   Default
+
+
+.. container:: table-row
+
+   Property
          .. _stdwrap-ifempty:
 
          ifEmpty
@@ -334,7 +351,7 @@ value is "imported" from the field called "header" from the $cObj
          string /stdWrap
 
    Description
-         if the content is empty (trimmed) at this point, the content is loaded
+         If the content is empty (trimmed) at this point, the content is loaded
          with "ifEmpty". Zeros are treated as empty values!
 
    Default

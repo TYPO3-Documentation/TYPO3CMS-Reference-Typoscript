@@ -39,6 +39,24 @@ Also check the explanations and the examples further below!
 .. container:: table-row
 
    Property
+         isNull
+
+   Data type
+         stdWrap
+
+   Description
+         If the resulting content of the stdWrap is null (NULL type in PHP)
+         ...
+
+         Since null values cannot be assigned in TypoScript, only the stdWrap
+         features are available below this property.
+
+   Default
+
+
+.. container:: table-row
+
+   Property
          isTrue
 
    Data type
