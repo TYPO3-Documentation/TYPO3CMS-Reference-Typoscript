@@ -1,6 +1,0 @@
-﻿.. |img-47|     image:: ../../Images/manual_html_me910706.png
-.. :height: 181
-.. :width: 293
-.. :align: left
-.. :border: 0
-.. :name: Grafik40

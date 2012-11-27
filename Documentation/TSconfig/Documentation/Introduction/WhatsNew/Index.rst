@@ -4,7 +4,6 @@
 .. -*- coding: utf-8 -*- with BOM.
 
 .. include:: ../../Includes.txt
-.. include:: Images.txt
 
 
 What's new
@@ -19,7 +18,7 @@ For TYPO3 4.7 a setting in the page module has been added: The item
 The description of some properties has been added or updated.
 
 .. figure:: ../../Images/manual_html_m3858f798.png
-   alt: Blue world icon
+   :alt: Blue world icon
 
 **More information about changed properties**
 
