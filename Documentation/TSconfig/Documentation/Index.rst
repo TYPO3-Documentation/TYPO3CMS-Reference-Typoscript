@@ -6,6 +6,8 @@
 .. include:: Includes.txt
 
 
+.. _start:
+
 ==================
 TSconfig Reference
 ==================
@@ -14,7 +16,7 @@ TSconfig Reference
       doc_core_tsconfig
 
 :Version:
-      4.7.0-dev (upcoming 6.0)
+      6.0
 
 :Language:
       en

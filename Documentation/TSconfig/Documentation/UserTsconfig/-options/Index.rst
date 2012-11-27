@@ -589,7 +589,7 @@ Various options for the user affecting the core at various points.
          string
 
    Description
-         Set background colors for tree branches.
+         (Since TYPO3 6.0) Set background colors for tree branches.
 
          Color can be any valid CSS color value. The best results can be
          achieved by using rgba values.

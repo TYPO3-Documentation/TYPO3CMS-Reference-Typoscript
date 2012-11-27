@@ -9,11 +9,14 @@
 What's new
 ^^^^^^^^^^
 
-This version of the TSconfig Reference was updated for TYPO3 version
-4.7.
+This version of the TSconfig Reference was updated for TYPO3 CMS
+version 6.0.
 
-For TYPO3 4.7 a setting in the page module has been added: The item
-"Page Information" in the drop down box can now be hidden.
+For TYPO3 6.0 the User TSconfig setting
+options.pageTree.backgroundColor has been added: It allows different
+background colors for page tree branches. Additionally the options
+pageTree.showPathAboveMounts and
+pageTree.doktypesToShowInNewPageDragArea have been appended.
 
 The description of some properties has been added or updated.
 
@@ -41,4 +44,8 @@ TYPO3 4.6: `http://wiki.typo3.org/Documentation\_changes\_in\_4.6
 TYPO3 4.7: `http://forge.typo3.org/projects/typo3v4-doc\_core\_tsconfi
 g/versions/1428 <http://forge.typo3.org/projects/typo3v4-doc_core_tsco
 nfig/versions/1428>`_
+
+TYPO3 6.0: `http://forge.typo3.org/projects/typo3v4-doc\_core\_tsconfi
+g/versions/1624 <http://forge.typo3.org/projects/typo3v4-doc_core_tsco
+nfig/versions/1624>`_
 
