@@ -22,7 +22,7 @@ TypoScript as used in TYPO3 templates (and not in TSconfig).
 For explanations about the syntax of TypoScript itself, please refer
 to the "TypoScript Syntax and In-Depth Study" manual.
 
-This version is updated for TYPO3 version 4.7.
+This version is updated for TYPO3 CMS version 6.0.
 
 
 .. _what-s-new:
@@ -30,20 +30,21 @@ This version is updated for TYPO3 version 4.7.
 What's new
 ^^^^^^^^^^
 
-The main changes include new config.stat\_\* options which allow
-anonymized storage of log information. For page.includeCSS and
-page.includeJS\* conditions are now available.
+The main changes include the new cObject FILES and the getText data
+type "file". The new HMENU property "sectionIndex.useColPos" allows
+configuration of the value for colPos. The object imgResource was
+amended by the property "treatIdAsReference". For the cObject USER the
+new property stdWrap has been appended. For the TypoScript conditions
+"=" and "!=" easy comparison against multiple values has been added.
+stdWrap now offers the properties "ifNull" and "if.isNull" to allow
+NULL value handling.
 
-The new stdWrap properties "cache" and "orderedStdWrap" were added.
-stdWrap has been added to the HMENU options "maxItems", "minItems" and
-"begin". The option config.htmlTag\_stdWrap, which makes more
-modifications of the html tag possible, has been appended.
-
-New properties of filelink.icon were appended. The option
-config.pageTitleSeparator has been added allowing further
-customizations of the website title. The meta object now offers the
-new subproperty "httpEquivalent", which makes handling of meta tags
-more flexible.
+In accordance with the deprecation policy for TYPO3 CMS the following
+objects and properties have been marked as removed: The content
+objects HTML, PHP_SCRIPT, PHP_SCRIPT_INT and PHP_SCRIPT_EXT, noBlur in
+menues, all config.stat* options, minifyJS, minifyCSS,
+concatenateJsAndCss, noLinkUnderline, hover, hoverStyle and
+smallFormFields, incT3Lib_htmlmail, FE_DATA and FE_TABLE.
 
 Additionally various descriptions were improved and many smaller
 mistakes were fixed.
@@ -74,6 +75,10 @@ TYPO3 4.6: `http://wiki.typo3.org/Documentation\_changes\_in\_4.6
 TYPO3 4.7: `http://forge.typo3.org/projects/typo3v4-doc\_core\_tsref/v
 ersions/1454 <http://forge.typo3.org/projects/typo3v4-doc_core_tsref/v
 ersions/1454>`_
+
+TYPO3 6.0: `http://forge.typo3.org/projects/typo3v4-doc\_core\_tsref/v
+ersions/1623 <http://forge.typo3.org/projects/typo3v4-doc_core_tsref/v
+ersions/1623>`_
 
 
 .. _credits:
@@ -116,20 +121,21 @@ Case sensitivity
 """"""""""""""""
 
 All names and references in TypoScript are  **case sensitive!** This
-is very important to notice. That means that::
+is very important to notice. For example watch the words "TEXT" and "value"
+in this TypoScript code::
 
    myObject = TEXT
    myObject.value = <strong>Some HTML code</strong>
 
-is not the same as ::
+This is not the same as ::
 
    myObject = text
    myObject.Value = <strong>Some HTML code</strong>
 
 While the first will be recognized as the content-object "TEXT" and
 will produce the desired output, the latter will not be recognized and
-will not output anything. Even if you wrote "TEXT" in uppercase in the
-second example, it would still not work, because the property "value"
+will not output anything. Even if you wrote **"TEXT"** in uppercase in the
+second example, it would still not work, because the property **"value"**
 is misspelled.
 
 Always remember: In this manual the case of objects **is** important.
