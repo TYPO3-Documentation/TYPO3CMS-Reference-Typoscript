@@ -233,6 +233,22 @@ imgResource.
 .. container:: table-row
 
    Property
+         treatIdAsReference
+
+   Data type
+         boolean
+
+   Description
+         If set, given UIDs are interpreted as UIDs to sys_file_reference
+         instead of to sys_file. This allows using file references, e.g. with
+         import.data = levelmedia:....
+
+   Default
+         0
+
+.. container:: table-row
+
+   Property
          maxW
 
    Data type
