@@ -29,9 +29,6 @@ rootlevel of the object. This is non-standard! Check the examples.
    Description
          Description:
 
-   Default
-         Default:
-
 
 .. container:: table-row
 
@@ -39,12 +36,10 @@ rootlevel of the object. This is non-standard! Check the examples.
          value
 
    Data type
-         value /stdWrap
+         string /stdWrap
 
    Description
          Text, which you want to output.
-
-   Default
 
 
 .. container:: table-row
@@ -54,11 +49,6 @@ rootlevel of the object. This is non-standard! Check the examples.
 
    Data type
          ->stdWrap
-
-   Description
-
-
-   Default
 
 
 .. ###### END~OF~TABLE ######

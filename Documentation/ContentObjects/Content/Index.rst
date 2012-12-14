@@ -45,8 +45,6 @@ the records selected which has a higher value than the current.
    Description
          The SQL-statement is set here!
 
-   Default
-
 
 .. container:: table-row
 
@@ -65,8 +63,6 @@ the records selected which has a higher value than the current.
          these: "pages\_", "tt\_", "tx\_", "ttx\_", "fe\_", "user\_" or
          "static\_".
 
-   Default
-
 
 .. container:: table-row
 
@@ -75,9 +71,6 @@ the records selected which has a higher value than the current.
 
    Data type
          cObject
-
-   Description
-
 
    Default
          < [tablename]
@@ -113,8 +106,6 @@ the records selected which has a higher value than the current.
          collect mode. If set, elements of the current page will be at the
          bottom.
 
-   Default
-
 
 .. container:: table-row
 
@@ -127,8 +118,6 @@ the records selected which has a higher value than the current.
    Description
          Wrap the whole content-story...
 
-   Default
-
 
 .. container:: table-row
 
@@ -140,8 +129,6 @@ the records selected which has a higher value than the current.
 
    Description
          (Executed after ".wrap".)
-
-   Default
 
 
 .. ###### END~OF~TABLE ######

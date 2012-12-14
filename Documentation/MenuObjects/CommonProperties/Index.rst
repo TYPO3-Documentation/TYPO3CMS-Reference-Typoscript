@@ -37,12 +37,10 @@ otherwise noted!
          sectionIndex
 
    Data type
-
+         *(array of keys)*
 
    Description
          (see below)
-
-   Default
 
 
 .. container:: table-row
@@ -51,12 +49,13 @@ otherwise noted!
          alternativeSortingField
 
    Data type
-
+         string
 
    Description
          Normally the menuitems are sorted by the fields "sorting" in the
          pages- and tt\_content-table. Here you can enter a list of fields that
-         is used in the SQL- "ORDER BY" statement instead.
+         is used in the SQL- "ORDER BY" statement instead. You can also provide
+         the sorting order.
 
          **Examples (for "pages" table):**
 
@@ -69,8 +68,6 @@ otherwise noted!
          This property works with normal menus, sectionsIndex menus and
          special-menus of type "directory".
 
-   Default
-
 
 .. container:: table-row
 
@@ -78,7 +75,7 @@ otherwise noted!
          minItems
 
    Data type
-         int
+         integer
 
    Description
          The minimum items in the menu. If the number of pages does not reach
@@ -87,8 +84,6 @@ otherwise noted!
 
          Takes precedence over HMENU.minItems.
 
-   Default
-
 
 .. container:: table-row
 
@@ -96,14 +91,12 @@ otherwise noted!
          maxItems
 
    Data type
-         int
+         integer
 
    Description
          The maximum items in the menu. More items will be ignored.
 
          Takes precedence over HMENU.maxItems.
-
-   Default
 
 
 .. container:: table-row
@@ -112,7 +105,7 @@ otherwise noted!
          begin
 
    Data type
-         int +calc
+         integer +calc
 
    Description
          The first item in the menu.
@@ -125,8 +118,6 @@ otherwise noted!
             begin = 3
 
          Takes precedence over HMENU.begin.
-
-   Default
 
 
 .. container:: table-row
@@ -150,8 +141,6 @@ otherwise noted!
          width=200,height=300,status=0,menubar=0
 
          **Note:** Does not work with JSMENU's.
-
-   Default
 
 
 .. container:: table-row
@@ -187,8 +176,6 @@ otherwise noted!
          sectionIndex! In that case you need special unique names of items
          based on something else than the uid of the parent page of course!
 
-   Default
-
 
 .. container:: table-row
 
@@ -196,15 +183,13 @@ otherwise noted!
          debugItemConf
 
    Data type
-
+         boolean
 
    Description
          Outputs (by the debug()-function) the configuration arrays for each
          menuitem. Useful to debug optionSplit things and such...
 
          Applies to GMENU, TMENU and IMGMENU.
-
-   Default
 
 
 .. container:: table-row
@@ -225,8 +210,6 @@ otherwise noted!
 
          Applies to GMENU, TMENU and IMGMENU.
 
-   Default
-
 
 .. container:: table-row
 
@@ -246,8 +229,6 @@ otherwise noted!
          Must be rawurlencoded.
 
          Applies to GMENU, TMENU and IMGMENU.
-
-   Default
 
 
 .. container:: table-row
@@ -286,8 +267,6 @@ otherwise noted!
          the return URL in the GET var "return\_url" and the page id in the GET
          var "pageId".
 
-   Default
-
 
 .. container:: table-row
 
@@ -316,8 +295,6 @@ otherwise noted!
          You can override element states like SPC, IFSUB, ACT, CUR or USR by
          setting the key ITEM\_STATE in the page records. See cObject
          HMENU/special=userdefined for more information.
-
-   Default
 
 
 .. container:: table-row
@@ -371,8 +348,6 @@ otherwise noted!
 
          Applies to GMENU, TMENU, GMENU\_LAYERS, TMENU\_LAYERS and
          GMENU\_FOLDOUT on >= 2 :sup:`nd` level in a menu.
-
-   Default
 
 
 .. ###### END~OF~TABLE ######

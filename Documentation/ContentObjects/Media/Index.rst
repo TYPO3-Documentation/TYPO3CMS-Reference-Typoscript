@@ -192,8 +192,6 @@ automatically.
               swa = SWF
             }
 
-   Default
-
 
 .. container:: table-row
 
@@ -216,8 +214,6 @@ automatically.
               defaultHeight = 50
             }
 
-   Default
-
 
 .. container:: table-row
 
@@ -229,8 +225,6 @@ automatically.
 
    Description
          URL of the media file.
-
-   Default
 
 
 .. container:: table-row
@@ -264,8 +258,6 @@ automatically.
 
          }
 
-   Default
-
 
 .. container:: table-row
 
@@ -279,8 +271,6 @@ automatically.
          If the file is a URL and forcePlayer is not set, the URL will be
          called directly instead of using a player.
 
-   Default
-
 
 .. container:: table-row
 
@@ -288,12 +278,10 @@ automatically.
          width
 
    Data type
-         int /stdWrap
+         integer /stdWrap
 
    Description
          Media width, will be overridden by parameter.mmWidth.
-
-   Default
 
 
 .. container:: table-row
@@ -302,12 +290,10 @@ automatically.
          height
 
    Data type
-         int /stdWrap
+         integer /stdWrap
 
    Description
          Media height, will be overridden by parameter.mmHeight.
-
-   Default
 
 
 .. container:: table-row
@@ -317,11 +303,6 @@ automatically.
 
    Data type
          ->stdWrap
-
-   Description
-
-
-   Default
 
 
 .. ###### END~OF~TABLE ######

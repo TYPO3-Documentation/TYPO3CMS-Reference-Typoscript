@@ -44,8 +44,6 @@
 
          "left", "page", "frameset"
 
-   Default
-
 
 .. container:: table-row
 
@@ -56,14 +54,12 @@
          *url-parameters*
 
    Description
-         **Example:**
+         **Example:** ::
 
-         print=1&othervar=anotherthing
+            print=1&othervar=anotherthing
 
-         would add ' *&print=1&othervar=anotherthing* ' to the ".src"-content
-         (if not ".src" is set manually!!)
-
-   Default
+         This would add ' *&print=1&othervar=anotherthing* ' to the
+         ".src"-content (if not ".src" is set manually).
 
 
 .. container:: table-row
@@ -79,8 +75,6 @@
 
          scrolling="AUTO" noresize frameborder="NO"
 
-   Default
-
 
 .. container:: table-row
 
@@ -93,7 +87,7 @@
    Description
          Manually set name of frame
 
-         **NOTE:** Is set automatically and should not be overridden under
+         **Note:** Is set automatically and should not be overridden under
          normal conditions!
 
    Default

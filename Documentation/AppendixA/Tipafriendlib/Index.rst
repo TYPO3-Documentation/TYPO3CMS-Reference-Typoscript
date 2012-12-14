@@ -102,8 +102,6 @@ tipafriendLib.inc properties
    Description
          The template-file.
 
-   Default
-
 
 .. container:: table-row
 
@@ -116,8 +114,6 @@ tipafriendLib.inc properties
    Description
          Code to define, what the script does. Case sensitive.
 
-   Default
-
 
 .. container:: table-row
 
@@ -128,10 +124,8 @@ tipafriendLib.inc properties
          string
 
    Description
-         The default code (see above) if the value is empty. By default it's
-         not set and a help screen will appear
-
-   Default
+         The default code (see above) if the value is empty. By default it is
+         not set and a help screen will appear.
 
 
 .. container:: table-row
@@ -151,8 +145,6 @@ tipafriendLib.inc properties
 
             wrap1.wrap = <b> | </b>
 
-   Default
-
 
 .. container:: table-row
 
@@ -164,8 +156,6 @@ tipafriendLib.inc properties
 
    Description
          Global Wrap 2 (see above)
-
-   Default
 
 
 .. container:: table-row
@@ -179,8 +169,6 @@ tipafriendLib.inc properties
    Description
          Value for ###GC1### marker (Global color 1)
 
-   Default
-
 
 .. container:: table-row
 
@@ -193,8 +181,6 @@ tipafriendLib.inc properties
    Description
          Value for ###GC2### marker (Global color 2)
 
-   Default
-
 
 .. container:: table-row
 
@@ -206,8 +192,6 @@ tipafriendLib.inc properties
 
    Description
          Value for ###GC3### marker (Global color 3)
-
-   Default
 
 
 .. container:: table-row
@@ -222,8 +206,6 @@ tipafriendLib.inc properties
          TypoLink configuration for the TIPLINK to the TIPFORM page.
          .additionalParams is added the parameter "&tipUrl="
 
-   Default
-
 
 .. container:: table-row
 
@@ -236,8 +218,6 @@ tipafriendLib.inc properties
    Description
          If set, the page is fetched as HTML and send in HTML (a plain text
          version is sent as well).
-
-   Default
 
 
 .. ###### END~OF~TABLE ######

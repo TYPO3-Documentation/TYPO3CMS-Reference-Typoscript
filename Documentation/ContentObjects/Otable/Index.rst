@@ -56,8 +56,6 @@ the table tag.
 
          All measures are in pixels.
 
-   Default
-
 
 .. container:: table-row
 
@@ -66,11 +64,6 @@ the table tag.
 
    Data type
          cObject
-
-   Description
-
-
-   Default
 
 
 .. container:: table-row
@@ -96,11 +89,6 @@ the table tag.
    Data type
          ->stdWrap
 
-   Description
-
-
-   Default
-
 
 .. ###### END~OF~TABLE ######
 
@@ -116,6 +104,6 @@ Example:
 
    top.100 = OTABLE
    top.100.offset = 310,8
-   top.100.tableParams = border="1" cellpadding="0" cellspacing="0"
+   top.100.tableParams = border="1" style="border-spacing: 0px;"
    top.100.1 < temp.topmenu
 

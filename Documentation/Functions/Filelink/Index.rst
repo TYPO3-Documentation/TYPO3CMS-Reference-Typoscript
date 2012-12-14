@@ -45,8 +45,6 @@ icon, size and file are rendered in the listed order.
 
             path = "uploads/media/"
 
-   Default
-
 
 .. container:: table-row
 
@@ -79,8 +77,6 @@ icon, size and file are rendered in the listed order.
 
          These sub-properties all have stdWrap available.
 
-   Default
-
 
 .. container:: table-row
 
@@ -93,8 +89,6 @@ icon, size and file are rendered in the listed order.
    Description
          This is a comma separated list of those file extensions that should
          render as thumbnails instead of icons.
-
-   Default
 
 
 .. container:: table-row
@@ -121,8 +115,6 @@ icon, size and file are rendered in the listed order.
             icon_thumbSize = 150
             icon_thumbSize = 40x40
 
-   Default
-
 
 .. container:: table-row
 
@@ -138,8 +130,6 @@ icon, size and file are rendered in the listed order.
          If this is set, it'll substitute the use of the thumbs-script for
          display of thumbnails.
 
-   Default
-
 
 .. container:: table-row
 
@@ -150,9 +140,10 @@ icon, size and file are rendered in the listed order.
          boolean
 
    Description
-         If the icon should be linked also
+         Set if the icon should be linked as well.
 
    Default
+         0
 
 
 .. container:: table-row
@@ -169,8 +160,6 @@ icon, size and file are rendered in the listed order.
 
          Use this to eg. import another label from a database field or such.
 
-   Default
-
 
 .. container:: table-row
 
@@ -182,8 +171,6 @@ icon, size and file are rendered in the listed order.
 
    Description
          Wraps the links.
-
-   Default
 
 
 .. container:: table-row
@@ -199,6 +186,7 @@ icon, size and file are rendered in the listed order.
          <A>-tag.
 
    Default
+         0
 
 
 .. container:: table-row
@@ -213,8 +201,6 @@ icon, size and file are rendered in the listed order.
          stdWrap of the label (by default the label is the filename) after
          having been wrapped with A-tag!
 
-   Default
-
 
 .. container:: table-row
 
@@ -226,8 +212,6 @@ icon, size and file are rendered in the listed order.
 
    Description
          Set if size should be shown
-
-   Default
 
 
 .. container:: table-row
@@ -245,7 +229,7 @@ icon, size and file are rendered in the listed order.
          This has the advantage that any clicks on the file can be registered
          in statistics.
 
-         The disadvantage is, that users cant right-click and select "Save
+         The disadvantage is, that users cannot right-click and select "Save
          Target As" in the browser.
 
          **Extra properties:**
@@ -277,8 +261,6 @@ icon, size and file are rendered in the listed order.
             jumpurl.secure = 1
             jumpurl.secure.mimeTypes = pdf=application/pdf, doc=application/msword
 
-   Default
-
 
 .. container:: table-row
 
@@ -289,9 +271,7 @@ icon, size and file are rendered in the listed order.
          target /stdWrap
 
    Description
-
-
-   Default
+         Target for the <a>-tag.
 
 
 .. container:: table-row
@@ -301,11 +281,6 @@ icon, size and file are rendered in the listed order.
 
    Data type
          ->stdWrap
-
-   Description
-
-
-   Default
 
 
 .. container:: table-row
@@ -323,8 +298,6 @@ icon, size and file are rendered in the listed order.
 
          class="board"
 
-   Default
-
 
 .. container:: table-row
 
@@ -337,8 +310,6 @@ icon, size and file are rendered in the listed order.
    Description
          if set, any 2-digit prepended numbers ("eg \_23") in the filename is
          removed.
-
-   Default
 
 
 .. container:: table-row
@@ -356,8 +327,6 @@ icon, size and file are rendered in the listed order.
          properties)
 
          If no alttext is specified, it will use an empty alttext
-
-   Default
 
 
 .. container:: table-row
@@ -390,8 +359,6 @@ icon, size and file are rendered in the listed order.
 
          "longdesc" attribute (URL pointing to document with extensive details
          about image).
-
-   Default
 
 
 .. ###### END~OF~TABLE ######

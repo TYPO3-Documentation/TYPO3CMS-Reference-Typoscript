@@ -22,7 +22,7 @@ Opera. The menu on the first level is a GMENU because GMENU\_FOLDOUT
 is responsible for this, but the submenu on the next level (referred
 to as 2nd level) can be both TMENU and another GMENU.
 
-**NOTE:** You must include the library
+**Note:** You must include the library
 "typo3/sysext/statictemplates/media/scripts/gmenu\_foldout.php".
 
 The script implemented is taken from
@@ -59,8 +59,6 @@ http://www9.ewebcity.com/skripts/foldoutmenu\_move.htm
          If set, items that has a submenu is not linked. Items without a
          submenu are always linked in the regular ways.
 
-   Default
-
 
 .. container:: table-row
 
@@ -68,7 +66,7 @@ http://www9.ewebcity.com/skripts/foldoutmenu\_move.htm
          foldTimer
 
    Data type
-         int
+         integer
 
    Description
          The timeout in the animation, these are milliseconds.
@@ -83,7 +81,7 @@ http://www9.ewebcity.com/skripts/foldoutmenu\_move.htm
          foldSpeed
 
    Data type
-         int, range 1-100
+         integer, range 1-100
 
    Description
          How many steps in an animation? Choose 1 for no animation.
@@ -103,8 +101,6 @@ http://www9.ewebcity.com/skripts/foldoutmenu\_move.htm
    Description
          Stay open when you click a new toplink? (Level 1)
 
-   Default
-
 
 .. container:: table-row
 
@@ -112,7 +108,7 @@ http://www9.ewebcity.com/skripts/foldoutmenu\_move.htm
          bottomHeight
 
    Data type
-         int, pixels
+         integer, pixels
 
    Description
          Sets the height of the bottom layer. Is important if the bottom layer
@@ -129,7 +125,7 @@ http://www9.ewebcity.com/skripts/foldoutmenu\_move.htm
          menuWidth
 
    Data type
-         int, pixels
+         integer, pixels
 
    Description
          Width of the whole menu main layer. Important to set, especially for
@@ -146,7 +142,7 @@ http://www9.ewebcity.com/skripts/foldoutmenu\_move.htm
          menuHeight
 
    Data type
-         int
+         integer
 
    Description
          Height of the whole menu layer. Seems not to be not that important.
@@ -168,8 +164,6 @@ http://www9.ewebcity.com/skripts/foldoutmenu\_move.htm
          you don't set this value the items will appear on top of their
          "parent".
 
-   Default
-
 
 .. container:: table-row
 
@@ -181,8 +175,6 @@ http://www9.ewebcity.com/skripts/foldoutmenu\_move.htm
 
    Description
          Offset of the menu main layer on the page. From upper left corner
-
-   Default
 
 
 .. container:: table-row
@@ -197,8 +189,6 @@ http://www9.ewebcity.com/skripts/foldoutmenu\_move.htm
          Background color behind menu. If not set, transparent (which will not
          work very well in case .foldSpeed is set to something else than 1. But
          see for yourself)
-
-   Default
 
 
 .. container:: table-row
@@ -239,8 +229,6 @@ http://www9.ewebcity.com/skripts/foldoutmenu\_move.htm
    Description
          Content for the bottom layer that covers the end of the menu.
 
-   Default
-
 
 .. container:: table-row
 
@@ -248,7 +236,7 @@ http://www9.ewebcity.com/skripts/foldoutmenu\_move.htm
          adjustItemsH
 
    Data type
-         int
+         integer
 
    Description
          Adjusts the height calculation of the menulayers of the first level
@@ -261,8 +249,6 @@ http://www9.ewebcity.com/skripts/foldoutmenu\_move.htm
          This value will substract 10 pixels from the height of the layer in
          calculations.
 
-   Default
-
 
 .. container:: table-row
 
@@ -270,15 +256,13 @@ http://www9.ewebcity.com/skripts/foldoutmenu\_move.htm
          adjustSubItemsH
 
    Data type
-         int
+         integer
 
    Description
          Adjusts the height calculation of the menu layers of the second level
          (subitems, called Sub)
 
          See above
-
-   Default
 
 
 .. container:: table-row
@@ -302,8 +286,6 @@ http://www9.ewebcity.com/skripts/foldoutmenu\_move.htm
          the position, put the marker ###ARROW\_IMAGE### into the wrap of the
          item and the image will be put there instead.
 
-   Default
-
 
 .. container:: table-row
 
@@ -320,8 +302,6 @@ http://www9.ewebcity.com/skripts/foldoutmenu\_move.htm
 
             hspace=5 vspace=7
 
-   Default
-
 
 .. container:: table-row
 
@@ -333,8 +313,6 @@ http://www9.ewebcity.com/skripts/foldoutmenu\_move.htm
 
    Description
          If set, the active menu items will fold out "onLoad".
-
-   Default
 
 
 .. ###### END~OF~TABLE ######

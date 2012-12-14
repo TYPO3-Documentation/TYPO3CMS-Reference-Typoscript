@@ -73,7 +73,7 @@ the gif-file. This is especially used with the IMGMENU menuobject.
          noBlur
 
    Data type
-         Boolean
+         boolean
 
    Description
          Normally graphical links are "blurred" if the browser is MSIE. This
@@ -100,8 +100,6 @@ the gif-file. This is especially used with the IMGMENU menuobject.
          This "explodes" or "implodes" the image-map. Useful to let the hot
          area cover a little more than just the letters of the text.
 
-   Default
-
 
 .. container:: table-row
 
@@ -117,8 +115,6 @@ the gif-file. This is especially used with the IMGMENU menuobject.
          (Used from TEXT Gifbuilding objects, this has stdWrap properties.
          Otherwise not)
 
-   Default
-
 
 .. container:: table-row
 
@@ -133,8 +129,6 @@ the gif-file. This is especially used with the IMGMENU menuobject.
 
          (Used from TEXT Gifbuilding objects, this has stdWrap properties.
          Otherwise not)
-
-   Default
 
 
 .. ###### END~OF~TABLE ######

@@ -15,11 +15,17 @@ This is a very flexible object whose rendering can vary depending on a
 given key. The principle is similar to that of the "switch" construct
 in PHP.
 
+The value of the "key" property determines, which of the provided
+cObjects will finally be rendered.
+
 The "key" property is expected to match one of the values found in the
-"Array". If none is found, the "default" property will be used. Any
-string can be used as value in the "Array" except for those that match
-another property. So the forbidden values are: "setCurrent", "key",
-"stdWrap" and "if". And of course, "default" has a special meaning.
+"array of cObjects". Any string can be used as value in this array,
+except for those that match another property. So the forbidden values
+are: "if", "setCurrent", "key", and "stdWrap". "default" also cannot
+be used as it has a special meaning: If the value of the "key"
+property is *not* found in the array of cObjects, then the cObject
+from the "default" property will be used.
+
 
 .. ### BEGIN~OF~TABLE ###
 
@@ -41,6 +47,18 @@ another property. So the forbidden values are: "setCurrent", "key",
 .. container:: table-row
 
    Property
+         if
+
+   Data type
+         ->if
+
+   Description
+         If "if" returns false, nothing is returned.
+
+
+.. container:: table-row
+
+   Property
          setCurrent
 
    Data type
@@ -48,8 +66,6 @@ another property. So the forbidden values are: "setCurrent", "key",
 
    Description
          Sets the "current"-value.
-
-   Default
 
 
 .. container:: table-row
@@ -61,14 +77,34 @@ another property. So the forbidden values are: "setCurrent", "key",
          string /stdWrap
 
    Description
-         This is used to define the source of the value that will be matched
-         against the values of "Array". It will generally not be a simple
-         string, but use its stdWrap properties to retrieve a dynamic value
-         from some specific source, typically a field of the current record
-         (see example below).
+         The key, which determines, which cObject will be rendered. Its
+         value is expected to match the name of one of the cObjects from
+         the array of cObjects; this cObject is then rendered. If no name
+         of a cObject is matched, the cObject from the property "default"
+         is rendered.
+
+         This defines the source of the value that will be matched against
+         the values of the "array of cObjects". It will generally not be a
+         simple string, but use its stdWrap properties to retrieve a
+         dynamic value from some specific source, typically a field of the
+         current record. See the example below.
 
    Default
          default
+
+
+.. container:: table-row
+
+   Property
+         *(array of cObjects)*
+
+   Data type
+         cObject
+
+   Description
+         Array of cObjects. Use this to define cObjects for the different
+         values of "key". If "key" has a certain value, the according
+         cObject will be rendered.
 
 
 .. container:: table-row
@@ -80,24 +116,8 @@ another property. So the forbidden values are: "setCurrent", "key",
          cObject
 
    Description
-         Defines the rendering for all values of "key" that don't match any of
-         the values of "Array".
-
-   Default
-
-
-.. container:: table-row
-
-   Property
-         Array...
-
-   Data type
-         cObject
-
-   Description
-         Defines the rendering for a number of values.
-
-   Default
+         Use this to define the rendering for *those* values of "key" that
+         do *not* match any of the values of the "array of cObjects".
 
 
 .. container:: table-row
@@ -112,22 +132,6 @@ another property. So the forbidden values are: "setCurrent", "key",
          stdWrap around any object that was rendered no matter what the "key"
          value is.
 
-   Default
-
-
-.. container:: table-row
-
-   Property
-         if
-
-   Data type
-         ->if
-
-   Description
-         If "if" returns false, nothing is returned.
-
-   Default
-
 
 .. ###### END~OF~TABLE ######
 
@@ -141,21 +145,22 @@ Example:
 
 This example chooses between two different renderings of some content
 depending on whether the field "layout" is "1" or not ("default"). The
-result is in either case wrapped with "\|<br />". If the field
+result is in either case wrapped with "\|<br>". If the field
 "header" turns out not to be set ("false") an empty string is returned
 anyway. ::
 
    stuff = CASE
    stuff.key.field = layout
    stuff.if.isTrue.field = header
-   stuff.stdWrap.wrap = |<br />
 
-   stuff.default = TEXT
-   stuff.default {
-     ....
-   }
    stuff.1 = TEXT
    stuff.1 {
      ....
    }
+   stuff.default = TEXT
+   stuff.default {
+     ....
+   }
+
+   stuff.stdWrap.wrap = |<br>
 

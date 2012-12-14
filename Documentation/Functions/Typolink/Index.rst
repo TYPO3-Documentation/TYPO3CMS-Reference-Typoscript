@@ -59,8 +59,6 @@ with the link-parameters (lowercased)!
    Description
          Target used for file links
 
-   Default
-
 
 .. container:: table-row
 
@@ -73,8 +71,6 @@ with the link-parameters (lowercased)!
    Description
          Target used for internal links
 
-   Default
-
 
 .. container:: table-row
 
@@ -86,8 +82,6 @@ with the link-parameters (lowercased)!
 
    Description
          Adds a "&no\_cache=1"-parameter to the link
-
-   Default
 
 
 .. container:: table-row
@@ -108,8 +102,6 @@ with the link-parameters (lowercased)!
 
          The $TYPO3\_CONF\_VARS['SYS']['encryptionKey'] is included in the hash
          in order to make it unique for the server and non-predictable.
-
-   Default
 
 
 .. container:: table-row
@@ -138,9 +130,7 @@ with the link-parameters (lowercased)!
 
             .additionalParams.data = register:SWORD_PARAMS
 
-         **NOTE:** This is only active for internal links!
-
-   Default
+         **Note:** This is only active for internal links!
 
 
 .. container:: table-row
@@ -173,8 +163,6 @@ with the link-parameters (lowercased)!
 
          **.exclude:** List of query arguments to exclude from the link (eg L
          or cHash).
-
-   Default
 
 
 .. container:: table-row
@@ -218,8 +206,6 @@ with the link-parameters (lowercased)!
    Description
          Wraps the links.
 
-   Default
-
 
 .. container:: table-row
 
@@ -234,7 +220,7 @@ with the link-parameters (lowercased)!
          <A>-tag.
 
    Default
-
+         0
 
 .. container:: table-row
 
@@ -290,7 +276,7 @@ with the link-parameters (lowercased)!
          slash (//) or if a scheme (like http) is found inside it, the link
          will be considered to be an external one. If there's a slash but not a
          dot before it, it is considered to be a path to a file and link is
-         made to it (even if it doesn't exist as it must consider that it might
+         made to it (even if it does not exist as it must consider that it might
          be a speaking URL). In all other cases it is assumed that the value is
          either a page id and a page alias and a link is made to that page, if
          it exists.
@@ -369,8 +355,6 @@ with the link-parameters (lowercased)!
 
             typolink.parameter.data = parameters : allParams
 
-   Default
-
 
 .. container:: table-row
 
@@ -412,8 +396,6 @@ with the link-parameters (lowercased)!
    Description
          Sets the title parameter of the A-tag.
 
-   Default
-
 
 .. container:: table-row
 
@@ -429,8 +411,6 @@ with the link-parameters (lowercased)!
 
          status=1,menubar=1,scrollbars=1,resizable=1,location=1,directories=1,t
          oolbar=1
-
-   Default
 
 
 .. container:: table-row
@@ -450,8 +430,6 @@ with the link-parameters (lowercased)!
          So, in these two cases you will not get the value wrapped but the url
          or target value returned!
 
-   Default
-
 
 .. container:: table-row
 
@@ -467,8 +445,6 @@ with the link-parameters (lowercased)!
 
          This is used create a link, which jumps from one page directly the
          section on another page.
-
-   Default
 
 
 .. container:: table-row
@@ -486,8 +462,6 @@ with the link-parameters (lowercased)!
 
          class="board"
 
-   Default
-
 
 .. container:: table-row
 
@@ -500,8 +474,6 @@ with the link-parameters (lowercased)!
    Description
          If set, typolinks pointing to access restricted pages will still link
          to the page even though the page cannot be accessed.
-
-   Default
 
 
 .. container:: table-row
@@ -532,8 +504,6 @@ with the link-parameters (lowercased)!
                        $finalTagParts['aTagParams'] . '>
 
          The userfunction must return an <A>-tag.
-
-   Default
 
 
 .. ###### END~OF~TABLE ######

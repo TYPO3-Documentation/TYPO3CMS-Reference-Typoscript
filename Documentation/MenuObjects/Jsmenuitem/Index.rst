@@ -46,8 +46,6 @@ JSMENUITEM
          ever link to anything. Only update the content of the next selector
          box on next level.
 
-   Default
-
 
 .. container:: table-row
 
@@ -61,8 +59,6 @@ JSMENUITEM
          If set an item in the menu selector will always link. This takes
          precedence over "noLink".
 
-   Default
-
 
 .. container:: table-row
 
@@ -74,8 +70,6 @@ JSMENUITEM
 
    Description
          if set, the first link will be shown when the menu is updated.
-
-   Default
 
 
 .. container:: table-row
@@ -89,8 +83,6 @@ JSMENUITEM
    Description
          if set, the active level will be selected, if present
 
-   Default
-
 
 .. container:: table-row
 
@@ -103,8 +95,6 @@ JSMENUITEM
    Description
          wraps the selector box
 
-   Default
-
 
 .. container:: table-row
 
@@ -112,7 +102,7 @@ JSMENUITEM
          width
 
    Data type
-         int+
+         positive integer
 
    Description
          Initial width of the boxes set by a number of \_ (underscores)
@@ -127,7 +117,7 @@ JSMENUITEM
          elements
 
    Data type
-         int+
+         positive integer
 
    Description
          Initial number of elements in the menu. This is of course overruled by
@@ -151,8 +141,6 @@ JSMENUITEM
 
          style="width: 200px;"
 
-   Default
-
 
 .. container:: table-row
 
@@ -164,8 +152,6 @@ JSMENUITEM
 
    Description
          Firt label in top of the menu (default is blank)
-
-   Default
 
 
 .. ###### END~OF~TABLE ######

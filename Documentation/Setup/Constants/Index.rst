@@ -11,6 +11,10 @@
 "CONSTANTS"
 ^^^^^^^^^^^
 
+This object can be used to define constants. This is useful, if you
+need one and the same value at many places in your website. With
+constants, you can maintain it easily.
+
 .. ### BEGIN~OF~TABLE ###
 
 .. container:: table-row
@@ -31,24 +35,26 @@
 .. container:: table-row
 
    Property
-         Array...
+         *(array of keys)*
 
    Data type
-         *string*
+         *(string)*
 
    Description
-         Constants.
+         Constants in the form *constants.key = value*.
 
-         **Examples:**
+         The "key" is the constant name, which you write in your texts. The
+         "value" is the actual output, which you want to get in your website.
 
-         .EMAIL =  *email@email.com*
+         **Examples:** ::
 
-         Now if parseFunc anywhere is configured with constants=1 then all
-         cases of the string ###EMAIL### will be substituted in the text.
+            constants.EMAIL = email@email.com
 
-         see ->parseFunc
+         If now parseFunc somewhere is configured with .constants=1, then all
+         occurrences of the string ###EMAIL### in the text will be substituted
+         with the actual address.
 
-   Default
+         See ->parseFunc.
 
 
 .. ###### END~OF~TABLE ######

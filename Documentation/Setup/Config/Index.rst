@@ -54,8 +54,6 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
                 L = 3
             }
 
-   Default
-
 
 .. container:: table-row
 
@@ -102,8 +100,6 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          **Note** : Do  **not** include the "type" parameter in the linkVars
          list, as this can result in unexpected behavior.
 
-   Default
-
 
 .. container:: table-row
 
@@ -145,8 +141,6 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          This will by default add "&MP=2-207" to all links pointing to pages
          36,37 and 48
 
-   Default
-
 
 .. container:: table-row
 
@@ -173,8 +167,6 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          which is processed already (by a previous ID root point) will not be
          processed again.
 
-   Default
-
 
 .. container:: table-row
 
@@ -187,8 +179,6 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    Description
          If set, the typolink function will not try to find the closest MP
          value for the id.
-
-   Default
 
 
 .. container:: table-row
@@ -270,8 +260,6 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          By default a header "content-type:text/html; charset..." is sent. This
          option will disable that.
 
-   Default
-
 
 .. container:: table-row
 
@@ -327,8 +315,6 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
 
          Thanks to Ole Tange, www.forbrug.dk for co-authoring this feature.
 
-   Default
-
 
 .. container:: table-row
 
@@ -363,8 +349,6 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          allowed and never be send when logins are allowed! Then there will
          never be problems with logins and same-URLs.
 
-   Default
-
 
 .. container:: table-row
 
@@ -384,21 +368,19 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
 
          (this will send a content-header for a WAP-site)
 
-         Content-type: image/gif \| Expires: Mon, 25 Jul 2011 05:00:00 GMT
+         Content-type: image/gif \| Expires: Mon, 25 Jul 2017 05:00:00 GMT
 
          (this will send a content-header for a GIF-file and an Expires header)
 
-         Location: www.typo3.com
+         Location: www.typo3.org
 
-         (This redirects the page to `www.typo3.com <http://www.typo3.com/>`_ )
+         (This redirects the page to `www.typo3.org <http://www.typo3.org/>`_ )
 
          By default TYPO3 sends a "Content-Type" header with the defined
          encoding, unless this is disabled using config.disableCharsetHeader
          (see above). It then sends cache headers, if configured (see above).
          Then come the additional headers, plus finally a "Content-Length"
          header, if enabled (see below).
-
-   Default
 
 
 .. container:: table-row
@@ -417,8 +399,6 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          length header cannot include the length of these objects and the
          content-length will cut of the length of the document in some
          browsers.
-
-   Default
 
 
 .. container:: table-row
@@ -469,8 +449,6 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
 
          PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 
-   Default
-
 
 .. container:: table-row
 
@@ -507,8 +485,6 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          If you are not running in compliance mode you will get some other
          message. MSIE will report "BackCompat" for instance - this means it
          runs in quirks-mode, supporting all the old "browser-bugs".
-
-   Default
 
 
 .. container:: table-row
@@ -550,8 +526,6 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
 
          same as config.doctype if set to a keyword
 
-   Default
-
 
 .. container:: table-row
 
@@ -578,8 +552,6 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
 
          Any other string is used as the XML prologue itself.
 
-   Default
-
 
 .. container:: table-row
 
@@ -602,8 +574,6 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
 
             config.htmlTag_setParams = xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US"
 
-   Default
-
 
 .. container:: table-row
 
@@ -617,8 +587,6 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          (Since TYPO3 4.7) Modify the whole <html> tag with stdWrap
          functionality. This can be used to extend or override this tag.
 
-   Default
-
 
 .. container:: table-row
 
@@ -626,7 +594,7 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          namespaces
 
    Data type
-         array of strings
+         *(array of strings)*
 
    Description
          This property enables you to add xml namespaces (xmlns) to the <html>
@@ -641,8 +609,6 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          This configuration will result in an <html> tag like ::
 
             <html xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:foaf="http://xmlns.com/foaf/0.1/">
-
-   Default
 
 
 .. container:: table-row
@@ -693,8 +659,6 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
 
             config.htmlTag_dir = rtl
 
-   Default
-
 
 .. container:: table-row
 
@@ -708,8 +672,6 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          Returns the 'border' attribute for an <img> tag only if the doctype is
          not xhtml\_strict, xhtml\_11 or xhtml\_2 or if the config parameter
          'disableImgBorderAttr' is not set
-
-   Default
 
 
 .. container:: table-row
@@ -729,8 +691,6 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
 
             onFocus="blurLink(this)"
 
-   Default
-
 
 .. container:: table-row
 
@@ -742,8 +702,6 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
 
    Description
          If set, the openPic JavaScript function is forced to be included
-
-   Default
 
 
 .. container:: table-row
@@ -757,8 +715,6 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    Description
          If set, the over() and out() JavaScript functions are forced to be
          included
-
-   Default
 
 
 .. container:: table-row
@@ -779,7 +735,8 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          JavaScript is written to a temporary file and included from that file.
          See "inlineStyle2TempFile" below.
 
-         Depends on the compatibility mode (see Tools>Install>Update wizard):
+         Depends on the compatibility mode (see the Update wizard under Tools >
+         Install):
 
          *compatibility mode < 4.0: 0*
 
@@ -789,8 +746,6 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
 
             config.removeDefaultJS = external
             config.removeDefaultJS = 1
-
-   Default
 
 
 .. container:: table-row
@@ -804,8 +759,6 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    Description
          (Since TYPO3 4.6) Remove CSS generated by \_CSS\_DEFAULT\_STYLE
          configuration of extensions.
-
-   Default
 
 
 .. container:: table-row
@@ -822,8 +775,8 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          cause faster page loading. Together with removeDefaultJS = external it
          will significantly lower web site traffic.
 
-         The default value depends on the compatibility mode (see
-         Tools>Install>Update wizard):
+         The default value depends on the compatibility mode (see the Update
+         wizard under Tools > Install):
 
          *compatibility mode < 4.0: 0*
 
@@ -843,8 +796,6 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
 
          **Note:** This property was deprecated and has been removed in TYPO3
          6.0! Use config.compressJs instead.
-
-   Default
 
 
 .. container:: table-row
@@ -884,8 +835,6 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
 
             $GLOBALS['TYPO3_CONF_VARS']['FE']['jsCompressHandler'] = t3lib_extMgm::extPath($_EXTKEY) . 'Classes/class.tx_myext_jsCompressHandler.php:tx_myext_jsCompressHandler->compressJs';
 
-   Default
-
 
 .. container:: table-row
 
@@ -912,8 +861,6 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
 
          **Note:** This property was deprecated and has been removed in TYPO3
          6.0. Use config.compressCss instead.
-
-   Default
 
 
 .. container:: table-row
@@ -949,8 +896,6 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
             or before TYPO3 6.0:
 
             $GLOBALS['TYPO3_CONF_VARS']['FE']['cssCompressHandler'] = t3lib_extMgm::extPath($_EXTKEY) . 'Classes/class.tx_myext_cssCompressHandler.php:tx_myext_cssCompressHandler->compressCss';
-
-   Default
 
 
 .. container:: table-row
@@ -1012,8 +957,6 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
 
             $GLOBALS['TYPO3_CONF_VARS']['FE']['jsConcatenateHandler'] = t3lib_extMgm::extPath($_EXTKEY) . 'Classes/class.tx_myext_jsConcatenateHandler.php:tx_myext_jsConcatenateHandler->concatenateJs';
 
-   Default
-
 
 .. container:: table-row
 
@@ -1043,8 +986,6 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
 
             $GLOBALS['TYPO3_CONF_VARS']['FE']['cssConcatenateHandler'] = t3lib_extMgm::extPath($_EXTKEY) . 'Classes/class.tx_myext_cssConcatenateHandler.php:tx_myext_cssConcatenateHandler->concatenateCss';
 
-   Default
-
 
 .. container:: table-row
 
@@ -1061,7 +1002,8 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
 
          The file hash is based solely on the content of the styles.
 
-         Depends on the compatibility mode (see Tools>Install>Update wizard):
+         Depends on the compatibility mode (see the Update wizard under Tools >
+         Install):
 
          *compatibility mode < 4.0: 0*
 
@@ -1070,8 +1012,6 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          **Example:** ::
 
             config.inlineStyle2TempFile = 1
-
-   Default
 
 
 .. container:: table-row
@@ -1089,8 +1029,6 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          This works with GIFBUILDER files (using content from the GIFBUILDER
          TEXT objects as a base for the prefix), menus (using the title of the
          menu item) and scaled images (using the original filename base).
-
-   Default
 
 
 .. container:: table-row
@@ -1162,7 +1100,7 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          content must be set into $TSFE->content.** Take a look at
          typo3/sysext/cms/tslib/pagegen.php.
 
-         **NOTE:** This option is ignored if ::
+         **Note:** This option is ignored if ::
 
             ['FE']['noPHPscriptInclude'] => 1;
 
@@ -1189,8 +1127,6 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          If set any debug-information in the TypoScript code is output.
          Currently this applies only to the menu-objects
 
-   Default
-
 
 .. container:: table-row
 
@@ -1210,8 +1146,6 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          corresponding values. Possible keywords are: ###TITLE###,
          ###REQUEST\_URI###
 
-   Default
-
 
 .. container:: table-row
 
@@ -1224,8 +1158,6 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    Description
          Alternative message in HTML that appears when the preview function is
          active!
-
-   Default
 
 
 .. container:: table-row
@@ -1245,8 +1177,6 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
 
             config.message_preview_workspace = <div class="previewbox">Displaying workspace named "%s" (number %s)!</div>
             config.message_preview_workspace = <div class="previewbox">Displaying workspace number %2$s named "%1$s"!</div>
-
-   Default
 
 
 .. container:: table-row
@@ -1290,8 +1220,6 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
             locale_all = danish
             locale_all = da_DK
 
-   Default
-
 
 .. container:: table-row
 
@@ -1307,8 +1235,6 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          If set, the words MUST be surrounded by whitespace in order to be
          marked up.
 
-   Default
-
 
 .. container:: table-row
 
@@ -1323,8 +1249,6 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
 
          If set, the words MUST be the exact same case as the search word was.
 
-   Default
-
 
 .. container:: table-row
 
@@ -1336,8 +1260,6 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
 
    Description
          Default internal target. Used by typolink if no target is set
-
-   Default
 
 
 .. container:: table-row
@@ -1365,8 +1287,6 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
 
    Description
          Default file link target. Used by typolink if no fileTarget is set.
-
-   Default
 
 
 .. container:: table-row
@@ -1413,10 +1333,8 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
 
          mailto:&#97;&#64;&#98;&#46;&#99;
 
-         The big advantage of this method is that it doesn't need any
+         The big advantage of this method is that it does not need any
          JavaScript!
-
-   Default
 
 
 .. container:: table-row
@@ -1448,7 +1366,7 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          Example: (dot)
 
    Default
-         Default: . ( <= just a simple dot)
+         . *(just a simple dot)*
 
 
 .. container:: table-row
@@ -1457,7 +1375,7 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          forceTypeValue
 
    Data type
-         int
+         integer
 
    Description
          Force the &type value of all TYPO3 generated links to a specific value
@@ -1466,8 +1384,6 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          Useful if you run a template with special content at - say &type=95 -
          but still wants to keep your targets neutral. Then you set your
          targets to blank and this value to the type value you wish.
-
-   Default
 
 
 .. container:: table-row
@@ -1486,8 +1402,6 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          frameset.
 
          Works only with type-values different from zero.
-
-   Default
 
 
 .. container:: table-row
@@ -1547,8 +1461,6 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
 
          This option may be overridden in the FORMS-cObject.
 
-   Default
-
 
 .. container:: table-row
 
@@ -1560,8 +1472,6 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
 
    Description
          This includes a PHP file.
-
-   Default
 
 
 .. container:: table-row
@@ -1577,8 +1487,6 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
 
          **Note** : This option was deprecated since TYPO3 4.5 and has
          been removed in TYPO3 6.0.
-
-   Default
 
 
 .. container:: table-row
@@ -1616,8 +1524,6 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          TYPO3\CMS\Core\Imaging\GraphicalFunctions (t3lib\_stdgraphics, often
          referred to as "gifbuilder").
 
-   Default
-
 
 .. container:: table-row
 
@@ -1652,8 +1558,6 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          This value has no default value and only if you specify a value for
          this token will a substitution process take place.
 
-   Default
-
 
 .. container:: table-row
 
@@ -1661,7 +1565,7 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          cache\_period
 
    Data type
-         int, seconds
+         integer
 
    Description
          The number of second a page may remain in cache.
@@ -1670,7 +1574,7 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          (field="cache\_timeout") if this value is greater than zero.
 
    Default
-         86400 (=24H)
+         86400 *(= 24 hours)*
 
 
 .. container:: table-row
@@ -1718,8 +1622,6 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
 
          Consider the fe\_user records on page 2 for the cache lifetime of all
          pages.
-
-   Default
 
 
 .. container:: table-row
@@ -1789,8 +1691,6 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          If set, pages with doktype "External Url" will not trigger jumpUrl in
          TSFE. This may help you to have external urls open inside you
          framesets.
-
-   Default
 
 
 .. container:: table-row
@@ -1868,8 +1768,6 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
 
          **Note** : This option has been removed in TYPO3 6.0.
 
-   Default
-
 
 .. container:: table-row
 
@@ -1934,8 +1832,6 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
 
          **Note** : This option has been removed in TYPO3 6.0.
 
-   Default
-
 
 .. container:: table-row
 
@@ -1968,8 +1864,6 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
 
          **Note** : This option has been removed in TYPO3 6.0.
 
-   Default
-
 
 .. container:: table-row
 
@@ -1983,8 +1877,6 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          If true the log file is NOT written in Apache extended format.
 
          **Note** : This option has been removed in TYPO3 6.0.
-
-   Default
 
 
 .. container:: table-row
@@ -2000,8 +1892,6 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          IP-address.
 
          **Note** : This option has been removed in TYPO3 6.0.
-
-   Default
 
 
 .. container:: table-row
@@ -2024,8 +1914,6 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
 
          **Note** : This option has been removed in TYPO3 6.0.
 
-   Default
-
 
 .. container:: table-row
 
@@ -2042,8 +1930,6 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
 
          **Note** : This option has been removed in TYPO3 6.0.
 
-   Default
-
 
 .. container:: table-row
 
@@ -2051,7 +1937,7 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          stat\_titleLen
 
    Data type
-         int 1-100
+         integer 1-100
 
    Description
          The length of the page names in the path written to log file/database.
@@ -2068,7 +1954,7 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          stat\_pageLen
 
    Data type
-         int 1-100
+         integer 1-100
 
    Description
          The length of the page name (at the end of the path) written to the
@@ -2105,7 +1991,7 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          stat\_IP\_anonymize\_mask\_ipv4
 
    Data type
-         int
+         integer
 
    Description
          (Since TYPO3 4.7) Prefix-mask 0..32 to use for anonymisation of IP
@@ -2127,7 +2013,7 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          stat\_IP\_anonymize\_mask\_ipv6
 
    Data type
-         int
+         integer
 
    Description
          (Since TYPO3 4.7) Prefix-mask 0..128 to use for anonymisation of IP
@@ -2238,7 +2124,7 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          simulateStaticDocuments\_addTitle
 
    Data type
-         int
+         integer
 
    Description
          If not zero, TYPO3 generates urls with the title in, limited to the
@@ -2249,8 +2135,6 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
             Startpage.23.1.html
 
          instead of the default, "23.1.html", without the title.
-
-   Default
 
 
 .. container:: table-row
@@ -2274,8 +2158,6 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
 
          "23.1.html" would  *still* be "23.1.html"
 
-   Default
-
 
 .. container:: table-row
 
@@ -2292,13 +2174,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          hyphen, this option allows search engines to index keywords in URLs.
          Before TYPO3 4.0 this character was hard-coded to underscore.
 
-         Depends on the compatibility mode (see Tools>Install>Update wizard):
+         Depends on the compatibility mode (see the Update wizard under Tools >
+         Install):
 
          *compatibility mode < 4.0:* underscore "\_"
 
          *compatibility mode >= 4.0:* hyphen "-"
-
-   Default
 
 
 .. container:: table-row
@@ -2317,8 +2198,6 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          index\_ts.php script sends a location header to the correct page.
          However if you better like an error message outputted, just set this
          option.
-
-   Default
 
 
 .. container:: table-row
@@ -2375,8 +2254,6 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          parameters that various plugins might allow in addition. This is to
          limit the run-away risk when many parameters gets combined.
 
-   Default
-
 
 .. container:: table-row
 
@@ -2400,8 +2277,6 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          extension sets itself) and further the parameter "L" (could be
          language selection) and "print" (could be print-version).
 
-   Default
-
 
 .. container:: table-row
 
@@ -2415,8 +2290,6 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          Using the "Show content from this page instead" feature allows you to
          insert content from the current domain only. Setting this option will
          allow content included from anywhere in the page tree!
-
-   Default
 
 
 .. container:: table-row
@@ -2435,11 +2308,9 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          **Note:** If you're working on a server where you have both internal
          and external access, you might do yourself a favor and set the
          absRefPrefix to the url and path of you site, e.g.
-         http://www.typo3.com/. If you do not, you risk to render pages to
+         http://www.typo3.org/. If you do not, you risk to render pages to
          cache from the internal network and thereby prefix image-references
          and links with a non-accessible path from outside.
-
-   Default
 
 
 .. container:: table-row
@@ -2457,8 +2328,6 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          **Example:** ::
 
             pageRendererTemplateFile = fileadmin/test_pagerender.html
-
-   Default
 
 
 .. container:: table-row
@@ -2530,8 +2399,6 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          Passes the default <title> tag content to this function. No TypoScript
          parameters are passed though.
 
-   Default
-
 
 .. container:: table-row
 
@@ -2546,8 +2413,6 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          bottom of the HTML document, which is after the content and before the
          closing body tag.
 
-   Default
-
 
 .. container:: table-row
 
@@ -2561,8 +2426,6 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          The content is added before the "TYPO3 Content Management Framework"
          comment in the <head> section of the page. Use this to insert a note
          like that "Programmed by My-Agency".
-
-   Default
 
 
 .. container:: table-row
@@ -2605,8 +2468,6 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          to use must be looked up in the locallang-file used by the plugin of
          course.
 
-   Default
-
 
 .. container:: table-row
 
@@ -2625,8 +2486,6 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          portuguese. This feature makes sense if one language is incompletely
          translated and close to another language.
 
-   Default
-
 
 .. container:: table-row
 
@@ -2634,7 +2493,7 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          sys\_language\_uid
 
    Data type
-         int
+         integer
 
    Description
          This value points to the uid of a record from the "sys\_language"
@@ -2646,8 +2505,6 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          Language record can be found with that language. If not, the value
          will default to zero (default language) except if
          "sys\_language\_mode" is set to a value like "content\_fallback".
-
-   Default
 
 
 .. container:: table-row
@@ -2679,15 +2536,13 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
 
          **strict** - The system will report an error if the requested
          translation does not exist. Basically this means that all pages with
-         gray background in the Web>Info / Localization overview module will
+         gray background in the Web > Info / Localization overview module will
          fail (they would otherwise fall back to default language in one or
          another way)
 
          **ignore** - The system will stay with the selected language even if
          the page is not translated and there's no content available in this
          language, so you can handle that situation on your own then.
-
-   Default
 
 
 .. container:: table-row
@@ -2711,7 +2566,7 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          "l10n\_mode" directive in the field-configuration of $TCA.
 
          For backend administration this requires that you configure the
-         "Web>Page" module to display content elements accordingly; That each
+         "Web > Page" module to display content elements accordingly; That each
          default element is shown and next to it any translation found. This
          configuration can be done with Page TSconfig for a section of the
          website using the object path "mod.web\_layout.defLangBinding = 1".
@@ -2721,8 +2576,6 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          **hideNonTranslated** : If this keyword is used a record that has no
          translation will not be shown. The default is that records with no
          translation will show up in the default language.
-
-   Default
 
 
 .. container:: table-row
@@ -2764,8 +2617,6 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          the image(s) from the default translation will be used unless other
          images are inserted!
 
-   Default
-
 
 .. container:: table-row
 
@@ -2782,8 +2633,6 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
 
          Fields set in this property will override if the same field is set for
          "sys\_language\_softMergeIfNotBlank".
-
-   Default
 
 
 .. container:: table-row
@@ -2804,8 +2653,6 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          If found (another domain), then that domain is prepended the link, the
          external target is used instead and thus the link jumps to the page in
          the correct domain.
-
-   Default
 
 
 .. container:: table-row
@@ -2879,8 +2726,6 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          Will create a link to page with id 29 and add GET parameters where the
          return URL and original page id is a part of it.
 
-   Default
-
 
 .. container:: table-row
 
@@ -2892,8 +2737,6 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
 
    Description
          See "typolinkLinkAccessRestrictedPages" above
-
-   Default
 
 
 .. container:: table-row
@@ -2919,8 +2762,6 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          If the value is "all" then ALL "http://" links in the message are
          converted.
 
-   Default
-
 
 .. container:: table-row
 
@@ -2942,8 +2783,6 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          quoted-printable
 
          8bit
-
-   Default
 
 
 .. container:: table-row
@@ -2974,11 +2813,9 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    Description
          If set, the admin panel appears in the bottom of pages.
 
-         **NOTE:** In addition the panel must be enabled for the user as well,
+         **Note:** In addition the panel must be enabled for the user as well,
          using the TSconfig for the user! See the TSconfig reference about
          additional admin panel properties.
-
-   Default
 
 
 .. container:: table-row
@@ -2994,10 +2831,8 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          card, \*, allowed) then a link to the typo3/ login script with redirect
          pointing back to the page is shown.
 
-         **NOTE:** beLoginLinkIPList\_login and/or beLoginLinkIPList\_logout
+         **Note:** beLoginLinkIPList\_login and/or beLoginLinkIPList\_logout
          (see below) must be defined if the link should show up!
-
-   Default
 
 
 .. container:: table-row
@@ -3015,8 +2850,6 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
 
             <hr /><b>LOGIN</b>
 
-   Default
-
 
 .. container:: table-row
 
@@ -3028,8 +2861,6 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
 
    Description
          HTML code wrapped with the logout link, see above
-
-   Default
 
 
 .. container:: table-row
@@ -3043,8 +2874,6 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    Description
          Enables cached pages to be indexed.
 
-   Default
-
 
 .. container:: table-row
 
@@ -3057,8 +2886,6 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    Description
          If set, external media linked to on the pages is indexed as well.
 
-   Default
-
 
 .. container:: table-row
 
@@ -3066,7 +2893,7 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          index\_descrLgd
 
    Data type
-         int
+         integer
 
    Description
          This indicates how many chars to preserve as description for an
@@ -3130,7 +2957,7 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          \- Setting charsets may put some special requirements on both XML
          declaration/ meta-http-equiv. (C.9)
 
-         \- UTF-8 encoding is in fact expected by XML!!
+         \- UTF-8 encoding is in fact expected by XML!
 
          \- stylesheet element and attribute names are NOT converted to
          lowercase
@@ -3154,8 +2981,6 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
 
          **output** = only the output code just before it's echoed out.
 
-   Default
-
 
 .. container:: table-row
 
@@ -3175,8 +3000,6 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
 
          Keywords are the same as for "xhtml\_cleaning", see above.
 
-   Default
-
 
 .. container:: table-row
 
@@ -3190,8 +3013,6 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          If set, the stdWrap property "prefixComment" will be disabled, thus
          preventing any revealing and space-consuming comments in the HTML
          source code.
-
-   Default
 
 
 .. container:: table-row
@@ -3213,8 +3034,6 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
 
             config.baseURL = http://typo3.org/sub_dir/
 
-   Default
-
 
 .. container:: table-row
 
@@ -3233,8 +3052,6 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          **Example:** ::
 
             config.tx_realurl_enable = 1
-
-   Default
 
 
 .. ###### END~OF~TABLE ######

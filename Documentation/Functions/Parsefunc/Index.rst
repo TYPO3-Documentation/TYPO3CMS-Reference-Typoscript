@@ -117,13 +117,11 @@ tags, the "makeLinks"-things and so on...
               table.stripNL=1
               table.stdWrap.HTMLparser = 1
               table.stdWrap.HTMLparser {
-                tags.table.overrideAttribs = border="0" cellpadding="2" cellspacing="1" style="margin-top: 10px; margin-bottom: 10px;"
+                tags.table.overrideAttribs = border="0" style="margin-top: 10px; margin-bottom: 10px;"
                 tags.tr.allowedAttribs=0
-                tags.td.overrideAttribs = valign="top" style="background-color: #eeeeee; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; font-size: 10px;"
+                tags.td.overrideAttribs = class="table-cell" style="background-color: #eeeeee; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; font-size: 10px;"
               }
             }
-
-   Default
 
 
 .. container:: table-row
@@ -135,19 +133,23 @@ tags, the "makeLinks"-things and so on...
          boolean
 
    Description
-         The top-level defined constants will be substituted in the text. The
-         constant-name is wrapped in "###".
+         You can define constants in the top-level object "constants" in the
+         *Setup* field of your TypoScript template.
+
+         If this property is set, you can use markers (the constant name
+         wrapped in "###") in your text. TYPO3 then substitutes the markers
+         with the value of the according constant.
 
          **Example:** ::
 
             constants.EMAIL = email@email.com
 
-         (NOTE: This is top-level TypoScript!)
+         *(The definition of the constant above is top-level TypoScript. It
+         belongs on one level with the objects "config" and "page".)*
 
-         All cases of the string ###EMAIL### will be substituted in the text.
-         The constants are defined as a top-level object.
-
-   Default
+         If you now use parseFunc with .constants=1, all occurrences of the
+         string ###EMAIL### in the text will be substituted with the actual
+         address.
 
 
 .. container:: table-row
@@ -156,7 +158,7 @@ tags, the "makeLinks"-things and so on...
          short
 
    Data type
-         *array of strings*
+         *(array of strings)*
 
    Description
          Like constants above, but local.
@@ -164,14 +166,12 @@ tags, the "makeLinks"-things and so on...
          **Example:**
 
          This substitutes all occurrences of "T3" with "TYPO3 CMS" and "T3web"
-         with a link to typo3.com. ::
+         with a link to typo3.org. ::
 
             short {
               T3 = TYPO3 CMS
-              T3web = <a href="http://typo3.com">typo3</a>
+              T3web = <a href="http://typo3.org">typo3</a>
             }
-
-   Default
 
 
 .. container:: table-row
@@ -184,8 +184,6 @@ tags, the "makeLinks"-things and so on...
 
    Description
          This is stdWrap properties for all non-tag content.
-
-   Default
 
 
 .. container:: table-row
@@ -201,8 +199,6 @@ tags, the "makeLinks"-things and so on...
          Similar to e.g. .postUserFunc in stdWrap.
 
          Remember the function name must possibly be prepended "user\_"
-
-   Default
 
 
 .. container:: table-row
@@ -221,8 +217,6 @@ tags, the "makeLinks"-things and so on...
          between special TypoTags (unless .breakoutTypoTagContent is not set
          for the TypoTag)
 
-   Default
-
 
 .. container:: table-row
 
@@ -238,8 +232,6 @@ tags, the "makeLinks"-things and so on...
          processes all non-tag content. (Notice: .breakoutTypoTagContent must
          be set for the TypoTag if it's excluded from nonTypoTagContent)
 
-   Default
-
 
 .. container:: table-row
 
@@ -253,7 +245,7 @@ tags, the "makeLinks"-things and so on...
          Marks up any words from the GET-method send array sword\_list[] in the
          text. The word MUST be at least two characters long!
 
-         **NOTE:** works only with $GLOBALS['TSFE']->no\_cache==1
+         **Note:** works only with $GLOBALS['TSFE']->no\_cache==1
 
    Default
          <font color="red">\|</font>
@@ -268,10 +260,8 @@ tags, the "makeLinks"-things and so on...
          boolean / ->makelinks
 
    Description
-         Convert webadresses prefixed with "http://" and mail-adresses prefixed
-         with "mailto:" to links.
-
-   Default
+         Convert web addresses prefixed with "http://" and mail addresses
+         prefixed with "mailto:" to links.
 
 
 .. container:: table-row
@@ -286,8 +276,6 @@ tags, the "makeLinks"-things and so on...
          Here you can define  **custom tags** that will parse the content to
          something.
 
-   Default
-
 
 .. container:: table-row
 
@@ -301,9 +289,7 @@ tags, the "makeLinks"-things and so on...
          List of tags, which are allowed to exist in code!
 
          Highest priority: If a tag is found in allowTags, denyTags is
-         ignored!!
-
-   Default
+         ignored!
 
 
 .. container:: table-row
@@ -328,8 +314,6 @@ tags, the "makeLinks"-things and so on...
             .allowTags = b,i,a,img
             .denyTags = *
 
-   Default
-
 
 .. container:: table-row
 
@@ -342,8 +326,6 @@ tags, the "makeLinks"-things and so on...
    Description
          if "if" returns false the input value is not parsed, but returned
          directly.
-
-   Default
 
 
 .. ###### END~OF~TABLE ######

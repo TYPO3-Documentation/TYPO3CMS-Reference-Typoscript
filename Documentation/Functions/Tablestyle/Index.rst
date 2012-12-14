@@ -40,9 +40,8 @@ tag.
          align /stdWrap
 
    Description
-
-
-   Default
+         Specifies the alignment of the table according to surrounding
+         text.
 
 
 .. container:: table-row
@@ -51,12 +50,10 @@ tag.
          border
 
    Data type
-         int /stdWrap
+         integer /stdWrap
 
    Description
-
-
-   Default
+         The number of pixels for the table border.
 
 
 .. container:: table-row
@@ -65,12 +62,10 @@ tag.
          cellspacing
 
    Data type
-         int /stdWrap
+         integer /stdWrap
 
    Description
-
-
-   Default
+         The number of pixels for the cellspacing.
 
 
 .. container:: table-row
@@ -79,12 +74,10 @@ tag.
          cellpadding
 
    Data type
-         int /stdWrap
+         integer /stdWrap
 
    Description
-
-
-   Default
+         The number of pixels for the cellpadding.
 
 
 .. container:: table-row
@@ -96,9 +89,7 @@ tag.
          string
 
    Description
-         Set to field name from the $cObj->data-array
-
-   Default
+         Set to field name from the $cObj->data-array.
 
 
 .. container:: table-row
@@ -110,13 +101,17 @@ tag.
 
          color.2
 
+         color...
+
    Data type
          string
 
    Description
-         [default],[1],[2] = User defined
+         Set background colors for the table. One of these colors
+         will be used depending on the value of color.field. You can
+         set the colors using color names, hex numbers or RGB numbers.
 
-   Default
+         [default],[1],[2] are user defined.
 
 
 .. container:: table-row
@@ -128,10 +123,12 @@ tag.
          <table>-params
 
    Description
+         Additional parameters for the table tag. E.g.::
 
+            id="my-table"
 
-   Default
-
+         This will add the id attribute with the value "my-table" to
+         the table tag.
 
 .. ###### END~OF~TABLE ######
 

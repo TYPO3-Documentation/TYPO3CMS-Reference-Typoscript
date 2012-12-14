@@ -56,8 +56,6 @@ used.
 
          **avi, mov, asf, mpg, wmv** : Movies (AVI, QuickTime, MPEG4).
 
-   Default
-
 
 .. container:: table-row
 
@@ -97,8 +95,6 @@ used.
          **Note** : If you set a width or a height here, this will overwrite
          the width or the height which have been set using ".width" and
          ".height".
-
-   Default
 
 
 .. container:: table-row
@@ -142,11 +138,6 @@ used.
 
    Data type
          ->stdWrap
-
-   Description
-
-
-   Default
 
 
 .. ###### END~OF~TABLE ######

@@ -46,6 +46,23 @@ a short instruction.
 .. container:: table-row
 
    Property
+         enable
+
+   Data type
+         boolean /stdWrap
+
+   Description
+         Whether or not to link the image.
+
+         **The image is linked ONLY, if this is true!**
+
+   Default
+         0
+
+
+.. container:: table-row
+
+   Property
          file
 
    Data type
@@ -54,8 +71,6 @@ a short instruction.
    Description
          Override the path of the image which is displayed
 
-   Default
-
 
 .. container:: table-row
 
@@ -63,13 +78,11 @@ a short instruction.
          width
 
    Data type
-         int (1-1000) /stdWrap
+         integer (1-1000) /stdWrap
 
    Description
          If you add "m" to either the width or height, the image will be held
          in proportions and width/height works as max-dimensions
-
-   Default
 
 
 .. container:: table-row
@@ -78,12 +91,10 @@ a short instruction.
          height
 
    Data type
-         int (1-1000) /stdWrap
+         integer (1-1000) /stdWrap
 
    Description
          see ".width"
-
-   Default
 
 
 .. container:: table-row
@@ -92,7 +103,7 @@ a short instruction.
          effects
 
    Data type
-         see GIFBUILDER / effects. (from stdgraphics-library)
+         see GIFBUILDER / effects. (from GraphicalFunctions library)
 
          /stdWrap
 
@@ -100,8 +111,6 @@ a short instruction.
          **Example:** ::
 
             gamma=1.3 | sharpen=80 | solarize=70
-
-   Default
 
 
 .. container:: table-row
@@ -117,7 +126,7 @@ a short instruction.
          does not use antialiasing and is therefore much faster.
 
    Default
-
+         0
 
 .. container:: table-row
 
@@ -131,8 +140,6 @@ a short instruction.
          Enter an alternative path to use for temp images. Must be found in the
          list in $TYPO3\_CONF\_VARS['FE']['allowedTempPaths'].
 
-   Default
-
 
 .. container:: table-row
 
@@ -144,8 +151,6 @@ a short instruction.
 
    Description
          page title of the new window (HTML)
-
-   Default
 
 
 .. container:: table-row
@@ -159,8 +164,6 @@ a short instruction.
    Description
          Body tag of the new window
 
-   Default
-
 
 .. container:: table-row
 
@@ -172,8 +175,6 @@ a short instruction.
 
    Description
          Wrap of the image, which is output between the body-tags
-
-   Default
 
 
 .. container:: table-row
@@ -187,8 +188,6 @@ a short instruction.
    Description
          NOTE: Only if ".JSwindow" is set
 
-   Default
-
 
 .. container:: table-row
 
@@ -200,11 +199,7 @@ a short instruction.
 
    Description
          If set to "1", the image will be opened in a new window which is
-         fitted to the dimensions of the image!
-
-         You can also use stdWrap here.
-
-   Default
+         fit to the dimensions of the image!
 
 
 .. container:: table-row
@@ -218,8 +213,6 @@ a short instruction.
    Description
          x and y is added to the window dimensions.
 
-   Default
-
 
 .. container:: table-row
 
@@ -230,9 +223,7 @@ a short instruction.
          boolean /stdWrap
 
    Description
-         Each picture will open in a new window!
-
-   Default
+         If set, each picture will open in a new window!
 
 
 .. container:: table-row
@@ -247,8 +238,6 @@ a short instruction.
          If this returns anything, the URL shown in the JS-window is NOT
          tx\_cms\_showpic but the url given here!
 
-   Default
-
 
 .. container:: table-row
 
@@ -262,12 +251,10 @@ a short instruction.
          If this is set, the image parameters are not appended to the altUrl
 
          automatically. This is useful if you want to create them with a user
-         function
-
-         instead.
+         function instead.
 
    Default
-
+         0
 
 .. container:: table-row
 
@@ -278,9 +265,7 @@ a short instruction.
          ->typolink
 
    Description
-         NOTE: This overrides the imageLinkWrap if it returns anything!!
-
-   Default
+         **Note:** This overrides the imageLinkWrap if it returns anything!
 
 
 .. container:: table-row
@@ -322,8 +307,6 @@ a short instruction.
          the lightbox by including its JS and CSS files and to activate it for
          certain links (e.g. for links with the class "lightbox").
 
-   Default
-
 
 .. container:: table-row
 
@@ -335,23 +318,6 @@ a short instruction.
 
    Description
          Enable stdWrap for the image
-
-   Default
-
-
-.. container:: table-row
-
-   Property
-         enable
-
-   Data type
-         boolean /stdWrap
-
-   Description
-         **The image is linked ONLY if this is true!!**
-
-   Default
-         0
 
 
 .. ###### END~OF~TABLE ######

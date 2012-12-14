@@ -26,7 +26,7 @@ not be set at all though so check it with is\_array()!)
 $conf
 """""
 
-The array $confcontains the configuration for the PHP\_SCRIPT cObject.
+The array $conf contains the configuration for the PHP\_SCRIPT cObject.
 Try debug($conf) to see the content printed out for debugging!
 
 
@@ -48,7 +48,7 @@ White spaces
 Because nothing is sent off to the browser before everything is
 rendered and returned to index\_ts.php which originally set of the
 rendering process, you must ensure that there's no whitespace before
-and after your <?...?> tags in your include- or library-scripts!
+and after your <?php...?> tags in your include- or library-scripts!
 
 
 .. _appendix-include-tsfe:
@@ -122,7 +122,7 @@ Internal Vars in the main frontend object, TSFE (TypoScript Front End)
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 There are some variables in the global object, TSFE, you might need to
-know about. These ARE ALL READ-ONLY!! (Read: Don't change them!) See
+know about. These ARE ALL READ-ONLY! (Read: Don't change them!) See
 the class TypoScriptFrontendController (tslib\_fe) for the full
 descriptions.
 
@@ -152,12 +152,10 @@ writing: $GLOBALS['TSFE']->id
          id
 
    PHP-Type
-         int
+         integer
 
    Description
          The page id
-
-   Default
 
 
 .. container:: table-row
@@ -166,12 +164,10 @@ writing: $GLOBALS['TSFE']->id
          type
 
    PHP-Type
-         int
+         integer
 
    Description
          The type
-
-   Default
 
 
 .. container:: table-row
@@ -184,8 +180,6 @@ writing: $GLOBALS['TSFE']->id
 
    Description
          The pagerecord
-
-   Default
 
 
 .. container:: table-row
@@ -200,8 +194,6 @@ writing: $GLOBALS['TSFE']->id
          The current front-end user.
 
          Userrecord in $GLOBALS['TSFE']->fe\_user->user, if any login.
-
-   Default
 
 
 .. container:: table-row
@@ -231,8 +223,6 @@ writing: $GLOBALS['TSFE']->id
          The rootLine (all the way to tree root, not only the current site!).
          Current site root line is in $GLOBALS['TSFE']->tmpl->rootLine
 
-   Default
-
 
 .. container:: table-row
 
@@ -247,8 +237,6 @@ writing: $GLOBALS['TSFE']->id
          typo3/sysext/frontend/Classes/Page/PageRepository.php
          (t3lib/class.t3lib_page.php).
 
-   Default
-
 
 .. container:: table-row
 
@@ -260,8 +248,6 @@ writing: $GLOBALS['TSFE']->id
 
    Description
          The group list, sorted numerically. Group -1 = no login
-
-   Default
 
 
 .. container:: table-row
@@ -330,8 +316,6 @@ Global vars
    Description
          TYPO3 Configuration.
 
-   Default
-
 
 .. container:: table-row
 
@@ -343,8 +327,6 @@ Global vars
 
    Description
          Main frontend object.
-
-   Default
 
 
 .. ###### END~OF~TABLE ######

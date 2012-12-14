@@ -1149,16 +1149,16 @@ style regular expression (must be wrapped in "/") to the value.
 Examples:
 ~~~~~~~~~
 
-If the HTTP\_HOST is "www.typo3.com" this will match with::
+If the HTTP\_HOST is "www.typo3.org" this will match with::
 
-   [globalString = IENV:HTTP_HOST = www.typo3.com]
+   [globalString = IENV:HTTP_HOST = www.typo3.org]
 
 This will also match with it::
 
-   [globalString = IENV:HTTP_HOST = *typo3.com]
+   [globalString = IENV:HTTP_HOST = *typo3.org]
 
 ... but this will also match with an HTTP\_HOST like this:
-"demo.typo3.com"
+"demo.typo3.org"
 
 
 IMPORTANT NOTE ON globalVar and globalString:

@@ -48,8 +48,6 @@ See code examples.
          Use this to import / generate the content, that should flow around the
          image block.
 
-   Default
-
 
 .. container:: table-row
 
@@ -57,7 +55,7 @@ See code examples.
          textPos
 
    Data type
-         int /stdWrap
+         integer /stdWrap
 
    Description
          Text position:
@@ -86,8 +84,6 @@ See code examples.
 
          26 - In Text: Left (no wrap)
 
-   Default
-
 
 .. container:: table-row
 
@@ -99,8 +95,6 @@ See code examples.
 
    Description
          Margin between the image and the content.
-
-   Default
 
 
 .. container:: table-row
@@ -121,6 +115,7 @@ See code examples.
          with this flag.
 
    Default
+         0
 
 
 .. container:: table-row
@@ -140,8 +135,6 @@ See code examples.
 
             imgList.field = image
 
-   Default
-
 
 .. container:: table-row
 
@@ -158,8 +151,6 @@ See code examples.
 
          "uploads/pics/"
 
-   Default
-
 
 .. container:: table-row
 
@@ -167,12 +158,10 @@ See code examples.
          imgMax
 
    Data type
-         int /stdWrap
+         integer /stdWrap
 
    Description
          Maximum number of images.
-
-   Default
 
 
 .. container:: table-row
@@ -181,12 +170,10 @@ See code examples.
          imgStart
 
    Data type
-         int /stdWrap
+         integer /stdWrap
 
    Description
          Start with image-number ".imgStart".
-
-   Default
 
 
 .. container:: table-row
@@ -210,8 +197,6 @@ See code examples.
          This would render the first two images with "1. ..." and the last
          image with "2. ...", provided that the ".imgList" contains 3 images.
 
-   Default
-
 
 .. container:: table-row
 
@@ -233,8 +218,6 @@ See code examples.
 
          "file.import.current = 1" fetches the name of the images!
 
-   Default
-
 
 .. container:: table-row
 
@@ -246,8 +229,6 @@ See code examples.
 
    Description
          Caption.
-
-   Default
 
 
 .. container:: table-row
@@ -285,8 +266,6 @@ See code examples.
 
          .stdWrap = stdWrap properties used to render the caption.
 
-   Default
-
 
 .. container:: table-row
 
@@ -303,8 +282,6 @@ See code examples.
          ->IMAGE cObjects.
 
          If alttext is not specified, an empty alttext will be used.
-
-   Default
 
 
 .. container:: table-row
@@ -338,8 +315,6 @@ See code examples.
          "longdesc" attribute (URL pointing to document with extensive details
          about image).
 
-   Default
-
 
 .. container:: table-row
 
@@ -351,8 +326,6 @@ See code examples.
 
    Description
          If true, a border i generated around the images.
-
-   Default
 
 
 .. container:: table-row
@@ -391,12 +364,10 @@ See code examples.
          cols
 
    Data type
-         int /stdWrap
+         integer /stdWrap
 
    Description
-         Columns
-
-   Default
+         Number of columns.
 
 
 .. container:: table-row
@@ -405,12 +376,10 @@ See code examples.
          rows
 
    Data type
-         int /stdWrap
+         integer /stdWrap
 
    Description
-         Rows (higher priority thab "cols")
-
-   Default
+         Number of rows (higher priority than "cols").
 
 
 .. container:: table-row
@@ -425,8 +394,6 @@ See code examples.
          If set, the rows are not divided by a table-rows. Thus images are more
          nicely shown if the height differs a lot (normally the width is the
          same!)
-
-   Default
 
 
 .. container:: table-row
@@ -444,8 +411,6 @@ See code examples.
          If noRows is set, noCols will be unset. They cannot be set
          simultaneously.
 
-   Default
-
 
 .. container:: table-row
 
@@ -453,12 +418,13 @@ See code examples.
          colSpace
 
    Data type
-         int /stdWrap
+         integer /stdWrap
 
    Description
          Space between columns.
 
    Default
+         0
 
 
 .. container:: table-row
@@ -467,12 +433,13 @@ See code examples.
          rowSpace
 
    Data type
-         int /stdWrap
+         integer /stdWrap
 
    Description
          Space between rows.
 
    Default
+         0
 
 
 .. container:: table-row
@@ -481,13 +448,14 @@ See code examples.
          spaceBelowAbove
 
    Data type
-         int /stdWrap
+         integer /stdWrap
 
    Description
          Pixel space between content an images when position of image is above
          or below text (but not in text)
 
    Default
+         0
 
 
 .. container:: table-row
@@ -502,8 +470,6 @@ See code examples.
          This passes the final <table> code for the image block to the stdWrap
          function.
 
-   Default
-
 
 .. container:: table-row
 
@@ -511,7 +477,7 @@ See code examples.
          maxW
 
    Data type
-         int /stdWrap
+         integer /stdWrap
 
    Description
          Maximum width of the image-table.
@@ -519,9 +485,7 @@ See code examples.
          This will scale images not in the right size! Takes the number of
          columns into account!
 
-         **NOTE:** Works ONLY if IMAGE-obj is NOT GIFBUILDER!
-
-   Default
+         **Note:** Works ONLY if IMAGE-obj is NOT GIFBUILDER!
 
 
 .. container:: table-row
@@ -530,7 +494,7 @@ See code examples.
          maxWInText
 
    Data type
-         int /stdWrap
+         integer /stdWrap
 
    Description
          Maximum width of the image-table, if the text is wrapped around the
@@ -539,7 +503,7 @@ See code examples.
          This will scale images not in the right size! Takes the number of
          columns into account!
 
-         **NOTE:** Works ONLY if IMAGE-obj is NOT GIFBUILDER!
+         **Note:** Works ONLY if IMAGE-obj is NOT GIFBUILDER!
 
    Default
          50% of maxW
@@ -551,7 +515,7 @@ See code examples.
          equalH
 
    Data type
-         int /stdWrap
+         integer /stdWrap
 
    Description
          If this value is greater than zero, it will secure that images in a
@@ -566,8 +530,6 @@ See code examples.
          "maxH", "maxW", "minW", "minH" of the IMAGE-objects generating the
          images. Furthermore it will override the "noRows"-property and
          generate a table with no columns instead!
-
-   Default
 
 
 .. container:: table-row
@@ -596,8 +558,6 @@ See code examples.
 
          1 : 2 : 3
 
-   Default
-
 
 .. container:: table-row
 
@@ -605,14 +565,14 @@ See code examples.
          image\_compression
 
    Data type
-         int /stdWrap
+         integer /stdWrap
 
    Description
          Image Compression:
 
          0= Default
 
-         1= Don't change! (removes all parameters for the image\_object!!)
+         1= Don't change! (removes all parameters for the image\_object!)
 
          (adds gif-extension and color-reduction command)
 
@@ -667,11 +627,9 @@ See code examples.
          The default ImageMagick quality seems to be 75. This equals Photoshop
          quality 45. Images compressed with ImageMagick with the same visual
          quality as a Photoshop-compressed image seem to be largely 50% greater
-         in size!!
+         in size!
 
-         **NOTE:** Works ONLY if IMAGE-obj is NOT GIFBUILDER
-
-   Default
+         **Note:** Works ONLY if IMAGE-obj is NOT GIFBUILDER!
 
 
 .. container:: table-row
@@ -680,11 +638,11 @@ See code examples.
          image\_effects
 
    Data type
-         int /stdWrap
+         integer /stdWrap
 
    Description
          Adds these commands to the parameters for the scaling. This function
-         has no effect if "image\_compression" above is set to 1!!
+         has no effect if "image\_compression" above is set to 1!
 
          1 => "-rotate 90",
 
@@ -704,9 +662,7 @@ See code examples.
 
          26 => "-gamma 0.8"
 
-         **NOTE:** Works ONLY if IMAGE-obj is NOT GIFBUILDER
-
-   Default
+         **Note:** Works ONLY if IMAGE-obj is NOT GIFBUILDER!
 
 
 .. container:: table-row
@@ -746,13 +702,11 @@ See code examples.
               bottomImg_mask = fileadmin/darkroom1_bottom.jpg
             }
 
-         **NOTE:** This cancels the jpg-quality settings sent as ordinary
+         **Note:** This cancels the jpg-quality settings sent as ordinary
          ".params" to the imgResource. In addition the output of this operation
          will always be jpg or gif!
 
-         **NOTE:** Works ONLY if IMAGE-obj is NOT GIFBUILDER
-
-   Default
+         **Note:** Works ONLY if IMAGE-obj is NOT GIFBUILDER!
 
 
 .. container:: table-row
@@ -765,8 +719,6 @@ See code examples.
 
    Description
          (See stdWrap.editIcons)
-
-   Default
 
 
 .. container:: table-row
@@ -783,8 +735,6 @@ See code examples.
          margins for the object if entered "in text". So it's not recommended,
          but it has been requested by some people for reasons.
 
-   Default
-
 
 .. container:: table-row
 
@@ -793,11 +743,6 @@ See code examples.
 
    Data type
          ->stdWrap
-
-   Description
-
-
-   Default
 
 
 .. ###### END~OF~TABLE ######

@@ -46,8 +46,6 @@ This element inserts a QuickTime Player.
          qualified URLs. Use config.baseURL and/or config.absRefPrefix to get
          fully qualified URLs automatically.
 
-   Default
-
 
 .. container:: table-row
 
@@ -55,15 +53,13 @@ This element inserts a QuickTime Player.
          width
 
    Data type
-         int
+         integer
 
    Description
          Width of QTOBJECT.
 
          If it is not set, it will be filled with defaultWidth of the player
          configuration.
-
-   Default
 
 
 .. container:: table-row
@@ -72,15 +68,13 @@ This element inserts a QuickTime Player.
          height
 
    Data type
-         int
+         integer
 
    Description
          Width of QTOBJECT.
 
          If it is not set, it will be filled with defaultHeight of the player
          configuration.
-
-   Default
 
 
 .. container:: table-row
@@ -127,8 +121,6 @@ This element inserts a QuickTime Player.
          settings having precedence over player specific settings
          ([type].player.default.aprams).
 
-   Default
-
 
 .. container:: table-row
 
@@ -143,8 +135,6 @@ This element inserts a QuickTime Player.
          value is "audio", the player configuration audio.player will be used.
          Player specific settings are only used, if there is no general value
          set.
-
-   Default
 
 
 .. container:: table-row
@@ -167,8 +157,6 @@ This element inserts a QuickTime Player.
 
          }
 
-   Default
-
 
 .. container:: table-row
 
@@ -176,12 +164,10 @@ This element inserts a QuickTime Player.
          [type].player.defaultWidth
 
    Data type
-         int
+         integer
 
    Description
          Default width.
-
-   Default
 
 
 .. container:: table-row
@@ -190,12 +176,10 @@ This element inserts a QuickTime Player.
          [type].player.defaultHeight
 
    Data type
-         int
+         integer
 
    Description
          Default height.
-
-   Default
 
 
 .. container:: table-row
@@ -210,8 +194,6 @@ This element inserts a QuickTime Player.
          The mapping does the rename of a parameter for a specific player type.
          Player specific parameter mapping. See SWFOBJECT for an example.
 
-   Default
-
 
 .. container:: table-row
 
@@ -220,11 +202,6 @@ This element inserts a QuickTime Player.
 
    Data type
          ->stdWrap
-
-   Description
-
-
-   Default
 
 
 .. ###### END~OF~TABLE ######

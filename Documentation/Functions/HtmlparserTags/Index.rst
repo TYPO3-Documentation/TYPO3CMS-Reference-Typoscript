@@ -44,11 +44,19 @@ HTMLparser\_tags
          allowedAttribs
 
    Data type
-
+         mixed
 
    Description
-         '0' (zero) = no attributes allowed, '[commalist of attributes]' = only
-         allowed attributes. If blank/not set, all attributes are allowed.
+         Defines the allowed attributes.
+
+         Possible values:
+
+         **0** (zero): No attributes allowed.
+
+         **(comma-separated list of attributes)**: Only attributes in this
+         list are allowed.
+
+         **(blank/not set)**: All attributes are allowed.
 
 
 .. container:: table-row
@@ -286,7 +294,7 @@ HTMLparser\_tags
          nesting
 
    Data type
-
+         mixed
 
    Description
          If set true, then this tag must have starting and ending tags in the

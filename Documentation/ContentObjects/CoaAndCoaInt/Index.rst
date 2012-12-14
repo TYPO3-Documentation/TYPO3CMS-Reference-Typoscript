@@ -38,9 +38,6 @@ cObjects but with any cObject.
    Description
          Description:
 
-   Default
-         Default:
-
 
 .. container:: table-row
 
@@ -49,11 +46,6 @@ cObjects but with any cObject.
 
    Data type
          cObject
-
-   Description
-
-
-   Default
 
 
 .. container:: table-row
@@ -65,9 +57,7 @@ cObjects but with any cObject.
          ->if
 
    Description
-         if "if" returns false the COA is NOT rendered
-
-   Default
+         If "if" returns false, the COA is NOT rendered.
 
 
 .. container:: table-row
@@ -78,11 +68,6 @@ cObjects but with any cObject.
    Data type
          wrap /stdWrap
 
-   Description
-
-
-   Default
-
 
 .. container:: table-row
 
@@ -92,11 +77,6 @@ cObjects but with any cObject.
    Data type
          ->stdWrap
 
-   Description
-
-
-   Default
-
 
 .. container:: table-row
 
@@ -104,20 +84,18 @@ cObjects but with any cObject.
          includeLibs
 
    Data type
-         *list of* resource /stdWrap
+         *(list of resources)* /stdWrap
 
    Description
-         **(This property is used only if the object is COA\_INT!, See
+         **(This property is used only if the object is COA\_INT! See
          introduction.)**
 
          This is a comma-separated list of resources that are included as PHP-
          scripts (with include\_once() function) if this script is included.
 
-         This is possible to do because any include-files will be known before
-         the scripts are included. That's not the case with the regular
+         This is possible to do, because any include-files will be known before
+         the scripts are included. That is not the case with the regular
          PHP\_SCRIPT cObject.
-
-   Default
 
 
 .. ###### END~OF~TABLE ######
@@ -138,7 +116,7 @@ Example:
    temp.menutable = COBJ_ARRAY
    temp.menutable {
      10 = TEXT
-     10.value = <table border="0" cellpadding="0" cellspacing="0">
+     10.value = <table border="0" style="border-spacing: 0px;">
 
      20 = HMENU
      20.entryLevel = 0

@@ -147,8 +147,6 @@ match the basename of the main font face with an alternative font.
               123 = vera.ttf
             ....
 
-   Default
-
 
 .. container:: table-row
 
@@ -181,8 +179,6 @@ match the basename of the main font face with an alternative font.
          uses "t3lib/fonts/vera.ttf" for all characters that fall below/equal
          to 65 in Unicode value.
 
-   Default
-
 
 .. container:: table-row
 
@@ -196,8 +192,6 @@ match the basename of the main font face with an alternative font.
          If set, this will take the font size of the TEXT GIFBUILDER object and
          multiply with this amount (xx.xx) and override the "fontSize" property
          inside "charMapConfig".
-
-   Default
 
 
 .. container:: table-row
@@ -238,8 +232,6 @@ match the basename of the main font face with an alternative font.
          size is 24. If this configuration is used on a GIFBUILDER TEXT object
          where the font size is only 16, the spacing values will be corrected
          by "16/24", effectively reducing the pixelspace to "2" in that case.
-
-   Default
 
 
 .. ###### END~OF~TABLE ######

@@ -51,14 +51,12 @@ Always secure input from outside, for example with intval.
          uidInList
 
    Data type
-         Until TYPO3 4.5: *list of page\_id*
+         Until TYPO3 4.5: *list of page\_ids*
 
-         Since TYPO3 4.6: *list of page\_id* /stdWrap
+         Since TYPO3 4.6: *list of page\_ids* /stdWrap
 
    Description
-
-
-   Default
+         Comma-separated list of page ids.
 
 
 .. container:: table-row
@@ -67,10 +65,10 @@ Always secure input from outside, for example with intval.
          pidInList
 
    Data type
-         *list of page\_id* /stdWrap
+         *list of page\_ids* /stdWrap
 
    Description
-
+         Comma-separated list of parent ids.
 
    Default
          this
@@ -82,9 +80,9 @@ Always secure input from outside, for example with intval.
          recursive
 
    Data type
-         Until TYPO3 4.5:int
+         Until TYPO3 4.5: integer
 
-         Since TYPO3 4.6: int /stdWrap
+         Since TYPO3 4.6: integer /stdWrap
 
    Description
          Recursive levels for the pidInList
@@ -99,14 +97,10 @@ Always secure input from outside, for example with intval.
          orderBy
 
    Data type
-         *SQL-orderBy*
-
-         /stdWrap
+         *SQL-orderBy* /stdWrap
 
    Description
          Without "order by"! E.g. "sorting, title"
-
-   Default
 
 
 .. container:: table-row
@@ -115,14 +109,10 @@ Always secure input from outside, for example with intval.
          groupBy
 
    Data type
-         *SQL-groupBy*
-
-         /stdWrap
+         *SQL-groupBy* /stdWrap
 
    Description
          Without "group by"! E.g. "CType"
-
-   Default
 
 
 .. container:: table-row
@@ -131,24 +121,14 @@ Always secure input from outside, for example with intval.
          max
 
    Data type
-         Until TYPO3 4.5: int
+         Until TYPO3 4.5: integer +calc +"total"
 
-         +calc
-
-         +"total"
-
-         Since TYPO3 4.6: int
-
-         +calc
-
-         +"total" /stdWrap
+         Since TYPO3 4.6: integer +calc +"total" /stdWrap
 
    Description
          Max records
 
          **Special keyword:** "total" is substituted with count(\*)
-
-   Default
 
 
 .. container:: table-row
@@ -157,24 +137,14 @@ Always secure input from outside, for example with intval.
          begin
 
    Data type
-         Until TYPO3 4.5: int
+         Until TYPO3 4.5: integer +calc +"total"
 
-         +calc
-
-         +"total"
-
-         Since TYPO3 4.6: int
-
-         +calc
-
-         +"total" /stdWrap
+         Since TYPO3 4.6: integer +calc +"total" /stdWrap
 
    Description
-         Begin with record number  *value*
+         Begin with record number *value*
 
          **Special keyword:** "total" is substituted with count(\*)
-
-   Default
 
 
 .. container:: table-row
@@ -183,14 +153,12 @@ Always secure input from outside, for example with intval.
          where
 
    Data type
-         Until TYPO3 4.5:  *SQL-where*
+         Until TYPO3 4.5: *SQL-where*
 
          Since TYPO3 4.6: *SQL-where* /stdWrap
 
    Description
-         Without "where"!, E.g. " (title LIKE '%SOMETHING%' AND NOT doktype) "
-
-   Default
+         Without "where"! E.g. " (title LIKE '%SOMETHING%' AND NOT doktype) "
 
 
 .. container:: table-row
@@ -202,9 +170,7 @@ Always secure input from outside, for example with intval.
          *SQL-where* /stdWrap
 
    Description
-         Without "AND"!, E.g. "NOT doktype".
-
-   Default
+         Without "AND"! E.g. "NOT doktype".
 
 
 .. container:: table-row
@@ -224,8 +190,6 @@ Always secure input from outside, for example with intval.
          field matches the $GLOBALS['TSFE']->sys\_language\_uid (which is set
          by the config.sys\_language\_uid option)
 
-   Default
-
 
 .. container:: table-row
 
@@ -240,10 +204,10 @@ Always secure input from outside, for example with intval.
    Description
          List of fields to select, or "count(\*)".
 
-         :code:`If the records need to be localized, please include the
+         If the records need to be localized, please include the
          relevant localization-fields
          (uid,pid,languageField,transOrigPointerField). Otherwise the TYPO3
-         internal localization will not succeed.`
+         internal localization will not succeed.
 
    Default
          \*
@@ -267,8 +231,6 @@ Always secure input from outside, for example with intval.
          Enter tablename for JOIN , LEFT OUTER JOIN and RIGHT OUTER JOIN
          respectively.
 
-   Default
-
 
 .. container:: table-row
 
@@ -276,7 +238,7 @@ Always secure input from outside, for example with intval.
          markers
 
    Data type
-         array of markers
+         *(array of markers)*
 
    Description
          The markers defined in this section can be used, wrapped in the usual
@@ -289,7 +251,7 @@ Always secure input from outside, for example with intval.
 
          Sets the value directly.
 
-         <markername>.commaSeparatedList (bool)
+         <markername>.commaSeparatedList (boolean)
 
          If set, the value is interpreted as a comma-separated list of values.
          Each value in the list is individually escaped and quoted.
@@ -314,8 +276,6 @@ Always secure input from outside, for example with intval.
                 }
               }
             }
-
-   Default
 
 
 .. ###### END~OF~TABLE ######

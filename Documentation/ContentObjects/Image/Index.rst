@@ -47,11 +47,6 @@ of the returning image (if any) and contains width, height and so on.
    Data type
          imgResource
 
-   Description
-
-
-   Default
-
 
 .. container:: table-row
 
@@ -60,11 +55,6 @@ of the returning image (if any) and contains width, height and so on.
 
    Data type
          <IMG>-params /stdWrap
-
-   Description
-
-
-   Default
 
 
 .. container:: table-row
@@ -101,8 +91,6 @@ of the returning image (if any) and contains width, height and so on.
          since TYPO3 4.3 and was used only if "altText" did not specify a value
          or properties. In TYPO3 4.6 "alttext" has been removed.)
 
-   Default
-
 
 .. container:: table-row
 
@@ -132,8 +120,6 @@ of the returning image (if any) and contains width, height and so on.
          "longdesc" attribute (URL pointing to document with extensive details
          about image).
 
-   Default
-
 
 .. container:: table-row
 
@@ -145,8 +131,6 @@ of the returning image (if any) and contains width, height and so on.
 
    Description
          (before ".wrap")
-
-   Default
 
 
 .. container:: table-row
@@ -163,8 +147,6 @@ of the returning image (if any) and contains width, height and so on.
          **Note:** ONLY active if linkWrap is NOT set and file is NOT
          GIFBUILDER (as it works with the original imagefile).
 
-   Default
-
 
 .. container:: table-row
 
@@ -175,9 +157,7 @@ of the returning image (if any) and contains width, height and so on.
          ->if
 
    Description
-         if "if" returns false the image is not shown!
-
-   Default
+         If "if" returns false, the image is not shown!
 
 
 .. container:: table-row
@@ -189,9 +169,7 @@ of the returning image (if any) and contains width, height and so on.
          wrap /stdWrap
 
    Description
-
-
-   Default
+         Wrap for the image tag.
 
 
 .. container:: table-row
@@ -201,11 +179,6 @@ of the returning image (if any) and contains width, height and so on.
 
    Data type
          ->stdWrap
-
-   Description
-
-
-   Default
 
 
 .. ###### END~OF~TABLE ######

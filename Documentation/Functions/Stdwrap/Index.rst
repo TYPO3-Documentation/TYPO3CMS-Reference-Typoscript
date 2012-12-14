@@ -68,9 +68,6 @@ value is "imported" from the field called "header" from the $cObj
    Description
          Description:
 
-   Default
-         Default:
-
 
 .. container:: table-row
 
@@ -93,8 +90,6 @@ value is "imported" from the field called "header" from the $cObj
    Description
          Sets the current value to the incoming content of the function.
 
-   Default
-
 
 .. container:: table-row
 
@@ -109,8 +104,6 @@ value is "imported" from the field called "header" from the $cObj
    Description
          Sets the "current"-value. This is normally set from some outside
          routine, so be careful with this. But it might be handy to do this
-
-   Default
 
 
 .. container:: table-row
@@ -139,8 +132,6 @@ value is "imported" from the field called "header" from the $cObj
 
          Output will be "Ich bin..." instead of "I am..."
 
-   Default
-
 
 .. container:: table-row
 
@@ -151,11 +142,6 @@ value is "imported" from the field called "header" from the $cObj
 
    Data type
          getText
-
-   Description
-
-
-   Default
 
 
 .. container:: table-row
@@ -182,8 +168,6 @@ value is "imported" from the field called "header" from the $cObj
          nav\_title will be returned unless it is a blank string, in which case
          the title-field's value is returned.
 
-   Default
-
 
 .. container:: table-row
 
@@ -197,8 +181,6 @@ value is "imported" from the field called "header" from the $cObj
 
    Description
          Sets the content to the "current"-value (see ->split)
-
-   Default
 
 
 .. container:: table-row
@@ -214,8 +196,6 @@ value is "imported" from the field called "header" from the $cObj
    Description
          Loads content from a content-object
 
-   Default
-
 
 .. container:: table-row
 
@@ -228,9 +208,7 @@ value is "imported" from the field called "header" from the $cObj
          ->numRows
 
    Description
-         Returns the number of rows resulting from the select
-
-   Default
+         Returns the number of rows resulting from the supplied SELECT query.
 
 
 .. container:: table-row
@@ -260,8 +238,6 @@ value is "imported" from the field called "header" from the $cObj
          5: fullpath\_flag: If set, the filelist is returned with complete
          paths, and not just the filename
 
-   Default
-
 
 .. container:: table-row
 
@@ -279,8 +255,6 @@ value is "imported" from the field called "header" from the $cObj
          second parameter.
 
          See  *.postUserFunc*
-
-   Default
 
 
 .. container:: table-row
@@ -304,8 +278,6 @@ value is "imported" from the field called "header" from the $cObj
          if "override" returns something else than "" or zero (trimmed), the
          content is loaded with this!
 
-   Default
-
 
 .. container:: table-row
 
@@ -319,8 +291,6 @@ value is "imported" from the field called "header" from the $cObj
 
    Description
          (as "listNum" below)
-
-   Default
 
 
 .. container:: table-row
@@ -337,8 +307,6 @@ value is "imported" from the field called "header" from the $cObj
          If the content is null (NULL type in PHP), the content is overridden
          with the value defined here.
 
-   Default
-
 
 .. container:: table-row
 
@@ -354,8 +322,6 @@ value is "imported" from the field called "header" from the $cObj
          If the content is empty (trimmed) at this point, the content is loaded
          with "ifEmpty". Zeros are treated as empty values!
 
-   Default
-
 
 .. container:: table-row
 
@@ -370,8 +336,6 @@ value is "imported" from the field called "header" from the $cObj
    Description
          Same as "ifEmpty" but the check is done using strlen().
 
-   Default
-
 
 .. container:: table-row
 
@@ -381,13 +345,7 @@ value is "imported" from the field called "header" from the $cObj
          listNum
 
    Data type
-         int
-
-         +calc
-
-         +"last"
-
-         +"rand"
+         integer +calc +"last" +"rand"
 
    Description
          Explodes the content with "," (comma) and the content is set to the
@@ -430,8 +388,6 @@ value is "imported" from the field called "header" from the $cObj
               }
             }
 
-   Default
-
 
 .. container:: table-row
 
@@ -441,12 +397,11 @@ value is "imported" from the field called "header" from the $cObj
          trim
 
    Data type
-
+         boolean
 
    Description
-         PHP-function trim(); removes whitespaces around the value.
-
-   Default
+         If set, the PHP-function trim() will be used to remove whitespaces
+         around the value.
 
 
 .. container:: table-row
@@ -461,8 +416,6 @@ value is "imported" from the field called "header" from the $cObj
 
    Description
          Recursive call to the stdWrap function.
-
-   Default
 
 
 .. container:: table-row
@@ -483,8 +436,6 @@ value is "imported" from the field called "header" from the $cObj
 
          If the content is empty, "" is returned immediately.
 
-   Default
-
 
 .. container:: table-row
 
@@ -499,8 +450,6 @@ value is "imported" from the field called "header" from the $cObj
    Description
          If the if-object returns false, stdWrap returns "" immediately.
 
-   Default
-
 
 .. container:: table-row
 
@@ -514,8 +463,6 @@ value is "imported" from the field called "header" from the $cObj
 
    Description
          value in this field MUST be set
-
-   Default
 
 
 .. container:: table-row
@@ -539,8 +486,6 @@ value is "imported" from the field called "header" from the $cObj
    Description
          Convert the charset of the string from the charset given as value to
          the current rendering charset of the frontend (renderCharset).
-
-   Default
 
 
 .. container:: table-row
@@ -568,8 +513,6 @@ value is "imported" from the field called "header" from the $cObj
             parseFunc.tags.myTag = TEXT
             parseFunc.tags.myTag.value = This will be inserted when &lt;myTag&gt; is found!
 
-   Default
-
 
 .. container:: table-row
 
@@ -589,8 +532,6 @@ value is "imported" from the field called "header" from the $cObj
 
          (See "Core API" for ->HTMLparser options)
 
-   Default
-
 
 .. container:: table-row
 
@@ -601,11 +542,6 @@ value is "imported" from the field called "header" from the $cObj
 
    Data type
          ->split
-
-   Description
-
-
-   Default
 
 
 .. container:: table-row
@@ -623,8 +559,6 @@ value is "imported" from the field called "header" from the $cObj
          content with the possibility of using PCRE regular expressions. An
          array with numeric indices defines the order of actions and thus
          allows multiple replacements at once.
-
-   Default
 
 
 .. container:: table-row
@@ -662,8 +596,6 @@ value is "imported" from the field called "header" from the $cObj
             -5 * (-4+6) ^ 2 - 100%7 = 98
             -5 * ((-4+6) ^ 2) - 100%7 = -22
 
-   Default
-
 
 .. container:: table-row
 
@@ -673,14 +605,12 @@ value is "imported" from the field called "header" from the $cObj
          char
 
    Data type
-         int
+         integer
 
    Description
          Content is set to the chr( *value* ). ::
 
             $content = chr(intval($conf['char']));
-
-   Default
 
 
 .. container:: table-row
@@ -697,8 +627,6 @@ value is "imported" from the field called "header" from the $cObj
          PHP function intval(); returns an integer. ::
 
             $content = intval($content);
-
-   Default
 
 
 .. container:: table-row
@@ -726,8 +654,6 @@ value is "imported" from the field called "header" from the $cObj
               wrap = <img src="http://www.gravatar.com/avatar/|" />
             }
 
-   Default
-
 
 .. container:: table-row
 
@@ -743,8 +669,6 @@ value is "imported" from the field called "header" from the $cObj
          (Since TYPO3 4.6) Round the value with the selected method to the
          given number of decimals.
 
-   Default
-
 
 .. container:: table-row
 
@@ -759,8 +683,6 @@ value is "imported" from the field called "header" from the $cObj
    Description
          Format a float value to any number format you need (e.g. useful for
          prices).
-
-   Default
 
 
 .. container:: table-row
@@ -789,8 +711,6 @@ value is "imported" from the field called "header" from the $cObj
             .value.field = tstamp
             .value.date =
 
-   Default
-
 
 .. container:: table-row
 
@@ -818,8 +738,6 @@ value is "imported" from the field called "header" from the $cObj
 
          **.GMT** : If set, the PHP function gmstrftime() will be used instead
          of strftime().
-
-   Default
 
 
 .. container:: table-row
@@ -859,8 +777,6 @@ value is "imported" from the field called "header" from the $cObj
             lib.ageFormat.data = page:tstamp
             lib.ageFormat.age = " Minuten | Stunden | Tage | Jahre | Minute | Stunde | Tag | Jahr"
 
-   Default
-
 
 .. container:: table-row
 
@@ -876,8 +792,6 @@ value is "imported" from the field called "header" from the $cObj
          Converts case
 
          Uses "renderCharset" for the operation.
-
-   Default
 
 
 .. container:: table-row
@@ -902,8 +816,6 @@ value is "imported" from the field called "header" from the $cObj
 
             bytes.labels = " | K| M| G"
 
-   Default
-
 
 .. container:: table-row
 
@@ -921,8 +833,6 @@ value is "imported" from the field called "header" from the $cObj
 
          Uses "renderCharset" for the operation.
 
-   Default
-
 
 .. container:: table-row
 
@@ -938,8 +848,6 @@ value is "imported" from the field called "header" from the $cObj
          Removes "bad" HTML code based on a pattern that filters away HTML that
          is considered dangerous for XSS bugs.
 
-   Default
-
 
 .. container:: table-row
 
@@ -949,7 +857,7 @@ value is "imported" from the field called "header" from the $cObj
          cropHTML
 
    Data type
-
+         string
 
    Description
          Crops the content to a certain length. In contrast to stdWrap.crop it
@@ -959,8 +867,6 @@ value is "imported" from the field called "header" from the $cObj
 
          Note that stdWrap.crop should not be used if stdWrap.cropHTML is
          already used.
-
-   Default
 
 
 .. container:: table-row
@@ -976,8 +882,6 @@ value is "imported" from the field called "header" from the $cObj
    Description
          Strips all html-tags.
 
-   Default
-
 
 .. container:: table-row
 
@@ -987,7 +891,7 @@ value is "imported" from the field called "header" from the $cObj
          crop
 
    Data type
-
+         string
 
    Description
          Crops the content to a certain length.
@@ -1026,8 +930,6 @@ value is "imported" from the field called "header" from the $cObj
 
          Uses "renderCharset" for the operation.
 
-   Default
-
 
 .. container:: table-row
 
@@ -1041,8 +943,6 @@ value is "imported" from the field called "header" from the $cObj
 
    Description
          Passes the content through rawurlencode()-PHP-function.
-
-   Default
 
 
 .. container:: table-row
@@ -1061,8 +961,6 @@ value is "imported" from the field called "header" from the $cObj
          Additional property ".preserveEntities" will preserve entities so only
          non-entity characters are affected.
 
-   Default
-
 
 .. container:: table-row
 
@@ -1076,8 +974,6 @@ value is "imported" from the field called "header" from the $cObj
 
    Description
          All double-line-breaks are substituted with this value.
-
-   Default
 
 
 .. container:: table-row
@@ -1094,8 +990,6 @@ value is "imported" from the field called "header" from the $cObj
          Pass the value through the PHP function nl2br(). This
          converts line breaks to <br /> tags.
 
-   Default
-
 
 .. container:: table-row
 
@@ -1109,8 +1003,6 @@ value is "imported" from the field called "header" from the $cObj
 
    Description
          All ASCII-codes of "10" (CR) are substituted with *value.*
-
-   Default
 
 
 .. container:: table-row
@@ -1127,8 +1019,6 @@ value is "imported" from the field called "header" from the $cObj
          Lets you split the content by chr(10) and process each line
          independently. Used to format content made with the RTE.
 
-   Default
-
 
 .. container:: table-row
 
@@ -1144,8 +1034,6 @@ value is "imported" from the field called "header" from the $cObj
          Splits the content by characters "," ";" and chr(10) (return), trims
          each value and returns a comma-separated list of the values.
 
-   Default
-
 
 .. container:: table-row
 
@@ -1159,8 +1047,6 @@ value is "imported" from the field called "header" from the $cObj
 
    Description
          Wraps the content.
-
-   Default
 
 
 .. container:: table-row
@@ -1176,8 +1062,6 @@ value is "imported" from the field called "header" from the $cObj
    Description
          Same as .innerWrap (but watch the order in which they are executed).
 
-   Default
-
 
 .. container:: table-row
 
@@ -1188,11 +1072,6 @@ value is "imported" from the field called "header" from the $cObj
 
    Data type
          wrap
-
-   Description
-
-
-   Default
 
 
 .. container:: table-row
@@ -1208,8 +1087,6 @@ value is "imported" from the field called "header" from the $cObj
    Description
          Lets you add tag parameters to the content  *if* the content is a tag!
 
-   Default
-
 
 .. container:: table-row
 
@@ -1223,8 +1100,6 @@ value is "imported" from the field called "header" from the $cObj
 
    Description
          Wraps the content in font-tags.
-
-   Default
 
 
 .. container:: table-row
@@ -1240,8 +1115,6 @@ value is "imported" from the field called "header" from the $cObj
    Description
          Wraps content with table-tags.
 
-   Default
-
 
 .. container:: table-row
 
@@ -1255,8 +1128,6 @@ value is "imported" from the field called "header" from the $cObj
 
    Description
          Used to make lists of links to files.
-
-   Default
 
 
 .. container:: table-row
@@ -1272,8 +1143,6 @@ value is "imported" from the field called "header" from the $cObj
    Description
          cObject prepended the content.
 
-   Default
-
 
 .. container:: table-row
 
@@ -1287,8 +1156,6 @@ value is "imported" from the field called "header" from the $cObj
 
    Description
          cObject appended the content.
-
-   Default
 
 
 .. container:: table-row
@@ -1305,8 +1172,6 @@ value is "imported" from the field called "header" from the $cObj
          Wraps content with <div style=text-align:[ *value* ];"> \| </div>
          *if* align is set.
 
-   Default
-
 
 .. container:: table-row
 
@@ -1320,8 +1185,6 @@ value is "imported" from the field called "header" from the $cObj
 
    Description
          Wraps the content with a link-tag.
-
-   Default
 
 
 .. container:: table-row
@@ -1348,8 +1211,6 @@ value is "imported" from the field called "header" from the $cObj
          **Notice:** Currently this works only with TCA fields of type "select"
          which are not database relations.
 
-   Default
-
 
 .. container:: table-row
 
@@ -1359,12 +1220,10 @@ value is "imported" from the field called "header" from the $cObj
          spaceBefore
 
    Data type
-         int /stdWrap
+         integer /stdWrap
 
    Description
          Pixels space before. Done with a clear-gif; <img ...><br>.
-
-   Default
 
 
 .. container:: table-row
@@ -1375,12 +1234,10 @@ value is "imported" from the field called "header" from the $cObj
          spaceAfter
 
    Data type
-         int /stdWrap
+         integer /stdWrap
 
    Description
          Pixels space after. Done with a clear-gif; <img ...><br>.
-
-   Default
 
 
 .. container:: table-row
@@ -1404,8 +1261,6 @@ value is "imported" from the field called "header" from the $cObj
          attribute setting the height. (Affects spaceBefore and spaceAfter as
          well).
 
-   Default
-
 
 .. container:: table-row
 
@@ -1420,8 +1275,6 @@ value is "imported" from the field called "header" from the $cObj
    Description
          .splitChar defines an alternative splitting character (default is "\|"
          - the vertical line)
-
-   Default
 
 
 .. container:: table-row
@@ -1444,8 +1297,6 @@ value is "imported" from the field called "header" from the $cObj
 
             | val1 | val2 |
 
-   Default
-
 
 .. container:: table-row
 
@@ -1460,8 +1311,6 @@ value is "imported" from the field called "header" from the $cObj
    Description
          *same as .wrap (but watch the order in which they are executed)*
 
-   Default
-
 
 .. container:: table-row
 
@@ -1471,20 +1320,19 @@ value is "imported" from the field called "header" from the $cObj
          dataWrap
 
    Data type
-
+         mixed
 
    Description
-         The content is parsed for sections of {...} and the content of {...}
-         is of the type getText and substituted with the result of getText.
+         The content is parsed for pairs of curly braces. The content of the
+         curly braces is of the type getText and is substituted with the result
+         of getText.
 
-         **Example:**
-
-         This will produce a tag around the content with an attribute that
-         contains the number of the current page::
+         **Example:** ::
 
             <div id="{tsfe : id}"> | </div>
 
-   Default
+         This will produce a <div> tag around the content with an id attribute
+         that contains the number of the current page.
 
 
 .. container:: table-row
@@ -1500,8 +1348,6 @@ value is "imported" from the field called "header" from the $cObj
    Description
          cObject prepended to content (before)
 
-   Default
-
 
 .. container:: table-row
 
@@ -1516,8 +1362,6 @@ value is "imported" from the field called "header" from the $cObj
    Description
          cObject appended to content (after)
 
-   Default
-
 
 .. container:: table-row
 
@@ -1531,8 +1375,6 @@ value is "imported" from the field called "header" from the $cObj
 
    Description
          *same as .wrap (but watch the order in which they are executed)*
-
-   Default
 
 
 .. container:: table-row
@@ -1573,8 +1415,6 @@ value is "imported" from the field called "header" from the $cObj
 
          This results in "This is a working solution."
 
-   Default
-
 
 .. container:: table-row
 
@@ -1588,8 +1428,6 @@ value is "imported" from the field called "header" from the $cObj
 
    Description
          *Wraps the complete content*
-
-   Default
 
 
 .. container:: table-row
@@ -1612,8 +1450,6 @@ value is "imported" from the field called "header" from the $cObj
             10 = TEXT
             10.value = This is the page title: {page:title}
             10.insertData = 1
-
-   Default
 
 
 .. container:: table-row
@@ -1638,8 +1474,6 @@ value is "imported" from the field called "header" from the $cObj
          **.stdWrap**
 
          \- stdWrap properties wrapping the offsetWrap'ed output
-
-   Default
 
 
 .. container:: table-row
@@ -1681,8 +1515,6 @@ value is "imported" from the field called "header" from the $cObj
               postUserFunc.typolink = 11
             }
 
-   Default
-
 
 .. container:: table-row
 
@@ -1704,8 +1536,6 @@ value is "imported" from the field called "header" from the $cObj
 
          Supplied by Jens Ellerbrock
 
-   Default
-
 
 .. container:: table-row
 
@@ -1718,7 +1548,7 @@ value is "imported" from the field called "header" from the $cObj
          string
 
    Description
-         Prefixes content with an HTML comment with the second part of input
+         (Since TYPO3 3.6.0) Prefixes content with an HTML comment with the second part of input
          string (divided by "\|") where first part is an integer telling how
          many trailing tabs to put before the comment on a new line.
 
@@ -1729,10 +1559,6 @@ value is "imported" from the field called "header" from the $cObj
             prefixComment = 2 | CONTENT ELEMENT, uid:{field:uid}/{field:CType}
 
          Will indent the comment with 1 tab (and the next line with 2+1 tabs)
-
-         (Added in TYPO3 >3.6.0RC1)
-
-   Default
 
 
 .. container:: table-row
@@ -1789,8 +1615,6 @@ value is "imported" from the field called "header" from the $cObj
 
             editIcons = header[header_align|date], bodytext
 
-   Default
-
 
 .. container:: table-row
 
@@ -1805,8 +1629,6 @@ value is "imported" from the field called "header" from the $cObj
    Description
          See cObject EDITPANEL.
 
-   Default
-
 
 .. container:: table-row
 
@@ -1820,8 +1642,6 @@ value is "imported" from the field called "header" from the $cObj
 
    Description
          (Since TYPO3 4.7) Caches rendered content in the caching framework.
-
-   Default
 
 
 .. container:: table-row
@@ -1841,8 +1661,6 @@ value is "imported" from the field called "header" from the $cObj
 
          Should be used under construction only.
 
-   Default
-
 
 .. container:: table-row
 
@@ -1861,8 +1679,6 @@ value is "imported" from the field called "header" from the $cObj
 
          Set to value "2" the content will be printed in a table - looks nicer.
 
-   Default
-
 
 .. container:: table-row
 
@@ -1879,8 +1695,6 @@ value is "imported" from the field called "header" from the $cObj
          is where ".field" gets data from.
 
          Should be used under construction only.
-
-   Default
 
 
 .. ###### END~OF~TABLE ######

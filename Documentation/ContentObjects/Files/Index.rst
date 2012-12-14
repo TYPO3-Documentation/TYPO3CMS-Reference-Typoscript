@@ -54,8 +54,6 @@ different cObjects.
             page.10 = FILES
             page.10.files = 12,15,16
 
-   Default
-
 
 .. container:: table-row
 
@@ -70,9 +68,9 @@ different cObjects.
          IRRE with sys_file_reference as child table). You can either
          provide a UID or a comma separated list of UIDs from the
          database table sys_file_reference or you have to specify a
-         table, uid and fieldname in the according subproperties of
+         table, uid and fieldname in the according sub-properties of
          "references". See further documentation of these
-         subproperties in the table below.
+         sub-properties in the table below.
 
          **Examples:** ::
 
@@ -98,8 +96,6 @@ different cObjects.
 
          This will fetch all items related to the page.media field.
 
-   Default
-
 
 .. container:: table-row
 
@@ -112,8 +108,6 @@ different cObjects.
    Description
          Comma separated list of sys_file_collection UIDs, which
          are loaded into the FILES object.
-
-   Default
 
 
 .. container:: table-row
@@ -141,8 +135,6 @@ different cObjects.
             page.10 = FILES
             page.10.folders = 2:mypics/,4:myimages/
 
-   Default
-
 
 .. container:: table-row
 
@@ -168,8 +160,6 @@ different cObjects.
 
          This returns the size of the current file.
 
-   Default
-
 
 .. container:: table-row
 
@@ -178,11 +168,6 @@ different cObjects.
 
    Data type
          ->stdWrap
-
-   Description
-
-
-   Default
 
 
 .. ###### END~OF~TABLE ######
@@ -224,8 +209,6 @@ Special key: "references"
    Description
          The table name of the table having the file field.
 
-   Default
-
 
 .. container:: table-row
 
@@ -238,8 +221,6 @@ Special key: "references"
    Description
          The UID of the record from which to fetch the referenced files.
 
-   Default
-
 
 .. container:: table-row
 
@@ -251,8 +232,6 @@ Special key: "references"
 
    Description
          Fieldname of the file field in the table.
-
-   Default
 
 
 .. ###### END~OF~TABLE ######

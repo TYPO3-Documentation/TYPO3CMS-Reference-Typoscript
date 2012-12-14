@@ -24,13 +24,10 @@ Data types reference
    Examples
          ::
 
-            <body bgcolor="red">
+            <body lang="de">
 
    Comment
-
-
-   Default
-
+         An HTML tag.
 
 .. container:: table-row
 
@@ -100,14 +97,12 @@ Data types reference
             write the exact filename or you can include an asterisk (\*) as
             wildcard.It's recommended to include a "\*" before the file extension
             (see example to the left). This will ensure that the file is still
-            referenced correct even if the template is copied and the file will
-            have it's name prepended with numbers!!
+            referenced correctly even if the template is copied and the file will
+            have its name prepended with numbers!
 
          #. If the value contains a "/" it's expected to be a reference (absolute
             or relative) to a file on the file-system instead of the resource-
             field. No support for wildcards.
-
-   Default
 
 
 .. container:: table-row
@@ -140,8 +135,6 @@ Data types reference
 
          #. GIFBUILDER-object
 
-   Default
-
 
 .. container:: table-row
 
@@ -157,8 +150,6 @@ Data types reference
 
    Comment
          pure HTML-code
-
-   Default
 
 
 .. container:: table-row
@@ -180,8 +171,6 @@ Data types reference
 
          This is normally the same value as the name of the root-level object
          that defines the frame.
-
-   Default
 
 
 .. container:: table-row
@@ -205,8 +194,6 @@ Data types reference
          converted to a web image format (gif or jpg) if it happens not to be
          already!
 
-   Default
-
 
 .. container:: table-row
 
@@ -216,40 +203,38 @@ Data types reference
          degree
 
    Examples
-
+         45
 
    Comment
          -90 to 90, integers
-
-   Default
 
 
 .. container:: table-row
 
    Data type
+         .. _data-type-positive-integer:
          .. _data-type-posint:
          .. _data-type-intplus:
 
-         posint / int+
+         positive integer / posint / int+
 
    Examples
-
+         42, 8, 9
 
    Comment
          Positive integer
-
-   Default
 
 
 .. container:: table-row
 
    Data type
          .. _data-type-int:
+         .. _data-type-integer:
 
-         int
+         integer / int
 
    Examples
-
+         42, -8, -9, 0
 
    Comment
          integer
@@ -257,20 +242,18 @@ Data types reference
          (sometimes used generally though another type would have been more
          appropriate, like "pixels")
 
-   Default
-
 
 .. container:: table-row
 
    Data type
-         .. _data-type-str:
          .. _data-type-string:
+         .. _data-type-str:
          .. _data-type-value:
 
-         str / string / value
+         string / str / value
 
    Examples
-
+         The quick brown fox jumps over the lazy dog.
 
    Comment
          string.
@@ -278,12 +261,11 @@ Data types reference
          (sometimes used generally though another type would have been more
          appropriate, like "align")
 
-   Default
-
 
 .. container:: table-row
 
    Data type
+         .. _data-type-bool:
          .. _data-type-boolean:
 
          boolean
@@ -296,8 +278,6 @@ Data types reference
 
          non-empty strings (but not zero) are "true"
 
-   Default
-
 
 .. container:: table-row
 
@@ -307,12 +287,10 @@ Data types reference
          rotation
 
    Examples
-
+         180
 
    Comment
          integer, degrees from 0 - 360
-
-   Default
 
 
 .. container:: table-row
@@ -329,8 +307,6 @@ Data types reference
          x,y is the offset from the upper left corner.
 
          w,h is the width and height
-
-   Default
 
 
 .. container:: table-row
@@ -380,8 +356,6 @@ Data types reference
 
          Aqua = "#00FFFF"
 
-   Default
-
 
 .. container:: table-row
 
@@ -418,8 +392,6 @@ Data types reference
          three RGB-channels or a floating point with an "\*" before, which will
          then multiply the values with that factor.
 
-   Default
-
 
 .. container:: table-row
 
@@ -434,9 +406,7 @@ Data types reference
          34
 
    Comment
-         A page id (int) or "this" (=current page id)
-
-   Default
+         A page id (integer) or "this" (=current page id)
 
 
 .. container:: table-row
@@ -452,8 +422,6 @@ Data types reference
    Comment
          pixel-distance
 
-   Default
-
 
 .. container:: table-row
 
@@ -468,8 +436,6 @@ Data types reference
    Comment
          list of values
 
-   Default
-
 
 .. container:: table-row
 
@@ -479,7 +445,7 @@ Data types reference
          margins
 
    Examples
-         *This sets leftmargin to 10 and bottom-margin to 5. Top and right is
+         *This sets margin-left to 10 and margin-bottom to 5. Top and right are
          not set (zero)*
 
          10,0,0,5
@@ -488,8 +454,6 @@ Data types reference
          l,t,r,b
 
          left, top, right, bottom
-
-   Default
 
 
 .. container:: table-row
@@ -510,8 +474,6 @@ Data types reference
 
          Used to wrap something. The part on the left and right of the vertical
          line is placed on the left and right side of the value.
-
-   Default
 
 
 .. container:: table-row
@@ -537,8 +499,6 @@ Data types reference
          instead of {x}.
 
          Thus we can insert page\_ids from previous levels.
-
-   Default
 
 
 .. container:: table-row
@@ -569,8 +529,6 @@ Data types reference
          **lcfirst** : (Since TYPO3 4.6) Convert the first letter of the string
          to lowercase.
 
-   Default
-
 
 .. container:: table-row
 
@@ -586,8 +544,6 @@ Data types reference
          "before \| after"
 
          Used for content and sets space "before \| after".
-
-   Default
 
 
 .. container:: table-row
@@ -640,8 +596,6 @@ Data types reference
          y - year, numeric, 2 digits
 
          z - day of the year, numeric; e.g. "299"
-
-   Default
 
 
 .. container:: table-row
@@ -741,8 +695,6 @@ Data types reference
 
          %% - a literal \`%' character
 
-   Default
-
 
 .. container:: table-row
 
@@ -759,8 +711,6 @@ Data types reference
    Comment
          Seconds since 1/1 1970...
 
-   Default
-
 
 .. container:: table-row
 
@@ -774,8 +724,6 @@ Data types reference
 
    Comment
          path relative to the directory from which we operate.
-
-   Default
 
 
 .. container:: table-row
@@ -793,8 +741,6 @@ Data types reference
    Comment
 
 
-   Default
-
 
 .. container:: table-row
 
@@ -809,9 +755,7 @@ Data types reference
          *could be 'border="0" framespacing="0"'*
 
    Comment
-
-
-   Default
+         Parameters for a tag.
 
 
 .. container:: table-row
@@ -1054,7 +998,7 @@ Data types reference
 
             :dd:
                 **path:** path to a file, possibly placed in an extension, returns
-                empty if the file doesn't exist.
+                empty if the file does not exist.
 
           - :dt:
                 **= cObj : parentRecordNumber**
@@ -1124,8 +1068,6 @@ Data types reference
          The value of config-option "lockFilePath" must equal the first part of
          the path. Thereby the path is locked to that folder.
 
-   Default
-
 
 .. container:: table-row
 
@@ -1159,8 +1101,6 @@ Data types reference
          prefixed with "ux\_" is present and if so, this class is instantiated
          instead. See the document "Inside TYPO3" for more information on
          extending the classes in TYPO3!
-
-   Default
 
 
 .. ###### END~OF~TABLE ######

@@ -55,8 +55,6 @@ been removed in TYPO3 6.0.
               parent = 0
             }
 
-   Default
-
 
 .. container:: table-row
 
@@ -86,8 +84,6 @@ been removed in TYPO3 6.0.
               hidden = 0
             }
 
-   Default
-
 
 .. container:: table-row
 
@@ -102,8 +98,6 @@ been removed in TYPO3 6.0.
          written in case of an update of a record (and not a new submission)
 
          Please pay attention to the property below! ("overrideEdit")
-
-   Default
 
 
 .. container:: table-row
@@ -129,8 +123,6 @@ been removed in TYPO3 6.0.
               hidden = 1
             }
 
-   Default
-
 
 .. container:: table-row
 
@@ -145,8 +137,6 @@ been removed in TYPO3 6.0.
          id of the current fe\_user should be inserted. This fe\_user-uid is
          inserted/updated both by "new" and "edit"
 
-   Default
-
 
 .. container:: table-row
 
@@ -160,8 +150,6 @@ been removed in TYPO3 6.0.
          Works with new records: Insert automatically the PID of the page,
          where the submitted data is sent to. Any "pid" supplied from the
          submitted data will override. This is for convenience.
-
-   Default
 
 
 .. container:: table-row
@@ -184,8 +172,6 @@ been removed in TYPO3 6.0.
 
          A very good example is to look at "pi/guest\_submit.php",
          included in the extension "tt\_guest" (used for a guestbook feature)
-
-   Default
 
 
 .. container:: table-row
@@ -218,8 +204,6 @@ been removed in TYPO3 6.0.
          submissions are checked whether another record with this value already
          exists. If so, the record is NOT inserted, because it's expected to be
          a "double post" (posting the same data more than once)
-
-   Default
 
 
 .. ###### END~OF~TABLE ######

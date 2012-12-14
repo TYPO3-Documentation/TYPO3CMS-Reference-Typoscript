@@ -55,8 +55,6 @@ with the "dontCheckPid"-option.
 
             source = tt_content_34, 45, tt_links_56
 
-   Default
-
 
 .. container:: table-row
 
@@ -81,8 +79,6 @@ with the "dontCheckPid"-option.
 
          This adds the tables tt\_content, tt\_address, tt\_links and
          tx\_myexttable.
-
-   Default
 
 
 .. container:: table-row
@@ -114,6 +110,7 @@ with the "dontCheckPid"-option.
          accessible for the website user. This option disables that check.
 
    Default
+         0
 
 
 .. container:: table-row
@@ -125,9 +122,7 @@ with the "dontCheckPid"-option.
          wrap /stdWrap
 
    Description
-
-
-   Default
+         Wraps the output. Executed before ".stdWrap".
 
 
 .. container:: table-row
@@ -140,8 +135,6 @@ with the "dontCheckPid"-option.
 
    Description
          (Executed after ".wrap".)
-
-   Default
 
 
 .. ###### END~OF~TABLE ######

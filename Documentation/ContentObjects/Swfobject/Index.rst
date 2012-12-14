@@ -45,8 +45,6 @@ This object will insert a Flash player driven by JavaScript.
          qualified URLs. Use config.baseURL and/or config.absRefPrefix to get
          fully qualified URLs automatically.
 
-   Default
-
 
 .. container:: table-row
 
@@ -54,15 +52,13 @@ This object will insert a Flash player driven by JavaScript.
          width
 
    Data type
-         int /stdWrap
+         integer /stdWrap
 
    Description
          Width of the swfObject.
 
          If it is not set, it will be filled with defaultWidth of the player
          configuration.
-
-   Default
 
 
 .. container:: table-row
@@ -71,15 +67,13 @@ This object will insert a Flash player driven by JavaScript.
          height
 
    Data type
-         int /stdWrap
+         integer /stdWrap
 
    Description
          Height of the swfObject.
 
          If it is not set, it will be filled with defaultHeight of the player
          configuration.
-
-   Default
 
 
 .. container:: table-row
@@ -94,8 +88,6 @@ This object will insert a Flash player driven by JavaScript.
          Sets default for different media types. E.g. "audio" or "video". If
          value is "audio", the player configuration audio.player will be used.
 
-   Default
-
 
 .. container:: table-row
 
@@ -107,8 +99,6 @@ This object will insert a Flash player driven by JavaScript.
 
    Description
          Location of player
-
-   Default
 
 
 .. container:: table-row
@@ -144,8 +134,6 @@ This object will insert a Flash player driven by JavaScript.
          lash/9.0/UsingFlash/help.html?content=WSd60f23110762d6b883b18f10cb1fe1
          af6-7ba7.html>`_
 
-   Default
-
 
 .. container:: table-row
 
@@ -153,12 +141,10 @@ This object will insert a Flash player driven by JavaScript.
          [type].player.defaultWidth
 
    Data type
-
+         integer
 
    Description
          Default media width.
-
-   Default
 
 
 .. container:: table-row
@@ -167,12 +153,10 @@ This object will insert a Flash player driven by JavaScript.
          [type].player.defaultHeight
 
    Data type
-
+         integer
 
    Description
          Default media height.
-
-   Default
 
 
 .. container:: table-row
@@ -181,10 +165,10 @@ This object will insert a Flash player driven by JavaScript.
          [type].player.mapping
 
    Data type
-
+         *(array of keys)*
 
    Description
-         The audio player doesn't work with file, but instead expects the file
+         The audio player does not work with file, but instead expects the file
          with the flashvar soundFile. mapping does the rename of parameter for
          you by default.
 
@@ -193,8 +177,6 @@ This object will insert a Flash player driven by JavaScript.
             mapping {
               flashvars.file = soundFile
             }
-
-   Default
 
 
 .. container:: table-row
@@ -206,7 +188,7 @@ This object will insert a Flash player driven by JavaScript.
          string /stdWrap
 
    Description
-
+         Specifies the URL of your express install SWF.
 
    Default
          typo3/contrib/flashmedia/swfobject/expressInstall.swf
@@ -224,8 +206,6 @@ This object will insert a Flash player driven by JavaScript.
          If the file is a URL and forcePlayer is not set, the URL will be
          called directly instead of using a player.
 
-   Default
-
 
 .. container:: table-row
 
@@ -237,8 +217,6 @@ This object will insert a Flash player driven by JavaScript.
 
    Description
          Flash vars.
-
-   Default
 
 
 .. container:: table-row
@@ -252,8 +230,6 @@ This object will insert a Flash player driven by JavaScript.
    Description
          Flash params.
 
-   Default
-
 
 .. container:: table-row
 
@@ -265,8 +241,6 @@ This object will insert a Flash player driven by JavaScript.
 
    Description
          Flash attributes.
-
-   Default
 
 
 .. container:: table-row
@@ -322,11 +296,6 @@ This object will insert a Flash player driven by JavaScript.
 
    Data type
          ->stdWrap
-
-   Description
-
-
-   Default
 
 
 .. ###### END~OF~TABLE ######

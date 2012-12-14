@@ -65,8 +65,6 @@ useful for putting menus into them.
 
          stdWrap is available for the property TDParams.
 
-   Default
-
 
 .. container:: table-row
 
@@ -82,8 +80,6 @@ useful for putting menus into them.
          The default value of TDParams is: valign="top".
 
          stdWrap is available for the property TDParams.
-
-   Default
 
 
 .. container:: table-row
@@ -101,8 +97,6 @@ useful for putting menus into them.
 
          stdWrap is available for the property TDParams.
 
-   Default
-
 
 .. container:: table-row
 
@@ -119,8 +113,6 @@ useful for putting menus into them.
 
          stdWrap is available for the property TDParams.
 
-   Default
-
 
 .. container:: table-row
 
@@ -136,8 +128,6 @@ useful for putting menus into them.
          The default value of TDParams is: valign="top".
 
          stdWrap is available for the property TDParams.
-
-   Default
 
 
 .. container:: table-row
@@ -166,8 +156,6 @@ useful for putting menus into them.
    Description
          Width of the content-cell "c".
 
-   Default
-
 
 .. container:: table-row
 
@@ -191,11 +179,6 @@ useful for putting menus into them.
 
    Data type
          ->stdWrap
-
-   Description
-
-
-   Default
 
 
 .. ###### END~OF~TABLE ######
@@ -223,7 +206,7 @@ Example:
      }
 
      tm.10 < temp.sidemenu
-     tm.TDParams = valign="top"
+     tm.TDParams = style="vertical-align: top;"
 
      stdWrap.wrap = <div id="mytable">|</div>
    }

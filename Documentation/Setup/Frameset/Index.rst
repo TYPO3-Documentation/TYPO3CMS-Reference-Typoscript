@@ -24,9 +24,6 @@
    Description
          Description:
 
-   Default
-         Default:
-
 
 .. container:: table-row
 
@@ -38,8 +35,6 @@
 
    Description
          Configuration of frames and nested framesets.
-
-   Default
 
 
 .. container:: table-row
@@ -53,8 +48,6 @@
    Description
          Cols
 
-   Default
-
 
 .. container:: table-row
 
@@ -66,8 +59,6 @@
 
    Description
          Rows
-
-   Default
 
 
 .. container:: table-row
@@ -82,8 +73,6 @@
          **Example:**
 
          border="0" framespacing="0" frameborder="NO"
-
-   Default
 
 
 .. ###### END~OF~TABLE ######

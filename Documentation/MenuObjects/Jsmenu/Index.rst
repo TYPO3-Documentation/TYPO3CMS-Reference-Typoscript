@@ -34,7 +34,7 @@ JSMENU
          levels
 
    Data type
-         int, 1-5
+         integer, 1-5
 
    Description
          How many levels there are
@@ -57,8 +57,6 @@ JSMENU
          If you have more than one JSMENU on the page, you should set this
          value for each one.
 
-   Default
-
 
 .. container:: table-row
 
@@ -69,9 +67,7 @@ JSMENU
          target
 
    Description
-         Decides target of the menu-links
-
-   Default
+         Determines the target of the menu-links.
 
 
 .. container:: table-row
@@ -80,13 +76,11 @@ JSMENU
          forceTypeValue
 
    Data type
-         int
+         integer
 
    Description
          If set, the &type parameter of the link is forced to this value
          regardless of target.
-
-   Default
 
 
 .. container:: table-row
@@ -100,8 +94,6 @@ JSMENU
    Description
          levels-config
 
-   Default
-
 
 .. container:: table-row
 
@@ -114,8 +106,6 @@ JSMENU
    Description
          wrap around the selector-boxes
 
-   Default
-
 
 .. container:: table-row
 
@@ -127,8 +117,6 @@ JSMENU
 
    Description
          wrap around the selector-boxes with wrap and form-tags og JS-code.
-
-   Default
 
 
 .. container:: table-row
@@ -143,8 +131,6 @@ JSMENU
          General first label. May be overridden by the one set in each
          JSMENUITEM
 
-   Default
-
 
 .. container:: table-row
 
@@ -156,8 +142,6 @@ JSMENU
 
    Description
          If set, spacer can go into the menu, else not.
-
-   Default
 
 
 .. ###### END~OF~TABLE ######

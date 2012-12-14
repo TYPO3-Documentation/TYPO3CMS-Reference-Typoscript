@@ -51,8 +51,6 @@ encapsLines
             <div>Some text</div>
             <B>Some text</B>
 
-   Default
-
 
 .. container:: table-row
 
@@ -78,8 +76,6 @@ encapsLines
 
          ([ *tagname* ] is in uppercase.)
 
-   Default
-
 
 .. container:: table-row
 
@@ -87,7 +83,7 @@ encapsLines
          addAttributes.[ *tagname* ]
 
    Data type
-         array of strings
+         *(array of strings)*
 
    Description
          Attributes to set in the encapsulation tag.
@@ -104,14 +100,12 @@ encapsLines
             .setOnly =
 
          exists : This will set the value ONLY if the property does not already
-         exist
+         exist.
 
          blank : This will set the value ONLY if the property does not already
-         exist OR is blank ("")
+         exist OR is blank ("").
 
-         Default is to always override/set the attributes value.
-
-   Default
+         Default is to always override/set the value of the attributes.
 
 
 .. container:: table-row
@@ -141,8 +135,6 @@ encapsLines
             Some text
             <b>Some text</b>
 
-   Default
-
 
 .. container:: table-row
 
@@ -169,8 +161,6 @@ encapsLines
             <P>First line of text</P>
             <p>Some text</p>
 
-   Default
-
 
 .. container:: table-row
 
@@ -183,8 +173,6 @@ encapsLines
    Description
          Wraps the content inside all lines, whether they are encapsulated or
          not.
-
-   Default
 
 
 .. container:: table-row
@@ -200,8 +188,6 @@ encapsLines
 
          ([ *tagname* ] is in uppercase.)
 
-   Default
-
 
 .. container:: table-row
 
@@ -215,8 +201,6 @@ encapsLines
          If set, this value is set as the default "align" value of the wrapping
          tags, both from .encapsTagList, .bypassEncapsTagList and
          .nonWrappedTag
-
-   Default
 
 
 .. container:: table-row
@@ -233,8 +217,6 @@ encapsLines
          .wrapNonWrappedLines and has the advantage that its attributes are
          set by .addAttributes as well as defaultAlign. Thus you can match
          the wrapping tags used for non-wrapped and wrapped lines more easily.
-
-   Default
 
 
 .. ###### END~OF~TABLE ######

@@ -179,8 +179,6 @@ Examples:
 
          "\|\|" can be used instead of line breaks
 
-   Default
-
 
 .. container:: table-row
 
@@ -188,7 +186,7 @@ Examples:
          dataArray
 
    Data type
-         *[array of form elements]*
+         *(array of form elements)*
 
    Description
          This is an alternative way to define the form-fields. Instead of using
@@ -260,8 +258,6 @@ Examples:
               40.value.lang.dk = Send
             }
 
-   Default
-
 
 .. container:: table-row
 
@@ -273,8 +269,6 @@ Examples:
 
    Description
          Wraps the labels for radio buttons.
-
-   Default
 
 
 .. container:: table-row
@@ -305,8 +299,6 @@ Examples:
    Description
          Wraps the input element and label of a radio button.
 
-   Default
-
 
 .. container:: table-row
 
@@ -326,17 +318,15 @@ Examples:
 
          **Empty:** the current page is chosen.
 
-         **NOTE:** If type is integer/empty the form will be submitted to a
+         **Note:** If type is integer/empty the form will be submitted to a
          page in TYPO3 and if this page has a value for target/no\_cache, then
          this will be used instead of the default target/no\_cache below.
 
-         **NOTE:** If the redirect-value is set, the redirect-target overrides
+         **Note:** If the redirect-value is set, the redirect-target overrides
          the target set by the action-url
 
-         **NOTE:** May be overridden by the property override feature of the
+         **Note:** May be overridden by the property override feature of the
          formdata (see above)
-
-   Default
 
 
 .. container:: table-row
@@ -349,8 +339,6 @@ Examples:
 
    Description
          Default target of the form.
-
-   Default
 
 
 .. container:: table-row
@@ -381,8 +369,6 @@ Examples:
    Description
          Default no\_cache-option.
 
-   Default
-
 
 .. container:: table-row
 
@@ -404,8 +390,6 @@ Examples:
          If you set this flag, "noValueInsert", the content will always be the
          default content.
 
-   Default
-
 
 .. container:: table-row
 
@@ -418,8 +402,6 @@ Examples:
    Description
          Overriding option to the config-value of the same name. See "CONFIG"
          above.
-
-   Default
 
 
 .. container:: table-row
@@ -457,10 +439,8 @@ Examples:
          location data of the page. This should be done with search-fields as
          this will carry the initial searching start point with.
 
-         **NOTE:** May be overridden by the property override feature of the
+         **Note:** May be overridden by the property override feature of the
          formdata (see above)
-
-   Default
 
 
 .. container:: table-row
@@ -480,10 +460,8 @@ Examples:
 
          **Empty;** the current page is chosen.
 
-         **NOTE:** If this value is set, the target of this overrides the
+         **Note:** If this value is set, the target of this overrides the
          target of the "type".
-
-   Default
 
 
 .. container:: table-row
@@ -514,7 +492,7 @@ Examples:
          Message for the form evaluation function in case of correctly filled
          form.
 
-         **NOTE:** May be overridden by the property override feature of the
+         **Note:** May be overridden by the property override feature of the
          formdata (see above).
 
    Default
@@ -534,7 +512,7 @@ Examples:
 
          This message is shown above the list of fields.
 
-         **NOTE:** May be overridden by the property override feature of the
+         **Note:** May be overridden by the property override feature of the
          formdata (see above).
 
    Default
@@ -552,10 +530,8 @@ Examples:
    Description
          Message if a field evaluated to be an email address did not validate.
 
-         **NOTE:** May be overridden by the property override feature of the
+         **Note:** May be overridden by the property override feature of the
          formdata (see above).
-
-   Default
 
 
 .. container:: table-row
@@ -567,12 +543,10 @@ Examples:
          ->IMAGE (cObject)
 
    Description
-         If this is a valid image the submit button is rendered as this image!!
+         If this is a valid image, the submit button is rendered as this image.
 
-         **NOTE:** CurrentValue is set to the caption-label before generating
+         **Note:** CurrentValue is set to the caption-label before generating
          the image.
-
-   Default
 
 
 .. container:: table-row
@@ -601,8 +575,6 @@ Examples:
          value inserted, but wrapped in .commentWrap stdWrap-properties (see
          below).
 
-   Default
-
 
 .. container:: table-row
 
@@ -614,8 +586,6 @@ Examples:
 
    Description
          Field: Wraps the fields
-
-   Default
 
 
 .. container:: table-row
@@ -629,8 +599,6 @@ Examples:
    Description
          Labels: Wraps the label
 
-   Default
-
 
 .. container:: table-row
 
@@ -643,8 +611,6 @@ Examples:
    Description
          Comments: Wrap for comments IF you use ###COMMENT###
 
-   Default
-
 
 .. container:: table-row
 
@@ -656,8 +622,6 @@ Examples:
 
    Description
          Defines if required-fields should be checked and marked up.
-
-   Default
 
 
 .. container:: table-row
@@ -776,8 +740,6 @@ Examples:
    Description
          Wraps the whole form (before form tag is added)
 
-   Default
-
 
 .. container:: table-row
 
@@ -785,7 +747,7 @@ Examples:
          hiddenFields
 
    Data type
-         [array of cObject]
+         *(array of cObjects)*
 
    Description
          Used to set hiddenFields from TS.
@@ -800,8 +762,6 @@ Examples:
          Available sub-property:
 
          **stdWrap** , see ->stdWrap.
-
-   Default
 
 
 .. container:: table-row
@@ -826,8 +786,6 @@ Examples:
 
          **stdWrap** is available for the sub-properties, e.g. params.tagname.
 
-   Default
-
 
 .. container:: table-row
 
@@ -847,8 +805,6 @@ Examples:
          "email" would be wrapped to this value:
          *tx\_myextension[input][email]*
 
-   Default
-
 
 .. container:: table-row
 
@@ -865,8 +821,6 @@ Examples:
          The wrap attributes can also be disabled on a per-field basis by using
          the special keyword "disabled" as the value of the wrap attribute.
 
-   Default
-
 
 .. container:: table-row
 
@@ -881,8 +835,6 @@ Examples:
          array as separate elements including other practical values. This mode
          is for use in extensions where the array return value can be more
          useful.
-
-   Default
 
 
 .. container:: table-row
@@ -906,8 +858,6 @@ Examples:
          **Notice:** In TYPO3 4.0 and later, CSS Styled Content is configured
          to produce accessible forms by default.
 
-   Default
-
 
 .. container:: table-row
 
@@ -922,8 +872,6 @@ Examples:
          hash. ::
 
             <form name="...">
-
-   Default
 
 
 .. container:: table-row
@@ -940,8 +888,6 @@ Examples:
          the name set in the "formName" property). If set to "0", there will be
          no prefix at all.
 
-   Default
-
 
 .. container:: table-row
 
@@ -957,8 +903,6 @@ Examples:
          cleaned field name, prefixed with the form name as the ID, instead.
 
          This can be useful to style specifically named fields with CSS.
-
-   Default
 
 
 .. ###### END~OF~TABLE ######

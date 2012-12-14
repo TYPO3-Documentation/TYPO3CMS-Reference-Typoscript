@@ -29,7 +29,7 @@ case it looks like this:
 
 file: fileadmin/scripts/include.php ::
 
-   <?
+   <?php
            ...
            include('fileadmin/scripts/hello_world.php');
            include('fileadmin/scripts/other_library.php');
@@ -43,7 +43,7 @@ The file  **hello\_world.php** looks like this:
 
 file: fileadmin/scripts/hello\_world.php ::
 
-   <?
+   <?php
    class hello_world {
            function theMessage() {
                    return "Hello World";
@@ -65,7 +65,7 @@ includes the third script::
 
 file: fileadmin/scripts/surprise.php ::
 
-   <?
+   <?php
            $hello_world_object = new hello_world;             // New instance is created
            $contentBefore = $this->cObjGetSingle($conf['cObj'], $conf['cObj.']);
            $content = $contentBefore . $hello_world_object->theMessage();

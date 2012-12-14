@@ -12,7 +12,7 @@ LOAD\_REGISTER
 ^^^^^^^^^^^^^^
 
 This provides a way to load the array $GLOBALS['TSFE']->register[]
-with values. It doesn't return anything! The usefulness of this is,
+with values. It does not return anything! The usefulness of this is,
 that some predefined configurations (like the page-content) can be
 used in various places but use different values as the values of the
 register can change during the page-rendering.
@@ -37,9 +37,7 @@ register can change during the page-rendering.
 .. container:: table-row
 
    Property
-         Array...
-
-         [field name]
+         *(array of field names)*
 
    Data type
          string /stdWrap
@@ -47,7 +45,7 @@ register can change during the page-rendering.
    Description
          **Example:**
 
-         (This sets "contentWidth", "label" and "head") ::
+         This sets "contentWidth", "label" and "head". ::
 
             page.27 = LOAD_REGISTER
             page.27 {
@@ -58,8 +56,6 @@ register can change during the page-rendering.
               head = some text
               head.wrap = <b> | </b>
             }
-
-   Default
 
 
 .. ###### END~OF~TABLE ######

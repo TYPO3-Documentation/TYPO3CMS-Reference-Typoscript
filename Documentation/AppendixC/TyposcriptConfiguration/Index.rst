@@ -66,19 +66,17 @@ is set in LocalConfiguration.php
          caching of the page.Set this during development! And set it, if the
          content you create may not be cached.
 
-         **NOTE:** If you have a parsing error in your include script the
+         **Note:** If you have a parsing error in your include script the
          $GLOBALS['TSFE']->set\_no\_cache()function is NOT executed and thereby
          does not disable caching. Upon a parse-error you must manually clear
          the page-cache after you have corrected your error!
 
-         3) the array $confcontains the configuration for the PHP\_SCRIPT
+         3) the array $conf contains the configuration for the PHP\_SCRIPT
          cObject. Try debug($conf) to see the content printed out for
          debugging!
 
          *See the appendix later in this manual for an introduction to writing
          your own PHP include-scripts.*
-
-   Default
 
 
 .. container:: table-row
@@ -88,11 +86,6 @@ is set in LocalConfiguration.php
 
    Data type
          ->stdWrap
-
-   Description
-
-
-   Default
 
 
 .. ###### END~OF~TABLE ######
@@ -181,8 +174,6 @@ PHP\_SCRIPT\_INT
          \- You can not nest PHP\_SCRIPT\_INT and PHP\_SCRIPT\_EXT in
          PHP\_SCRIPT\_INT. You may nest PHP\_SCRIPT cObjects though.
 
-   Default
-
 
 .. container:: table-row
 
@@ -190,7 +181,7 @@ PHP\_SCRIPT\_INT
          includeLibs
 
    Data type
-         *list of* resource
+         *(list of resources)*
 
    Description
          This is a comma-separated list of resources that are included as PHP-
@@ -200,8 +191,6 @@ PHP\_SCRIPT\_INT
          the scripts are included. That's not the case with the regular
          PHP\_SCRIPT cObject.
 
-   Default
-
 
 .. container:: table-row
 
@@ -210,11 +199,6 @@ PHP\_SCRIPT\_INT
 
    Data type
          ->stdWrap
-
-   Description
-
-
-   Default
 
 
 .. ###### END~OF~TABLE ######
@@ -268,8 +252,8 @@ PHP\_SCRIPT\_EXT
          it's output to the browser.
 
          This basically means that PHP\_SCRIPT **\_EXT** (external, because
-         it's included in the global space in index\_ts.php file!!) can output
-         data directly with echo-statements!
+         it's included in the global space in index\_ts.php!) can output data
+         directly with echo-statements!
 
          This is a very "raw" version of PHP\_SCRIPT because it's not included
          from inside an object and you have only very few standard functions
@@ -296,8 +280,6 @@ PHP\_SCRIPT\_EXT
 
          \- Don't mess with the global vars named $EXTiS\_\*
 
-   Default
-
 
 .. container:: table-row
 
@@ -305,7 +287,7 @@ PHP\_SCRIPT\_EXT
          includeLibs
 
    Data type
-         *list of* resource
+         *(list of resources)*
 
    Description
          This is a comma-separated list of resources that are included as PHP-
@@ -315,8 +297,6 @@ PHP\_SCRIPT\_EXT
          the scripts are included. That's not the case with the regular
          PHP\_SCRIPT cObject.
 
-   Default
-
 
 .. container:: table-row
 
@@ -325,11 +305,6 @@ PHP\_SCRIPT\_EXT
 
    Data type
          ->stdWrap
-
-   Description
-
-
-   Default
 
 
 .. ###### END~OF~TABLE ######

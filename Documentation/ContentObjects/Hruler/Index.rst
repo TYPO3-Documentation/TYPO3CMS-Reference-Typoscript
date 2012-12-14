@@ -72,8 +72,6 @@ divider.
    Description
          Space before the line (to the left).
 
-   Default
-
 
 .. container:: table-row
 
@@ -85,8 +83,6 @@ divider.
 
    Description
          Space after the line (to the right).
-
-   Default
 
 
 .. container:: table-row
@@ -111,11 +107,6 @@ divider.
 
    Data type
          ->stdWrap
-
-   Description
-
-
-   Default
 
 
 .. ###### END~OF~TABLE ######

@@ -13,7 +13,7 @@ TMENUITEM
 
 The current record is the page-record of the menu item - just like you
 have it with GMENU/gifbuilder. Now, if you would like to get data from
-the current page record, use stdWrap.data = page : [field name]
+the current page record, use stdWrap.data = page : [field name].
 
 .. ### BEGIN~OF~TABLE ###
 
@@ -43,8 +43,6 @@ the current page record, use stdWrap.data = page : [field name]
    Description
          Wraps the whole item.
 
-   Default
-
 
 .. container:: table-row
 
@@ -57,8 +55,6 @@ the current page record, use stdWrap.data = page : [field name]
    Description
          Wraps the whole item and any submenu concatenated to it.
 
-   Default
-
 
 .. container:: table-row
 
@@ -70,13 +66,14 @@ the current page record, use stdWrap.data = page : [field name]
 
    Description
          If set, all appearances of the string '{elementUid}' in the total
-         element html-code (after wrapped in .allWrap} is substituted with the
+         element html-code (after wrapped in .allWrap} are substituted with the
          uid number of the menu item.
 
          This is useful if you want to insert an identification code in the
          HTML in order to manipulate properties with JavaScript.
 
    Default
+         0
 
 
 .. container:: table-row
@@ -90,7 +87,7 @@ the current page record, use stdWrap.data = page : [field name]
    Description
          If property RO is set (see below) then you can set this property to a
          certain set of parameters which will allow you to change the
-         background color of e.g. the table cell when the mouse rolls over you
+         background color of e.g. the table cell when the mouse rolls over your
          text-link.
 
          **Syntax:** ::
@@ -102,17 +99,17 @@ the current page record, use stdWrap.data = page : [field name]
             page = PAGE
             page.typeNum = 0
             page.10 = HMENU
-            page.10.wrap = <table border=1>|</table>
+            page.10.wrap = <table>|</table>
             page.10.1 = TMENU
             page.10.1.NO {
-              allWrap = <tr><td valign=top id="1tmenu{elementUid}" style="background:#eeeeee;">|</td></tr>
+              allWrap = <tr><td id="tmenu{elementUid}" style="background: #eeeeee;">|</td></tr>
               subst_elementUid = 1
-              RO_chBgColor = #cccccc | #eeeeee | 1tmenu
+              RO_chBgColor = #cccccc | #eeeeee | tmenu
               RO = 1
             }
 
          This example will start out with the table cells in #eeeeee and change
-         them to #cccccc (and back) when rolled over. The "1tmenu" string is a
+         them to #cccccc (and back) when rolled over. The "tmenu" string is a
          unique id for the menu items. You may not need it (unless the same
          menu items are more than once on a page), but the important thing is
          that the id of the table cell has the exact same label before the
@@ -120,8 +117,6 @@ the current page record, use stdWrap.data = page : [field name]
          a default background color for the cell with the style-attribute (blue
          marking). If you do not, Mozilla browsers will behave a little strange
          by not capturing the mouseout event the first time it's triggered.
-
-   Default
 
 
 .. container:: table-row
@@ -132,11 +127,6 @@ the current page record, use stdWrap.data = page : [field name]
    Data type
          HTML /stdWrap
 
-   Description
-
-
-   Default
-
 
 .. container:: table-row
 
@@ -146,11 +136,6 @@ the current page record, use stdWrap.data = page : [field name]
    Data type
          imgResource
 
-   Description
-
-
-   Default
-
 
 .. container:: table-row
 
@@ -159,11 +144,6 @@ the current page record, use stdWrap.data = page : [field name]
 
    Data type
          <img>-params
-
-   Description
-
-
-   Default
 
 
 .. container:: table-row
@@ -176,8 +156,6 @@ the current page record, use stdWrap.data = page : [field name]
 
    Description
          If set, this image is linked with the same <A> tag as the text
-
-   Default
 
 
 .. container:: table-row
@@ -192,8 +170,6 @@ the current page record, use stdWrap.data = page : [field name]
          If set, ".beforeImg" and ".beforeROImg" is expected to create a
          rollOver-pair.
 
-   Default
-
 
 .. container:: table-row
 
@@ -206,8 +182,6 @@ the current page record, use stdWrap.data = page : [field name]
    Description
          wrap around the ".before"-code
 
-   Default
-
 
 .. container:: table-row
 
@@ -216,11 +190,6 @@ the current page record, use stdWrap.data = page : [field name]
 
    Data type
          wrap
-
-   Description
-
-
-   Default
 
 
 .. container:: table-row
@@ -234,8 +203,6 @@ the current page record, use stdWrap.data = page : [field name]
    Description
          stdWrap to the link-text!
 
-   Default
-
 
 .. container:: table-row
 
@@ -246,9 +213,11 @@ the current page record, use stdWrap.data = page : [field name]
          boolean
 
    Description
-
+         If set, the link is first wrapped with " *.wrap"* and then the
+         <A>-tag.
 
    Default
+         0
 
 
 .. container:: table-row
@@ -262,11 +231,9 @@ the current page record, use stdWrap.data = page : [field name]
    Description
          Additional parameters
 
-         **Example:**
+         **Example:** ::
 
-         class="board"
-
-   Default
+            class="board"
 
 
 .. container:: table-row
@@ -288,8 +255,6 @@ the current page record, use stdWrap.data = page : [field name]
          This would use the abstract or description field for the <a title="">
          attribute.
 
-   Default
-
 
 .. container:: table-row
 
@@ -305,8 +270,6 @@ the current page record, use stdWrap.data = page : [field name]
 
          For details, see typolink->additionalParams
 
-   Default
-
 
 .. container:: table-row
 
@@ -317,9 +280,10 @@ the current page record, use stdWrap.data = page : [field name]
          boolean /stdWrap
 
    Description
-         If set, the linktext are not linked at all!
+         If set, the linktexts are not linked at all!
 
    Default
+         0
 
 
 .. container:: table-row
@@ -331,10 +295,10 @@ the current page record, use stdWrap.data = page : [field name]
          boolean /stdWrap
 
    Description
-         If set, the text will not be shown at all (smart with spacers)
+         If set, the text will not be shown at all (smart with spacers).
 
    Default
-
+         0
 
 .. container:: table-row
 
@@ -363,8 +327,6 @@ the current page record, use stdWrap.data = page : [field name]
    Description
          If set, rollOver is enabled for this link
 
-   Default
-
 
 .. container:: table-row
 
@@ -375,11 +337,9 @@ the current page record, use stdWrap.data = page : [field name]
          [mixed]
 
    Description
-         The series of "before..." properties are duplicated to "after..."
+         The series of "before..." properties is duplicated to "after..."
          properties as well. The only difference is that the output generated
          by the .after.... properties are placed after the link and not before.
-
-   Default
 
 
 .. container:: table-row
@@ -393,8 +353,6 @@ the current page record, use stdWrap.data = page : [field name]
    Description
          Alternative target overriding the target property of the TMENU if set.
 
-   Default
-
 
 .. container:: table-row
 
@@ -406,8 +364,6 @@ the current page record, use stdWrap.data = page : [field name]
 
    Description
          stdWrap of the whole item
-
-   Default
 
 
 .. ###### END~OF~TABLE ######

@@ -68,9 +68,6 @@ Inserts a transparent gif-file.
    Data type
          wrap /stdWrap
 
-   Description
-
-
    Default
          \|<br />
 
@@ -85,8 +82,6 @@ Inserts a transparent gif-file.
 
    Description
          (Executed after ".wrap".)
-
-   Default
 
 
 .. ###### END~OF~TABLE ######

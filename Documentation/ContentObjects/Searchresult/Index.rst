@@ -51,8 +51,6 @@ to pages.
 
             pages.title:tt_content.bodytext
 
-   Default
-
 
 .. container:: table-row
 
@@ -76,8 +74,6 @@ to pages.
             ###NEXT###:            The next-button
             ###PREV###:             The prev-button
 
-   Default
-
 
 .. container:: table-row
 
@@ -90,8 +86,6 @@ to pages.
    Description
          This cObject will be wrapped by a link to the next search result. This
          is the code substituting the "###NEXT###"-mark
-
-   Default
 
 
 .. container:: table-row
@@ -106,8 +100,6 @@ to pages.
          This cObject will be wrapped by a link to the prev search result. This
          is the code substituting the "###PREV###"-mark
 
-   Default
-
 
 .. container:: table-row
 
@@ -119,8 +111,6 @@ to pages.
 
    Description
          target til next/prev links!
-
-   Default
 
 
 .. container:: table-row
@@ -147,18 +137,16 @@ to pages.
          cObject
 
    Description
-         The cObject to render the search results
+         The cObject to render the search results.
 
          $cObj->data array is set to the resulting record from the search.
 
-         Please note, that in all fields are named [tablename]\_[fieldnam].
+         Please note, that  all fields are named [tablename]\_[fieldname].
          Thus the page title is in the field "pages\_title".
 
          Apart from this, these fields from the pages-table are also present::
 
                    uid
-
-   Default
 
 
 .. container:: table-row
@@ -170,9 +158,7 @@ to pages.
          wrap /stdWrap
 
    Description
-
-
-   Default
+         Wraps the code from the render object.
 
 
 .. container:: table-row
@@ -186,8 +172,6 @@ to pages.
    Description
          The cObject prepended in the search results returns rows
 
-   Default
-
 
 .. container:: table-row
 
@@ -199,8 +183,6 @@ to pages.
 
    Description
          The cObject used if the search results in no rows.
-
-   Default
 
 
 .. container:: table-row
@@ -216,34 +198,7 @@ to pages.
          the pages-table.
 
    Default
-
-
-.. container:: table-row
-
-   Property
-         wrap
-
-   Data type
-         wrap /stdWrap
-
-   Description
-         Wrap the whole content...
-
-   Default
-
-
-.. container:: table-row
-
-   Property
-         stdWrap
-
-   Data type
-         ->stdWrap
-
-   Description
-         Wrap the whole content...
-
-   Default
+         0
 
 
 .. container:: table-row
@@ -258,13 +213,14 @@ to pages.
          If set, then the doktypes 3 and 4 (External URLS and Shortcuts) are
          added to the doktypes being searched.
 
-         However at this point in time, no pages will be select if they do not
-         have at least one tt\_content record on them! That is because the
-         pages and tt\_content (or other) table is joined. So there must at
+         However at this point in time, no pages will be selected if they do
+         not have at least one tt\_content record on them! That is because the
+         pages and tt\_content (or other) table are joined. So there must at
          least be one occurrence of a tt\_content element on an External URL /
          Shortcut page for them to show up.
 
    Default
+         0
 
 
 .. container:: table-row
@@ -283,7 +239,29 @@ to pages.
 
             languageField.tt_content = sys_language_uid
 
-   Default
+
+.. container:: table-row
+
+   Property
+         wrap
+
+   Data type
+         wrap /stdWrap
+
+   Description
+         Wrap the whole content. Executed before ".stdWrap".
+
+
+.. container:: table-row
+
+   Property
+         stdWrap
+
+   Data type
+         ->stdWrap
+
+   Description
+         Wrap the whole content. Executed after ".wrap".
 
 
 .. ###### END~OF~TABLE ######

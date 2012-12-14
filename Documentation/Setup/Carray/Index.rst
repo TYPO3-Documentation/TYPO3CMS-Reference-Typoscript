@@ -24,9 +24,6 @@
    Description
          Description:
 
-   Default
-         Default:
-
 
 .. container:: table-row
 
@@ -38,10 +35,8 @@
 
    Description
          This is a numerical "array" of content-objects (cObjects). The order
-         by which you specific the objects is not important as the array will
+         with which you specific the objects is not important as the array will
          be sorted before it's parsed!
-
-   Default
 
 
 .. container:: table-row
@@ -56,30 +51,26 @@
          (stdWrap properties...)
 
    Data type
-
+         ->stdWrap
 
    Description
-         **NOTE:** This applies ONLY if "CARRAY /stdWrap" is set to be data
-         type
+         **Note:** This applies ONLY if "CARRAY /stdWrap" is set to be data
+         type.
 
          If you specify any non-integer properties to a CARRAY, stdWrap will be
          invoked with all properties of the CARRAY.
 
-         **Example:**
+         **Example:** ::
 
-         This will return '<b>This will be rendered before "10"testing</b>'
+            10 = TEXT
+            10.value = testing
 
-         10 = TEXT
+            5 = TEXT
+            5.value = This will be rendered before "10"
 
-         10.value = testing
+            wrap = <b>\|</b>
 
-         5 = TEXT
-
-         5.value = This will be rendered before "10"
-
-         wrap = <b>\|</b>
-
-   Default
+         This will return '<b>This will be rendered before "10"testing</b>'.
 
 
 .. container:: table-row
@@ -91,13 +82,11 @@
          <TD>-params
 
    Description
-         **NOTE:** This applies ONLY if "CARRAY +TDParams" is set to be data
-         type
+         **Note:** This applies ONLY if "CARRAY +TDParams" is set to be data
+         type.
 
          This property is used only in some cases where CARRAY is used. Please
          look out for a note about that in the various cases.
-
-   Default
 
 
 .. ###### END~OF~TABLE ######

@@ -36,13 +36,13 @@ Adds parameters to an HTML tag.
          \_offset
 
    Data type
-         int
+         integer
 
    Description
          Use this to define which tag you want to manipulate.
 
          1 is the first tag in the input, 2 is the second, -1 is the last, -2
-         is the second last
+         is the second last.
 
    Default
          1
@@ -51,7 +51,7 @@ Adds parameters to an HTML tag.
 .. container:: table-row
 
    Property
-         (array of strings)
+         *(array of strings)*
 
    Data type
          string /stdWrap
@@ -64,8 +64,6 @@ Adds parameters to an HTML tag.
 
          If the returned value is a blank string (but not zero!), then the
          existing property (if any) will not be overridden.
-
-   Default
 
 
 .. ###### END~OF~TABLE ######
@@ -81,14 +79,14 @@ Example:
 ::
 
    page.13 = TEXT
-   page.13.value = <tr><td valign="top">
-   page.13.addParams.bgcolor = {$menuCol.bgColor}
+   page.13.value = <tr><td>
+   page.13.addParams.bgcolor = white
    page.13.addParams._offset = -1
 
 Result example::
 
-   <tr><td valign="top" bgcolor="white">
+   <tr><td bgcolor="white">
 
 (This example adds the 'bgColor' property to the value of the TEXT
-cObject, if the content is not "" (zero counts as a value here!).)
+cObject.)
 

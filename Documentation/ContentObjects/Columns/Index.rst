@@ -87,8 +87,6 @@ tag can be defined with the according options.
    Description
          The total-width of the columns+gaps.
 
-   Default
-
 
 .. container:: table-row
 
@@ -105,8 +103,6 @@ tag can be defined with the according options.
 
          0 = no gap
 
-   Default
-
 
 .. container:: table-row
 
@@ -120,8 +116,6 @@ tag can be defined with the according options.
 
    Description
          Background-color for the gap-tablecells.
-
-   Default
 
 
 .. container:: table-row
@@ -138,8 +132,6 @@ tag can be defined with the according options.
          Thickness of the divider line in the gap between cells.
 
          0 = no line
-
-   Default
 
 
 .. container:: table-row
@@ -170,9 +162,7 @@ tag can be defined with the according options.
          cObject
 
    Description
-         This is the content-object for each column!!
-
-   Default
+         This is the content-object for each column.
 
 
 .. container:: table-row
@@ -184,9 +174,7 @@ tag can be defined with the according options.
          cObject
 
    Description
-         This is a cObject placed after the columns-table!!
-
-   Default
+         This is a cObject placed after the columns-table.
 
 
 .. container:: table-row
@@ -200,8 +188,6 @@ tag can be defined with the according options.
    Description
          If "if" returns false, the columns are not rendered!
 
-   Default
-
 
 .. container:: table-row
 
@@ -210,11 +196,6 @@ tag can be defined with the according options.
 
    Data type
          ->stdWrap
-
-   Description
-
-
-   Default
 
 
 .. ###### END~OF~TABLE ######

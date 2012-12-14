@@ -37,7 +37,7 @@ graphical navigation, where each link is a separate gif-file.
          RO
 
    Data type
-         Boolean
+         boolean
 
    Description
          RollOver configuration enabled / disabled.
@@ -55,15 +55,13 @@ graphical navigation, where each link is a separate gif-file.
          expAll
 
    Data type
-         Boolean
+         boolean
 
    Description
          If this is true, the menu will always show the menu on the level
          underneath the menu item. This corresponds to a situation where a user
          has clicked a menu item and the menu folds out the next level. This
          can enable that to happen on all items as default.
-
-   Default
 
 
 .. container:: table-row
@@ -72,13 +70,11 @@ graphical navigation, where each link is a separate gif-file.
          collapse
 
    Data type
-         Boolean
+         boolean
 
    Description
          If set, "active" menu items that has expanded the next level on the
          menu will now collapse that menu again.
-
-   Default
 
 
 .. container:: table-row
@@ -87,12 +83,10 @@ graphical navigation, where each link is a separate gif-file.
          accessKey
 
    Data type
-         Boolean
+         boolean
 
    Description
          If set access-keys are set on the menu-links
-
-   Default
 
 
 .. container:: table-row
@@ -101,7 +95,7 @@ graphical navigation, where each link is a separate gif-file.
          noBlur
 
    Data type
-         Boolean
+         boolean
 
    Description
          Normally graphical links are "blurred" if the browser is MSIE.
@@ -112,8 +106,6 @@ graphical navigation, where each link is a separate gif-file.
 
          **Note** : This option and the JavaScript for blurring have been
          removed in TYPO3 6.0.
-
-   Default
 
 
 .. container:: table-row
@@ -137,14 +129,12 @@ graphical navigation, where each link is a separate gif-file.
          forceTypeValue
 
    Data type
-         int
+         integer
 
    Description
          If set, the &type parameter of the link is forced to this value
          regardless of target. Overrides the global equivalent in 'config' if
          set.
-
-   Default
 
 
 .. container:: table-row
@@ -169,8 +159,6 @@ graphical navigation, where each link is a separate gif-file.
               }
             }
 
-   Default
-
 
 .. container:: table-row
 
@@ -182,8 +170,6 @@ graphical navigation, where each link is a separate gif-file.
 
    Description
          Wraps only if there were items in the menu!
-
-   Default
 
 
 .. container:: table-row
@@ -207,8 +193,6 @@ graphical navigation, where each link is a separate gif-file.
 
          Look at the implementation in static\_template "styles.gmenu.bug"
 
-   Default
-
 
 .. container:: table-row
 
@@ -222,8 +206,6 @@ graphical navigation, where each link is a separate gif-file.
          This adds the total width of the previously generated menu items to
          the offset of the GifBuilderObj's mentioned in this list.
 
-   Default
-
 
 .. container:: table-row
 
@@ -236,8 +218,6 @@ graphical navigation, where each link is a separate gif-file.
    Description
          Forces the menu as a whole to these minimum dimensions
 
-   Default
-
 
 .. container:: table-row
 
@@ -249,8 +229,6 @@ graphical navigation, where each link is a separate gif-file.
 
    Description
          Forces the menu as a whole to these maximum dimensions
-
-   Default
 
 
 .. container:: table-row
@@ -265,8 +243,6 @@ graphical navigation, where each link is a separate gif-file.
          If set, then the width of all menu items will be equal to the largest
          of them all.
 
-   Default
-
 
 .. container:: table-row
 
@@ -280,8 +256,6 @@ graphical navigation, where each link is a separate gif-file.
          If set, then the height of all menu items will be equal to the largest
          of them all.
 
-   Default
-
 
 .. container:: table-row
 
@@ -289,7 +263,7 @@ graphical navigation, where each link is a separate gif-file.
          distributeX
 
    Data type
-         int+
+         positive integer
 
    Description
          If set, the total width of all the menu items will be equal to this
@@ -298,8 +272,6 @@ graphical navigation, where each link is a separate gif-file.
 
          Will overrule any setting for ".useLargestItemX"
 
-   Default
-
 
 .. container:: table-row
 
@@ -307,7 +279,7 @@ graphical navigation, where each link is a separate gif-file.
          distributeY
 
    Data type
-         int+
+         positive integer
 
    Description
          If set, the total height of all the menu items will be equal to this
@@ -315,8 +287,6 @@ graphical navigation, where each link is a separate gif-file.
          each menu items height.
 
          Will overrule any setting for ".useLargestItemY"
-
-   Default
 
 
 .. container:: table-row
@@ -331,9 +301,7 @@ graphical navigation, where each link is a separate gif-file.
          If the menu is forced to a certain minimum dimension, this is a list
          of objects in the gifbuilder-object that is removed for this last
          item. This is important to do if the menu items has elements that
-         should only be applied if the item is actually a menu item!!
-
-   Default
+         should only be applied if the item is actually a menu item!
 
 
 .. container:: table-row
@@ -347,8 +315,6 @@ graphical navigation, where each link is a separate gif-file.
    Description
          If set, the alt-parameter of the images are not set. You can do it
          manually by "imgParams" (see below)
-
-   Default
 
 
 .. container:: table-row
@@ -367,8 +333,6 @@ graphical navigation, where each link is a separate gif-file.
 
          See example in
          typo3/sysext/statictemplates/media/scripts/example\_itemArrayProcFunc.php
-
-   Default
 
 
 .. container:: table-row
@@ -398,8 +362,6 @@ graphical navigation, where each link is a separate gif-file.
 
          The ->OptionSplit function is run on the whole GIFBUILDER-
          configuration before the items are generated.
-
-   Default
 
 
 .. ###### END~OF~TABLE ######
@@ -448,8 +410,6 @@ been for a long time.
    Description
          If set, the item is NOT linked!
 
-   Default
-
 
 .. container:: table-row
 
@@ -462,8 +422,6 @@ been for a long time.
    Description
          Parameters for the <img>-tag
 
-   Default
-
 
 .. container:: table-row
 
@@ -475,8 +433,6 @@ been for a long time.
 
    Description
          Alternative target which overrides the target defined for the GMENU
-
-   Default
 
 
 .. container:: table-row
@@ -491,8 +447,6 @@ been for a long time.
          Defines an alternative image to use. If an image returns here, it will
          override any GIFBUILDER configuration.
 
-   Default
-
 
 .. container:: table-row
 
@@ -505,8 +459,6 @@ been for a long time.
    Description
          Additional parameters
 
-   Default
-
 
 .. container:: table-row
 
@@ -518,8 +470,6 @@ been for a long time.
 
    Description
          which defines the title attribute of the a-tag. (See TMENUITEM also)
-
-   Default
 
 
 .. container:: table-row
@@ -536,8 +486,6 @@ been for a long time.
 
          For details, see typolink->additionalParams
 
-   Default
-
 
 .. container:: table-row
 
@@ -549,8 +497,6 @@ been for a long time.
 
    Description
          Wrap of the menu item.
-
-   Default
 
 
 .. container:: table-row
@@ -564,8 +510,6 @@ been for a long time.
    Description
          Wraps the whole item.
 
-   Default
-
 
 .. container:: table-row
 
@@ -577,8 +521,6 @@ been for a long time.
 
    Description
          Wraps the whole item and any submenu concatenated to it.
-
-   Default
 
 
 .. container:: table-row
@@ -593,6 +535,7 @@ been for a long time.
          If set, "{elementUid}" is substituted with the item uid.
 
    Default
+         0
 
 
 .. container:: table-row
@@ -605,8 +548,6 @@ been for a long time.
 
    Description
          stdWrap of the whole item
-
-   Default
 
 
 .. ###### END~OF~TABLE ######

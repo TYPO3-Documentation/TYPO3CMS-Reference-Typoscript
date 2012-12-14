@@ -46,7 +46,7 @@ mailto:name@email.rld
          target
 
    Description
-         The target of the link
+         The target of the link.
 
    Default
          \_top
@@ -61,9 +61,7 @@ mailto:name@email.rld
          wrap /stdWrap
 
    Description
-         wrap around the link
-
-   Default
+         Wrap around the link.
 
 
 .. container:: table-row
@@ -75,10 +73,11 @@ mailto:name@email.rld
          boolean
 
    Description
-         If set, the link is first wrapped with  *http.wrap* and then the
+         If set, the link is first wrapped with *http.wrap* and then the
          <A>-tag.
 
    Default
+         0
 
 
 .. container:: table-row
@@ -100,8 +99,6 @@ mailto:name@email.rld
             "scheme,path":        http://www.webaddress.rld/test/doc.php
             "scheme,path,query": http://www.webaddress.rld/test/doc.php?id=3
 
-   Default
-
 
 .. container:: table-row
 
@@ -118,8 +115,6 @@ mailto:name@email.rld
 
             class="board"
 
-   Default
-
 
 .. container:: table-row
 
@@ -130,9 +125,7 @@ mailto:name@email.rld
          wrap /stdWrap
 
    Description
-         wrap around the link
-
-   Default
+         Wrap around the link.
 
 
 .. container:: table-row
@@ -148,6 +141,7 @@ mailto:name@email.rld
          <A>-tag.
 
    Default
+         0
 
 
 .. container:: table-row
@@ -164,8 +158,6 @@ mailto:name@email.rld
          **Example:** ::
 
             class="board"
-
-   Default
 
 
 .. ###### END~OF~TABLE ######

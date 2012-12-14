@@ -68,8 +68,6 @@ The extension "feedit" needs to be installed for this to work.
 
             label = Section <b>%s</b>
 
-   Default
-
 
 .. container:: table-row
 
@@ -92,8 +90,6 @@ The extension "feedit" needs to be installed for this to work.
          (toolbar is a general list of icons regarding the page, so use this
          for page records only)
 
-   Default
-
 
 .. container:: table-row
 
@@ -107,8 +103,6 @@ The extension "feedit" needs to be installed for this to work.
          Will display a panel for creation of new element (in the top of list)
          on the page from that table.
 
-   Default
-
 
 .. container:: table-row
 
@@ -116,12 +110,10 @@ The extension "feedit" needs to be installed for this to work.
          newRecordInPid
 
    Data type
-         int
+         integer
 
    Description
          Define a page ID where new records (except new pages) will be created.
-
-   Default
 
 
 .. container:: table-row
@@ -130,13 +122,11 @@ The extension "feedit" needs to be installed for this to work.
          line
 
    Data type
-         boolean / int
+         boolean / integer
 
    Description
          If set, a black line will appear after the panel. This value will
          indicate the distance from the black line to the panel
-
-   Default
 
 
 .. container:: table-row
@@ -149,8 +139,6 @@ The extension "feedit" needs to be installed for this to work.
 
    Description
          If set, then the record edited is displayed above the editing form.
-
-   Default
 
 
 .. container:: table-row
@@ -165,8 +153,6 @@ The extension "feedit" needs to be installed for this to work.
          If set, only records with a pid matching the current id (TSFE->id)
          will be shown with the panel.
 
-   Default
-
 
 .. container:: table-row
 
@@ -179,8 +165,6 @@ The extension "feedit" needs to be installed for this to work.
    Description
          Wraps the edit panel
 
-   Default
-
 
 .. container:: table-row
 
@@ -192,8 +176,6 @@ The extension "feedit" needs to be installed for this to work.
 
    Description
          Wraps the whole edit panel including the black line (if configured)
-
-   Default
 
 
 .. container:: table-row
@@ -227,15 +209,13 @@ The extension "feedit" needs to be installed for this to work.
          previewBorder
 
    Data type
-         boolean / int
+         boolean / integer
 
    Description
          If set, the hidden/starttime/endtime/fe\_user elements which are
          previewed will have a border around.
 
          The integer value denotes the thickness of the border
-
-   Default
 
 
 .. container:: table-row
@@ -258,8 +238,6 @@ The extension "feedit" needs to be installed for this to work.
 
          **color** denotes the color of the border.
 
-   Default
-
 
 .. container:: table-row
 
@@ -268,11 +246,6 @@ The extension "feedit" needs to be installed for this to work.
 
    Data type
          ->stdWrap
-
-   Description
-
-
-   Default
 
 
 .. ###### END~OF~TABLE ######

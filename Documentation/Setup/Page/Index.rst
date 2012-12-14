@@ -57,7 +57,7 @@ Most of this code is executed in the PHP-script
          typeNum
 
    Data type
-         int
+         integer
 
    Description
          This decides the the typeId of the page. The value defaults to 0 for
@@ -77,11 +77,6 @@ Most of this code is executed in the PHP-script
    Data type
          cObject
 
-   Description
-
-
-   Default
-
 
 .. container:: table-row
 
@@ -93,8 +88,6 @@ Most of this code is executed in the PHP-script
 
    Description
          Wraps the content of the the cObject array
-
-   Default
 
 
 .. container:: table-row
@@ -108,8 +101,6 @@ Most of this code is executed in the PHP-script
    Description
          Wraps the content of the the cObject array with stdWrap options
 
-   Default
-
 
 .. container:: table-row
 
@@ -121,8 +112,6 @@ Most of this code is executed in the PHP-script
 
    Description
          This is default bodytag overridden by ".bodyTag" if that is set.
-
-   Default
 
 
 .. container:: table-row
@@ -165,7 +154,7 @@ Most of this code is executed in the PHP-script
          bodyTagMargins
 
    Data type
-         int
+         integer
 
    Description
          margins in the body tag.
@@ -175,14 +164,12 @@ Most of this code is executed in the PHP-script
          .useCSS = 1 (boolean) - will set a "BODY {margin: ...}" line in the
          in-document style declaration - for XHTML compliance.
 
-         **Example:**
+         **Example:** ::
 
-         value  *4*
+            bodyTagMargins = 4
 
-         adds  *leftmargin="4" topmargin="4" marginwidth="4" marginheight="4"*
-         to the bodyTag.
-
-   Default
+         This adds  *leftmargin="4" topmargin="4" marginwidth="4"
+         marginheight="4"* to the bodyTag.
 
 
 .. container:: table-row
@@ -195,8 +182,6 @@ Most of this code is executed in the PHP-script
 
    Description
          This content is added to the end of the bodyTag.
-
-   Default
 
 
 .. container:: table-row
@@ -211,8 +196,6 @@ Most of this code is executed in the PHP-script
          Background image on the page. This is automatically added to the body-
          tag.
 
-   Default
-
 
 .. container:: table-row
 
@@ -226,8 +209,6 @@ Most of this code is executed in the PHP-script
          if any properties is set to this property, the page is made into a
          frameset.
 
-   Default
-
 
 .. container:: table-row
 
@@ -236,11 +217,6 @@ Most of this code is executed in the PHP-script
 
    Data type
          ->META
-
-   Description
-
-
-   Default
 
 
 .. container:: table-row
@@ -258,11 +234,7 @@ Most of this code is executed in the PHP-script
          bar, next to the site's name in lists of bookmarks, and next to the
          page's title in the tab.
 
-         **Note:**
-
-         This must be a valid ".ico"-file (iconfile)
-
-   Default
+         **Note:** This must be a valid ".ico"-file (iconfile).
 
 
 .. container:: table-row
@@ -279,8 +251,6 @@ Most of this code is executed in the PHP-script
 
          By default, gets inserted after all the style definitions.
 
-   Default
-
 
 .. container:: table-row
 
@@ -293,8 +263,6 @@ Most of this code is executed in the PHP-script
    Description
          Same as headerData above, except that this block gets included at the
          bottom of the page (just before the closing body tag).
-
-   Default
 
 
 .. container:: table-row
@@ -309,8 +277,6 @@ Most of this code is executed in the PHP-script
          configuration for the page. Any entries override the same entries in
          the toplevel-object "config".
 
-   Default
-
 
 .. container:: table-row
 
@@ -318,14 +284,14 @@ Most of this code is executed in the PHP-script
          includeLibs
 
    Data type
-         *array of strings*
+         *(array of strings)*
 
    Description
          With this you may include php-files. This does the same as
          "includeLibrary" in ->CONFIG but this can include more than one file.
          These files are included  *after* the file of includeLibrary.
 
-         **NOTE:**
+         **Note:**
 
          The toplevel object "includeLibs" and the scripts defined with this
          property is added to each other. Script-keys (that is the "array of
@@ -337,8 +303,6 @@ Most of this code is executed in the PHP-script
          **Example:** ::
 
             includeLibs.tx_myext = lib_filename.php
-
-   Default
 
 
 .. container:: table-row
@@ -353,7 +317,7 @@ Most of this code is executed in the PHP-script
          javascriptLibs
 
    Data type
-         *array of strings*
+         *(array of strings)*
 
    Description
          This allows to include the JavaScript libraries that are shipped with
@@ -415,8 +379,6 @@ Most of this code is executed in the PHP-script
          ExtCore, but not both together. Requesting both at the same time will
          lead to errors.
 
-   Default
-
 
 .. container:: table-row
 
@@ -424,7 +386,7 @@ Most of this code is executed in the PHP-script
          inlineLanguageLabel
 
    Data type
-         *array of strings*
+         *(array of strings)*
 
    Description
          ExtJS specific, adds language labels to the page.
@@ -440,8 +402,6 @@ Most of this code is executed in the PHP-script
 
             TYPO3.lang = {"label1":"123","label2":"456"};
 
-   Default
-
 
 .. container:: table-row
 
@@ -449,7 +409,7 @@ Most of this code is executed in the PHP-script
          inlineSettings
 
    Data type
-         *array of strings*
+         *(array of strings)*
 
    Description
          ExtJS specific, adds settings to the page.
@@ -464,8 +424,6 @@ Most of this code is executed in the PHP-script
          will produce following source::
 
             TYPO3.settings = {"TS":{"setting1":"Hello","setting2":"GoOnTop"}};
-
-   Default
 
 
 .. container:: table-row
@@ -489,8 +447,6 @@ Most of this code is executed in the PHP-script
          will produce following source::
 
             Ext.onReady(function() {Ext.Msg.alert("TypoScript Message","Hello World!"); });
-
-   Default
 
 
 .. container:: table-row
@@ -536,8 +492,6 @@ Most of this code is executed in the PHP-script
             includeJSlibs.twitter = http://twitter.com/javascripts/blogger.js
             includeJSlibs.twitter.external = 1
 
-   Default
-
 
 .. container:: table-row
 
@@ -550,8 +504,6 @@ Most of this code is executed in the PHP-script
    Description
          Same as includeJSlibs above, except that this block gets included at
          the bottom of the page (just before the closing body tag).
-
-   Default
 
 
 .. container:: table-row
@@ -605,8 +557,6 @@ Most of this code is executed in the PHP-script
               file2.if.isTrue = {$myConstant}
             }
 
-   Default
-
 
 .. container:: table-row
 
@@ -619,8 +569,6 @@ Most of this code is executed in the PHP-script
    Description
          Same as includeJS above, except that this block gets included at the
          bottom of the page (just before the closing body tag).
-
-   Default
 
 
 .. container:: table-row
@@ -649,8 +597,6 @@ Most of this code is executed in the PHP-script
          With config.minifyJS = 1 (removed in TYPO3 6.0) the inlineJS was
          minified as well.
 
-   Default
-
 
 .. container:: table-row
 
@@ -663,8 +609,6 @@ Most of this code is executed in the PHP-script
    Description
          Same jsInline above, except that the JavaScript gets inserted at the
          bottom of the page (just before the closing body tag).
-
-   Default
 
 
 .. container:: table-row
@@ -693,8 +637,6 @@ Most of this code is executed in the PHP-script
          **Note** : This option was deprecated and has been removed in TYPO3
          4.3. Use jsInline instead.
 
-   Default
-
 
 .. container:: table-row
 
@@ -714,8 +656,6 @@ Most of this code is executed in the PHP-script
          Inserts a stylesheet in the <HEAD>-section of the page;
 
          *<link rel="stylesheet" href="[resource]">*
-
-   Default
 
 
 .. container:: table-row
@@ -778,8 +718,6 @@ Most of this code is executed in the PHP-script
               cooliris.external = 1
             }
 
-   Default
-
 
 .. container:: table-row
 
@@ -802,8 +740,6 @@ Most of this code is executed in the PHP-script
                 20.value = h1 span {color: blue;}
             }
 
-   Default
-
 
 .. container:: table-row
 
@@ -816,8 +752,6 @@ Most of this code is executed in the PHP-script
    Description
          This value is just passed on as inline css (in-document css
          encapsulated in <style>-tags)
-
-   Default
 
 
 .. container:: table-row
@@ -845,8 +779,6 @@ Most of this code is executed in the PHP-script
          *Might be deprecated soon. Most likely the RTE should be configured by
          the stylesheet instead. Stay tuned...*
 
-   Default
-
 
 .. container:: table-row
 
@@ -861,8 +793,6 @@ Most of this code is executed in the PHP-script
 
          **Note** : This option was deprecated and has been removed in
          TYPO3 6.0. Use stylesheets instead.
-
-   Default
 
 
 .. container:: table-row
@@ -879,8 +809,6 @@ Most of this code is executed in the PHP-script
 
          **Note** : This option was deprecated and has been removed in
          TYPO3 6.0. Use stylesheets instead.
-
-   Default
 
 
 .. container:: table-row
@@ -900,8 +828,6 @@ Most of this code is executed in the PHP-script
 
          **Note** : This option was deprecated and has been removed in
          TYPO3 6.0. Use stylesheets instead.
-
-   Default
 
 
 .. container:: table-row
@@ -927,8 +853,6 @@ Most of this code is executed in the PHP-script
          **Note** : This option was deprecated and has been removed in
          TYPO3 6.0. Use stylesheets instead.
 
-   Default
-
 
 .. container:: table-row
 
@@ -940,8 +864,6 @@ Most of this code is executed in the PHP-script
 
    Description
          Will include CSS styles for the Admin Panel.
-
-   Default
 
 
 .. ###### END~OF~TABLE ######

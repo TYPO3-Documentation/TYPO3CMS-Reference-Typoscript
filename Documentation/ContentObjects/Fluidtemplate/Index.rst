@@ -52,8 +52,6 @@ work.
    Description
          The fluid template file.
 
-   Default
-
 
 .. container:: table-row
 
@@ -67,8 +65,6 @@ work.
          Sets a specific layout path; usually it is Layouts/ underneath the
          template file.
 
-   Default
-
 
 .. container:: table-row
 
@@ -81,8 +77,6 @@ work.
    Description
          Sets a specific partials path; usually it is Partials/ underneath the
          template file.
-
-   Default
 
 
 .. container:: table-row
@@ -111,8 +105,6 @@ work.
    Description
          Sets variables for initializing extbase.
 
-   Default
-
 
 .. container:: table-row
 
@@ -124,8 +116,6 @@ work.
 
    Description
          Sets the extension name of the controller.
-
-   Default
 
 
 .. container:: table-row
@@ -139,8 +129,6 @@ work.
    Description
          Sets the name of the controller.
 
-   Default
-
 
 .. container:: table-row
 
@@ -153,8 +141,6 @@ work.
    Description
          Sets the name of the action.
 
-   Default
-
 
 .. container:: table-row
 
@@ -162,9 +148,7 @@ work.
          variables
 
    Data type
-         *Array... of*
-
-         cObjects
+         *(array of cObjects)*
 
    Description
          Sets variables that should be available in the fluid template. The
@@ -172,8 +156,6 @@ work.
 
          Reserved variables are "data" and "current", which are filled
          automatically with the current data set.
-
-   Default
 
 
 .. container:: table-row
@@ -183,11 +165,6 @@ work.
 
    Data type
          ->stdWrap
-
-   Description
-
-
-   Default
 
 
 .. ###### END~OF~TABLE ######

@@ -41,12 +41,10 @@ the register key SPLIT\_COUNT.
          token
 
    Data type
-         str /stdWrap
+         string /stdWrap
 
    Description
-         string or character (token) used to split the value
-
-   Default
+         String or character (token) used to split the value.
 
 
 .. container:: table-row
@@ -55,12 +53,10 @@ the register key SPLIT\_COUNT.
          max
 
    Data type
-         int /stdWrap
+         integer /stdWrap
 
    Description
-         max number of splits
-
-   Default
+         Maximum number of splits.
 
 
 .. container:: table-row
@@ -69,12 +65,10 @@ the register key SPLIT\_COUNT.
          min
 
    Data type
-         int /stdWrap
+         integer /stdWrap
 
    Description
-         min number of splits.
-
-   Default
+         Minimum number of splits.
 
 
 .. container:: table-row
@@ -83,13 +77,11 @@ the register key SPLIT\_COUNT.
          returnKey
 
    Data type
-         int /stdWrap
+         integer /stdWrap
 
    Description
          Instead of parsing the split result, just return this element of the
          index immediately.
-
-   Default
 
 
 .. container:: table-row
@@ -98,17 +90,11 @@ the register key SPLIT\_COUNT.
          cObjNum
 
    Data type
-         *cObjNum*
-
-         +optionSplit
-
-         /stdWrap
+         *cObjNum* +optionSplit /stdWrap
 
    Description
          This is a pointer the array of this object ("1,2,3,4"), that should
          treat the items, resulting from the split.
-
-   Default
 
 
 .. container:: table-row
@@ -122,25 +108,23 @@ the register key SPLIT\_COUNT.
    Description
          The object that should treat the value.
 
-         **NOTE:** The "current"-value is set to the value of current item,
+         **Note:** The "current"-value is set to the value of current item,
          when the objects are called. See "stdWrap" / current.
 
-         **Example (stdWrap used):** ::
+         **Example for stdWrap:** ::
 
             1.current = 1
-            1.wrap = <B> | </B>
+            1.wrap = <b> | </b>
 
-         **Example (CARRAY used):** ::
+         **Example for CARRAY:** ::
 
             1 {
               10 = TEXT
               10.current = 1
-              10.wrap = <B> | </B>
+              10.wrap = <b> | </b>
               20 = CLEARGIF
               20.height = 20
             }
-
-   Default
 
 
 .. container:: table-row
@@ -149,16 +133,10 @@ the register key SPLIT\_COUNT.
          wrap
 
    Data type
-         wrap
-
-         +optionSplit
-
-         /stdWrap
+         wrap +optionSplit /stdWrap
 
    Description
          Defines a wrap for each item.
-
-   Default
 
 
 .. ###### END~OF~TABLE ######
@@ -175,17 +153,17 @@ This is an example of TypoScript-code that imports the content of
 field "bodytext" from the $cObj->data-array (ln 2). The content is
 split by the linebreak-character (ln 4). The items should all be
 treated with a stdWrap (ln 5) which imports the value of the item (ln
-6). This value is wrapped in a tablerow where the first column is a
+6). This value is wrapped in a table row where the first column is a
 bullet-gif (ln 7). Finally the whole thing is wrapped in the proper
 table-tags (ln 9) ::
 
-   1    20 = TEXT
+   1         20 = TEXT
    2         20.field = bodytext
    3         20.split {
    4           token.char = 10
    5           cObjNum = 1
    6           1.current = 1
-   7           1.wrap = <tr><td valign="top"><img src="dot.gif"></td><td valign="top"> | </td></tr>
+   7           1.wrap = <tr><td><img src="dot.gif"></td><td> | </td></tr>
    8         }
-   9         20.wrap = <table border="0" cellpadding="0" cellspacing="3" width="368"> | </table><br>
+   9         20.wrap = <table style="width: 368px;"> | </table><br>
 

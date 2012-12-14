@@ -42,8 +42,6 @@ site-specific.
    Description
          Set to field name from the $cObj->data-array
 
-   Default
-
 
 .. container:: table-row
 
@@ -62,8 +60,6 @@ site-specific.
 
          [3] = "Arial,Helvetica,Sans serif";
 
-   Default
-
 
 .. container:: table-row
 
@@ -75,8 +71,6 @@ site-specific.
 
    Description
          [default] = User defined
-
-   Default
 
 
 .. container:: table-row
@@ -100,8 +94,6 @@ site-specific.
 
          [11] = "-1";
 
-   Default
-
 
 .. container:: table-row
 
@@ -113,8 +105,6 @@ site-specific.
 
    Description
          [default] = User defined
-
-   Default
 
 
 .. container:: table-row
@@ -130,8 +120,6 @@ site-specific.
 
          See "content.php" for the colors available
 
-   Default
-
 
 .. container:: table-row
 
@@ -143,8 +131,6 @@ site-specific.
 
    Description
          [default] = User defined
-
-   Default
 
 
 .. container:: table-row
@@ -160,8 +146,6 @@ site-specific.
    Description
          [1],[2] = User defined
 
-   Default
-
 
 .. container:: table-row
 
@@ -169,7 +153,7 @@ site-specific.
          properties.field
 
    Data type
-         int
+         integer
 
    Description
          Set to field name from the $cObj->data-array
@@ -186,8 +170,6 @@ site-specific.
 
          Thus a value of 5 would result in bold and underlined text
 
-   Default
-
 
 .. container:: table-row
 
@@ -195,13 +177,11 @@ site-specific.
          properties.default
 
    Data type
-         int /stdWrap
+         integer /stdWrap
 
    Description
          [default] = User defined (This value will be used whenever ".field" is
          false!)
-
-   Default
 
 
 .. container:: table-row
@@ -219,8 +199,6 @@ site-specific.
          Use it to assign a stylesheet by setting this value to eg.
 
          <div class="text"> \| </div>
-
-   Default
 
 
 .. ###### END~OF~TABLE ######

@@ -34,7 +34,7 @@ Files:
          user\_feAdmin->init'. See the static\_templates for examples.
 
          **Note:** Using the USER\_INT cObject allows the script to work
-         regardless of the page-cache which is necessary!!
+         regardless of the page-cache which is necessary!
 
  - :File:
          fe\_admin\_dmailsubscrip.tmpl
@@ -71,8 +71,8 @@ get a menu of items to edit when you're logged in. With email-
 authentication, you can request an email to be sent to your email
 address. This email contains a list of the available records.
 
-It's allbased on HTML-template files which you have to design by
-yourself, so there's some design work to do. On the other hand you get
+It is all based on HTML-template files which you have to design by
+yourself, so there is some design work to do. On the other hand you get
 total freedom to design your forms.
 
 
@@ -146,8 +146,6 @@ fe\_adminLib.inc properties
    Description
          The template file.
 
-   Default
-
 
 .. container:: table-row
 
@@ -160,8 +158,6 @@ fe\_adminLib.inc properties
    Description
          Alternatively you can set this property directly to the value of the
          template.
-
-   Default
 
 
 .. container:: table-row
@@ -180,8 +176,6 @@ fe\_adminLib.inc properties
          for each table in question. For an example, see the table definition
          for fe\_users which is a good example.
 
-   Default
-
 
 .. container:: table-row
 
@@ -194,8 +188,6 @@ fe\_adminLib.inc properties
    Description
          Defines which action should be default (if &cmd= is not set when
          calling the page)
-
-   Default
 
 
 .. container:: table-row
@@ -210,8 +202,6 @@ fe\_adminLib.inc properties
          This is a list of page-ids for which to clear the cache on any
          successful operation be it EDIT, CREATE or DELETE.
 
-   Default
-
 
 .. container:: table-row
 
@@ -224,8 +214,6 @@ fe\_adminLib.inc properties
    Description
          If set, debug information will be output from fe\_adminLib which helps
          to track errors.
-
-   Default
 
 
 .. container:: table-row
@@ -281,8 +269,6 @@ fe\_adminLib.inc properties
          saved. The content passed is an array with the current (and previous)
          record in.
 
-   Default
-
 
 .. container:: table-row
 
@@ -304,8 +290,6 @@ fe\_adminLib.inc properties
          **.defaultValues.[field name]** (value string); Like .overrideValues
          but this sets the default values the first time the form is displayed.
 
-   Default
-
 
 .. container:: table-row
 
@@ -319,8 +303,6 @@ fe\_adminLib.inc properties
          Whether or not records may be deleted. Still regular authentication
          (ownership or email authCode) is required. Setting the var "preview"
          lets you make a delete-preview before actually deleting the record.
-
-   Default
 
 
 .. container:: table-row
@@ -340,8 +322,6 @@ fe\_adminLib.inc properties
          Normally you may have only a default infomail (infomail.default) for
          instance for sending the password. But you can use other keys also.
          See below.
-
-   Default
 
 
 .. container:: table-row
@@ -369,8 +349,6 @@ fe\_adminLib.inc properties
 
          **.label** (string) - The suffix for the markers, see 'Email Markers'
          beneath.
-
-   Default
 
 
 .. container:: table-row
@@ -420,7 +398,7 @@ fe\_adminLib.inc properties
 
          There is a special "field name" you can use, which is '\_FIELDLIST"
          and that lets you specify a list of fields in the record to base the
-         auth-code on. If nothing is specifyed the md5-hash is based on the
+         auth-code on. If nothing is specified the md5-hash is based on the
          whole record which means that any changes will disable the setfixed
          link. If on the other hand, you set \_FIELDLIST = uid,pid then that
          record will be editable as long as the uid and pid values are intact.
@@ -430,9 +408,9 @@ fe\_adminLib.inc properties
          This is a common configuration of the email-properties with a simple
          setfixed setting::
 
-            email.from = kasper@typo3.com
+            email.from = kasper@typo3.org
             email.fromName = Kasper Skårhøj
-            email.admin = kasper@typo3.com
+            email.admin = kasper@typo3.org
             setfixed.approve {
               hidden = 0
               _FIELDLIST = uid,pid
@@ -456,8 +434,6 @@ fe\_adminLib.inc properties
          and for deletion::
 
             ...###SYS_SETFIXED_DELETE###
-
-   Default
 
 
 .. container:: table-row
@@ -483,8 +459,8 @@ fe\_adminLib.inc properties
 
          **.addKey** (string) adds the string to the md5-hash of the authCode.
          Just enter any random string here. Point is that people from outside
-         doesn't know this code and therefore are not able to reconstruct the
-         md5-hash solely based on the uid
+         do not know this code and therefore are not able to reconstruct the
+         md5-hash solely based on the uid.
 
          **.addDate** (date-config) You can use this to make the code time-
          disabled. Say if you enter "d-m-Y" here as value, the code will work
@@ -505,8 +481,6 @@ fe\_adminLib.inc properties
          secret key (like you should in any case) and add "uid" as
          authcodeField ONLY. This is secure enough.
 
-   Default
-
 
 .. container:: table-row
 
@@ -514,9 +488,11 @@ fe\_adminLib.inc properties
          email
 
    Data type
-
+         *(array of keys)*
 
    Description
+         Available sub-properties:
+
          **.from** (string, email) Defines the sender email address of mails
          sent out
 
@@ -532,8 +508,6 @@ fe\_adminLib.inc properties
          the record and the email address of that user is fetched for the
          purpose instead.
 
-   Default
-
 
 .. container:: table-row
 
@@ -541,7 +515,7 @@ fe\_adminLib.inc properties
          pid
 
    Data type
-         int+
+         positive integer
 
    Description
          The pid in which to store/get the records.
@@ -567,8 +541,6 @@ fe\_adminLib.inc properties
          'ctrl' section of their $TCA-configuration will automatically get this
          field set to the current fe\_user id.
 
-   Default
-
 
 .. container:: table-row
 
@@ -581,8 +553,6 @@ fe\_adminLib.inc properties
    Description
          If set, fe\_users - regardless of whether they own themselves or not -
          will be allowed to edit himself.
-
-   Default
 
 
 .. container:: table-row
@@ -598,8 +568,6 @@ fe\_adminLib.inc properties
          through this form. Normally only the owner fe\_user is allowed to do
          that.
 
-   Default
-
 
 .. container:: table-row
 
@@ -610,15 +578,13 @@ fe\_adminLib.inc properties
          function name
 
    Description
-         Function by which you can manipulate the dataArray before it's saved.
+         Function with which you can manipulate the dataArray before it is saved.
 
          The dataArray is passed to the function as $content and MUST be
          returned again from the function.
 
          The property "parentObj" is a hardcoded reference to the fe\_adminLib
          object.
-
-   Default
 
 
 .. container:: table-row
@@ -631,8 +597,6 @@ fe\_adminLib.inc properties
 
    Description
          Contains typolink properties for the URL (action tag) of the form.
-
-   Default
 
 
 .. container:: table-row
@@ -683,8 +647,6 @@ fe\_adminLib.inc properties
          The values of those fields are first converted to lowercase and only
          alphanum chars are preserved.
 
-   Default
-
 
 .. container:: table-row
 
@@ -699,8 +661,6 @@ fe\_adminLib.inc properties
          before the value array is used to construct the update-JavaScript
          statements.
 
-   Default
-
 
 .. container:: table-row
 
@@ -708,7 +668,7 @@ fe\_adminLib.inc properties
          evalErrors.[field].[evalCode]
 
    Data type
-
+         *(array of keys)*
 
    Description
          This lets you specify the error messages inserted in the
@@ -716,8 +676,6 @@ fe\_adminLib.inc properties
          error.
 
          See description of evaluation below.
-
-   Default
 
 
 .. container:: table-row
@@ -742,8 +700,6 @@ fe\_adminLib.inc properties
          marker named ###CE\_myHeader### or ###PCE\_myHeader### (see below for
          details on the difference).
 
-   Default
-
 
 .. container:: table-row
 
@@ -762,8 +718,6 @@ fe\_adminLib.inc properties
 
             wrap1.wrap = <b> |</b>
 
-   Default
-
 
 .. container:: table-row
 
@@ -775,8 +729,6 @@ fe\_adminLib.inc properties
 
    Description
          Global Wrap 2 (see above)
-
-   Default
 
 
 .. container:: table-row
@@ -790,8 +742,6 @@ fe\_adminLib.inc properties
    Description
          Value for ###GC1### marker (Global color 1)
 
-   Default
-
 
 .. container:: table-row
 
@@ -804,8 +754,6 @@ fe\_adminLib.inc properties
    Description
          Value for ###GC2### marker (Global color 2)
 
-   Default
-
 
 .. container:: table-row
 
@@ -817,8 +765,6 @@ fe\_adminLib.inc properties
 
    Description
          Value for ###GC3### marker (Global color 3)
-
-   Default
 
 
 .. ###### END~OF~TABLE ######
@@ -937,7 +883,6 @@ These are subparts that should exist in any template.
          wrong fe\_user/group ownership).
 
 
-
 .. _appendix-fe-adminlib-email:
 
 'infomail' Email subparts
@@ -971,7 +916,6 @@ class) must be loaded.
          ###SUB\_RECORD###
 
    :Description:
-
 
 
 'infomail' Email markers
@@ -1161,7 +1105,7 @@ are removed. If there is a simple "required"-error (a field is not
 filled in) then the SUB\_REQUIRED\_FIELDS\_WARNING is not removed and
 thus the error message contained herein is shown.
 
-Let's say that more specifically it's the 'email' field in a form
+Let's say that more specifically it is the 'email' field in a form
 which is not filled in. Then you can put in a subpart named ::
 
    ###SUB_REQUIRED_FIELD_email###
@@ -1352,7 +1296,7 @@ that apply currently:
   filenames (non-MM, see "Inside TYPO3" document on MM relations for
   files).
 
-It's recommended to use a dedicated folder for files administered by
+It is recommended to use a dedicated folder for files administered by
 the fe\_adminLib. The TYPO3 testsite does that by using the
 uploads/photomarathon/ folder for images. This makes it much easier to
 clean up the mess if files and their relations to the records are

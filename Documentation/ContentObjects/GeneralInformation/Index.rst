@@ -39,7 +39,7 @@ REUSING cOBJECTS
 When dealing with "cObjects", you're allowed to use a special syntax
 in order to reuse cObjects without actually creating a copy. This has
 the advantage of minimizing the size of the cached template. But on
-the other hand it doesn't give you the flexibility of overriding
+the other hand it does not give you the flexibility of overriding
 values.
 
 This example will show you how it works::
@@ -103,7 +103,7 @@ where only a pointer is created.
 
 .. _reusing-cobjects-temp-objects:
 
-**NOTE:**
+**Note:**
 ~~~~~~~~~
 
 If  *lib.stdheader* was  *temp.stdheader* instead, the pointer would

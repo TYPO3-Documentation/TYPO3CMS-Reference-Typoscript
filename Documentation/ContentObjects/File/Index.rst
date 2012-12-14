@@ -57,8 +57,6 @@ different cObjects.
          The maximum filesize of documents to be read is set to 1024 kb
          internally!
 
-   Default
-
 
 .. container:: table-row
 
@@ -70,8 +68,6 @@ different cObjects.
 
    Description
          (Executed before ".wrap" and ".stdWrap".)
-
-   Default
 
 
 .. container:: table-row
@@ -85,8 +81,6 @@ different cObjects.
    Description
          (Executed after ".linkWrap" and before ".stdWrap".)
 
-   Default
-
 
 .. container:: table-row
 
@@ -98,8 +92,6 @@ different cObjects.
 
    Description
          (Executed after ".linkWrap" and ".wrap".)
-
-   Default
 
 
 .. container:: table-row
@@ -116,8 +108,6 @@ different cObjects.
          **For <img> output only!**
 
          If no alttext is specified, it will use an empty alttext.
-
-   Default
 
 
 .. container:: table-row
@@ -149,8 +139,6 @@ different cObjects.
 
          "longdesc" attribute (URL pointing to document with extensive details
          about image).
-
-   Default
 
 
 .. ###### END~OF~TABLE ######

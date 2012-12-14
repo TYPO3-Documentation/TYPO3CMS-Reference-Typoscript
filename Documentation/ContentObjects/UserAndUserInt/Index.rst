@@ -80,11 +80,9 @@ outside the main page-rendering.
               reverseOrder = 1
             }
 
-         **NOTE:** When using a function, the name of the function has to start
+         **Note:** When using a function, the name of the function has to start
          with "user\_". When using a class, the name of the class must start
          with "user\_" (there are no conditions on the name of the method).
-
-   Default
 
 
 .. container:: table-row
@@ -93,7 +91,7 @@ outside the main page-rendering.
          includeLibs
 
    Data type
-         *list of* resource /stdWrap
+         *(list of resources)* /stdWrap
 
    Description
          **This property applies only if the object is created as USER\_INT.**
@@ -104,8 +102,6 @@ outside the main page-rendering.
          This is possible to do because any include-files will be known before
          the scripts are included.
 
-   Default
-
 
 .. container:: table-row
 
@@ -114,11 +110,6 @@ outside the main page-rendering.
 
    Data type
          ->stdWrap
-
-   Description
-
-
-   Default
 
 
 .. ###### END~OF~TABLE ######

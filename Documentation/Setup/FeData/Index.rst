@@ -24,25 +24,14 @@ been removed in TYPO3 6.0.
    Data type
          Data type:
 
-   Description
-         Description:
-
-   Default
-         Default:
-
 
 .. container:: table-row
 
    Property
-         array of tableNames
+         *(array of tablenames)*
 
    Data type
          ->FE\_TABLE
-
-   Description
-
-
-   Default
 
 
 .. ###### END~OF~TABLE ######

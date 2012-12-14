@@ -48,8 +48,6 @@ from the previous section. Confusion could happen, because both
          present and NOT set, the object is NOT rendered! This corresponds to
          the functionality of ".if" of the stdWrap-function.
 
-   Default
-
 
 .. container:: table-row
 
@@ -92,12 +90,10 @@ from the previous section. Confusion could happen, because both
          reduceColors
 
    Data type
-         posint (1-255) /stdWrap
+         positive integer (1-255) /stdWrap
 
    Description
          Reduce the number of colors (if gif-file)
-
-   Default
 
 
 .. container:: table-row
@@ -116,8 +112,6 @@ from the previous section. Confusion could happen, because both
          If you render text, you should leave the niceText option OFF as the
          result will probably be more precise without the niceText antialiasing
          hack.
-
-   Default
 
 
 .. container:: table-row
@@ -146,10 +140,8 @@ from the previous section. Confusion could happen, because both
          This will allow for the closest color to be matched instead. You may
          need this if you image is not guaranteed "clean".
 
-         **NOTE:** You may experience that this doesn't work if you use the
+         **Note:** You may experience that this does not work, if you use the
          reduceColors-option or render text with niceText-option.
-
-   Default
 
 
 .. container:: table-row
@@ -158,12 +150,10 @@ from the previous section. Confusion could happen, because both
          quality
 
    Data type
-         posint (10-100)
+         positive integer (10-100)
 
    Description
          JPG-quality (if ".format" = jpg/jpeg)
-
-   Default
 
 
 .. container:: table-row
@@ -212,8 +202,6 @@ from the previous section. Confusion could happen, because both
          of images an so on. Only TEXT-objects exceeding the boundaries of the
          workarea will be printed outside this area.
 
-   Default
-
 
 .. container:: table-row
 
@@ -226,8 +214,6 @@ from the previous section. Confusion could happen, because both
    Description
          Maximal width of the gif-file.
 
-   Default
-
 
 .. container:: table-row
 
@@ -239,8 +225,6 @@ from the previous section. Confusion could happen, because both
 
    Description
          Maximal height of the gif-file.
-
-   Default
 
 
 .. ###### END~OF~TABLE ######
@@ -285,8 +269,6 @@ TEXT
          The cObj->data-array is loaded with the page-record, if for example
          the GIFBUILDER-object is used by GMENU or IMGMENU.
 
-   Default
-
 
 .. container:: table-row
 
@@ -299,8 +281,6 @@ TEXT
    Description
          Defines the maximum width for an object, overlapping elements will
          force an automatic line break.
-
-   Default
 
 
 .. container:: table-row
@@ -325,7 +305,7 @@ TEXT
          textMaxLength
 
    Data type
-         int
+         integer
 
    Description
          The maximum length of the text. This is just a natural break that
@@ -352,8 +332,6 @@ TEXT
 
          (By René Fritz <r.fritz@colorcube.de>)
 
-   Default
-
 
 .. container:: table-row
 
@@ -377,7 +355,7 @@ TEXT
          fontSize
 
    Data type
-         posint
+         positive integer
 
    Description
          Font size
@@ -488,7 +466,7 @@ TEXT
          iterations
 
    Data type
-         posint
+         positive integer
 
    Description
          How many times the text should be "printed" onto it self. This will
@@ -506,7 +484,7 @@ TEXT
          spacing
 
    Data type
-         posint
+         positive integer
 
    Description
          Pixel-distance between letters. This may render ugly!
@@ -521,7 +499,7 @@ TEXT
          wordSpacing
 
    Data type
-         posint
+         positive integer
 
    Description
          Pixel-distance between words.
@@ -558,11 +536,9 @@ TEXT
 
    Description
          If this option is set, the text will not be rendered. Shadows and
-         emboss will, though, so don't apply these!! But this feature is also
+         emboss will, though, so don't apply these! But this feature is also
          meant only to enable a text to generate the imageMap coordinates
          without rendering itself.
-
-   Default
 
 
 .. container:: table-row
@@ -573,11 +549,6 @@ TEXT
    Data type
          GifBuilderObj->EMBOSS
 
-   Description
-
-
-   Default
-
 
 .. container:: table-row
 
@@ -587,11 +558,6 @@ TEXT
    Data type
          GifBuilderObj->SHADOW
 
-   Description
-
-
-   Default
-
 
 .. container:: table-row
 
@@ -600,11 +566,6 @@ TEXT
 
    Data type
          GifBuilderObj->OUTLINE
-
-   Description
-
-
-   Default
 
 
 .. container:: table-row
@@ -616,11 +577,6 @@ TEXT
          ->IMGMAP
 
          ->stdWrap properties for "altText" and "titleText" in this case
-
-   Description
-
-
-   Default
 
 
 .. container:: table-row
@@ -656,9 +612,7 @@ TEXT
          .sharpen = sharpen-value for the mask (after scaling), integer 0-99
          (this enables you to make the text crisper if it's too blurred!)
 
-         .scaleFactor = scaling-factor, int 2-5
-
-   Default
+         .scaleFactor = scaling-factor, integer 2-5
 
 
 .. container:: table-row
@@ -671,7 +625,7 @@ TEXT
          splitRendering.[array]
 
    Data type
-
+         integer / *(array of keys)*
 
    Description
          Split the rendering of a string into separate processes with
@@ -685,11 +639,11 @@ TEXT
 
          **Properties:**
 
-         splitRendering.compX =  *Additional pixelspace between parts, x
-         direction*
+         splitRendering.compX (integer) =  *Additional pixelspace between
+         parts, x direction*
 
-         splitRendering.compY =  *Additional pixelspace between parts, y
-         direction*
+         splitRendering.compY (integer) =  *Additional pixelspace between
+         parts, y direction*
 
          splitRendering.[array] =  *keyword* [charRange, highlightWord]
 
@@ -714,7 +668,7 @@ TEXT
 
          **Keyword: charRange**
 
-         splitRendering.[array].value = Commaseparated list of character ranges
+         splitRendering.[array].value = Comma-separated list of character ranges
          (eg. "100-200") given as Unicode character numbers. The list accepts
          optional starting and ending points, eg. " - 200" or " 200 -" and
          single values, eg. "65, 66, 67"
@@ -730,7 +684,7 @@ TEXT
            with niceText. Basically this means that when niceText is used, these
            values will have only the half effect.
 
-         - When word spacing is used the "highlightWord" mode doesn't work.
+         - When word spacing is used the "highlightWord" mode does not work.
 
          - The color override works only without "niceText".
 
@@ -750,8 +704,6 @@ TEXT
               value = TheWord
               color = red
             }
-
-   Default
 
 
 .. ###### END~OF~TABLE ######
@@ -777,9 +729,6 @@ SHADOW
    Description
          Description:
 
-   Default
-         Default:
-
 
 .. container:: table-row
 
@@ -787,7 +736,7 @@ SHADOW
          textObjNum
 
    Data type
-         pos-int
+         positive integer
 
    Description
          Must point to the TEXT-object if these shadow-properties are not
@@ -796,8 +745,6 @@ SHADOW
 
          If - on the other hand - the shadow is a property to a text-object,
          this property is not needed.
-
-   Default
 
 
 .. container:: table-row
@@ -811,8 +758,6 @@ SHADOW
    Description
          Shadow offset
 
-   Default
-
 
 .. container:: table-row
 
@@ -825,8 +770,6 @@ SHADOW
    Description
          Shadow color
 
-   Default
-
 
 .. container:: table-row
 
@@ -834,7 +777,7 @@ SHADOW
          blur
 
    Data type
-         posint (1-99)
+         positive integer (1-99)
 
    Description
          Blurring of the shadow. Above 40 only values of 40,50,60,70,80,90 mean
@@ -846,8 +789,6 @@ SHADOW
          cannot use the latest ImageMagick development yet, this is not
          utilized so far.
 
-   Default
-
 
 .. container:: table-row
 
@@ -855,14 +796,12 @@ SHADOW
          opacity
 
    Data type
-         posint (1-100)
+         positive integer (1-100)
 
    Description
          Opacity (transparency^-1)
 
-         100% opacity = 0% transparency). Only active with a value for blur.
-
-   Default
+         100% opacity = 0% transparency. Only active with a value for blur.
 
 
 .. container:: table-row
@@ -871,13 +810,11 @@ SHADOW
          intensity
 
    Data type
-         posint(0-100)
+         positive integer (0-100)
 
    Description
          How "massive" the shadow is. This value can - if it has a high value
          combined with a blurred shadow - create a kind of soft-edged outline.
-
-   Default
 
 
 .. ###### END~OF~TABLE ######
@@ -907,9 +844,6 @@ text.
    Description
          Description:
 
-   Default
-         Default:
-
 
 .. container:: table-row
 
@@ -917,7 +851,7 @@ text.
          textObjNum
 
    Data type
-         pos-int
+         positive integer
 
    Description
          Must point to the TEXT-object if these shadow-properties are not
@@ -926,8 +860,6 @@ text.
 
          If - on the other hand - the shadow is a property to a text-object,
          this property is not needed.
-
-   Default
 
 
 .. container:: table-row
@@ -941,8 +873,6 @@ text.
    Description
          Offset of the emboss
 
-   Default
-
 
 .. container:: table-row
 
@@ -954,8 +884,6 @@ text.
 
    Description
          Upper border-color
-
-   Default
 
 
 .. container:: table-row
@@ -969,8 +897,6 @@ text.
    Description
          lower border-color
 
-   Default
-
 
 .. container:: table-row
 
@@ -978,13 +904,11 @@ text.
          blur
 
    Data type
-         posint (1-99)
+         positive integer (1-99)
 
    Description
          Blurring of the shadow. Above 40 only values of 40,50,60,70,80,90
          means something.
-
-   Default
 
 
 .. container:: table-row
@@ -993,14 +917,12 @@ text.
          opacity
 
    Data type
-         posint (1-100)
+         positive integer (1-100)
 
    Description
          Opacity (transparency^-1)
 
-         100% opacity = 0% transparency). Only active with a value for blur.
-
-   Default
+         100% opacity = 0% transparency. Only active with a value for blur.
 
 
 .. container:: table-row
@@ -1009,13 +931,11 @@ text.
          intensity
 
    Data type
-         posint(0-100)
+         positive integer (0-100)
 
    Description
          How "massive" the emboss is. This value can - if it has a high value
          combined with a blurred shadow - create a kind of soft-edged outline.
-
-   Default
 
 
 .. ###### END~OF~TABLE ######
@@ -1045,9 +965,6 @@ high intensity. That works better!
    Description
          Description:
 
-   Default
-         Default:
-
 
 .. container:: table-row
 
@@ -1055,7 +972,7 @@ high intensity. That works better!
          textObjNum
 
    Data type
-         pos-int
+         positive integer
 
    Description
          Must point to the TEXT-object if these shadow-properties are not
@@ -1064,8 +981,6 @@ high intensity. That works better!
 
          If - on the other hand - the shadow is a property to a text-object,
          this property is not needed.
-
-   Default
 
 
 .. container:: table-row
@@ -1079,8 +994,6 @@ high intensity. That works better!
    Description
          Thickness in each direction, range 1-2
 
-   Default
-
 
 .. container:: table-row
 
@@ -1092,8 +1005,6 @@ high intensity. That works better!
 
    Description
          Outline color
-
-   Default
 
 
 .. ###### END~OF~TABLE ######
@@ -1139,8 +1050,6 @@ BOX
          w,h are the dimensions. Dimensions of 1 will result in 1-pixel wide
          lines!
 
-   Default
-
 
 .. container:: table-row
 
@@ -1163,7 +1072,7 @@ BOX
          opacity
 
    Data type
-         pos-int (1-100)
+         positive integer (1-100)
 
    Description
          Opacity (i.e. inverse of transparency, e.g. 100% opacity = 0%
@@ -1243,8 +1152,6 @@ ELLIPSE
          w,h are the dimensions. Dimensions of 1 will result in 1-pixel wide
          lines!
 
-   Default
-
 
 .. container:: table-row
 
@@ -1311,8 +1218,6 @@ IMAGE
    Description
          The imagefile
 
-   Default
-
 
 .. container:: table-row
 
@@ -1343,8 +1248,6 @@ IMAGE
          Maximum times is 20 each direction. If you need more, use a larger
          image.
 
-   Default
-
 
 .. container:: table-row
 
@@ -1358,8 +1261,6 @@ IMAGE
          *See in the "Data types reference" at the beginning of this document
          or in the table "BOX".*
 
-   Default
-
 
 .. container:: table-row
 
@@ -1371,8 +1272,6 @@ IMAGE
 
    Description
          Optional mask-image for the imagefile.
-
-   Default
 
 
 .. ###### END~OF~TABLE ######
@@ -1486,8 +1385,6 @@ Example:
    Description
          Color reduction.
 
-   Default
-
 
 .. container:: table-row
 
@@ -1523,8 +1420,6 @@ Example:
             20 = EFFECT
             20.value = wave=1,20
 
-   Default
-
 
 .. container:: table-row
 
@@ -1537,8 +1432,6 @@ Example:
    Description
          Makes the image look as if it had been drawn with charcoal and defines
          the intensity of that effect.
-
-   Default
 
 
 .. container:: table-row
@@ -1559,8 +1452,6 @@ Example:
             20 = EFFECT
             20.value = wave=1,20 | gray
 
-   Default
-
 
 .. container:: table-row
 
@@ -1572,8 +1463,6 @@ Example:
 
    Description
          Creates rounded edges.
-
-   Default
 
 
 .. container:: table-row
@@ -1588,8 +1477,6 @@ Example:
          Creates a relief effect: Creates highlights or shadows that replace
          light and dark boundaries in the image.
 
-   Default
-
 
 .. container:: table-row
 
@@ -1602,8 +1489,6 @@ Example:
    Description
          Vertical flipping.
 
-   Default
-
 
 .. container:: table-row
 
@@ -1615,8 +1500,6 @@ Example:
 
    Description
          Horizontal flipping.
-
-   Default
 
 
 .. container:: table-row
@@ -1648,8 +1531,6 @@ Example:
    Description
          Defines the number of different colors to use in the image.
 
-   Default
-
 
 .. container:: table-row
 
@@ -1662,8 +1543,6 @@ Example:
    Description
          Horizontal shearing.
 
-   Default
-
 
 .. container:: table-row
 
@@ -1675,8 +1554,6 @@ Example:
 
    Description
          Invert the colors.
-
-   Default
 
 
 .. ###### END~OF~TABLE ######
@@ -1704,9 +1581,6 @@ Sets another workarea.
    Description
          Description:
 
-   Default
-         Default:
-
 
 .. container:: table-row
 
@@ -1726,8 +1600,6 @@ Sets another workarea.
          For the usage of "calc" see the according note at the beginning of the
          section "GIFBUILDER".
 
-   Default
-
 
 .. container:: table-row
 
@@ -1741,8 +1613,6 @@ Sets another workarea.
          Sets the current to the default.
 
          Checked for using isset().
-
-   Default
 
 
 .. ###### END~OF~TABLE ######
@@ -1824,8 +1694,6 @@ image!
          For the usage of "calc" see the according note at the beginning of the
          section "GIFBUILDER".
 
-   Default
-
 
 .. ###### END~OF~TABLE ######
 
@@ -1853,9 +1721,6 @@ image!
    Description
          Description:
 
-   Default
-         Default:
-
 
 .. container:: table-row
 
@@ -1867,8 +1732,6 @@ image!
 
    Description
          Width of the scaled image.
-
-   Default
 
 
 .. container:: table-row
@@ -1882,8 +1745,6 @@ image!
    Description
          Height of the scaled image.
 
-   Default
-
 
 .. container:: table-row
 
@@ -1895,8 +1756,6 @@ image!
 
    Description
          Parameters to be used for the processing.
-
-   Default
 
 
 .. ###### END~OF~TABLE ######
@@ -1936,9 +1795,6 @@ Example:
    Description
          Description:
 
-   Default
-         Default:
-
 
 .. container:: table-row
 
@@ -1966,8 +1822,6 @@ Example:
 
             20 = ADJUST
             20.value = inputLevels = 50, 190
-
-   Default
 
 
 .. container:: table-row
@@ -1998,8 +1852,6 @@ Example:
             20 = ADJUST
             20.value = outputLevels = 50, 190
 
-   Default
-
 
 .. container:: table-row
 
@@ -2011,8 +1863,6 @@ Example:
 
    Description
          Sets the levels automatically.
-
-   Default
 
 
 .. ###### END~OF~TABLE ######

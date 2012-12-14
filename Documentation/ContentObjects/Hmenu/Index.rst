@@ -67,7 +67,7 @@ Generates hierarchical menus.
          cache\_period
 
    Data type
-         int
+         integer
 
    Description
          The number of seconds a menu may remain in cache. If this value is not
@@ -79,8 +79,6 @@ Generates hierarchical menus.
 
          3) 86400 (= 1 day)
 
-   Default
-
 
 .. container:: table-row
 
@@ -90,7 +88,7 @@ Generates hierarchical menus.
          entryLevel
 
    Data type
-         int /stdWrap
+         integer /stdWrap
 
    Description
          Defines at which level in the rootLine the menu should start.
@@ -120,8 +118,6 @@ Generates hierarchical menus.
    Description
          *See section "The .special property" and the according tables below.*
 
-   Default
-
 
 .. container:: table-row
 
@@ -136,8 +132,6 @@ Generates hierarchical menus.
    Description
          See above
 
-   Default
-
 
 .. container:: table-row
 
@@ -147,9 +141,9 @@ Generates hierarchical menus.
          minItems
 
    Data type
-         Until TYPO3 4.6: int
+         Until TYPO3 4.6: integer
 
-         Since TYPO3 4.7: int /stdWrap
+         Since TYPO3 4.7: integer /stdWrap
 
    Description
          The minimum items in the menu. If the number of pages does not reach
@@ -160,8 +154,6 @@ Generates hierarchical menus.
          menu level individually, set the properties in the menu objects (see
          "Common properties" table).
 
-   Default
-
 
 .. container:: table-row
 
@@ -171,16 +163,14 @@ Generates hierarchical menus.
          maxItems
 
    Data type
-         Until TYPO3 4.6: int
+         Until TYPO3 4.6: integer
 
-         Since TYPO3 4.7: int /stdWrap
+         Since TYPO3 4.7: integer /stdWrap
 
    Description
          The maximum items in the menu. More items will be ignored.
 
          **Notice:** Affects all sub menus as well. (See "minItems" for notice)
-
-   Default
 
 
 .. container:: table-row
@@ -191,9 +181,9 @@ Generates hierarchical menus.
          begin
 
    Data type
-         Until TYPO3 4.6: int +calc
+         Until TYPO3 4.6: integer +calc
 
-         Since TYPO3 4.7: int /stdWrap +calc
+         Since TYPO3 4.7: integer /stdWrap +calc
 
    Description
          The first item in the menu.
@@ -206,8 +196,6 @@ Generates hierarchical menus.
             begin = 3
 
          **Notice:** Affects all sub menus as well. (See "minItems" for notice)
-
-   Default
 
 
 .. container:: table-row
@@ -227,12 +215,10 @@ Generates hierarchical menus.
 
          **Example:**
 
-         The pages with these uid-number will NOT be within the menu!!
+         The pages with these uid-numbers will NOT be within the menu!
          Additionally the current page is always excluded too. ::
 
             excludeUidList = 34,2,current
-
-   Default
 
 
 .. container:: table-row
@@ -268,8 +254,6 @@ Generates hierarchical menus.
          If set, pages with the checkbox "Not in menu" checked will be included
          in menus.
 
-   Default
-
 
 .. container:: table-row
 
@@ -285,8 +269,6 @@ Generates hierarchical menus.
          This is a list of page UID numbers that will always be regarded as
          active menu items and thereby automatically opened regardless of the
          rootline.
-
-   Default
 
 
 .. container:: table-row
@@ -323,8 +305,6 @@ Generates hierarchical menus.
          For these options to make sense, they should only be used when
          "config.sys\_language\_mode" is not set to "content\_fallback".
 
-   Default
-
 
 .. container:: table-row
 
@@ -341,8 +321,6 @@ Generates hierarchical menus.
 
          **Notice:** This works only for  *special=language* .
 
-   Default
-
 
 .. container:: table-row
 
@@ -357,8 +335,6 @@ Generates hierarchical menus.
    Description
          If "if" returns false, the menu is not generated.
 
-   Default
-
 
 .. container:: table-row
 
@@ -371,9 +347,7 @@ Generates hierarchical menus.
          wrap /stdWrap
 
    Description
-
-
-   Default
+         Wrap for the HMENU.
 
 
 .. container:: table-row
@@ -388,8 +362,6 @@ Generates hierarchical menus.
 
    Description
          (Executed after ".wrap".)
-
-   Default
 
 
 .. ###### END~OF~TABLE ######
@@ -601,8 +573,6 @@ Mount pages are supported.
             20.special = updated
             20.special.value = 35, 56
 
-   Default
-
 
 .. container:: table-row
 
@@ -647,7 +617,7 @@ Mount pages are supported.
          depth
 
    Data type
-         int
+         integer
 
    Description
          Defines the tree depth.
@@ -671,7 +641,7 @@ Mount pages are supported.
          beginAtLevel
 
    Data type
-         int
+         integer
 
    Description
          Determines starting level for the page trees generated based on .value
@@ -697,14 +667,15 @@ Mount pages are supported.
          maxAge
 
    Data type
-         int (seconds) +calc
+         integer +calc
 
    Description
-         Pages with update-dates older than the current time minus this number
-         of seconds will not be shown in the menu no matter what. Default is
-         "not used". You may use +-\*/ for calculations.
+         Only show pages, whose update-date *at most* lies this number of
+         seconds in the past. Or with other words: Pages with update-dates
+         older than the current time minus this number of seconds will not
+         be shown in the menu no matter what.
 
-   Default
+         By default all pages are shown. You may use +-\*/ for calculations.
 
 
 .. container:: table-row
@@ -715,7 +686,7 @@ Mount pages are supported.
          limit
 
    Data type
-         int
+         integer
 
    Description
          Maximal number of items in the menu. Default is 10, max is 100.
@@ -826,8 +797,6 @@ Mount pages are supported.
             temp.breadcrumbs.special = rootline
             temp.breadcrumbs.special.range = 1|-2
 
-   Default
-
 
 .. container:: table-row
 
@@ -877,8 +846,6 @@ Mount pages are supported.
             page.2.1.NO {
               linkWrap = | >
             }
-
-   Default
 
 
 .. ###### END~OF~TABLE ######
@@ -1044,8 +1011,6 @@ list from the property ".items".
               index.uid = 8
             }
 
-   Default
-
 
 .. container:: table-row
 
@@ -1063,8 +1028,6 @@ list from the property ".items".
          "prev" and "next" will also link to the first page of the next section
          / to the last page of the previous section.
 
-   Default
-
 
 .. container:: table-row
 
@@ -1079,8 +1042,6 @@ list from the property ".items".
    Description
          Optional/alternative target of the item.
 
-   Default
-
 
 .. container:: table-row
 
@@ -1090,12 +1051,10 @@ list from the property ".items".
          [itemname].uid
 
    Data type
-         int
+         integer
 
    Description
          (uid of page) - optional/alternative page-uid to link to.
-
-   Default
 
 
 .. container:: table-row
@@ -1116,8 +1075,6 @@ list from the property ".items".
          This gives the link to the previous page the linktext "« zurück". ::
 
             prev.fields.title = « zurück
-
-   Default
 
 
 .. ###### END~OF~TABLE ######
@@ -1164,7 +1121,7 @@ Mount pages are supported.
          value
 
    Data type
-         int /stdWrap
+         integer /stdWrap
 
    Description
          Page for which keywords to find similar pages
@@ -1182,8 +1139,6 @@ Mount pages are supported.
             20.1.NO {
               ...
             }
-
-   Default
 
 
 .. container:: table-row
@@ -1226,14 +1181,12 @@ Mount pages are supported.
          entryLevel
 
    Data type
-         int
+         integer
 
    Description
          Where in the rootline the search begins.
 
-         *Seeproperty entryLevel in the section "HMENU" above.*
-
-   Default
+         *See property entryLevel in the section "HMENU" above.*
 
 
 .. container:: table-row
@@ -1244,7 +1197,7 @@ Mount pages are supported.
          depth
 
    Data type
-         int
+         integer
 
    Description
          (same as in section "special.updated")
@@ -1261,7 +1214,7 @@ Mount pages are supported.
          limit
 
    Data type
-         int
+         integer
 
    Description
          (same as in section "special.updated")
@@ -1283,8 +1236,6 @@ Mount pages are supported.
    Description
          (same as in section "special.updated")
 
-   Default
-
 
 .. container:: table-row
 
@@ -1298,8 +1249,6 @@ Mount pages are supported.
 
    Description
          (same as in section "special.updated")
-
-   Default
 
 
 .. container:: table-row
@@ -1316,8 +1265,6 @@ Mount pages are supported.
          Lets you define the keywords manually by defining them as a comma-
          separated list. If this property is defined, it overrides the default,
          which is the keywords of the current page.
-
-   Default
 
 
 .. container:: table-row
@@ -1424,8 +1371,6 @@ error if tried accessed (depending on site configuration).
          The number of elements in this list determines the number of menu
          items.
 
-   Default
-
 
 .. container:: table-row
 
@@ -1440,8 +1385,6 @@ error if tried accessed (depending on site configuration).
    Description
          If set to 1 the button for a language will ve rendered as a non-
          disabled button even if no translation is found for the language.
-
-   Default
 
 
 .. ###### END~OF~TABLE ######
@@ -1524,8 +1467,6 @@ menu items.
    Description
          Filename of the php file to include.
 
-   Default
-
 
 .. container:: table-row
 
@@ -1535,13 +1476,11 @@ menu items.
          [any other key]
 
    Data type
-
+         *(whatever)*
 
    Description
          Your own variables to your script. They are all accessible in the
          array $conf in your script.
-
-   Default
 
 
 .. ###### END~OF~TABLE ######
@@ -1644,8 +1583,6 @@ menu.
 
    Description
          Name of the function
-
-   Default
 
 
 .. ###### END~OF~TABLE ######

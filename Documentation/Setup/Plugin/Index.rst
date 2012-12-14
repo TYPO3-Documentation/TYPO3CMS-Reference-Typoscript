@@ -46,12 +46,10 @@ prefixed with an underscore:
          *userFunc*
 
    Data type
-
+         *(array of keys)*
 
    Description
-         *Property setting up the USER / USER\_INT object of the plugin*
-
-   Default
+         *Property setting up the USER / USER\_INT object of the plugin*.
 
 
 .. container:: table-row
@@ -60,12 +58,10 @@ prefixed with an underscore:
          *includeLibs*
 
    Data type
-
+         *(array of keys)*
 
    Description
-         *Property setting up the USER / USER\_INT object of the plugin*
-
-   Default
+         *Property setting up the USER / USER\_INT object of the plugin*.
 
 
 .. container:: table-row
@@ -85,8 +81,6 @@ prefixed with an underscore:
          This value is for all plugins read by the pagegen script when making
          the header of the document.
 
-   Default
-
 
 .. container:: table-row
 
@@ -102,8 +96,6 @@ prefixed with an underscore:
 
          This works only if the plugin calls $this->pi\_setPiVarDefaults().
 
-   Default
-
 
 .. container:: table-row
 
@@ -115,8 +107,6 @@ prefixed with an underscore:
 
    Description
          Can be used to override the default locallang labels for the plugin.
-
-   Default
 
 
 .. ###### END~OF~TABLE ######

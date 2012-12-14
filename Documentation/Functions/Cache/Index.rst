@@ -67,8 +67,6 @@ cached, but rendered on every call.
          versions of the rendered content while being generic enough to stay
          efficient.
 
-   Default
-
 
 .. container:: table-row
 
@@ -112,8 +110,6 @@ cached, but rendered on every call.
          Can hold a comma-separated list of tags. These tags will be attached
          to the cached content into the cache\_hash storage (not into
          cache\_pages) and can be used to purge the cached content.
-
-   Default
 
 
 .. ###### END~OF~TABLE ######

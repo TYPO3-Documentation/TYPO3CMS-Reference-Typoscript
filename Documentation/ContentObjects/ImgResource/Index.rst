@@ -44,11 +44,6 @@ height and so on.
    Data type
          imgResource
 
-   Description
-
-
-   Default
-
 
 .. container:: table-row
 
@@ -57,11 +52,6 @@ height and so on.
 
    Data type
          ->stdWrap
-
-   Description
-
-
-   Default
 
 
 .. ###### END~OF~TABLE ######

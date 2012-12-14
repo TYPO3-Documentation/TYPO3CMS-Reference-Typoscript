@@ -31,9 +31,6 @@ been removed in TYPO3 6.0. Use the content object "TEXT" instead!
    Description
          Description:
 
-   Default
-         Default:
-
 
 .. container:: table-row
 
@@ -46,8 +43,6 @@ been removed in TYPO3 6.0. Use the content object "TEXT" instead!
    Description
          Raw HTML-code.
 
-   Default
-
 
 .. container:: table-row
 
@@ -59,8 +54,6 @@ been removed in TYPO3 6.0. Use the content object "TEXT" instead!
 
    Description
          (Executed after the stdWrap for the property ".value".)
-
-   Default
 
 
 .. ###### END~OF~TABLE ######

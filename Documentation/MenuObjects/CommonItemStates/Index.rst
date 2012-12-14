@@ -37,7 +37,7 @@ That means they are not used by for instance the JSMENU.
          NO
 
    Data type
-         Boolean / (config)
+         boolean / (config)
 
    Description
          The default "Normal" state rendering of Item. This is required for all
@@ -67,7 +67,7 @@ That means they are not used by for instance the JSMENU.
          IFSUBRO
 
    Data type
-         Boolean / (config)
+         boolean / (config)
 
    Description
          Enable/Configuration for menu items which has subpages.
@@ -84,7 +84,7 @@ That means they are not used by for instance the JSMENU.
          ACTRO
 
    Data type
-         Boolean / (config)
+         boolean / (config)
 
    Description
          Enable/Configuration for menu items which are found in the rootLine.
@@ -101,7 +101,7 @@ That means they are not used by for instance the JSMENU.
          ACTIFSUBRO
 
    Data type
-         Boolean / (config)
+         boolean / (config)
 
    Description
          Enable/Configuration for menu items which are found in the rootLine
@@ -119,7 +119,7 @@ That means they are not used by for instance the JSMENU.
          CURRO
 
    Data type
-         Boolean / (config)
+         boolean / (config)
 
    Description
          Enable/Configuration for a menu item if the item is the current page.
@@ -136,7 +136,7 @@ That means they are not used by for instance the JSMENU.
          CURIFSUBRO
 
    Data type
-         Boolean / (config)
+         boolean / (config)
 
    Description
          Enable/Configuration for a menu item if the item is the current page
@@ -154,7 +154,7 @@ That means they are not used by for instance the JSMENU.
          USRRO
 
    Data type
-         Boolean / (config)
+         boolean / (config)
 
    Description
          Enable/Configuration for menu items which are access restricted pages
@@ -170,7 +170,7 @@ That means they are not used by for instance the JSMENU.
          SPC
 
    Data type
-         Boolean / (config)
+         boolean / (config)
 
    Description
          Enable/Configuration for 'Spacer' pages.
@@ -178,7 +178,7 @@ That means they are not used by for instance the JSMENU.
          Spacers are pages of the doktype "Spacer". These are not viewable
          pages but "placeholders" which can be used to divide menuitems.
 
-         **Note:** Rollovers doesn't work with spacers, if you use GMENU!
+         **Note:** Rollovers do not work with spacers, if you use GMENU!
 
    Default
          0
@@ -192,7 +192,7 @@ That means they are not used by for instance the JSMENU.
          USERDEF1RO
 
    Data type
-         Boolean / (config)
+         boolean / (config)
 
    Description
          Userdefined, see .itemArrayProcFunc for details on how to use this.
@@ -201,8 +201,6 @@ That means they are not used by for instance the JSMENU.
          a script/userfunction processing the menu item array. See
          HMENU/special=userdefined or the property .itemArrayProcFunc of the
          menu objects.
-
-   Default
 
 
 .. container:: table-row
@@ -213,12 +211,10 @@ That means they are not used by for instance the JSMENU.
          USERDEF2RO
 
    Data type
-         Boolean / (config)
+         boolean / (config)
 
    Description
          (See above)
-
-   Default
 
 
 .. ###### END~OF~TABLE ######

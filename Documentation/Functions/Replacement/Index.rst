@@ -44,8 +44,6 @@ of actions and thus allows multiple replacements at once.
    Description
          Defines the string that shall be replaced.
 
-   Default
-
 
 .. container:: table-row
 
@@ -57,8 +55,6 @@ of actions and thus allows multiple replacements at once.
 
    Description
          Defines the string to be used for the replacement.
-
-   Default
 
 
 .. container:: table-row

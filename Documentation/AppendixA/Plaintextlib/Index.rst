@@ -81,8 +81,6 @@ plaintextLib.inc properties
    Description
          Url of the site.
 
-   Default
-
 
 .. container:: table-row
 
@@ -94,8 +92,6 @@ plaintextLib.inc properties
 
    Description
          Default output if CType is not rendered.
-
-   Default
 
 
 .. container:: table-row
@@ -109,8 +105,6 @@ plaintextLib.inc properties
    Description
          Header for uploads.
 
-   Default
-
 
 .. container:: table-row
 
@@ -122,8 +116,6 @@ plaintextLib.inc properties
 
    Description
          Header for images.
-
-   Default
 
 
 .. container:: table-row
@@ -137,8 +129,6 @@ plaintextLib.inc properties
    Description
          Header for image captions.
 
-   Default
-
 
 .. container:: table-row
 
@@ -150,8 +140,6 @@ plaintextLib.inc properties
 
    Description
          Prefix for image-links.
-
-   Default
 
 
 .. container:: table-row
@@ -166,12 +154,10 @@ plaintextLib.inc properties
          defaultType
 
    Data type
-         int
+         integer
 
    Description
          Defines which type to use as default.
-
-   Default
 
 
 .. container:: table-row
@@ -185,8 +171,6 @@ plaintextLib.inc properties
    Description
          For header date.
 
-   Default
-
 
 .. container:: table-row
 
@@ -198,8 +182,6 @@ plaintextLib.inc properties
 
    Description
          Prefix for header date.
-
-   Default
 
 
 .. container:: table-row
@@ -213,8 +195,6 @@ plaintextLib.inc properties
    Description
          Prefix for header links.
 
-   Default
-
 
 .. container:: table-row
 
@@ -222,12 +202,10 @@ plaintextLib.inc properties
          [1-5].preLineLen
 
    Data type
-         int
+         integer
 
    Description
          Length of line before header.
-
-   Default
 
 
 .. container:: table-row
@@ -236,12 +214,10 @@ plaintextLib.inc properties
          [1-5].postLineLen
 
    Data type
-         int
+         integer
 
    Description
          Length of line after header.
-
-   Default
 
 
 .. container:: table-row
@@ -250,12 +226,10 @@ plaintextLib.inc properties
          [1-5].preBlanks
 
    Data type
-         int
+         integer
 
    Description
          Number of blank lines before header.
-
-   Default
 
 
 .. container:: table-row
@@ -264,12 +238,10 @@ plaintextLib.inc properties
          [1-5].postBlanks
 
    Data type
-         int
+         integer
 
    Description
          Number of blank lines after header.
-
-   Default
 
 
 .. container:: table-row
@@ -283,8 +255,6 @@ plaintextLib.inc properties
    Description
          for header text.
 
-   Default
-
 
 .. container:: table-row
 
@@ -296,8 +266,6 @@ plaintextLib.inc properties
 
    Description
          Character to pre-line.
-
-   Default
 
 
 .. container:: table-row
@@ -311,8 +279,6 @@ plaintextLib.inc properties
    Description
          Character to post-line.
 
-   Default
-
 
 .. container:: table-row
 
@@ -320,12 +286,10 @@ plaintextLib.inc properties
          [1-5].preLineBlanks
 
    Data type
-         int
+         integer
 
    Description
          Number of blank lines between header and pre-line.
-
-   Default
 
 
 .. container:: table-row
@@ -334,12 +298,10 @@ plaintextLib.inc properties
          [1-5].postLineBlanks
 
    Data type
-         int
+         integer
 
    Description
          Number of blank lines between header and post-line.
-
-   Default
 
 
 .. container:: table-row
@@ -354,8 +316,6 @@ plaintextLib.inc properties
          If set, a number is prepended every header. The number corresponds to
          the content element number in the select.
 
-   Default
-
 
 .. container:: table-row
 
@@ -367,8 +327,6 @@ plaintextLib.inc properties
 
    Description
          Header string prefix.
-
-   Default
 
 
 .. container:: table-row
@@ -382,8 +340,6 @@ plaintextLib.inc properties
    Description
          Bullet for bullet list, layout [0-3].
 
-   Default
-
 
 .. container:: table-row
 
@@ -395,8 +351,6 @@ plaintextLib.inc properties
 
    Description
          If set, this is used for lines on the second row of bullet-lists.
-
-   Default
 
 
 .. container:: table-row
@@ -411,8 +365,6 @@ plaintextLib.inc properties
          cObject to render menu. The output is stripped for tags and the links
          is extracted. Further all <BR> chars are converted to chr(10).
 
-   Default
-
 
 .. container:: table-row
 
@@ -426,8 +378,6 @@ plaintextLib.inc properties
          cObject to render other elements. See config below which simply uses
          this object to render more tt\_content elements as plaintext.
 
-   Default
-
 
 .. container:: table-row
 
@@ -439,8 +389,6 @@ plaintextLib.inc properties
 
    Description
          stdWrap for body-text. See config example below.
-
-   Default
 
 
 .. container:: table-row
@@ -455,8 +403,6 @@ plaintextLib.inc properties
          Lets you process the output of each content element before it finally
          is returned. Property "parentObj" of the conf-array holds a references
          to the plainText object calling the function.
-
-   Default
 
 
 .. ###### END~OF~TABLE ######

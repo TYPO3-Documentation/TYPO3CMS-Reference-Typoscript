@@ -41,7 +41,7 @@ imgResource.
          imageExtension /stdWrap
 
    Description
-
+         The file extension.
 
    Default
          web
@@ -93,8 +93,6 @@ imgResource.
             .width = 100c+30
             .height = 100c-25
 
-   Default
-
 
 .. container:: table-row
 
@@ -106,8 +104,6 @@ imgResource.
 
    Description
          see ".width"
-
-   Default
 
 
 .. container:: table-row
@@ -125,8 +121,6 @@ imgResource.
 
          fx. "-rotate 90" or "-negate"
 
-   Default
-
 
 .. container:: table-row
 
@@ -141,6 +135,7 @@ imgResource.
          does not use anti-aliasing and is therefore much faster.
 
    Default
+         0
 
 
 .. container:: table-row
@@ -187,8 +182,6 @@ imgResource.
          Enter an alternative path to use for temp images. Must be found in the
          list in $TYPO3\_CONF\_VARS['FE']['allowedTempPaths'].
 
-   Default
-
 
 .. container:: table-row
 
@@ -196,14 +189,12 @@ imgResource.
          frame
 
    Data type
-         int
+         integer
 
    Description
          Chooses which frame in an gif-animation or pdf-file.
 
          "" = first frame (zero)
-
-   Default
 
 
 .. container:: table-row
@@ -227,8 +218,6 @@ imgResource.
             .import.field = image
             .import.listNum = 0
 
-   Default
-
 
 .. container:: table-row
 
@@ -246,6 +235,7 @@ imgResource.
    Default
          0
 
+
 .. container:: table-row
 
    Property
@@ -256,8 +246,6 @@ imgResource.
 
    Description
          Max width
-
-   Default
 
 
 .. container:: table-row
@@ -271,8 +259,6 @@ imgResource.
    Description
          Max height
 
-   Default
-
 
 .. container:: table-row
 
@@ -285,8 +271,6 @@ imgResource.
    Description
          Min width (overrules maxW/maxH)
 
-   Default
-
 
 .. container:: table-row
 
@@ -298,8 +282,6 @@ imgResource.
 
    Description
          Min height (overrules maxW/maxH)
-
-   Default
 
 
 .. container:: table-row
@@ -324,7 +306,7 @@ imgResource.
             10.file.stripProfile = 1
 
    Default
-
+         0
 
 .. container:: table-row
 
@@ -343,12 +325,10 @@ imgResource.
          imgResource
 
    Description
-         The mask by which the image is masked onto "m.bgImg". Both "m.mask"
+         The mask with which the image is masked onto "m.bgImg". Both "m.mask"
          and "m.bgImg"  **is scaled to fit** the size of the imgResource image!
 
          **Note:** Both "m.mask" and "m.bgImg" must be valid images.
-
-   Default
 
 
 .. container:: table-row
@@ -361,8 +341,6 @@ imgResource.
 
    Description
          **Note:** Both "m.mask" and "m.bgImg" must be valid images.
-
-   Default
 
 
 .. container:: table-row
@@ -385,8 +363,6 @@ imgResource.
          **Note:** Both "m.bottomImg" and "m.bottomImg\_mask" must be valid
          images.
 
-   Default
-
 
 .. container:: table-row
 
@@ -401,8 +377,6 @@ imgResource.
 
          **Note:** Both "m.bottomImg" and "m.bottomImg\_mask" must be valid
          images.
-
-   Default
 
 
 .. ###### END~OF~TABLE ######

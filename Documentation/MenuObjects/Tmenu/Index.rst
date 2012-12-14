@@ -34,15 +34,13 @@ TMENU
          expAll
 
    Data type
-         Boolean /stdWrap
+         boolean /stdWrap
 
    Description
          If this is true, the menu will always show the menu on the level
          underneath the menu item. This corresponds to a situation where a user
          has clicked a menu item and the menu folds out the next level. This
          can enable that to happen on all items as default.
-
-   Default
 
 
 .. container:: table-row
@@ -57,8 +55,6 @@ TMENU
          If set, "active" menu items that has expanded the next level on the
          menu will now collapse that menu again.
 
-   Default
-
 
 .. container:: table-row
 
@@ -70,8 +66,6 @@ TMENU
 
    Description
          If set access-keys are set on the menu-links
-
-   Default
 
 
 .. container:: table-row
@@ -91,8 +85,6 @@ TMENU
 
          **Note** : This option and the JavaScript for blurring have been
          removed in TYPO3 6.0.
-
-   Default
 
 
 .. container:: table-row
@@ -116,13 +108,11 @@ TMENU
          forceTypeValue
 
    Data type
-         int
+         integer
 
    Description
          If set, the &type parameter of the link is forced to this value
          regardless of target.
-
-   Default
 
 
 .. container:: table-row
@@ -138,8 +128,6 @@ TMENU
 
          **Example:** see GMENU.stdWrap
 
-   Default
-
 
 .. container:: table-row
 
@@ -151,8 +139,6 @@ TMENU
 
    Description
          Wraps only if there were items in the menu!
-
-   Default
 
 
 .. container:: table-row
@@ -172,8 +158,6 @@ TMENU
          See example in
          typo3/sysext/statictemplates/media/scripts/example\_itemArrayProcFunc.php
 
-   Default
-
 
 .. container:: table-row
 
@@ -191,8 +175,6 @@ TMENU
 
          The ->OptionSplit function is run on the whole configuration before
          the items are generated.
-
-   Default
 
 
 .. ###### END~OF~TABLE ######

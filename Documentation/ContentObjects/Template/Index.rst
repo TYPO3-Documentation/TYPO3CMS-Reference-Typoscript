@@ -55,8 +55,6 @@ content by TYPO3.
          This will use the file fileadmin/template.html as template for your
          website.
 
-   Default
-
 
 .. container:: table-row
 
@@ -64,16 +62,14 @@ content by TYPO3.
          subparts
 
    Data type
-         *Array... of*
-
-         cObject
+         *(array of cObjects)*
 
    Description
          This is an array of subpart-markers (case-sensitive).
 
          A subpart is defined by  **two** markers in the template. The markers
          must be wrapped by "###" on both sides. You may insert the subpart-
-         markers inside HTML-comment-tags!!
+         markers inside HTML-comment-tags!
 
          **Example:**
 
@@ -88,10 +84,10 @@ content by TYPO3.
 
             page.10.subparts {
               HELLO = TEXT
-              HELLO.value = En subpart er blevet erstattet!!
+              HELLO.value = En subpart er blevet erstattet!
             }
 
-         **NOTE:**
+         **Note:**
 
          Before the content-objects of each subpart are generated, all subparts
          in the array are extracted and loaded into the register so that you
@@ -105,10 +101,8 @@ content by TYPO3.
 
          Eg. this subpart above has the register-key "SUBPART\_HELLO".
 
-         *This is valid ONLY if the property .nonCachedSubst is not set! (see
-         below)*
-
-   Default
+         *This is valid ONLY if the property .nonCachedSubst is not set (see
+         below)!*
 
 
 .. container:: table-row
@@ -143,8 +137,6 @@ content by TYPO3.
          unless it was the src attribute of an img tag in which case the path
          prefixed is "fileadmin/img/"
 
-   Default
-
 
 .. container:: table-row
 
@@ -152,9 +144,7 @@ content by TYPO3.
          marks
 
    Data type
-         *Array... of*
-
-         cObject
+         *(array of cObjects)*
 
    Description
          This is an array of marks-markers (case-sensitive).
@@ -186,8 +176,6 @@ content by TYPO3.
          in the register are also available to the cObjects of markers (only if
          .nonCachedSubst is not set!).
 
-   Default
-
 
 .. container:: table-row
 
@@ -195,9 +183,7 @@ content by TYPO3.
          wraps
 
    Data type
-         *Array... of*
-
-         cObject
+         *(array of cObjects)*
 
    Description
          This is an array of wraps-markers (case-sensitive).
@@ -218,8 +204,6 @@ content by TYPO3.
               MYLINK.value = <a href="#"> | </a>
             }
 
-   Default
-
 
 .. container:: table-row
 
@@ -233,8 +217,6 @@ content by TYPO3.
          This is an optional definition of a subpart, that we decide to work
          on. In other words; if you define this value that subpart is extracted
          from the template and is the basis for this whole template object.
-
-   Default
 
 
 .. container:: table-row
@@ -274,9 +256,7 @@ content by TYPO3.
          a problem if you have marks inside of subparts! But setting this flag
          will make the marker-substitution a non-cached, subsequent process.
 
-         Another solution is to turn of caching, see below.
-
-   Default
+         Another solution is to turn off caching, see below.
 
 
 .. container:: table-row
@@ -302,8 +282,6 @@ content by TYPO3.
          Obviously you loose the ability to refer to other parts in the
          template with the register-keys as described above.
 
-   Default
-
 
 .. container:: table-row
 
@@ -312,11 +290,6 @@ content by TYPO3.
 
    Data type
          ->stdWrap
-
-   Description
-
-
-   Default
 
 
 .. ###### END~OF~TABLE ######

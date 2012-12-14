@@ -11,7 +11,9 @@
 if
 ^^
 
-This function returns true if ALL of the present conditions are met
+Allows you to check multiple conditions.
+
+This function returns true, if ALL of the present conditions are met
 (they are connected with an "AND", a logical conjunction). If a
 single condition is false, the value returned is false.
 
@@ -39,6 +41,20 @@ Also check the explanations and the examples further below!
 .. container:: table-row
 
    Property
+         directReturn
+
+   Data type
+         boolean
+
+   Description
+         If this property exists, no other conditions will be checked. Instead
+         the true/false of this value is returned. Can be used to set
+         true/false with a TypoScript constant.
+
+
+.. container:: table-row
+
+   Property
          isNull
 
    Data type
@@ -51,8 +67,6 @@ Also check the explanations and the examples further below!
          Since null values cannot be assigned in TypoScript, only the stdWrap
          features are available below this property.
 
-   Default
-
 
 .. container:: table-row
 
@@ -60,12 +74,10 @@ Also check the explanations and the examples further below!
          isTrue
 
    Data type
-         str /stdWrap
+         string /stdWrap
 
    Description
          If the content is "true".... (not empty string and not zero)
-
-   Default
 
 
 .. container:: table-row
@@ -74,12 +86,10 @@ Also check the explanations and the examples further below!
          isFalse
 
    Data type
-         str /stdWrap
+         string /stdWrap
 
    Description
          If the content is "false"... (empty or zero)
-
-   Default
 
 
 .. container:: table-row
@@ -88,14 +98,10 @@ Also check the explanations and the examples further below!
          isPositive
 
    Data type
-         int /stdWrap
-
-         \+ calc
+         integer /stdWrap \+ calc
 
    Description
-         returns false if content is not positive
-
-   Default
+         Returns false, if the content is not positive.
 
 
 .. container:: table-row
@@ -107,9 +113,7 @@ Also check the explanations and the examples further below!
          value /stdWrap
 
    Description
-         returns false if content is not greater than ".value"
-
-   Default
+         Returns false, if the content is not greater than ".value".
 
 
 .. container:: table-row
@@ -121,9 +125,7 @@ Also check the explanations and the examples further below!
          value /stdWrap
 
    Description
-         returns false if content is not less than ".value"
-
-   Default
+         Returns false, if the content is not less than ".value".
 
 
 .. container:: table-row
@@ -135,9 +137,7 @@ Also check the explanations and the examples further below!
          value /stdWrap
 
    Description
-         returns false if content does not equal ".value"
-
-   Default
+         Returns false, if the content does not equal ".value".
 
 
 .. container:: table-row
@@ -149,11 +149,10 @@ Also check the explanations and the examples further below!
          value /stdWrap
 
    Description
-         returns false if content is not in the comma-separated list ".value".
+         Returns false, if the content is not in the comma-separated list
+         ".value".
 
-         The list in ".value" may not have spaces between elements!!
-
-   Default
+         **Note:** The list in ".value" may not have spaces between elements!
 
 
 .. container:: table-row
@@ -165,9 +164,7 @@ Also check the explanations and the examples further below!
          value /stdWrap
 
    Description
-         "value" (the comparison value mentioned above)
-
-   Default
+         The value to check. This is the comparison value mentioned above.
 
 
 .. container:: table-row
@@ -179,25 +176,16 @@ Also check the explanations and the examples further below!
          boolean
 
    Description
-         This negates the result just before it exits. So if anything above
-         returns true the overall returns ends up returning false!!
+         This property is checked after all other properties. If set, it
+         negates the result, which is present before its execution.
+
+         So if all other conditions, which were used, returned true, with
+         this property the overall return ends up being false. If at least
+         one of the other conditions, which were used, returned false, the
+         overall return ends up being true.
 
    Default
-
-
-.. container:: table-row
-
-   Property
-         directReturn
-
-   Data type
-         boolean
-
-   Description
-         If this property exists the true/false of this value is returned.
-         Could be used to set true/false by TypoScript constant
-
-   Default
+         0
 
 
 .. ###### END~OF~TABLE ######

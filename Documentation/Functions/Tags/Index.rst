@@ -12,7 +12,7 @@ tags
 ^^^^
 
 Used to create custom tags and define how they should be parsed. This
-is used in conjunction with  *parseFunc* .
+is used in conjunction with *parseFunc* .
 
 
 .. ### BEGIN~OF~TABLE ###
@@ -28,46 +28,41 @@ is used in conjunction with  *parseFunc* .
    Description
          Description:
 
-   Default
-         Default:
-
 
 .. container:: table-row
 
    Property
-         Array...
+         *(array of strings)*
 
    Data type
-         cObject  *+stripNL*
-
-         *+ breakoutTypoTagContent*
+         cObject
 
    Description
-         Every entry in the  *Array...* corresponds to a tag, that will be
-         parsed. The elements MUST be in lowercase.
+         Every entry in the array of strings corresponds to a tag, that will
+         be parsed. The elements **must** be in lowercase.
 
-         Every entry must be set to a content-object.
+         Every entry must be set to a content object.
 
          "current" is set to the content of the tag, eg <TAG>content</TAG>:
          here "current" is set to "content".
 
          **Parameters:**
 
-         Parameters of the tag is set in $cObj->parameters (key is lowercased):
+         Parameters of the tag are set in $cObj->parameters (key is lowercased)::
 
-         <TAG COLOR="red">content</TAG>
+            <TAG COLOR="red">content</TAG>
 
-         => $cObj->parameters[color] = red
+         This sets $cObj->parameters[color] = red.
 
-         **Special added properties to the content-object:**
+         $cObj->parameters[allParams] is automatically set to the whole
+         parameter-string of the tag. Here it is ' color="red"'
 
-         $cObj->parameters[allParams]: this is automatically set to the whole
-         parameter-string of the tag, eg ' color="red"'
+         **Special properties for each content-object:**
 
-         [cObject].stripNL: is a boolean option, which tells  *parseFunc* that
-         NewLines before and after content of the tag should be stripped.
+         **[cObject].stripNL:** is a boolean option, which tells *parseFunc* that
+         newlines before and after the content of the tag should be stripped.
 
-         [cObject].breakoutTypoTagContent: is a boolean option, which tells
+         **[cObject].breakoutTypoTagContent:** is a boolean option, which tells
          parseFunc that this block of content is breaking up the nonTypoTag
          content and that the content after this must be re-wrapped.
 
@@ -76,11 +71,9 @@ is used in conjunction with  *parseFunc* .
             tags.bold = TEXT
             tags.bold {
               current = 1
-              wrap = <B> | </B>
+              wrap = <p style="font-weight: bold;"> | </p>
             }
             tags.bold.stripNL = 1
-
-   Default
 
 
 .. ###### END~OF~TABLE ######
@@ -114,7 +107,7 @@ should be the image-reference in "fileadmin/" ::
            current = 1
            typolink.extTarget = _blank
            typolink.target={$cLinkTagTarget}
-           typolink.wrap = <B><FONT color=red>|</FONT></B>
+           typolink.wrap = <p style="color: red;">|</p>
            typolink.parameter.data = parameters : allParams
          }
 

@@ -95,7 +95,7 @@ number of the field.
 
 **Note:**
 
-You cannot create submenus to sectionIndex-menus. That doesn't make
+You cannot create submenus to sectionIndex-menus. That does not make
 any sense as these elements are not pages and thereby have no
 children.
 

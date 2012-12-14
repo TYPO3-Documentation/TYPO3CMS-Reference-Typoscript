@@ -42,8 +42,6 @@ Top-level objects
 
          type=99 reserved for plaintext display
 
-   Default
-
 
 .. container:: table-row
 
@@ -56,8 +54,6 @@ Top-level objects
    Description
          Resources in list (internal)
 
-   Default
-
 
 .. container:: table-row
 
@@ -69,8 +65,6 @@ Top-level objects
 
    Description
          SiteTitle (internal)
-
-   Default
 
 
 .. container:: table-row
@@ -87,8 +81,6 @@ Top-level objects
          These values are stored with cached pages which means they are also
          accessible when retrieving a cached page.
 
-   Default
-
 
 .. container:: table-row
 
@@ -103,8 +95,6 @@ Top-level objects
          may be substituted in the text throughout the pages. The substitution
          is done by parseFunc. (Option: constants=1)
 
-   Default
-
 
 .. container:: table-row
 
@@ -117,8 +107,6 @@ Top-level objects
    Description
          Here you can configure how data submitted from the front-end should be
          processed, which script and so on.
-
-   Default
 
 
 .. container:: table-row
@@ -134,8 +122,6 @@ Top-level objects
          your includescript in TYPO3.
 
          Please see the PAGE-object, which has the same property.
-
-   Default
 
 
 .. container:: table-row
@@ -156,7 +142,7 @@ Top-level objects
          \_GIFBUILDER
 
    Data type
-
+         *(whatever)*
 
    Description
          These top-level object names are reserved. That means you can risk
@@ -169,15 +155,13 @@ Top-level objects
          " **tt\_\*** ", eg tt\_content (from "content (default)") is used to
          render content from tables.
 
-         " **temp** " and " **styles** " are used for conde-libraries you can
+         " **temp** " and " **styles** " are used for code-libraries you can
          copy during parse-time, but they are not saved with the template in
-         cache.  ***"temp" / "styles" are unset*** before the templateis
+         cache.  ***"temp" / "styles" are unset*** before the template is
          cached! Therefore use these names to store temporary data.
 
          " **lib** " can be used for a "library" of code, you can reference in
          TypoScript (unlike "styles" which is unset)
-
-   Default
 
 
 .. container:: table-row
@@ -209,8 +193,6 @@ Top-level objects
          These are just recommendations. Especially the name 'page' for the
          content bearing page is very common.
 
-   Default
-
 
 .. container:: table-row
 
@@ -228,8 +210,6 @@ Top-level objects
          "tt\_..." is normally used to define the setup of content-records. Eg.
          "tt\_content" would be used for the tt\_content-table as default. See
          the "CONTENT"-cObject
-
-   Default
 
 
 .. ###### END~OF~TABLE ######

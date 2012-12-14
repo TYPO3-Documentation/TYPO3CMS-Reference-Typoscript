@@ -100,8 +100,6 @@ for the menu to make sense (use the expAll-flag).
          should set this value to "x" if you have a horizontal GMENU\_LAYERS
          and to "y" if you have a vertical menu.
 
-   Default
-
 
 .. container:: table-row
 
@@ -121,8 +119,6 @@ for the menu to make sense (use the expAll-flag).
          this feature enabled (because the absolute position of the layer is
          not known).
 
-   Default
-
 
 .. container:: table-row
 
@@ -130,14 +126,12 @@ for the menu to make sense (use the expAll-flag).
          lockPosition\_adjust
 
    Data type
-         int
+         integer
 
    Description
          A number which is added to the width/height of the menu items in order
          to compensate for e.g. hspace or other things between the images in
          the GMENU\_LAYERS
-
-   Default
 
 
 .. container:: table-row
@@ -158,8 +152,6 @@ for the menu to make sense (use the expAll-flag).
 
          If so, set this flag.
 
-   Default
-
 
 .. container:: table-row
 
@@ -167,14 +159,12 @@ for the menu to make sense (use the expAll-flag).
          xPosOffset
 
    Data type
-         int
+         integer
 
    Description
          The offset of the menu from the point where it's "activated" (if
          lockPosition is false) / from top left page corner (if lockPosition is
          set)
-
-   Default
 
 
 .. container:: table-row
@@ -183,12 +173,10 @@ for the menu to make sense (use the expAll-flag).
          yPosOffset
 
    Data type
-         int
+         integer
 
    Description
          As above, but for the y-dimension.
-
-   Default
 
 
 .. container:: table-row
@@ -197,7 +185,7 @@ for the menu to make sense (use the expAll-flag).
          topOffset
 
    Data type
-         int
+         integer
 
    Description
          The offset of menu items from top of browser. Should be set rather
@@ -206,8 +194,6 @@ for the menu to make sense (use the expAll-flag).
 
          Used with either lockPosition=x or xPosOffset defined.
 
-   Default
-
 
 .. container:: table-row
 
@@ -215,7 +201,7 @@ for the menu to make sense (use the expAll-flag).
          leftOffset
 
    Data type
-         int
+         integer
 
    Description
          The offset of menu items from left border of browser. Should be set
@@ -223,8 +209,6 @@ for the menu to make sense (use the expAll-flag).
          order to use directionLeft.
 
          Used with either lockPosition=y or yPosOffset defined.
-
-   Default
 
 
 .. container:: table-row
@@ -241,8 +225,6 @@ for the menu to make sense (use the expAll-flag).
          not just "zero". You should enable this if you wish to be able to work
          with zero offsets. This is typically the case if you use relative
          positioning.
-
-   Default
 
 
 .. container:: table-row
@@ -263,8 +245,6 @@ for the menu to make sense (use the expAll-flag).
          If you set the width of the menu-layers in .layerStyles this might
          work no matter what.
 
-   Default
-
 
 .. container:: table-row
 
@@ -278,8 +258,6 @@ for the menu to make sense (use the expAll-flag).
          Set this, if you want the items to be bottom-aligned (pop's out
          upwards instead of downwards).
 
-   Default
-
 
 .. container:: table-row
 
@@ -287,7 +265,7 @@ for the menu to make sense (use the expAll-flag).
          setFixedWidth
 
    Data type
-         int
+         integer
 
    Description
          For GMENU\_LAYERS the width and heights of the element is normally
@@ -307,8 +285,6 @@ for the menu to make sense (use the expAll-flag).
          **Notice:** Active if value is NOT a blank str. Setting this value to
          zero means that no width is calculated for the items in GMENU\_LAYERS.
 
-   Default
-
 
 .. container:: table-row
 
@@ -316,12 +292,10 @@ for the menu to make sense (use the expAll-flag).
          setFixedHeight
 
    Data type
-         int
+         integer
 
    Description
          See "setFixedWidth". Same, but for height.
-
-   Default
 
 
 .. container:: table-row
@@ -338,8 +312,6 @@ for the menu to make sense (use the expAll-flag).
 
          (Syntax: List of integers, evaluated clockwise: Left, Top, Right,
          Bottom, Left, Top)
-
-   Default
 
 
 .. container:: table-row
@@ -368,8 +340,6 @@ for the menu to make sense (use the expAll-flag).
          all elements before this element (for which you set this attribute)
          also have this attribute set!
 
-   Default
-
 
 .. container:: table-row
 
@@ -391,8 +361,6 @@ for the menu to make sense (use the expAll-flag).
          If set, the frozen element will always stay, even if the submenu is
          hidden.
 
-   Default
-
 
 .. container:: table-row
 
@@ -400,15 +368,13 @@ for the menu to make sense (use the expAll-flag).
          hideMenuWhenNotOver
 
    Data type
-         int+
+         positive integer
 
    Description
          If set (> 1) then the menu will hide it self whenever a user moves the
          cursor away from the menu. The value of this parameter determines the
          width (pixels) of the zone around the element until the mouse pointer
          is considered to be far enough away to hide the layer.
-
-   Default
 
 
 .. container:: table-row
@@ -417,13 +383,11 @@ for the menu to make sense (use the expAll-flag).
          hideMenuTimer
 
    Data type
-         int+
+         positive integer
 
    Description
          This is the number of milliseconds to wait before the submenu will
          disappear if hideMenuWhenNotOver is set.
-
-   Default
 
 
 .. container:: table-row
@@ -437,8 +401,6 @@ for the menu to make sense (use the expAll-flag).
    Description
          If set, the menu will not hide its layers when the mouse button is
          clicked. Useful if your menu items loads the pages in another frame.
-
-   Default
 
 
 .. container:: table-row
@@ -497,8 +459,6 @@ for the menu to make sense (use the expAll-flag).
 
          **.addHeight** = Adds the height of the trigger element
 
-   Default
-
 
 .. container:: table-row
 
@@ -523,8 +483,6 @@ for the menu to make sense (use the expAll-flag).
          **.addWidth** = Adds the width of the parent layer
 
          **.addHeight** = Adds the height of the parent layer
-
-   Default
 
 
 .. ###### END~OF~TABLE ######

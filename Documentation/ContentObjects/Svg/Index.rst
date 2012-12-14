@@ -78,8 +78,6 @@ do not have native SVG support, so that it also works in e.g. IE
 
             src = fileadmin/svg/tiger.svg
 
-   Default
-
 
 .. container:: table-row
 
@@ -94,8 +92,6 @@ do not have native SVG support, so that it also works in e.g. IE
 
          Will be ignored, if "src" is defined.
 
-   Default
-
 
 .. container:: table-row
 
@@ -108,8 +104,6 @@ do not have native SVG support, so that it also works in e.g. IE
    Description
          Output, if SVG output is not possible.
 
-   Default
-
 
 .. container:: table-row
 
@@ -118,11 +112,6 @@ do not have native SVG support, so that it also works in e.g. IE
 
    Data type
          ->stdWrap
-
-   Description
-
-
-   Default
 
 
 .. ###### END~OF~TABLE ######

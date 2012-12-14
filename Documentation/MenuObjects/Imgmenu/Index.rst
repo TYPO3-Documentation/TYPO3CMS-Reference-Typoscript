@@ -53,13 +53,11 @@ GIFBUILDER-objects for each item (NO, ACT, SPC... and so on).
          forceTypeValue
 
    Data type
-         int
+         integer
 
    Description
          If set, the &type parameter of the link is forced to this value
          regardless of target.
-
-   Default
 
 
 .. container:: table-row
@@ -68,7 +66,7 @@ GIFBUILDER-objects for each item (NO, ACT, SPC... and so on).
          noBlur
 
    Data type
-         Boolean
+         boolean
 
    Description
          Normally graphical links are "blurred" if the browser is MSIE.
@@ -80,8 +78,6 @@ GIFBUILDER-objects for each item (NO, ACT, SPC... and so on).
          **Note** : This option and the JavaScript for blurring have been
          removed in TYPO3 6.0.
 
-   Default
-
 
 .. container:: table-row
 
@@ -92,9 +88,7 @@ GIFBUILDER-objects for each item (NO, ACT, SPC... and so on).
          wrap
 
    Description
-
-
-   Default
+         Wraps the whole image-map.
 
 
 .. container:: table-row
@@ -104,11 +98,6 @@ GIFBUILDER-objects for each item (NO, ACT, SPC... and so on).
 
    Data type
          <img>-params
-
-   Description
-
-
-   Default
 
 
 .. container:: table-row
@@ -122,8 +111,6 @@ GIFBUILDER-objects for each item (NO, ACT, SPC... and so on).
    Description
          Main configuration of the image-map! This defines the "underlay"!
 
-   Default
-
 
 .. container:: table-row
 
@@ -135,8 +122,6 @@ GIFBUILDER-objects for each item (NO, ACT, SPC... and so on).
 
    Description
          Main offset of the GIFBUILDER-items (also called the "distribution")
-
-   Default
 
 
 .. container:: table-row
@@ -181,8 +166,6 @@ GIFBUILDER-objects for each item (NO, ACT, SPC... and so on).
          property of the text-objects in the GIFBUILDER-objects is set
          automatically, unless is already set.)
 
-   Default
-
 
 .. container:: table-row
 
@@ -194,8 +177,6 @@ GIFBUILDER-objects for each item (NO, ACT, SPC... and so on).
 
    Description
          Extra <area...>tags for the image-map
-
-   Default
 
 
 .. container:: table-row
@@ -209,8 +190,6 @@ GIFBUILDER-objects for each item (NO, ACT, SPC... and so on).
    Description
          if set, the final GIFBUILDER object configuration is output in order
          for you to debug your configuration
-
-   Default
 
 
 .. ###### END~OF~TABLE ######
