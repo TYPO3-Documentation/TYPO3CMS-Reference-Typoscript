@@ -19,21 +19,6 @@ tag can be defined with the according options.
 .. container:: table-row
 
    Property
-         Property:
-
-   Data type
-         Data type:
-
-   Description
-         Description:
-
-   Default
-         Default:
-
-
-.. container:: table-row
-
-   Property
          tableParams
 
    Data type

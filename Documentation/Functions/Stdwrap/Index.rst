@@ -60,18 +60,6 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
-         Property:
-
-   Data type
-         Data type:
-
-   Description
-         Description:
-
-
-.. container:: table-row
-
-   Property
          .. _stdwrap-get-data:
 
          Get data:

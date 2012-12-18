@@ -25,21 +25,6 @@ the gif-file. This is especially used with the IMGMENU menuobject.
 .. container:: table-row
 
    Property
-         Property:
-
-   Data type
-         Data type:
-
-   Description
-         Description:
-
-   Default
-         Default:
-
-
-.. container:: table-row
-
-   Property
          url
 
    Data type

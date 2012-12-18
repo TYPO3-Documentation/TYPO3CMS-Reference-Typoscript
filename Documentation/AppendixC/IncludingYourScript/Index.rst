@@ -134,21 +134,6 @@ writing: $GLOBALS['TSFE']->id
 .. container:: table-row
 
    Var
-         Var:
-
-   PHP-Type
-         PHP-Type:
-
-   Description
-         Description:
-
-   Default
-         Default:
-
-
-.. container:: table-row
-
-   Var
          id
 
    PHP-Type
@@ -274,21 +259,6 @@ Global vars
 """""""""""
 
 .. ### BEGIN~OF~TABLE ###
-
-.. container:: table-row
-
-   Var
-         Var:
-
-   PHP-Type
-         PHP-Type:
-
-   Description
-         Description:
-
-   Default
-         Default:
-
 
 .. container:: table-row
 

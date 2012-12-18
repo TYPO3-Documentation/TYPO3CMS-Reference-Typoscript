@@ -21,18 +21,6 @@ rootlevel of the object. This is non-standard! Check the examples.
 .. container:: table-row
 
    Property
-         Property:
-
-   Data type
-         Data type:
-
-   Description
-         Description:
-
-
-.. container:: table-row
-
-   Property
          value
 
    Data type
@@ -79,8 +67,6 @@ The above example gets the header of the current page (which is
 stored in the database field "title"). The header is then wrapped in
 <strong> tags, before it is returned.
 
-
-::
 
 Now let us have a look at an extract from a more complex example::
 

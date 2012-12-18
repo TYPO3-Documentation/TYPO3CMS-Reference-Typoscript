@@ -16,18 +16,6 @@
 .. container:: table-row
 
    Property
-         Property:
-
-   Data type
-         Data type:
-
-   Description
-         Description:
-
-
-.. container:: table-row
-
-   Property
          1,2,3,4...
 
    Data type

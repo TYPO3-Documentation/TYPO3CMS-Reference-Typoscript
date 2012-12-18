@@ -21,21 +21,6 @@ of actions and thus allows multiple replacements at once.
 .. container:: table-row
 
    Property
-         Property:
-
-   Data type
-         Data type:
-
-   Description
-         Description:
-
-   Default
-         Default:
-
-
-.. container:: table-row
-
-   Property
          search
 
    Data type

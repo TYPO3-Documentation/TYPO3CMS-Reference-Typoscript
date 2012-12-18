@@ -25,15 +25,6 @@ Files:
 .. container:: table-row
 
    File
-         File:
-
-   Description
-         Description:
-
-
-.. container:: table-row
-
-   File
          tipafriendLib.inc
 
    Description
@@ -75,21 +66,6 @@ tipafriendLib.inc properties
 """"""""""""""""""""""""""""
 
 .. ### BEGIN~OF~TABLE ###
-
-.. container:: table-row
-
-   Property
-         Property:
-
-   Data type
-         Data type:
-
-   Description
-         Description:
-
-   Default
-         Default:
-
 
 .. container:: table-row
 

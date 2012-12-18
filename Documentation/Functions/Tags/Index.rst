@@ -20,18 +20,6 @@ is used in conjunction with *parseFunc*.
 .. container:: table-row
 
    Property
-         Property:
-
-   Data type
-         Data type:
-
-   Description
-         Description:
-
-
-.. container:: table-row
-
-   Property
          *(array of strings)*
 
    Data type

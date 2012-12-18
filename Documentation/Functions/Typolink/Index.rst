@@ -21,21 +21,6 @@ with the link-parameters (lowercased)!
 .. container:: table-row
 
    Property
-         Property:
-
-   Data type
-         Data type:
-
-   Description
-         Description:
-
-   Default
-         Default:
-
-
-.. container:: table-row
-
-   Property
          extTarget
 
    Data type

@@ -28,21 +28,6 @@ for that function. Consult the PHP manual, if unsure.
 .. container:: table-row
 
    Property
-         Property:
-
-   Data type
-         Data type:
-
-   Description
-         Description:
-
-   Default
-         Default:
-
-
-.. container:: table-row
-
-   Property
          decimals
 
    Data type

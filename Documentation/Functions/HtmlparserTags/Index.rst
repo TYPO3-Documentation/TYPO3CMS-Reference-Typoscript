@@ -17,18 +17,6 @@ HTMLparser\_tags
 .. container:: table-row
 
    Property
-         Property:
-
-   Data type
-         Data type:
-
-   Description
-         Description:
-
-
-.. container:: table-row
-
-   Property
          overrideAttribs
 
    Data type

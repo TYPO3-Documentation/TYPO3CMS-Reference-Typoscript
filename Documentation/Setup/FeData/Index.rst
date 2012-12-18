@@ -19,15 +19,6 @@ been removed in TYPO3 6.0.
 .. container:: table-row
 
    Property
-         Property:
-
-   Data type
-         Data type:
-
-
-.. container:: table-row
-
-   Property
          *(array of table names)*
 
    Data type

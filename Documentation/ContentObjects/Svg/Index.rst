@@ -21,21 +21,6 @@ do not have native SVG support, so that it also works in e.g. IE
 .. container:: table-row
 
    Property
-         Property:
-
-   Data type
-         Data type:
-
-   Description
-         Description:
-
-   Default
-         Default:
-
-
-.. container:: table-row
-
-   Property
          width
 
    Data type

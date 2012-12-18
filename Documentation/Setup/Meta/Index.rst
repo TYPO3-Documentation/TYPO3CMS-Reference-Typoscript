@@ -17,18 +17,6 @@
 .. container:: table-row
 
    Property
-         Property:
-
-   Data type
-         Data type:
-
-   Description
-         Description:
-
-
-.. container:: table-row
-
-   Property
          *(array of key names)*
 
    Data type

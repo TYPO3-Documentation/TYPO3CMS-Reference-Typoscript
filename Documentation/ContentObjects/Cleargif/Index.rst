@@ -18,21 +18,6 @@ Inserts a transparent gif-file.
 .. container:: table-row
 
    Property
-         Property:
-
-   Data type
-         Data type:
-
-   Description
-         Description:
-
-   Default
-         Default:
-
-
-.. container:: table-row
-
-   Property
          height
 
    Data type

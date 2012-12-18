@@ -22,21 +22,6 @@ the records selected which has a higher value than the current.
 .. container:: table-row
 
    Property
-         Property:
-
-   Data type
-         Data type:
-
-   Description
-         Description:
-
-   Default
-         Default:
-
-
-.. container:: table-row
-
-   Property
          select
 
    Data type

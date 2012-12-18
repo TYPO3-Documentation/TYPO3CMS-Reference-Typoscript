@@ -20,21 +20,6 @@ GIFBUILDER objects for each item (NO, ACT, SPC... and so on).
 .. container:: table-row
 
    Property
-         Property:
-
-   Data type
-         Data type:
-
-   Description
-         Description:
-
-   Default
-         Default:
-
-
-.. container:: table-row
-
-   Property
          target
 
    Data type

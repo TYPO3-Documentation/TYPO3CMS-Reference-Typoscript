@@ -18,21 +18,6 @@ Adds parameters to an HTML tag.
 .. container:: table-row
 
    Property
-         Property:
-
-   Data type
-         Data type:
-
-   Description
-         Description:
-
-   Default
-         Default:
-
-
-.. container:: table-row
-
-   Property
          \_offset
 
    Data type

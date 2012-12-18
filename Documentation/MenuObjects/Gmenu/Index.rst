@@ -19,21 +19,6 @@ graphical navigation, where each link is a separate gif-file.
 .. container:: table-row
 
    Property
-         Property:
-
-   Data type
-         Data type:
-
-   Description
-         Description:
-
-   Default
-         Default:
-
-
-.. container:: table-row
-
-   Property
          RO
 
    Data type
@@ -383,21 +368,6 @@ situation like this. However this is how it irreversibly is and has
 been for a long time.
 
 .. ### BEGIN~OF~TABLE ###
-
-.. container:: table-row
-
-   Property
-         Property:
-
-   Data type
-         Data type:
-
-   Description
-         Description:
-
-   Default
-         Default:
-
 
 .. container:: table-row
 

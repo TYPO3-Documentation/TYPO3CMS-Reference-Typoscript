@@ -19,21 +19,6 @@ been removed in TYPO3 6.0.
 .. container:: table-row
 
    Property
-         Property:
-
-   Data type
-         Data type:
-
-   Description
-         Description:
-
-   Default
-         Default:
-
-
-.. container:: table-row
-
-   Property
          default.[field]
 
    Data type

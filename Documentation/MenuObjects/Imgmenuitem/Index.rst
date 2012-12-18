@@ -16,21 +16,6 @@ IMGMENUITEM
 .. container:: table-row
 
    Property
-         Property:
-
-   Data type
-         Data type:
-
-   Description
-         Description:
-
-   Default
-         Default:
-
-
-.. container:: table-row
-
-   Property
          1,2,3,4...
 
    Data type

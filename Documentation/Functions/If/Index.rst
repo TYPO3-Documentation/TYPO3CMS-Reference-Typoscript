@@ -26,21 +26,6 @@ Also check the explanations and the examples further below!
 .. container:: table-row
 
    Property
-         Property:
-
-   Data type
-         Data type:
-
-   Description
-         Description:
-
-   Default
-         Default:
-
-
-.. container:: table-row
-
-   Property
          directReturn
 
    Data type

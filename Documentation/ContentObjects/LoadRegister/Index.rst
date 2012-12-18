@@ -22,21 +22,6 @@ register can change during the page-rendering.
 .. container:: table-row
 
    Property
-         Property:
-
-   Data type
-         Data type:
-
-   Description
-         Description:
-
-   Default
-         Default:
-
-
-.. container:: table-row
-
-   Property
          *(array of field names)*
 
    Data type

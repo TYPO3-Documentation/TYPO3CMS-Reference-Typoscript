@@ -16,18 +16,6 @@ HTMLparser
 .. container:: table-row
 
    Property
-         Property:
-
-   Data type
-         Data type:
-
-   Description
-         Description:
-
-
-.. container:: table-row
-
-   Property
          allowTags
 
    Data type

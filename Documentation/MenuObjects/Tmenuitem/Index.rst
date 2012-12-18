@@ -20,21 +20,6 @@ the current page record, use stdWrap.data = page : [field name].
 .. container:: table-row
 
    Property
-         Property:
-
-   Data type
-         Data type:
-
-   Description
-         Description:
-
-   Default
-         Default:
-
-
-.. container:: table-row
-
-   Property
          allWrap
 
    Data type

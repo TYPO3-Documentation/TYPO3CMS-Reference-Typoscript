@@ -35,21 +35,6 @@ http://www9.ewebcity.com/skripts/foldoutmenu\_move.htm
 .. container:: table-row
 
    Property
-         Property:
-
-   Data type
-         Data type:
-
-   Description
-         Description:
-
-   Default
-         Default:
-
-
-.. container:: table-row
-
-   Property
          dontLinkIfSubmenu
 
    Data type

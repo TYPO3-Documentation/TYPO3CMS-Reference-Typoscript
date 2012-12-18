@@ -39,21 +39,6 @@ Most of this code is executed in the PHP-script
 .. container:: table-row
 
    Property
-         Property:
-
-   Data type
-         Data type:
-
-   Description
-         Description:
-
-   Default
-         Default:
-
-
-.. container:: table-row
-
-   Property
          typeNum
 
    Data type

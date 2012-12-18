@@ -19,21 +19,6 @@ That means they are not used by for instance the JSMENU.
 .. container:: table-row
 
    Property
-         Property:
-
-   Data type
-         Data type:
-
-   Description
-         Description:
-
-   Default
-         Default:
-
-
-.. container:: table-row
-
-   Property
          NO
 
    Data type

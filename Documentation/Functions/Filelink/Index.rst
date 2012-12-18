@@ -20,21 +20,6 @@ icon, size and file are rendered in the listed order.
 .. container:: table-row
 
    Property
-         Property:
-
-   Data type
-         Data type:
-
-   Description
-         Description:
-
-   Default
-         Default:
-
-
-.. container:: table-row
-
-   Property
          path
 
    Data type

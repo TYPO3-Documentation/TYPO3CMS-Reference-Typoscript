@@ -23,18 +23,6 @@ been removed in TYPO3 6.0. Use the content object "TEXT" instead!
 .. container:: table-row
 
    Property
-         Property:
-
-   Data type
-         Data type:
-
-   Description
-         Description:
-
-
-.. container:: table-row
-
-   Property
          value
 
    Data type

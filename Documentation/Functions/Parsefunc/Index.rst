@@ -20,21 +20,6 @@ tags, the "makeLinks"-things and so on...
 .. container:: table-row
 
    Property
-         Property:
-
-   Data type
-         Data type:
-
-   Description
-         Description:
-
-   Default
-         Default:
-
-
-.. container:: table-row
-
-   Property
          externalBlocks
 
    Data type

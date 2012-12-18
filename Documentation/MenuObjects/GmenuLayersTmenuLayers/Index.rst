@@ -51,21 +51,6 @@ for the menu to make sense (use the expAll-flag).
 .. container:: table-row
 
    Property
-         Property:
-
-   Data type
-         Data type:
-
-   Description
-         Description:
-
-   Default
-         Default:
-
-
-.. container:: table-row
-
-   Property
          layerStyle
 
    Data type

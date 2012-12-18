@@ -27,21 +27,6 @@ of the returning image (if any) and contains width, height and so on.
 .. container:: table-row
 
    Property
-         Property:
-
-   Data type
-         Data type:
-
-   Description
-         Description:
-
-   Default
-         Default:
-
-
-.. container:: table-row
-
-   Property
          file
 
    Data type

@@ -19,21 +19,6 @@ Generates hierarchical menus.
 .. container:: table-row
 
    Property
-         Property:
-
-   Data type
-         Data type:
-
-   Description
-         Description:
-
-   Default
-         Default:
-
-
-.. container:: table-row
-
-   Property
          .. _hmenu-number:
 
          (1 / 2 / 3 /...)
@@ -428,22 +413,6 @@ Mount pages are supported.
 .. container:: table-row
 
    Property
-
-         Property:
-
-   Data type
-         Data type:
-
-   Description
-         Description:
-
-   Default
-         Default:
-
-
-.. container:: table-row
-
-   Property
          .. _hmenu-special-directory-value:
 
          value
@@ -478,21 +447,6 @@ pages you define in the property ".value".
 Mount pages are supported.
 
 .. ### BEGIN~OF~TABLE ###
-
-.. container:: table-row
-
-   Property
-         Property:
-
-   Data type
-         Data type:
-
-   Description
-         Description:
-
-   Default
-         Default:
-
 
 .. container:: table-row
 
@@ -540,21 +494,6 @@ see later) will override that.
 Mount pages are supported.
 
 .. ### BEGIN~OF~TABLE ###
-
-.. container:: table-row
-
-   Property
-         Property:
-
-   Data type
-         Data type:
-
-   Description
-         Description:
-
-   Default
-         Default:
-
 
 .. container:: table-row
 
@@ -768,21 +707,6 @@ Mount pages are supported.
 .. container:: table-row
 
    Property
-         Property:
-
-   Data type
-         Data type:
-
-   Description
-         Description:
-
-   Default
-         Default:
-
-
-.. container:: table-row
-
-   Property
          .. _hmenu-special-rootline-range:
 
          range
@@ -903,21 +827,6 @@ table of contents and so on. The menu is built of items given by a
 list from the property ".items".
 
 .. ### BEGIN~OF~TABLE ###
-
-.. container:: table-row
-
-   Property
-         Property:
-
-   Data type
-         Data type:
-
-   Description
-         Description:
-
-   Default
-         Default:
-
 
 .. container:: table-row
 
@@ -1099,21 +1008,6 @@ menu object (e.g. for a GMENU, see later) will override that.
 Mount pages are supported.
 
 .. ### BEGIN~OF~TABLE ###
-
-.. container:: table-row
-
-   Property
-         Property:
-
-   Data type
-         Data type:
-
-   Description
-         Description:
-
-   Default
-         Default:
-
 
 .. container:: table-row
 
@@ -1347,21 +1241,6 @@ error if tried accessed (depending on site configuration).
 .. container:: table-row
 
    Property
-         Property:
-
-   Data type
-         Data type:
-
-   Description
-         Description:
-
-   Default
-         Default:
-
-
-.. container:: table-row
-
-   Property
          .. _hmenu-special-language-value:
 
          value
@@ -1440,21 +1319,6 @@ menu items.
 4.6. Use the special type "userfunction" instead.
 
 .. ### BEGIN~OF~TABLE ###
-
-.. container:: table-row
-
-   Property
-         Property:
-
-   Data type
-         Data type:
-
-   Description
-         Description:
-
-   Default
-         Default:
-
 
 .. container:: table-row
 
@@ -1557,21 +1421,6 @@ Calls a user function/method in class which should (similar to how
 menu.
 
 .. ### BEGIN~OF~TABLE ###
-
-.. container:: table-row
-
-   Property
-         Property:
-
-   Data type
-         Data type:
-
-   Description
-         Description:
-
-   Default
-         Default:
-
 
 .. container:: table-row
 
