@@ -34,7 +34,7 @@ plugin because they describe the features of the markers and subparts
 and present an example to learn from. Therefore the example templates
 may be changed e.g. when new features come along.
 
-You should therefore  *not* rely on using the default templates unless
+You should therefore *not* rely on using the default templates unless
 you'll accept the fact that they may change in the future! So make a
 copy, modify it for your own purpose if needed and set up the
 TypoScript of the plugin to use your own template file!

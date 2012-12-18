@@ -162,7 +162,7 @@ tag can be defined with the according options.
          cObject
 
    Description
-         This is the content-object for each column.
+         This is the content object for each column.
 
 
 .. container:: table-row

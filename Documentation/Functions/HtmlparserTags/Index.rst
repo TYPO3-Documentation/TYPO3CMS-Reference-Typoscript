@@ -53,10 +53,10 @@ HTMLparser\_tags
 
          **0** (zero): No attributes allowed.
 
-         **(comma-separated list of attributes)**: Only attributes in this
+         **(comma-separated list of attributes):** Only attributes in this
          list are allowed.
 
-         **(blank/not set)**: All attributes are allowed.
+         **(blank/not set):** All attributes are allowed.
 
 
 .. container:: table-row

@@ -193,10 +193,11 @@ site-specific.
          wrap
 
    Description
-         If this value is set, the wrapping with a font-tag based on font,size
-         and color is NOT done. Rather the element is wrapped with this value.
+         If this value is set, the wrapping with a font-tag based on font, size
+         and color is **not** done. Rather the element is wrapped with this
+         value.
 
-         Use it to assign a stylesheet by setting this value to eg.
+         Use it to assign a stylesheet by setting this value to e.g.
 
          <div class="text"> \| </div>
 

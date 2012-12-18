@@ -80,10 +80,10 @@ TMENU
          Normally links are "blurred" if the browser is MSIE. Blurring removes
          the ugly box around a clicked link.
 
-         If this property is set, the link is NOT blurred (browser-default)
+         If this property is set, the link is **not** blurred (browser-default)
          with "onFocus".
 
-         **Note** : This option and the JavaScript for blurring have been
+         **Note:** This option and the JavaScript for blurring have been
          removed in TYPO3 6.0.
 
 
@@ -171,7 +171,7 @@ TMENU
          This is the TMENUITEM-options for each category of menu item that can
          be generated.
 
-         **SPECIAL:**
+         **Special:**
 
          The ->OptionSplit function is run on the whole configuration before
          the items are generated.

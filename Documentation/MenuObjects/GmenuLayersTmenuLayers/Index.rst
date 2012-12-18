@@ -13,11 +13,11 @@ GMENU\_LAYERS / TMENU\_LAYERS
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 GMENU\_LAYERS / TMENU\_LAYERS works as an extension to GMENU/TMENU,
-which means the these properties underneath is additional properties
+which means that the properties underneath are additional properties
 to the ones above.
 
 The purpose of xMENU\_LAYERS is to create 2-level (or more!) menus
-where the 2nd+ level is shown on a DHTML-layer. Most features works
+where the 2nd+ level is shown on a DHTML-layer. Most features work
 with modern browsers including Netscape, Microsoft Internet Explorer,
 Mozilla, Konqueror and Opera. You can cascade the menus as you like.
 
@@ -111,7 +111,7 @@ for the menu to make sense (use the expAll-flag).
 
    Description
          If set and lockPosition is blank (so that the menu layer follows the
-         mouse) then the menu will NOT follow the mouse but still it will
+         mouse) then the menu will **not** follow the mouse but still it will
          appear where the mouse cursor hit the trigger-element. Useful if you
          don't know the exact positions of elements.
 
@@ -282,8 +282,9 @@ for the menu to make sense (use the expAll-flag).
          Then you need only specify either an x or y coordinate to follow and
          the item will appear where the mouse hits the element.
 
-         **Notice:** Active if value is NOT a blank str. Setting this value to
-         zero means that no width is calculated for the items in GMENU\_LAYERS.
+         **Note:** Active if value is **not** a blank string. Setting this value
+         to zero means that no width is calculated for the items in
+         GMENU\_LAYERS.
 
 
 .. container:: table-row
@@ -455,9 +456,9 @@ for the menu to make sense (use the expAll-flag).
 
          **Additional Properties:**
 
-         **.addWidth** = Adds the width of the trigger element
+         **.addWidth:** Adds the width of the trigger element.
 
-         **.addHeight** = Adds the height of the trigger element
+         **.addHeight:** Adds the height of the trigger element.
 
 
 .. container:: table-row
@@ -480,9 +481,9 @@ for the menu to make sense (use the expAll-flag).
 
          **Additional Properties:**
 
-         **.addWidth** = Adds the width of the parent layer
+         **.addWidth:** Adds the width of the parent layer.
 
-         **.addHeight** = Adds the height of the parent layer
+         **.addHeight:** Adds the height of the parent layer.
 
 
 .. ###### END~OF~TABLE ######
@@ -500,7 +501,7 @@ Example:
    page.10 = HMENU
    page.10.1 = GMENU_LAYERS
    page.10.1 {
-     layerStyle = position: absolute; VISIBILITY: hidden;
+     layerStyle = position: absolute; visibility: hidden;
      xPosOffset = -30
      lockPosition = x
      expAll=1

@@ -42,7 +42,7 @@ This element inserts a QuickTime Player.
    Description
          Media file or URL.
 
-         **No**  **te:** Files are treated as URLs. You need to set fully
+         **Note:** Files are treated as URLs. You need to set fully
          qualified URLs. Use config.baseURL and/or config.absRefPrefix to get
          fully qualified URLs automatically.
 
@@ -56,7 +56,7 @@ This element inserts a QuickTime Player.
          integer
 
    Description
-         Width of QTOBJECT.
+         Width of the QTOBJECT.
 
          If it is not set, it will be filled with defaultWidth of the player
          configuration.
@@ -71,7 +71,7 @@ This element inserts a QuickTime Player.
          integer
 
    Description
-         Width of QTOBJECT.
+         Height of the QTOBJECT.
 
          If it is not set, it will be filled with defaultHeight of the player
          configuration.
@@ -101,7 +101,7 @@ This element inserts a QuickTime Player.
          stdWrap
 
    Description
-         HTML Template for the Object. ###QTOBJECT### is replaced with the
+         HTML Template for the object. ###QTOBJECT### is replaced with the
          qtobject, ###ID### is replaced with the unique Id of the div/object.
 
    Default

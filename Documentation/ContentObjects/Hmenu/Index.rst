@@ -150,7 +150,7 @@ Generates hierarchical menus.
          this level, a dummy-page with the title "..." and
          uid=[currentpage\_id] is inserted.
 
-         **Notice:** Affects all sub menus as well. To set the value for each
+         **Note:** Affects all sub menus as well. To set the value for each
          menu level individually, set the properties in the menu objects (see
          "Common properties" table).
 
@@ -170,7 +170,8 @@ Generates hierarchical menus.
    Description
          The maximum items in the menu. More items will be ignored.
 
-         **Notice:** Affects all sub menus as well. (See "minItems" for notice)
+         **Note:** Affects all sub menus as well. (See "minItems" for a
+         notice.)
 
 
 .. container:: table-row
@@ -195,13 +196,14 @@ Generates hierarchical menus.
 
             begin = 3
 
-         **Notice:** Affects all sub menus as well. (See "minItems" for notice)
+         **Note:** Affects all sub menus as well. (See "minItems" for a
+         notice.)
 
 
 .. container:: table-row
 
    Property
-         .. _hmenu-ecludeuidlist:
+         .. _hmenu-excludeuidlist:
 
          excludeUidList
 
@@ -215,7 +217,7 @@ Generates hierarchical menus.
 
          **Example:**
 
-         The pages with these uid-numbers will NOT be within the menu!
+         The pages with these uid-numbers will **not** be within the menu!
          Additionally the current page is always excluded too. ::
 
             excludeUidList = 34,2,current
@@ -319,7 +321,7 @@ Generates hierarchical menus.
    Description
          *see typolink.addQueryString*
 
-         **Notice:** This works only for  *special=language* .
+         **Note:** This works only for *special=language*.
 
 
 .. container:: table-row
@@ -590,18 +592,18 @@ Mount pages are supported.
 
          The following values are possible:
 
-         **- SYS\_LASTCHANGED** : Is updated to the youngest tstamp of the
+         **SYS\_LASTCHANGED:** Is updated to the youngest tstamp of the
          records on the page when a page is generated.
 
-         **- crdate:** Uses the "crdate"-field of the pagerecord.
+         **crdate:** Uses the "crdate"-field of the pagerecord.
 
-         **- tstamp:** Uses the "tstamp"-field of the pagerecord, which is set
+         **tstamp:** Uses the "tstamp"-field of the pagerecord, which is set
          automatically when the record is changed.
 
-         \- **manual** or  **lastUpdated:** Use the field "lastUpdated", which
+         **manual** or **lastUpdated:** Uses the field "lastUpdated", which
          can be set manually in the page-record.
 
-         **- starttime:** Uses the starttime field.
+         **starttime:** Uses the starttime field.
 
          Fields with empty values are generally not selected.
 
@@ -627,7 +629,7 @@ Mount pages are supported.
          A depth of 1 means only the start id, depth of 2 means start-id +
          first level.
 
-         **Notice** : "depth" is relative to "beginAtLevel".
+         **Note:** "depth" is relative to "beginAtLevel".
 
    Default
          20
@@ -653,7 +655,7 @@ Mount pages are supported.
 
          2 starts with the second row of subpages.
 
-         **Notice:** "depth" is relative to this property.
+         **Note:** "depth" is relative to this property.
 
    Default
          0
@@ -754,7 +756,7 @@ their hierarchical order.
 An HMENU with the property special = rootline creates a rootline menu
 (also known as "breadcrumb trail") that could look like this:
 
-Page level 1 > Page level 2 > Page level 3 >  *Current page*
+Page level 1 > Page level 2 > Page level 3 > *Current page*
 
 Such a click path facilitates the user's orientation on the website
 and makes navigation to a certain page level easier.
@@ -954,7 +956,7 @@ list from the property ".items".
 
          *Reserved item names:*
 
-         **next** /  **prev** : Links to the next page / the previous page.
+         **next** / **prev:** Links to the next page / the previous page.
          Next and previous pages are from the same "pid" as the current page id
          (or "value") - that is the next item in a menu with the current page.
          Also referred to as current level.
@@ -963,7 +965,7 @@ list from the property ".items".
          page of the next section / to the last page of the previous section,
          too.
 
-         **nextsection** /  **prevsection** : Links to the next section / the
+         **nextsection** / **prevsection:** Links to the next section / the
          previous section. A section is defined as the subpages of a page on
          the same level as the parent (pid) page of the current page. Will not
          work if the parent page of the current page is the root page of the
@@ -972,32 +974,32 @@ list from the property ".items".
          .. figure:: ../../Images/ContentObjectsHmenuSpecialBrowse.png
             :alt: Example for the usage of the property "items".
 
-         **nextsection\_last** / **prevsection\_last** : Where
+         **nextsection\_last** / **prevsection\_last:** Where
          nextsection/prevsection links to the first page in a section, these
-         link to the last pages. If there is only one page in thesection that
+         link to the last pages. If there is only one page in the section that
          will be both first and last.Will not work if the parent page of the
          current page is the root page of the site.
 
-         **first** / **last** : First / last page on the current level. If
-         there isonly one page on the current level that page will be both
+         **first** / **last:** First / last page on the current level. If
+         there is only one page on the current level that page will be both
          first and last.
 
-         **up** : Links to the parent (pid) page of the current page (up 1
+         **up:** Links to the parent (pid) page of the current page (up 1
          level). Will always be available.
 
-         **index** : Links to the parent of the parent pageof the current
+         **index:** Links to the parent of the parent pageof the current
          page(up 2 levels). May not be available, if that page is out of the
          rootline.
 
          **Examples:**
 
-         If id=20 is the current page then:
+         If id = 20 is the current page then:
 
-         21= prev and first, 19 = next, 18 = last, 17 = up, 1=index, 10 =
+         21 = prev and first, 19 = next, 18 = last, 17 = up, 1 = index, 10 =
          nextsection, 11 = nextsection\_last
 
-         prevsection and prevsection\_last is not present because id=3 has no
-         subpages!
+         prevsection and prevsection\_last are not present because id = 3 has
+         no subpages!
 
          **TypoScript (only "browse"-part, needs also TMENU/GMENU):** ::
 
@@ -1070,11 +1072,11 @@ list from the property ".items".
    Description
          Override field "field name" in pagerecord.
 
-         **Example:**
-
-         This gives the link to the previous page the linktext "« zurück". ::
+         **Example:** ::
 
             prev.fields.title = « zurück
+
+         This gives the link to the previous page the linktext "« zurück".
 
 
 .. ###### END~OF~TABLE ######
@@ -1156,18 +1158,18 @@ Mount pages are supported.
 
          Possible values are:
 
-         **- SYS\_LASTCHANGED:** Is updated to the youngest tstamp of the
+         **SYS\_LASTCHANGED:** Is updated to the youngest tstamp of the
          records on the page when a page is generated.
 
-         **- manual** or  **lastUpdated:** Use the field "lastUpdated", which
+         **manual** or **lastUpdated:** Uses the field "lastUpdated", which
          can be set manually in the page-record.
 
-         **- tstamp:** Uses the "tstamp"-field of the pagerecord, which is set
+         **tstamp:** Uses the "tstamp"-field of the pagerecord, which is set
          automatically when the record is changed.
 
-         **- crdate:** Uses the "crdate"-field of the pagerecord.
+         **crdate:** Uses the "crdate"-field of the pagerecord.
 
-         **- starttime:** Uses the starttime field.
+         **starttime:** Uses the starttime field.
 
    Default
          SYS\_LASTCHANGED
@@ -1299,8 +1301,8 @@ Mount pages are supported.
    Description
          Defines the field from the current page from which to take the
          keywords being matched. The default is "keyword". (Notice that
-         ".keywordsField" is only setting the page-record field to  *search in*
-         !)
+         ".keywordsField" is only setting the page-record field to *search
+         in*!)
 
    Default
          keywords
@@ -1465,7 +1467,7 @@ menu items.
          resource
 
    Description
-         Filename of the php file to include.
+         Filename of the PHP file to include.
 
 
 .. container:: table-row
@@ -1509,7 +1511,7 @@ selected (SELECT \* FROM...)
 If you create fake page rows, make sure to add at least "title" and
 "uid" field values.
 
-Notice:
+Note:
 
 If you work with mount-points you can set the MP param which should be
 set for the page by setting the internal field "\_MP\_PARAM" in the
@@ -1518,14 +1520,14 @@ page-record (xxx-xxx).
 Overriding URLs:
 
 You can also use the internal field "\_OVERRIDE\_HREF" to set a custom
-href-value (eg. "http://www.typo3.org") which will in any case be used
+href-value (e.g. "http://www.typo3.org") which will in any case be used
 rather than a link to the page that the page otherwise might
 represent. If you use "\_OVERRIDE\_HREF" then "\_OVERRIDE\_TARGET" can
 be used to override the target value as well (See example below).
 
 Other reserved keys:
 
-"\_ADD\_GETVARS" can be used to add get parameters to the URL, eg.
+"\_ADD\_GETVARS" can be used to add get parameters to the URL, e.g.
 "&L=xxx".
 
 "\_SAFE" can be used to protect the element to make sure it is not
@@ -1671,7 +1673,7 @@ The menu looks like this on a web page:
    :alt: Output of the example menu.
 
 The TypoScript code above generates this menu, but the items do not
-link straight to pages as usual. This is because the  *whole* menu is
+link straight to pages as usual. This is because the *whole* menu is
 generated from this array, which was returned from the function
 "menuMenuArray" called in TypoScript line 4+5 ::
 
@@ -1719,7 +1721,7 @@ generated from this array, which was returned from the function
      42:         );
      43:     }
 
-Notice how the array contains "fake" page-records which has  *no* uid
+Notice how the array contains "fake" page-records which has *no* uid
 field, only a "title" and "\_OVERRIDE\_HREF" as required and some
 other fields as it fits.
 

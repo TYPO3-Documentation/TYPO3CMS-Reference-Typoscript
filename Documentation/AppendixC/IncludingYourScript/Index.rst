@@ -62,10 +62,10 @@ if the content you create may not be cached.
 
 **Note:** If you make a syntax error in your script that keeps PHP
 from executing it, then the $GLOBALS['TSFE']->set\_no\_cache()
-function is not executed and the page  *is* cached! So in these
+function is not executed and the page *is* cached! So in these
 situations, correct the error, clear the page-cache and try again.
 This is true only for PHP\_SCRIPT and not for PHP\_SCRIPT\_INT and
-PHP\_SCRIPT\_EXT which are rendered  *after* the cached page!
+PHP\_SCRIPT\_EXT which are rendered *after* the cached page!
 
 
 Example:
@@ -81,7 +81,7 @@ Example:
 $this->cObjGetSingle( value , properties )
 """"""""""""""""""""""""""""""""""""""""""
 
-Gets a content-object from the $conf-array. (See the section below
+Gets a content object from the $conf-array. (See the section below
 named "Case story" on how to use this!)
 
 

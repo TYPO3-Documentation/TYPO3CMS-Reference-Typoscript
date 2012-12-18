@@ -50,7 +50,7 @@ constants, you can maintain it easily.
 
             constants.EMAIL = email@email.com
 
-         If now parseFunc somewhere is configured with .constants=1, then all
+         If now parseFunc somewhere is configured with .constants = 1, then all
          occurrences of the string ###EMAIL### in the text will be substituted
          with the actual address.
 

@@ -97,7 +97,7 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          Same as above, but "&L=[L-value]" will only be added if the current
          value is 1, 2 or 3.
 
-         **Note** : Do  **not** include the "type" parameter in the linkVars
+         **Note:** Do **not** include the "type" parameter in the linkVars
          list, as this can result in unexpected behavior.
 
 
@@ -192,7 +192,7 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    Description
          Charset used for the internal rendering of the page content. It is
          highly recommended that this value is the same as the charset of the
-         content coming from the main data source (eg. the database). Thus you
+         content coming from the main data source (e.g. the database). Thus you
          don't need to do any other conversion.
 
          All strings from locallang files and locale strings are (and should
@@ -208,15 +208,13 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          have to worry about renderCharset and metaCharset - the same charset
          is used in the whole system.
 
-         **Note** : In TYPO3 4.7 $TYPO3\_CONF\_VARS['BE']['forceCharset'] has
+         **Note:** In TYPO3 4.7 $TYPO3\_CONF\_VARS['BE']['forceCharset'] has
          been removed. Since this version TYPO3 internally always uses UTF-8 by
          default.
 
    Default
-         Until TYPO3 4.7: The value of $TYPO3\_CONF\_VARS['BE']['forceCharset']
-         if set, otherwise
-
-         "iso-8859-1"
+         Until TYPO3 4.6: The value of $TYPO3\_CONF\_VARS['BE']['forceCharset']
+         if set, otherwise "iso-8859-1"
 
          Since TYPO3 4.7: "utf-8"
 
@@ -279,7 +277,7 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
 
          - page was cached
 
-         - No \*\_INT or \*\_EXT objects were on the page (eg. USER\_INT)
+         - No \*\_INT or \*\_EXT objects were on the page (e.g. USER\_INT)
 
          - No frontend user is logged in
 
@@ -414,25 +412,25 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          generated. The value can either be a complete doctype or one of the
          following keywords:
 
-         " **xhtml\_trans** " for the XHTML 1.0 Transitional doctype.
+         **xhtml\_trans** for the XHTML 1.0 Transitional doctype.
 
-         " **xhtml\_frames** " for the XHTML 1.0 Frameset doctype.
+         **xhtml\_frames** for the XHTML 1.0 Frameset doctype.
 
-         " **xhtml\_strict** " for the XHTML 1.0 Strict doctype.
+         **xhtml\_strict** for the XHTML 1.0 Strict doctype.
 
-         " **xhtml\_basic** " for the XHTML basic doctype.
+         **xhtml\_basic** for the XHTML basic doctype.
 
-         " **xhtml\_11** " for the XHTML 1.1 doctype.
+         **xhtml\_11** for the XHTML 1.1 doctype.
 
-         " **xhtml+rdfa\_10** " for the XHTML+RDFa 1.0 doctype.
+         **xhtml+rdfa\_10** for the XHTML+RDFa 1.0 doctype.
 
-         " **xhtml\_2** " for the XHTML 2 doctype.
+         **xhtml\_2** for the XHTML 2 doctype.
 
-         " **html5** " for the HTML5 doctype.
+         **html5** for the HTML5 doctype.
 
-         " **none** " for NO doctype at all.
+         **none** for *no* doctype at all.
 
-         **Note** : In TYPO3 4.4 the keyword for HTML5 was "html\_5". This
+         **Note:** In TYPO3 4.4 the keyword for HTML5 was "html\_5". This
          spelling was deprecated since TYPO3 4.5 and has been removed in TYPO3
          4.7.
 
@@ -441,13 +439,13 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          you must also set config.xhtmlDoctype(see below).
 
          See "config.htmlTag\_setParams" and "config.htmlTag\_langKey" for more
-         details on the effect on the html tag.
+         details on the effect on the HTML tag.
 
-         Default is the HTML 4 Transitional doctype:
+         Default is the HTML 4 Transitional doctype::
 
-         <!DOCTYPE html
+            <!DOCTYPE html
 
-         PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+                PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 
 
 .. container:: table-row
@@ -501,30 +499,30 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          If config.doctype is set to a string then config.xhtmlDoctype must be
          set to one of these keywords:
 
-         " **xhtml\_trans** " for XHTML 1.0 Transitional doctype.
+         **xhtml\_trans** for XHTML 1.0 Transitional doctype.
 
-         " **xhtml\_frames** " for XHTML 1.0 Frameset doctype.
+         **xhtml\_frames** for XHTML 1.0 Frameset doctype.
 
-         " **xhtml\_strict** " for XHTML 1.0 Strict doctype.
+         **xhtml\_strict** for XHTML 1.0 Strict doctype.
 
-         " **xhtml\_basic** " for XHTML basic doctype.
+         **xhtml\_basic** for XHTML basic doctype.
 
-         " **xhtml\_11** " for XHTML 1.1 doctype.
+         **xhtml\_11** for XHTML 1.1 doctype.
 
-         " **xhtml\_2** " for XHTML 2 doctype.
+         **xhtml\_2** for XHTML 2 doctype.
 
          This is an example to use MathML 2.0 in an XHTML 1.1 document::
 
             config.doctype (
-            <!DOCTYPE html
-            PUBLIC "-//W3C//DTD XHTML 1.1 plus MathML 2.0//EN"
-            "http://www.w3.org/Math/DTD/mathml2/xhtml-math11-f.dtd">
+              <!DOCTYPE html
+                  PUBLIC "-//W3C//DTD XHTML 1.1 plus MathML 2.0//EN"
+                  "http://www.w3.org/Math/DTD/mathml2/xhtml-math11-f.dtd">
             )
             config.xhtmlDoctype = xhtml_11
 
-         Default:
+   Default:
 
-         same as config.doctype if set to a keyword
+         *(same as config.doctype if set to a keyword)*
 
 
 .. container:: table-row
@@ -537,18 +535,18 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
 
    Description
          If empty (not set) then the default XML 1.0 prologue is set, when the
-         doctype is set to a known keyword (eg xhtml\_11)::
+         doctype is set to a known keyword (e.g. xhtml\_11)::
 
             <?xml version="1.0" encoding="[config.renderCharset]">
 
-         If set to one of the know keywords then a standard prologue will be
-         set:
+         If set to one of the following keywords then a standard prologue will
+         be set:
 
-         " **xml\_10** "XML 1.0 prologue (see above)
+         **xml\_10:** XML 1.0 prologue (see above)
 
-         " **xml\_11** "XML 1.1 prologue
+         **xml\_11:** XML 1.1 prologue
 
-         If " **none** " then the default XML prologue is not set.
+         **none:** The default XML prologue is *not* set.
 
          Any other string is used as the XML prologue itself.
 
@@ -599,7 +597,7 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    Description
          This property enables you to add xml namespaces (xmlns) to the <html>
          tag. This is especially useful if you want to add RDFa or microformats
-         to your html.
+         to your HTML.
 
          **Example:** ::
 
@@ -731,7 +729,7 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          The default JavaScript is the blurLink function and browser detection
          variables.
 
-         **Special case:** if the value is " **external** " then the default
+         **Special case:** If the value is "**external**", then the default
          JavaScript is written to a temporary file and included from that file.
          See "inlineStyle2TempFile" below.
 
@@ -786,7 +784,7 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
 
             config.minifyJS = 1
 
-         **Note** : JavaScript in external files in the FE will only be
+         **Note:** JavaScript in external files in the FE will only be
          minified, if a compression handler is registered using
          $GLOBALS['TYPO3\_CONF\_VARS']['FE']['jsCompressHandler'].
 
@@ -851,7 +849,7 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
 
             config.minifyCSS = 1
 
-         **Note** : CSS in external files in the FE will only be minified, if a
+         **Note:** CSS in external files in the FE will only be minified, if a
          compression handler is registered using
          $GLOBALS['TYPO3\_CONF\_VARS']['FE']['cssCompressHandler'].
 
@@ -913,7 +911,7 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
 
             config.concatenateJsAndCss = 1
 
-         **Note** : There are no default concatenation handlers, which could do
+         **Note:** There are no default concatenation handlers, which could do
          the concatenation. A custom concatenation handler must be provided and
          registered using
          $GLOBALS['TYPO3\_CONF\_VARS']['FE']['concatenateHandler'].
@@ -1096,7 +1094,7 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          thus you may include libraries here. Always use include\_once for
          libraries.
 
-         Remember not to output anything from such an included script.  **All
+         Remember not to output anything from such an included script. **All
          content must be set into $TSFE->content.** Take a look at
          typo3/sysext/cms/tslib/pagegen.php.
 
@@ -1125,7 +1123,7 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
 
    Description
          If set any debug-information in the TypoScript code is output.
-         Currently this applies only to the menu-objects
+         Currently this applies only to the menu objects.
 
 
 .. container:: table-row
@@ -1459,7 +1457,8 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
               config.compensateFieldWidth = 0.6
             [global]
 
-         This option may be overridden in the FORMS-cObject.
+         This option may be overridden by the property of the same name in
+         the FORMS-cObject.
 
 
 .. container:: table-row
@@ -1485,7 +1484,7 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    Description
          Include t3lib/class.t3lib\_htmlmail.php.
 
-         **Note** : This option was deprecated since TYPO3 4.5 and has
+         **Note:** This option was deprecated since TYPO3 4.5 and has
          been removed in TYPO3 6.0.
 
 
@@ -1519,7 +1518,7 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          also forces small images to be scaled to a larger size. This is not
          always a good thing.
 
-         If this property is set, images are  **not** allowed to be scaled up
+         If this property is set, images are **not** allowed to be scaled up
          in size. This parameter clears the $this->mayScaleUp var of the class
          TYPO3\CMS\Core\Imaging\GraphicalFunctions (t3lib\_stdgraphics, often
          referred to as "gifbuilder").
@@ -1595,10 +1594,10 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          records to include. Otherwise, the cache entry will be used although a
          start/stop date already passed by.
 
-         To include records of type <tablename> on page <pid> into the cache
+         To include records of type <table name> on page <pid> into the cache
          lifetime calculation of page <page-id>, add the following TypoScript:
 
-         config.cache.<page-id> = <tablename>:<pid>
+         config.cache.<page-id> = <table name>:<pid>
 
          Multiple record sources can be added as comma-separated list, see the
          examples.
@@ -1666,9 +1665,9 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          boolean
 
    Description
-         If this is set, none of the features of the PAGE-object is processed
+         If this is set, none of the features of the PAGE object is processed
          and the content of the page will be the result of the cObject array
-         (1,2,3,4...) of the PAGE-object. This means that the result of the
+         (1,2,3,4...) of the PAGE object. This means that the result of the
          cObject should include everything from the <HTML> .... to the </HTML>
          tag!
 
@@ -1689,7 +1688,7 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
 
    Description
          If set, pages with doktype "External Url" will not trigger jumpUrl in
-         TSFE. This may help you to have external urls open inside you
+         TSFE. This may help you to have external URLs open inside you
          framesets.
 
 
@@ -1704,7 +1703,7 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    Description
          Enable stat logging at all.
 
-         **Note** : All statistics related options including this one have
+         **Note:** All statistics related options including this one have
          been removed in TYPO3 6.0. Use other well known tools like Google
          Analytics or Piwik instead.
 
@@ -1729,7 +1728,7 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          Default is "0,1" which normally logs all hits on framesets and hits on
          content keeping pages. Of course this depends on the template design.
 
-         **Note** : This option has been removed in TYPO3 6.0.
+         **Note:** This option has been removed in TYPO3 6.0.
 
    Default
          0,1
@@ -1746,7 +1745,7 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    Description
          If set a page hit is not logged if a user is logged in into TYPO3.
 
-         **Note** : This option has been removed in TYPO3 6.0.
+         **Note:** This option has been removed in TYPO3 6.0.
 
    Default
          false
@@ -1761,12 +1760,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          list of strings
 
    Description
-         If the REMOTE\_ADDR is in the list of IP-addresses, it's also not
+         If the REMOTE\_ADDR is in the list of IP addresses, it's also not
          logged.
 
          Can use wildcard, e.g. "192.168.1.\*"
 
-         **Note** : This option has been removed in TYPO3 6.0.
+         **Note:** This option has been removed in TYPO3 6.0.
 
 
 .. container:: table-row
@@ -1780,7 +1779,7 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    Description
          Enable logging to the database table sys\_stat.
 
-         **Note** : This option has been removed in TYPO3 6.0.
+         **Note:** This option has been removed in TYPO3 6.0.
 
    Default
          false
@@ -1797,7 +1796,7 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    Description
          Enable logging to the log file "stat\_apache\_logfile".
 
-         **Note** : This option has been removed in TYPO3 6.0.
+         **Note:** This option has been removed in TYPO3 6.0.
 
    Default
          false
@@ -1830,7 +1829,7 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
 
          This will create daily log files (e.g. typo3\_20060321.log).
 
-         **Note** : This option has been removed in TYPO3 6.0.
+         **Note:** This option has been removed in TYPO3 6.0.
 
 
 .. container:: table-row
@@ -1842,7 +1841,7 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          string
 
    Description
-         The "pagename" simulated for apache.
+         The "page name" simulated for apache.
 
          Default: "[path][title]--[uid].html"
 
@@ -1862,7 +1861,7 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          [request\_uri] = inserts the REQUEST\_URI server value (useful with
          RealUrl for example)
 
-         **Note** : This option has been removed in TYPO3 6.0.
+         **Note:** This option has been removed in TYPO3 6.0.
 
 
 .. container:: table-row
@@ -1874,9 +1873,9 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          boolean
 
    Description
-         If true the log file is NOT written in Apache extended format.
+         If true, the log file is **not** written in Apache extended format.
 
-         **Note** : This option has been removed in TYPO3 6.0.
+         **Note:** This option has been removed in TYPO3 6.0.
 
 
 .. container:: table-row
@@ -1888,10 +1887,10 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          boolean
 
    Description
-         If true the HTTP\_HOST is - if available - NOT inserted instead of the
-         IP-address.
+         If true, the HTTP\_HOST is - if available - **not** inserted instead
+         of the IP address.
 
-         **Note** : This option has been removed in TYPO3 6.0.
+         **Note:** This option has been removed in TYPO3 6.0.
 
 
 .. container:: table-row
@@ -1912,7 +1911,7 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          results in even more readable titles, if your log analyzing software
          supports it.
 
-         **Note** : This option has been removed in TYPO3 6.0.
+         **Note:** This option has been removed in TYPO3 6.0.
 
 
 .. container:: table-row
@@ -1928,7 +1927,7 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          path. This makes a shorter name in case you have only a redundant part
          like "home" or "my site".
 
-         **Note** : This option has been removed in TYPO3 6.0.
+         **Note:** This option has been removed in TYPO3 6.0.
 
 
 .. container:: table-row
@@ -1937,12 +1936,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          stat\_titleLen
 
    Data type
-         integer 1-100
+         integer (1-100)
 
    Description
          The length of the page names in the path written to log file/database.
 
-         **Note** : This option has been removed in TYPO3 6.0.
+         **Note:** This option has been removed in TYPO3 6.0.
 
    Default
          20
@@ -1954,13 +1953,13 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          stat\_pageLen
 
    Data type
-         integer 1-100
+         integer (1-100)
 
    Description
          The length of the page name (at the end of the path) written to the
          log file/database.
 
-         **Note** : This option has been removed in TYPO3 6.0.
+         **Note:** This option has been removed in TYPO3 6.0.
 
    Default
          30
@@ -1979,7 +1978,7 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          to 1 will log an empty hostname and will enable anonymization of IP
          addresses.
 
-         **Note** : This option has been removed in TYPO3 6.0.
+         **Note:** This option has been removed in TYPO3 6.0.
 
    Default
          0
@@ -2001,7 +2000,7 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
 
             config.stat_IP_anonymize_ipv4 = 24
 
-         **Note** : This option has been removed in TYPO3 6.0.
+         **Note:** This option has been removed in TYPO3 6.0.
 
    Default
          24
@@ -2023,7 +2022,7 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
 
             config.stat_IP_anonymize_ipv6 = 64
 
-         **Note** : This option has been removed in TYPO3 6.0.
+         **Note:** This option has been removed in TYPO3 6.0.
 
    Default
          64
@@ -2042,7 +2041,7 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          user, if the user is logged in in the FE currently. Setting this to 0
          allows to anonymize the username.
 
-         **Note** : This option has been removed in TYPO3 6.0.
+         **Note:** This option has been removed in TYPO3 6.0.
 
    Default
          1
@@ -2061,7 +2060,7 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    Description
          If set TYPO3 makes all links in another way than usual. This
          affects all sites in the database. This option can be used
-         with  **Apache compiled with mod\_rewrite and configured in
+         with **Apache compiled with mod\_rewrite and configured in
          httpd.conf for use of this in the ".htaccess"-files.**
 
          Include this in the .htaccess file ::
@@ -2072,14 +2071,14 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          This means that any "\*.html"-documents should be handled by
          index.php.
 
-         Now if this is done, TYPO3 will interpret the url of the html-document
+         Now if this is done, TYPO3 will interpret the URL of the html-document
          like this:
 
          [title].[id].[type].html
 
          Title is optional and only useful for the entries in the apache log-
          files. You may omit both [title] and [type] but if title is present,
-         type must also be there!.
+         type must also be there!
 
          **Example:**
 
@@ -2087,14 +2086,14 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
 
             Startpage.23.1.html
 
-         TYPO3 will interpret this as the page with alias = "start" and the
+         TYPO3 will interpret this as the page with alias = "start". The
          type is zero (default)::
 
             start.html
 
          **Alternative value (PATH\_INFO):**
 
-         Instead of using the rewrite-module in apache (eg. if you're running
+         Instead of using the rewrite-module in apache (e.g. if you're running
          Windows!) you can use the PATH\_INFO variable from PHP.
 
          It's very simple. Just set simulateStaticDocuments to "PATH\_INFO" and
@@ -2102,11 +2101,11 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
 
          **Also:** See below, .absRefPrefix
 
-         **Example (put in Setup-field of your template):** ::
+         **Example (to be put in the Setup field of your template):** ::
 
             config.simulateStaticDocuments = PATH_INFO
 
-         **Note** : Since TYPO3 4.3 the system extension "simulatestatic" had
+         **Note:** Since TYPO3 4.3 the system extension "simulatestatic" had
          to be installed to be able to activate this functionality. Since TYPO3
          6.0 the extension simulatestatic no longer is part of the TYPO3 Core.
          Instead it needs to be installed from TER.
@@ -2127,8 +2126,8 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          integer
 
    Description
-         If not zero, TYPO3 generates urls with the title in, limited to the
-         first [simulateStaticDocuments\_addTitle] number of chars.
+         If not zero, TYPO3 generates URLs with the title in them, limited to
+         the first [simulateStaticDocuments\_addTitle] number of chars.
 
          **Example:** ::
 
@@ -2152,11 +2151,11 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
 
          **Example:**
 
-         "Startpage.23.0.html" would  *still* be "Startpage.23.0.html"
+         "Startpage.23.0.html" would *still* be "Startpage.23.0.html"
 
          "23.0.html" would be "23.html" (that is without the zero)
 
-         "23.1.html" would  *still* be "23.1.html"
+         "23.1.html" would *still* be "23.1.html"
 
 
 .. container:: table-row
@@ -2214,8 +2213,8 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
 
          **Example:**
 
-         You have a news-plugin. The main page has the url "Page\_1.228.0.html"
-         but when one clicks on a news item the url will be
+         You have a news-plugin. The main page has the URL "Page\_1.228.0.html"
+         but when one clicks on a news item the URL will be
          "Page\_1.228.0.html?&tx\_mininews\_pi1[showUid]=2&cHash=b8d239c224"
          instead.
 
@@ -2228,7 +2227,7 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          This will transform the filename used to this value: "Page\_1.228+B6Jn
          R4X21pbmluZXdzX3BpMVtzaG93VWlkXT0yJmNIYXNoPWI4ZDIzOWMyMjQ\_.0.html".
          The query string has simply been base64-encoded (and some more...) and
-         added to the HTML-filename (so now external search-engines will find
+         added to the HTML filename (so now external search-engines will find
          this!). The really great thing about this that the filename is self-
          reliant because the filename contains the parameters. The downside to
          it is the very very long filename.
@@ -2244,15 +2243,15 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          frontend, then the REAL parameter string is found in the database! The
          really great thing about this is that the filename is very short
          (opposite to the base64-method). The downside to this is that IF you
-         clear the database cache table at any time, the URL here does NOT work
-         until a page with the link has been generated again (re-inserting the
-         parameter list into the database).
+         clear the database cache table at any time, the URL here does **not**
+         work until a page with the link has been generated again (re-inserting
+         the parameter list into the database).
 
-         **NOTICE:** From TYPO3 3.6.0 the encoding will work only on parameters
+         **Note:** Since TYPO3 3.6.0 the encoding works only on parameters
          that are manually entered in the list set by
          .simulateStaticDocuments\_pEnc\_onlyP (see right below) or those
          parameters that various plugins might allow in addition. This is to
-         limit the run-away risk when many parameters gets combined.
+         limit the run-away risk when many parameters get combined.
 
 
 .. container:: table-row
@@ -2307,7 +2306,7 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
 
          **Note:** If you're working on a server where you have both internal
          and external access, you might do yourself a favor and set the
-         absRefPrefix to the url and path of you site, e.g.
+         absRefPrefix to the URL and path of you site, e.g.
          http://www.typo3.org/. If you do not, you risk to render pages to
          cache from the internal network and thereby prefix image-references
          and links with a non-accessible path from outside.
@@ -2526,21 +2525,21 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          "Alternative Page Language" table) and if it is not found it will fall
          back to the default language and display that.
 
-         **content\_fallback** - [ Recommended ] The system will always operate
+         **content\_fallback:** Recommended. The system will always operate
          with the selected language even if the page is not translated with a
          page overlay record. This will keep menus etc. translated. However,
-         the  *content* on the page can still fall back to another language,
+         the *content* on the page can still fall back to another language,
          defined by the value of this keyword, e.g. "content\_fallback ; 1,0"
          to fall back to the content of sys\_language\_uid 1 and if that is not
-         present either, to default (0)
+         present either, to default (0).
 
-         **strict** - The system will report an error if the requested
+         **strict:** The system will report an error if the requested
          translation does not exist. Basically this means that all pages with
          gray background in the Web > Info / Localization overview module will
-         fail (they would otherwise fall back to default language in one or
-         another way)
+         fail (they would otherwise fall back to default language in one way
+         or another).
 
-         **ignore** - The system will stay with the selected language even if
+         **ignore:** The system will stay with the selected language even if
          the page is not translated and there's no content available in this
          language, so you can handle that situation on your own then.
 
@@ -2573,7 +2572,7 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
 
          Keyword:
 
-         **hideNonTranslated** : If this keyword is used a record that has no
+         **hideNonTranslated:** If this keyword is used a record that has no
          translation will not be shown. The default is that records with no
          translation will show up in the default language.
 
@@ -2597,7 +2596,7 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          document for details). The first ("exclude") simply means that the
          field when found in a translation of a record will not be overlaid the
          default records field value. The second ("mergeIfNotBlank") means that
-         it will be overlaid  *only* if it has a non-blank value.
+         it will be overlaid *only* if it has a non-blank value.
 
          Since it might be practical to set up fields for "mergeIfNotBlank" on
          a per-site basis this options allows you to override additional fields
@@ -2773,7 +2772,7 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
 
    Description
          This sets the encoding of plaintext emails (notification messages).
-         The default encoding is "quoted-printable". But setting this to eg.
+         The default encoding is "quoted-printable". But setting this to e.g.
          "base64" will encode the content with base64 encoding.
 
          **Values possible:**
@@ -2797,7 +2796,7 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          Alternative charset for the notification mails.
 
    Default
-         Until TYPO3 4.7: ISO-8859-1
+         Until TYPO3 4.6: ISO-8859-1
 
          Since TYPO3 4.7: utf-8
 
@@ -2928,13 +2927,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          string
 
    Description
-         Tries to clean up the output to make it XHTML compliant and a bit
-         more. THIS IS NOT COMPLETE YET, but a "pilot" to see if it makes sense
-         anyways. For now this is what is done:
+         Cleans up the output to make it XHTML compliant and a bit more.
+         For now this is what is done:
 
-         **What it does at this point:**
+         *What it does:*
 
-         \- All tags (img,br,hr) is ended with "/>" - others?
+         \- All tags are ended with "/>"
 
          \- Lowercase for elements and attributes
 
@@ -2942,9 +2940,9 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
 
          \- Add "alt" attribute to img-tags if it's not there already.
 
-         **What it does NOT do (yet) according to XHTML specs.:**
+         *What it does **not** do (yet) according to XHTML specifications:*
 
-         \- Wellformedness: Nesting is NOT checked
+         \- Wellformedness: Nesting is **not** checked
 
          \- name/id attribute issue is not observed at this point.
 
@@ -2959,7 +2957,7 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
 
          \- UTF-8 encoding is in fact expected by XML!
 
-         \- stylesheet element and attribute names are NOT converted to
+         \- stylesheet element and attribute names are **not** converted to
          lowercase
 
          \- ampersands (and entities in general I think) MUST be converted to
@@ -2972,14 +2970,16 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          Please see the class TYPO3\CMS\Core\Html\HtmlParser
          (t3lib\_parsehtml) for details.
 
-         You can enable this function with the following values:
+         You can enable this function by setting it to one of the following
+         keywords:
 
-         **all** = the content is always processed before it may be stored in
-         cache.
+         **all:** The content is always processed before it is possibly
+         stored in cache (or not stored in cache).
 
-         **cached** = only if the page is put into the cache,
+         **cached:** The content is only processed, if the page will be put
+         into the cache.
 
-         **output** = only the output code just before it's echoed out.
+         **output:** The content is processed just before it is echoed out.
 
 
 .. container:: table-row
@@ -2988,17 +2988,17 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          prefixLocalAnchors
 
    Data type
-         string keyword
+         string
 
    Description
          If set to one of the keywords, the content will have all local anchors
          in links prefixed with the path of the script. Basically this means
          that <a href="#"> will be transformed to <a
          href="path/path/script?params#">. This procedure is necessary if the
-         <base> tag is set (eg. if "realurl" extension is used to produce
-         Speaking URLs) (see property "config.baseURL").
+         <base> tag is set (e.g. if the "realurl" extension is used to produce
+         speaking URLs). See property "config.baseURL".
 
-         Keywords are the same as for "xhtml\_cleaning", see above.
+         The keywords are the same as for "xhtml\_cleaning", see above.
 
 
 .. container:: table-row

@@ -11,13 +11,13 @@
 GMENU\_FOLDOUT
 ^^^^^^^^^^^^^^
 
-GMENU\_FOLDOUT works as an extension to GMENU, which means the these
-properties underneath is additional properties to the ones above.
+GMENU\_FOLDOUT works as an extension to GMENU, which means that the
+properties underneath are additional properties to the ones above.
 
 The purpose of GMENU\_FOLDOUT is to create 2-level menus which are
 folded out dynamically.
 
-It works with both Netscape, Mozilla, Microsoft internet Explorer and
+It works with Netscape, Mozilla, Microsoft Internet Explorer and
 Opera. The menu on the first level is a GMENU because GMENU\_FOLDOUT
 is responsible for this, but the submenu on the next level (referred
 to as 2nd level) can be both TMENU and another GMENU.

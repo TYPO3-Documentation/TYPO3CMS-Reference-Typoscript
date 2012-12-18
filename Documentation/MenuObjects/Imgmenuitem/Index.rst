@@ -42,21 +42,21 @@ IMGMENUITEM
          The way an imagemap is made is this; All IMGMENUITEMS are included in
          one big Gifbuilderobj (and renumbered!). Because of this,
          Gifbuilderobjects on the next level will not be able to access the
-         data of each menuitem.
+         data of each menu item.
 
          Also the feature of using [##.w] and [##.h] with +calc is currently
          not supported by IMGMENUITEMs.
 
-         Therefore all IMAGE-objects on the first level is checked; if "file"
-         or "mask" for any IMAGE-objects are set to "GIFBUILDER", the
-         Gifbuilder-object is parsed to see if any TEXT-objects are present and
-         if so, the TEXT-object is "checked" - which means, that the stdWrap-
+         Therefore all IMAGE objects on the first level is checked; if "file"
+         or "mask" for any IMAGE objects are set to "GIFBUILDER", the
+         GIFBUILDER object is parsed to see if any TEXT objects are present and
+         if so, the TEXT object is "checked" - which means, that the stdWrap-
          function is called at a time where the $cObj->data-array is set to the
-         actual menuitem.
+         actual menu item.
 
-         In the example below, the text of each menuitem is rendered by letting
+         In the example below, the text of each menu item is rendered by letting
          the title be rendered on a mask instead of directly on the image.
-         Please observe that the "NO.10"-object is present in order for the
+         Please observe that the "NO.10" object is present in order for the
          image-map coordinates to be generated! ::
 
             NO.6 = IMAGE

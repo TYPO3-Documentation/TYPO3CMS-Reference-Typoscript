@@ -76,10 +76,10 @@ plaintextLib.inc properties
          siteUrl
 
    Data type
-         url
+         string
 
    Description
-         Url of the site.
+         The URL of the site.
 
 
 .. container:: table-row
@@ -414,7 +414,7 @@ plaintextLib.inc properties
 
 Datatype 'untrimmed string' means that you can enter a string as
 usual, but if you enter a value between two vertical lines, that value
-will be used and NOT trimmed. Normally values are trimmed.
+will be used and **not** trimmed. Normally values *are* trimmed.
 
 
 .. _appendix-plaintextlib-examples:

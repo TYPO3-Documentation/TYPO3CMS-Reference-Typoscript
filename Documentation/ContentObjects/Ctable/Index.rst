@@ -11,7 +11,7 @@
 CTABLE
 ^^^^^^
 
-Creates a table in which you can define the content of the the various
+Creates a table in which you can define the content of the various
 cells.
 
 A CTABLE is a little more feature packed than the simple OTABLE. It

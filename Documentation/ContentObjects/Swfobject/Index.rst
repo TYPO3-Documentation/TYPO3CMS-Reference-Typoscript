@@ -41,7 +41,7 @@ This object will insert a Flash player driven by JavaScript.
    Description
          Media file or URL.
 
-         **No**  **te:** Files are treated as URLs. You need to set fully
+         **Note:** Files are treated as URLs. You need to set fully
          qualified URLs. Use config.baseURL and/or config.absRefPrefix to get
          fully qualified URLs automatically.
 
@@ -98,7 +98,7 @@ This object will insert a Flash player driven by JavaScript.
          string /stdWrap
 
    Description
-         Location of player
+         Location of the player.
 
 
 .. container:: table-row

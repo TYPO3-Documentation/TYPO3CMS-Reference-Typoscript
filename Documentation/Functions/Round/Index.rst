@@ -49,11 +49,11 @@ selected round method.
 
          Possible keywords:
 
-         \-  **ceil** : Round the value up to the next integer.
+         \-  **ceil:** Round the value up to the next integer.
 
-         \-  **floor** : Round the value down to the previous integer.
+         \-  **floor:** Round the value down to the previous integer.
 
-         \-  **round** : Round the value to the specified number of decimals.
+         \-  **round:** Round the value to the specified number of decimals.
 
    Default
          round

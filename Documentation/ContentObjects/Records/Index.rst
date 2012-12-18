@@ -84,17 +84,17 @@ with the "dontCheckPid"-option.
 .. container:: table-row
 
    Property
-         conf.[ *tablename* ]
+         conf.[*table name*]
 
    Data type
          cObject
 
    Description
-         Config-array which renders records from table  *tablename*
+         Config array which renders records from table *table name*.
 
    Default
-         If this is NOT defined, the rendering of the records is done with the
-         toplevel-object [tablename] - just like the cObject, CONTENT!
+         If this is *not* defined, the rendering of the records is done with
+         the top-level object [table name] - just like the cObject CONTENT!
 
 
 .. container:: table-row

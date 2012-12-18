@@ -11,7 +11,7 @@
 "FE\_TABLE"
 ^^^^^^^^^^^
 
-**Note** : These options were deprecated since TYPO3 4.6 and have
+**Note:** These options were deprecated since TYPO3 4.6 and have
 been removed in TYPO3 6.0.
 
 .. ### BEGIN~OF~TABLE ###
@@ -183,11 +183,11 @@ been removed in TYPO3 6.0.
          string
 
    Description
-         Separator character used when the submitted data is an array from eg.
+         Separator character used when the submitted data is an array from e.g.
          a multiple selector box.
 
    Default
-         chr(10) (linebreak)
+         chr(10) *(line break)*
 
 
 .. container:: table-row
@@ -202,11 +202,11 @@ been removed in TYPO3 6.0.
          Specifies a field name (integer) into which an integer-hash compiled
          of the submitted data is inserted. If the field is set, then
          submissions are checked whether another record with this value already
-         exists. If so, the record is NOT inserted, because it's expected to be
-         a "double post" (posting the same data more than once)
+         exists. If so, the record is **not** inserted, because it's expected to
+         be a "double post" (posting the same data more than once).
 
 
 .. ###### END~OF~TABLE ######
 
-[tsref:FEData.(tablename)/->FE\_TABLE]
+[tsref:FEData.(table name)/->FE\_TABLE]
 

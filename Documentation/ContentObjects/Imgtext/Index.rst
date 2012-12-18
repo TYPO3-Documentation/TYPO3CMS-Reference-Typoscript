@@ -124,7 +124,7 @@ See code examples.
          imgList
 
    Data type
-         *list of imagefiles* /stdWrap
+         *list of image files* /stdWrap
 
    Description
          List of images from ".imgPath".
@@ -210,9 +210,9 @@ See code examples.
          Rendering of the images.
 
          The register "IMAGE\_NUM" is set with the number of image being
-         rendered for each rendering of an image-object. Starting with zero.
+         rendered for each rendering of an image object. Starting with zero.
 
-         The image-object should not be of type GIFBUILDER!
+         The image object should not be of type GIFBUILDER!
 
          **Important:**
 
@@ -485,7 +485,7 @@ See code examples.
          This will scale images not in the right size! Takes the number of
          columns into account!
 
-         **Note:** Works ONLY if IMAGE-obj is NOT GIFBUILDER!
+         **Note:** Works ONLY if IMAGE-obj is **not** GIFBUILDER!
 
 
 .. container:: table-row
@@ -503,7 +503,7 @@ See code examples.
          This will scale images not in the right size! Takes the number of
          columns into account!
 
-         **Note:** Works ONLY if IMAGE-obj is NOT GIFBUILDER!
+         **Note:** Works ONLY if IMAGE-obj is **not** GIFBUILDER!
 
    Default
          50% of maxW
@@ -527,7 +527,7 @@ See code examples.
          totalWidth.
 
          Please note that this value will override the properties "width",
-         "maxH", "maxW", "minW", "minH" of the IMAGE-objects generating the
+         "maxH", "maxW", "minW", "minH" of the IMAGE objects generating the
          images. Furthermore it will override the "noRows"-property and
          generate a table with no columns instead!
 
@@ -542,10 +542,10 @@ See code examples.
 
    Description
          This value defines the width-relations of the images in the columns of
-         IMGTEXT. The syntax is "[int] : [int] : [int] : ..." for each column.
-         If there are more image columns than figures in this value, it's
-         ignored. If the relation between two of these figures exceeds 10, this
-         function is ignore.
+         IMGTEXT. The syntax is "[integer] : [integer] : [integer] : ..." for
+         each column. If there are more image columns than figures in this
+         value, it's ignored. If the relation between two of these figures
+         exceeds 10, this function is ignored.
 
          It works only fully if all images are downscaled by their maxW-
          definition.
@@ -554,9 +554,9 @@ See code examples.
 
          If 6 images are placed in three columns and their width's are high
          enough to be forcibly scaled, this value will scale the images in the
-         to be e.g. 100, 200 and 300 pixels from left to right
+         to be e.g. 100, 200 and 300 pixels from left to right::
 
-         1 : 2 : 3
+            1 : 2 : 3
 
 
 .. container:: table-row
@@ -629,7 +629,7 @@ See code examples.
          quality as a Photoshop-compressed image seem to be largely 50% greater
          in size!
 
-         **Note:** Works ONLY if IMAGE-obj is NOT GIFBUILDER!
+         **Note:** Works ONLY if IMAGE-obj is **not** GIFBUILDER!
 
 
 .. container:: table-row
@@ -662,7 +662,7 @@ See code examples.
 
          26 => "-gamma 0.8"
 
-         **Note:** Works ONLY if IMAGE-obj is NOT GIFBUILDER!
+         **Note:** Works ONLY if IMAGE-obj is **not** GIFBUILDER!
 
 
 .. container:: table-row
@@ -706,7 +706,7 @@ See code examples.
          ".params" to the imgResource. In addition the output of this operation
          will always be jpg or gif!
 
-         **Note:** Works ONLY if IMAGE-obj is NOT GIFBUILDER!
+         **Note:** Works ONLY if IMAGE-obj is **not** GIFBUILDER!
 
 
 .. container:: table-row

@@ -186,7 +186,7 @@ a short instruction.
          <A>-data:target /stdWrap
 
    Description
-         NOTE: Only if ".JSwindow" is set
+         **Note:** Only if ".JSwindow" is set.
 
 
 .. container:: table-row
@@ -235,8 +235,8 @@ a short instruction.
          string /stdWrap
 
    Description
-         If this returns anything, the URL shown in the JS-window is NOT
-         tx\_cms\_showpic but the url given here!
+         If this returns anything, the URL shown in the JS-window is **not**
+         tx\_cms\_showpic but the URL given here!
 
 
 .. container:: table-row

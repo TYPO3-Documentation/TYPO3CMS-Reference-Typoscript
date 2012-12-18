@@ -11,7 +11,7 @@
 Common properties
 ^^^^^^^^^^^^^^^^^
 
-These properties are in common for  *all* menu objects unless
+These properties are in common for *all* menu objects unless
 otherwise noted!
 
 .. ### BEGIN~OF~TABLE ###
@@ -52,7 +52,7 @@ otherwise noted!
          string
 
    Description
-         Normally the menuitems are sorted by the fields "sorting" in the
+         Normally the menu items are sorted by the fields "sorting" in the
          pages- and tt\_content-table. Here you can enter a list of fields that
          is used in the SQL- "ORDER BY" statement instead. You can also provide
          the sorting order.
@@ -63,7 +63,7 @@ otherwise noted!
 
          (This will render the menu in reversed alphabetical order.)
 
-         **LIMITATIONS:**
+         **Limitations:**
 
          This property works with normal menus, sectionsIndex menus and
          special-menus of type "directory".
@@ -132,13 +132,13 @@ otherwise noted!
          If set, the links of the menu-items will open by JavaScript in a pop-
          up window.
 
-         **.newWindow** boolean, that lets every menuitem open in its own
+         **.newWindow:** Boolean. Lets every menu item open in its own
          window opposite to opening in the same window for each click.
 
-         **.params** is the list of parameters sent to the JavaScript open-
-         window function, e.g.:
+         **.params:** The list of parameters sent to the JavaScript open-
+         window function, e.g.::
 
-         width=200,height=300,status=0,menubar=0
+            JSWindow.params = width=200,height=300,status=0,menubar=0
 
          **Note:** Does not work with JSMENU's.
 
@@ -152,7 +152,7 @@ otherwise noted!
          string
 
    Description
-         prefix for the imagenames. This prefix is appended with the uid of the
+         Prefix for the image names. This prefix is appended with the uid of the
          page.
 
    Default
@@ -168,7 +168,7 @@ otherwise noted!
          boolean
 
    Description
-         If set, the image names of menuitems is not randomly assigned. Useful
+         If set, the image names of menu items is not randomly assigned. Useful
          switch if you're manipulating these images with some external
          JavaScript.
 
@@ -187,7 +187,7 @@ otherwise noted!
 
    Description
          Outputs (by the debug()-function) the configuration arrays for each
-         menuitem. Useful to debug optionSplit things and such...
+         menu item. Useful to debug optionSplit things and such...
 
          Applies to GMENU, TMENU and IMGMENU.
 
@@ -205,7 +205,7 @@ otherwise noted!
          the real uid of the page is sent by the parameter "&real\_uid=[uid]".
 
          This feature is smart, if you have inserted a menu from somewhere
-         else, perhaps a shared menu, but wants the menuitems to call the same
+         else, perhaps a shared menu, but wants the menu items to call the same
          page, which then generates a proper output based on the real\_uid.
 
          Applies to GMENU, TMENU and IMGMENU.
@@ -278,7 +278,7 @@ otherwise noted!
 
    Description
          The first variable passed to this function is the "menuArr" array with
-         the menuitems as they are collected based on the type of menu.
+         the menu items as they are collected based on the type of menu.
 
          You're free to manipulate or add to this array as you like. Just
          remember to return the array again!

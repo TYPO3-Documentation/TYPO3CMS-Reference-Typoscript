@@ -133,7 +133,7 @@ Data types reference
             configuration variable $TYPO3\_CONF\_VARS['GFX']['imagefile\_ext'].
             Standard is pdf, gif, jpg, jpeg, tif, bmp, ai, pcx, tga, png.
 
-         #. GIFBUILDER-object
+         #. GIFBUILDER object
 
 
 .. container:: table-row
@@ -141,7 +141,7 @@ Data types reference
    Data type
          .. _data-type-html-code:
 
-         HTML-code
+         HTML code
 
    Examples
          ::
@@ -149,7 +149,7 @@ Data types reference
             <b>Some text in bold</b>
 
    Comment
-         pure HTML-code
+         pure HTML code
 
 
 .. container:: table-row
@@ -183,7 +183,7 @@ Data types reference
    Examples
          jpg
 
-         web  *(gif or jpg ..)*
+         web *(gif or jpg ..)*
 
    Comment
          Image extensions can be anything among the allowed types defined in
@@ -322,40 +322,47 @@ Data types reference
          #ffeecc
 
    Comment
-         HTML-color codes:
+         HTML color codes:
 
-         Black = "#000000"
+         .. ### BEGIN~OF~SIMPLE~TABLE ###
 
-         Silver = "#C0C0C0"
+         =============    ==============
+         Color name          Hexadecimal code
+         =============    ==============
+         Black               #000000
 
-         Gray = "#808080"
+         Silver              #C0C0C0
 
-         White = "#FFFFFF"
+         Gray                #808080
 
-         Maroon = "#800000"
+         White               #FFFFFF
 
-         Red = "#FF0000"
+         Maroon              #800000
 
-         Purple = "#800080"
+         Red                 #FF0000
 
-         Fuchsia = "#FF00FF"
+         Purple              #800080
 
-         Green = "#008000"
+         Fuchsia             #FF00FF
 
-         Lime = "#00FF00"
+         Green               #008000
 
-         Olive = "#808000"
+         Lime                #00FF00
 
-         Yellow = "#FFFF00"
+         Olive               #808000
 
-         Navy = "#000080"
+         Yellow              #FFFF00
 
-         Blue = "#0000FF"
+         Navy                #000080
 
-         Teal = "#008080"
+         Blue                #0000FF
 
-         Aqua = "#00FFFF"
+         Teal                #008080
 
+         Aqua                #00FFFF
+         =============    ==============
+
+         .. ###### END~OF~SIMPLE~TABLE ######
 
 .. container:: table-row
 
@@ -365,21 +372,21 @@ Data types reference
          GraphicColor
 
    Examples
-         red  *(HTML-color)*
+         red *(HTML-color)*
 
-         #ffeecc  *(HTML-color)*
+         #ffeecc *(HTML-color)*
 
-         255,0,255  *(RGB-integers)*
+         255,0,255 *(RGB-integers)*
 
          *Extra:*
 
-         red  *: \*0.8*  *("red" is darkened by factor 0.8)*
+         red *: \*0.8 ("red" is darkened by factor 0.8)*
 
-         #ffeecc  *: +16*  *("ffeecc" is going to #fffedc because 16 is added)*
+         #ffeecc *: +16 ("ffeecc" is going to #fffedc because 16 is added)*
 
    Comment
-         The color can be given as HTML-colors or as a comma-separated list of
-         RGB-values (integers)
+         The color can be given as HTML-color or as a comma-separated list of
+         RGB-values (integers).
 
          You can add an extra parameter that will modify the color
          mathematically:
@@ -388,7 +395,7 @@ Data types reference
 
          [colordef] : [modifier]
 
-         where modifier can be and integer which is added/subtracted to the
+         where modifier can be an integer which is added/subtracted to the
          three RGB-channels or a floating point with an "\*" before, which will
          then multiply the values with that factor.
 
@@ -406,7 +413,7 @@ Data types reference
          34
 
    Comment
-         A page id (integer) or "this" (=current page id)
+         A page id (integer) or "this" (=current page id).
 
 
 .. container:: table-row
@@ -472,8 +479,8 @@ Data types reference
    Comment
          <...> \| </...>
 
-         Used to wrap something. The part on the left and right of the vertical
-         line is placed on the left and right side of the value.
+         Used to wrap something. The parts on the left and right of the vertical
+         line are placed on the left and right side of the value.
 
 
 .. container:: table-row
@@ -516,17 +523,17 @@ Data types reference
 
          Possible keywords:
 
-         **upper** : Convert all letters of the string to uppercase.
+         **upper:** Convert all letters of the string to uppercase.
 
-         **lower** : Convert all letters of the string to lowercase.
+         **lower:** Convert all letters of the string to lowercase.
 
-         **capitalize** : (Since TYPO3 4.6) Uppercase the first character of
+         **capitalize:** (Since TYPO3 4.6) Uppercase the first character of
          each word in the string.
 
-         **ucfirst** : (Since TYPO3 4.6) Convert the first letter of the string
+         **ucfirst:** (Since TYPO3 4.6) Convert the first letter of the string
          to uppercase.
 
-         **lcfirst** : (Since TYPO3 4.6) Convert the first letter of the string
+         **lcfirst:** (Since TYPO3 4.6) Convert the first letter of the string
          to lowercase.
 
 
@@ -554,7 +561,7 @@ Data types reference
          date-conf
 
    Examples
-         d-m-y  *(dd-mm-yy format)*
+         d-m-y *(dd-mm-yy format)*
 
    Comment
          See PHP function Date()!
@@ -704,12 +711,12 @@ Data types reference
          UNIX-time
 
    Examples
-         *Seconds to 07/04 2000 23:58:*
+         *Seconds to May 09th 2016 12:34:*
 
-         955144722
+         1462790096
 
    Comment
-         Seconds since 1/1 1970...
+         Seconds since January 1st 1970.
 
 
 .. container:: table-row
@@ -723,7 +730,7 @@ Data types reference
          *fileadmin/stuff/*
 
    Comment
-         path relative to the directory from which we operate.
+         Path relative to the directory from which we operate.
 
 
 .. container:: table-row
@@ -766,7 +773,8 @@ Data types reference
          getText
 
    Examples
-         .. for help about t3-field-list-table see http://mbless.de/4us/typo3-oo2rest/06-The-%5Bfield-list-table%5D-directive/1-demo.rst.html
+         .. For help about t3-field-list-table see
+            http://mbless.de/4us/typo3-oo2rest/06-The-%5Bfield-list-table%5D-directive/1-demo.rst.html
 
          .. t3-field-list-table::
           :header-rows: 1
@@ -785,30 +793,30 @@ Data types reference
           - :dt:
                **= field : header**
 
-               *get content from the $cObj->data-array[ **header** ]*
+               *get content from the $cObj->data-array[header]*
 
             :dd:
-                **field:** [field name from the current  *$cObj* ->data-array in the
+                **field:** [field name from the current *$cObj* ->data-array in the
                 cObj.]
 
-                As default the  *$cObj* ->data-array is $GLOBALS['TSFE']->page (record
+                As default the *$cObj* ->data-array is $GLOBALS['TSFE']->page (record
                 of the current page!)
 
-                In TMENU:  *$cObj* ->data is set to the page-record for each menu
+                In TMENU: *$cObj* ->data is set to the page-record for each menu
                 item.
 
-                In CONTENT/RECORDS  *$cObj* ->data is set to the actual record
+                In CONTENT/RECORDS *$cObj* ->data is set to the actual record
 
-                In GIFBUILDER  *$cObj* ->data is set to the data GIFBUILDER is
+                In GIFBUILDER *$cObj* ->data is set to the data GIFBUILDER is
                 supplied with.
 
           - :dt:
                 **= parameters : color**
 
-                *get content from the $cObj->parameters-array[ **color** ]*
+                *get content from the $cObj->parameters-array[color]*
 
             :dd:
-                **parameters:** [field name from the current  *$cObj* ->parameters-
+                **parameters:** [field name from the current *$cObj* ->parameters-
                 array in the cObj.]
 
                 See ->parseFunc!
@@ -816,12 +824,12 @@ Data types reference
           - :dt:
                 **= register : color**
 
-                *get content from the $GLOBALS['TSFE']->register[ **color** ]*
+                *get content from the $GLOBALS['TSFE']->register[color]*
 
             :dd:
                 **register:** [field name from the $GLOBALS['TSFE']->register]
 
-                See cObject "LOAD\_REGISTER"
+                See cObject "LOAD\_REGISTER"!
 
           - :dt:
                 **= leveltitle : 1**
@@ -863,7 +871,7 @@ Data types reference
 
             :dd:
                 **global:** [GLOBAL-var, split with \| if you want to get from an
-                array! DEPRECATED, use GP, TSFE or getenv]
+                array! Deprecated, use GP, TSFE or getenv]
 
           - :dt:
                 **= date : d-m-y**
@@ -909,7 +917,7 @@ Data types reference
             :dd:
                 **GP:** Value from GET or POST method. Use this instead of global
 
-                **GPvar:**  **usage of "GPvar" is deprecated. Use "GP" instead**
+                **GPvar: Usage of "GPvar" is deprecated. Use "GP" instead!**
 
           - :dt:
                 **= getenv : HTTP\_REFERER**
@@ -953,7 +961,7 @@ Data types reference
 
                 These properties are available:
 
-                name, size, sha1, extension, mimetype, contents, publicUrl, localPath
+                name, size, sha1, extension, MIME type, contents, publicUrl, localPath
 
           - :dt:
                 **= fullRootLine : -1, title**
@@ -1050,9 +1058,9 @@ Data types reference
          dir
 
    Examples
-         *returns a list of all pdf, gif and jpg-*  *files from
-         fileadmin/files/ sorted by*  *their name* reversely and with the full
-         path (with " *fileadmin/files/" prepended)*
+         *returns a list of all pdf, gif and jpg-files from
+         fileadmin/files/ sorted by their name reversely and with the full
+         path (with "fileadmin/files/" prepended).*
 
          **fileadmin/files/ \| pdf,gif,jpg \| name** \| r \| true
 
@@ -1091,16 +1099,16 @@ Data types reference
          information at the USER cObject.
 
          Depending on implementation the class or function name (but not the
-         method name) should probably be prefixed with "user\_". This can be
-         changed in the $TYPO3\_CONF\_VARS config though. Also the function /
+         method name) should probably be prefixed with "user\_". The prefix
+         can be changed in the $TYPO3\_CONF\_VARS config though. The function /
          method is normally called with 2 parameters, $conf (TS configuration)
          and $content (some content to be processed and returned).
 
          Also if you call a method in a class, it is checked (when using the
          USER/USER\_INT objects) whether a class with the same name, but
-         prefixed with "ux\_" is present and if so, this class is instantiated
-         instead. See the document "Inside TYPO3" for more information on
-         extending the classes in TYPO3!
+         prefixed with "ux\_" is present and if so, *this* class is
+         instantiated instead. See the document "Inside TYPO3" for more
+         information on extending classes in TYPO3!
 
 
 .. ###### END~OF~TABLE ######

@@ -67,12 +67,12 @@ to pages.
 
          This substitutes the following fields::
 
-            ###RANGELOW###:        The low result range, eg. "1"
-            ###RANGEHIGH###:        The high result range, eg. "10"
-            ###TOTAL###:    The total results
-            ###RESULT###:   The result itself
+            ###RANGELOW###:        The low result range, e.g. "1"
+            ###RANGEHIGH###:       The high result range, e.g. "10"
+            ###TOTAL###:           The total results
+            ###RESULT###:          The result itself
             ###NEXT###:            The next-button
-            ###PREV###:             The prev-button
+            ###PREV###:            The prev-button
 
 
 .. container:: table-row
@@ -141,7 +141,7 @@ to pages.
 
          $cObj->data array is set to the resulting record from the search.
 
-         Please note, that  all fields are named [tablename]\_[fieldname].
+         Please note, that  all fields are named [table name]\_[field name].
          Thus the page title is in the field "pages\_title".
 
          Apart from this, these fields from the pages-table are also present::
@@ -194,8 +194,8 @@ to pages.
          boolean /stdWrap
 
    Description
-         If this is set, the result is NOT sorted after lastUpdated, tstamp for
-         the pages-table.
+         If this is set, the result is **not** sorted after lastUpdated, tstamp
+         for the pages-table.
 
    Default
          0
@@ -278,7 +278,7 @@ Example:
 
    register:SWORD_PARAMS = '&sword_list[]=word1&sword_list[]=word2 .....'
 
-See typolink for more info!
+See typolink for more information!
 
 
 .. _cobj-searchresult-notes:
@@ -286,16 +286,16 @@ See typolink for more info!
 Notes:
 """"""
 
-"sword" and "scols" MUST be set in order for the search to be engaged.
+"sword" and "scols" **must** be set in order for the search to be engaged.
 
-var "sword" = search word(s)
+var "sword": Search word(s).
 
-var "scols" = search columns separated by ":". E.g.:
-pages.title:pages.keywords:tt\_content.bodytext
+var "scols": Search columns separated by ":". E.g.:
+pages.title:pages.keywords:tt\_content.bodytext.
 
-var "stype" = the starting point of the search: false = current page,
+var "stype": The starting point of the search: false = current page,
 L-2 = page before currentPage, L-1 = current page, L0 = rootlevel, L1
-= from first level, L2 = from second level
+= from first level, L2 = from second level.
 
 var $GLOBALS['HTTP\_POST\_VARS']['locationData']: If this is set, the
 search is done as was it from another page in the website given by the
@@ -315,13 +315,13 @@ var "spointer": This points to the start-record in the search.
 
 LATER:
 
-var "alldomains" : boolean: If set the search will proceed into other
-domains
+var "alldomains": boolean: If set the search will proceed into other
+domains.
 
-var "allsites" : boolean: If set the search will proceed into other
-sites (defined by the "root" setting of an active template.)
+var "allsites": boolean: If set the search will proceed into other
+sites (defined by the "root" setting of an active template).
 
-var "depth": The depth
+var "depth": The search depth.
 
 
 .. _cobj-searchresult-syntax:
@@ -329,7 +329,7 @@ var "depth": The depth
 Search syntax
 """""""""""""
 
-When you search, you can use three operator types
+When you search, you can use three operator types:
 
 - AND: "+", "and" (UK), "og" (DK)
 
@@ -349,10 +349,10 @@ Examples:
 
 #. *"menu backend"* - will find pages with the phrase "menu backend".
 
-#. *menu or backend* - will find pages with either 'menu' or 'backend'
+#. *menu or backend* - will find pages with either 'menu' or 'backend'.
 
 #. *menu or backend not content* - will find pages with either 'menu' or
-   'backend' but not 'content'
+   'backend' but not 'content'.
 
 
 .. _cobj-searchresult-example-queries:
@@ -360,8 +360,8 @@ Examples:
 Queries to the examples
 """""""""""""""""""""""
 
-In this case "pagecontent" is chosen as the fields to search. That
-includes  *tt\_content.header* ,  *tt\_content.bodytext* and
+In this case "page content" is chosen as the fields to search. That
+includes *tt\_content.header*, *tt\_content.bodytext* and
 *tt\_content.imagecaption.*
 
 Prefixed to these queries is this::
@@ -372,7 +372,7 @@ Prefixed to these queries is this::
 
 The part "... pages.uid IN (2,5,6,20,21,22,29,30,31,3,4,8,9,16,1)... "
 is a list of pages-uid's to search. This list is based on the page-ids
-in the website-branch of the pagetree and confines the search to that
+in the website-branch of the page tree and confines the search to that
 branch and not the whole page-table.
 
 #. ::
@@ -391,6 +391,6 @@ branch and not the whole page-table.
 
       ... AND ((tt_content.header LIKE '%menu%' OR tt_content.bodytext LIKE '%menu%' OR tt_content.imagecaption LIKE '%menu%') OR (tt_content.header LIKE '%backend%' OR tt_content.bodytext LIKE '%backend%' OR tt_content.imagecaption LIKE '%backend%') AND NOT (tt_content.header LIKE '%content%' OR tt_content.bodytext LIKE '%content%' OR tt_content.imagecaption LIKE '%content%')) GROUP BY pages.uid
 
-Notice that upper and lowercase do not matter. Also 'menu' as
-searchword will find 'menu', 'menus', 'menuitems' etc.
+Notice that upper and lowercase do not matter. Also 'men' as
+search word will find 'men', 'menu', 'menus' etc.
 

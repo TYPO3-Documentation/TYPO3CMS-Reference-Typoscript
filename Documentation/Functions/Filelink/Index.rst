@@ -66,14 +66,14 @@ icon, size and file are rendered in the listed order.
 
          Since TYPO3 4.7 the following sub-properties are available:
 
-         **path** : Path to the icon set (default:
+         **path:** Path to the icon set (default:
          typo3/gfx/fileicons/)
 
-         **ext** : File extension of icons (default: gif)
+         **ext:** File extension of icons (default: gif)
 
-         **widthAttribute** : Width of the icons in pixels (default: 18)
+         **widthAttribute:** Width of the icons in pixels (default: 18)
 
-         **heightAttribute** : Height of the icons in pixels (default: 16)
+         **heightAttribute:** Height of the icons in pixels (default: 16)
 
          These sub-properties all have stdWrap available.
 
@@ -87,7 +87,7 @@ icon, size and file are rendered in the listed order.
          *list of image extensions* /stdWrap
 
    Description
-         This is a comma separated list of those file extensions that should
+         This is a comma-separated list of those file extensions that should
          render as thumbnails instead of icons.
 
 
@@ -127,7 +127,7 @@ icon, size and file are rendered in the listed order.
    Description
          Enter a cObject to use alternatively for the icons, e.g. IMAGE type.
 
-         If this is set, it'll substitute the use of the thumbs-script for
+         If this is set, it will substitute the use of the thumbs-script for
          display of thumbnails.
 
 
@@ -158,7 +158,7 @@ icon, size and file are rendered in the listed order.
          stdWrap options for the label (by default the label is the filename)
          before being wrapped with the A-tags.
 
-         Use this to eg. import another label from a database field or such.
+         Use this to e.g. import another label from a database field or such.
 
 
 .. container:: table-row
@@ -182,7 +182,7 @@ icon, size and file are rendered in the listed order.
          boolean
 
    Description
-         If set, the link is first wrapped with " *.wrap"* and then the
+         If set, the link is first wrapped with "*.wrap*" and then the
          <A>-tag.
 
    Default
@@ -234,20 +234,20 @@ icon, size and file are rendered in the listed order.
 
          **Extra properties:**
 
-         **.secure** = [boolean]
+         **.secure:** Boolean.
 
-         If set, then the file pointed to by jumpurl is NOT redirected to, but
-         rather it's read from the file and returned with a correct header.
+         If set, then the file pointed to by jumpurl is **not** redirected to,
+         but rather it's read from the file and returned with a correct header.
          This option adds a hash and locationData to the URL and there MUST be
          access to the record in order to download the file. If the file
          position on the server is furthermore secured by a .htaccess file
          preventing ANY access, you've got secure download here!
 
-         **.secure.mimeTypes** = list of mimetypes
+         **.secure.mimeTypes:** List of MIME types.
 
-         Syntax: [ext] = [mimetype]
+         Syntax: [ext] = [MIME type]
 
-         **.parameter** = [string/stdWrap]
+         **.parameter:** String /stdWrap.
 
          By default the jumpurl link will use the current pid and typeNum.
 

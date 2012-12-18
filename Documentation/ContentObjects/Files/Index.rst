@@ -16,7 +16,7 @@ File Abstraction Layer (FAL) and is there to output information
 about files.
 
 
-**Note** : Do not mix this up with the cObject FILE; both are
+**Note:** Do not mix this up with the cObject FILE; both are
 different cObjects.
 
 
@@ -46,7 +46,7 @@ different cObjects.
          string /stdWrap
 
    Description
-         Comma separated list of sys_file UIDs, which are loaded
+         Comma-separated list of sys_file UIDs, which are loaded
          into the FILES object.
 
          **Example:** ::
@@ -66,9 +66,9 @@ different cObjects.
    Description
          Provides a way to load files from a file field (of type
          IRRE with sys_file_reference as child table). You can either
-         provide a UID or a comma separated list of UIDs from the
+         provide a UID or a comma-separated list of UIDs from the
          database table sys_file_reference or you have to specify a
-         table, uid and fieldname in the according sub-properties of
+         table, uid and field name in the according sub-properties of
          "references". See further documentation of these
          sub-properties in the table below.
 
@@ -106,7 +106,7 @@ different cObjects.
          string /stdWrap
 
    Description
-         Comma separated list of sys_file_collection UIDs, which
+         Comma-separated list of sys_file_collection UIDs, which
          are loaded into the FILES object.
 
 
@@ -119,7 +119,7 @@ different cObjects.
          string /stdWrap
 
    Description
-         Comma separated list of combined folder identifiers which
+         Comma-separated list of combined folder identifiers which
          are loaded into the FILES object.
 
          A combined folder identifier looks like this:
@@ -231,7 +231,7 @@ Special key: "references"
          string /stdWrap
 
    Description
-         Fieldname of the file field in the table.
+         Field name of the file field in the table.
 
 
 .. ###### END~OF~TABLE ######

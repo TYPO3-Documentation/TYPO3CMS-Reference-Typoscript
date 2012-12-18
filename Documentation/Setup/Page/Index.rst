@@ -60,10 +60,10 @@ Most of this code is executed in the PHP-script
          integer
 
    Description
-         This decides the the typeId of the page. The value defaults to 0 for
-         the first found PAGE object, but it MUST be set and be unique as soon
-         you use more than one such object (watch this if you use frames on
-         your page)!
+         This determines the typeId of the page. The value defaults to 0 for
+         the first found PAGE object, but it **must** be set and be unique as
+         soon you use *more* than one such object (watch this if you use frames
+         on your page)!
 
    Default
          0
@@ -87,7 +87,7 @@ Most of this code is executed in the PHP-script
          wrap
 
    Description
-         Wraps the content of the the cObject array
+         Wraps the content of the cObject array.
 
 
 .. container:: table-row
@@ -99,7 +99,7 @@ Most of this code is executed in the PHP-script
          ->stdWrap
 
    Description
-         Wraps the content of the the cObject array with stdWrap options
+         Wraps the content of the cObject array with stdWrap options.
 
 
 .. container:: table-row
@@ -168,7 +168,7 @@ Most of this code is executed in the PHP-script
 
             bodyTagMargins = 4
 
-         This adds  *leftmargin="4" topmargin="4" marginwidth="4"
+         This adds *leftmargin="4" topmargin="4" marginwidth="4"
          marginheight="4"* to the bodyTag.
 
 
@@ -274,8 +274,8 @@ Most of this code is executed in the PHP-script
          ->CONFIG
 
    Description
-         configuration for the page. Any entries override the same entries in
-         the toplevel-object "config".
+         Configuration for the page. Any entries made here override the same
+         entries in the top-level object "config".
 
 
 .. container:: table-row
@@ -287,18 +287,18 @@ Most of this code is executed in the PHP-script
          *(array of strings)*
 
    Description
-         With this you may include php-files. This does the same as
+         With this you may include PHP files. This does the same as
          "includeLibrary" in ->CONFIG but this can include more than one file.
-         These files are included  *after* the file of includeLibrary.
+         These files are included *after* the file of includeLibrary.
 
          **Note:**
 
-         The toplevel object "includeLibs" and the scripts defined with this
+         The top-level object "includeLibs" and the scripts defined with this
          property is added to each other. Script-keys (that is the "array of
          strings"-value, like below "tx\_myext") from this property of the page
-         overrides any scripts-keys from the toplevel "includeLibs" property!
+         overrides any scripts-keys from the top-level "includeLibs" property!
 
-         The script-filenames are of the datatype "resource".
+         The script-filenames are of the data type "resource".
 
          **Example:** ::
 
@@ -371,11 +371,11 @@ Most of this code is executed in the PHP-script
                SVG.forceFlash = 1
             }
 
-         **Note** : If both ExtCore and ExtJS are requested, the only superset
+         **Note:** If both ExtCore and ExtJS are requested, the only superset
          ExtJS will be loaded. This will also affect any options set. They will
          only come from ExtJS.
 
-         **Note** : In TYPO3 4.5.2 and older you should either request ExtJS or
+         **Note:** Before TYPO3 4.5.3 you should either request ExtJS or
          ExtCore, but not both together. Requesting both at the same time will
          lead to errors.
 
@@ -432,7 +432,7 @@ Most of this code is executed in the PHP-script
          extOnReady
 
    Data type
-         *-* >CARRAY
+         ->CARRAY
 
    Description
          ExtJS specific, adds inline JavaScript, wrapped in Ext.onReady.
@@ -464,25 +464,25 @@ Most of this code is executed in the PHP-script
          nothing is inserted. This means that remote files cannot be referenced
          (i.e. using "http://..."), except by using the ".external" property.
 
-         Each file has  *optional properties* :
+         Each file has *optional properties*:
 
-         **.allWrap** - wraps the complete tag, useful for conditional
+         **.allWrap:** Wraps the complete tag, useful for conditional
          comments.
 
-         **.disableCompression** - (Since TYPO3 4.6) If config.compressJs is
+         **.disableCompression:** (Since TYPO3 4.6) If config.compressJs is
          enabled, this disables the compression of this file.
 
-         **.excludeFromConcatenation** - (Since TYPO3 4.6) If
+         **.excludeFromConcatenation:** (Since TYPO3 4.6) If
          config.concatenateJs is enabled, this prevents the file from being
          concatenated.
 
-         **.external** - If set, there is no file existence check. Useful for
+         **.external:** If set, there is no file existence check. Useful for
          inclusion of external files.
 
-         **.forceOnTop** - boolean flag. If set, this file will be added on top
+         **.forceOnTop:** Boolean flag. If set, this file will be added on top
          of all other files.
 
-         **.if** - (Since TYPO3 4.7) Allows to define conditions, which must
+         **.if:** (Since TYPO3 4.7) Allows to define conditions, which must
          evaluate to TRUE for the file to be included. If they do not evaluate
          to TRUE, the file will not be included. Extensive usage might cause
          huge numbers of temporary files to be created. See ->if for details.
@@ -521,30 +521,30 @@ Most of this code is executed in the PHP-script
          nothing is inserted. This means that remote files cannot be referenced
          (i.e. using "http://..."), except by using the ".external" property.
 
-         Each file has  *optional properties* :
+         Each file has *optional properties*:
 
-         **.allWrap** - wraps the complete tag, useful for conditional
+         **.allWrap:** Wraps the complete tag, useful for conditional
          comments.
 
-         **.disableCompression** - (Since TYPO3 4.6) If config.compressJs is
+         **.disableCompression:** (Since TYPO3 4.6) If config.compressJs is
          enabled, this disables the compression of this file.
 
-         **.excludeFromConcatenation** - (Since TYPO3 4.6) If
+         **.excludeFromConcatenation:** (Since TYPO3 4.6) If
          config.concatenateJs is enabled, this prevents the file from being
          concatenated.
 
-         **.external** - If set, there is no file existence check. Useful for
+         **.external:** If set, there is no file existence check. Useful for
          inclusion of external files.
 
-         **.forceOnTop** - boolean flag. If set, this file will be added on top
+         **.forceOnTop:** Boolean flag. If set, this file will be added on top
          of all other files.
 
-         **.if** - (Since TYPO3 4.7) Allows to define conditions, which must
+         **.if:** (Since TYPO3 4.7) Allows to define conditions, which must
          evaluate to TRUE for the file to be included. If they do not evaluate
          to TRUE, the file will not be included. Extensive usage might cause
          huge numbers of temporary files to be created. See ->if for details.
 
-         **.type** - setting the MIME type of the script (default:
+         **.type:** Setting the MIME type of the script (default:
          text/javascript).
 
          **Example:** ::
@@ -634,7 +634,7 @@ Most of this code is executed in the PHP-script
          With config.minifyJS = 1 (removed in TYPO3 6.0) the inlineJS was
          minified as well.
 
-         **Note** : This option was deprecated and has been removed in TYPO3
+         **Note:** This option was deprecated and has been removed in TYPO3
          4.3. Use jsInline instead.
 
 
@@ -674,35 +674,35 @@ Most of this code is executed in the PHP-script
          The file definition must be a valid "resource" data type, otherwise
          nothing is inserted.
 
-         Each file has  *optional properties* :
+         Each file has *optional properties*:
 
-         **.allWrap** - wraps the complete tag, useful for conditional
+         **.allWrap:** Wraps the complete tag, useful for conditional
          comments.
 
-         **.alternate** - If set (boolean) then the rel-attribute will be
+         **.alternate:** If set (boolean) then the rel-attribute will be
          "alternate stylesheet".
 
-         **.disableCompression** - (Since TYPO3 4.6) If config.compressCss is
+         **.disableCompression:** (Since TYPO3 4.6) If config.compressCss is
          enabled, this disables the compression of this file.
 
-         **.excludeFromConcatenation** - (Since TYPO3 4.6) If
+         **.excludeFromConcatenation:** (Since TYPO3 4.6) If
          config.concatenateCss is enabled, this prevents the file from being
          concatenated.
 
-         **.external** - If set, there is no file existence check. Useful for
+         **.external:** If set, there is no file existence check. Useful for
          inclusion of external files.
 
-         **.if** – (Since TYPO3 4.7) Allows to define conditions, which must
+         **.if:** (Since TYPO3 4.7) Allows to define conditions, which must
          evaluate to TRUE for the file to be included. If they do not evaluate
          to TRUE, the file will not be included. Extensive usage might cause
          huge numbers of temporary files to be created. See ->if for details.
 
-         **.import** - If set (boolean) then the @import way of including a
+         **.import:** If set (boolean) then the @import way of including a
          stylesheet is used instead of <link>
 
-         **.media** - setting the media attribute of the <style> tag.
+         **.media:** Setting the media attribute of the <style> tag.
 
-         **.title** - setting the title of the <style> tag.
+         **.title:** Setting the title of the <style> tag.
 
          **Example:** ::
 
@@ -750,8 +750,8 @@ Most of this code is executed in the PHP-script
          string
 
    Description
-         This value is just passed on as inline css (in-document css
-         encapsulated in <style>-tags)
+         This value is just passed on as inline CSS (in-document CSS
+         encapsulated in <style>-tags).
 
 
 .. container:: table-row
@@ -770,10 +770,10 @@ Most of this code is executed in the PHP-script
 
    Description
          If set, the classes for the Rich Text Editor configured in Page
-         TSconfig is inserted in as the first thing in the Style-section right
+         TSconfig are inserted as the first thing in the Style-section right
          after the setting of the stylesheet.
 
-         **.add\_mainStyleOverrideDefs** = [\* / list of tags ] - will add all
+         **.add\_mainStyleOverrideDefs:** [\* / list of tags ]. Will add all
          the "RTE.default. mainStyleOverride\_add" - tags configured as well.
 
          *Might be deprecated soon. Most likely the RTE should be configured by
@@ -791,7 +791,7 @@ Most of this code is executed in the PHP-script
    Description
          Disables link-underlining. Uses in-document stylesheet.
 
-         **Note** : This option was deprecated and has been removed in
+         **Note:** This option was deprecated and has been removed in
          TYPO3 6.0. Use stylesheets instead.
 
 
@@ -807,7 +807,7 @@ Most of this code is executed in the PHP-script
          The color of a link when the mouse moves over it! (only MSIE). Uses
          in-document stylesheet.
 
-         **Note** : This option was deprecated and has been removed in
+         **Note:** This option was deprecated and has been removed in
          TYPO3 6.0. Use stylesheets instead.
 
 
@@ -826,7 +826,7 @@ Most of this code is executed in the PHP-script
 
             page.hoverStyle = font: bold; text-decoration: none;
 
-         **Note** : This option was deprecated and has been removed in
+         **Note:** This option was deprecated and has been removed in
          TYPO3 6.0. Use stylesheets instead.
 
 
@@ -846,11 +846,11 @@ Most of this code is executed in the PHP-script
 
          **Tip:**
 
-         Use this together with the config-option "compensateFieldWidth" set to
-         "0.6" for netscape-browsers in order to render the small form fields
-         in the same width!
+         Use this together with the option "config.compensateFieldWidth" set to
+         "0.6" for Netscape browsers in order to render the small form fields
+         in the same width as is normal for other browsers!
 
-         **Note** : This option was deprecated and has been removed in
+         **Note:** This option was deprecated and has been removed in
          TYPO3 6.0. Use stylesheets instead.
 
 

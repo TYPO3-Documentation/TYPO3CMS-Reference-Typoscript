@@ -43,10 +43,10 @@ the gif-file. This is especially used with the IMGMENU menuobject.
          url
 
    Data type
-         url
+         string
 
    Description
-         url to link
+         The URL to link.
 
    Default
          For IMGMENU menu objects provided automatically
@@ -79,9 +79,9 @@ the gif-file. This is especially used with the IMGMENU menuobject.
          Normally graphical links are "blurred" if the browser is MSIE. This
          removes the ugly box around a link.
 
-         If this property is set, the link is NOT blurred with "onFocus".
+         If this property is set, the link is **not** blurred with "onFocus".
 
-         **Note** : This option and the JavaScript for blurring have been
+         **Note:** This option and the JavaScript for blurring have been
          removed in TYPO3 6.0.
 
    Default

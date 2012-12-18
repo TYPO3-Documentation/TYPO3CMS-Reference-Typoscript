@@ -22,7 +22,7 @@ work as described in the documentation inside the system extension.
 
 This object provides a way to create forms::
 
-   textarea:  Label | [* = required][field name =] textarea[,cols,rows,"wrap= [eg. "OFF"]"] | [defaultdata] | Special evaluation configuration (see note below)
+   textarea:  Label | [* = required][field name =] textarea[,cols,rows,"wrap= [e.g. "OFF"]"] | [defaultdata] | Special evaluation configuration (see note below)
    input:          Label | [* = required][field name =] input[,size,max] | [defaultdata] | Special evaluation configuration (see note below)
    password:       Label | [* = required][field name =] input[,size,max] | [defaultdata]
    file:           Label | [* = required][field name (*1)=] file[,size]
@@ -76,7 +76,7 @@ names:
 Displaying the form:
 """"""""""""""""""""
 
-**You must set the property "layout"** . If you do not set it, the
+**You must set the property "layout".** If you do not set it, the
 form will not be rendered! For more information see the example and
 the table below.
 
@@ -133,7 +133,7 @@ those types as part 4 in the configuration line (see examples above).
 
 The special evaluation types are divided by a semicolon (":").
 
-The first part defines the evaluation  **keyword** . Current options
+The first part defines the evaluation **keyword**. Current options
 are "EREG" (for regular expression) and "EMAIL" (for evaluation to an
 email address).
 
@@ -194,15 +194,15 @@ Examples:
          property, you can define the elements in regular TypoScript style
          arrays.
 
-         .dataArray is  *added* to the input in .data if any.
+         .dataArray is *added* to the input in .data if any.
 
          Every entry in the dataArray is numeric and has three main properties,
-         *label* ,  *type* ,  *value* and  *required* . All of them have
+         *label*, *type*, *value* and *required*. All of them have
          stdWrap properties.
 
          There is an alternative property to .value, which is .valueArray. This
          is also an array in the same style with numeric entries which has
-         properties  *label* ,  *value* and  *selected* . All three of these
+         properties *label*, *value* and *selected*. All three of these
          properties have stdWrap properties.
 
          **Example:** ::
@@ -311,22 +311,22 @@ Examples:
    Description
          Type (action="" of the form):
 
-         **Integer:** this is regarded to be a page in TYPO3
+         **Integer:** This is regarded to be a page in TYPO3.
 
-         **String:** this is regarded to be a normal URL (e.g. "formmail.php"
-         or "fe\_tce\_db.php")
+         **String:** This is regarded to be a normal URL (e.g. "formmail.php"
+         or "fe\_tce\_db.php").
 
-         **Empty:** the current page is chosen.
+         **Empty:** The current page is chosen.
 
-         **Note:** If type is integer/empty the form will be submitted to a
+         **Note:** If type is integer or empty, the form will be submitted to a
          page in TYPO3 and if this page has a value for target/no\_cache, then
          this will be used instead of the default target/no\_cache below.
 
          **Note:** If the redirect-value is set, the redirect-target overrides
-         the target set by the action-url
+         the target set by the action-url.
 
          **Note:** May be overridden by the property override feature of the
-         formdata (see above)
+         formdata (see above).
 
 
 .. container:: table-row
@@ -422,7 +422,7 @@ Examples:
          page-content item from the table "tt\_content" with id "120", then the
          value would be "100:tt\_content:120".
 
-         The value is use by eg. the cObject SEARCHRESULT. If the value
+         The value is use by e.g. the cObject SEARCHRESULT. If the value
          $GLOBALS['HTTP\_POST\_VARS']['locationData'] is detected here, the
          search is done as if it was performed on this page! This is very
          useful if you want a search functionality implemented on a page with
@@ -454,11 +454,11 @@ Examples:
    Description
          URL to redirect to (generates the hidden field "redirect")
 
-         **Integer:** this is regarded to be a page in TYPO3
+         **Integer:** This is regarded to be a page in TYPO3.
 
-         **String:** this is regarded to be a normal url
+         **String:** This is regarded to be a normal URL.
 
-         **Empty;** the current page is chosen.
+         **Empty:** The current page is chosen.
 
          **Note:** If this value is set, the target of this overrides the
          target of the "type".
@@ -470,7 +470,7 @@ Examples:
          recipient
 
    Data type
-         *(list of) string* /stdWrap
+         *(list of strings)* /stdWrap
 
    Description
          Email recipient of the formmail content (generates the hiddenfield
@@ -761,7 +761,7 @@ Examples:
 
          Available sub-property:
 
-         **stdWrap** , see ->stdWrap.
+         **stdWrap**, see ->stdWrap.
 
 
 .. container:: table-row
@@ -801,7 +801,7 @@ Examples:
 
          **Example:**
 
-         If value is  *tx\_myextension[input][ \| ]* then the field name
+         If value is *tx\_myextension[input][ \| ]* then the field name
          "email" would be wrapped to this value:
          *tx\_myextension[input][email]*
 
@@ -855,7 +855,7 @@ Examples:
          - All form elements will have an id-attribute carrying the formname with
            the md5-hashed field name appended
 
-         **Notice:** In TYPO3 4.0 and later, CSS Styled Content is configured
+         **Note:** In TYPO3 4.0 and later, CSS Styled Content is configured
          to produce accessible forms by default.
 
 
@@ -929,7 +929,7 @@ will be substituted by the username if a user is logged in!
 
 If you want the login-form to change into a logout form you should use
 conditions to do this. See this TS-example (extract from the
-static\_template  *"styles.content (default)"* )::
+static\_template *"styles.content (default)"*)::
 
      # loginform
    styles.content.loginform {
@@ -945,7 +945,7 @@ Example: Mailform
 
 This creates a simple mail form (this is not TypoScript, but the setup
 code that you should put directly into the "bodytext"-field of a
-pagecontent record of the type "FORMMAIL"::
+page content record of the type "FORMMAIL"::
 
    Name: | *replyto_name= input | Enter your name here
    Email: | *replyto_email=input |
@@ -977,8 +977,8 @@ pagecontent record of the type "FORMMAIL"::
 
 - "Like TV" is a checkbox. Default is "unchecked".
 
-- "formtype\_mail" is the name of the submit button. It  **must** be
-  names soif you use the built-in form mail of TYPO3, at it will make
+- "formtype\_mail" is the name of the submit button. It **must** be
+  names so if you use the built-in form mail of TYPO3, at it will make
   TYPO3 react automatically on the input and interpret it as form mail
   input!
 
@@ -989,7 +989,7 @@ pagecontent record of the type "FORMMAIL"::
 
 - "subject": Enter the subject of your mail
 
-- "recipient\_copy" : A copy is sent to this mail-address. You may
+- "recipient\_copy" : A copy is sent to this mail address. You may
   supply more addresses by separating with a comma (,). The mail sent to
   recipient\_copy is the same, but a separate message from the one sent
   to the 'recipient' and furthermore the copy-mail is sent only if the
@@ -1012,13 +1012,13 @@ pagecontent record of the type "FORMMAIL"::
   mail header.
 
 - "redirect": With this option you can define a TYPO3 page (page id) or
-  external URL (www.example.com) as redirect url after submit. If this
+  external URL (www.example.com) as redirect URL after submit. If this
   option isn't set the form will be shown again.
 
 - "priority": With this option you can set the priority of the mail from
   1 (not important) to 5 (very important). Default is 3.
 
 - "tv" (again, but hidden). Repeating this field may be smart as the
-  value "tv" is normally NOT submitted with the value "false" if not
+  value "tv" is normally **not** submitted with the value "false" if not
   checked. Inserting this line will ensure a default value for "tv".
 

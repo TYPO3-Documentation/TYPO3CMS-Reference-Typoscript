@@ -27,8 +27,8 @@ Example:
 
 This form-element will change the registered value of record with
 uid=345 from the "tt\_products" table in typo3. Please note, that the
-record itself is NOT in any way modified, only the "counter" in the
-session-data indicating the "number of items" from the table is
+record itself is **not** in any way modified, only the "counter" in
+the session-data indicating the "number of items" from the table is
 modified. ::
 
    <input name="recs[tt_products][345]">
@@ -50,8 +50,8 @@ Example:
    <input type="checkbox" name="recs[tt_content][345]" value="1">
 
 
-**Clearing the "basket"**
-"""""""""""""""""""""""""
+Clearing the "basket"
+"""""""""""""""""""""
 
 This will clear the basket::
 

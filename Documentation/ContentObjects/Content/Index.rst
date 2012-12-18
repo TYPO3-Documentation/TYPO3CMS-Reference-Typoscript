@@ -52,7 +52,7 @@ the records selected which has a higher value than the current.
          table
 
    Data type
-         *TableName* /stdWrap
+         *table name* /stdWrap
 
    Description
          The table, the content should come from.
@@ -73,7 +73,7 @@ the records selected which has a higher value than the current.
          cObject
 
    Default
-         < [tablename]
+         < [table name]
 
 
 .. container:: table-row
@@ -93,16 +93,16 @@ the records selected which has a higher value than the current.
 
          Use -1 in combination with collect.
 
-         **.collect (integer /stdWrap)** : If set, all content elements found
+         **.collect:** (integer /stdWrap) If set, all content elements found
          on current and parent pages will be collected. Otherwise, the sliding
          would stop after the first hit. Set this value to the amount of levels
          to collect on, or use "-1" to collect up to the siteroot.
 
-         **.collectFuzzy (boolean /stdWrap)** : Only useful in collect mode. If
+         **.collectFuzzy:** (boolean /stdWrap) Only useful in collect mode. If
          no content elements have been found for the specified depth in collect
          mode, traverse further until at least one match has occurred.
 
-         **.collectReverse (boolean /stdWrap)** : Change order of elements in
+         **.collectReverse:** (boolean /stdWrap) Change order of elements in
          collect mode. If set, elements of the current page will be at the
          bottom.
 

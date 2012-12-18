@@ -51,11 +51,11 @@
 
             meta.description = This is the description of the content in this document.
             meta.keywords = These are the keywords.
-            meta.refresh = [seconds]; [url, leave blank for same page]
+            meta.refresh = [seconds]; [URL, leave blank for same page]
 
          For each key the following sub-property is available:
 
-         **httpEquivalent** : (Since TYPO3 4.7) If set to 1, the http-equiv
+         **httpEquivalent:** (Since TYPO3 4.7) If set to 1, the http-equiv
          attribute is used in the meta tag instead of the "name" attribute.
          Default: 0.
 

@@ -18,7 +18,7 @@ It is defined as PHP function fileResource() in
 typo3/sysext/frontend/Classes/ContentObject/ContentObjectRenderer.php
 (/typo3/sysext/cms/tslib/class.tslib\_content.php).
 
-**Note** : Do not mix this up with the cObject FILES; both are
+**Note:** Do not mix this up with the cObject FILES; both are
 different cObjects.
 
 
@@ -50,8 +50,8 @@ different cObjects.
    Description
          The file whose content should be returned.
 
-         If the resource is  **jpg, jpeg, gif or png** the image is inserted as
-         an image-tag. All other formats are read and inserted into the HTML-
+         If the resource is **jpg, jpeg, gif or png** the image is inserted as
+         an image-tag. All other formats are read and inserted into the HTML
          code.
 
          The maximum filesize of documents to be read is set to 1024 kb

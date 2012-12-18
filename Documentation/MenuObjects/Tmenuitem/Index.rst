@@ -66,7 +66,7 @@ the current page record, use stdWrap.data = page : [field name].
 
    Description
          If set, all appearances of the string '{elementUid}' in the total
-         element html-code (after wrapped in .allWrap} are substituted with the
+         element HTML code (after wrapped in .allWrap} are substituted with the
          uid number of the menu item.
 
          This is useful if you want to insert an identification code in the
@@ -213,7 +213,7 @@ the current page record, use stdWrap.data = page : [field name].
          boolean
 
    Description
-         If set, the link is first wrapped with " *.wrap"* and then the
+         If set, the link is first wrapped with "*.wrap*" and then the
          <A>-tag.
 
    Default

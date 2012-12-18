@@ -26,12 +26,12 @@ format supported. PNG and JPG are just as well to create today
 
 .. _gifbuilder-calc:
 
-NOTE (+calc)
-""""""""""""
+Note on (+calc)
+"""""""""""""""
 
 Whenever the "+calc"-function is added to a value in the data type of
 the properties underneath, you can use the dimensions of TEXT and
-IMAGE-objects from the GifBuilderObj-array. This is done by inserting
+IMAGE objects from the GifBuilderObj-array. This is done by inserting
 a tag like this: "[10.w]" or "[10.h]", where "10" is the
 GifBuilderObj-number in the array and "w"/"h" signifies either width
 or height of the object.
@@ -76,7 +76,7 @@ constant {$styles.header.gfx1.itemH}
 The "\_GIFBUILDER" Top Level Object
 """""""""""""""""""""""""""""""""""
 
-You can configure some global settings for GIFBUILDER by a top level
+You can configure some global settings for GIFBUILDER by a top-level
 object named "\_GIFBUILDER". One of the available properties of the
 global GIFBUILDER configuration is "charRangeMap".
 
@@ -122,7 +122,7 @@ match the basename of the main font face with an alternative font.
 
    Description
          Basename of font file to match for this configuration. Notice that
-         only the  *filename* of the font file is used - the path is stripped
+         only the *filename* of the font file is used - the path is stripped
          off. This is done to make matching easier and avoid problems when font
          files might move to other locations in extensions etc.
 
@@ -136,7 +136,7 @@ match the basename of the main font face with an alternative font.
          configuration into "splitRendering" configuration of the individual
          GIFBUILDER objects. In the example below the key is "123".
 
-         Notice; If the key is already found in the local GIFBUILDER
+         Notice: If the key is already found in the local GIFBUILDER
          configuration the content of that key is respected and not overridden.
          Thus you can make local configurations which override the global
          setting.

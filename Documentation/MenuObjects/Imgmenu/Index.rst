@@ -11,9 +11,9 @@
 IMGMENU
 ^^^^^^^
 
-Imagemaps are made by creating one large GIFBUILDER-object based on
-the GIFBUILDER-object ".main" and adding the properties of the
-GIFBUILDER-objects for each item (NO, ACT, SPC... and so on).
+Imagemaps are made by creating one large GIFBUILDER object based on
+the GIFBUILDER object ".main" and adding the properties of the
+GIFBUILDER objects for each item (NO, ACT, SPC... and so on).
 
 .. ### BEGIN~OF~TABLE ###
 
@@ -72,10 +72,10 @@ GIFBUILDER-objects for each item (NO, ACT, SPC... and so on).
          Normally graphical links are "blurred" if the browser is MSIE.
          Blurring removes the ugly box around a clicked link.
 
-         If this property is set, the link is NOT blurred (browser-default)
+         If this property is set, the link is **not** blurred (browser-default)
          with "onFocus".
 
-         **Note** : This option and the JavaScript for blurring have been
+         **Note:** This option and the JavaScript for blurring have been
          removed in TYPO3 6.0.
 
 
@@ -138,7 +138,7 @@ GIFBUILDER-objects for each item (NO, ACT, SPC... and so on).
          This is the TMENUITEM-options for each category of menu item that can
          be generated.
 
-         **SPECIAL:**
+         **Special:**
 
          The ->OptionSplit function is run on the whole GIFBUILDER-
          configuration before the items are generated.
@@ -149,22 +149,22 @@ GIFBUILDER-objects for each item (NO, ACT, SPC... and so on).
          dimension of each link.
 
          This works by adding a WORKAREA-GifBuilderObj between each of the
-         IMGMENUITEM ("subset" of a GIFBUILDER-object) and this work area
+         IMGMENUITEM ("subset" of a GIFBUILDER object) and this work area
          defines where the text should be printed. As such the "x,y" defines
-         the offset  ***the next item will have*** (this should be the width of
-         the previous in many cases!) and "v,h" defines the  ***dimensions of
-         the current item*** .
+         the offset **the next item will have** (this should be the width of
+         the previous in many cases!) and "v,h" defines the **dimensions of
+         the current item**.
 
          Consider this example taken from the static\_template "template: MM":
 
          NO.distrib = textX+10, 0, textX+10, textY+5
 
          In the future TypoScript may provide better ways to position
-         GIFBUILDER-objects on the image-maps!
+         GIFBUILDER objects on the image-maps!
 
-         **ImgMap** is automatically used on the links! (that is the ".imgMap"
-         property of the text-objects in the GIFBUILDER-objects is set
-         automatically, unless is already set.)
+         **ImgMap** is automatically used on the links! (Meaning the ".imgMap"
+         property of the TEXT objects in the GIFBUILDER objects is set
+         automatically, unless it is already set.)
 
 
 .. container:: table-row

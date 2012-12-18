@@ -22,7 +22,7 @@ files if you differ your output based on the same conditions that the
 template may include! For example you cannot just return browser-
 specific code to TypoScript if not the template also distinguishes
 between the actual browsers. If you do, the cache will cache the page
-with the browser-specific HTML-code and the next hit by another
+with the browser-specific HTML code and the next hit by another
 browser will trigger the cache to return a wrong page. If the
 condition is correctly setup "another browser"-hit will instead render
 another page (which will also be cached but tagged with the other

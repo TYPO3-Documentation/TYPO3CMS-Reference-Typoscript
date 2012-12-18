@@ -59,7 +59,7 @@ Description
 """""""""""
 
 This class is used to create forms for database-administration in the
-frontend  *independently of the backend (BE).* Thus you may want to
+frontend *independently of the backend (BE)*. Thus you may want to
 use this, if you like frontend users to edit database content.
 
 Authentication either goes through fe\_user login in which case you
@@ -107,7 +107,7 @@ Incoming GET or POST vars:
    rU            Record UID
    aC            Authentication Code
    fD            Fixed Data (array of fields)
-   FE            Frontend Edit data array, syntax, FE[ *tablename* ][ *field name* ] = value
+   FE            Frontend Edit data array. Syntax: FE[*table name*][*field name*] = value
 ============  ===================
 
 .. ###### END~OF~SIMPLE~TABLE ######
@@ -166,12 +166,12 @@ fe\_adminLib.inc properties
          table
 
    Data type
-         tablename
+         string
 
    Description
-         The table to edit.
+         The name of the table to edit.
 
-         Notice: The ultimate lsit of fields allowed to be edited for the table
+         **Note:** The ultimate list of fields allowed to be edited for the table
          is defined in TCA with the key ["feInterface"]["fe\_admin\_fieldList"]
          for each table in question. For an example, see the table definition
          for fe\_users which is a good example.
@@ -196,7 +196,7 @@ fe\_adminLib.inc properties
          clearCacheOfPages
 
    Data type
-         *[list of integers]*
+         *(list of integers)*
 
    Description
          This is a list of page-ids for which to clear the cache on any
@@ -235,12 +235,12 @@ fe\_adminLib.inc properties
 
          But you need to specify:
 
-         **.fields** (list of field names) which determines the fields allowed
+         **.fields:** List of field names. Determines the fields allowed
          for editing. Every field in this list must be found as well in the
          ["feInterface"]["fe\_admin\_fieldList"] found in the TCA array which
          ultimately determines which fields can be edited by the fe\_adminLib.
 
-         **.overrideValues.[field name]** (value string) defines values for
+         **.overrideValues.[field name]:** Value string. Defines values for
          specific fields which will override ANY input from the form.
          Overriding values happens after the outside values has been parsed by
          the .parseValues-property of fe\_adminLib but before the evaluation by
@@ -248,26 +248,26 @@ fe\_adminLib.inc properties
          wish to hide a record which is being edited, because you want to
          preview it first.
 
-         **.required** (list of field names, subset of .fields) which
-         determines which fields are required to return a true value. The valid
+         **.required:** List of field names, subset of .fields.
+         Determines which fields are required to return a true value. The valid
          fields entered here will have the subpart ###SUB\_REQUIRED\_FIELD\_
          *[field name]* ### removed from the templates if they evaluates to
          being true and thereby OK. See below for information about this
          subpart.
 
-         **.evalValues.[field name]** (list of eval-codes) defines specific
-         evaluation forms for the individual fiels of the form. See below.
+         **.evalValues.[field name]:** List of eval-codes. Defines specific
+         evaluation forms for the individual fields of the form. See below.
 
-         **.preview** (boolean) will enable the form submitted to be previewed
+         **.preview:** Boolean. Will enable the form submitted to be previewed
          first. This requires a template for preview to be found in the
          template file. See below for subpart marker names.
 
-         **.menuLockPid** (boolean will force the menu of editable items to be
-         locked to the .pid (edit only)
+         **.menuLockPid:** Boolean. Will force the menu of editable items to be
+         locked to the .pid (edit only).
 
-         **.userFunc\_afterSave** (function name) is called after the record is
-         saved. The content passed is an array with the current (and previous)
-         record in.
+         **.userFunc\_afterSave:** Function name. The function to be called after
+         the record is saved. The content passed is an array with the current
+         (and previous) record in.
 
 
 .. container:: table-row
@@ -283,11 +283,11 @@ fe\_adminLib.inc properties
 
          Plus there is these additional properties:
 
-         **.noSpecialLoginForm** (boolean) - if set, fe\_adminLib does NOT look
-         for the subpart marker TEMPLATE\_CREATE\_LOGIN but always for
+         **.noSpecialLoginForm:** Boolean. If set, fe\_adminLib does **not**
+         look for the subpart marker TEMPLATE\_CREATE\_LOGIN but always for
          TEMPLATE\_CREATE
 
-         **.defaultValues.[field name]** (value string); Like .overrideValues
+         **.defaultValues.[field name]:** Value string. Like .overrideValues
          but this sets the default values the first time the form is displayed.
 
 
@@ -336,18 +336,18 @@ fe\_adminLib.inc properties
          In order to make fe\_adminLib send an infomail, you must specify these
          vars in your GET vars or HTML-form.
 
-         **fetch** - if integer, it searches for the uid being the value of
+         **fetch:** If integer, it searches for the uid being the value of
          'fetch'. If not, it searches for the email-field (defined by a
          property of fe\_adminLib, see below).
 
-         **key** - points to the infomail.[key] configuration to use
+         **key:** Points to the infomail.[key] configuration to use.
 
          **Properties:**
 
-         **.dontLockPid** (boolean) - selects only records from the .pid of
+         **.dontLockPid:** Boolean. Selects only records from the .pid of
          fe\_adminLib.
 
-         **.label** (string) - The suffix for the markers, see 'Email Markers'
+         **.label:** String. The suffix for the markers, see 'Email Markers'
          beneath.
 
 
@@ -365,14 +365,14 @@ fe\_adminLib.inc properties
 
          **Syntax:**
 
-         **.[fix**  ***key***  **].[**  ***field name***  **] =**
-         ***fieldvalue*** - is used to setup a setfixed-link insertable in the
-         infomail by the SYS\_SETFIXED\_\*-markers. See above (setfixed-
-         property of fe\_adminLib).
+         **.[fixkey].[field name] = fieldvalue** Used to setup a
+         setfixed-link insertable in the infomail by the
+         SYS\_SETFIXED\_\*-markers. See above (setfixed-property of
+         fe\_adminLib).
 
          Special fixkey 'DELETE' is just a boolean.
 
-         **.userFunc\_afterSave** (function name) is called after the record is
+         **.userFunc\_afterSave:** Function name. Called after the record is
          saved. The content passed is an array with the current (and previous)
          record in.
 
@@ -426,7 +426,7 @@ fe\_adminLib.inc properties
 
             &cmd=setfixed&rU=9&fD[hidden]=0&aC=5c403d90
 
-         Now, all you need is to point that to the correct url (where
+         Now, all you need is to point that to the correct URL (where
          fe\_adminLib is invoked!), e.g.::
 
             ###THIS_URL######FORM_URL######SYS_SETFIXED_approve###
@@ -448,26 +448,26 @@ fe\_adminLib.inc properties
          authcodeFields
 
    Data type
-         *[list of fields]*
+         *(list of fields)*
 
    Description
-         Comma separated list of fields to base the authCode generation on.
+         Comma-separated list of fields to base the authCode generation on.
          Basically this list would include "uid" only in most cases. If the
          list includes more fields, you should be aware that the authCode will
          change when the value of that field changes. And then the user will
          have to re-send an email to himself with a new code.
 
-         **.addKey** (string) adds the string to the md5-hash of the authCode.
+         **.addKey:** String. Adds the string to the md5-hash of the authCode.
          Just enter any random string here. Point is that people from outside
          do not know this code and therefore are not able to reconstruct the
          md5-hash solely based on the uid.
 
-         **.addDate** (date-config) You can use this to make the code time-
+         **.addDate:** Date-config. You can use this to make the code time-
          disabled. Say if you enter "d-m-Y" here as value, the code will work
          until midnight and then a new code will be valid.
 
-         **.codeLength** (int) Defines how long the authentication code should
-         be. Default is 8 characters.
+         **.codeLength:** Integer. Defines how long the authentication code
+         should be. Default is 8 characters.
 
          In any case $TYPO3\_CONF\_VARS['SYS']['encryptionKey'] is prepended.
 
@@ -493,16 +493,16 @@ fe\_adminLib.inc properties
    Description
          Available sub-properties:
 
-         **.from** (string, email) Defines the sender email address of mails
-         sent out
+         **.from:** String. Defines the sender email address of mails sent
+         out.
 
-         **.fromName** (string) Defines the name of the sender. If set, this
-         will be used on the form NAME <EMAIL>
+         **.fromName:** String. Defines the name of the sender. If set, this
+         will be used on the form NAME <EMAIL>.
 
-         **.admin** Email address of the administrator which is notified of
+         **.admin:** Email address of the administrator which is notified of
          changes.
 
-         **.field** (string/integer) Defines the field name of the record where
+         **.field:** String / Integer. Defines the field name of the record where
          the email address to send to is found. If the field content happens to
          be an integer, this is assumed to be the uid of the fe\_user owning
          the record and the email address of that user is fetched for the
@@ -561,7 +561,7 @@ fe\_adminLib.inc properties
          allowedGroups
 
    Data type
-         [list of integers]
+         *(list of integers)*
 
    Description
          List of fe\_groups uid numbers which are allowed to edit the records
@@ -605,44 +605,44 @@ fe\_adminLib.inc properties
          parseValues.[field]
 
    Data type
-         [list of parseCodes]
+         *(list of parseCodes)*
 
    Description
          **ParseCodes:**
 
-         **int** - returns the integer value of the input
+         **int:** Returns the integer value of the input.
 
-         **lower** - returns lowercase version of the input
+         **lower:** Returns lowercase version of the input.
 
-         **upper** - returns uppercase version of the input
+         **upper:** Returns uppercase version of the input.
 
-         **nospace** - strips all space
+         **nospace:** Strips all spaces.
 
-         **alpha, num, alphanum, alphanum\_x** - only alphabetic (a-z) and/or
-         numeric chars. alphanum\_x also allows \_ and -
+         **alpha, num, alphanum, alphanum\_x:** Only alphabetic (a-z) and/or
+         numeric chars. alphanum\_x also allows \_ and -.
 
-         **trim** - trims whitespace in the ends of the string
+         **trim:** Trims whitespace at the beginning and the end of the string.
 
-         **setEmptyIfAbsent** - will make sure the field is set to empty if the
+         **setEmptyIfAbsent:** Will make sure the field is set to empty if the
          value is not submitted. This ensures a field to be updated an is handy
-         with checkboxes
+         with checkboxes.
 
-         **random[x]** - Returns a random number between 0 and x
+         **random[x]:** Returns a random number between 0 and x.
 
          **files[semicolon-list(!) of extensions, none=all][maxsize in kb,
-         none=no limit]** - Defining the field to hold files. See below for
+         none=no limit]:** Defining the field to hold files. See below for
          details!
 
-         **multiple** - Set this, if the input comes from a multiple-selector
-         box (remember to add ...[] to the field name so the values come in an
+         **multiple:** Set this, if the input comes from a multiple-selector
+         box. (Remember to add ...[] to the field name so the values come in an
          array!)
 
-         **checkArray** - Set this, if you want several checkboxes to set bits
+         **checkArray:** Set this, if you want several checkboxes to set bits
          in a single field. In that case you must prepend every checkbox with
          [x] where x is the bitnumber to set starting with zero. The default
          values of the checkbox form elements must be false.
 
-         **uniqueHashInt[semicolon-list(!) of other fields]** - This makes a
+         **uniqueHashInt[semicolon-list(!) of other fields]:** This makes a
          unique hash (32 bit integer) of the content in the specified fields.
          The values of those fields are first converted to lowercase and only
          alphanum chars are preserved.
@@ -779,7 +779,7 @@ Main subparts
 
 There is a certain system in the naming of the main subparts of the
 template file. The markers below are used when an action results in
-"saving". The  *[action]* code may be DELETE, EDIT or CREATE depending
+"saving". The *[action]* code may be DELETE, EDIT or CREATE depending
 on the cmd value.
 
 .. t3-field-list-table::
@@ -792,15 +792,15 @@ on the cmd value.
          Description:
 
  - :Subpart marker:
-         ###TEMPLATE\_ *[action]* \_SAVED###
+         ###TEMPLATE\_[action]\_SAVED###
 
    :Description:
-         Used for HTML output
+         Used for HTML output with "[action]" being an action.
 
  - :Subpart marker:
          ###TEMPLATE\_SETFIXED\_OK### (general)
 
-         ###TEMPLATE\_SETFIXED\_OK\_[ *fixkey* ]###
+         ###TEMPLATE\_SETFIXED\_OK\_[*fixkey*]###
 
    :Description:
          Used for a successful setfixed-link.
@@ -815,26 +815,26 @@ on the cmd value.
          any way the authentication code will be invalid!
 
  - :Subpart marker:
-         ###EMAIL\_TEMPLATE\_ *[action]* \_SAVED###
+         ###EMAIL\_TEMPLATE\_[action]\_SAVED###
 
    :Description:
-         Used for an email message sent to the website user
+         Used for an email message sent to the website user.
 
  - :Subpart marker:
-         ###EMAIL\_TEMPLATE\_ *[action]* \_SAVED-ADMIN###
+         ###EMAIL\_TEMPLATE\_[action]\_SAVED-ADMIN###
 
    :Description:
-         Used for an email message sent to the admin
+         Used for an email message sent to the admin.
 
  - :Subpart marker:
-         ###EMAIL\_TEMPLATE\_SETFIXED\_ *[fixkey]* ###
+         ###EMAIL\_TEMPLATE\_SETFIXED\_[fixkey]###
 
    :Description:
          Used for notification messages in the event of successful setfixed
          operations.
 
  - :Subpart marker:
-         ###EMAIL\_TEMPLATE\_SETFIXED\_ *[fixkey]-ADMIN* ###
+         ###EMAIL\_TEMPLATE\_SETFIXED\_[fixkey]-ADMIN###
 
    :Description:
          Ditto, for admin email
@@ -908,7 +908,7 @@ class) must be loaded.
    :Description:
 
  - :Subpart:
-         ###EMAIL\_TEMPLATE\_[ *infomail\_key* ]###
+         ###EMAIL\_TEMPLATE\_[infomail\_key]###
 
    :Description:
 
@@ -936,7 +936,7 @@ class) must be loaded.
    :Description:
 
  - :Marker:
-         ###SYS\_SETFIXED\_[ *fixkey* ]###
+         ###SYS\_SETFIXED\_[fixkey]###
 
    :Description:
 
@@ -952,8 +952,8 @@ the table 'fe\_users' you must use a FORM-tag like this::
 
    <FORM name="fe_users_form" method="POST" action="....">
 
-The fields used to submit data for the records has this syntax: FE[
-*tablename* ][ *field name* ]. This means, if you want to edit the
+The fields used to submit data for the records has this syntax:
+FE[*table name*][*field name*]. This means, if you want to edit the
 'city' field of a tt\_address record, you could use a form element
 like this::
 
@@ -1001,7 +1001,7 @@ Common markers
          ###FORM\_URL###
 
    :Description:
-         The url used in the forms::
+         The URL used in the forms::
 
             index.php?id=page-id&type=page-type
 
@@ -1051,7 +1051,7 @@ Common markers
          ###THIS\_URL###
 
    :Description:
-         Set to the current script url as obtained by
+         Set to the current script URL as obtained by
          TYPO3\CMS\Core\Utility\GeneralUtility::getThisUrl()
          (t3lib\_div::getThisUrl()).
 
@@ -1110,7 +1110,7 @@ which is not filled in. Then you can put in a subpart named ::
 
    ###SUB_REQUIRED_FIELD_email###
 
-This is normally removed, but it'll  *not* be removed if the email
+This is normally removed, but it will *not* be removed if the email
 field fails and thus you are able to give a special warning for that
 specific field.
 
@@ -1118,11 +1118,11 @@ Printing other error messages
 
 However you may use other forms of evaluation than simple "required"
 check. This is specifiedfor "create" and "edit" modes by the
-properties ".evalValues. *[field name]* = *[list of codes]* ". In
+properties ".evalValues.[field name] = [list of codes]". In
 order to tell your website user *which* of the possible evaluations
 went wrong, you can specify error messages by the property .evalErrors
 which will be inserted as the marker named ###EVAL\_ERROR\_FIELD\_
-*[field name]* ###.
+[field name]###.
 
 Lets say that you have put the code 'uniqueLocal' in the list of
 evaluation code for the email field. You would do that if you want to
@@ -1158,10 +1158,10 @@ default::
    ...?FE[tt_address][name]=Mike%20Tyson&FE[tt_address][email]=mike@trex.us&doNotSave=1&noWarnings=1
 
 Notice the blue value names are the field values (must be
-rawurlencoded. In javascript this function is called escape()) and the
-red values are necessary if you want to NOT save the record by this
-action and NOT to display error messages if some fields which are
-required is not passed any value.
+rawurlencoded. In JavaScript this function is called escape()) and the
+red values are necessary if you want to **not** save the record by this
+action and **not** to display error messages, if some fields which are
+required are not passed any value.
 
 
 .. _appendix-fe-adminlib-eval:
@@ -1225,7 +1225,7 @@ List of eval-codes
    :Description:
          Specifies a minimum / maximum of characters to enter in the fields.
 
-         **Example** , that requires at least 5 characters: atleast [5]
+         **Example**, that requires at least 5 characters: atleast [5]
 
  - :Eval-code:
          inBranch
@@ -1233,9 +1233,9 @@ List of eval-codes
    :Description:
          inBranch requires the value (typically of a pid-field) to be among a
          list of page-id's (pid's) specified with the inBranch parameters. The
-         parameters are given like  *[root\_pid; depth; beginAt]*
+         parameters are given like *[root\_pid; depth; beginAt]*
 
-         **Example** , which will return a list of pids one level deep from
+         **Example**, which will return a list of pids one level deep from
          page 4 (included): inBranch [4;1]
 
  - :Eval-code:
@@ -1243,7 +1243,7 @@ List of eval-codes
 
    :Description:
          This evaluation does not result in any error code. Only it simply
-         unsets the field if the value of the field is empty. Thus it'll not
+         unsets the field if the value of the field is empty. Thus it will not
          override any current value if the field value is not set.
 
 
@@ -1274,11 +1274,11 @@ that apply currently:
 
 - However you can use PREVIEW mode with 'create'. Works like this: if
   the mode is preview the temporary uploaded file is copied to a unique
-  filename (prepended with the tablename) in typo3temp/ folder. Then the
+  filename (prepended with the table name) in typo3temp/ folder. Then the
   field value is set to the filenames in a list. When the user approves
   the content of the preview those temporary files are finally copied to
   the uploads/\* folder (or wherever specified in TCA). Limitations are
-  that the temporary files in typo3temp/ are NOT deleted when copied to
+  that the temporary files in typo3temp/ are **not** deleted when copied to
   the real upload-folder (this may be improved) and certainly not if the
   user aborts (can't be improved because the user may go anywhere). If
   the user cancels the preview in order to change values, the files will

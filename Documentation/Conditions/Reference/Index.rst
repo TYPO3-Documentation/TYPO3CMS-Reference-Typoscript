@@ -97,8 +97,8 @@ Values and comparison:
 
 .. ### BEGIN~OF~SIMPLE~TABLE ###
 
-.. Note: The first row cannot be smaller, as ReST does not allow a
-   linebreak in the first column of a simple table.
+.. Note: The first column cannot be smaller, as ReST does not allow
+   a line break in the first column of a simple table.
 
 ========================================================   ===========================
 Browser:                                                   Identification:
@@ -385,7 +385,7 @@ This is a direct match on the useragent string from
 getenv("HTTP\_USER\_AGENT")
 
 You have the options of putting a "\*" at the beginning and/or end of
-the value  *agent* thereby matching with this wildcard!
+the value *agent* thereby matching with this wildcard!
 
 
 Examples:
@@ -490,7 +490,7 @@ Comparison:
 
 The values must be a straight match with the value of
 getenv("HTTP\_ACCEPT\_LANGUAGE") from PHP. Alternatively, if the value
-is wrapped in "\*" (eg. "\*en-us\*") then it will split all languages
+is wrapped in "\*" (e.g. "\*en-us\*") then it will split all languages
 found in the HTTP\_ACCEPT\_LANGUAGE string and try to match the value
 with any of those parts of the string. Such a string normally looks
 like "de,en-us;q=0.7,en;q=0.3" and "\*en-us\*" would match with this
@@ -524,7 +524,7 @@ tested.
 Examples:
 ~~~~~~~~~
 
-These examples will match any IP-address starting with "123"::
+These examples will match any IP address starting with "123"::
 
    [IP = 123.*.*.*]
 
@@ -532,7 +532,7 @@ or ::
 
    [IP = 123]
 
-These examples will match any IP-address ending with "123" or being
+These examples will match any IP address ending with "123" or being
 "192.168.1.34"::
 
    [IP = *.*.*.123][IP = 192.168.1.34]
@@ -560,7 +560,7 @@ getenv("REMOTE\_ADDR") retrieved by PHP.
 
 Value is comma-list of domain names to match with. \*-wildcard allowed
 but cannot be part of a string, so it must match the full host name
-(eg. myhost.\*.com => correct, myhost.\*domain.com => wrong)
+(e.g. myhost.\*.com => correct, myhost.\*domain.com => wrong)
 
 
 .. _condition-hour:
@@ -576,7 +576,7 @@ Syntax:
 
    [hour = hour1, > hour2, < hour3, ...]
 
-**Note** : The first "=" sign directly after the word "hour" is always
+**Note:** The first "=" sign directly after the word "hour" is always
 needed and is no operator. After that follow the operator and then the
 hour.
 
@@ -590,7 +590,7 @@ point are compared with the current hour of the server time.
 As you see in the section "Syntax" above, you can separate multiple
 conditions in one with a comma. The comma will then connect them with
 a logical disjunction (OR), that means the whole condition will be
-true, when  *one or more* of its operands are true.
+true, when *one or more* of its operands are true.
 
 
 .. ### BEGIN~OF~SIMPLE~TABLE ###
@@ -1161,8 +1161,8 @@ This will also match with it::
 "demo.typo3.org"
 
 
-IMPORTANT NOTE ON globalVar and globalString:
-'''''''''''''''''''''''''''''''''''''''''''''
+Important note on globalVar and globalString
+''''''''''''''''''''''''''''''''''''''''''''
 
 You can use values from global arrays and objects by dividing the var-
 name with a "\|" (vertical line).
@@ -1189,12 +1189,12 @@ the "\|" divider may be used to separate keys in arrays and/or
 objects. "LIT" means "literal" and the string after ":" is trimmed and
 returned as the value (without being divided by "\|" or anything)
 
-**Notice:** Using the "IENV:" prefix is highly recommended to get
+**Note:** Using the "IENV:" prefix is highly recommended to get
 server/environment variables which are system-independent. Basically
 this will get the value using
 TYPO3\CMS\Core\Utility\GeneralUtility::getIndpEnv()
 (t3lib\_div::getIndpEnv()). With "ENV:" you get the raw output from
-getenv() which is NOT always the same on all systems!
+getenv() which is **not** always the same on all systems!
 
 
 Examples:

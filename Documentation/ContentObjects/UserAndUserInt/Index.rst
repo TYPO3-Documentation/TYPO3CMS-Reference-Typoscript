@@ -13,21 +13,21 @@ USER and USER\_INT
 ^^^^^^^^^^^^^^^^^^
 
 This calls either a PHP-function or a method in a class. This is very
-useful if you want to incorporate you own data processing or content.
+useful if you want to incorporate your own data processing or content.
 
-Basically this is a userdefined cObject, because it's just a call to a
+Basically this is a user defined cObject, because it's just a call to a
 function or method you control!
 
 An important thing to know is that if you call a method in a class
 (which is of course instantiated as an object) the internal variable
-'cObj' of that class is set with a  *reference* to the parent cObj.
+'cObj' of that class is set with a *reference* to the parent cObj.
 See the file
 typo3/sysext/statictemplates/media/scripts/example\_callfunction.php for an
 example of how this may be useful for you. Basically it offers you an
 API of functions which are more or less relevant for you. Refer to the
 appendix "PHP include scripts" at the end of this document.
 
-If you create this object as USER\_INT, it'll be rendered non-cached,
+If you create this object as USER\_INT, it will be rendered non-cached,
 outside the main page-rendering.
 
 .. ### BEGIN~OF~TABLE ###
@@ -56,12 +56,12 @@ outside the main page-rendering.
          function name
 
    Description
-         The name of the function. If you specify the name with a '->' in, it's
-         interpreted as a call to a method in a class.
+         The name of the function. If you specify the name with a '->' in it,
+         it's interpreted as a call to a method in a class.
 
-         Two parameters are sent: A content variable (which is empty in this
-         case, but not when used from stdWrap function .postUserFunc and
-         .preUserFunc)and the second parameter is an array with the properties
+         Two parameters are sent: First a content variable (which is empty in
+         this case, but not when used from stdWrap function .postUserFunc and
+         .preUserFunc). And the second parameter is an array with the properties
          of this cObject if any.
 
          **Example:**

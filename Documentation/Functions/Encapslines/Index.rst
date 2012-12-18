@@ -55,7 +55,7 @@ encapsLines
 .. container:: table-row
 
    Property
-         remapTag.[ *tagname* ]
+         remapTag.[*tagname*]
 
    Data type
          string
@@ -74,13 +74,13 @@ encapsLines
             <div>Some text</div>
             <div>Some text</div>
 
-         ([ *tagname* ] is in uppercase.)
+         ([*tagname*] is in uppercase.)
 
 
 .. container:: table-row
 
    Property
-         addAttributes.[ *tagname* ]
+         addAttributes.[*tagname*]
 
    Data type
          *(array of strings)*
@@ -95,7 +95,7 @@ encapsLines
               align=center
             }
 
-         ([ *tagname* ] is in uppercase.) ::
+         ([*tagname*] is in uppercase.) ::
 
             .setOnly =
 
@@ -178,7 +178,7 @@ encapsLines
 .. container:: table-row
 
    Property
-         encapsLinesStdWrap.[ *tagname* ]
+         encapsLinesStdWrap.[*tagname*]
 
    Data type
          ->stdWrap
@@ -186,7 +186,7 @@ encapsLines
    Description
          Wraps the content inside all encapsulated lines.
 
-         ([ *tagname* ] is in uppercase.)
+         ([*tagname*] is in uppercase.)
 
 
 .. container:: table-row
@@ -257,7 +257,7 @@ content looks like this::
    <p style="text-align: right;">This line is right-aligned.</p>
 
 Each line is nicely wrapped with <p> tags. The line from the database
-which was  *already* wrapped (but in <div>-tags) has been converted to
+which was *already* wrapped (but in <div>-tags) has been converted to
 <p>, but keeps it's alignment. Overall, notice that the Rich Text
 Editor ONLY stored the line which was in fact right-aligned - every
 other line from the RTE was stored without any wrapping tags, so that

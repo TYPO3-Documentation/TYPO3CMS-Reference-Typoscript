@@ -136,10 +136,10 @@ JSMENUITEM
          string
 
    Description
-         Additional parameters to the <select> box. Eg, you could set the width
-         with a style-parameter like this:
+         Additional parameters to the <select> box. E.g. you could set the width
+         with a style-parameter like this::
 
-         style="width: 200px;"
+            additionalParams = style="width: 200px;"
 
 
 .. container:: table-row
@@ -151,7 +151,7 @@ JSMENUITEM
          string
 
    Description
-         Firt label in top of the menu (default is blank)
+         First label in top of the menu (default is blank).
 
 
 .. ###### END~OF~TABLE ######
@@ -173,9 +173,9 @@ Example:
      2.wrap = |<hr>
    }
 
-   # Insert on page.
+   # Insert the menu on the page.
    page = PAGE
-   page.typeNum =0
+   page.typeNum = 0
    page.5 = TEXT
    page.5.field = title
    page.10 < temp.jsmenu

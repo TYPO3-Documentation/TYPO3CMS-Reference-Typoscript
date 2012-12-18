@@ -28,7 +28,7 @@ trigger this feature. It is evaluated twice:
   set. The configuration options cache.tags and cache.lifetime allow to
   control the caching.
 
-**Note** : This feature relies on the caching framework, which needs
+**Note:** This feature relies on the caching framework, which needs
 to be enabled for this feature to work. Otherwise content will not be
 cached, but rendered on every call.
 
@@ -62,7 +62,7 @@ cached, but rendered on every call.
          The cache identifier that is used to store the rendered content into
          the cache and to read it from there.
 
-         **Note** : Make sure to use a valid cache identifier. Also take care
+         **Note:** Make sure to use a valid cache identifier. Also take care
          to choose a cache key that is accurate enough to distinguish different
          versions of the rendered content while being generic enough to stay
          efficient.
@@ -86,12 +86,12 @@ cached, but rendered on every call.
          Possible values are any positive integer and the keywords "unlimited"
          and "default":
 
-         **integer** : Lifetime in seconds.
+         **integer:** Lifetime in seconds.
 
-         **"unlimited"** : Cached content will not expire unless actively
+         **"unlimited":** Cached content will not expire unless actively
          purged by id or by tag or if the complete cache is flushed.
 
-         **"default"** : The default cache lifetime as configured in
+         **"default":** The default cache lifetime as configured in
          config.cache\_period is used.
 
    Default

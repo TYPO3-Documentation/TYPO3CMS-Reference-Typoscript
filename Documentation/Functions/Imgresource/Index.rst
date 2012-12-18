@@ -72,7 +72,7 @@ imgResource.
          defines how much the cropping will be moved off the center to the
          border.
 
-         Notice that you can only use "m" or "c" at the same time!
+         Notice that you can only use "m" *or* "c" at the same time!
 
          **Examples:**
 
@@ -162,7 +162,7 @@ imgResource.
             file.noScale = 1
 
          This example results in an image tag like the following. Note that
-         src="test.jpg" is the  *original* file::
+         src="test.jpg" is the *original* file::
 
             <img src="test.jpg" width="240" height="180" />
 
@@ -326,7 +326,7 @@ imgResource.
 
    Description
          The mask with which the image is masked onto "m.bgImg". Both "m.mask"
-         and "m.bgImg"  **is scaled to fit** the size of the imgResource image!
+         and "m.bgImg" **is scaled to fit** the size of the imgResource image!
 
          **Note:** Both "m.mask" and "m.bgImg" must be valid images.
 
@@ -355,7 +355,7 @@ imgResource.
          An image masked by "m.bottomImg\_mask" onto "m.bgImg" before the
          imgResources is masked by "m.mask".
 
-         Both "m.bottomImg" and "m.bottomImg\_mask"  **is scaled to fit** the
+         Both "m.bottomImg" and "m.bottomImg\_mask" **is scaled to fit** the
          size of the imgResource image!
 
          This is most often used to create an underlay for the imgResource.

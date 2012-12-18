@@ -51,12 +51,14 @@
          options
 
    Data type
-         *url-parameters*
+         string
 
    Description
+         URL parameters.
+
          **Example:** ::
 
-            print=1&othervar=anotherthing
+            options = print=1&othervar=anotherthing
 
          This would add ' *&print=1&othervar=anotherthing* ' to the
          ".src"-content (if not ".src" is set manually).

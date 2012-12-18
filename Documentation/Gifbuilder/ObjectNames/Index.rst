@@ -44,9 +44,9 @@ from the previous section. Confusion could happen, because both
          \+ .if (->if)
 
    Description
-         .if (->if) is a property of all gifbuilder-objects. If the property is
-         present and NOT set, the object is NOT rendered! This corresponds to
-         the functionality of ".if" of the stdWrap-function.
+         .if (->if) is a property of all GIFBUILDER objects. If the property is
+         present and **not** set, the object is **not** rendered! This
+         corresponds to the functionality of ".if" of the stdWrap-function.
 
 
 .. container:: table-row
@@ -60,8 +60,8 @@ from the previous section. Confusion could happen, because both
    Description
          Size of the gif-file.
 
-         For the usage of "calc" see the according note on that at the
-         beginning of the section "GIFBUILDER".
+         For the usage of "calc" see the according note at the beginning of
+         the section "GIFBUILDER".
 
    Default
          100,20
@@ -197,9 +197,9 @@ from the previous section. Confusion could happen, because both
          x,y,w,h + calc /stdWrap
 
    Description
-         Define the workarea on the giffile. All the GifBuilderObj's will see
+         Define the workarea on the gif file. All the GifBuilderObj's will see
          this as the dimensions of the gif-file regarding alignment, overlaying
-         of images an so on. Only TEXT-objects exceeding the boundaries of the
+         of images an so on. Only TEXT objects exceeding the boundaries of the
          workarea will be printed outside this area.
 
 
@@ -267,7 +267,7 @@ TEXT
          this string is not empty.
 
          The cObj->data-array is loaded with the page-record, if for example
-         the GIFBUILDER-object is used by GMENU or IMGMENU.
+         the GIFBUILDER object is used by GMENU or IMGMENU.
 
 
 .. container:: table-row
@@ -342,8 +342,8 @@ TEXT
          boolean
 
    Description
-         If set, HTML-tags in the string inserted are NOT removed. Any other
-         way HTML-code is removed by default!
+         If set, HTML-tags in the string inserted are **not** removed. Any
+         other way HTML code is removed by default!
 
    Default
          0
@@ -517,10 +517,10 @@ TEXT
          boolean
 
    Description
-         If this is true, the text is NOT printed.
+         If this is true, the text is **not** printed.
 
-         This feature may be used if you need a shadow-object to base a shadow
-         on the text, but do not want the text to print.
+         This feature may be used, if you need a SHADOW object to base a shadow
+         on the text, but do not want the text to be displayed.
 
    Default
          0
@@ -639,39 +639,40 @@ TEXT
 
          **Properties:**
 
-         splitRendering.compX (integer) =  *Additional pixelspace between
-         parts, x direction*
+         **splitRendering.compX:** Integer. Additional pixelspace between
+         parts, x direction.
 
-         splitRendering.compY (integer) =  *Additional pixelspace between
-         parts, y direction*
+         **splitRendering.compY:** Integer. Additional pixelspace between
+         parts, y direction.
 
-         splitRendering.[array] =  *keyword* [charRange, highlightWord]
+         **splitRendering.[array] = keyword** with keyword being [charRange,
+         highlightWord]
 
-         splitRendering.[array] {
+         **splitRendering.[array] {**
 
-         fontFile =  *Alternative font file for this rendering*
+            **fontFile:** Alternative font file for this rendering.
 
-         fontSize =  *Alternative font size for this rendering*
+            **fontSize:** Alternative font size for this rendering.
 
-         color =  *Alternative color for this rendering, works ONLY without
-         "niceText"*
+            **color:** Alternative color for this rendering, works *only*
+            without "niceText".
 
-         xSpaceBefore =  *x-Space before this part*
+            **xSpaceBefore:** x-Space before this part.
 
-         xSpaceAfter =  *x-Space after this part*
+            **xSpaceAfter:** x-Space after this part.
 
-         ySpaceBefore =  *y-Space before this part*
+            **ySpaceBefore:** y-Space before this part.
 
-         ySpaceAfter =  *y-Space after this part*
+            **ySpaceAfter:** y-Space after this part.
 
          }
 
          **Keyword: charRange**
 
          splitRendering.[array].value = Comma-separated list of character ranges
-         (eg. "100-200") given as Unicode character numbers. The list accepts
-         optional starting and ending points, eg. " - 200" or " 200 -" and
-         single values, eg. "65, 66, 67"
+         (e.g. "100-200") given as Unicode character numbers. The list accepts
+         optional starting and ending points, e.g. " - 200" or " 200 -" and
+         single values, e.g. "65, 66, 67".
 
          **Keyword: highlightWord**
 
@@ -680,7 +681,7 @@ TEXT
 
          **Limitations:**
 
-         - The pixelcompensation values are not corrected for scale factor used
+         - The pixel compensation values are not corrected for scale factor used
            with niceText. Basically this means that when niceText is used, these
            values will have only the half effect.
 
@@ -739,11 +740,11 @@ SHADOW
          positive integer
 
    Description
-         Must point to the TEXT-object if these shadow-properties are not
-         properties to a TEXT-object directly ("stand-alone-shadow"). Then the
-         shadow needs to know which TEXT-object it should be a shadow of!
+         Must point to the TEXT object if these shadow-properties are not
+         properties to a TEXT object directly ("stand-alone-shadow"). Then the
+         shadow needs to know which TEXT object it should be a shadow of!
 
-         If - on the other hand - the shadow is a property to a text-object,
+         If - on the other hand - the shadow is a property to a TEXT object,
          this property is not needed.
 
 
@@ -854,11 +855,11 @@ text.
          positive integer
 
    Description
-         Must point to the TEXT-object if these shadow-properties are not
-         properties to a TEXT-object directly ("stand-alone-shadow"). Then the
-         shadow needs to know which TEXT-object it should be a shadow of!
+         Must point to the TEXT object if these shadow-properties are not
+         properties to a TEXT object directly ("stand-alone-shadow"). Then the
+         shadow needs to know which TEXT object it should be a shadow of!
 
-         If - on the other hand - the shadow is a property to a text-object,
+         If - on the other hand - the shadow is a property to a TEXT object,
          this property is not needed.
 
 
@@ -975,11 +976,11 @@ high intensity. That works better!
          positive integer
 
    Description
-         Must point to the TEXT-object if these shadow-properties are not
-         properties to a TEXT-object directly ("stand-alone-shadow"). Then the
-         shadow needs to know which TEXT-object it should be a shadow of!
+         Must point to the TEXT object if these shadow-properties are not
+         properties to a TEXT object directly ("stand-alone-shadow"). Then the
+         shadow needs to know which TEXT object it should be a shadow of!
 
-         If - on the other hand - the shadow is a property to a text-object,
+         If - on the other hand - the shadow is a property to a TEXT object,
          this property is not needed.
 
 
@@ -1216,7 +1217,7 @@ IMAGE
          imgResource
 
    Description
-         The imagefile
+         The image file
 
 
 .. container:: table-row
@@ -1271,7 +1272,7 @@ IMAGE
          imgResource
 
    Description
-         Optional mask-image for the imagefile.
+         Optional mask-image for the image file.
 
 
 .. ###### END~OF~TABLE ######
@@ -1771,7 +1772,7 @@ ADJUST
 This lets you adjust the tonal range like in the "levels"-dialog of
 Photoshop. You can set the input- and output-levels and that way remap
 the tonal range of the image. If you need to adjust the gamma value,
-have a look at the EFFECT-object.
+have a look at the EFFECT object.
 
 
 Example:

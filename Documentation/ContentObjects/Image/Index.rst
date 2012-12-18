@@ -144,8 +144,8 @@ of the returning image (if any) and contains width, height and so on.
          ->imageLinkWrap
 
    Description
-         **Note:** ONLY active if linkWrap is NOT set and file is NOT
-         GIFBUILDER (as it works with the original imagefile).
+         **Note:** Only active if linkWrap is **not** set and file is
+         **not** GIFBUILDER (as it works with the original image file).
 
 
 .. container:: table-row

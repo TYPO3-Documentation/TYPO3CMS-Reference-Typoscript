@@ -15,7 +15,7 @@ This function is often added as a property to values in TypoScript.
 
 .. _stdwrap-examples:
 
-Example with the property "value" of the content-object, "TEXT"::
+Example with the property "value" of the content object "TEXT"::
 
    10 = TEXT
    10.value = some text
@@ -155,18 +155,28 @@ value is "imported" from the field called "header" from the $cObj
          Field name
 
    Description
-         Sets the content to the value $cObj->data[ *field* ]
+         Sets the content to the value of the according field
+         (which comes from $cObj->data[*field*]).
 
-         **Example:** Set content to the value of field "title": ".field =
-         title"
+         **Example:** ::
 
-         $cObj->data changes. See the description for the data type
-         "getText"/field!
+            .field = title
 
-         **Note:** You can also divide field names by "//". Say, you set
-         "nav\_title // title" as the value, then the content from the field
-         nav\_title will be returned unless it is a blank string, in which case
-         the title-field's value is returned.
+         This sets the content to the value of the field "title".
+
+         You can also check multiple field names, if you divide them
+         by "//".
+
+         **Example:** ::
+
+            .field = nav_title // title
+
+         Here the content from the field nav\_title will be returned
+         unless it is a blank string. If a blank string, the value of
+         the title field is returned.
+
+         **Note:** $cObj->data changes depending on the context.
+         See the description for the data type "getText"/field!
 
 
 .. container:: table-row
@@ -194,7 +204,7 @@ value is "imported" from the field called "header" from the $cObj
          cObject
 
    Description
-         Loads content from a content-object
+         Loads content from a content object.
 
 
 .. container:: table-row
@@ -254,7 +264,7 @@ value is "imported" from the field called "header" from the $cObj
          content to the function as first parameter and any properties as
          second parameter.
 
-         See  *.postUserFunc*
+         See *.postUserFunc*!
 
 
 .. container:: table-row
@@ -349,17 +359,17 @@ value is "imported" from the field called "header" from the $cObj
 
    Description
          Explodes the content with "," (comma) and the content is set to the
-         item[ *value* ].
+         item[*value*].
 
          **Special keyword:** "last" is set to the last element of the array!
 
-         (Since TYPO3 4.6) **Special keyword** : "rand" returns a random item
+         (Since TYPO3 4.6) **Special keyword:** "rand" returns a random item
          out of a list.
 
          **.splitChar** (string):
 
          Defines the string used to explode the value. If splitChar is an
-         integer, the character with that number is used (eg. "10" to split
+         integer, the character with that number is used (e.g. "10" to split
          lines...).
 
          Default: "," (comma)
@@ -431,8 +441,8 @@ value is "imported" from the field called "header" from the $cObj
    Description
          This flag requires the content to be set to some value after any
          content-import and treatment that might have happened now (data,
-         field, current, listNum, trim). Zero is NOT regarded as empty! Use
-         "if" instead!
+         field, current, listNum, trim). Zero is **not** regarded as empty!
+         Use "if" instead!
 
          If the content is empty, "" is returned immediately.
 
@@ -501,7 +511,7 @@ value is "imported" from the field called "header" from the $cObj
    Description
          Processing instructions for the content.
 
-         **Notice:** If you enter a string as value this will be taken as a
+         **Note:** If you enter a string as value, this will be taken as a
          reference to an object path globally in the TypoScript object tree.
          This will be the basis configuration for parseFunc merged with any
          properties you add here. It works exactly like references does for
@@ -608,7 +618,7 @@ value is "imported" from the field called "header" from the $cObj
          integer
 
    Description
-         Content is set to the chr( *value* ). ::
+         Content is set to the chr(*value*). ::
 
             $content = chr(intval($conf['char']));
 
@@ -703,7 +713,7 @@ value is "imported" from the field called "header" from the $cObj
 
          Properties:
 
-         **.GMT** : If set, the PHP function gmdate() will be used instead of
+         **.GMT:** If set, the PHP function gmdate() will be used instead of
          date().
 
          **Example** where a timestamp is imported::
@@ -724,19 +734,19 @@ value is "imported" from the field called "header" from the $cObj
 
    Description
          Exactly like "date" above. See the PHP manual (strftime) for the
-         codes, or datatype "strftime-conf".
+         codes, or data type "strftime-conf".
 
          This formatting is useful if the locale is set in advance in the
-         CONFIG-object. See this.
+         CONFIG object. See there.
 
          Properties:
 
-         **.charset** : Can be set to the charset of the output string if you
+         **.charset:** Can be set to the charset of the output string if you
          need to convert it to renderCharset. Default is to take the
          intelligently guessed charset from
          TYPO3\CMS\Core\Charset\CharsetConverter (t3lib\_cs).
 
-         **.GMT** : If set, the PHP function gmstrftime() will be used instead
+         **.GMT:** If set, the PHP function gmstrftime() will be used instead
          of strftime().
 
 
@@ -809,8 +819,8 @@ value is "imported" from the field called "header" from the $cObj
 
          If you add a value for the property "labels" you can alter the default
          suffixes. Labels for bytes, kilo, mega and giga are separated by
-         vertical bar (\|) and possibly encapsulated in "". Eg: " \| K\| M\| G"
-         (which is the default value)
+         vertical bar (\|) and possibly encapsulated in "". E.g.: " \| K\| M\| G"
+         (which is the default value).
 
          Thus::
 
@@ -880,7 +890,7 @@ value is "imported" from the field called "header" from the $cObj
          boolean
 
    Description
-         Strips all html-tags.
+         Strips all HTML tags.
 
 
 .. container:: table-row
@@ -1085,7 +1095,7 @@ value is "imported" from the field called "header" from the $cObj
          ->addParams
 
    Description
-         Lets you add tag parameters to the content  *if* the content is a tag!
+         Lets you add tag parameters to the content *if* the content is a tag!
 
 
 .. container:: table-row
@@ -1169,7 +1179,7 @@ value is "imported" from the field called "header" from the $cObj
          align /stdWrap
 
    Description
-         Wraps content with <div style=text-align:[ *value* ];"> \| </div>
+         Wraps content with <div style=text-align:[*value*];"> \| </div>
          *if* align is set.
 
 
@@ -1201,14 +1211,14 @@ value is "imported" from the field called "header" from the $cObj
          Resolves a comma-separated list of values into the TCA item
          representation.
 
-         **.table** (string):  *The Table to look up*
+         **.table:** String. *The Table to look up.*
 
-         **.field** (string):  *The field to resolve*
+         **.field:** String. *The field to resolve.*
 
-         **.delimiter** (string):  *Delimiter for concatenating multiple
+         **.delimiter:** String. *Delimiter for concatenating multiple
          elements.*
 
-         **Notice:** Currently this works only with TCA fields of type "select"
+         **Note:** Currently this works only with TCA fields of type "select"
          which are not database relations.
 
 
@@ -1473,7 +1483,7 @@ value is "imported" from the field called "header" from the $cObj
 
          **.stdWrap**
 
-         \- stdWrap properties wrapping the offsetWrap'ed output
+         \- stdWrap properties wrapping the offsetWrap'ed output.
 
 
 .. container:: table-row
@@ -1581,23 +1591,23 @@ value is "imported" from the field called "header" from the $cObj
          It's assumed that the current record of the cObj is the record to be
          edited.
 
-         Syntax:  *optional tablename* :  *comma list of field names[list of
+         Syntax: *optional table name* : *comma list of field names [list of
          pallette-field names separated by \| ]*
 
-         **.beforeLastTag** (1,0,-1): If set (1), the icon will be inserted
-         before the last HTML tag in the content. If -1 the icon will be
-         prepended to the content. If zero (0) the icon is appended in the end
-         of the content.
+         **.beforeLastTag:** Possible values are 1, 0 and -1. If set (1), the
+         icon will be inserted before the last HTML tag in the content. If -1,
+         the icon will be prepended to the content. If zero (0), the icon is
+         appended in the end of the content.
 
-         **.styleAttribute** (string): Adds a style-attribute to the icon image
+         **.styleAttribute:** String. Adds a style-attribute to the icon image
          with this value. For instance you can set "position:absolute" if you
          want a non-destructive insertion of the icon. Notice: For general
          styling all edit icons has the class "frontEndEditIcons" which can be
          addressed from the stylesheet of the site.
 
-         **.iconTitle** (string): The title attribute of the image tag.
+         **.iconTitle:** String. The title attribute of the image tag.
 
-         **.iconImg** (HTML): Alternative HTML code instead of the default icon
+         **.iconImg:** HTML. Alternative HTML code instead of the default icon
          shown. Can be used to set another icon for editing (for instance a red
          dot or otherwise... :-)
 

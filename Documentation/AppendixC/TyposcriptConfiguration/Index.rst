@@ -12,7 +12,7 @@ TypoScript Configuration
 The following objects are related to the direct inclusion of PHP code
 inside templates.
 
-**Note** : These content objects were deprecated since TYPO3 4.5 and have
+**Note:** These content objects were deprecated since TYPO3 4.5 and have
 been removed in TYPO3 6.0. Use the content object "USER" instead!
 
 
@@ -24,7 +24,7 @@ PHP\_SCRIPT
 
 This includes a PHP-script.
 
-NOTE: This option is ignored if ['FE']['noPHPscriptInclude'] => 1;
+**Note:** This option is ignored if ['FE']['noPHPscriptInclude'] => 1;
 is set in LocalConfiguration.php
 ($TYPO3\_CONF\_VARS['FE']['noPHPscriptInclude'] = 1; in localconf.php).
 
@@ -67,9 +67,9 @@ is set in LocalConfiguration.php
          content you create may not be cached.
 
          **Note:** If you have a parsing error in your include script the
-         $GLOBALS['TSFE']->set\_no\_cache()function is NOT executed and thereby
-         does not disable caching. Upon a parse-error you must manually clear
-         the page-cache after you have corrected your error!
+         $GLOBALS['TSFE']->set\_no\_cache()function is **not** executed and
+         thereby does not disable caching. Upon a parse-error you must
+         manually clear the page-cache after you have corrected your error!
 
          3) the array $conf contains the configuration for the PHP\_SCRIPT
          cObject. Try debug($conf) to see the content printed out for
@@ -167,7 +167,7 @@ PHP\_SCRIPT\_INT
          work out-of-the-box with this option though.
 
          \- Dependence and use of LOAD\_REGISTER is fragile because the
-         PHP\_SCRIPT\_INT is not rendered until  *after* the cached content and
+         PHP\_SCRIPT\_INT is not rendered until *after* the cached content and
          due to this changed order of events, use of LOAD\_REGISTER may not
          work.
 

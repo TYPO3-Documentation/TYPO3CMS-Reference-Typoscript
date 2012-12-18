@@ -22,7 +22,7 @@ template::
 
    config.includeLibrary = fileadmin/scripts/include.php
 
-The file  **include.php** is now included (in
+The file **include.php** is now included (in
 typo3/sysext/frontend/Classes/Page/PageGenerator.php, in older
 versions in typo3/sysext/cms/tslib/class.tslib\_pagegen.php). In this
 case it looks like this:
@@ -39,7 +39,7 @@ file: fileadmin/scripts/include.php ::
 As you can see, this file includes our library "hello\_world" and some
 other libraries too!
 
-The file  **hello\_world.php** looks like this:
+The file **hello\_world.php** looks like this:
 
 file: fileadmin/scripts/hello\_world.php ::
 
@@ -55,7 +55,7 @@ So far nothing has happened, except our libraries are included, ready
 for use.
 
 Now we need to use the outcome of the class hello\_world somewhere on
-a page. So in the TypoScript code we setup a content-object that
+a page. So in the TypoScript code we setup a content object that
 includes the third script::
 
    page.100 = PHP_SCRIPT
@@ -72,7 +72,7 @@ file: fileadmin/scripts/surprise.php ::
            $content = $this->stdWrap($content, $conf['stdWrap.']);
    ?>
 
-Line 1: The PHP-object $hello\_world\_object is created.
+Line 1: The PHP object $hello\_world\_object is created.
 
 Line 2: This fetches the content of a cObject, "cObj", we defined
 

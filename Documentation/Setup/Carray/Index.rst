@@ -34,9 +34,9 @@
          cObject
 
    Description
-         This is a numerical "array" of content-objects (cObjects). The order
-         with which you specific the objects is not important as the array will
-         be sorted before it's parsed!
+         This is a numerical "array" of content objects (cObjects). The order
+         in which you specify the objects is not important as the array will
+         be sorted numerically before it's parsed!
 
 
 .. container:: table-row

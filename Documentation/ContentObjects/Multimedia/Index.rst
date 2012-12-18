@@ -43,19 +43,26 @@ used.
    Description
          The multimedia file. Possible file types are:
 
-         **txt, html, htm** : Will be inserted directly, of the following
-         properties only ".stdWrap" can be used.
+         .. ### BEGIN~OF~SIMPLE~TABLE ###
 
-         **class** : Java-applet.
+         ===============================  ===================================================
+          File type                        File content
+         ===============================  ===================================================
+          txt, html, htm                    Will be inserted directly. Of the following
+                                            properties only ".stdWrap" can be used.
 
-         **swf** : Flash animation.
+          class                             Java-applet.
 
-         **swa, dcr** : ShockWave Animation.
+          swf                               Flash animation.
 
-         **au, wav, mp3** : Sound.
+          swa, dcr                          Shockwave animation.
 
-         **avi, mov, asf, mpg, wmv** : Movies (AVI, QuickTime, MPEG4).
+          au, wav, mp3                      Sound.
 
+          avi, mov, asf, mpg, wmv           Movie (AVI, QuickTime, ...).
+         ===============================  ===================================================
+
+         .. ###### END~OF~SIMPLE~TABLE ######
 
 .. container:: table-row
 
@@ -66,7 +73,7 @@ used.
          string /stdWrap
 
    Description
-         These are parameters for the multimedia-objects. Use this to enter
+         These are parameters for the multimedia objects. Use this to enter
          stuff like autostart, type, width, height and so on. For each file
          type several parameters make sense. For an incomplete list see below
          this table.
@@ -92,7 +99,7 @@ used.
               height =
             )
 
-         **Note** : If you set a width or a height here, this will overwrite
+         **Note:** If you set a width or a height here, this will overwrite
          the width or the height which have been set using ".width" and
          ".height".
 
@@ -185,7 +192,7 @@ width              Width of the movie.                                          
 height             Height of the movie.                                                     200
 autostart          Automatically start the video. Set to true or false.
 
-                   **Note**: Not for "mov", there the parameter is called "autostart".
+                   **Note:** Not for "mov", there the parameter is called "autostart".
                    See example below.
 ================   ======================================================================   ============
 

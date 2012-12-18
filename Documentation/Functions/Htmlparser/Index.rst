@@ -147,18 +147,18 @@ HTMLparser
          -1 / 0 / 1 / 2
 
    Description
-         This regards all content which is NOT tags:
+         This regards all content which is **not** tags:
 
-         "0" means "disabled" - nothing is done
+         **0:** Disabled - nothing is done.
 
-         "1" means the content outside tags is htmlspecialchar()'ed (PHP-
-         function which converts &"<> to &...;)
+         **1:** The content outside tags is htmlspecialchar()'ed (PHP-
+         function which converts &"<> to &...;).
 
-         "2" is the same as "1" but entities like "&amp;" or "&#234" are
+         **2:** Same as "1", but entities like "&amp;" or "&#234" are
          untouched.
 
-         "-1" does the opposite of "1" - converts &lt; to <, &gt; to >, &quot;
-         to " etc.
+         **-1:** Does the opposite of "1". It converts &lt; to <, &gt;
+         to >, &quot; to " etc.
 
 
 .. container:: table-row

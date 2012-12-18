@@ -176,7 +176,7 @@ That means they are not used by for instance the JSMENU.
          Enable/Configuration for 'Spacer' pages.
 
          Spacers are pages of the doktype "Spacer". These are not viewable
-         pages but "placeholders" which can be used to divide menuitems.
+         pages but "placeholders" which can be used to divide menu items.
 
          **Note:** Rollovers do not work with spacers, if you use GMENU!
 

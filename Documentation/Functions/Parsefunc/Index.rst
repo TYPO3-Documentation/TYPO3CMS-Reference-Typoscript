@@ -48,48 +48,48 @@ tags, the "makeLinks"-things and so on...
 
          **.[tagname]** {
 
-         **callRecursive** = [boolean]; If set, the content of the block is
-         directed into parseFunc again. Otherwise the content is just passed
-         through with no other processing than stdWrap (see below)
+            **callRecursive:** Boolean. If set, the content of the block is
+            directed into parseFunc again. Otherwise the content is just passed
+            through with no other processing than stdWrap (see below).
 
-         **callRecursive.dontWrapSelf** = [boolean]; If set, the tags of the
-         block is  *not* wrapped around the content returned from parseFunc.
+            **callRecursive.dontWrapSelf:** Boolean. If set, the tags of the
+            block is *not* wrapped around the content returned from parseFunc.
 
-         **callRecursive.alternativeWrap** = Alternative wrapping instead of
-         the original tags.
+            **callRecursive.alternativeWrap:** Alternative wrapping instead of
+            the original tags.
 
-         **callRecursive.tagStdWrap** = ->stdWrap processing of the block-tags.
+            **callRecursive.tagStdWrap:** ->stdWrap processing of the block-tags.
 
-         **stdWrap** = ->stdWrap processing of the whole block (regardless of
-         whether callRecursive was set.)
+            **stdWrap:** ->stdWrap processing of the whole block (regardless of
+            whether callRecursive was set.)
 
-         **stripNLprev** = [boolean]; Strips off last linebreak of the previous
-         outside block
+            **stripNLprev:** Boolean. Strips off last line break of the previous
+            outside block.
 
-         **stripNLnext** = [boolean]; Strips off first linebreak of the next
-         outside block
+            **stripNLnext:** Boolean. Strips off first line break of the next
+            outside block.
 
-         **stripNL** = [boolean]: Does both of the above.
+            **stripNL:** Boolean. Does both of the above.
 
-         **HTMLtableCells** = [boolean]; If set, then the content is expected
-         to be a table and every table-cell is traversed.
+            **HTMLtableCells:** Boolean. If set, then the content is expected
+            to be a table and every table-cell is traversed.
 
-         \# Below, default is all cells and 1,2,3... overrides for specific
-         cols.
+            Below, "default" means all cells and "1", "2", "3", ... overrides
+            for specific columns.
 
-         **HTMLtableCells.[default/1/2/3/...]** {
+            **HTMLtableCells.[default/1/2/3/...]** {
 
-         **callRecursive** = [boolean]; The content is parsed through current
-         parseFunc
+               **callRecursive:** Boolean. The content is parsed through current
+               parseFunc.
 
-         **stdWrap** = ->stdWrap processing of the content in the cell
+               **stdWrap:** ->stdWrap processing of the content in the cell.
 
-         **tagStdWrap** = -> The <TD> tag is processed by ->stdWrap
+               **tagStdWrap:** -> The <TD> tag is processed by ->stdWrap.
 
-         }
+            }
 
-         **HTMLtableCells.addChr10BetweenParagraphs** = [boolean]; If set, then
-         all </P><P> appearances will have a chr(10) inserted between them
+         **HTMLtableCells.addChr10BetweenParagraphs:** Boolean. If set, then
+         all appearances of "</P><P>" will have a chr(10) inserted between them.
 
          }
 
@@ -105,20 +105,20 @@ tags, the "makeLinks"-things and so on...
          overridden. ::
 
             tt_content.text.20.parseFunc.externalBlocks {
-              blockquote.callRecursive=1
+              blockquote.callRecursive = 1
               blockquote.callRecursive.tagStdWrap.HTMLparser = 1
               blockquote.callRecursive.tagStdWrap.HTMLparser {
                 tags.blockquote.fixAttrib.style.list = margin-bottom:0;margin-top:0;
-                tags.blockquote.fixAttrib.style.always=1
+                tags.blockquote.fixAttrib.style.always = 1
               }
-              blockquote.stripNLprev=1
-              blockquote.stripNLnext=1
+              blockquote.stripNLprev = 1
+              blockquote.stripNLnext = 1
 
-              table.stripNL=1
+              table.stripNL = 1
               table.stdWrap.HTMLparser = 1
               table.stdWrap.HTMLparser {
                 tags.table.overrideAttribs = border="0" style="margin-top: 10px; margin-bottom: 10px;"
-                tags.tr.allowedAttribs=0
+                tags.tr.allowedAttribs = 0
                 tags.td.overrideAttribs = class="table-cell" style="background-color: #eeeeee; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; font-size: 10px;"
               }
             }
@@ -147,7 +147,7 @@ tags, the "makeLinks"-things and so on...
          *(The definition of the constant above is top-level TypoScript. It
          belongs on one level with the objects "config" and "page".)*
 
-         If you now use parseFunc with .constants=1, all occurrences of the
+         If you now use parseFunc with .constants = 1, all occurrences of the
          string ###EMAIL### in the text will be substituted with the actual
          address.
 
@@ -273,7 +273,7 @@ tags, the "makeLinks"-things and so on...
          *->tags*
 
    Description
-         Here you can define  **custom tags** that will parse the content to
+         Here you can define **custom tags** that will parse the content to
          something.
 
 
@@ -301,9 +301,9 @@ tags, the "makeLinks"-things and so on...
          list of strings
 
    Description
-         List of tags, which may NOT exist in code! (use "\*" for all.)
+         List of tags, which may **not** exist in code! (use "\*" for all.)
 
-         Lowest priority: If a tag is NOT found in allowTags, denyTags is
+         Lowest priority: If a tag is **not** found in allowTags, denyTags is
          checked. If denyTags is not "\*" and the tag is not found in the list,
          the tag may exist!
 
@@ -324,7 +324,7 @@ tags, the "makeLinks"-things and so on...
          ->if
 
    Description
-         if "if" returns false the input value is not parsed, but returned
+         if "if" returns false, the input value is not parsed, but returned
          directly.
 
 

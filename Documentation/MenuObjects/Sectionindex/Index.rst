@@ -21,7 +21,7 @@ default with colPos=0!).
 .sectionIndex = [boolean]
 
 If you set this, all content elements (from tt\_content table) of
-"Column" = "Normal"  *and* the "Index"-check box clicked are selected.
+"Column" = "Normal" *and* the "Index"-check box clicked are selected.
 This corresponds to the "Menu/Sitemap" content element when "Section
 index" is selected as type.
 
@@ -78,7 +78,7 @@ Basically this shows that
 
 \- the field "header" and "subheader" from tt\_content are mapped to
 "title" and "subtitle" in the pages-record. Thus you shouldn't need to
-change your standard menu-objects to fit this thing...
+change your standard menu objects to fit this thing...
 
 \- the fields "starttime", "endtime", "fe\_group", "media" from
 tt\_content are mapped to the same fields in a pages-record.

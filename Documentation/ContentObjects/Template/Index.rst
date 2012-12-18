@@ -67,7 +67,7 @@ content by TYPO3.
    Description
          This is an array of subpart-markers (case-sensitive).
 
-         A subpart is defined by  **two** markers in the template. The markers
+         A subpart is defined by **two** markers in the template. The markers
          must be wrapped by "###" on both sides. You may insert the subpart-
          markers inside HTML-comment-tags!
 
@@ -76,7 +76,7 @@ content by TYPO3.
          In the template there is the subpart "HELLO"::
 
             <!-- start of subpart ###HELLO### -->
-            This is the HTML-code, that will be loaded in the register and will be replaced with the result...
+            This is the HTML code, that will be loaded in the register and will be replaced with the result...
             <!-- end ###HELLO### -->
 
          The following TypoScript code now replaces the subpart "HELLO" with
@@ -89,7 +89,7 @@ content by TYPO3.
 
          **Note:**
 
-         Before the content-objects of each subpart are generated, all subparts
+         Before the content objects of each subpart are generated, all subparts
          in the array are extracted and loaded into the register so that you
          can load them from there later on.
 
@@ -97,9 +97,9 @@ content by TYPO3.
 
          In addition the current-value is loaded with the content of each
          subpart just before the cObject for the subpart is parsed. That makes
-         it quite easy to load the subpart of the cObject (eg: ".current=1")
+         it quite easy to load the subpart of the cObject (e.g.: ".current = 1")
 
-         Eg. this subpart above has the register-key "SUBPART\_HELLO".
+         E.g. this subpart above has the register-key "SUBPART\_HELLO".
 
          *This is valid ONLY if the property .nonCachedSubst is not set (see
          below)!*
@@ -149,8 +149,8 @@ content by TYPO3.
    Description
          This is an array of marks-markers (case-sensitive).
 
-         A mark is defined by  **one** marker in the template. The marker must
-         be wrapped by "###" on both sides. Opposite to subparts, you may NOT
+         A mark is defined by **one** marker in the template. The marker must
+         be wrapped by "###" on both sides. Opposite to subparts, you may **not**
          insert the subpart-markers inside HTML-comment-tags! (They will not be
          removed.)
 
@@ -314,7 +314,7 @@ Example:
      }
      marks {
        Testmark = TEXT
-       Testmark.value = This is replacing a simple marker in the HTML-code.
+       Testmark.value = This is replacing a simple marker in the HTML code.
      }
      workOnSubpart = DOCUMENT
    }

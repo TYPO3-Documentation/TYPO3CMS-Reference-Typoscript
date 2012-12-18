@@ -12,7 +12,7 @@ tags
 ^^^^
 
 Used to create custom tags and define how they should be parsed. This
-is used in conjunction with *parseFunc* .
+is used in conjunction with *parseFunc*.
 
 
 .. ### BEGIN~OF~TABLE ###
@@ -57,12 +57,12 @@ is used in conjunction with *parseFunc* .
          $cObj->parameters[allParams] is automatically set to the whole
          parameter-string of the tag. Here it is ' color="red"'
 
-         **Special properties for each content-object:**
+         **Special properties for each content object:**
 
-         **[cObject].stripNL:** is a boolean option, which tells *parseFunc* that
+         **[cObject].stripNL:** Boolean option, which tells *parseFunc* that
          newlines before and after the content of the tag should be stripped.
 
-         **[cObject].breakoutTypoTagContent:** is a boolean option, which tells
+         **[cObject].breakoutTypoTagContent:** Boolean option, which tells
          parseFunc that this block of content is breaking up the nonTypoTag
          content and that the content after this must be re-wrapped.
 

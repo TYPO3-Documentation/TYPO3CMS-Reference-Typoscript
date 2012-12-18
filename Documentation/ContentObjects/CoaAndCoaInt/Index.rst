@@ -57,7 +57,7 @@ cObjects but with any cObject.
          ->if
 
    Description
-         If "if" returns false, the COA is NOT rendered.
+         If "if" returns false, the COA is **not** rendered.
 
 
 .. container:: table-row

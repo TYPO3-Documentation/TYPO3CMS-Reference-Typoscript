@@ -120,7 +120,7 @@ General information
 Case sensitivity
 """"""""""""""""
 
-All names and references in TypoScript are  **case sensitive!** This
+All names and references in TypoScript are **case sensitive!** This
 is very important to notice. For example watch the words "TEXT" and "value"
 in this TypoScript code::
 
@@ -132,7 +132,7 @@ This is not the same as ::
    myObject = text
    myObject.Value = <strong>Some HTML code</strong>
 
-While the first will be recognized as the content-object "TEXT" and
+While the first will be recognized as the content object "TEXT" and
 will produce the desired output, the latter will not be recognized and
 will not output anything. Even if you wrote **"TEXT"** in uppercase in the
 second example, it would still not work, because the property **"value"**

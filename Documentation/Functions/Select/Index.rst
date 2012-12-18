@@ -100,7 +100,11 @@ Always secure input from outside, for example with intval.
          *SQL-orderBy* /stdWrap
 
    Description
-         Without "order by"! E.g. "sorting, title"
+         ORDER BY clause without the words "ORDER BY".
+
+         **Example:** ::
+
+            orderBy = sorting, title
 
 
 .. container:: table-row
@@ -112,7 +116,11 @@ Always secure input from outside, for example with intval.
          *SQL-groupBy* /stdWrap
 
    Description
-         Without "group by"! E.g. "CType"
+         GROUP BY clause without the words "GROUP BY".
+
+         **Example:** ::
+
+            groupBy = CType
 
 
 .. container:: table-row
@@ -128,7 +136,7 @@ Always secure input from outside, for example with intval.
    Description
          Max records
 
-         **Special keyword:** "total" is substituted with count(\*)
+         **Special keyword:** "total" is substituted with count(\*).
 
 
 .. container:: table-row
@@ -142,9 +150,9 @@ Always secure input from outside, for example with intval.
          Since TYPO3 4.6: integer +calc +"total" /stdWrap
 
    Description
-         Begin with record number *value*
+         Begin with record number *value*.
 
-         **Special keyword:** "total" is substituted with count(\*)
+         **Special keyword:** "total" is substituted with count(\*).
 
 
 .. container:: table-row
@@ -158,7 +166,11 @@ Always secure input from outside, for example with intval.
          Since TYPO3 4.6: *SQL-where* /stdWrap
 
    Description
-         Without "where"! E.g. " (title LIKE '%SOMETHING%' AND NOT doktype) "
+         WHERE clause without the word "WHERE".
+
+         **Example:** ::
+
+            where = (title LIKE '%SOMETHING%' AND NOT doktype)
 
 
 .. container:: table-row
@@ -170,7 +182,11 @@ Always secure input from outside, for example with intval.
          *SQL-where* /stdWrap
 
    Description
-         Without "AND"! E.g. "NOT doktype".
+         AND clause in a WHERE clause; without the word "AND".
+
+         **Example:** ::
+
+            andWhere = NOT doktype
 
 
 .. container:: table-row
@@ -188,7 +204,7 @@ Always secure input from outside, for example with intval.
          to a record in sys\_language table. And if set, the records returned
          by the select-function will be selected only if the value of this
          field matches the $GLOBALS['TSFE']->sys\_language\_uid (which is set
-         by the config.sys\_language\_uid option)
+         by the option config.sys\_language\_uid).
 
 
 .. container:: table-row
@@ -205,9 +221,9 @@ Always secure input from outside, for example with intval.
          List of fields to select, or "count(\*)".
 
          If the records need to be localized, please include the
-         relevant localization-fields
-         (uid,pid,languageField,transOrigPointerField). Otherwise the TYPO3
-         internal localization will not succeed.
+         relevant localization-fields (uid, pid, languageField and
+         transOrigPointerField). Otherwise the TYPO3 internal localization
+         will not succeed.
 
    Default
          \*
@@ -228,7 +244,7 @@ Always secure input from outside, for example with intval.
          Since TYPO3 4.6: string /stdWrap
 
    Description
-         Enter tablename for JOIN , LEFT OUTER JOIN and RIGHT OUTER JOIN
+         Enter the table name for JOIN , LEFT OUTER JOIN and RIGHT OUTER JOIN
          respectively.
 
 
@@ -247,16 +263,16 @@ Always secure input from outside, for example with intval.
          provides a way to safely use external data (e.g. database fields,
          GET/POST parameters) in a query.
 
-         <markername>.value (value)
+         **<markername>.value:** (value)
 
          Sets the value directly.
 
-         <markername>.commaSeparatedList (boolean)
+         **<markername>.commaSeparatedList:** (boolean)
 
          If set, the value is interpreted as a comma-separated list of values.
          Each value in the list is individually escaped and quoted.
 
-         (stdWrap properties ...)
+         **(stdWrap properties ...)**
 
          All stdWrap properties can be used for each markername.
 

@@ -231,12 +231,12 @@ The extension "feedit" needs to be installed for this to work.
          wrap / HTML color
 
    Description
-         **innerWrap** wraps the content elements (including the icons) inside
+         **innerWrap:** Wraps the content elements (including the icons) inside
          the preview border (an HTML table).
 
-         **outerWrap** wraps the whole content element including the border.
+         **outerWrap:** Wraps the whole content element including the border.
 
-         **color** denotes the color of the border.
+         **color:** Denotes the color of the border.
 
 
 .. container:: table-row

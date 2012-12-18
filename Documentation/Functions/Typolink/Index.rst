@@ -94,7 +94,7 @@ with the link-parameters (lowercased)!
 
    Description
          If set, the additionalParams list is exploded and calculated into a
-         hash string appended to the url, like "&cHash=ae83fd7s87". When the
+         hash string appended to the URL, like "&cHash=ae83fd7s87". When the
          caching mechanism sees this value, it calculates the same value on the
          server based on incoming values in HTTP\_GET\_VARS, excluding
          id,type,no\_cache,ftu,cHash,MP values. If the incoming cHash value
@@ -113,14 +113,14 @@ with the link-parameters (lowercased)!
          string /stdWrap
 
    Description
-         This is parameters that are added to the end of the url. This must be
+         This is parameters that are added to the end of the URL. This must be
          code ready to insert after the last parameter.
 
-         **Example:**
+         **Example:** ::
 
-         '&print=1'
+            '&print=1'
 
-         '&sword\_list[]=word1&sword\_list[]=word2'
+            '&sword\_list[]=word1&sword\_list[]=word2'
 
          **Applications:**
 
@@ -147,21 +147,18 @@ with the link-parameters (lowercased)!
          the last parameter of the same name will be applied), but enable
          "config.uniqueLinkVars" if you still don't like it.
 
-         **.method:** If set to to GET or POST then then the parsed query
-         arguments (GET or POST data) will be used. This settings are useful if
-         you use URL processing extensions like Real URL, which translate part
-         of the path into query arguments.
+         **.method:** If set to GET or POST, then the parsed query arguments
+         (GET or POST data) will be used. This setting is useful, if you use
+         URL processing extensions like Real URL, which translate part of the
+         path into query arguments.
 
          It's also possible to get both, POST and GET data, on setting this to
 
          "POST,GET" or "GET,POST". The last method in this sequence takes
-
          precedence and overwrites the parts that are also present for the
-         first
+         first method.
 
-         method.
-
-         **.exclude:** List of query arguments to exclude from the link (eg L
+         **.exclude:** List of query arguments to exclude from the link (e.g. L
          or cHash).
 
 
@@ -216,7 +213,7 @@ with the link-parameters (lowercased)!
          boolean
 
    Description
-         If set, the link is first wrapped with " *.wrap"* and then the
+         If set, the link is first wrapped with "*.wrap*" and then the
          <A>-tag.
 
    Default
@@ -232,7 +229,7 @@ with the link-parameters (lowercased)!
 
    Description
          This is the main data that is used for creating the link. It can be
-         the id of a page, the URL of some external page, an e-mail address or
+         the id of a page, the URL of some external page, an email address or
          a reference to a file on the server. On top of this there can be
          additional information for specifying a target, a class and a title.
          Below are a few examples followed by full explanations.
@@ -241,12 +238,12 @@ with the link-parameters (lowercased)!
 
             parameter = 51
 
-         *Most simple. Will create a link page 51.* ::
+         *Most simple. Will create a link to page 51.* ::
 
             parameter = 51 _blank specialLink "Very important information"
 
          *A full example. A link to page 51 that will open in a new window. The
-         link will a class attribute with value "specialLink" and a title
+         link will have a class attribute with value "specialLink" and a title
          attribute reading "Very important information". So the result will be
          the following:* ::
 
@@ -256,12 +253,12 @@ with the link-parameters (lowercased)!
 
          *An external link with a class attribute. Note the dash (-) that
          replaces the second value (the target). This makes it possible to
-         define a class (third value) without having to define a class.* ::
+         define a class (third value) without having to define a target.* ::
 
             parameter = info@typo3.org - - "Send a mail to main TYPO3 contact"
 
-         *Create a mailto link with a title attribute (but no target and no
-         class)*
+         *Creates a mailto link with a title attribute (but no target and no
+         class).*
 
          As you can see from the examples, each significant part of the
          parameter string is separated by a space. Values that can themselves
@@ -298,12 +295,12 @@ with the link-parameters (lowercased)!
 
             typolink.parameter = 51#345
 
-         *Create a link to page 51 with an anchor to tt\_content element number
+         *Creates a link to page 51 with an anchor to tt\_content element number
          345* ::
 
             typolink.parameter = #top
 
-         *Create a link to the current page with an anchor called "top".*
+         *Creates a link to the current page with an anchor called "top".*
 
          It's also possible to direct the typolink to use a custom function (a
          "link handler") to build the link. This is described in more details
@@ -327,12 +324,12 @@ with the link-parameters (lowercased)!
 
             typolink.parameter = 51 400x300
 
-         *Open page 51 in a popup window measuring 400 by 300 pixels* ::
+         *Opens page 51 in a popup window measuring 400 by 300 pixels* ::
 
             typolink.parameter = 51 400x300:resizable=0,location=1
 
-         *Same as above, but window will not be resizable and will show the
-         location bar*
+         *Same as above, but the window will not be resizable and will show
+         the location bar.*
 
          **Class**
 
@@ -368,9 +365,9 @@ with the link-parameters (lowercased)!
          Forces links to internal pages to be absolute, thus having a proper
          URL scheme and domain prepended.
 
-         Additional property:
+         Additional sub-property:
 
-         .scheme: Defines the URL scheme to be used (https or http). http is
+         **.scheme:** Defines the URL scheme to be used (https or http). http is
          the default value.
 
          **Example:** ::
@@ -422,12 +419,12 @@ with the link-parameters (lowercased)!
          string
 
    Description
-         If set to "url" then it will return the URL of the link
-         ($this->lastTypoLinkUrl)
+         If set to "url", then it will return the URL of the link
+         ($this->lastTypoLinkUrl).
 
-         If set to "target" it will return the target of the link.
+         If set to "target", it will return the target of the link.
 
-         So, in these two cases you will not get the value wrapped but the url
+         So, in these two cases you will not get the value wrapped but the URL
          or target value returned!
 
 
@@ -441,7 +438,7 @@ with the link-parameters (lowercased)!
 
    Description
          If this value is present, it's prepended with a "#" and placed after
-         any internal url to another page in TYPO3.
+         any internal URL to another page in TYPO3.
 
          This is used create a link, which jumps from one page directly the
          section on another page.

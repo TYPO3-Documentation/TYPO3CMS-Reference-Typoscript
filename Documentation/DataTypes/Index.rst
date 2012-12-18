@@ -18,10 +18,10 @@ The values you assign to properties in TypoScript are often of a
 specific format. The following table describes these formats.
 
 E.g. if a value is defined as the type "<tag>", you're supposed to
-supply HTML-code. If it is of the type "resource", it's a reference to
+supply HTML code. If it is of the type "resource", it's a reference to
 a file from the resource-field in the template. If the type is
-"GraphicColor" a color-definition is expected and you should supply an
-HTML-valid color-code or RGB-values comma-separated.
+"GraphicColor", a color-definition is expected and you should supply
+an HTML color code or comma-separated RGB-values.
 
 
 .. toctree::

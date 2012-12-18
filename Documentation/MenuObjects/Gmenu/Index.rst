@@ -42,7 +42,7 @@ graphical navigation, where each link is a separate gif-file.
    Description
          RollOver configuration enabled / disabled.
 
-         If this is true, RO becomes a GIFBUILDER-object defining the layout of
+         If this is true, RO becomes a GIFBUILDER object defining the layout of
          the menu item when the mouse rolls over it
 
    Default
@@ -101,10 +101,10 @@ graphical navigation, where each link is a separate gif-file.
          Normally graphical links are "blurred" if the browser is MSIE.
          Blurring removes the ugly box around a clicked link.
 
-         If this property is set, the link is NOT blurred (browser-default)
+         If this property is set, the link is **not** blurred (browser-default)
          with "onFocus".
 
-         **Note** : This option and the JavaScript for blurring have been
+         **Note:** This option and the JavaScript for blurring have been
          removed in TYPO3 6.0.
 
 
@@ -299,7 +299,7 @@ graphical navigation, where each link is a separate gif-file.
 
    Description
          If the menu is forced to a certain minimum dimension, this is a list
-         of objects in the gifbuilder-object that is removed for this last
+         of objects in the GIFBUILDER object that is removed for this last
          item. This is important to do if the menu items has elements that
          should only be applied if the item is actually a menu item!
 
@@ -358,7 +358,7 @@ graphical navigation, where each link is a separate gif-file.
 
          This pattern goes for ALL the states except the SPC state.
 
-         **SPECIAL:**
+         **Special:**
 
          The ->OptionSplit function is run on the whole GIFBUILDER-
          configuration before the items are generated.
@@ -408,7 +408,7 @@ been for a long time.
          boolean
 
    Description
-         If set, the item is NOT linked!
+         If set, the item is **not** linked!
 
 
 .. container:: table-row
