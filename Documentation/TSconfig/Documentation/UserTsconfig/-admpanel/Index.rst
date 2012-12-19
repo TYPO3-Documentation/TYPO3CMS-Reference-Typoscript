@@ -16,21 +16,6 @@ Configuration of the Admin Panel in the Frontend for the user.
 .. container:: table-row
 
    Property
-         Property:
-
-   Data type
-         Data type:
-
-   Description
-         Description:
-
-   Default
-         Default:
-
-
-.. container:: table-row
-
-   Property
          enable
 
    Data type

@@ -14,18 +14,6 @@
 .. container:: table-row
 
    Property
-         Property:
-
-   Data type
-         Data type:
-
-   Description
-         Description:
-
-
-.. container:: table-row
-
-   Property
          table.[ *tablename* ]
 
          default
@@ -334,18 +322,6 @@
 Processing options for a $TCA configured table.
 
 .. ### BEGIN~OF~TABLE ###
-
-.. container:: table-row
-
-   Property
-         Property:
-
-   Data type
-         Data type:
-
-   Description
-         Description:
-
 
 .. container:: table-row
 

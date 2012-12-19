@@ -18,18 +18,6 @@ disable options, blind options in selector boxes etc.
 .. container:: table-row
 
    Property
-         Property:
-
-   Data type
-         Data type:
-
-   Description
-         Description:
-
-
-.. container:: table-row
-
-   Property
          [ *tablename* ].[ *field* ]
 
          [ *tablename* ].[ *field* ].types.[ *type* ]
@@ -271,18 +259,6 @@ Properties for the TCEFORM configuration object (see introduction
 above).
 
 .. ### BEGIN~OF~TABLE ###
-
-.. container:: table-row
-
-   Property
-         Property:
-
-   Data type
-         Data type:
-
-   Description
-         Description:
-
 
 .. container:: table-row
 
@@ -661,21 +637,6 @@ object.
 .. container:: table-row
 
    Property
-         Property:
-
-   Data type
-         Data type:
-
-   Description
-         Description:
-
-   Default
-         Default:
-
-
-.. container:: table-row
-
-   Property
          langDisable
 
    Data type
@@ -726,21 +687,6 @@ properties for the TCEFORM FlexForm sheet configuration object (see
 ->TCEFORM section above).
 
 .. ### BEGIN~OF~TABLE ###
-
-.. container:: table-row
-
-   Property
-         Property:
-
-   Data type
-         Data type:
-
-   Description
-         Description:
-
-   Default
-         Default:
-
 
 .. container:: table-row
 
@@ -826,21 +772,6 @@ properties for the TCEFORM FlexForm sheet configuration object (see
 Properties for the suggest wizard (see introduction above).
 
 .. ### BEGIN~OF~TABLE ###
-
-.. container:: table-row
-
-   Property
-         Property:
-
-   Data type
-         Data type:
-
-   Description
-         Description:
-
-   Default
-         Default:
-
 
 .. container:: table-row
 

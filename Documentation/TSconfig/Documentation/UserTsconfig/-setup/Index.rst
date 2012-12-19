@@ -41,21 +41,6 @@ This table shows the keys for both defaults and override values:
 .. container:: table-row
 
    Property
-         Property:
-
-   Data type
-         Data type:
-
-   Description
-         Description:
-
-   Default
-         Default:
-
-
-.. container:: table-row
-
-   Property
          thumbnailsByDefault
 
    Data type
@@ -514,21 +499,6 @@ The table below describes the related option:
 
 
 .. ### BEGIN~OF~TABLE ###
-
-.. container:: table-row
-
-   Property
-         Property:
-
-   Data type
-         Data type:
-
-   Description
-         Description:
-
-   Default
-         Default:
-
 
 .. container:: table-row
 
