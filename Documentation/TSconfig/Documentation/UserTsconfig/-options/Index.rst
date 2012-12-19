@@ -27,8 +27,6 @@ Various options for the user affecting the core at various points.
 
          **NOTE:** Only for admin-users. For other users it has no effect.
 
-   Default
-
 
 .. container:: table-row
 
@@ -36,7 +34,7 @@ Various options for the user affecting the core at various points.
          RTEkeyList
 
    Data type
-         [list of keywords]
+         *(list of keywords)*
 
    Description
          This is a list of the Rich Text Editor buttons the user may see
@@ -62,8 +60,6 @@ Various options for the user affecting the core at various points.
    Description
          This will allow a user to clear the whole page cache.
 
-   Default
-
 
 .. container:: table-row
 
@@ -76,8 +72,6 @@ Various options for the user affecting the core at various points.
    Description
          This will allow a user to clear all cache (that is everything
          including templates)
-
-   Default
 
 
 .. container:: table-row
@@ -126,8 +120,6 @@ Various options for the user affecting the core at various points.
          \- the same as the previous. Leaving out parts of the IP address is
          the same as wild cards...
 
-   Default
-
 
 .. container:: table-row
 
@@ -141,8 +133,6 @@ Various options for the user affecting the core at various points.
          If set, the clipboard content will be preserved for the next login.
          Normally the clipboard content lasts only during the session.
 
-   Default
-
 
 .. container:: table-row
 
@@ -150,7 +140,7 @@ Various options for the user affecting the core at various points.
          clipboardNumberPads
 
    Data type
-         int (0-20)
+         integer (0-20)
 
    Description
          This allows you to enter how many pads you want on the clipboard.
@@ -228,8 +218,6 @@ Various options for the user affecting the core at various points.
 
          **Note** : This option has been removed in TYPO3 4.4.
 
-   Default
-
 
 .. container:: table-row
 
@@ -275,8 +263,6 @@ Various options for the user affecting the core at various points.
 
          Note: This option is deprecated since TYPO3 4.5.
 
-   Default
-
 
 .. container:: table-row
 
@@ -320,8 +306,6 @@ Various options for the user affecting the core at various points.
          Group 5 has not been set, so it will be displayed by default, just
          like group 1.
 
-   Default
-
 
 .. container:: table-row
 
@@ -337,8 +321,6 @@ Various options for the user affecting the core at various points.
 
          Note: This option is deprecated since TYPO3 4.5.
 
-   Default
-
 
 .. container:: table-row
 
@@ -351,8 +333,6 @@ Various options for the user affecting the core at various points.
    Description
          If set, the page tree is  *not* opened to the page being edited when
          an id number is entered in the "Edit Id" box.
-
-   Default
 
 
 .. container:: table-row
@@ -371,8 +351,6 @@ Various options for the user affecting the core at various points.
 
          Note: This option is deprecated since TYPO3 4.5.
 
-   Default
-
 
 .. container:: table-row
 
@@ -387,8 +365,6 @@ Various options for the user affecting the core at various points.
          when an id is entered in the "Edit Id" box.
 
          (provided .bookmark\_onEditId\_dontSetPageTree is not set!)
-
-   Default
 
 
 .. container:: table-row
@@ -406,8 +382,6 @@ Various options for the user affecting the core at various points.
 
          Note: This option is deprecated since TYPO3 4.5.
 
-   Default
-
 
 .. container:: table-row
 
@@ -419,8 +393,6 @@ Various options for the user affecting the core at various points.
 
    Description
          If set, the user cannot create or edit bookmarks.
-
-   Default
 
 
 .. container:: table-row
@@ -435,8 +407,6 @@ Various options for the user affecting the core at various points.
          If set, a createFolders option appears in the element browser (for
          admin-users this is always enabled).
 
-   Default
-
 
 .. container:: table-row
 
@@ -448,8 +418,6 @@ Various options for the user affecting the core at various points.
 
    Description
          If set, then image thumbnails are not shown in the element browser.
-
-   Default
 
 
 .. container:: table-row
@@ -463,8 +431,6 @@ Various options for the user affecting the core at various points.
    Description
          As .noThumbsInEB but for the Rich Text Editor image selector.
 
-   Default
-
 
 .. container:: table-row
 
@@ -477,8 +443,6 @@ Various options for the user affecting the core at various points.
    Description
          If set, the upload-fields in the element browser are put in the top of
          the window.
-
-   Default
 
 
 .. container:: table-row
@@ -505,8 +469,6 @@ Various options for the user affecting the core at various points.
 
             options.saveDocNew = 0
             options.saveDocNew.tt_content = top
-
-   Default
 
 
 .. container:: table-row
@@ -544,8 +506,6 @@ Various options for the user affecting the core at various points.
 
          Overriding for single tables works like "saveDocNew" above.
 
-   Default
-
 
 .. container:: table-row
 
@@ -561,8 +521,6 @@ Various options for the user affecting the core at various points.
          Shows link to the history for the record in TCEFORMs.
 
          Overriding for single tables works like "saveDocNew" above.
-
-   Default
 
 
 .. container:: table-row
@@ -590,8 +548,6 @@ Various options for the user affecting the core at various points.
          .. figure:: ../../Images/options.pageTree.backgroundColor.png
             :alt: Tree branches with configured background colors
 
-   Default
-
 
 .. container:: table-row
 
@@ -610,8 +566,6 @@ Various options for the user affecting the core at various points.
          If the value is set "titlelink" then the icon will instead be wrapped
          with the same link as the title.
 
-   Default
-
 
 .. container:: table-row
 
@@ -625,8 +579,6 @@ Various options for the user affecting the core at various points.
          If set, the page titles in the page tree will not be highlighted when
          clicked.
 
-   Default
-
 
 .. container:: table-row
 
@@ -639,8 +591,6 @@ Various options for the user affecting the core at various points.
    Description
          If set, the titles in the page navigation tree will have their ID
          numbers printed before the clickable title.
-
-   Default
 
 
 .. container:: table-row
@@ -658,8 +608,6 @@ Various options for the user affecting the core at various points.
 
          Useful if there are several domains in one page tree.
 
-   Default
-
 
 .. container:: table-row
 
@@ -673,8 +621,6 @@ Various options for the user affecting the core at various points.
          If set, the navigation title is displayed in the page navigation tree
          instead of the normal page title. The page title is showed in a
          tooltip if the mouse hovers the navigation title.
-
-   Default
 
 
  .. container:: table-row
@@ -692,8 +638,6 @@ Various options for the user affecting the core at various points.
              :alt: Active user db mount
 
           This is useful if you work a lot with user db mounts.
-
-   Default
 
  .. container:: table-row
 
@@ -729,8 +673,6 @@ Various options for the user affecting the core at various points.
          If set, the workspace info box will also be shown in the page tree
          even in online mode. Recommended when working with workspaces a lot.
 
-   Default
-
 .. container:: table-row
 
    Property
@@ -741,8 +683,6 @@ Various options for the user affecting the core at various points.
 
    Description
          If set, the filter-box in the top of the page tree will be hidden.
-
-   Default
 
 
 .. container:: table-row
@@ -757,8 +697,6 @@ Various options for the user affecting the core at various points.
          If set, not in menu and special pages are separated in the page tree
          from standard pages.
 
-   Default
-
 
 .. container:: table-row
 
@@ -772,8 +710,6 @@ Various options for the user affecting the core at various points.
          If set and pageTree.seperateNotinmenuPages=1, separated pages are
          sorted alphabetically.
 
-   Default
-
 
 .. container:: table-row
 
@@ -781,7 +717,7 @@ Various options for the user affecting the core at various points.
          pageTree.altElementBrowserMountPoints
 
    Data type
-         list of integers
+         *(list of integers)*
 
    Description
          Sets alternative webmounts for use in the Element Browser. You
@@ -795,8 +731,6 @@ Various options for the user affecting the core at various points.
 
             options.pageTree.altElementBrowserMountPoints = 34,123
 
-   Default
-
 
 .. container:: table-row
 
@@ -804,7 +738,7 @@ Various options for the user affecting the core at various points.
          folderTree.altElementBrowserMountPoints
 
    Data type
-         list of foldernames
+         *(list of foldernames)*
 
    Description
          Sets alternative filemounts for use in the Element Browser. The
@@ -812,13 +746,11 @@ Various options for the user affecting the core at various points.
          separate folders by a comma. If a folder you specify does not exist it
          will not get mounted. Effective in workspaces too.
 
-         The alternative filemounts are  **added** to the existing Filemounts.
+         The alternative filemounts are  **added** to the existing filemounts.
 
          **Example** ::
 
             options.folderTree.altElementBrowserMountPoints = _temp_/, templates
-
-   Default
 
 
 .. container:: table-row
@@ -827,7 +759,7 @@ Various options for the user affecting the core at various points.
          folderTree.uploadFieldsInLinkBrowser
 
    Data type
-         int
+         integer
 
    Description
          This value defines the number of upload fields in the element browser.
@@ -858,7 +790,7 @@ Various options for the user affecting the core at various points.
          contextMenu.[key].disableItems
 
    Data type
-         list of items
+         *(list of items)*
 
    Description
          List of context menu ("clickmenu") items to disable.
@@ -879,8 +811,6 @@ Various options for the user affecting the core at various points.
          Items to disable are (for "folder" type - that is files/folders):
 
          edit,upload,rename,new,info,copy,cut,paste,delete
-
-   Default
 
 
 .. container:: table-row
@@ -905,11 +835,11 @@ Various options for the user affecting the core at various points.
          contextMenu.options.clickMenuTimeOut
 
    Data type
-         int, 1-100
+         integer (1-100)
 
    Description
          Number of seconds the click menu is visible in the top frame before it
-         disappears by it self.
+         disappears by itself.
 
    Default
          5
@@ -927,8 +857,6 @@ Various options for the user affecting the core at various points.
          If set, then the clickmenu in the top frame is always shown. Default
          is that it's shown only if the pop-up menus are disabled by user or by
          browser.
-
-   Default
 
 
 .. container:: table-row
@@ -948,8 +876,6 @@ Various options for the user affecting the core at various points.
             options.overridePageModule = web_txtemplavoilaM1
 
          This will enable TemplaVoila page module as default page module.
-
-   Default
 
 
 .. container:: table-row
@@ -1004,8 +930,6 @@ Various options for the user affecting the core at various points.
    Description
          Default number of file upload forms shown in the File->List module
 
-   Default
-
 
 .. container:: table-row
 
@@ -1013,7 +937,7 @@ Various options for the user affecting the core at various points.
          hideRecords.[table]
 
    Data type
-         list of record ids
+         *(list of record ids)*
 
    Description
          This hides records in the backend user interface. It is not an access
@@ -1038,8 +962,6 @@ Various options for the user affecting the core at various points.
 
             options.hideRecords.pages = 12,45
 
-   Default
-
 
 .. container:: table-row
 
@@ -1052,8 +974,6 @@ Various options for the user affecting the core at various points.
    Description
          Number of hours for expiry of preview links to workspaces. Default is
          48 hours.
-
-   Default
 
 
 .. container:: table-row
@@ -1129,14 +1049,12 @@ Various options for the user affecting the core at various points.
          workspaces.allowed\_languages.[workspaceId]
 
    Data type
-         list of sys\_language ids
+         *(list of sys\_language ids)*
 
    Description
          This is a list of sys\_language uids which will be allowed in a
          workspace. This list - if set - will override the allowed languages
          list in the BE user group configuration.
-
-   Default
 
 
 .. container:: table-row
@@ -1145,13 +1063,11 @@ Various options for the user affecting the core at various points.
          additionalPreviewLanguages
 
    Data type
-         list of sys\_language ids
+         *(list of sys\_language ids)*
 
    Description
          The user will see these additional languages when localizing stuff in
          TCEforms. The list are uid numbers of sys\_language records.
-
-   Default
 
 
 .. container:: table-row
@@ -1166,8 +1082,6 @@ Various options for the user affecting the core at various points.
          If set, localized fields in flexforms are shown only for languages
          which the current page is translated to.
 
-   Default
-
 
 .. container:: table-row
 
@@ -1175,7 +1089,7 @@ Various options for the user affecting the core at various points.
          view.languageOrder
 
    Data type
-         list of sys\_language ids
+         *(list of sys\_language ids)*
 
    Description
          When a backend user clicks a view-page link in the backend (magnifying
@@ -1189,8 +1103,6 @@ Various options for the user affecting the core at various points.
 
             options.view.languageOrder = 2,1
 
-   Default
-
 
 .. container:: table-row
 
@@ -1198,7 +1110,7 @@ Various options for the user affecting the core at various points.
          file\_list.enableDisplayBigControlPanel
 
    Data type
-         list of keywords
+         *(list of keywords)*
 
    Description
          Determines whether the checkbox "Extended view" in the filelist module
@@ -1227,7 +1139,7 @@ Various options for the user affecting the core at various points.
          file\_list.enableDisplayThumbnails
 
    Data type
-         list of keywords
+         *(list of keywords)*
 
    Description
          Determines whether the checkbox "Display thumbnails" in the filelist
@@ -1253,7 +1165,7 @@ Various options for the user affecting the core at various points.
          file\_list.enableClipBoard
 
    Data type
-         list of keywords
+         *(list of keywords)*
 
    Description
          Determines whether the checkbox "Show clipboard" in the filelist

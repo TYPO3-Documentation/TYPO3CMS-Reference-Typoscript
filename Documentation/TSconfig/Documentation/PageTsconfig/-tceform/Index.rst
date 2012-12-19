@@ -305,10 +305,10 @@ above).
          keepItems
 
    Data type
-         list of values
+         *(list of values)*
 
    Description
-         *(applies to select-types only)*
+         *(Applies to select-types only.)*
 
          This keeps in the list only the items defined here. All others are
          removed.
@@ -327,7 +327,7 @@ above).
          removeItems
 
    Data type
-         list of values
+         *(list of values)*
 
    Description
          *(applies to select-types only)*
@@ -507,10 +507,10 @@ above).
          PAGE\_TSCONFIG\_IDLIST
 
    Data type
-         comma list of integers
+         *(list of integers)*
 
    Description
-         *(applies to select-types with foreign table)*
+         *(Applies to select-types with foreign table.)*
 
          See above.
 
@@ -576,14 +576,16 @@ above).
          RTEfullScreenWidth
 
    Data type
-         int+/%
+         positive integer / %
 
    Description
-         *(applies for RTE text fields only with the RTE wizard configured)*
+         *(Applies for RTE text fields only with the RTE wizard configured.)*
 
-         The width of the RTE full screen display. If nothing is set, the whole
-         width is used which means "100%". If you set an integer value, that
-         indicates the pixels width.
+         The width of the RTE full screen display. If you set an integer value,
+         that indicates the pixels width. You can also set a percentage value.
+
+   Default
+         100%
 
 
 .. container:: table-row
@@ -647,8 +649,6 @@ object.
          FlexForms will not only allow editing the default language, but also
          additional languages according to "sys\_languages" table contents.
 
-   Default
-
 
 .. container:: table-row
 
@@ -670,8 +670,6 @@ object.
               langDisable  = 1
               langChildren = 0
             }
-
-   Default
 
 
 .. ###### END~OF~TABLE ######
@@ -707,8 +705,6 @@ properties for the TCEFORM FlexForm sheet configuration object (see
               disabled = 1
             }
 
-   Default
-
 
 .. container:: table-row
 
@@ -728,8 +724,6 @@ properties for the TCEFORM FlexForm sheet configuration object (see
               sheetTitle = LLL:fileadmin/locallang.xml:tt_content.pi_flexform.my_ext_pi1.sDEF
             }
 
-   Default
-
 
 .. container:: table-row
 
@@ -743,8 +737,6 @@ properties for the TCEFORM FlexForm sheet configuration object (see
          (Since TYPO3 4.6) Specifies a description for the sheet shown in the
          FlexForm.
 
-   Default
-
 
 .. container:: table-row
 
@@ -757,8 +749,6 @@ properties for the TCEFORM FlexForm sheet configuration object (see
    Description
          (Since TYPO3 4.6) Specifies a short description of the sheet used as
          link title in the tab-menu.
-
-   Default
 
 
 .. ###### END~OF~TABLE ######
@@ -779,7 +769,7 @@ Properties for the suggest wizard (see introduction above).
          pidList
 
    Data type
-         list of values
+         *(list of values)*
 
    Description
          Limit the search to certain pages (and their subpages). When pidList
@@ -793,8 +783,6 @@ Properties for the suggest wizard (see introduction above).
               pidList = 1,2,3,45
             }
 
-   Default
-
 
 .. container:: table-row
 
@@ -802,7 +790,7 @@ Properties for the suggest wizard (see introduction above).
          pidDepth
 
    Data type
-         int+
+         positive integer
 
    Description
          Expand pidList by this number of levels. Only has an effect, if
@@ -815,8 +803,6 @@ Properties for the suggest wizard (see introduction above).
               pidDepth = 4
             }
 
-   Default
-
 
 .. container:: table-row
 
@@ -824,7 +810,7 @@ Properties for the suggest wizard (see introduction above).
          minimumCharacters
 
    Data type
-         int+
+         positive integer
 
    Description
          Minimum number of characters needed to start the search. Works only
@@ -846,7 +832,7 @@ Properties for the suggest wizard (see introduction above).
          maxPathTitleLength
 
    Data type
-         int+
+         positive integer
 
    Description
          Maximum number of characters to display when a path element is too
@@ -857,8 +843,6 @@ Properties for the suggest wizard (see introduction above).
             TCEFORM.suggest.default {
               maxPathTitleLength = 30
             }
-
-   Default
 
 
 .. container:: table-row
@@ -902,8 +886,6 @@ Properties for the suggest wizard (see introduction above).
               searchCondition = doktype=1
             }
 
-   Default
-
 
 .. container:: table-row
 
@@ -922,8 +904,6 @@ Properties for the suggest wizard (see introduction above).
               # configures all suggest wizards which list records from table "pages" to add the css-class "pages" to every list item of the result list.
               cssClass = pages
             }
-
-   Default
 
 
 .. container:: table-row
@@ -954,8 +934,6 @@ Properties for the suggest wizard (see introduction above).
    Description
          User function to manipulate the displayed records in the result.
 
-   Default
-
 
 .. container:: table-row
 
@@ -973,8 +951,6 @@ Properties for the suggest wizard (see introduction above).
             TCEFORM.pages.storage_pid.suggest.default {
               hide = 1
             }
-
-   Default
 
 
 .. ###### END~OF~TABLE ######

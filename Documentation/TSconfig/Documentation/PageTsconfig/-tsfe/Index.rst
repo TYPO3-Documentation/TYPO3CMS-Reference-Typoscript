@@ -42,8 +42,6 @@
               )
             );
 
-   Default
-
 
 .. container:: table-row
 
@@ -92,8 +90,6 @@
          a certain branch of the page tree, make sure to create a template
          record (a blank one will do) on the page that carries the Page
          TSconfig information.
-
-   Default
 
 
 .. ###### END~OF~TABLE ######

@@ -49,8 +49,6 @@ This table shows the keys for both defaults and override values:
    Description
          Show Thumbnails by default
 
-   Default
-
 
 .. container:: table-row
 
@@ -62,8 +60,6 @@ This table shows the keys for both defaults and override values:
 
    Description
          Notify me by email, when somebody logs in from my account
-
-   Default
 
 
 .. container:: table-row
@@ -81,8 +77,6 @@ This table shows the keys for both defaults and override values:
          This is an old property. Rather look at startModule below instead, as
          it provides more flexibility.
 
-   Default
-
 
 .. container:: table-row
 
@@ -95,8 +89,6 @@ This table shows the keys for both defaults and override values:
    Description
          Show help text when applicable
 
-   Default
-
 
 .. container:: table-row
 
@@ -104,12 +96,10 @@ This table shows the keys for both defaults and override values:
          titleLen
 
    Data type
-         int+
+         positive integer
 
    Description
          Max. Title Length
-
-   Default
 
 
 .. container:: table-row
@@ -123,8 +113,6 @@ This table shows the keys for both defaults and override values:
    Description
          Wide document background
 
-   Default
-
 
 .. container:: table-row
 
@@ -137,8 +125,6 @@ This table shows the keys for both defaults and override values:
    Description
          Enable Rich Text Editor
 
-   Default
-
 
 .. container:: table-row
 
@@ -150,8 +136,6 @@ This table shows the keys for both defaults and override values:
 
    Description
          File upload directly in Doc. module
-
-   Default
 
 
 .. container:: table-row
@@ -167,8 +151,6 @@ This table shows the keys for both defaults and override values:
 
          Determines the type of help text mode for TCA form fields.
 
-   Default
-
 
 .. container:: table-row
 
@@ -176,7 +158,7 @@ This table shows the keys for both defaults and override values:
          navFrameWidth
 
    Data type
-         int+
+         positive integer
 
    Description
          The width in pixels of the navigation frame in the Page and File main
@@ -204,8 +186,6 @@ This table shows the keys for both defaults and override values:
          **Note** : This option became superfluous in TYPO3 4.5 and has been
          removed in TYPO3 4.5.
 
-   Default
-
 
 .. container:: table-row
 
@@ -222,8 +202,6 @@ This table shows the keys for both defaults and override values:
          for TYPO3 4.5 see t3lib/config_default.php).
          E.g. "dk", "de", "es" etc.
 
-   Default
-
 
 .. container:: table-row
 
@@ -231,13 +209,11 @@ This table shows the keys for both defaults and override values:
          copyLevels
 
    Data type
-         int+
+         positive integer
 
    Description
          Recursive Copy: Enter the number of page sub-levels to include, when a
          page is copied
-
-   Default
 
 
 .. container:: table-row
@@ -252,8 +228,6 @@ This table shows the keys for both defaults and override values:
          Recursive Delete(!): Allow ALL subpages to be deleted when deleting a
          page
 
-   Default
-
 
 .. container:: table-row
 
@@ -265,8 +239,6 @@ This table shows the keys for both defaults and override values:
 
    Description
          Display all save functions in Doc-module menu
-
-   Default
 
 
 .. container:: table-row
@@ -280,8 +252,6 @@ This table shows the keys for both defaults and override values:
    Description
          If set, then the hideAtCopy feature for records in TCE will not be
          used.
-
-   Default
 
 
 .. container:: table-row
@@ -298,8 +268,6 @@ This table shows the keys for both defaults and override values:
          the submodule in its own frame. This allows for a better display on
          small screens.
 
-   Default
-
 
 .. container:: table-row
 
@@ -311,8 +279,6 @@ This table shows the keys for both defaults and override values:
 
    Description
          Name of the module that is called when the user logs into the Backend
-
-   Default
 
 
 .. container:: table-row
@@ -337,8 +303,6 @@ This table shows the keys for both defaults and override values:
          This is extremely nice (in my opinion) for experienced users who know
          the icons of the modules.
 
-   Default
-
 
 .. container:: table-row
 
@@ -355,8 +319,6 @@ This table shows the keys for both defaults and override values:
          icon in the page tree). This simulates the old behaviourin Classic
          Backend
 
-   Default
-
 
 .. container:: table-row
 
@@ -369,8 +331,6 @@ This table shows the keys for both defaults and override values:
    Description
          If set then submodule icons will not be shown in the left menu of the
          backend.
-
-   Default
 
 
 .. container:: table-row
@@ -385,8 +345,6 @@ This table shows the keys for both defaults and override values:
          If set, palettes are not activated in the TCEFORMs when focus is moved
          to a field.
 
-   Default
-
 
 .. container:: table-row
 
@@ -398,8 +356,6 @@ This table shows the keys for both defaults and override values:
 
    Description
          Disable the context menu layers in the backend.
-
-   Default
 
 
 .. container:: table-row
@@ -414,8 +370,6 @@ This table shows the keys for both defaults and override values:
          If you are using IE or Mozilla, TYPO3 will load a little JavaScript
          file that makes it possible to use the <tab> key in textareas. If you
          don't like the feature for some reason, you can disable it here.
-
-   Default
 
 
 .. container:: table-row
@@ -441,7 +395,7 @@ This table shows the keys for both defaults and override values:
          resizeTextareas\_MaxHeight
 
    Data type
-         int+
+         positive integer
 
    Description
          Defines the maximal height of textarea (in pixels).
@@ -479,8 +433,6 @@ This table shows the keys for both defaults and override values:
          This option enables the Flash-based uploader in the File module, which
          allows to select multiple files at once when uploading files. It
          requires to have the Flash plugin installed (Flash 9 or higher).
-
-   Default
 
 
 .. ###### END~OF~TABLE ######
