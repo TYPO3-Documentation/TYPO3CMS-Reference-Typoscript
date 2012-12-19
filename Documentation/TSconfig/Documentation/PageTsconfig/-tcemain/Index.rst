@@ -33,7 +33,7 @@
          permissions.groupid
 
    Data type
-         int+
+         positive integer
 
    Description
          Hardcodes the default owner Backend User / Group UID of new and copied
@@ -70,7 +70,7 @@
          permissions.everybody
 
    Data type
-         list of string/int[0-31]
+         *(list of strings)* / integer (0-31)
 
    Description
          Default permissions set for owner-user, owner-group and everybody.
@@ -81,7 +81,7 @@
          bits corresponding to the keylist should be set. (Bits in keylist:
          show=1,edit=2,delete=4,new=8,editcontent=16)
 
-         Defaults from $TYPO3\_CONF\_VARS::
+         Defaults from $GLOBALS['TYPO3\_CONF\_VARS']::
 
             'user' => 'show,edit,delete,new,editcontent',
             'group' => 'show,edit,new,editcontent',
@@ -329,7 +329,7 @@ Processing options for a $TCA configured table.
          history.keepEntries
 
    Data type
-         int+
+         positive integer
 
    Description
          Maximum number of entries in the sys\_history for this table. Range
@@ -353,7 +353,7 @@ Processing options for a $TCA configured table.
          history.maxAgeDays
 
    Data type
-         int+
+         positive integer
 
    Description
          The number of days elements are in the history at most. Takes

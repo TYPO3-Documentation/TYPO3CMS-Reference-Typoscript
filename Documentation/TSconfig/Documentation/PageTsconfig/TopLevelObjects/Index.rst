@@ -27,8 +27,6 @@ These are the Page TSconfig Top Level Objects (TLOs):
          *Notice that these options are merged with settings from User TSconfig
          (TLO: mod) which takes precedence.*
 
-   Default
-
 
 .. container:: table-row
 
@@ -47,8 +45,6 @@ These are the Page TSconfig Top Level Objects (TLOs):
          documentation/>`_ . There the chapter "RTE API" contains more
          information.
 
-   Default
-
 
 .. container:: table-row
 
@@ -60,8 +56,6 @@ These are the Page TSconfig Top Level Objects (TLOs):
 
    Description
          Configuration for the TYPO3 Core Engine (TCEmain)
-
-   Default
 
 
 .. container:: table-row
@@ -76,8 +70,6 @@ These are the Page TSconfig Top Level Objects (TLOs):
          Extra configuration for the form fields rendered by the TCEforms-class
          in general.
 
-   Default
-
 
 .. container:: table-row
 
@@ -90,8 +82,6 @@ These are the Page TSconfig Top Level Objects (TLOs):
    Description
          Options for the TSFE front end object.
 
-   Default
-
 
 .. container:: table-row
 
@@ -99,14 +89,12 @@ These are the Page TSconfig Top Level Objects (TLOs):
          user
 
    Data type
-
+         *(whatever)*
 
    Description
          This is for custom purposes.
 
          Deprecated, use "tx\_\*" below from extensions
-
-   Default
 
 
 .. container:: table-row
@@ -115,12 +103,10 @@ These are the Page TSconfig Top Level Objects (TLOs):
          tx\_[extension key with no underscore]
 
    Data type
-
+         *(whatever)*
 
    Description
          This is reserved space for extensions.
-
-   Default
 
 
 .. ###### END~OF~TABLE ######

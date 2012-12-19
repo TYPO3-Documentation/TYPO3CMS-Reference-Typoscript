@@ -60,8 +60,6 @@ Configuration of the Admin Panel in the Frontend for the user.
          If set, the panel will not be displayed in the bottom of the page.
          This only has a visual effect.
 
-   Default
-
 
 .. container:: table-row
 
@@ -113,8 +111,6 @@ Configuration of the Admin Panel in the Frontend for the user.
 
          .edit.editNoPopup (boolean)
 
-   Default
-
 
 .. container:: table-row
 
@@ -147,8 +143,6 @@ Configuration of the Admin Panel in the Frontend for the user.
               module.edit.forceDisplayFieldIcons = 1
               hide = 1
             }
-
-   Default
 
 
 .. ###### END~OF~TABLE ######

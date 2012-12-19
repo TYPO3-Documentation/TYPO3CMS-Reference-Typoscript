@@ -24,8 +24,6 @@ These are the User TSconfig Top Level Objects (TLOs):
    Description
          Options regarding the front-end admin panel
 
-   Default
-
 
 .. container:: table-row
 
@@ -37,8 +35,6 @@ These are the User TSconfig Top Level Objects (TLOs):
 
    Description
          Options for the user, various
-
-   Default
 
 
 .. container:: table-row
@@ -53,8 +49,6 @@ These are the User TSconfig Top Level Objects (TLOs):
          Overriding values for the backend modules
 
          **Deprecated.** Use page.mod instead!
-
-   Default
 
 
 .. container:: table-row
@@ -80,8 +74,6 @@ These are the User TSconfig Top Level Objects (TLOs):
          *not* remove it again by rather set it blank if you want to disable
          the effect again!
 
-   Default
-
 
 .. container:: table-row
 
@@ -101,7 +93,7 @@ These are the User TSconfig Top Level Objects (TLOs):
 
          3. Value from Page TSconfig
 
-         4. Value from "defVals" GET vars (see alt\_doc.php)
+         4. Value from "defVals" GET variables (see alt\_doc.php)
 
          5. Value from previous record based on 'useColumnsForDefaultValues'
 
@@ -121,8 +113,6 @@ These are the User TSconfig Top Level Objects (TLOs):
 
             TCAdefaults.pages.hidden = 0
 
-   Default
-
 
 .. container:: table-row
 
@@ -130,14 +120,12 @@ These are the User TSconfig Top Level Objects (TLOs):
          user
 
    Data type
-
+         *(whatever)*
 
    Description
          This is for custom purposes.
 
          Deprecated, use "tx\_\*" below from extensions
-
-   Default
 
 
 .. container:: table-row
@@ -146,7 +134,7 @@ These are the User TSconfig Top Level Objects (TLOs):
          auth
 
    Data type
-
+         array
 
    Description
          Configuration for authentication services. Currently these are the
@@ -156,8 +144,6 @@ These are the User TSconfig Top Level Objects (TLOs):
 
          Specifies a URL to redirect to after login is performed in the backend
          login form.
-
-   Default
 
 
 .. container:: table-row
@@ -176,8 +162,6 @@ These are the User TSconfig Top Level Objects (TLOs):
 
             page.TCEMAIN.table.pages.disablePrependAtCopy = 1
 
-   Default
-
 
 .. container:: table-row
 
@@ -185,12 +169,10 @@ These are the User TSconfig Top Level Objects (TLOs):
          tx\_[extension key with no underscore]
 
    Data type
-
+         *(whatever)*
 
    Description
          This is reserved space for extensions.
-
-   Default
 
 
 .. ###### END~OF~TABLE ######

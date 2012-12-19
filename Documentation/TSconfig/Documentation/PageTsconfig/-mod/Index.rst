@@ -373,7 +373,7 @@ the Page TSconfig and alters the configuration:
          colPos\_list
 
    Data type
-         (list of integers, blank = don't do anything.)
+         *(list of integers)*
 
    Description
          This option lets you specify which columns of tt\_content elements
@@ -403,8 +403,6 @@ the Page TSconfig and alters the configuration:
 
             mod.SHARED.colPos_list = 0,3
 
-   Default
-
 
 .. container:: table-row
 
@@ -419,8 +417,6 @@ the Page TSconfig and alters the configuration:
          interface.
 
          Used in Web > List, Web > Page and TemplaVoilà page module.
-
-   Default
 
 
 .. container:: table-row
@@ -453,8 +449,6 @@ the Page TSconfig and alters the configuration:
          defaultLanguageFlag, e.g. "de.gif" to get the German flag. In TYPO3
          4.5 and newer you must use the name without dot and extension.
 
-   Default
-
 
 .. container:: table-row
 
@@ -467,8 +461,6 @@ the Page TSconfig and alters the configuration:
    Description
          Comma-separated list of language UID which will be disabled in the
          given page tree.
-
-   Default
 
 
 .. ###### END~OF~TABLE ######
@@ -487,7 +479,7 @@ the Page TSconfig and alters the configuration:
          tt\_content.colPos\_list
 
    Data type
-         (list of integers, blank = don't do anything.)
+         *(list of integers)*
 
    Description
          See mod.SHARED.colPos\_list for details.
@@ -501,8 +493,6 @@ the Page TSconfig and alters the configuration:
 
             mod.web_layout.tt_content.colPos_list = 0,3
 
-   Default
-
 
 .. container:: table-row
 
@@ -510,7 +500,7 @@ the Page TSconfig and alters the configuration:
          tt\_content.fieldOrder
 
    Data type
-         list of field names from tt\_content table
+         *(list of field names from tt\_content table)*
 
    Description
          This allows you to specify (and thereby overrule) the preferred order
@@ -522,13 +512,11 @@ the Page TSconfig and alters the configuration:
          **Example:**
 
          This results in the 'Text' field and thereafter 'Header' field being
-         display as the very first fields instead of the 'Type' field. ::
+         displayed as the very first fields instead of the 'Type' field. ::
 
             mod.web_layout.tt_content {
               fieldOrder = bodytext, header
             }
-
-   Default
 
 
 .. container:: table-row
@@ -537,7 +525,7 @@ the Page TSconfig and alters the configuration:
          editFieldsAtATime
 
    Data type
-         int+
+         positive integer
 
    Description
          Specifies the number of subsequent content elements to load in the
@@ -567,6 +555,7 @@ the Page TSconfig and alters the configuration:
          hidden.
 
    Default
+         0
 
 
 .. container:: table-row
@@ -582,6 +571,7 @@ the Page TSconfig and alters the configuration:
          in the top of the menu in Web > Page
 
    Default
+         0
 
 
 .. container:: table-row
@@ -596,6 +586,7 @@ the Page TSconfig and alters the configuration:
          Disables the search box in Columns view.
 
    Default
+         0
 
 
 .. container:: table-row
@@ -648,8 +639,6 @@ the Page TSconfig and alters the configuration:
          Disables the fact that the new-content-element icons links to the
          content element wizard and not directly to a blank "NEW" form.
 
-   Default
-
 
 .. container:: table-row
 
@@ -664,8 +653,6 @@ the Page TSconfig and alters the configuration:
          interface.
 
          Overrides the same property from mod.SHARED if set.
-
-   Default
 
 
 .. container:: table-row
@@ -688,6 +675,7 @@ the Page TSconfig and alters the configuration:
          one overlay with a possible translation if found.
 
    Default
+         0
 
 
 .. container:: table-row
@@ -701,8 +689,6 @@ the Page TSconfig and alters the configuration:
    Description
          Disables the topmost icon toolbar with the "view"-Icon and the icon
          toolbar below.
-
-   Default
 
 
 .. container:: table-row
@@ -719,7 +705,8 @@ the Page TSconfig and alters the configuration:
 
          Use this option instead of removing page information completely.
 
-         **Note** : This option and the item "Page Information" have been removed in TYPO3 6.0.
+         **Note** : This option and the item "Page Information" have been removed
+         in TYPO3 6.0.
 
    Default
          0
@@ -754,6 +741,7 @@ the Page TSconfig and alters the configuration:
             }
 
    Default
+         0
 
 
 .. container:: table-row
@@ -777,12 +765,10 @@ the Page TSconfig and alters the configuration:
          each element:
 
          .. figure:: ../../Images/manual_html_7dbda7e7.png
-            :alt: The list module after deactivation the alternating background colors
+            :alt: The list module after deactivating the alternating background colors
 
          **Note** : This option has been removed in TYPO3 4.5 and the
          background colors are always alternating.
-
-   Default
 
 
 .. container:: table-row
@@ -797,8 +783,6 @@ the Page TSconfig and alters the configuration:
          If set, then the links on the table titles which shows a single table
          listing only will not be available (including sorting links on columns
          titles, because these links jumps to the table-only view).
-
-   Default
 
 
 .. container:: table-row
@@ -838,7 +822,7 @@ the Page TSconfig and alters the configuration:
          itemsLimitSingleTable
 
    Data type
-         int+
+         positive integer
 
    Description
          Set the default maximum number of items to show in single table view.
@@ -853,7 +837,7 @@ the Page TSconfig and alters the configuration:
          itemsLimitPerTable
 
    Data type
-         int+
+         positive integer
 
    Description
          Set the default maximum number of items to show per table.
@@ -883,12 +867,10 @@ the Page TSconfig and alters the configuration:
          hideTables
 
    Data type
-         *list of table names*
+         *(list of table names)*
 
    Description
          Hide these tables in record listings (comma-separated)
-
-   Default
 
 
 .. container:: table-row
@@ -907,8 +889,6 @@ the Page TSconfig and alters the configuration:
 
             mod.web_list.table.tt_content.hideTable = 1
 
-   Default
-
 
 .. container:: table-row
 
@@ -916,7 +896,7 @@ the Page TSconfig and alters the configuration:
          hideTranslations
 
    Data type
-         list of table names
+         *(list of table names)*
 
    Description
          (Since TYPO3 4.6) For tables in this list all their records in
@@ -933,8 +913,6 @@ the Page TSconfig and alters the configuration:
          or ::
 
             mod.web_list.hideTranslations = tt_content,tt_news
-
-   Default
 
 
 .. container:: table-row
@@ -958,13 +936,15 @@ the Page TSconfig and alters the configuration:
          allowedNewTables
 
    Data type
-         *list of table names*
+         *(list of table names)*
 
    Description
          If this list is set, then only tables listed here will have a link to
          "create new" in the page and subpages.
 
-         This also affects "db\_new.php" (the display of "Create new record")
+         This also affects the display of "Create new record",
+         typo3/sysext/backend/Classes/Controller/NewRecordController.php
+         (db\_new.php).
 
          **Note:** Technically records can be created (e.g. by copying/moving),
          so this is "pseudo security". The point is to reduce the number of
@@ -982,8 +962,6 @@ the Page TSconfig and alters the configuration:
          .. figure:: ../../Images/manual_html_6d60e8b.png
             :alt: The New record screen after modifying the allowed elements
 
-   Default
-
 
 .. container:: table-row
 
@@ -991,7 +969,7 @@ the Page TSconfig and alters the configuration:
          deniedNewTables
 
    Data type
-         *list of table names*
+         *(list of table names)*
 
    Description
          If this list is set, then the tables listed here won't have a link to
@@ -1009,8 +987,6 @@ the Page TSconfig and alters the configuration:
               deniedNewTables = tt_news,tt_content
             }
 
-   Default
-
 
 .. container:: table-row
 
@@ -1024,8 +1000,6 @@ the Page TSconfig and alters the configuration:
          If set, then the new-link over the control panel of the pages and
          tt\_content listings in the List module will link to the wizards and
          not create a record in the top of the list.
-
-   Default
 
 
 .. container:: table-row
@@ -1042,8 +1016,6 @@ the Page TSconfig and alters the configuration:
          control- and clipboard panels are disabled (unless extended mode is
          set) in order to save bandwidth.
 
-   Default
-
 
 .. container:: table-row
 
@@ -1051,7 +1023,7 @@ the Page TSconfig and alters the configuration:
          enableDisplayBigControlPanel
 
    Data type
-         list of keywords
+         *(list of keywords)*
 
    Description
          Determines whether the checkbox "Extended view" in the list module is
@@ -1080,7 +1052,7 @@ the Page TSconfig and alters the configuration:
          enableClipBoard
 
    Data type
-         list of keywords
+         *(list of keywords)*
 
    Description
          Determines whether the checkbox "Show clipboard" in the list module is
@@ -1106,7 +1078,7 @@ the Page TSconfig and alters the configuration:
          enableLocalizationView
 
    Data type
-         list of keywords
+         *(list of keywords)*
 
    Description
          Determines whether the checkbox "Localization view" in the list module
@@ -1144,8 +1116,6 @@ the Page TSconfig and alters the configuration:
 
          Also see "options.overridePageModule"
 
-   Default
-
 
 .. container:: table-row
 
@@ -1170,8 +1140,6 @@ the Page TSconfig and alters the configuration:
 
          **show** = Shows page/content element in frontend
 
-   Default
-
 
 .. ###### END~OF~TABLE ######
 
@@ -1189,7 +1157,7 @@ the Page TSconfig and alters the configuration:
          type
 
    Data type
-         int+
+         positive integer
 
    Description
          Enter the value of the &type parameter passed to the webpage.
@@ -1202,8 +1170,6 @@ the Page TSconfig and alters the configuration:
             mod.web_view {
                     type = 1
             }
-
-   Default
 
 
 .. ###### END~OF~TABLE ######
@@ -1230,7 +1196,7 @@ element wizard, for example.
          pages
 
    Data type
-         *boolean*
+         boolean
 
    Description
          (Since TYPO3 4.6) Use the following sub-properties to show or hide the
@@ -1271,7 +1237,7 @@ element wizard, for example.
          order
 
    Data type
-         *list of values*
+         *(list of values)*
 
    Description
          Define an alternate order for the groups of records in the new records
@@ -1290,8 +1256,6 @@ element wizard, for example.
 
          .. figure:: ../../Images/manual_html_1c6e46bb.png
             :alt: The position of News changed after modifying the New record screen
-
-   Default
 
 
 .. ###### END~OF~TABLE ######
@@ -1322,8 +1286,6 @@ element wizard, for example.
          .. figure:: ../../Images/manual_html_56794b6d.png
             :alt: The New content element screen with tabs
 
-   Default
-
 
 .. container:: table-row
 
@@ -1340,8 +1302,6 @@ element wizard, for example.
 
          The configuration options below apply to any group.
 
-   Default
-
 
 .. container:: table-row
 
@@ -1353,8 +1313,6 @@ element wizard, for example.
 
    Description
          Name of the group.
-
-   Default
 
 
 .. container:: table-row
@@ -1377,8 +1335,6 @@ element wizard, for example.
               # Only show text and textpic in common
             mod.wizards.newContentElement.wizardItems.common.show = text,textpic
 
-   Default
-
 
 .. container:: table-row
 
@@ -1390,8 +1346,6 @@ element wizard, for example.
 
    Description
          List of items in the group.
-
-   Default
 
 
 .. container:: table-row
@@ -1405,8 +1359,6 @@ element wizard, for example.
    Description
          Configuration for a single item.
 
-   Default
-
 
 .. container:: table-row
 
@@ -1418,8 +1370,6 @@ element wizard, for example.
 
    Description
          Path to the icon.
-
-   Default
 
 
 .. container:: table-row
@@ -1433,8 +1383,6 @@ element wizard, for example.
    Description
          Name of the item.
 
-   Default
-
 
 .. container:: table-row
 
@@ -1447,8 +1395,6 @@ element wizard, for example.
    Description
          Description text for the item.
 
-   Default
-
 
 .. container:: table-row
 
@@ -1460,8 +1406,6 @@ element wizard, for example.
 
    Description
          Default values for tt\_content fields.
-
-   Default
 
 
 .. ###### END~OF~TABLE ######
@@ -1586,8 +1530,6 @@ wizard:
          "opendocs" extension, on which this setting has no effect anymore. The
          above screenshot comes from TYPO3 4.1.
 
-   Default
-
 
 .. container:: table-row
 
@@ -1603,8 +1545,6 @@ wizard:
          *See example above.*
 
          **Note:** As of TYPO3 4.2 this menu does not exist anymore.
-
-   Default
 
 
 .. ###### END~OF~TABLE ######
