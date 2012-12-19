@@ -56,15 +56,6 @@ Examples from the TYPO3 core are listed in the table below:
 .. container:: table-row
 
    Property
-         Property:
-
-   Description
-         Description:
-
-
-.. container:: table-row
-
-   Property
          web\_layout.menu.function
 
    Description
@@ -246,15 +237,6 @@ Examples from the TYPO3 core are listed in the table below:
 .. container:: table-row
 
    Property
-         Property:
-
-   Description
-         Description:
-
-
-.. container:: table-row
-
-   Property
          taskcenter
 
    Description
@@ -388,21 +370,6 @@ the Page TSconfig and alters the configuration:
 .. container:: table-row
 
    Property
-         Property:
-
-   Data type
-         Data type:
-
-   Description
-         Description:
-
-   Default
-         Default:
-
-
-.. container:: table-row
-
-   Property
          colPos\_list
 
    Data type
@@ -513,21 +480,6 @@ the Page TSconfig and alters the configuration:
 """"""""""""""""""""""""""""""""""
 
 .. ### BEGIN~OF~TABLE ###
-
-.. container:: table-row
-
-   Property
-         Property:
-
-   Data type
-         Data type:
-
-   Description
-         Description:
-
-   Default
-         Default:
-
 
 .. container:: table-row
 
@@ -782,21 +734,6 @@ the Page TSconfig and alters the configuration:
 """"""""""""""""""""""""""""""""
 
 .. ### BEGIN~OF~TABLE ###
-
-.. container:: table-row
-
-   Property
-         Property:
-
-   Data type
-         Data type:
-
-   Description
-         Description:
-
-   Default
-         Default:
-
 
 .. container:: table-row
 
@@ -1249,21 +1186,6 @@ the Page TSconfig and alters the configuration:
 .. container:: table-row
 
    Property
-         Property:
-
-   Data type
-         Data type:
-
-   Description
-         Description:
-
-   Default
-         Default:
-
-
-.. container:: table-row
-
-   Property
          type
 
    Data type
@@ -1301,21 +1223,6 @@ element wizard, for example.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. ### BEGIN~OF~TABLE ###
-
-.. container:: table-row
-
-   Property
-         Property:
-
-   Data type
-         Data type:
-
-   Description
-         Description:
-
-   Default
-         Default:
-
 
 .. container:: table-row
 
@@ -1396,21 +1303,6 @@ element wizard, for example.
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. ### BEGIN~OF~TABLE ###
-
-.. container:: table-row
-
-   Property
-         Property:
-
-   Data type
-         Data type:
-
-   Description
-         Description:
-
-   Default
-         Default:
-
 
 .. container:: table-row
 
@@ -1632,21 +1524,6 @@ wizard:
 .. container:: table-row
 
    Property
-         Property:
-
-   Data type
-         Data type:
-
-   Description
-         Description:
-
-   Default
-         Default:
-
-
-.. container:: table-row
-
-   Property
          allowTVlisting
 
    Data type
@@ -1683,21 +1560,6 @@ wizard:
 """""""""""""""""""""""""""""""""""""""""""""""""
 
 .. ### BEGIN~OF~TABLE ###
-
-.. container:: table-row
-
-   Property
-         Property:
-
-   Data type
-         Data type:
-
-   Description
-         Description:
-
-   Default
-         Default:
-
 
 .. container:: table-row
 

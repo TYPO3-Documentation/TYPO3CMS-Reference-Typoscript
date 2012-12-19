@@ -16,21 +16,6 @@ These are the Page TSconfig Top Level Objects (TLOs):
 .. container:: table-row
 
    Property
-         Property:
-
-   Data type
-         Data type:
-
-   Description
-         Description:
-
-   Default
-         Default:
-
-
-.. container:: table-row
-
-   Property
          mod
 
    Data type

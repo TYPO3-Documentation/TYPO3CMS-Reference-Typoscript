@@ -17,21 +17,6 @@ Various options for the user affecting the core at various points.
 .. container:: table-row
 
    Property
-         Property:
-
-   Data type
-         Data type:
-
-   Description
-         Description:
-
-   Default
-         Default:
-
-
-.. container:: table-row
-
-   Property
          dontMountAdminMounts
 
    Data type
