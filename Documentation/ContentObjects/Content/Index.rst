@@ -28,7 +28,7 @@ the records selected which has a higher value than the current.
          ->select
 
    Description
-         The SQL-statement is set here!
+         The SQL-statement, a SELECT query, is set here!
 
 
 .. container:: table-row
@@ -56,6 +56,14 @@ the records selected which has a higher value than the current.
 
    Data type
          cObject
+
+   Description
+         The cObject used for rendering the records resulting from the query in
+         .select.
+
+         If .renderObj is not set explicitly, then *< [table name]* is used. So
+         in this case the configuration of the according table is being copied.
+         See the notes on the example below.
 
    Default
          < [table name]
@@ -126,7 +134,7 @@ the records selected which has a higher value than the current.
 Example:
 """"""""
 
-Here is an example of the CONTENT-obj::
+Here is an example of the CONTENT object::
 
      1 = CONTENT
      1.table = tt_content
@@ -134,6 +142,11 @@ Here is an example of the CONTENT-obj::
        pidInList = this
        orderBy = sorting
      }
+
+Since in the above example .renderObj is not set explicitly, TYPO3
+will automatically set *1.renderObj < tt_content*, so that renderObj
+will reference the TypoScript configuration of tt_content. The
+according TypoScript configuration will be copied to renderObj.
 
 
 Example:
