@@ -10,7 +10,7 @@ Differences to conditions in TypoScript templates
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 There are some slight differences between conditions in TSconfig and
-conditions in template TypoScript, which must be taken into account:
+conditions in TypoScript templates, which must be taken into account:
 
 - Conditions "usergroup" and "loginUser" apply to BE groups and BE users
   – respectively – and not to FE groups and FE users, quite obviously.
@@ -23,7 +23,7 @@ conditions in template TypoScript, which must be taken into account:
 - Note that conditions such as "PIDupinRootline" or "treeLevel" will
   apply correctly to pages that are being created but are not yet saved.
 
-Furthermore the following condition is available  **only** in
+Furthermore the following condition is available **only** in
 TSconfig:
 
 

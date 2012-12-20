@@ -22,7 +22,7 @@ These are the User TSconfig Top Level Objects (TLOs):
          ->ADMPANEL
 
    Description
-         Options regarding the front-end admin panel
+         Options regarding the frontend admin panel.
 
 
 .. container:: table-row
@@ -65,20 +65,20 @@ These are the User TSconfig Top Level Objects (TLOs):
          Default values and override values for the user settings known from
          the setup module.
 
-         **Notice:**
+         **Note:**
 
-         There is a tricky aspect to these settings; If first you have set a
-         value by setup.override and then removes it again you will experience
+         There is a tricky aspect to these settings: If first you have set a
+         value by setup.override and then remove it again, you will experience
          that the value persists to exist. This is because it is saved in the
-         backend users profile. Therefore, if you have once set a value, do
-         *not* remove it again by rather set it blank if you want to disable
+         backend user's profile. Therefore, if you have once set a value, do
+         *not* remove it again but rather set it blank if you want to disable
          the effect again!
 
 
 .. container:: table-row
 
    Property
-         TCAdefaults.[tablename].[field]
+         TCAdefaults.[table name].[field]
 
    Data type
          string
@@ -87,7 +87,7 @@ These are the User TSconfig Top Level Objects (TLOs):
          Sets default values for records. The order of default values when
          creating new records in the backend is this:
 
-         1. Value from $TCA
+         1. Value from $GLOBALS['TCA']
 
          2. Value from User TSconfig (these settings)
 
@@ -100,7 +100,7 @@ These are the User TSconfig Top Level Objects (TLOs):
          However the order for default values used by tcemain.php if a certain
          field is not granted access to for user will be:
 
-         1. Value from $TCA
+         1. Value from $GLOBALS['TCA']
 
          2. Value from User TSconfig (these settings)
 
@@ -125,7 +125,7 @@ These are the User TSconfig Top Level Objects (TLOs):
    Description
          This is for custom purposes.
 
-         Deprecated, use "tx\_\*" below from extensions
+         Deprecated, use "tx\_\*" from extensions! See blow.
 
 
 .. container:: table-row
@@ -137,8 +137,8 @@ These are the User TSconfig Top Level Objects (TLOs):
          array
 
    Description
-         Configuration for authentication services. Currently these are the
-         options:
+         Configuration for authentication services. Currently this is the only
+         option:
 
          **auth.BE.redirectToURL**
 

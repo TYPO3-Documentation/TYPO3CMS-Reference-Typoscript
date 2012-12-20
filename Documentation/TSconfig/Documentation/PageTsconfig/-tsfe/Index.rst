@@ -83,8 +83,8 @@
             $websiteID =
                 $PageTSconfig['TSFE.']['constants.']['websiteConfig.']['id'];
 
-         **Notice:** In the frontend the setting of default constants will only
-         apply to a branch of the tree  *if* a template record is found on that
+         **Note:** In the frontend the setting of default constants will only
+         apply to a branch of the tree *if* a template record is found on that
          page (or if a template record is set for "next level"). In other
          words: If you want the Page TSconfig constant defaults to affect only
          a certain branch of the page tree, make sure to create a template

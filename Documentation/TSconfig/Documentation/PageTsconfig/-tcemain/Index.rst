@@ -14,7 +14,7 @@
 .. container:: table-row
 
    Property
-         table.[ *tablename* ]
+         table.[*table name*]
 
          default
 
@@ -215,7 +215,7 @@
          The special string "%s" will be replaced with the table name and
          record uid of the changed record.
 
-         Default is "TYPO3 Workspace Note: Stage Change for [tablename:uid]".
+         Default is "TYPO3 Workspace Note: Stage Change for [table name:uid]".
 
          **Example:** ::
 
@@ -224,7 +224,7 @@
               notificationEmail_subject = TYPO3-Arbeitsumgebungshinweis: Änderung der Stufe für %s
             }
 
-         **Note** : This option is deprecated since TYPO3 4.5. Since TYPO3 4.5
+         **Note:** This option is deprecated since TYPO3 4.5. Since TYPO3 4.5
          localized emails are sent by default, if the translation files for the
          respective language have been downloaded with the Extension Manager.
 
@@ -306,7 +306,7 @@
               )
             }
 
-         **Note** : This option is deprecated since TYPO3 4.5. Since TYPO3 4.5
+         **Note:** This option is deprecated since TYPO3 4.5. Since TYPO3 4.5
          localized emails are sent by default, if the translation files for the
          respective language have been downloaded with the Extension Manager.
 
@@ -319,7 +319,7 @@
 ->TCEMAIN\_tables
 """""""""""""""""
 
-Processing options for a $TCA configured table.
+Processing options for a $GLOBALS['TCA'] configured table.
 
 .. ### BEGIN~OF~TABLE ###
 
@@ -344,7 +344,7 @@ Processing options for a $TCA configured table.
               table.tt_content.history.keepEntries = 20
             }
 
-         **Note** : This option has been removed in TYPO3 4.0.
+         **Note:** This option has been removed in TYPO3 4.0.
 
 
 .. container:: table-row
@@ -361,7 +361,7 @@ Processing options for a $TCA configured table.
 
          Default is 7 days. Range 0-200. Zero turns the maxAgeDays off.
 
-         **Note** : This option has been removed in TYPO3 6.0.
+         **Note:** This option has been removed in TYPO3 6.0.
 
 
 .. container:: table-row
@@ -374,18 +374,18 @@ Processing options for a $TCA configured table.
 
    Description
          Disables the "prependAtCopy" feature (if configured for the table in
-         $TCA).
+         $GLOBALS['TCA']).
 
-         (The word "prepend" is misguiding - the "(copy)" label is  *appended*
+         (The word "prepend" is misguiding - the "(copy)" label is *appended*
          to (put after) the record title! Sorry for that mistake, it isn't the
          only time I have made that.)
 
          **Example:** ::
 
             TCEMAIN.table.pages {
-                # Pages will NOT have "(copy)" appended:
+                # Pages will *not* have "(copy)" appended:
               disablePrependAtCopy = 1
-                # Pages will NOT be hidden upon copy:
+                # Pages will *not* be hidden upon copy:
               disableHideAtCopy = 1
             }
 
@@ -404,7 +404,7 @@ Processing options for a $TCA configured table.
          if another page with the same named existed already.
 
          .. figure:: ../../Images/manual_html_m5a1cc22d.png
-            :alt: Hidden page with added suffx after copying its orignal page
+            :alt: Hidden page with added suffix after copying its original page
 
 .. container:: table-row
 
@@ -416,11 +416,11 @@ Processing options for a $TCA configured table.
 
    Description
          Disables the "hideAtCopy" feature (if configured for the table in
-         $TCA).
+         $GLOBALS['TCA']).
 
          For an example, see "disablePrependAtCopy" above.
 
 
 .. ###### END~OF~TABLE ######
 
-[page:TCEMAIN.default/TCEMAIN.table.(tablename)/->TCEMAIN\_tables]
+[page:TCEMAIN.default/TCEMAIN.table.(table name)/->TCEMAIN\_tables]

@@ -10,8 +10,8 @@
 ^^^^^
 
 Configuration for backend modules. Generally the syntax is
-*[module\_name].[property]* . The module name is defined in the
-conf.phpfiles for the module.
+*[module\_name].[property]*. The module name is defined in the
+conf.php files for the module.
 
 
 Blinding Function Menu options in Backend Modules
@@ -43,11 +43,11 @@ The 'Page TSconfig' option is simply disabled by setting this Page
 TSconfig!
 
 All you need to know in order to disable function menu items in the
-backend modules is,  *which* modules support it and what the  *key* of
+backend modules is, *which* modules support it and what the *key* of
 the menu item is (in the above example it was
 'tx\_infopagetsconfig\_webinfo'). Modules extending the class
 "t3lib\_SCbase" will most likely provide this out-of-the-box since
-it's a part of the base class in t3lib\_SCbase::menuConfig().
+it is a part of the base class in t3lib\_SCbase::menuConfig().
 
 Examples from the TYPO3 core are listed in the table below:
 
@@ -97,7 +97,7 @@ Examples from the TYPO3 core are listed in the table below:
          **Option tags:** ::
 
             <select name="SET[function]">
-                <option value="tx_cms_webinfo_page">Pagetree Overview</option>
+                <option value="tx_cms_webinfo_page">Page tree Overview</option>
                 <option value="tx_cms_webinfo_lang">Localization Overview</option>
                 <option value="tx_belog_webinfo">Log</option>
                 <option value="tx_infopagetsconfig_webinfo">Page TSconfig</option>
@@ -144,7 +144,7 @@ Examples from the TYPO3 core are listed in the table below:
    Description
          **Web > Functions module, Wizards submodule**
 
-         This is the 2nd-level Function Menu in the Web > Functions module.
+         This is the 2nd level Function Menu in the Web > Functions module.
          Instead of the "function" key of the main menu it just uses the key
          "wiz" instead.
 
@@ -217,7 +217,7 @@ Examples from the TYPO3 core are listed in the table below:
 
          **Example:**
 
-         Set this as  *User TSconfig* ::
+         Set this as *User TSconfig* ::
 
               # Task Center configuration:
             mod.user_task.menu.function {
@@ -268,7 +268,7 @@ Examples from the TYPO3 core are listed in the table below:
 
          **Example:**
 
-         Set this as  *User TSconfig* ::
+         Set this as *User TSconfig* ::
 
               # Task Center configuration:
             taskcenter {
@@ -298,7 +298,7 @@ the <option> tags. This listing is a cleaned-up version of a function
 menu. The keys are the values of the option tags::
 
    <select>
-       <option value="tx_cms_webinfo_page">Pagetree overview</option>
+       <option value="tx_cms_webinfo_page">Page tree overview</option>
        <option value="tx_belog_webinfo">Log</option>
        <option value="tx_infopagetsconfig_webinfo">Page TSconfig</option>
    </select>
@@ -362,8 +362,8 @@ the Page TSconfig and alters the configuration:
 .. figure:: ../../Images/manual_html_748558d0.png
    :alt: Example 2: Overriding the Page TSconfig menu function
 
-**Shared options for modules (mod.SHARED)** :
-"""""""""""""""""""""""""""""""""""""""""""""
+Shared options for modules (mod.SHARED)
+"""""""""""""""""""""""""""""""""""""""
 
 .. ### BEGIN~OF~TABLE ###
 
@@ -387,7 +387,7 @@ the Page TSconfig and alters the configuration:
 
          Each column has a number which ultimately comes from the configuration
          of the table tt\_content, field 'colPos' found in the tables.php file.
-         This is the values of the four default columns:
+         These are the values of the four default columns:
 
          Left: 1
 
@@ -402,6 +402,9 @@ the Page TSconfig and alters the configuration:
          This results in only the Normal and Border column being displayed::
 
             mod.SHARED.colPos_list = 0,3
+
+   Default
+         1,0,2,3
 
 
 .. container:: table-row
@@ -468,8 +471,8 @@ the Page TSconfig and alters the configuration:
 [page:mod.SHARED; beuser:mod.SHARED]
 
 
-**Web > Page (mod.web\_layout)** :
-""""""""""""""""""""""""""""""""""
+Web > Page (mod.web\_layout)
+""""""""""""""""""""""""""""
 
 .. ### BEGIN~OF~TABLE ###
 
@@ -705,7 +708,7 @@ the Page TSconfig and alters the configuration:
 
          Use this option instead of removing page information completely.
 
-         **Note** : This option and the item "Page Information" have been removed
+         **Note:** This option and the item "Page Information" have been removed
          in TYPO3 6.0.
 
    Default
@@ -717,8 +720,8 @@ the Page TSconfig and alters the configuration:
 [page:mod.web\_layout; beuser:mod.web\_layout]
 
 
-**Web > List (mod.web\_list)** :
-""""""""""""""""""""""""""""""""
+Web > List (mod.web\_list)
+""""""""""""""""""""""""""
 
 .. ### BEGIN~OF~TABLE ###
 
@@ -767,7 +770,7 @@ the Page TSconfig and alters the configuration:
          .. figure:: ../../Images/manual_html_7dbda7e7.png
             :alt: The list module after deactivating the alternating background colors
 
-         **Note** : This option has been removed in TYPO3 4.5 and the
+         **Note:** This option has been removed in TYPO3 4.5 and the
          background colors are always alternating.
 
 
@@ -876,7 +879,7 @@ the Page TSconfig and alters the configuration:
 .. container:: table-row
 
    Property
-         table.[ *tablename* ].hideTable
+         table.[*table name*].hideTable
 
    Data type
          boolean
@@ -1109,12 +1112,12 @@ the Page TSconfig and alters the configuration:
          string
 
    Description
-         If set to an extension key, (eg. "templavoila") then the
+         If set to an extension key, (e.g. "templavoila"), then the
          "mod1/index.php" file of that extension will be used for creating new
          elements on the page. "newContentWiz" will likewise use the
          "mod1/db\_new\_content\_el.php" for creating new content elements.
 
-         Also see "options.overridePageModule"
+         Also see "options.overridePageModule".
 
 
 .. container:: table-row
@@ -1146,8 +1149,8 @@ the Page TSconfig and alters the configuration:
 [page:mod.web\_list; beuser:mod.web\_list]
 
 
-**Web > View (mod.web\_view)**
-""""""""""""""""""""""""""""""
+Web > View (mod.web\_view)
+""""""""""""""""""""""""""
 
 .. ### BEGIN~OF~TABLE ###
 
@@ -1177,16 +1180,16 @@ the Page TSconfig and alters the configuration:
 [page:mod.web\_view; beuser:mod.web\_view]
 
 
-**Wizards (mod.wizards)**
-"""""""""""""""""""""""""
+Wizards (mod.wizards)
+"""""""""""""""""""""
 
 The configuration for wizards was introduced in TYPO3 4.3. Wizards
 make it possible to customize the new record wizard or the new content
 element wizard, for example.
 
 
-**New record wizard (mod.wizards.newRecord)**
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+New record wizard (mod.wizards.newRecord)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. ### BEGIN~OF~TABLE ###
 
@@ -1263,8 +1266,8 @@ element wizard, for example.
 [page:mod.wizards.newRecord; beuser:page.mod.wizards.newRecord]
 
 
-**New content element wizard (mod.wizards.newContentElement)**
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+New content element wizard (mod.wizards.newContentElement)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. ### BEGIN~OF~TABLE ###
 
@@ -1460,8 +1463,8 @@ wizard:
 .. figure:: ../../Images/manual_html_73b37d4e.png
    :alt: Added entry in the new content element wizard
 
-**Tools > Extension Manager (mod.tools\_em)**
-"""""""""""""""""""""""""""""""""""""""""""""
+Tools > Extension Manager (mod.tools\_em)
+"""""""""""""""""""""""""""""""""""""""""
 
 .. ### BEGIN~OF~TABLE ###
 
@@ -1488,7 +1491,7 @@ wizard:
          .. figure:: ../../Images/manual_html_3fa38a1.png
             :alt: The Extension Manager with additional options
 
-         **Note** : This setting does not influence the new Extension Manager
+         **Note:** This setting does not influence the new Extension Manager
          which comes with TYPO3 4.5 and newer.
 
    Default
@@ -1500,8 +1503,8 @@ wizard:
 [beuser:mod.tools\_em]
 
 
-**Edit document 'module' (mod.xMOD\_alt\_doc)** :
-"""""""""""""""""""""""""""""""""""""""""""""""""
+Edit document 'module' (mod.xMOD\_alt\_doc)
+"""""""""""""""""""""""""""""""""""""""""""
 
 .. ### BEGIN~OF~TABLE ###
 
