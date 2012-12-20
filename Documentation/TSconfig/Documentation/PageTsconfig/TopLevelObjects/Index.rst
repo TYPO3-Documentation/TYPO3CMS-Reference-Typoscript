@@ -6,10 +6,10 @@
 .. include:: ../../Includes.txt
 
 
-Top Level Objects
+Top-Level Objects
 ^^^^^^^^^^^^^^^^^
 
-These are the Page TSconfig Top Level Objects (TLOs):
+These are the Page TSconfig Top-Level Objects (TLOs):
 
 .. ### BEGIN~OF~TABLE ###
 
@@ -39,11 +39,8 @@ These are the Page TSconfig Top Level Objects (TLOs):
    Description
          This defines configuration for the Rich Text Editor.
 
-         Please refer to the document "TYPO3 Core API" which you find in the
-         section `Core Documentation on typo3.org
-         <http://typo3.org/documentation/document-library/core-
-         documentation/>`_ . There the chapter "RTE API" contains more
-         information.
+         Please refer to the document ":ref:`TYPO3 Core API <t3api:start>`".
+         There the chapter "RTE API" contains more information.
 
 
 .. container:: table-row
@@ -55,7 +52,7 @@ These are the Page TSconfig Top Level Objects (TLOs):
          ->TCEMAIN
 
    Description
-         Configuration for the TYPO3 Core Engine (TCEmain)
+         Configuration for the TYPO3 Core Engine (TCEmain).
 
 
 .. container:: table-row
@@ -80,7 +77,7 @@ These are the Page TSconfig Top Level Objects (TLOs):
          ->TSFE
 
    Description
-         Options for the TSFE front end object.
+         Options for the TSFE frontend object.
 
 
 .. container:: table-row

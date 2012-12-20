@@ -121,7 +121,7 @@ Configuration of the Admin Panel in the Frontend for the user.
          [object]
 
    Description
-         **DEPRECATED** , use override.\* instead (see above).
+         **Deprecated**, use override.\* instead (see above)!
 
          **.forceDisplayIcons** (boolean):
 
@@ -164,7 +164,7 @@ In that case the backend interface is not started. ::
                    </a>
 
 .. figure:: ../../Images/manual_html_639a5d8e.png
-   :alt: The TYPO3 ADMIN PANEL
+   :alt: The TYPO3 admin panel
 
 This is what the admin panel looks like. Notice the fact that the
 visibility of the admin panel is ultimately depending on being

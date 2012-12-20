@@ -18,9 +18,9 @@ disable options, blind options in selector boxes etc.
 .. container:: table-row
 
    Property
-         [ *tablename* ].[ *field* ]
+         [*table name*].[*field*]
 
-         [ *tablename* ].[ *field* ].types.[ *type* ]
+         [*table name*].[*field*].types.[*type*]
 
    Data type
          ->TCEFORM\_confObj
@@ -31,17 +31,17 @@ disable options, blind options in selector boxes etc.
          This is a description of how you can customize in general and override
          for specific types.
 
-         TCEFORM.[tablename].[field] - configures the field in TCEFORM for all
+         TCEFORM.[table name].[field] - configures the field in TCEFORM for all
          types.
 
-         TCEFORM.[tablename].[field].types.[type] - configures the field in
+         TCEFORM.[table name].[field].types.[type] - configures the field in
          TCEFORM in case the 'type'-value of the field matches type.
 
 
 .. container:: table-row
 
    Property
-         [ *tablename* ].[ *field* ].config.[ *key* ]
+         [*table name*].[*field*].config.[*key*]
 
    Data type
          string / array
@@ -50,9 +50,11 @@ disable options, blind options in selector boxes etc.
          This setting allows to override TCA field configuration and offers a
          flexible opportunity to reuse tables and TCA definitions but adapt
          them to individual demands. So this will influence configuration
-         settings in $TCA[<tablename>]['columns'][<field>]['config'][<key>].
+         settings in
+         $GLOBALS['TCA'][<table name>]['columns'][<field>]['config'][<key>].
 
-         Depending on the $TCA type of the field, the allowed keys are:
+         Depending on the $GLOBALS['TCA'] type of the field, the allowed keys
+         are:
 
          **input** - size, max
 
@@ -77,9 +79,9 @@ disable options, blind options in selector boxes etc.
 
          suggest.[queryTable]
 
-         [tablename].[field].suggest.default
+         [table name].[field].suggest.default
 
-         [tablename].[field].suggest.[queryTable]
+         [table name].[field].suggest.[queryTable]
 
    Data type
          ->TCEFORM\_suggest
@@ -95,8 +97,8 @@ disable options, blind options in selector boxes etc.
 
          \- "suggest.default" is overwritten by "suggest.[queryTable]".
 
-         \- Both are overwritten by "[tablename].[field].suggest.default" which
-         itself is overwritten by "[tablename].[field].suggest.[queryTable]"
+         \- Both are overwritten by "[table name].[field].suggest.default" which
+         itself is overwritten by "[table name].[field].suggest.[queryTable]"
 
          suggest.default:
 
@@ -107,21 +109,21 @@ disable options, blind options in selector boxes etc.
          Configuration for all suggest wizards from all tables listing records
          from table [queryTable]
 
-         [tablename].[field].suggest.default
+         [table name].[field].suggest.default
 
          Configuration for the suggest wizard for field [field] in table
-         [tablename]
+         [table name]
 
-         [tablename].[field].suggest.[queryTable]
+         [table name].[field].suggest.[queryTable]
 
          Configuration for the suggest wizard for field [field] in table
-         [tablename] listing records from [queryTable]
+         [table name] listing records from [queryTable]
 
 
 .. container:: table-row
 
    Property
-         [tablename].[field].[dataStructKey]
+         [table name].[field].[dataStructKey]
 
    Data type
          ->TCEFORM\_flexform
@@ -138,7 +140,7 @@ disable options, blind options in selector boxes etc.
 .. container:: table-row
 
    Property
-         [tablename].[field].[dataStructKey].[flexSheet]
+         [table name].[field].[dataStructKey].[flexSheet]
 
    Data type
          ->TCEFORM\_flexformSheet
@@ -147,7 +149,7 @@ disable options, blind options in selector boxes etc.
          Configuration for the data structure of a sheet with type "flex".
 
          The [dataStructKey] represents the key of a FlexForm in
-         $TCA[<tablename>]['columns'][<field>]['config']['ds'].
+         $GLOBALS['TCA'][<table name>]['columns'][<field>]['config']['ds'].
 
          This key will be split into up to two parts. By default the first part
          will be used as identifier of the FlexForm in TSconfig.
@@ -158,14 +160,14 @@ disable options, blind options in selector boxes etc.
          For example the identifier of the key "my\_ext\_pi1,list" will be
          "my\_ext\_pi1" and of the key "\*,my\_CType" it will be "my\_CType".
 
-         TCEFORM.[tablename].[field].[dataStructKey].[flexSheet] configures a
+         TCEFORM.[table name].[field].[dataStructKey].[flexSheet] configures a
          whole FlexForm sheet.
 
 
 .. container:: table-row
 
    Property
-         [tablename].[field].[dataStructKey].[flexSheet].[flexField]
+         [table name].[field].[dataStructKey].[flexSheet].[flexField]
 
    Data type
          ->TCEFORM\_confObj
@@ -173,7 +175,7 @@ disable options, blind options in selector boxes etc.
    Description
          Configuration for the data structure of a field with type "flex".
 
-         TCEFORM.[tablename].[field].[dataStructKey].[flexSheet].[flexField]
+         TCEFORM.[table name].[field].[dataStructKey].[flexSheet].[flexField]
          configures a single FlexForm field.
 
          Only these TCEFORM\_confObj options are available for FlexForm fields:
@@ -224,7 +226,7 @@ disable options, blind options in selector boxes etc.
 .. container:: table-row
 
    Property
-         [tablename].[field].[dataStructKey].[flexSheet].[flexField].config.[ke
+         [table name].[field].[dataStructKey].[flexSheet].[flexField].config.[ke
          y]
 
    Data type
@@ -233,7 +235,8 @@ disable options, blind options in selector boxes etc.
    Description
          This setting allows to override FlexForm field configuration.
 
-         Depending on the $TCA type of the field, the allowed keys are:
+         Depending on the $GLOBALS['TCA'] type of the field, the allowed keys
+         are:
 
          \- input: size, max
 
@@ -374,7 +377,7 @@ above).
             :alt: The Page types are extended by two new items
 
          **Warning:** This example shows the principle of adding
-         adhoc-items to a selector box in TYPO3, but you  *should not* add new
+         adhoc-items to a selector box in TYPO3, but you *should not* add new
          *page types* or Content Element types this way!
 
 
@@ -624,7 +627,7 @@ above).
 
 .. ###### END~OF~TABLE ######
 
-[page:TCEFORM.(tablename).(field)/TCEFORM.(tablename).(field).types.(t
+[page:TCEFORM.(table name).(field)/TCEFORM.(table name).(field).types.(t
 ype)]
 
 
@@ -674,7 +677,7 @@ object.
 
 .. ###### END~OF~TABLE ######
 
-[page:TCEFORM.[tablename].[field].[dataStructKey]]
+[page:TCEFORM.[table name].[field].[dataStructKey]]
 
 
 ->TCEFORM\_flexformSheet
@@ -753,7 +756,7 @@ properties for the TCEFORM FlexForm sheet configuration object (see
 
 .. ###### END~OF~TABLE ######
 
-[page:TCEFORM.[tablename].[field].[dataStructKey].[flexSheet]]
+[page:TCEFORM.[table name].[field].[dataStructKey].[flexSheet]]
 
 
 ->TCEFORM\_suggest
@@ -901,7 +904,7 @@ Properties for the suggest wizard (see introduction above).
          **Example:** ::
 
             TCEFORM.suggest.pages {
-              # configures all suggest wizards which list records from table "pages" to add the css-class "pages" to every list item of the result list.
+              # configures all suggest wizards which list records from table "pages" to add the CSS class "pages" to every list item of the result list.
               cssClass = pages
             }
 
@@ -956,6 +959,6 @@ Properties for the suggest wizard (see introduction above).
 .. ###### END~OF~TABLE ######
 
 [page:TCEFORM.suggest.default/TCEFORM.suggest.(queryTable)/TCEFORM.(ta
-blename).(field).suggest.default/TCEFORM.(tablename).(field).(queryTab
+blename).(field).suggest.default/TCEFORM.(table name).(field).(queryTab
 le)]
 

@@ -44,7 +44,7 @@ tree. However it can be very handy to set global values that will be
 initialized from the root of the tree.
 
 In extensions this is easily done by the extension API function,
-t3lib\_extMgm::addPageTSConfig(). In the (ext\_)localconf.phpfile you
+t3lib\_extMgm::addPageTSConfig(). In the (ext\_)localconf.php file you
 can call it like this to set default configuration::
 
    t3lib_extMgm::addPageTSConfig('

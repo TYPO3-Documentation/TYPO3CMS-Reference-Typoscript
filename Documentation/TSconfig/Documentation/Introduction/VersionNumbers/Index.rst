@@ -6,8 +6,8 @@
 .. include:: ../../Includes.txt
 
 
-Versionnumbers
-^^^^^^^^^^^^^^
+Version Numbers
+^^^^^^^^^^^^^^^
 
 For new features TSconfig includes a note in which TYPO3 version the
 feature was added. If such a note is missing, the feature is part of

@@ -25,7 +25,7 @@ Various options for the user affecting the core at various points.
    Description
          This options prevents the root to be mounted for an admin user.
 
-         **NOTE:** Only for admin-users. For other users it has no effect.
+         **Note:** Only for admin-users. For other users it has no effect.
 
 
 .. container:: table-row
@@ -40,13 +40,11 @@ Various options for the user affecting the core at various points.
          This is a list of the Rich Text Editor buttons the user may see
          displayed. The user will not see any buttons not listed here.
 
-         Either enter a comma list of button keywords (see "TYPO3 Core API /
-         RTE section") or specify all with a wildcard "\*" for everything.
+         Either enter a comma-separated list of button keywords (see "TYPO3
+         Core API / RTE section") or set a wildcard "\*" to show all.
 
    Default
          \*
-
-         (If value is not set at all, \*, is default)
 
 
 .. container:: table-row
@@ -102,7 +100,7 @@ Various options for the user affecting the core at various points.
          List of IP-numbers with wildcards.
 
          **Note:** This option is enabled only if the
-         TYPO3\_CONF\_VARS['BE']['enabledBeUserIPLock'] configuration is true.
+         $TYPO3\_CONF\_VARS['BE']['enabledBeUserIPLock'] configuration is true.
 
          **Examples:**
 
@@ -213,10 +211,10 @@ Various options for the user affecting the core at various points.
          frame contains the bookmarks, the search field and the workspace
          selector.
 
-         **Note** : Only takes effect, if alt\_main.php, the old backend from
+         **Note:** Only takes effect, if alt\_main.php, the old backend from
          TYPO3 4.1, is used.
 
-         **Note** : This option has been removed in TYPO3 4.4.
+         **Note:** This option has been removed in TYPO3 4.4.
 
 
 .. container:: table-row
@@ -244,7 +242,6 @@ Various options for the user affecting the core at various points.
          5. Miscellaneous
 
          Set 0 to disable one of these group IDs, 1 to enable it (this is the
-
          default) or "string" to change the label accordingly.
 
          **Example:** ::
@@ -289,7 +286,6 @@ Various options for the user affecting the core at various points.
          5. Miscellaneous
 
          Set 0 to disable one of these group IDs, 1 to enable it (this is the
-
          default) or "string" to change the label accordingly.
 
          **Example:** ::
@@ -316,7 +312,7 @@ Various options for the user affecting the core at various points.
          boolean
 
    Description
-         If set, the page tree is  *not* opened to the page being edited when
+         If set, the page tree is *not* opened to the page being edited when
          an id number is entered in the "Edit Id" box.
 
          Note: This option is deprecated since TYPO3 4.5.
@@ -331,7 +327,7 @@ Various options for the user affecting the core at various points.
          boolean
 
    Description
-         If set, the page tree is  *not* opened to the page being edited when
+         If set, the page tree is *not* opened to the page being edited when
          an id number is entered in the "Edit Id" box.
 
 
@@ -378,7 +374,7 @@ Various options for the user affecting the core at various points.
    Description
          If set, the user cannot create or edit bookmarks.
 
-         **Note** : In TYPO3 4.3 and older depends on .shortcutFrame being set.
+         **Note:** In TYPO3 4.3 and older depends on .shortcutFrame being set.
 
          Note: This option is deprecated since TYPO3 4.5.
 
@@ -707,7 +703,7 @@ Various options for the user affecting the core at various points.
          boolean
 
    Description
-         If set and pageTree.seperateNotinmenuPages=1, separated pages are
+         If set and pageTree.seperateNotinmenuPages = 1, separated pages are
          sorted alphabetically.
 
 
@@ -725,7 +721,7 @@ Various options for the user affecting the core at various points.
          you insert a non-integer it will evaluate to "0" (zero) and the root
          of the page tree is mounted. Effective in workspaces too.
 
-         These alternative webmounts  **replace** configured DB Mountpoints.
+         These alternative webmounts **replace** configured DB mount points.
 
          **Example** ::
 
@@ -738,7 +734,7 @@ Various options for the user affecting the core at various points.
          folderTree.altElementBrowserMountPoints
 
    Data type
-         *(list of foldernames)*
+         *(list of folder names)*
 
    Description
          Sets alternative filemounts for use in the Element Browser. The
@@ -746,7 +742,7 @@ Various options for the user affecting the core at various points.
          separate folders by a comma. If a folder you specify does not exist it
          will not get mounted. Effective in workspaces too.
 
-         The alternative filemounts are  **added** to the existing filemounts.
+         The alternative filemounts are **added** to the existing filemounts.
 
          **Example** ::
 
@@ -855,7 +851,7 @@ Various options for the user affecting the core at various points.
 
    Description
          If set, then the clickmenu in the top frame is always shown. Default
-         is that it's shown only if the pop-up menus are disabled by user or by
+         is that it is shown only if the pop-up menus are disabled by user or by
          browser.
 
 
@@ -1189,6 +1185,4 @@ Various options for the user affecting the core at various points.
 
 
 [beuser:options]
-
-
 

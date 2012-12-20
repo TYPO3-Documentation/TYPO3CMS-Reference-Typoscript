@@ -19,5 +19,5 @@ Introduction
    WhatsNew/Index
    Credits/Index
    Feedback/Index
-   Versionnumbers/Index
+   VersionNumbers/Index
 

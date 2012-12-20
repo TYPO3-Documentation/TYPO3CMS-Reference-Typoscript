@@ -12,7 +12,7 @@
 Default values and overriding values for the "User tools > User
 settings" module.
 
-**Notice** : The "User tools > User settings" module only represents a
+**Note:** The "User tools > User settings" module only represents a
 subset of the options from the table below.
 
 .. figure:  ../../Images/manual_html_6ed6f97c.png
@@ -24,10 +24,10 @@ user to change himself and no matter what the current value is, the
 overriding value will overrule it. The default values are used for new
 users or if the setup is re-initialized.
 
-NOTICE: If you have first set a value (by override e.g.) and then
-REMOVE that value from being set, the value is NOT restored to the
-original default but is kept at the current value! Therefore setting a
-value and later removing that value would require the users
+**Note:** If you have first set a value (by override e.g.) and then
+*remove* that value from being set, the value is **not** restored to
+the original default but is kept at the current value! Therefore
+setting a value and later removing that value would require the users
 preferences to be reset (you can do that from the Install Tool >
 Database Analyser > Reset user preferences) OR better, don't remove
 the value, just change the value of it! (e.g. to a blank string if you
@@ -164,7 +164,7 @@ This table shows the keys for both defaults and override values:
          The width in pixels of the navigation frame in the Page and File main
          modules.
 
-         **Note** : This option became superfluous in TYPO3 4.5 and has been
+         **Note:** This option became superfluous in TYPO3 4.5 and has been
          removed in TYPO3 4.5.
 
    Default
@@ -183,7 +183,7 @@ This table shows the keys for both defaults and override values:
          If set, the frameset modules will have the border between the
          navigation and list frame resizable.
 
-         **Note** : This option became superfluous in TYPO3 4.5 and has been
+         **Note:** This option became superfluous in TYPO3 4.5 and has been
          removed in TYPO3 4.5.
 
 
@@ -313,10 +313,10 @@ This table shows the keys for both defaults and override values:
          boolean
 
    Description
-         Setting this option will not open the Web>Page module but rather load
+         Setting this option will not open the Web > Page module but rather load
          the content elements (normal column/default language) together with
          the page header in one big form when a page is edited (clicking a page
-         icon in the page tree). This simulates the old behaviourin Classic
+         icon in the page tree). This simulates the old behaviour in Classic
          Backend
 
 
@@ -455,13 +455,13 @@ The table below describes the related option:
 .. container:: table-row
 
    Property
-         <fieldname>.disabled
+         <field name>.disabled
 
    Data type
          boolean
 
    Description
-         This setting hides the option with the name <fieldname> in the module
+         This setting hides the option with the name <field name> in the module
          User Settings.
 
          You can find the names of the fields in the Module "Configuration".
@@ -473,15 +473,15 @@ The table below describes the related option:
 
          With this example, we hide the "E-mail me when I login" checkbox.
 
-         You can also combinesetup.fields.<fieldname>.disabled and
-         setup.override.<fieldname>.
+         You can also combine setup.fields.<field name>.disabled and
+         setup.override.<field name>.
 
          **Example:** ::
 
             setup.fields.emailMeAtLogin.disabled = 1
             setup.override.emailMeAtLogin = 1
 
-         Now the "Email me when i login" field is removed, but the user will
+         Now the "Email me when I login" field is removed, but the user will
          still receive an email when he logs in.
 
    Default

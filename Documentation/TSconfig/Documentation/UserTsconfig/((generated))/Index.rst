@@ -24,7 +24,7 @@ Verifying the final configuration
 It's vital to check the resulting configuration of the users. You can
 do that in the Tools > User Admin module (which is provided by the
 extension "beuser") by clicking a username. Then you'll see the
-TSconfig tree among other information. Here's an example:
+TSconfig tree among other information. Here is an example:
 
 .. figure:: ../../Images/manual_html_464ee54.png
    :alt: Comparing backend user or backend group settings with the User Admin module
@@ -32,7 +32,7 @@ TSconfig tree among other information. Here's an example:
 Overriding previously set options
 """""""""""""""""""""""""""""""""
 
-Now, lets say the user is a member of a  *usergroup* with this
+Now, lets say the user is a member of a *usergroup* with this
 configuration::
 
    TCAdefaults.tt_content {
@@ -57,7 +57,7 @@ users. However it can be very handy to set global values that will be
 initialized for all users.
 
 In extensions this is easily done by the extension API function,
-t3lib\_extMgm::addUserTSConfig(). In the (ext\_)localconf.phpfile you
+t3lib\_extMgm::addUserTSConfig(). In the (ext\_)localconf.php file you
 can call it like this to set default configuration::
 
    /**
