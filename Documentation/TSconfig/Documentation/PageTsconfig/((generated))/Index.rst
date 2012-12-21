@@ -5,12 +5,8 @@
 
 .. include:: ../../Includes.txt
 
-
-((generated))
-^^^^^^^^^^^^^
-
 The "TSconfig" field
-""""""""""""""""""""
+^^^^^^^^^^^^^^^^^^^^
 
 This is an example of the TSconfig field with a snippet of
 configuration for the Rich Text Editor. Precisely the Rich Text Editor
@@ -27,7 +23,7 @@ The "TSconfig" field here is available in the tab called "Resources":
    :alt: The Page TSconfig field inside the page properties
 
 Verifying the final configuration
-"""""""""""""""""""""""""""""""""
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If you need to check out the actual configuration for a certain branch
 in the website, use the 'Web > Info' module (provided by the extension
@@ -37,7 +33,7 @@ in the website, use the 'Web > Info' module (provided by the extension
    :alt: The Page TSconfig configuration for a page when using the Info module
 
 Setting default Page TSconfig
-"""""""""""""""""""""""""""""
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Page TSconfig is designed to be individual for branches of the page
 tree. However it can be very handy to set global values that will be
