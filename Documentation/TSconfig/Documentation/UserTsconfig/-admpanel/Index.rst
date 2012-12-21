@@ -111,6 +111,8 @@ Configuration of the Admin Panel in the Frontend for the user.
 
          .edit.editNoPopup (boolean)
 
+         .tsdebug.forceTemplateParsing (boolean)
+
 
 .. container:: table-row
 
