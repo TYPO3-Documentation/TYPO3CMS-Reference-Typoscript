@@ -5,15 +5,8 @@
 
 .. include:: ../../Includes.txt
 
-
-((generated))
-^^^^^^^^^^^^^
-
-((generated))
-"""""""""""""
-
 Example:
-~~~~~~~~
+^^^^^^^^
 
 ::
 

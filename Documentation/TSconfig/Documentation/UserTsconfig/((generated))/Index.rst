@@ -5,12 +5,8 @@
 
 .. include:: ../../Includes.txt
 
-
-((generated))
-^^^^^^^^^^^^^
-
 The "TSconfig" field
-""""""""""""""""""""
+^^^^^^^^^^^^^^^^^^^^
 
 This is how the TSconfig for users is entered in the backend user
 records:
@@ -19,7 +15,7 @@ records:
    :alt: The TSconfig inside the backend user or backend group properties
 
 Verifying the final configuration
-"""""""""""""""""""""""""""""""""
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 It's vital to check the resulting configuration of the users. You can
 do that in the Tools > User Admin module (which is provided by the
@@ -30,7 +26,7 @@ TSconfig tree among other information. Here is an example:
    :alt: Comparing backend user or backend group settings with the User Admin module
 
 Overriding previously set options
-"""""""""""""""""""""""""""""""""
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Now, lets say the user is a member of a *usergroup* with this
 configuration::
@@ -50,7 +46,7 @@ field is not changed and simply inherited directly from the group::
 
 
 Setting default User TSconfig
-"""""""""""""""""""""""""""""
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 User TSconfig is designed to be individual for users or groups of
 users. However it can be very handy to set global values that will be
@@ -76,4 +72,3 @@ can call it like this to set default configuration::
 
 This API function simply adds the content to
 $TYPO3\_CONF\_VARS['BE']['defaultUserTSconfig'].
-
