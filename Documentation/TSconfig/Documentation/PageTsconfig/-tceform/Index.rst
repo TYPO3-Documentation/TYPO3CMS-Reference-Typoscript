@@ -5,6 +5,7 @@
 
 .. include:: ../../Includes.txt
 
+.. _tceform:
 
 ->TCEFORM
 ^^^^^^^^^
@@ -254,6 +255,7 @@ disable options, blind options in selector boxes etc.
 
 [page:TCEFORM]
 
+.. _pagetceformconfobj:
 
 ->TCEFORM\_confObj
 """"""""""""""""""
@@ -630,6 +632,7 @@ above).
 [page:TCEFORM.(table name).(field)/TCEFORM.(table name).(field).types.(t
 ype)]
 
+.. _pagetceformflexform:
 
 ->TCEFORM\_flexform
 """""""""""""""""""
@@ -679,6 +682,7 @@ object.
 
 [page:TCEFORM.[table name].[field].[dataStructKey]]
 
+.. _pagetceformflexformsheet:
 
 ->TCEFORM\_flexformSheet
 """"""""""""""""""""""""
@@ -961,4 +965,3 @@ Properties for the suggest wizard (see introduction above).
 [page:TCEFORM.suggest.default/TCEFORM.suggest.(queryTable)/TCEFORM.(ta
 blename).(field).suggest.default/TCEFORM.(table name).(field).(queryTab
 le)]
-

@@ -5,6 +5,8 @@
 
 .. include:: ../../Includes.txt
 
+.. _pagethetsconfigfield:
+
 The "TSconfig" field
 ^^^^^^^^^^^^^^^^^^^^
 
@@ -22,6 +24,8 @@ The "TSconfig" field here is available in the tab called "Resources":
 .. figure:: ../../Images/manual_html_1194c6cf.png
    :alt: The Page TSconfig field inside the page properties
 
+.. _pageverifyingthefinalconfiguration:
+
 Verifying the final configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -31,6 +35,8 @@ in the website, use the 'Web > Info' module (provided by the extension
 
 .. figure:: ../../Images/manual_html_m7ed27f1e.png
    :alt: The Page TSconfig configuration for a page when using the Info module
+
+.. _pagesettingdefaultpagetsconfig:
 
 Setting default Page TSconfig
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

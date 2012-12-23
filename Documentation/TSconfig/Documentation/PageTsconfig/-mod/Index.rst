@@ -5,6 +5,7 @@
 
 .. include:: ../../Includes.txt
 
+.. _pagemod:
 
 ->MOD
 ^^^^^
@@ -13,6 +14,7 @@ Configuration for backend modules. Generally the syntax is
 *[module\_name].[property]*. The module name is defined in the
 conf.php files for the module.
 
+.. _pageblindingfunctionmenuoptions:
 
 Blinding Function Menu options in Backend Modules
 """""""""""""""""""""""""""""""""""""""""""""""""
@@ -322,6 +324,7 @@ around it and access the functionality anyways. You should use the
 option of blinding elements mostly to remove otherwise distracting
 options.
 
+.. _pageoverridingpagetsconfigwithusertsconfig:
 
 Overriding Page TSconfig with User TSconfig
 """""""""""""""""""""""""""""""""""""""""""
@@ -361,6 +364,8 @@ the Page TSconfig and alters the configuration:
 
 .. figure:: ../../Images/manual_html_748558d0.png
    :alt: Example 2: Overriding the Page TSconfig menu function
+
+.. _pagesharedotionsformodules:
 
 Shared options for modules (mod.SHARED)
 """""""""""""""""""""""""""""""""""""""
@@ -470,6 +475,7 @@ Shared options for modules (mod.SHARED)
 
 [page:mod.SHARED; beuser:mod.SHARED]
 
+.. _pagewebpage:
 
 Web > Page (mod.web\_layout)
 """"""""""""""""""""""""""""
@@ -719,6 +725,7 @@ Web > Page (mod.web\_layout)
 
 [page:mod.web\_layout; beuser:mod.web\_layout]
 
+.. _pageweblist:
 
 Web > List (mod.web\_list)
 """"""""""""""""""""""""""
@@ -1148,6 +1155,7 @@ Web > List (mod.web\_list)
 
 [page:mod.web\_list; beuser:mod.web\_list]
 
+.. _pagewebview:
 
 Web > View (mod.web\_view)
 """"""""""""""""""""""""""
@@ -1187,6 +1195,7 @@ The configuration for wizards was introduced in TYPO3 4.3. Wizards
 make it possible to customize the new record wizard or the new content
 element wizard, for example.
 
+.. _pagewebrecordwizard:
 
 New record wizard (mod.wizards.newRecord)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1265,6 +1274,7 @@ New record wizard (mod.wizards.newRecord)
 
 [page:mod.wizards.newRecord; beuser:page.mod.wizards.newRecord]
 
+.. _pagenewcontentelementwizard:
 
 New content element wizard (mod.wizards.newContentElement)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1416,6 +1426,7 @@ New content element wizard (mod.wizards.newContentElement)
 [page:mod.wizards.newContentElement;
 beuser:mod.wizards.newContentElement]
 
+.. _pageexample1:
 
 Example 1:
 ~~~~~~~~~~
@@ -1432,6 +1443,7 @@ Add a new element (header) to the "common" group::
    }
    mod.wizards.newContentElement.wizardItems.common.show := addToList(header)
 
+.. _pageexample2:
 
 Example 2:
 ~~~~~~~~~~
@@ -1462,6 +1474,8 @@ wizard:
 
 .. figure:: ../../Images/manual_html_73b37d4e.png
    :alt: Added entry in the new content element wizard
+
+.. _pagetoolsem:
 
 Tools > Extension Manager (mod.tools\_em)
 """""""""""""""""""""""""""""""""""""""""
@@ -1502,6 +1516,7 @@ Tools > Extension Manager (mod.tools\_em)
 
 [beuser:mod.tools\_em]
 
+.. _pageeditdocumentmodul:
 
 Edit document 'module' (mod.xMOD\_alt\_doc)
 """""""""""""""""""""""""""""""""""""""""""

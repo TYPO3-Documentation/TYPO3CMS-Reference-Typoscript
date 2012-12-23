@@ -5,6 +5,7 @@
 
 .. include:: ../../Includes.txt
 
+.. _useroptions:
 
 ->OPTIONS
 ^^^^^^^^^
@@ -1185,4 +1186,3 @@ Various options for the user affecting the core at various points.
 
 
 [beuser:options]
-

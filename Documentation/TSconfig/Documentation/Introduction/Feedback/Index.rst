@@ -5,6 +5,7 @@
 
 .. include:: ../../Includes.txt
 
+.. _feedback:
 
 Feedback
 ^^^^^^^^
@@ -21,4 +22,3 @@ Maintaining quality documentation is hard work and the Documentation
 Team is always looking for volunteers. If you feel like helping please
 join the documentation mailing list (typo3.projects.documentation on
 lists.typo3.org).
-

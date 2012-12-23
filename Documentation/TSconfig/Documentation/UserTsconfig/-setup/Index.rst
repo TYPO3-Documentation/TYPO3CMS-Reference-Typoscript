@@ -5,6 +5,7 @@
 
 .. include:: ../../Includes.txt
 
+.. _usersetup:
 
 ->SETUP
 ^^^^^^^
@@ -492,4 +493,3 @@ The table below describes the related option:
 
 
 [beuser:setup.fields]
-

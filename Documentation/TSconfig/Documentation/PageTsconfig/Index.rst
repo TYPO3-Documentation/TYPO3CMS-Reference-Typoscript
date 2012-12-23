@@ -5,6 +5,7 @@
 
 .. include:: ../Includes.txt
 
+.. _pagetsconfig:
 
 Page TSconfig
 -------------
@@ -29,4 +30,3 @@ overridden further out).
    -tcemain/Index
    -tceform/Index
    -tsfe/Index
-

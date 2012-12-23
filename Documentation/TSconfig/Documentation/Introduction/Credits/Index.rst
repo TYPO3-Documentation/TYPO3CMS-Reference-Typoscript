@@ -6,10 +6,11 @@
 .. include:: ../../Includes.txt
 
 
+.. _credits:
+
 Credits
 ^^^^^^^
 
 This document was originally written by Kasper Skårhøj. It has since
 then been maintained successively by Michael Stucki, François Suter,
 Christopher Stelmaszyk and Christian Wöbbeking.
-

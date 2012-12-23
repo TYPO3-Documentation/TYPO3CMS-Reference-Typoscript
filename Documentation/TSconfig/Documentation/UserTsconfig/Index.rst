@@ -5,6 +5,7 @@
 
 .. include:: ../Includes.txt
 
+.. _usertsconfig:
 
 User TSconfig
 -------------
