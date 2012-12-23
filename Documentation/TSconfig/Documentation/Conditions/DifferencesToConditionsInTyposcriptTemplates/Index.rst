@@ -5,6 +5,7 @@
 
 .. include:: ../../Includes.txt
 
+.. _differences:
 
 Differences to conditions in TypoScript templates
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -26,6 +27,7 @@ conditions in TypoScript templates, which must be taken into account:
 Furthermore the following condition is available **only** in
 TSconfig:
 
+.. _adminuser:
 
 adminUser
 """""""""

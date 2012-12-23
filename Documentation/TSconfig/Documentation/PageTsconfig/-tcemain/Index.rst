@@ -5,6 +5,7 @@
 
 .. include:: ../../Includes.txt
 
+.. _pagetcemain:
 
 ->TCEMAIN
 ^^^^^^^^^
@@ -315,6 +316,7 @@
 
 [page:TCEMAIN]
 
+.. _pagetcemaintables:
 
 ->TCEMAIN\_tables
 """""""""""""""""

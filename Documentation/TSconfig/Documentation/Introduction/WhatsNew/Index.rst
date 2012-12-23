@@ -5,6 +5,7 @@
 
 .. include:: ../../Includes.txt
 
+.. _whatsnew:
 
 What's new
 ^^^^^^^^^^
@@ -48,4 +49,3 @@ nfig/versions/1428>`_
 TYPO3 6.0: `http://forge.typo3.org/projects/typo3v4-doc\_core\_tsconfi
 g/versions/1624 <http://forge.typo3.org/projects/typo3v4-doc_core_tsco
 nfig/versions/1624>`_
-

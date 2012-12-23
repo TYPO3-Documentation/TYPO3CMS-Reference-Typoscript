@@ -5,6 +5,7 @@
 
 .. include:: ../Includes.txt
 
+.. _introduction:
 
 Introduction
 ------------
@@ -20,4 +21,3 @@ Introduction
    Credits/Index
    Feedback/Index
    VersionNumbers/Index
-

@@ -5,6 +5,7 @@
 
 .. include:: ../../Includes.txt
 
+.. _pagetoplevelobjects:
 
 Top-Level Objects
 ^^^^^^^^^^^^^^^^^
@@ -109,4 +110,3 @@ These are the Page TSconfig Top-Level Objects (TLOs):
 .. ###### END~OF~TABLE ######
 
 [page]
-

@@ -5,6 +5,8 @@
 
 .. include:: ../../Includes.txt
 
+.. _conditions-example:
+
 Example:
 ^^^^^^^^
 

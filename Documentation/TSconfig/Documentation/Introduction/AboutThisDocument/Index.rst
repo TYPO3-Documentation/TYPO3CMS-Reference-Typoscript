@@ -5,6 +5,7 @@
 
 .. include:: ../../Includes.txt
 
+.. _aboutthisdocument:
 
 About this document
 ^^^^^^^^^^^^^^^^^^^
@@ -18,4 +19,3 @@ vast possibilities of customizing the TYPO3 backend.
 
 For details about the nature of TypoScript as a syntax, please read
 the document "TypoScript Syntax & In-depth Study".
-

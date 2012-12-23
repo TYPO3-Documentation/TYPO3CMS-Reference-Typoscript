@@ -5,6 +5,8 @@
 
 .. include:: ../../Includes.txt
 
+.. _userthetsconfigfield:
+
 The "TSconfig" field
 ^^^^^^^^^^^^^^^^^^^^
 
@@ -13,6 +15,8 @@ records:
 
 .. figure:: ../../Images/manual_html_m2a166eee.png
    :alt: The TSconfig inside the backend user or backend group properties
+
+.. _userverifyingthefinalconfiguration:
 
 Verifying the final configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -24,6 +28,8 @@ TSconfig tree among other information. Here is an example:
 
 .. figure:: ../../Images/manual_html_464ee54.png
    :alt: Comparing backend user or backend group settings with the User Admin module
+
+.. _useroverridingpreviouslysetoptions:
 
 Overriding previously set options
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -44,6 +50,7 @@ field is not changed and simply inherited directly from the group::
    TCAdefaults.tt_content.header = 234
    options.clearCache.all = 1
 
+.. _usersettingdefaultusertsconfig:
 
 Setting default User TSconfig
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
