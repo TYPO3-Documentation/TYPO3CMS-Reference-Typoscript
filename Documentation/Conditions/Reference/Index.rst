@@ -1122,6 +1122,10 @@ matches::
 
    [globalVar = LIT:1 = {$constant_to_turnSomethingOn}]
 
+Find out if there currently is a valid backend login::
+
+   [globalVar = TSFE : beUserLogin = 1]
+
 
 .. _condition-globalstring:
 
