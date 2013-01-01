@@ -386,6 +386,8 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
 
 .. container:: table-row
 
+   .. _config-doctype:
+
    Property
          doctype
 
