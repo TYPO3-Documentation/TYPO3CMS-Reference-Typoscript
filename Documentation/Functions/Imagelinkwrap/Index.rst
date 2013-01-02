@@ -45,8 +45,9 @@ Example: Create a link to the ``tx_cms_showpic`` script
 Since TYPO3 CMS 4.5 there is an alternative. You may set
 :ts:`directImageLink` to TRUE (:ts:`directImageLink = 1`). Then the link
 will point directly to the image - no intermediate script involved.
-A use could be to display the images in a lightbox. See the
-`Example: Images in a lightbox`_.
+A use could be to display the images in a lightbox.
+See :ref:`imageLinkWrap-example-fancybox` and 
+:ref:`imageLinkWrap-example-topup`.
 
 
 Example: Link directly to the original image
@@ -197,7 +198,11 @@ Example for bodyTag
 ::
 
    imageLinkWrap.JSwindow = 1
-   imageLinkWrap.bodyTag = <body style="background-color:black; margin:0; padding:0;">
+   imageLinkWrap.bodyTag (
+      <body style="background-color:black; margin:0; padding:0;"
+            bgColor="#000", leftmargin="0" topmargin="0"
+            marginwidth="0" marginheight="0">
+   )
 
 
 
@@ -348,7 +353,8 @@ In this way it is easy to use a lightbox of your choice and to display
 resized images in the frontend: You only need to integrate the lightbox
 by including it's Javascript and CSS files and to activate certain links
 by using the right "lightbox" class. Here's a more complete example:
-`Example: Images in a lightbox`_.
+:ref:`imageLinkWrap-example-fancybox` (and 
+:ref:`imageLinkWrap-example-topup`).
 
 
 stdWrap
@@ -367,6 +373,7 @@ result.
 Examples for imageLinkWrap
 --------------------------
 
+.. imageLinkWrap-example-popup-window:
 
 Example: Larger display in a popup window
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -402,9 +409,35 @@ Example: Larger display in a popup window
          JSwindow.expand = 30,20
    }
 
+   
+.. _imageLinkWrap-example-printlink:   
+   
+Example: Printlink
+~~~~~~~~~~~~~~~~~~
+::
 
-Example: Images in a lightbox
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   5 = IMAGE
+   5 {
+      file = fileadmin/images/printlink.png
+      imageLinkWrap = 1
+      imageLinkWrap {
+         enable = 1
+         typolink {
+            target = _blank
+            parameter.data = page:alias // TSFE:id
+            additionalParams = &type=98
+         }
+      }
+      altText = print version
+      titleText = Open print version of this page in a new window
+      params = class="printlink"
+   }
+
+
+.. _imageLinkWrap-example-fancybox:
+   
+Example: Images in lightbox "fancybox"
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Let's follow this `lightbox.ts example`__ and use `fancybox <http://fancybox.net>`_:
 
@@ -430,6 +463,52 @@ __ https://github.com/georgringer/modernpackage/blob/master/Resources/Private/Ty
          dataWrap = class= "lightbox" rel="fancybox{field:uid}"
       }
    }
+
+.. _imageLinkWrap-example-topup:
+   
+Example: Images in lightbox "TopUp"
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+In this `blog post`__ (german) Paul Lunow shows a way to integrate the
+`jQuery`__ `TopUp lightbox`__:
+
+__ http://www.interaktionsdesigner.de/2009/12/04/typo3-klickvergrosern-durch-eine-jquery-lightbox-ersetzen/
+__ http://jquery.com/
+__ http://gettopup.com/
+
+::
+
+   tt_content.image.20.1.imageLinkWrap >
+   tt_content.image.20.1.imageLinkWrap = 1
+   tt_content.image.20.1.imageLinkWrap {
+      enable = 1
+      typolink {
+            # directly link to the recent image
+         parameter.cObject = IMG_RESOURCE
+         parameter.cObject.file.import.data = TSFE:lastImageInfo|origFile
+         parameter.cObject.file.maxW = {$styles.content.imgtext.maxW}
+         parameter.override.listNum.stdWrap.data = register : IMAGE_NUM_CURRENT
+         title.field = imagecaption // title
+         title.split.token.char = 10
+         title.if.isTrue.field = imagecaption // header
+         title.split.token.char = 10
+         title.split.returnKey.data = register : IMAGE_NUM_CURRENT
+         parameter.cObject = IMG_RESOURCE
+         parameter.cObject.file.import.data = TSFE:lastImageInfo|origFile
+         ATagParams = target="_blank"
+      }
+   }
+
+
+.. imageLinkWrap-link-list:   
+   
+Link list
+---------
+
+`click-enlage <http://jweiland.net/typo3/typoscript/click-enlarge.html>`_,
+`lightbox.ts <https://github.com/georgringer/modernpackage/blob/master/Resources/Private/TypoScript/content/lightbox.ts>`_,
+
+
 
 
 Data types
