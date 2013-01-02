@@ -11,6 +11,38 @@
 imageLinkWrap
 =============
 
+Properties
+----------
+
+.. container:: ts-properties
+
+  ===================================================== ===================================================== ======= ==================
+  Property                                              Data types                                            stdWrap Default
+  ===================================================== ===================================================== ======= ==================
+  :ts:`imageLinkWrap =`                                 :ref:`my-data-type-boolean`                           yes       0
+  enable_ =                                             :ref:`my-data-type-boolean`                           yes       0
+  file_ =                                               :ref:`my-data-type-stdWrap`                           yes       
+  width_ =                                              :ref:`my-data-type-positive-integer`                  yes       
+  height_ =                                             :ref:`my-data-type-positive-integer`                  yes       
+  effects_ =                                            like :ref:`gifbuilder-effect` of :ref:`GIFBUILDER`    yes       
+  sample_ =                                             :ref:`my-data-type-boolean`                           yes       0
+  alternativeTempPath_ =                                :ref:`my-data-type-path`                              yes       
+  title_ =                                              :ref:`my-data-type-string`                            yes       
+  bodyTag_ =                                            :ref:`my-data-type-tag`                               yes       
+  wrap_ =                                               :ref:`my-data-type-wrap`                              (?)       
+  target_ =                                             :ref:`my-data-type-target`                            yes       "thePicture"
+  JSwindow_ =                                           :ref:`my-data-type-boolean`                           yes       
+  JSwindow.expand_ =                                    :ts:`x`, :ts:`y` (both :ref:`my-data-type-integer`)   yes       
+  JSwindow.newWindow_ =                                 :ref:`my-data-type-boolean`                           yes       
+  JSwindow.altUrl_ =                                    :ref:`my-data-type-string`                            yes       
+  `JSwindow.altUrl\_noDefaultParams`_ =                 :ref:`my-data-type-boolean`                           (?)       0
+  typolink_ =                                           like :ref:`typolink`                                  (?)      
+  directImageLink_ =                                    :ref:`my-data-type-boolean`                           yes       0
+  linkParams_ =                                         any of the options of :ref:`typolink`                 (?)      
+  stdWrap_ =                                            :ref:`my-data-type-stdWrap`                           yes       
+  ===================================================== ===================================================== ======= ==================
+
+
 What it does
 ------------
 
@@ -568,22 +600,22 @@ String
 
 .. _my-data-type-stdWrap:
 
-stdWrap
--------
+data type "stdWrap"
+-------------------
 ((describe TypoScript my-data-type ``stdWrap`` here))
 
 
 .. _my-data-type-wrap:
 
-wrap
-----
+data type "wrap"
+----------------
 
 ((describe my-data-type ``wrap`` here))
 
 .. _my-data-type-target:
 
-target
-------
+data type "target"
+------------------
 
 ((describe my-data-type ``target`` here))
 
