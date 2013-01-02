@@ -23,9 +23,10 @@ deal with several parameters. The script adds an md5-hash to protect
 the parameters. The image will only be shown if the parameters are
 unchanged.
 
+.. _imageLinkWrap-basic-example-showpic:
 
-Example: Create a link to the ``tx_cms_showpic`` script
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Basic example: Create a link to the ``tx_cms_showpic`` script
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ::
 
    10 = IMAGE
@@ -50,8 +51,10 @@ See :ref:`imageLinkWrap-example-fancybox` and
 :ref:`imageLinkWrap-example-topup`.
 
 
-Example: Link directly to the original image
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. _imageLinkWrap-basic-example-directImageLink:
+
+Basic example: Link directly to the original image
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ::
 
    10 = IMAGE
@@ -195,13 +198,17 @@ Needs :ts:`JSwindow = 1`.
 
 Example for bodyTag
 """""""""""""""""""
-::
+
+With all margins set to zero the window will exactly fit the image.
+With the ``onBlur`` the window closes automatically if it looses focus::
 
    imageLinkWrap.JSwindow = 1
    imageLinkWrap.bodyTag (
       <body style="background-color:black; margin:0; padding:0;"
             bgColor="#000", leftmargin="0" topmargin="0"
-            marginwidth="0" marginheight="0">
+            marginwidth="0" marginheight="0"
+            onBlur="self.close()"
+            >
    )
 
 
@@ -306,13 +313,6 @@ typolink
 This is your chance to completely control what link is being generated.
 If this returns anything that will override the built in results of
 :ts:`imageLinkWrap`.
-
-Example for typolink
-""""""""""""""""""""
-::
-
-   ((...))
-
 
 
 directImageLink
@@ -505,10 +505,9 @@ __ http://gettopup.com/
 Link list
 ---------
 
-`click-enlage <http://jweiland.net/typo3/typoscript/click-enlarge.html>`_,
+Links of interest:
+`click-enlage (de) <http://jweiland.net/typo3/typoscript/click-enlarge.html>`_,
 `lightbox.ts <https://github.com/georgringer/modernpackage/blob/master/Resources/Private/TypoScript/content/lightbox.ts>`_,
-
-
 
 
 Data types
