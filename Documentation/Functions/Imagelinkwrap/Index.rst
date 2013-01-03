@@ -19,34 +19,34 @@ Properties
   ===================================================== ===================================================== ======= ==================
   Property                                              Data types                                            stdWrap Default
   ===================================================== ===================================================== ======= ==================
-  :ts:`imageLinkWrap =`                                 :ref:`my-data-type-boolean`                           yes       0
-  enable_ =                                             :ref:`my-data-type-boolean`                           yes       0
-  file_ =                                               :ref:`my-data-type-stdWrap`                           yes       
-  width_ =                                              :ref:`my-data-type-positive-integer`                  yes       
-  height_ =                                             :ref:`my-data-type-positive-integer`                  yes       
-  effects_ =                                            like :ref:`gifbuilder-effect` of :ref:`GIFBUILDER`    yes       
-  sample_ =                                             :ref:`my-data-type-boolean`                           yes       0
-  alternativeTempPath_ =                                :ref:`my-data-type-path`                              yes       
-  title_ =                                              :ref:`my-data-type-string`                            yes       
-  bodyTag_ =                                            :ref:`my-data-type-tag`                               yes       
-  wrap_ =                                               :ref:`my-data-type-wrap`                              (?)       
-  target_ =                                             :ref:`my-data-type-target`                            yes       "thePicture"
-  JSwindow_ =                                           :ref:`my-data-type-boolean`                           yes       
-  JSwindow.expand_ =                                    :ts:`x`, :ts:`y` (both :ref:`my-data-type-integer`)   yes       
-  JSwindow.newWindow_ =                                 :ref:`my-data-type-boolean`                           yes       
-  JSwindow.altUrl_ =                                    :ref:`my-data-type-string`                            yes       
-  `JSwindow.altUrl\_noDefaultParams`_ =                 :ref:`my-data-type-boolean`                           (?)       0
-  typolink_ =                                           like :ref:`typolink`                                  (?)      
-  directImageLink_ =                                    :ref:`my-data-type-boolean`                           yes       0
-  linkParams_ =                                         any of the options of :ref:`typolink`                 (?)      
-  stdWrap_ =                                            :ref:`my-data-type-stdWrap`                           yes       
+  :ts:`imageLinkWrap =`                                 :ref:`data-type-boolean`                              yes       0
+  enable_ =                                             :ref:`data-type-boolean`                              yes       0
+  file_ =                                               :ref:`data-type-stdWrap`                              yes
+  width_ =                                              :ref:`data-type-positive-integer`                     yes
+  height_ =                                             :ref:`data-type-positive-integer`                     yes
+  effects_ =                                            like :ref:`gifbuilder-effect` of :ref:`GIFBUILDER`    yes
+  sample_ =                                             :ref:`data-type-boolean`                              yes       0
+  alternativeTempPath_ =                                :ref:`data-type-path`                                 yes
+  title_ =                                              :ref:`data-type-string`                               yes
+  bodyTag_ =                                            :ref:`data-type-tag`                                  yes
+  wrap_ =                                               :ref:`data-type-wrap`                                 (?)
+  target_ =                                             :ref:`data-type-target`                               yes       "thePicture"
+  JSwindow_ =                                           :ref:`data-type-boolean`                              yes
+  JSwindow.expand_ =                                    :ts:`x`, :ts:`y` (both :ref:`data-type-integer`)      yes
+  JSwindow.newWindow_ =                                 :ref:`data-type-boolean`                              yes
+  JSwindow.altUrl_ =                                    :ref:`data-type-string`                               yes
+  `JSwindow.altUrl\_noDefaultParams`_ =                 :ref:`data-type-boolean`                              (?)       0
+  typolink_ =                                           like :ref:`typolink`                                  (?)
+  directImageLink_ =                                    :ref:`data-type-boolean`                              yes       0
+  linkParams_ =                                         any of the options of :ref:`typolink`                 (?)
+  stdWrap_ =                                            :ref:`data-type-stdWrap`                              yes
   ===================================================== ===================================================== ======= ==================
 
 
 What it does
 ------------
 
-:ts:`imageLinkWrap =` [:ref:`my-data-type-boolean`, default: 0]
+:ts:`imageLinkWrap =` [:ref:`data-type-boolean`, default: 0]
 
 Set this to TRUE (:ts:`imageLinkWrap = 1`) to attach a link to an image
 that opens a special view of the image. By default the link points to
@@ -79,7 +79,7 @@ Since TYPO3 CMS 4.5 there is an alternative. You may set
 :ts:`directImageLink` to TRUE (:ts:`directImageLink = 1`). Then the link
 will point directly to the image - no intermediate script involved.
 A use could be to display the images in a lightbox.
-See :ref:`imageLinkWrap-example-fancybox` and 
+See :ref:`imageLinkWrap-example-fancybox` and
 :ref:`imageLinkWrap-example-topup`.
 
 
@@ -131,7 +131,7 @@ Configuration
 enable
 ~~~~~~
 
-:ts:`imageLinkWrap.enable =` [:ref:`my-data-type-boolean`, default: 0; :ref:`my-data-type-stdWrap`]
+:ts:`imageLinkWrap.enable =` [:ref:`data-type-boolean`, default: 0; :ref:`data-type-stdWrap`]
 
 Whether or not to link the image. Must be set to TRUE. Otherwise
 :ts:`imageLinkWrap` will do nothing.
@@ -141,16 +141,16 @@ Whether or not to link the image. Must be set to TRUE. Otherwise
 file
 ~~~~
 
-:ts:`imageLinkWrap.file =` [:ref:`my-data-type-stdWrap`]
+:ts:`imageLinkWrap.file =` [:ref:`data-type-stdWrap`]
 
-Apply :ref:`my-data-type-stdWrap` functionality to the file path.
+Apply :ref:`data-type-stdWrap` functionality to the file path.
 ((...))
 
 
 width
 ~~~~~
 
-:ts:`imageLinkWrap.width =` [:ref:`my-data-type-positive-integer`;  :ref:`my-data-type-stdWrap`]
+:ts:`imageLinkWrap.width =` [:ref:`data-type-positive-integer`;  :ref:`data-type-stdWrap`]
 
 Width of the image to be shown in pixels. If you add "m" to :ts:`width`
 or :ts:`height` or both then the width and height parameters will be
@@ -160,7 +160,7 @@ interpreted as maximum and proportions of the image will be preserved.
 height
 ~~~~~~
 
-:ts:`imageLinkWrap.height =` [:ref:`my-data-type-positive-integer`;  :ref:`my-data-type-stdWrap`]
+:ts:`imageLinkWrap.height =` [:ref:`data-type-positive-integer`;  :ref:`data-type-stdWrap`]
 
 Width of the image to be shown in pixels. If you add "m" to :ts:`width`
 or :ts:`height` or both then the width and height parameters will be
@@ -171,7 +171,7 @@ interpreted as maximum and proportions of the image will be preserved.
 effects
 ~~~~~~~
 
-:ts:`imageLinkWrap.effects =` [like :ref:`gifbuilder-effect` of :ref:`GIFBUILDER`;  :ref:`my-data-type-stdWrap`]
+:ts:`imageLinkWrap.effects =` [like :ref:`gifbuilder-effect` of :ref:`GIFBUILDER`;  :ref:`data-type-stdWrap`]
 
 Example for effects
 """""""""""""""""""
@@ -193,7 +193,7 @@ Apply image effects to the preview image.
 sample
 ~~~~~~
 
-:ts:`imageLinkWrap.sample =` [:ref:`my-data-type-boolean`, default: 0;  :ref:`my-data-type-stdWrap`]
+:ts:`imageLinkWrap.sample =` [:ref:`data-type-boolean`, default: 0;  :ref:`data-type-stdWrap`]
 
 :ts:`sample` is a switch with which you can influence how
 :ref:`ImageMagick` calculates the preview image. If :ts:`sample` is TRUE
@@ -205,7 +205,7 @@ therefore much faster than ImageMagick's ``geometry`` procedure.
 alternativeTempPath
 ~~~~~~~~~~~~~~~~~~~
 
-:ts:`imageLinkWrap.alternativeTempPath =` [:ref:`my-data-type-path`;  :ref:`my-data-type-stdWrap`]
+:ts:`imageLinkWrap.alternativeTempPath =` [:ref:`data-type-path`;  :ref:`data-type-stdWrap`]
 
 This is used to specify an alternative path to be used for temporary
 images. To be considered legal the value must exist in the list of
@@ -215,7 +215,7 @@ allowed temporary paths (:php:`$TYPO3_CONF_VARS['FE']['allowedTempPaths']`).
 title
 ~~~~~
 
-:ts:`imageLinkWrap.title =` [:ref:`my-data-type-string`;  :ref:`my-data-type-stdWrap`]
+:ts:`imageLinkWrap.title =` [:ref:`data-type-string`;  :ref:`data-type-stdWrap`]
 
 Specifies the (html-) title of the preview window. Needs :ts:`JSwindow = 1`.
 
@@ -223,7 +223,7 @@ Specifies the (html-) title of the preview window. Needs :ts:`JSwindow = 1`.
 bodyTag
 ~~~~~~~
 
-:ts:`imageLinkWrap.bodyTag =` [:ref:`my-data-type-tag`;  :ref:`my-data-type-stdWrap`]
+:ts:`imageLinkWrap.bodyTag =` [:ref:`data-type-tag`;  :ref:`data-type-stdWrap`]
 
 This is the ``<body>``-Body tag of the preview window.
 Needs :ts:`JSwindow = 1`.
@@ -248,7 +248,7 @@ With the ``onBlur`` the window closes automatically if it looses focus::
 wrap
 ~~~~
 
-:ts:`imageLinkWrap.wrap =` [:ref:`my-data-type-wrap`]
+:ts:`imageLinkWrap.wrap =` [:ref:`data-type-wrap`]
 
 This wrap is placed around the ``<img>``-tag in the preview window.
 Needs :ts:`JSwindow = 1`.
@@ -257,7 +257,7 @@ Needs :ts:`JSwindow = 1`.
 target
 ~~~~~~
 
-:ts:`imageLinkWrap.target =` [:ref:`my-data-type-target`, default: 'thePicture'; :ref:`my-data-type-stdWrap`]
+:ts:`imageLinkWrap.target =` [:ref:`data-type-target`, default: 'thePicture'; :ref:`data-type-stdWrap`]
 
 This specifies the ``target`` attribute of the link. The attribute
 will only be created if the current :ref:`Doctype <config-doctype>`
@@ -282,7 +282,7 @@ Examples for target
 JSwindow
 ~~~~~~~~
 
-:ts:`imageLinkWrap.JSwindow =` [:ref:`my-data-type-boolean`;  :ref:`my-data-type-stdWrap`]
+:ts:`imageLinkWrap.JSwindow =` [:ref:`data-type-boolean`;  :ref:`data-type-stdWrap`]
 
 If true (:ts:`JSwindow = 1`) Javascript will be used to open the image
 in a new window. The window is automatically resized to match the
@@ -292,9 +292,9 @@ dimensions of the image.
 JSwindow.expand
 ~~~~~~~~~~~~~~~
 
-:ts:`imageLinkWrap.JSwindow.expand =` [:ts:`x`, :ts:`y`;  :ref:`my-data-type-stdWrap`]
+:ts:`imageLinkWrap.JSwindow.expand =` [:ts:`x`, :ts:`y`;  :ref:`data-type-stdWrap`]
 
-:ts:`x` and :ts:`x` are of data type :ref:`my-data-type-integer`. The values
+:ts:`x` and :ts:`x` are of data type :ref:`data-type-integer`. The values
 are added to the width and height of the preview image when calculating
 the width and height of the preview window.
 
@@ -302,11 +302,11 @@ the width and height of the preview window.
 JSwindow.newWindow
 ~~~~~~~~~~~~~~~~~~
 
-:ts:`imageLinkWrap.JSwindow.newWindow =` [:ref:`my-data-type-boolean`;  :ref:`my-data-type-stdWrap`]
+:ts:`imageLinkWrap.JSwindow.newWindow =` [:ref:`data-type-boolean`;  :ref:`data-type-stdWrap`]
 
-If the :ref:`Doctype <config-doctype>` allows the :ref:`my-data-type-target` attribute
+If the :ref:`Doctype <config-doctype>` allows the :ref:`data-type-target` attribute
 the image will be opened in a window with the respective name.
-If that windows is kept open and the next image with the same :ref:`my-data-type-target`
+If that windows is kept open and the next image with the same :ref:`data-type-target`
 attribute is to be shown then it will appear in the same preview window.
 
 Thinks are different if you set :ts:`JSwindow.newWindow` to TRUE
@@ -319,7 +319,7 @@ that each image is opened in a new window.
 JSwindow.altUrl
 ~~~~~~~~~~~~~~~
 
-:ts:`imageLinkWrap.JSwindow.altUrl =` [:ref:`my-data-type-string`;  :ref:`my-data-type-stdWrap`]
+:ts:`imageLinkWrap.JSwindow.altUrl =` [:ref:`data-type-string`;  :ref:`data-type-stdWrap`]
 
 If this returns anything then the URL of the preview window (opened
 by Javascript) is **not** pointing to :ref:`tx_cms_showpic` but it is
@@ -330,7 +330,7 @@ the URL given here!
 JSwindow.altUrl\_noDefaultParams
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-:ts:`imageLinkWrap.JSwindow.altUrl_noDefaultParams =` [:ref:`my-data-type-boolean`, default: 0;  :ref:`my-data-type-stdWrap`???]
+:ts:`imageLinkWrap.JSwindow.altUrl_noDefaultParams =` [:ref:`data-type-boolean`, default: 0;  :ref:`data-type-stdWrap`???]
 
 If true (:ts:`JSwindow.altUrl_noDefaultParams = 1`) then the image
 parameters are not appended automatically to the :ts:`altUrl`.
@@ -350,7 +350,7 @@ If this returns anything that will override the built in results of
 directImageLink
 ~~~~~~~~~~~~~~~
 
-:ts:`imageLinkWrap.directImageLink =` [:ref:`my-data-type-boolean`, default: 0;  :ref:`my-data-type-stdWrap`]
+:ts:`imageLinkWrap.directImageLink =` [:ref:`data-type-boolean`, default: 0;  :ref:`data-type-stdWrap`]
 
 If true (:ts:`directImageLink = 1`) the link to preview version of the
 image will point to the image file will directly. This means that
@@ -385,16 +385,16 @@ In this way it is easy to use a lightbox of your choice and to display
 resized images in the frontend: You only need to integrate the lightbox
 by including it's Javascript and CSS files and to activate certain links
 by using the right "lightbox" class. Here's a more complete example:
-:ref:`imageLinkWrap-example-fancybox` (and 
+:ref:`imageLinkWrap-example-fancybox` (and
 :ref:`imageLinkWrap-example-topup`).
 
 
 stdWrap
 ~~~~~~~
 
-:ts:`imageLinkWrap.stdWrap =` [:ref:`my-data-type-stdWrap`]
+:ts:`imageLinkWrap.stdWrap =` [:ref:`data-type-stdWrap`]
 
-This adds :ref:`my-data-type-stdWrap` functionality to the almost final
+This adds :ref:`data-type-stdWrap` functionality to the almost final
 result.
 
 
@@ -441,9 +441,9 @@ Example: Larger display in a popup window
          JSwindow.expand = 30,20
    }
 
-   
-.. _imageLinkWrap-example-printlink:   
-   
+
+.. _imageLinkWrap-example-printlink:
+
 Example: Printlink
 ~~~~~~~~~~~~~~~~~~
 ::
@@ -467,7 +467,7 @@ Example: Printlink
 
 
 .. _imageLinkWrap-example-fancybox:
-   
+
 Example: Images in lightbox "fancybox"
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -497,7 +497,7 @@ __ https://github.com/georgringer/modernpackage/blob/master/Resources/Private/Ty
    }
 
 .. _imageLinkWrap-example-topup:
-   
+
 Example: Images in lightbox "TopUp"
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -532,8 +532,8 @@ __ http://gettopup.com/
    }
 
 
-.. imageLinkWrap-link-list:   
-   
+.. imageLinkWrap-link-list:
+
 Link list
 ---------
 
@@ -568,71 +568,6 @@ Examples of my-data-type ``Boolean``::
    dummy.enable = no            # TRUE (!), because ('no') is true in PHP
    dummy.enable = 0 anything    # FALSE, because ('0 anything') is false in PHP
    dummy.enable = 1 anything    # FALSE, because ('1 anything') is false in PHP
-
-
-
-
-
-.. _my-data-type-positive-integer:
-
-Positive Integer
-----------------
-((describe TypoScript my-data-type ``Positive Integer`` here))
-
-A non-negative integer number: ``0 <= i <= maxInteger``
-
-
-
-.. _my-data-type-integer:
-
-Integer
--------
-An integer number: ``minInteger <= i <= maxInteger``
-
-
-
-.. _my-data-type-string:
-
-String
-------
-((describe TypoScript my-data-type ``String`` here))
-
-
-.. _my-data-type-stdWrap:
-
-data type "stdWrap"
--------------------
-((describe TypoScript my-data-type ``stdWrap`` here))
-
-
-.. _my-data-type-wrap:
-
-data type "wrap"
-----------------
-
-((describe my-data-type ``wrap`` here))
-
-.. _my-data-type-target:
-
-data type "target"
-------------------
-
-((describe my-data-type ``target`` here))
-
-
-.. _my-data-type-tag:
-
-tag
----
-
-((describe my-data-type ``tag`` here))
-
-
-.. _my-data-type-path:
-
-path
-----
-((describe data ype ``path`` here))
 
 
 

@@ -8,17 +8,20 @@
 
 .. _data-types-reference:
 
+====================
 Data types reference
-^^^^^^^^^^^^^^^^^^^^
+====================
 
 
-.. ### BEGIN~OF~TABLE ###
+
+.. _data-type-tag:
+
+<tag>
+=====
 
 .. container:: table-row
 
    Data type
-         .. _data-type-tag:
-
          <tag>
 
    Examples
@@ -29,11 +32,16 @@ Data types reference
    Comment
          An HTML tag.
 
+
+
+.. _data-type-align:
+
+align
+=====
+
 .. container:: table-row
 
    Data type
-         .. _data-type-align:
-
          align
 
    Examples
@@ -48,11 +56,15 @@ Data types reference
          left
 
 
+
+.. _data-type-vhalign:
+
+VHalign
+=======
+
 .. container:: table-row
 
    Data type
-         .. _data-type-vhalign:
-
          VHalign
 
    Examples
@@ -76,11 +88,15 @@ Data types reference
          l , t
 
 
+
+.. _data-type-resource:
+
+resource
+========
+
 .. container:: table-row
 
    Data type
-         .. _data-type-resource:
-
          resource
 
    Examples
@@ -105,11 +121,15 @@ Data types reference
             field. No support for wildcards.
 
 
+
+.. _data-type-imgresource:
+
+imgResource
+===========
+
 .. container:: table-row
 
    Data type
-         .. _data-type-imgresource:
-
          imgResource
 
    Examples
@@ -136,11 +156,15 @@ Data types reference
          #. GIFBUILDER object
 
 
+
+.. _data-type-html-code:
+
+HTML code
+=========
+
 .. container:: table-row
 
    Data type
-         .. _data-type-html-code:
-
          HTML code
 
    Examples
@@ -152,11 +176,15 @@ Data types reference
          pure HTML code
 
 
+
+.. _data-type-target:
+
+target
+======
+
 .. container:: table-row
 
    Data type
-         .. _data-type-target:
-
          target
 
    Examples
@@ -173,11 +201,15 @@ Data types reference
          that defines the frame.
 
 
+
+.. _data-type-imageextension:
+
+imageExtension
+==============
+
 .. container:: table-row
 
    Data type
-         .. _data-type-imageextension:
-
          imageExtension
 
    Examples
@@ -195,11 +227,15 @@ Data types reference
          already!
 
 
+
+.. _data-type-degree:
+
+degree
+======
+
 .. container:: table-row
 
    Data type
-         .. _data-type-degree:
-
          degree
 
    Examples
@@ -209,13 +245,17 @@ Data types reference
          -90 to 90, integers
 
 
+
+.. _data-type-positive-integer:
+.. _data-type-posint:
+.. _data-type-intplus:
+
+positive integer
+================
+
 .. container:: table-row
 
    Data type
-         .. _data-type-positive-integer:
-         .. _data-type-posint:
-         .. _data-type-intplus:
-
          positive integer / posint / int+
 
    Examples
@@ -225,12 +265,16 @@ Data types reference
          Positive integer
 
 
+
+.. _data-type-int:
+.. _data-type-integer:
+
+integer
+=======
+
 .. container:: table-row
 
    Data type
-         .. _data-type-int:
-         .. _data-type-integer:
-
          integer / int
 
    Examples
@@ -243,13 +287,17 @@ Data types reference
          appropriate, like "pixels")
 
 
+
+.. _data-type-string:
+.. _data-type-str:
+.. _data-type-value:
+
+string
+======
+
 .. container:: table-row
 
    Data type
-         .. _data-type-string:
-         .. _data-type-str:
-         .. _data-type-value:
-
          string / str / value
 
    Examples
@@ -262,12 +310,16 @@ Data types reference
          appropriate, like "align")
 
 
+
+.. _data-type-bool:
+.. _data-type-boolean:
+
+boolean
+=======
+
 .. container:: table-row
 
    Data type
-         .. _data-type-bool:
-         .. _data-type-boolean:
-
          boolean
 
    Examples
@@ -279,11 +331,15 @@ Data types reference
          non-empty strings (but not zero) are "true"
 
 
+
+.. _data-type-rotation:
+
+rotation
+========
+
 .. container:: table-row
 
    Data type
-         .. _data-type-rotation:
-
          rotation
 
    Examples
@@ -293,11 +349,15 @@ Data types reference
          integer, degrees from 0 - 360
 
 
+
+.. _data-type-xywh:
+
+x,y,w,h
+=======
+
 .. container:: table-row
 
    Data type
-         .. _data-type-xywh:
-
          x,y,w,h
 
    Examples
@@ -309,11 +369,15 @@ Data types reference
          w,h is the width and height
 
 
+
+.. _data-type-html-color:
+
+HTML-color
+==========
+
 .. container:: table-row
 
    Data type
-         .. _data-type-html-color:
-
          HTML-color
 
    Examples
@@ -324,51 +388,37 @@ Data types reference
    Comment
          HTML color codes:
 
-         .. ### BEGIN~OF~SIMPLE~TABLE ###
+         =============  ================
+         Color name     Hexadecimal code
+         =============  ================
+         Black             #000000
+         Silver            #C0C0C0
+         Gray              #808080
+         White             #FFFFFF
+         Maroon            #800000
+         Red               #FF0000
+         Purple            #800080
+         Fuchsia           #FF00FF
+         Green             #008000
+         Lime              #00FF00
+         Olive             #808000
+         Yellow            #FFFF00
+         Navy              #000080
+         Blue              #0000FF
+         Teal              #008080
+         Aqua              #00FFFF
+         =============  ================
 
-         =============    ==============
-         Color name          Hexadecimal code
-         =============    ==============
-         Black               #000000
 
-         Silver              #C0C0C0
 
-         Gray                #808080
+.. _data-type-graphiccolor:
 
-         White               #FFFFFF
-
-         Maroon              #800000
-
-         Red                 #FF0000
-
-         Purple              #800080
-
-         Fuchsia             #FF00FF
-
-         Green               #008000
-
-         Lime                #00FF00
-
-         Olive               #808000
-
-         Yellow              #FFFF00
-
-         Navy                #000080
-
-         Blue                #0000FF
-
-         Teal                #008080
-
-         Aqua                #00FFFF
-         =============    ==============
-
-         .. ###### END~OF~SIMPLE~TABLE ######
+GraphicColor
+============
 
 .. container:: table-row
 
    Data type
-         .. _data-type-graphiccolor:
-
          GraphicColor
 
    Examples
@@ -400,11 +450,15 @@ Data types reference
          then multiply the values with that factor.
 
 
+
+.. _data-type-page-id:
+
+page\_id
+========
+
 .. container:: table-row
 
    Data type
-         .. _data-type-page-id:
-
          page\_id
 
    Examples
@@ -416,11 +470,15 @@ Data types reference
          A page id (integer) or "this" (=current page id).
 
 
+
+.. _data-type-pixels:
+
+pixels
+======
+
 .. container:: table-row
 
    Data type
-         .. _data-type-pixels:
-
          pixels
 
    Examples
@@ -430,11 +488,15 @@ Data types reference
          pixel-distance
 
 
+
+.. _data-type-list:
+
+list
+====
+
 .. container:: table-row
 
    Data type
-         .. _data-type-list:
-
          list
 
    Examples
@@ -444,11 +506,15 @@ Data types reference
          list of values
 
 
+
+.. _data-type-margins:
+
+margins
+=======
+
 .. container:: table-row
 
    Data type
-         .. _data-type-margins:
-
          margins
 
    Examples
@@ -463,11 +529,15 @@ Data types reference
          left, top, right, bottom
 
 
+
+.. _data-type-wrap:
+
+wrap
+====
+
 .. container:: table-row
 
    Data type
-         .. _data-type-wrap:
-
          wrap
 
    Examples
@@ -483,11 +553,15 @@ Data types reference
          line are placed on the left and right side of the value.
 
 
+
+.. _data-type-linkwrap:
+
+linkWrap
+========
+
 .. container:: table-row
 
    Data type
-         .. _data-type-linkwrap:
-
          linkWrap
 
    Examples
@@ -508,11 +582,15 @@ Data types reference
          Thus we can insert page\_ids from previous levels.
 
 
+
+.. _data-type-case:
+
+case
+====
+
 .. container:: table-row
 
    Data type
-         .. _data-type-case:
-
          case
 
    Examples
@@ -537,11 +615,15 @@ Data types reference
          to lowercase.
 
 
+
+.. _data-type-space:
+
+space
+=====
+
 .. container:: table-row
 
    Data type
-         .. _data-type-space:
-
          space
 
    Examples
@@ -553,11 +635,15 @@ Data types reference
          Used for content and sets space "before \| after".
 
 
+
+.. _data-type-date-conf:
+
+date-conf
+=========
+
 .. container:: table-row
 
    Data type
-         .. _data-type-date-conf:
-
          date-conf
 
    Examples
@@ -566,50 +652,39 @@ Data types reference
    Comment
          See PHP function Date()!
 
-         a - "am" or "pm"
+         === ===========================================================
+         Abb The abbreviation is expanded to:
+         === ===========================================================
+         a   "am" or "pm"
+         A   "AM" or "PM"
+         d   01 - 31, day of the month, numeric, 2 digits with leading zeros
+         D   day of the week, textual, 3 letters like "Fri"
+         F   month, textual, long, like "January"
+         h   hour, numeric, 12 hour format
+         H   hour, numeric, 24 hour format
+         i   minutes, numeric
+         j   1 - 31, day of the month, numeric, without leading zeros
+         l   (lowercase 'L'), day of the week, textual, long, like "Friday"
+         m   month, numeric
+         M   month, textual, 3 letters, like "Jan"
+         s   seconds, numeric
+         S   English ordinal suffix, textual, 2 characters, like "th" or "nd"
+         U   seconds since the epoch
+         Y   year, numeric, 4 digits, like "2013"
+         w   day of the week, numeric, 0 represents Sunday
+         y   year, numeric, 2 digits, like "13"
+         z   day of the year, numeric, like "299"
+         === ===========================================================
 
-         A - "AM" or "PM"
 
-         d - day of the month, numeric, 2 digits (with leading zeros)
+.. _data-type-strftime-conf:
 
-         D - day of the week, textual, 3 letters; e.g. "Fri"
-
-         F - month, textual, long; e.g. "January"
-
-         h - hour, numeric, 12 hour format
-
-         H - hour, numeric, 24 hour format
-
-         i - minutes, numeric
-
-         j - day of the month, numeric, without leading zeros
-
-         l (lowercase 'L') - day of the week, textual, long; i.e. "Friday"
-
-         m - month, numeric
-
-         M - month, textual, 3 letters; e.g. "Jan"
-
-         s - seconds, numeric
-
-         S - English ordinal suffix, textual, 2 characters; i.e. "th", "nd"
-
-         U - seconds since the epoch
-
-         Y - year, numeric, 4 digits
-
-         w - day of the week, numeric, 0 represents Sunday
-
-         y - year, numeric, 2 digits
-
-         z - day of the year, numeric; e.g. "299"
-
+strftime-conf
+=============
 
 .. container:: table-row
 
    Data type
-         .. _data-type-strftime-conf:
-
          strftime-conf
 
    Examples
@@ -626,88 +701,54 @@ Data types reference
             %T
 
    Comment
-         %a - abbreviated weekday name according to the current locale
+         ==== ==========================================================
+         Abb  The abbreviation is expanded to:
+         ==== ==========================================================
+         %a   abbreviated weekday name according to the current locale
+         %A   full weekday name according to the current locale
+         %b   abbreviated month name according to the current locale
+         %B   full month name according to the current locale
+         %c   preferred date and time representation for the current locale
+         %C   century number (the year divided by 100 and truncated to an integer, range 00 to 99)
+         %d   day of the month as a decimal number (range 00 to 31)
+         %D   same as %m/%d/%y
+         %e   day of the month as a decimal number, a single digit is preceded by a space (range ' 1' to '31')
+         %h   same as %b
+         %H   hour as a decimal number using a 24-hour clock (range 00 to 23)
+         %I   hour as a decimal number using a 12-hour clock (range 01 to 12)
+         %j   day of the year as a decimal number (range 001 to 366)
+         %m   month as a decimal number (range 01 to 12)
+         %M   minute as a decimal number
+         %n   newline character
+         %p   either \`am' or \`pm' according to the given time value, or the corresponding strings for the current locale
+         %r   time in a.m. and p.m. notation
+         %R   time in 24 hour notation
+         %S   second as a decimal number
+         %t   tab character
+         %T   current time, equal to %H:%M:%S
+         %u   weekday as a decimal number [1,7], with 1 representing Monday
+         %U   week number of the current year as a decimal number, starting with the first Sunday as the first day of the first week
+         %V   The ISO 8601:1988 week number of the current year as a decimal number, range 01 to 53, where week 1 is the first week that has at least 4 days in the current year, and with Monday as the first day of the week.
+         %W   week number of the current year as a decimal number, starting with the first Monday as the first day of the first week
+         %w   day of the week as a decimal, Sunday being 0
+         %x   preferred date representation for the current locale without the time
+         %X   preferred time representation for the current locale without the date
+         %y   year as a decimal number without a century (range 00 to 99)
+         %Y   year as a decimal number including the century
+         %Z   time zone or name or abbreviation
+         %%   a literal \`%' character
+         ==== ==========================================================
 
-         %A - full weekday name according to the current locale
 
-         %b - abbreviated month name according to the current locale
 
-         %B - full month name according to the current locale
+.. _data-type-unix-time:
 
-         %c - preferred date and time representation for the current locale
-
-         %C - century number (the year divided by 100 and truncated to an
-         integer, range 00 to 99)
-
-         %d - day of the month as a decimal number (range 00 to 31)
-
-         %D - same as %m/%d/%y
-
-         %e - day of the month as a decimal number, a single digit is preceded
-         by a space (range ' 1' to '31')
-
-         %h - same as %b
-
-         %H - hour as a decimal number using a 24-hour clock (range 00 to 23)
-
-         %I - hour as a decimal number using a 12-hour clock (range 01 to 12)
-
-         %j - day of the year as a decimal number (range 001 to 366)
-
-         %m - month as a decimal number (range 01 to 12)
-
-         %M - minute as a decimal number
-
-         %n - newline character
-
-         %p - either \`am' or \`pm' according to the given time value, or the
-         corresponding strings for the current locale
-
-         %r - time in a.m. and p.m. notation
-
-         %R - time in 24 hour notation
-
-         %S - second as a decimal number
-
-         %t - tab character
-
-         %T - current time, equal to %H:%M:%S
-
-         %u - weekday as a decimal number [1,7], with 1 representing Monday
-
-         %U - week number of the current year as a decimal number, starting
-         with the first Sunday as the first day of the first week
-
-         %V - The ISO 8601:1988 week number of the current year as a decimal
-         number, range 01 to 53, where week 1 is the first week that has at
-         least 4 days in the current year, and with Monday as the first day of
-         the week.
-
-         %W - week number of the current year as a decimal number, starting
-         with the first Monday as the first day of the first week
-
-         %w - day of the week as a decimal, Sunday being 0
-
-         %x - preferred date representation for the current locale without the
-         time
-
-         %X - preferred time representation for the current locale without the
-         date
-
-         %y - year as a decimal number without a century (range 00 to 99)
-
-         %Y - year as a decimal number including the century
-
-         %Z - time zone or name or abbreviation
-
-         %% - a literal \`%' character
-
+UNIX-time
+=========
 
 .. container:: table-row
 
    Data type
-         .. _data-type-unix-time:
-
          UNIX-time
 
    Examples
@@ -719,12 +760,16 @@ Data types reference
          Seconds since January 1st 1970.
 
 
+
+.. _data-type-path:
+
+path
+====
+
 .. container:: table-row
 
    Data type
-         .. _data-type-path:
 
-         path
 
    Examples
          *fileadmin/stuff/*
@@ -733,11 +778,15 @@ Data types reference
          Path relative to the directory from which we operate.
 
 
+
+.. _data-type-tag-data:
+
+< tag >-data
+============
+
 .. container:: table-row
 
    Data type
-         .. _data-type-tag-data:
-
          < *tag* >-data
 
    Examples
@@ -749,11 +798,14 @@ Data types reference
 
 
 
+.. _data-type-tag-params:
+
+< tag >-params
+==============
+
 .. container:: table-row
 
    Data type
-         .. _data-type-tag-params:
-
          < *tag* >-params
 
    Examples
@@ -765,11 +817,15 @@ Data types reference
          Parameters for a tag.
 
 
+
+.. _data-type-gettext:
+
+getText
+=======
+
 .. container:: table-row
 
    Data type
-         .. _data-type-gettext:
-
          getText
 
    Examples
@@ -1050,11 +1106,15 @@ Data types reference
                 gets field "uid"
 
 
+
+.. _data-type-dir:
+
+dir
+===
+
 .. container:: table-row
 
    Data type
-         .. _data-type-dir:
-
          dir
 
    Examples
@@ -1077,11 +1137,15 @@ Data types reference
          the path. Thereby the path is locked to that folder.
 
 
+
+.. _data-type-function-name:
+
+function name
+=============
+
 .. container:: table-row
 
    Data type
-         .. _data-type-function-name:
-
          function name
 
    Examples
@@ -1126,43 +1190,58 @@ These are some "data types" that might be mentioned and valid values
 are shown here below:
 
 
-.. ### BEGIN~OF~SIMPLE~TABLE ###
+.. _data-type-cobject:
 
-.. Note: Labels cannot be put in the first column of a simple table; they
-   would be rendered as an empty row there. So I put them in the second column.
+cObject
+=======
 
-=============================   ========================================================================
-Data type:                      Comment:
-=============================   ========================================================================
-cObject                         .. _data-type-cobject:
+"cObjects" are also called "Content Objects". See the section "Content
+Objects" later in this manual.
 
-                                "cObjects" are also called "Content Objects". See the section "Content
-                                Objects" later in this manual.
+**Examples:** ::
 
-                                **Examples:** ::
+    TEXT / IMAGE / MEDIA ....
 
-                                   TEXT / IMAGE / MEDIA ....
 
-frameObj                        .. _data-type-frameobj:
 
-                                FRAMESET / FRAME
+.. _data-type-frameobj:
 
-menuObj                         .. _data-type-menuobj:
+frameObj
+========
 
-                                See the section "Menu Objects" later in this manual.
+FRAMESET / FRAME
 
-                                **Examples:** ::
 
-                                   GMENU / TMENU / IMGMENU / JSMENU
 
-GifBuilderObj                   .. _data-type-gifbuilderobj:
+.. _data-type-menuobj:
 
-                                See the section "GIFBUILDER" later in this manual.
+menuObj
+=======
 
-                                **Examples:** ::
+See the section "Menu Objects" later in this manual.
 
-                                   TEXT / SHADOW / OUTLINE / EMBOSS / BOX / IMAGE / EFFECT
-=============================   ========================================================================
+**Examples:** ::
 
-.. ###### END~OF~SIMPLE~TABLE ######
+    GMENU / TMENU / IMGMENU / JSMENU
 
+
+
+.. _data-type-gifbuilderobj:
+
+GifBuilderObj
+=============
+
+See section :ref:`GIFBUILDER` in this manual.
+
+**Examples:** ::
+
+    TEXT / SHADOW / OUTLINE / EMBOSS / BOX / IMAGE / EFFECT
+
+
+
+.. _data-type-stdwrap:
+
+stdWrap
+=======
+
+((To be described.))
