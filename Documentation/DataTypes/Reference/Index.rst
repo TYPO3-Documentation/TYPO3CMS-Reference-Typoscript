@@ -331,11 +331,11 @@ boolean
          The value is considered to be true if `PHP evaluates this value
          to True`__. If the value is empty or PHP evaluates to False it
          is counted as being false.
-         
+
          __ http://php.net/manual/en/language.types.boolean.php
-         
+
          Examples::
-         
+
             dummy.enable =              # false, because value is empty
             dummy.enable = 0            # false, prefered notation
             dummy.enable = 1            # true, prefered notation
@@ -1251,10 +1251,3 @@ See section :ref:`GIFBUILDER` in this manual.
     TEXT / SHADOW / OUTLINE / EMBOSS / BOX / IMAGE / EFFECT
 
 
-
-.. _data-type-stdwrap:
-
-stdWrap
-=======
-
-((To be described.))

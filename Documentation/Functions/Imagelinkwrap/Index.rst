@@ -27,7 +27,7 @@ Properties
   ===================================================== ===================================================== ======= ==================
   :ts:`imageLinkWrap =`                                 :ref:`data-type-boolean`                              yes       0
   enable_ =                                             :ref:`data-type-boolean`                              yes       0
-  file_ =                                               :ref:`data-type-stdWrap`                              yes
+  file_ =                                               :ref:`stdwrap`                                        yes
   width_ =                                              :ref:`data-type-positive-integer`                     yes
   height_ =                                             :ref:`data-type-positive-integer`                     yes
   effects_ =                                            like :ref:`gifbuilder-effect` of :ref:`GIFBUILDER`    yes
@@ -45,7 +45,7 @@ Properties
   typolink_ =                                           like :ref:`typolink`                                  (?)
   directImageLink_ =                                    :ref:`data-type-boolean`                              yes       0
   linkParams_ =                                         any of the options of :ref:`typolink`                 (?)
-  stdWrap_ =                                            :ref:`data-type-stdWrap`                              yes
+  stdWrap_ =                                            :ref:`stdwrap`                                        yes
   ===================================================== ===================================================== ======= ==================
 
 
@@ -61,26 +61,25 @@ Property details
 enable
 ~~~~~~
 
-:ts:`imageLinkWrap.enable =` [:ref:`data-type-boolean`, default: 0; :ref:`data-type-stdWrap`]
+:ts:`imageLinkWrap.enable =` :ref:`data-type-boolean`
 
-Whether or not to link the image. Must be set to TRUE. Otherwise
-:ts:`imageLinkWrap` will do nothing.
+Whether or not to link the image. Must be set to True to make 
+:ts:`imageLinkWrap` do anything at all.
 
 
 
 file
 ~~~~
 
-:ts:`imageLinkWrap.file =` [:ref:`data-type-stdWrap`]
+:ts:`imageLinkWrap.file =` :ref:`stdwrap`
 
-Apply :ref:`data-type-stdWrap` functionality to the file path.
-((...))
+Apply :ref:`stdwrap` functionality to the file path.
 
 
 width
 ~~~~~
 
-:ts:`imageLinkWrap.width =` [:ref:`data-type-positive-integer`;  :ref:`data-type-stdWrap`]
+:ts:`imageLinkWrap.width =` :ref:`data-type-positive-integer`
 
 Width of the image to be shown in pixels. If you add "m" to :ts:`width`
 or :ts:`height` or both then the width and height parameters will be
@@ -90,7 +89,7 @@ interpreted as maximum and proportions of the image will be preserved.
 height
 ~~~~~~
 
-:ts:`imageLinkWrap.height =` [:ref:`data-type-positive-integer`;  :ref:`data-type-stdWrap`]
+:ts:`imageLinkWrap.height =` :ref:`data-type-positive-integer`
 
 Width of the image to be shown in pixels. If you add "m" to :ts:`width`
 or :ts:`height` or both then the width and height parameters will be
@@ -101,7 +100,9 @@ interpreted as maximum and proportions of the image will be preserved.
 effects
 ~~~~~~~
 
-:ts:`imageLinkWrap.effects =` [like :ref:`gifbuilder-effect` of :ref:`GIFBUILDER`;  :ref:`data-type-stdWrap`]
+:ts:`imageLinkWrap.effects =` like :ref:`gifbuilder-effect` of :ref:`GIFBUILDER`
+
+Apply image effects to the preview image.
 
 Example for effects
 """""""""""""""""""
@@ -117,53 +118,51 @@ Example for effects
       height = 600m
    }
 
-Apply image effects to the preview image.
-
 
 sample
 ~~~~~~
 
-:ts:`imageLinkWrap.sample =` [:ref:`data-type-boolean`, default: 0;  :ref:`data-type-stdWrap`]
+:ts:`imageLinkWrap.sample =` :ref:`data-type-boolean`
 
-:ts:`sample` is a switch with which you can influence how
-:ref:`ImageMagick` calculates the preview image. If :ts:`sample` is TRUE
-then ``- sample`` is with ImageMagick instead of ``- geometry`` to
-calculate the preview image. ``sample`` does not use antialiasing and is
-therefore much faster than ImageMagick's ``geometry`` procedure.
+:ts:`sample` is a switch which determines how the image processor
+(often ImageMagick) calculates the preview image. 
+If :ts:`sample` is true then ``- sample``
+is used with ImageMagick instead of ``- geometry`` to calculate the 
+preview image. ``sample`` does not use antialiasing and is therefore 
+much faster than ImageMagick's ``geometry`` procedure.
 
 
 alternativeTempPath
 ~~~~~~~~~~~~~~~~~~~
 
-:ts:`imageLinkWrap.alternativeTempPath =` [:ref:`data-type-path`;  :ref:`data-type-stdWrap`]
+:ts:`imageLinkWrap.alternativeTempPath =` :ref:`data-type-path`
 
 This is used to specify an alternative path to be used for temporary
-images. To be considered legal the value must exist in the list of
+images. To be considered legal the value must be part of the list of
 allowed temporary paths (:php:`$TYPO3_CONF_VARS['FE']['allowedTempPaths']`).
 
 
 title
 ~~~~~
 
-:ts:`imageLinkWrap.title =` [:ref:`data-type-string`;  :ref:`data-type-stdWrap`]
+:ts:`imageLinkWrap.title =` :ref:`data-type-string`
 
-Specifies the (html-) title of the preview window. Needs :ts:`JSwindow = 1`.
+Specifies the html-page-title of the preview window. 
+Needs :ts:`JSwindow = 1`.
 
 
 bodyTag
 ~~~~~~~
 
-:ts:`imageLinkWrap.bodyTag =` [:ref:`data-type-tag`;  :ref:`data-type-stdWrap`]
+:ts:`imageLinkWrap.bodyTag =` :ref:`data-type-tag`
 
-This is the ``<body>``-Body tag of the preview window.
+This is the ``<body>``-tag of the preview window.
 Needs :ts:`JSwindow = 1`.
 
-Example for bodyTag
-"""""""""""""""""""
+Example::
 
-With all margins set to zero the window will exactly fit the image.
-With the ``onBlur`` the window closes automatically if it looses focus::
-
+   # with all margins set to zero the window will exactly fit the image.
+   # "onBlur" closes the window automatically if it looses focus
    imageLinkWrap.JSwindow = 1
    imageLinkWrap.bodyTag (
       <body style="background-color:black; margin:0; padding:0;"
@@ -178,7 +177,7 @@ With the ``onBlur`` the window closes automatically if it looses focus::
 wrap
 ~~~~
 
-:ts:`imageLinkWrap.wrap =` [:ref:`data-type-wrap`]
+:ts:`imageLinkWrap.wrap =` :ref:`data-type-wrap`
 
 This wrap is placed around the ``<img>``-tag in the preview window.
 Needs :ts:`JSwindow = 1`.
@@ -187,15 +186,13 @@ Needs :ts:`JSwindow = 1`.
 target
 ~~~~~~
 
-:ts:`imageLinkWrap.target =` [:ref:`data-type-target`, default: 'thePicture'; :ref:`data-type-stdWrap`]
+:ts:`imageLinkWrap.target =` :ref:`data-type-target`
 
 This specifies the ``target`` attribute of the link. The attribute
 will only be created if the current :ref:`Doctype <config-doctype>`
-allows it. Needs :ts:`JSwindow = 1`.
+allows it. Needs :ts:`JSwindow = 1`. Default: 'thePicture'.
 
-Examples for target
-"""""""""""""""""""
-::
+Examples::
 
       # (1) to produce:  <a target="preview" ... >
    imageLinkWrap.target = preview
@@ -209,39 +206,41 @@ Examples for target
    imageLinkWrap.JSwindow.newWindow = 1
 
 
+   
 JSwindow
 ~~~~~~~~
 
-:ts:`imageLinkWrap.JSwindow =` [:ref:`data-type-boolean`;  :ref:`data-type-stdWrap`]
+:ts:`imageLinkWrap.JSwindow =` :ref:`data-type-boolean`
 
 If true (:ts:`JSwindow = 1`) Javascript will be used to open the image
 in a new window. The window is automatically resized to match the
 dimensions of the image.
 
 
+
 JSwindow.expand
 ~~~~~~~~~~~~~~~
 
-:ts:`imageLinkWrap.JSwindow.expand =` [:ts:`x`, :ts:`y`;  :ref:`data-type-stdWrap`]
+:ts:`imageLinkWrap.JSwindow.expand =` :ts:`x`, :ts:`y`
 
 :ts:`x` and :ts:`x` are of data type :ref:`data-type-integer`. The values
 are added to the width and height of the preview image when calculating
 the width and height of the preview window.
 
 
+
 JSwindow.newWindow
 ~~~~~~~~~~~~~~~~~~
 
-:ts:`imageLinkWrap.JSwindow.newWindow =` [:ref:`data-type-boolean`;  :ref:`data-type-stdWrap`]
+:ts:`imageLinkWrap.JSwindow.newWindow =` :ref:`data-type-boolean`
 
-If the :ref:`Doctype <config-doctype>` allows the :ref:`data-type-target` attribute
-the image will be opened in a window with the respective name.
-If that windows is kept open and the next image with the same :ref:`data-type-target`
-attribute is to be shown then it will appear in the same preview window.
-
-Thinks are different if you set :ts:`JSwindow.newWindow` to True
-(:ts:` = 1`): Then a unique hash value will be
-calculated and used as ``target`` value for each image. This garantees
+If the :ref:`Doctype <config-doctype>` allows the :ref:`data-type-target`
+attribute then the image will be opened in a window with the name given
+by ``target``. If that windows is kept open and the next image with the
+same :ref:`data-type-target` attribute is to be shown then it will appear
+in the same preview window.
+If :ts:`JSwindow.newWindow`  is set to True (:ts:` = 1`) then a unique 
+hash value is used as ``target`` value for each image. This garantees
 that each image is opened in a new window.
 
 
@@ -249,60 +248,58 @@ that each image is opened in a new window.
 JSwindow.altUrl
 ~~~~~~~~~~~~~~~
 
-:ts:`imageLinkWrap.JSwindow.altUrl =` [:ref:`data-type-string`;  :ref:`data-type-stdWrap`]
+:ts:`imageLinkWrap.JSwindow.altUrl =` :ref:`data-type-string`
 
-If this returns anything then the URL of the preview window (opened
-by Javascript) is **not** pointing to :ref:`tx_cms_showpic` but it is
-the URL given here!
+If this returns anything then it is used as URL of the preview window.
+Otherwise the default "showpic" script will be used.
 
 
 
 JSwindow.altUrl\_noDefaultParams
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-:ts:`imageLinkWrap.JSwindow.altUrl_noDefaultParams =` [:ref:`data-type-boolean`, default: 0;  :ref:`data-type-stdWrap`???]
+:ts:`imageLinkWrap.JSwindow.altUrl_noDefaultParams =` :ref:`data-type-boolean`
 
 If true (:ts:`JSwindow.altUrl_noDefaultParams = 1`) then the image
-parameters are not appended automatically to the :ts:`altUrl`.
+parameters are not automatically appended to the :ts:`altUrl`.
 This is useful if you want to add them yourself in a special way.
+
 
 
 typolink
 ~~~~~~~~
 
-:ts:`imageLinkWrap.typolink =` [like :ref:`typolink`]
+:ts:`imageLinkWrap.typolink =` like :ref:`typolink`
 
-This is your chance to completely control what link is being generated.
-If this returns anything that will override the built in results of
-:ts:`imageLinkWrap`.
+If this returns anything it will be used as link and override 
+everything else.
+
+
 
 
 directImageLink
 ~~~~~~~~~~~~~~~
 
-:ts:`imageLinkWrap.directImageLink =` [:ref:`data-type-boolean`, default: 0;  :ref:`data-type-stdWrap`]
+:ts:`imageLinkWrap.directImageLink =` :ref:`data-type-boolean`
 
-If true (:ts:`directImageLink = 1`) the link to preview version of the
-image will point to the image file will directly. This means that
-:ref:`tx_cms_showpic` will not be used.
+If true (:ts:`directImageLink = 1`) then a link will be generated that
+points directly to the image file. This means that no "showpic" script
+will be used.
 
 
 
 linkParams
 ~~~~~~~~~~
 
-:ts:`imageLinkWrap.linkParams =` [any of the options of :ref:`typolink`]
+:ts:`imageLinkWrap.linkParams =` any of the options of :ref:`typolink`
 
-When the direct link to the preview image is calculated all the
-attributes of :ts:`linkParams` are used as configuration of the
-:ref:`typolink` function. In other words: use the properties that are
-valid for :ref:`typolink` in order to apply them to the preview link.
+When the direct link for the preview image is calculated all 
+attributes of :ts:`linkParams` are used as settings for the
+:ref:`typolink` function. In other words: Use the same parameters
+for :ts:`linkParams` that you would use for :ref:`typolink`.
 Needs :ts:`JSwindow = 0`.
 
-
-Example for linkParams
-""""""""""""""""""""""
-::
+Example::
 
    JSwindow = 0
    directImageLink = 1
@@ -311,20 +308,18 @@ Example for linkParams
       rel="{$styles.content.imgtext.linkWrap.lightboxRelAttribute}"
    )
 
-In this way it is easy to use a lightbox of your choice and to display
-resized images in the frontend: You only need to integrate the lightbox
-by including it's Javascript and CSS files and to activate certain links
-by using the right "lightbox" class. Here's a more complete example:
-:ref:`imageLinkWrap-example-fancybox` (and
-:ref:`imageLinkWrap-example-topup`).
+This way it is easy to use a lightbox and to display
+resized images in the frontend. More complete examples are
+:ref:`imageLinkWrap-example-fancybox` and
+:ref:`imageLinkWrap-example-topup`.
 
 
 stdWrap
 ~~~~~~~
 
-:ts:`imageLinkWrap.stdWrap =` [:ref:`data-type-stdWrap`]
+:ts:`imageLinkWrap.stdWrap =` :ref:`stdwrap`
 
-This adds :ref:`data-type-stdWrap` functionality to the almost final
+This adds :ref:`stdwrap` functionality to the almost final
 result.
 
 
@@ -334,30 +329,27 @@ What it does
 
 :ts:`imageLinkWrap = 1`
 
-Set this to True to attach a link to an image
+If set to True then this function attaches a link to an image
 that opens a special view of the image. By default the link points to
-the :ref:`TYPO3-CMS-eID-script` :ref:`tx_cms_showpic` that knows how to
-deal with several parameters. The script adds an md5-hash to protect
-the parameters. The image will only be shown if the parameters are
-unchanged. See :ref:`imageLinkWrap-basic-example-showpic`.
+the a "showpic" script that knows how to deal with several parameters.
+The script checks an md5-hash to make sure that the parameters are unchanged. 
+See :ref:`imageLinkWrap-basic-example-showpic`.
 
 Since TYPO3 CMS 4.5 there is an alternative. You may set
-:ts:`directImageLink` to True (:ts:` = 1`). Then the link
-will point directly to the image - no intermediate script involved.
-A use could be to display the images in a lightbox. See 
+:ts:`directImageLink` to True (:ts:` = 1`). In that case the link
+will directly point to the image - no intermediate is script involved.
+This method can well be used to display images in a lightbox. See 
 :ref:`imageLinkWrap-basic-example-directImageLink` and the lightbox
 examples on this page.
 
-If :ts:`JSwindow` is true (:ts:` = 1`) more fancy
-features become available because the preview is opened by
-Javascript. That way window title, size, background-color and more can
-be specifically set.
+If :ts:`JSwindow` is true (:ts:` = 1`) more fancy features become 
+are available since the preview now is opened by Javascript. Then the
+window title, size, background-color and more can be set to special
+values.
 
 
 Implementation
 --------------
-
-See
 
 - imageLinkWrap__ in API__,
 - method ``imageLinkWrap`` in
@@ -382,6 +374,10 @@ Examples for imageLinkWrap
    :local:
    :depth: 1
 
+   
+   
+   
+   
 .. _imageLinkWrap-basic-example-showpic:
 
 Basic example: Create a link to the showpic script
@@ -403,6 +399,9 @@ Basic example: Create a link to the showpic script
    }
 
 
+   
+   
+   
 .. _imageLinkWrap-basic-example-directImageLink:
 
 Basic example: Link directly to the original image
@@ -422,6 +421,10 @@ Basic example: Link directly to the original image
       }
    }
 
+   
+   
+   
+   
 .. imageLinkWrap-example-popup-window:
 
 Example: Larger display in a popup window
@@ -458,7 +461,10 @@ Example: Larger display in a popup window
          JSwindow.expand = 30,20
    }
 
-
+   
+   
+   
+   
 .. _imageLinkWrap-example-printlink:
 
 Example: Printlink
@@ -482,7 +488,10 @@ Example: Printlink
       params = class="printlink"
    }
 
-
+   
+   
+   
+   
 .. _imageLinkWrap-example-fancybox:
 
 Example: Images in lightbox "fancybox"
@@ -513,7 +522,10 @@ __ https://github.com/georgringer/modernpackage/blob/master/Resources/Private/Ty
       }
    }
 
-
+   
+   
+   
+   
 .. _imageLinkWrap-example-topup:
 
 Example: Images in lightbox "TopUp"
@@ -550,6 +562,8 @@ __ http://gettopup.com/
    }
 
 
+   
+   
 
 .. COMMENT   
 
