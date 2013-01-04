@@ -326,10 +326,23 @@ boolean
          1
 
    Comment
-         boolean
+         Non-empty strings (but not zero) are "true"
 
-         non-empty strings (but not zero) are "true"
-
+         The value is considered to be true if `PHP evaluates this value
+         to True`__. If the value is empty or PHP evaluates to False it
+         is counted as being false.
+         
+         __ http://php.net/manual/en/language.types.boolean.php
+         
+         Examples::
+         
+            dummy.enable =              # false, because value is empty
+            dummy.enable = 0            # false, prefered notation
+            dummy.enable = 1            # true, prefered notation
+            dummy.enable = yes          # true, because ('yes')    is a non empty string and not treated as '0'
+            dummy.enable = no           # true (!), because ('no') is a non empty string and not treated as '0'
+            dummy.enable = 0 anything   # false, because ('0 anything') is treated as '0'
+            dummy.enable = 1 anything   # false, because ('1 anything') is treated as '1'
 
 
 .. _data-type-rotation:

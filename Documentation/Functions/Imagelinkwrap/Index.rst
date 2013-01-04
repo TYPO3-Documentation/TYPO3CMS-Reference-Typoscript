@@ -6,10 +6,16 @@
 .. include:: ../../Includes.txt
 
 
+   
 .. _imagelinkwrap:
 
 imageLinkWrap
 =============
+
+.. contents::
+   :local:
+   :depth: 1
+
 
 Properties
 ----------
@@ -43,90 +49,14 @@ Properties
   ===================================================== ===================================================== ======= ==================
 
 
-What it does
-------------
 
-:ts:`imageLinkWrap =` [:ref:`data-type-boolean`, default: 0]
+Property details
+----------------
 
-Set this to TRUE (:ts:`imageLinkWrap = 1`) to attach a link to an image
-that opens a special view of the image. By default the link points to
-the :ref:`TYPO3-CMS-eID-script` :ref:`tx_cms_showpic` that knows how to
-deal with several parameters. The script adds an md5-hash to protect
-the parameters. The image will only be shown if the parameters are
-unchanged.
+.. contents::
+   :local:
+   :depth: 1
 
-.. _imageLinkWrap-basic-example-showpic:
-
-Basic example: Create a link to the ``tx_cms_showpic`` script
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-::
-
-   10 = IMAGE
-   10 {
-         # point to the image
-      file = fileadmin/demo/lorem_ipsum/images/a4.jpg
-         # make it rather small
-      file.width = 80
-         # add a link to tx_cms_showpic.php that shows the original image
-      imageLinkWrap = 1
-      imageLinkWrap {
-         enable = 1
-         # JSwindow = 1
-      }
-   }
-
-Since TYPO3 CMS 4.5 there is an alternative. You may set
-:ts:`directImageLink` to TRUE (:ts:`directImageLink = 1`). Then the link
-will point directly to the image - no intermediate script involved.
-A use could be to display the images in a lightbox.
-See :ref:`imageLinkWrap-example-fancybox` and
-:ref:`imageLinkWrap-example-topup`.
-
-
-.. _imageLinkWrap-basic-example-directImageLink:
-
-Basic example: Link directly to the original image
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-::
-
-   10 = IMAGE
-   10 {
-      file = fileadmin/demo/lorem_ipsum/images/a4.jpg
-      file.width = 80
-      imageLinkWrap = 1
-      imageLinkWrap {
-         enable = 1
-            # link directly to the image
-         directImageLink = 1
-         # JSwindow = 1
-      }
-   }
-
-
-:ts:`JSwindow`: If you set this to TRUE (:ts:`JSwindow = 1`) more fancy
-features become available because the preview is opened by
-Javascript. That way you can specify the window title, size,
-background-color and more.
-
-
-Implementation
---------------
-
-See
-
-- imageLinkWrap__ in API__,
-- method ``imageLinkWrap`` in
-- class ``ContentObjectRenderer`` in
-- namespace :php:`namespace TYPO3\CMS\Frontend\ContentObject;` in
-- file :file:`ContentObjectRenderer.php` in
-- folder ``typo3/sysext/frontend/Classes/ContentObject``.
-
-__ http://typo3.org/api/typo3cms/search/all_69.html?imageLinkWrap
-__ http://typo3.org/api/typo3cms/
-
-
-Configuration
--------------
 
 enable
 ~~~~~~
@@ -309,8 +239,8 @@ the image will be opened in a window with the respective name.
 If that windows is kept open and the next image with the same :ref:`data-type-target`
 attribute is to be shown then it will appear in the same preview window.
 
-Thinks are different if you set :ts:`JSwindow.newWindow` to TRUE
-(:ts:`JSwindow.newWindow = 1`): Then a unique hash value will be
+Thinks are different if you set :ts:`JSwindow.newWindow` to True
+(:ts:` = 1`): Then a unique hash value will be
 calculated and used as ``target`` value for each image. This garantees
 that each image is opened in a new window.
 
@@ -399,11 +329,98 @@ result.
 
 
 
+What it does
+------------
+
+:ts:`imageLinkWrap = 1`
+
+Set this to True to attach a link to an image
+that opens a special view of the image. By default the link points to
+the :ref:`TYPO3-CMS-eID-script` :ref:`tx_cms_showpic` that knows how to
+deal with several parameters. The script adds an md5-hash to protect
+the parameters. The image will only be shown if the parameters are
+unchanged. See :ref:`imageLinkWrap-basic-example-showpic`.
+
+Since TYPO3 CMS 4.5 there is an alternative. You may set
+:ts:`directImageLink` to True (:ts:` = 1`). Then the link
+will point directly to the image - no intermediate script involved.
+A use could be to display the images in a lightbox. See 
+:ref:`imageLinkWrap-basic-example-directImageLink` and the lightbox
+examples on this page.
+
+If :ts:`JSwindow` is true (:ts:` = 1`) more fancy
+features become available because the preview is opened by
+Javascript. That way window title, size, background-color and more can
+be specifically set.
+
+
+Implementation
+--------------
+
+See
+
+- imageLinkWrap__ in API__,
+- method ``imageLinkWrap`` in
+- class ``ContentObjectRenderer`` in
+- namespace :php:`namespace TYPO3\CMS\Frontend\ContentObject;` in
+- file :file:`ContentObjectRenderer.php` in
+- folder ``typo3/sysext/frontend/Classes/ContentObject``.
+
+__ http://typo3.org/api/typo3cms/search/all_69.html?imageLinkWrap
+__ http://typo3.org/api/typo3cms/
+
+
+
+
 
 .. _imagelinkwrap-examples:
 
 Examples for imageLinkWrap
 --------------------------
+
+.. contents::
+   :local:
+   :depth: 1
+
+.. _imageLinkWrap-basic-example-showpic:
+
+Basic example: Create a link to the showpic script
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+::
+
+   10 = IMAGE
+   10 {
+         # point to the image
+      file = fileadmin/demo/lorem_ipsum/images/a4.jpg
+         # make it rather small
+      file.width = 80
+         # add a link to tx_cms_showpic.php that shows the original image
+      imageLinkWrap = 1
+      imageLinkWrap {
+         enable = 1
+         # JSwindow = 1
+      }
+   }
+
+
+.. _imageLinkWrap-basic-example-directImageLink:
+
+Basic example: Link directly to the original image
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+::
+
+   10 = IMAGE
+   10 {
+      file = fileadmin/demo/lorem_ipsum/images/a4.jpg
+      file.width = 80
+      imageLinkWrap = 1
+      imageLinkWrap {
+         enable = 1
+            # link directly to the image
+         directImageLink = 1
+         # JSwindow = 1
+      }
+   }
 
 .. imageLinkWrap-example-popup-window:
 
@@ -496,6 +513,7 @@ __ https://github.com/georgringer/modernpackage/blob/master/Resources/Private/Ty
       }
    }
 
+
 .. _imageLinkWrap-example-topup:
 
 Example: Images in lightbox "TopUp"
@@ -532,69 +550,15 @@ __ http://gettopup.com/
    }
 
 
-.. imageLinkWrap-link-list:
 
-Link list
----------
+.. COMMENT   
 
-Links of interest:
-`click-enlage (de) <http://jweiland.net/typo3/typoscript/click-enlarge.html>`_,
-`lightbox.ts <https://github.com/georgringer/modernpackage/blob/master/Resources/Private/TypoScript/content/lightbox.ts>`_,
-
-
-Data types
-==========
-
-((this chapter should be placed elsewhere))
-
-
-.. _my-data-type-boolean:
-
-Boolean
--------
-The value is considered to be TRUE if `PHP evaluates this value to TRUE`__.
-If the value is empty or `PHP evaluates to FALSE`__ it is counted as
-FALSE.
-
-__ http://php.net/manual/en/language.types.boolean.php
-__ http://php.net/manual/en/language.types.boolean.php
-
-Examples of my-data-type ``Boolean``::
-
-   dummy.enable =               # FALSE, because value is empty
-   dummy.enable = 0             # FALSE, prefered notation
-   dummy.enable = 1             # TRUE, prefered notation
-   dummy.enable = yes           # TRUE, because ('yes') is true in PHP
-   dummy.enable = no            # TRUE (!), because ('no') is true in PHP
-   dummy.enable = 0 anything    # FALSE, because ('0 anything') is false in PHP
-   dummy.enable = 1 anything    # FALSE, because ('1 anything') is false in PHP
-
-
-
-What should get a description somewhere
-=======================================
-
-
-.. _typo3-cms-eid-script:
-
-TYPO3 CMS eID script
---------------------
-
-((to be described somewhere))
-
-
-.. _imagemagick:
-
-ImageMagick
------------
-((to be explained somewhere))
-
-ImageMagick, GraphicsMagick, ...
-
-
-.. _tx_cms_showpic:
-
-tx_cms_showpic
---------------
-((describe the ``tx_cms_showpic`` script somewhere))
+   .. _imageLinkWrap-link-list:
+   
+   Link list
+   ---------
+   
+   Links of interest:
+   `click-enlage (de) <http://jweiland.net/typo3/typoscript/click-enlarge.html>`_,
+   `lightbox.ts <https://github.com/georgringer/modernpackage/blob/master/Resources/Private/TypoScript/content/lightbox.ts>`_,
 
