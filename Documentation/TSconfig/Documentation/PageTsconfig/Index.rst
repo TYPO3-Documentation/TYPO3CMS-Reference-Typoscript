@@ -24,9 +24,9 @@ overridden further out).
    :titlesonly:
    :glob:
 
-   ((generated))/Index
+   Field/Index
    TopLevelObjects/Index
-   -mod/Index
-   -tcemain/Index
-   -tceform/Index
-   -tsfe/Index
+   Mod/Index
+   TCEmain/Index
+   TCEform/Index
+   TSFE/Index

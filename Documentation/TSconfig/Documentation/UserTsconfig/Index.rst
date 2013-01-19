@@ -22,9 +22,9 @@ configuration in the TSconfig field of the user himself.
    :titlesonly:
    :glob:
 
-   ((generated))/Index
+   Field/Index
    TopLevelObjects/Index
-   -admpanel/Index
-   -options/Index
-   -setup/Index
+   admPanel/Index
+   Options/Index
+   Setup/Index
 

@@ -20,7 +20,7 @@ templates.
    :titlesonly:
    :glob:
 
-   ((generated))/Index
-   DifferencesToConditionsInTyposcriptTemplates/Index
+   Example/Index
+   Differences/Index
    References/Index
 
