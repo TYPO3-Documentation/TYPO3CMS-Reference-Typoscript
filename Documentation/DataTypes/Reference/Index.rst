@@ -326,23 +326,20 @@ boolean
          1
 
    Comment
-         Non-empty strings (but not zero) are "true"
+         Possible values for boolean variables are "1" and "0"
+         (meaning "TRUE" and "FALSE").
 
-         The value is considered to be true if `PHP evaluates this value
-         to True`__. If the value is empty or PHP evaluates to False it
-         is counted as being false.
+         Everything else is `evaluated to one of these values by PHP`__:
+         Non-empty strings (but not "0") are treated as "TRUE",
+         empty strings are evaluated to FALSE.
 
          __ http://php.net/manual/en/language.types.boolean.php
 
          Examples::
 
-            dummy.enable =              # false, because value is empty
-            dummy.enable = 0            # false, prefered notation
-            dummy.enable = 1            # true, prefered notation
-            dummy.enable = yes          # true, because ('yes')    is a non empty string and not treated as '0'
-            dummy.enable = no           # true (!), because ('no') is a non empty string and not treated as '0'
-            dummy.enable = 0 anything   # false, because ('0 anything') is treated as '0'
-            dummy.enable = 1 anything   # false, because ('1 anything') is treated as '1'
+            dummy.enable = 0            # false, preferred notation
+            dummy.enable = 1            # true, preferred notation
+            dummy.enable =              # false, because the value is empty
 
 
 .. _data-type-rotation:
