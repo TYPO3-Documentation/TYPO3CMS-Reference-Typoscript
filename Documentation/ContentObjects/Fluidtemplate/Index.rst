@@ -29,13 +29,30 @@ work.
 .. container:: table-row
 
    Property
+         template
+
+   Data type
+         cObject
+
+   Description
+         Use this property to define a content object, which should be
+         used as template file. It is an alternative to ".file"; if
+         ".template" is set, it takes precedence. While any content
+         object can be used here, the cObject FILE might be the usual
+         choice.
+
+
+.. container:: table-row
+
+   Property
          file
 
    Data type
          string /stdWrap
 
    Description
-         The fluid template file.
+         The fluid template file. It is an alternative to
+         ".template" and is used only, if ".template" is not set.
 
 
 .. container:: table-row
@@ -174,7 +191,8 @@ You could use it with a TypoScript code like this::
    page = PAGE
    page.10 = FLUIDTEMPLATE
    page.10 {
-     file = fileadmin/templates/MyTemplate.html
+     template = FILE
+     template.file = fileadmin/templates/MyTemplate.html
      partialRootPath = fileadmin/templates/partial/
      variables {
        mylabel = TEXT
