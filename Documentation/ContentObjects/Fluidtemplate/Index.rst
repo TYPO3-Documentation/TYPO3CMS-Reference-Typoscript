@@ -35,11 +35,11 @@ work.
          cObject
 
    Description
-         Use this property to define a content object, which should be
-         used as template file. It is an alternative to ".file"; if
-         ".template" is set, it takes precedence. While any content
-         object can be used here, the cObject FILE might be the usual
-         choice.
+         (Since TYPO3 6.1) Use this property to define a content object,
+         which should be used as template file. It is an alternative to
+         ".file"; if ".template" is set, it takes precedence. While any
+         content object can be used here, the cObject FILE might be the
+         usual choice.
 
 
 .. container:: table-row
@@ -163,6 +163,37 @@ work.
 .. container:: table-row
 
    Property
+         settings
+
+   Data type
+         *(array of keys)*
+
+   Description
+         (Since TYPO3 6.1) Sets the given settings array in the fluid
+         template. In the view, the value can then be used.
+
+         **Example:** ::
+
+            page = PAGE
+            page.10 = FLUIDTEMPLATE
+            page.10 {
+              file = fileadmin/templates/MyTemplate.html
+              settings {
+                copyrightYear = 2013
+              }
+            }
+
+         To access copyrightYear in the template file use this::
+
+            {settings.copyrightYear}
+
+         Apart from just setting a key-value pair as done in the example,
+         you can also reference objects or access constants as well.
+
+
+.. container:: table-row
+
+   Property
          stdWrap
 
    Data type
@@ -185,6 +216,7 @@ like this::
    <h1>{data.title}<f:if condition="{data.subtitle}">, {data.subtitle}</f:if></h1>
    <h3>{mylabel}</h3>
    <f:format.html>{data.bodytext}</f:format.html>
+   <p>&copy; {settings.copyrightYear}</p>
 
 You could use it with a TypoScript code like this::
 
@@ -198,8 +230,13 @@ You could use it with a TypoScript code like this::
        mylabel = TEXT
        mylabel.value = Label coming from TypoScript!
      }
+     settings {
+       # Get the copyright year from a TypoScript constant.
+       copyrightYear = {$year}
+     }
    }
 
 As a result the page title and the label from TypoScript will be
-inserted as headlines.
+inserted as headlines. The copyright year will be taken from the
+TypoScript constant "year".
 
