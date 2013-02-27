@@ -1188,7 +1188,7 @@ TYPO3\CMS\Core\Utility\GeneralUtility::\_GP() (t3lib\_div::\_GP()).
 Finally a lot of values from the TSFE object are
 useful. In order to get those values for comparison with "globalVar"
 and "globalString" conditions, you prefix that variable's name with
-either "IENV:"/"ENV:" , "GP:", "TSFE:" or "LIT:" respectively.Still
+either "IENV:"/"ENV:", "GP:", "TSFE:" or "LIT:" respectively. Still
 the "\|" divider may be used to separate keys in arrays and/or
 objects. "LIT" means "literal" and the string after ":" is trimmed and
 returned as the value (without being divided by "\|" or anything)

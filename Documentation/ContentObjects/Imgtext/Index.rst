@@ -241,7 +241,7 @@ See code examples.
 
    Description
          If this is set, the caption text is split by the character (or string)
-         from ".token" , and every item is displayed under an image each in the
+         from ".token", and every item is displayed under an image each in the
          image block.
 
          .token = (string /stdWrap) Character to split the caption elements

@@ -229,7 +229,7 @@ Always secure input from outside, for example with intval.
          Since TYPO3 4.6: string /stdWrap
 
    Description
-         Enter the table name for JOIN , LEFT OUTER JOIN and RIGHT OUTER JOIN
+         Enter the table name for JOIN, LEFT OUTER JOIN and RIGHT OUTER JOIN
          respectively.
 
 

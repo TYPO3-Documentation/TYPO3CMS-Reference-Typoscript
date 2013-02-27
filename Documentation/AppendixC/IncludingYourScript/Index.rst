@@ -78,8 +78,8 @@ Example:
 
 .. _appendix-include-cobjgetsingle:
 
-$this->cObjGetSingle( value , properties )
-""""""""""""""""""""""""""""""""""""""""""
+$this->cObjGetSingle( value, properties )
+"""""""""""""""""""""""""""""""""""""""""
 
 Gets a content object from the $conf-array. (See the section below
 named "Case story" on how to use this!)
