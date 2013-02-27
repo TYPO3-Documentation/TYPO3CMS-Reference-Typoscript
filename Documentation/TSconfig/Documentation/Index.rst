@@ -28,7 +28,7 @@ TSconfig Reference
       tsconfig, typoscript, reference, forDevelopers, forAdvanced
 
 :Copyright:
-      2000-2012
+      2000-2013
 
 :Author:
       Documentation Team
