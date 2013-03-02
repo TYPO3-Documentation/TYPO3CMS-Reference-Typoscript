@@ -96,7 +96,13 @@ Most of this code is executed in the PHP-script
          cObject
 
    Description
-         This is default bodytag overridden by ".bodyTag" if that is set.
+         This is the default body tag. It is overridden by ".bodyTag", if
+         that is set.
+
+         **Note:** Additionally to the body tag properties noted here,
+         there also is the property "config.disableBodyTag", which - if set
+         - disables body tag generation independently from what might be set
+         here.
 
 
 .. container:: table-row

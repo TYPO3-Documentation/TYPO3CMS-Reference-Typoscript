@@ -993,6 +993,28 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
 .. container:: table-row
 
    Property
+         disableBodyTag
+
+   Data type
+         boolean
+
+   Description
+         (Since TYPO3 6.1) This option disables <body> tag generation by the
+         TYPO3 core. It is useful for extensions like TemplaVoilà, which can
+         produce their own <body> tag with additional attributes.
+
+         **Note:** disableBodyTag takes precedence over the page properties
+         "bodyTagCObject", "bodyTag", "bgImg", "bodyTagMargins" and
+         "bodyTagAdd". If disableBodyTag is set to "1", the others are
+         ignored.
+
+   Default
+         0
+
+
+.. container:: table-row
+
+   Property
          inlineStyle2TempFile
 
    Data type
