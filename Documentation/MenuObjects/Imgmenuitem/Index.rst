@@ -25,8 +25,8 @@ IMGMENUITEM
          **Note:**
 
          The way an imagemap is made is this; All IMGMENUITEMS are included in
-         one big Gifbuilderobj (and renumbered!). Because of this,
-         Gifbuilderobjects on the next level will not be able to access the
+         one big Gifbuilder object (and renumbered!). Because of this,
+         Gifbuilder objects on the next level will not be able to access the
          data of each menu item.
 
          Also the feature of using [##.w] and [##.h] with +calc is currently
@@ -45,7 +45,7 @@ IMGMENUITEM
          image-map coordinates to be generated! ::
 
             NO.6 = IMAGE
-            NO.6.file = masked_pencolor*.gif
+            NO.6.file = fileadmin/masked_pencolor.gif
             NO.6.mask = GIFBUILDER
             NO.6.mask {
               XY = 500, 200
