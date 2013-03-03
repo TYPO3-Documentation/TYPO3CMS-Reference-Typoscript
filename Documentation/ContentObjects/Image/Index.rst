@@ -180,7 +180,12 @@ Example:
 ::
 
        10 = IMAGE
-       10.file = toplogo*.gif
+       # toplogo.gif has the dimensions 300 x 150 pixels.
+       10.file = fileadmin/toplogo.gif
        10.params = style="margin: 0px 20px;"
        10.wrap = |<br>
+
+This returns ::
+
+   <img src="fileadmin/toplogo.gif" width="300" height="150" border="0" style="margin: 0px 20px;" alt=""><br>
 

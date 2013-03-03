@@ -100,25 +100,35 @@ resource
          resource
 
    Examples
-         *From the resourcefield:* ::
-
-            toplogo*.gif
-
-         *Reference to filesystem:* ::
+         *Reference to a file in the file system:* ::
 
             fileadmin/picture.gif
 
-   Comment
-         #. A reference to a file from the resource-field in the template. You can
-            write the exact filename or you can include an asterisk (\*) as
-            wildcard.It's recommended to include a "\*" before the file extension
-            (see example to the left). This will ensure that the file is still
-            referenced correctly even if the template is copied and the file will
-            have its name prepended with numbers!
+         *Reference to a file from the resource field of the TypoScript
+         template:* ::
 
-         #. If the value contains a "/" it's expected to be a reference (absolute
-            or relative) to a file on the file-system instead of the resource-
-            field. No support for wildcards.
+            toplogo*.gif
+
+         Note that the resource field and the possibility to reference files from
+         it have been removed in TYPO3 6.0.
+
+   Comment
+         #. If the value contains a "/", it is expected to be a reference
+            (absolute or relative) to a file in the file system. There is no
+            support for wildcard characters in the name of the reference.
+
+         #. If the value does not contain a "/", it is expected to be a reference
+            to a file from the resource field in the template. You can write the
+            exact filename or you can include an asterisk (\*) as wildcard. It is
+            recommended to include an "\*" before the file extension (see the
+            example). This will ensure that the file is still referenced
+            correctly even if the template is copied (so that the file will have
+            its name prepended with a number)!
+
+            **Note:** The resource field in TypoScript templates has been removed
+            in TYPO3 6.0. If you used this feature, move the referenced files to
+            the folder fileadmin/ or similar and change your TypoScript to refer
+            to these resources providing their path in the file system.
 
 
 
@@ -135,25 +145,27 @@ imgResource
    Examples
          Here "file" is an imgResource::
 
-            file = toplogo*.gif
-            file.width = 200
+            10 = IMAGE
+            10.file = fileadmin/toplogo.gif
+            10.file.width = 200
 
          GIFBUILDER::
 
-            file = GIFBUILDER
-            file {
-               ... (GIFBUILDER-properties here)
+            10 = IMAGE
+            10.file = GIFBUILDER
+            10.file {
+               # GIFBUILDER properties here...
             }
 
    Comment
-         #. A "resource" (see above) + imgResource-properties (see example to the
-            left and object-reference below).
+         #. A "resource" (see above) plus imgResource properties (see the example
+            and the object reference for imgResource below).
 
             Filetypes can be anything among the allowed types defined in the
             configuration variable $TYPO3\_CONF\_VARS['GFX']['imagefile\_ext'].
             Standard is pdf, gif, jpg, jpeg, tif, bmp, ai, pcx, tga, png.
 
-         #. GIFBUILDER object
+         #. A GIFBUILDER object. See the object reference for GIFBUILDER below.
 
 
 

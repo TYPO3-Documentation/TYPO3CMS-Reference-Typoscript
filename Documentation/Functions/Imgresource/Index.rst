@@ -141,15 +141,15 @@ imgResource.
          **Example:** ::
 
             // test.jpg could e.g. have 1600 x 1200 pixels
-            file = test.jpg
+            file = fileadmin/test.jpg
             file.width = 240m
             file.height = 240m
             file.noScale = 1
 
          This example results in an image tag like the following. Note that
-         src="test.jpg" is the *original* file::
+         src="fileadmin/test.jpg" is the *original* file::
 
-            <img src="test.jpg" width="240" height="180" />
+            <img src="fileadmin/test.jpg" width="240" height="180" />
 
    Default
          0
@@ -375,8 +375,9 @@ imgResource.
 Example:
 """"""""
 
-This scales the image toplogo.gif to the width of 200 pixels. ::
+This scales the image fileadmin/toplogo.gif to the width of 200
+pixels. ::
 
-   file = toplogo.gif
+   file = fileadmin/toplogo.gif
    file.width = 200
 
