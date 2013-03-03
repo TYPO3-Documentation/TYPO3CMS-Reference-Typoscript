@@ -31,6 +31,7 @@ Functions
    Tablestyle/Index
    Addparams/Index
    Filelink/Index
+   Strpad/Index
    Round/Index
    Numberformat/Index
    Parsefunc/Index

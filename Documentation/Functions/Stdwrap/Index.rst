@@ -405,6 +405,22 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
+         .. _stdwrap-strpad:
+
+         strPad
+
+   Data type
+         ->strPad
+
+   Description
+         (Since TYPO3 6.1) Pads the current content to a certain length.
+         You can define the padding characters and the side(s), on which
+         the padding should be added.
+
+
+.. container:: table-row
+
+   Property
          .. _stdwrap-stdwrap:
 
          stdWrap
