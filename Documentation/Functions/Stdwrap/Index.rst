@@ -82,6 +82,31 @@ value is "imported" from the field called "header" from the $cObj
 .. container:: table-row
 
    Property
+         .. _stdwrap-addpagecachetags:
+
+         addPageCacheTags
+
+   Data type
+         string /stdWrap
+
+   Description
+         (Since TYPO3 6.1) Comma-separated list of cache tags, which should
+         be added to the page cache.
+
+         **Example:** ::
+
+            addPageCacheTags = pagetag1,pagetag2,pagetag3
+
+         This will add the tags "pagetag1", "pagetag2" and "pagetag3" to the
+         according cached pages in cache_pages.
+
+         **Note:** If you instead want to store rendered content into the
+         caching framework, see the :ref:`stdWrap feature cache <cache>`.
+
+
+.. container:: table-row
+
+   Property
          .. _stdwrap-setcurrent:
 
          setCurrent
