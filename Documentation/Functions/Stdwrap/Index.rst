@@ -1299,17 +1299,40 @@ value is "imported" from the field called "header" from the $cObj
          noTrimWrap
 
    Data type
-         "special" wrap
+         "special" wrap /+.splitChar
 
    Description
-         This wraps the content with the values val1 and val2 in the example
-         below - including surrounding whitespace! - without trimming the
-         values. Note that this kind of wrap requires a "\|" character to begin
-         and end the wrap.
+         This wraps the content *without* trimming the values. That means that
+         surrounding whitespaces stay included! Note that this kind of wrap
+         does not only need a special character in the middle, but that it also
+         needs the same special character to begin and end the wrap (default
+         for all three is "\|").
 
          **Example:** ::
 
-            | val1 | val2 |
+            noTrimWrap = | val1 | val2 |
+
+         In this example the content with the values val1 and val2 will be
+         wrapped; including the whitespaces.
+
+         **Additional property:**
+
+         .splitChar
+
+         (Since TYPO3 6.1) Can be set to define an alternative special
+         character. stdWrap is available. Default is "\|" - the vertical line.
+         This sub-property is useful in cases when the default special
+         character would be recognized by :ref:`objects-optionsplit` (which
+         takes precedence over noTrimWrap).
+
+         **Example:** ::
+
+            noTrimWrap = ^ val1 ^ val2 ^ || ^ val3 ^ val4 ^
+            noTrimWrap.splitChar = ^
+
+         :ref:`objects-optionsplit` will use the "\|\|" to have two subparts in
+         the first part. In each subpart noTrimWrap will then use the "^" as
+         special character.
 
 
 .. container:: table-row
