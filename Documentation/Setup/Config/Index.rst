@@ -2403,14 +2403,35 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          pageTitleSeparator
 
    Data type
-         string
+         Until TYPO3 6.0: string
+
+         Since TYPO3 6.1: string /stdWrap
 
    Description
          (Since TYPO3 4.7) The signs which should be printed in the title tag
-         between the website name and the page title.
+         between the website name and the page title. If pageTitleSeparator is
+         set, but *no* sub-properties are defined, then a space will be added
+         to the end of the separator. stdWrap is useful to adjust whitespaces
+         at the beginning and the end of the separator.
+
+         **Examples:** ::
+
+            config.pageTitleSeparator = .
+
+         This produces a title tag with the content "website. page title". ::
+
+            config.pageTitleSeparator = -
+            config.pageTitleSeparator.noTrimWrap = | | |
+
+         This produces a title tag with the content "website - page title". ::
+
+            config.pageTitleSeparator = *
+            config.pageTitleSeparator.noTrimWrap = |||
+
+         This produces a title tag with the content "website*page title".
 
    Default
-         :
+         : *(colon with following space)*
 
 
 .. container:: table-row
