@@ -305,6 +305,20 @@ value is "imported" from the field called "header" from the $cObj
          If the content is null (NULL type in PHP), the content is overridden
          with the value defined here.
 
+         **Example:** ::
+
+            page.10 = COA_INT
+            page.10 {
+              10 = TEXT
+              10 {
+                field = description
+                stdWrap.ifNull = No description defined.
+              }
+            }
+
+         This example shows the content of the field description or, if that
+         field contains the value NULL, the text "No description defined.".
+
 
 .. container:: table-row
 

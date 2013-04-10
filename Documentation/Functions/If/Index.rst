@@ -52,6 +52,18 @@ Also check the explanations and the examples further below!
          Since null values cannot be assigned in TypoScript, only the stdWrap
          features are available below this property.
 
+         **Example:** ::
+
+            page.10 = COA_INT
+            page.10.10 = TEXT
+            page.10.10 {
+              if.isNull.field = description
+              value = No description available.
+            }
+
+         This example returns "No description available.", if the content of
+         the field "description" is NULL.
+
 
 .. container:: table-row
 
