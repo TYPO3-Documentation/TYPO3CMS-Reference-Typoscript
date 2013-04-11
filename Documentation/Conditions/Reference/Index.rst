@@ -73,8 +73,9 @@ Internet Explorer, the version must be above 8. ::
 
    [browser = firefox] || [browser = msie] && [version => 8]
 
-For full explanations about conditions, please refer to "TypoScript
-Syntax and In-depth Study".
+For full explanations about conditions, please refer to :ref:`the
+according chapter in "TypoScript Syntax and In-depth Study"
+<t3tssyntax:conditions>`.
 
 
 .. _condition-browser:

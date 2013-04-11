@@ -2080,9 +2080,7 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          simulateStaticDocuments
 
    Data type
-         boolean /
-
-         string
+         boolean / string
 
    Description
          If set TYPO3 makes all links in another way than usual. This
@@ -3076,7 +3074,7 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          the value that is expected to be the URL and append a "/" to the end
          of the string.
 
-         If this is set, make sure that "prefixLocalAnchors" is set to "all"
+         If this is set, make sure that "prefixLocalAnchors" is set to "all".
 
          **Example:** ::
 
