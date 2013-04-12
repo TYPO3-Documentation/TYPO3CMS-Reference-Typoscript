@@ -83,7 +83,7 @@ links in text
 
 <TYPOLIST> is used to create bullet-lists
 
-<GRAFIX> will create a gif-file 90x10 pixels where the text is the
+<GRAFIX> will create an image file 90x10 pixels where the text is the
 content of the tag.
 
 <PIC> lets us place an image in the text. The content of the tag
@@ -112,7 +112,6 @@ should be the image-reference in "fileadmin/" ::
              100 = TEXT
              100.text.current = 1
              100.offset = 5,10
-             100.nicetext = 1
            }
          }
          pic = IMAGE

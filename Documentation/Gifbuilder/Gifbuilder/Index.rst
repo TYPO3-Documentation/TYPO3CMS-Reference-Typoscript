@@ -12,15 +12,15 @@ GIFBUILDER
 ^^^^^^^^^^
 
 GIFBUILDER is an object, which is used in many situations for creating
-gif-files. Anywhere the ->GIFBUILDER object is mentioned, these are
-the properties that apply.
+image files (e.g. gif, png or jpg). Anywhere the ->GIFBUILDER object
+is mentioned, these are the properties that apply.
 
 Using TypoScript you can define a "numerical array" of "GIFBUILDER
 OBJECTS" (like "TEXT", "IMAGE", etc.) and they will be rendered onto
 an image one by one.
 
 The name "GIFBUILDER" comes from the time where GIF was the only file
-format supported. PNG and JPG are just as well to create today
+format supported. PNG and JPG can just as well be created today
 (configured with $TYPO3\_CONF\_VARS['GFX']).
 
 
@@ -66,7 +66,7 @@ Here's a full example (taken from "styles.content (default)")::
      }
    }
 
-As you see, the gif-image has a width defined as the width of the text
+As you see, the image has a width defined as the width of the text
 printed onto it + 10 pixels. The height is fixed by the value of the
 constant {$styles.header.gfx1.itemH}
 
