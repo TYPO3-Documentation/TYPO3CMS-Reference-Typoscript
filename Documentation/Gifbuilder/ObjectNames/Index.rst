@@ -13,8 +13,9 @@ Object names in this section
 
 Whenever you see a reference to anything named an "object" in this
 section it's a reference to a "GifBuilderObj" and not the "cObjects"
-from the previous section. Confusion could happen, because both
-"IMAGE" and "TEXT" is an object in both areas.
+from the previous section. Confusion could happen, because "IMAGE"
+and "TEXT" are objects in *both* areas; note that they are different
+each time!
 
 .. ### BEGIN~OF~TABLE ###
 
@@ -43,7 +44,7 @@ from the previous section. Confusion could happen, because both
          x,y +calc /stdWrap
 
    Description
-         Size of the gif-file.
+         Size of the image file.
 
          For the usage of "calc" see the according note at the beginning of
          the section "GIFBUILDER".
@@ -78,7 +79,7 @@ from the previous section. Confusion could happen, because both
          positive integer (1-255) /stdWrap
 
    Description
-         Reduce the number of colors (if gif-file)
+         Reduce the number of colors.
 
 
 .. container:: table-row
@@ -147,12 +148,10 @@ from the previous section. Confusion could happen, because both
          backColor
 
    Data type
-         GraphicColor
-
-         /stdWrap
+         GraphicColor /stdWrap
 
    Description
-         Background color for the gif.
+         Background color of the image.
 
    Default
          white
@@ -167,7 +166,7 @@ from the previous section. Confusion could happen, because both
          x,y +calc /stdWrap
 
    Description
-         Offset all objects on the gif.
+         Offset all objects on the image.
 
    Default
          0,0
@@ -182,10 +181,10 @@ from the previous section. Confusion could happen, because both
          x,y,w,h + calc /stdWrap
 
    Description
-         Define the workarea on the gif file. All the GifBuilderObj's will see
-         this as the dimensions of the gif-file regarding alignment, overlaying
-         of images an so on. Only TEXT objects exceeding the boundaries of the
-         workarea will be printed outside this area.
+         Define the workarea on the image file. All the GifBuilderObjects will
+         see this as the dimensions of the image file regarding alignment,
+         overlaying of images an so on. Only TEXT objects exceeding the
+         boundaries of the workarea will be printed outside this area.
 
 
 .. container:: table-row
@@ -197,7 +196,7 @@ from the previous section. Confusion could happen, because both
          pixels /stdWrap
 
    Description
-         Maximal width of the gif-file.
+         Maximal width of the image file.
 
 
 .. container:: table-row
@@ -209,7 +208,7 @@ from the previous section. Confusion could happen, because both
          pixels /stdWrap
 
    Description
-         Maximal height of the gif-file.
+         Maximal height of the image file.
 
 
 .. ###### END~OF~TABLE ######
@@ -222,6 +221,8 @@ from the previous section. Confusion could happen, because both
 TEXT
 """"
 
+Renders a text.
+
 .. ### BEGIN~OF~TABLE ###
 
 .. container:: table-row
@@ -233,8 +234,8 @@ TEXT
          ->stdWrap
 
    Description
-         This is text text-string on the gif-file. The item is rendered only if
-         this string is not empty.
+         This is text text-string on the image file. The item is rendered only
+         if this string is not empty.
 
          The cObj->data-array is loaded with the page-record, if for example
          the GIFBUILDER object is used by GMENU or IMGMENU.
@@ -325,7 +326,7 @@ TEXT
          fontSize
 
    Data type
-         positive integer
+         positive integer /stdWrap
 
    Description
          Font size
@@ -355,7 +356,7 @@ TEXT
          fontFile
 
    Data type
-         resource
+         resource /stdWrap
 
    Description
          Font face (truetype font you can upload!)
@@ -389,7 +390,7 @@ TEXT
          align
 
    Data type
-         align
+         align /stdWrap
 
    Description
          Alignment of the text
@@ -436,7 +437,7 @@ TEXT
          iterations
 
    Data type
-         positive integer
+         positive integer /stdWrap
 
    Description
          How many times the text should be "printed" onto it self. This will
@@ -454,7 +455,7 @@ TEXT
          spacing
 
    Data type
-         positive integer
+         positive integer /stdWrap
 
    Description
          Pixel-distance between letters. This may render ugly!
@@ -469,7 +470,7 @@ TEXT
          wordSpacing
 
    Data type
-         positive integer
+         positive integer /stdWrap
 
    Description
          Pixel-distance between words.
@@ -484,7 +485,7 @@ TEXT
          hide
 
    Data type
-         boolean
+         boolean /stdWrap
 
    Description
          If this is true, the text is **not** printed.
@@ -502,7 +503,7 @@ TEXT
          hideButCreateMap
 
    Data type
-         boolean
+         boolean /stdWrap
 
    Description
          If this option is set, the text will not be rendered. Shadows and
@@ -555,25 +556,25 @@ TEXT
          niceText
 
    Data type
-         boolean
+         boolean /stdWrap
 
    Description
          This is a very popular feature that helps to render small letters much
          nicer than the freetype library can normally do. But it also loads the
          system very much!
 
-         The principle of this function is to create a black/white giffile in
-         twice or more times the size of the actual gif-file and then print the
-         text onto this in a scaled dimension. Afterwards ImageMagick (IM)
-         scales down the mask and masks the font color down on the original
-         gif-file through the temporary mask.
+         The principle of this function is to create a black/white image file
+         in twice or more times the size of the actual image file and then
+         print the text onto this in a scaled dimension. Afterwards ImageMagick
+         (IM) scales down the mask and masks the font color down on the
+         original image file through the temporary mask.
 
          The fact that the font is actually rendered in the double size and
          scaled down adds a more homogenous shape to the letters. Some fonts
          are more critical than others though. If you do not need the quality,
          then don't use the function.
 
-         **Some properties:**
+         **Some sub-properties:**
 
          .before = IM-params before scale
 
@@ -687,6 +688,8 @@ TEXT
 SHADOW
 """"""
 
+Creates a shadow under the associated text.
+
 .. ### BEGIN~OF~TABLE ###
 
 .. container:: table-row
@@ -695,11 +698,11 @@ SHADOW
          textObjNum
 
    Data type
-         positive integer
+         positive integer /stdWrap
 
    Description
-         Must point to the TEXT object if these shadow-properties are not
-         properties to a TEXT object directly ("stand-alone-shadow"). Then the
+         Must point to the TEXT object if these shadow properties are not
+         properties to a TEXT object directly ("stand-alone shadow"). Then the
          shadow needs to know which TEXT object it should be a shadow of!
 
          If - on the other hand - the shadow is a property to a TEXT object,
@@ -712,10 +715,10 @@ SHADOW
          offset
 
    Data type
-         x,y
+         x,y /stdWrap
 
    Description
-         Shadow offset
+         The offset of the shadow.
 
 
 .. container:: table-row
@@ -724,10 +727,10 @@ SHADOW
          color
 
    Data type
-         GraphicColor
+         GraphicColor /stdWrap
 
    Description
-         Shadow color
+         The color of the shadow.
 
 
 .. container:: table-row
@@ -736,17 +739,15 @@ SHADOW
          blur
 
    Data type
-         positive integer (1-99)
+         positive integer (1-99) /stdWrap
 
    Description
          Blurring of the shadow. Above 40 only values of 40,50,60,70,80,90 mean
          something.
 
-         **Note:** Unfortunately the blurring capabilities of ImageMagick are
-         not very mature in version 4.2.9. This is addressed in the later
-         version 5.2.0 where a gaussian blur-function is added. BUT as we
-         cannot use the latest ImageMagick development yet, this is not
-         utilized so far.
+         **Note:** The blurring capabilities of ImageMagick are not very mature
+         in version 4.2.9. This is addressed in the later version 5.2.0 where a
+         gaussian blur-function is added. BUT, this is not utilized so far.
 
 
 .. container:: table-row
@@ -755,12 +756,14 @@ SHADOW
          opacity
 
    Data type
-         positive integer (1-100)
+         positive integer (1-100) /stdWrap
 
    Description
-         Opacity (transparency^-1)
+         The degree to which the shadow conceals the background. Mathematically
+         speaking: Opacity = Transparency^-1. E.g. 100% opacity = 0%
+         transparency.
 
-         100% opacity = 0% transparency. Only active with a value for blur.
+         Only active with a value for blur.
 
 
 .. container:: table-row
@@ -769,7 +772,7 @@ SHADOW
          intensity
 
    Data type
-         positive integer (0-100)
+         positive integer (0-100) /stdWrap
 
    Description
          How "massive" the shadow is. This value can - if it has a high value
@@ -786,7 +789,7 @@ SHADOW
 EMBOSS
 """"""
 
-Emboss is actually two shadows offset in opposite directions and with
+Our emboss are actually two shadows offset in opposite directions and with
 different colors as to create an effect of light cast onto an embossed
 text.
 
@@ -798,11 +801,11 @@ text.
          textObjNum
 
    Data type
-         positive integer
+         positive integer /stdWrap
 
    Description
-         Must point to the TEXT object if these shadow-properties are not
-         properties to a TEXT object directly ("stand-alone-shadow"). Then the
+         Must point to the TEXT object if these shadow properties are not
+         properties to a TEXT object directly ("stand-alone shadow"). Then the
          shadow needs to know which TEXT object it should be a shadow of!
 
          If - on the other hand - the shadow is a property to a TEXT object,
@@ -815,10 +818,10 @@ text.
          offset
 
    Data type
-         x,y
+         x,y /stdWrap
 
    Description
-         Offset of the emboss
+         Offset of the emboss.
 
 
 .. container:: table-row
@@ -827,7 +830,7 @@ text.
          highColor
 
    Data type
-         GraphicColor
+         GraphicColor /stdWrap
 
    Description
          Upper border-color
@@ -839,7 +842,7 @@ text.
          lowColor
 
    Data type
-         GraphicColor
+         GraphicColor /stdWrap
 
    Description
          lower border-color
@@ -851,7 +854,7 @@ text.
          blur
 
    Data type
-         positive integer (1-99)
+         positive integer (1-99) /stdWrap
 
    Description
          Blurring of the shadow. Above 40 only values of 40,50,60,70,80,90
@@ -864,12 +867,14 @@ text.
          opacity
 
    Data type
-         positive integer (1-100)
+         positive integer (1-100) /stdWrap
 
    Description
-         Opacity (transparency^-1)
+         The degree to which the shadow conceals the background. Mathematically
+         speaking: Opacity = Transparency^-1. E.g. 100% opacity = 0%
+         transparency.
 
-         100% opacity = 0% transparency. Only active with a value for blur.
+         Only active with a value for blur.
 
 
 .. container:: table-row
@@ -878,7 +883,7 @@ text.
          intensity
 
    Data type
-         positive integer (0-100)
+         positive integer (0-100) /stdWrap
 
    Description
          How "massive" the emboss is. This value can - if it has a high value
@@ -895,9 +900,11 @@ text.
 OUTLINE
 """""""
 
+Creates a colored contour line around the shapes of the associated text.
+
 This outline normally renders quite ugly as it's done by printing 4 or
 8 texts underneath the text in question. Try to use a shadow with a
-high intensity. That works better!
+high intensity instead. That works better!
 
 .. ### BEGIN~OF~TABLE ###
 
@@ -907,11 +914,11 @@ high intensity. That works better!
          textObjNum
 
    Data type
-         positive integer
+         positive integer /stdWrap
 
    Description
-         Must point to the TEXT object if these shadow-properties are not
-         properties to a TEXT object directly ("stand-alone-shadow"). Then the
+         Must point to the TEXT object if these shadow properties are not
+         properties to a TEXT object directly ("stand-alone shadow"). Then the
          shadow needs to know which TEXT object it should be a shadow of!
 
          If - on the other hand - the shadow is a property to a TEXT object,
@@ -924,7 +931,7 @@ high intensity. That works better!
          thickness
 
    Data type
-         x,y
+         x,y /stdWrap
 
    Description
          Thickness in each direction, range 1-2
@@ -936,7 +943,7 @@ high intensity. That works better!
          color
 
    Data type
-         GraphicColor
+         GraphicColor /stdWrap
 
    Description
          Outline color
@@ -951,6 +958,8 @@ high intensity. That works better!
 
 BOX
 """
+
+Prints a filled box.
 
 .. ### BEGIN~OF~TABLE ###
 
@@ -977,10 +986,10 @@ BOX
          color
 
    Data type
-         GraphicColor
+         GraphicColor /stdWrap
 
    Description
-         fill-color
+         Fill color of the box.
 
    Default
          black
@@ -992,11 +1001,12 @@ BOX
          opacity
 
    Data type
-         positive integer (1-100)
+         positive integer (1-100) /stdWrap
 
    Description
-         Opacity (i.e. inverse of transparency, e.g. 100% opacity = 0%
-         transparency)
+         The degree to which the box conceals the background. Mathematically
+         speaking: Opacity = Transparency^-1. E.g. 100% opacity = 0%
+         transparency.
 
    Default
          100
@@ -1008,10 +1018,11 @@ BOX
          align
 
    Data type
-         VHalign
+         VHalign /stdWrap
 
    Description
-         Pair of values, which defines the horizontal and vertical alignment.
+         Pair of values, which defines the horizontal and vertical alignment of
+         the box in the image.
 
          **Values:**
 
@@ -1039,6 +1050,8 @@ BOX
 ELLIPSE
 """""""
 
+Prints a filled ellipse.
+
 .. ### BEGIN~OF~TABLE ###
 
 .. container:: table-row
@@ -1064,22 +1077,10 @@ ELLIPSE
          color
 
    Data type
-         GraphicColor
+         GraphicColor /stdWrap
 
    Description
-         fill-color
-
-         **Example:** ::
-
-            file = GIFBUILDER
-            file {
-              XY = 200,200
-              format = jpg
-              quality = 100
-              10 = ELLIPSE
-              10.dimensions = 100,100,50,50
-              10.color = red
-            }
+         Fill color of the ellipse.
 
    Default
          black
@@ -1090,10 +1091,28 @@ ELLIPSE
 [tsref:->GIFBUILDER.(GBObj).ELLIPSE]
 
 
+Example:
+~~~~~~~~
+
+::
+
+   file = GIFBUILDER
+   file {
+     XY = 200,200
+     format = jpg
+     quality = 100
+     10 = ELLIPSE
+     10.dimensions = 100,100,50,50
+     10.color = red
+   }
+
+
 .. _gifbuilder-image:
 
 IMAGE
 """""
+
+Renders an image file.
 
 .. ### BEGIN~OF~TABLE ###
 
@@ -1106,7 +1125,7 @@ IMAGE
          imgResource
 
    Description
-         The image file
+         The image file.
 
 
 .. container:: table-row
@@ -1130,13 +1149,13 @@ IMAGE
          tile
 
    Data type
-         x,y
+         x,y /stdWrap
 
    Description
-         tile x,y times.
+         Repeat the image x,y times (which creates the look of tiles).
 
-         Maximum times is 20 each direction. If you need more, use a larger
-         image.
+         Maximum number of times in each direction is 20. If you need more,
+         use a larger image.
 
 
 .. container:: table-row
@@ -1145,7 +1164,7 @@ IMAGE
          align
 
    Data type
-         VHalign
+         VHalign /stdWrap
 
    Description
          *See in the "Data types reference" at the beginning of this document
@@ -1174,6 +1193,10 @@ IMAGE
 EFFECT
 """"""
 
+Allows you to apply one or more of the following effects to the image.
+
+The EFFECT object only has one property: "value". stdWrap is available for
+"value".
 
 Syntax:
 ~~~~~~~
@@ -1182,6 +1205,9 @@ Syntax:
 
    .value = [Property] = [value] | [Property] = [value]
 
+All effects are defined as properties or property-value pairs inside
+"value". Multiple properties or property-value pairs are separated by
+"\|".
 
 Example:
 ~~~~~~~~
@@ -1210,7 +1236,7 @@ Example:
          gamma
 
    Data type
-         0.5 - 3.0
+         double (0.5 - 3.0)
 
    Description
          Sets the gamma value.
@@ -1225,7 +1251,7 @@ Example:
          blur
 
    Data type
-         1-99
+         positive integer (1-99)
 
    Description
          Blurs the edges inside the image.
@@ -1240,7 +1266,7 @@ Example:
          sharpen
 
    Data type
-         1-99
+         positive integer (1-99)
 
    Description
          Sharpens the edges inside the image.
@@ -1255,7 +1281,7 @@ Example:
          solarize
 
    Data type
-         0-99
+         positive integer (0-99)
 
    Description
          Color reduction.
@@ -1267,7 +1293,7 @@ Example:
          swirl
 
    Data type
-         0-100
+         positive integer (0-100)
 
    Description
          The image is swirled or spun from its center.
@@ -1282,11 +1308,13 @@ Example:
          wave
 
    Data type
-         amplitude, length
+         positive integer,positive integer
 
    Description
-         All horizontal edges are transformed by a wave with the given
-         amplitude and length.
+         Provide values for the amplitude and the length of a wave,
+         separated by comma. All horizontal edges in the image will
+         then be transformed by a wave with the given amplitude and
+         length.
 
          Maximum value for amplitude and length is 100.
 
@@ -1302,7 +1330,7 @@ Example:
          charcoal
 
    Data type
-         0-100
+         positive integer (0-100)
 
    Description
          Makes the image look as if it had been drawn with charcoal and defines
@@ -1334,7 +1362,7 @@ Example:
          edge
 
    Data type
-         0-99
+         positive integer (0-99)
 
    Description
          Creates rounded edges.
@@ -1383,7 +1411,7 @@ Example:
          rotate
 
    Data type
-         0-360
+         positive integer (0-360)
 
    Description
          Number of degrees for a clockwise rotation.
@@ -1401,7 +1429,7 @@ Example:
          colors
 
    Data type
-         2-255
+         positive integer (2-255)
 
    Description
          Defines the number of different colors to use in the image.
@@ -1413,10 +1441,13 @@ Example:
          shear
 
    Data type
-         -90 - 90
+         integer (-90 - 90)
 
    Description
-         Horizontal shearing.
+         Number of degrees for a horizontal shearing. Horizontal shearing
+         slides one edge of the image along the X axis, creating a
+         parallelogram. Provide an integer between -90 and 90 for the number
+         of degrees.
 
 
 .. container:: table-row
@@ -1470,12 +1501,13 @@ Sets another workarea.
          clear
 
    Data type
-         (isset)
+         string
 
    Description
-         Sets the current to the default.
+         Sets the current workarea to the default workarea.
 
-         Checked for using isset().
+         The value is checked for using isset(): If isset() returns TRUE, the
+         workarea is cleared, otherwise it is not.
 
 
 .. ###### END~OF~TABLE ######
@@ -1499,7 +1531,7 @@ image!
          backColor
 
    Data type
-         GraphicColor
+         GraphicColor /stdWrap
 
    Description
          *See "Data types reference".*
@@ -1514,7 +1546,7 @@ image!
          align
 
    Data type
-         VHalign
+         VHalign /stdWrap
 
    Description
          Horizontal and vertical alignment of the crop frame.
@@ -1552,6 +1584,8 @@ image!
 
 SCALE
 """""
+
+This scales the GIFBUILDER object to the provided dimensions.
 
 **Note:** This object resets workArea to the new dimensions of the
 image!
