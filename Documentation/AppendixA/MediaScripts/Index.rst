@@ -11,16 +11,25 @@
 media/scripts/ in general
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The directory typo3/sysext/statictemplates/media/scripts (in older
-versions typo3/sysext/cms/tslib/media/scripts or just media/scripts)
-primarily contains PHP scripts which are meant as 'external modules'
-as opposed to features included in the typo3/sysext/frontend/Classes/
-(typo3/sysext/cms/tslib/) libraries. They are distributed with TYPO3
-as part of the sysext statictemplates and form a basis for externally
-developed frontend functionality. So for most of these scripts, be
-inspired by them to write your own code. Notice the word 'most';
-because some are written long time ago and do not represent the
-state-of-the-day to do it.
+**Note:** Until TYPO3 6.0 the system extension "statictemplates" had
+to be installed to be able to activate this functionality. Since TYPO3
+6.1 the extension statictemplates no longer is part of the TYPO3 Core.
+Instead it needs to be installed from TER.
+
+Until TYPO3 6.0, the directory
+typo3/sysext/statictemplates/media/scripts (in older versions
+typo3/sysext/cms/tslib/media/scripts or just media/scripts) primarily
+contained PHP scripts which were meant as 'external modules' as opposed
+to features included in the typo3/sysext/frontend/Classes/
+(typo3/sysext/cms/tslib/) libraries. They were distributed with TYPO3
+as part of the sysext statictemplates and formed a basis for externally
+developed frontend functionality. So for most of these scripts, you
+could be inspired by them to write your own code. Notice the word
+'most'; because some were written long time ago and do not represent
+the state-of-the-day to do it.
+
+Since TYPO3 6.1 these examples have been outsourced; statictemplates
+must now be installed from TER, if you want to use it.
 
 
 .. _appendix-example-templates:

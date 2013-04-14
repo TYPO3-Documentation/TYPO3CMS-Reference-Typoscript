@@ -140,8 +140,8 @@ TMENU
          compiled by implode()'ing the array $I[parts] in the passed array.
          Thus you may modify this if you need to.
 
-         See example in
-         typo3/sysext/statictemplates/media/scripts/example\_itemArrayProcFunc.php
+         See example in the extension statictemplates
+         (statictemplates/media/scripts/example\_itemArrayProcFunc.php).
 
 
 .. container:: table-row

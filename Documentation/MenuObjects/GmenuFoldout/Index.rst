@@ -11,24 +11,29 @@
 GMENU\_FOLDOUT
 ^^^^^^^^^^^^^^
 
+**Note:** Until TYPO3 6.0 the menu objects GMENU\_LAYERS, TMENU\_LAYERS
+and GMENU_FOLDOUT were part of the TYPO3 Core. Since TYPO3 6.1 they
+have been moved to the extension statictemplates, which with TYPO3 6.1
+has itself been removed from the TYPO3 Core. In order to use these menu
+objects now, you need to install statictemplates from TER.
+
 GMENU\_FOLDOUT works as an extension to GMENU, which means that the
 properties underneath are additional properties to the ones above.
 
-The purpose of GMENU\_FOLDOUT is to create 2-level menus which are
+The purpose of GMENU\_FOLDOUT is to create 2-level menus, which are
 folded out dynamically.
 
-It works with Netscape, Mozilla, Microsoft Internet Explorer and
-Opera. The menu on the first level is a GMENU because GMENU\_FOLDOUT
-is responsible for this, but the submenu on the next level (referred
-to as 2nd level) can be both TMENU and another GMENU.
+The menu on the first level is a GMENU, because GMENU\_FOLDOUT is
+responsible for this, but the submenu on the next level (referred to as
+2nd level) can be both TMENU or another GMENU.
 
 **Note:** You must include the library
-"typo3/sysext/statictemplates/media/scripts/gmenu\_foldout.php".
+"typo3conf/ext/statictemplates/media/scripts/gmenu\_foldout.php" (in
+older versions
+"typo3/sysext/statictemplates/media/scripts/gmenu\_foldout.php").
 
 The script implemented is taken from
 http://www9.ewebcity.com/skripts/foldoutmenu\_move.htm
-
-**Compatibility:** MSIE 4+, Netscape 4+ and 6+, Opera 5+
 
 .. ### BEGIN~OF~TABLE ###
 
@@ -311,7 +316,7 @@ Example:
 ::
 
    ## GMENU_FOLDOUT
-   includeLibs.gmenu_foldout = typo3/sysext/statictemplates/media/scripts/gmenu_foldout.php
+   includeLibs.gmenu_foldout = typo3conf/ext/statictemplates/media/scripts/gmenu_foldout.php
 
    temp.foldoutMenu = HMENU
    temp.foldoutMenu.1 = GMENU_FOLDOUT
@@ -347,8 +352,8 @@ Example:
      bottomBackColor = silver
      menuWidth = 170
 
-     arrowNO = typo3/sysext/statictemplates/media/bullets/arrow_no.gif
-     arrowACT = typo3/sysext/statictemplates/media/bullets/arrow_act.gif
+     arrowNO = typo3conf/ext/statictemplates/media/bullets/arrow_no.gif
+     arrowACT = typo3conf/ext/statictemplates/media/bullets/arrow_act.gif
      arrowImgParams = hspace=4 align=top
 
      bottomContent = TEXT

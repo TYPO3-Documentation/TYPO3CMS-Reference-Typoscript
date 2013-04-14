@@ -273,9 +273,13 @@ value is "imported" from the field called "header" from the $cObj
          Function name
 
    Description
-         Calling a PHP-function or method in a class, passing the current
-         content to the function as first parameter and any properties as
-         second parameter.
+         Calls the provided PHP function. If you specify the name with a '->'
+         in it, then it is interpreted as a call to a method in a class.
+
+         Two parameters are sent to the PHP function: As first parameter a
+         content variable, which contains the current content. This is the
+         value to be processed. As second parameter any sub-properties of
+         preUserFunc are provided to the function.
 
          See *.postUserFunc*!
 
@@ -1563,10 +1567,16 @@ value is "imported" from the field called "header" from the $cObj
          function name
 
    Description
-         Calling a PHP function or method in a class, passing the current
-         content to the function as first parameter and any properties as
-         second parameter. Please see the description of the cObject USER for
-         in-depth information.
+         Calls the provided PHP function. If you specify the name with a '->'
+         in it, then it is interpreted as a call to a method in a class.
+
+         Two parameters are sent to the PHP function: As first parameter a
+         content variable, which contains the current content. This is the
+         value to be processed. As second parameter any sub-properties of
+         postUserFunc are provided to the function.
+
+         The description of the cObject USER contains some more in-depth
+         information.
 
          **Example:**
 
@@ -1574,22 +1584,87 @@ value is "imported" from the field called "header" from the $cObj
 
             page = PAGE
             page.typeNum = 0
-            includeLibs.something = typo3/sysext/statictemplates/media/scripts/example_callfunction.php
+            # Include the PHP file with our custom code
+            includeLibs.reverseString = fileadmin/example_reverseString.php
 
             page.10 = TEXT
             page.10 {
-              value = Hello World
+              value = Hello World!
               postUserFunc = user_reverseString
               postUserFunc.uppercase = 1
             }
 
             page.20 = TEXT
             page.20 {
-              value = Hello World
+              value = Hello World!
               postUserFunc = user_various->reverseString
               postUserFunc.uppercase = 1
               postUserFunc.typolink = 11
             }
+
+         The file fileadmin/example_reverseString.php might amongst
+         other things contain::
+
+            /**
+             * Custom function for data processing
+             *
+             * @param	string		When custom functions are used for data processing (like in stdWrap functions), the $content variable will hold the value to be processed. When functions are meant to just return some generated content (like in USER and USER_INT objects), this variable is empty.
+             * @param	array		TypoScript properties passed to this function.
+             * @return	string		The input string reversed. If the TypoScript property "uppercase" was set, it will also be in uppercase.
+             */
+            function user_reverseString($content, $conf) {
+              $content = strrev($content);
+              if ($conf['uppercase']) {
+                $content = strtoupper($content);
+              }
+              return $content;
+            }
+
+            /**
+             * Example of a method in a PHP class to be called from TypoScript
+             *
+             */
+            class user_various {
+              /**
+               * Reference to the parent (calling) cObject set from TypoScript
+               */
+              public $cObj;
+
+              /**
+               * Doing the same as user_reverseString() but with a class. Also demonstrates how this gives us the ability to use methods in the parent object.
+               *
+               * @param	string		String to process (from stdWrap)
+               * @param	array		TypoScript properties passed on to this method.
+               * @return	string	The input string reversed. If the TypoScript property "uppercase" was set, it will also be in uppercase. May also be linked.
+               * @see user_reverseString()
+               */
+              public function reverseString($content, $conf) {
+                $content = strrev($content);
+                if ($conf['uppercase']) {
+                  // Use the method caseshift() from ContentObjectRenderer.php.
+                  $content = $this->cObj->caseshift($content, 'upper');
+                }
+                if ($conf['typolink']) {
+                  // Use the method getTypoLink() from ContentObjectRenderer.php.
+                  $content = $this->cObj->getTypoLink($content, $conf['typolink']);
+                }
+                return $content;
+              }
+            }
+
+         For page.10 the content, which is present when postUserFunc is
+         executed, will be given to the PHP function
+         user_reverseString(). The result will be "!DLROW OLLEH".
+
+         The content of page.20 will be processed by the function
+         reverseString() from the class user_various. This also returns
+         the text "!DLROW OLLEH", but wrapped into a link to the page
+         with the ID 11. The result will be "<a
+         href="index.php?id=11">!DLROW OLLEH</a>".
+
+         Note how in the second example $cObj, the reference to the
+         calling cObject, is utilised to use functions from
+         ContentObjectRenderer.php!
 
 
 .. container:: table-row
@@ -1603,12 +1678,18 @@ value is "imported" from the field called "header" from the $cObj
          function name
 
    Description
-         Calling a PHP function or method in a class, passing the current
-         content to the function as first parameter and any properties as
-         second parameter. The result will be rendered non-cached, outside the
-         main page-rendering. Please see the description of the cObject
-         USER\_INT and the cObject PHP\_SCRIPT\_INT (which you find in the
-         appendix "PHP include scripts") for in-depth information.
+         Calls the provided PHP function. If you specify the name with a '->'
+         in it, then it is interpreted as a call to a method in a class.
+
+         Two parameters are sent to the PHP function: As first parameter a
+         content variable, which contains the current content. This is the
+         value to be processed. As second parameter any sub-properties of
+         postUserFuncInt are provided to the function.
+
+         The result will be rendered non-cached, outside the main
+         page-rendering. Please see the description of the cObject USER\_INT
+         and the cObject PHP\_SCRIPT\_INT (which you find in the appendix "PHP
+         include scripts") for in-depth information.
 
          Supplied by Jens Ellerbrock
 

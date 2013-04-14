@@ -12,27 +12,32 @@
 GMENU\_LAYERS / TMENU\_LAYERS
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+**Note:** Until TYPO3 6.0 the menu objects GMENU\_LAYERS, TMENU\_LAYERS
+and GMENU_FOLDOUT were part of the TYPO3 Core. Since TYPO3 6.1 they
+have been moved to the extension statictemplates, which with TYPO3 6.1
+has itself been removed from the TYPO3 Core. In order to use these menu
+objects now, you need to install statictemplates from TER.
+
 GMENU\_LAYERS / TMENU\_LAYERS works as an extension to GMENU/TMENU,
 which means that the properties underneath are additional properties
 to the ones above.
 
 The purpose of xMENU\_LAYERS is to create 2-level (or more!) menus
-where the 2nd+ level is shown on a DHTML-layer. Most features work
-with modern browsers including Netscape, Microsoft Internet Explorer,
-Mozilla, Konqueror and Opera. You can cascade the menus as you like.
+where the 2nd+ level is shown on a DHTML-layer. You can cascade the
+menus as you like.
 
 **Note:** You must include the library
-"typo3/sysext/statictemplates/media/scripts/gmenu\_layers.php" (for
-GMENU\_LAYERS) and/or
-"typo3/sysext/statictemplates/media/scripts/tmenu\_layers.php" (for
-TMENU\_LAYERS) and you must also expand the xMENU\_LAYERS to the next
+"typo3conf/ext/statictemplates/media/scripts/gmenu\_layers.php" (in
+older versions
+"typo3/sysext/statictemplates/media/scripts/gmenu\_layers.php") for
+GMENU\_LAYERS and/or
+"typo3conf/ext/statictemplates/media/scripts/tmenu\_layers.php" (in
+older versions
+"typo3/sysext/statictemplates/media/scripts/tmenu\_layers.php") for
+TMENU\_LAYERS. Remember to expand the xMENU\_LAYERS to the next levels
 for the menu to make sense (use the expAll-flag).
 
-**Compatibility:** MSIE 4+, Netscape 4+ and 6+, Opera 5+, Konqueror.
-
 **Notes:**
-
-- Netscape 4 does not support mouseover on the layers.
 
 - Opera seems to have problems with the mouseout event if you roll from
   an element to a layer. Then the event may not be fired before entering
@@ -482,7 +487,7 @@ Example:
 
 ::
 
-   page.includeLibs.gmenu_layers = typo3/sysext/statictemplates/media/scripts/gmenu_layers.php
+   page.includeLibs.gmenu_layers = typo3conf/ext/statictemplates/media/scripts/gmenu_layers.php
    page.10 = HMENU
    page.10.1 = GMENU_LAYERS
    page.10.1 {
