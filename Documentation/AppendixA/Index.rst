@@ -8,8 +8,8 @@
 
 .. _appendix-a:
 
-Appendix A – media/scripts/ Plugins
------------------------------------
+Appendix A – PHP include scripts
+--------------------------------
 
 
 .. toctree::
@@ -17,8 +17,6 @@ Appendix A – media/scripts/ Plugins
    :titlesonly:
    :glob:
 
-   MediaScripts/Index
-   FeAdminlib/Index
-   Tipafriendlib/Index
-   Plaintextlib/Index
+   TyposcriptConfiguration/Index
+   IncludingYourScript/Index
 

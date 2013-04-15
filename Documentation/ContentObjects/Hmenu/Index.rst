@@ -1312,7 +1312,7 @@ Creates a language menu with flags (notice that some lines break):
 special.userdefined
 ~~~~~~~~~~~~~~~~~~~
 
-Lets you write your own little PHP-script that generates the array of
+Lets you write your own little PHP script that generates the array of
 menu items.
 
 **Note:** The special type "userdefined" has been removed in TYPO3

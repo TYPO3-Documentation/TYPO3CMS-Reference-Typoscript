@@ -875,7 +875,7 @@ getText
 
             :dd:
                 **field:** [field name from the current *$cObj* ->data-array in the
-                cObj.]
+                cObject.]
 
                 As default the *$cObj* ->data-array is $GLOBALS['TSFE']->page (record
                 of the current page!)
@@ -895,7 +895,7 @@ getText
 
             :dd:
                 **parameters:** [field name from the current *$cObj* ->parameters-
-                array in the cObj.]
+                array in the cObject.]
 
                 See ->parseFunc!
 

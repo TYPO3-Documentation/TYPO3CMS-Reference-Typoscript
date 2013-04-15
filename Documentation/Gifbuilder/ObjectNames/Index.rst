@@ -237,7 +237,7 @@ Renders a text.
          This is text text-string on the image file. The item is rendered only
          if this string is not empty.
 
-         The cObj->data-array is loaded with the page-record, if for example
+         The $cObj->data-array is loaded with the page-record, if for example
          the GIFBUILDER object is used by GMENU or IMGMENU.
 
 

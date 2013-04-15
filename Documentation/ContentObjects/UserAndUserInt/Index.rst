@@ -15,16 +15,15 @@ USER and USER\_INT
 This calls either a PHP function or a method in a class. This is very
 useful if you want to incorporate your own data processing or content.
 
-Basically this is a user defined cObject, because it's just a call to a
-function or method, which you control!
+Basically USER and USER\_INT are user defined cObjects, because they
+just call a function or method, which you control!
 
 If you call a method in a class (which is of course instantiated as an
-object), the internal variable 'cObj' of that class is set with a
+object), the internal variable '$cObj' of that class is set with a
 *reference* to the parent cObject. This offers you an API of functions,
 which might be more or less relevant for you. See
 ContentObjectRenderer.php in the TYPO3 source code; access to typolink
-or stdWrap are only two of the gimmicks you get. Also refer to the
-appendix "PHP include scripts" at the end of this document.
+or stdWrap are only two of the gimmicks you get.
 
 If you create this object as USER\_INT, it will be rendered non-cached,
 outside the main page-rendering.

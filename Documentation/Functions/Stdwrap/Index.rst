@@ -1687,9 +1687,7 @@ value is "imported" from the field called "header" from the $cObj
          postUserFuncInt are provided to the function.
 
          The result will be rendered non-cached, outside the main
-         page-rendering. Please see the description of the cObject USER\_INT
-         and the cObject PHP\_SCRIPT\_INT (which you find in the appendix "PHP
-         include scripts") for in-depth information.
+         page-rendering. Please see the description of the cObject USER\_INT.
 
          Supplied by Jens Ellerbrock
 
@@ -1735,8 +1733,8 @@ value is "imported" from the field called "header" from the $cObj
          edit form for certain fields.
 
          The value of this property is a list of fields from a table to edit.
-         It's assumed that the current record of the cObj is the record to be
-         edited.
+         It's assumed that the current record of the cObject is the record to
+         be edited.
 
          Syntax: *optional table name* : *comma list of field names [list of
          pallette-field names separated by \| ]*

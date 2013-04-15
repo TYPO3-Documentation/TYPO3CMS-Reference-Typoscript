@@ -11,14 +11,29 @@
 Including your script
 ^^^^^^^^^^^^^^^^^^^^^
 
+This section should give you some pointers on what you can process in
+your script and which functions and variables you can access.
+
 Your script is included by a function, PHP\_SCRIPT, inside the class
 "ContentObjectRenderer" (tslib\_cObj) in the
 typo3/sysext/frontend/Classes/ContentObject/ContentObjectRenderer.php
 (tslib\_content.php) script. Thereby your file is a part of this object
 (ContentObjectRenderer, respectively tslib\_cObj) and function. This is
 why you must return all content in the variable "$content" and any
-TypoScript-configuration is available from the array "$conf" (it may
-not be set at all though so check it with is\_array()!)
+TypoScript configuration is available from the array "$conf" (it may
+not be set at all though, so check it with is\_array()!)
+
+
+.. _appendix-include-content:
+
+$content
+""""""""
+
+Contains the content, which was passed to the object, if any. All
+content, which you want to return, must be in this variable!
+
+Remember, don't output anything (but debug code) directly in your
+script!
 
 
 .. _appendix-include-conf:
@@ -30,25 +45,15 @@ The array $conf contains the configuration for the PHP\_SCRIPT cObject.
 Try debug($conf) to see the content printed out for debugging!
 
 
-.. _appendix-include-content:
-
-$content
-""""""""
-
-Return all content in this variable.
-
-Remember, don't output anything (but debug code) in your script!
-
-
 .. _appendix-include-white-spaces:
 
 White spaces
 """"""""""""
 
 Because nothing is sent off to the browser before everything is
-rendered and returned to index\_ts.php which originally set of the
-rendering process, you must ensure that there's no whitespace before
-and after your <?php...?> tags in your include- or library-scripts!
+rendered and returned to index\_ts.php (which originally set off the
+rendering process), you must ensure that there's no whitespace before
+and after your <?php...?> tags in your include or library scripts!
 
 
 .. _appendix-include-tsfe:
@@ -57,15 +62,15 @@ $GLOBALS['TSFE']->set\_no\_cache()
 """"""""""""""""""""""""""""""""""
 
 Call the function $GLOBALS['TSFE']->set\_no\_cache(), if you want to
-disable caching of the page.Call this during development! And call it,
-if the content you create may not be cached.
+disable caching of the page. Call this during development only! And
+call it, if the content you create may not be cached.
 
 **Note:** If you make a syntax error in your script that keeps PHP
 from executing it, then the $GLOBALS['TSFE']->set\_no\_cache()
 function is not executed and the page *is* cached! So in these
 situations, correct the error, clear the page-cache and try again.
 This is true only for PHP\_SCRIPT and not for PHP\_SCRIPT\_INT and
-PHP\_SCRIPT\_EXT which are rendered *after* the cached page!
+PHP\_SCRIPT\_EXT, which are rendered *after* the cached page!
 
 
 Example:
@@ -78,11 +83,10 @@ Example:
 
 .. _appendix-include-cobjgetsingle:
 
-$this->cObjGetSingle( value, properties )
-"""""""""""""""""""""""""""""""""""""""""
+$this->cObjGetSingle(value, properties)
+"""""""""""""""""""""""""""""""""""""""
 
-Gets a content object from the $conf-array. (See the section below
-named "Case story" on how to use this!)
+Gets a content object from the $conf array.
 
 
 Example:
@@ -93,16 +97,16 @@ Example:
    $content = $this->cObjGetSingle($conf['image'], $conf['image.']);
 
 This would return any IMAGE-cObject at the property "image" of the
-conf-array for the include-script!
+$conf array for the include script!
 
 
 .. _appendix-include-stdwrap:
 
-$this->stdWrap( value, properties )
-"""""""""""""""""""""""""""""""""""
+$this->stdWrap(value, properties)
+"""""""""""""""""""""""""""""""""
 
-stdWrap's the content "value" due to the configuration of the array
-"properties".
+Hands the content in "value" to the stdWrap function, which will
+process it according to the configuration of the array "properties".
 
 
 Example:
@@ -113,18 +117,18 @@ Example:
    $content = $this->stdWrap($content, $conf['stdWrap.']);
 
 This will stdWrap the content with the properties of ".stdWrap" of the
-$conf-array!
+$conf array!
 
 
-.. _appendix-include-internal-vars:
+.. _appendix-include-internal-variables:
 
-Internal Vars in the main frontend object, TSFE (TypoScript Front End)
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+Internal variables in the main frontend object, TSFE
+""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-There are some variables in the global object, TSFE, you might need to
-know about. These ARE ALL READ-ONLY! (Read: Don't change them!) See
-the class TypoScriptFrontendController (tslib\_fe) for the full
-descriptions.
+There are some variables in the global object, TSFE (TypoScript
+Frontend), you might need to know about. These ARE ALL READ-ONLY!
+(Read: Don't change them!) See the class TypoScriptFrontendController
+(tslib\_fe) for the full descriptions.
 
 If you for instance want to access the variable "id", you can do so by
 writing: $GLOBALS['TSFE']->id
@@ -133,7 +137,7 @@ writing: $GLOBALS['TSFE']->id
 
 .. container:: table-row
 
-   Var
+   Variable
          id
 
    PHP-Type
@@ -145,7 +149,7 @@ writing: $GLOBALS['TSFE']->id
 
 .. container:: table-row
 
-   Var
+   Variable
          type
 
    PHP-Type
@@ -157,19 +161,19 @@ writing: $GLOBALS['TSFE']->id
 
 .. container:: table-row
 
-   Var
+   Variable
          page
 
    PHP-Type
          array
 
    Description
-         The pagerecord
+         The page record
 
 
 .. container:: table-row
 
-   Var
+   Variable
          fe\_user
 
    PHP-Type
@@ -178,12 +182,12 @@ writing: $GLOBALS['TSFE']->id
    Description
          The current front-end user.
 
-         Userrecord in $GLOBALS['TSFE']->fe\_user->user, if any login.
+         User record in $GLOBALS['TSFE']->fe\_user->user, if any login.
 
 
 .. container:: table-row
 
-   Var
+   Variable
          loginUser
 
    PHP-Type
@@ -198,7 +202,7 @@ writing: $GLOBALS['TSFE']->id
 
 .. container:: table-row
 
-   Var
+   Variable
          rootLine
 
    PHP-Type
@@ -211,21 +215,21 @@ writing: $GLOBALS['TSFE']->id
 
 .. container:: table-row
 
-   Var
+   Variable
          sys\_page
 
    PHP-Type
          object
 
    Description
-         The object with pagefunctions (object) See
+         The object with page functions (object) See
          typo3/sysext/frontend/Classes/Page/PageRepository.php
          (t3lib/class.t3lib_page.php).
 
 
 .. container:: table-row
 
-   Var
+   Variable
          gr\_list
 
    PHP-Type
@@ -237,7 +241,7 @@ writing: $GLOBALS['TSFE']->id
 
 .. container:: table-row
 
-   Var
+   Variable
          beUserLogin
 
    PHP-Type
@@ -253,23 +257,23 @@ writing: $GLOBALS['TSFE']->id
 .. ###### END~OF~TABLE ######
 
 
-.. _appendix-include-global-vars:
+.. _appendix-include-global-variables:
 
-Global vars
-"""""""""""
+Global variables
+""""""""""""""""
 
 .. ### BEGIN~OF~TABLE ###
 
 .. container:: table-row
 
-   Var
+   Variable
          BE\_USER
 
    PHP-Type
          object
 
    Description
-         The back-end user object (if any).
+         The backend user object (if any).
 
    Default
          not set
@@ -277,7 +281,7 @@ Global vars
 
 .. container:: table-row
 
-   Var
+   Variable
          TYPO3\_CONF\_VARS
 
    PHP-Type
@@ -289,7 +293,7 @@ Global vars
 
 .. container:: table-row
 
-   Var
+   Variable
          TSFE
 
    PHP-Type

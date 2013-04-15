@@ -90,8 +90,5 @@ address the task at hand.
    Gifbuilder/Index
    MenuObjects/Index
    AppendixA/Index
-   AppendixB/Index
-   AppendixC/Index
-   AppendixD/Index
-   Targets
+    Targets
 

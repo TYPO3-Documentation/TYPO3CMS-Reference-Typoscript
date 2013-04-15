@@ -20,9 +20,9 @@ It has the alias COA standing for "content object array". You can also
 call it "COA" instead of COBJ\_ARRAY.
 
 You can also create this object as a COA\_INT in which case it works
-exactly like the USER\_INT object does: It's rendered non-cached! The
-COA\_INT provides a way to utilize this feature not only with USER
-cObjects but with any cObject.
+exactly like the USER\_INT object does: It's rendered non-cached! That
+way COA\_INT allows you not only to render USER\_INT objects
+non-cached, but to render *every* cObject non-cached.
 
 
 .. ### BEGIN~OF~TABLE ###
