@@ -668,7 +668,7 @@ Renders a text.
             10.splitRendering.10 {
               value = 200-380 , 65, 66
               fontSize = 50
-              fontFile =  t3lib/fonts/nimbus.ttf
+              fontFile = typo3/sysext/core/Resources/Private/Font/nimbus.ttf
               xSpaceBefore = 30
             }
             10.splitRendering.20 = highlightWord
