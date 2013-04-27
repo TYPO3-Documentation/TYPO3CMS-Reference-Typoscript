@@ -829,6 +829,36 @@ Web > List (mod.web\_list)
 .. container:: table-row
 
    Property
+         noExportRecordsLinks
+
+   Data type
+         boolean
+
+   Description
+         If set, the "Export" and "Download CSV file" buttons are hidden
+         in single table view inside the list module. This option is for
+         example important to disable batch download of sensitive data via
+         csv or t3d exports.
+
+         **Example:** ::
+
+            mod.web_list {
+                    noExportRecordsLinks = 1
+            }
+
+         The buttons "Export" and "Download CSV file" are hidden 
+         in single table view inside the list module:
+
+         .. figure:: ../../Images/listModuleWithoutExportButtons.png
+            :alt: The list module without export buttons after activating the single-table mode
+
+   Default
+         0
+
+
+.. container:: table-row
+
+   Property
          itemsLimitSingleTable
 
    Data type
