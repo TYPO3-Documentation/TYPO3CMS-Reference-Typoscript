@@ -37,16 +37,18 @@ TSconfig Reference
       documentation@typo3.org
 
 :License:
-      Open Content License available from `www.opencontent.org/opl.shtml
-      <http://www.opencontent.org/opl.shtml>`_
+      Open Content License available from `www.opencontent.org/opl.shtml`_.
+
+      .. _www.opencontent.org/opl.shtml: http://www.opencontent.org/opl.shtml
 
 :Rendered:
       |today|
 
 The content of this document is related to TYPO3,
 
-a GNU/GPL CMS/Framework available from `www.typo3.org
-<http://www.typo3.org/>`_
+a GNU/GPL CMS/Framework available from `www.typo3.org`_.
+
+  .. _www.typo3.org: http://www.typo3.org/
 
 
 **Official documentation**
