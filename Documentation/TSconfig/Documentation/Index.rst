@@ -16,7 +16,7 @@ TSconfig Reference
       doc_core_tsconfig
 
 :Version:
-      6.0
+      6.1
 
 :Language:
       en

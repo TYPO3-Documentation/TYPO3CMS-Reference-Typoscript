@@ -13,10 +13,13 @@ What's new
 This version of the TSconfig Reference was updated for TYPO3 CMS
 version 6.1.
 
-For TYPO3 6.1 the Page TSconfig property noExportRecordsLinks has been added.
+For TYPO3 6.1 the Page TSconfig property noExportRecordsLinks has been added,
+which allows to hide the buttons "Export" and "Download CSV file" in the list
+module.
 
-Since TYPO3 6.0 the property mod.SHARED.colPos_list has been removed.
-Use instead Backend Layouts (see example here :ref:`example_for_backend_layout`).
+In TYPO3 6.0 already the property mod.SHARED.colPos_list has been removed.
+Use Backend Layouts instead (see :ref:`Example for Backend Layouts
+<example_for_backend_layout>`).
 
 
 .. figure:: ../../Images/manual_html_m3858f798.png
@@ -53,4 +56,4 @@ TYPO3 6.0: `http://forge.typo3.org/projects/typo3v4-doc\_core\_tsconfig/versions
 
 TYPO3 6.1: `http://forge.typo3.org/projects/typo3v4-doc\_core\_tsconfig/versions/1961`_.
 
-.. _http://forge.typo3.org/projects/typo3v4-doc_core_tsconfig/versions/1961
+.. _http://forge.typo3.org/projects/typo3v4-doc\_core\_tsconfig/versions/1961: http://forge.typo3.org/projects/typo3v4-doc_core_tsconfig/versions/1961
