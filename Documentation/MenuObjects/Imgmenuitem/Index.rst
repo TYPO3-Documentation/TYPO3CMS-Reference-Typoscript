@@ -19,12 +19,12 @@ IMGMENUITEM
          1,2,3,4...
 
    Data type
-         ->GifBuilderObj
+         ->GifBuilder Object
 
    Description
          **Note:**
 
-         The way an imagemap is made is this; All IMGMENUITEMS are included in
+         The way an image-map is made is this: All IMGMENUITEMS are included in
          one big Gifbuilder object (and renumbered!). Because of this,
          Gifbuilder objects on the next level will not be able to access the
          data of each menu item.

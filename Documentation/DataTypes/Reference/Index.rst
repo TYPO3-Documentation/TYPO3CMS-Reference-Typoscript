@@ -594,7 +594,7 @@ linkWrap
    Comment
          <.. {x}.> \| </...>
 
-         {x}; x is an integer (0-9) and points to a key in the PHP-array
+         {x}; x is an integer (0-9) and points to a key in the PHP array
          rootLine. The key is equal to the level the current page is on
          measured relatively to the root of the website.
 
@@ -865,7 +865,7 @@ getText
 
           - :dt:
             :dd:
-                This returns a value from somewhere in a PHP-array, as defined by the
+                This returns a value from somewhere in a PHP array, as defined by the
                 type. The syntax is "type : pointer". The type is case-insensitive.
 
           - :dt:
@@ -1250,8 +1250,8 @@ See the section "Menu Objects" later in this manual.
 
 .. _data-type-gifbuilderobj:
 
-GifBuilderObj
-=============
+GifBuilder Object
+=================
 
 See section :ref:`GIFBUILDER` in this manual.
 

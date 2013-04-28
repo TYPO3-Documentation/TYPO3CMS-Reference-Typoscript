@@ -12,10 +12,10 @@ Object names in this section
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Whenever you see a reference to anything named an "object" in this
-section it's a reference to a "GifBuilderObj" and not the "cObjects"
-from the previous section. Confusion could happen, because "IMAGE"
-and "TEXT" are objects in *both* areas; note that they are different
-each time!
+section it's a reference to a "GifBuilder Object" and not the
+"cObjects" from the previous section. Confusion could happen, because
+"TEXT" and "IMAGE" are objects in *both* areas; note that they are
+different each time!
 
 .. ### BEGIN~OF~TABLE ###
 
@@ -25,9 +25,7 @@ each time!
          1,2,3,4...
 
    Data type
-         GifBuilderObj
-
-         \+ .if (->if)
+         GifBuilder Object \+ .if (->if)
 
    Description
          .if (->if) is a property of all GIFBUILDER objects. If the property is
@@ -181,7 +179,7 @@ each time!
          x,y,w,h + calc /stdWrap
 
    Description
-         Define the workarea on the image file. All the GifBuilderObjects will
+         Define the workarea on the image file. All the GifBuilder Objects will
          see this as the dimensions of the image file regarding alignment,
          overlaying of images an so on. Only TEXT objects exceeding the
          boundaries of the workarea will be printed outside this area.
@@ -518,7 +516,7 @@ Renders a text.
          emboss
 
    Data type
-         GifBuilderObj->EMBOSS
+         GifBuilder Object->EMBOSS
 
 
 .. container:: table-row
@@ -527,7 +525,7 @@ Renders a text.
          shadow
 
    Data type
-         GifBuilderObj->SHADOW
+         GifBuilder Object->SHADOW
 
 
 .. container:: table-row
@@ -536,7 +534,7 @@ Renders a text.
          outline
 
    Data type
-         GifBuilderObj->OUTLINE
+         GifBuilder Object->OUTLINE
 
 
 .. container:: table-row
@@ -565,9 +563,9 @@ Renders a text.
 
          The principle of this function is to create a black/white image file
          in twice or more times the size of the actual image file and then
-         print the text onto this in a scaled dimension. Afterwards ImageMagick
-         (IM) scales down the mask and masks the font color down on the
-         original image file through the temporary mask.
+         print the text onto this in a scaled dimension. Afterwards
+         GraphicsMagick/ImageMagick scales down the mask and masks the font
+         color down on the original image file through the temporary mask.
 
          The fact that the font is actually rendered in the double size and
          scaled down adds a more homogenous shape to the letters. Some fonts
@@ -576,9 +574,9 @@ Renders a text.
 
          **Some sub-properties:**
 
-         .before = IM-params before scale
+         .before = GraphicsMagick/ImageMagick-params before scale
 
-         .after = IM-params after scale
+         .after = GraphicsMagick/ImageMagick-params after scale
 
          .sharpen = sharpen-value for the mask (after scaling), integer 0-99
          (this enables you to make the text crisper if it's too blurred!)
@@ -744,10 +742,6 @@ Creates a shadow under the associated text.
    Description
          Blurring of the shadow. Above 40 only values of 40,50,60,70,80,90 mean
          something.
-
-         **Note:** The blurring capabilities of ImageMagick are not very mature
-         in version 4.2.9. This is addressed in the later version 5.2.0 where a
-         gaussian blur-function is added. BUT, this is not utilized so far.
 
 
 .. container:: table-row
@@ -1622,7 +1616,7 @@ image!
          params
 
    Data type
-         ImageMagickParams
+         GraphicsMagick/ImageMagick parameters
 
    Description
          Parameters to be used for the processing.

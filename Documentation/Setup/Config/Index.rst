@@ -1485,7 +1485,7 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
             [global]
 
          This option may be overridden by the property of the same name in
-         the FORMS-cObject.
+         the FORMS cObject.
 
 
 .. container:: table-row
