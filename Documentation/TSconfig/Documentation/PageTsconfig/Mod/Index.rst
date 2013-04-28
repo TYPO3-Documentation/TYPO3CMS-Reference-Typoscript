@@ -412,6 +412,60 @@ Shared options for modules (mod.SHARED)
          1,0,2,3
 
 
+         **Note:**
+
+         Since TYPO3 6.0 mod.SHARED.colPos_list is no longer working.
+         Instead, use backend layouts.
+
+         .. _example_for_backend_layout:
+
+         **Example for a Backend Layout**
+
+         * Create a record of type "Backend Layout"
+           (e.g. in the root page of your website).
+
+         * Add a title (e.g. My Layout).
+
+         * Add in field "Config" the following configuration:
+
+            .. HINT::
+               You can use the wizard next to the configuration field as a help.
+
+           ::
+
+             backend_layout {
+                 colCount = 2
+                 rowCount = 1
+                 rows {
+                     1 {
+                         columns {
+                             1 {
+                                 name = Content
+                                 colPos = 0
+                             }
+                             2 {
+                                 name = Left
+                                 colPos = 1
+                             }
+                         }
+                     }
+                 }
+             }
+
+         * Click on the root page of your website.
+
+         * Click page properties > Appearance.
+
+         * Select the new Backend Layout for this page and
+           for the subpages.
+           This way the new Backend Layout will be preselected for all subpages (also for new ones).
+
+         * Now the columns with colPos=0 and colPos=1 are labeled with "Content" and "Left".
+
+         .. figure:: ../../Images/simpleBackendLayout.png
+            :alt: A simple Backend Layout
+
+
 .. container:: table-row
 
    Property
@@ -424,7 +478,7 @@ Shared options for modules (mod.SHARED)
          Alternative label for "Default" when language labels are shown in the
          interface.
 
-         Used in Web > List, Web > Page and TemplaVoilÃ  page module.
+         Used in Web > List, Web > Page and TemplaVoilá  page module.
 
 
 .. container:: table-row
