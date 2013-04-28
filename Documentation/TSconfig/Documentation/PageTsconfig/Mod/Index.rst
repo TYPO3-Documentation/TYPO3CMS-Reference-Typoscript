@@ -400,17 +400,13 @@ Shared options for modules (mod.SHARED)
 
          Right: 2
 
-         Border:3
+         Border: 3
 
          **Example:**
 
          This results in only the Normal and Border column being displayed::
 
             mod.SHARED.colPos_list = 0,3
-
-   Default
-         1,0,2,3
-
 
          **Note:**
 
@@ -440,12 +436,12 @@ Shared options for modules (mod.SHARED)
                      1 {
                          columns {
                              1 {
-                                 name = Content
-                                 colPos = 0
-                             }
-                             2 {
                                  name = Left
                                  colPos = 1
+                             }
+                             2 {
+                                 name = Content
+                                 colPos = 0
                              }
                          }
                      }
@@ -454,16 +450,20 @@ Shared options for modules (mod.SHARED)
 
          * Click on the root page of your website.
 
-         * Click page properties > Appearance.
+         * Click Page Properties > Appearance.
 
-         * Select the new Backend Layout for this page and
-           for the subpages.
-           This way the new Backend Layout will be preselected for all subpages (also for new ones).
+         * Select the new Backend Layout for this page and for the subpages.
+           This way the new Backend Layout will be preselected for all subpages
+           (also for new ones).
 
-         * Now the columns with colPos=0 and colPos=1 are labeled with "Content" and "Left".
+         * Now the columns with colPos=1 and colPos=0 are displayed, labeled
+           with "Left" and "Content".
 
          .. figure:: ../../Images/simpleBackendLayout.png
             :alt: A simple Backend Layout
+
+   Default
+         1,0,2,3
 
 
 .. container:: table-row
@@ -478,7 +478,7 @@ Shared options for modules (mod.SHARED)
          Alternative label for "Default" when language labels are shown in the
          interface.
 
-         Used in Web > List, Web > Page and TemplaVoilá  page module.
+         Used in Web > List, Web > Page and TemplaVoilÃ  page module.
 
 
 .. container:: table-row
@@ -889,9 +889,9 @@ Web > List (mod.web\_list)
          boolean
 
    Description
-         If set, the "Export" and "Download CSV file" buttons are hidden
-         in single table view inside the list module. This option is for
-         example important to disable batch download of sensitive data via
+         (Since TYPO3 6.1) If set, the "Export" and "Download CSV file" buttons
+         are hidden in single table view inside the list module. This option is
+         for example important to disable batch download of sensitive data via
          csv or t3d exports.
 
          **Example:** ::
