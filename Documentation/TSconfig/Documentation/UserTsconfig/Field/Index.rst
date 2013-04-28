@@ -16,6 +16,42 @@ records:
 .. figure:: ../../Images/manual_html_m2a166eee.png
    :alt: The TSconfig inside the backend user or backend group properties
 
+
+**An example for User TSconfig**
+
+* Add in User TSconfig:
+
+  ::
+
+   page.RTE.default.showButtons = button1
+
+* You get the value "button1".
+
+* Add later in User TSconfig:
+
+  ::
+
+   page.RTE.default.showButtons := addToList(button2)
+
+* You get the value "buttons1,button2".
+
+* Add in **Page TSconfig**:
+
+  ::
+
+   page.RTE.default.showButtons = button1
+
+* Finally you get the value "button2".
+
+.. IMPORTANT::
+   When a property is set in **User** TSconfig, it *overwrites* the according
+   **Page** TSconfig property, if that one already had been set in Page TSconfig.
+   It is **not** possible to *reference* a property from Page TSconfig
+   and to *modify* it in User TSconfig.
+   If you set a property in User TSconfig, which *before* already had been set
+   in *Page* TSconfig, then the value from Page TSconfig will be overwritten.
+
+
 .. _userverifyingthefinalconfiguration:
 
 Verifying the final configuration

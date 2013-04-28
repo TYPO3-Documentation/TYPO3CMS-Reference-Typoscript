@@ -24,6 +24,25 @@ The "TSconfig" field here is available in the tab called "Resources":
 .. figure:: ../../Images/manual_html_1194c6cf.png
    :alt: The Page TSconfig field inside the page properties
 
+
+**An example for Page TSconfig**
+
+* Add in Page TSconfig:
+
+  ::
+
+   RTE.default.showButtons = button1
+
+* You get the value "button1".
+
+* Add later in Page TSconfig:
+
+  ::
+
+   RTE.default.showButtons := addToList(button2)
+
+* Finally you get the value "button1,button2".
+
 .. _pageverifyingthefinalconfiguration:
 
 Verifying the final configuration
