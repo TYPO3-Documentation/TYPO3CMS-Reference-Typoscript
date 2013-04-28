@@ -11,15 +11,13 @@ What's new
 ^^^^^^^^^^
 
 This version of the TSconfig Reference was updated for TYPO3 CMS
-version 6.0.
+version 6.1.
 
-For TYPO3 6.0 the User TSconfig setting
-options.pageTree.backgroundColor has been added: It allows different
-background colors for page tree branches. Additionally the options
-pageTree.showPathAboveMounts and
-pageTree.doktypesToShowInNewPageDragArea have been appended.
+For TYPO3 6.1 the Page TSconfig property noExportRecordsLinks has been added.
 
-The description of some properties has been added or updated.
+Since TYPO3 6.0 the property mod.SHARED.colPos_list has been removed.
+Use instead Backend Layouts (see example here :ref:`example_for_backend_layout`).
+
 
 .. figure:: ../../Images/manual_html_m3858f798.png
    :alt: Blue world icon
@@ -52,3 +50,7 @@ TYPO3 4.7: `http://forge.typo3.org/projects/typo3v4-doc\_core\_tsconfig/versions
 TYPO3 6.0: `http://forge.typo3.org/projects/typo3v4-doc\_core\_tsconfig/versions/1624`_.
 
 .. _http://forge.typo3.org/projects/typo3v4-doc\_core\_tsconfig/versions/1624: http://forge.typo3.org/projects/typo3v4-doc_core_tsconfig/versions/1624
+
+TYPO3 6.1: `http://forge.typo3.org/projects/typo3v4-doc\_core\_tsconfig/versions/1961`_.
+
+.. _http://forge.typo3.org/projects/typo3v4-doc_core_tsconfig/versions/1961
