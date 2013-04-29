@@ -170,10 +170,10 @@ See code examples.
          *imgObjNum* +optionSplit
 
    Description
-         Here you define, which IMAGE-cObjects from the array "1,2,3,4..." in
+         Here you define, which IMAGE cObjects from the array "1,2,3,4..." in
          this object that should render the images.
 
-         "current" is set to the image-filename.
+         "current" is set to the image filename.
 
          **Example:** ::
 
@@ -391,7 +391,7 @@ See code examples.
 
    Description
          If set, the columns are not made in the table. The images are all put
-         in one row separated by a clear giffile to space them apart.
+         in one row separated by a clear gif-file to space them apart.
 
          If noRows is set, noCols will be unset. They cannot be set
          simultaneously.
@@ -470,7 +470,7 @@ See code examples.
          This will scale images not in the right size! Takes the number of
          columns into account!
 
-         **Note:** Works ONLY if IMAGE-obj is **not** GIFBUILDER!
+         **Note:** Works ONLY if the IMAGE object is **not** GIFBUILDER!
 
 
 .. container:: table-row
@@ -488,7 +488,7 @@ See code examples.
          This will scale images not in the right size! Takes the number of
          columns into account!
 
-         **Note:** Works ONLY if IMAGE-obj is **not** GIFBUILDER!
+         **Note:** Works ONLY if the IMAGE object is **not** GIFBUILDER!
 
    Default
          50% of maxW
@@ -553,68 +553,70 @@ See code examples.
          integer /stdWrap
 
    Description
-         Image Compression:
+         Set to one of the following numbers to get the according kind of image
+         compression:
 
-         0= Default
+         0 = Default (no image compression)
 
-         1= Don't change! (removes all parameters for the image\_object!)
+         1 = Do not change the image (removes all parameters except "import"
+         and its sub-properties for the image object!)
 
-         (adds gif-extension and color-reduction command)
+         *The following numbers add gif extension and color-reduction command:*
 
-         10= GIF/256
+         10 = GIF/colors unchanged (up to 256 colors)
 
-         11= GIF/128
+         11 = GIF/128 colors
 
-         12= GIF/64
+         12 = GIF/64 colors
 
-         13= GIF/32
+         13 = GIF/32 colors
 
-         14= GIF/16
+         14 = GIF/16 colors
 
-         15= GIF/8
+         15 = GIF/8 colors
 
-         (adds jpg-extension and quality command)
+         *The following numbers add jpg extension and quality command:*
 
-         20= IM: -quality 100
+         20 = JPG/quality 100
 
-         21= IM: -quality 90 <=> Photoshop 60 (JPG/Very High)
+         21 = JPG/quality 90 <=> Photoshop 60 (JPG/Very High)
 
-         22= IM: -quality 80 (JPG/High)
+         22 = JPG/quality 80 (JPG/High)
 
-         23= IM: -quality 70
+         23 = JPG/quality 70
 
-         24= IM: -quality 60 <=> Photoshop 30 (JPG/Medium)
+         24 = JPG/quality 60 <=> Photoshop 30 (JPG/Medium)
 
-         25= IM: -quality 50
+         25 = JPG/quality 50
 
-         26= IM: -quality 40 (JPG/Low)
+         26 = JPG/quality 40 (JPG/Low)
 
-         27= IM: -quality 30 <=> Photoshop 10
+         27 = JPG/quality 30 <=> Photoshop 10
 
-         28= IM: -quality 20 (JPG/Very Low)
+         28 = JPG/quality 20 (JPG/Very Low)
 
-         (adds png-extension and color-reduction command)
+         *The following numbers add png extension and color-reduction command:*
 
-         30= PNG/256
+         30 = PNG/256 colors
 
-         31= PNG/128
+         31 = PNG/128 colors
 
-         32= PNG/64
+         32 = PNG/64 colors
 
-         33= PNG/32
+         33 = PNG/32 colors
 
-         34= PNG/16
+         34 = PNG/16 colors
 
-         35= PNG/8
+         35 = PNG/8 colors
 
-         39= PNG
+         39 = PNG/colors unchanged (up to 256 colors)
 
-         The default ImageMagick quality seems to be 75. This equals Photoshop
-         quality 45. Images compressed with ImageMagick with the same visual
-         quality as a Photoshop-compressed image seem to be largely 50% greater
-         in size!
+         The default GraphicsMagick/ImageMagick quality seems to be 75. This
+         equals Photoshop quality 45. Images compressed with
+         GraphicsMagick/ImageMagick with the same visual quality as a
+         Photoshop-compressed image seem to be largely 50% greater in size!
 
-         **Note:** Works ONLY if IMAGE-obj is **not** GIFBUILDER!
+         **Note:** Works ONLY if the IMAGE object is **not** GIFBUILDER!
 
 
 .. container:: table-row
@@ -626,28 +628,29 @@ See code examples.
          integer /stdWrap
 
    Description
-         Adds these commands to the parameters for the scaling. This function
-         has no effect if "image\_compression" above is set to 1!
+         Set to one of the following numbers to get the according effect. Adds
+         the respective commands to the parameters for the scaling. This
+         function has no effect if "image\_compression" above is set to 1!
 
-         1 => "-rotate 90",
+         1 = "-rotate 90",
 
-         2 => "-rotate 270",
+         2 = "-rotate 270",
 
-         3 => "-rotate 180",
+         3 = "-rotate 180",
 
-         10 => "-colorspace GRAY",
+         10 = "-colorspace GRAY",
 
-         11 => "-sharpen 70",
+         11 = "-sharpen 70",
 
-         20 => "-normalize",
+         20 = "-normalize",
 
-         23 => "-contrast",
+         23 = "-contrast",
 
-         25 => "-gamma 1.3",
+         25 = "-gamma 1.3",
 
-         26 => "-gamma 0.8"
+         26 = "-gamma 0.8"
 
-         **Note:** Works ONLY if IMAGE-obj is **not** GIFBUILDER!
+         **Note:** Works ONLY if the IMAGE object is **not** GIFBUILDER!
 
 
 .. container:: table-row
@@ -691,7 +694,7 @@ See code examples.
          ".params" to the imgResource. In addition the output of this operation
          will always be jpg or gif!
 
-         **Note:** Works ONLY if IMAGE-obj is **not** GIFBUILDER!
+         **Note:** Works ONLY if the IMAGE object is **not** GIFBUILDER!
 
 
 .. container:: table-row

@@ -133,7 +133,7 @@ GIFBUILDER objects for each item (NO, ACT, SPC... and so on).
          "textX" and "textY" can be used for the width (X) and height (Y)
          dimension of each link.
 
-         This works by adding a WORKAREA-GifBuilderObj between each of the
+         This works by adding a WORKAREA-GifBuilder Object between each of the
          IMGMENUITEM ("subset" of a GIFBUILDER object) and this work area
          defines where the text should be printed. As such the "x,y" defines
          the offset **the next item will have** (this should be the width of

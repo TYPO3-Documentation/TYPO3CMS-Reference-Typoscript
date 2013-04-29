@@ -228,6 +228,6 @@ files that were found. ::
    page.10.renderObj = TEXT
    page.10.renderObj {
      data = file:current:size
-     wrap = <p>File size:<strong>|</strong></p>
+     wrap = <p>File size: <strong>|</strong></p>
    }
 

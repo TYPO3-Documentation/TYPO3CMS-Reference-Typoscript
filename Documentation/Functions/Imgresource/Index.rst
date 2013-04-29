@@ -102,7 +102,7 @@ imgResource.
          Since TYPO3 4.6: string /stdWrap
 
    Description
-         ImageMagick command-line:
+         GraphicsMagick/ImageMagick command-line:
 
          fx. "-rotate 90" or "-negate"
 
@@ -230,7 +230,7 @@ imgResource.
          pixels /stdWrap
 
    Description
-         Max width
+         Maximum width
 
 
 .. container:: table-row
@@ -242,7 +242,7 @@ imgResource.
          pixels /stdWrap
 
    Description
-         Max height
+         Maximum height
 
 
 .. container:: table-row
@@ -254,7 +254,7 @@ imgResource.
          pixels /stdWrap
 
    Description
-         Min width (overrules maxW/maxH)
+         Minimum width (overrules maxW/maxH)
 
 
 .. container:: table-row
@@ -266,7 +266,7 @@ imgResource.
          pixels /stdWrap
 
    Description
-         Min height (overrules maxW/maxH)
+         Minimum height (overrules maxW/maxH)
 
 
 .. container:: table-row
@@ -278,8 +278,9 @@ imgResource.
          boolean
 
    Description
-         If set, IM-command will use a stripProfile-command which shrinks the
-         generated thumbnails. See Install Tool for options and details.
+         If set, the GraphicsMagick/ImageMagick-command will use a
+         stripProfile-command which shrinks the generated thumbnails. See the
+         Install Tool for options and details.
 
          If im\_useStripProfileByDefault is set in the install tool, you can
          deactivate it by setting stripProfile=0.

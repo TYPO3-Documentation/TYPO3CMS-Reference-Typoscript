@@ -135,7 +135,7 @@ Top-level objects
 
          "**plugin**" is used for rendering of special content like boards,
          e-commerce solutions, guestbooks and so on. Normally set from
-         static\_templates. *Please see separate description below!*
+         static\_templates.
 
          "**tt\_\***", e.g. tt\_content (from "content (default)") is used to
          render content from tables.
@@ -194,7 +194,7 @@ Top-level objects
 
          "tt\_..." is normally used to define the setup of content-records. E.g.
          "tt\_content" would be used for the tt\_content-table as default. See
-         the "CONTENT"-cObject
+         the "CONTENT" cObject
 
 
 .. ###### END~OF~TABLE ######

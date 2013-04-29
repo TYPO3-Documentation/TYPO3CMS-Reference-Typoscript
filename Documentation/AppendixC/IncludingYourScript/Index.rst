@@ -92,7 +92,7 @@ Example:
 
    $content = $this->cObjGetSingle($conf['image'], $conf['image.']);
 
-This would return any IMAGE-cObject at the property "image" of the
+This would return any IMAGE cObject at the property "image" of the
 conf-array for the include-script!
 
 

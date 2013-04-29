@@ -283,7 +283,7 @@ Most of this code is executed in the PHP-script
          strings"-value, like below "tx\_myext") from this property of the page
          overrides any scripts-keys from the top-level "includeLibs" property!
 
-         The script-filenames are of the data type "resource".
+         The script filenames are of the data type "resource".
 
          **Example:** ::
 

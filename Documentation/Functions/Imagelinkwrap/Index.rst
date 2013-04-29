@@ -125,11 +125,12 @@ sample
 :ts:`imageLinkWrap.sample =` :ref:`data-type-boolean`
 
 :ts:`sample` is a switch which determines how the image processor
-(often ImageMagick) calculates the preview image. 
-If :ts:`sample` is true then ``- sample``
-is used with ImageMagick instead of ``- geometry`` to calculate the 
-preview image. ``sample`` does not use antialiasing and is therefore 
-much faster than ImageMagick's ``geometry`` procedure.
+(often GraphicsMagick or ImageMagick) calculates the preview image.
+If :ts:`sample` is true then ``- sample`` is used with
+GraphicsMagick/ImageMagick instead of ``- geometry`` to calculate
+the preview image. ``sample`` does not use antialiasing and is
+therefore much faster than the ``geometry`` procedure of
+GraphicsMagick/ImageMagick.
 
 
 alternativeTempPath

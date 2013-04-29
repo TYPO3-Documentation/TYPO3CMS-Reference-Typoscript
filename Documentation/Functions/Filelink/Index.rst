@@ -91,8 +91,8 @@ icon, size and file are rendered in the listed order.
          extension of the image file must be part of "icon\_image\_ext\_list".
 
          You can set one or two values, see the examples. If you set two
-         values, the first value will define the max width and the second one
-         the max height. The aspect ratio of the original image will be
+         values, the first value will define the maximum width and the second
+         one the maximum height. The aspect ratio of the original image will be
          preserved.
 
          **Examples:** ::

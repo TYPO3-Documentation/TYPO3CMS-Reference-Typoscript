@@ -8,8 +8,8 @@
 
 .. _gifbuilder-non-gifbuilder:
 
-NON-GifBuilderObjects
-^^^^^^^^^^^^^^^^^^^^^
+NON-GifBuilder Objects
+^^^^^^^^^^^^^^^^^^^^^^
 
 
 .. _gifbuilder-imgmap:
@@ -17,7 +17,7 @@ NON-GifBuilderObjects
 IMGMAP
 """"""
 
-This is used by the GifBuilderObj "TEXT" to create an image-map for
+This is used by the GifBuilder Object "TEXT" to create an image-map for
 the image file. This is especially used with the IMGMENU menu object.
 
 .. ### BEGIN~OF~TABLE ###
