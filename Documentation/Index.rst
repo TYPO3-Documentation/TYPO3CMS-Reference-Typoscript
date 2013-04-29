@@ -16,7 +16,7 @@ TypoScript Reference
       doc_core_tsref
 
 :Version:
-      6.1-dev
+      6.1
 
 :Language:
       en

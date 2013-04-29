@@ -22,7 +22,7 @@ TypoScript as used in TYPO3 templates (and not in TSconfig).
 For explanations about the syntax of TypoScript itself, please refer
 to the "TypoScript Syntax and In-Depth Study" manual.
 
-This version is updated for TYPO3 CMS version 6.0.
+This version is updated for TYPO3 CMS version 6.1.
 
 
 .. _what-s-new:
@@ -30,21 +30,21 @@ This version is updated for TYPO3 CMS version 6.0.
 What's new
 ^^^^^^^^^^
 
-The main changes include the new cObject FILES and the getText data
-type "file". The new HMENU property "sectionIndex.useColPos" allows
-configuration of the value for colPos. The object imgResource was
-amended by the property "treatIdAsReference". For the cObject USER the
-new property stdWrap has been appended. For the TypoScript conditions
-"=" and "!=" easy comparison against multiple values has been added.
-stdWrap now offers the properties "ifNull" and "if.isNull" to allow
-NULL value handling.
+The main changes include the new stdWrap property strPad, which allows
+to pad the input value to a certain length. The stdWrap feature
+addPageCacheTags enables you to add tags to cached pages.
+noTrimWrap.splitChar has been introduced, which now allows to control
+how noTrimWrap and optionSplit should work together. stdWrap has been
+added to config.pageTitleSeparator. For the cObject FLUIDTEMPLATE the
+properties "template" and "settings" have been added. The new config
+property "removePageCss" was amended, allowing you to remove CSS
+styles, which were added, because of a certain situation. The config
+property "disableBodyTag" has been appended, which allows to disable
+body tag creation by TYPO3 completely.
 
-In accordance with the deprecation policy for TYPO3 CMS the following
-objects and properties have been marked as removed: The content
-objects HTML, PHP_SCRIPT, PHP_SCRIPT_INT and PHP_SCRIPT_EXT, noBlur in
-menues, all config.stat* options, minifyJS, minifyCSS,
-concatenateJsAndCss, noLinkUnderline, hover, hoverStyle and
-smallFormFields, incT3Lib_htmlmail, FE_DATA and FE_TABLE.
+The system extension statictemplates and the associated menu objects
+GMENU_LAYERS, GMENU_FOLDOUT and TMENU_LAYERS experienced removal from
+the TYPO3 Core.
 
 Additionally various descriptions were improved and many smaller
 mistakes were fixed.
@@ -79,6 +79,10 @@ ersions/1454>`_
 TYPO3 6.0: `http://forge.typo3.org/projects/typo3v4-doc\_core\_tsref/v
 ersions/1623 <http://forge.typo3.org/projects/typo3v4-doc_core_tsref/v
 ersions/1623>`_
+
+TYPO3 6.1: `http://forge.typo3.org/projects/typo3v4-doc\_core\_tsref/v
+ersions/1960 <http://forge.typo3.org/projects/typo3v4-doc_core_tsref/v
+ersions/1960>`_
 
 
 .. _credits:
