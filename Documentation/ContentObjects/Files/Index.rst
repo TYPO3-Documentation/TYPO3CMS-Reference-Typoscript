@@ -211,13 +211,13 @@ Special key: "references"
 
 .. _cobj-files-examples:
 
-Example:
-""""""""
+Examples:
+"""""""""
 
-In this example, we first load files using all of the methods to load
-files explained above (using sys_file UIDs, collection UIDs, and folders).
+In this example, we first load files using several of the methods
+explained above (using sys_file UIDs, collection UIDs, and folders).
 Then we use the TEXT cObject as renderObj to output the file size of all
-files that were found. ::
+files that were found::
 
    page.10 = FILES
 
@@ -229,5 +229,27 @@ files that were found. ::
    page.10.renderObj {
      data = file:current:size
      wrap = <p>File size: <strong>|</strong></p>
+   }
+
+
+In this second example, we use "references" to get the images related
+to a given page (in this case, the current page). Each image is then
+rendered as an IMAGE cObject with some meta data coming from the file
+itself (publicUrl) or from the reference to it (title)::
+
+   page.20 = FILES
+   page.20 {
+     references {
+       table = pages
+       uid.data = tsfe:id
+       fieldName = media
+     }
+     renderObj = IMAGE
+     renderObj {
+       file.import.data = file:current:publicUrl
+       altText.data = file:current:title
+       wrap = <div class="slide">|</div>
+     }
+     stdWrap.wrap = <div class="carousel">|</div>
    }
 
