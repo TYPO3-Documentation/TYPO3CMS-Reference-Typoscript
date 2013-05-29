@@ -1139,7 +1139,7 @@ Syntax:
 
 ::
 
-   [globalString =   var1=value,  var2= *value2, var3= *value3*, ...]
+   [globalString = var1=value, var2= *value2, var3= *value3*, ...]
 
 
 Comparison:
@@ -1225,27 +1225,37 @@ Syntax:
 
 ::
 
-   [userFunc = user_match(checkLocalIP)]
+   [userFunc = user_function(argument1, argument2, ...)]
 
 
 Comparison:
 '''''''''''
 
-This call the function "user\_match" with the first parameter
-"checkLocalIP". You write that function. You decide what it checks.
-Function result is evaluated as true/false.
+This calls a user-defined function (above called "user\_function") and
+passes the provided parameters to that function (e.g. the two
+parameters "argument1" and "argument2"). You write the function; you
+decide what it checks. The function should return true or false.
+Otherwise the result is evaluated to true or false.
 
 
 Example:
 ~~~~~~~~
 
+Put the following condition in your TypoScript. ::
+
+   [userFunc = user_match(checkLocalIP, 192.168)]
+
+It will call the function "user_match" with "checkLocalIP" as first
+argument and "192.168" as second argument. Whether the condition
+returns true or false depends on what that function returns.
+
 Put this function in your AdditionalConfiguration.php
 (localconf.php) file::
 
-   function user_match($cmd) {
-           switch($cmd) {
+   function user_match($command, $subnet) {
+           switch($command) {
                    case 'checkLocalIP':
-                           if (strstr(getenv('REMOTE_ADDR'), '192.168')) {
+                           if (strstr(getenv('REMOTE_ADDR'), $subnet)) {
                                    return TRUE;
                            }
                    break;
@@ -1253,10 +1263,9 @@ Put this function in your AdditionalConfiguration.php
                            // ....
                    break;
            }
+           return FALSE;
    }
 
-This condition will return true if the remote address contains
-"192.168" - which is what your function finds out. ::
-
-   [userFunc = user_match(checkLocalIP)]
+If the remote address contains "192.168", the condition will return
+true, otherwise it will return false.
 
