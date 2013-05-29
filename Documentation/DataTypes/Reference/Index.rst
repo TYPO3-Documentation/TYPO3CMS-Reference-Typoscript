@@ -1037,9 +1037,24 @@ getText
                 that during execution of the FILES cObject, you can also reference the
                 current file with "current" as UID like "file : current : size".
 
-                These properties are available:
+                |
+
+                The following properties are available:
 
                 name, size, sha1, extension, MIME type, contents, publicUrl, localPath
+
+                |
+
+                Furthermore when manipulating references (such as images in content
+                elements or media in pages), additional properties are available (not
+                all are available all the time, it depends on the setup of *references*
+                of the FILES cObject):
+
+                title, description, link, alternative
+
+                |
+
+                See the :ref:`FILES cObject for usage examples <cobj-files-examples>`.
 
           - :dt:
                 **= fullRootLine : -1, title**
