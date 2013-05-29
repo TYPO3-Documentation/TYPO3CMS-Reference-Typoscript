@@ -3,6 +3,6 @@
 conf.py:
   project: TypoScript Reference
   copyright: 2000-2013
-  version: 6.1
-  release: 6.1
+  version: 6.2-dev
+  release: 6.2-dev
 ...
