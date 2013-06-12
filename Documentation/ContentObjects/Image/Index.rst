@@ -39,7 +39,7 @@ of the returning image (if any) and contains width, height and so on.
          params
 
    Data type
-         <IMG>-params /stdWrap
+         <IMG>-params /:ref:`stdWrap <stdwrap>`
 
 
 .. container:: table-row
@@ -67,7 +67,7 @@ of the returning image (if any) and contains width, height and so on.
          (alttext)
 
    Data type
-         string /stdWrap
+         string /:ref:`stdWrap <stdwrap>`
 
    Description
          If no alt text is specified, an empty alt text will be used.
@@ -83,7 +83,7 @@ of the returning image (if any) and contains width, height and so on.
          emptyTitleHandling
 
    Data type
-         string /stdWrap
+         string /:ref:`stdWrap <stdwrap>`
 
    Description
          Value can be "keepEmpty" to preserve an empty title attribute, or
@@ -99,7 +99,7 @@ of the returning image (if any) and contains width, height and so on.
          longdescURL
 
    Data type
-         string /stdWrap
+         string /:ref:`stdWrap <stdwrap>`
 
    Description
          "longdesc" attribute (URL pointing to document with extensive details
@@ -112,7 +112,7 @@ of the returning image (if any) and contains width, height and so on.
          linkWrap
 
    Data type
-         linkWrap /stdWrap
+         :ref:`linkWrap <data-type-linkwrap>` /:ref:`stdWrap <stdwrap>`
 
    Description
          (before ".wrap")
@@ -124,13 +124,11 @@ of the returning image (if any) and contains width, height and so on.
          imageLinkWrap
 
    Data type
-         boolean/
-
-         ->imageLinkWrap
+         boolean/ :ref:`->imageLinkWrap <imagelinkwrap>`
 
    Description
          **Note:** Only active if linkWrap is **not** set and file is
-         **not** GIFBUILDER (as it works with the original image file).
+         **not** :ref:`GIFBUILDER <gifbuilder>` (as it works with the original image file).
 
 
 .. container:: table-row
@@ -139,7 +137,7 @@ of the returning image (if any) and contains width, height and so on.
          if
 
    Data type
-         ->if
+         :ref:`->if <if>`
 
    Description
          If "if" returns false, the image is not shown!
@@ -151,7 +149,7 @@ of the returning image (if any) and contains width, height and so on.
          wrap
 
    Data type
-         wrap /stdWrap
+         :ref:`wrap <data-type-wrap>` /:ref:`stdWrap <stdwrap>`
 
    Description
          Wrap for the image tag.
@@ -163,7 +161,7 @@ of the returning image (if any) and contains width, height and so on.
          stdWrap
 
    Data type
-         ->stdWrap
+         :ref:`->stdWrap <stdwrap>`
 
 
 .. ###### END~OF~TABLE ######

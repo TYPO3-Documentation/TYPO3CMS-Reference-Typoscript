@@ -61,7 +61,7 @@ outside the main page-rendering.
          includeLibs
 
    Data type
-         *(list of resources)* /stdWrap
+         *(list of resources)* /:ref:`stdWrap <stdwrap>`
 
    Description
          **This property applies only if the object is created as USER\_INT.**
@@ -97,7 +97,7 @@ outside the main page-rendering.
          stdWrap
 
    Data type
-         ->stdWrap
+         :ref:`->stdWrap <stdwrap>`
 
 
 .. ###### END~OF~TABLE ######

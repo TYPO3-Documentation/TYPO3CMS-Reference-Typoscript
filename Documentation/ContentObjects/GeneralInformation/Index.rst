@@ -85,7 +85,7 @@ This example will show you how it works::
    }
 
 First lib.stdheader is defined. This is (and must be) a cObject! (In
-this case it is COA.)
+this case it is :ref:`COA <cobj-coa>`.)
 
 Now *lib.stdheader* is copied to *tt\_content.header.10* with the
 "<" operator. This means that an actual copy of *lib.stdheader* is

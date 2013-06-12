@@ -12,7 +12,7 @@ FLUIDTEMPLATE
 ^^^^^^^^^^^^^
 
 The TypoScript object FLUIDTEMPLATE works in a similar way to the
-regular "marker"-based TEMPLATE object. However, it does not use
+regular "marker"-based :ref:`TEMPLATE <cobj-template>` object. However, it does not use
 markers or subparts, but allows Fluid-style variables with curly
 braces.
 
@@ -32,13 +32,13 @@ work.
          template
 
    Data type
-         cObject
+         :ref:`cObject <data-type-cobject>`
 
    Description
          (Since TYPO3 6.1) Use this property to define a content object,
          which should be used as template file. It is an alternative to
          ".file"; if ".template" is set, it takes precedence. While any
-         content object can be used here, the cObject FILE might be the
+         content object can be used here, the cObject :ref:`FILE <cobj-file>` might be the
          usual choice.
 
 
@@ -48,7 +48,7 @@ work.
          file
 
    Data type
-         string /stdWrap
+         string /:ref:`stdWrap <stdwrap>`
 
    Description
          The fluid template file. It is an alternative to
@@ -61,7 +61,7 @@ work.
          layoutRootPath
 
    Data type
-         filepath /stdWrap
+         filepath /:ref:`stdWrap <stdwrap>`
 
    Description
          Sets a specific layout path; usually it is Layouts/ underneath the
@@ -74,7 +74,7 @@ work.
          partialRootPath
 
    Data type
-         filepath /stdWrap
+         filepath /:ref:`stdWrap <stdwrap>`
 
    Description
          Sets a specific partials path; usually it is Partials/ underneath the
@@ -87,7 +87,7 @@ work.
          format
 
    Data type
-         keyword /stdWrap
+         keyword /:ref:`stdWrap <stdwrap>`
 
    Description
          Sets the format of the current request.
@@ -102,7 +102,7 @@ work.
          extbase.pluginName
 
    Data type
-         string /stdWrap
+         string /:ref:`stdWrap <stdwrap>`
 
    Description
          Sets variables for initializing extbase.
@@ -114,7 +114,7 @@ work.
          extbase.controllerExtensionName
 
    Data type
-         string /stdWrap
+         string /:ref:`stdWrap <stdwrap>`
 
    Description
          Sets the extension name of the controller.
@@ -126,7 +126,7 @@ work.
          extbase.controllerName
 
    Data type
-         string /stdWrap
+         string /:ref:`stdWrap <stdwrap>`
 
    Description
          Sets the name of the controller.
@@ -138,7 +138,7 @@ work.
          extbase.controllerActionName
 
    Data type
-         string /stdWrap
+         string /:ref:`stdWrap <stdwrap>`
 
    Description
          Sets the name of the action.
@@ -197,7 +197,7 @@ work.
          stdWrap
 
    Data type
-         ->stdWrap
+         :ref:`->stdWrap <stdwrap>`
 
 
 .. ###### END~OF~TABLE ######

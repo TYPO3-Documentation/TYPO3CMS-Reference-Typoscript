@@ -25,7 +25,7 @@ register can change during the page-rendering.
          *(array of field names)*
 
    Data type
-         string /stdWrap
+         string /:ref:`stdWrap <stdwrap>`
 
    Description
          **Example:**

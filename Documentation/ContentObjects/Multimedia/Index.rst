@@ -23,7 +23,7 @@ used.
          file
 
    Data type
-         resource /stdWrap
+         :ref:`resource <data-type-resource>` /:ref:`stdWrap <stdwrap>`
 
    Description
          The multimedia file. Possible file types are:
@@ -55,7 +55,7 @@ used.
          params
 
    Data type
-         string /stdWrap
+         string /:ref:`stdWrap <stdwrap>`
 
    Description
          These are parameters for the multimedia objects. Use this to enter
@@ -95,7 +95,7 @@ used.
          width
 
    Data type
-         integer /stdWrap
+         integer /:ref:`stdWrap <stdwrap>`
 
    Description
          Width attribute of the embed tag.
@@ -112,7 +112,7 @@ used.
          height
 
    Data type
-         integer /stdWrap
+         integer /:ref:`stdWrap <stdwrap>`
 
    Description
          Height attribute of the embed tag.
@@ -129,7 +129,7 @@ used.
          stdWrap
 
    Data type
-         ->stdWrap
+         :ref:`->stdWrap <stdwrap>`
 
 
 .. ###### END~OF~TABLE ######

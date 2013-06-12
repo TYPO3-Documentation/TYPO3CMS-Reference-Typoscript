@@ -16,7 +16,7 @@ File Abstraction Layer (FAL) and is there to output information
 about files.
 
 
-**Note:** Do not mix this up with the cObject FILE; both are
+**Note:** Do not mix this up with the cObject :ref:`FILE <cobj-file>`; both are
 different cObjects.
 
 
@@ -28,7 +28,7 @@ different cObjects.
          files
 
    Data type
-         string /stdWrap
+         string /:ref:`stdWrap <stdwrap>`
 
    Description
          Comma-separated list of sys_file UIDs, which are loaded
@@ -88,7 +88,7 @@ different cObjects.
          collections
 
    Data type
-         string /stdWrap
+         string /:ref:`stdWrap <stdwrap>`
 
    Description
          Comma-separated list of sys_file_collection UIDs, which
@@ -101,7 +101,7 @@ different cObjects.
          folders
 
    Data type
-         string /stdWrap
+         string /:ref:`stdWrap <stdwrap>`
 
    Description
          Comma-separated list of combined folder identifiers which
@@ -127,7 +127,7 @@ different cObjects.
          renderObj
 
    Data type
-         cObject +optionSplit
+         :ref:`cObject <data-type-cobject>` :ref:`+optionSplit <objects-optionsplit>`
 
    Description
          The cObject used for rendering the files. It is executed
@@ -152,7 +152,7 @@ different cObjects.
          stdWrap
 
    Data type
-         ->stdWrap
+         :ref:`->stdWrap <stdwrap>`
 
 
 .. ###### END~OF~TABLE ######
@@ -174,7 +174,7 @@ Special key: "references"
          table
 
    Data type
-         string /stdWrap
+         string /:ref:`stdWrap <stdwrap>`
 
    Description
          The table name of the table having the file field.
@@ -186,7 +186,7 @@ Special key: "references"
          uid
 
    Data type
-         string /stdWrap
+         string /:ref:`stdWrap <stdwrap>`
 
    Description
          The UID of the record from which to fetch the referenced files.
@@ -198,7 +198,7 @@ Special key: "references"
          fieldName
 
    Data type
-         string /stdWrap
+         string /:ref:`stdWrap <stdwrap>`
 
    Description
          Field name of the file field in the table.
@@ -216,7 +216,7 @@ Examples:
 
 In this example, we first load files using several of the methods
 explained above (using sys_file UIDs, collection UIDs, and folders).
-Then we use the TEXT cObject as renderObj to output the file size of all
+Then we use the :ref:`TEXT <cobj-text>` cObject as renderObj to output the file size of all
 files that were found::
 
    page.10 = FILES
@@ -234,7 +234,7 @@ files that were found::
 
 In this second example, we use "references" to get the images related
 to a given page (in this case, the current page). Each image is then
-rendered as an IMAGE cObject with some meta data coming from the file
+rendered as an :ref:`IMAGE <cobj-image>` cObject with some meta data coming from the file
 itself (publicUrl) or from the reference to it (title)::
 
    page.20 = FILES

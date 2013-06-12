@@ -21,7 +21,7 @@ This object will insert a Flash player driven by JavaScript.
          file
 
    Data type
-         string /stdWrap
+         string /:ref:`stdWrap <stdwrap>`
 
    Description
          Media file or URL.
@@ -37,7 +37,7 @@ This object will insert a Flash player driven by JavaScript.
          width
 
    Data type
-         integer /stdWrap
+         integer /:ref:`stdWrap <stdwrap>`
 
    Description
          Width of the swfObject.
@@ -52,7 +52,7 @@ This object will insert a Flash player driven by JavaScript.
          height
 
    Data type
-         integer /stdWrap
+         integer /:ref:`stdWrap <stdwrap>`
 
    Description
          Height of the swfObject.
@@ -67,7 +67,7 @@ This object will insert a Flash player driven by JavaScript.
          type
 
    Data type
-         string /stdWrap
+         string /:ref:`stdWrap <stdwrap>`
 
    Description
          Sets default for different media types. E.g. "audio" or "video". If
@@ -80,7 +80,7 @@ This object will insert a Flash player driven by JavaScript.
          [type].player
 
    Data type
-         string /stdWrap
+         string /:ref:`stdWrap <stdwrap>`
 
    Description
          Location of the player.
@@ -170,7 +170,7 @@ This object will insert a Flash player driven by JavaScript.
          installUrl
 
    Data type
-         string /stdWrap
+         string /:ref:`stdWrap <stdwrap>`
 
    Description
          Specifies the URL of your express install SWF.
@@ -185,7 +185,7 @@ This object will insert a Flash player driven by JavaScript.
          forcePlayer
 
    Data type
-         string /stdWrap
+         string /:ref:`stdWrap <stdwrap>`
 
    Description
          If the file is a URL and forcePlayer is not set, the URL will be
@@ -234,7 +234,7 @@ This object will insert a Flash player driven by JavaScript.
          flashVersion
 
    Data type
-         string /stdWrap
+         string /:ref:`stdWrap <stdwrap>`
 
    Description
          Required flash version.
@@ -249,7 +249,7 @@ This object will insert a Flash player driven by JavaScript.
          alternativeContent
 
    Data type
-         stdWrap
+         :ref:`->stdWrap <stdwrap>`
 
    Description
          Alternative content.
@@ -264,7 +264,7 @@ This object will insert a Flash player driven by JavaScript.
          layout
 
    Data type
-         stdWrap
+         :ref:`->stdWrap <stdwrap>`
 
    Description
          HTML Template for the Object. ###SWFOBJECT### is replaced with the
@@ -280,7 +280,7 @@ This object will insert a Flash player driven by JavaScript.
          stdWrap
 
    Data type
-         ->stdWrap
+         :ref:`->stdWrap <stdwrap>`
 
 
 .. ###### END~OF~TABLE ######

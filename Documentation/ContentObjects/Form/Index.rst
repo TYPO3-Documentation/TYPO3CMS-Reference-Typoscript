@@ -157,7 +157,7 @@ Examples:
          data
 
    Data type
-         string /stdWrap
+         string /:ref:`stdWrap <stdwrap>`
 
    Description
          This is the data that sets up the form. See above.
@@ -250,7 +250,7 @@ Examples:
          radioWrap
 
    Data type
-         ->stdWrap
+         :ref:`->stdWrap <stdwrap>`
 
    Description
          Wraps the labels for radio buttons.
@@ -262,7 +262,7 @@ Examples:
          radioWrap.accessibilityWrap
 
    Data type
-         wrap /stdWrap
+         :ref:`wrap <data-type-wrap>` /:ref:`stdWrap <stdwrap>`
 
    Description
          Defines how radio buttons are wrapped when accessibility mode is
@@ -279,7 +279,7 @@ Examples:
          radioInputWrap
 
    Data type
-         ->stdWrap
+         :ref:`->stdWrap <stdwrap>`
 
    Description
          Wraps the input element and label of a radio button.
@@ -320,7 +320,7 @@ Examples:
          target
 
    Data type
-         target /stdWrap
+         :ref:`target <data-type-target>` /:ref:`stdWrap <stdwrap>`
 
    Description
          Default target of the form.
@@ -332,7 +332,7 @@ Examples:
          method
 
    Data type
-         form-method /stdWrap
+         form-method /:ref:`stdWrap <stdwrap>`
 
    Description
          **Example:**
@@ -349,7 +349,7 @@ Examples:
          no\_cache
 
    Data type
-         string /stdWrap
+         string /:ref:`stdWrap <stdwrap>`
 
    Description
          Default no\_cache-option.
@@ -361,7 +361,7 @@ Examples:
          noValueInsert
 
    Data type
-         boolean /stdWrap
+         boolean /:ref:`stdWrap <stdwrap>`
 
    Description
          By default values that are submitted to the same page (and thereby
@@ -382,7 +382,7 @@ Examples:
          compensateFieldWidth
 
    Data type
-         double /stdWrap
+         double /:ref:`stdWrap <stdwrap>`
 
    Description
          Overriding option to the config-value of the same name. See "CONFIG"
@@ -395,7 +395,7 @@ Examples:
          locationData
 
    Data type
-         boolean / string /stdWrap
+         boolean / string /:ref:`stdWrap <stdwrap>`
 
    Description
          If this value is true, then a hidden-field called "locationData" is
@@ -434,7 +434,7 @@ Examples:
          redirect
 
    Data type
-         string /stdWrap
+         string /:ref:`stdWrap <stdwrap>`
 
    Description
          URL to redirect to (generates the hidden field "redirect")
@@ -455,7 +455,7 @@ Examples:
          recipient
 
    Data type
-         *(list of strings)* /stdWrap
+         *(list of strings)* /:ref:`stdWrap <stdwrap>`
 
    Description
          Email recipient of the formmail content (generates the hiddenfield
@@ -471,7 +471,7 @@ Examples:
          goodMess
 
    Data type
-         string /stdWrap
+         string /:ref:`stdWrap <stdwrap>`
 
    Description
          Message for the form evaluation function in case of correctly filled
@@ -490,7 +490,7 @@ Examples:
          badMess
 
    Data type
-         string /stdWrap
+         string /:ref:`stdWrap <stdwrap>`
 
    Description
          Message for the form evaluation in case of missing required fields.
@@ -510,7 +510,7 @@ Examples:
          emailMess
 
    Data type
-         string /stdWrap
+         string /:ref:`stdWrap <stdwrap>`
 
    Description
          Message if a field evaluated to be an email address did not validate.
@@ -525,7 +525,7 @@ Examples:
          image
 
    Data type
-         ->IMAGE (cObject)
+         :ref:`->IMAGE <cobj-image>` (cObject)
 
    Description
          If this is a valid image, the submit button is rendered as this image.
@@ -567,7 +567,7 @@ Examples:
          fieldWrap
 
    Data type
-         ->stdWrap
+         :ref:`->stdWrap <stdwrap>`
 
    Description
          Field: Wraps the fields
@@ -579,7 +579,7 @@ Examples:
          labelWrap
 
    Data type
-         ->stdWrap
+         :ref:`->stdWrap <stdwrap>`
 
    Description
          Labels: Wraps the label
@@ -591,7 +591,7 @@ Examples:
          commentWrap
 
    Data type
-         ->stdWrap
+         :ref:`->stdWrap <stdwrap>`
 
    Description
          Comments: Wrap for comments IF you use ###COMMENT###
@@ -603,7 +603,7 @@ Examples:
          REQ
 
    Data type
-         boolean /stdWrap
+         boolean /:ref:`stdWrap <stdwrap>`
 
    Description
          Defines if required-fields should be checked and marked up.
@@ -615,7 +615,7 @@ Examples:
          REQ.fieldWrap
 
    Data type
-         ->stdWrap
+         :ref:`->stdWrap <stdwrap>`
 
    Description
          Field: Wraps the fields, but for required fields
@@ -630,7 +630,7 @@ Examples:
          REQ.labelWrap
 
    Data type
-         ->stdWrap
+         :ref:`->stdWrap <stdwrap>`
 
    Description
          Labels: Wraps the label, but for required fields
@@ -645,7 +645,7 @@ Examples:
          REQ.layout
 
    Data type
-         string /stdWrap
+         string /:ref:`stdWrap <stdwrap>`
 
    Description
          The same as "layout" above, but for required fields
@@ -660,7 +660,7 @@ Examples:
          COMMENT.layout
 
    Data type
-         string /stdWrap
+         string /:ref:`stdWrap <stdwrap>`
 
    Description
          Alternative layout for comments.
@@ -675,7 +675,7 @@ Examples:
          CHECK.layout
 
    Data type
-         string /stdWrap
+         string /:ref:`stdWrap <stdwrap>`
 
    Description
          Alternative layout for checkboxes
@@ -690,7 +690,7 @@ Examples:
          RADIO.layout
 
    Data type
-         string /stdWrap
+         string /:ref:`stdWrap <stdwrap>`
 
    Description
          Alternative layout for radio buttons
@@ -705,7 +705,7 @@ Examples:
          LABEL.layout
 
    Data type
-         string /stdWrap
+         string /:ref:`stdWrap <stdwrap>`
 
    Description
          Alternative layout for label types
@@ -720,7 +720,7 @@ Examples:
          stdWrap
 
    Data type
-         ->stdWrap
+         :ref:`->stdWrap <stdwrap>`
 
    Description
          Wraps the whole form (before form tag is added)
@@ -746,7 +746,7 @@ Examples:
 
          Available sub-property:
 
-         **stdWrap**, see ->stdWrap.
+         **stdWrap**, see :ref:`->stdWrap <stdwrap>`.
 
 
 .. container:: table-row
@@ -755,7 +755,7 @@ Examples:
          params
 
    Data type
-         form-element tag parameters /stdWrap
+         form-element tag parameters /:ref:`stdWrap <stdwrap>`
 
    Description
          Extra parameters to form elements.
@@ -778,7 +778,7 @@ Examples:
          wrapFieldName
 
    Data type
-         wrap /stdWrap
+         :ref:`wrap <data-type-wrap>` /:ref:`stdWrap <stdwrap>`
 
    Description
          This wraps the field names before they are applied to the form-field
@@ -797,7 +797,7 @@ Examples:
          noWrapAttr
 
    Data type
-         boolean /stdWrap
+         boolean /:ref:`stdWrap <stdwrap>`
 
    Description
          If this value is true then all wrap attributes of textarea elements
@@ -813,7 +813,7 @@ Examples:
          arrayReturnMode
 
    Data type
-         boolean /stdWrap
+         boolean /:ref:`stdWrap <stdwrap>`
 
    Description
          If set, the <form> tags and the form content will be returned in an
@@ -828,7 +828,7 @@ Examples:
          accessibility
 
    Data type
-         boolean /stdWrap
+         boolean /:ref:`stdWrap <stdwrap>`
 
    Description
          If set, then the form will be compliant with accessibility guidelines
@@ -850,7 +850,7 @@ Examples:
          formName
 
    Data type
-         string /stdWrap
+         string /:ref:`stdWrap <stdwrap>`
 
    Description
          An alternative name for this form. Default will be a unique (random)
@@ -865,7 +865,7 @@ Examples:
          fieldPrefix
 
    Data type
-         string /stdWrap
+         string /:ref:`stdWrap <stdwrap>`
 
    Description
          Alternative prefix for the name of the fields in this form. Otherwise,
@@ -880,7 +880,7 @@ Examples:
          dontMd5FieldNames
 
    Data type
-         boolean /stdWrap
+         boolean /:ref:`stdWrap <stdwrap>`
 
    Description
          The IDs generated for all elements in a form are md5 hashes from the

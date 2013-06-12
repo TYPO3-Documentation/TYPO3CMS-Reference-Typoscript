@@ -66,7 +66,7 @@ to pages.
          next
 
    Data type
-         cObject
+         :ref:`cObject <data-type-cobject>`
 
    Description
          This cObject will be wrapped by a link to the next search result. This
@@ -79,7 +79,7 @@ to pages.
          prev
 
    Data type
-         cObject
+         :ref:`cObject <data-type-cobject>`
 
    Description
          This cObject will be wrapped by a link to the prev search result. This
@@ -92,7 +92,7 @@ to pages.
          target
 
    Data type
-         target /stdWrap
+         :ref:`target <data-type-target>` /:ref:`stdWrap <stdwrap>`
 
    Description
          target til next/prev links!
@@ -104,7 +104,7 @@ to pages.
          range
 
    Data type
-         integer /stdWrap
+         integer /:ref:`stdWrap <stdwrap>`
 
    Description
          The number of results at a time!
@@ -119,7 +119,7 @@ to pages.
          renderObj
 
    Data type
-         cObject
+         :ref:`cObject <data-type-cobject>`
 
    Description
          The cObject to render the search results.
@@ -140,7 +140,7 @@ to pages.
          renderWrap
 
    Data type
-         wrap /stdWrap
+         :ref:`wrap <data-type-wrap>` /:ref:`stdWrap <stdwrap>`
 
    Description
          Wraps the code from the render object.
@@ -152,7 +152,7 @@ to pages.
          resultObj
 
    Data type
-         cObject
+         :ref:`cObject <data-type-cobject>`
 
    Description
          The cObject prepended in the search results returns rows
@@ -164,7 +164,7 @@ to pages.
          noResultObj
 
    Data type
-         cObject
+         :ref:`cObject <data-type-cobject>`
 
    Description
          The cObject used if the search results in no rows.
@@ -176,7 +176,7 @@ to pages.
          noOrderBy
 
    Data type
-         boolean /stdWrap
+         boolean /:ref:`stdWrap <stdwrap>`
 
    Description
          If this is set, the result is **not** sorted after lastUpdated, tstamp
@@ -231,7 +231,7 @@ to pages.
          wrap
 
    Data type
-         wrap /stdWrap
+         :ref:`wrap <data-type-wrap>` /:ref:`stdWrap <stdwrap>`
 
    Description
          Wrap the whole content. Executed before ".stdWrap".
@@ -243,7 +243,7 @@ to pages.
          stdWrap
 
    Data type
-         ->stdWrap
+         :ref:`->stdWrap <stdwrap>`
 
    Description
          Wrap the whole content. Executed after ".wrap".
