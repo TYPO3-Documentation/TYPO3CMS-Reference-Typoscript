@@ -13,8 +13,9 @@ MEDIA
 
 The Media content element is a dispatcher which gets its HTML output
 from one of the available render objects. By default, these render
-objects include SWFOBJECT (Flash driven by JavaScript), QTOBJECT
-(QuickTime driven by JavaScript) and Multimedia (the original
+objects include :ref:`SWFOBJECT <cobj-swfobject>` (Flash driven by
+JavaScript), :ref:`QTOBJECT <cobj-qtobject>` (QuickTime driven by
+JavaScript) and :ref:`MULTIMEDIA <cobj-multimedia>` (the original
 Multimedia object rendered with EMBED tags).
 
 The property "renderType" defines which object will be used for
@@ -29,9 +30,9 @@ renderTypes can be registered and rendered with a custom extension.
 The Media content element contains the following 3 :sup:`rd` party
 files in typo3/contrib/flashmedia:
 
-- qtobject/qtobject.js (JavaScript for QTOBJECT)
+- qtobject/qtobject.js (JavaScript for :ref:`QTOBJECT <cobj-qtobject>`)
 
-- swfobject/swfobject.js (JavaScript for SWFOBJECT)
+- swfobject/swfobject.js (JavaScript for :ref:`SWFOBJECT <cobj-swfobject>`)
 
 - swfobject/expressInstall.swf (This is displayed if the client’s Flash
   version is too low)
@@ -65,7 +66,7 @@ automatically.
          flexParams
 
    Data type
-         string /stdWrap
+         string /:ref:`stdWrap <stdwrap>`
 
    Description
          Used for Flexform configuration of the content element
@@ -80,7 +81,7 @@ automatically.
          alternativeContent
 
    Data type
-         stdWrap
+         :ref:`->stdWrap <stdwrap>`
 
    Description
          Alternative content, which is printed out, if the client deactivated
@@ -97,7 +98,7 @@ automatically.
          type
 
    Data type
-         string /stdWrap
+         string /:ref:`stdWrap <stdwrap>`
 
    Description
          Defines media type: "video" or "audio".
@@ -112,7 +113,7 @@ automatically.
          renderType
 
    Data type
-         string /stdWrap
+         string /:ref:`stdWrap <stdwrap>`
 
    Description
          Used to select the render object.
@@ -123,9 +124,9 @@ automatically.
 
          swf will be used, if renderType is "auto".
 
-         **Note:** renderType embed will be rendered by the cObject MULTIMEDIA,
-         swf by SWFOBJECT and qt by QTOBJECT. For the according documentation
-         see the sections on these cObjects.
+         **Note:** renderType embed will be rendered by the cObject :ref:`MULTIMEDIA <cobj-multimedia>`,
+         swf by :ref:`SWFOBJECT <cobj-swfobject>` and qt by :ref:`QTOBJECT <cobj-qtobject>`.
+         For the according documentation see the sections on these cObjects.
 
    Default
          auto
@@ -206,7 +207,7 @@ automatically.
          file
 
    Data type
-         string /stdWrap
+         string /:ref:`stdWrap <stdwrap>`
 
    Description
          URL of the media file.
@@ -250,7 +251,7 @@ automatically.
          forcePlayer
 
    Data type
-         string /stdWrap
+         string /:ref:`stdWrap <stdwrap>`
 
    Description
          If the file is a URL and forcePlayer is not set, the URL will be
@@ -263,7 +264,7 @@ automatically.
          width
 
    Data type
-         integer /stdWrap
+         integer /:ref:`stdWrap <stdwrap>`
 
    Description
          Media width, will be overridden by parameter.mmWidth.
@@ -275,7 +276,7 @@ automatically.
          height
 
    Data type
-         integer /stdWrap
+         integer /:ref:`stdWrap <stdwrap>`
 
    Description
          Media height, will be overridden by parameter.mmHeight.
@@ -287,7 +288,7 @@ automatically.
          stdWrap
 
    Data type
-         ->stdWrap
+         :ref:`->stdWrap <stdwrap>`
 
 
 .. ###### END~OF~TABLE ######

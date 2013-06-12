@@ -14,7 +14,7 @@ CTABLE
 Creates a table in which you can define the content of the various
 cells.
 
-A CTABLE is a little more feature packed than the simple OTABLE. It
+A CTABLE is a little more feature packed than the simple :ref:`OTABLE <cobj-otable>`. It
 features a content column and four surrounding columns, which may be
 useful for putting menus into them.
 
@@ -26,7 +26,7 @@ useful for putting menus into them.
          offset
 
    Data type
-         x,y /stdWrap
+         x,y /:ref:`stdWrap <stdwrap>`
 
    Description
          Offset from upper left corner.
@@ -41,7 +41,7 @@ useful for putting menus into them.
          tm
 
    Data type
-         ->CARRAY +TDParams /stdWrap
+         :ref:`->CARRAY <carray>` +TDParams /:ref:`stdWrap <stdwrap>`
 
    Description
          TopMenu
@@ -57,7 +57,7 @@ useful for putting menus into them.
          lm
 
    Data type
-         ->CARRAY +TDParams /stdWrap
+         :ref:`->CARRAY <carray>` +TDParams /:ref:`stdWrap <stdwrap>`
 
    Description
          LeftMenu
@@ -73,7 +73,7 @@ useful for putting menus into them.
          rm
 
    Data type
-         ->CARRAY +TDParams /stdWrap
+         :ref:`->CARRAY <carray>` +TDParams /:ref:`stdWrap <stdwrap>`
 
    Description
          RightMenu
@@ -89,7 +89,7 @@ useful for putting menus into them.
          bm
 
    Data type
-         ->CARRAY +TDParams /stdWrap
+         :ref:`->CARRAY <carray>` +TDParams /:ref:`stdWrap <stdwrap>`
 
    Description
          BottomMenu
@@ -105,7 +105,7 @@ useful for putting menus into them.
          c
 
    Data type
-         ->CARRAY +TDParams /stdWrap
+         :ref:`->CARRAY <carray>` +TDParams /:ref:`stdWrap <stdwrap>`
 
    Description
          Content-cell
@@ -121,7 +121,7 @@ useful for putting menus into them.
          cMargins
 
    Data type
-         margins /stdWrap
+         :ref:`margins <data-type-margins>` /:ref:`stdWrap <stdwrap>`
 
    Description
          Distance around the content-cell "c".
@@ -136,7 +136,7 @@ useful for putting menus into them.
          cWidth
 
    Data type
-         pixels /stdWrap
+         :ref:`pixels <data-type-pixels>` /:ref:`stdWrap <stdwrap>`
 
    Description
          Width of the content-cell "c".
@@ -148,7 +148,7 @@ useful for putting menus into them.
          tableParams
 
    Data type
-         <TABLE>-params /stdWrap
+         <TABLE>-params /:ref:`stdWrap <stdwrap>`
 
    Description
          Attributes of the table tag.
@@ -163,7 +163,7 @@ useful for putting menus into them.
          stdWrap
 
    Data type
-         ->stdWrap
+         :ref:`->stdWrap <stdwrap>`
 
 
 .. ###### END~OF~TABLE ######

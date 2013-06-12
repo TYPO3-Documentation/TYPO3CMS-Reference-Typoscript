@@ -24,7 +24,7 @@ rootlevel of the object. This is non-standard! Check the examples.
          value
 
    Data type
-         string /stdWrap
+         string /:ref:`stdWrap <stdwrap>`
 
    Description
          Text, which you want to output.
@@ -36,7 +36,7 @@ rootlevel of the object. This is non-standard! Check the examples.
          *(stdWrap properties...)*
 
    Data type
-         ->stdWrap
+         :ref:`->stdWrap <stdwrap>`
 
 
 .. ###### END~OF~TABLE ######
@@ -78,7 +78,7 @@ Now let us have a look at an extract from a more complex example::
 The above example returns the content, which was found in the field
 "bodytext" of the current record from $cObj->data-array. Here that
 shall be the current record from the database table tt_content. This
-is useful inside COA objects.
+is useful inside :ref:`COA <cobj-coa>` objects.
 
 Here is the same example in its context::
 
@@ -100,10 +100,10 @@ Here is the same example in its context::
       }
    }
 
-Here we use the cObject CONTENT to return all content elements
+Here we use the cObject :ref:`CONTENT <cobj-content>` to return all content elements
 (records from the database table "tt_content"), which are on the
 current page. (These content elements have the corresponding value in
-"irre_parentid".) They are rendered using a COA cObject, which only
+"irre_parentid".) They are rendered using a :ref:`COA <cobj-coa>` cObject, which only
 processes them, if there is content in the field "bodytext".
 
 The resulting records are each rendered using a TEXT object:

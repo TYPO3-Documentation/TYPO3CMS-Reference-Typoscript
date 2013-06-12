@@ -24,7 +24,7 @@ content by TYPO3.
          template
 
    Data type
-         cObject
+         :ref:`cObject <data-type-cobject>`
 
    Description
          This must be loaded with the template-code. If not, the object returns
@@ -196,7 +196,7 @@ content by TYPO3.
          workOnSubpart
 
    Data type
-         string /stdWrap
+         string /:ref:`stdWrap <stdwrap>`
 
    Description
          This is an optional definition of a subpart, that we decide to work
@@ -210,7 +210,7 @@ content by TYPO3.
          markerWrap
 
    Data type
-         wrap /stdWrap
+         :ref:`wrap <data-type-wrap>` /:ref:`stdWrap <stdwrap>`
 
    Description
          This is the wrap the markers are wrapped with. The default value is
@@ -230,7 +230,7 @@ content by TYPO3.
          substMarksSeparately
 
    Data type
-         boolean /stdWrap
+         boolean /:ref:`stdWrap <stdwrap>`
 
    Description
          If set, then marks are substituted in the content AFTER the
@@ -250,7 +250,7 @@ content by TYPO3.
          nonCachedSubst
 
    Data type
-         boolean /stdWrap
+         boolean /:ref:`stdWrap <stdwrap>`
 
    Description
          If set, then the substitution mode of this cObject is totally
@@ -274,7 +274,7 @@ content by TYPO3.
          stdWrap
 
    Data type
-         ->stdWrap
+         :ref:`->stdWrap <stdwrap>`
 
 
 .. ###### END~OF~TABLE ######

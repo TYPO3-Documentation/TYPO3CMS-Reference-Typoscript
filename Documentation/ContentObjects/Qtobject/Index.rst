@@ -22,7 +22,7 @@ This element inserts a QuickTime Player.
          file
 
    Data type
-         stdWrap
+         :ref:`->stdWrap <stdwrap>`
 
    Description
          Media file or URL.
@@ -68,7 +68,7 @@ This element inserts a QuickTime Player.
          alternativeContent
 
    Data type
-         stdWrap
+         :ref:`->stdWrap <stdwrap>`
 
    Description
          Alternative content.
@@ -83,7 +83,7 @@ This element inserts a QuickTime Player.
          layout
 
    Data type
-         stdWrap
+         :ref:`->stdWrap <stdwrap>`
 
    Description
          HTML Template for the object. ###QTOBJECT### is replaced with the
@@ -113,7 +113,7 @@ This element inserts a QuickTime Player.
          type
 
    Data type
-         string /stdWrap
+         string /:ref:`stdWrap <stdwrap>`
 
    Description
          Sets default for different media types. E.g. "audio" or "video". If
@@ -186,7 +186,7 @@ This element inserts a QuickTime Player.
          stdWrap
 
    Data type
-         ->stdWrap
+         :ref:`->stdWrap <stdwrap>`
 
 
 .. ###### END~OF~TABLE ######

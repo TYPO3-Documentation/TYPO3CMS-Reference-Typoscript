@@ -37,7 +37,7 @@ the records selected which has a higher value than the current.
          table
 
    Data type
-         *table name* /stdWrap
+         *table name* /:ref:`stdWrap <stdwrap>`
 
    Description
          The table, the content should come from.
@@ -55,7 +55,7 @@ the records selected which has a higher value than the current.
          renderObj
 
    Data type
-         cObject
+         :ref:`cObject <data-type-cobject>`
 
    Description
          The cObject used for rendering the records resulting from the query in
@@ -75,7 +75,7 @@ the records selected which has a higher value than the current.
          slide
 
    Data type
-         integer /stdWrap
+         integer /:ref:`stdWrap <stdwrap>`
 
    Description
          If set and no content element is found by the select command, then the
@@ -86,16 +86,16 @@ the records selected which has a higher value than the current.
 
          Use -1 in combination with collect.
 
-         **.collect:** (integer /stdWrap) If set, all content elements found
+         **.collect:** (integer /:ref:`stdWrap <stdwrap>`) If set, all content elements found
          on current and parent pages will be collected. Otherwise, the sliding
          would stop after the first hit. Set this value to the amount of levels
          to collect on, or use "-1" to collect up to the siteroot.
 
-         **.collectFuzzy:** (boolean /stdWrap) Only useful in collect mode. If
+         **.collectFuzzy:** (boolean /:ref:`stdWrap <stdwrap>`) Only useful in collect mode. If
          no content elements have been found for the specified depth in collect
          mode, traverse further until at least one match has occurred.
 
-         **.collectReverse:** (boolean /stdWrap) Change order of elements in
+         **.collectReverse:** (boolean /:ref:`stdWrap <stdwrap>`) Change order of elements in
          collect mode. If set, elements of the current page will be at the
          bottom.
 
@@ -106,7 +106,7 @@ the records selected which has a higher value than the current.
          wrap
 
    Data type
-         wrap /stdWrap
+         :ref:`wrap <data-type-wrap>` /:ref:`stdWrap <stdwrap>`
 
    Description
          Wrap the whole content-story...
@@ -118,7 +118,7 @@ the records selected which has a higher value than the current.
          stdWrap
 
    Data type
-         ->stdWrap
+         :ref:`->stdWrap <stdwrap>`
 
    Description
          (Executed after ".wrap".)

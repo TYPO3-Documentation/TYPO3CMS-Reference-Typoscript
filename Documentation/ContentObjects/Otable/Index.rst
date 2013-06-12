@@ -22,7 +22,7 @@ the table tag.
          offset
 
    Data type
-         x,y /stdWrap
+         x,y /:ref:`stdWrap <stdwrap>`
 
    Description
          Offset from upper left corner.
@@ -48,7 +48,7 @@ the table tag.
          1,2,3,4...
 
    Data type
-         cObject
+         :ref:`cObject <data-type-cobject>`
 
 
 .. container:: table-row
@@ -57,7 +57,7 @@ the table tag.
          tableParams
 
    Data type
-         <TABLE>-params /stdWrap
+         <TABLE>-params /:ref:`stdWrap <stdwrap>`
 
    Description
          Attributes of the table tag.
@@ -72,7 +72,7 @@ the table tag.
          stdWrap
 
    Data type
-         ->stdWrap
+         :ref:`->stdWrap <stdwrap>`
 
 
 .. ###### END~OF~TABLE ######

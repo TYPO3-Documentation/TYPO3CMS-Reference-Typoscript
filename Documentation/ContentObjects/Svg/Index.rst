@@ -24,7 +24,7 @@ do not have native SVG support, so that it also works in e.g. IE
          width
 
    Data type
-         integer /stdWrap
+         integer /:ref:`stdWrap <stdwrap>`
 
    Description
          Width of the SVG.
@@ -39,7 +39,7 @@ do not have native SVG support, so that it also works in e.g. IE
          height
 
    Data type
-         integer /stdWrap
+         integer /:ref:`stdWrap <stdwrap>`
 
    Description
          Height of the SVG.
@@ -54,7 +54,7 @@ do not have native SVG support, so that it also works in e.g. IE
          src
 
    Data type
-         file resource /stdWrap
+         :ref:`file resource <data-type-resource>` /:ref:`stdWrap <stdwrap>`
 
    Description
          SVG file resource.
@@ -70,7 +70,7 @@ do not have native SVG support, so that it also works in e.g. IE
          value
 
    Data type
-         XML /stdWrap
+         XML /:ref:`stdWrap <stdwrap>`
 
    Description
          Raw XML data for the SVG.
@@ -84,7 +84,7 @@ do not have native SVG support, so that it also works in e.g. IE
          noscript
 
    Data type
-         string/stdWrap
+         string /:ref:`stdWrap <stdwrap>`
 
    Description
          Output, if SVG output is not possible.
@@ -96,7 +96,7 @@ do not have native SVG support, so that it also works in e.g. IE
          stdWrap
 
    Data type
-         ->stdWrap
+         :ref:`->stdWrap <stdwrap>`
 
 
 .. ###### END~OF~TABLE ######

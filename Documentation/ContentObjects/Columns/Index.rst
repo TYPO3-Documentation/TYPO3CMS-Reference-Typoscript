@@ -22,7 +22,7 @@ tag can be defined with the according options.
          tableParams
 
    Data type
-         <TABLE>-params /stdWrap
+         <TABLE>-params /:ref:`stdWrap <stdwrap>`
 
    Description
          Attributes of the table tag.
@@ -37,7 +37,7 @@ tag can be defined with the according options.
          TDparams
 
    Data type
-         <TD>-params /stdWrap
+         <TD>-params /:ref:`stdWrap <stdwrap>`
 
    Description
          Attributes of the td tags.
@@ -52,7 +52,7 @@ tag can be defined with the according options.
          rows
 
    Data type
-         integer (Range: 2-20) /stdWrap
+         integer (Range: 2-20) /:ref:`stdWrap <stdwrap>`
 
    Description
          The number of rows in the columns.
@@ -67,7 +67,7 @@ tag can be defined with the according options.
          totalWidth
 
    Data type
-         integer /stdWrap
+         integer /:ref:`stdWrap <stdwrap>`
 
    Description
          The total-width of the columns+gaps.
@@ -79,9 +79,7 @@ tag can be defined with the according options.
          gapWidth
 
    Data type
-         integer /stdWrap
-
-         +optionSplit
+         integer /:ref:`stdWrap <stdwrap>` :ref:`+optionSplit <objects-optionsplit>`
 
    Description
          Width of the gap between columns.
@@ -95,9 +93,7 @@ tag can be defined with the according options.
          gapBgCol
 
    Data type
-         HTML-color /stdWrap
-
-         +optionSplit
+         HTML-color /:ref:`stdWrap <stdwrap>` :ref:`+optionSplit <objects-optionsplit>`
 
    Description
          Background-color for the gap-tablecells.
@@ -109,9 +105,7 @@ tag can be defined with the according options.
          gapLineThickness
 
    Data type
-         integer /stdWrap
-
-         +optionSplit
+         integer /:ref:`stdWrap <stdwrap>` :ref:`+optionSplit <objects-optionsplit>`
 
    Description
          Thickness of the divider line in the gap between cells.
@@ -125,9 +119,7 @@ tag can be defined with the according options.
          gapLineCol
 
    Data type
-         HTML-color /stdWrap
-
-         +optionSplit
+         HTML-color /:ref:`stdWrap <stdwrap>` :ref:`+optionSplit <objects-optionsplit>`
 
    Description
          Line color of the divider line.
@@ -144,7 +136,7 @@ tag can be defined with the according options.
          1,2,3,4...
 
    Data type
-         cObject
+         :ref:`cObject <data-type-cobject>`
 
    Description
          This is the content object for each column.
@@ -156,7 +148,7 @@ tag can be defined with the according options.
          after
 
    Data type
-         cObject
+         :ref:`cObject <data-type-cobject>`
 
    Description
          This is a cObject placed after the columns-table.
@@ -168,7 +160,7 @@ tag can be defined with the according options.
          if
 
    Data type
-         ->if
+         :ref:`->if <if>`
 
    Description
          If "if" returns false, the columns are not rendered!
@@ -180,7 +172,7 @@ tag can be defined with the according options.
          stdWrap
 
    Data type
-         ->stdWrap
+         :ref:`->stdWrap <stdwrap>`
 
 
 .. ###### END~OF~TABLE ######
