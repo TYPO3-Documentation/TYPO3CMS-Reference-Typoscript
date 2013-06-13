@@ -27,7 +27,7 @@ See code examples.
          text
 
    Data type
-         ->CARRAY /stdWrap
+         :ref:`->CARRAY <carray>` /:ref:`stdWrap <stdwrap>`
 
    Description
          Use this to import / generate the content, that should flow around the
@@ -40,7 +40,7 @@ See code examples.
          textPos
 
    Data type
-         integer /stdWrap
+         integer /:ref:`stdWrap <stdwrap>`
 
    Description
          Text position:
@@ -76,7 +76,7 @@ See code examples.
          textMargin
 
    Data type
-         pixels /stdWrap
+         :ref:`pixels <data-type-pixels>` /:ref:`stdWrap <stdwrap>`
 
    Description
          Margin between the image and the content.
@@ -109,7 +109,7 @@ See code examples.
          imgList
 
    Data type
-         *list of image files* /stdWrap
+         *list of image files* /:ref:`stdWrap <stdwrap>`
 
    Description
          List of images from ".imgPath".
@@ -127,7 +127,7 @@ See code examples.
          imgPath
 
    Data type
-         path /stdWrap
+         path /:ref:`stdWrap <stdwrap>`
 
    Description
          Path to the images.
@@ -143,7 +143,7 @@ See code examples.
          imgMax
 
    Data type
-         integer /stdWrap
+         integer /:ref:`stdWrap <stdwrap>`
 
    Description
          Maximum number of images.
@@ -155,7 +155,7 @@ See code examples.
          imgStart
 
    Data type
-         integer /stdWrap
+         integer /:ref:`stdWrap <stdwrap>`
 
    Description
          Start with image-number ".imgStart".
@@ -167,10 +167,10 @@ See code examples.
          imgObjNum
 
    Data type
-         *imgObjNum* +optionSplit
+         *imgObjNum* :ref:`+optionSplit <objects-optionsplit>`
 
    Description
-         Here you define, which IMAGE cObjects from the array "1,2,3,4..." in
+         Here you define, which :ref:`IMAGE <cobj-image>` cObjects from the array "1,2,3,4..." in
          this object that should render the images.
 
          "current" is set to the image filename.
@@ -189,7 +189,7 @@ See code examples.
          1,2,3,4
 
    Data type
-         ->IMAGE (cObject)
+         :ref:`->IMAGE <cobj-image>` (cObject)
 
    Description
          Rendering of the images.
@@ -197,7 +197,7 @@ See code examples.
          The register "IMAGE\_NUM" is set with the number of image being
          rendered for each rendering of an image object. Starting with zero.
 
-         The image object should not be of type GIFBUILDER!
+         The image object should not be of type :ref:`GIFBUILDER <gifbuilder>`!
 
          **Important:**
 
@@ -210,7 +210,7 @@ See code examples.
          caption
 
    Data type
-         ->CARRAY /stdWrap
+         :ref:`->CARRAY <carray>` /:ref:`stdWrap <stdwrap>`
 
    Description
          Caption.
@@ -222,7 +222,7 @@ See code examples.
          captionAlign
 
    Data type
-         align /stdWrap
+         :ref:`align <data-type-align>` /:ref:`stdWrap <stdwrap>`
 
    Description
          Caption alignment.
@@ -244,7 +244,7 @@ See code examples.
          from ".token", and every item is displayed under an image each in the
          image block.
 
-         .token = (string /stdWrap) Character to split the caption elements
+         .token = (string /:ref:`stdWrap <stdwrap>`) Character to split the caption elements
          (default is chr(10))
 
          .cObject = cObject, used to fetch the caption for the split
@@ -260,11 +260,11 @@ See code examples.
          titleText
 
    Data type
-         string /stdWrap
+         string /:ref:`stdWrap <stdwrap>`
 
    Description
          Default altText/titleText if no alternatives are provided by the
-         ->IMAGE cObjects.
+         :ref:`->IMAGE <cobj-image>` cObjects.
 
          If alttext is not specified, an empty alttext will be used.
 
@@ -275,7 +275,7 @@ See code examples.
          emptyTitleHandling
 
    Data type
-         string /stdWrap
+         string /:ref:`stdWrap <stdwrap>`
 
    Description
          Value can be "keepEmpty" to preserve an empty title attribute, or
@@ -291,10 +291,10 @@ See code examples.
          longdescURL
 
    Data type
-         string /stdWrap
+         string /:ref:`stdWrap <stdwrap>`
 
    Description
-         Default longdescURL if no alternatives are provided by the ->IMAGE
+         Default longdescURL if no alternatives are provided by the :ref:`->IMAGE <cobj-image>`
          cObjects
 
          "longdesc" attribute (URL pointing to document with extensive details
@@ -307,7 +307,7 @@ See code examples.
          border
 
    Data type
-         boolean /stdWrap
+         boolean /:ref:`stdWrap <stdwrap>`
 
    Description
          If true, a border i generated around the images.
@@ -319,7 +319,7 @@ See code examples.
          borderCol
 
    Data type
-         *HTML-color* /stdWrap
+         *HTML-color* /:ref:`stdWrap <stdwrap>`
 
    Description
          Color of the border, if ".border" is set
@@ -334,7 +334,7 @@ See code examples.
          borderThick
 
    Data type
-         pixels /stdWrap
+         :ref:`pixels <data-type-pixels>` /:ref:`stdWrap <stdwrap>`
 
    Description
          Width of the border around the pictures
@@ -349,7 +349,7 @@ See code examples.
          cols
 
    Data type
-         integer /stdWrap
+         integer /:ref:`stdWrap <stdwrap>`
 
    Description
          Number of columns.
@@ -361,7 +361,7 @@ See code examples.
          rows
 
    Data type
-         integer /stdWrap
+         integer /:ref:`stdWrap <stdwrap>`
 
    Description
          Number of rows (higher priority than "cols").
@@ -373,7 +373,7 @@ See code examples.
          noRows
 
    Data type
-         boolean /stdWrap
+         boolean /:ref:`stdWrap <stdwrap>`
 
    Description
          If set, the rows are not divided by a table-rows. Thus images are more
@@ -387,7 +387,7 @@ See code examples.
          noCols
 
    Data type
-         boolean /stdWrap
+         boolean /:ref:`stdWrap <stdwrap>`
 
    Description
          If set, the columns are not made in the table. The images are all put
@@ -403,7 +403,7 @@ See code examples.
          colSpace
 
    Data type
-         integer /stdWrap
+         integer /:ref:`stdWrap <stdwrap>`
 
    Description
          Space between columns.
@@ -418,7 +418,7 @@ See code examples.
          rowSpace
 
    Data type
-         integer /stdWrap
+         integer /:ref:`stdWrap <stdwrap>`
 
    Description
          Space between rows.
@@ -433,7 +433,7 @@ See code examples.
          spaceBelowAbove
 
    Data type
-         integer /stdWrap
+         integer /:ref:`stdWrap <stdwrap>`
 
    Description
          Pixel space between content an images when position of image is above
@@ -449,7 +449,7 @@ See code examples.
          tableStdWrap
 
    Data type
-         ->stdWrap
+         :ref:`->stdWrap <stdwrap>`
 
    Description
          This passes the final <table> code for the image block to the stdWrap
@@ -462,7 +462,7 @@ See code examples.
          maxW
 
    Data type
-         integer /stdWrap
+         integer /:ref:`stdWrap <stdwrap>`
 
    Description
          Maximum width of the image-table.
@@ -470,7 +470,7 @@ See code examples.
          This will scale images not in the right size! Takes the number of
          columns into account!
 
-         **Note:** Works ONLY if the IMAGE object is **not** GIFBUILDER!
+         **Note:** Works ONLY if the :ref:`IMAGE <cobj-image>` object is **not** :ref:`GIFBUILDER <gifbuilder>`!
 
 
 .. container:: table-row
@@ -479,7 +479,7 @@ See code examples.
          maxWInText
 
    Data type
-         integer /stdWrap
+         integer /:ref:`stdWrap <stdwrap>`
 
    Description
          Maximum width of the image-table, if the text is wrapped around the
@@ -488,7 +488,7 @@ See code examples.
          This will scale images not in the right size! Takes the number of
          columns into account!
 
-         **Note:** Works ONLY if the IMAGE object is **not** GIFBUILDER!
+         **Note:** Works ONLY if the :ref:`IMAGE <cobj-image>` object is **not** :ref:`GIFBUILDER <gifbuilder>`!
 
    Default
          50% of maxW
@@ -500,7 +500,7 @@ See code examples.
          equalH
 
    Data type
-         integer /stdWrap
+         integer /:ref:`stdWrap <stdwrap>`
 
    Description
          If this value is greater than zero, it will secure that images in a
@@ -512,7 +512,7 @@ See code examples.
          totalWidth.
 
          Please note that this value will override the properties "width",
-         "maxH", "maxW", "minW", "minH" of the IMAGE objects generating the
+         "maxH", "maxW", "minW", "minH" of the :ref:`IMAGE <cobj-image>` objects generating the
          images. Furthermore it will override the "noRows"-property and
          generate a table with no columns instead!
 
@@ -523,7 +523,7 @@ See code examples.
          colRelations
 
    Data type
-         string /stdWrap
+         string /:ref:`stdWrap <stdwrap>`
 
    Description
          This value defines the width-relations of the images in the columns of
@@ -550,7 +550,7 @@ See code examples.
          image\_compression
 
    Data type
-         integer /stdWrap
+         integer /:ref:`stdWrap <stdwrap>`
 
    Description
          Set to one of the following numbers to get the according kind of image
@@ -616,7 +616,7 @@ See code examples.
          GraphicsMagick/ImageMagick with the same visual quality as a
          Photoshop-compressed image seem to be largely 50% greater in size!
 
-         **Note:** Works ONLY if the IMAGE object is **not** GIFBUILDER!
+         **Note:** Works ONLY if the :ref:`IMAGE <cobj-image>` object is **not** :ref:`GIFBUILDER <gifbuilder>`!
 
 
 .. container:: table-row
@@ -625,7 +625,7 @@ See code examples.
          image\_effects
 
    Data type
-         integer /stdWrap
+         integer /:ref:`stdWrap <stdwrap>`
 
    Description
          Set to one of the following numbers to get the according effect. Adds
@@ -650,7 +650,7 @@ See code examples.
 
          26 = "-gamma 0.8"
 
-         **Note:** Works ONLY if the IMAGE object is **not** GIFBUILDER!
+         **Note:** Works ONLY if the :ref:`IMAGE <cobj-image>` object is **not** :ref:`GIFBUILDER <gifbuilder>`!
 
 
 .. container:: table-row
@@ -661,7 +661,7 @@ See code examples.
    Data type
          Array
 
-         \+ .key /stdWrap
+         \+ .key /:ref:`stdWrap <stdwrap>`
 
    Description
          **Frames:**
@@ -694,7 +694,7 @@ See code examples.
          ".params" to the imgResource. In addition the output of this operation
          will always be jpg or gif!
 
-         **Note:** Works ONLY if the IMAGE object is **not** GIFBUILDER!
+         **Note:** Works ONLY if the :ref:`IMAGE <cobj-image>` object is **not** :ref:`GIFBUILDER <gifbuilder>`!
 
 
 .. container:: table-row
@@ -715,7 +715,7 @@ See code examples.
          noStretchAndMarginCells
 
    Data type
-         boolean /stdWrap
+         boolean /:ref:`stdWrap <stdwrap>`
 
    Description
          If set (1), the cells used to add left and right margins plus stretch
@@ -730,7 +730,7 @@ See code examples.
          stdWrap
 
    Data type
-         ->stdWrap
+         :ref:`->stdWrap <stdwrap>`
 
 
 .. ###### END~OF~TABLE ######

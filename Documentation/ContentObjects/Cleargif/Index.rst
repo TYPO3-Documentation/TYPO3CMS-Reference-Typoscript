@@ -21,7 +21,7 @@ Inserts a transparent gif-file.
          height
 
    Data type
-         *<img>-data:height* /stdWrap
+         *<img>-data:height* /:ref:`stdWrap <stdwrap>`
 
    Description
          Height of the image.
@@ -36,7 +36,7 @@ Inserts a transparent gif-file.
          width
 
    Data type
-         *<img>-data:width* /stdWrap
+         *<img>-data:width* /:ref:`stdWrap <stdwrap>`
 
    Description
          Width of the image.
@@ -51,7 +51,7 @@ Inserts a transparent gif-file.
          wrap
 
    Data type
-         wrap /stdWrap
+         :ref:`wrap <data-type-wrap>` /:ref:`stdWrap <stdwrap>`
 
    Default
          \|<br />
@@ -63,7 +63,7 @@ Inserts a transparent gif-file.
          stdWrap
 
    Data type
-         ->stdWrap
+         :ref:`->stdWrap <stdwrap>`
 
    Description
          (Executed after ".wrap".)

@@ -18,7 +18,7 @@ It is defined as PHP function fileResource() in
 typo3/sysext/frontend/Classes/ContentObject/ContentObjectRenderer.php
 (/typo3/sysext/cms/tslib/class.tslib\_content.php).
 
-**Note:** Do not mix this up with the cObject FILES; both are
+**Note:** Do not mix this up with the cObject :ref:`FILES <cobj-files>`; both are
 different cObjects.
 
 
@@ -30,7 +30,7 @@ different cObjects.
          file
 
    Data type
-         resource /stdWrap
+         :ref:`resource <data-type-resource>` /:ref:`stdWrap <stdwrap>`
 
    Description
          The file whose content should be returned.
@@ -39,7 +39,7 @@ different cObjects.
          an image-tag. All other formats are read and inserted into the HTML
          code.
 
-         The maximum filesize of documents to be read is set to 1024 kb
+         The maximum filesize of documents to be read is set to 1024 KB
          internally!
 
 
@@ -49,7 +49,7 @@ different cObjects.
          linkWrap
 
    Data type
-         linkWrap /stdWrap
+         :ref:`linkWrap <data-type-linkwrap>` /:ref:`stdWrap <stdwrap>`
 
    Description
          (Executed before ".wrap" and ".stdWrap".)
@@ -61,7 +61,7 @@ different cObjects.
          wrap
 
    Data type
-         wrap /stdWrap
+         :ref:`wrap <data-type-wrap>` /:ref:`stdWrap <stdwrap>`
 
    Description
          (Executed after ".linkWrap" and before ".stdWrap".)
@@ -73,7 +73,7 @@ different cObjects.
          stdWrap
 
    Data type
-         ->stdWrap
+         :ref:`->stdWrap <stdwrap>`
 
    Description
          (Executed after ".linkWrap" and ".wrap".)
@@ -87,7 +87,7 @@ different cObjects.
          titleText
 
    Data type
-         string /stdWrap
+         string /:ref:`stdWrap <stdwrap>`
 
    Description
          **For <img> output only!**
@@ -101,7 +101,7 @@ different cObjects.
          emptyTitleHandling
 
    Data type
-         string /stdWrap
+         string /:ref:`stdWrap <stdwrap>`
 
    Description
          Value can be "keepEmpty" to preserve an empty title attribute, or
@@ -117,7 +117,7 @@ different cObjects.
          longdescURL
 
    Data type
-         string /stdWrap
+         string /:ref:`stdWrap <stdwrap>`
 
    Description
          **For <img> output only!**

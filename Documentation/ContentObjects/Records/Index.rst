@@ -12,8 +12,9 @@ RECORDS
 ^^^^^^^
 
 This object is meant for displaying lists of records from a variety of
-tables. Contrary to the CONTENT object, it does not allow for very
-fine selections of records (it has no "select" property)
+tables. Contrary to the :ref:`CONTENT <cobj-content>` object, it does
+not allow very fine selections of records (as it has no "select"
+property).
 
 The register-key SYS\_LASTCHANGED is updated with the tstamp-field of
 the records selected which has a higher value than the current.
@@ -31,7 +32,7 @@ with the "dontCheckPid"-option.
          source
 
    Data type
-         *records-list* /stdWrap
+         *records-list* /:ref:`stdWrap <stdwrap>`
 
    Description
          List of record-id's, optionally with prepended table-names.
@@ -47,7 +48,7 @@ with the "dontCheckPid"-option.
          tables
 
    Data type
-         *list of tables* /stdWrap
+         *list of tables* /:ref:`stdWrap <stdwrap>`
 
    Description
          List of accepted tables. If any items in the ".source"-list are not
@@ -72,14 +73,14 @@ with the "dontCheckPid"-option.
          conf.[*table name*]
 
    Data type
-         cObject
+         :ref:`cObject <data-type-cobject>`
 
    Description
          Config array which renders records from table *table name*.
 
    Default
          If this is *not* defined, the rendering of the records is done with
-         the top-level object [table name] - just like the cObject CONTENT!
+         the top-level object [table name] - just like the cObject :ref:`CONTENT <cobj-content>`!
 
 
 .. container:: table-row
@@ -88,7 +89,7 @@ with the "dontCheckPid"-option.
          dontCheckPid
 
    Data type
-         boolean /stdWrap
+         boolean /:ref:`stdWrap <stdwrap>`
 
    Description
          Normally a record cannot be selected, if its parent page (pid) is not
@@ -104,7 +105,7 @@ with the "dontCheckPid"-option.
          wrap
 
    Data type
-         wrap /stdWrap
+         :ref:`wrap <data-type-wrap>` /:ref:`stdWrap <stdwrap>`
 
    Description
          Wraps the output. Executed before ".stdWrap".
@@ -116,7 +117,7 @@ with the "dontCheckPid"-option.
          stdWrap
 
    Data type
-         ->stdWrap
+         :ref:`->stdWrap <stdwrap>`
 
    Description
          (Executed after ".wrap".)

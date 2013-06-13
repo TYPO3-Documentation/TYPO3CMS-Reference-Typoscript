@@ -16,7 +16,7 @@ stdWrap is available for the cObject itself and for the property
 "value". See the examples.
 
 **Note:** This content object was deprecated since TYPO3 4.6 and has
-been removed in TYPO3 6.0. Use the content object "TEXT" instead!
+been removed in TYPO3 6.0. Use the content object ":ref:`cobj-text`" instead!
 
 .. ### BEGIN~OF~TABLE ###
 
@@ -26,7 +26,7 @@ been removed in TYPO3 6.0. Use the content object "TEXT" instead!
          value
 
    Data type
-         HTML /stdWrap
+         HTML /:ref:`stdWrap <stdwrap>`
 
    Description
          Raw HTML code.
@@ -38,7 +38,7 @@ been removed in TYPO3 6.0. Use the content object "TEXT" instead!
          stdWrap
 
    Data type
-         ->stdWrap
+         :ref:`->stdWrap <stdwrap>`
 
    Description
          (Executed after the stdWrap for the property ".value".)
@@ -84,5 +84,5 @@ stored in the database field "title"). The header is then wrapped in
 The above example returns the content, which was found in the field
 "bodytext" of the current record from $cObj->data-array. Here that
 shall be the current record from the database table tt_content. This
-is useful inside COA objects.
+is useful inside :ref:`COA <cobj-coa>` objects.
 

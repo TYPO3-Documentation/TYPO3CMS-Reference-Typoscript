@@ -24,7 +24,7 @@ Generates hierarchical menus.
          (1 / 2 / 3 /...)
 
    Data type
-         menuObj
+         :ref:`menuObj <data-type-menuobj>`
 
    Description
          **Required!**
@@ -73,7 +73,7 @@ Generates hierarchical menus.
          entryLevel
 
    Data type
-         integer /stdWrap
+         integer /:ref:`stdWrap <stdwrap>`
 
    Description
          Defines at which level in the rootLine the menu should start.
@@ -112,7 +112,7 @@ Generates hierarchical menus.
          special.value
 
    Data type
-         *list of page-uid's* /stdWrap
+         *list of page-uid's* /:ref:`stdWrap <stdwrap>`
 
    Description
          See above
@@ -128,7 +128,7 @@ Generates hierarchical menus.
    Data type
          Until TYPO3 4.6: integer
 
-         Since TYPO3 4.7: integer /stdWrap
+         Since TYPO3 4.7: integer /:ref:`stdWrap <stdwrap>`
 
    Description
          The minimum items in the menu. If the number of pages does not reach
@@ -150,7 +150,7 @@ Generates hierarchical menus.
    Data type
          Until TYPO3 4.6: integer
 
-         Since TYPO3 4.7: integer /stdWrap
+         Since TYPO3 4.7: integer /:ref:`stdWrap <stdwrap>`
 
    Description
          The maximum items in the menu. More items will be ignored.
@@ -167,9 +167,9 @@ Generates hierarchical menus.
          begin
 
    Data type
-         Until TYPO3 4.6: integer +calc
+         Until TYPO3 4.6: integer :ref:`+calc <objects-calc>`
 
-         Since TYPO3 4.7: integer /stdWrap +calc
+         Since TYPO3 4.7: integer /:ref:`stdWrap <stdwrap>` :ref:`+calc <objects-calc>`
 
    Description
          The first item in the menu.
@@ -193,7 +193,7 @@ Generates hierarchical menus.
          excludeUidList
 
    Data type
-         list of integers /stdWrap
+         list of integers /:ref:`stdWrap <stdwrap>`
 
    Description
          This is a list of page uid's to exclude when the select statement is
@@ -250,7 +250,7 @@ Generates hierarchical menus.
          alwaysActivePIDlist
 
    Data type
-         list of integers /stdWrap
+         list of integers /:ref:`stdWrap <stdwrap>`
 
    Description
          This is a list of page UID numbers that will always be regarded as
@@ -317,7 +317,7 @@ Generates hierarchical menus.
          if
 
    Data type
-         ->if
+         :ref:`->if <if>`
 
    Description
          If "if" returns false, the menu is not generated.
@@ -331,7 +331,7 @@ Generates hierarchical menus.
          wrap
 
    Data type
-         wrap /stdWrap
+         :ref:`wrap <data-type-wrap>` /:ref:`stdWrap <stdwrap>`
 
    Description
          Wrap for the HMENU.
@@ -345,7 +345,7 @@ Generates hierarchical menus.
          stdWrap
 
    Data type
-         ->stdWrap
+         :ref:`->stdWrap <stdwrap>`
 
    Description
          (Executed after ".wrap".)
@@ -418,7 +418,7 @@ Mount pages are supported.
          value
 
    Data type
-         list of page ids /stdWrap
+         list of page ids /:ref:`stdWrap <stdwrap>`
 
    Description
          This will generate a menu of all pages with pid = 35 and pid = 56. ::
@@ -456,7 +456,7 @@ Mount pages are supported.
          value
 
    Data type
-         list of page ids /stdWrap
+         list of page ids /:ref:`stdWrap <stdwrap>`
 
    Description
          This will generate a menu with the two pages (uid=35 and uid=56)
@@ -503,7 +503,7 @@ Mount pages are supported.
          value
 
    Data type
-         list of page ids /stdWrap
+         list of page ids /:ref:`stdWrap <stdwrap>`
 
    Description
          This will generate a menu of the most recently updated pages from the
@@ -608,7 +608,7 @@ Mount pages are supported.
          maxAge
 
    Data type
-         integer +calc
+         integer :ref:`+calc <objects-calc>`
 
    Description
          Only show pages, whose update-date *at most* lies this number of
@@ -712,7 +712,7 @@ Mount pages are supported.
          range
 
    Data type
-         string /stdWrap
+         string /:ref:`stdWrap <stdwrap>`
 
    Description
          [begin-level] \| [end-level] (same way as you reference the
@@ -836,7 +836,7 @@ list from the property ".items".
          value
 
    Data type
-         int/stdWrap
+         integer /:ref:`stdWrap <stdwrap>`
 
    Description
          Default is the current page id. Seldom you might want to override this
@@ -1017,7 +1017,7 @@ Mount pages are supported.
          value
 
    Data type
-         integer /stdWrap
+         integer /:ref:`stdWrap <stdwrap>`
 
    Description
          Page for which keywords to find similar pages
@@ -1155,7 +1155,7 @@ Mount pages are supported.
          setKeywords
 
    Data type
-         string/stdWrap
+         string /:ref:`stdWrap <stdwrap>`
 
    Description
          Lets you define the keywords manually by defining them as a comma-
@@ -1246,7 +1246,7 @@ error if tried accessed (depending on site configuration).
          value
 
    Data type
-         comma list of sys\_language uids/stdWrap
+         comma list of sys\_language uids /:ref:`stdWrap <stdwrap>`
 
    Description
          The number of elements in this list determines the number of menu
@@ -1328,7 +1328,7 @@ menu items.
          file
 
    Data type
-         resource
+         :ref:`resource <data-type-resource>`
 
    Description
          Filename of the PHP file to include.

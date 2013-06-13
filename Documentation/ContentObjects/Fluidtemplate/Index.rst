@@ -12,7 +12,7 @@ FLUIDTEMPLATE
 ^^^^^^^^^^^^^
 
 The TypoScript object FLUIDTEMPLATE works in a similar way to the
-regular "marker"-based TEMPLATE object. However, it does not use
+regular "marker"-based :ref:`TEMPLATE <cobj-template>` object. However, it does not use
 markers or subparts, but allows Fluid-style variables with curly
 braces.
 
@@ -32,7 +32,7 @@ work.
          file
 
    Data type
-         string /stdWrap
+         string /:ref:`stdWrap <stdwrap>`
 
    Description
          The fluid template file.
@@ -44,7 +44,7 @@ work.
          layoutRootPath
 
    Data type
-         filepath /stdWrap
+         filepath /:ref:`stdWrap <stdwrap>`
 
    Description
          Sets a specific layout path; usually it is Layouts/ underneath the
@@ -57,7 +57,7 @@ work.
          partialRootPath
 
    Data type
-         filepath /stdWrap
+         filepath /:ref:`stdWrap <stdwrap>`
 
    Description
          Sets a specific partials path; usually it is Partials/ underneath the
@@ -70,7 +70,7 @@ work.
          format
 
    Data type
-         keyword /stdWrap
+         keyword /:ref:`stdWrap <stdwrap>`
 
    Description
          Sets the format of the current request.
@@ -85,7 +85,7 @@ work.
          extbase.pluginName
 
    Data type
-         string /stdWrap
+         string /:ref:`stdWrap <stdwrap>`
 
    Description
          Sets variables for initializing extbase.
@@ -97,7 +97,7 @@ work.
          extbase.controllerExtensionName
 
    Data type
-         string /stdWrap
+         string /:ref:`stdWrap <stdwrap>`
 
    Description
          Sets the extension name of the controller.
@@ -109,7 +109,7 @@ work.
          extbase.controllerName
 
    Data type
-         string /stdWrap
+         string /:ref:`stdWrap <stdwrap>`
 
    Description
          Sets the name of the controller.
@@ -121,7 +121,7 @@ work.
          extbase.controllerActionName
 
    Data type
-         string /stdWrap
+         string /:ref:`stdWrap <stdwrap>`
 
    Description
          Sets the name of the action.
@@ -149,7 +149,7 @@ work.
          stdWrap
 
    Data type
-         ->stdWrap
+         :ref:`->stdWrap <stdwrap>`
 
 
 .. ###### END~OF~TABLE ######

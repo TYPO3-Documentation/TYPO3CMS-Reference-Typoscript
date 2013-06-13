@@ -20,9 +20,9 @@ It has the alias COA standing for "content object array". You can also
 call it "COA" instead of COBJ\_ARRAY.
 
 You can also create this object as a COA\_INT in which case it works
-exactly like the USER\_INT object does: It's rendered non-cached! The
-COA\_INT provides a way to utilize this feature not only with USER
-cObjects but with any cObject.
+exactly like the :ref:`USER_INT <cobj-user-int>` object does: It's rendered non-cached! That
+way COA\_INT allows you not only to render :ref:`USER_INT <cobj-user-int>` objects
+non-cached, but to render *every* cObject non-cached.
 
 
 .. ### BEGIN~OF~TABLE ###
@@ -33,7 +33,7 @@ cObjects but with any cObject.
          1,2,3,4...
 
    Data type
-         cObject
+         :ref:`cObject <data-type-cobject>`
 
 
 .. container:: table-row
@@ -42,7 +42,7 @@ cObjects but with any cObject.
          if
 
    Data type
-         ->if
+         :ref:`->if <if>`
 
    Description
          If "if" returns false, the COA is **not** rendered.
@@ -54,7 +54,7 @@ cObjects but with any cObject.
          wrap
 
    Data type
-         wrap /stdWrap
+         :ref:`wrap <data-type-wrap>` /:ref:`stdWrap <stdwrap>`
 
 
 .. container:: table-row
@@ -63,7 +63,7 @@ cObjects but with any cObject.
          stdWrap
 
    Data type
-         ->stdWrap
+         :ref:`->stdWrap <stdwrap>`
 
 
 .. container:: table-row
@@ -72,7 +72,7 @@ cObjects but with any cObject.
          includeLibs
 
    Data type
-         *(list of resources)* /stdWrap
+         *(list of resources)* /:ref:`stdWrap <stdwrap>`
 
    Description
          **(This property is used only if the object is COA\_INT! See

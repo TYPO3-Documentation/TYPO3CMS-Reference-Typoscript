@@ -35,7 +35,7 @@ from the "default" property will be used.
          if
 
    Data type
-         ->if
+         :ref:`->if <if>`
 
    Description
          If "if" returns false, nothing is returned.
@@ -47,7 +47,7 @@ from the "default" property will be used.
          setCurrent
 
    Data type
-         string /stdWrap
+         string /:ref:`stdWrap <stdwrap>`
 
    Description
          Sets the "current"-value.
@@ -59,7 +59,7 @@ from the "default" property will be used.
          key
 
    Data type
-         string /stdWrap
+         string /:ref:`stdWrap <stdwrap>`
 
    Description
          The key, which determines, which cObject will be rendered. Its
@@ -84,7 +84,7 @@ from the "default" property will be used.
          *(array of cObjects)*
 
    Data type
-         cObject
+         :ref:`cObject <data-type-cobject>`
 
    Description
          Array of cObjects. Use this to define cObjects for the different
@@ -98,7 +98,7 @@ from the "default" property will be used.
          default
 
    Data type
-         cObject
+         :ref:`cObject <data-type-cobject>`
 
    Description
          Use this to define the rendering for *those* values of "key" that
@@ -111,7 +111,7 @@ from the "default" property will be used.
          stdWrap
 
    Data type
-         ->stdWrap
+         :ref:`->stdWrap <stdwrap>`
 
    Description
          stdWrap around any object that was rendered no matter what the "key"

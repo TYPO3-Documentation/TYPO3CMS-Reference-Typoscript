@@ -22,7 +22,7 @@ divider.
          lineThickness
 
    Data type
-         integer /stdWrap
+         integer /:ref:`stdWrap <stdwrap>`
 
    Description
          Range: 1-50
@@ -37,7 +37,7 @@ divider.
          lineColor
 
    Data type
-         HTML-color /stdWrap
+         HTML-color /:ref:`stdWrap <stdwrap>`
 
    Description
          The color of the ruler.
@@ -52,7 +52,7 @@ divider.
          spaceLeft
 
    Data type
-         pixels /stdWrap
+         :ref:`pixels <data-type-pixels>` /:ref:`stdWrap <stdwrap>`
 
    Description
          Space before the line (to the left).
@@ -64,7 +64,7 @@ divider.
          spaceRight
 
    Data type
-         pixels /stdWrap
+         :ref:`pixels <data-type-pixels>` /:ref:`stdWrap <stdwrap>`
 
    Description
          Space after the line (to the right).
@@ -76,7 +76,7 @@ divider.
          tableWidth
 
    Data type
-         string /stdWrap
+         string /:ref:`stdWrap <stdwrap>`
 
    Description
          Width of the ruler ("width" attribute in a table).
@@ -91,7 +91,7 @@ divider.
          stdWrap
 
    Data type
-         ->stdWrap
+         :ref:`->stdWrap <stdwrap>`
 
 
 .. ###### END~OF~TABLE ######

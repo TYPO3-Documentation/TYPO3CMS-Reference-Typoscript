@@ -44,7 +44,7 @@ The extension "feedit" needs to be installed for this to work.
          label
 
    Data type
-         string /stdWrap
+         string /:ref:`stdWrap <stdwrap>`
 
    Description
          Title for the panel. You can insert the record title with %s
@@ -145,7 +145,7 @@ The extension "feedit" needs to be installed for this to work.
          innerWrap
 
    Data type
-         wrap /stdWrap
+         :ref:`wrap <data-type-wrap>` /:ref:`stdWrap <stdwrap>`
 
    Description
          Wraps the edit panel
@@ -157,7 +157,7 @@ The extension "feedit" needs to be installed for this to work.
          outerWrap
 
    Data type
-         wrap /stdWrap
+         :ref:`wrap <data-type-wrap>` /:ref:`stdWrap <stdwrap>`
 
    Description
          Wraps the whole edit panel including the black line (if configured)
@@ -213,7 +213,7 @@ The extension "feedit" needs to be installed for this to work.
          previewBorder.color
 
    Data type
-         wrap / HTML color
+         :ref:`wrap <data-type-wrap>` / HTML color
 
    Description
          **innerWrap:** Wraps the content elements (including the icons) inside
@@ -230,7 +230,7 @@ The extension "feedit" needs to be installed for this to work.
          stdWrap
 
    Data type
-         ->stdWrap
+         :ref:`->stdWrap <stdwrap>`
 
 
 .. ###### END~OF~TABLE ######
