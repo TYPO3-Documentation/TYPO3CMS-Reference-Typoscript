@@ -15,7 +15,7 @@ This function is often added as a property to values in TypoScript.
 
 .. _stdwrap-examples:
 
-Example with the property "value" of the content object "TEXT"::
+Example with the property "value" of the content object ":ref:`cobj-text`"::
 
    10 = TEXT
    10.value = some text
@@ -107,7 +107,7 @@ value is "imported" from the field called "header" from the $cObj
    Description
          This is used to define optional language specific values.
 
-         If the global language key set by the ->config property .language is
+         If the global language key set by the :ref:`->config <config>` property .language is
          found in this array, then this value is used instead of the default
          input value to stdWrap.
 
@@ -129,7 +129,7 @@ value is "imported" from the field called "header" from the $cObj
          data
 
    Data type
-         getText
+         :ref:`data-type-gettext`
 
 
 .. container:: table-row
@@ -164,7 +164,7 @@ value is "imported" from the field called "header" from the $cObj
          the title field is returned.
 
          **Note:** $cObj->data changes depending on the context.
-         See the description for the data type "getText"/field!
+         See the description for the data type ":ref:`data-type-gettext`"/field!
 
 
 .. container:: table-row
@@ -178,7 +178,7 @@ value is "imported" from the field called "header" from the $cObj
          boolean
 
    Description
-         Sets the content to the "current"-value (see ->split)
+         Sets the content to the "current"-value (see :ref:`->split <split>`)
 
 
 .. container:: table-row
@@ -189,7 +189,7 @@ value is "imported" from the field called "header" from the $cObj
          cObject
 
    Data type
-         cObject
+         :ref:`data-type-cobject`
 
    Description
          Loads content from a content object.
@@ -203,7 +203,7 @@ value is "imported" from the field called "header" from the $cObj
          numRows
 
    Data type
-         ->numRows
+         :ref:`->numRows <numrows>`
 
    Description
          Returns the number of rows resulting from the supplied SELECT query.
@@ -217,7 +217,7 @@ value is "imported" from the field called "header" from the $cObj
          filelist
 
    Data type
-         dir /stdWrap
+         :ref:`data-type-dir` /stdWrap
 
    Description
          Reads a directory and returns a list of files.
@@ -357,7 +357,7 @@ value is "imported" from the field called "header" from the $cObj
          listNum
 
    Data type
-         integer +calc +"last" +"rand"
+         integer :ref:`+calc <objects-calc>` +"last" +"rand"
 
    Description
          Explodes the content with "," (comma) and the content is set to the
@@ -457,7 +457,7 @@ value is "imported" from the field called "header" from the $cObj
          if
 
    Data type
-         ->if
+         :ref:`->if <if>`
 
    Description
          If the if-object returns false, stdWrap returns "" immediately.
@@ -508,7 +508,7 @@ value is "imported" from the field called "header" from the $cObj
          parseFunc
 
    Data type
-         object path reference / ->parseFunc
+         object path reference / :ref:`->parseFunc <parsefunc>`
 
    Description
          Processing instructions for the content.
@@ -534,15 +534,15 @@ value is "imported" from the field called "header" from the $cObj
          HTMLparser
 
    Data type
-         boolean / ->HTMLparser
+         boolean / :ref:`->HTMLparser <htmlparser>`
 
    Description
          This object allows you to parse the HTML-content and make all kinds of
          advanced filterings on the content.
 
-         Value must be set and properties are those of ->HTMLparser.
+         Value must be set and properties are those of :ref:`->HTMLparser <htmlparser>`.
 
-         (See "Core API" for ->HTMLparser options)
+         (See "Core API" for :ref:`->HTMLparser <htmlparser>` options)
 
 
 .. container:: table-row
@@ -553,7 +553,7 @@ value is "imported" from the field called "header" from the $cObj
          split
 
    Data type
-         ->split
+         :ref:`->split <split>`
 
 
 .. container:: table-row
@@ -564,7 +564,7 @@ value is "imported" from the field called "header" from the $cObj
          replacement
 
    Data type
-         ->replacement
+         :ref:`->replacement <replacement>`
 
    Description
          (Since TYPO3 4.6) Performs an ordered search/replace on the current
@@ -675,7 +675,7 @@ value is "imported" from the field called "header" from the $cObj
          round
 
    Data type
-         ->round
+         :ref:`->round <round>`
 
    Description
          (Since TYPO3 4.6) Round the value with the selected method to the
@@ -690,7 +690,7 @@ value is "imported" from the field called "header" from the $cObj
          numberFormat
 
    Data type
-         ->numberFormat
+         :ref:`->numberFormat <numberformat>`
 
    Description
          Format a float value to any number format you need (e.g. useful for
@@ -705,7 +705,7 @@ value is "imported" from the field called "header" from the $cObj
          date
 
    Data type
-         date-conf
+         :ref:`data-type-date-conf`
 
    Description
          The content should be data-type "UNIX-time". Returns the content
@@ -715,8 +715,8 @@ value is "imported" from the field called "header" from the $cObj
 
          Properties:
 
-         **.GMT:** If set, the PHP function gmdate() will be used instead of
-         date().
+         **.GMT:** If set, the PHP function `gmdate() <http://www.php.net/gmdate>`_ will be
+         used instead of `date() <http://www.php.net/date>`_.
 
          **Example** where a timestamp is imported::
 
@@ -732,14 +732,14 @@ value is "imported" from the field called "header" from the $cObj
          strftime
 
    Data type
-         strftime-conf
+         :ref:`data-type-strftime-conf`
 
    Description
-         Exactly like "date" above. See the PHP manual (strftime) for the
-         codes, or data type "strftime-conf".
+         Exactly like "date" above. See the PHP manual (`strftime <http://www.php.net/strftime>`_) for the
+         codes, or data type ":ref:`data-type-strftime-conf`".
 
          This formatting is useful if the locale is set in advance in the
-         CONFIG object. See there.
+         :ref:`CONFIG <config>` object. See there.
 
          Properties:
 
@@ -748,8 +748,8 @@ value is "imported" from the field called "header" from the $cObj
          intelligently guessed charset from
          TYPO3\CMS\Core\Charset\CharsetConverter (t3lib\_cs).
 
-         **.GMT:** If set, the PHP function gmstrftime() will be used instead
-         of strftime().
+         **.GMT:** If set, the PHP function `gmstrftime() <http://www.php.net/gmstrftime>`_ will be used instead
+         of `strftime() <http://www.php.net/strftime>`_.
 
 
 .. container:: table-row
@@ -954,7 +954,7 @@ value is "imported" from the field called "header" from the $cObj
          boolean
 
    Description
-         Passes the content through rawurlencode()-PHP-function.
+         Passes the content through the PHP function `rawurlencode() <http://www.php.net/rawurlencode>`_.
 
 
 .. container:: table-row
@@ -968,7 +968,7 @@ value is "imported" from the field called "header" from the $cObj
          boolean
 
    Description
-         Passes the content through the PHP function htmlspecialchars().
+         Passes the content through the PHP function `htmlspecialchars() <http://www.php.net/htmlspecialchars>`_.
 
          Additional property ".preserveEntities" will preserve entities so only
          non-entity characters are affected.
@@ -999,7 +999,7 @@ value is "imported" from the field called "header" from the $cObj
          boolean
 
    Description
-         Pass the value through the PHP function nl2br(). This
+         Pass the value through the PHP function `nl2br() <http://www.php.net/nl2br>`_. This
          converts line breaks to <br /> tags.
 
 
@@ -1025,7 +1025,7 @@ value is "imported" from the field called "header" from the $cObj
          encapsLines
 
    Data type
-         ->encapsLines
+         :ref:`->encapsLines <encapslines>`
 
    Description
          Lets you split the content by chr(10) and process each line
@@ -1055,7 +1055,7 @@ value is "imported" from the field called "header" from the $cObj
          innerWrap
 
    Data type
-         wrap /stdWrap
+         :ref:`wrap <data-type-wrap>` /stdWrap
 
    Description
          Wraps the content.
@@ -1069,7 +1069,7 @@ value is "imported" from the field called "header" from the $cObj
          innerWrap2
 
    Data type
-         wrap /stdWrap
+         :ref:`wrap <data-type-wrap>` /stdWrap
 
    Description
          Same as .innerWrap (but watch the order in which they are executed).
@@ -1083,7 +1083,7 @@ value is "imported" from the field called "header" from the $cObj
          fontTag
 
    Data type
-         wrap
+         :ref:`wrap <data-type-wrap>`
 
 
 .. container:: table-row
@@ -1094,7 +1094,7 @@ value is "imported" from the field called "header" from the $cObj
          addParams
 
    Data type
-         ->addParams
+         :ref:`->addParams <addparams>`
 
    Description
          Lets you add tag parameters to the content *if* the content is a tag!
@@ -1108,7 +1108,7 @@ value is "imported" from the field called "header" from the $cObj
          textStyle
 
    Data type
-         ->textStyle
+         :ref:`->textStyle <textstyle>`
 
    Description
          Wraps the content in font-tags.
@@ -1122,7 +1122,7 @@ value is "imported" from the field called "header" from the $cObj
          tableStyle
 
    Data type
-         ->tableStyle
+         :ref:`->tableStyle <tablestyle>`
 
    Description
          Wraps content with table-tags.
@@ -1136,7 +1136,7 @@ value is "imported" from the field called "header" from the $cObj
          filelink
 
    Data type
-         ->filelink
+         :ref:`->filelink <filelink>`
 
    Description
          Used to make lists of links to files.
@@ -1150,7 +1150,7 @@ value is "imported" from the field called "header" from the $cObj
          preCObject
 
    Data type
-         cObject
+         :ref:`data-type-cobject`
 
    Description
          cObject prepended the content.
@@ -1164,7 +1164,7 @@ value is "imported" from the field called "header" from the $cObj
          postCObject
 
    Data type
-         cObject
+         :ref:`data-type-cobject`
 
    Description
          cObject appended the content.
@@ -1178,7 +1178,7 @@ value is "imported" from the field called "header" from the $cObj
          wrapAlign
 
    Data type
-         align /stdWrap
+         :ref:`align <data-type-align>` /stdWrap
 
    Description
          Wraps content with <div style=text-align:[*value*];"> \| </div>
@@ -1193,7 +1193,7 @@ value is "imported" from the field called "header" from the $cObj
          typolink
 
    Data type
-         ->typolink
+         :ref:`->typolink <typolink>`
 
    Description
          Wraps the content with a link-tag.
@@ -1260,7 +1260,7 @@ value is "imported" from the field called "header" from the $cObj
          space
 
    Data type
-         space /stdWrap
+         :ref:`space <data-type-space>` /stdWrap
 
    Description
          [spaceBefore] \| [spaceAfter]
@@ -1282,7 +1282,7 @@ value is "imported" from the field called "header" from the $cObj
          wrap
 
    Data type
-         wrap /+.splitChar
+         :ref:`wrap <data-type-wrap>` /+.splitChar
 
    Description
          .splitChar defines an alternative splitting character (default is "\|"
@@ -1318,7 +1318,7 @@ value is "imported" from the field called "header" from the $cObj
          wrap2
 
    Data type
-         wrap /+.splitChar
+         :ref:`wrap <data-type-wrap>` /+.splitChar
 
    Description
          *same as .wrap (but watch the order in which they are executed)*
@@ -1336,8 +1336,8 @@ value is "imported" from the field called "header" from the $cObj
 
    Description
          The content is parsed for pairs of curly braces. The content of the
-         curly braces is of the type getText and is substituted with the result
-         of getText.
+         curly braces is of the type :ref:`data-type-gettext` and is substituted with the result
+         of :ref:`data-type-gettext`.
 
          **Example:** ::
 
@@ -1355,7 +1355,7 @@ value is "imported" from the field called "header" from the $cObj
          prepend
 
    Data type
-         cObject
+         :ref:`data-type-cobject`
 
    Description
          cObject prepended to content (before)
@@ -1369,7 +1369,7 @@ value is "imported" from the field called "header" from the $cObj
          append
 
    Data type
-         cObject
+         :ref:`data-type-cobject`
 
    Description
          cObject appended to content (after)
@@ -1383,7 +1383,7 @@ value is "imported" from the field called "header" from the $cObj
          wrap3
 
    Data type
-         wrap /+.splitChar
+         :ref:`wrap <data-type-wrap>` /+.splitChar
 
    Description
          *same as .wrap (but watch the order in which they are executed)*
@@ -1436,7 +1436,7 @@ value is "imported" from the field called "header" from the $cObj
          outerWrap
 
    Data type
-         wrap /stdWrap
+         :ref:`wrap <data-type-wrap>` /stdWrap
 
    Description
          *Wraps the complete content*
@@ -1476,12 +1476,13 @@ value is "imported" from the field called "header" from the $cObj
 
    Description
          This wraps the input in a table with columns to the left and top that
-         offsets the content by the values of x,y. Based on the cObject OTABLE.
+         offsets the content by the values of x,y. Based on the cObject
+         :ref:`OTABLE <cobj-otable>`.
 
          **.tableParams / .tdParams** /stdWrap
 
          \- used to manipulate tableParams/tdParams (default width=99%) of the
-         offset. Default: See OTABLE.
+         offset. Default: See :ref:`OTABLE <cobj-otable>`.
 
          **.stdWrap**
 
@@ -1501,8 +1502,8 @@ value is "imported" from the field called "header" from the $cObj
    Description
          Calling a PHP function or method in a class, passing the current
          content to the function as first parameter and any properties as
-         second parameter. Please see the description of the cObject USER for
-         in-depth information.
+         second parameter. Please see the description of the cObject
+         :ref:`USER <cobj-user>` for in-depth information.
 
          **Example:**
 
@@ -1543,8 +1544,9 @@ value is "imported" from the field called "header" from the $cObj
          content to the function as first parameter and any properties as
          second parameter. The result will be rendered non-cached, outside the
          main page-rendering. Please see the description of the cObject
-         USER\_INT and the cObject PHP\_SCRIPT\_INT (which you find in the
-         appendix "PHP include scripts") for in-depth information.
+         :ref:`USER_INT <cobj-user-int>` and the cObject :ref:`PHP_SCRIPT_INT
+         <cobj-phpscript-int>` (which you find in the appendix "PHP include
+         scripts") for in-depth information.
 
          Supplied by Jens Ellerbrock
 
@@ -1639,7 +1641,7 @@ value is "imported" from the field called "header" from the $cObj
          boolean / editPanel
 
    Description
-         See cObject EDITPANEL.
+         See cObject :ref:`cobj-editpanel`.
 
 
 .. container:: table-row
