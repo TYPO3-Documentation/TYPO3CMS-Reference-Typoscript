@@ -728,6 +728,22 @@ Various options for the user affecting the core at various points.
 
             options.pageTree.altElementBrowserMountPoints = 34,123
 
+.. container:: table-row
+
+   Property
+         pageTree.excludeDoktypes
+
+   Data type
+         *(list of integers)*
+
+   Description
+         Excludes nodes (pages) with one of the defined doktypes from the
+         pagetree. Can be used for example for hiding
+         :ref:`custom doktypes <t3api:page-types>`.
+
+         **Example** ::
+
+            options.pageTree.excludeDoktypes = 254,1
 
 .. container:: table-row
 
