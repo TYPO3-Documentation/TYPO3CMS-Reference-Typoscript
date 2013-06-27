@@ -126,7 +126,7 @@ timestamp). ::
 
    5 = TEXT
    5 {
-     cache.key = mycurrenttimestamp_{page:id}_{TSFE:sys_language_uid}
+     cache.key = mycurrenttimestamp_{page:uid}_{TSFE:sys_language_uid}
      cache.key.insertData = 1
    }
 
