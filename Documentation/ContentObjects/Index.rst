@@ -18,34 +18,34 @@ Content Objects (cObject)
    :glob:
 
    GeneralInformation/Index
-   Html/Index
-   Text/Index
+   Case/Index
+   Cleargif/Index
    CoaAndCoaInt/Index
+   Columns/Index
+   Content/Index
+   Ctable/Index
+   Editpanel/Index
    File/Index
    Files/Index
+   Fluidtemplate/Index
+   Form/Index
+   Hmenu/Index
+   Hruler/Index
+   Html/Index
    Image/Index
    ImgResource/Index
-   Cleargif/Index
-   Content/Index
-   Records/Index
-   Hmenu/Index
-   Ctable/Index
-   Otable/Index
-   Columns/Index
-   Hruler/Index
    Imgtext/Index
-   Case/Index
    LoadRegister/Index
-   RestoreRegister/Index
-   Form/Index
-   Searchresult/Index
-   UserAndUserInt/Index
-   Template/Index
-   Fluidtemplate/Index
    Media/Index
-   Swfobject/Index
-   Qtobject/Index
    Multimedia/Index
+   Otable/Index
+   Qtobject/Index
+   Records/Index
+   RestoreRegister/Index
+   Searchresult/Index
    Svg/Index
-   Editpanel/Index
+   Swfobject/Index
+   Template/Index
+   Text/Index
+   UserAndUserInt/Index
 
