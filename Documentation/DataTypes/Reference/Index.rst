@@ -1119,8 +1119,9 @@ getText
                 *output the current root-line visually in HTML*
 
             :dd:
-                **debug:** Returns HTML formatted content of PHP variable defined by
-                keyword. Available keys are "rootLine", "fullRootLine", "data"
+                **debug:** Returns HTML formatted content of the PHP variable defined
+                by the keyword. Available keywords are "rootLine", "fullRootLine",
+                "data", "register" and "page".
 
           - :dd:
                 **Getting array/object elements**
