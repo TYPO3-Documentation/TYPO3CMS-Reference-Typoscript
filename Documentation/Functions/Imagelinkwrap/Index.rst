@@ -106,7 +106,7 @@ Apply image effects to the preview image.
 
 Example for effects
 """""""""""""""""""
-::
+.. code-block:: typoscript
 
    imageLinkWrap {
       effects = gamma=1.3 | sharpen=80 | solarize=70
@@ -383,7 +383,7 @@ Examples for imageLinkWrap
 
 Basic example: Create a link to the showpic script
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-::
+.. code-block:: typoscript
 
    10 = IMAGE
    10 {
@@ -407,7 +407,7 @@ Basic example: Create a link to the showpic script
 
 Basic example: Link directly to the original image
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-::
+.. code-block:: typoscript
 
    10 = IMAGE
    10 {
@@ -431,7 +431,7 @@ Basic example: Link directly to the original image
 Example: Larger display in a popup window
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-::
+.. code-block:: typoscript
 
    page = PAGE
    page.10 = IMAGE
@@ -470,7 +470,7 @@ Example: Larger display in a popup window
 
 Example: Printlink
 ~~~~~~~~~~~~~~~~~~
-::
+.. code-block:: typoscript
 
    5 = IMAGE
    5 {
@@ -502,7 +502,7 @@ Let's follow this `lightbox.ts example`__ and use `fancybox <http://fancybox.net
 
 __ https://github.com/georgringer/modernpackage/blob/master/Resources/Private/TypoScript/content/lightbox.ts
 
-::
+.. code-block:: typoscript
 
       # Add the CSS and JS files
    page {
@@ -539,7 +539,7 @@ __ http://www.interaktionsdesigner.de/2009/12/04/typo3-klickvergrosern-durch-ein
 __ http://jquery.com/
 __ http://gettopup.com/
 
-::
+.. code-block:: typoscript
 
    tt_content.image.20.1.imageLinkWrap >
    tt_content.image.20.1.imageLinkWrap = 1
