@@ -2309,7 +2309,7 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
 
    Description
          Sets the template for page renderer class
-         (TYPO3\CMS\Core\Page\PageRenderer t3lib\_PageRenderer).
+         TYPO3\CMS\Core\Page\PageRenderer (t3lib\_PageRenderer).
 
          **Example:** ::
 
