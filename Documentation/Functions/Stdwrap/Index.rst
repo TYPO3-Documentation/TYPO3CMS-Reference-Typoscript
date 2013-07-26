@@ -5,6 +5,7 @@
 
 .. include:: ../../Includes.txt
 
+.. highlight:: typoscript
 
 .. _stdwrap:
 
@@ -748,7 +749,9 @@ char
          integer
 
    Description
-         Content is set to the chr(*value*). ::
+         Content is set to the chr(*value*):
+
+         .. code-block:: php
 
             $content = chr(intval($conf['char']));
 
@@ -767,7 +770,9 @@ intval
          boolean
 
    Description
-         PHP function intval(); returns an integer. ::
+         PHP function intval(); returns an integer:
+
+         .. code-block:: php
 
             $content = intval($content);
 
@@ -852,7 +857,9 @@ date
 
    Description
          The content should be data-type "UNIX-time". Returns the content
-         formatted as a date. ::
+         formatted as a date:
+
+         .. code-block:: php
 
             $content = date($conf['date'], $content);
 
@@ -1808,7 +1815,7 @@ postUserFunc
 
          **Example:**
 
-         You can paste this example directly into a new template record. ::
+         You can paste this example directly into a new template record::
 
             page = PAGE
             page.typeNum = 0
@@ -1831,7 +1838,9 @@ postUserFunc
             }
 
          The file fileadmin/example_reverseString.php might amongst
-         other things contain::
+         other things contain:
+
+         .. code-block:: php
 
             /**
              * Custom function for data processing
