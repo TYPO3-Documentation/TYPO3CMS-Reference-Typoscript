@@ -1123,7 +1123,8 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
 
          Remember not to output anything from such an included script. **All
          content must be set into $TSFE->content.** Take a look at
-         typo3/sysext/cms/tslib/pagegen.php.
+         typo3/sysext/frontend/Classes/Page/PageGenerator.php
+         (typo3/sysext/cms/tslib/pagegen.php).
 
          **Note:** This option is ignored if ::
 
