@@ -46,7 +46,7 @@ different cObjects.
          references
 
    Data type
-         array
+         string /:ref:`stdWrap <stdwrap>` or array
 
    Description
          Provides a way to load files from a file field (of type
