@@ -66,6 +66,25 @@ of actions and thus allows multiple replacements at once.
          0
 
 
+.. container:: table-row
+
+   Property
+         useOptionSplitReplace
+
+   Data type
+         boolean /stdWrap
+
+   Description
+         (Since TYPO3 6.2) This property allows to use :ref:`objects-optionsplit`
+         for the replace property. That way the replace property can be different
+         depending on the occurrence of the string (first/middle/last part,
+         ...). This works for both normal and regular expression replacements.
+         For examples see below.
+
+   Default
+         0
+
+
 .. ###### END~OF~TABLE ######
 
 [tsref:->replacement]
@@ -73,13 +92,13 @@ of actions and thus allows multiple replacements at once.
 
 .. _replacement-examples:
 
-Example:
-""""""""
+Examples:
+"""""""""
 
 ::
 
-   20 = TEXT
-   20 {
+   10 = TEXT
+   10 {
      value = There_are_a_cat,_a_dog_and_a_tiger_in_da_hood!_Yeah!
      stdWrap.replacement {
        10 {
@@ -100,4 +119,32 @@ Example:
 
 This returns: "There are an animal, an animal and an animal around the
 block! Yeah!".
+
+
+The following examples demonstrate the use of :ref:`objects-optionsplit`:
+
+::
+
+   20 = TEXT
+   20.value = There_are_a_cat,_a_dog_and_a_tiger_in_da_hood!_Yeah!
+   20.replacement.10 {
+     search = _
+     replace = 1 || 2 || 3
+     useOptionSplitReplace = 1
+   }
+
+This returns: "There1are2a3cat,3a3dog3and3a3tiger3in3da3hood!3Yeah!"
+
+::
+
+   30 = TEXT
+   30.value = There are a cat, a dog and a tiger in da hood! Yeah!
+   30.replacement.10 {
+     search = #(a) (Cat|Dog|Tiger)#i
+     replace = ${1} tiny ${2} || ${1} midsized ${2} || ${1} big ${2}
+     useRegExp = 1
+     useOptionSplitReplace = 1
+   }
+
+This returns: "There are a tiny cat, a midsized dog and a big tiger in da hood! Yeah!"
 
