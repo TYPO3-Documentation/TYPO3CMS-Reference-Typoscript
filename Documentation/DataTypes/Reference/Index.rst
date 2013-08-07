@@ -957,7 +957,8 @@ getText
                 *get the current time formatted dd-mm-yy*
 
             :dd:
-                **date:** [date-conf]
+                **date:** [date-conf]. Can also be used without colon and date
+                configuration. Then the date will be formatted as "d/m Y".
 
           - :dt:
                 **= page : title**
@@ -968,20 +969,20 @@ getText
                 **page:** [current page record]
 
           - :dt:
-                **= current : 1**
+                **= current**
 
                 *get the current value*
 
             :dd:
-                **current: 1** (gets 'current' value)
+                **current** (gets the 'current' value)
 
           - :dt:
-                **= level : 1**
+                **= level**
 
                 *get the rootline level of the current page*
 
             :dd:
-                **level: 1** (gets the rootline level of the current page)
+                **level** (gets the rootline level of the current page)
 
           - :dt:
                 **= GP : stuff**
