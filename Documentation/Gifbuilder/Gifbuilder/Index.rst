@@ -112,7 +112,7 @@ match the basename of the main font face with an alternative font.
          files might move to other locations in extensions etc.
 
          So if you use the font file "EXT:myext/fonts/vera.ttf" or
-         "typo3/sysext/core/Resources/Private/Font/vera.ttf" both of them will
+         "typo3/sysext/install/Resources/Private/Font/vera.ttf" both of them will
          match with this configuration.
 
          **The key:**
@@ -151,7 +151,7 @@ match the basename of the main font face with an alternative font.
               123 = arial.ttf
               123 {
                 charMapConfig {
-                  fontFile = typo3/sysext/core/Resources/Private/Font/vera.ttf
+                  fontFile = typo3/sysext/install/Resources/Private/Font/vera.ttf
                   value = -65
                   fontSize = 45
                 }
@@ -161,7 +161,7 @@ match the basename of the main font face with an alternative font.
 
          This example configuration shows that GIFBUILDER TEXT objects with
          font faces matching "arial.ttf" will have a splitConfiguration that
-         uses "typo3/sysext/core/Resources/Private/Font/vera.ttf" for all
+         uses "typo3/sysext/install/Resources/Private/Font/vera.ttf" for all
          characters that fall below/equal to 65 in Unicode value.
 
 
@@ -203,7 +203,7 @@ match the basename of the main font face with an alternative font.
               123 = arial.ttf
               123 {
                 charMapConfig {
-                  fontFile = typo3/sysext/core/Resources/Private/Font/vera.ttf
+                  fontFile = typo3/sysext/install/Resources/Private/Font/vera.ttf
                   value = 48-57
                   color = green
                   xSpaceBefore = 3
