@@ -63,8 +63,8 @@ prefixed with an underscore:
          acceptable display from the plugin, but should ideally be cleared and
          moved to an external stylesheet.
 
-         This value is for all plugins read by the pagegen script when making
-         the header of the document.
+         This value is for all plugins read by the PageGenerator script when
+         making the header of the document.
 
 
 .. container:: table-row
@@ -73,13 +73,26 @@ prefixed with an underscore:
          \_DEFAULT\_PI\_VARS.[piVar-key]
 
    Data type
-         string
+         Until TYPO3 6.1: string
+
+         Since TYPO3 6.2: string /stdWrap
 
    Description
          Allows you to set default values of the piVars array which most
          plugins are using (and should use) for data exchange with themselves.
 
          This works only if the plugin calls $this->pi\_setPiVarDefaults().
+
+         (Since TYPO3 6.2) The values have stdWrap, which also works
+         recursively for multilevel keys.
+
+         **Example:** ::
+
+            plugin.tt_news._DEFAULT_PI_VARS {
+              year.stdWrap.data = date:Y
+            }
+
+         This sets the key "year" to the current year.
 
 
 .. container:: table-row
