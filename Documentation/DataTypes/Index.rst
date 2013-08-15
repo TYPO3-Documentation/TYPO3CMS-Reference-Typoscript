@@ -7,12 +7,14 @@
 
 
 .. _data-types:
+.. _data-types-reference:
 
+==========
 Data types
-----------
+==========
 
 Introduction
-^^^^^^^^^^^^
+============
 
 The values you assign to properties in TypoScript are often of a
 specific format. The following table describes these formats.
@@ -29,5 +31,39 @@ an HTML color code or comma-separated RGB-values.
    :titlesonly:
    :glob:
 
-   Reference/Index
+   Align/Index
+   Boolean/Index
+   Case/Index
+   Dateconf/Index
+   Degree/Index
+   Dir/Index
+   Functionname/Index
+   Gettext/Index
+   Graphiccolor/Index
+   Htmlcode/Index
+   Htmlcolor/Index
+   Imageextension/Index
+   Imgresource/Index
+   Integer/Index
+   Linkwrap/Index
+   List/Index
+   Margins/Index
+   Objecttypes/Index
+   Pageid/Index
+   Path/Index
+   Pixels/Index
+   Positiveinteger/Index
+   Resource/Index
+   Rotation/Index
+   Space/Index
+   Strftimeconf/Index
+   String/Index
+   Tag/Index
+   Tagdata/Index
+   Tagparams/Index
+   Target/Index
+   Unixtime/Index
+   Vhalign/Index
+   Wrap/Index
+   Xywh/Index
 
