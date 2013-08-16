@@ -6,6 +6,8 @@
 .. include:: ../../Includes.txt
 
 
+.. highlight:: typoscript
+
 .. _data-type-gettext:
 
 getText
@@ -17,303 +19,510 @@ getText
          getText
 
    Examples
-         .. For help about t3-field-list-table see
-            http://mbless.de/4us/typo3-oo2rest/06-The-%5Bfield-list-table%5D-directive/1-demo.rst.html
+         The getText data type is actually some kind of tool box allowing
+         to retrieve values from a variety of sources, like GET/POST variables,
+         registers, values up the page tree, from the database, etc.
 
-         .. t3-field-list-table::
-          :header-rows: 1
+         The general syntax is as follows::
 
-          - :dt:
-                Example
+            key:code
 
-            :dd:
-                Comment
+         where :code:`key` indicates the source we are trying to retrieve the
+         value from and :code:`code` is some form of path or pointer to the value,
+         which depends on the key used. The various keys and their possible codes
+         are described below.
 
-          - :dt:
-            :dd:
-                This returns a value from somewhere in a PHP array, as defined by the
-                type. The syntax is "type : pointer". The type is case-insensitive.
+         The :code:`code` can contain pipe characters (\|) to separate keys
+         in a multi-dimensional array. This works with :code:`gp` and :code:`tsfe`.
+         Example::
 
-          - :dt:
-               **= field : header**
+            foo = TSFE:fe_user|user|username
 
-               *get content from the $cObj->data-array[header]*
+         Spaces around the colon (:) are irrelevant. The :code:`key` is case-insensitive.
 
-            :dd:
-                **field:** [field name from the current *$cObj* ->data-array in the
-                cObject.]
+         **Getting alternative values**
 
-                As default the *$cObj* ->data-array is $GLOBALS['TSFE']->page (record
-                of the current page!)
+         By separating the value of getText with :code:`//` (double slash) you let
+         getText fetch the first value. If it appears empty ("" or zero) the
+         next value is fetched and so on. Example::
 
-                In TMENU: *$cObj* ->data is set to the page-record for each menu
-                item.
+            foo = field:header // field:title // field:uid
 
-                In CONTENT/RECORDS *$cObj* ->data is set to the actual record
+         This gets "title" if "header" is empty. If "title" is also empty it
+         gets field "uid"
 
-                In GIFBUILDER *$cObj* ->data is set to the data GIFBUILDER is
-                supplied with.
 
-          - :dt:
-                **= parameters : color**
+.. _data-type-gettext-field:
 
-                *get content from the $cObj->parameters-array[color]*
+field:
+------
 
-            :dd:
-                **parameters:** [field name from the current *$cObj* ->parameters-
-                array in the cObject.]
+**Syntax**
 
-                See ->parseFunc!
+field: [field name from the current :code:`$cObj->data` array in the cObject.]
 
-          - :dt:
-                **= register : color**
+- As default the :code:`$cObj->data` array is :code:`$GLOBALS['TSFE']->page`
+  (record of the current page!)
+- In :ref:`TMENU <tmenu>` :code:`$cObj->data` is set to the page-record for each menu
+  item.
+- In :ref:`CONTENT <cobj-content>`/:ref:`RECORDS <cobj-records>`
+  :code:`$cObj->data` is set to the actual record
+- In :ref:`GIFBUILDER <gifbuilder>` :code:`$cObj->data` is set to the data
+  :ref:`GIFBUILDER <gifbuilder>` is supplied with.
 
-                *get content from the $GLOBALS['TSFE']->register[color]*
+**Example**::
 
-            :dd:
-                **register:** [field name from the $GLOBALS['TSFE']->register]
+   foo = field : header
 
-                See cObject "LOAD\_REGISTER"!
+*gets content from $cObj->data['header']*
 
-          - :dt:
-                **= leveltitle : 1**
 
-                *get the title of the page on the first level of the rootline*
+.. _data-type-gettext-parameters:
 
-                **= leveltitle : -2 , slide**
+parameters:
+-----------
 
-                *get the title of the page on the level right below the current page
-                AND if that is not present, walt to the bottom of the rootline until
-                there's a title*
+**Syntax**
 
-                **= leveluid : 0**
+parameters: [field name from the current `$cObj->parameters` array in the cObject.]
 
-                *get the id of the root-page of the website (level zero)*
+See :ref:`parseFunc <parsefunc>`.
 
-            :dd:
-                **leveltitle, leveluid, levelmedia:** [levelTitle, uid or media in
-                rootLine, 0- , negative = from behind, " , slide" parameter forces a
-                walk to the bottom of the rootline until there's a "true" value to
-                return. Useful with levelmedia.]
 
-          - :dt:
-                **= levelfield : -1 , user\_myExtField , slide**
+**Example**::
 
-                *get the value of the user defined field "user\_myExtField" in the
-                root line (requires additional configuration in $TYPO3\_CONF\_VARS to
-                include field!)*
+   foo = parameters: color
 
-            :dd:
-                **levelfield:** Like "leveltitle" et al. but where the second
-                parameter is the rootLine field you want to fetch. Syntax: [pointer,
-                integer], [field name], ["slide"]
+*gets content from $cObj->parameters['color']*
 
-          - :dt:
-                **= global : HTTP\_COOKIE\_VARS \| some\_cookie**
 
-                *get the env variable $HTTP\_COOKIE\_VARS[some\_cookie]*
+.. _data-type-gettext-register:
 
-            :dd:
-                **global:** [GLOBAL-var, split with \| if you want to get from an
-                array! Deprecated, use GP, TSFE or getenv]
+register:
+---------
 
-          - :dt:
-                **= date : d-m-y**
+**Syntax**
 
-                *get the current time formatted dd-mm-yy*
+register: [field name from the $GLOBALS['TSFE']->register]
 
-            :dd:
-                **date:** [date-conf]. Can also be used without colon and date
-                configuration. Then the date will be formatted as "d/m Y".
+See :ref:`LOAD_REGISTER <cobj-load-register>`.
 
-          - :dt:
-                **= page : title**
 
-                *get the current page-title*
+**Example**::
 
-            :dd:
-                **page:** [current page record]
+   foo = register: color
 
-          - :dt:
-                **= current**
+*gets content from $GLOBALS['TSFE']->register['color']*
 
-                *get the current value*
 
-            :dd:
-                **current** (gets the 'current' value)
+.. _data-type-gettext-levelmedia:
+.. _data-type-gettext-leveluid:
+.. _data-type-gettext-leveltitle:
 
-          - :dt:
-                **= level**
+leveltitle, leveluid, levelmedia:
+---------------------------------
 
-                *get the rootline level of the current page*
+**Syntax**
 
-            :dd:
-                **level** (gets the rootline level of the current page)
+leveltitle, leveluid, levelmedia: [levelTitle, uid or media in
+rootLine, 0- , negative = from behind, " , slide" parameter forces a
+walk to the bottom of the rootline until there's a "true" value to
+return. Useful with levelmedia.]
 
-          - :dt:
-                **= GP : stuff**
+Returns values from up or down the page tree.
 
-                *get input value from query string, (&stuff=)*
 
-                **= GP : stuff \| key**
+**Examples**
 
-                *get input value from query string, (&stuff[key]=)*
+.. code-block:: typoscript
 
-            :dd:
-                **GP:** Value from GET or POST method. Use this instead of global
+   foo = leveltitle : 1
 
-                **GPvar: Usage of "GPvar" is deprecated. Use "GP" instead!**
+*gets the title of the page on the first level of the rootline*
 
-          - :dt:
-                **= getenv : HTTP\_REFERER**
+.. code-block:: typoscript
 
-                *get the env var HTTP\_REFERER*
+   foo = leveltitle : -2 , slide
 
-            :dd:
-                **getenv:** Value from environment variables
+*gets the title of the page on the level right below the current page
+AND if that is not present, walk to the bottom of the rootline until
+there's a title*
 
-          - :dt:
-                **= getIndpEnv : REMOTE\_ADDR**
+.. code-block:: typoscript
 
-                *get the client IP*
+   foo = leveluid : 0
 
-            :dd:
-                **getIndpEnv:** Value from
-                TYPO3\CMS\Core\Utility\GeneralUtility::getIndpEnv() (t3lib\_div::getIndpEnv())
+*gets the id of the root-page of the website (level zero)*
 
-          - :dt:
-                **= DB : tt\_content:234:header**
 
-                *get the value of the header of record with uid 234 from table
-                tt\_content*
+.. _data-type-gettext-levelfield:
 
-            :dd:
-                **DB:** Value from database, syntax is [table name] : [uid] : [field].
-                Any record from a table in TCA can be selected here. Only marked-
-                deleted records does not return a value here.
+levelfield:
+-----------
 
-          - :dt:
-                **= file : 17 : size**
+**Syntax**
 
-                *(Since TYPO3 6.0) get the file size of the file with the
-                sys\_file UID 17.*
+levelfield: Like "leveltitle" et al. but where the second
+parameter is the rootLine field you want to fetch. Syntax: [pointer,
+integer], [field name], ["slide"]
 
-            :dd:
-                **file:** syntax is [uid] : [property]. Retrieves a property from a
-                file object (FAL) by identifying it through its sys\_file UID. Note
-                that during execution of the FILES cObject, you can also reference the
-                current file with "current" as UID like "file : current : size".
 
-                |
+**Example**::
 
-                The following properties are available:
+   foo = levelfield : -1 , user_myExtField , slide
 
-                name, size, sha1, extension, MIME type, contents, publicUrl, localPath
+*gets the value of the user defined field :code:`user_myExtField` in the
+root line (requires additional configuration in :code:`$TYPO3_CONF_VARS` to
+include field!)*
 
-                |
 
-                Furthermore when manipulating references (such as images in content
-                elements or media in pages), additional properties are available (not
-                all are available all the time, it depends on the setup of *references*
-                of the FILES cObject):
+.. _data-type-gettext-date:
 
-                title, description, link, alternative
+date:
+-----
 
-                |
+**Syntax**
 
-                See the :ref:`FILES cObject for usage examples <cobj-files-examples>`.
+date: [date-conf]. Can also be used without colon and date
+configuration. Then the date will be formatted as "d/m Y".
 
-          - :dt:
-                **= fullRootLine : -1, title**
 
-                *get the title of the page right before the start of the current
-                website*
+**Example**::
 
-            :dd:
-                **fullRootLine:** syntax is [pointer, integer], [field name],
-                ["slide"]
+   foo = date : d-m-y
 
-                This property can be used to retrieve values from "above" the current
-                page's root. Take the below page tree and assume that we are on the
-                page "Here you are!". Using the "levelfield" propertydescribed above,
-                it is possible to goup only to the page "Site root", because it is the
-                root of a new (sub-)site. With "fullRootLine" it is possible to go all
-                the way up to page tree root. The numbers between square brackets
-                indicate to which page each value of *pointer* would point to::
+*gets the current time formatted dd-mm-yy*
 
-                  - Page tree root [-2]
-                    |- 1. page before [-1]
-                      |- Site root (root template here!) [0]
-                        |- Here you are! [1]
 
-                A "slide" parameter can be added just as for the "levelfield" property
-                above.
+.. _data-type-gettext-page:
 
-          - :dt:
-                **= LLL:EXT:css\_styled\_content/pi1/locallang.xlf:login.logout**
+page:
+-----
 
-                *get localized label for logout button*
+**Syntax**
 
-            :dd:
-                **LLL:** Reference to a locallang (xlf, xml or php) label. Reference
-                consists of [fileref]:[labelkey]
+page: [field in the current page record]
 
-          - :dt:
-                **= path:EXT:ie7/js/ie7-standard.js**
+**Example**::
 
-                *get path to file relative to siteroot possibly placed in an
-                extension*
+   foo = page : title
 
-            :dd:
-                **path:** path to a file, possibly placed in an extension, returns
-                empty if the file does not exist.
+*gets the current page title*
 
-          - :dt:
-                **= cObj : parentRecordNumber**
 
-                *get the number of the current cObject record*
+.. _data-type-gettext-current:
 
-            :dd:
-                **cObj:** [internal variable from list: "parentRecordNumber"]: For
-                CONTENT and RECORDS cObjects that are returned
+current:
+--------
 
-                by a select query, this returns the row number (1,2,3,...) of the
-                current cObject record.
+**Syntax**
 
-          - :dt:
-                **= debug : rootLine**
+current (gets the "current" value)
 
-                *output the current root-line visually in HTML*
+**Example**::
 
-            :dd:
-                **debug:** Returns HTML formatted content of the PHP variable defined
-                by the keyword. Available keywords are "rootLine", "fullRootLine",
-                "data", "register" and "page".
+   foo = current
 
-          - :dd:
-                **Getting array/object elements**
+*gets the current value*
 
-                You can fetch the value of an array/object by splitting it with a pipe
-                "\|".Example::
 
-                   = TSFE:fe_user|user|username
+.. _data-type-gettext-level:
 
-          - :dd:
-                **Getting more values**
+level:
+------
 
-                By separating the value of getText with "//" (double slash) you let
-                getText fetch the first value. If it appears empty ("" or zero) the
-                next value is fetched and so on. Example::
+**Syntax**
 
-                   = field:header // field:title // field:uid
+level (gets the rootline level of the current page)
 
-                This gets "title" if "header" is empty. If "title" is also empty it
-                gets field "uid"
+**Example**::
 
+   foo = level
 
-.. toctree::
-   :maxdepth: 5
-   :titlesonly:
-   :glob:
+*gets the rootline level of the current page*
 
-   Getindpenv/Index
+
+.. _data-type-gettext-gp:
+
+GP:
+---
+
+**Syntax**
+
+GP: Value from GET or POST method.
+
+.. note::
+
+   "GPvar" also exists, but is deprecated.
+
+**Examples**
+
+.. code-block:: typoscript
+
+   foo = GP : stuff
+
+*gets input value from query string &stuff=...*
+
+.. code-block:: typoscript
+
+   foo = GP : stuff | bar
+
+*gets input value from query string &stuff[bar]=...*
+
+
+.. _data-type-gettext-getenv:
+
+getenv:
+-------
+
+**Syntax**
+
+getenv: Value from environment variables
+
+**Example**::
+
+   foo = getenv : HTTP_REFERER
+
+*gets the env var HTTP\_REFERER*
+
+
+.. _data-type-gettext-getindpenv:
+
+getIndpEnv:
+-----------
+
+*getIndpEnv* returns the value of a *System Environment Variable*
+denoted by *name* regardless of server OS, CGI/MODULE version etc. The
+result is identical to the SERVER variable in most cases. This method
+should be used instead of *getEnv* to get reliable values for all
+situations. The internal processing is handled by
+:code:`TYPO3\CMS\Core\Utility\GeneralUtility::getIndpEnv()`
+
+**Syntax**::
+
+    getIndpEnv : <name>
+
+
+**Example**::
+
+   # get and output the client IP
+   page = PAGE
+   page.10 = TEXT
+   page.10.data = getIndpEnv : REMOTE_ADDR
+   page.10.htmlSpecialChars = 1
+
+
+**These names can be used with getIndpEnv**:
+
+===================== ==================================================================== ===============
+Name                  Definition                                                           Example or result
+===================== ==================================================================== ===============
+HTTP_ACCEPT_LANGUAGE  language(s) accepted by client
+HTTP_HOST             [host][:[port]]                                                      192.168.1.4:8080
+HTTP_REFERER          [scheme]://[host][:[port]][path]                                     `http://192.168.1.4:8080/typo3/32/temp/phpcheck/index.php/arg1/arg2/arg3/?arg1,arg2,arg3&p1=parameter1&p2[key]=value`
+HTTP_USER_AGENT       client user agent
+PATH_INFO             [path_info]                                                          /arg1/arg2/arg3/
+QUERY_STRING          [query]                                                              arg1,arg2,arg3&p1=parameter1&p2[key]=value
+REMOTE_ADDR           client IP
+REMOTE_HOST           client host
+REQUEST_URI           [path]?[query]                                                       /typo3/32/temp/phpcheck/index.php/arg1/arg2/arg3/?arg1,arg2,arg3&p1=parameter1&p2[key]=value
+SCRIPT_FILENAME       absolute filename of script
+SCRIPT_NAME           [path_script]                                                        /typo3/32/temp/phpcheck/[index.php]
+TYPO3_DOCUMENT_ROOT   absolute path of root of documents
+TYPO3_HOST_ONLY       [host]                                                               192.168.1.4
+TYPO3_PORT            [port]                                                               8080
+TYPO3_REQUEST_DIR     [scheme]://[host][:[port]][path_dir]
+TYPO3_REQUEST_HOST    [scheme]://[host][:[port]]
+TYPO3_REQUEST_SCRIPT  [scheme]://[host][:[port]][path_script]
+TYPO3_REQUEST_URL     [scheme]://[host][:[port]][path]?[query]
+TYPO3_REV_PROXY       TRUE if this session runs over a well known proxy
+TYPO3_SITE_SCRIPT     [script / Speaking URL] of the TYPO3 website
+TYPO3_SITE_URL        [scheme]://[host][:[port]][path_dir] of the TYPO3 website frontend
+TYPO3_SSL             TRUE if this session uses SSL/TLS (https)
+1                     Return an array with all values for debugging purposes
+===================== ==================================================================== ===============
+
+
+
+.. _data-type-gettext-tsfe:
+
+TSFE:
+-----
+
+**Syntax**
+
+TSFE: [value from the :code:`$GLOBALS['TSFE']` array, multi-dimensional]
+
+**Example**::
+
+   foo = TSFE:fe_user|user|username
+
+*gets the "username" field of the current FE user*
+
+
+.. _data-type-gettext-db:
+
+DB:
+---
+
+**Syntax**
+
+DB: Value from database, syntax is [table name] : [uid] : [field].
+Any record from a table in TCA can be selected here. Records
+marked as deleted will not return any value.
+
+**Example**::
+
+   foo = DB : tt_content:234:header
+
+*gets the value of the header field of record with uid 234 from table "tt\_content"*
+
+
+.. _data-type-gettext-file:
+
+file:
+-----
+
+*(Since TYPO3 CMS 6.0)*
+
+**Syntax**
+
+file: syntax is [uid] : [property]. Retrieves a property from a
+file object (FAL) by identifying it through its sys\_file UID. Note
+that during execution of the FILES cObject, you can also reference the
+current file with "current" as UID like "file : current : size".
+
+The following properties are available:
+
+name, size, sha1, extension, MIME type, contents, publicUrl, localPath
+
+Furthermore when manipulating references (such as images in content
+elements or media in pages), additional properties are available (not
+all are available all the time, it depends on the setup of *references*
+of the FILES cObject):
+
+title, description, link, alternative
+
+See the :ref:`FILES cObject for usage examples <cobj-files-examples>`.
+
+**Example**::
+
+   foo = file : 17 : size
+
+*gets the file size of the file with the sys\_file UID 17.*
+
+
+.. _data-type-gettext-fullrootline:
+
+fullRootLine:
+-------------
+
+**Syntax**
+
+fullRootLine: syntax is [pointer, integer], [field name], ["slide"]
+
+This property can be used to retrieve values from "above" the current
+page's root. Take the below page tree and assume that we are on the
+page "Here you are!". Using the "levelfield" propertydescribed above,
+it is possible to goup only to the page "Site root", because it is the
+root of a new (sub-)site. With "fullRootLine" it is possible to go all
+the way up to page tree root. The numbers between square brackets
+indicate to which page each value of *pointer* would point to::
+
+   - Page tree root [-2]
+    |- 1. page before [-1]
+      |- Site root (root template here!) [0]
+       |- Here you are! [1]
+
+
+A "slide" parameter can be added just as for the "levelfield" property
+above.
+
+**Example**::
+
+   foo = fullRootLine : -1, title
+
+*gets the title of the page right before the start of the current website*
+
+
+.. _data-type-gettext-lll:
+
+LLL:
+----
+
+**Syntax**
+
+LLL: Reference to a locallang (xlf, xml or php) label.
+Reference consists of [fileref]:[labelkey]
+
+**Example**::
+
+   foo = LLL:EXT:felogin/pi1/locallang.xlf:logout
+
+*gets localized label for logout button*
+
+.. _data-type-gettext-path:
+
+path:
+-----
+
+**Syntax**
+
+path: path to a file, possibly placed in an extension, returns
+empty if the file does not exist.
+
+**Example**::
+
+   foo = path:EXT:rsaauth/resources/rsaauth.js
+
+*gets path to file rsaauth.js (inside extension rsaauth) relative to siteroot*
+
+.. _data-type-gettext-cobj:
+
+cObj:
+-----
+
+**Syntax**
+
+cObj: parentRecordNumber
+
+For CONTENT and RECORDS cObjects that are returned
+by a select query, this returns the row number (1,2,3,...) of the
+current cObject record.
+
+"parentRecordNumber" is the only key available.
+
+**Example**::
+
+   foo = cObj : parentRecordNumber
+
+*gets the number of the current cObject record*
+
+.. _data-type-gettext-debug:
+
+debug:
+------
+
+**Syntax**
+
+debug: Returns HTML-formatted content of the PHP variable defined
+by the keyword. Available keywords are "rootLine", "fullRootLine",
+"data", "register" and "page".
+
+**Example**::
+
+   foo = debug : rootLine
+
+*outputs the current root-line visually in HTML*
+
+
+.. _data-type-gettext-global:
+
+global:
+-------
+
+**Syntax**
+
+global: [GLOBAL-var, split with \| if you want to get from an
+array! Deprecated, use GP, TSFE or getenv]
+
