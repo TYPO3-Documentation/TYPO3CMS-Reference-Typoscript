@@ -15,29 +15,326 @@
 .. role::   php(code)
 
 
-"CONFIG"
-^^^^^^^^
+.. _setup_config:
+
+config
+------
 
 In typo3/sysext/cms/tslib/ this is known as
 $GLOBALS['TSFE']->config['config'], thus the property "debug" below is
 accessible as $GLOBALS['TSFE']->config['config']['debug'].
 
+.. only:: html
+
+   .. contents::
+      :local:
+      :depth: 1
+
+
+Properties
+^^^^^^^^^^
+
+.. container:: ts-properties
+
+   ===================================================== =================================== ==========================
+   Property                                              Data type                           Default
+   ===================================================== =================================== ==========================
+   `absRefPrefix`_                                       string      
+   `additionalHeaders`_                                  strings divided by "\|"
+   `admPanel`_                                           boolean
+   `ATagParams`_                                         *<A>-params*
+   `baseURL`_                                            string
+   `beLoginLinkIPList\_login`_                           HTML
+   `beLoginLinkIPList\_logout`_                          HTML
+   `beLoginLinkIPList`_                                  [IP-number]
+   `cache\_clearAtMidnight`_                             boolean                             false
+   `cache\_period`_                                      int, seconds                        86400 (=24H)
+   `cache`_                                              array          
+   `compensateFieldWidth`_                               double            
+   `compressCss`_                                        boolean           
+   `compressJs`_                                         boolean           
+   `concatenateCss`_                                     boolean           
+   `concatenateJs`_                                      boolean           
+   `concatenateJsAndCss`_                                boolean                             0
+   `content\_from\_pid\_allowOutsideDomain`_             boolean           
+   `debug`_                                              boolean                       
+   `defaultGetVars`_                                     array                
+   `disableAllHeaderCode`_                               boolean                             false
+   `disableCharsetHeader`_                               boolean
+   `disableImgBorderAttr`_                               boolean
+   `disablePageExternalUrl`_                             boolean
+   `disablePrefixComment`_                               boolean           
+   `disablePreviewNotification`_                         boolean                             0
+   `doctype`_                                            string            
+   `doctypeSwitch`_                                      boolean / string           
+   `enableContentLengthHeader`_                          boolean           
+   `extTarget`_                                          target                              \_top
+   `fileTarget`_                                         target            
+   `forceTypeValue`_                                     int            
+   `frameReloadIfNotInFrameset`_                         boolean           
+   `ftu`_                                                boolean                             false
+   `headerComment`_                                      string            
+   `htmlTag\_dir`_                                       string            
+   `htmlTag\_langKey`_                                   string                              en
+   `htmlTag\_setParams`_                                 string            
+   `htmlTag\_stdWrap`_                                   stdWrap           
+   `includeLibrary`_                                     resource          
+   `incT3Lib\_htmlmail`_                                 boolean           
+   `index\_descrLgd`_                                    int                                 200
+   `index\_enable`_                                      boolean           
+   `index\_externals`_                                   boolean           
+   `index\_metatags`_                                    boolean                             true
+   `inlineStyle2TempFile`_                               boolean           
+   `intTarget`_                                          target            
+   `jumpurl\_enable`_                                    boolean                             0
+   `jumpurl\_mailto\_disable`_                           boolean                             0
+   `language\_alt`_                                      string            
+   `language`_                                           string            
+   `linkVars`_                                           list           
+   `locale\_all`_                                        string            
+   `lockFilePath`_                                       string                              fileadmin/
+   `mainScript`_                                         string                              index.php
+   `meaningfulTempFilePrefix`_                           integer  
+   `message\_page\_is\_being\_generated`_                string                  
+   `message\_preview\_workspace`_                        string            
+   `message\_preview`_                                   string            
+   `metaCharset`_                                        string                              value of ".renderCharset"
+   `minifyCSS`_                                          boolean           
+   `minifyJS`_                                           boolean           
+   `moveJsFromHeaderToFooter`_                           boolean           
+   `MP\_defaults`_                                       string            
+   `MP\_disableTypolinkClosestMPvalue`_                  boolean           
+   `MP\_mapRootPoints`_                                  list of PIDs/string           
+   `namespaces`_                                         array of strings           
+   `no\_cache`_                                          boolean           
+   `noPageTitle`_                                        integer                             0
+   `noScaleUp`_                                          boolean           
+   `notification\_email\_charset`_                       string                              utf-8
+   `notification\_email\_encoding`_                      string            
+   `notification\_email\_urlmode`_                       string            
+   `pageGenScript`_                                      resource                            typo3/sysext/cms/tslib/pagegen.php
+   `pageRendererTemplateFile`_                           string            
+   `pageTitleFirst`_                                     boolean                             0
+   `pageTitleSeparator`_                                 string                              :
+   `prefixLocalAnchors`_                                 string  keyword            
+   `removeDefaultCss`_                                   boolean           
+   `removeDefaultJS`_                                    boolean / string           
+   `renderCharset`_                                      string                              'utf-8'
+   `sendCacheHeaders\_onlyWhenLoginDeniedInBranch`_      boolean
+   `sendCacheHeaders`_                                   boolean
+   `setJS\_mouseOver`_                                   boolean
+   `setJS\_openPic`_                                     boolean
+   `simulateStaticDocuments\_addTitle`_                  int
+   `simulateStaticDocuments\_dontRedirectPathInfoError`_ boolean
+   `simulateStaticDocuments\_noTypeIfNoTitle`_           boolean
+   `simulateStaticDocuments\_pEnc\_onlyP`_               string
+   `simulateStaticDocuments\_pEnc`_                      string
+   `simulateStaticDocuments\_replacementChar`_           string
+   `simulateStaticDocuments`_                            boolean or string                   see below
+   `spamProtectEmailAddresses\_atSubst`_                 string                              (at)
+   `spamProtectEmailAddresses\_lastDotSubst`_            string                              .
+   `spamProtectEmailAddresses`_                          "ascii" / -10 to 10
+   `stat\_apache\_logfile`_                              filename
+   `stat\_apache\_niceTitle`_                            boolean / string
+   `stat\_apache\_noHost`_                               boolean
+   `stat\_apache\_noRoot`_                               boolean
+   `stat\_apache\_notExtended`_                          boolean
+   `stat\_apache\_pagenames`_                            string
+   `stat\_apache`_                                       boolean                             false
+   `stat\_excludeBEuserHits`_                            boolean                             false
+   `stat\_excludeIPList`_                                list of strings               
+   `stat\_IP\_anonymize\_mask\_ipv4`_                    int                                 24
+   `stat\_IP\_anonymize\_mask\_ipv6`_                    int                                 64
+   `stat\_IP\_anonymize`_                                boolean                             0
+   `stat\_logUser`_                                      boolean                             1
+   `stat\_mysql`_                                        boolean                             false
+   `stat\_pageLen`_                                      int 1-100                           30
+   `stat\_titleLen`_                                     int 1-100                           20
+   `stat\_typeNumList`_                                  int/list                            0,1
+   `stat`_                                               boolean                             true
+   `sword\_noMixedCase`_                                 boolean
+   `sword\_standAlone`_                                  boolean
+   `sys\_language\_mode`_                                string
+   `sys\_language\_overlay`_                             boolean / keyword
+   `sys\_language\_softExclude`_                         string
+   `sys\_language\_softMergeIfNotBlank`_                 string
+   `sys\_language\_uid`_                                 int
+   `titleTagFunction`_                                   function name
+   `tx\_[extension key with no underscores]\_[\*]`_   
+   `typolinkCheckRootline`_                              boolean
+   `typolinkEnableLinksAcrossDomains`_                   boolean                             0
+   `typolinkLinkAccessRestrictedPages\_addParams`_       string   
+   `typolinkLinkAccessRestrictedPages`_                  integer (page id) / keyword "NONE"
+   `uniqueLinkVars`_                                     boolean                             1
+   `USERNAME\_substToken`_                               string                              <!--###USERNAME###-->
+   `USERUID\_substToken`_                                string
+   `xhtml\_cleaning`_                                    string
+   `xhtmlDoctype`_                                       string
+   `xmlprologue`_                                        string
+   ===================================================== =================================== ==========================
+   
+.. keep this as a comment ...
+
+   ======================================================================= ================================================== =================================== ==========================
+   Property                                                                Property                                           Data type                           Default
+   ======================================================================= ================================================== =================================== ==========================
+   :ref:`setup-config-absrefprefix`                                        absRefPrefix                                       string      
+   :ref:`setup-config-additionalheaders`                                   additionalHeaders                                  strings divided by "\|"
+   :ref:`setup-config-admpanel`                                            admPanel                                           boolean
+   :ref:`setup-config-atagparams`                                          ATagParams                                         *<A>-params*
+   :ref:`setup-config-baseurl`                                             baseURL                                            string
+   :ref:`setup-config-beloginlinkiplist-login`                             beLoginLinkIPList\_login                           HTML
+   :ref:`setup-config-beloginlinkiplist-logout`                            beLoginLinkIPList\_logout                          HTML
+   :ref:`setup-config-beloginlinkiplist`                                   beLoginLinkIPList                                  [IP-number]
+   :ref:`setup-config-cache-clearatmidnight`                               cache\_clearAtMidnight                             boolean                             false
+   :ref:`setup-config-cache-period`                                        cache\_period                                      int, seconds                        86400 (=24H)
+   :ref:`setup-config-cache`                                               cache                                              array          
+   :ref:`setup-config-compensatefieldwidth`                                compensateFieldWidth                               double            
+   :ref:`setup-config-compresscss`                                         compressCss                                        boolean           
+   :ref:`setup-config-compressjs`                                          compressJs                                         boolean           
+   :ref:`setup-config-concatenatecss`                                      concatenateCss                                     boolean           
+   :ref:`setup-config-concatenatejs`                                       concatenateJs                                      boolean           
+   :ref:`setup-config-concatenatejsandcss`                                 concatenateJsAndCss                                boolean                             0
+   :ref:`setup-config-content-from-pid-allowoutsidedomain`                 content\_from\_pid\_allowOutsideDomain             boolean           
+   :ref:`setup-config-debug`                                               debug                                              boolean                       
+   :ref:`setup-config-defaultgetvars`                                      defaultGetVars                                     array                
+   :ref:`setup-config-disableallheadercode`                                disableAllHeaderCode                               boolean                             false
+   :ref:`setup-config-disablecharsetheader`                                disableCharsetHeader                               boolean
+   :ref:`setup-config-disableimgborderattr`                                disableImgBorderAttr                               boolean
+   :ref:`setup-config-disablepageexternalurl`                              disablePageExternalUrl                             boolean
+   :ref:`setup-config-disableprefixcomment`                                disablePrefixComment                               boolean           
+   :ref:`setup-config-disablepreviewnotification`                          disablePreviewNotification                         boolean                             0
+   :ref:`setup-config-doctype`                                             doctype                                            string            
+   :ref:`setup-config-doctypeswitch`                                       doctypeSwitch                                      boolean / string           
+   :ref:`setup-config-enablecontentlengthheader`                           enableContentLengthHeader                          boolean           
+   :ref:`setup-config-exttarget`                                           extTarget                                          target                              \_top
+   :ref:`setup-config-filetarget`                                          fileTarget                                         target            
+   :ref:`setup-config-forcetypevalue`                                      forceTypeValue                                     int            
+   :ref:`setup-config-framereloadifnotinframeset`                          frameReloadIfNotInFrameset                         boolean           
+   :ref:`setup-config-ftu`                                                 ftu                                                boolean                             false
+   :ref:`setup-config-headercomment`                                       headerComment                                      string            
+   :ref:`setup-config-htmltag-dir`                                         htmlTag\_dir                                       string            
+   :ref:`setup-config-htmltag-langkey`                                     htmlTag\_langKey                                   string                              en
+   :ref:`setup-config-htmltag-setparams`                                   htmlTag\_setParams                                 string            
+   :ref:`setup-config-htmltag-stdwrap`                                     htmlTag\_stdWrap                                   stdWrap           
+   :ref:`setup-config-includelibrary`                                      includeLibrary                                     resource          
+   :ref:`setup-config-inct3lib-htmlmail`                                   incT3Lib\_htmlmail                                 boolean           
+   :ref:`setup-config-index-descrlgd`                                      index\_descrLgd                                    int                                 200
+   :ref:`setup-config-index-enable`                                        index\_enable                                      boolean           
+   :ref:`setup-config-index-externals`                                     index\_externals                                   boolean           
+   :ref:`setup-config-index-metatags`                                      index\_metatags                                    boolean                             true
+   :ref:`setup-config-inlinestyle2tempfile`                                inlineStyle2TempFile                               boolean           
+   :ref:`setup-config-inttarget`                                           intTarget                                          target            
+   :ref:`setup-config-jumpurl-enable`                                      jumpurl\_enable                                    boolean                             0
+   :ref:`setup-config-jumpurl-mailto-disable`                              jumpurl\_mailto\_disable                           boolean                             0
+   :ref:`setup-config-language-alt`                                        language\_alt                                      string            
+   :ref:`setup-config-language`                                            language                                           string            
+   :ref:`setup-config-linkvars`                                            linkVars                                           list           
+   :ref:`setup-config-locale-all`                                          locale\_all                                        string            
+   :ref:`setup-config-lockfilepath`                                        lockFilePath                                       string                              fileadmin/
+   :ref:`setup-config-mainscript`                                          mainScript                                         string                              index.php
+   :ref:`setup-config-meaningfultempfileprefix`                            meaningfulTempFilePrefix                           integer  
+   :ref:`setup-config-message-page-is-being-generated`                     message\_page\_is\_being\_generated                string                  
+   :ref:`setup-config-message-preview-workspace`                           message\_preview\_workspace                        string            
+   :ref:`setup-config-message-preview`                                     message\_preview                                   string            
+   :ref:`setup-config-metacharset`                                         metaCharset                                        string                              value of ".renderCharset"
+   :ref:`setup-config-minifycss`                                           minifyCSS                                          boolean           
+   :ref:`setup-config-minifyjs`                                            minifyJS                                           boolean           
+   :ref:`setup-config-movejsfromheadertofooter`                            moveJsFromHeaderToFooter                           boolean           
+   :ref:`setup-config-mp-defaults`                                         MP\_defaults                                       string            
+   :ref:`setup-config-mp-disabletypolinkclosestmpvalue`                    MP\_disableTypolinkClosestMPvalue                  boolean           
+   :ref:`setup-config-mp-maprootpoints`                                    MP\_mapRootPoints                                  list of PIDs/string           
+   :ref:`setup-config-namespaces`                                          namespaces                                         array of strings           
+   :ref:`setup-config-no-cache`                                            no\_cache                                          boolean           
+   :ref:`setup-config-nopagetitle`                                         noPageTitle                                        integer                             0
+   :ref:`setup-config-noscaleup`                                           noScaleUp                                          boolean           
+   :ref:`setup-config-notification-email-charset`                          notification\_email\_charset                       string                              utf-8
+   :ref:`setup-config-notification-email-encoding`                         notification\_email\_encoding                      string            
+   :ref:`setup-config-notification-email-urlmode`                          notification\_email\_urlmode                       string            
+   :ref:`setup-config-pagegenscript`                                       pageGenScript                                      resource                            typo3/sysext/cms/tslib/pagegen.php
+   :ref:`setup-config-pagerenderertemplatefile`                            pageRendererTemplateFile                           string            
+   :ref:`setup-config-pagetitlefirst`                                      pageTitleFirst                                     boolean                             0
+   :ref:`setup-config-pagetitleseparator`                                  pageTitleSeparator                                 string                              :
+   :ref:`setup-config-prefixlocalanchors`                                  prefixLocalAnchors                                 string  keyword            
+   :ref:`setup-config-removedefaultcss`                                    removeDefaultCss                                   boolean           
+   :ref:`setup-config-removedefaultjs`                                     removeDefaultJS                                    boolean / string           
+   :ref:`setup-config-rendercharset`                                       renderCharset                                      string                              'utf-8'
+   :ref:`setup-config-sendcacheheaders-onlywhenlogindeniedinbranch`        sendCacheHeaders\_onlyWhenLoginDeniedInBranch      boolean
+   :ref:`setup-config-sendcacheheaders`                                    sendCacheHeaders                                   boolean
+   :ref:`setup-config-setjs-mouseover`                                     setJS\_mouseOver                                   boolean
+   :ref:`setup-config-setjs-openpic`                                       setJS\_openPic                                     boolean
+   :ref:`setup-config-simulatestaticdocuments-addtitle`                    simulateStaticDocuments\_addTitle                  int
+   :ref:`setup-config-simulatestaticdocuments-dontredirectpathinfoerror`   simulateStaticDocuments\_dontRedirectPathInfoError boolean
+   :ref:`setup-config-simulatestaticdocuments-notypeifnotitle`             simulateStaticDocuments\_noTypeIfNoTitle           boolean
+   :ref:`setup-config-simulatestaticdocuments-penc-onlyp`                  simulateStaticDocuments\_pEnc\_onlyP               string
+   :ref:`setup-config-simulatestaticdocuments-penc`                        simulateStaticDocuments\_pEnc                      string
+   :ref:`setup-config-simulatestaticdocuments-replacementchar`             simulateStaticDocuments\_replacementChar           string
+   :ref:`setup-config-simulatestaticdocuments`                             simulateStaticDocuments                            boolean or string                   see below
+   :ref:`setup-config-spamprotectemailaddresses-atsubst`                   spamProtectEmailAddresses\_atSubst                 string                              (at)
+   :ref:`setup-config-spamprotectemailaddresses-lastdotsubst`              spamProtectEmailAddresses\_lastDotSubst            string                              .
+   :ref:`setup-config-spamprotectemailaddresses`                           spamProtectEmailAddresses                          "ascii" / -10 to 10
+   :ref:`setup-config-stat-apache-logfile`                                 stat\_apache\_logfile                              filename
+   :ref:`setup-config-stat-apache-nicetitle`                               stat\_apache\_niceTitle                            boolean / string
+   :ref:`setup-config-stat-apache-nohost`                                  stat\_apache\_noHost                               boolean
+   :ref:`setup-config-stat-apache-noroot`                                  stat\_apache\_noRoot                               boolean
+   :ref:`setup-config-stat-apache-notextended`                             stat\_apache\_notExtended                          boolean
+   :ref:`setup-config-stat-apache-pagenames`                               stat\_apache\_pagenames                            string
+   :ref:`setup-config-stat-apache`                                         stat\_apache                                       boolean                             false
+   :ref:`setup-config-stat-excludebeuserhits`                              stat\_excludeBEuserHits                            boolean                             false
+   :ref:`setup-config-stat-excludeiplist`                                  stat\_excludeIPList                                list of strings               
+   :ref:`setup-config-stat-ip-anonymize-mask-ipv4`                         stat\_IP\_anonymize\_mask\_ipv4                    int                                 24
+   :ref:`setup-config-stat-ip-anonymize-mask-ipv6`                         stat\_IP\_anonymize\_mask\_ipv6                    int                                 64
+   :ref:`setup-config-stat-ip-anonymize`                                   stat\_IP\_anonymize                                boolean                             0
+   :ref:`setup-config-stat-loguser`                                        stat\_logUser                                      boolean                             1
+   :ref:`setup-config-stat-mysql`                                          stat\_mysql                                        boolean                             false
+   :ref:`setup-config-stat-pagelen`                                        stat\_pageLen                                      int 1-100                           30
+   :ref:`setup-config-stat-titlelen`                                       stat\_titleLen                                     int 1-100                           20
+   :ref:`setup-config-stat-typenumlist`                                    stat\_typeNumList                                  int/list                            0,1
+   :ref:`setup-config-stat`                                                stat                                               boolean                             true
+   :ref:`setup-config-sword-nomixedcase`                                   sword\_noMixedCase                                 boolean
+   :ref:`setup-config-sword-standalone`                                    sword\_standAlone                                  boolean
+   :ref:`setup-config-sys-language-mode`                                   sys\_language\_mode                                string
+   :ref:`setup-config-sys-language-overlay`                                sys\_language\_overlay                             boolean / keyword
+   :ref:`setup-config-sys-language-softexclude`                            sys\_language\_softExclude                         string
+   :ref:`setup-config-sys-language-softmergeifnotblank`                    sys\_language\_softMergeIfNotBlank                 string
+   :ref:`setup-config-sys-language-uid`                                    sys\_language\_uid                                 int
+   :ref:`setup-config-titletagfunction`                                    titleTagFunction                                   function name
+   :ref:`setup-config-tx-extension-key-with-no-underscores`                tx\_[extension key with no underscores]\_[\*]   
+   :ref:`setup-config-typolinkcheckrootline`                               typolinkCheckRootline                              boolean
+   :ref:`setup-config-typolinkenablelinksacrossdomains`                    typolinkEnableLinksAcrossDomains                   boolean                             0
+   :ref:`setup-config-typolinklinkaccessrestrictedpages-addparams`         typolinkLinkAccessRestrictedPages\_addParams       string   
+   :ref:`setup-config-typolinklinkaccessrestrictedpages`                   typolinkLinkAccessRestrictedPages                  integer (page id) / keyword "NONE"
+   :ref:`setup-config-uniquelinkvars`                                      uniqueLinkVars                                     boolean                             1
+   :ref:`setup-config-username-substtoken`                                 USERNAME\_substToken                               string                              <!--###USERNAME###-->
+   :ref:`setup-config-useruid-substtoken`                                  USERUID\_substToken                                string
+   :ref:`setup-config-xhtml-cleaning`                                      xhtml\_cleaning                                    string
+   :ref:`setup-config-xhtmldoctype`                                        xhtmlDoctype                                       string
+   :ref:`setup-config-xmlprologue`                                         xmlprologue                                        string
+   ======================================================================= ================================================== =================================== ==========================
+   
+  
+
+Property details
+^^^^^^^^^^^^^^^^
+
+.. only:: html
+
+   .. contents::
+      :local:
+      :depth: 1
+
+
+"CONFIG"
+^^^^^^^^
+
+
 .. ### BEGIN~OF~TABLE ###
 
-.. container:: table-row
 
-   Property
-         Property:
-   
-   Data type
-         Data type:
-   
-   Description
-         Description:
-   
-   Default
-         Default:
+.. _setup-config-defaultgetvars:
 
+defaultGetVars
+""""""""""""""
 
 .. container:: table-row
 
@@ -65,6 +362,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    
    Default
 
+
+
+.. _setup-config-linkvars:
+
+linkVars
+""""""""
 
 .. container:: table-row
 
@@ -118,6 +421,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    Default
 
 
+
+.. _setup-config-uniquelinkvars:
+
+uniqueLinkVars
+""""""""""""""
+
 .. container:: table-row
 
    Property
@@ -134,6 +443,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    Default
          1
 
+
+
+.. _setup-config-mp-defaults:
+
+MP\_defaults
+""""""""""""
 
 .. container:: table-row
 
@@ -163,6 +478,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    Default
 
 
+
+.. _setup-config-mp-maprootpoints:
+
+MP\_mapRootPoints
+"""""""""""""""""
+
 .. container:: table-row
 
    Property
@@ -190,6 +511,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    Default
 
 
+
+.. _setup-config-mp-disabletypolinkclosestmpvalue:
+
+MP\_disableTypolinkClosestMPvalue
+"""""""""""""""""""""""""""""""""
+
 .. container:: table-row
 
    Property
@@ -204,6 +531,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    
    Default
 
+
+
+.. _setup-config-rendercharset:
+
+renderCharset
+"""""""""""""
 
 .. container:: table-row
 
@@ -245,6 +578,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          Since TYPO3 4.7: "utf-8"
 
 
+
+.. _setup-config-metacharset:
+
+metaCharset
+"""""""""""
+
 .. container:: table-row
 
    Property
@@ -274,6 +613,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          value of ".renderCharset"
 
 
+
+.. _setup-config-disablecharsetheader:
+
+disableCharsetHeader
+""""""""""""""""""""
+
 .. container:: table-row
 
    Property
@@ -288,6 +633,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    
    Default
 
+
+
+.. _setup-config-sendcacheheaders:
+
+sendCacheHeaders
+""""""""""""""""
 
 .. container:: table-row
 
@@ -346,6 +697,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    Default
 
 
+
+.. _setup-config-sendcacheheaders-onlywhenlogindeniedinbranch:
+
+sendCacheHeaders\_onlyWhenLoginDeniedInBranch
+"""""""""""""""""""""""""""""""""""""""""""""
+
 .. container:: table-row
 
    Property
@@ -382,6 +739,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    Default
 
 
+
+.. _setup-config-additionalheaders:
+
+additionalHeaders
+"""""""""""""""""
+
 .. container:: table-row
 
    Property
@@ -417,6 +780,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    Default
 
 
+
+.. _setup-config-enablecontentlengthheader:
+
+enableContentLengthHeader
+"""""""""""""""""""""""""
+
 .. container:: table-row
 
    Property
@@ -436,6 +805,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    
    Default
 
+
+
+.. _setup-config-doctype:
+
+doctype
+"""""""
 
 .. container:: table-row
 
@@ -488,6 +863,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    Default
 
 
+
+.. _setup-config-doctypeswitch:
+
+doctypeSwitch
+"""""""""""""
+
 .. container:: table-row
 
    Property
@@ -528,6 +909,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    
    Default
 
+
+
+.. _setup-config-xhtmldoctype:
+
+xhtmlDoctype
+""""""""""""
 
 .. container:: table-row
 
@@ -573,6 +960,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    Default
 
 
+
+.. _setup-config-xmlprologue:
+
+xmlprologue
+"""""""""""
+
 .. container:: table-row
 
    Property
@@ -603,6 +996,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    Default
 
 
+
+.. _setup-config-htmltag-setparams:
+
+htmlTag\_setParams
+""""""""""""""""""
+
 .. container:: table-row
 
    Property
@@ -629,6 +1028,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    Default
 
 
+
+.. _setup-config-htmltag-stdwrap:
+
+htmlTag\_stdWrap
+""""""""""""""""
+
 .. container:: table-row
 
    Property
@@ -643,6 +1048,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    
    Default
 
+
+
+.. _setup-config-namespaces:
+
+namespaces
+""""""""""
 
 .. container:: table-row
 
@@ -673,6 +1084,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    Default
 
 
+
+.. _setup-config-htmltag-langkey:
+
+htmlTag\_langKey
+""""""""""""""""
+
 .. container:: table-row
 
    Property
@@ -697,6 +1114,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    Default
          en
 
+
+
+.. _setup-config-htmltag-dir:
+
+htmlTag\_dir
+""""""""""""
 
 .. container:: table-row
 
@@ -728,6 +1151,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    Default
 
 
+
+.. _setup-config-disableimgborderattr:
+
+disableImgBorderAttr
+""""""""""""""""""""
+
 .. container:: table-row
 
    Property
@@ -743,6 +1172,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    
    Default
 
+
+
+.. _setup-config-atagparams:
+
+ATagParams
+""""""""""
 
 .. container:: table-row
 
@@ -766,6 +1201,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    Default
 
 
+
+.. _setup-config-setjs-openpic:
+
+setJS\_openPic
+""""""""""""""
+
 .. container:: table-row
 
    Property
@@ -779,6 +1220,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    
    Default
 
+
+
+.. _setup-config-setjs-mouseover:
+
+setJS\_mouseOver
+""""""""""""""""
 
 .. container:: table-row
 
@@ -794,6 +1241,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    
    Default
 
+
+
+.. _setup-config-removedefaultjs:
+
+removeDefaultJS
+"""""""""""""""
 
 .. container:: table-row
 
@@ -829,6 +1282,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    Default
 
 
+
+.. _setup-config-removedefaultcss:
+
+removeDefaultCss
+""""""""""""""""
+
 .. container:: table-row
 
    Property
@@ -843,6 +1302,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    
    Default
 
+
+
+.. _setup-config-minifyjs:
+
+minifyJS
+""""""""
 
 .. container:: table-row
 
@@ -887,6 +1352,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    Default
 
 
+
+.. _setup-config-compressjs:
+
+compressJs
+""""""""""
+
 .. container:: table-row
 
    Property
@@ -927,6 +1398,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    Default
 
 
+
+.. _setup-config-minifycss:
+
+minifyCSS
+"""""""""
+
 .. container:: table-row
 
    Property
@@ -959,6 +1436,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    
    Default
 
+
+
+.. _setup-config-compresscss:
+
+compressCss
+"""""""""""
 
 .. container:: table-row
 
@@ -997,6 +1480,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    Default
 
 
+
+.. _setup-config-concatenatejsandcss:
+
+concatenateJsAndCss
+"""""""""""""""""""
+
 .. container:: table-row
 
    Property
@@ -1032,6 +1521,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          0
 
 
+
+.. _setup-config-concatenatejs:
+
+concatenateJs
+"""""""""""""
+
 .. container:: table-row
 
    Property
@@ -1062,6 +1557,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    
    Default
 
+
+
+.. _setup-config-concatenatecss:
+
+concatenateCss
+""""""""""""""
 
 .. container:: table-row
 
@@ -1094,6 +1595,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    Default
 
 
+
+.. _setup-config-inlinestyle2tempfile:
+
+inlineStyle2TempFile
+""""""""""""""""""""
+
 .. container:: table-row
 
    Property
@@ -1124,6 +1631,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    Default
 
 
+
+.. _setup-config-meaningfultempfileprefix:
+
+meaningfulTempFilePrefix
+""""""""""""""""""""""""
+
 .. container:: table-row
 
    Property
@@ -1142,6 +1655,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    
    Default
 
+
+
+.. _setup-config-ftu:
+
+ftu
+"""
 
 .. container:: table-row
 
@@ -1175,6 +1694,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          false
 
 
+
+.. _setup-config-mainscript:
+
+mainScript
+""""""""""
+
 .. container:: table-row
 
    Property
@@ -1192,6 +1717,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    Default
          index.php
 
+
+
+.. _setup-config-pagegenscript:
+
+pageGenScript
+"""""""""""""
 
 .. container:: table-row
 
@@ -1224,6 +1755,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          typo3/sysext/cms/tslib/pagegen.php
 
 
+
+.. _setup-config-debug:
+
+debug
+"""""
+
 .. container:: table-row
 
    Property
@@ -1238,6 +1775,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    
    Default
 
+
+
+.. _setup-config-message-page-is-being-generated:
+
+message\_page\_is\_being\_generated
+"""""""""""""""""""""""""""""""""""
 
 .. container:: table-row
 
@@ -1260,6 +1803,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    Default
 
 
+
+.. _setup-config-message-preview:
+
+message\_preview
+""""""""""""""""
+
 .. container:: table-row
 
    Property
@@ -1274,6 +1823,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    
    Default
 
+
+
+.. _setup-config-message-preview-workspace:
+
+message\_preview\_workspace
+"""""""""""""""""""""""""""
 
 .. container:: table-row
 
@@ -1298,6 +1853,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    Default
 
 
+
+.. _setup-config-disablepreviewnotification:
+
+disablePreviewNotification
+""""""""""""""""""""""""""
+
 .. container:: table-row
 
    Property
@@ -1312,6 +1873,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    Default
          0
 
+
+
+.. _setup-config-locale-all:
+
+locale\_all
+"""""""""""
 
 .. container:: table-row
 
@@ -1344,6 +1911,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    Default
 
 
+
+.. _setup-config-sword-standalone:
+
+sword\_standAlone
+"""""""""""""""""
+
 .. container:: table-row
 
    Property
@@ -1361,6 +1934,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    Default
 
 
+
+.. _setup-config-sword-nomixedcase:
+
+sword\_noMixedCase
+""""""""""""""""""
+
 .. container:: table-row
 
    Property
@@ -1377,6 +1956,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    Default
 
 
+
+.. _setup-config-inttarget:
+
+intTarget
+"""""""""
+
 .. container:: table-row
 
    Property
@@ -1390,6 +1975,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    
    Default
 
+
+
+.. _setup-config-exttarget:
+
+extTarget
+"""""""""
 
 .. container:: table-row
 
@@ -1406,6 +1997,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          \_top
 
 
+
+.. _setup-config-filetarget:
+
+fileTarget
+""""""""""
+
 .. container:: table-row
 
    Property
@@ -1419,6 +2016,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    
    Default
 
+
+
+.. _setup-config-spamprotectemailaddresses:
+
+spamProtectEmailAddresses
+"""""""""""""""""""""""""
 
 .. container:: table-row
 
@@ -1470,6 +2073,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    Default
 
 
+
+.. _setup-config-spamprotectemailaddresses-atsubst:
+
+spamProtectEmailAddresses\_atSubst
+""""""""""""""""""""""""""""""""""
+
 .. container:: table-row
 
    Property
@@ -1484,6 +2093,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    Default
          (at)
 
+
+
+.. _setup-config-spamprotectemailaddresses-lastdotsubst:
+
+spamProtectEmailAddresses\_lastDotSubst
+"""""""""""""""""""""""""""""""""""""""
 
 .. container:: table-row
 
@@ -1501,6 +2116,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    Default
          Default: . ( <= just a simple dot)
 
+
+
+.. _setup-config-forcetypevalue:
+
+forceTypeValue
+""""""""""""""
 
 .. container:: table-row
 
@@ -1520,6 +2141,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    
    Default
 
+
+
+.. _setup-config-framereloadifnotinframeset:
+
+frameReloadIfNotInFrameset
+""""""""""""""""""""""""""
 
 .. container:: table-row
 
@@ -1541,6 +2168,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    Default
 
 
+
+.. _setup-config-jumpurl-enable:
+
+jumpurl\_enable
+"""""""""""""""
+
 .. container:: table-row
 
    Property
@@ -1558,6 +2191,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          0
 
 
+
+.. _setup-config-jumpurl-mailto-disable:
+
+jumpurl\_mailto\_disable
+""""""""""""""""""""""""
+
 .. container:: table-row
 
    Property
@@ -1572,6 +2211,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    Default
          0
 
+
+
+.. _setup-config-compensatefieldwidth:
+
+compensateFieldWidth
+""""""""""""""""""""
 
 .. container:: table-row
 
@@ -1603,6 +2248,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    Default
 
 
+
+.. _setup-config-includelibrary:
+
+includeLibrary
+""""""""""""""
+
 .. container:: table-row
 
    Property
@@ -1617,6 +2268,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    Default
 
 
+
+.. _setup-config-inct3lib-htmlmail:
+
+incT3Lib\_htmlmail
+""""""""""""""""""
+
 .. container:: table-row
 
    Property
@@ -1630,6 +2287,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    
    Default
 
+
+
+.. _setup-config-lockfilepath:
+
+lockFilePath
+""""""""""""
 
 .. container:: table-row
 
@@ -1647,6 +2310,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    Default
          fileadmin/
 
+
+
+.. _setup-config-noscaleup:
+
+noScaleUp
+"""""""""
 
 .. container:: table-row
 
@@ -1668,6 +2337,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    Default
 
 
+
+.. _setup-config-username-substtoken:
+
+USERNAME\_substToken
+""""""""""""""""""""
+
 .. container:: table-row
 
    Property
@@ -1684,6 +2359,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    Default
          <!--###USERNAME###-->
 
+
+
+.. _setup-config-useruid-substtoken:
+
+USERUID\_substToken
+"""""""""""""""""""
 
 .. container:: table-row
 
@@ -1704,6 +2385,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    Default
 
 
+
+.. _setup-config-cache-period:
+
+cache\_period
+"""""""""""""
+
 .. container:: table-row
 
    Property
@@ -1721,6 +2408,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    Default
          86400 (=24H)
 
+
+
+.. _setup-config-cache:
+
+cache
+"""""
 
 .. container:: table-row
 
@@ -1777,6 +2470,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    Default
 
 
+
+.. _setup-config-cache-clearatmidnight:
+
+cache\_clearAtMidnight
+""""""""""""""""""""""
+
 .. container:: table-row
 
    Property
@@ -1792,6 +2491,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    Default
          false
 
+
+
+.. _setup-config-no-cache:
+
+no\_cache
+"""""""""
 
 .. container:: table-row
 
@@ -1809,6 +2514,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    Default
          -
 
+
+
+.. _setup-config-disableallheadercode:
+
+disableAllHeaderCode
+""""""""""""""""""""
 
 .. container:: table-row
 
@@ -1832,6 +2543,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          false
 
 
+
+.. _setup-config-disablepageexternalurl:
+
+disablePageExternalUrl
+""""""""""""""""""""""
+
 .. container:: table-row
 
    Property
@@ -1848,6 +2565,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    Default
 
 
+
+.. _setup-config-stat:
+
+stat
+""""
+
 .. container:: table-row
 
    Property
@@ -1862,6 +2585,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    Default
          true
 
+
+
+.. _setup-config-stat-typenumlist:
+
+stat\_typeNumList
+"""""""""""""""""
 
 .. container:: table-row
 
@@ -1884,6 +2613,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          0,1
 
 
+
+.. _setup-config-stat-excludebeuserhits:
+
+stat\_excludeBEuserHits
+"""""""""""""""""""""""
+
 .. container:: table-row
 
    Property
@@ -1898,6 +2633,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    Default
          false
 
+
+
+.. _setup-config-stat-excludeiplist:
+
+stat\_excludeIPList
+"""""""""""""""""""
 
 .. container:: table-row
 
@@ -1916,6 +2657,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    Default
 
 
+
+.. _setup-config-stat-mysql:
+
+stat\_mysql
+"""""""""""
+
 .. container:: table-row
 
    Property
@@ -1931,6 +2678,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          false
 
 
+
+.. _setup-config-stat-apache:
+
+stat\_apache
+""""""""""""
+
 .. container:: table-row
 
    Property
@@ -1945,6 +2698,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    Default
          false
 
+
+
+.. _setup-config-stat-apache-logfile:
+
+stat\_apache\_logfile
+"""""""""""""""""""""
 
 .. container:: table-row
 
@@ -1978,6 +2737,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    Default
 
 
+
+.. _setup-config-stat-apache-pagenames:
+
+stat\_apache\_pagenames
+"""""""""""""""""""""""
+
 .. container:: table-row
 
    Property
@@ -2010,6 +2775,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    Default
 
 
+
+.. _setup-config-stat-apache-notextended:
+
+stat\_apache\_notExtended
+"""""""""""""""""""""""""
+
 .. container:: table-row
 
    Property
@@ -2023,6 +2794,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    
    Default
 
+
+
+.. _setup-config-stat-apache-nohost:
+
+stat\_apache\_noHost
+""""""""""""""""""""
 
 .. container:: table-row
 
@@ -2038,6 +2815,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    
    Default
 
+
+
+.. _setup-config-stat-apache-nicetitle:
+
+stat\_apache\_niceTitle
+"""""""""""""""""""""""
 
 .. container:: table-row
 
@@ -2062,6 +2845,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    Default
 
 
+
+.. _setup-config-stat-apache-noroot:
+
+stat\_apache\_noRoot
+""""""""""""""""""""
+
 .. container:: table-row
 
    Property
@@ -2078,6 +2867,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    Default
 
 
+
+.. _setup-config-stat-titlelen:
+
+stat\_titleLen
+""""""""""""""
+
 .. container:: table-row
 
    Property
@@ -2092,6 +2887,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    Default
          20
 
+
+
+.. _setup-config-stat-pagelen:
+
+stat\_pageLen
+"""""""""""""
 
 .. container:: table-row
 
@@ -2109,6 +2910,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          30
 
 
+
+.. _setup-config-stat-ip-anonymize:
+
+stat\_IP\_anonymize
+"""""""""""""""""""
+
 .. container:: table-row
 
    Property
@@ -2125,6 +2932,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    Default
          0
 
+
+
+.. _setup-config-stat-ip-anonymize-mask-ipv4:
+
+stat\_IP\_anonymize\_mask\_ipv4
+"""""""""""""""""""""""""""""""
 
 .. container:: table-row
 
@@ -2148,6 +2961,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          24
 
 
+
+.. _setup-config-stat-ip-anonymize-mask-ipv6:
+
+stat\_IP\_anonymize\_mask\_ipv6
+"""""""""""""""""""""""""""""""
+
 .. container:: table-row
 
    Property
@@ -2170,6 +2989,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          64
 
 
+
+.. _setup-config-stat-loguser:
+
+stat\_logUser
+"""""""""""""
+
 .. container:: table-row
 
    Property
@@ -2186,6 +3011,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    Default
          1
 
+
+
+.. _setup-config-simulatestaticdocuments:
+
+simulateStaticDocuments
+"""""""""""""""""""""""
 
 .. container:: table-row
 
@@ -2262,6 +3093,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          You can also set this value to the string "PATH\_INFO"
 
 
+
+.. _setup-config-simulatestaticdocuments-addtitle:
+
+simulateStaticDocuments\_addTitle
+"""""""""""""""""""""""""""""""""
+
 .. container:: table-row
 
    Property
@@ -2284,6 +3121,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    
    Default
 
+
+
+.. _setup-config-simulatestaticdocuments-notypeifnotitle:
+
+simulateStaticDocuments\_noTypeIfNoTitle
+""""""""""""""""""""""""""""""""""""""""
 
 .. container:: table-row
 
@@ -2309,6 +3152,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    Default
 
 
+
+.. _setup-config-simulatestaticdocuments-replacementchar:
+
+simulateStaticDocuments\_replacementChar
+""""""""""""""""""""""""""""""""""""""""
+
 .. container:: table-row
 
    Property
@@ -2333,6 +3182,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    Default
 
 
+
+.. _setup-config-simulatestaticdocuments-dontredirectpathinfoerror:
+
+simulateStaticDocuments\_dontRedirectPathInfoError
+""""""""""""""""""""""""""""""""""""""""""""""""""
+
 .. container:: table-row
 
    Property
@@ -2352,6 +3207,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    
    Default
 
+
+
+.. _setup-config-simulatestaticdocuments-penc:
+
+simulateStaticDocuments\_pEnc
+"""""""""""""""""""""""""""""
 
 .. container:: table-row
 
@@ -2410,6 +3271,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    Default
 
 
+
+.. _setup-config-simulatestaticdocuments-penc-onlyp:
+
+simulateStaticDocuments\_pEnc\_onlyP
+""""""""""""""""""""""""""""""""""""
+
 .. container:: table-row
 
    Property
@@ -2437,6 +3304,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    Default
 
 
+
+.. _setup-config-content-from-pid-allowoutsidedomain:
+
+content\_from\_pid\_allowOutsideDomain
+""""""""""""""""""""""""""""""""""""""
+
 .. container:: table-row
 
    Property
@@ -2452,6 +3325,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    
    Default
 
+
+
+.. _setup-config-absrefprefix:
+
+absRefPrefix
+""""""""""""
 
 .. container:: table-row
 
@@ -2480,6 +3359,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    Default
 
 
+
+.. _setup-config-pagerenderertemplatefile:
+
+pageRendererTemplateFile
+""""""""""""""""""""""""
+
 .. container:: table-row
 
    Property
@@ -2499,6 +3384,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    
    Default
 
+
+
+.. _setup-config-nopagetitle:
+
+noPageTitle
+"""""""""""
 
 .. container:: table-row
 
@@ -2521,6 +3412,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          0
 
 
+
+.. _setup-config-pagetitlefirst:
+
+pageTitleFirst
+""""""""""""""
+
 .. container:: table-row
 
    Property
@@ -2541,6 +3438,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          0
 
 
+
+.. _setup-config-pagetitleseparator:
+
+pageTitleSeparator
+""""""""""""""""""
+
 .. container:: table-row
 
    Property
@@ -2557,6 +3460,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          :
 
 
+
+.. _setup-config-titletagfunction:
+
+titleTagFunction
+""""""""""""""""
+
 .. container:: table-row
 
    Property
@@ -2571,6 +3480,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    
    Default
 
+
+
+.. _setup-config-movejsfromheadertofooter:
+
+moveJsFromHeaderToFooter
+""""""""""""""""""""""""
 
 .. container:: table-row
 
@@ -2588,6 +3503,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    Default
 
 
+
+.. _setup-config-headercomment:
+
+headerComment
+"""""""""""""
+
 .. container:: table-row
 
    Property
@@ -2603,6 +3524,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    
    Default
 
+
+
+.. _setup-config-language:
+
+language
+""""""""
 
 .. container:: table-row
 
@@ -2645,6 +3572,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    Default
 
 
+
+.. _setup-config-language-alt:
+
+language\_alt
+"""""""""""""
+
 .. container:: table-row
 
    Property
@@ -2664,6 +3597,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    
    Default
 
+
+
+.. _setup-config-sys-language-uid:
+
+sys\_language\_uid
+""""""""""""""""""
 
 .. container:: table-row
 
@@ -2686,6 +3625,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    
    Default
 
+
+
+.. _setup-config-sys-language-mode:
+
+sys\_language\_mode
+"""""""""""""""""""
 
 .. container:: table-row
 
@@ -2727,6 +3672,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    Default
 
 
+
+.. _setup-config-sys-language-overlay:
+
+sys\_language\_overlay
+""""""""""""""""""""""
+
 .. container:: table-row
 
    Property
@@ -2761,6 +3712,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    
    Default
 
+
+
+.. _setup-config-sys-language-softmergeifnotblank:
+
+sys\_language\_softMergeIfNotBlank
+""""""""""""""""""""""""""""""""""
 
 .. container:: table-row
 
@@ -2806,6 +3763,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    Default
 
 
+
+.. _setup-config-sys-language-softexclude:
+
+sys\_language\_softExclude
+""""""""""""""""""""""""""
+
 .. container:: table-row
 
    Property
@@ -2824,6 +3787,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    
    Default
 
+
+
+.. _setup-config-typolinkcheckrootline:
+
+typolinkCheckRootline
+"""""""""""""""""""""
 
 .. container:: table-row
 
@@ -2846,6 +3815,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    
    Default
 
+
+
+.. _setup-config-typolinkenablelinksacrossdomains:
+
+typolinkEnableLinksAcrossDomains
+""""""""""""""""""""""""""""""""
 
 .. container:: table-row
 
@@ -2891,6 +3866,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          0
 
 
+
+.. _setup-config-typolinklinkaccessrestrictedpages:
+
+typolinkLinkAccessRestrictedPages
+"""""""""""""""""""""""""""""""""
+
 .. container:: table-row
 
    Property
@@ -2926,6 +3907,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    Default
 
 
+
+.. _setup-config-typolinklinkaccessrestrictedpages-addparams:
+
+typolinkLinkAccessRestrictedPages\_addParams
+""""""""""""""""""""""""""""""""""""""""""""
+
 .. container:: table-row
 
    Property
@@ -2939,6 +3926,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    
    Default
 
+
+
+.. _setup-config-notification-email-urlmode:
+
+notification\_email\_urlmode
+""""""""""""""""""""""""""""
 
 .. container:: table-row
 
@@ -2966,6 +3959,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    Default
 
 
+
+.. _setup-config-notification-email-encoding:
+
+notification\_email\_encoding
+"""""""""""""""""""""""""""""
+
 .. container:: table-row
 
    Property
@@ -2990,6 +3989,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    Default
 
 
+
+.. _setup-config-notification-email-charset:
+
+notification\_email\_charset
+""""""""""""""""""""""""""""
+
 .. container:: table-row
 
    Property
@@ -3006,6 +4011,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          
          Since TYPO3 4.7: utf-8
 
+
+
+.. _setup-config-admpanel:
+
+admPanel
+""""""""
 
 .. container:: table-row
 
@@ -3025,6 +4036,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    Default
 
 
+
+.. _setup-config-beloginlinkiplist:
+
+beLoginLinkIPList
+"""""""""""""""""
+
 .. container:: table-row
 
    Property
@@ -3043,6 +4060,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    
    Default
 
+
+
+.. _setup-config-beloginlinkiplist-login:
+
+beLoginLinkIPList\_login
+""""""""""""""""""""""""
 
 .. container:: table-row
 
@@ -3064,6 +4087,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    Default
 
 
+
+.. _setup-config-beloginlinkiplist-logout:
+
+beLoginLinkIPList\_logout
+"""""""""""""""""""""""""
+
 .. container:: table-row
 
    Property
@@ -3077,6 +4106,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    
    Default
 
+
+
+.. _setup-config-index-enable:
+
+index\_enable
+"""""""""""""
 
 .. container:: table-row
 
@@ -3092,6 +4127,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    Default
 
 
+
+.. _setup-config-index-externals:
+
+index\_externals
+""""""""""""""""
+
 .. container:: table-row
 
    Property
@@ -3105,6 +4146,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    
    Default
 
+
+
+.. _setup-config-index-descrlgd:
+
+index\_descrLgd
+"""""""""""""""
 
 .. container:: table-row
 
@@ -3122,6 +4169,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
          200
 
 
+
+.. _setup-config-index-metatags:
+
+index\_metatags
+"""""""""""""""
+
 .. container:: table-row
 
    Property
@@ -3137,6 +4190,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    Default
          true
 
+
+
+.. _setup-config-xhtml-cleaning:
+
+xhtml\_cleaning
+"""""""""""""""
 
 .. container:: table-row
 
@@ -3202,6 +4261,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    Default
 
 
+
+.. _setup-config-prefixlocalanchors:
+
+prefixLocalAnchors
+""""""""""""""""""
+
 .. container:: table-row
 
    Property
@@ -3223,6 +4288,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    Default
 
 
+
+.. _setup-config-disableprefixcomment:
+
+disablePrefixComment
+""""""""""""""""""""
+
 .. container:: table-row
 
    Property
@@ -3238,6 +4309,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    
    Default
 
+
+
+.. _setup-config-baseurl:
+
+baseURL
+"""""""
 
 .. container:: table-row
 
@@ -3262,6 +4339,12 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
    
    Default
 
+
+
+.. _setup-config-tx-extension-key-with-no-underscores:
+
+tx\_[extension key with no underscores]\_[\*]
+"""""""""""""""""""""""""""""""""""""""""""""
 
 .. container:: table-row
 
