@@ -103,7 +103,9 @@ userFunc
          \_CSS\_DEFAULT\_STYLE
 
    Data type
-         string
+         Until TYPO3 6.1: string
+
+         Since TYPO3 6.2: string /:ref:`stdWrap <stdwrap>`
 
    Description
          Use this to have some default CSS styles inserted in the header
