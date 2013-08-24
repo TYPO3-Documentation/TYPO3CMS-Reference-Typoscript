@@ -8,14 +8,45 @@
 
 .. _constants:
 
-"CONSTANTS"
-^^^^^^^^^^^
+constants
+=========
 
 This object can be used to define constants. This is useful, if you
 need one and the same value at many places in your website. With
 constants, you can maintain it easily.
 
+.. only:: html
+
+   .. contents::
+      :local:
+      :depth: 1
+
+Properties
+^^^^^^^^^^
+
+.. container:: ts-properties
+
+   ==================== =============================== ====================== =======
+   Property             Data Type                       :ref:`t3tsref:stdwrap` Default
+   ==================== =============================== ====================== =======
+   `(array of keys)`_   :ref:`t3tsref:data-type-string`                               
+   ==================== =============================== ====================== =======
+
+Property details
+^^^^^^^^^^^^^^^^
+
+.. only:: html
+
+   .. contents::
+      :local:
+      :depth: 1
+
 .. ### BEGIN~OF~TABLE ###
+
+.. _setup-constants-array-of-keys:
+
+*(array of keys)*
+"""""""""""""""""
 
 .. container:: table-row
 
@@ -42,7 +73,6 @@ constants, you can maintain it easily.
          See ->parseFunc.
 
 
-.. ###### END~OF~TABLE ######
 
-[tsref:constants]
+.. ###### END~OF~TABLE ######
 

@@ -1,4 +1,4 @@
-.. ==================================================
+﻿.. ==================================================
 .. FOR YOUR INFORMATION
 .. --------------------------------------------------
 .. -*- coding: utf-8 -*- with BOM.
@@ -8,38 +8,73 @@
 
 .. _fe-table:
 
-"FE\_TABLE"
-^^^^^^^^^^^
+fe\_table
+=========
 
 **Note:** These options were deprecated since TYPO3 4.6 and have
 been removed in TYPO3 6.0.
 
+.. only:: html
+
+   .. contents::
+      :local:
+      :depth: 1
+
+Properties
+^^^^^^^^^^
+
+.. container:: ts-properties
+
+   ======================= ================================= ====================== ======================
+   Property                Data Type                         :ref:`t3tsref:stdwrap` Default               
+   ======================= ================================= ====================== ======================
+   `allowEdit.[field]`_    :ref:`t3tsref:data-type-string`                                                
+   `allowNew.[field]`_     :ref:`t3tsref:data-type-string`                                                
+   `autoInsertPID`_        :ref:`t3tsref:data-type-boolean`                                               
+   `default.[field]`_      :ref:`t3tsref:data-type-string`                                                
+   `doublePostCheck`_      string (field name)                                                            
+   `overrideEdit.[field]`_ :ref:`t3tsref:data-type-string`                                                
+   `processScript`_        :ref:`t3tsref:data-type-resource`                                              
+   `separator`_            :ref:`t3tsref:data-type-string`                          chr(10) *(line break)*
+   `userIdColumn`_         string (field)                                                                 
+   ======================= ================================= ====================== ======================
+
+Property details
+^^^^^^^^^^^^^^^^
+
+.. only:: html
+
+   .. contents::
+      :local:
+      :depth: 1
+
 .. ### BEGIN~OF~TABLE ###
+
+.. _setup-fe-table-allowedit-field:
+
+allowEdit.[field]
+"""""""""""""""""
 
 .. container:: table-row
 
    Property
-         default.[field]
+         allowEdit.[field]
 
    Data type
          string
 
    Description
-         This property is in charge of which default-values is used for the
-         table:
+         Same as above ("allowNew") but this controls which fields that may be
+         written in case of an update of a record (and not a new submission)
 
-         **Example:**
+         Please pay attention to the property below! ("overrideEdit")
 
-         This defines the default values used for new records. These values
-         will be overridden with any value submitted instead (as long as the
-         submitted fields are allowed due to "allowNew") ::
 
-            default {
-              subject = This is the default subject value!
-              hidden = 1
-              parent = 0
-            }
 
+.. _setup-fe-table-allownew-field:
+
+allowNew.[field]
+""""""""""""""""
 
 .. container:: table-row
 
@@ -70,20 +105,84 @@ been removed in TYPO3 6.0.
             }
 
 
+
+.. _setup-fe-table-autoinsertpid:
+
+autoInsertPID
+"""""""""""""
+
 .. container:: table-row
 
    Property
-         allowEdit.[field]
+         autoInsertPID
+
+   Data type
+         boolean
+
+   Description
+         Works with new records: Insert automatically the PID of the page,
+         where the submitted data is sent to. Any "pid" supplied from the
+         submitted data will override. This is for convenience.
+
+
+
+.. _setup-fe-table-default-field:
+
+default.[field]
+"""""""""""""""
+
+.. container:: table-row
+
+   Property
+         default.[field]
 
    Data type
          string
 
    Description
-         Same as above ("allowNew") but this controls which fields that may be
-         written in case of an update of a record (and not a new submission)
+         This property is in charge of which default-values is used for the
+         table:
 
-         Please pay attention to the property below! ("overrideEdit")
+         **Example:**
 
+         This defines the default values used for new records. These values
+         will be overridden with any value submitted instead (as long as the
+         submitted fields are allowed due to "allowNew") ::
+
+            default {
+              subject = This is the default subject value!
+              hidden = 1
+              parent = 0
+            }
+
+
+
+.. _setup-fe-table-doublepostcheck:
+
+doublePostCheck
+"""""""""""""""
+
+.. container:: table-row
+
+   Property
+         doublePostCheck
+
+   Data type
+         string (field name)
+
+   Description
+         Specifies a field name (integer) into which an integer-hash compiled
+         of the submitted data is inserted. If the field is set, then
+         submissions are checked whether another record with this value already
+         exists. If so, the record is **not** inserted, because it's expected to
+         be a "double post" (posting the same data more than once).
+
+
+
+.. _setup-fe-table-overrideedit-field:
+
+overrideEdit.[field]
+""""""""""""""""""""
 
 .. container:: table-row
 
@@ -109,33 +208,11 @@ been removed in TYPO3 6.0.
             }
 
 
-.. container:: table-row
 
-   Property
-         userIdColumn
+.. _setup-fe-table-processscript:
 
-   Data type
-         string (field)
-
-   Description
-         This is a string that points to the column of a record where the user-
-         id of the current fe\_user should be inserted. This fe\_user-uid is
-         inserted/updated both by "new" and "edit"
-
-
-.. container:: table-row
-
-   Property
-         autoInsertPID
-
-   Data type
-         boolean
-
-   Description
-         Works with new records: Insert automatically the PID of the page,
-         where the submitted data is sent to. Any "pid" supplied from the
-         submitted data will override. This is for convenience.
-
+processScript
+"""""""""""""
 
 .. container:: table-row
 
@@ -159,6 +236,12 @@ been removed in TYPO3 6.0.
          included in the extension "tt\_guest" (used for a guestbook feature)
 
 
+
+.. _setup-fe-table-separator:
+
+separator
+"""""""""
+
 .. container:: table-row
 
    Property
@@ -175,23 +258,25 @@ been removed in TYPO3 6.0.
          chr(10) *(line break)*
 
 
+
+.. _setup-fe-table-useridcolumn:
+
+userIdColumn
+""""""""""""
+
 .. container:: table-row
 
    Property
-         doublePostCheck
+         userIdColumn
 
    Data type
-         string (field name)
+         string (field)
 
    Description
-         Specifies a field name (integer) into which an integer-hash compiled
-         of the submitted data is inserted. If the field is set, then
-         submissions are checked whether another record with this value already
-         exists. If so, the record is **not** inserted, because it's expected to
-         be a "double post" (posting the same data more than once).
+         This is a string that points to the column of a record where the user-
+         id of the current fe\_user should be inserted. This fe\_user-uid is
+         inserted/updated both by "new" and "edit"
 
 
 .. ###### END~OF~TABLE ######
-
-[tsref:FEData.(table name)/->FE\_TABLE]
 

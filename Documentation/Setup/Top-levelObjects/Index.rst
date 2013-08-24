@@ -1,4 +1,4 @@
-.. ==================================================
+﻿.. ==================================================
 .. FOR YOUR INFORMATION
 .. --------------------------------------------------
 .. -*- coding: utf-8 -*- with BOM.
@@ -9,48 +9,109 @@
 .. _top-level-objects:
 
 Top-level objects
-^^^^^^^^^^^^^^^^^
+=================
 
+.. only:: html
+
+   .. contents::
+      :local:
+      :depth: 1
+
+Properties
+^^^^^^^^^^
+
+.. container:: ts-properties
+
+   ======================== ================== ====================== =======
+   Property                 Data Type          :ref:`t3tsref:stdwrap` Default
+   ======================== ================== ====================== =======
+   `((abc ...?))`_          ->PAGE                                           
+   `((bcd ...?))`_          *(whatever)*                                     
+   `config`_                ->CONFIG                                         
+   `constants`_             ->CONSTANTS                                      
+   `FEData`_                *->FE\_DATA*                                     
+   `includeLibs`_           *Array of strings*                               
+   `Other reserved TLO's:`_ *(whatever)*                                     
+   `resources`_             readonly                                         
+   `sitetitle`_             readonly                                         
+   `types`_                 readonly                                         
+   ======================== ================== ====================== =======
+
+Property details
+^^^^^^^^^^^^^^^^
+
+.. only:: html
+
+   .. contents::
+      :local:
+      :depth: 1
 
 .. ### BEGIN~OF~TABLE ###
 
-.. container:: table-row
+.. _top-level-objects-abc:
 
-   Property
-         types
-
-   Data type
-         readonly
-
-   Description
-         Types (internal)
-
-         type=99 reserved for plaintext display
-
+((abc ...?))
+""""""""""""
 
 .. container:: table-row
 
    Property
-         resources
+         ...
 
    Data type
-         readonly
+         ->PAGE
 
    Description
-         Resources in list (internal)
+         Start a new page.
 
+         **Example:** ::
+
+            page = PAGE
+            page.typeNum = 1
+
+         **Guidelines:**
+
+         Good, general PAGE object names to use are such as:
+
+         *page* for the main page with content
+
+         *frameset, frameset2* for framesets.
+
+         *top, left, menu, right, bottom, border* for top and menu frames etc.
+
+         These are just recommendations. However, especially the name 'page'
+         for the content bearing page is very common.
+
+
+
+.. _top-level-objects-bcd:
+
+((bcd ...?))
+""""""""""""
 
 .. container:: table-row
 
    Property
-         sitetitle
+         ...
 
    Data type
-         readonly
+         *(whatever)*
 
    Description
-         SiteTitle (internal)
+         If a top-level object is not a PAGE object it could be used as a
+         temporary repository for setup. In this case you should use the "temp"
+         or "styles" objects.
 
+         "tt\_..." is normally used to define the setup of content-records. E.g.
+         "tt\_content" would be used for the tt\_content-table as default. See
+         the "CONTENT" cObject
+
+
+
+.. _top-level-objects-config:
+
+config
+""""""
 
 .. container:: table-row
 
@@ -67,6 +128,12 @@ Top-level objects
          accessible when retrieving a cached page.
 
 
+
+.. _top-level-objects-constants:
+
+constants
+"""""""""
+
 .. container:: table-row
 
    Property
@@ -81,6 +148,12 @@ Top-level objects
          is done by parseFunc (with .constants = 1 set).
 
 
+
+.. _top-level-objects-fedata:
+
+FEData
+""""""
+
 .. container:: table-row
 
    Property
@@ -93,6 +166,12 @@ Top-level objects
          Here you can configure how data submitted from the front-end should be
          processed, which script and so on.
 
+
+
+.. _top-level-objects-includelibs:
+
+includeLibs
+"""""""""""
 
 .. container:: table-row
 
@@ -108,6 +187,12 @@ Top-level objects
 
          Please see the PAGE object, which has the same property.
 
+
+
+.. _top-level-objects-other-reserved-tlo-s:
+
+Other reserved TLO's:
+"""""""""""""""""""""
 
 .. container:: table-row
 
@@ -149,56 +234,60 @@ Top-level objects
          TypoScript (unlike "styles" which is unset).
 
 
-.. container:: table-row
 
-   Property
-         ...
+.. _top-level-objects-resources:
 
-   Data type
-         ->PAGE
-
-   Description
-         Start a new page.
-
-         **Example:** ::
-
-            page = PAGE
-            page.typeNum = 1
-
-         **Guidelines:**
-
-         Good, general PAGE object names to use are such as:
-
-         *page* for the main page with content
-
-         *frameset, frameset2* for framesets.
-
-         *top, left, menu, right, bottom, border* for top and menu frames etc.
-
-         These are just recommendations. However, especially the name 'page'
-         for the content bearing page is very common.
-
+resources
+"""""""""
 
 .. container:: table-row
 
    Property
-         ...
+         resources
 
    Data type
-         *(whatever)*
+         readonly
 
    Description
-         If a top-level object is not a PAGE object it could be used as a
-         temporary repository for setup. In this case you should use the "temp"
-         or "styles" objects.
+         Resources in list (internal)
 
-         "tt\_..." is normally used to define the setup of content-records. E.g.
-         "tt\_content" would be used for the tt\_content-table as default. See
-         the "CONTENT" cObject
+
+
+.. _top-level-objects-sitetitle:
+
+sitetitle
+"""""""""
+
+.. container:: table-row
+
+   Property
+         sitetitle
+
+   Data type
+         readonly
+
+   Description
+         SiteTitle (internal)
+
+
+
+.. _top-level-objects-types:
+
+types
+"""""
+
+.. container:: table-row
+
+   Property
+         types
+
+   Data type
+         readonly
+
+   Description
+         Types (internal)
+
+         type=99 reserved for plaintext display
 
 
 .. ###### END~OF~TABLE ######
-
-
-[tsref:(TLO)]
-

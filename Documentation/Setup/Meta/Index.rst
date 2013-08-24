@@ -1,4 +1,4 @@
-.. ==================================================
+﻿.. ==================================================
 .. FOR YOUR INFORMATION
 .. --------------------------------------------------
 .. -*- coding: utf-8 -*- with BOM.
@@ -8,11 +8,42 @@
 
 .. _meta:
 
-"META"
-^^^^^^
+meta
+====
 
+.. only:: html
+
+   .. contents::
+      :local:
+      :depth: 1
+
+Properties
+^^^^^^^^^^
+
+.. container:: ts-properties
+
+   ========================= =============== ====================== =======
+   Property                  Data Type       :ref:`t3tsref:stdwrap` Default
+   ========================= =============== ====================== =======
+   `(array of key names)`_   string /stdWrap                               
+   ========================= =============== ====================== =======
+
+Property details
+^^^^^^^^^^^^^^^^
+
+.. only:: html
+
+   .. contents::
+      :local:
+      :depth: 1
 
 .. ### BEGIN~OF~TABLE ###
+
+
+.. _REPLACE-ME-array-of-key-names:
+
+(array of key names)
+""""""""""""""""""""
 
 .. container:: table-row
 
@@ -56,8 +87,6 @@
          content="IE=edge,chrome=1">.
 
 
+
+
 .. ###### END~OF~TABLE ######
-
-
-[tsref:->META]
-

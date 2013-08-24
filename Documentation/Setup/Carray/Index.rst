@@ -1,4 +1,4 @@
-.. ==================================================
+﻿.. ==================================================
 .. FOR YOUR INFORMATION
 .. --------------------------------------------------
 .. -*- coding: utf-8 -*- with BOM.
@@ -8,30 +8,44 @@
 
 .. _carray:
 
-"CARRAY"
-^^^^^^^^
+carray
+======
+
+.. only:: html
+
+   .. contents::
+      :local:
+      :depth: 1
+
+Properties
+^^^^^^^^^^
+
+.. container:: ts-properties
+
+   ========================== =========== ====================== =======
+   Property                   Data Type   :ref:`t3tsref:stdwrap` Default
+   ========================== =========== ====================== =======
+   `(stdWrap properties...)`_ ->stdWrap                          
+   `(TDParams)`_              <TD>-params                        
+   `1,2,3,4...`_              cObject                            
+   ========================== =========== ====================== =======
+
+Property details
+^^^^^^^^^^^^^^^^
+
+.. only:: html
+
+   .. contents::
+      :local:
+      :depth: 1
 
 .. ### BEGIN~OF~TABLE ###
 
-.. container:: table-row
 
-   Property
-         1,2,3,4...
+.. _setup-carray-stdwrap-properties:
 
-   Data type
-         cObject
-
-   Description
-         This is a numerical "array" of content objects (cObjects). The order
-         in which you specify the objects is not important as the array will
-         be sorted numerically before it's parsed!
-
-
-.. container:: table-row
-
-   Property
-         **Occasional properties:**
-
+(stdWrap properties...)
+"""""""""""""""""""""""
 
 .. container:: table-row
 
@@ -61,6 +75,12 @@
          This will return '<b>This will be rendered before "10"testing</b>'.
 
 
+
+.. _setup-carray-tdparams:
+
+(TDParams)
+""""""""""
+
 .. container:: table-row
 
    Property
@@ -77,7 +97,24 @@
          look out for a note about that in the various cases.
 
 
+
+.. _setup-carray-1-2-3-4:
+
+1,2,3,4...
+""""""""""
+
+.. container:: table-row
+
+   Property
+         1,2,3,4...
+
+   Data type
+         cObject
+
+   Description
+         This is a numerical "array" of content objects (cObjects). The order
+         in which you specify the objects is not important as the array will
+         be sorted numerically before it's parsed!
+
+
 .. ###### END~OF~TABLE ######
-
-[tsref:->CARRAY]
-

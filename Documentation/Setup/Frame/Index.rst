@@ -1,4 +1,4 @@
-.. ==================================================
+﻿.. ==================================================
 .. FOR YOUR INFORMATION
 .. --------------------------------------------------
 .. -*- coding: utf-8 -*- with BOM.
@@ -8,11 +8,69 @@
 
 .. _frame:
 
-"FRAME"
-^^^^^^^
+frame
+=====
 
+.. only:: html
+
+   .. contents::
+      :local:
+      :depth: 1
+
+Properties
+^^^^^^^^^^
+
+.. container:: ts-properties
+
+   ========== ================================== ====================== ==============================================
+   Property   Data Type                          :ref:`t3tsref:stdwrap` Default                                       
+   ========== ================================== ====================== ==============================================
+   `name`_    <frame>-data:name                                         value of ".obj"                               
+   `obj`_     *pointer to top-level object-name*                                                                      
+   `options`_ :ref:`t3tsref:data-type-string`                                                                         
+   `params`_  <frame>-params                                                                                          
+   `src`_     <frame>-data:src /stdWrap                                 typolink to id=[currentId]&type=[obj->typeNum]
+   ========== ================================== ====================== ==============================================
+
+Property details
+^^^^^^^^^^^^^^^^
+
+.. only:: html
+
+   .. contents::
+      :local:
+      :depth: 1
 
 .. ### BEGIN~OF~TABLE ###
+
+.. _setup-frame-name:
+
+name
+""""
+
+.. container:: table-row
+
+   Property
+         name
+
+   Data type
+         <frame>-data:name
+
+   Description
+         Manually set name of frame
+
+         **Note:** Is set automatically and should not be overridden under
+         normal conditions!
+
+   Default
+         value of ".obj"
+
+
+
+.. _setup-frame-obj:
+
+obj
+"""
 
 .. container:: table-row
 
@@ -29,6 +87,12 @@
 
          "left", "page", "frameset"
 
+
+
+.. _setup-frame-options:
+
+options
+"""""""
 
 .. container:: table-row
 
@@ -49,6 +113,12 @@
          ".src"-content (if not ".src" is set manually).
 
 
+
+.. _setup-frame-params:
+
+params
+""""""
+
 .. container:: table-row
 
    Property
@@ -63,23 +133,11 @@
          scrolling="AUTO" noresize frameborder="NO"
 
 
-.. container:: table-row
 
-   Property
-         name
+.. _setup-frame-src:
 
-   Data type
-         <frame>-data:name
-
-   Description
-         Manually set name of frame
-
-         **Note:** Is set automatically and should not be overridden under
-         normal conditions!
-
-   Default
-         value of ".obj"
-
+src
+"""
 
 .. container:: table-row
 
@@ -99,9 +157,6 @@
 
 
 .. ###### END~OF~TABLE ######
-
-
-[tsref:(page).frameSet.(number)/->FRAMESET.(number)]
 
 
 Example:

@@ -1,4 +1,4 @@
-.. ==================================================
+﻿.. ==================================================
 .. FOR YOUR INFORMATION
 .. --------------------------------------------------
 .. -*- coding: utf-8 -*- with BOM.
@@ -8,10 +8,45 @@
 
 .. _frameset:
 
-"FRAMESET"
+frameset
+========
+
+.. only:: html
+
+   .. contents::
+      :local:
+      :depth: 1
+
+Properties
 ^^^^^^^^^^
 
+.. container:: ts-properties
+
+   ============= ==================== ====================== =======
+   Property      Data Type            :ref:`t3tsref:stdwrap` Default
+   ============= ==================== ====================== =======
+   `1,2,3,4...`_ frameObj                                           
+   `cols`_       <frameset>-data:cols                               
+   `params`_     <frameset>-params                                  
+   `rows`_       <frameset>-data:rows                               
+   ============= ==================== ====================== =======
+
+Property details
+^^^^^^^^^^^^^^^^
+
+.. only:: html
+
+   .. contents::
+      :local:
+      :depth: 1
+
 .. ### BEGIN~OF~TABLE ###
+
+
+.. _setup-frameset-1-2-3-4:
+
+1,2,3,4...
+""""""""""
 
 .. container:: table-row
 
@@ -25,6 +60,12 @@
          Configuration of frames and nested framesets.
 
 
+
+.. _setup-frameset-cols:
+
+cols
+""""
+
 .. container:: table-row
 
    Property
@@ -37,17 +78,11 @@
          Cols
 
 
-.. container:: table-row
 
-   Property
-         rows
+.. _setup-frameset-params:
 
-   Data type
-         <frameset>-data:rows
-
-   Description
-         Rows
-
+params
+""""""
 
 .. container:: table-row
 
@@ -63,7 +98,24 @@
          border="0" framespacing="0" frameborder="NO"
 
 
-.. ###### END~OF~TABLE ######
 
-[tsref:(page).frameSet/->FRAMESET]
+.. _setup-frameset-rows:
+
+rows
+""""
+
+.. container:: table-row
+
+   Property
+         rows
+
+   Data type
+         <frameset>-data:rows
+
+   Description
+         Rows
+
+
+
+.. ###### END~OF~TABLE ######
 

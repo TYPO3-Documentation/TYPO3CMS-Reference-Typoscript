@@ -1,4 +1,4 @@
-.. ==================================================
+﻿.. ==================================================
 .. FOR YOUR INFORMATION
 .. --------------------------------------------------
 .. -*- coding: utf-8 -*- with BOM.
@@ -8,8 +8,8 @@
 
 .. _page:
 
-"PAGE"
-^^^^^^
+page
+====
 
 Pages are referenced by two main values. The "id" and "type".
 
@@ -34,25 +34,76 @@ Most of this code is executed in the PHP script
 *typo3/sysext/frontend/Classes/Page/PageGenerator.php*
 (typo3/sysext/cms/tslib/class.tslib\_pagegen.php).
 
+.. only:: html
+
+   .. contents::
+      :local:
+      :depth: 1
+
+Properties
+^^^^^^^^^^
+
+.. container:: ts-properties
+
+   ============================== ================================= ====================== ========================
+   Property                       Data Type                         :ref:`t3tsref:stdwrap` Default                 
+   ============================== ================================= ====================== ========================
+   `1,2,3,4...`_                  cObject                                                                          
+   `adminPanelStyles`_            :ref:`t3tsref:data-type-boolean`                                                 
+   `bgImg`_                       imgResource                                                                      
+   `bodyTag`_                     <tag>                                                    <body bgcolor="#FFFFFF">
+   `bodyTagAdd`_                  :ref:`t3tsref:data-type-string`                                                  
+   `bodyTagCObject`_              cObject                                                                          
+   `bodyTagMargins`_              :ref:`t3tsref:data-type-integer`                                                 
+   `config`_                      ->CONFIG                                                                         
+   `CSS\_inlineStyle`_            :ref:`t3tsref:data-type-string`                                                  
+   `cssInline`_                   ->CARRAY                                                                         
+   `extOnReady`_                  ->CARRAY                                                                         
+   `footerData`_                  ->CARRAY                                                                         
+   `frameSet`_                    ->FRAMESET                                                                       
+   `headerData`_                  ->CARRAY                                                                         
+   `headTag`_                     <tag>                                                    <head>                  
+   `hover`_                       HTML-color                                                                       
+   `hoverStyle`_                  :ref:`t3tsref:data-type-string`                                                  
+   `includeCSS.[array]`_          :ref:`t3tsref:data-type-resource`                                                
+   `includeJS.[array]`_           :ref:`t3tsref:data-type-resource`                                                
+   `includeJSFooter.[array]`_     :ref:`t3tsref:data-type-resource`                                                
+   `includeJSFooterlibs.[array]`_ :ref:`t3tsref:data-type-resource`                                                
+   `includeJSlibs.[array]`_       :ref:`t3tsref:data-type-resource`                                                
+   `includeLibs`_                 *(array of strings)*                                                             
+   `inlineJS`_                    ->CARRAY                                                                         
+   `inlineLanguageLabel`_         *(array of strings)*                                                             
+   `inlineSettings`_              *(array of strings)*                                                             
+   `insertClassesFromRTE`_        :ref:`t3tsref:data-type-boolean`                                                 
+   `javascriptLibs`_              *(array of strings)*                                                             
+   `jsFooterInline`_              ->CARRAY                                                                         
+   `jsInline`_                    ->CARRAY                                                                         
+   `meta`_                        ->META                                                                           
+   `noLinkUnderline`_             :ref:`t3tsref:data-type-boolean`                                                 
+   `shortcutIcon`_                :ref:`t3tsref:data-type-resource`                                                
+   `smallFormFields`_             :ref:`t3tsref:data-type-boolean`                                                 
+   `stdWrap`_                     ->stdWrap                                                                        
+   `stylesheet`_                  :ref:`t3tsref:data-type-resource`                                                
+   `typeNum`_                     :ref:`t3tsref:data-type-integer`                         0                       
+   `wrap`_                        wrap                                                                             
+   ============================== ================================= ====================== ========================
+
+Property details
+^^^^^^^^^^^^^^^^
+
+.. only:: html
+
+   .. contents::
+      :local:
+      :depth: 1
+
 .. ### BEGIN~OF~TABLE ###
 
-.. container:: table-row
 
-   Property
-         typeNum
+.. _setup-page-1-2-3-4:
 
-   Data type
-         integer
-
-   Description
-         This determines the typeId of the page. The value defaults to 0 for
-         the first found PAGE object, but it **must** be set and be unique as
-         soon you use *more* than one such object (watch this if you use frames
-         on your page)!
-
-   Default
-         0
-
+1,2,3,4...
+""""""""""
 
 .. container:: table-row
 
@@ -63,47 +114,48 @@ Most of this code is executed in the PHP script
          cObject
 
 
-.. container:: table-row
 
-   Property
-         wrap
+.. _setup-page-adminpanelstyles:
 
-   Data type
-         wrap
-
-   Description
-         Wraps the content of the cObject array.
-
+adminPanelStyles
+""""""""""""""""
 
 .. container:: table-row
 
    Property
-         stdWrap
+         adminPanelStyles
 
    Data type
-         ->stdWrap
+         boolean
 
    Description
-         Wraps the content of the cObject array with stdWrap options.
+         Will include CSS styles for the Admin Panel.
 
+
+
+.. _setup-page-bgimg:
+
+bgImg
+"""""
 
 .. container:: table-row
 
    Property
-         bodyTagCObject
+         bgImg
 
    Data type
-         cObject
+         imgResource
 
    Description
-         This is the default body tag. It is overridden by ".bodyTag", if
-         that is set.
+         Background image on the page. This is automatically added to the body-
+         tag.
 
-         **Note:** Additionally to the body tag properties noted here,
-         there also is the property "config.disableBodyTag", which - if set
-         - disables body tag generation independently from what might be set
-         here.
 
+
+.. _setup-page-bodytag:
+
+bodyTag
+"""""""
 
 .. container:: table-row
 
@@ -124,20 +176,53 @@ Most of this code is executed in the PHP script
          <body bgcolor="#FFFFFF">
 
 
+
+.. _setup-page-bodytagadd:
+
+bodyTagAdd
+""""""""""
+
 .. container:: table-row
 
    Property
-         headTag
+         bodyTagAdd
 
    Data type
-         <tag>
+         string
 
    Description
-         Head-tag if alternatives are wanted
+         This content is added to the end of the bodyTag.
 
-   Default
-         <head>
 
+
+.. _setup-page-bodytagcobject:
+
+bodyTagCObject
+""""""""""""""
+
+.. container:: table-row
+
+   Property
+         bodyTagCObject
+
+   Data type
+         cObject
+
+   Description
+         This is the default body tag. It is overridden by ".bodyTag", if
+         that is set.
+
+         **Note:** Additionally to the body tag properties noted here,
+         there also is the property "config.disableBodyTag", which - if set
+         - disables body tag generation independently from what might be set
+         here.
+
+
+
+.. _setup-page-bodytagmargins:
+
+bodyTagMargins
+""""""""""""""
 
 .. container:: table-row
 
@@ -163,30 +248,125 @@ Most of this code is executed in the PHP script
          marginheight="4"* to the bodyTag.
 
 
+
+.. _setup-page-config:
+
+config
+""""""
+
 .. container:: table-row
 
    Property
-         bodyTagAdd
+         config
+
+   Data type
+         ->CONFIG
+
+   Description
+         Configuration for the page. Any entries made here override the same
+         entries in the top-level object "config".
+
+
+
+.. _setup-page-css-inlinestyle:
+
+CSS\_inlineStyle
+""""""""""""""""
+
+.. container:: table-row
+
+   Property
+         CSS\_inlineStyle
 
    Data type
          string
 
    Description
-         This content is added to the end of the bodyTag.
+         This value is just passed on as inline CSS (in-document CSS
+         encapsulated in <style>-tags).
 
+
+
+.. _setup-page-cssinline:
+
+cssInline
+"""""""""
 
 .. container:: table-row
 
    Property
-         bgImg
+         cssInline
 
    Data type
-         imgResource
+         ->CARRAY
 
    Description
-         Background image on the page. This is automatically added to the body-
-         tag.
+         Use cObjects for creating inline CSS
 
+         **Example:** ::
+
+            cssInline {
+                10 = TEXT
+                10.value = h1 {margin:15px;}
+
+                20 = TEXT
+                20.value = h1 span {color: blue;}
+            }
+
+
+
+.. _setup-page-extonready:
+
+extOnReady
+""""""""""
+
+.. container:: table-row
+
+   Property
+         extOnReady
+
+   Data type
+         ->CARRAY
+
+   Description
+         ExtJS specific, adds inline JavaScript, wrapped in Ext.onReady.
+
+         **Example:** ::
+
+            page.extOnReady {
+               10 = TEXT
+               10.value = Ext.Msg.alert("TypoScript Message","Hello World!");
+            }
+
+         will produce following source::
+
+            Ext.onReady(function() {Ext.Msg.alert("TypoScript Message","Hello World!"); });
+
+
+
+.. _setup-page-footerdata:
+
+footerData
+""""""""""
+
+.. container:: table-row
+
+   Property
+         footerData
+
+   Data type
+         ->CARRAY
+
+   Description
+         Same as headerData above, except that this block gets included at the
+         bottom of the page (just before the closing body tag).
+
+
+
+.. _setup-page-frameset:
+
+frameSet
+""""""""
 
 .. container:: table-row
 
@@ -201,32 +381,11 @@ Most of this code is executed in the PHP script
          frameset.
 
 
-.. container:: table-row
 
-   Property
-         meta
+.. _setup-page-headerdata:
 
-   Data type
-         ->META
-
-
-.. container:: table-row
-
-   Property
-         shortcutIcon
-
-   Data type
-         resource
-
-   Description
-         Favicon of the page. Create a reference to an icon here!
-
-         Browsers that support favicons display them in the browser's address
-         bar, next to the site's name in lists of bookmarks, and next to the
-         page's title in the tab.
-
-         **Note:** This must be a valid ".ico"-file (iconfile).
-
+headerData
+""""""""""
 
 .. container:: table-row
 
@@ -243,31 +402,292 @@ Most of this code is executed in the PHP script
          By default, gets inserted after all the style definitions.
 
 
+
+.. _setup-page-headtag:
+
+headTag
+"""""""
+
 .. container:: table-row
 
    Property
-         footerData
+         headTag
 
    Data type
-         ->CARRAY
+         <tag>
 
    Description
-         Same as headerData above, except that this block gets included at the
+         Head-tag if alternatives are wanted
+
+   Default
+         <head>
+
+
+
+.. _setup-page-hover:
+
+hover
+"""""
+
+.. container:: table-row
+
+   Property
+         hover
+
+   Data type
+         HTML-color
+
+   Description
+         The color of a link when the mouse moves over it! (only MSIE). Uses
+         in-document stylesheet.
+
+         **Note:** This option was deprecated and has been removed in
+         TYPO3 6.0. Use stylesheets instead.
+
+
+
+.. _setup-page-hoverstyle:
+
+hoverStyle
+""""""""""
+
+.. container:: table-row
+
+   Property
+         hoverStyle
+
+   Data type
+         string
+
+   Description
+         Additional style information to the hover-color.
+
+         **Example:** ::
+
+            page.hoverStyle = font: bold; text-decoration: none;
+
+         **Note:** This option was deprecated and has been removed in
+         TYPO3 6.0. Use stylesheets instead.
+
+
+
+.. _setup-page-includecss-array:
+
+includeCSS.[array]
+""""""""""""""""""
+
+.. container:: table-row
+
+   Property
+         includeCSS.[array]
+
+   Data type
+         resource
+
+   Description
+         Inserts a stylesheet (just like the .stylesheet property) by allows to
+         setting up more than a single stylesheet, because you can enter files
+         in an array.
+
+         The file definition must be a valid "resource" data type, otherwise
+         nothing is inserted.
+
+         Each file has *optional properties*:
+
+         **.allWrap:** Wraps the complete tag, useful for conditional
+         comments.
+
+         **.alternate:** If set (boolean) then the rel-attribute will be
+         "alternate stylesheet".
+
+         **.disableCompression:** (Since TYPO3 4.6) If config.compressCss is
+         enabled, this disables the compression of this file.
+
+         **.excludeFromConcatenation:** (Since TYPO3 4.6) If
+         config.concatenateCss is enabled, this prevents the file from being
+         concatenated.
+
+         **.external:** If set, there is no file existence check. Useful for
+         inclusion of external files.
+
+         **.if:** (Since TYPO3 4.7) Allows to define conditions, which must
+         evaluate to TRUE for the file to be included. If they do not evaluate
+         to TRUE, the file will not be included. Extensive usage might cause
+         huge numbers of temporary files to be created. See ->if for details.
+
+         **.import:** If set (boolean) then the @import way of including a
+         stylesheet is used instead of <link>
+
+         **.media:** Setting the media attribute of the <style> tag.
+
+         **.title:** Setting the title of the <style> tag.
+
+         **Example:** ::
+
+            includeCSS {
+              file1 = fileadmin/mystylesheet1.css
+              file2 = stylesheet_uploaded_to_template*.css
+              file2.title = High contrast
+              file2.media = print
+              ie6Style = fileadmin/css/style3.css
+              ie6Style.allWrap = <!--[if lte IE 7]>|<![endif]-->
+              cooliris = http://www.cooliris.com/shared/
+                         resources/css/global.css
+              cooliris.external = 1
+            }
+
+
+
+.. _setup-page-includejs-array:
+
+includeJS.[array]
+"""""""""""""""""
+
+.. container:: table-row
+
+   Property
+         includeJS.[array]
+
+   Data type
+         resource
+
+   Description
+         Inserts one or more (Java)Scripts in <script> tags.
+
+         The file definition must be a valid "resource" data type, otherwise
+         nothing is inserted. This means that remote files cannot be referenced
+         (i.e. using "http://..."), except by using the ".external" property.
+
+         Each file has *optional properties*:
+
+         **.allWrap:** Wraps the complete tag, useful for conditional
+         comments.
+
+         **.disableCompression:** (Since TYPO3 4.6) If config.compressJs is
+         enabled, this disables the compression of this file.
+
+         **.excludeFromConcatenation:** (Since TYPO3 4.6) If
+         config.concatenateJs is enabled, this prevents the file from being
+         concatenated.
+
+         **.external:** If set, there is no file existence check. Useful for
+         inclusion of external files.
+
+         **.forceOnTop:** Boolean flag. If set, this file will be added on top
+         of all other files.
+
+         **.if:** (Since TYPO3 4.7) Allows to define conditions, which must
+         evaluate to TRUE for the file to be included. If they do not evaluate
+         to TRUE, the file will not be included. Extensive usage might cause
+         huge numbers of temporary files to be created. See ->if for details.
+
+         **.type:** Setting the MIME type of the script (default:
+         text/javascript).
+
+         **Example:** ::
+
+            includeJS {
+              file1 = fileadmin/helloworld.js
+              file1.type = application/x-javascript
+              # Include a second file, but only if myConstant is set in the TS constants field.
+              file2 = javascript_uploaded_to_template*.js
+              file2.if.isTrue = {$myConstant}
+            }
+
+
+
+.. _setup-page-includejsfooter-array:
+
+includeJSFooter.[array]
+"""""""""""""""""""""""
+
+.. container:: table-row
+
+   Property
+         includeJSFooter.[array]
+
+   Data type
+         resource
+
+   Description
+         Same as includeJS above, except that this block gets included at the
          bottom of the page (just before the closing body tag).
 
 
+
+.. _setup-page-includejsfooterlibs-array:
+
+includeJSFooterlibs.[array]
+"""""""""""""""""""""""""""
+
 .. container:: table-row
 
    Property
-         config
+         includeJSFooterlibs.[array]
 
    Data type
-         ->CONFIG
+         resource
 
    Description
-         Configuration for the page. Any entries made here override the same
-         entries in the top-level object "config".
+         Same as includeJSlibs above, except that this block gets included at
+         the bottom of the page (just before the closing body tag).
 
+
+
+.. _setup-page-includejslibs-array:
+
+includeJSlibs.[array]
+"""""""""""""""""""""
+
+.. container:: table-row
+
+   Property
+         includeJSlibs.[array]
+
+   Data type
+         resource
+
+   Description
+         Adds JS library files to head of page.
+
+         The file definition must be a valid "resource" data type, otherwise
+         nothing is inserted. This means that remote files cannot be referenced
+         (i.e. using "http://..."), except by using the ".external" property.
+
+         Each file has *optional properties*:
+
+         **.allWrap:** Wraps the complete tag, useful for conditional
+         comments.
+
+         **.disableCompression:** (Since TYPO3 4.6) If config.compressJs is
+         enabled, this disables the compression of this file.
+
+         **.excludeFromConcatenation:** (Since TYPO3 4.6) If
+         config.concatenateJs is enabled, this prevents the file from being
+         concatenated.
+
+         **.external:** If set, there is no file existence check. Useful for
+         inclusion of external files.
+
+         **.forceOnTop:** Boolean flag. If set, this file will be added on top
+         of all other files.
+
+         **.if:** (Since TYPO3 4.7) Allows to define conditions, which must
+         evaluate to TRUE for the file to be included. If they do not evaluate
+         to TRUE, the file will not be included. Extensive usage might cause
+         huge numbers of temporary files to be created. See ->if for details.
+
+         **Example:** ::
+
+            includeJSlibs.twitter = http://twitter.com/javascripts/blogger.js
+            includeJSlibs.twitter.external = 1
+
+
+
+.. _setup-page-includelibs:
+
+includeLibs
+"""""""""""
 
 .. container:: table-row
 
@@ -296,11 +716,128 @@ Most of this code is executed in the PHP script
             includeLibs.tx_myext = lib_filename.php
 
 
+
+.. _setup-page-inlinejs:
+
+inlineJS
+""""""""
+
 .. container:: table-row
 
    Property
-         **JavaScript:**
+         inlineJS
 
+   Data type
+         ->CARRAY
+
+   Description
+         Inserts inline JavaScript in the header-section. Don't use script-tags
+         as they are added by TYPO3.
+
+         **Example:** ::
+
+            page.inlineJS.10 = TEXT
+            page.inlineJS.10.value = function a(val) { alert(val); }
+
+         With config.removeDefaultJS = external the inlineJS is moved to
+         external file.
+
+         With config.minifyJS = 1 (removed in TYPO3 6.0) the inlineJS was
+         minified as well.
+
+         **Note:** This option was deprecated and has been removed in TYPO3
+         4.3. Use jsInline instead.
+
+
+
+.. _setup-page-inlinelanguagelabel:
+
+inlineLanguageLabel
+"""""""""""""""""""
+
+.. container:: table-row
+
+   Property
+         inlineLanguageLabel
+
+   Data type
+         *(array of strings)*
+
+   Description
+         ExtJS specific, adds language labels to the page.
+
+         **Example:** ::
+
+            inlineLanguageLabel {
+               label1 = 123
+               label2 = 456
+            }
+
+         will produce following source::
+
+            TYPO3.lang = {"label1":"123","label2":"456"};
+
+
+
+.. _setup-page-inlinesettings:
+
+inlineSettings
+""""""""""""""
+
+.. container:: table-row
+
+   Property
+         inlineSettings
+
+   Data type
+         *(array of strings)*
+
+   Description
+         ExtJS specific, adds settings to the page.
+
+         **Example:** ::
+
+            page.inlineSettings {
+               setting1 = Hello
+               setting2 = GoOnTop
+            }
+
+         will produce following source::
+
+            TYPO3.settings = {"TS":{"setting1":"Hello","setting2":"GoOnTop"}};
+
+
+
+.. _setup-page-insertclassesfromrte:
+
+insertClassesFromRTE
+""""""""""""""""""""
+
+.. container:: table-row
+
+   Property
+         insertClassesFromRTE
+
+   Data type
+         boolean
+
+   Description
+         If set, the classes for the Rich Text Editor configured in Page
+         TSconfig are inserted as the first thing in the Style-section right
+         after the setting of the stylesheet.
+
+         **.add\_mainStyleOverrideDefs:** [\* / list of tags ]. Will add all
+         the "RTE.default. mainStyleOverride\_add" - tags configured as well.
+
+         *Might be deprecated soon. Most likely the RTE should be configured by
+         the stylesheet instead. Stay tuned...*
+
+
+
+.. _setup-page-javascriptlibs:
+
+javascriptLibs
+""""""""""""""
 
 .. container:: table-row
 
@@ -371,196 +908,30 @@ Most of this code is executed in the PHP script
          lead to errors.
 
 
-.. container:: table-row
 
-   Property
-         inlineLanguageLabel
+.. _setup-page-jsfooterinline:
 
-   Data type
-         *(array of strings)*
-
-   Description
-         ExtJS specific, adds language labels to the page.
-
-         **Example:** ::
-
-            inlineLanguageLabel {
-               label1 = 123
-               label2 = 456
-            }
-
-         will produce following source::
-
-            TYPO3.lang = {"label1":"123","label2":"456"};
-
+jsFooterInline
+""""""""""""""
 
 .. container:: table-row
 
    Property
-         inlineSettings
-
-   Data type
-         *(array of strings)*
-
-   Description
-         ExtJS specific, adds settings to the page.
-
-         **Example:** ::
-
-            page.inlineSettings {
-               setting1 = Hello
-               setting2 = GoOnTop
-            }
-
-         will produce following source::
-
-            TYPO3.settings = {"TS":{"setting1":"Hello","setting2":"GoOnTop"}};
-
-
-.. container:: table-row
-
-   Property
-         extOnReady
+         jsFooterInline
 
    Data type
          ->CARRAY
 
    Description
-         ExtJS specific, adds inline JavaScript, wrapped in Ext.onReady.
-
-         **Example:** ::
-
-            page.extOnReady {
-               10 = TEXT
-               10.value = Ext.Msg.alert("TypoScript Message","Hello World!");
-            }
-
-         will produce following source::
-
-            Ext.onReady(function() {Ext.Msg.alert("TypoScript Message","Hello World!"); });
-
-
-.. container:: table-row
-
-   Property
-         includeJSlibs.[array]
-
-   Data type
-         resource
-
-   Description
-         Adds JS library files to head of page.
-
-         The file definition must be a valid "resource" data type, otherwise
-         nothing is inserted. This means that remote files cannot be referenced
-         (i.e. using "http://..."), except by using the ".external" property.
-
-         Each file has *optional properties*:
-
-         **.allWrap:** Wraps the complete tag, useful for conditional
-         comments.
-
-         **.disableCompression:** (Since TYPO3 4.6) If config.compressJs is
-         enabled, this disables the compression of this file.
-
-         **.excludeFromConcatenation:** (Since TYPO3 4.6) If
-         config.concatenateJs is enabled, this prevents the file from being
-         concatenated.
-
-         **.external:** If set, there is no file existence check. Useful for
-         inclusion of external files.
-
-         **.forceOnTop:** Boolean flag. If set, this file will be added on top
-         of all other files.
-
-         **.if:** (Since TYPO3 4.7) Allows to define conditions, which must
-         evaluate to TRUE for the file to be included. If they do not evaluate
-         to TRUE, the file will not be included. Extensive usage might cause
-         huge numbers of temporary files to be created. See ->if for details.
-
-         **Example:** ::
-
-            includeJSlibs.twitter = http://twitter.com/javascripts/blogger.js
-            includeJSlibs.twitter.external = 1
-
-
-.. container:: table-row
-
-   Property
-         includeJSFooterlibs.[array]
-
-   Data type
-         resource
-
-   Description
-         Same as includeJSlibs above, except that this block gets included at
-         the bottom of the page (just before the closing body tag).
-
-
-.. container:: table-row
-
-   Property
-         includeJS.[array]
-
-   Data type
-         resource
-
-   Description
-         Inserts one or more (Java)Scripts in <script> tags.
-
-         The file definition must be a valid "resource" data type, otherwise
-         nothing is inserted. This means that remote files cannot be referenced
-         (i.e. using "http://..."), except by using the ".external" property.
-
-         Each file has *optional properties*:
-
-         **.allWrap:** Wraps the complete tag, useful for conditional
-         comments.
-
-         **.disableCompression:** (Since TYPO3 4.6) If config.compressJs is
-         enabled, this disables the compression of this file.
-
-         **.excludeFromConcatenation:** (Since TYPO3 4.6) If
-         config.concatenateJs is enabled, this prevents the file from being
-         concatenated.
-
-         **.external:** If set, there is no file existence check. Useful for
-         inclusion of external files.
-
-         **.forceOnTop:** Boolean flag. If set, this file will be added on top
-         of all other files.
-
-         **.if:** (Since TYPO3 4.7) Allows to define conditions, which must
-         evaluate to TRUE for the file to be included. If they do not evaluate
-         to TRUE, the file will not be included. Extensive usage might cause
-         huge numbers of temporary files to be created. See ->if for details.
-
-         **.type:** Setting the MIME type of the script (default:
-         text/javascript).
-
-         **Example:** ::
-
-            includeJS {
-              file1 = fileadmin/helloworld.js
-              file1.type = application/x-javascript
-              # Include a second file, but only if myConstant is set in the TS constants field.
-              file2 = javascript_uploaded_to_template*.js
-              file2.if.isTrue = {$myConstant}
-            }
-
-
-.. container:: table-row
-
-   Property
-         includeJSFooter.[array]
-
-   Data type
-         resource
-
-   Description
-         Same as includeJS above, except that this block gets included at the
+         Same jsInline above, except that the JavaScript gets inserted at the
          bottom of the page (just before the closing body tag).
 
+
+
+.. _setup-page-jsinline:
+
+jsInline
+""""""""
 
 .. container:: table-row
 
@@ -589,187 +960,26 @@ Most of this code is executed in the PHP script
          minified as well.
 
 
+
+.. _setup-page-meta:
+
+meta
+""""
+
 .. container:: table-row
 
    Property
-         jsFooterInline
+         meta
 
    Data type
-         ->CARRAY
-
-   Description
-         Same jsInline above, except that the JavaScript gets inserted at the
-         bottom of the page (just before the closing body tag).
+         ->META
 
 
-.. container:: table-row
 
-   Property
-         inlineJS
+.. _setup-page-nolinkunderline:
 
-   Data type
-         ->CARRAY
-
-   Description
-         Inserts inline JavaScript in the header-section. Don't use script-tags
-         as they are added by TYPO3.
-
-         **Example:** ::
-
-            page.inlineJS.10 = TEXT
-            page.inlineJS.10.value = function a(val) { alert(val); }
-
-         With config.removeDefaultJS = external the inlineJS is moved to
-         external file.
-
-         With config.minifyJS = 1 (removed in TYPO3 6.0) the inlineJS was
-         minified as well.
-
-         **Note:** This option was deprecated and has been removed in TYPO3
-         4.3. Use jsInline instead.
-
-
-.. container:: table-row
-
-   Property
-         **CSS Stylesheets:**
-
-
-.. container:: table-row
-
-   Property
-         stylesheet
-
-   Data type
-         resource
-
-   Description
-         Inserts a stylesheet in the <HEAD>-section of the page;
-
-         *<link rel="stylesheet" href="[resource]">*
-
-
-.. container:: table-row
-
-   Property
-         includeCSS.[array]
-
-   Data type
-         resource
-
-   Description
-         Inserts a stylesheet (just like the .stylesheet property) by allows to
-         setting up more than a single stylesheet, because you can enter files
-         in an array.
-
-         The file definition must be a valid "resource" data type, otherwise
-         nothing is inserted.
-
-         Each file has *optional properties*:
-
-         **.allWrap:** Wraps the complete tag, useful for conditional
-         comments.
-
-         **.alternate:** If set (boolean) then the rel-attribute will be
-         "alternate stylesheet".
-
-         **.disableCompression:** (Since TYPO3 4.6) If config.compressCss is
-         enabled, this disables the compression of this file.
-
-         **.excludeFromConcatenation:** (Since TYPO3 4.6) If
-         config.concatenateCss is enabled, this prevents the file from being
-         concatenated.
-
-         **.external:** If set, there is no file existence check. Useful for
-         inclusion of external files.
-
-         **.if:** (Since TYPO3 4.7) Allows to define conditions, which must
-         evaluate to TRUE for the file to be included. If they do not evaluate
-         to TRUE, the file will not be included. Extensive usage might cause
-         huge numbers of temporary files to be created. See ->if for details.
-
-         **.import:** If set (boolean) then the @import way of including a
-         stylesheet is used instead of <link>
-
-         **.media:** Setting the media attribute of the <style> tag.
-
-         **.title:** Setting the title of the <style> tag.
-
-         **Example:** ::
-
-            includeCSS {
-              file1 = fileadmin/mystylesheet1.css
-              file2 = stylesheet_uploaded_to_template*.css
-              file2.title = High contrast
-              file2.media = print
-              ie6Style = fileadmin/css/style3.css
-              ie6Style.allWrap = <!--[if lte IE 7]>|<![endif]-->
-              cooliris = http://www.cooliris.com/shared/
-                         resources/css/global.css
-              cooliris.external = 1
-            }
-
-
-.. container:: table-row
-
-   Property
-         cssInline
-
-   Data type
-         ->CARRAY
-
-   Description
-         Use cObjects for creating inline CSS
-
-         **Example:** ::
-
-            cssInline {
-                10 = TEXT
-                10.value = h1 {margin:15px;}
-
-                20 = TEXT
-                20.value = h1 span {color: blue;}
-            }
-
-
-.. container:: table-row
-
-   Property
-         CSS\_inlineStyle
-
-   Data type
-         string
-
-   Description
-         This value is just passed on as inline CSS (in-document CSS
-         encapsulated in <style>-tags).
-
-
-.. container:: table-row
-
-   Property
-         **Other:**
-
-
-.. container:: table-row
-
-   Property
-         insertClassesFromRTE
-
-   Data type
-         boolean
-
-   Description
-         If set, the classes for the Rich Text Editor configured in Page
-         TSconfig are inserted as the first thing in the Style-section right
-         after the setting of the stylesheet.
-
-         **.add\_mainStyleOverrideDefs:** [\* / list of tags ]. Will add all
-         the "RTE.default. mainStyleOverride\_add" - tags configured as well.
-
-         *Might be deprecated soon. Most likely the RTE should be configured by
-         the stylesheet instead. Stay tuned...*
-
+noLinkUnderline
+"""""""""""""""
 
 .. container:: table-row
 
@@ -786,40 +996,35 @@ Most of this code is executed in the PHP script
          TYPO3 6.0. Use stylesheets instead.
 
 
-.. container:: table-row
 
-   Property
-         hover
+.. _setup-page-shortcuticon:
 
-   Data type
-         HTML-color
-
-   Description
-         The color of a link when the mouse moves over it! (only MSIE). Uses
-         in-document stylesheet.
-
-         **Note:** This option was deprecated and has been removed in
-         TYPO3 6.0. Use stylesheets instead.
-
+shortcutIcon
+""""""""""""
 
 .. container:: table-row
 
    Property
-         hoverStyle
+         shortcutIcon
 
    Data type
-         string
+         resource
 
    Description
-         Additional style information to the hover-color.
+         Favicon of the page. Create a reference to an icon here!
 
-         **Example:** ::
+         Browsers that support favicons display them in the browser's address
+         bar, next to the site's name in lists of bookmarks, and next to the
+         page's title in the tab.
 
-            page.hoverStyle = font: bold; text-decoration: none;
+         **Note:** This must be a valid ".ico"-file (iconfile).
 
-         **Note:** This option was deprecated and has been removed in
-         TYPO3 6.0. Use stylesheets instead.
 
+
+.. _setup-page-smallformfields:
+
+smallFormFields
+"""""""""""""""
 
 .. container:: table-row
 
@@ -845,19 +1050,84 @@ Most of this code is executed in the PHP script
          TYPO3 6.0. Use stylesheets instead.
 
 
+
+.. _setup-page-stdwrap:
+
+stdWrap
+"""""""
+
 .. container:: table-row
 
    Property
-         adminPanelStyles
+         stdWrap
 
    Data type
-         boolean
+         ->stdWrap
 
    Description
-         Will include CSS styles for the Admin Panel.
+         Wraps the content of the cObject array with stdWrap options.
+
+
+
+.. _setup-page-stylesheet:
+
+stylesheet
+""""""""""
+
+.. container:: table-row
+
+   Property
+         stylesheet
+
+   Data type
+         resource
+
+   Description
+         Inserts a stylesheet in the <HEAD>-section of the page;
+
+         *<link rel="stylesheet" href="[resource]">*
+
+
+
+.. _setup-page-typenum:
+
+typeNum
+"""""""
+
+.. container:: table-row
+
+   Property
+         typeNum
+
+   Data type
+         integer
+
+   Description
+         This determines the typeId of the page. The value defaults to 0 for
+         the first found PAGE object, but it **must** be set and be unique as
+         soon you use *more* than one such object (watch this if you use frames
+         on your page)!
+
+   Default
+         0
+
+
+
+.. _setup-page-wrap:
+
+wrap
+""""
+
+.. container:: table-row
+
+   Property
+         wrap
+
+   Data type
+         wrap
+
+   Description
+         Wraps the content of the cObject array.
 
 
 .. ###### END~OF~TABLE ######
-
-[tsref:(page)]
-

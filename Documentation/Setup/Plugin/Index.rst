@@ -1,4 +1,4 @@
-.. ==================================================
+﻿.. ==================================================
 .. FOR YOUR INFORMATION
 .. --------------------------------------------------
 .. -*- coding: utf-8 -*- with BOM.
@@ -8,8 +8,8 @@
 
 .. _plugin:
 
-The "plugin" TLO
-^^^^^^^^^^^^^^^^
+plugin
+======
 
 This is used for extensions in TYPO3 set up as frontend plugins.
 Typically you can set configuration properties of the plugin here. Say
@@ -23,7 +23,60 @@ at least 1 or 2 reserved properties. Furthermore this table outlines
 some other default properties. Generally system properties are
 prefixed with an underscore:
 
+.. only:: html
+
+   .. contents::
+      :local:
+      :depth: 1
+
+Properties
+^^^^^^^^^^
+
+.. container:: ts-properties
+
+   ======================================= =============================== ====================== =======
+   Property                                Data Type                       :ref:`t3tsref:stdwrap` Default
+   ======================================= =============================== ====================== =======
+   `includeLibs`_                          (array of keys)                                             
+   `userFunc`_                             (array of keys)                                             
+   `\_CSS\_DEFAULT\_STYLE`_                :ref:`t3tsref:data-type-string`                               
+   `\_DEFAULT\_PI\_VARS.[piVar-key]`_      Until TYPO3 6.1: string                                       
+   `\_LOCAL\_LANG.[lang-key].[label-key]`_ :ref:`t3tsref:data-type-string`                               
+   ======================================= =============================== ====================== =======
+
+Property details
+^^^^^^^^^^^^^^^^
+
+.. only:: html
+
+   .. contents::
+      :local:
+      :depth: 1
+
 .. ### BEGIN~OF~TABLE ###
+
+.. _setup-plugin-includelibs:
+
+includeLibs
+"""""""""""
+
+.. container:: table-row
+
+   Property
+         *includeLibs*
+
+   Data type
+         *(array of keys)*
+
+   Description
+         *Property setting up the USER / USER\_INT object of the plugin*.
+
+
+
+.. _setup-plugin-userfunc:
+
+userFunc
+""""""""
 
 .. container:: table-row
 
@@ -37,17 +90,11 @@ prefixed with an underscore:
          *Property setting up the USER / USER\_INT object of the plugin*.
 
 
-.. container:: table-row
 
-   Property
-         *includeLibs*
+.. _setup-plugin-css-default-style:
 
-   Data type
-         *(array of keys)*
-
-   Description
-         *Property setting up the USER / USER\_INT object of the plugin*.
-
+\_CSS\_DEFAULT\_STYLE
+"""""""""""""""""""""
 
 .. container:: table-row
 
@@ -66,6 +113,12 @@ prefixed with an underscore:
          This value is for all plugins read by the PageGenerator script when
          making the header of the document.
 
+
+
+.. _setup-plugin-default-pi-vars-pivar-key:
+
+\_DEFAULT\_PI\_VARS.[piVar-key]
+"""""""""""""""""""""""""""""""
 
 .. container:: table-row
 
@@ -95,6 +148,12 @@ prefixed with an underscore:
          This sets the key "year" to the current year.
 
 
+
+.. _setup-plugin-local-lang-lang-key-label-key:
+
+\_LOCAL\_LANG.[lang-key].[label-key]
+""""""""""""""""""""""""""""""""""""
+
 .. container:: table-row
 
    Property
@@ -108,6 +167,3 @@ prefixed with an underscore:
 
 
 .. ###### END~OF~TABLE ######
-
-[tsref:plugin]
-
