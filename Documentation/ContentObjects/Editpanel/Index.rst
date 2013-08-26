@@ -28,12 +28,9 @@ each content element on the page. It is also possible to insert an
 EDITPANEL as cObject in the template, using TypoScript.
 
 
-.. figure:: ../../Images/icon_note.png
-   :alt: Note
+.. note::
 
-**Note**
-
-The extension "feedit" needs to be installed for this to work.
+   The extension "feedit" needs to be installed for this to work.
 
 
 .. ### BEGIN~OF~TABLE ###
