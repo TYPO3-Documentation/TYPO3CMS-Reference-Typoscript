@@ -11,14 +11,11 @@
 FORM
 ^^^^
 
-.. figure:: ../../Images/icon_note.png
-   :alt: Note
+.. note::
 
-**Note**
-
-The following only applies, if the system extension "form" (which
-comes with TYPO3 since version 4.6) is *not* installed. If it is, things
-work as described in the documentation inside the system extension.
+   The following only applies, if the system extension "form" (which
+   comes with TYPO3 since version 4.6) is *not* installed. If it is, things
+   work as described in the documentation inside the system extension.
 
 This object provides a way to create forms::
 
