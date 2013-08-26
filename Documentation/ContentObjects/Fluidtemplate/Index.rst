@@ -16,13 +16,10 @@ regular "marker"-based :ref:`TEMPLATE <cobj-template>` object. However, it does 
 markers or subparts, but allows Fluid-style variables with curly
 braces.
 
-.. figure:: ../../Images/icon_note.png
-   :alt: Note
+.. note::
 
-**Note**
-
-The extensions "fluid" and "extbase" need to be installed for this to
-work.
+   The extensions "fluid" and "extbase" need to be installed for this to
+   work.
 
 .. ### BEGIN~OF~TABLE ###
 

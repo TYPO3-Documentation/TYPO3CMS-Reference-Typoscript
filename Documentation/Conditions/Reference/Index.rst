@@ -146,20 +146,19 @@ condition ::
 
 evaluates to true.
 
-.. figure:: ../../Images/icon_note.png
-   :alt: Note
+.. note::
 
-**Older TYPO3 versions**
+   **Older TYPO3 versions**
 
-Until TYPO3 4.2 the user agent was determined differently: Each value
-was compared with the ($browsername.$browserversion, e.g.
-"netscape4.72") using strstr(). So if the value was "netscape" or just
-"scape" or "net" all netscape browsers would match. If the value was
-"netscape4" all Netscape 4.xx browsers would match. If any value in
-the list matched the current browser, the condition returned true.
+   Until TYPO3 4.2 the user agent was determined differently: Each value
+   was compared with the ($browsername.$browserversion, e.g.
+   "netscape4.72") using strstr(). So if the value was "netscape" or just
+   "scape" or "net" all netscape browsers would match. If the value was
+   "netscape4" all Netscape 4.xx browsers would match. If any value in
+   the list matched the current browser, the condition returned true.
 
-TYPO3 version 4.2 or older does not detect all the browsers listed
-above.
+   TYPO3 version 4.2 or older does not detect all the browsers listed
+   above.
 
 
 Examples:
@@ -285,40 +284,39 @@ For example if the value is "win9" this will match with "win95" and
 Examples:
 ~~~~~~~~~
 
-This will match with windows and mac -systems only ::
+This will match with Windows and Mac systems only ::
 
    [system= win,mac]
 
-.. figure:: ../../Images/icon_note.png
-   :alt: Note
+.. note::
 
-**Older TYPO3 versions and backwards compatibility**
+   **Older TYPO3 versions and backwards compatibility**
 
-TYPO3 version 4.4 or older does not detect all the systems listed
-above.
+   TYPO3 version 4.4 or older does not detect all the systems listed
+   above.
 
-For backwards compatibility, some systems are also matched by more
-generic strings.
+   For backwards compatibility, some systems are also matched by more
+   generic strings.
 
-It is recommended to use the new identifiers documented above, but the
-following are valid, too:
+   It is recommended to use the new identifiers documented above, but the
+   following are valid, too:
 
 
-.. ### BEGIN~OF~SIMPLE~TABLE ###
+   .. ### BEGIN~OF~SIMPLE~TABLE ###
 
-====================   =======================================
-System:                Generic identification:
-====================   =======================================
-Android                linux
-Chrome OS              linux
-iOS                    mac
-Windows 7              winNT
-Windows Vista          winNT
-Windows XP             winNT
-Windows 2000           winNT
-====================   =======================================
+   ====================   =======================================
+   System:                Generic identification:
+   ====================   =======================================
+   Android                linux
+   Chrome OS              linux
+   iOS                    mac
+   Windows 7              winNT
+   Windows Vista          winNT
+   Windows XP             winNT
+   Windows 2000           winNT
+   ====================   =======================================
 
-.. ###### END~OF~SIMPLE~TABLE ######
+   .. ###### END~OF~SIMPLE~TABLE ######
 
 
 .. _condition-device:
