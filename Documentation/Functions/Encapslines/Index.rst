@@ -180,7 +180,7 @@ encapsLines
          defaultAlign
 
    Data type
-         string /stdWrap
+         string /:ref:`stdWrap <stdwrap>`
 
    Description
          If set, this value is set as the default "align" value of the wrapping

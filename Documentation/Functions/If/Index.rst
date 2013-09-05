@@ -71,7 +71,7 @@ Also check the explanations and the examples further below!
          isTrue
 
    Data type
-         string /stdWrap
+         string /:ref:`stdWrap <stdwrap>`
 
    Description
          If the content is "true".... (not empty string and not zero)
@@ -83,7 +83,7 @@ Also check the explanations and the examples further below!
          isFalse
 
    Data type
-         string /stdWrap
+         string /:ref:`stdWrap <stdwrap>`
 
    Description
          If the content is "false"... (empty or zero)
@@ -95,7 +95,7 @@ Also check the explanations and the examples further below!
          isPositive
 
    Data type
-         integer /stdWrap \+ calc
+         integer /:ref:`stdWrap <stdwrap>` \+ calc
 
    Description
          Returns false, if the content is not positive.
@@ -107,7 +107,7 @@ Also check the explanations and the examples further below!
          isGreaterThan
 
    Data type
-         value /stdWrap
+         value /:ref:`stdWrap <stdwrap>`
 
    Description
          Returns false, if the content is not greater than ".value".
@@ -119,7 +119,7 @@ Also check the explanations and the examples further below!
          isLessThan
 
    Data type
-         value /stdWrap
+         value /:ref:`stdWrap <stdwrap>`
 
    Description
          Returns false, if the content is not less than ".value".
@@ -131,7 +131,7 @@ Also check the explanations and the examples further below!
          equals
 
    Data type
-         value /stdWrap
+         value /:ref:`stdWrap <stdwrap>`
 
    Description
          Returns false, if the content does not equal ".value".
@@ -143,7 +143,7 @@ Also check the explanations and the examples further below!
          isInList
 
    Data type
-         value /stdWrap
+         value /:ref:`stdWrap <stdwrap>`
 
    Description
          Returns false, if the content is not in the comma-separated list
@@ -158,7 +158,7 @@ Also check the explanations and the examples further below!
          value
 
    Data type
-         value /stdWrap
+         value /:ref:`stdWrap <stdwrap>`
 
    Description
          The value to check. This is the comparison value mentioned above.

@@ -20,7 +20,7 @@
          *(array of key names)*
 
    Data type
-         string /stdWrap
+         string /:ref:`stdWrap <stdwrap>`
 
    Description
          Allows you to define meta tags.

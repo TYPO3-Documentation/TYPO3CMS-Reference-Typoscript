@@ -36,7 +36,7 @@ header-layout (and a non-empty 'header'-field!) is selected. In other
 words, if the header layout of an element is set to "Hidden" then the
 page will not appear in the menu.
 
-.sectionIndex.useColPos = [integer /stdWrap]
+.sectionIndex.useColPos = [integer /:ref:`stdWrap <stdwrap>`]
 
 (Since TYPO3 6.0) This property allows you to set the colPos which
 should be used in the where clause of the query. Possible values

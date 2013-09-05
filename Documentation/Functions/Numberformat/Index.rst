@@ -31,7 +31,7 @@ for that function. Consult the PHP manual, if unsure.
          decimals
 
    Data type
-         integer /stdWrap
+         integer /:ref:`stdWrap <stdwrap>`
 
    Description
          Number of decimals the formatted number will have. Defaults to 0, so
@@ -48,7 +48,7 @@ for that function. Consult the PHP manual, if unsure.
          dec\_point
 
    Data type
-         string /stdWrap
+         string /:ref:`stdWrap <stdwrap>`
 
    Description
          Character that divides the decimals from the rest of the number.
@@ -64,7 +64,7 @@ for that function. Consult the PHP manual, if unsure.
          thousands\_sep
 
    Data type
-         string /stdWrap
+         string /:ref:`stdWrap <stdwrap>`
 
    Description
          Character that divides the thousands of the number. Defaults to ",";

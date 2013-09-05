@@ -23,7 +23,7 @@ imgResource.
          ext
 
    Data type
-         imageExtension /stdWrap
+         imageExtension /:ref:`stdWrap <stdwrap>`
 
    Description
          The file extension.
@@ -38,7 +38,7 @@ imgResource.
          width
 
    Data type
-         pixels /stdWrap
+         pixels /:ref:`stdWrap <stdwrap>`
 
    Description
          If both the width and the height are set and one of the numbers is
@@ -85,7 +85,7 @@ imgResource.
          height
 
    Data type
-         pixels /stdWrap
+         pixels /:ref:`stdWrap <stdwrap>`
 
    Description
          see ".width"
@@ -99,7 +99,7 @@ imgResource.
    Data type
          Until TYPO3 4.5: string
 
-         Since TYPO3 4.6: string /stdWrap
+         Since TYPO3 4.6: string /:ref:`stdWrap <stdwrap>`
 
    Description
          GraphicsMagick/ImageMagick command-line:
@@ -129,7 +129,7 @@ imgResource.
          noScale
 
    Data type
-         boolean /stdWrap
+         boolean /:ref:`stdWrap <stdwrap>`
 
    Description
          If set, the image itself will never be scaled. Only width and height
@@ -188,7 +188,7 @@ imgResource.
          import
 
    Data type
-         path /stdWrap
+         path /:ref:`stdWrap <stdwrap>`
 
    Description
          *value* should be set to the path of the file
@@ -227,7 +227,7 @@ imgResource.
          maxW
 
    Data type
-         pixels /stdWrap
+         pixels /:ref:`stdWrap <stdwrap>`
 
    Description
          Maximum width
@@ -239,7 +239,7 @@ imgResource.
          maxH
 
    Data type
-         pixels /stdWrap
+         pixels /:ref:`stdWrap <stdwrap>`
 
    Description
          Maximum height
@@ -251,7 +251,7 @@ imgResource.
          minW
 
    Data type
-         pixels /stdWrap
+         pixels /:ref:`stdWrap <stdwrap>`
 
    Description
          Minimum width (overrules maxW/maxH)
@@ -263,7 +263,7 @@ imgResource.
          minH
 
    Data type
-         pixels /stdWrap
+         pixels /:ref:`stdWrap <stdwrap>`
 
    Description
          Minimum height (overrules maxW/maxH)

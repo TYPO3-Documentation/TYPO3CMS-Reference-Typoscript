@@ -27,7 +27,7 @@ selected round method.
          roundType
 
    Data type
-         string /stdWrap
+         string /:ref:`stdWrap <stdwrap>`
 
    Description
          Round method which should be used.
@@ -50,7 +50,7 @@ selected round method.
          decimals
 
    Data type
-         integer /stdWrap
+         integer /:ref:`stdWrap <stdwrap>`
 
    Description
          Number of decimals the rounded value will have. Only used with the
