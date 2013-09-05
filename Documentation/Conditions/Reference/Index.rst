@@ -12,72 +12,6 @@ Condition reference
 ^^^^^^^^^^^^^^^^^^^
 
 
-.. _condition-syntax:
-
-General syntax
-""""""""""""""
-
-Each condition is encapsulated by square brackets. For a list of
-available conditions see below.
-
-"[ELSE]" is available as else operator. It is a condition, which will
-return TRUE, if the previous condition returned FALSE.
-
-Each condition block is ended with "[GLOBAL]".
-
-
-Example:
-~~~~~~~~
-
-::
-
-   [browser = msie]
-     # TypoScript Code for users of Internet Explorer.
-   [ELSE]
-     # TypoScript Code for users of other browsers.
-   [GLOBAL]
-
-
-.. _condition-general-notes:
-
-General notes
-"""""""""""""
-
-Values are normally trimmed before comparison, so blanks are not taken
-into account.
-
-Note that conditions cannot be used inside of curly brackets.
-
-You may combine several conditions with two operators: && (and), \|\|
-(or)
-
-Alternatively you may use "AND" and "OR" instead of "&&" and "\|\|".
-The AND operator always takes higher precedence over OR. If no operator
-has been specified, it will default to OR.
-
-
-Examples:
-~~~~~~~~~
-
-This condition will match if the visitor opens the website with
-Internet Explorer on Windows (but not on Mac) ::
-
-   [browser = msie] && [system = win]
-
-This will match with either Opera or Firefox browsers ::
-
-   [browser = opera] || [browser = firefox]
-
-This will match with either Firefox or Internet Explorer. In case of
-Internet Explorer, the version must be above 8. ::
-
-   [browser = firefox] || [browser = msie] && [version => 8]
-
-For full explanations about conditions, please refer to :ref:`the
-according chapter in "TypoScript Syntax and In-depth Study"
-<t3tssyntax:conditions>`.
-
-
 .. _condition-browser:
 
 browser
@@ -129,6 +63,8 @@ Webkit                                                     webkit
 .. ###### END~OF~SIMPLE~TABLE ######
 
 
+Comparison with the browser, which the website visitor uses.
+
 The condition works with the user agent string. The user agent is
 parsed with a regular expression, which searches the string for
 matches with the identifications named above. If there are multiple
@@ -164,7 +100,7 @@ evaluates to true.
 Examples:
 ~~~~~~~~~
 
-This will match with Chrome and Opera-browsers::
+This will match with Chrome and Opera browsers::
 
    [browser = chrome, opera]
 
@@ -185,6 +121,8 @@ Syntax:
 
 Comparison:
 '''''''''''
+
+Comparison with the browser version, which the website visitor uses.
 
 Values are floating-point numbers with "." as the decimal separator.
 
@@ -216,13 +154,13 @@ Operator:      Function:
 Examples:
 ~~~~~~~~~
 
-This matches with exactly "4.03" browsers ::
+This matches with exactly "8.03" browsers ::
 
-   [version=  =4.03]
+   [version = =8.03]
 
-This matches with all 4+ browsers and Netscape 3 browsers ::
+This matches with all browser versions below 8 and Internet Explorer 8 ::
 
-   [version=  >4][browser= netscape3]
+   [version = <8][browser = msie8]
 
 
 .. _condition-system:
@@ -286,7 +224,7 @@ Examples:
 
 This will match with Windows and Mac systems only ::
 
-   [system= win,mac]
+   [system = win,mac]
 
 .. note::
 
@@ -330,7 +268,7 @@ Syntax:
 
 ::
 
-   [device= device1, device2]
+   [device = device1, device2]
 
 
 Values and comparison:
@@ -351,8 +289,10 @@ Indexing robots     robot
 .. ###### END~OF~SIMPLE~TABLE ######
 
 
+Comparison with the website visitor's device.
+
 Values are strings and a match happens if one of these strings equals
-the type of device
+the type of device.
 
 
 Examples:
@@ -380,8 +320,8 @@ Syntax:
 Values and comparison:
 ''''''''''''''''''''''
 
-This is a direct match on the useragent string from
-getenv("HTTP\_USER\_AGENT")
+This is a direct match on the website visitor's useragent string from
+getenv('HTTP\_USER\_AGENT').
 
 You have the options of putting a "\*" at the beginning and/or end of
 the value *agent* thereby matching with this wildcard!
@@ -410,10 +350,10 @@ A short list of user-agent strings and a proper match:
 ===========================================================   ======================   =============================
 HTTP\_USER\_AGENT:                                            Agent description:       Matching condition:
 ===========================================================   ======================   =============================
-Nokia7110/1.0+(04.77)                                         Nokia 7110 WAP phone     [useragent= Nokia7110\*]
-Lotus-Notes/4.5 ( Windows-NT )                                Lotus-Notes browser      [useragent= Lotus-Notes\*]
-Mozilla/3.0 (compatible; AvantGo 3.2)                         AvantGo browser          [useragent= \*AvantGo\*]
-Mozilla/3.0 (compatible; WebCapture 1.0; Auto; Windows)       Adobe Acrobat 4.0        [useragent= \*WebCapture\*]
+Nokia7110/1.0+(04.77)                                         Nokia 7110 WAP phone     [useragent = Nokia7110\*]
+Lotus-Notes/4.5 ( Windows-NT )                                Lotus-Notes browser      [useragent = Lotus-Notes\*]
+Mozilla/3.0 (compatible; AvantGo 3.2)                         AvantGo browser          [useragent = \*AvantGo\*]
+Mozilla/3.0 (compatible; WebCapture 1.0; Auto; Windows)       Adobe Acrobat 4.0        [useragent = \*WebCapture\*]
 ===========================================================   ======================   =============================
 
 .. ###### END~OF~SIMPLE~TABLE ######
@@ -487,8 +427,10 @@ Syntax:
 Comparison:
 '''''''''''
 
+Comparison with the website visitor's preferred languages.
+
 The values must be a straight match with the value of
-getenv("HTTP\_ACCEPT\_LANGUAGE") from PHP. Alternatively, if the value
+getenv('HTTP\_ACCEPT\_LANGUAGE') from PHP. Alternatively, if the value
 is wrapped in "\*" (e.g. "\*en-us\*") then it will split all languages
 found in the HTTP\_ACCEPT\_LANGUAGE string and try to match the value
 with any of those parts of the string. Such a string normally looks
@@ -513,7 +455,9 @@ Syntax:
 Comparison:
 '''''''''''
 
-The values are compared with the getenv("REMOTE\_ADDR") from PHP.
+Comparison with the IP address, which the website visitor uses.
+
+The values are compared with getenv('REMOTE\_ADDR') from PHP.
 
 You may include "\*" instead of one of the parts in values. You may
 also list the first one, two or three parts and only they will be
@@ -554,8 +498,10 @@ Syntax:
 Comparison:
 '''''''''''
 
-The values are compared to the fully qualified hostname of
-getenv("REMOTE\_ADDR") retrieved by PHP.
+Comparison with the hostname, which the website visitor uses.
+
+The values are compared to the fully qualified hostname, which is
+retrieved by PHP based on getenv('REMOTE\_ADDR').
 
 Value is comma-list of domain names to match with. \*-wildcard allowed
 but cannot be part of a string, so it must match the full host name
@@ -828,22 +774,24 @@ Syntax:
 Comparison:
 '''''''''''
 
+This matches on the uid of a usergroup of a logged in frontend user.
+
 The comparison can only return true if the grouplist is not empty
 (global var "gr\_list").
 
-The values must either exists in the grouplist OR the value must be a
+The values must either exist in the grouplist OR the value must be a
 "\*".
 
 
 Example:
 ~~~~~~~~
 
-This matches all logins::
+This matches all FE logins::
 
    [usergroup = *]
 
-This matches logins from users members of groups with uid's 1 and/or
-2::
+This matches logins of frontend users, which are members of frontend
+user groups with uid's 1 and/or 2::
 
    [usergroup = 1,2]
 
@@ -872,8 +820,8 @@ Matches on the uid of a logged in frontend user. Works like
 Example:
 ~~~~~~~~
 
-This matches any login (use this instead of "[usergroup = \*]" to
-match when a user is logged in!)::
+This matches any FE login (use this instead of "[usergroup = \*]" to
+match when a FE user is logged in!)::
 
    [loginUser = *]
 
@@ -883,7 +831,7 @@ Additionally it is possible to check if no FE user is logged in.
 Example:
 ~~~~~~~~
 
-This matches when no user is logged in::
+This matches when no FE user is logged in::
 
    [loginUser = ]
 
@@ -937,14 +885,14 @@ Comparison:
 
 This checks if the last element of the rootLine is at a level
 corresponding to one of the figures in "treeLevel". Level = 0 is the
-"root" of a website. Level=1 is the first menu level.
+"root" of a website. Level = 1 is the first menu level.
 
 
 Example:
 ~~~~~~~~
 
-This changes something with the template, if the page viewed is on
-level either level 0 (basic) or on level 2 ::
+This condition matches, if the page viewed is on either level 0 (root)
+or on level 2 ::
 
    [treeLevel = 0,2]
 
@@ -973,8 +921,8 @@ in the rootline.
 Example:
 ~~~~~~~~
 
-This changes something with the template, if the page viewed is or is
-a subpage to page 34 or page 36 ::
+This condition matches, if the page viewed is or is a subpage to page
+34 or page 36 ::
 
    [PIDinRootline = 34,36]
 
@@ -1017,9 +965,13 @@ Syntax:
 Comparison:
 '''''''''''
 
-Require a minimum compatibility version. This version is not necessary
-equal with the TYPO3 version, it is a configurable value that can be
-changed in the Upgrade Wizard of the Install Tool.
+Comparison with the compatibility version of the TYPO3 installation.
+
+Require a *minimum* compatibility version; the condition will match, if
+the set compatibility version is higher than or equal to x.y.z. The
+compatibility version is not necessarily equal to the TYPO3 version,
+which is used. Instead, it is a configurable value that can be changed
+in the Upgrade Wizard of the Install Tool.
 
 "compatVersion" is especially useful if you want to provide new
 default settings but keep the backwards compatibility for old versions
@@ -1047,8 +999,8 @@ The values in floating point are compared to the global variables
 "var1", "var2" ... from above.
 
 You can use multiple conditions in one by separating them with a
-comma. The comma then acts as alogical disjunction, that means the
-whole condition evaluates to true,whenever *one or more* of its
+comma. The comma then acts as a logical disjunction, that means the
+whole condition evaluates to true, whenever *one or more* of its
 operands are true.
 
 
@@ -1123,7 +1075,7 @@ matches::
 
 Find out if there currently is a valid backend login::
 
-   [globalVar = TSFE : beUserLogin = 1]
+   [globalVar = TSFE:beUserLogin = 1]
 
 
 .. _condition-globalstring:
@@ -1167,15 +1119,15 @@ This will also match with it::
 Important note on globalVar and globalString
 ''''''''''''''''''''''''''''''''''''''''''''
 
-You can use values from global arrays and objects by dividing the var-
-name with a "\|" (vertical line).
+You can use values from global arrays and objects by dividing the
+variable name with a "\|" (vertical line).
 
 
 Examples:
 ~~~~~~~~~
 
-The global var $HTTP\_POST\_VARS['key']['levels'] would be retrieved
-by "HTTP\_POST\_VARS\|key\|levels"
+The global variable $HTTP\_POST\_VARS['key']['levels'] would be
+retrieved by "HTTP\_POST\_VARS\|key\|levels".
 
 Also note that it's recommended to program your scripts in compliance
 with the php.ini-optimized settings. Please see that file (from your
@@ -1203,11 +1155,11 @@ getenv() which is **not** always the same on all systems!
 Examples:
 ~~~~~~~~~
 
-This will match with a remote-addr beginning with "192.168." ::
+This will match with a remote address beginning with "192.168." ::
 
    [globalString = IENV:REMOTE_ADDR = 192.168.*]
 
-This will match with the user whose username is "test"::
+This will match with the frontend user whose username is "test"::
 
    [globalString = TSFE:fe_user|user|username = test]
 
