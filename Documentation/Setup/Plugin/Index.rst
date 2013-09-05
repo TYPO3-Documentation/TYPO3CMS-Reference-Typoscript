@@ -40,6 +40,7 @@ Properties
    `includeLibs`_                          (array of keys)
    `userFunc`_                             (array of keys)
    `\_CSS\_DEFAULT\_STYLE`_                :ref:`t3tsref:data-type-string`
+   `\_CSS\_PAGE\_STYLE`_                   :ref:`t3tsref:data-type-string`
    `\_DEFAULT\_PI\_VARS.[piVar-key]`_      Until TYPO3 6.1: string
    `\_LOCAL\_LANG.[lang-key].[label-key]`_ :ref:`t3tsref:data-type-string`
    ======================================= =============================== ====================== =======
@@ -106,9 +107,39 @@ userFunc
 
    Description
          Use this to have some default CSS styles inserted in the header
-         section of the document. Most likely this will provide a default
-         acceptable display from the plugin, but should ideally be cleared and
-         moved to an external stylesheet.
+         section of the document. \_CSS\_DEFAULT\_STYLE outputs a set of
+         default styles, just because an extension is installed. Most likely
+         this will provide an acceptable default display from the plugin, but
+         should ideally be cleared and moved to an external stylesheet.
+
+         This value is for all plugins read by the PageGenerator script when
+         making the header of the document.
+
+
+
+.. _setup-plugin-css-page-style:
+
+\_CSS\_PAGE\_STYLE
+""""""""""""""""""
+
+.. container:: table-row
+
+   Property
+         \_CSS\_PAGE\_STYLE
+
+   Data type
+         string
+
+   Description
+         Use this to have some page-specific CSS styles inserted in the header
+         section of the document. \_CSS\_PAGE\_STYLE can be used to render
+         certain styles not just because an extension is installed, but only in
+         a special situation, e.g. some styles will be output, when
+         css_styled_content is installed **and** a textpic element with an
+         image positioned alongside the text is present on the current page.
+         Most likely this will provide an acceptable display from the plugin
+         especially for this page, but should ideally be cleared and moved to
+         an external stylesheet.
 
          This value is for all plugins read by the PageGenerator script when
          making the header of the document.
