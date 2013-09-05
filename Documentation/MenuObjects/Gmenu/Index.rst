@@ -424,7 +424,7 @@ been for a long time.
          ATagParams
 
    Data type
-         string /stdWrap
+         string /:ref:`stdWrap <stdwrap>`
 
    Description
          Additional parameters
@@ -436,7 +436,7 @@ been for a long time.
          ATagTitle
 
    Data type
-         string /stdWrap
+         string /:ref:`stdWrap <stdwrap>`
 
    Description
          which defines the title attribute of the a-tag. (See TMENUITEM also)
@@ -448,7 +448,7 @@ been for a long time.
          additionalParams
 
    Data type
-         string /stdWrap
+         string /:ref:`stdWrap <stdwrap>`
 
    Description
          Define parameters that are added to the end of the URL. This must be
@@ -475,7 +475,7 @@ been for a long time.
          allWrap
 
    Data type
-         wrap /stdWrap
+         wrap /:ref:`stdWrap <stdwrap>`
 
    Description
          Wraps the whole item.
@@ -487,7 +487,7 @@ been for a long time.
          wrapItemAndSub
 
    Data type
-         wrap /stdWrap
+         wrap /:ref:`stdWrap <stdwrap>`
 
    Description
          Wraps the whole item and any submenu concatenated to it.

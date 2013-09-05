@@ -41,7 +41,7 @@ cached, but rendered on every call.
          key
 
    Data type
-         string /stdWrap
+         string /:ref:`stdWrap <stdwrap>`
 
    Description
          The cache identifier that is used to store the rendered content into
@@ -59,7 +59,7 @@ cached, but rendered on every call.
          lifetime
 
    Data type
-         mixed /stdWrap
+         mixed /:ref:`stdWrap <stdwrap>`
 
    Description
          Lifetime of the content in cache.
@@ -89,7 +89,7 @@ cached, but rendered on every call.
          tags
 
    Data type
-         string /stdWrap
+         string /:ref:`stdWrap <stdwrap>`
 
    Description
          Can hold a comma-separated list of tags. These tags will be attached

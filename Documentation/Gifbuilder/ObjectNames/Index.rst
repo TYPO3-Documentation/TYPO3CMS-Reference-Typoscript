@@ -39,7 +39,7 @@ different each time!
          XY
 
    Data type
-         x,y +calc /stdWrap
+         x,y +calc /:ref:`stdWrap <stdwrap>`
 
    Description
          Size of the image file.
@@ -74,7 +74,7 @@ different each time!
          reduceColors
 
    Data type
-         positive integer (1-255) /stdWrap
+         positive integer (1-255) /:ref:`stdWrap <stdwrap>`
 
    Description
          Reduce the number of colors.
@@ -86,7 +86,7 @@ different each time!
          transparentBackground
 
    Data type
-         boolean /stdWrap
+         boolean /:ref:`stdWrap <stdwrap>`
 
    Description
          Set this flag to render the background transparent. TYPO3 makes the
@@ -104,7 +104,7 @@ different each time!
          transparentColor
 
    Data type
-         *HTMLColor* /stdWrap
+         *HTMLColor* /:ref:`stdWrap <stdwrap>`
 
    Description
          Specify a color that should be transparent
@@ -146,7 +146,7 @@ different each time!
          backColor
 
    Data type
-         GraphicColor /stdWrap
+         GraphicColor /:ref:`stdWrap <stdwrap>`
 
    Description
          Background color of the image.
@@ -161,7 +161,7 @@ different each time!
          offset
 
    Data type
-         x,y +calc /stdWrap
+         x,y +calc /:ref:`stdWrap <stdwrap>`
 
    Description
          Offset all objects on the image.
@@ -176,7 +176,7 @@ different each time!
          workArea
 
    Data type
-         x,y,w,h + calc /stdWrap
+         x,y,w,h + calc /:ref:`stdWrap <stdwrap>`
 
    Description
          Define the workarea on the image file. All the GifBuilder Objects will
@@ -191,7 +191,7 @@ different each time!
          maxWidth
 
    Data type
-         pixels /stdWrap
+         pixels /:ref:`stdWrap <stdwrap>`
 
    Description
          Maximal width of the image file.
@@ -203,7 +203,7 @@ different each time!
          maxHeight
 
    Data type
-         pixels /stdWrap
+         pixels /:ref:`stdWrap <stdwrap>`
 
    Description
          Maximal height of the image file.
@@ -245,7 +245,7 @@ Renders a text.
          breakWidth
 
    Data type
-         integer /stdWrap
+         integer /:ref:`stdWrap <stdwrap>`
 
    Description
          Defines the maximum width for an object, overlapping elements will
@@ -290,7 +290,7 @@ Renders a text.
          maxWidth
 
    Data type
-         pixels /stdWrap
+         pixels /:ref:`stdWrap <stdwrap>`
 
    Description
          Sets the maximum width in pixels, the text must be. Reduces the
@@ -324,7 +324,7 @@ Renders a text.
          fontSize
 
    Data type
-         positive integer /stdWrap
+         positive integer /:ref:`stdWrap <stdwrap>`
 
    Description
          Font size
@@ -339,7 +339,7 @@ Renders a text.
          fontColor
 
    Data type
-         GraphicColor /stdWrap
+         GraphicColor /:ref:`stdWrap <stdwrap>`
 
    Description
          Font color
@@ -354,7 +354,7 @@ Renders a text.
          fontFile
 
    Data type
-         resource /stdWrap
+         resource /:ref:`stdWrap <stdwrap>`
 
    Description
          Font face (truetype font you can upload!)
@@ -388,7 +388,7 @@ Renders a text.
          align
 
    Data type
-         align /stdWrap
+         align /:ref:`stdWrap <stdwrap>`
 
    Description
          Alignment of the text
@@ -403,7 +403,7 @@ Renders a text.
          offset
 
    Data type
-         x,y +calc /stdWrap
+         x,y +calc /:ref:`stdWrap <stdwrap>`
 
    Description
          Offset of the text
@@ -435,7 +435,7 @@ Renders a text.
          iterations
 
    Data type
-         positive integer /stdWrap
+         positive integer /:ref:`stdWrap <stdwrap>`
 
    Description
          How many times the text should be "printed" onto it self. This will
@@ -453,7 +453,7 @@ Renders a text.
          spacing
 
    Data type
-         positive integer /stdWrap
+         positive integer /:ref:`stdWrap <stdwrap>`
 
    Description
          Pixel-distance between letters. This may render ugly!
@@ -468,7 +468,7 @@ Renders a text.
          wordSpacing
 
    Data type
-         positive integer /stdWrap
+         positive integer /:ref:`stdWrap <stdwrap>`
 
    Description
          Pixel-distance between words.
@@ -483,7 +483,7 @@ Renders a text.
          hide
 
    Data type
-         boolean /stdWrap
+         boolean /:ref:`stdWrap <stdwrap>`
 
    Description
          If this is true, the text is **not** printed.
@@ -501,7 +501,7 @@ Renders a text.
          hideButCreateMap
 
    Data type
-         boolean /stdWrap
+         boolean /:ref:`stdWrap <stdwrap>`
 
    Description
          If this option is set, the text will not be rendered. Shadows and
@@ -554,7 +554,7 @@ Renders a text.
          niceText
 
    Data type
-         boolean /stdWrap
+         boolean /:ref:`stdWrap <stdwrap>`
 
    Description
          This is a very popular feature that helps to render small letters much
@@ -696,7 +696,7 @@ Creates a shadow under the associated text.
          textObjNum
 
    Data type
-         positive integer /stdWrap
+         positive integer /:ref:`stdWrap <stdwrap>`
 
    Description
          Must point to the TEXT object if these shadow properties are not
@@ -713,7 +713,7 @@ Creates a shadow under the associated text.
          offset
 
    Data type
-         x,y /stdWrap
+         x,y /:ref:`stdWrap <stdwrap>`
 
    Description
          The offset of the shadow.
@@ -725,7 +725,7 @@ Creates a shadow under the associated text.
          color
 
    Data type
-         GraphicColor /stdWrap
+         GraphicColor /:ref:`stdWrap <stdwrap>`
 
    Description
          The color of the shadow.
@@ -737,7 +737,7 @@ Creates a shadow under the associated text.
          blur
 
    Data type
-         positive integer (1-99) /stdWrap
+         positive integer (1-99) /:ref:`stdWrap <stdwrap>`
 
    Description
          Blurring of the shadow. Above 40 only values of 40,50,60,70,80,90 mean
@@ -750,7 +750,7 @@ Creates a shadow under the associated text.
          opacity
 
    Data type
-         positive integer (1-100) /stdWrap
+         positive integer (1-100) /:ref:`stdWrap <stdwrap>`
 
    Description
          The degree to which the shadow conceals the background. Mathematically
@@ -766,7 +766,7 @@ Creates a shadow under the associated text.
          intensity
 
    Data type
-         positive integer (0-100) /stdWrap
+         positive integer (0-100) /:ref:`stdWrap <stdwrap>`
 
    Description
          How "massive" the shadow is. This value can - if it has a high value
@@ -795,7 +795,7 @@ text.
          textObjNum
 
    Data type
-         positive integer /stdWrap
+         positive integer /:ref:`stdWrap <stdwrap>`
 
    Description
          Must point to the TEXT object if these shadow properties are not
@@ -812,7 +812,7 @@ text.
          offset
 
    Data type
-         x,y /stdWrap
+         x,y /:ref:`stdWrap <stdwrap>`
 
    Description
          Offset of the emboss.
@@ -824,7 +824,7 @@ text.
          highColor
 
    Data type
-         GraphicColor /stdWrap
+         GraphicColor /:ref:`stdWrap <stdwrap>`
 
    Description
          Upper border-color
@@ -836,7 +836,7 @@ text.
          lowColor
 
    Data type
-         GraphicColor /stdWrap
+         GraphicColor /:ref:`stdWrap <stdwrap>`
 
    Description
          lower border-color
@@ -848,7 +848,7 @@ text.
          blur
 
    Data type
-         positive integer (1-99) /stdWrap
+         positive integer (1-99) /:ref:`stdWrap <stdwrap>`
 
    Description
          Blurring of the shadow. Above 40 only values of 40,50,60,70,80,90
@@ -861,7 +861,7 @@ text.
          opacity
 
    Data type
-         positive integer (1-100) /stdWrap
+         positive integer (1-100) /:ref:`stdWrap <stdwrap>`
 
    Description
          The degree to which the shadow conceals the background. Mathematically
@@ -877,7 +877,7 @@ text.
          intensity
 
    Data type
-         positive integer (0-100) /stdWrap
+         positive integer (0-100) /:ref:`stdWrap <stdwrap>`
 
    Description
          How "massive" the emboss is. This value can - if it has a high value
@@ -908,7 +908,7 @@ high intensity instead. That works better!
          textObjNum
 
    Data type
-         positive integer /stdWrap
+         positive integer /:ref:`stdWrap <stdwrap>`
 
    Description
          Must point to the TEXT object if these shadow properties are not
@@ -925,7 +925,7 @@ high intensity instead. That works better!
          thickness
 
    Data type
-         x,y /stdWrap
+         x,y /:ref:`stdWrap <stdwrap>`
 
    Description
          Thickness in each direction, range 1-2
@@ -937,7 +937,7 @@ high intensity instead. That works better!
          color
 
    Data type
-         GraphicColor /stdWrap
+         GraphicColor /:ref:`stdWrap <stdwrap>`
 
    Description
          Outline color
@@ -963,7 +963,7 @@ Prints a filled box.
          dimensions
 
    Data type
-         x,y,w,h +calc /stdWrap
+         x,y,w,h +calc /:ref:`stdWrap <stdwrap>`
 
    Description
          Dimensions of a filled box.
@@ -980,7 +980,7 @@ Prints a filled box.
          color
 
    Data type
-         GraphicColor /stdWrap
+         GraphicColor /:ref:`stdWrap <stdwrap>`
 
    Description
          Fill color of the box.
@@ -995,7 +995,7 @@ Prints a filled box.
          opacity
 
    Data type
-         positive integer (1-100) /stdWrap
+         positive integer (1-100) /:ref:`stdWrap <stdwrap>`
 
    Description
          The degree to which the box conceals the background. Mathematically
@@ -1012,7 +1012,7 @@ Prints a filled box.
          align
 
    Data type
-         VHalign /stdWrap
+         VHalign /:ref:`stdWrap <stdwrap>`
 
    Description
          Pair of values, which defines the horizontal and vertical alignment of
@@ -1054,7 +1054,7 @@ Prints a filled ellipse.
          dimensions
 
    Data type
-         x,y,w,h +calc /stdWrap
+         x,y,w,h +calc /:ref:`stdWrap <stdwrap>`
 
    Description
          Dimensions of a filled ellipse.
@@ -1071,7 +1071,7 @@ Prints a filled ellipse.
          color
 
    Data type
-         GraphicColor /stdWrap
+         GraphicColor /:ref:`stdWrap <stdwrap>`
 
    Description
          Fill color of the ellipse.
@@ -1128,7 +1128,7 @@ Renders an image file.
          offset
 
    Data type
-         x,y +calc /stdWrap
+         x,y +calc /:ref:`stdWrap <stdwrap>`
 
    Description
          Offset of the image
@@ -1143,7 +1143,7 @@ Renders an image file.
          tile
 
    Data type
-         x,y /stdWrap
+         x,y /:ref:`stdWrap <stdwrap>`
 
    Description
          Repeat the image x,y times (which creates the look of tiles).
@@ -1158,7 +1158,7 @@ Renders an image file.
          align
 
    Data type
-         VHalign /stdWrap
+         VHalign /:ref:`stdWrap <stdwrap>`
 
    Description
          *See in the "Data types reference" at the beginning of this document
@@ -1476,7 +1476,7 @@ Sets another workarea.
          set
 
    Data type
-         x,y,w,h + calc /stdWrap
+         x,y,w,h + calc /:ref:`stdWrap <stdwrap>`
 
    Description
          Sets the dimensions of the workarea.
@@ -1525,7 +1525,7 @@ image!
          backColor
 
    Data type
-         GraphicColor /stdWrap
+         GraphicColor /:ref:`stdWrap <stdwrap>`
 
    Description
          *See "Data types reference".*
@@ -1540,7 +1540,7 @@ image!
          align
 
    Data type
-         VHalign /stdWrap
+         VHalign /:ref:`stdWrap <stdwrap>`
 
    Description
          Horizontal and vertical alignment of the crop frame.
@@ -1557,7 +1557,7 @@ image!
          crop
 
    Data type
-         x,y,w,h + calc /stdWrap
+         x,y,w,h + calc /:ref:`stdWrap <stdwrap>`
 
    Description
          x,y is the offset of the crop-frame from the position specified by
@@ -1592,7 +1592,7 @@ image!
          width
 
    Data type
-         pixels + calc /stdWrap
+         pixels + calc /:ref:`stdWrap <stdwrap>`
 
    Description
          Width of the scaled image.
@@ -1604,7 +1604,7 @@ image!
          height
 
    Data type
-         pixels + calc /stdWrap
+         pixels + calc /:ref:`stdWrap <stdwrap>`
 
    Description
          Height of the scaled image.

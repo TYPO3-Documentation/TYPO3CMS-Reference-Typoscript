@@ -87,7 +87,7 @@ value is "imported" from the field called "header" from the $cObj
          setCurrent
 
    Data type
-         string /stdWrap
+         string /:ref:`stdWrap <stdwrap>`
 
    Description
          Sets the "current"-value. This is normally set from some outside
@@ -217,7 +217,7 @@ value is "imported" from the field called "header" from the $cObj
          filelist
 
    Data type
-         :ref:`data-type-dir` /stdWrap
+         :ref:`data-type-dir` /:ref:`stdWrap <stdwrap>`
 
    Description
          Reads a directory and returns a list of files.
@@ -270,7 +270,7 @@ value is "imported" from the field called "header" from the $cObj
          override
 
    Data type
-         string /stdWrap
+         string /:ref:`stdWrap <stdwrap>`
 
    Description
          if "override" returns something else than "" or zero (trimmed), the
@@ -299,7 +299,7 @@ value is "imported" from the field called "header" from the $cObj
          ifNull
 
    Data type
-         string /stdWrap
+         string /:ref:`stdWrap <stdwrap>`
 
    Description
          If the content is null (NULL type in PHP), the content is overridden
@@ -328,7 +328,7 @@ value is "imported" from the field called "header" from the $cObj
          ifEmpty
 
    Data type
-         string /stdWrap
+         string /:ref:`stdWrap <stdwrap>`
 
    Description
          If the content is empty (trimmed) at this point, the content is loaded
@@ -343,7 +343,7 @@ value is "imported" from the field called "header" from the $cObj
          ifBlank
 
    Data type
-         string /stdWrap
+         string /:ref:`stdWrap <stdwrap>`
 
    Description
          Same as "ifEmpty" but the check is done using strlen().
@@ -649,7 +649,7 @@ value is "imported" from the field called "header" from the $cObj
          hash
 
    Data type
-         string /stdWrap
+         string /:ref:`stdWrap <stdwrap>`
 
    Description
          (Since TYPO3 4.6) Returns a hashed value of the current content. Set
@@ -1055,7 +1055,7 @@ value is "imported" from the field called "header" from the $cObj
          innerWrap
 
    Data type
-         :ref:`wrap <data-type-wrap>` /stdWrap
+         :ref:`wrap <data-type-wrap>` /:ref:`stdWrap <stdwrap>`
 
    Description
          Wraps the content.
@@ -1069,7 +1069,7 @@ value is "imported" from the field called "header" from the $cObj
          innerWrap2
 
    Data type
-         :ref:`wrap <data-type-wrap>` /stdWrap
+         :ref:`wrap <data-type-wrap>` /:ref:`stdWrap <stdwrap>`
 
    Description
          Same as .innerWrap (but watch the order in which they are executed).
@@ -1178,7 +1178,7 @@ value is "imported" from the field called "header" from the $cObj
          wrapAlign
 
    Data type
-         :ref:`align <data-type-align>` /stdWrap
+         :ref:`align <data-type-align>` /:ref:`stdWrap <stdwrap>`
 
    Description
          Wraps content with <div style=text-align:[*value*];"> \| </div>
@@ -1232,7 +1232,7 @@ value is "imported" from the field called "header" from the $cObj
          spaceBefore
 
    Data type
-         integer /stdWrap
+         integer /:ref:`stdWrap <stdwrap>`
 
    Description
          Pixels space before. Done with a clear-gif; <img ...><br>.
@@ -1246,7 +1246,7 @@ value is "imported" from the field called "header" from the $cObj
          spaceAfter
 
    Data type
-         integer /stdWrap
+         integer /:ref:`stdWrap <stdwrap>`
 
    Description
          Pixels space after. Done with a clear-gif; <img ...><br>.
@@ -1260,7 +1260,7 @@ value is "imported" from the field called "header" from the $cObj
          space
 
    Data type
-         :ref:`space <data-type-space>` /stdWrap
+         :ref:`space <data-type-space>` /:ref:`stdWrap <stdwrap>`
 
    Description
          [spaceBefore] \| [spaceAfter]
@@ -1397,7 +1397,7 @@ value is "imported" from the field called "header" from the $cObj
          orderedStdWrap
 
    Data type
-         Array of numeric keys with /stdWrap each
+         Array of numeric keys with /:ref:`stdWrap <stdwrap>` each
 
    Description
          (Since TYPO3 4.7) Execute multiple stdWrap statements in a freely
@@ -1436,7 +1436,7 @@ value is "imported" from the field called "header" from the $cObj
          outerWrap
 
    Data type
-         :ref:`wrap <data-type-wrap>` /stdWrap
+         :ref:`wrap <data-type-wrap>` /:ref:`stdWrap <stdwrap>`
 
    Description
          *Wraps the complete content*
@@ -1479,7 +1479,7 @@ value is "imported" from the field called "header" from the $cObj
          offsets the content by the values of x,y. Based on the cObject
          :ref:`OTABLE <cobj-otable>`.
 
-         **.tableParams / .tdParams** /stdWrap
+         **.tableParams / .tdParams** /:ref:`stdWrap <stdwrap>`
 
          \- used to manipulate tableParams/tdParams (default width=99%) of the
          offset. Default: See :ref:`OTABLE <cobj-otable>`.

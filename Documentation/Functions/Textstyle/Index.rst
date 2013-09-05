@@ -52,7 +52,7 @@ site-specific.
          face.default
 
    Data type
-         string /stdWrap
+         string /:ref:`stdWrap <stdwrap>`
 
    Description
          [default] = User defined
@@ -86,7 +86,7 @@ site-specific.
          size.default
 
    Data type
-         string /stdWrap
+         string /:ref:`stdWrap <stdwrap>`
 
    Description
          [default] = User defined
@@ -112,7 +112,7 @@ site-specific.
          color.default
 
    Data type
-         string /stdWrap
+         string /:ref:`stdWrap <stdwrap>`
 
    Description
          [default] = User defined
@@ -162,7 +162,7 @@ site-specific.
          properties.default
 
    Data type
-         integer /stdWrap
+         integer /:ref:`stdWrap <stdwrap>`
 
    Description
          [default] = User defined (This value will be used whenever ".field" is

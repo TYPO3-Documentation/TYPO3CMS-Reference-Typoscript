@@ -23,7 +23,7 @@ the current page record, use stdWrap.data = page : [field name].
          allWrap
 
    Data type
-         wrap /stdWrap
+         wrap /:ref:`stdWrap <stdwrap>`
 
    Description
          Wraps the whole item.
@@ -35,7 +35,7 @@ the current page record, use stdWrap.data = page : [field name].
          wrapItemAndSub
 
    Data type
-         wrap /stdWrap
+         wrap /:ref:`stdWrap <stdwrap>`
 
    Description
          Wraps the whole item and any submenu concatenated to it.
@@ -110,7 +110,7 @@ the current page record, use stdWrap.data = page : [field name].
          before
 
    Data type
-         HTML /stdWrap
+         HTML /:ref:`stdWrap <stdwrap>`
 
 
 .. container:: table-row
@@ -211,7 +211,7 @@ the current page record, use stdWrap.data = page : [field name].
          ATagParams
 
    Data type
-         *<A>-params* /stdWrap
+         *<A>-params* /:ref:`stdWrap <stdwrap>`
 
    Description
          Additional parameters
@@ -227,7 +227,7 @@ the current page record, use stdWrap.data = page : [field name].
          ATagTitle
 
    Data type
-         string /stdWrap
+         string /:ref:`stdWrap <stdwrap>`
 
    Description
          Allows you to specify the "title" attribute of the <a> tag around the
@@ -247,7 +247,7 @@ the current page record, use stdWrap.data = page : [field name].
          additionalParams
 
    Data type
-         string /stdWrap
+         string /:ref:`stdWrap <stdwrap>`
 
    Description
          Define parameters that are added to the end of the URL. This must be
@@ -262,7 +262,7 @@ the current page record, use stdWrap.data = page : [field name].
          doNotLinkIt
 
    Data type
-         boolean /stdWrap
+         boolean /:ref:`stdWrap <stdwrap>`
 
    Description
          If set, the linktexts are not linked at all!
@@ -277,7 +277,7 @@ the current page record, use stdWrap.data = page : [field name].
          doNotShowLink
 
    Data type
-         boolean /stdWrap
+         boolean /:ref:`stdWrap <stdwrap>`
 
    Description
          If set, the text will not be shown at all (smart with spacers).
@@ -291,7 +291,7 @@ the current page record, use stdWrap.data = page : [field name].
          stdWrap2
 
    Data type
-         wrap /stdWrap
+         wrap /:ref:`stdWrap <stdwrap>`
 
    Description
          stdWrap to the total link-text and ATag. (Notice that the plain

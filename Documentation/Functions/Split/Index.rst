@@ -26,7 +26,7 @@ the register key SPLIT\_COUNT.
          token
 
    Data type
-         string /stdWrap
+         string /:ref:`stdWrap <stdwrap>`
 
    Description
          String or character (token) used to split the value.
@@ -38,7 +38,7 @@ the register key SPLIT\_COUNT.
          max
 
    Data type
-         integer /stdWrap
+         integer /:ref:`stdWrap <stdwrap>`
 
    Description
          Maximum number of splits.
@@ -50,7 +50,7 @@ the register key SPLIT\_COUNT.
          min
 
    Data type
-         integer /stdWrap
+         integer /:ref:`stdWrap <stdwrap>`
 
    Description
          Minimum number of splits.
@@ -62,7 +62,7 @@ the register key SPLIT\_COUNT.
          returnKey
 
    Data type
-         integer /stdWrap
+         integer /:ref:`stdWrap <stdwrap>`
 
    Description
          Instead of parsing the split result, just return this element of the
@@ -75,7 +75,7 @@ the register key SPLIT\_COUNT.
          cObjNum
 
    Data type
-         *cObjNum* +optionSplit /stdWrap
+         *cObjNum* +optionSplit /:ref:`stdWrap <stdwrap>`
 
    Description
          This is a pointer the array of this object ("1,2,3,4"), that should
@@ -88,7 +88,7 @@ the register key SPLIT\_COUNT.
          1,2,3,4
 
    Data type
-         ->CARRAY /stdWrap
+         ->CARRAY /:ref:`stdWrap <stdwrap>`
 
    Description
          The object that should treat the value.
@@ -118,7 +118,7 @@ the register key SPLIT\_COUNT.
          wrap
 
    Data type
-         wrap +optionSplit /stdWrap
+         wrap +optionSplit /:ref:`stdWrap <stdwrap>`
 
    Description
          Defines a wrap for each item.

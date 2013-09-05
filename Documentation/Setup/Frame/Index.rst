@@ -87,7 +87,7 @@
          src
 
    Data type
-         <frame>-data:src /stdWrap
+         <frame>-data:src /:ref:`stdWrap <stdwrap>`
 
    Description
          Instead of using the "obj" destination, you can define a specific src

@@ -23,7 +23,7 @@ icon, size and file are rendered in the listed order.
          path
 
    Data type
-         path /stdWrap
+         path /:ref:`stdWrap <stdwrap>`
 
    Description
          **Example:** ::
@@ -37,7 +37,7 @@ icon, size and file are rendered in the listed order.
          icon
 
    Data type
-         boolean /stdWrap
+         boolean /:ref:`stdWrap <stdwrap>`
 
    Description
          Set, if an icon should be shown.
@@ -69,7 +69,7 @@ icon, size and file are rendered in the listed order.
          icon\_image\_ext\_list
 
    Data type
-         *list of image extensions* /stdWrap
+         *list of image extensions* /:ref:`stdWrap <stdwrap>`
 
    Description
          This is a comma-separated list of those file extensions that should
@@ -82,7 +82,7 @@ icon, size and file are rendered in the listed order.
          icon\_thumbSize
 
    Data type
-         string /stdWrap
+         string /:ref:`stdWrap <stdwrap>`
 
    Description
          Defines the size of the thumbnail in pixels.
@@ -152,7 +152,7 @@ icon, size and file are rendered in the listed order.
          wrap
 
    Data type
-         wrap /stdWrap
+         wrap /:ref:`stdWrap <stdwrap>`
 
    Description
          Wraps the links.
@@ -193,7 +193,7 @@ icon, size and file are rendered in the listed order.
          size
 
    Data type
-         boolean /stdWrap
+         boolean /:ref:`stdWrap <stdwrap>`
 
    Description
          Set if size should be shown
@@ -232,7 +232,7 @@ icon, size and file are rendered in the listed order.
 
          Syntax: [ext] = [MIME type]
 
-         **.parameter:** String /stdWrap.
+         **.parameter:** String /:ref:`stdWrap <stdwrap>`.
 
          By default the jumpurl link will use the current pid and typeNum.
 
@@ -253,7 +253,7 @@ icon, size and file are rendered in the listed order.
          target
 
    Data type
-         target /stdWrap
+         target /:ref:`stdWrap <stdwrap>`
 
    Description
          Target for the <a>-tag.
@@ -274,7 +274,7 @@ icon, size and file are rendered in the listed order.
          ATagParams
 
    Data type
-         <A>-params /stdWrap
+         <A>-params /:ref:`stdWrap <stdwrap>`
 
    Description
          Additional parameters
@@ -305,7 +305,7 @@ icon, size and file are rendered in the listed order.
          titleText
 
    Data type
-         string /stdWrap
+         string /:ref:`stdWrap <stdwrap>`
 
    Description
          For icons (image made with "iconCObject" must have their own
@@ -320,7 +320,7 @@ icon, size and file are rendered in the listed order.
          emptyTitleHandling
 
    Data type
-         string /stdWrap
+         string /:ref:`stdWrap <stdwrap>`
 
    Description
          Value can be "keepEmpty" to preserve an empty title attribute, or
@@ -336,7 +336,7 @@ icon, size and file are rendered in the listed order.
          longdescURL
 
    Data type
-         string /stdWrap
+         string /:ref:`stdWrap <stdwrap>`
 
    Description
          For icons (image made with "iconCObject" must have their own

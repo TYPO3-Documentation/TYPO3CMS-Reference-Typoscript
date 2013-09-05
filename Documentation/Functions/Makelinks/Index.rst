@@ -43,7 +43,7 @@ mailto:name@email.rld
          http.wrap
 
    Data type
-         wrap /stdWrap
+         wrap /:ref:`stdWrap <stdwrap>`
 
    Description
          Wrap around the link.
@@ -91,7 +91,7 @@ mailto:name@email.rld
          http.ATagParams
 
    Data type
-         <A>-params /stdWrap
+         <A>-params /:ref:`stdWrap <stdwrap>`
 
    Description
          Additional parameters
@@ -107,7 +107,7 @@ mailto:name@email.rld
          mailto.wrap
 
    Data type
-         wrap /stdWrap
+         wrap /:ref:`stdWrap <stdwrap>`
 
    Description
          Wrap around the link.
@@ -135,7 +135,7 @@ mailto:name@email.rld
          mailto.ATagParams
 
    Data type
-         <A>-params /stdWrap
+         <A>-params /:ref:`stdWrap <stdwrap>`
 
    Description
          Additional parameters
