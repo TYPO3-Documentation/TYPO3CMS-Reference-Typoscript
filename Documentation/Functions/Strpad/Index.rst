@@ -27,7 +27,7 @@ operation.
    Data type
          In TYPO3 6.1: integer
 
-         Since TYPO3 6.2: integer /stdWrap
+         Since TYPO3 6.2: integer /:ref:`stdWrap <stdwrap>`
 
    Description
          The length of the output string. If the value is negative, less
@@ -46,7 +46,7 @@ operation.
    Data type
          In TYPO3 6.1: string
 
-         Since TYPO3 6.2: string /stdWrap
+         Since TYPO3 6.2: string /:ref:`stdWrap <stdwrap>`
 
    Description
          The character(s) to pad with. The value of padWith may be
@@ -67,7 +67,7 @@ operation.
    Data type
          In TYPO3 6.1: *(list of keywords)*
 
-         Since TYPO3 6.2: *(list of keywords)* /stdWrap
+         Since TYPO3 6.2: *(list of keywords)* /:ref:`stdWrap <stdwrap>`
 
    Description
          The side(s) of the input value, on which the padding should be

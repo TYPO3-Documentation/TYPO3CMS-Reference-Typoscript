@@ -24,7 +24,7 @@ of actions and thus allows multiple replacements at once.
          search
 
    Data type
-         string /stdWrap
+         string /:ref:`stdWrap <stdwrap>`
 
    Description
          Defines the string that shall be replaced.
@@ -36,7 +36,7 @@ of actions and thus allows multiple replacements at once.
          replace
 
    Data type
-         string /stdWrap
+         string /:ref:`stdWrap <stdwrap>`
 
    Description
          Defines the string to be used for the replacement.
@@ -48,7 +48,7 @@ of actions and thus allows multiple replacements at once.
          useRegExp
 
    Data type
-         boolean /stdWrap
+         boolean /:ref:`stdWrap <stdwrap>`
 
    Description
          Defines that the search and replace strings are considered as PCRE
@@ -72,7 +72,7 @@ of actions and thus allows multiple replacements at once.
          useOptionSplitReplace
 
    Data type
-         boolean /stdWrap
+         boolean /:ref:`stdWrap <stdwrap>`
 
    Description
          (Since TYPO3 6.2) This property allows to use :ref:`objects-optionsplit`

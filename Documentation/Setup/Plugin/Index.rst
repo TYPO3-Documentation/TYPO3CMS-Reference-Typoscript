@@ -37,11 +37,11 @@ Properties
    ======================================= =============================== ====================== =======
    Property                                Data Type                       :ref:`t3tsref:stdwrap` Default
    ======================================= =============================== ====================== =======
-   `includeLibs`_                          (array of keys)                                             
-   `userFunc`_                             (array of keys)                                             
-   `\_CSS\_DEFAULT\_STYLE`_                :ref:`t3tsref:data-type-string`                               
-   `\_DEFAULT\_PI\_VARS.[piVar-key]`_      Until TYPO3 6.1: string                                       
-   `\_LOCAL\_LANG.[lang-key].[label-key]`_ :ref:`t3tsref:data-type-string`                               
+   `includeLibs`_                          (array of keys)
+   `userFunc`_                             (array of keys)
+   `\_CSS\_DEFAULT\_STYLE`_                :ref:`t3tsref:data-type-string`
+   `\_DEFAULT\_PI\_VARS.[piVar-key]`_      Until TYPO3 6.1: string
+   `\_LOCAL\_LANG.[lang-key].[label-key]`_ :ref:`t3tsref:data-type-string`
    ======================================= =============================== ====================== =======
 
 Property details
@@ -128,7 +128,7 @@ userFunc
    Data type
          Until TYPO3 6.1: string
 
-         Since TYPO3 6.2: string /stdWrap
+         Since TYPO3 6.2: string /:ref:`stdWrap <stdwrap>`
 
    Description
          Allows you to set default values of the piVars array which most

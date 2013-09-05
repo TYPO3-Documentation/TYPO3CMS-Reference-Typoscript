@@ -24,7 +24,7 @@ with the link-parameters (lowercased)!
          extTarget
 
    Data type
-         target /stdWrap
+         target /:ref:`stdWrap <stdwrap>`
 
    Description
          Target used for external links
@@ -39,7 +39,7 @@ with the link-parameters (lowercased)!
          fileTarget
 
    Data type
-         target /stdWrap
+         target /:ref:`stdWrap <stdwrap>`
 
    Description
          Target used for file links
@@ -51,7 +51,7 @@ with the link-parameters (lowercased)!
          target
 
    Data type
-         target /stdWrap
+         target /:ref:`stdWrap <stdwrap>`
 
    Description
          Target used for internal links
@@ -63,7 +63,7 @@ with the link-parameters (lowercased)!
          no\_cache
 
    Data type
-         boolean /stdWrap
+         boolean /:ref:`stdWrap <stdwrap>`
 
    Description
          Adds a "&no\_cache=1"-parameter to the link
@@ -95,7 +95,7 @@ with the link-parameters (lowercased)!
          additionalParams
 
    Data type
-         string /stdWrap
+         string /:ref:`stdWrap <stdwrap>`
 
    Description
          This is parameters that are added to the end of the URL. This must be
@@ -183,7 +183,7 @@ with the link-parameters (lowercased)!
          wrap
 
    Data type
-         wrap /stdWrap
+         wrap /:ref:`stdWrap <stdwrap>`
 
    Description
          Wraps the links.
@@ -210,7 +210,7 @@ with the link-parameters (lowercased)!
          parameter
 
    Data type
-         string /stdWrap
+         string /:ref:`stdWrap <stdwrap>`
 
    Description
          This is the main data that is used for creating the link. It can be
@@ -373,7 +373,7 @@ with the link-parameters (lowercased)!
          title
 
    Data type
-         string /stdWrap
+         string /:ref:`stdWrap <stdwrap>`
 
    Description
          Sets the title parameter of the A-tag.
@@ -419,7 +419,7 @@ with the link-parameters (lowercased)!
          section
 
    Data type
-         string /stdWrap
+         string /:ref:`stdWrap <stdwrap>`
 
    Description
          If this value is present, it's prepended with a "#" and placed after
@@ -435,7 +435,7 @@ with the link-parameters (lowercased)!
          ATagParams
 
    Data type
-         <A>-params /stdWrap
+         <A>-params /:ref:`stdWrap <stdwrap>`
 
    Description
          Additional parameters

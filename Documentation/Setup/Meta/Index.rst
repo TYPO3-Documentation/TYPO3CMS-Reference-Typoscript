@@ -22,11 +22,11 @@ Properties
 
 .. container:: ts-properties
 
-   ========================= =============== ====================== =======
-   Property                  Data Type       :ref:`t3tsref:stdwrap` Default
-   ========================= =============== ====================== =======
-   `(array of key names)`_   string /stdWrap                               
-   ========================= =============== ====================== =======
+   ========================= ================================ ====================== =======
+   Property                  Data Type                        :ref:`t3tsref:stdwrap` Default
+   ========================= ================================ ====================== =======
+   `(array of key names)`_   string /:ref:`stdWrap <stdwrap>`
+   ========================= ================================ ====================== =======
 
 Property details
 ^^^^^^^^^^^^^^^^
@@ -51,7 +51,7 @@ Property details
          *(array of key names)*
 
    Data type
-         string /stdWrap
+         string /:ref:`stdWrap <stdwrap>`
 
    Description
          Allows you to define meta tags.

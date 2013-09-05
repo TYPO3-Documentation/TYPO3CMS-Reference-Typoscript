@@ -38,7 +38,7 @@ Always secure input from outside, for example with intval.
    Data type
          Until TYPO3 4.5: *list of page\_ids*
 
-         Since TYPO3 4.6: *list of page\_ids* /stdWrap
+         Since TYPO3 4.6: *list of page\_ids* /:ref:`stdWrap <stdwrap>`
 
    Description
          Comma-separated list of page ids.
@@ -50,7 +50,7 @@ Always secure input from outside, for example with intval.
          pidInList
 
    Data type
-         *list of page\_ids* /stdWrap
+         *list of page\_ids* /:ref:`stdWrap <stdwrap>`
 
    Description
          Comma-separated list of parent ids.
@@ -67,7 +67,7 @@ Always secure input from outside, for example with intval.
    Data type
          Until TYPO3 4.5: integer
 
-         Since TYPO3 4.6: integer /stdWrap
+         Since TYPO3 4.6: integer /:ref:`stdWrap <stdwrap>`
 
    Description
          Recursive levels for the pidInList
@@ -82,7 +82,7 @@ Always secure input from outside, for example with intval.
          orderBy
 
    Data type
-         *SQL-orderBy* /stdWrap
+         *SQL-orderBy* /:ref:`stdWrap <stdwrap>`
 
    Description
          ORDER BY clause without the words "ORDER BY".
@@ -98,7 +98,7 @@ Always secure input from outside, for example with intval.
          groupBy
 
    Data type
-         *SQL-groupBy* /stdWrap
+         *SQL-groupBy* /:ref:`stdWrap <stdwrap>`
 
    Description
          GROUP BY clause without the words "GROUP BY".
@@ -116,7 +116,7 @@ Always secure input from outside, for example with intval.
    Data type
          Until TYPO3 4.5: integer +calc +"total"
 
-         Since TYPO3 4.6: integer +calc +"total" /stdWrap
+         Since TYPO3 4.6: integer +calc +"total" /:ref:`stdWrap <stdwrap>`
 
    Description
          Max records
@@ -132,7 +132,7 @@ Always secure input from outside, for example with intval.
    Data type
          Until TYPO3 4.5: integer +calc +"total"
 
-         Since TYPO3 4.6: integer +calc +"total" /stdWrap
+         Since TYPO3 4.6: integer +calc +"total" /:ref:`stdWrap <stdwrap>`
 
    Description
          Begin with record number *value*.
@@ -148,7 +148,7 @@ Always secure input from outside, for example with intval.
    Data type
          Until TYPO3 4.5: *SQL-where*
 
-         Since TYPO3 4.6: *SQL-where* /stdWrap
+         Since TYPO3 4.6: *SQL-where* /:ref:`stdWrap <stdwrap>`
 
    Description
          WHERE clause without the word "WHERE".
@@ -164,7 +164,7 @@ Always secure input from outside, for example with intval.
          andWhere
 
    Data type
-         *SQL-where* /stdWrap
+         *SQL-where* /:ref:`stdWrap <stdwrap>`
 
    Description
          AND clause in a WHERE clause; without the word "AND".
@@ -182,7 +182,7 @@ Always secure input from outside, for example with intval.
    Data type
          Until TYPO3 4.5: string
 
-         Since TYPO3 4.6: string /stdWrap
+         Since TYPO3 4.6: string /:ref:`stdWrap <stdwrap>`
 
    Description
          If set, this points to the field in the record which holds a reference
@@ -200,7 +200,7 @@ Always secure input from outside, for example with intval.
    Data type
          Until TYPO3 4.5: string
 
-         Since TYPO3 4.6: string /stdWrap
+         Since TYPO3 4.6: string /:ref:`stdWrap <stdwrap>`
 
    Description
          List of fields to select, or "count(\*)".
@@ -226,7 +226,7 @@ Always secure input from outside, for example with intval.
    Data type
          Until TYPO3 4.5: string
 
-         Since TYPO3 4.6: string /stdWrap
+         Since TYPO3 4.6: string /:ref:`stdWrap <stdwrap>`
 
    Description
          Enter the table name for JOIN, LEFT OUTER JOIN and RIGHT OUTER JOIN

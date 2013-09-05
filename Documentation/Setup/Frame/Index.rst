@@ -22,15 +22,15 @@ Properties
 
 .. container:: ts-properties
 
-   ========== ================================== ====================== ==============================================
-   Property   Data Type                          :ref:`t3tsref:stdwrap` Default                                       
-   ========== ================================== ====================== ==============================================
-   `name`_    <frame>-data:name                                         value of ".obj"                               
-   `obj`_     *pointer to top-level object-name*                                                                      
-   `options`_ :ref:`t3tsref:data-type-string`                                                                         
-   `params`_  <frame>-params                                                                                          
-   `src`_     <frame>-data:src /stdWrap                                 typolink to id=[currentId]&type=[obj->typeNum]
-   ========== ================================== ====================== ==============================================
+   ========== ========================================== ====================== ==============================================
+   Property   Data Type                                  :ref:`t3tsref:stdwrap` Default
+   ========== ========================================== ====================== ==============================================
+   `name`_    <frame>-data:name                                                 value of ".obj"
+   `obj`_     *pointer to top-level object-name*
+   `options`_ :ref:`t3tsref:data-type-string`
+   `params`_  <frame>-params
+   `src`_     <frame>-data:src /:ref:`stdWrap <stdwrap>`                        typolink to id=[currentId]&type=[obj->typeNum]
+   ========== ========================================== ====================== ==============================================
 
 Property details
 ^^^^^^^^^^^^^^^^
@@ -145,7 +145,7 @@ src
          src
 
    Data type
-         <frame>-data:src /stdWrap
+         <frame>-data:src /:ref:`stdWrap <stdwrap>`
 
    Description
          Instead of using the "obj" destination, you can define a specific src

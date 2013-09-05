@@ -41,7 +41,7 @@ is set in LocalConfiguration.php
          file
 
    Data type
-         resource /stdWrap
+         resource /:ref:`stdWrap <stdwrap>`
 
    Description
          The name of the file, which will be included. This file must be valid
@@ -99,7 +99,7 @@ PHP\_SCRIPT\_INT
          file
 
    Data type
-         resource /stdWrap
+         resource /:ref:`stdWrap <stdwrap>`
 
    Description
          The name of the file, which will be included. This file must be valid
@@ -198,7 +198,7 @@ PHP\_SCRIPT\_EXT
          file
 
    Data type
-         resource /stdWrap
+         resource /:ref:`stdWrap <stdwrap>`
 
    Description
          The name of the file, which will be included. This file must be valid

@@ -39,7 +39,7 @@ Adds parameters to an HTML tag.
          *(array of strings)*
 
    Data type
-         string /stdWrap
+         string /:ref:`stdWrap <stdwrap>`
 
    Description
          This defines the content of each added property to the tag.

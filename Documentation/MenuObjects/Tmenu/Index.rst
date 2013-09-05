@@ -19,7 +19,7 @@ TMENU
          expAll
 
    Data type
-         boolean /stdWrap
+         boolean /:ref:`stdWrap <stdwrap>`
 
    Description
          If this is true, the menu will always show the menu on the level

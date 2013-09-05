@@ -22,7 +22,7 @@ tag.
          align
 
    Data type
-         align /stdWrap
+         align /:ref:`stdWrap <stdwrap>`
 
    Description
          Specifies the alignment of the table according to surrounding
@@ -35,7 +35,7 @@ tag.
          border
 
    Data type
-         integer /stdWrap
+         integer /:ref:`stdWrap <stdwrap>`
 
    Description
          The number of pixels for the table border.
@@ -47,7 +47,7 @@ tag.
          cellspacing
 
    Data type
-         integer /stdWrap
+         integer /:ref:`stdWrap <stdwrap>`
 
    Description
          The number of pixels for the cellspacing.
@@ -59,7 +59,7 @@ tag.
          cellpadding
 
    Data type
-         integer /stdWrap
+         integer /:ref:`stdWrap <stdwrap>`
 
    Description
          The number of pixels for the cellpadding.

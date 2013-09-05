@@ -25,9 +25,9 @@ Properties
    ========================== =========== ====================== =======
    Property                   Data Type   :ref:`t3tsref:stdwrap` Default
    ========================== =========== ====================== =======
-   `(stdWrap properties...)`_ ->stdWrap                          
-   `(TDParams)`_              <TD>-params                        
-   `1,2,3,4...`_              cObject                            
+   `(stdWrap properties...)`_ ->stdWrap
+   `(TDParams)`_              <TD>-params
+   `1,2,3,4...`_              cObject
    ========================== =========== ====================== =======
 
 Property details
@@ -56,7 +56,7 @@ Property details
          ->stdWrap
 
    Description
-         **Note:** This applies ONLY if "CARRAY /stdWrap" is set to be data
+         **Note:** This applies ONLY if "CARRAY /:ref:`stdWrap <stdwrap>`" is set to be data
          type.
 
          If you specify any non-integer properties to a CARRAY, stdWrap will be
