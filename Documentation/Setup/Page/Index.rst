@@ -497,6 +497,9 @@ includeCSS.[array]
          **.allWrap:** Wraps the complete tag, useful for conditional
          comments.
 
+         **.allWrap.splitChar:** (Since TYPO3 6.2) Defines an alternative
+         splitting character (default is "\|" - the vertical line).
+
          **.alternate:** If set (boolean) then the rel-attribute will be
          "alternate stylesheet".
 
@@ -562,6 +565,9 @@ includeJS.[array]
 
          **.allWrap:** Wraps the complete tag, useful for conditional
          comments.
+
+         **.allWrap.splitChar:** (Since TYPO3 6.2) Defines an alternative
+         splitting character (default is "\|" - the vertical line).
 
          **.disableCompression:** (Since TYPO3 4.6) If config.compressJs is
          enabled, this disables the compression of this file.
@@ -658,6 +664,9 @@ includeJSlibs.[array]
 
          **.allWrap:** Wraps the complete tag, useful for conditional
          comments.
+
+         **.allWrap.splitChar:** (Since TYPO3 6.2) Defines an alternative
+         splitting character (default is "\|" - the vertical line).
 
          **.disableCompression:** (Since TYPO3 4.6) If config.compressJs is
          enabled, this disables the compression of this file.

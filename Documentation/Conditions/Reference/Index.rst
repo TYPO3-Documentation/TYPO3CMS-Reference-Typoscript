@@ -73,7 +73,7 @@ most correct one.
 
 An example user agent could look like this::
 
-   Mozilla/5.0 (Windows NT 5.1; rv:17.0) Gecko/20100101 Firefox/17.0
+   Mozilla/5.0 (Windows NT 6.2; WOW64; rv:24.0) Gecko/20100101 Firefox/24.0
 
 This string contains the identifications "Gecko" and "Firefox". The
 condition ::
