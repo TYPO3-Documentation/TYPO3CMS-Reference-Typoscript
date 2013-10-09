@@ -6,7 +6,7 @@
 .. include:: ../../Includes.txt
 
 
-   
+
 .. _imagelinkwrap:
 
 imageLinkWrap
@@ -63,7 +63,7 @@ enable
 
 :typoscript:`imageLinkWrap.enable =` :ref:`data-type-boolean`
 
-Whether or not to link the image. Must be set to True to make 
+Whether or not to link the image. Must be set to True to make
 :typoscript:`imageLinkWrap` do anything at all.
 
 
@@ -152,7 +152,7 @@ title
 
 :typoscript:`imageLinkWrap.title =` :ref:`data-type-string`
 
-Specifies the html-page-title of the preview window. 
+Specifies the html-page-title of the preview window.
 Needs :typoscript:`JSwindow = 1`.
 
 
@@ -196,7 +196,7 @@ target
 :typoscript:`imageLinkWrap.target =` :ref:`data-type-target`
 
 This specifies the ``target`` attribute of the link. The attribute
-will only be created if the current :ref:`Doctype <config-doctype>`
+will only be created if the current :ref:`Doctype <setup-config-doctype>`
 allows it. Needs :typoscript:`JSwindow = 1`. Default: 'thePicture'.
 
 Examples:
@@ -215,7 +215,7 @@ Examples:
    imageLinkWrap.JSwindow.newWindow = 1
 
 
-   
+
 JSwindow
 ~~~~~~~~
 
@@ -245,7 +245,7 @@ JSwindow.newWindow
 
 :typoscript:`imageLinkWrap.JSwindow.newWindow =` :ref:`data-type-boolean`
 
-If the :ref:`Doctype <config-doctype>` allows the :ref:`data-type-target`
+If the :ref:`Doctype <setup-config-doctype>` allows the :ref:`data-type-target`
 attribute then the image will be opened in a window with the name given
 by ``target``. If that windows is kept open and the next image with the
 same :ref:`data-type-target` attribute is to be shown then it will appear
@@ -285,7 +285,7 @@ typolink
 
 :typoscript:`imageLinkWrap.typolink =` like :ref:`typolink`
 
-If this returns anything it will be used as link and override 
+If this returns anything it will be used as link and override
 everything else.
 
 
@@ -308,7 +308,7 @@ linkParams
 :typoscript:`imageLinkWrap.linkParams =` any of the options of
 :ref:`typolink`
 
-When the direct link for the preview image is calculated all 
+When the direct link for the preview image is calculated all
 attributes of :typoscript:`linkParams` are used as settings for the
 :ref:`typolink` function. In other words: Use the same parameters
 for :typoscript:`linkParams` that you would use for :ref:`typolink`.
@@ -349,7 +349,7 @@ What it does
 If set to True then this function attaches a link to an image
 that opens a special view of the image. By default the link points to
 the a "showpic" script that knows how to deal with several parameters.
-The script checks an md5-hash to make sure that the parameters are unchanged. 
+The script checks an md5-hash to make sure that the parameters are unchanged.
 See :ref:`imageLinkWrap-basic-example-showpic`.
 
 Since TYPO3 CMS 4.5 there is an alternative. You may set
@@ -391,10 +391,10 @@ Examples for imageLinkWrap
    :local:
    :depth: 1
 
-   
-   
-   
-   
+
+
+
+
 .. _imageLinkWrap-basic-example-showpic:
 
 Basic example: Create a link to the showpic script
@@ -417,9 +417,9 @@ Basic example: Create a link to the showpic script
    }
 
 
-   
-   
-   
+
+
+
 .. _imageLinkWrap-basic-example-directImageLink:
 
 Basic example: Link directly to the original image
@@ -440,10 +440,10 @@ Basic example: Link directly to the original image
       }
    }
 
-   
-   
-   
-   
+
+
+
+
 .. imageLinkWrap-example-popup-window:
 
 Example: Larger display in a popup window
@@ -480,10 +480,10 @@ Example: Larger display in a popup window
          JSwindow.expand = 30,20
    }
 
-   
-   
-   
-   
+
+
+
+
 .. _imageLinkWrap-example-printlink:
 
 Example: Printlink
@@ -579,16 +579,16 @@ __ http://gettopup.com/
    }
 
 
-   
-   
+
+
 
 .. COMMENT
 
    .. _imageLinkWrap-link-list:
-   
+
    Link list
    ---------
-   
+
    Links of interest:
    `click-enlage (de) <http://jweiland.net/typo3/typoscript/click-enlarge.html>`_,
    `lightbox.ts <https://github.com/georgringer/modernpackage/blob/master/Resources/Private/TypoScript/content/lightbox.ts>`_,

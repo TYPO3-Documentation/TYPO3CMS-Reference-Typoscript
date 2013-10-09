@@ -29,7 +29,6 @@ Properties
    ===================================================== ================================== ====================== ======================================================================
    Property                                              Data Type                          :ref:`t3tsref:stdwrap` Default
    ===================================================== ================================== ====================== ======================================================================
-   `((Unknown Property))`_                               :ref:`t3tsref:data-type-string`
    `absRefPrefix`_                                       :ref:`t3tsref:data-type-string`
    `additionalHeaders`_                                  strings divided by "\|"
    `admPanel`_                                           :ref:`t3tsref:data-type-boolean`
@@ -57,6 +56,7 @@ Properties
    `disablePageExternalUrl`_                             :ref:`t3tsref:data-type-boolean`
    `disablePrefixComment`_                               :ref:`t3tsref:data-type-boolean`
    `disablePreviewNotification`_                         :ref:`t3tsref:data-type-boolean`                          0
+   `doctype`_                                            :ref:`t3tsref:data-type-string`
    `doctypeSwitch`_                                      boolean / string
    `enableContentLengthHeader`_                          :ref:`t3tsref:data-type-boolean`
    `extTarget`_                                          :ref:`t3tsref:data-type-target`                           \_top
@@ -175,62 +175,6 @@ Property details
       :depth: 1
 
 .. ### BEGIN~OF~TABLE ###
-
-
-.. _setup-config-unknown-property:
-
-((Unknown Property))
-""""""""""""""""""""
-
-.. container:: table-row
-
-   .. _config-doctype:
-
-   Property
-         doctype
-
-   Data type
-         string
-
-   Description
-         If set, then a document type declaration (and an XML prologue) will be
-         generated. The value can either be a complete doctype or one of the
-         following keywords:
-
-         **xhtml\_trans** for the XHTML 1.0 Transitional doctype.
-
-         **xhtml\_frames** for the XHTML 1.0 Frameset doctype.
-
-         **xhtml\_strict** for the XHTML 1.0 Strict doctype.
-
-         **xhtml\_basic** for the XHTML basic doctype.
-
-         **xhtml\_11** for the XHTML 1.1 doctype.
-
-         **xhtml+rdfa\_10** for the XHTML+RDFa 1.0 doctype.
-
-         **xhtml\_2** for the XHTML 2 doctype.
-
-         **html5** for the HTML5 doctype.
-
-         **none** for *no* doctype at all.
-
-         **Note:** In TYPO3 4.4 the keyword for HTML5 was "html\_5". This
-         spelling was deprecated since TYPO3 4.5 and has been removed in TYPO3
-         4.7.
-
-         Note that the keywords also change the way TYPO3 generates some of the
-         XHTML tags to ensure valid XML. If you set doctype to a string, then
-         you must also set config.xhtmlDoctype(see below).
-
-         See "config.htmlTag\_setParams" and "config.htmlTag\_langKey" for more
-         details on the effect on the HTML tag.
-
-         Default is the HTML 4 Transitional doctype::
-
-            <!DOCTYPE html
-
-                PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 
 
 
@@ -982,6 +926,61 @@ disablePreviewNotification
    Default
          0
 
+
+.. _setup-config-doctype:
+
+doctype
+"""""""
+
+.. container:: table-row
+
+   Property
+         doctype
+
+   Data type
+         string
+
+   Description
+         If set, then a document type declaration (and an XML prologue) will be
+         generated. The value can either be a complete doctype or one of the
+         following keywords:
+
+         **xhtml\_trans** for the XHTML 1.0 Transitional doctype.
+
+         **xhtml\_frames** for the XHTML 1.0 Frameset doctype.
+
+         **xhtml\_strict** for the XHTML 1.0 Strict doctype.
+
+         **xhtml\_basic** for the XHTML basic doctype.
+
+         **xhtml\_11** for the XHTML 1.1 doctype.
+
+         **xhtml+rdfa\_10** for the XHTML+RDFa 1.0 doctype.
+
+         **xhtml\_2** for the XHTML 2 doctype.
+
+         **html5** for the HTML5 doctype.
+
+         **none** for *no* doctype at all.
+
+         .. note::
+
+            In TYPO3 CMS 4.4 the keyword for HTML5 was "html\_5". This spelling
+            was deprecated since TYPO3 4.5 and has been removed in TYPO3 CMS 4.7.
+
+         Note that the keywords also change the way TYPO3 generates some of the
+         XHTML tags to ensure valid XML. If you set doctype to a string, then
+         you must also set config.xhtmlDoctype(see below).
+
+         See :ref:`config.htmlTag_setParams <setup-config-htmltag-setparams>` and
+         :ref:`comfig.htmlTag_langKey <setup-config-htmltag-langkey>` for more
+         details on the effect on the HTML tag.
+
+         Default is the HTML 4 Transitional doctype::
+
+            <!DOCTYPE html
+
+                PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 
 
 .. _setup-config-doctypeswitch:
