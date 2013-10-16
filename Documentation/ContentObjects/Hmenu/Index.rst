@@ -131,8 +131,8 @@ Generates hierarchical menus.
          Since TYPO3 4.7: integer /:ref:`stdWrap <stdwrap>`
 
    Description
-         The minimum items in the menu. If the number of pages does not reach
-         this level, a dummy-page with the title "..." and
+         The minimum number of items in the menu. If the number of pages does
+         not reach this level, a dummy-page with the title "..." and
          uid=[currentpage\_id] is inserted.
 
          **Note:** Affects all sub menus as well. To set the value for each
@@ -153,7 +153,8 @@ Generates hierarchical menus.
          Since TYPO3 4.7: integer /:ref:`stdWrap <stdwrap>`
 
    Description
-         The maximum items in the menu. More items will be ignored.
+         The maximum number of items in the menu. Additional items will be
+         ignored.
 
          **Note:** Affects all sub menus as well. (See "minItems" for a
          notice.)

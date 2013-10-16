@@ -124,6 +124,34 @@ different cObjects.
 .. container:: table-row
 
    Property
+         begin
+
+   Data type
+         integer /:ref:`stdWrap <stdwrap>`
+
+   Description
+         (Since TYPO3 6.2) The first item to return. If not set (default), items
+         beginning with the first one are returned.
+
+
+.. container:: table-row
+
+   Property
+         maxItems
+
+   Data type
+         integer /:ref:`stdWrap <stdwrap>`
+
+   Description
+         (Since TYPO3 6.2) Maximum number of items to return. If not set (default),
+         items until the last one are returned. If begin and maxItems together
+         exceed the number of available items, no items beyond the last available
+         item will be returned - output won't continue with the first available item.
+
+
+.. container:: table-row
+
+   Property
          renderObj
 
    Data type
@@ -216,8 +244,8 @@ Examples:
 
 In this example, we first load files using several of the methods
 explained above (using sys_file UIDs, collection UIDs, and folders).
-Then we use the :ref:`TEXT <cobj-text>` cObject as renderObj to output the file size of all
-files that were found::
+Then we use the :ref:`TEXT <cobj-text>` cObject as renderObj to output
+the file size of all files that were found::
 
    page.10 = FILES
 
@@ -233,9 +261,10 @@ files that were found::
 
 
 In this second example, we use "references" to get the images related
-to a given page (in this case, the current page). Each image is then
-rendered as an :ref:`IMAGE <cobj-image>` cObject with some meta data coming from the file
-itself (publicUrl) or from the reference to it (title)::
+to a given page (in this case, the current page). We start with the
+first image and return up to five images. Each image is then rendered
+as an :ref:`IMAGE <cobj-image>` cObject with some meta data coming from
+the file itself (publicUrl) or from the reference to it (title)::
 
    page.20 = FILES
    page.20 {
@@ -244,6 +273,10 @@ itself (publicUrl) or from the reference to it (title)::
        uid.data = tsfe:id
        fieldName = media
      }
+
+     begin = 0
+     maxItems = 5
+
      renderObj = IMAGE
      renderObj {
        file.import.data = file:current:publicUrl
