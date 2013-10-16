@@ -463,6 +463,11 @@ You may include "\*" instead of one of the parts in values. You may
 also list the first one, two or three parts and only they will be
 tested.
 
+Since TYPO3 6.2 the IP condition also supports the special keyword
+"devIP". If - instead of using an actual IP address or range - you use
+this keyword, the IP address, which the visitor uses, will be compared
+to :code:`$TYPO3_CONF_VARS['SYS']['devIPmask']` as set in the Install
+Tool.
 
 Examples:
 ~~~~~~~~~
@@ -479,6 +484,11 @@ These examples will match any IP address ending with "123" or being
 "192.168.1.34"::
 
    [IP = *.*.*.123][IP = 192.168.1.34]
+
+This example will match the IP address or range defined in
+:code:`$TYPO3_CONF_VARS['SYS']['devIPmask']`::
+
+   [IP = devIP]
 
 
 .. _condition-hostname:
