@@ -58,7 +58,7 @@ Properties
    `disablePreviewNotification`_                         :ref:`t3tsref:data-type-boolean`                          0
    `doctype`_                                            :ref:`t3tsref:data-type-string`
    `doctypeSwitch`_                                      boolean / string
-   `enableContentLengthHeader`_                          :ref:`t3tsref:data-type-boolean`
+   `enableContentLengthHeader`_                          :ref:`t3tsref:data-type-boolean`                          1
    `extTarget`_                                          :ref:`t3tsref:data-type-target`                           \_top
    `fileTarget`_                                         :ref:`t3tsref:data-type-target`
    `forceTypeValue`_                                     :ref:`t3tsref:data-type-integer`
@@ -1045,9 +1045,13 @@ enableContentLengthHeader
          If a PHP\_SCRIPT\_EXT object is detected on the page or if the Backend
          user is logged in, this is disabled. The reason is that the content
          length header cannot include the length of these objects and the
-         content-length will cut of the length of the document in some
+         content-length will cut off the length of the document in some
          browsers.
 
+   Default
+         Until TYPO3 6.1: 0
+
+         Since TYPO3 6.2: 1
 
 
 .. _setup-config-exttarget:
