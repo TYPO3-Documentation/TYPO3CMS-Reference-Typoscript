@@ -1193,13 +1193,16 @@ Comparison:
 
 This calls a user-defined function (above called "user\_function") and
 passes the provided parameters to that function (e.g. the two
-parameters "argument1" and "argument2"). You write the function; you
-decide what it checks. The function should return true or false.
-Otherwise the result is evaluated to true or false.
+parameters "argument1" and "argument2"). Parameters can be enclosed
+with quotes so that leading and trailing spaces and commas inside a
+parameter can be used. Quotes can be escaped using the "\" character.
+You write the function; you decide what it checks. The function should
+return true or false. Otherwise the result is evaluated to true or
+false.
 
 
-Example:
-~~~~~~~~
+Examples:
+~~~~~~~~~
 
 Put the following condition in your TypoScript. ::
 
@@ -1228,4 +1231,14 @@ Put this function in your AdditionalConfiguration.php
 
 If the remote address contains "192.168", the condition will return
 true, otherwise it will return false.
+
+The function in the following condition shows how quotes can be used.
+It has three arguments::
+
+    [userFunc = user_testFunctionWithThreeArgumentsSpaces(1, 2, " 3, 4, 5, 6")]
+
+The function in the next condition also has three arguments and it
+shows how quotes can be escaped::
+
+    [userFunc = user_testFunctionWithThreeArgumentsEscapedQuotes(1, 2, "3, \"4, 5\", 6")]
 
