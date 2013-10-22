@@ -73,7 +73,7 @@ most correct one.
 
 An example user agent could look like this::
 
-   Mozilla/5.0 (Windows NT 6.2; WOW64; rv:24.0) Gecko/20100101 Firefox/24.0
+   Mozilla/5.0 (Windows NT 6.3; WOW64; rv:24.0) Gecko/20100101 Firefox/24.0
 
 This string contains the identifications "Gecko" and "Firefox". The
 condition ::
@@ -195,6 +195,7 @@ HP-UX                      unix\_hp
 Chrome OS                  chrome
 iOS                        iOS
 Macintosh                  mac
+Windows 8                  win8
 Windows 7                  win7
 Windows Vista              winVista
 Windows XP                 winXP
@@ -248,6 +249,7 @@ This will match with Windows and Mac systems only ::
    Android                linux
    Chrome OS              linux
    iOS                    mac
+   Windows 8              winNT
    Windows 7              winNT
    Windows Vista          winNT
    Windows XP             winNT
