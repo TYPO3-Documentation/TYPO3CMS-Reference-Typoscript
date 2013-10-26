@@ -17,7 +17,7 @@ About this document
 ^^^^^^^^^^^^^^^^^^^
 
 This document is a complete reference to all objects and properties of
-TypoScript as used in TYPO3 templates (and not in TSconfig).
+TypoScript as used in TYPO3 TypoScript templates (and not in TSconfig).
 
 For explanations about the syntax of TypoScript itself, please refer
 to the "TypoScript Syntax and In-Depth Study" manual.
