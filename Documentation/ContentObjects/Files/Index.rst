@@ -124,6 +124,18 @@ different cObjects.
 .. container:: table-row
 
    Property
+         sorting
+
+   Data type
+         string /:ref:`stdWrap <stdwrap>`
+
+   Description
+         Name of the field, which should be used to sort the files.
+
+
+.. container:: table-row
+
+   Property
          begin
 
    Data type
