@@ -132,6 +132,12 @@ different cObjects.
    Description
          Name of the field, which should be used to sort the files.
 
+         Available sub-property:
+
+         **direction:** (Since TYPO3 6.2) The direction, in which the files should
+         be sorted. Possible values are "asc" for ascending and "desc" for
+         descending. Ascending is the default.
+
 
 .. container:: table-row
 
