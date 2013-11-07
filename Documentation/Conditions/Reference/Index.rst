@@ -520,6 +520,51 @@ but cannot be part of a string, so it must match the full host name
 (e.g. myhost.\*.com => correct, myhost.\*domain.com => wrong)
 
 
+.. _condition-applicationcontext:
+
+applicationContext
+""""""""""""""""""
+
+
+Syntax:
+~~~~~~~
+
+::
+
+   [applicationContext = context1, context2, ...]
+
+
+Comparison:
+'''''''''''
+
+Comparison with the application context in which the system is running.
+
+The values are compared to applicationContext, which is set at the
+very beginning of the bootstrap sequence based on :code:`getenv('TYPO3_CONTEXT')`.
+
+Value is comma-list of application contexts to match with.
+Wildcards + and \* are allowed, as well as regular expressions
+delimited with /PREG_PATTERN/
+
+
+Examples:
+~~~~~~~~~
+
+Matches exactly the applicationContexts "Development/Debugging" or "Development/Profiling"::
+
+   [applicationContext = Development/Debugging, Development/Profiling]
+
+Matches any applicationContext with a rootContext of "Production",
+for example "Production/Live" or "Production/Staging"::
+
+   [applicationContext = Production*]
+
+Matches any applicationContext starting with "Production/Staging/Server"
+and ending with one digit, for example "Production/Staging/Server3"::
+
+   [applicationContext = /^Production\/Staging\/Server\d+$/]
+
+
 .. _condition-hour:
 
 hour
