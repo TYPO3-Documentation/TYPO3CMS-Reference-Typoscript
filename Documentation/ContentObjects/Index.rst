@@ -31,7 +31,6 @@ Content Objects (cObject)
    Form/Index
    Hmenu/Index
    Hruler/Index
-   Html/Index
    Image/Index
    ImgResource/Index
    Imgtext/Index
