@@ -44,9 +44,10 @@ the records selected which has a higher value than the current.
 
          In standard configuration this will be "tt\_content".
 
-         **Note:** Allowed tables are "pages" or tables prefixed with one of
-         these: "pages\_", "tt\_", "tx\_", "ttx\_", "fe\_", "user\_" or
-         "static\_".
+         **Note:** Until TYPO3 6.1 allowed tables were "pages" or tables with
+         one of these prefixes: "pages\_", "tt\_", "tx\_", "ttx\_", "fe\_",
+         "user\_" or "static\_". Since TYPO3 6.2 prefixes are no longer checked;
+         now any table can be used.
 
 
 .. container:: table-row
