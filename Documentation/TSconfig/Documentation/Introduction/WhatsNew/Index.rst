@@ -46,14 +46,14 @@ TYPO3 4.6: `http://wiki.typo3.org/Documentation\_changes\_in\_4.6`_.
 
 .. _http://wiki.typo3.org/Documentation\_changes\_in\_4.6: http://wiki.typo3.org/Documentation_changes_in_4.6
 
-TYPO3 4.7: `http://forge.typo3.org/projects/typo3v4-doc\_core\_tsconfig/versions/1428`_.
+TYPO3 4.7: `http://forge.typo3.org/projects/typo3cms-doc-tsconfig/versions/1428`_.
 
-.. _http://forge.typo3.org/projects/typo3v4-doc\_core\_tsconfig/versions/1428: http://forge.typo3.org/projects/typo3v4-doc_core_tsconfig/versions/1428
+.. _http://forge.typo3.org/projects/typo3cms-doc-tsconfig/versions/1428: http://forge.typo3.org/projects/typo3cms-doc-tsconfig/versions/1428
 
-TYPO3 6.0: `http://forge.typo3.org/projects/typo3v4-doc\_core\_tsconfig/versions/1624`_.
+TYPO3 6.0: `http://forge.typo3.org/projects/typo3cms-doc-tsconfig/versions/1624`_.
 
-.. _http://forge.typo3.org/projects/typo3v4-doc\_core\_tsconfig/versions/1624: http://forge.typo3.org/projects/typo3v4-doc_core_tsconfig/versions/1624
+.. _http://forge.typo3.org/projects/typo3cms-doc-tsconfig/versions/1624: http://forge.typo3.org/projects/typo3cms-doc-tsconfig/versions/1624
 
-TYPO3 6.1: `http://forge.typo3.org/projects/typo3v4-doc\_core\_tsconfig/versions/1961`_.
+TYPO3 6.1: `http://forge.typo3.org/projects/typo3cms-doc-tsconfig/versions/1961`_.
 
-.. _http://forge.typo3.org/projects/typo3v4-doc\_core\_tsconfig/versions/1961: http://forge.typo3.org/projects/typo3v4-doc_core_tsconfig/versions/1961
+.. _http://forge.typo3.org/projects/typo3cms-doc-tsconfig/versions/1961: http://forge.typo3.org/projects/typo3cms-doc-tsconfig/versions/1961
