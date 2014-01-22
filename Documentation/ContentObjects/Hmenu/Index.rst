@@ -1260,6 +1260,25 @@ like any other field.
 .. container:: table-row
 
    Property
+         .. _hmenu-special-categories-relation:
+
+         relation
+
+   Data type
+         :ref:`string <data-type-string>` / :ref:`stdWrap <stdwrap>`
+
+   Description
+         Name of the categories-relation field to use for
+         building the list of categorized pages, as there can
+         be several such fields on a given table.
+
+   Default
+         categories
+
+
+.. container:: table-row
+
+   Property
          .. _hmenu-special-categories-sorting:
 
          sorting
