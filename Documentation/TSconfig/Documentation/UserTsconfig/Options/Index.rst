@@ -618,7 +618,7 @@ Various options for the user affecting the core at various points.
          tooltip if the mouse hovers the navigation title.
 
 
- .. container:: table-row
+.. container:: table-row
 
    Property
          pageTree.showPathAboveMounts
@@ -634,7 +634,7 @@ Various options for the user affecting the core at various points.
 
           This is useful if you work a lot with user db mounts.
 
- .. container:: table-row
+.. container:: table-row
 
    Property
          pageTree.doktypesToShowInNewPageDragArea
