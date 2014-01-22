@@ -600,9 +600,7 @@ Various options for the user affecting the core at various points.
 
    Description
          If set, the domain name will be appended to the page title for
-
          pages that have "Is root of web site?" checked in the page properties.
-
          Useful if there are several domains in one page tree.
 
 
