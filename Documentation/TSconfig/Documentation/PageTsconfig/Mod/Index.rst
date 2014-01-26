@@ -1267,6 +1267,31 @@ Web > View (mod.web\_view)
             }
 
 
+.. container:: table-row
+
+   Property
+         previewFrameWidths
+
+   Data type
+         positive integer
+
+   Description
+         Enter value for frame width and any LLL or string for label
+
+         **Example:**
+
+         With this configuration a new frame sizes with 500px x 300px labeled
+         myPreview will be added in the dropdown menu Width inside Web > View module::
+
+            mod.web_view.previewFrameWidths {
+                    300.label = myPreview
+                      300.height = 500
+            }
+
+         .. figure:: ../../Images/WebViewTSConfigPreview.png
+            :alt: Dropdown menu Width with added frame size called myPreview
+
+
 .. ###### END~OF~TABLE ######
 
 [page:mod.web\_view; beuser:mod.web\_view]
