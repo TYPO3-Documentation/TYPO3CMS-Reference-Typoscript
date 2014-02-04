@@ -111,11 +111,11 @@ Examples:
 
    5 = TEXT
    5 {
-     cache.key = mycurrenttimestamp
-     cache.tags = tag_a,tag_b,tag_c
-     cache.lifetime = 3600
-     data = date : U
-     strftime = %H:%M:%S
+     stdWrap.cache.key = mycurrenttimestamp
+     stdWrap.cache.tags = tag_a,tag_b,tag_c
+     stdWrap.cache.lifetime = 3600
+     stdWrap.data = date : U
+     stdWrap.strftime = %H:%M:%S
    }
 
 In the above example the current time will be cached with the key
@@ -126,8 +126,8 @@ timestamp). ::
 
    5 = TEXT
    5 {
-     cache.key = mycurrenttimestamp_{page:uid}_{TSFE:sys_language_uid}
-     cache.key.insertData = 1
+     stdWrap.cache.key = mycurrenttimestamp_{page:uid}_{TSFE:sys_language_uid}
+     stdWrap.cache.key.insertData = 1
    }
 
 Here a dynamic key is used. It takes the page id and the language uid

@@ -185,8 +185,8 @@ different cObjects.
 
             page.10.renderObj = TEXT
             page.10.renderObj {
-              data = file:current:size
-              wrap = <p>File size:<strong>|</strong></p>
+              stdWrap.data = file:current:size
+              stdWrap.wrap = <p>File size:<strong>|</strong></p>
             }
 
          This returns the size of the current file.
@@ -273,8 +273,8 @@ the file size of all files that were found::
 
    page.10.renderObj = TEXT
    page.10.renderObj {
-     data = file:current:size
-     wrap = <p>File size: <strong>|</strong></p>
+     stdWrap.data = file:current:size
+     stdWrap.wrap = <p>File size: <strong>|</strong></p>
    }
 
 

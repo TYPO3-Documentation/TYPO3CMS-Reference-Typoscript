@@ -314,8 +314,8 @@ situations. The internal processing is handled by
    # get and output the client IP
    page = PAGE
    page.10 = TEXT
-   page.10.data = getIndpEnv : REMOTE_ADDR
-   page.10.htmlSpecialChars = 1
+   page.10.stdWrap.data = getIndpEnv : REMOTE_ADDR
+   page.10.stdWrap.htmlSpecialChars = 1
 
 
 **These names can be used with getIndpEnv**:

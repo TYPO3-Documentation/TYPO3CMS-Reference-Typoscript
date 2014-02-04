@@ -77,8 +77,8 @@ Examples:
    lib.number = TEXT
    lib.number {
      value = 3.14159
-     round.roundType = round
-     round.decimals = 2
+     stdWrap.round.roundType = round
+     stdWrap.round.decimals = 2
    }
 
 This returns 3.14.

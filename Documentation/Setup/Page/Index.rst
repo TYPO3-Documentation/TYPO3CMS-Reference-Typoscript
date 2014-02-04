@@ -957,7 +957,7 @@ jsInline
 
             page.jsInline {
                     10 = TEXT
-                    10.dataWrap = var pageId = {TSFE:id};
+                    10.stdWrap.dataWrap = var pageId = {TSFE:id};
             }
 
          **Note:**

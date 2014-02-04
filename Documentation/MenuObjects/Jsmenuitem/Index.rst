@@ -162,7 +162,7 @@ Example:
    page = PAGE
    page.typeNum = 0
    page.5 = TEXT
-   page.5.field = title
+   page.5.stdWrap.field = title
    page.10 < temp.jsmenu
 
 This draws a menu with two selector boxes.

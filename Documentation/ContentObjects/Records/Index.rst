@@ -285,10 +285,10 @@ special menu as defined in "css_styled_content".
 		tables = tt_content
 		conf.tt_content = TEXT
 		conf.tt_content {
-			field = header
-			typolink.parameter = {field:pid}#{field:uid}
-			typolink.parameter.insertData = 1
-			wrap = <li>|</li>
+			stdWrap.field = header
+			stdWrap.typolink.parameter = {field:pid}#{field:uid}
+			stdWrap.typolink.parameter.insertData = 1
+			stdWrap.wrap = <li>|</li>
 		}
 		wrap = <ul>|</ul>
 	}

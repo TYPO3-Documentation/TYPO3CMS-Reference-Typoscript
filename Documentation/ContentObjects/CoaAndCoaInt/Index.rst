@@ -113,7 +113,7 @@ Example:
        wrap = <tr><td> | </td></tr>
        XY = {$menuXY}
        backColor = {$bgCol}
-       20  = TEXT
+       20 = TEXT
        20 {
          text.field = title
          fontFile = fileadmin/fonts/hatten.ttf

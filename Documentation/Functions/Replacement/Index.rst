@@ -127,7 +127,7 @@ The following examples demonstrate the use of :ref:`objects-optionsplit`:
 
    20 = TEXT
    20.value = There_are_a_cat,_a_dog_and_a_tiger_in_da_hood!_Yeah!
-   20.replacement.10 {
+   20.stdWrap.replacement.10 {
      search = _
      replace = 1 || 2 || 3
      useOptionSplitReplace = 1
@@ -139,7 +139,7 @@ This returns: "There1are2a3cat,3a3dog3and3a3tiger3in3da3hood!3Yeah!"
 
    30 = TEXT
    30.value = There are a cat, a dog and a tiger in da hood! Yeah!
-   30.replacement.10 {
+   30.stdWrap.replacement.10 {
      search = #(a) (Cat|Dog|Tiger)#i
      replace = ${1} tiny ${2} || ${1} midsized ${2} || ${1} big ${2}
      useRegExp = 1

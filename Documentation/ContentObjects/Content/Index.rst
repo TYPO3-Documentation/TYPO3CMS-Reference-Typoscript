@@ -158,7 +158,7 @@ Here is an example of record-renderObj's::
    // Configuration for records with the typeField-value (often "CType") set to "header"
    tt_content.header.default {
      10 = TEXT
-     10.field = header
+     10.stdWrap.field = header
      .....
    }
 
