@@ -58,10 +58,10 @@ is used in conjunction with *parseFunc*.
 
             tags.bold = TEXT
             tags.bold {
-              current = 1
-              wrap = <p style="font-weight: bold;"> | </p>
+              stdWrap.current = 1
+              stdWrap.wrap = <p style="font-weight: bold;"> | </p>
             }
-            tags.bold.stripNL = 1
+            tags.bold.stdWrap.stripNL = 1
 
 
 .. ###### END~OF~TABLE ######
@@ -92,11 +92,11 @@ should be the image-reference in "fileadmin/" ::
        tags {
          link = TEXT
          link {
-           current = 1
-           typolink.extTarget = _blank
-           typolink.target={$cLinkTagTarget}
-           typolink.wrap = <p style="color: red;">|</p>
-           typolink.parameter.data = parameters : allParams
+           stdWrap.current = 1
+           stdWrap.typolink.extTarget = _blank
+           stdWrap.typolink.target = {$cLinkTagTarget}
+           stdWrap.typolink.wrap = <p style="color: red;">|</p>
+           stdWrap.typolink.parameter.data = parameters : allParams
          }
 
          typolist < tt_content.bullets.default.20

@@ -54,8 +54,8 @@ This example will show you how it works::
      stdWrap.fieldRequired = header
 
      1 = TEXT
-     1.current = 1
-     1.fontTag = {$content.wrap.header1}
+     1.stdWrap.current = 1
+     1.stdWrap.fontTag = {$content.wrap.header1}
 
      stdWrap.space = {$content.headerSpace}
    }
@@ -70,8 +70,8 @@ This example will show you how it works::
      10.stdWrap.space >
 
      20 = TEXT
-     20.field = subheader
-     20.fontTag = {$content.wrap.subheader1}
+     20.stdWrap.field = subheader
+     20.stdWrap.fontTag = {$content.wrap.subheader1}
    }
 
 
@@ -130,23 +130,23 @@ Example:
 
    page.10 = TEXT
    page.10.value = kasper
-   page.10.case = upper
+   page.10.stdWrap.case = upper
 
    page.20 = < page.10
-   page.20.case = lower
+   page.20.stdWrap.case = lower
    page.20.value >
-   page.20.field = pages
+   page.20.stdWrap.field = pages
 
 The result is this configuration:
 
 .. figure:: ../../Images/ContentObjectsExampleMerge1.png
    :alt: Resulting configuration.
 
-Notice that .value was not cleared (the red line), because it's simply
-two arrays which are joined:
+Notice that .value was *not* cleared, because it's simply two arrays
+which are joined:
 
 .. figure:: ../../Images/ContentObjectsExampleMerge2.png
    :alt: The arrays, which are merged.
 
-So hence the red line in the above example is useless.
+So hence the line *page.20.value >* in the above example is useless.
 

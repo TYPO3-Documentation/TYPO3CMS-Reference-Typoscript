@@ -90,15 +90,15 @@ Examples:
    lib.myPrice = TEXT
    lib.myPrice {
      value = 0.8
-     numberFormat {
+     stdWrap.numberFormat {
        decimals = 2
        dec_point.cObject = TEXT
        dec_point.cObject {
          value = .
-         lang.de = ,
+         stdWrap.lang.de = ,
        }
      }
-     noTrimWrap = || &euro;|
+     stdWrap.noTrimWrap = || &euro;|
    }
    # Will basically result in "0.80 €", but for German in "0,80 €".
 
@@ -108,13 +108,13 @@ Examples:
      select.pidInList = 42
      renderObj = TEXT
      renderObj {
-       field = views
+       stdWrap.field = views
        # By default use 3 decimals or
        # use the number given by the Get/Post variable precisionLevel, if set.
-       numberFormat.decimals = 3
-       numberFormat.decimals.override.data = GP:precisionLevel
-       numberFormat.dec_point = ,
-       numberFormat.thousands_sep = .
+       stdWrap.numberFormat.decimals = 3
+       stdWrap.numberFormat.decimals.override.data = GP:precisionLevel
+       stdWrap.numberFormat.dec_point = ,
+       stdWrap.numberFormat.thousands_sep = .
      }
    }
    # Could result in something like "9.586,007".

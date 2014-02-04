@@ -105,8 +105,8 @@ the register key SPLIT\_COUNT.
 
             1 {
               10 = TEXT
-              10.current = 1
-              10.wrap = <b> | </b>
+              10.stdWrap.current = 1
+              10.stdWrap.wrap = <b> | </b>
               20 = CLEARGIF
               20.height = 20
             }
@@ -143,12 +143,12 @@ bullet-gif (ln 7). Finally the whole thing is wrapped in the proper
 table-tags (ln 9) ::
 
    1         20 = TEXT
-   2         20.field = bodytext
-   3         20.split {
+   2         20.stdWrap.field = bodytext
+   3         20.stdWrap.split {
    4           token.char = 10
    5           cObjNum = 1
    6           1.current = 1
    7           1.wrap = <tr><td><img src="dot.gif"></td><td> | </td></tr>
    8         }
-   9         20.wrap = <table style="width: 368px;"> | </table><br>
+   9         20.stdWrap.wrap = <table style="width: 368px;"> | </table><br>
 

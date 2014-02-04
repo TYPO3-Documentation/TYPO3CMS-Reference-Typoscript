@@ -57,7 +57,7 @@ Also check the explanations and the examples further below!
             page.10 = COA_INT
             page.10.10 = TEXT
             page.10.10 {
-              if.isNull.field = description
+              stdWrap.if.isNull.field = description
               value = No description available.
             }
 
@@ -248,5 +248,6 @@ the field "newUntil" has a date less than the current date! ::
        isLessThan.field = newUntil
        negate = 1
      }
-   …
+   ...
+
 
