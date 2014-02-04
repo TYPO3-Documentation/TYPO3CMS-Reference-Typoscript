@@ -12,9 +12,10 @@ TEXT
 ^^^^
 
 The content object "TEXT" can be used to output static text or HTML.
-Note that the stdWrap properties are not available under the property
-"stdWrap" (as they are for the other cObjects), but on the very
-rootlevel of the object. This is non-standard! Check the examples.
+
+stdWrap properties are available under the property "value" and - just
+like for any other cObject - under the property "stdWrap".
+
 
 .. ### BEGIN~OF~TABLE ###
 
@@ -33,10 +34,29 @@ rootlevel of the object. This is non-standard! Check the examples.
 .. container:: table-row
 
    Property
+         stdWrap
+
+   Data type
+         :ref:`->stdWrap <stdwrap>`
+
+   Description
+         (Executed after the stdWrap for the property ".value".)
+
+
+.. container:: table-row
+
+   Property
          *(stdWrap properties...)*
 
    Data type
          :ref:`->stdWrap <stdwrap>`
+
+   Description
+         stdWrap properties are additionally available on the very rootlevel of the
+         object. This is non-standard.
+
+         **Note:** These properties are deprecated. Use the property ".stdWrap"
+         instead!
 
 
 .. ###### END~OF~TABLE ######
@@ -51,7 +71,7 @@ Examples:
 
    10 = TEXT
    10.value = This is a text in uppercase
-   10.case = upper
+   10.stdWrap.case = upper
 
 The above example uses the stdWrap property "case". It returns "THIS
 IS A TEXT IN UPPERCASE".
@@ -60,8 +80,8 @@ IS A TEXT IN UPPERCASE".
 ::
 
    10 = TEXT
-   10.field = title
-   10.wrap = <strong>|</strong>
+   10.value.field = title
+   10.stdWrap.wrap = <strong>|</strong>
 
 The above example gets the header of the current page (which is
 stored in the database field "title"). The header is then wrapped in
@@ -71,9 +91,9 @@ stored in the database field "title"). The header is then wrapped in
 Now let us have a look at an extract from a more complex example::
 
    10 = TEXT
-   10.field = bodytext
-   10.parseFunc < lib.parseFunc_RTE
-   10.dataWrap = <div>|</div>
+   10.value.field = bodytext
+   10.stdWrap.parseFunc < lib.parseFunc_RTE
+   10.stdWrap.dataWrap = <div>|</div>
 
 The above example returns the content, which was found in the field
 "bodytext" of the current record from $cObj->data-array. Here that
@@ -94,9 +114,9 @@ Here is the same example in its context::
      renderObj {
        stdWrap.if.isTrue.data = field:bodytext
        10 = TEXT
-       10.field = bodytext
-       10.parseFunc < lib.parseFunc_RTE
-       10.dataWrap = <div>|</div>
+       10.value.field = bodytext
+       10.stdWrap.parseFunc < lib.parseFunc_RTE
+       10.stdWrap.dataWrap = <div>|</div>
       }
    }
 

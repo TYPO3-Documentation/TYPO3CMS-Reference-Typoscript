@@ -330,10 +330,10 @@ through the makelinks-functions and substitutes all <LINK> and
 
    tt_content.text.default {
      20 = TEXT
-     20.field = bodytext
-     20.wrap = | <br>
-     20.brTag = <br>
-     20.parseFunc {
+     20.stdWrap.field = bodytext
+     20.stdWrap.wrap = | <br>
+     20.stdWrap.brTag = <br>
+     20.stdWrap.parseFunc {
        makelinks = 1
        makelinks.http.keep = path
        makelinks.http.extTarget = _blank
@@ -341,11 +341,11 @@ through the makelinks-functions and substitutes all <LINK> and
        tags {
          link = TEXT
          link {
-           current = 1
-           typolink.extTarget = _blank
-           typolink.target = {$cLinkTagTarget}
-           typolink.wrap = <p style="color: red; font-weight: bold;">|</p>
-           typolink.parameter.data = parameters : allParams
+           stdWrap.current = 1
+           stdWrap.typolink.extTarget = _blank
+           stdWrap.typolink.target = {$cLinkTagTarget}
+           stdWrap.typolink.wrap = <p style="color: red; font-weight: bold;">|</p>
+           stdWrap.typolink.parameter.data = parameters : allParams
          }
 
          typolist < tt_content.bullets.default.20

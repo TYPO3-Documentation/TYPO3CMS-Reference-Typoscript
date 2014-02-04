@@ -773,9 +773,9 @@ Example:
        border.field = imageborder
        caption {
          1 = TEXT
-         1.field = imagecaption
-         1.wrap = <p style="font-size: 12px;"> |</p>
-         1.wrap2 = {$cBodyTextWrap}
+         1.stdWrap.field = imagecaption
+         1.stdWrap.wrap = <p style="font-size: 12px;"> |</p>
+         1.stdWrap.wrap2 = {$cBodyTextWrap}
        }
        borderThick = 2
        colSpace = 10

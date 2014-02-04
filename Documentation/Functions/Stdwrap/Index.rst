@@ -19,7 +19,7 @@ Example with the property "value" of the content object ":ref:`cobj-text`"::
 
    10 = TEXT
    10.value = some text
-   10.case = upper
+   10.stdWrap.case = upper
 
 Here the content of the object "10" is uppercased before it is
 returned.
@@ -47,8 +47,8 @@ The above example could be rewritten to this::
 
    10 = TEXT
    10.value = some text
-   10.case = upper
-   10.field = header
+   10.stdWrap.case = upper
+   10.stdWrap.field = header
 
 Now the line "10.value = some text" is obsolete, because the whole
 value is "imported" from the field called "header" from the $cObj
@@ -116,7 +116,7 @@ value is "imported" from the field called "header" from the $cObj
             config.language = de
             page.10 = TEXT
             page.10.value = I am a Berliner!
-            page.10.lang.de = Ich bin ein Berliner!
+            page.10.stdWrap.lang.de = Ich bin ein Berliner!
 
          Output will be "Ich bin..." instead of "I am..."
 
@@ -311,7 +311,7 @@ value is "imported" from the field called "header" from the $cObj
             page.10 {
               10 = TEXT
               10 {
-                field = description
+                stdWrap.field = description
                 stdWrap.ifNull = No description defined.
               }
             }
@@ -395,7 +395,7 @@ value is "imported" from the field called "header" from the $cObj
             page.5 {
               10 = TEXT
               10 {
-                field = subtitle
+                stdWrap.field = subtitle
                 stdWrap.listNum = rand
               }
             }
@@ -662,8 +662,8 @@ value is "imported" from the field called "header" from the $cObj
             page.10 = TEXT
             page.10 {
               value = test@example.com
-              hash = md5
-              wrap = <img src="http://www.gravatar.com/avatar/|" />
+              stdWrap.hash = md5
+              stdWrap.wrap = <img src="http://www.gravatar.com/avatar/|" />
             }
 
 
@@ -786,8 +786,8 @@ value is "imported" from the field called "header" from the $cObj
          **Example:** ::
 
             lib.ageFormat = TEXT
-            lib.ageFormat.data = page:tstamp
-            lib.ageFormat.age = " Minuten | Stunden | Tage | Jahre | Minute | Stunde | Tag | Jahr"
+            lib.ageFormat.stdWrap.data = page:tstamp
+            lib.ageFormat.stdWrap.age = " Minuten | Stunden | Tage | Jahre | Minute | Stunde | Tag | Jahr"
 
 
 .. container:: table-row
@@ -1410,7 +1410,7 @@ value is "imported" from the field called "header" from the $cObj
 
             10 = TEXT
             10.value = a
-            10.orderedStdWrap {
+            10.stdWrap.orderedStdWrap {
               30.wrap = |.
 
               10.wrap = is | working
@@ -1461,7 +1461,7 @@ value is "imported" from the field called "header" from the $cObj
 
             10 = TEXT
             10.value = This is the page title: {page:title}
-            10.insertData = 1
+            10.stdWrap.insertData = 1
 
 
 .. container:: table-row
@@ -1516,16 +1516,16 @@ value is "imported" from the field called "header" from the $cObj
             page.10 = TEXT
             page.10 {
               value = Hello World
-              postUserFunc = user_reverseString
-              postUserFunc.uppercase = 1
+              stdWrap.postUserFunc = user_reverseString
+              stdWrap.postUserFunc.uppercase = 1
             }
 
             page.20 = TEXT
             page.20 {
               value = Hello World
-              postUserFunc = user_various->reverseString
-              postUserFunc.uppercase = 1
-              postUserFunc.typolink = 11
+              stdWrap.postUserFunc = user_various->reverseString
+              stdWrap.postUserFunc.uppercase = 1
+              stdWrap.postUserFunc.typolink = 11
             }
 
 

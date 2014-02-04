@@ -65,13 +65,13 @@ Example:
 
    page.13 = TEXT
    page.13.value = <tr><td>
-   page.13.addParams.bgcolor = white
-   page.13.addParams._offset = -1
+   page.13.stdWrap.addParams.bgcolor = white
+   page.13.stdWrap.addParams._offset = -1
 
 Result example::
 
    <tr><td bgcolor="white">
 
-(This example adds the 'bgColor' property to the value of the TEXT
-cObject.)
+This example adds the 'bgColor' property to the value of the TEXT
+cObject.
 

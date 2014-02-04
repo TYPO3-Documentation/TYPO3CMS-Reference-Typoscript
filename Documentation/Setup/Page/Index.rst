@@ -571,7 +571,7 @@ Most of this code is executed in the PHP-script
 
             page.jsInline {
                     10 = TEXT
-                    10.dataWrap = var pageId = {TSFE:id};
+                    10.stdWrap.dataWrap = var pageId = {TSFE:id};
             }
 
          **Note:**

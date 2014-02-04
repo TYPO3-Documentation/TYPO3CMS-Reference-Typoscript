@@ -153,8 +153,8 @@ content by TYPO3.
             page.10.marks {
               DATE = TEXT
               DATE {
-                data = date : U
-                strftime = %Y
+                stdWrap.data = date : U
+                stdWrap.strftime = %Y
             }
 
          Marks are substituted by a str\_replace-function. The subparts loaded
