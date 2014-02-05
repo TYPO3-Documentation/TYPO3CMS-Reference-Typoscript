@@ -20,8 +20,7 @@ TEXT
 
 The content object "TEXT" can be used to output static text or HTML.
 
-stdWrap properties are available - just like for any other cObject - 
-under the property "stdWrap".
+stdWrap properties are available on the very rootlevel of the object.
 
 
 .. ### BEGIN~OF~TABLE ###
@@ -58,15 +57,6 @@ under the property "stdWrap".
 .. container:: table-row
 
    Property
-         stdWrap
-
-   Data type
-         :ref:`->stdWrap <stdwrap>`
-
-
-.. container:: table-row
-
-   Property
          (stdWrap properties...)
    
    Data type
@@ -74,10 +64,9 @@ under the property "stdWrap".
    
    Description
          stdWrap properties are additionally available on the very rootlevel of the
-         object. This is non-standard.
-
-         **Note:** These properties are deprecated. Use the property ".stdWrap"
-         instead!
+         object. This is non-standard! You should use these stdWrap
+         properties consistently to those of the other cObjects by
+         accessing them through the property "stdWrap".
    
    Default
 
