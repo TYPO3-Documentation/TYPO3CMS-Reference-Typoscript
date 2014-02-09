@@ -27,6 +27,7 @@ overridden further out).
    Field/Index
    TopLevelObjects/Index
    Mod/Index
+   Options/Index
    TCEmain/Index
    TCEform/Index
    TSFE/Index
