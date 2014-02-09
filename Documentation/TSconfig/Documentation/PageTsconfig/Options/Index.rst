@@ -37,7 +37,7 @@ backendLayout
 
          2 existing individual backend layouts should be excluded from drop-down list.
 
-         .. figure:: ../../Images/BackendLayoutsID.png
+         .. figure:: ../../Images/BackendLayoutID.png
             :alt: 2 individual backend layouts.
 
          Exclude these individual backend layouts from drop-down list::
