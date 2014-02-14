@@ -42,13 +42,15 @@ Adds parameters to an HTML tag.
          string /:ref:`stdWrap <stdwrap>`
 
    Description
-         This defines the content of each added property to the tag.
+         The name of the property defines the property to be added to the
+         tag. The value is what will be set as content of the property.
 
-         If there is a tag-property with this name already (case-sensitive!)
+         If the tag already has a property with this name (case-sensitive!),
          that property will be overridden!
 
          If the returned value is a blank string (but not zero!), then the
-         existing property (if any) will not be overridden.
+         property will not be set and (if it exists already) not be
+         overridden.
 
 
 .. ###### END~OF~TABLE ######

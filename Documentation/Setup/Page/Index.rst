@@ -113,6 +113,9 @@ Property details
    Data type
          cObject
 
+   Description
+         These properties can be used to define any number of objects,
+         just like you can do with a :ref:`COA content object <cobj-coa>`.
 
 
 .. _setup-page-adminpanelstyles:
@@ -485,7 +488,7 @@ includeCSS.[array]
          resource
 
    Description
-         Inserts a stylesheet (just like the .stylesheet property) by allows to
+         Inserts a stylesheet (just like the .stylesheet property), but allows
          setting up more than a single stylesheet, because you can enter files
          in an array.
 
@@ -1044,10 +1047,10 @@ smallFormFields
          boolean
 
    Description
-         Renders formfields like textarea, input and select-boxes small with
+         Renders form fields like textarea, input and select-boxes small with
          "verdana size 1" font.
 
-         Uses in-document stylesheet.
+         Uses inline stylesheet.
 
          **Tip:**
 
@@ -1112,9 +1115,10 @@ typeNum
          integer
 
    Description
-         This determines the typeId of the page. The value defaults to 0 for
+         This determines the typeId of the page. The *&type=* parameter in the URL
+         determines, which page object will be rendered. The value defaults to 0 for
          the first found PAGE object, but it **must** be set and be unique as
-         soon you use *more* than one such object (watch this if you use frames
+         soon as you use *more* than one such object (watch this if you use frames
          on your page)!
 
    Default

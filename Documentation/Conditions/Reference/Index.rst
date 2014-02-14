@@ -216,8 +216,8 @@ The system is extracted out of the useragent string.
 Values are strings and a match happens if one of these strings is the
 first part of the system-identification.
 
-For example if the value is "win9" this will match with "win95" and
-"win98" systems.
+For example if the value is "win" this will match with all Windows
+systems.
 
 
 Examples:
@@ -332,17 +332,17 @@ the value *agent* thereby matching with this wildcard!
 Examples:
 ~~~~~~~~~
 
-If the HTTP\_USER\_AGENT is "Mozilla/4.0 (compatible; Lotus-Notes/5.0;
+If the HTTP\_USER\_AGENT is "Mozilla/4.0 (compatible; Lotus-Notes/6.0;
 Windows-NT)" this will match with it::
 
-   [useragent = Mozilla/4.0 (compatible; Lotus-Notes/5.0; Windows-NT)]
+   [useragent = Mozilla/4.0 (compatible; Lotus-Notes/6.0; Windows-NT)]
 
 This will also match with it::
 
    [useragent = *Lotus-Notes*]
 
 ... but this will also match with a useragent like this: "Lotus-
-Notes/4.5 ( Windows-NT )"
+Notes/5.0 ( Windows-NT )"
 
 A short list of user-agent strings and a proper match:
 
@@ -352,10 +352,10 @@ A short list of user-agent strings and a proper match:
 ===========================================================   ======================   =============================
 HTTP\_USER\_AGENT:                                            Agent description:       Matching condition:
 ===========================================================   ======================   =============================
-Nokia7110/1.0+(04.77)                                         Nokia 7110 WAP phone     [useragent = Nokia7110\*]
-Lotus-Notes/4.5 ( Windows-NT )                                Lotus-Notes browser      [useragent = Lotus-Notes\*]
+Mozilla/5.0 (iPhone; CPU iPhone OS 7_0 like Mac OS X)         Apple iPhone             [useragent = \*iPhone\*]
+Lotus-Notes/6.0 ( Windows-NT )                                Lotus-Notes browser      [useragent = Lotus-Notes\*]
 Mozilla/3.0 (compatible; AvantGo 3.2)                         AvantGo browser          [useragent = \*AvantGo\*]
-Mozilla/3.0 (compatible; WebCapture 1.0; Auto; Windows)       Adobe Acrobat 4.0        [useragent = \*WebCapture\*]
+Mozilla/4.0 (compatible; WebCapture 3.0; Auto; Windows)       Adobe Acrobat            [useragent = \*WebCapture\*]
 ===========================================================   ======================   =============================
 
 .. ###### END~OF~SIMPLE~TABLE ######
@@ -364,7 +364,7 @@ Mozilla/3.0 (compatible; WebCapture 1.0; Auto; Windows)       Adobe Acrobat 4.0 
 WAP-agents:
 '''''''''''
 
-These are some of the known WAP agents:
+These are some WAP agents:
 
 
 .. ### BEGIN~OF~SIMPLE~TABLE ###
@@ -372,41 +372,13 @@ These are some of the known WAP agents:
 ==============================  ==============================
 HTTP\_USER\_AGENT:              .. invisible comment
 ==============================  ==============================
-ALAV UP/4.0.7                   PLM's WapBrowser
 Alcatel-BE3/1.0 UP/4.0.6c       QWAPPER/1.0
-AUR PALM WAPPER                 R380 2.0 WAP1.1
 Device V1.12                    SIE-IC35/1.0
 EricssonR320/R1A                SIE-P35/1.0 UP/4.1.2a
-fetchpage.cgi/0.53              SIE-P35/1.0 UP/4.1.2a
-Java1.1.8                       UP.Browser/3.01-IG01
-Java1.2.2                       UP.Browser/3.01-QC31
-m-crawler/1.0 WAP               UP.Browser/3.02-MC01
-Materna-WAPPreview/1.1.3        UP.Browser/3.02-SY01
-MC218 2.0 WAP1.1                UP.Browser/3.1-UPG1
-Mitsu/1.1.A                     UP.Browser/4.1.2a-XXXX
-MOT-CB/0.0.19 UP/4.0.5j         UPG1 UP/4.0.7
-MOT-CB/0.0.21 UP/4.0.5m         Wapalizer/1.0
-Nokia-WAP-Toolkit/1.2           Wapalizer/1.1
-Nokia-WAP-Toolkit/1.3beta       WapIDE-SDK/2.0; (R320s (Arial))
-Nokia7110/1.0 ()                WAPJAG Virtual WAP
-Nokia7110/1.0 (04.67)           WAPJAG Virtual WAP
-Nokia7110/1.0 (04.67)           WAPman Version 1.1 beta:Build W2000020401
-Nokia7110/1.0 (04.69)           WAPman Version 1.1
-Nokia7110/1.0 (04.70)           Waptor 1.0
-Nokia7110/1.0 (04.71)           WapView 0.00
-Nokia7110/1.0 (04.73)           WapView 0.20371
-Nokia7110/1.0 (04.74)           WapView 0.28
-Nokia7110/1.0 (04.76)           WapView 0.37
-Nokia7110/1.0 (04.77)           WapView 0.46
-Nokia7110/1.0 (04.80)           WapView 0.47
-Nokia7110/1.0 (30.05)           WinWAP 2.2 WML 1.1
-Nokia7110/1.0                   wmlb
-
-                                YourWap/0.91
-
-                                YourWap/1.16
-
-                                Zetor
+Java1.2.2                       UP.Browser/3.01-IG01
+Mitsu/1.1.A                     WapView 0.47
+Nokia-WAP-Toolkit/1.2
+Nokia7110/1.0
 ==============================  ==============================
 
 .. ###### END~OF~SIMPLE~TABLE ######
@@ -1001,7 +973,7 @@ Syntax:
 Comparison:
 '''''''''''
 
-Do the same as PIDinRootline, except the current page-uid is excluded
+Does the same as PIDinRootline, except the current page-uid is excluded
 from check.
 
 
@@ -1091,10 +1063,6 @@ Operator:       Function:
 Examples:
 ~~~~~~~~~
 
-This will match with a URL like "...&print=1"::
-
-   [globalVar = GP:print > 0]
-
 This will match, if the page-id is equal to either 10, 12 or 15::
 
    [globalVar = TSFE:id = 10|12|15]
@@ -1111,6 +1079,15 @@ This will match, if the page-id is not equal to 316::
 
    [globalVar = TSFE:id != 316]
 
+This will match with the pages having the layout field set to "Layout
+1"::
+
+   [globalVar = TSFE:page|layout = 1]
+
+This will match with a URL like "...&print=1"::
+
+   [globalVar = GP:print > 0]
+
 This will match the non-existing GET/POST variable "style"::
 
    [globalVar = GP:style = ]
@@ -1120,10 +1097,13 @@ variable "M" equals 2 or both::
 
    [globalVar = GP:L = 8, GP:M = 2]
 
-This will match with the pages having the layout field set to "Layout
-1"::
+This will only check POST parameters:
 
-   [globalVar = TSFE:page|layout = 1]
+   [globalVar = _POST|tx_myext_pi1|showUid > 0]
+
+This will only check GET parameters:
+
+   [globalVar = _GET|tx_myext_pi1|showUid > 0]
 
 If the constant {$constant\_to\_turnSomethingOn} is "1" then this
 matches::
@@ -1133,6 +1113,10 @@ matches::
 Find out if there currently is a valid backend login::
 
    [globalVar = TSFE:beUserLogin = 1]
+
+This will match only with the backend user with UID 13::
+
+   [globalVar = BE_USER|user|uid = 13]
 
 
 .. _condition-globalstring:

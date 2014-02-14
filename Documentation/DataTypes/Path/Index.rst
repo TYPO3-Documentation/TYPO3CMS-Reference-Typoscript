@@ -14,13 +14,13 @@ path
 .. container:: table-row
 
    Data type
-
+         path
 
    Examples
          *fileadmin/stuff/*
 
    Comment
-         Path relative to the directory from which we operate.
+         Path relative to the root directory from which we operate.
 
 
 

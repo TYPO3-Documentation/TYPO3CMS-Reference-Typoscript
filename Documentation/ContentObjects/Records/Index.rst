@@ -173,11 +173,13 @@ conf
          :ref:`cObject <data-type-cobject>`
 
    Description
-         Config array which renders records from table *table name*.
+         Configuration array, which defines the rendering for records from
+         table *table name*.
 
    Default
          If this is *not* defined, the rendering of the records is done with
-         the top-level object [table name] - just like the cObject :ref:`CONTENT <cobj-content>`!
+         the top-level object *[table name]* - just like when ".renderObj" is
+         not set for the cObject :ref:`CONTENT <cobj-content>`!
 
 
 .. _cobj-records-properties-dontcheckpid:
@@ -255,7 +257,7 @@ as defined in "css_styled_content".
 	tt_content.shortcut {
 		20 = CASE
 		20.key.field = layout
-		20.0= RECORDS
+		20.0 = RECORDS
 		20.0 {
 			source.field = records
 			tables = {$content.shortcut.tables}
@@ -266,6 +268,25 @@ as defined in "css_styled_content".
 Since no :code:`conf` property is defined, the rendering will
 look for a top-level TypoScript object bearing the name of the
 table to be rendered (e.g. "tt_content").
+
+
+.. _cobj-records-examples-source-ii:
+
+Selection with source II
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. code-block:: typoscript
+
+	20 = RECORDS
+	20 {
+		source = 10,12
+		dontCheckPid = 1
+		tables = tt_content
+	}
+
+This example loads the content elements with the UIDs 10 and 12 no
+matter where these elements are located and whether these pages are
+accessible for the current user.
 
 
 .. _cobj-records-examples-categories:

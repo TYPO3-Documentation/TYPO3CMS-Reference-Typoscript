@@ -104,7 +104,7 @@ Property details
 
          "tt\_..." is normally used to define the setup of content-records. E.g.
          "tt\_content" would be used for the tt\_content-table as default. See
-         the "CONTENT" cObject
+         the :ref:`"CONTENT" cObject <cobj-content>`.
 
 
 

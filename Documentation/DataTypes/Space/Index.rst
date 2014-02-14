@@ -20,9 +20,9 @@ space
          5 \| 5
 
    Comment
-         "before \| after"
+         "space before \| space after"
 
-         Used for content and sets space "before \| after".
+         Used for content and sets the according number of pixels space "before \| after".
 
 
 

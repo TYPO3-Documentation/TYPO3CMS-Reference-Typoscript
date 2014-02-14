@@ -8,7 +8,7 @@
 
 .. _data-type-gifbuilderobj:
 
-GifBuilder Object
+Gifbuilder Object
 =================
 
 See section :ref:`GIFBUILDER` in this manual.

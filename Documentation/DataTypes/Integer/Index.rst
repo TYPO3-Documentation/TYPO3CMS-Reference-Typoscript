@@ -23,8 +23,8 @@ integer
    Comment
          integer
 
-         (sometimes used generally though another type would have been more
-         appropriate, like "pixels")
+         (This data type is sometimes used generally though another type would
+         have been more appropriate, like "pixels".)
 
 
 

@@ -70,7 +70,7 @@ Property details
             5 = TEXT
             5.value = This will be rendered before "10"
 
-            wrap = <b>\|</b>
+            wrap = <b>|</b>
 
          This will return '<b>This will be rendered before "10"testing</b>'.
 

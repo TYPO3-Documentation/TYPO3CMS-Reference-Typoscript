@@ -14,6 +14,8 @@ tags
 Used to create custom tags and define how they should be parsed. This
 is used in conjunction with *parseFunc*.
 
+The best known is the "link" tag, which is used to create links.
+
 
 .. ### BEGIN~OF~TABLE ###
 
@@ -32,7 +34,8 @@ is used in conjunction with *parseFunc*.
          Every entry must be set to a content object.
 
          "current" is set to the content of the tag, eg <TAG>content</TAG>:
-         here "current" is set to "content".
+         here "current" is set to "content". It can be used with
+         stdWrap.current = 1.
 
          **Parameters:**
 
@@ -63,6 +66,8 @@ is used in conjunction with *parseFunc*.
             }
             tags.bold.stdWrap.stripNL = 1
 
+         This example would e.g. transform :code:`<BOLD>Important!</BOLD>`
+         to :code:`<p style="font-weight: bold;">Important!</p>`.
 
 .. ###### END~OF~TABLE ######
 
@@ -76,18 +81,18 @@ Example:
 """"""""
 
 This example creates 4 custom tags. The <LINK>-, <TYPOLIST>-,
-<GRAFIX>- and <PIC>-tags
+<GRAFIX>- and <PIC>-tags:
 
 <LINK> is made into a typolink and provides an easy way of creating
-links in text
+links in text.
 
-<TYPOLIST> is used to create bullet-lists
+<TYPOLIST> is used to create bullet-lists.
 
-<GRAFIX> will create an image file 90x10 pixels where the text is the
-content of the tag.
+<GRAFIX> will create an image file with 90x10 pixels where the text is
+the content of the tag.
 
 <PIC> lets us place an image in the text. The content of the tag
-should be the image-reference in "fileadmin/" ::
+should be the image-reference in "fileadmin/images/". ::
 
        tags {
          link = TEXT
@@ -114,8 +119,9 @@ should be the image-reference in "fileadmin/" ::
              100.offset = 5,10
            }
          }
+         # Transforms <pic>file.png</pic> to <img src="fileadmin/images/file.png" >
          pic = IMAGE
-         pic.file.import = fileadmin/
+         pic.file.import = fileadmin/images/
          pic.file.import.current = 1
        }
 

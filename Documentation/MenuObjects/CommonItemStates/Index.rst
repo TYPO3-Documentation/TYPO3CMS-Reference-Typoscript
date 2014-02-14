@@ -8,10 +8,10 @@
 
 .. _tmenu-gmenu-imgmenu-common-properties:
 
-Common item states for TMENU, GMENU and IMGMENU series:
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Common item states for TMENU, GMENU and IMGMENU
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-These properties are in common for TMENU, GMENU and IMGMENU series.
+These properties are in common for TMENU, GMENU and IMGMENU.
 That means they are not used by for instance the JSMENU.
 
 .. ### BEGIN~OF~TABLE ###
@@ -183,7 +183,7 @@ That means they are not used by for instance the JSMENU.
          Userdefined, see .itemArrayProcFunc for details on how to use this.
 
          You can set the ITEM\_STATE values USERDEF1 and USERDEF2 (+...RO) from
-         a script/userfunction processing the menu item array. See
+         a script/user function processing the menu item array. See
          HMENU/special=userdefined or the property .itemArrayProcFunc of the
          menu objects.
 
@@ -207,7 +207,7 @@ That means they are not used by for instance the JSMENU.
 [tsref:(cObject).HMENU.(mObj\_itemStates)]
 
 Order of priority: USERDEF2, USERDEF1, SPC, USR, CURIFSUB, CUR,
-ACTIFSUB, ACT, IFSUB
+ACTIFSUB, ACT, IFSUB.
 
 All \*RO states require the default "RO" configuration to be set up.
 

@@ -70,7 +70,7 @@ Property details
          occurrences of the string ###EMAIL### in the text will be substituted
          with the actual address.
 
-         See ->parseFunc.
+         See :ref:`->parseFunc <parsefunc>`.
 
 
 

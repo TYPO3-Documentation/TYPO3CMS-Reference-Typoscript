@@ -13,21 +13,15 @@
 getText
 =======
 
-.. only:: html
-
-   .. contents::
-      :local:
-      :depth: 1
-
 .. container:: table-row
 
    Data type
          getText
 
    Examples
-         The getText data type is actually some kind of tool box allowing
-         to retrieve values from a variety of sources, like GET/POST variables,
-         registers, values up the page tree, from the database, etc.
+         The getText data type is some kind of tool box allowing to retrieve
+         values from a variety of sources, e.g. from GET/POST variables, from
+         registers, values from up the page tree, from the database, etc.
 
          The general syntax is as follows::
 
@@ -35,12 +29,14 @@ getText
 
          where :code:`key` indicates the source we are trying to retrieve the
          value from and :code:`code` is some form of path or pointer to the value,
-         which depends on the key used. The various keys and their possible codes
-         are described below.
+         which depends on the key used. The various keys (e.g. :code:`field`,
+         :code:`parameter`, :code:`register`...) and their possible codes are
+         described below.
 
          The :code:`code` can contain pipe characters (\|) to separate keys
-         in a multi-dimensional array. This works with :code:`gp` and :code:`tsfe`.
-         Example::
+         in a multi-dimensional array. This e.g. works with :code:`gp` and :code:`tsfe`.
+
+         **Example:** ::
 
             foo = TSFE:fe_user|user|username
 
@@ -48,14 +44,23 @@ getText
 
          **Getting alternative values**
 
-         By separating the value of getText with :code:`//` (double slash) you let
-         getText fetch the first value. If it appears empty ("" or zero) the
-         next value is fetched and so on. Example::
+         By separating the value of getText with :code:`//` (double slash) you can
+         supply a number of codes and getText will return the first one, which is not
+         empty ("" or zero).
+
+         **Example:** ::
 
             foo = field:header // field:title // field:uid
 
-         This gets "title" if "header" is empty. If "title" is also empty it
-         gets field "uid"
+         This gets the content of the field "header". If "header is empty, "title" is
+         retrieved. If "title" is empty as well, it finally gets the field "uid".
+
+
+.. only:: html
+
+   .. contents::
+      :local:
+      :depth: 1
 
 
 .. _data-type-gettext-field:
@@ -529,6 +534,6 @@ global:
 
 **Syntax**
 
-global: [GLOBAL-var, split with \| if you want to get from an
-array! Deprecated, use GP, TSFE or getenv]
+global: [GLOBAL variable, split with \| if you want to get from an
+array! Deprecated, use GP, TSFE or getenv!]
 

@@ -11,8 +11,8 @@
 tableStyle
 ^^^^^^^^^^
 
-This is used to style a table-tag. The input is wrapped by this table-
-tag.
+This function is used to add properties to a table-tag. The input is
+wrapped by this table-tag.
 
 .. ### BEGIN~OF~TABLE ###
 
@@ -74,7 +74,7 @@ tag.
          string
 
    Description
-         Set to field name from the $cObj->data-array.
+         Set to a field name from the $cObj->data-array.
 
 
 .. container:: table-row

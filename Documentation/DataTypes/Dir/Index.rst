@@ -21,14 +21,14 @@ dir
          fileadmin/files/ sorted by their name reversely and with the full
          path (with "fileadmin/files/" prepended).*
 
-         **fileadmin/files/ \| pdf,gif,jpg \| name** \| r \| true
+         **fileadmin/files/ \| pdf,gif,jpg \| name \| r \| true**
 
    Comment
          [path relative to the web root of the site] \| [list of valid
          extensions] \| [sorting: name, size, ext, date] \| [reverse: "r"] \|
-         [return full path: boolean
+         [return full path: boolean]
 
-         Files matching is returned in a comma-separated string.
+         Files matching are returned in a comma-separated string.
 
          **Note:**
 

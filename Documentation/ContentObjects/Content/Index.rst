@@ -17,6 +17,9 @@ finely select records and rendering them.
 The register-key SYS\_LASTCHANGED is updated with the tstamp-field of
 the records selected which has a higher value than the current.
 
+The cObject :ref:`RECORDS <cobj-records>` in contrast is for displaying
+lists of records from a variety of tables without fine graining.
+
 .. ### BEGIN~OF~TABLE ###
 
 .. container:: table-row
@@ -79,7 +82,7 @@ the records selected which has a higher value than the current.
          integer /:ref:`stdWrap <stdwrap>`
 
    Description
-         If set and no content element is found by the select command, then the
+         If set and no content element is found by the select command, the
          rootLine will be traversed back until some content is found.
 
          Possible values are "-1" (slide back up to the siteroot), "1" (only
@@ -88,7 +91,7 @@ the records selected which has a higher value than the current.
          Use -1 in combination with collect.
 
          **.collect:** (integer /:ref:`stdWrap <stdwrap>`) If set, all content elements found
-         on current and parent pages will be collected. Otherwise, the sliding
+         on the current and parent pages will be collected. Otherwise, the sliding
          would stop after the first hit. Set this value to the amount of levels
          to collect on, or use "-1" to collect up to the siteroot.
 
@@ -96,10 +99,11 @@ the records selected which has a higher value than the current.
          no content elements have been found for the specified depth in collect
          mode, traverse further until at least one match has occurred.
 
-         **.collectReverse:** (boolean /:ref:`stdWrap <stdwrap>`) Change order of elements in
+         **.collectReverse:** (boolean /:ref:`stdWrap <stdwrap>`) Reverse order of elements in
          collect mode. If set, elements of the current page will be at the
          bottom.
 
+         **Note:** The sliding will stop when reaching a folder. See $cObj->checkPid_badDoktypeList.
 
 .. container:: table-row
 
@@ -110,7 +114,7 @@ the records selected which has a higher value than the current.
          :ref:`wrap <data-type-wrap>` /:ref:`stdWrap <stdwrap>`
 
    Description
-         Wrap the whole content-story...
+         Wrap the whole content.
 
 
 .. container:: table-row
@@ -153,17 +157,17 @@ according TypoScript configuration will be copied to renderObj.
 Example:
 """"""""
 
-Here is an example of record-renderObj's::
+Here is an example of record-rendering objects::
 
-   // Configuration for records with the typeField-value (often "CType") set to "header"
+   // Configuration for records with the "field" type value (often "CType") set to "header"
    tt_content.header.default {
      10 = TEXT
      10.stdWrap.field = header
      .....
    }
 
-   // Configuration for records with the typeField-value (often "CType") set to "bullets"
-   // If field "layout" is set to "1" or "2" a special configuration is used, else default
+   // Configuration for records with the "field" type value (often "CType") set to "bullets"
+   // If field "layout" is set to "1" or "2", a special configuration is used, else defaults are being used.
    tt_content.bullets.subTypeField = layout
    tt_content.bullets.default {
      .....
@@ -175,7 +179,7 @@ Here is an example of record-renderObj's::
      .....
    }
 
-   // This is what happens if the typeField-value does not match any of the above
+   // This is what happens if the "field" type value does not match any of the above
    tt_content.default.default {
      .....
    }

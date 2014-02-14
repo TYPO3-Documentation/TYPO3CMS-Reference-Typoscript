@@ -19,10 +19,42 @@ typo3/sysext/frontend/Classes/ContentObject/ContentObjectRenderer.php
 (/typo3/sysext/cms/tslib/class.tslib\_content.php).
 
 The array $GLOBALS['TSFE']->lastImageInfo is set with the info-array
-of the returning image (if any) and contains width, height and so on.
+of the returning image (if any) and contains width, height and so on:
+
+=============================  ==========================================
+Name of the getText property   Content
+=============================  ==========================================
+0                              width
+1                              height
+2                              file extension
+3                              resource
+origFile                       path and file name of the original file
+_mtime                         modification time of the original file
+=============================  ==========================================
+
+**Note:** Gifbuilder also has an :ref:`IMAGE object <gifbuilder-image>` -
+do not mix that one up with the cObject described here; both are
+different objects.
+
+If you only need the file path to the (possibly resized and also
+otherwise adjusted) image, the cObject
+:ref:`IMG_RESOURCE <cobj-img-resource>` might be what you are looking
+for.
 
 
 .. ### BEGIN~OF~TABLE ###
+
+.. container:: table-row
+
+   Property
+         if
+
+   Data type
+         :ref:`->if <if>`
+
+   Description
+         If "if" returns false, the image is not shown!
+
 
 .. container:: table-row
 
@@ -525,18 +557,6 @@ dataKey.*
    Description
          **Note:** Only active if linkWrap is **not** set and file is
          **not** :ref:`GIFBUILDER <gifbuilder>` (as it works with the original image file).
-
-
-.. container:: table-row
-
-   Property
-         if
-
-   Data type
-         :ref:`->if <if>`
-
-   Description
-         If "if" returns false, the image is not shown!
 
 
 .. container:: table-row

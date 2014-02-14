@@ -22,7 +22,9 @@ HTML-color
          #ffeecc
 
    Comment
-         HTML color codes:
+         Named colors or color codes.
+
+         Some HTML color codes are:
 
          =============  ================
          Color name     Hexadecimal code

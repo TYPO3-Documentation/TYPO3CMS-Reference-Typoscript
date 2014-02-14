@@ -12,7 +12,7 @@ Object names in this section
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Whenever you see a reference to anything named an "object" in this
-section it's a reference to a "GifBuilder Object" and not the
+section it's a reference to a "Gifbuilder Object" and not the
 "cObjects" from the previous section. Confusion could happen, because
 "TEXT" and "IMAGE" are objects in *both* areas; note that they are
 different each time!
@@ -25,7 +25,7 @@ different each time!
          1,2,3,4...
 
    Data type
-         GifBuilder Object \+ .if (->if)
+         Gifbuilder Object \+ .if (->if)
 
    Description
          .if (->if) is a property of all GIFBUILDER objects. If the property is
@@ -179,7 +179,7 @@ different each time!
          x,y,w,h + calc /:ref:`stdWrap <stdwrap>`
 
    Description
-         Define the workarea on the image file. All the GifBuilder Objects will
+         Define the workarea on the image file. All the Gifbuilder Objects will
          see this as the dimensions of the image file regarding alignment,
          overlaying of images an so on. Only TEXT objects exceeding the
          boundaries of the workarea will be printed outside this area.
@@ -516,7 +516,7 @@ Renders a text.
          emboss
 
    Data type
-         GifBuilder Object->EMBOSS
+         Gifbuilder Object->EMBOSS
 
 
 .. container:: table-row
@@ -525,7 +525,7 @@ Renders a text.
          shadow
 
    Data type
-         GifBuilder Object->SHADOW
+         Gifbuilder Object->SHADOW
 
 
 .. container:: table-row
@@ -534,7 +534,7 @@ Renders a text.
          outline
 
    Data type
-         GifBuilder Object->OUTLINE
+         Gifbuilder Object->OUTLINE
 
 
 .. container:: table-row

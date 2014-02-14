@@ -60,17 +60,20 @@ EDITPANEL as cObject in the template, using TypoScript.
          string
 
    Description
-         Define which functions are accessible. Further this list may be
-         reduced, if the BE\_USER does not have permission to perform the
-         action
+         Define which functions are accessible. Further this comma-separated
+         list may be reduced, if the BE\_USER does not have permission to
+         perform the action.
 
-         Values should be listed separated by comma. This is the options you
-         can choose between:
+         Values should be listed separated by comma. These are the options you
+         can choose from:
 
-         toolbar,edit,new,delete,move,hide
-
-         (toolbar is a general list of icons regarding the page, so use this
-         for page records only)
+         * **toolbar:** is a list of icons regarding the page, so use this
+           for page records only.
+         * **edit:** edit element.
+         * **new:** create new element.
+         * **delete:** delete element.
+         * **move:** move element.
+         * **hide:** hide element.
 
 
 .. container:: table-row
@@ -108,7 +111,7 @@ EDITPANEL as cObject in the template, using TypoScript.
 
    Description
          If set, a black line will appear after the panel. This value will
-         indicate the distance from the black line to the panel
+         indicate the distance from the black line to the panel.
 
 
 .. container:: table-row
@@ -145,7 +148,7 @@ EDITPANEL as cObject in the template, using TypoScript.
          :ref:`wrap <data-type-wrap>` /:ref:`stdWrap <stdwrap>`
 
    Description
-         Wraps the edit panel
+         Wraps the edit panel.
 
 
 .. container:: table-row
@@ -157,7 +160,7 @@ EDITPANEL as cObject in the template, using TypoScript.
          :ref:`wrap <data-type-wrap>` /:ref:`stdWrap <stdwrap>`
 
    Description
-         Wraps the whole edit panel including the black line (if configured)
+         Wraps the whole edit panel including the black line (if configured).
 
 
 .. container:: table-row
@@ -175,8 +178,7 @@ EDITPANEL as cObject in the template, using TypoScript.
 
          **Example:** ::
 
-            tt_content.stdWrap.editPanel.
-            printBeforeContent = 1
+            tt_content.stdWrap.editPanel.printBeforeContent = 1
 
          This displays the edit panels in front of the according elements, if
          you use css\_styled\_content.
@@ -195,9 +197,9 @@ EDITPANEL as cObject in the template, using TypoScript.
 
    Description
          If set, the hidden/starttime/endtime/fe\_user elements which are
-         previewed will have a border around.
+         previewed will have a border around them.
 
-         The integer value denotes the thickness of the border
+         The integer value denotes the thickness of the border.
 
 
 .. container:: table-row

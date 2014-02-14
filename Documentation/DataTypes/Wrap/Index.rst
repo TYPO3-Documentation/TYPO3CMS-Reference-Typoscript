@@ -25,7 +25,11 @@ wrap
    Comment
          <...> \| </...>
 
-         Used to wrap something. The parts on the left and right of the vertical
-         line are placed on the left and right side of the value.
+         Used to wrap something. The vertical bar ("|") is the place, where
+         your content will be inserted; the parts on the left and right of the
+         vertical line are placed on the left and right side of the content.
+
+         Spaces between the wrap-parts and the divider ("|") are trimmed off
+         from each part of the wrap.
 
 

@@ -23,12 +23,11 @@ function name
 
          Method in class::
 
-            user_stringReversing
-            ->reverseString
+            user_stringReversing->reverseString
 
    Comment
          Indicates a function or method in a class to call. See more
-         information at the USER cObject.
+         information at the :ref:`USER cObject <cobj-user>`.
 
          Depending on implementation the class or function name (but not the
          method name) should probably be prefixed with "user\_". The prefix
