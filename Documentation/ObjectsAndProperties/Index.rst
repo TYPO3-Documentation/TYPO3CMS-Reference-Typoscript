@@ -117,8 +117,7 @@ The following four rules are used by optionSplit:
 
 Example::
 
-   first1 \|\| first2 \|\*\| middle1 \|\| middle2 \|\| middle3 \|\*\|
-last1 \|\| last2
+   first1 || first2 |*| middle1 || middle2 || middle3 |*| last1 || last2
 
 
 Examples:

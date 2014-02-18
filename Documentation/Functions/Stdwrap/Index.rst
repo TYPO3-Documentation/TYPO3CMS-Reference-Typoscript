@@ -957,7 +957,7 @@ case
          case
 
    Data type
-         case
+         :ref:`data-type-case`
 
    Description
          Converts case
