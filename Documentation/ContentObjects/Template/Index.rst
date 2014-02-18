@@ -27,8 +27,9 @@ content by TYPO3.
          :ref:`cObject <data-type-cobject>`
 
    Description
-         This must be loaded with the template-code. If not, the object returns
-         nothing.
+         This must be loaded with the template-code. Usually this is done
+         with a :ref:`FILE cObject <cobj-file>`. If it is not loaded with
+         code, the object returns nothing.
 
          **Example:** ::
 
@@ -105,8 +106,8 @@ content by TYPO3.
          If you specify properties (uppercase) these will match HTML tags and
          specify alternative paths for them. See example below.
 
-         If the property is named "style" it will set alternative path for the
-         "url()" wrapper that may be in <style> sections.
+         If the property is named "style", it will set an alternative path for
+         the "url()" wrapper that may be in <style> sections.
 
          **Example:** ::
 
@@ -118,9 +119,9 @@ content by TYPO3.
               relPathPrefix.IMG = fileadmin/img/
             }
 
-         In this example all relative paths found are prefixed "fileadmin/"
+         In this example all relative paths found are prefixed with "fileadmin/"
          unless it was the src attribute of an img tag in which case the path
-         prefixed is "fileadmin/img/"
+         is prefixed with "fileadmin/img/"
 
 
 .. container:: table-row
@@ -304,5 +305,7 @@ Example:
      workOnSubpart = DOCUMENT
    }
 
-In this example a template named test.tmpl is loaded and used.
+In this example a template named test.tmpl is loaded and used. The
+subpart "HELLO" and the mark "Testmark" in the template file will be
+replaced with the output of the according cObjects.
 

@@ -267,7 +267,7 @@ Example:
      wrapNonWrappedLines = <p style="margin: 0 0 0;">|</p>
 
      # Forcing these attributes onto the encapsulation-tags if any
-     addAttributes.p {
+     addAttributes.P {
        style=margin: 0 0 0;
      }
      innerStdWrap_all.ifEmpty = &nbsp;

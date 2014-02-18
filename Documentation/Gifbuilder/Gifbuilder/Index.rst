@@ -31,9 +31,9 @@ Note on (+calc)
 
 Whenever the "+calc"-function is added to a value in the data type of
 the properties underneath, you can use the dimensions of TEXT and
-IMAGE objects from the GifBuilder Object array. This is done by
+IMAGE objects from the Gifbuilder Object array. This is done by
 inserting a tag like this: "[10.w]" or "[10.h]", where "10" is the
-GifBuilder Object number in the array and "w"/"h" signifies either
+Gifbuilder Object number in the array and "w"/"h" signifies either
 width or height of the object.
 
 The special property "lineHeight" (e.g. "[10.lineHeight]") uses the

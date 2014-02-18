@@ -16,6 +16,10 @@ The content object "TEXT" can be used to output static text or HTML.
 stdWrap properties are available under the property "value" and on the
 very rootlevel of the object.
 
+**Note:** Gifbuilder also has a :ref:`TEXT object <gifbuilder-text>` -
+do not mix that one up with the cObject described here; both are
+different objects.
+
 
 .. ### BEGIN~OF~TABLE ###
 

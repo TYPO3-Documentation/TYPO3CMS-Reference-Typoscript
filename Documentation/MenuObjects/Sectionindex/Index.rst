@@ -8,10 +8,10 @@
 
 .. _section-index:
 
-[menuObj].sectionIndex
-^^^^^^^^^^^^^^^^^^^^^^
+[menu object].sectionIndex
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-This is a property that all menuObj's share. If it is set, then the
+This is a property that all menu objects share. If it is set, then the
 menu will not consist of links to pages on the "next level" but rather
 of links to the parent page to the menu, but in addition "#"-links to
 the cObjects rendered on the page. In other words, the menu items will

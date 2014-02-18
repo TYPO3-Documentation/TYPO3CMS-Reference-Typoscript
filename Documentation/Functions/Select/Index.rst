@@ -70,7 +70,7 @@ Always secure input from outside, for example with intval.
          Since TYPO3 4.6: integer /:ref:`stdWrap <stdwrap>`
 
    Description
-         Recursive levels for the pidInList
+         Recursive levels for the pidInList.
 
    Default
          0
@@ -247,6 +247,8 @@ Always secure input from outside, for example with intval.
          properly escaped and quoted to prevent SQL injection problems. This
          provides a way to safely use external data (e.g. database fields,
          GET/POST parameters) in a query.
+
+         **Available sub-properties:**
 
          **<markername>.value:** (value)
 

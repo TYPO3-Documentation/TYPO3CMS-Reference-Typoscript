@@ -118,8 +118,8 @@ tags, the "makeLinks"-things and so on...
          boolean
 
    Description
-         You can define constants in the top-level object "constants" in the
-         *Setup* field of your TypoScript template.
+         You can define constants in the :ref:`top-level object "constants"
+         <constants>` in the *Setup* field of your TypoScript template.
 
          If this property is set, you can use markers (the constant name
          wrapped in "###") in your text. TYPO3 then substitutes the markers
@@ -200,7 +200,7 @@ tags, the "makeLinks"-things and so on...
          .plainTextStdWrap works an ALL non-tag pieces in the text.
          .nonTypoTagStdWrap is post processing of all text (including tags)
          between special TypoTags (unless .breakoutTypoTagContent is not set
-         for the TypoTag)
+         for the TypoTag).
 
 
 .. container:: table-row
@@ -215,7 +215,7 @@ tags, the "makeLinks"-things and so on...
          Like .userFunc. Differences is (like nonTypoTagStdWrap) that this is
          post processing of all content pieces around TypoTags while .userFunc
          processes all non-tag content. (Notice: .breakoutTypoTagContent must
-         be set for the TypoTag if it's excluded from nonTypoTagContent)
+         be set for the TypoTag if it's excluded from nonTypoTagContent).
 
 
 .. container:: table-row
@@ -230,7 +230,7 @@ tags, the "makeLinks"-things and so on...
          Marks up any words from the GET-method send array sword\_list[] in the
          text. The word MUST be at least two characters long!
 
-         **Note:** works only with $GLOBALS['TSFE']->no\_cache==1
+         **Note:** works only with $GLOBALS['TSFE']->no\_cache = 1.
 
    Default
          <font color="red">\|</font>

@@ -11,7 +11,18 @@
 HMENU
 ^^^^^
 
-Generates hierarchical menus.
+This cObject generates hierarchical menus. It is the one usually being
+used to create the navigation menu of websites.
+
+The cObject HMENU allows you to define the global settings of the menu
+as a whole. For the rendering of the single menu levels, different
+:ref:`menu objects <menu-objects>` can be used.
+
+Apart from just creating a hierarchical menu of the pages as they are
+structured in the page tree, HMENU also allows you to use the
+:ref:`.special property <hmenu-special-property>` to create special
+menus. These special menus take characteristics of special menu types
+into account.
 
 
 .. ### BEGIN~OF~TABLE ###
@@ -24,21 +35,39 @@ Generates hierarchical menus.
          (1 / 2 / 3 /...)
 
    Data type
-         :ref:`menuObj <data-type-menuobj>`
+         :ref:`menu object <data-type-menuobj>`
 
    Description
-         **Required!**
+         For every menu level, that should be rendered, an according entry must
+         exist. It defines the menu object that should render the menu items on
+         the according level. 1 is the first level, 2 is the second level, 3 is
+         the third level and so on.
 
-         Defines which menuObj that should render the menu items on the various
-         levels.
+         **The property "1" is required!**
 
-         1 is the first level, 2 is the second level, 3 is the third level, 4
-         is ....
+         The entry 1 for the first level always must exist. All other levels only
+         will be generated when they are configured.
 
          **Example:** ::
 
             temp.sidemenu = HMENU
             temp.sidemenu.1 = GMENU
+            temp.sidemenu.1 {
+              # Configuration of that GMENU here...
+            }
+            temp.sidemenu.2 = TMENU
+            temp.sidemenu.2 {
+              # Configuration of that TMENU here...
+            }
+            temp.sidemenu.3 = TMENU
+            temp.sidemenu.3 {
+              # Configuration of that TMENU here...
+            }
+
+         This creates a menu with up to three levels: The first level being a GMENU,
+         the second and third level being TMENUs.
+
+         TYPO3 offers :ref:`a variety of menu objects <menu-objects>`.
 
    Default
          (no menu)
@@ -97,11 +126,13 @@ Generates hierarchical menus.
          special
 
    Data type
-         *"directory" / "list" / "updated" / "browse" / "rootline" / "keywords"
-         / "language"*
+         *"directory" / "list" / "updated" / "rootline" / "browse" / "keywords"
+         / "language" / "userfunction"*
 
    Description
-         *See section "The .special property" and the according tables below.*
+         Lets you define special types of menus.
+
+         See the section about the :ref:`.special property <hmenu-special-property>`!
 
 
 .. container:: table-row
@@ -115,7 +146,9 @@ Generates hierarchical menus.
          *list of page-uid's* /:ref:`stdWrap <stdwrap>`
 
    Description
-         See above
+         List of page uid's to use for the special menu. What they are used
+         for depends on the menu type as defined by ".special"; see the
+         section about the :ref:`.special property <hmenu-special-property>`!
 
 
 .. container:: table-row
@@ -391,7 +424,7 @@ links to pages like "next/previous", "last modified", "pages in a
 certain page" and so on.
 
 **Note:** .entryLevel generally is not supported together with the
-.special property! The only exception is special.keywords.
+.special property! The only exception is special = keywords.
 
 Also be aware that this property selects pages for the first level in
 the menu. Submenus by menuObjects 2+ will be created as usual.
@@ -399,8 +432,8 @@ the menu. Submenus by menuObjects 2+ will be created as usual.
 
 .. _hmenu-special-directory:
 
-special.directory
-~~~~~~~~~~~~~~~~~
+special = directory
+~~~~~~~~~~~~~~~~~~~
 
 A HMENU of type special = directory lets you create a menu listing the
 subpages of one or more parent pages. The parent pages are defined in
@@ -433,13 +466,13 @@ Mount pages are supported.
 
 .. ###### END~OF~TABLE ######
 
-[tsref:(cObject).HMENU.special.directory]
+[tsref:(cObject).HMENU.special = directory]
 
 
 .. _hmenu-special-list:
 
-special.list
-~~~~~~~~~~~~
+special = list
+~~~~~~~~~~~~~~
 
 A HMENU of type special = list lets you create a menu that lists the
 pages you define in the property ".value".
@@ -475,13 +508,13 @@ Mount pages are supported.
 
 .. ###### END~OF~TABLE ######
 
-[tsref:(cObject).HMENU.special.list]
+[tsref:(cObject).HMENU.special = list]
 
 
 .. _hmenu-special-updated:
 
-special.updated
-~~~~~~~~~~~~~~~
+special = updated
+~~~~~~~~~~~~~~~~~
 
 An HMENU with the property special = updated will create a menu of the
 most recently updated pages.
@@ -655,7 +688,7 @@ Mount pages are supported.
 
 .. ###### END~OF~TABLE ######
 
-[tsref:(cObject).HMENU.special.updated]
+[tsref:(cObject).HMENU.special = updated]
 
 
 .. _hmenu-special-updated-examples:
@@ -683,8 +716,8 @@ within the last three days (3600\*24\*3)::
 
 .. _hmenu-special-rootline:
 
-special.rootline
-~~~~~~~~~~~~~~~~
+special = rootline
+~~~~~~~~~~~~~~~~~~
 
 The path of pages from the current page to the root page of the page
 tree is called "rootline".
@@ -776,7 +809,7 @@ Mount pages are supported.
 
 .. ###### END~OF~TABLE ######
 
-[tsref:(cObject).HMENU.special.rootline]
+[tsref:(cObject).HMENU.special = rootline]
 
 
 .. _hmenu-special-rootline-examples:
@@ -816,10 +849,10 @@ have the image appended. ::
 
 .. _hmenu-special-browse:
 
-special.browse
-~~~~~~~~~~~~~~
+special = browse
+~~~~~~~~~~~~~~~~
 
-**Warning:** Mount pages are not supported!
+**Warning:** Mount pages are *not* supported!
 
 This menu contains pages which give your user the possibility to
 browse to the previous page, to the next page, to a page with the
@@ -990,13 +1023,13 @@ list from the property ".items".
 
 .. ###### END~OF~TABLE ######
 
-[tsref:(cObject).HMENU.special.browse]
+[tsref:(cObject).HMENU.special = browse]
 
 
 .. _hmenu-special-keywords:
 
-special.keywords
-~~~~~~~~~~~~~~~~
+special = keywords
+~~~~~~~~~~~~~~~~~~
 
 Makes a menu of pages, which contain one or more keywords also found
 on the current page.
@@ -1048,7 +1081,7 @@ Mount pages are supported.
          string
 
    Description
-         Which field in the pages-table to use for sorting.
+         Which field in the pages table to use for sorting.
 
          Possible values are:
 
@@ -1096,7 +1129,7 @@ Mount pages are supported.
          integer
 
    Description
-         (same as in section "special.updated")
+         (same as in section "special = updated")
 
    Default
          20
@@ -1113,7 +1146,7 @@ Mount pages are supported.
          integer
 
    Description
-         (same as in section "special.updated")
+         (same as in section "special = updated")
 
    Default
          10
@@ -1130,7 +1163,7 @@ Mount pages are supported.
          boolean
 
    Description
-         (same as in section "special.updated")
+         (same as in section "special = updated")
 
 
 .. container:: table-row
@@ -1144,7 +1177,7 @@ Mount pages are supported.
          boolean
 
    Description
-         (same as in section "special.updated")
+         (same as in section "special = updated")
 
 
 .. container:: table-row
@@ -1174,9 +1207,9 @@ Mount pages are supported.
          string
 
    Description
-         Defines the field in the pages-table in which to search for the
+         Defines the field in the pages table in which to search for the
          keywords. Default is the field name "keyword". No check is done to see
-         if the field you enter here exists, so enter an existing field, OK?!
+         if the field you enter here exists, so make sure to enter an existing field!
 
    Default
          keywords
@@ -1204,13 +1237,13 @@ Mount pages are supported.
 
 .. ###### END~OF~TABLE ######
 
-[tsref:(cObject).HMENU.special.keywords]
+[tsref:(cObject).HMENU.special = keywords]
 
 
 .. _hmenu-special-language:
 
-special.language
-~~~~~~~~~~~~~~~~
+special = language
+~~~~~~~~~~~~~~~~~~
 
 Creates a language selector menu. Typically this is made as a menu
 with flags for each language a page is translated to and when the user
@@ -1264,13 +1297,13 @@ error if tried accessed (depending on site configuration).
          boolean
 
    Description
-         If set to 1 the button for a language will ve rendered as a non-
+         If set to 1, the button for a language will be rendered as a non-
          disabled button even if no translation is found for the language.
 
 
 .. ###### END~OF~TABLE ######
 
-[tsref:(cObject).HMENU.special.language]
+[tsref:(cObject).HMENU.special = language]
 
 
 .. _hmenu-special-language-examples:
@@ -1309,14 +1342,14 @@ Creates a language menu with flags (notice that some lines break):
 
 .. _hmenu-special-userdefined:
 
-special.userdefined
-~~~~~~~~~~~~~~~~~~~
+special = userdefined
+~~~~~~~~~~~~~~~~~~~~~
 
 Lets you write your own little PHP script that generates the array of
 menu items.
 
 **Note:** The special type "userdefined" has been removed in TYPO3
-4.6. Use the special type "userfunction" instead.
+4.6. Use the special type "userfunction" instead!
 
 .. ### BEGIN~OF~TABLE ###
 
@@ -1351,7 +1384,7 @@ menu items.
 
 .. ###### END~OF~TABLE ######
 
-[tsref:(cObject).HMENU.special.userdefined]
+[tsref:(cObject).HMENU.special = userdefined]
 
 
 .. _hmenu-special-userdefined-examples:
@@ -1413,8 +1446,8 @@ will override the natural state-evaluation.
 
 .. _hmenu-special-userfunction:
 
-special.userfunction
-~~~~~~~~~~~~~~~~~~~~
+special = userfunction
+~~~~~~~~~~~~~~~~~~~~~~
 
 Calls a user function/method in class which should (similar to how
 "userdefined" worked above) return an array with page records for the
@@ -1438,7 +1471,7 @@ menu.
 
 .. ###### END~OF~TABLE ######
 
-[tsref:(cObject).HMENU.special.userfunction]
+[tsref:(cObject).HMENU.special = userfunction]
 
 
 .. _hmenu-special-userfunction-examples:

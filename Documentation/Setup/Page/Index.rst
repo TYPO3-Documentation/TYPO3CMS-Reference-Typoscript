@@ -62,6 +62,9 @@ Most of this code is executed in the PHP script
    Data type
          cObject
 
+   Description
+         These properties can be used to define any number of objects,
+         just like you can do with a :ref:`COA content object <cobj-coa>`.
 
 .. container:: table-row
 
@@ -830,10 +833,10 @@ Most of this code is executed in the PHP script
          boolean
 
    Description
-         Renders formfields like textarea, input and select-boxes small with
+         Renders form fields like textarea, input and select-boxes small with
          "verdana size 1" font.
 
-         Uses in-document stylesheet.
+         Uses inline stylesheet.
 
          **Tip:**
 

@@ -14,7 +14,6 @@ numRows
 This object allows you to specify a SELECT query, which will be
 executed in the database. The object then returns the number of
 rows, which were returned by the query.
-.
 
 
 .. ### BEGIN~OF~TABLE ###
@@ -37,7 +36,7 @@ rows, which were returned by the query.
          select
 
    Data type
-         ->select
+         :ref:`->select <select>`
 
    Description
          Select query for the operation.

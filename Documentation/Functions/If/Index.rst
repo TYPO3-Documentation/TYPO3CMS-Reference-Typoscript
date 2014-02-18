@@ -151,6 +151,12 @@ Also check the explanations and the examples further below!
 
          **Note:** The list in ".value" may not have spaces between elements!
 
+         **Example:** ::
+
+            if.isInList.field = uid
+            if.value = 1,2,34,50,87
+
+         This returns true, if the uid is part of the list in .value.
 
 .. container:: table-row
 
@@ -227,19 +233,18 @@ More complex is this::
 
 There are two conditions - isGreaterThan and isTrue. If they are both
 true, the total is true (both are connected with an AND). BUT(!) then
-the result if the function in total would be false because the
+the result of the function in total would be false because the
 ".negate"-flag inverts the result!
 
 
 .. _if-examples:
 
-Example:
-~~~~~~~~
+Examples:
+~~~~~~~~~
 
 This is a GIFBUILDER object that will write "NEW" on a menu-item if
 the field "newUntil" has a date less than the current date! ::
 
-   ...
      30 = TEXT
      30.text = NEW!
      30.offset = 10,10
@@ -248,6 +253,15 @@ the field "newUntil" has a date less than the current date! ::
        isLessThan.field = newUntil
        negate = 1
      }
-   ...
 
+
+In the next example the querystring parameter is used as a condition: A
+typolink or the link of a menu item links back to the default language
+(&L=0), if the currently active language ID is greater than 2. This is
+useful for example if only languages 0 to 2 are available in the target
+page. ::
+
+     additionalParams = &L=0
+     additionalParams.if.value = 2
+     additionalParams.if.isGreaterThan.data = GP:L
 

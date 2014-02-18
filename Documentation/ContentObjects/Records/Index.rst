@@ -76,11 +76,13 @@ with the "dontCheckPid"-option.
          :ref:`cObject <data-type-cobject>`
 
    Description
-         Config array which renders records from table *table name*.
+         Configuration array, which defines the rendering for records from
+         table *table name*.
 
    Default
          If this is *not* defined, the rendering of the records is done with
-         the top-level object [table name] - just like the cObject :ref:`CONTENT <cobj-content>`!
+         the top-level object *[table name]* - just like when ".renderObj" is
+         not set for the cObject :ref:`CONTENT <cobj-content>`!
 
 
 .. container:: table-row
@@ -139,4 +141,18 @@ Example:
      20.source.field = records
      20.tables = tt_address
      20.conf.tt_address < tt_address.default
+
+
+::
+
+     20 = RECORDS
+     20 {
+       source = 10,12
+       dontCheckPid = 1
+       tables = tt_content
+     }
+
+This example loads the content elements with the UIDs 10 and 12 no
+matter where these elements are located and whether these pages are
+accessible for the current user.
 
