@@ -798,7 +798,7 @@ value is "imported" from the field called "header" from the $cObj
          case
 
    Data type
-         case
+         :ref:`data-type-case`
 
    Description
          Converts case
