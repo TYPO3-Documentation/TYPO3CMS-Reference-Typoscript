@@ -167,7 +167,7 @@ graphical navigation, where each link is a separate gif-file.
 
    Description
          This adds the total height of the previously generated menu items to
-         the offset of the GifBuilder Objects mentioned in this list.
+         the offset of the Gifbuilder Objects mentioned in this list.
 
          **Example:**
 
@@ -189,7 +189,7 @@ graphical navigation, where each link is a separate gif-file.
 
    Description
          This adds the total width of the previously generated menu items to
-         the offset of the GifBuilder Objects mentioned in this list.
+         the offset of the Gifbuilder Objects mentioned in this list.
 
 
 .. container:: table-row

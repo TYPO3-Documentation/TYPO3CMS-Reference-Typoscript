@@ -12,10 +12,17 @@ LOAD\_REGISTER
 ^^^^^^^^^^^^^^
 
 This provides a way to load the array $GLOBALS['TSFE']->register[]
-with values. It does not return anything! The usefulness of this is,
-that some predefined configurations (like the page-content) can be
-used in various places but use different values as the values of the
-register can change during the page-rendering.
+with values. It does not return anything! 
+
+The register is working like a stack: With each call new content can be
+put on top of the stack. :ref:`RESTORE_REGISTER <cobj-restore-register>`
+can be used to remove the element at the topmost position again.
+
+Registers are used at many different places, e.g. css_styled_content
+uses registers to enumerate the classes of the headlines. The
+usefulness of registers is that some predefined configurations (like
+the page-content) can be used in various places but use different
+values as the values of the register can change during page rendering.
 
 .. ### BEGIN~OF~TABLE ###
 
@@ -46,4 +53,43 @@ register can change during the page-rendering.
 .. ###### END~OF~TABLE ######
 
 [tsref:(cObject).LOAD\_REGISTER]
+
+
+.. _cobj-load-register-examples:
+
+Example:
+""""""""
+
+::
+
+     1 = LOAD_REGISTER
+     1.param.cObject = TEXT
+     1.param.cObject.stdWrap.data = GP:the_id
+     # To avoid SQL injections we use intval - so the parameter
+     # will always be an integer.
+     1.param.cObject.stdWrap.intval = 1
+
+     10 = CONTENT
+     10.table = tx_my_table
+     10.select {
+       pidInList = this
+       orderBy = sorting
+       # Now we use the registered parameter
+       andWhere = uid = {REGISTER:param}
+       andWhere.insertData = 1
+     }
+     10.renderObj = COA
+     10.renderObj {
+       10 = TEXT
+       10.stdWrap.field = the_id
+     }
+
+In this example we first load a special value, which is given as a
+GET/POST parameter, into the register. Then we use a
+:ref:`CONTENT object <cobj-content>` to render content based on this
+value. This CONTENT object loads data from a table and looks up a
+special entry using the value from the register.
+
+For an example in combination with :ref:`RESTORE_REGISTER <cobj-restore-register>`
+see the :ref:`example on the page RESTORE_REGISTER <cobj-restore-register-examples>`.
 

@@ -499,7 +499,7 @@ with the link-parameters (lowercased)!
 Using link handlers
 """""""""""""""""""
 
-A feature (added in TYPO3 4.1) allows you to register a link handler
+A feature allows you to register a link handler
 for a keyword you define. For example, you can link to a page with id
 34 with "<link 34>" in a typical bodytext field which converts <link>
 tags with "->typolink". But what if you have an extension,

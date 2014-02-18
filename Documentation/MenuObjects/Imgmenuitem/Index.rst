@@ -19,7 +19,7 @@ IMGMENUITEM
          1,2,3,4...
 
    Data type
-         ->GifBuilder Object
+         ->Gifbuilder Object
 
    Description
          **Note:**

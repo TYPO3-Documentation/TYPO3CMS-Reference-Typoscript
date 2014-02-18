@@ -11,13 +11,13 @@
 makelinks
 ^^^^^^^^^
 
-makelinks substitutes all appearances of
+makelinks substitutes all appearances of web addresses or mail links
+with a real link-tag. Web addresses and mail links must be contained in
+the text in the following form::
 
-http://www.webaddress.rld
+   http://www.example.com
 
-mailto:name@email.rld
-
-... with a real link-tag.
+   mailto:name@example.com
 
 
 .. ### BEGIN~OF~TABLE ###
@@ -76,13 +76,15 @@ mailto:name@email.rld
    Description
          As default the link-text will be the full domain-name of the link.
 
-         **Examples** ::
+         **Example:**
 
-            http://www.webaddress.rld/test/doc.php?id=3
-            "":           www.webaddress.rld
-            "scheme":             http://www.webaddress.rld
-            "scheme,path":        http://www.webaddress.rld/test/doc.php
-            "scheme,path,query": http://www.webaddress.rld/test/doc.php?id=3
+         With the URL http://www.example.com/test/doc.php?id=3 in our text we will
+         get the following results::
+
+            http.keep = "":                   www.example.com
+            http.keep = "scheme":             http://www.example.com
+            http.keep = "scheme,path":        http://www.example.com/test/doc.php
+            http.keep = "scheme,path,query":  http://www.example.com/test/doc.php?id=3
 
 
 .. container:: table-row
@@ -98,7 +100,7 @@ mailto:name@email.rld
 
          **Example:** ::
 
-            class="board"
+            http.ATagParams = class="board"
 
 
 .. container:: table-row
@@ -142,7 +144,7 @@ mailto:name@email.rld
 
          **Example:** ::
 
-            class="board"
+            mailto.ATagParams = class="board"
 
 
 .. ###### END~OF~TABLE ######

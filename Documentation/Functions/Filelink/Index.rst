@@ -293,8 +293,8 @@ icon, size and file are rendered in the listed order.
          boolean
 
    Description
-         if set, any 2-digit prepended numbers ("eg \_23") in the filename is
-         removed.
+         If set, any 2-digit *appended*(!) numbers in the filename are removed.
+         E.g. "filename\_23.gif" then becomes "filename.gif".
 
 
 .. container:: table-row

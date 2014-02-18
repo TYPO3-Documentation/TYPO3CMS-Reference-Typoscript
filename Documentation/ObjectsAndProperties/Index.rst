@@ -25,7 +25,8 @@ Reference to objects
 
 Whenever you see *->[object name]* in the tables it means that the
 property is an object "*object name*" with properties from object
-*object name*. You don't need to define the object type.
+*object name*. You don't need to define the object type. You will
+often find the according documentation on its own page.
 
 
 .. _objects-calc:
@@ -60,8 +61,8 @@ value as parameters.
 Example:
 ~~~~~~~~
 
-pixels /stdWrap: Here the value should be set to pixels and parsed
-through stdWrap.
+If the property "pixels" has the data type "integer /stdWrap", the
+value should be set to an integer and can be parsed through stdWrap.
 
 In a real application we could do like this::
 
@@ -84,11 +85,25 @@ once. Here the value of properties would be parsed through this
 function and depending on your setup you could e.g. let the last menu-
 item appear with another color than the others.
 
+
+.. _objects-optionsplit-syntax:
+
+Syntax
+~~~~~~
+
 The syntax is like this:
 
-\|\*\| - splits the value in parts *first, middle, last.*
+\|\*\| splits the value in parts *first, middle* and *last*.
 
-\|\| - splits each of the *first, middle, last* in subparts
+\|\| splits each of the parts *first, middle* and *last* in subparts.
+
+
+.. _objects-optionsplit-rules:
+
+The four rules
+~~~~~~~~~~~~~~
+
+The following four rules are used by optionSplit:
 
 #. The priority is *last, first, middle*.
 
@@ -98,10 +113,11 @@ The syntax is like this:
 #. If the *first* - and *middle* value are empty, the first part of the
    last-value is repeated before the last value.
 
-#. The *middle* value is rotated.
+#. The *middle* value is repeated.
 
-ex: first1 \|\| first2 \|\*\| middle1 \|\| middle2 \|\| middle3 \|\*\|
-last1 \|\| last 2
+Example::
+
+   first1 || first2 |*| middle1 || middle2 || middle3 |*| last1 || last2
 
 
 Examples:
@@ -122,15 +138,14 @@ Now consider a menu with five items:
 
    Links
 
-... and a configuration like this (taken from the example-code on the
-first pages)::
+... and a configuration like this::
 
    temp.topmenu.1.NO {
      backColor = red
      ....
    }
 
-If you look in this reference (see later) at the linkWrap-property of
+If you look in this reference (see later) at the linkWrap property of
 the GMENU object, you'll discover that all properties of *.NO* are
 parsed through *optionSplit*. This means that before the individual
 menu items are generated, the properties are split by this function.
@@ -330,8 +345,8 @@ space must exist between the two \|\*\|\|\*\|!* ::
    Links (olive) last, subpart 2
 
 
-"4: The *middle* value is rotated"
-''''''''''''''''''''''''''''''''''
+"4: The *middle* value is repeated"
+'''''''''''''''''''''''''''''''''''
 
 
 Example:
@@ -360,4 +375,27 @@ Example:
    **Contact** (yellow) middle, subpart 1
 
    **Links** (green) middle, subpart 2
+
+
+.. _objects-optionsplit-condensed:
+
+Overview with abstract examples
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+The following table gives you a condensed overview of how the
+optionSplit rules work together:
+
+=========================  ======================  =======
+optionSplit                Resulting items         Rule
+=========================  ======================  =======
+a                          a a a a
+a || b || c                a b c c c ...
+a || b \|*| c              a b c c c ...
+a || b \|*| c \|*| d || e  a b c c ... c c d e     Rule 1
+a || b \|*| c \|*| d || e  a b d e                 Rule 1
+a || b \|*| c \|*| d || e  a d e                   Rule 1
+a || b \|*||*| c || d      a b ... b c d           Rule 2
+\|*|\|*| a || b            a a ... a b             Rule 3
+a \|*| b || c \|*|         a b c b c b c ... b c   Rule 4
+=========================  ======================  =======
 

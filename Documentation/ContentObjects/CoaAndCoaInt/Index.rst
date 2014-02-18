@@ -10,14 +10,14 @@
 .. _cobj-coa:
 .. _cobj-coa-int:
 
-COBJ\_ARRAY (COA, COA\_INT)
+COA, COA\_INT (COBJ\_ARRAY)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 This is a cObject, in which you can place several other cObjects using
 numbers to enumerate them.
 
-It has the alias COA standing for "content object array". You can also
-call it "COA" instead of COBJ\_ARRAY.
+COA stands for "content object array"; it has the alias COBJ\_ARRAY.
+You can also call it "COBJ\_ARRAY" instead of COA.
 
 You can also create this object as a COA\_INT in which case it works
 exactly like the :ref:`USER_INT <cobj-user-int>` object does: It's rendered non-cached! That
@@ -30,15 +30,6 @@ non-cached, but to render *every* cObject non-cached.
 .. container:: table-row
 
    Property
-         1,2,3,4...
-
-   Data type
-         :ref:`cObject <data-type-cobject>`
-
-
-.. container:: table-row
-
-   Property
          if
 
    Data type
@@ -46,6 +37,19 @@ non-cached, but to render *every* cObject non-cached.
 
    Description
          If "if" returns false, the COA is **not** rendered.
+
+
+.. container:: table-row
+
+   Property
+         1,2,3,4...
+
+   Data type
+         :ref:`cObject <data-type-cobject>`
+
+   Description
+         Numbered properties to define the different cObjects, which should be
+         rendered.
 
 
 .. container:: table-row
@@ -83,7 +87,7 @@ non-cached, but to render *every* cObject non-cached.
 
          This is possible to do, because any include-files will be known before
          the scripts are included. That is not the case with the regular
-         PHP\_SCRIPT cObject.
+         COA cObject.
 
 
 .. ###### END~OF~TABLE ######
@@ -96,13 +100,13 @@ non-cached, but to render *every* cObject non-cached.
 .. _cobj-coa-examples:
 .. _cobj-coa-int-examples:
 
-Example:
-""""""""
+Examples:
+"""""""""
 
 ::
 
-   temp.menutable = COBJ_ARRAY
-   temp.menutable {
+   lib.menutable = COA
+   lib.menutable {
      10 = TEXT
      10.value = <table border="0" style="border-spacing: 0px;">
 
@@ -127,3 +131,16 @@ Example:
      30.value = </table>
    }
 
+The previous example will print a table with a graphical menu in it.
+
+::
+
+   lib.currentDate = COA_INT
+   lib.currentDate {
+     10 = TEXT
+     10.stdWrap.data = date:U
+     10.stdWrap.strftime = %H:%M:%S
+   }
+
+This example will not be cached and so will display the current time
+on each page hit.

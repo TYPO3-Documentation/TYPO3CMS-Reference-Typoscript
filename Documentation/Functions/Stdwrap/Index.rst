@@ -220,21 +220,21 @@ value is "imported" from the field called "header" from the $cObj
          :ref:`data-type-dir` /:ref:`stdWrap <stdwrap>`
 
    Description
-         Reads a directory and returns a list of files.
+         Reads a directory and returns a list of file names.
 
          The value is exploded by "\|" into parameters:
 
          1: The path
 
-         2: comma-list of allowed extensions (no spaces between); if empty all
-         extensions goes.
+         2: comma-separated list of allowed extensions (no spaces between);
+         if empty, all extensions are allowed.
 
-         3: sorting: name, size, ext, date, mdate (modification date)
+         3: sorting: name, size, ext, date, mdate (modification date).
 
-         4: reverse: Set to "r" if you want a reversed sorting
+         4: reverse: Set to "r" if you want a reversed sorting.
 
          5: fullpath\_flag: If set, the filelist is returned with complete
-         paths, and not just the filename
+         paths, and not just the filename.
 
 
 .. container:: table-row
@@ -331,7 +331,7 @@ value is "imported" from the field called "header" from the $cObj
          string /:ref:`stdWrap <stdwrap>`
 
    Description
-         If the content is empty (trimmed) at this point, the content is loaded
+         If the trimmed content is empty at this point, the content is loaded
          with "ifEmpty". Zeros are treated as empty values!
 
 
@@ -442,9 +442,9 @@ value is "imported" from the field called "header" from the $cObj
 
    Description
          This flag requires the content to be set to some value after any
-         content-import and treatment that might have happened now (data,
-         field, current, listNum, trim). Zero is **not** regarded as empty!
-         Use "if" instead!
+         content-import and treatment that might have happened until now
+         (data, field, current, listNum, trim). Zero is **not** regarded as
+         empty! Use "if" instead!
 
          If the content is empty, "" is returned immediately.
 
@@ -474,7 +474,7 @@ value is "imported" from the field called "header" from the $cObj
          Field name
 
    Description
-         value in this field MUST be set
+         The value in this field **must** be set.
 
 
 .. container:: table-row
@@ -537,8 +537,8 @@ value is "imported" from the field called "header" from the $cObj
          boolean / :ref:`->HTMLparser <htmlparser>`
 
    Description
-         This object allows you to parse the HTML-content and make all kinds of
-         advanced filterings on the content.
+         This object allows you to parse the HTML-content and perform all kinds of
+         advanced filtering on the content.
 
          Value must be set and properties are those of :ref:`->HTMLparser <htmlparser>`.
 
@@ -594,7 +594,7 @@ value is "imported" from the field called "header" from the $cObj
          If .prioriCalc is set to "intval" an integer is returned.
 
          There is no error checking and division by zero or other invalid
-         values may generate strange results. Also you use a proper syntax
+         values may generate strange results. Also you should use a proper syntax
          because future modifications to the function used may allow for more
          operators and features.
 

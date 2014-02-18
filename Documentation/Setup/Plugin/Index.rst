@@ -67,6 +67,14 @@ prefixed with an underscore:
          This value is for all plugins read by the PageGenerator script when
          making the header of the document.
 
+         This is e.g. used by css_styled_content and indexed_search. Their
+         default styles can be removed with::
+
+            plugin.tx_cssstyledcontent._CSS_DEFAULT_STYLE >
+            plugin.tx_indexedsearch._CSS_DEFAULT_STYLE >
+
+         However, you will then have to define according styles yourself.
+
 
 
 .. _setup-plugin-css-page-style:
@@ -123,6 +131,15 @@ prefixed with an underscore:
    Description
          Can be used to override the default locallang labels for the plugin.
 
+         **Example:** ::
+
+            plugin.tx_myext_pi1._LOCAL_LANG.de.list_mode_1 = Der erste Modus
+
+         All variables, which are used inside an extension with
+         :code:`$this->pi_getLL('list_mode_1', 'Text, if no entry in locallang.xlf', true);`
+         can that way be overwritten with TypoScript. The locallang.xlf file in
+         the plugin folder in the file system can be used to get an overview of
+         the entries the extension uses.
 
 .. ###### END~OF~TABLE ######
 

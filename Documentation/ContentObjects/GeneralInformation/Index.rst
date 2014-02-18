@@ -23,7 +23,7 @@ class is named "ContentObjectRenderer" ("tslib\_cObj") and often this is also
 the variable-name of the objects ($cObj).
 
 The $cObj in PHP has an array, $this->data, which holds records of
-various kind. See data type "getText".
+various kind. See data type :ref:`"getText" <data-type-gettext>`.
 
 This record is normally "loaded" with the record from a table
 depending on the situation. Say if you are creating a menu it's often

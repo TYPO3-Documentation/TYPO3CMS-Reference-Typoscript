@@ -26,7 +26,9 @@ imgResource.
          imageExtension /:ref:`stdWrap <stdwrap>`
 
    Description
-         The file extension.
+         Allowed file extensions for images. "web" is the class of
+         web-enabled image file types (defined in
+         $TYPO3_CONF_VARS['GFX']['imagefile_ext'] in the Install Tool).
 
    Default
          web
@@ -57,7 +59,7 @@ imgResource.
          defines how much the cropping will be moved off the center to the
          border.
 
-         Notice that you can only use "m" *or* "c" at the same time!
+         Notice that you can only use either "m" *or* "c" at the same time!
 
          **Examples:**
 
@@ -73,7 +75,7 @@ imgResource.
             .height = 100c
 
          This crops 100x100px; from landscape-images a bit right of the center
-         and portrait-images a bit upper than centered::
+         and portrait-images a bit higher than centered::
 
             .width = 100c+30
             .height = 100c-25
@@ -104,7 +106,7 @@ imgResource.
    Description
          GraphicsMagick/ImageMagick command-line:
 
-         fx. "-rotate 90" or "-negate"
+         fx. "-rotate 90", "-negate" or "-quality 90"
 
 
 .. container:: table-row
@@ -164,8 +166,8 @@ imgResource.
          string
 
    Description
-         Enter an alternative path to use for temp images. Must be found in the
-         list in $TYPO3\_CONF\_VARS['FE']['allowedTempPaths'].
+         Enter an alternative path to use for temporary images. Must be found
+         in the list in $TYPO3\_CONF\_VARS['FE']['allowedTempPaths'].
 
 
 .. container:: table-row
@@ -177,7 +179,7 @@ imgResource.
          integer
 
    Description
-         Chooses which frame in an gif-animation or pdf-file.
+         Chooses the frame in a PDF or GIF file.
 
          "" = first frame (zero)
 

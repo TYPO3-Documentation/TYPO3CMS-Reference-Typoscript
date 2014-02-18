@@ -89,7 +89,8 @@ from the "default" property will be used.
    Description
          Array of cObjects. Use this to define cObjects for the different
          values of "key". If "key" has a certain value, the according
-         cObject will be rendered.
+         cObject will be rendered. The cObjects can have any name, but not
+         the names of the other properties of the cObject CASE.
 
 
 .. container:: table-row
@@ -102,7 +103,9 @@ from the "default" property will be used.
 
    Description
          Use this to define the rendering for *those* values of "key" that
-         do *not* match any of the values of the "array of cObjects".
+         do *not* match any of the values of the "array of cObjects". If no
+         default cObject is defined, an empty string will be returned for
+         the default case.
 
 
 .. container:: table-row
@@ -128,20 +131,22 @@ from the "default" property will be used.
 Example:
 """"""""
 
-This example chooses between two different renderings of some content
-depending on whether the field "layout" is "1" or not ("default"). The
-result is in either case wrapped with "\|<br>". If the field
-"header" turns out not to be set ("false") an empty string is returned
-anyway. ::
+If in this example the field "header" turns out not to be set ("false"), an
+empty string is returned. Otherwise TYPO3 chooses between two different
+renderings of some content depending on whether the field "layout" is "1"
+or not ("default"). The result is in either case wrapped with "\|<br>".  ::
 
    stuff = CASE
-   stuff.key.field = layout
    stuff.if.isTrue.field = header
+   # This value determines, which of the following cObjects will be rendered.
+   stuff.key.field = layout
 
+   # cObject for the case that field layout is "1".
    stuff.1 = TEXT
    stuff.1 {
      ....
    }
+   # cObject for all other cases.
    stuff.default = TEXT
    stuff.default {
      ....

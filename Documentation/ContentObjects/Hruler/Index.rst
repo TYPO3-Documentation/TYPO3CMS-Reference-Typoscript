@@ -79,7 +79,7 @@ divider.
          string /:ref:`stdWrap <stdwrap>`
 
    Description
-         Width of the ruler ("width" attribute in a table).
+         Width of the ruler ("width" attribute in the table).
 
    Default
          99%
