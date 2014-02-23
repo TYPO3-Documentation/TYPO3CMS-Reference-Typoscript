@@ -757,7 +757,7 @@ Various options for the user affecting the core at various points.
 
          **Example** ::
 
-         Searching for *my-* now additionally returns also pages with these string in the alias field.
+         Searching for ``my\-`` now additionally returns also pages with these string in the alias field.
 
          .. figure:: ../../Images/optionsPageTreeSearchInAlias.png
             :alt: Filtering the pagetree for my- now additionally returns pages with matched alias fields.
