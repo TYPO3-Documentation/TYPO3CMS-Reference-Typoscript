@@ -755,7 +755,7 @@ Various options for the user affecting the core at various points.
          If set, the search in the pagetree (filter tree) also filters on the alias field.
          Contrary to filtered page titles the search result of alias fields will **not** be highlighted.
 
-         **Example** ::
+         **Example**
 
          Searching for ``my\-`` now additionally returns also pages with these string in the alias field.
 
