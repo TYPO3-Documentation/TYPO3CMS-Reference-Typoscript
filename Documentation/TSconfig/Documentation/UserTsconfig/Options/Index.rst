@@ -746,6 +746,25 @@ Various options for the user affecting the core at various points.
 .. container:: table-row
 
    Property
+         pageTree.searchInAlias
+
+   Data type
+         boolean
+
+   Description
+         If set, the search in the pagetree (filter tree) also filters on the alias field.
+         Contrary to filtered page titles the search result of alias fields will **not** be highlighted.
+
+         **Example** ::
+
+         Searching for ``my-`` now additionally returns also pages with these string in the alias field.
+
+         .. figure:: ../../Images/optionsPageTreeSearchInAlias.png
+            :alt: Filtering the pagetree for my- now additionally returns pages with matched alias fields.
+
+.. container:: table-row
+
+   Property
          folderTree.altElementBrowserMountPoints
 
    Data type
