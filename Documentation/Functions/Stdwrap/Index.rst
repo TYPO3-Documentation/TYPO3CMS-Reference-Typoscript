@@ -1157,6 +1157,37 @@ htmlSpecialChars
          non-entity characters are affected.
 
 
+.. _stdwrap-escapejsvalue:
+
+escapeJsValue
+'''''''''''''
+
+.. container:: table-row
+
+   Property
+         escapeJsValue
+
+   Data type
+         boolean /:ref:`stdWrap <stdwrap>`
+
+   Description
+         Escapes content to be used safely inside strings in JavaScript.
+         Characters, which can cause problems inside JavaScript strings, are
+         replaced with their encoded equivalents.
+
+         Passes the content through the core function :ref:`t3cmsapi:TYPO3\\CMS\\Core\\Utility\\GeneralUtility::quoteJSvalue`
+         but removes the surrounding quotes.
+
+         **Example:** ::
+
+            10 = TEXT
+            10 {
+                data = GP:sWord
+                escapeJsValue = 1
+                wrap = setSearchWord('|');
+            }
+
+
 .. _stdwrap-doublebrtag:
 
 doubleBrTag
