@@ -23,7 +23,7 @@ Properties
 .. container:: ts-properties
 
    ========================= ================================ ====================== =======
-   Property                  Data Type                        :ref:`t3tsref:stdwrap` Default
+   Property                  Data Type                        :ref:`stdwrap`         Default
    ========================= ================================ ====================== =======
    `(array of key names)`_   string /:ref:`stdWrap <stdwrap>`
    ========================= ================================ ====================== =======

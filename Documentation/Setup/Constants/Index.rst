@@ -27,9 +27,9 @@ Properties
 .. container:: ts-properties
 
    ==================== =============================== ====================== =======
-   Property             Data Type                       :ref:`t3tsref:stdwrap` Default
+   Property             Data Type                       :ref:`stdwrap`         Default
    ==================== =============================== ====================== =======
-   `(array of keys)`_   :ref:`t3tsref:data-type-string`                               
+   `(array of keys)`_   :ref:`data-type-string`
    ==================== =============================== ====================== =======
 
 Property details

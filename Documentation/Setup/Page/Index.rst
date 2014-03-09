@@ -46,46 +46,46 @@ Properties
 .. container:: ts-properties
 
    ============================== ================================= ====================== ========================
-   Property                       Data Type                         :ref:`t3tsref:stdwrap` Default                 
+   Property                       Data Type                         :ref:`stdwrap`         Default
    ============================== ================================= ====================== ========================
-   `1,2,3,4...`_                  cObject                                                                          
-   `adminPanelStyles`_            :ref:`t3tsref:data-type-boolean`                                                 
-   `bgImg`_                       imgResource                                                                      
+   `1,2,3,4...`_                  cObject
+   `adminPanelStyles`_            :ref:`data-type-boolean`
+   `bgImg`_                       imgResource
    `bodyTag`_                     <tag>                                                    <body bgcolor="#FFFFFF">
-   `bodyTagAdd`_                  :ref:`t3tsref:data-type-string`                                                  
-   `bodyTagCObject`_              cObject                                                                          
-   `bodyTagMargins`_              :ref:`t3tsref:data-type-integer`                                                 
-   `config`_                      ->CONFIG                                                                         
-   `CSS\_inlineStyle`_            :ref:`t3tsref:data-type-string`                                                  
-   `cssInline`_                   ->CARRAY                                                                         
-   `extOnReady`_                  ->CARRAY                                                                         
-   `footerData`_                  ->CARRAY                                                                         
-   `frameSet`_                    ->FRAMESET                                                                       
-   `headerData`_                  ->CARRAY                                                                         
-   `headTag`_                     <tag>                                                    <head>                  
-   `hover`_                       HTML-color                                                                       
-   `hoverStyle`_                  :ref:`t3tsref:data-type-string`                                                  
-   `includeCSS.[array]`_          :ref:`t3tsref:data-type-resource`                                                
-   `includeJS.[array]`_           :ref:`t3tsref:data-type-resource`                                                
-   `includeJSFooter.[array]`_     :ref:`t3tsref:data-type-resource`                                                
-   `includeJSFooterlibs.[array]`_ :ref:`t3tsref:data-type-resource`                                                
-   `includeJSlibs.[array]`_       :ref:`t3tsref:data-type-resource`                                                
-   `includeLibs`_                 *(array of strings)*                                                             
-   `inlineJS`_                    ->CARRAY                                                                         
-   `inlineLanguageLabel`_         *(array of strings)*                                                             
-   `inlineSettings`_              *(array of strings)*                                                             
-   `insertClassesFromRTE`_        :ref:`t3tsref:data-type-boolean`                                                 
-   `javascriptLibs`_              *(array of strings)*                                                             
-   `jsFooterInline`_              ->CARRAY                                                                         
-   `jsInline`_                    ->CARRAY                                                                         
-   `meta`_                        ->META                                                                           
-   `noLinkUnderline`_             :ref:`t3tsref:data-type-boolean`                                                 
-   `shortcutIcon`_                :ref:`t3tsref:data-type-resource`                                                
-   `smallFormFields`_             :ref:`t3tsref:data-type-boolean`                                                 
-   `stdWrap`_                     ->stdWrap                                                                        
-   `stylesheet`_                  :ref:`t3tsref:data-type-resource`                                                
-   `typeNum`_                     :ref:`t3tsref:data-type-integer`                         0                       
-   `wrap`_                        wrap                                                                             
+   `bodyTagAdd`_                  :ref:`data-type-string`
+   `bodyTagCObject`_              cObject
+   `bodyTagMargins`_              :ref:`data-type-integer`
+   `config`_                      ->CONFIG
+   `CSS\_inlineStyle`_            :ref:`data-type-string`
+   `cssInline`_                   ->CARRAY
+   `extOnReady`_                  ->CARRAY
+   `footerData`_                  ->CARRAY
+   `frameSet`_                    ->FRAMESET
+   `headerData`_                  ->CARRAY
+   `headTag`_                     <tag>                                                    <head>
+   `hover`_                       HTML-color
+   `hoverStyle`_                  :ref:`data-type-string`
+   `includeCSS.[array]`_          :ref:`data-type-resource`
+   `includeJS.[array]`_           :ref:`data-type-resource`
+   `includeJSFooter.[array]`_     :ref:`data-type-resource`
+   `includeJSFooterlibs.[array]`_ :ref:`data-type-resource`
+   `includeJSlibs.[array]`_       :ref:`data-type-resource`
+   `includeLibs`_                 *(array of strings)*
+   `inlineJS`_                    ->CARRAY
+   `inlineLanguageLabel`_         *(array of strings)*
+   `inlineSettings`_              *(array of strings)*
+   `insertClassesFromRTE`_        :ref:`data-type-boolean`
+   `javascriptLibs`_              *(array of strings)*
+   `jsFooterInline`_              ->CARRAY
+   `jsInline`_                    ->CARRAY
+   `meta`_                        ->META
+   `noLinkUnderline`_             :ref:`data-type-boolean`
+   `shortcutIcon`_                :ref:`data-type-resource`
+   `smallFormFields`_             :ref:`data-type-boolean`
+   `stdWrap`_                     ->:ref:`stdWrap <stdwrap>`
+   `stylesheet`_                  :ref:`data-type-resource`
+   `typeNum`_                     :ref:`data-type-integer`                                 0
+   `wrap`_                        wrap
    ============================== ================================= ====================== ========================
 
 Property details

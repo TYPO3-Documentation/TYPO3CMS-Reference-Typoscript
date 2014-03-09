@@ -9,9 +9,6 @@ conf.py:
     t3cmsapi:
     - http://typo3.org/api/typo3cms/
     - null
-    t3tsref:
-    - http://docs.typo3.org/typo3cms/TyposcriptReference/
-    - null
     t3api:
     - http://docs.typo3.org/typo3cms/CoreApiReference/
     - null

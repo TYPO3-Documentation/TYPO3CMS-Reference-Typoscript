@@ -26,17 +26,17 @@ Properties
 .. container:: ts-properties
 
    ======================= ================================= ====================== ======================
-   Property                Data Type                         :ref:`t3tsref:stdwrap` Default               
+   Property                Data Type                         :ref:`stdwrap`         Default
    ======================= ================================= ====================== ======================
-   `allowEdit.[field]`_    :ref:`t3tsref:data-type-string`                                                
-   `allowNew.[field]`_     :ref:`t3tsref:data-type-string`                                                
-   `autoInsertPID`_        :ref:`t3tsref:data-type-boolean`                                               
-   `default.[field]`_      :ref:`t3tsref:data-type-string`                                                
-   `doublePostCheck`_      string (field name)                                                            
-   `overrideEdit.[field]`_ :ref:`t3tsref:data-type-string`                                                
-   `processScript`_        :ref:`t3tsref:data-type-resource`                                              
-   `separator`_            :ref:`t3tsref:data-type-string`                          chr(10) *(line break)*
-   `userIdColumn`_         string (field)                                                                 
+   `allowEdit.[field]`_    :ref:`data-type-string`
+   `allowNew.[field]`_     :ref:`data-type-string`
+   `autoInsertPID`_        :ref:`data-type-boolean`
+   `default.[field]`_      :ref:`data-type-string`
+   `doublePostCheck`_      string (field name)
+   `overrideEdit.[field]`_ :ref:`data-type-string`
+   `processScript`_        :ref:`data-type-resource`
+   `separator`_            :ref:`data-type-string`                                  chr(10) *(line break)*
+   `userIdColumn`_         string (field)
    ======================= ================================= ====================== ======================
 
 Property details

@@ -26,9 +26,9 @@ Properties
 .. container:: ts-properties
 
    =========================== =========== ====================== =======
-   Property                    Data Type   :ref:`t3tsref:stdwrap` Default
+   Property                    Data Type   :ref:`stdwrap`         Default
    =========================== =========== ====================== =======
-   `(array of table names)`_   ->FE\_TABLE                               
+   `(array of table names)`_   ->FE\_TABLE
    =========================== =========== ====================== =======
 
 Property details

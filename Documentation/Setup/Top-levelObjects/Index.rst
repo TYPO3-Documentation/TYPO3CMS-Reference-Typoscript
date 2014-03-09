@@ -23,18 +23,18 @@ Properties
 .. container:: ts-properties
 
    ======================== ================== ====================== =======
-   Property                 Data Type          :ref:`t3tsref:stdwrap` Default
+   Property                 Data Type          :ref:`stdwrap`         Default
    ======================== ================== ====================== =======
-   `((abc ...?))`_          ->PAGE                                           
-   `((bcd ...?))`_          *(whatever)*                                     
-   `config`_                ->CONFIG                                         
-   `constants`_             ->CONSTANTS                                      
-   `FEData`_                *->FE\_DATA*                                     
-   `includeLibs`_           *Array of strings*                               
-   `Other reserved TLO's:`_ *(whatever)*                                     
-   `resources`_             readonly                                         
-   `sitetitle`_             readonly                                         
-   `types`_                 readonly                                         
+   `((abc ...?))`_          ->PAGE
+   `((bcd ...?))`_          *(whatever)*
+   `config`_                ->CONFIG
+   `constants`_             ->CONSTANTS
+   `FEData`_                *->FE\_DATA*
+   `includeLibs`_           *Array of strings*
+   `Other reserved TLO's:`_ *(whatever)*
+   `resources`_             readonly
+   `sitetitle`_             readonly
+   `types`_                 readonly
    ======================== ================== ====================== =======
 
 Property details

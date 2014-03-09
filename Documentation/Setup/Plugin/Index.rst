@@ -35,14 +35,14 @@ Properties
 .. container:: ts-properties
 
    ======================================= =============================== ====================== =======
-   Property                                Data Type                       :ref:`t3tsref:stdwrap` Default
+   Property                                Data Type                       :ref:`stdwrap`         Default
    ======================================= =============================== ====================== =======
    `includeLibs`_                          (array of keys)
    `userFunc`_                             (array of keys)
-   `\_CSS\_DEFAULT\_STYLE`_                :ref:`t3tsref:data-type-string`
-   `\_CSS\_PAGE\_STYLE`_                   :ref:`t3tsref:data-type-string`
+   `\_CSS\_DEFAULT\_STYLE`_                :ref:`data-type-string`
+   `\_CSS\_PAGE\_STYLE`_                   :ref:`data-type-string`
    `\_DEFAULT\_PI\_VARS.[piVar-key]`_      Until TYPO3 6.1: string
-   `\_LOCAL\_LANG.[lang-key].[label-key]`_ :ref:`t3tsref:data-type-string`
+   `\_LOCAL\_LANG.[lang-key].[label-key]`_ :ref:`data-type-string`
    ======================================= =============================== ====================== =======
 
 Property details

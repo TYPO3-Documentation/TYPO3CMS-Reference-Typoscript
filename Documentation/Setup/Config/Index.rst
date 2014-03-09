@@ -27,142 +27,142 @@ Properties
 .. container:: ts-properties
 
    ===================================================== ================================== ====================== ======================================================================
-   Property                                              Data Type                          :ref:`t3tsref:stdwrap` Default
+   Property                                              Data Type                          :ref:`stdwrap`         Default
    ===================================================== ================================== ====================== ======================================================================
-   `absRefPrefix`_                                       :ref:`t3tsref:data-type-string`
+   `absRefPrefix`_                                       :ref:`data-type-string`
    `additionalHeaders`_                                  strings divided by "\|"
-   `admPanel`_                                           :ref:`t3tsref:data-type-boolean`
+   `admPanel`_                                           :ref:`data-type-boolean`
    `ATagParams`_                                         *<A>-params*
-   `baseURL`_                                            :ref:`t3tsref:data-type-string`
+   `baseURL`_                                            :ref:`data-type-string`
    `beLoginLinkIPList`_                                  [IP-number]
-   `beLoginLinkIPList\_login`_                           :ref:`t3tsref:data-type-html-code`
-   `beLoginLinkIPList\_logout`_                          :ref:`t3tsref:data-type-html-code`
+   `beLoginLinkIPList\_login`_                           :ref:`data-type-html-code`
+   `beLoginLinkIPList\_logout`_                          :ref:`data-type-html-code`
    `cache`_                                              array
-   `cache\_clearAtMidnight`_                             :ref:`t3tsref:data-type-boolean`                          false
-   `cache\_period`_                                      :ref:`t3tsref:data-type-integer`                          86400 *(= 24 hours)*
+   `cache\_clearAtMidnight`_                             :ref:`data-type-boolean`                                  false
+   `cache\_period`_                                      :ref:`data-type-integer`                                  86400 *(= 24 hours)*
    `compensateFieldWidth`_                               double
-   `compressCss`_                                        :ref:`t3tsref:data-type-boolean`
-   `compressJs`_                                         :ref:`t3tsref:data-type-boolean`
-   `concatenateCss`_                                     :ref:`t3tsref:data-type-boolean`
-   `concatenateJs`_                                      :ref:`t3tsref:data-type-boolean`
-   `concatenateJsAndCss`_                                :ref:`t3tsref:data-type-boolean`                          0
-   `content\_from\_pid\_allowOutsideDomain`_             :ref:`t3tsref:data-type-boolean`
-   `debug`_                                              :ref:`t3tsref:data-type-boolean`
+   `compressCss`_                                        :ref:`data-type-boolean`
+   `compressJs`_                                         :ref:`data-type-boolean`
+   `concatenateCss`_                                     :ref:`data-type-boolean`
+   `concatenateJs`_                                      :ref:`data-type-boolean`
+   `concatenateJsAndCss`_                                :ref:`data-type-boolean`                                  0
+   `content\_from\_pid\_allowOutsideDomain`_             :ref:`data-type-boolean`
+   `debug`_                                              :ref:`data-type-boolean`
    `defaultGetVars`_                                     array
-   `disableAllHeaderCode`_                               :ref:`t3tsref:data-type-boolean`                          false
-   `disableBodyTag`_                                     :ref:`t3tsref:data-type-boolean`                          0
-   `disableCharsetHeader`_                               :ref:`t3tsref:data-type-boolean`
-   `disableImgBorderAttr`_                               :ref:`t3tsref:data-type-boolean`
-   `disablePageExternalUrl`_                             :ref:`t3tsref:data-type-boolean`
-   `disablePrefixComment`_                               :ref:`t3tsref:data-type-boolean`
-   `disablePreviewNotification`_                         :ref:`t3tsref:data-type-boolean`                          0
-   `doctype`_                                            :ref:`t3tsref:data-type-string`
+   `disableAllHeaderCode`_                               :ref:`data-type-boolean`                                  false
+   `disableBodyTag`_                                     :ref:`data-type-boolean`                                  0
+   `disableCharsetHeader`_                               :ref:`data-type-boolean`
+   `disableImgBorderAttr`_                               :ref:`data-type-boolean`
+   `disablePageExternalUrl`_                             :ref:`data-type-boolean`
+   `disablePrefixComment`_                               :ref:`data-type-boolean`
+   `disablePreviewNotification`_                         :ref:`data-type-boolean`                                  0
+   `doctype`_                                            :ref:`data-type-string`
    `doctypeSwitch`_                                      boolean / string
-   `enableContentLengthHeader`_                          :ref:`t3tsref:data-type-boolean`                          1
-   `extTarget`_                                          :ref:`t3tsref:data-type-target`                           \_top
-   `fileTarget`_                                         :ref:`t3tsref:data-type-target`
-   `forceTypeValue`_                                     :ref:`t3tsref:data-type-integer`
-   `frameReloadIfNotInFrameset`_                         :ref:`t3tsref:data-type-boolean`
-   `ftu`_                                                :ref:`t3tsref:data-type-boolean`                          false
-   `headerComment`_                                      :ref:`t3tsref:data-type-string`
-   `htmlTag\_dir`_                                       :ref:`t3tsref:data-type-string`
-   `htmlTag\_langKey`_                                   :ref:`t3tsref:data-type-string`                           en
-   `htmlTag\_setParams`_                                 :ref:`t3tsref:data-type-string`
-   `htmlTag\_stdWrap`_                                   ->stdWrap
-   `includeLibrary`_                                     :ref:`t3tsref:data-type-resource`
-   `incT3Lib\_htmlmail`_                                 :ref:`t3tsref:data-type-boolean`
-   `index\_descrLgd`_                                    :ref:`t3tsref:data-type-integer`                          200
-   `index\_enable`_                                      :ref:`t3tsref:data-type-boolean`
-   `index\_externals`_                                   :ref:`t3tsref:data-type-boolean`
-   `index\_metatags`_                                    :ref:`t3tsref:data-type-boolean`                          true
-   `inlineStyle2TempFile`_                               :ref:`t3tsref:data-type-boolean`
-   `intTarget`_                                          :ref:`t3tsref:data-type-target`
-   `jumpurl\_enable`_                                    :ref:`t3tsref:data-type-boolean`                          0
-   `jumpurl\_mailto\_disable`_                           :ref:`t3tsref:data-type-boolean`                          0
-   `language`_                                           :ref:`t3tsref:data-type-string`
-   `language\_alt`_                                      :ref:`t3tsref:data-type-string`
-   `linkVars`_                                           :ref:`t3tsref:data-type-list`
-   `locale\_all`_                                        :ref:`t3tsref:data-type-string`
-   `lockFilePath`_                                       :ref:`t3tsref:data-type-string`                           fileadmin/
-   `mainScript`_                                         :ref:`t3tsref:data-type-string`                           index.php
-   `meaningfulTempFilePrefix`_                           :ref:`t3tsref:data-type-integer`
-   `message\_page\_is\_being\_generated`_                :ref:`t3tsref:data-type-string`
-   `message\_preview`_                                   :ref:`t3tsref:data-type-string`
-   `message\_preview\_workspace`_                        :ref:`t3tsref:data-type-string`
-   `metaCharset`_                                        :ref:`t3tsref:data-type-string`                           value of ".renderCharset"
-   `minifyCSS`_                                          :ref:`t3tsref:data-type-boolean`
-   `minifyJS`_                                           :ref:`t3tsref:data-type-boolean`
-   `moveJsFromHeaderToFooter`_                           :ref:`t3tsref:data-type-boolean`
-   `MP\_defaults`_                                       :ref:`t3tsref:data-type-string`
-   `MP\_disableTypolinkClosestMPvalue`_                  :ref:`t3tsref:data-type-boolean`
+   `enableContentLengthHeader`_                          :ref:`data-type-boolean`                                  1
+   `extTarget`_                                          :ref:`data-type-target`                                   \_top
+   `fileTarget`_                                         :ref:`data-type-target`
+   `forceTypeValue`_                                     :ref:`data-type-integer`
+   `frameReloadIfNotInFrameset`_                         :ref:`data-type-boolean`
+   `ftu`_                                                :ref:`data-type-boolean`                                  false
+   `headerComment`_                                      :ref:`data-type-string`
+   `htmlTag\_dir`_                                       :ref:`data-type-string`
+   `htmlTag\_langKey`_                                   :ref:`data-type-string`                                   en
+   `htmlTag\_setParams`_                                 :ref:`data-type-string`
+   `htmlTag\_stdWrap`_                                   ->:ref:`stdwrap`
+   `includeLibrary`_                                     :ref:`data-type-resource`
+   `incT3Lib\_htmlmail`_                                 :ref:`data-type-boolean`
+   `index\_descrLgd`_                                    :ref:`data-type-integer`                                  200
+   `index\_enable`_                                      :ref:`data-type-boolean`
+   `index\_externals`_                                   :ref:`data-type-boolean`
+   `index\_metatags`_                                    :ref:`data-type-boolean`                                  true
+   `inlineStyle2TempFile`_                               :ref:`data-type-boolean`
+   `intTarget`_                                          :ref:`data-type-target`
+   `jumpurl\_enable`_                                    :ref:`data-type-boolean`                                  0
+   `jumpurl\_mailto\_disable`_                           :ref:`data-type-boolean`                                  0
+   `language`_                                           :ref:`data-type-string`
+   `language\_alt`_                                      :ref:`data-type-string`
+   `linkVars`_                                           :ref:`data-type-list`
+   `locale\_all`_                                        :ref:`data-type-string`
+   `lockFilePath`_                                       :ref:`data-type-string`                                   fileadmin/
+   `mainScript`_                                         :ref:`data-type-string`                                   index.php
+   `meaningfulTempFilePrefix`_                           :ref:`data-type-integer`
+   `message\_page\_is\_being\_generated`_                :ref:`data-type-string`
+   `message\_preview`_                                   :ref:`data-type-string`
+   `message\_preview\_workspace`_                        :ref:`data-type-string`
+   `metaCharset`_                                        :ref:`data-type-string`                                   value of ".renderCharset"
+   `minifyCSS`_                                          :ref:`data-type-boolean`
+   `minifyJS`_                                           :ref:`data-type-boolean`
+   `moveJsFromHeaderToFooter`_                           :ref:`data-type-boolean`
+   `MP\_defaults`_                                       :ref:`data-type-string`
+   `MP\_disableTypolinkClosestMPvalue`_                  :ref:`data-type-boolean`
    `MP\_mapRootPoints`_                                  list of PIDs/string
    `namespaces`_                                         *(array of strings)*
-   `no\_cache`_                                          :ref:`t3tsref:data-type-boolean`                          -
-   `noPageTitle`_                                        :ref:`t3tsref:data-type-integer`                          0
-   `noScaleUp`_                                          :ref:`t3tsref:data-type-boolean`
-   `notification\_email\_charset`_                       :ref:`t3tsref:data-type-string`                           Until TYPO3 4.6: ISO-8859-1
-   `notification\_email\_encoding`_                      :ref:`t3tsref:data-type-string`
-   `notification\_email\_urlmode`_                       :ref:`t3tsref:data-type-string`
-   `pageGenScript`_                                      :ref:`t3tsref:data-type-resource`                         typo3/sysext/frontend/Classes/Page/PageGenerator.php
-   `pageRendererTemplateFile`_                           :ref:`t3tsref:data-type-string`
-   `pageTitleFirst`_                                     :ref:`t3tsref:data-type-boolean`                          0
+   `no\_cache`_                                          :ref:`data-type-boolean`                                  -
+   `noPageTitle`_                                        :ref:`data-type-integer`                                  0
+   `noScaleUp`_                                          :ref:`data-type-boolean`
+   `notification\_email\_charset`_                       :ref:`data-type-string`                                   Until TYPO3 4.6: ISO-8859-1
+   `notification\_email\_encoding`_                      :ref:`data-type-string`
+   `notification\_email\_urlmode`_                       :ref:`data-type-string`
+   `pageGenScript`_                                      :ref:`data-type-resource`                                 typo3/sysext/frontend/Classes/Page/PageGenerator.php
+   `pageRendererTemplateFile`_                           :ref:`data-type-string`
+   `pageTitleFirst`_                                     :ref:`data-type-boolean`                                  0
    `pageTitleSeparator`_                                 Until TYPO3 6.0: string                                   : *(colon with following space)*
-   `prefixLocalAnchors`_                                 :ref:`t3tsref:data-type-string`
-   `removeDefaultCss`_                                   :ref:`t3tsref:data-type-boolean`
+   `prefixLocalAnchors`_                                 :ref:`data-type-string`
+   `removeDefaultCss`_                                   :ref:`data-type-boolean`
    `removeDefaultJS`_                                    boolean / string
-   `removePageCss`_                                      :ref:`t3tsref:data-type-boolean`
-   `renderCharset`_                                      :ref:`t3tsref:data-type-string`                           Until TYPO3 4.6: The value of $TYPO3\_CONF\_VARS['BE']['forceCharset']
-   `sendCacheHeaders`_                                   :ref:`t3tsref:data-type-boolean`
-   `sendCacheHeaders\_onlyWhenLoginDeniedInBranch`_      :ref:`t3tsref:data-type-boolean`
-   `setJS\_mouseOver`_                                   :ref:`t3tsref:data-type-boolean`
-   `setJS\_openPic`_                                     :ref:`t3tsref:data-type-boolean`
+   `removePageCss`_                                      :ref:`data-type-boolean`
+   `renderCharset`_                                      :ref:`data-type-string`                                   Until TYPO3 4.6: The value of $TYPO3\_CONF\_VARS['BE']['forceCharset']
+   `sendCacheHeaders`_                                   :ref:`data-type-boolean`
+   `sendCacheHeaders\_onlyWhenLoginDeniedInBranch`_      :ref:`data-type-boolean`
+   `setJS\_mouseOver`_                                   :ref:`data-type-boolean`
+   `setJS\_openPic`_                                     :ref:`data-type-boolean`
    `simulateStaticDocuments`_                            boolean / string                                          The default is defined by the configuration option
-   `simulateStaticDocuments\_addTitle`_                  :ref:`t3tsref:data-type-integer`
-   `simulateStaticDocuments\_dontRedirectPathInfoError`_ :ref:`t3tsref:data-type-boolean`
-   `simulateStaticDocuments\_noTypeIfNoTitle`_           :ref:`t3tsref:data-type-boolean`
-   `simulateStaticDocuments\_pEnc`_                      :ref:`t3tsref:data-type-string`
-   `simulateStaticDocuments\_pEnc\_onlyP`_               :ref:`t3tsref:data-type-string`
-   `simulateStaticDocuments\_replacementChar`_           :ref:`t3tsref:data-type-string`
+   `simulateStaticDocuments\_addTitle`_                  :ref:`data-type-integer`
+   `simulateStaticDocuments\_dontRedirectPathInfoError`_ :ref:`data-type-boolean`
+   `simulateStaticDocuments\_noTypeIfNoTitle`_           :ref:`data-type-boolean`
+   `simulateStaticDocuments\_pEnc`_                      :ref:`data-type-string`
+   `simulateStaticDocuments\_pEnc\_onlyP`_               :ref:`data-type-string`
+   `simulateStaticDocuments\_replacementChar`_           :ref:`data-type-string`
    `spamProtectEmailAddresses`_                          "ascii" /
-   `spamProtectEmailAddresses\_atSubst`_                 :ref:`t3tsref:data-type-string`                           (at)
-   `spamProtectEmailAddresses\_lastDotSubst`_            :ref:`t3tsref:data-type-string`                           . *(just a simple dot)*
-   `stat`_                                               :ref:`t3tsref:data-type-boolean`                          true
-   `stat\_apache`_                                       :ref:`t3tsref:data-type-boolean`                          false
+   `spamProtectEmailAddresses\_atSubst`_                 :ref:`data-type-string`                                   (at)
+   `spamProtectEmailAddresses\_lastDotSubst`_            :ref:`data-type-string`                                   . *(just a simple dot)*
+   `stat`_                                               :ref:`data-type-boolean`                                  true
+   `stat\_apache`_                                       :ref:`data-type-boolean`                                  false
    `stat\_apache\_logfile`_                              filename
    `stat\_apache\_niceTitle`_                            boolean / string
-   `stat\_apache\_noHost`_                               :ref:`t3tsref:data-type-boolean`
-   `stat\_apache\_noRoot`_                               :ref:`t3tsref:data-type-boolean`
-   `stat\_apache\_notExtended`_                          :ref:`t3tsref:data-type-boolean`
-   `stat\_apache\_pagenames`_                            :ref:`t3tsref:data-type-string`
-   `stat\_excludeBEuserHits`_                            :ref:`t3tsref:data-type-boolean`                          false
+   `stat\_apache\_noHost`_                               :ref:`data-type-boolean`
+   `stat\_apache\_noRoot`_                               :ref:`data-type-boolean`
+   `stat\_apache\_notExtended`_                          :ref:`data-type-boolean`
+   `stat\_apache\_pagenames`_                            :ref:`data-type-string`
+   `stat\_excludeBEuserHits`_                            :ref:`data-type-boolean`                                  false
    `stat\_excludeIPList`_                                list of strings
-   `stat\_IP\_anonymize`_                                :ref:`t3tsref:data-type-boolean`                          0
-   `stat\_IP\_anonymize\_mask\_ipv4`_                    :ref:`t3tsref:data-type-integer`                          24
-   `stat\_IP\_anonymize\_mask\_ipv6`_                    :ref:`t3tsref:data-type-integer`                          64
-   `stat\_logUser`_                                      :ref:`t3tsref:data-type-boolean`                          1
-   `stat\_mysql`_                                        :ref:`t3tsref:data-type-boolean`                          false
+   `stat\_IP\_anonymize`_                                :ref:`data-type-boolean`                                  0
+   `stat\_IP\_anonymize\_mask\_ipv4`_                    :ref:`data-type-integer`                                  24
+   `stat\_IP\_anonymize\_mask\_ipv6`_                    :ref:`data-type-integer`                                  64
+   `stat\_logUser`_                                      :ref:`data-type-boolean`                                  1
+   `stat\_mysql`_                                        :ref:`data-type-boolean`                                  false
    `stat\_pageLen`_                                      integer (1-100)                                           30
    `stat\_titleLen`_                                     integer (1-100)                                           20
    `stat\_typeNumList`_                                  int/list                                                  0,1
-   `sword\_noMixedCase`_                                 :ref:`t3tsref:data-type-boolean`
-   `sword\_standAlone`_                                  :ref:`t3tsref:data-type-boolean`
-   `sys\_language\_mode`_                                :ref:`t3tsref:data-type-string`
+   `sword\_noMixedCase`_                                 :ref:`data-type-boolean`
+   `sword\_standAlone`_                                  :ref:`data-type-boolean`
+   `sys\_language\_mode`_                                :ref:`data-type-string`
    `sys\_language\_overlay`_                             boolean / keyword
-   `sys\_language\_softExclude`_                         :ref:`t3tsref:data-type-string`
-   `sys\_language\_softMergeIfNotBlank`_                 :ref:`t3tsref:data-type-string`
-   `sys\_language\_uid`_                                 :ref:`t3tsref:data-type-integer`
+   `sys\_language\_softExclude`_                         :ref:`data-type-string`
+   `sys\_language\_softMergeIfNotBlank`_                 :ref:`data-type-string`
+   `sys\_language\_uid`_                                 :ref:`data-type-integer`
    `titleTagFunction`_                                   function name
    `tx\_[extension key with no underscores]\_[\*]`_      -
-   `typolinkCheckRootline`_                              :ref:`t3tsref:data-type-boolean`
-   `typolinkEnableLinksAcrossDomains`_                   :ref:`t3tsref:data-type-boolean`                          0
+   `typolinkCheckRootline`_                              :ref:`data-type-boolean`
+   `typolinkEnableLinksAcrossDomains`_                   :ref:`data-type-boolean`                                  0
    `typolinkLinkAccessRestrictedPages`_                  integer (page id) / keyword "NONE"
-   `typolinkLinkAccessRestrictedPages\_addParams`_       :ref:`t3tsref:data-type-string`
-   `uniqueLinkVars`_                                     :ref:`t3tsref:data-type-boolean`                          1
-   `USERNAME\_substToken`_                               :ref:`t3tsref:data-type-string`                           <!--###USERNAME###-->
-   `USERUID\_substToken`_                                :ref:`t3tsref:data-type-string`
-   `xhtml\_cleaning`_                                    :ref:`t3tsref:data-type-string`
-   `xhtmlDoctype`_                                       :ref:`t3tsref:data-type-string`
-   `xmlprologue`_                                        :ref:`t3tsref:data-type-string`
+   `typolinkLinkAccessRestrictedPages\_addParams`_       :ref:`data-type-string`
+   `uniqueLinkVars`_                                     :ref:`data-type-boolean`                                  1
+   `USERNAME\_substToken`_                               :ref:`data-type-string`                                   <!--###USERNAME###-->
+   `USERUID\_substToken`_                                :ref:`data-type-string`
+   `xhtml\_cleaning`_                                    :ref:`data-type-string`
+   `xhtmlDoctype`_                                       :ref:`data-type-string`
+   `xmlprologue`_                                        :ref:`data-type-string`
    ===================================================== ================================== ====================== ======================================================================
 
 Property details

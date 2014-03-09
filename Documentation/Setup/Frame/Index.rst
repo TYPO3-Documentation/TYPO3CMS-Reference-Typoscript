@@ -23,11 +23,11 @@ Properties
 .. container:: ts-properties
 
    ========== ========================================== ====================== ==============================================
-   Property   Data Type                                  :ref:`t3tsref:stdwrap` Default
+   Property   Data Type                                  :ref:`stdwrap`         Default
    ========== ========================================== ====================== ==============================================
    `name`_    <frame>-data:name                                                 value of ".obj"
    `obj`_     *pointer to top-level object-name*
-   `options`_ :ref:`t3tsref:data-type-string`
+   `options`_ :ref:`data-type-string`
    `params`_  <frame>-params
    `src`_     <frame>-data:src /:ref:`stdWrap <stdwrap>`                        typolink to id=[currentId]&type=[obj->typeNum]
    ========== ========================================== ====================== ==============================================

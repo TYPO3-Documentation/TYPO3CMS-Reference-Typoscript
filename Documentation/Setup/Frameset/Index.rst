@@ -23,12 +23,12 @@ Properties
 .. container:: ts-properties
 
    ============= ==================== ====================== =======
-   Property      Data Type            :ref:`t3tsref:stdwrap` Default
+   Property      Data Type            :ref:`stdwrap`         Default
    ============= ==================== ====================== =======
-   `1,2,3,4...`_ frameObj                                           
-   `cols`_       <frameset>-data:cols                               
-   `params`_     <frameset>-params                                  
-   `rows`_       <frameset>-data:rows                               
+   `1,2,3,4...`_ frameObj
+   `cols`_       <frameset>-data:cols
+   `params`_     <frameset>-params
+   `rows`_       <frameset>-data:rows
    ============= ==================== ====================== =======
 
 Property details
