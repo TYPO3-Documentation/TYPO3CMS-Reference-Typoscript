@@ -285,8 +285,12 @@ CSS\_inlineStyle
          string
 
    Description
-         This value is just passed on as inline CSS (in-document CSS
-         encapsulated in <style>-tags).
+         This value is just passed on as CSS.
+
+         **Note:** To make TYPO3 actually output these styles as *inline* CSS
+         (in-document CSS encapsulated in <style> tags),
+         :ref:`config.inlineStyle2TempFile <setup-config-inlinestyle2tempfile>`
+         must be set to 0.
 
 
 
