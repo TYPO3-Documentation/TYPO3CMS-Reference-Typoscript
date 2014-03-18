@@ -43,6 +43,8 @@ Always secure input from outside, for example with intval.
    Description
          Comma-separated list of page ids.
 
+         **Special keyword:** "this" is replaced with the id of the current page.
+
 
 .. container:: table-row
 
@@ -54,6 +56,8 @@ Always secure input from outside, for example with intval.
 
    Description
          Comma-separated list of parent ids.
+
+         **Special keyword:** "this" is replaced with the id of the current page.
 
    Default
          this
