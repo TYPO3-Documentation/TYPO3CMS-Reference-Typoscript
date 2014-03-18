@@ -680,6 +680,9 @@ Most of this code is executed in the PHP-script
          **.external:** If set, there is no file existence check. Useful for
          inclusion of external files.
 
+         **.forceOnTop:** Boolean flag. If set, this file will be added on top
+         of all other files.
+
          **.if:** (Since TYPO3 4.7) Allows to define conditions, which must
          evaluate to TRUE for the file to be included. If they do not evaluate
          to TRUE, the file will not be included. Extensive usage might cause
