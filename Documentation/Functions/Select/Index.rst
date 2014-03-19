@@ -15,18 +15,13 @@ This object generates an SQL-select statement needed to select records
 from the database.
 
 Some records are hidden or timed by start and end-times. This is
-automatically added to the SQL-select by looking in the $TCA
+automatically added to the SQL-select by looking in the $GLOBALS['TCA']
 (enablefields).
-
-Also, if the "pidInList" feature is used, any page in the pid-list
-that is not visible for the user of the website IS REMOVED from the
-pidlist. Thereby no records from hidden, timed or access-protected
-pages are selected! Nor records from recyclers.
 
 **Note:** Be careful if you are using GET/POST data (for example
 GPvar) in this object! You could introduce SQL injections!
 
-Always secure input from outside, for example with intval.
+Always secure input from outside, for example with intval!
 
 .. ### BEGIN~OF~TABLE ###
 
@@ -36,14 +31,16 @@ Always secure input from outside, for example with intval.
          uidInList
 
    Data type
-         Until TYPO3 4.5: *list of page\_ids*
+         Until TYPO3 4.5: *list of record\_ids*
 
-         Since TYPO3 4.6: *list of page\_ids* /:ref:`stdWrap <stdwrap>`
+         Since TYPO3 4.6: *list of record\_ids* /:ref:`stdWrap <stdwrap>`
 
    Description
-         Comma-separated list of page ids.
+         Comma-separated list of record uids from the according database table. For example
+         when the select function works on the table tt_content, then this will be uids of
+         tt_content records.
 
-         **Special keyword:** "this" is replaced with the id of the current page.
+         **Special keyword:** "this" is replaced with the id of the current record.
 
 
 .. container:: table-row
@@ -55,7 +52,13 @@ Always secure input from outside, for example with intval.
          *list of page\_ids* /:ref:`stdWrap <stdwrap>`
 
    Description
-         Comma-separated list of parent ids.
+         Comma-separated list of pids of the record. This will be page_ids. For example when the
+         select function works on the table tt_content, then this will be pids of tt_content records,
+         the parent pages of these records.
+
+         Pages in the list, which are not visible for the website user, *are automatically removed*
+         from the list. Thereby no records from hidden, timed or access-protected pages will be selected!
+         Nor will be records from recyclers.
 
          **Special keyword:** "this" is replaced with the id of the current page.
 
@@ -74,7 +77,7 @@ Always secure input from outside, for example with intval.
          Since TYPO3 4.6: integer /:ref:`stdWrap <stdwrap>`
 
    Description
-         Recursive levels for the pidInList.
+         Number of recursivity levels for the pidInList.
 
    Default
          0

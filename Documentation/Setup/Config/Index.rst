@@ -2609,8 +2609,8 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
 
          The requirements for this is that the table is configured with
          "languageField" and "transOrigPointerField" in the [ctrl] section of
-         $TCA. Also, exclusion of certain fields can be done with the
-         "l10n\_mode" directive in the field-configuration of $TCA.
+         $GLOBALS['TCA']. Also, exclusion of certain fields can be done with the
+         "l10n\_mode" directive in the field-configuration of $GLOBALS['TCA'].
 
          For backend administration this requires that you configure the
          "Web > Page" module to display content elements accordingly; That each
