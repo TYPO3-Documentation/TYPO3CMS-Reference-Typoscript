@@ -555,7 +555,7 @@ includeCSS.[array]
 .. _setup-page-includecsslibs-array:
 
 includeCSSLibs.[array]
-"""""""""""""""""""""
+""""""""""""""""""""""
 
 .. container:: table-row
 

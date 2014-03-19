@@ -103,6 +103,10 @@ addPageCacheTags
          This will add the tags "pagetag1", "pagetag2" and "pagetag3" to the
          according cached pages in cache_pages.
 
+         Pages, which have been cached with a tag, can be deleted from cache
+         again with the TSconfig option :ref:`TCEMAIN.clearCacheCmd
+         <t3tsconfig:pagetcemain>` (see there for more information).
+
          **Note:** If you instead want to store rendered content into the
          caching framework, see the :ref:`stdWrap feature cache <cache>`.
 

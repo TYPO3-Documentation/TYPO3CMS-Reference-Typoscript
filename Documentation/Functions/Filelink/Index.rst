@@ -293,7 +293,7 @@ icon, size and file are rendered in the listed order.
          boolean
 
    Description
-         If set, any 2-digit *appended*(!) numbers in the filename are removed.
+         If set, any 2-digit *appended(!)* numbers in the filename are removed.
          E.g. "filename\_23.gif" then becomes "filename.gif".
 
 
