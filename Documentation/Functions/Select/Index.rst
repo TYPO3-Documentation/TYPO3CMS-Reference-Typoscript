@@ -202,6 +202,24 @@ Always secure input from outside, for example with intval!
 .. container:: table-row
 
    Property
+         includeRecordsWithoutDefaultTranslation
+
+   Data type
+         boolean
+
+   Description
+         (Since TYPO3 6.2) If content language overlay is activated and the option
+         "languageField" is set, includeRecordsWithoutDefaultTranslation allows to
+         additionally fetch records, which do **not** have a parent in the default
+         language.
+
+   Default
+         0
+
+
+.. container:: table-row
+
+   Property
          selectFields
 
    Data type
