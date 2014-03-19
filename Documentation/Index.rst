@@ -16,7 +16,7 @@ TypoScript Reference
       doc_core_tsref
 
 :Version:
-      6.2-dev
+      6.2
 
 :Language:
       en
@@ -28,7 +28,7 @@ TypoScript Reference
       forAdmins, forIntermediates
 
 :Copyright:
-      2000-2013
+      2000-2014
 
 :Author:
       Documentation Team

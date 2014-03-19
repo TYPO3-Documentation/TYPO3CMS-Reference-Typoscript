@@ -22,7 +22,7 @@ TypoScript as used in TYPO3 TypoScript templates (and not in TSconfig).
 For explanations about the syntax of TypoScript itself, please refer
 to the "TypoScript Syntax and In-Depth Study" manual.
 
-This version is updated for TYPO3 CMS version 6.1.
+This version is updated for TYPO3 CMS version 6.2.
 
 
 .. _what-s-new:
@@ -30,21 +30,34 @@ This version is updated for TYPO3 CMS version 6.1.
 What's new
 ^^^^^^^^^^
 
-The main changes include the new stdWrap property strPad, which allows
-to pad the input value to a certain length. The stdWrap feature
-addPageCacheTags enables you to add tags to cached pages.
-noTrimWrap.splitChar has been introduced, which now allows to control
-how noTrimWrap and optionSplit should work together. stdWrap has been
-added to config.pageTitleSeparator. For the cObject FLUIDTEMPLATE the
-properties "template" and "settings" have been added. The new config
-property "removePageCss" was amended, allowing you to remove CSS
-styles, which were added, because of a certain situation. The config
-property "disableBodyTag" has been appended, which allows to disable
-body tag creation by TYPO3 completely.
+The main changes include: The cObject FILES got the new properties
+"begin" and "maxItems" and the property "sorting" got the new
+sub-property "direction". The content object IMAGE now supports
+responsive images using the properties "layoutKey" and "layout" and
+"sourceCollection". cObject HMENU got a new special menu type called
+"categories". For the RECORDS content object the property "categories"
+has been introduced, which makes records related to selected categories
+available for rendering.
 
-The system extension statictemplates and the associated menu objects
-GMENU_LAYERS, GMENU_FOLDOUT and TMENU_LAYERS experienced removal from
-the TYPO3 Core.
+The page property "includeCSSLibs" allows to include CSS libraries. The
+page properties includeJS, includeJSlibs and includeCSS were added
+a new "allWrap.splitChar" property.
+
+A new keyword "devIP" can be used in the IP condition. The userFunc
+condition can now handle multiple parameters and now supports quotes
+for its arguments. A new condition called "applicationContext" has been
+amended. Detection of Windows 8 has been added to the system condition.
+
+The new property "includeRecordsWithoutDefaultTranslation" of the select
+function allows to also fetch records, which do *not* have a parent in
+the default language. The new stdWrap property "escapeJsValue" enables
+you to escape values for usage in JavaScript.
+
+Certain getText properties can be used without second parameter.
+
+optionSplit has been added to the replace property of the stdWrap
+function replacement. The new property is called
+"useOptionSplitReplace".
 
 Additionally various descriptions were improved and many smaller
 mistakes were fixed.
@@ -82,6 +95,10 @@ refer to the links below.
    TYPO3 6.1: `http://forge.typo3.org/projects/typo3cms-doc-typoscript/v
    ersions/1960 <http://forge.typo3.org/projects/typo3cms-doc-typoscript/v
    ersions/1960>`_
+
+   TYPO3 6.2: `http://forge.typo3.org/projects/typo3cms-doc-typoscript/v
+   ersions/1968 <http://forge.typo3.org/projects/typo3cms-doc-typoscript/v
+   ersions/1968>`_
 
 
 .. _credits:
