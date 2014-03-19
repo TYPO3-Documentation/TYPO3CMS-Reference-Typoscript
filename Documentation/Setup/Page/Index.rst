@@ -66,6 +66,7 @@ Properties
    `hover`_                       HTML-color
    `hoverStyle`_                  :ref:`data-type-string`
    `includeCSS.[array]`_          :ref:`data-type-resource`
+   `includeCSSLibs.[array]`_      :ref:`data-type-resource`
    `includeJS.[array]`_           :ref:`data-type-resource`
    `includeJSFooter.[array]`_     :ref:`data-type-resource`
    `includeJSFooterlibs.[array]`_ :ref:`data-type-resource`
@@ -551,6 +552,69 @@ includeCSS.[array]
 
 
 
+.. _setup-page-includecsslibs-array:
+
+includeCSSLibs.[array]
+"""""""""""""""""""""
+
+.. container:: table-row
+
+   Property
+         includeCSSLibs.[array]
+
+   Data type
+         resource
+
+   Description
+         (Since TYPO3 6.2) Adds CSS library files to head of page.
+
+         The file definition must be a valid "resource" data type, otherwise
+         nothing is inserted. This means that remote files cannot be referenced
+         (i.e. using "http://..."), except by using the ".external" property.
+
+         Each file has *optional properties*:
+
+         **.allWrap:** Wraps the complete tag, useful for conditional
+         comments.
+
+         **.allWrap.splitChar:** Defines an alternative
+         splitting character (default is "\|" - the vertical line).
+
+         **.alternate:** If set (boolean) then the rel-attribute will be
+         "alternate stylesheet".
+
+         **.disableCompression:** If config.compressCss is
+         enabled, this disables the compression of this file.
+
+         **.excludeFromConcatenation:** If
+         config.concatenateCss is enabled, this prevents the file from being
+         concatenated.
+
+         **.external:** If set, there is no file existence check. Useful for
+         inclusion of external files.
+
+         **.forceOnTop:** Boolean flag. If set, this file will be added on top
+         of all other files.
+
+         **.if:** Allows to define conditions, which must
+         evaluate to TRUE for the file to be included. If they do not evaluate
+         to TRUE, the file will not be included. Extensive usage might cause
+         huge numbers of temporary files to be created. See ->if for details.
+
+         **.import:** If set (boolean) then the @import way of including a
+         stylesheet is used instead of <link>
+
+         **.media:** Setting the media attribute of the <style> tag.
+
+         **.title:** Setting the title of the <style> tag.
+
+         **Example:** ::
+
+            includeCSSLibs.twitter = http://twitter.com/styles/blogger.css
+            includeCSSLibs.twitter.external = 1
+
+
+
 .. _setup-page-includejs-array:
 
 includeJS.[array]
@@ -645,7 +709,7 @@ includeJSFooterlibs.[array]
          resource
 
    Description
-         Same as includeJSlibs above, except that this block gets included at
+         Same as includeJSlibs, except that this block gets included at
          the bottom of the page (just before the closing body tag).
 
 
