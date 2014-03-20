@@ -1161,34 +1161,35 @@ htmlSpecialChars
          non-entity characters are affected.
 
 
-.. _stdwrap-escapejsvalue:
+.. _stdwrap-encodeforjavascriptvalue:
 
-escapeJsValue
-'''''''''''''
+encodeForJavaScriptValue
+''''''''''''''''''''''''
 
 .. container:: table-row
 
    Property
-         escapeJsValue
+         encodeForJavaScriptValue
 
    Data type
          boolean /:ref:`stdWrap <stdwrap>`
 
    Description
-         Escapes content to be used safely inside strings in JavaScript.
+         Encodes content to be used safely inside strings in JavaScript.
          Characters, which can cause problems inside JavaScript strings, are
-         replaced with their encoded equivalents.
+         replaced with their encoded equivalents. The resulting string is
+         enclosed in single quotes.
 
-         Passes the content through the core function :ref:`t3cmsapi:TYPO3\\CMS\\Core\\Utility\\GeneralUtility::quoteJSvalue`
-         but removes the surrounding quotes.
+         Passes the content through the core function
+         :ref:`t3cmsapi:TYPO3\\CMS\\Core\\Utility\\GeneralUtility::quoteJSvalue`.
 
          **Example:** ::
 
             10 = TEXT
             10 {
-                data = GP:sWord
-                escapeJsValue = 1
-                wrap = setSearchWord('|');
+                stdWrap.data = GP:sWord
+                stdWrap.encodeForJavaScriptValue = 1
+                stdWrap.wrap = setSearchWord(|);
             }
 
 

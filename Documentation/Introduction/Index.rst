@@ -50,8 +50,8 @@ amended. Detection of Windows 8 has been added to the system condition.
 
 The new property "includeRecordsWithoutDefaultTranslation" of the select
 function allows to also fetch records, which do *not* have a parent in
-the default language. The new stdWrap property "escapeJsValue" enables
-you to escape values for usage in JavaScript.
+the default language. The new stdWrap property "encodeForJavaScriptValue"
+enables you to encode values for usage in JavaScript strings.
 
 Certain getText properties can be used without second parameter.
 
