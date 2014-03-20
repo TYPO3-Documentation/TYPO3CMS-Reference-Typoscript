@@ -36,6 +36,13 @@ header-layout (and a non-empty 'header'-field!) is selected. In other
 words, if the header layout of an element is set to "Hidden" then the
 page will not appear in the menu.
 
+.sectionIndex.includeHiddenHeaders = [boolean]
+
+(Since TYPO3 6.2) If you set this and sectionIndex.type is set to "header",
+also elements with a header layout set to "Hidden" will appear in the menu.
+This was the default behaviour until TYPO3 4.6 and with this property you
+can enable the "old" behaviour again.
+
 .sectionIndex.useColPos = [integer /:ref:`stdWrap <stdwrap>`]
 
 (Since TYPO3 6.0) This property allows you to set the colPos which
