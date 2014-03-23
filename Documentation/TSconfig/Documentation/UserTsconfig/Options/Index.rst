@@ -247,12 +247,12 @@ Various options for the user affecting the core at various points.
 
          **Example:**
 
-            :ts:`shortcutGroups {`
-              :ts:`1=1`
-              :ts:`2=My Group`
-              :ts:`3=0`
-              :ts:`4=`
-            :ts:`}`
+            :ts:`shortcutGroups {
+              1=1
+              2=My Group
+              3=0
+              4=
+            }`
 
          Bookmark group 1 is loaded with the default label (Pages), group 2 is
          loaded and labeled as "My Group" and groups 3 and 4 are disabled.
@@ -291,12 +291,12 @@ Various options for the user affecting the core at various points.
 
          **Example:**
 
-            :ts:`bookmarkGroups {`
-              :ts:`1=1`
-              :ts:`2=My Group`
-              :ts:`3=0`
-              :ts:`4=`
-            :ts:`}`
+            :ts:`bookmarkGroups {
+              1=1
+              2=My Group
+              3=0
+              4=
+            }`
 
          Bookmark group 1 is loaded with the default label (Pages), group 2 is
          loaded and labeled as "My Group" and groups 3 and 4 are disabled.
@@ -464,8 +464,8 @@ Various options for the user affecting the core at various points.
          tt\_content where it will appear, and in addition create the records
          in the top of the page (default is after instead of top).
 
-            :ts:`options.saveDocNew = 0`
-            :ts:`options.saveDocNew.tt_content = top`
+            :ts:`options.saveDocNew = 0
+                 options.saveDocNew.tt_content = top`
 
 
 .. container:: table-row
@@ -538,9 +538,9 @@ Various options for the user affecting the core at various points.
 
          **Examples:**
 
-            :ts:`options.pageTree.backgroundColor.2 = red`
-            :ts:`options.pageTree.backgroundColor.3 = #00FFFF`
-            :ts:`options.pageTree.backgroundColor.4 = rgba(0, 255, 0, 0.1)`
+            :ts:`options.pageTree.backgroundColor.2 = red
+                 options.pageTree.backgroundColor.3 = #00FFFF
+                 options.pageTree.backgroundColor.4 = rgba(0, 255, 0, 0.1)`
 
          .. figure:: ../../Images/options.pageTree.backgroundColor.png
             :alt: Tree branches with configured background colors

@@ -46,12 +46,12 @@
 
          **Example:**
 
-            :ts:`TCEMAIN {`
-                :ts:`# Owner be_users UID for new pages:`
-              :ts:`permissions.userid = 2`
-                :ts:`# Owner be_groups UID for new pages:`
-              :ts:`permissions.groupid = 3`
-            :ts:`}`
+            :ts:`TCEMAIN {
+                # Owner be_users UID for new pages:
+              permissions.userid = 2
+                # Owner be_groups UID for new pages:
+              permissions.groupid = 3
+            }`
 
          Backend User with UID 2 is "test" and the Backend Group with UID 3 is
          "test\_group". With the configuration above a new page would be
@@ -84,22 +84,22 @@
 
          Defaults from $GLOBALS['TYPO3\_CONF\_VARS']
 
-            :php:`'user' => 'show,edit,delete,new,editcontent',`
-            :php:`'group' => 'show,edit,new,editcontent',`
-            :php:`'everybody' => ''`
+            :php:`'user' => 'show,edit,delete,new,editcontent',
+                  'group' => 'show,edit,new,editcontent',
+                  'everybody' => ''`
 
          **Example:**
 
-            :ts:`TCEMAIN.permissions {`
-                :ts:`# User can do anything (default):`
-              :ts:`user = 31`
-                :ts:`# Group can do anything`
-                :ts:`# (normally "delete" is disabled)`
-              :ts:`group = 31`
-                :ts:`# Everybody can at least see the page`
-                :ts:`# (normally everybody can do nothing)`
-              :ts:`everybody = show`
-            :ts:`}`
+            :ts:`TCEMAIN.permissions {
+                # User can do anything (default):
+              user = 31
+                # Group can do anything
+                # (normally "delete" is disabled)
+              group = 31
+                # Everybody can at least see the page
+                # (normally everybody can do nothing)
+              everybody = show
+            }`
 
          The page "Community" was created with the settings from the example
          above. Compared to the two other pages created with default
@@ -124,15 +124,15 @@
 
          **Examples:**
 
-              :ts:`# Will clear the cache for page ID 12 and 23`
-              :ts:`# when saving a record in this page:`
-            :ts:`TCEMAIN.clearCacheCmd = 12,23`
+              :ts:`# Will clear the cache for page ID 12 and 23
+              # when saving a record in this page:
+            TCEMAIN.clearCacheCmd = 12,23
 
-              :ts:`# Will clear all pages cache:`
-            :ts:`TCEMAIN.clearCacheCmd = pages`
+              # Will clear all pages cache:
+            TCEMAIN.clearCacheCmd = pages
 
-              :ts:`# Will clear ALL cache:`
-            :ts:`TCEMAIN.clearCacheCmd = all`
+              # Will clear ALL cache:
+            TCEMAIN.clearCacheCmd = all`
 
 
 .. container:: table-row
@@ -196,10 +196,10 @@
 
          **Example:**
 
-            :ts:`TCEMAIN {`
-                :ts:`# Set a German label:`
-              :ts:`translateToMessage = Bitte in "%s" Übersetzen:`
-            :ts:`}`
+            :ts:`TCEMAIN {
+                # Set a German label:
+              translateToMessage = Bitte in "%s" Übersetzen:
+            }`
 
 
 .. container:: table-row
@@ -220,10 +220,10 @@
 
          **Example:**
 
-            :ts:`TCEMAIN {`
-                :ts:`# Set a German header:`
-              :ts:`notificationEmail_subject = TYPO3-Arbeitsumgebungshinweis: Änderung der Stufe für %s`
-            :ts:`}`
+            :ts:`TCEMAIN {
+                # Set a German header:
+              notificationEmail_subject = TYPO3-Arbeitsumgebungshinweis: Änderung der Stufe für %s
+            }`
 
          **Note:** This option is deprecated since TYPO3 4.5. Since TYPO3 4.5
          localized emails are sent by default, if the translation files for the
@@ -293,19 +293,19 @@
 
          **Example:**
 
-            :ts:`TCEMAIN {`
-                :ts:`# Set a German bodytext:`
-              :ts:`notificationEmail_body (`
-                :ts:`Auf der TYPO3-Seite "%s" (%s)`
-                :ts:`wurde in der Arbeitsumgebung "%s" (%s)`
-                :ts:`die Stufe des Elements/der Elemente "%11$s" (%s) am Ort "%10$s" im Seitenbaum verändert:`
-                :ts:`==> %s`
-                :ts:`Kommentar des Benutzers:`
-                :ts:`"%s"`
+            :ts:`TCEMAIN {
+                # Set a German bodytext:
+              notificationEmail_body (
+                Auf der TYPO3-Seite "%s" (%s)
+                wurde in der Arbeitsumgebung "%s" (%s)
+                die Stufe des Elements/der Elemente "%11$s" (%s) am Ort "%10$s" im Seitenbaum verändert:
+                ==> %s
+                Kommentar des Benutzers:
+                "%s"
 
-                :ts:`Die Stufe wurde geändert von %s (Benutzername: %s).`
-              :ts:`)`
-            :ts:`}`
+                Die Stufe wurde geändert von %s (Benutzername: %s).
+              )
+            }`
 
          **Note:** This option is deprecated since TYPO3 4.5. Since TYPO3 4.5
          localized emails are sent by default, if the translation files for the
@@ -339,12 +339,12 @@ Processing options for a $GLOBALS['TCA'] configured table.
 
          **Example:**
 
-            :ts:`TCEMAIN {`
-                :ts:`# Default for all tables is 10 entries:`
-              :ts:`default.history.keepEntries = 10`
-                :ts:`# But the Content Elements will have 20 levels:`
-              :ts:`table.tt_content.history.keepEntries = 20`
-            :ts:`}`
+            :ts:`TCEMAIN {
+                # Default for all tables is 10 entries:
+              default.history.keepEntries = 10
+                # But the Content Elements will have 20 levels:
+              table.tt_content.history.keepEntries = 20
+            }`
 
          **Note:** This option has been removed in TYPO3 4.0.
 
@@ -384,12 +384,12 @@ Processing options for a $GLOBALS['TCA'] configured table.
 
          **Example:**
 
-            :ts:`TCEMAIN.table.pages {`
-                :ts:`# Pages will *not* have "(copy)" appended:`
-              :ts:`disablePrependAtCopy = 1`
-                :ts:`# Pages will *not* be hidden upon copy:`
-              :ts:`disableHideAtCopy = 1`
-            :ts:`}`
+            :ts:`TCEMAIN.table.pages {
+                # Pages will *not* have "(copy)" appended:
+              disablePrependAtCopy = 1
+                # Pages will *not* be hidden upon copy:
+              disableHideAtCopy = 1
+            }`
 
          These settings adjust that a page which is copied will neither have
          "(copy X)" appended nor be hidden.
