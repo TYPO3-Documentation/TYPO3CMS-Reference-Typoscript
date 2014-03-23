@@ -87,9 +87,10 @@ can call it like this to set default configuration
            :ts:`proc.preserveTables = 1`
 
            :ts:`showButtons = cut,copy,paste,fontstyle,fontsize,textcolor`
-
            :ts:`hideButtons = class,user,chMode`
+
        :ts:`}`
+
    :ts:`');`
 
 This API function simply adds the content to
