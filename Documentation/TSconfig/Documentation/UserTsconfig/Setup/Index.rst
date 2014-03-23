@@ -479,8 +479,8 @@ The table below describes the related option:
 
          **Example:**
 
-            :ts:`setup.fields.emailMeAtLogin.disabled = 1`
-            :ts:`setup.override.emailMeAtLogin = 1`
+            :ts:`setup.fields.emailMeAtLogin.disabled = 1
+                 setup.override.emailMeAtLogin = 1`
 
          Now the "Email me when I login" field is removed, but the user will
          still receive an email when he logs in.
