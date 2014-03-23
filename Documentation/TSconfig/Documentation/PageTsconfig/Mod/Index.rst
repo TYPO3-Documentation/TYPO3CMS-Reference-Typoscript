@@ -33,8 +33,7 @@ In this case the main menu of the Web > Info module looks like this:
 By adding this Page TSconfig we can remove the "Page TSconfig" item
 
    :ts:`mod.web_info.menu.function {`
-     :ts:`tx_infopagetsconfig_webinfo = 0`
-   :ts:`}`
+   :ts:`tx_infopagetsconfig_webinfo = 0}`
 
 The function menu will now look like this:
 
@@ -70,18 +69,23 @@ Examples from the TYPO3 core are listed in the table below:
 
             :ts:`<select name="SET[function]">`
                 :ts:`<option value="1">Columns</option>`
+
                 :ts:`<option value="0">QuickEdit</option>`
+
                 :ts:`<option value="2">Languages</option>`
+
                 :ts:`<option value="3">Grid-View</option>`
             :ts:`</select>`
 
          **Example:**
 
-              :ts:`# Disables all items except the "QuickEdit" item:`
-            :ts:`mod.web_layout.menu.function {`
-              :ts:`1 = 0`
-              :ts:`2 = 0`
-              :ts:`3 = 0`
+            :ts:`# Disables all items except the "QuickEdit" item:`
+                :ts:`mod.web_layout.menu.function {`
+                :ts:`1 = 0`
+
+                :ts:`2 = 0`
+
+                :ts:`3 = 0`
             :ts:`}
 
 
@@ -100,12 +104,19 @@ Examples from the TYPO3 core are listed in the table below:
 
             :ts:`<select name="SET[function]">`
                 :ts:`<option value="tx_cms_webinfo_page">Page tree Overview</option>`
+
                 :ts:`<option value="tx_cms_webinfo_lang">Localization Overview</option>`
+
                 :ts:`<option value="tx_belog_webinfo">Log</option>`
+
                 :ts:`<option value="tx_infopagetsconfig_webinfo">Page TSconfig</option>`
+
                 :ts:`<option value="tx_linkvalidator_ModFuncReport">Linkvalidator</option>`
+
                 :ts:`<option value="tx_realurl_modfunc1">Speaking Url Management</option>`
+
                 :ts:`<option value="tx_indexedsearch_modfunc1">Indexed search</option>`
+
                 :ts:`<option value="tx_indexedsearch_modfunc2">Indexed search statistics</option>`
             :ts:`</select>`
 
@@ -114,9 +125,10 @@ Examples from the TYPO3 core are listed in the table below:
 
          **Example:**
 
-              :ts:`# Disables the item "Indexed search statistics":`
-            :ts:`mod.web_info.menu.function {`
-              :ts:`tx_indexedsearch_modfunc2 = 0`
+            :ts:`# Disables the item "Indexed search statistics":`
+                :ts:`mod.web_info.menu.function {`
+
+                :ts:`tx_indexedsearch_modfunc2 = 0`
             :ts:`}`
 
 
@@ -157,14 +169,16 @@ Examples from the TYPO3 core are listed in the table below:
 
             :ts:`<select name="SET[wiz]">`
                 :ts:`<option value="tx_wizardcrpages_webfunc_2">Create multiple pages</option>`
+
                 :ts:`<option value="tx_wizardsortpages_webfunc_2">Sort pages</option>`
             :ts:`</select>`
 
          **Example:**
 
-              :ts:`# Disables the sub-item "Create multiple pages":`
-            :ts:`mod.web_func.menu.wiz {`
-              :ts:`tx_wizardcrpages_webfunc_2 = 0`
+            :ts:`# Disables the sub-item "Create multiple pages":`
+                :ts:`mod.web_func.menu.wiz {`
+
+                :ts:`tx_wizardcrpages_webfunc_2 = 0`
             :ts:`}`
 
 
@@ -183,8 +197,11 @@ Examples from the TYPO3 core are listed in the table below:
 
             :ts:`<select name="SET[function]">`
                 :ts:`<option value="tx_tstemplateceditor">Constant Editor</option>`
+
                 :ts:`<option value="tx_tstemplateinfo">Info/Modify</option>`
+
                 :ts:`<option value="tx_tstemplateobjbrowser">TypoScript Object Browser</option>`
+
                 :ts:`<option value="tx_tstemplateanalyzer">Template Analyzer</option>`
             :ts:`</select>`
 
@@ -221,12 +238,16 @@ Examples from the TYPO3 core are listed in the table below:
 
          Set this as *User TSconfig*
 
-              :ts:`# Task Center configuration:`
+            :ts:`# Task Center configuration:`
+
             :ts:`mod.user_task.menu.function {`
                 :ts:`# Disable "Recent Pages" display:`
-              :ts:`tx_taskcenterrecent = 0`
+
+                :ts:`tx_taskcenterrecent = 0`
+
                 :ts:`# Disable "Action" list`
-              :ts:`tx_sysaction = 0`
+
+                :ts:`tx_sysaction = 0`
             :ts:`}`
 
 
@@ -261,7 +282,7 @@ Examples from the TYPO3 core are listed in the table below:
          You can hide a task by using the following syntax in User TSconfig
 
             :ts:`taskcenter {`
-              :ts:`<extension-key>.<task-class> = 0`
+                :ts:`<extension-key>.<task-class> = 0`
             :ts:`}`
 
          Be aware that <extension-key> needs to be replaced by the actual
@@ -272,14 +293,20 @@ Examples from the TYPO3 core are listed in the table below:
 
          Set this as *User TSconfig*
 
-              :ts:`# Task Center configuration:`
+            :ts:`# Task Center configuration:`
+
             :ts:`taskcenter {`
                 :ts:`# Disable "Quick Note":`
-              :ts:`sys_notepad.tx_sysnotepad_task = 0`
+
+                :ts:`sys_notepad.tx_sysnotepad_task = 0`
+
                 :ts:`# Disable "Action":`
-              :ts:`sys_action.tx_sysaction_task = 0`
+
+                :ts:`sys_action.tx_sysaction_task = 0`
+
                 :ts:`# Disable "Import/Export":`
-              :ts:`impexp.tx_impexp_task = 0`
+
+                :ts:`impexp.tx_impexp_task = 0`
             :ts:`}`
 
 
@@ -301,7 +328,9 @@ menu. The keys are the values of the option tags
 
    :ts:`<select>`
        :ts:`<option value="tx_cms_webinfo_page">Page tree overview</option>`
+
        :ts:`<option value="tx_belog_webinfo">Log</option>`
+
        :ts:`<option value="tx_infopagetsconfig_webinfo">Page TSconfig</option>`
    :ts:`</select>`
 
@@ -309,7 +338,7 @@ As you can see, this is where the key for the example before was
 found
 
    :ts:`mod.web_info.menu.function {`
-          :ts:`tx_infopagetsconfig_webinfo = 0`
+       :ts:`tx_infopagetsconfig_webinfo = 0`
    :ts:`}`
 
 .. figure:: ../../Images/manual_html_3cd9b3b7.png
@@ -338,7 +367,7 @@ menu item in the Web > Info module was disabled in the Page TSconfig
 with this value
 
    :ts:`mod.web_info.menu.function {`
-     :ts:`tsconf = 0`
+       :ts:`tsconf = 0`
    :ts:`}`
 
 If however we activate this configuration in the TSconfig of a certain
@@ -347,7 +376,7 @@ select this menu item because the value of his User TSconfig overrides
 the same value set in the Page TSconfig
 
    :ts:`mod.web_info.menu.function {`
-     :ts:`tsconf = 1`
+       :ts:`tsconf = 1`
    :ts:`}`
 
 .. figure:: ../../Images/manual_html_m6b2884ce.png
@@ -427,25 +456,28 @@ Shared options for modules (mod.SHARED)
             .. HINT::
                You can use the wizard next to the configuration field as a help.
 
-           :ts:`
-             backend_layout {
-                 colCount = 2
-                 rowCount = 1
-                 rows {
-                     1 {
-                         columns {
-                             1 {
-                                 name = Left
-                                 colPos = 1
-                             }
-                             2 {
-                                 name = Content
-                                 colPos = 0
-                             }
-                         }
-                     }
-                 }
-             }`
+             :ts:`backend_layout {`
+                 :ts:`colCount = 2`
+
+                 :ts:`rowCount = 1`
+
+                 :ts:`rows {`
+                     :ts:`1 {`
+                         :ts:`columns {`
+                             :ts:`1 {`
+                                 :ts:`name = Left`
+
+                                 :ts:`colPos = 1`
+                             :ts:`}`
+                             :ts:`2 {`
+                                 :ts:`name = Content`
+
+                                 :ts:`colPos = 0`
+                             :ts:`}`
+                         :ts:`}`
+                     :ts:`}`
+                 :ts:`}`
+             :ts:`}`
 
          * Click on the root page of your website.
 
@@ -500,8 +532,9 @@ Shared options for modules (mod.SHARED)
          This will show the German flag.
 
             :ts:`mod.SHARED {`
-              :ts:`defaultLanguageFlag = de`
-              :ts:`defaultLanguageLabel = deutsch`
+                :ts:`defaultLanguageFlag = de`
+
+                :ts:`defaultLanguageLabel = deutsch`
             :ts:`}`
 
          **Note:**
@@ -577,7 +610,7 @@ Web > Page (mod.web\_layout)
          displayed as the very first fields instead of the 'Type' field.
 
             :ts:`mod.web_layout.tt_content {`
-              :ts:`fieldOrder = bodytext, header`
+                :ts:`fieldOrder = bodytext, header`
             :ts:`}`
 
 
@@ -597,7 +630,7 @@ Web > Page (mod.web\_layout)
          **Example:**
 
             :ts:`mod.web_layout {`
-              :ts:`editFieldsAtATime = 2`
+                :ts:`editFieldsAtATime = 2`
             :ts:`}`
 
    Default
@@ -800,7 +833,7 @@ Web > List (mod.web\_list)
          **Example:**
 
             :ts:`mod.web_list {`
-                    :ts:`noCreateRecordsLink = 1`
+                :ts:`noCreateRecordsLink = 1`
             :ts:`}`
 
    Default
@@ -821,7 +854,7 @@ Web > List (mod.web\_list)
          **Example:**
 
             :ts:`mod.web_list {`
-                    :ts:`alternateBgColors = 0`
+                :ts:`alternateBgColors = 0`
             :ts:`}`
 
          The result is the deactivation of alternating background colors for
@@ -866,7 +899,7 @@ Web > List (mod.web\_list)
          **Example:**
 
             :ts:`mod.web_list {`
-                    :ts:`listOnlyInSingleTableView = 1`
+                :ts:`listOnlyInSingleTableView = 1`
             :ts:`}`
 
          The result will be that records from tables are only listed in the
@@ -896,7 +929,7 @@ Web > List (mod.web\_list)
          **Example:**
 
             :ts:`mod.web_list {`
-                    :ts:`noExportRecordsLinks = 1`
+                :ts:`noExportRecordsLinks = 1`
             :ts:`}`
 
          The buttons "Export" and "Download CSV file" are hidden 
@@ -1046,7 +1079,7 @@ Web > List (mod.web\_list)
          **Example:**
 
             :ts:`mod.web_list {`
-              :ts:`allowedNewTables = pages, tt_news`
+                :ts:`allowedNewTables = pages, tt_news`
             :ts:`}`
 
          Only pages and tt\_news table elements will be linked to in the New
@@ -1077,7 +1110,7 @@ Web > List (mod.web\_list)
          **Example:**
 
             :ts:`mod.web_list {`
-              :ts:`deniedNewTables = tt_news,tt_content`
+                :ts:`deniedNewTables = tt_news,tt_content`
             :ts:`}`
 
 
@@ -1262,7 +1295,7 @@ Web > View (mod.web\_view)
          "index.php?id=123&type=1" from the Web > View module
 
             :ts:`mod.web_view {`
-                    :ts:`type = 1`
+                :ts:`type = 1`
             :ts:`}`
 
 
@@ -1283,8 +1316,9 @@ Web > View (mod.web\_view)
          myPreview will be added in the dropdown menu Width inside Web > View module
 
             :ts:`mod.web_view.previewFrameWidths {`
-                    :ts:`300.label = myPreview`
-                      :ts:`300.height = 500`
+                :ts:`300.label = myPreview`
+
+                :ts:`300.height = 500`
             :ts:`}`
 
          .. figure:: ../../Images/WebViewTSConfigPreview.png
@@ -1339,7 +1373,7 @@ New record wizard (mod.wizards.newRecord)
          **Example:**
 
             :ts:`mod.wizards.newRecord.pages.show {`
-                    :ts:`pageInside = 0`
+                :ts:`pageInside = 0`
             :ts:`}`
 
          Hides the "Page (inside)" link.
@@ -1450,10 +1484,12 @@ New content element wizard (mod.wizards.newContentElement)
 
          **Example:**
 
-              :ts:`# Hide bulletList`
+            :ts:`# Hide bulletList`
+
             :ts:`mod.wizards.newContentElement.wizardItems.common.show := removeFromList(bullets)`
 
-              :ts:`# Only show text and textpic in common`
+            :ts:`# Only show text and textpic in common`
+
             :ts:`mod.wizards.newContentElement.wizardItems.common.show = text,textpic`
 
 
@@ -1542,14 +1578,17 @@ Example 1:
 Add a new element (header) to the "common" group
 
    :ts:`mod.wizards.newContentElement.wizardItems.common.elements.header {`
-           :ts:`icon = gfx/c_wiz/regular_text.gif`
-           :ts:`title = Header`
-           :ts:`description = Adds a header element only`
-           :ts:`tt_content_defValues {`
-                   :ts:`CType = header`
-           :ts:`}`
+       :ts:`icon = gfx/c_wiz/regular_text.gif`
+
+       :ts:`title = Header`
+
+       :ts:`description = Adds a header element only`
+
+       :ts:`tt_content_defValues {`
+           :ts:`CType = header`
+       :ts:`}`
    :ts:`}`
-   mod.wizards.newContentElement.wizardItems.common.show := addToList(header)
+   :ts:`mod.wizards.newContentElement.wizardItems.common.show := addToList(header)`
 
 .. _pageexample2:
 
@@ -1559,21 +1598,30 @@ Example 2:
 Create a new group and add a (pre-filled) element to it
 
    :ts:`mod.wizards.newContentElement.wizardItems.myGroup {`
-           :ts:`header = LLL:EXT:cms/layout/locallang.xml:advancedFunctions`
-           :ts:`elements.customText {`
-                   :ts:`icon = gfx/c_wiz/regular_text.gif`
-                   :ts:`title = Introductory text for national startpage`
-                   :ts:`description = Use this element for all national startpages`
-                   :ts:`tt_content_defValues {`
-                           :ts:`CType = text`
-                           :ts:`bodytext (`
-   :ts:`<h2>Section Header</h2>`
-   :ts:`<p class="bodytext">Lorem ipsum dolor sit amet, consectetur, sadipisci velit ...</p>`
-                           :ts:`)`
-                           :ts:`header = Section Header`
-                           :ts:`header_layout = 100`
-                   :ts:`}`
+       :ts:`header = LLL:EXT:cms/layout/locallang.xml:advancedFunctions`
+
+       :ts:`elements.customText {`
+           :ts:`icon = gfx/c_wiz/regular_text.gif`
+
+           :ts:`title = Introductory text for national startpage`
+
+           :ts:`description = Use this element for all national startpages`
+
+           :ts:`tt_content_defValues {`
+               :ts:`CType = text`
+
+               :ts:`bodytext (`
+           :ts:`<h2>Section Header</h2>`
+               :ts:`<p class="bodytext">Lorem ipsum dolor sit amet, consectetur, sadipisci velit ...</p>`
+
+               :ts:`)`
+
+           :ts:`header = Section Header`
+
+           :ts:`header_layout = 100`
+
            :ts:`}`
+       :ts:`}`
    :ts:`}`
    mod.wizards.newContentElement.wizardItems.myGroup.show = customText
 
@@ -1645,8 +1693,9 @@ Edit document 'module' (mod.xMOD\_alt\_doc)
          **Example:**
 
             :ts:`mod.xMOD_alt_doc {`
-              :ts:`disableDocSelector = 1`
-              :ts:`disableCacheSelector = 1`
+                :ts:`disableDocSelector = 1`
+
+                :ts:`disableCacheSelector = 1`
             :ts:`}`
 
          .. figure:: ../../Images/manual_html_2a6f6c3a.png

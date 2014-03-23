@@ -11,7 +11,9 @@ Example:
 ^^^^^^^^
 
 :ts:`[treeLevel = 1]`
+
 :ts:`TCEFORM.tt_content.section_frame.disabled = 1`
+
 :ts:`[GLOBAL]`
 
 The above TSconfig will hide the "section\_frame" field of content

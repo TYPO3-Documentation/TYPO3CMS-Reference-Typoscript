@@ -248,10 +248,14 @@ Various options for the user affecting the core at various points.
          **Example:**
 
             :ts:`shortcutGroups {`
-              :ts:`1=1`
-              :ts:`2=My Group`
-              :ts:`3=0`
-              :ts:`4=`
+                :ts:`1=1`
+
+                :ts:`2=My Group`
+
+                :ts:`3=0`
+
+                :ts:`4=`
+
             :ts:`}`
 
          Bookmark group 1 is loaded with the default label (Pages), group 2 is
@@ -292,10 +296,13 @@ Various options for the user affecting the core at various points.
          **Example:**
 
             :ts:`bookmarkGroups {`
-              :ts:`1=1`
-              :ts:`2=My Group`
-              :ts:`3=0`
-              :ts:`4=`
+                :ts:`1=1`
+
+                :ts:`2=My Group`
+
+                :ts:`3=0`
+
+                :ts:`4=`
             :ts:`}`
 
          Bookmark group 1 is loaded with the default label (Pages), group 2 is
@@ -465,6 +472,7 @@ Various options for the user affecting the core at various points.
          in the top of the page (default is after instead of top).
 
             :ts:`options.saveDocNew = 0`
+
             :ts:`options.saveDocNew.tt_content = top`
 
 
@@ -539,7 +547,9 @@ Various options for the user affecting the core at various points.
          **Examples:**
 
             :ts:`options.pageTree.backgroundColor.2 = red`
+
             :ts:`options.pageTree.backgroundColor.3 = #00FFFF`
+
             :ts:`options.pageTree.backgroundColor.4 = rgba(0, 255, 0, 0.1)`
 
          .. figure:: ../../Images/options.pageTree.backgroundColor.png

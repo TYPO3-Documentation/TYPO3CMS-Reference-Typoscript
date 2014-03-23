@@ -39,13 +39,13 @@ in the Page TSconfig of the same page or a subpage.
 
 * Add in Page TSconfig
 
-:ts:`RTE.default.showButtons = bold`
+   :ts:`RTE.default.showButtons = bold`
 
 * You get the value "bold".
 
 * Add later in Page TSconfig
 
-ts:`RTE.default.showButtons := addToList(italic)`
+   ts:`RTE.default.showButtons := addToList(italic)`
 
 * Finally you get the value "bold,italic".
 
@@ -85,7 +85,9 @@ can call it like this to set default configuration
    :ts:`t3lib_extMgm::addPageTSConfig('`
        :ts:`RTE.default {`
            :ts:`proc.preserveTables = 1`
+
            :ts:`showButtons = cut,copy,paste,fontstyle,fontsize,textcolor`
+
            :ts:`hideButtons = class,user,chMode`
        :ts:`}`
    :ts:`');`
