@@ -245,14 +245,14 @@ Various options for the user affecting the core at various points.
          Set 0 to disable one of these group IDs, 1 to enable it (this is the
          default) or "string" to change the label accordingly.
 
-         **Example:** ::
+         **Example:**
 
-            shortcutGroups {
-              1=1
-              2=My Group
-              3=0
-              4=
-            }
+            :ts:`shortcutGroups {`
+              :ts:`1=1`
+              :ts:`2=My Group`
+              :ts:`3=0`
+              :ts:`4=`
+            :ts:`}`
 
          Bookmark group 1 is loaded with the default label (Pages), group 2 is
          loaded and labeled as "My Group" and groups 3 and 4 are disabled.
@@ -289,14 +289,14 @@ Various options for the user affecting the core at various points.
          Set 0 to disable one of these group IDs, 1 to enable it (this is the
          default) or "string" to change the label accordingly.
 
-         **Example:** ::
+         **Example:**
 
-            bookmarkGroups {
-              1=1
-              2=My Group
-              3=0
-              4=
-            }
+            :ts:`bookmarkGroups {`
+              :ts:`1=1`
+              :ts:`2=My Group`
+              :ts:`3=0`
+              :ts:`4=`
+            :ts:`}`
 
          Bookmark group 1 is loaded with the default label (Pages), group 2 is
          loaded and labeled as "My Group" and groups 3 and 4 are disabled.
@@ -462,10 +462,10 @@ Various options for the user affecting the core at various points.
 
          In this example the button is disabled for all tables, except
          tt\_content where it will appear, and in addition create the records
-         in the top of the page (default is after instead of top). ::
+         in the top of the page (default is after instead of top).
 
-            options.saveDocNew = 0
-            options.saveDocNew.tt_content = top
+            :ts:`options.saveDocNew = 0`
+            :ts:`options.saveDocNew.tt_content = top`
 
 
 .. container:: table-row
@@ -536,11 +536,11 @@ Various options for the user affecting the core at various points.
 
          The syntax is: options.pageTree.backgroundColor.<pageId> = <color>
 
-         **Examples:** ::
+         **Examples:**
 
-            options.pageTree.backgroundColor.2 = red
-            options.pageTree.backgroundColor.3 = #00FFFF
-            options.pageTree.backgroundColor.4 = rgba(0, 255, 0, 0.1)
+            :ts:`options.pageTree.backgroundColor.2 = red`
+            :ts:`options.pageTree.backgroundColor.3 = #00FFFF`
+            :ts:`options.pageTree.backgroundColor.4 = rgba(0, 255, 0, 0.1)`
 
          .. figure:: ../../Images/options.pageTree.backgroundColor.png
             :alt: Tree branches with configured background colors
@@ -722,9 +722,9 @@ Various options for the user affecting the core at various points.
 
          These alternative webmounts **replace** configured DB mount points.
 
-         **Example** ::
+         **Example**
 
-            options.pageTree.altElementBrowserMountPoints = 34,123
+            :ts:`options.pageTree.altElementBrowserMountPoints = 34,123`
 
 .. container:: table-row
 
@@ -739,9 +739,9 @@ Various options for the user affecting the core at various points.
          pagetree. Can be used for example for hiding
          :ref:`custom doktypes <t3api:page-types>`.
 
-         **Example** ::
+         **Example**
 
-            options.pageTree.excludeDoktypes = 254,1
+            :ts:`options.pageTree.excludeDoktypes = 254,1`
 
 .. container:: table-row
 
@@ -778,9 +778,9 @@ Various options for the user affecting the core at various points.
 
          The alternative filemounts are **added** to the existing filemounts.
 
-         **Example** ::
+         **Example**
 
-            options.folderTree.altElementBrowserMountPoints = _temp_/, templates
+            :ts:`options.folderTree.altElementBrowserMountPoints = _temp_/, templates`
 
 
 .. container:: table-row
@@ -901,9 +901,9 @@ Various options for the user affecting the core at various points.
          By this value you can substitute the default "Web > Page" module key
          ("web\_layout") with another backend module key.
 
-         **Example:** ::
+         **Example:**
 
-            options.overridePageModule = web_txtemplavoilaM1
+            :ts:`options.overridePageModule = web_txtemplavoilaM1`
 
          This will enable TemplaVoila page module as default page module.
 
@@ -988,9 +988,9 @@ Various options for the user affecting the core at various points.
 
          \- New record wizard
 
-         **Example:** ::
+         **Example:**
 
-            options.hideRecords.pages = 12,45
+            :ts:`options.hideRecords.pages = 12,45`
 
 
 .. container:: table-row
@@ -1129,9 +1129,9 @@ Various options for the user affecting the core at various points.
          This is a useful setting for translators which primarily wish to see
          their translation when they click the view-links.
 
-         **Example:** ::
+         **Example:**
 
-            options.view.languageOrder = 2,1
+            :ts:`options.view.languageOrder = 2,1`
 
 
 .. container:: table-row

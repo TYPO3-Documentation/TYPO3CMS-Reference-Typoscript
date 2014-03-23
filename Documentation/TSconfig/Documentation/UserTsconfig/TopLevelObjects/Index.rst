@@ -110,9 +110,9 @@ These are the User TSconfig Top Level Objects (TLOs):
 
          **Example:**
 
-         This sets the default hidden flag for pages to "clear" ::
+         This sets the default hidden flag for pages to "clear"
 
-            TCAdefaults.pages.hidden = 0
+            :ts:`TCAdefaults.pages.hidden = 0`
 
 
 .. container:: table-row
@@ -159,9 +159,9 @@ These are the User TSconfig Top Level Objects (TLOs):
          You can override all page TSconfig properties by putting them into
          user TSconfig and prefixing them with page.
 
-         **Example:** ::
+         **Example:**
 
-            page.TCEMAIN.table.pages.disablePrependAtCopy = 1
+            :ts:`page.TCEMAIN.table.pages.disablePrependAtCopy = 1`
 
 
 .. container:: table-row

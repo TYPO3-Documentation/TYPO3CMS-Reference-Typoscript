@@ -44,14 +44,14 @@
          record. The default user group is the "main group" of the backend user
          - the group in the very top of the users group-list.)
 
-         **Example:** ::
+         **Example:**
 
-            TCEMAIN {
-                # Owner be_users UID for new pages:
-              permissions.userid = 2
-                # Owner be_groups UID for new pages:
-              permissions.groupid = 3
-            }
+            :ts:`TCEMAIN {`
+                :ts:`# Owner be_users UID for new pages:`
+              :ts:`permissions.userid = 2`
+                :ts:`# Owner be_groups UID for new pages:`
+              :ts:`permissions.groupid = 3`
+            :ts:`}`
 
          Backend User with UID 2 is "test" and the Backend Group with UID 3 is
          "test\_group". With the configuration above a new page would be
@@ -82,24 +82,24 @@
          bits corresponding to the keylist should be set. (Bits in keylist:
          show=1,edit=2,delete=4,new=8,editcontent=16)
 
-         Defaults from $GLOBALS['TYPO3\_CONF\_VARS']::
+         Defaults from $GLOBALS['TYPO3\_CONF\_VARS']
 
-            'user' => 'show,edit,delete,new,editcontent',
-            'group' => 'show,edit,new,editcontent',
-            'everybody' => ''
+            :php:`'user' => 'show,edit,delete,new,editcontent',`
+            :php:`'group' => 'show,edit,new,editcontent',`
+            :php:`'everybody' => ''`
 
-         **Example:** ::
+         **Example:**
 
-            TCEMAIN.permissions {
-                # User can do anything (default):
-              user = 31
-                # Group can do anything
-                # (normally "delete" is disabled)
-              group = 31
-                # Everybody can at least see the page
-                # (normally everybody can do nothing)
-              everybody = show
-            }
+            :ts:`TCEMAIN.permissions {`
+                :ts:`# User can do anything (default):`
+              :ts:`user = 31`
+                :ts:`# Group can do anything`
+                :ts:`# (normally "delete" is disabled)`
+              :ts:`group = 31`
+                :ts:`# Everybody can at least see the page`
+                :ts:`# (normally everybody can do nothing)`
+              :ts:`everybody = show`
+            :ts:`}`
 
          The page "Community" was created with the settings from the example
          above. Compared to the two other pages created with default
@@ -122,17 +122,17 @@
          This can allow you to have the cache for additional pages cleared when
          saving to some page or branch of the page tree.
 
-         **Examples:** ::
+         **Examples:**
 
-              # Will clear the cache for page ID 12 and 23
-              # when saving a record in this page:
-            TCEMAIN.clearCacheCmd = 12,23
+              :ts:`# Will clear the cache for page ID 12 and 23`
+              :ts:`# when saving a record in this page:`
+            :ts:`TCEMAIN.clearCacheCmd = 12,23`
 
-              # Will clear all pages cache:
-            TCEMAIN.clearCacheCmd = pages
+              :ts:`# Will clear all pages cache:`
+            :ts:`TCEMAIN.clearCacheCmd = pages`
 
-              # Will clear ALL cache:
-            TCEMAIN.clearCacheCmd = all
+              :ts:`# Will clear ALL cache:`
+            :ts:`TCEMAIN.clearCacheCmd = all`
 
 
 .. container:: table-row
@@ -194,12 +194,12 @@
 
          Default is "Translate to [language title]:".
 
-         **Example:** ::
+         **Example:**
 
-            TCEMAIN {
-                # Set a German label:
-              translateToMessage = Bitte in "%s" √ºbersetzen:
-            }
+            :ts:`TCEMAIN {`
+                :ts:`# Set a German label:`
+              :ts:`translateToMessage = Bitte in "%s" ‹bersetzen:`
+            :ts:`}`
 
 
 .. container:: table-row
@@ -218,12 +218,12 @@
 
          Default is "TYPO3 Workspace Note: Stage Change for [table name:uid]".
 
-         **Example:** ::
+         **Example:**
 
-            TCEMAIN {
-                # Set a German header:
-              notificationEmail_subject = TYPO3-Arbeitsumgebungshinweis: √Ñnderung der Stufe f√ºr %s
-            }
+            :ts:`TCEMAIN {`
+                :ts:`# Set a German header:`
+              :ts:`notificationEmail_subject = TYPO3-Arbeitsumgebungshinweis: ƒnderung der Stufe f¸r %s`
+            :ts:`}`
 
          **Note:** This option is deprecated since TYPO3 4.5. Since TYPO3 4.5
          localized emails are sent by default, if the translation files for the
@@ -291,21 +291,21 @@
 
          State was change by %s (username: %s)"
 
-         **Example:** ::
+         **Example:**
 
-            TCEMAIN {
-                # Set a German bodytext:
-              notificationEmail_body (
-                Auf der TYPO3-Seite "%s" (%s)
-                wurde in der Arbeitsumgebung "%s" (%s)
-                die Stufe des Elements/der Elemente "%11$s" (%s) am Ort "%10$s" im Seitenbaum ver√§ndert:
-                ==> %s
-                Kommentar des Benutzers:
-                "%s"
+            :ts:`TCEMAIN {`
+                :ts:`# Set a German bodytext:`
+              :ts:`notificationEmail_body (`
+                :ts:`Auf der TYPO3-Seite "%s" (%s)`
+                :ts:`wurde in der Arbeitsumgebung "%s" (%s)`
+                :ts:`die Stufe des Elements/der Elemente "%11$s" (%s) am Ort "%10$s" im Seitenbaum ver‰ndert:`
+                :ts:`==> %s`
+                :ts:`Kommentar des Benutzers:`
+                :ts:`"%s"`
 
-                Die Stufe wurde ge√§ndert von %s (Benutzername: %s).
-              )
-            }
+                :ts:`Die Stufe wurde ge‰ndert von %s (Benutzername: %s).`
+              :ts:`)`
+            :ts:`}`
 
          **Note:** This option is deprecated since TYPO3 4.5. Since TYPO3 4.5
          localized emails are sent by default, if the translation files for the
@@ -337,14 +337,14 @@ Processing options for a $GLOBALS['TCA'] configured table.
          Maximum number of entries in the sys\_history for this table. Range
          0-200. Zero turns the history off.
 
-         **Example:** ::
+         **Example:**
 
-            TCEMAIN {
-                # Default for all tables is 10 entries:
-              default.history.keepEntries = 10
-                # But the Content Elements will have 20 levels:
-              table.tt_content.history.keepEntries = 20
-            }
+            :ts:`TCEMAIN {`
+                :ts:`# Default for all tables is 10 entries:`
+              :ts:`default.history.keepEntries = 10`
+                :ts:`# But the Content Elements will have 20 levels:`
+              :ts:`table.tt_content.history.keepEntries = 20`
+            :ts:`}`
 
          **Note:** This option has been removed in TYPO3 4.0.
 
@@ -382,14 +382,14 @@ Processing options for a $GLOBALS['TCA'] configured table.
          to (put after) the record title! Sorry for that mistake, it isn't the
          only time I have made that.)
 
-         **Example:** ::
+         **Example:**
 
-            TCEMAIN.table.pages {
-                # Pages will *not* have "(copy)" appended:
-              disablePrependAtCopy = 1
-                # Pages will *not* be hidden upon copy:
-              disableHideAtCopy = 1
-            }
+            :ts:`TCEMAIN.table.pages {`
+                :ts:`# Pages will *not* have "(copy)" appended:`
+              :ts:`disablePrependAtCopy = 1`
+                :ts:`# Pages will *not* be hidden upon copy:`
+              :ts:`disableHideAtCopy = 1`
+            :ts:`}`
 
          These settings adjust that a page which is copied will neither have
          "(copy X)" appended nor be hidden.
