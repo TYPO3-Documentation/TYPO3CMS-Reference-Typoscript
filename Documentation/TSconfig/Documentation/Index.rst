@@ -16,7 +16,7 @@ TSconfig Reference
       doc_core_tsconfig
 
 :Version:
-      6.2-dev
+      6.2
 
 :Language:
       en
@@ -28,7 +28,7 @@ TSconfig Reference
       tsconfig, typoscript, reference, forDevelopers, forAdvanced
 
 :Copyright:
-      2000-2013
+      2000-2014
 
 :Author:
       Documentation Team
