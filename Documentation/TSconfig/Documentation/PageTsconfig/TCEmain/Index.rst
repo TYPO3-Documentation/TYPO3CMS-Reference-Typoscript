@@ -48,9 +48,12 @@
 
             :ts:`TCEMAIN {`
                 :ts:`# Owner be_users UID for new pages:`
-              :ts:`permissions.userid = 2`
+
+                :ts:`permissions.userid = 2`
+
                 :ts:`# Owner be_groups UID for new pages:`
-              :ts:`permissions.groupid = 3`
+
+                :ts:`permissions.groupid = 3`
             :ts:`}`
 
          Backend User with UID 2 is "test" and the Backend Group with UID 3 is
@@ -85,20 +88,30 @@
          Defaults from $GLOBALS['TYPO3\_CONF\_VARS']
 
             :php:`'user' => 'show,edit,delete,new,editcontent',`
+
             :php:`'group' => 'show,edit,new,editcontent',`
+
             :php:`'everybody' => ''`
 
          **Example:**
 
             :ts:`TCEMAIN.permissions {`
+
                 :ts:`# User can do anything (default):`
-              :ts:`user = 31`
+
+                :ts:`user = 31`
+
                 :ts:`# Group can do anything`
+
                 :ts:`# (normally "delete" is disabled)`
-              :ts:`group = 31`
+
+                :ts:`group = 31`
+
                 :ts:`# Everybody can at least see the page`
+
                 :ts:`# (normally everybody can do nothing)`
-              :ts:`everybody = show`
+
+                :ts:`everybody = show`
             :ts:`}`
 
          The page "Community" was created with the settings from the example
@@ -124,14 +137,18 @@
 
          **Examples:**
 
-              :ts:`# Will clear the cache for page ID 12 and 23`
-              :ts:`# when saving a record in this page:`
+            :ts:`# Will clear the cache for page ID 12 and 23`
+
+            :ts:`# when saving a record in this page:`
+
             :ts:`TCEMAIN.clearCacheCmd = 12,23`
 
-              :ts:`# Will clear all pages cache:`
+            :ts:`# Will clear all pages cache:`
+
             :ts:`TCEMAIN.clearCacheCmd = pages`
 
-              :ts:`# Will clear ALL cache:`
+            :ts:`# Will clear ALL cache:`
+
             :ts:`TCEMAIN.clearCacheCmd = all`
 
 
@@ -198,7 +215,8 @@
 
             :ts:`TCEMAIN {`
                 :ts:`# Set a German label:`
-              :ts:`translateToMessage = Bitte in "%s" Übersetzen:`
+
+                :ts:`translateToMessage = Bitte in "%s" Übersetzen:`
             :ts:`}`
 
 
@@ -222,7 +240,8 @@
 
             :ts:`TCEMAIN {`
                 :ts:`# Set a German header:`
-              :ts:`notificationEmail_subject = TYPO3-Arbeitsumgebungshinweis: Änderung der Stufe für %s`
+
+                :ts:`notificationEmail_subject = TYPO3-Arbeitsumgebungshinweis: Änderung der Stufe für %s`
             :ts:`}`
 
          **Note:** This option is deprecated since TYPO3 4.5. Since TYPO3 4.5
@@ -295,16 +314,22 @@
 
             :ts:`TCEMAIN {`
                 :ts:`# Set a German bodytext:`
-              :ts:`notificationEmail_body (`
-                :ts:`Auf der TYPO3-Seite "%s" (%s)`
-                :ts:`wurde in der Arbeitsumgebung "%s" (%s)`
-                :ts:`die Stufe des Elements/der Elemente "%11$s" (%s) am Ort "%10$s" im Seitenbaum verändert:`
-                :ts:`==> %s`
-                :ts:`Kommentar des Benutzers:`
-                :ts:`"%s"`
 
-                :ts:`Die Stufe wurde geändert von %s (Benutzername: %s).`
-              :ts:`)`
+                :ts:`notificationEmail_body (`
+                    :ts:`Auf der TYPO3-Seite "%s" (%s)`
+
+                    :ts:`wurde in der Arbeitsumgebung "%s" (%s)`
+
+                    :ts:`die Stufe des Elements/der Elemente "%11$s" (%s) am Ort "%10$s" im Seitenbaum verändert:`
+
+                    :ts:`==> %s`
+
+                    :ts:`Kommentar des Benutzers:`
+
+                    :ts:`"%s"`
+
+                    :ts:`Die Stufe wurde geändert von %s (Benutzername: %s).`
+                :ts:`)`
             :ts:`}`
 
          **Note:** This option is deprecated since TYPO3 4.5. Since TYPO3 4.5
@@ -341,9 +366,12 @@ Processing options for a $GLOBALS['TCA'] configured table.
 
             :ts:`TCEMAIN {`
                 :ts:`# Default for all tables is 10 entries:`
-              :ts:`default.history.keepEntries = 10`
+
+                :ts:`default.history.keepEntries = 10`
+
                 :ts:`# But the Content Elements will have 20 levels:`
-              :ts:`table.tt_content.history.keepEntries = 20`
+
+                :ts:`table.tt_content.history.keepEntries = 20`
             :ts:`}`
 
          **Note:** This option has been removed in TYPO3 4.0.
@@ -386,9 +414,12 @@ Processing options for a $GLOBALS['TCA'] configured table.
 
             :ts:`TCEMAIN.table.pages {`
                 :ts:`# Pages will *not* have "(copy)" appended:`
-              :ts:`disablePrependAtCopy = 1`
+
+                :ts:`disablePrependAtCopy = 1`
+
                 :ts:`# Pages will *not* be hidden upon copy:`
-              :ts:`disableHideAtCopy = 1`
+
+                :ts:`disableHideAtCopy = 1`
             :ts:`}`
 
          These settings adjust that a page which is copied will neither have

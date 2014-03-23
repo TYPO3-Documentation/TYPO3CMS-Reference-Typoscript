@@ -142,9 +142,11 @@ Configuration of the Admin Panel in the Frontend for the user.
          the admin-panel itself:*
 
             :ts:`admPanel {`
-              :ts:`enable.edit = 1`
-              :ts:`module.edit.forceDisplayFieldIcons = 1`
-              :ts:`hide = 1`
+                :ts:`enable.edit = 1`
+
+                :ts:`module.edit.forceDisplayFieldIcons = 1`
+
+                :ts:`hide = 1`
             :ts:`}`
 
 
