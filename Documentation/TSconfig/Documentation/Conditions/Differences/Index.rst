@@ -36,9 +36,7 @@ adminUser
 Syntax:
 ~~~~~~~
 
-::
-
-   [adminUser = 0/1]
+:ts:`[adminUser = 0/1]`
 
 
 Comparison
@@ -51,7 +49,7 @@ if the user is an admin, 0 if he is not.
 Example:
 ~~~~~~~~
 
-The following condition will apply only if the BE user is an admin. ::
+The following condition will apply only if the BE user is an admin.
 
-   [adminUser = 1]
+:ts:`[adminUser = 1]`
 

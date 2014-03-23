@@ -33,15 +33,15 @@
          parameter looks like this: [fe\_user-session-id]-[a hash made to
          prevent misuse]
 
-         The parameter can be calculated like this::
+         The parameter can be calculated like this
 
-            $param = '&FE_SESSION_KEY=' . rawurlencode(
-              $GLOBALS['TSFE']->fe_user->id . '-' .
-              md5(
-                $GLOBALS['TSFE']->fe_user->id. '/' .
-                $GLOBALS['TYPO3_CONF_VARS']['SYS']['encryptionKey']
-              )
-            );
+            :php:`$param = '&FE_SESSION_KEY=' . rawurlencode(`
+              :php:`$GLOBALS['TSFE']->fe_user->id . '-' .`
+              :php:`md5(`
+                :php:`$GLOBALS['TSFE']->fe_user->id. '/' .`
+                :php:`$GLOBALS['TYPO3_CONF_VARS']['SYS']['encryptionKey']`
+              :php:`)`
+            :php:`)`;
 
 
 .. container:: table-row
@@ -66,9 +66,9 @@
          somewhere in the frontend you don't want the redundancy of specifying
          the value twice. In such a case you can use this feature.
 
-         **Example:** ::
+         **Example:**
 
-            TSFE.constants.websiteConfig.id = 123
+            :ts:`TSFE.constants.websiteConfig.id = 123`
 
          In the TypoScript templates you can now insert this constant as
          {$websiteConfig.id}
@@ -77,12 +77,12 @@
             :alt: Showing TS constants with the TypoScript Object Browser
 
          In the backend module (in the Web main module) you can reach the value
-         by a few lines of code like these::
+         by a few lines of code like these
 
-            $PageTSconfig =
-                t3lib_BEfunc::getPagesTSconfig($this->pObj->id);
-            $websiteID =
-                $PageTSconfig['TSFE.']['constants.']['websiteConfig.']['id'];
+            php:`$PageTSconfig =`
+                php:`t3lib_BEfunc::getPagesTSconfig($this->pObj->id);`
+            php:`$websiteID =`
+                php:`$PageTSconfig['TSFE.']['constants.']['websiteConfig.']['id'];`
 
          **Note:** In the frontend the setting of default constants will only
          apply to a branch of the tree *if* a template record is found on that

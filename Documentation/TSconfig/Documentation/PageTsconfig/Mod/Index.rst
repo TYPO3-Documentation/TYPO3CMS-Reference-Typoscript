@@ -30,11 +30,11 @@ In this case the main menu of the Web > Info module looks like this:
 .. figure:: ../../Images/manual_html_m615ff10e.png
    :alt: The original function menu inside the info module
 
-By adding this Page TSconfig we can remove the "Page TSconfig" item::
+By adding this Page TSconfig we can remove the "Page TSconfig" item
 
-   mod.web_info.menu.function {
-     tx_infopagetsconfig_webinfo = 0
-   }
+   :ts:`mod.web_info.menu.function {`
+     :ts:`tx_infopagetsconfig_webinfo = 0`
+   :ts:`}`
 
 The function menu will now look like this:
 
@@ -66,23 +66,23 @@ Examples from the TYPO3 core are listed in the table below:
          .. figure:: ../../Images/manual_html_5268c65f.png
             :alt: The original layout menu inside the page module
 
-         **Option tags:** ::
+         **Option tags:**
 
-            <select name="SET[function]">
-                <option value="1">Columns</option>
-                <option value="0">QuickEdit</option>
-                <option value="2">Languages</option>
-                <option value="3">Grid-View</option>
-            </select>
+            :ts:`<select name="SET[function]">`
+                :ts:`<option value="1">Columns</option>`
+                :ts:`<option value="0">QuickEdit</option>`
+                :ts:`<option value="2">Languages</option>`
+                :ts:`<option value="3">Grid-View</option>`
+            :ts:`</select>`
 
-         **Example:** ::
+         **Example:**
 
-              # Disables all items except the "QuickEdit" item:
-            mod.web_layout.menu.function {
-              1 = 0
-              2 = 0
-              3 = 0
-            }
+              :ts:`# Disables all items except the "QuickEdit" item:`
+            :ts:`mod.web_layout.menu.function {`
+              :ts:`1 = 0`
+              :ts:`2 = 0`
+              :ts:`3 = 0`
+            :ts:`}
 
 
 .. container:: table-row
@@ -96,28 +96,28 @@ Examples from the TYPO3 core are listed in the table below:
          .. figure:: ../../Images/manual_html_4c191623.png
             :alt: The original function menu inside the info module
 
-         **Option tags:** ::
+         **Option tags:**
 
-            <select name="SET[function]">
-                <option value="tx_cms_webinfo_page">Page tree Overview</option>
-                <option value="tx_cms_webinfo_lang">Localization Overview</option>
-                <option value="tx_belog_webinfo">Log</option>
-                <option value="tx_infopagetsconfig_webinfo">Page TSconfig</option>
-                <option value="tx_linkvalidator_ModFuncReport">Linkvalidator</option>
-                <option value="tx_realurl_modfunc1">Speaking Url Management</option>
-                <option value="tx_indexedsearch_modfunc1">Indexed search</option>
-                <option value="tx_indexedsearch_modfunc2">Indexed search statistics</option>
-            </select>
+            :ts:`<select name="SET[function]">`
+                :ts:`<option value="tx_cms_webinfo_page">Page tree Overview</option>`
+                :ts:`<option value="tx_cms_webinfo_lang">Localization Overview</option>`
+                :ts:`<option value="tx_belog_webinfo">Log</option>`
+                :ts:`<option value="tx_infopagetsconfig_webinfo">Page TSconfig</option>`
+                :ts:`<option value="tx_linkvalidator_ModFuncReport">Linkvalidator</option>`
+                :ts:`<option value="tx_realurl_modfunc1">Speaking Url Management</option>`
+                :ts:`<option value="tx_indexedsearch_modfunc1">Indexed search</option>`
+                :ts:`<option value="tx_indexedsearch_modfunc2">Indexed search statistics</option>`
+            :ts:`</select>`
 
          Note: The Module "Speaking Url Management" is provided by the
          extension RealURL, which is not part of the TYPO3 Core.
 
-         **Example:** ::
+         **Example:**
 
-              # Disables the item "Indexed search statistics":
-            mod.web_info.menu.function {
-              tx_indexedsearch_modfunc2 = 0
-            }
+              :ts:`# Disables the item "Indexed search statistics":`
+            :ts:`mod.web_info.menu.function {`
+              :ts:`tx_indexedsearch_modfunc2 = 0`
+            :ts:`}`
 
 
 .. container:: table-row
@@ -131,11 +131,11 @@ Examples from the TYPO3 core are listed in the table below:
          .. figure:: ../../Images/manual_html_4570ee97.png
             :alt: The original function menu inside the functions module
 
-         **Option tags:** ::
+         **Option tags:**
 
-            <select name="SET[function]">
-                <option value="tx_funcwizards_webfunc">Wizards</option>
-            </select>
+            :ts:`<select name="SET[function]">`
+                :ts:`<option value="tx_funcwizards_webfunc">Wizards</option>`
+            :ts:`</select>`
 
 
 .. container:: table-row
@@ -153,19 +153,19 @@ Examples from the TYPO3 core are listed in the table below:
          .. figure:: ../../Images/manual_html_601b8e77.png
             :alt: Wizards submodules of the function menu inside the functions module
 
-         **Option tags:** ::
+         **Option tags:**
 
-            <select name="SET[wiz]">
-                <option value="tx_wizardcrpages_webfunc_2">Create multiple pages</option>
-                <option value="tx_wizardsortpages_webfunc_2">Sort pages</option>
-            </select>
+            :ts:`<select name="SET[wiz]">`
+                :ts:`<option value="tx_wizardcrpages_webfunc_2">Create multiple pages</option>`
+                :ts:`<option value="tx_wizardsortpages_webfunc_2">Sort pages</option>`
+            :ts:`</select>`
 
-         **Example:** ::
+         **Example:**
 
-              # Disables the sub-item "Create multiple pages":
-            mod.web_func.menu.wiz {
-              tx_wizardcrpages_webfunc_2 = 0
-            }
+              :ts:`# Disables the sub-item "Create multiple pages":`
+            :ts:`mod.web_func.menu.wiz {`
+              :ts:`tx_wizardcrpages_webfunc_2 = 0`
+            :ts:`}`
 
 
 .. container:: table-row
@@ -179,14 +179,14 @@ Examples from the TYPO3 core are listed in the table below:
          .. figure:: ../../Images/manual_html_38b1b9c9.png
             :alt: The original function menu from the template module
 
-         **Option tags:** ::
+         **Option tags:**
 
-            <select name="SET[function]">
-                <option value="tx_tstemplateceditor">Constant Editor</option>
-                <option value="tx_tstemplateinfo">Info/Modify</option>
-                <option value="tx_tstemplateobjbrowser">TypoScript Object Browser</option>
-                <option value="tx_tstemplateanalyzer">Template Analyzer</option>
-            </select>
+            :ts:`<select name="SET[function]">`
+                :ts:`<option value="tx_tstemplateceditor">Constant Editor</option>`
+                :ts:`<option value="tx_tstemplateinfo">Info/Modify</option>`
+                :ts:`<option value="tx_tstemplateobjbrowser">TypoScript Object Browser</option>`
+                :ts:`<option value="tx_tstemplateanalyzer">Template Analyzer</option>`
+            :ts:`</select>`
 
 
 .. container:: table-row
@@ -219,15 +219,15 @@ Examples from the TYPO3 core are listed in the table below:
 
          **Example:**
 
-         Set this as *User TSconfig* ::
+         Set this as *User TSconfig*
 
-              # Task Center configuration:
-            mod.user_task.menu.function {
-                # Disable "Recent Pages" display:
-              tx_taskcenterrecent = 0
-                # Disable "Action" list
-              tx_sysaction = 0
-            }
+              :ts:`# Task Center configuration:`
+            :ts:`mod.user_task.menu.function {`
+                :ts:`# Disable "Recent Pages" display:`
+              :ts:`tx_taskcenterrecent = 0`
+                :ts:`# Disable "Action" list`
+              :ts:`tx_sysaction = 0`
+            :ts:`}`
 
 
 .. ###### END~OF~TABLE ######
@@ -258,11 +258,11 @@ Examples from the TYPO3 core are listed in the table below:
          .. figure:: ../../Images/manual_html_m44e31433.png
             :alt: Configuring the TYPO3 Taskcenter
 
-         You can hide a task by using the following syntax in User TSconfig::
+         You can hide a task by using the following syntax in User TSconfig
 
-            taskcenter {
-              <extension-key>.<task-class> = 0
-            }
+            :ts:`taskcenter {`
+              :ts:`<extension-key>.<task-class> = 0`
+            :ts:`}`
 
          Be aware that <extension-key> needs to be replaced by the actual
          extension key and <task-class> by the class name of the PHP class
@@ -270,17 +270,17 @@ Examples from the TYPO3 core are listed in the table below:
 
          **Example:**
 
-         Set this as *User TSconfig* ::
+         Set this as *User TSconfig*
 
-              # Task Center configuration:
-            taskcenter {
-                # Disable "Quick Note":
-              sys_notepad.tx_sysnotepad_task = 0
-                # Disable "Action":
-              sys_action.tx_sysaction_task = 0
-                # Disable "Import/Export":
-              impexp.tx_impexp_task = 0
-            }
+              :ts:`# Task Center configuration:`
+            :ts:`taskcenter {`
+                :ts:`# Disable "Quick Note":`
+              :ts:`sys_notepad.tx_sysnotepad_task = 0`
+                :ts:`# Disable "Action":`
+              :ts:`sys_action.tx_sysaction_task = 0`
+                :ts:`# Disable "Import/Export":`
+              :ts:`impexp.tx_impexp_task = 0`
+            :ts:`}`
 
 
 .. ###### END~OF~TABLE ######
@@ -297,20 +297,20 @@ Therefore, if you want to blind a menu item, the only safe way of
 doing it, is to look at the HTML source of the backend module, to find
 the selector box with the function menu and to extract the key from
 the <option> tags. This listing is a cleaned-up version of a function
-menu. The keys are the values of the option tags::
+menu. The keys are the values of the option tags
 
-   <select>
-       <option value="tx_cms_webinfo_page">Page tree overview</option>
-       <option value="tx_belog_webinfo">Log</option>
-       <option value="tx_infopagetsconfig_webinfo">Page TSconfig</option>
-   </select>
+   :ts:`<select>`
+       :ts:`<option value="tx_cms_webinfo_page">Page tree overview</option>`
+       :ts:`<option value="tx_belog_webinfo">Log</option>`
+       :ts:`<option value="tx_infopagetsconfig_webinfo">Page TSconfig</option>`
+   :ts:`</select>`
 
 As you can see, this is where the key for the example before was
-found::
+found
 
-   mod.web_info.menu.function {
-          tx_infopagetsconfig_webinfo = 0
-   }
+   :ts:`mod.web_info.menu.function {`
+          :ts:`tx_infopagetsconfig_webinfo = 0`
+   :ts:`}`
 
 .. figure:: ../../Images/manual_html_3cd9b3b7.png
    :alt: Warning
@@ -335,20 +335,20 @@ user.
 
 To illustrate this feature let's consider the case from above where a
 menu item in the Web > Info module was disabled in the Page TSconfig
-with this value::
+with this value
 
-   mod.web_info.menu.function {
-     tsconf = 0
-   }
+   :ts:`mod.web_info.menu.function {`
+     :ts:`tsconf = 0`
+   :ts:`}`
 
 If however we activate this configuration in the TSconfig of a certain
 backend user (e.g. the admin user), that user would still be able to
 select this menu item because the value of his User TSconfig overrides
-the same value set in the Page TSconfig::
+the same value set in the Page TSconfig
 
-   mod.web_info.menu.function {
-     tsconf = 1
-   }
+   :ts:`mod.web_info.menu.function {`
+     :ts:`tsconf = 1`
+   :ts:`}`
 
 .. figure:: ../../Images/manual_html_m6b2884ce.png
    :alt: Example 1: Overriding the Page TSconfig menu function
@@ -404,9 +404,9 @@ Shared options for modules (mod.SHARED)
 
          **Example:**
 
-         This results in only the Normal and Border column being displayed::
+         This results in only the Normal and Border column being displayed
 
-            mod.SHARED.colPos_list = 0,3
+            :ts:`mod.SHARED.colPos_list = 0,3`
 
          **Note:**
 
@@ -427,8 +427,7 @@ Shared options for modules (mod.SHARED)
             .. HINT::
                You can use the wizard next to the configuration field as a help.
 
-           ::
-
+           :ts:`
              backend_layout {
                  colCount = 2
                  rowCount = 1
@@ -446,7 +445,7 @@ Shared options for modules (mod.SHARED)
                          }
                      }
                  }
-             }
+             }`
 
          * Click on the root page of your website.
 
@@ -498,12 +497,12 @@ Shared options for modules (mod.SHARED)
 
          **Example:**
 
-         This will show the German flag. ::
+         This will show the German flag.
 
-            mod.SHARED {
-              defaultLanguageFlag = de
-              defaultLanguageLabel = deutsch
-            }
+            :ts:`mod.SHARED {`
+              :ts:`defaultLanguageFlag = de`
+              :ts:`defaultLanguageLabel = deutsch`
+            :ts:`}`
 
          **Note:**
 
@@ -552,9 +551,9 @@ Web > Page (mod.web\_layout)
 
          **Example:**
 
-         This results in only the Normal and Border column being displayed::
+         This results in only the Normal and Border column being displayed
 
-            mod.web_layout.tt_content.colPos_list = 0,3
+            :ts:`mod.web_layout.tt_content.colPos_list = 0,3`
 
 
 .. container:: table-row
@@ -575,11 +574,11 @@ Web > Page (mod.web\_layout)
          **Example:**
 
          This results in the 'Text' field and thereafter 'Header' field being
-         displayed as the very first fields instead of the 'Type' field. ::
+         displayed as the very first fields instead of the 'Type' field.
 
-            mod.web_layout.tt_content {
-              fieldOrder = bodytext, header
-            }
+            :ts:`mod.web_layout.tt_content {`
+              :ts:`fieldOrder = bodytext, header`
+            :ts:`}`
 
 
 .. container:: table-row
@@ -595,11 +594,11 @@ Web > Page (mod.web\_layout)
          edit form when clicking the edit icon of a content element in the
          'Columns' view of the module.
 
-         **Example:** ::
+         **Example:**
 
-            mod.web_layout {
-              editFieldsAtATime = 2
-            }
+            :ts:`mod.web_layout {`
+              :ts:`editFieldsAtATime = 2`
+            :ts:`}`
 
    Default
          1
@@ -798,11 +797,11 @@ Web > List (mod.web\_list)
          If set, the link in the bottom of the page, "Create new record", is
          hidden.
 
-         **Example:** ::
+         **Example:**
 
-            mod.web_list {
-                    noCreateRecordsLink = 1
-            }
+            :ts:`mod.web_list {`
+                    :ts:`noCreateRecordsLink = 1`
+            :ts:`}`
 
    Default
          0
@@ -819,11 +818,11 @@ Web > List (mod.web\_list)
    Description
          If set, the background colors of rows in the lists will alternate.
 
-         **Example:** ::
+         **Example:**
 
-            mod.web_list {
-                    alternateBgColors = 0
-            }
+            :ts:`mod.web_list {`
+                    :ts:`alternateBgColors = 0`
+            :ts:`}`
 
          The result is the deactivation of alternating background colors for
          each element:
@@ -864,11 +863,11 @@ Web > List (mod.web\_list)
          single table view, that means when a table has been clicked. This is
          very practical for pages containing many records from many tables!
 
-         **Example:** ::
+         **Example:**
 
-            mod.web_list {
-                    listOnlyInSingleTableView = 1
-            }
+            :ts:`mod.web_list {`
+                    :ts:`listOnlyInSingleTableView = 1`
+            :ts:`}`
 
          The result will be that records from tables are only listed in the
          single-table mode:
@@ -894,11 +893,11 @@ Web > List (mod.web\_list)
          for example important to disable batch download of sensitive data via
          csv or t3d exports.
 
-         **Example:** ::
+         **Example:**
 
-            mod.web_list {
-                    noExportRecordsLinks = 1
-            }
+            :ts:`mod.web_list {`
+                    :ts:`noExportRecordsLinks = 1`
+            :ts:`}`
 
          The buttons "Export" and "Download CSV file" are hidden 
          in single table view inside the list module:
@@ -979,9 +978,9 @@ Web > List (mod.web\_list)
          If set to non-zero, the table is hidden. If it is zero, table is shown
          no matter if table name is listed in "hideTables" list.
 
-         **Example:** ::
+         **Example:**
 
-            mod.web_list.table.tt_content.hideTable = 1
+            :ts:`mod.web_list.table.tt_content.hideTable = 1`
 
 
 .. container:: table-row
@@ -1000,13 +999,13 @@ Web > List (mod.web\_list)
          Use "\*" to hide all records of additional website languages in all
          tables or choose tables by comma-separated list.
 
-         **Example:** ::
+         **Example:**
 
-            mod.web_list.hideTranslations = *
+            :ts:`mod.web_list.hideTranslations = *`
 
-         or ::
+         or
 
-            mod.web_list.hideTranslations = tt_content,tt_news
+            :ts:`mod.web_list.hideTranslations = tt_content,tt_news`
 
 
 .. container:: table-row
@@ -1044,11 +1043,11 @@ Web > List (mod.web\_list)
          so this is "pseudo security". The point is to reduce the number of
          options for new records visually.
 
-         **Example:** ::
+         **Example:**
 
-            mod.web_list {
-              allowedNewTables = pages, tt_news
-            }
+            :ts:`mod.web_list {`
+              :ts:`allowedNewTables = pages, tt_news`
+            :ts:`}`
 
          Only pages and tt\_news table elements will be linked to in the New
          record screen:
@@ -1075,11 +1074,11 @@ Web > List (mod.web\_list)
          If allowedNewTables and deniedNewTables contain a common subset,
          deniedNewTables takes precedence.
 
-         **Example:** ::
+         **Example:**
 
-            mod.web_list {
-              deniedNewTables = tt_news,tt_content
-            }
+            :ts:`mod.web_list {`
+              :ts:`deniedNewTables = tt_news,tt_content`
+            :ts:`}`
 
 
 .. container:: table-row
@@ -1260,11 +1259,11 @@ Web > View (mod.web\_view)
          **Example:**
 
          By this configuration frontend pages will be shown with
-         "index.php?id=123&type=1" from the Web > View module::
+         "index.php?id=123&type=1" from the Web > View module
 
-            mod.web_view {
-                    type = 1
-            }
+            :ts:`mod.web_view {`
+                    :ts:`type = 1`
+            :ts:`}`
 
 
 .. container:: table-row
@@ -1281,12 +1280,12 @@ Web > View (mod.web\_view)
          **Example:**
 
          With this configuration a new frame sizes with 500px x 300px labeled
-         myPreview will be added in the dropdown menu Width inside Web > View module::
+         myPreview will be added in the dropdown menu Width inside Web > View module
 
-            mod.web_view.previewFrameWidths {
-                    300.label = myPreview
-                      300.height = 500
-            }
+            :ts:`mod.web_view.previewFrameWidths {`
+                    :ts:`300.label = myPreview`
+                      :ts:`300.height = 500`
+            :ts:`}`
 
          .. figure:: ../../Images/WebViewTSConfigPreview.png
             :alt: Dropdown menu Width with added frame size called myPreview
@@ -1337,11 +1336,11 @@ New record wizard (mod.wizards.newRecord)
          Setting any of these properties to 0 will hide the corresponding link,
          but setting to 1 will leave it visible.
 
-         **Example:** ::
+         **Example:**
 
-            mod.wizards.newRecord.pages.show {
-                    pageInside = 0
-            }
+            :ts:`mod.wizards.newRecord.pages.show {`
+                    :ts:`pageInside = 0`
+            :ts:`}`
 
          Hides the "Page (inside)" link.
 
@@ -1368,9 +1367,9 @@ New record wizard (mod.wizards.newRecord)
          Records are grouped by extension keys, plus the special key "system"
          for records provided by the TYPO3 Core.
 
-         **Example:** ::
+         **Example:**
 
-            mod.wizards.newRecord.order = tt_news
+            :ts:`mod.wizards.newRecord.order = tt_news`
 
          This places the tt\_news group at the top (after pages and content
          elements). The other groups follow unchanged:
@@ -1401,9 +1400,9 @@ New content element wizard (mod.wizards.newContentElement)
    Description
          Alternative rendering mode; set to "tabs", if you want tabs.
 
-         **Example:** ::
+         **Example:**
 
-            mod.wizards.newContentElement.renderMode = tabs
+            :ts:`mod.wizards.newContentElement.renderMode = tabs`
 
          .. figure:: ../../Images/manual_html_56794b6d.png
             :alt: The New content element screen with tabs
@@ -1449,13 +1448,13 @@ New content element wizard (mod.wizards.newContentElement)
          Comma-separated list of items to show in the group. Use "\*" to show
          all.
 
-         **Example:** ::
+         **Example:**
 
-              # Hide bulletList
-            mod.wizards.newContentElement.wizardItems.common.show := removeFromList(bullets)
+              :ts:`# Hide bulletList`
+            :ts:`mod.wizards.newContentElement.wizardItems.common.show := removeFromList(bullets)`
 
-              # Only show text and textpic in common
-            mod.wizards.newContentElement.wizardItems.common.show = text,textpic
+              :ts:`# Only show text and textpic in common`
+            :ts:`mod.wizards.newContentElement.wizardItems.common.show = text,textpic`
 
 
 .. container:: table-row
@@ -1540,16 +1539,16 @@ beuser:mod.wizards.newContentElement]
 Example 1:
 ~~~~~~~~~~
 
-Add a new element (header) to the "common" group::
+Add a new element (header) to the "common" group
 
-   mod.wizards.newContentElement.wizardItems.common.elements.header {
-           icon = gfx/c_wiz/regular_text.gif
-           title = Header
-           description = Adds a header element only
-           tt_content_defValues {
-                   CType = header
-           }
-   }
+   :ts:`mod.wizards.newContentElement.wizardItems.common.elements.header {`
+           :ts:`icon = gfx/c_wiz/regular_text.gif`
+           :ts:`title = Header`
+           :ts:`description = Adds a header element only`
+           :ts:`tt_content_defValues {`
+                   :ts:`CType = header`
+           :ts:`}`
+   :ts:`}`
    mod.wizards.newContentElement.wizardItems.common.show := addToList(header)
 
 .. _pageexample2:
@@ -1557,25 +1556,25 @@ Add a new element (header) to the "common" group::
 Example 2:
 ~~~~~~~~~~
 
-Create a new group and add a (pre-filled) element to it::
+Create a new group and add a (pre-filled) element to it
 
-   mod.wizards.newContentElement.wizardItems.myGroup {
-           header = LLL:EXT:cms/layout/locallang.xml:advancedFunctions
-           elements.customText {
-                   icon = gfx/c_wiz/regular_text.gif
-                   title = Introductory text for national startpage
-                   description = Use this element for all national startpages
-                   tt_content_defValues {
-                           CType = text
-                           bodytext (
-   <h2>Section Header</h2>
-   <p class="bodytext">Lorem ipsum dolor sit amet, consectetur, sadipisci velit ...</p>
-                           )
-                           header = Section Header
-                           header_layout = 100
-                   }
-           }
-   }
+   :ts:`mod.wizards.newContentElement.wizardItems.myGroup {`
+           :ts:`header = LLL:EXT:cms/layout/locallang.xml:advancedFunctions`
+           :ts:`elements.customText {`
+                   :ts:`icon = gfx/c_wiz/regular_text.gif`
+                   :ts:`title = Introductory text for national startpage`
+                   :ts:`description = Use this element for all national startpages`
+                   :ts:`tt_content_defValues {`
+                           :ts:`CType = text`
+                           :ts:`bodytext (`
+   :ts:`<h2>Section Header</h2>`
+   :ts:`<p class="bodytext">Lorem ipsum dolor sit amet, consectetur, sadipisci velit ...</p>`
+                           :ts:`)`
+                           :ts:`header = Section Header`
+                           :ts:`header_layout = 100`
+                   :ts:`}`
+           :ts:`}`
+   :ts:`}`
    mod.wizards.newContentElement.wizardItems.myGroup.show = customText
 
 This will add the following at the bottom of the new content element
@@ -1605,9 +1604,9 @@ Tools > Extension Manager (mod.tools\_em)
          extensions. That can take many seconds (up to 30) depending on the
          number of extensions.
 
-         **Example:** ::
+         **Example:**
 
-            mod.tools_em.allowTVlisting = 1
+            :ts:`mod.tools_em.allowTVlisting = 1`
 
          Enables these options in the Extension Manager:
 
@@ -1643,12 +1642,12 @@ Edit document 'module' (mod.xMOD\_alt\_doc)
    Description
          If set, the document selector is disabled.
 
-         **Example:** ::
+         **Example:**
 
-            mod.xMOD_alt_doc {
-              disableDocSelector = 1
-              disableCacheSelector = 1
-            }
+            :ts:`mod.xMOD_alt_doc {`
+              :ts:`disableDocSelector = 1`
+              :ts:`disableCacheSelector = 1`
+            :ts:`}`
 
          .. figure:: ../../Images/manual_html_2a6f6c3a.png
             :alt: Effect if document selector is disabled

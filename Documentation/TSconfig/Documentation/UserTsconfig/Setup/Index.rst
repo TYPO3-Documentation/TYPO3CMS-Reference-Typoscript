@@ -468,19 +468,19 @@ The table below describes the related option:
          You can find the names of the fields in the Module "Configuration".
          Just browse through the "User Settings" array.
 
-         **Example:** ::
+         **Example:**
 
-            setup.fields.emailMeAtLogin.disabled = 1
+            :ts:`setup.fields.emailMeAtLogin.disabled = 1`
 
          With this example, we hide the "E-mail me when I login" checkbox.
 
          You can also combine setup.fields.<field name>.disabled and
          setup.override.<field name>.
 
-         **Example:** ::
+         **Example:**
 
-            setup.fields.emailMeAtLogin.disabled = 1
-            setup.override.emailMeAtLogin = 1
+            :ts:`setup.fields.emailMeAtLogin.disabled = 1`
+            :ts:`setup.override.emailMeAtLogin = 1`
 
          Now the "Email me when I login" field is removed, but the user will
          still receive an email when he logs in.

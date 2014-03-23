@@ -139,13 +139,13 @@ Configuration of the Admin Panel in the Frontend for the user.
          *Forces edit-forms to open in same window - not pop up window.*
 
          *Example, that forces the display of the edit icons without displaying
-         the admin-panel itself:* ::
+         the admin-panel itself:*
 
-            admPanel {
-              enable.edit = 1
-              module.edit.forceDisplayFieldIcons = 1
-              hide = 1
-            }
+            :ts:`admPanel {`
+              :ts:`enable.edit = 1`
+              :ts:`module.edit.forceDisplayFieldIcons = 1`
+              :ts:`hide = 1`
+            :ts:`}`
 
 
 .. ###### END~OF~TABLE ######
@@ -172,10 +172,10 @@ In that case the backend interface is not started. ::
 This is what the admin panel looks like. Notice the fact that the
 visibility of the admin panel is ultimately depending on being
 configured in your TypoScript template for the website! This is easily
-done by inserting this string in the TypoScript Template::
+done by inserting this string in the TypoScript Template
 
-      config.admPanel = 1
+      :ts:`config.admPanel = 1`
 
-Or if you use frames, this is probably better::
+Or if you use frames, this is probably better
 
-      page.config.admPanel = 1
+      :ts:`page.config.admPanel = 1`
