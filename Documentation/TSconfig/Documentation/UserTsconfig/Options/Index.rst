@@ -57,8 +57,25 @@ Various options for the user affecting the core at various points.
          boolean
 
    Description
-         This will allow a user to clear the whole page cache.
+         This will allow a non-admin user to clear frontend and page-related caches.
 
+   Default
+         0
+
+.. container:: table-row
+
+   Property
+         clearCache.system
+
+   Data type
+         boolean
+
+   Description
+         This will allow a non-admin user to clear frontend and page-related caches, plus some
+         backend-related caches (that is everything including templates). This property is equivalent to clearCache.all.
+
+   Default
+         0
 
 .. container:: table-row
 
@@ -69,8 +86,11 @@ Various options for the user affecting the core at various points.
          boolean
 
    Description
-         This will allow a user to clear all cache (that is everything
-         including templates)
+         This will allow a non-admin user to clear frontend and page-related caches, plus some
+         backend-related caches (that is everything including templates).
+
+   Default
+         0
 
 
 .. container:: table-row
