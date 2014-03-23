@@ -11,7 +11,15 @@ What's new
 ^^^^^^^^^^
 
 This version of the TSconfig Reference was updated for TYPO3 CMS
-version 6.1.
+version 6.2.
+
+For TYPO3 6.2 the User TSconfig property options.clearCache.system has been added 
+which allows a non-admin user to clear frontend and page-related caches, plus some backend-related caches.
+The new property mod.web_view.previewFrameWidths allows to emulate device widths.
+When using the property field.options.pageTree.searchInAlias the search in the pagetree (filter) also filters on the URL alias field.
+The new User TSconfig property excludeDoktypes allows to hide pages with certain doktypes in the page tree.
+And last but not least the new Page TSconfig property options.backendLayout.exclude allows to control which backend layouts are usable.
+
 
 For TYPO3 6.1 the Page TSconfig property noExportRecordsLinks has been added,
 which allows to hide the buttons "Export" and "Download CSV file" in the list
@@ -57,3 +65,7 @@ TYPO3 6.0: `http://forge.typo3.org/projects/typo3cms-doc-tsconfig/versions/1624`
 TYPO3 6.1: `http://forge.typo3.org/projects/typo3cms-doc-tsconfig/versions/1961`_.
 
 .. _http://forge.typo3.org/projects/typo3cms-doc-tsconfig/versions/1961: http://forge.typo3.org/projects/typo3cms-doc-tsconfig/versions/1961
+
+TYPO3 6.2: `http://forge.typo3.org/projects/typo3cms-doc-tsconfig/versions/2011`_.
+
+.. _http://forge.typo3.org/projects/typo3cms-doc-tsconfig/versions/2011: http://forge.typo3.org/projects/typo3cms-doc-tsconfig/versions/2011
