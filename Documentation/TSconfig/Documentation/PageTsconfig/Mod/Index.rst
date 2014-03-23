@@ -33,7 +33,7 @@ In this case the main menu of the Web > Info module looks like this:
 By adding this Page TSconfig we can remove the "Page TSconfig" item
 
    :ts:`mod.web_info.menu.function {`
-   :ts:`tx_infopagetsconfig_webinfo = 0}`
+       :ts:`tx_infopagetsconfig_webinfo = 0}`
 
 The function menu will now look like this:
 
@@ -73,7 +73,6 @@ Examples from the TYPO3 core are listed in the table below:
                 :ts:`<option value="0">QuickEdit</option>`
 
                 :ts:`<option value="2">Languages</option>`
-
                 :ts:`<option value="3">Grid-View</option>`
             :ts:`</select>`
 
@@ -435,7 +434,7 @@ Shared options for modules (mod.SHARED)
 
          This results in only the Normal and Border column being displayed
 
-            :ts:`mod.SHARED.colPos_list = 0,3`
+         :ts:`mod.SHARED.colPos_list = 0,3`
 
          **Note:**
 
@@ -531,11 +530,11 @@ Shared options for modules (mod.SHARED)
 
          This will show the German flag.
 
-            :ts:`mod.SHARED {`
-                :ts:`defaultLanguageFlag = de`
+         :ts:`mod.SHARED {`
+             :ts:`defaultLanguageFlag = de`
 
-                :ts:`defaultLanguageLabel = deutsch`
-            :ts:`}`
+             :ts:`defaultLanguageLabel = deutsch`
+         :ts:`}`
 
          **Note:**
 
@@ -586,7 +585,7 @@ Web > Page (mod.web\_layout)
 
          This results in only the Normal and Border column being displayed
 
-            :ts:`mod.web_layout.tt_content.colPos_list = 0,3`
+         :ts:`mod.web_layout.tt_content.colPos_list = 0,3`
 
 
 .. container:: table-row
@@ -609,9 +608,9 @@ Web > Page (mod.web\_layout)
          This results in the 'Text' field and thereafter 'Header' field being
          displayed as the very first fields instead of the 'Type' field.
 
-            :ts:`mod.web_layout.tt_content {`
-                :ts:`fieldOrder = bodytext, header`
-            :ts:`}`
+         :ts:`mod.web_layout.tt_content {`
+             :ts:`fieldOrder = bodytext, header`
+         :ts:`}`
 
 
 .. container:: table-row
@@ -629,9 +628,9 @@ Web > Page (mod.web\_layout)
 
          **Example:**
 
-            :ts:`mod.web_layout {`
-                :ts:`editFieldsAtATime = 2`
-            :ts:`}`
+         :ts:`mod.web_layout {`
+             :ts:`editFieldsAtATime = 2`
+         :ts:`}`
 
    Default
          1
@@ -832,9 +831,9 @@ Web > List (mod.web\_list)
 
          **Example:**
 
-            :ts:`mod.web_list {`
-                :ts:`noCreateRecordsLink = 1`
-            :ts:`}`
+         :ts:`mod.web_list {`
+             :ts:`noCreateRecordsLink = 1`
+         :ts:`}`
 
    Default
          0
@@ -853,9 +852,9 @@ Web > List (mod.web\_list)
 
          **Example:**
 
-            :ts:`mod.web_list {`
-                :ts:`alternateBgColors = 0`
-            :ts:`}`
+         :ts:`mod.web_list {`
+             :ts:`alternateBgColors = 0`
+         :ts:`}`
 
          The result is the deactivation of alternating background colors for
          each element:
@@ -898,9 +897,9 @@ Web > List (mod.web\_list)
 
          **Example:**
 
-            :ts:`mod.web_list {`
-                :ts:`listOnlyInSingleTableView = 1`
-            :ts:`}`
+         :ts:`mod.web_list {`
+             :ts:`listOnlyInSingleTableView = 1`
+         :ts:`}`
 
          The result will be that records from tables are only listed in the
          single-table mode:
@@ -928,9 +927,9 @@ Web > List (mod.web\_list)
 
          **Example:**
 
-            :ts:`mod.web_list {`
-                :ts:`noExportRecordsLinks = 1`
-            :ts:`}`
+         :ts:`mod.web_list {`
+             :ts:`noExportRecordsLinks = 1`
+         :ts:`}`
 
          The buttons "Export" and "Download CSV file" are hidden 
          in single table view inside the list module:
@@ -1013,7 +1012,7 @@ Web > List (mod.web\_list)
 
          **Example:**
 
-            :ts:`mod.web_list.table.tt_content.hideTable = 1`
+         :ts:`mod.web_list.table.tt_content.hideTable = 1`
 
 
 .. container:: table-row
@@ -1034,11 +1033,11 @@ Web > List (mod.web\_list)
 
          **Example:**
 
-            :ts:`mod.web_list.hideTranslations = *`
+         :ts:`mod.web_list.hideTranslations = *`
 
          or
 
-            :ts:`mod.web_list.hideTranslations = tt_content,tt_news`
+         :ts:`mod.web_list.hideTranslations = tt_content,tt_news`
 
 
 .. container:: table-row
@@ -1078,9 +1077,9 @@ Web > List (mod.web\_list)
 
          **Example:**
 
-            :ts:`mod.web_list {`
-                :ts:`allowedNewTables = pages, tt_news`
-            :ts:`}`
+         :ts:`mod.web_list {`
+             :ts:`allowedNewTables = pages, tt_news`
+         :ts:`}`
 
          Only pages and tt\_news table elements will be linked to in the New
          record screen:
@@ -1109,9 +1108,9 @@ Web > List (mod.web\_list)
 
          **Example:**
 
-            :ts:`mod.web_list {`
-                :ts:`deniedNewTables = tt_news,tt_content`
-            :ts:`}`
+         :ts:`mod.web_list {`
+             :ts:`deniedNewTables = tt_news,tt_content`
+         :ts:`}`
 
 
 .. container:: table-row
@@ -1294,9 +1293,9 @@ Web > View (mod.web\_view)
          By this configuration frontend pages will be shown with
          "index.php?id=123&type=1" from the Web > View module
 
-            :ts:`mod.web_view {`
-                :ts:`type = 1`
-            :ts:`}`
+         :ts:`mod.web_view {`
+             :ts:`type = 1`
+         :ts:`}`
 
 
 .. container:: table-row
@@ -1315,11 +1314,11 @@ Web > View (mod.web\_view)
          With this configuration a new frame sizes with 500px x 300px labeled
          myPreview will be added in the dropdown menu Width inside Web > View module
 
-            :ts:`mod.web_view.previewFrameWidths {`
-                :ts:`300.label = myPreview`
+         :ts:`mod.web_view.previewFrameWidths {`
+         :ts:`300.label = myPreview`
 
-                :ts:`300.height = 500`
-            :ts:`}`
+             :ts:`300.height = 500`
+         :ts:`}`
 
          .. figure:: ../../Images/WebViewTSConfigPreview.png
             :alt: Dropdown menu Width with added frame size called myPreview
@@ -1372,9 +1371,9 @@ New record wizard (mod.wizards.newRecord)
 
          **Example:**
 
-            :ts:`mod.wizards.newRecord.pages.show {`
-                :ts:`pageInside = 0`
-            :ts:`}`
+         :ts:`mod.wizards.newRecord.pages.show {`
+             :ts:`pageInside = 0`
+         :ts:`}`
 
          Hides the "Page (inside)" link.
 
@@ -1403,7 +1402,7 @@ New record wizard (mod.wizards.newRecord)
 
          **Example:**
 
-            :ts:`mod.wizards.newRecord.order = tt_news`
+         :ts:`mod.wizards.newRecord.order = tt_news`
 
          This places the tt\_news group at the top (after pages and content
          elements). The other groups follow unchanged:
@@ -1436,7 +1435,7 @@ New content element wizard (mod.wizards.newContentElement)
 
          **Example:**
 
-            :ts:`mod.wizards.newContentElement.renderMode = tabs`
+         :ts:`mod.wizards.newContentElement.renderMode = tabs`
 
          .. figure:: ../../Images/manual_html_56794b6d.png
             :alt: The New content element screen with tabs
@@ -1484,13 +1483,13 @@ New content element wizard (mod.wizards.newContentElement)
 
          **Example:**
 
-            :ts:`# Hide bulletList`
+         :ts:`# Hide bulletList`
 
-            :ts:`mod.wizards.newContentElement.wizardItems.common.show := removeFromList(bullets)`
+         :ts:`mod.wizards.newContentElement.wizardItems.common.show := removeFromList(bullets)`
 
-            :ts:`# Only show text and textpic in common`
+         :ts:`# Only show text and textpic in common`
 
-            :ts:`mod.wizards.newContentElement.wizardItems.common.show = text,textpic`
+         :ts:`mod.wizards.newContentElement.wizardItems.common.show = text,textpic`
 
 
 .. container:: table-row
@@ -1577,17 +1576,17 @@ Example 1:
 
 Add a new element (header) to the "common" group
 
-   :ts:`mod.wizards.newContentElement.wizardItems.common.elements.header {`
-       :ts:`icon = gfx/c_wiz/regular_text.gif`
+:ts:`mod.wizards.newContentElement.wizardItems.common.elements.header {`
+    :ts:`icon = gfx/c_wiz/regular_text.gif`
 
-       :ts:`title = Header`
+    :ts:`title = Header`
 
-       :ts:`description = Adds a header element only`
+    :ts:`description = Adds a header element only`
 
-       :ts:`tt_content_defValues {`
-           :ts:`CType = header`
-       :ts:`}`
-   :ts:`}`
+    :ts:`tt_content_defValues {`
+        :ts:`CType = header`
+    :ts:`}`
+:ts:`}`
    :ts:`mod.wizards.newContentElement.wizardItems.common.show := addToList(header)`
 
 .. _pageexample2:
@@ -1654,7 +1653,7 @@ Tools > Extension Manager (mod.tools\_em)
 
          **Example:**
 
-            :ts:`mod.tools_em.allowTVlisting = 1`
+         :ts:`mod.tools_em.allowTVlisting = 1`
 
          Enables these options in the Extension Manager:
 
