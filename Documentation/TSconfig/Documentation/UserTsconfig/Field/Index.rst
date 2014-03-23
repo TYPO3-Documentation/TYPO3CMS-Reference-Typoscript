@@ -55,16 +55,16 @@ user is a member, in the User TSconfig field of that user himself.
 Let's say the user is a member of a *usergroup* with this
 configuration
 
-   :ts:`TCAdefaults.tt_content {
-     hidden = 1
-     header = Hello!
-   }`
+   :ts:`TCAdefaults.tt_content {`
+     :ts:`hidden = 1`
+     :ts:`header = Hello!`
+   :ts:`}`
 
 Then we set the following values in the TSconfig field of the *user*
 himself
 
-   :ts:`TCAdefaults.tt_content.header = 234
-   options.clearCache.all = 1`
+   :ts:`TCAdefaults.tt_content.header = 234`
+   :ts:`options.clearCache.all = 1`
 
 This would override the default value of the header ("234") and add the
 clear cache option. The default value of the hidden field is not
@@ -128,19 +128,19 @@ In extensions this is easily done by the extension API function,
 t3lib\_extMgm::addUserTSConfig(). In the (ext\_)localconf.php file you
 can call it like this to set default configuration
 
-   :ts:`/**
-    * Adding the admin panel to users by default and forcing the display of the edit-icons
-    */
-   t3lib_extMgm::addUserTSConfig('
-   admPanel {
-     enable.edit = 1
-     module.edit.forceNoPopup = 1
-     module.edit.forceDisplayFieldIcons = 1
-     module.edit.forceDisplayIcons = 0
-     hide = 1
-   }
-   options.enableBookmarks = 1
-   ');`
+   :ts:`/**`
+    :ts:`* Adding the admin panel to users by default and forcing the display of the edit-icons`
+    :ts:`*/`
+   :ts:`t3lib_extMgm::addUserTSConfig('`
+   :ts:`admPanel {`
+     :ts:`enable.edit = 1`
+     :ts:`module.edit.forceNoPopup = 1`
+     :ts:`module.edit.forceDisplayFieldIcons = 1`
+     :ts:`module.edit.forceDisplayIcons = 0`
+     :ts:`hide = 1`
+   :ts:`}`
+   :ts:`options.enableBookmarks = 1`
+   :ts:`');`
 
 This API function simply adds the content to
 $TYPO3\_CONF\_VARS['BE']['defaultUserTSconfig'].

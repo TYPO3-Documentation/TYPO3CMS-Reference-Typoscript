@@ -45,7 +45,7 @@ in the Page TSconfig of the same page or a subpage.
 
 * Add later in Page TSconfig
 
-:ts:`RTE.default.showButtons := addToList(italic)`
+ts:`RTE.default.showButtons := addToList(italic)`
 
 * Finally you get the value "bold,italic".
 
@@ -82,13 +82,13 @@ In extensions this is easily done by the extension API function,
 t3lib\_extMgm::addPageTSConfig(). In the (ext\_)localconf.php file you
 can call it like this to set default configuration
 
-   :ts:`t3lib_extMgm::addPageTSConfig('
-       RTE.default {
-           proc.preserveTables = 1
-           showButtons = cut,copy,paste,fontstyle,fontsize,textcolor
-           hideButtons = class,user,chMode
-       }
-   ');`
+   :ts:`t3lib_extMgm::addPageTSConfig('`
+       :ts:`RTE.default {`
+           :ts:`proc.preserveTables = 1`
+           :ts:`showButtons = cut,copy,paste,fontstyle,fontsize,textcolor`
+           :ts:`hideButtons = class,user,chMode`
+       :ts:`}`
+   :ts:`');`
 
 This API function simply adds the content to
 $TYPO3\_CONF\_VARS['BE']['defaultPageTSconfig'].
