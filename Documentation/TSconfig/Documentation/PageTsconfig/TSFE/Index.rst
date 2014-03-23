@@ -35,13 +35,13 @@
 
          The parameter can be calculated like this
 
-            :php:`$param = '&FE_SESSION_KEY=' . rawurlencode(
-                 `$GLOBALS['TSFE']->fe_user->id . '-' .
-                    md5(
-                      $GLOBALS['TSFE']->fe_user->id. '/' .
-                      $GLOBALS['TYPO3_CONF_VARS']['SYS']['encryptionKey']
-                    )
-                  );`
+            :php:`$param = '&FE_SESSION_KEY=' . rawurlencode(`
+              :php:`$GLOBALS['TSFE']->fe_user->id . '-' .`
+              :php:`md5(`
+                :php:`$GLOBALS['TSFE']->fe_user->id. '/' .`
+                :php:`$GLOBALS['TYPO3_CONF_VARS']['SYS']['encryptionKey']`
+              :php:`)`
+            :php:`)`;
 
 
 .. container:: table-row

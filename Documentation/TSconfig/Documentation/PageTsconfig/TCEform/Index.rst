@@ -195,33 +195,33 @@ disable options, blind options in selector boxes etc.
 
          **Example:**
 
-            :ts:`TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.myField {
-              # Remove
-              disabled = 1
+            :ts:`TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.myField {`
+              :ts:`# Remove`
+              :ts:`disabled = 1`
 
-              # Rename
-              label = LLL:fileadmin/locallang.xml:tt_content.pi_flexform.my_ext_pi1.sDEF.myField
+              :ts:`# Rename`
+              :ts:`label = LLL:fileadmin/locallang.xml:tt_content.pi_flexform.my_ext_pi1.sDEF.myField`
 
-              # Remove all items from select but these ones
-              keepItems = item1,item2,item3
+              :ts:`# Remove all items from select but these ones`
+              :ts:`keepItems = item1,item2,item3`
 
-              # Remove items from select
-              removeItems = item1,item2,item3
+              :ts:`# Remove items from select`
+              :ts:`removeItems = item1,item2,item3`
 
-              # Add new items to select
-              addItems {
-                item1 = LLL:fileadmin/locallang.xml:tt_content.pi_flexform.my_ext_pi1.sDEF.myField.item1
-                item2 = LLL:fileadmin/locallang.xml:tt_content.pi_flexform.my_ext_pi1.sDEF.myField.item2
-                item3 = LLL:fileadmin/locallang.xml:tt_content.pi_flexform.my_ext_pi1.sDEF.myField.item3
-              }
+              :ts:`# Add new items to select`
+              :ts:`addItems {`
+                :ts:`item1 = LLL:fileadmin/locallang.xml:tt_content.pi_flexform.my_ext_pi1.sDEF.myField.item1`
+                :ts:`item2 = LLL:fileadmin/locallang.xml:tt_content.pi_flexform.my_ext_pi1.sDEF.myField.item2`
+                :ts:`item3 = LLL:fileadmin/locallang.xml:tt_content.pi_flexform.my_ext_pi1.sDEF.myField.item3`
+              :ts:`}`
 
-              # Rename existing items
-              altLabels {
-                item1 = LLL:fileadmin/locallang.xml:tt_content.pi_flexform.my_ext_pi1.sDEF.myField.item1
-                item2 = LLL:fileadmin/locallang.xml:tt_content.pi_flexform.my_ext_pi1.sDEF.myField.item2
-                item3 = LLL:fileadmin/locallang.xml:tt_content.pi_flexform.my_ext_pi1.sDEF.myField.item3
-              }
-            }`
+              :ts:`# Rename existing items`
+              :ts:`altLabels {`
+                :ts:`item1 = LLL:fileadmin/locallang.xml:tt_content.pi_flexform.my_ext_pi1.sDEF.myField.item1`
+                :ts:`item2 = LLL:fileadmin/locallang.xml:tt_content.pi_flexform.my_ext_pi1.sDEF.myField.item2`
+                :ts:`item3 = LLL:fileadmin/locallang.xml:tt_content.pi_flexform.my_ext_pi1.sDEF.myField.item3`
+              :ts:`}`
+            :ts:`}`
 
 
 .. container:: table-row
@@ -278,10 +278,10 @@ above).
 
          **Example:**
 
-            :ts:`TCEFORM.pages.title {
-                # You cannot edit the Page title field now:
-              disabled = 1
-            }`
+            :ts:`TCEFORM.pages.title {`
+                :ts:`# You cannot edit the Page title field now:`
+              :ts:`disabled = 1`
+            :ts:`}`
 
 
 .. container:: table-row
@@ -297,11 +297,11 @@ above).
 
          **Example:**
 
-            :ts:`TCEFORM.pages.title {
-              label = LLL:EXT:my_ext/locallang_db.xml:table.column
-              label.default = New Label
-              label.de = Neuer Feldname
-            }`
+            :ts:`TCEFORM.pages.title {`
+              :ts:`label = LLL:EXT:my_ext/locallang_db.xml:table.column`
+              :ts:`label.default = New Label`
+              :ts:`label.de = Neuer Feldname`
+            :ts:`}`
 
 
 .. container:: table-row
@@ -320,10 +320,10 @@ above).
 
          **Example:**
 
-            :ts:`TCEFORM.pages.doktype {
-                # Show only standard and "Spacer" page types
-              keepItems = 1,199
-            }`
+            :ts:`TCEFORM.pages.doktype {`
+                :ts:`# Show only standard and "Spacer" page types`
+              :ts:`keepItems = 1,199`
+            :ts:`}`
 
 
 .. container:: table-row
@@ -342,10 +342,10 @@ above).
 
          **Example:**
 
-            :ts:`TCEFORM.pages.doktype {
-                # Remove the "Recycler" and "Spacer" page type options:
-              removeItems = 199, 255
-            }`
+            :ts:`TCEFORM.pages.doktype {`
+                :ts:`# Remove the "Recycler" and "Spacer" page type options:`
+              :ts:`removeItems = 199, 255`
+            :ts:`}`
 
 
 .. container:: table-row
@@ -365,13 +365,13 @@ above).
 
          **Example:**
 
-            :ts:`TCEFORM.pages.doktype {
-                # Creates a new page type option:
-              addItems.123 = New Page type!
+            :ts:`TCEFORM.pages.doktype {`
+                :ts:`# Creates a new page type option:`
+              :ts:`addItems.123 = New Page type!`
 
-                # Creates yet a page type with "locallang" title:
-              addItems.124 = LLL:EXT:lang/locallang_tca.php:title
-            }`
+                :ts:`# Creates yet a page type with "locallang" title:`
+              :ts:`addItems.124 = LLL:EXT:lang/locallang_tca.php:title` 
+            :ts:`}
 
          This example extends the options for Page types with two new items:
 
@@ -406,10 +406,10 @@ above).
 
          **Example:**
 
-            :ts:`TCEFORM.pages.doktype {
-                # "INVALID VALUE ..." label will never show up:
-              disableNoMatchingValueElement = 1
-            }`
+            :ts:`TCEFORM.pages.doktype {`
+                :ts:`# "INVALID VALUE ..." label will never show up:`
+              :ts:`disableNoMatchingValueElement = 1`
+            :ts:`}`
 
          Now the selector box will default to the first element in the selector
          box:
@@ -437,10 +437,10 @@ above).
 
          **Example:**
 
-            :ts:`TCEFORM.pages.doktype {
-                # Alternative "INVALID VALUE ..." label:
-              noMatchingValue_label = VALUE "%s" was not available!
-            }`
+            :ts:`TCEFORM.pages.doktype {`
+                :ts:`# Alternative "INVALID VALUE ..." label:`
+              :ts:`noMatchingValue_label = VALUE "%s" was not available!`
+            :ts:`}`
 
          The result will be:
 
@@ -463,13 +463,13 @@ above).
 
          **Example:**
 
-            :ts:`TCEFORM.pages.doktype {
-                # Setting alternative labels:
-              altLabels.1 = STANDARD Page Type
-              altLabels.254 = Folder (for various elements)
-                # Sets the default label for Recycler via "locallang":
-              altLabels.255 = LLL:EXT:lang/locallang_tca.php:doktype.I.2
-            }`
+            :ts:`TCEFORM.pages.doktype {`
+                :ts:`# Setting alternative labels:`
+              :ts:`altLabels.1 = STANDARD Page Type`
+              :ts:`altLabels.254 = Folder (for various elements)`
+                :ts:`# Sets the default label for Recycler via "locallang":`
+              :ts:`altLabels.255 = LLL:EXT:lang/locallang_tca.php:doktype.I.2`
+            :ts:`}`
 
          Result will be:
 
@@ -611,10 +611,10 @@ above).
 
          **Example:**
 
-            :ts:`TCEFORM.pages.title {
-                # The label for the "title" field will link itself
-              linkTitleToSelf = 1
-            }`
+            :ts:`TCEFORM.pages.title {`
+                :ts:`# The label for the "title" field will link itself`
+              :ts:`linkTitleToSelf = 1`
+            :ts:`}`
 
          The result is that the label for the title field will be a link:
 
@@ -671,11 +671,11 @@ object.
 
          **Example:**
 
-            :ts:`TCEFORM.tt_content.pi_flexform.login {
-              # Language settings plug-in configuration
-              langDisable  = 1
-              langChildren = 0
-            }`
+            :ts:`TCEFORM.tt_content.pi_flexform.login {`
+              :ts:`# Language settings plug-in configuration`
+              :ts:`langDisable  = 1`
+              :ts:`langChildren = 0`
+            :ts:`}`
 
 
 .. ###### END~OF~TABLE ######
@@ -707,10 +707,10 @@ properties for the TCEFORM FlexForm sheet configuration object (see
 
          **Example:**
 
-            :ts:`TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF {
-              # The tab with key "sDEF" of the FlexForm plug-in configuration is now hidden
-              disabled = 1
-            }`
+            :ts:`TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF {`
+              :ts:`# The tab with key "sDEF" of the FlexForm plug-in configuration is now hidden`
+              :ts:`disabled = 1`
+            :ts:`}`
 
 
 .. container:: table-row
@@ -726,10 +726,10 @@ properties for the TCEFORM FlexForm sheet configuration object (see
 
          **Example:**
 
-            :ts:`TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF {
-              # Rename the first tab of the FlexForm plug-in configuration
-              sheetTitle = LLL:fileadmin/locallang.xml:tt_content.pi_flexform.my_ext_pi1.sDEF
-            }`
+            :ts:`TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF {`
+              :ts:`# Rename the first tab of the FlexForm plug-in configuration`
+              :ts:`sheetTitle = LLL:fileadmin/locallang.xml:tt_content.pi_flexform.my_ext_pi1.sDEF`
+            :ts:`}`
 
 
 .. container:: table-row
@@ -785,10 +785,10 @@ Properties for the suggest wizard (see introduction above).
 
          **Example:**
 
-            :ts:`TCEFORM.suggest.default {
-              # sets the pidList for a suggest fields in all tables
-              pidList = 1,2,3,45
-            }`
+            :ts:`TCEFORM.suggest.default {`
+              :ts:`# sets the pidList for a suggest fields in all tables`
+              :ts:`pidList = 1,2,3,45`
+            :ts:`}`
 
 
 .. container:: table-row
@@ -805,10 +805,10 @@ Properties for the suggest wizard (see introduction above).
 
          **Example:**
 
-            :ts:`TCEFORM.suggest.default {
-              pidList = 6,7
-              pidDepth = 4
-            }`
+            :ts:`TCEFORM.suggest.default {`
+              :ts:`pidList = 6,7`
+              :ts:`pidDepth = 4`
+            :ts:`}`
 
 
 .. container:: table-row
@@ -825,9 +825,9 @@ Properties for the suggest wizard (see introduction above).
 
          **Example:**
 
-            :ts:`TCEFORM.pages.storage_pid.suggest.default {
-              minimumCharacters = 3
-            }`
+            :ts:`TCEFORM.pages.storage_pid.suggest.default {`
+              :ts:`minimumCharacters = 3`
+            :ts:`}`
 
    Default
          2
@@ -847,9 +847,9 @@ Properties for the suggest wizard (see introduction above).
 
          **Example:**
 
-            :ts:`TCEFORM.suggest.default {
-              maxPathTitleLength = 30
-            }`
+            :ts:`TCEFORM.suggest.default {`
+              :ts:`maxPathTitleLength = 30`
+            :ts:`}`
 
 
 .. container:: table-row
@@ -866,10 +866,10 @@ Properties for the suggest wizard (see introduction above).
 
          **Example:**
 
-            :ts:`TCEFORM.pages.storage_pid.suggest.default {
-              # configures the suggest wizard for the field "storage_pid" in table "pages" to search only for whole phrases
-              searchWholePhrase = 1
-            }`
+            :ts:`TCEFORM.pages.storage_pid.suggest.default {`
+              :ts:`# configures the suggest wizard for the field "storage_pid" in table "pages" to search only for whole phrases`
+              :ts:`searchWholePhrase = 1`
+            :ts:`}`
 
    Default
          0
@@ -888,10 +888,10 @@ Properties for the suggest wizard (see introduction above).
 
          **Example:**
 
-            :ts:`TCEFORM.pages.storage_pid.suggest.default {
-              # configures the suggest wizard for the field "storage_pid" in table "pages" to search only for pages with doktype=1
-              searchCondition = doktype=1
-            }`
+            :ts:`TCEFORM.pages.storage_pid.suggest.default {`
+              :ts:`# configures the suggest wizard for the field "storage_pid" in table "pages" to search only for pages with doktype=1`
+              :ts:`searchCondition = doktype=1`
+            :ts:`}`
 
 
 .. container:: table-row
@@ -907,10 +907,10 @@ Properties for the suggest wizard (see introduction above).
 
          **Example:**
 
-            :ts:`TCEFORM.suggest.pages {
-              # configures all suggest wizards which list records from table "pages" to add the CSS class "pages" to every list item of the result list.
-              cssClass = pages
-            }`
+            :ts:`TCEFORM.suggest.pages {`
+              :ts:`# configures all suggest wizards which list records from table "pages" to add the CSS class "pages" to every list item of the result list.`
+              :ts:`cssClass = pages`
+            :ts:`}`
 
 
 .. container:: table-row
@@ -955,9 +955,9 @@ Properties for the suggest wizard (see introduction above).
 
          **Example:**
 
-            :ts:`TCEFORM.pages.storage_pid.suggest.default {
-              hide = 1
-            }`
+            :ts:`TCEFORM.pages.storage_pid.suggest.default {`
+              :ts:`hide = 1`
+            :ts:`}`
 
 
 .. ###### END~OF~TABLE ######

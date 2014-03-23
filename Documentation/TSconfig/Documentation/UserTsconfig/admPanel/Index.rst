@@ -141,11 +141,11 @@ Configuration of the Admin Panel in the Frontend for the user.
          *Example, that forces the display of the edit icons without displaying
          the admin-panel itself:*
 
-            :ts:`admPanel {
-              enable.edit = 1
-              module.edit.forceDisplayFieldIcons = 1
-              hide = 1
-            }`
+            :ts:`admPanel {`
+              :ts:`enable.edit = 1`
+              :ts:`module.edit.forceDisplayFieldIcons = 1`
+              :ts:`hide = 1`
+            :ts:`}`
 
 
 .. ###### END~OF~TABLE ######
