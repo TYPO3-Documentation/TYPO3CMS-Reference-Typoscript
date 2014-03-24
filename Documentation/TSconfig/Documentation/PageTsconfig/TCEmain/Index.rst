@@ -1,4 +1,4 @@
-.. ==================================================
+ï»¿.. ==================================================
 .. FOR YOUR INFORMATION
 .. --------------------------------------------------
 .. -*- coding: utf-8 -*- with BOM.
@@ -216,7 +216,7 @@
             :ts:`TCEMAIN {`
                 :ts:`# Set a German label:`
 
-                :ts:`translateToMessage = Bitte in "%s" Übersetzen:`
+                :ts:`translateToMessage = Bitte in "%s" Ã¼bersetzen:`
             :ts:`}`
 
 
@@ -241,7 +241,7 @@
             :ts:`TCEMAIN {`
                 :ts:`# Set a German header:`
 
-                :ts:`notificationEmail_subject = TYPO3-Arbeitsumgebungshinweis: Änderung der Stufe für %s`
+                :ts:`notificationEmail_subject = TYPO3-Arbeitsumgebungshinweis: Ã„nderung der Stufe fÃ¼r %s`
             :ts:`}`
 
          **Note:** This option is deprecated since TYPO3 4.5. Since TYPO3 4.5
@@ -320,7 +320,7 @@
 
                     :ts:`wurde in der Arbeitsumgebung "%s" (%s)`
 
-                    :ts:`die Stufe des Elements/der Elemente "%11$s" (%s) am Ort "%10$s" im Seitenbaum verändert:`
+                    :ts:`die Stufe des Elements/der Elemente "%11$s" (%s) am Ort "%10$s" im Seitenbaum verÃ¤ndert:`
 
                     :ts:`==> %s`
 
@@ -328,7 +328,7 @@
 
                     :ts:`"%s"`
 
-                    :ts:`Die Stufe wurde geändert von %s (Benutzername: %s).`
+                    :ts:`Die Stufe wurde geÃ¤ndert von %s (Benutzername: %s).`
                 :ts:`)`
             :ts:`}`
 
