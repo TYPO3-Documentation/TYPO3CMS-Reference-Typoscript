@@ -36,7 +36,9 @@ adminUser
 Syntax:
 ~~~~~~~
 
-:ts:`[adminUser = 0/1]`
+.. highlight:: typoscript
+
+   [adminUser = 0/1]
 
 
 Comparison
@@ -51,5 +53,7 @@ Example:
 
 The following condition will apply only if the BE user is an admin.
 
-:ts:`[adminUser = 1]`
+.. highlight:: typoscript
+
+   [adminUser = 1]
 
