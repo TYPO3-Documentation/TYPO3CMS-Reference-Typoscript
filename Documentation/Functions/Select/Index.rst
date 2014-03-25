@@ -62,6 +62,32 @@ Always secure input from outside, for example with intval!
 
          **Special keyword:** "this" is replaced with the id of the current page.
 
+         (Since TYPO3 6.2) **Special keyword:** "root" allows to select records from the root-page level
+         (records with pid=0, e.g. useful for the table "sys_category" and others).
+
+         (Since TYPO3 6.2) **Special value:** "-1" allows to select versioned records in workspaces
+         directly.
+
+         **Example:** ::
+
+            10 = CONTENT
+            10 {
+              table = sys_category
+              select {
+                pidInList = root,-1
+                selectFields = sys_category.*
+                join = sys_category_record_mm ON sys_category_record_mm.uid_local = sys_category.uid
+                where.data = field:_ORIG_uid // field:uid
+                where.intval = 1
+                where.wrap = sys_category_record_mm.uid_foreign=|
+                orderBy = sys_category_record_mm.sorting_foreign
+                languageField = sys_category.sys_language_uid
+              }
+            }
+
+         This example fetches related sys_category records stored in the MM intermediate table.
+
+
    Default
          this
 
@@ -305,6 +331,9 @@ Always secure input from outside, for example with intval!
               }
             }
 
+         This example selects all records from table tt_content, which are on page 73 and
+         which don't have the header set to the value provided by the Get/Post variable
+         "first", ordered by the content of the column "sorting".
 
 .. ###### END~OF~TABLE ######
 
