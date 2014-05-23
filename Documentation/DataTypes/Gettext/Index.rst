@@ -405,7 +405,7 @@ current file with "current" as UID like "file : current : size".
 
 The following properties are available:
 
-name, size, sha1, extension, MIME type, contents, publicUrl, localPath
+name, size, sha1, extension, mime_type, contents, publicUrl, localPath
 
 Furthermore when manipulating references (such as images in content
 elements or media in pages), additional properties are available (not

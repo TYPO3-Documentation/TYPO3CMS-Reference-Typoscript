@@ -509,14 +509,14 @@ Syntax:
 Comparison:
 '''''''''''
 
-Comparison with the application context in which the system is running.
+Comparison with the application context, in which TYPO3 is running.
 
 The values are compared to applicationContext, which is set at the
 very beginning of the bootstrap sequence based on :code:`getenv('TYPO3_CONTEXT')`.
 
 Value is comma-list of application contexts to match with.
 Wildcards + and \* are allowed, as well as regular expressions
-delimited with /PREG_PATTERN/
+delimited with /PREG_PATTERN/.
 
 
 Examples:
