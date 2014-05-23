@@ -1041,7 +1041,7 @@ getText
 
                 The following properties are available:
 
-                name, size, sha1, extension, MIME type, contents, publicUrl, localPath
+                name, size, sha1, extension, mime_type, contents, publicUrl, localPath
 
                 |
 
