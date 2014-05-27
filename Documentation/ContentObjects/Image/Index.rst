@@ -62,7 +62,7 @@ for.
          file
 
    Data type
-         imgResource
+         :ref:`->imgResource <imgresource>`
 
 
 .. container:: table-row
