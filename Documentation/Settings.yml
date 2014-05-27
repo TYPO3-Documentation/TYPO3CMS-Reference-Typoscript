@@ -15,4 +15,7 @@ conf.py:
     t3tssyntax:
     - http://docs.typo3.org/typo3cms/TyposcriptSyntaxReference/
     - null
+  html_theme_options:
+    github_repository: TYPO3-Documentation/TYPO3CMS-Reference-Typoscript
+    github_branch: latest
 ...
