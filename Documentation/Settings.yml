@@ -1,0 +1,11 @@
+# Settings.yml
+---
+conf.py:
+  project: TypoScript Reference
+  copyright: 2000-2014
+  version: 4.7
+  release: 4.7
+  html_theme_options:
+    github_repository: TYPO3-Documentation/TYPO3CMS-Reference-Typoscript
+    github_branch: 4-7
+...
