@@ -21,7 +21,7 @@ configure this.
 
 The "TSconfig" field here is available in the tab called "Resources":
 
-.. figure:: ../../Images/manual_html_1194c6cf.png
+.. figure:: ../../Images/PageTsconfigField.png
    :alt: The Page TSconfig field inside the page properties
 
 
@@ -39,22 +39,28 @@ in the Page TSconfig of the same page or a subpage.
 
 * Add in Page TSconfig
 
-   :ts:`RTE.default.showButtons = bold`
+.. code-block:: typoscript
+
+	RTE.default.showButtons = bold
 
 * You get the value "bold".
 
 * Add later in Page TSconfig
 
-   ts:`RTE.default.showButtons := addToList(italic)`
+.. code-block:: typoscript
+
+	RTE.default.showButtons := addToList(italic)
 
 * Finally you get the value "bold,italic".
 
 
 Page TSconfig itself can be overwritten by User TSconfig.
 
-.. IMPORTANT:: It is *not* possible to *modify* Page TSconfig in User
-   TSconfig. Page TSconfig can only be :ref:`overwritten in User
-   TSconfig <userrelationshiptovaluessetinpagetsconfig>`.
+.. important::
+
+   It is *not* possible to *modify* Page TSconfig in User
+   TSconfig. Page TSconfig can only be
+   :ref:`overwritten in User TSconfig <userrelationshiptovaluessetinpagetsconfig>`.
 
 
 .. _pageverifyingthefinalconfiguration:
@@ -63,10 +69,9 @@ Verifying the final configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 If you need to check out the actual configuration for a certain branch
-in the website, use the 'Web > Info' module (provided by the extension
-"info\_pagetsconfig"):
+in the website, use the 'Web > Info' module:
 
-.. figure:: ../../Images/manual_html_m7ed27f1e.png
+.. figure:: ../../Images/PageTsconfigVerification.png
    :alt: The Page TSconfig configuration for a page when using the Info module
 
 .. _pagesettingdefaultpagetsconfig:
@@ -79,19 +84,19 @@ tree. However it can be very handy to set global values that will be
 initialized from the root of the tree.
 
 In extensions this is easily done by the extension API function,
-t3lib\_extMgm::addPageTSConfig(). In the (ext\_)localconf.php file you
-can call it like this to set default configuration
+:code:`\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig()`.
+In the :file:`ext_localconf.php` file you
+can call it like this to set default configuration:
 
-   :ts:`t3lib_extMgm::addPageTSConfig('`
-       :ts:`RTE.default {`
-           :ts:`proc.preserveTables = 1`
+.. code-block:: typoscript
 
-           :ts:`showButtons = cut,copy,paste,fontstyle,fontsize,textcolor`
-           :ts:`hideButtons = class,user,chMode`
-
-       :ts:`}`
-
-   :ts:`');`
+	\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig('
+		RTE.default {
+			proc.preserveTables = 1
+			showButtons = cut,copy,paste,fontstyle,fontsize,textcolor
+			hideButtons = class,user,chMode
+		}
+	');
 
 This API function simply adds the content to
-$TYPO3\_CONF\_VARS['BE']['defaultPageTSconfig'].
+:code:`$TYPO3_CONF_VARS['BE']['defaultPageTSconfig']`.

@@ -46,15 +46,14 @@
 
          **Example:**
 
-            :ts:`TCEMAIN {`
-                :ts:`# Owner be_users UID for new pages:`
+         .. code-block:: typoscript
 
-                :ts:`permissions.userid = 2`
-
-                :ts:`# Owner be_groups UID for new pages:`
-
-                :ts:`permissions.groupid = 3`
-            :ts:`}`
+			TCEMAIN {
+				# Owner be_users UID for new pages:
+				permissions.userid = 2
+				# Owner be_groups UID for new pages:
+				permissions.groupid = 3
+			}
 
          Backend User with UID 2 is "test" and the Backend Group with UID 3 is
          "test\_group". With the configuration above a new page would be
@@ -85,34 +84,28 @@
          bits corresponding to the keylist should be set. (Bits in keylist:
          show=1,edit=2,delete=4,new=8,editcontent=16)
 
-         Defaults from $GLOBALS['TYPO3\_CONF\_VARS']
+         Defaults from :code:`$GLOBALS['TYPO3_CONF_VARS']`:
 
-            :php:`'user' => 'show,edit,delete,new,editcontent',`
+         .. code-block:: php
 
-            :php:`'group' => 'show,edit,new,editcontent',`
-
-            :php:`'everybody' => ''`
+			'user' => 'show,edit,delete,new,editcontent',
+			'group' => 'show,edit,new,editcontent',
+			'everybody' => ''
 
          **Example:**
 
-            :ts:`TCEMAIN.permissions {`
+         .. code-block:: typoscript
 
-                :ts:`# User can do anything (default):`
-
-                :ts:`user = 31`
-
-                :ts:`# Group can do anything`
-
-                :ts:`# (normally "delete" is disabled)`
-
-                :ts:`group = 31`
-
-                :ts:`# Everybody can at least see the page`
-
-                :ts:`# (normally everybody can do nothing)`
-
-                :ts:`everybody = show`
-            :ts:`}`
+			TCEMAIN.permissions {
+				# User can do anything (default):
+				user = 31
+				# Group can do anything
+				# (normally "delete" is disabled)
+				group = 31
+				# Everybody can at least see the page
+				# (normally everybody can do nothing)
+				everybody = show
+			}
 
          The page "Community" was created with the settings from the example
          above. Compared to the two other pages created with default
@@ -137,19 +130,15 @@
 
          **Examples:**
 
-            :ts:`# Will clear the cache for page ID 12 and 23`
+         .. code-block:: typoscript
 
-            :ts:`# when saving a record in this page:`
-
-            :ts:`TCEMAIN.clearCacheCmd = 12,23`
-
-            :ts:`# Will clear all pages cache:`
-
-            :ts:`TCEMAIN.clearCacheCmd = pages`
-
-            :ts:`# Will clear ALL cache:`
-
-            :ts:`TCEMAIN.clearCacheCmd = all`
+			# Will clear the cache for page ID 12 and 23
+			# when saving a record in this page:
+			TCEMAIN.clearCacheCmd = 12,23
+			# Will clear all pages cache:
+			TCEMAIN.clearCacheCmd = pages
+			# Will clear ALL cache:
+			TCEMAIN.clearCacheCmd = all
 
 
 .. container:: table-row
@@ -213,11 +202,12 @@
 
          **Example:**
 
-            :ts:`TCEMAIN {`
-                :ts:`# Set a German label:`
+         .. code-block:: typoscript
 
-                :ts:`translateToMessage = Bitte in "%s" übersetzen:`
-            :ts:`}`
+			TCEMAIN {
+				# Set a German label:
+				translateToMessage = Bitte in "%s" übersetzen:
+			}
 
 
 .. container:: table-row
@@ -238,15 +228,18 @@
 
          **Example:**
 
-            :ts:`TCEMAIN {`
-                :ts:`# Set a German header:`
+         .. code-block:: typoscript
 
-                :ts:`notificationEmail_subject = TYPO3-Arbeitsumgebungshinweis: Änderung der Stufe für %s`
-            :ts:`}`
+			TCEMAIN {
+				# Set a German header:
+				notificationEmail_subject = TYPO3-Arbeitsumgebungshinweis: Änderung der Stufe für %s
+			}
 
-         **Note:** This option is deprecated since TYPO3 4.5. Since TYPO3 4.5
-         localized emails are sent by default, if the translation files for the
-         respective language have been downloaded with the Extension Manager.
+         .. note::
+
+            This option is deprecated since TYPO3 4.5. Since TYPO3 4.5
+            localized emails are sent by default, if the translation files for the
+            respective language have been downloaded with the Extension Manager.
 
 
 .. container:: table-row
@@ -312,29 +305,26 @@
 
          **Example:**
 
-            :ts:`TCEMAIN {`
-                :ts:`# Set a German bodytext:`
+         .. code-block:: typoscript
 
-                :ts:`notificationEmail_body (`
-                    :ts:`Auf der TYPO3-Seite "%s" (%s)`
+			TCEMAIN {
+				# Set a German bodytext:
+				notificationEmail_body (
+					Auf der TYPO3-Seite "%s" (%s)
+					wurde in der Arbeitsumgebung "%s" (%s)
+					die Stufe des Elements/der Elemente "%11$s" (%s) am Ort "%10$s" im Seitenbaum verändert:
+					==> %s
+					Kommentar des Benutzers:
+					"%s"
+					Die Stufe wurde geändert von %s (Benutzername: %s).
+				)
+			}
 
-                    :ts:`wurde in der Arbeitsumgebung "%s" (%s)`
+         .. note::
 
-                    :ts:`die Stufe des Elements/der Elemente "%11$s" (%s) am Ort "%10$s" im Seitenbaum verändert:`
-
-                    :ts:`==> %s`
-
-                    :ts:`Kommentar des Benutzers:`
-
-                    :ts:`"%s"`
-
-                    :ts:`Die Stufe wurde geändert von %s (Benutzername: %s).`
-                :ts:`)`
-            :ts:`}`
-
-         **Note:** This option is deprecated since TYPO3 4.5. Since TYPO3 4.5
-         localized emails are sent by default, if the translation files for the
-         respective language have been downloaded with the Extension Manager.
+            This option is deprecated since TYPO3 4.5. Since TYPO3 4.5
+            localized emails are sent by default, if the translation files for the
+            respective language have been downloaded with the Extension Manager.
 
 
 .. ###### END~OF~TABLE ######
@@ -349,32 +339,6 @@
 Processing options for a $GLOBALS['TCA'] configured table.
 
 .. ### BEGIN~OF~TABLE ###
-
-.. container:: table-row
-
-   Property
-         history.keepEntries
-
-   Data type
-         positive integer
-
-   Description
-         Maximum number of entries in the sys\_history for this table. Range
-         0-200. Zero turns the history off.
-
-         **Example:**
-
-            :ts:`TCEMAIN {`
-                :ts:`# Default for all tables is 10 entries:`
-
-                :ts:`default.history.keepEntries = 10`
-
-                :ts:`# But the Content Elements will have 20 levels:`
-
-                :ts:`table.tt_content.history.keepEntries = 20`
-            :ts:`}`
-
-         **Note:** This option has been removed in TYPO3 4.0.
 
 
 .. container:: table-row
@@ -391,7 +355,9 @@ Processing options for a $GLOBALS['TCA'] configured table.
 
          Default is 7 days. Range 0-200. Zero turns the maxAgeDays off.
 
-         **Note:** This option has been removed in TYPO3 6.0.
+         .. note::
+
+            This option has been removed in TYPO3 6.0.
 
 
 .. container:: table-row
@@ -406,21 +372,21 @@ Processing options for a $GLOBALS['TCA'] configured table.
          Disables the "prependAtCopy" feature (if configured for the table in
          $GLOBALS['TCA']).
 
-         (The word "prepend" is misguiding - the "(copy)" label is *appended*
-         to (put after) the record title! Sorry for that mistake, it isn't the
-         only time I have made that.)
+         .. note::
+
+            The word "prepend" is misguiding. The "(copy)" label is actually *appended*
+            to the record title
 
          **Example:**
 
-            :ts:`TCEMAIN.table.pages {`
-                :ts:`# Pages will *not* have "(copy)" appended:`
+         .. code-block:: typoscript
 
-                :ts:`disablePrependAtCopy = 1`
-
-                :ts:`# Pages will *not* be hidden upon copy:`
-
-                :ts:`disableHideAtCopy = 1`
-            :ts:`}`
+			TCEMAIN.table.pages {
+				# Pages will *not* have "(copy)" appended:
+				disablePrependAtCopy = 1
+				# Pages will *not* be hidden upon copy:
+				disableHideAtCopy = 1
+			}
 
          These settings adjust that a page which is copied will neither have
          "(copy X)" appended nor be hidden.

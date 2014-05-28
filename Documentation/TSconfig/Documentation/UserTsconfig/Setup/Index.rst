@@ -13,10 +13,13 @@
 Default values and overriding values for the "User tools > User
 settings" module.
 
-**Note:** The "User tools > User settings" module only represents a
-subset of the options from the table below.
+.. note::
 
-.. figure:  ../../Images/manual_html_6ed6f97c.png
+   The "User tools > User settings" module only represents a
+   subset of the options from the table below.
+
+
+.. figure::  ../../Images/UserSettings.png
    :alt: Default values and overriding values for the "User tools > User settings" module
 
 Default values are set by 'setup.default' while overriding values are
@@ -25,14 +28,16 @@ user to change himself and no matter what the current value is, the
 overriding value will overrule it. The default values are used for new
 users or if the setup is re-initialized.
 
-**Note:** If you have first set a value (by override e.g.) and then
-*remove* that value from being set, the value is **not** restored to
-the original default but is kept at the current value! Therefore
-setting a value and later removing that value would require the users
-preferences to be reset (you can do that from the Install Tool >
-Database Analyser > Reset user preferences) OR better, don't remove
-the value, just change the value of it! (e.g. to a blank string if you
-wish to "reset" the value).
+.. note::
+
+   If you have first set a value (by override e.g.) and then
+   *remove* that value from being set, the value is **not** restored to
+   the original default but is kept at the current value! Therefore
+   setting a value and later removing that value would require the users
+   preferences to be reset (you can do that from the Install Tool >
+   Database Analyser > Reset user preferences) OR better, don't remove
+   the value, just change the value of it! (e.g. to a blank string if you
+   wish to "reset" the value).
 
 This table shows the keys for both defaults and override values:
 
@@ -165,8 +170,10 @@ This table shows the keys for both defaults and override values:
          The width in pixels of the navigation frame in the Page and File main
          modules.
 
-         **Note:** This option became superfluous in TYPO3 4.5 and has been
-         removed in TYPO3 4.5.
+         .. note::
+
+            This option became superfluous in TYPO3 4.5 and has been
+            removed in TYPO3 4.5.
 
    Default
          245
@@ -184,8 +191,10 @@ This table shows the keys for both defaults and override values:
          If set, the frameset modules will have the border between the
          navigation and list frame resizable.
 
-         **Note:** This option became superfluous in TYPO3 4.5 and has been
-         removed in TYPO3 4.5.
+         .. note::
+
+            This option became superfluous in TYPO3 4.5 and has been
+            removed in TYPO3 4.5.
 
 
 .. container:: table-row
@@ -470,7 +479,9 @@ The table below describes the related option:
 
          **Example:**
 
-            :ts:`setup.fields.emailMeAtLogin.disabled = 1`
+         .. code-block:: typoscript
+
+			setup.fields.emailMeAtLogin.disabled = 1
 
          With this example, we hide the "E-mail me when I login" checkbox.
 
@@ -479,9 +490,10 @@ The table below describes the related option:
 
          **Example:**
 
-            :ts:`setup.fields.emailMeAtLogin.disabled = 1`
+         .. code-block:: typoscript
 
-            :ts:`setup.override.emailMeAtLogin = 1`
+			setup.fields.emailMeAtLogin.disabled = 1
+			setup.override.emailMeAtLogin = 1
 
          Now the "Email me when I login" field is removed, but the user will
          still receive an email when he logs in.

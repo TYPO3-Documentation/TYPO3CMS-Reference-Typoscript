@@ -33,17 +33,14 @@
          parameter looks like this: [fe\_user-session-id]-[a hash made to
          prevent misuse]
 
-         The parameter can be calculated like this
+         The parameter can be calculated like this:
 
-            :php:`$param = '&FE_SESSION_KEY=' . rawurlencode(`
-                 :php:`$GLOBALS['TSFE']->fe_user->id . '-' .`
+         .. code-block:: php
 
-                 :php:`md5(`
-                      :php:`$GLOBALS['TSFE']->fe_user->id. '/' .`
-
-                      :php:`$GLOBALS['TYPO3_CONF_VARS']['SYS']['encryptionKey']`
-                 :php:`)`
-            :php:`)`;
+			$param = '&FE_SESSION_KEY=' . rawurlencode(
+				$GLOBALS['TSFE']->fe_user->id . '-' .
+				md5( $GLOBALS['TSFE']->fe_user->id. '/' . $GLOBALS['TYPO3_CONF_VARS']['SYS']['encryptionKey'])
+			);
 
 
 .. container:: table-row
@@ -70,7 +67,9 @@
 
          **Example:**
 
-            :ts:`TSFE.constants.websiteConfig.id = 123`
+         .. code-block:: typoscript
+
+			TSFE.constants.websiteConfig.id = 123
 
          In the TypoScript templates you can now insert this constant as
          {$websiteConfig.id}
@@ -81,18 +80,20 @@
          In the backend module (in the Web main module) you can reach the value
          by a few lines of code like these
 
-            :php:`$PageTSconfig =`
-                :php:`t3lib_BEfunc::getPagesTSconfig($this->pObj->id);`
-            :php:`$websiteID =`
-                :php:`$PageTSconfig['TSFE.']['constants.']['websiteConfig.']['id'];`
+         .. code-block:: php
 
-         **Note:** In the frontend the setting of default constants will only
-         apply to a branch of the tree *if* a template record is found on that
-         page (or if a template record is set for "next level"). In other
-         words: If you want the Page TSconfig constant defaults to affect only
-         a certain branch of the page tree, make sure to create a template
-         record (a blank one will do) on the page that carries the Page
-         TSconfig information.
+			$PageTSconfig = \TYPO3\CMS\Backend\Utility\BackendUtility::getPagesTSconfig($this->pObj->id);
+			$websiteID = $PageTSconfig['TSFE.']['constants.']['websiteConfig.']['id'];
+
+         .. note::
+
+            In the frontend the setting of default constants will only
+            apply to a branch of the tree *if* a template record is found on that
+            page (or if a template record is set for "next level"). In other
+            words: If you want the Page TSconfig constant defaults to affect only
+            a certain branch of the page tree, make sure to create a template
+            record (a blank one will do) on the page that carries the Page
+            TSconfig information.
 
 
 .. ###### END~OF~TABLE ######

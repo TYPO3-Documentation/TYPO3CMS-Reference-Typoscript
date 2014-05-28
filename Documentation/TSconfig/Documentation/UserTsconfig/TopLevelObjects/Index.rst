@@ -110,9 +110,11 @@ These are the User TSconfig Top Level Objects (TLOs):
 
          **Example:**
 
-         This sets the default hidden flag for pages to "clear"
+         This sets the default hidden flag for pages to "clear".
 
-            :ts:`TCAdefaults.pages.hidden = 0`
+         .. code-block:: typoscript
+
+         	TCAdefaults.pages.hidden = 0
 
 
 .. container:: table-row
@@ -161,7 +163,9 @@ These are the User TSconfig Top Level Objects (TLOs):
 
          **Example:**
 
-            :ts:`page.TCEMAIN.table.pages.disablePrependAtCopy = 1`
+         .. code-block:: typoscript
+
+			page.TCEMAIN.table.pages.disablePrependAtCopy = 1
 
 
 .. container:: table-row

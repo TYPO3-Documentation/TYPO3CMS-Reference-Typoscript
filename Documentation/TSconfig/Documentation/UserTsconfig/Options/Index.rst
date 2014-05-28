@@ -26,7 +26,9 @@ Various options for the user affecting the core at various points.
    Description
          This options prevents the root to be mounted for an admin user.
 
-         **Note:** Only for admin-users. For other users it has no effect.
+         .. note::
+
+            Only for admin-users. For other users it has no effect.
 
 
 .. container:: table-row
@@ -120,8 +122,11 @@ Various options for the user affecting the core at various points.
    Description
          List of IP-numbers with wildcards.
 
-         **Note:** This option is enabled only if the
-         $TYPO3\_CONF\_VARS['BE']['enabledBeUserIPLock'] configuration is true.
+         .. note::
+
+            This option is enabled only if the
+            :code:`$TYPO3_CONF_VARS['BE']['enabledBeUserIPLock']`
+            configuration is true.
 
          **Examples:**
 
@@ -222,25 +227,6 @@ Various options for the user affecting the core at various points.
 .. container:: table-row
 
    Property
-         shortcutFrame
-
-   Data type
-         boolean
-
-   Description
-         If set, the bookmark frame in the bottom of the window appears. This
-         frame contains the bookmarks, the search field and the workspace
-         selector.
-
-         **Note:** Only takes effect, if alt\_main.php, the old backend from
-         TYPO3 4.1, is used.
-
-         **Note:** This option has been removed in TYPO3 4.4.
-
-
-.. container:: table-row
-
-   Property
          shortcutGroups
 
    Data type
@@ -267,23 +253,23 @@ Various options for the user affecting the core at various points.
 
          **Example:**
 
-            :ts:`shortcutGroups {`
-                :ts:`1=1`
+         .. code-block:: typoscript
 
-                :ts:`2=My Group`
-
-                :ts:`3=0`
-
-                :ts:`4=`
-
-            :ts:`}`
+			shortcutGroups {
+				1=1
+				2=My Group
+				3=0
+				4=
+			}
 
          Bookmark group 1 is loaded with the default label (Pages), group 2 is
          loaded and labeled as "My Group" and groups 3 and 4 are disabled.
          Group 5 has not been set, so it will be displayed by default, just
          like group 1.
 
-         Note: This option is deprecated since TYPO3 4.5.
+         .. note::
+
+            This option is deprecated since TYPO3 4.5.
 
 
 .. container:: table-row
@@ -315,15 +301,14 @@ Various options for the user affecting the core at various points.
 
          **Example:**
 
-            :ts:`bookmarkGroups {`
-                :ts:`1=1`
+         .. code-block:: typoscript
 
-                :ts:`2=My Group`
-
-                :ts:`3=0`
-
-                :ts:`4=`
-            :ts:`}`
+			bookmarkGroups {
+				1=1
+				2=My Group
+				3=0
+				4=
+			}
 
          Bookmark group 1 is loaded with the default label (Pages), group 2 is
          loaded and labeled as "My Group" and groups 3 and 4 are disabled.
@@ -343,7 +328,9 @@ Various options for the user affecting the core at various points.
          If set, the page tree is *not* opened to the page being edited when
          an id number is entered in the "Edit Id" box.
 
-         Note: This option is deprecated since TYPO3 4.5.
+         .. note::
+
+            This option is deprecated since TYPO3 4.5.
 
 
 .. container:: table-row
@@ -373,7 +360,9 @@ Various options for the user affecting the core at various points.
 
          (provided .shortcut\_onEditId\_dontSetPageTree is not set!)
 
-         Note: This option is deprecated since TYPO3 4.5.
+         .. note::
+
+            This option is deprecated since TYPO3 4.5.
 
 
 .. container:: table-row
@@ -402,9 +391,11 @@ Various options for the user affecting the core at various points.
    Description
          If set, the user cannot create or edit bookmarks.
 
-         **Note:** In TYPO3 4.3 and older depends on .shortcutFrame being set.
+         .. note::
 
-         Note: This option is deprecated since TYPO3 4.5.
+            In TYPO3 4.3 and older depends on .shortcutFrame being set.
+
+            This option is deprecated since TYPO3 4.5.
 
 
 .. container:: table-row
@@ -453,7 +444,7 @@ Various options for the user affecting the core at various points.
          boolean
 
    Description
-         As .noThumbsInEB but for the Rich Text Editor image selector.
+         As :code:`noThumbsInEB` but for the Rich Text Editor image selector.
 
 
 .. container:: table-row
@@ -491,9 +482,10 @@ Various options for the user affecting the core at various points.
          tt\_content where it will appear, and in addition create the records
          in the top of the page (default is after instead of top).
 
-            :ts:`options.saveDocNew = 0`
+         .. code-block:: typoscript
 
-            :ts:`options.saveDocNew.tt_content = top`
+			options.saveDocNew = 0
+			options.saveDocNew.tt_content = top
 
 
 .. container:: table-row
@@ -566,11 +558,11 @@ Various options for the user affecting the core at various points.
 
          **Examples:**
 
-            :ts:`options.pageTree.backgroundColor.2 = red`
+         .. code-block:: typoscript
 
-            :ts:`options.pageTree.backgroundColor.3 = #00FFFF`
-
-            :ts:`options.pageTree.backgroundColor.4 = rgba(0, 255, 0, 0.1)`
+			options.pageTree.backgroundColor.2 = red
+			options.pageTree.backgroundColor.3 = #00FFFF
+			options.pageTree.backgroundColor.4 = rgba(0, 255, 0, 0.1)
 
          .. figure:: ../../Images/options.pageTree.backgroundColor.png
             :alt: Tree branches with configured background colors
@@ -754,7 +746,9 @@ Various options for the user affecting the core at various points.
 
          **Example**
 
-            :ts:`options.pageTree.altElementBrowserMountPoints = 34,123`
+         .. code-block:: typoscript
+
+			options.pageTree.altElementBrowserMountPoints = 34,123
 
 .. container:: table-row
 
@@ -771,7 +765,9 @@ Various options for the user affecting the core at various points.
 
          **Example**
 
-            :ts:`options.pageTree.excludeDoktypes = 254,1`
+         .. code-block:: typoscript
+
+			options.pageTree.excludeDoktypes = 254,1
 
 .. container:: table-row
 
@@ -810,7 +806,9 @@ Various options for the user affecting the core at various points.
 
          **Example**
 
-            :ts:`options.folderTree.altElementBrowserMountPoints = _temp_/, templates`
+         .. code-block:: typoscript
+
+			options.folderTree.altElementBrowserMountPoints = _temp_/, templates
 
 
 .. container:: table-row
@@ -933,7 +931,9 @@ Various options for the user affecting the core at various points.
 
          **Example:**
 
-            :ts:`options.overridePageModule = web_txtemplavoilaM1`
+         .. code-block:: typoscript
+
+			options.overridePageModule = web_txtemplavoilaM1
 
          This will enable TemplaVoila page module as default page module.
 
@@ -1020,7 +1020,9 @@ Various options for the user affecting the core at various points.
 
          **Example:**
 
-            :ts:`options.hideRecords.pages = 12,45`
+         .. code-block:: typoscript
+
+			options.hideRecords.pages = 12,45
 
 
 .. container:: table-row
@@ -1161,7 +1163,9 @@ Various options for the user affecting the core at various points.
 
          **Example:**
 
-            :ts:`options.view.languageOrder = 2,1`
+         .. code-block:: typoscript
+
+			options.view.languageOrder = 2,1
 
 
 .. container:: table-row
