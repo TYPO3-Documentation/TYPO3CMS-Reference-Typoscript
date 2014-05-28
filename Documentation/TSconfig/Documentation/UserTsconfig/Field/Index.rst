@@ -36,13 +36,17 @@ selected groups are evaluated from top to bottom.
 
 * Add in User TSconfig
 
-   :ts:`page.RTE.default.showButtons = bold`
+.. code-block:: typoscript
+
+	page.RTE.default.showButtons = bold
 
 * You get the value "bold".
 
 * Add later in User TSconfig
 
-   :ts:`page.RTE.default.showButtons := addToList(italic)`
+.. code-block:: typoscript
+
+	page.RTE.default.showButtons := addToList(italic)
 
 * You get the value "bold,italic".
 
@@ -55,18 +59,20 @@ user is a member, in the User TSconfig field of that user himself.
 Let's say the user is a member of a *usergroup* with this
 configuration
 
-   :ts:`TCAdefaults.tt_content {`
-       :ts:`hidden = 1`
+.. code-block:: typoscript
 
-       :ts:`header = Hello!`
-   :ts:`}`
+	TCAdefaults.tt_content {
+		hidden = 1
+		header = Hello!
+	}
 
 Then we set the following values in the TSconfig field of the *user*
 himself
 
-   :ts:`TCAdefaults.tt_content.header = 234`
+.. code-block:: typoscript
 
-   :ts:`options.clearCache.all = 1`
+	TCAdefaults.tt_content.header = 234
+	options.clearCache.all = 1
 
 This would override the default value of the header ("234") and add the
 clear cache option. The default value of the hidden field is not
@@ -84,7 +90,8 @@ TSconfig property is set in **User** TSconfig that way (no matter, if
 in the TSconfig field of a group or a user), it **overwrites** the
 value of the according **Page** TSconfig property.
 
-.. IMPORTANT::
+.. important::
+
    It is **not** possible to *reference* the value of a property from Page
    TSconfig and to *modify* this value in User TSconfig!
    If you set a property in User TSconfig, which already had been set in
@@ -94,11 +101,15 @@ value of the according **Page** TSconfig property.
 
 * Add in **Page TSconfig**
 
-   :ts:`RTE.default.showButtons = bold`
+.. code-block:: typoscript
+
+	RTE.default.showButtons = bold
 
 * Add in User TSconfig
 
-   :ts:`page.RTE.default.showButtons := addToList(italic)`
+.. code-block:: typoscript
+
+	page.RTE.default.showButtons := addToList(italic)
 
 * Finally you do *not* get the value "bold,italic", but the value "italic".
 
@@ -127,29 +138,25 @@ users. However it can be very handy to set global values that will be
 initialized for all users.
 
 In extensions this is easily done by the extension API function,
-t3lib\_extMgm::addUserTSConfig(). In the (ext\_)localconf.php file you
-can call it like this to set default configuration
+:code:`\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addUserTSConfig()`.
+In the :file:`ext_localconf.php` file of your extension you can call use that
+to set a default configuration.
 
-   :ts:`/**`
-      :ts:`* Adding the admin panel to users by default and forcing the display of the edit-icons`
+.. code-block:: php
 
-      :ts:`*/`
-
-      :ts:`t3lib_extMgm::addUserTSConfig('`
-
-      :ts:`admPanel {`
-          :ts:`enable.edit = 1`
-
-          :ts:`module.edit.forceNoPopup = 1`
-
-          :ts:`module.edit.forceDisplayFieldIcons = 1`
-
-          :ts:`module.edit.forceDisplayIcons = 0`
-
-          :ts:`hide = 1`
-          :ts:`}`
-   :ts:`options.enableBookmarks = 1`
-   :ts:`');`
+	/**
+	 * Adding the admin panel to users by default and forcing the display of the edit-icons
+	 */
+	\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addUserTSConfig('
+		admPanel {
+			enable.edit = 1
+			module.edit.forceNoPopup = 1
+			module.edit.forceDisplayFieldIcons = 1
+			module.edit.forceDisplayIcons = 0
+			hide = 1
+		}
+		options.enableBookmarks = 1
+	');
 
 This API function simply adds the content to
-$TYPO3\_CONF\_VARS['BE']['defaultUserTSconfig'].
+:code:`$TYPO3_CONF_VARS['BE']['defaultUserTSconfig']`.

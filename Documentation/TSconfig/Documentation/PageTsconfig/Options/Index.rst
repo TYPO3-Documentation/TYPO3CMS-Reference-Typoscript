@@ -40,9 +40,11 @@ backendLayout
          .. figure:: ../../Images/BackendLayoutID.png
             :alt: 2 individual backend layouts.
 
-         Exclude these individual backend layouts from drop-down list
+         Exclude these individual backend layouts from drop-down list:
 
-            :ts:`options.backendLayout.exclude = 1,2`
+         .. code-block:: typoscript
+
+			options.backendLayout.exclude = 1,2
 
          .. figure:: ../../Images/BackendLayoutsExcluded.png
             :alt: Drop-down list without individual backend layouts.

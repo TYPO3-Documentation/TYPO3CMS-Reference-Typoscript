@@ -141,32 +141,31 @@ Configuration of the Admin Panel in the Frontend for the user.
          *Example, that forces the display of the edit icons without displaying
          the admin-panel itself:*
 
-            :ts:`admPanel {`
-                :ts:`enable.edit = 1`
+         .. code-block:: typoscript
 
-                :ts:`module.edit.forceDisplayFieldIcons = 1`
-
-                :ts:`hide = 1`
-            :ts:`}`
+			admPanel {
+				enable.edit = 1
+				module.edit.forceDisplayFieldIcons = 1
+				hide = 1
+			}
 
 
 .. ###### END~OF~TABLE ######
 
 [beuser:admPanel]
 
-.. figure:: ../../Images/manual_html_m43fb96d.png
-   :alt: TIP
+.. tip::
 
-**Tip**
+   If you want to link to the login-screen of the backend, but wish that
+   the user should return to the frontend for editing, you do that with
+   this link, sending the "redirect\_url" parameter to the login-screen.
+   In that case the backend interface is not started.
 
-If you want to link to the login-screen of the backend, but wish that
-the user should return to the frontend for editing, you do that with
-this link, sending the "redirect\_url" parameter to the login-screen.
-In that case the backend interface is not started. ::
+   .. code-block:: html
 
-              <a href="typo3/index.php?redirect_url=../">
-                           Backend login returning to frontend
-                   </a>
+		<a href="typo3/index.php?redirect_url=../">
+			Backend login returning to frontend
+		</a>
 
 .. figure:: ../../Images/manual_html_639a5d8e.png
    :alt: The TYPO3 admin panel
@@ -174,10 +173,14 @@ In that case the backend interface is not started. ::
 This is what the admin panel looks like. Notice the fact that the
 visibility of the admin panel is ultimately depending on being
 configured in your TypoScript template for the website! This is easily
-done by inserting this string in the TypoScript Template
+done by inserting this string in the TypoScript Template:
 
-      :ts:`config.admPanel = 1`
+.. code-block:: typoscript
+
+	config.admPanel = 1
 
 Or if you use frames, this is probably better
 
-      :ts:`page.config.admPanel = 1`
+.. code-block:: typoscript
+
+	page.config.admPanel = 1

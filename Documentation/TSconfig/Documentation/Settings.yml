@@ -5,4 +5,20 @@ conf.py:
   copyright: 2000-2014
   version: 6.2
   release: 6.2
+  intersphinx_mapping:
+    t3tsref:
+    - http://docs.typo3.org/typo3cms/TyposcriptReference
+    - null
+
+    t3tssyntax:
+    - http://docs.typo3.org/typo3cms/TyposcriptSyntaxReference
+    - null
+
+    t3api:
+    - http://docs.typo3.org/TYPO3/CoreApiReference
+    - null
+
+    t3tca:
+    - http://docs.typo3.org/typo3cms/TCAReference/
+    - null
 ...

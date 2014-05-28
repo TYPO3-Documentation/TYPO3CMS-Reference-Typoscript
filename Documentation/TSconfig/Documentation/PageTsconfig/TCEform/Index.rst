@@ -24,7 +24,7 @@ disable options, blind options in selector boxes etc.
          [*table name*].[*field*].types.[*type*]
 
    Data type
-         ->TCEFORM\_confObj
+         :ref:`TCEFORM_confObj <pagetceformconfobj>`
 
    Description
          These objects contain additional configuration of the TCEFORM
@@ -54,23 +54,29 @@ disable options, blind options in selector boxes etc.
          settings in
          $GLOBALS['TCA'][<table name>]['columns'][<field>]['config'][<key>].
 
-         Depending on the $GLOBALS['TCA'] type of the field, the allowed keys
-         are:
+         Depending on the :ref:`TCA type <t3tca:columns-common-properties-type>`
+         of the field, the allowed keys are:
 
-         **input** - size, max
+         input
+           size, max
 
-         **text** - cols, rows, wrap
+         text
+           cols, rows, wrap
 
-         **check** - cols, showIfRTE
+         check
+           cols, showIfRTE
 
-         **select** - size, autoSizeMax, maxitems, minitems
+         select
+           size, autoSizeMax, maxitems, minitems
 
-         **group** - size, autoSizeMax, max\_size, show\_thumbs, maxitems,
-         minitems, disable\_controls
+         group
+           size, autoSizeMax, max\_size, show\_thumbs, maxitems,
+           minitems, disable\_controls
 
-         **inline** - appearance, foreign\_label, foreign\_selector,
-         foreign\_unique, maxitems, minitems, size, autoSizeMax,
-         symmetric\_label
+         inline
+           appearance, foreign\_label, foreign\_selector,
+           foreign\_unique, maxitems, minitems, size, autoSizeMax,
+           symmetric\_label
 
 
 .. container:: table-row
@@ -85,7 +91,7 @@ disable options, blind options in selector boxes etc.
          [table name].[field].suggest.[queryTable]
 
    Data type
-         ->TCEFORM\_suggest
+         :ref:`TCEFORM_suggest <pagetceformsuggest>`
 
    Description
          Configuration for the "suggest" wizard.
@@ -96,10 +102,10 @@ disable options, blind options in selector boxes etc.
          Each level of the configuration overwrites the values of the level
          below it:
 
-         \- "suggest.default" is overwritten by "suggest.[queryTable]".
+         - "suggest.default" is overwritten by "suggest.[queryTable]".
 
-         \- Both are overwritten by "[table name].[field].suggest.default" which
-         itself is overwritten by "[table name].[field].suggest.[queryTable]"
+         - Both are overwritten by "[table name].[field].suggest.default" which
+           itself is overwritten by "[table name].[field].suggest.[queryTable]"
 
          suggest.default:
 
@@ -127,7 +133,7 @@ disable options, blind options in selector boxes etc.
          [table name].[field].[dataStructKey]
 
    Data type
-         ->TCEFORM\_flexform
+         :ref:`TCEFORM_flexform <pagetceformflexform>`
 
    Description
          (Since TYPO3 4.6) Properties for the TCEFORM FlexForm meta
@@ -144,7 +150,7 @@ disable options, blind options in selector boxes etc.
          [table name].[field].[dataStructKey].[flexSheet]
 
    Data type
-         ->TCEFORM\_flexformSheet
+         :ref:`TCEFORM_flexformSheet <pagetceformflexformsheet>`
 
    Description
          Configuration for the data structure of a sheet with type "flex".
@@ -171,7 +177,7 @@ disable options, blind options in selector boxes etc.
          [table name].[field].[dataStructKey].[flexSheet].[flexField]
 
    Data type
-         ->TCEFORM\_confObj
+         :ref:`TCEFORM_confObj <pagetceformconfobj>`
 
    Description
          Configuration for the data structure of a field with type "flex".
@@ -181,64 +187,55 @@ disable options, blind options in selector boxes etc.
 
          Only these TCEFORM\_confObj options are available for FlexForm fields:
 
-         \- disabled
+         - disabled
 
-         \- label
+         - label
 
-         \- keepItems
+         - keepItems
 
-         \- removeItems
+         - removeItems
 
-         \- addItems
+         - addItems
 
-         \- altLabels
+         - altLabels
 
          **Example:**
 
-            :ts:`TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.myField {`
-                :ts:`# Remove`
+         .. code-block:: typoscript
 
-                :ts:`disabled = 1`
+			TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.myField {
+				# Remove
+				disabled = 1
 
-                :ts:`# Rename`
+				# Rename
+				label = LLL:fileadmin/locallang.xml:tt_content.pi_flexform.my_ext_pi1.sDEF.myField
 
-                :ts:`label = LLL:fileadmin/locallang.xml:tt_content.pi_flexform.my_ext_pi1.sDEF.myField`
+				# Remove all items from select but these ones
+				keepItems = item1,item2,item3
 
-                :ts:`# Remove all items from select but these ones`
+				# Remove items from select
+				removeItems = item1,item2,item3
 
-                :ts:`keepItems = item1,item2,item3`
+				# Add new items to select
+				addItems {
+					item1 = LLL:fileadmin/locallang.xml:tt_content.pi_flexform.my_ext_pi1.sDEF.myField.item1
+					item2 = LLL:fileadmin/locallang.xml:tt_content.pi_flexform.my_ext_pi1.sDEF.myField.item2
+					item3 = LLL:fileadmin/locallang.xml:tt_content.pi_flexform.my_ext_pi1.sDEF.myField.item3
+				}
 
-                :ts:`# Remove items from select`
-
-                :ts:`removeItems = item1,item2,item3`
-
-                :ts:`# Add new items to select`
-
-                :ts:`addItems {`
-                    :ts:`item1 = LLL:fileadmin/locallang.xml:tt_content.pi_flexform.my_ext_pi1.sDEF.myField.item1`
-
-                    :ts:`item2 = LLL:fileadmin/locallang.xml:tt_content.pi_flexform.my_ext_pi1.sDEF.myField.item2`
-
-                    :ts:`item3 = LLL:fileadmin/locallang.xml:tt_content.pi_flexform.my_ext_pi1.sDEF.myField.item3`
-                :ts:`}`
-
-                :ts:`# Rename existing items`
-
-                :ts:`altLabels {`
-                    :ts:`item1 = LLL:fileadmin/locallang.xml:tt_content.pi_flexform.my_ext_pi1.sDEF.myField.item1`
-
-                    :ts:`item2 = LLL:fileadmin/locallang.xml:tt_content.pi_flexform.my_ext_pi1.sDEF.myField.item2`
-
-                    :ts:`item3 = LLL:fileadmin/locallang.xml:tt_content.pi_flexform.my_ext_pi1.sDEF.myField.item3`
-                :ts:`}`
-            :ts:`}`
+				# Rename existing items
+				altLabels {
+					item1 = LLL:fileadmin/locallang.xml:tt_content.pi_flexform.my_ext_pi1.sDEF.myField.item1
+					item2 = LLL:fileadmin/locallang.xml:tt_content.pi_flexform.my_ext_pi1.sDEF.myField.item2
+					item3 = LLL:fileadmin/locallang.xml:tt_content.pi_flexform.my_ext_pi1.sDEF.myField.item3
+				}
+			}
 
 
 .. container:: table-row
 
    Property
-         [table name].[field].[dataStructKey].[flexSheet].[flexField].config.[ke
-         y]
+         [table name].[field].[dataStructKey].[flexSheet].[flexField].config.[key]
 
    Data type
          string / array
@@ -249,21 +246,22 @@ disable options, blind options in selector boxes etc.
          Depending on the $GLOBALS['TCA'] type of the field, the allowed keys
          are:
 
-         \- input: size, max
+         - input: size, max
 
-         \- text: cols, rows, wrap
+         - text: cols, rows, wrap
 
-         \- check: cols, showIfRTE
+         - check: cols, showIfRTE
 
-         \- select: size, autoSizeMax, maxitems, minitems
+         - select: size, autoSizeMax, maxitems, minitems
 
-         \- group: size, autoSizeMax, max\_size, show\_thumbs, maxitems,
-         minitems, disable\_controls
+         - group: size, autoSizeMax, max\_size, show\_thumbs, maxitems,
+           minitems, disable\_controls
 
 
 .. ###### END~OF~TABLE ######
 
 [page:TCEFORM]
+
 
 .. _pagetceformconfobj:
 
@@ -288,11 +286,12 @@ above).
 
          **Example:**
 
-            :ts:`TCEFORM.pages.title {`
-                :ts:`# You cannot edit the Page title field now:`
+         .. code-block:: typoscript
 
-                :ts:`disabled = 1`
-            :ts:`}`
+			TCEFORM.pages.title {
+				# You cannot edit the Page title field now:
+				disabled = 1
+			}
 
 
 .. container:: table-row
@@ -308,13 +307,13 @@ above).
 
          **Example:**
 
-            :ts:`TCEFORM.pages.title {`
-                :ts:`label = LLL:EXT:my_ext/locallang_db.xml:table.column`
+         .. code-block:: typoscript
 
-                :ts:`label.default = New Label`
-
-                :ts:`label.de = Neuer Feldname`
-            :ts:`}`
+			TCEFORM.pages.title {
+				label = LLL:EXT:my_ext/locallang_db.xml:table.column
+				label.default = New Label
+				label.de = Neuer Feldname
+			}
 
 
 .. container:: table-row
@@ -333,11 +332,12 @@ above).
 
          **Example:**
 
-            :ts:`TCEFORM.pages.doktype {`
-                :ts:`# Show only standard and "Spacer" page types`
+         .. code-block:: typoscript
 
-                :ts:`keepItems = 1,199`
-            :ts:`}`
+			TCEFORM.pages.doktype {
+				# Show only standard and "Spacer" page types
+				keepItems = 1,199
+			}
 
 
 .. container:: table-row
@@ -356,11 +356,12 @@ above).
 
          **Example:**
 
-            :ts:`TCEFORM.pages.doktype {`
-                :ts:`# Remove the "Recycler" and "Spacer" page type options:`
+         .. code-block:: typoscript
 
-                :ts:`removeItems = 199, 255`
-            :ts:`}`
+			TCEFORM.pages.doktype {
+				# Remove the "Recycler" and "Spacer" page type options:
+				removeItems = 199, 255
+			}
 
 
 .. container:: table-row
@@ -380,24 +381,27 @@ above).
 
          **Example:**
 
-            :ts:`TCEFORM.pages.doktype {`
-                :ts:`# Creates a new page type option:`
+         .. code-block:: typoscript
 
-                :ts:`addItems.123 = New Page type!`
-
-                :ts:`# Creates yet a page type with "locallang" title:`
-
-                :ts:`addItems.124 = LLL:EXT:lang/locallang_tca.php:title` 
-            :ts:`}
+			TCEFORM.pages.doktype {
+				# Creates a new page type option:
+				addItems.123 = New Page type!
+				# Creates yet a page type with "locallang" title:
+				addItems.124 = LLL:EXT:lang/locallang_tca.php:title
+			}
 
          This example extends the options for Page types with two new items:
 
          .. figure:: ../../Images/manual_html_32b14869.png
             :alt: The Page types are extended by two new items
 
-         **Warning:** This example shows the principle of adding
-         adhoc-items to a selector box in TYPO3, but you *should not* add new
-         *page types* or Content Element types this way!
+         .. warning::
+
+            This example shows the principle of adding
+            adhoc-items to a selector box in TYPO3, but you *should not* add new
+            *page types* or Content Element types this way!
+
+            For adding new page types, refer to :ref:`Core APIs <t3api:page-types>`.
 
 
 .. container:: table-row
@@ -423,11 +427,12 @@ above).
 
          **Example:**
 
-            :ts:`TCEFORM.pages.doktype {`
-                :ts:`# "INVALID VALUE ..." label will never show up:`
+         .. code-block:: typoscript
 
-                :ts:`disableNoMatchingValueElement = 1`
-            :ts:`}`
+			TCEFORM.pages.doktype {
+				# "INVALID VALUE ..." label will never show up:
+				disableNoMatchingValueElement = 1
+			}
 
          Now the selector box will default to the first element in the selector
          box:
@@ -455,11 +460,12 @@ above).
 
          **Example:**
 
-            :ts:`TCEFORM.pages.doktype {`
-                :ts:`# Alternative "INVALID VALUE ..." label:`
+         .. code-block:: typoscript
 
-                :ts:`noMatchingValue_label = VALUE "%s" was not available!`
-            :ts:`}`
+			TCEFORM.pages.doktype {
+				# Alternative "INVALID VALUE ..." label:
+				noMatchingValue_label = VALUE "%s" was not available!
+			}
 
          The result will be:
 
@@ -482,17 +488,15 @@ above).
 
          **Example:**
 
-            :ts:`TCEFORM.pages.doktype {`
-                :ts:`# Setting alternative labels:`
+         .. code-block:: typoscript
 
-                :ts:`altLabels.1 = STANDARD Page Type`
-
-                :ts:`altLabels.254 = Folder (for various elements)`
-
-                :ts:`# Sets the default label for Recycler via "locallang":`
-
-                :ts:`altLabels.255 = LLL:EXT:lang/locallang_tca.php:doktype.I.2`
-            :ts:`}`
+			TCEFORM.pages.doktype {
+				# Setting alternative labels:
+				altLabels.1 = STANDARD Page Type
+				altLabels.254 = Folder (for various elements)
+				# Sets the default label for Recycler via "locallang":
+				altLabels.255 = LLL:EXT:lang/locallang_tca.php:doktype.I.2
+			}
 
          Result will be:
 
@@ -511,18 +515,24 @@ above).
    Description
          *(applies to select-types with foreign table)*
 
-         When the select-types are used with foreign-table, the where-query has
-         four markers (see description of $TCA in the "Inside TYPO3" document).
-         The value of three of these markers may be set from Page TSconfig.
+         For select-type fields relating to a foreign table, additional SQL
+         conditions can be applied. These may contain markers defined in
+         Page TSconfig. See the description of the
+         :ref:`foreign_table_where property <t3tca:columns-select-properties-foreign-table-where>`
+         in the TCA reference.
 
          **Examples:**
 
-            :ts:`TCEFORM.tt_content.pi_flexform.PAGE_TSCONFIG_ID = 22`
+         .. code-block:: typoscript
+
+			TCEFORM.tt_content.pi_flexform.PAGE_TSCONFIG_ID = 22
 
          In this example, the value will substitute the marker in a plugin
          FlexForm.
 
-            :ts:`TCEFORM.tx_myext.myfield.PAGE_TSCONFIG_ID = 22`
+         .. code-block:: typoscript
+
+			TCEFORM.tx_myext.myfield.PAGE_TSCONFIG_ID = 22
 
          This example might be used for a record in an extension. It refers to
          a table called "tx\_myext" and the field "myfield". Here the marker
@@ -544,12 +554,16 @@ above).
 
          **Examples:**
 
-            :ts:`TCEFORM.tt_content.pi_flexform.PAGE_TSCONFIG_IDLIST = 20,21,22`
+         .. code-block:: typoscript
+
+			TCEFORM.tt_content.pi_flexform.PAGE_TSCONFIG_IDLIST = 20,21,22
 
          In this example, the value will substitute the marker in a plugin
          FlexForm.
 
-            :ts:`TCEFORM.tx_myext.myfield.PAGE_TSCONFIG_IDLIST = 20,21,22`
+         .. code-block:: typoscript
+
+			TCEFORM.tx_myext.myfield.PAGE_TSCONFIG_IDLIST = 20,21,22
 
          This example might be used for a record in an extension. It refers to
          a table called "tx\_myext" and the field "myfield". Here the marker
@@ -571,12 +585,16 @@ above).
 
          **Examples:**
 
-            :ts:`TCEFORM.tt_content.pi_flexform.PAGE_TSCONFIG_STR = %hello%`
+         .. code-block:: typoscript
+
+			TCEFORM.tt_content.pi_flexform.PAGE_TSCONFIG_STR = %hello%
 
          In this example, the value will substitute the marker in a plugin
          FlexForm.
 
-            :ts:`TCEFORM.tx_myext.myfield.PAGE_TSCONFIG_STR = %hello%`
+         .. code-block:: typoscript
+
+			TCEFORM.tx_myext.myfield.PAGE_TSCONFIG_STR = %hello%
 
          This example might be used for a record in an extension. It refers to
          a table called "tx\_myext" and the field "myfield". Here the marker
@@ -634,11 +652,12 @@ above).
 
          **Example:**
 
-            :ts:`TCEFORM.pages.title {`
-                :ts:`# The label for the "title" field will link itself`
+         .. code-block:: typoscript
 
-                :ts:`linkTitleToSelf = 1`
-            :ts:`}`
+			TCEFORM.pages.title {
+				# The label for the "title" field will link itself
+				linkTitleToSelf = 1
+			}
 
          The result is that the label for the title field will be a link:
 
@@ -653,8 +672,8 @@ above).
 
 .. ###### END~OF~TABLE ######
 
-[page:TCEFORM.(table name).(field)/TCEFORM.(table name).(field).types.(t
-ype)]
+[page:TCEFORM.(table name).(field)/TCEFORM.(table name).(field).types.(type)]
+
 
 .. _pagetceformflexform:
 
@@ -695,13 +714,13 @@ object.
 
          **Example:**
 
-            :ts:`TCEFORM.tt_content.pi_flexform.login {`
-                :ts:`# Language settings plug-in configuration`
+         .. code-block:: typoscript
 
-                :ts:`langDisable  = 1`
-
-                :ts:`langChildren = 0`
-            :ts:`}`
+			TCEFORM.tt_content.pi_flexform.login {
+				# Language settings plug-in configuration
+				langDisable  = 1
+				langChildren = 0
+			}
 
 
 .. ###### END~OF~TABLE ######
@@ -733,11 +752,12 @@ properties for the TCEFORM FlexForm sheet configuration object (see
 
          **Example:**
 
-            :ts:`TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF {`
-                :ts:`# The tab with key "sDEF" of the FlexForm plug-in configuration is now hidden`
+         .. code-block:: typoscript
 
-                :ts:`disabled = 1`
-            :ts:`}`
+			TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF {
+				# The tab with key "sDEF" of the FlexForm plug-in configuration is now hidden
+				disabled = 1
+			}
 
 
 .. container:: table-row
@@ -753,11 +773,12 @@ properties for the TCEFORM FlexForm sheet configuration object (see
 
          **Example:**
 
-            :ts:`TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF {`
-                :ts:`# Rename the first tab of the FlexForm plug-in configuration`
+         .. code-block:: typoscript
 
-                :ts:`sheetTitle = LLL:fileadmin/locallang.xml:tt_content.pi_flexform.my_ext_pi1.sDEF`
-            :ts:`}`
+			TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF {
+				# Rename the first tab of the FlexForm plug-in configuration
+				sheetTitle = LLL:fileadmin/locallang.xml:tt_content.pi_flexform.my_ext_pi1.sDEF
+			}
 
 
 .. container:: table-row
@@ -791,6 +812,8 @@ properties for the TCEFORM FlexForm sheet configuration object (see
 [page:TCEFORM.[table name].[field].[dataStructKey].[flexSheet]]
 
 
+.. _pagetceformsuggest:
+
 ->TCEFORM\_suggest
 """"""""""""""""""
 
@@ -813,11 +836,12 @@ Properties for the suggest wizard (see introduction above).
 
          **Example:**
 
-            :ts:`TCEFORM.suggest.default {`
-                :ts:`# sets the pidList for a suggest fields in all tables`
+         .. code-block:: typoscript
 
-                :ts:`pidList = 1,2,3,45`
-            :ts:`}`
+			TCEFORM.suggest.default {
+				# sets the pidList for a suggest fields in all tables
+				pidList = 1,2,3,45
+			}
 
 
 .. container:: table-row
@@ -834,11 +858,12 @@ Properties for the suggest wizard (see introduction above).
 
          **Example:**
 
-            :ts:`TCEFORM.suggest.default {`
-                :ts:`pidList = 6,7`
+         .. code-block:: typoscript
 
-                :ts:`pidDepth = 4`
-            :ts:`}`
+			TCEFORM.suggest.default {
+				pidList = 6,7
+				pidDepth = 4
+			}
 
 
 .. container:: table-row
@@ -855,9 +880,11 @@ Properties for the suggest wizard (see introduction above).
 
          **Example:**
 
-            :ts:`TCEFORM.pages.storage_pid.suggest.default {`
-                :ts:`minimumCharacters = 3`
-            :ts:`}`
+         .. code-block:: typoscript
+
+			TCEFORM.pages.storage_pid.suggest.default {
+				minimumCharacters = 3
+			}
 
    Default
          2
@@ -877,9 +904,11 @@ Properties for the suggest wizard (see introduction above).
 
          **Example:**
 
-            :ts:`TCEFORM.suggest.default {`
-                :ts:`maxPathTitleLength = 30`
-            :ts:`}`
+         .. code-block:: typoscript
+
+			TCEFORM.suggest.default {
+				maxPathTitleLength = 30
+			}
 
 
 .. container:: table-row
@@ -896,11 +925,12 @@ Properties for the suggest wizard (see introduction above).
 
          **Example:**
 
-            :ts:`TCEFORM.pages.storage_pid.suggest.default {`
-                :ts:`# configures the suggest wizard for the field "storage_pid" in table "pages" to search only for whole phrases`
+         .. code-block:: typoscript
 
-                :ts:`searchWholePhrase = 1`
-            :ts:`}`
+			TCEFORM.pages.storage_pid.suggest.default {
+				# configures the suggest wizard for the field "storage_pid" in table "pages" to search only for whole phrases
+				searchWholePhrase = 1
+			}
 
    Default
          0
@@ -919,11 +949,13 @@ Properties for the suggest wizard (see introduction above).
 
          **Example:**
 
-            :ts:`TCEFORM.pages.storage_pid.suggest.default {`
-                :ts:`# configures the suggest wizard for the field "storage_pid" in table "pages" to search only for pages with doktype=1`
+         .. code-block:: typoscript
 
-                :ts:`searchCondition = doktype=1`
-            :ts:`}`
+			TCEFORM.pages.storage_pid.suggest.default {
+				# configures the suggest wizard for the field "storage_pid" in table "pages"
+				# to search only for pages with doktype=1
+				searchCondition = doktype=1
+			}
 
 
 .. container:: table-row
@@ -939,11 +971,13 @@ Properties for the suggest wizard (see introduction above).
 
          **Example:**
 
-            :ts:`TCEFORM.suggest.pages {`
-                :ts:`# configures all suggest wizards which list records from table "pages" to add the CSS class "pages" to every list item of the result list.`
+         .. code-block:: typoscript
 
-                :ts:`cssClass = pages`
-            :ts:`}`
+			TCEFORM.suggest.pages {
+				# configures all suggest wizards which list records from table "pages"
+				# to add the CSS class "pages" to every list item of the result list.
+				cssClass = pages
+			}
 
 
 .. container:: table-row
@@ -957,10 +991,10 @@ Properties for the suggest wizard (see introduction above).
    Description
          PHP class alternative receiver class - the file that holds the class
          needs to be included manually before calling the suggest feature,
-         should be derived from "t3lib\_tceforms\_suggest\_defaultreceiver"
+         should be derived from :code:`\TYPO3\CMS\Backend\Form\Element\SuggestDefaultReceiver`.
 
    Default
-         t3lib\_tceforms\_suggest\_defaultreceiver
+         \\TYPO3\\CMS\\Backend\\Form\\Element\\SuggestDefaultReceiver
 
 
 .. container:: table-row
@@ -988,9 +1022,11 @@ Properties for the suggest wizard (see introduction above).
 
          **Example:**
 
-            :ts:`TCEFORM.pages.storage_pid.suggest.default {`
-                :ts:`hide = 1`
-            :ts:`}`
+         .. code-block:: typoscript
+
+			TCEFORM.pages.storage_pid.suggest.default {
+				hide = 1
+			}
 
 
 .. ###### END~OF~TABLE ######
