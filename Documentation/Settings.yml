@@ -21,7 +21,7 @@ conf.py:
   
   latex_documents:
   - - Index
-    - TyposcriptReference.tex
+    - t3tsref.tex
     - Typoscript Reference
     - Documentation Team
     - manual
