@@ -28,8 +28,10 @@ Name of the getText property   Content
 1                              height
 2                              file extension
 3                              resource
-origFile                       path and file name of the original file
+origFile                       relative URL pointing to the original file
 _mtime                         modification time of the original file
+originalFile                   The FAL object referencing the original file
+processedFile                  The FAL object referencing the processed file
 =============================  ==========================================
 
 **Note:** Gifbuilder also has an :ref:`IMAGE object <gifbuilder-image>` -
