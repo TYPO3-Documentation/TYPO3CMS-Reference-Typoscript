@@ -282,7 +282,7 @@ In this second example, we use "references" to get the images related
 to a given page (in this case, the current page). We start with the
 first image and return up to five images. Each image is then rendered
 as an :ref:`IMAGE <cobj-image>` cObject with some meta data coming from
-the file itself (publicUrl) or from the reference to it (title)::
+the file itself (localPath) or from the reference to it (title)::
 
    page.20 = FILES
    page.20 {
@@ -297,7 +297,7 @@ the file itself (publicUrl) or from the reference to it (title)::
 
      renderObj = IMAGE
      renderObj {
-       file.import.data = file:current:publicUrl
+       file.import.data = file:current:localPath
        altText.data = file:current:title
        wrap = <div class="slide">|</div>
      }
