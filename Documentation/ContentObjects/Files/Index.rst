@@ -265,17 +265,17 @@ explained above (using sys_file UIDs, collection UIDs, and folders).
 Then we use the :ref:`TEXT <cobj-text>` cObject as renderObj to output
 the file size of all files that were found::
 
-   page.10 = FILES
+	page.10 = FILES
 
-   page.10.files = 12,15,16
-   page.10.collections = 2,9
-   page.10.folders = 1:mypics/
+	page.10.files = 12,15,16
+	page.10.collections = 2,9
+	page.10.folders = 1:mypics/
 
-   page.10.renderObj = TEXT
-   page.10.renderObj {
-     stdWrap.data = file:current:size
-     stdWrap.wrap = <p>File size: <strong>|</strong></p>
-   }
+	page.10.renderObj = TEXT
+	page.10.renderObj {
+		stdWrap.data = file:current:size
+		stdWrap.wrap = <p>File size: <strong>|</strong></p>
+	}
 
 
 In this second example, we use "references" to get the images related
@@ -284,23 +284,24 @@ first image and return up to five images. Each image is then rendered
 as an :ref:`IMAGE <cobj-image>` cObject with some meta data coming from
 the file itself (publicUrl) or from the reference to it (title)::
 
-   page.20 = FILES
-   page.20 {
-     references {
-       table = pages
-       uid.data = tsfe:id
-       fieldName = media
-     }
+	page.20 = FILES
+	page.20 {
+		references {
+		table = pages
+		uid.data = tsfe:id
+		fieldName = media
+		}
 
-     begin = 0
-     maxItems = 5
+		begin = 0
+		maxItems = 5
 
-     renderObj = IMAGE
-     renderObj {
-       file.import.data = file:current:publicUrl
-       altText.data = file:current:title
-       wrap = <div class="slide">|</div>
-     }
-     stdWrap.wrap = <div class="carousel">|</div>
-   }
+		renderObj = IMAGE
+		renderObj {
+			file.import.data = file:current:uid
+			file.treatIdAsReference = 1
+			altText.data = file:current:title
+			wrap = <div class="slide">|</div>
+		}
+		stdWrap.wrap = <div class="carousel">|</div>
+	}
 
