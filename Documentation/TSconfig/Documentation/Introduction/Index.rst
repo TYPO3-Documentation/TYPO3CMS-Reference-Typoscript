@@ -74,21 +74,21 @@ TYPO3 4.6: `http://wiki.typo3.org/Documentation\_changes\_in\_4.6`_.
 
 .. _http://wiki.typo3.org/Documentation\_changes\_in\_4.6: http://wiki.typo3.org/Documentation_changes_in_4.6
 
-TYPO3 4.7: `http://forge.typo3.org/projects/typo3cms-doc-tsconfig/versions/1428`_.
+TYPO3 4.7: `https://forge.typo3.org/versions/1428`_.
 
-.. _http://forge.typo3.org/projects/typo3cms-doc-tsconfig/versions/1428: http://forge.typo3.org/projects/typo3cms-doc-tsconfig/versions/1428
+.. _https://forge.typo3.org/versions/1428: https://forge.typo3.org/versions/1428
 
-TYPO3 6.0: `http://forge.typo3.org/projects/typo3cms-doc-tsconfig/versions/1624`_.
+TYPO3 6.0: `https://forge.typo3.org/versions/1624`_.
 
-.. _http://forge.typo3.org/projects/typo3cms-doc-tsconfig/versions/1624: http://forge.typo3.org/projects/typo3cms-doc-tsconfig/versions/1624
+.. _https://forge.typo3.org/versions/1624: https://forge.typo3.org/versions/1624
 
-TYPO3 6.1: `http://forge.typo3.org/projects/typo3cms-doc-tsconfig/versions/1961`_.
+TYPO3 6.1: `https://forge.typo3.org/versions/1961`_.
 
-.. _http://forge.typo3.org/projects/typo3cms-doc-tsconfig/versions/1961: http://forge.typo3.org/projects/typo3cms-doc-tsconfig/versions/1961
+.. _https://forge.typo3.org/versions/1961: https://forge.typo3.org/versions/1961
 
-TYPO3 6.2: `http://forge.typo3.org/projects/typo3cms-doc-tsconfig/versions/2011`_.
+TYPO3 6.2: `https://forge.typo3.org/versions/2011`_.
 
-.. _http://forge.typo3.org/projects/typo3cms-doc-tsconfig/versions/2011: http://forge.typo3.org/projects/typo3cms-doc-tsconfig/versions/2011
+.. _https://forge.typo3.org/versions/2011: https://forge.typo3.org/versions/2011
 
 
 .. _credits:
@@ -111,8 +111,8 @@ to `documentation@typo3.org <mailto:documentation@typo3.org>`_ .
 
 If you find a bug in this manual, please file an issue in the bug
 tracker of this manual:
-`http://forge.typo3.org/projects/typo3cms-doc-tsconfig/issues
-<http://forge.typo3.org/projects/typo3cms-doc-tsconfig/issues>`_
+`https://forge.typo3.org/projects/typo3cms-doc-tsconfig/issues
+<https://forge.typo3.org/projects/typo3cms-doc-tsconfig/issues>`_
 
 Maintaining quality documentation is hard work and the Documentation
 Team is always looking for volunteers. If you feel like helping please
