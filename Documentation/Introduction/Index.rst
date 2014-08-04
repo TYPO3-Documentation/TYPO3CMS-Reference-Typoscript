@@ -71,17 +71,11 @@ refer to the links below.
    TYPO3 4.6: `http://wiki.typo3.org/Documentation\_changes\_in\_4.6
    <http://wiki.typo3.org/Documentation_changes_in_4.6>`_
 
-   TYPO3 4.7: `http://forge.typo3.org/projects/typo3cms-doc-typoscript/v
-   ersions/1454 <http://forge.typo3.org/projects/typo3cms-doc-typoscript/v
-   ersions/1454>`_
+   TYPO3 4.7: `https://forge.typo3.org/versions/1454 <https://forge.typo3.org/versions/1454>`_
 
-   TYPO3 6.0: `http://forge.typo3.org/projects/typo3cms-doc-typoscript/v
-   ersions/1623 <http://forge.typo3.org/projects/typo3cms-doc-typoscript/v
-   ersions/1623>`_
+   TYPO3 6.0: `https://forge.typo3.org/versions/1623 <https://forge.typo3.org/versions/1623>`_
 
-   TYPO3 6.1: `http://forge.typo3.org/projects/typo3cms-doc-typoscript/v
-   ersions/1960 <http://forge.typo3.org/projects/typo3cms-doc-typoscript/v
-   ersions/1960>`_
+   TYPO3 6.1: `https://forge.typo3.org/versions/1960 <https://forge.typo3.org/versions/1960>`_
 
 
 .. _credits:
@@ -104,8 +98,8 @@ to `documentation@typo3.org <mailto:documentation@typo3.org>`_ .
 
 If you find a bug in this manual, please file an issue in this
 manual's bug tracker:
-`http://forge.typo3.org/projects/typo3cms-doc-typoscript/issues
-<http://forge.typo3.org/projects/typo3cms-doc-typoscript/issues>`_
+`https://forge.typo3.org/projects/typo3cms-doc-typoscript/issues
+<https://forge.typo3.org/projects/typo3cms-doc-typoscript/issues>`_
 
 Maintaining quality documentation is hard work and the Documentation
 Team is always looking for volunteers. If you feel like helping please
