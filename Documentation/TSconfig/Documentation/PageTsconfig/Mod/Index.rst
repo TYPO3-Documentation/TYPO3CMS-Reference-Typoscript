@@ -526,8 +526,7 @@ Shared options for modules (mod.SHARED)
    Description
          Filename of the file with the flag icon for the default language. Do
          not use the complete filename, but only the name without dot and
-         extension. The file used to be taken from :file:`typo3/gfx/flags/`
-         and is now taken from :file:`typo3/sysext/t3skin/images/flags`.
+         extension. The file is taken from :file:`typo3/sysext/t3skin/images/flags/`.
 
          Used in Web > List and TemplaVoilà page module.
 
@@ -541,11 +540,15 @@ Shared options for modules (mod.SHARED)
             }
 
          .. tip::
+         
             You can specify "multiple" for the multi-language flag.
             In general: Use the "Select flag icon" selector of a language
-            record in the backend to find out what names are available:
+            record in the backend to find out what names are available.
 
-            .. image:: select-flag-icon.png
+            .. figure:: ../../Images/SelectFlagIcon.png
+            
+               The flag selector of a language record in the backend - 
+               a handy way to find out what flag names are available
 
          .. note::
 
