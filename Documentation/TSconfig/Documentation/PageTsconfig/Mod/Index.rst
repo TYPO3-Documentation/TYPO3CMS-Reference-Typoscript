@@ -526,26 +526,36 @@ Shared options for modules (mod.SHARED)
    Description
          Filename of the file with the flag icon for the default language. Do
          not use the complete filename, but only the name without dot and
-         extension. The file will be taken from typo3/gfx/flags/.
+         extension. The file is taken from :file:`typo3/sysext/t3skin/images/flags/`.
 
          Used in Web > List and TemplaVoilà page module.
 
-         **Example:**
-
-         This will show the German flag.
+         **Example:** This will show the German flag.
 
          .. code-block:: typoscript
 
-			mod.SHARED {
-				defaultLanguageFlag = de
-				defaultLanguageLabel = deutsch
-			}
+            mod.SHARED {
+               defaultLanguageFlag = de
+               defaultLanguageLabel = deutsch
+            }
+
+         .. tip::
+         
+            You can specify "multiple" for the multi-language flag.
+            In general: Use the "Select flag icon" selector of a language
+            record in the backend to find out what names are available.
+
+            .. figure:: ../../Images/SelectFlagIcon.png
+            
+               The flag selector of a language record in the backend - 
+               a handy way to find out what flag names are available
 
          .. note::
 
             Prior to TYPO3 4.5 you had to set the complete filename as
-            defaultLanguageFlag, e.g. "de.gif" to get the German flag. In TYPO3
-            4.5 and newer you must use the name without dot and extension.
+            defaultLanguageFlag, for example "de.gif" to get the german
+            flag. Since TYPO3 4.5 you must use the name without dot and
+            extension.
 
 
 .. container:: table-row
