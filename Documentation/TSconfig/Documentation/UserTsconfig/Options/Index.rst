@@ -564,7 +564,7 @@ Various options for the user affecting the core at various points.
 			options.pageTree.backgroundColor.3 = #00FFFF
 			options.pageTree.backgroundColor.4 = rgba(0, 255, 0, 0.1)
 
-         .. figure:: ../../Images/options.pageTree.backgroundColor.png
+         .. figure:: ../../Images/optionsPageTreeBackgroundColor.png
             :alt: Tree branches with configured background colors
 
 
