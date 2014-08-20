@@ -108,8 +108,6 @@ Configuration of the Admin Panel in the Frontend for the user.
 
          .edit.displayIcons (boolean)
 
-         .edit.editFormsOnPage (boolean)
-
          .edit.editNoPopup (boolean)
 
          .tsdebug.forceTemplateParsing (boolean)
