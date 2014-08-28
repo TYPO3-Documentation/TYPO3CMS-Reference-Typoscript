@@ -41,7 +41,7 @@ strftime-conf
          %C   century number (the year divided by 100 and truncated to an integer, range 00 to 99)
          %d   day of the month as a decimal number (range 00 to 31)
          %D   same as %m/%d/%y
-         %e   day of the month as a decimal number, a single digit is preceded by a space (range ' 1' to '31')
+         %e   day of the month as a decimal number, a single digit is preceded by a space (range ' 1' to '31'). The %e modifier is not supported in the Windows implementation of 'strftime'.
          %h   same as %b
          %H   hour as a decimal number using a 24-hour clock (range 00 to 23)
          %I   hour as a decimal number using a 12-hour clock (range 01 to 12)
@@ -67,6 +67,4 @@ strftime-conf
          %Z   time zone or name or abbreviation
          %%   a literal \`%' character
          ==== ==========================================================
-
-
-
+         
