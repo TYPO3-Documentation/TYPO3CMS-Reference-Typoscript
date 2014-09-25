@@ -56,8 +56,8 @@ Property details
          ->stdWrap
 
    Description
-         **Note:** This applies ONLY if "CARRAY /:ref:`stdWrap <stdwrap>`" is set to be data
-         type.
+         **Note:** This applies ONLY if "CARRAY /:ref:`stdWrap <stdwrap>`" is
+         set to be data type.
 
          If you specify any non-integer properties to a CARRAY, stdWrap will be
          invoked with all properties of the CARRAY.

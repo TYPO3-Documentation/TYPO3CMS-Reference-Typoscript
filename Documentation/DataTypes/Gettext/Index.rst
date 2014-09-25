@@ -34,13 +34,15 @@ getText
          described below.
 
          The :code:`code` can contain pipe characters (\|) to separate keys
-         in a multi-dimensional array. This e.g. works with :code:`gp` and :code:`tsfe`.
+         in a multi-dimensional array. This e.g. works with :code:`gp` and
+         :code:`tsfe`.
 
          **Example:** ::
 
             foo = TSFE:fe_user|user|username
 
-         Spaces around the colon (:) are irrelevant. The :code:`key` is case-insensitive.
+         Spaces around the colon (:) are irrelevant. The :code:`key` is
+         case-insensitive.
 
          **Getting alternative values**
 
@@ -182,9 +184,8 @@ integer], [field name], ["slide"]
 
    foo = levelfield : -1 , user_myExtField , slide
 
-*gets the value of the user defined field :code:`user_myExtField` in the
-root line (requires additional configuration in :code:`$TYPO3_CONF_VARS` to
-include field!)*
+*gets the value of the user defined field user_myExtField in the root
+line (requires additional configuration in $TYPO3_CONF_VARS to include field!)*
 
 
 .. _data-type-gettext-date:

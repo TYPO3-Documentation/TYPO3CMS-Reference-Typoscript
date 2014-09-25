@@ -35,8 +35,8 @@ braces.
          (Since TYPO3 6.1) Use this property to define a content object,
          which should be used as template file. It is an alternative to
          ".file"; if ".template" is set, it takes precedence. While any
-         content object can be used here, the cObject :ref:`FILE <cobj-file>` might be the
-         usual choice.
+         content object can be used here, the cObject :ref:`FILE <cobj-file>`
+         might be the usual choice.
 
 
 .. container:: table-row

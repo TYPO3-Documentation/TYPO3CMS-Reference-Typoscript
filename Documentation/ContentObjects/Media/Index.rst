@@ -121,8 +121,9 @@ TypoScript.
 
          swf will be used, if renderType is "auto".
 
-         **Note:** renderType embed will be rendered by the cObject :ref:`MULTIMEDIA <cobj-multimedia>`,
-         swf by :ref:`SWFOBJECT <cobj-swfobject>` and qt by :ref:`QTOBJECT <cobj-qtobject>`.
+         **Note:** renderType embed will be rendered by the cObject
+         :ref:`MULTIMEDIA <cobj-multimedia>`, swf by
+         :ref:`SWFOBJECT <cobj-swfobject>` and qt by :ref:`QTOBJECT <cobj-qtobject>`.
          For the according documentation see the sections on these cObjects.
 
    Default

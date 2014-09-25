@@ -545,11 +545,15 @@ compressCss
 
          **Example:** ::
 
-            $GLOBALS['TYPO3_CONF_VARS']['FE']['cssCompressHandler'] = TYPO3\CMS\Core\Extension\ExtensionManager::extPath($_EXTKEY) . 'Classes/class.tx_myext_cssCompressHandler.php:tx_myext_cssCompressHandler->compressCss';
+            $GLOBALS['TYPO3_CONF_VARS']['FE']['cssCompressHandler'] =
+               TYPO3\CMS\Core\Extension\ExtensionManager::extPath($_EXTKEY) .
+               'Classes/class.tx_myext_cssCompressHandler.php:tx_myext_cssCompressHandler->compressCss';
 
             or before TYPO3 6.0:
 
-            $GLOBALS['TYPO3_CONF_VARS']['FE']['cssCompressHandler'] = t3lib_extMgm::extPath($_EXTKEY) . 'Classes/class.tx_myext_cssCompressHandler.php:tx_myext_cssCompressHandler->compressCss';
+            $GLOBALS['TYPO3_CONF_VARS']['FE']['cssCompressHandler'] =
+               t3lib_extMgm::extPath($_EXTKEY) .
+               'Classes/class.tx_myext_cssCompressHandler.php:tx_myext_cssCompressHandler->compressCss';
 
 
 
@@ -589,11 +593,15 @@ compressJs
 
          **Example:** ::
 
-            $GLOBALS['TYPO3_CONF_VARS']['FE']['jsCompressHandler'] = TYPO3\CMS\Core\Extension\ExtensionManager::extPath($_EXTKEY) . 'Classes/class.tx_myext_jsCompressHandler.php:tx_myext_jsCompressHandler->compressJs';
+            $GLOBALS['TYPO3_CONF_VARS']['FE']['jsCompressHandler'] =
+               TYPO3\CMS\Core\Extension\ExtensionManager::extPath($_EXTKEY) .
+               'Classes/class.tx_myext_jsCompressHandler.php:tx_myext_jsCompressHandler->compressJs';
 
             or before TYPO3 6.0:
 
-            $GLOBALS['TYPO3_CONF_VARS']['FE']['jsCompressHandler'] = t3lib_extMgm::extPath($_EXTKEY) . 'Classes/class.tx_myext_jsCompressHandler.php:tx_myext_jsCompressHandler->compressJs';
+            $GLOBALS['TYPO3_CONF_VARS']['FE']['jsCompressHandler'] =
+               t3lib_extMgm::extPath($_EXTKEY) .
+               'Classes/class.tx_myext_jsCompressHandler.php:tx_myext_jsCompressHandler->compressJs';
 
 
 
@@ -624,11 +632,15 @@ concatenateCss
 
          **Example:** ::
 
-            $GLOBALS['TYPO3_CONF_VARS']['FE']['cssConcatenateHandler'] = TYPO3\CMS\Core\Extension\ExtensionManager::extPath($_EXTKEY) . 'Classes/class.tx_myext_cssConcatenateHandler.php:tx_myext_cssConcatenateHandler->concatenateCss';
+            $GLOBALS['TYPO3_CONF_VARS']['FE']['cssConcatenateHandler'] =
+               TYPO3\CMS\Core\Extension\ExtensionManager::extPath($_EXTKEY) .
+               'Classes/class.tx_myext_cssConcatenateHandler.php:tx_myext_cssConcatenateHandler->concatenateCss';
 
             or before TYPO3 6.0:
 
-            $GLOBALS['TYPO3_CONF_VARS']['FE']['cssConcatenateHandler'] = t3lib_extMgm::extPath($_EXTKEY) . 'Classes/class.tx_myext_cssConcatenateHandler.php:tx_myext_cssConcatenateHandler->concatenateCss';
+            $GLOBALS['TYPO3_CONF_VARS']['FE']['cssConcatenateHandler'] =
+               t3lib_extMgm::extPath($_EXTKEY) .
+               'Classes/class.tx_myext_cssConcatenateHandler.php:tx_myext_cssConcatenateHandler->concatenateCss';
 
 
 
@@ -659,11 +671,15 @@ concatenateJs
 
          **Example:** ::
 
-            $GLOBALS['TYPO3_CONF_VARS']['FE']['jsConcatenateHandler'] = TYPO3\CMS\Core\Extension\ExtensionManager::extPath($_EXTKEY) . 'Classes/class.tx_myext_jsConcatenateHandler.php:tx_myext_jsConcatenateHandler->concatenateJs';
+            $GLOBALS['TYPO3_CONF_VARS']['FE']['jsConcatenateHandler'] =
+               TYPO3\CMS\Core\Extension\ExtensionManager::extPath($_EXTKEY) .
+               'Classes/class.tx_myext_jsConcatenateHandler.php:tx_myext_jsConcatenateHandler->concatenateJs';
 
             or before TYPO3 6.0:
 
-            $GLOBALS['TYPO3_CONF_VARS']['FE']['jsConcatenateHandler'] = t3lib_extMgm::extPath($_EXTKEY) . 'Classes/class.tx_myext_jsConcatenateHandler.php:tx_myext_jsConcatenateHandler->concatenateJs';
+            $GLOBALS['TYPO3_CONF_VARS']['FE']['jsConcatenateHandler'] =
+               t3lib_extMgm::extPath($_EXTKEY) .
+               'Classes/class.tx_myext_jsConcatenateHandler.php:tx_myext_jsConcatenateHandler->concatenateJs';
 
 
 
@@ -694,7 +710,9 @@ concatenateJsAndCss
 
          **Example:** ::
 
-            $GLOBALS['TYPO3_CONF_VARS']['FE']['concatenateHandler'] = t3lib_extMgm::extPath($_EXTKEY) . 'Classes/class.tx_myext_concatenateHandler.php:tx_myext_concatenateHandler->concatenateFiles';
+            $GLOBALS['TYPO3_CONF_VARS']['FE']['concatenateHandler'] =
+               t3lib_extMgm::extPath($_EXTKEY) .
+               'Classes/class.tx_myext_concatenateHandler.php:tx_myext_concatenateHandler->concatenateFiles';
 
          **Note:** This property was deprecated and has been removed with TYPO3
          6.0! Use config.concatenateJs and config.concatenateCss instead.
@@ -1873,7 +1891,9 @@ minifyCSS
 
          **Example:** ::
 
-            $GLOBALS['TYPO3_CONF_VARS']['FE']['cssCompressHandler'] = t3lib_extMgm::extPath($_EXTKEY) . 'Classes/class.tx_myext_cssCompressHandler.php:tx_myext_cssCompressHandler->minifyCss';
+            $GLOBALS['TYPO3_CONF_VARS']['FE']['cssCompressHandler'] =
+               t3lib_extMgm::extPath($_EXTKEY) .
+               'Classes/class.tx_myext_cssCompressHandler.php:tx_myext_cssCompressHandler->minifyCss';
 
          **Note:** This property was deprecated and has been removed in TYPO3
          6.0. Use config.compressCss instead.
@@ -1916,7 +1936,9 @@ minifyJS
 
          **Example:** ::
 
-            $GLOBALS['TYPO3_CONF_VARS']['FE']['jsCompressHandler'] = t3lib_extMgm::extPath($_EXTKEY) . 'Classes/class.tx_myext_jsCompressHandler.php:tx_myext_jsCompressHandler->minifyJs';
+            $GLOBALS['TYPO3_CONF_VARS']['FE']['jsCompressHandler'] =
+               t3lib_extMgm::extPath($_EXTKEY) .
+               'Classes/class.tx_myext_jsCompressHandler.php:tx_myext_jsCompressHandler->minifyJs';
 
          **Note:** This property was deprecated and has been removed in TYPO3
          6.0! Use config.compressJs instead.
@@ -2049,7 +2071,8 @@ namespaces
 
          This configuration will result in an <html> tag like ::
 
-            <html xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:foaf="http://xmlns.com/foaf/0.1/">
+            <html xmlns:dc="http://purl.org/dc/elements/1.1/"
+               xmlns:foaf="http://xmlns.com/foaf/0.1/">
 
 
 

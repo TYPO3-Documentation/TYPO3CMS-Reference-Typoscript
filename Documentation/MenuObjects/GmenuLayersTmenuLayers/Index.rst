@@ -27,11 +27,11 @@ where the 2nd+ level is shown on a DHTML-layer. You can cascade the
 menus as you like.
 
 **Note:** You must include the library
-"typo3conf/ext/statictemplates/media/scripts/gmenu\_layers.php" (in
+"media/scripts/gmenu\_layers.php" (in
 older versions
 "typo3/sysext/statictemplates/media/scripts/gmenu\_layers.php") for
 GMENU\_LAYERS and/or
-"typo3conf/ext/statictemplates/media/scripts/tmenu\_layers.php" (in
+"media/scripts/tmenu\_layers.php" (in
 older versions
 "typo3/sysext/statictemplates/media/scripts/tmenu\_layers.php") for
 TMENU\_LAYERS. Remember to expand the xMENU\_LAYERS to the next levels
@@ -487,7 +487,7 @@ Example:
 
 ::
 
-   page.includeLibs.gmenu_layers = typo3conf/ext/statictemplates/media/scripts/gmenu_layers.php
+   page.includeLibs.gmenu_layers = media/scripts/gmenu_layers.php
    page.10 = HMENU
    page.10.1 = GMENU_LAYERS
    page.10.1 {

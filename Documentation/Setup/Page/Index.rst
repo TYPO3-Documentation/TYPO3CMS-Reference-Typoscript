@@ -669,7 +669,8 @@ includeJS.[array]
             includeJS {
               file1 = fileadmin/helloworld.js
               file1.type = application/x-javascript
-              # Include a second file, but only if myConstant is set in the TS constants field.
+              # Include a second file, but only if myConstant is set
+              # in the TS constants field.
               file2 = javascript_uploaded_to_template*.js
               file2.if.isTrue = {$myConstant}
             }
@@ -935,17 +936,22 @@ javascriptLibs
          the TYPO3 Core. ::
 
             javascriptLibs {
-                 # Note: All jQuery-related options are available since TYPO3 v6.0
-                 # include jQuery (boolean)
+               # Note: All jQuery-related options are available since TYPO3 v6.0
+               # include jQuery (boolean)
                jQuery = 1
-                 # change the version (possible values: latest|1.7.2|…, default: latest)
-                 # Note: jQuery.source has to be a CDN like "google" when jQuery.version is not "latest"
+               # Change the version
+               # (possible values: latest|1.7.2|…, default: latest)
+               # Note: jQuery.source has to be a CDN like "google"
+               # when jQuery.version is not "latest"
                jQuery.version = latest
-                 # include from local or different CDNs (possible values: local|google|jquery|msn, default: local)
+               # Include from local or different CDNs
+               # (possible values: local|google|jquery|msn, default: local)
                jQuery.source = local
-                 # set jQuery into its own scope to avoid conflicts (boolean)
+               # Set jQuery into its own scope to avoid conflicts (boolean)
                jQuery.noConflict = 1
-                 # change the namespace when noConflict is activated and use jQuery with "TYPO3.###NAMESPACE###(…);" (string, default: jQuery)
+               # Change the namespace when noConflict is activated
+               # and use jQuery with "TYPO3.###NAMESPACE###(…);"
+               # (string, default: jQuery)
                jQuery.noConflict.namespace = ownNamespace
 
                  # include prototype

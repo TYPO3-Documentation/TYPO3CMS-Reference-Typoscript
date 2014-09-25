@@ -116,7 +116,7 @@ Example:
      width = 600
      height = 600
      value (
-       <rect x="100" y="100" width="500" height="200" fill="white" stroke="black" stroke-width="5px"/>
+       <rect x="100" y="100" width="500" height="200" fill="white" stroke="black"/>
        <line x1="0" y1="200" x2="700" y2="200" stroke="red" stroke-width="20px"/>
        <polygon points="185 0 125 25 185 100" transform="rotate(135 125 25)" />
        <circle cx="190" cy="150" r="40" stroke="black" stroke-width="2" fill="yellow"/>

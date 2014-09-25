@@ -185,7 +185,8 @@ things contain::
        $query = $GLOBALS['TYPO3_DB']->SELECTquery(
          'header',
          'tt_content',
-         'pid=' . intval($GLOBALS['TSFE']->id) . $this->cObj->enableFields('tt_content'),
+         'pid=' . intval($GLOBALS['TSFE']->id) .
+           $this->cObj->enableFields('tt_content'),
          '',
          'sorting' . ($conf['reverseOrder'] ? ' DESC' : '')
        );

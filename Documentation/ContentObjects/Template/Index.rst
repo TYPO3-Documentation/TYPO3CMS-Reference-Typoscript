@@ -62,7 +62,8 @@ content by TYPO3.
          In the template there is the subpart "HELLO"::
 
             <!-- start of subpart ###HELLO### -->
-            This is the HTML code, that will be loaded in the register and will be replaced with the result...
+            This is the HTML code, that will be loaded in the register
+            and will be replaced with the result...
             <!-- end ###HELLO### -->
 
          The following TypoScript code now replaces the subpart "HELLO" with

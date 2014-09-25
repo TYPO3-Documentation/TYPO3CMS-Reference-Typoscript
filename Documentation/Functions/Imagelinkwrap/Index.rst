@@ -476,7 +476,8 @@ Example: Larger display in a popup window
          wrap = <a href="javascript:close();"> | </a>
          # let there be a new and unique window for each image
          JSwindow.newWindow = 1
-         # make the preview window 30px wider and 20px higher than what the image requires
+         # make the preview window 30px wider and 20px higher
+         # than what the image requires
          JSwindow.expand = 30,20
    }
 

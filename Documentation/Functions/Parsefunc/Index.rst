@@ -102,9 +102,9 @@ tags, the "makeLinks"-things and so on...
               table.stripNL = 1
               table.stdWrap.HTMLparser = 1
               table.stdWrap.HTMLparser {
-                tags.table.overrideAttribs = border="0" style="margin-top: 10px; margin-bottom: 10px;"
+                tags.table.overrideAttribs = border="0" style="margin-top: 10px;"
                 tags.tr.allowedAttribs = 0
-                tags.td.overrideAttribs = class="table-cell" style="background-color: #eeeeee; font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; font-size: 10px;"
+                tags.td.overrideAttribs = class="table-cell" style="font-size: 10px;"
               }
             }
 

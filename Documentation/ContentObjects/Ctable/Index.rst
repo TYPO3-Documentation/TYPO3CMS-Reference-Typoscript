@@ -14,9 +14,9 @@ CTABLE
 Creates a table in which you can define the content of the various
 cells.
 
-A CTABLE is a little more feature packed than the simple :ref:`OTABLE <cobj-otable>`. It
-features a content column and four surrounding columns, which may be
-useful for putting menus into them.
+A CTABLE is a little more feature packed than the simple
+:ref:`OTABLE <cobj-otable>`. It features a content column and four
+surrounding columns, which may be useful for putting menus into them.
 
 .. ### BEGIN~OF~TABLE ###
 

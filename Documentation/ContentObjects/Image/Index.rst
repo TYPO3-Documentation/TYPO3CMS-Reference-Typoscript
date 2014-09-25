@@ -167,7 +167,9 @@ layoutKey
 
            .. code-block:: html
 
-              <img src="###SRC###" width="###WIDTH###" height="###HEIGHT###" ###PARAMS### ###ALTPARAMS### ###BORDER### ###SELFCLOSINGTAGSLASH###>
+              <img src="###SRC###"
+                   width="###WIDTH###"
+                   height="###HEIGHT###" ###PARAMS### ###ALTPARAMS### ###BORDER### ###SELFCLOSINGTAGSLASH###>
 
          - :code:`srcset` renders an image tag pointing to a set of images for the different resolutions.
            They are referenced inside the :code:`srcset` attribute the :code:`<img>` tag for each defined resolution.
@@ -175,7 +177,8 @@ layoutKey
 
            .. code-block:: html
 
-			  <img src="###SRC###" srcset="|*|###SRC### ###SRCSETCANDIDATE###,|*|###SRC### ###SRCSETCANDIDATE###" ###PARAMS### ###ALTPARAMS######SELFCLOSINGTAGSLASH###>
+              <img src="###SRC###"
+                   srcset="|*|###SRC### ###SRCSETCANDIDATE###,|*|###SRC### ###SRCSETCANDIDATE###" ###PARAMS### ###ALTPARAMS######SELFCLOSINGTAGSLASH###>
 
          - :code:`picture` renders a picture tag containing source tags for each resolutions:
            and a :code:`<img>` tag for the default image. Picture is in the working draft
@@ -183,13 +186,18 @@ layoutKey
 
            .. code-block:: html
 
-			  <picture><source src="###SRC###" media="###MEDIAQUERY###"###SELFCLOSINGTAGSLASH###><img src="###SRC###" ###PARAMS### ###ALTPARAMS######SELFCLOSINGTAGSLASH###></picture>
+              <picture>
+                 <source src="###SRC###"
+                         media="###MEDIAQUERY###"###SELFCLOSINGTAGSLASH###>
+                 <img src="###SRC###" ###PARAMS### ###ALTPARAMS######SELFCLOSINGTAGSLASH###>
+              </picture>
 
          - :code:`data` renders an image tag containing data-keys for the different resolutions:
 
            .. code-block:: html
 
-			  <img src="###SRC###" data-###DATAKEY###="###SRC###" ###PARAMS### ###ALTPARAMS######SELFCLOSINGTAGSLASH###>
+              <img src="###SRC###"
+                   data-###DATAKEY###="###SRC###" ###PARAMS### ###ALTPARAMS######SELFCLOSINGTAGSLASH###>
 
    Default
          default
@@ -226,8 +234,10 @@ layout.layoutKey
          array
 
    Description
-         Definition for the HTML rendering for the named :ref:`cobj-image-layoutkey`. Depending on your needs you can use the existing pre-defined layoutKey or you can define
-         your own element for your responsive layout.
+         Definition for the HTML rendering for the named
+         :ref:`cobj-image-layoutkey`. Depending on your needs you can use the
+         existing pre-defined layoutKey or you can define your own element for
+         your responsive layout.
 
          **Example:** ::
 
@@ -251,27 +261,35 @@ layout.layoutKey.element
          :ref:`string <data-type-string>`
 
    Description
-         The outer element definition for the HTML rendering of the image. Possible markers are mainly all parameters which
-         can be defined in the IMAGE object, e.g.:
+         The outer element definition for the HTML rendering of the image.
+         Possible markers are mainly all parameters which can be defined in the
+         IMAGE object, e.g.:
 
          - :code:`###SRC###` the file URL for the src attribute
 
-         - :code:`###WIDTH###` the width of the image for the width tag (only the width value)
+         - :code:`###WIDTH###` the width of the image for the width tag (only the
+           width value)
 
-         - :code:`###HEIGHT###` the height of the image for the height tag (only the width value)
+         - :code:`###HEIGHT###` the height of the image for the height tag (only the
+           width value)
 
-         - :code:`###PARAMS###` additional params defined in the IMAGE object (as complete attribute)
+         - :code:`###PARAMS###` additional params defined in the IMAGE object (as
+           complete attribute)
 
-         - :code:`###ALTPARAMS###` additional alt params defined in the IMAGE object (as complete attribute)
+         - :code:`###ALTPARAMS###` additional alt params defined in the IMAGE object
+           (as complete attribute)
 
          - :code:`###BORDER###` border for the image tag (as complete attribute)
 
          - :code:`###SELFCLOSINGTAGSLASH###` renders the closing slash of the tag,
-           depending on the setting of :ref:`config.xhtmlDoctype <setup-config-xhtmldoctype>` and :ref:`config.Doctype <setup-config-doctype>`
+           depending on the setting of
+           :ref:`config.xhtmlDoctype <setup-config-xhtmldoctype>` and
+           :ref:`config.Doctype <setup-config-doctype>`
 
-         - :code:`###SOURCECOLLECTION###` the additional sources of the image depending on
-           the different usage in responsive webdesign. The definition of the sources
-           is declared inside :ref:`layout.layoutKey.source <cobj-image-layout-layoutkey-source>`
+         - :code:`###SOURCECOLLECTION###` the additional sources of the image
+           depending on the different usage in responsive webdesign. The
+           definition of the sources is declared inside
+           :ref:`layout.layoutKey.source <cobj-image-layout-layoutkey-source>`
 
 
 .. _cobj-image-layout-layoutkey-source:
@@ -306,8 +324,10 @@ layout.layoutKey.source
 
         - :code:`###DATAKEY###` is the name of the dataKey defined in the :ref:`sourceCollection <cobj-image-sourcecollection>`
 
-        You can define additional markers by adding more datakeys to the collection. ###SRCSETCANDIDATE###, ###MEDIAQUERY###, ###DATAKEY###
-        are already defined as additional datakeys in the out of the box typoscript. Thus can be overwritten by your typoscript.
+        You can define additional markers by adding more datakeys to the collection.
+        ###SRCSETCANDIDATE###, ###MEDIAQUERY###, ###DATAKEY### are already defined
+        as additional datakeys in the out of the box typoscript. Thus can be
+        overwritten by your typoscript.
 
 
 .. _cobj-image-sourcecollection:
@@ -324,14 +344,20 @@ sourceCollection
          array
 
    Description
-         For responsive images you need different image resolutions for each output device and output mode (portrait vs. landscape).
-         :code:`sourceCollection` defines the different resolutions for image rendering, normally you would define al least one :code:`sourceCollection` per
-         layout breakpoint. The amount of sourceCollections, the name and the specification for the sourceCollections will be defined by the
-         HTML/CSS/JS code you are using. The configuration of the sourceCollection defines the size of the image which is rendered.
+         For responsive images you need different image resolutions for each
+         output device and output mode (portrait vs. landscape).
+         :code:`sourceCollection` defines the different resolutions for image
+         rendering, normally you would define al least one
+         :code:`sourceCollection` per layout breakpoint. The amount of
+         sourceCollections, the name and the specification for the
+         sourceCollections will be defined by the HTML/CSS/JS code you are
+         using. The configuration of the sourceCollection defines the size of
+         the image which is rendered.
 
          Each resolution should be set up as separate array in the
-         :code:`sourceCollection`. Each :code:`sourceCollection` consists of different
-         :ref:`dataKey <cobj-image-datakey>` properties which you can define to suit your needs.
+         :code:`sourceCollection`. Each :code:`sourceCollection` consists of
+         different :ref:`dataKey <cobj-image-datakey>` properties which you can
+         define to suit your needs.
 
 
 
@@ -373,7 +399,8 @@ dataKey
          :ref:`stdWrap <stdWrap>`
 
    Description
-         Definition of your image size definition depending on your responsive layout, breakpoints and display density.
+         Definition of your image size definition depending on your responsive
+         layout, breakpoints and display density.
 
 
 .. _cobj-image-datakey-if:
@@ -390,7 +417,8 @@ dataKey.if
          :ref:`if <if>`
 
    Description
-         Renders only if the condition is met, this is evaluated before any execution of code.
+         Renders only if the condition is met, this is evaluated before any
+         execution of code.
 
 
 .. _cobj-image-datakey-pixeldensity:
@@ -407,9 +435,11 @@ dataKey.pixelDensity
          integer / :ref:`stdWrap <stdWrap>`
 
    Description
-         Defines the density of the rendered Image, e.g. retina display would have a density of 2, the density is a multiplicator for the
-         image dimensions: If the pixelDensity is set to 2 and the width is set to 200 the generated image file will have a width of 400 but will
-         be treated inside the html code as 200 pixel.
+         Defines the density of the rendered Image, e.g. retina display would
+         have a density of 2, the density is a multiplicator for the image
+         dimensions: If the pixelDensity is set to 2 and the width is set to
+         200 the generated image file will have a width of 400 but will be
+         treated inside the html code as 200 pixel.
 
    Default
          1
@@ -428,7 +458,8 @@ dataKey.width
          :ref:`stdWrap <stdWrap>`
 
    Description
-         Defines the width for the html code of the image defined in this source collection. For the image file itself the width will be multiplied by
+         Defines the width for the html code of the image defined in this
+         source collection. For the image file itself the width will be multiplied by
          :ref:`dataKey.pixelDensity <cobj-image-datakey-pixeldensity>`.
 
 .. _cobj-image-datakey-height:
@@ -445,7 +476,8 @@ dataKey.height
          :ref:`stdWrap <stdWrap>`
 
    Description
-         Defines the height for the html code of the image defined in this source collection. For the image file itself the height will be multiplied by
+         Defines the height for the html code of the image defined in this
+         source collection. For the image file itself the height will be multiplied by
          :ref:`dataKey.pixelDensity <cobj-image-datakey-pixeldensity>`.
 
 .. _cobj-image-datakey-maxW:
@@ -462,7 +494,8 @@ dataKey.maxW
          :ref:`stdWrap <stdWrap>`
 
    Description
-         Defines the maxW for the html code of the image defined in this source collection. For the image file itself the maxW will be multiplied by
+         Defines the maxW for the html code of the image defined in this
+         source collection. For the image file itself the maxW will be multiplied by
          :ref:`dataKey.pixelDensity <cobj-image-datakey-pixeldensity>`.
 
 .. _cobj-image-datakey-maxH:
@@ -479,7 +512,8 @@ dataKey.maxH
          :ref:`stdWrap <stdWrap>`
 
    Description
-         Defines the maxH for the html code of the image defined in this source collection. For the image file itself the maxH will be multiplied by
+         Defines the maxH for the html code of the image defined in this
+         source collection. For the image file itself the maxH will be multiplied by
          :ref:`dataKey.pixelDensity <cobj-image-datakey-pixeldensity>`.
 
 
@@ -497,7 +531,8 @@ dataKey.minW
          :ref:`stdWrap <stdWrap>`
 
    Description
-         Defines the minW for the html code of the image defined in this source collection. For the image file itself the minW will be multiplied by
+         Defines the minW for the html code of the image defined in this
+         source collection. For the image file itself the minW will be multiplied by
          :ref:`dataKey.pixelDensity <cobj-image-datakey-pixeldensity>`.
 
 .. _cobj-image-datakey-minH:
@@ -514,7 +549,8 @@ dataKey.minH
          :ref:`stdWrap <stdWrap>`
 
    Description
-         Defines the minH for the html code of the image defined in this source collection. For the image file itself the minH will be multiplied by
+         Defines the minH for the html code of the image defined in this
+         source collection. For the image file itself the minH will be multiplied by
          :ref:`dataKey.pixelDensity <cobj-image-datakey-pixeldensity>`.
 
 .. _cobj-image-datakey-others:
@@ -531,7 +567,9 @@ dataKey.*
          string
 
    Description
-         You can define additional key value pairs which won't be used for setting the image size, but will be available as additional markers for the image template. See example mediaquery.
+         You can define additional key value pairs which won't be used for
+         setting the image size, but will be available as additional markers for
+         the image template. See example mediaquery.
 
 
 .. container:: table-row
@@ -556,7 +594,8 @@ dataKey.*
 
    Description
          **Note:** Only active if linkWrap is **not** set and file is
-         **not** :ref:`GIFBUILDER <gifbuilder>` (as it works with the original image file).
+         **not** :ref:`GIFBUILDER <gifbuilder>` (as it works with the original
+         image file).
 
 
 .. container:: table-row
@@ -612,7 +651,12 @@ This returns:
 
 .. code-block:: html
 
-   <img src="fileadmin/toplogo.gif" width="300" height="150" border="0" style="margin: 0px 20px;" alt=""><br>
+   <img src="fileadmin/toplogo.gif"
+        width="300"
+        height="150"
+        border="0"
+        style="margin: 0px 20px;"
+        alt=""><br>
 
 
 .. _cobj-image-examples-responsive:
@@ -683,7 +727,22 @@ This returns as an example all per default possible HTML-Output:
 
 .. code-block:: html
 
-   <img src="fileadmin/_processed_/imagefilenamename_595cc36c48.png" width="600" height="423"    alt=""  border="0" />
-   <img src="fileadmin/_processed_/imagefilenamename_595cc36c48.png" data-small="fileadmin/_processed_/imagefilenamename_595cc36c48.png" data-smallRetina="fileadmin/_processed_/imagefilenamename_42fb68d642.png"    alt="" />
-   <picture><source src="fileadmin/_processed_/imagefilenamename_595cc36c48.png" media="(max-device-width: 600px)" /><source src="fileadmin/_processed_/imagefilenamename_42fb68d642.png" media="(max-device-width: 600px) AND (min-resolution: 192dpi)" /><img src="fileadmin/_processed_/imagefilenamename_595cc36c48.png"    alt="" /></picture><
-   <img src="fileadmin/_processed_/imagefilenamename_595cc36c48.png" srcset="fileadmin/_processed_/imagefilenamename_595cc36c48.png 600w,fileadmin/_processed_/imagefilenamename_42fb68d642.png 600w 2x" alt="" />
+   <img src="fileadmin/_processed_/imagefilenamename_595cc36c48.png"
+     width="600" height="423"    alt=""  border="0" />
+   <img src="fileadmin/_processed_/imagefilenamename_595cc36c48.png"
+     data-small="fileadmin/_processed_/imagefilenamename_595cc36c48.png"
+     data-smallRetina="fileadmin/_processed_/imagefilenamename_42fb68d642.png"
+     alt="" />
+   <picture>
+     <source src="fileadmin/_processed_/imagefilenamename_595cc36c48.png"
+       media="(max-device-width: 600px)" />
+     <source src="fileadmin/_processed_/imagefilenamename_42fb68d642.png"
+       media="(max-device-width: 600px) AND (min-resolution: 192dpi)" />
+     <img src="fileadmin/_processed_/imagefilenamename_595cc36c48.png"
+       alt="" />
+   </picture><
+   <img src="fileadmin/_processed_/imagefilenamename_595cc36c48.png"
+     srcset="fileadmin/_processed_/imagefilenamename_595cc36c48.png 600w,
+       fileadmin/_processed_/imagefilenamename_42fb68d642.png 600w 2x"
+     alt="" />
+

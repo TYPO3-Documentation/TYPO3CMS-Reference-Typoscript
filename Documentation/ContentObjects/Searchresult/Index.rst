@@ -351,9 +351,30 @@ includes *tt\_content.header*, *tt\_content.bodytext* and
 
 Prefixed to these queries is this::
 
-   SELECT pages.title AS pages_title, pages.subtitle AS pages_subtitle, pages.keywords AS pages_keywords, pages.description AS pages_description, pages.uid, tt_content.header AS tt_content_header, tt_content.bodytext AS tt_content_bodytext, tt_content.imagecaption AS tt_content_imagecaption
+   SELECT pages.title AS pages_title,
+     pages.subtitle AS pages_subtitle,
+     pages.keywords AS pages_keywords,
+     pages.description AS pages_description,
+     pages.uid,
+     tt_content.header AS tt_content_header,
+     tt_content.bodytext AS tt_content_bodytext,
+     tt_content.imagecaption AS tt_content_imagecaption
    FROM pages, tt_content
-   WHERE(tt_content.pid=pages.uid) AND (pages.uid IN (2,5,6,20,21,22,29,30,31,3,4,8,9,16,1) AND pages.doktype in (1,2,5) AND pages.no_search=0 AND NOT tt_content.deleted AND NOT tt_content.hidden AND (tt_content.starttime<=985792797) AND (tt_content.endtime=0 OR tt_content.endtime>985792797) AND tt_content.fe_group IN (0,-1) AND NOT pages.deleted AND NOT pages.hidden AND (pages.starttime<=985792797) AND (pages.endtime=0 OR pages.endtime>985792797) AND pages.fe_group IN (0,-1)) ...
+   WHERE(tt_content.pid=pages.uid)
+   AND (pages.uid IN (2,5,6,20,21,22,29,30,31,3,4,8,9,16,1)
+     AND pages.doktype in (1,2,5)
+     AND pages.no_search=0
+     AND NOT tt_content.deleted
+     AND NOT tt_content.hidden
+     AND (tt_content.starttime<=985792797)
+     AND (tt_content.endtime=0 OR tt_content.endtime>985792797)
+     AND tt_content.fe_group IN (0,-1)
+     AND NOT pages.deleted
+     AND NOT pages.hidden
+     AND (pages.starttime<=985792797)
+     AND (pages.endtime=0 OR pages.endtime>985792797)
+     AND pages.fe_group IN (0,-1)
+   ) ...
 
 The part "... pages.uid IN (2,5,6,20,21,22,29,30,31,3,4,8,9,16,1)... "
 is a list of pages-uid's to search. This list is based on the page-ids
@@ -362,19 +383,55 @@ branch and not the whole page-table.
 
 #. ::
 
-      ... AND ((tt_content.header LIKE '%menu%' OR tt_content.bodytext LIKE '%menu%' OR tt_content.imagecaption LIKE '%menu%') AND (tt_content.header LIKE '%backend%' OR tt_content.bodytext LIKE '%backend%' OR tt_content.imagecaption LIKE '%backend%')) GROUP BY pages.uid
+      ... AND (
+            (tt_content.header LIKE '%menu%'
+              OR tt_content.bodytext LIKE '%menu%'
+              OR tt_content.imagecaption LIKE '%menu%'
+            )
+            AND (tt_content.header LIKE '%backend%'
+              OR tt_content.bodytext LIKE '%backend%'
+              OR tt_content.imagecaption LIKE '%backend%'
+            )
+          ) GROUP BY pages.uid
 
 #. ::
 
-      ... AND ((tt_content.header LIKE '%menu backend%' OR tt_content.bodytext LIKE '%menu backend%' OR tt_content.imagecaption LIKE '%menu backend%')) GROUP BY pages.uid
+      ... AND (
+            (tt_content.header LIKE '%menu backend%'
+              OR tt_content.bodytext LIKE '%menu backend%'
+              OR tt_content.imagecaption LIKE '%menu backend%'
+            )
+          ) GROUP BY pages.uid
 
 #. ::
 
-      ... AND ((tt_content.header LIKE '%menu%' OR tt_content.bodytext LIKE '%menu%' OR tt_content.imagecaption LIKE '%menu%') OR (tt_content.header LIKE '%backend%' OR tt_content.bodytext LIKE '%backend%' OR tt_content.imagecaption LIKE '%backend%')) GROUP BY pages.uid
+      ... AND (
+            (tt_content.header LIKE '%menu%'
+              OR tt_content.bodytext LIKE '%menu%'
+              OR tt_content.imagecaption LIKE '%menu%'
+            )
+            OR (tt_content.header LIKE '%backend%'
+              OR tt_content.bodytext LIKE '%backend%'
+              OR tt_content.imagecaption LIKE '%backend%'
+            )
+          ) GROUP BY pages.uid
 
 #. ::
 
-      ... AND ((tt_content.header LIKE '%menu%' OR tt_content.bodytext LIKE '%menu%' OR tt_content.imagecaption LIKE '%menu%') OR (tt_content.header LIKE '%backend%' OR tt_content.bodytext LIKE '%backend%' OR tt_content.imagecaption LIKE '%backend%') AND NOT (tt_content.header LIKE '%content%' OR tt_content.bodytext LIKE '%content%' OR tt_content.imagecaption LIKE '%content%')) GROUP BY pages.uid
+      ... AND (
+            (tt_content.header LIKE '%menu%'
+              OR tt_content.bodytext LIKE '%menu%'
+              OR tt_content.imagecaption LIKE '%menu%'
+            )
+            OR (tt_content.header LIKE '%backend%'
+              OR tt_content.bodytext LIKE '%backend%'
+              OR tt_content.imagecaption LIKE '%backend%'
+            )
+            AND NOT (tt_content.header LIKE '%content%'
+              OR tt_content.bodytext LIKE '%content%'
+              OR tt_content.imagecaption LIKE '%content%'
+            )
+          ) GROUP BY pages.uid
 
 Notice that upper and lowercase do not matter. Also 'men' as
 search word will find 'men', 'menu', 'menus' etc.

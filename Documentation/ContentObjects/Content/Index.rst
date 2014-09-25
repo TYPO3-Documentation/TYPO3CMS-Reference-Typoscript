@@ -99,11 +99,12 @@ lists of records from a variety of tables without fine graining.
          no content elements have been found for the specified depth in collect
          mode, traverse further until at least one match has occurred.
 
-         **.collectReverse:** (boolean /:ref:`stdWrap <stdwrap>`) Reverse order of elements in
-         collect mode. If set, elements of the current page will be at the
-         bottom.
+         **.collectReverse:** (boolean /:ref:`stdWrap <stdwrap>`) Reverse
+         order of elements in collect mode. If set, elements of the current
+         page will be at the bottom.
 
-         **Note:** The sliding will stop when reaching a folder. See $cObj->checkPid_badDoktypeList.
+         **Note:** The sliding will stop when reaching a folder.
+         See $cObj->checkPid_badDoktypeList.
 
 .. container:: table-row
 
@@ -159,15 +160,18 @@ Example:
 
 Here is an example of record-rendering objects::
 
-   // Configuration for records with the "field" type value (often "CType") set to "header"
+   // Configuration for records with the "field" type value
+   // (often "CType") set to "header"
    tt_content.header.default {
      10 = TEXT
      10.stdWrap.field = header
      .....
    }
 
-   // Configuration for records with the "field" type value (often "CType") set to "bullets"
-   // If field "layout" is set to "1" or "2", a special configuration is used, else defaults are being used.
+   // Configuration for records with the "field" type value
+   // (often "CType") set to "bullets"
+   // If field "layout" is set to "1" or "2", a special configuration is used,
+   // else defaults are being used.
    tt_content.bullets.subTypeField = layout
    tt_content.bullets.default {
      .....

@@ -521,20 +521,24 @@ handler is allowed to create the link.
 
 Registering the handler for keyword "pressrelease" is done like this::
 
-   $TYPO3_CONF_VARS['SC_OPTIONS']['tslib/class.tslib_content.php']['typolinkLinkHandler']['pressrelease'] = 'EXT:pressrelease/class.linkHandler.php:&tx_linkHandler';
+   $TYPO3_CONF_VARS['SC_OPTIONS']['tslib/class.tslib_content.php']
+     ['typolinkLinkHandler']['pressrelease'] =
+     'EXT:pressrelease/class.linkHandler.php:&tx_linkHandler';
 
 The class file "pressrelease/class.linkHandler.php" contains the class
 "tx\_linkHandler" which could look like this::
 
    class tx_linkHandler {
-           function main($linktxt, $conf, $linkHandlerKeyword, $linkHandlerValue, $link_param, &$pObj) {
-                   $lconf = array();
-                   $lconf['useCacheHash'] = 1;
-                   $lconf['parameter'] = 34;
-                   $lconf['additionalParams'] = '&tx_pressrelease[showUid]='.rawurlencode($linkHandlerValue);
+     function main($linktxt, $conf, $linkHandlerKeyword,
+       $linkHandlerValue, $link_param, &$pObj) {
+       $lconf = array();
+       $lconf['useCacheHash'] = 1;
+       $lconf['parameter'] = 34;
+       $lconf['additionalParams'] = '&tx_pressrelease[showUid]=' .
+         rawurlencode($linkHandlerValue);
 
-                   return $pObj->typoLink($linktxt, $lconf);
-           }
+       return $pObj->typoLink($linktxt, $lconf);
+     }
    }
 
 In this function, the value part after the keyword is set as the value
@@ -547,7 +551,8 @@ to produce a cached display.
 
 The link that results from this operation will look like this::
 
-   <a href="index.php?id=34&amp;tx_pressrelease[showUid]=123%3A456&amp;cHash=c0551fead6" >
+   <a href="index.php?id=34&amp;
+     tx_pressrelease[showUid]=123%3A456&amp;cHash=c0551fead6" >
 
 The link would be encoded with RealURL and respect config.linkVars as
 long as ->typolink is used to generate the final URL.

@@ -1846,8 +1846,8 @@ postUserFunc
          value to be processed. As second parameter any sub-properties of
          postUserFunc are provided to the function.
 
-         The description of the cObject :ref:`USER <cobj-user>` contains some more in-depth
-         information.
+         The description of the cObject :ref:`USER <cobj-user>` contains some
+         more in-depth information.
 
          **Example:**
 

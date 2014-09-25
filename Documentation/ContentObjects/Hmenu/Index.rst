@@ -403,7 +403,7 @@ Example:
    temp.sidemenu.1 = TMENU
    temp.sidemenu.1 {
      target = page
-     NO.afterImg = typo3conf/ext/statictemplates/media/bullets/dots2.gif |*||*| _
+     NO.afterImg = media/bullets/dots2.gif |*||*| _
      NO.afterImgTagParams = style="margin: 0px 20px;"
      NO.linkWrap = {$fontTag}
      NO.ATagBeforeWrap = 1
@@ -1437,7 +1437,7 @@ Creates a language menu with flags (notice that some lines break):
      XY = [5.w]+4, [5.h]+4
      backColor = white
      5 = IMAGE
-     5.file = typo3conf/ext/statictemplates/media/flags/flag_uk.gif || typo3conf/ext/statictemplates/media/flags/flag_fr.gif || typo3conf/ext/statictemplates/media/flags/flag_es.gif
+     5.file = flag_uk.gif || flag_fr.gif || flag_es.gif
      5.offset = 2,2
    }
 
@@ -1447,7 +1447,7 @@ Creates a language menu with flags (notice that some lines break):
 
    lib.langMenu.1.USERDEF1 < lib.langMenu.1.NO
    lib.langMenu.1.USERDEF1 = 1
-   lib.langMenu.1.USERDEF1.5.file = typo3conf/ext/statictemplates/media/flags/flag_uk_d.gif  || typo3conf/ext/statictemplates/media/flags/flag_fr_d.gif  || typo3conf/ext/statictemplates/media/flags/flag_es_d.gif
+   lib.langMenu.1.USERDEF1.5.file = flag_uk_d.gif  || flag_fr_d.gif  || flag_es_d.gif
    lib.langMenu.1.USERDEF1.noLink = 1
 
 
@@ -1626,7 +1626,7 @@ are graphical items::
      18:   10.fontSize = 10
      19: }
      20: lib.leftmenu.20.2 = GMENU
-     21: lib.leftmenu.20.2.wrap = | <tr><td class="bckgdwhite" height="4"></td></tr><tr><td class="bckgdgrey1" height="1"></td></tr>
+     21: lib.leftmenu.20.2.wrap = | <tr><td></td></tr><tr><td></td></tr>
      22: lib.leftmenu.20.2.NO {
      23:   wrap = <tr><td class="bckgdwhite" height="4"></td></tr><tr><td>|</td></tr>
      24:   XY = 163,16
@@ -1650,10 +1650,10 @@ are graphical items::
      42: lib.leftmenu.20.3.NO {
      43:   allWrap = <tr><td>|</td></tr>
      44:   linkWrap (
-     45:    <table border="0" cellpadding="0" cellspacing="0" style="margin: 2px; 0px; 2px; 0px;">
+     45:    <table border="0" cellpadding="0" cellspacing="0">
      46:       <tr>
      47:         <td><img src="clear.gif" width="15" height="1" /></td>
-     48:         <td><img src="fileadmin/arrow_gray.gif" height="9" width="9" hspace="3" /></td>
+     48:         <td><img src="fileadmin/arrow_gray.gif" height="9" width="9" /></td>
      49:         <td>|</td>
      50:       </tr>
      51:    </table>
@@ -1670,49 +1670,49 @@ link straight to pages as usual. This is because the *whole* menu is
 generated from this array, which was returned from the function
 "menuMenuArray" called in TypoScript line 4+5 ::
 
-      1:     function makeMenuArray($content, $conf) {
-      2:         return array(
-      3:             array(
-      4:                 'title' => 'Contact',
-      5:                 '_OVERRIDE_HREF' => 'index.php?id=10',
-      6:                 '_SUB_MENU' => array(
-      7:                     array(
-      8:                         'title' => 'Offices',
-      9:                         '_OVERRIDE_HREF' => 'index.php?id=11',
-     10:                         '_OVERRIDE_TARGET' => '_top',
-     11:                         'ITEM_STATE' => 'ACT',
-     12:                         '_SUB_MENU' => array(
-     13:                             array(
-     14:                                 'title' => 'Copenhagen Office',
-     15:                                 '_OVERRIDE_HREF' => 'index.php?id=11&officeId=cph',
-     16:                             ),
-     17:                             array(
-     18:                                 'title' => 'Paris Office',
-     19:                                 '_OVERRIDE_HREF' => 'index.php?id=11&officeId=paris',
-     20:                             ),
-     21:                             array(
-     22:                                 'title' => 'New York Office',
-     23:                                 '_OVERRIDE_HREF' => 'http://www.newyork-office.com',
-     24:                                 '_OVERRIDE_TARGET' => '_blank',
-     25:                             )
-     26:                         )
-     27:                     ),
-     28:                     array(
-     29:                         'title' => 'Form',
-     30:                         '_OVERRIDE_HREF' => 'index.php?id=10&cmd=showform',
-     31:                     ),
-     32:                     array(
-     33:                         'title' => 'Thank you',
-     34:                         '_OVERRIDE_HREF' => 'index.php?id=10&cmd=thankyou',
-     35:                     ),
-     36:                 ),
-     37:             ),
-     38:             array(
-     39:                 'title' => 'Products',
-     40:                 '_OVERRIDE_HREF' => 'index.php?id=14',
-     41:             )
-     42:         );
-     43:     }
+      1:  function makeMenuArray($content, $conf) {
+      2:    return array(
+      3:      array(
+      4:          'title' => 'Contact',
+      5:          '_OVERRIDE_HREF' => 'index.php?id=10',
+      6:          '_SUB_MENU' => array(
+      7:              array(
+      8:                  'title' => 'Offices',
+      9:                  '_OVERRIDE_HREF' => 'index.php?id=11',
+     10:                  '_OVERRIDE_TARGET' => '_top',
+     11:                  'ITEM_STATE' => 'ACT',
+     12:                  '_SUB_MENU' => array(
+     13:                      array(
+     14:                          'title' => 'Copenhagen Office',
+     15:                          '_OVERRIDE_HREF' => 'index.php?id=11&officeId=cph',
+     16:                      ),
+     17:                      array(
+     18:                          'title' => 'Paris Office',
+     19:                          '_OVERRIDE_HREF' => 'index.php?id=11&officeId=paris',
+     20:                      ),
+     21:                      array(
+     22:                          'title' => 'New York Office',
+     23:                          '_OVERRIDE_HREF' => 'http://www.example.com',
+     24:                          '_OVERRIDE_TARGET' => '_blank',
+     25:                      )
+     26:                  )
+     27:              ),
+     28:              array(
+     29:                  'title' => 'Form',
+     30:                  '_OVERRIDE_HREF' => 'index.php?id=10&cmd=showform',
+     31:              ),
+     32:              array(
+     33:                  'title' => 'Thank you',
+     34:                  '_OVERRIDE_HREF' => 'index.php?id=10&cmd=thankyou',
+     35:              ),
+     36:          ),
+     37:      ),
+     38:      array(
+     39:          'title' => 'Products',
+     40:          '_OVERRIDE_HREF' => 'index.php?id=14',
+     41:      )
+     42:    );
+     43:  }
 
 Notice how the array contains "fake" page-records which has *no* uid
 field, only a "title" and "\_OVERRIDE\_HREF" as required and some

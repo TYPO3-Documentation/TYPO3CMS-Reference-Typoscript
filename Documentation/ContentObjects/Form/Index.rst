@@ -17,20 +17,20 @@ FORM
    comes with TYPO3 since version 4.6) is *not* installed. If it is, things
    work as described in the documentation inside the system extension.
 
-This object provides a way to create forms::
+This object provides a way to create forms. Example::
 
    textarea:  Label | [* = required][field name =] textarea[,cols,rows,"wrap= [e.g. "OFF"]"] | [defaultdata] | Special evaluation configuration (see note below)
-   input:          Label | [* = required][field name =] input[,size,max] | [defaultdata] | Special evaluation configuration (see note below)
-   password:       Label | [* = required][field name =] input[,size,max] | [defaultdata]
-   file:           Label | [* = required][field name (*1)=] file[,size]
-   check:          Label | [* = required][field name =]check | [checked=1]
-   select:         Label | [* = required][field name =]select[,size (int/"auto"), "m"=multiple] | label [=value] , ...
-   radio:          Label | [* = required][field name =]radio | label [=value] , ...
-   hidden:         |[field name =]hidden | value
-   submit:         Label |[field name =]submit | Caption
-   reset:             Label |[field name =]reset | Caption
-   label:          Label | label | Label value
-   property:               [Internal, see below]
+   input:     Label | [* = required][field name =] input[,size,max] | [defaultdata] | Special evaluation configuration (see note below)
+   password:  Label | [* = required][field name =] input[,size,max] | [defaultdata]
+   file:      Label | [* = required][field name (*1)=] file[,size]
+   check:     Label | [* = required][field name =]check | [checked=1]
+   select:    Label | [* = required][field name =]select[,size (int/"auto"), "m"=multiple] | label [=value] , ...
+   radio:     Label | [* = required][field name =]radio | label [=value] , ...
+   hidden:    |[field name =]hidden | value
+   submit:    Label |[field name =]submit | Caption
+   reset:     Label |[field name =]reset | Caption
+   label:     Label | label | Label value
+   property:  [Internal, see below]
 
 
 .. _cobj-form-preselected-item:
@@ -143,7 +143,7 @@ Examples:
 
 ::
 
-   Your address: | address=textarea,40,10 |  | EREG : You can only enter the characters A to Z : ^[a-zA-Z]*$
+   Your address: | address=textarea,40,10 |  | EREG : Only enter the characters A to Z : ^[a-zA-Z]*$
    Your email: | *email=input |  | EMAIL
 
 .. ### BEGIN~OF~TABLE ###
@@ -937,7 +937,7 @@ page content record of the type "FORMMAIL"::
    | html_enabled=hidden | 1
    | subject=hidden| This is the subject
    | recipient_copy=hidden | copy@email.com
-   | auto_respond_msg=hidden|  Hello / This is an automatic response. //We have received your mail.
+   | auto_respond_msg=hidden|  Hello / We have received your mail.
    | from_name=hidden | Website XY
    | from_email=hidden | noreply@website.com
    | organization=hidden | Organization XY

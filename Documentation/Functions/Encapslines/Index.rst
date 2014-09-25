@@ -254,7 +254,8 @@ Example:
 
 ::
 
-   # Make sure nonTypoTagStdWrap operates on content outside <typolist> and <typohead> only:
+   # Make sure nonTypoTagStdWrap operates
+   # on content outside <typolist> and <typohead> only:
    tt_content.text.20.parseFunc.tags.typolist.breakoutTypoTagContent = 1
    tt_content.text.20.parseFunc.tags.typohead.breakoutTypoTagContent = 1
    # ... and no <br> before typohead.

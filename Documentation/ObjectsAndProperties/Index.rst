@@ -45,7 +45,8 @@ Example:
 
 ::
 
-   45 + 34 * 2 = 158          (which is the same as this in ordinary arithmetic: (45+34)*2=158)
+   45 + 34 * 2 = 158
+   (which is the same as this in ordinary arithmetic: (45+34)*2=158)
 
 
 .. _objects-stdwrap:

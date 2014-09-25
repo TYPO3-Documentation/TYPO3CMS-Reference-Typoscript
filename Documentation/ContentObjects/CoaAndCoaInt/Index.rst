@@ -20,9 +20,10 @@ COA stands for "content object array"; it has the alias COBJ\_ARRAY.
 You can also call it "COBJ\_ARRAY" instead of COA.
 
 You can also create this object as a COA\_INT in which case it works
-exactly like the :ref:`USER_INT <cobj-user-int>` object does: It's rendered non-cached! That
-way COA\_INT allows you not only to render :ref:`USER_INT <cobj-user-int>` objects
-non-cached, but to render *every* cObject non-cached.
+exactly like the :ref:`USER_INT <cobj-user-int>` object does: It's
+rendered non-cached! That way COA\_INT allows you not only to render
+:ref:`USER_INT <cobj-user-int>` objects non-cached, but to render
+*every* cObject non-cached.
 
 
 .. ### BEGIN~OF~TABLE ###

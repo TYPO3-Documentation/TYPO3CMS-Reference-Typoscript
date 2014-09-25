@@ -28,7 +28,7 @@ responsible for this, but the submenu on the next level (referred to as
 2nd level) can be both TMENU or another GMENU.
 
 **Note:** You must include the library
-"typo3conf/ext/statictemplates/media/scripts/gmenu\_foldout.php" (in
+"media/scripts/gmenu\_foldout.php" (in
 older versions
 "typo3/sysext/statictemplates/media/scripts/gmenu\_foldout.php").
 
@@ -316,7 +316,7 @@ Example:
 ::
 
    ## GMENU_FOLDOUT
-   includeLibs.gmenu_foldout = typo3conf/ext/statictemplates/media/scripts/gmenu_foldout.php
+   includeLibs.gmenu_foldout = media/scripts/gmenu_foldout.php
 
    temp.foldoutMenu = HMENU
    temp.foldoutMenu.1 = GMENU_FOLDOUT
@@ -352,8 +352,8 @@ Example:
      bottomBackColor = silver
      menuWidth = 170
 
-     arrowNO = typo3conf/ext/statictemplates/media/bullets/arrow_no.gif
-     arrowACT = typo3conf/ext/statictemplates/media/bullets/arrow_act.gif
+     arrowNO = media/bullets/arrow_no.gif
+     arrowACT = media/bullets/arrow_act.gif
      arrowImgParams = hspace=4 align=top
 
      bottomContent = TEXT

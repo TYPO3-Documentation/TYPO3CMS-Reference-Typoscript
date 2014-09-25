@@ -512,7 +512,8 @@ Comparison:
 Comparison with the application context, in which TYPO3 is running.
 
 The values are compared to applicationContext, which is set at the
-very beginning of the bootstrap sequence based on :code:`getenv('TYPO3_CONTEXT')`.
+very beginning of the bootstrap sequence based on
+:code:`getenv('TYPO3_CONTEXT')`.
 
 Value is comma-list of application contexts to match with.
 Wildcards + and \* are allowed, as well as regular expressions
@@ -522,7 +523,8 @@ delimited with /PREG_PATTERN/.
 Examples:
 ~~~~~~~~~
 
-Matches exactly the applicationContexts "Development/Debugging" or "Development/Profiling"::
+Matches exactly the applicationContexts "Development/Debugging" or
+"Development/Profiling"::
 
    [applicationContext = Development/Debugging, Development/Profiling]
 
@@ -1018,7 +1020,7 @@ Syntax:
 
 ::
 
-   [globalVar = var1 = value1, var2 > value2, var3 < value3, var4 <= value4, var5 >= value5, var6 != value6, ...]
+   [globalVar = var1 = value1, var2 > value2, var3 < value3, var4 <= value4, ...]
 
 
 Comparison:

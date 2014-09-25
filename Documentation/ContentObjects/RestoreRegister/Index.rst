@@ -56,7 +56,8 @@ again. ::
      30 {
        myTextRegister.cObject = COA
        myTextRegister.cObject {
-         # Get the current text from myTextRegister: "This is text originally used in the second block..."
+         # Get the current text from myTextRegister:
+         # "This is text originally used in the second block..."
          10 = TEXT
          10.stdWrap.data = register:myTextRegister
          10.stdWrap.append = TEXT
@@ -68,7 +69,8 @@ again. ::
      }
      # Up to this place no actual output has been produced.
 
-     # Outputs block 30 "This is text originally used in the second block... (but now used in the third block). This is a second text in the third block."
+     # Outputs block 30 "This is text originally used in the second block...
+     # (but now used in the third block). This is a second text in the third block."
      40 = TEXT
      40.stdWrap.data = register:myTextRegister
 

@@ -22,7 +22,8 @@ space
    Comment
          "space before \| space after"
 
-         Used for content and sets the according number of pixels space "before \| after".
+         Used for content and sets the according number of pixels space
+         "before \| after".
 
 
 
