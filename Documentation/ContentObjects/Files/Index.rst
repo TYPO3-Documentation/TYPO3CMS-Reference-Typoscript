@@ -75,7 +75,7 @@ different cObjects.
 
             references {
               table = pages
-              uid.data = page:uid
+              uid.data = {page:uid}
               fieldName = media
             }
 
