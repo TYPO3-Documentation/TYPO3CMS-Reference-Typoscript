@@ -21,16 +21,18 @@ typo3/sysext/frontend/Classes/ContentObject/ContentObjectRenderer.php
 The array $GLOBALS['TSFE']->lastImageInfo is set with the info-array
 of the returning image (if any) and contains width, height and so on:
 
-=============================  ==========================================
+=============================  =============================================
 Name of the getText property   Content
-=============================  ==========================================
+=============================  =============================================
 0                              width
 1                              height
 2                              file extension
 3                              resource
-origFile                       path and file name of the original file
+origFile                       relative URL pointing to the original file
 _mtime                         modification time of the original file
-=============================  ==========================================
+originalFile                   The FAL object referencing the original file
+processedFile                  The FAL object referencing the processed file
+=============================  =============================================
 
 **Note:** Gifbuilder also has an :ref:`IMAGE object <gifbuilder-image>` -
 do not mix that one up with the cObject described here; both are
