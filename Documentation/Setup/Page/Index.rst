@@ -172,12 +172,14 @@ bodyTag
    Description
          Body tag on the page
 
-         **Example:** ::
+         **Example:**
 
-            <body bgcolor="{$bgCol}">
+         .. code:: html
+
+         	<body bgcolor="{$bgCol}">
 
    Default
-         <body bgcolor="#FFFFFF">
+         <body>
 
 
 
