@@ -51,7 +51,7 @@ Properties
    `1,2,3,4...`_                  cObject
    `adminPanelStyles`_            :ref:`data-type-boolean`
    `bgImg`_                       imgResource
-   `bodyTag`_                     <tag>                                                    <body bgcolor="#FFFFFF">
+   `bodyTag`_                     <tag>                                                    <body>
    `bodyTagAdd`_                  :ref:`data-type-string`
    `bodyTagCObject`_              cObject
    `bodyTagMargins`_              :ref:`data-type-integer`
