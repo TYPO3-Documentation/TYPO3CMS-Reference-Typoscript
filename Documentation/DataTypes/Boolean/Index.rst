@@ -25,7 +25,7 @@ boolean
          (meaning "TRUE" and "FALSE").
 
          Everything else is `evaluated to one of these values by PHP`__:
-         Non-empty strings (but not "0") are treated as "TRUE",
+         Non-empty strings (except "0" [zero]) are treated as "TRUE",
          empty strings are evaluated to FALSE.
 
          __ http://php.net/manual/en/language.types.boolean.php
