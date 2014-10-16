@@ -10,7 +10,44 @@
 ->TCEMAIN
 ^^^^^^^^^
 
-.. ### BEGIN~OF~TABLE ###
+
+.. only:: html
+
+   .. contents::
+      :local:
+      :depth: 1
+
+
+.. _pagetcemain-properties:
+
+Properties
+""""""""""
+
+.. container:: ts-properties
+
+   =================================== =========================================
+   Property                            Data Type
+   =================================== =========================================
+   `clearCacheCmd`_                    list of values
+   `clearCache\_disable`_              boolean
+   `clearCache\_pageGrandParent`_      boolean
+   `clearCache\_pageSiblingChildren`_  boolean
+   `disableHideAtCopy`_                boolean
+   `disablePrependAtCopy`_             boolean
+   `history.maxAgeDays`_               integer
+   `notificationEmail\_subject`_       string
+   `notificationEmail\_body`_          string
+   `permissions (user and group)`_     integer
+   `permissions (actions)`_            list of strings / integer
+   `table.[table name]`_               :ref:`TCEMAIN_tables <pagetcemaintables>`
+   `translateToMessage`_               string
+   =================================== =========================================
+
+
+.. _pagetcemain-table-table-name:
+
+table.[table name]
+~~~~~~~~~~~~~~~~~~
 
 .. container:: table-row
 
@@ -20,11 +57,16 @@
          default
 
    Data type
-         ->TCEMAIN\_tables
+         :ref:`TCEMAIN_tables <pagetcemaintables>`
 
    Description
          Options for each table.
 
+
+.. _pagetcemain-permissions-user-group:
+
+permissions (user and group)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. container:: table-row
 
@@ -59,9 +101,14 @@
          "test\_group". With the configuration above a new page would be
          created with this user/group setting instead of the defaults:
 
-         .. figure:: ../../Images/manual_html_63233290.png
+         .. figure:: ../../Images/AccessDefaultPermissions.png
             :alt: Page with altered permissions for backend users and groups
 
+
+.. _pagetcemain-permissions-actions:
+
+permissions (actions)
+~~~~~~~~~~~~~~~~~~~~~
 
 .. container:: table-row
 
@@ -112,9 +159,14 @@
          permissions you can see the effect: The Backend Group can now also
          delete the page by default and Everybody has read access:
 
-         .. figure:: ../../Images/manual_html_23d64d7b.png
+         .. figure:: ../../Images/AccessDefaultActions.png
             :alt: Page with altered permissions for backend users, groups and everybody
 
+
+.. _pagetcemain-clearcachecmd:
+
+clearCacheCmd
+~~~~~~~~~~~~~
 
 .. container:: table-row
 
@@ -141,6 +193,11 @@
 			TCEMAIN.clearCacheCmd = all
 
 
+.. _pagetcemain-clearcache-pagesiblingchildren:
+
+clearCache\_pageSiblingChildren
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 .. container:: table-row
 
    Property
@@ -157,6 +214,11 @@
          and siblings (same level) is cleared.)
 
 
+.. _pagetcemain-clearcache-pagegrandparent:
+
+clearCache\_pageGrandParent
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 .. container:: table-row
 
    Property
@@ -169,6 +231,11 @@
          If set, then the grand parent of a page being edited will have the
          page cache cleared.
 
+
+.. _pagetcemain-clearcache-disable:
+
+clearCache\_disable
+~~~~~~~~~~~~~~~~~~~
 
 .. container:: table-row
 
@@ -183,6 +250,11 @@
          edited etc. is disabled. This also disables the significance of the
          two "clearCache\_page\*" options listed above.
 
+
+.. _pagetcemain-translatetomessage:
+
+translateToMessage
+~~~~~~~~~~~~~~~~~~
 
 .. container:: table-row
 
@@ -209,6 +281,11 @@
 				translateToMessage = Bitte in "%s" übersetzen:
 			}
 
+
+.. _pagetcemain-notificationemail-subject:
+
+notificationEmail\_subject
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. container:: table-row
 
@@ -237,10 +314,15 @@
 
          .. note::
 
-            This option is deprecated since TYPO3 4.5. Since TYPO3 4.5
+            This option is deprecated since TYPO3 CMS 4.5. Since CMS TYPO3 4.5
             localized emails are sent by default, if the translation files for the
             respective language have been downloaded with the Extension Manager.
 
+
+.. _pagetcemain-notificationemail-body:
+
+notificationEmail\_body
+~~~~~~~~~~~~~~~~~~~~~~~
 
 .. container:: table-row
 
@@ -322,24 +404,25 @@
 
          .. note::
 
-            This option is deprecated since TYPO3 4.5. Since TYPO3 4.5
+            This option is deprecated since TYPO3 CMS 4.5. Since CMS TYPO3 4.5
             localized emails are sent by default, if the translation files for the
             respective language have been downloaded with the Extension Manager.
 
-
-.. ###### END~OF~TABLE ######
-
 [page:TCEMAIN]
+
 
 .. _pagetcemaintables:
 
-->TCEMAIN\_tables
-"""""""""""""""""
+TCEMAIN\_tables sub-properties
+""""""""""""""""""""""""""""""
 
-Processing options for a $GLOBALS['TCA'] configured table.
+Processing options for tables configured via :code:`$GLOBALS['TCA']`.
 
-.. ### BEGIN~OF~TABLE ###
 
+.. _pagetcemaintables-history-maxagedays:
+
+history.maxAgeDays
+~~~~~~~~~~~~~~~~~~
 
 .. container:: table-row
 
@@ -357,8 +440,13 @@ Processing options for a $GLOBALS['TCA'] configured table.
 
          .. note::
 
-            This option has been removed in TYPO3 6.0.
+            This option has been removed in TYPO3 CMS 6.0.
 
+
+.. _pagetcemaintables-disableprependatcopy:
+
+disablePrependAtCopy
+~~~~~~~~~~~~~~~~~~~~
 
 .. container:: table-row
 
@@ -370,7 +458,7 @@ Processing options for a $GLOBALS['TCA'] configured table.
 
    Description
          Disables the "prependAtCopy" feature (if configured for the table in
-         $GLOBALS['TCA']).
+         :code:`$GLOBALS['TCA']`).
 
          .. note::
 
@@ -402,8 +490,14 @@ Processing options for a $GLOBALS['TCA'] configured table.
          default mode: The page is hidden and the "(copy X)" suffix is added,
          if another page with the same named existed already.
 
-         .. figure:: ../../Images/manual_html_m5a1cc22d.png
+         .. figure:: ../../Images/PageCopyWithSuffix.png
             :alt: Hidden page with added suffix after copying its original page
+
+
+.. _pagetcemaintables-disablehideatcopy:
+
+disableHideAtCopy
+~~~~~~~~~~~~~~~~~
 
 .. container:: table-row
 
@@ -415,11 +509,9 @@ Processing options for a $GLOBALS['TCA'] configured table.
 
    Description
          Disables the "hideAtCopy" feature (if configured for the table in
-         $GLOBALS['TCA']).
+         :code:`$GLOBALS['TCA']`).
 
-         For an example, see "disablePrependAtCopy" above.
-
-
-.. ###### END~OF~TABLE ######
+         For an example, see :ref:`disablePrependAtCopy <pagetcemaintables-disableprependatcopy>`
+         above.
 
 [page:TCEMAIN.default/TCEMAIN.table.(table name)/->TCEMAIN\_tables]
