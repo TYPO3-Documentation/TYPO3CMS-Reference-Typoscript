@@ -96,7 +96,9 @@ addPageCacheTags
          (Since TYPO3 6.1) Comma-separated list of cache tags, which should
          be added to the page cache.
 
-         **Example:** ::
+         **Example:**
+
+         .. code-block:: typoscript
 
             addPageCacheTags = pagetag1,pagetag2,pagetag3
 
@@ -104,11 +106,13 @@ addPageCacheTags
          according cached pages in cache_pages.
 
          Pages, which have been cached with a tag, can be deleted from cache
-         again with the TSconfig option :ref:`TCEMAIN.clearCacheCmd
-         <t3tsconfig:pagetcemain>` (see there for more information).
+         again with the TSconfig option
+         :ref:`TCEMAIN.clearCacheCmd <t3tsconfig:pagetcemain-clearcachecmd>`.
 
-         **Note:** If you instead want to store rendered content into the
-         caching framework, see the :ref:`stdWrap feature cache <cache>`.
+         .. note::
+
+            If you instead want to store rendered content into the
+            caching framework, see the :ref:`stdWrap feature cache <stdwrap-cache>`.
 
 
 .. _stdwrap-setcurrent:
@@ -2081,10 +2085,10 @@ cache
          cache
 
    Data type
-         ->cache
+         :ref:`cache <cache>`
 
    Description
-         (Since TYPO3 4.7) Caches rendered content in the caching framework.
+         (Since TYPO3 CMS 4.7) Caches rendered content in the caching framework.
 
 
 .. _stdwrap-debug:
