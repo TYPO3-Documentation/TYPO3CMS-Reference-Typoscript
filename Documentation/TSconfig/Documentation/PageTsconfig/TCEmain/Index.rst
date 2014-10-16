@@ -174,11 +174,18 @@ clearCacheCmd
          clearCacheCmd
 
    Data type
-         List of values (integers, "all", "pages")
+         List of values (integers, "all", "pages" or tags)
 
    Description
-         This can allow you to have the cache for additional pages cleared when
+         This allows you to have the cache for additional pages cleared when
          saving to some page or branch of the page tree.
+
+         It it possible to trigger clearing of all caches or just the pages
+         cache. It is also possible to target precise pages either by referring
+         to their ID numbers or to tags that are attached to them.
+
+         Attaching tags to page cache is described in the
+         :ref:`TypoScript Reference <t3tsref:stdwrap-addpagecachetags>`.
 
          **Examples:**
 
@@ -191,6 +198,8 @@ clearCacheCmd
 			TCEMAIN.clearCacheCmd = pages
 			# Will clear ALL cache:
 			TCEMAIN.clearCacheCmd = all
+			# Will clear cache for all pages tagged with tag "pagetag1"
+			TCE.clearCacheCmd = cacheTag:pagetag1
 
 
 .. _pagetcemain-clearcache-pagesiblingchildren:
