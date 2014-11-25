@@ -189,7 +189,7 @@ layoutKey
            .. code-block:: html
 
               <picture>
-                 <source src="###SRC###"
+                 <source srcset="###SRC###"
                          media="###MEDIAQUERY###"###SELFCLOSINGTAGSLASH###>
                  <img src="###SRC###" ###PARAMS### ###ALTPARAMS######SELFCLOSINGTAGSLASH###>
               </picture>
