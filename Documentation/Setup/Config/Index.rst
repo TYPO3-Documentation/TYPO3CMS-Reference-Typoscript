@@ -100,9 +100,6 @@ Properties
    `no\_cache`_                                          :ref:`data-type-boolean`                                  -
    `noPageTitle`_                                        :ref:`data-type-integer`                                  0
    `noScaleUp`_                                          :ref:`data-type-boolean`
-   `notification\_email\_charset`_                       :ref:`data-type-string`                                   Until TYPO3 4.6: ISO-8859-1
-   `notification\_email\_encoding`_                      :ref:`data-type-string`
-   `notification\_email\_urlmode`_                       :ref:`data-type-string`
    `pageGenScript`_                                      :ref:`data-type-resource`                                 typo3/sysext/frontend/Classes/Page/PageGenerator.php
    `pageRendererTemplateFile`_                           :ref:`data-type-string`
    `pageTitleFirst`_                                     :ref:`data-type-boolean`                                  0
@@ -2148,87 +2145,6 @@ noScaleUp
          in size. This parameter clears the $this->mayScaleUp var of the class
          TYPO3\CMS\Core\Imaging\GraphicalFunctions (t3lib\_stdgraphics, often
          referred to as "gifbuilder").
-
-
-
-.. _setup-config-notification-email-charset:
-
-notification\_email\_charset
-""""""""""""""""""""""""""""
-
-.. container:: table-row
-
-   Property
-         notification\_email\_charset
-
-   Data type
-         string
-
-   Description
-         Alternative charset for the notification mails.
-
-   Default
-         Until TYPO3 4.6: ISO-8859-1
-
-         Since TYPO3 4.7: utf-8
-
-
-
-.. _setup-config-notification-email-encoding:
-
-notification\_email\_encoding
-"""""""""""""""""""""""""""""
-
-.. container:: table-row
-
-   Property
-         notification\_email\_encoding
-
-   Data type
-         string
-
-   Description
-         This sets the encoding of plaintext emails (notification messages).
-         The default encoding is "quoted-printable". But setting this to e.g.
-         "base64" will encode the content with base64 encoding.
-
-         **Values possible:**
-
-         base64
-
-         quoted-printable
-
-         8bit
-
-
-
-.. _setup-config-notification-email-urlmode:
-
-notification\_email\_urlmode
-""""""""""""""""""""""""""""
-
-.. container:: table-row
-
-   Property
-         notification\_email\_urlmode
-
-   Data type
-         string
-
-   Description
-         This option allows you to handle URL's in plain text emails so long
-         URLS of more than 76 chars are not broken. This option can be either
-         empty or "76" or "all".
-
-         If the string is blank, all links in plaintext emails are untouched.
-
-         If it's set to 76 then all links longer then 76 characters are stored
-         in the database and a hash is sent in the GET-var ?RDCT=[md5/20] to
-         the index.php script which finds the proper link in the database and
-         issues a location header (redirection).
-
-         If the value is "all" then ALL "http://" links in the message are
-         converted.
 
 
 
