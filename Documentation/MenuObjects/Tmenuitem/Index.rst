@@ -198,7 +198,7 @@ the current page record, use stdWrap.data = page : [field name].
          boolean
 
    Description
-         If set, the link is first wrapped with "*.wrap*" and then the
+         If set, the link is first wrapped with "*.linkWrap*" and then the
          <A>-tag.
 
    Default
