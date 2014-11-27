@@ -39,12 +39,14 @@ Various options for the user affecting the core at various points.
          string
 
    Description
-         When a user uploads pictures they are stored in the default folder
-         of the first file storage that user may access. In general, this will
-         be :file:`fileadmin/user_upload`. With this property it is possible
-         to set a specific upload folder.
+         When a user uploads files they are stored in the default upload folder
+         of the first file storage that user may access. The folder is used for
+         RTE and its magic images, as well as uploads in the TCEforms fields.
+         In general, this will be :file:`fileadmin/user_upload`.
 
-         The syntax is "storage uid:file path". Example:
+         With this property it is possible to set a specific upload folder.
+
+         The syntax is "storage_uid:file_path". Example:
 
          .. code-block:: typoscript
 
