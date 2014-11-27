@@ -18,7 +18,7 @@ braces.
 
 .. note::
 
-   The sytem extensions "fluid" and "extbase" need to be installed for this to
+   The system extensions "fluid" and "extbase" need to be installed for this to
    work.
 
 
@@ -100,11 +100,13 @@ layoutRootPaths
    Description
          .. note::
 
-            Mind the plural.
+            Mind the plural -s in "layoutRootPaths"!
 
          Used to define several paths for layouts, which will be tried
-         in order. The first folder where the desired layout is found is
-         used. The keys of the array define the order.
+         in reversed order (the paths are searched from bottom to top).
+         The first folder where the desired layout is found, is used.
+         If the array keys are numeric, they are first sorted and then
+         tried in reversed order.
 
          **Example:**
 
@@ -156,11 +158,11 @@ partialRootPaths
    Description
          .. note::
 
-            Mind the plural.
+            Mind the plural -s in "partialRootPaths"!
 
          Used to define several paths for partials, which will be tried
-         in order. The first folder where the desired partial is found is
-         used. The keys of the array define the order.
+         in reversed order. The first folder where the desired partial is
+         found, is used. The keys of the array define the order.
 
          See :ref:`layoutRootPaths <cobj-fluidtemplate-properties-layoutrootpaths>`
          for more details.
