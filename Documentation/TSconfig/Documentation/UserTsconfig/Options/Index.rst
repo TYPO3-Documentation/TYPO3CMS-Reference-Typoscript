@@ -963,27 +963,27 @@ Various options for the user affecting the core at various points.
    Description
          Configure which module groups or modules should be hidden from
          the main menu.
-         
+
          It is not an access restriction but makes defined modules invisible.
          That means in principle those modules can still be accessed
          if the rights allow.
-         
+
          .. note::
-         
-             A list of all available module groups and modules can be found
-             in in the backend module
-             *SYSTEM -> Configuration -> $GLOBALS['TBE_MODULES'] (BE Modules)*
-         
-          **Example:**
+
+            A list of all available module groups and modules can be found
+            in in the backend module
+            *SYSTEM -> Configuration -> $GLOBALS['TBE_MODULES'] (BE Modules)*
+
+         **Example:**
 
          .. code-block:: typoscript
 
 			# Hide module groups "file" + "help"
 			options.hideModules = file, help
-			
+
 			# Hide module "func" and "info" from the "web" group
 			options.hideModules.web := addToList(func,info)
-			
+
 			# Hide module BELogLog from "system" group
 			options.hideModules.system = BelogLog
 
