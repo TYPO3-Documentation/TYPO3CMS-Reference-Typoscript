@@ -30,6 +30,26 @@ Various options for the user affecting the core at various points.
 
             Only for admin-users. For other users it has no effect.
 
+.. container:: table-row
+
+   Property
+         defaultUploadFolder
+
+   Data type
+         string
+
+   Description
+         When a user uploads pictures they are stored in the default folder
+         of the first file storage that user may access. In general, this will
+         be :file:`fileadmin/user_upload`. With this property it is possible
+         to set a specific upload folder.
+
+         The syntax is "storage uid:file path". Example:
+
+         .. code-block:: typoscript
+
+         	options.defaultUploadFolder = 2:user_folders/my_folder/
+
 
 .. container:: table-row
 
