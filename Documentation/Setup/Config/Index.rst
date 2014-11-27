@@ -980,22 +980,19 @@ doctype
 
          .. note::
 
-            In TYPO3 CMS 4.4 the keyword for HTML5 was "html\_5". This spelling
-            was deprecated since TYPO3 4.5 and has been removed in TYPO3 CMS 4.7.
-
-         Note that the keywords also change the way TYPO3 generates some of the
-         XHTML tags to ensure valid XML. If you set doctype to a string, then
-         you must also set config.xhtmlDoctype(see below).
+            Keywords also change the way TYPO3 generates some of the
+            XHTML tags to ensure valid XML. If you set doctype to a string, then
+            you must also set config.xhtmlDoctype(see below).
 
          See :ref:`config.htmlTag_setParams <setup-config-htmltag-setparams>` and
          :ref:`comfig.htmlTag_langKey <setup-config-htmltag-langkey>` for more
          details on the effect on the HTML tag.
 
-         Default is the HTML 4 Transitional doctype::
+         Default is the HTML 5 doctype:
 
-            <!DOCTYPE html
+         .. code-block:: html
 
-                PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+            <!DOCTYPE html>
 
 
 .. _setup-config-doctypeswitch:
