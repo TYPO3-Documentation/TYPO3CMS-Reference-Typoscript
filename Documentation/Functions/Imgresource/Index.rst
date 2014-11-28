@@ -176,7 +176,7 @@ imgResource.
          frame
 
    Data type
-         integer
+         integer /:ref:`stdWrap <stdwrap>`
 
    Description
          Chooses the frame in a PDF or GIF file.
