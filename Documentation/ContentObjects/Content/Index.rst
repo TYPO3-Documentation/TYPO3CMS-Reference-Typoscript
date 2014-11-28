@@ -28,7 +28,7 @@ lists of records from a variety of tables without fine graining.
          select
 
    Data type
-         ->select
+         :ref:`->select <select>`
 
    Description
          The SQL-statement, a SELECT query, is set here!
