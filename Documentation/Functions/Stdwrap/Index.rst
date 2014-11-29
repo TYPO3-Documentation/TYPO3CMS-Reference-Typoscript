@@ -73,7 +73,7 @@ setContentToCurrent
          setContentToCurrent
 
    Data type
-         boolean
+         boolean /stdWrap
 
    Description
          Sets the current value to the incoming content of the function.
@@ -90,7 +90,7 @@ addPageCacheTags
          addPageCacheTags
 
    Data type
-         string /:ref:`stdWrap <stdwrap>`
+         string /stdWrap
 
    Description
          (Since TYPO3 6.1) Comma-separated list of cache tags, which should
@@ -122,7 +122,7 @@ setCurrent
          setCurrent
 
    Data type
-         string /:ref:`stdWrap <stdwrap>`
+         string /stdWrap
 
    Description
          Sets the "current"-value. This is normally set from some outside
@@ -140,7 +140,7 @@ lang
          lang
 
    Data type
-         Array of language keys
+         Array of language keys /stdWrap
 
    Description
          This is used to define optional language specific values.
@@ -170,7 +170,7 @@ data
          data
 
    Data type
-         :ref:`data-type-gettext`
+         :ref:`data-type-gettext` /stdWrap
 
 
 .. _stdwrap-field:
@@ -184,7 +184,7 @@ field
          field
 
    Data type
-         Field name
+         Field name /stdWrap
 
    Description
          Sets the content to the value of the according field
@@ -222,7 +222,7 @@ current
          current
 
    Data type
-         boolean
+         boolean /stdWrap
 
    Description
          Sets the content to the "current"-value (see :ref:`->split <split>`)
@@ -256,7 +256,7 @@ numRows
          numRows
 
    Data type
-         :ref:`->numRows <numrows>`
+         :ref:`->numRows <numrows>` /stdWrap
 
    Description
          Returns the number of rows resulting from the supplied SELECT query.
@@ -273,7 +273,7 @@ filelist
          filelist
 
    Data type
-         :ref:`data-type-dir` /:ref:`stdWrap <stdwrap>`
+         :ref:`data-type-dir` /stdWrap
 
    Description
          Reads a directory and returns a list of file names.
@@ -335,7 +335,7 @@ override
          override
 
    Data type
-         string /:ref:`stdWrap <stdwrap>`
+         string /stdWrap
 
    Description
          if "override" returns something else than "" or zero (trimmed), the
@@ -370,7 +370,7 @@ ifNull
          ifNull
 
    Data type
-         string /:ref:`stdWrap <stdwrap>`
+         string /stdWrap
 
    Description
          If the content is null (NULL type in PHP), the content is overridden
@@ -402,7 +402,7 @@ ifEmpty
          ifEmpty
 
    Data type
-         string /:ref:`stdWrap <stdwrap>`
+         string /stdWrap
 
    Description
          If the trimmed content is empty at this point, the content is loaded
@@ -420,7 +420,7 @@ ifBlank
          ifBlank
 
    Data type
-         string /:ref:`stdWrap <stdwrap>`
+         string /stdWrap
 
    Description
          Same as "ifEmpty" but the check is done using strlen().
@@ -437,7 +437,7 @@ listNum
          listNum
 
    Data type
-         integer :ref:`+calc <objects-calc>` +"last" +"rand"
+         integer :ref:`+calc <objects-calc>` +"last" +"rand" /stdWrap
 
    Description
          Explodes the content with "," (comma) and the content is set to the
@@ -492,7 +492,7 @@ trim
          trim
 
    Data type
-         boolean
+         boolean /stdWrap
 
    Description
          If set, the PHP-function trim() will be used to remove whitespaces
@@ -546,7 +546,7 @@ required
          required
 
    Data type
-         boolean
+         boolean /stdWrap
 
    Description
          This flag requires the content to be set to some value after any
@@ -585,7 +585,7 @@ fieldRequired
          fieldRequired
 
    Data type
-         Field name
+         Field name /stdWrap
 
    Description
          The value in this field **must** be set.
@@ -608,7 +608,7 @@ csConv
          csConv
 
    Data type
-         string
+         string /stdWrap
 
    Description
          Convert the charset of the string from the charset given as value to
@@ -626,7 +626,7 @@ parseFunc
          parseFunc
 
    Data type
-         object path reference / :ref:`->parseFunc <parsefunc>`
+         object path reference / :ref:`->parseFunc <parsefunc>` /stdWrap
 
    Description
          Processing instructions for the content.
@@ -655,7 +655,7 @@ HTMLparser
          HTMLparser
 
    Data type
-         boolean / :ref:`->HTMLparser <htmlparser>`
+         boolean / :ref:`->HTMLparser <htmlparser>` /stdWrap
 
    Description
          This object allows you to parse the HTML-content and perform all kinds of
@@ -677,7 +677,7 @@ split
          split
 
    Data type
-         :ref:`->split <split>`
+         :ref:`->split <split>` /stdWrap
 
 
 .. _stdwrap-replacement:
@@ -691,7 +691,7 @@ replacement
          replacement
 
    Data type
-         :ref:`->replacement <replacement>`
+         :ref:`->replacement <replacement>` /stdWrap
 
    Description
          (Since TYPO3 4.6) Performs an ordered search/replace on the current
@@ -711,7 +711,7 @@ prioriCalc
          prioriCalc
 
    Data type
-         boolean
+         boolean /stdWrap
 
    Description
          Calculation of the value using operators -+\*/%^ plus respects
@@ -750,7 +750,7 @@ char
          char
 
    Data type
-         integer
+         integer /stdWrap
 
    Description
          Content is set to the chr(*value*):
@@ -771,7 +771,7 @@ intval
          intval
 
    Data type
-         boolean
+         boolean /stdWrap
 
    Description
          PHP function intval(); returns an integer:
@@ -792,7 +792,7 @@ hash
          hash
 
    Data type
-         string /:ref:`stdWrap <stdwrap>`
+         string /stdWrap
 
    Description
          (Since TYPO3 4.6) Returns a hashed value of the current content. Set
@@ -821,7 +821,7 @@ round
          round
 
    Data type
-         :ref:`->round <round>`
+         :ref:`->round <round>` /stdWrap
 
    Description
          (Since TYPO3 4.6) Round the value with the selected method to the
@@ -857,7 +857,7 @@ date
          date
 
    Data type
-         :ref:`data-type-date-conf`
+         :ref:`data-type-date-conf` /stdWrap
 
    Description
          The content should be data-type "UNIX-time". Returns the content
@@ -889,7 +889,7 @@ strftime
          strftime
 
    Data type
-         :ref:`data-type-strftime-conf`
+         :ref:`data-type-strftime-conf` /stdWrap
 
    Description
          Exactly like "date" above. See the PHP manual (`strftime <http://www.php.net/strftime>`_) for the
@@ -920,7 +920,7 @@ age
          age
 
    Data type
-         boolean or string
+         boolean or string /stdWrap
 
    Description
          If enabled with a "1" (number, integer) the content is seen as a date
@@ -961,7 +961,7 @@ case
          case
 
    Data type
-         :ref:`data-type-case`
+         :ref:`data-type-case` /stdWrap
 
    Description
          Converts case
@@ -980,7 +980,7 @@ bytes
          bytes
 
    Data type
-         boolean
+         boolean /stdWrap
 
    Description
          Will format the input (an integer) as bytes: bytes, kb, mb
@@ -1006,7 +1006,7 @@ substring
          substring
 
    Data type
-         [p1], [p2]
+         [p1], [p2] /stdWrap
 
    Description
          Returns the substring with [p1] and [p2] sent as the 2nd and 3rd
@@ -1026,7 +1026,7 @@ removeBadHTML
          removeBadHTML
 
    Data type
-         boolean
+         boolean /stdWrap
 
    Description
          Removes "bad" HTML code based on a pattern that filters away HTML that
@@ -1044,7 +1044,7 @@ cropHTML
          cropHTML
 
    Data type
-         string
+         string /stdWrap
 
    Description
          Crops the content to a certain length. In contrast to stdWrap.crop it
@@ -1067,7 +1067,7 @@ stripHtml
          stripHtml
 
    Data type
-         boolean
+         boolean /stdWrap
 
    Description
          Strips all HTML tags.
@@ -1084,7 +1084,7 @@ crop
          crop
 
    Data type
-         string
+         string /stdWrap
 
    Description
          Crops the content to a certain length.
@@ -1135,7 +1135,7 @@ rawUrlEncode
          rawUrlEncode
 
    Data type
-         boolean
+         boolean /stdWrap
 
    Description
          Passes the content through the PHP function `rawurlencode() <http://www.php.net/rawurlencode>`_.
@@ -1152,7 +1152,7 @@ htmlSpecialChars
          htmlSpecialChars
 
    Data type
-         boolean
+         boolean /stdWrap
 
    Description
          Passes the content through the PHP function `htmlspecialchars() <http://www.php.net/htmlspecialchars>`_.
@@ -1172,7 +1172,7 @@ doubleBrTag
          doubleBrTag
 
    Data type
-         string
+         string /stdWrap
 
    Description
          All double-line-breaks are substituted with this value.
@@ -1189,7 +1189,7 @@ br
          br
 
    Data type
-         boolean
+         boolean /stdWrap
 
    Description
          Pass the value through the PHP function `nl2br() <http://www.php.net/nl2br>`_. This
@@ -1207,7 +1207,7 @@ brTag
          brTag
 
    Data type
-         string
+         string /stdWrap
 
    Description
          All ASCII-codes of "10" (CR) are substituted with *value.*
@@ -1224,7 +1224,7 @@ encapsLines
          encapsLines
 
    Data type
-         :ref:`->encapsLines <encapslines>`
+         :ref:`->encapsLines <encapslines>` /stdWrap
 
    Description
          Lets you split the content by chr(10) and process each line
@@ -1242,7 +1242,7 @@ keywords
          keywords
 
    Data type
-         boolean
+         boolean /stdWrap
 
    Description
          Splits the content by characters "," ";" and chr(10) (return), trims
@@ -1260,7 +1260,7 @@ innerWrap
          innerWrap
 
    Data type
-         :ref:`wrap <data-type-wrap>` /:ref:`stdWrap <stdwrap>`
+         :ref:`wrap <data-type-wrap>` /stdWrap
 
    Description
          Wraps the content.
@@ -1277,7 +1277,7 @@ innerWrap2
          innerWrap2
 
    Data type
-         :ref:`wrap <data-type-wrap>` /:ref:`stdWrap <stdwrap>`
+         :ref:`wrap <data-type-wrap>` /stdWrap
 
    Description
          Same as .innerWrap (but watch the order in which they are executed).
@@ -1294,7 +1294,7 @@ fontTag
          fontTag
 
    Data type
-         :ref:`wrap <data-type-wrap>`
+         :ref:`wrap <data-type-wrap>` /stdWrap
 
 
 .. _stdwrap-addparams:
@@ -1308,7 +1308,7 @@ addParams
          addParams
 
    Data type
-         :ref:`->addParams <addparams>`
+         :ref:`->addParams <addparams>` /stdWrap
 
    Description
          Lets you add tag parameters to the content *if* the content is a tag!
@@ -1325,7 +1325,7 @@ textStyle
          textStyle
 
    Data type
-         :ref:`->textStyle <textstyle>`
+         :ref:`->textStyle <textstyle>` /stdWrap
 
    Description
          Wraps the content in font-tags.
@@ -1342,7 +1342,7 @@ tableStyle
          tableStyle
 
    Data type
-         :ref:`->tableStyle <tablestyle>`
+         :ref:`->tableStyle <tablestyle>` /stdWrap
 
    Description
          Wraps content with table-tags.
@@ -1359,7 +1359,7 @@ filelink
          filelink
 
    Data type
-         :ref:`->filelink <filelink>`
+         :ref:`->filelink <filelink>` /stdWrap
 
    Description
          Used to make lists of links to files.
@@ -1410,7 +1410,7 @@ wrapAlign
          wrapAlign
 
    Data type
-         :ref:`align <data-type-align>` /:ref:`stdWrap <stdwrap>`
+         :ref:`align <data-type-align>` /stdWrap
 
    Description
          Wraps content with <div style=text-align:[*value*];"> \| </div>
@@ -1428,7 +1428,7 @@ typolink
          typolink
 
    Data type
-         :ref:`->typolink <typolink>`
+         :ref:`->typolink <typolink>` /stdWrap
 
    Description
          Wraps the content with a link-tag.
@@ -1445,7 +1445,7 @@ TCAselectItem
          TCAselectItem
 
    Data type
-         Array of properties
+         Array of properties /stdWrap
 
    Description
          Resolves a comma-separated list of values into the TCA item
@@ -1473,7 +1473,7 @@ spaceBefore
          spaceBefore
 
    Data type
-         integer /:ref:`stdWrap <stdwrap>`
+         integer /stdWrap
 
    Description
          Pixels space before. Done with a clear-gif; <img ...><br>.
@@ -1490,7 +1490,7 @@ spaceAfter
          spaceAfter
 
    Data type
-         integer /:ref:`stdWrap <stdwrap>`
+         integer /stdWrap
 
    Description
          Pixels space after. Done with a clear-gif; <img ...><br>.
@@ -1507,7 +1507,7 @@ space
          space
 
    Data type
-         :ref:`space <data-type-space>` /:ref:`stdWrap <stdwrap>`
+         :ref:`space <data-type-space>` /stdWrap
 
    Description
          [spaceBefore] \| [spaceAfter]
@@ -1532,7 +1532,7 @@ wrap
          wrap
 
    Data type
-         :ref:`wrap <data-type-wrap>` /+.splitChar
+         :ref:`wrap <data-type-wrap>` /+.splitChar /stdWrap
 
    Description
          .splitChar defines an alternative splitting character (default is "\|"
@@ -1550,7 +1550,7 @@ noTrimWrap
          noTrimWrap
 
    Data type
-         "special" wrap /+.splitChar
+         "special" wrap /+.splitChar /stdWrap
 
    Description
          This wraps the content *without* trimming the values. That means that
@@ -1597,7 +1597,7 @@ wrap2
          wrap2
 
    Data type
-         :ref:`wrap <data-type-wrap>` /+.splitChar
+         :ref:`wrap <data-type-wrap>` /+.splitChar /stdWrap
 
    Description
          *same as .wrap (but watch the order in which they are executed)*
@@ -1614,7 +1614,7 @@ dataWrap
          dataWrap
 
    Data type
-         mixed
+         mixed /stdWrap
 
    Description
          The content is parsed for pairs of curly braces. The content of the
@@ -1674,7 +1674,7 @@ wrap3
          wrap3
 
    Data type
-         :ref:`wrap <data-type-wrap>` /+.splitChar
+         :ref:`wrap <data-type-wrap>` /+.splitChar /stdWrap
 
    Description
          *same as .wrap (but watch the order in which they are executed)*
@@ -1691,7 +1691,7 @@ orderedStdWrap
          orderedStdWrap
 
    Data type
-         Array of numeric keys with /:ref:`stdWrap <stdwrap>` each
+         Array of numeric keys with /stdWrap each
 
    Description
          (Since TYPO3 4.7) Execute multiple stdWrap statements in a freely
@@ -1733,7 +1733,7 @@ outerWrap
          outerWrap
 
    Data type
-         :ref:`wrap <data-type-wrap>` /:ref:`stdWrap <stdwrap>`
+         :ref:`wrap <data-type-wrap>` /stdWrap
 
    Description
          *Wraps the complete content*
@@ -1750,7 +1750,7 @@ insertData
          insertData
 
    Data type
-         boolean
+         boolean /stdWrap
 
    Description
          If set, then the content string is parsed like .dataWrap above.
@@ -1775,7 +1775,7 @@ offsetWrap
          offsetWrap
 
    Data type
-         x,y
+         x,y /stdWrap
 
    Description
          This wraps the input in a table with columns to the left and top that
@@ -1947,7 +1947,7 @@ prefixComment
          prefixComment
 
    Data type
-         string
+         string /stdWrap
 
    Description
          Prefixes content with an HTML comment with the second part of input
@@ -1974,7 +1974,7 @@ editIcons
          editIcons
 
    Data type
-         string
+         string /stdWrap
 
    Description
          If not empty, then insert an icon linking to
@@ -2066,7 +2066,7 @@ debug
          debug
 
    Data type
-         boolean
+         boolean /stdWrap
 
    Description
          Prints content with HTMLSpecialChars() and <pre></pre>: Useful for
@@ -2087,7 +2087,7 @@ debugFunc
          debugFunc
 
    Data type
-         boolean
+         boolean /stdWrap
 
    Description
          Prints the content directly to browser with the debug() function.
@@ -2108,7 +2108,7 @@ debugData
          debugData
 
    Data type
-         boolean
+         boolean /stdWrap
 
    Description
          Prints the current data-array, $cObj->data, directly to browser. This
