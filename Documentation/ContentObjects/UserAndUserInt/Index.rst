@@ -156,7 +156,9 @@ order. To do that we use the following TypoScript::
    page.30 = USER
    page.30 {
      userFunc = user_various->listContentRecordsOnPage
+     # reverseOrder is a boolean variable (see PHP code below)
      reverseOrder = 1
+     # debugOutput is a boolean variable with /stdWrap (see PHP code below)
      debugOutput = 1
    }
 
@@ -191,6 +193,9 @@ things contain::
        );
 
        $output = '';
+       if (isset($conf['debugOutput.'])) {
+         $conf['debugOutput'] = $this->cObj->stdWrap($conf['debugOutput'], $conf['debugOutput.']);
+       }
        if ($conf['debugOutput']) {
          $output = 'This is the query: <strong>' . $query . '</strong><br /><br />';
        }
