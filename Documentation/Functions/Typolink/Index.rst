@@ -129,8 +129,7 @@ with the link-parameters (lowercased)!
    Description
          Add the QUERY\_STRING to the start of the link. Notice that this does
          not check for any duplicate parameters! This is not a problem (only
-         the last parameter of the same name will be applied), but enable
-         "config.uniqueLinkVars" if you still don't like it.
+         the last parameter of the same name will be applied)
 
          **.method:** If set to GET or POST, then the parsed query arguments
          (GET or POST data) will be used. This setting is useful, if you use

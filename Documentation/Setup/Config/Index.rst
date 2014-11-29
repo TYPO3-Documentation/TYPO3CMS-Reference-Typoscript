@@ -154,7 +154,6 @@ Properties
    `typolinkEnableLinksAcrossDomains`_                   :ref:`data-type-boolean`                                  0
    `typolinkLinkAccessRestrictedPages`_                  integer (page id) / keyword "NONE"
    `typolinkLinkAccessRestrictedPages\_addParams`_       :ref:`data-type-string`
-   `uniqueLinkVars`_                                     :ref:`data-type-boolean`                                  1
    `USERNAME\_substToken`_                               :ref:`data-type-string`                                   <!--###USERNAME###-->
    `USERUID\_substToken`_                                :ref:`data-type-string`
    `xhtml\_cleaning`_                                    :ref:`data-type-string`
@@ -3785,29 +3784,6 @@ typolinkLinkAccessRestrictedPages\_addParams
 
    Description
          See "typolinkLinkAccessRestrictedPages" above
-
-
-
-.. _setup-config-uniquelinkvars:
-
-uniqueLinkVars
-""""""""""""""
-
-.. container:: table-row
-
-   Property
-         uniqueLinkVars
-
-   Data type
-         boolean
-
-   Description
-         It might happen that TYPO3 generates links with the same parameter
-         twice or more. This is no problem because only the last parameter is
-         used, thus the problem is just a cosmetic one.
-
-   Default
-         1
 
 
 
