@@ -73,7 +73,7 @@ value is "imported" from the field called "header" from the $cObj
          setContentToCurrent
 
    Data type
-         boolean
+         boolean /stdWrap
 
    Description
          Sets the current value to the incoming content of the function.
@@ -87,7 +87,7 @@ value is "imported" from the field called "header" from the $cObj
          setCurrent
 
    Data type
-         string /:ref:`stdWrap <stdwrap>`
+         string /stdWrap
 
    Description
          Sets the "current"-value. This is normally set from some outside
@@ -102,7 +102,7 @@ value is "imported" from the field called "header" from the $cObj
          lang
 
    Data type
-         Array of language keys
+         Array of language keys /stdWrap
 
    Description
          This is used to define optional language specific values.
@@ -129,7 +129,7 @@ value is "imported" from the field called "header" from the $cObj
          data
 
    Data type
-         :ref:`data-type-gettext`
+         :ref:`data-type-gettext` /stdWrap
 
 
 .. container:: table-row
@@ -140,7 +140,7 @@ value is "imported" from the field called "header" from the $cObj
          field
 
    Data type
-         Field name
+         Field name /stdWrap
 
    Description
          Sets the content to the value of the according field
@@ -175,7 +175,7 @@ value is "imported" from the field called "header" from the $cObj
          current
 
    Data type
-         boolean
+         boolean /stdWrap
 
    Description
          Sets the content to the "current"-value (see :ref:`->split <split>`)
@@ -203,7 +203,7 @@ value is "imported" from the field called "header" from the $cObj
          numRows
 
    Data type
-         :ref:`->numRows <numrows>`
+         :ref:`->numRows <numrows>` /stdWrap
 
    Description
          Returns the number of rows resulting from the supplied SELECT query.
@@ -217,7 +217,7 @@ value is "imported" from the field called "header" from the $cObj
          filelist
 
    Data type
-         :ref:`data-type-dir` /:ref:`stdWrap <stdwrap>`
+         :ref:`data-type-dir` /stdWrap
 
    Description
          Reads a directory and returns a list of file names.
@@ -270,7 +270,7 @@ value is "imported" from the field called "header" from the $cObj
          override
 
    Data type
-         string /:ref:`stdWrap <stdwrap>`
+         string /stdWrap
 
    Description
          if "override" returns something else than "" or zero (trimmed), the
@@ -299,7 +299,7 @@ value is "imported" from the field called "header" from the $cObj
          ifNull
 
    Data type
-         string /:ref:`stdWrap <stdwrap>`
+         string /stdWrap
 
    Description
          If the content is null (NULL type in PHP), the content is overridden
@@ -328,7 +328,7 @@ value is "imported" from the field called "header" from the $cObj
          ifEmpty
 
    Data type
-         string /:ref:`stdWrap <stdwrap>`
+         string /stdWrap
 
    Description
          If the trimmed content is empty at this point, the content is loaded
@@ -343,7 +343,7 @@ value is "imported" from the field called "header" from the $cObj
          ifBlank
 
    Data type
-         string /:ref:`stdWrap <stdwrap>`
+         string /stdWrap
 
    Description
          Same as "ifEmpty" but the check is done using strlen().
@@ -357,7 +357,7 @@ value is "imported" from the field called "header" from the $cObj
          listNum
 
    Data type
-         integer :ref:`+calc <objects-calc>` +"last" +"rand"
+         integer :ref:`+calc <objects-calc>` +"last" +"rand" /stdWrap
 
    Description
          Explodes the content with "," (comma) and the content is set to the
@@ -409,7 +409,7 @@ value is "imported" from the field called "header" from the $cObj
          trim
 
    Data type
-         boolean
+         boolean /stdWrap
 
    Description
          If set, the PHP-function trim() will be used to remove whitespaces
@@ -438,7 +438,7 @@ value is "imported" from the field called "header" from the $cObj
          required
 
    Data type
-         boolean
+         boolean /stdWrap
 
    Description
          This flag requires the content to be set to some value after any
@@ -471,7 +471,7 @@ value is "imported" from the field called "header" from the $cObj
          fieldRequired
 
    Data type
-         Field name
+         Field name /stdWrap
 
    Description
          The value in this field **must** be set.
@@ -493,7 +493,7 @@ value is "imported" from the field called "header" from the $cObj
          csConv
 
    Data type
-         string
+         string /stdWrap
 
    Description
          Convert the charset of the string from the charset given as value to
@@ -508,7 +508,7 @@ value is "imported" from the field called "header" from the $cObj
          parseFunc
 
    Data type
-         object path reference / :ref:`->parseFunc <parsefunc>`
+         object path reference / :ref:`->parseFunc <parsefunc>` /stdWrap
 
    Description
          Processing instructions for the content.
@@ -534,7 +534,7 @@ value is "imported" from the field called "header" from the $cObj
          HTMLparser
 
    Data type
-         boolean / :ref:`->HTMLparser <htmlparser>`
+         boolean / :ref:`->HTMLparser <htmlparser>` /stdWrap
 
    Description
          This object allows you to parse the HTML-content and perform all kinds of
@@ -553,7 +553,7 @@ value is "imported" from the field called "header" from the $cObj
          split
 
    Data type
-         :ref:`->split <split>`
+         :ref:`->split <split>` /stdWrap
 
 
 .. container:: table-row
@@ -564,7 +564,7 @@ value is "imported" from the field called "header" from the $cObj
          replacement
 
    Data type
-         :ref:`->replacement <replacement>`
+         :ref:`->replacement <replacement>` /stdWrap
 
    Description
          (Since TYPO3 4.6) Performs an ordered search/replace on the current
@@ -581,7 +581,7 @@ value is "imported" from the field called "header" from the $cObj
          prioriCalc
 
    Data type
-         boolean
+         boolean /stdWrap
 
    Description
          Calculation of the value using operators -+\*/%^ plus respects
@@ -617,7 +617,7 @@ value is "imported" from the field called "header" from the $cObj
          char
 
    Data type
-         integer
+         integer /stdWrap
 
    Description
          Content is set to the chr(*value*). ::
@@ -633,7 +633,7 @@ value is "imported" from the field called "header" from the $cObj
          intval
 
    Data type
-         boolean
+         boolean /stdWrap
 
    Description
          PHP function intval(); returns an integer. ::
@@ -649,7 +649,7 @@ value is "imported" from the field called "header" from the $cObj
          hash
 
    Data type
-         string /:ref:`stdWrap <stdwrap>`
+         string /stdWrap
 
    Description
          (Since TYPO3 4.6) Returns a hashed value of the current content. Set
@@ -675,7 +675,7 @@ value is "imported" from the field called "header" from the $cObj
          round
 
    Data type
-         :ref:`->round <round>`
+         :ref:`->round <round>` /stdWrap
 
    Description
          (Since TYPO3 4.6) Round the value with the selected method to the
@@ -705,7 +705,7 @@ value is "imported" from the field called "header" from the $cObj
          date
 
    Data type
-         :ref:`data-type-date-conf`
+         :ref:`data-type-date-conf` /stdWrap
 
    Description
          The content should be data-type "UNIX-time". Returns the content
@@ -732,7 +732,7 @@ value is "imported" from the field called "header" from the $cObj
          strftime
 
    Data type
-         :ref:`data-type-strftime-conf`
+         :ref:`data-type-strftime-conf` /stdWrap
 
    Description
          Exactly like "date" above. See the PHP manual (`strftime <http://www.php.net/strftime>`_) for the
@@ -760,7 +760,7 @@ value is "imported" from the field called "header" from the $cObj
          age
 
    Data type
-         boolean or string
+         boolean or string /stdWrap
 
    Description
          If enabled with a "1" (number, integer) the content is seen as a date
@@ -798,7 +798,7 @@ value is "imported" from the field called "header" from the $cObj
          case
 
    Data type
-         :ref:`data-type-case`
+         :ref:`data-type-case` /stdWrap
 
    Description
          Converts case
@@ -814,7 +814,7 @@ value is "imported" from the field called "header" from the $cObj
          bytes
 
    Data type
-         boolean
+         boolean /stdWrap
 
    Description
          Will format the input (an integer) as bytes: bytes, kb, mb
@@ -837,7 +837,7 @@ value is "imported" from the field called "header" from the $cObj
          substring
 
    Data type
-         [p1], [p2]
+         [p1], [p2] /stdWrap
 
    Description
          Returns the substring with [p1] and [p2] sent as the 2nd and 3rd
@@ -854,7 +854,7 @@ value is "imported" from the field called "header" from the $cObj
          removeBadHTML
 
    Data type
-         boolean
+         boolean /stdWrap
 
    Description
          Removes "bad" HTML code based on a pattern that filters away HTML that
@@ -869,7 +869,7 @@ value is "imported" from the field called "header" from the $cObj
          cropHTML
 
    Data type
-         string
+         string /stdWrap
 
    Description
          Crops the content to a certain length. In contrast to stdWrap.crop it
@@ -889,7 +889,7 @@ value is "imported" from the field called "header" from the $cObj
          stripHtml
 
    Data type
-         boolean
+         boolean /stdWrap
 
    Description
          Strips all HTML tags.
@@ -903,7 +903,7 @@ value is "imported" from the field called "header" from the $cObj
          crop
 
    Data type
-         string
+         string /stdWrap
 
    Description
          Crops the content to a certain length.
@@ -951,7 +951,7 @@ value is "imported" from the field called "header" from the $cObj
          rawUrlEncode
 
    Data type
-         boolean
+         boolean /stdWrap
 
    Description
          Passes the content through the PHP function `rawurlencode() <http://www.php.net/rawurlencode>`_.
@@ -965,7 +965,7 @@ value is "imported" from the field called "header" from the $cObj
          htmlSpecialChars
 
    Data type
-         boolean
+         boolean /stdWrap
 
    Description
          Passes the content through the PHP function `htmlspecialchars() <http://www.php.net/htmlspecialchars>`_.
@@ -982,7 +982,7 @@ value is "imported" from the field called "header" from the $cObj
          doubleBrTag
 
    Data type
-         string
+         string /stdWrap
 
    Description
          All double-line-breaks are substituted with this value.
@@ -996,7 +996,7 @@ value is "imported" from the field called "header" from the $cObj
          br
 
    Data type
-         boolean
+         boolean /stdWrap
 
    Description
          Pass the value through the PHP function `nl2br() <http://www.php.net/nl2br>`_. This
@@ -1011,7 +1011,7 @@ value is "imported" from the field called "header" from the $cObj
          brTag
 
    Data type
-         string
+         string /stdWrap
 
    Description
          All ASCII-codes of "10" (CR) are substituted with *value.*
@@ -1025,7 +1025,7 @@ value is "imported" from the field called "header" from the $cObj
          encapsLines
 
    Data type
-         :ref:`->encapsLines <encapslines>`
+         :ref:`->encapsLines <encapslines>` /stdWrap
 
    Description
          Lets you split the content by chr(10) and process each line
@@ -1040,7 +1040,7 @@ value is "imported" from the field called "header" from the $cObj
          keywords
 
    Data type
-         boolean
+         boolean /stdWrap
 
    Description
          Splits the content by characters "," ";" and chr(10) (return), trims
@@ -1055,7 +1055,7 @@ value is "imported" from the field called "header" from the $cObj
          innerWrap
 
    Data type
-         :ref:`wrap <data-type-wrap>` /:ref:`stdWrap <stdwrap>`
+         :ref:`wrap <data-type-wrap>` /stdWrap
 
    Description
          Wraps the content.
@@ -1069,7 +1069,7 @@ value is "imported" from the field called "header" from the $cObj
          innerWrap2
 
    Data type
-         :ref:`wrap <data-type-wrap>` /:ref:`stdWrap <stdwrap>`
+         :ref:`wrap <data-type-wrap>` /stdWrap
 
    Description
          Same as .innerWrap (but watch the order in which they are executed).
@@ -1083,7 +1083,7 @@ value is "imported" from the field called "header" from the $cObj
          fontTag
 
    Data type
-         :ref:`wrap <data-type-wrap>`
+         :ref:`wrap <data-type-wrap>` /stdWrap
 
 
 .. container:: table-row
@@ -1094,7 +1094,7 @@ value is "imported" from the field called "header" from the $cObj
          addParams
 
    Data type
-         :ref:`->addParams <addparams>`
+         :ref:`->addParams <addparams>` /stdWrap
 
    Description
          Lets you add tag parameters to the content *if* the content is a tag!
@@ -1108,7 +1108,7 @@ value is "imported" from the field called "header" from the $cObj
          textStyle
 
    Data type
-         :ref:`->textStyle <textstyle>`
+         :ref:`->textStyle <textstyle>` /stdWrap
 
    Description
          Wraps the content in font-tags.
@@ -1122,7 +1122,7 @@ value is "imported" from the field called "header" from the $cObj
          tableStyle
 
    Data type
-         :ref:`->tableStyle <tablestyle>`
+         :ref:`->tableStyle <tablestyle>` /stdWrap
 
    Description
          Wraps content with table-tags.
@@ -1136,7 +1136,7 @@ value is "imported" from the field called "header" from the $cObj
          filelink
 
    Data type
-         :ref:`->filelink <filelink>`
+         :ref:`->filelink <filelink>` /stdWrap
 
    Description
          Used to make lists of links to files.
@@ -1178,7 +1178,7 @@ value is "imported" from the field called "header" from the $cObj
          wrapAlign
 
    Data type
-         :ref:`align <data-type-align>` /:ref:`stdWrap <stdwrap>`
+         :ref:`align <data-type-align>` /stdWrap
 
    Description
          Wraps content with <div style=text-align:[*value*];"> \| </div>
@@ -1193,7 +1193,7 @@ value is "imported" from the field called "header" from the $cObj
          typolink
 
    Data type
-         :ref:`->typolink <typolink>`
+         :ref:`->typolink <typolink>` /stdWrap
 
    Description
          Wraps the content with a link-tag.
@@ -1207,7 +1207,7 @@ value is "imported" from the field called "header" from the $cObj
          TCAselectItem
 
    Data type
-         Array of properties
+         Array of properties /stdWrap
 
    Description
          Resolves a comma-separated list of values into the TCA item
@@ -1232,7 +1232,7 @@ value is "imported" from the field called "header" from the $cObj
          spaceBefore
 
    Data type
-         integer /:ref:`stdWrap <stdwrap>`
+         integer /stdWrap
 
    Description
          Pixels space before. Done with a clear-gif; <img ...><br>.
@@ -1246,7 +1246,7 @@ value is "imported" from the field called "header" from the $cObj
          spaceAfter
 
    Data type
-         integer /:ref:`stdWrap <stdwrap>`
+         integer /stdWrap
 
    Description
          Pixels space after. Done with a clear-gif; <img ...><br>.
@@ -1260,7 +1260,7 @@ value is "imported" from the field called "header" from the $cObj
          space
 
    Data type
-         :ref:`space <data-type-space>` /:ref:`stdWrap <stdwrap>`
+         :ref:`space <data-type-space>` /stdWrap
 
    Description
          [spaceBefore] \| [spaceAfter]
@@ -1282,7 +1282,7 @@ value is "imported" from the field called "header" from the $cObj
          wrap
 
    Data type
-         :ref:`wrap <data-type-wrap>` /+.splitChar
+         :ref:`wrap <data-type-wrap>` /+.splitChar /stdWrap
 
    Description
          .splitChar defines an alternative splitting character (default is "\|"
@@ -1297,7 +1297,7 @@ value is "imported" from the field called "header" from the $cObj
          noTrimWrap
 
    Data type
-         "special" wrap
+         "special" wrap /stdWrap
 
    Description
          This wraps the content with the values val1 and val2 in the example
@@ -1318,7 +1318,7 @@ value is "imported" from the field called "header" from the $cObj
          wrap2
 
    Data type
-         :ref:`wrap <data-type-wrap>` /+.splitChar
+         :ref:`wrap <data-type-wrap>` /+.splitChar /stdWrap
 
    Description
          *same as .wrap (but watch the order in which they are executed)*
@@ -1332,7 +1332,7 @@ value is "imported" from the field called "header" from the $cObj
          dataWrap
 
    Data type
-         mixed
+         mixed /stdWrap
 
    Description
          The content is parsed for pairs of curly braces. The content of the
@@ -1383,7 +1383,7 @@ value is "imported" from the field called "header" from the $cObj
          wrap3
 
    Data type
-         :ref:`wrap <data-type-wrap>` /+.splitChar
+         :ref:`wrap <data-type-wrap>` /+.splitChar /stdWrap
 
    Description
          *same as .wrap (but watch the order in which they are executed)*
@@ -1397,7 +1397,7 @@ value is "imported" from the field called "header" from the $cObj
          orderedStdWrap
 
    Data type
-         Array of numeric keys with /:ref:`stdWrap <stdwrap>` each
+         Array of numeric keys with /stdWrap each
 
    Description
          (Since TYPO3 4.7) Execute multiple stdWrap statements in a freely
@@ -1436,7 +1436,7 @@ value is "imported" from the field called "header" from the $cObj
          outerWrap
 
    Data type
-         :ref:`wrap <data-type-wrap>` /:ref:`stdWrap <stdwrap>`
+         :ref:`wrap <data-type-wrap>` /stdWrap
 
    Description
          *Wraps the complete content*
@@ -1450,7 +1450,7 @@ value is "imported" from the field called "header" from the $cObj
          insertData
 
    Data type
-         boolean
+         boolean /stdWrap
 
    Description
          If set, then the content string is parsed like .dataWrap above.
@@ -1472,7 +1472,7 @@ value is "imported" from the field called "header" from the $cObj
          offsetWrap
 
    Data type
-         x,y
+         x,y /stdWrap
 
    Description
          This wraps the input in a table with columns to the left and top that
@@ -1559,7 +1559,7 @@ value is "imported" from the field called "header" from the $cObj
          prefixComment
 
    Data type
-         string
+         string /stdWrap
 
    Description
          (Since TYPO3 3.6.0) Prefixes content with an HTML comment with the second part of input
@@ -1583,7 +1583,7 @@ value is "imported" from the field called "header" from the $cObj
          editIcons
 
    Data type
-         string
+         string /stdWrap
 
    Description
          If not empty, then insert an icon linking to
@@ -1666,7 +1666,7 @@ value is "imported" from the field called "header" from the $cObj
          debug
 
    Data type
-         boolean
+         boolean /stdWrap
 
    Description
          Prints content with HTMLSpecialChars() and <pre></pre>: Useful for
@@ -1684,7 +1684,7 @@ value is "imported" from the field called "header" from the $cObj
          debugFunc
 
    Data type
-         boolean
+         boolean /stdWrap
 
    Description
          Prints the content directly to browser with the debug() function.
@@ -1702,7 +1702,7 @@ value is "imported" from the field called "header" from the $cObj
          debugData
 
    Data type
-         boolean
+         boolean /stdWrap
 
    Description
          Prints the current data-array, $cObj->data, directly to browser. This
