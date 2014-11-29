@@ -55,6 +55,37 @@ braces.
 .. container:: table-row
 
    Property
+         layoutRootPaths
+
+   Data type
+         array
+
+   Description
+         Sets a specific layout path; usually it is Layouts/ underneath the
+         template file.
+         You can override these paths by adding multiple paths in the fashion of
+         an 10, 20, 30 array type notation.
+
+         Example:
+
+         ::
+         page.10 = FLUIDTEMPLATE
+         page.10.file = EXT:sitedesign/Resources/Private/Templates/Main.html
+         page.10.layoutRootPaths {
+           10 = EXT:sitedesign/Resources/Private/Layouts
+           20 = EXT:sitemodification/Resources/Private/Layouts
+         }
+
+         In this case if a layout is referenced TYPO3 will look for the
+         first occurence in the list (starting at higher array numbers)
+         and use the first result found.
+
+         This is very handy when overriding default partials.
+
+
+.. container:: table-row
+
+   Property
          layoutRootPath
 
    Data type
@@ -63,6 +94,37 @@ braces.
    Description
          Sets a specific layout path; usually it is Layouts/ underneath the
          template file.
+
+
+.. container:: table-row
+
+   Property
+         partialRootPaths
+
+   Data type
+         array of filepaths
+
+   Description
+         Sets a specific partials path; usually it is Partials/ underneath the
+         template file.
+         You can override these paths by adding multiple paths in the fashion of
+         an 10, 20, 30 array type notation.
+
+         Example:
+
+         ::
+         page.10 = FLUIDTEMPLATE
+         page.10.file = EXT:sitedesign/Resources/Private/Templates/Main.html
+         page.10.partialRootPaths {
+           10 = EXT:sitedesign/Resources/Private/Partials
+           20 = EXT:sitemodification/Resources/Private/Partials
+         }
+
+         In this case if a partial is referenced TYPO3 will look for the
+         first occurence in the list (starting at higher array numbers)
+         and use the first result found.
+
+         This is very handy when overriding default partials.
 
 
 .. container:: table-row

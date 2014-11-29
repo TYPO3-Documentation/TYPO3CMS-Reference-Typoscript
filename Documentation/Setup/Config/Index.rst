@@ -47,6 +47,7 @@ Properties
    `concatenateJs`_                                      :ref:`data-type-boolean`
    `concatenateJsAndCss`_                                :ref:`data-type-boolean`                                  0
    `content\_from\_pid\_allowOutsideDomain`_             :ref:`data-type-boolean`
+   `contentObjectExceptionHandler`_                      :ref:`data-type-boolean`                                  1 (in production context)
    `debug`_                                              :ref:`data-type-boolean`
    `defaultGetVars`_                                     array
    `disableAllHeaderCode`_                               :ref:`data-type-boolean`                                  false
@@ -735,6 +736,54 @@ content\_from\_pid\_allowOutsideDomain
          Using the "Show content from this page instead" feature allows you to
          insert content from the current domain only. Setting this option will
          allow content included from anywhere in the page tree!
+
+
+
+.. _setup-config-contentObjectExceptionHandler:
+
+contentObjectExceptionHandler
+"""""""""""""""""""""""""""""
+
+.. container:: table-row
+
+   Property
+         contentObjectExceptionHandler
+
+   Data type
+         string
+
+   Description
+         Register an exception handler to catch exception thrown from within
+         the content element itself.
+         Instead of rendering an exception for the entire page, only the affected
+         content element will render an error message within the page.
+         This setting is extremely flexible so read through the following examples carefully
+
+         .. code-block:: typoscript
+
+            # Use 1 for the default exception handler (enabled by default in production context)
+            config.contentObjectExceptionHandler = 1
+
+            # Use a class name for individual exception handlers
+            config.contentObjectExceptionHandler = TYPO3\CMS\Frontend\ContentObject\Exception\ProductionExceptionHandler
+
+            # Customize the error message. A randomly generated code is replaced within the message if needed.
+            config.contentObjectExceptionHandler.errorMessage = Oops an error occurred. Code: %s
+
+            # Configure exception codes which will not be handled, but bubble up again (useful for temporary fatal errors)
+            tt_content.login.20.exceptionHandler.ignoreCodes.10 = 1414512813
+
+            # Disable the exception handling for an individual plugin/ content object
+            tt_content.login.20.exceptionHandler = 0
+
+            # ignoreCodes and errorMessage can be both configured globally …
+            config.contentObjectExceptionHandler.errorMessage = Oops an error occurred. Code: %s
+            config.contentObjectExceptionHandler.ignoreCodes.10 = 1414512813
+
+            # … or locally for individual content objects
+            tt_content.login.20.exceptionHandler.errorMessage = Oops an error occurred. Code: %s
+            tt_content.login.20.exceptionHandler.ignoreCodes.10 = 1414512813
+
 
 
 
