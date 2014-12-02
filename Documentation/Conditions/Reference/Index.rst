@@ -17,6 +17,8 @@ Condition reference
 browser
 """""""
 
+**Note:** This condition is deprecated since TYPO3 7! Use conditional
+CSS includes or a userFunc condition and a project like WURFL instead.
 
 Syntax:
 ~~~~~~~
@@ -73,7 +75,7 @@ most correct one.
 
 An example user agent could look like this::
 
-   Mozilla/5.0 (Windows NT 6.3; WOW64; rv:24.0) Gecko/20100101 Firefox/24.0
+   Mozilla/5.0 (Windows NT 6.3; WOW64; rv:31.0) Gecko/20100101 Firefox/31.0
 
 This string contains the identifications "Gecko" and "Firefox". The
 condition ::
@@ -110,6 +112,8 @@ This will match with Chrome and Opera browsers::
 version
 """""""
 
+**Note:** This condition is deprecated since TYPO3 7! Use conditional
+CSS includes or a userFunc condition and a project like WURFL instead.
 
 Syntax:
 ~~~~~~~
@@ -168,6 +172,8 @@ This matches with all browser versions below 8 and Internet Explorer 8 ::
 system
 """"""
 
+**Note:** This condition is deprecated since TYPO3 7! Use conditional
+CSS includes or a userFunc condition and a project like WURFL instead.
 
 Syntax:
 ~~~~~~~
@@ -310,6 +316,8 @@ This will match WAP-phones and PDA's ::
 useragent
 """""""""
 
+**Note:** This condition is deprecated since TYPO3 7! Use conditional
+CSS includes or a userFunc condition and a project like WURFL instead.
 
 Syntax:
 ~~~~~~~
