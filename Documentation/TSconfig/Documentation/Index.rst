@@ -16,7 +16,7 @@ TSconfig Reference
       doc_core_tsconfig
 
 :Version:
-      7.0-dev
+      |release|
 
 :Language:
       en
