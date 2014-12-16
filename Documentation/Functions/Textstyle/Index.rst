@@ -14,6 +14,8 @@ textStyle
 This is used to style text with a bunch of standard options + some
 site-specific.
 
+**Note:** This property is deprecated since TYPO3 7.1! Use CSS instead.
+
 .. ### BEGIN~OF~TABLE ###
 
 .. container:: table-row

@@ -1366,6 +1366,9 @@ textStyle
    Description
          Wraps the content in font-tags.
 
+         **Note:** This property is deprecated since TYPO3 7.1! Use
+         CSS instead.
+
 
 .. _stdwrap-tablestyle:
 
@@ -1382,6 +1385,9 @@ tableStyle
 
    Description
          Wraps content with table-tags.
+
+         **Note:** This property is deprecated since TYPO3 7.1! Use
+         CSS instead.
 
 
 .. _stdwrap-filelink:
