@@ -62,7 +62,7 @@ Properties
    `footerData`_                  ->CARRAY
    `frameSet`_                    ->FRAMESET
    `headerData`_                  ->CARRAY
-   `headTag`_                     <tag>                                                    <head>
+   `headTag`_                     <tag> /stdWrap                                           <head>
    `hover`_                       HTML-color
    `hoverStyle`_                  :ref:`data-type-string`
    `includeCSS.[array]`_          :ref:`data-type-resource`
@@ -424,7 +424,7 @@ headTag
          headTag
 
    Data type
-         <tag>
+         <tag> /stdWrap
 
    Description
          Head-tag if alternatives are wanted
