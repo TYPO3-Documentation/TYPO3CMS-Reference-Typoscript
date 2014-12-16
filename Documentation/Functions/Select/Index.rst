@@ -89,9 +89,7 @@ Always secure input from outside, for example with intval.
          recursive
    
    Data type
-         Until TYPO3 4.5:int
-         
-         Since TYPO3 4.6: int /stdWrap
+         int
    
    Description
          Recursive levels for the pidInList
