@@ -72,9 +72,7 @@ Always secure input from outside, for example with intval!
          recursive
 
    Data type
-         Until TYPO3 4.5: integer
-
-         Since TYPO3 4.6: integer /:ref:`stdWrap <stdwrap>`
+         integer
 
    Description
          Number of recursivity levels for the pidInList.
