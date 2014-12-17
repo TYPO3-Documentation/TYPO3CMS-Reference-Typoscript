@@ -406,7 +406,7 @@ current file with "current" as UID like "file : current : size".
 
 The following properties are available:
 
-name, size, sha1, extension, mime_type, contents, publicUrl, localPath
+name, size, sha1, extension, mime_type, contents, publicUrl, localPath, modification_date, creation_date
 
 Furthermore when manipulating references (such as images in content
 elements or media in pages), additional properties are available (not
@@ -414,6 +414,9 @@ all are available all the time, it depends on the setup of *references*
 of the FILES cObject):
 
 title, description, link, alternative
+
+Additionally since TYPO3 CMS 6.2, any data in the "sys_file_metadata" table can
+be accessed too.
 
 See the :ref:`FILES cObject for usage examples <cobj-files-examples>`.
 
