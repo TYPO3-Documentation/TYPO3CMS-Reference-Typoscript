@@ -116,23 +116,6 @@ Various options for the user affecting the core at various points.
    Default
          0
 
-
-.. container:: table-row
-
-   Property
-         clearCache.clearRTECache
-
-   Data type
-         boolean
-
-   Description
-         If set, the option «Clear RTE Cache» is enabled in the Clear Cache
-         menu. Note that the option is always available to admin users.
-
-   Default
-         0
-
-
 .. container:: table-row
 
    Property
