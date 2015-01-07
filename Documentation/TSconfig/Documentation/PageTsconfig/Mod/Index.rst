@@ -421,9 +421,14 @@ Shared options for modules (mod.SHARED)
          In that case the remaining columns are not needed. By this option you
          can specify exactly which of the columns you want to display.
 
+         If used on top of Backend Layouts, this setting controls which columns
+         are editable. Columns configured in the Backend Layout which are not
+         listed here, will be displayed with placeholder area.
+
          Each column has a number which ultimately comes from the configuration
          of the table tt\_content, field 'colPos' found in the tables.php file.
-         These are the values of the four default columns:
+         These are the values of the four default columns used in the default
+         Backend Layout:
 
          Left: 1
 
@@ -444,7 +449,9 @@ Shared options for modules (mod.SHARED)
          .. note::
 
             Since TYPO3 6.0 mod.SHARED.colPos_list is no longer working.
-            Instead, use backend layouts.
+            Use Backend Layouts instead.
+
+            In TYPO3 CMS 6.2, this setting was reintroduced and affects Backend Layouts.
 
          .. _example_for_backend_layout:
 
