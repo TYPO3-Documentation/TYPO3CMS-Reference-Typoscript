@@ -764,13 +764,36 @@ Various options for the user affecting the core at various points.
          you insert a non-integer it will evaluate to "0" (zero) and the root
          of the page tree is mounted. Effective in workspaces too.
 
-         These alternative webmounts **replace** configured DB mount points.
+         These alternative webmounts **replace** configured DB mount points
+         unless you use the ``altElementBrowserMountPoints.append`` option
+         described below.
 
          **Example**
 
          .. code-block:: typoscript
 
 			options.pageTree.altElementBrowserMountPoints = 34,123
+
+
+.. container:: table-row
+
+   Property
+         pageTree.altElementBrowserMountPoints.append
+
+   Data type
+         boolean
+
+   Description
+         If this option is set to TRUE the mount points configured in
+         ``altElementBrowserMountPoints`` will be appended to the
+         configured DB mount points. By default the mount points will
+         be replaced.
+
+         **Example**
+
+         .. code-block:: typoscript
+
+			options.pageTree.altElementBrowserMountPoints.append = 1
 
 .. container:: table-row
 
