@@ -134,9 +134,9 @@ different cObjects.
 
          Available sub-property:
 
-         **direction:** (Since TYPO3 6.2) The direction, in which the files should
-         be sorted. Possible values are "asc" for ascending and "desc" for
-         descending. Ascending is the default.
+         **direction:** (Since TYPO3 6.2) string /stdWrap. The direction, in which
+         the files should be sorted. Possible values are "asc" for ascending and
+         "desc" for descending. Ascending is the default.
 
 
 .. container:: table-row
