@@ -552,7 +552,7 @@ Example: Images in lightbox "TopUp"
 In this `blog post`__ (german) Paul Lunow shows a way to integrate the
 `jQuery`__ `TopUp lightbox`__:
 
-__ http://www.interaktionsdesigner.de/2009/12/04/typo3-klickvergrosern-durch-eine-jquery-lightbox-ersetzen/
+__ http://www.interaktionsdesigner.de/2009/typo3-klickvergrossern-durch-eine-jquery-lightbox-ersetzen/
 __ http://jquery.com/
 __ http://gettopup.com/
 
