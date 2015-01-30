@@ -49,11 +49,6 @@ outside the main page-rendering.
          .preUserFunc). The second parameter is an array with the properties of
          this cObject, if any.
 
-         **Note:** When using a function, the name of the *function* has to
-         start with "user\_". When using a class, the name of the *class* must
-         start with "user\_" (there are no conditions on the name of the
-         method).
-
 
 .. container:: table-row
 
