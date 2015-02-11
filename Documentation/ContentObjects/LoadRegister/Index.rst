@@ -75,8 +75,8 @@ Example:
        pidInList = this
        orderBy = sorting
        # Now we use the registered parameter
-       andWhere = uid = {REGISTER:param}
-       andWhere.insertData = 1
+       where = uid = {REGISTER:param}
+       where.insertData = 1
      }
      10.renderObj = COA
      10.renderObj {

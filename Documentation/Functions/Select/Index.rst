@@ -195,22 +195,6 @@ Always secure input from outside, for example with intval!
 .. container:: table-row
 
    Property
-         andWhere
-
-   Data type
-         *SQL-where* /:ref:`stdWrap <stdwrap>`
-
-   Description
-         AND clause in a WHERE clause; without the word "AND".
-
-         **Example:** ::
-
-            andWhere = NOT doktype
-
-
-.. container:: table-row
-
-   Property
          languageField
 
    Data type

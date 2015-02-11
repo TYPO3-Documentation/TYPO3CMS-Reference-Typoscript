@@ -1350,46 +1350,6 @@ addParams
          Lets you add tag parameters to the content *if* the content is a tag!
 
 
-.. _stdwrap-textstyle:
-
-textStyle
-'''''''''
-
-.. container:: table-row
-
-   Property
-         textStyle
-
-   Data type
-         :ref:`->textStyle <textstyle>` /stdWrap
-
-   Description
-         Wraps the content in font-tags.
-
-         **Note:** This property is deprecated since TYPO3 7.1! Use
-         CSS instead.
-
-
-.. _stdwrap-tablestyle:
-
-tableStyle
-''''''''''
-
-.. container:: table-row
-
-   Property
-         tableStyle
-
-   Data type
-         :ref:`->tableStyle <tablestyle>` /stdWrap
-
-   Description
-         Wraps content with table-tags.
-
-         **Note:** This property is deprecated since TYPO3 7.1! Use
-         CSS instead.
-
-
 .. _stdwrap-filelink:
 
 filelink

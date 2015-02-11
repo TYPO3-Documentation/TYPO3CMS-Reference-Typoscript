@@ -107,8 +107,6 @@ the register key SPLIT\_COUNT.
               10 = TEXT
               10.stdWrap.current = 1
               10.stdWrap.wrap = <b> | </b>
-              20 = CLEARGIF
-              20.height = 20
             }
 
 
