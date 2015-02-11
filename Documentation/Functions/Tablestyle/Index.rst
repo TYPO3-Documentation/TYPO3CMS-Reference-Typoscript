@@ -14,6 +14,8 @@ tableStyle
 This function is used to add properties to a table-tag. The input is
 wrapped by this table-tag.
 
+**Note:** This property is deprecated since TYPO3 7.1! Use CSS instead.
+
 .. ### BEGIN~OF~TABLE ###
 
 .. container:: table-row

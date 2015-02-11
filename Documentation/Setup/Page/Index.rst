@@ -62,7 +62,7 @@ Properties
    `footerData`_                  ->CARRAY
    `frameSet`_                    ->FRAMESET
    `headerData`_                  ->CARRAY
-   `headTag`_                     <tag>                                                    <head>
+   `headTag`_                     <tag> /stdWrap                                           <head>
    `hover`_                       HTML-color
    `hoverStyle`_                  :ref:`data-type-string`
    `includeCSS.[array]`_          :ref:`data-type-resource`
@@ -424,7 +424,7 @@ headTag
          headTag
 
    Data type
-         <tag>
+         <tag> /stdWrap
 
    Description
          Head-tag if alternatives are wanted
@@ -1104,11 +1104,15 @@ shortcutIcon
    Description
          Favicon of the page. Create a reference to an icon here!
 
-         Browsers that support favicons display them in the browser's address
-         bar, next to the site's name in lists of bookmarks, and next to the
-         page's title in the tab.
+         Browsers that support favicons display them in the address bar of
+         the browser, next to the name of the site in lists of bookmarks
+         and next to the title of the page in the tab.
 
-         **Note:** This must be a valid ".ico"-file (iconfile).
+         **Note:** The file must be a valid ".ico" file (icon file).
+
+         **Note:** The reference to this file will only be included in the
+         output of your website, if the file actually exists! Should the
+         file be missing, the tag will not be rendered.
 
 
 

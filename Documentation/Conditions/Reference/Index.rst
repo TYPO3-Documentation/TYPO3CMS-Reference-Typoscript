@@ -17,6 +17,8 @@ Condition reference
 browser
 """""""
 
+**Note:** This condition is deprecated since TYPO3 7.0! Use conditional
+CSS includes or a userFunc condition and a project like WURFL instead.
 
 Syntax:
 ~~~~~~~
@@ -73,7 +75,7 @@ most correct one.
 
 An example user agent could look like this::
 
-   Mozilla/5.0 (Windows NT 6.3; WOW64; rv:24.0) Gecko/20100101 Firefox/24.0
+   Mozilla/5.0 (Windows NT 6.3; WOW64; rv:31.0) Gecko/20100101 Firefox/31.0
 
 This string contains the identifications "Gecko" and "Firefox". The
 condition ::
@@ -110,6 +112,8 @@ This will match with Chrome and Opera browsers::
 version
 """""""
 
+**Note:** This condition is deprecated since TYPO3 7.0! Use conditional
+CSS includes or a userFunc condition and a project like WURFL instead.
 
 Syntax:
 ~~~~~~~
@@ -168,6 +172,8 @@ This matches with all browser versions below 8 and Internet Explorer 8 ::
 system
 """"""
 
+**Note:** This condition is deprecated since TYPO3 7.0! Use conditional
+CSS includes or a userFunc condition and a project like WURFL instead.
 
 Syntax:
 ~~~~~~~
@@ -264,6 +270,8 @@ This will match with Windows and Mac systems only ::
 device
 """"""
 
+**Note:** This condition is deprecated since TYPO3 7.1! Use conditional
+CSS includes or a userFunc condition and a project like WURFL instead.
 
 Syntax:
 ~~~~~~~
@@ -310,6 +318,8 @@ This will match WAP-phones and PDA's ::
 useragent
 """""""""
 
+**Note:** This condition is deprecated since TYPO3 7.0! Use conditional
+CSS includes or a userFunc condition and a project like WURFL instead.
 
 Syntax:
 ~~~~~~~
@@ -1205,6 +1215,96 @@ This will match with a remote address beginning with "192.168." ::
 This will match with the frontend user whose username is "test"::
 
    [globalString = TSFE:fe_user|user|username = test]
+
+
+.. _condition-custom-conditions:
+
+Custom Conditions
+"""""""""""""""""
+
+(Since TYPO3 7.0) You can add own TypoScript conditions via a separate API.
+
+Instead of using the "userFunc" condition, it is encouraged to use
+this new API for your own TypoScript conditions.
+
+Syntax:
+~~~~~~~
+
+::
+
+   [YourVendor\YourPackage\YourCondition = var1 = value1, var2 != value2, ...]
+
+
+Comparison:
+'''''''''''
+
+An extension / package can ship an implementation of the abstract
+class :code:`AbstractCondition`. Via the existing TypoScript condition
+syntax the class is called by the simple full namespaced class name.
+
+The main function :code:`matchCondition` of this class can then
+evaluate any parameters given after the class name. The parameters
+will be given in form of a numeric array, each entry containing the
+strings that are split by the commas, e.g. array('= var1 = value1',
+'var2 != value2').
+
+
+Examples:
+~~~~~~~~~
+
+This example shows how to write own TypoScript conditions and how to
+evaluate their parameters in PHP. With the PHP code following below,
+these three conditions will match:
+
+.. code-block:: typoscript
+
+	[Documentation\Examples\TypoScript\ExampleCondition]
+	    Your TypoScript code here
+	[global]
+
+	[Documentation\Examples\TypoScript\ExampleCondition TYPO3]
+	    Your TypoScript code here
+	[global]
+
+	[Documentation\Examples\TypoScript\ExampleCondition = 42]
+	    Your TypoScript code here
+	[global]
+
+
+.. code-block:: php
+
+	<?php
+	namespace Documentation\Examples\TypoScript;
+	
+	/**
+	 * Example condition
+	 */
+	class ExampleCondition extends \TYPO3\CMS\Core\Configuration\TypoScript\ConditionMatching\AbstractCondition {
+	
+		/**
+		 * Evaluate condition
+		 *
+		 * @param array $conditionParameters
+		 * @return bool
+		 */
+		public function matchCondition(array $conditionParameters) {
+			$result = FALSE;
+			if (empty($conditionParameters)) {
+				$result = TRUE;
+			}
+			if (!empty($conditionParameters) && $conditionParameters[0] === 'TYPO3') {
+				$result = TRUE;
+			}
+			if (!empty($conditionParameters) && substr($conditionParameters[0], 0, 1) === '=') {
+				$conditionParameters[0] = trim(substr($conditionParameters[0], 1));
+				if ($conditionParameters[0] = '42') {
+					$result = TRUE;
+				}
+			}
+
+			return $result;
+		}
+	}
 
 
 .. _condition-userfunc:

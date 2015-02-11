@@ -26,9 +26,9 @@ Properties
 
 .. container:: ts-properties
 
-   ===================================================== ================================== ====================== ======================================================================
-   Property                                              Data Type                          :ref:`stdwrap`         Default
-   ===================================================== ================================== ====================== ======================================================================
+   ===================================================== ================================== ======================================================================
+   Property                                              Data Type                          Default
+   ===================================================== ================================== ======================================================================
    `absRefPrefix`_                                       :ref:`data-type-string`
    `additionalHeaders`_                                  strings divided by "\|"
    `admPanel`_                                           :ref:`data-type-boolean`
@@ -38,59 +38,63 @@ Properties
    `beLoginLinkIPList\_login`_                           :ref:`data-type-html-code`
    `beLoginLinkIPList\_logout`_                          :ref:`data-type-html-code`
    `cache`_                                              array
-   `cache\_clearAtMidnight`_                             :ref:`data-type-boolean`                                  false
-   `cache\_period`_                                      :ref:`data-type-integer`                                  86400 *(= 24 hours)*
+   `cache\_clearAtMidnight`_                             :ref:`data-type-boolean`           false
+   `cache\_period`_                                      :ref:`data-type-integer`           86400 *(= 24 hours)*
    `compensateFieldWidth`_                               double
    `compressCss`_                                        :ref:`data-type-boolean`
    `compressJs`_                                         :ref:`data-type-boolean`
    `concatenateCss`_                                     :ref:`data-type-boolean`
    `concatenateJs`_                                      :ref:`data-type-boolean`
-   `concatenateJsAndCss`_                                :ref:`data-type-boolean`                                  0
+   `concatenateJsAndCss`_                                :ref:`data-type-boolean`           0
    `content\_from\_pid\_allowOutsideDomain`_             :ref:`data-type-boolean`
+<<<<<<< .merge_file_NIGAl6
    `contentObjectExceptionHandler`_                      :ref:`data-type-boolean`                                  1 (in production context)
+=======
+   `contentObjectExceptionHandler`_                      array
+>>>>>>> .merge_file_Rz95A4
    `debug`_                                              :ref:`data-type-boolean`
    `defaultGetVars`_                                     array
-   `disableAllHeaderCode`_                               :ref:`data-type-boolean`                                  false
-   `disableBodyTag`_                                     :ref:`data-type-boolean`                                  0
+   `disableAllHeaderCode`_                               :ref:`data-type-boolean`           false
+   `disableBodyTag`_                                     :ref:`data-type-boolean`           0
    `disableCharsetHeader`_                               :ref:`data-type-boolean`
    `disableImgBorderAttr`_                               :ref:`data-type-boolean`
    `disablePageExternalUrl`_                             :ref:`data-type-boolean`
    `disablePrefixComment`_                               :ref:`data-type-boolean`
-   `disablePreviewNotification`_                         :ref:`data-type-boolean`                                  0
+   `disablePreviewNotification`_                         :ref:`data-type-boolean`           0
    `doctype`_                                            :ref:`data-type-string`
    `doctypeSwitch`_                                      boolean / string
-   `enableContentLengthHeader`_                          :ref:`data-type-boolean`                                  1
-   `extTarget`_                                          :ref:`data-type-target`                                   \_top
+   `enableContentLengthHeader`_                          :ref:`data-type-boolean`           1
+   `extTarget`_                                          :ref:`data-type-target`            \_top
    `fileTarget`_                                         :ref:`data-type-target`
    `forceTypeValue`_                                     :ref:`data-type-integer`
    `frameReloadIfNotInFrameset`_                         :ref:`data-type-boolean`
-   `ftu`_                                                :ref:`data-type-boolean`                                  false
+   `ftu`_                                                :ref:`data-type-boolean`           false
    `headerComment`_                                      :ref:`data-type-string`
    `htmlTag\_dir`_                                       :ref:`data-type-string`
-   `htmlTag\_langKey`_                                   :ref:`data-type-string`                                   en
+   `htmlTag\_langKey`_                                   :ref:`data-type-string`            en
    `htmlTag\_setParams`_                                 :ref:`data-type-string`
    `htmlTag\_stdWrap`_                                   ->:ref:`stdwrap`
    `includeLibrary`_                                     :ref:`data-type-resource`
    `incT3Lib\_htmlmail`_                                 :ref:`data-type-boolean`
-   `index\_descrLgd`_                                    :ref:`data-type-integer`                                  200
+   `index\_descrLgd`_                                    :ref:`data-type-integer`           200
    `index\_enable`_                                      :ref:`data-type-boolean`
    `index\_externals`_                                   :ref:`data-type-boolean`
-   `index\_metatags`_                                    :ref:`data-type-boolean`                                  true
+   `index\_metatags`_                                    :ref:`data-type-boolean`           true
    `inlineStyle2TempFile`_                               :ref:`data-type-boolean`
    `intTarget`_                                          :ref:`data-type-target`
-   `jumpurl\_enable`_                                    :ref:`data-type-boolean`                                  0
-   `jumpurl\_mailto\_disable`_                           :ref:`data-type-boolean`                                  0
+   `jumpurl\_enable`_                                    :ref:`data-type-boolean`           0
+   `jumpurl\_mailto\_disable`_                           :ref:`data-type-boolean`           0
    `language`_                                           :ref:`data-type-string`
    `language\_alt`_                                      :ref:`data-type-string`
    `linkVars`_                                           :ref:`data-type-list`
    `locale\_all`_                                        :ref:`data-type-string`
-   `lockFilePath`_                                       :ref:`data-type-string`                                   fileadmin/
-   `mainScript`_                                         :ref:`data-type-string`                                   index.php
+   `lockFilePath`_                                       :ref:`data-type-string`            fileadmin/
+   `mainScript`_                                         :ref:`data-type-string`            index.php
    `meaningfulTempFilePrefix`_                           :ref:`data-type-integer`
    `message\_page\_is\_being\_generated`_                :ref:`data-type-string`
    `message\_preview`_                                   :ref:`data-type-string`
    `message\_preview\_workspace`_                        :ref:`data-type-string`
-   `metaCharset`_                                        :ref:`data-type-string`                                   value of ".renderCharset"
+   `metaCharset`_                                        :ref:`data-type-string`            value of ".renderCharset"
    `minifyCSS`_                                          :ref:`data-type-boolean`
    `minifyJS`_                                           :ref:`data-type-boolean`
    `moveJsFromHeaderToFooter`_                           :ref:`data-type-boolean`
@@ -98,23 +102,23 @@ Properties
    `MP\_disableTypolinkClosestMPvalue`_                  :ref:`data-type-boolean`
    `MP\_mapRootPoints`_                                  list of PIDs/string
    `namespaces`_                                         *(array of strings)*
-   `no\_cache`_                                          :ref:`data-type-boolean`                                  -
-   `noPageTitle`_                                        :ref:`data-type-integer`                                  0
+   `no\_cache`_                                          :ref:`data-type-boolean`           -
+   `noPageTitle`_                                        :ref:`data-type-integer`           0
    `noScaleUp`_                                          :ref:`data-type-boolean`
-   `pageGenScript`_                                      :ref:`data-type-resource`                                 typo3/sysext/frontend/Classes/Page/PageGenerator.php
+   `pageGenScript`_                                      :ref:`data-type-resource`          typo3/sysext/frontend/Classes/Page/PageGenerator.php
    `pageRendererTemplateFile`_                           :ref:`data-type-string`
-   `pageTitleFirst`_                                     :ref:`data-type-boolean`                                  0
-   `pageTitleSeparator`_                                 Until TYPO3 6.0: string                                   : *(colon with following space)*
+   `pageTitleFirst`_                                     :ref:`data-type-boolean`           0
+   `pageTitleSeparator`_                                 Until TYPO3 6.0: string            : *(colon with following space)*
    `prefixLocalAnchors`_                                 :ref:`data-type-string`
    `removeDefaultCss`_                                   :ref:`data-type-boolean`
    `removeDefaultJS`_                                    boolean / string
    `removePageCss`_                                      :ref:`data-type-boolean`
-   `renderCharset`_                                      :ref:`data-type-string`                                   Until TYPO3 4.6: The value of $TYPO3\_CONF\_VARS['BE']['forceCharset']
+   `renderCharset`_                                      :ref:`data-type-string`            Until TYPO3 4.6: The value of $TYPO3\_CONF\_VARS['BE']['forceCharset']
    `sendCacheHeaders`_                                   :ref:`data-type-boolean`
    `sendCacheHeaders\_onlyWhenLoginDeniedInBranch`_      :ref:`data-type-boolean`
    `setJS\_mouseOver`_                                   :ref:`data-type-boolean`
    `setJS\_openPic`_                                     :ref:`data-type-boolean`
-   `simulateStaticDocuments`_                            boolean / string                                          The default is defined by the configuration option
+   `simulateStaticDocuments`_                            boolean / string                   The default is defined by the configuration option
    `simulateStaticDocuments\_addTitle`_                  :ref:`data-type-integer`
    `simulateStaticDocuments\_dontRedirectPathInfoError`_ :ref:`data-type-boolean`
    `simulateStaticDocuments\_noTypeIfNoTitle`_           :ref:`data-type-boolean`
@@ -122,26 +126,26 @@ Properties
    `simulateStaticDocuments\_pEnc\_onlyP`_               :ref:`data-type-string`
    `simulateStaticDocuments\_replacementChar`_           :ref:`data-type-string`
    `spamProtectEmailAddresses`_                          "ascii" /
-   `spamProtectEmailAddresses\_atSubst`_                 :ref:`data-type-string`                                   (at)
-   `spamProtectEmailAddresses\_lastDotSubst`_            :ref:`data-type-string`                                   . *(just a simple dot)*
-   `stat`_                                               :ref:`data-type-boolean`                                  true
-   `stat\_apache`_                                       :ref:`data-type-boolean`                                  false
+   `spamProtectEmailAddresses\_atSubst`_                 :ref:`data-type-string`            (at)
+   `spamProtectEmailAddresses\_lastDotSubst`_            :ref:`data-type-string`            . *(just a simple dot)*
+   `stat`_                                               :ref:`data-type-boolean`           true
+   `stat\_apache`_                                       :ref:`data-type-boolean`           false
    `stat\_apache\_logfile`_                              filename
    `stat\_apache\_niceTitle`_                            boolean / string
    `stat\_apache\_noHost`_                               :ref:`data-type-boolean`
    `stat\_apache\_noRoot`_                               :ref:`data-type-boolean`
    `stat\_apache\_notExtended`_                          :ref:`data-type-boolean`
    `stat\_apache\_pagenames`_                            :ref:`data-type-string`
-   `stat\_excludeBEuserHits`_                            :ref:`data-type-boolean`                                  false
+   `stat\_excludeBEuserHits`_                            :ref:`data-type-boolean`           false
    `stat\_excludeIPList`_                                list of strings
-   `stat\_IP\_anonymize`_                                :ref:`data-type-boolean`                                  0
-   `stat\_IP\_anonymize\_mask\_ipv4`_                    :ref:`data-type-integer`                                  24
-   `stat\_IP\_anonymize\_mask\_ipv6`_                    :ref:`data-type-integer`                                  64
-   `stat\_logUser`_                                      :ref:`data-type-boolean`                                  1
-   `stat\_mysql`_                                        :ref:`data-type-boolean`                                  false
-   `stat\_pageLen`_                                      integer (1-100)                                           30
-   `stat\_titleLen`_                                     integer (1-100)                                           20
-   `stat\_typeNumList`_                                  int/list                                                  0,1
+   `stat\_IP\_anonymize`_                                :ref:`data-type-boolean`           0
+   `stat\_IP\_anonymize\_mask\_ipv4`_                    :ref:`data-type-integer`           24
+   `stat\_IP\_anonymize\_mask\_ipv6`_                    :ref:`data-type-integer`           64
+   `stat\_logUser`_                                      :ref:`data-type-boolean`           1
+   `stat\_mysql`_                                        :ref:`data-type-boolean`           false
+   `stat\_pageLen`_                                      integer (1-100)                    30
+   `stat\_titleLen`_                                     integer (1-100)                    20
+   `stat\_typeNumList`_                                  int/list                           0,1
    `sword\_noMixedCase`_                                 :ref:`data-type-boolean`
    `sword\_standAlone`_                                  :ref:`data-type-boolean`
    `sys\_language\_mode`_                                :ref:`data-type-string`
@@ -152,15 +156,15 @@ Properties
    `titleTagFunction`_                                   function name
    `tx\_[extension key with no underscores]\_[\*]`_      -
    `typolinkCheckRootline`_                              :ref:`data-type-boolean`
-   `typolinkEnableLinksAcrossDomains`_                   :ref:`data-type-boolean`                                  0
+   `typolinkEnableLinksAcrossDomains`_                   :ref:`data-type-boolean`           0
    `typolinkLinkAccessRestrictedPages`_                  integer (page id) / keyword "NONE"
    `typolinkLinkAccessRestrictedPages\_addParams`_       :ref:`data-type-string`
-   `USERNAME\_substToken`_                               :ref:`data-type-string`                                   <!--###USERNAME###-->
+   `USERNAME\_substToken`_                               :ref:`data-type-string`            <!--###USERNAME###-->
    `USERUID\_substToken`_                                :ref:`data-type-string`
    `xhtml\_cleaning`_                                    :ref:`data-type-string`
    `xhtmlDoctype`_                                       :ref:`data-type-string`
    `xmlprologue`_                                        :ref:`data-type-string`
-   ===================================================== ================================== ====================== ======================================================================
+   ===================================================== ================================== ======================================================================
 
 Property details
 ^^^^^^^^^^^^^^^^
@@ -750,40 +754,54 @@ contentObjectExceptionHandler
          contentObjectExceptionHandler
 
    Data type
-         string
+         array
 
    Description
-         Register an exception handler to catch exception thrown from within
-         the content element itself.
-         Instead of rendering an exception for the entire page, only the affected
-         content element will render an error message within the page.
-         This setting is extremely flexible so read through the following examples carefully
+         Exceptions which occur during rendering of content objects (typically plugins)
+         will now be caught by default in production context and an error message
+         is shown along with the rendered output.
+
+         If this is done, the page will remain available while the section of the page
+         that produces an error (i.e. throws an exception) will show a configurable error message.
+         By default this error message contains a random code which references
+         the exception and is also logged by the logging framework for developer reference.
+
+         **Usage**
 
          .. code-block:: typoscript
 
-            # Use 1 for the default exception handler (enabled by default in production context)
-            config.contentObjectExceptionHandler = 1
+			# Use 1 for the default exception handler (enabled by default in production context)
+			config.contentObjectExceptionHandler = 1
 
-            # Use a class name for individual exception handlers
-            config.contentObjectExceptionHandler = TYPO3\CMS\Frontend\ContentObject\Exception\ProductionExceptionHandler
+			# Use a class name for individual exception handlers
+			config.contentObjectExceptionHandler = TYPO3\CMS\Frontend\ContentObject\Exception\ProductionExceptionHandler
 
-            # Customize the error message. A randomly generated code is replaced within the message if needed.
-            config.contentObjectExceptionHandler.errorMessage = Oops an error occurred. Code: %s
+			# Customize the error message. A randomly generated code is replaced within the message if needed.
+			config.contentObjectExceptionHandler.errorMessage = Oops an error occurred. Code: %s
 
-            # Configure exception codes which will not be handled, but bubble up again (useful for temporary fatal errors)
-            tt_content.login.20.exceptionHandler.ignoreCodes.10 = 1414512813
+			# Configure exception codes which will not be handled, but bubble up again (useful for temporary fatal errors)
+			tt_content.login.20.exceptionHandler.ignoreCodes.10 = 1414512813
 
-            # Disable the exception handling for an individual plugin/ content object
-            tt_content.login.20.exceptionHandler = 0
+			# Disable the exception handling for an individual plugin/ content object
+			tt_content.login.20.exceptionHandler = 0
 
-            # ignoreCodes and errorMessage can be both configured globally …
-            config.contentObjectExceptionHandler.errorMessage = Oops an error occurred. Code: %s
-            config.contentObjectExceptionHandler.ignoreCodes.10 = 1414512813
+			# ignoreCodes and errorMessage can be both configured globally …
+			config.contentObjectExceptionHandler.errorMessage = Oops an error occurred. Code: %s
+			config.contentObjectExceptionHandler.ignoreCodes.10 = 1414512813
 
-            # … or locally for individual content objects
-            tt_content.login.20.exceptionHandler.errorMessage = Oops an error occurred. Code: %s
-            tt_content.login.20.exceptionHandler.ignoreCodes.10 = 1414512813
+			# … or locally for individual content objects
+			tt_content.login.20.exceptionHandler.errorMessage = Oops an error occurred. Code: %s
+			tt_content.login.20.exceptionHandler.ignoreCodes.10 = 1414512813
 
+
+         .. important::
+
+            Instead of breaking the whole page when an exception occurs, an error message
+            is shown for the part of the page that is broken.
+            Be aware that unlike before, it is now possible that a page with error message gets cached.
+
+            To get rid of the error message not only the actual error needs to be fixed,
+            but the cache must be cleared for this page.
 
 
 
