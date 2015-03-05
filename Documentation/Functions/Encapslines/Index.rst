@@ -272,11 +272,8 @@ Example:
        style=margin: 0 0 0;
      }
      innerStdWrap_all.ifEmpty = &nbsp;
-     innerStdWrap_all.textStyle < tt_content.text.20.textStyle
    }
-   # Finally removing the old textstyle formatting on the whole bodytext part.
-   tt_content.text.20.textStyle >
-   # ... and <br>-tag after the content is not needed either...
+   # <br>-tag after the content is not needed either...
    tt_content.text.20.wrap >
 
 This is an example of how to wrap traditional tt\_content bodytext

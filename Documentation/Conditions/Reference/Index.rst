@@ -65,7 +65,7 @@ Webkit                                                     webkit
 .. ###### END~OF~SIMPLE~TABLE ######
 
 
-Comparison with the browser, which the website visitor uses.
+DEPRECATED! Comparison with the browser, which the website visitor uses.
 
 The condition works with the user agent string. The user agent is
 parsed with a regular expression, which searches the string for
@@ -126,7 +126,7 @@ Syntax:
 Comparison:
 '''''''''''
 
-Comparison with the browser version, which the website visitor uses.
+DEPRECATED! Comparison with the browser version, which the website visitor uses.
 
 Values are floating-point numbers with "." as the decimal separator.
 
@@ -216,7 +216,7 @@ Amiga                      amiga
 .. ###### END~OF~SIMPLE~TABLE ######
 
 
-Comparison with the operating system, which the website visitor uses.
+DEPRECATED! Comparison with the operating system, which the website visitor uses.
 The system is extracted out of the useragent string.
 
 Values are strings and a match happens if one of these strings is the
@@ -332,7 +332,7 @@ Syntax:
 Values and comparison:
 ''''''''''''''''''''''
 
-This is a direct match on the website visitor's useragent string from
+DEPRECATED! This is a direct match on the website visitor's useragent string from
 getenv('HTTP\_USER\_AGENT').
 
 You have the options of putting a "\*" at the beginning and/or end of
@@ -1375,3 +1375,14 @@ shows how quotes can be escaped::
 
     [userFunc = user_testFunctionWithThreeArgumentsEscapedQuotes(1, 2, "3, \"4, 5\", 6")]
 
+From CMS version 7 on up, it is highly encouraged to use the following syntax:
+
+    [BigCompanyName\TypoScriptLovePackage\BennisTypoScriptCondition]
+
+    [BigCompanyName\TypoScriptLovePackage\BennisTypoScriptCondition = 7]
+
+    [BigCompanyName\TypoScriptLovePackage\BennisTypoScriptCondition = 7, != 6]
+
+    [BigCompanyName\TypoScriptLovePackage\BennisTypoScriptCondition = {$mysite.myconstant}]
+
+In these cases the condition class can (in fact: has to) deal with the implementation of "=" of "!=" itself.

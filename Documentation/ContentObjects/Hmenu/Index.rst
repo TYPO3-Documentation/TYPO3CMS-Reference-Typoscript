@@ -957,6 +957,7 @@ list from the property ".items".
               index.target = _blank
               index.fields.title = INDEX
               index.uid = 8
+              excludeNoSearchPages = 1
             }
 
 
@@ -1023,6 +1024,21 @@ list from the property ".items".
             prev.fields.title = « zurück
 
          This gives the link to the previous page the linktext "« zurück".
+
+
+.. container:: table-row
+
+   Property
+         .. _hmenu-special-excludeNoSearchPages:
+
+         excludeNoSearchPages
+
+   Data type
+         boolean
+
+   Description
+         Toggles whether pages marked with the "no search" checkbox should be excluded from the menu.
+
 
 
 .. ###### END~OF~TABLE ######

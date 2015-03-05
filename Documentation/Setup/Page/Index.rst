@@ -70,7 +70,7 @@ Properties
    `includeJS.[array]`_           :ref:`data-type-resource`
    `includeJSFooter.[array]`_     :ref:`data-type-resource`
    `includeJSFooterlibs.[array]`_ :ref:`data-type-resource`
-   `includeJSlibs.[array]`_       :ref:`data-type-resource`
+   `includeJSLibs.[array]`_       :ref:`data-type-resource`
    `includeLibs`_                 *(array of strings)*
    `inlineJS`_                    ->CARRAY
    `inlineLanguageLabel`_         *(array of strings)*
@@ -666,6 +666,8 @@ includeJS.[array]
          **.type:** Setting the MIME type of the script (default:
          text/javascript).
 
+         **.async:** Set to ``1`` to set asyncronous loading.
+
          **Example:** ::
 
             includeJS {
@@ -712,7 +714,7 @@ includeJSFooterlibs.[array]
          resource
 
    Description
-         Same as includeJSlibs, except that this block gets included at
+         Same as includeJSLibs, except that this block gets included at
          the bottom of the page (just before the closing body tag).
 
 
@@ -725,7 +727,7 @@ includeJSlibs.[array]
 .. container:: table-row
 
    Property
-         includeJSlibs.[array]
+         includeJSLibs.[array]
 
    Data type
          resource
@@ -765,8 +767,8 @@ includeJSlibs.[array]
 
          **Example:** ::
 
-            includeJSlibs.twitter = http://twitter.com/javascripts/blogger.js
-            includeJSlibs.twitter.external = 1
+            includeJSLibs.twitter = http://twitter.com/javascripts/blogger.js
+            includeJSLibs.twitter.external = 1
 
 
 

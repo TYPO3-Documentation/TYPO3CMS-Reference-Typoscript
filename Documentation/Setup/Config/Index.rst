@@ -47,7 +47,11 @@ Properties
    `concatenateJs`_                                      :ref:`data-type-boolean`
    `concatenateJsAndCss`_                                :ref:`data-type-boolean`           0
    `content\_from\_pid\_allowOutsideDomain`_             :ref:`data-type-boolean`
+<<<<<<< .merge_file_NIGAl6
+   `contentObjectExceptionHandler`_                      :ref:`data-type-boolean`                                  1 (in production context)
+=======
    `contentObjectExceptionHandler`_                      array
+>>>>>>> .merge_file_Rz95A4
    `debug`_                                              :ref:`data-type-boolean`
    `defaultGetVars`_                                     array
    `disableAllHeaderCode`_                               :ref:`data-type-boolean`           false
@@ -157,7 +161,6 @@ Properties
    `typolinkLinkAccessRestrictedPages\_addParams`_       :ref:`data-type-string`
    `USERNAME\_substToken`_                               :ref:`data-type-string`            <!--###USERNAME###-->
    `USERUID\_substToken`_                                :ref:`data-type-string`
-   `xhtml\_cleaning`_                                    :ref:`data-type-string`
    `xhtmlDoctype`_                                       :ref:`data-type-string`
    `xmlprologue`_                                        :ref:`data-type-string`
    ===================================================== ================================== ======================================================================
@@ -193,6 +196,8 @@ absRefPrefix
          prepended with this string. Used to convert relative paths to absolute
          paths.
 
+         You may also use the value ``auto`` and let TYPO3 guess the prefix.
+
          **Note:** If you're working on a server where you have both internal
          and external access, you might do yourself a favor and set the
          absRefPrefix to the URL and path of you site, e.g.
@@ -213,31 +218,30 @@ additionalHeaders
          additionalHeaders
 
    Data type
-         strings divided by "\|"
+         array
 
    Description
-         This property can be used to define additional HTTP headers. Separate
-         each header with a vertical line "\|".
+         This property can be used to define additional HTTP headers.
 
-         **Examples:**
+         **Example:**
 
-         Content-type: text/vnd.wap.wml
+         .. code-block:: typoscript
 
-         (this will send a content-header for a WAP-site)
+         config.additionalHeaders {
+             10 {
+                 # the header string
+                 header = WWW-Authenticate: Negotiate
 
-         Content-type: image/gif \| Expires: Mon, 25 Jul 2017 05:00:00 GMT
+                 # replace previous headers with the same name
+                 # optional, default is "on"
+                 replace = 0
 
-         (this will send a content-header for a GIF-file and an Expires header)
-
-         Location: www.typo3.org
-
-         (This redirects the page to `www.typo3.org <http://www.typo3.org/>`_ )
-
-         By default TYPO3 sends a "Content-Type" header with the defined
-         encoding, unless this is disabled using config.disableCharsetHeader
-         (see above). It then sends cache headers, if configured (see above).
-         Then come the additional headers, plus finally a "Content-Length"
-         header, if enabled (see below).
+                 # optional, force the HTTP response code
+                 httpResponseCode = 401
+             }
+             # always set cache headers to private, overwriting the sophisticated TYPO3 option
+             20.header = Cache-control: Private
+         }
 
 
 
@@ -939,7 +943,7 @@ disableImgBorderAttr
 
    Description
          Returns the 'border' attribute for an <img> tag only if the doctype is
-         not xhtml\_strict, xhtml\_11 or xhtml\_2 or if the config parameter
+         not xhtml\_strict, xhtml\_11 or (the deprecated value) xhtml\_2 or if the config parameter
          'disableImgBorderAttr' is not set
 
 
@@ -1034,7 +1038,7 @@ doctype
 
          **xhtml+rdfa\_10** for the XHTML+RDFa 1.0 doctype.
 
-         **xhtml\_2** for the XHTML 2 doctype.
+         **xhtml\_2** for the XHTML 2 doctype. (Deprecated as of CMS 7.1)
 
          **html5** for the HTML5 doctype.
 
@@ -1456,6 +1460,7 @@ index\_enable
 
    Description
          Enables cached pages to be indexed.
+         *Automatically enabled when EXT:indexed_search is enabled*
 
 
 
@@ -1474,6 +1479,7 @@ index\_externals
 
    Description
          If set, external media linked to on the pages is indexed as well.
+         *Automatically enabled when EXT:indexed_search is enabled*
 
 
 
@@ -1793,29 +1799,6 @@ mainScript
 
    Default
          index.php
-
-
-
-.. _setup-config-meaningfultempfileprefix:
-
-meaningfulTempFilePrefix
-""""""""""""""""""""""""
-
-.. container:: table-row
-
-   Property
-         meaningfulTempFilePrefix
-
-   Data type
-         integer
-
-   Description
-         If > 0 TYPO3 will try to create a meaningful prefix of the given
-         length for the temporary image files.
-
-         This works with GIFBUILDER files (using content from the GIFBUILDER
-         TEXT objects as a base for the prefix), menus (using the title of the
-         menu item) and scaled images (using the original filename base).
 
 
 
@@ -2271,6 +2254,24 @@ pageRendererTemplateFile
 
 
 
+.. _setup-config-pagetitle:
+
+pageTitle
+"""""""""
+
+.. container:: table-row
+
+   Property
+         pageTitle
+
+   Data type
+         string / stdWrap
+
+   Description
+         Sets the pagetitle.
+
+
+
 .. _setup-config-pagetitlefirst:
 
 pageTitleFirst
@@ -2361,7 +2362,15 @@ prefixLocalAnchors
          <base> tag is set (e.g. if the "realurl" extension is used to produce
          speaking URLs). See property "config.baseURL".
 
-         The keywords are the same as for "xhtml\_cleaning", see above.
+         Possible keywords:
+
+         **all:** The content is always processed before it is possibly
+         stored in cache (or not stored in cache).
+
+         **cached:** The content is only processed, if the page will be put
+         into the cache.
+
+         **output:** The content is processed just before it is echoed out.
 
 
 
@@ -3678,6 +3687,26 @@ sys\_language\_uid
 
 
 
+.. _setup-config-sys-language-isocode:
+
+sys\_language\_isocode
+""""""""""""""""""""""
+
+.. container:: table-row
+
+   Property
+         sys\_language\_isocode
+
+   Data type
+         string
+
+   Description
+         ISO 639-1 language code. By default this is being set by ``TSFE:sys_language_isocode``.
+         The value is derived from the ISO-code that is stored within the sys_language record.
+         You can override this value with this setting if necessary.
+
+
+
 .. _setup-config-titletagfunction:
 
 titleTagFunction
@@ -3896,76 +3925,6 @@ USERUID\_substToken
 
 
 
-.. _setup-config-xhtml-cleaning:
-
-xhtml\_cleaning
-"""""""""""""""
-
-.. container:: table-row
-
-   Property
-         xhtml\_cleaning
-
-   Data type
-         string
-
-   Description
-         Cleans up the output to make it XHTML compliant and a bit more.
-         For now this is what is done:
-
-         *What it does:*
-
-         \- All tags are ended with "/>"
-
-         \- Lowercase for elements and attributes
-
-         \- All attributes in quotes
-
-         \- Add "alt" attribute to img-tags if it's not there already.
-
-         *What it does **not** do (yet) according to XHTML specifications:*
-
-         \- Wellformedness: Nesting is **not** checked
-
-         \- name/id attribute issue is not observed at this point.
-
-         \- Certain nesting of elements not allowed. Most interesting, <PRE>
-         cannot contain img, big,small,sub,sup ...
-
-         \- Wrapping scripts and style element contents in CDATA - or
-         alternatively they should have entities converted.
-
-         \- Setting charsets may put some special requirements on both XML
-         declaration/ meta-http-equiv. (C.9)
-
-         \- UTF-8 encoding is in fact expected by XML!
-
-         \- stylesheet element and attribute names are **not** converted to
-         lowercase
-
-         \- ampersands (and entities in general I think) MUST be converted to
-         an entity reference! (&amps;). This may mean further conversion of
-         non-tag content before output to page. May be related to the charset
-         issue as a whole.
-
-         \- Minimized values not allowed: Must do this: selected="selected"
-
-         Please see the class TYPO3\CMS\Core\Html\HtmlParser
-         (t3lib\_parsehtml) for details.
-
-         You can enable this function by setting it to one of the following
-         keywords:
-
-         **all:** The content is always processed before it is possibly
-         stored in cache (or not stored in cache).
-
-         **cached:** The content is only processed, if the page will be put
-         into the cache.
-
-         **output:** The content is processed just before it is echoed out.
-
-
-
 .. _setup-config-xhtmldoctype:
 
 xhtmlDoctype
@@ -3995,7 +3954,7 @@ xhtmlDoctype
 
          **xhtml\_11** for XHTML 1.1 doctype.
 
-         **xhtml\_2** for XHTML 2 doctype.
+         **xhtml\_2** for XHTML 2 doctype. (Deprecated as of CMS 7.1)
 
          This is an example to use MathML 2.0 in an XHTML 1.1 document::
 
