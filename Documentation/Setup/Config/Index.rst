@@ -190,15 +190,32 @@ absRefPrefix
 
    Description
          If this value is set, then all relative links in TypoScript are
-         prepended with this string. Used to convert relative paths to absolute
-         paths.
+         prepended with this string.
 
-         **Note:** If you're working on a server where you have both internal
-         and external access, you might do yourself a favor and set the
-         absRefPrefix to the URL and path of you site, e.g.
-         http://www.typo3.org/. If you do not, you risk to render pages to
-         cache from the internal network and thereby prefix image-references
-         and links with a non-accessible path from outside.
+         **Examples:**
+
+         1. Prefixing all links with a "/" results in absolute link paths::
+
+            config.absRefPrefix = /
+
+         2. Prefixing all links with the path to a subdirectory::
+
+            config.absRefPrefix = /some-subsite/
+
+         3. Prefixing all links with a URI scheme::
+
+            config.absRefPrefix = http://example.com/
+
+         **Note:** Using an URI in absRefPrefix will require additional conditions
+         if you use different domains for your deployment stages in CI environments.
+
+         **Note:** If you're working on a server where you have different domain
+         names or different path segments leading to the same page (e.g. for internal
+         and external access), you might do yourself a favor and set absRefPrefix to
+         the URL and path of you site, e.g. http://www.typo3.org/. If you do not,
+         you risk to render pages to cache from the internal network and thereby
+         prefix image-references and links with a wrong path or a path not accessible
+         from outside.
 
 
 
