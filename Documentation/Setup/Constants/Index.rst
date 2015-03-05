@@ -11,9 +11,20 @@
 constants
 =========
 
-This object can be used to define constants. This is useful, if you
-need one and the same value at many places in your website. With
-constants, you can maintain it easily.
+This object can be used to define constants for replacement inside a
+parseFunc. If parseFunc somewhere is configured with .constants = 1,
+then all occurrences of the constant in the text will be substituted
+with the actual value. This is useful, if you need one and the same
+value at many places in your website. With constants, you can
+maintain it easily.
+
+.. note::
+
+   The constants defined here are **not** the ones, which can be defined
+   in the constants section of your template and which then in the setup
+   section can be used as :code:`{$myconstant}`. For these constants see
+   :ref:`the according chapter in "TypoScript Syntax and In-depth Study"
+   <t3tssyntax:constants>`.
 
 .. only:: html
 
