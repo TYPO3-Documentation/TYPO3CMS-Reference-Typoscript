@@ -206,6 +206,11 @@ absRefPrefix
 
             config.absRefPrefix = http://example.com/
 
+         **Special keyword:** "auto" (Since TYPO3 CMS 7.1)
+         lets TYPO3 autodetect the site root based
+         on path prefixes (and not based on host name variables from the
+         server, making this value safe for multi-domain environments).
+
          **Note:** Using an URI in absRefPrefix will require additional conditions
          if you use different domains for your deployment stages in CI environments.
 
