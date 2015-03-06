@@ -72,7 +72,7 @@ field:
 
 **Syntax**
 
-field: [field name from the current :code:`$cObj->data` array in the cObject.]
+field: [field name from the current :code:`$cObj->data` array in the cObject, multi-dimensional.]
 
 - As default the :code:`$cObj->data` array is :code:`$GLOBALS['TSFE']->page`
   (record of the current page!)
@@ -83,11 +83,19 @@ field: [field name from the current :code:`$cObj->data` array in the cObject.]
 - In :ref:`GIFBUILDER <gifbuilder>` :code:`$cObj->data` is set to the data
   :ref:`GIFBUILDER <gifbuilder>` is supplied with.
 
-**Example**::
+**Examples**
+
+.. code-block:: typoscript
 
    foo = field : header
 
 *gets content from $cObj->data['header']*
+
+.. code-block:: typoscript
+
+   foo = field : fieldname|level1|level2
+
+*gets content from $cObj->data['fieldname']['level1']['level2']*
 
 
 .. _data-type-gettext-parameters:
