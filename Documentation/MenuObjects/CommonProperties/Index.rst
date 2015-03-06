@@ -256,6 +256,25 @@ otherwise noted!
 .. container:: table-row
 
    Property
+         additionalWhere
+
+   Data type
+         string /:ref:`stdWrap <stdwrap>`
+
+   Description
+         Adds an additional part to the WHERE clause for this menu.
+         Make sure to start the part with ``AND ``!
+
+         **Example:** ::
+
+            lib.authormenu = HMENU
+            lib.authormenu.1 = TMENU
+            lib.authormenu.1.additionalWhere = AND author!=""
+
+
+.. container:: table-row
+
+   Property
          itemArrayProcFunc
 
    Data type
