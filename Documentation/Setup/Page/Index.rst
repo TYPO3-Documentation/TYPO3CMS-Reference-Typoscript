@@ -645,6 +645,9 @@ includeJS.[array]
          **.allWrap.splitChar:** (Since TYPO3 6.2) Defines an alternative
          splitting character (default is "\|" - the vertical line).
 
+         **.async:** (Since TYPO3 7.1) Allows the file to be loaded
+         asynchronously.
+
          **.disableCompression:** (Since TYPO3 4.6) If config.compressJs is
          enabled, this disables the compression of this file.
 
@@ -744,6 +747,9 @@ includeJSLibs.[array]
 
          **.allWrap.splitChar:** (Since TYPO3 6.2) Defines an alternative
          splitting character (default is "\|" - the vertical line).
+
+         **.async:** (Since TYPO3 7.1) Allows the file to be loaded
+         asynchronously.
 
          **.disableCompression:** (Since TYPO3 4.6) If config.compressJs is
          enabled, this disables the compression of this file.
