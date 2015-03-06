@@ -87,7 +87,6 @@ Properties
    `locale\_all`_                                        :ref:`data-type-string`
    `lockFilePath`_                                       :ref:`data-type-string`            fileadmin/
    `mainScript`_                                         :ref:`data-type-string`            index.php
-   `meaningfulTempFilePrefix`_                           :ref:`data-type-integer`
    `message\_page\_is\_being\_generated`_                :ref:`data-type-string`
    `message\_preview`_                                   :ref:`data-type-string`
    `message\_preview\_workspace`_                        :ref:`data-type-string`
@@ -1838,29 +1837,6 @@ mainScript
 
    Default
          index.php
-
-
-
-.. _setup-config-meaningfultempfileprefix:
-
-meaningfulTempFilePrefix
-""""""""""""""""""""""""
-
-.. container:: table-row
-
-   Property
-         meaningfulTempFilePrefix
-
-   Data type
-         integer
-
-   Description
-         If > 0 TYPO3 will try to create a meaningful prefix of the given
-         length for the temporary image files.
-
-         This works with GIFBUILDER files (using content from the GIFBUILDER
-         TEXT objects as a base for the prefix), menus (using the title of the
-         menu item) and scaled images (using the original filename base).
 
 
 
