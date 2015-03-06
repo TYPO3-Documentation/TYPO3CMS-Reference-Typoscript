@@ -11,6 +11,13 @@
 SEARCHRESULT
 ^^^^^^^^^^^^
 
+.. note::
+
+   This content object has been deprecated in TYPO3 CMS 7.1. If you still use it
+   for now, you need to install the system extension "compatibility6". In the
+   long run, you are advised to migrate to alternatives such as FLUIDTEMPLATE to
+   customize the output of the content.
+
 This object can be used to display search results. SEARCHRESULT only
 returns results from pages with of doktype "Standard" (1),
 "Advanced" (2) and "Not in menu" (5).
