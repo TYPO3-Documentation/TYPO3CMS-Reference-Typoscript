@@ -40,7 +40,7 @@ has been introduced, which makes records related to selected categories
 available for rendering.
 
 The page property "includeCSSLibs" allows to include CSS libraries. The
-page properties includeJS, includeJSlibs and includeCSS were added
+page properties includeJS, includeJSLibs and includeCSS were added
 a new "allWrap.splitChar" property.
 
 A new keyword "devIP" can be used in the IP condition. The userFunc
