@@ -17,6 +17,12 @@ FORM
    comes with TYPO3 since version 4.6) is *not* installed. If it is, things
    work as described in the documentation inside the system extension.
 
+.. note::
+
+   This content object has been deprecated in TYPO3 CMS 7.1. If you still use it
+   for now, you need to install the system extension "compatibility6". In the
+   long run, you are advised to migrate to the system extension "form".
+
 This object provides a way to create forms. Example::
 
    textarea:  Label | [* = required][field name =] textarea[,cols,rows,"wrap= [e.g. "OFF"]"] | [defaultdata] | Special evaluation configuration (see note below)
