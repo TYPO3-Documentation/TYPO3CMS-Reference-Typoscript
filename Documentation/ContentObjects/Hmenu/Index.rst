@@ -1025,6 +1025,23 @@ list from the property ".items".
          This gives the link to the previous page the linktext "« zurück".
 
 
+.. container:: table-row
+
+   Property
+         .. _hmenu-special-browser-excludenosearchpages:
+
+         excludeNoSearchPages
+
+   Data type
+         boolean
+
+   Description
+         If set, pages marked with the "no search" checkbox will be excluded from the menu.
+
+   Default
+         0
+
+
 .. ###### END~OF~TABLE ######
 
 [tsref:(cObject).HMENU.special = browse]
