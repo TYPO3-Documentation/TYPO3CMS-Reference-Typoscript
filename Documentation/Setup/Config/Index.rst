@@ -1520,6 +1520,22 @@ accessible as $GLOBALS['TSFE']->config['config']['debug'].
 .. container:: table-row
 
    Property
+         formMailCharset
+
+   Data type
+         string
+
+   Description
+         Character set of mails sent through TYPO3 mail forms. If it is
+         unset, the character set defined in config.metaCharset is used.
+
+   Default
+         "" *(unset)*
+
+
+.. container:: table-row
+
+   Property
          lockFilePath
 
    Data type
