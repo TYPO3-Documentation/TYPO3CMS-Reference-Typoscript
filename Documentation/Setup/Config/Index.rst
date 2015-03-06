@@ -103,6 +103,7 @@ Properties
    `noScaleUp`_                                          :ref:`data-type-boolean`
    `pageGenScript`_                                      :ref:`data-type-resource`          typo3/sysext/frontend/Classes/Page/PageGenerator.php
    `pageRendererTemplateFile`_                           :ref:`data-type-string`
+   `pageTitle`_                                          :ref:`data-type-stdwrap`
    `pageTitleFirst`_                                     :ref:`data-type-boolean`           0
    `pageTitleSeparator`_                                 Until TYPO3 6.0: string            : *(colon with following space)*
    `prefixLocalAnchors`_                                 :ref:`data-type-string`
@@ -2289,6 +2290,26 @@ pageRendererTemplateFile
          **Example:** ::
 
             pageRendererTemplateFile = fileadmin/test_pagerender.html
+
+
+
+.. _setup-config-pagetitle:
+
+pageTitle
+"""""""""
+
+.. container:: table-row
+
+   Property
+         pageTitle
+
+   Data type
+         :ref:`stdWrap <stdwrap>`
+
+   Description
+         stdWrap for the page title. This option will be executed *after* all
+         other processing options like config.titleTagFunction and
+         config.pageTitleFirst.
 
 
 
