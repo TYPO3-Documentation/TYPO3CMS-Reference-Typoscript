@@ -30,7 +30,7 @@ Properties
    Property                                              Data Type                          Default
    ===================================================== ================================== ======================================================================
    `absRefPrefix`_                                       :ref:`data-type-string`
-   `additionalHeaders`_                                  strings divided by "\|"
+   `additionalHeaders`_                                  array with numeric indices
    `admPanel`_                                           :ref:`data-type-boolean`
    `ATagParams`_                                         *<A>-params*
    `baseURL`_                                            :ref:`data-type-string`
@@ -236,25 +236,38 @@ additionalHeaders
          additionalHeaders
 
    Data type
-         strings divided by "\|"
+         array with numeric indices
 
    Description
-         This property can be used to define additional HTTP headers. Separate
-         each header with a vertical line "\|".
+         This property can be used to define additional HTTP headers.
 
-         **Examples:**
+         For each numeric index, there are the following sub-properties:
 
-         Content-type: text/vnd.wap.wml
+         **header:** The header string.
 
-         (this will send a content-header for a WAP-site)
+         **replace:** Optional. If set, previous headers with the same name
+         are replaced with the current one. Default is "1".
 
-         Content-type: image/gif \| Expires: Mon, 25 Jul 2017 05:00:00 GMT
+         **httpResponseCode:** Optional. HTTP status code as an integer.
 
-         (this will send a content-header for a GIF-file and an Expires header)
+         **Example:**
 
-         Location: www.typo3.org
+         .. code-block:: typoscript
 
-         (This redirects the page to `www.typo3.org <http://www.typo3.org/>`_ )
+           config.additionalHeaders {
+              10 {
+                 # The header string
+                 header = WWW-Authenticate: Negotiate
+
+                 # Do not replace previous headers with the same name.
+                 replace = 0
+
+                 # Force a 401 HTTP response code
+                 httpResponseCode = 401
+              }
+              # Always set cache headers to private, overwriting the default TYPO3 Cache-control header
+              20.header = Cache-control: Private
+           }
 
          By default TYPO3 sends a "Content-Type" header with the defined
          encoding, unless this is disabled using config.disableCharsetHeader
