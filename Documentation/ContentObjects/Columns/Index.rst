@@ -11,6 +11,13 @@
 COLUMNS
 ^^^^^^^
 
+.. note::
+
+   This content object has been deprecated in TYPO3 CMS 7.1. If you still use it
+   for now, you need to install the system extension "compatibility6". In the
+   long run, you are advised to migrate to alternatives such as FLUIDTEMPLATE to
+   customize the output of the content.
+
 Inserts a table with several columns. Size and styling of the table
 tag can be defined with the according options.
 
