@@ -10,8 +10,8 @@
 .. _cobj-coa:
 .. _cobj-coa-int:
 
-COA, COA\_INT (COBJ\_ARRAY)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+COA, COA\_INT
+^^^^^^^^^^^^^
 
 This is a cObject, in which you can place several other cObjects using
 numbers to enumerate them.
@@ -94,7 +94,7 @@ rendered non-cached! That way COA\_INT allows you not only to render
 .. ###### END~OF~TABLE ######
 
 
-[tsref:(cObject).COA/(cObject).COA\_INT/(cObject).COBJ\_ARRAY]
+[tsref:(cObject).COA/(cObject).COA\_INT]
 
 
 .. _cobj-cobj-array-examples:

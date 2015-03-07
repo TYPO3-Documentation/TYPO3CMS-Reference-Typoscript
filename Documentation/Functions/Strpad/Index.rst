@@ -11,10 +11,9 @@
 strPad
 ^^^^^^
 
-(Since TYPO3 6.1) This property returns the input value padded to a
-certain length. The padding is added on the left side, the right side
-or on both sides. strPad uses the PHP function str_pad() for the
-operation.
+This property returns the input value padded to a certain length. The
+padding is added on the left side, the right side or on both sides.
+strPad uses the PHP function str_pad() for the operation.
 
 
 .. ### BEGIN~OF~TABLE ###
@@ -25,9 +24,7 @@ operation.
          length
 
    Data type
-         In TYPO3 6.1: integer
-
-         Since TYPO3 6.2: integer /:ref:`stdWrap <stdwrap>`
+         integer /:ref:`stdWrap <stdwrap>`
 
    Description
          The length of the output string. If the value is negative, less
@@ -44,9 +41,7 @@ operation.
          padWith
 
    Data type
-         In TYPO3 6.1: string
-
-         Since TYPO3 6.2: string /:ref:`stdWrap <stdwrap>`
+         string /:ref:`stdWrap <stdwrap>`
 
    Description
          The character(s) to pad with. The value of padWith may be
@@ -65,9 +60,7 @@ operation.
          type
 
    Data type
-         In TYPO3 6.1: *(list of keywords)*
-
-         Since TYPO3 6.2: *(list of keywords)* /:ref:`stdWrap <stdwrap>`
+         *(list of keywords)* /:ref:`stdWrap <stdwrap>`
 
    Description
          The side(s) of the input value, on which the padding should be

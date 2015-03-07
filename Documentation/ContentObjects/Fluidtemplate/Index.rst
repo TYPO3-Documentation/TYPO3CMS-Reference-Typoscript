@@ -41,11 +41,11 @@ template
          :ref:`cObject <data-type-cobject>`
 
    Description
-         (Since TYPO3 6.1) Use this property to define a content object,
-         which should be used as template file. It is an alternative to
-         ".file"; if ".template" is set, it takes precedence. While any
-         content object can be used here, the cObject :ref:`FILE <cobj-file>`
-         might be the usual choice.
+         Use this property to define a content object, which should be
+         used as template file. It is an alternative to ".file"; if
+         ".template" is set, it takes precedence. While any content object
+         can be used here, the cObject :ref:`FILE <cobj-file>` might be the 
+         usual choice.
 
 
 .. _cobj-fluidtemplate-properties-file:
@@ -291,8 +291,8 @@ settings
          *(array of keys)*
 
    Description
-         (Since TYPO3 6.1) Sets the given settings array in the fluid
-         template. In the view, the value can then be used.
+         Sets the given settings array in the fluid template. In the
+         view, the value can then be used.
 
          **Example:**
 

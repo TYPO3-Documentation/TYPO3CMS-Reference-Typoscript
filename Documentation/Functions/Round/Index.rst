@@ -11,9 +11,9 @@
 round
 ^^^^^
 
-(Since TYPO3 4.6) With this property you can round the value up, down
-or to a certain number of decimals. For each roundType the according
-PHP function will be used.
+With this property you can round the value up, down or to a certain
+number of decimals. For each roundType the according PHP function will
+be used.
 
 The value will be converted to a float value before applying the
 selected round method.

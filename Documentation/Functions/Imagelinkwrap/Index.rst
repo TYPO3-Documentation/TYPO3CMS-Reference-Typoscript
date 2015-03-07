@@ -352,12 +352,11 @@ the a "showpic" script that knows how to deal with several parameters.
 The script checks an md5-hash to make sure that the parameters are unchanged.
 See :ref:`imageLinkWrap-basic-example-showpic`.
 
-Since TYPO3 CMS 4.5 there is an alternative. You may set
-:typoscript:`directImageLink` to True (:typoscript:` = 1`). In that
-case the link will directly point to the image - no intermediate is
-script involved. This method can well be used to display images in a
-lightbox. See :ref:`imageLinkWrap-basic-example-directImageLink` and
-the lightbox examples on this page.
+There is an alternative. You may set :typoscript:`directImageLink` to True
+(:typoscript:` = 1`). In that case the link will directly point to the image
+- no intermediate is script involved. This method can well be used to display
+images in a lightbox. See :ref:`imageLinkWrap-basic-example-directImageLink`
+and the lightbox examples on this page.
 
 If :typoscript:`JSwindow` is true (:typoscript:` = 1`) more fancy
 features are available since the preview now is opened by Javascript.

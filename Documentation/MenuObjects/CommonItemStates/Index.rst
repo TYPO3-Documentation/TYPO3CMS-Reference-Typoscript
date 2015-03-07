@@ -183,9 +183,8 @@ That means they are not used by for instance the JSMENU.
          Userdefined, see .itemArrayProcFunc for details on how to use this.
 
          You can set the ITEM\_STATE values USERDEF1 and USERDEF2 (+...RO) from
-         a script/user function processing the menu item array. See
-         HMENU/special=userdefined or the property .itemArrayProcFunc of the
-         menu objects.
+         a script/user function processing the menu item array. See the property
+         .itemArrayProcFunc of the menu objects.
 
 
 .. container:: table-row

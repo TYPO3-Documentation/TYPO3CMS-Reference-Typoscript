@@ -15,8 +15,7 @@ This object returns the content of the file specified in the property
 "file".
 
 It is defined as PHP function fileResource() in
-typo3/sysext/frontend/Classes/ContentObject/ContentObjectRenderer.php
-(/typo3/sysext/cms/tslib/class.tslib\_content.php).
+typo3/sysext/frontend/Classes/ContentObject/ContentObjectRenderer.php.
 
 **Note:** Do not mix this up with the cObject :ref:`FILES <cobj-files>`; both are
 different cObjects.

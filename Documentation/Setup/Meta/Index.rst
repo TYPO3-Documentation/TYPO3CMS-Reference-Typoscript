@@ -74,9 +74,8 @@ Property details
 
          For each key the following sub-property is available:
 
-         **httpEquivalent:** (Since TYPO3 4.7) If set to 1, the http-equiv
-         attribute is used in the meta tag instead of the "name" attribute.
-         Default: 0.
+         **httpEquivalent:** If set to 1, the http-equiv attribute is used in the meta
+         tag instead of the "name" attribute. Default: 0.
 
          **Example:** ::
 

@@ -84,20 +84,6 @@ condition ::
 
 evaluates to true.
 
-.. note::
-
-   **Older TYPO3 versions**
-
-   Until TYPO3 4.2 the user agent was determined differently: Each value
-   was compared with the ($browsername.$browserversion, e.g.
-   "netscape4.72") using strstr(). So if the value was "netscape" or just
-   "scape" or "net" all netscape browsers would match. If the value was
-   "netscape4" all Netscape 4.xx browsers would match. If any value in
-   the list matched the current browser, the condition returned true.
-
-   TYPO3 version 4.2 or older does not detect all the browsers listed
-   above.
-
 
 Examples:
 ~~~~~~~~~
@@ -232,37 +218,6 @@ Examples:
 This will match with Windows and Mac systems only ::
 
    [system = win,mac]
-
-.. note::
-
-   **Older TYPO3 versions and backwards compatibility**
-
-   TYPO3 version 4.4 or older does not detect all the systems listed
-   above.
-
-   For backwards compatibility, some systems are also matched by more
-   generic strings.
-
-   It is recommended to use the new identifiers documented above, but the
-   following are valid, too:
-
-
-   .. ### BEGIN~OF~SIMPLE~TABLE ###
-
-   ====================   =======================================
-   System:                Generic identification:
-   ====================   =======================================
-   Android                linux
-   Chrome OS              linux
-   iOS                    mac
-   Windows 8              winNT
-   Windows 7              winNT
-   Windows Vista          winNT
-   Windows XP             winNT
-   Windows 2000           winNT
-   ====================   =======================================
-
-   .. ###### END~OF~SIMPLE~TABLE ######
 
 
 .. _condition-device:
@@ -447,11 +402,10 @@ You may include "\*" instead of one of the parts in values. You may
 also list the first one, two or three parts and only they will be
 tested.
 
-Since TYPO3 6.2 the IP condition also supports the special keyword
-"devIP". If - instead of using an actual IP address or range - you use
-this keyword, the IP address, which the visitor uses, will be compared
-to :code:`$TYPO3_CONF_VARS['SYS']['devIPmask']` as set in the Install
-Tool.
+The IP condition also supports the special keyword "devIP". If - instead
+of using an actual IP address or range - you use this keyword, the IP
+address, which the visitor uses, will be compared to
+:code:`$TYPO3_CONF_VARS['SYS']['devIPmask']` as set in the Install Tool.
 
 Examples:
 ~~~~~~~~~
@@ -584,9 +538,9 @@ true, when *one or more* of its operands are true.
 =============   ==============================================================
 Operator:       Function:
 =============   ==============================================================
-[none]          Requires an exact match with the value. Since TYPO3 6.0
-                comparison with a list of values is possible as well. The
-                condition then returns true, if the value is in the list.
+[none]          Requires an exact match with the value. Comparison with a
+                list of values is possible as well. The condition then
+                returns true, if the value is in the list.
                 Values must then be separated by "|".
 
 >               The hour must be greater than the value.
@@ -597,9 +551,9 @@ Operator:       Function:
 
 >=              The hour must be greater than or equal to the value.
 
-!=              The hour must be not equal to the value. Since TYPO3 6.0
-                comparison with a list of values is possible as well. The
-                condition then returns true, if the value is not in the list.
+!=              The hour must be not equal to the value. Comparison with a
+                list of values is possible as well. The condition then
+                returns true, if the value is not in the list.
                 Values must then be separated by "|".
 =============   ==============================================================
 
@@ -1050,9 +1004,9 @@ operands are true.
 =============   ==============================================================
 Operator:       Function:
 =============   ==============================================================
-=               Requires an exact match with the value. Since TYPO3 6.0
-                comparison with a list of values is possible as well. The
-                condition then returns true, if the value is in the list.
+=               Requires an exact match with the value. Comparison with a
+                list of values is possible as well. The condition then
+                returns true, if the value is in the list.
                 Values must then be separated by "|".
 
 >               The var must be greater than the value.
@@ -1063,9 +1017,9 @@ Operator:       Function:
 
 >=              The var mast be greater than or equal to the value.
 
-!=              The var must be not equal to the value. Since TYPO3 6.0
-                comparison with a list of values is possible as well. The
-                condition then returns true, if the value is not in the list.
+!=              The var must be not equal to the value. Comparison with a
+                list of values is possible as well. The condition then
+                returns true, if the value is not in the list.
                 Values must then be separated by "|".
 =============   ==============================================================
 
@@ -1188,7 +1142,7 @@ distribution) for details.
 
 Caring about this means that you would get values like HTTP\_HOST by
 getenv() and you would retrieve GET/POST values with
-TYPO3\CMS\Core\Utility\GeneralUtility::\_GP() (t3lib\_div::\_GP()).
+TYPO3\CMS\Core\Utility\GeneralUtility::\_GP().
 Finally a lot of values from the TSFE object are
 useful. In order to get those values for comparison with "globalVar"
 and "globalString" conditions, you prefix that variable's name with
@@ -1200,8 +1154,8 @@ returned as the value (without being divided by "\|" or anything)
 **Note:** Using the "IENV:" prefix is highly recommended to get
 server/environment variables which are system-independent. Basically
 this will get the value using
-TYPO3\CMS\Core\Utility\GeneralUtility::getIndpEnv()
-(t3lib\_div::getIndpEnv()). With "ENV:" you get the raw output from
+TYPO3\CMS\Core\Utility\GeneralUtility::getIndpEnv().
+With "ENV:" you get the raw output from
 getenv() which is **not** always the same on all systems!
 
 
@@ -1345,8 +1299,7 @@ It will call the function "user_match" with "checkLocalIP" as first
 argument and "192.168" as second argument. Whether the condition
 returns true or false depends on what that function returns.
 
-Put this function in your AdditionalConfiguration.php
-(localconf.php) file::
+Put this function in your AdditionalConfiguration.php file::
 
    function user_match($command, $subnet) {
            switch($command) {

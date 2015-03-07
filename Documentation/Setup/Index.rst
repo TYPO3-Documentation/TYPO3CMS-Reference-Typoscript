@@ -22,8 +22,6 @@ Setup
    Config/Index
    Constants/Index
    Page/Index
-   FeData/Index
-   FeTable/Index
    Frameset/Index
    Frame/Index
    Meta/Index

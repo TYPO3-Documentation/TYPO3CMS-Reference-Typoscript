@@ -99,9 +99,7 @@ imgResource.
          params
 
    Data type
-         Until TYPO3 4.5: string
-
-         Since TYPO3 4.6: string /:ref:`stdWrap <stdwrap>`
+         string /:ref:`stdWrap <stdwrap>`
 
    Description
          GraphicsMagick/ImageMagick command-line:

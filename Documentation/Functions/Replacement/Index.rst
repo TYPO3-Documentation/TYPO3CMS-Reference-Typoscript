@@ -11,10 +11,10 @@
 replacement
 ^^^^^^^^^^^
 
-(Since TYPO3 4.6) This object performs an ordered search and replace
-operation on the current content with the possibility of using PCRE
-regular expressions. An array with numeric indices defines the order
-of actions and thus allows multiple replacements at once.
+This object performs an ordered search and replace operation on the
+current content with the possibility of using PCRE regular expressions.
+An array with numeric indices defines the order of actions and thus
+allows multiple replacements at once.
 
 .. ### BEGIN~OF~TABLE ###
 
@@ -75,11 +75,10 @@ of actions and thus allows multiple replacements at once.
          boolean /:ref:`stdWrap <stdwrap>`
 
    Description
-         (Since TYPO3 6.2) This property allows to use :ref:`objects-optionsplit`
-         for the replace property. That way the replace property can be different
-         depending on the occurrence of the string (first/middle/last part,
-         ...). This works for both normal and regular expression replacements.
-         For examples see below.
+         This property allows to use :ref:`objects-optionsplit` for the replace
+         property. That way the replace property can be different depending on the
+         occurrence of the string (first/middle/last part, ...). This works for
+         both normal and regular expression replacements. For examples see below.
 
    Default
          0

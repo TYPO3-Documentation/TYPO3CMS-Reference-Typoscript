@@ -403,8 +403,6 @@ marked as deleted will not return any value.
 file:
 -----
 
-*(Since TYPO3 CMS 6.0)*
-
 **Syntax**
 
 file: syntax is [uid] : [property]. Retrieves a property from a
@@ -423,8 +421,7 @@ of the FILES cObject):
 
 title, description, link, alternative
 
-Additionally, since TYPO3 CMS 6.2, any data in the "sys_file_metadata" table can
-be accessed too.
+Additionally, any data in the "sys_file_metadata" table can be accessed too.
 
 See the :ref:`FILES cObject for usage examples <cobj-files-examples>`.
 

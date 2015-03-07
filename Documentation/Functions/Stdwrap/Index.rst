@@ -27,10 +27,9 @@ returned.
 
 stdWrap properties are executed in the order they appear in the table
 below. If you want to study this further please refer to
-typo3/sysext/frontend/Classes/ContentObject/ContentObjectRenderer.php
-(typo3/sysext/cms/tslib/class.tslib\_content.php), where you will find
-the function stdWrap() and the array $stdWrapOrder, which represents
-the exact order of execution.
+typo3/sysext/frontend/Classes/ContentObject/ContentObjectRenderer.php,
+where you will find the function stdWrap() and the array $stdWrapOrder,
+which represents the exact order of execution.
 
 Note that the stdWrap property "orderedStdWrap" allows you to execute
 multiple stdWrap functions in a freely selectable order.
@@ -93,8 +92,8 @@ addPageCacheTags
          string /stdWrap
 
    Description
-         (Since TYPO3 6.1) Comma-separated list of cache tags, which should
-         be added to the page cache.
+         Comma-separated list of cache tags, which should be added to the page
+         cache.
 
          **Example:**
 
@@ -449,8 +448,7 @@ listNum
 
          **Special keyword:** "last" is set to the last element of the array!
 
-         (Since TYPO3 4.6) **Special keyword:** "rand" returns a random item
-         out of a list.
+         **Special keyword:** "rand" returns a random item out of a list.
 
          **.splitChar** (string):
 
@@ -517,9 +515,8 @@ strPad
          :ref:`->strPad <strpad>`
 
    Description
-         (Since TYPO3 6.1) Pads the current content to a certain length.
-         You can define the padding characters and the side(s), on which
-         the padding should be added.
+         Pads the current content to a certain length. You can define the padding
+         characters and the side(s), on which the padding should be added.
 
 
 .. _stdwrap-stdwrap:
@@ -698,10 +695,10 @@ replacement
          :ref:`->replacement <replacement>` /stdWrap
 
    Description
-         (Since TYPO3 4.6) Performs an ordered search/replace on the current
-         content with the possibility of using PCRE regular expressions. An
-         array with numeric indices defines the order of actions and thus
-         allows multiple replacements at once.
+         Performs an ordered search/replace on the current content with the
+         possibility of using PCRE regular expressions. An array with numeric
+         indices defines the order of actions and thus allows multiple
+         replacements at once.
 
 
 .. _stdwrap-prioricalc:
@@ -799,10 +796,10 @@ hash
          string /stdWrap
 
    Description
-         (Since TYPO3 4.6) Returns a hashed value of the current content. Set
-         to one of the algorithms which are available in PHP. For a list of
-         supported algorithms see `http://www.php.net/manual/en/function.hash-
-         algos.php <http://www.php.net/manual/en/function.hash-algos.php>`_ .
+         Returns a hashed value of the current content. Set to one of the
+         algorithms which are available in PHP. For a list of supported
+         algorithms see `http://www.php.net/manual/en/function.hash-algos.php
+         <http://www.php.net/manual/en/function.hash-algos.php>`_ .
 
          **Example:** ::
 
@@ -828,8 +825,8 @@ round
          :ref:`->round <round>` /stdWrap
 
    Description
-         (Since TYPO3 4.6) Round the value with the selected method to the
-         given number of decimals.
+         Round the value with the selected method to the given number of
+         decimals.
 
 
 .. _stdwrap-numberformat:
@@ -907,7 +904,7 @@ strftime
          **.charset:** Can be set to the charset of the output string if you
          need to convert it to renderCharset. Default is to take the
          intelligently guessed charset from
-         TYPO3\CMS\Core\Charset\CharsetConverter (t3lib\_cs).
+         TYPO3\CMS\Core\Charset\CharsetConverter.
 
          **.GMT:** If set, the PHP function `gmstrftime() <http://www.php.net/gmstrftime>`_ will be used instead
          of `strftime() <http://www.php.net/strftime>`_.
@@ -1612,11 +1609,10 @@ noTrimWrap
 
          .splitChar
 
-         (Since TYPO3 6.1) Can be set to define an alternative special
-         character. stdWrap is available. Default is "\|" - the vertical line.
-         This sub-property is useful in cases when the default special
-         character would be recognized by :ref:`objects-optionsplit` (which
-         takes precedence over noTrimWrap).
+         Can be set to define an alternative special character. stdWrap is
+         available. Default is "\|" - the vertical line. This sub-property is
+         useful in cases when the default special character would be recognized
+         by :ref:`objects-optionsplit` (which takes precedence over noTrimWrap).
 
          **Example:** ::
 
@@ -1736,11 +1732,10 @@ orderedStdWrap
          Array of numeric keys with /stdWrap each
 
    Description
-         (Since TYPO3 4.7) Execute multiple stdWrap statements in a freely
-         selectable order. The order is determined by the numeric order of the
-         keys. This allows to use multiple stdWrap statements without having to
-         remember the rather complex sorting order in which the stdWrap
-         functions are executed.
+         Execute multiple stdWrap statements in a freely selectable order. The order
+         is determined by the numeric order of the keys. This allows to use multiple
+         stdWrap statements without having to remember the rather complex sorting
+         order in which the stdWrap functions are executed.
 
          **Example:** ::
 
@@ -2021,8 +2016,8 @@ editIcons
    Description
          If not empty, then insert an icon linking to
          typo3/sysext/backend/Classes/Controller/EditDocumentController.php
-         (typo3/alt\_doc.php) with some parameters to build and backend user
-         edit form for certain fields.
+         with some parameters to build and backend user edit form for certain
+         fields.
 
          The value of this property is a list of fields from a table to edit.
          It's assumed that the current record of the cObject is the record to
@@ -2094,7 +2089,7 @@ cache
          :ref:`cache <cache>`
 
    Description
-         (Since TYPO3 CMS 4.7) Caches rendered content in the caching framework.
+         Caches rendered content in the caching framework.
 
 
 .. _stdwrap-debug:

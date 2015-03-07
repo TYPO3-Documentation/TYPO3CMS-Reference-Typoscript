@@ -11,10 +11,10 @@
 cache
 ^^^^^
 
-(Since TYPO3 4.7) Stores the rendered content into the caching
-framework and reads it from there. This allows you to reuse this
-content without prior rendering. The presence of "cache.key" will
-trigger this feature. It is evaluated twice:
+Stores the rendered content into the caching framework and reads it
+from there. This allows you to reuse this content without prior
+rendering. The presence of "cache.key" will trigger this feature. It
+is evaluated twice:
 
 - Content is read from cache directly after the stdWrapPreProcess hook
   and before "setContentToCurrent". If there is a cache entry for the

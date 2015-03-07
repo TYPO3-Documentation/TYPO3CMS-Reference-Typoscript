@@ -21,8 +21,6 @@ MENU Objects
    CommonItemStates/Index
    Sectionindex/Index
    Gmenu/Index
-   GmenuLayersTmenuLayers/Index
-   GmenuFoldout/Index
    Tmenu/Index
    Tmenuitem/Index
    Imgmenu/Index

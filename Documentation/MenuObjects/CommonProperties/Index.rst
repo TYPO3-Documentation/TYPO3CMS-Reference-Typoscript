@@ -290,15 +290,14 @@ otherwise noted!
          **Note:**
 
          .parentObj property is **hardcoded** to be a reference to the calling
-         typo3/sysext/frontend/Classes/ContentObject/Menu/ (tslib\_menu) object.
-         Here you'll find e.g. ->id to be the uid of the menu item generating a
-         submenu and such.
+         typo3/sysext/frontend/Classes/ContentObject/Menu/ object. Here you'll
+         find e.g. ->id to be the uid of the menu item generating a submenu and
+         such.
 
          **Presetting element state**
 
          You can override element states like SPC, IFSUB, ACT, CUR or USR by
-         setting the key ITEM\_STATE in the page records. See cObject
-         HMENU/special=userdefined for more information.
+         setting the key ITEM\_STATE in the page records.
 
 
 .. container:: table-row
@@ -350,8 +349,7 @@ otherwise noted!
          .. figure:: ../../Images/MenuObjectsCommonPropertiesSubmenuObjSuffixes.png
             :alt: Output of the above example.
 
-         Applies to GMENU, TMENU, GMENU\_LAYERS, TMENU\_LAYERS and
-         GMENU\_FOLDOUT on >= 2 :sup:`nd` level in a menu.
+         Applies to GMENU and TMENU on >= 2 :sup:`nd` level in a menu.
 
 
 .. ###### END~OF~TABLE ######

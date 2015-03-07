@@ -77,25 +77,6 @@ graphical navigation, where each link is a separate gif-file.
 .. container:: table-row
 
    Property
-         noBlur
-
-   Data type
-         boolean
-
-   Description
-         Normally graphical links are "blurred" if the browser is MSIE.
-         Blurring removes the ugly box around a clicked link.
-
-         If this property is set, the link is **not** blurred (browser-default)
-         with "onFocus".
-
-         **Note:** This option and the JavaScript for blurring have been
-         removed in TYPO3 6.0.
-
-
-.. container:: table-row
-
-   Property
          target
 
    Data type

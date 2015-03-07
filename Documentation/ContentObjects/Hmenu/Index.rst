@@ -159,9 +159,7 @@ into account.
          minItems
 
    Data type
-         Until TYPO3 4.6: integer
-
-         Since TYPO3 4.7: integer /:ref:`stdWrap <stdwrap>`
+         integer /:ref:`stdWrap <stdwrap>`
 
    Description
          The minimum number of items in the menu. If the number of pages does
@@ -181,9 +179,7 @@ into account.
          maxItems
 
    Data type
-         Until TYPO3 4.6: integer
-
-         Since TYPO3 4.7: integer /:ref:`stdWrap <stdwrap>`
+         integer /:ref:`stdWrap <stdwrap>`
 
    Description
          The maximum number of items in the menu. Additional items will be
@@ -201,9 +197,7 @@ into account.
          begin
 
    Data type
-         Until TYPO3 4.6: integer :ref:`+calc <objects-calc>`
-
-         Since TYPO3 4.7: integer /:ref:`stdWrap <stdwrap>` :ref:`+calc <objects-calc>`
+         integer /:ref:`stdWrap <stdwrap>` :ref:`+calc <objects-calc>`
 
    Description
          The first item in the menu.
@@ -1468,118 +1462,13 @@ Creates a language menu with flags (notice that some lines break):
    lib.langMenu.1.USERDEF1.noLink = 1
 
 
-.. _hmenu-special-userdefined:
-
-special = userdefined
-~~~~~~~~~~~~~~~~~~~~~
-
-Lets you write your own little PHP script that generates the array of
-menu items.
-
-**Note:** The special type "userdefined" has been removed in TYPO3
-4.6. Use the special type "userfunction" instead!
-
-.. ### BEGIN~OF~TABLE ###
-
-.. container:: table-row
-
-   Property
-         .. _hmenu-special-userdefined-file:
-
-         file
-
-   Data type
-         :ref:`resource <data-type-resource>`
-
-   Description
-         Filename of the PHP file to include.
-
-
-.. container:: table-row
-
-   Property
-         .. _hmenu-special-userdefined-other:
-
-         [any other key]
-
-   Data type
-         *(whatever)*
-
-   Description
-         Your own variables to your script. They are all accessible in the
-         array $conf in your script.
-
-
-.. ###### END~OF~TABLE ######
-
-[tsref:(cObject).HMENU.special = userdefined]
-
-
-.. _hmenu-special-userdefined-examples:
-
-How-to:
-'''''''
-
-You must populate an array called $menuItemsArray with page-records of
-the menu items you want to be in the menu.
-
-It works like this::
-
-   $menuItemsArray[] = pageRow1;
-   $menuItemsArray[] = pageRow2;
-   $menuItemsArray[] = pageRow3;
-   ...
-
-A "pageRow" is a record from the table "pages" with all fields
-selected (SELECT \* FROM...)
-
-If you create fake page rows, make sure to add at least "title" and
-"uid" field values.
-
-Note:
-
-If you work with mount-points you can set the MP param which should be
-set for the page by setting the internal field "\_MP\_PARAM" in the
-page-record (xxx-xxx).
-
-Overriding URLs:
-
-You can also use the internal field "\_OVERRIDE\_HREF" to set a custom
-href-value (e.g. "http://www.typo3.org") which will in any case be used
-rather than a link to the page that the page otherwise might
-represent. If you use "\_OVERRIDE\_HREF" then "\_OVERRIDE\_TARGET" can
-be used to override the target value as well (See example below).
-
-Other reserved keys:
-
-"\_ADD\_GETVARS" can be used to add get parameters to the URL, e.g.
-"&L=xxx".
-
-"\_SAFE" can be used to protect the element to make sure it is not
-filtered out for any reason.
-
-Creating submenus:
-
-You can create submenus for the next level easily by just adding an
-array of menu items in the internal field "\_SUB\_MENU" (See example
-below).
-
-Presetting element state
-
-If you would like to preset an element to be recognized as a SPC,
-IFSUB, ACT, CUR or USR mode item, you can do so by specifying one of
-these values in the key "ITEM\_STATE" of the page record. This setting
-will override the natural state-evaluation.
-
-
 .. _hmenu-special-userfunction:
 
 special = userfunction
 ~~~~~~~~~~~~~~~~~~~~~~
 
-Calls a user function/method in class which should (similar to how
-"userdefined" worked above) return an array with page records for the
-menu.
+Calls a user function/method in class which should return an array with
+page records for the menu.
 
 .. ### BEGIN~OF~TABLE ###
 

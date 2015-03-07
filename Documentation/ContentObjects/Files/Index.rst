@@ -11,9 +11,8 @@
 FILES
 ^^^^^
 
-(Since TYPO3 CMS 6.0) This content object was integrated with the
-File Abstraction Layer (FAL) and is there to output information
-about files.
+This content object was integrated with the File Abstraction Layer (FAL)
+and is there to output information about files.
 
 
 .. note::
@@ -144,8 +143,8 @@ about files.
 
          Available sub-property:
 
-         **direction:** (Since TYPO3 CMS 6.2) string /stdWrap. The direction, in which
-         the files should be sorted. Possible values are "asc" for ascending and
+         **direction:** string /stdWrap. The direction, in which the
+         files should be sorted. Possible values are "asc" for ascending and
          "desc" for descending. Ascending is the default.
 
 
@@ -158,8 +157,8 @@ about files.
          integer /:ref:`stdWrap <stdwrap>`
 
    Description
-         (Since TYPO3 CMS 6.2) The first item to return. If not set (default), items
-         beginning with the first one are returned.
+         The first item to return. If not set (default), items beginning
+         with the first one are returned.
 
 
 .. container:: table-row
@@ -171,10 +170,10 @@ about files.
          integer /:ref:`stdWrap <stdwrap>`
 
    Description
-         (Since TYPO3 CMS 6.2) Maximum number of items to return. If not set (default),
-         items until the last one are returned. If begin and maxItems together
-         exceed the number of available items, no items beyond the last available
-         item will be returned - output won't continue with the first available item.
+         Maximum number of items to return. If not set (default), items until
+         the last one are returned. If begin and maxItems together exceed the
+         number of available items, no items beyond the last available item will
+         be returned - output won't continue with the first available item.
 
 
 .. container:: table-row

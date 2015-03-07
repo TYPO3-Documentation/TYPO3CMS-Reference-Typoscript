@@ -31,8 +31,7 @@ Another good habit is to use "page" as the top-level object name for
 the content-page on a website.
 
 Most of this code is executed in the PHP script
-*typo3/sysext/frontend/Classes/Page/PageGenerator.php*
-(typo3/sysext/cms/tslib/class.tslib\_pagegen.php).
+*typo3/sysext/frontend/Classes/Page/PageGenerator.php*.
 
 .. only:: html
 
@@ -63,8 +62,6 @@ Properties
    `frameSet`_                    ->FRAMESET
    `headerData`_                  ->CARRAY
    `headTag`_                     <tag> /stdWrap                                           <head>
-   `hover`_                       HTML-color
-   `hoverStyle`_                  :ref:`data-type-string`
    `includeCSS.[array]`_          :ref:`data-type-resource`
    `includeCSSLibs.[array]`_      :ref:`data-type-resource`
    `includeJS.[array]`_           :ref:`data-type-resource`
@@ -72,7 +69,6 @@ Properties
    `includeJSFooterlibs.[array]`_ :ref:`data-type-resource`
    `includeJSLibs.[array]`_       :ref:`data-type-resource`
    `includeLibs`_                 *(array of strings)*
-   `inlineJS`_                    ->CARRAY
    `inlineLanguageLabel`_         *(array of strings)*
    `inlineSettings`_              *(array of strings)*
    `insertClassesFromRTE`_        :ref:`data-type-boolean`
@@ -80,9 +76,7 @@ Properties
    `jsFooterInline`_              ->CARRAY
    `jsInline`_                    ->CARRAY
    `meta`_                        ->META
-   `noLinkUnderline`_             :ref:`data-type-boolean`
    `shortcutIcon`_                :ref:`data-type-resource`
-   `smallFormFields`_             :ref:`data-type-boolean`
    `stdWrap`_                     ->:ref:`stdWrap <stdwrap>`
    `stylesheet`_                  :ref:`data-type-resource`
    `typeNum`_                     :ref:`data-type-integer`                                 0
@@ -434,53 +428,6 @@ headTag
 
 
 
-.. _setup-page-hover:
-
-hover
-"""""
-
-.. container:: table-row
-
-   Property
-         hover
-
-   Data type
-         HTML-color
-
-   Description
-         The color of a link when the mouse moves over it! (only MSIE). Uses
-         in-document stylesheet.
-
-         **Note:** This option was deprecated and has been removed in
-         TYPO3 6.0. Use stylesheets instead.
-
-
-
-.. _setup-page-hoverstyle:
-
-hoverStyle
-""""""""""
-
-.. container:: table-row
-
-   Property
-         hoverStyle
-
-   Data type
-         string
-
-   Description
-         Additional style information to the hover-color.
-
-         **Example:** ::
-
-            page.hoverStyle = font: bold; text-decoration: none;
-
-         **Note:** This option was deprecated and has been removed in
-         TYPO3 6.0. Use stylesheets instead.
-
-
-
 .. _setup-page-includecss-array:
 
 includeCSS.[array]
@@ -507,18 +454,17 @@ includeCSS.[array]
          **.allWrap:** Wraps the complete tag, useful for conditional
          comments.
 
-         **.allWrap.splitChar:** (Since TYPO3 6.2) Defines an alternative
-         splitting character (default is "\|" - the vertical line).
+         **.allWrap.splitChar:** Defines an alternative splitting character
+         (default is "\|" - the vertical line).
 
          **.alternate:** If set (boolean) then the rel-attribute will be
          "alternate stylesheet".
 
-         **.disableCompression:** (Since TYPO3 4.6) If config.compressCss is
-         enabled, this disables the compression of this file.
+         **.disableCompression:** If config.compressCss is enabled, this
+         disables the compression of this file.
 
-         **.excludeFromConcatenation:** (Since TYPO3 4.6) If
-         config.concatenateCss is enabled, this prevents the file from being
-         concatenated.
+         **.excludeFromConcatenation:** If config.concatenateCss is
+         enabled, this prevents the file from being concatenated.
 
          **.external:** If set, there is no file existence check. Useful for
          inclusion of external files.
@@ -526,10 +472,10 @@ includeCSS.[array]
          **.forceOnTop:** Boolean flag. If set, this file will be added on top
          of all other files.
 
-         **.if:** (Since TYPO3 4.7) Allows to define conditions, which must
-         evaluate to TRUE for the file to be included. If they do not evaluate
-         to TRUE, the file will not be included. Extensive usage might cause
-         huge numbers of temporary files to be created. See ->if for details.
+         **.if:** Allows to define conditions, which must evaluate to TRUE for
+         the file to be included. If they do not evaluate to TRUE, the file
+         will not be included. Extensive usage might cause huge numbers of
+         temporary files to be created. See ->if for details.
 
          **.import:** If set (boolean) then the @import way of including a
          stylesheet is used instead of <link>
@@ -568,7 +514,7 @@ includeCSSLibs.[array]
          resource
 
    Description
-         (Since TYPO3 6.2) Adds CSS library files to head of page.
+         Adds CSS library files to head of page.
 
          The file definition must be a valid "resource" data type, otherwise
          nothing is inserted. This means that remote files cannot be referenced
@@ -642,18 +588,17 @@ includeJS.[array]
          **.allWrap:** Wraps the complete tag, useful for conditional
          comments.
 
-         **.allWrap.splitChar:** (Since TYPO3 6.2) Defines an alternative
-         splitting character (default is "\|" - the vertical line).
+         **.allWrap.splitChar:** Defines an alternative splitting character
+         (default is "\|" - the vertical line).
 
          **.async:** (Since TYPO3 7.1) Allows the file to be loaded
          asynchronously.
 
-         **.disableCompression:** (Since TYPO3 4.6) If config.compressJs is
-         enabled, this disables the compression of this file.
+         **.disableCompression:** If config.compressJs is enabled, this
+         disables the compression of this file.
 
-         **.excludeFromConcatenation:** (Since TYPO3 4.6) If
-         config.concatenateJs is enabled, this prevents the file from being
-         concatenated.
+         **.excludeFromConcatenation:** If config.concatenateJs is enabled,
+         this prevents the file from being concatenated.
 
          **.external:** If set, there is no file existence check. Useful for
          inclusion of external files.
@@ -661,10 +606,10 @@ includeJS.[array]
          **.forceOnTop:** Boolean flag. If set, this file will be added on top
          of all other files.
 
-         **.if:** (Since TYPO3 4.7) Allows to define conditions, which must
-         evaluate to TRUE for the file to be included. If they do not evaluate
-         to TRUE, the file will not be included. Extensive usage might cause
-         huge numbers of temporary files to be created. See ->if for details.
+         **.if:** Allows to define conditions, which must evaluate to TRUE for
+         the file to be included. If they do not evaluate to TRUE, the file will
+         not be included. Extensive usage might cause huge numbers of temporary
+         files to be created. See ->if for details.
 
          **.type:** Setting the MIME type of the script (default:
          text/javascript).
@@ -745,18 +690,17 @@ includeJSLibs.[array]
          **.allWrap:** Wraps the complete tag, useful for conditional
          comments.
 
-         **.allWrap.splitChar:** (Since TYPO3 6.2) Defines an alternative
-         splitting character (default is "\|" - the vertical line).
+         **.allWrap.splitChar:** Defines an alternative splitting character
+         (default is "\|" - the vertical line).
 
          **.async:** (Since TYPO3 7.1) Allows the file to be loaded
          asynchronously.
 
-         **.disableCompression:** (Since TYPO3 4.6) If config.compressJs is
-         enabled, this disables the compression of this file.
+         **.disableCompression:** If config.compressJs is enabled, this
+         disables the compression of this file.
 
-         **.excludeFromConcatenation:** (Since TYPO3 4.6) If
-         config.concatenateJs is enabled, this prevents the file from being
-         concatenated.
+         **.excludeFromConcatenation:** If config.concatenateJs is enabled,
+         this prevents the file from being concatenated.
 
          **.external:** If set, there is no file existence check. Useful for
          inclusion of external files.
@@ -764,10 +708,10 @@ includeJSLibs.[array]
          **.forceOnTop:** Boolean flag. If set, this file will be added on top
          of all other files.
 
-         **.if:** (Since TYPO3 4.7) Allows to define conditions, which must
-         evaluate to TRUE for the file to be included. If they do not evaluate
-         to TRUE, the file will not be included. Extensive usage might cause
-         huge numbers of temporary files to be created. See ->if for details.
+         **.if:** Allows to define conditions, which must evaluate to TRUE for the
+         file to be included. If they do not evaluate to TRUE, the file will not be
+         included. Extensive usage might cause huge numbers of temporary files to be
+         created. See ->if for details.
 
          **Example:** ::
 
@@ -806,39 +750,6 @@ includeLibs
          **Example:** ::
 
             includeLibs.tx_myext = lib_filename.php
-
-
-
-.. _setup-page-inlinejs:
-
-inlineJS
-""""""""
-
-.. container:: table-row
-
-   Property
-         inlineJS
-
-   Data type
-         ->CARRAY
-
-   Description
-         Inserts inline JavaScript in the header-section. Don't use script-tags
-         as they are added by TYPO3.
-
-         **Example:** ::
-
-            page.inlineJS.10 = TEXT
-            page.inlineJS.10.value = function a(val) { alert(val); }
-
-         With config.removeDefaultJS = external the inlineJS is moved to
-         external file.
-
-         With config.minifyJS = 1 (removed in TYPO3 6.0) the inlineJS was
-         minified as well.
-
-         **Note:** This option was deprecated and has been removed in TYPO3
-         4.3. Use jsInline instead.
 
 
 
@@ -944,7 +855,6 @@ javascriptLibs
          the TYPO3 Core. ::
 
             javascriptLibs {
-               # Note: All jQuery-related options are available since TYPO3 v6.0
                # include jQuery (boolean)
                jQuery = 1
                # Change the version
@@ -1000,10 +910,6 @@ javascriptLibs
          ExtJS will be loaded. This will also affect any options set. They will
          only come from ExtJS.
 
-         **Note:** Before TYPO3 4.5.3 you should either request ExtJS or
-         ExtCore, but not both together. Requesting both at the same time will
-         lead to errors.
-
 
 
 .. _setup-page-jsfooterinline:
@@ -1050,11 +956,8 @@ jsInline
 
          **Note:**
 
-         With config.removeDefaultJS = external, the inlineJS is moved to
-         an external file.
-
-         With config.minifyJS = 1 (removed in TYPO3 6.0) the inlineJS was
-         minified as well.
+         With config.removeDefaultJS = external, the inline JavaScript is
+         moved to an external file.
 
 
 
@@ -1070,27 +973,6 @@ meta
 
    Data type
          ->META
-
-
-
-.. _setup-page-nolinkunderline:
-
-noLinkUnderline
-"""""""""""""""
-
-.. container:: table-row
-
-   Property
-         noLinkUnderline
-
-   Data type
-         boolean
-
-   Description
-         Disables link-underlining. Uses in-document stylesheet.
-
-         **Note:** This option was deprecated and has been removed in
-         TYPO3 6.0. Use stylesheets instead.
 
 
 
@@ -1119,36 +1001,6 @@ shortcutIcon
          **Note:** The reference to this file will only be included in the
          output of your website, if the file actually exists! Should the
          file be missing, the tag will not be rendered.
-
-
-
-.. _setup-page-smallformfields:
-
-smallFormFields
-"""""""""""""""
-
-.. container:: table-row
-
-   Property
-         smallFormFields
-
-   Data type
-         boolean
-
-   Description
-         Renders form fields like textarea, input and select-boxes small with
-         "verdana size 1" font.
-
-         Uses inline stylesheet.
-
-         **Tip:**
-
-         Use this together with the option "config.compensateFieldWidth" set to
-         "0.6" for Netscape browsers in order to render the small form fields
-         in the same width as is normal for other browsers!
-
-         **Note:** This option was deprecated and has been removed in
-         TYPO3 6.0. Use stylesheets instead.
 
 
 

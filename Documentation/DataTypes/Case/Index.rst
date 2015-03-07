@@ -28,14 +28,12 @@ case
 
          **lower:** Convert all letters of the string to lowercase.
 
-         **capitalize:** (Since TYPO3 4.6) Uppercase the first character of
-         each word in the string.
+         **capitalize:** Uppercase the first character of each word in
+         the string.
 
-         **ucfirst:** (Since TYPO3 4.6) Convert the first letter of the string
-         to uppercase.
+         **ucfirst:** Convert the first letter of the string to uppercase.
 
-         **lcfirst:** (Since TYPO3 4.6) Convert the first letter of the string
-         to lowercase.
+         **lcfirst:** Convert the first letter of the string to lowercase.
 
 
 

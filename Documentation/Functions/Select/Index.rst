@@ -31,9 +31,7 @@ Always secure input from outside, for example with intval!
          uidInList
 
    Data type
-         Until TYPO3 4.5: *list of record\_ids*
-
-         Since TYPO3 4.6: *list of record\_ids* /:ref:`stdWrap <stdwrap>`
+         *list of record\_ids* /:ref:`stdWrap <stdwrap>`
 
    Description
          Comma-separated list of record uids from the according database table.
@@ -63,12 +61,11 @@ Always secure input from outside, for example with intval!
 
          **Special keyword:** "this" is replaced with the id of the current page.
 
-         (Since TYPO3 6.2) **Special keyword:** "root" allows to select records from
-         the root-page level (records with pid=0, e.g. useful for the table "sys_category"
-         and others).
+         **Special keyword:** "root" allows to select records from the root-page level
+         (records with pid=0, e.g. useful for the table "sys_category" and others).
 
-         (Since TYPO3 6.2) **Special value:** "-1" allows to select versioned records
-         in workspaces directly.
+         **Special value:** "-1" allows to select versioned records in workspaces
+         directly.
 
          **Example:** ::
 
@@ -148,9 +145,7 @@ Always secure input from outside, for example with intval!
          max
 
    Data type
-         Until TYPO3 4.5: integer +calc +"total"
-
-         Since TYPO3 4.6: integer +calc +"total" /:ref:`stdWrap <stdwrap>`
+         integer +calc +"total" /:ref:`stdWrap <stdwrap>`
 
    Description
          Max records
@@ -164,9 +159,7 @@ Always secure input from outside, for example with intval!
          begin
 
    Data type
-         Until TYPO3 4.5: integer +calc +"total"
-
-         Since TYPO3 4.6: integer +calc +"total" /:ref:`stdWrap <stdwrap>`
+         integer +calc +"total" /:ref:`stdWrap <stdwrap>`
 
    Description
          Begin with record number *value*.
@@ -180,9 +173,7 @@ Always secure input from outside, for example with intval!
          where
 
    Data type
-         Until TYPO3 4.5: *SQL-where*
-
-         Since TYPO3 4.6: *SQL-where* /:ref:`stdWrap <stdwrap>`
+         *SQL-where* /:ref:`stdWrap <stdwrap>`
 
    Description
          WHERE clause without the word "WHERE".
@@ -217,9 +208,7 @@ Always secure input from outside, for example with intval!
          languageField
 
    Data type
-         Until TYPO3 4.5: string
-
-         Since TYPO3 4.6: string /:ref:`stdWrap <stdwrap>`
+         string /:ref:`stdWrap <stdwrap>`
 
    Description
          If set, this points to the field in the record which holds a reference
@@ -238,10 +227,9 @@ Always secure input from outside, for example with intval!
          boolean
 
    Description
-         (Since TYPO3 6.2) If content language overlay is activated and the option
-         "languageField" is set, includeRecordsWithoutDefaultTranslation allows to
-         additionally fetch records, which do **not** have a parent in the default
-         language.
+         If content language overlay is activated and the option "languageField" is set,
+         includeRecordsWithoutDefaultTranslation allows to additionally fetch records,
+         which do **not** have a parent in the default language.
 
    Default
          0
@@ -253,9 +241,7 @@ Always secure input from outside, for example with intval!
          selectFields
 
    Data type
-         Until TYPO3 4.5: string
-
-         Since TYPO3 4.6: string /:ref:`stdWrap <stdwrap>`
+         string /:ref:`stdWrap <stdwrap>`
 
    Description
          List of fields to select, or "count(\*)".
@@ -279,9 +265,7 @@ Always secure input from outside, for example with intval!
          rightjoin
 
    Data type
-         Until TYPO3 4.5: string
-
-         Since TYPO3 4.6: string /:ref:`stdWrap <stdwrap>`
+         string /:ref:`stdWrap <stdwrap>`
 
    Description
          Enter the table name for JOIN, LEFT OUTER JOIN and RIGHT OUTER JOIN

@@ -161,5 +161,5 @@ Version numbers
 
 For new features TSref includes a note in which TYPO3 version the
 feature was added. If such a note is missing, the feature is part of
-TYPO3 since version 4.5 at least.
+TYPO3 since version 6.2 at least.
 

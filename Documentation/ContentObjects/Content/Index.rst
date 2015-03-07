@@ -43,14 +43,10 @@ lists of records from a variety of tables without fine graining.
          *table name* /:ref:`stdWrap <stdwrap>`
 
    Description
-         The table, the content should come from.
+         The table, the content should come from. Any table can be used;
+         a check for a table prefix is not done.
 
          In standard configuration this will be "tt\_content".
-
-         **Note:** Until TYPO3 6.1 allowed tables were "pages" or tables with
-         one of these prefixes: "pages\_", "tt\_", "tx\_", "ttx\_", "fe\_",
-         "user\_" or "static\_". Since TYPO3 6.2 prefixes are no longer checked;
-         now any table can be used.
 
 
 .. container:: table-row

@@ -49,10 +49,9 @@ icon, size and file are rendered in the listed order.
          If for a certain filetype no icon file is found in icon.path, the file
          "default" plus extension (e.g. "default.gif") will be used.
 
-         Since TYPO3 4.7 the following sub-properties are available:
+         The following sub-properties are available:
 
-         **path:** Path to the icon set (default:
-         typo3/gfx/fileicons/)
+         **path:** Path to the icon set (default: typo3/gfx/fileicons/)
 
          **ext:** File extension of icons (default: gif)
 

@@ -13,9 +13,9 @@ FORM
 
 .. note::
 
-   The following only applies, if the system extension "form" (which
-   comes with TYPO3 since version 4.6) is *not* installed. If it is, things
-   work as described in the documentation inside the system extension.
+   The following only applies, if the system extension "form" is *not*
+   installed. If it is, things work as described in the documentation
+   inside the system extension.
 
 .. note::
 
@@ -843,8 +843,8 @@ Examples:
          - All form elements will have an id-attribute carrying the formname with
            the md5-hashed field name appended
 
-         **Note:** In TYPO3 4.0 and later, CSS Styled Content is configured
-         to produce accessible forms by default.
+         **Note:** CSS Styled Content is configured to produce accessible forms by
+         default.
 
 
 .. container:: table-row

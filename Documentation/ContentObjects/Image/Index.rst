@@ -15,8 +15,7 @@ Returns an image tag with the image file defined in the property
 "file" and processed according to the properties set.
 
 Defined as PHP function cImage() in
-typo3/sysext/frontend/Classes/ContentObject/ContentObjectRenderer.php
-(/typo3/sysext/cms/tslib/class.tslib\_content.php).
+typo3/sysext/frontend/Classes/ContentObject/ContentObjectRenderer.php.
 
 The array $GLOBALS['TSFE']->lastImageInfo is set with the info-array
 of the returning image (if any) and contains width, height and so on:
@@ -98,17 +97,11 @@ for.
 
          titleText
 
-         (alttext)
-
    Data type
          string /:ref:`stdWrap <stdwrap>`
 
    Description
          If no alt text is specified, an empty alt text will be used.
-
-         ("alttext" is the old spelling of this attribute. It was deprecated
-         since TYPO3 4.3 and was used only if "altText" did not specify a value
-         or properties. In TYPO3 4.6 "alttext" has been removed.)
 
 
 .. container:: table-row

@@ -39,9 +39,9 @@ Properties
    ======================================= =============================== ====================== =======
    `includeLibs`_                          (array of keys)
    `userFunc`_                             (array of keys)
-   `\_CSS\_DEFAULT\_STYLE`_                :ref:`data-type-string`
+   `\_CSS\_DEFAULT\_STYLE`_                string /:ref:`stdwrap`
    `\_CSS\_PAGE\_STYLE`_                   :ref:`data-type-string`
-   `\_DEFAULT\_PI\_VARS.[piVar-key]`_      Until TYPO3 6.1: string
+   `\_DEFAULT\_PI\_VARS.[piVar-key]`_      string /:ref:`stdwrap`
    `\_LOCAL\_LANG.[lang-key].[label-key]`_ :ref:`data-type-string`
    ======================================= =============================== ====================== =======
 
@@ -103,9 +103,7 @@ userFunc
          \_CSS\_DEFAULT\_STYLE
 
    Data type
-         Until TYPO3 6.1: string
-
-         Since TYPO3 6.2: string /:ref:`stdWrap <stdwrap>`
+         string /:ref:`stdWrap <stdwrap>`
 
    Description
          Use this to have some default CSS styles inserted in the header
@@ -167,9 +165,7 @@ userFunc
          \_DEFAULT\_PI\_VARS.[piVar-key]
 
    Data type
-         Until TYPO3 6.1: string
-
-         Since TYPO3 6.2: string /:ref:`stdWrap <stdwrap>`
+         string /:ref:`stdWrap <stdwrap>`
 
    Description
          Allows you to set default values of the piVars array which most
@@ -177,8 +173,8 @@ userFunc
 
          This works only if the plugin calls $this->pi\_setPiVarDefaults().
 
-         (Since TYPO3 6.2) The values have stdWrap, which also works
-         recursively for multilevel keys.
+         The values have stdWrap, which also works recursively for multilevel
+         keys.
 
          **Example:** ::
 

@@ -38,16 +38,15 @@ page will not appear in the menu.
 
 .sectionIndex.includeHiddenHeaders = [boolean]
 
-(Since TYPO3 6.2) If you set this and sectionIndex.type is set to "header",
-also elements with a header layout set to "Hidden" will appear in the menu.
-This was the default behaviour until TYPO3 4.6 and with this property you
-can enable the "old" behaviour again.
+If you set this and sectionIndex.type is set to "header", also elements
+with a header layout set to "Hidden" will appear in the menu. This was
+the default behaviour until TYPO3 4.6 and with this property you can
+enable this old behaviour again.
 
 .sectionIndex.useColPos = [integer /:ref:`stdWrap <stdwrap>`]
 
-(Since TYPO3 6.0) This property allows you to set the colPos which
-should be used in the where clause of the query. Possible values
-are integers, default is "0".
+This property allows you to set the colPos which should be used in the
+where clause of the query. Possible values are integers, default is "0".
 
 Any positive integer and 0 will lead to a where clause containing
 "colPos=x" with x being the aforementioned integer. A negative value
@@ -95,10 +94,9 @@ non-existing fields in the page-record
 
 \- a new field, "sectionIndex\_uid" is introduced in the page record
 which is detected by the function
-TYPO3\CMS\Core\TypoScript\TemplateService->linkData()
-(t3lib\_tstemplate->linkData()). If  this field is present in a page
-record, the linkData()-function will prepend a hash-mark and the
-number of the field.
+TYPO3\CMS\Core\TypoScript\TemplateService->linkData(). If this field
+is present in a page record, the linkData()-function will prepend a
+hash-mark and the number of the field.
 
 **Note:**
 
