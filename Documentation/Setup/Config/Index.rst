@@ -1512,7 +1512,8 @@ index\_enable
          boolean
 
    Description
-         Enables cached pages to be indexed.
+         Enables cached pages to be indexed. *Automatically enabled when
+         EXT:indexed_search is enabled.*
 
 
 
@@ -1531,6 +1532,7 @@ index\_externals
 
    Description
          If set, external media linked to on the pages is indexed as well.
+         *Automatically enabled when EXT:indexed_search is enabled.*
 
 
 
