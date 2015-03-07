@@ -263,7 +263,7 @@ otherwise noted!
 
    Description
          Adds an additional part to the WHERE clause for this menu.
-         Make sure to start the part with :code:`AND `!
+         Make sure to start the part with "AND "!
 
          **Example:** ::
 

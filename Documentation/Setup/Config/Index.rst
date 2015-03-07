@@ -103,7 +103,7 @@ Properties
    `noScaleUp`_                                          :ref:`data-type-boolean`
    `pageGenScript`_                                      :ref:`data-type-resource`          typo3/sysext/frontend/Classes/Page/PageGenerator.php
    `pageRendererTemplateFile`_                           :ref:`data-type-string`
-   `pageTitle`_                                          :ref:`data-type-stdwrap`
+   `pageTitle`_                                          :ref:`stdWrap`
    `pageTitleFirst`_                                     :ref:`data-type-boolean`           0
    `pageTitleSeparator`_                                 Until TYPO3 6.0: string            : *(colon with following space)*
    `prefixLocalAnchors`_                                 :ref:`data-type-string`
@@ -199,15 +199,15 @@ absRefPrefix
 
          1. Prefixing all links with a "/" results in absolute link paths::
 
-            config.absRefPrefix = /
+              config.absRefPrefix = /
 
          2. Prefixing all links with the path to a subdirectory::
 
-            config.absRefPrefix = /some-subsite/
+              config.absRefPrefix = /some-subsite/
 
          3. Prefixing all links with a URI scheme::
 
-            config.absRefPrefix = http://example.com/
+              config.absRefPrefix = http://example.com/
 
          **Special keyword:** "auto" (Since TYPO3 CMS 7.1)
          lets TYPO3 autodetect the site root based
@@ -977,7 +977,7 @@ disableImgBorderAttr
 
    Description
          Returns the 'border' attribute for an <img> tag only if the doctype is
-         not xhtml\_strict, xhtml\_11 or xhtml\_2 or if the config parameter
+         not xhtml\_strict or xhtml\_11 or if the config parameter
          'disableImgBorderAttr' is not set
 
 
@@ -1072,8 +1072,6 @@ doctype
 
          **xhtml+rdfa\_10** for the XHTML+RDFa 1.0 doctype.
 
-         **xhtml\_2** for the XHTML 2 doctype.
-
          **html5** for the HTML5 doctype.
 
          **none** for *no* doctype at all.
@@ -1082,7 +1080,7 @@ doctype
 
             Keywords also change the way TYPO3 generates some of the
             XHTML tags to ensure valid XML. If you set doctype to a string, then
-            you must also set config.xhtmlDoctype(see below).
+            you must also set config.xhtmlDoctype (see below).
 
          See :ref:`config.htmlTag_setParams <setup-config-htmltag-setparams>` and
          :ref:`comfig.htmlTag_langKey <setup-config-htmltag-langkey>` for more
@@ -4116,8 +4114,6 @@ xhtmlDoctype
          **xhtml\_basic** for XHTML basic doctype.
 
          **xhtml\_11** for XHTML 1.1 doctype.
-
-         **xhtml\_2** for XHTML 2 doctype.
 
          This is an example to use MathML 2.0 in an XHTML 1.1 document::
 
