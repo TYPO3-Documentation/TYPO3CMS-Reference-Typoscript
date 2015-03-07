@@ -97,7 +97,7 @@ Here is the same example in its context::
    10 {
      table = tt_content
      select {
-       andWhere.dataWrap = irre_parentid  = {field:uid}
+       where.dataWrap = irre_parentid  = {field:uid}
        begin = 0
      }
 

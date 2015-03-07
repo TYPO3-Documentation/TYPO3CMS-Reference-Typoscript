@@ -207,6 +207,9 @@ Always secure input from outside, for example with intval!
 
             andWhere = NOT doktype
 
+         **Note:** This property is deprecated since TYPO3 7.1! Use
+         the properties .where and .markers instead.
+
 
 .. container:: table-row
 
