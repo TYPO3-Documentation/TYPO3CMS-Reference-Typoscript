@@ -149,20 +149,6 @@ HTMLparser
          to >, &quot; to " etc.
 
 
-.. container:: table-row
-
-   Property
-         xhtml\_cleaning
-
-   Data type
-         boolean
-
-   Description
-         Cleans up the content for XHTML compliance. Still slightly
-         experimental and supports only some clean up operations (like
-         conversion tags and attributes to lower case).
-
-
 .. ###### END~OF~TABLE ######
 
 [page:->HTMLparser; tsref:->HTMLparser]

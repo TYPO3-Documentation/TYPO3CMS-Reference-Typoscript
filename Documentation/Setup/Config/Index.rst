@@ -160,7 +160,6 @@ Properties
    `typolinkLinkAccessRestrictedPages\_addParams`_       :ref:`data-type-string`
    `USERNAME\_substToken`_                               :ref:`data-type-string`            <!--###USERNAME###-->
    `USERUID\_substToken`_                                :ref:`data-type-string`
-   `xhtml\_cleaning`_                                    :ref:`data-type-string`
    `xhtmlDoctype`_                                       :ref:`data-type-string`
    `xmlprologue`_                                        :ref:`data-type-string`
    ===================================================== ================================== ======================================================================
@@ -2416,7 +2415,16 @@ prefixLocalAnchors
          <base> tag is set (e.g. if the "realurl" extension is used to produce
          speaking URLs). See property "config.baseURL".
 
-         The keywords are the same as for "xhtml\_cleaning", see above.
+         You can enable this function by setting it to one of the following
+         keywords:
+
+         **all:** The content is always processed before it is possibly
+         stored in cache (or not stored in cache).
+
+         **cached:** The content is only processed, if the page will be put
+         into the cache.
+
+         **output:** The content is processed just before it is echoed out.
 
 
 
@@ -4013,76 +4021,6 @@ USERUID\_substToken
 
          This value has no default value and only if you specify a value for
          this token will a substitution process take place.
-
-
-
-.. _setup-config-xhtml-cleaning:
-
-xhtml\_cleaning
-"""""""""""""""
-
-.. container:: table-row
-
-   Property
-         xhtml\_cleaning
-
-   Data type
-         string
-
-   Description
-         Cleans up the output to make it XHTML compliant and a bit more.
-         For now this is what is done:
-
-         *What it does:*
-
-         \- All tags are ended with "/>"
-
-         \- Lowercase for elements and attributes
-
-         \- All attributes in quotes
-
-         \- Add "alt" attribute to img-tags if it's not there already.
-
-         *What it does **not** do (yet) according to XHTML specifications:*
-
-         \- Wellformedness: Nesting is **not** checked
-
-         \- name/id attribute issue is not observed at this point.
-
-         \- Certain nesting of elements not allowed. Most interesting, <PRE>
-         cannot contain img, big,small,sub,sup ...
-
-         \- Wrapping scripts and style element contents in CDATA - or
-         alternatively they should have entities converted.
-
-         \- Setting charsets may put some special requirements on both XML
-         declaration/ meta-http-equiv. (C.9)
-
-         \- UTF-8 encoding is in fact expected by XML!
-
-         \- stylesheet element and attribute names are **not** converted to
-         lowercase
-
-         \- ampersands (and entities in general I think) MUST be converted to
-         an entity reference! (&amps;). This may mean further conversion of
-         non-tag content before output to page. May be related to the charset
-         issue as a whole.
-
-         \- Minimized values not allowed: Must do this: selected="selected"
-
-         Please see the class TYPO3\CMS\Core\Html\HtmlParser
-         (t3lib\_parsehtml) for details.
-
-         You can enable this function by setting it to one of the following
-         keywords:
-
-         **all:** The content is always processed before it is possibly
-         stored in cache (or not stored in cache).
-
-         **cached:** The content is only processed, if the page will be put
-         into the cache.
-
-         **output:** The content is processed just before it is echoed out.
 
 
 
