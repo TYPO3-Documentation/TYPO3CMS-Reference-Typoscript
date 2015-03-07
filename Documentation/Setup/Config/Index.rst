@@ -145,6 +145,8 @@ Properties
    `stat\_typeNumList`_                                  int/list                           0,1
    `sword\_noMixedCase`_                                 :ref:`data-type-boolean`
    `sword\_standAlone`_                                  :ref:`data-type-boolean`
+   `sys\_language\_isocode`_                             :ref:`data-type-string`
+   `sys\_language\_isocode\_default`_                    :ref:`data-type-string`
    `sys\_language\_mode`_                                :ref:`data-type-string`
    `sys\_language\_overlay`_                             boolean / keyword
    `sys\_language\_softExclude`_                         :ref:`data-type-string`
@@ -3552,6 +3554,71 @@ sword\_standAlone
 
          If set, the words MUST be surrounded by whitespace in order to be
          marked up.
+
+
+
+.. _setup-config-sys-language-isocode:
+
+sys\_language\_isocode
+""""""""""""""""""""""
+
+.. container:: table-row
+
+   Property
+         sys\_language\_isocode
+
+   Data type
+         string
+
+   Description
+         ISO 639-1 language code for the according language. By default this
+         is being set by ``TSFE:sys_language_isocode``. The value is derived
+         from the ISO code that is stored within the sys_language record.
+         You can override the value, which was retrieved that way, with this
+         setting.
+
+        The ISO code is also used for the language attribute of the HTML tag.
+        Therefore the setting config.htmlTag_langKey is not needed anymore, if
+        it is the same as the ISO code.
+
+        See the example at sys\_language\_isocode\_default!
+
+
+.. _setup-config-sys-language-isocode-default:
+
+sys\_language\_isocode\_default
+"""""""""""""""""""""""""""""""
+
+.. container:: table-row
+
+   Property
+         sys\_language\_isocode\_default
+
+   Data type
+         string
+
+   Description
+         ISO 639-1 language code for the default language (that is
+         ``sys_language_uid = 0``).
+
+         **Example:** ::
+
+         .. code-block:: typoscript
+
+            # Danish by default
+            config.sys_language_uid = 0
+            config.sys_language_isocode_default = da
+
+            [globalVar = GP:L = 1]
+               # ISO code is filled by the respective DB value from sys_language (uid 1)
+               config.sys_language_uid = 1
+
+               # You can override this of course
+               config.sys_language_isocode = fr
+            [GLOBAL]
+
+   Default
+         en
 
 
 
