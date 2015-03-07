@@ -20,9 +20,9 @@ This document is a complete reference to all objects and properties of
 TypoScript as used in TYPO3 TypoScript templates (and not in TSconfig).
 
 For explanations about the syntax of TypoScript itself, please refer
-to the "TypoScript Syntax and In-Depth Study" manual.
+to the :ref:`"TypoScript Syntax and In-Depth Study" <t3tssyntax:start>` manual.
 
-This version is updated for TYPO3 CMS version 6.2.
+This version is updated for TYPO3 CMS version 7.1.
 
 
 .. _what-s-new:
@@ -30,37 +30,15 @@ This version is updated for TYPO3 CMS version 6.2.
 What's new
 ^^^^^^^^^^
 
-The main changes include: The cObject FILES got the new properties
-"begin" and "maxItems" and the property "sorting" got the new
-sub-property "direction". The content object IMAGE now supports
-responsive images using the properties "layoutKey" and "layout" and
-"sourceCollection". cObject HMENU got a new special menu type called
-"categories". For the RECORDS content object the property "categories"
-has been introduced, which makes records related to selected categories
-available for rendering.
-
-The page property "includeCSSLibs" allows to include CSS libraries. The
-page properties includeJS, includeJSLibs and includeCSS were added
-a new "allWrap.splitChar" property.
-
-A new keyword "devIP" can be used in the IP condition. The userFunc
-condition can now handle multiple parameters and now supports quotes
-for its arguments. A new condition called "applicationContext" has been
-amended. Detection of Windows 8 has been added to the system condition.
-
-The new property "includeRecordsWithoutDefaultTranslation" of the select
-function allows to also fetch records, which do *not* have a parent in
-the default language. The new stdWrap property "encodeForJavaScriptValue"
-enables you to encode values for usage in JavaScript strings.
-
-Certain getText properties can be used without second parameter.
-
-optionSplit has been added to the replace property of the stdWrap
-function replacement. The new property is called
-"useOptionSplitReplace".
+During the development of TYPO3 7, a lot of properties have been added,
+changed, deprecated or removed.
 
 Additionally various descriptions were improved and many smaller
 mistakes were fixed.
+
+For a list of all changes see the `commit log on GitHub
+<https://github.com/TYPO3-Documentation/TYPO3CMS-Reference-Typoscript/commits/latest>`_.
+
 
 For more details about changes in the various TYPO3 versions please
 refer to the links below.
