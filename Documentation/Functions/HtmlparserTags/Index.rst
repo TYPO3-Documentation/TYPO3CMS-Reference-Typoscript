@@ -231,11 +231,30 @@ HTMLparser\_tags
          function reference
 
    Description
-         User function for processing of the attribute.
+         User function for processing of the attribute. The return value
+         of this function will be used as the new tag value.
 
          **Example:**
 
          ...fixAttrib.href.userFunc = tx\_realurl->test\_urlProc
+         
+         Two parameters are passed to the function:
+         
+         1. The tag value as a string or an array containing the tag value
+            and additional configuration (see below).
+         2. The reference the to HtmlParser instance that calls the method.
+         
+         By default the first parameter is the value of the processed tag.
+         This changes when you pass additional configuration options to the
+         user function:
+         
+         ...fixAttrib.href.userFunc.myCustomParm = myCustomValue
+         
+         In that case the first parameter passed to the user function will
+         be an array containing these values:
+         
+         - attributeValue: The original value of the processed attribute
+         - myCustomParm: myCustomValue
 
 
 .. container:: table-row
