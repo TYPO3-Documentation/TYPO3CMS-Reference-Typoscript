@@ -615,33 +615,6 @@ Web > Page (mod.web\_layout)
 .. container:: table-row
 
    Property
-         tt\_content.fieldOrder
-
-   Data type
-         *(list of field names from tt\_content table)*
-
-   Description
-         This allows you to specify (and thereby overrule) the preferred order
-         of the field names of the "Quick Edit" editing forms of the
-         tt\_content table (Content Elements). Just specify the list of fields,
-         separated by comma. Then these fields will be listed first and all
-         remaining fields thereafter in their original order.
-
-         **Example:**
-
-         This results in the 'Text' field and thereafter 'Header' field being
-         displayed as the very first fields instead of the 'Type' field.
-
-         .. code-block:: typoscript
-
-			mod.web_layout.tt_content {
-				fieldOrder = bodytext, header
-			}
-
-
-.. container:: table-row
-
-   Property
          editFieldsAtATime
 
    Data type
