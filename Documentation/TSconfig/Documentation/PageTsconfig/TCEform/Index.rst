@@ -634,42 +634,6 @@ above).
          100%
 
 
-.. container:: table-row
-
-   Property
-         linkTitleToSelf
-
-   Data type
-         boolean
-
-   Description
-         *(all fields)*
-
-         If set, then the title of the field in the forms links to alt\_doc.php
-         editing ONLY that field.
-
-         Works for existing records only - not for new records.
-
-         **Example:**
-
-         .. code-block:: typoscript
-
-			TCEFORM.pages.title {
-				# The label for the "title" field will link itself
-				linkTitleToSelf = 1
-			}
-
-         The result is that the label for the title field will be a link:
-
-         .. figure:: ../../Images/manual_html_m156d544f.png
-            :alt: The label for the title field turns into a link
-
-         Clicking the link brings you to a form where only this field is shown:
-
-         .. figure:: ../../Images/manual_html_62e7bc5f.png
-            :alt: The Edit Page screen after clicking the link
-
-
 .. ###### END~OF~TABLE ######
 
 [page:TCEFORM.(table name).(field)/TCEFORM.(table name).(field).types.(type)]
