@@ -95,7 +95,7 @@ layoutRootPaths
          layoutRootPaths
 
    Data type
-         array of file paths with :ref:`stdWrap <stdwrap>`
+         array of file paths
 
    Description
          .. note::
@@ -153,7 +153,7 @@ partialRootPaths
          partialRootPaths
 
    Data type
-         array of file paths with :ref:`stdWrap <stdwrap>`
+         array of file paths
 
    Description
          .. note::
