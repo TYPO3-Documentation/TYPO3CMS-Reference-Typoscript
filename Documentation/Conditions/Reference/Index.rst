@@ -485,7 +485,7 @@ Comparison:
 Comparison with the hostname, which the website visitor uses.
 
 The values are compared to the fully qualified hostname, which is
-retrieved by PHP based on getenv('REMOTE\_ADDR').
+retrieved by PHP based on getenv('REMOTE\_HOST').
 
 Value is comma-list of domain names to match with. \*-wildcard allowed
 but cannot be part of a string, so it must match the full host name
