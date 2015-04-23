@@ -379,6 +379,8 @@ above).
          might be removed if the selector represents records. In that case only
          still existing records will be preserved.
 
+         The subkey ``icon`` will allow to add your own icons to new values.
+
          **Example:**
 
          .. code-block:: typoscript
@@ -388,6 +390,7 @@ above).
 				addItems.123 = New Page type!
 				# Creates yet a page type with "locallang" title:
 				addItems.124 = LLL:EXT:lang/locallang_tca.php:title
+				addItems.124.icon = EXT:myExt/icon.png
 			}
 
          This example extends the options for Page types with two new items:
@@ -482,9 +485,11 @@ above).
          string (localized)
 
    Description
-         *(applies to select-types only)*
+         *(applies to select-types, checkboxes and radiobuttons only)*
 
          This allows you to enter alternative labels for the items in the list.
+
+         For a single checkbox/radiobutton, use ``default``, for multiple checkboxes/radiobuttons, use an integer for their position (starting at 0)
 
          **Example:**
 
