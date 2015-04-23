@@ -443,6 +443,18 @@ Various options for the user affecting the core at various points.
 .. container:: table-row
 
    Property
+         popupWindowSize
+
+   Data type
+         string
+
+   Description
+         Defines the size of the element browser.
+
+
+.. container:: table-row
+
+   Property
          noThumbsInRTEimageSelect
 
    Data type
@@ -776,6 +788,27 @@ Various options for the user affecting the core at various points.
 
          .. code-block:: typoscript
 
+			options.pageTree.altElementBrowserMountPoints.append = 1
+
+.. container:: table-row
+
+   Property
+         pageTree.altElementBrowserMountPoints.append
+
+   Data type
+        boolean
+
+   Description
+         This option allows administrators to add additional mount points
+         in the RTE and the Wizard element browser instead of replacing
+         the configured database mount points of the user when using the
+         existing UserTSconfig option.
+
+         **Example**
+
+         .. code-block:: typoscript
+
+			options.pageTree.altElementBrowserMountPoints = 34,123
 			options.pageTree.altElementBrowserMountPoints.append = 1
 
 .. container:: table-row

@@ -49,6 +49,9 @@ conditions in TypoScript templates, which must be taken into account:
 - Note that conditions such as "PIDupinRootline" or "treeLevel" will
   apply correctly to pages that are being created but are not yet saved.
 
+- You *can* use custom conditions, though.
+  ``[BigCompanyName\TypoScriptLovePackage\MyCustomTypoScriptCondition = 7]``
+
 Furthermore the following condition is available **only** in
 TSconfig:
 
