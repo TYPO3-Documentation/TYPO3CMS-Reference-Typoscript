@@ -400,8 +400,14 @@ headerData
          ->CARRAY
 
    Description
-         Inserts content in the header-section. Could be JavaScripts, meta-
-         tags, other stylesheet references.
+         Inserts content in the head section of the website. Could e.g. be Meta 
+         tags.
+
+         While you can also use this to include stylesheet references or JavaScript,
+         you should better use :ref:`page.includeCSS <setup-page-includecss-array>`
+         and :ref:`page.includeJS <setup-page-includejs-array>` for such files.
+         Features like file concatenation and file compression will not work on files,
+         which are included using headerData.
 
          By default, gets inserted after all the style definitions.
 

@@ -532,7 +532,9 @@ compressCss
          boolean
 
    Description
-         If set, CSS files will be minified and compressed.
+         If set, CSS files referenced in page.includeCSS and the like will be
+         minified and compressed. Does not work on files, which are referenced
+         in page.headerData.
 
          Minification will remove all excess space. The more significant
          compression step (using gzip compression) requires
@@ -555,6 +557,9 @@ compressCss
                TYPO3\CMS\Core\Extension\ExtensionManager::extPath($_EXTKEY) .
                'Classes/class.tx_myext_cssCompressHandler.php:tx_myext_cssCompressHandler->compressCss';
 
+   Default
+         0
+
 
 
 .. _setup-config-compressjs:
@@ -573,7 +578,9 @@ compressJs
    Description
          Enabling this option together with
          $TYPO3\_CONF\_VARS['FE']['compressionLevel'] in the Install Tool
-         delivers Frontend JavaScript files using GZIP compression.
+         delivers Frontend JavaScript files referenced in page.includeJS and
+         the like using GZIP compression. Does not work on files, which are
+         referenced in page.headerData.
 
          This can significantly reduce file sizes of linked JavaScript files
          and thus decrease loading times.
@@ -597,6 +604,9 @@ compressJs
                TYPO3\CMS\Core\Extension\ExtensionManager::extPath($_EXTKEY) .
                'Classes/class.tx_myext_jsCompressHandler.php:tx_myext_jsCompressHandler->compressJs';
 
+   Default
+         0
+
 
 
 .. _setup-config-concatenatecss:
@@ -614,7 +624,10 @@ concatenateCss
 
    Description
          Setting config.concatenateCss merges Stylesheet files referenced in
-         the Frontend together.
+         the Frontend in page.includeCSS and the like together. Files are merged
+         only, if their media attribute has the same value, e.g. if it is "all"
+         for several files. Does not work on files, which are referenced in
+         page.headerData.
 
          **Example:** ::
 
@@ -629,6 +642,9 @@ concatenateCss
             $GLOBALS['TYPO3_CONF_VARS']['FE']['cssConcatenateHandler'] =
                TYPO3\CMS\Core\Extension\ExtensionManager::extPath($_EXTKEY) .
                'Classes/class.tx_myext_cssConcatenateHandler.php:tx_myext_cssConcatenateHandler->concatenateCss';
+
+   Default
+         0
 
 
 
@@ -647,7 +663,8 @@ concatenateJs
 
    Description
          Setting config.concatenateJs merges JavaScript files referenced in
-         the Frontend together.
+         the Frontend in page.includeJS and the like together. Does not work
+         on files, which are referenced in page.headerData.
 
          **Example:** ::
 
@@ -662,6 +679,9 @@ concatenateJs
             $GLOBALS['TYPO3_CONF_VARS']['FE']['jsConcatenateHandler'] =
                TYPO3\CMS\Core\Extension\ExtensionManager::extPath($_EXTKEY) .
                'Classes/class.tx_myext_jsConcatenateHandler.php:tx_myext_jsConcatenateHandler->concatenateJs';
+
+   Default
+         0
 
 
 
