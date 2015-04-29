@@ -820,7 +820,7 @@ debug
 
    Description
          If set any debug-information in the TypoScript code is output.
-         Currently this applies only to the menu objects.
+         This applies e.g. to menu objects and the parsetime output.
 
 
 
