@@ -114,9 +114,9 @@ layoutRootPaths
 
 			page.10 = FLUIDTEMPLATE
 			page.10.file = EXT:sitedesign/Resources/Private/Templates/Main.html
-			page.10.partialRootPaths {
-				10 = EXT:sitedesign/Resources/Private/Partials
-				20 = EXT:sitemodification/Resources/Private/Partials
+			page.10.layoutRootPaths {
+				10 = EXT:sitedesign/Resources/Private/Layouts
+				20 = EXT:sitemodification/Resources/Private/Layouts
 			}
 
          If property :ref:`layoutRootPath <cobj-fluidtemplate-properties-layoutrootpath>`
