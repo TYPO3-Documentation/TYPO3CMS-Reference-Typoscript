@@ -232,7 +232,9 @@ Always secure input from outside, for example with intval!
          includeRecordsWithoutDefaultTranslation
 
    Data type
-         boolean
+         Until TYPO3 7.2: boolean
+
+         Since TYPO3 7.3: boolean /:ref:`stdWrap <stdwrap>`
 
    Description
          (Since TYPO3 6.2) If content language overlay is activated and the option
