@@ -224,7 +224,7 @@ Always secure input from outside, for example with intval!
          includeRecordsWithoutDefaultTranslation
 
    Data type
-         boolean
+         boolean /:ref:`stdWrap <stdwrap>`
 
    Description
          If content language overlay is activated and the option "languageField" is set,
