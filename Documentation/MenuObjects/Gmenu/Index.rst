@@ -484,18 +484,6 @@ been for a long time.
 .. container:: table-row
 
    Property
-         wrapItemAndSub
-
-   Data type
-         wrap /:ref:`stdWrap <stdwrap>`
-
-   Description
-         Wraps the whole item and any submenu concatenated to it.
-
-
-.. container:: table-row
-
-   Property
          subst\_elementUid
 
    Data type
