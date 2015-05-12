@@ -2421,7 +2421,7 @@ sendCacheHeaders
 
          - Expires [expire time of page cache]
 
-         - Etag [md5 of content]
+         - ETag [md5 of content]
 
          - Cache-Control: max-age: [seconds til expiretime]
 
