@@ -588,6 +588,9 @@ includeJS.[array]
          The file definition must be a valid "resource" data type, otherwise
          nothing is inserted. This means that remote files cannot be referenced
          (i.e. using "http://..."), except by using the ".external" property.
+         
+         **Please note:** Having :ref:`config.moveJsFromHeaderToFooter <setup-config-movejsfromheadertofooter>`
+         activated moves all files to the footer.
 
          Each file has *optional properties*:
 
