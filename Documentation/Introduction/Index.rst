@@ -47,28 +47,14 @@ refer to the links below.
 
    **More information about changed properties**
 
-   You can find a list of changes for more recent TYPO3 versions here:
-
-   TYPO3 4.2: `http://wiki.typo3.org/Documentation\_changes\_in\_4.2
-   <http://wiki.typo3.org/Documentation_changes_in_4.2>`_
-
-   TYPO3 4.3: `http://wiki.typo3.org/Documentation\_changes\_in\_4.3
-   <http://wiki.typo3.org/Documentation_changes_in_4.3>`_
-
-   TYPO3 4.4 and 4.5:
-   `http://wiki.typo3.org/Documentation\_changes\_in\_4.4\_and\_4.5
-   <http://wiki.typo3.org/Documentation_changes_in_4.4_and_4.5>`_
-
-   TYPO3 4.6: `http://wiki.typo3.org/Documentation\_changes\_in\_4.6
-   <http://wiki.typo3.org/Documentation_changes_in_4.6>`_
-
-   TYPO3 4.7: `https://forge.typo3.org/versions/1454 <https://forge.typo3.org/versions/1454>`_
-
-   TYPO3 6.0: `https://forge.typo3.org/versions/1623 <https://forge.typo3.org/versions/1623>`_
-
-   TYPO3 6.1: `https://forge.typo3.org/versions/1960 <https://forge.typo3.org/versions/1960>`_
-
-   TYPO3 6.2: `https://forge.typo3.org/versions/1968 <https://forge.typo3.org/versions/1968>`_
+   - `Documentation changes in TYPO3 6.2 <https://forge.typo3.org/versions/1968>`__
+   - `Documentation changes in TYPO3 6.1 <https://forge.typo3.org/versions/1960>`__
+   - `Documentation changes in TYPO3 6.0 <https://forge.typo3.org/versions/1623>`__
+   - `Documentation changes in TYPO3 4.7 <https://forge.typo3.org/versions/1454>`__
+   - `Documentation changes in TYPO3 4.6 <http://wiki.typo3.org/Documentation_changes_in_4.6>`__
+   - `Documentation changes in TYPO3 4.4 and 4.5 <http://wiki.typo3.org/Documentation_changes_in_4.4_and_4.5>`__
+   - `Documentation changes in TYPO3 4.3 <http://wiki.typo3.org/Documentation_changes_in_4.3>`__
+   - `Documentation changes in TYPO3 4.2 <http://wiki.typo3.org/Documentation_changes_in_4.2>`__
 
 
 .. _credits:
