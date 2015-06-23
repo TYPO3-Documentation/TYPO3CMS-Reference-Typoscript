@@ -27,6 +27,87 @@ braces.
 Properties
 """"""""""
 
+.. _cobj-fluidtemplate-properties-templatename:
+
+templateName
+''''''''''''
+
+.. container:: table-row
+
+   Property
+         templateName
+
+   Data type
+         string /:ref:`stdWrap <stdwrap>`
+
+   Description
+         This name is used together with the set format to find the template in the given
+         templateRootPaths. Use this property to define a content object, which should be
+         used as template file. It is an alternative to ".file". If ".template" is set,
+         it takes precedence.
+
+         **Example:**
+
+         .. code-block:: typoscript
+
+			lib.stdContent = FLUIDTEMPLATE
+			lib.stdContent {
+				templateName = Default
+				layoutRootPaths {
+					10 = EXT:frontend/Resources/Private/Layouts
+					20 = EXT:sitemodification/Resources/Private/Layouts
+				}
+				partialRootPaths {
+					10 = EXT:frontend/Resources/Private/Partials
+					20 = EXT:sitemodification/Resources/Private/Partials
+				}
+				templateRootPaths {
+					10 = EXT:frontend/Resources/Private/Templates
+					20 = EXT:sitemodification/Resources/Private/Templates
+				}
+				variable {
+					foo = bar
+				}
+			}
+
+         **Example:**
+
+         .. code-block:: typoscript
+
+			lib.stdContent = FLUIDTEMPLATE
+			lib.stdContent {
+				templateName = TEXT
+				templateName.stdWrap {
+					cObject = TEXT
+					cObject {
+						data = levelfield:-2,backend_layout_next_level,slide
+						override.field = backend_layout
+						split {
+							token = frontend__
+							1.current = 1
+							1.wrap = |
+						}
+					}
+					ifEmpty = Default
+				}
+				layoutRootPaths {
+					10 = EXT:frontend/Resources/Private/Layouts
+					20 = EXT:sitemodification/Resources/Private/Layouts
+				}
+				partialRootPaths {
+					10 = EXT:frontend/Resources/Private/Partials
+					20 = EXT:sitemodification/Resources/Private/Partials
+				}
+				templateRootPaths {
+					10 = EXT:frontend/Resources/Private/Templates
+					20 = EXT:sitemodification/Resources/Private/Templates
+				}
+				variable {
+					foo = bar
+				}
+			}
+
+
 .. _cobj-fluidtemplate-properties-template:
 
 template
@@ -44,7 +125,7 @@ template
          Use this property to define a content object, which should be
          used as template file. It is an alternative to ".file"; if
          ".template" is set, it takes precedence. While any content object
-         can be used here, the cObject :ref:`FILE <cobj-file>` might be the 
+         can be used here, the cObject :ref:`FILE <cobj-file>` might be the
          usual choice.
 
 
@@ -64,6 +145,45 @@ file
    Description
          The fluid template file. It is an alternative to
          ".template" and is used only, if ".template" is not set.
+
+
+.. _cobj-fluidtemplate-properties-templaterootpaths:
+
+templateRootPaths
+'''''''''''''''''
+
+.. container:: table-row
+
+   Property
+         templateRootPaths
+
+   Data type
+         array of file paths with :ref:`stdWrap <stdwrap>`
+
+   Description
+         .. note::
+
+            Mind the plural -s in "templateRootPaths"!
+
+         Used to define several paths for templates, which will be tried
+         in reversed order (the paths are searched from bottom to top).
+         The first folder where the desired layout is found, is used.
+         If the array keys are numeric, they are first sorted and then
+         tried in reversed order.
+
+         Useful in combination with the :ref:`templateName <cobj-fluidtemplate-properties-templatename>`
+         property.
+
+         **Example:**
+
+         .. code-block:: typoscript
+
+			page.10 = FLUIDTEMPLATE
+			page.10.templateName = Default
+			page.10.templateRootPaths {
+				10 = EXT:sitedesign/Resources/Private/Layouts
+				20 = EXT:sitemodification/Resources/Private/Layouts
+			}
 
 
 .. _cobj-fluidtemplate-properties-layoutrootpath:
