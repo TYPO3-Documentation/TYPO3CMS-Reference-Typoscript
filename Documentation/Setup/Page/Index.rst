@@ -623,6 +623,11 @@ includeJS.[array]
          **.type:** Setting the MIME type of the script (default:
          text/javascript).
 
+         **.integrity:** (Since TYPO3 7.3) Adds the integrity attribute to the script
+         element to let browsers ensure subresource integrity. Useful in hosting scenarios
+         with resources externalized to CDN's. See `SRI <http://www.w3.org/TR/SRI/>`_ for
+         more details. Integrity hashes may be generated using `<https://srihash.org/>`_.
+
          **Example:** ::
 
             includeJS {
@@ -722,10 +727,16 @@ includeJSLibs.[array]
          included. Extensive usage might cause huge numbers of temporary files to be
          created. See ->if for details.
 
+         **.integrity:** (Since TYPO3 7.3) Adds the integrity attribute to the script
+         element to let browsers ensure subresource integrity. Useful in hosting scenarios
+         with resources externalized to CDN's. See `SRI <http://www.w3.org/TR/SRI/>`_ for
+         more details. Integrity hashes may be generated using `<https://srihash.org/>`_.
+
          **Example:** ::
 
             includeJSLibs.twitter = http://twitter.com/javascripts/blogger.js
             includeJSLibs.twitter.external = 1
+            includeJSLibs.twitter.integrity = sha256-C6CB9UYIS9UJeqinPHWTHVqh/E1uhG5Twh+Y5qFQmYg=
 
 
 
