@@ -35,5 +35,7 @@ case
 
          **lcfirst:** Convert the first letter of the string to lowercase.
 
+         **uppercamelcase:** Convert underscored ``upper_camel_case`` to ``UpperCamelCase``.
 
+         **lowercamelcase:** Covert underscored ``lower_camel_case`` to ``lowerCamelCase``.
 
