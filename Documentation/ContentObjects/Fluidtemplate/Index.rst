@@ -317,6 +317,49 @@ settings
          you can also reference objects or access constants as well.
 
 
+.. _cobj-fluidtemplate-properties-dataprocessing:
+
+dataProcessing
+''''''''''''''
+
+.. container:: table-row
+
+   Property
+         dataProcessing
+
+   Data type
+         *(array of class references by full namespace)*
+
+   Description
+         Add one or multiple processors to manipulate the ``$data`` variable
+         of the currently rendered content object, like tt_content or page.
+         The sub-property ``options`` can be used to add further parameter to the processor class.
+
+         **Example:**
+
+         .. code-block:: typoscript
+
+			my_custom_ctype = FLUIDTEMPLATE
+			my_custom_ctype {
+				templateRootPaths {
+					10 = EXT:your_extension_key/Resources/Private/Templates
+				}
+				templateName = CustomName
+				settings {
+					extraParam = 1
+				}
+				dataProcessing {
+					1 = Vendor\YourExtensionKey\DataProcessing\MyFirstCustomProcessor
+					2 = Vendor2\AnotherExtensionKey\DataProcessing\MySecondCustomProcessor
+					2 {
+						options {
+							myOption = SomeValue
+						}
+					}
+				}
+			}
+
+
 .. _cobj-fluidtemplate-properties-stdwrap:
 
 stdWrap
