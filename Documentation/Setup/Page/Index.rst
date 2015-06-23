@@ -148,6 +148,8 @@ bgImg
          Background image on the page. This is automatically added to the body-
          tag.
 
+         **Note:** This option is deprecated since TYPO3 CMS 7 and removed with TYPO3 CMS 8.
+
 
 
 .. _setup-page-bodytag:
