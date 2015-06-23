@@ -317,22 +317,6 @@ This table shows the keys for both defaults and override values:
 .. container:: table-row
 
    Property
-         classicPageEditMode
-
-   Data type
-         boolean
-
-   Description
-         Setting this option will not open the Web > Page module but rather load
-         the content elements (normal column/default language) together with
-         the page header in one big form when a page is edited (clicking a page
-         icon in the page tree). This simulates the old behaviour in Classic
-         Backend
-
-
-.. container:: table-row
-
-   Property
          hideSubmoduleIcons
 
    Data type
