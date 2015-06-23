@@ -1063,11 +1063,15 @@ variable "M" equals 2 or both::
 
    [globalVar = GP:L = 8, GP:M = 2]
 
-This will only check POST parameters:
+Similar to GP, but with array parts of tx_demo from GET and POST merged before matching::
+
+   [globalVar = GPmerged:tx_demo|foo = 1]
+
+This will only check POST parameters::
 
    [globalVar = _POST|tx_myext_pi1|showUid > 0]
 
-This will only check GET parameters:
+This will only check GET parameters::
 
    [globalVar = _GET|tx_myext_pi1|showUid > 0]
 
