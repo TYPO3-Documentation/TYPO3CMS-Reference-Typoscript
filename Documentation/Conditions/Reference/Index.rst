@@ -746,7 +746,7 @@ Comparison:
 
 Day of year, 0-364 (or 365 in leap years). That this condition begins
 with 0 for the first day of the year means that e.g. [dayofyear =
-7]will be true on the 6 :sup:`th` of January.
+5] will be true on the 6 :sup:`th` of January.
 
 Apart from that this condition uses the same way of comparison as
 hour.
