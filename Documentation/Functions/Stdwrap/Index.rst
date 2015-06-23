@@ -910,6 +910,42 @@ strftime
          of `strftime() <http://www.php.net/strftime>`_.
 
 
+.. _stdwrap-strtotime:
+
+strtotime
+'''''''''
+
+.. container:: table-row
+
+   Property
+         strtotime
+
+   Data type
+         string
+
+   Description
+         Allows conversion of formatted dates to timestamp, e.g. to perform date calculations.
+
+         Possible values are ``1`` or any time string valid as first argument of the PHP ``strtotime()`` function.
+
+         **Example:** ::
+
+            date_as_timestamp = TEXT
+            date_as_timestamp {
+               value = 2015-04-15
+               strtotime = 1
+            }
+
+         **Example:** ::
+
+            next_weekday = TEXT
+            next_weekday {
+               data = GP:selected_date
+               strtotime = + 2 weekdays
+               strftime = %Y-%m-%d
+            }
+
+
 .. _stdwrap-age:
 
 age
