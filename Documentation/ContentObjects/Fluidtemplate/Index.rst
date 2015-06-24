@@ -16,11 +16,6 @@ regular "marker"-based :ref:`TEMPLATE <cobj-template>` object. However, it does 
 markers or subparts, but allows Fluid-style variables with curly
 braces.
 
-.. note::
-
-   The system extensions "fluid" and "extbase" need to be installed for this to
-   work.
-
 
 .. _cobj-fluidtemplate-properties:
 
