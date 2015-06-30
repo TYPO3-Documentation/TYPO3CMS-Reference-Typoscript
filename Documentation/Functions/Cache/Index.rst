@@ -28,10 +28,6 @@ is evaluated twice:
   set. The configuration options cache.tags and cache.lifetime allow to
   control the caching.
 
-**Note:** This feature relies on the caching framework, which needs
-to be enabled for this feature to work. Otherwise content will not be
-cached, but rendered on every call.
-
 
 .. ### BEGIN~OF~TABLE ###
 
