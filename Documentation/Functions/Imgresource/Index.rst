@@ -26,8 +26,9 @@ imgResource.
          imageExtension /:ref:`stdWrap <stdwrap>`
 
    Description
-         Allowed file extensions for images. "web" is the class of
-         web-enabled image file types (defined in
+         Target file extension for the processed image. The option "web" checks if the file extension
+         is one of gif, jpg, jpeg, or png and if not it will find the best target extension.
+         The target extension must be in the list of file extensions perceived as images (defined in
          $TYPO3_CONF_VARS['GFX']['imagefile_ext'] in the Install Tool).
 
    Default
