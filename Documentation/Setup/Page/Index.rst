@@ -48,7 +48,6 @@ Properties
    Property                       Data Type                         :ref:`stdwrap`         Default
    ============================== ================================= ====================== ========================
    `1,2,3,4...`_                  cObject
-   `adminPanelStyles`_            :ref:`data-type-boolean`
    `bgImg`_                       imgResource
    `bodyTag`_                     <tag>                                                    <body>
    `bodyTagAdd`_                  :ref:`data-type-string`
@@ -111,23 +110,6 @@ Property details
    Description
          These properties can be used to define any number of objects,
          just like you can do with a :ref:`COA content object <cobj-coa>`.
-
-
-.. _setup-page-adminpanelstyles:
-
-adminPanelStyles
-""""""""""""""""
-
-.. container:: table-row
-
-   Property
-         adminPanelStyles
-
-   Data type
-         boolean
-
-   Description
-         Will include CSS styles for the Admin Panel.
 
 
 
