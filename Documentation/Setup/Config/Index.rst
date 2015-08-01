@@ -200,15 +200,15 @@ absRefPrefix
 
          1. Prefixing all links with a "/" results in absolute link paths::
 
-            config.absRefPrefix = /
+              config.absRefPrefix = /
 
          2. Prefixing all links with the path to a subdirectory::
 
-            config.absRefPrefix = /some-subsite/
+              config.absRefPrefix = /some-subsite/
 
          3. Prefixing all links with a URI scheme::
 
-            config.absRefPrefix = http://example.com/
+              config.absRefPrefix = http://example.com/
 
          **Note:** Using an URI in absRefPrefix will require additional conditions
          if you use different domains for your deployment stages in CI environments.
