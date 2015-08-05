@@ -57,6 +57,7 @@ Properties
    `disablePageExternalUrl`_                             :ref:`data-type-boolean`
    `disablePrefixComment`_                               :ref:`data-type-boolean`
    `disablePreviewNotification`_                         :ref:`data-type-boolean`           0
+   `disableLanguageHeader`_                              :ref:`data-type-boolean`
    `doctype`_                                            :ref:`data-type-string`
    `doctypeSwitch`_                                      boolean / string
    `enableContentLengthHeader`_                          :ref:`data-type-boolean`           1
@@ -1007,6 +1008,22 @@ disablePreviewNotification
    Default
          0
 
+.. _disableLanguageHeader:
+
+disableLanguageHeader
+"""""""""""""""""""""
+
+.. container:: table-row
+
+   Property
+         disableLanguageHeader
+
+   Data type
+         boolean
+
+   Description
+         if set, disables to send the header "Content-language: XX" where "XX" is the iso
+         code of the sys_language_isocode
 
 .. _setup-config-doctype:
 
