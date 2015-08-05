@@ -843,19 +843,12 @@ javascriptLibs
                # (string, default: jQuery)
                jQuery.noConflict.namespace = ownNamespace
 
-                 # include ExtCore
-               ExtCore = 1
-                 # include ExtCore debug file (uncompressed)
-               ExtCore.debug = 1
-
                  # includes ExtJS
                ExtJs = 1
                  # include ext-all.css
                ExtJs.css = 1
                  # include default theme
                ExtJs.theme = 1
-                # load specific adapter (jquery|yui)
-               ExtJs.adapter = …
                  # initialize QuickTips
                ExtJs.quickTips = 1
                  # includes ExtJS debug file (uncompressed)
@@ -869,9 +862,6 @@ javascriptLibs
                SVG.forceFlash = 1
             }
 
-         **Note:** If both ExtCore and ExtJS are requested, the only superset
-         ExtJS will be loaded. This will also affect any options set. They will
-         only come from ExtJS.
 
 
 
