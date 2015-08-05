@@ -211,7 +211,7 @@ imgResource.
          treatIdAsReference
 
    Data type
-         boolean
+         boolean /:ref:`stdWrap <stdwrap>`
 
    Description
          If set, given UIDs are interpreted as UIDs to sys_file_reference
