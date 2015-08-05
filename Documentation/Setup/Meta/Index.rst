@@ -85,6 +85,56 @@ Property details
          This results in <meta http-equiv="X-UA-Compatible"
          content="IE=edge,chrome=1">.
 
+         Meta tags with a different attribute name are supported like the Open Graph meta tags.
+
+         **Example:** ::
+
+            page {
+               meta {
+                  X-UA-Compatible = IE=edge,chrome=1
+                  X-UA-Compatible.attribute = http-equiv
+
+                  keywords = TYPO3
+
+                  og:site_name = TYPO3
+                  og:site_name.attribute = property
+
+                  description = Inspiring people to share Normal
+
+                  dc\.description = Inspiring people to share [DC tags]
+
+                  og:description = Inspiring people to share [OpenGraph]
+                  og:description.attribute = property
+
+                  og:locale = en_GB
+                  og:locale.attribute = property
+
+                  og:locale:alternate {
+                     attribute = property
+                     value {
+                        1 = fr_FR
+                        2 = de_DE
+                     }
+                  }
+
+                  refresh = 5; url=http://example.com/
+                  refresh.attribute = http-equiv
+               }
+            }
+
+         Thy can be used like ``property`` used for OG tags in the example.
+         You may also supply multiple values for one name, which results in
+         multiple meta tags with the same name to be rendered.
+
+         **Result for og:description:** ::
+
+            <meta property="og:description" content="Inspiring people to share [OpenGraph]" />
+
+         See http://ogp.me/ for more information about the Open Graph
+         protocol and its properties.
+
+
+
 
 
 
