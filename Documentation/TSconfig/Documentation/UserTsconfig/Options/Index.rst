@@ -178,24 +178,6 @@ Various options for the user affecting the core at various points.
          3
 
 
-.. container:: table-row
-
-   Property
-         enableShowPalettes
-
-   Data type
-         boolean
-
-   Description
-         .. figure:: ../../Images/manual_html_2f9c146a.png
-            :alt: Shown secondary options (palettes) in the content editing forms
-
-         If true, the checkbox "Show secondary options (palettes)" is
-         displayed in content editing forms.
-
-   Default
-         1
-
 
 .. container:: table-row
 
