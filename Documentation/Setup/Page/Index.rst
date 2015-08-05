@@ -722,37 +722,6 @@ includeJSLibs.[array]
 
 
 
-.. _setup-page-includelibs:
-
-includeLibs
-"""""""""""
-
-.. container:: table-row
-
-   Property
-         includeLibs
-
-   Data type
-         *(array of strings)*
-
-   Description
-         With this you may include PHP files. This does the same as
-         "includeLibrary" in ->CONFIG but this can include more than one file.
-         These files are included *after* the file of includeLibrary.
-
-         **Note:**
-
-         The top-level object "includeLibs" and the scripts defined with this
-         property is added to each other. Script-keys (that is the "array of
-         strings"-value, like below "tx\_myext") from this property of the page
-         overrides any scripts-keys from the top-level "includeLibs" property!
-
-         The script filenames are of the data type "resource".
-
-         **Example:** ::
-
-            includeLibs.tx_myext = lib_filename.php
-
 
 
 .. _setup-page-inlinelanguagelabel:
