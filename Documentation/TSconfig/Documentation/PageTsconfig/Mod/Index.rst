@@ -547,14 +547,14 @@ Shared options for modules (mod.SHARED)
             }
 
          .. tip::
-         
+
             You can specify "multiple" for the multi-language flag.
             In general: Use the "Select flag icon" selector of a language
             record in the backend to find out what names are available.
 
             .. figure:: ../../Images/SelectFlagIcon.png
-            
-               The flag selector of a language record in the backend - 
+
+               The flag selector of a language record in the backend -
                a handy way to find out what flag names are available
 
          .. note::
@@ -682,26 +682,6 @@ Web > Page (mod.web\_layout)
 
    Default
          0
-
-
-.. container:: table-row
-
-   Property
-         disableBigButtons
-
-   Data type
-         boolean
-
-   Description
-         Disables the large buttons in top of the Columns view.
-
-         These are the buttons that are hidden with this option:
-
-         .. figure:: ../../Images/manual_html_7e6b718a.png
-            :alt: Large buttons in top of the columns view
-
-   Default
-         1
 
 
 .. container:: table-row
