@@ -384,7 +384,7 @@ headerData
          ->CARRAY
 
    Description
-         Inserts content in the head section of the website. Could e.g. be Meta 
+         Inserts content in the head section of the website. Could e.g. be Meta
          tags.
 
          While you can also use this to include stylesheet references or JavaScript,
@@ -874,14 +874,6 @@ javascriptLibs
                # (string, default: jQuery)
                jQuery.noConflict.namespace = ownNamespace
 
-                 # include prototype
-               Prototype = 1
-
-                 # include Scriptaculous
-               Scriptaculous = 1
-                 # adds modules dragdrop and controls to Scriptaculous
-               Scriptaculous.modules = dragdrop,controls
-
                  # include ExtCore
                ExtCore = 1
                  # include ExtCore debug file (uncompressed)
@@ -893,7 +885,7 @@ javascriptLibs
                ExtJs.css = 1
                  # include default theme
                ExtJs.theme = 1
-                # load specific adapter (jquery|prototype|yui)
+                # load specific adapter (jquery|yui)
                ExtJs.adapter = …
                  # initialize QuickTips
                ExtJs.quickTips = 1
