@@ -122,6 +122,28 @@ the register key SPLIT\_COUNT.
          Defines a wrap for each item.
 
 
+.. container:: table-row
+
+   Property
+         returnCount
+
+   Data type
+         boolean /:ref:`stdWrap <stdwrap>`
+
+   Description
+         Counts all elements resulting from the split.
+
+         **Example:** ::
+
+            # returns 9
+            1 = TEXT
+            1 {
+                value = x,y,z,1,2,3,a,b,c
+                split.token = ,
+                split.returnCount = 1
+            }
+
+
 .. ###### END~OF~TABLE ######
 
 [tsref:->split]

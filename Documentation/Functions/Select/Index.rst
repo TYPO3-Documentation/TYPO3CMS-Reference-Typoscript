@@ -80,7 +80,6 @@ Always secure input from outside, for example with intval!
                 where.intval = 1
                 where.wrap = sys_category_record_mm.uid_foreign=|
                 orderBy = sys_category_record_mm.sorting_foreign
-                languageField = sys_category.sys_language_uid
               }
             }
 
@@ -211,12 +210,10 @@ Always secure input from outside, for example with intval!
          string /:ref:`stdWrap <stdwrap>`
 
    Description
-         If set, this points to the field in the record which holds a reference
-         to a record in sys\_language table. And if set, the records returned
-         by the select-function will be selected only if the value of this
-         field matches the $GLOBALS['TSFE']->sys\_language\_uid (which is set
-         by the option config.sys\_language\_uid).
+         By default all records that have language-relevant information in the
+         TCA "ctrl"-section are translated on translated pages.
 
+         This can be disabled by setting languageField = 0.
 
 .. container:: table-row
 
@@ -227,7 +224,7 @@ Always secure input from outside, for example with intval!
          boolean /:ref:`stdWrap <stdwrap>`
 
    Description
-         If content language overlay is activated and the option "languageField" is set,
+         If content language overlay is activated and the option "languageField" is not disabled,
          includeRecordsWithoutDefaultTranslation allows to additionally fetch records,
          which do **not** have a parent in the default language.
 
