@@ -384,7 +384,7 @@ headerData
          ->CARRAY
 
    Description
-         Inserts content in the head section of the website. Could e.g. be Meta 
+         Inserts content in the head section of the website. Could e.g. be Meta
          tags.
 
          While you can also use this to include stylesheet references or JavaScript,
@@ -722,37 +722,6 @@ includeJSLibs.[array]
 
 
 
-.. _setup-page-includelibs:
-
-includeLibs
-"""""""""""
-
-.. container:: table-row
-
-   Property
-         includeLibs
-
-   Data type
-         *(array of strings)*
-
-   Description
-         With this you may include PHP files. This does the same as
-         "includeLibrary" in ->CONFIG but this can include more than one file.
-         These files are included *after* the file of includeLibrary.
-
-         **Note:**
-
-         The top-level object "includeLibs" and the scripts defined with this
-         property is added to each other. Script-keys (that is the "array of
-         strings"-value, like below "tx\_myext") from this property of the page
-         overrides any scripts-keys from the top-level "includeLibs" property!
-
-         The script filenames are of the data type "resource".
-
-         **Example:** ::
-
-            includeLibs.tx_myext = lib_filename.php
-
 
 
 .. _setup-page-inlinelanguagelabel:
@@ -874,27 +843,12 @@ javascriptLibs
                # (string, default: jQuery)
                jQuery.noConflict.namespace = ownNamespace
 
-                 # include prototype
-               Prototype = 1
-
-                 # include Scriptaculous
-               Scriptaculous = 1
-                 # adds modules dragdrop and controls to Scriptaculous
-               Scriptaculous.modules = dragdrop,controls
-
-                 # include ExtCore
-               ExtCore = 1
-                 # include ExtCore debug file (uncompressed)
-               ExtCore.debug = 1
-
                  # includes ExtJS
                ExtJs = 1
                  # include ext-all.css
                ExtJs.css = 1
                  # include default theme
                ExtJs.theme = 1
-                # load specific adapter (jquery|prototype|yui)
-               ExtJs.adapter = …
                  # initialize QuickTips
                ExtJs.quickTips = 1
                  # includes ExtJS debug file (uncompressed)
@@ -908,9 +862,6 @@ javascriptLibs
                SVG.forceFlash = 1
             }
 
-         **Note:** If both ExtCore and ExtJS are requested, the only superset
-         ExtJS will be loaded. This will also affect any options set. They will
-         only come from ExtJS.
 
 
 
