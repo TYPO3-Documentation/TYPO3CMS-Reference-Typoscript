@@ -100,3 +100,24 @@ can call it like this to set default configuration:
 
 This API function simply adds the content to
 :code:`$TYPO3_CONF_VARS['BE']['defaultPageTSconfig']`.
+
+
+
+Register static Page TSconfig files
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Register PageTS config files in :file:`Configuration/TCA/Overrides/pages.php` of any extension,
+which will be shown in the page properties (the same way as TypoScript static templates are included).
+
+.. note::
+
+   The included files from the pages in the rootline are included after the default
+   page TSconfig and before the normal TSconfig from the pages in the rootline.
+
+.. code-block:: php
+
+	\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::registerPageTSConfigFile(
+		'extension_name',
+		'Configuration/PageTS/myPageTSconfigFile.txt',
+		'My special config'
+	);
