@@ -72,7 +72,6 @@ Properties
    `htmlTag\_langKey`_                                   :ref:`data-type-string`            en
    `htmlTag\_setParams`_                                 :ref:`data-type-string`
    `htmlTag\_stdWrap`_                                   ->:ref:`stdwrap`
-   `includeLibrary`_                                     :ref:`data-type-resource`
    `index\_descrLgd`_                                    :ref:`data-type-integer`           200
    `index\_enable`_                                      :ref:`data-type-boolean`
    `index\_externals`_                                   :ref:`data-type-boolean`
@@ -1415,24 +1414,6 @@ htmlTag\_stdWrap
    Description
          Modify the whole <html> tag with stdWrap functionality. This can be
          used to extend or override this tag.
-
-
-
-.. _setup-config-includelibrary:
-
-includeLibrary
-""""""""""""""
-
-.. container:: table-row
-
-   Property
-         includeLibrary
-
-   Data type
-         resource
-
-   Description
-         This includes a PHP file.
 
 
 
