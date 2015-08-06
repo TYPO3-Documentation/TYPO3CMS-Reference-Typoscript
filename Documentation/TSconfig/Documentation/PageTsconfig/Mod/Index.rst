@@ -1286,6 +1286,30 @@ Web > List (mod.web\_list)
          **show** = Shows page/content element in frontend
 
 
+.. container:: table-row
+
+   Property
+         tableDisplayOrder.[*table name*]
+
+   Data type
+         array
+
+   Description
+         Flexible configuration of the order in which tables are displayed.
+
+         The keywords ``before`` and ``after`` can be used to specify an order relative to other table names.
+
+         **Example:**
+
+         .. code-block:: typoscript
+
+			mod.web_list.tableDisplayOrder.<tableName> {
+			  before = <tableA>, <tableB>, ...
+			  after = <tableA>, <tableB>, ...
+			}
+
+
+
 .. ###### END~OF~TABLE ######
 
 [page:mod.web\_list; beuser:mod.web\_list]
