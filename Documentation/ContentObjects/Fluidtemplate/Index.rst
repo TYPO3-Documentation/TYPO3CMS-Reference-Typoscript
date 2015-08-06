@@ -474,12 +474,18 @@ dataProcessing
 				}
 			}
 
-         There are two DataProcessors available to allow flexible processing for comma-separated
+         There are three DataProcessors available to allow flexible processing e.g. for comma-separated
          values. To use e.g. with the FLUIDTEMPLATE content object.
 
-         - The SplitProcessor allows to split values separated with a delimiter inside a single database field into an array to loop over it.
+         - The SplitProcessor allows to split values separated with a delimiter inside a single database
+           field into an array to loop over it.
 
-         - The CommaSeparatedValueProcessor allows to split values into a two-dimensional array used for CSV files or tt_content records of CType "table".
+         - The CommaSeparatedValueProcessor allows to split values into a two-dimensional array used for
+           CSV files or tt_content records of CType "table".
+
+         - The FilesProcessor resolves File References, Files, or Files inside a folder or collection to
+           be used for output in the Frontend. A FLUIDTEMPLATE can then simply iterate over processed data
+           automatically
 
          **Using the SplitProcessor the following scenario is possible**
 
@@ -535,6 +541,63 @@ dataProcessing
 					<tr>
 				</f:for>
 			</table>
+
+         **Using the FilesProcessor the following scenario is possible**
+
+         .. code-block:: typoscript
+
+			tt_content.image.20 = FLUIDTEMPLATE
+			tt_content.image.20 {
+				file = EXT:myextension/Resources/Private/Templates/ContentObjects/Image.html
+
+				dataProcessing.10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+				dataProcessing.10 {
+					# the field name where relations are set
+					# + stdWrap
+					references.fieldName = image
+
+					# the table name where relations are put, defaults to the currently selected record from $cObj->getTable()
+					# + stdWrap
+					references.table = tt_content
+
+					# A list of sys_file UID records
+					# + stdWrap
+					files = 21,42
+
+					# A list of File Collection UID records
+					# + stdWrap
+					collections = 13,14
+
+					# A list of FAL Folder identifiers and files fetched recursive from all folders
+					# + stdWrap
+					folders = 1:introduction/images/,1:introduction/posters/
+					folders.recursive = 1
+
+					# Property of which the files should be sorted after they have been accumulated
+					# can be any property of sys_file, sys_file_metadata
+					# + stdWrap
+					sorting = description
+
+					# Can be "ascending", "descending" or "random", defaults to "ascending" if none given
+					# + stdWrap
+					sorting.direction = descending
+
+					# The target variable to be handed to the ContentObject again, can be used
+					# in Fluid e.g. to iterate over the objects. defaults to "files" when not defined
+					# + stdWrap
+					as = myfiles
+				}
+			}
+
+         In the Fluid template then iterate over the files
+
+         .. code-block:: html
+
+			<ul>
+			<f:for each="{myfiles}" as="file">
+				<li><a href="{file.publicUrl}">{file.name}</a></li>
+			</f:for>
+			</ul>
 
 .. _cobj-fluidtemplate-properties-stdwrap:
 
