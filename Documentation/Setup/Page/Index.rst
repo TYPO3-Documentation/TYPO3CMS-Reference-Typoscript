@@ -67,7 +67,6 @@ Properties
    `includeJSFooter.[array]`_     :ref:`data-type-resource`
    `includeJSFooterlibs.[array]`_ :ref:`data-type-resource`
    `includeJSLibs.[array]`_       :ref:`data-type-resource`
-   `includeLibs`_                 *(array of strings)*
    `inlineLanguageLabel`_         *(array of strings)*
    `inlineSettings`_              *(array of strings)*
    `insertClassesFromRTE`_        :ref:`data-type-boolean`
