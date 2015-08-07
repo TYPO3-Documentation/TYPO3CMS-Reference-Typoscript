@@ -1356,11 +1356,12 @@ Example:
          edge
 
    Data type
-         positive integer (0-99)
+         positive integer
 
    Description
-         Creates rounded edges.
-
+         Detect edges within an image. This is a grey-scale operator, so it is 
+         applied to each of the three color channels separately. The value defines
+         the radius for the edge detection.
 
 .. container:: table-row
 
