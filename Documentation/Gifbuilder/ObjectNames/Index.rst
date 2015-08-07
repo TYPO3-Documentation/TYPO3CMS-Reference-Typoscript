@@ -1278,7 +1278,12 @@ Example:
          positive integer (0-99)
 
    Description
-         Color reduction.
+         Color reduction, 'burning' the brightest colors black. The
+         brighter the color, the darker the solarized color is. This
+         happens in photography when chemical film is over exposed.
+
+         The value sets the grayscale level above which the color is
+         negated.
 
 
 .. container:: table-row
