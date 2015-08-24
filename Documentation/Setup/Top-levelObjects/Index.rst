@@ -30,7 +30,6 @@ Properties
    `config`_                ->CONFIG
    `constants`_             ->CONSTANTS
    `FEData`_                *->FE\_DATA*
-   `includeLibs`_           *Array of strings*
    `Other reserved TLO's:`_ *(whatever)*
    `resources`_             readonly
    `sitetitle`_             readonly
@@ -166,26 +165,6 @@ FEData
          Here you can configure how data submitted from the front-end should be
          processed, which script and so on.
 
-
-
-.. _top-level-objects-includelibs:
-
-includeLibs
-"""""""""""
-
-.. container:: table-row
-
-   Property
-         includeLibs
-
-   Data type
-         *Array of strings*
-
-   Description
-         With this you can include PHP files with function libraries for use in
-         your include script in TYPO3.
-
-         Please see the PAGE object, which has the same property.
 
 
 
