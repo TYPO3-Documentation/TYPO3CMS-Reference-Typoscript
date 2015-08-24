@@ -109,13 +109,13 @@ Examples:
 This example shows how to include your own PHP script and how to use it
 from TypoScript. Use this TypoScript configuration::
 
-   # Include the PHP file with our custom code
-   includeLibs.time = fileadmin/example_time.php
 
    page = PAGE
    page.10 = USER_INT
    page.10 {
      userFunc = user_printTime
+     # Include the PHP file with our custom code
+     includeLibs = fileadmin/example_time.php
    }
 
 The file fileadmin/example_time.php might amongst other things
@@ -145,11 +145,11 @@ order. To do that we use the following TypoScript::
 
    page = PAGE
    page.typeNum = 0
-   # Include the PHP file with our custom code
-   includeLibs.listRecords = fileadmin/example_listRecords.php
 
    page.30 = USER
    page.30 {
+     # Include the PHP file with our custom code
+     includeLibs = fileadmin/example_listRecords.php
      userFunc = user_various->listContentRecordsOnPage
      # reverseOrder is a boolean variable (see PHP code below)
      reverseOrder = 1
