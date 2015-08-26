@@ -445,7 +445,7 @@ history.maxAgeDays
          The number of days elements are in the history at most. Takes
          precedence over keepEntries.
 
-         Default is 7 days. Range 0-200. Zero turns the maxAgeDays off.
+         Default is 30 days. Range 0-365. Zero turns the maxAgeDays off.
 
          .. note::
 
