@@ -537,7 +537,7 @@ above).
 
          .. code-block:: typoscript
 
-			TCEFORM.tx_myext.myfield.PAGE_TSCONFIG_ID = 22
+			TCEFORM.tx_myext_table.myfield.PAGE_TSCONFIG_ID = 22
 
          This example might be used for a record in an extension. It refers to
          a table called "tx\_myext" and the field "myfield". Here the marker
@@ -568,7 +568,7 @@ above).
 
          .. code-block:: typoscript
 
-			TCEFORM.tx_myext.myfield.PAGE_TSCONFIG_IDLIST = 20,21,22
+			TCEFORM.tx_myext_table.myfield.PAGE_TSCONFIG_IDLIST = 20,21,22
 
          This example might be used for a record in an extension. It refers to
          a table called "tx\_myext" and the field "myfield". Here the marker
@@ -599,7 +599,7 @@ above).
 
          .. code-block:: typoscript
 
-			TCEFORM.tx_myext.myfield.PAGE_TSCONFIG_STR = %hello%
+			TCEFORM.tx_myext_table.myfield.PAGE_TSCONFIG_STR = %hello%
 
          This example might be used for a record in an extension. It refers to
          a table called "tx\_myext" and the field "myfield". Here the marker
