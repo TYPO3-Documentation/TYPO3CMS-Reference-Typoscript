@@ -1,10 +1,5 @@
-﻿.. ==================================================
-.. FOR YOUR INFORMATION
-.. --------------------------------------------------
-.. -*- coding: utf-8 -*- with BOM.
-
+﻿
 .. include:: ../../Includes.txt
-
 
 .. _config:
 
@@ -166,7 +161,7 @@ absRefPrefix
          If this value is set, then all relative links in TypoScript are
          prepended with this string.
 
-         **Examples:**
+         Examples:
 
          1. Prefixing all links with a "/" results in absolute link paths::
 
@@ -223,24 +218,22 @@ additionalHeaders
 
          **httpResponseCode:** Optional. HTTP status code as an integer.
 
-         **Example:**
+         Example::
 
-         .. code-block:: typoscript
+            config.additionalHeaders {
+               10 {
+                  # The header string
+                  header = WWW-Authenticate: Negotiate
 
-           config.additionalHeaders {
-              10 {
-                 # The header string
-                 header = WWW-Authenticate: Negotiate
+                  # Do not replace previous headers with the same name.
+                  replace = 0
 
-                 # Do not replace previous headers with the same name.
-                 replace = 0
-
-                 # Force a 401 HTTP response code
-                 httpResponseCode = 401
-              }
-              # Always set cache headers to private, overwriting the default TYPO3 Cache-control header
-              20.header = Cache-control: Private
-           }
+                  # Force a 401 HTTP response code
+                  httpResponseCode = 401
+               }
+               # Always set cache headers to private, overwriting the default TYPO3 Cache-control header
+               20.header = Cache-control: Private
+            }
 
          By default TYPO3 sends a "Content-Type" header with the defined
          encoding, unless this is disabled using config.disableCharsetHeader
@@ -288,7 +281,7 @@ ATagParams
    Description
          Additional parameters to all links in TYPO3 (excluding menu-links)
 
-         **Example:**
+         Example:
 
          To blur links, insert::
 
@@ -316,7 +309,7 @@ baseURL
 
          If this is set, make sure that "prefixLocalAnchors" is set to "all".
 
-         **Example:** ::
+         Example::
 
             config.baseURL = http://typo3.org/sub_dir/
 
@@ -361,7 +354,7 @@ beLoginLinkIPList\_login
    Description
          HTML code wrapped with the login link, see 'beLoginLinkIPList'
 
-         **Example:** ::
+         Example::
 
             <hr /><b>LOGIN</b>
 
@@ -419,17 +412,17 @@ cache
          You can use the keyword "all" instead of a <page-id> to consider
          records for the cache lifetime of all pages.
 
-         **Examples:** ::
+         Examples::
 
             config.cache.10 = fe_users:2
 
          This includes the fe\_users records on page 2 in the cache lifetime
-         calculation for page 10. ::
+         calculation for page 10::
 
             config.cache.10 = fe_users:2,tt_news:11
 
          This includes records from multiple sources, namely the fe\_users
-         records on page 2 and the tt\_news records on page 11. ::
+         records on page 2 and the tt\_news records on page 11::
 
             config.cache.all = fe_users:2
 
@@ -507,7 +500,7 @@ compensateFieldWidth
          to display the same size form fields, you could use a value of
          approx "0.6" for netscape-browsers.
 
-         **Example:** ::
+         Example::
 
             [browser = netscape]
               config.compensateFieldWidth = 0.6
@@ -543,7 +536,7 @@ compressCss
          related compressionLevel options in .htaccess, as otherwise the
          compressed files will not be readable by the user agent.
 
-         **Example:** ::
+         Example::
 
             config.compressCss = 1
 
@@ -551,7 +544,7 @@ compressCss
          also register your own one using
          $GLOBALS['TYPO3\_CONF\_VARS']['FE']['cssCompressHandler'].
 
-         **Example:** ::
+         Example::
 
             $GLOBALS['TYPO3_CONF_VARS']['FE']['cssCompressHandler'] =
                TYPO3\CMS\Core\Extension\ExtensionManager::extPath($_EXTKEY) .
@@ -590,7 +583,7 @@ compressJs
          description of $TYPO3\_CONF\_VARS['FE']['compressionLevel'] in the
          Install Tool.
 
-         **Example:** ::
+         Example::
 
             config.compressJs = 1
 
@@ -598,7 +591,7 @@ compressJs
          also register your own one using
          $GLOBALS['TYPO3\_CONF\_VARS']['FE']['jsCompressHandler'].
 
-         **Example:** ::
+         Example::
 
             $GLOBALS['TYPO3_CONF_VARS']['FE']['jsCompressHandler'] =
                TYPO3\CMS\Core\Extension\ExtensionManager::extPath($_EXTKEY) .
@@ -629,7 +622,7 @@ concatenateCss
          for several files. Does not work on files, which are referenced in
          page.headerData.
 
-         **Example:** ::
+         Example::
 
             config.concatenateCss = 1
 
@@ -637,7 +630,7 @@ concatenateCss
          can also register your own one using
          $GLOBALS['TYPO3\_CONF\_VARS']['FE']['cssConcatenateHandler'].
 
-         **Example:** ::
+         Example::
 
             $GLOBALS['TYPO3_CONF_VARS']['FE']['cssConcatenateHandler'] =
                TYPO3\CMS\Core\Extension\ExtensionManager::extPath($_EXTKEY) .
@@ -666,7 +659,7 @@ concatenateJs
          the Frontend in page.includeJS and the like together. Does not work
          on files, which are referenced in page.headerData.
 
-         **Example:** ::
+         Example::
 
             config.concatenateJs = 1
 
@@ -674,7 +667,7 @@ concatenateJs
          can also register your own one using
          $GLOBALS['TYPO3\_CONF\_VARS']['FE']['jsConcatenateHandler'].
 
-         **Example:** ::
+         Example::
 
             $GLOBALS['TYPO3_CONF_VARS']['FE']['jsConcatenateHandler'] =
                TYPO3\CMS\Core\Extension\ExtensionManager::extPath($_EXTKEY) .
@@ -701,7 +694,7 @@ concatenateJsAndCss
    Description
          Setting config.concatenateJsAndCss bundles JS and CSS files in the FE.
 
-         **Example:** ::
+         Example::
 
             config.concatenateJsAndCss = 1
 
@@ -709,7 +702,7 @@ concatenateJsAndCss
          can also register your own one using
          $GLOBALS['TYPO3\_CONF\_VARS']['FE']['concatenateHandler'].
 
-         **Example:** ::
+         Example::
 
             $GLOBALS['TYPO3_CONF_VARS']['FE']['concatenateHandler'] =
                TYPO3\CMS\Core\Extension\ExtensionManager::extPath($_EXTKEY) .
@@ -844,7 +837,7 @@ defaultGetVars
 
          test[var1] will be written as text.var1
 
-         **Example:** ::
+         Example::
 
             config.defaultGetVars {
                 test.var1.var2.p3 = 15
@@ -1335,7 +1328,7 @@ htmlTag\_dir
 
          ltr = Left-To-Right (Default for other languages)
 
-         **Example:** ::
+         Example::
 
             config.htmlTag_dir = rtl
 
@@ -1361,7 +1354,7 @@ htmlTag\_langKey
          The values must follow the format specified in `IETF RFC 3066
          <http://www.ietf.org/rfc/rfc3066.txt>`_
 
-         **Example:** ::
+         Example::
 
             config.htmlTag_langKey = en-US
 
@@ -1392,7 +1385,7 @@ htmlTag\_setParams
          **Special:** If you set it to "none" then no attributes will be set at
          any event.
 
-         **Example:** ::
+         Example::
 
             config.htmlTag_setParams = xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US"
 
@@ -1519,7 +1512,7 @@ inlineStyle2TempFile
 
          The file hash is based solely on the content of the styles.
 
-         **Example:** ::
+         Example::
 
             config.inlineStyle2TempFile = 0
 
@@ -1693,7 +1686,7 @@ linkVars
 
          - **/[regex]/** -Match against a regular expression (PCRE style)
 
-         **Example:** ::
+         Example::
 
             config.linkVars = L, print
 
@@ -1734,7 +1727,7 @@ locale\_all
          locale strings. This is used in stdWrap.strftime to convert locale
          strings to the renderCharset of the frontend.
 
-         **Example:**
+         Example:
 
          This will render dates in danish made with stdWrap/strftime::
 
@@ -1852,7 +1845,7 @@ message\_preview\_workspace
          active in a draft workspace. You can use sprintf() placeholders for
          Workspace title (first) and number (second).
 
-         **Examples:** ::
+         Examples::
 
             config.message_preview_workspace = <div class="previewbox">Displaying workspace named "%s" (number %s)!</div>
             config.message_preview_workspace = <div class="previewbox">Displaying workspace number %2$s named "%1$s"!</div>
@@ -1933,7 +1926,7 @@ MP\_defaults
 
          [id],[id],... : [MP-var] \| [id],[id],... : [MP-var] \| ...
 
-         **Example:** ::
+         Example::
 
             config.MP_defaults = 36,37,48 : 2-207
 
@@ -2010,7 +2003,7 @@ namespaces
          tag. This is especially useful if you want to add RDFa or microformats
          to your HTML.
 
-         **Example:** ::
+         Example::
 
             config.namespaces.dc = http://purl.org/dc/elements/1.1/
             config.namespaces.foaf = http://xmlns.com/foaf/0.1/
@@ -2149,7 +2142,7 @@ pageRendererTemplateFile
          Sets the template for page renderer class
          TYPO3\CMS\Core\Page\PageRenderer.
 
-         **Example:** ::
+         Example::
 
             pageRendererTemplateFile = fileadmin/test_pagerender.html
 
@@ -2221,16 +2214,16 @@ pageTitleSeparator
          separator. stdWrap is useful to adjust whitespaces at the beginning and
          the end of the separator.
 
-         **Examples:** ::
+         Examples::
 
             config.pageTitleSeparator = .
 
-         This produces a title tag with the content "website. page title". ::
+         This produces a title tag with the content "website. page title"::
 
             config.pageTitleSeparator = -
             config.pageTitleSeparator.noTrimWrap = | | |
 
-         This produces a title tag with the content "website - page title". ::
+         This produces a title tag with the content "website - page title"::
 
             config.pageTitleSeparator = *
             config.pageTitleSeparator.noTrimWrap = |||
@@ -2319,7 +2312,7 @@ removeDefaultJS
          JavaScript is written to a temporary file and included from that file.
          See "inlineStyle2TempFile" below.
 
-         **Examples:** ::
+         Examples::
 
             config.removeDefaultJS = external
             config.removeDefaultJS = 1
@@ -2705,9 +2698,7 @@ sys\_language\_isocode\_default
          ISO 639-1 language code for the default language (that is
          ``sys_language_uid = 0``).
 
-         **Example:** ::
-
-         .. code-block:: typoscript
+         Example::
 
             # Danish by default
             config.sys_language_uid = 0
@@ -2867,7 +2858,7 @@ sys\_language\_softMergeIfNotBlank
 
          [table]:[field], [table]:[field], [table]:[field], ...
 
-         **Example:** ::
+         Example::
 
             config.sys_language_softMergeIfNotBlank = tt_content:image , tt_content:header
 
@@ -2943,7 +2934,7 @@ tx\_[extension key with no underscores]\_[\*]
          actually display anything in the frontend (i.e. don't receive their
          configuration as an argument from the frontend rendering process).
 
-         **Example:** ::
+         Example::
 
             config.tx_realurl_enable = 1
 
@@ -3049,7 +3040,7 @@ typolinkLinkAccessRestrictedPages
          See "showAccessRestrictedPages" for menu objects as well (similar
          feature for menus)
 
-         **Example:** ::
+         Example::
 
             config.typolinkLinkAccessRestrictedPages = 29
             config.typolinkLinkAccessRestrictedPages_addParams = &return_url=###RETURN_URL###&pageId=###PAGE_ID###
