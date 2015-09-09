@@ -2668,11 +2668,11 @@ sys\_language\_isocode
          string
 
    Description
-         ISO 639-1 language code for the according language. By default this
-         is being set by ``TSFE:sys_language_isocode``. The value is derived
-         from the ISO code that is stored within the sys_language record.
-         You can override the value, which was retrieved that way, with this
-         setting.
+        ISO 639-1 language code for the according language. By default this
+        is being set by ``TSFE:sys_language_isocode``. The value is derived
+        from the ISO code that is stored within the sys_language record.
+        You can override the value, which was retrieved that way, with this
+        setting.
 
         The ISO code is also used for the language attribute of the HTML tag.
         Therefore the setting config.htmlTag_langKey is not needed anymore, if
@@ -3152,8 +3152,7 @@ xhtmlDoctype
             )
             config.xhtmlDoctype = xhtml_11
 
-   Default:
-
+   Default
          *(same as config.doctype if set to a keyword)*
 
 
