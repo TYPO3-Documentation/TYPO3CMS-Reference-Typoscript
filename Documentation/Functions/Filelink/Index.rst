@@ -297,6 +297,25 @@ icon, size and file are rendered in the listed order.
          about image).
 
 
+.. container:: table-row
+
+   Property
+         typolinkConfiguration
+
+   Data type
+         :ref:`->typolink <typolink>`
+
+   Description
+         This property can be used to pass additional typolink settings for the generated file link.
+
+         Please note that these properties will be ignored because they are set by the filelink function:
+
+         - parameter
+         - fileTarget
+         - title
+         - ATagParams
+
+
 .. ###### END~OF~TABLE ######
 
 [tsref:->filelink]
