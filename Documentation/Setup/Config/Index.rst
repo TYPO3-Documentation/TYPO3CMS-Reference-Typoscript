@@ -73,8 +73,6 @@ Properties
    `index\_metatags`_                                    :ref:`data-type-boolean`           true
    `inlineStyle2TempFile`_                               :ref:`data-type-boolean`
    `intTarget`_                                          :ref:`data-type-target`
-   `jumpurl\_enable`_                                    :ref:`data-type-boolean`           0
-   `jumpurl\_mailto\_disable`_                           :ref:`data-type-boolean`           0
    `language`_                                           :ref:`data-type-string`
    `language\_alt`_                                      :ref:`data-type-string`
    `linkVars`_                                           :ref:`data-type-list`
@@ -1536,49 +1534,6 @@ intTarget
 
    Description
          Default internal target. Used by typolink if no target is set
-
-
-
-.. _setup-config-jumpurl-enable:
-
-jumpurl\_enable
-"""""""""""""""
-
-.. container:: table-row
-
-   Property
-         jumpurl\_enable
-
-   Data type
-         boolean
-
-   Description
-         jumpUrl is a concept where external links are redirected from the
-         index\_ts.php script, which first logs the URL.
-
-   Default
-         0
-
-
-
-.. _setup-config-jumpurl-mailto-disable:
-
-jumpurl\_mailto\_disable
-""""""""""""""""""""""""
-
-.. container:: table-row
-
-   Property
-         jumpurl\_mailto\_disable
-
-   Data type
-         boolean
-
-   Description
-         Disables the use of jumpUrl when linking to email-adresses.
-
-   Default
-         0
 
 
 

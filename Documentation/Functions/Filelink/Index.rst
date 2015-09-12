@@ -201,54 +201,6 @@ icon, size and file are rendered in the listed order.
 .. container:: table-row
 
    Property
-         jumpurl
-
-   Data type
-         boolean
-
-   Description
-         Decides if the link should call the script with the jumpurl parameter
-         in order to be able to register any clicks in statistics.
-
-         This has the advantage that any clicks on the file can be registered
-         in statistics.
-
-         The disadvantage is, that users cannot right-click and select "Save
-         Target As" in the browser.
-
-         **Extra properties:**
-
-         **.secure:** Boolean.
-
-         If set, then the file pointed to by jumpurl is **not** redirected to,
-         but rather it's read from the file and returned with a correct header.
-         This option adds a hash and locationData to the URL and there MUST be
-         access to the record in order to download the file. If the file
-         position on the server is furthermore secured by a .htaccess file
-         preventing ANY access, you've got secure download here!
-
-         **.secure.mimeTypes:** List of MIME types.
-
-         Syntax: [ext] = [MIME type]
-
-         **.parameter:** String /:ref:`stdWrap <stdwrap>`.
-
-         By default the jumpurl link will use the current pid and typeNum.
-
-         If you need alternative values (e.g. for logging) you can specify them
-         here.
-
-         For options see typolink.parameter.
-
-         **Example:** ::
-
-            jumpurl.secure = 1
-            jumpurl.secure.mimeTypes = pdf=application/pdf, doc=application/msword
-
-
-.. container:: table-row
-
-   Property
          target
 
    Data type
