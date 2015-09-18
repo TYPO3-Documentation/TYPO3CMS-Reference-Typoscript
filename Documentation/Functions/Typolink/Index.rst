@@ -149,36 +149,6 @@ with the link-parameters (lowercased)!
 .. container:: table-row
 
    Property
-         jumpurl
-
-   Data type
-         boolean
-
-   Description
-         Decides if the link should call the script with the jumpurl parameter
-         in order to register any clicks in statistics.
-
-         This works the same way as "filelink.jumpurl" does – for more details
-         see the description there.
-
-         **Example:** ::
-
-            lib.parseFunc_RTE.tags.link {
-              typolink.jumpurl = 1
-              typolink.jumpurl.secure = 1
-              typolink.jumpurl.secure.mimeTypes = pdf=application/pdf, doc=application/msword, png=image/png, gif=image/gif, jpg=image/jpg
-            }
-
-         These settings in the TS template will make any link to an internal
-         file inserted in the RTE be rendered as a secure file download.
-
-   Default
-         0
-
-
-.. container:: table-row
-
-   Property
          wrap
 
    Data type
