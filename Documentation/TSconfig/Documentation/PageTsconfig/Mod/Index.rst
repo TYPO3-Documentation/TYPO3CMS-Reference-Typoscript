@@ -1479,27 +1479,6 @@ New content element wizard (mod.wizards.newContentElement)
 .. container:: table-row
 
    Property
-         renderMode
-
-   Data type
-         string
-
-   Description
-         Alternative rendering mode; set to "tabs", if you want tabs.
-
-         **Example:**
-
-         .. code-block:: typoscript
-
-			mod.wizards.newContentElement.renderMode = tabs
-
-         .. figure:: ../../Images/manual_html_56794b6d.png
-            :alt: The New content element screen with tabs
-
-
-.. container:: table-row
-
-   Property
          wizardItems.[group]
 
    Data type
