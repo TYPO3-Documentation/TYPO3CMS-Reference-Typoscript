@@ -1038,6 +1038,7 @@ bytes
          Thus::
 
             bytes.labels = " | K| M| G"
+            bytes.base = 1000
 
 
 .. _stdwrap-substring:

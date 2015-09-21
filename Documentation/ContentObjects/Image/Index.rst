@@ -548,6 +548,22 @@ dataKey.minH
          source collection. For the image file itself the minH will be multiplied by
          :ref:`dataKey.pixelDensity <cobj-image-datakey-pixeldensity>`.
 
+.. _cobj-image-datakey-quality:
+
+dataKey.quality
+"""""""""""""""
+
+.. container:: table-row
+
+   Property
+         sourceCollection.dataKey.quality
+
+   Data type
+         integer
+
+   Description
+         Defines the quality of the rendered images on a scale from 1-100.
+
 .. _cobj-image-datakey-others:
 
 dataKey.*
