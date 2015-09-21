@@ -72,6 +72,18 @@ the register key SPLIT\_COUNT.
 .. container:: table-row
 
    Property
+         returnCount
+
+   Data type
+         integer
+
+   Description
+         Returns the number of split items
+
+
+.. container:: table-row
+
+   Property
          cObjNum
 
    Data type

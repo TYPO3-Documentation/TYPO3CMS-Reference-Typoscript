@@ -752,6 +752,32 @@ inlineLanguageLabel
 
 
 
+.. _setup-page-inlinelanguagelabelfiles:
+
+inlineLanguageLabelFiles
+""""""""""""""""""""""""
+
+.. container:: table-row
+
+   Property
+         inlineLanguageLabelFiles
+
+   Data type
+         *(array of strings)*
+
+   Description
+         ExtJS specific, adds language labels to the page.
+
+         **Example:** ::
+
+            inlineLanguageLabelFiles {
+               someLabels = EXT:myExt/Resources/Private/Language/locallang.xlf
+               someLabels.selectionPrefix = idPrefix
+               someLabels.stripFromSelectionName = strip_me
+               someLabels.errorMode = 2
+            }
+
+
 .. _setup-page-inlinesettings:
 
 inlineSettings
