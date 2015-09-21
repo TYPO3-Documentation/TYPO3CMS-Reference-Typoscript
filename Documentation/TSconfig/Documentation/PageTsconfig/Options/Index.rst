@@ -13,6 +13,43 @@
 Various options for the page affecting the core at various points.
 
 
+.. _pageworkspaces:
+
+workspaces
+^^^^^^^^^^
+
+.. ### BEGIN~OF~TABLE ###
+
+.. container:: table-row
+
+   Property
+         previewPageId
+
+   Data type
+         integer/fieldReference per table
+
+   Description
+         Page uid will be used for previewing records on a workspace.
+
+         **Examples:**
+
+         .. code-block:: typoscript
+
+            # Using page 123 for previewing workspaces records (in general)
+            options.workspaces.previewPageId = 123
+
+            # Using the pid field of each record for previewing (in general)
+            options.workspaces.previewPageId = field:pid
+
+            # Using page 123 for previewing workspaces records (for table tx_myext_table)
+            options.workspaces.previewPageId.tx_myext_table = 123
+
+            # Using the pid field of each record for previewing (or table tx_myext_table)
+            options.workspaces.previewPageId.tx_myext_table = field:pid
+
+.. ###### END~OF~TABLE ######
+
+
 .. _pagebackendlayout:
 
 backendLayout
