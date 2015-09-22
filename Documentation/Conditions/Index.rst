@@ -22,7 +22,7 @@ available conditions see below.
 "[ELSE]" is available as else operator. It is a condition, which will
 return TRUE, if the previous condition returned FALSE.
 
-Each condition block is ended with "[GLOBAL]".
+Each condition block is ended with "[END]".
 
 
 Example:
@@ -34,7 +34,7 @@ Example:
      # TypoScript Code for users of Internet Explorer.
    [ELSE]
      # TypoScript Code for users of other browsers.
-   [GLOBAL]
+   [END]
 
 
 .. _condition-general-notes:
