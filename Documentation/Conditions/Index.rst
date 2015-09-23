@@ -1,10 +1,6 @@
-.. ==================================================
-.. FOR YOUR INFORMATION
-.. --------------------------------------------------
-.. -*- coding: utf-8 -*- with BOM.
 
 .. include:: ../Includes.txt
-
+.. highlight:: typoscript
 
 .. _conditions:
 
@@ -19,11 +15,25 @@ General syntax
 Each condition is encapsulated by square brackets. For a list of
 available conditions see below.
 
-"[ELSE]" is available as else operator. It is a condition, which will
+`[ELSE]` is available as else operator. It is a condition, which will
 return TRUE, if the previous condition returned FALSE.
 
-Each condition block is ended with "[END]".
+Each condition block is ended with `[END]`.
 
+
+`[GLOBAL]` is a condition by itself that always returns "true".
+It ensures that the following TypoScript code is located in the
+global scope. So you can be sure that it's not affected by previous
+TypoScript, for example if a closing bracket is missing.
+The *Template Analyzer* shows this very well: TYPO3 places a
+`[GLOBAL]` condition at the beginning of each TypoScript file.
+
+As a developer you can use `[GLOBAL]` for testing purposes
+to ensure that your own condition works as expected.
+See :ref:`t3tssyntax:The-Global-Condition` for additional documentation.
+
+.. There's more in Patrick Lobacher's "integrator book" (german only).
+   Corresponding information still needs to be added here.
 
 Example:
 ~~~~~~~~
@@ -57,16 +67,16 @@ Examples:
 ~~~~~~~~~
 
 This condition will match if the visitor opens the website with
-Internet Explorer on Windows (but not on Mac) ::
+Internet Explorer on Windows (but not on Mac)::
 
    [browser = msie] && [system = win]
 
-This will match with either Opera or Firefox browsers ::
+This will match with either Opera or Firefox browsers::
 
    [browser = opera] || [browser = firefox]
 
 This will match with either Firefox or Internet Explorer. In case of
-Internet Explorer, the version must be above 8. ::
+Internet Explorer, the version must be above 8::
 
    [browser = firefox] || [browser = msie] && [version => 8]
 
