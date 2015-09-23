@@ -1553,13 +1553,13 @@ New content element wizard (mod.wizards.newContentElement)
 .. container:: table-row
 
    Property
-         wizardItems.[group].elements.[name].icon
+         wizardItems.[group].elements.[name].iconIdentifier
 
    Data type
-         resource
+         string
 
    Description
-         Path to the icon.
+         The icon identifier of the icon you want to display.
 
 
 .. container:: table-row
