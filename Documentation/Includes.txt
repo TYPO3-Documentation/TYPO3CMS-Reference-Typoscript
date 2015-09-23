@@ -11,4 +11,4 @@
 
 .. highlight:: typoscript
 
-.. default-role: code
+.. default-role:: code
