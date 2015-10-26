@@ -186,7 +186,8 @@ intersphinx_mapping = {}
 # PART 3: apply user settings
 
 def updateModuleGlobals(GLOBALS, US):
-    GLOBALS.update(US['general'])
+    if US.has_key('general'):
+        GLOBALS.update(US['general'])
 
     # allow comma separated values like: .rst,.md
     if type(GLOBALS['source_suffix']) in [type(''), type(u'')]:
