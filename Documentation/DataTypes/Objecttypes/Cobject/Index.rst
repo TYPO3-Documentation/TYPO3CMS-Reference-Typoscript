@@ -16,7 +16,7 @@ Objects" later in this manual.
 
 **Examples:** ::
 
-    TEXT / IMAGE / MEDIA ....
+    TEXT / IMAGE / TEMPLATE ....
 
 
 

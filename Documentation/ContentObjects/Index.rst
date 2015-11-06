@@ -35,15 +35,11 @@ Content Objects (cObject)
    ImgResource/Index
    Imgtext/Index
    LoadRegister/Index
-   Media/Index
-   Multimedia/Index
    Otable/Index
-   Qtobject/Index
    Records/Index
    RestoreRegister/Index
    Searchresult/Index
    Svg/Index
-   Swfobject/Index
    Template/Index
    Text/Index
    UserAndUserInt/Index
