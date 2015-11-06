@@ -206,7 +206,8 @@ and is there to output information about files.
          The cObject used for rendering the files. It is executed
          once for every file. Note that during each execution you can
          find information about the current file using the getText
-         property "file" with the "current" keyword.
+         property "file" :ref:`data-type-gettext-file` with the "current" keyword. 
+         Look there to find out which properties of the file are available. 
 
          **Example:**
 
