@@ -664,7 +664,7 @@ HTMLparser
 
          Value must be set and properties are those of :ref:`->HTMLparser <htmlparser>`.
 
-         (See :ref:`t3api:rte` for more information about RTE transformations)
+         (See :ref:`t3coreapi:rte` for more information about RTE transformations)
 
 
 .. _stdwrap-split:
@@ -1227,7 +1227,7 @@ encodeForJavaScriptValue
          enclosed in single quotes.
 
          Passes the content through the core function
-         :ref:`t3cmsapi:TYPO3\\CMS\\Core\\Utility\\GeneralUtility::quoteJSvalue`.
+         :ref:`t3api:TYPO3\\CMS\\Core\\Utility\\GeneralUtility::quoteJSvalue`.
 
          **Example:** ::
 
