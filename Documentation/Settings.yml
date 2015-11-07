@@ -6,10 +6,10 @@ conf.py:
   version: 6.2
   release: 6.2
   intersphinx_mapping:
-    t3cmsapi:
+    t3api:
     - http://typo3.org/api/typo3cms/
     - null
-    t3api:
+    t3coreapi:
     - http://docs.typo3.org/typo3cms/CoreApiReference/
     - null
     t3tssyntax:
