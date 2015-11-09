@@ -1,8 +1,3 @@
-.. ==================================================
-.. FOR YOUR INFORMATION
-.. --------------------------------------------------
-.. -*- coding: utf-8 -*- with BOM.
-
 .. include:: ../../Includes.txt
 
 .. _pagemod:
@@ -34,9 +29,9 @@ By adding this Page TSconfig we can remove the "Page TSconfig" item
 
 .. code-block:: typoscript
 
-	mod.web_info.menu.function {
-		tx_infopagetsconfig_webinfo = 0
-	}
+   mod.web_info.menu.function {
+      tx_infopagetsconfig_webinfo = 0
+   }
 
 The function menu will now look like this:
 
@@ -72,23 +67,23 @@ Examples from the TYPO3 core are listed in the table below:
 
          .. code-block:: html
 
-			<select name="SET[function]">
-				<option value="1">Columns</option>
-				<option value="0">QuickEdit</option>
-				<option value="2">Languages</option>
-				<option value="3">Grid-View</option>
-			</select>
+            <select name="SET[function]">
+               <option value="1">Columns</option>
+               <option value="0">QuickEdit</option>
+               <option value="2">Languages</option>
+               <option value="3">Grid-View</option>
+            </select>
 
          **Example:**
 
          .. code-block:: typoscript
 
-			# Disables all items except the "QuickEdit" item:
-			mod.web_layout.menu.function {
-				1 = 0
-				2 = 0
-				3 = 0
-			}
+            # Disables all items except the "QuickEdit" item:
+            mod.web_layout.menu.function {
+               1 = 0
+               2 = 0
+               3 = 0
+            }
 
 
 .. container:: table-row
@@ -106,16 +101,16 @@ Examples from the TYPO3 core are listed in the table below:
 
          .. code-block:: typoscript
 
-			<select name="SET[function]">
-				<option value="tx_cms_webinfo_page">Page tree Overview</option>
-				<option value="tx_cms_webinfo_lang">Localization Overview</option>
-				<option value="tx_belog_webinfo">Log</option>
-				<option value="tx_infopagetsconfig_webinfo">Page TSconfig</option>
-				<option value="tx_linkvalidator_ModFuncReport">Linkvalidator</option>
-				<option value="tx_realurl_modfunc1">Speaking Url Management</option>
-				<option value="tx_indexedsearch_modfunc1">Indexed search</option>
-				<option value="tx_indexedsearch_modfunc2">Indexed search statistics</option>
-			</select>
+            <select name="SET[function]">
+               <option value="tx_cms_webinfo_page">Page tree Overview</option>
+               <option value="tx_cms_webinfo_lang">Localization Overview</option>
+               <option value="tx_belog_webinfo">Log</option>
+               <option value="tx_infopagetsconfig_webinfo">Page TSconfig</option>
+               <option value="tx_linkvalidator_ModFuncReport">Linkvalidator</option>
+               <option value="tx_realurl_modfunc1">Speaking Url Management</option>
+               <option value="tx_indexedsearch_modfunc1">Indexed search</option>
+               <option value="tx_indexedsearch_modfunc2">Indexed search statistics</option>
+            </select>
 
          .. note::
 
@@ -126,10 +121,10 @@ Examples from the TYPO3 core are listed in the table below:
 
          .. code-block:: typoscript
 
-			# Disables the item "Indexed search statistics":
-			mod.web_info.menu.function {
-				tx_indexedsearch_modfunc2 = 0
-			}
+            # Disables the item "Indexed search statistics":
+            mod.web_info.menu.function {
+               tx_indexedsearch_modfunc2 = 0
+            }
 
 
 .. container:: table-row
@@ -147,9 +142,9 @@ Examples from the TYPO3 core are listed in the table below:
 
          .. code-block:: html
 
-			<select name="SET[function]">
-				<option value="tx_funcwizards_webfunc">Wizards</option>
-			</select>
+            <select name="SET[function]">
+               <option value="tx_funcwizards_webfunc">Wizards</option>
+            </select>
 
 
 .. container:: table-row
@@ -171,19 +166,19 @@ Examples from the TYPO3 core are listed in the table below:
 
          .. code-block:: html
 
-			<select name="SET[wiz]">
-				<option value="tx_wizardcrpages_webfunc_2">Create multiple pages</option>
-				<option value="tx_wizardsortpages_webfunc_2">Sort pages</option>
-			</select>
+            <select name="SET[wiz]">
+               <option value="tx_wizardcrpages_webfunc_2">Create multiple pages</option>
+               <option value="tx_wizardsortpages_webfunc_2">Sort pages</option>
+            </select>
 
          **Example:**
 
          .. code-block:: typoscript
 
-			# Disables the sub-item "Create multiple pages":
-			mod.web_func.menu.wiz {
-				tx_wizardcrpages_webfunc_2 = 0
-			}
+            # Disables the sub-item "Create multiple pages":
+            mod.web_func.menu.wiz {
+               tx_wizardcrpages_webfunc_2 = 0
+            }
 
 
 .. container:: table-row
@@ -201,12 +196,12 @@ Examples from the TYPO3 core are listed in the table below:
 
          .. code-block:: html
 
-			<select name="SET[function]">
-				<option value="tx_tstemplateceditor">Constant Editor</option>
-				<option value="tx_tstemplateinfo">Info/Modify</option>
-				<option value="tx_tstemplateobjbrowser">TypoScript Object Browser</option>
-				<option value="tx_tstemplateanalyzer">Template Analyzer</option>
-			</select>
+            <select name="SET[function]">
+               <option value="tx_tstemplateceditor">Constant Editor</option>
+               <option value="tx_tstemplateinfo">Info/Modify</option>
+               <option value="tx_tstemplateobjbrowser">TypoScript Object Browser</option>
+               <option value="tx_tstemplateanalyzer">Template Analyzer</option>
+            </select>
 
 
 .. container:: table-row
@@ -243,13 +238,13 @@ Examples from the TYPO3 core are listed in the table below:
 
          .. code-block:: typoscript
 
-			# Task Center configuration:
-			mod.user_task.menu.function {
-				# Disable "Recent Pages" display:
-				tx_taskcenterrecent = 0
-				# Disable "Action" list
-				tx_sysaction = 0
-			}
+            # Task Center configuration:
+            mod.user_task.menu.function {
+               # Disable "Recent Pages" display:
+               tx_taskcenterrecent = 0
+               # Disable "Action" list
+               tx_sysaction = 0
+            }
 
 
 .. ###### END~OF~TABLE ######
@@ -284,9 +279,9 @@ Examples from the TYPO3 core are listed in the table below:
 
          .. code-block:: typoscript
 
-			taskcenter {
-				<extension-key>.<task-class> = 0
-			}
+            taskcenter {
+               <extension-key>.<task-class> = 0
+            }
 
          Be aware that <extension-key> needs to be replaced by the actual
          extension key and <task-class> by the class name of the PHP class
@@ -298,15 +293,15 @@ Examples from the TYPO3 core are listed in the table below:
 
          .. code-block:: typoscript
 
-			# Task Center configuration:
-			taskcenter {
-				# Disable "Quick Note":
-				sys_notepad.tx_sysnotepad_task = 0
-				# Disable "Action":
-				sys_action.tx_sysaction_task = 0
-				# Disable "Import/Export":
-				impexp.tx_impexp_task = 0
-			}
+            # Task Center configuration:
+            taskcenter {
+               # Disable "Quick Note":
+               sys_notepad.tx_sysnotepad_task = 0
+               # Disable "Action":
+               sys_action.tx_sysaction_task = 0
+               # Disable "Import/Export":
+               impexp.tx_impexp_task = 0
+            }
 
 
 .. ###### END~OF~TABLE ######
@@ -327,20 +322,20 @@ menu. The keys are the values of the option tags.
 
 .. code-block:: html
 
-	<select>
-		<option value="tx_cms_webinfo_page">Page tree overview</option>
-		<option value="tx_belog_webinfo">Log</option>
-		<option value="tx_infopagetsconfig_webinfo">Page TSconfig</option>
-	</select>
+   <select>
+      <option value="tx_cms_webinfo_page">Page tree overview</option>
+      <option value="tx_belog_webinfo">Log</option>
+      <option value="tx_infopagetsconfig_webinfo">Page TSconfig</option>
+   </select>
 
 As you can see, this is where the key for the example before was
 found.
 
 .. code-block:: typoscript
 
-	mod.web_info.menu.function {
-		tx_infopagetsconfig_webinfo = 0
-	}
+   mod.web_info.menu.function {
+      tx_infopagetsconfig_webinfo = 0
+   }
 
 .. warning::
 
@@ -366,9 +361,9 @@ with this value
 
 .. code-block:: typoscript
 
-	mod.web_info.menu.function {
-		tsconf = 0
-	}
+   mod.web_info.menu.function {
+      tsconf = 0
+   }
 
 If however we activate this configuration in the TSconfig of a certain
 backend user (e.g. the admin user), that user would still be able to
@@ -377,9 +372,9 @@ the same value set in the Page TSconfig
 
 .. code-block:: typoscript
 
-	mod.web_info.menu.function {
-		tsconf = 1
-	}
+   mod.web_info.menu.function {
+      tsconf = 1
+   }
 
 .. figure:: ../../Images/manual_html_m6b2884ce.png
    :alt: Example 1: Overriding the Page TSconfig menu function
@@ -444,7 +439,7 @@ Shared options for modules (mod.SHARED)
 
          .. code-block:: typoscript
 
-			mod.SHARED.colPos_list = 0,3
+            mod.SHARED.colPos_list = 0,3
 
          .. note::
 
@@ -470,24 +465,24 @@ Shared options for modules (mod.SHARED)
 
          .. code-block:: typoscript
 
-			backend_layout {
-				colCount = 2
-				rowCount = 1
-				rows {
-					1 {
-						columns {
-							1 {
-								name = Left
-								colPos = 1
-							}
-							2 {
-								name = Content
-								colPos = 0
-							}
-						}
-					}
-				}
-			}
+            backend_layout {
+               colCount = 2
+               rowCount = 1
+               rows {
+                  1 {
+                     columns {
+                        1 {
+                           name = Left
+                           colPos = 1
+                        }
+                        2 {
+                           name = Content
+                           colPos = 0
+                        }
+                     }
+                  }
+               }
+            }
 
          * Click on the root page of your website.
 
@@ -610,7 +605,7 @@ Web > Page (mod.web\_layout)
 
          .. code-block:: typoscript
 
-			mod.web_layout.allowInconsistentLanguageHandling = 1
+            mod.web_layout.allowInconsistentLanguageHandling = 1
 
 
 .. container:: table-row
@@ -633,7 +628,7 @@ Web > Page (mod.web\_layout)
 
          .. code-block:: typoscript
 
-			mod.web_layout.tt_content.colPos_list = 0,3
+            mod.web_layout.tt_content.colPos_list = 0,3
 
 
 .. container:: table-row
@@ -653,9 +648,9 @@ Web > Page (mod.web\_layout)
 
          .. code-block:: typoscript
 
-			mod.web_layout {
-				editFieldsAtATime = 2
-			}
+            mod.web_layout {
+               editFieldsAtATime = 2
+            }
 
    Default
          1
@@ -828,39 +823,38 @@ Web > Page (mod.web\_layout)
 
          .. code-block:: typoscript
 
-			mod.web_layout.BackendLayouts {
-				exampleKey {
-					title = Example
-					config {
-						backend_layout {
-							colCount = 1
-							rowCount = 2
-							rows {
-								1 {
-									columns {
-										1 {
-											name = LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:colPos.I.3
-											colPos = 3
-											colspan = 1
-										}
-									}
-								}
-								2 {
-									columns {
-										1 {
-											name = Main
-											colPos = 0
-											colspan = 1
-										}
-									}
-								}
-							}
-						}
-					}
-					icon = EXT:example_extension/Resources/Public/Images/BackendLayouts/default.gif
-				}
-			}
-
+            mod.web_layout.BackendLayouts {
+               exampleKey {
+                  title = Example
+                  config {
+                     backend_layout {
+                        colCount = 1
+                        rowCount = 2
+                        rows {
+                           1 {
+                              columns {
+                                 1 {
+                                    name = LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:colPos.I.3
+                                    colPos = 3
+                                    colspan = 1
+                                 }
+                              }
+                           }
+                           2 {
+                              columns {
+                                 1 {
+                                    name = Main
+                                    colPos = 0
+                                    colspan = 1
+                                 }
+                              }
+                           }
+                        }
+                     }
+                  }
+                  icon = EXT:example_extension/Resources/Public/Images/BackendLayouts/default.gif
+               }
+            }
 
 .. ###### END~OF~TABLE ######
 
@@ -889,9 +883,9 @@ Web > List (mod.web\_list)
 
          .. code-block:: typoscript
 
-			mod.web_list {
-				noCreateRecordsLink = 1
-			}
+            mod.web_list {
+               noCreateRecordsLink = 1
+            }
 
    Default
          0
@@ -930,9 +924,9 @@ Web > List (mod.web\_list)
 
          .. code-block:: typoscript
 
-			mod.web_list {
-				listOnlyInSingleTableView = 1
-			}
+            mod.web_list {
+               listOnlyInSingleTableView = 1
+            }
 
          The result will be that records from tables are only listed in the
          single-table mode:
@@ -962,9 +956,9 @@ Web > List (mod.web\_list)
 
          .. code-block:: typoscript
 
-			mod.web_list {
-				noExportRecordsLinks = 1
-			}
+            mod.web_list {
+               noExportRecordsLinks = 1
+            }
 
          The buttons "Export" and "Download CSV file" are hidden
          in single table view inside the list module:
@@ -1049,7 +1043,7 @@ Web > List (mod.web\_list)
 
          .. code-block:: typoscript
 
-			mod.web_list.table.tt_content.hideTable = 1
+            mod.web_list.table.tt_content.hideTable = 1
 
 
 .. container:: table-row
@@ -1072,13 +1066,13 @@ Web > List (mod.web\_list)
 
          .. code-block:: typoscript
 
-			mod.web_list.hideTranslations = *
+            mod.web_list.hideTranslations = *
 
          or
 
          .. code-block:: typoscript
 
-			mod.web_list.hideTranslations = tt_content,tt_news
+            mod.web_list.hideTranslations = tt_content,tt_news
 
 
 .. container:: table-row
@@ -1122,9 +1116,9 @@ Web > List (mod.web\_list)
 
          .. code-block:: typoscript
 
-			mod.web_list {
-			allowedNewTables = pages, tt_news
-			}
+            mod.web_list {
+            allowedNewTables = pages, tt_news
+            }
 
          Only pages and tt\_news table elements will be linked to in the New
          record screen:
@@ -1155,9 +1149,9 @@ Web > List (mod.web\_list)
 
          .. code-block:: typoscript
 
-			mod.web_list {
-				deniedNewTables = tt_news,tt_content
-			}
+            mod.web_list {
+               deniedNewTables = tt_news,tt_content
+            }
 
 
 .. container:: table-row
@@ -1334,10 +1328,10 @@ Web > List (mod.web\_list)
 
          .. code-block:: typoscript
 
-			mod.web_list.tableDisplayOrder.<tableName> {
-			  before = <tableA>, <tableB>, ...
-			  after = <tableA>, <tableB>, ...
-			}
+            mod.web_list.tableDisplayOrder.<tableName> {
+              before = <tableA>, <tableB>, ...
+              after = <tableA>, <tableB>, ...
+            }
 
 
 
@@ -1370,9 +1364,9 @@ Web > View (mod.web\_view)
 
          .. code-block:: typoscript
 
-			mod.web_view {
-				type = 1
-			}
+            mod.web_view {
+               type = 1
+            }
 
 
 .. container:: table-row
@@ -1393,10 +1387,10 @@ Web > View (mod.web\_view)
 
          .. code-block:: typoscript
 
-			mod.web_view.previewFrameWidths {
-				300.label = myPreview
-				300.height = 500
-			}
+            mod.web_view.previewFrameWidths {
+               300.label = myPreview
+               300.height = 500
+            }
 
          .. figure:: ../../Images/WebViewTSConfigPreview.png
             :alt: Dropdown menu Width with added frame size called myPreview
@@ -1454,9 +1448,9 @@ New record wizard (mod.wizards.newRecord)
 
          .. code-block:: typoscript
 
-			mod.wizards.newRecord.pages.show {
-				pageInside = 0
-			}
+            mod.wizards.newRecord.pages.show {
+               pageInside = 0
+            }
 
          Hides the "Page (inside)" link.
 
@@ -1487,7 +1481,7 @@ New record wizard (mod.wizards.newRecord)
 
          .. code-block:: typoscript
 
-			mod.wizards.newRecord.order = tt_news
+            mod.wizards.newRecord.order = tt_news
 
          This places the tt\_news group at the top (after pages and content
          elements). The other groups follow unchanged:
@@ -1551,10 +1545,10 @@ New content element wizard (mod.wizards.newContentElement)
 
          .. code-block:: typoscript
 
-			# Hide bulletList
-			mod.wizards.newContentElement.wizardItems.common.show := removeFromList(bullets)
-			# Only show text and textpic in common
-			mod.wizards.newContentElement.wizardItems.common.show = text,textpic
+            # Hide bulletList
+            mod.wizards.newContentElement.wizardItems.common.show := removeFromList(bullets)
+            # Only show text and textpic in common
+            mod.wizards.newContentElement.wizardItems.common.show = text,textpic
 
 
 .. container:: table-row
@@ -1643,15 +1637,15 @@ Add a new element (header) to the "common" group
 
 .. code-block:: typoscript
 
-	mod.wizards.newContentElement.wizardItems.common.elements.header {
-		icon = gfx/c_wiz/regular_text.gif
-		title = Header
-		description = Adds a header element only
-		tt_content_defValues {
-			CType = header
-		}
-	}
-	mod.wizards.newContentElement.wizardItems.common.show := addToList(header)
+   mod.wizards.newContentElement.wizardItems.common.elements.header {
+      icon = gfx/c_wiz/regular_text.gif
+      title = Header
+      description = Adds a header element only
+      tt_content_defValues {
+         CType = header
+      }
+   }
+   mod.wizards.newContentElement.wizardItems.common.show := addToList(header)
 
 .. _pageexample2:
 
@@ -1662,24 +1656,24 @@ Create a new group and add a (pre-filled) element to it
 
 .. code-block:: typoscript
 
-	mod.wizards.newContentElement.wizardItems.myGroup {
-		header = LLL:EXT:cms/layout/locallang.xlf:advancedFunctions
-		elements.customText {
-			icon = gfx/c_wiz/regular_text.gif
-			title = Introductory text for national startpage
-			description = Use this element for all national startpages
-			tt_content_defValues {
-				CType = text
-				bodytext (
-					<h2>Section Header</h2>
-					<p class="bodytext">Lorem ipsum dolor sit amet, consectetur, sadipisci velit ...</p>
-				)
-				header = Section Header
-				header_layout = 100
-			}
-		}
-	}
-	mod.wizards.newContentElement.wizardItems.myGroup.show = customText
+   mod.wizards.newContentElement.wizardItems.myGroup {
+      header = LLL:EXT:cms/layout/locallang.xlf:advancedFunctions
+      elements.customText {
+         icon = gfx/c_wiz/regular_text.gif
+         title = Introductory text for national startpage
+         description = Use this element for all national startpages
+         tt_content_defValues {
+            CType = text
+            bodytext (
+               <h2>Section Header</h2>
+               <p class="bodytext">Lorem ipsum dolor sit amet, consectetur, sadipisci velit ...</p>
+            )
+            header = Section Header
+            header_layout = 100
+         }
+      }
+   }
+   mod.wizards.newContentElement.wizardItems.myGroup.show = customText
 
 This will add the following at the bottom of the new content element
 wizard:
@@ -1712,7 +1706,7 @@ Tools > Extension Manager (mod.tools\_em)
 
          .. code-block:: typoscript
 
-			mod.tools_em.allowTVlisting = 1
+            mod.tools_em.allowTVlisting = 1
 
          Enables these options in the Extension Manager:
 
