@@ -592,6 +592,30 @@ Web > Page (mod.web\_layout)
 .. container:: table-row
 
    Property
+         allowInconsistentLanguageHandling
+
+   Data type
+         *boolean*
+
+   Description
+         By default, TYPO3 will not allow you to mix translated content and independent content in the page module.
+         Content elements violating this behavior will be marked in the Page Module and there is no UI control allowing
+         you to create independent content elements in a given language.
+
+         If you want to go back to the old, inconsistent behavior, you can toggle it back on via this switch.
+
+         **Example:**
+
+         Allows to set TYPO3s page module back to inconsistent language mode
+
+         .. code-block:: typoscript
+
+			mod.web_layout.allowInconsistentLanguageHandling = 1
+
+
+.. container:: table-row
+
+   Property
          tt\_content.colPos\_list
 
    Data type
@@ -1246,20 +1270,27 @@ Web > List (mod.web\_list)
 .. container:: table-row
 
    Property
-         newPageWiz.overrideWithExtension
 
-         newContentWiz.overrideWithExtension
+         newPageWizard.override
+
+         newContentElementWizard.override
 
    Data type
          string
 
    Description
-         If set to an extension key, (e.g. "templavoila"), then the
-         "mod1/index.php" file of that extension will be used for creating new
-         elements on the page. "newContentWiz" will likewise use the
-         "mod1/db\_new\_content\_el.php" for creating new content elements.
+         If set to an extension key, (e.g. "templavoila"), then the specified module or route  will be used for creating
+         new elements on the page. "newContentElementWizard" will likewise use the defined module or route for creating
+         new content elements.
 
          Also see "options.overridePageModule".
+
+         **Example:**
+
+         .. code-block:: typoscript
+
+            mod.newContentElementWizard.override = my_custom_module
+            mod.newContentElementWizard.override = my_module_route
 
 
 .. container:: table-row
@@ -1632,7 +1663,7 @@ Create a new group and add a (pre-filled) element to it
 .. code-block:: typoscript
 
 	mod.wizards.newContentElement.wizardItems.myGroup {
-		header = LLL:EXT:cms/layout/locallang.xml:advancedFunctions
+		header = LLL:EXT:cms/layout/locallang.xlf:advancedFunctions
 		elements.customText {
 			icon = gfx/c_wiz/regular_text.gif
 			title = Introductory text for national startpage
