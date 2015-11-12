@@ -255,7 +255,7 @@ PHP\_SCRIPT\_EXT
 
          This is possible to do because any include-files will be known before
          the scripts are included. That is not the case with the regular
-         PHP\_SCRIPT cObject.
+         USER cObject.
 
 
 .. container:: table-row

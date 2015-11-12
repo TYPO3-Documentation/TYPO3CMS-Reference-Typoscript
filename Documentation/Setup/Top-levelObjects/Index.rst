@@ -187,6 +187,12 @@ includeLibs
 
          Please see the PAGE object, which has the same property.
 
+         **Note:** This property was deprecated and has been removed with TYPO3
+         7! If you only need the included files inside a certain scope, e.g.
+         inside a COA_INT or USER_INT cObject, use the includeLibs functionalities
+         of this cObject instead. You can also use hooks during the Frontend set
+         up to execute custom PHP code.
+
 
 
 .. _top-level-objects-other-reserved-tlo-s:

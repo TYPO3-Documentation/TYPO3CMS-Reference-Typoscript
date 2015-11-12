@@ -791,15 +791,21 @@ includeLibs
          **Note:**
 
          The top-level object "includeLibs" and the scripts defined with this
-         property is added to each other. Script-keys (that is the "array of
+         property are added to each other. Script-keys (that is the "array of
          strings"-value, like below "tx\_myext") from this property of the page
-         overrides any scripts-keys from the top-level "includeLibs" property!
+         override any scripts-keys from the top-level "includeLibs" property!
 
          The script filenames are of the data type "resource".
 
          **Example:** ::
 
-            includeLibs.tx_myext = lib_filename.php
+            page.includeLibs.tx_myext = lib_filename.php
+
+         **Note:** This property was deprecated and has been removed with TYPO3
+         7! If you only need the included files inside a certain scope, e.g.
+         inside a COA_INT or USER_INT cObject, use the includeLibs functionalities
+         of this cObject instead. You can also use hooks during the Frontend set
+         up to execute custom PHP code.
 
 
 

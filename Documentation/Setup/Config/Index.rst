@@ -1377,6 +1377,12 @@ includeLibrary
    Description
          This includes a PHP file.
 
+         **Note:** This property was deprecated and has been removed with TYPO3
+         7! If you only need the included files inside a certain scope, e.g.
+         inside a COA_INT or USER_INT cObject, use the includeLibs functionalities
+         of this cObject instead. You can also use hooks during the Frontend set
+         up to execute custom PHP code.
+
 
 
 .. _setup-config-inct3lib-htmlmail:
