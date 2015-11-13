@@ -52,7 +52,7 @@ Properties
    `disablePageExternalUrl`_                             :ref:`data-type-boolean`
    `disablePrefixComment`_                               :ref:`data-type-boolean`
    `disablePreviewNotification`_                         :ref:`data-type-boolean`           0
-   `disableLanguageHeader`_                              :ref:`data-type-boolean`
+   `disableLanguageHeader`_                              :ref:`data-type-boolean`           0
    `doctype`_                                            :ref:`data-type-string`
    `doctypeSwitch`_                                      boolean / string
    `enableContentLengthHeader`_                          :ref:`data-type-boolean`           1
@@ -1010,8 +1010,12 @@ disableLanguageHeader
          boolean
 
    Description
-         if set, disables to send the header "Content-language: XX" where "XX" is the iso
-         code of the sys_language_isocode
+         TYPO3 by default sends a "Content-language: XX" HTTP header,
+         where "XX" is the ISO code from sys_language_isocode. If this
+         option is set, this header will not be sent.
+
+   Default
+         0
 
 .. _setup-config-doctype:
 
