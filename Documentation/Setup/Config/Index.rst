@@ -305,8 +305,6 @@ baseURL
          the value that is expected to be the URL and append a "/" to the end
          of the string.
 
-         If this is set, make sure that "prefixLocalAnchors" is set to "all".
-
          **Example**::
 
             config.baseURL = http://typo3.org/sub_dir/
@@ -2222,6 +2220,8 @@ prefixLocalAnchors
 
          **output:** The content is processed just before it is echoed out.
 
+         **Note:** This property is deprecated since TYPO3 7! Use absolute links
+         with config.absRefPrefix instead.
 
 
 .. _setup-config-removedefaultcss:
