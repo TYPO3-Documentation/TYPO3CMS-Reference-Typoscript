@@ -768,6 +768,18 @@ inlineLanguageLabelFiles
    Description
          ExtJS specific, adds language labels to the page.
 
+         **Available sub-properties:**
+
+         **selectionPrefix:** Only label keys that start with this prefix will
+         be included. Default: ''.
+
+         **stripFromSelectionName:** A string that will be removed from any
+         included label key. Default: ''.
+
+         **errorMode:** Error mode if the file could not be found:
+         0 - syslog entry, 1 - do nothing, 2 - throw an exception.
+         Default: 0
+
          **Example:** ::
 
             inlineLanguageLabelFiles {
