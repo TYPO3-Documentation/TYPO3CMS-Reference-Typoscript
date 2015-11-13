@@ -22,7 +22,7 @@ TypoScript as used in TYPO3 TypoScript templates (and not in TSconfig).
 For explanations about the syntax of TypoScript itself, please refer
 to the :ref:`"TypoScript Syntax and In-Depth Study" <t3tssyntax:start>` manual.
 
-This version is updated for TYPO3 CMS version 7.1.
+This version is updated for TYPO3 CMS version 7 LTS.
 
 
 .. _what-s-new:
@@ -51,10 +51,10 @@ refer to the links below.
    - `Documentation changes in TYPO3 6.1 <https://forge.typo3.org/versions/1960>`__
    - `Documentation changes in TYPO3 6.0 <https://forge.typo3.org/versions/1623>`__
    - `Documentation changes in TYPO3 4.7 <https://forge.typo3.org/versions/1454>`__
-   - `Documentation changes in TYPO3 4.6 <http://wiki.typo3.org/Documentation_changes_in_4.6>`__
-   - `Documentation changes in TYPO3 4.4 and 4.5 <http://wiki.typo3.org/Documentation_changes_in_4.4_and_4.5>`__
-   - `Documentation changes in TYPO3 4.3 <http://wiki.typo3.org/Documentation_changes_in_4.3>`__
-   - `Documentation changes in TYPO3 4.2 <http://wiki.typo3.org/Documentation_changes_in_4.2>`__
+   - `Documentation changes in TYPO3 4.6 <https://wiki.typo3.org/Documentation_changes_in_4.6>`__
+   - `Documentation changes in TYPO3 4.4 and 4.5 <https://wiki.typo3.org/Documentation_changes_in_4.4_and_4.5>`__
+   - `Documentation changes in TYPO3 4.3 <https://wiki.typo3.org/Documentation_changes_in_4.3>`__
+   - `Documentation changes in TYPO3 4.2 <https://wiki.typo3.org/Documentation_changes_in_4.2>`__
 
 
 .. _credits:
@@ -84,7 +84,7 @@ using the bug tracker: https://github.com/TYPO3-Documentation/TYPO3CMS-Reference
 Maintaining high quality documentation requires time and effort
 and the TYPO3 Documentation Team always appreciates support.
 If you want to support us, please join the documentation
-mailing list/forum (http://forum.typo3.org/index.php/f/44/).
+mailing list/forum (https://forum.typo3.org/index.php/f/44/).
 
 
 .. _general-information:
