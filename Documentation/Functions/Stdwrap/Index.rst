@@ -1022,17 +1022,22 @@ bytes
    Description
          Will format the input (an integer) as bytes: bytes, kb, mb
 
+         **Available sub-properties:**
+
+         **labels**:
          If you add a value for the property "labels" you can alter the default
          suffixes. Labels for bytes, kilo, mega and giga are separated by
          vertical bar (\|) and possibly encapsulated in "". E.g.: " \| K\| M\| G"
          (which is the default value).
 
+         **base**:
+         The base to use for the calculation. Useful values are 1000 or 1024.
          There are 2 presets defined:
 
          - iec: uses the Ki, Mi, etc prefixes and binary base (power of two, 1024)
          - si: uses the k, M, etc prefixes and decimal base (power of ten, 1000)
 
-         The default formatting is set to "iec" base size calculations on the same base as before.
+         The default formatting is set to "iec" base size calculations.
          The fractional part, when present, will be two numbers.
 
          Thus::
