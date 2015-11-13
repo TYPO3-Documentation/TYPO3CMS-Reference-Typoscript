@@ -878,13 +878,6 @@ javascriptLibs
                ExtJs.quickTips = 1
                  # includes ExtJS debug file (uncompressed)
                ExtJs.debug = 1
-
-                 # include SVG library
-               SVG = 1
-                 # include SVG debug file
-               SVG.debug = 1
-                 #force rendering with flash
-               SVG.forceFlash = 1
             }
 
 
