@@ -230,6 +230,22 @@ page: [field in the current page record]
 *gets the current page title*
 
 
+.. _data-type-gettext-pagelayout:
+
+pagelayout:
+-----------
+
+**Syntax**
+
+pagelayout
+
+**Example**::
+
+   foo = pagelayout
+
+*gets the current backend layout*
+
+
 .. _data-type-gettext-current:
 
 current:
