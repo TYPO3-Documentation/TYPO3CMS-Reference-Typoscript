@@ -20,7 +20,7 @@ FORM
 .. note::
 
    This content object has been deprecated in TYPO3 CMS 7.1. If you still use it
-   for now, you need to install the system extension "compatibility6". In the
+   for now, you need to install the extension "compatibility6". In the
    long run, you are advised to migrate to the system extension "form".
 
 This object provides a way to create forms. Example::
