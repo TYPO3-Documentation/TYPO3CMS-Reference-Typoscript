@@ -13,11 +13,8 @@
 COA, COA\_INT
 ^^^^^^^^^^^^^
 
-This is a cObject, in which you can place several other cObjects using
-numbers to enumerate them.
-
-COA stands for "content object array"; it has the alias COBJ\_ARRAY.
-You can also call it "COBJ\_ARRAY" instead of COA.
+COA stands for "content object array" and is a cObject, in which you
+can place several other cObjects using numbers to enumerate them.
 
 You can also create this object as a COA\_INT in which case it works
 exactly like the :ref:`USER_INT <cobj-user-int>` object does: It's
