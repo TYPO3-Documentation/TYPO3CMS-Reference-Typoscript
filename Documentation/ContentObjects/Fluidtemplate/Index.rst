@@ -60,7 +60,7 @@ templateName
 					10 = EXT:frontend/Resources/Private/Templates
 					20 = EXT:sitemodification/Resources/Private/Templates
 				}
-				variable {
+				variables {
 					foo = bar
 				}
 			}
@@ -97,7 +97,7 @@ templateName
 					10 = EXT:frontend/Resources/Private/Templates
 					20 = EXT:sitemodification/Resources/Private/Templates
 				}
-				variable {
+				variables {
 					foo = bar
 				}
 			}
