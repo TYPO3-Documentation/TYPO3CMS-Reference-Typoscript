@@ -1,7 +1,3 @@
-.. ==================================================
-.. FOR YOUR INFORMATION
-.. --------------------------------------------------
-.. -*- coding: utf-8 -*- with BOM.
 
 .. include:: ../../Includes.txt
 
@@ -158,7 +154,7 @@ layoutKey
 
          If you don't have a responsive HTML layout you should use the default layout.
 
-         - :ts:`default` renders a normal non-responsive image as a :code:`<img>` tag:
+         - :ts:`default` renders a normal non-responsive image as a :html:`<img>` tag:
 
            .. code-block:: html
 
@@ -167,7 +163,7 @@ layoutKey
                    height="###HEIGHT###" ###PARAMS### ###ALTPARAMS### ###BORDER### ###SELFCLOSINGTAGSLASH###>
 
          - :ts:`srcset` renders an image tag pointing to a set of images for the different resolutions.
-           They are referenced inside the :ts:`srcset` attribute the :code:`<img>` tag for each defined resolution.
+           They are referenced inside the :ts:`srcset` attribute the :html:`<img>` tag for each defined resolution.
            Each image is actually rendered by TYPO3. Srcset is a proposed addition to HTML5 (http://www.w3.org/html/wg/drafts/srcset/w3c-srcset/).
 
            .. code-block:: html
@@ -176,7 +172,7 @@ layoutKey
                    srcset="|*|###SRC### ###SRCSETCANDIDATE###,|*|###SRC### ###SRCSETCANDIDATE###" ###PARAMS### ###ALTPARAMS######SELFCLOSINGTAGSLASH###>
 
          - :ts:`picture` renders a picture tag containing source tags for each resolutions:
-           and a :code:`<img>` tag for the default image. Picture is in the working draft
+           and a :html:`<img>` tag for the default image. Picture is in the working draft
            for HTML5 (http://www.w3.org/TR/html-picture-element/).
 
            .. code-block:: html
@@ -260,28 +256,28 @@ layout.layoutKey.element
          Possible markers are mainly all parameters which can be defined in the
          IMAGE object, e.g.:
 
-         - :code:`###SRC###` the file URL for the src attribute
+         - :html:`###SRC###` the file URL for the src attribute
 
-         - :code:`###WIDTH###` the width of the image for the width tag (only the
+         - :html:`###WIDTH###` the width of the image for the width tag (only the
            width value)
 
-         - :code:`###HEIGHT###` the height of the image for the height tag (only the
+         - :html:`###HEIGHT###` the height of the image for the height tag (only the
            width value)
 
-         - :code:`###PARAMS###` additional params defined in the IMAGE object (as
+         - :html:`###PARAMS###` additional params defined in the IMAGE object (as
            complete attribute)
 
-         - :code:`###ALTPARAMS###` additional alt params defined in the IMAGE object
+         - :html:`###ALTPARAMS###` additional alt params defined in the IMAGE object
            (as complete attribute)
 
-         - :code:`###BORDER###` border for the image tag (as complete attribute)
+         - :html:`###BORDER###` border for the image tag (as complete attribute)
 
-         - :code:`###SELFCLOSINGTAGSLASH###` renders the closing slash of the tag,
+         - :html:`###SELFCLOSINGTAGSLASH###` renders the closing slash of the tag,
            depending on the setting of
            :ref:`config.xhtmlDoctype <setup-config-xhtmldoctype>` and
            :ref:`config.Doctype <setup-config-doctype>`
 
-         - :code:`###SOURCECOLLECTION###` the additional sources of the image
+         - :html:`###SOURCECOLLECTION###` the additional sources of the image
            depending on the different usage in responsive webdesign. The
            definition of the sources is declared inside
            :ref:`layout.layoutKey.source <cobj-image-layout-layoutkey-source>`
@@ -301,23 +297,23 @@ layout.layoutKey.source
          :ref:`stdWrap <stdWrap>`
 
    Description
-        Defines the HTML code for the :code:`###SOURCECOLLECTION###`
+        Defines the HTML code for the :html:`###SOURCECOLLECTION###`
         of the :ref:`cobj-image-layout-layoutkey-element`.
         Possible markers in the out of the box configuration are:
 
-        - :code:`###SRC###` the file URL for the src attribute
+        - :html:`###SRC###` the file URL for the src attribute
 
-        - :code:`###WIDTH###` the width of the image for the width tag (only the width value)
+        - :html:`###WIDTH###` the width of the image for the width tag (only the width value)
 
-        - :code:`###HEIGHT###` the height of the image for the height tag (only the width value)
+        - :html:`###HEIGHT###` the height of the image for the height tag (only the width value)
 
-        - :code:`###SELFCLOSINGTAGSLASH###` renders the closing slash of the tag, depending on the setting of xhtmlDoctype
+        - :html:`###SELFCLOSINGTAGSLASH###` renders the closing slash of the tag, depending on the setting of xhtmlDoctype
 
-        - :code:`###SRCSETCANDIDATE###` is the value of the srcsetCandidate defined in each SourceCollection.DataKey
+        - :html:`###SRCSETCANDIDATE###` is the value of the srcsetCandidate defined in each SourceCollection.DataKey
 
-        - :code:`###MEDIAQUERY###` is the value of the mediaQuery defined in each SourceCollection.DataKey
+        - :html:`###MEDIAQUERY###` is the value of the mediaQuery defined in each SourceCollection.DataKey
 
-        - :code:`###DATAKEY###` is the name of the dataKey defined in the :ref:`sourceCollection <cobj-image-sourcecollection>`
+        - :html:`###DATAKEY###` is the name of the dataKey defined in the :ref:`sourceCollection <cobj-image-sourcecollection>`
 
         You can define additional markers by adding more datakeys to the collection.
         ###SRCSETCANDIDATE###, ###MEDIAQUERY###, ###DATAKEY### are already defined

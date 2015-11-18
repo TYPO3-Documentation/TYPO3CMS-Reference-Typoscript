@@ -66,8 +66,8 @@ The best known is the "link" tag, which is used to create links.
             }
             tags.bold.stdWrap.stripNL = 1
 
-         This example would e.g. transform :code:`<BOLD>Important!</BOLD>`
-         to :code:`<p style="font-weight: bold;">Important!</p>`.
+         This example would e.g. transform :html:`<BOLD>Important!</BOLD>`
+         to :html:`<p style="font-weight: bold;">Important!</p>`.
 
 .. ###### END~OF~TABLE ######
 
