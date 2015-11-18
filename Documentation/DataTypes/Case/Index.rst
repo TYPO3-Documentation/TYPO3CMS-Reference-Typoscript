@@ -1,7 +1,3 @@
-.. ==================================================
-.. FOR YOUR INFORMATION
-.. --------------------------------------------------
-.. -*- coding: utf-8 -*- with BOM.
 
 .. include:: ../../Includes.txt
 
@@ -11,31 +7,25 @@
 case
 ====
 
-.. container:: table-row
+Data type
+   case
 
-   Data type
-         case
+Examples
+   upper
 
-   Examples
-         upper
+Description
+   Case-conversion.
 
-   Comment
-         Case-conversion.
+   Possible keywords:
 
-         Possible keywords:
-
-         **upper:** Convert all letters of the string to uppercase.
-
-         **lower:** Convert all letters of the string to lowercase.
-
-         **capitalize:** Uppercase the first character of each word in
-         the string.
-
-         **ucfirst:** Convert the first letter of the string to uppercase.
-
-         **lcfirst:** Convert the first letter of the string to lowercase.
-
-         **uppercamelcase:** Convert underscored ``upper_camel_case`` to ``UpperCamelCase``.
-
-         **lowercamelcase:** Covert underscored ``lower_camel_case`` to ``lowerCamelCase``.
-
+   ===============================================================================
+   Keyword               Description
+   -------------------------------------------------------------------------------
+   :ts:`upper`           Convert all letters of the string to upper case
+   :ts:`lower`           Convert all letters of the string to lower case
+   :ts:`capitalize`      Uppercase the first character of each word in the string
+   :ts:`ucfirst`         Convert the first letter of the string to upper case
+   :ts:`lcfirst`         Convert the first letter of the string to lower case
+   :ts:`uppercamelcase`  Convert underscored `upper_camel_case` to `UpperCamelCase`
+   :ts:`lowercamelcase`  Convert underscored `lower_camel_case` to `lowerCamelCase`
+   ================================================================================

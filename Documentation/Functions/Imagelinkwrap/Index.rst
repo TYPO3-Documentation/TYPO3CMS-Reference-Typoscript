@@ -25,7 +25,7 @@ Properties
   ===================================================== ===================================================================== ======= ==================
   Property                                              Data types                                                            stdWrap Default
   ===================================================== ===================================================================== ======= ==================
-  :typoscript:`imageLinkWrap =`                         :ref:`data-type-boolean`                                              yes       0
+  :ts:`imageLinkWrap         =`                         :ref:`data-type-boolean`                                              yes       0
   enable_ =                                             :ref:`data-type-boolean`                                              yes       0
   file_ =                                               :ref:`stdwrap`                                                        yes
   width_ =                                              :ref:`data-type-positive-integer`                                     yes
@@ -38,7 +38,7 @@ Properties
   wrap_ =                                               :ref:`data-type-wrap`                                                 (?)
   target_ =                                             :ref:`data-type-target`                                               yes       "thePicture"
   JSwindow_ =                                           :ref:`data-type-boolean`                                              yes
-  JSwindow.expand_ =                                    :typoscript:`x`, :typoscript:`y` (both :ref:`data-type-integer`)      yes
+  JSwindow.expand_ =                                    :ts:`x`, :ts:`y` (both :ref:`data-type-integer`)                      yes
   JSwindow.newWindow_ =                                 :ref:`data-type-boolean`                                              yes
   JSwindow.altUrl_ =                                    :ref:`data-type-string`                                               yes
   `JSwindow.altUrl\_noDefaultParams`_ =                 :ref:`data-type-boolean`                                              (?)       0
@@ -61,17 +61,17 @@ Property details
 enable
 ~~~~~~
 
-:typoscript:`imageLinkWrap.enable =` :ref:`data-type-boolean`
+:ts:`imageLinkWrap.enable =` :ref:`data-type-boolean`
 
 Whether or not to link the image. Must be set to True to make
-:typoscript:`imageLinkWrap` do anything at all.
+:ts:`imageLinkWrap` do anything at all.
 
 
 
 file
 ~~~~
 
-:typoscript:`imageLinkWrap.file =` :ref:`stdwrap`
+:ts:`imageLinkWrap.file =` :ref:`stdwrap`
 
 Apply :ref:`stdwrap` functionality to the file path.
 
@@ -79,10 +79,10 @@ Apply :ref:`stdwrap` functionality to the file path.
 width
 ~~~~~
 
-:typoscript:`imageLinkWrap.width =` :ref:`data-type-positive-integer`
+:ts:`imageLinkWrap.width =` :ref:`data-type-positive-integer`
 
 Width of the image to be shown in pixels. If you add "m" to
-:typoscript:`width` or :typoscript:`height` or both then the width and
+:ts:`width` or :ts:`height` or both then the width and
 height parameters will be interpreted as maximum and proportions of the
 image will be preserved.
 
@@ -90,10 +90,10 @@ image will be preserved.
 height
 ~~~~~~
 
-:typoscript:`imageLinkWrap.height =` :ref:`data-type-positive-integer`
+:ts:`imageLinkWrap.height =` :ref:`data-type-positive-integer`
 
 Width of the image to be shown in pixels. If you add "m" to
-:typoscript:`width` or :typoscript:`height` or both then the width and
+:ts:`width` or :ts:`height` or both then the width and
 height parameters will be interpreted as maximum and proportions of the
 image will be preserved.
 
@@ -102,7 +102,7 @@ image will be preserved.
 effects
 ~~~~~~~
 
-:typoscript:`imageLinkWrap.effects =` like :ref:`gifbuilder-effect` of
+:ts:`imageLinkWrap.effects =` like :ref:`gifbuilder-effect` of
 :ref:`GIFBUILDER`
 
 Apply image effects to the preview image.
@@ -126,21 +126,21 @@ Example for effects
 sample
 ~~~~~~
 
-:typoscript:`imageLinkWrap.sample =` :ref:`data-type-boolean`
+:ts:`imageLinkWrap.sample =` :ref:`data-type-boolean`
 
-:typoscript:`sample` is a switch which determines how the image
+:ts:`sample` is a switch which determines how the image
 processor (often GraphicsMagick or ImageMagick) calculates the preview
-image. If :typoscript:`sample` is true then ``- sample`` is used with
-GraphicsMagick/ImageMagick instead of ``- geometry`` to calculate the
-preview image. ``sample`` does not use antialiasing and is therefore
-much faster than the ``geometry`` procedure of
-GraphicsMagick/ImageMagick.
+image. If :ts:`sample` is true then `- sample` is used with
+GraphicsMagick or ImageMagick instead of `- geometry` to calculate the
+preview image. `sample` does not use antialiasing and is therefore
+much faster than the `geometry` procedure of
+GraphicsMagick or ImageMagick.
 
 
 alternativeTempPath
 ~~~~~~~~~~~~~~~~~~~
 
-:typoscript:`imageLinkWrap.alternativeTempPath =` :ref:`data-type-path`
+:ts:`imageLinkWrap.alternativeTempPath =` :ref:`data-type-path`
 
 This is used to specify an alternative path to be used for temporary
 images. To be considered legal the value must be part of the list of
@@ -150,19 +150,19 @@ allowed temporary paths (:php:`$TYPO3_CONF_VARS['FE']['allowedTempPaths']`).
 title
 ~~~~~
 
-:typoscript:`imageLinkWrap.title =` :ref:`data-type-string`
+:ts:`imageLinkWrap.title =` :ref:`data-type-string`
 
 Specifies the html-page-title of the preview window.
-Needs :typoscript:`JSwindow = 1`.
+Needs :ts:`JSwindow = 1`.
 
 
 bodyTag
 ~~~~~~~
 
-:typoscript:`imageLinkWrap.bodyTag =` :ref:`data-type-tag`
+:ts:`imageLinkWrap.bodyTag =` :ref:`data-type-tag`
 
-This is the ``<body>``-tag of the preview window.
-Needs :typoscript:`JSwindow = 1`.
+This is the `<body>`-tag of the preview window.
+Needs :ts:`JSwindow = 1`.
 
 Example:
 
@@ -184,20 +184,20 @@ Example:
 wrap
 ~~~~
 
-:typoscript:`imageLinkWrap.wrap =` :ref:`data-type-wrap`
+:ts:`imageLinkWrap.wrap =` :ref:`data-type-wrap`
 
-This wrap is placed around the ``<img>``-tag in the preview window.
-Needs :typoscript:`JSwindow = 1`.
+This wrap is placed around the `<img>`-tag in the preview window.
+Needs :ts:`JSwindow = 1`.
 
 
 target
 ~~~~~~
 
-:typoscript:`imageLinkWrap.target =` :ref:`data-type-target`
+:ts:`imageLinkWrap.target =` :ref:`data-type-target`
 
-This specifies the ``target`` attribute of the link. The attribute
+This specifies the `target` attribute of the link. The attribute
 will only be created if the current :ref:`Doctype <setup-config-doctype>`
-allows it. Needs :typoscript:`JSwindow = 1`. Default: 'thePicture'.
+allows it. Needs :ts:`JSwindow = 1`. Default: 'thePicture'.
 
 Examples:
 
@@ -219,9 +219,9 @@ Examples:
 JSwindow
 ~~~~~~~~
 
-:typoscript:`imageLinkWrap.JSwindow =` :ref:`data-type-boolean`
+:ts:`imageLinkWrap.JSwindow =` :ref:`data-type-boolean`
 
-If true (:typoscript:`JSwindow = 1`) Javascript will be used to open
+If true (:ts:`JSwindow = 1`) Javascript will be used to open
 the image in a new window. The window is automatically resized to match
 the dimensions of the image.
 
@@ -230,10 +230,10 @@ the dimensions of the image.
 JSwindow.expand
 ~~~~~~~~~~~~~~~
 
-:typoscript:`imageLinkWrap.JSwindow.expand =` :typoscript:`x`,
-:typoscript:`y`
+:ts:`imageLinkWrap.JSwindow.expand =` :ts:`x`,
+:ts:`y`
 
-:typoscript:`x` and :typoscript:`x` are of data type
+:ts:`x` and :ts:`x` are of data type
 :ref:`data-type-integer`. The values are added to the width and height
 of the preview image when calculating the width and height of the
 preview window.
@@ -243,15 +243,15 @@ preview window.
 JSwindow.newWindow
 ~~~~~~~~~~~~~~~~~~
 
-:typoscript:`imageLinkWrap.JSwindow.newWindow =` :ref:`data-type-boolean`
+:ts:`imageLinkWrap.JSwindow.newWindow =` :ref:`data-type-boolean`
 
 If the :ref:`Doctype <setup-config-doctype>` allows the :ref:`data-type-target`
 attribute then the image will be opened in a window with the name given
-by ``target``. If that windows is kept open and the next image with the
+by `target`. If that windows is kept open and the next image with the
 same :ref:`data-type-target` attribute is to be shown then it will appear
 in the same preview window.
-If :typoscript:`JSwindow.newWindow` is set to True
-(:typoscript:` = 1`) then a unique hash value is used as ``target``
+If :ts:`JSwindow.newWindow` is set to True
+(:ts:` = 1`) then a unique hash value is used as `target`
 value for each image. This garantees that each image is opened in a new
 window.
 
@@ -260,7 +260,7 @@ window.
 JSwindow.altUrl
 ~~~~~~~~~~~~~~~
 
-:typoscript:`imageLinkWrap.JSwindow.altUrl =` :ref:`data-type-string`
+:ts:`imageLinkWrap.JSwindow.altUrl =` :ref:`data-type-string`
 
 If this returns anything then it is used as URL of the preview window.
 Otherwise the default "showpic" script will be used.
@@ -270,12 +270,12 @@ Otherwise the default "showpic" script will be used.
 JSwindow.altUrl\_noDefaultParams
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-:typoscript:`imageLinkWrap.JSwindow.altUrl_noDefaultParams =`
+:ts:`imageLinkWrap.JSwindow.altUrl_noDefaultParams =`
 :ref:`data-type-boolean`
 
-If true (:typoscript:`JSwindow.altUrl_noDefaultParams = 1`) then the
+If true (:ts:`JSwindow.altUrl_noDefaultParams = 1`) then the
 image parameters are not automatically appended to the
-:typoscript:`altUrl`. This is useful if you want to add them yourself
+:ts:`altUrl`. This is useful if you want to add them yourself
 in a special way.
 
 
@@ -283,7 +283,7 @@ in a special way.
 typolink
 ~~~~~~~~
 
-:typoscript:`imageLinkWrap.typolink =` like :ref:`typolink`
+:ts:`imageLinkWrap.typolink =` like :ref:`typolink`
 
 If this returns anything it will be used as link and override
 everything else.
@@ -294,9 +294,9 @@ everything else.
 directImageLink
 ~~~~~~~~~~~~~~~
 
-:typoscript:`imageLinkWrap.directImageLink =` :ref:`data-type-boolean`
+:ts:`imageLinkWrap.directImageLink =` :ref:`data-type-boolean`
 
-If true (:typoscript:`directImageLink = 1`) then a link will be
+If true (:ts:`directImageLink = 1`) then a link will be
 generated that points directly to the image file. This means that no
 "showpic" script will be used.
 
@@ -305,14 +305,14 @@ generated that points directly to the image file. This means that no
 linkParams
 ~~~~~~~~~~
 
-:typoscript:`imageLinkWrap.linkParams =` any of the options of
+:ts:`imageLinkWrap.linkParams =` any of the options of
 :ref:`typolink`
 
 When the direct link for the preview image is calculated all
-attributes of :typoscript:`linkParams` are used as settings for the
+attributes of :ts:`linkParams` are used as settings for the
 :ref:`typolink` function. In other words: Use the same parameters
-for :typoscript:`linkParams` that you would use for :ref:`typolink`.
-Needs :typoscript:`JSwindow = 0`.
+for :ts:`linkParams` that you would use for :ref:`typolink`.
+Needs :ts:`JSwindow = 0`.
 
 Example:
 
@@ -334,7 +334,7 @@ resized images in the frontend. More complete examples are
 stdWrap
 ~~~~~~~
 
-:typoscript:`imageLinkWrap.stdWrap =` :ref:`stdwrap`
+:ts:`imageLinkWrap.stdWrap =` :ref:`stdwrap`
 
 This adds :ref:`stdwrap` functionality to the almost final
 result.
@@ -344,7 +344,7 @@ result.
 What it does
 ------------
 
-:typoscript:`imageLinkWrap = 1`
+:ts:`imageLinkWrap = 1`
 
 If set to True then this function attaches a link to an image
 that opens a special view of the image. By default the link points to
@@ -352,13 +352,13 @@ the a "showpic" script that knows how to deal with several parameters.
 The script checks an md5-hash to make sure that the parameters are unchanged.
 See :ref:`imageLinkWrap-basic-example-showpic`.
 
-There is an alternative. You may set :typoscript:`directImageLink` to True
-(:typoscript:` = 1`). In that case the link will directly point to the image
+There is an alternative. You may set :ts:`directImageLink` to True
+(:ts:` = 1`). In that case the link will directly point to the image
 - no intermediate is script involved. This method can well be used to display
 images in a lightbox. See :ref:`imageLinkWrap-basic-example-directImageLink`
 and the lightbox examples on this page.
 
-If :typoscript:`JSwindow` is true (:typoscript:` = 1`) more fancy
+If :ts:`JSwindow` is true (:ts:` = 1`) more fancy
 features are available since the preview now is opened by Javascript.
 Then the window title, size, background-color and more can be set to
 special values.
@@ -368,11 +368,11 @@ Implementation
 --------------
 
 - imageLinkWrap__ in API__,
-- method ``imageLinkWrap`` in
-- class ``ContentObjectRenderer`` in
+- method `imageLinkWrap` in
+- class :class:`ContentObjectRenderer` in
 - namespace :php:`namespace TYPO3\CMS\Frontend\ContentObject;` in
 - file :file:`ContentObjectRenderer.php` in
-- folder ``typo3/sysext/frontend/Classes/ContentObject``.
+- folder :file:`typo3/sysext/frontend/Classes/ContentObject`.
 
 __ http://typo3.org/api/typo3cms/search/all_69.html?imageLinkWrap
 __ http://typo3.org/api/typo3cms/

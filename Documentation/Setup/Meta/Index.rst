@@ -1,8 +1,4 @@
-﻿.. ==================================================
-.. FOR YOUR INFORMATION
-.. --------------------------------------------------
-.. -*- coding: utf-8 -*- with BOM.
-
+﻿
 .. include:: ../../Includes.txt
 
 
@@ -122,7 +118,7 @@ Property details
                }
             }
 
-         Thy can be used like ``property`` used for OG tags in the example.
+         They can be used like :ts:`property` used for OG tags in the example.
          You may also supply multiple values for one name, which results in
          multiple meta tags with the same name to be rendered.
 

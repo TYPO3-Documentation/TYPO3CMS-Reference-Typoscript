@@ -405,7 +405,7 @@ tested.
 The IP condition also supports the special keyword "devIP". If - instead
 of using an actual IP address or range - you use this keyword, the IP
 address, which the visitor uses, will be compared to
-:code:`$TYPO3_CONF_VARS['SYS']['devIPmask']` as set in the Install Tool.
+:php:`$TYPO3_CONF_VARS['SYS']['devIPmask']` as set in the Install Tool.
 
 Examples:
 ~~~~~~~~~
@@ -424,7 +424,7 @@ These examples will match any IP address ending with "123" or being
    [IP = *.*.*.123][IP = 192.168.1.34]
 
 This example will match the IP address or range defined in
-:code:`$TYPO3_CONF_VARS['SYS']['devIPmask']`::
+:php:`$TYPO3_CONF_VARS['SYS']['devIPmask']`::
 
    [IP = devIP]
 
@@ -477,7 +477,7 @@ Comparison with the application context, in which TYPO3 is running.
 
 The values are compared to applicationContext, which is set at the
 very beginning of the bootstrap sequence based on
-:code:`getenv('TYPO3_CONTEXT')`.
+:php:`getenv('TYPO3_CONTEXT')`.
 
 Value is comma-list of application contexts to match with.
 Wildcards + and \* are allowed, as well as regular expressions
@@ -1233,12 +1233,12 @@ these three conditions will match:
 
 	<?php
 	namespace Documentation\Examples\TypoScript;
-	
+
 	/**
 	 * Example condition
 	 */
 	class ExampleCondition extends \TYPO3\CMS\Core\Configuration\TypoScript\ConditionMatching\AbstractCondition {
-	
+
 		/**
 		 * Evaluate condition
 		 *

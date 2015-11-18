@@ -446,9 +446,9 @@ dataProcessing
          *(array of class references by full namespace)*
 
    Description
-         Add one or multiple processors to manipulate the ``$data`` variable
+         Add one or multiple processors to manipulate the :php:`$data` variable
          of the currently rendered content object, like tt_content or page.
-         The sub-property ``options`` can be used to add further parameter to the processor class.
+         The sub-property :ts:`options` can be used to add further parameter to the processor class.
 
          **Example:**
 

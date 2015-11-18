@@ -148,7 +148,7 @@ layoutKey
 
    Description
          Defines the render layout for the IMAGE. The render layout is the HTML Code for the IMAGE itself.
-         Possible "out of the box" values are :code:`default`, :code:`srcset`, :code:`picture`, :code:`data`.
+         Possible "out of the box" values are :ts:`default`, :ts:`srcset`, :ts:`picture`, :ts:`data`.
          Each possibility represents a different solution to render the HTML Code of the IMAGE. The default code
          renders the img-tag as plain old html tag with the different attributes.
 
@@ -158,7 +158,7 @@ layoutKey
 
          If you don't have a responsive HTML layout you should use the default layout.
 
-         - :code:`default` renders a normal non-responsive image as a :code:`<img>` tag:
+         - :ts:`default` renders a normal non-responsive image as a :code:`<img>` tag:
 
            .. code-block:: html
 
@@ -166,8 +166,8 @@ layoutKey
                    width="###WIDTH###"
                    height="###HEIGHT###" ###PARAMS### ###ALTPARAMS### ###BORDER### ###SELFCLOSINGTAGSLASH###>
 
-         - :code:`srcset` renders an image tag pointing to a set of images for the different resolutions.
-           They are referenced inside the :code:`srcset` attribute the :code:`<img>` tag for each defined resolution.
+         - :ts:`srcset` renders an image tag pointing to a set of images for the different resolutions.
+           They are referenced inside the :ts:`srcset` attribute the :code:`<img>` tag for each defined resolution.
            Each image is actually rendered by TYPO3. Srcset is a proposed addition to HTML5 (http://www.w3.org/html/wg/drafts/srcset/w3c-srcset/).
 
            .. code-block:: html
@@ -175,7 +175,7 @@ layoutKey
               <img src="###SRC###"
                    srcset="|*|###SRC### ###SRCSETCANDIDATE###,|*|###SRC### ###SRCSETCANDIDATE###" ###PARAMS### ###ALTPARAMS######SELFCLOSINGTAGSLASH###>
 
-         - :code:`picture` renders a picture tag containing source tags for each resolutions:
+         - :ts:`picture` renders a picture tag containing source tags for each resolutions:
            and a :code:`<img>` tag for the default image. Picture is in the working draft
            for HTML5 (http://www.w3.org/TR/html-picture-element/).
 
@@ -187,7 +187,7 @@ layoutKey
                  <img src="###SRC###" ###PARAMS### ###ALTPARAMS######SELFCLOSINGTAGSLASH###>
               </picture>
 
-         - :code:`data` renders an image tag containing data-keys for the different resolutions:
+         - :ts:`data` renders an image tag containing data-keys for the different resolutions:
 
            .. code-block:: html
 
@@ -341,16 +341,16 @@ sourceCollection
    Description
          For responsive images you need different image resolutions for each
          output device and output mode (portrait vs. landscape).
-         :code:`sourceCollection` defines the different resolutions for image
+         :ts:`sourceCollection` defines the different resolutions for image
          rendering, normally you would define al least one
-         :code:`sourceCollection` per layout breakpoint. The amount of
+         :ts:`sourceCollection` per layout breakpoint. The amount of
          sourceCollections, the name and the specification for the
          sourceCollections will be defined by the HTML/CSS/JS code you are
          using. The configuration of the sourceCollection defines the size of
          the image which is rendered.
 
          Each resolution should be set up as separate array in the
-         :code:`sourceCollection`. Each :code:`sourceCollection` consists of
+         :ts:`sourceCollection`. Each :ts:`sourceCollection` consists of
          different :ref:`dataKey <cobj-image-datakey>` properties which you can
          define to suit your needs.
 

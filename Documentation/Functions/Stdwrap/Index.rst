@@ -926,7 +926,7 @@ strtotime
    Description
          Allows conversion of formatted dates to timestamp, e.g. to perform date calculations.
 
-         Possible values are ``1`` or any time string valid as first argument of the PHP ``strtotime()`` function.
+         Possible values are :ts:`1` or any time string valid as first argument of the PHP :php:`strtotime()` function.
 
          **Example:** ::
 

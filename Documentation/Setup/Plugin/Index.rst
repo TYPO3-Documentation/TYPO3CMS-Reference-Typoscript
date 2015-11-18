@@ -207,7 +207,7 @@ userFunc
             plugin.tx_myext_pi1._LOCAL_LANG.de.list_mode_1 = Der erste Modus
 
          All variables, which are used inside an extension with
-         :code:`$this->pi_getLL('list_mode_1', 'Text, if no entry in locallang.xlf', true);`
+         :php:`$this->pi_getLL('list_mode_1', 'Text, if no entry in locallang.xlf', true);`
          can that way be overwritten with TypoScript. The locallang.xlf file in
          the plugin folder in the file system can be used to get an overview of
          the entries the extension uses.

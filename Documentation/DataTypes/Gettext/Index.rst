@@ -1,7 +1,3 @@
-.. ==================================================
-.. FOR YOUR INFORMATION
-.. --------------------------------------------------
-.. -*- coding: utf-8 -*- with BOM.
 
 .. include:: ../../Includes.txt
 
@@ -27,26 +23,26 @@ getText
 
             key:code
 
-         where :code:`key` indicates the source we are trying to retrieve the
-         value from and :code:`code` is some form of path or pointer to the value,
-         which depends on the key used. The various keys (e.g. :code:`field`,
-         :code:`parameter`, :code:`register`...) and their possible codes are
+         where :ts:`key` indicates the source we are trying to retrieve the
+         value from and :ts:`code` is some form of path or pointer to the value,
+         which depends on the key used. The various keys (e.g. :ts:`field`,
+         :ts:`parameter`, :ts:`register`...) and their possible codes are
          described below.
 
-         The :code:`code` can contain pipe characters (\|) to separate keys
-         in a multi-dimensional array. This e.g. works with :code:`gp` and
-         :code:`tsfe`.
+         The :ts:`code` can contain pipe characters (\|) to separate keys
+         in a multi-dimensional array. This e.g. works with :ts:`gp` and
+         :ts:`tsfe`.
 
          **Example:** ::
 
             foo = TSFE:fe_user|user|username
 
-         Spaces around the colon (:) are irrelevant. The :code:`key` is
+         Spaces around the colon (:) are irrelevant. The :ts:`key` is
          case-insensitive.
 
          **Getting alternative values**
 
-         By separating the value of getText with :code:`//` (double slash) you can
+         By separating the value of getText with :ts:`//` (double slash) you can
          supply a number of codes and getText will return the first one, which is not
          empty ("" or zero).
 
@@ -72,15 +68,15 @@ field:
 
 **Syntax**
 
-field: [field name from the current :code:`$cObj->data` array in the cObject, multi-dimensional.]
+field: [field name from the current :php:`$cObj->data` array in the cObject, multi-dimensional.]
 
-- As default the :code:`$cObj->data` array is :code:`$GLOBALS['TSFE']->page`
+- As default the :php:`$cObj->data` array is :php:`$GLOBALS['TSFE']->page`
   (record of the current page!)
-- In :ref:`TMENU <tmenu>` :code:`$cObj->data` is set to the page-record for each menu
+- In :ref:`TMENU <tmenu>` :php:`$cObj->data` is set to the page-record for each menu
   item.
 - In :ref:`CONTENT <cobj-content>`/:ref:`RECORDS <cobj-records>`
-  :code:`$cObj->data` is set to the actual record
-- In :ref:`GIFBUILDER <gifbuilder>` :code:`$cObj->data` is set to the data
+  :php:`$cObj->data` is set to the actual record
+- In :ref:`GIFBUILDER <gifbuilder>` :php:`$cObj->data` is set to the data
   :ref:`GIFBUILDER <gifbuilder>` is supplied with.
 
 **Examples**
@@ -332,7 +328,7 @@ denoted by *name* regardless of server OS, CGI/MODULE version etc. The
 result is identical to the SERVER variable in most cases. This method
 should be used instead of *getEnv* to get reliable values for all
 situations. The internal processing is handled by
-:code:`TYPO3\CMS\Core\Utility\GeneralUtility::getIndpEnv()`
+:php:`TYPO3\CMS\Core\Utility\GeneralUtility::getIndpEnv()`
 
 **Syntax**::
 
@@ -387,7 +383,7 @@ TSFE:
 
 **Syntax**
 
-TSFE: [value from the :code:`$GLOBALS['TSFE']` array, multi-dimensional]
+TSFE: [value from the :php:`$GLOBALS['TSFE']` array, multi-dimensional]
 
 **Example**::
 

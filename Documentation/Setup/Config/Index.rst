@@ -2628,7 +2628,7 @@ sys\_language\_isocode
 
    Description
         ISO 639-1 language code for the according language. By default this
-        is being set by ``TSFE:sys_language_isocode``. The value is derived
+        is being set by :ts:`TSFE:sys_language_isocode`. The value is derived
         from the ISO code that is stored within the sys_language record.
         You can override the value, which was retrieved that way, with this
         setting.
@@ -2655,7 +2655,7 @@ sys\_language\_isocode\_default
 
    Description
          ISO 639-1 language code for the default language (that is
-         ``sys_language_uid = 0``).
+         :ts:`sys_language_uid = 0`).
 
          **Example**::
 

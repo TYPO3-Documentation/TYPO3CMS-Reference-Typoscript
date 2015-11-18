@@ -421,7 +421,7 @@ certain page" and so on.
 
 .. note::
 
-   :code:`.entryLevel` generally is not supported together with the
+   :ts:`.entryLevel` generally is not supported together with the
    :code:.special` property! The only exception is :code:special = keywords`.
 
 Also be aware that this property selects pages for the first level in
