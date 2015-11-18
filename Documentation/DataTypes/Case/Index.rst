@@ -18,9 +18,9 @@ Description
 
    Possible keywords:
 
-   ===================== =========================================================
+   ===================== ==========================================================
    Keyword               Description
-   --------------------- ---------------------------------------------------------
+   --------------------- ----------------------------------------------------------
    :ts:`upper`           Convert all letters of the string to upper case
    :ts:`lower`           Convert all letters of the string to lower case
    :ts:`capitalize`      Uppercase the first character of each word in the string
