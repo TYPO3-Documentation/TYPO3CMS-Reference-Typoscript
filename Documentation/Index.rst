@@ -1,7 +1,3 @@
-.. ==================================================
-.. FOR YOUR INFORMATION
-.. --------------------------------------------------
-.. -*- coding: utf-8 -*- with BOM.
 
 .. include:: Includes.txt
 
@@ -49,7 +45,8 @@ a GNU/GPL CMS/Framework available from `www.typo3.org
 <https://typo3.org/>`_
 
 
-**Official documentation**
+Official documentation
+======================
 
 This document is included as part of the official TYPO3 documentation.
 It has been approved by the TYPO3 Documentation Team following a peer-
@@ -59,7 +56,8 @@ Documentation Team (documentation@typo3.org). Official documents are
 kept up-to-date to the best of the Documentation Team's abilities.
 
 
-**Core Manual**
+Core Manual
+===========
 
 This document is a Core Manual. Core Manuals address the built in
 functionality of TYPO3 and are designed to provide the reader with in-
@@ -72,18 +70,11 @@ Core Manuals are written as reference manuals. The reader should rely
 on the Table of Contents to identify what particular section will best
 address the task at hand.
 
-.. only:: html
 
-   .. tip::
-
-      :ref:`Sitemap`
-
-**Table of Contents**
+Table of Contents and Sitemap
+=============================
 
 .. toctree::
-   :maxdepth: 5
-   :titlesonly:
-   :glob:
 
    Introduction/Index
    DataTypes/Index
@@ -96,4 +87,3 @@ address the task at hand.
    MenuObjects/Index
    AppendixA/Index
    Targets
-

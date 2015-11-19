@@ -1,343 +1,421 @@
-.. ==================================================
-.. FOR YOUR INFORMATION
-.. --------------------------------------------------
-.. -*- coding: utf-8 -*- with BOM.
 
 .. include:: ../../Includes.txt
+
 
 
 .. _filelink:
 
 filelink
-^^^^^^^^
+========
 
-Creates a list of file links. Input is a filename in the path "path".
+:aspect:`Function:`
+   filelink
 
-icon, size and file are rendered in the listed order.
+:aspect:`Description:`
+   Creates a list of file links. Input is a filename specified in :ts:`path`.
+   icon, size and file are rendered in the listed order.
 
-.. ### BEGIN~OF~TABLE ###
+:aspect:`Overview:`
+   ::
 
-.. container:: table-row
+      1.filelink {
+         altText =
+         ATagBeforeWrap =
+         ATagParams =
+         emptyTitleHandling =
+         file =
+         icon =
+         icon_link =
+         icon_image_ext_list =
+         icon_thumbSize =
+         iconCObject =
+         # jumpurl?
+         jumpurl =
+         labelStdWrap =
+         longdescURL =
+         path =
+         removePrependedNumbers =
+         size = =
+         stdWrap =
+         target =
+         # titleText ?
+         titleText =
+         typolinkConfiguration =
+         wrap =
+      }
 
-   Property
-         path
+altText
+-------
 
-   Data type
-         path /:ref:`stdWrap <stdwrap>`
+:aspect:`Property:`
+   altText
 
-   Description
-         **Example:** ::
+:aspect:`Data type:`
+   string /:ref:`stdWrap <stdwrap>`
 
-            path = "uploads/media/"
+:aspect:`Description:`
+   For icons (image made with "iconCObject" must have their own
+   properties). If no alttext is specified, it will use an empty alttext
 
 
-.. container:: table-row
 
-   Property
-         icon
+ATagBeforeWrap
+--------------
 
-   Data type
-         boolean /:ref:`stdWrap <stdwrap>`
+:aspect:`Property:`
+   ATagBeforeWrap
 
-   Description
-         Set, if an icon should be shown.
+:aspect:`Data type:`
+   boolean
 
-         The filename of the icon used is the one of the filetype of the file
-         given in "path" (see above) plus extension (by default gif). E.g. for
-         CSS files the icon file "css.gif" will be used by default.
+:aspect:`Description:`
+   If set, the link is first wrapped with "*.wrap*" and then the <A>-tag.
 
-         If for a certain filetype no icon file is found in icon.path, the file
-         "default" plus extension (e.g. "default.gif") will be used.
+:aspect:`Default:`
+   0
 
-         The following sub-properties are available:
 
-         **path:** Path to the icon set (default: typo3/gfx/fileicons/)
 
-         **ext:** File extension of icons (default: gif)
+ATagParams
+----------
 
-         **widthAttribute:** Width of the icons in pixels (default: 18)
+:aspect:`Property:`
+   ATagParams
 
-         **heightAttribute:** Height of the icons in pixels (default: 16)
+:aspect:`Data type:`
+   <A>-params /:ref:`stdWrap <stdwrap>`
 
-         These sub-properties all have stdWrap available.
+:aspect:`Description:`
+   Additional parameters
 
+:aspect:`Example:`
+   `class="board"`
 
-.. container:: table-row
 
-   Property
-         icon\_image\_ext\_list
 
-   Data type
-         *list of image extensions* /:ref:`stdWrap <stdwrap>`
+emptyTitleHandling
+------------------
 
-   Description
-         This is a comma-separated list of those file extensions that should
-         render as thumbnails instead of icons.
+:aspect:`Property:`
+   emptyTitleHandling
 
+:aspect:`Data type:`
+string /:ref:`stdWrap <stdwrap>`
 
-.. container:: table-row
+:aspect:`Description:`
+   Value can be :ts:`keepEmpty` to preserve an empty title attribute or
+   :ts:`useAlt` to use the alt attribute instead.
 
-   Property
-         icon\_thumbSize
+:aspect:`Default:`
+   :ts:`useAlt`
 
-   Data type
-         string /:ref:`stdWrap <stdwrap>`
 
-   Description
-         Defines the size of the thumbnail in pixels.
 
-         "icon" needs to be set for the option to take effect and the file
-         extension of the image file must be part of "icon\_image\_ext\_list".
+file
+----
 
-         You can set one or two values, see the examples. If you set two
-         values, the first value will define the maximum width and the second
-         one the maximum height. The aspect ratio of the original image will be
-         preserved.
+:aspect:`Property:`
+   file
 
-         **Examples:** ::
+:aspect:`Data type:`
+   ->stdWrap
 
-            icon_thumbSize = 150
-            icon_thumbSize = 40x40
+:aspect:`Description:`
+   stdWrap of the label (by default the label is the filename) after
+   having been wrapped with A-tag!
 
 
-.. container:: table-row
 
-   Property
-         iconCObject
+icon
+----
 
-   Data type
-         cObject
+:aspect:`Property:`
+   icon
 
-   Description
-         Enter a cObject to use alternatively for the icons, e.g. IMAGE type.
+:aspect:`Data type:`
+   :ref:`boolean <data-type-bool>`/:ref:`stdWrap <stdwrap>`
 
-         If this is set, it will substitute the use of the thumbs-script for
-         display of thumbnails.
+:aspect:`Overview:`
+   ::
 
+      1.filelink {
+         icon = 1
+         icon.path =
+         icon.ext =
+         icon.widthAttribute =
+         icon.heightAttribute =
+         icon.stdWrap {
+            # ...
+         ]
+      }
 
-.. container:: table-row
 
-   Property
-         icon\_link
+:aspect:`Description:`
+   Set, if an icon should be shown.
 
-   Data type
-         boolean
+   The filename of the icon used is the one of the filetype of the file
+   given in path_ (see above) plus extension (by default :file:`.gif`).
+   For example for CSS files the icon file :file:`css.gif` will be used
+   by default.
+   If for a certain filetype no icon file is found in :ts:`icon.path`, the file
+   :file:`default` plus extension (for example :file:`default.gif`) will be used.
 
-   Description
-         Set if the icon should be linked as well.
+   The following sub-properties are available and have stdWrap functionality:
 
-   Default
-         0
+   - :ts:`path`: Path to the icon set. Default is :file:`typo3/gfx/fileicons/`.
 
+   - :ts:`ext`: File extension of icons. Default is :file:`.gif`.
 
-.. container:: table-row
+   - :ts:`widthAttribute`: Width of the icons in pixels. Default: 18
 
-   Property
-         labelStdWrap
+   - :ts:`heightAttribute` Height of the icons in pixels. Default: 16
 
-   Data type
-         ->stdWrap
 
-   Description
-         stdWrap options for the label (by default the label is the filename)
-         before being wrapped with the A-tags.
 
-         Use this to e.g. import another label from a database field or such.
+icon\_link
+----------
 
+:aspect:`Property:`
+   icon\_link
 
-.. container:: table-row
+:aspect:`Data type:`
+   boolean
 
-   Property
-         wrap
+:aspect:`Description:`
+   Set if the icon should be linked as well.
 
-   Data type
-         wrap /:ref:`stdWrap <stdwrap>`
+:aspect:`Default:`
+   0
 
-   Description
-         Wraps the links.
 
 
-.. container:: table-row
+icon\_image\_ext\_list
+----------------------
 
-   Property
-         ATagBeforeWrap
+:aspect:`Property:`
+   icon\_image\_ext\_list
 
-   Data type
-         boolean
+:aspect:`Data type:`
+   *list of image extensions* /:ref:`stdWrap <stdwrap>`
 
-   Description
-         If set, the link is first wrapped with "*.wrap*" and then the
-         <A>-tag.
+:aspect:`Description:`
+   This is a comma-separated list of those file extensions that should
+   render as thumbnails instead of icons.
 
-   Default
-         0
 
 
-.. container:: table-row
+icon\_thumbSize
+---------------
 
-   Property
-         file
+:aspect:`Property:`
+   icon\_thumbSize
 
-   Data type
-         ->stdWrap
+:aspect:`Data type:`
+   string /:ref:`stdWrap <stdwrap>`
 
-   Description
-         stdWrap of the label (by default the label is the filename) after
-         having been wrapped with A-tag!
+:aspect:`Description:`
+   Defines the size of the thumbnail in pixels.
 
+   :ts:`icon` needs to be set for the option to take effect and the file
+   extension of the image file must be part of :ts:`icon_image_ext_list`.
+   You can set one or two values, see the examples. If you set two
+   values, the first value will define the maximum width and the second
+   one the maximum height. The aspect ratio of the original image will be
+   preserved.
 
-.. container:: table-row
+:aspect:`Examples:`
+   ::
 
-   Property
-         size
+      icon_thumbSize = 150
+      icon_thumbSize = 40x40
 
-   Data type
-         boolean /:ref:`stdWrap <stdwrap>`
 
-   Description
-         Set if size should be shown
 
+iconCObject
+-----------
 
-.. container:: table-row
+:aspect:`Property:`
+   iconCObject
 
-   Property
-         target
+:aspect:`Data type:`
+   cObject
 
-   Data type
-         target /:ref:`stdWrap <stdwrap>`
+:aspect:`Description:`
+   Enter a cObject to use alternatively for the icons, for example IMAGE type.
+   If this is set, it will substitute the use of the thumbs-script for
+   display of thumbnails.
 
-   Description
-         Target for the <a>-tag.
 
 
-.. container:: table-row
+jumpurl
+-------
+   ?
 
-   Property
-         stdWrap
 
-   Data type
-         ->stdWrap
 
 
-.. container:: table-row
+labelStdWrap
+------------
 
-   Property
-         ATagParams
+:aspect:`Property:`
+   labelStdWrap
 
-   Data type
-         <A>-params /:ref:`stdWrap <stdwrap>`
+:aspect:`Data type:`
+   ->stdWrap
 
-   Description
-         Additional parameters
+:aspect:`Description:`
+   stdWrap options for the label (by default the label is the filename)
+   before being wrapped with the A-tags.
+   Use this to for example import another label from a database field or such.
 
-         **Example:**
 
-         class="board"
 
+longdescURL
+-----------
 
-.. container:: table-row
+:aspect:`Property:`
+   longdescURL
 
-   Property
-         removePrependedNumbers
+:aspect:`Data type:`
+   string /:ref:`stdWrap <stdwrap>`
 
-   Data type
-         boolean
+:aspect:`Description:`
+   For icons (image made with "iconCObject" must have their own
+   properties).
+   "longdesc" attribute (URL pointing to document with extensive details
+   about image).
 
-   Description
-         If set, any 2-digit *appended(!)* numbers in the filename are removed.
-         E.g. "filename\_23.gif" then becomes "filename.gif".
 
 
-.. container:: table-row
+path
+----
 
-   Property
-         altText
+:aspect:`Property:`
+   path
 
-         titleText
+:aspect:`Data type:`
+   path /:ref:`stdWrap <stdwrap>`
 
-   Data type
-         string /:ref:`stdWrap <stdwrap>`
+:aspect:`Example:`
+   :ts:`path = "uploads/media/`
 
-   Description
-         For icons (image made with "iconCObject" must have their own
-         properties)
 
-         If no alttext is specified, it will use an empty alttext
 
+removePrependedNumbers
+----------------------
 
-.. container:: table-row
+:aspect:`Property:`
+   removePrependedNumbers
 
-   Property
-         emptyTitleHandling
+:aspect:`Data type:`
+   boolean
 
-   Data type
-         string /:ref:`stdWrap <stdwrap>`
+:aspect:`Description:`
+   If set, any 2-digit *appended(!)* numbers in the filename are removed.
 
-   Description
-         Value can be "keepEmpty" to preserve an empty title attribute, or
-         "useAlt" to use the alt attribute instead.
+:aspect:`Example:`
+   If set, :file:`filename_23.gif` becomes :file:`filename.gif`.
 
-   Default
-         useAlt
 
 
-.. container:: table-row
+size
+----
 
-   Property
-         longdescURL
+:aspect:`Property:`
+   size
 
-   Data type
-         string /:ref:`stdWrap <stdwrap>`
+:aspect:`Data type:`
+   boolean /:ref:`stdWrap <stdwrap>`
 
-   Description
-         For icons (image made with "iconCObject" must have their own
-         properties)
+:aspect:`Description:`
+   Set if size should be shown
 
-         "longdesc" attribute (URL pointing to document with extensive details
-         about image).
 
 
-.. container:: table-row
+stdWrap
+-------
 
-   Property
-         typolinkConfiguration
+:aspect:`Property:`
+   stdWrap
 
-   Data type
-         :ref:`->typolink <typolink>`
+:aspect:`Data type:`
+   ->stdWrap
 
-   Description
-         This property can be used to pass additional typolink settings for the generated file link.
 
-         Please note that these properties will be ignored because they are set by the filelink function:
 
-         - parameter
-         - fileTarget
-         - title
-         - ATagParams
+target
+------
 
+:aspect:`Property:`
+   target
 
-.. ###### END~OF~TABLE ######
+:aspect:`Data type:`
+   target /:ref:`stdWrap <stdwrap>`
 
-[tsref:->filelink]
+:aspect:`Description:`
+   Target for the <a>-tag.
+
+
+
+titleText
+---------
+?
+
+
+
+
+typolinkConfiguration
+---------------------
+
+:aspect:`Property:`
+   typolinkConfiguration
+
+:aspect:`Data type:`
+   :ref:`->typolink <typolink>`
+
+:aspect:`Description:`
+   This property can be used to pass additional typolink settings for
+   the generated file link.
+   Please note that the following properties will be ignored because they are
+   set by the filelink function:
+   :ts:`ATagParams`,
+   :ts:`fileTarget`,
+   :ts:`parameter`,
+   :ts:`title`.
+
+
+
+wrap
+----
+
+:aspect:`Property:`
+   wrap
+
+:aspect:`Data type:`
+   wrap /:ref:`stdWrap <stdwrap>`
+
+:aspect:`Description:`
+   Wraps the links.
+
 
 
 .. _filelink-examples:
 
-Example:
-""""""""
+Filelink Example
+================
 
 ::
 
-       1.filelink {
-         path = uploads/media/
-         icon = 1
-         icon.wrap = <td> | </td>
-         size = 1
-         size.wrap = <td> | </td>
-         file.fontTag = {$styles.content.uploads.wrap}
-         file.wrap = <td> | </td>
-         jumpurl = 1
-         target = _blank
-         stdWrap = <tr> | </tr>
-       }
+   1.filelink {
+      path = uploads/media/
+      icon = 1
+      icon.wrap = <td> | </td>
+      size = 1
+      size.wrap = <td> | </td>
+      file.fontTag = {$styles.content.uploads.wrap}
+      file.wrap = <td> | </td>
+      jumpurl = 1
+      target = _blank
+      stdWrap = <tr> | </tr>
+   }
 

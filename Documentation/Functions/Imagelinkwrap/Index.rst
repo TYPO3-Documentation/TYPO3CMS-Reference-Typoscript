@@ -25,7 +25,7 @@ Properties
   ===================================================== ===================================================================== ======= ==================
   Property                                              Data types                                                            stdWrap Default
   ===================================================== ===================================================================== ======= ==================
-  :ts:`imageLinkWrap         =`                         :ref:`data-type-boolean`                                              yes       0
+  :ts:`imageLinkWrap =`                                 :ref:`data-type-boolean`                                              yes       0
   enable_ =                                             :ref:`data-type-boolean`                                              yes       0
   file_ =                                               :ref:`stdwrap`                                                        yes
   width_ =                                              :ref:`data-type-positive-integer`                                     yes

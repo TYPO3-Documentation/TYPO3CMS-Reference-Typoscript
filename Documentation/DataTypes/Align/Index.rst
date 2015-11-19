@@ -1,7 +1,3 @@
-.. ==================================================
-.. FOR YOUR INFORMATION
-.. --------------------------------------------------
-.. -*- coding: utf-8 -*- with BOM.
 
 .. include:: ../../Includes.txt
 
@@ -11,19 +7,14 @@
 align
 =====
 
-.. container:: table-row
+:aspect:`Data type:`
+   align
 
-   Data type
-         align
+:aspect:`Description:`
+   Decides about alignment, typically in HTML-tags.
 
-   Examples
-         right
+:aspect:`Examples:`
+   :ts:`left`, :ts:`center`, :ts:`right`
 
-   Comment
-         **right / left / center**
-
-         Decides alignment, typically in HTML-tags
-
-   Default
-         left
-
+:aspect:`Default:`
+   :ts:`left`
