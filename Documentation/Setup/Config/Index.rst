@@ -1011,8 +1011,17 @@ disableLanguageHeader
 
    Description
          TYPO3 by default sends a "Content-language: XX" HTTP header,
-         where "XX" is the ISO code from sys_language_isocode. If this
-         option is set, this header will not be sent.
+         where "XX" is the ISO code of the according lanuage.
+
+         For the default language (sys_language_uid=0), this header is based
+         on the value of config.sys_language_isocode_default. If this is unset,
+         config.language is used. If that is unset as well, it finally falls
+         back to "en".
+
+         For other languages, it uses the value from language_isocode from
+         sys_language. That value may be overwritten by config.sys_language_isocode.
+
+         If config.disableLanguageHeader is set, this header will not be sent.
 
    Default
          0
