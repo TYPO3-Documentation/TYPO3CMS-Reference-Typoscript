@@ -68,6 +68,7 @@ Properties
    `includeJSFooterlibs.[array]`_ :ref:`data-type-resource`
    `includeJSLibs.[array]`_       :ref:`data-type-resource`
    `inlineLanguageLabel`_         *(array of strings)*
+   `inlineLanguageLabelFiles`_    *(array of strings)*
    `inlineSettings`_              *(array of strings)*
    `insertClassesFromRTE`_        :ref:`data-type-boolean`
    `javascriptLibs`_              *(array of strings)*
@@ -737,7 +738,10 @@ inlineLanguageLabel
          *(array of strings)*
 
    Description
-         ExtJS specific, adds language labels to the page.
+         Adds language labels to the page.
+
+         Has "LLL:" support. You can either add a constant or a locallang
+         reference using page.inlineLanguageLabel.[key].
 
          **Example:** ::
 
@@ -766,7 +770,7 @@ inlineLanguageLabelFiles
          *(array of strings)*
 
    Description
-         ExtJS specific, adds language labels to the page.
+         Adds language labels to the page.
 
          **Available sub-properties:**
 
