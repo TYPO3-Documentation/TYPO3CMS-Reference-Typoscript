@@ -1910,49 +1910,31 @@ postUserFunc
 
             page = PAGE
             page.typeNum = 0
-            # Include the PHP file with our custom code
-            includeLibs.reverseString = fileadmin/example_reverseString.php
 
             page.10 = TEXT
             page.10 {
               value = Hello World!
-              stdWrap.postUserFunc = user_reverseString
+              stdWrap.postUserFunc = Your\NameSpace\YourClass->reverseString
               stdWrap.postUserFunc.uppercase = 1
             }
 
             page.20 = TEXT
             page.20 {
               value = Hello World!
-              stdWrap.postUserFunc = user_various->reverseString
+              stdWrap.postUserFunc = Your\NameSpace\YourClass->reverseString
               stdWrap.postUserFunc.uppercase = 1
               stdWrap.postUserFunc.typolink = 11
             }
 
-         The file fileadmin/example_reverseString.php might amongst
-         other things contain:
+         Your methods will get the parameters ``$content`` and ``$conf`` (in that order) and need to return a string.
 
          .. code-block:: php
-
-            /**
-             * Custom function for data processing
-             *
-             * @param	string		When custom functions are used for data processing (like in stdWrap functions), the $content variable will hold the value to be processed. When functions are meant to just return some generated content (like in USER and USER_INT objects), this variable is empty.
-             * @param	array		TypoScript properties passed to this function.
-             * @return	string		The input string reversed. If the TypoScript property "uppercase" was set, it will also be in uppercase.
-             */
-            function user_reverseString($content, $conf) {
-              $content = strrev($content);
-              if ($conf['uppercase']) {
-                $content = strtoupper($content);
-              }
-              return $content;
-            }
 
             /**
              * Example of a method in a PHP class to be called from TypoScript
              *
              */
-            class user_various {
+            class YourClass {
               /**
                * Reference to the parent (calling) cObject set from TypoScript
                */
@@ -1964,15 +1946,14 @@ postUserFunc
                * @param	string		String to process (from stdWrap)
                * @param	array		TypoScript properties passed on to this method.
                * @return	string	The input string reversed. If the TypoScript property "uppercase" was set, it will also be in uppercase. May also be linked.
-               * @see user_reverseString()
                */
               public function reverseString($content, $conf) {
                 $content = strrev($content);
-                if ($conf['uppercase']) {
+                if (isset($conf['uppercase']) && $conf['uppercase'] === '1') {
                   // Use the method caseshift() from ContentObjectRenderer.php.
                   $content = $this->cObj->caseshift($content, 'upper');
                 }
-                if ($conf['typolink']) {
+                if (isset($conf['typolink'])) {
                   // Use the method getTypoLink() from ContentObjectRenderer.php.
                   $content = $this->cObj->getTypoLink($content, $conf['typolink']);
                 }
@@ -1982,10 +1963,10 @@ postUserFunc
 
          For page.10 the content, which is present when postUserFunc is
          executed, will be given to the PHP function
-         user_reverseString(). The result will be "!DLROW OLLEH".
+         ``reverseString()``. The result will be "!DLROW OLLEH".
 
          The content of page.20 will be processed by the function
-         reverseString() from the class user_various. This also returns
+         ``reverseString()`` from the class ``YourClass``. This also returns
          the text "!DLROW OLLEH", but wrapped into a link to the page
          with the ID 11. The result will be "<a
          href="index.php?id=11">!DLROW OLLEH</a>".
