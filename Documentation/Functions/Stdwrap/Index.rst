@@ -1941,10 +1941,10 @@ postUserFunc
               public $cObj;
 
               /**
-               * Doing the same as user_reverseString() but with a class. Also demonstrates how this gives us the ability to use methods in the parent object.
+               * Custom method for data processing. Also demonstrates how this gives us the ability to use methods in the parent object.
                *
-               * @param	string		String to process (from stdWrap)
-               * @param	array		TypoScript properties passed on to this method.
+               * @param	string		When custom methods are used for data processing (like in stdWrap functions), the $content variable will hold the value to be processed. When methods are meant to just return some generated content (like in USER and USER_INT objects), this variable is empty.
+               * @param	array		TypoScript properties passed to this method.
                * @return	string	The input string reversed. If the TypoScript property "uppercase" was set, it will also be in uppercase. May also be linked.
                */
               public function reverseString($content, $conf) {
