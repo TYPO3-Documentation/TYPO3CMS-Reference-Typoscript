@@ -7,19 +7,15 @@
 case
 ====
 
-Data type
-   `case`
+:aspect:`Data type:`
+   case
 
-Examples
-   :ts:`upper`
+:aspect:`Description:`
+   Do a case conversion.
 
-Description
-   Case-conversion.
-
-   Possible keywords:
-
+:aspect:`Possible values:`
    ===================== ==========================================================
-   Keyword               Description
+   Value                 Effect
    --------------------- ----------------------------------------------------------
    :ts:`upper`           Convert all letters of the string to upper case
    :ts:`lower`           Convert all letters of the string to lower case
@@ -29,3 +25,14 @@ Description
    :ts:`uppercamelcase`  Convert underscored `upper_camel_case` to `UpperCamelCase`
    :ts:`lowercamelcase`  Convert underscored `lower_camel_case` to `lowerCamelCase`
    ===================== ==========================================================
+
+:aspect:`Example:`
+   Code::
+
+      10 = TEXT
+      10.value = Hello world!
+      10.case = upper
+
+   Result::
+
+      HELLO WORLD!
