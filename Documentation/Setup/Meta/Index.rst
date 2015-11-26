@@ -17,17 +17,17 @@ Properties
    ========================= ================================ ====================== =======
    Property                  Data Type                        :ref:`stdwrap`         Default
    ========================= ================================ ====================== =======
-   `(array of key names)`_   string /:ref:`stdWrap <stdwrap>`
+   `array of key names`_     string /:ref:`stdWrap <stdwrap>`
    ========================= ================================ ====================== =======
 
 
 .. _REPLACE-ME-array-of-key-names:
 
-(array of key names)
---------------------
+array of key names
+------------------
 
 :aspect:`Property:`
-   (array of key names)
+   array of key names
 
 :aspect:`Data type:`
    string /:ref:`stdWrap <stdwrap>`
@@ -40,9 +40,9 @@ Properties
    :ts:`value` is the content of the meta tag. If the value is empty (after
    trimming), the meta tag is not generated.
 
-   The :ts:`key` can be the name of any meta tag, for example "description" or
-   "keywords". If the key is "refresh" (case insensitive), then the
-   "http-equiv" attribute is used in the meta tag instead of the "name"
+   The :ts:`key` can be the name of any meta tag, for example :html:`description` or
+   :html:`keywords`. If the key is :ts:`refresh` (case insensitive), then the
+   :html:`http-equiv` attribute is used in the meta tag instead of the :html:`name`
    attribute.
 
    For each key the following sub-property is available:
