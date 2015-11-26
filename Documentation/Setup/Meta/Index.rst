@@ -4,17 +4,13 @@
 
 .. _meta:
 
+====
 meta
 ====
 
-.. only:: html
-
-   .. contents::
-      :local:
-      :depth: 1
 
 Properties
-^^^^^^^^^^
+==========
 
 .. container:: ts-properties
 
@@ -24,116 +20,101 @@ Properties
    `(array of key names)`_   string /:ref:`stdWrap <stdwrap>`
    ========================= ================================ ====================== =======
 
-Property details
-^^^^^^^^^^^^^^^^
-
-.. only:: html
-
-   .. contents::
-      :local:
-      :depth: 1
-
-.. ### BEGIN~OF~TABLE ###
-
 
 .. _REPLACE-ME-array-of-key-names:
 
 (array of key names)
-""""""""""""""""""""
+--------------------
 
-.. container:: table-row
+:aspect:`Property:`
+   (array of key names)
 
-   Property
-         *(array of key names)*
+:aspect:`Data type:`
+   string /:ref:`stdWrap <stdwrap>`
 
-   Data type
-         string /:ref:`stdWrap <stdwrap>`
+:aspect:`Description:`
+   To define meta tags.
 
-   Description
-         Allows you to define meta tags.
+   Use the scheme :ts:`meta.key = value`.
 
-         Use the scheme *meta.key = value*.
+   :ts:`value` is the content of the meta tag. If the value is empty (after
+   trimming), the meta tag is not generated.
 
-         The "key" can be the name of any meta tag, e.g. "description" or
-         "keywords". If the key is "refresh" (case insensitive), then the
-         "http-equiv" attribute is used in the meta tag instead of the "name"
-         attribute.
+   The :ts:`key` can be the name of any meta tag, for example "description" or
+   "keywords". If the key is "refresh" (case insensitive), then the
+   "http-equiv" attribute is used in the meta tag instead of the "name"
+   attribute.
 
-         "value" is the content of the meta tag. If the value is empty (after
-         trimming), the meta tag is not generated.
+   For each key the following sub-property is available:
 
-         **Examples:** ::
+   :aspect:`httpEquivalent:`
+      If set to 1, the :html:`http-equiv` attribute is used in the meta
+      tag instead of the :html:`name` attribute. Default: 0.
 
-            meta.description = This is the description of the content in this document.
-            meta.keywords = These are the keywords.
-            # Get value from "keywords" field of the current or any parent page
-            meta.keywords.data = levelfield:-1, keywords, slide
-            meta.refresh = [seconds]; [URL, leave blank for same page]
 
-         For each key the following sub-property is available:
+:aspect:`Examples:`
+   Simple definition::
 
-         **httpEquivalent:** If set to 1, the http-equiv attribute is used in the meta
-         tag instead of the "name" attribute. Default: 0.
+      meta.description = This is the description of the content in this document.
+      meta.keywords = These are the keywords.
 
-         **Example:** ::
+   Fetch data from the keywords field of the current or any parent page::
 
-            meta.X-UA-Compatible = IE=edge,chrome=1
-            meta.X-UA-Compatible.httpEquivalent = 1
+      meta.keywords.data = levelfield:-1, keywords, slide
 
-         This results in <meta http-equiv="X-UA-Compatible"
-         content="IE=edge,chrome=1">.
+   Make a meta.refresh entry::
 
-         Meta tags with a different attribute name are supported like the Open Graph meta tags.
+      meta.refresh = [seconds]; [URL, leave blank for same page]
 
-         **Example:** ::
+   Usage of :ts:`httpEquivalent`::
 
-            page {
-               meta {
-                  X-UA-Compatible = IE=edge,chrome=1
-                  X-UA-Compatible.attribute = http-equiv
+      meta.X-UA-Compatible = IE=edge,chrome=1
+      meta.X-UA-Compatible.httpEquivalent = 1
 
-                  keywords = TYPO3
+   Result:
 
-                  og:site_name = TYPO3
-                  og:site_name.attribute = property
+   .. code-block:: html
 
-                  description = Inspiring people to share Normal
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">.
 
-                  dc\.description = Inspiring people to share [DC tags]
+   Meta tags with a different attribute name are supported like the
+   Open Graph meta tags::
 
-                  og:description = Inspiring people to share [OpenGraph]
-                  og:description.attribute = property
-
-                  og:locale = en_GB
-                  og:locale.attribute = property
-
-                  og:locale:alternate {
-                     attribute = property
-                     value {
-                        1 = fr_FR
-                        2 = de_DE
-                     }
-                  }
-
-                  refresh = 5; url=http://example.com/
-                  refresh.attribute = http-equiv
+      page {
+         meta {
+            X-UA-Compatible = IE=edge,chrome=1
+            X-UA-Compatible.attribute = http-equiv
+            keywords = TYPO3
+            og:site_name = TYPO3
+            og:site_name.attribute = property
+            description = Inspiring people to share Normal
+            dc.description = Inspiring people to share [DC tags]
+            og:description = Inspiring people to share [OpenGraph]
+            og:description.attribute = property
+            og:locale = en_GB
+            og:locale.attribute = property
+            og:locale:alternate {
+               attribute = property
+               value {
+                  1 = fr_FR
+                  2 = de_DE
                }
             }
+            refresh = 5; url=http://example.com/
+            refresh.attribute = http-equiv
+         }
+      }
 
-         They can be used like :ts:`property` used for OG tags in the example.
-         You may also supply multiple values for one name, which results in
-         multiple meta tags with the same name to be rendered.
+   They can be used like :ts:`property` used for OG tags in the example.
+   You may also supply multiple values for one name, which results in
+   multiple meta tags with the same name to be rendered.
 
-         **Result for og:description:** ::
+   Result for :ts:`og:description`:
 
-            <meta property="og:description" content="Inspiring people to share [OpenGraph]" />
+   .. code-block:: html
 
-         See http://ogp.me/ for more information about the Open Graph
-         protocol and its properties.
+        <meta property="og:description"
+              content="Inspiring people to share [OpenGraph]" />
 
-
-
-
-
-
-.. ###### END~OF~TABLE ######
+   See http://ogp.me/ for more information about the Open Graph
+   protocol and its properties.
