@@ -66,6 +66,8 @@ Property details
 
             meta.description = This is the description of the content in this document.
             meta.keywords = These are the keywords.
+            # Get value from "keywords" field of the current or any parent page
+            meta.keywords.data = levelfield:-1, keywords, slide
             meta.refresh = [seconds]; [URL, leave blank for same page]
 
          For each key the following sub-property is available:
