@@ -39,6 +39,7 @@ Properties
    `notificationEmail\_body`_          string
    `permissions (user and group)`_     integer
    `permissions (actions)`_            list of strings / integer
+   `previewDomain`_                    string
    `table.[table name]`_               :ref:`TCEMAIN_tables <pagetcemaintables>`
    `translateToMessage`_               string
    =================================== =========================================
@@ -289,6 +290,38 @@ translateToMessage
 				# Set a German label:
 				translateToMessage = Bitte in "%s" übersetzen:
 			}
+
+
+.. _pagetcemain-previewdomain:
+
+previewDomain
+~~~~~~~~~~~~~
+
+.. container:: table-row
+
+   Property
+         previewDomain
+
+   Data type
+         string
+
+   Description
+         Defines a preview domain used for frontend previews triggered from the backend. E.g. "Save and View" button
+         The value must be a valid domain, optionally prefixed by a schema.
+         
+         **Examples:**
+         
+         .. code-block:: typoscript
+         
+		TCEMAIN.previewDomain = dev.local
+		TCEMAIN.previewDomain = http://dev.local
+		TCEMAIN.previewDomain = https://example.com
+         
+         .. note::
+         
+            If the option is not specified, the first available domain record within the current rootline is used.
+            Moverover, if no domain record is present either, the current domain (and schema) used
+            for the backend will be chosen.
 
 
 .. _pagetcemain-notificationemail-subject:
