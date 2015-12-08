@@ -4,13 +4,21 @@
 
 .. _conditions:
 
+==========
 Conditions
-----------
+==========
+
+.. seealso::
+
+   For full explanations about conditions, especially about condition
+   syntax, please refer to :ref:`the according chapter in "TypoScript
+   Syntax and In-depth Study" <t3tssyntax:conditions>`.
+
 
 .. _condition-syntax:
 
 General syntax
-""""""""""""""
+==============
 
 Each condition is encapsulated by square brackets. For a list of
 available conditions see below.
@@ -35,10 +43,10 @@ See :ref:`t3tssyntax:The-Global-Condition` for additional documentation.
 .. There's more in Patrick Lobacher's "integrator book" (german only).
    Corresponding information still needs to be added here.
 
-Example:
-~~~~~~~~
+Example
+-------
 
-::
+Test browser::
 
    [browser = msie]
      # TypoScript Code for users of Internet Explorer.
@@ -50,7 +58,7 @@ Example:
 .. _condition-general-notes:
 
 General notes
-"""""""""""""
+=============
 
 Values are normally trimmed before comparison, so leading and trailing
 blanks are not taken into account.
@@ -63,35 +71,50 @@ You may combine several conditions with two operators: && (and), \|\|
 operator has been specified, it will default to OR.
 
 
-Examples:
-~~~~~~~~~
+Examples
+--------
+
+Test browser and system
+~~~~~~~~~~~~~~~~~~~~~~~
 
 This condition will match if the visitor opens the website with
 Internet Explorer on Windows (but not on Mac)::
 
    [browser = msie] && [system = win]
 
+Test browser
+~~~~~~~~~~~~
+
 This will match with either Opera or Firefox browsers::
 
    [browser = opera] || [browser = firefox]
+
+Test browser and version
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 This will match with either Firefox or Internet Explorer. In case of
 Internet Explorer, the version must be above 8::
 
    [browser = firefox] || [browser = msie] && [version => 8]
 
-This will match with an empty value:
+
+Test for empty value
+~~~~~~~~~~~~~~~~~~~~
+
+This will match with an empty value::
 
    [globalString = IENV:HTTP_REFERER = /^$/]
 
-This will match with an not empty value:
+Test for non-empty value
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+This will match with an not empty value::
 
    [globalString = IENV:HTTP_REFERER = /.+/]
 
-For full explanations about conditions, especially about condition
-syntax, please refer to :ref:`the according chapter in "TypoScript
-Syntax and In-depth Study" <t3tssyntax:conditions>`.
 
+More
+====
 
 .. toctree::
    :maxdepth: 5
@@ -99,4 +122,3 @@ Syntax and In-depth Study" <t3tssyntax:conditions>`.
    :glob:
 
    Reference/Index
-
