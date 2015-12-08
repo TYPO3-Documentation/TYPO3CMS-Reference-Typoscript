@@ -80,6 +80,14 @@ Internet Explorer, the version must be above 8::
 
    [browser = firefox] || [browser = msie] && [version => 8]
 
+This will match with an empty value:
+
+   [globalString = IENV:HTTP_REFERER = /^$/]
+
+This will match with an not empty value:
+
+   [globalString = IENV:HTTP_REFERER = /.+/]
+
 For full explanations about conditions, especially about condition
 syntax, please refer to :ref:`the according chapter in "TypoScript
 Syntax and In-depth Study" <t3tssyntax:conditions>`.
