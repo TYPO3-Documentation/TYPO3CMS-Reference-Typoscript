@@ -912,8 +912,8 @@ disableCharsetHeader
          boolean
 
    Description
-         By default a header "content-type:text/html; charset..." is sent. This
-         option will disable that.
+         By default a HTTP header "content-type:text/html; charset..." is sent.
+         This option will disable that.
 
 
 
