@@ -890,8 +890,6 @@ javascriptLibs
                ExtJs.css = 1
                  # include default theme
                ExtJs.theme = 1
-                 # initialize QuickTips
-               ExtJs.quickTips = 1
                  # includes ExtJS debug file (uncompressed)
                ExtJs.debug = 1
             }
