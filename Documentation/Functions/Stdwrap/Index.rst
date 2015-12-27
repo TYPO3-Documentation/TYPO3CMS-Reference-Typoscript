@@ -758,7 +758,7 @@ char
 
          .. code-block:: php
 
-            $content = chr(intval($conf['char']));
+            $content = chr((int)$conf['char']);
 
 
 .. _stdwrap-intval:
