@@ -165,8 +165,7 @@ imgResource.
          string
 
    Description
-         Enter an alternative path to use for temporary images. Must be found
-         in the list in $TYPO3\_CONF\_VARS['FE']['allowedTempPaths'].
+         Enter an alternative path to use for temporary images.
 
 
 .. container:: table-row

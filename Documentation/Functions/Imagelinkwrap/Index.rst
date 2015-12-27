@@ -143,8 +143,7 @@ alternativeTempPath
 :ts:`imageLinkWrap.alternativeTempPath =` :ref:`data-type-path`
 
 This is used to specify an alternative path to be used for temporary
-images. To be considered legal the value must be part of the list of
-allowed temporary paths (:php:`$TYPO3_CONF_VARS['FE']['allowedTempPaths']`).
+images.
 
 
 title
