@@ -886,7 +886,7 @@ javascriptLibs
 
                  # includes ExtJS
                ExtJs = 1
-                 # include ext-all.css
+                 # include ext-all-notheme.css
                ExtJs.css = 1
                  # include default theme
                ExtJs.theme = 1
