@@ -277,13 +277,7 @@ ATagParams
          *<A>-params*
 
    Description
-         Additional parameters to all links in TYPO3 (excluding menu-links)
-
-         **Example**:
-
-         To blur links, insert::
-
-            onFocus="blurLink(this)"
+         Additional parameters to all links in TYPO3 (excluding menu-links).
 
 
 
@@ -2274,7 +2268,7 @@ removeDefaultJS
    Description
          If set, the default JavaScript in the header will be removed.
 
-         The default JavaScript are the browser detection variables.
+         The default JavaScript is the decryption function for email addresses.
 
          **Special case:** If the value is "**external**", then the default
          JavaScript is written to a temporary file and included from that file.
