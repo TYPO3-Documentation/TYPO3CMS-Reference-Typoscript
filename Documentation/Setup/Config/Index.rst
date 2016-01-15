@@ -1551,8 +1551,8 @@ jumpurl\_enable
          boolean
 
    Description
-         jumpUrl is a concept where external links are redirected from the
-         index\_ts.php script, which first logs the URL.
+         jumpUrl is a concept where external links are redirected from
+         \\TYPO3\\CMS\\Frontend\\Http\\RequestHandler, which first logs the URL.
 
    Default
          0
@@ -2290,10 +2290,10 @@ pageGenScript
 
    Description
          Alternative page generation script for applications using
-         index\_ts.php for initialization, caching, stating and so on. This
-         script is included in the global scope of index\_ts.php-script and
-         thus you may include libraries here. Always use include\_once for
-         libraries.
+         \\TYPO3\\CMS\\Frontend\\Http\\RequestHandler for initialization, caching,
+         stating and so on. This script is included in the global scope of
+         \\TYPO3\\CMS\\Frontend\\Http\\RequestHandler and thus you may include
+         libraries here. Always use include\_once for libraries.
 
          Remember not to output anything from such an included script. **All
          content must be set into $TSFE->content.** Take a look at
@@ -2812,10 +2812,10 @@ simulateStaticDocuments\_dontRedirectPathInfoError
          Regarding PATH\_INFO mode:
 
          When a page is requested by "PATH\_INFO" method it must be configured
-         in order to work properly. If PATH\_INFO is not configured, the
-         index\_ts.php script sends a location header to the correct page.
-         However if you better like an error message outputted, just set this
-         option.
+         in order to work properly. If PATH\_INFO is not configured,
+         \\TYPO3\\CMS\\Frontend\\Http\\RequestHandler sends a location header to the
+         correct page. However if you better like an error message outputted,
+         just set this option.
 
 
 

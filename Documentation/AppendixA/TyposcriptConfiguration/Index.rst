@@ -212,8 +212,9 @@ PHP\_SCRIPT\_EXT
          before it's output to the browser.
 
          This basically means that PHP\_SCRIPT **\_EXT** (external, because
-         it's included in the global space in index\_ts.php!) can output data
-         directly with echo-statements!
+         it's included in the global space in
+         \\TYPO3\\CMS\\Frontend\\Http\\RequestHandler!) can output data directly
+         with echo-statements!
 
          This is a very "raw" version of PHP\_SCRIPT because it's not included
          from inside an object and you have only very few standard functions

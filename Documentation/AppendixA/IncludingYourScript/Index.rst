@@ -51,9 +51,10 @@ White spaces
 """"""""""""
 
 Because nothing is sent off to the browser before everything is
-rendered and returned to index\_ts.php (which originally set off the
-rendering process), you must ensure that there's no whitespace before
-and after your <?php...?> tags in your include or library scripts!
+rendered and returned to \\TYPO3\\CMS\\Frontend\\Http\\RequestHandler
+(which originally set off the rendering process), you must ensure
+that there's no whitespace before and after your <?php...?> tags
+in your include or library scripts!
 
 
 .. _appendix-include-tsfe:
