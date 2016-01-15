@@ -2065,10 +2065,10 @@ pageGenScript
 
    Description
          Alternative page generation script for applications using
-         index\_ts.php for initialization, caching, stating and so on. This
-         script is included in the global scope of index\_ts.php-script and
-         thus you may include libraries here. Always use include\_once for
-         libraries.
+         \\TYPO3\\CMS\\Frontend\\Http\\RequestHandler for initialization, caching,
+         stating and so on. This script is included in the global scope of
+         \\TYPO3\\CMS\\Frontend\\Http\\RequestHandler and thus you may include
+         libraries here. Always use include\_once for libraries.
 
          Remember not to output anything from such an included script. **All
          content must be set into $TSFE->content.** Take a look at
