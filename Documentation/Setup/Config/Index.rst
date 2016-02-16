@@ -1510,8 +1510,8 @@ inlineStyle2TempFile
 
    Description
          If set, the inline styles TYPO3 controls in the core are written to a
-         file, typo3temp/stylesheet\_[hashstring].css, and the header will only
-         contain the link to the stylesheet.
+         file, typo3temp/assets/css/stylesheet\_[hashstring].css, and the header
+         will only contain the link to the stylesheet.
 
          The file hash is based solely on the content of the styles.
 
