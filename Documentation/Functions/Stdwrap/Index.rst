@@ -1811,34 +1811,6 @@ insertData
             10.stdWrap.insertData = 1
 
 
-.. _stdwrap-offsetwrap:
-
-offsetWrap
-''''''''''
-
-.. container:: table-row
-
-   Property
-         offsetWrap
-
-   Data type
-         x,y /stdWrap
-
-   Description
-         This wraps the input in a table with columns to the left and top that
-         offsets the content by the values of x,y. Based on the cObject
-         :ref:`OTABLE <cobj-otable>`.
-
-         **.tableParams / .tdParams** /:ref:`stdWrap <stdwrap>`
-
-         \- used to manipulate tableParams/tdParams (default width=99%) of the
-         offset. Default: See :ref:`OTABLE <cobj-otable>`.
-
-         **.stdWrap**
-
-         \- stdWrap properties wrapping the offsetWrap'ed output.
-
-
 .. _stdwrap-postuserfunc:
 
 postUserFunc
