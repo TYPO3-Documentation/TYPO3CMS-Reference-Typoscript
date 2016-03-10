@@ -68,26 +68,6 @@ rendered non-cached! That way COA\_INT allows you not only to render
          :ref:`->stdWrap <stdwrap>`
 
 
-.. container:: table-row
-
-   Property
-         includeLibs
-
-   Data type
-         *(list of resources)* /:ref:`stdWrap <stdwrap>`
-
-   Description
-         **(This property is used only if the object is COA\_INT! See
-         introduction.)**
-
-         This is a comma-separated list of resources that are included as PHP-
-         scripts (with include\_once() function) if this script is included.
-
-         This is possible to do, because any include-files will be known before
-         the scripts are included. That is not the case with the regular
-         COA cObject.
-
-
 .. ###### END~OF~TABLE ######
 
 

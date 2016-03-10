@@ -25,6 +25,10 @@ function name
 
             user_stringReversing->reverseString
 
+         Method in class, namespaced and preferred version::
+
+            Your\NameSpace\YourClass->reverseString
+
    Comment
          Indicates a function or method in a class to call. See more
          information at the :ref:`USER cObject <cobj-user>`.

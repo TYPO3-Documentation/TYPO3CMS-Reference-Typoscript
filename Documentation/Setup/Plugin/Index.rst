@@ -37,7 +37,6 @@ Properties
    ======================================= =============================== ====================== =======
    Property                                Data Type                       :ref:`stdwrap`         Default
    ======================================= =============================== ====================== =======
-   `includeLibs`_                          (array of keys)
    `userFunc`_                             (array of keys)
    `\_CSS\_DEFAULT\_STYLE`_                string /:ref:`stdwrap`
    `\_CSS\_PAGE\_STYLE`_                   :ref:`data-type-string`
@@ -55,24 +54,6 @@ Property details
       :depth: 1
 
 .. ### BEGIN~OF~TABLE ###
-
-.. _setup-plugin-includelibs:
-
-includeLibs
-"""""""""""
-
-.. container:: table-row
-
-   Property
-         *includeLibs*
-
-   Data type
-         *(array of keys)*
-
-   Description
-         *Property setting up the USER / USER\_INT object of the plugin*.
-
-
 
 .. _setup-plugin-userfunc:
 

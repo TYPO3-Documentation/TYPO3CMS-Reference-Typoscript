@@ -1862,6 +1862,7 @@ postUserFunc
 
          .. code-block:: php
 
+            namespace Your\NameSpace
             /**
              * Example of a method in a PHP class to be called from TypoScript
              *

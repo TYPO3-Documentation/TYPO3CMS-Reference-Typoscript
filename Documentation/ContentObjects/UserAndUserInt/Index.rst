@@ -53,37 +53,18 @@ outside the main page-rendering.
 .. container:: table-row
 
    Property
-         includeLibs
-
-   Data type
-         *(list of resources)* /:ref:`stdWrap <stdwrap>`
-
-   Description
-         **This property applies only if the object is created as USER\_INT.**
-
-         This is a comma-separated list of resources that are included as PHP-
-         scripts (with include\_once() function) if this script is included.
-
-         This is possible to do because any include-files will be known before
-         the scripts are included.
-
-
-.. container:: table-row
-
-   Property
          *(properties you define)*
 
    Data type
          *(the data type you want)*
 
    Description
-         Apart from the properties "userFunc", "stdWrap" and possibly
-         "includeLibs", which are defined for all USER/USER\_INT objects by
-         default, you can add additional properties with any name and any data
-         type to your USER/USER\_INT object. These properties and their values
-         will then be available in PHP; they will be passed to your function (in
-         the second parameter). This allows you to process them further in any
-         way you wish.
+         Apart from the properties "userFunc" and "stdWrap", which are defined for
+         all USER/USER\_INT objects by default, you can add additional properties
+         with any name and any data type to your USER/USER\_INT object. These
+         properties and their values will then be available in PHP; they will be
+         passed to your function (in the second parameter). This allows you to
+         process them further in any way you wish.
 
 
 .. container:: table-row
@@ -113,26 +94,27 @@ from TypoScript. Use this TypoScript configuration::
    page = PAGE
    page.10 = USER_INT
    page.10 {
-     userFunc = user_printTime
-     # Include the PHP file with our custom code
-     includeLibs = fileadmin/example_time.php
+     userFunc = Your\NameSpace\YourClass->printTime
    }
 
 The file fileadmin/example_time.php might amongst other things
 contain::
 
-   /**
-    * Output the current time in red letters
-    *
-    * @param	string		Empty string (no content to process)
-    * @param	array		TypoScript configuration
-    * @return	string		HTML output, showing the current server time.
-    */
-   function user_printTime($content, $conf) {
-     return '<p style="color: red;">Dynamic time: ' . date('H:i:s') . '</p><br />';
+   namespace Your\NameSpace
+   class YourClass {
+     /**
+      * Output the current time in red letters
+      *
+      * @param	string		Empty string (no content to process)
+      * @param	array		TypoScript configuration
+      * @return	string		HTML output, showing the current server time.
+      */
+     public function printTime($content, $conf) {
+       return '<p style="color: red;">Dynamic time: ' . date('H:i:s') . '</p><br />';
+     }
    }
 
-Here page.10 will give back what the PHP function user_printTime()
+Here page.10 will give back what the PHP function printTime()
 returned. Since we did not use a USER object, but a USER\_INT object,
 this function is executed on every page hit. So this example each time
 outputs the current time in red letters.
@@ -148,9 +130,7 @@ order. To do that we use the following TypoScript::
 
    page.30 = USER
    page.30 {
-     # Include the PHP file with our custom code
-     includeLibs = fileadmin/example_listRecords.php
-     userFunc = user_various->listContentRecordsOnPage
+     userFunc = Your\NameSpace\YourClass->listContentRecordsOnPage
      # reverseOrder is a boolean variable (see PHP code below)
      reverseOrder = 1
      # debugOutput is a boolean variable with /stdWrap (see PHP code below)
@@ -160,11 +140,12 @@ order. To do that we use the following TypoScript::
 The file fileadmin/example_listRecords.php might amongst other
 things contain::
 
+   namespace Your\NameSpace
    /**
     * Example of a method in a PHP class to be called from TypoScript
     *
     */
-   class user_various {
+   class YourClass {
      /**
       * Reference to the parent (calling) cObject set from TypoScript
       */
@@ -216,7 +197,7 @@ things contain::
    }
 
 page.30 will give back what the function listContentRecordsOnPage() of
-the class user_various returned. This example returns some debug output
+the class YourClass returned. This example returns some debug output
 at the beginning and then the headers of the content elements on the
 page in reversed order. Note how we defined the properties
 "reverseOrder" and "debugOutput" for this USER object and how we used
