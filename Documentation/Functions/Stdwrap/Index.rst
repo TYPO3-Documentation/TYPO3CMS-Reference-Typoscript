@@ -613,7 +613,7 @@ csConv
 
    Description
          Convert the charset of the string from the charset given as value to
-         the current rendering charset of the frontend (renderCharset).
+         the current rendering charset of the frontend (UTF-8).
 
 
 .. _stdwrap-parsefunc:
@@ -902,7 +902,7 @@ strftime
          Properties:
 
          **.charset:** Can be set to the charset of the output string if you
-         need to convert it to renderCharset. Default is to take the
+         need to convert it to UTF-8. Default is to take the
          intelligently guessed charset from
          TYPO3\CMS\Core\Charset\CharsetConverter.
 
@@ -1003,7 +1003,7 @@ case
    Description
          Converts case
 
-         Uses "renderCharset" for the operation.
+         Uses "UTF-8" for the operation.
 
 
 .. _stdwrap-bytes:
@@ -1063,7 +1063,7 @@ substring
          Returns the substring with [p1] and [p2] sent as the 2nd and 3rd
          parameter to the PHP substring function.
 
-         Uses "renderCharset" for the operation.
+         Uses "UTF-8" for the operation.
 
 
 .. _stdwrap-removebadhtml:
@@ -1172,7 +1172,7 @@ crop
          the division is in the middle of a word, the remains of that word is
          removed.
 
-         Uses "renderCharset" for the operation.
+         Uses "UTF-8" for the operation.
 
 
 .. _stdwrap-rawurlencode:

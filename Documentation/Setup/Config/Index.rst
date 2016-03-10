@@ -82,7 +82,7 @@ Properties
    `message\_page\_is\_being\_generated`_                :ref:`data-type-string`
    `message\_preview`_                                   :ref:`data-type-string`
    `message\_preview\_workspace`_                        :ref:`data-type-string`
-   `metaCharset`_                                        :ref:`data-type-string`            value of ".renderCharset"
+   `metaCharset`_                                        :ref:`data-type-string`            utf-8
    `moveJsFromHeaderToFooter`_                           :ref:`data-type-boolean`
    `MP\_defaults`_                                       :ref:`data-type-string`
    `MP\_disableTypolinkClosestMPvalue`_                  :ref:`data-type-boolean`
@@ -100,7 +100,6 @@ Properties
    `removeDefaultCss`_                                   :ref:`data-type-boolean`
    `removeDefaultJS`_                                    boolean / string
    `removePageCss`_                                      :ref:`data-type-boolean`
-   `renderCharset`_                                      :ref:`data-type-string`            utf-8
    `sendCacheHeaders`_                                   :ref:`data-type-boolean`
    `sendCacheHeaders\_onlyWhenLoginDeniedInBranch`_      :ref:`data-type-boolean`
    `setJS\_mouseOver`_                                   :ref:`data-type-boolean`
@@ -1685,7 +1684,7 @@ locale\_all
 
          TSFE->localeCharset is intelligently set to the assumed charset of the
          locale strings. This is used in stdWrap.strftime to convert locale
-         strings to the renderCharset of the frontend.
+         strings to the UTF-8 of the frontend.
 
          **Example**:
 
@@ -1833,15 +1832,15 @@ metaCharset
          It is used for a) HTML meta tag, b) HTTP header (unless disabled with
          .disableCharsetHeader) and c) xhtml prologues (if available).
 
-         If renderCharset and metaCharset are different, the output content is
+         If metaCharset is not UTF-8, the output content is
          automatically converted to metaCharset before output and likewise are
          values posted back to the page converted from metaCharset to
-         renderCharset for internal processing. This conversion takes time of
+         UTF-8 for internal processing. This conversion takes time of
          course so there is another good reason to use the same charset for
          both.
 
    Default
-         value of ".renderCharset"
+         utf-8
 
 
 
@@ -2304,38 +2303,6 @@ removePageCss
          extension is installed, but only in a special situation. E.g. some
          styles will be output, when a textpic element with an image
          positioned alongside the text is present on the current page.)
-
-
-
-.. _setup-config-rendercharset:
-
-renderCharset
-"""""""""""""
-
-.. container:: table-row
-
-   Property
-         renderCharset
-
-   Data type
-         string
-
-   Description
-         Charset used for the internal rendering of the page content. It is
-         highly recommended that this value is the same as the charset of the
-         content coming from the main data source (e.g. the database). Thus you
-         don't need to do any other conversion.
-
-         All strings from locallang files and locale strings are (and should
-         be) converted to "renderCharset" during rendering.
-
-         If you need another output charset than the render charset, see
-         "metaCharset" above.
-
-         TYPO3 internally always uses UTF-8 by default.
-
-   Default
-         utf-8
 
 
 
@@ -3136,7 +3103,7 @@ xmlprologue
          If empty (not set) then the default XML 1.0 prologue is set, when the
          doctype is set to a known keyword (e.g. xhtml\_11)::
 
-            <?xml version="1.0" encoding="[config.renderCharset]">
+            <?xml version="1.0" encoding="utf-8">
 
          If set to one of the following keywords then a standard prologue will
          be set:
