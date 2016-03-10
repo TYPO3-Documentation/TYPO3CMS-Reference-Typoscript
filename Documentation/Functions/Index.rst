@@ -26,9 +26,7 @@ Functions
    Replacement/Index
    If/Index
    Typolink/Index
-   Textstyle/Index
    Encapslines/Index
-   Tablestyle/Index
    Addparams/Index
    Filelink/Index
    Strpad/Index
