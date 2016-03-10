@@ -247,7 +247,7 @@ with the link-parameters (lowercased)!
 
          **Examples:** ::
 
-            typolink.parameter = 51#345
+            typolink.parameter = 51#c345
 
          *Creates a link to page 51 with an anchor to tt\_content element number
          345* ::
