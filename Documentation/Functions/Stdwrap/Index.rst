@@ -1878,6 +1878,9 @@ offsetWrap
 
          \- stdWrap properties wrapping the offsetWrap'ed output.
 
+         **Note:** This property is deprecated since TYPO3 7! Use
+         CSS instead.
+
 
 .. _stdwrap-postuserfunc:
 
