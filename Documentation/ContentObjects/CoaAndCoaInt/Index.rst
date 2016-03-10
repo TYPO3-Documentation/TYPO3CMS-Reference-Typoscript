@@ -87,6 +87,12 @@ rendered non-cached! That way COA\_INT allows you not only to render
          the scripts are included. That is not the case with the regular
          COA cObject.
 
+         **Note:** This property is deprecated in TYPO3 7 and will be
+         removed with TYPO3 8! Make sure everything that was previously loaded
+         via includeLibs is now encapsulated in proper PHP classes, which is
+         referenced by COA/COA_INT when needed. Use proper class naming and
+         autoloading.
+
 
 .. ###### END~OF~TABLE ######
 

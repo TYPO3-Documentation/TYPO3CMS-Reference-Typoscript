@@ -67,6 +67,12 @@ outside the main page-rendering.
          This is possible to do because any include-files will be known before
          the scripts are included.
 
+         **Note:** This property is deprecated in TYPO3 7 and will be
+         removed with TYPO3 8! Make sure everything that was previously loaded
+         via includeLibs is now encapsulated in proper PHP classes, which is
+         referenced by USER/USER_INT when needed. Use proper class naming and
+         autoloading.
+
 
 .. container:: table-row
 

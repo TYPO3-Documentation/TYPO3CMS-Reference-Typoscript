@@ -72,6 +72,12 @@ includeLibs
    Description
          *Property setting up the USER / USER\_INT object of the plugin*.
 
+         **Note:** This property is deprecated in TYPO3 7 and will be
+         removed with TYPO3 8! Make sure everything that was previously loaded
+         via includeLibs is now encapsulated in proper PHP classes, which is
+         referenced by USER/USER_INT when needed. Use proper class naming and
+         autoloading.
+
 
 
 .. _setup-plugin-userfunc:
