@@ -185,25 +185,6 @@ Always secure input from outside, for example with intval!
 .. container:: table-row
 
    Property
-         andWhere
-
-   Data type
-         *SQL-where* /:ref:`stdWrap <stdwrap>`
-
-   Description
-         AND clause in a WHERE clause; without the word "AND".
-
-         **Example:** ::
-
-            andWhere = NOT doktype
-
-         **Note:** This property is deprecated since TYPO3 7.1! Use
-         the properties .where and .markers instead.
-
-
-.. container:: table-row
-
-   Property
          languageField
 
    Data type
