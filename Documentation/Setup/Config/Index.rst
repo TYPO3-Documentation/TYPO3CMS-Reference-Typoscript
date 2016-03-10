@@ -2334,6 +2334,9 @@ renderCharset
 
          TYPO3 internally always uses UTF-8 by default.
 
+         **Note:** This property is deprecated since TYPO3 7! Use UTF-8
+         properly in your installation instead.
+
    Default
          utf-8
 
