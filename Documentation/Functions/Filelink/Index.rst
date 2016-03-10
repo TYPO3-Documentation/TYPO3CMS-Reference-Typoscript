@@ -29,8 +29,6 @@ filelink
          icon_image_ext_list =
          icon_thumbSize =
          iconCObject =
-         # jumpurl?
-         jumpurl =
          labelStdWrap =
          longdescURL =
          path =
@@ -247,13 +245,6 @@ iconCObject
 
 
 
-jumpurl
--------
-   ?
-
-
-
-
 labelStdWrap
 ------------
 
@@ -414,7 +405,6 @@ Filelink Example
       size.wrap = <td> | </td>
       file.fontTag = {$styles.content.uploads.wrap}
       file.wrap = <td> | </td>
-      jumpurl = 1
       target = _blank
       stdWrap = <tr> | </tr>
    }
