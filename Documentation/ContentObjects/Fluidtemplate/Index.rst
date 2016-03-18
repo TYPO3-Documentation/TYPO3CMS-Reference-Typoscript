@@ -45,62 +45,62 @@ templateName
 
          .. code-block:: typoscript
 
-			lib.stdContent = FLUIDTEMPLATE
-			lib.stdContent {
-				templateName = Default
-				layoutRootPaths {
-					10 = EXT:frontend/Resources/Private/Layouts
-					20 = EXT:sitemodification/Resources/Private/Layouts
-				}
-				partialRootPaths {
-					10 = EXT:frontend/Resources/Private/Partials
-					20 = EXT:sitemodification/Resources/Private/Partials
-				}
-				templateRootPaths {
-					10 = EXT:frontend/Resources/Private/Templates
-					20 = EXT:sitemodification/Resources/Private/Templates
-				}
-				variables {
-					foo = bar
-				}
-			}
+            lib.stdContent = FLUIDTEMPLATE
+            lib.stdContent {
+                templateName = Default
+                layoutRootPaths {
+                    10 = EXT:frontend/Resources/Private/Layouts
+                    20 = EXT:sitemodification/Resources/Private/Layouts
+                }
+                partialRootPaths {
+                    10 = EXT:frontend/Resources/Private/Partials
+                    20 = EXT:sitemodification/Resources/Private/Partials
+                }
+                templateRootPaths {
+                    10 = EXT:frontend/Resources/Private/Templates
+                    20 = EXT:sitemodification/Resources/Private/Templates
+                }
+                variables {
+                    foo = bar
+                }
+            }
 
          **Example:**
 
          .. code-block:: typoscript
 
-			lib.stdContent = FLUIDTEMPLATE
-			lib.stdContent {
-				templateName = TEXT
-				templateName.stdWrap {
-					cObject = TEXT
-					cObject {
-						data = levelfield:-2,backend_layout_next_level,slide
-						override.field = backend_layout
-						split {
-							token = frontend__
-							1.current = 1
-							1.wrap = |
-						}
-					}
-					ifEmpty = Default
-				}
-				layoutRootPaths {
-					10 = EXT:frontend/Resources/Private/Layouts
-					20 = EXT:sitemodification/Resources/Private/Layouts
-				}
-				partialRootPaths {
-					10 = EXT:frontend/Resources/Private/Partials
-					20 = EXT:sitemodification/Resources/Private/Partials
-				}
-				templateRootPaths {
-					10 = EXT:frontend/Resources/Private/Templates
-					20 = EXT:sitemodification/Resources/Private/Templates
-				}
-				variables {
-					foo = bar
-				}
-			}
+            lib.stdContent = FLUIDTEMPLATE
+            lib.stdContent {
+                templateName = TEXT
+                templateName.stdWrap {
+                    cObject = TEXT
+                    cObject {
+                        data = levelfield:-2,backend_layout_next_level,slide
+                        override.field = backend_layout
+                        split {
+                            token = frontend__
+                            1.current = 1
+                            1.wrap = |
+                        }
+                    }
+                    ifEmpty = Default
+                }
+                layoutRootPaths {
+                    10 = EXT:frontend/Resources/Private/Layouts
+                    20 = EXT:sitemodification/Resources/Private/Layouts
+                }
+                partialRootPaths {
+                    10 = EXT:frontend/Resources/Private/Partials
+                    20 = EXT:sitemodification/Resources/Private/Partials
+                }
+                templateRootPaths {
+                    10 = EXT:frontend/Resources/Private/Templates
+                    20 = EXT:sitemodification/Resources/Private/Templates
+                }
+                variables {
+                    foo = bar
+                }
+            }
 
 
 .. _cobj-fluidtemplate-properties-template:
@@ -173,12 +173,16 @@ templateRootPaths
 
          .. code-block:: typoscript
 
-			page.10 = FLUIDTEMPLATE
-			page.10.templateName = Default
-			page.10.templateRootPaths {
-				10 = EXT:sitedesign/Resources/Private/Layouts
-				20 = EXT:sitemodification/Resources/Private/Layouts
-			}
+            page {
+                10 = FLUIDTEMPLATE
+                10 {
+                    templateName = Default
+                    templateRootPaths {
+                        10 = EXT:sitedesign/Resources/Private/Layouts
+                        20 = EXT:sitemodification/Resources/Private/Layouts
+                    }
+                }
+            }
 
 
 .. _cobj-fluidtemplate-properties-layoutrootpath:
@@ -227,12 +231,16 @@ layoutRootPaths
 
          .. code-block:: typoscript
 
-			page.10 = FLUIDTEMPLATE
-			page.10.file = EXT:sitedesign/Resources/Private/Templates/Main.html
-			page.10.layoutRootPaths {
-				10 = EXT:sitedesign/Resources/Private/Layouts
-				20 = EXT:sitemodification/Resources/Private/Layouts
-			}
+            page {
+                10 = FLUIDTEMPLATE
+                10 {
+                    file = EXT:site_default/Resources/Private/Templates/Main.html
+                    layoutRootPaths {
+                        10 = EXT:site_default/Resources/Private/Layouts
+                        20 = EXT:site_modification/Resources/Private/Layouts
+                    }
+                }
+            }
 
          If property :ref:`layoutRootPath <cobj-fluidtemplate-properties-layoutrootpath>`
          (singular) is also used, it will be placed as the first option
@@ -413,20 +421,22 @@ settings
 
          .. code-block:: typoscript
 
-			page = PAGE
-			page.10 = FLUIDTEMPLATE
-			page.10 {
-				file = fileadmin/templates/MyTemplate.html
-				settings {
-					copyrightYear = 2013
-				}
-			}
+            page = PAGE
+            page {
+                10 = FLUIDTEMPLATE
+                10 {
+                    file = fileadmin/templates/MyTemplate.html
+                    settings {
+                        copyrightYear = 2013
+                    }
+                }
+            }
 
          To access copyrightYear in the template file use this:
 
          .. code-block:: text
 
-         	{settings.copyrightYear}
+            {settings.copyrightYear}
 
          Apart from just setting a key-value pair as done in the example,
          you can also reference objects or access constants as well.
@@ -454,25 +464,25 @@ dataProcessing
 
          .. code-block:: typoscript
 
-			my_custom_ctype = FLUIDTEMPLATE
-			my_custom_ctype {
-				templateRootPaths {
-					10 = EXT:your_extension_key/Resources/Private/Templates
-				}
-				templateName = CustomName
-				settings {
-					extraParam = 1
-				}
-				dataProcessing {
-					1 = Vendor\YourExtensionKey\DataProcessing\MyFirstCustomProcessor
-					2 = Vendor2\AnotherExtensionKey\DataProcessing\MySecondCustomProcessor
-					2 {
-						options {
-							myOption = SomeValue
-						}
-					}
-				}
-			}
+            my_custom_ctype = FLUIDTEMPLATE
+            my_custom_ctype {
+                templateName = CustomName
+                templateRootPaths {
+                    10 = EXT:site_default/Resources/Private/Templates
+                }
+                settings {
+                    extraParam = 1
+                }
+                dataProcessing {
+                    1 = Vendor\YourExtensionKey\DataProcessing\MyFirstCustomProcessor
+                    2 = Vendor2\AnotherExtensionKey\DataProcessing\MySecondCustomProcessor
+                    2 {
+                        options {
+                            myOption = SomeValue
+                        }
+                    }
+                }
+            }
 
          There are five DataProcessors available to allow flexible processing e.g. for comma-separated
          values. To use e.g. with the FLUIDTEMPLATE content object.
@@ -498,220 +508,228 @@ dataProcessing
 
          .. code-block:: typoscript
 
-			page.10 = FLUIDTEMPLATE
-			page.10.file = EXT:site_default/Resources/Private/Template/Default.html
-			page.10.dataProcessing.2 = TYPO3\CMS\Frontend\DataProcessing\SplitProcessor
-			page.10.dataProcessing.2 {
-				if.isTrue.field = bodytext
-				delimiter = ,
-				fieldName = bodytext
-				removeEmptyEntries = 1
-				filterIntegers = 1
-				filterUnique = 1
-				as = keywords
-			}
+            page {
+                10 = FLUIDTEMPLATE
+                10 {
+                    file = EXT:site_default/Resources/Private/Template/Default.html
+
+                    dataProcessing.2 = TYPO3\CMS\Frontend\DataProcessing\SplitProcessor
+                    dataProcessing.2 {
+                        if.isTrue.field = bodytext
+                        delimiter = ,
+                        fieldName = bodytext
+                        removeEmptyEntries = 1
+                        filterIntegers = 1
+                        filterUnique = 1
+                        as = keywords
+                    }
+                }
+            }
 
          In the Fluid template then iterate over the split data
 
          .. code-block:: html
 
-			<f:for each="{keywords}" as="keyword">
-				<li>Keyword: {keyword}</li>
-			</f:for>
+            <f:for each="{keywords}" as="keyword">
+                <li>Keyword: {keyword}</li>
+            </f:for>
 
          **Using the CommaSeparatedValueProcessor the following scenario is possible**
 
          .. code-block:: typoscript
 
-			page.10 = FLUIDTEMPLATE
-			page.10.file = EXT:site_default/Resources/Private/Template/Default.html
-			page.10.dataProcessing.4 = TYPO3\CMS\Frontend\DataProcessing\CommaSeparatedValueProcessor
-			page.10.dataProcessing.4 {
-				if.isTrue.field = bodytext
-				fieldName = bodytext
-				fieldDelimiter = |
-				fieldEnclosure =
-				maximumColumns = 2
-				as = table
-			}
+            page {
+                10 = FLUIDTEMPLATE
+                10 {
+                    file = EXT:site_default/Resources/Private/Template/Default.html
+
+                    dataProcessing.4 = TYPO3\CMS\Frontend\DataProcessing\CommaSeparatedValueProcessor
+                    dataProcessing.4 {
+                        if.isTrue.field = bodytext
+                        fieldName = bodytext
+                        fieldDelimiter = |
+                        fieldEnclosure =
+                        maximumColumns = 2
+                        as = table
+                    }
+                }
+            }
 
          In the Fluid template then iterate over the processed data
 
          .. code-block:: html
 
-			<table>
-				<f:for each="{table}" as="columns">
-					<tr>
-						<f:for each="{columns}" as="column">
-							<td>{column}</td>
-						</f:for>
-					<tr>
-				</f:for>
-			</table>
+            <table>
+                <f:for each="{table}" as="columns">
+                    <tr>
+                        <f:for each="{columns}" as="column">
+                            <td>{column}</td>
+                        </f:for>
+                    <tr>
+                </f:for>
+            </table>
 
          **Using the FilesProcessor the following scenario is possible**
 
          .. code-block:: typoscript
 
-			tt_content.image.20 = FLUIDTEMPLATE
-			tt_content.image.20 {
-				file = EXT:myextension/Resources/Private/Templates/ContentObjects/Image.html
+            tt_content.image.20 = FLUIDTEMPLATE
+            tt_content.image.20 {
+                file = EXT:site_default/Resources/Private/Templates/ContentObjects/Image.html
 
-				dataProcessing.10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
-				dataProcessing.10 {
-					# the field name where relations are set
-					# + stdWrap
-					references.fieldName = image
+                dataProcessing.10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+                dataProcessing.10 {
+                    # the field name where relations are set
+                    # + stdWrap
+                    references.fieldName = image
 
-					# the table name where relations are put, defaults to the currently selected record from $cObj->getTable()
-					# + stdWrap
-					references.table = tt_content
+                    # the table name where relations are put, defaults to the currently selected record from $cObj->getTable()
+                    # + stdWrap
+                    references.table = tt_content
 
-					# A list of sys_file UID records
-					# + stdWrap
-					files = 21,42
+                    # A list of sys_file UID records
+                    # + stdWrap
+                    files = 21,42
 
-					# A list of File Collection UID records
-					# + stdWrap
-					collections = 13,14
+                    # A list of File Collection UID records
+                    # + stdWrap
+                    collections = 13,14
 
-					# A list of FAL Folder identifiers and files fetched recursive from all folders
-					# + stdWrap
-					folders = 1:introduction/images/,1:introduction/posters/
-					folders.recursive = 1
+                    # A list of FAL Folder identifiers and files fetched recursive from all folders
+                    # + stdWrap
+                    folders = 1:introduction/images/,1:introduction/posters/
+                    folders.recursive = 1
 
-					# Property of which the files should be sorted after they have been accumulated
-					# can be any property of sys_file, sys_file_metadata
-					# + stdWrap
-					sorting = description
+                    # Property of which the files should be sorted after they have been accumulated
+                    # can be any property of sys_file, sys_file_metadata
+                    # + stdWrap
+                    sorting = description
 
-					# Can be "ascending", "descending" or "random", defaults to "ascending" if none given
-					# + stdWrap
-					sorting.direction = descending
+                    # Can be "ascending", "descending" or "random", defaults to "ascending" if none given
+                    # + stdWrap
+                    sorting.direction = descending
 
-					# The target variable to be handed to the ContentObject again, can be used
-					# in Fluid e.g. to iterate over the objects. defaults to "files" when not defined
-					# + stdWrap
-					as = myfiles
-				}
-			}
+                    # The target variable to be handed to the ContentObject again, can be used
+                    # in Fluid e.g. to iterate over the objects. defaults to "files" when not defined
+                    # + stdWrap
+                    as = myfiles
+                }
+            }
 
          In the Fluid template then iterate over the files
 
          .. code-block:: html
 
-			<ul>
-			<f:for each="{myfiles}" as="file">
-				<li><a href="{file.publicUrl}">{file.name}</a></li>
-			</f:for>
-			</ul>
+            <ul>
+                <f:for each="{myfiles}" as="file">
+                    <li><a href="{file.publicUrl}">{file.name}</a></li>
+                </f:for>
+            </ul>
 
          **Using the DatabaseQueryProcessor the following scenario is possible**
 
          .. code-block:: typoscript
 
-			tt_content.mycontent.20 = FLUIDTEMPLATE
-			tt_content.mycontent.20 {
-				file = EXT:myextension/Resources/Private/Templates/ContentObjects/MyContent.html
+            tt_content.mycontent.20 = FLUIDTEMPLATE
+            tt_content.mycontent.20 {
+                file = EXT:site_default/Resources/Private/Templates/ContentObjects/MyContent.html
 
-				dataProcessing.10 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor
-				dataProcessing.10 {
-					# regular if syntax
-					if.isTrue.field = records
+                dataProcessing.10 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor
+                dataProcessing.10 {
+                    # regular if syntax
+                    if.isTrue.field = records
 
-					# the table name from which the data is fetched from
-					# + stdWrap
-					table = tt_address
+                    # the table name from which the data is fetched from
+                    # + stdWrap
+                    table = tt_address
 
-					# All properties from .select can be used directly
-					# + stdWrap
-					colPos = 1
-					pidInList = 13,14
+                    # All properties from .select can be used directly
+                    # + stdWrap
+                    colPos = 1
+                    pidInList = 13,14
 
-					# The target variable to be handed to the ContentObject again, can be used
-					# in Fluid e.g. to iterate over the objects. defaults to "records" when not defined
-					# + stdWrap
-					as = myrecords
+                    # The target variable to be handed to the ContentObject again, can be used
+                    # in Fluid e.g. to iterate over the objects. defaults to "records" when not defined
+                    # + stdWrap
+                    as = myrecords
 
-					# The fetched records can also be processed by DataProcessors.
-					# All configured processors are applied to every row of the result.
-					dataProcessing {
-						10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
-						10 {
-							references.fieldName = image
-						}
-					}
-				}
-			}
+                    # The fetched records can also be processed by DataProcessors.
+                    # All configured processors are applied to every row of the result.
+                    dataProcessing {
+                        10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+                        10 {
+                            references.fieldName = image
+                        }
+                    }
+                }
+            }
 
          In the Fluid template then iterate over the files:
 
          .. code-block:: html
 
-			<ul>
-			<f:for each="{myrecords}" as="record">
-				<li>
-					<f:image image="{record.files.0}" />
-					<a href="{record.data.www}">{record.data.first_name} {record.data.last_name}</a>
-				</li>
-			</f:for>
-			</ul>
+            <ul>
+            <f:for each="{myrecords}" as="record">
+                <li>
+                    <f:image image="{record.files.0}" />
+                    <a href="{record.data.www}">{record.data.first_name} {record.data.last_name}</a>
+                </li>
+            </f:for>
+            </ul>
 
          **Using the GalleryProcessor the following scenario is possible**
 
          .. code-block:: typoscript
 
-			tt_content.textmedia.20 = FLUIDTEMPLATE
-			tt_content.textmedia.20 {
-				file = EXT:myextension/Resources/Private/Templates/ContentObjects/Image.html
+            tt_content.textmedia.20 = FLUIDTEMPLATE
+            tt_content.textmedia.20 {
+                file = EXT:site_default/Resources/Private/Templates/ContentObjects/Image.html
 
-				dataProcessing {
+                dataProcessing {
+                    # Process files
+                    10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
 
-					# Process files
-					10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+                    # Calculate gallery info
+                    20 = TYPO3\CMS\Frontend\DataProcessing\GalleryProcessor
+                    20 {
+                        # filesProcessedDataKey :: Key in processedData array that holds the files (default: files) + stdWrap
+                        filesProcessedDataKey = files
 
-					# Calculate gallery info
-					20 = TYPO3\CMS\Frontend\DataProcessing\GalleryProcessor
-					20 {
+                        # mediaOrientation :: Media orientation, see: TCA[tt_content][column][imageorient] (default: data.imageorient) + stdWrap
+                        mediaOrientation.field = imageorient
 
-						# filesProcessedDataKey :: Key in processedData array that holds the files (default: files) + stdWrap
-						filesProcessedDataKey = files
+                        # numberOfColumns :: Number of columns (default: data.imagecols) + stdWrap
+                        numberOfColumns.field = imagecols
 
-						# mediaOrientation :: Media orientation, see: TCA[tt_content][column][imageorient] (default: data.imageorient) + stdWrap
-						mediaOrientation.field = imageorient
+                        # equalMediaHeight :: Equal media height in pixels (default: data.imageheight) + stdWrap
+                        equalMediaHeight.field = imageheight
 
-						# numberOfColumns :: Number of columns (default: data.imagecols) + stdWrap
-						numberOfColumns.field = imagecols
+                        # equalMediaWidth :: Equal media width in pixels (default: data.imagewidth) + stdWrap
+                        equalMediaWidth.field = imagewidth
 
-						# equalMediaHeight :: Equal media height in pixels (default: data.imageheight) + stdWrap
-						equalMediaHeight.field = imageheight
+                        # maxGalleryWidth :: Max gallery width in pixels (default: 600) + stdWrap
+                        maxGalleryWidth = 1000
 
-						# equalMediaWidth :: Equal media width in pixels (default: data.imagewidth) + stdWrap
-						equalMediaWidth.field = imagewidth
+                        # maxGalleryWidthInText :: Max gallery width in pixels when orientation intext (default: 300) + stdWrap
+                        maxGalleryWidthInText = 1000
 
-						# maxGalleryWidth :: Max gallery width in pixels (default: 600) + stdWrap
-						maxGalleryWidth = 1000
+                        # columnSpacing :: Column spacing width in pixels (default: 0) + stdWrap
+                        columnSpacing = 0
 
-						# maxGalleryWidthInText :: Max gallery width in pixels when orientation intext (default: 300) + stdWrap
-						maxGalleryWidthInText = 1000
+                        # borderEnabled :: Border enabled (default: data.imageborder) + stdWrap
+                        borderEnabled.field = imageborder
 
-						# columnSpacing :: Column spacing width in pixels (default: 0) + stdWrap
-						columnSpacing = 0
+                        # borderWidth :: Border width in pixels (default: 0) + stdWrap
+                        borderWidth = 0
 
-						# borderEnabled :: Border enabled (default: data.imageborder) + stdWrap
-						borderEnabled.field = imageborder
+                        # borderPadding :: Border padding in pixels  (default: 0) + stdWrap
+                        borderPadding = 10
 
-						# borderWidth :: Border width in pixels (default: 0) + stdWrap
-						borderWidth = 0
-
-						# borderPadding :: Border padding in pixels  (default: 0) + stdWrap
-						borderPadding = 10
-
-						# as :: Name of key in processedData array where result is placed (default: gallery) + stdWrap
-						as = gallery
-					}
-				}
-			}
+                        # as :: Name of key in processedData array where result is placed (default: gallery) + stdWrap
+                        as = gallery
+                    }
+                }
+            }
 
 
          Content of the basic Fluid template of the gallery
@@ -719,120 +737,120 @@ dataProcessing
 
          .. code-block:: html
 
-			<f:if condition="{gallery.position.noWrap} != 1">
-				<f:render partial="Header" arguments="{_all}" />
-			</f:if>
+            <f:if condition="{gallery.position.noWrap} != 1">
+                <f:render partial="Header" arguments="{_all}" />
+            </f:if>
 
-			<div class="ce-textpic ce-{gallery.position.horizontal} ce-{gallery.position.vertical}{f:if(condition: '{gallery.position.noWrap}', then: ' ce-nowrap')}">
+            <div class="ce-textpic ce-{gallery.position.horizontal} ce-{gallery.position.vertical}{f:if(condition: '{gallery.position.noWrap}', then: ' ce-nowrap')}">
 
-				<f:if condition="{gallery.position.vertical} != 'below'">
-					<f:render partial="MediaGallery" arguments="{_all}" />
-				</f:if>
+                <f:if condition="{gallery.position.vertical} != 'below'">
+                    <f:render partial="MediaGallery" arguments="{_all}" />
+                </f:if>
 
-				<div class="ce-bodytext">
+                <div class="ce-bodytext">
 
-					<f:if condition="{gallery.position.noWrap}">
-						<f:render partial="Header" arguments="{_all}" />
-					</f:if>
+                    <f:if condition="{gallery.position.noWrap}">
+                        <f:render partial="Header" arguments="{_all}" />
+                    </f:if>
 
-					<f:format.html>{data.bodytext}</f:format.html>
-				</div>
+                    <f:format.html>{data.bodytext}</f:format.html>
+                </div>
 
-				<f:if condition="{gallery.position.vertical} == 'below'">
-					<f:render partial="MediaGallery" arguments="{_all}" />
-				</f:if>
+                <f:if condition="{gallery.position.vertical} == 'below'">
+                    <f:render partial="MediaGallery" arguments="{_all}" />
+                </f:if>
 
-			</div>
+            </div>
 
 
          Content of partial MediaGallery
 
          .. code-block:: html
 
-			<f:if condition="{gallery.rows}">
-				<div class="ce-gallery{f:if(condition: '{data.imageborder}', then: ' ce-border')}" data-ce-columns="{gallery.count.columns}" data-ce-images="{gallery.count.files}">
-					<f:if condition="{gallery.position.horizontal} == 'center'">
-						<div class="ce-outer">
-							<div class="ce-inner">
-					</f:if>
-					<f:for each="{gallery.rows}" as="row">
-						<div class="ce-row">
-							<f:for each="{row.columns}" as="column">
-								<f:if condition="{column.media}">
-									<div class="ce-column">
-										<f:if condition="{column.media.description}">
-											<f:then>
-												<figure>
-											</f:then>
-											<f:else>
-												<div class="ce-media">
-											</f:else>
-										</f:if>
-										<f:if condition="{column.media.type} == 2">
-											<f:render section="imageType" arguments="{_all}" />
-										</f:if>
-										<f:if condition="{column.media.type} == 4">
-											<f:render section="videoType" arguments="{_all}" />
-										</f:if>
+            <f:if condition="{gallery.rows}">
+                <div class="ce-gallery{f:if(condition: '{data.imageborder}', then: ' ce-border')}" data-ce-columns="{gallery.count.columns}" data-ce-images="{gallery.count.files}">
+                    <f:if condition="{gallery.position.horizontal} == 'center'">
+                        <div class="ce-outer">
+                            <div class="ce-inner">
+                    </f:if>
+                    <f:for each="{gallery.rows}" as="row">
+                        <div class="ce-row">
+                            <f:for each="{row.columns}" as="column">
+                                <f:if condition="{column.media}">
+                                    <div class="ce-column">
+                                        <f:if condition="{column.media.description}">
+                                            <f:then>
+                                                <figure>
+                                            </f:then>
+                                            <f:else>
+                                                <div class="ce-media">
+                                            </f:else>
+                                        </f:if>
+                                        <f:if condition="{column.media.type} == 2">
+                                            <f:render section="imageType" arguments="{_all}" />
+                                        </f:if>
+                                        <f:if condition="{column.media.type} == 4">
+                                            <f:render section="videoType" arguments="{_all}" />
+                                        </f:if>
 
-										<f:if condition="{column.media.description}">
-											<f:then>
-													<figcaption>
-														{column.media.description}
-													</figcaption>
-												</figure>
-											</f:then>
-											<f:else>
-												</div>
-											</f:else>
-										</f:if>
-									</div>
-								</f:if>
-							</f:for>
-						</div>
-					</f:for>
-					<f:if condition="{gallery.position.horizontal} == 'center'">
-							</div>
-						</div>
-					</f:if>
-				</div>
-			</f:if>
+                                        <f:if condition="{column.media.description}">
+                                            <f:then>
+                                                    <figcaption>
+                                                        {column.media.description}
+                                                    </figcaption>
+                                                </figure>
+                                            </f:then>
+                                            <f:else>
+                                                </div>
+                                            </f:else>
+                                        </f:if>
+                                    </div>
+                                </f:if>
+                            </f:for>
+                        </div>
+                    </f:for>
+                    <f:if condition="{gallery.position.horizontal} == 'center'">
+                            </div>
+                        </div>
+                    </f:if>
+                </div>
+            </f:if>
 
-			<f:section name="imageType">
-				<f:if condition="{column.media.link}">
-					<f:then>
-						<f:link.typolink parameter="{column.media.link}">
-							<f:render section="media" arguments="{_all}" />
-						</f:link.typolink>
-					</f:then>
-					<f:else>
-						<f:if condition="{data.image_zoom}">
-							<f:then>
-								<ce:link.clickEnlarge image="{column.media}" configuration="{settings.media.popup}">
-									<f:render section="media" arguments="{_all}" />
-								</ce:link.clickEnlarge>
-							</f:then>
-							<f:else>
-								<f:render section="media" arguments="{_all}" />
-							</f:else>
-						</f:if>
-					</f:else>
-				</f:if>
-			</f:section>
+            <f:section name="imageType">
+                <f:if condition="{column.media.link}">
+                    <f:then>
+                        <f:link.typolink parameter="{column.media.link}">
+                            <f:render section="media" arguments="{_all}" />
+                        </f:link.typolink>
+                    </f:then>
+                    <f:else>
+                        <f:if condition="{data.image_zoom}">
+                            <f:then>
+                                <ce:link.clickEnlarge image="{column.media}" configuration="{settings.media.popup}">
+                                    <f:render section="media" arguments="{_all}" />
+                                </ce:link.clickEnlarge>
+                            </f:then>
+                            <f:else>
+                                <f:render section="media" arguments="{_all}" />
+                            </f:else>
+                        </f:if>
+                    </f:else>
+                </f:if>
+            </f:section>
 
-			<f:section name="videoType">
-				<f:render section="media" arguments="{_all}" />
-			</f:section>
+            <f:section name="videoType">
+                <f:render section="media" arguments="{_all}" />
+            </f:section>
 
-			<f:section name="media">
-				<f:image
-					image="{column.media}"
-					width="{column.dimensions.width}"
-					height="{column.dimensions.height}"
-					alt="{column.media.alternative}"
-					title="{column.media.title}"
-				/>
-			</f:section>
+            <f:section name="media">
+                <f:image
+                    image="{column.media}"
+                    width="{column.dimensions.width}"
+                    height="{column.dimensions.height}"
+                    alt="{column.media.alternative}"
+                    title="{column.media.title}"
+                />
+            </f:section>
 
 
 
@@ -863,30 +881,30 @@ like this:
 
 .. code-block:: html
 
-	<h1>{data.title}<f:if condition="{data.subtitle}">, {data.subtitle}</f:if></h1>
-	<h3>{mylabel}</h3>
-	<f:format.html>{data.bodytext}</f:format.html>
-	<p>&copy; {settings.copyrightYear}</p>
+    <h1>{data.title}<f:if condition="{data.subtitle}">, {data.subtitle}</f:if></h1>
+    <h3>{mylabel}</h3>
+    <f:format.html>{data.bodytext}</f:format.html>
+    <p>&copy; {settings.copyrightYear}</p>
 
 You could use it with a TypoScript code like this:
 
 .. code-block:: typoscript
 
-	page = PAGE
-	page.10 = FLUIDTEMPLATE
-	page.10 {
-		template = FILE
-		template.file = fileadmin/templates/MyTemplate.html
-		partialRootPath = fileadmin/templates/partial/
-		variables {
-			mylabel = TEXT
-			mylabel.value = Label coming from TypoScript!
-		}
-		settings {
-			# Get the copyright year from a TypoScript constant.
-			copyrightYear = {$year}
-		}
-	}
+    page = PAGE
+    page.10 = FLUIDTEMPLATE
+    page.10 {
+        template = FILE
+        template.file = fileadmin/templates/MyTemplate.html
+        partialRootPath = fileadmin/templates/partial/
+        variables {
+            mylabel = TEXT
+            mylabel.value = Label coming from TypoScript!
+        }
+        settings {
+            # Get the copyright year from a TypoScript constant.
+            copyrightYear = {$year}
+        }
+    }
 
 As a result the page title and the label from TypoScript will be
 inserted as headlines. The copyright year will be taken from the
