@@ -752,28 +752,28 @@ contentObjectExceptionHandler
 
          .. code-block:: typoscript
 
-			# Use 1 for the default exception handler (enabled by default in production context)
-			config.contentObjectExceptionHandler = 1
+            # Use 1 for the default exception handler (enabled by default in production context)
+            config.contentObjectExceptionHandler = 1
 
-			# Use a class name for individual exception handlers
-			config.contentObjectExceptionHandler = TYPO3\CMS\Frontend\ContentObject\Exception\ProductionExceptionHandler
+            # Use a class name for individual exception handlers
+            config.contentObjectExceptionHandler = TYPO3\CMS\Frontend\ContentObject\Exception\ProductionExceptionHandler
 
-			# Customize the error message. A randomly generated code is replaced within the message if needed.
-			config.contentObjectExceptionHandler.errorMessage = Oops an error occurred. Code: %s
+            # Customize the error message. A randomly generated code is replaced within the message if needed.
+            config.contentObjectExceptionHandler.errorMessage = Oops an error occurred. Code: %s
 
-			# Configure exception codes which will not be handled, but bubble up again (useful for temporary fatal errors)
-			tt_content.login.20.exceptionHandler.ignoreCodes.10 = 1414512813
+            # Configure exception codes which will not be handled, but bubble up again (useful for temporary fatal errors)
+            tt_content.login.20.exceptionHandler.ignoreCodes.10 = 1414512813
 
-			# Disable the exception handling for an individual plugin/ content object
-			tt_content.login.20.exceptionHandler = 0
+            # Disable the exception handling for an individual plugin/ content object
+            tt_content.login.20.exceptionHandler = 0
 
-			# ignoreCodes and errorMessage can be both configured globally …
-			config.contentObjectExceptionHandler.errorMessage = Oops an error occurred. Code: %s
-			config.contentObjectExceptionHandler.ignoreCodes.10 = 1414512813
+            # ignoreCodes and errorMessage can be both configured globally …
+            config.contentObjectExceptionHandler.errorMessage = Oops an error occurred. Code: %s
+            config.contentObjectExceptionHandler.ignoreCodes.10 = 1414512813
 
-			# … or locally for individual content objects
-			tt_content.login.20.exceptionHandler.errorMessage = Oops an error occurred. Code: %s
-			tt_content.login.20.exceptionHandler.ignoreCodes.10 = 1414512813
+            # … or locally for individual content objects
+            tt_content.login.20.exceptionHandler.errorMessage = Oops an error occurred. Code: %s
+            tt_content.login.20.exceptionHandler.ignoreCodes.10 = 1414512813
 
 
          .. important::
@@ -1890,8 +1890,7 @@ MP\_defaults
             config.MP_defaults = 36,37,48 : 2-207
 
          This will by default add "&MP=2-207" to all links pointing to pages
-         36,37 and 48
-
+         36,37 and 48.
 
 
 .. _setup-config-mp-disabletypolinkclosestmpvalue:
@@ -1930,11 +1929,11 @@ MP\_mapRootPoints
          Defines a list of ID numbers from which the MP-vars are automatically
          calculated for the branch.
 
-         The result is used just like MP\_defaults are used to find MP-vars if
-         none has been specified prior to the call to
-         TYPO3\CMS\Core\TypoScript\TemplateService::linkData().
+         The result is used just like :ref:`MP\_defaults <setup-config-mp-defaults>` are used to
+         find MP-vars if none has been specified prior to the call to
+         `TYPO3\CMS\Core\TypoScript\TemplateService::linkData()`.
 
-         You can specify "root" as a special keyword in the list of IDs and
+         You can specify `root` as a special keyword in the list of IDs and
          that will create a map-tree for the whole site (but this may be VERY
          processing intensive if there are many pages!).
 
@@ -1942,6 +1941,7 @@ MP\_mapRootPoints
          which is processed already (by a previous ID root point) will not be
          processed again.
 
+         The configured IDs have to be the uids of Mount Point pages itself, not the targets.
 
 
 .. _setup-config-namespaces:
