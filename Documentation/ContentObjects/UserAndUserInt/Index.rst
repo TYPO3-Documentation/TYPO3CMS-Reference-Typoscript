@@ -100,7 +100,7 @@ from TypoScript. Use this TypoScript configuration::
 The file fileadmin/example_time.php might amongst other things
 contain::
 
-   namespace Your\NameSpace
+   namespace Your\NameSpace;
    class YourClass {
      /**
       * Output the current time in red letters
@@ -140,7 +140,7 @@ order. To do that we use the following TypoScript::
 The file fileadmin/example_listRecords.php might amongst other
 things contain::
 
-   namespace Your\NameSpace
+   namespace Your\NameSpace;
    /**
     * Example of a method in a PHP class to be called from TypoScript
     *
