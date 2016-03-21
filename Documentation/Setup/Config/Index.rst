@@ -882,7 +882,7 @@ disableBodyTag
          <body> tag with additional attributes.
 
          **Note:** disableBodyTag takes precedence over the page properties
-         "bodyTagCObject", "bodyTag", "bgImg", "bodyTagMargins" and
+         "bodyTagCObject", "bodyTag", "bodyTagMargins" and
          "bodyTagAdd". If disableBodyTag is set to "1", the others are
          ignored.
 
