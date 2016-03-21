@@ -28,6 +28,30 @@ HTMLparser
 .. container:: table-row
 
    Property
+         stripEmptyTags
+
+   Data type
+         boolean
+
+   Description
+         Passes the content to PHPs ``strip_tags()``.
+
+
+.. container:: table-row
+
+   Property
+         stripEmptyTags.keepTags
+
+   Data type
+         string
+
+   Description
+         Comma separated list of tags to keep when applying ``strip_tags()``.
+
+
+.. container:: table-row
+
+   Property
          tags.[tagname]
 
    Data type

@@ -219,7 +219,6 @@ the local machine". You can make it available like this::
    page.20 = USER_INT
    page.20 {
       userFunc = MyVendorName\Hostname->get_hostname
-      includeLibs = fileadmin/gethostname.php
    }
 
 Contents of :file:`fileadmin/gethostname.php`:

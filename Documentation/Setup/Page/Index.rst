@@ -48,7 +48,6 @@ Properties
    Property                       Data Type                         :ref:`stdwrap`         Default
    ============================== ================================= ====================== ========================
    `1,2,3,4...`_                  cObject
-   `bgImg`_                       imgResource
    `bodyTag`_                     <tag>                                                    <body>
    `bodyTagAdd`_                  :ref:`data-type-string`
    `bodyTagCObject`_              cObject
@@ -110,27 +109,6 @@ Property details
    Description
          These properties can be used to define any number of objects,
          just like you can do with a :ref:`COA content object <cobj-coa>`.
-
-
-
-.. _setup-page-bgimg:
-
-bgImg
-"""""
-
-.. container:: table-row
-
-   Property
-         bgImg
-
-   Data type
-         imgResource
-
-   Description
-         Background image on the page. This is automatically added to the body-
-         tag.
-
-         **Note:** This option is deprecated since TYPO3 CMS 7 and removed with TYPO3 CMS 8.
 
 
 
