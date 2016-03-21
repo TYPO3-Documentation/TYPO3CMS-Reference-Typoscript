@@ -1093,6 +1093,32 @@ Web > List (mod.web\_list)
 .. container:: table-row
 
    Property
+         searchLevel.items
+
+   Data type
+         array
+
+   Description
+         Sets labels for each level label in the searchlevel select box
+
+         .. code-block:: typoscript
+
+            mod.web_list.searchLevel.items {
+               -1 = EXT:lang/locallang_core.xlf:labels.searchLevel.infinite
+               0 = EXT:lang/locallang_core.xlf:labels.searchLevel.0
+               1 = EXT:lang/locallang_core.xlf:labels.searchLevel.1
+               2 = EXT:lang/locallang_core.xlf:labels.searchLevel.2
+               3 = EXT:lang/locallang_core.xlf:labels.searchLevel.3
+               4 = EXT:lang/locallang_core.xlf:labels.searchLevel.4
+            }
+
+   Default
+
+
+
+.. container:: table-row
+
+   Property
          allowedNewTables
 
    Data type
@@ -1515,6 +1541,30 @@ New content element wizard (mod.wizards.newContentElement)
          four default groups are: "common", "special", "forms" and "plugins".
 
          The configuration options below apply to any group.
+
+
+.. container:: table-row
+
+   Property
+         wizardItems.[group].before
+
+   Data type
+         string
+
+   Description
+         Sorts [group] in front of the group given. The four default groups are: "common", "special", "forms" and "plugins".
+
+
+.. container:: table-row
+
+   Property
+         wizardItems.[group].after
+
+   Data type
+         string
+
+   Description
+         Sorts [group] next to the group given. The four default groups are: "common", "special", "forms" and "plugins".
 
 
 .. container:: table-row
