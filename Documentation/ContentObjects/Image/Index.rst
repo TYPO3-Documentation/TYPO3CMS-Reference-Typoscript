@@ -122,7 +122,7 @@ for.
          longdescURL
 
    Data type
-         string /:ref:`stdWrap <stdwrap>`
+         :ref:`string <data-type-string>`/:ref:`stdWrap <stdwrap>`
 
    Description
          "longdesc" attribute (URL pointing to document with extensive details
@@ -140,7 +140,7 @@ layoutKey
          layoutKey
 
    Data type
-         :ref:`string <data-type-string>`
+         :ref:`string <data-type-string>`/:ref:`stdWrap <stdwrap>`
 
    Description
          Defines the render layout for the IMAGE. The render layout is the HTML Code for the IMAGE itself.
