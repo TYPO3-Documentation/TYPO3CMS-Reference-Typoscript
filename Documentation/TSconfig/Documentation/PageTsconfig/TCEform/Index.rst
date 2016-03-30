@@ -58,25 +58,25 @@ disable options, blind options in selector boxes etc.
          of the field, the allowed keys are:
 
          input
-           size, max
+           size, max, readOnly
 
          text
-           cols, rows, wrap
+           cols, rows, wrap, readOnly
 
          check
-           cols, showIfRTE
+           cols, showIfRTE, readOnly
 
          select
-           size, autoSizeMax, maxitems, minitems
+           size, autoSizeMax, maxitems, minitems, readOnly, treeConfig
 
          group
            size, autoSizeMax, max\_size, show\_thumbs, maxitems,
-           minitems, disable\_controls
+           minitems, disable\_controls, readOnly
 
          inline
-           appearance, foreign\_label, foreign\_selector,
+           appearance, behaviour, foreign\_label, foreign\_selector,
            foreign\_unique, maxitems, minitems, size, autoSizeMax,
-           symmetric\_label
+           symmetric\_label, readOnly
 
 
 .. container:: table-row
