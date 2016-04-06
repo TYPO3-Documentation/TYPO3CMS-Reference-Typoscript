@@ -12,13 +12,15 @@ CONTENT
 ^^^^^^^
 
 This object is designed to generate content by making it possible to
-finely select records and rendering them.
+finely select records and rendering them. 
 
-The register-key SYS\_LASTCHANGED is updated with the tstamp-field of
-the records selected which has a higher value than the current.
+The visibility of records is controlled by start and end-times and 
+other standardized fields automatically. The register-key SYS\_LASTCHANGED
+is updated with the tstamp-field ofthe records selected which has a higher 
+value than the current.
 
-The cObject :ref:`RECORDS <cobj-records>` in contrast is for displaying
-lists of records from a variety of tables without fine graining.
+The cObject :ref:`RECORDS <cobj-records>` in contrast is for displayinglists 
+of records from a variety of tables without fine graining.
 
 .. ### BEGIN~OF~TABLE ###
 
@@ -31,8 +33,8 @@ lists of records from a variety of tables without fine graining.
          :ref:`->select <select>`
 
    Description
-         The SQL-statement, a SELECT query, is set here!
-
+         The SQL-statement, a SELECT query, is set here,
+         including automatic visibility control.
 
 .. container:: table-row
 
