@@ -1,14 +1,12 @@
-.. ==================================================
-.. FOR YOUR INFORMATION
-.. --------------------------------------------------
-.. -*- coding: utf-8 -*- with BOM.
-
 .. include:: Includes.txt
 
-.. only:: t3html
+.. _targets-for-crossreferencing:
+.. _labels-for-crossreferencing:
 
-   Index: Labels for Cross-Referencing
-   ===================================
+.. only:: html t3html
+
+   Targets for Cross-Referencing
+   =============================
 
    .. ref-targets-list::
 
