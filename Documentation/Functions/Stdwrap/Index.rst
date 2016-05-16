@@ -1809,6 +1809,11 @@ insertData
             10 = TEXT
             10.value = This is the page title: {page:title}
             10.stdWrap.insertData = 1
+            
+         .. warning:
+            Never use this on content that can be edited in backend. This allows editors to disclose
+            normally hidden information. Never use this to insert data into wraps. 
+            Use :ref:`dataWrap <stdwrap-datawrap>` instead.
 
 
 .. _stdwrap-postuserfunc:
