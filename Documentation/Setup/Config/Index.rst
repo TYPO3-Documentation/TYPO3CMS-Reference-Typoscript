@@ -885,6 +885,11 @@ disableBodyTag
          "bodyTagCObject", "bodyTag", "bodyTagMargins" and
          "bodyTagAdd". If disableBodyTag is set to "1", the others are
          ignored.
+         
+         .. attention:: As of the time being only the openeing
+            part of the tag is left out (`<body>`) but not the closing part(`</body>`).
+            In :forge:`76201` this has been reported as a bug and the behaviour
+            may change in future.
 
    Default
          0
