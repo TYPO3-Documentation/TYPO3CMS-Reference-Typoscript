@@ -66,7 +66,7 @@ Properties
    `htmlTag\_dir`_                                       :ref:`data-type-string`
    `htmlTag\_langKey`_                                   :ref:`data-type-string`            en
    `htmlTag\_setParams`_                                 :ref:`data-type-string`
-   `htmlTag\_stdWrap`_                                   ->:ref:`stdwrap`
+   `htmlTag\_stdWrap`_                                   :ref:`stdwrap`
    `index\_descrLgd`_                                    :ref:`data-type-integer`           200
    `index\_enable`_                                      :ref:`data-type-boolean`
    `index\_externals`_                                   :ref:`data-type-boolean`
@@ -88,14 +88,14 @@ Properties
    `MP\_disableTypolinkClosestMPvalue`_                  :ref:`data-type-boolean`
    `MP\_mapRootPoints`_                                  list of PIDs/string
    `namespaces`_                                         *(array of strings)*
-   `no\_cache`_                                          :ref:`data-type-boolean`           -
+   `no\_cache`_                                          :ref:`data-type-boolean`           0
    `noPageTitle`_                                        :ref:`data-type-integer`           0
    `noScaleUp`_                                          :ref:`data-type-boolean`
    `pageGenScript`_                                      :ref:`data-type-resource`          typo3/sysext/frontend/Classes/Page/PageGenerator.php
    `pageRendererTemplateFile`_                           :ref:`data-type-string`
    `pageTitle`_                                          :ref:`stdWrap`
    `pageTitleFirst`_                                     :ref:`data-type-boolean`           0
-   `pageTitleSeparator`_                                 string /:ref:`stdWrap <stdwrap>`   : *(colon with following space)*
+   `pageTitleSeparator`_                                 string /:ref:`stdWrap <stdwrap>`   `: ` *(colon with following space)*
    `prefixLocalAnchors`_                                 :ref:`data-type-string`
    `removeDefaultCss`_                                   :ref:`data-type-boolean`
    `removeDefaultJS`_                                    boolean / string
@@ -117,7 +117,7 @@ Properties
    `sys\_language\_softMergeIfNotBlank`_                 :ref:`data-type-string`
    `sys\_language\_uid`_                                 :ref:`data-type-integer`
    `titleTagFunction`_                                   function name
-   `tx\_[extension key with no underscores]\_[\*]`_      -
+   `tx\_[extension key with no underscores]\_[\*]`_      \-
    `typolinkCheckRootline`_                              :ref:`data-type-boolean`
    `typolinkEnableLinksAcrossDomains`_                   :ref:`data-type-boolean`           0
    `typolinkLinkAccessRestrictedPages`_                  integer (page id) / keyword "NONE"
