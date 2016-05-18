@@ -710,18 +710,23 @@ concatenateJsAndCss
 content\_from\_pid\_allowOutsideDomain
 """"""""""""""""""""""""""""""""""""""
 
-.. container:: table-row
+:aspect:`Property`
+      content\_from\_pid\_allowOutsideDomain
 
-   Property
-         content\_from\_pid\_allowOutsideDomain
+:aspect:`Data type`
+      boolean
 
-   Data type
-         boolean
+:aspect:`Description`
+      Using the "Show content from this page instead" feature allows you to
+      insert content from the current domain only. Setting this option will
+      allow content included from anywhere in the page tree!
 
-   Description
-         Using the "Show content from this page instead" feature allows you to
-         insert content from the current domain only. Setting this option will
-         allow content included from anywhere in the page tree!
+      Another use case is mount points: By means of the page type "Mount Point" you can virtually
+      insert a whole subtree from somwhere else by just pointing to it. However, usually this
+      only works within the page tree of the given domain. Setting :ts:`config.content_from_pid_allowOutsideDomain = 1`
+      removes that restriction.
+
+Keywords: mountpoint
 
 
 
@@ -885,7 +890,7 @@ disableBodyTag
          "bodyTagCObject", "bodyTag", "bodyTagMargins" and
          "bodyTagAdd". If disableBodyTag is set to "1", the others are
          ignored.
-         
+
          .. attention:: As of the time being only the openeing
             part of the tag is left out (`<body>`) but not the closing part(`</body>`).
             In :forge:`76201` this has been reported as a bug and the behaviour
@@ -1898,6 +1903,7 @@ MP\_defaults
          36,37 and 48.
 
 
+
 .. _setup-config-mp-disabletypolinkclosestmpvalue:
 
 MP\_disableTypolinkClosestMPvalue
@@ -1922,31 +1928,36 @@ MP\_disableTypolinkClosestMPvalue
 MP\_mapRootPoints
 """""""""""""""""
 
-.. container:: table-row
+:aspect:`Property`
+      MP\_mapRootPoints
 
-   Property
-         MP\_mapRootPoints
+:aspect:`Data type`
+      list of PIDs/string
 
-   Data type
-         list of PIDs/string
+:aspect:`Description`
+      Defines a list of ID numbers from which the MP-vars are automatically
+      calculated for the branch.
 
-   Description
-         Defines a list of ID numbers from which the MP-vars are automatically
-         calculated for the branch.
+      The result is used just like :ref:`MP\_defaults <setup-config-mp-defaults>` are used to
+      find MP-vars if none has been specified prior to the call to
+      `TYPO3\CMS\Core\TypoScript\TemplateService::linkData()`.
 
-         The result is used just like :ref:`MP\_defaults <setup-config-mp-defaults>` are used to
-         find MP-vars if none has been specified prior to the call to
-         `TYPO3\CMS\Core\TypoScript\TemplateService::linkData()`.
+      You can specify `root` as a special keyword in the list of IDs and
+      that will create a map-tree for the whole site (but this may be VERY
+      processing intensive if there are many pages!).
 
-         You can specify `root` as a special keyword in the list of IDs and
-         that will create a map-tree for the whole site (but this may be VERY
-         processing intensive if there are many pages!).
+      The order of IDs specified may have a significance; Any ID in a branch
+      which is processed already (by a previous ID root point) will not be
+      processed again.
 
-         The order of IDs specified may have a significance; Any ID in a branch
-         which is processed already (by a previous ID root point) will not be
-         processed again.
+      The configured IDs have to be the uids of Mount Point pages itself, not the targets.
 
-         The configured IDs have to be the uids of Mount Point pages itself, not the targets.
+      .. tip::
+
+         To mount content from parts of the page tree that don't belong to the current
+         domain set :ref:`setup-config-content-from-pid-allowoutsidedomain` to true.
+
+
 
 
 .. _setup-config-namespaces:
