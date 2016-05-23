@@ -873,31 +873,24 @@ disableAllHeaderCode
 disableBodyTag
 """"""""""""""
 
-.. container:: table-row
+:aspect:`Property`
+      disableBodyTag
 
-   Property
-         disableBodyTag
+:aspect:`Data type`
+      boolean
 
-   Data type
-         boolean
+:aspect:`Description`
+      If this option is set the TYPO3 core will not generate the
+      opening `<body ...>` part of the body tag. The closing `</body>`
+      is not affected and will still be issued.
 
-   Description
-         This option disables <body> tag generation by the TYPO3 core. It is
-         useful for extensions like TemplaVoilà, which can produce their own
-         <body> tag with additional attributes.
+      :ts:`disableBodyTag` takes precedence over the *page* properties
+      :ts:`bodyTagCObject`, :ts:`bodyTag`, :ts:`bodyTagMargins` and
+      :ts:`bodyTagAdd`. With :ts:`config.disableBodyTag =1` the others are
+      ignored and don't have any effect.
 
-         **Note:** disableBodyTag takes precedence over the page properties
-         "bodyTagCObject", "bodyTag", "bodyTagMargins" and
-         "bodyTagAdd". If disableBodyTag is set to "1", the others are
-         ignored.
-
-         .. attention:: As of the time being only the openeing
-            part of the tag is left out (`<body>`) but not the closing part(`</body>`).
-            In :forge:`76201` this has been reported as a bug and the behaviour
-            may change in future.
-
-   Default
-         0
+:aspect:`Default`
+      0 (false)
 
 
 
