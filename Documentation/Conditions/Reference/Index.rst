@@ -918,7 +918,7 @@ these three conditions will match:
 			}
 			if (!empty($conditionParameters) && substr($conditionParameters[0], 0, 1) === '=') {
 				$conditionParameters[0] = trim(substr($conditionParameters[0], 1));
-				if ($conditionParameters[0] = '42') {
+				if ($conditionParameters[0] == '42') {
 					$result = TRUE;
 				}
 			}
