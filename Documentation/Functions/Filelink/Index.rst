@@ -162,13 +162,16 @@ icon
 
    The following sub-properties are available and have stdWrap functionality:
 
-   - :ts:`path`: Path to the icon set. Default is :file:`typo3/gfx/fileicons/`.
+   -  :ts:`path`:
+            Path to the icon set.
+            Default is :file:`typo3/sysext/frontend/Resources/Public/Icons/FileIcons/` since TYPO3 v7.
+            Before the default has been :file:`typo3/gfx/fileicons/`.
 
-   - :ts:`ext`: File extension of icons. Default is :file:`.gif`.
+   -  :ts:`ext`: File extension of icons. Default is :file:`.gif`.
 
-   - :ts:`widthAttribute`: Width of the icons in pixels. Default: 18
+   -  :ts:`widthAttribute`: Width of the icons in pixels. Default: 18
 
-   - :ts:`heightAttribute` Height of the icons in pixels. Default: 16
+   -  :ts:`heightAttribute` Height of the icons in pixels. Default: 16
 
 
 
