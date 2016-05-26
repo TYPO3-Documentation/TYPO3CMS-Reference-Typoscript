@@ -425,6 +425,8 @@ Renders a text.
 
          **Note:** This option is not available if .niceText is enabled.
 
+         **Note:** setting this option to 0 will not work if *fontColor* is set to black (or #000000).
+
    Default
          1
 
