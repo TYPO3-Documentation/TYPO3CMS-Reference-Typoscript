@@ -65,8 +65,9 @@ the register key SPLIT\_COUNT.
          integer /:ref:`stdWrap <stdwrap>`
 
    Description
-         Instead of parsing the split result, just return this element of the
-         index immediately.
+         Instead of parsing the split result, just return the element of the
+         index with this number immediately and stop processing of the split
+         function.
 
 
 .. container:: table-row
@@ -75,10 +76,21 @@ the register key SPLIT\_COUNT.
          returnCount
 
    Data type
-         integer
+         boolean /:ref:`stdWrap <stdwrap>`
 
    Description
-         Returns the number of split items
+         Counts all elements resulting from the split, returns their number
+         and stops processing of the split function.
+
+         **Example:** ::
+
+            # returns 9
+            1 = TEXT
+            1 {
+                value = x,y,z,1,2,3,a,b,c
+                split.token = ,
+                split.returnCount = 1
+            }
 
 
 .. container:: table-row
@@ -132,28 +144,6 @@ the register key SPLIT\_COUNT.
 
    Description
          Defines a wrap for each item.
-
-
-.. container:: table-row
-
-   Property
-         returnCount
-
-   Data type
-         boolean /:ref:`stdWrap <stdwrap>`
-
-   Description
-         Counts all elements resulting from the split.
-
-         **Example:** ::
-
-            # returns 9
-            1 = TEXT
-            1 {
-                value = x,y,z,1,2,3,a,b,c
-                split.token = ,
-                split.returnCount = 1
-            }
 
 
 .. ###### END~OF~TABLE ######
