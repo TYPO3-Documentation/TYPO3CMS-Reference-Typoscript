@@ -754,7 +754,11 @@ char
          integer /stdWrap
 
    Description
-         Content is set to the chr(*value*):
+         Content is set to chr(*value*). This returns a one-character
+         string containing the character specified by ascii code. Reliable
+         results will be obtained only for character codes in the integer
+         range 0 - 127. See
+         `the PHP manual <http://php.net/manual/en/function.chr.php>`_:
 
          .. code-block:: php
 
