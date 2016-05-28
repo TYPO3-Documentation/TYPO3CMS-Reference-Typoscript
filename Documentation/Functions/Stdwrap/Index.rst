@@ -1301,7 +1301,8 @@ brTag
          string /stdWrap
 
    Description
-         All ASCII-codes of "10" (CR) are substituted with *value.*
+         All ASCII codes of "10" (line feed, LF) are substituted with the
+         *value*, which has been provided in this property.
 
 
 .. _stdwrap-encapslines:
