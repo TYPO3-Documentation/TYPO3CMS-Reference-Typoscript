@@ -1236,7 +1236,8 @@ encodeForJavaScriptValue
          Encodes content to be used safely inside strings in JavaScript.
          Characters, which can cause problems inside JavaScript strings, are
          replaced with their encoded equivalents. The resulting string is
-         enclosed in single quotes.
+         *not* enclosed in quotes. If needed, quotes can be added using
+         TypoScript.
 
          Passes the content through the core function
          :ref:`t3api:TYPO3\\CMS\\Core\\Utility\\GeneralUtility::quoteJSvalue`.
