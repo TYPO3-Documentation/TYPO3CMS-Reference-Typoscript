@@ -1284,7 +1284,7 @@ br
 
    Description
          Pass the value through the PHP function `nl2br() <http://www.php.net/nl2br>`_. This
-         converts line breaks to <br /> tags.
+         converts each line break to a <br /> or a <br> tag depending on doctype.
 
 
 .. _stdwrap-brtag:
