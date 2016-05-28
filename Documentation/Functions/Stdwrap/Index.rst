@@ -1083,6 +1083,9 @@ removeBadHTML
          Removes "bad" HTML code based on a pattern that filters away HTML that
          is considered dangerous for XSS bugs.
 
+         **Note:** The removal, which removeBadHTML does, is not 100% complete.
+         You cannot rely on the processing to remove **all** potentially bad tags.
+
 
 .. _stdwrap-crophtml:
 
