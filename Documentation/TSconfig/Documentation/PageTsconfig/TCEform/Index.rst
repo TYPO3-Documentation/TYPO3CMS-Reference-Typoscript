@@ -54,30 +54,6 @@ disable options, blind options in selector boxes etc.
          settings in
          $GLOBALS['TCA'][<table name>]['columns'][<field>]['config'][<key>].
 
-         Depending on the :ref:`TCA type <t3tca:columns-common-properties-type>`
-         of the field, the allowed keys are:
-
-         input
-           size, max, readOnly
-
-         text
-           cols, rows, wrap, readOnly
-
-         check
-           cols, showIfRTE, readOnly
-
-         select
-           size, autoSizeMax, maxitems, minitems, readOnly, treeConfig
-
-         group
-           size, autoSizeMax, max\_size, show\_thumbs, maxitems,
-           minitems, disable\_controls, readOnly
-
-         inline
-           appearance, behaviour, foreign\_label, foreign\_selector,
-           foreign\_unique, maxitems, minitems, size, autoSizeMax,
-           symmetric\_label, readOnly
-
 
 .. container:: table-row
 
@@ -185,20 +161,6 @@ disable options, blind options in selector boxes etc.
          TCEFORM.[table name].[field].[dataStructKey].[flexSheet].[flexField]
          configures a single FlexForm field.
 
-         Only these TCEFORM\_confObj options are available for FlexForm fields:
-
-         - disabled
-
-         - label
-
-         - keepItems
-
-         - removeItems
-
-         - addItems
-
-         - altLabels
-
          **Example:**
 
          .. code-block:: typoscript
@@ -242,20 +204,6 @@ disable options, blind options in selector boxes etc.
 
    Description
          This setting allows to override FlexForm field configuration.
-
-         Depending on the $GLOBALS['TCA'] type of the field, the allowed keys
-         are:
-
-         - input: size, max
-
-         - text: cols, rows, wrap
-
-         - check: cols, showIfRTE
-
-         - select: size, autoSizeMax, maxitems, minitems
-
-         - group: size, autoSizeMax, max\_size, show\_thumbs, maxitems,
-           minitems, disable\_controls
 
 
 .. ###### END~OF~TABLE ######
@@ -530,7 +478,7 @@ above).
 
          .. code-block:: typoscript
 
-			TCEFORM.tt_content.pi_flexform.PAGE_TSCONFIG_ID = 22
+			TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.myField.PAGE_TSCONFIG_ID = 22
 
          In this example, the value will substitute the marker in a plugin
          FlexForm.
@@ -561,7 +509,7 @@ above).
 
          .. code-block:: typoscript
 
-			TCEFORM.tt_content.pi_flexform.PAGE_TSCONFIG_IDLIST = 20,21,22
+			TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.myField.PAGE_TSCONFIG_IDLIST = 20,21,22
 
          In this example, the value will substitute the marker in a plugin
          FlexForm.
@@ -592,7 +540,7 @@ above).
 
          .. code-block:: typoscript
 
-			TCEFORM.tt_content.pi_flexform.PAGE_TSCONFIG_STR = %hello%
+			TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.myField.PAGE_TSCONFIG_STR = %hello%
 
          In this example, the value will substitute the marker in a plugin
          FlexForm.
