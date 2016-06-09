@@ -1,7 +1,3 @@
-.. ==================================================
-.. FOR YOUR INFORMATION
-.. --------------------------------------------------
-.. -*- coding: utf-8 -*- with BOM.
 
 .. include:: ../../Includes.txt
 
@@ -86,15 +82,14 @@ initialized from the root of the tree.
 In extensions this is easily done by the extension API function,
 :code:`\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig()`.
 In the :file:`ext_localconf.php` file you
-can call it like this to set default configuration:
+can call it like this to set default configuration::
 
-.. code-block:: typoscript
-	\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig('
-		RTE.default {
-			showButtons = cut,copy,paste,fontstyle,fontsize,textcolor
-			hideButtons = class,user,chMode
-		}
-	');
+   \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig('
+      RTE.default {
+         showButtons = cut,copy,paste,fontstyle,fontsize,textcolor
+         hideButtons = class,user,chMode
+      }
+   ');
 
 This API function simply adds the content to
 :code:`$TYPO3_CONF_VARS['BE']['defaultPageTSconfig']`.
@@ -105,17 +100,17 @@ Register static Page TSconfig files
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Register PageTS config files in :file:`Configuration/TCA/Overrides/pages.php` of any extension,
-which will be shown in the page properties (the same way as TypoScript static templates are included).
+which will be shown in the page properties (the same way as TypoScript static templates are included)::
+
+   \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::registerPageTSConfigFile(
+      'extension_name',
+      'Configuration/PageTS/myPageTSconfigFile.txt',
+      'My special config'
+   );
 
 .. note::
 
    The included files from the pages in the rootline are included after the default
    page TSconfig and before the normal TSconfig from the pages in the rootline.
 
-.. code-block:: php
 
-	\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::registerPageTSConfigFile(
-		'extension_name',
-		'Configuration/PageTS/myPageTSconfigFile.txt',
-		'My special config'
-	);

@@ -1,7 +1,3 @@
-.. ==================================================
-.. FOR YOUR INFORMATION
-.. --------------------------------------------------
-.. -*- coding: utf-8 -*- with BOM.
 
 .. include:: ../../Includes.txt
 
@@ -141,11 +137,11 @@ Configuration of the Admin Panel in the Frontend for the user.
 
          .. code-block:: typoscript
 
-			admPanel {
-				enable.edit = 1
-				module.edit.forceDisplayFieldIcons = 1
-				hide = 1
-			}
+            admPanel {
+               enable.edit = 1
+               module.edit.forceDisplayFieldIcons = 1
+               hide = 1
+            }
 
 
 .. ###### END~OF~TABLE ######
@@ -161,9 +157,9 @@ Configuration of the Admin Panel in the Frontend for the user.
 
    .. code-block:: html
 
-		<a href="typo3/index.php?redirect_url=../">
-			Backend login returning to frontend
-		</a>
+      <a href="typo3/index.php?redirect_url=../">
+         Backend login returning to frontend
+      </a>
 
 .. figure:: ../../Images/manual_html_639a5d8e.png
    :alt: The TYPO3 admin panel
@@ -175,10 +171,10 @@ done by inserting this string in the TypoScript Template:
 
 .. code-block:: typoscript
 
-	config.admPanel = 1
+   config.admPanel = 1
 
 Or if you use frames, this is probably better
 
 .. code-block:: typoscript
 
-	page.config.admPanel = 1
+   page.config.admPanel = 1

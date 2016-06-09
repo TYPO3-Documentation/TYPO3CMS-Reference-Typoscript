@@ -1,9 +1,11 @@
 .. include:: Includes.txt
 
-.. _targets-for-crossreferencing:
-.. _labels-for-crossreferencing:
 
-.. only:: html t3html
+.. only:: html
+
+   .. _targets-for-crossreferencing:
+   .. _labels-for-crossreferencing:
+
 
    Targets for Cross-Referencing
    =============================
