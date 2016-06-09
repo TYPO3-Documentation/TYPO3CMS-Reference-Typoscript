@@ -1,8 +1,4 @@
-﻿.. ==================================================
-.. FOR YOUR INFORMATION
-.. --------------------------------------------------
-.. -*- coding: utf-8 -*- with BOM.
-
+﻿
 .. include:: ../../Includes.txt
 
 .. _pagetcemain:
@@ -39,6 +35,7 @@ Properties
    `notificationEmail\_body`_          string
    `permissions (user and group)`_     integer
    `permissions (actions)`_            list of strings / integer
+   `preview`_                          array
    `previewDomain`_                    string
    `table.[table name]`_               :ref:`TCEMAIN_tables <pagetcemaintables>`
    `translateToMessage`_               string
@@ -91,12 +88,12 @@ permissions (user and group)
 
          .. code-block:: typoscript
 
-			TCEMAIN {
-				# Owner be_users UID for new pages:
-				permissions.userid = 2
-				# Owner be_groups UID for new pages:
-				permissions.groupid = 3
-			}
+            TCEMAIN {
+               # Owner be_users UID for new pages:
+               permissions.userid = 2
+               # Owner be_groups UID for new pages:
+               permissions.groupid = 3
+            }
 
          Backend User with UID 2 is "test" and the Backend Group with UID 3 is
          "test\_group". With the configuration above a new page would be
@@ -136,24 +133,24 @@ permissions (actions)
 
          .. code-block:: php
 
-			'user' => 'show,edit,delete,new,editcontent',
-			'group' => 'show,edit,new,editcontent',
-			'everybody' => ''
+            'user' => 'show,edit,delete,new,editcontent',
+            'group' => 'show,edit,new,editcontent',
+            'everybody' => ''
 
          **Example:**
 
          .. code-block:: typoscript
 
-			TCEMAIN.permissions {
-				# User can do anything (default):
-				user = 31
-				# Group can do anything
-				# (normally "delete" is disabled)
-				group = 31
-				# Everybody can at least see the page
-				# (normally everybody can do nothing)
-				everybody = show
-			}
+            TCEMAIN.permissions {
+               # User can do anything (default):
+               user = 31
+               # Group can do anything
+               # (normally "delete" is disabled)
+               group = 31
+               # Everybody can at least see the page
+               # (normally everybody can do nothing)
+               everybody = show
+            }
 
          The page "Community" was created with the settings from the example
          above. Compared to the two other pages created with default
@@ -192,15 +189,15 @@ clearCacheCmd
 
          .. code-block:: typoscript
 
-			# Will clear the cache for page ID 12 and 23
-			# when saving a record in this page:
-			TCEMAIN.clearCacheCmd = 12,23
-			# Will clear all pages cache:
-			TCEMAIN.clearCacheCmd = pages
-			# Will clear ALL cache:
-			TCEMAIN.clearCacheCmd = all
-			# Will clear cache for all pages tagged with tag "pagetag1"
-			TCEMAIN.clearCacheCmd = cacheTag:pagetag1
+            # Will clear the cache for page ID 12 and 23
+            # when saving a record in this page:
+            TCEMAIN.clearCacheCmd = 12,23
+            # Will clear all pages cache:
+            TCEMAIN.clearCacheCmd = pages
+            # Will clear ALL cache:
+            TCEMAIN.clearCacheCmd = all
+            # Will clear cache for all pages tagged with tag "pagetag1"
+            TCEMAIN.clearCacheCmd = cacheTag:pagetag1
 
 
 .. _pagetcemain-clearcache-pagesiblingchildren:
@@ -286,10 +283,60 @@ translateToMessage
 
          .. code-block:: typoscript
 
-			TCEMAIN {
-				# Set a German label:
-				translateToMessage = Bitte in "%s" übersetzen:
-			}
+            TCEMAIN {
+               # Set a German label:
+               translateToMessage = Bitte in "%s" übersetzen:
+            }
+
+
+.. _pagetcemain-preview:
+
+preview
+~~~~~~~
+
+.. container:: table-row
+
+   Property
+         preview
+
+   Data type
+         array
+
+   Description
+         Configure preview link generated for the save+view button in Backend.
+         This allows to have different preview URLs depending on the record type.
+         Common usecase is to have previews for blog or news records, but this feature
+         now allows you to define a different preview page for content elements as well,
+         which might be handy if those are stored in a sysfolder.
+
+         .. code-block:: typoscript
+
+            TCEMAIN.preview {
+                <table name> {
+                    previewPageId = 123
+                    useDefaultLanguageRecord = 0
+                    fieldToParameterMap {
+                        uid = tx_myext_pi1[showUid]
+                    }
+                    additionalGetParameters {
+                        tx_myext_pi1.special = HELLO # results in tx_myext_pi1[special]
+                    }
+                }
+            }
+
+         The :ts:`previewPageId` is the uid of the page to use for preview. If this setting is omitted the current page will be used.
+         If the current page is not a normal page, the root page will be chosen.
+
+         The :ts:`useDefaultLanguageRecord` defaults to `1` and ensures that translated records will use the uid of the default record
+         for the preview link. You may disable this, if your extension can deal with the uid of translated records.
+
+         The :ts:`fieldToParameterMap` is a mapping which allows you to select fields of the record to be included as GET-parameters in
+         the preview link. The key specifies the field name and the value specifies the GET-parameter name.
+
+         Finally :ts:`additionalGetParameters` allow you to add arbitrary GET-parameters and even override others.
+
+         The core automatically sets the "no_cache" and the "L" parameter. The language matches the language of the current record.
+         You may override each parameter by using the :ts:`additionalGetParameters` configuration option.
 
 
 .. _pagetcemain-previewdomain:
@@ -308,17 +355,17 @@ previewDomain
    Description
          Defines a preview domain used for frontend previews triggered from the backend. E.g. "Save and View" button
          The value must be a valid domain, optionally prefixed by a schema.
-         
+
          **Examples:**
-         
+
          .. code-block:: typoscript
-         
-		TCEMAIN.previewDomain = dev.local
-		TCEMAIN.previewDomain = http://dev.local
-		TCEMAIN.previewDomain = https://example.com
-         
+
+            TCEMAIN.previewDomain = dev.local
+            TCEMAIN.previewDomain = http://dev.local
+            TCEMAIN.previewDomain = https://example.com
+
          .. note::
-         
+
             If the option is not specified, the first available domain record within the current rootline is used.
             Moverover, if no domain record is present either, the current domain (and schema) used
             for the backend will be chosen.
@@ -349,10 +396,10 @@ notificationEmail\_subject
 
          .. code-block:: typoscript
 
-			TCEMAIN {
-				# Set a German header:
-				notificationEmail_subject = TYPO3-Arbeitsumgebungshinweis: Änderung der Stufe für %s
-			}
+            TCEMAIN {
+               # Set a German header:
+               notificationEmail_subject = TYPO3-Arbeitsumgebungshinweis: Änderung der Stufe für %s
+            }
 
          .. note::
 
@@ -431,18 +478,18 @@ notificationEmail\_body
 
          .. code-block:: typoscript
 
-			TCEMAIN {
-				# Set a German bodytext:
-				notificationEmail_body (
-					Auf der TYPO3-Seite "%s" (%s)
-					wurde in der Arbeitsumgebung "%s" (%s)
-					die Stufe des Elements/der Elemente "%11$s" (%s) am Ort "%10$s" im Seitenbaum verändert:
-					==> %s
-					Kommentar des Benutzers:
-					"%s"
-					Die Stufe wurde geändert von %s (Benutzername: %s).
-				)
-			}
+            TCEMAIN {
+               # Set a German bodytext:
+               notificationEmail_body (
+                  Auf der TYPO3-Seite "%s" (%s)
+                  wurde in der Arbeitsumgebung "%s" (%s)
+                  die Stufe des Elements/der Elemente "%11$s" (%s) am Ort "%10$s" im Seitenbaum verändert:
+                  ==> %s
+                  Kommentar des Benutzers:
+                  "%s"
+                  Die Stufe wurde geändert von %s (Benutzername: %s).
+               )
+            }
 
          .. note::
 
@@ -511,12 +558,12 @@ disablePrependAtCopy
 
          .. code-block:: typoscript
 
-			TCEMAIN.table.pages {
-				# Pages will *not* have "(copy)" appended:
-				disablePrependAtCopy = 1
-				# Pages will *not* be hidden upon copy:
-				disableHideAtCopy = 1
-			}
+            TCEMAIN.table.pages {
+               # Pages will *not* have "(copy)" appended:
+               disablePrependAtCopy = 1
+               # Pages will *not* be hidden upon copy:
+               disableHideAtCopy = 1
+            }
 
          These settings adjust that a page which is copied will neither have
          "(copy X)" appended nor be hidden.
@@ -556,4 +603,3 @@ disableHideAtCopy
          For an example, see :ref:`disablePrependAtCopy <pagetcemaintables-disableprependatcopy>`
          above.
 
-[page:TCEMAIN.default/TCEMAIN.table.(table name)/->TCEMAIN\_tables]
