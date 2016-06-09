@@ -352,7 +352,7 @@ above).
             adhoc-items to a selector box in TYPO3, but you *should not* add new
             *page types* or Content Element types this way!
 
-            For adding new page types, refer to :ref:`Core APIs <t3api:page-types>`.
+            For adding new page types, refer to :ref:`Core APIs <t3coreapi:page-types>`.
 
 
 .. container:: table-row
