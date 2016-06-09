@@ -40,7 +40,7 @@ These are the Page TSconfig Top-Level Objects (TLOs):
    Description
          This defines configuration for the Rich Text Editor.
 
-         Please refer to the :ref:`RTE Page Tsconfig chapter <t3api:transformations-tsconfig>`
+         Please refer to the :ref:`RTE Page Tsconfig chapter <t3coreapi:transformations-tsconfig>`
          in Core APIs.
 
 

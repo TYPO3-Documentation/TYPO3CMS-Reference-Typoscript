@@ -804,7 +804,7 @@ Various options for the user affecting the core at various points.
    Description
          Excludes nodes (pages) with one of the defined doktypes from the
          pagetree. Can be used for example for hiding
-         :ref:`custom doktypes <t3api:page-types>`.
+         :ref:`custom doktypes <t3coreapi:page-types>`.
 
          **Example**
 
