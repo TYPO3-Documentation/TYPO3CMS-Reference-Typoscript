@@ -11,7 +11,7 @@
 menu object
 ===========
 
-See the section :ref:`"Menu Objects" <data-type-menuobj>` later in this manual.
+See the section :ref:`"Menu Objects" <menu-objects>` later in this manual.
 
 **Examples:** ::
 
