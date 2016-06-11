@@ -40,25 +40,23 @@ As a developer you can use `[GLOBAL]` for testing purposes
 to ensure that your own condition works as expected.
 See :ref:`t3tssyntax:The-Global-Condition` for additional documentation.
 
-.. There's more in Patrick Lobacher's "integrator book" (german only).
-   Corresponding information still needs to be added here.
 
 Example
 -------
 
-Test browser::
+Test day of month::
 
-   [browser = msie]
-     # TypoScript Code for users of Internet Explorer.
+   [dayofmonth = 9]
+     # TypoScript for the ninth day of the month.
    [ELSE]
-     # TypoScript Code for users of other browsers.
+     # TypoScript for other days.
    [END]
 
 
 .. _condition-general-notes:
 
-General notes
-=============
+Trimming, braces and condition operators
+========================================
 
 Values are normally trimmed before comparison, so leading and trailing
 blanks are not taken into account.
@@ -74,51 +72,37 @@ operator has been specified, it will default to OR.
 Examples
 --------
 
-Test browser and system
-~~~~~~~~~~~~~~~~~~~~~~~
+Test day of month and month
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-This condition will match if the visitor opens the website with
-Internet Explorer on Windows (but not on Mac)::
+This condition will match on May 9th::
 
-   [browser = msie] && [system = win]
+   [dayofmonth = 9] && [month = 5]
 
-Test browser
-~~~~~~~~~~~~
+Test day of month
+~~~~~~~~~~~~~~~~~
 
-This will match with either Opera or Firefox browsers::
+This will match on either the ninth or the tenth of a month::
 
-   [browser = opera] || [browser = firefox]
+   [dayofmonth = 9] || [dayofmonth = 10]
 
-Test browser and version
-~~~~~~~~~~~~~~~~~~~~~~~~
+Test month and day of month
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-This will match with either Firefox or Internet Explorer. In case of
-Internet Explorer, the version must be above 8::
+This will match in either June or May. In case of
+May, the day of the month must be above 8::
 
-   [browser = firefox] || [browser = msie] && [version => 8]
-
-
-Test for empty value
-~~~~~~~~~~~~~~~~~~~~
-
-This will match with an empty value::
-
-   [globalString = IENV:HTTP_REFERER = /^$/]
-
-Test for non-empty value
-~~~~~~~~~~~~~~~~~~~~~~~~
-
-This will match with an not empty value::
-
-   [globalString = IENV:HTTP_REFERER = /.+/]
+   [month = 6] || [month = 5] && [dayofmonth => 8]
 
 
-More
-====
+Condition reference
+===================
+.. This headline is here to fix the structure of the chapters during rendering
+   so that the condition reference from the following file is _not_ shown as a
+   sub-chapter of the previous section "Test month and day of month".
+   Apart from that this headline is completely useless.
 
 .. toctree::
-   :maxdepth: 5
    :titlesonly:
-   :glob:
 
    Reference/Index

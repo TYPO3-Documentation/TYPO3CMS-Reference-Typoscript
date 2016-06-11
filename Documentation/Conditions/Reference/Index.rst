@@ -9,7 +9,7 @@
 .. _condition-reference:
 
 Condition reference
-^^^^^^^^^^^^^^^^^^^
+===================
 
 
 .. _condition-language:
@@ -788,6 +788,14 @@ This will also match with it::
 
 ... but this will also match with an HTTP\_HOST like this:
 "demo.typo3.org"
+
+If HTTP\_REFERER is set to an empty value, this will match with it::
+
+   [globalString = IENV:HTTP_REFERER = /^$/]
+
+In contrast this will match with a non-empty value::
+
+   [globalString = IENV:HTTP_REFERER = /.+/]
 
 
 Important note on globalVar and globalString

@@ -483,18 +483,6 @@ compensateFieldWidth
          This floating point value will be used by the FORMS cObject to
          compensate the length of the form fields text and input.
 
-         This feature was useful, if the page-option "smallFormFields"
-         (removed in TYPO3 6.0) was set. In that case Netscape rendered
-         form fields much longer than IE. If you wanted the two browsers
-         to display the same size form fields, you could use a value of
-         approx "0.6" for netscape-browsers.
-
-         **Example**::
-
-            [browser = netscape]
-              config.compensateFieldWidth = 0.6
-            [global]
-
          This option may be overridden by the property of the same name in
          the FORMS cObject.
 
