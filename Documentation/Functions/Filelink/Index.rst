@@ -162,8 +162,7 @@ icon
 
    -  :ts:`path`:
             Path to the icon set.
-            Default is :file:`typo3/sysext/frontend/Resources/Public/Icons/FileIcons/` since TYPO3 v7.
-            Before the default has been :file:`typo3/gfx/fileicons/`.
+            Default is :file:`typo3/sysext/frontend/Resources/Public/Icons/FileIcons/`.
 
    -  :ts:`ext`: File extension of icons. Default is :file:`.gif`.
 

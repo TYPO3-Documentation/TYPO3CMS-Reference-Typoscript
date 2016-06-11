@@ -851,7 +851,7 @@ This will match with the frontend user whose username is "test"::
 Custom Conditions
 """""""""""""""""
 
-(Since TYPO3 7.0) You can add own TypoScript conditions via a separate API.
+You can add own TypoScript conditions via a separate API.
 
 Instead of using the "userFunc" condition, it is encouraged to use
 this new API for your own TypoScript conditions.

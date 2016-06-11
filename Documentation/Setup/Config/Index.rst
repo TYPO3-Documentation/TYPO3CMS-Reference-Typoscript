@@ -172,8 +172,7 @@ absRefPrefix
 
               config.absRefPrefix = http://example.com/
 
-         **Special keyword:** "auto" (Since TYPO3 CMS 7.1)
-         lets TYPO3 autodetect the site root based
+         **Special keyword:** "auto" lets TYPO3 autodetect the site root based
          on path prefixes (and not based on host name variables from the
          server, making this value safe for multi-domain environments).
 
@@ -685,8 +684,8 @@ concatenateJsAndCss
                TYPO3\CMS\Core\Extension\ExtensionManager::extPath($_EXTKEY) .
                'Classes/class.tx_myext_concatenateHandler.php:tx_myext_concatenateHandler->concatenateFiles';
 
-         **Note:** This property was deprecated and is planned to be removed with TYPO3
-         6.0! Use config.concatenateJs and config.concatenateCss instead.
+         **Note:** This property was deprecated and is planned to be removed!
+         Use config.concatenateJs and config.concatenateCss instead.
 
    Default
          0

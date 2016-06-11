@@ -560,8 +560,7 @@ includeJS.[array]
          **.allWrap.splitChar:** Defines an alternative splitting character
          (default is "\|" - the vertical line).
 
-         **.async:** (Since TYPO3 7.1) Allows the file to be loaded
-         asynchronously.
+         **.async:** Allows the file to be loaded asynchronously.
 
          **.disableCompression:** If config.compressJs is enabled, this
          disables the compression of this file.
@@ -583,9 +582,9 @@ includeJS.[array]
          **.type:** Setting the MIME type of the script (default:
          text/javascript).
 
-         **.integrity:** (Since TYPO3 7.3) Adds the integrity attribute to the script
-         element to let browsers ensure subresource integrity. Useful in hosting scenarios
-         with resources externalized to CDN's. See `SRI <http://www.w3.org/TR/SRI/>`_ for
+         **.integrity:** Adds the integrity attribute to the script element to let
+         browsers ensure subresource integrity. Useful in hosting scenarios with
+         resources externalized to CDN's. See `SRI <http://www.w3.org/TR/SRI/>`_ for
          more details. Integrity hashes may be generated using `<https://srihash.org/>`_.
 
          **Example:** ::
@@ -667,8 +666,7 @@ includeJSLibs.[array]
          **.allWrap.splitChar:** Defines an alternative splitting character
          (default is "\|" - the vertical line).
 
-         **.async:** (Since TYPO3 7.1) Allows the file to be loaded
-         asynchronously.
+         **.async:** Allows the file to be loaded asynchronously.
 
          **.disableCompression:** If config.compressJs is enabled, this
          disables the compression of this file.
@@ -687,9 +685,9 @@ includeJSLibs.[array]
          included. Extensive usage might cause huge numbers of temporary files to be
          created. See ->if for details.
 
-         **.integrity:** (Since TYPO3 7.3) Adds the integrity attribute to the script
-         element to let browsers ensure subresource integrity. Useful in hosting scenarios
-         with resources externalized to CDN's. See `SRI <http://www.w3.org/TR/SRI/>`_ for
+         **.integrity:** Adds the integrity attribute to the script element to let
+         browsers ensure subresource integrity. Useful in hosting scenarios with
+         resources externalized to CDN's. See `SRI <http://www.w3.org/TR/SRI/>`_ for
          more details. Integrity hashes may be generated using `<https://srihash.org/>`_.
 
          **Example:** ::
@@ -822,8 +820,8 @@ insertClassesFromRTE
          **.add\_mainStyleOverrideDefs:** [\* / list of tags ]. Will add all
          the "RTE.default. mainStyleOverride\_add" - tags configured as well.
 
-         *Might be deprecated soon. Most likely the RTE should be configured by
-         the stylesheet instead. Stay tuned...*
+         **Note:** Instead of using this property, most likely the RTE should
+         be configured by stylesheets!
 
 
 
