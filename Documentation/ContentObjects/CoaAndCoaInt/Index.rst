@@ -18,9 +18,9 @@ can place several other cObjects using numbers to enumerate them.
 
 You can also create this object as a COA\_INT in which case it works
 exactly like the :ref:`USER_INT <cobj-user-int>` object does: It's
-rendered non-cached! That way COA\_INT allows you not only to render
-:ref:`USER_INT <cobj-user-int>` objects non-cached, but to render
-*every* cObject non-cached.
+rendered non-cached! That way you cannot only render non-cached
+:ref:`USER_INT <cobj-user-int>` objects, but COA\_INT allows
+you to render *every* cObject non-cached.
 
 
 .. ### BEGIN~OF~TABLE ###
