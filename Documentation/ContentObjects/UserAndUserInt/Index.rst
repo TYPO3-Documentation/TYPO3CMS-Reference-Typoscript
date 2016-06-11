@@ -45,14 +45,14 @@ userFunc
       this cObject, if any.
 
 
-Property
-========
+(properties you define)
+=======================
 
 :aspect:`Property`
-      myPropertyAbc
+      (properties you define)
 
 :aspect:`Data type`
-      myDataTypeAbc
+      (the data type you want)
 
 :aspect:`Description`
       Apart from the properties "userFunc" and "stdWrap", which are defined for
@@ -78,12 +78,11 @@ stdWrap
 .. _cobj-user-examples:
 .. _cobj-user-int-examples:
 
-=========
 Examples:
 =========
 
 Example 1
-=========
+---------
 
 This example shows how to include your own PHP script and how to use it
 from TypoScript. Use this TypoScript configuration::
@@ -117,7 +116,7 @@ this function is executed on every page hit. So this example each time
 outputs the current time in red letters.
 
 Example 2
-=========
+---------
 
 Now let us have a look at another example:
 
@@ -204,14 +203,14 @@ them in the PHP code.
 
 
 Example 3
-=========
+---------
 
 Another example can be found in the documentation of the stdWrap
 property :ref:`stdwrap-postUserFunc` There you can also see how to work with
 :php:`$cObj`, the reference to the parent (calling) cObject.
 
 Example 4
-=========
+---------
 
 PHP has a function :php:`gethostname()` to "get the standard host name for
 the local machine". You can make it available like this::
