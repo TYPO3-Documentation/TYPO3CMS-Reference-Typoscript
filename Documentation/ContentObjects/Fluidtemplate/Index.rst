@@ -342,7 +342,7 @@ extbase.controllerExtensionName
          string /:ref:`stdWrap <stdwrap>`
 
    Description
-         Sets the extension name of the controller.
+         Sets the extension name of the controller. This is essential if you want to have translations at the usual paths of an extension directly available in your template via <f:translate/>.
 
 
 .. _cobj-fluidtemplate-properties-extbase-controllername:
