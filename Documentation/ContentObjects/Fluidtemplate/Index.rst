@@ -336,6 +336,9 @@ extbase.controllerExtensionName
    Description
          Sets the extension name of the controller.
 
+         **Important:** This is for example essential if you have translations at the usual
+         paths in your extension and want to use them right away in your template via `<f:translate/>`.
+
 
 .. _cobj-fluidtemplate-properties-extbase-controllername:
 
