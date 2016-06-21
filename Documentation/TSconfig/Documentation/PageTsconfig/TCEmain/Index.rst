@@ -1,4 +1,3 @@
-﻿
 .. include:: ../../Includes.txt
 
 .. _pagetcemain:
