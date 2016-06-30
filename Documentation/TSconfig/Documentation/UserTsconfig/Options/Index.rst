@@ -975,21 +975,6 @@ Various options for the user affecting the core at various points.
 
          This will enable TemplaVoila page module as default page module.
 
-
-.. container:: table-row
-
-   Property
-         moduleMenuCollapsable
-
-   Data type
-         boolean
-
-   Description
-         If set, the user can collapse main modules in the left menu.
-
-   Default
-         1
-
 .. container:: table-row
 
    Property
