@@ -1228,6 +1228,42 @@ Various options for the user affecting the core at various points.
 .. container:: table-row
 
    Property
+         view.feedit.popupHeight
+
+   Data type
+         *integer*
+
+   Description
+         Sets the height of the popup window of feedit
+
+         **Example:**
+
+         .. code-block:: typoscript
+
+			options.feedit.popupHeight = 700
+
+
+.. container:: table-row
+
+   Property
+         view.feedit.popupWidth
+
+   Data type
+         *integer*
+
+   Description
+         Sets the width of the popup window of feedit
+
+         **Example:**
+
+         .. code-block:: typoscript
+
+			options.feedit.popupWidth = 700
+
+
+.. container:: table-row
+
+   Property
          file\_list.enableDisplayBigControlPanel
 
    Data type
@@ -1278,6 +1314,21 @@ Various options for the user affecting the core at various points.
 
    Default
          selectable
+
+
+.. container:: table-row
+
+   Property
+         file\_list.filesPerPage
+
+   Data type
+         integer
+
+   Description
+         The maximum number of files shown per page in File > List
+
+   Default
+         40
 
 
 .. container:: table-row

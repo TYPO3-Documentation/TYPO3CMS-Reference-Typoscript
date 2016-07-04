@@ -1021,10 +1021,12 @@ Web > List (mod.web\_list)
          hideTables
 
    Data type
-         *(list of table names)*
+         *(list of table names)* or "*"
 
    Description
          Hide these tables in record listings (comma-separated)
+
+         If "*" is used, all tables will be hidden
 
 
 .. container:: table-row
