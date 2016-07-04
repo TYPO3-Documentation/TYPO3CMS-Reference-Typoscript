@@ -404,7 +404,6 @@ Filelink Example
       icon.wrap = <td> | </td>
       size = 1
       size.wrap = <td> | </td>
-      file.fontTag = {$styles.content.uploads.wrap}
       file.wrap = <td> | </td>
       target = _blank
       stdWrap = <tr> | </tr>

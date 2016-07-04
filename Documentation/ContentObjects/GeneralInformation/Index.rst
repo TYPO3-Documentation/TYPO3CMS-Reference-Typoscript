@@ -49,7 +49,6 @@ This example will show you how it works::
 
      1 = TEXT
      1.stdWrap.current = 1
-     1.stdWrap.fontTag = {$content.wrap.header1}
 
      stdWrap.space = {$content.headerSpace}
    }
@@ -65,7 +64,6 @@ This example will show you how it works::
 
      20 = TEXT
      20.stdWrap.field = subheader
-     20.stdWrap.fontTag = {$content.wrap.subheader1}
    }
 
 
