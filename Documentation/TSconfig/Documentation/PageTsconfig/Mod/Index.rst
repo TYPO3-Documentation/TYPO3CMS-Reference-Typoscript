@@ -25,6 +25,8 @@ In this case the main menu of the Web > Info module looks like this:
 .. figure:: ../../Images/manual_html_m615ff10e.png
    :alt: The original function menu inside the info module
 
+   The original function menu inside the info module
+
 By adding this Page TSconfig we can remove the "Page TSconfig" item
 
 .. code-block:: typoscript
@@ -37,6 +39,8 @@ The function menu will now look like this:
 
 .. figure:: ../../Images/manual_html_10bf0f2e.png
    :alt: The function menu inside the info module without Page TSconfig
+
+   The function menu inside the info module without Page TSconfig
 
 The 'Page TSconfig' option is simply disabled by setting this Page
 TSconfig!
@@ -62,6 +66,8 @@ Examples from the TYPO3 core are listed in the table below:
 
          .. figure:: ../../Images/manual_html_5268c65f.png
             :alt: The original layout menu inside the page module
+
+            The original layout menu inside the page module
 
          **Option tags:**
 
@@ -97,9 +103,11 @@ Examples from the TYPO3 core are listed in the table below:
          .. figure:: ../../Images/manual_html_4c191623.png
             :alt: The original function menu inside the info module
 
+            The original function menu inside the info module
+
          **Option tags:**
 
-         .. code-block:: typoscript
+         .. code-block:: html
 
             <select name="SET[function]">
                <option value="tx_cms_webinfo_page">Page tree Overview</option>
@@ -137,6 +145,8 @@ Examples from the TYPO3 core are listed in the table below:
 
          .. figure:: ../../Images/manual_html_4570ee97.png
             :alt: The original function menu inside the functions module
+
+            The original function menu inside the functions module
 
          **Option tags:**
 
@@ -1021,12 +1031,12 @@ Web > List (mod.web\_list)
          hideTables
 
    Data type
-         *(list of table names)* or "*"
+         *(list of table names)* or `*`
 
    Description
          Hide these tables in record listings (comma-separated)
 
-         If "*" is used, all tables will be hidden
+         If `*` is used, all tables will be hidden
 
 
 .. container:: table-row
@@ -1145,7 +1155,7 @@ Web > List (mod.web\_list)
          .. code-block:: typoscript
 
             mod.web_list {
-            allowedNewTables = pages, tt_news
+               allowedNewTables = pages, tt_news
             }
 
          Only pages and tt\_news table elements will be linked to in the New

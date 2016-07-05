@@ -45,7 +45,7 @@ Various options for the user affecting the core at various points.
 
          .. code-block:: typoscript
 
-         	options.defaultUploadFolder = 2:user_folders/my_folder/
+            options.defaultUploadFolder = 2:user_folders/my_folder/
 
 
 .. container:: table-row
@@ -125,7 +125,7 @@ Various options for the user affecting the core at various points.
          .. note::
 
             This option is enabled only if the
-            :code:`$TYPO3_CONF_VARS['BE']['enabledBeUserIPLock']`
+            :php:`$TYPO3_CONF_VARS['BE']['enabledBeUserIPLock']`
             configuration is true.
 
          **Examples:**
@@ -237,12 +237,12 @@ Various options for the user affecting the core at various points.
 
          .. code-block:: typoscript
 
-			shortcutGroups {
-				1=1
-				2=My Group
-				3=0
-				4=
-			}
+            shortcutGroups {
+               1=1
+               2=My Group
+               3=0
+               4=
+            }
 
          Bookmark group 1 is loaded with the default label (Pages), group 2 is
          loaded and labeled as "My Group" and groups 3 and 4 are disabled.
@@ -285,12 +285,12 @@ Various options for the user affecting the core at various points.
 
          .. code-block:: typoscript
 
-			bookmarkGroups {
-				1=1
-				2=My Group
-				3=0
-				4=
-			}
+            bookmarkGroups {
+               1=1
+               2=My Group
+               3=0
+               4=
+            }
 
          Bookmark group 1 is loaded with the default label (Pages), group 2 is
          loaded and labeled as "My Group" and groups 3 and 4 are disabled.
@@ -438,7 +438,7 @@ Various options for the user affecting the core at various points.
          boolean
 
    Description
-         As :code:`noThumbsInEB` but for the Rich Text Editor image selector.
+         As :ts:`noThumbsInEB` but for the Rich Text Editor image selector.
 
 
 .. container:: table-row
@@ -478,8 +478,8 @@ Various options for the user affecting the core at various points.
 
          .. code-block:: typoscript
 
-			options.saveDocNew = 0
-			options.saveDocNew.tt_content = top
+            options.saveDocNew = 0
+            options.saveDocNew.tt_content = top
 
 
 .. container:: table-row
@@ -554,12 +554,14 @@ Various options for the user affecting the core at various points.
 
          .. code-block:: typoscript
 
-			options.pageTree.backgroundColor.2 = red
-			options.pageTree.backgroundColor.3 = #00FFFF
-			options.pageTree.backgroundColor.4 = rgba(0, 255, 0, 0.1)
+            options.pageTree.backgroundColor.2 = red
+            options.pageTree.backgroundColor.3 = #00FFFF
+            options.pageTree.backgroundColor.4 = rgba(0, 255, 0, 0.1)
 
          .. figure:: ../../Images/optionsPageTreeBackgroundColor.png
             :alt: Tree branches with configured background colors
+
+            Tree branches with configured background colors
 
 
 .. container:: table-row
@@ -744,7 +746,7 @@ Various options for the user affecting the core at various points.
 
          .. code-block:: typoscript
 
-			options.pageTree.altElementBrowserMountPoints = 34,123
+            options.pageTree.altElementBrowserMountPoints = 34,123
 
 
 .. container:: table-row
@@ -765,7 +767,7 @@ Various options for the user affecting the core at various points.
 
          .. code-block:: typoscript
 
-			options.pageTree.altElementBrowserMountPoints.append = 1
+            options.pageTree.altElementBrowserMountPoints.append = 1
 
 .. container:: table-row
 
@@ -785,8 +787,8 @@ Various options for the user affecting the core at various points.
 
          .. code-block:: typoscript
 
-			options.pageTree.altElementBrowserMountPoints = 34,123
-			options.pageTree.altElementBrowserMountPoints.append = 1
+            options.pageTree.altElementBrowserMountPoints = 34,123
+            options.pageTree.altElementBrowserMountPoints.append = 1
 
 .. container:: table-row
 
@@ -805,7 +807,7 @@ Various options for the user affecting the core at various points.
 
          .. code-block:: typoscript
 
-			options.pageTree.excludeDoktypes = 254,1
+            options.pageTree.excludeDoktypes = 254,1
 
 .. container:: table-row
 
@@ -846,7 +848,7 @@ Various options for the user affecting the core at various points.
 
          .. code-block:: typoscript
 
-			options.folderTree.altElementBrowserMountPoints = _temp_/, templates
+            options.folderTree.altElementBrowserMountPoints = _temp_/, templates
 
 
 .. container:: table-row
@@ -971,9 +973,9 @@ Various options for the user affecting the core at various points.
 
          .. code-block:: typoscript
 
-			options.overridePageModule = web_txtemplavoilaM1
+            options.overridePageModule = web_txtemplavoilaM1
 
-         This will enable TemplaVoila page module as default page module.
+            This will enable TemplaVoila page module as default page module.
 
 .. container:: table-row
 
@@ -1001,14 +1003,14 @@ Various options for the user affecting the core at various points.
 
          .. code-block:: typoscript
 
-			# Hide module groups "file" + "help"
-			options.hideModules = file, help
+            # Hide module groups "file" + "help"
+            options.hideModules = file, help
 
-			# Hide module "func" and "info" from the "web" group
-			options.hideModules.web := addToList(func,info)
+            # Hide module "func" and "info" from the "web" group
+            options.hideModules.web := addToList(func,info)
 
-			# Hide module BELogLog from "system" group
-			options.hideModules.system = BelogLog
+            # Hide module BELogLog from "system" group
+            options.hideModules.system = BelogLog
 
 .. container:: table-row
 
@@ -1079,7 +1081,7 @@ Various options for the user affecting the core at various points.
 
          .. code-block:: typoscript
 
-			options.hideRecords.pages = 12,45
+            options.hideRecords.pages = 12,45
 
 
 .. container:: table-row
@@ -1222,7 +1224,7 @@ Various options for the user affecting the core at various points.
 
          .. code-block:: typoscript
 
-			options.view.languageOrder = 2,1
+            options.view.languageOrder = 2,1
 
 
 .. container:: table-row
@@ -1240,7 +1242,7 @@ Various options for the user affecting the core at various points.
 
          .. code-block:: typoscript
 
-			options.feedit.popupHeight = 700
+            options.feedit.popupHeight = 700
 
 
 .. container:: table-row
@@ -1258,7 +1260,7 @@ Various options for the user affecting the core at various points.
 
          .. code-block:: typoscript
 
-			options.feedit.popupWidth = 700
+            options.feedit.popupWidth = 700
 
 
 .. container:: table-row
