@@ -1682,6 +1682,10 @@ locale\_all
             locale_all = danish
             locale_all = da_DK
 
+         .. note::
+
+            It is possible to supply a comma-separated list of locales as a fallback chain
+
 
 
 .. _setup-config-lockfilepath:

@@ -1370,20 +1370,6 @@ innerWrap2
          Same as .innerWrap (but watch the order in which they are executed).
 
 
-.. _stdwrap-fonttag:
-
-fontTag
-'''''''
-
-.. container:: table-row
-
-   Property
-         fontTag
-
-   Data type
-         :ref:`wrap <data-type-wrap>` /stdWrap
-
-
 .. _stdwrap-addparams:
 
 addParams
