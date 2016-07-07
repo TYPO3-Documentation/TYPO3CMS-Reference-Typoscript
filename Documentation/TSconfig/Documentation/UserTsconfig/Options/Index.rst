@@ -2,13 +2,19 @@
 
 .. _useroptions:
 
-->OPTIONS
-^^^^^^^^^
+=======
+OPTIONS
+=======
 
 Various options for the user affecting the core at various points.
 
 
 .. ### BEGIN~OF~TABLE ###
+
+.. _useroptions-dontMountAdminMounts:
+
+dontMountAdminMounts
+====================
 
 .. container:: table-row
 
@@ -24,6 +30,11 @@ Various options for the user affecting the core at various points.
          .. note::
 
             Only for admin-users. For other users it has no effect.
+
+.. _useroptions-defaultUploadFolder:
+
+defaultUploadFolder
+===================
 
 .. container:: table-row
 
@@ -48,6 +59,11 @@ Various options for the user affecting the core at various points.
             options.defaultUploadFolder = 2:user_folders/my_folder/
 
 
+.. _useroptions-RTEkeyList:
+
+RTEkeyList
+==========
+
 .. container:: table-row
 
    Property
@@ -67,6 +83,11 @@ Various options for the user affecting the core at various points.
          \*
 
 
+.. _useroptions-clearCache-pages:
+
+clearCache.pages
+================
+
 .. container:: table-row
 
    Property
@@ -80,6 +101,11 @@ Various options for the user affecting the core at various points.
 
    Default
          0
+
+.. _useroptions-clearCache-system:
+
+clearCache.system
+=================
 
 .. container:: table-row
 
@@ -96,6 +122,11 @@ Various options for the user affecting the core at various points.
    Default
          0
 
+.. _useroptions-clearCache-all:
+
+clearCache.all
+==============
+
 .. container:: table-row
 
    Property
@@ -110,6 +141,11 @@ Various options for the user affecting the core at various points.
 
    Default
          0
+
+.. _useroptions-lockToIP:
+
+lockToIP
+========
 
 .. container:: table-row
 
@@ -145,6 +181,11 @@ Various options for the user affecting the core at various points.
          the same as wild cards...
 
 
+.. _useroptions-saveClipboard:
+
+saveClipboard
+=============
+
 .. container:: table-row
 
    Property
@@ -157,6 +198,11 @@ Various options for the user affecting the core at various points.
          If set, the clipboard content will be preserved for the next login.
          Normally the clipboard content lasts only during the session.
 
+
+.. _useroptions-clipboardNumberPads:
+
+clipboardNumberPads
+===================
 
 .. container:: table-row
 
@@ -173,6 +219,11 @@ Various options for the user affecting the core at various points.
          3
 
 
+
+.. _useroptions-enableShortcuts:
+
+enableShortcuts
+===============
 
 .. container:: table-row
 
@@ -191,6 +242,11 @@ Various options for the user affecting the core at various points.
          1
 
 
+.. _useroptions-enableBookmarks:
+
+enableBookmarks
+===============
+
 .. container:: table-row
 
    Property
@@ -205,6 +261,11 @@ Various options for the user affecting the core at various points.
    Default
          1
 
+
+.. _useroptions-shortcutGroups:
+
+shortcutGroups
+==============
 
 .. container:: table-row
 
@@ -254,6 +315,11 @@ Various options for the user affecting the core at various points.
             This option is deprecated since TYPO3 4.5.
 
 
+.. _useroptions-bookmarkGroups:
+
+bookmarkGroups
+==============
+
 .. container:: table-row
 
    Property
@@ -298,6 +364,11 @@ Various options for the user affecting the core at various points.
          like group 1.
 
 
+.. _useroptions-shortcut_onEditId_dontSetPageTree:
+
+shortcut\_onEditId\_dontSetPageTree
+===================================
+
 .. container:: table-row
 
    Property
@@ -315,6 +386,11 @@ Various options for the user affecting the core at various points.
             This option is deprecated since TYPO3 4.5.
 
 
+.. _useroptions-bookmark_onEditId_dontSetPageTree:
+
+bookmark\_onEditId\_dontSetPageTree
+===================================
+
 .. container:: table-row
 
    Property
@@ -327,6 +403,11 @@ Various options for the user affecting the core at various points.
          If set, the page tree is *not* opened to the page being edited when
          an id number is entered in the "Edit Id" box.
 
+
+.. _useroptions-shortcut_onEditId_keepExistingExpanded:
+
+shortcut\_onEditId\_keepExistingExpanded
+========================================
 
 .. container:: table-row
 
@@ -347,6 +428,11 @@ Various options for the user affecting the core at various points.
             This option is deprecated since TYPO3 4.5.
 
 
+.. _useroptions-bookmark_onEditId_keepExistingExpanded:
+
+bookmark\_onEditId\_keepExistingExpanded
+========================================
+
 .. container:: table-row
 
    Property
@@ -361,6 +447,11 @@ Various options for the user affecting the core at various points.
 
          (provided .bookmark\_onEditId\_dontSetPageTree is not set!)
 
+
+.. _useroptions-mayNotCreateEditShortcuts:
+
+mayNotCreateEditShortcuts
+=========================
 
 .. container:: table-row
 
@@ -380,6 +471,11 @@ Various options for the user affecting the core at various points.
             This option is deprecated since TYPO3 4.5.
 
 
+.. _useroptions-mayNotCreateEditBookmarks:
+
+mayNotCreateEditBookmarks
+=========================
+
 .. container:: table-row
 
    Property
@@ -391,6 +487,11 @@ Various options for the user affecting the core at various points.
    Description
          If set, the user cannot create or edit bookmarks.
 
+
+.. _useroptions-createFoldersInEB:
+
+createFoldersInEB
+=================
 
 .. container:: table-row
 
@@ -405,6 +506,11 @@ Various options for the user affecting the core at various points.
          admin-users this is always enabled).
 
 
+.. _useroptions-noThumbsInEB:
+
+noThumbsInEB
+============
+
 .. container:: table-row
 
    Property
@@ -416,6 +522,11 @@ Various options for the user affecting the core at various points.
    Description
          If set, then image thumbnails are not shown in the element browser.
 
+
+.. _useroptions-popupWindowSize:
+
+popupWindowSize
+===============
 
 .. container:: table-row
 
@@ -429,6 +540,11 @@ Various options for the user affecting the core at various points.
          Defines the size of the element browser.
 
 
+.. _useroptions-noThumbsInRTEimageSelect:
+
+noThumbsInRTEimageSelect
+========================
+
 .. container:: table-row
 
    Property
@@ -440,6 +556,11 @@ Various options for the user affecting the core at various points.
    Description
          As :ts:`noThumbsInEB` but for the Rich Text Editor image selector.
 
+
+.. _useroptions-uploadFieldsInTopOfEB:
+
+uploadFieldsInTopOfEB
+=====================
 
 .. container:: table-row
 
@@ -453,6 +574,11 @@ Various options for the user affecting the core at various points.
          If set, the upload-fields in the element browser are put in the top of
          the window.
 
+
+.. _useroptions-saveDocNew:
+
+saveDocNew
+==========
 
 .. container:: table-row
 
@@ -482,6 +608,11 @@ Various options for the user affecting the core at various points.
             options.saveDocNew.tt_content = top
 
 
+.. _useroptions-saveDocView:
+
+saveDocView
+===========
+
 .. container:: table-row
 
    Property
@@ -502,6 +633,11 @@ Various options for the user affecting the core at various points.
          1
 
 
+.. _useroptions-disableDelete:
+
+disableDelete
+=============
+
 .. container:: table-row
 
    Property
@@ -518,6 +654,11 @@ Various options for the user affecting the core at various points.
          Overriding for single tables works like "saveDocNew" above.
 
 
+.. _useroptions-showHistory:
+
+showHistory
+===========
+
 .. container:: table-row
 
    Property
@@ -533,6 +674,11 @@ Various options for the user affecting the core at various points.
 
          Overriding for single tables works like "saveDocNew" above.
 
+
+.. _useroptions-pageTree-backgroundColor:
+
+pageTree.backgroundColor
+========================
 
 .. container:: table-row
 
@@ -564,6 +710,11 @@ Various options for the user affecting the core at various points.
             Tree branches with configured background colors
 
 
+.. _useroptions-pageTree-disableIconLinkToContextmenu:
+
+pageTree.disableIconLinkToContextmenu
+=====================================
+
 .. container:: table-row
 
    Property
@@ -582,6 +733,11 @@ Various options for the user affecting the core at various points.
          with the same link as the title.
 
 
+.. _useroptions-pageTree-disableTitleHighlight:
+
+pageTree.disableTitleHighlight
+==============================
+
 .. container:: table-row
 
    Property
@@ -595,6 +751,11 @@ Various options for the user affecting the core at various points.
          clicked.
 
 
+.. _useroptions-pageTree-showPageIdWithTitle:
+
+pageTree.showPageIdWithTitle
+============================
+
 .. container:: table-row
 
    Property
@@ -607,6 +768,11 @@ Various options for the user affecting the core at various points.
          If set, the titles in the page navigation tree will have their ID
          numbers printed before the clickable title.
 
+
+.. _useroptions-pageTree-showDomainNameWithTitle:
+
+pageTree.showDomainNameWithTitle
+================================
 
 .. container:: table-row
 
@@ -622,6 +788,11 @@ Various options for the user affecting the core at various points.
          Useful if there are several domains in one page tree.
 
 
+.. _useroptions-pageTree-showNavTitle:
+
+pageTree.showNavTitle
+=====================
+
 .. container:: table-row
 
    Property
@@ -635,6 +806,11 @@ Various options for the user affecting the core at various points.
          instead of the normal page title. The page title is showed in a
          tooltip if the mouse hovers the navigation title.
 
+
+.. _useroptions-pageTree-showPathAboveMounts:
+
+pageTree.showPathAboveMounts
+============================
 
 .. container:: table-row
 
@@ -651,6 +827,11 @@ Various options for the user affecting the core at various points.
              :alt: Active user db mount
 
           This is useful if you work a lot with user db mounts.
+
+.. _useroptions-pageTree-doktypesToShowInNewPageDragArea:
+
+pageTree.doktypesToShowInNewPageDragArea
+========================================
 
 .. container:: table-row
 
@@ -674,6 +855,11 @@ Various options for the user affecting the core at various points.
          1,6,4,7,3,254,255,199
 
 
+.. _useroptions-pageTree-onlineWorkspaceInfo:
+
+pageTree.onlineWorkspaceInfo
+============================
+
 .. container:: table-row
 
    Property
@@ -686,6 +872,11 @@ Various options for the user affecting the core at various points.
          If set, the workspace info box will also be shown in the page tree
          even in online mode. Recommended when working with workspaces a lot.
 
+.. _useroptions-pageTree-hideFilter:
+
+pageTree.hideFilter
+===================
+
 .. container:: table-row
 
    Property
@@ -697,6 +888,11 @@ Various options for the user affecting the core at various points.
    Description
          If set, the filter-box in the top of the page tree will be hidden.
 
+
+.. _useroptions-pageTree-separateNotinmenuPages:
+
+pageTree.separateNotinmenuPages
+===============================
 
 .. container:: table-row
 
@@ -711,6 +907,11 @@ Various options for the user affecting the core at various points.
          from standard pages.
 
 
+.. _useroptions-pageTree-alphasortNotinmenuPages:
+
+pageTree.alphasortNotinmenuPages
+================================
+
 .. container:: table-row
 
    Property
@@ -723,6 +924,11 @@ Various options for the user affecting the core at various points.
          If set and pageTree.seperateNotinmenuPages = 1, separated pages are
          sorted alphabetically.
 
+
+.. _useroptions-pageTree-altElementBrowserMountPoints:
+
+pageTree.altElementBrowserMountPoints
+=====================================
 
 .. container:: table-row
 
@@ -749,6 +955,11 @@ Various options for the user affecting the core at various points.
             options.pageTree.altElementBrowserMountPoints = 34,123
 
 
+.. _useroptions-pageTree-altElementBrowserMountPoints-append:
+
+pageTree.altElementBrowserMountPoints.append
+============================================
+
 .. container:: table-row
 
    Property
@@ -768,6 +979,11 @@ Various options for the user affecting the core at various points.
          .. code-block:: typoscript
 
             options.pageTree.altElementBrowserMountPoints.append = 1
+
+.. _useroptions-pageTree-altElementBrowserMountPoints-append:
+
+pageTree.altElementBrowserMountPoints.append
+============================================
 
 .. container:: table-row
 
@@ -790,6 +1006,11 @@ Various options for the user affecting the core at various points.
             options.pageTree.altElementBrowserMountPoints = 34,123
             options.pageTree.altElementBrowserMountPoints.append = 1
 
+.. _useroptions-pageTree-excludeDoktypes:
+
+pageTree.excludeDoktypes
+========================
+
 .. container:: table-row
 
    Property
@@ -809,6 +1030,11 @@ Various options for the user affecting the core at various points.
 
             options.pageTree.excludeDoktypes = 254,1
 
+.. _useroptions-pageTree-searchInAlias:
+
+pageTree.searchInAlias
+======================
+
 .. container:: table-row
 
    Property
@@ -827,6 +1053,11 @@ Various options for the user affecting the core at various points.
 
          .. figure:: ../../Images/optionsPageTreeSearchInAlias.png
             :alt: Filtering the pagetree for my- now additionally returns pages with matched alias fields.
+
+.. _useroptions-folderTree-altElementBrowserMountPoints:
+
+folderTree.altElementBrowserMountPoints
+=======================================
 
 .. container:: table-row
 
@@ -851,6 +1082,11 @@ Various options for the user affecting the core at various points.
             options.folderTree.altElementBrowserMountPoints = _temp_/, templates
 
 
+.. _useroptions-folderTree-uploadFieldsInLinkBrowser:
+
+folderTree.uploadFieldsInLinkBrowser
+====================================
+
 .. container:: table-row
 
    Property
@@ -867,6 +1103,11 @@ Various options for the user affecting the core at various points.
          3
 
 
+.. _useroptions-folderTree-hideCreateFolder:
+
+folderTree.hideCreateFolder
+===========================
+
 .. container:: table-row
 
    Property
@@ -881,6 +1122,11 @@ Various options for the user affecting the core at various points.
    Default
          false
 
+
+.. _useroptions-contextMenu-key-disableItems:
+
+contextMenu.[key].disableItems
+==============================
 
 .. container:: table-row
 
@@ -911,6 +1157,11 @@ Various options for the user affecting the core at various points.
          edit,upload,rename,new,info,copy,cut,paste,delete
 
 
+.. _useroptions-contextMenu-options-leftIcons:
+
+contextMenu.options.leftIcons
+=============================
+
 .. container:: table-row
 
    Property
@@ -926,6 +1177,11 @@ Various options for the user affecting the core at various points.
    Default
          1
 
+
+.. _useroptions-contextMenu-options-clickMenuTimeOut:
+
+contextMenu.options.clickMenuTimeOut
+====================================
 
 .. container:: table-row
 
@@ -943,6 +1199,11 @@ Various options for the user affecting the core at various points.
          5
 
 
+.. _useroptions-contextMenu-options-alwaysShowClickMenuInTopFrame:
+
+contextMenu.options.alwaysShowClickMenuInTopFrame
+=================================================
+
 .. container:: table-row
 
    Property
@@ -956,6 +1217,11 @@ Various options for the user affecting the core at various points.
          is that it is shown only if the pop-up menus are disabled by user or by
          browser.
 
+
+.. _useroptions-overridePageModule:
+
+overridePageModule
+==================
 
 .. container:: table-row
 
@@ -1012,6 +1278,11 @@ Various options for the user affecting the core at various points.
             # Hide module BELogLog from "system" group
             options.hideModules.system = BelogLog
 
+.. _useroptions-alertPopups:
+
+alertPopups
+===========
+
 .. container:: table-row
 
    Property
@@ -1038,6 +1309,11 @@ Various options for the user affecting the core at various points.
          255 (show all warnings)
 
 
+.. _useroptions-defaultFileUploads:
+
+defaultFileUploads
+==================
+
 .. container:: table-row
 
    Property
@@ -1049,6 +1325,11 @@ Various options for the user affecting the core at various points.
    Description
          Default number of file upload forms shown in the File->List module
 
+
+.. _useroptions-hideRecords-table:
+
+hideRecords.[table]
+===================
 
 .. container:: table-row
 
@@ -1084,6 +1365,11 @@ Various options for the user affecting the core at various points.
             options.hideRecords.pages = 12,45
 
 
+.. _useroptions-workspaces-previewLinkTTLHours:
+
+workspaces.previewLinkTTLHours
+==============================
+
 .. container:: table-row
 
    Property
@@ -1096,6 +1382,11 @@ Various options for the user affecting the core at various points.
          Number of hours for expiry of preview links to workspaces. Default is
          48 hours.
 
+
+.. _useroptions-workspaces-swapMode:
+
+workspaces.swapMode
+===================
 
 .. container:: table-row
 
@@ -1119,6 +1410,11 @@ Various options for the user affecting the core at various points.
    Default
          normal behavior (same as in 4.0)
 
+
+.. _useroptions-workspaces-changeStageMode:
+
+workspaces.changeStageMode
+==========================
 
 .. container:: table-row
 
@@ -1146,6 +1442,11 @@ Various options for the user affecting the core at various points.
          normal behavior (same as in 4.0)
 
 
+.. _useroptions-workspaces-considerReferences:
+
+workspaces.considerReferences
+=============================
+
 .. container:: table-row
 
    Property
@@ -1164,6 +1465,11 @@ Various options for the user affecting the core at various points.
          1
 
 
+.. _useroptions-workspaces.allowed_languages-workspaceId:
+
+workspaces.allowed\_languages.[workspaceId]
+===========================================
+
 .. container:: table-row
 
    Property
@@ -1178,6 +1484,11 @@ Various options for the user affecting the core at various points.
          list in the BE user group configuration.
 
 
+.. _useroptions-additionalPreviewLanguages:
+
+additionalPreviewLanguages
+==========================
+
 .. container:: table-row
 
    Property
@@ -1191,6 +1502,11 @@ Various options for the user affecting the core at various points.
          TCEforms. The list are uid numbers of sys\_language records.
 
 
+.. _useroptions-checkPageLanguageOverlay:
+
+checkPageLanguageOverlay
+========================
+
 .. container:: table-row
 
    Property
@@ -1203,6 +1519,11 @@ Various options for the user affecting the core at various points.
          If set, localized fields in flexforms are shown only for languages
          which the current page is translated to.
 
+
+.. _useroptions-view-languageOrder:
+
+view.languageOrder
+==================
 
 .. container:: table-row
 
@@ -1227,6 +1548,11 @@ Various options for the user affecting the core at various points.
             options.view.languageOrder = 2,1
 
 
+.. _useroptions-view.feedit-popupHeight:
+
+view.feedit.popupHeight
+=======================
+
 .. container:: table-row
 
    Property
@@ -1245,6 +1571,11 @@ Various options for the user affecting the core at various points.
             options.feedit.popupHeight = 700
 
 
+.. _useroptions-view.feedit-popupWidth:
+
+view.feedit.popupWidth
+======================
+
 .. container:: table-row
 
    Property
@@ -1262,6 +1593,11 @@ Various options for the user affecting the core at various points.
 
             options.feedit.popupWidth = 700
 
+
+.. _useroptions-file_list-enableDisplayBigControlPanel:
+
+file\_list.enableDisplayBigControlPanel
+=======================================
 
 .. container:: table-row
 
@@ -1292,6 +1628,11 @@ Various options for the user affecting the core at various points.
          selectable
 
 
+.. _useroptions-file_list-enableDisplayThumbnails:
+
+file\_list.enableDisplayThumbnails
+==================================
+
 .. container:: table-row
 
    Property
@@ -1318,6 +1659,11 @@ Various options for the user affecting the core at various points.
          selectable
 
 
+.. _useroptions-file_list-filesPerPage:
+
+file\_list.filesPerPage
+=======================
+
 .. container:: table-row
 
    Property
@@ -1332,6 +1678,11 @@ Various options for the user affecting the core at various points.
    Default
          40
 
+
+.. _useroptions-file_list-enableClipBoard:
+
+file\_list.enableClipBoard
+==========================
 
 .. container:: table-row
 
@@ -1360,6 +1711,3 @@ Various options for the user affecting the core at various points.
 
 
 .. ###### END~OF~TABLE ######
-
-
-[beuser:options]
