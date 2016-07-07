@@ -2104,6 +2104,8 @@ pageRendererTemplateFile
 
             pageRendererTemplateFile = fileadmin/test_pagerender.html
 
+   Default
+         EXT:core/Resources/Private/Templates/PageRenderer.html
 
 
 .. _setup-config-pagetitle:
