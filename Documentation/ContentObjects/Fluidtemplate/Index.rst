@@ -113,10 +113,10 @@ layoutRootPaths
          .. code-block:: typoscript
 
 			page.10 = FLUIDTEMPLATE
-			page.10.file = EXT:sitedesign/Resources/Private/Templates/Main.html
+			page.10.file = EXT:sitedesign/Resources/Private/Layouts/Main.html
 			page.10.partialRootPaths {
-				10 = EXT:sitedesign/Resources/Private/Partials
-				20 = EXT:sitemodification/Resources/Private/Partials
+				10 = EXT:sitedesign/Resources/Private/Layouts/
+				20 = EXT:sitemodification/Resources/Private/Layouts/
 			}
 
          If property :ref:`layoutRootPath <cobj-fluidtemplate-properties-layoutrootpath>`
@@ -166,6 +166,18 @@ partialRootPaths
 
          See :ref:`layoutRootPaths <cobj-fluidtemplate-properties-layoutrootpaths>`
          for more details.
+       
+         **Example:**
+
+         .. code-block:: typoscript
+
+			page.10 = FLUIDTEMPLATE
+			page.10.file = EXT:sitedesign/Resources/Private/Partials/example-partial.html
+			page.10.partialRootPaths {
+				10 = EXT:sitedesign/Resources/Private/Partials/
+				20 = EXT:sitemodification/Resources/Private/Partials/
+			} 
+        
 
 
 .. _cobj-fluidtemplate-properties-format:
