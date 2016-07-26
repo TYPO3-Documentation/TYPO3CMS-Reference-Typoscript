@@ -355,7 +355,7 @@ defaultGetVars
          
          ::
          
-            config.defaultgetVars {
+            config.defaultGetVars {
                 test.var1.var2.p3 = 15
                 L = 3
             }
