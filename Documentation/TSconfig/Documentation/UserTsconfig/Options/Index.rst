@@ -1548,15 +1548,15 @@ view.languageOrder
             options.view.languageOrder = 2,1
 
 
-.. _useroptions-view.feedit-popupHeight:
+.. _useroptions-feedit-popupHeight:
 
-view.feedit.popupHeight
-=======================
+feedit.popupHeight
+==================
 
 .. container:: table-row
 
    Property
-         view.feedit.popupHeight
+         feedit.popupHeight
 
    Data type
          *integer*
@@ -1571,15 +1571,15 @@ view.feedit.popupHeight
             options.feedit.popupHeight = 700
 
 
-.. _useroptions-view.feedit-popupWidth:
+.. _useroptions-feedit-popupWidth:
 
-view.feedit.popupWidth
-======================
+feedit.popupWidth
+=================
 
 .. container:: table-row
 
    Property
-         view.feedit.popupWidth
+         feedit.popupWidth
 
    Data type
          *integer*
