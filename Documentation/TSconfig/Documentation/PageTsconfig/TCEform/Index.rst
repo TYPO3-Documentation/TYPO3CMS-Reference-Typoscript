@@ -165,7 +165,7 @@ disable options, blind options in selector boxes etc.
 				disabled = 1
 
 				# Rename
-				label = LLL:fileadmin/locallang.xml:tt_content.pi_flexform.my_ext_pi1.sDEF.myField
+				label = LLL:fileadmin/locallang.xlf:tt_content.pi_flexform.my_ext_pi1.sDEF.myField
 
 				# Remove all items from select but these ones
 				keepItems = item1,item2,item3
@@ -175,16 +175,16 @@ disable options, blind options in selector boxes etc.
 
 				# Add new items to select
 				addItems {
-					item1 = LLL:fileadmin/locallang.xml:tt_content.pi_flexform.my_ext_pi1.sDEF.myField.item1
-					item2 = LLL:fileadmin/locallang.xml:tt_content.pi_flexform.my_ext_pi1.sDEF.myField.item2
-					item3 = LLL:fileadmin/locallang.xml:tt_content.pi_flexform.my_ext_pi1.sDEF.myField.item3
+					item1 = LLL:fileadmin/locallang.xlf:tt_content.pi_flexform.my_ext_pi1.sDEF.myField.item1
+					item2 = LLL:fileadmin/locallang.xlf:tt_content.pi_flexform.my_ext_pi1.sDEF.myField.item2
+					item3 = LLL:fileadmin/locallang.xlf:tt_content.pi_flexform.my_ext_pi1.sDEF.myField.item3
 				}
 
 				# Rename existing items
 				altLabels {
-					item1 = LLL:fileadmin/locallang.xml:tt_content.pi_flexform.my_ext_pi1.sDEF.myField.item1
-					item2 = LLL:fileadmin/locallang.xml:tt_content.pi_flexform.my_ext_pi1.sDEF.myField.item2
-					item3 = LLL:fileadmin/locallang.xml:tt_content.pi_flexform.my_ext_pi1.sDEF.myField.item3
+					item1 = LLL:fileadmin/locallang.xlf:tt_content.pi_flexform.my_ext_pi1.sDEF.myField.item1
+					item2 = LLL:fileadmin/locallang.xlf:tt_content.pi_flexform.my_ext_pi1.sDEF.myField.item2
+					item3 = LLL:fileadmin/locallang.xlf:tt_content.pi_flexform.my_ext_pi1.sDEF.myField.item3
 				}
 			}
 
@@ -253,7 +253,7 @@ above).
          .. code-block:: typoscript
 
 			TCEFORM.pages.title {
-				label = LLL:EXT:my_ext/locallang_db.xml:table.column
+				label = LLL:EXT:my_ext/locallang_db.xlf:table.column
 				label.default = New Label
 				label.de = Neuer Feldname
 			}
@@ -689,7 +689,7 @@ properties for the TCEFORM FlexForm sheet configuration object (see
 
 			TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF {
 				# Rename the first tab of the FlexForm plug-in configuration
-				sheetTitle = LLL:fileadmin/locallang.xml:tt_content.pi_flexform.my_ext_pi1.sDEF
+				sheetTitle = LLL:fileadmin/locallang.xlf:tt_content.pi_flexform.my_ext_pi1.sDEF
 			}
 
 
