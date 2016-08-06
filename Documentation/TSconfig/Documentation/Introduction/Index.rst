@@ -41,7 +41,7 @@ For TYPO3 6.1 the Page TSconfig property noExportRecordsLinks has been added,
 which allows to hide the buttons "Export" and "Download CSV file" in the list
 module.
 
-In TYPO3 6.0 already the property mod.SHARED.colPos_list has been removed.
+In TYPO3 6.0 already the property mod.SHARED.colPos_list had been removed.
 Use Backend Layouts instead (see :ref:`Example for Backend Layouts <example_for_backend_layout>`).
 
 
@@ -124,4 +124,4 @@ Version Numbers
 
 For new features TSconfig includes a note in which TYPO3 version the
 feature was added. If such a note is missing, the feature is part of
-TYPO3 since version 4.5 at least.
+TYPO3 since version 6.2 at least.

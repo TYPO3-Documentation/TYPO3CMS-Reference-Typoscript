@@ -220,28 +220,6 @@ clipboardNumberPads
 
 
 
-.. _useroptions-enableShortcuts:
-
-enableShortcuts
-===============
-
-.. container:: table-row
-
-   Property
-         enableShortcuts
-
-   Data type
-         boolean
-
-   Description
-         Enables the usage of bookmarks in the backend.
-
-         Note: This option is deprecated since TYPO3 4.5.
-
-   Default
-         1
-
-
 .. _useroptions-enableBookmarks:
 
 enableBookmarks
@@ -260,59 +238,6 @@ enableBookmarks
 
    Default
          1
-
-
-.. _useroptions-shortcutGroups:
-
-shortcutGroups
-==============
-
-.. container:: table-row
-
-   Property
-         shortcutGroups
-
-   Data type
-         Array of integers/ strings
-
-   Description
-         Set groups of bookmarks that can be accessed by the user.
-
-         By default, 5 default groups will be defined globally (shared, can
-         only be set by admins) and also for each user (personal bookmarks):
-
-         1. Pages
-
-         2. Records
-
-         3. Files
-
-         4. Tools
-
-         5. Miscellaneous
-
-         Set 0 to disable one of these group IDs, 1 to enable it (this is the
-         default) or "string" to change the label accordingly.
-
-         **Example:**
-
-         .. code-block:: typoscript
-
-            shortcutGroups {
-               1=1
-               2=My Group
-               3=0
-               4=
-            }
-
-         Bookmark group 1 is loaded with the default label (Pages), group 2 is
-         loaded and labeled as "My Group" and groups 3 and 4 are disabled.
-         Group 5 has not been set, so it will be displayed by default, just
-         like group 1.
-
-         .. note::
-
-            This option is deprecated since TYPO3 4.5.
 
 
 .. _useroptions-bookmarkGroups:
@@ -362,113 +287,6 @@ bookmarkGroups
          loaded and labeled as "My Group" and groups 3 and 4 are disabled.
          Group 5 has not been set, so it will be displayed by default, just
          like group 1.
-
-
-.. _useroptions-shortcut_onEditId_dontSetPageTree:
-
-shortcut\_onEditId\_dontSetPageTree
-===================================
-
-.. container:: table-row
-
-   Property
-         shortcut\_onEditId\_dontSetPageTree
-
-   Data type
-         boolean
-
-   Description
-         If set, the page tree is *not* opened to the page being edited when
-         an id number is entered in the "Edit Id" box.
-
-         .. note::
-
-            This option is deprecated since TYPO3 4.5.
-
-
-.. _useroptions-bookmark_onEditId_dontSetPageTree:
-
-bookmark\_onEditId\_dontSetPageTree
-===================================
-
-.. container:: table-row
-
-   Property
-         bookmark\_onEditId\_dontSetPageTree
-
-   Data type
-         boolean
-
-   Description
-         If set, the page tree is *not* opened to the page being edited when
-         an id number is entered in the "Edit Id" box.
-
-
-.. _useroptions-shortcut_onEditId_keepExistingExpanded:
-
-shortcut\_onEditId\_keepExistingExpanded
-========================================
-
-.. container:: table-row
-
-   Property
-         shortcut\_onEditId\_keepExistingExpanded
-
-   Data type
-         boolean
-
-   Description
-         If set, the existing expanded pages in the page tree are not collapsed
-         when an id is entered in the "Edit Id" box.
-
-         (provided .shortcut\_onEditId\_dontSetPageTree is not set!)
-
-         .. note::
-
-            This option is deprecated since TYPO3 4.5.
-
-
-.. _useroptions-bookmark_onEditId_keepExistingExpanded:
-
-bookmark\_onEditId\_keepExistingExpanded
-========================================
-
-.. container:: table-row
-
-   Property
-         bookmark\_onEditId\_keepExistingExpanded
-
-   Data type
-         boolean
-
-   Description
-         If set, the existing expanded pages in the page tree are not collapsed
-         when an id is entered in the "Edit Id" box.
-
-         (provided .bookmark\_onEditId\_dontSetPageTree is not set!)
-
-
-.. _useroptions-mayNotCreateEditShortcuts:
-
-mayNotCreateEditShortcuts
-=========================
-
-.. container:: table-row
-
-   Property
-         mayNotCreateEditShortcuts
-
-   Data type
-         boolean
-
-   Description
-         If set, the user cannot create or edit bookmarks.
-
-         .. note::
-
-            In TYPO3 4.3 and older depends on .shortcutFrame being set.
-
-            This option is deprecated since TYPO3 4.5.
 
 
 .. _useroptions-mayNotCreateEditBookmarks:
@@ -689,7 +507,7 @@ pageTree.backgroundColor
          string
 
    Description
-         (Since TYPO3 6.0) Set background colors for tree branches.
+         Set background colors for tree branches.
 
          Color can be any valid CSS color value. The best results can be
          achieved by using rgba values.

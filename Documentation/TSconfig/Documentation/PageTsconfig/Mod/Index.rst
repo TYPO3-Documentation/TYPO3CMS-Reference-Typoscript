@@ -216,49 +216,6 @@ Examples from the TYPO3 core are listed in the table below:
             </select>
 
 
-.. container:: table-row
-
-   Property
-         user\_task.menu.function
-
-   Description
-         **User > Task Center**
-
-         Prior to TYPO3 4.5 the Task Center worked the following way:
-
-         The Task Center does not provide a selector box function menu. But
-         behind the scenes it uses the same functionality of saving "states"
-         and therefore you can also blind items in the Task Center.
-
-         There is one tricky thing though: The Task Center is not depending on
-         a page in the page tree! So you either have to set default Page
-         TSconfig or User TSconfig to blind options here!
-
-         .. figure:: ../../Images/manual_html_1d084bf7.png
-            :alt: The TYPO3 taskcenter
-
-         **Keys are:**
-
-         tx\_sysnotepad = Quick Notetx\_taskcenterrecent = Recent
-         Pagestx\_taskcenterrootlist = Web > List module /
-         roottx\_taskcentermodules = Pluginstx\_sysaction = Actionstx\_systodos
-         = Tasks
-
-         **Example:**
-
-         Set this as *User TSconfig*
-
-         .. code-block:: typoscript
-
-            # Task Center configuration:
-            mod.user_task.menu.function {
-               # Disable "Recent Pages" display:
-               tx_taskcenterrecent = 0
-               # Disable "Action" list
-               tx_sysaction = 0
-            }
-
-
 .. ###### END~OF~TABLE ######
 
 [page:mod; beuser:mod]
@@ -273,7 +230,7 @@ Examples from the TYPO3 core are listed in the table below:
    Description
          **User > Task Center**
 
-         In TYPO3 4.5 and newer the Task Center can be configured as follows:
+         The Task Center can be configured as follows:
 
          The Task Center does not provide a selector box function menu holding
          the different tasks. But behind the scenes it uses the same
@@ -455,7 +412,7 @@ Shared options for modules (mod.SHARED)
 
          .. note::
 
-            Since TYPO3 6.0 mod.SHARED.colPos_list is no longer working.
+            Since TYPO3 6.0 mod.SHARED.colPos_list was no longer working.
             Use Backend Layouts instead.
 
             In TYPO3 CMS 6.2, this setting was reintroduced and affects Backend Layouts.
@@ -566,10 +523,7 @@ Shared options for modules (mod.SHARED)
 
          .. note::
 
-            Prior to TYPO3 4.5 you had to set the complete filename as
-            defaultLanguageFlag, for example "de.gif" to get the german
-            flag. Since TYPO3 4.5 you must use the name without dot and
-            extension.
+            Use the file name without dot and extension.
 
 
 .. container:: table-row
@@ -800,29 +754,6 @@ Web > Page (mod.web\_layout)
 .. container:: table-row
 
    Property
-         disablePageInformation
-
-   Data type
-         boolean
-
-   Description
-         (Since TYPO3 4.7) Hide the menu item "Page information" in the drop
-         down box.
-
-         Use this option instead of removing page information completely.
-
-         .. note::
-
-            This option and the item "Page Information" have been removed
-            in TYPO3 6.0.
-
-   Default
-         0
-
-
-.. container:: table-row
-
-   Property
          BackendLayouts
 
    Data type
@@ -959,10 +890,10 @@ Web > List (mod.web\_list)
          boolean
 
    Description
-         (Since TYPO3 6.1) If set, the "Export" and "Download CSV file" buttons
-         are hidden in single table view inside the list module. This option is
-         for example important to disable batch download of sensitive data via
-         csv or t3d exports.
+         If set, the "Export" and "Download CSV file" buttons are
+         hidden in single table view inside the list module. This
+         option is for example important to disable batch download
+         of sensitive data via csv or t3d exports.
 
          **Example:**
 
@@ -1069,7 +1000,7 @@ Web > List (mod.web\_list)
          *(list of table names)*
 
    Description
-         (Since TYPO3 4.6) For tables in this list all their records in
+         For tables in this list all their records in
          additional website languages will be hidden in the List module. Only
          records in default website languages are visible.
 
@@ -1098,7 +1029,7 @@ Web > List (mod.web\_list)
          boolean
 
    Description
-         (Since TYPO3 4.6) Disables the search box located below the clipboard
+         Disables the search box located below the clipboard
 
    Default
          0
@@ -1443,9 +1374,8 @@ Web > View (mod.web\_view)
 Wizards (mod.wizards)
 """""""""""""""""""""
 
-The configuration for wizards was introduced in TYPO3 4.3. Wizards
-make it possible to customize the new record wizard or the new content
-element wizard, for example.
+Wizards make it possible to customize the new record wizard or the new
+content element wizard, for example.
 
 .. _pagewebrecordwizard:
 
@@ -1463,7 +1393,7 @@ New record wizard (mod.wizards.newRecord)
          boolean
 
    Description
-         (Since TYPO3 4.6) Use the following sub-properties to show or hide the
+         Use the following sub-properties to show or hide the
          specified links.
 
          **Available sub-properties:**
@@ -1744,47 +1674,3 @@ wizard:
 .. figure:: ../../Images/manual_html_73b37d4e.png
    :alt: Added entry in the new content element wizard
 
-.. _pagetoolsem:
-
-Tools > Extension Manager (mod.tools\_em)
-"""""""""""""""""""""""""""""""""""""""""
-
-.. ### BEGIN~OF~TABLE ###
-
-.. container:: table-row
-
-   Property
-         allowTVlisting
-
-   Data type
-         boolean
-
-   Description
-         If set, the listings "Technical", "Validation" and "Changed" are
-         available in the Extension Manager. Those will evaluate ALL available
-         extensions. That can take many seconds (up to 30) depending on the
-         number of extensions.
-
-         **Example:**
-
-         .. code-block:: typoscript
-
-            mod.tools_em.allowTVlisting = 1
-
-         Enables these options in the Extension Manager:
-
-         .. figure:: ../../Images/manual_html_3fa38a1.png
-            :alt: The Extension Manager with additional options
-
-         .. note::
-
-            This setting does not influence the new Extension Manager
-            which comes with TYPO3 4.5 and newer.
-
-   Default
-         0
-
-
-.. ###### END~OF~TABLE ######
-
-[beuser:mod.tools\_em]

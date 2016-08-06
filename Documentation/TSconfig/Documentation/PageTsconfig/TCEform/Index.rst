@@ -107,8 +107,7 @@ disable options, blind options in selector boxes etc.
          :ref:`TCEFORM_flexform <pagetceformflexform>`
 
    Description
-         (Since TYPO3 4.6) Properties for the TCEFORM FlexForm meta
-         configuration.
+         Properties for the TCEFORM FlexForm meta configuration.
 
          FlexForms have a built in possibility to use different field
          configuration for multiple languages. The handling of this multi-
@@ -592,8 +591,7 @@ above).
 ->TCEFORM\_flexform
 """""""""""""""""""
 
-(Since TYPO3 4.6) Properties for the TCEFORM FlexForm configuration
-object.
+Properties for the TCEFORM FlexForm configuration object.
 
 .. ### BEGIN~OF~TABLE ###
 
@@ -644,9 +642,8 @@ object.
 ->TCEFORM\_flexformSheet
 """"""""""""""""""""""""
 
-The following options were introduced in TYPO3 4.5. These are the
-properties for the TCEFORM FlexForm sheet configuration object (see
-->TCEFORM section above).
+These are the properties for the TCEFORM FlexForm sheet configuration
+object (see ->TCEFORM section above).
 
 .. ### BEGIN~OF~TABLE ###
 
@@ -702,8 +699,7 @@ properties for the TCEFORM FlexForm sheet configuration object (see
          string / getText
 
    Description
-         (Since TYPO3 4.6) Specifies a description for the sheet shown in the
-         FlexForm.
+         Specifies a description for the sheet shown in the FlexForm.
 
 
 .. container:: table-row
@@ -715,8 +711,8 @@ properties for the TCEFORM FlexForm sheet configuration object (see
          string / getText
 
    Description
-         (Since TYPO3 4.6) Specifies a short description of the sheet used as
-         link title in the tab-menu.
+         Specifies a short description of the sheet used as link title
+         in the tab-menu.
 
 
 .. ###### END~OF~TABLE ######
