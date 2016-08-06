@@ -332,7 +332,7 @@ above).
 				# Creates a new page type option:
 				addItems.123 = New Page type!
 				# Creates yet a page type with "locallang" title:
-				addItems.124 = LLL:EXT:lang/locallang_tca.php:title
+				addItems.124 = LLL:EXT:lang/locallang_tca.xlf:title
 				addItems.124.icon = EXT:myExt/icon.png
 			}
 
@@ -443,7 +443,7 @@ above).
 				altLabels.1 = STANDARD Page Type
 				altLabels.254 = Folder (for various elements)
 				# Sets the default label for Recycler via "locallang":
-				altLabels.255 = LLL:EXT:lang/locallang_tca.php:doktype.I.2
+				altLabels.255 = LLL:EXT:lang/locallang_tca.xlf:doktype.I.2
 			}
 
          Result will be:
