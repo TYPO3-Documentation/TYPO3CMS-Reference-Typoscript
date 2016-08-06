@@ -156,45 +156,6 @@ This table shows the keys for both defaults and override values:
 .. container:: table-row
 
    Property
-         navFrameWidth
-
-   Data type
-         positive integer
-
-   Description
-         The width in pixels of the navigation frame in the Page and File main
-         modules.
-
-         .. note::
-
-            This option became superfluous in TYPO3 4.5 and has been
-            removed in TYPO3 4.5.
-
-   Default
-         245
-
-
-.. container:: table-row
-
-   Property
-         navFrameResizable
-
-   Data type
-         boolean
-
-   Description
-         If set, the frameset modules will have the border between the
-         navigation and list frame resizable.
-
-         .. note::
-
-            This option became superfluous in TYPO3 4.5 and has been
-            removed in TYPO3 4.5.
-
-
-.. container:: table-row
-
-   Property
          lang
 
    Data type
@@ -451,7 +412,7 @@ above.
 
 On top of being able to set default values or override them as
 described above, it is also possible to hide fields in the module
-"User tools > User Settings". This is available since TYPO3 4.3.
+"User tools > User Settings".
 
 The table below describes the related option:
 

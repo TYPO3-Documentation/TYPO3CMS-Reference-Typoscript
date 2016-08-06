@@ -378,30 +378,6 @@ TCEMAIN\_tables sub-properties
 Processing options for tables configured via :code:`$GLOBALS['TCA']`.
 
 
-.. _pagetcemaintables-history-maxagedays:
-
-history.maxAgeDays
-~~~~~~~~~~~~~~~~~~
-
-.. container:: table-row
-
-   Property
-         history.maxAgeDays
-
-   Data type
-         positive integer
-
-   Description
-         The number of days elements are in the history at most. Takes
-         precedence over keepEntries.
-
-         Default is 30 days. Range 0-365. Zero turns the maxAgeDays off.
-
-         .. note::
-
-            This option has been removed in TYPO3 CMS 6.0.
-
-
 .. _pagetcemaintables-disableprependatcopy:
 
 disablePrependAtCopy
