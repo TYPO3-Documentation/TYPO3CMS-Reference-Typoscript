@@ -7,7 +7,9 @@
 
 Configuration for backend modules. Generally the syntax is
 *[module\_name].[property]*. The module name is defined in the
-conf.php files for the module.
+ext\_tables.php file, inside the
+:code:`\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addModule()`
+call with the key name :code:`name`.
 
 .. _pageblindingfunctionmenuoptions:
 
@@ -49,8 +51,8 @@ All you need to know in order to disable function menu items in the
 backend modules is, *which* modules support it and what the *key* of
 the menu item is (in the above example it was
 'tx\_infopagetsconfig\_webinfo'). Modules extending the class
-"t3lib\_SCbase" will most likely provide this out-of-the-box since
-it is a part of the base class in t3lib\_SCbase::menuConfig().
+"BaseScriptClass" will most likely provide this out-of-the-box since
+it is a part of the base class in BaseScriptClass::menuConfig().
 
 Examples from the TYPO3 core are listed in the table below:
 
@@ -1141,8 +1143,7 @@ Web > List (mod.web\_list)
          "create new" in the page and subpages.
 
          This also affects the display of "Create new record",
-         typo3/sysext/backend/Classes/Controller/NewRecordController.php
-         (db\_new.php).
+         typo3/sysext/backend/Classes/Controller/NewRecordController.php.
 
          .. note::
 
@@ -1176,7 +1177,7 @@ Web > List (mod.web\_list)
    Description
          If this list is set, then the tables listed here won't have a link to
          "create news" in the page and subpages. This also affects
-         "db\_new.php" (the display of "Create new record").
+         "BackendUtility::getModuleUrl('db_new')" (the display of "Create new record").
 
          This is the opposite of the previous property "allowedNewTables".
 

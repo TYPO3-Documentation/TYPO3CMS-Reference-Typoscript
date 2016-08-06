@@ -94,11 +94,12 @@ These are the Page TSconfig Top-Level Objects (TLOs):
 
          3. Value from Page TSconfig
 
-         4. Value from "defVals" GET variables (see alt\_doc.php)
+         4. Value from "defVals" GET variables (see BackendUtility::getModuleUrl('record_edit'))
 
          5. Value from previous record based on 'useColumnsForDefaultValues'
 
-         However the order for default values used by tcemain.php if a certain
+         However the order for default values used by
+         \TYPO3\CMS\Core\DataHandling\DataHandler if a certain
          field is not granted access to for user will be:
 
          1. Value from $GLOBALS['TCA']
