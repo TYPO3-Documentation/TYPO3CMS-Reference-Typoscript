@@ -114,13 +114,7 @@ value of the according **Page** TSconfig property.
 Verifying the final configuration
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-It's vital to check the resulting configuration of the users. You can
-do that in the Tools > User Admin module (which is provided by the
-extension "beuser") by clicking a username. Then you'll see the
-TSconfig tree among other information. Here is an example:
-
-.. figure:: ../../Images/manual_html_464ee54.png
-   :alt: Comparing backend user or backend group settings with the User Admin module
+It's vital to check the resulting configuration of the users.
 
 
 .. _usersettingdefaultusertsconfig:
