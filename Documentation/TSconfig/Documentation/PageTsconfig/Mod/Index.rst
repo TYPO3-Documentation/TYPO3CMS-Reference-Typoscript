@@ -1269,9 +1269,6 @@ Web > List (mod.web\_list)
          Keyword which defines what happens when a user clicks the title in the
          list.
 
-         Default is that pages will go one level down while other records have
-         no link at all.
-
          Keywords:
 
          **edit** = Edits record
@@ -1279,6 +1276,9 @@ Web > List (mod.web\_list)
          **info** = Shows information
 
          **show** = Shows page/content element in frontend
+
+   Default
+         edit
 
 
 .. container:: table-row
