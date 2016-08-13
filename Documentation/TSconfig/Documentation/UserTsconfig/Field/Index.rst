@@ -128,8 +128,8 @@ initialized for all users.
 
 In extensions this is easily done by the extension API function,
 :code:`\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addUserTSConfig()`.
-In the :file:`ext_localconf.php` file of your extension you can call use that
-to set a default configuration.
+In the :code:`ext_localconf.php` file of your extension you can call it
+like this to set a default configuration.
 
 .. code-block:: php
 
@@ -147,5 +147,5 @@ to set a default configuration.
 		options.enableBookmarks = 1
 	');
 
-This API function simply adds the content to
+This API function during runtime adds the content to
 :code:`$TYPO3_CONF_VARS['BE']['defaultUserTSconfig']`.
