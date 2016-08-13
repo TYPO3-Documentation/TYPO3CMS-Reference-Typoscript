@@ -869,6 +869,34 @@ Properties for the suggest wizard (see introduction above).
 .. container:: table-row
 
    Property
+         addWhere
+
+   Data type
+         string
+
+   Description
+         Additional WHERE clause (with AND at the beginning).
+
+         Markers that are possible for replacement
+
+         * ###THIS_UID###
+         * ###CURRENT_PID###
+         * ###PAGE_TSCONFIG_ID###
+         * ###PAGE_TSCONFIG_IDLIST###
+         * ###PAGE_TSCONFIG_STR###
+
+         **Example:**
+
+         .. code-block:: typoscript
+
+			TCEFORM.pages.storage_pid.suggest.default {
+				addWhere = AND pages.pid=###PAGE_TSCONFIG_ID###
+			}
+
+
+.. container:: table-row
+
+   Property
          cssClass
 
    Data type
