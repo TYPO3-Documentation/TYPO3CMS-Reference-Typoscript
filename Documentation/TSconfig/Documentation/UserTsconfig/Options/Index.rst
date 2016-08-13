@@ -842,13 +842,19 @@ folderTree.altElementBrowserMountPoints
          folderTree.altElementBrowserMountPoints
 
    Data type
-         *(list of folder names)*
+         *(list of "storageUid:folderName" items)*
 
    Description
-         Sets alternative filemounts for use in the Element Browser. The
-         folders you specify here must exist within the fileadmin/ folder. You
-         separate folders by a comma. If a folder you specify does not exist it
-         will not get mounted. Effective in workspaces too.
+         Sets alternative filemounts for use in the File List and in
+         Element Browser. Each item consists of storage Uid followed by a colon
+         and the folder name inside that storage. You separate multiple items by
+         a comma.
+
+         For backwards compatibility, defining only a folder name but without a
+         storage Uid and colon prepended is still supported as well. Folders
+         without a storage Uid prepended are assumed to be located in the default
+         storage, which by default is the fileadmin/ folder. If a folder you specify
+         does not exist it will not get mounted. Effective in workspaces too.
 
          The alternative filemounts are **added** to the existing filemounts.
 
@@ -856,7 +862,7 @@ folderTree.altElementBrowserMountPoints
 
          .. code-block:: typoscript
 
-            options.folderTree.altElementBrowserMountPoints = _temp_/, templates
+            options.folderTree.altElementBrowserMountPoints = _temp_/, 2:/templates, 1:/files/images
 
 
 .. _useroptions-folderTree-uploadFieldsInLinkBrowser:
