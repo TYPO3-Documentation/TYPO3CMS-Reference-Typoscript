@@ -80,17 +80,19 @@ initialized from the root of the tree.
 
 In extensions this is easily done by the extension API function,
 :code:`\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig()`.
-In the :file:`ext_localconf.php` file you
+In the :code:`ext_localconf.php` file of your extension you
 can call it like this to set default configuration::
 
-   \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig('
-      RTE.default {
-         showButtons = cut,copy,paste,fontstyle,fontsize,textcolor
-         hideButtons = class,user,chMode
-      }
-   ');
+.. code-block:: php
 
-This API function simply adds the content to
+	\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig('
+		RTE.default {
+			showButtons = cut,copy,paste,fontstyle,fontsize,textcolor
+			hideButtons = class,user,chMode
+		}
+	');
+
+This API function during runtime adds the content to
 :code:`$TYPO3_CONF_VARS['BE']['defaultPageTSconfig']`.
 
 
