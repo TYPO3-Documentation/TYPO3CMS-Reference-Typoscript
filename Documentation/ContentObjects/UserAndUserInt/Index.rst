@@ -169,7 +169,7 @@ things contain::
        $output = '';
        if (isset($conf['debugOutput.'])) {
          $conf['debugOutput'] = $this->cObj->stdWrap($conf['debugOutput'], $conf['debugOutput.']);
-       }https://bitbucket.org/birkenfeld/pygments-main
+       }
        if ($conf['debugOutput']) {
          $output = 'This is the query: <strong>' . $query . '</strong><br /><br />';
        }
