@@ -1107,7 +1107,7 @@ Web > List (mod.web\_list)
 
    Description
          If this list is set, then the tables listed here won't have a link to
-         "create news" in the page and subpages. This also affects
+         "create new record" in the page and subpages. This also affects
          "BackendUtility::getModuleUrl('db_new')" (the display of "Create new record").
 
          This is the opposite of the previous property "allowedNewTables".
