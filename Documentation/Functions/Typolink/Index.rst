@@ -183,79 +183,51 @@ with the link-parameters (lowercased)!
          additional information for specifying a target, a class and a title.
          Below are a few examples followed by full explanations.
 
-         **Examples:** ::
+         **Examples:**
 
-            parameter = 51
+         *Most simple. Will create a link to page 51:* ::
 
-         *Most simple. Will create a link to page 51.* ::
-
-            parameter = 51 _blank specialLink "Very important information"
+            parameter = t3://page?uid=51
 
          *A full example. A link to page 51 that will open in a new window. The
          link will have a class attribute with value "specialLink" and a title
-         attribute reading "Very important information". So the result will be
-         the following:* ::
+         attribute reading "Very important information":* ::
+
+            parameter = t3://page?uid=51 _blank specialLink "Very important information"
+
+         *which is converted to a link like this:* ::
 
             <a href="?id=51" target="_blank" class="specialLink" title="Very important information">
 
-            parameter = http://typo3.org/ - specialLink
-
          *An external link with a class attribute. Note the dash (-) that
          replaces the second value (the target). This makes it possible to
-         define a class (third value) without having to define a target.* ::
+         define a class (third value) without having to define a target:* ::
 
-            parameter = info@typo3.org - - "Send a mail to main TYPO3 contact"
+            parameter = http://typo3.org/ - specialLink
 
-         *Creates a mailto link with a title attribute (but no target and no
-         class).*
+         *A mailto link with a title attribute (but no target and no class):* ::
+
+            parameter = mailto:info@typo3.org - - "Send a mail to main TYPO3 contact"
 
          As you can see from the examples, each significant part of the
          parameter string is separated by a space. Values that can themselves
          contain spaces must be enclosed in double quotes. Each of these values
          are described in more detail below.
 
-         **Destination**
+         **1. Resource reference**
 
-         The first value is the destination of the link. If there's a @ it will
-         be considered to be a mail address and a mailto link will be created.
-         If the value contains a dot (.) before the first slash (/) or a double
-         slash (//) or if a scheme (like http) is found inside it, the link
-         will be considered to be an external one. If there's a slash but not a
-         dot before it, it is considered to be a path to a file and link is
-         made to it (even if it does not exist as it must consider that it might
-         be a speaking URL). In all other cases it is assumed that the value is
-         either a page id and a page alias and a link is made to that page, if
-         it exists.
+         The first value is the destination of the link. It might start with:
 
-         In the case of a link to a page, the value can be more complex than
-         just a number or an alias. There can be three "sub-values" separated
-         by commas. Here's an example::
-
-            typolink.parameter = 51,100,&test=1 - - "RSS Feed"
-
-         The first value is the page id, the second is the type, the third will
-         override the "additionalParams" property. It's also possible to
-         specify a section that will override the section property. If the
-         section mark is an integer, it will be considered as a pointer to a
-         tt\_content record. If not, it's used as is. If there's only a section
-         mark, the link is made to the current page.
-
-         **Examples:** ::
-
-            typolink.parameter = 51#c345
-
-         *Creates a link to page 51 with an anchor to tt\_content element number
-         345* ::
-
-            typolink.parameter = #top
-
-         *Creates a link to the current page with an anchor called "top".*
+         * `t3://`: internal TYPO3 resource references. See `Resource references`_
+           for an in depth explanation on the syntax of these references.
+         * `http(s)://`: regular external links
+         * `mailto:info@typo3.org`: regular mailto links
 
          It's also possible to direct the typolink to use a custom function (a
          "link handler") to build the link. This is described in more details
          below this table.
 
-         **Target or popup settings**
+         **2. Target or popup settings**
 
          Targets are normally defined the properties described above
          (extTarget, fileTarget and target) but it is possible to override them
@@ -269,18 +241,18 @@ with the link-parameters (lowercased)!
          defined, as well as additional parameters to be passed to the
          JavaScript function. Also see property "Jswindow".
 
-         **Examples:** ::
+         *Examples:* ::
+
+         *Open page 51 in a popup window measuring 400 by 300 pixels:* ::
 
             typolink.parameter = 51 400x300
 
-         *Opens page 51 in a popup window measuring 400 by 300 pixels* ::
+         *Same as above, but the window will not be resizable and will show
+         the location bar:* ::
 
             typolink.parameter = 51 400x300:resizable=0,location=1
 
-         *Same as above, but the window will not be resizable and will show
-         the location bar.*
-
-         **Class**
+         **3. Class**
 
          The third value can be used to define a class name for the link tag.
          This class is inserted in the tag before any other value from the
@@ -288,7 +260,7 @@ with the link-parameters (lowercased)!
          possible to use a dash (-) to skip this value when one wants to define
          a fourth value, but no class (see examples above).
 
-         **Title**
+         **4. Title**
 
          The standard way of defining the title attribute of the link would be
          to use the "title" property or even the "ATagParams" property. However
@@ -455,6 +427,113 @@ with the link-parameters (lowercased)!
 .. ###### END~OF~TABLE ######
 
 [tsref:->typolink]
+
+
+
+
+.. _typolink-resource_references: `Resource references`
+
+Resource references
+"""""""""""""""""""
+
+TYPO3 supports a modern and future-proof way of referencing resources using an
+extensible and expressive syntax which is easy to understand.
+
+In order to understand the syntax, we will guide you through using a simple page
+link.
+
+`t3://page?uid=13&campaignCode=ABC123`
+
+The syntax consists of three main parts, much like parts on an URL:
+
+Syntax Namespace (`t3://`)
+   The namespace is set to `t3://` to ensure the `LinkService` should be called to
+   parse the URL. This value is fixed and mandatory.
+
+Resource handler key (`page`)
+   The resource handler key is a list of available handlers that TYPO3 can work
+   with. At the time of writing these handlers are:
+
+   * page
+   * file
+   * folder
+
+   More keys can be added via :php:`$TYPO3_CONF_VARS['SYS']['linkHandler']` in an associative
+   array where the key is the handler key and the value is a class implementing
+   the LinkHandlerInterface.
+
+Resource parameters(`?uid=13&campaignCode=ABC123`)
+   These are the specific identification parameters that are used by any handler.
+   Note that these may carry additional parameters in order to configure the
+   behavior of any handler.
+
+Handler syntax
+==============
+
+page
+----
+
+The page identifier is a compound string based on several optional settings.
+
+:aspect:`uid` (int):
+
+   The **uid** of a page record.
+
+   `t3://page?uid=13`
+
+:aspect:`alias` (string):
+
+   The **alias** of a page record (as an alternative to the UID).
+
+   `t3://page?alias=myfunkyalias`
+
+:aspect:`type` (int) *(optional)*:
+
+   `t3://page?uid=13&type=3` will reference page 13 in type 3.
+
+:aspect:`parameters` (string) *(optional, prefixed with &)*:
+
+   `t3://page?uid=1313&my=param&will=get&added=here`
+
+:aspect:`fragment` (string) *(optional, prefixed with #)*:
+
+   `t3://page?alias=myfunkyalias#c123`
+
+   `t3://page?uid=13&type=3#c123`
+
+   `t3://page?uid=13&type3?my=param&will=get&added=here#c123`
+
+file
+----
+
+:aspect:`uid` (int):
+
+   The UID of a file within the FAL database table `sys_file`.
+
+   `t3://file?uid=13`
+
+:aspect:`identifier` (string):
+
+   The identifier of a file when not indexed in FAL.
+
+   `t3://file?identifier=folder/myfile.jpg`
+
+folder
+------
+
+:aspect:`identifier` (string):
+
+   The identifier of a given folder.
+
+   `t3://folder?identifier=fileadmin`
+
+:aspect:`storage` (string) *(optional)*:
+
+   The FAL storage to the given folder.
+
+   `t3://folder?storage=1&identifier=myfolder`
+
+
 
 
 .. _typolink-link-handler:
