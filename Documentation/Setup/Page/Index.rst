@@ -50,7 +50,6 @@ Properties
    `config`_                      ->CONFIG
    `CSS\_inlineStyle`_            :ref:`data-type-string`
    `cssInline`_                   ->CARRAY
-   `extOnReady`_                  ->CARRAY
    `footerData`_                  ->CARRAY
    `frameSet`_                    ->FRAMESET
    `headerData`_                  ->CARRAY
@@ -61,7 +60,6 @@ Properties
    `includeJSFooter.[array]`_     :ref:`data-type-resource`
    `includeJSFooterlibs.[array]`_ :ref:`data-type-resource`
    `includeJSLibs.[array]`_       :ref:`data-type-resource`
-   `inlineLanguageLabel`_         *(array of strings)*
    `inlineLanguageLabelFiles`_    *(array of strings)*
    `inlineSettings`_              *(array of strings)*
    `insertClassesFromRTE`_        :ref:`data-type-boolean`
@@ -273,35 +271,6 @@ cssInline
                 20 = TEXT
                 20.value = h1 span {color: blue;}
             }
-
-
-
-.. _setup-page-extonready:
-
-extOnReady
-""""""""""
-
-.. container:: table-row
-
-   Property
-         extOnReady
-
-   Data type
-         ->CARRAY
-
-   Description
-         ExtJS specific, adds inline JavaScript, wrapped in Ext.onReady.
-
-         **Example:** ::
-
-            page.extOnReady {
-               10 = TEXT
-               10.value = Ext.Msg.alert("TypoScript Message","Hello World!");
-            }
-
-         will produce following source::
-
-            Ext.onReady(function() {Ext.Msg.alert("TypoScript Message","Hello World!"); });
 
 
 
@@ -695,38 +664,6 @@ includeJSLibs.[array]
 
 
 
-.. _setup-page-inlinelanguagelabel:
-
-inlineLanguageLabel
-"""""""""""""""""""
-
-.. container:: table-row
-
-   Property
-         inlineLanguageLabel
-
-   Data type
-         *(array of strings)*
-
-   Description
-         Adds language labels to the page.
-
-         Has "LLL:" support. You can either add a constant or a locallang
-         reference using page.inlineLanguageLabel.[key].
-
-         **Example:** ::
-
-            inlineLanguageLabel {
-               label1 = 123
-               label2 = 456
-            }
-
-         will produce following source::
-
-            TYPO3.lang = {"label1":"123","label2":"456"};
-
-
-
 .. _setup-page-inlinelanguagelabelfiles:
 
 inlineLanguageLabelFiles
@@ -854,15 +791,6 @@ javascriptLibs
                # and use jQuery with "TYPO3.###NAMESPACE###(…);"
                # (string, default: jQuery)
                jQuery.noConflict.namespace = ownNamespace
-
-                 # includes ExtJS
-               ExtJs = 1
-                 # include ext-all-notheme.css
-               ExtJs.css = 1
-                 # include default theme
-               ExtJs.theme = 1
-                 # includes ExtJS debug file (uncompressed)
-               ExtJs.debug = 1
             }
 
 
