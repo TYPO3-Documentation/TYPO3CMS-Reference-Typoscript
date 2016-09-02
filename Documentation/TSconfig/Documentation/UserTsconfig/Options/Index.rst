@@ -2,9 +2,9 @@
 
 .. _useroptions:
 
-=======
-OPTIONS
-=======
+=========
+->OPTIONS
+=========
 
 Various options for the user affecting the core at various points.
 
