@@ -1374,4 +1374,28 @@ file\_list.enableClipBoard
          selectable
 
 
+.. _useroptions-options-impexp-enableImportForNonAdminUser:
+
+options.impexp.enableImportForNonAdminUser
+==========================================
+
+.. container:: table-row
+
+   Property
+         options.impexp.enableImportForNonAdminUser
+
+   Data type
+         boolean
+
+   Description
+         The import/export module of `EXT:impext` is disabled by default for
+         non-admin users. Enable this for a non-admin users who need to use the module.
+         This should only be enabled for "trustworthy" backend users, as it might
+         impose a security risk.
+
+   Default
+         false
+
+
+
 .. ###### END~OF~TABLE ######
