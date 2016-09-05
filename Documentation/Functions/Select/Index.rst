@@ -80,6 +80,7 @@ Always secure input from outside, for example with intval!
                 where.intval = 1
                 where.wrap = sys_category_record_mm.uid_foreign=|
                 orderBy = sys_category_record_mm.sorting_foreign
+                languageField = 0 # disable translation handling of sys_category
               }
             }
 
