@@ -696,13 +696,15 @@ concatenateJsAndCss
 content\_from\_pid\_allowOutsideDomain
 """"""""""""""""""""""""""""""""""""""
 
-:aspect:`Property`
+.. container:: table-row
+
+   Property
       content\_from\_pid\_allowOutsideDomain
 
-:aspect:`Data type`
+   Data type
       boolean
 
-:aspect:`Description`
+   Description
       Using the "Show content from this page instead" feature allows you to
       insert content from the current domain only. Setting this option will
       allow content included from anywhere in the page tree!
@@ -859,13 +861,15 @@ disableAllHeaderCode
 disableBodyTag
 """"""""""""""
 
-:aspect:`Property`
+.. container:: table-row
+
+   Property
       disableBodyTag
 
-:aspect:`Data type`
+   Data type`
       boolean
 
-:aspect:`Description`
+   Description
       If this option is set the TYPO3 core will not generate the
       opening `<body ...>` part of the body tag. The closing `</body>`
       is not affected and will still be issued.
@@ -875,7 +879,7 @@ disableBodyTag
       :ts:`bodyTagAdd`. With :ts:`config.disableBodyTag =1` the others are
       ignored and don't have any effect.
 
-:aspect:`Default`
+   Default
       0 (false)
 
 
@@ -1911,13 +1915,15 @@ MP\_disableTypolinkClosestMPvalue
 MP\_mapRootPoints
 """""""""""""""""
 
-:aspect:`Property`
+.. container:: table-row
+
+   Property
       MP\_mapRootPoints
 
-:aspect:`Data type`
+   Data type
       list of PIDs/string
 
-:aspect:`Description`
+   Description
       Defines a list of ID numbers from which the MP-vars are automatically
       calculated for the branch.
 
