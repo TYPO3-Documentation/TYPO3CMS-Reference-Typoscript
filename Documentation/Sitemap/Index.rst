@@ -7,11 +7,11 @@
 Sitemap
 =======
 
+.. container:: sitemap
 
-.. toctree::
-   :class: sitemap
+   .. toctree::
 
-   ../Index
+      ../Index
 
 .. .. only:: latex
 ..
