@@ -86,3 +86,4 @@ Table of Contents and Sitemap
    MenuObjects/Index
    AppendixA/Index
    Targets
+   Sitemap  <https://docs.typo3.org/typo3cms/TyposcriptReference/Sitemap/>
