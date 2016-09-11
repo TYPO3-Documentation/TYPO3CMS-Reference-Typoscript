@@ -9,7 +9,7 @@ FORM
 .. note::
 
    The following only applies, if the system extension "form" is *not*
-   installed. If it is, things work as described in the documentation
+   installed. If it is, things work as described in the `documentation <https://docs.typo3.org/typo3cms/extensions/form/Index.html>`_
    inside the system extension.
 
 .. note::
