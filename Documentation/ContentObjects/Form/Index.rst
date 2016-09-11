@@ -6,11 +6,11 @@
 FORM
 ^^^^
 
-.. note::
+.. attention::
 
    The following only applies, if the system extension "form" is *not*
-   installed. If it is, things work as described in the documentation
-   inside the system extension.
+   installed. **If sysext:form is installed**, stop reading here and continue with
+   `sysext:form's own documentation <https://docs.typo3.org/typo3cms/extensions/form/>`__.
 
 .. note::
 
@@ -18,7 +18,9 @@ FORM
    for now, you need to install the extension "compatibility6". In the
    long run, you are advised to migrate to the system extension "form".
 
-This object provides a way to create forms. Example::
+This object provides a way to create forms. Example:
+
+.. code-block:: none
 
    textarea:  Label | [* = required][field name =] textarea[,cols,rows,"wrap= [e.g. "OFF"]"] | [defaultdata] | Special evaluation configuration (see note below)
    input:     Label | [* = required][field name =] input[,size,max] | [defaultdata] | Special evaluation configuration (see note below)
@@ -76,13 +78,7 @@ Displaying the form:
 
 **You must set the property "layout".** If you do not set it, the
 form will not be rendered! For more information see the example and
-the table below.
-
-
-Example:
-~~~~~~~~
-
-::
+the table below::
 
    temp.mailform = FORM
    temp.mailform {
@@ -108,7 +104,9 @@ Correct return-email:
 """""""""""""""""""""
 
 In order for the mails to be attached with the email address of the
-people that submits the mails, please use the field name "email", e.g::
+people that submits the mails, please use the field name "email", e.g:
+
+.. code-block:: none
 
    Email: | *email=input |
 
@@ -139,13 +137,13 @@ If the "EREG" keyword is specified the 2 :sup:`nd` and 3 :sup:`rd`
 parts are error message and regular expression respectively.
 
 
-Examples:
-~~~~~~~~~
+Example:
 
-::
+.. code-block:: none
 
    Your address: | address=textarea,40,10 |  | EREG : Only enter the characters A to Z : ^[a-zA-Z]*$
    Your email: | *email=input |  | EMAIL
+
 
 .. ### BEGIN~OF~TABLE ###
 
@@ -155,7 +153,7 @@ Examples:
          data
 
    Data type
-         string /:ref:`stdWrap <stdwrap>`
+         string /:ref:`stdWrap`
 
    Description
          This is the data that sets up the form. See above.
@@ -188,33 +186,35 @@ Examples:
          properties *label*, *value* and *selected*. All three of these
          properties have stdWrap properties.
 
-         **Example:** ::
+         Example::
 
             dataArray {
-              10.label = Name:
-              10.type = name=input
-              10.value = [Enter name]
-              10.required = 1
-              20.label = Eyecolor
-              20.type = eyecolor=select
-              20.valueArray {
-                10.label = Blue
-                10.value = 1
-                20.label = Red
-                20.value = 2
-                20.selected = 1
-              }
-              40.type = submit=submit
-              40.value = Submit
+               10.label = Name:
+               10.type = name=input
+               10.value = [Enter name]
+               10.required = 1
+               20.label = Eyecolor
+               20.type = eyecolor=select
+               20.valueArray {
+                  10.label = Blue
+                  10.value = 1
+                  20.label = Red
+                  20.value = 2
+                  20.selected = 1
+               }
+               40.type = submit=submit
+               40.value = Submit
             }
 
-         This is the same as this line in the .data property::
+         This is the same as this line in the .data property:
+
+         .. code-block:: none
 
             Name: | *name=input | [Enter name]
             Eyecolor: | eyecolor=select | Blue=1, *Red=2
             | submit=submit | Submit
 
-         **Why do it this way?** Good question, but doing it this way has a
+         *Why do it this way?* Good question, but doing it this way has a
          tremendous advantage, because labels are all separated from the codes.
          In addition it's much easier to pull out or insert new elements in the
          form.
@@ -222,23 +222,23 @@ Examples:
          Inserting an email-field after the name field would be like this::
 
             dataArray {
-              15.label = Email:
-              15.type = input
-              15.value = your@email.com
-              15.specialEval = EMAIL
+               15.label = Email:
+               15.type = input
+               15.value = your@email.com
+               15.specialEval = EMAIL
             }
 
          Or translating the form to danish (setting config.language to 'dk')::
 
             dataArray {
-              10.label.lang.dk = Navn:
-              10.value.lang.dk = [Indtast dit navn]
-              20.label.lang.dk = Øjenfarve
-              20.valueArray {
-                10.label.lang.dk = Blå
-                20.label.lang.dk = Rød
-              }
-              40.value.lang.dk = Send
+               10.label.lang.dk = Navn:
+               10.value.lang.dk = [Indtast dit navn]
+               20.label.lang.dk = Øjenfarve
+               20.valueArray {
+                  10.label.lang.dk = Blå
+                  20.label.lang.dk = Rød
+               }
+               40.value.lang.dk = Send
             }
 
 
@@ -260,7 +260,7 @@ Examples:
          radioWrap.accessibilityWrap
 
    Data type
-         :ref:`wrap <data-type-wrap>` /:ref:`stdWrap <stdwrap>`
+         :ref:`wrap <data-type-wrap>` /:ref:`stdWrap`
 
    Description
          Defines how radio buttons are wrapped when accessibility mode is
@@ -294,21 +294,30 @@ Examples:
    Description
          Type (action="" of the form):
 
-         **Integer:** This is regarded to be a page in TYPO3.
+         Integer
+            This is regarded to be a page in TYPO3.
 
-         **String:** This is regarded to be a normal URL (e.g. "formmail.php"
-         or "fe\_tce\_db.php").
+         String
+            This is regarded to be a normal URL (e.g. "formmail.php"
+            or "fe\_tce\_db.php").
 
-         **Empty:** The current page is chosen.
+         Empty
+            The current page is chosen.
 
-         **Note:** If type is integer or empty, the form will be submitted to a
+         *Note 1:*
+
+         If type is integer or empty, the form will be submitted to a
          page in TYPO3 and if this page has a value for target/no\_cache, then
          this will be used instead of the default target/no\_cache below.
 
-         **Note:** If the redirect-value is set, the redirect-target overrides
+         *Note 2:*
+
+         If the redirect-value is set, the redirect-target overrides
          the target set by the action-url.
 
-         **Note:** May be overridden by the property override feature of the
+         *Note 3:*
+
+         May be overridden by the property override feature of the
          formdata (see above).
 
 
@@ -318,7 +327,7 @@ Examples:
          target
 
    Data type
-         :ref:`target <data-type-target>` /:ref:`stdWrap <stdwrap>`
+         :ref:`target <data-type-target>` /:ref:`stdWrap`
 
    Description
          Default target of the form.
@@ -330,12 +339,10 @@ Examples:
          method
 
    Data type
-         form-method /:ref:`stdWrap <stdwrap>`
+         form-method /:ref:`stdWrap`
 
    Description
-         **Example:**
-
-         GET
+         Example: `GET`
 
    Default
          POST
@@ -347,7 +354,7 @@ Examples:
          no\_cache
 
    Data type
-         string /:ref:`stdWrap <stdwrap>`
+         string /:ref:`stdWrap`
 
    Description
          Default no\_cache-option.
@@ -359,7 +366,7 @@ Examples:
          noValueInsert
 
    Data type
-         boolean /:ref:`stdWrap <stdwrap>`
+         boolean /:ref:`stdWrap`
 
    Description
          By default values that are submitted to the same page (and thereby
@@ -368,9 +375,9 @@ Examples:
 
          This, however, applies ONLY if the "no\_cache=1" is set! (a page being
          cached may not include user-specific defaults in the fields of
-         course...)
+         course ...)
 
-         If you set this flag, "noValueInsert", the content will always be the
+         If you set this flag, :ts:`noValueInsert`, the content will always be the
          default content.
 
 
@@ -380,7 +387,7 @@ Examples:
          compensateFieldWidth
 
    Data type
-         double /:ref:`stdWrap <stdwrap>`
+         double /:ref:`stdWrap`
 
    Description
          Overriding option to the config-value of the same name. See "CONFIG"
@@ -393,7 +400,7 @@ Examples:
          locationData
 
    Data type
-         boolean / string /:ref:`stdWrap <stdwrap>`
+         boolean / string /:ref:`stdWrap`
 
    Description
          If this value is true, then a hidden-field called "locationData" is
@@ -422,7 +429,9 @@ Examples:
          location data of the page. This should be done with search-fields as
          this will carry the initial searching start point with.
 
-         **Note:** May be overridden by the property override feature of the
+         *Note:*
+
+         May be overridden by the property override feature of the
          formdata (see above)
 
 
@@ -432,18 +441,23 @@ Examples:
          redirect
 
    Data type
-         string /:ref:`stdWrap <stdwrap>`
+         string /:ref:`stdWrap`
 
    Description
          URL to redirect to (generates the hidden field "redirect")
 
-         **Integer:** This is regarded to be a page in TYPO3.
+         Integer:
+            This is regarded to be a page in TYPO3.
 
-         **String:** This is regarded to be a normal URL.
+         String:
+            This is regarded to be a normal URL.
 
-         **Empty:** The current page is chosen.
+         Empty:
+            The current page is chosen.
 
-         **Note:** If this value is set, the target of this overrides the
+         *Note:*
+
+         If this value is set, the target of this overrides the
          target of the "type".
 
 
@@ -453,7 +467,7 @@ Examples:
          recipient
 
    Data type
-         *(list of strings)* /:ref:`stdWrap <stdwrap>`
+         *(list of strings)* /:ref:`stdWrap`
 
    Description
          Email recipient of the formmail content (generates the hiddenfield
@@ -469,13 +483,15 @@ Examples:
          goodMess
 
    Data type
-         string /:ref:`stdWrap <stdwrap>`
+         string /:ref:`stdWrap`
 
    Description
          Message for the form evaluation function in case of correctly filled
          form.
 
-         **Note:** May be overridden by the property override feature of the
+         *Note:*
+
+         May be overridden by the property override feature of the
          formdata (see above).
 
    Default
@@ -488,14 +504,16 @@ Examples:
          badMess
 
    Data type
-         string /:ref:`stdWrap <stdwrap>`
+         string /:ref:`stdWrap`
 
    Description
          Message for the form evaluation in case of missing required fields.
 
          This message is shown above the list of fields.
 
-         **Note:** May be overridden by the property override feature of the
+         *Note:*
+
+         May be overridden by the property override feature of the
          formdata (see above).
 
    Default
@@ -508,12 +526,14 @@ Examples:
          emailMess
 
    Data type
-         string /:ref:`stdWrap <stdwrap>`
+         string /:ref:`stdWrap`
 
    Description
          Message if a field evaluated to be an email address did not validate.
 
-         **Note:** May be overridden by the property override feature of the
+         *Note:*
+
+         May be overridden by the property override feature of the
          formdata (see above).
 
 
@@ -528,14 +548,15 @@ Examples:
    Description
          If this is a valid image, the submit button is rendered as this image.
 
-         **Note:** CurrentValue is set to the caption-label before generating
-         the image.
+         *Note:*
+
+         CurrentValue is set to the caption-label before generating the image.
 
 
 .. container:: table-row
 
    Property
-         layout
+         layout (required!)
 
    Data type
          string
@@ -547,10 +568,10 @@ Examples:
          **This property is mandatory; you must set it!** Otherwise the form
          will not be rendered.
 
-         **Example:**
+         *Example:*
 
          This substitutes the marker "###FIELD###" with the field data and the
-         marker "###LABEL###' with label data. ::
+         marker "###LABEL###' with label data::
 
             layout = <tr><td>###FIELD###</td><td> ###LABEL###</td></tr>
 
@@ -601,7 +622,7 @@ Examples:
          REQ
 
    Data type
-         boolean /:ref:`stdWrap <stdwrap>`
+         boolean /:ref:`stdWrap`
 
    Description
          Defines if required-fields should be checked and marked up.
@@ -643,7 +664,7 @@ Examples:
          REQ.layout
 
    Data type
-         string /:ref:`stdWrap <stdwrap>`
+         string /:ref:`stdWrap`
 
    Description
          The same as "layout" above, but for required fields
@@ -658,7 +679,7 @@ Examples:
          COMMENT.layout
 
    Data type
-         string /:ref:`stdWrap <stdwrap>`
+         string /:ref:`stdWrap`
 
    Description
          Alternative layout for comments.
@@ -673,7 +694,7 @@ Examples:
          CHECK.layout
 
    Data type
-         string /:ref:`stdWrap <stdwrap>`
+         string /:ref:`stdWrap`
 
    Description
          Alternative layout for checkboxes
@@ -688,7 +709,7 @@ Examples:
          RADIO.layout
 
    Data type
-         string /:ref:`stdWrap <stdwrap>`
+         string /:ref:`stdWrap`
 
    Description
          Alternative layout for radio buttons
@@ -703,7 +724,7 @@ Examples:
          LABEL.layout
 
    Data type
-         string /:ref:`stdWrap <stdwrap>`
+         string /:ref:`stdWrap`
 
    Description
          Alternative layout for label types
@@ -735,16 +756,14 @@ Examples:
    Description
          Used to set hiddenFields from TS.
 
-         **Example:** ::
+         Example::
 
             hiddenFields.pid = TEXT
             hiddenFields.pid.value = 2
 
          This makes a hidden-field with the name "pid" and value "2".
 
-         Available sub-property:
-
-         **stdWrap**, see :ref:`->stdWrap <stdwrap>`.
+         Available sub-property: :ts:`stdWrap`, see :ref:`stdwrap`.
 
 
 .. container:: table-row
@@ -753,12 +772,12 @@ Examples:
          params
 
    Data type
-         form-element tag parameters /:ref:`stdWrap <stdwrap>`
+         form-element tag parameters /:ref:`stdWrap`
 
    Description
          Extra parameters to form elements.
 
-         **Example:** ::
+         Example::
 
             params = style="width:200px;"
             params.textarea = style="width:300px;"
@@ -767,7 +786,7 @@ Examples:
          This sets the default to 200 px width, but excludes check-boxes and
          sets textareas to 300.
 
-         **stdWrap** is available for the sub-properties, e.g. params.tagname.
+         :ts:`stdWrap` is available for the sub-properties, e.g. params.tagname.
 
 
 .. container:: table-row
@@ -776,17 +795,13 @@ Examples:
          wrapFieldName
 
    Data type
-         :ref:`wrap <data-type-wrap>` /:ref:`stdWrap <stdwrap>`
+         :ref:`wrap <data-type-wrap>` /:ref:`stdWrap`
 
    Description
          This wraps the field names before they are applied to the form-field
-         tags.
-
-         **Example:**
-
-         If value is *tx\_myextension[input][ \| ]* then the field name
-         "email" would be wrapped to this value:
-         *tx\_myextension[input][email]*
+         tags. For example, if value is :ts:`tx_myextension[input][ | ]`
+         then the field name "email" would be wrapped to this value:
+         :ts:`tx_myextension[input][email]`.
 
 
 .. container:: table-row
@@ -795,7 +810,7 @@ Examples:
          noWrapAttr
 
    Data type
-         boolean /:ref:`stdWrap <stdwrap>`
+         boolean /:ref:`stdWrap`
 
    Description
          If this value is true then all wrap attributes of textarea elements
@@ -811,7 +826,7 @@ Examples:
          arrayReturnMode
 
    Data type
-         boolean /:ref:`stdWrap <stdwrap>`
+         boolean /:ref:`stdWrap`
 
    Description
          If set, the <form> tags and the form content will be returned in an
@@ -826,7 +841,7 @@ Examples:
          accessibility
 
    Data type
-         boolean /:ref:`stdWrap <stdwrap>`
+         boolean /:ref:`stdWrap`
 
    Description
          If set, then the form will be compliant with accessibility guidelines
@@ -848,11 +863,13 @@ Examples:
          formName
 
    Data type
-         string /:ref:`stdWrap <stdwrap>`
+         string /:ref:`stdWrap`
 
    Description
          An alternative name for this form. Default will be a unique (random)
-         hash. ::
+         hash. Appears in html like:
+
+         .. code-block:: html
 
             <form name="...">
 
@@ -863,7 +880,7 @@ Examples:
          fieldPrefix
 
    Data type
-         string /:ref:`stdWrap <stdwrap>`
+         string /:ref:`stdWrap`
 
    Description
          Alternative prefix for the name of the fields in this form. Otherwise,
@@ -878,7 +895,7 @@ Examples:
          dontMd5FieldNames
 
    Data type
-         boolean /:ref:`stdWrap <stdwrap>`
+         boolean /:ref:`stdWrap`
 
    Description
          The IDs generated for all elements in a form are md5 hashes from the
@@ -946,62 +963,77 @@ page content record of the type "FORMMAIL"::
    | priority=hidden | 5
    | tv=hidden | 0
 
-- "replyto\_name": If the field is named like this the value is used as
-  reply to name in the email software and will not be shown in the mail
-  content. Choose another field name like the\_name to use the value as
-  a normal field. Note the asterisk (\*) which means the field is
-  required. and the field name will be "the\_name". Also a default value
-  is set ("Enter your name here")
+`replyto_name`
+   If the field is named like this the value is used as
+   reply to name in the email software and will not be shown in the mail
+   content. Choose another field name like the\_name to use the value as
+   a normal field. Note the asterisk (\*) which means the field is
+   required. and the field name will be "the\_name". Also a default value
+   is set ("Enter your name here")
 
-- "replyto\_email": If the field is named like this the value is used as
-  reply to email address in the email software and will not be shown in
-  the mail content. To get the value as sender address in the mail
-  software use "email" as field name.
+`replyto_email`
+   If the field is named like this the value is used as
+   reply to email address in the email software and will not be shown in
+   the mail content. To get the value as sender address in the mail
+   software use "email" as field name.
 
-- "Like TV" is a checkbox. Default is "unchecked".
+`Like TV`
+   is a checkbox. Default is "unchecked".
 
-- "formtype\_mail" is the name of the submit button. It **must** be
-  names so if you use the built-in form mail of TYPO3, at it will make
-  TYPO3 react automatically on the input and interpret it as form mail
-  input!
+`formtype_mail`
+   is the name of the submit button. It **must** be
+   names so if you use the built-in form mail of TYPO3, at it will make
+   TYPO3 react automatically on the input and interpret it as form mail
+   input!
 
-- "html\_enabled" will let the mail be rendered in nice HTML
+`html_enabled`
+   will let the mail be rendered in nice HTML
 
-- "use\_base64" will send the mail encoded as base64 instead of quoted-
-  printable
+`use_base64`
+   will send the mail encoded as base64 instead of quoted-
+   printable
 
-- "subject": Enter the subject of your mail
+`subject`
+   Enter the subject of your mail
 
-- "recipient\_copy" : A copy is sent to this mail address. You may
-  supply more addresses by separating with a comma (,). The mail sent to
-  recipient\_copy is the same, but a separate message from the one sent
-  to the 'recipient' and furthermore the copy-mail is sent only if the
-  'recipient' mail is sent.
+`recipient_copy`
+   A copy is sent to this mail address. You may
+   supply more addresses by separating with a comma (,). The mail sent to
+   recipient\_copy is the same, but a separate message from the one sent
+   to the 'recipient' and furthermore the copy-mail is sent only if the
+   'recipient' mail is sent.
 
-- "auto\_respond\_msg": This is an auto-responder message. This is sent
-  if the email of the "submitter" is known (field: "email"). The value
-  of this is the message broken up in to lines by a slash "/". Each
-  slash is a new line in the email. The first line is used for the
-  subject.
+`auto_respond_msg`
+   This is an auto-responder message. This is sent
+   if the email of the "submitter" is known (field: "email"). The value
+   of this is the message broken up in to lines by a slash "/". Each
+   slash is a new line in the email. The first line is used for the
+   subject.
 
-- "from\_name": With this option you can set the mail header from name,
-  which will be shown in the mail software.
+`from_name`
+   With this option you can set the mail header from name,
+   which will be shown in the mail software.
 
-- "from\_email": With this option you can set the mail header from
-  email, which will be shown in the mail software as sender address.
+`from_email`
+   With this option you can set the mail header from
+   email, which will be shown in the mail software as sender address.
 
-- "organization": With this option you can set the mail header
-  organization parameter, which won't be shown in the mail but in the
-  mail header.
+`organization`
+   With this option you can set the mail header
+   organization parameter, which won't be shown in the mail but in the
+   mail header.
 
-- "redirect": With this option you can define a TYPO3 page (page id) or
-  external URL (www.example.com) as redirect URL after submit. If this
-  option isn't set the form will be shown again.
+`redirect`
+   With this option you can define a TYPO3 page (page id) or
+   external URL (www.example.com) as redirect URL after submit. If this
+   option isn't set the form will be shown again.
 
-- "priority": With this option you can set the priority of the mail from
-  1 (not important) to 5 (very important). Default is 3.
+`priority`
+   With this option you can set the priority of the mail from
+   1 (not important) to 5 (very important). Default is 3.
 
-- "tv" (again, but hidden). Repeating this field may be smart as the
-  value "tv" is normally **not** submitted with the value "false" if not
-  checked. Inserting this line will ensure a default value for "tv".
+`tv`
+   (again, but hidden). Repeating this field may be smart as the
+   value "tv" is normally **not** submitted with the value "false" if not
+   checked. Inserting this line will ensure a default value for "tv".
 
