@@ -1,18 +1,11 @@
-:orphan:
-
-.. include:: ../Includes.txt
+:template: sitemap.html
 
 .. _Sitemap:
 
+======================
 Sitemap
-=======
+======================
 
-.. container:: sitemap
+.. template 'sitemap.html' will insert the toctree as a sitemap here
+   below normal contents
 
-   .. toctree::
-
-      ../Index
-
-.. .. only:: latex
-..
-..    Is fully contained in html output but not in LaTeX and pdf.

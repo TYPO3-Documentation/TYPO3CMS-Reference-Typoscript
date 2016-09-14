@@ -73,8 +73,12 @@ address the task at hand.
 Table of Contents and Sitemap
 =============================
 
-.. toctree::
+Please visit the complete :ref:`Sitemap`
 
+.. toctree::
+   :hidden:
+
+   Sitemap/Index
    Introduction/Index
    DataTypes/Index
    ObjectsAndProperties/Index
@@ -86,4 +90,3 @@ Table of Contents and Sitemap
    MenuObjects/Index
    AppendixA/Index
    Targets
-   Sitemap  <https://docs.typo3.org/typo3cms/TyposcriptReference/Sitemap/>
