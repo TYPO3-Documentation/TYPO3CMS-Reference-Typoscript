@@ -79,6 +79,7 @@ Please visit the complete :ref:`Sitemap`.
 .. toctree::
    :hidden:
 
+   Sitemap/Index
    Introduction/Index
    DataTypes/Index
    ObjectsAndProperties/Index
