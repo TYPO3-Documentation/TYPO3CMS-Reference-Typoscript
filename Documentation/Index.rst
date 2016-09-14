@@ -74,7 +74,10 @@ address the task at hand.
 Table of Contents and Sitemap
 =============================
 
+Please visit the complete :ref:`Sitemap`.
+
 .. toctree::
+   :hidden:
 
    Introduction/Index
    DataTypes/Index
