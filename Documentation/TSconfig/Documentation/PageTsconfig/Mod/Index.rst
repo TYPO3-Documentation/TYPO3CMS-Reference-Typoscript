@@ -277,33 +277,34 @@ Examples from the TYPO3 core are listed in the table below:
 
 [beuser]
 
-Since function menu items can be provided by extensions it is not
-possible to create a complete list of menu keys. The list above
-represents a typical installation of the TYPO3 Core with the
-Introduction Package. Therefore the listing includes options from
-system extensions and some additional ones.
+. tip::
 
-Therefore, if you want to blind a menu item, the only safe way of
-doing it, is to look at the HTML source of the backend module, to find
-the selector box with the function menu and to extract the key from
-the <option> tags. This listing is a cleaned-up version of a function
-menu. The keys are the values of the option tags.
+Since function menu items are provided by extensions it is not
+possible to create a complete and current list of menu keys in
+this documentation. So please do not rely on the given examples,
+as the keys may change from time to time.
 
-.. code-block:: html
+If you blind a menu item, then check for all currently registered 
+keys in the configuration module.
+Open the configuration module in TYPO3 backend and select the 
+option »BE Modules Extensions«. This will show you a tree like this:
 
-   <select>
-      <option value="tx_cms_webinfo_page">Page tree overview</option>
-      <option value="tx_belog_webinfo">Log</option>
-      <option value="tx_infopagetsconfig_webinfo">Page TSconfig</option>
-   </select>
+..
 
-As you can see, this is where the key for the example before was
-found.
+   web_info
+      MOD_MENU
+         function
+            tx_crawler_modfunc1
+            TYPO3\CMS\InfoPagetsconfig\Controller\InfoPageTyposcriptConfigController
+
+To blind the menu items just copy the keys and set the values 
+as described previously.
 
 .. code-block:: typoscript
 
    mod.web_info.menu.function {
-      tx_infopagetsconfig_webinfo = 0
+      tx_crawler_modfunc1 = 0
+      TYPO3\CMS\InfoPagetsconfig\Controller\InfoPageTyposcriptConfigController = 0
    }
 
 .. warning::
