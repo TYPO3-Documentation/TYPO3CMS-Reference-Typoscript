@@ -2227,8 +2227,10 @@ prefixLocalAnchors
 
          **output:** The content is processed just before it is echoed out.
 
-         **Note:** This property is deprecated since TYPO3 7! Use absolute links
-         with config.absRefPrefix instead.
+         **Note:** This property is deprecated since TYPO3 7! If you still use it
+         for now, you need to install the extension "compatibility6". In the long
+         run, you are advised to use absolute links with config.absRefPrefix
+         instead.
 
 
 .. _setup-config-removedefaultcss:
