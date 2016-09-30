@@ -95,7 +95,6 @@ Properties
    `pageTitle`_                                          :ref:`stdWrap`
    `pageTitleFirst`_                                     :ref:`data-type-boolean`           0
    `pageTitleSeparator`_                                 string /:ref:`stdWrap <stdwrap>`   `: ` *(colon with following space)*
-   `prefixLocalAnchors`_                                 :ref:`data-type-string`
    `removeDefaultCss`_                                   :ref:`data-type-boolean`
    `removeDefaultJS`_                                    boolean / string
    `removePageCss`_                                      :ref:`data-type-boolean`
@@ -2199,42 +2198,6 @@ pageTitleSeparator
    Default
          : *(colon with following space)*
 
-
-
-.. _setup-config-prefixlocalanchors:
-
-prefixLocalAnchors
-""""""""""""""""""
-
-.. container:: table-row
-
-   Property
-         prefixLocalAnchors
-
-   Data type
-         string
-
-   Description
-         If set to one of the keywords, the content will have all local anchors
-         in links prefixed with the path of the script. Basically this means
-         that <a href="#"> will be transformed to <a
-         href="path/path/script?params#">. This procedure is necessary if the
-         <base> tag is set (e.g. if the "realurl" extension is used to produce
-         speaking URLs). See property "config.baseURL".
-
-         You can enable this function by setting it to one of the following
-         keywords:
-
-         **all:** The content is always processed before it is possibly
-         stored in cache (or not stored in cache).
-
-         **cached:** The content is only processed, if the page will be put
-         into the cache.
-
-         **output:** The content is processed just before it is echoed out.
-
-         **Note:** This property is deprecated since TYPO3 7! Use absolute links
-         with config.absRefPrefix instead.
 
 
 .. _setup-config-removedefaultcss:
