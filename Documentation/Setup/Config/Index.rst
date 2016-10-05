@@ -94,7 +94,7 @@ Properties
    `pageRendererTemplateFile`_                           :ref:`data-type-string`
    `pageTitle`_                                          :ref:`stdWrap`
    `pageTitleFirst`_                                     :ref:`data-type-boolean`           0
-   `pageTitleSeparator`_                                 string /:ref:`stdWrap <stdwrap>`   `: ` *(colon with following space)*
+   `pageTitleSeparator`_                                 string /:ref:`stdWrap <stdwrap>`   ": " *(colon with following space)*
    `removeDefaultCss`_                                   :ref:`data-type-boolean`
    `removeDefaultJS`_                                    boolean / string
    `removePageCss`_                                      :ref:`data-type-boolean`
@@ -2659,6 +2659,8 @@ sys\_language\_mode
          the page is not translated and there's no content available in this
          language, so you can handle that situation on your own then.
 
+         An in-depth discussion is found in the
+         :ref:`Frontend Localization Guide <t3l10n:localization-modes>`.
 
 
 .. _setup-config-sys-language-overlay:
