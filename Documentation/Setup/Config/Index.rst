@@ -2743,16 +2743,16 @@ sys\_language\_softMergeIfNotBlank
 
          Background:
 
-         In TCA you can configure "l10n\_mode" - localization mode - for each
-         field. Two of the options affect how the frontend displays content;
-         The values "exclude" and "mergeIfNotBlank" (see "TYPO3 Core API"
-         document for details). The first ("exclude") simply means that the
-         field when found in a translation of a record will not be overlaid the
-         default records field value. The second ("mergeIfNotBlank") means that
-         it will be overlaid *only* if it has a non-blank value.
+         In TCA you can configure :ref:`"l10n_mode" property <t3tca:columns-properties-l10n-mode>`
+         (localization mode) - for each field. Two of the options affect how
+         the frontend displays content (the values "exclude" and "mergeIfNotBlank").
+         The first ("exclude") means that the value from the translated record will
+         not be overlaid the value from the record in the default language.
+         The second ("mergeIfNotBlank") means that it will be overlaid *only*
+         if it has a non-blank value.
 
          Since it might be practical to set up fields for "mergeIfNotBlank" on
-         a per-site basis this options allows you to override additional fields
+         a per-site basis this option allows you to override additional fields
          from tables.
 
          **Syntax:**
@@ -2768,6 +2768,8 @@ sys\_language\_softMergeIfNotBlank
          For the image field this might be very practical because it means that
          the image(s) from the default translation will be used unless other
          images are inserted!
+
+         See also the :ref:`Frontend Localization Guide <t3l10n:localized-content-fine-tune-overlays>`.
 
 
 
