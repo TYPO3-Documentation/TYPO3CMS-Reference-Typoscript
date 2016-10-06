@@ -11,6 +11,7 @@ ext\_tables.php file, inside the
 :code:`\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addModule()`
 call with the key name :code:`name`.
 
+
 .. _pageblindingfunctionmenuoptions:
 
 Blinding Function Menu options in Backend Modules
@@ -24,296 +25,146 @@ user/group).
 
 In this case the main menu of the Web > Info module looks like this:
 
-.. figure:: ../../Images/manual_html_m615ff10e.png
-   :alt: The original function menu inside the info module
+.. figure:: ../../Images/FunctionMenuInfoModule.png
+   :alt: The function menu of the Web > Info module
 
-   The original function menu inside the info module
+   Function menu in the Web > Info module for the Introduction Package
 
 By adding this Page TSconfig we can remove the "Page TSconfig" item
 
 .. code-block:: typoscript
 
    mod.web_info.menu.function {
-      tx_infopagetsconfig_webinfo = 0
+      TYPO3\CMS\InfoPagetsconfig\Controller\InfoPageTyposcriptConfigController = 0
    }
 
-The function menu will now look like this:
+so that we now have:
 
-.. figure:: ../../Images/manual_html_10bf0f2e.png
-   :alt: The function menu inside the info module without Page TSconfig
+.. figure:: ../../Images/FunctionMenuInfoModuleBlindedOption.png
+   :alt: The function menu of the Web > Info module with blinded option
 
-   The function menu inside the info module without Page TSconfig
+   Function menu in the Web > Info module without the Page TSconfig item
 
-The 'Page TSconfig' option is simply disabled by setting this Page
-TSconfig!
+The "Page TSconfig" item is simply disabled by setting this Page TSconfig.
 
 All you need to know in order to disable function menu items in the
-backend modules is, *which* modules support it and what the *key* of
-the menu item is (in the above example it was
-'tx\_infopagetsconfig\_webinfo'). Modules extending the class
-"BaseScriptClass" will most likely provide this out-of-the-box since
-it is a part of the base class in BaseScriptClass::menuConfig().
+backend modules is *which* modules support it and what the *key* of
+the menu item is.
 
-Examples from the TYPO3 core are listed in the table below:
+The modules which support this feature are listed below.
 
-.. ### BEGIN~OF~TABLE ###
+The function menu item keys may change over time. Furthermore it is
+impossible to create a complete list of them, since items may be added
+by extensions. As such, the best way to find the list of existing
+function menu item keys is to use the **SYSTEM > Configuration**
+module, in the *$GLOBALS['TBE\_MODULES\_EXT'] (BE Modules Extensions)* view.
+This will show you a tree like this:
 
-.. container:: table-row
+.. figure:: ../../Images/FunctionMenuKeysList.png
+   :alt: List of function keys
 
-   Property
-         web\_layout.menu.function
+   Viewing the list of function keys using the Configuration module
 
-   Description
-         **Web > Page module**
-
-         .. figure:: ../../Images/manual_html_5268c65f.png
-            :alt: The original layout menu inside the page module
-
-            The original layout menu inside the page module
-
-         **Option tags:**
-
-         .. code-block:: html
-
-            <select name="SET[function]">
-               <option value="1">Columns</option>
-               <option value="0">QuickEdit</option>
-               <option value="2">Languages</option>
-               <option value="3">Grid-View</option>
-            </select>
-
-         **Example:**
-
-         .. code-block:: typoscript
-
-            # Disables all items except the "QuickEdit" item:
-            mod.web_layout.menu.function {
-               1 = 0
-               2 = 0
-               3 = 0
-            }
-
-
-.. container:: table-row
-
-   Property
-         web\_info.menu.function
-
-   Description
-         **Web > Info module**
-
-         .. figure:: ../../Images/manual_html_4c191623.png
-            :alt: The original function menu inside the info module
-
-            The original function menu inside the info module
-
-         **Option tags:**
-
-         .. code-block:: html
-
-            <select name="SET[function]">
-               <option value="tx_cms_webinfo_page">Page tree Overview</option>
-               <option value="tx_cms_webinfo_lang">Localization Overview</option>
-               <option value="tx_belog_webinfo">Log</option>
-               <option value="tx_infopagetsconfig_webinfo">Page TSconfig</option>
-               <option value="tx_linkvalidator_ModFuncReport">Linkvalidator</option>
-               <option value="tx_realurl_modfunc1">Speaking Url Management</option>
-               <option value="tx_indexedsearch_modfunc1">Indexed search</option>
-               <option value="tx_indexedsearch_modfunc2">Indexed search statistics</option>
-            </select>
-
-         .. note::
-
-            The Module "Speaking Url Management" is provided by the
-            extension RealURL, which is not part of the TYPO3 Core.
-
-         **Example:**
-
-         .. code-block:: typoscript
-
-            # Disables the item "Indexed search statistics":
-            mod.web_info.menu.function {
-               tx_indexedsearch_modfunc2 = 0
-            }
-
-
-.. container:: table-row
-
-   Property
-         web\_func.menu.function
-
-   Description
-         **Web > Functions module**
-
-         .. figure:: ../../Images/manual_html_4570ee97.png
-            :alt: The original function menu inside the functions module
-
-            The original function menu inside the functions module
-
-         **Option tags:**
-
-         .. code-block:: html
-
-            <select name="SET[function]">
-               <option value="tx_funcwizards_webfunc">Wizards</option>
-            </select>
-
-
-.. container:: table-row
-
-   Property
-         web\_func.menu.wiz
-
-   Description
-         **Web > Functions module, Wizards submodule**
-
-         This is the 2nd level Function Menu in the Web > Functions module.
-         Instead of the "function" key of the main menu it just uses the key
-         "wiz" instead.
-
-         .. figure:: ../../Images/manual_html_601b8e77.png
-            :alt: Wizards submodules of the function menu inside the functions module
-
-         **Option tags:**
-
-         .. code-block:: html
-
-            <select name="SET[wiz]">
-               <option value="tx_wizardcrpages_webfunc_2">Create multiple pages</option>
-               <option value="tx_wizardsortpages_webfunc_2">Sort pages</option>
-            </select>
-
-         **Example:**
-
-         .. code-block:: typoscript
-
-            # Disables the sub-item "Create multiple pages":
-            mod.web_func.menu.wiz {
-               tx_wizardcrpages_webfunc_2 = 0
-            }
-
-
-.. container:: table-row
-
-   Property
-         web\_ts.menu.function
-
-   Description
-         **Web > Template module**
-
-         .. figure:: ../../Images/manual_html_38b1b9c9.png
-            :alt: The original function menu from the template module
-
-         **Option tags:**
-
-         .. code-block:: html
-
-            <select name="SET[function]">
-               <option value="tx_tstemplateceditor">Constant Editor</option>
-               <option value="tx_tstemplateinfo">Info/Modify</option>
-               <option value="tx_tstemplateobjbrowser">TypoScript Object Browser</option>
-               <option value="tx_tstemplateanalyzer">Template Analyzer</option>
-            </select>
-
-
-.. ###### END~OF~TABLE ######
-
-[page:mod; beuser:mod]
-
-.. ### BEGIN~OF~TABLE ###
-
-.. container:: table-row
-
-   Property
-         taskcenter
-
-   Description
-         **User > Task Center**
-
-         The Task Center can be configured as follows:
-
-         The Task Center does not provide a selector box function menu holding
-         the different tasks. But behind the scenes it uses the same
-         functionality of saving "states" and therefore you can also blind
-         items in the Task Center.
-
-         There is one tricky thing though: The Task Center is not depending on
-         a page in the page tree! So you have to set User TSconfig to blind
-         options here!
-
-         .. figure:: ../../Images/manual_html_m44e31433.png
-            :alt: Configuring the TYPO3 Taskcenter
-
-         You can hide a task by using the following syntax in User TSconfig
-
-         .. code-block:: typoscript
-
-            taskcenter {
-               <extension-key>.<task-class> = 0
-            }
-
-         Be aware that <extension-key> needs to be replaced by the actual
-         extension key and <task-class> by the class name of the PHP class
-         providing the task.
-
-         **Example:**
-
-         Set this as *User TSconfig*
-
-         .. code-block:: typoscript
-
-            # Task Center configuration:
-            taskcenter {
-               # Disable "Quick Note":
-               sys_notepad.tx_sysnotepad_task = 0
-               # Disable "Action":
-               sys_action.tx_sysaction_task = 0
-               # Disable "Import/Export":
-               impexp.tx_impexp_task = 0
-            }
-
-
-.. ###### END~OF~TABLE ######
-
-[beuser]
-
-Since function menu items can be provided by extensions it is not
-possible to create a complete list of menu keys. The list above
-represents a typical installation of the TYPO3 Core with the
-Introduction Package. Therefore the listing includes options from
-system extensions and some additional ones.
-
-Therefore, if you want to blind a menu item, the only safe way of
-doing it, is to look at the HTML source of the backend module, to find
-the selector box with the function menu and to extract the key from
-the <option> tags. This listing is a cleaned-up version of a function
-menu. The keys are the values of the option tags.
-
-.. code-block:: html
-
-   <select>
-      <option value="tx_cms_webinfo_page">Page tree overview</option>
-      <option value="tx_belog_webinfo">Log</option>
-      <option value="tx_infopagetsconfig_webinfo">Page TSconfig</option>
-   </select>
-
-As you can see, this is where the key for the example before was
-found.
-
-.. code-block:: typoscript
-
-   mod.web_info.menu.function {
-      tx_infopagetsconfig_webinfo = 0
-   }
+To blind the menu items just copy the keys and set the values
+as described in the relevant module descriptions below.
 
 .. warning::
 
    Blinding Function Menu items is not hardcore access control! All it
-   does is to hide the possibility of accessing that module functionality
+   does is hide the possibility of accessing that module functionality
    from the interface. It might be possible for users to hack their way
    around it and access the functionality anyways. You should use the
    option of blinding elements mostly to remove otherwise distracting
    options.
+
+.. _pageblindingfunctionmenuoptions-weblayout:
+
+web\_layout.menu.function
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+This is the function menu of the **WEB > Page** module.
+
+.. figure:: ../../Images/FunctionMenuPageModule.png
+   :alt: The function menu of the Page module
+
+   The default options of the Page module function menu
+
+For this module the function keys are simple numerical:
+
+- "0" for QuickEdit
+- "1" for Columns
+- "2" for Languages
+
+In order to blind them, the following TSconfig would be used:
+
+.. code-block:: typoscript
+
+    # Disables all items except the "Columns" item:
+    mod.web_layout.menu.function {
+        0 = 0
+        2 = 0
+    }
+
+
+.. _pageblindingfunctionmenuoptions-webinfo:
+
+web\_info.menu.function
+~~~~~~~~~~~~~~~~~~~~~~~
+
+This is the function menu of the **WEB > Info** module.
+
+.. figure:: ../../Images/FunctionMenuInfoModule.png
+   :alt: The function menu of the Info module
+
+   The default options of the Info module function menu
+
+.. code-block:: typoscript
+
+    # Disables the item "Page Tsconfig":
+    mod.web_info.menu.function {
+        TYPO3\CMS\InfoPagetsconfig\Controller\InfoPageTyposcriptConfigController = 0
+    }
+
+
+.. _pageblindingfunctionmenuoptions-webfunc:
+
+web\_func.menu.function
+~~~~~~~~~~~~~~~~~~~~~~~
+
+This is the function menu of the **WEB > Functions** module.
+
+.. figure:: ../../Images/FunctionMenuFunctionsModule.png
+   :alt: The function menu of the Functions module
+
+   The default options of the Functions module function menu
+
+.. code-block:: typoscript
+
+    # Disables the item "Sort pages":
+    mod.web_func.menu.function {
+        TYPO3\CMS\WizardSortpages\View\SortPagesWizardModuleFunction = 0
+    }
+
+
+.. _pageblindingfunctionmenuoptions-webts:
+
+web\_ts.menu.function
+~~~~~~~~~~~~~~~~~~~~~
+
+This is the function menu of the **WEB > Template** module.
+
+.. figure:: ../../Images/FunctionMenuTemplateModule.png
+   :alt: The function menu of the Template module
+
+   The default options of the Template module function menu
+
+.. code-block:: typoscript
+
+    # Disables the item "Template Analyzer":
+    mod.web_ts.menu.function {
+        TYPO3\CMS\Tstemplate\Controller\TemplateAnalyzerModuleFunctionController = 0
+    }
+
 
 .. _pageoverridingpagetsconfigwithusertsconfig:
 
