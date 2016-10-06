@@ -81,7 +81,7 @@ initialized from the root of the tree.
 In extensions this is easily done by the extension API function,
 :code:`\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig()`.
 In the :code:`ext_localconf.php` file of your extension you
-can call it like this to set default configuration::
+can call it like this to set default configuration:
 
 .. code-block:: php
 
@@ -101,7 +101,9 @@ Register static Page TSconfig files
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Register PageTS config files in :file:`Configuration/TCA/Overrides/pages.php` of any extension,
-which will be shown in the page properties (the same way as TypoScript static templates are included)::
+which will be shown in the page properties (the same way as TypoScript static templates are included):
+
+.. code-block:: php
 
    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::registerPageTSConfigFile(
       'extension_name',
