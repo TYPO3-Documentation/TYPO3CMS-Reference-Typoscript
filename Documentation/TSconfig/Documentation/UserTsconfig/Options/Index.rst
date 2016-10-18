@@ -551,24 +551,6 @@ pageTree.disableIconLinkToContextmenu
          with the same link as the title.
 
 
-.. _useroptions-pageTree-disableTitleHighlight:
-
-pageTree.disableTitleHighlight
-==============================
-
-.. container:: table-row
-
-   Property
-         pageTree.disableTitleHighlight
-
-   Data type
-         boolean
-
-   Description
-         If set, the page titles in the page tree will not be highlighted when
-         clicked.
-
-
 .. _useroptions-pageTree-showPageIdWithTitle:
 
 pageTree.showPageIdWithTitle
@@ -938,27 +920,6 @@ contextMenu.[key].disableItems
          Items to disable are (for "folder" type - that is files/folders):
 
          edit,upload,rename,new,info,copy,cut,paste,delete
-
-
-.. _useroptions-contextMenu-options-leftIcons:
-
-contextMenu.options.leftIcons
-=============================
-
-.. container:: table-row
-
-   Property
-         contextMenu.options.leftIcons
-
-   Data type
-         boolean
-
-   Description
-         If set, the icons in the clickmenu appear at the left side of the text
-         instead of at the right side.
-
-   Default
-         1
 
 
 .. _useroptions-contextMenu-options-clickMenuTimeOut:
