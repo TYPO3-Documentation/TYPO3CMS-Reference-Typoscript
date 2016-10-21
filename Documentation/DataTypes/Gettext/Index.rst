@@ -556,3 +556,16 @@ global:
 
 global: [GLOBAL variable, split with \| if you want to get from an
 array! Deprecated, use GP, TSFE or getenv!]
+
+flexform:
+---------
+
+**Syntax**
+
+flexform: [field containing flexform data].[property of this flexform]
+
+**Example**::
+
+    foo = flexform: pi_flexform:settings.categories
+
+* returns the flexform value of given name
