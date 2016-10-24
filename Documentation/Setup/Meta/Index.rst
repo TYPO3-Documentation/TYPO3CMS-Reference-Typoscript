@@ -80,11 +80,11 @@ Property details
 
          **Example:** ::
 
-            meta.X-UA-Compatible = IE=edge,chrome=1
+            meta.X-UA-Compatible = IE=edge
             meta.X-UA-Compatible.httpEquivalent = 1
 
          This results in <meta http-equiv="X-UA-Compatible"
-         content="IE=edge,chrome=1">.
+         content="IE=edge">.
 
 
 
