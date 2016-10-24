@@ -67,21 +67,21 @@ array of key names
 
    Usage of :ts:`httpEquivalent`::
 
-      meta.X-UA-Compatible = IE=edge,chrome=1
+      meta.X-UA-Compatible = IE=edge
       meta.X-UA-Compatible.httpEquivalent = 1
 
    Result:
 
    .. code-block:: html
 
-      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">.
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">.
 
    Meta tags with a different attribute name are supported like the
    Open Graph meta tags::
 
       page {
          meta {
-            X-UA-Compatible = IE=edge,chrome=1
+            X-UA-Compatible = IE=edge
             X-UA-Compatible.attribute = http-equiv
             keywords = TYPO3
             og:site_name = TYPO3
