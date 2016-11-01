@@ -284,6 +284,12 @@ Special key: "references"
 Examples:
 """""""""
 
+
+.. _cobj-files-examples-files:
+
+Usage with files
+~~~~~~~~~~~~~~~~
+
 In this example, we first load files using several of the methods
 explained above (using sys_file UIDs, collection UIDs, and folders).
 Then we use the :ref:`TEXT <cobj-text>` cObject as renderObj to output
@@ -303,6 +309,11 @@ the file size of all files that were found:
         stdWrap.wrap = <p>File size: <strong>|</strong></p>
     }
 
+
+.. _cobj-files-examples-references:
+
+Usage with references
+~~~~~~~~~~~~~~~~~~~~~
 
 In this second example, we use "references" to get the images related
 to a given page (in this case, the current page). We start with the
@@ -325,11 +336,34 @@ the file itself or from the reference to it (title):
 
         renderObj = IMAGE
         renderObj {
-            file.import.data = file:current:uid
-            file.treatIdAsReference = 1
+            file.import.data = file:current:publicUrl
             altText.data = file:current:title
             wrap = <div class="slide">|</div>
         }
         stdWrap.wrap = <div class="carousel">|</div>
     }
 
+
+.. _cobj-files-examples-sliding:
+
+Usage with sliding
+~~~~~~~~~~~~~~~~~~
+
+One usual feature is to use images attached to pages and use
+them up and down the page tree, a process called "sliding".
+
+.. code-block:: typoscript
+
+    lib.banner = FILES
+    lib.banner {
+        references {
+            data = levelmedia: -1, slide
+        }
+
+        renderObj = IMAGE
+        renderObj {
+            file.import.data = file:current:publicUrl
+            altText.data = file:current:title
+            wrap = <div class="banner">|</div>
+        }
+    }
