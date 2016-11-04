@@ -80,6 +80,18 @@ stdWrap
 Examples:
 =========
 
+Note: the examples below reference class files located in ``fileadmin`` - this is no
+longer the recommended best practice as it does not cause the class files to be loaded
+or even be loadable by Composer.
+
+For the best result you should *always*, without exception, place your class files in
+an extension, define composer class loading for this extension and add this extension as
+a depedency of your project. Then, your classes will load without issues when you refer
+to them by their class name.
+
+The examples below will work though - except that the classes will fail to load unless
+manually included or manually added to composer autoload of the root composer.json.
+
 Example 1
 ---------
 
