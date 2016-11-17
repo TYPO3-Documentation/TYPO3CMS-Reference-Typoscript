@@ -363,7 +363,7 @@ Implementation
 
 - imageLinkWrap__ in API__,
 - method `imageLinkWrap` in
-- class :class:`ContentObjectRenderer` in
+- class :php:`ContentObjectRenderer` in
 - namespace :php:`namespace TYPO3\CMS\Frontend\ContentObject;` in
 - file :file:`ContentObjectRenderer.php` in
 - folder :file:`typo3/sysext/frontend/Classes/ContentObject`.
