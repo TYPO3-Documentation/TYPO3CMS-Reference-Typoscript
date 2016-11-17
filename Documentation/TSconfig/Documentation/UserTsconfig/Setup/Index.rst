@@ -221,21 +221,6 @@ This table shows the keys for both defaults and override values:
 .. container:: table-row
 
    Property
-         condensedMode
-
-   Data type
-         boolean
-
-   Description
-         If set, the backend will not load the Web-submodules and File-
-         submodules in a frameset but allow the page and folder trees to load
-         the submodule in its own frame. This allows for a better display on
-         small screens.
-
-
-.. container:: table-row
-
-   Property
          startModule
 
    Data type
