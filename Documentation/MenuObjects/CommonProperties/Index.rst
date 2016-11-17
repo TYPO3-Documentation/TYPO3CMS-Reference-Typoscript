@@ -228,7 +228,10 @@ otherwise noted!
 
          If the value is "NONE" the link will not be changed and the site will
          perform page-not-found handling when clicked (which can be used to
-         capture the event and act accordingly of course).
+         capture the event and act accordingly of course). This means that the 
+         link's URL will point to the page even if it is not accessible by the
+         current frontend user. Note that the default behavior of page-not-found
+         handling is to show the parent page instead.
 
          **Properties:**
 
