@@ -188,7 +188,7 @@ integer], [field name], ["slide"]
    foo = levelfield : -1 , user_myExtField , slide
 
 *gets the value of the user defined field user_myExtField in the root
-line (requires additional configuration in $TYPO3_CONF_VARS to include field!)*
+line (requires additional configuration in :php:`$GLOBALS['TYPO3_CONF_VARS']['FE']['addRootLineFields']` to include field!)*
 
 
 .. _data-type-gettext-date:
