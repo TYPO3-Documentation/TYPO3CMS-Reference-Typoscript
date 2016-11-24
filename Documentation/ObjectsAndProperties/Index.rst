@@ -150,9 +150,8 @@ menu items are generated, the properties are split by this function.
 Now lets look at some examples:
 
 
-Subparts \|\|
-'''''''''''''
-
+optionSplit subparts `||`
+-------------------------
 
 Example:
 ~~~~~~~~
@@ -196,9 +195,8 @@ repeated because the menu has five items. ::
    Links (green) first, subpart 3 (repeated)
 
 
-Parts \|\*\|
-''''''''''''
-
+optionSplit parts `|*|`
+-----------------------
 
 Example:
 ~~~~~~~~
@@ -284,16 +282,19 @@ the *first*-value is discarded as it's priority is less than the
 
 
 "1: The priority is *last, first, middle*"
-''''''''''''''''''''''''''''''''''''''''''
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Now the last two examples showed that the *last*-value has the
 highest priority, then the *first*-value and then the *middle*
 -value.
 
+...
+
 
 "2: If the *middle*-value is empty, the last part of the first-value is repeated"
-'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+...
 
 Example:
 ~~~~~~~~
@@ -318,8 +319,9 @@ the two \|\*\|\|\*\|!* ::
 
 
 "3: If the *first* - and *middle* value are empty, the first part of the last-value is repeated before the last value"
-''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+...
 
 Example:
 ~~~~~~~~
@@ -344,8 +346,9 @@ space must exist between the two \|\*\|\|\*\|!* ::
 
 
 "4: The *middle* value is repeated"
-'''''''''''''''''''''''''''''''''''
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+...
 
 Example:
 ~~~~~~~~
@@ -377,18 +380,23 @@ Example:
 
 .. _objects-optionsplit-condensed:
 
+
 Overview with abstract examples
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
 
 .. contents:: Page contents
    :local:
    :backlinks: top
 
 
+
 The following table gives you a condensed overview of how the
 optionSplit rules work together:
 
 ((old table))
+"""""""""""""
 
 =============================  ====  ======================  =======
 optionSplit                    N     Resulting sequence      Rule
