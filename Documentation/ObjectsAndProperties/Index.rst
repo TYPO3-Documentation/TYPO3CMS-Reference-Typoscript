@@ -3,20 +3,21 @@
 
 .. _objects-and-properties:
 
+======================
 Objects and properties
-----------------------
+======================
 
 
 .. _objects-introduction:
 
 Introduction
-^^^^^^^^^^^^
+============
 
 
 .. _objects-referencing:
 
 Reference to objects
-""""""""""""""""""""
+--------------------
 
 Whenever you see *->[object name]* in the tables it means that the
 property is an object "*object name*" with properties from object
@@ -27,7 +28,7 @@ often find the according documentation on its own page.
 .. _objects-calc:
 
 Calculating values (+calc)
-""""""""""""""""""""""""""
+--------------------------
 
 Sometimes a data type is set to "something +calc". "+calc" indicates
 that the value is calculated with "+-/\*". *Be aware that the
@@ -35,8 +36,8 @@ operators have no "weight".* The calculation is just done from left to
 right.
 
 
-Example:
-~~~~~~~~
+calc example:
+~~~~~~~~~~~~~
 
 ::
 
@@ -47,15 +48,15 @@ Example:
 .. _objects-stdwrap:
 
 "... /stdWrap"
-""""""""""""""
+--------------
 
 When a data type is set to "*type* /stdWrap" it means that the value
 is parsed through the stdWrap function with the properties of the
 value as parameters.
 
 
-Example:
-~~~~~~~~
+stdWrap example:
+~~~~~~~~~~~~~~~~
 
 If the property "pixels" has the data type "integer /stdWrap", the
 value should be set to an integer and can be parsed through stdWrap.
@@ -70,10 +71,11 @@ current $cObj->data-array. But we don't trust the result to be an
 integer so we parse it through the intval()-function.
 
 
+
 .. _objects-optionsplit:
 
 optionSplit
-"""""""""""
+-----------
 
 optionSplit is a very tricky function. It's primarily used in the
 menu objects where you define properties of a whole bunch of items at
