@@ -382,7 +382,7 @@ The following table gives you a condensed overview of how the
 optionSplit rules work together:
 
 =========================  =============== ======================  =======
-optionSplit                number of items Resulting items         Rule
+optionSplit                Number of items Resulting items         Rule
 =========================  =============== ======================  =======
 a                          4               a a a a
 a || b || c                >=5             a b c c c ...
