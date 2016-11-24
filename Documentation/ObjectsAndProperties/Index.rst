@@ -381,17 +381,17 @@ Overview with abstract examples
 The following table gives you a condensed overview of how the
 optionSplit rules work together:
 
-=========================  ======================  =======
-optionSplit                Resulting items         Rule
-=========================  ======================  =======
-a                          a a a a
-a || b || c                a b c c c ...
-a || b \|*| c              a b c c c ...
-a || b \|*| c \|*| d || e  a b c c ... c c d e     Rule 1
-a || b \|*| c \|*| d || e  a b d e                 Rule 1
-a || b \|*| c \|*| d || e  a d e                   Rule 1
-a || b \|*||*| c || d      a b ... b c d           Rule 2
-\|*|\|*| a || b            a a ... a b             Rule 3
-a \|*| b || c \|*|         a b c b c b c ... b c   Rule 4
-=========================  ======================  =======
+=========================  =============== ======================  =======
+optionSplit                number of items Resulting items         Rule
+=========================  =============== ======================  =======
+a                          4               a a a a
+a || b || c                >=5             a b c c c ...
+a || b \|*| c              >=5             a b c c c ...
+a || b \|*| c \|*| d || e  >=8             a b c c ... c c d e     Rule 1
+a || b \|*| c \|*| d || e  4               a b d e                 Rule 1
+a || b \|*| c \|*| d || e  3               a d e                   Rule 1
+a || b \|*||*| c || d      >=5             a b ... b c d           Rule 2
+\|*|\|*| a || b            >=4             a a ... a b             Rule 3
+a \|*| b || c \|*|         >=9             a b c b c b c ... b c   Rule 4
+=========================  =============== ======================  =======
 
