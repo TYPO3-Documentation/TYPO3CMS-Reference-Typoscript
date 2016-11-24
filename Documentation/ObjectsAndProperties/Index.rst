@@ -386,7 +386,7 @@ Overview with abstract examples
 
 
 
-.. contents:: Page contents
+.. contents:: Chapter contents
    :local:
    :backlinks: top
 
