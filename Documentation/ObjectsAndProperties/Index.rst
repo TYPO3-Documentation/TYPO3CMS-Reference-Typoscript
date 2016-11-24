@@ -8,11 +8,6 @@ Objects and properties
 ======================
 
 
-.. contents:: Page contents
-   :local:
-   :backlinks: top
-
-
 .. _objects-introduction:
 
 Introduction
@@ -385,6 +380,11 @@ Example:
 Overview with abstract examples
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+.. contents:: Page contents
+   :local:
+   :backlinks: top
+
+
 The following table gives you a condensed overview of how the
 optionSplit rules work together:
 
@@ -428,8 +428,9 @@ optionSplit                N     Resulting sequence      Rule
 `a`                        1     a
 `a`                        2     a a
 `a`                        3     a a a
-`a`                        > 3   a a a ...
+`a`                        >3    a a a ...
 =========================  ====  ======================  =======
+
 
 
 Example: `a || b || c`
@@ -448,8 +449,8 @@ optionSplit                N     Resulting sequence      Rule
 =========================  ====  ======================  =======
 
 
-Example: `a || b |*| c |*| d || e`
-""""""""""""""""""""""""""""""""""
+Example: `|*|  |*| a || b`
+""""""""""""""""""""""""""
 
 N is the the number of input elements.
 
@@ -458,13 +459,29 @@ N is the the number of input elements.
 =========================  ====  ======================  =======
 optionSplit                N     Resulting sequence      Rule
 =========================  ====  ======================  =======
-`a || b |*| c |*| d || e`  1     e
-`a || b |*| c |*| d || e`  2     a e
-`a || b |*| c |*| d || e`  3     a b e
-`a || b |*| c |*| d || e`  4     a b d e
-`a || b |*| c |*| d || e`  5     a b c d e
-`a || b |*| c |*| d || e`  6     a b c c d e
-`a || b |*| c |*| d || e`  >6    a b c ... c d e
+`|*|  |*| a || b`          1     b                       1
+`|*|  |*| a || b`          2     a b                     1
+`|*|  |*| a || b`          3     a a b                   1,3
+`|*|  |*| a || b`          >3    a ... a b               1,3
+=========================  ====  ======================  =======
+
+
+
+Example: `a |*| b || c |*| `
+""""""""""""""""""""""""""""
+
+N is the the number of input elements.
+
+((is this correct?))
+
+=========================  ====  ======================  =======
+optionSplit                N     Resulting sequence      Check!
+=========================  ====  ======================  =======
+`a |*| b || c |*|`         1     a
+`a |*| b || c |*|`         2     a b
+`a |*| b || c |*|`         3     a b c
+`a |*| b || c |*|`         4     a b b c                 or is it: a b c c ?
+`a |*| b || c |*|`         >4    a b ... b c             or is it: a b c ... c?)
 =========================  ====  ======================  =======
 
 
@@ -487,11 +504,10 @@ optionSplit                N     Resulting sequence      Rule
 `a || b |*|  |*| d || e`   >5    a b ... b d e
 =========================  ====  ======================  =======
 
-          >=4   a a ... a b             3
 
 
-Example: `|*|  |*| a || b`
-""""""""""""""""""""""""""
+Example: `a || b |*| c |*| d || e`
+""""""""""""""""""""""""""""""""""
 
 N is the the number of input elements.
 
@@ -500,26 +516,13 @@ N is the the number of input elements.
 =========================  ====  ======================  =======
 optionSplit                N     Resulting sequence      Rule
 =========================  ====  ======================  =======
-`|*|  |*| a || b`          1     b                       1
-`|*|  |*| a || b`          2     a b                     1
-`|*|  |*| a || b`          3     a a b                   1,3
-`|*|  |*| a || b`          >3    a ... a b               1,3
+`a || b |*| c |*| d || e`  1     e
+`a || b |*| c |*| d || e`  2     a e
+`a || b |*| c |*| d || e`  3     a b e
+`a || b |*| c |*| d || e`  4     a b d e
+`a || b |*| c |*| d || e`  5     a b c d e
+`a || b |*| c |*| d || e`  6     a b c c d e
+`a || b |*| c |*| d || e`  >6    a b c ... c d e
 =========================  ====  ======================  =======
 
 
-Example: `a |*| b || c |*| `
-""""""""""""""""""""""""""""
-
-N is the the number of input elements.
-
-((is this correct?))
-
-=========================  ====  ======================  =======
-optionSplit                N     Resulting sequence      Check!
-=========================  ====  ======================  =======
-`a |*| b || c |*| `        1     a
-`a |*| b || c |*| `        2     a b
-`a |*| b || c |*| `        3     a b c
-`a |*| b || c |*| `        4     a b b c                 or is it: a b c c ?
-`a |*| b || c |*| `        >4    a b ... b c             or is it: a b c ... c?)
-=========================  ====  ======================  =======
