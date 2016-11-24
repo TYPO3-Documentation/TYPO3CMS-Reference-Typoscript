@@ -390,19 +390,19 @@ optionSplit rules work together:
 
 ((old table))
 
-=========================  ====  ======================  =======
-optionSplit                N     Resulting sequence      Rule
-=========================  ====  ======================  =======
-`a`                        >=3   a a a ...
-`a || b || c`              >=5   a b c c c ...
-`a || b |*| c`             >=5   a b c c c ...
-`a || b |*| c |*| d || e`  >=8   a b c c ... c c d e     1
-`a || b |*| c |*| d || e`  4     a b d e                 1
-`a || b |*| c |*| d || e`  3     a d e                   1
-`a || b |*|   |*| c || d`  >=5   a b ... b c d           2
-`|*|  |*| a || b`          >=4   a a ... a b             3
-`a |*| b || c |*| `        >=9   a b c b c b c ... b c   4
-=========================  ====  ======================  =======
+=============================  ====  ======================  =======
+optionSplit                    N     Resulting sequence      Rule
+=============================  ====  ======================  =======
+`a`                            >=3   a a a ...
+`a || b || c`                  >=5   a b c c c ...
+`a || b  |*|  c`               >=5   a b c c c ...
+`a || b  |*|  c  |*|  d || e`  >=8   a b c c ... c c d e     1
+`a || b  |*|  c  |*|  d || e`  4     a b d e                 1
+`a || b  |*|  c  |*|  d || e`  3     a d e                   1
+`a || b  |*|     |*|  c || d`  >=5   a b ... b c d           2
+`|*|  |*|  a || b`             >=4   a a ... a b             3
+`a  |*|  b || c  |*|`          >=9   a b c b c b c ... b c   4
+=============================  ====  ======================  =======
 
 
 ((old table rewritten in new form - still needs to be reviewed))
