@@ -8,6 +8,11 @@ Objects and properties
 ======================
 
 
+.. contents:: Page contents
+   :local:
+   :backlinks: top
+
+
 .. _objects-introduction:
 
 Introduction
@@ -103,15 +108,15 @@ The four rules
 
 The following four rules are used by optionSplit:
 
-#. The priority is *last, first, middle*.
+1. The overall priority is *last, first, middle*.
 
-#. If the *middle*-value is empty (""), the last part of the first-
+2. If the *middle*-value is empty (""), the last part of the first-
    value is repeated.
 
-#. If the *first* - and *middle* value are empty, the first part of the
+3. If the *first* value AND the *middle* value are empty, the first part of the
    last-value is repeated before the last value.
 
-#. The *middle* value is repeated.
+4. The *middle* value is repeated.
 
 Example::
 
@@ -383,17 +388,138 @@ Overview with abstract examples
 The following table gives you a condensed overview of how the
 optionSplit rules work together:
 
-=========================  ======================  =======
-optionSplit                Resulting items         Rule
-=========================  ======================  =======
-a                          a a a a
-a || b || c                a b c c c ...
-a || b \|*| c              a b c c c ...
-a || b \|*| c \|*| d || e  a b c c ... c c d e     Rule 1
-a || b \|*| c \|*| d || e  a b d e                 Rule 1
-a || b \|*| c \|*| d || e  a d e                   Rule 1
-a || b \|*||*| c || d      a b ... b c d           Rule 2
-\|*|\|*| a || b            a a ... a b             Rule 3
-a \|*| b || c \|*|         a b c b c b c ... b c   Rule 4
-=========================  ======================  =======
+((old table))
 
+=========================  ====  ======================  =======
+optionSplit                N     Resulting sequence      Rule
+=========================  ====  ======================  =======
+`a`                        >=3   a a a ...
+`a || b || c`              >=5   a b c c c ...
+`a || b |*| c`             >=5   a b c c c ...
+`a || b |*| c |*| d || e`  >=8   a b c c ... c c d e     1
+`a || b |*| c |*| d || e`  4     a b d e                 1
+`a || b |*| c |*| d || e`  3     a d e                   1
+`a || b |*|   |*| c || d`  >=5   a b ... b c d           2
+`|*|  |*| a || b`          >=4   a a ... a b             3
+`a |*| b || c |*| `        >=9   a b c b c b c ... b c   4
+=========================  ====  ======================  =======
+
+
+((old table rewritten in new form - still needs to be reviewed))
+
+.. 1. The overall priority is *last, first, middle*.
+..
+.. 2. If the *middle*-value is empty (""), the last part of the first-
+..    value is repeated.
+..
+.. 3. If the *first* value AND the *middle* value are empty, the first part of the
+..    last-value is repeated before the last value.
+..
+.. 4. The *middle* value is repeated.
+
+Example: `a`
+""""""""""""
+
+N is the the number of input elements.
+
+=========================  ====  ======================  =======
+optionSplit                N     Resulting sequence      Rule
+=========================  ====  ======================  =======
+`a`                        1     a
+`a`                        2     a a
+`a`                        3     a a a
+`a`                        > 3   a a a ...
+=========================  ====  ======================  =======
+
+
+Example: `a || b || c`
+""""""""""""""""""""""
+
+N is the the number of input elements.
+
+=========================  ====  ======================  =======
+optionSplit                N     Resulting sequence      Rule
+=========================  ====  ======================  =======
+`a || b || c`              1     a
+`a || b || c`              2     a b
+`a || b || c`              3     a b c
+`a || b || c`              4     a b c c
+`a || b || c`              >4    a b c c c ...
+=========================  ====  ======================  =======
+
+
+Example: `a || b |*| c |*| d || e`
+""""""""""""""""""""""""""""""""""
+
+N is the the number of input elements.
+
+((is this correct?))
+
+=========================  ====  ======================  =======
+optionSplit                N     Resulting sequence      Rule
+=========================  ====  ======================  =======
+`a || b |*| c |*| d || e`  1     e
+`a || b |*| c |*| d || e`  2     a e
+`a || b |*| c |*| d || e`  3     a b e
+`a || b |*| c |*| d || e`  4     a b d e
+`a || b |*| c |*| d || e`  5     a b c d e
+`a || b |*| c |*| d || e`  6     a b c c d e
+`a || b |*| c |*| d || e`  >6    a b c ... c d e
+=========================  ====  ======================  =======
+
+
+
+Example: `a || b |*|  |*| d || e`
+""""""""""""""""""""""""""""""""
+
+N is the the number of input elements.
+
+((is this correct?))
+
+=========================  ====  ======================  =======
+optionSplit                N     Resulting sequence      Rule
+=========================  ====  ======================  =======
+`a || b |*|  |*| d || e`   1     e
+`a || b |*|  |*| d || e`   2     a e
+`a || b |*|  |*| d || e`   3     a b e
+`a || b |*|  |*| d || e`   4     a b d e
+`a || b |*|  |*| d || e`   5     a b b d e
+`a || b |*|  |*| d || e`   >5    a b ... b d e
+=========================  ====  ======================  =======
+
+          >=4   a a ... a b             3
+
+
+Example: `|*|  |*| a || b`
+""""""""""""""""""""""""""
+
+N is the the number of input elements.
+
+((is this correct?))
+
+=========================  ====  ======================  =======
+optionSplit                N     Resulting sequence      Rule
+=========================  ====  ======================  =======
+`|*|  |*| a || b`          1     b                       1
+`|*|  |*| a || b`          2     a b                     1
+`|*|  |*| a || b`          3     a a b                   1,3
+`|*|  |*| a || b`          >3    a ... a b               1,3
+=========================  ====  ======================  =======
+
+
+Example: `a |*| b || c |*| `
+""""""""""""""""""""""""""""
+
+N is the the number of input elements.
+
+((is this correct?))
+
+=========================  ====  ======================  =======
+optionSplit                N     Resulting sequence      Check!
+=========================  ====  ======================  =======
+`a |*| b || c |*| `        1     a
+`a |*| b || c |*| `        2     a b
+`a |*| b || c |*| `        3     a b c
+`a |*| b || c |*| `        4     a b b c                 or is it: a b c c ?
+`a |*| b || c |*| `        >4    a b ... b c             or is it: a b c ... c?)
+=========================  ====  ======================  =======
