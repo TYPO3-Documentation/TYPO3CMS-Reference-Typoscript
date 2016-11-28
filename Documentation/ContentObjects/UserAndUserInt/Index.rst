@@ -20,7 +20,7 @@ which might be more or less relevant for you. See
 :file:`ContentObjectRenderer.php` in the TYPO3 source code; access to :ts:`typolink`
 or :ts:`stdWrap` are only two of the gimmicks you get.
 
-If you create this object as :ts:`USER\_INT`, it will be rendered non-cached,
+If you create this object as :ts:`USER_INT`, it will be rendered non-cached,
 outside the main page-rendering.
 
 userFunc
@@ -107,7 +107,9 @@ from TypoScript. Use this TypoScript configuration::
    }
 
 The file fileadmin/example_time.php might amongst other things
-contain::
+contain:
+
+.. code-block:: php
 
    namespace Your\NameSpace;
    class YourClass {
@@ -149,7 +151,9 @@ order. To do that we use the following TypoScript::
    }
 
 The file fileadmin/example_listRecords.php might amongst other
-things contain::
+things contain:
+
+.. code-block:: php
 
    namespace Your\NameSpace;
    /**
