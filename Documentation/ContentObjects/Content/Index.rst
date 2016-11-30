@@ -23,9 +23,9 @@ Explanatory example
 -------------------
 
 See class :ref:`TYPO3 \\ CMS \\ Frontend \\ Controller \\ TypoScriptFrontendController \\ ContentContentObject
-<:ref:`t3api:typo3\cms\frontend\contentobject\contentcontentobject`>`
+<:ref:`t3api:typo3\\cms\\frontend\\contentobject\\contentcontentobject`>`
 
-::
+.. code-block:: guess
 
    # Note: TypoScript (TS) is just another way to define an array of settings which
    #       is later on INTERPRETED by TYPO3. TypoScript can be written in ANY order
@@ -40,7 +40,7 @@ See class :ref:`TYPO3 \\ CMS \\ Frontend \\ Controller \\ TypoScriptFrontendCont
 
    ### STEP 1: do nothing if 'if' results in false
    1.if {
-      # ifclause = ...
+      # ifclause =
    }
 
    ### STEP 2: define parameters
@@ -52,7 +52,7 @@ See class :ref:`TYPO3 \\ CMS \\ Frontend \\ Controller \\ TypoScriptFrontendCont
    }
 
    # renderObj = <TABLEVALUE
-   1.renderObj = ...
+   1.renderObj =
 
    # slide = 0                    # default! #stdWrap
    1.slide = -3
