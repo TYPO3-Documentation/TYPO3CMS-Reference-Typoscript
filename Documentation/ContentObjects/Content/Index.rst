@@ -22,10 +22,10 @@ is raised to the maximum timestamp value of the respective records.
 Explanatory example
 -------------------
 
-See class :ref:`TYPO3 \\ CMS \\ Frontend \\ Controller \\ TypoScriptFrontendController \\ ContentContentObject
+See PHP class :ref:`TYPO3 \\ CMS \\ Frontend \\ Controller \\ TypoScriptFrontendController \\ ContentContentObject
 <t3api:typo3\\cms\\frontend\\contentobject\\contentcontentobject>`
 
-::
+Preamble::
 
    # Note: TypoScript (TS) is just another way to define an array of settings which
    #       is later on INTERPRETED by TYPO3. TypoScript can be written in ANY order
@@ -108,7 +108,7 @@ Expanded form::
    // STEP 6: Return 'totalResult'
 
 
-See also: :ref:`select`, :ref:`data-type-wrap`, :ref:`stdWrap`, :ref:`data-type-cobject`
+See also: :ref:`if`, :ref:`select`, :ref:`data-type-wrap`, :ref:`stdWrap`, :ref:`data-type-cobject`
 
 
 
