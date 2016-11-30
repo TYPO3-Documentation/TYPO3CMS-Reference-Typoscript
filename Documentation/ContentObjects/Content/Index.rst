@@ -19,8 +19,8 @@ is raised to the maximum timestamp value of the respective records.
    lists of records from a variety of tables without fine graining.
 
 
-Explanatory example
--------------------
+Comprehensive example
+---------------------
 
 See PHP class :ref:`TYPO3 \\ CMS \\ Frontend \\ Controller \\ TypoScriptFrontendController \\ ContentContentObject
 <t3api:typo3\\cms\\frontend\\contentobject\\contentcontentobject>`
