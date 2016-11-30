@@ -27,18 +27,18 @@ See class :ref:`TYPO3 \\ CMS \\ Frontend \\ Controller \\ TypoScriptFrontendCont
 
 ::
 
-   # Note: TypoScript (TS) is just another way to define an array of settings which is
-   #       later on interpreted by the TYPO3 interpreter. TypoScript can be written in
-   #       any order as long it defines the same array. Actual execution order is
-   #       TOTALLY INDEPENDENT of Typoscript code order.
+   # Note: TypoScript (TS) is just another way to define an array of settings which
+   #       is later on INTERPRETED by TYPO3. TypoScript can be written in ANY order
+   #       as long as it leads to the same array. Actual execution order is TOTALLY
+   #       INDEPENDENT of TypoScript code order.
    #
    #       The order of TS in this example however tries to reflect execution order.
-   #       Steps are taking place in that order at execution time.
+   #       The denoted steps are taking place in that order at execution time.
 
 
    1 = CONTENT
 
-   ### STEP 1: do nothing if `if` results in false
+   ### STEP 1: do nothing if 'if' results in false
    1.if {
       # ifclause = ...
    }
@@ -69,18 +69,18 @@ See class :ref:`TYPO3 \\ CMS \\ Frontend \\ Controller \\ TypoScriptFrontendCont
    ### STEP 3: find all records
 
    ### STEP 4: apply the renderObj to each record and collect
-   ###         the results as string `totalResult`
+   ###         the results as string 'totalResult'
 
-   ### STEP 5: Apply `wrap` to the `totalResult`
+   ### STEP 5: Apply 'wrap' to the 'totalResult'
    1.wrap = |                     # default!
 
-   ### STEP 6: Apply `stdWrap` to the `totalResult`
+   ### STEP 6: Apply 'stdWrap' to the 'totalResult'
    1.stdWrap =                    # default! #stdWrap
 
-   ### STEP 6: Return `totalResult`
+   ### STEP 6: Return 'totalResult'
 
 
-See: :ref:`select`, :ref:`data-type-wrap`, :ref:`stdWrap`, :ref:`data-type-cobject`
+See also: :ref:`select`, :ref:`data-type-wrap`, :ref:`stdWrap`, :ref:`data-type-cobject`
 
 
 
