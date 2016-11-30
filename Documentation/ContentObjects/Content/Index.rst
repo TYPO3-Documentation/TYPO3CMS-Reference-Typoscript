@@ -93,7 +93,7 @@ See class :ref:`TYPO3 \\ CMS \\ Frontend \\ Controller \\ TypoScriptFrontendCont
 
    1 = CONTENT
 
-   ### STEP 1: do nothing if "if" results in false
+   ### STEP 1: do nothing if if results in false
 
    1.if {
       # ifclause =
@@ -103,7 +103,7 @@ See class :ref:`TYPO3 \\ CMS \\ Frontend \\ Controller \\ TypoScriptFrontendCont
 
    ### STEP 2: define parameters
 
-   1.table = tt_content           # default="" #stdWrap
+   1.table = tt_content           # default= #stdWrap
 
    1.select {
       pidInList = this
@@ -131,15 +131,15 @@ See class :ref:`TYPO3 \\ CMS \\ Frontend \\ Controller \\ TypoScriptFrontendCont
    ### STEP 3: find all records
 
    ### STEP 4: apply the renderObj to each record and collect
-   ###         the results as string "totalResult"
+   ###         the results as string totalResult
 
-   ### STEP 5: Apply "wrap" to the "totalResult"
+   ### STEP 5: Apply wrap to the totalResult
    1.wrap = |                     # default!
 
-   ### STEP 6: Apply "stdWrap" to the "totalResult"
+   ### STEP 6: Apply stdWrap to the totalResult
    1.stdWrap =                    # default! #stdWrap
 
-   ### STEP 6: Return "totalResult"
+   ### STEP 6: Return totalResult
 
 
 See also: :ref:`select`, :ref:`data-type-wrap`, :ref:`stdWrap`, :ref:`data-type-cobject`
@@ -212,16 +212,16 @@ slide
       If set and no content element is found by the select command, the
       rootLine will be traversed back until some content is found.
 
-      Possible values are "-1" (slide back up to the siteroot), "1" (only
-      the current level) and "2" (up from one level back).
+      Possible values are :ts:`-1` (slide back up to the siteroot), :ts:`1` (only
+      the current level) and :ts:`2` (up from one level back).
 
-      Use -1 in combination with collect.
+      Use :ts:`-1` in combination with collect.
 
       slide.collect
          (integer /:ref:`stdWrap`) If set, all content elements found
          on the current and parent pages will be collected. Otherwise, the sliding
          would stop after the first hit. Set this value to the amount of levels
-         to collect on, or use "-1" to collect up to the siteroot.
+         to collect on, or use :ts:`-1` to collect up to the siteroot.
 
       slide.collectFuzzy
          (boolean /:ref:`stdWrap`) Only useful in collect mode. If
