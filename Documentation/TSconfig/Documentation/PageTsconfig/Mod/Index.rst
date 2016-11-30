@@ -99,11 +99,11 @@ In order to blind them, the following TSconfig would be used:
 
 .. code-block:: typoscript
 
-    # Disables all items except the "Columns" item:
-    mod.web_layout.menu.function {
-        0 = 0
-        2 = 0
-    }
+   # Disables all items except the "Columns" item:
+   mod.web_layout.menu.function {
+      0 = 0
+      2 = 0
+   }
 
 
 .. _pageblindingfunctionmenuoptions-webinfo:
@@ -120,16 +120,16 @@ This is the function menu of the **WEB > Info** module.
 
 .. code-block:: typoscript
 
-    mod.web_info.menu.function {
-        # Disables the item "Page Tsconfig":
-        TYPO3\CMS\InfoPagetsconfig\Controller\InfoPageTyposcriptConfigController = 0
-        # Disables the item "Log":
-        TYPO3\CMS\Belog\Module\BackendLogModuleBootstrap = 0
-        # Disables the item "Pagetree Overview":
-        TYPO3\CMS\Frontend\Controller\PageInformationController = 0
-        # Disables the item "Localization Overview":
-        TYPO3\CMS\Frontend\Controller\TranslationStatusController = 0
-    }
+   mod.web_info.menu.function {
+         # Disable item "Page Tsconfig"
+      TYPO3\CMS\InfoPagetsconfig\Controller\InfoPageTyposcriptConfigController = 0
+         Disable item "Log"
+      TYPO3\CMS\Belog\Module\BackendLogModuleBootstrap = 0
+         # Disable item "Pagetree Overview"
+      TYPO3\CMS\Frontend\Controller\PageInformationController = 0
+         # Disable item "Localization Overview"
+      TYPO3\CMS\Frontend\Controller\TranslationStatusController = 0
+   }
 
 
 .. _pageblindingfunctionmenuoptions-webfunc:
@@ -146,10 +146,10 @@ This is the function menu of the **WEB > Functions** module.
 
 .. code-block:: typoscript
 
-    # Disables the item "Sort pages":
-    mod.web_func.menu.function {
-        TYPO3\CMS\WizardSortpages\View\SortPagesWizardModuleFunction = 0
-    }
+   # Disables the item "Sort pages":
+   mod.web_func.menu.function {
+      TYPO3\CMS\WizardSortpages\View\SortPagesWizardModuleFunction = 0
+   }
 
 
 .. _pageblindingfunctionmenuoptions-webts:
@@ -166,10 +166,10 @@ This is the function menu of the **WEB > Template** module.
 
 .. code-block:: typoscript
 
-    # Disables the item "Template Analyzer":
-    mod.web_ts.menu.function {
-        TYPO3\CMS\Tstemplate\Controller\TemplateAnalyzerModuleFunctionController = 0
-    }
+   # Disables the item "Template Analyzer":
+   mod.web_ts.menu.function {
+      TYPO3\CMS\Tstemplate\Controller\TemplateAnalyzerModuleFunctionController = 0
+   }
 
 
 .. _pageoverridingpagetsconfigwithusertsconfig:
@@ -1530,4 +1530,3 @@ wizard:
 
 .. figure:: ../../Images/manual_html_73b37d4e.png
    :alt: Added entry in the new content element wizard
-
