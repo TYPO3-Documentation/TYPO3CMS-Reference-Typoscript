@@ -6,10 +6,10 @@
 CONTENT
 =======
 
-This object is designed to generate content by making it possible to
-finely select records and rendering them.
+This object is designed to generate content by allowing to
+finely select records and have them rendered.
 
-What records are visible is controlled by 'start' and 'end' fields and
+What records are visible is controlled by `start` and `end` fields and
 more standard fields automatically. The internal value SYS\_LASTCHANGED
 is raised to the maximum timestamp value of the respective records.
 
