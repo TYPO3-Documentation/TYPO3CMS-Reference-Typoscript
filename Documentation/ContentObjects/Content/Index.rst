@@ -23,7 +23,7 @@ Explanatory example
 -------------------
 
 See class :ref:`TYPO3 \\ CMS \\ Frontend \\ Controller \\ TypoScriptFrontendController \\ ContentContentObject
-<:ref:`t3api:typo3\\cms\\frontend\\contentobject\\contentcontentobject`>`
+<t3api:typo3\\cms\\frontend\\contentobject\\contentcontentobject>`
 
 .. code-block:: guess
 
@@ -65,6 +65,71 @@ See class :ref:`TYPO3 \\ CMS \\ Frontend \\ Controller \\ TypoScriptFrontendCont
 
    # slideCollectFuzzy = false    # default! #stdWrap
    1.slide.collectFuzzy =
+
+   ### STEP 3: find all records
+
+   ### STEP 4: apply the renderObj to each record and collect
+   ###         the results as string 'totalResult'
+
+   ### STEP 5: Apply 'wrap' to the 'totalResult'
+   1.wrap = |                     # default!
+
+   ### STEP 6: Apply 'stdWrap' to the 'totalResult'
+   1.stdWrap =                    # default! #stdWrap
+
+   ### STEP 6: Return 'totalResult'
+
+::
+
+   # Note: TypoScript (TS) is just another way to define an array of settings which
+   #       is later on INTERPRETED by TYPO3. TypoScript can be written in ANY order
+   #       as long as it leads to the same array. Actual execution order is TOTALLY
+   #       INDEPENDENT of TypoScript code order.
+   #
+   #       The order of TS in this example however tries to reflect execution order.
+   #       The denoted steps are taking place in that order at execution time.
+
+::
+
+   1 = CONTENT
+
+   ### STEP 1: do nothing if 'if' results in false
+   1.if {
+      # ifclause =
+   }
+
+::
+
+   ### STEP 2: define parameters
+   1.table = tt_content           # default='' #stdWrap
+
+   1.select {
+      pidInList = this
+      orderBy = sorting
+   }
+
+::
+
+   # renderObj = <TABLEVALUE
+   1.renderObj =
+
+   # slide = 0                    # default! #stdWrap
+   1.slide = -3
+
+
+::
+
+   # slideCollect = 0             # default! #stdWrap
+   1.slide.collect =
+
+   # slideCollectReverse = false  # default! #stdWrap
+   1.slide.collectReverse =
+
+   # slideCollectFuzzy = false    # default! #stdWrap
+   1.slide.collectFuzzy =
+
+
+::
 
    ### STEP 3: find all records
 
