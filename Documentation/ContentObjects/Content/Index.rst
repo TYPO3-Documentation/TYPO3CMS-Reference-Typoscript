@@ -38,13 +38,13 @@ See class :ref:`TYPO3 \\ CMS \\ Frontend \\ Controller \\ TypoScriptFrontendCont
 
    1 = CONTENT
 
-   ### STEP 1: do nothing if 'if' results in false
+   ### STEP 1: do nothing if "if" results in false
    1.if {
       # ifclause =
    }
 
    ### STEP 2: define parameters
-   1.table = tt_content           # default='' #stdWrap
+   1.table = tt_content           # default="" #stdWrap
 
    1.select {
       pidInList = this
@@ -69,15 +69,15 @@ See class :ref:`TYPO3 \\ CMS \\ Frontend \\ Controller \\ TypoScriptFrontendCont
    ### STEP 3: find all records
 
    ### STEP 4: apply the renderObj to each record and collect
-   ###         the results as string 'totalResult'
+   ###         the results as string "totalResult"
 
-   ### STEP 5: Apply 'wrap' to the 'totalResult'
+   ### STEP 5: Apply "wrap" to the "totalResult"
    1.wrap = |                     # default!
 
-   ### STEP 6: Apply 'stdWrap' to the 'totalResult'
+   ### STEP 6: Apply "stdWrap" to the "totalResult"
    1.stdWrap =                    # default! #stdWrap
 
-   ### STEP 6: Return 'totalResult'
+   ### STEP 6: Return "totalResult"
 
 ::
 
@@ -93,7 +93,8 @@ See class :ref:`TYPO3 \\ CMS \\ Frontend \\ Controller \\ TypoScriptFrontendCont
 
    1 = CONTENT
 
-   ### STEP 1: do nothing if 'if' results in false
+   ### STEP 1: do nothing if "if" results in false
+
    1.if {
       # ifclause =
    }
@@ -101,23 +102,19 @@ See class :ref:`TYPO3 \\ CMS \\ Frontend \\ Controller \\ TypoScriptFrontendCont
 ::
 
    ### STEP 2: define parameters
-   1.table = tt_content           # default='' #stdWrap
+
+   1.table = tt_content           # default="" #stdWrap
 
    1.select {
       pidInList = this
       orderBy = sorting
    }
 
-::
-
    # renderObj = <TABLEVALUE
    1.renderObj =
 
    # slide = 0                    # default! #stdWrap
    1.slide = -3
-
-
-::
 
    # slideCollect = 0             # default! #stdWrap
    1.slide.collect =
@@ -134,15 +131,15 @@ See class :ref:`TYPO3 \\ CMS \\ Frontend \\ Controller \\ TypoScriptFrontendCont
    ### STEP 3: find all records
 
    ### STEP 4: apply the renderObj to each record and collect
-   ###         the results as string 'totalResult'
+   ###         the results as string "totalResult"
 
-   ### STEP 5: Apply 'wrap' to the 'totalResult'
+   ### STEP 5: Apply "wrap" to the "totalResult"
    1.wrap = |                     # default!
 
-   ### STEP 6: Apply 'stdWrap' to the 'totalResult'
+   ### STEP 6: Apply "stdWrap" to the "totalResult"
    1.stdWrap =                    # default! #stdWrap
 
-   ### STEP 6: Return 'totalResult'
+   ### STEP 6: Return "totalResult"
 
 
 See also: :ref:`select`, :ref:`data-type-wrap`, :ref:`stdWrap`, :ref:`data-type-cobject`
@@ -194,12 +191,12 @@ renderObj
       The cObject used for rendering the records resulting from the query in
       .select.
 
-      If .renderObj is not set explicitly, then *< [table name]* is used. So
+      If :ts:`renderObj` is not set explicitly, then :ts:`< [table name]` is used. So
       in this case the configuration of the according table is being copied.
       See the notes on the example below.
 
 :aspect:`Default`
-      < [table name]
+      :ts:`< [table name]`
 
 
 slide
@@ -220,18 +217,21 @@ slide
 
       Use -1 in combination with collect.
 
-      **.collect:** (integer /:ref:`stdWrap`) If set, all content elements found
-      on the current and parent pages will be collected. Otherwise, the sliding
-      would stop after the first hit. Set this value to the amount of levels
-      to collect on, or use "-1" to collect up to the siteroot.
+      slide.collect
+         (integer /:ref:`stdWrap`) If set, all content elements found
+         on the current and parent pages will be collected. Otherwise, the sliding
+         would stop after the first hit. Set this value to the amount of levels
+         to collect on, or use "-1" to collect up to the siteroot.
 
-      **.collectFuzzy:** (boolean /:ref:`stdWrap`) Only useful in collect mode. If
-      no content elements have been found for the specified depth in collect
-      mode, traverse further until at least one match has occurred.
+      slide.collectFuzzy
+         (boolean /:ref:`stdWrap`) Only useful in collect mode. If
+         no content elements have been found for the specified depth in collect
+         mode, traverse further until at least one match has occurred.
 
-      **.collectReverse:** (boolean /:ref:`stdWrap`) Reverse
-      order of elements in collect mode. If set, elements of the current
-      page will be at the bottom.
+      slide.collectReverse
+         (boolean /:ref:`stdWrap`) Reverse
+         order of elements in collect mode. If set, elements of the current
+         page will be at the bottom.
 
       **Note:** The sliding will stop when reaching a folder.
       See :php:`$cObj->checkPid_badDoktypeList`.
@@ -257,10 +257,10 @@ stdWrap
       stdWrap
 
 :aspect:`Data type`
-      :ref:`->stdWrap <stdwrap>`
+      :ref:`stdwrap`
 
 :aspect:`Description`
-      (Executed after ".wrap".)
+      Apply `stdWrap` functionality.
 
 
 
@@ -282,7 +282,7 @@ Here is an example of the CONTENT object::
 Since in the above example .renderObj is not set explicitly, TYPO3
 will automatically set :ts:`1.renderObj < tt_content`, so that `renderObj`
 will reference the TypoScript configuration of `tt_content`. The
-according TypoScript configuration will be copied to renderObj.
+according TypoScript configuration will be copied to `renderObj`.
 
 
 Example 2
