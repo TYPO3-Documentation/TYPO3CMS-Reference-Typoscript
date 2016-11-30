@@ -120,9 +120,15 @@ This is the function menu of the **WEB > Info** module.
 
 .. code-block:: typoscript
 
-    # Disables the item "Page Tsconfig":
     mod.web_info.menu.function {
+        # Disables the item "Page Tsconfig":
         TYPO3\CMS\InfoPagetsconfig\Controller\InfoPageTyposcriptConfigController = 0
+        # Disables the item "Log":
+        TYPO3\CMS\Belog\Module\BackendLogModuleBootstrap = 0
+        # Disables the item "Pagetree Overview":
+        TYPO3\CMS\Frontend\Controller\PageInformationController = 0
+        # Disables the item "Localization Overview":
+        TYPO3\CMS\Frontend\Controller\TranslationStatusController = 0
     }
 
 
