@@ -93,7 +93,7 @@ select
       select
 
 :aspect:`Data type`
-      :ref:`->select <select>`
+      :ref:`select`
 
 :aspect:`Description`
       The SQL-statement, a SELECT query, is set here,
@@ -107,13 +107,13 @@ table
       table
 
 :aspect:`Data type`
-      *table name* /:ref:`stdWrap <stdwrap>`
+      *table name* /:ref:`stdwrap`
 
 :aspect:`Description`
       The table, the content should come from. Any table can be used;
       a check for a table prefix is not done.
 
-      In standard configuration this will be "tt\_content".
+      In standard configuration this will be `tt_content`.
 
 
 renderObj
@@ -123,7 +123,7 @@ renderObj
       renderObj
 
 :aspect:`Data type`
-      :ref:`cObject <data-type-cobject>`
+      :ref:`data-type-cObject`
 
 :aspect:`Description`
       The cObject used for rendering the records resulting from the query in
@@ -144,7 +144,7 @@ slide
       slide
 
 :aspect:`Data type`
-      integer /:ref:`stdWrap <stdwrap>`
+      integer /:ref:`stdWrap`
 
 :aspect:`Description`
       If set and no content element is found by the select command, the
@@ -155,21 +155,21 @@ slide
 
       Use -1 in combination with collect.
 
-      **.collect:** (integer /:ref:`stdWrap <stdwrap>`) If set, all content elements found
+      **.collect:** (integer /:ref:`stdWrap`) If set, all content elements found
       on the current and parent pages will be collected. Otherwise, the sliding
       would stop after the first hit. Set this value to the amount of levels
       to collect on, or use "-1" to collect up to the siteroot.
 
-      **.collectFuzzy:** (boolean /:ref:`stdWrap <stdwrap>`) Only useful in collect mode. If
+      **.collectFuzzy:** (boolean /:ref:`stdWrap`) Only useful in collect mode. If
       no content elements have been found for the specified depth in collect
       mode, traverse further until at least one match has occurred.
 
-      **.collectReverse:** (boolean /:ref:`stdWrap <stdwrap>`) Reverse
+      **.collectReverse:** (boolean /:ref:`stdWrap`) Reverse
       order of elements in collect mode. If set, elements of the current
       page will be at the bottom.
 
       **Note:** The sliding will stop when reaching a folder.
-      See $cObj->checkPid_badDoktypeList.
+      See :php:`$cObj->checkPid_badDoktypeList`.
 
 
 wrap
@@ -179,7 +179,7 @@ wrap
       wrap
 
 :aspect:`Data type`
-      :ref:`wrap <data-type-wrap>` /:ref:`stdWrap <stdwrap>`
+      :ref:`wrap <data-type-wrap>` /:ref:`stdWrap`
 
 :aspect:`Description`
       Wrap the whole content.
@@ -215,8 +215,8 @@ Here is an example of the CONTENT object::
    }
 
 Since in the above example .renderObj is not set explicitly, TYPO3
-will automatically set *1.renderObj < tt_content*, so that renderObj
-will reference the TypoScript configuration of tt_content. The
+will automatically set :ts:`1.renderObj < tt_content`, so that `renderObj`
+will reference the TypoScript configuration of `tt_content`. The
 according TypoScript configuration will be copied to renderObj.
 
 
