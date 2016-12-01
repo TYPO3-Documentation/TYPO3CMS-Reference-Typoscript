@@ -4,37 +4,87 @@
 .. _select:
 
 select
-^^^^^^
+======
 
-This object generates an SQL-select statement needed to select records
+This object generates an SQL-select statement to select records
 from the database.
 
-Some records are hidden or timed by start and end-times. This is
-automatically added to the SQL-select by looking in the $GLOBALS['TCA']
-(enablefields).
+Some records are hidden or timed by start- and end-times. This is
+automatically added to the SQL-select by looking for "enablefields"
+in the :php:`$GLOBALS['TCA']`.
 
-**Note:** Be careful if you are using GET/POST data (for example
-GPvar) in this object! You could introduce SQL injections!
+.. warning::
 
-Always secure input from outside, for example with intval!
+   Do not use GET or POST data like GPvar directly with this object!
+   Avoid SQL injections! Don't trust any external data! Secure
+   any unknown data, for example with :ref:`intval`.
+
+
+
+
+Comprehensive example
+---------------------
+
+See PHP class ...
+
+.. :ref:`TYPO3 \\ CMS \\ Frontend \\ Controller \\ TypoScriptFrontendController \\ ContentContentObject <t3api:typo3\\cms\\frontend\\contentobject\\contentcontentobject>`
+
+Preamble::
+
+   # Note: TypoScript (TS) is just another way to define an array of settings which
+   #       is later on INTERPRETED by TYPO3. TypoScript can be written in ANY order
+   #       as long as it leads to the same array. Actual execution order is TOTALLY
+   #       INDEPENDENT of TypoScript code order.
+   #
+   #       The order of TS in this example however tries to reflect execution order.
+   #       The denoted steps are taking place in that order at execution time.
+
+Condensed form::
+
+   //
+
+Expanded form::
+
+   //
+
+See also: :ref:`if`, :ref:`select`, :ref:`data-type-wrap`, :ref:`stdWrap`, :ref:`data-type-cobject`
+
+
 
 .. ### BEGIN~OF~TABLE ###
+
+.. _select-uidInList:
+
+uidInList
+---------
 
 .. container:: table-row
 
    Property
-         uidInList
+         :ts:`uidInList`
 
    Data type
-         *list of record\_ids* /:ref:`stdWrap <stdwrap>`
+         *list of record\_ids* /:ref:`stdWrap`
 
    Description
          Comma-separated list of record uids from the according database table.
          For example when the select function works on the table tt_content, then
          this will be uids of tt_content records.
 
-         **Special keyword:** "this" is replaced with the id of the current record.
+         *Note:* :ts:`this` is **special keyword ** and replaced with
+         *the id of the current record*.
 
+   Examples
+         | :ts:`select.uidInList = 1,2,3`
+         | :ts:`select.uidInList = this
+
+
+
+
+.. _select-pidInList:
+
+pidInList
+---------
 
 .. container:: table-row
 
@@ -42,7 +92,7 @@ Always secure input from outside, for example with intval!
          pidInList
 
    Data type
-         *list of page\_ids* /:ref:`stdWrap <stdwrap>`
+         *list of page\_ids* /:ref:`stdWrap`
 
    Description
          Comma-separated list of pids of the record. This will be page_ids. For
@@ -87,13 +137,18 @@ Always secure input from outside, for example with intval!
          this
 
 
+.. _select-recursive:
+
+recursive
+---------
+
 .. container:: table-row
 
    Property
          recursive
 
    Data type
-         integer /:ref:`stdWrap <stdwrap>`
+         integer /:ref:`stdWrap`
 
    Description
          Number of recursivity levels for the pidInList.
@@ -102,13 +157,18 @@ Always secure input from outside, for example with intval!
          0
 
 
+.. _select-orderBy:
+
+orderBy
+-------
+
 .. container:: table-row
 
    Property
          orderBy
 
    Data type
-         *SQL-orderBy* /:ref:`stdWrap <stdwrap>`
+         *SQL-orderBy* /:ref:`stdWrap`
 
    Description
          ORDER BY clause without the words "ORDER BY".
@@ -118,13 +178,18 @@ Always secure input from outside, for example with intval!
             orderBy = sorting, title
 
 
+.. _select-groupBy:
+
+groupBy
+-------
+
 .. container:: table-row
 
    Property
          groupBy
 
    Data type
-         *SQL-groupBy* /:ref:`stdWrap <stdwrap>`
+         *SQL-groupBy* /:ref:`stdWrap`
 
    Description
          GROUP BY clause without the words "GROUP BY".
@@ -134,18 +199,30 @@ Always secure input from outside, for example with intval!
             groupBy = CType
 
 
+
+.. _select-max:
+
+max
+---
+
 .. container:: table-row
 
    Property
          max
 
    Data type
-         integer +calc +"total" /:ref:`stdWrap <stdwrap>`
+         integer +calc +"total" /:ref:`stdWrap`
 
    Description
          Max records
 
          **Special keyword:** "total" is substituted with count(\*).
+
+
+.. _select-begin:
+
+begin
+-----
 
 
 .. container:: table-row
@@ -154,7 +231,7 @@ Always secure input from outside, for example with intval!
          begin
 
    Data type
-         integer +calc +"total" /:ref:`stdWrap <stdwrap>`
+         integer +calc +"total" /:ref:`stdWrap`
 
    Description
          Begin with record number *value*.
@@ -162,13 +239,18 @@ Always secure input from outside, for example with intval!
          **Special keyword:** "total" is substituted with count(\*).
 
 
+.. _select-where:
+
+where
+-----
+
 .. container:: table-row
 
    Property
          where
 
    Data type
-         *SQL-where* /:ref:`stdWrap <stdwrap>`
+         *SQL-where* /:ref:`stdWrap`
 
    Description
          WHERE clause without the word "WHERE".
@@ -178,13 +260,18 @@ Always secure input from outside, for example with intval!
             where = (title LIKE '%SOMETHING%' AND NOT doktype)
 
 
+.. _select-languageField:
+
+languageField
+-------------
+
 .. container:: table-row
 
    Property
          languageField
 
    Data type
-         string /:ref:`stdWrap <stdwrap>`
+         string /:ref:`stdWrap`
 
    Description
          By default all records that have language-relevant information in the
@@ -192,13 +279,19 @@ Always secure input from outside, for example with intval!
 
          This can be disabled by setting languageField = 0.
 
+
+.. _select-includeRecordsWithoutDefaultTranslation:
+
+includeRecordsWithoutDefaultTranslation
+---------------------------------------
+
 .. container:: table-row
 
    Property
          includeRecordsWithoutDefaultTranslation
 
    Data type
-         boolean /:ref:`stdWrap <stdwrap>`
+         boolean /:ref:`stdWrap`
 
    Description
          If content language overlay is activated and the option "languageField" is not disabled,
@@ -209,13 +302,19 @@ Always secure input from outside, for example with intval!
          0
 
 
+
+.. _select-selectFields:
+
+selectFields
+------------
+
 .. container:: table-row
 
    Property
          selectFields
 
    Data type
-         string /:ref:`stdWrap <stdwrap>`
+         string /:ref:`stdWrap`
 
    Description
          List of fields to select, or "count(\*)".
@@ -229,22 +328,32 @@ Always secure input from outside, for example with intval!
          \*
 
 
+
+.. _select-join:
+.. _select-leftjoin:
+.. _select-rightjoin:
+
+join, leftjoin, rightjoin
+-------------------------
+
 .. container:: table-row
 
    Property
-         join
-
-         leftjoin
-
-         rightjoin
+         join, leftjoin, rightjoin
 
    Data type
-         string /:ref:`stdWrap <stdwrap>`
+         string /:ref:`stdWrap`
 
    Description
          Enter the table name for JOIN, LEFT OUTER JOIN and RIGHT OUTER JOIN
          respectively.
 
+
+
+.. _select-markers:
+
+markers
+-------
 
 .. container:: table-row
 
@@ -298,6 +407,3 @@ Always secure input from outside, for example with intval!
          "first", ordered by the content of the column "sorting".
 
 .. ###### END~OF~TABLE ######
-
-[tsref:->select]
-
