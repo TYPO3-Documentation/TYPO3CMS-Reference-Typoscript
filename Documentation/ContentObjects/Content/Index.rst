@@ -38,6 +38,7 @@ Preamble::
 Condensed form::
 
    1 = CONTENT
+   1 {
       if {
       }
       table = tt_content
