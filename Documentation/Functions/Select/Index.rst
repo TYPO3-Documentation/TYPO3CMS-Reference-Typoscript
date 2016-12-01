@@ -21,16 +21,16 @@ in the :php:`$GLOBALS['TCA']`.
 
 
 
-
 Comprehensive example
 ---------------------
 
-See PHP class ...
+See PHP source code for
+:ref:`TYPO3 \\ CMS \\ Frontend \\ ContentObject \\ ContentObjectRenderer <t3api:typo3\\cms\\frontend\\ContentObject\\ContentObjectRenderer>`,
+:ref:`ContentObjectRenderer::getQuery() <t3api:typo3\\cms\\frontend\\ContentObject\\ContentObjectRenderer::getQuery>`,
+:ref:`ContentObjectRenderer::getWhere() <t3api:typo3\\cms\\frontend\\ContentObject\\ContentObjectRenderer::getWhere>`.
 
-.. :ref:`TYPO3 \\ CMS \\ Frontend \\ Controller \\ TypoScriptFrontendController \\ ContentContentObject <t3api:typo3\\cms\\frontend\\contentobject\\contentcontentobject>`
 
-Preamble::
-
+.. Preamble: :
    # Note: TypoScript (TS) is just another way to define an array of settings which
    #       is later on INTERPRETED by TYPO3. TypoScript can be written in ANY order
    #       as long as it leads to the same array. Actual execution order is TOTALLY
@@ -41,13 +41,31 @@ Preamble::
 
 Condensed form::
 
+   10 = CONTENT
+   10 {
+      table =
+      select {
+         uidInList =
+         pidInList =
+         recursive =
+         orderBy =
+         groupBy =
+         max =
+         begin =
+         where =
+         languageField =
+         includeRecordsWithoutDefaultTranslation =
+         selectFields =
+         join =
+         leftjoin =
+         rightjoin =
+      }
+   }
+
+
+.. Expanded form::
    //
-
-Expanded form::
-
-   //
-
-See also: :ref:`if`, :ref:`select`, :ref:`data-type-wrap`, :ref:`stdWrap`, :ref:`data-type-cobject`
+   See also: :ref:`if`, :ref:`select`, :ref:`data-type-wrap`, :ref:`stdWrap`, :ref:`data-type-cobject`
 
 
 
@@ -68,15 +86,15 @@ uidInList
 
    Description
          Comma-separated list of record uids from the according database table.
-         For example when the select function works on the table tt_content, then
-         this will be uids of tt_content records.
+         For example when the select function works on the table `tt_content`, then
+         this will be uids of `tt_content` records.
 
-         *Note:* :ts:`this` is **special keyword ** and replaced with
-         *the id of the current record*.
+         **Note:** :ts:`this` is a *special keyword* and replaced with the id of the
+         *current record*.
 
    Examples
          | :ts:`select.uidInList = 1,2,3`
-         | :ts:`select.uidInList = this
+         | :ts:`select.uidInList = this`
 
 
 
@@ -89,7 +107,7 @@ pidInList
 .. container:: table-row
 
    Property
-         pidInList
+         :ts:`pidInList`
 
    Data type
          *list of page\_ids* /:ref:`stdWrap`
@@ -112,29 +130,27 @@ pidInList
          **Special value:** "-1" allows to select versioned records in workspaces
          directly.
 
-         **Example:** ::
+   Example
+      Fetch related `sys_category` records stored in the MM intermediate table::
 
-            10 = CONTENT
-            10 {
-              table = sys_category
-              select {
-                pidInList = root,-1
-                selectFields = sys_category.*
-                join = sys_category_record_mm ON sys_category_record_mm.uid_local = sys_category.uid
-                where.data = field:_ORIG_uid // field:uid
-                where.intval = 1
-                where.wrap = sys_category_record_mm.uid_foreign=|
-                orderBy = sys_category_record_mm.sorting_foreign
-                languageField = 0 # disable translation handling of sys_category
-              }
+         10 = CONTENT
+         10 {
+            table = sys_category
+            select {
+               pidInList = root,-1
+               selectFields = sys_category.*
+               join = sys_category_record_mm ON sys_category_record_mm.uid_local = sys_category.uid
+               where.data = field:_ORIG_uid // field:uid
+               where.intval = 1
+               where.wrap = sys_category_record_mm.uid_foreign=|
+               orderBy = sys_category_record_mm.sorting_foreign
+               languageField = 0 # disable translation handling of sys_category
             }
-
-         This example fetches related sys_category records stored in the MM
-         intermediate table.
+         }
 
 
    Default
-         this
+         :ts:`this`
 
 
 .. _select-recursive:
@@ -145,7 +161,7 @@ recursive
 .. container:: table-row
 
    Property
-         recursive
+         :ts:`recursive`
 
    Data type
          integer /:ref:`stdWrap`
@@ -165,7 +181,7 @@ orderBy
 .. container:: table-row
 
    Property
-         orderBy
+         :ts:`orderBy`
 
    Data type
          *SQL-orderBy* /:ref:`stdWrap`
@@ -186,7 +202,7 @@ groupBy
 .. container:: table-row
 
    Property
-         groupBy
+         :ts:`groupBy`
 
    Data type
          *SQL-groupBy* /:ref:`stdWrap`
@@ -208,7 +224,7 @@ max
 .. container:: table-row
 
    Property
-         max
+         :ts:`max`
 
    Data type
          integer +calc +"total" /:ref:`stdWrap`
@@ -217,6 +233,7 @@ max
          Max records
 
          **Special keyword:** "total" is substituted with count(\*).
+
 
 
 .. _select-begin:
@@ -228,7 +245,7 @@ begin
 .. container:: table-row
 
    Property
-         begin
+         :ts:`begin`
 
    Data type
          integer +calc +"total" /:ref:`stdWrap`
@@ -247,7 +264,7 @@ where
 .. container:: table-row
 
    Property
-         where
+         :ts:`where`
 
    Data type
          *SQL-where* /:ref:`stdWrap`
@@ -268,7 +285,7 @@ languageField
 .. container:: table-row
 
    Property
-         languageField
+         :ts:`languageField`
 
    Data type
          string /:ref:`stdWrap`
@@ -288,7 +305,7 @@ includeRecordsWithoutDefaultTranslation
 .. container:: table-row
 
    Property
-         includeRecordsWithoutDefaultTranslation
+         :ts:`includeRecordsWithoutDefaultTranslation`
 
    Data type
          boolean /:ref:`stdWrap`
@@ -311,7 +328,7 @@ selectFields
 .. container:: table-row
 
    Property
-         selectFields
+         :ts:`selectFields`
 
    Data type
          string /:ref:`stdWrap`
@@ -339,7 +356,7 @@ join, leftjoin, rightjoin
 .. container:: table-row
 
    Property
-         join, leftjoin, rightjoin
+         :ts:`join`, :ts:`leftjoin`, :ts:`rightjoin`
 
    Data type
          string /:ref:`stdWrap`
@@ -358,7 +375,7 @@ markers
 .. container:: table-row
 
    Property
-         markers
+         :ts:`markers`
 
    Data type
          *(array of markers)*
