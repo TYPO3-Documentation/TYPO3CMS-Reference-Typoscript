@@ -9,327 +9,825 @@ optionSplit
 
 .. attention::
 
-   Currently this page is being reworked. So it is totally WIP (work in progress).
+   Currently this page is being reworked. So it is very much WIP (work in progress).
 
-`optionSplit` is the codename of a very tricky - but useful! - function
-and functionality. When you are dealing with lists often special
-rules apply to the first and the last element. `optionSplit` takes
-that into account and allows a very concise notation for this.
 
-**The overall goal here is to explain:**
-
-   Given a special `optionSplit` expression and given
-   different output lists of different length: Which sequences
-   of elements will we get?
-
-`optionSplit` is primarily used with the menu objects.
-So let's take an example from menu building::
-
-   temp.topmenu.1.NO {
-     ATagParams = class="c"
-     # ...
-   }
-
-As a result all link tags in the output will have a class attribute like
-`<a href="..." class="c" ...>`. Now, since the value of `ATagParams`
-is fed through `optionSplit` first, we can write::
-
-   ATagParams =  class="a"  |*|  class="b"  |*|  class="c"
-
-Here we have three specifications in one line. `|*|` is the character sequence used
-as delimiter to split the three parts. As a result the first link in the menu will have
-`class="a"`, all items in the middle have `class="b"` and the last one has
-`class="c"`.
-
-What makes `optionSplit` tricky is the fact that you don't have to specify all three parts.
-And, of course, there may only be one element in the output. Or two.
-What should be done in those cases?
-
-And as if this wasn't complicated enough `optionSplit` offers to split each of the three parts again
-in - upto - three subparts each. The character sequence `||` is used as delimiter for splitting into subparts.
-
-
-
-.. _objects-optionsplit-syntax:
-
-Syntax
-======
-
-`|*|` splits the value in parts *first*, *middle* and *last*.
-
-`||` splits each of the parts *first*, *middle* and *last* into - upto - three subparts.
-
-
-
-.. _objects-optionsplit-rules:
-
-The rules
-=========
-
-`optionSplit` follows these rules:
-
-1. The overall priority is *last*, *first*, *middle*.
-
-2. If the *middle*-value is empty (""), the last part of the first-
-   value is repeated.
-
-3. If the *first* value AND the *middle* value are empty, the first part of the
-   last-value is repeated before the last value.
-
-4. The *middle* value is repeated.
-
-
-
-((... all properties of *.NO* are parsed through `optionSplit` ...))
-
-
-
-Example:
-========
-
-Here we only have the *first* part. It is split into three subparts. If there
-are more than three items in the result the *last subpart* will be repeated:
-
-.. code-block:: none
-
-   # Definition:
-   backColor = red || yellow || green
-
-   Result:
-   N        Sequence
-   1        green
-   2        red green
-   3        red yellow green
-   >3       red yellow green green ...
-
-
-
-Example:
-========
-
-Here the *middle*-value is left out. Then the last subpart of the first
-primary part is repeated.
-
-((needs to be verified!!!))
-
-.. code-block:: none
-
-   # Definition:
-   backColor = red || yellow  |*||*|  blue || olive
-
-   Result:
-   N        Sequence
-   1        olive
-   2        blue olive
-   3        ?
-   4        ?
-   5        red yellow yellow blue olive
-
-
-.. attention::
-
-   To make the middle part empty no space may exist between the delimiters!
-
-   Right: `|*||*|`
-
-   Wrong: `|*| |*|`
-
-
-
-Example:
-========
-
-Here part one (*first*) AND part two (*middle*) are empty. Part three
-(*last*) is split into two subparts:
-
-.. code-block:: none
-
-   # Definition:
-   backColor = |*||*|  blue || olive
-
-   Result:
-   N        Sequence
-   1        olive
-   2        blue olive
-   3        blue blue olive
-   >3       blue blue ... blue olive
-
-Example:
-========
-
-We have part one (*first*)and two (*middle*), but not three (*last*).
-For *middle* there are two subparts.
-
-.. code-block:: none
-
-   # Definition:
-   backColor = red  |*|  yellow || green  |*|
-
-   Result:
-   N        Sequence
-   1        red
-   2        red yellow
-   3        red yellow green
-   4        red yellow green yellow
-   5        red yellow green yellow green
-   >5       red yellow green yellow green yellow ...
-
-.. _objects-optionsplit-condensed:
-
-Overview with abstract examples
-===============================
-
-
-
-.. contents:: Chapter contents
+.. contents:: On this page:
    :local:
    :backlinks: top
 
 
+Introduction
+============
 
-The following table gives you a condensed overview of how the
-optionSplit rules work together:
+`optionSplit` is the codename of a very tricky - but very useful! - function
+and functionality. It is primarily used with the menu objects.
+So let's take an example from menu building::
 
-((old table))
--------------
+   topmenu.1.NO {
+     ATagParams = class="z"
+   }
 
-=============================  ====  ======================  =======
-optionSplit                    N     Resulting sequence      Rule
-=============================  ====  ======================  =======
-`a`                            >=3   a a a ...
-`a || b || c`                  >=5   a b c c c ...
-`a || b  |*|  c`               >=5   a b c c c ...
-`a || b  |*|  c  |*|  d || e`  >=8   a b c c ... c c d e     1
-`a || b  |*|  c  |*|  d || e`  4     a b d e                 1
-`a || b  |*|  c  |*|  d || e`  3     a d e                   1
-`a || b  |*|     |*|  c || d`  >=5   a b ... b c d           2
-`|*|  |*|  a || b`             >=4   a a ... a b             3
-`a  |*|  b || c  |*|`          >=9   a b c b c b c ... b c   4
-=============================  ====  ======================  =======
+This means that all A-tag generated from that definition will look like
+`<a class="z" ... >`. Usually you cannot know in advance how many links will be generated.
+In general anything is possible from none, one to many. In real life of html code generation
+there is more to account for: The first link of a list may need to look different than those
+in the middle or add the end.
 
+So we know that on the output side we have a list of links. It is of unknown length. Let's
+describe this as: We have an **output sequence of 0 to N items**.
 
-((old table rewritten in new form - still needs to be reviewed))
+In our definition we have a string like `class="z"` that is to be used for all items of the
+output sequence. Now `optionSplit`comes into play.
 
-.. 1. The overall priority is *last, first, middle*.
-..
-.. 2. If the *middle*-value is empty (""), the last part of the first-
-..    value is repeated.
-..
-.. 3. If the *first* value AND the *middle* value are empty, the first part of the
-..    last-value is repeated before the last value.
-..
-.. 4. The *middle* value is repeated.
+Definition:
+   `optionSplit` is a (1) **syntax** to define more than only one value,
+   and it is (2) **a ruleset** to map the defined values to the output list.
 
-Example: `a`
-------------
+In other words:
 
-N is the the number of input elements.
+   1. We have an **input sequence of M items**. M is known.
+   2. We have an **output sequence of 0 to N items**. N is unknown and may be zero, one, or "large".
+   3. We have a **ruleset** delivered with `optionSplit` that specifies how the input sequence
+      should be mapped to the output sequence.
 
-=========================  ====  ======================  =======
-optionSplit                N     Resulting sequence      Rule
-=========================  ====  ======================  =======
-`a`                        1     a
-`a`                        2     a a
-`a`                        3     a a a
-`a`                        >3    a a a ...
-=========================  ====  ======================  =======
+So we want to explain:
+
+   - How do we specify the input sequence?
+   - What is the ruleset of `optionSplit`?
+   - What output sequence can we expect for a given input sequence
+
+What makes `optionSplit` so powerful ist the fact that almost **all** properties of :ts:`*.NO*`
+are "optionSplit enabled".
 
 
-
-Example: `a || b || c`
-----------------------
-
-N is the the number of input elements.
-
-=========================  ====  ======================  =======
-optionSplit                N     Resulting sequence      Rule
-=========================  ====  ======================  =======
-`a || b || c`              1     a
-`a || b || c`              2     a b
-`a || b || c`              3     a b c
-`a || b || c`              4     a b c c
-`a || b || c`              >4    a b c c c ...
-=========================  ====  ======================  =======
+.. highlight:: none
 
 
-Example: `|*|  |*| a || b`
---------------------------
+Terminology
+===========
 
-N is the the number of input elements.
+Mainparts
+---------
 
-((is this correct?))
+`optionSplit` uses the string `|*|` to split the total string into **mainparts**.
+Note: Only the first **three** mainparts will be used. If there are more they
+will be ignored.
+On the input side we may have for example::
 
-==========================  ====  ======================  =======
-optionSplit                 N     Resulting sequence      Rule
-==========================  ====  ======================  =======
-`|*|  |*|  a || b`          1     b                       1
-`|*|  |*|  a || b`          2     a b                     1
-`|*|  |*|  a || b`          3     a a b                   1,3
-`|*|  |*|  a || b`          >3    a ... a b               1,3
-==========================  ====  ======================  =======
+   wrap = A                    We have: M=1  items, 1  mainpart : A
+   wrap = A |*| R              We have: M=2  items, 2  mainparts: A, R
+   wrap = A |*| R |*| Z        We have: M=3  items, 3  mainparts: A, R, Z
+   wrap = A |*| R |*| Z |*| X  We have: M=3! items, 3! mainparts: A, R, Z
 
+**Rule:** There can be 0, 1, 2 or 3 mainparts.
 
+Subparts
+--------
 
-Example: `a |*| b || c |*|`
-----------------------------
+Each mainpart may further be split into **subparts**. The delimiter for splitting a mainpart into
+subparts is `||`.
 
-N is the the number of input elements.
+Example::
 
-((is this correct?))
+   wrap = a                       We have: M=1  item,  1 mainpart,  1 subparts
+   wrap = a || b                  We have: M=2  items, 1 mainpart,  2 subparts
+   wrap = a || b || c             We have: M=3  items, 1 mainpart,  3 subparts
+   wrap = a || b || c || d        We have: M=4  items, 1 mainpart,  4 subparts
+   wrap = a || b || c || d || ... We have: M>4  items, 1 mainpart, >4 subparts
 
-============================  ====  ======================  =======
-optionSplit                   N     Resulting sequence      Check!
-============================  ====  ======================  =======
-`a  |*|  b || c  |*|`         1     a
-`a  |*|  b || c  |*|`         2     a b
-`a  |*|  b || c  |*|`         3     a b c
-`a  |*|  b || c  |*|`         4     a b b c                 or is it: a b c c ?
-`a  |*|  b || c  |*|`         >4    a b ... b c             or is it: a b c ... c?)
-============================  ====  ======================  =======
+**Rule:** There can be any number of subparts.
 
 
 
-Example: `a || b |*|  |*| d || e`
----------------------------------
+Understanding by example
+========================
 
-N is the the number of input elements.
+Three by three items
+--------------------
 
-((is this correct?))
+Let's see a full example with three mainparts. And each mainpart is split into three
+subparts::
 
-===========================  ====  ======================  =======
-optionSplit                  N     Resulting sequence      Rule
-===========================  ====  ======================  =======
-`a || b  |*|  |*|  d || e`   1     e
-`a || b  |*|  |*|  d || e`   2     a e
-`a || b  |*|  |*|  d || e`   3     a b e
-`a || b  |*|  |*|  d || e`   4     a b d e
-`a || b  |*|  |*|  d || e`   5     a b b d e
-`a || b  |*|  |*|  d || e`   >5    a b ... b d e
-===========================  ====  ======================  =======
+   wrap = a || b || c  |*|  r || s || t  |*|  x || y || z
+
+Mainpart 1 consists of the three subparts a, b, c. We call it `A`.
+
+Mainpart 2 consists of the three subparts r, s, t. We call it `R`.
+
+Mainpart 3 consists of the three subparts x, y, z. We call it `Z`.
+
+Let's see what happens::
+
+   input:
+      wrap = a || b || c  |*|  r || s || t  |*|  x || y || z
+
+   output:
+       N     output sequence
+       1     z
+       2     y z
+       3     x y z
+       4     a x y z
+       5     a b x y z
+       6     a b c x y z
+       7     a b c r x y z
+       8     a b c r s x y z
+       9     a b c r s t x y z
+      10     a b c r s t r x y z
+      11     a b c r s t r s x y z
+      12     a b c r s t r s t x y z
+      13     a b c r s t r s t r x y z
+      14     a b c r s t r s t r s x y z
+      15     a b c r s t r s t r s t x y z
+      16     a b c r s t r s t r s t r x y z
+      17     a b c r s t r s t r s t r s x y z
+      18     a b c r s t r s t r s t r s t x y z
+      19     a b c r s t r s t r s t r s t r x y z
+      20     a b c r s t r s t r s t r s t r s x y z
+
+
+**`optionSplit` rules:**
+
+1. The items of mainpart Z are used first.
+2. The items of mainpart A are used second.
+3. The items of mainpart R are used third.
+4. The order in which input items appear in the output is from left to right.
+5. Items are taken from the **end** of mainpart Z first.
+6. Items are taken from the **start** of mainpart A second.
+7. Items are taken from the **start** of mainpart R third and **repeated** as long as necessary.
+
+
+Three by two items
+------------------
+
+Rules 1 to 7 define this behavior::
+
+   input:
+      wrap = a || b  |*|  r || s  |*|  y || z
+
+   output:
+       N     output sequence
+       1     z
+       2     y z
+       3     a y z
+       4     a b y z
+       5     a b r y z
+       6     a b r s y z
+       7     a b r s r y z
+       8     a b r s r s y z
+       9     a b r s r s r y z
+      10     a b r s r s r s y z
+      11     a b r s r s r s r y z
+      12     a b r s r s r s r s y z
+      13     a b r s r s r s r s r y z
+      14     a b r s r s r s r s r s y z
+      15     a b r s r s r s r s r s r y z
+      16     a b r s r s r s r s r s r s y z
+      17     a b r s r s r s r s r s r s r y z
+      18     a b r s r s r s r s r s r s r s y z
+      19     a b r s r s r s r s r s r s r s r y z
+      20     a b r s r s r s r s r s r s r s r s y z
+
+
+Three by one items
+------------------
+
+And again::
+
+   input:
+      wrap = a   |*|  r   |*|  z
+
+   output:
+       N     output sequence
+       1     z
+       2     a z
+       3     a r z
+       4     a r r z
+       5     a r r r z
+       6     a r r r r z
+       7     a r r r r r z
+       8     a r r r r r r z
+       9     a r r r r r r r z
+      10     a r r r r r r r r z
+      11     a r r r r r r r r r z
+      12     a r r r r r r r r r r z
+      13     a r r r r r r r r r r r z
+      14     a r r r r r r r r r r r r z
+      15     a r r r r r r r r r r r r r z
+      16     a r r r r r r r r r r r r r r z
+      17     a r r r r r r r r r r r r r r r z
+      18     a r r r r r r r r r r r r r r r r z
+      19     a r r r r r r r r r r r r r r r r r z
+      20     a r r r r r r r r r r r r r r r r r r z
 
 
 
-Example: `a || b |*| c |*| d || e`
-----------------------------------
+Two by three items
+------------------
 
-N is the the number of input elements.
-
-=============================  ====  ======================  =======
-optionSplit                    N     Resulting sequence      Rule
-=============================  ====  ======================  =======
-`a || b  |*|  c  |*|  d || e`  1     e
-`a || b  |*|  c  |*|  d || e`  2     d e
-`a || b  |*|  c  |*|  d || e`  3     a d e
-`a || b  |*|  c  |*|  d || e`  4     a b d e
-`a || b  |*|  c  |*|  d || e`  5     a b c d e
-`a || b  |*|  c  |*|  d || e`  6     a b c c d e
-`a || b  |*|  c  |*|  d || e`  >6    a b c ... c d e
-=============================  ====  ======================  =======
+What happens if we have only ONE mainpart delimiter `|*|` in our definition? Answer: We will have the TWO
+mainparts A and R.
 
 
+Following rules 1 to 7 gives::
 
-Test Code (TypoScript)
-======================
+   input:
+      wrap = a || b || c  |*|  r || s || t
+
+   output:
+       N     output sequence
+       1     a
+       2     a b
+       3     a b c
+       4     a b c r
+       5     a b c r s
+       6     a b c r s t
+       7     a b c r s t r
+       8     a b c r s t r s
+       9     a b c r s t r s t
+      10     a b c r s t r s t r
+      11     a b c r s t r s t r s
+      12     a b c r s t r s t r s t
+      13     a b c r s t r s t r s t r
+      14     a b c r s t r s t r s t r s
+      15     a b c r s t r s t r s t r s t
+      16     a b c r s t r s t r s t r s t r
+      17     a b c r s t r s t r s t r s t r s
+      18     a b c r s t r s t r s t r s t r s t
+      19     a b c r s t r s t r s t r s t r s t r
+      20     a b c r s t r s t r s t r s t r s t r s
+
+
+Two by two items
+----------------
+
+Following rules 1 to 7 gives::
+
+   input:
+      wrap = a || b  |*|  r || s
+
+   output:
+       N     output sequence
+       1     a
+       2     a b
+       3     a b r
+       4     a b r s
+       5     a b r s r
+       6     a b r s r s
+       7     a b r s r s r
+       8     a b r s r s r s
+       9     a b r s r s r s r
+      10     a b r s r s r s r s
+      11     a b r s r s r s r s r
+      12     a b r s r s r s r s r s
+      13     a b r s r s r s r s r s r
+      14     a b r s r s r s r s r s r s
+      15     a b r s r s r s r s r s r s r
+      16     a b r s r s r s r s r s r s r s
+      17     a b r s r s r s r s r s r s r s r
+      18     a b r s r s r s r s r s r s r s r s
+      19     a b r s r s r s r s r s r s r s r s r
+      20     a b r s r s r s r s r s r s r s r s r s
+
+
+Two by one items
+----------------
+
+Following rules 1 to 7 gives::
+
+   input:
+      wrap = a  |*|  r
+
+   output:
+       N     output sequence
+       1     a
+       2     a r
+       3     a r r
+       4     a r r r
+       5     a r r r r
+       6     a r r r r r
+       7     a r r r r r r
+       8     a r r r r r r r
+       9     a r r r r r r r r
+      10     a r r r r r r r r r
+      11     a r r r r r r r r r r
+      12     a r r r r r r r r r r r
+      13     a r r r r r r r r r r r r
+      14     a r r r r r r r r r r r r r
+      15     a r r r r r r r r r r r r r r
+      16     a r r r r r r r r r r r r r r r
+      17     a r r r r r r r r r r r r r r r r
+      18     a r r r r r r r r r r r r r r r r r
+      19     a r r r r r r r r r r r r r r r r r r
+      20     a r r r r r r r r r r r r r r r r r r r
+
+
+
+One by one items
+----------------
+
+::
+
+   input:
+      wrap = a
+
+   output:
+       N     output sequence
+       1     a
+       2     a a
+       3     a a a
+       4     a a a a
+       5     a a a a a
+       6     a a a a a a
+       7     a a a a a a a
+       8     a a a a a a a a
+       9     a a a a a a a a a
+      10     a a a a a a a a a a
+      11     a a a a a a a a a a a
+      12     a a a a a a a a a a a a
+      13     a a a a a a a a a a a a a
+      14     a a a a a a a a a a a a a a
+      15     a a a a a a a a a a a a a a a
+      16     a a a a a a a a a a a a a a a a
+      17     a a a a a a a a a a a a a a a a a
+      18     a a a a a a a a a a a a a a a a a a
+      19     a a a a a a a a a a a a a a a a a a a
+      20     a a a a a a a a a a a a a a a a a a a a
+
+
+
+One by two items
+----------------
+
+::
+
+   input:
+      wrap = a || b
+
+   output:
+       N     output sequence
+       1     a
+       2     a b
+       3     a b b
+       4     a b b b
+       5     a b b b b
+       6     a b b b b b
+       7     a b b b b b b
+       8     a b b b b b b b
+       9     a b b b b b b b b
+      10     a b b b b b b b b b
+      11     a b b b b b b b b b b
+      12     a b b b b b b b b b b b
+      13     a b b b b b b b b b b b b
+      14     a b b b b b b b b b b b b b
+      15     a b b b b b b b b b b b b b b
+      16     a b b b b b b b b b b b b b b b
+      17     a b b b b b b b b b b b b b b b b
+      18     a b b b b b b b b b b b b b b b b b
+      19     a b b b b b b b b b b b b b b b b b b
+      20     a b b b b b b b b b b b b b b b b b b b
+
+
+One by three items
+------------------
+
+::
+
+   input:
+      wrap = a || b || c
+
+   output:
+       N     output sequence
+       1     a
+       2     a b
+       3     a b c
+       4     a b c c
+       5     a b c c c
+       6     a b c c c c
+       7     a b c c c c c
+       8     a b c c c c c c
+       9     a b c c c c c c c
+      10     a b c c c c c c c c
+      11     a b c c c c c c c c c
+      12     a b c c c c c c c c c c
+      13     a b c c c c c c c c c c c
+      14     a b c c c c c c c c c c c c
+      15     a b c c c c c c c c c c c c c
+      16     a b c c c c c c c c c c c c c c
+      17     a b c c c c c c c c c c c c c c c
+      18     a b c c c c c c c c c c c c c c c c
+      19     a b c c c c c c c c c c c c c c c c c
+      20     a b c c c c c c c c c c c c c c c c c c
+
+One by four items
+-----------------
+
+::
+
+   input:
+      wrap = a || b || c || d
+
+   output:
+       N     output sequence
+       1     a
+       2     a b
+       3     a b c
+       4     a b c d
+       5     a b c d d
+       6     a b c d d d
+       7     a b c d d d d
+       8     a b c d d d d d
+       9     a b c d d d d d d
+      10     a b c d d d d d d d
+      11     a b c d d d d d d d d
+      12     a b c d d d d d d d d d
+      13     a b c d d d d d d d d d d
+      14     a b c d d d d d d d d d d d
+      15     a b c d d d d d d d d d d d d
+      16     a b c d d d d d d d d d d d d d
+      17     a b c d d d d d d d d d d d d d d
+      18     a b c d d d d d d d d d d d d d d d
+      19     a b c d d d d d d d d d d d d d d d d
+      20     a b c d d d d d d d d d d d d d d d d d
+
+
+
+Three items A, no item R, three items Z
+---------------------------------------
+
+In this situation with still have **three** mainparts. We can tell this from the fact that we have
+TWO occurrences of the mainpart delimiter. And the second mainpart R is really empty.
+
+As result we get::
+
+   input:
+      wrap = a || b || c  |*||*|  x || y || z
+
+   output:
+       N     output sequence
+       1     z
+       2     y z
+       3     x y z
+       4     a x y z
+       5     a b x y z
+       6     a b c x y z
+       7     a b c c x y z
+       8     a b c c c x y z
+       9     a b c c c c x y z
+      10     a b c c c c c x y z
+      11     a b c c c c c c x y z
+      12     a b c c c c c c c x y z
+      13     a b c c c c c c c c x y z
+      14     a b c c c c c c c c c x y z
+      15     a b c c c c c c c c c c x y z
+      16     a b c c c c c c c c c c c x y z
+      17     a b c c c c c c c c c c c c x y z
+      18     a b c c c c c c c c c c c c c x y z
+      19     a b c c c c c c c c c c c c c c x y z
+      20     a b c c c c c c c c c c c c c c c x y z
+
+
+**`optionSplit` rules:**
+
+8. If mainpart R is empty the last subpart of A is repeated.
+
+
+One item A, no item R, one items Z
+-----------------------------------
+
+With rules 1 to 8 we get::
+
+   input:
+      wrap = a  |*||*|  z
+
+   output:
+       N     output sequence
+       1     z
+       2     a z
+       3     a a z
+       4     a a a z
+       5     a a a a z
+       6     a a a a a z
+       7     a a a a a a z
+       8     a a a a a a a z
+       9     a a a a a a a a z
+      10     a a a a a a a a a z
+      11     a a a a a a a a a a z
+      12     a a a a a a a a a a a z
+      13     a a a a a a a a a a a a z
+      14     a a a a a a a a a a a a a z
+      15     a a a a a a a a a a a a a a z
+      16     a a a a a a a a a a a a a a a z
+      17     a a a a a a a a a a a a a a a a z
+      18     a a a a a a a a a a a a a a a a a z
+      19     a a a a a a a a a a a a a a a a a a z
+      20     a a a a a a a a a a a a a a a a a a a z
+
+
+
+One item A, one (unexpected!?) item R, one item Z
+-------------------------------------------------
+
+.. attention::
+
+   To really make mainpart R empty there must not be a space
+   in the middle of `|*||*|`!
+
+What happens if there IS a space? Normal behavior of a three by one case! ::
+
+   input:
+      wrap = a  |*| |*|  z
+
+   output:
+       N     output sequence
+       1     z
+       2     a z
+       3     a  z
+       4     a   z
+       5     a    z
+       6     a     z
+       7     a      z
+       8     a       z
+       9     a        z
+      10     a         z
+      11     a          z
+      12     a           z
+      13     a            z
+      14     a             z
+      15     a              z
+      16     a               z
+      17     a                z
+      18     a                 z
+      19     a                  z
+      20     a                   z
+
+
+More
+----
+
+::
+
+   input:
+      wrap = |*||*|  z
+
+   output:
+       N     output sequence
+       1     z
+       2     z z
+       3     z z z
+       4     z z z z
+       5     z z z z z
+       6     z z z z z z
+       7     z z z z z z z
+       8     z z z z z z z z
+       9     z z z z z z z z z
+      10     z z z z z z z z z z
+      11     z z z z z z z z z z z
+      12     z z z z z z z z z z z z
+      13     z z z z z z z z z z z z z
+      14     z z z z z z z z z z z z z z
+      15     z z z z z z z z z z z z z z z
+      16     z z z z z z z z z z z z z z z z
+      17     z z z z z z z z z z z z z z z z z
+      18     z z z z z z z z z z z z z z z z z z
+      19     z z z z z z z z z z z z z z z z z z z
+      20     z z z z z z z z z z z z z z z z z z z z
+
+
+::
+
+   input:
+      wrap = |*| |*|  z
+
+   output:
+       N     output sequence
+       1     z
+       2      z
+       3       z
+       4        z
+       5         z
+       6          z
+       7           z
+       8            z
+       9             z
+      10              z
+      11               z
+      12                z
+      13                 z
+      14                  z
+      15                   z
+      16                    z
+      17                     z
+      18                      z
+      19                       z
+      20                        z
+
+::
+
+   input:
+      wrap = |*| r || s || t  |*|
+
+   output:
+       N     output sequence
+       1     r
+       2     r s
+       3     r s t
+       4     r s t r
+       5     r s t r s
+       6     r s t r s t
+       7     r s t r s t r
+       8     r s t r s t r s
+       9     r s t r s t r s t
+      10     r s t r s t r s t r
+      11     r s t r s t r s t r s
+      12     r s t r s t r s t r s t
+      13     r s t r s t r s t r s t r
+      14     r s t r s t r s t r s t r s
+      15     r s t r s t r s t r s t r s t
+      16     r s t r s t r s t r s t r s t r
+      17     r s t r s t r s t r s t r s t r s
+      18     r s t r s t r s t r s t r s t r s t
+      19     r s t r s t r s t r s t r s t r s t r
+      20     r s t r s t r s t r s t r s t r s t r s
+
+
+::
+
+   input:
+      wrap = a || b || c  |*||*|
+
+   output:
+       N     output sequence
+       1     a
+       2     a b
+       3     a b c
+       4     a b c c
+       5     a b c c c
+       6     a b c c c c
+       7     a b c c c c c
+       8     a b c c c c c c
+       9     a b c c c c c c c
+      10     a b c c c c c c c c
+      11     a b c c c c c c c c c
+      12     a b c c c c c c c c c c
+      13     a b c c c c c c c c c c c
+      14     a b c c c c c c c c c c c c
+      15     a b c c c c c c c c c c c c c
+      16     a b c c c c c c c c c c c c c c
+      17     a b c c c c c c c c c c c c c c c
+      18     a b c c c c c c c c c c c c c c c c
+      19     a b c c c c c c c c c c c c c c c c c
+      20     a b c c c c c c c c c c c c c c c c c c
+
+::
+
+   input:
+      wrap = |*||*|  x || y || z
+
+   output:
+       N     output sequence
+       1     z
+       2     y z
+       3     x y z
+       4     x x y z
+       5     x x x y z
+       6     x x x x y z
+       7     x x x x x y z
+       8     x x x x x x y z
+       9     x x x x x x x y z
+      10     x x x x x x x x y z
+      11     x x x x x x x x x y z
+      12     x x x x x x x x x x y z
+      13     x x x x x x x x x x x y z
+      14     x x x x x x x x x x x x y z
+      15     x x x x x x x x x x x x x y z
+      16     x x x x x x x x x x x x x x y z
+      17     x x x x x x x x x x x x x x x y z
+      18     x x x x x x x x x x x x x x x x y z
+      19     x x x x x x x x x x x x x x x x x y z
+      20     x x x x x x x x x x x x x x x x x x y z
+
+::
+
+   input:
+      wrap = a   |*|||s|*|  z
+
+   output:
+       N     output sequence
+       1     z
+       2     a z
+       3     a  z
+       4     a  s z
+       5     a  s  z
+       6     a  s  s z
+       7     a  s  s  z
+       8     a  s  s  s z
+       9     a  s  s  s  z
+      10     a  s  s  s  s z
+      11     a  s  s  s  s  z
+      12     a  s  s  s  s  s z
+      13     a  s  s  s  s  s  z
+      14     a  s  s  s  s  s  s z
+      15     a  s  s  s  s  s  s  z
+      16     a  s  s  s  s  s  s  s z
+      17     a  s  s  s  s  s  s  s  z
+      18     a  s  s  s  s  s  s  s  s z
+      19     a  s  s  s  s  s  s  s  s  z
+      20     a  s  s  s  s  s  s  s  s  s z
+
+
+::
+
+   input:
+      wrap = a   |*|r|||*|  z
+
+   output:
+       N     output sequence
+       1     z
+       2     a z
+       3     a r z
+       4     a r  z
+       5     a r  r z
+       6     a r  r  z
+       7     a r  r  r z
+       8     a r  r  r  z
+       9     a r  r  r  r z
+      10     a r  r  r  r  z
+      11     a r  r  r  r  r z
+      12     a r  r  r  r  r  z
+      13     a r  r  r  r  r  r z
+      14     a r  r  r  r  r  r  z
+      15     a r  r  r  r  r  r  r z
+      16     a r  r  r  r  r  r  r  z
+      17     a r  r  r  r  r  r  r  r z
+      18     a r  r  r  r  r  r  r  r  z
+      19     a r  r  r  r  r  r  r  r  r z
+      20     a r  r  r  r  r  r  r  r  r  z
+
+::
+
+   input:
+      wrap = a   |*|r|||||*|  z
+
+   output:
+       N     output sequence
+       1     z
+       2     a z
+       3     a r z
+       4     a r  z
+       5     a r   z
+       6     a r   r z
+       7     a r   r  z
+       8     a r   r   z
+       9     a r   r   r z
+      10     a r   r   r  z
+      11     a r   r   r   z
+      12     a r   r   r   r z
+      13     a r   r   r   r  z
+      14     a r   r   r   r   z
+      15     a r   r   r   r   r z
+      16     a r   r   r   r   r  z
+      17     a r   r   r   r   r   z
+      18     a r   r   r   r   r   r z
+      19     a r   r   r   r   r   r  z
+      20     a r   r   r   r   r   r   z
+
+
+::
+
+   input:
+      wrap = a   |*|r|||||||*|  z
+
+   output:
+       N     output sequence
+       1     z
+       2     a z
+       3     a r z
+       4     a r  z
+       5     a r   z
+       6     a r    z
+       7     a r    r z
+       8     a r    r  z
+       9     a r    r   z
+      10     a r    r    z
+      11     a r    r    r z
+      12     a r    r    r  z
+      13     a r    r    r   z
+      14     a r    r    r    z
+      15     a r    r    r    r z
+      16     a r    r    r    r  z
+      17     a r    r    r    r   z
+      18     a r    r    r    r    z
+      19     a r    r    r    r    r z
+      20     a r    r    r    r    r  z
+
+
+
+
+
+
+Test Code 1 (TypoScript)
+========================
 
 Constants::
 
@@ -638,8 +1136,8 @@ Setup::
    }
 
 
-Test Code Result
-================
+Test Code 1 Result
+==================
 
 .. code-block:: none
 
