@@ -21,44 +21,43 @@ Introduction
 ============
 
 `optionSplit` is the codename of a very tricky - but very useful! - function
-and functionality. It is primarily used with the menu objects.
-So let's take an example from menu building::
+and functionality. It is primarily used with the menu objects where it is
+enable for MANY properties. This make `optionSplit` really powerful.
+
+So let's take an example from menu building.
+As a result all A-tags generated from this definition will have the `class` attribute
+set like this: :html:`<a class="z" ... >`::
 
    topmenu.1.NO {
      ATagParams = class="z"
    }
 
-This means that all A-tag generated from that definition will look like
-`<a class="z" ... >`. Usually you cannot know in advance how many links will be generated.
-In general anything is possible from none, one to many. In real life of html code generation
-there is more to account for: The first link of a list may need to look different than those
-in the middle or add the end.
+How many A-tags will there be? Usually we cannat answer that question in advance
+as we cannot know how long the list of menu items is. From zero to many everything
+is possible. Let's describe this as: We have an **output sequence of 0 to N items**.
 
-So we know that on the output side we have a list of links. It is of unknown length. Let's
-describe this as: We have an **output sequence of 0 to N items**.
+In real life one more thing is important: We often want to have a different properties
+for the first and the last or odd and even elements. `optionSplit` tries to offer
+an easy solution for this task as well. We can specify more than just one shaping
+of a value for a property. Let's describe this as: We have an **input sequence M items**.
 
-In our definition we have a string like `class="z"` that is to be used for all items of the
-output sequence. Now `optionSplit`comes into play.
+Now we can precisely define what `optionSplit` is.
 
 Definition:
-   `optionSplit` is a (1) **syntax** to define more than only one value,
-   and it is (2) **a ruleset** to map the defined values to the output list.
+   `optionSplit` is a **syntax** to define an input sequence of a fixed amount **M**
+   of values. It has a fixed, builtin **ruleset**. Its **functionality** is to
+   apply ONE of the input values to each output item according to the position of
+   the output item and the ruleset.
 
 In other words:
 
    1. We have an **input sequence of M items**. M is known.
    2. We have an **output sequence of 0 to N items**. N is unknown and may be zero, one, or "large".
    3. We have a **ruleset** delivered with `optionSplit` that specifies how the input sequence
-      should be mapped to the output sequence.
+      should be applied to the output sequence.
 
-So we want to explain:
+In the following we'll try to shed light on this.
 
-   - How do we specify the input sequence?
-   - What is the ruleset of `optionSplit`?
-   - What output sequence can we expect for a given input sequence
-
-What makes `optionSplit` so powerful ist the fact that almost **all** properties of :ts:`*.NO*`
-are "optionSplit enabled".
 
 
 .. highlight:: none
@@ -67,20 +66,36 @@ are "optionSplit enabled".
 Terminology
 ===========
 
+It's useful to aggree about some terms first: delimiter string, mainpart, subpart.
+
 Mainparts
 ---------
 
 `optionSplit` uses the string `|*|` to split the total string into **mainparts**.
-Note: Only the first **three** mainparts will be used. If there are more they
+Up to **three** mainparts will be used. If there are more they
 will be ignored.
 On the input side we may have for example::
 
-   wrap = A                    We have: M=1  items, 1  mainpart : A
-   wrap = A |*| R              We have: M=2  items, 2  mainparts: A, R
-   wrap = A |*| R |*| Z        We have: M=3  items, 3  mainparts: A, R, Z
-   wrap = A |*| R |*| Z |*| X  We have: M=3! items, 3! mainparts: A, R, Z
+   wrap =                      We have: M=0  items; 1  mainpart : A      ; mainpart is empty
+   wrap = A                    We have: M=1  items; 1  mainpart : A      ;
+   wrap = A |*| R              We have: M=2  items; 2  mainparts: A, R   ;
+   wrap = A |*| R |*| Z        We have: M=3  items; 3  mainparts: A, R, Z;
+   wrap = A |*| R |*| Z |*| X  We have: M=3! items; 3! mainparts: A, R, Z; only two delimiters are important
 
-**Rule:** There can be 0, 1, 2 or 3 mainparts.
+
+Our terminology:
+   |  A always implies that it's the first mainpart.
+   |  R stands for a second mainpart.
+   |  Z denotes the third mainpart.
+
+
+Viewed from the perspective of how many mainpart delimiters `|*|` we have
+the cases:
+
+1. We have only mainpart A if there is no `|*|`.
+2. We have mainparts A and R if `|*|` occurs exactly once.
+3. We have mainparts A, R and Z if `|*|` occurs - at least - twice.
+
 
 Subparts
 --------
@@ -100,24 +115,27 @@ Example::
 
 
 
-Understanding by example
-========================
+Full example to see how it works
+================================
+
+Let's look at a full example that visualizes what we have said so far.
+
 
 Three by three items
 --------------------
 
-Let's see a full example with three mainparts. And each mainpart is split into three
+We have all three mainparts A, R and Z. And each mainpart is split into three
 subparts::
 
    wrap = a || b || c  |*|  r || s || t  |*|  x || y || z
 
-Mainpart 1 consists of the three subparts a, b, c. We call it `A`.
+Mainpart A (the first one) consists of the three subparts a, b, c.
 
-Mainpart 2 consists of the three subparts r, s, t. We call it `R`.
+Mainpart R (the second one) consists of the three subparts r, s, t.
 
-Mainpart 3 consists of the three subparts x, y, z. We call it `Z`.
+Mainpart Z (the third one) consists of the three subparts x, y, z.
 
-Let's see what happens::
+And this is what happens::
 
    input:
       wrap = a || b || c  |*|  r || s || t  |*|  x || y || z
@@ -146,16 +164,24 @@ Let's see what happens::
       20     a b c r s t r s t r s t r s t r s x y z
 
 
-**`optionSplit` rules:**
+The optionSplit ruleset
+=======================
+
+From the full example we can deduce the **builtin ruleset**:
 
 1. The items of mainpart Z are used first.
 2. The items of mainpart A are used second.
 3. The items of mainpart R are used third.
-4. The order in which input items appear in the output is from left to right.
-5. Items are taken from the **end** of mainpart Z first.
-6. Items are taken from the **start** of mainpart A second.
-7. Items are taken from the **start** of mainpart R third and **repeated** as long as necessary.
+4. The *order* in which input items appear in the output is from left to right
+   exactly as in the input.
+5. For mainpart Z the *start position* is as close to the *end* as possible.
+6. For mainpart A subparts are taken from the beginning.
+7. For mainpart R subparts are taken from the beginning and the whole
+   sequence R is *repeated* from the beginning as long as necessary.
 
+
+More Examples
+=============
 
 Three by two items
 ------------------
@@ -225,11 +251,10 @@ And again::
 Two by three items
 ------------------
 
-What happens if we have only ONE mainpart delimiter `|*|` in our definition? Answer: We will have the TWO
-mainparts A and R.
+Now the mainpart delimiter `|*|` occurrs only once. So we are
+dealing with the first two mainparts A and R.
 
-
-Following rules 1 to 7 gives::
+According to rules 1 to 7 we get::
 
    input:
       wrap = a || b || c  |*|  r || s || t
@@ -261,7 +286,7 @@ Following rules 1 to 7 gives::
 Two by two items
 ----------------
 
-Following rules 1 to 7 gives::
+According to rules 1 to 7 we get::
 
    input:
       wrap = a || b  |*|  r || s
@@ -293,7 +318,7 @@ Following rules 1 to 7 gives::
 Two by one items
 ----------------
 
-Following rules 1 to 7 gives::
+According to rules 1 to 7 we get::
 
    input:
       wrap = a  |*|  r
@@ -326,7 +351,8 @@ Following rules 1 to 7 gives::
 One by one items
 ----------------
 
-::
+With no delimiters at all we still have - implictely - one mainpart
+A with one subpart a::
 
    input:
       wrap = a
@@ -359,7 +385,7 @@ One by one items
 One by two items
 ----------------
 
-::
+One mainpart A with two subparts a and b::
 
    input:
       wrap = a || b
@@ -391,7 +417,7 @@ One by two items
 One by three items
 ------------------
 
-::
+More::
 
    input:
       wrap = a || b || c
@@ -422,7 +448,7 @@ One by three items
 One by four items
 -----------------
 
-::
+More::
 
    input:
       wrap = a || b || c || d
@@ -450,6 +476,10 @@ One by four items
       19     a b c d d d d d d d d d d d d d d d d
       20     a b c d d d d d d d d d d d d d d d d d
 
+
+
+More examples: Tricky stuff
+===========================
 
 
 Three items A, no item R, three items Z
