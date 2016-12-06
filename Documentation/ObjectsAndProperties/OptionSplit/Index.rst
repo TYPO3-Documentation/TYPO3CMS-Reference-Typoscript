@@ -859,6 +859,8 @@ More
 Test Code 1 (TypoScript)
 ========================
 
+.. highlight:: typoscript
+
 Constants::
 
    os_1 = a
@@ -1165,6 +1167,8 @@ Setup::
 
 Test Code 1 Result
 ==================
+
+.. highlight:: none
 
 output::
 
