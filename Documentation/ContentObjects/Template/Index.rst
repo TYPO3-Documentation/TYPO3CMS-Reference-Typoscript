@@ -30,8 +30,8 @@ content by TYPO3.
 
             page.10 = TEMPLATE
             page.10 {
-              template = FILE
-              template.file = fileadmin/template.html
+               template = FILE
+               template.file = fileadmin/template.html
             }
 
          This will use the file fileadmin/template.html as template for your
