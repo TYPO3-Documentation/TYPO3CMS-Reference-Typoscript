@@ -12,17 +12,11 @@ Pages are referenced by two main values. The "id" and "type".
 page is found.
 
 **The "type"** is used to define how the page should be rendered. This
-is primarily used with framesets. Here the frameset normally has the
-type=0 (or not set) and the documents in the frameset would be defined
-with another type, e.g. type=1 for the content-page.
+is primarily used with different representations of the same content.
+Your default page will most likely have type 0 while a JSON stream with the same
+content could go with type 1.
 
-You should explore the framesets of the TYPO3-sites around. Also look
-in the standard-templates for framesets.
-
-It's a good habit to use type=1 for the main-page of a website with
-frames. With no-frames sites type is normally zero.
-
-Another good habit is to use "page" as the top-level object name for
+A good habit is to use "page" as the top-level object name for
 the content-page on a website.
 
 Most of this code is executed in the PHP script
