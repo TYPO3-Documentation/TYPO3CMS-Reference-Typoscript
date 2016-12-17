@@ -413,11 +413,11 @@ includeCSS.[array]
          **Example:** ::
 
             includeCSS {
-              file1 = fileadmin/mystylesheet1.css
-              file2 = stylesheet_uploaded_to_template*.css
+              file1 = EXT:extension/Resources/Public/Css/myStyleSheet1.css
+              file2 = EXT:extension/Resources/Public/Css/myStyleSheet2.css
               file2.title = High contrast
               file2.media = print
-              ie6Style = fileadmin/css/style3.css
+              ie6Style = EXT:extension/Resources/Public/Css/myStyleSheet3.css
               ie6Style.allWrap = <!--[if lte IE 7]>|<![endif]-->
               cooliris = http://www.cooliris.com/shared/
                          resources/css/global.css
@@ -548,11 +548,11 @@ includeJS.[array]
          **Example:** ::
 
             includeJS {
-              file1 = fileadmin/helloworld.js
+              file1 = EXT:extension/Resources/Public/JavaScript/HelloWorld.js
               file1.type = application/x-javascript
               # Include a second file, but only if myConstant is set
               # in the TS constants field.
-              file2 = javascript_uploaded_to_template*.js
+              file2 = EXT:extension/Resources/Public/JavaScript/HelloWorld2.js
               file2.if.isTrue = {$myConstant}
             }
 
