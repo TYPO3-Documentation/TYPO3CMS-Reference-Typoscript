@@ -28,6 +28,7 @@ content by TYPO3.
 
          **Example:** ::
 
+            page.10 = TEMPLATE
             page.10 {
               template = FILE
               template.file = fileadmin/template.html

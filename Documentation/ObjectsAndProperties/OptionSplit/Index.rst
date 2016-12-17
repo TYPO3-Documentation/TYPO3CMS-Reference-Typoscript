@@ -859,9 +859,9 @@ More
 Test Code 1 (TypoScript)
 ========================
 
-Constants::
+.. highlight:: typoscript
 
-   # Bernd Wilke (πφ), 2016-11-24
+Constants::
 
    os_1 = a
    os_2 = a || b || c
@@ -880,12 +880,11 @@ Constants::
 
 Setup::
 
-   # Bernd Wilke (πφ), 2016-11-24
    temp.marray = HMENU
    temp.marray {
      special = directory
      # enter a page with at least 9 visible subpages!
-     special.value = 9
+     special.value = 123
      maxItems = 5
 
      1 = TMENU
@@ -952,16 +951,16 @@ Setup::
          <tr>
            <th>optionsplit</th>
            <th>1</th>
-       <th>2</th>
-       <th>3</th>
-       <th>4</th>
-       <th>5</th>
-       <th>6</th>
-       <th>7</th>
-       <th>8</th>
-       <th>9</th>
-       </tr>
-       |
+           <th>2</th>
+           <th>3</th>
+           <th>4</th>
+           <th>5</th>
+           <th>6</th>
+           <th>7</th>
+           <th>8</th>
+           <th>9</th>
+         </tr>
+         |
        </table>
        )
 
@@ -1169,8 +1168,11 @@ Setup::
 Test Code 1 Result
 ==================
 
-.. code-block:: none
+.. highlight:: none
 
+output::
+
+    optionsplit       1      2        3          4            5              6                7                  8                    9
    a                 [a_]  [a_a_]  [a_a_a_]  [a_a_a_a_]  [a_a_a_a_a_]  [a_a_a_a_a_a_]  [a_a_a_a_a_a_a_]  [a_a_a_a_a_a_a_a_]  [a_a_a_a_a_a_a_a_a_]
    a||b||c           [a_]  [a_b_]  [a_b_c_]  [a_b_c_c_]  [a_b_c_c_c_]  [a_b_c_c_c_c_]  [a_b_c_c_c_c_c_]  [a_b_c_c_c_c_c_c_]  [a_b_c_c_c_c_c_c_c_]
    |*||*|a||b        [b_]  [a_b_]  [a_a_b_]  [a_a_a_b_]  [a_a_a_a_b_]  [a_a_a_a_a_b_]  [a_a_a_a_a_a_b_]  [a_a_a_a_a_a_a_b_]  [a_a_a_a_a_a_a_a_b_]
@@ -1178,6 +1180,8 @@ Test Code 1 Result
    a||b|*||*|d||e    [e_]  [d_e_]  [a_d_e_]  [a_b_d_e_]  [a_b_b_d_e_]  [a_b_b_b_d_e_]  [a_b_b_b_b_d_e_]  [a_b_b_b_b_b_d_e_]  [a_b_b_b_b_b_b_d_e_]
    a||b|*|c|*|d||e   [e_]  [d_e_]  [a_d_e_]  [a_b_d_e_]  [a_b_c_d_e_]  [a_b_c_c_d_e_]  [a_b_c_c_c_d_e_]  [a_b_c_c_c_c_d_e_]  [a_b_c_c_c_c_c_d_e_]
 
+   
+      optionsplit            1      2        3          4            5              6                7                  8                    9
    a                        [a_]  [a_a_]  [a_a_a_]  [a_a_a_a_]  [a_a_a_a_a_]  [a_a_a_a_a_a_]  [a_a_a_a_a_a_a_]  [a_a_a_a_a_a_a_a_]  [a_a_a_a_a_a_a_a_a_]
    a || b || c              [a_]  [a_b_]  [a_b_c_]  [a_b_c_c_]  [a_b_c_c_c_]  [a_b_c_c_c_c_]  [a_b_c_c_c_c_c_]  [a_b_c_c_c_c_c_c_]  [a_b_c_c_c_c_c_c_c_]
    |*| |*| a || b           [b_]  [a_b_]  [_a_b_]   [__a_b_]    [___a_b_]     [____a_b_]      [_____a_b_]       [______a_b_]        [_______a_b_]

@@ -69,12 +69,13 @@ Property details
 
          *page* for the main page with content
 
-         *frameset, frameset2* for framesets.
+         *json* for a json stream with content
 
-         *top, left, menu, right, bottom, border* for top and menu frames etc.
+         *xml* for a XML stream with content
 
          These are just recommendations. However, especially the name 'page'
-         for the content bearing page is very common.
+         for the content bearing page is very common and most documentation will
+         imply that your main page object is called 'page'.
 
 
 

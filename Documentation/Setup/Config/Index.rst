@@ -59,7 +59,6 @@ Properties
    `fileTarget`_                                         :ref:`data-type-target`
    `forceTypeValue`_                                     :ref:`data-type-integer`
    `formMailCharset`_                                    :ref:`data-type-string`
-   `frameReloadIfNotInFrameset`_                         :ref:`data-type-boolean`
    `ftu`_                                                :ref:`data-type-boolean`           false
    `headerComment`_                                      :ref:`data-type-string`
    `htmlTag\_dir`_                                       :ref:`data-type-string`
@@ -77,7 +76,6 @@ Properties
    `linkVars`_                                           :ref:`data-type-list`
    `locale\_all`_                                        :ref:`data-type-string`
    `lockFilePath`_                                       :ref:`data-type-string`            fileadmin/
-   `mainScript`_                                         :ref:`data-type-string`            index.php
    `message\_page\_is\_being\_generated`_                :ref:`data-type-string`
    `message\_preview`_                                   :ref:`data-type-string`
    `message\_preview\_workspace`_                        :ref:`data-type-string`
@@ -89,7 +87,6 @@ Properties
    `namespaces`_                                         *(array of strings)*
    `no\_cache`_                                          :ref:`data-type-boolean`           0
    `noPageTitle`_                                        :ref:`data-type-integer`           0
-   `noScaleUp`_                                          :ref:`data-type-boolean`
    `pageGenScript`_                                      :ref:`data-type-resource`          typo3/sysext/frontend/Classes/Page/PageGenerator.php
    `pageRendererTemplateFile`_                           :ref:`data-type-string`
    `pageTitle`_                                          :ref:`stdWrap`
@@ -937,8 +934,7 @@ disablePageExternalUrl
 
    Description
          If set, pages with doktype "External Url" will not trigger jumpUrl in
-         TSFE. This may help you to have external URLs open inside you
-         framesets.
+         TSFE.
 
 
 
@@ -1211,30 +1207,6 @@ formMailCharset
 
    Default
          "" *(unset)*
-
-
-
-.. _setup-config-framereloadifnotinframeset:
-
-frameReloadIfNotInFrameset
-""""""""""""""""""""""""""
-
-.. container:: table-row
-
-   Property
-         frameReloadIfNotInFrameset
-
-   Data type
-         boolean
-
-   Description
-         If set, then the current page will check if the page object name (e.g.
-         "page" or "frameset") exists as "parent.[name]" (e.g. "parent.page")
-         and if not the page will be reloaded in top frame. This secures that
-         links from search engines to pages inside a frameset will load the
-         frameset.
-
-         Works only with type-values different from zero.
 
 
 
@@ -1714,30 +1686,6 @@ lockFilePath
 
 
 
-.. _setup-config-mainscript:
-
-mainScript
-""""""""""
-
-.. container:: table-row
-
-   Property
-         mainScript
-
-   Data type
-         string
-
-   Description
-         This lets you specify an alternative "mainScript" which is the
-         document that TYPO3 expects to be the default doc. This is used in
-         form-tags and other places where TYPO3 needs to refer directly to the
-         main-script of the application
-
-   Default
-         index.php
-
-
-
 .. _setup-config-message-page-is-being-generated:
 
 message\_page\_is\_being\_generated
@@ -2025,31 +1973,6 @@ noPageTitle
 
    Default
          0
-
-
-
-.. _setup-config-noscaleup:
-
-noScaleUp
-"""""""""
-
-.. container:: table-row
-
-   Property
-         noScaleUp
-
-   Data type
-         boolean
-
-   Description
-         Normally images are scaled to the size specified via TypoScript. This
-         also forces small images to be scaled to a larger size. This is not
-         always a good thing.
-
-         If this property is set, images are **not** allowed to be scaled up
-         in size. This parameter clears the $this->mayScaleUp var of the class
-         TYPO3\CMS\Core\Imaging\GraphicalFunctions (often referred to as
-         "Gifbuilder").
 
 
 
