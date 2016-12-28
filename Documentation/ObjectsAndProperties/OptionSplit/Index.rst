@@ -7,11 +7,6 @@
 optionSplit
 ===========
 
-.. attention::
-
-   Currently this page is being reworked. So it is very much WIP (work in progress).
-
-
 .. contents:: On this page:
    :local:
    :backlinks: top
@@ -1180,7 +1175,7 @@ output::
    a||b|*||*|d||e    [e_]  [d_e_]  [a_d_e_]  [a_b_d_e_]  [a_b_b_d_e_]  [a_b_b_b_d_e_]  [a_b_b_b_b_d_e_]  [a_b_b_b_b_b_d_e_]  [a_b_b_b_b_b_b_d_e_]
    a||b|*|c|*|d||e   [e_]  [d_e_]  [a_d_e_]  [a_b_d_e_]  [a_b_c_d_e_]  [a_b_c_c_d_e_]  [a_b_c_c_c_d_e_]  [a_b_c_c_c_c_d_e_]  [a_b_c_c_c_c_c_d_e_]
 
-   
+
       optionsplit            1      2        3          4            5              6                7                  8                    9
    a                        [a_]  [a_a_]  [a_a_a_]  [a_a_a_a_]  [a_a_a_a_a_]  [a_a_a_a_a_a_]  [a_a_a_a_a_a_a_]  [a_a_a_a_a_a_a_a_]  [a_a_a_a_a_a_a_a_a_]
    a || b || c              [a_]  [a_b_]  [a_b_c_]  [a_b_c_c_]  [a_b_c_c_c_]  [a_b_c_c_c_c_]  [a_b_c_c_c_c_c_]  [a_b_c_c_c_c_c_c_]  [a_b_c_c_c_c_c_c_c_]
@@ -1188,4 +1183,247 @@ output::
    a |*| b || c |*|         [a_]  [a_b_]  [a_b_c_]  [a_b_c_b_]  [a_b_c_b_c_]  [a_b_c_b_c_b_]  [a_b_c_b_c_b_c_]  [a_b_c_b_c_b_c_b_]  [a_b_c_b_c_b_c_b_c_]
    a || b |*| |*| d || e    [e_]  [d_e_]  [a_d_e_]  [a_b_d_e_]  [a_b__d_e_]   [a_b___d_e_]    [a_b____d_e_]     [a_b_____d_e_]      [a_b______d_e_]
    a || b |*| c |*| d || e  [e_]  [d_e_]  [a_d_e_]  [a_b_d_e_]  [a_b_c_d_e_]  [a_b_c_c_d_e_]  [a_b_c_c_c_d_e_]  [a_b_c_c_c_c_d_e_]  [a_b_c_c_c_c_c_d_e_]
+
+
+
+Test Code 2 (TypoScript)
+========================
+
+This is the code that was used to produce many of the above examples.
+
+
+.. highlight:: typoscript
+
+Constants::
+
+   os1 = a
+   os2 = a||b||c
+   os3 = |*||*|a||b
+   os4 = a|*|b||c|*|
+   os5 = a||b|*||*|d||e
+   os6 = a||b|*|c|*|d||e
+
+   os1 = a
+   os2 = a ||
+   os3 = a || b
+   os4 = a || b ||
+   os5 = a || b || c
+   os6 = a |||| c
+
+   os1 = a
+   os2 = a |*|
+   os3 = a |*| b
+   os4 = a |*| b |*|
+   os5 = a |*| b |*| c
+   os6 = a |*| b |*| c |*| d
+
+   os1 = a || b || c
+   os2 = a || b || c  |*|
+   os3 = a || b || c  |*|  r ||
+   os4 = a || b || c  |*|  r || s || t
+   os5 = a || b || c  |*||*|  x || y || z
+   os6 = a || b || c  |*|  r || s || t  |*|  x || y || z
+
+
+   os6 = a   |*|  r   |*|  z
+   os6 = a || b  |*|  r || s  |*|  y || z
+   os6 = a || b || c  |*|  r || s || t  |*|  x || y || z
+
+
+   os6 = a || b || c  |*|  r || s || t
+   os6 = a || b  |*|  r || s
+   os6 = a  |*|  r
+
+   os6 = a
+   os6 = a || b
+   os6 = a || b || c
+
+
+   os6 = a || b || c  |*||*|  x || y || z
+
+   os6 = a  |*||*| z
+   os6 =  |*||*|  z
+   os6 =  |*| |*| z
+
+   os6 =  |*| r || s || t  |*|
+   os6 = a || b || c  |*||*|
+   os6 = |*||*|  x || y || z
+
+
+   os6 = a   |*|||s|*|  z
+   os6 = a   |*|r|||*|  z
+   os6 = a   |*|r|||||*|  z
+   os6 = a   |*|r|||||||*|  z
+
+
+Setup::
+
+   lib.marray = HMENU
+   lib.marray {
+       special = directory
+       # enter a page with at least 9 visible subpages!
+       special.value = 2
+       maxItems = 999
+
+       1 = TMENU
+       1 {
+           NO {
+               before = _
+               before = &nbsp;
+               # allWrap.data = {register:os}
+               before.wrap = {$os6}
+               doNotShowLink = 1
+           }
+       }
+   }
+
+   lib.mrow = COA
+   lib.mrow {
+       1 = LOAD_REGISTER
+       1.os = {$os6}
+
+       4 = TEXT
+       4.value = input:
+       4.wrap =  |<br/>
+
+       5 = TEXT
+       5.data = register:os
+       5.wrap = &nbsp;&nbsp;&nbsp;wrap =&nbsp; |<br/><br/>output:<br>    N     output sequence<br/>
+
+       10 < lib.marray
+       10.maxItems = 1
+       10.wrap = &nbsp;&nbsp;&nbsp;&nbsp;1    &nbsp; |<br/>
+
+       20 < .10
+       20.maxItems = 2
+       20.wrap = &nbsp;&nbsp;&nbsp;&nbsp;2    &nbsp; |<br/>
+
+       30 < .10
+       30.maxItems = 3
+       30.wrap = &nbsp;&nbsp;&nbsp;&nbsp;3    &nbsp; |<br/>
+
+       40 < .10
+       40.maxItems = 4
+       40.wrap = &nbsp;&nbsp;&nbsp;&nbsp;4    &nbsp; |<br/>
+
+       50 < .10
+       50.maxItems = 5
+       50.wrap = &nbsp;&nbsp;&nbsp;&nbsp;5    &nbsp; |<br/>
+
+       60 < .10
+       60.maxItems = 6
+       60.wrap = &nbsp;&nbsp;&nbsp;&nbsp;6    &nbsp; |<br/>
+
+       70 < .10
+       70.maxItems = 7
+       70.wrap = &nbsp;&nbsp;&nbsp;&nbsp;7    &nbsp; |<br/>
+
+       80 < .10
+       80.maxItems = 8
+       80.wrap = &nbsp;&nbsp;&nbsp;&nbsp;8    &nbsp; |<br/>
+
+       90 < .10
+       90.maxItems = 9
+       90.wrap = &nbsp;&nbsp;&nbsp;&nbsp;9    &nbsp; |<br/>
+
+       120 < .10
+       120.maxItems = 10
+       120.wrap = &nbsp;&nbsp;&nbsp;10    &nbsp; |<br/>
+
+       130 < .10
+       130.maxItems = 11
+       130.wrap = &nbsp;&nbsp;&nbsp;11    &nbsp; |<br/>
+
+       140 < .10
+       140.maxItems = 12
+       140.wrap = &nbsp;&nbsp;&nbsp;12    &nbsp; |<br/>
+
+       150 < .10
+       150.maxItems = 13
+       150.wrap = &nbsp;&nbsp;&nbsp;13    &nbsp; |<br/>
+
+       160 < .10
+       160.maxItems = 14
+       160.wrap = &nbsp;&nbsp;&nbsp;14    &nbsp; |<br/>
+
+       170 < .10
+       170.maxItems = 15
+       170.wrap = &nbsp;&nbsp;&nbsp;15    &nbsp; |<br/>
+
+       180 < .10
+       180.maxItems = 16
+       180.wrap = &nbsp;&nbsp;&nbsp;16    &nbsp; |<br/>
+
+       190 < .10
+       190.maxItems = 17
+       190.wrap = &nbsp;&nbsp;&nbsp;17    &nbsp; |<br/>
+
+       200 < .10
+       200.maxItems = 18
+       200.wrap = &nbsp;&nbsp;&nbsp;18    &nbsp; |<br/>
+
+       210 < .10
+       210.maxItems = 19
+       210.wrap = &nbsp;&nbsp;&nbsp;19    &nbsp; |<br/>
+
+       220 < .10
+       220.maxItems = 20
+       220.wrap = &nbsp;&nbsp;&nbsp;20    &nbsp; |<br/>
+
+       1100 = RESTORE_REGISTER
+
+       wrap = | <br>
+   }
+
+   # Default PAGE object:
+   page = PAGE
+
+   page.10 = COA
+   page.10 {
+       wrap = <pre>|</pre>
+       10 = COA
+       10 {
+           wrap =
+
+           10 < lib.mrow
+           #10 {
+           #    1.os = {$os6}
+           #    10.1.NO.before.wrap  = {$os6}
+           #}
+       }
+   }
+
+
+Test Code 2 Result
+==================
+
+.. highlight:: none
+
+output::
+
+   input:
+      wrap = a   |*|r|||||||*|  z
+
+   output:
+       N     output sequence
+       1     z
+       2     a z
+       3     a r z
+       4     a r  z
+       5     a r   z
+       6     a r    z
+       7     a r    r z
+       8     a r    r  z
+       9     a r    r   z
+      10     a r    r    z
+      11     a r    r    r z
+      12     a r    r    r  z
+      13     a r    r    r   z
+      14     a r    r    r    z
+      15     a r    r    r    r z
+      16     a r    r    r    r  z
+      17     a r    r    r    r   z
+      18     a r    r    r    r    z
+      19     a r    r    r    r    r z
+      20     a r    r    r    r    r  z
 
