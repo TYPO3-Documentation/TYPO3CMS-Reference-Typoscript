@@ -1261,7 +1261,7 @@ Setup::
    lib.marray = HMENU
    lib.marray {
        special = directory
-       # enter a page with at least 9 visible subpages!
+       # enter the uid of a page with at least 20 visible subpages!
        special.value = 2
        maxItems = 999
 
