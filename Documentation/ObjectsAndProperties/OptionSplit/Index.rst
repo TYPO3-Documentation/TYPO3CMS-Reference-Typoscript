@@ -27,7 +27,7 @@ set like this: :html:`<a class="z" ... >`::
      ATagParams = class="z"
    }
 
-How many A-tags will there be? Usually we cannat answer that question in advance
+How many A-tags will there be? Usually we cannot answer that question in advance
 as we cannot know how long the list of menu items is. From zero to many everything
 is possible. Let's describe this as: We have an **output sequence of 0 to N items**.
 
@@ -103,7 +103,7 @@ the cases:
 Subparts
 --------
 
-Each mainpart may further be split into **subparts**. The delimiter for splitting a mainpart into
+Each mainpart may be split further into **subparts**. The delimiter for splitting a mainpart into
 subparts is `||`.
 
 Example::
@@ -893,6 +893,7 @@ Setup::
      1 = TMENU
      1 {
        NO {
+         // the underscore is used to represent each item and avoid a collapsing of whitespace in html
          before = _
          doNotShowLink = 1
        }
@@ -1065,16 +1066,16 @@ Setup::
          <tr>
            <th>optionsplit</th>
            <th>1</th>
-       <th>2</th>
-       <th>3</th>
-       <th>4</th>
-       <th>5</th>
-       <th>6</th>
-       <th>7</th>
-       <th>8</th>
-       <th>9</th>
-       </tr>
-       |
+           <th>2</th>
+           <th>3</th>
+           <th>4</th>
+           <th>5</th>
+           <th>6</th>
+           <th>7</th>
+           <th>8</th>
+           <th>9</th>
+         </tr>
+         |
        </table>
        )
 
@@ -1277,8 +1278,8 @@ Setup::
        1 {
            NO {
                before = _
+               // use non-breaking space for each item instead of underscore
                before = &nbsp;
-               # allWrap.data = {register:os}
                before.wrap = {$os6}
                doNotShowLink = 1
            }
