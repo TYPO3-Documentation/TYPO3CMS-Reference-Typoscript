@@ -33,7 +33,7 @@ templateName
    Description
          This name is used together with the set format to find the template in the given
          templateRootPaths. Use this property to define a content object, which should be
-         used as template file. It is an alternative to ".file". If ".template" is set,
+         used as template file. It is an alternative to ".file". If ".templateName" is set,
          it takes precedence.
 
          **Example:**
