@@ -10,6 +10,7 @@ optionSplit
 .. contents:: On this page:
    :local:
    :backlinks: top
+   :class: compact
 
 
 Introduction
