@@ -2645,7 +2645,7 @@ sendCacheHeaders\_onlyWhenLoginDeniedInBranch
          (allowing caching) the user will still see the page from cache when
          logged in (and so thinks he is not logged in anyway)! The only general
          way to prevent this is to have a different URL for pages when users
-         are logged in (which the extension "realurl" can accomplish).
+         are logged in.
 
          Another way to solve the problem is using this option in combination
          with disabling and enabling logins in various sections of the site. In
