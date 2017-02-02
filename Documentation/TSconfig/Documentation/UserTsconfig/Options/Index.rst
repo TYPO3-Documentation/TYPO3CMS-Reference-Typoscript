@@ -921,47 +921,6 @@ contextMenu.[key].disableItems
 
          edit,upload,rename,new,info,copy,cut,paste,delete
 
-
-.. _useroptions-contextMenu-options-clickMenuTimeOut:
-
-contextMenu.options.clickMenuTimeOut
-====================================
-
-.. container:: table-row
-
-   Property
-         contextMenu.options.clickMenuTimeOut
-
-   Data type
-         integer (1-100)
-
-   Description
-         Number of seconds the click menu is visible in the top frame before it
-         disappears by itself.
-
-   Default
-         5
-
-
-.. _useroptions-contextMenu-options-alwaysShowClickMenuInTopFrame:
-
-contextMenu.options.alwaysShowClickMenuInTopFrame
-=================================================
-
-.. container:: table-row
-
-   Property
-         contextMenu.options.alwaysShowClickMenuInTopFrame
-
-   Data type
-         boolean
-
-   Description
-         If set, then the clickmenu in the top frame is always shown. Default
-         is that it is shown only if the pop-up menus are disabled by user or by
-         browser.
-
-
 .. _useroptions-overridePageModule:
 
 overridePageModule
