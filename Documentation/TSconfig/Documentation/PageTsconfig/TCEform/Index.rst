@@ -482,7 +482,7 @@ above).
 			TCEFORM.tx_myext_table.myfield.PAGE_TSCONFIG_ID = 22
 
          This example might be used for a record in an extension. It refers to
-         a table called "tx\_myext" and the field "myfield". Here the marker
+         a table called "tx\_myext\_table" and the field "myfield". Here the marker
          will be substituted by the value "22".
 
 
@@ -513,7 +513,7 @@ above).
 			TCEFORM.tx_myext_table.myfield.PAGE_TSCONFIG_IDLIST = 20,21,22
 
          This example might be used for a record in an extension. It refers to
-         a table called "tx\_myext" and the field "myfield". Here the marker
+         a table called "tx\_myext\_table" and the field "myfield". Here the marker
          will be substituted by the list of integers.
 
 
@@ -544,7 +544,7 @@ above).
 			TCEFORM.tx_myext_table.myfield.PAGE_TSCONFIG_STR = %hello%
 
          This example might be used for a record in an extension. It refers to
-         a table called "tx\_myext" and the field "myfield". Here the marker
+         a table called "tx\_myext\_table" and the field "myfield". Here the marker
          will be substituted by the given value.
 
 
