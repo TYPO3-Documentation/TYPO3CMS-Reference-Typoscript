@@ -2640,59 +2640,10 @@ sys\_language\_softExclude
 
    Description
          Setting additional "exclude" flags for l10n\_mode in TCA for frontend
-         rendering. Works exactly like sys\_language\_softMergeIfNotBlank (see
-         that for details - same Syntax!).
+         rendering.
 
          Fields set in this property will override if the same field is set for
          "sys\_language\_softMergeIfNotBlank".
-
-
-
-.. _setup-config-sys-language-softmergeifnotblank:
-
-sys\_language\_softMergeIfNotBlank
-""""""""""""""""""""""""""""""""""
-
-.. container:: table-row
-
-   Property
-         sys\_language\_softMergeIfNotBlank
-
-   Data type
-         string
-
-   Description
-         Setting additional "mergeIfNotBlank" fields from TypoScript.
-
-         Background:
-
-         In TCA you can configure :ref:`"l10n_mode" property <t3tca:columns-properties-l10n-mode>`
-         (localization mode) - for each field. Two of the options affect how
-         the frontend displays content (the values "exclude" and "mergeIfNotBlank").
-         The first ("exclude") means that the value from the translated record will
-         not be overlaid the value from the record in the default language.
-         The second ("mergeIfNotBlank") means that it will be overlaid *only*
-         if it has a non-blank value.
-
-         Since it might be practical to set up fields for "mergeIfNotBlank" on
-         a per-site basis this option allows you to override additional fields
-         from tables.
-
-         **Syntax:**
-
-         [table]:[field], [table]:[field], [table]:[field], ...
-
-         **Example**::
-
-            config.sys_language_softMergeIfNotBlank = tt_content:image , tt_content:header
-
-         This setting means that the header and image field of content elements
-         will be used from the translation only if they had a non-blank value.
-         For the image field this might be very practical because it means that
-         the image(s) from the default translation will be used unless other
-         images are inserted!
-
-         See also the :ref:`Frontend Localization Guide <t3l10n:localized-content-fine-tune-overlays>`.
 
 
 
