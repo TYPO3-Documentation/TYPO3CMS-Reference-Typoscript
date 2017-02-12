@@ -410,6 +410,38 @@ Web > Page (mod.web\_layout)
 .. container:: table-row
 
    Property
+         preview
+
+   Data type
+         string
+
+   Description
+         It is possible to render previews of your own content elements in the page module.
+         By referencing a simple Fluid template you can create a visual representation of your
+         content element, making it easier for an editor to understand what is going on on
+         the page.
+
+         The syntax is as follows:
+
+         .. code-block:: typoscript
+
+            mod.web_layout.tt_content.preview.[CTYPE].[list_type value] = EXT:site_mysite/Resources/Private/Templates/Preview/ExamplePlugin.html
+
+         This way you can even switch between previews for your plugins by supplying `list` as CType.
+
+         **Example:**
+
+         .. code-block:: typoscript
+
+            mod.web_layout.tt_content.preview.text = EXT:site_mysite/Resources/Private/Templates/Preview/Text.html
+            mod.web_layout.tt_content.preview.table = EXT:site_mysite/Resources/Private/Templates/Preview/Table.html
+            mod.web_layout.tt_content.preview.list.tx_news = EXT:site_mysite/Resources/Private/Templates/Preview/TxNews.html
+
+
+
+.. container:: table-row
+
+   Property
          allowInconsistentLanguageHandling
 
    Data type
