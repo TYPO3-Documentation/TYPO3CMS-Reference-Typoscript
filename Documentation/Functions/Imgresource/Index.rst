@@ -169,11 +169,10 @@ imgResource.
             tt_content.image.20.1.file.crop =
             
             # Overrule/set cropping for all images
-	         tt_content.image.20.1.file.crop = 50,50,100,100   
+	    tt_content.image.20.1.file.crop = 50,50,100,100   
    
    Default
          not-set (when file/image is a file_reference the crop value of the file reference is used)
-
 
 .. container:: table-row
 
