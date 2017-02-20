@@ -150,6 +150,29 @@ imgResource.
    Default
          0
 
+.. container:: table-row
+
+   Property
+         crop
+
+   Data type
+         string /:ref:`stdWrap <stdwrap>`
+
+   Description
+         It is possible to define a area that should be taken (cropped) from the image. 
+         When not defined in `typoscript` the value wil be taken from the file_reference when 
+         possible. With this setting you can override this behavior. 
+         
+         **Examples:** ::
+            
+            # Disable cropping set by the editor in the back-end
+            tt_content.image.20.1.file.crop =
+            
+            # Overrule/set cropping for all images
+	    tt_content.image.20.1.file.crop = 50,50,100,100   
+   
+   Default
+         not-set (when file/image is a file_reference the crop value of the file reference is used)
 
 .. container:: table-row
 
