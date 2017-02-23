@@ -890,13 +890,13 @@ folderTree.hideCreateFolder
 
 .. _useroptions-contextMenu-key-disableItems:
 
-contextMenu.[key].disableItems
+contextMenu.table.[table][.tree].disableItems
 ==============================
 
 .. container:: table-row
 
    Property
-         contextMenu.[key].disableItems
+         contextMenu.table.[table][.tree].disableItems
 
    Data type
          *(list of items)*
@@ -905,21 +905,29 @@ contextMenu.[key].disableItems
          List of context menu ("clickmenu") items to disable.
 
          "key" points to which kind of icon that brings up the menu, and
-         possible options are "pageTree", "pageList", "folderTree",
-         "folderList". "page" and "folder" obviously point to either the Web or
-         File main module. "Tree" and "List" points to whether the menu is
-         activated from the page/folder tree or the listing of records/files.
+         possible options are "pages" and "sys_file" Those obviously point to 
+         either the Web or File main module. By adding the option "tree", this 
+         settings apply to the page/folder tree, otherwise to the listing of records/files.
 
-         Items to disable are (for "page" type - that is database records):
+         Items to disable for "page" type (that is database records) are:
 
-         view,edit,hide,new,info,copy,cut,paste,delete,move\_wizard,
+         view, edit, new, info, copy, copyRelease, cut, cutRelease, pasteAfter, 
+         pasteInto, more, newWizard, openListModule, mountAsTreeRoot, enable, 
+         disable, delete, history, clearCache
 
-         history,perms,new\_wizard,hide,edit\_access,edit\_pageheader,db\_list,
-         versioning,moreoptions
+         Items to disable for "sys_file" type (that is files/folders) are:
 
-         Items to disable are (for "folder" type - that is files/folders):
+         view, edit, new, info, copy, copyRelease, cut, cutRelease, pasteAfter, 
+         more, newWizard, openListModule, enable, disable, delete, history
+         
+         **Example:**
 
-         edit,upload,rename,new,info,copy,cut,paste,delete
+         .. code-block:: typoscript
+
+            options.contextMenu.table.pages.disableItems = new,newWizard
+            
+            options.contextMenu.table.pages.tree.disableItems = new,newWizard
+
 
 .. _useroptions-overridePageModule:
 
