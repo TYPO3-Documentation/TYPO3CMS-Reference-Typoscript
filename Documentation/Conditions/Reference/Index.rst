@@ -1239,27 +1239,29 @@ Examples:
 
 Put the following condition in your TypoScript. ::
 
-   [userFunc = user_match(checkLocalIP, 192.168)]
+   [userFunc = Vendor\Extension\Condition\MyCondition::match(checkLocalIP, 192.168)]
 
-It will call the function "user_match" with "checkLocalIP" as first
-argument and "192.168" as second argument. Whether the condition
-returns true or false depends on what that function returns.
+It will call the class "Vendor\\Extension\\Condition\\MyCondition" with the
+function "match", "checkLocalIP" as first argument and "192.168" as second argument. 
+Whether the condition returns true or false depends on what that function returns.
 
-Put this function in your AdditionalConfiguration.php
-(localconf.php) file::
+Put this function in your MyCondition.php
+file::
 
-   function user_match($command, $subnet) {
-           switch($command) {
-                   case 'checkLocalIP':
-                           if (strstr(getenv('REMOTE_ADDR'), $subnet)) {
-                                   return TRUE;
-                           }
-                   break;
-                   case 'checkSomethingElse':
-                           // ....
-                   break;
-           }
-           return FALSE;
+   class MyCondition {
+      public static function user_match($command, $subnet) {
+         switch($command) {
+             case 'checkLocalIP':
+               if (strstr(getenv('REMOTE_ADDR'), $subnet)) {
+                  return TRUE;
+               }
+               break;
+             case 'checkSomethingElse':
+                  // ....
+                  break;
+          }
+          return FALSE;
+      }
    }
 
 If the remote address contains "192.168", the condition will return
@@ -1268,10 +1270,10 @@ true, otherwise it will return false.
 The function in the following condition shows how quotes can be used.
 It has three arguments::
 
-    [userFunc = user_testFunctionWithThreeArgumentsSpaces(1, 2, " 3, 4, 5, 6")]
+    [userFunc = Vendor\Extension\Condition\MyCondition::testFunctionWithThreeArgumentsSpaces(1, 2, " 3, 4, 5, 6")]
 
 The function in the next condition also has three arguments and it
 shows how quotes can be escaped::
 
-    [userFunc = user_testFunctionWithThreeArgumentsEscapedQuotes(1, 2, "3, \"4, 5\", 6")]
+    [userFunc = Vendor\Extension\Condition\MyCondition::testFunctionWithThreeArgumentsEscapedQuotes(1, 2, "3, \"4, 5\", 6")]
 
