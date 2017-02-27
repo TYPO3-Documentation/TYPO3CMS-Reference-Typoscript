@@ -1237,30 +1237,33 @@ false.
 Examples:
 ~~~~~~~~~
 
-Put the following condition in your TypoScript. ::
+Put the following condition in your TypoScript::
 
    [userFunc = Vendor\Extension\Condition\MyCondition::match(checkLocalIP, 192.168)]
 
-It will call the class "Vendor\\Extension\\Condition\\MyCondition" with the
-function "match", "checkLocalIP" as first argument and "192.168" as second argument. 
-Whether the condition returns true or false depends on what that function returns.
+It will call the class :php`Vendor\\Extension\\Condition\\MyCondition` with the
+function `match`, `'checkLocalIP'` as first argument and `'192.168'` as second argument.
+The condition is true or false depending on what the function returns.
 
-Put this function in your MyCondition.php
-file::
+Put this function into your :file:`MyCondition.php` file:
+
+.. hint: the default highlighting in the TSRef is 'typoscript'
+
+.. code-block:: php
 
    class MyCondition {
       public static function user_match($command, $subnet) {
          switch($command) {
-             case 'checkLocalIP':
+            case 'checkLocalIP':
                if (strstr(getenv('REMOTE_ADDR'), $subnet)) {
-                  return TRUE;
+                  return true;
                }
                break;
-             case 'checkSomethingElse':
-                  // ....
-                  break;
-          }
-          return FALSE;
+            case 'checkSomethingElse':
+               // ....
+               break;
+         }
+          return false;
       }
    }
 
@@ -1270,10 +1273,10 @@ true, otherwise it will return false.
 The function in the following condition shows how quotes can be used.
 It has three arguments::
 
-    [userFunc = Vendor\Extension\Condition\MyCondition::testFunctionWithThreeArgumentsSpaces(1, 2, " 3, 4, 5, 6")]
+   [userFunc = Vendor\Extension\Condition\MyCondition::testFunctionWithThreeArgumentsSpaces(1, 2, " 3, 4, 5, 6")]
 
 The function in the next condition also has three arguments and it
 shows how quotes can be escaped::
 
-    [userFunc = Vendor\Extension\Condition\MyCondition::testFunctionWithThreeArgumentsEscapedQuotes(1, 2, "3, \"4, 5\", 6")]
+   [userFunc = Vendor\Extension\Condition\MyCondition::testFunctionWithThreeArgumentsEscapedQuotes(1, 2, "3, \"4, 5\", 6")]
 
