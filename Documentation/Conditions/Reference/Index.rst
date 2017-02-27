@@ -1,8 +1,3 @@
-.. ==================================================
-.. FOR YOUR INFORMATION
-.. --------------------------------------------------
-.. -*- coding: utf-8 -*- with BOM.
-
 .. include:: ../../Includes.txt
 
 
@@ -1212,57 +1207,55 @@ Examples:
 
 This example shows how to write own TypoScript conditions and how to
 evaluate their parameters in PHP. With the PHP code following below,
-these three conditions will match:
+these three conditions will match::
 
-.. code-block:: typoscript
+   [Documentation\Examples\TypoScript\ExampleCondition]
+       Your TypoScript code here
+   [global]
 
-	[Documentation\Examples\TypoScript\ExampleCondition]
-	    Your TypoScript code here
-	[global]
+   [Documentation\Examples\TypoScript\ExampleCondition TYPO3]
+       Your TypoScript code here
+   [global]
 
-	[Documentation\Examples\TypoScript\ExampleCondition TYPO3]
-	    Your TypoScript code here
-	[global]
-
-	[Documentation\Examples\TypoScript\ExampleCondition = 42]
-	    Your TypoScript code here
-	[global]
+   [Documentation\Examples\TypoScript\ExampleCondition = 42]
+       Your TypoScript code here
+   [global]
 
 
 .. code-block:: php
 
-	<?php
-	namespace Documentation\Examples\TypoScript;
+   <?php
+   namespace Documentation\Examples\TypoScript;
 
-	/**
-	 * Example condition
-	 */
-	class ExampleCondition extends \TYPO3\CMS\Core\Configuration\TypoScript\ConditionMatching\AbstractCondition {
+   /**
+    * Example condition
+    */
+   class ExampleCondition extends \TYPO3\CMS\Core\Configuration\TypoScript\ConditionMatching\AbstractCondition {
 
-		/**
-		 * Evaluate condition
-		 *
-		 * @param array $conditionParameters
-		 * @return bool
-		 */
-		public function matchCondition(array $conditionParameters) {
-			$result = FALSE;
-			if (empty($conditionParameters)) {
-				$result = TRUE;
-			}
-			if (!empty($conditionParameters) && $conditionParameters[0] === 'TYPO3') {
-				$result = TRUE;
-			}
-			if (!empty($conditionParameters) && substr($conditionParameters[0], 0, 1) === '=') {
-				$conditionParameters[0] = trim(substr($conditionParameters[0], 1));
-				if ($conditionParameters[0] = '42') {
-					$result = TRUE;
-				}
-			}
+      /**
+       * Evaluate condition
+       *
+       * @param array $conditionParameters
+       * @return bool
+       */
+      public function matchCondition(array $conditionParameters) {
+         $result = FALSE;
+         if (empty($conditionParameters)) {
+            $result = TRUE;
+         }
+         if (!empty($conditionParameters) && $conditionParameters[0] === 'TYPO3') {
+            $result = TRUE;
+         }
+         if (!empty($conditionParameters) && substr($conditionParameters[0], 0, 1) === '=') {
+            $conditionParameters[0] = trim(substr($conditionParameters[0], 1));
+            if ($conditionParameters[0] = '42') {
+               $result = TRUE;
+            }
+         }
 
-			return $result;
-		}
-	}
+         return $result;
+      }
+   }
 
 
 .. _condition-userfunc:
@@ -1295,28 +1288,32 @@ false.
 Examples:
 ~~~~~~~~~
 
-Put the following condition in your TypoScript. ::
+Put the following condition in your TypoScript::
 
-   [userFunc = user_match(checkLocalIP, 192.168)]
+   [userFunc = Vendor\Extension\Condition\MyCondition::match(checkLocalIP, 192.168)]
 
-It will call the function "user_match" with "checkLocalIP" as first
-argument and "192.168" as second argument. Whether the condition
-returns true or false depends on what that function returns.
+It will call the class :php:`Vendor\\Extension\\Condition\\MyCondition` with the
+function `match`, `'checkLocalIP'` as first argument and `'192.168'` as second argument.
+The condition evaluates to true or false according to the result of the function.
 
-Put this function in your AdditionalConfiguration.php file::
+Put this function in your :file:`MyCondition.php` file:
 
-   function user_match($command, $subnet) {
-           switch($command) {
-                   case 'checkLocalIP':
-                           if (strstr(getenv('REMOTE_ADDR'), $subnet)) {
-                                   return TRUE;
-                           }
-                   break;
-                   case 'checkSomethingElse':
-                           // ....
-                   break;
-           }
-           return FALSE;
+.. code-block:: php
+
+   class MyCondition {
+      public static function user_match($command, $subnet) {
+         switch($command) {
+            case 'checkLocalIP':
+               if (strstr(getenv('REMOTE_ADDR'), $subnet)) {
+                  return true;
+               }
+               break;
+            case 'checkSomethingElse':
+               // ....
+               break;
+         }
+          return false;
+      }
    }
 
 If the remote address contains "192.168", the condition will return
@@ -1325,10 +1322,9 @@ true, otherwise it will return false.
 The function in the following condition shows how quotes can be used.
 It has three arguments::
 
-    [userFunc = user_testFunctionWithThreeArgumentsSpaces(1, 2, " 3, 4, 5, 6")]
+   [userFunc = Vendor\Extension\Condition\MyCondition::testFunctionWithThreeArgumentsSpaces(1, 2, " 3, 4, 5, 6")]
 
-The function in the next condition also has three arguments and it
-shows how quotes can be escaped::
+The function in the next condition also has three arguments and it shows how quotes can be escaped::
 
-    [userFunc = user_testFunctionWithThreeArgumentsEscapedQuotes(1, 2, "3, \"4, 5\", 6")]
+   [userFunc = Vendor\Extension\Condition\MyCondition::testFunctionWithThreeArgumentsEscapedQuotes(1, 2, "3, \"4, 5\", 6")]
 
