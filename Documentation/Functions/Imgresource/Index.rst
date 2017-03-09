@@ -300,7 +300,7 @@ imgResource.
          stripProfile-command which shrinks the generated thumbnails. See the
          Install Tool for options and details.
 
-         If im\_useStripProfileByDefault is set in the Install Tool, you can
+         If processor\_stripColorProfileByDefault is set in the Install Tool, you can
          deactivate it by setting stripProfile=0.
 
          **Example:** ::
