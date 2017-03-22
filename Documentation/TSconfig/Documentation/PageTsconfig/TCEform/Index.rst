@@ -48,6 +48,8 @@ disable options, blind options in selector boxes etc.
          them to individual demands. So this will influence configuration
          settings in
          $GLOBALS['TCA'][<table name>]['columns'][<field>]['config'][<key>].
+         Not all Properties are alowed to override: Find properties you're allowed to override in
+         pageTs in :code:`typo3/sysext/backend/Classes/Form/Utility/FormEngineUtility.php->$allowOverrideMatrix`
 
 
 .. container:: table-row
