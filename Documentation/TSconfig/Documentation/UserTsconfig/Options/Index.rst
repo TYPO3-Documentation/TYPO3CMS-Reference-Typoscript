@@ -1037,31 +1037,29 @@ defaultFileUploads
          Default number of file upload forms shown in the File->List module
 
 
-.. _useroptions-hideRecords-table:
+.. _useroptions-hideRecords-pages:
 
-hideRecords.[table]
-===================
+hideRecords.pages
+=================
 
 .. container:: table-row
 
    Property
-         hideRecords.[table]
+         hideRecords.pages
 
    Data type
-         *(list of record ids)*
+         *(list of page ids)*
 
    Description
          This hides records in the backend user interface. It is not an access
-
          restriction but makes defined records invisible. That means in
          principle
+         those records can still be edited if the user rights allow. This makes
+         sense if only a specialized module should be used to edit those
+         otherwise hidden records.
 
-         those records can still be edited if the rights allow. This makes
-         sense if a specialized module should be used only to edit those
-         records.
-
-         This option is currently implemented for pages only and has an effect
-         in following places:
+         This option is currently implemented for the pages table only and has
+         an effect in the following places:
 
          \- Page tree navigation frame
 
