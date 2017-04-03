@@ -529,6 +529,25 @@ current cObject record.
 
 *gets the number of the current cObject record*
 
+
+.. _data-type-gettext-session:
+
+session:
+--------
+
+**Syntax**
+
+session: key
+
+The :ts:`key` refers to the session key used to store the value. Subelements may be accessed by using the :ts:`|` symbol to access nested values of arrays or objects in the session
+
+**Example**::
+
+   foo = session: shop_cart|itemCount
+
+*get the number of items of a stored shopping cart array/object*
+
+
 .. _data-type-gettext-debug:
 
 debug:
