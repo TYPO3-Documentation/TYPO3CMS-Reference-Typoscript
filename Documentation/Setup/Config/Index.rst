@@ -1679,7 +1679,7 @@ lockFilePath
    Description
          This is used to lock paths to be "inside" this path.
 
-         Used by "filelist" in stdWrap
+         Used by :ref:`stdwrap-filelist` in stdWrap
 
    Default
          fileadmin/
