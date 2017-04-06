@@ -1677,9 +1677,12 @@ lockFilePath
          string
 
    Description
-         This is used to lock paths to be "inside" this path.
+         This value affects the functionality of :ref:`stdwrap-filelist` which is
+         part of the :ref:`stdWrap` suite.
 
-         Used by :ref:`stdwrap-filelist` in stdWrap
+         Set :ts:`lockFilePath` to the **relative** path of a folder.
+         `filelist` will only return values for a folder that starts with the path
+         given by :ts:`lockFilePath`.
 
    Default
          fileadmin/
