@@ -299,15 +299,15 @@ filelist
             10 = TEXT
             10.filelist = fileadmin/images/ | gif,jpg,jpeg,png | name | 0 | 0
             
-         Add you own postprocessing to it for further processing::
+         You maybe want to add your own postprocessing to it for further selection::
          
             10.stdWrap.postUserFunc = My\NameSpace\MyClass->findImageForNow
             
-         with - maybe - some logic in PHP:
+         Possible logic in PHP:
          
          .. code-block:: php
 
-            class My\NameSpaceMyClass
+            class My\NameSpace\MyClass
             {
 
                public function findImageForNow($content, $conf)
