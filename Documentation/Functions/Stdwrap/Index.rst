@@ -278,17 +278,47 @@ filelist
 
          The value is exploded by "\|" into parameters:
 
-         1: The path
+         1. The path
 
-         2: comma-separated list of allowed extensions (no spaces between);
-         if empty, all extensions are allowed.
+         2. comma-separated list of allowed extensions (no spaces between);
+            if empty, all extensions are allowed.
 
-         3: sorting: name, size, ext, date, mdate (modification date).
+         3. sorting: name, size, ext, date, mdate (modification date).
 
-         4: reverse: Set to "r" if you want a reversed sorting.
+         4. reverse: Set to "r" if you want a reversed sorting.
 
-         5: fullpath\_flag: If set, the filelist is returned with complete
-         paths, and not just the filename.
+         5. `fullpath_flag`: If set, the filelist is returned with complete
+            paths, and not just the filename.
+         
+         Also see :ref:`setup-config-lockfilepath` on how to restrict file search.
+
+   Example
+         Find just the names of image files in :file:`fileadmin/images`,
+         sorted ascending by name::
+         
+            10 = TEXT
+            10.filelist = fileadmin/images/ | gif,jpg,jpeg,png | name | 0 | 0
+            
+         Add you own postprocessing to it for further processing::
+         
+            10.stdWrap.postUserFunc = My\NameSpace\MyClass->findImageForNow
+            
+         with - maybe - some logic in PHP:
+         
+         .. code-block:: php
+
+            class My\NameSpaceMyClass
+            {
+
+               public function findImageForNow($content, $conf)
+               {
+                  $files = explode(',', $content);
+                  // $result = ...
+                  return $result
+               }
+            }   
+                  
+
 
 
 .. _stdwrap-preuserfunc:
