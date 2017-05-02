@@ -10,7 +10,7 @@ FORM
 
    The following only applies, if the system extension "form" is *not*
    installed. **If sysext:form is installed**, stop reading here and continue with
-   `sysext:form's own documentation <https://docs.typo3.org/typo3cms/extensions/form/>`__.
+   `sysext:form's own documentation <https://docs.typo3.org/typo3cms/drafts/code.tritum.de/TYPO3.CMS/Form_Documentation/>`__.
 
 .. note::
 
