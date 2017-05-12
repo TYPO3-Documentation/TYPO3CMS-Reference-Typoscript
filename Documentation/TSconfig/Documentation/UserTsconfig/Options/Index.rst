@@ -890,13 +890,13 @@ folderTree.hideCreateFolder
 
 .. _useroptions-contextMenu-key-disableItems:
 
-contextMenu.table.[table][.tree].disableItems
-==============================
+contextMenu.table.[tableName][.context].disableItems
+====================================================
 
 .. container:: table-row
 
    Property
-         contextMenu.table.[table][.tree].disableItems
+         contextMenu.table.[tableName][.context].disableItems
 
    Data type
          *(list of items)*
@@ -904,21 +904,24 @@ contextMenu.table.[table][.tree].disableItems
    Description
          List of context menu ("clickmenu") items to disable.
 
-         "key" points to which kind of icon that brings up the menu, and
-         possible options are "pages" and "sys_file" Those obviously point to 
-         either the Web or File main module. By adding the option "tree", this 
-         settings apply to the page/folder tree, otherwise to the listing of records/files.
+         The "[tableName]" refers to the type of the record (database table name)
+         the context menu is shown for e.g.  "pages", "sys_file", "tt_content", etc. 
+         
+         Optional key "[.context]" refers to the place from which the context menu
+         is triggered. The core uses just one context called **"tree"** for context menus
+         triggered from page tree and folder tree.
+         This way you can disable certain options for one context, but keep them for the other.
 
-         Items to disable for "page" type (that is database records) are:
+         Items to disable for "page" type are:
 
-         view, edit, new, info, copy, copyRelease, cut, cutRelease, pasteAfter, 
-         pasteInto, more, newWizard, openListModule, mountAsTreeRoot, enable, 
-         disable, delete, history, clearCache
+         view, edit, new, info, copy, copyRelease, cut, cutRelease, pasteAfter,
+         pasteInto, newWizard, openListModule, mountAsTreeRoot, enable, disable,
+         delete, history, clearCache
 
          Items to disable for "sys_file" type (that is files/folders) are:
 
-         view, edit, new, info, copy, copyRelease, cut, cutRelease, pasteAfter, 
-         more, newWizard, openListModule, enable, disable, delete, history
+         edit, rename, upload, new, info, copy, copyRelease, cut, cutRelease, pasteInto,
+         delete
          
          **Example:**
 
@@ -927,6 +930,13 @@ contextMenu.table.[table][.tree].disableItems
             options.contextMenu.table.pages.disableItems = new,newWizard
             
             options.contextMenu.table.pages.tree.disableItems = new,newWizard
+
+         .. note::
+
+            Context menu rendering was refactored in v8.6, so when migrating from v7
+            some of the settings needs to be tuned. See chapter in the 
+            :ref:`TYPO3 API documentation <t3coreapi:context-menu>` 
+            regarding new context menu implementation.
 
 
 .. _useroptions-overridePageModule:
