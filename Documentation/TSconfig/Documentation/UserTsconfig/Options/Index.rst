@@ -891,7 +891,7 @@ folderTree.hideCreateFolder
 .. _useroptions-contextMenu-key-disableItems:
 
 contextMenu.table.[tableName][.context].disableItems
-==============================
+====================================================
 
 .. container:: table-row
 
@@ -934,7 +934,8 @@ contextMenu.table.[tableName][.context].disableItems
          .. note::
 
             Context menu rendering was refactored in v8.6, so when migrating from v7
-            some of the settings needs to be tuned. See chapter in the :ref:`TYPO3 API documentation<t3coreapi:context-menu>` 
+            some of the settings needs to be tuned. See chapter in the 
+            :ref:`TYPO3 API documentation <t3coreapi:context-menu>` 
             regarding new context menu implementation.
 
 
