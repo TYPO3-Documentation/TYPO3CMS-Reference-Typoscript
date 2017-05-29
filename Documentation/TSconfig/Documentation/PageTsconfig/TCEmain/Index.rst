@@ -327,8 +327,8 @@ preview
          You may override each parameter by using the :ts:`additionalGetParameters` configuration option.
          
          .. note::
-             Make sure :ts:`options.saveDocView.<table name>` is not set, otherwise the save+view button will not be displayed when
-             editing records of your table.
+             Make sure not to set :ts:`options.saveDocView.<table name> = 0`, otherwise the save+view button will not be displayed
+             when editing records of your table.
 
 
 .. _pagetcemain-previewdomain:
