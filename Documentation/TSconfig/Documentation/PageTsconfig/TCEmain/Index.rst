@@ -325,6 +325,10 @@ preview
 
          The core automatically sets the "no_cache" and the "L" parameter. The language matches the language of the current record.
          You may override each parameter by using the :ts:`additionalGetParameters` configuration option.
+         
+         .. note::
+             Make sure :ts:`options.saveDocView.<table name>` is not set, otherwise the save+view button will not be displayed when
+             editing records of your table.
 
 
 .. _pagetcemain-previewdomain:
