@@ -526,7 +526,7 @@ Operator:       Function:
 
 <=              The hour must be less than or equal to the value.
 
->=              The hour must be greater than or equal to the value.
+=>              The hour must be greater than or equal to the value.
 
 !=              The hour must be not equal to the value. Since TYPO3 6.0
                 comparison with a list of values is possible as well. The
