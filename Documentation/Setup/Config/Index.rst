@@ -2175,7 +2175,7 @@ removeDefaultJS
             config.removeDefaultJS = 1
 
    Default
-         1
+         external
 
 
 
