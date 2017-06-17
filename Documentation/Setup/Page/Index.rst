@@ -264,6 +264,9 @@ cssInline
 
                 20 = TEXT
                 20.value = h1 span {color: blue;}
+
+                30 = FILE
+                30.file = EXT:mysite/Resources/Public/StyleSheets/styles.css
             }
 
 
@@ -419,8 +422,7 @@ includeCSS.[array]
               file2.media = print
               ie6Style = fileadmin/css/style3.css
               ie6Style.allWrap = <!--[if lte IE 7]>|<![endif]-->
-              cooliris = http://www.cooliris.com/shared/
-                         resources/css/global.css
+              cooliris = http://www.cooliris.com/shared/resources/css/global.css
               cooliris.external = 1
             }
 
