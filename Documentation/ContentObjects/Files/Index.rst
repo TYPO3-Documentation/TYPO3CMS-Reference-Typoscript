@@ -331,7 +331,7 @@ the file itself or from the reference to it (title):
 
         renderObj = IMAGE
         renderObj {
-            file.import.data = file:current:publicUrl
+            file.import.dataWrap = {file:current:storage}:{file:current:identifier}
             altText.data = file:current:title
             wrap = <div class="slide">|</div>
         }
@@ -357,7 +357,7 @@ them up and down the page tree, a process called "sliding".
 
         renderObj = IMAGE
         renderObj {
-            file.import.data = file:current:publicUrl
+            file.import.dataWrap = {file:current:storage}:{file:current:identifier}
             altText.data = file:current:title
             wrap = <div class="banner">|</div>
         }
