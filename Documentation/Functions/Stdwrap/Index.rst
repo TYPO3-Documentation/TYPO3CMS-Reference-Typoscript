@@ -1090,14 +1090,14 @@ substring
 
    Description
          Returns the substring with [p1] and [p2] sent as the 2nd and 3rd
-         parameter to the PHP substring function.
+         parameter to the PHP `mb_substr <http://www.php.net/mb_substr>`_ function.
 
          Uses "UTF-8" for the operation.
 
 
 .. _stdwrap-removebadhtml:
 
-removeBadHTML
+removeBadHTML_
 '''''''''''''
 
 .. container:: table-row
