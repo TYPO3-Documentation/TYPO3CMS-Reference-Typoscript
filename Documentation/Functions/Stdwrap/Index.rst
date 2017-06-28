@@ -1097,7 +1097,7 @@ substring
 
 .. _stdwrap-removebadhtml:
 
-removeBadHTML_
+removeBadHTML
 '''''''''''''
 
 .. container:: table-row
