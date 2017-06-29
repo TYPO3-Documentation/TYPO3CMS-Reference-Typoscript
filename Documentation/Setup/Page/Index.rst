@@ -22,12 +22,6 @@ the content-page on a website.
 Most of this code is executed in the PHP script
 *typo3/sysext/frontend/Classes/Page/PageGenerator.php*.
 
-.. only:: html
-
-   .. contents::
-      :local:
-      :depth: 1
-
 Properties
 ^^^^^^^^^^
 
@@ -60,7 +54,7 @@ Properties
    `javascriptLibs`_              *(array of strings)*
    `jsFooterInline`_              ->CARRAY
    `jsInline`_                    ->CARRAY
-   `meta`_                        ->META
+   `meta`_                        :ref:`->META <meta>`
    `shortcutIcon`_                :ref:`data-type-resource`
    `stdWrap`_                     ->:ref:`stdWrap <stdwrap>`
    `stylesheet`_                  :ref:`data-type-resource`
@@ -852,7 +846,11 @@ meta
          meta
 
    Data type
-         ->META
+         :ref:`->META <meta>`
+         
+   Description
+         ./.
+   
 
 
 
