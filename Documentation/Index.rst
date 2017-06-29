@@ -23,7 +23,7 @@ TypoScript Reference
       forAdmins, forIntermediates
 
 :Copyright:
-      2000-2015
+      since 2000
 
 :Author:
       Documentation Team
