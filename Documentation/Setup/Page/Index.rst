@@ -56,7 +56,7 @@ Properties
    `jsInline`_                    ->CARRAY
    `meta`_                        :ref:`->META <meta>`
    `shortcutIcon`_                :ref:`data-type-resource`
-   `stdWrap`_                     ->:ref:`stdWrap <stdwrap>`
+   `stdWrap`_                     :ref:`stdWrap <stdwrap>`
    `stylesheet`_                  :ref:`data-type-resource`
    `typeNum`_                     :ref:`data-type-integer`                                 0
    `wrap`_                        wrap
@@ -64,12 +64,6 @@ Properties
 
 Property details
 ^^^^^^^^^^^^^^^^
-
-.. only:: html
-
-   .. contents::
-      :local:
-      :depth: 1
 
 .. ### BEGIN~OF~TABLE ###
 
