@@ -2557,33 +2557,46 @@ sys\_language\_mode
          string
 
    Description
-         Setting various modes of handling localization.
-
+         Configures what system should do when a page is not translated
+         to the requested language.
+         It is only evaluated when `sys_language_uid` is greater than `0`,
+         and the requested page translation is NOT available.
+         Internally this setting influences the value set to the 
+         `$GLOBALS['TSFE']->sys_language_content`.
+         
          The syntax is "[keyword] ; [value]".
 
-         Possible keywords are:
+         **Possible keywords are:**
 
-         [default] - The system will look for a translation of the page (from
-         "Alternative Page Language" table) and if it is not found it will fall
-         back to the default language and display that.
+         [empty] - If not set, and the page is not translated, the system will
+         behave as if the default language was requested.
+         Internally both `$GLOBALS['TSFE']->sys_language_content`
+         and `$GLOBALS['TSFE']->sys_language_uid` whill be set to 0;
 
-         **content\_fallback:** Recommended. The system will always operate
+         **content\_fallback** - Recommended. The system will always operate
          with the selected language even if the page is not translated with a
          page overlay record. This will keep menus etc. translated. However,
          the *content* on the page can still fall back to another language,
-         defined by the value of this keyword, e.g. "content\_fallback ; 1,0"
+         defined by the value of this keyword, e.g. :ts:`content_fallback;1,3,0`
          to fall back to the content of sys\_language\_uid 1 and if that is not
          present either, to default (0).
+         Note that the fallback is on the page level, not on the content level.
+         This means that once a translated page record is found in the fallback
+         chain, system will try to use this language for the rendering even
+         if there is no content translated.
 
-         **strict:** The system will report an error if the requested
-         translation does not exist. Basically this means that all pages with
+         **strict** -  If the requested translation does not exist the system
+         will report a Page Not Found (404) error. Basically this means that all pages with
          gray background in the Web > Info / Localization overview module will
          fail (they would otherwise fall back to default language in one way
          or another).
 
-         **ignore:** The system will stay with the selected language even if
+         **ignore** - The system will stay with the selected language even if
          the page is not translated and there's no content available in this
          language, so you can handle that situation on your own then.
+         System will render the page and the content as this translation would exist.
+         Internally $GLOBALS['TSFE']->sys_language_content` is set to the value of the
+         `$GLOBALS['TSFE']->sys_language_uid`.
 
          An in-depth discussion is found in the
          :ref:`Frontend Localization Guide <t3l10n:localization-modes>`.
@@ -2603,11 +2616,16 @@ sys\_language\_overlay
          boolean / keyword
 
    Description
-         If set, records from certain tables selected by the CONTENT cObject
-         using the "languageField" setting will select the default language (0)
-         instead of any language set by sys\_language\_uid /
-         sys\_language\_mode. In addition the system will look for a
-         translation of the selected record and overlay configured fields.
+         
+         Defines whether TYPO3 should use content overlay technique when
+         fetching translated content. Content overlay means fetching records
+         from the default language first and then replacing them with translated
+         versions if available.
+         
+         It is only evaluated when `$TSFE->sys_language_content` is `> 0`.
+         Internally it sets the property `$TSFE->sys_language_contentOL` at a request.
+         Further calls via `$TSFE->sys_page->getRecordOverlay` receive this value 
+         to see if an overlay should happen.
 
          The requirements for this is that the table is configured with
          "languageField" and "transOrigPointerField" in the [ctrl] section of
@@ -2620,11 +2638,19 @@ sys\_language\_overlay
          configuration can be done with Page TSconfig for a section of the
          website using the object path "mod.web\_layout.defLangBinding = 1".
 
-         Keyword:
+         **Possible values:**
+         
+         **0** - Just fetch records from selected (`$TSFE->sys_language_content`) language,
+         no overlay will happen, no fetching of the records from the default language.
+         This boils down to "free mode" language handling. This is the only mode which shows
+         records without default language parent (with small exception to cases when you manually set
+         `select.includeRecordsWithoutDefaultTranslation = 1` for CONTENT TS object).
+         
+         **1** - Fetch records from the default language and overlay them with translations.
+         If a record is not translated default language version will be shown.
 
-         **hideNonTranslated:** If this keyword is used a record that has no
-         translation will not be shown. The default is that records with no
-         translation will show up in the default language.
+         **hideNonTranslated** -  Fetch records from the default language and overlay
+         them with translations. If some record is not translated it will not be shown.
 
 
 
@@ -2664,15 +2690,30 @@ sys\_language\_uid
          integer
 
    Description
-         This value points to the uid of a record from the "sys\_language"
-         table and if set, this means that various parts of the frontend
-         display code will select records which are assigned to this language.
+         This value points to the uid of a record from the "sys\_language".
+         Various parts of the frontend rendering code will select records 
+         which are assigned to this language.
          See ->SELECT
 
-         Internally, the value is depending on whether an Alternative Page
-         Language record can be found with that language. If not, the value
-         will default to zero (default language) except if
-         "sys\_language\_mode" is set to a value like "content\_fallback".
+         Internally this value is used to initialize the TypoScriptFrontendController
+         `$GLOBALS['TSFE']->sys_language_uid` property.
+         The `$GLOBALS['TSFE']->sys_language_content` property is set based
+         on the value of the `sys_language_uid` and other settings like 
+         `sys_language_mode`.
+
+         It is usually set to the value of the &L request parameter,
+         using TypoScript condition like:
+         
+         **Example**::
+
+            config.sys_language_uid = 0
+
+            [globalVar = GP:L = 1]
+               config.sys_language_uid = 1
+            [GLOBAL]
+            [globalVar = GP:L = 2]
+               config.sys_language_uid = 2
+            [GLOBAL]
 
 
 
