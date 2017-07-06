@@ -2561,7 +2561,7 @@ sys\_language\_mode
             If not set and the page is not translated, the system will
             behave as if the default language was requested.
             Internally both :php:`$GLOBALS['TSFE']->sys_language_content`
-            and :phpp:`$GLOBALS['TSFE']->sys_language_uid` whill be set to `0`.
+            and :phpp:`$GLOBALS['TSFE']->sys_language_uid` will be set to `0`.
 
          content\_fallback
             Recommended. The system will always operate
