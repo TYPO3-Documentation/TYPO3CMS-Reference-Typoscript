@@ -2595,7 +2595,7 @@ sys\_language\_mode
          the page is not translated and there's no content available in this
          language, so you can handle that situation on your own then.
          System will render the page and the content as this translation would exist.
-         Internally $GLOBALS['TSFE']->sys_language_content` is set to the value of the
+         Internally `$GLOBALS['TSFE']->sys_language_content` is set to the value of the
          `$GLOBALS['TSFE']->sys_language_uid`.
 
          An in-depth discussion is found in the
