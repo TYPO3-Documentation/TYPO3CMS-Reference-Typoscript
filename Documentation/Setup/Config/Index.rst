@@ -2568,8 +2568,8 @@ sys\_language\_mode
             with the selected language even if the page is not translated and has no
             page overlay record. This will keep menus etc. translated. However,
             the *content* on the page can still fall back to another language,
-            defined by the value of this keyword, e.g. :ts:`content_fallback;1,3,0`
-            to fall back to the content of sys\_language\_uid 1 then to 3 and if that is not
+            defined by the value of this keyword, e.g. :ts:`content_fallback;1,3,0`,
+            to fall back to the content of sys\_language\_uid 1, then to 3 and if that is not
             present either, to default (0).
             
             Note that the fallback affects all content of the page.
