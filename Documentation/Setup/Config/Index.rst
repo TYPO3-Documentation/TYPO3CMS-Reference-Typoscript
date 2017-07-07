@@ -2561,7 +2561,7 @@ sys\_language\_mode
             If not set and the page is not translated, the system will
             behave as if the default language was requested.
             In that case both :php:`$GLOBALS['TSFE']->sys_language_content`
-            and :phpp:`$GLOBALS['TSFE']->sys_language_uid` will be set to `0`.
+            and :php:`$GLOBALS['TSFE']->sys_language_uid` will be set to `0`.
 
          content\_fallback
             Recommended. The system will always operate
@@ -2569,8 +2569,9 @@ sys\_language\_mode
             page overlay record. This will keep menus etc. translated. However,
             the *content* on the page can still fall back to another language,
             defined by the value of this keyword, e.g. :ts:`content_fallback;1,3,0`,
-            to fall back to the content of sys\_language\_uid 1, then to 3 and if that is not
-            present either, to default (0).
+            to fall back to the content of sys\_language\_uid 1, after that to the
+            content of sys\_language\_uid 3 and if that is not present either,
+            to default (0).
             
             Note that the fallback affects all content of the page.
             This means that once a translated page record is found in the fallback
