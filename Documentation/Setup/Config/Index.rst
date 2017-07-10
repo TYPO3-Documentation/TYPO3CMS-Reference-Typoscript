@@ -416,12 +416,13 @@ cache\_clearAtMidnight
    Data type
          boolean
 
+   Default
+         false
+
    Description
          With this setting the cache always expires at midnight of the day, the
          page is scheduled to expire.
 
-   Default
-         false
 
 
 
@@ -438,14 +439,15 @@ cache\_period
    Data type
          integer
 
+   Default
+         86400 *(= 24 hours)*
+
    Description
          The number of second a page may remain in cache.
 
          This value is overridden by the value set in the page-record
          (field="cache\_timeout") if this value is greater than zero.
 
-   Default
-         86400 *(= 24 hours)*
 
 
 
@@ -484,6 +486,9 @@ compressCss
    Data type
          boolean
 
+   Default
+         0
+
    Description
          If set, CSS files referenced in page.includeCSS and the like will be
          minified and compressed. Does not work on files, which are referenced
@@ -510,8 +515,6 @@ compressCss
                TYPO3\CMS\Core\Extension\ExtensionManager::extPath($_EXTKEY) .
                'Classes/class.tx_myext_cssCompressHandler.php:tx_myext_cssCompressHandler->compressCss';
 
-   Default
-         0
 
 
 
@@ -527,6 +530,9 @@ compressJs
 
    Data type
          boolean
+
+   Default
+         0
 
    Description
          Enabling this option together with
@@ -557,8 +563,6 @@ compressJs
                TYPO3\CMS\Core\Extension\ExtensionManager::extPath($_EXTKEY) .
                'Classes/class.tx_myext_jsCompressHandler.php:tx_myext_jsCompressHandler->compressJs';
 
-   Default
-         0
 
 
 
@@ -574,6 +578,9 @@ concatenateCss
 
    Data type
          boolean
+
+   Default
+         0
 
    Description
          Setting config.concatenateCss merges Stylesheet files referenced in
@@ -596,8 +603,6 @@ concatenateCss
                TYPO3\CMS\Core\Extension\ExtensionManager::extPath($_EXTKEY) .
                'Classes/class.tx_myext_cssConcatenateHandler.php:tx_myext_cssConcatenateHandler->concatenateCss';
 
-   Default
-         0
 
 
 
@@ -613,6 +618,9 @@ concatenateJs
 
    Data type
          boolean
+
+   Default
+         0
 
    Description
          Setting config.concatenateJs merges JavaScript files referenced in
@@ -633,8 +641,6 @@ concatenateJs
                TYPO3\CMS\Core\Extension\ExtensionManager::extPath($_EXTKEY) .
                'Classes/class.tx_myext_jsConcatenateHandler.php:tx_myext_jsConcatenateHandler->concatenateJs';
 
-   Default
-         0
 
 
 
@@ -650,6 +656,9 @@ concatenateJsAndCss
 
    Data type
          boolean
+
+   Default
+         0
 
    Description
          Setting config.concatenateJsAndCss bundles JS and CSS files in the FE.
@@ -671,8 +680,6 @@ concatenateJsAndCss
          **Note:** This property was deprecated and is planned to be removed!
          Use config.concatenateJs and config.concatenateCss instead.
 
-   Default
-         0
 
 
 
@@ -826,6 +833,9 @@ disableAllHeaderCode
    Data type
          boolean
 
+   Default
+         false
+
    Description
          If this is set, none of the features of the PAGE object is processed
          and the content of the page will be the result of the cObject array
@@ -835,9 +845,6 @@ disableAllHeaderCode
 
          Use this feature in templates supplying other content-types than HTML.
          That could be an image or a WAP-page!
-
-   Default
-         false
 
 
 
@@ -854,6 +861,9 @@ disableBodyTag
    Data type`
       boolean
 
+   Default
+      0 (false)
+
    Description
       If this option is set the TYPO3 core will not generate the
       opening `<body ...>` part of the body tag. The closing `</body>`
@@ -863,9 +873,6 @@ disableBodyTag
       :ts:`bodyTagCObject`, :ts:`bodyTag`, :ts:`bodyTagMargins` and
       :ts:`bodyTagAdd`. With :ts:`config.disableBodyTag =1` the others are
       ignored and don't have any effect.
-
-   Default
-      0 (false)
 
 
 
@@ -960,11 +967,11 @@ disablePreviewNotification
    Data type
          boolean
 
-   Description
-         Disables the "preview" notification box completely.
-
    Default
          0
+
+   Description
+         Disables the "preview" notification box completely.
 
 .. _disableLanguageHeader:
 
@@ -979,6 +986,9 @@ disableLanguageHeader
    Data type
          boolean
 
+   Default
+         0
+
    Description
          TYPO3 by default sends a "Content-language: XX" HTTP header,
          where "XX" is the ISO code of the according lanuage.
@@ -992,9 +1002,6 @@ disableLanguageHeader
          sys_language. That value may be overwritten by config.sys_language_isocode.
 
          If config.disableLanguageHeader is set, this header will not be sent.
-
-   Default
-         0
 
 .. _setup-config-doctype:
 
@@ -1103,6 +1110,9 @@ enableContentLengthHeader
    Data type
          boolean
 
+   Default
+         1
+
    Description
          If set, a header "content-length: [bytes of content]" is sent.
 
@@ -1110,9 +1120,6 @@ enableContentLengthHeader
          that the content length header cannot include the length of these
          objects and the content-length will cut off the length of the
          document in some browsers.
-
-   Default
-         1
 
 
 .. _setup-config-exttarget:
@@ -1128,11 +1135,11 @@ extTarget
    Data type
          target
 
-   Description
-         Default external target. Used by typolink if no extTarget is set
-
    Default
          \_top
+
+   Description
+         Default external target. Used by typolink if no extTarget is set
 
 
 
@@ -1190,12 +1197,12 @@ formMailCharset
    Data type
          string
 
+   Default
+         "" *(unset)*
+
    Description
          Character set of mails sent through TYPO3 mail forms. If it is
          unset, the character set defined in config.metaCharset is used.
-
-   Default
-         "" *(unset)*
 
 
 
@@ -1211,6 +1218,9 @@ ftu
 
    Data type
          boolean
+
+   Default
+         false
 
    Description
          If set, the "&ftu=...." GET-fallback identification is inserted.
@@ -1231,9 +1241,6 @@ ftu
          use cookies.
 
          "ftu" means fe\_typo\_user ("fe" is "frontend").
-
-   Default
-         false
 
 
 
@@ -1302,6 +1309,9 @@ htmlTag\_langKey
    Data type
          string
 
+   Default
+         en
+
    Description
          Allows you to set the language value for the attributes "xml:lang" and
          "lang" in the <html> tag (when using "config.doctype = xhtml\*").
@@ -1312,9 +1322,6 @@ htmlTag\_langKey
          **Example**::
 
             config.htmlTag_langKey = en-US
-
-   Default
-         en
 
 
 
@@ -1378,12 +1385,12 @@ index\_descrLgd
    Data type
          integer
 
+   Default
+         200
+
    Description
          This indicates how many chars to preserve as description for an
          indexed page. This may be used in the search result display.
-
-   Default
-         200
 
 
 
@@ -1438,12 +1445,12 @@ index\_metatags
    Data type
          boolean
 
+   Default
+         true
+
    Description
          This allows to turn on or off the indexing of metatags. It is turned
          on by default.
-
-   Default
-         true
 
 
 
@@ -1460,6 +1467,9 @@ inlineStyle2TempFile
    Data type
          boolean
 
+   Default
+         1
+
    Description
          If set, the inline styles TYPO3 controls in the core are written to a
          file, typo3temp/assets/css/stylesheet\_[hashstring].css, and the header
@@ -1470,9 +1480,6 @@ inlineStyle2TempFile
          **Example**::
 
             config.inlineStyle2TempFile = 0
-
-   Default
-         1
 
 
 
@@ -1665,6 +1672,9 @@ lockFilePath
    Data type
          string
 
+   Default
+         fileadmin/
+
    Description
          This value affects the functionality of :ref:`stdwrap-filelist` which is
          part of the :ref:`stdWrap` suite.
@@ -1672,9 +1682,6 @@ lockFilePath
          Set :ts:`lockFilePath` to the **relative** path of a folder.
          `filelist` will only return values for a folder that starts with the path
          given by :ts:`lockFilePath`.
-
-   Default
-         fileadmin/
 
 
 
@@ -1760,6 +1767,9 @@ metaCharset
    Data type
          string
 
+   Default
+         utf-8
+
    Description
          Charset used for the output document. For example in the meta tag::
 
@@ -1774,9 +1784,6 @@ metaCharset
          UTF-8 for internal processing. This conversion takes time of
          course so there is another good reason to use the same charset for
          both.
-
-   Default
-         utf-8
 
 
 
@@ -1931,13 +1938,13 @@ no\_cache
    Data type
          boolean
 
+   Default
+         -
+
    Description
          If this is set to true, the page will not be cached. If set to false,
          it's ignored. Other parameters may have set it to true of other
          reasons.
-
-   Default
-         -
 
 
 
@@ -1954,6 +1961,9 @@ noPageTitle
    Data type
          integer
 
+   Default
+         0
+
    Description
          If you only want to have the site name (from the template record) in
          your <title> tag, set this to 1. If the value is 2 then the <title>
@@ -1962,9 +1972,6 @@ noPageTitle
          Please take note that this tag is required for (X)HTML compliant
          output, so you should only disable this tag if you generate it
          manually already.
-
-   Default
-         0
 
 
 
@@ -1980,6 +1987,9 @@ pageGenScript
 
    Data type
          resource
+
+   Default
+         typo3/sysext/frontend/Classes/Page/PageGenerator.php
 
    Description
          Alternative page generation script for applications using
@@ -1998,9 +2008,6 @@ pageGenScript
 
          is set in LocalConfiguration.php.
 
-   Default
-         typo3/sysext/frontend/Classes/Page/PageGenerator.php
-
 
 
 .. _setup-config-pagerenderertemplatefile:
@@ -2016,6 +2023,9 @@ pageRendererTemplateFile
    Data type
          string
 
+   Default
+         EXT:core/Resources/Private/Templates/PageRenderer.html
+
    Description
          Sets the template for page renderer class
          TYPO3\CMS\Core\Page\PageRenderer.
@@ -2023,9 +2033,6 @@ pageRendererTemplateFile
          **Example**::
 
             pageRendererTemplateFile = fileadmin/test_pagerender.html
-
-   Default
-         EXT:core/Resources/Private/Templates/PageRenderer.html
 
 
 .. _setup-config-pagetitle:
@@ -2061,6 +2068,9 @@ pageTitleFirst
    Data type
          boolean
 
+   Default
+         0
+
    Description
          TYPO3 by default prints a title tag in the format "website: page
          title".
@@ -2068,9 +2078,6 @@ pageTitleFirst
          If pageTitleFirst is set (and if the page title is printed), then the
          page title will be printed IN FRONT OF the template title. So it will
          look like "page title: website".
-
-   Default
-         0
 
 
 
@@ -2086,6 +2093,9 @@ pageTitleSeparator
 
    Data type
          string /:ref:`stdWrap <stdwrap>`
+
+   Default
+         : *(colon with following space)*
 
    Description
          The signs which should be printed in the title tag between the website
@@ -2109,9 +2119,6 @@ pageTitleSeparator
             config.pageTitleSeparator.noTrimWrap = |||
 
          This produces a title tag with the content "website*page title".
-
-   Default
-         : *(colon with following space)*
 
 
 
@@ -2149,6 +2156,9 @@ removeDefaultJS
    Data type
          boolean / string
 
+   Default
+         external
+
    Description
          If set, the default JavaScript in the header will be removed.
 
@@ -2162,9 +2172,6 @@ removeDefaultJS
 
             config.removeDefaultJS = external
             config.removeDefaultJS = 1
-
-   Default
-         external
 
 
 
@@ -2396,11 +2403,11 @@ spamProtectEmailAddresses\_atSubst
    Data type
          string
 
-   Description
-         Substitute label for the at-sign (@).
-
    Default
          (at)
+
+   Description
+         Substitute label for the at-sign (@).
 
 
 
@@ -2417,13 +2424,13 @@ spamProtectEmailAddresses\_lastDotSubst
    Data type
          string
 
+   Default
+         . *(just a simple dot)*
+
    Description
          Substitute label for the last dot in the email address.
 
          **Example**: (dot)
-
-   Default
-         . *(just a simple dot)*
 
 
 
@@ -2508,6 +2515,9 @@ sys\_language\_isocode\_default
    Data type
          string
 
+   Default
+         en
+
    Description
          ISO 639-1 language code for the default language (that is
          :ts:`sys_language_uid = 0`).
@@ -2526,9 +2536,6 @@ sys\_language\_isocode\_default
                config.sys_language_isocode = fr
 
             [GLOBAL]
-
-   Default
-         en
 
 
 
@@ -2550,9 +2557,9 @@ sys\_language\_mode
          to the requested language.
          It is only evaluated when :ts:`sys_language_uid` is greater than `0`
          and the requested page translation is NOT available.
-         Internally this setting corresponds to 
+         Internally this setting corresponds to
          :php:`$GLOBALS['TSFE']->sys_language_content`.
-         
+
          The syntax is "[keyword] ; [value]".
 
          **Possible keywords are:**
@@ -2572,7 +2579,7 @@ sys\_language\_mode
             to fall back to the content of sys\_language\_uid 1, after that to the
             content of sys\_language\_uid 3 and if that is not present either,
             to default (0).
-            
+
             Note that the fallback affects all content of the page.
             This means that once a translated page record is found in the fallback
             chain, the system will try to use this language for the rendering even
@@ -2580,7 +2587,7 @@ sys\_language\_mode
 
          strict
             If the requested translation does not exist the system
-            will report a *Page Not Found (404)* error. 
+            will report a *Page Not Found (404)* error.
             Basically this means that all pages with
             gray background in the Web > Info / Localization overview module will
             fail (they would otherwise fall back to default language in one way
@@ -2591,13 +2598,13 @@ sys\_language\_mode
             the page is not translated and there is no content available for this
             language, so you can handle that situation on your own then.
             The system will render the page and the content as if the translation would exist.
-            Internally :php:`$GLOBALS['TSFE']->sys_language_content` is set to the value of 
+            Internally :php:`$GLOBALS['TSFE']->sys_language_content` is set to the value of
             :php:`$GLOBALS['TSFE']->sys_language_uid`.
 
-         Refer to the 
+         Refer to the
          :ref:`Frontend Localization Guide <t3l10n:localization-modes>`
          for an in-depth discussion.
-         
+
 
 
 .. _setup-config-sys-language-overlay:
@@ -2614,15 +2621,14 @@ sys\_language\_overlay
          boolean / keyword
 
    Description
-         
          Defines whether TYPO3 should use the *content overlay* technique when
          fetching translated content. *Content overlay* means fetching records
          from the default language first and then replacing specific fields
          with the translation if that is found.
-         
+
          It is only evaluated when :php:`$TSFE->sys_language_content > 0`.
          Internally it sets the property :php:`$TSFE->sys_language_contentOL` at a request.
-         Further calls via :php:`$TSFE->sys_page->getRecordOverlay` receive this value 
+         Further calls via :php:`$TSFE->sys_page->getRecordOverlay` receive this value
          to see if overlaying should take place.
 
          The requirements for this is that the table is configured with
@@ -2637,18 +2643,18 @@ sys\_language\_overlay
          website using the object path "mod.web\_layout.defLangBinding = 1".
 
          **Possible values:**
-         
+
          0
             Just fetch records from the selected language as given by
             :php:`$TSFE->sys_language_content`.
             No overlay will happen, no fetching of the records from the default language.
             This boils down to "free mode" language handling. This is the only mode which shows
             records without a default language parent.
-            
+
             An exception to this rule can be made with the TypoScript CONTENT object
             if you manually set
             :ts:`select.includeRecordsWithoutDefaultTranslation = 1`.
-         
+
          1
             Fetch records from the default language and overlay them with translations.
             If a record is not translated the default language will be used.
@@ -2696,19 +2702,19 @@ sys\_language\_uid
 
    Description
          This property holds the value of the field "uid" of a record of table "sys\_language".
-         Various parts of the frontend rendering code will select records 
+         Various parts of the frontend rendering code will select records
          which are assigned to this language.
          See ->SELECT
 
          Internally this value is used to initialize the TypoScriptFrontendController
          :php:`$GLOBALS['TSFE']->sys_language_uid` property.
          The :php:`$GLOBALS['TSFE']->sys_language_content` property is set based
-         on the value of the :ts:`sys_language_uid` and other settings like 
+         on the value of the :ts:`sys_language_uid` and other settings like
          :ts:`sys_language_mode`.
 
          It is usually set to the value of the `&L` request parameter,
          using a TypoScript condition like in this example::
-         
+
             config.sys_language_uid = 0
 
             [globalVar = GP:L = 1]
@@ -2803,6 +2809,9 @@ typolinkEnableLinksAcrossDomains
    Data type
          boolean
 
+   Default
+         0
+
    Description
          This option enables to create links across domains using current
          domain's linking scheme.
@@ -2831,9 +2840,6 @@ typolinkEnableLinksAcrossDomains
          domain. No side effects are known at the time of writing of this
          documentation but they may exist. If any side effects are found, this
          documentation will be updated to include them.
-
-   Default
-         0
 
 
 
@@ -2905,13 +2911,13 @@ USERNAME\_substToken
    Data type
          string
 
+   Default
+         <!--###USERNAME###-->
+
    Description
          The is the token used on the page, which should be substituted with
          the current username IF a front-end user is logged in! If no login,
          the substitution will not happen.
-
-   Default
-         <!--###USERNAME###-->
 
 
 
@@ -2951,6 +2957,9 @@ xhtmlDoctype
    Data type
          string
 
+   Default
+         *(same as config.doctype if set to a keyword)*
+
    Description
          Sets the document type for the XHTML version of the generated page.
 
@@ -2975,9 +2984,6 @@ xhtmlDoctype
                   "http://www.w3.org/Math/DTD/mathml2/xhtml-math11-f.dtd">
             )
             config.xhtmlDoctype = xhtml_11
-
-   Default
-         *(same as config.doctype if set to a keyword)*
 
 
 
