@@ -90,9 +90,9 @@ These are the Page TSconfig Top-Level Objects (TLOs):
 
          1. Value from $GLOBALS['TCA']
 
-         2. Value from User TSconfig (these settings)
+         2. Value from User TSconfig
 
-         3. Value from Page TSconfig
+         3. Value from Page TSconfig (these settings)
 
          4. Value from "defVals" GET variables (see BackendUtility::getModuleUrl('record_edit'))
 
