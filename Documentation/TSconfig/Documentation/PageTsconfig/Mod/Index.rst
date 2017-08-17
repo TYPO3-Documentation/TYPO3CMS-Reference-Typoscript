@@ -647,12 +647,14 @@ Web > Page (mod.web\_layout)
 
    Data type
          boolean
+         
+   Default
+         1
 
    Description
-         Enables the creation of copies of content elements into languages in the translation wizard ("free mode"). Enabled by default.
+         Enables the creation of copies of content elements into languages in the translation wizard ("free mode").
 
-         **Example:**
-
+   Example
          .. code-block:: typoscript
 
             mod.web_layout {
@@ -668,11 +670,13 @@ Web > Page (mod.web\_layout)
    Data type
          boolean
 
+   Default
+         1
+   
    Description
-         Enables simple translations of content elements in the translation wizard ("connected mode"). Enabled by default.
+         Enables simple translations of content elements in the translation wizard ("connected mode").
 
-         **Example:**
-
+   Example
          .. code-block:: typoscript
 
             mod.web_layout {
