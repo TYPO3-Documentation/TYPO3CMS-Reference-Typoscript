@@ -643,6 +643,50 @@ Web > Page (mod.web\_layout)
 .. container:: table-row
 
    Property
+         localization.enableCopy
+
+   Data type
+         boolean
+         
+   Default
+         1
+
+   Description
+         Enables the creation of copies of content elements into languages in the translation wizard ("free mode").
+
+   Example
+         .. code-block:: typoscript
+
+            mod.web_layout {
+               localization.enableCopy = 0
+            }
+
+
+.. container:: table-row
+
+   Property
+         localization.enableTranslate
+
+   Data type
+         boolean
+
+   Default
+         1
+   
+   Description
+         Enables simple translations of content elements in the translation wizard ("connected mode").
+
+   Example
+         .. code-block:: typoscript
+
+            mod.web_layout {
+               localization.enableTranslate = 0
+            }
+
+
+.. container:: table-row
+
+   Property
          BackendLayouts
 
    Data type
