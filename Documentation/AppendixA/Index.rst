@@ -15,11 +15,10 @@ Including your script
 This section should give you some pointers on what you can process in
 your script and which functions and variables you can access.
 
-Your script is included by a function, PHP\_SCRIPT, inside the class
-"ContentObjectRenderer" in the
+Your script is included inside the class "ContentObjectRenderer" in the
 typo3/sysext/frontend/Classes/ContentObject/ContentObjectRenderer.php
 script. Thereby your file is a part of this object
-(ContentObjectRenderer) and function. This is why you must return all
+(ContentObjectRenderer). This is why you must return all
 content in the variable "$content" and any TypoScript configuration is
 available from the array "$conf" (it may not be set at all though, so
 check it with is\_array()!)
@@ -42,7 +41,7 @@ script!
 $conf
 """""
 
-The array $conf contains the configuration for the PHP\_SCRIPT cObject.
+The array $conf contains the configuration for the USER cObject.
 Try debug($conf) to see the content printed out for debugging!
 
 
@@ -71,8 +70,8 @@ call it, if the content you create may not be cached.
 from executing it, then the $GLOBALS['TSFE']->set\_no\_cache()
 function is not executed and the page *is* cached! So in these
 situations, correct the error, clear the page-cache and try again.
-This is true only for PHP\_SCRIPT and not for PHP\_SCRIPT\_INT, which
-is rendered *after* the cached page!
+This is true only for USER and not for USER\_INT, which is
+rendered *after* the cached page!
 
 
 Example:
