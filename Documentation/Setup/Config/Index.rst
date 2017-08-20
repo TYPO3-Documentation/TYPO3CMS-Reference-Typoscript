@@ -465,11 +465,13 @@ compensateFieldWidth
          double
 
    Description
-         This floating point value will be used by the FORMS cObject to
+         This floating point value was used by the FORMS cObject to
          compensate the length of the form fields text and input.
 
-         This option may be overridden by the property of the same name in
+         This option could be overridden by the property of the same name in
          the FORMS cObject.
+
+         **Note:** This property was deprecated in TYPO3 8.7 and is planned to be removed!
 
 
 
