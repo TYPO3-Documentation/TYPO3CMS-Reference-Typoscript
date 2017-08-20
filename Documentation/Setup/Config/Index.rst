@@ -28,7 +28,6 @@ Properties
    `cache`_                                              array
    `cache\_clearAtMidnight`_                             :ref:`data-type-boolean`           false
    `cache\_period`_                                      :ref:`data-type-integer`           86400 *(= 24 hours)*
-   `compensateFieldWidth`_                               double
    `compressCss`_                                        :ref:`data-type-boolean`
    `compressJs`_                                         :ref:`data-type-boolean`
    `concatenateCss`_                                     :ref:`data-type-boolean`
@@ -102,7 +101,6 @@ Properties
    `sys\_language\_isocode\_default`_                    :ref:`data-type-string`
    `sys\_language\_mode`_                                :ref:`data-type-string`
    `sys\_language\_overlay`_                             boolean / keyword
-   `sys\_language\_softExclude`_                         :ref:`data-type-string`
    `sys\_language\_softMergeIfNotBlank`_                 :ref:`data-type-string`
    `sys\_language\_uid`_                                 :ref:`data-type-integer`
    `titleTagFunction`_                                   function name
@@ -448,30 +446,6 @@ cache\_period
          This value is overridden by the value set in the page-record
          (field="cache\_timeout") if this value is greater than zero.
 
-
-
-
-.. _setup-config-compensatefieldwidth:
-
-compensateFieldWidth
-""""""""""""""""""""
-
-.. container:: table-row
-
-   Property
-         compensateFieldWidth
-
-   Data type
-         double
-
-   Description
-         This floating point value was used by the FORMS cObject to
-         compensate the length of the form fields text and input.
-
-         This option could be overridden by the property of the same name in
-         the FORMS cObject.
-
-         **Note:** This property was deprecated in TYPO3 8.7 and is planned to be removed!
 
 
 
@@ -2664,28 +2638,6 @@ sys\_language\_overlay
          hideNonTranslated
             Fetch records from the default language and overlay
             them with translations. If some record is not translated it will not be shown.
-
-
-
-.. _setup-config-sys-language-softexclude:
-
-sys\_language\_softExclude
-""""""""""""""""""""""""""
-
-.. container:: table-row
-
-   Property
-         sys\_language\_softExclude
-
-   Data type
-         string
-
-   Description
-         Setting additional "exclude" flags for l10n\_mode in TCA for frontend
-         rendering.
-
-         Fields set in this property will override if the same field is set for
-         "sys\_language\_softMergeIfNotBlank".
 
 
 
