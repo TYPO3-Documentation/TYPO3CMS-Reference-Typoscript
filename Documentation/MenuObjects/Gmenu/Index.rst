@@ -387,7 +387,7 @@ been for a long time.
          altImgResource
 
    Data type
-         imgResouce
+         imgResource
 
    Description
          Defines an alternative image to use. If an image returns here, it will
