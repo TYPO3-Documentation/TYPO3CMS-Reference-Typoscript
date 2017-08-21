@@ -177,6 +177,26 @@ imgResource.
 .. container:: table-row
 
    Property
+         cropVariant
+
+   Data type
+         string
+
+   Description
+         Since it's possible to define certain `crop variants <https://docs.typo3.org/typo3cms/extensions/core/8.7/Changelog/8.6/Feature-75880-ImplementMultipleCroppingVariantsInImageManipulationTool.html>`_ you can specify which one to use here.
+         
+         **Examples:** ::
+            
+            # Use "desktop" crop variant
+            tt_content.image.20.1.file.crop.data = file:current:crop
+	    tt_content.image.20.1.file.cropVariant = desktop
+            
+   Default
+         default
+	 
+.. container:: table-row
+
+   Property
          alternativeTempPath
 
    Data type
