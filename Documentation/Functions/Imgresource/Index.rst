@@ -3,8 +3,9 @@
 
 .. _imgresource:
 
+===========
 imgResource
-^^^^^^^^^^^
+===========
 
 imgResource contains the properties that are used with the data type
 imgResource.
@@ -20,14 +21,14 @@ imgResource.
    Data type
          imageExtension /:ref:`stdWrap <stdwrap>`
 
-   Description
-         Target file extension for the processed image. The option "web" checks if the file extension
-         is one of gif, jpg, jpeg, or png and if not it will find the best target extension.
-         The target extension must be in the list of file extensions perceived as images (defined in
-         $TYPO3_CONF_VARS['GFX']['imagefile_ext'] in the Install Tool).
-
    Default
          web
+
+   Description
+         Target file extension for the processed image. The value "web" checks if the file extension
+         is one of gif, jpg, jpeg, or png and if not it will find the best target extension.
+         The target extension must be in the list of file extensions perceived as images.
+         This is defined in :php:`$TYPO3_CONF_VARS['GFX']['imagefile_ext']` in the install tool.
 
 
 .. container:: table-row
@@ -41,8 +42,9 @@ imgResource.
    Description
          If both the width and the height are set and one of the numbers is
          appended by an "m", the proportions will be preserved and thus
-         width/height are treated as maximum dimensions for the image. The
-         image will be scaled to fit into width/height rectangle.
+         width and height are treated as maximum dimensions for the image. The
+         image will be scaled to fit into the rectangle of the dimensions
+         width and height.
 
          If both the width and the height are set and at least one of the
          numbers is appended by a "c", crop-scaling will be enabled. This means
@@ -57,8 +59,7 @@ imgResource.
 
          Notice that you can only use either "m" *or* "c" at the same time!
 
-         **Examples:**
-
+   Examples
          This crops 120x80px from the center of the scaled image::
 
             .width = 120c
@@ -86,7 +87,7 @@ imgResource.
          pixels /:ref:`stdWrap <stdwrap>`
 
    Description
-         see ".width"
+         See ".width"
 
 
 .. container:: table-row
@@ -111,12 +112,13 @@ imgResource.
    Data type
          boolean
 
-   Description
-         If set, -sample is used to scale images instead of -geometry. Sample
-         does not use anti-aliasing and is therefore much faster.
-
    Default
          0
+
+   Description
+         If set, `-sample` is used to scale images instead of `-geometry`. Sample
+         does not use anti-aliasing and is therefore much faster.
+
 
 
 .. container:: table-row
@@ -127,6 +129,9 @@ imgResource.
    Data type
          boolean /:ref:`stdWrap <stdwrap>`
 
+   Default
+         0
+
    Description
          If set, the image itself will never be scaled. Only width and height
          are calculated according to the other properties, so that the image is
@@ -134,21 +139,19 @@ imgResource.
          creating PDFs or printing of pages, where the original file could
          provide much better quality than a rescaled one.
 
-         **Example:** ::
+   Example
+         Here :file:`test.jpg` could have 1600 x 1200 pixels for example::
 
-            // test.jpg could e.g. have 1600 x 1200 pixels
             file = fileadmin/test.jpg
             file.width = 240m
             file.height = 240m
             file.noScale = 1
 
          This example results in an image tag like the following. Note that
-         src="fileadmin/test.jpg" is the *original* file::
+         `src="fileadmin/test.jpg"` is the *original* file::
 
             <img src="fileadmin/test.jpg" width="240" height="180" />
 
-   Default
-         0
 
 .. container:: table-row
 
@@ -158,21 +161,24 @@ imgResource.
    Data type
          string /:ref:`stdWrap <stdwrap>`
 
-   Description
-         It is possible to define a area that should be taken (cropped) from the image. 
-         When not defined in `typoscript` the value wil be taken from the file_reference when 
-         possible. With this setting you can override this behavior. 
-         
-         **Examples:** ::
-            
-            # Disable cropping set by the editor in the back-end
-            tt_content.image.20.1.file.crop =
-            
-            # Overrule/set cropping for all images
-	    tt_content.image.20.1.file.crop = 50,50,100,100   
-   
    Default
-         not-set (when file/image is a file_reference the crop value of the file reference is used)
+         not-set (when file/image is a file_reference the crop value of
+         the file reference is used)
+
+   Description
+         It is possible to define an area that should be taken (cropped) from the image.
+         When not defined in typoscript the value wil be taken from the file_reference when
+         possible. With this setting you can override this behavior.
+
+   Examples
+         Disable cropping set by the editor in the back-end::
+
+            tt_content.image.20.1.file.crop =
+
+         Overrule/set cropping for all images::
+
+            tt_content.image.20.1.file.crop = 50,50,100,100
+
 
 .. container:: table-row
 
@@ -186,15 +192,17 @@ imgResource.
          default
 
    Description
-         Since it's possible to define certain `crop variants <https://docs.typo3.org/typo3cms/extensions/core/8.7/Changelog/8.6/Feature-75880-ImplementMultipleCroppingVariantsInImageManipulationTool.html>`_ you can specify which one to use here.
-         
+         Since it's possible to define certain `crop variants
+         <https://docs.typo3.org/typo3cms/extensions/core/8.7/Changelog/8.6/Feature-75880-ImplementMultipleCroppingVariantsInImageManipulationTool.html>`__
+         you can specify which one to use here.
+
    Examples
-      Use "desktop" crop variant::
+      Use 'desktop' crop variant::
 
          tt_content.image.20.1.file.crop.data = file:current:crop
          tt_content.image.20.1.file.cropVariant = desktop
-            
-	 
+
+
 .. container:: table-row
 
    Property
@@ -234,9 +242,9 @@ imgResource.
 
          with stdWrap you get the filename from the data-array
 
-         **Example:**
-
-         This returns the first image in the field "image" from the data-array::
+   Example
+         This returns the first image in the field "image" from the
+         data-array::
 
             .import = uploads/pics/
             .import.field = image
@@ -251,13 +259,14 @@ imgResource.
    Data type
          boolean /:ref:`stdWrap <stdwrap>`
 
-   Description
-         If set, given UIDs are interpreted as UIDs to sys_file_reference
-         instead of to sys_file. This allows using file references, e.g. with
-         import.data = levelmedia:....
-
    Default
          0
+
+   Description
+         If set, given UIDs are interpreted as UIDs to sys_file_reference
+         instead of to sys_file. This allows using file references, for
+         example with :ts:`import.data = levelmedia: ...`.
+
 
 
 .. container:: table-row
@@ -316,22 +325,24 @@ imgResource.
    Data type
          boolean
 
+   Default
+         0
+
    Description
          If set, the GraphicsMagick/ImageMagick-command will use a
          stripProfile-command which shrinks the generated thumbnails. See the
          Install Tool for options and details.
 
-         If processor\_stripColorProfileByDefault is set in the Install Tool, you can
-         deactivate it by setting stripProfile=0.
+         If :ts:`processor_stripColorProfileByDefault` is set in the
+         Install Tool, you can deactivate it by setting :ts:`stripProfile=0`.
 
-         **Example:** ::
+   Example
+         ::
 
             10 = IMAGE
             10.file = fileadmin/images/image1.jpg
             10.file.stripProfile = 1
 
-   Default
-         0
 
 .. container:: table-row
 
@@ -412,11 +423,11 @@ imgResource.
 
 .. _imgresource-examples:
 
-Example:
-""""""""
+Examples
+========
 
-This scales the image fileadmin/toplogo.gif to the width of 200
-pixels. ::
+This scales the image :file:`fileadmin/toplogo.gif` to the width of 200
+pixels::
 
    file = fileadmin/toplogo.gif
    file.width = 200
