@@ -192,7 +192,7 @@ imgResource.
       Use "desktop" crop variant::
 
          tt_content.image.20.1.file.crop.data = file:current:crop
-	 tt_content.image.20.1.file.cropVariant = desktop
+         tt_content.image.20.1.file.cropVariant = desktop
             
 	 
 .. container:: table-row
