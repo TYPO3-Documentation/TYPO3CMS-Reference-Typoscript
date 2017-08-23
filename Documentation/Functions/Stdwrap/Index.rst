@@ -902,10 +902,10 @@ date
          **.GMT:** If set, the PHP function `gmdate() <http://www.php.net/gmdate>`_ will be
          used instead of `date() <http://www.php.net/date>`_.
 
-         **Example** where a timestamp is imported::
+         **Example** where a human readable format is rendered::
 
             .value.field = tstamp
-            .value.date =
+            .value.date = Y-m-d H:i
 
 
 .. _stdwrap-strftime:
