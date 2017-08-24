@@ -902,10 +902,15 @@ date
          **.GMT:** If set, the PHP function `gmdate() <http://www.php.net/gmdate>`_ will be
          used instead of `date() <http://www.php.net/date>`_.
 
-         **Example** where a human readable format is rendered::
+   Example
+         Render in human readable form::
 
-            .value.field = tstamp
-            .value.date = Y-m-d H:i
+            page.10 = TEXT
+            page.10.value {
+               # format like 2017-05-31 09:08
+               field = tstamp
+               date = Y-m-d H:i
+            }   
 
 
 .. _stdwrap-strftime:
