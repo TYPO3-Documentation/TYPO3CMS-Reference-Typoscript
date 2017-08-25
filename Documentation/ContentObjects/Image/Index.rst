@@ -67,7 +67,10 @@ for.
          params
 
    Data type
-         <IMG>-params /:ref:`stdWrap <stdwrap>`
+         string /:ref:`stdWrap <stdwrap>`
+
+   Description
+         HTML <IMG> parameters
 
 
 .. container:: table-row
