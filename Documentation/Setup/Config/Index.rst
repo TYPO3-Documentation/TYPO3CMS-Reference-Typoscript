@@ -90,8 +90,6 @@ Properties
    `removePageCss`_                                      :ref:`data-type-boolean`
    `sendCacheHeaders`_                                   :ref:`data-type-boolean`
    `sendCacheHeaders\_onlyWhenLoginDeniedInBranch`_      :ref:`data-type-boolean`
-   `setJS\_mouseOver`_                                   :ref:`data-type-boolean`
-   `setJS\_openPic`_                                     :ref:`data-type-boolean`
    `spamProtectEmailAddresses`_                          "ascii" /
    `spamProtectEmailAddresses\_atSubst`_                 :ref:`data-type-string`            (at)
    `spamProtectEmailAddresses\_lastDotSubst`_            :ref:`data-type-string`            . *(just a simple dot)*
@@ -2272,43 +2270,6 @@ sendCacheHeaders\_onlyWhenLoginDeniedInBranch
          logins; Cache-headers should simply be sent when logins are not
          allowed and never be send when logins are allowed! Then there will
          never be problems with logins and same-URLs.
-
-
-
-.. _setup-config-setjs-mouseover:
-
-setJS\_mouseOver
-""""""""""""""""
-
-.. container:: table-row
-
-   Property
-         setJS\_mouseOver
-
-   Data type
-         boolean
-
-   Description
-         If set, the over() and out() JavaScript functions are forced to be
-         included
-
-
-
-.. _setup-config-setjs-openpic:
-
-setJS\_openPic
-""""""""""""""
-
-.. container:: table-row
-
-   Property
-         setJS\_openPic
-
-   Data type
-         boolean
-
-   Description
-         If set, the openPic JavaScript function is forced to be included
 
 
 
