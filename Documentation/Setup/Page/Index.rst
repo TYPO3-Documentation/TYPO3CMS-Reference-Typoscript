@@ -50,7 +50,6 @@ Properties
    `includeJSLibs.[array]`_       :ref:`data-type-resource`
    `inlineLanguageLabelFiles`_    *(array of strings)*
    `inlineSettings`_              *(array of strings)*
-   `insertClassesFromRTE`_        :ref:`data-type-boolean`
    `javascriptLibs`_              *(array of strings)*
    `jsFooterInline`_              ->CARRAY
    `jsInline`_                    ->CARRAY
@@ -712,32 +711,6 @@ inlineSettings
          will produce following source::
 
             TYPO3.settings = {"TS":{"setting1":"Hello","setting2":"GoOnTop"}};
-
-
-
-.. _setup-page-insertclassesfromrte:
-
-insertClassesFromRTE
-""""""""""""""""""""
-
-.. container:: table-row
-
-   Property
-         insertClassesFromRTE
-
-   Data type
-         boolean
-
-   Description
-         If set, the classes for the Rich Text Editor configured in Page
-         TSconfig are inserted as the first thing in the Style-section right
-         after the setting of the stylesheet.
-
-         **.add\_mainStyleOverrideDefs:** [\* / list of tags ]. Will add all
-         the "RTE.default. mainStyleOverride\_add" - tags configured as well.
-
-         **Note:** Instead of using this property, most likely the RTE should
-         be configured by stylesheets!
 
 
 
