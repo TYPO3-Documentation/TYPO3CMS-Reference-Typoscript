@@ -267,9 +267,7 @@ translateToMessage
 
          Default is "Translate to [language title]:".
 
-         **Example:**
-
-         .. code-block:: typoscript
+         **Example:** ::
 
             TCEMAIN {
                # Set a German label:
