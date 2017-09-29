@@ -1023,31 +1023,51 @@ bytes
    Data type
          integer /stdWrap
 
+   Default
+         iec, 1024
+
    Description
-         Will format the input (an integer) as bytes: bytes, kb, mb
+         This function formats an integer value. The output will be one of the
+         usual byte notations like "bytes", "kb", "mb" and so on. The exact
+         behavior is defined by sub-properties. Compare with
+         `Wikipedia "Kibibyte" <https://en.wikipedia.org/wiki/Kibibyte>`__
+         for example.
 
-         **Available sub-properties:**
+         .labels
+            With :ts:`.labels = iec` the common units of the IEC are used
+            which have a base of 1024. Other values of base will be ignored.
 
-         **labels**:
-         If you add a value for the property "labels" you can alter the default
-         suffixes. Labels for bytes, kilo, mega and giga are separated by
-         vertical bar (\|) and possibly encapsulated in "". E.g.: " \| K\| M\| G"
-         (which is the default value).
+            With :ts:`.labels = si` the common SI units are used
+            which have a base of 1000. Other values of base will be ignored.
 
-         **base**:
-         The base to use for the calculation. Useful values are 1000 or 1024.
-         There are 2 presets defined:
+            You can define custom suffixes as well like this:
+            :ts:`.labels = " \| K\| M\| G"`. In this case the output prefixes
+            for bytes, kilo, mega, giga are specified. Add more labels to
+            shape the subsequent units. The individual labels are separated by
+            a vertical bar (\|). The whole string should be enclosed in double
+            quotes ("..."). For custom labels the value of 'base' is important.
+            It is 1024 by default and needs to be specified for other cases.
 
-         - iec: uses the Ki, Mi, etc prefixes and binary base (power of two, 1024)
-         - si: uses the k, M, etc prefixes and decimal base (power of ten, 1000)
+         .base
+            This defines the base that will be used in the calculations. Well
+            known values are 1000 or 1024. This setting is ignored if
+            .labels has the value 'si' or 'iec'. Default is 1024.
 
-         The default formatting is set to "iec" base size calculations.
-         The fractional part, when present, will be two numbers.
+   Examples
+        iec::
 
-         Thus::
+           bytes.labels = iec
+           # bytes.base = ...   Is ignored. 1024 is used.
 
-            bytes.labels = " | K| M| G"
-            bytes.base = 1000
+        si::
+
+           bytes.labels = si
+           # bytes.base = ...   Is ignored. 1000 is used.
+
+        Custom::
+
+           bytes.labels = " byte(s)| kibibyte| mebibyte| gibibyte"
+           bytes.base = 1024
 
 
 .. _stdwrap-substring:
