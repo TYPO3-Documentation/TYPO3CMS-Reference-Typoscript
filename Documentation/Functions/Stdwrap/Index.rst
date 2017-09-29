@@ -1041,11 +1041,11 @@ bytes
             which have a base of 1000. Other values of base will be ignored.
 
             You can define custom suffixes as well like this:
-            :ts:`.labels = " \| K\| M\| G"`. In this case the output prefixes
+            :ts:`.labels = " | K| M| G"`. In this case the output prefixes
             for bytes, kilo, mega, giga are specified. Add more labels to
             shape the subsequent units. The individual labels are separated by
-            a vertical bar (\|). The whole string should be enclosed in double
-            quotes ("..."). For custom labels the value of 'base' is important.
+            a vertical bar `|`. The whole string should be enclosed in double
+            quotes `"..."`. For custom labels the value of 'base' is important.
             It is 1024 by default and needs to be specified for other cases.
 
          .base
