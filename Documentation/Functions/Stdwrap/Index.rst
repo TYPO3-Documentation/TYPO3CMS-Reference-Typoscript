@@ -289,22 +289,22 @@ filelist
 
          5. `fullpath_flag`: If set, the filelist is returned with complete
             paths, and not just the filename.
-         
+
          Also see :ref:`setup-config-lockfilepath` on how to restrict file search.
 
    Example
          Find just the names of image files in :file:`fileadmin/images`,
          sorted ascending by name::
-         
+
             10 = TEXT
             10.filelist = fileadmin/images/ | gif,jpg,jpeg,png | name | 0 | 0
-            
+
          You maybe want to add your own postprocessing to it for further selection::
-         
+
             10.stdWrap.postUserFunc = My\NameSpace\MyClass->findImageForNow
-            
+
          Possible logic in PHP:
-         
+
          .. code-block:: php
 
             class My\NameSpace\MyClass
@@ -316,8 +316,8 @@ filelist
                   // $result = ...
                   return $result
                }
-            }   
-                  
+            }
+
 
 
 
@@ -910,7 +910,7 @@ date
                # format like 2017-05-31 09:08
                field = tstamp
                date = Y-m-d H:i
-            }   
+            }
 
 
 .. _stdwrap-strftime:
@@ -1051,34 +1051,113 @@ bytes
          bytes
 
    Data type
-         integer /stdWrap
+         boolean/stdWrap
+
+   Default
+         iec, 1024
 
    Description
-         Will format the input (an integer) as bytes: bytes, kb, mb
+         This is for number values. When the 'bytes' property is added and set
+         to 'true' then the number will be formatted in 'bytes' style with two
+         decimals like '1.53 KiB' or '1.00 MiB'.
+         Learn about common notations at
+         `Wikipedia "Kibibyte" <https://en.wikipedia.org/wiki/Kibibyte>`__.
+         IEC naming with base 1024 is the default. Use sub-properties for
+         customisation.
 
-         **Available sub-properties:**
+         .labels = iec
+            This is the default. IEC labels and base 1024 are used.
+            Built in IEC labels are :ts:`" | Ki| Mi| Gi| Ti| Pi| Ei| Zi| Yi"`
+            You need to append a final string like 'B' or '-Bytes' yourself.
 
-         **labels**:
-         If you add a value for the property "labels" you can alter the default
-         suffixes. Labels for bytes, kilo, mega and giga are separated by
-         vertical bar (\|) and possibly encapsulated in "". E.g.: " \| K\| M\| G"
-         (which is the default value).
+         .labels = si
+            In this case SI labels and base 1000 are used.
+            Built in IEC labels are :ts:`" | k| M| G| T| P| E| Z| Y"`
+            You need to append a final string like 'B' yourself.
 
-         **base**:
-         The base to use for the calculation. Useful values are 1000 or 1024.
-         There are 2 presets defined:
+         .labels = "..."
+            Custom values can be defined as well like in
+            :ts:`.labels = " Bytes| Kilobytes| Megabytes| Gigabytes"`. Use a
+            vertical bar to separate the labels. Enclose the whole string in
+            double quotes.
 
-         - iec: uses the Ki, Mi, etc prefixes and binary base (power of two, 1024)
-         - si: uses the k, M, etc prefixes and decimal base (power of ten, 1000)
+            .base = 1000
+               Only when using custom labels you can set base to 1000. All
+               other values, including the default, mean base 1024.
 
-         The default formatting is set to "iec" base size calculations.
-         The fractional part, when present, will be two numbers.
+         .. attention::
 
-         Thus::
+            If the value isn't a number the internal PHP function may issue a
+            warning which - depending on you error handling settings - can
+            interrupt execution. Example::
 
-            bytes.labels = " | K| M| G"
+               value = abc
+               bytes = 1
+
+            will show '0' but may raise a warning or an exception.
+
+   Examples
+      Output value 1000 without special formatting. Shows `1000`::
+
+         page = PAGE
+         page.10 = TEXT
+         page.10 {
+            value = 1000
+         }
+
+      Format value 1000 in IEC style with base=1024. Shows `0.98 Ki`::
+
+         page = PAGE
+         page.10 = TEXT
+         page.10 {
+            value = 1000
+            bytes = 1
+         }
+
+      Format value 1000 in IEC style with base=1024 and 'B' supplied by us.
+      Shows `0.98 KiB`::
+
+         page = PAGE
+         page.10 = TEXT
+         page.10 {
+            value = 1000
+            bytes = 1
+            noTrimWrap = ||B|
+         }
+
+      Format value 1000 in SI style with base=1000. Shows ` 1.00 k`::
+
+         page = PAGE
+         page.10 = TEXT
+         page.10 {
+            value = 1000
+            bytes = 1
+            bytes.labels = si
+         }
+
+      Format value 1000 in SI style with base=1000 and 'b' supplied by us.
+      Shows ` 1.00 kb`::
+
+         page = PAGE
+         page.10 = TEXT
+         page.10 {
+            value = 1000
+            bytes = 1
+            bytes.labels = si
+            noTrimWrap = ||b|
+         }
+
+      Format value 1000 with custom label and base=1000. Shows
+      `1.00 x 1000 Bytes`::
+
+         page = PAGE
+         page.10 = TEXT
+         page.10 {
+            value = 1000
+            bytes = 1
+            bytes.labels = " x 1 Byte| x 1000 Bytes"
             bytes.base = 1000
-
+         }
 
 .. _stdwrap-substring:
 
@@ -1834,10 +1913,10 @@ insertData
             10 = TEXT
             10.value = This is the page title: {page:title}
             10.stdWrap.insertData = 1
-            
+
          .. warning:
             Never use this on content that can be edited in backend. This allows editors to disclose
-            normally hidden information. Never use this to insert data into wraps. 
+            normally hidden information. Never use this to insert data into wraps.
             Use :ref:`dataWrap <stdwrap-datawrap>` instead.
 
 
