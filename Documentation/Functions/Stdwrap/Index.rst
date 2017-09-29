@@ -1021,53 +1021,113 @@ bytes
          bytes
 
    Data type
-         integer /stdWrap
+         boolean/stdWrap
 
    Default
          iec, 1024
 
    Description
-         This function formats an integer value. The output will be one of the
-         usual byte notations like "bytes", "kb", "mb" and so on. The exact
-         behavior is defined by sub-properties. Compare with
-         `Wikipedia "Kibibyte" <https://en.wikipedia.org/wiki/Kibibyte>`__
-         for example.
+         This is for number values. When the 'bytes' property is added and set
+         to 'true' then the number will be formatted in 'bytes' style with two
+         decimals like '1.53 KiB' or '1.00 MiB'.
+         Learn about common notations at
+         `Wikipedia "Kibibyte" <https://en.wikipedia.org/wiki/Kibibyte>`__.
+         IEC naming with base 1024 is the default. Use sub-properties for
+         customisation.
 
-         .labels
-            With :ts:`.labels = iec` the common units of the IEC are used
-            which have a base of 1024. Other values of base will be ignored.
+         .labels = iec
+            This is the default. IEC labels and base 1024 are used.
+            Built in IEC labels are :ts:`" | Ki| Mi| Gi| Ti| Pi| Ei| Zi| Yi"`
+            You need to append a final string like 'B' or '-Bytes' yourself.
 
-            With :ts:`.labels = si` the common SI units are used
-            which have a base of 1000. Other values of base will be ignored.
+         .labels = si
+            In this case SI labels and base 1000 are used.
+            Built in IEC labels are :ts:`" | k| M| G| T| P| E| Z| Y"`
+            You need to append a final string like 'B' yourself.
 
-            You can define custom suffixes as well like this:
-            :ts:`.labels = " | K| M| G"`. In this case the output prefixes
-            for bytes, kilo, mega, giga are specified. Add more labels to
-            shape the subsequent units. The individual labels are separated by
-            a vertical bar `|`. The whole string should be enclosed in double
-            quotes `"..."`. For custom labels the value of 'base' is important.
-            It is 1024 by default and needs to be specified for other cases.
+         .labels = "..."
+            Custom values can be defined as well like in
+            :ts:`.labels = " Bytes| Kilobytes| Megabytes| Gigabytes"`. Use a
+            vertical bar to separate the labels. Enclose the whole string in
+            double quotes.
 
-         .base
-            This defines the base that will be used in the calculations. Well
-            known values are 1000 or 1024. This setting is ignored if
-            .labels has the value 'si' or 'iec'. Default is 1024.
+            .base = 1000
+               Only when using custom labels you can set base to 1000. All
+               other values, including the default, mean base 1024.
+
+         .. attention::
+
+            If the value isn't a number the internal PHP function may issue a
+            warning which - depending on you error handling settings - can
+            interrupt execution. Example::
+
+               value = abc
+               bytes = 1
+
+            will show '0' but may raise a warning or an exception.
 
    Examples
-        iec::
+      Output value 1000 without special formatting. Shows `1000`::
 
-           bytes.labels = iec
-           # bytes.base = ...   Is ignored. 1024 is used.
+         page = PAGE
+         page.10 = TEXT
+         page.10 {
+            value = 1000
+         }
 
-        si::
+      Format value 1000 in IEC style with base=1024. Shows `0.98 Ki`::
 
-           bytes.labels = si
-           # bytes.base = ...   Is ignored. 1000 is used.
+         page = PAGE
+         page.10 = TEXT
+         page.10 {
+            value = 1000
+            bytes = 1
+         }
 
-        Custom::
+      Format value 1000 in IEC style with base=1024 and 'B' supplied by us.
+      Shows `0.98 KiB`::
 
-           bytes.labels = " byte(s)| kibibyte| mebibyte| gibibyte"
-           bytes.base = 1024
+         page = PAGE
+         page.10 = TEXT
+         page.10 {
+            value = 1000
+            bytes = 1
+            noTrimWrap = ||B|
+         }
+
+      Format value 1000 in SI style with base=1000. Shows ` 1.00 k`::
+
+         page = PAGE
+         page.10 = TEXT
+         page.10 {
+            value = 1000
+            bytes = 1
+            bytes.labels = si
+         }
+
+      Format value 1000 in SI style with base=1000 and 'b' supplied by us.
+      Shows ` 1.00 kb`::
+
+         page = PAGE
+         page.10 = TEXT
+         page.10 {
+            value = 1000
+            bytes = 1
+            bytes.labels = si
+            noTrimWrap = ||b|
+         }
+
+      Format value 1000 with custom label and base=1000. Shows
+      `1.00 x 1000 Bytes`::
+
+         page = PAGE
+         page.10 = TEXT
+         page.10 {
+            value = 1000
+            bytes = 1
+            bytes.labels = " x 1 Byte| x 1000 Bytes"
+            bytes.base = 1000
+         }
 
 
 .. _stdwrap-substring:
