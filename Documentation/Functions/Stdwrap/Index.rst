@@ -1058,7 +1058,7 @@ bytes
 
    Description
          This is for number values. When the 'bytes' property is added and set
-         to 'true' then the number will be formatted in 'bytes' style with two
+         to 'true' then a number will be formatted in 'bytes' style with two
          decimals like '1.53 KiB' or '1.00 MiB'.
          Learn about common notations at
          `Wikipedia "Kibibyte" <https://en.wikipedia.org/wiki/Kibibyte>`__.
@@ -1067,22 +1067,22 @@ bytes
 
          .labels = iec
             This is the default. IEC labels and base 1024 are used.
-            Built in IEC labels are :ts:`" | Ki| Mi| Gi| Ti| Pi| Ei| Zi| Yi"`
+            Built in IEC labels are :ts:`" | Ki| Mi| Gi| Ti| Pi| Ei| Zi| Yi"`.
             You need to append a final string like 'B' or '-Bytes' yourself.
 
          .labels = si
             In this case SI labels and base 1000 are used.
-            Built in IEC labels are :ts:`" | k| M| G| T| P| E| Z| Y"`
+            Built in IEC labels are :ts:`" | k| M| G| T| P| E| Z| Y"`.
             You need to append a final string like 'B' yourself.
 
          .labels = "..."
-            Custom values can be defined as well like in
+            Custom values can be defined as well like with
             :ts:`.labels = " Bytes| Kilobytes| Megabytes| Gigabytes"`. Use a
             vertical bar to separate the labels. Enclose the whole string in
             double quotes.
 
             .base = 1000
-               Only when using custom labels you can set base to 1000. All
+               Only with custom labels you can choose to set a base of1000. All
                other values, including the default, mean base 1024.
 
          .. attention::
@@ -1094,7 +1094,7 @@ bytes
                value = abc
                bytes = 1
 
-            will show '0' but may raise a warning or an exception.
+            will show `0` but may raise a warning or an exception.
 
    Examples
       Output value 1000 without special formatting. Shows `1000`::
@@ -1125,7 +1125,7 @@ bytes
             noTrimWrap = ||B|
          }
 
-      Format value 1000 in SI style with base=1000. Shows ` 1.00 k`::
+      Format value 1000 in SI style with base=1000. Shows `1.00 k`::
 
          page = PAGE
          page.10 = TEXT
@@ -1136,7 +1136,7 @@ bytes
          }
 
       Format value 1000 in SI style with base=1000 and 'b' supplied by us.
-      Shows ` 1.00 kb`::
+      Shows `1.00 kb`::
 
          page = PAGE
          page.10 = TEXT
