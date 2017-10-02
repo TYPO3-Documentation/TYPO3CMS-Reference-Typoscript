@@ -1171,7 +1171,7 @@ bytes
             bytes.base = 1000
          }
 
-      Format value 1000 with custom label and base=1000. Shows
+      Format value 1000 with custom label and base=1024. Shows
       `0.98 kibibyte (KiB)`::
 
          page = PAGE
