@@ -1077,7 +1077,7 @@ bytes
 
          .labels = "..."
             Custom values can be defined as well like with
-            :ts:`.labels = " Bytes| Kilobytes| Megabytes| Gigabytes"`. Use a
+            :ts:`.labels = " Byte| Kilobyte| Megabyte| Gigabyte"`. Use a
             vertical bar to separate the labels. Enclose the whole string in
             double quotes.
 
@@ -1158,6 +1158,31 @@ bytes
             bytes.labels = " x 1 Byte| x 1000 Bytes"
             bytes.base = 1000
          }
+
+      Format value 1000 with custom label and base=1000. Shows
+      `1.00 kilobyte (kB)`::
+
+         page = PAGE
+         page.10 = TEXT
+         page.10 {
+            value = 1000
+            bytes = 1
+            bytes.labels = " byte (B)| kilobyte (kB)| megabyte (MB)| gigabyte (GB)| terabyte (TB)| petabyte (PB)| exabyte (EB)| zettabyte (ZB)| yottabyte YB"
+            bytes.base = 1000
+         }
+
+      Format value 1000 with custom label and base=1000. Shows
+      `0.98 kibibyte (KiB)`::
+
+         page = PAGE
+         page.10 = TEXT
+         page.10 {
+            value = 1000
+            bytes = 1
+            bytes.labels = " byte (B)| kibibyte (KiB)| mebibyte (MiB)| gibibyte (GiB)| tebibyte (TiB)| pepibyte (PiB)| exbibyte (EiB)| zebibyte (ZiB)| yobibyte YiB"
+            bytes.base = 1024
+         }
+
 
 .. _stdwrap-substring:
 
