@@ -148,7 +148,8 @@ loaded with the lowercased link-parameters!
             This property should not be used for cached contents without a valid
             cHash. Otherwise the page is cached for the first set of parameters
             and subsubsequently taken from the cache no matter what parameters
-            are given.
+            are given. Additionally the security risk of cache poisoning has to
+            be considered.
 
 
 .. container:: table-row
