@@ -140,9 +140,12 @@ with the link-parameters (lowercased)!
          **.exclude:** List of query arguments to exclude from the link (e.g. L
          or cHash).
          
-         **Note:** This option should not be used in a part which will be cached or only if it was called with a valid cHash, otherwise
-         the parameters of the first page hit after the cache was cleared will be stored in 
-         the cache and rendered in subsequent requests.
+         .. attention::
+         
+            This property should not be used for cached contents without a valid 
+            cHash. Otherwise the page is cached for the first set of parameters
+            and subsubsequently taken from the cache no matter what parameters
+            are given.
 
 
 .. container:: table-row
