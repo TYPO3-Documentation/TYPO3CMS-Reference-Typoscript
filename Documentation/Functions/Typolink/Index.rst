@@ -3,13 +3,15 @@
 
 .. _typolink:
 
+========
 typolink
-^^^^^^^^
+========
 
 Wraps the incoming value with a link.
 
-If this is used from parseFunc the $cObj->parameters-array is loaded
-with the link-parameters (lowercased)!
+*Attention:*
+If this is used from :ts:`parseFunc` the :php:`$cObj->parameters` array is
+loaded with the lowercased link-parameters!
 
 .. ### BEGIN~OF~TABLE ###
 
@@ -61,7 +63,7 @@ with the link-parameters (lowercased)!
          boolean /:ref:`stdWrap <stdwrap>`
 
    Description
-         Adds a "&no\_cache=1"-parameter to the link
+         Adds "&no\_cache=1" to the link
 
 
 .. container:: table-row
@@ -77,7 +79,7 @@ with the link-parameters (lowercased)!
          hash string appended to the URL, like "&cHash=ae83fd7s87". When the
          caching mechanism sees this value, it calculates the same value on the
          server based on incoming values in HTTP\_GET\_VARS, excluding
-         id,type,no\_cache,ftu,cHash,MP values. If the incoming cHash value
+         id, type, no\_cache, ftu, cHash, MP values. If the incoming cHash value
          matches the calculated value, the page may be cached based on this.
 
          The $TYPO3\_CONF\_VARS['SYS']['encryptionKey'] is included in the hash
@@ -96,21 +98,20 @@ with the link-parameters (lowercased)!
          This is parameters that are added to the end of the URL. This must be
          code ready to insert after the last parameter.
 
-         **Example:** ::
+         Example
+            ::
 
-            '&print=1'
+               '&print=1'
+               '&sword\_list[]=word1&sword\_list[]=word2'
 
-            '&sword\_list[]=word1&sword\_list[]=word2'
+         Applications
+            This is very useful – for example – when linking to pages from a
+            search result. The search words are stored in the register-key
+            SWORD\_PARAMS and can be insert directly like this::
 
-         **Applications:**
+               .additionalParams.data = register:SWORD_PARAMS
 
-         This is very useful – for example – when linking to pages from a
-         search result. The search words are stored in the register-key
-         SWORD\_PARAMS and can be insert directly like this::
-
-            .additionalParams.data = register:SWORD_PARAMS
-
-         **Note:** This is only active for internal links!
+            *Note:* This is only active for internal links.
 
 
 .. container:: table-row
@@ -126,23 +127,25 @@ with the link-parameters (lowercased)!
          not check for any duplicate parameters! This is not a problem: Only
          the last parameter of the same name will be applied.
 
-         **.method:** If set to GET or POST, then the parsed query arguments
-         (GET or POST data) will be used. This setting is useful, if you use
-         URL processing extensions like Real URL, which translate part of the
-         path into query arguments.
+         .method
+            If set to GET or POST, then the parsed query arguments
+            (GET or POST data) will be used. This setting is useful, if you use
+            URL processing extensions like Real URL, which translate part of the
+            path into query arguments.
 
-         It's also possible to get both, POST and GET data, on setting this to
+            It's also possible to get both, POST and GET data, on setting this to
 
-         "POST,GET" or "GET,POST". The last method in this sequence takes
-         precedence and overwrites the parts that are also present for the
-         first method.
+            "POST,GET" or "GET,POST". The last method in this sequence takes
+            precedence and overwrites the parts that are also present for the
+            first method.
 
-         **.exclude:** List of query arguments to exclude from the link (e.g. L
-         or cHash).
-         
+         .exclude
+            List of query arguments to exclude from the link. Typical examples
+            are 'L' or 'cHash'.
+
          .. attention::
-         
-            This property should not be used for cached contents without a valid 
+
+            This property should not be used for cached contents without a valid
             cHash. Otherwise the page is cached for the first set of parameters
             and subsubsequently taken from the cache no matter what parameters
             are given.
@@ -169,7 +172,7 @@ with the link-parameters (lowercased)!
          boolean
 
    Description
-         If set, the link is first wrapped with "*.wrap*" and then the
+         If set, the link is first wrapped with :ts:`.wrap` and then the
          <A>-tag.
 
    Default
@@ -190,95 +193,97 @@ with the link-parameters (lowercased)!
          additional information for specifying a target, a class and a title.
          Below are a few examples followed by full explanations.
 
-         **Examples:**
+   Examples
+         1. Most simple. Will create a link to page 51::
 
-         *Most simple. Will create a link to page 51:* ::
+               parameter = t3://page?uid=51
 
-            parameter = t3://page?uid=51
+         2. A full example. A link to page 51 that will open in a new window.
+            The link will have a class attribute with value "specialLink" and a
+            title attribute reading "Very important information"::
 
-         *A full example. A link to page 51 that will open in a new window. The
-         link will have a class attribute with value "specialLink" and a title
-         attribute reading "Very important information":* ::
+               parameter = t3://page?uid=51 _blank specialLink "Very important information"
 
-            parameter = t3://page?uid=51 _blank specialLink "Very important information"
+         3. which is converted to a link like this::
 
-         *which is converted to a link like this:* ::
+               <a href="?id=51" target="_blank" class="specialLink" title="Very important information">
 
-            <a href="?id=51" target="_blank" class="specialLink" title="Very important information">
+         4. An external link with a class attribute. Note the dash (-) that
+            replaces the second value (the target). This makes it possible to
+            define a class (third value) without having to define a target::
 
-         *An external link with a class attribute. Note the dash (-) that
-         replaces the second value (the target). This makes it possible to
-         define a class (third value) without having to define a target:* ::
+               parameter = http://typo3.org/ - specialLink
 
-            parameter = http://typo3.org/ - specialLink
+         5. A mailto link with a title attribute (but no target and no class)::
 
-         *A mailto link with a title attribute (but no target and no class):* ::
-
-            parameter = mailto:info@typo3.org - - "Send a mail to main TYPO3 contact"
+               parameter = mailto:info@typo3.org - - "Send a mail to main TYPO3 contact"
 
          As you can see from the examples, each significant part of the
          parameter string is separated by a space. Values that can themselves
          contain spaces must be enclosed in double quotes. Each of these values
          are described in more detail below.
 
-         **1. Resource reference**
+   Resource reference
+         1. The link
 
-         The first value is the destination of the link. It might start with:
+            The first value is the destination of the link. It may start with:
 
-         * `t3://`: internal TYPO3 resource references. See `Resource references`_
-           for an in depth explanation on the syntax of these references.
-         * `http(s)://`: regular external links
-         * `mailto:info@typo3.org`: regular mailto links
+            -  `t3://`: internal TYPO3 resource references.
+               See `Resource references`_ for an in depth explanation on the
+               syntax of these references.
 
-         It's also possible to direct the typolink to use a custom function (a
-         "link handler") to build the link. This is described in more details
-         below this table.
+            -  `http(s)://`: regular external links
 
-         **2. Target or popup settings**
+            -  `mailto:info@typo3.org`: regular mailto links
 
-         Targets are normally defined the properties described above
-         (extTarget, fileTarget and target) but it is possible to override them
-         by explicitly defining a target in the parameter property. It's
-         possible to use a dash (-) to skip this value when one wants to define
-         a third or fourth value, but no target (see examples above).
+            It's also possible to direct the typolink to use a custom function (a
+            "link handler") to build the link. This is described in more detail
+            below.
 
-         Instead of a target, this second value can be used to define the
-         parameters of a JavaScript popup window into which the link will be
-         opened (using window.open). The height and width of the window can be
-         defined, as well as additional parameters to be passed to the
-         JavaScript function. Also see property "Jswindow".
+         2. Target or popup settings
 
-         *Examples:* ::
+            Targets are normally as described above (extTarget, fileTarget,
+            target). But it is possible to override them by explicitly defining
+            a target in the parameter property. It's possible to use a dash (-)
+            to skip this value when one wants to define a third or fourth
+            value, but no target.
 
-         *Open page 51 in a popup window measuring 400 by 300 pixels:* ::
+            Instead of a target, this second value can be used to define the
+            parameters of a JavaScript popup window into which the link will be
+            opened (using window.open). The height and width of the window can be
+            defined, as well as additional parameters to be passed to the
+            JavaScript function. Also see property "Jswindow".
 
-            typolink.parameter = 51 400x300
+            Examples
+               Open page 51 in a popup window measuring 400 by 300 pixels::
 
-         *Same as above, but the window will not be resizable and will show
-         the location bar:* ::
+                  typolink.parameter = 51 400x300
 
-            typolink.parameter = 51 400x300:resizable=0,location=1
+               Open page 51 in a popup window measuring 400 by 300 pixels. Do
+               not make the window resizable and show the location bar::
 
-         **3. Class**
+                  typolink.parameter = 51 400x300:resizable=0,location=1
 
-         The third value can be used to define a class name for the link tag.
-         This class is inserted in the tag before any other value from the
-         "ATagParams" property. Beware of conflicting class attributes. It's
-         possible to use a dash (-) to skip this value when one wants to define
-         a fourth value, but no class (see examples above).
+         3. Class
 
-         **4. Title**
+            The third value can be used to define a class name for the link tag.
+            This class is inserted in the tag before any other value from the
+            "ATagParams" property. Beware of conflicting class attributes. It's
+            possible to use a dash (-) to skip this value when one wants to define
+            a fourth value, but no class (see examples above).
 
-         The standard way of defining the title attribute of the link would be
-         to use the "title" property or even the "ATagParams" property. However
-         it can also be set in this fourth value, in which case it will
-         override the other settings. Note that the title should be wrapped in
-         double quotes (") if it contains blanks.
+         4. Title
 
-         **Note:** When used from parseFunc, the value should not be defined
-         explicitly, but imported using::
+            The standard way of defining the title attribute of the link would
+            be to use the :ts:`title` property or even the :ts:`ATagParams`
+            property. However it can also be set in this fourth value, in which
+            case it will override the other settings. Note that the title
+            should be wrapped in double quotes (") if it contains blanks.
 
-            typolink.parameter.data = parameters : allParams
+            *Attention:* When used from :ts:`parseFunc`, the value should not
+            be defined explicitly, but imported like this::
+
+               typolink.parameter.data = parameters : allParams
 
 
 .. container:: table-row
@@ -295,16 +300,15 @@ with the link-parameters (lowercased)!
 
          Additional sub-property:
 
-         **.scheme:** Defines the URL scheme to be used (https or http). http is
-         the default value.
+         .scheme
+            Defines the URL scheme to be used (https or http). http is the
+            default value. Example::
 
-         **Example:** ::
-
-            typolink {
-              parameter = 13
-              forceAbsoluteUrl = 1
-              forceAbsoluteUrl.scheme = https
-            }
+               typolink {
+                  parameter = 13
+                  forceAbsoluteUrl = 1
+                  forceAbsoluteUrl.scheme = https
+               }
 
    Default
          0
@@ -332,10 +336,9 @@ with the link-parameters (lowercased)!
 
    Description
          Preset values for opening the window. This example lists almost all
-         possible attributes:
+         possible attributes::
 
-         status=1,menubar=1,scrollbars=1,resizable=1,location=1,directories=1,t
-         oolbar=1
+            status=1,menubar=1,scrollbars=1,resizable=1,location=1,directories=1,toolbar=1
 
 
 .. container:: table-row
@@ -383,9 +386,9 @@ with the link-parameters (lowercased)!
    Description
          Additional parameters
 
-         Example:
+         Example::
 
-         class="board"
+            class="board"
 
 
 .. container:: table-row
@@ -413,7 +416,7 @@ with the link-parameters (lowercased)!
          This passes the link-data compiled by the typolink function to a user-
          defined function for final manipulation.
 
-         The $content variable passed to the user-function (first parameter) is
+         The :php:`$content` variable passed to the user-function (first parameter) is
          an array with the keys "TYPE", "TAG", "url", "targetParams" and
          "aTagParams".
 
@@ -422,11 +425,13 @@ with the link-parameters (lowercased)!
          TAG is the full <A>-tag as generated and ready from the typolink
          function.
 
-         The latter three is combined into the 'TAG' value after this formula::
+         The actual tag value is constructed like this:
 
-            <a href="' . $finalTagParts['url'] . '"' .
-                       $finalTagParts['targetParams'] .
-                       $finalTagParts['aTagParams'] . '>
+         .. code-block:: php
+
+            $contents = '<a href="' . $finalTagParts['url'] . '"'
+                        . $finalTagParts['targetParams']
+                        . $finalTagParts['aTagParams'] . '>';
 
          The userfunction must return an <A>-tag.
 
@@ -441,38 +446,38 @@ with the link-parameters (lowercased)!
 .. _typolink-resource_references: `Resource references`
 
 Resource references
-"""""""""""""""""""
+===================
 
 TYPO3 supports a modern and future-proof way of referencing resources using an
 extensible and expressive syntax which is easy to understand.
 
-In order to understand the syntax, we will guide you through using a simple page
-link.
+In order to understand the syntax, we will guide you through using a simple
+page link.
 
 `t3://page?uid=13&campaignCode=ABC123`
 
 The syntax consists of three main parts, much like parts on an URL:
 
 Syntax Namespace (`t3://`)
-   The namespace is set to `t3://` to ensure the `LinkService` should be called to
-   parse the URL. This value is fixed and mandatory.
+   The namespace is set to `t3://` to ensure the `LinkService` should be called
+   to parse the URL. This value is fixed and mandatory.
 
 Resource handler key (`page`)
    The resource handler key is a list of available handlers that TYPO3 can work
    with. At the time of writing these handlers are:
 
-   * page
-   * file
-   * folder
+   - page
+   - file
+   - folder
 
-   More keys can be added via :php:`$TYPO3_CONF_VARS['SYS']['linkHandler']` in an associative
-   array where the key is the handler key and the value is a class implementing
-   the LinkHandlerInterface.
+   More keys can be added via :php:`$TYPO3_CONF_VARS['SYS']['linkHandler']` in
+   an associative array where the key is the handler key and the value is a
+   class implementing the LinkHandlerInterface.
 
-Resource parameters(`?uid=13&campaignCode=ABC123`)
-   These are the specific identification parameters that are used by any handler.
-   Note that these may carry additional parameters in order to configure the
-   behavior of any handler.
+Resource parameters (`?uid=13&campaignCode=ABC123`)
+   These are the specific identification parameters that are used by any
+   handler. Note that these may carry additional parameters in order to
+   configure the behavior of any handler.
 
 Handler syntax
 ==============
@@ -547,7 +552,7 @@ folder
 .. _link-handler:
 
 Using link handlers
-"""""""""""""""""""
+===================
 
 A feature allows you to register a link handler
 for a keyword you define. For example, you can link to a page with id
@@ -569,33 +574,36 @@ attribute of the ->typolink call. When "pressrelease:123" enters
 a keyword with which a link handler is associated and if so, that
 handler is allowed to create the link.
 
-Registering the handler for keyword "pressrelease" is done like this::
+Registering the handler for keyword "pressrelease" is done like this:
+
+.. code-block:: php
 
    $TYPO3_CONF_VARS['SC_OPTIONS']['tslib/class.tslib_content.php']
      ['typolinkLinkHandler']['pressrelease'] =
      'EXT:pressrelease/class.linkHandler.php:&tx_linkHandler';
 
 The class file "pressrelease/class.linkHandler.php" contains the class
-"tx\_linkHandler" which could look like this::
+"tx\_linkHandler" which could look like this:
+
+.. code-block:: php
 
    class tx_linkHandler {
-     function main($linktxt, $conf, $linkHandlerKeyword,
-       $linkHandlerValue, $link_param, &$pObj) {
-       $lconf = array();
-       $lconf['useCacheHash'] = 1;
-       $lconf['parameter'] = 34;
-       $lconf['additionalParams'] = '&tx_pressrelease[showUid]=' .
-         rawurlencode($linkHandlerValue);
-
-       return $pObj->typoLink($linktxt, $lconf);
-     }
+      function main($linktxt, $conf, $linkHandlerKeyword,
+         $linkHandlerValue, $link_param, &$pObj) {
+         $lconf = array();
+         $lconf['useCacheHash'] = 1;
+         $lconf['parameter'] = 34;
+         $lconf['additionalParams'] = '&tx_pressrelease[showUid]=' .
+            rawurlencode($linkHandlerValue);
+         return $pObj->typoLink($linktxt, $lconf);
+      }
    }
 
 In this function, the value part after the keyword is set as the value
-of a GET parameter, "&tx\_pressrelease[showUid]" and the "parameter"
+of a GET parameter, `&tx_pressrelease[showUid]` and the "parameter"
 value of a new ->typolink call is set to "34" which assumes that on
 page ID 34 a plugin is put that will display pressrelease 123 when
-called with &tx\_pressrelease[showUid]=123. In addition you can see
+called with `&tx_pressrelease[showUid]=123`. In addition you can see
 the "userCacheHash" attribute for the typolink function used in order
 to produce a cached display.
 
