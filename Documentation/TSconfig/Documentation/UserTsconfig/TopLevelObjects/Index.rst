@@ -111,8 +111,23 @@ These are the User TSconfig Top Level Objects (TLOs):
          .. code-block:: typoscript
 
          	TCAdefaults.pages.hidden = 0
+		
+		
+	.. important::
+		Be aware that the previous example will not work when creating the page from the context menu;
+		this is triggered by the values listed into the `ctrl` section of `typo3/sysext/core/Configuration/TCA/pages.php`:
+
+		.. code-block:: php
+			'ctrl' => [
+	        	'useColumnsForDefaultValues' => 'doktype,fe_group,hidden',
+
+	    If 'hidden' is in the list, it gets overwritten with the "neighbor" record value (see `\TYPO3\CMS\Backend\Form\FormDataProvider\DatabaseRowInitializeNew::setDefaultsFromNeighborRow)` and as the value is set then (to '0' most of the time) it will not be overwritten again.
+	    To make it work as expected, that values must be overridden (for example using the `Configuration/TCA/Overrides` folder of an extension)
 
 
+		.. code-block:: php
+			$GLOBALS['TCA']['pages']['ctrl']['useColumnsForDefaultValues'] = 'doktype,fe_group';  		
+		
 .. container:: table-row
 
    Property
