@@ -104,30 +104,33 @@ These are the User TSconfig Top Level Objects (TLOs):
          So these values will be authoritative if the user has no access to the
          field anyway.
 
-         **Example:**
+Example
+   This sets the default hidden flag for pages to "clear".
 
-         This sets the default hidden flag for pages to "clear".
+   .. code-block:: typoscript
 
-         .. code-block:: typoscript
+      TCAdefaults.pages.hidden = 0
 
-         	TCAdefaults.pages.hidden = 0
-		
-		
-	.. important::
-		Be aware that the previous example will not work when creating the page from the context menu;
-		this is triggered by the values listed into the `ctrl` section of `typo3/sysext/core/Configuration/TCA/pages.php`:
+   .. important::
 
-		.. code-block:: php
-			'ctrl' => [
-	        	'useColumnsForDefaultValues' => 'doktype,fe_group,hidden',
+      This example will not work when creating the page from the context menu
+      since this is triggered by the values listed in the `ctrl` section of
+      :file:`typo3/sysext/core/Configuration/TCA/pages.php`::
 
-	    If 'hidden' is in the list, it gets overwritten with the "neighbor" record value (see `\TYPO3\CMS\Backend\Form\FormDataProvider\DatabaseRowInitializeNew::setDefaultsFromNeighborRow)` and as the value is set then (to '0' most of the time) it will not be overwritten again.
-	    To make it work as expected, that values must be overridden (for example using the `Configuration/TCA/Overrides` folder of an extension)
+         'ctrl' => [
+            'useColumnsForDefaultValues' => 'doktype,fe_group,hidden',
+
+      If 'hidden' is in the list, it gets overwritten with the "neighbor"
+      record value (see
+      :php:`\TYPO3\CMS\Backend\Form\FormDataProvider\DatabaseRowInitializeNew::setDefaultsFromNeighborRow`)
+      and as the value is set - usually to '0' - it will not be overwritten
+      again. To make it work as expected, that value must be overridden. This
+      can be done for example in the :file:`Configuration/TCA/Overrides` folder
+      of an extension::
+
+         $GLOBALS['TCA']['pages']['ctrl']['useColumnsForDefaultValues'] = 'doktype,fe_group';
 
 
-		.. code-block:: php
-			$GLOBALS['TCA']['pages']['ctrl']['useColumnsForDefaultValues'] = 'doktype,fe_group';  		
-		
 .. container:: table-row
 
    Property
