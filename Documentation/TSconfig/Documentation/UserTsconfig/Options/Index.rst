@@ -672,42 +672,6 @@ pageTree.hideFilter
          If set, the filter-box in the top of the page tree will be hidden.
 
 
-.. _useroptions-pageTree-separateNotinmenuPages:
-
-pageTree.separateNotinmenuPages
-===============================
-
-.. container:: table-row
-
-   Property
-         pageTree.separateNotinmenuPages
-
-   Data type
-         boolean
-
-   Description
-         If set, not in menu and special pages are separated in the page tree
-         from standard pages.
-
-
-.. _useroptions-pageTree-alphasortNotinmenuPages:
-
-pageTree.alphasortNotinmenuPages
-================================
-
-.. container:: table-row
-
-   Property
-         pageTree.alphasortNotinmenuPages
-
-   Data type
-         boolean
-
-   Description
-         If set and pageTree.seperateNotinmenuPages = 1, separated pages are
-         sorted alphabetically.
-
-
 .. _useroptions-pageTree-altElementBrowserMountPoints:
 
 pageTree.altElementBrowserMountPoints
@@ -905,8 +869,8 @@ contextMenu.table.[tableName][.context].disableItems
          List of context menu ("clickmenu") items to disable.
 
          The "[tableName]" refers to the type of the record (database table name)
-         the context menu is shown for e.g.  "pages", "sys_file", "tt_content", etc. 
-         
+         the context menu is shown for e.g.  "pages", "sys_file", "tt_content", etc.
+
          Optional key "[.context]" refers to the place from which the context menu
          is triggered. The core uses just one context called **"tree"** for context menus
          triggered from page tree and folder tree.
@@ -922,20 +886,20 @@ contextMenu.table.[tableName][.context].disableItems
 
          edit, rename, upload, new, info, copy, copyRelease, cut, cutRelease, pasteInto,
          delete
-         
+
          **Example:**
 
          .. code-block:: typoscript
 
             options.contextMenu.table.pages.disableItems = new,newWizard
-            
+
             options.contextMenu.table.pages.tree.disableItems = new,newWizard
 
          .. note::
 
             Context menu rendering was refactored in v8.6, so when migrating from v7
-            some of the settings needs to be tuned. See chapter in the 
-            :ref:`TYPO3 API documentation <t3coreapi:context-menu>` 
+            some of the settings needs to be tuned. See chapter in the
+            :ref:`TYPO3 API documentation <t3coreapi:context-menu>`
             regarding new context menu implementation.
 
 
