@@ -56,7 +56,8 @@ templateName
                     20 = EXT:sitemodification/Resources/Private/Templates
                 }
                 variables {
-                    foo = bar
+                    foo = TEXT
+                    foo.value = bar
                 }
             }
 
