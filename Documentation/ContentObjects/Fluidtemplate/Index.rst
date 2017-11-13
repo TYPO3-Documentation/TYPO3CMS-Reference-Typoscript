@@ -302,6 +302,7 @@ format
 
    Description
          Sets the format of the current request.
+         Something like "html", "xml", "png", "json" or the like. Can even be something like "rss.xml".
 
    Default
          html
