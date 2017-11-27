@@ -2216,7 +2216,7 @@ sendCacheHeaders
          In case caching is not allowed, these headers are sent to avoid client
          caching:
 
-         - Cache-Control: private
+         - Cache-Control: private, no-store
 
          Notice that enabling the browser caches means you have to consider how
          log files are written. Because when a page is cached on the client it
