@@ -32,6 +32,9 @@ into account.
    Data type
          :ref:`menu object <data-type-menuobj>`
 
+   Default
+         (no menu)
+         
    Description
          For every menu level, that should be rendered, an according entry must
          exist. It defines the menu object that should render the menu items on
@@ -64,8 +67,6 @@ into account.
 
          TYPO3 offers :ref:`a variety of menu objects <menu-objects>`.
 
-   Default
-         (no menu)
 
 
 .. container:: table-row
@@ -98,6 +99,9 @@ into account.
 
    Data type
          integer /:ref:`stdWrap <stdwrap>`
+         
+   Default
+         0
 
    Description
          Defines at which level in the rootLine the menu should start.
@@ -109,8 +113,6 @@ into account.
          rootLine. Thus "-1" is a menu with items from the outermost level,
          "-2" is the level before the outermost...
 
-   Default
-         0
 
 
 .. container:: table-row
@@ -241,13 +243,14 @@ into account.
    Data type
          list of integers
 
+   Default
+         5,6
+
    Description
          Enter the list of page document types (doktype) to exclude from menus.
          By default pages that are "not in menu" (5) are excluded and those
          marked for backend user access only (6).
 
-   Default
-         5,6
 
 
 .. container:: table-row
@@ -446,6 +449,9 @@ Mount pages are supported.
    Data type
          list of page ids /:ref:`stdWrap <stdwrap>`
 
+   Default
+         current page id
+
    Description
          This will generate a menu of all pages with pid = 35 and pid = 56. ::
 
@@ -453,8 +459,6 @@ Mount pages are supported.
             20.special = directory
             20.special.value = 35, 56
 
-   Default
-         current page id
 
 
 .. ###### END~OF~TABLE ######
@@ -484,6 +488,9 @@ Mount pages are supported.
    Data type
          list of page ids /:ref:`stdWrap <stdwrap>`
 
+   Default
+         0
+
    Description
          This will generate a menu with the two pages (uid=35 and uid=56)
          listed::
@@ -495,8 +502,6 @@ Mount pages are supported.
          If .value is not set, the default uid is 0, so that only your homepage
          will be listed.
 
-   Default
-         0
 
 
 .. ###### END~OF~TABLE ######
@@ -550,6 +555,9 @@ Mount pages are supported.
 
    Data type
          string
+         
+   Default
+         SYS\_LASTCHANGED         
 
    Description
          The field in the database which should be used to get the information
@@ -572,8 +580,6 @@ Mount pages are supported.
 
          Fields with empty values are generally not selected.
 
-   Default
-         SYS\_LASTCHANGED
 
 
 .. container:: table-row
@@ -585,6 +591,9 @@ Mount pages are supported.
 
    Data type
          integer
+         
+   Default
+         20         
 
    Description
          Defines the tree depth.
@@ -596,8 +605,6 @@ Mount pages are supported.
 
          **Note:** "depth" is relative to "beginAtLevel".
 
-   Default
-         20
 
 
 .. container:: table-row
@@ -609,6 +616,9 @@ Mount pages are supported.
 
    Data type
          integer
+
+   Default
+         0
 
    Description
          Determines starting level for the page trees generated based on .value
@@ -622,8 +632,6 @@ Mount pages are supported.
 
          **Note:** "depth" is relative to this property.
 
-   Default
-         0
 
 
 .. container:: table-row
@@ -654,12 +662,13 @@ Mount pages are supported.
 
    Data type
          integer
+         
+   Default
+         10         
 
    Description
          Maximal number of items in the menu. Default is 10, max is 100.
 
-   Default
-         10
 
 
 .. container:: table-row
@@ -672,11 +681,12 @@ Mount pages are supported.
    Data type
          boolean
 
+   Default
+         0 (false)
+
    Description
          If set, pages marked "No search" are not included.
 
-   Default
-         0
 
 
 .. ###### END~OF~TABLE ######
@@ -759,13 +769,14 @@ Mount pages are supported.
 
    Data type
          boolean
+         
+   Default
+         0 (false)         
 
    Description
          If set to true, the order of the rootline menu elements will be
          reversed.
 
-   Default
-         false
 
 
 .. ###### END~OF~TABLE ######
@@ -832,13 +843,14 @@ list from the property ".items".
    Data type
          integer /:ref:`stdWrap <stdwrap>`
 
+   Default
+         current page id
+
    Description
          Default is the current page id. Seldom you might want to override this
          value with another page-uid which will then act as the base point for
          the menu and the predefined items.
 
-   Default
-         current page id
 
 
 .. container:: table-row
@@ -991,12 +1003,13 @@ list from the property ".items".
 
    Data type
          boolean
+         
+   Default
+         0 (false)         
 
    Description
          If set, pages marked with the "no search" checkbox will be excluded from the menu.
 
-   Default
-         0
 
 
 .. ###### END~OF~TABLE ######
@@ -1058,6 +1071,9 @@ Mount pages are supported.
    Data type
          string
 
+   Default
+         SYS\_LASTCHANGED
+
    Description
          Which field in the pages table to use for sorting.
 
@@ -1076,8 +1092,6 @@ Mount pages are supported.
 
          **starttime:** Uses the starttime field.
 
-   Default
-         SYS\_LASTCHANGED
 
 
 .. container:: table-row
@@ -1106,11 +1120,12 @@ Mount pages are supported.
    Data type
          integer
 
+   Default
+         20
+
    Description
          (same as in section "special = updated")
 
-   Default
-         20
 
 
 .. container:: table-row
@@ -1122,12 +1137,13 @@ Mount pages are supported.
 
    Data type
          integer
+         
+   Default
+         10         
 
    Description
          (same as in section "special = updated")
 
-   Default
-         10
 
 
 .. container:: table-row
@@ -1184,13 +1200,14 @@ Mount pages are supported.
    Data type
          string
 
+   Default
+         keywords
+
    Description
          Defines the field in the pages table in which to search for the
          keywords. Default is the field name "keyword". No check is done to see
          if the field you enter here exists, so make sure to enter an existing field!
 
-   Default
-         keywords
 
 
 .. container:: table-row
@@ -1203,14 +1220,15 @@ Mount pages are supported.
    Data type
          string
 
+   Default
+         keywords
+
    Description
          Defines the field from the current page from which to take the
          keywords being matched. The default is "keyword". (Notice that
          ".keywordsField" is only setting the page-record field to *search
          in*!)
 
-   Default
-         keywords
 
 
 .. ###### END~OF~TABLE ######
@@ -1274,13 +1292,14 @@ like any other field.
    Data type
          :ref:`string <data-type-string>` / :ref:`stdWrap <stdwrap>`
 
+   Default
+         categories
+
    Description
          Name of the categories-relation field to use for
          building the list of categorized pages, as there can
          be several such fields on a given table.
 
-   Default
-         categories
 
 
 .. container:: table-row
@@ -1311,13 +1330,14 @@ like any other field.
    Data type
          "asc" or "desc" / :ref:`stdWrap <stdwrap>`
 
+   Default
+         asc
+
    Description
          Order in which the pages should be orderd, ascending or
          descending. Should be "asc" or "desc", case-insensitive.
          Will default to "asc" in case of invalid value.
 
-   Default
-         asc
 
 
 .. ###### END~OF~TABLE ######
