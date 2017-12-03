@@ -19,14 +19,16 @@ graphical navigation, where each link is a separate gif-file.
    Data type
          boolean
 
+   Default
+         0 (false)
+
    Description
          RollOver configuration enabled / disabled.
 
          If this is true, RO becomes a GIFBUILDER object defining the layout of
          the menu item when the mouse rolls over it
 
-   Default
-         0
+
 
 
 .. container:: table-row
@@ -77,11 +79,13 @@ graphical navigation, where each link is a separate gif-file.
    Data type
          target
 
+   Default
+         self
+
    Description
          Target of the menu links
 
-   Default
-         self
+
 
 
 .. container:: table-row
@@ -465,11 +469,12 @@ been for a long time.
    Data type
          boolean
 
+   Default
+         0 (false)
+
    Description
          If set, "{elementUid}" is substituted with the item uid.
 
-   Default
-         0
 
 
 .. container:: table-row
