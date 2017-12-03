@@ -113,16 +113,18 @@ into account.
          rootLine. Thus "-1" is a menu with items from the outermost level,
          "-2" is the level before the outermost...
 
-         **Note:** entryLevel does not show a menu **of a certain level of pages** (use :ts:`special = directory` for that)          but it means that it will start to be visible **from that level on**
+         **Note:** :ts:`entryLevel` does not show a menu **of a certain level of pages** 
+         (use :ts:`special = directory` for that)
+         but it means that it will start to be visible **from that level on**.
 
-         So, for example if you build a simple "sitemap" menu like this one:
+         So, for example if you build a simple "sitemap" menu like this one::
 
             page.10 = HMENU
             page.10 {
               entryLevel = 4
               1 = TMENU
-              1.wrap = <ul>|</ul>
-              1.NO.wrapItemAndSub = <li>|</li>
+              1.wrap = <ul> | </ul>
+              1.NO.wrapItemAndSub = <li> | </li>
               1.expAll = 1
               2 < .1
               3 < .2
@@ -133,10 +135,10 @@ into account.
             }
             
          it will start to be visible from the 4th level (and will contain only the subpages from that level).
-         Please note also that this affects also the menu generated with :ts:`MenuProcessor`; for example: 
+         Please note also that this affects also the menu generated with :ts:`MenuProcessor`. Example::
         
             page.10{
-               dataProcessing{
+               dataProcessing {
                 10 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
                 10 {
                    special = list
