@@ -117,28 +117,30 @@ See also: :ref:`if`, :ref:`select`, :ref:`data-type-wrap`, :ref:`stdWrap`, :ref:
 
 select
 ------
+.. container:: table-row
 
-:aspect:`Property`
-      select
+   Property
+         select
 
-:aspect:`Data type`
-      :ref:`select`
+   Data type
+         :ref:`select`
 
-:aspect:`Description`
+   Description
       The SQL-statement, a SELECT query, is set here,
       including automatic visibility control.
 
 
 table
 -----
+.. container:: table-row
 
-:aspect:`Property`
+   Property
       table
 
-:aspect:`Data type`
+   Data type
       *table name* /:ref:`stdwrap`
 
-:aspect:`Description`
+   Description
       The table, the content should come from. Any table can be used;
       a check for a table prefix is not done.
 
@@ -147,14 +149,18 @@ table
 
 renderObj
 ---------
+.. container:: table-row
 
-:aspect:`Property`
+   Property
       renderObj
 
-:aspect:`Data type`
+   Data type
       :ref:`data-type-cObject`
 
-:aspect:`Description`
+   Default
+      :ts:`< [table name]`
+
+   Description
       The cObject used for rendering the records resulting from the query in
       .select.
 
@@ -162,20 +168,19 @@ renderObj
       in this case the configuration of the according table is being copied.
       See the notes on the example below.
 
-:aspect:`Default`
-      :ts:`< [table name]`
 
 
 slide
 -----
+.. container:: table-row
 
-:aspect:`Property`
+   Property
       slide
 
-:aspect:`Data type`
+   Data type
       integer /:ref:`stdWrap`
 
-:aspect:`Description`
+   Description
       If set and no content element is found by the select command, the
       rootLine will be traversed back until some content is found.
 
@@ -206,27 +211,29 @@ slide
 
 wrap
 ----
+.. container:: table-row
 
-:aspect:`Property`
+   Property
       wrap
 
-:aspect:`Data type`
+   Data type
       :ref:`wrap <data-type-wrap>` /:ref:`stdWrap`
 
-:aspect:`Description`
+   Description
       Wrap the whole content.
 
 
 stdWrap
 -------
+.. container:: table-row
 
-:aspect:`Property`
+   Property
       stdWrap
 
-:aspect:`Data type`
+   Data type
       :ref:`stdwrap`
 
-:aspect:`Description`
+   Description
       Apply `stdWrap` functionality.
 
 
