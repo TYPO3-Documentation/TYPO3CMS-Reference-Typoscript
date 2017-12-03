@@ -56,11 +56,12 @@ TMENU
    Data type
          target
 
+   Default
+         self
+
    Description
          Target of the menu links
 
-   Default
-         self
 
 
 .. container:: table-row
