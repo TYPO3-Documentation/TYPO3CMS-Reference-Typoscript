@@ -18,6 +18,9 @@ That means they are not used by for instance the JSMENU.
 
    Data type
          boolean / (config)
+         
+   Default
+         1 (true)         
 
    Description
          The default "Normal" state rendering of Item. This is required for all
@@ -35,8 +38,7 @@ That means they are not used by for instance the JSMENU.
 
          That will be pure <a> tags wrapped around page titles.
 
-   Default
-         1
+
 
 
 .. container:: table-row
@@ -49,11 +51,12 @@ That means they are not used by for instance the JSMENU.
    Data type
          boolean / (config)
 
+   Default
+         0
+
    Description
          Enable/Configuration for menu items which has subpages.
 
-   Default
-         0
 
 
 .. container:: table-row
@@ -66,11 +69,12 @@ That means they are not used by for instance the JSMENU.
    Data type
          boolean / (config)
 
+   Default
+         0
+
    Description
          Enable/Configuration for menu items which are found in the rootLine.
 
-   Default
-         0
 
 
 .. container:: table-row
@@ -83,12 +87,13 @@ That means they are not used by for instance the JSMENU.
    Data type
          boolean / (config)
 
+   Default
+         0
+
    Description
          Enable/Configuration for menu items which are found in the rootLine
          and have subpages.
 
-   Default
-         0
 
 
 .. container:: table-row
@@ -101,11 +106,12 @@ That means they are not used by for instance the JSMENU.
    Data type
          boolean / (config)
 
+   Default
+         0
+
    Description
          Enable/Configuration for a menu item if the item is the current page.
 
-   Default
-         0
 
 
 .. container:: table-row
@@ -117,13 +123,14 @@ That means they are not used by for instance the JSMENU.
 
    Data type
          boolean / (config)
+         
+   Default
+         0         
 
    Description
          Enable/Configuration for a menu item if the item is the current page
          and has subpages.
 
-   Default
-         0
 
 
 .. container:: table-row
@@ -136,12 +143,13 @@ That means they are not used by for instance the JSMENU.
    Data type
          boolean / (config)
 
+   Default
+         0
+
    Description
          Enable/Configuration for menu items which are access restricted pages
          that a user has access to.
 
-   Default
-         0
 
 
 .. container:: table-row
@@ -152,6 +160,9 @@ That means they are not used by for instance the JSMENU.
    Data type
          boolean / (config)
 
+   Default
+         0
+
    Description
          Enable/Configuration for 'Spacer' pages.
 
@@ -160,8 +171,6 @@ That means they are not used by for instance the JSMENU.
 
          **Note:** Rollovers do not work with spacers, if you use GMENU!
 
-   Default
-         0
 
 
 .. container:: table-row
