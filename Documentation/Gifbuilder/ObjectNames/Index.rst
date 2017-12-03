@@ -36,14 +36,15 @@ different each time!
    Data type
          x,y +calc /:ref:`stdWrap <stdwrap>`
 
+   Default
+         100,20
+
    Description
          Size of the image file.
 
          For the usage of "calc" see the according note at the beginning of
          the section "GIFBUILDER".
 
-   Default
-         100,20
 
 
 .. container:: table-row
@@ -54,13 +55,14 @@ different each time!
    Data type
          "gif" / "jpg"
 
+   Default
+         gif
+
    Description
          Output type.
 
          "jpg"/"jpeg" = jpg-image
 
-   Default
-         gif
 
 
 .. container:: table-row
@@ -143,11 +145,12 @@ different each time!
    Data type
          GraphicColor /:ref:`stdWrap <stdwrap>`
 
+   Default
+         white
+
    Description
          Background color of the image.
 
-   Default
-         white
 
 
 .. container:: table-row
@@ -158,11 +161,12 @@ different each time!
    Data type
          x,y +calc /:ref:`stdWrap <stdwrap>`
 
+   Default
+         0,0
+
    Description
          Offset all objects on the image.
 
-   Default
-         0,0
 
 
 .. container:: table-row
@@ -255,12 +259,13 @@ Renders a text.
    Data type
          float
 
+   Default
+         1.0
+
    Description
          Defines a value that is multiplied by the line height of the current
          element.
 
-   Default
-         1.0
 
 
 .. container:: table-row
@@ -271,12 +276,13 @@ Renders a text.
    Data type
          integer
 
+   Default
+         100
+
    Description
          The maximum length of the text. This is just a natural break that
          prevents incidental rendering of very long texts!
 
-   Default
-         100
 
 
 .. container:: table-row
@@ -305,12 +311,13 @@ Renders a text.
    Data type
          boolean
 
+   Default
+         0 (false)
+
    Description
          If set, HTML-tags in the string inserted are **not** removed. Any
          other way HTML code is removed by default!
 
-   Default
-         0
 
 
 .. container:: table-row
@@ -321,11 +328,12 @@ Renders a text.
    Data type
          positive integer /:ref:`stdWrap <stdwrap>`
 
+   Default
+         12
+
    Description
          Font size
 
-   Default
-         12
 
 
 .. container:: table-row
@@ -336,11 +344,12 @@ Renders a text.
    Data type
          GraphicColor /:ref:`stdWrap <stdwrap>`
 
+   Default
+         black
+
    Description
          Font color
 
-   Default
-         black
 
 
 .. container:: table-row
@@ -350,12 +359,13 @@ Renders a text.
 
    Data type
          resource /:ref:`stdWrap <stdwrap>`
+         
+   Default
+         Nimbus (Arial-clone)         
 
    Description
          Font face (truetype font you can upload!)
 
-   Default
-         Nimbus (Arial-clone)
 
 
 .. container:: table-row
@@ -366,15 +376,16 @@ Renders a text.
    Data type
          degree
 
+   Default
+         0
+
+         Range: -90 til 90
+
    Description
          Rotation degrees of the text.
 
          **Note:** Angle is not available if spacing/wordSpacing is set.
 
-   Default
-         0
-
-         Range: -90 til 90
 
 
 .. container:: table-row
@@ -385,11 +396,12 @@ Renders a text.
    Data type
          align /:ref:`stdWrap <stdwrap>`
 
+   Default
+         left
+
    Description
          Alignment of the text
 
-   Default
-         left
 
 
 .. container:: table-row
@@ -400,11 +412,12 @@ Renders a text.
    Data type
          x,y +calc /:ref:`stdWrap <stdwrap>`
 
+   Default
+         0,0
+
    Description
          Offset of the text
 
-   Default
-         0,0
 
 
 .. container:: table-row
@@ -415,6 +428,9 @@ Renders a text.
    Data type
          boolean
 
+   Default
+         1 (true)
+
    Description
          FreeType antialiasing. Notice, the default mode is "on"!
 
@@ -422,8 +438,7 @@ Renders a text.
 
          **Note:** setting this option to 0 will not work if *fontColor* is set to black (or #000000).
 
-   Default
-         1
+
 
 
 .. container:: table-row
@@ -434,14 +449,15 @@ Renders a text.
    Data type
          positive integer /:ref:`stdWrap <stdwrap>`
 
+   Default
+         1
+
    Description
          How many times the text should be "printed" onto it self. This will
          add the effect of bold text.
 
          **Note:** This option is not available if .niceText is enabled.
 
-   Default
-         1
 
 
 .. container:: table-row
@@ -452,11 +468,12 @@ Renders a text.
    Data type
          positive integer /:ref:`stdWrap <stdwrap>`
 
+   Default
+         0
+
    Description
          Pixel-distance between letters. This may render ugly!
 
-   Default
-         0
 
 
 .. container:: table-row
@@ -467,11 +484,12 @@ Renders a text.
    Data type
          positive integer /:ref:`stdWrap <stdwrap>`
 
+   Default
+         = ".spacing"\*2
+
    Description
          Pixel-distance between words.
 
-   Default
-         = ".spacing"\*2
 
 
 .. container:: table-row
@@ -482,14 +500,15 @@ Renders a text.
    Data type
          boolean /:ref:`stdWrap <stdwrap>`
 
+   Default
+         0
+
    Description
          If this is true, the text is **not** printed.
 
          This feature may be used, if you need a SHADOW object to base a shadow
          on the text, but do not want the text to be displayed.
 
-   Default
-         0
 
 
 .. container:: table-row
@@ -979,11 +998,12 @@ Prints a filled box.
    Data type
          GraphicColor /:ref:`stdWrap <stdwrap>`
 
+   Default
+         black
+
    Description
          Fill color of the box.
 
-   Default
-         black
 
 
 .. container:: table-row
@@ -994,13 +1014,14 @@ Prints a filled box.
    Data type
          positive integer (1-100) /:ref:`stdWrap <stdwrap>`
 
+   Default
+         100
+
    Description
          The degree to which the box conceals the background. Mathematically
          speaking: Opacity = Transparency^-1. E.g. 100% opacity = 0%
          transparency.
 
-   Default
-         100
 
 
 .. container:: table-row
@@ -1010,6 +1031,9 @@ Prints a filled box.
 
    Data type
          VHalign /:ref:`stdWrap <stdwrap>`
+
+   Default
+         l, t
 
    Description
          Pair of values, which defines the horizontal and vertical alignment of
@@ -1027,8 +1051,6 @@ Prints a filled box.
 
             align = c, b
 
-   Default
-         l, t
 
 
 .. ###### END~OF~TABLE ######
@@ -1070,11 +1092,12 @@ Prints a filled ellipse.
    Data type
          GraphicColor /:ref:`stdWrap <stdwrap>`
 
+   Default
+         black
+
    Description
          Fill color of the ellipse.
 
-   Default
-         black
 
 
 .. ###### END~OF~TABLE ######
@@ -1127,11 +1150,12 @@ Renders an image file.
    Data type
          x,y +calc /:ref:`stdWrap <stdwrap>`
 
+   Default
+         0,0
+
    Description
          Offset of the image
 
-   Default
-         0,0
 
 
 .. container:: table-row
@@ -1229,11 +1253,12 @@ Example:
    Data type
          double (0.5 - 3.0)
 
+   Default
+         1.0
+
    Description
          Sets the gamma value.
 
-   Default
-         1.0
 
 
 .. container:: table-row
@@ -1244,11 +1269,12 @@ Example:
    Data type
          positive integer (1-99)
 
+   Default
+         0
+
    Description
          Blurs the edges inside the image.
 
-   Default
-         0
 
 
 .. container:: table-row
@@ -1259,11 +1285,12 @@ Example:
    Data type
          positive integer (1-99)
 
+   Default
+         0
+
    Description
          Sharpens the edges inside the image.
 
-   Default
-         0
 
 
 .. container:: table-row
@@ -1291,11 +1318,12 @@ Example:
    Data type
          positive integer (0-100)
 
+   Default
+         0
+
    Description
          The image is swirled or spun from its center.
 
-   Default
-         0
 
 
 .. container:: table-row
@@ -1410,14 +1438,15 @@ Example:
    Data type
          positive integer (0-360)
 
+   Default
+         0
+
    Description
          Number of degrees for a clockwise rotation.
 
          Image dimensions will grow if needed, so that nothing is cut off from
          the original image.
 
-   Default
-         0
 
 
 .. container:: table-row
@@ -1530,11 +1559,12 @@ image!
    Data type
          GraphicColor /:ref:`stdWrap <stdwrap>`
 
+   Default
+         The original backColor
+
    Description
          *See "Data types reference".*
 
-   Default
-         The original backColor
 
 
 .. container:: table-row
@@ -1545,13 +1575,14 @@ image!
    Data type
          VHalign /:ref:`stdWrap <stdwrap>`
 
+   Default
+         l, t
+
    Description
          Horizontal and vertical alignment of the crop frame.
 
          *See "Data types reference".*
 
-   Default
-         l, t
 
 
 .. container:: table-row
