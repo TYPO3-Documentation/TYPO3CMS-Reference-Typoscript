@@ -131,12 +131,13 @@ otherwise noted!
    Data type
          string
 
+   Default
+         "img"
+         
    Description
          Prefix for the image names. This prefix is appended with the uid of the
          page.
 
-   Default
-         "img"
 
 
 .. container:: table-row
