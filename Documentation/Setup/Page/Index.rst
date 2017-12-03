@@ -899,6 +899,9 @@ typeNum
 
    Data type
          integer
+         
+   Default
+         0         
 
    Description
          This determines the typeId of the page. The *&type=* parameter in the URL
@@ -906,9 +909,6 @@ typeNum
          the first found PAGE object, but it **must** be set and be unique as
          soon as you use *more* than one such object (watch this if you use frames
          on your page)!
-
-   Default
-         0
 
 
 
