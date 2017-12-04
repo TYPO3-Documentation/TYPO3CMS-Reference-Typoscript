@@ -113,7 +113,7 @@ See also: :ref:`if`, :ref:`select`, :ref:`data-type-wrap`, :ref:`stdWrap`, :ref:
 
 
 
-
+.. ### BEGIN~OF~TABLE ###
 
 select
 ------
@@ -237,7 +237,7 @@ stdWrap
       Apply `stdWrap` functionality.
 
 
-
+.. ###### END~OF~TABLE ######
 
 .. _cobj-content-examples:
 
