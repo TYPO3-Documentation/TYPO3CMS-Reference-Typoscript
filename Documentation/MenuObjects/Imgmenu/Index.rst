@@ -20,11 +20,12 @@ GIFBUILDER objects for each item (NO, ACT, SPC... and so on).
    Data type
          target
 
+   Default
+         self
+
    Description
          Target of the menu links
 
-   Default
-         self
 
 
 .. container:: table-row
