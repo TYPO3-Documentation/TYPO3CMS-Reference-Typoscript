@@ -210,6 +210,9 @@ content by TYPO3.
    Data type
          :ref:`wrap <data-type-wrap>` /:ref:`stdWrap <stdwrap>`
 
+   Default
+         ### \| ###
+
    Description
          This is the wrap the markers are wrapped with. The default value is
          ### \| ### resulting in the markers to be presented as
@@ -218,8 +221,6 @@ content by TYPO3.
          Any whitespace around the wrap-items is stripped before they are set
          around the marker\_key.
 
-   Default
-         ### \| ###
 
 
 .. container:: table-row
