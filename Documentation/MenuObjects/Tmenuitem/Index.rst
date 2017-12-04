@@ -43,6 +43,9 @@ the current page record, use stdWrap.data = page : [field name].
 
    Data type
          boolean
+         
+   Default
+         0 (false)         
 
    Description
          If set, all appearances of the string '{elementUid}' in the total
@@ -52,8 +55,6 @@ the current page record, use stdWrap.data = page : [field name].
          This is useful if you want to insert an identification code in the
          HTML in order to manipulate properties with JavaScript.
 
-   Default
-         0
 
 
 .. container:: table-row
@@ -192,12 +193,13 @@ the current page record, use stdWrap.data = page : [field name].
    Data type
          boolean
 
+   Default
+         0 (false)
+
    Description
          If set, the link is first wrapped with "*.linkWrap*" and then the
          <A>-tag.
 
-   Default
-         0
 
 
 .. container:: table-row
@@ -259,11 +261,12 @@ the current page record, use stdWrap.data = page : [field name].
    Data type
          boolean /:ref:`stdWrap <stdwrap>`
 
+   Default
+         0
+
    Description
          If set, the linktexts are not linked at all!
 
-   Default
-         0
 
 
 .. container:: table-row
@@ -274,11 +277,13 @@ the current page record, use stdWrap.data = page : [field name].
    Data type
          boolean /:ref:`stdWrap <stdwrap>`
 
+   Default
+         0
+
    Description
          If set, the text will not be shown at all (smart with spacers).
 
-   Default
-         0
+
 
 .. container:: table-row
 
@@ -288,12 +293,13 @@ the current page record, use stdWrap.data = page : [field name].
    Data type
          wrap /:ref:`stdWrap <stdwrap>`
 
+   Default
+         \|
+
    Description
          stdWrap to the total link-text and ATag. (Notice that the plain
          default value passed to the stdWrap function is "\|".)
 
-   Default
-         \|
 
 
 .. container:: table-row
