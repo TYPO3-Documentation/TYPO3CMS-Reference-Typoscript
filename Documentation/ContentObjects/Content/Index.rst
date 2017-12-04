@@ -22,7 +22,8 @@ is raised to the maximum timestamp value of the respective records.
 Comprehensive example
 ---------------------
 
-See PHP source code for :ref:`TYPO3 \\ CMS \\ Frontend \\ Controller \\ TypoScriptFrontendController \\ ContentContentObject
+See PHP source code for :ref:`TYPO3 \\ CMS \\ Frontend \\ Controller \\ 
+TypoScriptFrontendController \\ ContentContentObject
 <t3api:typo3\\cms\\frontend\\contentobject\\contentcontentobject>`.
 
 Preamble::
@@ -109,52 +110,75 @@ Expanded form::
    // STEP 6: Return 'totalResult'
 
 
-See also: :ref:`if`, :ref:`select`, :ref:`data-type-wrap`, :ref:`stdWrap`, :ref:`data-type-cobject`
+See also: :ref:`if`, :ref:`select`, :ref:`data-type-wrap`, :ref:`stdWrap`, 
+:ref:`data-type-cobject`
 
 
-
-
+.. _cobj-content-select:
 
 select
 ------
 
-:aspect:`Property`
-      select
+.. ### BEGIN~OF~TABLE ###
 
-:aspect:`Data type`
-      :ref:`select`
+.. container:: table-row
 
-:aspect:`Description`
+   Property
+         select
+
+   Data type
+         :ref:`select`
+
+   Description
       The SQL-statement, a SELECT query, is set here,
       including automatic visibility control.
 
+.. ###### END~OF~TABLE ######
+
+
+.. _cobj-content-table:
 
 table
 -----
 
-:aspect:`Property`
+.. ### BEGIN~OF~TABLE ###
+
+.. container:: table-row
+
+   Property
       table
 
-:aspect:`Data type`
+   Data type
       *table name* /:ref:`stdwrap`
 
-:aspect:`Description`
+   Description
       The table, the content should come from. Any table can be used;
       a check for a table prefix is not done.
 
       In standard configuration this will be `tt_content`.
 
+.. ###### END~OF~TABLE ######
+
+
+.. _cobj-content-renderObj:
 
 renderObj
 ---------
 
-:aspect:`Property`
+.. ### BEGIN~OF~TABLE ###
+
+.. container:: table-row
+
+   Property
       renderObj
 
-:aspect:`Data type`
+   Data type
       :ref:`data-type-cObject`
 
-:aspect:`Description`
+   Default
+      :ts:`< [table name]`
+
+   Description
       The cObject used for rendering the records resulting from the query in
       .select.
 
@@ -162,20 +186,25 @@ renderObj
       in this case the configuration of the according table is being copied.
       See the notes on the example below.
 
-:aspect:`Default`
-      :ts:`< [table name]`
+.. ###### END~OF~TABLE ######
 
+
+.. _cobj-content-slide:
 
 slide
 -----
 
-:aspect:`Property`
+.. ### BEGIN~OF~TABLE ###
+
+.. container:: table-row
+
+   Property
       slide
 
-:aspect:`Data type`
+   Data type
       integer /:ref:`stdWrap`
 
-:aspect:`Description`
+   Description
       If set and no content element is found by the select command, the
       rootLine will be traversed back until some content is found.
 
@@ -203,39 +232,55 @@ slide
       **Note:** The sliding will stop when reaching a folder.
       See :php:`$cObj->checkPid_badDoktypeList`.
 
+.. ###### END~OF~TABLE ######
+
+
+.. _cobj-content-wrap:
 
 wrap
 ----
 
-:aspect:`Property`
+.. ### BEGIN~OF~TABLE ###
+
+.. container:: table-row
+
+   Property
       wrap
 
-:aspect:`Data type`
+   Data type
       :ref:`wrap <data-type-wrap>` /:ref:`stdWrap`
 
-:aspect:`Description`
+   Description
       Wrap the whole content.
 
+.. ###### END~OF~TABLE ######
+
+
+.. _cobj-content-stdWrap:
 
 stdWrap
 -------
 
-:aspect:`Property`
+.. ### BEGIN~OF~TABLE ###
+
+.. container:: table-row
+
+   Property
       stdWrap
 
-:aspect:`Data type`
+   Data type
       :ref:`stdwrap`
 
-:aspect:`Description`
+   Description
       Apply `stdWrap` functionality.
 
-
+.. ###### END~OF~TABLE ######
 
 
 .. _cobj-content-examples:
 
-Example 1
----------
+CONTENT object example 1
+------------------------
 
 Here is an example of the CONTENT object::
 
@@ -252,8 +297,8 @@ will reference the TypoScript configuration of `tt_content`. The
 according TypoScript configuration will be copied to `renderObj`.
 
 
-Example 2
----------
+CONTENT object example 2
+------------------------
 
 Here is an example of record-rendering objects::
 
@@ -284,4 +329,3 @@ Here is an example of record-rendering objects::
    tt_content.default.default {
       # ...
    }
-
