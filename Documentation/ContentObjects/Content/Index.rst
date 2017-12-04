@@ -22,7 +22,8 @@ is raised to the maximum timestamp value of the respective records.
 Comprehensive example
 ---------------------
 
-See PHP source code for :ref:`TYPO3 \\ CMS \\ Frontend \\ Controller \\ TypoScriptFrontendController \\ ContentContentObject
+See PHP source code for :ref:`TYPO3 \\ CMS \\ Frontend \\ Controller \\ 
+TypoScriptFrontendController \\ ContentContentObject
 <t3api:typo3\\cms\\frontend\\contentobject\\contentcontentobject>`.
 
 Preamble::
@@ -109,14 +110,17 @@ Expanded form::
    // STEP 6: Return 'totalResult'
 
 
-See also: :ref:`if`, :ref:`select`, :ref:`data-type-wrap`, :ref:`stdWrap`, :ref:`data-type-cobject`
+See also: :ref:`if`, :ref:`select`, :ref:`data-type-wrap`, :ref:`stdWrap`, 
+:ref:`data-type-cobject`
 
 
-
-.. ### BEGIN~OF~TABLE ###
+.. _cobj-content-select:
 
 select
 ------
+
+.. ### BEGIN~OF~TABLE ###
+
 .. container:: table-row
 
    Property
@@ -129,9 +133,16 @@ select
       The SQL-statement, a SELECT query, is set here,
       including automatic visibility control.
 
+.. ###### END~OF~TABLE ######
+
+
+.. _cobj-content-table:
 
 table
 -----
+
+.. ### BEGIN~OF~TABLE ###
+
 .. container:: table-row
 
    Property
@@ -146,9 +157,16 @@ table
 
       In standard configuration this will be `tt_content`.
 
+.. ###### END~OF~TABLE ######
+
+
+.. _cobj-content-renderObj:
 
 renderObj
 ---------
+
+.. ### BEGIN~OF~TABLE ###
+
 .. container:: table-row
 
    Property
@@ -168,10 +186,16 @@ renderObj
       in this case the configuration of the according table is being copied.
       See the notes on the example below.
 
+.. ###### END~OF~TABLE ######
 
+
+.. _cobj-content-slide:
 
 slide
 -----
+
+.. ### BEGIN~OF~TABLE ###
+
 .. container:: table-row
 
    Property
@@ -208,9 +232,16 @@ slide
       **Note:** The sliding will stop when reaching a folder.
       See :php:`$cObj->checkPid_badDoktypeList`.
 
+.. ###### END~OF~TABLE ######
+
+
+.. _cobj-content-wrap:
 
 wrap
 ----
+
+.. ### BEGIN~OF~TABLE ###
+
 .. container:: table-row
 
    Property
@@ -222,9 +253,16 @@ wrap
    Description
       Wrap the whole content.
 
+.. ###### END~OF~TABLE ######
+
+
+.. _cobj-content-stdWrap:
 
 stdWrap
 -------
+
+.. ### BEGIN~OF~TABLE ###
+
 .. container:: table-row
 
    Property
@@ -236,13 +274,13 @@ stdWrap
    Description
       Apply `stdWrap` functionality.
 
-
 .. ###### END~OF~TABLE ######
+
 
 .. _cobj-content-examples:
 
-Example 1
----------
+CONTENT object example 1
+------------------------
 
 Here is an example of the CONTENT object::
 
@@ -259,8 +297,8 @@ will reference the TypoScript configuration of `tt_content`. The
 according TypoScript configuration will be copied to `renderObj`.
 
 
-Example 2
----------
+CONTENT object example 2
+------------------------
 
 Here is an example of record-rendering objects::
 
@@ -291,4 +329,3 @@ Here is an example of record-rendering objects::
    tt_content.default.default {
       # ...
    }
-
