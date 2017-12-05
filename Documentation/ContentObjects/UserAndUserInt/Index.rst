@@ -26,52 +26,66 @@ outside the main page-rendering.
 userFunc
 ========
 
-:aspect:`Property`
-      userFunc
+.. ### BEGIN~OF~TABLE ###
 
-:aspect:`Data type`
-      function name
+.. container:: table-row
 
-:aspect:`Description`
-      The name of the function, which should be called. If you specify the
-      name with a '->' in it, then it is interpreted as a call to a method in
-      a class.
+   Property
+         userFunc
+       
+   Data type      
+         function name
+      
+   Description
+         The name of the function, which should be called. If you specify the
+         name with a '->' in it, then it is interpreted as a call to a method in
+         a class.
 
-      Two parameters are sent to the PHP function: First a content variable
-      (which is empty for USER/USER\_INT objects, but not when the user
-      function is called from stdWrap functions .postUserFunc or
-      .preUserFunc). The second parameter is an array with the properties of
-      this cObject, if any.
+         Two parameters are sent to the PHP function: First a content variable
+         (which is empty for USER/USER\_INT objects, but not when the user
+         function is called from stdWrap functions .postUserFunc or
+         .preUserFunc). The second parameter is an array with the properties of
+         this cObject, if any.
 
+.. ###### END~OF~TABLE ######
 
 (properties you define)
 =======================
 
-:aspect:`Property`
-      (properties you define)
+.. ### BEGIN~OF~TABLE ###
 
-:aspect:`Data type`
-      (the data type you want)
+.. container:: table-row
 
-:aspect:`Description`
-      Apart from the properties "userFunc" and "stdWrap", which are defined for
-      all USER/USER\_INT objects by default, you can add additional properties
-      with any name and any data type to your USER/USER\_INT object. These
-      properties and their values will then be available in PHP; they will be
-      passed to your function (in the second parameter). This allows you to
-      process them further in any way you wish.
+   Property
+         (properties you define)
 
+   Data type
+         (the data type you want)
+
+   Description
+         Apart from the properties "userFunc" and "stdWrap", which are defined for
+         all USER/USER\_INT objects by default, you can add additional properties
+         with any name and any data type to your USER/USER\_INT object. These
+         properties and their values will then be available in PHP; they will be
+         passed to your function (in the second parameter). This allows you to
+         process them further in any way you wish.
+
+.. ###### END~OF~TABLE ######
 
 stdWrap
 =======
 
-:aspect:`Property`
-      stdWrap
+.. ### BEGIN~OF~TABLE ###
 
-:aspect:`Data type`
-      Everything that's made available by :ref:`stdWrap`.
+.. container:: table-row
 
+   Property
+         stdWrap
 
+   Data type
+         Everything that's made available by :ref:`stdWrap`.
+
+.. ###### END~OF~TABLE ######
 
 
 .. _cobj-user-examples:
