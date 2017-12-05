@@ -300,13 +300,14 @@ format
    Data type
          keyword /:ref:`stdWrap <stdwrap>`
 
+   Default
+         html
+
    Description
          :ts:`format` sets the format of the current request. It can be
          something like "html", "xml", "png", "json". And it can even come in the
          form of "rss.xml" or alike.
 
-   Default
-         html
 
 
 .. _cobj-fluidtemplate-properties-extbase-pluginname:
