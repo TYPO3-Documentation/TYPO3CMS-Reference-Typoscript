@@ -1018,7 +1018,7 @@ doctype
             you must also set config.xhtmlDoctype (see below).
 
          See :ref:`config.htmlTag_setParams <setup-config-htmltag-setparams>` and
-         :ref:`comfig.htmlTag_langKey <setup-config-htmltag-langkey>` for more
+         :ref:`config.htmlTag_langKey <setup-config-htmltag-langkey>` for more
          details on the effect on the HTML tag.
 
          Default is the HTML 5 doctype:
