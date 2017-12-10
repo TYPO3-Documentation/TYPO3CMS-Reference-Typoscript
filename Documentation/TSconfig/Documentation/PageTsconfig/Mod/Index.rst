@@ -1142,31 +1142,6 @@ Web > List (mod.web\_list)
 .. container:: table-row
 
    Property
-         enableLocalizationView
-
-   Data type
-         *(list of keywords)*
-
-   Description
-         Determines whether the checkbox "Localization view" in the list module
-         is shown or hidden. If it is hidden, you can predefine it to be always
-         activated or always deactivated.
-
-         The following values are possible:
-
-         - activated: The option is activated and the checkbox is hidden.
-
-         - deactivated: The option is deactivated and the checkbox is hidden.
-
-         - selectable: The checkbox is shown so that the option can be selected by the user.
-
-   Default
-         selectable
-
-
-.. container:: table-row
-
-   Property
 
          newPageWizard.override
 
