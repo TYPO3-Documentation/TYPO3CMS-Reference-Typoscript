@@ -259,68 +259,6 @@ numRows
    Description
          Returns the number of rows resulting from the supplied SELECT query.
 
-
-.. _stdwrap-filelist:
-
-filelist
-''''''''
-
-.. container:: table-row
-
-   Property
-         filelist
-
-   Data type
-         :ref:`data-type-dir` /stdWrap
-
-   Description
-         Reads a directory and returns a list of file names.
-
-         The value is exploded by "\|" into parameters:
-
-         1. The path
-
-         2. comma-separated list of allowed extensions (no spaces between);
-            if empty, all extensions are allowed.
-
-         3. sorting: name, size, ext, date, mdate (modification date).
-
-         4. reverse: Set to "r" if you want a reversed sorting.
-
-         5. `fullpath_flag`: If set, the filelist is returned with complete
-            paths, and not just the filename.
-
-         Also see :ref:`setup-config-lockfilepath` on how to restrict file search.
-
-   Example
-         Find just the names of image files in :file:`fileadmin/images`,
-         sorted ascending by name::
-
-            10 = TEXT
-            10.filelist = fileadmin/images/ | gif,jpg,jpeg,png | name | 0 | 0
-
-         You maybe want to add your own postprocessing to it for further selection::
-
-            10.stdWrap.postUserFunc = My\NameSpace\MyClass->findImageForNow
-
-         Possible logic in PHP:
-
-         .. code-block:: php
-
-            class My\NameSpace\MyClass
-            {
-
-               public function findImageForNow($content, $conf)
-               {
-                  $files = explode(',', $content);
-                  // $result = ...
-                  return $result
-               }
-            }
-
-
-
-
 .. _stdwrap-preuserfunc:
 
 preUserFunc
@@ -1203,28 +1141,6 @@ substring
 
          Uses "UTF-8" for the operation.
 
-
-.. _stdwrap-removebadhtml:
-
-removeBadHTML
-'''''''''''''
-
-.. container:: table-row
-
-   Property
-         removeBadHTML
-
-   Data type
-         boolean /stdWrap
-
-   Description
-         Removes "bad" HTML code based on a pattern that filters away HTML that
-         is considered dangerous for XSS bugs.
-
-         **Note:** The removal, which removeBadHTML does, is not 100% complete.
-         You cannot rely on the processing to remove **all** potentially bad tags.
-
-
 .. _stdwrap-crophtml:
 
 cropHTML
@@ -1610,94 +1526,6 @@ typolink
 
    Description
          Wraps the content with a link-tag.
-
-
-.. _stdwrap-tcaselectitem:
-
-TCAselectItem
-'''''''''''''
-
-.. container:: table-row
-
-   Property
-         TCAselectItem
-
-   Data type
-         Array of properties /stdWrap
-
-   Description
-         Resolves a comma-separated list of values into the TCA item
-         representation.
-
-         **.table:** String. *The Table to look up.*
-
-         **.field:** String. *The field to resolve.*
-
-         **.delimiter:** String. *Delimiter for concatenating multiple
-         elements.*
-
-         **Note:** Currently this works only with TCA fields of type "select"
-         which are not database relations.
-
-
-.. _stdwrap-spacebefore:
-
-spaceBefore
-'''''''''''
-
-.. container:: table-row
-
-   Property
-         spaceBefore
-
-   Data type
-         integer /stdWrap
-
-   Description
-         Pixels space before. Done with a clear-gif; <img ...><br>.
-
-
-.. _stdwrap-spaceafter:
-
-spaceAfter
-''''''''''
-
-.. container:: table-row
-
-   Property
-         spaceAfter
-
-   Data type
-         integer /stdWrap
-
-   Description
-         Pixels space after. Done with a clear-gif; <img ...><br>.
-
-
-.. _stdwrap-space:
-
-space
-'''''
-
-.. container:: table-row
-
-   Property
-         space
-
-   Data type
-         :ref:`space <data-type-space>` /stdWrap
-
-   Description
-         [spaceBefore] \| [spaceAfter]
-
-         **Additional property:**
-
-         .useDiv = 1
-
-         If set, a clear gif is not used but rather a <div> tag with a style-
-         attribute setting the height. (Affects spaceBefore and spaceAfter as
-         well).
-
 
 .. _stdwrap-wrap:
 

@@ -22,9 +22,6 @@ Properties
    `admPanel`_                                           :ref:`data-type-boolean`
    `ATagParams`_                                         *<A>-params*
    `baseURL`_                                            :ref:`data-type-string`
-   `beLoginLinkIPList`_                                  [IP-number]
-   `beLoginLinkIPList\_login`_                           :ref:`data-type-html-code`
-   `beLoginLinkIPList\_logout`_                          :ref:`data-type-html-code`
    `cache`_                                              array
    `cache\_clearAtMidnight`_                             :ref:`data-type-boolean`           false
    `cache\_period`_                                      :ref:`data-type-integer`           86400 *(= 24 hours)*
@@ -68,7 +65,6 @@ Properties
    `language\_alt`_                                      :ref:`data-type-string`
    `linkVars`_                                           :ref:`data-type-list`
    `locale\_all`_                                        :ref:`data-type-string`
-   `lockFilePath`_                                       :ref:`data-type-string`            fileadmin/
    `message\_page\_is\_being\_generated`_                :ref:`data-type-string`
    `message\_preview`_                                   :ref:`data-type-string`
    `message\_preview\_workspace`_                        :ref:`data-type-string`
@@ -80,7 +76,6 @@ Properties
    `namespaces`_                                         *(array of strings)*
    `no\_cache`_                                          :ref:`data-type-boolean`           0
    `noPageTitle`_                                        :ref:`data-type-integer`           0
-   `pageGenScript`_                                      :ref:`data-type-resource`          typo3/sysext/frontend/Classes/Page/PageGenerator.php
    `pageRendererTemplateFile`_                           :ref:`data-type-string`
    `pageTitle`_                                          :ref:`stdWrap`
    `pageTitleFirst`_                                     :ref:`data-type-boolean`           0
@@ -280,70 +275,6 @@ baseURL
          **Example**::
 
             config.baseURL = http://typo3.org/sub_dir/
-
-
-
-.. _setup-config-beloginlinkiplist:
-
-beLoginLinkIPList
-"""""""""""""""""
-
-.. container:: table-row
-
-   Property
-         beLoginLinkIPList
-
-   Data type
-         [IP-number]
-
-   Description
-         If set and REMOTE\_ADDR matches one of the listed IP-numbers (Wild-
-         card, \*, allowed) then a link to the typo3/ login script with redirect
-         pointing back to the page is shown.
-
-         **Note:** beLoginLinkIPList\_login and/or beLoginLinkIPList\_logout
-         (see below) must be defined if the link should show up!
-
-
-
-.. _setup-config-beloginlinkiplist-login:
-
-beLoginLinkIPList\_login
-""""""""""""""""""""""""
-
-.. container:: table-row
-
-   Property
-         beLoginLinkIPList\_login
-
-   Data type
-         HTML
-
-   Description
-         HTML code wrapped with the login link, see 'beLoginLinkIPList'
-
-         **Example**::
-
-            <hr /><b>LOGIN</b>
-
-
-
-.. _setup-config-beloginlinkiplist-logout:
-
-beLoginLinkIPList\_logout
-"""""""""""""""""""""""""
-
-.. container:: table-row
-
-   Property
-         beLoginLinkIPList\_logout
-
-   Data type
-         HTML
-
-   Description
-         HTML code wrapped with the logout link, see above
-
 
 
 .. _setup-config-cache:
@@ -844,7 +775,7 @@ disableBodyTag
       is not affected and will still be issued.
 
       :ts:`disableBodyTag` takes precedence over the *page* properties
-      :ts:`bodyTagCObject`, :ts:`bodyTag`, :ts:`bodyTagMargins` and
+      :ts:`bodyTagCObject`, :ts:`bodyTag` and
       :ts:`bodyTagAdd`. With :ts:`config.disableBodyTag =1` the others are
       ignored and don't have any effect.
 
@@ -996,8 +927,6 @@ doctype
          following keywords:
 
          **xhtml\_trans** for the XHTML 1.0 Transitional doctype.
-
-         **xhtml\_frames** for the XHTML 1.0 Frameset doctype.
 
          **xhtml\_strict** for the XHTML 1.0 Strict doctype.
 
@@ -1632,33 +1561,6 @@ locale\_all
             It is possible to supply a comma-separated list of locales as a fallback chain
 
 
-
-.. _setup-config-lockfilepath:
-
-lockFilePath
-""""""""""""
-
-.. container:: table-row
-
-   Property
-         lockFilePath
-
-   Data type
-         string
-
-   Default
-         fileadmin/
-
-   Description
-         This value affects the functionality of :ref:`stdwrap-filelist` which is
-         part of the :ref:`stdWrap` suite.
-
-         Set :ts:`lockFilePath` to the **relative** path of a folder.
-         `filelist` will only return values for a folder that starts with the path
-         given by :ts:`lockFilePath`.
-
-
-
 .. _setup-config-message-page-is-being-generated:
 
 message\_page\_is\_being\_generated
@@ -1758,6 +1660,8 @@ metaCharset
          UTF-8 for internal processing. This conversion takes time of
          course so there is another good reason to use the same charset for
          both.
+
+        If an unknown charset is provided a :php:`\RuntimeException` will be thrown.
 
 
 
@@ -1946,42 +1850,6 @@ noPageTitle
          Please take note that this tag is required for (X)HTML compliant
          output, so you should only disable this tag if you generate it
          manually already.
-
-
-
-.. _setup-config-pagegenscript:
-
-pageGenScript
-"""""""""""""
-
-.. container:: table-row
-
-   Property
-         pageGenScript
-
-   Data type
-         resource
-
-   Default
-         typo3/sysext/frontend/Classes/Page/PageGenerator.php
-
-   Description
-         Alternative page generation script for applications using
-         \\TYPO3\\CMS\\Frontend\\Http\\RequestHandler for initialization, caching,
-         stating and so on. This script is included in the global scope of
-         \\TYPO3\\CMS\\Frontend\\Http\\RequestHandler and thus you may include
-         libraries here. Always use include\_once for libraries.
-
-         Remember not to output anything from such an included script. **All
-         content must be set into $TSFE->content.** Take a look at
-         typo3/sysext/frontend/Classes/Page/PageGenerator.php.
-
-         **Note:** This option is ignored if ::
-
-            ['FE']['noPHPscriptInclude'] => 1;
-
-         is set in LocalConfiguration.php.
-
 
 
 .. _setup-config-pagerenderertemplatefile:
@@ -2882,8 +2750,6 @@ xhtmlDoctype
          set to one of these keywords:
 
          **xhtml\_trans** for XHTML 1.0 Transitional doctype.
-
-         **xhtml\_frames** for XHTML 1.0 Frameset doctype.
 
          **xhtml\_strict** for XHTML 1.0 Strict doctype.
 

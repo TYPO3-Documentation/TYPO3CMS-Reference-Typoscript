@@ -34,12 +34,10 @@ Properties
    `bodyTag`_                     <tag>                                                    <body>
    `bodyTagAdd`_                  :ref:`data-type-string`
    `bodyTagCObject`_              cObject
-   `bodyTagMargins`_              :ref:`data-type-integer`
    `config`_                      ->CONFIG
    `CSS\_inlineStyle`_            :ref:`data-type-string`
    `cssInline`_                   ->CARRAY
    `footerData`_                  ->CARRAY
-   `frameSet`_                    ->FRAMESET
    `headerData`_                  ->CARRAY
    `headTag`_                     <tag> /stdWrap                                           <head>
    `includeCSS.[array]`_          :ref:`data-type-resource`
@@ -56,7 +54,6 @@ Properties
    `meta`_                        :ref:`->META <meta>`
    `shortcutIcon`_                :ref:`data-type-resource`
    `stdWrap`_                     :ref:`stdWrap <stdwrap>`
-   `stylesheet`_                  :ref:`data-type-resource`
    `typeNum`_                     :ref:`data-type-integer`                                 0
    `wrap`_                        wrap
    ============================== ================================= ====================== ========================
@@ -154,37 +151,6 @@ bodyTagCObject
          here.
 
 
-
-.. _setup-page-bodytagmargins:
-
-bodyTagMargins
-""""""""""""""
-
-.. container:: table-row
-
-   Property
-         bodyTagMargins
-
-   Data type
-         integer
-
-   Description
-         margins in the body tag.
-
-         **Property:**
-
-         .useCSS = 1 (boolean) - will set a "BODY {margin: ...}" line in the
-         in-document style declaration - for XHTML compliance.
-
-         **Example:** ::
-
-            bodyTagMargins = 4
-
-         This adds *leftmargin="4" topmargin="4" marginwidth="4"
-         marginheight="4"* to the bodyTag.
-
-
-
 .. _setup-page-config:
 
 config
@@ -274,26 +240,6 @@ footerData
    Description
          Same as headerData above, except that this block gets included at the
          bottom of the page (just before the closing body tag).
-
-
-
-.. _setup-page-frameset:
-
-frameSet
-""""""""
-
-.. container:: table-row
-
-   Property
-         frameSet
-
-   Data type
-         ->FRAMESET
-
-   Description
-         if any properties is set to this property, the page is made into a
-         frameset.
-
 
 
 .. _setup-page-headerdata:
@@ -864,27 +810,6 @@ stdWrap
 
    Description
          Wraps the content of the cObject array with stdWrap options.
-
-
-
-.. _setup-page-stylesheet:
-
-stylesheet
-""""""""""
-
-.. container:: table-row
-
-   Property
-         stylesheet
-
-   Data type
-         resource
-
-   Description
-         Inserts a stylesheet in the <HEAD>-section of the page;
-
-         *<link rel="stylesheet" href="[resource]">*
-
 
 
 .. _setup-page-typenum:

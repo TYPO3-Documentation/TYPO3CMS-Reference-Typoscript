@@ -25,10 +25,6 @@ dir
 
          Files matching are returned in a comma-separated string.
 
-         **Note:**
-
-         The value of config-option "lockFilePath" must equal the first part of
-         the path. Thereby the path is locked to that folder.
 
 
 
