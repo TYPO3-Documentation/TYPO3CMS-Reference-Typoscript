@@ -2567,16 +2567,11 @@ typolinkCheckRootline
          boolean
 
    Description
-         If set, then every "typolink" is checked whether it's linking to a
+         Every "typolink" is checked whether it's linking to a
          page within the current rootline of the site.
 
-         If not, then TYPO3 searches for the first found domain record (without
-         redirect) in that rootline from out to in.
-
-         If found (another domain), then that domain is prepended the link, the
-         external target is used instead and thus the link jumps to the page in
-         the correct domain.
-
+         This option is always enabled since TYPO3 9 and setting it
+         will trigger a deprecation warning.
 
 
 .. _setup-config-typolinkenablelinksacrossdomains:
@@ -2613,10 +2608,6 @@ typolinkEnableLinksAcrossDomains
          (config.sys\_language\_XXX directives)
 
          \- all domains have the same set of languages defined
-
-         This option implies "config.typolinkCheckRootline=1", which will be
-         activated automatically. Setting value of "config.
-         typolinkCheckRootline" inside TS template will have no effect.
 
          Disclaimer: it must be understood that while link is generated to
          another domain, it is still generated in the context of current
