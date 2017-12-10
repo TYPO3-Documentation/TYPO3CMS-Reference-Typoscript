@@ -182,19 +182,20 @@ additionalHeaders
 
          For each numeric index, there are the following sub-properties:
 
-         **header:** The header string.
+         **header:** The header string . (and :ref:`stdWrap <stdwrap>`)
 
          **replace:** Optional. If set, previous headers with the same name
-         are replaced with the current one. Default is "1".
+         are replaced with the current one. Default is "1". (and :ref:`stdWrap <stdwrap>`)
 
-         **httpResponseCode:** Optional. HTTP status code as an integer.
+         **httpResponseCode:** Optional. HTTP status code as an integer. (and :ref:`stdWrap <stdwrap>`)
 
          **Example**::
 
             config.additionalHeaders {
                10 {
                   # The header string
-                  header = WWW-Authenticate: Negotiate
+                  header = foo:
+                  header.dataWrap = |{page:uid}
 
                   # Do not replace previous headers with the same name.
                   replace = 0
@@ -691,8 +692,9 @@ debug
          boolean
 
    Description
-         If set any debug-information in the TypoScript code is output.
+         If set debug information in the TypoScript code is sent.
          This applies e.g. to menu objects and the parsetime output.
+         The parsetime will be sent as HTTP response header `X-TYPO3-Parsetime`.
 
 
 
@@ -1508,7 +1510,9 @@ linkVars
 
          - **/[regex]/** -Match against a regular expression (PCRE style)
 
-         **Example**::
+         You can use the pipe character (|) to access nested properties.
+
+         **Examples**::
 
             config.linkVars = L, print
 
@@ -1518,7 +1522,12 @@ linkVars
             config.linkVars = L(1-3), print
 
          Same as above, but "&L=[L-value]" will only be added if the current
-         value is 1, 2 or 3.
+         value is 1, 2 or 3. ::
+
+            config.linkVars = L(1-3),tracking|green(0-5)
+
+         With the above configuration the following example GET parameters will be kept:
+         `&L=1&tracking[green]=3`. But a get parameter like `tracking[blue]` will not be kept.
 
          **Note:** Do **not** include the "type" parameter in the linkVars
          list, as this can result in unexpected behavior.

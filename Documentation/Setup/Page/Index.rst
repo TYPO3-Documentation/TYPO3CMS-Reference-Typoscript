@@ -342,6 +342,9 @@ includeCSS.[array]
          **.import:** If set (boolean) then the @import way of including a
          stylesheet is used instead of <link>
 
+         **.inline** If set, the content of the CSS file is inlined using <style> tags. Note that external files are not
+         inlined.
+
          **.media:** Setting the media attribute of the <style> tag.
 
          **.title:** Setting the title of the <style> tag.
@@ -455,6 +458,12 @@ includeJS.[array]
 
          **.async:** Allows the file to be loaded asynchronously.
 
+         **.crossorigin:** Allows to set the crossorigin attribute in script tags.
+         Is automatically set to `anonymous` for external JavaScript files if an
+         `.integrity` is set.
+
+         **.defer** Allows to set the HTML5 attribute :html:`defer`.
+
          **.disableCompression:** If config.compressJs is enabled, this
          disables the compression of this file.
 
@@ -560,6 +569,12 @@ includeJSLibs.[array]
          (default is "\|" - the vertical line).
 
          **.async:** Allows the file to be loaded asynchronously.
+
+         **.crossorigin:** Allows to set the crossorigin attribute in script tags.
+         Is automatically set to `anonymous` for external JavaScript files if an
+         `.integrity` is set.
+
+         **.defer** Allows to set the HTML5 attribute :html:`defer`.
 
          **.disableCompression:** If config.compressJs is enabled, this
          disables the compression of this file.

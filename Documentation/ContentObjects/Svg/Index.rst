@@ -52,7 +52,8 @@ do not have native SVG support, so that it also works in e.g. IE
          :ref:`file resource <data-type-resource>` /:ref:`stdWrap <stdwrap>`
 
    Description
-         SVG file resource.
+         SVG file resource, can also be referenced via `EXT:` prefix to point to files
+         in extensions.
 
          **Example:** ::
 
@@ -89,6 +90,17 @@ do not have native SVG support, so that it also works in e.g. IE
 
          `noscript` is deprecated since TYPO3 9 and will be removed in TYPO3 10.
 
+
+.. container:: table-row
+
+   Property
+         renderMode
+
+   Data type
+         string /:ref:`stdWrap <stdwrap>`
+
+   Description
+         Setting `renderMode` to inline will render an inline version of the SVG.
 
 .. container:: table-row
 
