@@ -1253,22 +1253,32 @@ Web > View (mod.web\_view)
          previewFrameWidths
 
    Data type
-         positive integer
+         array
 
    Description
-         Enter value for frame width and any LLL or string for label
+         Configure available presets in view module.
+
+         **<key>.label** Label for the preset
+
+         **<key>.type** Category of the preset, must be one of `desktop`, `tablet` or `mobile`
+
+         **<key>.width** Width of the preset
+
+         **<key>.height** Height of the preset
 
          **Example:**
 
-         With this configuration a new frame sizes with 500px x 300px labeled
-         myPreview will be added in the dropdown menu Width inside Web > View module
+         With this configuration a new preset with size 1027x768 will be configured with a label loaded from an
+         xlf file and the category `desktop`.
 
          .. code-block:: typoscript
 
-            mod.web_view.previewFrameWidths {
-               300.label = myPreview
-               300.height = 500
-            }
+             mod.web_view.previewFrameWidths {
+                <key>.label = LLL:EXT:viewpage/Resources/Private/Language/locallang.xlf:computer
+                <key>.type = desktop
+                <key>.width = 1024
+                <key>.height = 768
+             }
 
          .. figure:: ../../Images/WebViewTSConfigPreview.png
             :alt: Dropdown menu Width with added frame size called myPreview

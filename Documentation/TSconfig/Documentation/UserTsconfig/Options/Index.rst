@@ -1185,6 +1185,44 @@ file\_list.enableClipBoard
          selectable
 
 
+.. _useroptions-file_list-thumbnail-width:
+
+file_list.thumbnail.width
+==================================
+
+.. container:: table-row
+
+   Property
+         file_list.thumbnail.width
+
+   Data type
+         int
+
+   Description
+         All preview images in the file list will be rendered with the configured thumbnail width.
+
+   Default
+         64
+
+.. _useroptions-file_list-thumbnail-height:
+
+file_list.thumbnail.height
+==================================
+
+.. container:: table-row
+
+   Property
+         file_list.thumbnail.height
+
+   Data type
+         int
+
+   Description
+         All preview images in the file list will be rendered with the configured thumbnail height.
+
+   Default
+         64
+
 .. _useroptions-impexp-enableImportForNonAdminUser:
 
 impexp.enableImportForNonAdminUser
@@ -1206,7 +1244,6 @@ impexp.enableImportForNonAdminUser
 
    Default
          0
-
 
 
 .. ###### END~OF~TABLE ######
