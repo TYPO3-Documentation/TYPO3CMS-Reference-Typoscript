@@ -205,6 +205,8 @@ the same value set in the Page TSconfig
 .. figure:: ../../Images/manual_html_m6b2884ce.png
    :alt: Example 1: Overriding the Page TSconfig menu function
 
+   Example 1: Overriding the Page TSconfig menu function
+
 
 Here is another example: The value of
 'mod.web\_layout.editFieldsAtATime' has been set to '1' in Page
@@ -216,6 +218,8 @@ the Page TSconfig and alters the configuration:
 
 .. figure:: ../../Images/manual_html_748558d0.png
    :alt: Example 2: Overriding the Page TSconfig menu function
+
+   Example 2: Overriding the Page TSconfig menu function
 
 .. _pagesharedotionsformodules:
 
@@ -323,6 +327,8 @@ Shared options for modules (mod.SHARED)
 
          .. figure:: ../../Images/simpleBackendLayout.png
             :alt: A simple Backend Layout
+
+            A simple Backend Layout
 
    Default
          1,0,2,3
@@ -647,7 +653,7 @@ Web > Page (mod.web\_layout)
 
    Data type
          boolean
-         
+
    Default
          1
 
@@ -672,7 +678,7 @@ Web > Page (mod.web\_layout)
 
    Default
          1
-   
+
    Description
          Enables simple translations of content elements in the translation wizard ("connected mode").
 
@@ -810,6 +816,8 @@ Web > List (mod.web\_list)
          .. figure:: ../../Images/manual_html_165a5551.png
             :alt: The list module after activating the single-table mode
 
+            The list module after activating the single-table mode
+
    Default
          0
 
@@ -840,7 +848,11 @@ Web > List (mod.web\_list)
          in single table view inside the list module:
 
          .. figure:: ../../Images/listModuleWithoutExportButtons.png
-            :alt: The list module without export buttons after activating the single-table mode
+            :alt: The list module without export buttons after activating the
+                  single-table mode
+
+            The list module without export buttons after activating the
+            single-table mode
 
    Default
          0
@@ -1029,6 +1041,8 @@ Web > List (mod.web\_list)
          .. figure:: ../../Images/manual_html_6d60e8b.png
             :alt: The New record screen after modifying the allowed elements
 
+            The New record screen after modifying the allowed elements
+
 
 .. container:: table-row
 
@@ -1101,6 +1115,8 @@ Web > List (mod.web\_list)
 
          .. figure:: ../../Images/manual_html_74103dfb.png
             :alt: "Extended view" is shown in the list module
+
+            "Extended view" is shown in the list module
 
          The following values are possible:
 
@@ -1260,7 +1276,8 @@ Web > View (mod.web\_view)
 
          **<key>.label** Label for the preset
 
-         **<key>.type** Category of the preset, must be one of `desktop`, `tablet` or `mobile`
+         **<key>.type** Category of the preset, must be one of 'desktop',
+         'tablet' or 'mobile'
 
          **<key>.width** Width of the preset
 
@@ -1268,20 +1285,23 @@ Web > View (mod.web\_view)
 
          **Example:**
 
-         With this configuration a new preset with size 1027x768 will be configured with a label loaded from an
-         xlf file and the category `desktop`.
+         With this configuration a new preset with size 1027x768 will be
+         configured with a label loaded from an xlf file and the category
+         'desktop'.
 
          .. code-block:: typoscript
 
-             mod.web_view.previewFrameWidths {
-                <key>.label = LLL:EXT:viewpage/Resources/Private/Language/locallang.xlf:computer
-                <key>.type = desktop
-                <key>.width = 1024
-                <key>.height = 768
-             }
+            mod.web_view.previewFrameWidths {
+               <key>.label = LLL:EXT:viewpage/Resources/Private/Language/locallang.xlf:computer
+               <key>.type = desktop
+               <key>.width = 1024
+               <key>.height = 768
+            }
 
          .. figure:: ../../Images/WebViewTSConfigPreview.png
             :alt: Dropdown menu Width with added frame size called myPreview
+
+            Dropdown menu Width with added frame size called myPreview
 
 
 .. ###### END~OF~TABLE ######
@@ -1344,6 +1364,8 @@ New record wizard (mod.wizards.newRecord)
          .. figure:: ../../Images/manual_html_44865d7b.png
             :alt: The modified New record screen without Page (inside)
 
+            The modified New record screen without Page (inside)
+
    Default
          1
 
@@ -1375,6 +1397,8 @@ New record wizard (mod.wizards.newRecord)
 
          .. figure:: ../../Images/manual_html_1c6e46bb.png
             :alt: The position of News changed after modifying the New record screen
+
+            The position of News changed after modifying the New record screen
 
 
 .. ###### END~OF~TABLE ######
@@ -1591,3 +1615,5 @@ wizard:
 
 .. figure:: ../../Images/manual_html_73b37d4e.png
    :alt: Added entry in the new content element wizard
+
+   Added entry in the new content element wizard

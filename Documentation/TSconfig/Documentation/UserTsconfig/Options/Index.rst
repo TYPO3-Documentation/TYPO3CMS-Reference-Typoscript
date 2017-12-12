@@ -1194,13 +1194,14 @@ file_list.thumbnail.width
 .. container:: table-row
 
    Property
-         file_list.thumbnail.width
+         file\_list.thumbnail.width
 
    Data type
          int
 
    Description
-         All preview images in the file list will be rendered with the configured thumbnail width.
+         All preview images in the file list will be rendered with the
+         configured thumbnail width.
 
    Default
          64
@@ -1213,16 +1214,19 @@ file_list.thumbnail.height
 .. container:: table-row
 
    Property
-         file_list.thumbnail.height
+         file\_list.thumbnail.height
 
    Data type
          int
 
    Description
-         All preview images in the file list will be rendered with the configured thumbnail height.
+         All preview images in the file list will be rendered with the
+         configured thumbnail height.
 
    Default
          64
+
+
 
 .. _useroptions-impexp-enableImportForNonAdminUser:
 
