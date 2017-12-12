@@ -15,9 +15,7 @@ used to define the rendering of each single menu level.
 
 
 .. toctree::
-   :maxdepth: 5
    :titlesonly:
-   :glob:
 
    CommonProperties/Index
    CommonItemStates/Index

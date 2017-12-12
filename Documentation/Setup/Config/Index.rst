@@ -182,12 +182,14 @@ additionalHeaders
 
          For each numeric index, there are the following sub-properties:
 
-         **header:** The header string . (and :ref:`stdWrap <stdwrap>`)
+         **header:** The header string (has :ref:`stdWrap <stdwrap>` properties)
 
          **replace:** Optional. If set, previous headers with the same name
-         are replaced with the current one. Default is "1". (and :ref:`stdWrap <stdwrap>`)
+         are replaced with the current one. Default is "1".
+         (has :ref:`stdWrap <stdwrap>` properties)
 
-         **httpResponseCode:** Optional. HTTP status code as an integer. (and :ref:`stdWrap <stdwrap>`)
+         **httpResponseCode:** Optional. HTTP status code as an integer.
+         (has :ref:`stdWrap <stdwrap>` properties)
 
          **Example**::
 
@@ -692,7 +694,7 @@ debug
          boolean
 
    Description
-         If set debug information in the TypoScript code is sent.
+         If set then debug information in the TypoScript code is sent.
          This applies e.g. to menu objects and the parsetime output.
          The parsetime will be sent as HTTP response header `X-TYPO3-Parsetime`.
 
@@ -1522,12 +1524,13 @@ linkVars
             config.linkVars = L(1-3), print
 
          Same as above, but "&L=[L-value]" will only be added if the current
-         value is 1, 2 or 3. ::
+         value is 1, 2 or 3::
 
             config.linkVars = L(1-3),tracking|green(0-5)
 
-         With the above configuration the following example GET parameters will be kept:
-         `&L=1&tracking[green]=3`. But a get parameter like `tracking[blue]` will not be kept.
+         With the above configuration the following example GET parameters will
+         be kept: `&L=1&tracking[green]=3`. But a get parameter like
+         `tracking[blue]` will not be kept.
 
          **Note:** Do **not** include the "type" parameter in the linkVars
          list, as this can result in unexpected behavior.
@@ -1670,7 +1673,8 @@ metaCharset
          course so there is another good reason to use the same charset for
          both.
 
-        If an unknown charset is provided a :php:`\RuntimeException` will be thrown.
+        If an unknown charset is provided a :php:`\RuntimeException` will be
+        thrown.
 
 
 
@@ -1805,7 +1809,7 @@ namespaces
             config.namespaces.dc = http://purl.org/dc/elements/1.1/
             config.namespaces.foaf = http://xmlns.com/foaf/0.1/
 
-         This configuration will result in an <html> tag like ::
+         This configuration will result in an <html> tag like::
 
             <html xmlns:dc="http://purl.org/dc/elements/1.1/"
                xmlns:foaf="http://xmlns.com/foaf/0.1/">
@@ -2576,10 +2580,10 @@ typolinkCheckRootline
          boolean
 
    Description
-         Every "typolink" is checked whether it's linking to a
-         page within the current rootline of the site.
+         For every link created with "typolink" a check will be done to
+         verify that the target page is within the current rootline of the site.
 
-         This option is always enabled since TYPO3 9 and setting it
+         This option is always enabled since TYPO3 9. Setting it nevertheless
          will trigger a deprecation warning.
 
 

@@ -570,9 +570,9 @@ includeJSLibs.[array]
 
          **.async:** Allows the file to be loaded asynchronously.
 
-         **.crossorigin:** Allows to set the crossorigin attribute in script tags.
-         Is automatically set to `anonymous` for external JavaScript files if an
-         `.integrity` is set.
+         **.crossorigin:** Allows to set the crossorigin attribute in script
+         tags. Is automatically set to `anonymous` for external JavaScript
+         files if an `.integrity` is set.
 
          **.defer** Allows to set the HTML5 attribute :html:`defer`.
 
@@ -775,10 +775,10 @@ meta
 
    Data type
          :ref:`->META <meta>`
-         
+
    Description
          ./.
-   
+
 
 
 
@@ -839,9 +839,9 @@ typeNum
 
    Data type
          integer
-         
+
    Default
-         0         
+         0
 
    Description
          This determines the typeId of the page. The *&type=* parameter in the URL
