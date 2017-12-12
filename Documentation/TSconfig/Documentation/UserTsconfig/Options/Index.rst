@@ -527,30 +527,6 @@ pageTree.backgroundColor
 
             Tree branches with configured background colors
 
-
-.. _useroptions-pageTree-disableIconLinkToContextmenu:
-
-pageTree.disableIconLinkToContextmenu
-=====================================
-
-.. container:: table-row
-
-   Property
-         pageTree.disableIconLinkToContextmenu
-
-         folderTree.disableIconLinkToContextmenu
-
-   Data type
-         boolean / "titlelink"
-
-   Description
-         If set, the page/folder-icons in the page/folder tree will not
-         activate the clickmenu.
-
-         If the value is set "titlelink" then the icon will instead be wrapped
-         with the same link as the title.
-
-
 .. _useroptions-pageTree-showPageIdWithTitle:
 
 pageTree.showPageIdWithTitle
@@ -654,24 +630,6 @@ pageTree.doktypesToShowInNewPageDragArea
    Default
          1,6,4,7,3,254,255,199
 
-
-.. _useroptions-pageTree-hideFilter:
-
-pageTree.hideFilter
-===================
-
-.. container:: table-row
-
-   Property
-         pageTree.hideFilter
-
-   Data type
-         boolean
-
-   Description
-         If set, the filter-box in the top of the page tree will be hidden.
-
-
 .. _useroptions-pageTree-altElementBrowserMountPoints:
 
 pageTree.altElementBrowserMountPoints
@@ -728,54 +686,6 @@ pageTree.altElementBrowserMountPoints.append
             options.pageTree.altElementBrowserMountPoints = 34,123
             options.pageTree.altElementBrowserMountPoints.append = 1
 
-
-.. _useroptions-pageTree-excludeDoktypes:
-
-pageTree.excludeDoktypes
-========================
-
-.. container:: table-row
-
-   Property
-         pageTree.excludeDoktypes
-
-   Data type
-         *(list of integers)*
-
-   Description
-         Excludes nodes (pages) with one of the defined doktypes from the
-         pagetree. Can be used for example for hiding
-         :ref:`custom doktypes <t3coreapi:page-types>`.
-
-         **Example**
-
-         .. code-block:: typoscript
-
-            options.pageTree.excludeDoktypes = 254,1
-
-.. _useroptions-pageTree-searchInAlias:
-
-pageTree.searchInAlias
-======================
-
-.. container:: table-row
-
-   Property
-         pageTree.searchInAlias
-
-   Data type
-         boolean
-
-   Description
-         If set, the search in the pagetree (filter tree) also filters on the alias field.
-         Contrary to filtered page titles the search result of alias fields will **not** be highlighted.
-
-         **Example**
-
-         Searching for ``my-`` now additionally returns also pages with these string in the alias field.
-
-         .. figure:: ../../Images/optionsPageTreeSearchInAlias.png
-            :alt: Filtering the pagetree for my- now additionally returns pages with matched alias fields.
 
 .. _useroptions-folderTree-altElementBrowserMountPoints:
 
