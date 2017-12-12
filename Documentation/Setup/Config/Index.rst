@@ -22,9 +22,6 @@ Properties
    `admPanel`_                                           :ref:`data-type-boolean`
    `ATagParams`_                                         *<A>-params*
    `baseURL`_                                            :ref:`data-type-string`
-   `beLoginLinkIPList`_                                  [IP-number]
-   `beLoginLinkIPList\_login`_                           :ref:`data-type-html-code`
-   `beLoginLinkIPList\_logout`_                          :ref:`data-type-html-code`
    `cache`_                                              array
    `cache\_clearAtMidnight`_                             :ref:`data-type-boolean`           false
    `cache\_period`_                                      :ref:`data-type-integer`           86400 *(= 24 hours)*
@@ -68,7 +65,6 @@ Properties
    `language\_alt`_                                      :ref:`data-type-string`
    `linkVars`_                                           :ref:`data-type-list`
    `locale\_all`_                                        :ref:`data-type-string`
-   `lockFilePath`_                                       :ref:`data-type-string`            fileadmin/
    `message\_page\_is\_being\_generated`_                :ref:`data-type-string`
    `message\_preview`_                                   :ref:`data-type-string`
    `message\_preview\_workspace`_                        :ref:`data-type-string`
@@ -80,7 +76,6 @@ Properties
    `namespaces`_                                         *(array of strings)*
    `no\_cache`_                                          :ref:`data-type-boolean`           0
    `noPageTitle`_                                        :ref:`data-type-integer`           0
-   `pageGenScript`_                                      :ref:`data-type-resource`          typo3/sysext/frontend/Classes/Page/PageGenerator.php
    `pageRendererTemplateFile`_                           :ref:`data-type-string`
    `pageTitle`_                                          :ref:`stdWrap`
    `pageTitleFirst`_                                     :ref:`data-type-boolean`           0
@@ -187,19 +182,20 @@ additionalHeaders
 
          For each numeric index, there are the following sub-properties:
 
-         **header:** The header string.
+         **header:** The header string . (and :ref:`stdWrap <stdwrap>`)
 
          **replace:** Optional. If set, previous headers with the same name
-         are replaced with the current one. Default is "1".
+         are replaced with the current one. Default is "1". (and :ref:`stdWrap <stdwrap>`)
 
-         **httpResponseCode:** Optional. HTTP status code as an integer.
+         **httpResponseCode:** Optional. HTTP status code as an integer. (and :ref:`stdWrap <stdwrap>`)
 
          **Example**::
 
             config.additionalHeaders {
                10 {
                   # The header string
-                  header = WWW-Authenticate: Negotiate
+                  header = foo:
+                  header.dataWrap = |{page:uid}
 
                   # Do not replace previous headers with the same name.
                   replace = 0
@@ -280,70 +276,6 @@ baseURL
          **Example**::
 
             config.baseURL = http://typo3.org/sub_dir/
-
-
-
-.. _setup-config-beloginlinkiplist:
-
-beLoginLinkIPList
-"""""""""""""""""
-
-.. container:: table-row
-
-   Property
-         beLoginLinkIPList
-
-   Data type
-         [IP-number]
-
-   Description
-         If set and REMOTE\_ADDR matches one of the listed IP-numbers (Wild-
-         card, \*, allowed) then a link to the typo3/ login script with redirect
-         pointing back to the page is shown.
-
-         **Note:** beLoginLinkIPList\_login and/or beLoginLinkIPList\_logout
-         (see below) must be defined if the link should show up!
-
-
-
-.. _setup-config-beloginlinkiplist-login:
-
-beLoginLinkIPList\_login
-""""""""""""""""""""""""
-
-.. container:: table-row
-
-   Property
-         beLoginLinkIPList\_login
-
-   Data type
-         HTML
-
-   Description
-         HTML code wrapped with the login link, see 'beLoginLinkIPList'
-
-         **Example**::
-
-            <hr /><b>LOGIN</b>
-
-
-
-.. _setup-config-beloginlinkiplist-logout:
-
-beLoginLinkIPList\_logout
-"""""""""""""""""""""""""
-
-.. container:: table-row
-
-   Property
-         beLoginLinkIPList\_logout
-
-   Data type
-         HTML
-
-   Description
-         HTML code wrapped with the logout link, see above
-
 
 
 .. _setup-config-cache:
@@ -760,8 +692,9 @@ debug
          boolean
 
    Description
-         If set any debug-information in the TypoScript code is output.
+         If set debug information in the TypoScript code is sent.
          This applies e.g. to menu objects and the parsetime output.
+         The parsetime will be sent as HTTP response header `X-TYPO3-Parsetime`.
 
 
 
@@ -844,7 +777,7 @@ disableBodyTag
       is not affected and will still be issued.
 
       :ts:`disableBodyTag` takes precedence over the *page* properties
-      :ts:`bodyTagCObject`, :ts:`bodyTag`, :ts:`bodyTagMargins` and
+      :ts:`bodyTagCObject`, :ts:`bodyTag` and
       :ts:`bodyTagAdd`. With :ts:`config.disableBodyTag =1` the others are
       ignored and don't have any effect.
 
@@ -996,8 +929,6 @@ doctype
          following keywords:
 
          **xhtml\_trans** for the XHTML 1.0 Transitional doctype.
-
-         **xhtml\_frames** for the XHTML 1.0 Frameset doctype.
 
          **xhtml\_strict** for the XHTML 1.0 Strict doctype.
 
@@ -1579,7 +1510,9 @@ linkVars
 
          - **/[regex]/** -Match against a regular expression (PCRE style)
 
-         **Example**::
+         You can use the pipe character (|) to access nested properties.
+
+         **Examples**::
 
             config.linkVars = L, print
 
@@ -1589,7 +1522,12 @@ linkVars
             config.linkVars = L(1-3), print
 
          Same as above, but "&L=[L-value]" will only be added if the current
-         value is 1, 2 or 3.
+         value is 1, 2 or 3. ::
+
+            config.linkVars = L(1-3),tracking|green(0-5)
+
+         With the above configuration the following example GET parameters will be kept:
+         `&L=1&tracking[green]=3`. But a get parameter like `tracking[blue]` will not be kept.
 
          **Note:** Do **not** include the "type" parameter in the linkVars
          list, as this can result in unexpected behavior.
@@ -1630,33 +1568,6 @@ locale\_all
          .. note::
 
             It is possible to supply a comma-separated list of locales as a fallback chain
-
-
-
-.. _setup-config-lockfilepath:
-
-lockFilePath
-""""""""""""
-
-.. container:: table-row
-
-   Property
-         lockFilePath
-
-   Data type
-         string
-
-   Default
-         fileadmin/
-
-   Description
-         This value affects the functionality of :ref:`stdwrap-filelist` which is
-         part of the :ref:`stdWrap` suite.
-
-         Set :ts:`lockFilePath` to the **relative** path of a folder.
-         `filelist` will only return values for a folder that starts with the path
-         given by :ts:`lockFilePath`.
-
 
 
 .. _setup-config-message-page-is-being-generated:
@@ -1758,6 +1669,8 @@ metaCharset
          UTF-8 for internal processing. This conversion takes time of
          course so there is another good reason to use the same charset for
          both.
+
+        If an unknown charset is provided a :php:`\RuntimeException` will be thrown.
 
 
 
@@ -1946,42 +1859,6 @@ noPageTitle
          Please take note that this tag is required for (X)HTML compliant
          output, so you should only disable this tag if you generate it
          manually already.
-
-
-
-.. _setup-config-pagegenscript:
-
-pageGenScript
-"""""""""""""
-
-.. container:: table-row
-
-   Property
-         pageGenScript
-
-   Data type
-         resource
-
-   Default
-         typo3/sysext/frontend/Classes/Page/PageGenerator.php
-
-   Description
-         Alternative page generation script for applications using
-         \\TYPO3\\CMS\\Frontend\\Http\\RequestHandler for initialization, caching,
-         stating and so on. This script is included in the global scope of
-         \\TYPO3\\CMS\\Frontend\\Http\\RequestHandler and thus you may include
-         libraries here. Always use include\_once for libraries.
-
-         Remember not to output anything from such an included script. **All
-         content must be set into $TSFE->content.** Take a look at
-         typo3/sysext/frontend/Classes/Page/PageGenerator.php.
-
-         **Note:** This option is ignored if ::
-
-            ['FE']['noPHPscriptInclude'] => 1;
-
-         is set in LocalConfiguration.php.
-
 
 
 .. _setup-config-pagerenderertemplatefile:
@@ -2699,16 +2576,11 @@ typolinkCheckRootline
          boolean
 
    Description
-         If set, then every "typolink" is checked whether it's linking to a
+         Every "typolink" is checked whether it's linking to a
          page within the current rootline of the site.
 
-         If not, then TYPO3 searches for the first found domain record (without
-         redirect) in that rootline from out to in.
-
-         If found (another domain), then that domain is prepended the link, the
-         external target is used instead and thus the link jumps to the page in
-         the correct domain.
-
+         This option is always enabled since TYPO3 9 and setting it
+         will trigger a deprecation warning.
 
 
 .. _setup-config-typolinkenablelinksacrossdomains:
@@ -2745,10 +2617,6 @@ typolinkEnableLinksAcrossDomains
          (config.sys\_language\_XXX directives)
 
          \- all domains have the same set of languages defined
-
-         This option implies "config.typolinkCheckRootline=1", which will be
-         activated automatically. Setting value of "config.
-         typolinkCheckRootline" inside TS template will have no effect.
 
          Disclaimer: it must be understood that while link is generated to
          another domain, it is still generated in the context of current
@@ -2882,8 +2750,6 @@ xhtmlDoctype
          set to one of these keywords:
 
          **xhtml\_trans** for XHTML 1.0 Transitional doctype.
-
-         **xhtml\_frames** for XHTML 1.0 Frameset doctype.
 
          **xhtml\_strict** for XHTML 1.0 Strict doctype.
 

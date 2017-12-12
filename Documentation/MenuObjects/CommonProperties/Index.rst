@@ -120,8 +120,6 @@ otherwise noted!
 
             JSWindow.params = width=200,height=300,status=0,menubar=0
 
-         **Note:** Does not work with JSMENU's.
-
 
 .. container:: table-row
 

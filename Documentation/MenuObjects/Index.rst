@@ -27,6 +27,4 @@ used to define the rendering of each single menu level.
    Tmenuitem/Index
    Imgmenu/Index
    Imgmenuitem/Index
-   Jsmenu/Index
-   Jsmenuitem/Index
 

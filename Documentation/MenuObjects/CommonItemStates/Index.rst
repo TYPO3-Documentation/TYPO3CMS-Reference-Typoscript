@@ -7,7 +7,6 @@ Common item states for TMENU, GMENU and IMGMENU
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 These properties are in common for TMENU, GMENU and IMGMENU.
-That means they are not used by for instance the JSMENU.
 
 .. ### BEGIN~OF~TABLE ###
 
