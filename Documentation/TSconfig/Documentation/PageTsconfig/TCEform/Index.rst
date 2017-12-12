@@ -161,33 +161,33 @@ disable options, blind options in selector boxes etc.
 
          .. code-block:: typoscript
 
-			TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.myField {
-				# Remove
-				disabled = 1
+         TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.myField {
+            # Remove
+            disabled = 1
 
-				# Rename
-				label = LLL:fileadmin/locallang.xlf:tt_content.pi_flexform.my_ext_pi1.sDEF.myField
+            # Rename
+            label = LLL:fileadmin/locallang.xlf:tt_content.pi_flexform.my_ext_pi1.sDEF.myField
 
-				# Remove all items from select but these ones
-				keepItems = item1,item2,item3
+            # Remove all items from select but these ones
+            keepItems = item1,item2,item3
 
-				# Remove items from select
-				removeItems = item1,item2,item3
+            # Remove items from select
+            removeItems = item1,item2,item3
 
-				# Add new items to select
-				addItems {
-					item1 = LLL:fileadmin/locallang.xlf:tt_content.pi_flexform.my_ext_pi1.sDEF.myField.item1
-					item2 = LLL:fileadmin/locallang.xlf:tt_content.pi_flexform.my_ext_pi1.sDEF.myField.item2
-					item3 = LLL:fileadmin/locallang.xlf:tt_content.pi_flexform.my_ext_pi1.sDEF.myField.item3
-				}
+            # Add new items to select
+            addItems {
+               item1 = LLL:fileadmin/locallang.xlf:tt_content.pi_flexform.my_ext_pi1.sDEF.myField.item1
+               item2 = LLL:fileadmin/locallang.xlf:tt_content.pi_flexform.my_ext_pi1.sDEF.myField.item2
+               item3 = LLL:fileadmin/locallang.xlf:tt_content.pi_flexform.my_ext_pi1.sDEF.myField.item3
+            }
 
-				# Rename existing items
-				altLabels {
-					item1 = LLL:fileadmin/locallang.xlf:tt_content.pi_flexform.my_ext_pi1.sDEF.myField.item1
-					item2 = LLL:fileadmin/locallang.xlf:tt_content.pi_flexform.my_ext_pi1.sDEF.myField.item2
-					item3 = LLL:fileadmin/locallang.xlf:tt_content.pi_flexform.my_ext_pi1.sDEF.myField.item3
-				}
-			}
+            # Rename existing items
+            altLabels {
+               item1 = LLL:fileadmin/locallang.xlf:tt_content.pi_flexform.my_ext_pi1.sDEF.myField.item1
+               item2 = LLL:fileadmin/locallang.xlf:tt_content.pi_flexform.my_ext_pi1.sDEF.myField.item2
+               item3 = LLL:fileadmin/locallang.xlf:tt_content.pi_flexform.my_ext_pi1.sDEF.myField.item3
+            }
+         }
 
 
 .. container:: table-row
@@ -232,10 +232,10 @@ above).
 
          .. code-block:: typoscript
 
-			TCEFORM.pages.title {
-				# You cannot edit the Page title field now:
-				disabled = 1
-			}
+            TCEFORM.pages.title {
+               # You cannot edit the Page title field now:
+               disabled = 1
+            }
 
 
 .. container:: table-row
@@ -253,11 +253,11 @@ above).
 
          .. code-block:: typoscript
 
-			TCEFORM.pages.title {
-				label = LLL:EXT:my_ext/locallang_db.xlf:table.column
-				label.default = New Label
-				label.de = Neuer Feldname
-			}
+            TCEFORM.pages.title {
+               label = LLL:EXT:my_ext/locallang_db.xlf:table.column
+               label.default = New Label
+               label.de = Neuer Feldname
+            }
 
 
 .. container:: table-row
@@ -278,10 +278,10 @@ above).
 
          .. code-block:: typoscript
 
-			TCEFORM.pages.doktype {
-				# Show only standard and "Spacer" page types
-				keepItems = 1,199
-			}
+            TCEFORM.pages.doktype {
+               # Show only standard and "Spacer" page types
+               keepItems = 1,199
+            }
 
 
 .. container:: table-row
@@ -302,10 +302,10 @@ above).
 
          .. code-block:: typoscript
 
-			TCEFORM.pages.doktype {
-				# Remove the "Recycler" and "Spacer" page type options:
-				removeItems = 199, 255
-			}
+            TCEFORM.pages.doktype {
+               # Remove the "Recycler" and "Spacer" page type options:
+               removeItems = 199, 255
+            }
 
 
 .. container:: table-row
@@ -329,13 +329,13 @@ above).
 
          .. code-block:: typoscript
 
-			TCEFORM.pages.doktype {
-				# Creates a new page type option:
-				addItems.123 = New Page type!
-				# Creates yet a page type with "locallang" title:
-				addItems.124 = LLL:EXT:lang/locallang_tca.xlf:title
-				addItems.124.icon = EXT:myExt/icon.png
-			}
+            TCEFORM.pages.doktype {
+               # Creates a new page type option:
+               addItems.123 = New Page type!
+               # Creates yet a page type with "locallang" title:
+               addItems.124 = LLL:EXT:lang/locallang_tca.xlf:title
+               addItems.124.icon = EXT:myExt/icon.png
+            }
 
          This example extends the options for Page types with two new items:
 
@@ -376,10 +376,10 @@ above).
 
          .. code-block:: typoscript
 
-			TCEFORM.pages.doktype {
-				# "INVALID VALUE ..." label will never show up:
-				disableNoMatchingValueElement = 1
-			}
+            TCEFORM.pages.doktype {
+               # "INVALID VALUE ..." label will never show up:
+               disableNoMatchingValueElement = 1
+            }
 
          Now the selector box will default to the first element in the selector
          box:
@@ -409,10 +409,10 @@ above).
 
          .. code-block:: typoscript
 
-			TCEFORM.pages.doktype {
-				# Alternative "INVALID VALUE ..." label:
-				noMatchingValue_label = VALUE "%s" was not available!
-			}
+            TCEFORM.pages.doktype {
+               # Alternative "INVALID VALUE ..." label:
+               noMatchingValue_label = VALUE "%s" was not available!
+            }
 
          The result will be:
 
@@ -439,13 +439,13 @@ above).
 
          .. code-block:: typoscript
 
-			TCEFORM.pages.doktype {
-				# Setting alternative labels:
-				altLabels.1 = STANDARD Page Type
-				altLabels.254 = Folder (for various elements)
-				# Sets the default label for Recycler via "locallang":
-				altLabels.255 = LLL:EXT:lang/locallang_tca.xlf:doktype.I.2
-			}
+            TCEFORM.pages.doktype {
+               # Setting alternative labels:
+               altLabels.1 = STANDARD Page Type
+               altLabels.254 = Folder (for various elements)
+               # Sets the default label for Recycler via "locallang":
+               altLabels.255 = LLL:EXT:lang/locallang_tca.xlf:doktype.I.2
+            }
 
          Result will be:
 
@@ -531,11 +531,11 @@ Properties for the TCEFORM FlexForm configuration object.
 
          .. code-block:: typoscript
 
-			TCEFORM.tt_content.pi_flexform.login {
-				# Language settings plug-in configuration
-				langDisable  = 1
-				langChildren = 0
-			}
+            TCEFORM.tt_content.pi_flexform.login {
+               # Language settings plug-in configuration
+               langDisable  = 1
+               langChildren = 0
+            }
 
 
 .. ###### END~OF~TABLE ######
@@ -568,10 +568,10 @@ object (see ->TCEFORM section above).
 
          .. code-block:: typoscript
 
-			TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF {
-				# The tab with key "sDEF" of the FlexForm plug-in configuration is now hidden
-				disabled = 1
-			}
+            TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF {
+               # The tab with key "sDEF" of the FlexForm plug-in configuration is now hidden
+               disabled = 1
+            }
 
 
 .. container:: table-row
@@ -589,10 +589,10 @@ object (see ->TCEFORM section above).
 
          .. code-block:: typoscript
 
-			TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF {
-				# Rename the first tab of the FlexForm plug-in configuration
-				sheetTitle = LLL:fileadmin/locallang.xlf:tt_content.pi_flexform.my_ext_pi1.sDEF
-			}
+            TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF {
+               # Rename the first tab of the FlexForm plug-in configuration
+               sheetTitle = LLL:fileadmin/locallang.xlf:tt_content.pi_flexform.my_ext_pi1.sDEF
+            }
 
 
 .. container:: table-row
@@ -651,10 +651,10 @@ Properties for the suggest wizard (see introduction above).
 
          .. code-block:: typoscript
 
-			TCEFORM.suggest.default {
-				# sets the pidList for a suggest fields in all tables
-				pidList = 1,2,3,45
-			}
+            TCEFORM.suggest.default {
+               # sets the pidList for a suggest fields in all tables
+               pidList = 1,2,3,45
+            }
 
 
 .. container:: table-row
@@ -673,10 +673,10 @@ Properties for the suggest wizard (see introduction above).
 
          .. code-block:: typoscript
 
-			TCEFORM.suggest.default {
-				pidList = 6,7
-				pidDepth = 4
-			}
+            TCEFORM.suggest.default {
+               pidList = 6,7
+               pidDepth = 4
+            }
 
 
 .. container:: table-row
@@ -695,9 +695,9 @@ Properties for the suggest wizard (see introduction above).
 
          .. code-block:: typoscript
 
-			TCEFORM.pages.storage_pid.suggest.default {
-				minimumCharacters = 3
-			}
+            TCEFORM.pages.storage_pid.suggest.default {
+               minimumCharacters = 3
+            }
 
    Default
          2
@@ -719,9 +719,9 @@ Properties for the suggest wizard (see introduction above).
 
          .. code-block:: typoscript
 
-			TCEFORM.suggest.default {
-				maxPathTitleLength = 30
-			}
+            TCEFORM.suggest.default {
+               maxPathTitleLength = 30
+            }
 
 
 .. container:: table-row
@@ -740,10 +740,10 @@ Properties for the suggest wizard (see introduction above).
 
          .. code-block:: typoscript
 
-			TCEFORM.pages.storage_pid.suggest.default {
-				# configures the suggest wizard for the field "storage_pid" in table "pages" to search only for whole phrases
-				searchWholePhrase = 1
-			}
+            TCEFORM.pages.storage_pid.suggest.default {
+               # configures the suggest wizard for the field "storage_pid" in table "pages" to search only for whole phrases
+               searchWholePhrase = 1
+            }
 
    Default
          0
@@ -764,11 +764,11 @@ Properties for the suggest wizard (see introduction above).
 
          .. code-block:: typoscript
 
-			TCEFORM.pages.storage_pid.suggest.default {
-				# configures the suggest wizard for the field "storage_pid" in table "pages"
-				# to search only for pages with doktype=1
-				searchCondition = doktype=1
-			}
+            TCEFORM.pages.storage_pid.suggest.default {
+               # configures the suggest wizard for the field "storage_pid" in table "pages"
+               # to search only for pages with doktype=1
+               searchCondition = doktype=1
+            }
 
 
 .. container:: table-row
@@ -794,9 +794,9 @@ Properties for the suggest wizard (see introduction above).
 
          .. code-block:: typoscript
 
-			TCEFORM.pages.storage_pid.suggest.default {
-				addWhere = AND pages.pid=###PAGE_TSCONFIG_ID###
-			}
+            TCEFORM.pages.storage_pid.suggest.default {
+               addWhere = AND pages.pid=###PAGE_TSCONFIG_ID###
+            }
 
 
 .. container:: table-row
@@ -814,11 +814,11 @@ Properties for the suggest wizard (see introduction above).
 
          .. code-block:: typoscript
 
-			TCEFORM.suggest.pages {
-				# configures all suggest wizards which list records from table "pages"
-				# to add the CSS class "pages" to every list item of the result list.
-				cssClass = pages
-			}
+            TCEFORM.suggest.pages {
+               # configures all suggest wizards which list records from table "pages"
+               # to add the CSS class "pages" to every list item of the result list.
+               cssClass = pages
+            }
 
 
 .. container:: table-row
@@ -865,9 +865,9 @@ Properties for the suggest wizard (see introduction above).
 
          .. code-block:: typoscript
 
-			TCEFORM.pages.storage_pid.suggest.default {
-				hide = 1
-			}
+            TCEFORM.pages.storage_pid.suggest.default {
+               hide = 1
+            }
 
 
 .. ###### END~OF~TABLE ######
