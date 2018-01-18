@@ -97,6 +97,7 @@ Properties
    `sys\_language\_softMergeIfNotBlank`_                 :ref:`data-type-string`
    `sys\_language\_uid`_                                 :ref:`data-type-integer`
    `titleTagFunction`_                                   function name
+   `tx\_[extension key with no underscores]\_[\*]`       array
    `tx\_[extension key with no underscores]\_[\*]`_      \-
    `typolinkCheckRootline`_                              :ref:`data-type-boolean`
    `typolinkEnableLinksAcrossDomains`_                   :ref:`data-type-boolean`           0
@@ -2542,6 +2543,30 @@ titleTagFunction
 
 
 .. _setup-config-tx-extension-key-with-no-underscores:
+
+tx\_[extension key with no underscores]
+"""""""""""""""""""""""""""""""""""""""""""""
+
+.. container:: table-row
+
+   Property
+         tx\_[extension key with no underscores]
+
+   Data type
+         array
+
+   Description
+         Configuration space for extensions. This can be used – for example –
+         by plugins that need some TypoScript configuration, but that don't
+         actually display anything in the frontend (i.e. don't receive their
+         configuration as an argument from the frontend rendering process).
+
+         **Example**::
+
+            config.tx_myextension.width  = 10
+            config.tx_myextension.length = 20
+
+
 
 tx\_[extension key with no underscores]\_[\*]
 """""""""""""""""""""""""""""""""""""""""""""
