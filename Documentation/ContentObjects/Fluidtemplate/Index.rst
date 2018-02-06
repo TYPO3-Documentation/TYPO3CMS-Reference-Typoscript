@@ -427,7 +427,7 @@ settings
             page {
                 10 = FLUIDTEMPLATE
                 10 {
-                    file = fileadmin/templates/MyTemplate.html
+                    file = EXT:site_default/Resources/Private/Templates/MyTemplate.html
                     settings {
                         copyrightYear = 2013
                     }
@@ -878,7 +878,7 @@ stdWrap
 Example:
 """"""""
 
-The Fluid template (in fileadmin/templates/MyTemplate.html) could look
+The Fluid template (in EXT:site_default/Resources/Private/Templates/MyTemplate.html) could look
 like this:
 
 .. code-block:: html
@@ -896,8 +896,8 @@ You could use it with a TypoScript code like this:
     page.10 = FLUIDTEMPLATE
     page.10 {
         template = FILE
-        template.file = fileadmin/templates/MyTemplate.html
-        partialRootPath = fileadmin/templates/partial/
+        template.file = EXT:site_default/Resources/Private/Templates/MyTemplate.html
+        partialRootPath = EXT:site_default/Resources/Private/Partials/
         variables {
             mylabel = TEXT
             mylabel.value = Label coming from TypoScript!
