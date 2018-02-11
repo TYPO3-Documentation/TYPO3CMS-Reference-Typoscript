@@ -15,6 +15,12 @@ loaded with the lowercased link-parameters!
 
 .. ### BEGIN~OF~TABLE ###
 
+
+.. _typolink-extTarget:
+
+extTarget
+=========
+
 .. container:: table-row
 
    Property
@@ -30,6 +36,11 @@ loaded with the lowercased link-parameters!
          \_top
 
 
+.. _typolink-fileTarget:
+
+fileTarget
+==========
+
 .. container:: table-row
 
    Property
@@ -41,6 +52,11 @@ loaded with the lowercased link-parameters!
    Description
          Target used for file links
 
+
+.. _typolink-target:
+
+target
+======
 
 .. container:: table-row
 
@@ -54,6 +70,11 @@ loaded with the lowercased link-parameters!
          Target used for internal links
 
 
+.. _typolink-no-cache:
+
+no\_cache
+=========
+
 .. container:: table-row
 
    Property
@@ -65,6 +86,11 @@ loaded with the lowercased link-parameters!
    Description
          Adds "&no\_cache=1" to the link
 
+
+.. _typolink-useCacheHash:
+
+useCacheHash
+============
 
 .. container:: table-row
 
@@ -85,6 +111,11 @@ loaded with the lowercased link-parameters!
          The $TYPO3\_CONF\_VARS['SYS']['encryptionKey'] is included in the hash
          in order to make it unique for the server and non-predictable.
 
+
+.. _typolink-additionalParams:
+
+additionalParams
+================
 
 .. container:: table-row
 
@@ -113,6 +144,11 @@ loaded with the lowercased link-parameters!
 
             *Note:* This is only active for internal links.
 
+
+.. _typolink-addQueryString:
+
+addQueryString
+==============
 
 .. container:: table-row
 
@@ -152,6 +188,11 @@ loaded with the lowercased link-parameters!
             be considered.
 
 
+.. _typolink-wrap:
+
+wrap
+====
+
 .. container:: table-row
 
    Property
@@ -163,6 +204,11 @@ loaded with the lowercased link-parameters!
    Description
          Wraps the links.
 
+
+.. _typolink-ATagBeforeWrap:
+
+ATagBeforeWrap
+==============
 
 .. container:: table-row
 
@@ -178,6 +224,11 @@ loaded with the lowercased link-parameters!
 
    Default
          0
+
+.. _typolink-parameter:
+
+parameter
+=========
 
 .. container:: table-row
 
@@ -287,6 +338,11 @@ loaded with the lowercased link-parameters!
                typolink.parameter.data = parameters : allParams
 
 
+.. _typolink-forceAbsoluteUrl:
+
+forceAbsoluteUrl
+================
+
 .. container:: table-row
 
    Property
@@ -315,6 +371,11 @@ loaded with the lowercased link-parameters!
          0
 
 
+.. _typolink-title:
+
+title
+=====
+
 .. container:: table-row
 
    Property
@@ -326,6 +387,11 @@ loaded with the lowercased link-parameters!
    Description
          Sets the title parameter of the A-tag.
 
+
+.. _typolink-JSwindow-params:
+
+JSwindow\_params
+================
 
 .. container:: table-row
 
@@ -341,6 +407,11 @@ loaded with the lowercased link-parameters!
 
             status=1,menubar=1,scrollbars=1,resizable=1,location=1,directories=1,toolbar=1
 
+
+.. _typolink-returnLast:
+
+returnLast
+==========
 
 .. container:: table-row
 
@@ -360,6 +431,11 @@ loaded with the lowercased link-parameters!
          or target value returned!
 
 
+.. _typolink-section:
+
+section
+=======
+
 .. container:: table-row
 
    Property
@@ -375,6 +451,11 @@ loaded with the lowercased link-parameters!
          This is used create a link, which jumps from one page directly the
          section on another page.
 
+
+.. _typolink-ATagParams:
+
+ATagParams
+==========
 
 .. container:: table-row
 
@@ -392,6 +473,11 @@ loaded with the lowercased link-parameters!
             class="board"
 
 
+.. _typolink-linkAccessRestrictedPages:
+
+linkAccessRestrictedPages
+=========================
+
 .. container:: table-row
 
    Property
@@ -404,6 +490,11 @@ loaded with the lowercased link-parameters!
          If set, typolinks pointing to access restricted pages will still link
          to the page even though the page cannot be accessed.
 
+
+.. _typolink-userFunc:
+
+userFunc
+========
 
 .. container:: table-row
 
@@ -438,9 +529,6 @@ loaded with the lowercased link-parameters!
 
 
 .. ###### END~OF~TABLE ######
-
-[tsref:->typolink]
-
 
 
 
