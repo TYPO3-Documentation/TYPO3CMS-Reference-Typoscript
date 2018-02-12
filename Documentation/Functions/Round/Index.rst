@@ -55,6 +55,20 @@ selected round method.
    Default
          0
 
+.. container:: table-row
+
+   Property
+         round
+
+   Data type
+         boolean
+
+   Description
+         Set round = 1 to enable rounding.
+
+   Default
+         0
+
 
 .. ###### END~OF~TABLE ######
 
@@ -72,6 +86,7 @@ Examples:
    lib.number = TEXT
    lib.number {
      value = 3.14159
+     stdWrap.round = 1
      stdWrap.round.roundType = round
      stdWrap.round.decimals = 2
    }
