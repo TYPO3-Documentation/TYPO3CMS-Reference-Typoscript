@@ -645,6 +645,7 @@ inlineLanguageLabelFiles
                someLabels.errorMode = 2
             }
 
+        All labels will be available in ``TYPO3.lang``.
 
 .. _setup-page-inlinesettings:
 
