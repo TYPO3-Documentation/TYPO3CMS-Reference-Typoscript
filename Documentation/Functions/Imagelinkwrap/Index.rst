@@ -340,21 +340,21 @@ What it does
 
 :ts:`imageLinkWrap = 1`
 
-If set to True then this function attaches a link to an image
+If set to True (:ts:`= 1`) then this function attaches a link to an image
 that opens a special view of the image. By default the link points to
 the a "showpic" script that knows how to deal with several parameters.
 The script checks an md5-hash to make sure that the parameters are unchanged.
 See :ref:`imageLinkWrap-basic-example-showpic`.
 
 There is an alternative. You may set :ts:`directImageLink` to True
-(:ts:` = 1`). In that case the link will directly point to the image
-- no intermediate is script involved. This method can well be used to display
+(:ts:`= 1`). In that case the link will directly point to the image
+- no intermediate script is involved. This method can well be used to display
 images in a lightbox. See :ref:`imageLinkWrap-basic-example-directImageLink`
 and the lightbox examples on this page.
 
-If :ts:`JSwindow` is true (:ts:` = 1`) more fancy
+If :ts:`JSwindow` is True (:ts:`= 1`) more fancy
 features are available since the preview now is opened by Javascript.
-Then the window title, size, background-color and more can be set to
+Then the Javascript window title, size, background-color and more can be set to
 special values.
 
 
