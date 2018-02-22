@@ -813,7 +813,19 @@ contextMenu.table.[tableName][.context].disableItems
             some of the settings needs to be tuned. See chapter in the
             :ref:`TYPO3 API documentation <t3coreapi:context-menu>`
             regarding new context menu implementation.
+                        
+         .. note::            
+            
+            When the system extension Import/Export (impexp) is installed then two more options 
+            become available: **exportT3d** and **importT3d**  
+            
+         **Usage:**
 
+         .. code-block:: typoscript
+
+            # This will remove the "more" item in the Pagetree context menu and all its subelements:
+            options.contextMenu.table.pages.tree.disableItems = newWizard, openListModule, mountAsTreeRoot, exportT3d, importT3d           
+            
 
 .. _useroptions-overridePageModule:
 
