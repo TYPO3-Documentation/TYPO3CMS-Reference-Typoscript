@@ -131,6 +131,10 @@ Also check the explanations and the examples further below!
    Description
          Returns false, if the content does not equal ".value".
 
+         **Example:** ::
+
+            if.equals = POST
+            if.value.data = GETENV:REQUEST_METHOD
 
 .. container:: table-row
 
