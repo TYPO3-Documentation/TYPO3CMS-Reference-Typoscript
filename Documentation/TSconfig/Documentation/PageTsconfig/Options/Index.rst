@@ -21,12 +21,12 @@ backendLayout
          exclude
 
    Data type
-         *(list of integers)*
+         *(list of identifiers)*
 
    Description
          Excludes a list of backend layouts form being usable during assigning a layout in the backend.
 
-         Use the uid of the record in the default data provider.
+         Use the uid/identifier of the record in the default data provider.
 
          **Example:**
 
