@@ -107,7 +107,7 @@ which will be shown in the page properties (the same way as TypoScript static te
 
    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::registerPageTSConfigFile(
       'extension_name',
-      'Configuration/PageTS/myPageTSconfigFile.txt',
+      'Configuration/TSconfig/Page/myPageTSconfigFile.txt',
       'My special config'
    );
 
