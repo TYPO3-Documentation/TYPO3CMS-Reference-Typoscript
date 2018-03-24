@@ -96,8 +96,7 @@ Properties
    `sys\_language\_overlay`_                             boolean / keyword
    `sys\_language\_uid`_                                 :ref:`data-type-integer`
    `titleTagFunction`_                                   function name
-   `tx\_[extension key with no underscores]\_[\*]`       array
-   `tx\_[extension key with no underscores]\_[\*]`_      \-
+   `tx\_[extension key with no underscores]\_[\*]`_      array
    `typolinkCheckRootline`_                              :ref:`data-type-boolean`
    `typolinkEnableLinksAcrossDomains`_                   :ref:`data-type-boolean`           0
    `typolinkLinkAccessRestrictedPages`_                  integer (page id) / keyword "NONE"
