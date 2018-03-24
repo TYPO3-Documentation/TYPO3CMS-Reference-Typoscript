@@ -3,6 +3,7 @@
 
 .. _data-type-rotation:
 
+========
 rotation
 ========
 
@@ -16,6 +17,3 @@ rotation
 
    Comment
          integer, degrees from 0 - 360
-
-
-

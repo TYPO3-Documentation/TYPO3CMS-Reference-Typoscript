@@ -3,6 +3,7 @@
 
 .. _data-type-pixels:
 
+======
 pixels
 ======
 
@@ -16,6 +17,3 @@ pixels
 
    Comment
          pixel-distance
-
-
-

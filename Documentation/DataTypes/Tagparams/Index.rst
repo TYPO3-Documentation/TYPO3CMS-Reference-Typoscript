@@ -3,6 +3,7 @@
 
 .. _data-type-tag-params:
 
+==============
 < tag >-params
 ==============
 
@@ -18,5 +19,3 @@
 
    Comment
          Parameters for a tag.
-
-

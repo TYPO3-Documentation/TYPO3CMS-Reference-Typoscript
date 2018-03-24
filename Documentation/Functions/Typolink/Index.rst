@@ -27,7 +27,7 @@ extTarget
          extTarget
 
    Data type
-         target /:ref:`stdWrap <stdwrap>`
+         target / :ref:`stdwrap`
 
    Description
          Target used for external links
@@ -47,7 +47,7 @@ fileTarget
          fileTarget
 
    Data type
-         target /:ref:`stdWrap <stdwrap>`
+         target / :ref:`stdwrap`
 
    Description
          Target used for file links
@@ -64,7 +64,7 @@ target
          target
 
    Data type
-         target /:ref:`stdWrap <stdwrap>`
+         target / :ref:`stdwrap`
 
    Description
          Target used for internal links
@@ -81,7 +81,7 @@ no\_cache
          no\_cache
 
    Data type
-         boolean /:ref:`stdWrap <stdwrap>`
+         :ref:`data-type-bool` / :ref:`stdwrap`
 
    Description
          Adds "&no\_cache=1" to the link
@@ -98,18 +98,19 @@ useCacheHash
          useCacheHash
 
    Data type
-         boolean
+         :ref:`data-type-bool`
 
    Description
          If set, the additionalParams list is exploded and calculated into a
          hash string appended to the URL, like "&cHash=ae83fd7s87". When the
          caching mechanism sees this value, it calculates the same value on the
-         server based on incoming values in HTTP\_GET\_VARS, excluding
+         server based on incoming values in :php:`HTTP_GET_VARS`, excluding
          id, type, no\_cache, ftu, cHash, MP values. If the incoming cHash value
          matches the calculated value, the page may be cached based on this.
 
-         The $TYPO3\_CONF\_VARS['SYS']['encryptionKey'] is included in the hash
-         in order to make it unique for the server and non-predictable.
+         The :php:`$GLOBALS['TYPO3_CONF_VARS']['SYS']['encryptionKey']`
+         is included in the hash in order to make it unique for the
+         server and non-predictable.
 
 
 .. _typolink-additionalParams:
@@ -123,7 +124,7 @@ additionalParams
          additionalParams
 
    Data type
-         string /:ref:`stdWrap <stdwrap>`
+         :ref:`data-type-string` / :ref:`stdwrap`
 
    Description
          This is parameters that are added to the end of the URL. This must be
@@ -156,7 +157,7 @@ addQueryString
          addQueryString
 
    Data type
-         boolean
+         :ref:`data-type-bool`
 
    Description
          Add the QUERY\_STRING to the start of the link. Notice that this does
@@ -199,7 +200,7 @@ wrap
          wrap
 
    Data type
-         wrap /:ref:`stdWrap <stdwrap>`
+         wrap / :ref:`stdwrap`
 
    Description
          Wraps the links.
@@ -216,10 +217,10 @@ ATagBeforeWrap
          ATagBeforeWrap
 
    Data type
-         boolean
+         :ref:`data-type-bool`
 
    Description
-         If set, the link is first wrapped with :ts:`.wrap` and then the
+         If set, the link is first wrapped with :ts:`wrap` and then the
          <A>-tag.
 
    Default
@@ -236,7 +237,7 @@ parameter
          parameter
 
    Data type
-         string /:ref:`stdWrap <stdwrap>`
+         :ref:`data-type-string` / :ref:`stdwrap`
 
    Description
          This is the main data that is used for creating the link. It can be
@@ -349,7 +350,7 @@ forceAbsoluteUrl
          forceAbsoluteUrl
 
    Data type
-         boolean
+         :ref:`boolean <data-type-bool>`
 
    Description
          Forces links to internal pages to be absolute, thus having a proper
@@ -382,7 +383,7 @@ title
          title
 
    Data type
-         string /:ref:`stdWrap <stdwrap>`
+         :ref:`data-type-string` / :ref:`stdwrap`
 
    Description
          Sets the title parameter of the A-tag.
@@ -399,7 +400,7 @@ JSwindow\_params
          JSwindow\_params
 
    Data type
-         string
+         :ref:`data-type-string
 
    Description
          Preset values for opening the window. This example lists almost all
@@ -419,11 +420,11 @@ returnLast
          returnLast
 
    Data type
-         string
+         :ref:`data-type-string
 
    Description
          If set to "url", then it will return the URL of the link
-         ($this->lastTypoLinkUrl).
+         (:php:`$this->lastTypoLinkUrl`).
 
          If set to "target", it will return the target of the link.
 
@@ -442,7 +443,7 @@ section
          section
 
    Data type
-         string /:ref:`stdWrap <stdwrap>`
+         :ref:`data-type-string` / :ref:`stdwrap`
 
    Description
          If this value is present, it's prepended with a "#" and placed after
@@ -463,7 +464,7 @@ ATagParams
          ATagParams
 
    Data type
-         <A>-params /:ref:`stdWrap <stdwrap>`
+         <A>-params / :ref:`stdwrap`
 
    Description
          Additional parameters
@@ -484,7 +485,7 @@ linkAccessRestrictedPages
          linkAccessRestrictedPages
 
    Data type
-         boolean
+         :ref:`data-type-bool`
 
    Description
          If set, typolinks pointing to access restricted pages will still link
@@ -502,7 +503,7 @@ userFunc
          userFunc
 
    Data type
-         function name
+         :ref:`data-type-function-name`
 
    Description
          This passes the link-data compiled by the typolink function to a user-
@@ -559,7 +560,7 @@ Resource handler key (`page`)
    - file
    - folder
 
-   More keys can be added via :php:`$TYPO3_CONF_VARS['SYS']['linkHandler']` in
+   More keys can be added via :php:`$GLOBALS['TYPO3_CONF_VARS']['SYS']['linkHandler']` in
    an associative array where the key is the handler key and the value is a
    class implementing the LinkHandlerInterface.
 
@@ -667,12 +668,12 @@ Registering the handler for keyword "pressrelease" is done like this:
 
 .. code-block:: php
 
-   $TYPO3_CONF_VARS['SC_OPTIONS']['tslib/class.tslib_content.php']
+   $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['tslib/class.tslib_content.php']
      ['typolinkLinkHandler']['pressrelease'] =
      'EXT:pressrelease/class.linkHandler.php:&tx_linkHandler';
 
-The class file "pressrelease/class.linkHandler.php" contains the class
-"tx\_linkHandler" which could look like this:
+The class file :file:`pressrelease/class.linkHandler.php` contains the class
+:php:`tx_linkHandler` which could look like this:
 
 .. code-block:: php
 
@@ -696,11 +697,12 @@ called with `&tx_pressrelease[showUid]=123`. In addition you can see
 the "userCacheHash" attribute for the typolink function used in order
 to produce a cached display.
 
-The link that results from this operation will look like this::
+The link that results from this operation will look like this:
+
+.. code-block:: html
 
    <a href="index.php?id=34&amp;
      tx_pressrelease[showUid]=123%3A456&amp;cHash=c0551fead6" >
 
-The link would be encoded with RealURL and respect config.linkVars as
-long as ->typolink is used to generate the final URL.
-
+The link would be encoded with RealURL and respect :ts:`config.linkVars`
+as long as ->typolink is used to generate the final URL.

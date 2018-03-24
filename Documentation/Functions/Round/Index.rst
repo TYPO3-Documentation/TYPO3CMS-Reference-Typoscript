@@ -3,8 +3,9 @@
 
 .. _round:
 
+=====
 round
-^^^^^
+=====
 
 With this property you can round the value up, down or to a certain
 number of decimals. For each roundType the according PHP function will
@@ -16,13 +17,18 @@ selected round method.
 
 .. ### BEGIN~OF~TABLE ###
 
+.. _round-roundtype:
+
+roundType
+=========
+
 .. container:: table-row
 
    Property
          roundType
 
    Data type
-         string /:ref:`stdWrap <stdwrap>`
+         :ref:`data-type-string` / :ref:`stdwrap`
 
    Description
          Round method which should be used.
@@ -38,6 +44,10 @@ selected round method.
    Default
          round
 
+.. _round-decimals:
+
+decimals
+========
 
 .. container:: table-row
 
@@ -45,7 +55,7 @@ selected round method.
          decimals
 
    Data type
-         integer /:ref:`stdWrap <stdwrap>`
+         :ref:`data-type-integer` / :ref:`stdwrap`
 
    Description
          Number of decimals the rounded value will have. Only used with the
@@ -55,13 +65,18 @@ selected round method.
    Default
          0
 
+.. _round-round:
+
+round
+=====
+
 .. container:: table-row
 
    Property
          round
 
    Data type
-         boolean
+         :ref:`data-type-boolean`
 
    Description
          Set round = 1 to enable rounding.
@@ -85,10 +100,10 @@ Examples:
 
    lib.number = TEXT
    lib.number {
-     value = 3.14159
-     stdWrap.round = 1
-     stdWrap.round.roundType = round
-     stdWrap.round.decimals = 2
+       value = 3.14159
+       stdWrap.round = 1
+       stdWrap.round.roundType = round
+       stdWrap.round.decimals = 2
    }
 
 This returns 3.14.

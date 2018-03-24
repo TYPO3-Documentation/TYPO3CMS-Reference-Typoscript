@@ -3,8 +3,9 @@
 
 .. _replacement:
 
+===========
 replacement
-^^^^^^^^^^^
+===========
 
 This object performs an ordered search and replace operation on the
 current content with the possibility of using PCRE regular expressions.
@@ -13,17 +14,26 @@ allows multiple replacements at once.
 
 .. ### BEGIN~OF~TABLE ###
 
+.. _replacement-search:
+
+search
+======
+
 .. container:: table-row
 
    Property
          search
 
    Data type
-         string /:ref:`stdWrap <stdwrap>`
+         :ref:`data-type-string` / :ref:`stdwrap`
 
    Description
          Defines the string that shall be replaced.
 
+.. _replacement-replace:
+
+replace
+=======
 
 .. container:: table-row
 
@@ -31,11 +41,15 @@ allows multiple replacements at once.
          replace
 
    Data type
-         string /:ref:`stdWrap <stdwrap>`
+         :ref:`data-type-string` / :ref:`stdwrap`
 
    Description
          Defines the string to be used for the replacement.
 
+.. _replacement-useregexp:
+
+useRegExp
+=========
 
 .. container:: table-row
 
@@ -43,7 +57,7 @@ allows multiple replacements at once.
          useRegExp
 
    Data type
-         boolean /:ref:`stdWrap <stdwrap>`
+         :ref:`data-type-bool` / :ref:`stdwrap`
 
    Description
          Defines that the search and replace strings are considered as PCRE
@@ -52,14 +66,18 @@ allows multiple replacements at once.
          **Example:** ::
 
             10 {
-              search = #(a )CAT#i
-              replace = \1cat
-              useRegExp = 1
+                search = #(a )CAT#i
+                replace = \1cat
+                useRegExp = 1
             }
 
    Default
          0
 
+.. _replacement-useoptionsplitreplace:
+
+useOptionSplitReplace
+=====================
 
 .. container:: table-row
 
@@ -67,7 +85,7 @@ allows multiple replacements at once.
          useOptionSplitReplace
 
    Data type
-         boolean /:ref:`stdWrap <stdwrap>`
+         :ref:`data-type-bool` / :ref:`stdwrap`
 
    Description
          This property allows to use :ref:`objects-optionsplit` for the replace
@@ -87,28 +105,28 @@ allows multiple replacements at once.
 .. _replacement-examples:
 
 Examples:
-"""""""""
+=========
 
 ::
 
    10 = TEXT
    10 {
-     value = There_are_a_cat,_a_dog_and_a_tiger_in_da_hood!_Yeah!
-     stdWrap.replacement {
-       10 {
-         search = _
-         replace.char = 32
+       value = There_are_a_cat,_a_dog_and_a_tiger_in_da_hood!_Yeah!
+       stdWrap.replacement {
+           10 {
+               search = _
+               replace.char = 32
+           }
+           20 {
+               search = in da hood
+               replace = around the block
+           }
+           30 {
+               search = #a (Cat|Dog|Tiger)#i
+               replace = an animal
+               useRegExp = 1
+           }
        }
-       20 {
-         search = in da hood
-         replace = around the block
-       }
-       30 {
-         search = #a (Cat|Dog|Tiger)#i
-         replace = an animal
-         useRegExp = 1
-       }
-     }
    }
 
 This returns: "There are an animal, an animal and an animal around the
@@ -122,9 +140,9 @@ The following examples demonstrate the use of :ref:`objects-optionsplit`:
    20 = TEXT
    20.value = There_are_a_cat,_a_dog_and_a_tiger_in_da_hood!_Yeah!
    20.stdWrap.replacement.10 {
-     search = _
-     replace = 1 || 2 || 3
-     useOptionSplitReplace = 1
+       search = _
+       replace = 1 || 2 || 3
+       useOptionSplitReplace = 1
    }
 
 This returns: "There1are2a3cat,3a3dog3and3a3tiger3in3da3hood!3Yeah!"
@@ -134,11 +152,10 @@ This returns: "There1are2a3cat,3a3dog3and3a3tiger3in3da3hood!3Yeah!"
    30 = TEXT
    30.value = There are a cat, a dog and a tiger in da hood! Yeah!
    30.stdWrap.replacement.10 {
-     search = #(a) (Cat|Dog|Tiger)#i
-     replace = ${1} tiny ${2} || ${1} midsized ${2} || ${1} big ${2}
-     useRegExp = 1
-     useOptionSplitReplace = 1
+       search = #(a) (Cat|Dog|Tiger)#i
+       replace = ${1} tiny ${2} || ${1} midsized ${2} || ${1} big ${2}
+       useRegExp = 1
+       useOptionSplitReplace = 1
    }
 
 This returns: "There are a tiny cat, a midsized dog and a big tiger in da hood! Yeah!"
-

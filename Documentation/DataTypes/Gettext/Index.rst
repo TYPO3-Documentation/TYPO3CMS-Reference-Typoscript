@@ -1,10 +1,8 @@
 .. include:: ../../Includes.txt
 
-
-.. highlight:: typoscript
-
 .. _data-type-gettext:
 
+=======
 getText
 =======
 
@@ -63,7 +61,7 @@ getText
 .. _data-type-gettext-field:
 
 field:
-------
+======
 
 **Syntax**
 
@@ -78,15 +76,13 @@ field: [field name from the current :php:`$cObj->data` array in the cObject, mul
 - In :ref:`GIFBUILDER <gifbuilder>` :php:`$cObj->data` is set to the data
   :ref:`GIFBUILDER <gifbuilder>` is supplied with.
 
-**Examples**
-
-.. code-block:: typoscript
+**Examples**::
 
    foo = field : header
 
 *gets content from $cObj->data['header']*
 
-.. code-block:: typoscript
+::
 
    foo = field : fieldname|level1|level2
 
@@ -96,11 +92,11 @@ field: [field name from the current :php:`$cObj->data` array in the cObject, mul
 .. _data-type-gettext-parameters:
 
 parameters:
------------
+===========
 
 **Syntax**
 
-parameters: [field name from the current `$cObj->parameters` array in the cObject.]
+parameters: [field name from the current :php:`$cObj->parameters` array in the cObject.]
 
 See :ref:`parseFunc <parsefunc>`.
 
@@ -115,11 +111,11 @@ See :ref:`parseFunc <parsefunc>`.
 .. _data-type-gettext-register:
 
 register:
----------
+=========
 
 **Syntax**
 
-register: [field name from the $GLOBALS['TSFE']->register]
+register: [field name from the :php:`$GLOBALS['TSFE']->register`]
 
 See :ref:`LOAD_REGISTER <cobj-load-register>`.
 
@@ -136,7 +132,7 @@ See :ref:`LOAD_REGISTER <cobj-load-register>`.
 .. _data-type-gettext-leveltitle:
 
 leveltitle, leveluid, levelmedia:
----------------------------------
+=================================
 
 **Syntax**
 
@@ -148,15 +144,13 @@ return. Useful with levelmedia.]
 Returns values from up or down the page tree.
 
 
-**Examples**
-
-.. code-block:: typoscript
+**Examples**::
 
    foo = leveltitle : 1
 
 *gets the title of the page on the first level of the rootline*
 
-.. code-block:: typoscript
+::
 
    foo = leveltitle : -2 , slide
 
@@ -164,7 +158,7 @@ Returns values from up or down the page tree.
 AND if that is not present, walk to the bottom of the rootline until
 there's a title*
 
-.. code-block:: typoscript
+::
 
    foo = leveluid : 0
 
@@ -174,7 +168,7 @@ there's a title*
 .. _data-type-gettext-levelfield:
 
 levelfield:
------------
+===========
 
 **Syntax**
 
@@ -188,13 +182,13 @@ integer], [field name], ["slide"]
    foo = levelfield : -1 , user_myExtField , slide
 
 *gets the value of the user defined field user_myExtField in the root
-line (requires additional configuration in :php:`$GLOBALS['TYPO3_CONF_VARS']['FE']['addRootLineFields']` to include field!)*
+line (requires additional configuration in $GLOBALS['TYPO3_CONF_VARS']['FE']['addRootLineFields'] to include field!)*
 
 
 .. _data-type-gettext-date:
 
 date:
------
+=====
 
 **Syntax**
 
@@ -212,7 +206,7 @@ configuration. Then the date will be formatted as "d/m Y".
 .. _data-type-gettext-page:
 
 page:
------
+=====
 
 **Syntax**
 
@@ -228,7 +222,7 @@ page: [field in the current page record]
 .. _data-type-gettext-pagelayout:
 
 pagelayout:
------------
+===========
 
 **Syntax**
 
@@ -244,7 +238,7 @@ pagelayout
 .. _data-type-gettext-current:
 
 current:
---------
+========
 
 **Syntax**
 
@@ -260,7 +254,7 @@ current (gets the "current" value)
 .. _data-type-gettext-level:
 
 level:
-------
+======
 
 **Syntax**
 
@@ -276,7 +270,7 @@ level (gets the rootline level of the current page)
 .. _data-type-gettext-gp:
 
 GP:
----
+===
 
 **Syntax**
 
@@ -304,7 +298,7 @@ GP: Value from GET or POST method.
 .. _data-type-gettext-getenv:
 
 getenv:
--------
+=======
 
 **Syntax**
 
@@ -320,7 +314,7 @@ getenv: Value from environment variables
 .. _data-type-gettext-getindpenv:
 
 getIndpEnv:
------------
+===========
 
 *getIndpEnv* returns the value of a *System Environment Variable*
 denoted by *name* regardless of server OS, CGI/MODULE version etc. The
@@ -349,19 +343,19 @@ situations. The internal processing is handled by
 Name                  Definition                                                           Example or result
 ===================== ==================================================================== ===============
 HTTP_ACCEPT_LANGUAGE  language(s) accepted by client
-HTTP_HOST             [host][:[port]]                                                      192.168.1.4:8080
+HTTP_HOST             [host][:[port]]                                                      `192.168.1.4:8080`
 HTTP_REFERER          [scheme]://[host][:[port]][path]                                     `http://192.168.1.4:8080/typo3/32/temp/phpcheck/index.php/arg1/arg2/arg3/?arg1,arg2,arg3&p1=parameter1&p2[key]=value`
 HTTP_USER_AGENT       client user agent
-PATH_INFO             [path_info]                                                          /arg1/arg2/arg3/
-QUERY_STRING          [query]                                                              arg1,arg2,arg3&p1=parameter1&p2[key]=value
+PATH_INFO             [path_info]                                                          `/arg1/arg2/arg3/`
+QUERY_STRING          [query]                                                              `arg1,arg2,arg3&p1=parameter1&p2[key]=value`
 REMOTE_ADDR           client IP
 REMOTE_HOST           client host
-REQUEST_URI           [path]?[query]                                                       /typo3/32/temp/phpcheck/index.php/arg1/arg2/arg3/?arg1,arg2,arg3&p1=parameter1&p2[key]=value
+REQUEST_URI           [path]?[query]                                                       `/typo3/32/temp/phpcheck/index.php/arg1/arg2/arg3/?arg1,arg2,arg3&p1=parameter1&p2[key]=value`
 SCRIPT_FILENAME       absolute filename of script
-SCRIPT_NAME           [path_script]                                                        /typo3/32/temp/phpcheck/[index.php]
+SCRIPT_NAME           [path_script]                                                        `/typo3/32/temp/phpcheck/[index.php]`
 TYPO3_DOCUMENT_ROOT   absolute path of root of documents
-TYPO3_HOST_ONLY       [host]                                                               192.168.1.4
-TYPO3_PORT            [port]                                                               8080
+TYPO3_HOST_ONLY       [host]                                                               `192.168.1.4`
+TYPO3_PORT            [port]                                                               `8080`
 TYPO3_REQUEST_DIR     [scheme]://[host][:[port]][path_dir]
 TYPO3_REQUEST_HOST    [scheme]://[host][:[port]]
 TYPO3_REQUEST_SCRIPT  [scheme]://[host][:[port]][path_script]
@@ -378,7 +372,7 @@ TYPO3_SSL             TRUE if this session uses SSL/TLS (https)
 .. _data-type-gettext-tsfe:
 
 TSFE:
------
+=====
 
 **Syntax**
 
@@ -394,7 +388,7 @@ TSFE: [value from the :php:`$GLOBALS['TSFE']` array, multi-dimensional]
 .. _data-type-gettext-db:
 
 DB:
----
+===
 
 **Syntax**
 
@@ -412,7 +406,7 @@ marked as deleted will not return any value.
 .. _data-type-gettext-file:
 
 file:
------
+=====
 
 **Syntax**
 
@@ -446,7 +440,7 @@ See the :ref:`FILES cObject for usage examples <cobj-files-examples>`.
 .. _data-type-gettext-fullrootline:
 
 fullRootLine:
--------------
+=============
 
 **Syntax**
 
@@ -479,7 +473,7 @@ above.
 .. _data-type-gettext-lll:
 
 LLL:
-----
+====
 
 **Syntax**
 
@@ -495,7 +489,7 @@ Reference consists of [fileref]:[labelkey]
 .. _data-type-gettext-path:
 
 path:
------
+=====
 
 **Syntax**
 
@@ -511,7 +505,7 @@ empty if the file does not exist.
 .. _data-type-gettext-cobj:
 
 cObj:
------
+=====
 
 **Syntax**
 
@@ -533,7 +527,7 @@ current cObject record.
 .. _data-type-gettext-session:
 
 session:
---------
+========
 
 **Syntax**
 
@@ -551,7 +545,7 @@ The :ts:`key` refers to the session key used to store the value. Subelements may
 .. _data-type-gettext-debug:
 
 debug:
-------
+======
 
 **Syntax**
 
@@ -569,7 +563,7 @@ by the keyword. Available keywords are "rootLine", "fullRootLine",
 .. _data-type-gettext-global:
 
 global:
--------
+=======
 
 **Syntax**
 
@@ -577,7 +571,7 @@ global: [GLOBAL variable, split with \| if you want to get from an
 array! Deprecated, use GP, TSFE or getenv!]
 
 flexform:
----------
+=========
 
 **Syntax**
 

@@ -3,6 +3,7 @@
 
 .. _data-types-object-types:
 
+========================
 Data types: Object types
 ========================
 

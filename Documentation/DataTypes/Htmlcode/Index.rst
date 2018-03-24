@@ -3,6 +3,7 @@
 
 .. _data-type-html-code:
 
+=========
 HTML code
 =========
 
@@ -18,6 +19,3 @@ HTML code
 
    Comment
          pure HTML code
-
-
-

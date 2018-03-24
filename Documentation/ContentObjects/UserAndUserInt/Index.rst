@@ -255,7 +255,7 @@ Contents of :file:`fileadmin/gethostname.php`:
 
 .. code-block:: php
 
-   <?php namespace MyVendorName;
+   namespace MyVendorName;
       class Hostname {
          /**
           * Return standard host name for the local machine

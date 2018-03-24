@@ -3,6 +3,7 @@
 
 .. _data-type-page-id:
 
+========
 page\_id
 ========
 
@@ -18,6 +19,3 @@ page\_id
 
    Comment
          A page id (integer) or "this" (=current page id).
-
-
-

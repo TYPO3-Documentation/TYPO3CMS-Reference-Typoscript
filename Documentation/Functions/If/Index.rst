@@ -3,8 +3,9 @@
 
 .. _if:
 
+==
 if
-^^
+==
 
 Allows you to check multiple conditions.
 
@@ -12,11 +13,16 @@ This function returns true, if ALL of the present conditions are met
 (they are connected with an "AND", a logical conjunction). If a
 single condition is false, the value returned is false.
 
-The returned value may still be negated by the ".negate"-property.
+The returned value may still be negated by the :ref:`if-negate`-property.
 
 Also check the explanations and the examples further below!
 
 .. ### BEGIN~OF~TABLE ###
+
+.. _if-directreturn:
+
+directReturn
+============
 
 .. container:: table-row
 
@@ -24,13 +30,17 @@ Also check the explanations and the examples further below!
          directReturn
 
    Data type
-         boolean
+         :ref:`data-type-bool`
 
    Description
          If this property exists, no other conditions will be checked. Instead
          the true/false of this value is returned. Can be used to set
          true/false with a TypoScript constant.
 
+.. _if-isnull:
+
+isNull
+======
 
 .. container:: table-row
 
@@ -38,13 +48,13 @@ Also check the explanations and the examples further below!
          isNull
 
    Data type
-         stdWrap
+         :ref:`stdWrap`
 
    Description
-         If the resulting content of the stdWrap is null (NULL type in PHP)
+         If the resulting content of the :ts:`stdWrap` is null (:php:`NULL` type in PHP)
          ...
 
-         Since null values cannot be assigned in TypoScript, only the stdWrap
+         Since null values cannot be assigned in TypoScript, only the :ts:`stdWrap`
          features are available below this property.
 
          **Example:** ::
@@ -52,13 +62,17 @@ Also check the explanations and the examples further below!
             page.10 = COA_INT
             page.10.10 = TEXT
             page.10.10 {
-              stdWrap.if.isNull.field = description
-              value = No description available.
+                stdWrap.if.isNull.field = description
+                value = No description available.
             }
 
          This example returns "No description available.", if the content of
-         the field "description" is NULL.
+         the field "description" is :php:`NULL`.
 
+.. _if-istrue:
+
+isTrue
+======
 
 .. container:: table-row
 
@@ -66,11 +80,15 @@ Also check the explanations and the examples further below!
          isTrue
 
    Data type
-         string /:ref:`stdWrap <stdwrap>`
+         :ref:`data-type-string` / :ref:`stdwrap`
 
    Description
          If the content is "true".... (not empty string and not zero)
 
+.. _if-isfalse:
+
+isFalse
+=======
 
 .. container:: table-row
 
@@ -78,11 +96,15 @@ Also check the explanations and the examples further below!
          isFalse
 
    Data type
-         string /:ref:`stdWrap <stdwrap>`
+         :ref:`data-type-string` / :ref:`stdwrap`
 
    Description
          If the content is "false"... (empty or zero)
 
+.. _if-ispositive:
+
+isPositive
+==========
 
 .. container:: table-row
 
@@ -90,11 +112,15 @@ Also check the explanations and the examples further below!
          isPositive
 
    Data type
-         integer /:ref:`stdWrap <stdwrap>` \+ calc
+         :ref:`data-type-integer` / :ref:`stdwrap` \+ calc
 
    Description
          Returns false, if the content is not positive.
 
+.. _if-isgreaterthan:
+
+isGreaterThan
+=============
 
 .. container:: table-row
 
@@ -102,11 +128,15 @@ Also check the explanations and the examples further below!
          isGreaterThan
 
    Data type
-         value /:ref:`stdWrap <stdwrap>`
+         value / :ref:`stdwrap`
 
    Description
-         Returns false, if the content is not greater than ".value".
+         Returns false, if the content is not greater than :ts:`value`.
 
+.. _if-islessthan:
+
+isLessThan
+==========
 
 .. container:: table-row
 
@@ -114,11 +144,15 @@ Also check the explanations and the examples further below!
          isLessThan
 
    Data type
-         value /:ref:`stdWrap <stdwrap>`
+         value / :ref:`stdwrap`
 
    Description
-         Returns false, if the content is not less than ".value".
+         Returns false, if the content is not less than :ts:`value`.
 
+.. _if-equals:
+
+equals
+======
 
 .. container:: table-row
 
@@ -126,15 +160,20 @@ Also check the explanations and the examples further below!
          equals
 
    Data type
-         value /:ref:`stdWrap <stdwrap>`
+         value / :ref:`stdwrap`
 
    Description
-         Returns false, if the content does not equal ".value".
+         Returns false, if the content does not equal :ts:`value`.
 
          **Example:** ::
 
             if.equals = POST
             if.value.data = GETENV:REQUEST_METHOD
+
+.. _if-isinlist:
+
+isInList
+========
 
 .. container:: table-row
 
@@ -142,20 +181,25 @@ Also check the explanations and the examples further below!
          isInList
 
    Data type
-         value /:ref:`stdWrap <stdwrap>`
+         value / :ref:`stdwrap`
 
    Description
          Returns false, if the content is not in the comma-separated list
-         ".value".
+         :ts:`.value`.
 
-         **Note:** The list in ".value" may not have spaces between elements!
+         **Note:** The list in :ts:`value` may not have spaces between elements!
 
          **Example:** ::
 
             if.isInList.field = uid
             if.value = 1,2,34,50,87
 
-         This returns true, if the uid is part of the list in .value.
+         This returns true, if the uid is part of the list in :ts:`value`.
+
+.. _if-value:
+
+value
+=====
 
 .. container:: table-row
 
@@ -163,11 +207,15 @@ Also check the explanations and the examples further below!
          value
 
    Data type
-         value /:ref:`stdWrap <stdwrap>`
+         value / :ref:`stdwrap`
 
    Description
          The value to check. This is the comparison value mentioned above.
 
+.. _if-negate:
+
+negate
+======
 
 .. container:: table-row
 
@@ -175,7 +223,7 @@ Also check the explanations and the examples further below!
          negate
 
    Data type
-         boolean
+         :ref:`data-type-bool`
 
    Description
          This property is checked after all other properties. If set, it
@@ -199,28 +247,28 @@ Also check the explanations and the examples further below!
 .. _if-explanation:
 
 Explanation
-"""""""""""
+===========
 
 The "if"-function is a very odd way of returning true or false!
 Beware!
 
 "if" is normally used to decide whether to render an object or to return
-a value (see the cObjects and stdWrap).
+a value (see the :ref:`data-type-cobject` and :ref:`stdWrap`).
 
 Here is how it works:
 
 The function returns true or false. Whether it returns true or false
-depends on the properties of this function. Say if you set "isTrue =
-1" then the result is true. If you set "isTrue.field = header", the
-function returns true if the field "header" in $cObj->data is set!
+depends on the properties of this function. Say if you set :ts:`isTrue = 1`
+then the result is true. If you set :ts:`isTrue.field = header`, the
+function returns true if the field "header" in :php:`$cObj->data` is set!
 
 If you want to compare values, you must load a base-value in the
-".value"-property. Example::
+:ts:`value`-property. Example::
 
    .value = 10
    .isGreaterThan = 11
 
-This would return true because the value of ".isGreaterThan" is
+This would return true because the value of :ts:`isGreaterThan` is
 greater than 10, which is the base-value.
 
 More complex is this::
@@ -230,16 +278,16 @@ More complex is this::
    .isTrue.field = header
    .negate = 1
 
-There are two conditions - isGreaterThan and isTrue. If they are both
-true, the total is true (both are connected with an AND). BUT(!) then
-the result of the function in total would be false because the
-".negate"-flag inverts the result!
+There are two conditions - :ts:`isGreaterThan` and :ts:`isTrue`.
+If they are both true, the total is true (both are connected with an AND).
+BUT(!) then the result of the function in total would be false because the
+:ts:`negate`-flag inverts the result!
 
 
 .. _if-examples:
 
 Examples:
-~~~~~~~~~
+=========
 
 This is a GIFBUILDER object that will write "NEW" on a menu-item if
 the field "newUntil" has a date less than the current date! ::
@@ -248,9 +296,9 @@ the field "newUntil" has a date less than the current date! ::
      30.text = NEW!
      30.offset = 10,10
      30.if {
-       value.data = date: U
-       isLessThan.field = newUntil
-       negate = 1
+         value.data = date: U
+         isLessThan.field = newUntil
+         negate = 1
      }
 
 
@@ -263,4 +311,3 @@ page. ::
      additionalParams = &L=0
      additionalParams.if.value = 2
      additionalParams.if.isGreaterThan.data = GP:L
-

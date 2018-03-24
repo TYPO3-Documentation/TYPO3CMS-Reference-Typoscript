@@ -1530,62 +1530,65 @@ the same page id in TYPO3 but where the difference would be in some
 parameter value.
 
 First, this listing creates a menu in three levels where the first two
-are graphical items::
+are graphical items:
 
-      0: # ************************
-      1: # MENU LEFT
-      2: # ************************
-      3: lib.leftmenu.20 = HMENU
-      4: lib.leftmenu.20.special = userfunction
-      5: lib.leftmenu.20.special.userFunc = user_3dsplm_pi2->makeMenuArray
-      6: lib.leftmenu.20.1 = GMENU
-      7: lib.leftmenu.20.1.NO {
-      8:   wrap = <tr><td>|</td></tr><tr><td class="bckgdgrey1" height="1"></td></tr>
-      9:   XY = 163,19
-     10:   backColor = white
-     11:   10 = TEXT
-     12:   10.text.field = title
-     13:   10.text.case = upper
-     14:   10.fontColor = red
-     15:   10.fontFile = fileadmin/fonts/ARIALNB.TTF
-     16:   10.niceText = 1
-     17:   10.offset = 14,12
-     18:   10.fontSize = 10
-     19: }
-     20: lib.leftmenu.20.2 = GMENU
-     21: lib.leftmenu.20.2.wrap = | <tr><td></td></tr><tr><td></td></tr>
-     22: lib.leftmenu.20.2.NO {
-     23:   wrap = <tr><td class="bckgdwhite" height="4"></td></tr><tr><td>|</td></tr>
-     24:   XY = 163,16
-     25:   backColor = white
-     26:   10 = TEXT
-     27:   10.text.field = title
-     28:   10.text.case = upper
-     29:   10.fontColor = #666666
-     30:   10.fontFile = fileadmin/fonts/ARIALNB.TTF
-     31:   10.niceText = 1
-     32:   10.offset = 14,12
-     33:   10.fontSize = 11
-     34: }
-     35: lib.leftmenu.20.2.RO < lib.leftmenu.20.2.NO
-     36: lib.leftmenu.20.2.RO = 1
-     37: lib.leftmenu.20.2.RO.backColor = #eeeeee
-     38: lib.leftmenu.20.2.ACT < lib.leftmenu.20.2.NO
-     39: lib.leftmenu.20.2.ACT = 1
-     40: lib.leftmenu.20.2.ACT.10.fontColor = red
-     41: lib.leftmenu.20.3 = TMENU
-     42: lib.leftmenu.20.3.NO {
-     43:   allWrap = <tr><td>|</td></tr>
-     44:   linkWrap (
-     45:    <table border="0" cellpadding="0" cellspacing="0">
-     46:       <tr>
-     47:         <td><img src="clear.gif" width="15" height="1" /></td>
-     48:         <td><img src="fileadmin/arrow_gray.gif" height="9" width="9" /></td>
-     49:         <td>|</td>
-     50:       </tr>
-     51:    </table>
-     52:   )
-     53: }
+.. code-block:: typoscript
+   :linenos:
+
+   # ************************
+   # MENU LEFT
+   # ************************
+   lib.leftmenu.20 = HMENU
+   lib.leftmenu.20.special = userfunction
+   lib.leftmenu.20.special.userFunc = user_3dsplm_pi2->makeMenuArray
+   lib.leftmenu.20.1 = GMENU
+   lib.leftmenu.20.1.NO {
+     wrap = <tr><td>|</td></tr><tr><td class="bckgdgrey1" height="1"></td></tr>
+     XY = 163,19
+     backColor = white
+     10 = TEXT
+     10.text.field = title
+     10.text.case = upper
+     10.fontColor = red
+     10.fontFile = fileadmin/fonts/ARIALNB.TTF
+     10.niceText = 1
+     10.offset = 14,12
+     10.fontSize = 10
+   }
+   lib.leftmenu.20.2 = GMENU
+   lib.leftmenu.20.2.wrap = | <tr><td></td></tr><tr><td></td></tr>
+   lib.leftmenu.20.2.NO {
+     wrap = <tr><td class="bckgdwhite" height="4"></td></tr><tr><td>|</td></tr>
+     XY = 163,16
+     backColor = white
+     10 = TEXT
+     10.text.field = title
+     10.text.case = upper
+     10.fontColor = #666666
+     10.fontFile = fileadmin/fonts/ARIALNB.TTF
+     10.niceText = 1
+     10.offset = 14,12
+     10.fontSize = 11
+   }
+   lib.leftmenu.20.2.RO < lib.leftmenu.20.2.NO
+   lib.leftmenu.20.2.RO = 1
+   lib.leftmenu.20.2.RO.backColor = #eeeeee
+   lib.leftmenu.20.2.ACT < lib.leftmenu.20.2.NO
+   lib.leftmenu.20.2.ACT = 1
+   lib.leftmenu.20.2.ACT.10.fontColor = red
+   lib.leftmenu.20.3 = TMENU
+   lib.leftmenu.20.3.NO {
+     allWrap = <tr><td>|</td></tr>
+     linkWrap (
+      <table border="0" cellpadding="0" cellspacing="0">
+         <tr>
+           <td><img src="clear.gif" width="15" height="1" /></td>
+           <td><img src="fileadmin/arrow_gray.gif" height="9" width="9" /></td>
+           <td>|</td>
+         </tr>
+      </table>
+     )
+   }
 
 The menu looks like this on a web page:
 
@@ -1595,51 +1598,54 @@ The menu looks like this on a web page:
 The TypoScript code above generates this menu, but the items do not
 link straight to pages as usual. This is because the *whole* menu is
 generated from this array, which was returned from the function
-"menuMenuArray" called in TypoScript line 4+5 ::
+"menuMenuArray" called in TypoScript line 4+5 :
 
-      1:  function makeMenuArray($content, $conf) {
-      2:    return array(
-      3:      array(
-      4:          'title' => 'Contact',
-      5:          '_OVERRIDE_HREF' => 'index.php?id=10',
-      6:          '_SUB_MENU' => array(
-      7:              array(
-      8:                  'title' => 'Offices',
-      9:                  '_OVERRIDE_HREF' => 'index.php?id=11',
-     10:                  '_OVERRIDE_TARGET' => '_top',
-     11:                  'ITEM_STATE' => 'ACT',
-     12:                  '_SUB_MENU' => array(
-     13:                      array(
-     14:                          'title' => 'Copenhagen Office',
-     15:                          '_OVERRIDE_HREF' => 'index.php?id=11&officeId=cph',
-     16:                      ),
-     17:                      array(
-     18:                          'title' => 'Paris Office',
-     19:                          '_OVERRIDE_HREF' => 'index.php?id=11&officeId=paris',
-     20:                      ),
-     21:                      array(
-     22:                          'title' => 'New York Office',
-     23:                          '_OVERRIDE_HREF' => 'http://www.example.com',
-     24:                          '_OVERRIDE_TARGET' => '_blank',
-     25:                      )
-     26:                  )
-     27:              ),
-     28:              array(
-     29:                  'title' => 'Form',
-     30:                  '_OVERRIDE_HREF' => 'index.php?id=10&cmd=showform',
-     31:              ),
-     32:              array(
-     33:                  'title' => 'Thank you',
-     34:                  '_OVERRIDE_HREF' => 'index.php?id=10&cmd=thankyou',
-     35:              ),
-     36:          ),
-     37:      ),
-     38:      array(
-     39:          'title' => 'Products',
-     40:          '_OVERRIDE_HREF' => 'index.php?id=14',
-     41:      )
-     42:    );
-     43:  }
+.. code-block:: php
+   :linenos:
+
+   function makeMenuArray($content, $conf) {
+     return array(
+       array(
+           'title' => 'Contact',
+           '_OVERRIDE_HREF' => 'index.php?id=10',
+           '_SUB_MENU' => array(
+               array(
+                   'title' => 'Offices',
+                   '_OVERRIDE_HREF' => 'index.php?id=11',
+                   '_OVERRIDE_TARGET' => '_top',
+                   'ITEM_STATE' => 'ACT',
+                   '_SUB_MENU' => array(
+                       array(
+                           'title' => 'Copenhagen Office',
+                           '_OVERRIDE_HREF' => 'index.php?id=11&officeId=cph',
+                       ),
+                       array(
+                           'title' => 'Paris Office',
+                           '_OVERRIDE_HREF' => 'index.php?id=11&officeId=paris',
+                       ),
+                       array(
+                           'title' => 'New York Office',
+                           '_OVERRIDE_HREF' => 'http://www.example.com',
+                           '_OVERRIDE_TARGET' => '_blank',
+                       )
+                   )
+               ),
+               array(
+                   'title' => 'Form',
+                   '_OVERRIDE_HREF' => 'index.php?id=10&cmd=showform',
+               ),
+               array(
+                   'title' => 'Thank you',
+                   '_OVERRIDE_HREF' => 'index.php?id=10&cmd=thankyou',
+               ),
+           ),
+       ),
+       array(
+           'title' => 'Products',
+           '_OVERRIDE_HREF' => 'index.php?id=14',
+       )
+     );
+   }
 
 Notice how the array contains "fake" page-records which has *no* uid
 field, only a "title" and "\_OVERRIDE\_HREF" as required and some

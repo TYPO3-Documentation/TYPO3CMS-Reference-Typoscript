@@ -3,6 +3,7 @@
 
 .. _data-type-linkwrap:
 
+========
 linkWrap
 ========
 
@@ -27,6 +28,3 @@ linkWrap
          instead of {x}.
 
          Thus we can insert page\_ids from previous levels.
-
-
-

@@ -3,6 +3,7 @@
 
 .. _select:
 
+======
 select
 ======
 
@@ -22,12 +23,12 @@ in the :php:`$GLOBALS['TCA']`.
 
 
 Comprehensive example
----------------------
+=====================
 
 See PHP source code for
-:ref:`TYPO3 \\ CMS \\ Frontend \\ ContentObject \\ ContentObjectRenderer <t3api:typo3\\cms\\frontend\\ContentObject\\ContentObjectRenderer>`,
-:ref:`ContentObjectRenderer::getQuery() <t3api:typo3\\cms\\frontend\\ContentObject\\ContentObjectRenderer::getQuery>`,
-:ref:`ContentObjectRenderer::getWhere() <t3api:typo3\\cms\\frontend\\ContentObject\\ContentObjectRenderer::getWhere>`.
+:php:`\TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer`,
+:php:`ContentObjectRenderer::getQuery()`,
+:php:`ContentObjectRenderer::getWhere()`.
 
 
 .. Preamble: :
@@ -74,15 +75,15 @@ Condensed form::
 .. _select-uidInList:
 
 uidInList
----------
+=========
 
 .. container:: table-row
 
    Property
-         :ts:`uidInList`
+         uidInList
 
    Data type
-         *list of record\_ids* /:ref:`stdWrap`
+         *list of record\_ids* / :ref:`stdWrap`
 
    Description
          Comma-separated list of record uids from the according database table.
@@ -92,9 +93,11 @@ uidInList
          **Note:** :ts:`this` is a *special keyword* and replaced with the id of the
          *current record*.
 
-   Examples
-         | :ts:`select.uidInList = 1,2,3`
-         | :ts:`select.uidInList = this`
+   Example
+         ::
+
+            select.uidInList = 1,2,3
+            select.uidInList = this
 
 
 
@@ -102,15 +105,15 @@ uidInList
 .. _select-pidInList:
 
 pidInList
----------
+=========
 
 .. container:: table-row
 
    Property
-         :ts:`pidInList`
+         pidInList
 
    Data type
-         *list of page\_ids* /:ref:`stdWrap`
+         *list of page\_ids* / :ref:`stdWrap`
 
    Description
          Comma-separated list of pids of the record. This will be page_ids. For
@@ -156,15 +159,15 @@ pidInList
 .. _select-recursive:
 
 recursive
----------
+=========
 
 .. container:: table-row
 
    Property
-         :ts:`recursive`
+         recursive
 
    Data type
-         integer /:ref:`stdWrap`
+         :ref:`data-type-integer` / :ref:`stdWrap`
 
    Description
          Number of recursivity levels for the pidInList.
@@ -176,20 +179,21 @@ recursive
 .. _select-orderBy:
 
 orderBy
--------
+=======
 
 .. container:: table-row
 
    Property
-         :ts:`orderBy`
+         orderBy
 
    Data type
-         *SQL-orderBy* /:ref:`stdWrap`
+         *SQL-orderBy* / :ref:`stdWrap`
 
    Description
          ORDER BY clause without the words "ORDER BY".
 
-         **Example:** ::
+   Example
+         ::
 
             orderBy = sorting, title
 
@@ -197,20 +201,21 @@ orderBy
 .. _select-groupBy:
 
 groupBy
--------
+=======
 
 .. container:: table-row
 
    Property
-         :ts:`groupBy`
+         groupBy
 
    Data type
-         *SQL-groupBy* /:ref:`stdWrap`
+         *SQL-groupBy* / :ref:`stdWrap`
 
    Description
          GROUP BY clause without the words "GROUP BY".
 
-         **Example:** ::
+   Example
+         ::
 
             groupBy = CType
 
@@ -219,60 +224,61 @@ groupBy
 .. _select-max:
 
 max
----
+===
 
 .. container:: table-row
 
    Property
-         :ts:`max`
+         max
 
    Data type
-         integer +calc +"total" /:ref:`stdWrap`
+         :ref:`data-type-integer` +calc +"total" / :ref:`stdWrap`
 
    Description
          Max records
 
-         **Special keyword:** "total" is substituted with count(\*).
+         **Special keyword:** "total" is substituted with :php:`count(*)`.
 
 
 
 .. _select-begin:
 
 begin
------
+=====
 
 
 .. container:: table-row
 
    Property
-         :ts:`begin`
+         begin
 
    Data type
-         integer +calc +"total" /:ref:`stdWrap`
+         :ref:`data-type-integer` +calc +"total" / :ref:`stdWrap`
 
    Description
          Begin with record number *value*.
 
-         **Special keyword:** "total" is substituted with count(\*).
+         **Special keyword:** "total" is substituted with :php:`count(*)`.
 
 
 .. _select-where:
 
 where
------
+=====
 
 .. container:: table-row
 
    Property
-         :ts:`where`
+         where
 
    Data type
-         *SQL-where* /:ref:`stdWrap`
+         *SQL-where* / :ref:`stdWrap`
 
    Description
          WHERE clause without the word "WHERE".
 
-         **Example:** ::
+   Example
+         ::
 
             where = (title LIKE '%SOMETHING%' AND NOT doktype)
 
@@ -280,39 +286,39 @@ where
 .. _select-languageField:
 
 languageField
--------------
+=============
 
 .. container:: table-row
 
    Property
-         :ts:`languageField`
+         languageField
 
    Data type
-         string /:ref:`stdWrap`
+         :ref:`data-type-string` / :ref:`stdWrap`
 
    Description
          By default all records that have language-relevant information in the
          TCA "ctrl"-section are translated on translated pages.
 
-         This can be disabled by setting languageField = 0.
+         This can be disabled by setting :ts:`languageField = 0`.
 
 
 .. _select-includeRecordsWithoutDefaultTranslation:
 
 includeRecordsWithoutDefaultTranslation
----------------------------------------
+=======================================
 
 .. container:: table-row
 
    Property
-         :ts:`includeRecordsWithoutDefaultTranslation`
+         includeRecordsWithoutDefaultTranslation
 
    Data type
-         boolean /:ref:`stdWrap`
+         :ref:`data-type-bool` / :ref:`stdWrap`
 
    Description
-         If content language overlay is activated and the option "languageField" is not disabled,
-         includeRecordsWithoutDefaultTranslation allows to additionally fetch records,
+         If content language overlay is activated and the option :ts:`languageField` is not disabled,
+         :ts:`includeRecordsWithoutDefaultTranslation` allows to additionally fetch records,
          which do **not** have a parent in the default language.
 
    Default
@@ -323,18 +329,18 @@ includeRecordsWithoutDefaultTranslation
 .. _select-selectFields:
 
 selectFields
-------------
+============
 
 .. container:: table-row
 
    Property
-         :ts:`selectFields`
+         selectFields
 
    Data type
-         string /:ref:`stdWrap`
+         :ref:`data-type-string` / :ref:`stdWrap`
 
    Description
-         List of fields to select, or "count(\*)".
+         List of fields to select, or :php:`count(*)`.
 
          If the records need to be localized, please include the
          relevant localization-fields (uid, pid, languageField and
@@ -351,15 +357,15 @@ selectFields
 .. _select-rightjoin:
 
 join, leftjoin, rightjoin
--------------------------
+=========================
 
 .. container:: table-row
 
    Property
-         :ts:`join`, :ts:`leftjoin`, :ts:`rightjoin`
+         join, leftjoin, rightjoin
 
    Data type
-         string /:ref:`stdWrap`
+         :ref:`data-type-string` / :ref:`stdWrap`
 
    Description
          Enter the table name for JOIN, LEFT OUTER JOIN and RIGHT OUTER JOIN
@@ -370,12 +376,12 @@ join, leftjoin, rightjoin
 .. _select-markers:
 
 markers
--------
+=======
 
 .. container:: table-row
 
    Property
-         :ts:`markers`
+         markers
 
    Data type
          *(array of markers)*
@@ -393,7 +399,7 @@ markers
 
          Sets the value directly.
 
-         **<markername>.commaSeparatedList:** (boolean)
+         **<markername>.commaSeparatedList:** (:ref:`data-type-boolean`)
 
          If set, the value is interpreted as a comma-separated list of values.
          Each value in the list is individually escaped and quoted.
@@ -402,21 +408,23 @@ markers
 
          All stdWrap properties can be used for each markername.
 
-         **Example:** ::
+   Example
+
+         ::
 
             page.60 = CONTENT
             page.60 {
-              table = tt_content
-              select {
-                pidInList = 73
-                where = header != ###whatever###
-                orderBy = ###sortfield###
-                markers {
-                  whatever.data = GP:first
-                  sortfield.value = sor
-                  sortfield.wrap = |ting
+                table = tt_content
+                select {
+                    pidInList = 73
+                    where = header != ###whatever###
+                    orderBy = ###sortfield###
+                    markers {
+                        whatever.data = GP:first
+                        sortfield.value = sor
+                        sortfield.wrap = |ting
+                    }
                 }
-              }
             }
 
          This example selects all records from table tt_content, which are on page 73 and

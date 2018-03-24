@@ -4,6 +4,7 @@
 .. _data-type-integer:
 .. _data-type-int:
 
+=======
 integer
 =======
 
@@ -20,6 +21,3 @@ integer
 
          (This data type is sometimes used generally though another type would
          have been more appropriate, like "pixels".)
-
-
-

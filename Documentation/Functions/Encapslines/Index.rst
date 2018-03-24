@@ -3,10 +3,16 @@
 
 .. _encapslines:
 
+===========
 encapsLines
-^^^^^^^^^^^
+===========
 
 .. ### BEGIN~OF~TABLE ###
+
+.. _encapstaglist:
+
+encapsTagList
+=============
 
 .. container:: table-row
 
@@ -23,7 +29,9 @@ encapsLines
 
             encapsTagList = div, p
 
-         This setting will recognize the red line below as encapsulated lines::
+         This setting will recognize the red line below as encapsulated lines:
+
+         .. code-block:: html
 
             First line of text
             Some <div>text</div>
@@ -31,6 +39,10 @@ encapsLines
             <div>Some text</div>
             <B>Some text</B>
 
+.. _remaptag.[*tagname*]:
+
+remapTag.[*tagname*]
+====================
 
 .. container:: table-row
 
@@ -38,24 +50,32 @@ encapsLines
          remapTag.[*tagname*]
 
    Data type
-         string
+         :ref:`data-type-string`
 
    Description
          Enter a new tag name here if you wish the tagname of any encapsulation
          to be unified to a single tag name.
 
-         For instance, setting this value to "remapTag.P=DIV" would convert::
+         For instance, setting this value to :ts:`remapTag.P=DIV` would convert:
+
+         .. code-block:: html
 
             <p>Some text</p>
             <div>Some text</div>
 
-         to ::
+         to :
+
+         .. code-block:: html
 
             <div>Some text</div>
             <div>Some text</div>
 
          ([*tagname*] is in uppercase.)
 
+.. _addattributes.[*tagname*]:
+
+addAttributes.[*tagname*]
+=========================
 
 .. container:: table-row
 
@@ -71,8 +91,8 @@ encapsLines
          **Example:** ::
 
             addAttributes.P {
-              style=padding-bottom: 0px; margin-top: 1px; margin-bottom: 1px;
-              align=center
+                style = padding-bottom: 0px; margin-top: 1px; margin-bottom: 1px;
+                align = center
             }
 
          ([*tagname*] is in uppercase.) ::
@@ -87,6 +107,10 @@ encapsLines
 
          Default is to always override/set the value of the attributes.
 
+.. _removewrapping:
+
+removeWrapping
+==============
 
 .. container:: table-row
 
@@ -94,12 +118,14 @@ encapsLines
          removeWrapping
 
    Data type
-         boolean
+        :ref:`data-type-boolean`
 
    Description
          If set, then all existing wrapping will be removed.
 
-         This::
+         This:
+
+         .. code-block:: html
 
             First line of text
             Some <div>text</div>
@@ -107,7 +133,9 @@ encapsLines
             <div>Some text</div>
             <b>Some text</b>
 
-         becomes this::
+         becomes this:
+
+         .. code-block:: html
 
             First line of text
             Some <div>text</div>
@@ -115,6 +143,10 @@ encapsLines
             Some text
             <b>Some text</b>
 
+.. _wrapnonwrappedlines:
+
+wrapNonWrappedLines
+===================
 
 .. container:: table-row
 
@@ -122,25 +154,33 @@ encapsLines
          wrapNonWrappedLines
 
    Data type
-         wrap
+        :ref:`stdwrap-wrap`
 
    Description
          Wrapping for non-encapsulated lines
 
          **Example:** ::
 
-            .wrapNonWrappedLines = <p>|</p>
+            wrapNonWrappedLines = <p>|</p>
 
-         This::
+         This:
+
+         .. code-block:: html
 
             First line of text
             <p>Some text</p>
 
-         becomes this::
+         becomes this:
+
+         .. code-block:: html
 
             <P>First line of text</P>
             <p>Some text</p>
 
+.. _innerstdwrap\_all:
+
+innerStdWrap\_all
+=================
 
 .. container:: table-row
 
@@ -148,12 +188,16 @@ encapsLines
          innerStdWrap\_all
 
    Data type
-         ->stdWrap
+        :ref:`stdWrap`
 
    Description
          Wraps the content inside all lines, whether they are encapsulated or
          not.
 
+.. _encapslinesstdwrap.[*tagname*]:
+
+encapsLinesStdWrap.[*tagname*]
+==============================
 
 .. container:: table-row
 
@@ -161,7 +205,7 @@ encapsLines
          encapsLinesStdWrap.[*tagname*]
 
    Data type
-         ->stdWrap
+        :ref:`stdWrap`
 
    Description
          Wraps the content inside all encapsulated lines.
@@ -169,19 +213,28 @@ encapsLines
          ([*tagname*] is in uppercase.)
 
 
+.. _defaultalign:
+
+defaultAlign
+============
+
 .. container:: table-row
 
    Property
          defaultAlign
 
    Data type
-         string /:ref:`stdWrap <stdwrap>`
+         :ref:`data-type-string` / :ref:`stdWrap`
 
    Description
          If set, this value is set as the default "align" value of the wrapping
-         tags, both from .encapsTagList, .bypassEncapsTagList and
-         .nonWrappedTag
+         tags, both from :ref:`encapsTagList`, :ts:`bypassEncapsTagList` and
+         :ref:`nonWrappedTag`
 
+.. _nonwrappedtag:
+
+nonWrappedTag
+=============
 
 .. container:: table-row
 
@@ -189,14 +242,15 @@ encapsLines
          nonWrappedTag
 
    Data type
-         tagname
+         :ts:`tagname`
 
    Description
          For all non-wrapped lines, you can here set a tag in which they
          should be wrapped. Example would be "p". This is an alternative to
-         .wrapNonWrappedLines and has the advantage that its attributes are
-         set by .addAttributes as well as defaultAlign. Thus you can match
-         the wrapping tags used for non-wrapped and wrapped lines more easily.
+         :ts:`wrapNonWrappedLines` and has the advantage that its attributes are
+         set by :ts:`addAttributes` as well as :ts:`defaultAlign`.
+         Thus you can match the wrapping tags used for non-wrapped and wrapped
+         lines more easily.
 
 
 .. ###### END~OF~TABLE ######
@@ -207,15 +261,15 @@ encapsLines
 .. _encapslines-examples:
 
 Example:
-""""""""
+========
 
 ::
 
    encapsLines {
-     encapsTagList = div,p
-     remapTag.DIV = P
-     wrapNonWrappedLines = <p>|</p>
-     innerStdWrap_all.ifEmpty = &nbsp;
+       encapsTagList = div,p
+       remapTag.DIV = P
+       wrapNonWrappedLines = <p>|</p>
+       innerStdWrap_all.ifEmpty = &nbsp;
    }
 
 This example shows how to handle content rendered by TYPO3 and
@@ -229,7 +283,9 @@ Say, you have made this content with the Rich Text Editor::
    <div style="text-align: right;">This line is right-aligned.</div>
 
 After being processed by encapsLines with the above configuration, the
-content looks like this::
+content looks like this:
+
+.. code-block:: html
 
    <p>This is line # 1 </p>
    <p>&nbsp;</p>
@@ -245,7 +301,7 @@ the content in the database remains as human readable as possible.
 
 
 Example:
-""""""""
+========
 
 ::
 
@@ -258,21 +314,20 @@ Example:
    # Setting up nonTypoTagStdWrap to wrap the text with p-tags
    tt_content.text.20.parseFunc.nonTypoTagStdWrap >
    tt_content.text.20.parseFunc.nonTypoTagStdWrap.encapsLines {
-     encapsTagList = div,p
-     remapTag.DIV = P
-     wrapNonWrappedLines = <p style="margin: 0 0 0;">|</p>
+       encapsTagList = div,p
+       remapTag.DIV = P
+       wrapNonWrappedLines = <p style="margin: 0 0 0;">|</p>
 
-     # Forcing these attributes onto the encapsulation-tags if any
-     addAttributes.P {
-       style=margin: 0 0 0;
-     }
-     innerStdWrap_all.ifEmpty = &nbsp;
+       # Forcing these attributes onto the encapsulation-tags if any
+       addAttributes.P {
+           style=margin: 0 0 0;
+       }
+       innerStdWrap_all.ifEmpty = &nbsp;
    }
    # Finally removing the <br>-tag after the content...
    tt_content.text.20.wrap >
 
 This is an example of how to wrap traditional tt\_content bodytext
-with <p> tags, setting the line-distances to regular space like that
-generated by a <br> tag, but staying compatible with the RTE features
+with :html:`<p>` tags, setting the line-distances to regular space like that
+generated by a :html:`<br>` tag, but staying compatible with the RTE features
 such as assigning classes and alignment to paragraphs.
-

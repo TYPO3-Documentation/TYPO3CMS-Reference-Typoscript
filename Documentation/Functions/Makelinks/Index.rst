@@ -3,8 +3,9 @@
 
 .. _makelinks:
 
+=========
 makelinks
-^^^^^^^^^
+=========
 
 makelinks substitutes all appearances of web addresses or mail links
 with a real link-tag. Web addresses and mail links must be contained in
@@ -17,13 +18,18 @@ the text in the following form::
 
 .. ### BEGIN~OF~TABLE ###
 
+.. _makelinks-http-extTarget:
+
+http.extTarget
+==============
+
 .. container:: table-row
 
    Property
          http.extTarget
 
    Data type
-         target
+         :ref:`data-type-target`
 
    Description
          The target of the link.
@@ -31,6 +37,10 @@ the text in the following form::
    Default
          \_top
 
+.. _makelinks-http-wrap:
+
+http.wrap
+=========
 
 .. container:: table-row
 
@@ -38,11 +48,15 @@ the text in the following form::
          http.wrap
 
    Data type
-         wrap /:ref:`stdWrap <stdwrap>`
+         :ref:`data-type-wrap` / :ref:`stdwrap`
 
    Description
          Wrap around the link.
 
+.. _makelinks-http-ATagBeforeWrap:
+
+http.ATagBeforeWrap
+===================
 
 .. container:: table-row
 
@@ -50,15 +64,19 @@ the text in the following form::
          http.ATagBeforeWrap
 
    Data type
-         boolean
+         :ref:`data-type-boolean`
 
    Description
-         If set, the link is first wrapped with *http.wrap* and then the
-         <A>-tag.
+         If set, the link is first wrapped with :ts:`http.wrap` and then the
+         :html:`<a>`-tag.
 
    Default
          0
 
+.. _makelinks-http-keep:
+
+http.keep
+=========
 
 .. container:: table-row
 
@@ -81,6 +99,10 @@ the text in the following form::
             http.keep = "scheme,path":        http://www.example.com/test/doc.php
             http.keep = "scheme,path,query":  http://www.example.com/test/doc.php?id=3
 
+.. _makelinks-http-ATagParams:
+
+http.ATagParams
+===============
 
 .. container:: table-row
 
@@ -88,7 +110,7 @@ the text in the following form::
          http.ATagParams
 
    Data type
-         <A>-params /:ref:`stdWrap <stdwrap>`
+         <A>-params / :ref:`stdwrap`
 
    Description
          Additional parameters
@@ -97,6 +119,10 @@ the text in the following form::
 
             http.ATagParams = class="board"
 
+.. _makelinks-mailto.wrap:
+
+mailto.wrap
+===========
 
 .. container:: table-row
 
@@ -104,11 +130,15 @@ the text in the following form::
          mailto.wrap
 
    Data type
-         wrap /:ref:`stdWrap <stdwrap>`
+         :ref:`data-type-wrap` / :ref:`stdwrap`
 
    Description
          Wrap around the link.
 
+.. _makelinks-mailto.ATagBeforeWrap:
+
+mailto.ATagBeforeWrap
+=====================
 
 .. container:: table-row
 
@@ -116,15 +146,19 @@ the text in the following form::
          mailto.ATagBeforeWrap
 
    Data type
-         boolean
+         :ref:`data-type-boolean`
 
    Description
-         If set, the link is first wrapped with mailto *.wrap* and then the
-         <A>-tag.
+         If set, the link is first wrapped with mailto :ts:`wrap` and then the
+         :html:`<a>`-tag.
 
    Default
          0
 
+.. _makelinks-mailto.ATagParams:
+
+mailto.ATagParams
+=================
 
 .. container:: table-row
 
@@ -132,7 +166,7 @@ the text in the following form::
          mailto.ATagParams
 
    Data type
-         <A>-params /:ref:`stdWrap <stdwrap>`
+         <A>-params / :ref:`stdwrap`
 
    Description
          Additional parameters
@@ -146,4 +180,3 @@ the text in the following form::
 
 
 [tsref:->makelinks]
-

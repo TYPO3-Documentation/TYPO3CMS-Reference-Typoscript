@@ -12,7 +12,7 @@ Returns an image tag with the image file defined in the property
 Defined as PHP function cImage() in
 typo3/sysext/frontend/Classes/ContentObject/ContentObjectRenderer.php.
 
-The array $GLOBALS['TSFE']->lastImageInfo is set with the info-array
+The array :php:`$GLOBALS['TSFE']->lastImageInfo` is set with the info-array
 of the returning image (if any) and contains width, height and so on:
 
 =============================  =============================================

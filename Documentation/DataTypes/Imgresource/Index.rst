@@ -3,6 +3,7 @@
 
 .. _data-type-imgresource:
 
+===========
 imgResource
 ===========
 
@@ -15,15 +16,17 @@ imgResource
          Here "file" is an imgResource::
 
             10 = IMAGE
-            10.file = fileadmin/toplogo.gif
-            10.file.width = 200
+            10 {
+                file = fileadmin/toplogo.gif
+                file.width = 200
+            }
 
          GIFBUILDER::
 
             10 = IMAGE
             10.file = GIFBUILDER
             10.file {
-               # GIFBUILDER properties here...
+                 # GIFBUILDER properties here...
             }
 
    Comment
@@ -31,10 +34,7 @@ imgResource
             and the object reference for imgResource below).
 
             Filetypes can be anything among the allowed types defined in the
-            configuration variable $TYPO3\_CONF\_VARS['GFX']['imagefile\_ext'].
+            configuration variable :php:`$GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext']`.
             Standard is pdf, gif, jpg, jpeg, tif, bmp, ai, pcx, tga, png.
 
-         #. A GIFBUILDER object. See the object reference for GIFBUILDER below.
-
-
-
+         #. A GIFBUILDER object. See the object reference for :ref:`gifbuilder` below.

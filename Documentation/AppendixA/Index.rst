@@ -16,7 +16,7 @@ This section should give you some pointers on what you can process in
 your script and which functions and variables you can access.
 
 Your script is included inside the class "ContentObjectRenderer" in the
-typo3/sysext/frontend/Classes/ContentObject/ContentObjectRenderer.php
+:file:`typo3/sysext/frontend/Classes/ContentObject/ContentObjectRenderer.php`
 script. Thereby your file is a part of this object
 (ContentObjectRenderer). This is why you must return all
 content in the variable "$content" and any TypoScript configuration is
@@ -51,7 +51,7 @@ White spaces
 """"""""""""
 
 Because nothing is sent off to the browser before everything is
-rendered and returned to \\TYPO3\\CMS\\Frontend\\Http\\RequestHandler
+rendered and returned to :php:`\TYPO3\CMS\Frontend\Http\RequestHandler`
 (which originally set off the rendering process), you must ensure
 that there's no whitespace before and after your <?php...?> tags
 in your include or library scripts!
@@ -62,22 +62,22 @@ in your include or library scripts!
 $GLOBALS['TSFE']->set\_no\_cache()
 """"""""""""""""""""""""""""""""""
 
-Call the function $GLOBALS['TSFE']->set\_no\_cache(), if you want to
+Call the function :php:`$GLOBALS['TSFE']->set_no_cache()`, if you want to
 disable caching of the page. Call this during development only! And
 call it, if the content you create may not be cached.
 
 **Note:** If you make a syntax error in your script that keeps PHP
-from executing it, then the $GLOBALS['TSFE']->set\_no\_cache()
+from executing it, then the :php:`$GLOBALS['TSFE']->set_no_cache()`
 function is not executed and the page *is* cached! So in these
 situations, correct the error, clear the page-cache and try again.
-This is true only for USER and not for USER\_INT, which is
+This is true only for :ts:`USER` and not for :ts:`USER_INT`, which is
 rendered *after* the cached page!
 
 
 Example:
 ~~~~~~~~
 
-::
+.. code-block:: php
 
    $GLOBALS['TSFE']->set_no_cache();
 
@@ -93,7 +93,7 @@ Gets a content object from the $conf array.
 Example:
 ~~~~~~~~
 
-::
+.. code-block:: php
 
    $content = $this->cObjGetSingle($conf['image'], $conf['image.']);
 
@@ -113,7 +113,7 @@ process it according to the configuration of the array "properties".
 Example:
 ~~~~~~~~
 
-::
+.. code-block:: php
 
    $content = $this->stdWrap($content, $conf['stdWrap.']);
 
@@ -128,11 +128,11 @@ Internal variables in the main frontend object, TSFE
 
 There are some variables in the global object, TSFE (TypoScript
 Frontend), you might need to know about. These ARE ALL READ-ONLY!
-(Read: Don't change them!) See the class TypoScriptFrontendController
+(Read: Don't change them!) See the class :php:`TypoScriptFrontendController`
 for the full descriptions.
 
 If you for instance want to access the variable "id", you can do so by
-writing: $GLOBALS['TSFE']->id
+writing: :php:`$GLOBALS['TSFE']->id`
 
 .. ### BEGIN~OF~TABLE ###
 
@@ -183,7 +183,7 @@ writing: $GLOBALS['TSFE']->id
    Description
          The current front-end user.
 
-         User record in $GLOBALS['TSFE']->fe\_user->user, if any login.
+         User record in :php:`$GLOBALS['TSFE']->fe_user->user`, if any login.
 
 
 .. container:: table-row
@@ -211,7 +211,7 @@ writing: $GLOBALS['TSFE']->id
 
    Description
          The rootLine (all the way to tree root, not only the current site!).
-         Current site root line is in $GLOBALS['TSFE']->tmpl->rootLine
+         Current site root line is in :php:`$GLOBALS['TSFE']->tmpl->rootLine`
 
 
 .. container:: table-row
@@ -224,7 +224,7 @@ writing: $GLOBALS['TSFE']->id
 
    Description
          The object with page functions (object) See
-         typo3/sysext/frontend/Classes/Page/PageRepository.php.
+         :file:`typo3/sysext/frontend/Classes/Page/PageRepository.php`.
 
 
 .. container:: table-row

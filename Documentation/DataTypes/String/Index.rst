@@ -5,6 +5,7 @@
 .. _data-type-str:
 .. _data-type-value:
 
+======
 string
 ======
 
@@ -21,6 +22,3 @@ string
 
          (sometimes used generally though another type would have been more
          appropriate, like "align")
-
-
-

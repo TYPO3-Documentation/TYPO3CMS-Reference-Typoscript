@@ -3,6 +3,7 @@
 
 .. _data-type-html-color:
 
+==========
 HTML-color
 ==========
 
@@ -41,6 +42,3 @@ HTML-color
          Teal              #008080
          Aqua              #00FFFF
          =============  ================
-
-
-

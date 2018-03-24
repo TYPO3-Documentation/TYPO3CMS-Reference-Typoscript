@@ -3,6 +3,7 @@
 
 .. _data-type-strftime-conf:
 
+=============
 strftime-conf
 =============
 
@@ -62,6 +63,3 @@ strftime-conf
          %Z   time zone or name or abbreviation
          %%   a literal \`%' character
          ==== ==========================================================
-
-
-

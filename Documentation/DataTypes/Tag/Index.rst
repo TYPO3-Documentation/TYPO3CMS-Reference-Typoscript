@@ -3,6 +3,7 @@
 
 .. _data-type-tag:
 
+=====
 <tag>
 =====
 
@@ -18,6 +19,3 @@
 
    Comment
          An HTML tag.
-
-
-

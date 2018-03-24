@@ -3,6 +3,7 @@
 
 .. _data-type-case:
 
+====
 case
 ====
 
