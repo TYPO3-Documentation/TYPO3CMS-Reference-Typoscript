@@ -3,10 +3,8 @@
 
 .. _data-type-frameobj:
 
+========
 frameObj
 ========
 
 FRAMESET / FRAME
-
-
-

@@ -3,6 +3,7 @@
 
 .. _data-type-date-conf:
 
+=========
 date-conf
 =========
 
@@ -40,5 +41,3 @@ date-conf
          y   year, numeric, 2 digits, like "13"
          z   day of the year, numeric, like "299"
          === ===========================================================
-
-

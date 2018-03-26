@@ -3,6 +3,7 @@
 
 .. _data-type-wrap:
 
+====
 wrap
 ====
 
@@ -26,5 +27,3 @@ wrap
 
          Spaces between the wrap-parts and the divider ("|") are trimmed off
          from each part of the wrap.
-
-

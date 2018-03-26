@@ -3,6 +3,7 @@
 
 .. _data-type-margins:
 
+=======
 margins
 =======
 
@@ -21,6 +22,3 @@ margins
          l,t,r,b
 
          left, top, right, bottom
-
-
-

@@ -5,6 +5,7 @@
 .. _data-type-posint:
 .. _data-type-intplus:
 
+================
 positive integer
 ================
 
@@ -18,6 +19,3 @@ positive integer
 
    Comment
          Positive integer
-
-
-

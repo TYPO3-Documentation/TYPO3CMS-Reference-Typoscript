@@ -3,6 +3,7 @@
 
 .. _data-type-target:
 
+======
 target
 ======
 
@@ -23,5 +24,3 @@ target
 
          This is normally the same value as the name of the root-level object
          that defines the frame.
-
-

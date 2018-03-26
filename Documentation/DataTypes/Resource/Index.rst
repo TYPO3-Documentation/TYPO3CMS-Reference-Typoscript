@@ -3,6 +3,7 @@
 
 .. _data-type-resource:
 
+========
 resource
 ========
 
@@ -20,6 +21,3 @@ resource
          If the value contains a "/", it is expected to be a reference
          (absolute or relative) to a file in the file system. There is no
          support for wildcard characters in the name of the reference.
-
-
-

@@ -3,22 +3,28 @@
 
 .. _numberformat:
 
+============
 numberFormat
-^^^^^^^^^^^^
+============
 
 With this property you can format a float value and display it as you
-want, for example as a price. It is a wrapper for the number\_format()
+want, for example as a price. It is a wrapper for the :php:`number_format()`
 function of PHP.
 
 You can define how many decimals you want and which separators you
 want for decimals and thousands.
 
 Since the properties are finally used by the PHP function
-number\_format(), you need to make sure that they are valid parameters
+:php:`number_format()`, you need to make sure that they are valid parameters
 for that function. Consult the PHP manual, if unsure.
 
 
 .. ### BEGIN~OF~TABLE ###
+
+.. _numberformat-decimals:
+
+decimals
+========
 
 .. container:: table-row
 
@@ -26,7 +32,7 @@ for that function. Consult the PHP manual, if unsure.
          decimals
 
    Data type
-         integer /:ref:`stdWrap <stdwrap>`
+         :ref:`data-type-integer` / :ref:`stdwrap`
 
    Description
          Number of decimals the formatted number will have. Defaults to 0, so
@@ -36,6 +42,10 @@ for that function. Consult the PHP manual, if unsure.
    Default
          0
 
+.. _numberformat-dec\_point:
+
+dec\_point
+==========
 
 .. container:: table-row
 
@@ -43,7 +53,7 @@ for that function. Consult the PHP manual, if unsure.
          dec\_point
 
    Data type
-         string /:ref:`stdWrap <stdwrap>`
+         :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
 
    Description
          Character that divides the decimals from the rest of the number.
@@ -52,6 +62,10 @@ for that function. Consult the PHP manual, if unsure.
    Default
          .
 
+.. _numberformat-thousands\_sep:
+
+thousands\_sep
+==============
 
 .. container:: table-row
 
@@ -59,7 +73,7 @@ for that function. Consult the PHP manual, if unsure.
          thousands\_sep
 
    Data type
-         string /:ref:`stdWrap <stdwrap>`
+         :ref:`data-type-string` / :ref:`stdwrap`
 
    Description
          Character that divides the thousands of the number. Defaults to ",";
@@ -99,18 +113,17 @@ Examples:
 
    lib.carViews = CONTENT
    lib.carViews {
-     table = tx_mycarext_car
-     select.pidInList = 42
-     renderObj = TEXT
-     renderObj {
-       stdWrap.field = views
-       # By default use 3 decimals or
-       # use the number given by the Get/Post variable precisionLevel, if set.
-       stdWrap.numberFormat.decimals = 3
-       stdWrap.numberFormat.decimals.override.data = GP:precisionLevel
-       stdWrap.numberFormat.dec_point = ,
-       stdWrap.numberFormat.thousands_sep = .
-     }
+       table = tx_mycarext_car
+       select.pidInList = 42
+       renderObj = TEXT
+       renderObj {
+           stdWrap.field = views
+           # By default use 3 decimals or
+           # use the number given by the Get/Post variable precisionLevel, if set.
+           stdWrap.numberFormat.decimals = 3
+           stdWrap.numberFormat.decimals.override.data = GP:precisionLevel
+           stdWrap.numberFormat.dec_point = ,
+           stdWrap.numberFormat.thousands_sep = .
+       }
    }
    # Could result in something like "9.586,007".
-

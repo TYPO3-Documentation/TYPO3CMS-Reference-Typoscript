@@ -3,17 +3,23 @@
 
 .. _split:
 
+=====
 split
-^^^^^
+=====
 
 This object is used to split the input by a character and then parse
 the result onto some functions.
 
 For each iteration the split index starting with 0 (zero) is stored in
-the register key SPLIT\_COUNT.
+the register key :ts:`SPLIT_COUNT`.
 
 
 .. ### BEGIN~OF~TABLE ###
+
+.. _split-token:
+
+token
+=====
 
 .. container:: table-row
 
@@ -21,11 +27,15 @@ the register key SPLIT\_COUNT.
          token
 
    Data type
-         string /:ref:`stdWrap <stdwrap>`
+         :ref:`data-type-string` / :ref:`stdwrap`
 
    Description
          String or character (token) used to split the value.
 
+.. _split-max:
+
+max
+===
 
 .. container:: table-row
 
@@ -33,11 +43,15 @@ the register key SPLIT\_COUNT.
          max
 
    Data type
-         integer /:ref:`stdWrap <stdwrap>`
+         :ref:`data-type-integer` / :ref:`stdwrap`
 
    Description
          Maximum number of splits.
 
+.. _split-min:
+
+min
+===
 
 .. container:: table-row
 
@@ -45,11 +59,15 @@ the register key SPLIT\_COUNT.
          min
 
    Data type
-         integer /:ref:`stdWrap <stdwrap>`
+         :ref:`data-type-integer` / :ref:`stdwrap`
 
    Description
          Minimum number of splits.
 
+.. _split-returnkey:
+
+returnKey
+=========
 
 .. container:: table-row
 
@@ -57,13 +75,17 @@ the register key SPLIT\_COUNT.
          returnKey
 
    Data type
-         integer /:ref:`stdWrap <stdwrap>`
+         :ref:`data-type-integer` / :ref:`stdwrap`
 
    Description
          Instead of parsing the split result, just return the element of the
          index with this number immediately and stop processing of the split
          function.
 
+.. _split-returncount:
+
+returnCount
+===========
 
 .. container:: table-row
 
@@ -71,7 +93,7 @@ the register key SPLIT\_COUNT.
          returnCount
 
    Data type
-         boolean /:ref:`stdWrap <stdwrap>`
+         :ref:`data-type-bool` / :ref:`stdwrap`
 
    Description
          Counts all elements resulting from the split, returns their number
@@ -87,6 +109,10 @@ the register key SPLIT\_COUNT.
                 split.returnCount = 1
             }
 
+.. _split-cobjnum:
+
+cObjNum
+=======
 
 .. container:: table-row
 
@@ -94,12 +120,16 @@ the register key SPLIT\_COUNT.
          cObjNum
 
    Data type
-         *cObjNum* +optionSplit /:ref:`stdWrap <stdwrap>`
+         *cObjNum* +optionSplit / :ref:`stdwrap`
 
    Description
          This is a pointer the array of this object ("1,2,3,4"), that should
          treat the items, resulting from the split.
 
+.. _split-1,2,3,4:
+
+1,2,3,4
+=======
 
 .. container:: table-row
 
@@ -107,13 +137,13 @@ the register key SPLIT\_COUNT.
          1,2,3,4
 
    Data type
-         ->CARRAY /:ref:`stdWrap <stdwrap>`
+         ->CARRAY / :ref:`stdwrap`
 
    Description
          The object that should treat the value.
 
          **Note:** The "current"-value is set to the value of current item,
-         when the objects are called. See "stdWrap" / current.
+         when the objects are called. See :ref:`stdwrap` / current.
 
          **Example for stdWrap:** ::
 
@@ -123,11 +153,15 @@ the register key SPLIT\_COUNT.
          **Example for CARRAY:** ::
 
             1 {
-              10 = TEXT
-              10.stdWrap.current = 1
-              10.stdWrap.wrap = <b> | </b>
+                10 = TEXT
+                10.stdWrap.current = 1
+                10.stdWrap.wrap = <b> | </b>
             }
 
+.. _split-wrap:
+
+wrap
+====
 
 .. container:: table-row
 
@@ -135,7 +169,7 @@ the register key SPLIT\_COUNT.
          wrap
 
    Data type
-         wrap +optionSplit /:ref:`stdWrap <stdwrap>`
+         wrap +optionSplit / :ref:`stdwrap`
 
    Description
          Defines a wrap for each item.
@@ -149,23 +183,27 @@ the register key SPLIT\_COUNT.
 .. _split-examples:
 
 Example:
-""""""""
+========
 
 This is an example of TypoScript code that imports the content of
-field "bodytext" from the $cObj->data-array (ln 2). The content is
+field "bodytext" from the :php:`$cObj->data-array` (ln 2). The content is
 split by the line break character (ln 4). The items should all be
-treated with a stdWrap (ln 5) which imports the value of the item (ln
+treated with a :ts:`stdWrap` (ln 5) which imports the value of the item (ln
 6). This value is wrapped in a table row where the first column is a
 bullet-gif (ln 7). Finally the whole thing is wrapped in the proper
-table-tags (ln 9). ::
+table-tags (ln 9). :
 
-   1         20 = TEXT
-   2         20.stdWrap.field = bodytext
-   3         20.stdWrap.split {
-   4           token.char = 10
-   5           cObjNum = 1
-   6           1.current = 1
-   7           1.wrap = <tr><td><img src="dot.gif"></td><td> | </td></tr>
-   8         }
-   9         20.stdWrap.wrap = <table style="width: 368px;"> | </table><br>
+.. code-block:: typoscript
+   :linenos:
 
+   20 = TEXT
+   20.stdWrap {
+       field = bodytext
+       split {
+           token.char = 10
+           cObjNum = 1
+           1.current = 1
+           1.wrap = <tr><td><img src="dot.gif"></td><td> | </td></tr>
+       }
+       stdWrap.wrap = <table style="width: 368px;"> | </table><br>
+   }

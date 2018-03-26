@@ -3,6 +3,7 @@
 
 .. _data-type-imageextension:
 
+==============
 imageExtension
 ==============
 
@@ -18,12 +19,9 @@ imageExtension
 
    Comment
          Image extensions can be anything among the allowed types defined in
-         the global variable $TYPO3\_CONF\_VARS['GFX']['imagefile\_ext'].
+         the global variable :php:`$GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext']`.
          Standard is pdf, gif, jpg, jpeg, tif, bmp, ai, pcx, tga, png.
 
          The value **"web"** is special. This will just ensure that an image is
          converted to a web image format (gif or jpg) if it happens not to be
          already!
-
-
-

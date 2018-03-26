@@ -3,6 +3,7 @@
 
 .. _data-type-path:
 
+====
 path
 ====
 
@@ -12,10 +13,7 @@ path
          path
 
    Examples
-         *fileadmin/stuff/*
+         :file:`fileadmin/stuff/`
 
    Comment
          Path relative to the root directory from which we operate.
-
-
-

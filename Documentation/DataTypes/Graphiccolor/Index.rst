@@ -3,6 +3,7 @@
 
 .. _data-type-graphiccolor:
 
+============
 GraphicColor
 ============
 
@@ -38,6 +39,3 @@ GraphicColor
          where modifier can be an integer which is added/subtracted to the
          three RGB-channels or a floating point with an "\*" before, which will
          then multiply the values with that factor.
-
-
-

@@ -3,6 +3,7 @@
 
 .. _condition-reference:
 
+===================
 Condition reference
 ===================
 
@@ -10,7 +11,7 @@ Condition reference
 .. _condition-language:
 
 language
-""""""""
+========
 
 
 Syntax:
@@ -22,14 +23,14 @@ Syntax:
 
 
 Comparison:
-'''''''''''
+~~~~~~~~~~~
 
 Comparison with the website visitor's preferred languages.
 
 The values must be a straight match with the value of
-getenv('HTTP\_ACCEPT\_LANGUAGE') from PHP. Alternatively, if the value
+:php:`getenv('HTTP_ACCEPT_LANGUAGE')` from PHP. Alternatively, if the value
 is wrapped in "\*" (e.g. "\*en-us\*") then it will split all languages
-found in the HTTP\_ACCEPT\_LANGUAGE string and try to match the value
+found in the :php:`HTTP_ACCEPT_LANGUAGE` string and try to match the value
 with any of those parts of the string. Such a string normally looks
 like "de,en-us;q=0.7,en;q=0.3" and "\*en-us\*" would match with this
 string.
@@ -38,7 +39,7 @@ string.
 .. _condition-ip:
 
 IP
-""
+==
 
 
 Syntax:
@@ -50,11 +51,11 @@ Syntax:
 
 
 Comparison:
-'''''''''''
+~~~~~~~~~~~
 
 Comparison with the IP address, which the website visitor uses.
 
-The values are compared with getenv('REMOTE\_ADDR') from PHP.
+The values are compared with :php`getenv('REMOTE_ADDR')` from PHP.
 
 You may include "\*" instead of one of the parts in values. You may
 also list the first one, two or three parts and only they will be
@@ -63,7 +64,7 @@ tested.
 The IP condition also supports the special keyword "devIP". If - instead
 of using an actual IP address or range - you use this keyword, the IP
 address, which the visitor uses, will be compared to
-:php:`$TYPO3_CONF_VARS['SYS']['devIPmask']` as set in the Install Tool.
+:php:`$GLOBALS['TYPO3_CONF_VARS']['SYS']['devIPmask']` as set in the Install Tool.
 
 Examples:
 ~~~~~~~~~
@@ -82,7 +83,7 @@ These examples will match any IP address ending with "123" or being
    [IP = *.*.*.123][IP = 192.168.1.34]
 
 This example will match the IP address or range defined in
-:php:`$TYPO3_CONF_VARS['SYS']['devIPmask']`::
+:php:`$GLOBALS['TYPO3_CONF_VARS']['SYS']['devIPmask']`::
 
    [IP = devIP]
 
@@ -90,7 +91,7 @@ This example will match the IP address or range defined in
 .. _condition-hostname:
 
 hostname
-""""""""
+========
 
 
 Syntax:
@@ -102,12 +103,12 @@ Syntax:
 
 
 Comparison:
-'''''''''''
+~~~~~~~~~~~
 
 Comparison with the hostname, which the website visitor uses.
 
 The values are compared to the fully qualified hostname, which is
-retrieved by PHP based on getenv('REMOTE\_HOST').
+retrieved by PHP based on :php:`getenv('REMOTE_HOST')`.
 
 Value is comma-list of domain names to match with. \*-wildcard allowed
 but cannot be part of a string, so it must match the full host name
@@ -117,7 +118,7 @@ but cannot be part of a string, so it must match the full host name
 .. _condition-applicationcontext:
 
 applicationContext
-""""""""""""""""""
+==================
 
 
 Syntax:
@@ -129,7 +130,7 @@ Syntax:
 
 
 Comparison:
-'''''''''''
+~~~~~~~~~~~
 
 Comparison with the application context, in which TYPO3 is running.
 
@@ -164,7 +165,7 @@ and ending with one digit, for example "Production/Staging/Server3"::
 .. _condition-hour:
 
 hour
-""""
+====
 
 
 Syntax:
@@ -180,7 +181,7 @@ hour.
 
 
 Comparison:
-'''''''''''
+~~~~~~~~~~~
 
 Possible values are 0 to 23 (24-hours-format). The values in floating
 point are compared with the current hour of the server time.
@@ -259,7 +260,7 @@ In contrast a condition matching for 8 until 16 o'clock would be::
 .. _condition-minute:
 
 minute
-""""""
+======
 
 See "Hour" above. Uses the same syntax!
 
@@ -273,7 +274,7 @@ Syntax:
 
 
 Comparison:
-'''''''''''
+~~~~~~~~~~~
 
 Minute of hour, possible values are 0-59.
 
@@ -284,7 +285,7 @@ hour.
 .. _condition-month:
 
 month
-"""""
+=====
 
 See "Hour" above. Uses the same syntax!
 
@@ -298,7 +299,7 @@ Syntax:
 
 
 Comparison:
-'''''''''''
+~~~~~~~~~~~
 
 Month, from January being 1 until December being 12.
 
@@ -309,7 +310,7 @@ hour.
 .. _condition-year:
 
 year
-""""
+====
 
 See "Hour" above. Uses the same syntax!For further information look at
 the date() function in the PHP manual, format string Y.
@@ -324,7 +325,7 @@ Syntax:
 
 
 Comparison:
-'''''''''''
+~~~~~~~~~~~
 
 Year, as a 4-digit number.
 
@@ -335,7 +336,7 @@ hour.
 .. _condition-dayofweek:
 
 dayofweek
-"""""""""
+=========
 
 See "Hour" above. Uses the same syntax!
 
@@ -349,7 +350,7 @@ Syntax:
 
 
 Comparison:
-'''''''''''
+~~~~~~~~~~~
 
 Day of week, starting with Sunday being 0 until Saturday being 6.
 
@@ -360,7 +361,7 @@ hour.
 .. _condition-dayofmonth:
 
 dayofmonth
-""""""""""
+==========
 
 See "Hour" above. Uses the same syntax!
 
@@ -374,7 +375,7 @@ Syntax:
 
 
 Comparison:
-'''''''''''
+~~~~~~~~~~~
 
 Day of month, possible values are 1-31.
 
@@ -385,10 +386,10 @@ hour.
 .. _condition-dayofyear:
 
 dayofyear
-"""""""""
+=========
 
-See "Hour" above. Uses the same syntax!For further information look at
-the date() function in the PHP manual, format string z.
+See "Hour" above. Uses the same syntax! For further information look at
+the :php`date()` function in the PHP manual, format string z.
 
 
 Syntax:
@@ -400,7 +401,7 @@ Syntax:
 
 
 Comparison:
-'''''''''''
+~~~~~~~~~~~
 
 Day of year, 0-364 (or 365 in leap years). That this condition begins
 with 0 for the first day of the year means that e.g. [dayofyear =
@@ -413,7 +414,7 @@ hour.
 .. _condition-usergroup:
 
 usergroup
-"""""""""
+=========
 
 
 Syntax:
@@ -425,7 +426,7 @@ Syntax:
 
 
 Comparison:
-'''''''''''
+~~~~~~~~~~~
 
 This matches on the uid of a usergroup of a logged in frontend user.
 
@@ -452,7 +453,7 @@ user groups with uid's 1 and/or 2::
 .. _condition-loginuser:
 
 loginUser
-"""""""""
+=========
 
 
 Syntax:
@@ -464,7 +465,7 @@ Syntax:
 
 
 Comparison:
-'''''''''''
+~~~~~~~~~~~
 
 Matches on the uid of a logged in frontend user. Works like
 'usergroup' above including the \* wildcard to select ANY user.
@@ -492,7 +493,7 @@ This matches when no FE user is logged in::
 .. _condition-page:
 
 page
-""""
+====
 
 
 Syntax:
@@ -504,7 +505,7 @@ Syntax:
 
 
 Comparison:
-'''''''''''
+~~~~~~~~~~~
 
 This condition checks values of the current page record. While you can
 achieve the same with TSFE:[field] conditions in the frontend, this
@@ -522,7 +523,7 @@ This condition matches, if the layout field is set to 1::
 .. _condition-treelevel:
 
 treeLevel
-"""""""""
+=========
 
 
 Syntax:
@@ -534,7 +535,7 @@ Syntax:
 
 
 Comparison:
-'''''''''''
+~~~~~~~~~~~
 
 This checks if the last element of the rootLine is at a level
 corresponding to one of the figures in "treeLevel". Level = 0 is the
@@ -553,7 +554,7 @@ or on level 2 ::
 .. _condition-pidinrootline:
 
 PIDinRootline
-"""""""""""""
+=============
 
 
 Syntax:
@@ -565,7 +566,7 @@ Syntax:
 
 
 Comparison:
-'''''''''''
+~~~~~~~~~~~
 
 This checks if one of the figures in "treeLevel" is a PID (pages-uid)
 in the rootline.
@@ -583,7 +584,7 @@ This condition matches, if the page viewed is or is a subpage to page
 .. _condition-pidupinrootline:
 
 PIDupinRootline
-"""""""""""""""
+===============
 
 
 Syntax:
@@ -595,7 +596,7 @@ Syntax:
 
 
 Comparison:
-'''''''''''
+~~~~~~~~~~~
 
 Does the same as PIDinRootline, except the current page-uid is excluded
 from check.
@@ -604,7 +605,7 @@ from check.
 .. _condition-compatversion:
 
 compatVersion
-"""""""""""""
+=============
 
 
 Syntax:
@@ -616,7 +617,7 @@ Syntax:
 
 
 Comparison:
-'''''''''''
+~~~~~~~~~~~
 
 Comparison with the compatibility version of the TYPO3 installation.
 
@@ -634,7 +635,7 @@ of TYPO3.
 .. _condition-globalvar:
 
 globalVar
-"""""""""
+=========
 
 
 Syntax:
@@ -646,7 +647,7 @@ Syntax:
 
 
 Comparison:
-'''''''''''
+~~~~~~~~~~~
 
 The values in floating point are compared to the global variables
 "var1", "var2" ... from above.
@@ -733,7 +734,7 @@ This will only check GET parameters::
 
    [globalVar = _GET|tx_myext_pi1|showUid > 0]
 
-If the constant {$constant\_to\_turnSomethingOn} is "1" then this
+If the constant :ts:`{$constant_to_turnSomethingOn}` is "1" then this
 matches::
 
    [globalVar = LIT:1 = {$constant_to_turnSomethingOn}]
@@ -750,7 +751,7 @@ This will match only with the backend user with UID 13::
 .. _condition-globalstring:
 
 globalString
-""""""""""""
+============
 
 
 Syntax:
@@ -762,7 +763,7 @@ Syntax:
 
 
 Comparison:
-'''''''''''
+~~~~~~~~~~~
 
 This is a direct match on global strings.
 
@@ -773,7 +774,7 @@ style regular expression (must be wrapped in "/") to the value.
 Examples:
 ~~~~~~~~~
 
-If the HTTP\_HOST is "www.typo3.org" this will match with::
+If the :php:`HTTP_HOST` is "www.typo3.org" this will match with::
 
    [globalString = IENV:HTTP_HOST = www.typo3.org]
 
@@ -781,10 +782,10 @@ This will also match with it::
 
    [globalString = IENV:HTTP_HOST = *typo3.org]
 
-... but this will also match with an HTTP\_HOST like this:
+... but this will also match with an :php:`HTTP_HOST` like this:
 "demo.typo3.org"
 
-If HTTP\_REFERER is set to an empty value, this will match with it::
+If :php:`HTTP_REFERER` is set to an empty value, this will match with it::
 
    [globalString = IENV:HTTP_REFERER = /^$/]
 
@@ -794,7 +795,7 @@ In contrast this will match with a non-empty value::
 
 
 Important note on globalVar and globalString
-''''''''''''''''''''''''''''''''''''''''''''
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 You can use values from global arrays and objects by dividing the
 variable name with a "\|" (vertical line).
@@ -803,16 +804,16 @@ variable name with a "\|" (vertical line).
 Examples:
 ~~~~~~~~~
 
-The global variable $HTTP\_POST\_VARS['key']['levels'] would be
+The global variable :php:`$HTTP_POST_VARS['key']['levels']` would be
 retrieved by "HTTP\_POST\_VARS\|key\|levels".
 
 Also note that it's recommended to program your scripts in compliance
-with the php.ini-optimized settings. Please see that file (from your
+with the :file:`php.ini`-optimized settings. Please see that file (from your
 distribution) for details.
 
-Caring about this means that you would get values like HTTP\_HOST by
-getenv() and you would retrieve GET/POST values with
-TYPO3\CMS\Core\Utility\GeneralUtility::\_GP().
+Caring about this means that you would get values like :php:`HTTP_HOST` by
+:php:`getenv()` and you would retrieve GET/POST values with
+:php:`\TYPO3\CMS\Core\Utility\GeneralUtility::_GP()`.
 Finally a lot of values from the TSFE object are
 useful. In order to get those values for comparison with "globalVar"
 and "globalString" conditions, you prefix that variable's name with
@@ -824,9 +825,9 @@ returned as the value (without being divided by "\|" or anything)
 **Note:** Using the "IENV:" prefix is highly recommended to get
 server/environment variables which are system-independent. Basically
 this will get the value using
-TYPO3\CMS\Core\Utility\GeneralUtility::getIndpEnv().
+:php:`TYPO3\CMS\Core\Utility\GeneralUtility::getIndpEnv()`.
 With "ENV:" you get the raw output from
-getenv() which is **not** always the same on all systems!
+:php:`getenv()` which is **not** always the same on all systems!
 
 
 Examples:
@@ -844,7 +845,7 @@ This will match with the frontend user whose username is "test"::
 .. _condition-custom-conditions:
 
 Custom Conditions
-"""""""""""""""""
+=================
 
 You can add own TypoScript conditions via a separate API.
 
@@ -860,13 +861,13 @@ Syntax:
 
 
 Comparison:
-'''''''''''
+~~~~~~~~~~~
 
 An extension / package can ship an implementation of the abstract
-class :code:`AbstractCondition`. Via the existing TypoScript condition
+class :php:`AbstractCondition`. Via the existing TypoScript condition
 syntax the class is called by the simple full namespaced class name.
 
-The main function :code:`matchCondition` of this class can then
+The main function :php:`matchCondition` of this class can then
 evaluate any parameters given after the class name. The parameters
 will be given in form of a numeric array, each entry containing the
 strings that are split by the commas, e.g. array('= var1 = value1',
@@ -880,61 +881,61 @@ This example shows how to write own TypoScript conditions and how to
 evaluate their parameters in PHP. With the PHP code following below,
 these three conditions will match:
 
-.. code-block:: typoscript
+::
 
-	[Documentation\Examples\TypoScript\ExampleCondition]
-	    Your TypoScript code here
-	[global]
+    [Documentation\Examples\TypoScript\ExampleCondition]
+        Your TypoScript code here
+    [global]
 
-	[Documentation\Examples\TypoScript\ExampleCondition TYPO3]
-	    Your TypoScript code here
-	[global]
+    [Documentation\Examples\TypoScript\ExampleCondition TYPO3]
+        Your TypoScript code here
+    [global]
 
-	[Documentation\Examples\TypoScript\ExampleCondition = 42]
-	    Your TypoScript code here
-	[global]
+    [Documentation\Examples\TypoScript\ExampleCondition = 42]
+        Your TypoScript code here
+    [global]
 
 
 .. code-block:: php
 
-	<?php
-	namespace Documentation\Examples\TypoScript;
+    <?php
+    namespace Documentation\Examples\TypoScript;
 
-	/**
-	 * Example condition
-	 */
-	class ExampleCondition extends \TYPO3\CMS\Core\Configuration\TypoScript\ConditionMatching\AbstractCondition {
+    use \TYPO3\CMS\Core\Configuration\TypoScript\ConditionMatching\AbstractCondition;
 
-		/**
-		 * Evaluate condition
-		 *
-		 * @param array $conditionParameters
-		 * @return bool
-		 */
-		public function matchCondition(array $conditionParameters) {
-			$result = FALSE;
-			if (empty($conditionParameters)) {
-				$result = TRUE;
-			}
-			if (!empty($conditionParameters) && $conditionParameters[0] === 'TYPO3') {
-				$result = TRUE;
-			}
-			if (!empty($conditionParameters) && substr($conditionParameters[0], 0, 1) === '=') {
-				$conditionParameters[0] = trim(substr($conditionParameters[0], 1));
-				if ($conditionParameters[0] == '42') {
-					$result = TRUE;
-				}
-			}
+    class ExampleCondition extends AbstractCondition
+    {
+        /**
+         * Evaluate condition
+         *
+         * @param array $conditionParameters
+         * @return bool
+         */
+        public function matchCondition(array $conditionParameters)
+        {
+            $result = FALSE;
+            if (empty($conditionParameters)) {
+                $result = TRUE;
+            }
+            if (!empty($conditionParameters) && $conditionParameters[0] === 'TYPO3') {
+                $result = TRUE;
+            }
+            if (!empty($conditionParameters) && substr($conditionParameters[0], 0, 1) === '=') {
+                $conditionParameters[0] = trim(substr($conditionParameters[0], 1));
+                if ($conditionParameters[0] == '42') {
+                    $result = TRUE;
+                }
+            }
 
-			return $result;
-		}
-	}
+            return $result;
+        }
+    }
 
 
 .. _condition-userfunc:
 
 userFunc
-""""""""
+========
 
 
 Syntax:
@@ -946,9 +947,9 @@ Syntax:
 
 
 Comparison:
-'''''''''''
+~~~~~~~~~~~
 
-This calls a user-defined function (above called "user\_function") and
+This calls a user-defined function (above called :php:`user_function`) and
 passes the provided parameters to that function (e.g. the two
 parameters "argument1" and "argument2"). Parameters can be enclosed
 with quotes so that leading and trailing spaces and commas inside a
@@ -969,20 +970,23 @@ It will call the function "user_match" with "checkLocalIP" as first
 argument and "192.168" as second argument. Whether the condition
 returns true or false depends on what that function returns.
 
-Put this function in your AdditionalConfiguration.php file::
+Put this function in your AdditionalConfiguration.php file:
 
-   function user_match($command, $subnet) {
-           switch($command) {
-                   case 'checkLocalIP':
-                           if (strstr(getenv('REMOTE_ADDR'), $subnet)) {
-                                   return TRUE;
-                           }
-                   break;
-                   case 'checkSomethingElse':
-                           // ....
-                   break;
-           }
-           return FALSE;
+.. code-block:: php
+
+   function user_match($command, $subnet)
+   {
+        switch($command) {
+            case 'checkLocalIP':
+                if (strstr(getenv('REMOTE_ADDR'), $subnet)) {
+                    return TRUE;
+                }
+            break;
+            case 'checkSomethingElse':
+                // ....
+            break;
+        }
+        return FALSE;
    }
 
 If the remote address contains "192.168", the condition will return

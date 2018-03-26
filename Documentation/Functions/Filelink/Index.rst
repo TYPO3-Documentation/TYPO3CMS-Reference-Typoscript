@@ -4,6 +4,7 @@
 
 .. _filelink:
 
+========
 filelink
 ========
 
@@ -11,76 +12,84 @@ filelink
    filelink
 
 :aspect:`Description:`
-   Creates a list of file links. Input is a filename specified in :ts:`path`.
-   icon, size and file are rendered in the listed order.
+   Creates a list of file links. Input is a filename specified in
+   :ref:`filelink-path`.
+   :ref:`filelink-icon`, :ref:`filelink-size` and :ref:`filelink-file`
+   are rendered in the listed order.
 
 :aspect:`Overview:`
    ::
 
       1.filelink {
-         altText =
-         ATagBeforeWrap =
-         ATagParams =
-         emptyTitleHandling =
-         file =
-         icon =
-         icon_link =
-         icon_image_ext_list =
-         icon_thumbSize =
-         iconCObject =
-         labelStdWrap =
-         longdescURL =
-         path =
-         removePrependedNumbers =
-         size = =
-         stdWrap =
-         target =
-         # titleText ?
-         titleText =
-         typolinkConfiguration =
-         wrap =
+          altText =
+          ATagBeforeWrap =
+          ATagParams =
+          emptyTitleHandling =
+          file =
+          icon =
+          icon_link =
+          icon_image_ext_list =
+          icon_thumbSize =
+          iconCObject =
+          labelStdWrap =
+          longdescURL =
+          path =
+          removePrependedNumbers =
+          size = =
+          stdWrap =
+          target =
+          # titleText ?
+          titleText =
+          typolinkConfiguration =
+          wrap =
       }
 
+.. _filelink-alttext:
+
 altText
--------
+=======
 
 :aspect:`Property:`
    altText
 
 :aspect:`Data type:`
-   string /:ref:`stdWrap <stdwrap>`
+   :ref:`data-type-string` / :ref:`stdwrap`
 
 :aspect:`Description:`
-   For icons (image made with "iconCObject" must have their own
-   properties). If no alttext is specified, it will use an empty alttext
+   For icons (image made with :ref:`filelink-iconCObject` must have their own properties).
+   If no :ref:`filelink-altText` is specified, it will use an empty :ref:`filelink-altText`.
 
 
+
+.. _filelink-atagbeforewrap:
 
 ATagBeforeWrap
---------------
+==============
 
 :aspect:`Property:`
    ATagBeforeWrap
 
 :aspect:`Data type:`
-   boolean
+   :ref:`data-type-boolean`
 
 :aspect:`Description:`
-   If set, the link is first wrapped with "*.wrap*" and then the <A>-tag.
+   If set, the link is first wrapped with :ref:`filelink-wrap` and then the :html:`<A>`-tag.
 
 :aspect:`Default:`
    0
 
 
 
+.. _filelink-atagparams:
+
 ATagParams
-----------
+==========
 
 :aspect:`Property:`
    ATagParams
 
 :aspect:`Data type:`
-   <A>-params /:ref:`stdWrap <stdwrap>`
+   <A>-params / :ref:`stdwrap`
 
 :aspect:`Description:`
    Additional parameters
@@ -90,32 +99,36 @@ ATagParams
 
 
 
+.. _filelink-emptytitlehandling:
+
 emptyTitleHandling
-------------------
+==================
 
 :aspect:`Property:`
    emptyTitleHandling
 
 :aspect:`Data type:`
-string /:ref:`stdWrap <stdwrap>`
+    :ref:`data-type-string` /:ref:`stdwrap`
 
 :aspect:`Description:`
-   Value can be :ts:`keepEmpty` to preserve an empty title attribute or
-   :ts:`useAlt` to use the alt attribute instead.
+   Value can be "keepEmpty" to preserve an empty title attribute or
+   "useAlt" to use the alt attribute instead.
 
 :aspect:`Default:`
    :ts:`useAlt`
 
 
 
+.. _filelink-file:
+
 file
-----
+====
 
 :aspect:`Property:`
    file
 
 :aspect:`Data type:`
-   ->stdWrap
+   :ref:`stdwrap`
 
 :aspect:`Description:`
    stdWrap of the label (by default the label is the filename) after
@@ -123,27 +136,31 @@ file
 
 
 
+.. _filelink-icon:
+
 icon
-----
+====
 
 :aspect:`Property:`
    icon
 
 :aspect:`Data type:`
-   :ref:`boolean <data-type-bool>`/:ref:`stdWrap <stdwrap>`
+   :ref:`data-type-boolean` / :ref:`stdwrap`
 
 :aspect:`Overview:`
    ::
 
       1.filelink {
-         icon = 1
-         icon.path =
-         icon.ext =
-         icon.widthAttribute =
-         icon.heightAttribute =
-         icon.stdWrap {
-            # ...
-         ]
+          icon = 1
+          icon {
+              path =
+              ext =
+              widthAttribute =
+              heightAttribute =
+              stdWrap {
+                  # ...
+              }
+          }
       }
 
 
@@ -151,13 +168,13 @@ icon
    Set, if an icon should be shown.
 
    The filename of the icon used is the one of the filetype of the file
-   given in path_ (see above) plus extension (by default :file:`.gif`).
+   given in :ts:`path` (see above) plus extension (by default :file:`.gif`).
    For example for CSS files the icon file :file:`css.gif` will be used
    by default.
    If for a certain filetype no icon file is found in :ts:`icon.path`, the file
    :file:`default` plus extension (for example :file:`default.gif`) will be used.
 
-   The following sub-properties are available and have stdWrap functionality:
+   The following sub-properties are available and have :ref:`stdwrap` functionality:
 
    -  :ts:`path`:
             Path to the icon set.
@@ -171,14 +188,16 @@ icon
 
 
 
+.. _filelink-icon\_link:
+
 icon\_link
-----------
+==========
 
 :aspect:`Property:`
    icon\_link
 
 :aspect:`Data type:`
-   boolean
+   :ref:`data-type-boolean`
 
 :aspect:`Description:`
    Set if the icon should be linked as well.
@@ -188,14 +207,16 @@ icon\_link
 
 
 
+.. _filelink-icon\_image\_ext\_list:
+
 icon\_image\_ext\_list
-----------------------
+======================
 
 :aspect:`Property:`
    icon\_image\_ext\_list
 
 :aspect:`Data type:`
-   *list of image extensions* /:ref:`stdWrap <stdwrap>`
+   *list of image extensions* / :ref:`stdwrap`
 
 :aspect:`Description:`
    This is a comma-separated list of those file extensions that should
@@ -203,14 +224,16 @@ icon\_image\_ext\_list
 
 
 
+.. _filelink-icon\_thumbsize:
+
 icon\_thumbSize
----------------
+===============
 
 :aspect:`Property:`
    icon\_thumbSize
 
 :aspect:`Data type:`
-   string /:ref:`stdWrap <stdwrap>`
+   :ref:`data-type-string` / :ref:`stdwrap`
 
 :aspect:`Description:`
    Defines the size of the thumbnail in pixels.
@@ -230,14 +253,16 @@ icon\_thumbSize
 
 
 
+.. _filelink-iconcobject:
+
 iconCObject
------------
+===========
 
 :aspect:`Property:`
    iconCObject
 
 :aspect:`Data type:`
-   cObject
+   :ref:`data-type-cobject`
 
 :aspect:`Description:`
    Enter a cObject to use alternatively for the icons, for example IMAGE type.
@@ -246,14 +271,16 @@ iconCObject
 
 
 
+.. _filelink-labelstdwrap:
+
 labelStdWrap
-------------
+============
 
 :aspect:`Property:`
    labelStdWrap
 
 :aspect:`Data type:`
-   ->stdWrap
+   :ref:`stdwrap`
 
 :aspect:`Description:`
    stdWrap options for the label (by default the label is the filename)
@@ -262,14 +289,16 @@ labelStdWrap
 
 
 
+.. _filelink-longdescurl:
+
 longdescURL
------------
+===========
 
 :aspect:`Property:`
    longdescURL
 
 :aspect:`Data type:`
-   string /:ref:`stdWrap <stdwrap>`
+   :ref:`data-type-string` / :ref:`stdwrap`
 
 :aspect:`Description:`
    For icons (image made with "iconCObject" must have their own
@@ -279,28 +308,32 @@ longdescURL
 
 
 
+.. _filelink-path:
+
 path
-----
+====
 
 :aspect:`Property:`
    path
 
 :aspect:`Data type:`
-   path /:ref:`stdWrap <stdwrap>`
+   :ref:`data-type-path` / :ref:`stdwrap`
 
 :aspect:`Example:`
    :ts:`path = "uploads/media/`
 
 
 
+.. _filelink-removeprependednumbers:
+
 removePrependedNumbers
-----------------------
+======================
 
 :aspect:`Property:`
    removePrependedNumbers
 
 :aspect:`Data type:`
-   boolean
+   :ref:`data-type-bool`
 
 :aspect:`Description:`
    If set, any 2-digit *appended(!)* numbers in the filename are removed.
@@ -310,60 +343,71 @@ removePrependedNumbers
 
 
 
+.. _filelink-size:
+
 size
-----
+====
 
 :aspect:`Property:`
    size
 
 :aspect:`Data type:`
-   boolean /:ref:`stdWrap <stdwrap>`
+   :ref:`data-type-boolean` / :ref:`stdwrap`
 
 :aspect:`Description:`
    Set if size should be shown
 
 
 
+.. _filelink-stdwrap:
+
 stdWrap
--------
+=======
 
 :aspect:`Property:`
    stdWrap
 
 :aspect:`Data type:`
-   ->stdWrap
+   :ref:`stdwrap`
 
 
+
+.. _filelink-target:
 
 target
-------
+======
 
 :aspect:`Property:`
    target
 
 :aspect:`Data type:`
-   target /:ref:`stdWrap <stdwrap>`
+   :ref:`data-type-target` / :ref:`stdwrap`
 
 :aspect:`Description:`
    Target for the <a>-tag.
 
 
 
+.. _filelink-titletext:
+
 titleText
----------
-?
+=========
+
+tbd.
 
 
 
+
+.. _filelink-typolinkconfiguration:
 
 typolinkConfiguration
----------------------
+=====================
 
 :aspect:`Property:`
    typolinkConfiguration
 
 :aspect:`Data type:`
-   :ref:`->typolink <typolink>`
+   :ref:`typolink`
 
 :aspect:`Description:`
    This property can be used to pass additional typolink settings for
@@ -377,14 +421,16 @@ typolinkConfiguration
 
 
 
+.. _filelink-wrap:
+
 wrap
-----
+====
 
 :aspect:`Property:`
    wrap
 
 :aspect:`Data type:`
-   wrap /:ref:`stdWrap <stdwrap>`
+   :ref:`data-type-wrap` / :ref:`stdwrap`
 
 :aspect:`Description:`
    Wraps the links.
@@ -399,13 +445,12 @@ Filelink Example
 ::
 
    1.filelink {
-      path = uploads/media/
-      icon = 1
-      icon.wrap = <td> | </td>
-      size = 1
-      size.wrap = <td> | </td>
-      file.wrap = <td> | </td>
-      target = _blank
-      stdWrap = <tr> | </tr>
+       path = uploads/media/
+       icon = 1
+       icon.wrap = <td> | </td>
+       size = 1
+       size.wrap = <td> | </td>
+       file.wrap = <td> | </td>
+       target = _blank
+       stdWrap = <tr> | </tr>
    }
-

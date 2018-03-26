@@ -16,16 +16,16 @@ optionSplit
 Introduction
 ============
 
-`optionSplit` is the codename of a very tricky - but very useful! - function
+:ts:`optionSplit` is the codename of a very tricky - but very useful! - function
 and functionality. It is primarily used with the menu objects where it is
-enable for MANY properties. This make `optionSplit` really powerful.
+enable for MANY properties. This make :ts:`optionSplit` really powerful.
 
 So let's take an example from menu building.
 As a result all A-tags generated from this definition will have the `class` attribute
 set like this: :html:`<a class="z" ... >`::
 
    topmenu.1.NO {
-     ATagParams = class="z"
+       ATagParams = class="z"
    }
 
 How many A-tags will there be? Usually we cannot answer that question in advance
@@ -33,14 +33,14 @@ as we cannot know how long the list of menu items is. From zero to many everythi
 is possible. Let's describe this as: We have an **output sequence of 0 to N items**.
 
 In real life one more thing is important: We often want to have a different properties
-for the first and the last or odd and even elements. `optionSplit` tries to offer
+for the first and the last or odd and even elements. :ts:`optionSplit` tries to offer
 an easy solution for this task as well. We can specify more than just one shaping
 of a value for a property. Let's describe this as: We have an **input sequence M items**.
 
-Now we can precisely define what `optionSplit` is.
+Now we can precisely define what :ts:`optionSplit` is.
 
 Definition:
-   `optionSplit` is a **syntax** to define an input sequence of a fixed amount **M**
+   :ts:`optionSplit` is a **syntax** to define an input sequence of a fixed amount **M**
    of values. It has a fixed, builtin **ruleset**. Its **functionality** is to
    apply ONE of the input values to each output item according to the position of
    the output item and the ruleset.
@@ -49,7 +49,7 @@ In other words:
 
    1. We have an **input sequence of M items**. M is known.
    2. We have an **output sequence of 0 to N items**. N is unknown and may be zero, one, or "large".
-   3. We have a **ruleset** delivered with `optionSplit` that specifies how the input sequence
+   3. We have a **ruleset** delivered with :ts:`optionSplit` that specifies how the input sequence
       should be applied to the output sequence.
 
 In the following we'll try to shed light on this.
@@ -58,9 +58,8 @@ In the following we'll try to shed light on this.
 PHP-Code
 ========
 
-Lookout for usages of the function :php:`splitConfArray` which is part of the :php:`Core TypoScript TemplateService`
-class: :ref:`TYPO3 \\ CMS \\ Core \\ TypoScript \\ TemplateService :: splitConfArray()
-<t3api:TYPO3\\CMS\\Core\\TypoScript\\TemplateService::splitConfArray>`.
+Lookout for usages of the function
+:php:`\TYPO3\CMS\Core\TypoScript\TemplateService::splitConfArray()`.
 
 
 
@@ -73,9 +72,9 @@ Terminology
 It's useful to aggree about some terms first: delimiter string, mainpart, subpart.
 
 Mainparts
----------
+~~~~~~~~~
 
-`optionSplit` uses the string `|*|` to split the total string into **mainparts**.
+:ts:`optionSplit` uses the string `|*|` to split the total string into **mainparts**.
 Up to **three** mainparts will be used. If there are more they
 will be ignored.
 On the input side we may have for example::
@@ -102,7 +101,7 @@ the cases:
 
 
 Subparts
---------
+~~~~~~~~
 
 Each mainpart may be split further into **subparts**. The delimiter for splitting a mainpart into
 subparts is `||`.
@@ -126,7 +125,7 @@ Let's look at a full example that visualizes what we have said so far.
 
 
 Three by three items
---------------------
+~~~~~~~~~~~~~~~~~~~~
 
 We have all three mainparts A, R and Z. And each mainpart is split into three
 subparts::
@@ -188,7 +187,7 @@ More Examples
 =============
 
 Three by two items
-------------------
+~~~~~~~~~~~~~~~~~~
 
 Rules 1 to 7 define this behavior::
 
@@ -220,7 +219,7 @@ Rules 1 to 7 define this behavior::
 
 
 Three by one items
-------------------
+~~~~~~~~~~~~~~~~~~
 
 And again::
 
@@ -253,7 +252,7 @@ And again::
 
 
 Two by three items
-------------------
+~~~~~~~~~~~~~~~~~~
 
 Now the mainpart delimiter `|*|` occurrs only once. So we are
 dealing with the first two mainparts A and R.
@@ -288,7 +287,7 @@ According to rules 1 to 7 we get::
 
 
 Two by two items
-----------------
+~~~~~~~~~~~~~~~~
 
 According to rules 1 to 7 we get::
 
@@ -320,7 +319,7 @@ According to rules 1 to 7 we get::
 
 
 Two by one items
-----------------
+~~~~~~~~~~~~~~~~
 
 According to rules 1 to 7 we get::
 
@@ -353,7 +352,7 @@ According to rules 1 to 7 we get::
 
 
 One by one items
-----------------
+~~~~~~~~~~~~~~~~
 
 With no delimiters at all we still have - implictely - one mainpart
 A with one subpart a::
@@ -387,7 +386,7 @@ A with one subpart a::
 
 
 One by two items
-----------------
+~~~~~~~~~~~~~~~~
 
 One mainpart A with two subparts a and b::
 
@@ -419,7 +418,7 @@ One mainpart A with two subparts a and b::
 
 
 One by three items
-------------------
+~~~~~~~~~~~~~~~~~~
 
 More::
 
@@ -450,7 +449,7 @@ More::
       20     a b c c c c c c c c c c c c c c c c c c
 
 One by four items
------------------
+~~~~~~~~~~~~~~~~~
 
 More::
 
@@ -487,7 +486,7 @@ More examples: Tricky stuff
 
 
 Three items A, no item R, three items Z
----------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 In this situation with still have **three** mainparts. We can tell this from the fact that we have
 TWO occurrences of the mainpart delimiter. And the second mainpart R is really empty.
@@ -527,7 +526,7 @@ As result we get::
 
 
 One item A, no item R, one items Z
------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 With rules 1 to 8 we get::
 
@@ -560,7 +559,7 @@ With rules 1 to 8 we get::
 
 
 One item A, one (unexpected!?) item R, one item Z
--------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. attention::
 
@@ -597,7 +596,7 @@ What happens if there IS a space? Normal behavior of a three by one case! ::
 
 
 More
-----
+~~~~
 
 ::
 
@@ -1436,4 +1435,3 @@ output::
       18     a r    r    r    r    z
       19     a r    r    r    r    r z
       20     a r    r    r    r    r  z
-

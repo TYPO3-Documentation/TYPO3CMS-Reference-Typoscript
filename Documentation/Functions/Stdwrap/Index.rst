@@ -4,8 +4,9 @@
 
 .. _stdwrap:
 
+=======
 stdWrap
-^^^^^^^
+=======
 
 This function is often added as a property to values in TypoScript.
 
@@ -22,44 +23,44 @@ returned.
 
 stdWrap properties are executed in the order they appear in the table
 below. If you want to study this further please refer to
-typo3/sysext/frontend/Classes/ContentObject/ContentObjectRenderer.php,
-where you will find the function stdWrap() and the array $stdWrapOrder,
+:file:`typo3/sysext/frontend/Classes/ContentObject/ContentObjectRenderer.php`,
+where you will find the function :php:`stdWrap()` and the array :php:`$stdWrapOrder`,
 which represents the exact order of execution.
 
-Note that the stdWrap property "orderedStdWrap" allows you to execute
-multiple stdWrap functions in a freely selectable order.
+Note that the :ts:`stdWrap` property "orderedStdWrap" allows you to execute
+multiple :ts:`stdWrap` functions in a freely selectable order.
 
 
 .. _stdwrap-content-supplying:
 
 Content-supplying properties of stdWrap
-"""""""""""""""""""""""""""""""""""""""
+=======================================
 
 The properties in this table are parsed in the listed order. The
-properties "data", "field", "current", "cObject" (in that order!) are
-special as they are used to import content from variables or arrays.
-The above example could be rewritten to this::
+properties :ts:`data`, :ts:`field`, :ts:`current`, :ts:`cObject`
+(in that order!) are special as they are used to import content
+from variables or arrays. The above example could be rewritten to this::
 
    10 = TEXT
    10.value = some text
    10.stdWrap.case = upper
    10.stdWrap.field = header
 
-Now the line "10.value = some text" is obsolete, because the whole
-value is "imported" from the field called "header" from the $cObj
-->data-array.
+Now the line :ts:`10.value = some text` is obsolete, because the whole
+value is "imported" from the field called "header" from the
+:php:`$cObj->data-array`.
 
 
 .. _stdwrap-get-data:
 
 Getting data
-~~~~~~~~~~~~
+============
 
 
 .. _stdwrap-setcontenttocurrent:
 
 setContentToCurrent
-'''''''''''''''''''
+~~~~~~~~~~~~~~~~~~~
 
 .. container:: table-row
 
@@ -67,7 +68,7 @@ setContentToCurrent
          setContentToCurrent
 
    Data type
-         boolean /stdWrap
+         :ref:`boolean <data-type-bool>` / :ref:`stdWrap`
 
    Description
          Sets the current value to the incoming content of the function.
@@ -76,7 +77,7 @@ setContentToCurrent
 .. _stdwrap-addpagecachetags:
 
 addPageCacheTags
-''''''''''''''''
+~~~~~~~~~~~~~~~~
 
 .. container:: table-row
 
@@ -84,7 +85,7 @@ addPageCacheTags
          addPageCacheTags
 
    Data type
-         string /stdWrap
+         :ref:`data-type-string` / :ref:`stdWrap`
 
    Description
          Comma-separated list of cache tags, which should be added to the page
@@ -112,7 +113,7 @@ addPageCacheTags
 .. _stdwrap-setcurrent:
 
 setCurrent
-''''''''''
+~~~~~~~~~~
 
 .. container:: table-row
 
@@ -120,7 +121,7 @@ setCurrent
          setCurrent
 
    Data type
-         string /stdWrap
+         :ref:`data-type-string` / :ref:`stdWrap`
 
    Description
          Sets the "current"-value. This is normally set from some outside
@@ -130,7 +131,7 @@ setCurrent
 .. _stdwrap-lang:
 
 lang
-''''
+~~~~
 
 .. container:: table-row
 
@@ -138,7 +139,7 @@ lang
          lang
 
    Data type
-         Array of language keys /stdWrap
+         Array of language keys / :ref:`stdWrap`
 
    Description
          This is used to define optional language specific values.
@@ -160,7 +161,7 @@ lang
 .. _stdwrap-data:
 
 data
-''''
+~~~~
 
 .. container:: table-row
 
@@ -168,13 +169,13 @@ data
          data
 
    Data type
-         :ref:`data-type-gettext` /stdWrap
+         :ref:`data-type-gettext` / :ref:`stdWrap`
 
 
 .. _stdwrap-field:
 
 field
-'''''
+~~~~~
 
 .. container:: table-row
 
@@ -182,11 +183,11 @@ field
          field
 
    Data type
-         Field name /stdWrap
+         Field name / :ref:`stdWrap`
 
    Description
          Sets the content to the value of the according field
-         (which comes from $cObj->data[*field*]).
+         (which comes from :php:`$cObj->data[*field*]`).
 
          **Example:** ::
 
@@ -205,14 +206,14 @@ field
          unless it is a blank string. If a blank string, the value of
          the title field is returned.
 
-         **Note:** $cObj->data changes depending on the context.
+         **Note:** :php:`$cObj->data` changes depending on the context.
          See the description for the data type ":ref:`data-type-gettext`"/field!
 
 
 .. _stdwrap-current:
 
 current
-'''''''
+~~~~~~~
 
 .. container:: table-row
 
@@ -220,7 +221,7 @@ current
          current
 
    Data type
-         boolean /stdWrap
+         :ref:`boolean <data-type-bool>` / :ref:`stdWrap`
 
    Description
          Sets the content to the "current"-value (see :ref:`->split <split>`)
@@ -229,7 +230,7 @@ current
 .. _stdwrap-cobject:
 
 cObject
-'''''''
+~~~~~~~
 
 .. container:: table-row
 
@@ -246,7 +247,7 @@ cObject
 .. _stdwrap-numrows:
 
 numRows
-'''''''
+~~~~~~~
 
 .. container:: table-row
 
@@ -254,7 +255,7 @@ numRows
          numRows
 
    Data type
-         :ref:`->numRows <numrows>` /stdWrap
+         :ref:`->numRows <numrows>` / :ref:`stdWrap`
 
    Description
          Returns the number of rows resulting from the supplied SELECT query.
@@ -262,7 +263,7 @@ numRows
 .. _stdwrap-preuserfunc:
 
 preUserFunc
-'''''''''''
+~~~~~~~~~~~
 
 .. container:: table-row
 
@@ -270,7 +271,7 @@ preUserFunc
          preUserFunc
 
    Data type
-         Function name
+         :ref:`data-type-function-name`
 
    Description
          Calls the provided PHP function. If you specify the name with a '->'
@@ -281,19 +282,19 @@ preUserFunc
          value to be processed. As second parameter any sub-properties of
          preUserFunc are provided to the function.
 
-         See *.postUserFunc*!
+         See :ref:`stdwrap-postUserFunc`.
 
 
 .. _stdwrap-override-conditions:
 
 Override and conditions
-~~~~~~~~~~~~~~~~~~~~~~~
+=======================
 
 
 .. _stdwrap-override:
 
 override
-''''''''
+~~~~~~~~
 
 .. container:: table-row
 
@@ -301,7 +302,7 @@ override
          override
 
    Data type
-         string /stdWrap
+         :ref:`data-type-string` / :ref:`stdWrap`
 
    Description
          if "override" returns something else than "" or zero (trimmed), the
@@ -311,7 +312,7 @@ override
 .. _stdwrap-preifemptylistnum:
 
 preIfEmptyListNum
-'''''''''''''''''
+~~~~~~~~~~~~~~~~~
 
 .. container:: table-row
 
@@ -319,16 +320,16 @@ preIfEmptyListNum
          preIfEmptyListNum
 
    Data type
-         (as "listNum" below)
+         (as ":ref:`stdwrap-listNum`" below)
 
    Description
-         (as "listNum" below)
+         (as ":ref:`stdwrap-listNum`" below)
 
 
 .. _stdwrap-ifnull:
 
 ifNull
-''''''
+~~~~~~
 
 .. container:: table-row
 
@@ -336,10 +337,10 @@ ifNull
          ifNull
 
    Data type
-         string /stdWrap
+         :ref:`data-type-string` / :ref:`stdWrap`
 
    Description
-         If the content is null (NULL type in PHP), the content is overridden
+         If the content is null (:php:`NULL` type in PHP), the content is overridden
          with the value defined here.
 
          **Example:** ::
@@ -354,13 +355,13 @@ ifNull
             }
 
          This example shows the content of the field description or, if that
-         field contains the value NULL, the text "No description defined.".
+         field contains the value :php:`NULL`, the text "No description defined.".
 
 
 .. _stdwrap-ifempty:
 
 ifEmpty
-'''''''
+~~~~~~~
 
 .. container:: table-row
 
@@ -368,17 +369,17 @@ ifEmpty
          ifEmpty
 
    Data type
-         string /stdWrap
+         :ref:`data-type-string` / :ref:`stdWrap`
 
    Description
          If the trimmed content is empty at this point, the content is loaded
-         with "ifEmpty". Zeros are treated as empty values!
+         with :ts:`ifEmpty`. Zeros are treated as empty values!
 
 
 .. _stdwrap-ifblank:
 
 ifBlank
-'''''''
+~~~~~~~
 
 .. container:: table-row
 
@@ -386,16 +387,16 @@ ifBlank
          ifBlank
 
    Data type
-         string /stdWrap
+         :ref:`data-type-string` / :ref:`stdWrap`
 
    Description
-         Same as "ifEmpty" but the check is done using strlen().
+         Same as :ts:`ifEmpty` but the check is done using :php:`strlen()`.
 
 
 .. _stdwrap-listnum:
 
 listNum
-'''''''
+~~~~~~~
 
 .. container:: table-row
 
@@ -403,7 +404,7 @@ listNum
          listNum
 
    Data type
-         integer :ref:`+calc <objects-calc>` +"last" +"rand" /stdWrap
+         :ref:`data-type-integer` :ref:`+calc <objects-calc>` +"last" +"rand" / :ref:`stdWrap`
 
    Description
          Explodes the content with "," (comma) and the content is set to the
@@ -449,7 +450,7 @@ listNum
 .. _stdwrap-trim:
 
 trim
-''''
+~~~~
 
 .. container:: table-row
 
@@ -457,17 +458,17 @@ trim
          trim
 
    Data type
-         boolean /stdWrap
+         :ref:`boolean <data-type-bool>` / :ref:`stdWrap`
 
    Description
-         If set, the PHP-function trim() will be used to remove whitespaces
+         If set, the PHP-function :php:`trim()` will be used to remove whitespaces
          around the value.
 
 
 .. _stdwrap-strpad:
 
 strPad
-''''''
+~~~~~~
 
 .. container:: table-row
 
@@ -485,7 +486,7 @@ strPad
 .. _stdwrap-stdwrap:
 
 stdWrap
-'''''''
+~~~~~~~
 
 .. container:: table-row
 
@@ -493,16 +494,16 @@ stdWrap
          stdWrap
 
    Data type
-         ->stdWrap
+         :ref:`stdWrap`
 
    Description
-         Recursive call to the stdWrap function.
+         Recursive call to the :ts:`stdWrap` function.
 
 
 .. _stdwrap-required:
 
 required
-''''''''
+~~~~~~~~
 
 .. container:: table-row
 
@@ -510,7 +511,7 @@ required
          required
 
    Data type
-         boolean /stdWrap
+         :ref:`boolean <data-type-bool>` / :ref:`stdWrap`
 
    Description
          This flag requires the content to be set to some value after any
@@ -524,7 +525,7 @@ required
 .. _stdwrap-if:
 
 if
-''''''''''
+~~
 
 .. container:: table-row
 
@@ -541,7 +542,7 @@ if
 .. _stdwrap-fieldrequired:
 
 fieldRequired
-'''''''''''''
+~~~~~~~~~~~~~
 
 .. container:: table-row
 
@@ -549,7 +550,7 @@ fieldRequired
          fieldRequired
 
    Data type
-         Field name /stdWrap
+         Field name / :ref:`stdWrap`
 
    Description
          The value in this field **must** be set.
@@ -558,13 +559,13 @@ fieldRequired
 .. _stdwrap-parsedata:
 
 Parsing data
-~~~~~~~~~~~~
+============
 
 
 .. _stdwrap-csconv:
 
 csConv
-''''''
+~~~~~~
 
 .. container:: table-row
 
@@ -572,7 +573,7 @@ csConv
          csConv
 
    Data type
-         string /stdWrap
+         :ref:`data-type-string` / :ref:`stdWrap`
 
    Description
          Convert the charset of the string from the charset given as value to
@@ -582,7 +583,7 @@ csConv
 .. _stdwrap-parsefunc:
 
 parseFunc
-'''''''''
+~~~~~~~~~
 
 .. container:: table-row
 
@@ -590,7 +591,7 @@ parseFunc
          parseFunc
 
    Data type
-         object path reference / :ref:`->parseFunc <parsefunc>` /stdWrap
+         object path reference / :ref:`->parseFunc <parsefunc>` / :ref:`stdWrap`
 
    Description
          Processing instructions for the content.
@@ -611,7 +612,7 @@ parseFunc
 .. _stdwrap-htmlparser:
 
 HTMLparser
-''''''''''
+~~~~~~~~~~
 
 .. container:: table-row
 
@@ -619,7 +620,7 @@ HTMLparser
          HTMLparser
 
    Data type
-         boolean / :ref:`->HTMLparser <htmlparser>` /stdWrap
+         :ref:`boolean <data-type-bool>` / :ref:`->HTMLparser <htmlparser>` / :ref:`stdWrap`
 
    Description
          This object allows you to parse the HTML-content and perform all kinds of
@@ -633,7 +634,7 @@ HTMLparser
 .. _stdwrap-split:
 
 split
-'''''
+~~~~~
 
 .. container:: table-row
 
@@ -641,13 +642,13 @@ split
          split
 
    Data type
-         :ref:`->split <split>` /stdWrap
+         :ref:`->split <split>` / :ref:`stdWrap`
 
 
 .. _stdwrap-replacement:
 
 replacement
-'''''''''''
+~~~~~~~~~~~
 
 .. container:: table-row
 
@@ -655,7 +656,7 @@ replacement
          replacement
 
    Data type
-         :ref:`->replacement <replacement>` /stdWrap
+         :ref:`->replacement <replacement>` / :ref:`stdWrap`
 
    Description
          Performs an ordered search/replace on the current content with the
@@ -667,7 +668,7 @@ replacement
 .. _stdwrap-prioricalc:
 
 prioriCalc
-''''''''''
+~~~~~~~~~~
 
 .. container:: table-row
 
@@ -675,7 +676,7 @@ prioriCalc
          prioriCalc
 
    Data type
-         boolean /stdWrap
+         :ref:`boolean <data-type-bool>` / :ref:`stdWrap`
 
    Description
          Calculation of the value using operators -+\*/%^ plus respects
@@ -685,7 +686,7 @@ prioriCalc
 
          Returns a doublevalue.
 
-         If .prioriCalc is set to "intval" an integer is returned.
+         If :ts:`prioriCalc` is set to "intval" an integer is returned.
 
          There is no error checking and division by zero or other invalid
          values may generate strange results. Also you should use a proper syntax
@@ -706,7 +707,7 @@ prioriCalc
 .. _stdwrap-char:
 
 char
-''''
+~~~~
 
 .. container:: table-row
 
@@ -714,10 +715,10 @@ char
          char
 
    Data type
-         integer /stdWrap
+         :ref:`data-type-integer` / :ref:`stdWrap`
 
    Description
-         Content is set to chr(*value*). This returns a one-character
+         Content is set to :php:`chr(*value*)`. This returns a one-character
          string containing the character specified by ascii code. Reliable
          results will be obtained only for character codes in the integer
          range 0 - 127. See
@@ -731,7 +732,7 @@ char
 .. _stdwrap-intval:
 
 intval
-''''''
+~~~~~~
 
 .. container:: table-row
 
@@ -739,10 +740,10 @@ intval
          intval
 
    Data type
-         boolean /stdWrap
+         :ref:`boolean <data-type-bool>` / :ref:`stdWrap`
 
    Description
-         PHP function intval(); returns an integer:
+         PHP function :php:`intval()` returns an integer:
 
          .. code-block:: php
 
@@ -752,7 +753,7 @@ intval
 .. _stdwrap-hash:
 
 hash
-''''
+~~~~
 
 .. container:: table-row
 
@@ -760,7 +761,7 @@ hash
          hash
 
    Data type
-         string /stdWrap
+         :ref:`data-type-string` / :ref:`stdWrap`
 
    Description
          Returns a hashed value of the current content. Set to one of the
@@ -781,7 +782,7 @@ hash
 .. _stdwrap-round:
 
 round
-'''''
+~~~~~
 
 .. container:: table-row
 
@@ -789,7 +790,7 @@ round
          round
 
    Data type
-         :ref:`->round <round>` /stdWrap
+         :ref:`->round <round>` / :ref:`stdWrap`
 
    Description
          Round the value with the selected method to the given number of
@@ -799,7 +800,7 @@ round
 .. _stdwrap-numberformat:
 
 numberFormat
-''''''''''''
+~~~~~~~~~~~~
 
 .. container:: table-row
 
@@ -817,7 +818,7 @@ numberFormat
 .. _stdwrap-date:
 
 date
-''''
+~~~~
 
 .. container:: table-row
 
@@ -825,7 +826,7 @@ date
          date
 
    Data type
-         :ref:`data-type-date-conf` /stdWrap
+         :ref:`data-type-date-conf` / :ref:`stdWrap`
 
    Description
          The content should be data-type "UNIX-time". Returns the content
@@ -854,7 +855,7 @@ date
 .. _stdwrap-strftime:
 
 strftime
-''''''''
+~~~~~~~~
 
 .. container:: table-row
 
@@ -862,7 +863,7 @@ strftime
          strftime
 
    Data type
-         :ref:`data-type-strftime-conf` /stdWrap
+         :ref:`data-type-strftime-conf` / :ref:`stdWrap`
 
    Description
          Exactly like "date" above. See the PHP manual (`strftime <http://www.php.net/strftime>`_) for the
@@ -876,7 +877,7 @@ strftime
          **.charset:** Can be set to the charset of the output string if you
          need to convert it to UTF-8. Default is to take the
          intelligently guessed charset from
-         TYPO3\CMS\Core\Charset\CharsetConverter.
+         :php:`TYPO3\CMS\Core\Charset\CharsetConverter`.
 
          **.GMT:** If set, the PHP function `gmstrftime() <http://www.php.net/gmstrftime>`_ will be used instead
          of `strftime() <http://www.php.net/strftime>`_.
@@ -885,7 +886,7 @@ strftime
 .. _stdwrap-strtotime:
 
 strtotime
-'''''''''
+~~~~~~~~~
 
 .. container:: table-row
 
@@ -893,7 +894,7 @@ strtotime
          strtotime
 
    Data type
-         string
+         :ref:`data-type-string`
 
    Description
          Allows conversion of formatted dates to timestamp, e.g. to perform date calculations.
@@ -921,7 +922,7 @@ strtotime
 .. _stdwrap-age:
 
 age
-'''
+~~~
 
 .. container:: table-row
 
@@ -929,7 +930,7 @@ age
          age
 
    Data type
-         boolean or string /stdWrap
+         :ref:`boolean <data-type-bool>` or :ref:`data-type-string` / :ref:`stdWrap`
 
    Description
          If enabled with a "1" (number, integer) the content is seen as a date
@@ -962,7 +963,7 @@ age
 .. _stdwrap-case:
 
 case
-''''
+~~~~
 
 .. container:: table-row
 
@@ -970,7 +971,7 @@ case
          case
 
    Data type
-         :ref:`data-type-case` /stdWrap
+         :ref:`data-type-case` / :ref:`stdWrap`
 
    Description
          Converts case
@@ -981,7 +982,7 @@ case
 .. _stdwrap-bytes:
 
 bytes
-'''''
+~~~~~
 
 .. container:: table-row
 
@@ -989,7 +990,7 @@ bytes
          bytes
 
    Data type
-         boolean/stdWrap
+         :ref:`boolean <data-type-bool>` / :ref:`stdWrap`
 
    Default
          iec, 1024
@@ -1125,7 +1126,7 @@ bytes
 .. _stdwrap-substring:
 
 substring
-'''''''''
+~~~~~~~~~
 
 .. container:: table-row
 
@@ -1133,18 +1134,18 @@ substring
          substring
 
    Data type
-         [p1], [p2] /stdWrap
+         [p1], [p2] / :ref:`stdWrap`
 
    Description
          Returns the substring with [p1] and [p2] sent as the 2nd and 3rd
-         parameter to the PHP `mb_substr <http://www.php.net/mb_substr>`_ function.
+         parameter to the PHP `mb_substr <http://www.php.net/mb_substr>`_ function.
 
          Uses "UTF-8" for the operation.
 
 .. _stdwrap-crophtml:
 
 cropHTML
-''''''''
+~~~~~~~~
 
 .. container:: table-row
 
@@ -1152,22 +1153,22 @@ cropHTML
          cropHTML
 
    Data type
-         string /stdWrap
+         :ref:`data-type-string` / :ref:`stdWrap`
 
    Description
-         Crops the content to a certain length. In contrast to stdWrap.crop it
+         Crops the content to a certain length. In contrast to :ts:`stdWrap.crop` it
          respects HTML tags. It does not crop inside tags and closes open tags.
-         Entities (like ">") are counted as one char. See stdWrap.crop below
+         Entities (like ">") are counted as one char. See :ts:`stdWrap.crop` below
          for a syntax description and examples.
 
-         Note that stdWrap.crop should not be used if stdWrap.cropHTML is
+         Note that :ts:`stdWrap.crop` should not be used if :ts:`stdWrap.cropHTML` is
          already used.
 
 
 .. _stdwrap-striphtml:
 
 stripHtml
-'''''''''
+~~~~~~~~~
 
 .. container:: table-row
 
@@ -1175,7 +1176,7 @@ stripHtml
          stripHtml
 
    Data type
-         boolean /stdWrap
+         :ref:`boolean <data-type-bool>` / :ref:`stdWrap`
 
    Description
          Strips all HTML tags.
@@ -1184,7 +1185,7 @@ stripHtml
 .. _stdwrap-crop:
 
 crop
-''''
+~~~~
 
 .. container:: table-row
 
@@ -1192,7 +1193,7 @@ crop
          crop
 
    Data type
-         string /stdWrap
+         :ref:`data-type-string` / :ref:`stdWrap`
 
    Description
          Crops the content to a certain length.
@@ -1218,13 +1219,13 @@ crop
 
          **Examples:**
 
-         20 \| ... => max 20 characters. If more, the value will be truncated
+         :ts:`20 | ...` => max 20 characters. If more, the value will be truncated
          to the first 20 characters and prepended with "..."
 
-         -20 \| ... => max 20 characters. If more, the value will be truncated
+         :ts:`-20 | ...` => max 20 characters. If more, the value will be truncated
          to the last 20 characters and appended with "..."
 
-         20 \| ... \| 1 => max 20 characters. If more, the value will be
+         :ts:`20 | ... | 1` => max 20 characters. If more, the value will be
          truncated to the first 20 characters and prepended with "...". If
          the division is in the middle of a word, the remains of that word is
          removed.
@@ -1235,7 +1236,7 @@ crop
 .. _stdwrap-rawurlencode:
 
 rawUrlEncode
-''''''''''''
+~~~~~~~~~~~~
 
 .. container:: table-row
 
@@ -1243,7 +1244,7 @@ rawUrlEncode
          rawUrlEncode
 
    Data type
-         boolean /stdWrap
+         :ref:`boolean <data-type-bool>` / :ref:`stdWrap`
 
    Description
          Passes the content through the PHP function `rawurlencode() <http://www.php.net/rawurlencode>`_.
@@ -1252,7 +1253,7 @@ rawUrlEncode
 .. _stdwrap-htmlspecialchars:
 
 htmlSpecialChars
-''''''''''''''''
+~~~~~~~~~~~~~~~~
 
 .. container:: table-row
 
@@ -1260,19 +1261,19 @@ htmlSpecialChars
          htmlSpecialChars
 
    Data type
-         boolean /stdWrap
+         :ref:`boolean <data-type-bool>` / :ref:`stdWrap`
 
    Description
          Passes the content through the PHP function `htmlspecialchars() <http://www.php.net/htmlspecialchars>`_.
 
-         Additional property ".preserveEntities" will preserve entities so only
+         Additional property :ts:`preserveEntities` will preserve entities so only
          non-entity characters are affected.
 
 
 .. _stdwrap-encodeforjavascriptvalue:
 
 encodeForJavaScriptValue
-''''''''''''''''''''''''
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. container:: table-row
 
@@ -1280,7 +1281,7 @@ encodeForJavaScriptValue
          encodeForJavaScriptValue
 
    Data type
-         boolean /stdWrap
+         :ref:`boolean <data-type-bool>` / :ref:`stdWrap`
 
    Description
          Encodes content to be used safely inside strings in JavaScript.
@@ -1290,7 +1291,7 @@ encodeForJavaScriptValue
          TypoScript.
 
          Passes the content through the core function
-         :ref:`t3api:TYPO3\\CMS\\Core\\Utility\\GeneralUtility::quoteJSvalue`.
+         :php:`\TYPO3\CMS\Core\Utility\GeneralUtility::quoteJSvalue`.
 
          **Example:** ::
 
@@ -1305,7 +1306,7 @@ encodeForJavaScriptValue
 .. _stdwrap-doublebrtag:
 
 doubleBrTag
-'''''''''''
+~~~~~~~~~~~
 
 .. container:: table-row
 
@@ -1313,7 +1314,7 @@ doubleBrTag
          doubleBrTag
 
    Data type
-         string /stdWrap
+         :ref:`data-type-string` / :ref:`stdWrap`
 
    Description
          All double-line-breaks are substituted with this value.
@@ -1322,7 +1323,7 @@ doubleBrTag
 .. _stdwrap-br:
 
 br
-''
+~~
 
 .. container:: table-row
 
@@ -1330,17 +1331,17 @@ br
          br
 
    Data type
-         boolean /stdWrap
+         :ref:`boolean <data-type-bool>` / :ref:`stdWrap`
 
    Description
          Pass the value through the PHP function `nl2br() <http://www.php.net/nl2br>`_. This
-         converts each line break to a <br /> or a <br> tag depending on doctype.
+         converts each line break to a :html:`<br />` or a :html:`<br>` tag depending on doctype.
 
 
 .. _stdwrap-brtag:
 
 brTag
-'''''
+~~~~~
 
 .. container:: table-row
 
@@ -1348,7 +1349,7 @@ brTag
          brTag
 
    Data type
-         string /stdWrap
+         :ref:`data-type-string` / :ref:`stdWrap`
 
    Description
          All ASCII codes of "10" (line feed, LF) are substituted with the
@@ -1358,7 +1359,7 @@ brTag
 .. _stdwrap-encapslines:
 
 encapsLines
-'''''''''''
+~~~~~~~~~~~
 
 .. container:: table-row
 
@@ -1366,17 +1367,17 @@ encapsLines
          encapsLines
 
    Data type
-         :ref:`->encapsLines <encapslines>` /stdWrap
+         :ref:`->encapsLines <encapslines>` / :ref:`stdWrap`
 
    Description
-         Lets you split the content by chr(10) and process each line
+         Lets you split the content by :php:`chr(10)` and process each line
          independently. Used to format content made with the RTE.
 
 
 .. _stdwrap-keywords:
 
 keywords
-''''''''
+~~~~~~~~
 
 .. container:: table-row
 
@@ -1384,17 +1385,17 @@ keywords
          keywords
 
    Data type
-         boolean /stdWrap
+         :ref:`boolean <data-type-bool>` / :ref:`stdWrap`
 
    Description
-         Splits the content by characters "," ";" and chr(10) (return), trims
+         Splits the content by characters "," ";" and php:`chr(10)` (return), trims
          each value and returns a comma-separated list of the values.
 
 
 .. _stdwrap-innerwrap:
 
 innerWrap
-'''''''''
+~~~~~~~~~
 
 .. container:: table-row
 
@@ -1402,7 +1403,7 @@ innerWrap
          innerWrap
 
    Data type
-         :ref:`wrap <data-type-wrap>` /stdWrap
+         :ref:`wrap <data-type-wrap>` / :ref:`stdWrap`
 
    Description
          Wraps the content.
@@ -1411,7 +1412,7 @@ innerWrap
 .. _stdwrap-innerwrap2:
 
 innerWrap2
-''''''''''
+~~~~~~~~~~
 
 .. container:: table-row
 
@@ -1419,16 +1420,16 @@ innerWrap2
          innerWrap2
 
    Data type
-         :ref:`wrap <data-type-wrap>` /stdWrap
+         :ref:`wrap <data-type-wrap>` / :ref:`stdWrap`
 
    Description
-         Same as .innerWrap (but watch the order in which they are executed).
+         Same as :ts:`innerWrap` (but watch the order in which they are executed).
 
 
 .. _stdwrap-addparams:
 
 addParams
-'''''''''
+~~~~~~~~~
 
 .. container:: table-row
 
@@ -1436,7 +1437,7 @@ addParams
          addParams
 
    Data type
-         :ref:`->addParams <addparams>` /stdWrap
+         :ref:`->addParams <addparams>` / :ref:`stdWrap`
 
    Description
          Lets you add tag parameters to the content *if* the content is a tag!
@@ -1445,7 +1446,7 @@ addParams
 .. _stdwrap-filelink:
 
 filelink
-''''''''
+~~~~~~~~
 
 .. container:: table-row
 
@@ -1453,7 +1454,7 @@ filelink
          filelink
 
    Data type
-         :ref:`->filelink <filelink>` /stdWrap
+         :ref:`->filelink <filelink>` / :ref:`stdWrap`
 
    Description
          Used to make lists of links to files.
@@ -1462,7 +1463,7 @@ filelink
 .. _stdwrap-precobject:
 
 preCObject
-''''''''''
+~~~~~~~~~~
 
 .. container:: table-row
 
@@ -1473,13 +1474,13 @@ preCObject
          :ref:`data-type-cobject`
 
    Description
-         cObject prepended the content.
+         :ref:`stdwrap-cObject` prepended the content.
 
 
 .. _stdwrap-postcobject:
 
 postCObject
-'''''''''''
+~~~~~~~~~~~
 
 .. container:: table-row
 
@@ -1490,13 +1491,13 @@ postCObject
          :ref:`data-type-cobject`
 
    Description
-         cObject appended the content.
+         :ref:`stdwrap-cObject` appended the content.
 
 
 .. _stdwrap-wrapalign:
 
 wrapAlign
-'''''''''
+~~~~~~~~~
 
 .. container:: table-row
 
@@ -1504,17 +1505,17 @@ wrapAlign
          wrapAlign
 
    Data type
-         :ref:`align <data-type-align>` /stdWrap
+         :ref:`align <data-type-align>` / :ref:`stdWrap`
 
    Description
-         Wraps content with <div style=text-align:[*value*];"> \| </div>
+         Wraps content with :ts:`<div style=text-align:[*value*];"> | </div>`
          *if* align is set.
 
 
 .. _stdwrap-typolink:
 
 typolink
-''''''''
+~~~~~~~~
 
 .. container:: table-row
 
@@ -1522,7 +1523,7 @@ typolink
          typolink
 
    Data type
-         :ref:`->typolink <typolink>` /stdWrap
+         :ref:`->typolink <typolink>` / :ref:`stdWrap`
 
    Description
          Wraps the content with a link-tag.
@@ -1530,7 +1531,7 @@ typolink
 .. _stdwrap-wrap:
 
 wrap
-''''
+~~~~
 
 .. container:: table-row
 
@@ -1538,17 +1539,17 @@ wrap
          wrap
 
    Data type
-         :ref:`wrap <data-type-wrap>` /+.splitChar /stdWrap
+         :ref:`wrap <data-type-wrap>` /+.splitChar / :ref:`stdWrap`
 
    Description
-         .splitChar defines an alternative splitting character (default is "\|"
+         :ts:`splitChar` defines an alternative splitting character (default is "\|"
          - the vertical line)
 
 
 .. _stdwrap-notrimwrap:
 
 noTrimWrap
-''''''''''
+~~~~~~~~~~
 
 .. container:: table-row
 
@@ -1556,7 +1557,7 @@ noTrimWrap
          noTrimWrap
 
    Data type
-         "special" wrap /+.splitChar /stdWrap
+         "special" wrap /+.splitChar / :ref:`stdWrap`
 
    Description
          This wraps the content *without* trimming the values. That means that
@@ -1574,12 +1575,12 @@ noTrimWrap
 
          **Additional property:**
 
-         .splitChar
+         :ts:`splitChar`
 
-         Can be set to define an alternative special character. stdWrap is
+         Can be set to define an alternative special character. :ts:`stdWrap` is
          available. Default is "\|" - the vertical line. This sub-property is
          useful in cases when the default special character would be recognized
-         by :ref:`objects-optionsplit` (which takes precedence over noTrimWrap).
+         by :ref:`objects-optionsplit` (which takes precedence over :ts:`noTrimWrap`).
 
          **Example:** ::
 
@@ -1587,14 +1588,14 @@ noTrimWrap
             noTrimWrap.splitChar = ^
 
          :ref:`objects-optionsplit` will use the "\|\|" to have two subparts in
-         the first part. In each subpart noTrimWrap will then use the "^" as
+         the first part. In each subpart :ts:`noTrimWrap` will then use the "^" as
          special character.
 
 
 .. _stdwrap-wrap2:
 
 wrap2
-'''''
+~~~~~
 
 .. container:: table-row
 
@@ -1602,16 +1603,16 @@ wrap2
          wrap2
 
    Data type
-         :ref:`wrap <data-type-wrap>` /+.splitChar /stdWrap
+         :ref:`wrap <data-type-wrap>` /+.splitChar / :ref:`stdWrap`
 
    Description
-         *same as .wrap (but watch the order in which they are executed)*
+         same as :ref:`stdwrap-wrap` (but watch the order in which they are executed)
 
 
 .. _stdwrap-datawrap:
 
 dataWrap
-''''''''
+~~~~~~~~
 
 .. container:: table-row
 
@@ -1619,7 +1620,7 @@ dataWrap
          dataWrap
 
    Data type
-         mixed /stdWrap
+         mixed / :ref:`stdWrap`
 
    Description
          The content is parsed for pairs of curly braces. The content of the
@@ -1630,14 +1631,14 @@ dataWrap
 
             <div id="{tsfe : id}"> | </div>
 
-         This will produce a <div> tag around the content with an id attribute
+         This will produce a :html:`<div>` tag around the content with an id attribute
          that contains the number of the current page.
 
 
 .. _stdwrap-prepend:
 
 prepend
-'''''''
+~~~~~~~
 
 .. container:: table-row
 
@@ -1648,13 +1649,13 @@ prepend
          :ref:`data-type-cobject`
 
    Description
-         cObject prepended to content (before)
+         :ref:`stdwrap-cobject` prepended to content (before)
 
 
 .. _stdwrap-append:
 
 append
-''''''
+~~~~~~
 
 .. container:: table-row
 
@@ -1665,13 +1666,13 @@ append
          :ref:`data-type-cobject`
 
    Description
-         cObject appended to content (after)
+         :ref:`stdwrap-cobject` appended to content (after)
 
 
 .. _stdwrap-wrap3:
 
 wrap3
-'''''
+~~~~~
 
 .. container:: table-row
 
@@ -1679,16 +1680,16 @@ wrap3
          wrap3
 
    Data type
-         :ref:`wrap <data-type-wrap>` /+.splitChar /stdWrap
+         :ref:`wrap <data-type-wrap>` /+.splitChar / :ref:`stdWrap`
 
    Description
-         *same as .wrap (but watch the order in which they are executed)*
+         same as :ts:`wrap` (but watch the order in which they are executed)
 
 
 .. _stdwrap-orderedstdwrap:
 
 orderedStdWrap
-''''''''''''''
+~~~~~~~~~~~~~~
 
 .. container:: table-row
 
@@ -1696,13 +1697,13 @@ orderedStdWrap
          orderedStdWrap
 
    Data type
-         Array of numeric keys with /stdWrap each
+         Array of numeric keys with / :ref:`stdWrap` each
 
    Description
-         Execute multiple stdWrap statements in a freely selectable order. The order
+         Execute multiple :ts:`stdWrap` statements in a freely selectable order. The order
          is determined by the numeric order of the keys. This allows to use multiple
          stdWrap statements without having to remember the rather complex sorting
-         order in which the stdWrap functions are executed.
+         order in which the :ts:`stdWrap` functions are executed.
 
          **Example:** ::
 
@@ -1719,9 +1720,9 @@ orderedStdWrap
             }
 
          In this example orderedStdWrap is executed on the value "a".
-         10.innerWrap is executed first, followed by 10.wrap. Then the next key
-         is processed which is 20. Afterwards 30.wrap is executed on what
-         already was created.
+         :ts:`10.innerWrap` is executed first, followed by :ts:`10.wrap`.
+         Then the next key is processed which is 20. Afterwards :ts:`30.wrap`
+         is executed on what already was created.
 
          This results in "This is a working solution."
 
@@ -1729,7 +1730,7 @@ orderedStdWrap
 .. _stdwrap-outerwrap:
 
 outerWrap
-'''''''''
+~~~~~~~~~
 
 .. container:: table-row
 
@@ -1737,7 +1738,7 @@ outerWrap
          outerWrap
 
    Data type
-         :ref:`wrap <data-type-wrap>` /stdWrap
+         :ref:`wrap <data-type-wrap>` / :ref:`stdWrap`
 
    Description
          *Wraps the complete content*
@@ -1746,7 +1747,7 @@ outerWrap
 .. _stdwrap-insertdata:
 
 insertData
-''''''''''
+~~~~~~~~~~
 
 .. container:: table-row
 
@@ -1754,10 +1755,10 @@ insertData
          insertData
 
    Data type
-         boolean /stdWrap
+         :ref:`boolean <data-type-bool>` / :ref:`stdWrap`
 
    Description
-         If set, then the content string is parsed like .dataWrap above.
+         If set, then the content string is parsed like :ts:`dataWrap` above.
 
          **Example:**
 
@@ -1776,7 +1777,7 @@ insertData
 .. _stdwrap-postuserfunc:
 
 postUserFunc
-''''''''''''
+~~~~~~~~~~~~
 
 .. container:: table-row
 
@@ -1784,7 +1785,7 @@ postUserFunc
          postUserFunc
 
    Data type
-         function name
+         :ref:`data-type-function-name`
 
    Description
          Calls the provided PHP function. If you specify the name with a '->'
@@ -1793,9 +1794,9 @@ postUserFunc
          Two parameters are sent to the PHP function: As first parameter a
          content variable, which contains the current content. This is the
          value to be processed. As second parameter any sub-properties of
-         postUserFunc are provided to the function.
+         :ts:`postUserFunc` are provided to the function.
 
-         The description of the cObject :ref:`USER <cobj-user>` contains some
+         The description of the :ts:`cObject` :ref:`USER <cobj-user>` contains some
          more in-depth information.
 
          **Example:**
@@ -1820,7 +1821,8 @@ postUserFunc
               stdWrap.postUserFunc.typolink = 11
             }
 
-         Your methods will get the parameters ``$content`` and ``$conf`` (in that order) and need to return a string.
+         Your methods will get the parameters :php:`$content` and :php:`$conf`
+         (in that order) and need to return a string.
 
          .. code-block:: php
 
@@ -1829,7 +1831,8 @@ postUserFunc
              * Example of a method in a PHP class to be called from TypoScript
              *
              */
-            class YourClass {
+            class YourClass
+            {
               /**
                * Reference to the parent (calling) cObject set from TypoScript
                */
@@ -1842,7 +1845,8 @@ postUserFunc
                * @param	array		TypoScript properties passed to this method.
                * @return	string	The input string reversed. If the TypoScript property "uppercase" was set, it will also be in uppercase. May also be linked.
                */
-              public function reverseString($content, $conf) {
+              public function reverseString($content, $conf)
+              {
                 $content = strrev($content);
                 if (isset($conf['uppercase']) && $conf['uppercase'] === '1') {
                   // Use the method caseshift() from ContentObjectRenderer.php.
@@ -1856,25 +1860,24 @@ postUserFunc
               }
             }
 
-         For page.10 the content, which is present when postUserFunc is
+         For :ts:`page.10` the content, which is present when :ts:`postUserFunc` is
          executed, will be given to the PHP function
-         ``reverseString()``. The result will be "!DLROW OLLEH".
+         :php:`reverseString()`. The result will be "!DLROW OLLEH".
 
-         The content of page.20 will be processed by the function
-         ``reverseString()`` from the class ``YourClass``. This also returns
+         The content of :ts:`page.20` will be processed by the function
+         :php:`reverseString()` from the class :php:`YourClass`. This also returns
          the text "!DLROW OLLEH", but wrapped into a link to the page
-         with the ID 11. The result will be "<a
-         href="index.php?id=11">!DLROW OLLEH</a>".
+         with the ID 11. The result will be :html:`<a href="index.php?id=11">!DLROW OLLEH</a>`.
 
-         Note how in the second example $cObj, the reference to the
-         calling cObject, is utilised to use functions from
-         ContentObjectRenderer.php!
+         Note how in the second example :php:`$cObj`, the reference to the
+         calling :ts:`cObject`, is utilised to use functions from
+         :file:`ContentObjectRenderer.php`!
 
 
 .. _stdwrap-postuserfuncint:
 
 postUserFuncInt
-'''''''''''''''
+~~~~~~~~~~~~~~~
 
 .. container:: table-row
 
@@ -1882,7 +1885,7 @@ postUserFuncInt
          postUserFuncInt
 
    Data type
-         function name
+         :ref:`data-type-function-name`
 
    Description
          Calls the provided PHP function. If you specify the name with a '->'
@@ -1894,7 +1897,8 @@ postUserFuncInt
          postUserFuncInt are provided to the function.
 
          The result will be rendered non-cached, outside the main
-         page-rendering. Please see the description of the cObject :ref:`USER_INT <cobj-user-int>`.
+         page-rendering. Please see the description of the :ts:`cObject`
+         :ref:`USER_INT <cobj-user-int>`.
 
          Supplied by Jens Ellerbrock
 
@@ -1902,7 +1906,7 @@ postUserFuncInt
 .. _stdwrap-preficomment:
 
 prefixComment
-'''''''''''''
+~~~~~~~~~~~~~
 
 .. container:: table-row
 
@@ -1910,14 +1914,14 @@ prefixComment
          prefixComment
 
    Data type
-         string /stdWrap
+         :ref:`data-type-string` / :ref:`stdWrap`
 
    Description
          Prefixes content with an HTML comment with the second part of input
          string (divided by "\|") where first part is an integer telling how
          many trailing tabs to put before the comment on a new line.
 
-         The content is parsed through insertData.
+         The content is parsed through :ref:`stdwrap-insertData`.
 
          **Example:** ::
 
@@ -1929,7 +1933,7 @@ prefixComment
 .. _stdwrap-editicons:
 
 editIcons
-'''''''''
+~~~~~~~~~
 
 .. container:: table-row
 
@@ -1937,11 +1941,11 @@ editIcons
          editIcons
 
    Data type
-         string /stdWrap
+         :ref:`data-type-string` / :ref:`stdWrap`
 
    Description
          If not empty, then insert an icon linking to
-         typo3/sysext/backend/Classes/Controller/EditDocumentController.php
+         :file:`typo3/sysext/backend/Classes/Controller/EditDocumentController.php`
          with some parameters to build and backend user edit form for certain
          fields.
 
@@ -1987,7 +1991,7 @@ editIcons
 .. _stdwrap-editpanel:
 
 editPanel
-'''''''''
+~~~~~~~~~
 
 .. container:: table-row
 
@@ -1995,16 +1999,16 @@ editPanel
          editPanel
 
    Data type
-         boolean / editPanel
+         :ref:`boolean <data-type-bool>` / :ref:`cobj-editpanel`
 
    Description
-         See cObject :ref:`cobj-editpanel`.
+         See :ts:`cObject` :ref:`cobj-editpanel`.
 
 
 .. _stdwrap-cache:
 
 cache
-'''''
+~~~~~
 
 .. container:: table-row
 
@@ -2012,7 +2016,7 @@ cache
          cache
 
    Data type
-         :ref:`cache <cache>`
+         :ref:`cache`
 
    Description
          Caches rendered content in the caching framework.
@@ -2021,7 +2025,7 @@ cache
 .. _stdwrap-debug:
 
 debug
-'''''
+~~~~~
 
 .. container:: table-row
 
@@ -2029,12 +2033,12 @@ debug
          debug
 
    Data type
-         boolean /stdWrap
+         :ref:`boolean <data-type-bool>` / :ref:`stdWrap`
 
    Description
-         Prints content with HTMLSpecialChars() and <pre></pre>: Useful for
-         debugging which value stdWrap actually ends up with, if you are
-         constructing a website with TypoScript.
+         Prints content with :php:`HTMLSpecialChars()` and :html:`<pre></pre>`:
+         Useful for debugging which value :ts:`stdWrap` actually ends up with,
+         if you are constructing a website with TypoScript.
 
          Should be used under construction only.
 
@@ -2042,7 +2046,7 @@ debug
 .. _stdwrap-debugfunc:
 
 debugFunc
-'''''''''
+~~~~~~~~~
 
 .. container:: table-row
 
@@ -2050,10 +2054,10 @@ debugFunc
          debugFunc
 
    Data type
-         boolean /stdWrap
+         :ref:`boolean <data-type-bool>` / :ref:`stdWrap`
 
    Description
-         Prints the content directly to browser with the debug() function.
+         Prints the content directly to browser with the :php:`debug()` function.
 
          Should be used under construction only.
 
@@ -2063,7 +2067,7 @@ debugFunc
 .. _stdwrap-debugdata:
 
 debugData
-'''''''''
+~~~~~~~~~
 
 .. container:: table-row
 
@@ -2071,14 +2075,13 @@ debugData
          debugData
 
    Data type
-         boolean /stdWrap
+         :ref:`boolean <data-type-bool>` / :ref:`stdWrap`
 
    Description
-         Prints the current data-array, $cObj->data, directly to browser. This
-         is where ".field" gets data from.
+         Prints the current data-array, :php:`$cObj->data`, directly to browser. This
+         is where :ts:`field` gets data from.
 
          Should be used under construction only.
 
 
 [tsref:->stdWrap]
-

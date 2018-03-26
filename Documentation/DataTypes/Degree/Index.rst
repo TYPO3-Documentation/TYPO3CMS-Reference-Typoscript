@@ -3,6 +3,7 @@
 
 .. _data-type-degree:
 
+======
 degree
 ======
 
@@ -16,6 +17,3 @@ degree
 
    Comment
          -90 to 90, integers
-
-
-

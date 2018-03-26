@@ -3,6 +3,7 @@
 
 .. _data-type-list:
 
+====
 list
 ====
 
@@ -16,4 +17,3 @@ list
 
    Comment
          list of values
-

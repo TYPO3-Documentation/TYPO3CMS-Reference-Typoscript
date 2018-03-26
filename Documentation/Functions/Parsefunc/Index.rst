@@ -3,14 +3,20 @@
 
 .. _parsefunc:
 
+=========
 parseFunc
-^^^^^^^^^
+=========
 
 This object is used to parse some content for stuff like special typo
-tags, the "makeLinks"-things and so on...
+tags, the :ref:`parsefunc-makeLinks`-things and so on...
 
 
 .. ### BEGIN~OF~TABLE ###
+
+.. _parsefunc-externalBlocks:
+
+externalBlocks
+==============
 
 .. container:: table-row
 
@@ -28,30 +34,30 @@ tags, the "makeLinks"-things and so on...
 
          **.[tagname]** {
 
-            **callRecursive:** Boolean. If set, the content of the block is
+            **callRecursive:** :ref:`data-type-boolean`. If set, the content of the block is
             directed into parseFunc again. Otherwise the content is just passed
-            through with no other processing than stdWrap (see below).
+            through with no other processing than :ref:`stdwrap` (see below).
 
-            **callRecursive.dontWrapSelf:** Boolean. If set, the tags of the
+            **callRecursive.dontWrapSelf:** :ref:`data-type-boolean`. If set, the tags of the
             block is *not* wrapped around the content returned from parseFunc.
 
             **callRecursive.alternativeWrap:** Alternative wrapping instead of
             the original tags.
 
-            **callRecursive.tagStdWrap:** ->stdWrap processing of the block-tags.
+            **callRecursive.tagStdWrap:** :ref:`stdwrap` processing of the block-tags.
 
-            **stdWrap:** ->stdWrap processing of the whole block (regardless of
+            **stdWrap:** :ref:`stdwrap` processing of the whole block (regardless of
             whether callRecursive was set.)
 
-            **stripNLprev:** Boolean. Strips off last line break of the previous
+            **stripNLprev:** :ref:`data-type-boolean`. Strips off last line break of the previous
             outside block.
 
-            **stripNLnext:** Boolean. Strips off first line break of the next
+            **stripNLnext:** :ref:`data-type-boolean`. Strips off first line break of the next
             outside block.
 
-            **stripNL:** Boolean. Does both of the above.
+            **stripNL:** :ref:`data-type-boolean`. Does both of the above.
 
-            **HTMLtableCells:** Boolean. If set, then the content is expected
+            **HTMLtableCells:** :ref:`data-type-boolean`. If set, then the content is expected
             to be a table and every table-cell is traversed.
 
             Below, "default" means all cells and "1", "2", "3", ... overrides
@@ -59,17 +65,17 @@ tags, the "makeLinks"-things and so on...
 
             **HTMLtableCells.[default/1/2/3/...]** {
 
-               **callRecursive:** Boolean. The content is parsed through current
+               **callRecursive:** :ref:`data-type-boolean`. The content is parsed through current
                parseFunc.
 
-               **stdWrap:** ->stdWrap processing of the content in the cell.
+               **stdWrap:** :ref:`stdwrap` processing of the content in the cell.
 
-               **tagStdWrap:** -> The <TD> tag is processed by ->stdWrap.
+               **tagStdWrap:** -> The :html:`<TD>` tag is processed by :ref:`stdwrap`.
 
             }
 
-         **HTMLtableCells.addChr10BetweenParagraphs:** Boolean. If set, then
-         all appearances of "</P><P>" will have a chr(10) inserted between them.
+         **HTMLtableCells.addChr10BetweenParagraphs:** :ref:`data-type-boolean`. If set, then
+         all appearances of :html:`</P><P>` will have a :php:`chr(10)` inserted between them.
 
          }
 
@@ -85,24 +91,28 @@ tags, the "makeLinks"-things and so on...
          overridden. ::
 
             tt_content.text.20.parseFunc.externalBlocks {
-              blockquote.callRecursive = 1
-              blockquote.callRecursive.tagStdWrap.HTMLparser = 1
-              blockquote.callRecursive.tagStdWrap.HTMLparser {
-                tags.blockquote.fixAttrib.style.list = margin-bottom:0;margin-top:0;
-                tags.blockquote.fixAttrib.style.always = 1
-              }
-              blockquote.stripNLprev = 1
-              blockquote.stripNLnext = 1
+                blockquote.callRecursive = 1
+                blockquote.callRecursive.tagStdWrap.HTMLparser = 1
+                blockquote.callRecursive.tagStdWrap.HTMLparser {
+                    tags.blockquote.fixAttrib.style.list = margin-bottom:0;margin-top:0;
+                    tags.blockquote.fixAttrib.style.always = 1
+                }
+                blockquote.stripNLprev = 1
+                blockquote.stripNLnext = 1
 
-              table.stripNL = 1
-              table.stdWrap.HTMLparser = 1
-              table.stdWrap.HTMLparser {
-                tags.table.overrideAttribs = border="0" style="margin-top: 10px;"
-                tags.tr.allowedAttribs = 0
-                tags.td.overrideAttribs = class="table-cell" style="font-size: 10px;"
-              }
+                table.stripNL = 1
+                table.stdWrap.HTMLparser = 1
+                table.stdWrap.HTMLparser {
+                    tags.table.overrideAttribs = border="0" style="margin-top: 10px;"
+                    tags.tr.allowedAttribs = 0
+                    tags.td.overrideAttribs = class="table-cell" style="font-size: 10px;"
+                }
             }
 
+.. _parsefunc-constants:
+
+constants
+=========
 
 .. container:: table-row
 
@@ -110,7 +120,7 @@ tags, the "makeLinks"-things and so on...
          constants
 
    Data type
-         boolean
+         :ref:`data-type-boolean`
 
    Description
          You can define constants in the :ref:`top-level object "constants"
@@ -127,10 +137,14 @@ tags, the "makeLinks"-things and so on...
          *(The definition of the constant above is top-level TypoScript. It
          belongs on one level with the objects "config" and "page".)*
 
-         If you now use parseFunc with .constants = 1, all occurrences of the
+         If you now use parseFunc with :ts:`constants = 1`, all occurrences of the
          string ###EMAIL### in the text will be substituted with the actual
          address.
 
+.. _parsefunc-short:
+
+short
+=====
 
 .. container:: table-row
 
@@ -149,10 +163,14 @@ tags, the "makeLinks"-things and so on...
          with a link to typo3.org. ::
 
             short {
-              T3 = TYPO3 CMS
-              T3web = <a href="http://typo3.org">typo3.org</a>
+                T3 = TYPO3 CMS
+                T3web = <a href="http://typo3.org">typo3.org</a>
             }
 
+.. _parsefunc-plainTextStdWrap:
+
+plainTextStdWrap
+================
 
 .. container:: table-row
 
@@ -160,11 +178,15 @@ tags, the "makeLinks"-things and so on...
          plainTextStdWrap
 
    Data type
-         ->stdWrap
+         :ref:`stdwrap`
 
    Description
-         This is stdWrap properties for all non-tag content.
+         This is :ref:`stdwrap` properties for all non-tag content.
 
+.. _parsefunc-userFunc:
+
+userFunc
+========
 
 .. container:: table-row
 
@@ -172,14 +194,18 @@ tags, the "makeLinks"-things and so on...
          userFunc
 
    Data type
-         function name
+         :ref:`data-type-function-name`
 
    Description
          This passes the non-tag content to a function of your own choice.
-         Similar to e.g. .postUserFunc in stdWrap.
+         Similar to e.g. :ref:`stdwrap-postuserfunc` in :ref:`stdWrap`.
 
-         Remember the function name must possibly be prepended "user\_"
+         Remember the function name must possibly be prepended :php:`user_`.
 
+.. _parsefunc-nonTypoTagStdWrap:
+
+nonTypoTagStdWrap
+=================
 
 .. container:: table-row
 
@@ -187,16 +213,20 @@ tags, the "makeLinks"-things and so on...
          nonTypoTagStdWrap
 
    Data type
-         ->stdWrap
+         :ref:`stdWrap`
 
    Description
-         Like .plainTextStdWrap. Difference:
+         Like :ref:`parsefunc-plainTextStdWrap`. Difference:
 
-         .plainTextStdWrap works an ALL non-tag pieces in the text.
-         .nonTypoTagStdWrap is post processing of all text (including tags)
-         between special TypoTags (unless .breakoutTypoTagContent is not set
-         for the TypoTag).
+         :ref:`parsefunc-plainTextStdWrap` works an ALL non-tag pieces in the text.
+         :ref:`parsefunc-nonTypoTagStdWrap` is post processing of all text
+         (including tags) between special TypoTags
+         (unless :ts:`breakoutTypoTagContent` is not set for the TypoTag).
 
+.. _parsefunc-nonTypoTagUserFunc:
+
+nonTypoTagUserFunc
+==================
 
 .. container:: table-row
 
@@ -204,14 +234,20 @@ tags, the "makeLinks"-things and so on...
          nonTypoTagUserFunc
 
    Data type
-         function name
+         :ref:`data-type-function-name`
 
    Description
-         Like .userFunc. Differences is (like nonTypoTagStdWrap) that this is
-         post processing of all content pieces around TypoTags while .userFunc
-         processes all non-tag content. (Notice: .breakoutTypoTagContent must
-         be set for the TypoTag if it's excluded from nonTypoTagContent).
+         Like :ref:`parsefunc-userFunc`.
+         Differences is (like :ref:`parsefunc-nonTypoTagStdWrap`)
+         that this is post processing of all content pieces around TypoTags while
+         :ref:`parsefunc-userFunc` processes all non-tag content.
+         (Notice: :ts:`breakoutTypoTagContent` must be set for the TypoTag
+         if it's excluded from :ts:`nonTypoTagContent`).
 
+.. _parsefunc-sword:
+
+sword
+=====
 
 .. container:: table-row
 
@@ -219,17 +255,21 @@ tags, the "makeLinks"-things and so on...
          sword
 
    Data type
-         wrap
+         :ref:`data-type-wrap`
 
    Description
-         Marks up any words from the GET-method send array sword\_list[] in the
+         Marks up any words from the GET-method send array :php:`sword_list[]` in the
          text. The word MUST be at least two characters long!
 
-         **Note:** works only with $GLOBALS['TSFE']->no\_cache = 1.
+         **Note:** works only with :php:`$GLOBALS['TSFE']->no_cache = 1`.
 
    Default
-         <font color="red">\|</font>
+         :ts:`<font color="red">|</font>`
 
+.. _parsefunc-makelinks:
+
+makelinks
+=========
 
 .. container:: table-row
 
@@ -237,12 +277,16 @@ tags, the "makeLinks"-things and so on...
          makelinks
 
    Data type
-         boolean / ->makelinks
+         :ref:`data-type-boolean` / ->makelinks
 
    Description
          Convert web addresses prefixed with "http://" and mail addresses
          prefixed with "mailto:" to links.
 
+.. _parsefunc-tags:
+
+tags
+====
 
 .. container:: table-row
 
@@ -256,6 +300,10 @@ tags, the "makeLinks"-things and so on...
          Here you can define **custom tags** that will parse the content to
          something.
 
+.. _parsefunc-allowTags:
+
+allowTags
+=========
 
 .. container:: table-row
 
@@ -268,9 +316,13 @@ tags, the "makeLinks"-things and so on...
    Description
          List of tags, which are allowed to exist in code!
 
-         Highest priority: If a tag is found in allowTags, denyTags is
-         ignored!
+         Highest priority: If a tag is found in :ref:`parsefunc-allowTags`,
+         :ref:`parsefunc-denyTags` is ignored!
 
+.. _parsefunc-denyTags:
+
+denyTags
+========
 
 .. container:: table-row
 
@@ -283,17 +335,21 @@ tags, the "makeLinks"-things and so on...
    Description
          List of tags, which may **not** exist in code! (use "\*" for all.)
 
-         Lowest priority: If a tag is **not** found in allowTags, denyTags is
-         checked. If denyTags is not "\*" and the tag is not found in the list,
-         the tag may exist!
+         Lowest priority: If a tag is **not** found in :ref:`parsefunc-allowTags`,
+         :ref:`parsefunc-denyTags` is checked.
+         If denyTags is not "\*" and the tag is not found in the list, the tag may exist!
 
          **Example:**
 
-         This allows <B>, <I>, <A> and <IMG> -tags to exist ::
+         This allows :html:`<b>`, :html:`<i>`, :html:`<a>` and :html:`<img>` -tags to exist ::
 
             .allowTags = b,i,a,img
             .denyTags = *
 
+.. _parsefunc-if:
+
+if
+==
 
 .. container:: table-row
 
@@ -317,37 +373,36 @@ tags, the "makeLinks"-things and so on...
 .. _parsefunc-examples:
 
 Example:
-""""""""
+========
 
 This example takes the content of the field "bodytext" and parses it
-through the makelinks-functions and substitutes all <LINK> and
-<TYPOLIST>-tags with something else. ::
+through the :ref:`parsefunc-makelinks`-functions and substitutes all
+:html:`<LINK>` and :html:`<TYPOLIST>`-tags with something else. ::
 
    tt_content.text.default {
-     20 = TEXT
-     20.stdWrap.field = bodytext
-     20.stdWrap.wrap = | <br>
-     20.stdWrap.brTag = <br>
-     20.stdWrap.parseFunc {
-       makelinks = 1
-       makelinks.http.keep = path
-       makelinks.http.extTarget = _blank
-       makelinks.mailto.keep = path
-       tags {
-         link = TEXT
-         link {
-           stdWrap.current = 1
-           stdWrap.typolink.extTarget = _blank
-           stdWrap.typolink.target = {$cLinkTagTarget}
-           stdWrap.typolink.wrap = <p style="color: red; font-weight: bold;">|</p>
-           stdWrap.typolink.parameter.data = parameters : allParams
-         }
+       20 = TEXT
+       20.stdWrap.field = bodytext
+       20.stdWrap.wrap = | <br>
+       20.stdWrap.brTag = <br>
+       20.stdWrap.parseFunc {
+           makelinks = 1
+           makelinks.http.keep = path
+           makelinks.http.extTarget = _blank
+           makelinks.mailto.keep = path
+           tags {
+               link = TEXT
+               link {
+                   stdWrap.current = 1
+                   stdWrap.typolink.extTarget = _blank
+                   stdWrap.typolink.target = {$cLinkTagTarget}
+                   stdWrap.typolink.wrap = <p style="color: red; font-weight: bold;">|</p>
+                   stdWrap.typolink.parameter.data = parameters : allParams
+               }
 
-         typolist < tt_content.bullets.default.20
-         typolist.trim = 1
-         typolist.field >
-         typolist.current = 1
+               typolist < tt_content.bullets.default.20
+               typolist.trim = 1
+               typolist.field >
+               typolist.current = 1
+           }
        }
-     }
    }
-

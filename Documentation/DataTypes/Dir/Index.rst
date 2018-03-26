@@ -3,6 +3,7 @@
 
 .. _data-type-dir:
 
+===
 dir
 ===
 
@@ -24,5 +25,3 @@ dir
          [return full path: boolean]
 
          Files matching are returned in a comma-separated string.
-
-

@@ -4,6 +4,7 @@
 .. _data-type-boolean:
 .. _data-type-bool:
 
+=======
 boolean
 =======
 

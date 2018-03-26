@@ -3,6 +3,7 @@
 
 .. _data-type-unix-time:
 
+=========
 UNIX-time
 =========
 
@@ -18,6 +19,3 @@ UNIX-time
 
    Comment
          Seconds since January 1st 1970.
-
-
-

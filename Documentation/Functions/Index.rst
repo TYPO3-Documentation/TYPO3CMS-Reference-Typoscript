@@ -3,8 +3,9 @@
 
 .. _functions:
 
+=========
 Functions
----------
+=========
 
 
 .. toctree::
@@ -33,4 +34,3 @@ Functions
    Htmlparser/Index
    HtmlparserTags/Index
    Cache/Index
-

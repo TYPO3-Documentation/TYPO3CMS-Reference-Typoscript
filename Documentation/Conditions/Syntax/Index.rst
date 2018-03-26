@@ -22,26 +22,26 @@ General syntax
 Each condition is encapsulated by square brackets. For a list of
 available conditions see below.
 
-`[ELSE]` is available as else operator. It is a condition, which will
+:ts:`[ELSE]` is available as else operator. It is a condition, which will
 return TRUE, if the previous condition returned FALSE.
 
-Each condition block is ended with `[END]`.
+Each condition block is ended with :ts:`[END]`.
 
 
-`[GLOBAL]` is a condition by itself that always returns "true".
+:ts:`[GLOBAL]` is a condition by itself that always returns "true".
 It ensures that the following TypoScript code is located in the
 global scope. So you can be sure that it's not affected by previous
 TypoScript, for example if a closing bracket is missing.
 The *Template Analyzer* shows this very well: TYPO3 places a
-`[GLOBAL]` condition at the beginning of each TypoScript file.
+:ts:`[GLOBAL]` condition at the beginning of each TypoScript file.
 
-As a developer you can use `[GLOBAL]` for testing purposes
+As a developer you can use :ts:`[GLOBAL]` for testing purposes
 to ensure that your own condition works as expected.
 See :ref:`t3tssyntax:The-Global-Condition` for additional documentation.
 
 
 Example
--------
+~~~~~~~
 
 Test day of month::
 
@@ -69,24 +69,24 @@ operator has been specified, it will default to OR.
 
 
 Examples
---------
+~~~~~~~~
 
 Test day of month and month
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+"""""""""""""""""""""""""""
 
 This condition will match on May 9th::
 
    [dayofmonth = 9] && [month = 5]
 
 Test day of month
-~~~~~~~~~~~~~~~~~
+"""""""""""""""""
 
 This will match on either the ninth or the tenth of a month::
 
    [dayofmonth = 9] || [dayofmonth = 10]
 
 Test month and day of month
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+"""""""""""""""""""""""""""
 
 This will match in either June or May. In case of
 May, the day of the month must be above 8::

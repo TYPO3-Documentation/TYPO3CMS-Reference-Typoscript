@@ -4,6 +4,7 @@
 
 .. _imagelinkwrap:
 
+=============
 imageLinkWrap
 =============
 
@@ -13,14 +14,14 @@ imageLinkWrap
 
 
 Properties
-----------
+==========
 
 .. container:: ts-properties
 
   ===================================================== ===================================================================== ======= ==================
   Property                                              Data types                                                            stdWrap Default
   ===================================================== ===================================================================== ======= ==================
-  :ts:`imageLinkWrap =`                                 :ref:`data-type-boolean`                                              yes       0
+  imageLinkWrap_ =                                      :ref:`data-type-boolean`                                              yes       0
   enable_ =                                             :ref:`data-type-boolean`                                              yes       0
   file_ =                                               :ref:`stdwrap`                                                        yes
   width_ =                                              :ref:`data-type-positive-integer`                                     yes
@@ -43,18 +44,8 @@ Properties
   stdWrap_ =                                            :ref:`stdwrap`                                                        yes
   ===================================================== ===================================================================== ======= ==================
 
-
-
-Property details
-----------------
-
-.. contents::
-   :local:
-   :depth: 1
-
-
 enable
-~~~~~~
+======
 
 :ts:`imageLinkWrap.enable =` :ref:`data-type-boolean`
 
@@ -64,7 +55,7 @@ Whether or not to link the image. Must be set to True to make
 
 
 file
-~~~~
+====
 
 :ts:`imageLinkWrap.file =` :ref:`stdwrap`
 
@@ -72,7 +63,7 @@ Apply :ref:`stdwrap` functionality to the file path.
 
 
 width
-~~~~~
+=====
 
 :ts:`imageLinkWrap.width =` :ref:`data-type-positive-integer`
 
@@ -83,7 +74,7 @@ image will be preserved.
 
 
 height
-~~~~~~
+======
 
 :ts:`imageLinkWrap.height =` :ref:`data-type-positive-integer`
 
@@ -95,7 +86,7 @@ image will be preserved.
 
 
 effects
-~~~~~~~
+=======
 
 :ts:`imageLinkWrap.effects =` like :ref:`gifbuilder-effect` of
 :ref:`GIFBUILDER`
@@ -103,7 +94,7 @@ effects
 Apply image effects to the preview image.
 
 Example for effects
-"""""""""""""""""""
+~~~~~~~~~~~~~~~~~~~
 
 .. code-block:: typoscript
 
@@ -119,7 +110,7 @@ Example for effects
 
 
 sample
-~~~~~~
+======
 
 :ts:`imageLinkWrap.sample =` :ref:`data-type-boolean`
 
@@ -133,7 +124,7 @@ GraphicsMagick or ImageMagick.
 
 
 alternativeTempPath
-~~~~~~~~~~~~~~~~~~~
+===================
 
 :ts:`imageLinkWrap.alternativeTempPath =` :ref:`data-type-path`
 
@@ -142,7 +133,7 @@ images.
 
 
 title
-~~~~~
+=====
 
 :ts:`imageLinkWrap.title =` :ref:`data-type-string`
 
@@ -151,7 +142,7 @@ Needs :ts:`JSwindow = 1`.
 
 
 bodyTag
-~~~~~~~
+=======
 
 :ts:`imageLinkWrap.bodyTag =` :ref:`data-type-tag`
 
@@ -176,7 +167,7 @@ Example:
 
 
 wrap
-~~~~
+====
 
 :ts:`imageLinkWrap.wrap =` :ref:`data-type-wrap`
 
@@ -185,7 +176,7 @@ Needs :ts:`JSwindow = 1`.
 
 
 target
-~~~~~~
+======
 
 :ts:`imageLinkWrap.target =` :ref:`data-type-target`
 
@@ -211,7 +202,7 @@ Examples:
 
 
 JSwindow
-~~~~~~~~
+========
 
 :ts:`imageLinkWrap.JSwindow =` :ref:`data-type-boolean`
 
@@ -222,7 +213,7 @@ the dimensions of the image.
 
 
 JSwindow.expand
-~~~~~~~~~~~~~~~
+===============
 
 :ts:`imageLinkWrap.JSwindow.expand =` :ts:`x`,
 :ts:`y`
@@ -235,7 +226,7 @@ preview window.
 
 
 JSwindow.newWindow
-~~~~~~~~~~~~~~~~~~
+==================
 
 :ts:`imageLinkWrap.JSwindow.newWindow =` :ref:`data-type-boolean`
 
@@ -244,15 +235,14 @@ attribute then the image will be opened in a window with the name given
 by `target`. If that windows is kept open and the next image with the
 same :ref:`data-type-target` attribute is to be shown then it will appear
 in the same preview window.
-If :ts:`JSwindow.newWindow` is set to True
-(:ts:` = 1`) then a unique hash value is used as `target`
-value for each image. This garantees that each image is opened in a new
-window.
+If :ts:`JSwindow.newWindow` is set to True,
+then a unique hash value is used as `target` value for each image.
+This guarantees that each image is opened in a new window.
 
 
 
 JSwindow.altUrl
-~~~~~~~~~~~~~~~
+===============
 
 :ts:`imageLinkWrap.JSwindow.altUrl =` :ref:`data-type-string`
 
@@ -262,7 +252,7 @@ Otherwise the default "showpic" script will be used.
 
 
 JSwindow.altUrl\_noDefaultParams
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+================================
 
 :ts:`imageLinkWrap.JSwindow.altUrl_noDefaultParams =`
 :ref:`data-type-boolean`
@@ -275,7 +265,7 @@ in a special way.
 
 
 typolink
-~~~~~~~~
+========
 
 :ts:`imageLinkWrap.typolink =` like :ref:`typolink`
 
@@ -286,7 +276,7 @@ everything else.
 
 
 directImageLink
-~~~~~~~~~~~~~~~
+===============
 
 :ts:`imageLinkWrap.directImageLink =` :ref:`data-type-boolean`
 
@@ -297,7 +287,7 @@ generated that points directly to the image file. This means that no
 
 
 linkParams
-~~~~~~~~~~
+==========
 
 :ts:`imageLinkWrap.linkParams =` any of the options of
 :ref:`typolink`
@@ -326,7 +316,7 @@ resized images in the frontend. More complete examples are
 
 
 stdWrap
-~~~~~~~
+=======
 
 :ts:`imageLinkWrap.stdWrap =` :ref:`stdwrap`
 
@@ -336,7 +326,7 @@ result.
 
 
 What it does
-------------
+============
 
 :ts:`imageLinkWrap = 1`
 
@@ -359,7 +349,7 @@ special values.
 
 
 Implementation
---------------
+==============
 
 - imageLinkWrap__ in API__,
 - method `imageLinkWrap` in
@@ -378,7 +368,7 @@ __ http://typo3.org/api/typo3cms/
 .. _imagelinkwrap-examples:
 
 Examples for imageLinkWrap
---------------------------
+==========================
 
 .. contents::
    :local:
@@ -397,11 +387,11 @@ Basic example: Create a link to the showpic script
 
    10 = IMAGE
    10 {
-         # point to the image
+      # point to the image
       file = fileadmin/demo/lorem_ipsum/images/a4.jpg
-         # make it rather small
+      # make it rather small
       file.width = 80
-         # add a link to tx_cms_showpic.php that shows the original image
+      # add a link to tx_cms_showpic.php that shows the original image
       imageLinkWrap = 1
       imageLinkWrap {
          enable = 1
@@ -427,7 +417,7 @@ Basic example: Link directly to the original image
       imageLinkWrap = 1
       imageLinkWrap {
          enable = 1
-            # link directly to the image
+         # link directly to the image
          directImageLink = 1
          # JSwindow = 1
       }
@@ -586,4 +576,3 @@ __ http://gettopup.com/
    Links of interest:
    `click-enlage (de) <http://jweiland.net/typo3/typoscript/click-enlarge.html>`_,
    `lightbox.ts <https://github.com/georgringer/modernpackage/blob/master/Resources/Private/TypoScript/content/lightbox.ts>`_,
-

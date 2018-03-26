@@ -3,6 +3,7 @@
 
 .. _data-type-align:
 
+=====
 align
 =====
 

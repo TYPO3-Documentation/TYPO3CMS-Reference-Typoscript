@@ -3,12 +3,18 @@
 
 .. _addparams:
 
+=========
 addParams
-^^^^^^^^^
+=========
 
 Adds parameters to an HTML tag.
 
 .. ### BEGIN~OF~TABLE ###
+
+.. _addParams-\_offset:
+
+\_offset
+========
 
 .. container:: table-row
 
@@ -16,7 +22,7 @@ Adds parameters to an HTML tag.
          \_offset
 
    Data type
-         integer
+         :ref:`data-type-integer`
 
    Description
          Use this to define which tag you want to manipulate.
@@ -27,6 +33,10 @@ Adds parameters to an HTML tag.
    Default
          1
 
+.. _addParams-*(array-of-strings)*:
+
+*(array of strings)*
+====================
 
 .. container:: table-row
 
@@ -34,7 +44,7 @@ Adds parameters to an HTML tag.
          *(array of strings)*
 
    Data type
-         string /:ref:`stdWrap <stdwrap>`
+         :ref:`data-type-string` / :ref:`stdwrap`
 
    Description
          The name of the property defines the property to be added to the
@@ -56,7 +66,7 @@ Adds parameters to an HTML tag.
 .. _addparams-examples:
 
 Example:
-""""""""
+========
 
 ::
 
@@ -65,10 +75,11 @@ Example:
    page.13.stdWrap.addParams.bgcolor = white
    page.13.stdWrap.addParams._offset = -1
 
-Result example::
+Result example:
+
+.. code-block:: html
 
    <tr><td bgcolor="white">
 
-This example adds the 'bgColor' property to the value of the TEXT
-cObject.
-
+This example adds the :ts:`bgColor` property to the value of the :ref:`cobj-text`
+:ref:`data-type-cobject`.

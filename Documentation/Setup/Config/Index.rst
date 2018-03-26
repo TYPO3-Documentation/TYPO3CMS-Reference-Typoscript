@@ -399,13 +399,13 @@ compressCss
    Description
          If set, CSS files referenced in page.includeCSS and the like will be
          minified and compressed. Does not work on files, which are referenced
-         in page.headerData.
+         in ``page.headerData``.
 
          Minification will remove all excess space. The more significant
          compression step (using gzip compression) requires
-         $TYPO3\_CONF\_VARS['FE']['compressionLevel'] to be enabled in the
+         `$GLOBALS['TYPO3_CONF_VARS']['FE']['compressionLevel']` to be enabled in the
          Install Tool. For this to work you also need to activate the gzip-
-         related compressionLevel options in .htaccess, as otherwise the
+         related compressionLevel options in ``.htaccess``, as otherwise the
          compressed files will not be readable by the user agent.
 
          **Example**::
@@ -414,13 +414,15 @@ compressCss
 
          **Note:** TYPO3 comes with a built-in compression handler, but you can
          also register your own one using
-         $GLOBALS['TYPO3\_CONF\_VARS']['FE']['cssCompressHandler'].
+         ``$GLOBALS['TYPO3_CONF_VARS']['FE']['cssCompressHandler']``.
 
-         **Example**::
+         **Example**:
+
+         .. code-block:: php
 
             $GLOBALS['TYPO3_CONF_VARS']['FE']['cssCompressHandler'] =
-               TYPO3\CMS\Core\Extension\ExtensionManager::extPath($_EXTKEY) .
-               'Classes/class.tx_myext_cssCompressHandler.php:tx_myext_cssCompressHandler->compressCss';
+               \TYPO3\CMS\Core\Extension\ExtensionManager::extPath($_EXTKEY) .
+               'Classes/CssCompressHandler.php:Vendor\MyExt\CssCompressHandler->compressCss';
 
 
 
@@ -443,7 +445,7 @@ compressJs
 
    Description
          Enabling this option together with
-         $TYPO3\_CONF\_VARS['FE']['compressionLevel'] in the Install Tool
+         ``$GLOBALS['TYPO3_CONF_VARS']['FE']['compressionLevel']`` in the Install Tool
          delivers Frontend JavaScript files referenced in page.includeJS and
          the like using GZIP compression. Does not work on files, which are
          referenced in page.headerData.
@@ -453,7 +455,7 @@ compressJs
 
          Please note that this requires .htaccess to be adjusted, as otherwise
          the files will not be readable by the user agent. Please see the
-         description of $TYPO3\_CONF\_VARS['FE']['compressionLevel'] in the
+         description of ``$GLOBALS['TYPO3_CONF_VARS']['FE']['compressionLevel']`` in the
          Install Tool.
 
          **Example**::
@@ -462,13 +464,15 @@ compressJs
 
          **Note:** TYPO3 comes with a built-in compression handler, but you can
          also register your own one using
-         $GLOBALS['TYPO3\_CONF\_VARS']['FE']['jsCompressHandler'].
+         ``$GLOBALS['TYPO3_CONF_VARS']['FE']['jsCompressHandler']``.
 
-         **Example**::
+         **Example**:
+
+         .. code-block:: php
 
             $GLOBALS['TYPO3_CONF_VARS']['FE']['jsCompressHandler'] =
-               TYPO3\CMS\Core\Extension\ExtensionManager::extPath($_EXTKEY) .
-               'Classes/class.tx_myext_jsCompressHandler.php:tx_myext_jsCompressHandler->compressJs';
+               \TYPO3\CMS\Core\Extension\ExtensionManager::extPath($_EXTKEY) .
+               'Classes/JsCompressHandler.php:Vendor\MyExt\JsCompressHandler->compressJs';
 
 
 
@@ -490,7 +494,7 @@ concatenateCss
          0
 
    Description
-         Setting config.concatenateCss merges Stylesheet files referenced in
+         Setting :ts:`config.concatenateCss` merges Stylesheet files referenced in
          the Frontend in page.includeCSS and the like together. Files are merged
          only, if their media attribute has the same value, e.g. if it is "all"
          for several files. Does not work on files, which are referenced in
@@ -502,13 +506,15 @@ concatenateCss
 
          **Note:** TYPO3 comes with a built-in concatenation handler, but you
          can also register your own one using
-         $GLOBALS['TYPO3\_CONF\_VARS']['FE']['cssConcatenateHandler'].
+         ``$GLOBALS['TYPO3_CONF_VARS']['FE']['cssConcatenateHandler']``.
 
-         **Example**::
+         **Example**:
 
-            $GLOBALS['TYPO3_CONF_VARS']['FE']['cssConcatenateHandler'] =
-               TYPO3\CMS\Core\Extension\ExtensionManager::extPath($_EXTKEY) .
-               'Classes/class.tx_myext_cssConcatenateHandler.php:tx_myext_cssConcatenateHandler->concatenateCss';
+         .. code-block:: php
+
+            $GLOBALS['TYPO3_CONF_VARS']['FE']['cssCompressHandler'] =
+               \TYPO3\CMS\Core\Extension\ExtensionManager::extPath($_EXTKEY) .
+               'Classes/CssCompressHandler.php:Vendor\MyExt\CssCompressHandler->compressCss';
 
 
 
@@ -530,9 +536,9 @@ concatenateJs
          0
 
    Description
-         Setting config.concatenateJs merges JavaScript files referenced in
-         the Frontend in page.includeJS and the like together. Does not work
-         on files, which are referenced in page.headerData.
+         Setting :ts:`config.concatenateJs` merges JavaScript files referenced in
+         the Frontend in :ts:`page.includeJS` and the like together. Does not work
+         on files, which are referenced in :ts:`page.headerData`.
 
          **Example**::
 
@@ -540,13 +546,15 @@ concatenateJs
 
          **Note:** TYPO3 comes with a built-in concatenation handler, but you
          can also register your own one using
-         $GLOBALS['TYPO3\_CONF\_VARS']['FE']['jsConcatenateHandler'].
+         ``$GLOBALS['TYPO3_CONF_VARS']['FE']['jsConcatenateHandler']``.
 
-         **Example**::
+         **Example**:
+
+         .. code-block:: php
 
             $GLOBALS['TYPO3_CONF_VARS']['FE']['jsConcatenateHandler'] =
-               TYPO3\CMS\Core\Extension\ExtensionManager::extPath($_EXTKEY) .
-               'Classes/class.tx_myext_jsConcatenateHandler.php:tx_myext_jsConcatenateHandler->concatenateJs';
+               \TYPO3\CMS\Core\Extension\ExtensionManager::extPath($_EXTKEY) .
+               'Classes/JsConcatenateHandler.php:Vendor\MyExt\JsConcatenateHandler->concatenateJs';
 
 
 
@@ -568,7 +576,7 @@ concatenateJsAndCss
          0
 
    Description
-         Setting config.concatenateJsAndCss bundles JS and CSS files in the FE.
+         Setting :ts:`config.concatenateJsAndCss` bundles JS and CSS files in the FE.
 
          **Example**::
 
@@ -576,16 +584,19 @@ concatenateJsAndCss
 
          **Note:** TYPO3 comes with a built-in concatenation handler, but you
          can also register your own one using
-         $GLOBALS['TYPO3\_CONF\_VARS']['FE']['concatenateHandler'].
+         ``$GLOBALS['TYPO3_CONF_VARS']['FE']['concatenateHandler']``.
 
-         **Example**::
+         **Example**:
+
+         .. code-block:: php
 
             $GLOBALS['TYPO3_CONF_VARS']['FE']['concatenateHandler'] =
-               TYPO3\CMS\Core\Extension\ExtensionManager::extPath($_EXTKEY) .
-               'Classes/class.tx_myext_concatenateHandler.php:tx_myext_concatenateHandler->concatenateFiles';
+               \TYPO3\CMS\Core\Extension\ExtensionManager::extPath($_EXTKEY) .
+               'Classes/ConcatenateHandler.php:Vendor\MyExt\ConcatenateHandler->concatenateFiles';
+
 
          **Note:** This property was deprecated and is planned to be removed!
-         Use config.concatenateJs and config.concatenateCss instead.
+         Use :ts:`config.concatenateJs` and :ts:`config.concatenateCss` instead.
 
 
 
@@ -902,14 +913,14 @@ disableLanguageHeader
          where "XX" is the ISO code of the according lanuage.
 
          For the default language (sys_language_uid=0), this header is based
-         on the value of config.sys_language_isocode_default. If this is unset,
+         on the value of :ts:`config.sys_language_isocode_default`. If this is unset,
          config.language is used. If that is unset as well, it finally falls
          back to "en".
 
          For other languages, it uses the value from language_isocode from
-         sys_language. That value may be overwritten by config.sys_language_isocode.
+         sys_language. That value may be overwritten by :ts:`config.sys_language_isocode`.
 
-         If config.disableLanguageHeader is set, this header will not be sent.
+         If :ts:`config.disableLanguageHeader` is set, this header will not be sent.
 
 .. _setup-config-doctype:
 
@@ -947,7 +958,7 @@ doctype
 
             Keywords also change the way TYPO3 generates some of the
             XHTML tags to ensure valid XML. If you set doctype to a string, then
-            you must also set config.xhtmlDoctype (see below).
+            you must also set :ts:`config.xhtmlDoctype` (see below).
 
          See :ref:`config.htmlTag_setParams <setup-config-htmltag-setparams>` and
          :ref:`config.htmlTag_langKey <setup-config-htmltag-langkey>` for more

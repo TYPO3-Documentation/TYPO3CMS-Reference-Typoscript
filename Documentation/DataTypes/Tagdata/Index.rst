@@ -3,6 +3,7 @@
 
 .. _data-type-tag-data:
 
+============
 < tag >-data
 ============
 
@@ -17,6 +18,3 @@
          *could be '150,\*'*
 
    Comment
-
-
-

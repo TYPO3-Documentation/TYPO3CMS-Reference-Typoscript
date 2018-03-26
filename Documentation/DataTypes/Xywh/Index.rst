@@ -3,6 +3,7 @@
 
 .. _data-type-xywh:
 
+=======
 x,y,w,h
 =======
 
@@ -18,4 +19,3 @@ x,y,w,h
          x,y is the offset from the upper left corner.
 
          w,h is the width and height
-

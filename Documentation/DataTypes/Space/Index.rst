@@ -3,6 +3,7 @@
 
 .. _data-type-space:
 
+=====
 space
 =====
 
@@ -19,6 +20,3 @@ space
 
          Used for content and sets the according number of pixels space
          "before \| after".
-
-
-

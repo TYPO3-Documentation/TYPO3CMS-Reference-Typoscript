@@ -3,6 +3,7 @@
 
 .. _data-type-vhalign:
 
+=======
 VHalign
 =======
 
@@ -30,6 +31,3 @@ VHalign
 
    Default
          l , t
-
-
-

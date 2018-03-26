@@ -3,11 +3,17 @@
 
 .. _htmlparser-tags:
 
+================
 HTMLparser\_tags
-^^^^^^^^^^^^^^^^
+================
 
 
 .. ### BEGIN~OF~TABLE ###
+
+.. _htmlparser-tags-overrideattribs:
+
+overrideAttribs
+===============
 
 .. container:: table-row
 
@@ -15,11 +21,15 @@ HTMLparser\_tags
          overrideAttribs
 
    Data type
-         string
+         :ref:`data-type-string`
 
    Description
          If set, this string is preset as the attributes of the tag.
 
+.. _htmlparser-tags-allowedattribs:
+
+allowedAttribs
+==============
 
 .. container:: table-row
 
@@ -41,6 +51,10 @@ HTMLparser\_tags
 
          **(blank/not set):** All attributes are allowed.
 
+.. _htmlparser-tags-fixattrib-attribute-set:
+
+fixAttrib.[attribute].set
+=========================
 
 .. container:: table-row
 
@@ -48,11 +62,15 @@ HTMLparser\_tags
          fixAttrib.[attribute].set
 
    Data type
-         string
+         :ref:`data-type-string`
 
    Description
          Force the attribute value to this value.
 
+.. _htmlparser-tags-fixattrib-attribute-unset:
+
+fixAttrib.[attribute].unset
+===========================
 
 .. container:: table-row
 
@@ -60,11 +78,15 @@ HTMLparser\_tags
          fixAttrib.[attribute].unset
 
    Data type
-         boolean
+         :ref:`data-type-boolean`
 
    Description
          If set, the attribute is unset.
 
+.. _htmlparser-tags-fixattrib-attribute-default:
+
+fixAttrib.[attribute].default
+=============================
 
 .. container:: table-row
 
@@ -72,12 +94,16 @@ HTMLparser\_tags
          fixAttrib.[attribute].default
 
    Data type
-         string
+         :ref:`data-type-string`
 
    Description
          If no attribute exists by this name, this value is set as default
          value (if this value is not blank)
 
+.. _htmlparser-tags-fixattrib-attribute-always:
+
+fixAttrib.[attribute].always
+============================
 
 .. container:: table-row
 
@@ -85,12 +111,11 @@ HTMLparser\_tags
          fixAttrib.[attribute].always
 
    Data type
-         boolean
+         :ref:`data-type-boolean`
 
    Description
          If set, the attribute is always processed. Normally an attribute is
          processed only if it exists
-
 
 .. container:: table-row
 
@@ -104,12 +129,16 @@ HTMLparser\_tags
          fixAttrib.[attribute].lower
 
    Data type
-         boolean
+         :ref:`data-type-boolean`
 
    Description
          If any of these keys are set, the value is passed through the
          respective PHP-functions.
 
+.. _htmlparser-tags-fixattrib-attribute-range:
+
+fixAttrib.[attribute].range
+===========================
 
 .. container:: table-row
 
@@ -122,6 +151,10 @@ HTMLparser\_tags
    Description
          Setting integer range.
 
+.. _htmlparser-tags-fixattrib-attribute-list:
+
+fixAttrib.[attribute].list
+==========================
 
 .. container:: table-row
 
@@ -135,6 +168,10 @@ HTMLparser\_tags
          Attribute value must be in this list. If not, the value is set to the
          first element.
 
+.. _htmlparser-tags-fixattrib-attribute-removeiffalse:
+
+fixAttrib.[attribute].removeIfFalse
+===================================
 
 .. container:: table-row
 
@@ -142,13 +179,17 @@ HTMLparser\_tags
          fixAttrib.[attribute].removeIfFalse
 
    Data type
-         boolean/"blank" string
+         :ref:`data-type-boolean` / "blank" string
 
    Description
          If set, then the attribute is removed if it is "false". If this value
          is set to "blank" then the value must be a blank string (that means a
          "zero" value will not be removed)
 
+.. _htmlparser-tags-fixattrib-attribute-removeifequals:
+
+fixAttrib.[attribute].removeIfEquals
+====================================
 
 .. container:: table-row
 
@@ -156,11 +197,15 @@ HTMLparser\_tags
          fixAttrib.[attribute].removeIfEquals
 
    Data type
-         string
+         :ref:`data-type-string`
 
    Description
          If the attribute value matches the value set here, then it is removed.
 
+.. _htmlparser-tags-fixattrib-attribute-casesensitivecomp:
+
+fixAttrib.[attribute].casesensitiveComp
+=======================================
 
 .. container:: table-row
 
@@ -168,12 +213,17 @@ HTMLparser\_tags
          fixAttrib.[attribute].casesensitiveComp
 
    Data type
-         boolean
+         :ref:`data-type-boolean`
 
    Description
-         If set, the comparison in .removeIfEquals and .list will be case-
-         sensitive. At this point, it's insensitive.
+         If set, the comparison in :ref:`htmlparser-tags-fixattrib-attribute-removeifequals`
+         and :ref:`htmlparser-tags-fixattrib-attribute-list` will be case-sensitive.
+         At this point, it's insensitive.
 
+.. _htmlparser-tags-fixattrib-attribute-prefixlocalanchors:
+
+fixAttrib.[attribute].prefixLocalAnchors
+========================================
 
 .. container:: table-row
 
@@ -181,22 +231,26 @@ HTMLparser\_tags
          fixAttrib.[attribute].prefixLocalAnchors
 
    Data type
-         integer
+         :ref:`data-type-integer`
 
    Description
-         If the first char is a "#" character (anchor of fx. <a> tags) this
+         If the first char is a "#" character (anchor of fx. :html:`<a>` tags) this
          will prefix either a relative or absolute path.
 
          If the value is "1" you will get the absolute path
-         (TYPO3\CMS\Core\Utility\GeneralUtility::getIndpEnv('TYPO3\_REQUEST\_URL')).
+         (:php:`TYPO3\CMS\Core\Utility\GeneralUtility::getIndpEnv('TYPO3_REQUEST_URL')`).
 
          If the value is "2" you will get the relative path (stripping of
-         TYPO3\CMS\Core\Utility\GeneralUtility::getIndpEnv('TYPO3\_SITE\_URL')).
+         :php:`TYPO3\CMS\Core\Utility\GeneralUtility::getIndpEnv('TYPO3_SITE_URL')`).
 
          **Example:** ::
 
             ...fixAttrib.href.prefixLocalAnchors = 1
 
+.. _htmlparser-tags-fixattrib-attribute-prefixrelpathwith:
+
+fixAttrib.[attribute].prefixRelPathWith
+=======================================
 
 .. container:: table-row
 
@@ -204,7 +258,7 @@ HTMLparser\_tags
          fixAttrib.[attribute].prefixRelPathWith
 
    Data type
-         string
+         :ref:`data-type-string`
 
    Description
          If the value of the attribute seems to be a relative URL (no scheme
@@ -216,6 +270,10 @@ HTMLparser\_tags
          ...fixAttrib.src.prefixRelPathWith =
          http://192.168.230.3/typo3/32/dummy/
 
+.. _htmlparser-tags-fixattrib-attribute-userfunc:
+
+fixAttrib.[attribute].userFunc
+==============================
 
 .. container:: table-row
 
@@ -223,34 +281,35 @@ HTMLparser\_tags
          fixAttrib.[attribute].userFunc
 
    Data type
-         function reference
+         :ref:`data-type-function-name`
 
    Description
          User function for processing of the attribute. The return value
          of this function will be used as the new tag value.
 
-         **Example:**
+         **Example:**::
 
-         ...fixAttrib.href.userFunc = tx\_realurl->test\_urlProc
-         
+            ...fixAttrib.href.userFunc = \Vendor\ExtName\ClassName->function
+
          Two parameters are passed to the function:
-         
+
          1. The tag value as a string or an array containing the tag value
             and additional configuration (see below).
          2. The reference the to HtmlParser instance that calls the method.
-         
+
          By default the first parameter is the value of the processed tag.
          This changes when you pass additional configuration options to the
-         user function:
-         
-         ...fixAttrib.href.userFunc.myCustomParm = myCustomValue
-         
+         user function::
+
+            ...fixAttrib.href.userFunc.myCustomParm = myCustomValue
+
          In that case the first parameter passed to the user function will
          be an array containing these values:
-         
-         - attributeValue: The original value of the processed attribute
-         - myCustomParm: myCustomValue
 
+.. _htmlparser-tags-protect:
+
+protect
+=======
 
 .. container:: table-row
 
@@ -258,11 +317,15 @@ HTMLparser\_tags
          protect
 
    Data type
-         boolean
+         :ref:`data-type-boolean`
 
    Description
-         If set, the tag <> is converted to &lt; and &gt;
+         If set, the tag :html:`<>` is converted to :html:`&lt;` and :html:`&gt;`
 
+.. _htmlparser-tags-remap:
+
+remap
+=====
 
 .. container:: table-row
 
@@ -270,11 +333,15 @@ HTMLparser\_tags
          remap
 
    Data type
-         string
+         :ref:`data-type-string`
 
    Description
          If set, the tagname is remapped to this tagname
 
+.. _htmlparser-tags-rmtagifnoattrib:
+
+rmTagIfNoAttrib
+===============
 
 .. container:: table-row
 
@@ -282,11 +349,15 @@ HTMLparser\_tags
          rmTagIfNoAttrib
 
    Data type
-         boolean
+         :ref:`data-type-boolean`
 
    Description
          If set, then the tag is removed if no attributes happened to be there.
 
+.. _htmlparser-tags-nesting:
+
+nesting
+=======
 
 .. container:: table-row
 
@@ -299,16 +370,15 @@ HTMLparser\_tags
    Description
          If set true, then this tag must have starting and ending tags in the
          correct order. Any tags not in this order will be discarded. Thus
-         '</B><B><I></B></I></B>' will be converted to '<B><I></B></I>'.
+         :html:`</B><B><I></B></I></B>` will be converted to :html:`<B><I></B></I>`.
 
          Is the value "global" then true nesting in relation to other tags
          marked for "global" nesting control is preserved. This means that if
-         <B> and <I> are set for global nesting then this string
-         '</B><B><I></B></I></B>' is converted to '<B></B>'
+         :html:`<B>` and :html:`<I>` are set for global nesting then this string
+         :html:`</B><B><I></B></I></B>` is converted to :html:`<B></B>`
 
 
 .. ###### END~OF~TABLE ######
 
 
 [page:->HTMLparser\_tags; tsref:->HTMLparser\_tags]
-

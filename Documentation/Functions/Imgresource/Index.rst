@@ -13,13 +13,18 @@ imgResource.
 
 .. ### BEGIN~OF~TABLE ###
 
+.. _imgresource-ext:
+
+ext
+===
+
 .. container:: table-row
 
    Property
          ext
 
    Data type
-         imageExtension /:ref:`stdWrap <stdwrap>`
+         imageExtension / :ref:`stdwrap`
 
    Default
          web
@@ -28,8 +33,14 @@ imgResource.
          Target file extension for the processed image. The value "web" checks if the file extension
          is one of gif, jpg, jpeg, or png and if not it will find the best target extension.
          The target extension must be in the list of file extensions perceived as images.
-         This is defined in :php:`$TYPO3_CONF_VARS['GFX']['imagefile_ext']` in the install tool.
+         This is defined in :php:`$GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext']`
+         in the install tool.
 
+
+.. _imgresource-width:
+
+width
+=====
 
 .. container:: table-row
 
@@ -37,7 +48,7 @@ imgResource.
          width
 
    Data type
-         pixels /:ref:`stdWrap <stdwrap>`
+         :ref:`data-type-pixels` / :ref:`stdwrap`
 
    Description
          If both the width and the height are set and one of the numbers is
@@ -78,17 +89,26 @@ imgResource.
             .height = 100c-25
 
 
+.. _imgresource-height:
+
+height
+======
+
 .. container:: table-row
 
    Property
          height
 
    Data type
-         pixels /:ref:`stdWrap <stdwrap>`
+         :ref:`data-type-pixels` / :ref:`stdwrap`
 
    Description
-         See ".width"
+         See :ref:`imgresource-width`
 
+.. _imgresource-params:
+
+params
+======
 
 .. container:: table-row
 
@@ -96,13 +116,17 @@ imgResource.
          params
 
    Data type
-         string /:ref:`stdWrap <stdwrap>`
+         :ref:`data-type-string` / :ref:`stdwrap`
 
    Description
          GraphicsMagick/ImageMagick command-line:
 
-         fx. "-rotate 90", "-negate" or "-quality 90"
+         fx. ``-rotate 90``, ``-negate`` or ``-quality 90``
 
+.. _imgresource-sample:
+
+sample
+======
 
 .. container:: table-row
 
@@ -110,16 +134,19 @@ imgResource.
          sample
 
    Data type
-         boolean
+         :ref:`data-type-bool`
 
    Default
          0
 
    Description
-         If set, `-sample` is used to scale images instead of `-geometry`. Sample
+         If set, ``-sample`` is used to scale images instead of ``-geometry``. Sample
          does not use anti-aliasing and is therefore much faster.
 
+.. _imgresource-noscale:
 
+noScale
+=======
 
 .. container:: table-row
 
@@ -127,7 +154,7 @@ imgResource.
          noScale
 
    Data type
-         boolean /:ref:`stdWrap <stdwrap>`
+         :ref:`data-type-bool` / :ref:`stdwrap`
 
    Default
          0
@@ -148,10 +175,16 @@ imgResource.
             file.noScale = 1
 
          This example results in an image tag like the following. Note that
-         `src="fileadmin/test.jpg"` is the *original* file::
+         `src="fileadmin/test.jpg"` is the *original* file:
+
+         .. code-block:: html
 
             <img src="fileadmin/test.jpg" width="240" height="180" />
 
+.. _imgresource-crop:
+
+crop
+====
 
 .. container:: table-row
 
@@ -159,7 +192,7 @@ imgResource.
          crop
 
    Data type
-         string /:ref:`stdWrap <stdwrap>`
+         :ref:`data-type-string` / :ref:`stdwrap`
 
    Default
          not-set (when file/image is a file_reference the crop value of
@@ -179,6 +212,10 @@ imgResource.
 
             tt_content.image.20.1.file.crop = 50,50,100,100
 
+.. _imgresource-cropvariant:
+
+cropVariant
+===========
 
 .. container:: table-row
 
@@ -186,7 +223,7 @@ imgResource.
          cropVariant
 
    Data type
-         string
+         :ref:`data-type-string`
 
    Default
          default
@@ -202,6 +239,10 @@ imgResource.
          tt_content.image.20.1.file.crop.data = file:current:crop
          tt_content.image.20.1.file.cropVariant = desktop
 
+.. _imgresource-alternativetemppath:
+
+alternativeTempPath
+===================
 
 .. container:: table-row
 
@@ -209,11 +250,15 @@ imgResource.
          alternativeTempPath
 
    Data type
-         string
+         :ref:`data-type-string`
 
    Description
          Enter an alternative path to use for temporary images.
 
+.. _imgresource-frame:
+
+frame
+=====
 
 .. container:: table-row
 
@@ -221,13 +266,17 @@ imgResource.
          frame
 
    Data type
-         integer /:ref:`stdWrap <stdwrap>`
+         :ref:`data-type-integer` / :ref:`stdwrap`
 
    Description
          Chooses the frame in a PDF or GIF file.
 
          "" = first frame (zero)
 
+.. _imgresource-import:
+
+import
+======
 
 .. container:: table-row
 
@@ -235,12 +284,12 @@ imgResource.
          import
 
    Data type
-         path /:ref:`stdWrap <stdwrap>`
+         :ref:`data-type-path` / :ref:`stdwrap`
 
    Description
          *value* should be set to the path of the file
 
-         with stdWrap you get the filename from the data-array
+         with :ref:`stdwrap` you get the filename from the data-array
 
    Example
          This returns the first image in the field "image" from the
@@ -250,6 +299,10 @@ imgResource.
             .import.field = image
             .import.listNum = 0
 
+.. _imgresource-treatidasreference:
+
+treatIdAsReference
+==================
 
 .. container:: table-row
 
@@ -257,7 +310,7 @@ imgResource.
          treatIdAsReference
 
    Data type
-         boolean /:ref:`stdWrap <stdwrap>`
+         :ref:`data-type-bool` / :ref:`stdwrap`
 
    Default
          0
@@ -267,7 +320,10 @@ imgResource.
          instead of to sys_file. This allows using file references, for
          example with :ts:`import.data = levelmedia: ...`.
 
+.. _imgresource-maxw:
 
+maxW
+====
 
 .. container:: table-row
 
@@ -275,11 +331,15 @@ imgResource.
          maxW
 
    Data type
-         pixels /:ref:`stdWrap <stdwrap>`
+         :ref:`data-type-pixels` / :ref:`stdwrap`
 
    Description
          Maximum width
 
+.. _imgresource-maxh:
+
+maxH
+====
 
 .. container:: table-row
 
@@ -287,11 +347,15 @@ imgResource.
          maxH
 
    Data type
-         pixels /:ref:`stdWrap <stdwrap>`
+         :ref:`data-type-pixels` / :ref:`stdwrap`
 
    Description
          Maximum height
 
+.. _imgresource-minw:
+
+minW
+====
 
 .. container:: table-row
 
@@ -299,11 +363,15 @@ imgResource.
          minW
 
    Data type
-         pixels /:ref:`stdWrap <stdwrap>`
+         :ref:`data-type-pixels` / :ref:`stdwrap`
 
    Description
          Minimum width (overrules maxW/maxH)
 
+.. _imgresource-minh:
+
+minH
+====
 
 .. container:: table-row
 
@@ -311,11 +379,15 @@ imgResource.
          minH
 
    Data type
-         pixels /:ref:`stdWrap <stdwrap>`
+         :ref:`data-type-pixels` / :ref:`stdwrap`
 
    Description
          Minimum height (overrules maxW/maxH)
 
+.. _imgresource-stripprofile:
+
+stripProfile
+============
 
 .. container:: table-row
 
@@ -323,7 +395,7 @@ imgResource.
          stripProfile
 
    Data type
-         boolean
+         :ref:`data-type-bool`
 
    Default
          0
@@ -358,7 +430,7 @@ imgResource.
          m.mask
 
    Data type
-         imgResource
+         :ref:`data-type-imgresource`
 
    Description
          The mask with which the image is masked onto "m.bgImg". Both "m.mask"
@@ -373,7 +445,7 @@ imgResource.
          m.bgImg
 
    Data type
-         imgResource
+         :ref:`data-type-imgresource`
 
    Description
          **Note:** Both "m.mask" and "m.bgImg" must be valid images.
@@ -385,7 +457,7 @@ imgResource.
          m.bottomImg
 
    Data type
-         imgResource
+         :ref:`data-type-imgresource`
 
    Description
          An image masked by "m.bottomImg\_mask" onto "m.bgImg" before the
@@ -406,7 +478,7 @@ imgResource.
          m.bottomImg\_mask
 
    Data type
-         imgResource
+         :ref:`data-type-imgresource`
 
    Description
          (optional)
@@ -431,4 +503,3 @@ pixels::
 
    file = fileadmin/toplogo.gif
    file.width = 200
-
