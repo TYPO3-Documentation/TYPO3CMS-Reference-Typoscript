@@ -98,8 +98,8 @@ tags
 
    Description
          Can hold a comma-separated list of tags. These tags will be attached
-         to the cached content into the ``cache_hash`` storage (not into
-         ``cache_pages``) and can be used to purge the cached content.
+         to the entry added to the ``cache_hash`` cache (but not to
+         ``cache_pages`` cache) and can be used to purge the cached content.
 
 
 .. ###### END~OF~TABLE ######
