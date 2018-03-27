@@ -81,7 +81,7 @@ Top-level objects
          or :ts:`styles` objects.
 
          :ts:`tt_...` is normally used to define the setup of content-records. E.g.
-         :ts:`tt_content` would be used for the ``tt_content``-table as default. See
+         :ts:`tt_content` would be used for the `tt_content`-table as default. See
          :ref:`cobj-content`.
 
 

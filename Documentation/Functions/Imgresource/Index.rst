@@ -121,7 +121,7 @@ params
    Description
          GraphicsMagick/ImageMagick command-line:
 
-         fx. ``-rotate 90``, ``-negate`` or ``-quality 90``
+         fx. `-rotate 90`, `-negate` or `-quality 90`
 
 .. _imgresource-sample:
 
@@ -140,7 +140,7 @@ sample
          0
 
    Description
-         If set, ``-sample`` is used to scale images instead of ``-geometry``. Sample
+         If set, `-sample` is used to scale images instead of `-geometry`. Sample
          does not use anti-aliasing and is therefore much faster.
 
 .. _imgresource-noscale:

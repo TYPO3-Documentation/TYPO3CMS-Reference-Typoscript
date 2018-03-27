@@ -12,14 +12,14 @@ from there. This allows you to reuse this content without prior
 rendering. The presence of :ts:`cache.key` will trigger this feature. It
 is evaluated twice:
 
-- Content is read from cache directly after the ``stdWrapPreProcess`` hook
-  and before ``setContentToCurrent``. If there is a cache entry for the
+- Content is read from cache directly after the `stdWrapPreProcess` hook
+  and before `setContentToCurrent`. If there is a cache entry for the
   given cache key, :ts:`stdWrap` processing will stop and the cached content
   will be returned. If no cache content is found for this key, the
   stdWrap processing continues as usual.
 
 - Writing to cache happens at the end of rendering, directly before the
-  ``stdWrapPostProcess`` hook is called and before the "debug\*" functions.
+  `stdWrapPostProcess` hook is called and before the "debug\*" functions.
   The rendered content will be stored in the cache, if cache.key was
   set. The configuration options cache.tags and cache.lifetime allow to
   control the caching.
@@ -98,8 +98,8 @@ tags
 
    Description
          Can hold a comma-separated list of tags. These tags will be attached
-         to the entry added to the ``cache_hash`` cache (but not to
-         ``cache_pages`` cache) and can be used to purge the cached content.
+         to the entry added to the `cache_hash` cache (but not to
+         `cache_pages` cache) and can be used to purge the cached content.
 
 
 .. ###### END~OF~TABLE ######
