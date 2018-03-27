@@ -106,6 +106,7 @@ Properties
    `USERUID\_substToken`_                                :ref:`data-type-string`
    `xhtmlDoctype`_                                       :ref:`data-type-string`
    `xmlprologue`_                                        :ref:`data-type-string`
+   ===================================================== ================================================== ======================================================================
 
 .. ### BEGIN~OF~TABLE ###
 
@@ -138,7 +139,7 @@ absRefPrefix
          **Note:** If you're working on a server where you have different domain
          names or different path segments leading to the same page (e.g. for internal
          and external access), you might do yourself a favor and set :ref:`absRefPrefix` to
-         the URL and path of your site, e.g. ``https://typo3.org/``. If you do not,
+         the URL and path of your site, e.g. `https://typo3.org/`. If you do not,
          you risk to render pages to cache from the internal network and thereby
          prefix image-references and links with a wrong path or a path not accessible
          from outside.
@@ -791,7 +792,7 @@ disableCharsetHeader
          :ref:`data-type-boolean`
 
    Description
-         By default a HTTP header ``content-type:text/html; charset...`` is sent.
+         By default a HTTP header `content-type:text/html; charset...` is sent.
          This option will disable that.
 
 
@@ -810,8 +811,8 @@ disableImgBorderAttr
          :ref:`data-type-boolean`
 
    Description
-         Returns the ``border`` attribute for an :html:`<img>` tag only if the doctype is
-         not ``xhtml_strict`` or ``xhtml_11`` or if the config parameter
+         Returns the `border` attribute for an :html:`<img>` tag only if the doctype is
+         not `xhtml_strict` or `xhtml_11` or if the config parameter
          :ts:`disableImgBorderAttr` is not set
 
 
@@ -891,7 +892,7 @@ disableLanguageHeader
          0
 
    Description
-         TYPO3 by default sends a ``Content-language: XX`` HTTP header,
+         TYPO3 by default sends a `Content-language: XX` HTTP header,
          where "XX" is the ISO code of the according lanuage.
 
          For the default language (sys_language_uid = 0), this header is based
@@ -1074,10 +1075,10 @@ forceTypeValue
          :ref:`data-type-integer`
 
    Description
-         Force the ``&type`` value of all TYPO3 generated links to a specific value
+         Force the `&type` value of all TYPO3 generated links to a specific value
          (except if overruled by local :ts:`forceTypeValue` values).
 
-         Useful if you run a template with special content at - say ``&type=95`` -
+         Useful if you run a template with special content at - say `&type=95` -
          but still wants to keep your targets neutral. Then you set your
          targets to blank and this value to the type value you wish.
 
@@ -1213,8 +1214,8 @@ htmlTag\_langKey
          en
 
    Description
-         Allows you to set the language value for the attributes ``xml:lang`` and
-         ``lang`` in the :html:`<html>` tag (when using :ts:`config.doctype = xhtml*`).
+         Allows you to set the language value for the attributes `xml:lang` and
+         `lang` in the :html:`<html>` tag (when using :ts:`config.doctype = xhtml*`).
 
          The values must follow the format specified in `IETF RFC 3066
          <http://www.ietf.org/rfc/rfc3066.txt>`_
@@ -1514,7 +1515,7 @@ linkVars
 
          .. note::
 
-            Do **not** include the ``type`` parameter in the linkVars
+            Do **not** include the `type` parameter in the linkVars
             list, as this can result in unexpected behavior.
 
    Examples
@@ -1522,19 +1523,19 @@ linkVars
 
             config.linkVars = L, print
 
-         This will add ``&L=[L-value]&print=[print-value]`` to all links in
+         This will add `&L=[L-value]&print=[print-value]` to all links in
          TYPO3. ::
 
             config.linkVars = L(1-3), print
 
-         Same as above, but ``&L=[L-value]`` will only be added if the current
+         Same as above, but `&L=[L-value]` will only be added if the current
          value is 1, 2 or 3::
 
             config.linkVars = L(1-3),tracking|green(0-5)
 
          With the above configuration the following example GET parameters will
-         be kept: ``&L=1&tracking[green]=3``. But a get parameter like
-         ``tracking[blue]`` will not be kept.
+         be kept: `&L=1&tracking[green]=3`. But a get parameter like
+         `tracking[blue]` will not be kept.
 
 
 
@@ -1725,7 +1726,7 @@ MP\_defaults
 
             config.MP_defaults = 36,37,48 : 2-207
 
-         This will by default add ``&MP=2-207`` to all links pointing to pages
+         This will by default add `&MP=2-207` to all links pointing to pages
          36,37 and 48.
 
 
@@ -2194,7 +2195,7 @@ spamProtectEmailAddresses
          works.
 
    Example
-         ``mailto:a@b.c`` will be converted to ``mailto:&#97;&#64;&#98;&#46;&#99;``
+         `mailto:a@b.c` will be converted to `mailto:&#97;&#64;&#98;&#46;&#99;`
 
          The big advantage of this method is that it does not need any
          JavaScript!
@@ -2444,7 +2445,7 @@ sys\_language\_overlay
          to see if overlaying should take place.
 
          The requirements for this is that the table is configured with
-         ``languageField`` and ``transOrigPointerField`` in the :php:`['ctrl']` section of
+         `languageField` and `transOrigPointerField` in the :php:`['ctrl']` section of
          :php:`$GLOBALS['TCA']`. Also, exclusion of certain fields can be done with the
          "l10n\_mode" directive in the field-configuration of :php:`$GLOBALS['TCA']`.
 
