@@ -4,7 +4,7 @@
 .. _cobj-user-int:
 
 ==================
-USER and USER\_INT
+USER / USER\_INT
 ==================
 
 This calls either a PHP function or a method in a class. This is very

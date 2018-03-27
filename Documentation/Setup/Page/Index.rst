@@ -3,7 +3,8 @@
 
 .. _page:
 
-page
+====
+PAGE
 ====
 
 Pages are referenced by two main values. The "id" and "type".
