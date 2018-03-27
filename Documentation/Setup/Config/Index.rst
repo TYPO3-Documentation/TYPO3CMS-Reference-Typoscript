@@ -106,6 +106,7 @@ Properties
    `USERUID\_substToken`_                                :ref:`data-type-string`
    `xhtmlDoctype`_                                       :ref:`data-type-string`
    `xmlprologue`_                                        :ref:`data-type-string`
+   ===================================================== ================================================== ======================================================================
 
 .. ### BEGIN~OF~TABLE ###
 
