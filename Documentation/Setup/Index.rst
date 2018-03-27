@@ -3,8 +3,9 @@
 
 .. _setup:
 
+=====
 Setup
------
+=====
 
 
 .. toctree::
