@@ -17,50 +17,47 @@ is primarily used with different representations of the same content.
 Your default page will most likely have type 0 while a JSON stream with the same
 content could go with type 1.
 
-A good habit is to use "page" as the top-level object name for
+A good habit is to use :ts:`page` as the top-level object name for
 the content-page on a website.
 
 Most of this code is executed in the PHP script
-*typo3/sysext/frontend/Classes/Page/PageGenerator.php*.
+:file:`typo3/sysext/frontend/Classes/Page/PageGenerator.php`.
 
 Properties
-^^^^^^^^^^
+==========
 
 .. container:: ts-properties
 
-   ============================== ================================= ====================== ========================
-   Property                       Data Type                         :ref:`stdwrap`         Default
-   ============================== ================================= ====================== ========================
+   ============================== ===================================== ====================== ========================
+   Property                       Data Type                             :ref:`stdwrap`         Default
+   ============================== ===================================== ====================== ========================
    `1,2,3,4...`_                  cObject
-   `bodyTag`_                     <tag>                                                    <body>
+   `bodyTag`_                     :ref:`data-type-tag`                                         <body>
    `bodyTagAdd`_                  :ref:`data-type-string`
    `bodyTagCObject`_              cObject
-   `config`_                      ->CONFIG
+   `config`_                      :ref:`->CONFIG <config>`
    `CSS\_inlineStyle`_            :ref:`data-type-string`
    `cssInline`_                   ->CARRAY
    `footerData`_                  ->CARRAY
    `headerData`_                  ->CARRAY
-   `headTag`_                     <tag> /stdWrap                                           <head>
+   `headTag`_                     :ref:`data-type-tag` / :ref:`stdwrap`                        <head>
    `includeCSS.[array]`_          :ref:`data-type-resource`
    `includeCSSLibs.[array]`_      :ref:`data-type-resource`
    `includeJS.[array]`_           :ref:`data-type-resource`
    `includeJSFooter.[array]`_     :ref:`data-type-resource`
    `includeJSFooterlibs.[array]`_ :ref:`data-type-resource`
    `includeJSLibs.[array]`_       :ref:`data-type-resource`
-   `inlineLanguageLabelFiles`_    *(array of strings)*
-   `inlineSettings`_              *(array of strings)*
-   `javascriptLibs`_              *(array of strings)*
+   `inlineLanguageLabelFiles`_    (array of strings)
+   `inlineSettings`_              (array of strings)
+   `javascriptLibs`_              (array of strings)
    `jsFooterInline`_              ->CARRAY
    `jsInline`_                    ->CARRAY
    `meta`_                        :ref:`->META <meta>`
    `shortcutIcon`_                :ref:`data-type-resource`
-   `stdWrap`_                     :ref:`stdWrap <stdwrap>`
-   `typeNum`_                     :ref:`data-type-integer`                                 0
-   `wrap`_                        wrap
-   ============================== ================================= ====================== ========================
-
-Property details
-^^^^^^^^^^^^^^^^
+   `stdWrap`_                     :ref:`stdwrap`
+   `typeNum`_                     :ref:`data-type-integer`                                     0
+   `wrap`_                        :ref:`data-type-wrap`
+   ============================== ===================================== ====================== ========================
 
 .. ### BEGIN~OF~TABLE ###
 
@@ -68,7 +65,7 @@ Property details
 .. _setup-page-1-2-3-4:
 
 1,2,3,4...
-""""""""""
+==========
 
 .. container:: table-row
 
@@ -87,7 +84,7 @@ Property details
 .. _setup-page-bodytag:
 
 bodyTag
-"""""""
+=======
 
 .. container:: table-row
 
@@ -95,26 +92,25 @@ bodyTag
          bodyTag
 
    Data type
-         <tag>
+         :ref:`data-type-tag`
+
+   Default
+         <body>
 
    Description
          Body tag on the page
 
-         **Example:**
+   Example
+         ::
 
-         .. code:: html
-
-         	<body bgcolor="{$bgCol}">
-
-   Default
-         <body>
+            <body bgcolor="{$bgCol}">
 
 
 
 .. _setup-page-bodytagadd:
 
 bodyTagAdd
-""""""""""
+==========
 
 .. container:: table-row
 
@@ -122,17 +118,17 @@ bodyTagAdd
          bodyTagAdd
 
    Data type
-         string
+         :ref:`data-type-string`
 
    Description
-         This content is added to the end of the bodyTag.
+         This content is added to the end of the :html:`<body>`-tag.
 
 
 
 .. _setup-page-bodytagcobject:
 
 bodyTagCObject
-""""""""""""""
+==============
 
 .. container:: table-row
 
@@ -143,19 +139,19 @@ bodyTagCObject
          cObject
 
    Description
-         This is the default body tag. It is overridden by ".bodyTag", if
-         that is set.
+         This is the default body tag. It is overridden by :ref:`setup-page-bodyTag`,
+         if that is set.
 
          **Note:** Additionally to the body tag properties noted here,
-         there also is the property "config.disableBodyTag", which - if set
-         - disables body tag generation independently from what might be set
-         here.
+         there also is the property :ref:`setup-config-disableBodyTag`,
+         which, if set, disables body tag generation independently
+         from what might be set here.
 
 
 .. _setup-page-config:
 
 config
-""""""
+======
 
 .. container:: table-row
 
@@ -163,18 +159,18 @@ config
          config
 
    Data type
-         ->CONFIG
+         :ref:`->CONFIG <config>`
 
    Description
          Configuration for the page. Any entries made here override the same
-         entries in the top-level object "config".
+         entries in the top-level object :ref:`config`.
 
 
 
 .. _setup-page-css-inlinestyle:
 
 CSS\_inlineStyle
-""""""""""""""""
+================
 
 .. container:: table-row
 
@@ -182,13 +178,13 @@ CSS\_inlineStyle
          CSS\_inlineStyle
 
    Data type
-         string
+         :ref:`data-type-string`
 
    Description
          This value is just passed on as CSS.
 
          **Note:** To make TYPO3 actually output these styles as *inline* CSS
-         (in-document CSS encapsulated in <style> tags),
+         (in-document CSS encapsulated in :html:`<style>` tags),
          :ref:`config.inlineStyle2TempFile <setup-config-inlinestyle2tempfile>`
          must be set to 0.
 
@@ -197,7 +193,7 @@ CSS\_inlineStyle
 .. _setup-page-cssinline:
 
 cssInline
-"""""""""
+=========
 
 .. container:: table-row
 
@@ -210,7 +206,8 @@ cssInline
    Description
          Use cObjects for creating inline CSS
 
-         **Example:** ::
+   Example
+         ::
 
             cssInline {
                 10 = TEXT
@@ -228,7 +225,7 @@ cssInline
 .. _setup-page-footerdata:
 
 footerData
-""""""""""
+==========
 
 .. container:: table-row
 
@@ -239,14 +236,15 @@ footerData
          ->CARRAY
 
    Description
-         Same as headerData above, except that this block gets included at the
-         bottom of the page (just before the closing body tag).
+         Same as :ref:`setup-page-headerData` above,
+         except that this block gets included at the bottom of the page
+         (just before the closing :html:`</body>` tag).
 
 
 .. _setup-page-headerdata:
 
 headerData
-""""""""""
+==========
 
 .. container:: table-row
 
@@ -264,7 +262,7 @@ headerData
          you should better use :ref:`page.includeCSS <setup-page-includecss-array>`
          and :ref:`page.includeJS <setup-page-includejs-array>` for such files.
          Features like file concatenation and file compression will not work on files,
-         which are included using headerData.
+         which are included using :ts:`headerData`.
 
          By default, gets inserted after all the style definitions.
 
@@ -273,7 +271,7 @@ headerData
 .. _setup-page-headtag:
 
 headTag
-"""""""
+=======
 
 .. container:: table-row
 
@@ -281,20 +279,20 @@ headTag
          headTag
 
    Data type
-         <tag> /stdWrap
-
-   Description
-         Head-tag if alternatives are wanted
+         :ref:`data-type-tag` / :ref:`stdwrap`
 
    Default
          <head>
+
+   Description
+         Head-tag if alternatives are wanted
 
 
 
 .. _setup-page-includecss-array:
 
 includeCSS.[array]
-""""""""""""""""""
+==================
 
 .. container:: table-row
 
@@ -302,65 +300,66 @@ includeCSS.[array]
          includeCSS.[array]
 
    Data type
-         resource
+         :ref:`data-type-resource`
 
    Description
-         Inserts a stylesheet (just like the .stylesheet property), but allows
+         Inserts a stylesheet (just like the :ts:`stylesheet` property), but allows
          setting up more than a single stylesheet, because you can enter files
          in an array.
 
-         The file definition must be a valid "resource" data type, otherwise
-         nothing is inserted.
+         The file definition must be a valid :ref:`data-type-resource` data type,
+         otherwise nothing is inserted.
 
          Each file has *optional properties*:
 
-         **.allWrap:** Wraps the complete tag, useful for conditional
+         **allWrap**: Wraps the complete tag, useful for conditional
          comments.
 
-         **.allWrap.splitChar:** Defines an alternative splitting character
+         **allWrap.splitChar**: Defines an alternative splitting character
          (default is "\|" - the vertical line).
 
-         **.alternate:** If set (boolean) then the rel-attribute will be
+         **alternate**: If set (boolean) then the rel-attribute will be
          "alternate stylesheet".
 
-         **.disableCompression:** If config.compressCss is enabled, this
+         **disableCompression**: If :ts:`config.compressCss` is enabled, this
          disables the compression of this file.
 
-         **.excludeFromConcatenation:** If config.concatenateCss is
+         **excludeFromConcatenation**: If :ts:`config.concatenateCss` is
          enabled, this prevents the file from being concatenated.
 
-         **.external:** If set, there is no file existence check. Useful for
+         **external**: If set, there is no file existence check. Useful for
          inclusion of external files.
 
-         **.forceOnTop:** Boolean flag. If set, this file will be added on top
+         **forceOnTop**: Boolean flag. If set, this file will be added on top
          of all other files.
 
-         **.if:** Allows to define conditions, which must evaluate to TRUE for
+         **if**: Allows to define conditions, which must evaluate to TRUE for
          the file to be included. If they do not evaluate to TRUE, the file
          will not be included. Extensive usage might cause huge numbers of
          temporary files to be created. See ->if for details.
 
-         **.import:** If set (boolean) then the @import way of including a
-         stylesheet is used instead of <link>
+         **import**: If set (boolean) then the `@import` way of including a
+         stylesheet is used instead of :html:`<link>`
 
-         **.inline** If set, the content of the CSS file is inlined using <style> tags. Note that external files are not
-         inlined.
+         **inline**: If set, the content of the CSS file is inlined using
+         :html:`<style>` tags. Note that external files are not inlined.
 
-         **.media:** Setting the media attribute of the <style> tag.
+         **media**: Setting the media attribute of the :html:`<style>` tag.
 
-         **.title:** Setting the title of the <style> tag.
+         **title**: Setting the title of the :html:`<style>` tag.
 
-         **Example:** ::
+   Example
+         ::
 
             includeCSS {
-              file1 = fileadmin/mystylesheet1.css
-              file2 = stylesheet_uploaded_to_template*.css
-              file2.title = High contrast
-              file2.media = print
-              ie6Style = fileadmin/css/style3.css
-              ie6Style.allWrap = <!--[if lte IE 7]>|<![endif]-->
-              cooliris = http://www.cooliris.com/shared/resources/css/global.css
-              cooliris.external = 1
+                file1 = fileadmin/mystylesheet1.css
+                file2 = stylesheet_uploaded_to_template*.css
+                file2.title = High contrast
+                file2.media = print
+                ie6Style = fileadmin/css/style3.css
+                ie6Style.allWrap = <!--[if lte IE 7]>|<![endif]-->
+                cooliris = http://www.cooliris.com/shared/resources/css/global.css
+                cooliris.external = 1
             }
 
 
@@ -368,7 +367,7 @@ includeCSS.[array]
 .. _setup-page-includecsslibs-array:
 
 includeCSSLibs.[array]
-""""""""""""""""""""""
+======================
 
 .. container:: table-row
 
@@ -376,54 +375,54 @@ includeCSSLibs.[array]
          includeCSSLibs.[array]
 
    Data type
-         resource
+         :ref:`data-type-resource`
 
    Description
          Adds CSS library files to head of page.
 
-         The file definition must be a valid "resource" data type, otherwise
-         nothing is inserted. This means that remote files cannot be referenced
-         (i.e. using "http://..."), except by using the ".external" property.
+         The file definition must be a valid :ref:`data-type-resource` data type,
+         otherwise nothing is inserted. This means that remote files cannot be referenced
+         (i.e. using `https://...`), except by using the :ts:`.external` property.
 
          Each file has *optional properties*:
 
-         **.allWrap:** Wraps the complete tag, useful for conditional
+         **allWrap**: Wraps the complete tag, useful for conditional
          comments.
 
-         **.allWrap.splitChar:** Defines an alternative
+         **allWrap.splitChar**: Defines an alternative
          splitting character (default is "\|" - the vertical line).
 
-         **.alternate:** If set (boolean) then the rel-attribute will be
+         **alternate**: If set (boolean) then the rel-attribute will be
          "alternate stylesheet".
 
-         **.disableCompression:** If config.compressCss is
+         **disableCompression**: If :ts:`config.compressCss` is
          enabled, this disables the compression of this file.
 
-         **.excludeFromConcatenation:** If
-         config.concatenateCss is enabled, this prevents the file from being
-         concatenated.
+         **excludeFromConcatenation**: If :ts:`config.concatenateCss`
+         is enabled, this prevents the file from being concatenated.
 
-         **.external:** If set, there is no file existence check. Useful for
+         **external**: If set, there is no file existence check. Useful for
          inclusion of external files.
 
-         **.forceOnTop:** Boolean flag. If set, this file will be added on top
+         **forceOnTop**: Boolean flag. If set, this file will be added on top
          of all other files.
 
-         **.if:** Allows to define conditions, which must
+         **if**: Allows to define conditions, which must
          evaluate to TRUE for the file to be included. If they do not evaluate
          to TRUE, the file will not be included. Extensive usage might cause
          huge numbers of temporary files to be created. See ->if for details.
 
-         **.import:** If set (boolean) then the @import way of including a
-         stylesheet is used instead of <link>
+         **import**: If set (boolean) then the @import way of including a
+         stylesheet is used instead of :html:`<link>`
 
-         **.media:** Setting the media attribute of the <style> tag.
+         **media**: Setting the media attribute of the :html:`<style>` tag.
 
-         **.title:** Setting the title of the <style> tag.
+         **title**: Setting the title of the :html:`<style>` tag.
 
-         **Example:** ::
+   Example
+         ::
 
-            includeCSSLibs.twitter = http://twitter.com/styles/blogger.css
+            includeCSSLibs.twitter = https://twitter.com/styles/blogger.css
             includeCSSLibs.twitter.external = 1
 
 
@@ -431,7 +430,7 @@ includeCSSLibs.[array]
 .. _setup-page-includejs-array:
 
 includeJS.[array]
-"""""""""""""""""
+=================
 
 .. container:: table-row
 
@@ -439,66 +438,66 @@ includeJS.[array]
          includeJS.[array]
 
    Data type
-         resource
+         :ref:`data-type-resource`
 
    Description
          Inserts one or more (Java)Scripts in <script> tags.
          With :ref:`setup-config-movejsfromheadertofooter` set to TRUE all files
          will be moved to the footer.
-         The file definition must be a valid "resource" data type, otherwise
-         nothing is inserted. This means that remote files cannot be referenced
-         (i.e. using "http://..."), except by using the ".external" property.
+         The file definition must be a valid :ref:`data-type-resource` data type,
+         otherwise nothing is inserted. This means that remote files cannot be referenced
+         (i.e. using `https://...`), except by using the :ts:`.external` property.
 
          Each file has *optional properties*:
 
-         **.allWrap:** Wraps the complete tag, useful for conditional
+         **allWrap**: Wraps the complete tag, useful for conditional
          comments.
 
-         **.allWrap.splitChar:** Defines an alternative splitting character
+         **allWrap.splitChar**: Defines an alternative splitting character
          (default is "\|" - the vertical line).
 
-         **.async:** Allows the file to be loaded asynchronously.
+         **async**: Allows the file to be loaded asynchronously.
 
-         **.crossorigin:** Allows to set the crossorigin attribute in script tags.
+         **crossorigin**: Allows to set the crossorigin attribute in script tags.
          Is automatically set to `anonymous` for external JavaScript files if an
-         `.integrity` is set.
+         :ts:`.integrity` is set.
 
-         **.defer** Allows to set the HTML5 attribute :html:`defer`.
+         **defer** Allows to set the HTML5 attribute :html:**defer`.
 
-         **.disableCompression:** If config.compressJs is enabled, this
-         disables the compression of this file.
+         **disableCompression**: If :ts:`config.compressJs` is enabled,
+         this disables the compression of this file.
 
-         **.excludeFromConcatenation:** If config.concatenateJs is enabled,
+         **excludeFromConcatenation**: If :ts:`config.concatenateJs` is enabled,
          this prevents the file from being concatenated.
 
-         **.external:** If set, there is no file existence check. Useful for
+         **external**: If set, there is no file existence check. Useful for
          inclusion of external files.
 
-         **.forceOnTop:** Boolean flag. If set, this file will be added on top
+         **forceOnTop**: Boolean flag. If set, this file will be added on top
          of all other files.
 
-         **.if:** Allows to define conditions, which must evaluate to TRUE for
+         **if**: Allows to define conditions, which must evaluate to TRUE for
          the file to be included. If they do not evaluate to TRUE, the file will
          not be included. Extensive usage might cause huge numbers of temporary
          files to be created. See ->if for details.
 
-         **.type:** Setting the MIME type of the script (default:
-         text/javascript).
+         **type**: Setting the MIME type of the script (default: text/javascript).
 
-         **.integrity:** Adds the integrity attribute to the script element to let
+         **integrity**: Adds the integrity attribute to the script element to let
          browsers ensure subresource integrity. Useful in hosting scenarios with
          resources externalized to CDN's. See `SRI <http://www.w3.org/TR/SRI/>`_ for
          more details. Integrity hashes may be generated using `<https://srihash.org/>`_.
 
-         **Example:** ::
+   Example
+         ::
 
             includeJS {
-              file1 = fileadmin/helloworld.js
-              file1.type = application/x-javascript
-              # Include a second file, but only if myConstant is set
-              # in the TS constants field.
-              file2 = javascript_uploaded_to_template*.js
-              file2.if.isTrue = {$myConstant}
+                file1 = fileadmin/helloworld.js
+                file1.type = application/x-javascript
+                # Include a second file, but only if myConstant is set
+                # in the TS constants field.
+                file2 = javascript_uploaded_to_template*.js
+                file2.if.isTrue = {$myConstant}
             }
 
 
@@ -506,7 +505,7 @@ includeJS.[array]
 .. _setup-page-includejsfooter-array:
 
 includeJSFooter.[array]
-"""""""""""""""""""""""
+=======================
 
 .. container:: table-row
 
@@ -514,18 +513,19 @@ includeJSFooter.[array]
          includeJSFooter.[array]
 
    Data type
-         resource
+         :ref:`data-type-resource`
 
    Description
-         Same as includeJS above, except that this block gets included at the
-         bottom of the page (just before the closing body tag).
+         Same as :ref:`setup-page-includeJS` above, except that this block gets
+         included at the bottom of the page (just before the closing :html:`</body>`
+         tag).
 
 
 
 .. _setup-page-includejsfooterlibs-array:
 
 includeJSFooterlibs.[array]
-"""""""""""""""""""""""""""
+===========================
 
 .. container:: table-row
 
@@ -533,18 +533,19 @@ includeJSFooterlibs.[array]
          includeJSFooterlibs.[array]
 
    Data type
-         resource
+         :ref:`data-type-resource`
 
    Description
-         Same as includeJSLibs, except that this block gets included at
-         the bottom of the page (just before the closing body tag).
+         Same as :ref:`setup-page-includeJSLibs`, except that this block gets
+         included at the bottom of the page (just before the closing :html:`</body>`
+         tag).
 
 
 
 .. _setup-page-includejslibs-array:
 
 includeJSLibs.[array]
-"""""""""""""""""""""
+=====================
 
 .. container:: table-row
 
@@ -552,35 +553,36 @@ includeJSLibs.[array]
          includeJSLibs.[array]
 
    Data type
-         resource
+         :ref:`data-type-resource`
 
    Description
          Adds JS library files to head of page.
 
-         The file definition must be a valid "resource" data type, otherwise
-         nothing is inserted. This means that remote files cannot be referenced
-         (i.e. using "http://..."), except by using the ".external" property.
+         The file definition must be a valid :ref:`data-type-resource` data type,
+         otherwise nothing is inserted. This means that remote files cannot be
+         referenced (i.e. using `https://...`), except by using the :ts:`.external`
+         property.
 
          Each file has *optional properties*:
 
-         **.allWrap:** Wraps the complete tag, useful for conditional
+         **allWrap**: Wraps the complete tag, useful for conditional
          comments.
 
-         **.allWrap.splitChar:** Defines an alternative splitting character
+         **allWrap.splitChar**: Defines an alternative splitting character
          (default is "\|" - the vertical line).
 
-         **.async:** Allows the file to be loaded asynchronously.
+         **async**: Allows the file to be loaded asynchronously.
 
-         **.crossorigin:** Allows to set the crossorigin attribute in script
+         **crossorigin**: Allows to set the crossorigin attribute in script
          tags. Is automatically set to `anonymous` for external JavaScript
-         files if an `.integrity` is set.
+         files if an :ts:`.integrity` is set.
 
-         **.defer** Allows to set the HTML5 attribute :html:`defer`.
+         **defer** Allows to set the HTML5 attribute :html:`defer`.
 
-         **.disableCompression:** If config.compressJs is enabled, this
+         **disableCompression**: If :ts:`config.compressJs` is enabled, this
          disables the compression of this file.
 
-         **.excludeFromConcatenation:** If config.concatenateJs is enabled,
+         **excludeFromConcatenation**: If :ts:`config.concatenateJs` is enabled,
          this prevents the file from being concatenated.
 
          **.external:** If set, there is no file existence check. Useful for
@@ -612,7 +614,7 @@ includeJSLibs.[array]
 .. _setup-page-inlinelanguagelabelfiles:
 
 inlineLanguageLabelFiles
-""""""""""""""""""""""""
+========================
 
 .. container:: table-row
 
@@ -620,10 +622,11 @@ inlineLanguageLabelFiles
          inlineLanguageLabelFiles
 
    Data type
-         *(array of strings)*
+         (array of strings)
 
    Description
-         Adds language labels to the page.
+         Adds language labels to the page. All labels will be then be available in
+         the Javascript object :js:`TYPO3.lang`.
 
          **Available sub-properties:**
 
@@ -637,22 +640,20 @@ inlineLanguageLabelFiles
          0 - syslog entry, 1 - do nothing, 2 - throw an exception.
          Default: 0
 
-         **Example:** ::
+   Example
+         ::
 
             inlineLanguageLabelFiles {
-               someLabels = EXT:myExt/Resources/Private/Language/locallang.xlf
-               someLabels.selectionPrefix = idPrefix
-               someLabels.stripFromSelectionName = strip_me
-               someLabels.errorMode = 2
+                someLabels = EXT:myExt/Resources/Private/Language/locallang.xlf
+                someLabels.selectionPrefix = idPrefix
+                someLabels.stripFromSelectionName = strip_me
+                someLabels.errorMode = 2
             }
-
-        All labels will be then be available in the Javascript 
-        object :js:`TYPO3.lang`.
 
 .. _setup-page-inlinesettings:
 
 inlineSettings
-""""""""""""""
+==============
 
 .. container:: table-row
 
@@ -660,19 +661,22 @@ inlineSettings
          inlineSettings
 
    Data type
-         *(array of strings)*
+         (array of strings)
 
    Description
          ExtJS specific, adds settings to the page.
 
-         **Example:** ::
+   Example
+         ::
 
             page.inlineSettings {
-               setting1 = Hello
-               setting2 = GoOnTop
+                setting1 = Hello
+                setting2 = GoOnTop
             }
 
-         will produce following source::
+         Will produce following source
+
+         .. code-block:: js
 
             TYPO3.settings = {"TS":{"setting1":"Hello","setting2":"GoOnTop"}};
 
@@ -681,7 +685,7 @@ inlineSettings
 .. _setup-page-javascriptlibs:
 
 javascriptLibs
-""""""""""""""
+==============
 
 .. container:: table-row
 
@@ -689,29 +693,29 @@ javascriptLibs
          javascriptLibs
 
    Data type
-         *(array of strings)*
+         (array of strings)
 
    Description
          This allows to include the JavaScript libraries that are shipped with
          the TYPO3 Core. ::
 
             javascriptLibs {
-               # include jQuery (boolean)
-               jQuery = 1
-               # Change the version
-               # (possible values: latest|1.7.2|…, default: latest)
-               # Note: jQuery.source has to be a CDN like "google"
-               # when jQuery.version is not "latest"
-               jQuery.version = latest
-               # Include from local or different CDNs
-               # (possible values: local|google|jquery|msn, default: local)
-               jQuery.source = local
-               # Set jQuery into its own scope to avoid conflicts (boolean)
-               jQuery.noConflict = 1
-               # Change the namespace when noConflict is activated
-               # and use jQuery with "TYPO3.###NAMESPACE###(…);"
-               # (string, default: jQuery)
-               jQuery.noConflict.namespace = ownNamespace
+                # include jQuery (boolean)
+                jQuery = 1
+                # Change the version
+                # (possible values: latest|1.7.2|…, default: latest)
+                # Note: jQuery.source has to be a CDN like "google"
+                # when jQuery.version is not "latest"
+                jQuery.version = latest
+                # Include from local or different CDNs
+                # (possible values: local|google|jquery|msn, default: local)
+                jQuery.source = local
+                # Set jQuery into its own scope to avoid conflicts (boolean)
+                jQuery.noConflict = 1
+                # Change the namespace when noConflict is activated
+                # and use jQuery with "TYPO3.###NAMESPACE###(…);"
+                # (string, default: jQuery)
+                jQuery.noConflict.namespace = ownNamespace
             }
 
 
@@ -720,7 +724,7 @@ javascriptLibs
 .. _setup-page-jsfooterinline:
 
 jsFooterInline
-""""""""""""""
+==============
 
 .. container:: table-row
 
@@ -731,15 +735,15 @@ jsFooterInline
          ->CARRAY
 
    Description
-         Same jsInline above, except that the JavaScript gets inserted at the
-         bottom of the page (just before the closing body tag).
+         Same :ts:`jsInline` above, except that the JavaScript gets inserted at the
+         bottom of the page (just before the closing :html:`</body` tag).
 
 
 
 .. _setup-page-jsinline:
 
 jsInline
-""""""""
+========
 
 .. container:: table-row
 
@@ -752,24 +756,25 @@ jsInline
    Description
          Use cObjects for creating inline JavaScript
 
-         **Example:** ::
-
-            page.jsInline {
-                    10 = TEXT
-                    10.stdWrap.dataWrap = var pageId = {TSFE:id};
-            }
-
          **Note:**
 
-         With config.removeDefaultJS = external, the inline JavaScript is
-         moved to an external file.
+         With :ts:`config.removeDefaultJS = external`, the inline JavaScript is moved
+         to an external file.
+
+   Example
+         ::
+
+            page.jsInline {
+                10 = TEXT
+                10.stdWrap.dataWrap = var pageId = {TSFE:id};
+            }
 
 
 
 .. _setup-page-meta:
 
 meta
-""""
+====
 
 .. container:: table-row
 
@@ -788,7 +793,7 @@ meta
 .. _setup-page-shortcuticon:
 
 shortcutIcon
-""""""""""""
+============
 
 .. container:: table-row
 
@@ -796,7 +801,7 @@ shortcutIcon
          shortcutIcon
 
    Data type
-         resource
+         :ref:`data-type-resource`
 
    Description
          Favicon of the page. Create a reference to an icon here!
@@ -805,7 +810,7 @@ shortcutIcon
          the browser, next to the name of the site in lists of bookmarks
          and next to the title of the page in the tab.
 
-         **Note:** The file must be a valid ".ico" file (icon file).
+         **Note:** The file must be a valid :file:`.ico` file (icon file).
 
          **Note:** The reference to this file will only be included in the
          output of your website, if the file actually exists! Should the
@@ -816,7 +821,7 @@ shortcutIcon
 .. _setup-page-stdwrap:
 
 stdWrap
-"""""""
+=======
 
 .. container:: table-row
 
@@ -824,7 +829,7 @@ stdWrap
          stdWrap
 
    Data type
-         ->stdWrap
+         :ref:`stdwrap`
 
    Description
          Wraps the content of the cObject array with stdWrap options.
@@ -833,7 +838,7 @@ stdWrap
 .. _setup-page-typenum:
 
 typeNum
-"""""""
+=======
 
 .. container:: table-row
 
@@ -841,13 +846,13 @@ typeNum
          typeNum
 
    Data type
-         integer
+         :ref:`data-type-integer`
 
    Default
          0
 
    Description
-         This determines the typeId of the page. The *&type=* parameter in the URL
+         This determines the typeId of the page. The `&type=` parameter in the URL
          determines, which page object will be rendered. The value defaults to 0 for
          the first found PAGE object, but it **must** be set and be unique as
          soon as you use *more* than one such object (watch this if you use frames
@@ -858,7 +863,7 @@ typeNum
 .. _setup-page-wrap:
 
 wrap
-""""
+====
 
 .. container:: table-row
 
@@ -866,7 +871,7 @@ wrap
          wrap
 
    Data type
-         wrap
+         :ref:`data-type-wrap`
 
    Description
          Wraps the content of the cObject array.

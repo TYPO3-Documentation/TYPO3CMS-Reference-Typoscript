@@ -2607,17 +2607,17 @@ typolinkEnableLinksAcrossDomains
          If this option is not set, then all cross-domain links will be
          generated as
 
-         "http://domain.tld/index.php?id=12345" (where 12345 is page id).
+         `http://domain.tld/index.php?id=12345` (where `12345` is page id).
          Setting this option requires that domains, where pages are linked,
          have the same configuration for:
 
-         \- linking scheme (i.e. all use RealURL or CoolURI but not any
-         mixture)
+         - linking scheme (i.e. all use RealURL or CoolURI but not any
+           mixture)
 
-         \- all domains have identical localization settings
-         (:ts:`config.sys_language_XXX` directives)
+         - all domains have identical localization settings
+           (:ts:`sys_language_XXX` directives)
 
-         \- all domains have the same set of languages defined
+         - all domains have the same set of languages defined
 
          Disclaimer: it must be understood that while link is generated to
          another domain, it is still generated in the context of current
@@ -2646,13 +2646,13 @@ typolinkLinkAccessRestrictedPages
          this setting is an integer it will be interpreted as a page id to
          which the link will be directed.
 
-         If the value is "NONE" the original link to the page will be kept
+         If the value is :ts:`NONE` the original link to the page will be kept
          although it will generate a page-not-found situation (which can of
          course be picked up properly by the page-not-found handler and present
          a nice login form).
 
-         See "showAccessRestrictedPages" for menu objects as well (similar
-         feature for menus)
+         See :ref:`menu-common-properties-showaccessrestrictedpages`
+         for menu objects as well (similar feature for menus)
 
    Example
          ::
@@ -2679,7 +2679,7 @@ typolinkLinkAccessRestrictedPages\_addParams
          :ref:`data-type-string`
 
    Description
-         See "typolinkLinkAccessRestrictedPages" above
+         See :ref:`setup-config-typolinklinkaccessrestrictedpages` above.
 
 
 
@@ -2701,7 +2701,7 @@ USERNAME\_substToken
 
    Description
          The is the token used on the page, which should be substituted with
-         the current username IF a front-end user is logged in! If no login,
+         the current username *if* a front-end user is logged in! If no login,
          the substitution will not happen.
 
 
@@ -2721,7 +2721,7 @@ USERUID\_substToken
 
    Description
          The is the token used on the page, which should be substituted with
-         the current users UID IF a front-end user is logged in! If no login,
+         the current users UID *if* a front-end user is logged in! If no login,
          the substitution will not happen.
 
          This value has no default value and only if you specify a value for
@@ -2743,13 +2743,13 @@ xhtmlDoctype
          :ref:`data-type-string`
 
    Default
-         *(same as config.doctype if set to a keyword)*
+         (same as config.doctype if set to a keyword)
 
    Description
          Sets the document type for the XHTML version of the generated page.
 
-         If config.doctype is set to a string then config.xhtmlDoctype must be
-         set to one of these keywords:
+         If :ref:`setup-config-doctype` is set to a string then :ts:`xhtmlDoctype`
+         must be set to one of these keywords:
 
          **xhtml\_trans** for XHTML 1.0 Transitional doctype.
 
@@ -2759,6 +2759,7 @@ xhtmlDoctype
 
          **xhtml\_11** for XHTML 1.1 doctype.
 
+   Example
          This is an example to use MathML 2.0 in an XHTML 1.1 document::
 
             config.doctype (
@@ -2785,7 +2786,7 @@ xmlprologue
 
    Description
          If empty (not set) then the default XML 1.0 prologue is set, when the
-         doctype is set to a known keyword (e.g. xhtml\_11)::
+         doctype is set to a known keyword (e.g. :ts:`xhtml_11`)::
 
             <?xml version="1.0" encoding="utf-8">
 

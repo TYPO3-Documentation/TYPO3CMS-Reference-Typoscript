@@ -209,6 +209,10 @@ otherwise noted!
 
          Applies to GMENU, TMENU and IMGMENU.
 
+.. _menu-common-properties-showaccessrestrictedpages:
+
+showAccessRestrictedPages
+=========================
 
 .. container:: table-row
 
