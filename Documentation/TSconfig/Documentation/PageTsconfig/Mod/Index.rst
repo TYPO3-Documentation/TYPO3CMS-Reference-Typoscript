@@ -1074,20 +1074,6 @@ Web > List (mod.web\_list)
 .. container:: table-row
 
    Property
-         newWizards
-
-   Data type
-         boolean
-
-   Description
-         If set, then the new-link over the control panel of the pages and
-         tt\_content listings in the List module will link to the wizards and
-         not create a record in the top of the list.
-
-
-.. container:: table-row
-
-   Property
          showClipControlPanelsDespiteOfCMlayers
 
    Data type
