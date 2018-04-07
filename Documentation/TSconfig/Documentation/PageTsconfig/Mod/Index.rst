@@ -861,6 +861,53 @@ Web > List (mod.web\_list)
 .. container:: table-row
 
    Property
+         csvDelimiter
+
+   Data type
+         string
+
+   Description
+         Defines the delimiter for CSV exports (Microsoft Excel expects ; to be set).
+
+         **Example:**
+
+         .. code-block:: typoscript
+
+            mod.web_list {
+               csvDelimiter = ;
+            }
+
+         
+   Default
+         ,
+
+
+.. container:: table-row
+
+   Property
+         csvQuote
+
+   Data type
+         string
+
+   Description
+         Defines the quoting character for CSV exports.
+
+         **Example:**
+
+         .. code-block:: typoscript
+
+            mod.web_list {
+               csvQuote = '
+            }
+
+   Default
+         "
+
+
+.. container:: table-row
+
+   Property
          itemsLimitSingleTable
 
    Data type
