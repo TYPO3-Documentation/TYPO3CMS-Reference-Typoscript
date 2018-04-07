@@ -472,6 +472,34 @@ Web > Page (mod.web\_layout)
 .. container:: table-row
 
    Property
+         hideRestrictedCols
+
+   Data type
+         *boolean*
+
+   Description
+         When restricting a list of columns to the user, the restricted columns are rendered with a message that the
+         user has no access to these columns which might be undesired in certain cases (imagine a user having access
+         to only one of 20 columns total).
+         
+         With assigning the setting to the UserTS, these columns are hidden and the user will only see
+         the columns they are allowed to edit or add content to.
+         
+         If you use backend layouts to provide an abstract view of the frontend, hiding the columns with this setting
+         **will** break your layout, so handle it with care.
+
+         **Example:**
+
+         Hide all columns an editor has no access to
+
+         .. code-block:: typoscript
+
+            mod.web_layout.hideRestrictedCols = 1
+
+
+.. container:: table-row
+
+   Property
          tt\_content.colPos\_list
 
    Data type
