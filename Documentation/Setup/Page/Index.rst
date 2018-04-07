@@ -49,7 +49,6 @@ Properties
    `includeJSLibs.[array]`_       :ref:`data-type-resource`
    `inlineLanguageLabelFiles`_    (array of strings)
    `inlineSettings`_              (array of strings)
-   `javascriptLibs`_              (array of strings)
    `jsFooterInline`_              ->CARRAY
    `jsInline`_                    ->CARRAY
    `meta`_                        :ref:`->META <meta>`
@@ -679,45 +678,6 @@ inlineSettings
          .. code-block:: js
 
             TYPO3.settings = {"TS":{"setting1":"Hello","setting2":"GoOnTop"}};
-
-
-
-.. _setup-page-javascriptlibs:
-
-javascriptLibs
-==============
-
-.. container:: table-row
-
-   Property
-         javascriptLibs
-
-   Data type
-         (array of strings)
-
-   Description
-         This allows to include the JavaScript libraries that are shipped with
-         the TYPO3 Core. ::
-
-            javascriptLibs {
-                # include jQuery (boolean)
-                jQuery = 1
-                # Change the version
-                # (possible values: latest|1.7.2|…, default: latest)
-                # Note: jQuery.source has to be a CDN like "google"
-                # when jQuery.version is not "latest"
-                jQuery.version = latest
-                # Include from local or different CDNs
-                # (possible values: local|google|jquery|msn, default: local)
-                jQuery.source = local
-                # Set jQuery into its own scope to avoid conflicts (boolean)
-                jQuery.noConflict = 1
-                # Change the namespace when noConflict is activated
-                # and use jQuery with "TYPO3.###NAMESPACE###(…);"
-                # (string, default: jQuery)
-                jQuery.noConflict.namespace = ownNamespace
-            }
-
 
 
 
