@@ -390,7 +390,8 @@ ifBlank
          :ref:`data-type-string` / :ref:`stdWrap`
 
    Description
-         Same as :ts:`ifEmpty` but the check is done using :php:`strlen()`.
+         Same as :ts:`ifEmpty` but the check is done against ''. Zeros are not
+         treated as blank values!
 
 
 .. _stdwrap-listnum:
