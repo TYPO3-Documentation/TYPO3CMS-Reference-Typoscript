@@ -475,16 +475,19 @@ hideRestrictedCols
    :sep:`|` :aspect:`Condition:` optional
    :sep:`|` :aspect:`Data type:` boolean
    :sep:`|` :aspect:`Default:` false
+   :sep:`|` :aspect:`Location:` user typoscript
+   :sep:`|`
 
-   Activate this setting in user typoscript to only show the columns the user has access to.
+   If activated, only columns will be shown in the backend that the editor is
+   allowed to access. All columns with access restriction are then hidden.
 
-   By default columns with restricted access are rendered as message stating *that* 
-   the user doesn't have access. This may be useless and distracting or look repelling.
-   Instead, all columns an editor doesn't have access to can be hidden::
+   By default columns with restricted access are rendered with a message
+   telling *that* the user doesn't have access. This may be useless and
+   distracting or look repelling. Instead, all columns an editor doesn't have
+   access to can be hidden::
 
-      # add to user typoscript
       mod.web_layout.hideRestrictedCols = 1
-         
+
    .. attention::
 
       This setting will break your layout if you are using backend layouts.
@@ -898,7 +901,7 @@ Web > List (mod.web\_list)
                csvDelimiter = ;
             }
 
-         
+
    Default
          ,
 
