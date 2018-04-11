@@ -469,6 +469,27 @@ Web > Page (mod.web\_layout)
             mod.web_layout.allowInconsistentLanguageHandling = 1
 
 
+.. rst-class:: dl-parameters
+
+hideRestrictedCols
+   :sep:`|` :aspect:`Condition:` optional
+   :sep:`|` :aspect:`Data type:` boolean
+   :sep:`|` :aspect:`Default:` false
+
+   Activate this setting in user typoscript to only show the columns the user has access to.
+
+   By default columns with restricted access are rendered as message stating *that* 
+   the user doesn't have access. This may be useless and distracting or look repelling.
+   Instead, all columns an editor doesn't have access to can be hidden::
+
+      # add to user typoscript
+      mod.web_layout.hideRestrictedCols = 1
+         
+   .. attention::
+
+      This setting will break your layout if you are using backend layouts.
+
+
 .. container:: table-row
 
    Property
