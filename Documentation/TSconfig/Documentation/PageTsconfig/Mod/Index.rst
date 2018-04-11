@@ -426,8 +426,6 @@ Web > Page (mod.web\_layout)
          By referencing a simple Fluid template you can create a visual representation of your
          content element, making it easier for an editor to understand what is going on on
          the page.
-         
-         A
 
          The syntax is as follows:
 
