@@ -747,6 +747,10 @@ This will match only with the backend user with UID 13::
 
    [globalVar = BE_USER|user|uid = 13]
 
+This will match the session key ['foo']['bar'] = 1234567::
+
+   [globalVar = session:foo|bar = 1234567]
+
 
 .. _condition-globalstring:
 
