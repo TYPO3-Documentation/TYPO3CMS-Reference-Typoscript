@@ -426,6 +426,8 @@ Web > Page (mod.web\_layout)
          By referencing a simple Fluid template you can create a visual representation of your
          content element, making it easier for an editor to understand what is going on on
          the page.
+         
+         A
 
          The syntax is as follows:
 
@@ -434,12 +436,20 @@ Web > Page (mod.web\_layout)
             mod.web_layout.tt_content.preview.[CTYPE].[list_type value] = EXT:site_mysite/Resources/Private/Templates/Preview/ExamplePlugin.html
 
          This way you can even switch between previews for your plugins by supplying `list` as CType.
+         
+         .. note::
+
+            This only works, if there is no hook registered for the content type under 
+            
+            .. code-block:: php
+            
+               $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['cms/layout/class.tx_cms_layout.php']['tt_content_drawItem']['content_element_xy']
 
          **Example:**
 
          .. code-block:: typoscript
 
-            mod.web_layout.tt_content.preview.text = EXT:site_mysite/Resources/Private/Templates/Preview/Text.html
+            mod.web_layout.tt_content.preview.custom_ce = EXT:site_mysite/Resources/Private/Templates/Preview/CustomCe.html
             mod.web_layout.tt_content.preview.table = EXT:site_mysite/Resources/Private/Templates/Preview/Table.html
             mod.web_layout.tt_content.preview.list.tx_news = EXT:site_mysite/Resources/Private/Templates/Preview/TxNews.html
 
