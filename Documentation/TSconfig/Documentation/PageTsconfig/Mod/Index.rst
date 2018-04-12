@@ -479,7 +479,7 @@ hideRestrictedCols
    :sep:`|`
 
    If activated, only columns will be shown in the backend that the editor is
-   allowed to access. All columns with access restriction are then hidden.
+   allowed to access. All columns with access restriction are hidden in that case.
 
    By default columns with restricted access are rendered with a message
    telling *that* the user doesn't have access. This may be useless and
