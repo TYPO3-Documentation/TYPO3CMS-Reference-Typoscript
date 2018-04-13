@@ -254,7 +254,7 @@ And again::
 Two by three items
 ~~~~~~~~~~~~~~~~~~
 
-Now the mainpart delimiter `|*|` occurrs only once. So we are
+Now the mainpart delimiter `|*|` occurs only once. So we are
 dealing with the first two mainparts A and R.
 
 According to rules 1 to 7 we get::
