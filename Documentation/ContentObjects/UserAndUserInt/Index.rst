@@ -102,7 +102,7 @@ Examples:
 
    For the best result you should *always*, without exception, place your class files in
    an extension, define composer class loading for this extension and add this extension as
-   a depedency of your project. Then, your classes will load without issues when you refer
+   a dependency of your project. Then, your classes will load without issues when you refer
    to them by their class name.
 
    The examples below will work though - except that the classes will fail to load unless
