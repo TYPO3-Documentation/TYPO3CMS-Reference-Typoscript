@@ -940,7 +940,7 @@ list from the property ".items".
          **up:** Links to the parent (pid) page of the current page (up 1
          level). Will always be available.
 
-         **index:** Links to the parent of the parent pageof the current
+         **index:** Links to the parent of the parent page of the current
          page(up 2 levels). May not be available, if that page is out of the
          rootline.
 
