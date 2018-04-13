@@ -1372,7 +1372,7 @@ like any other field.
          asc
 
    Description
-         Order in which the pages should be orderd, ascending or
+         Order in which the pages should be ordered, ascending or
          descending. Should be "asc" or "desc", case-insensitive.
          Will default to "asc" in case of invalid value.
 
