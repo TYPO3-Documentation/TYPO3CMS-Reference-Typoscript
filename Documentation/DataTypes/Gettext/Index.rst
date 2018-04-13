@@ -448,8 +448,8 @@ fullRootLine: syntax is [pointer, integer], [field name], ["slide"]
 
 This property can be used to retrieve values from "above" the current
 page's root. Take the below page tree and assume that we are on the
-page "Here you are!". Using the "levelfield" propertydescribed above,
-it is possible to goup only to the page "Site root", because it is the
+page "Here you are!". Using the "levelfield" property described above,
+it is possible to go up only to the page "Site root", because it is the
 root of a new (sub-)site. With "fullRootLine" it is possible to go all
 the way up to page tree root. The numbers between square brackets
 indicate to which page each value of *pointer* would point to::
