@@ -69,7 +69,7 @@ Lookout for usages of the function
 Terminology
 ===========
 
-It's useful to aggree about some terms first: delimiter string, mainpart, subpart.
+It's useful to agree about some terms first: delimiter string, mainpart, subpart.
 
 Mainparts
 ~~~~~~~~~
