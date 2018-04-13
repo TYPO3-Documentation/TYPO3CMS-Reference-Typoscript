@@ -930,7 +930,7 @@ list from the property ".items".
          **nextsection\_last** / **prevsection\_last:** Where
          nextsection/prevsection links to the first page in a section, these
          link to the last pages. If there is only one page in the section that
-         will be both first and last.Will not work if the parent page of the
+         will be both first and last. Will not work if the parent page of the
          current page is the root page of the site.
 
          **first** / **last:** First / last page on the current level. If
