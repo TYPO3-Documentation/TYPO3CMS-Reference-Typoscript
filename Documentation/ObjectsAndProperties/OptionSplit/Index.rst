@@ -354,7 +354,7 @@ According to rules 1 to 7 we get::
 One by one items
 ~~~~~~~~~~~~~~~~
 
-With no delimiters at all we still have - implictely - one mainpart
+With no delimiters at all we still have - implicitly - one mainpart
 A with one subpart a::
 
    input:
