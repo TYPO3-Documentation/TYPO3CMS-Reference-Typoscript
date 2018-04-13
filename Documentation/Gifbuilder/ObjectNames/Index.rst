@@ -584,7 +584,7 @@ Renders a text.
          color down on the original image file through the temporary mask.
 
          The fact that the font is actually rendered in the double size and
-         scaled down adds a more homogenous shape to the letters. Some fonts
+         scaled down adds a more homogeneous shape to the letters. Some fonts
          are more critical than others though. If you do not need the quality,
          then don't use the function.
 
