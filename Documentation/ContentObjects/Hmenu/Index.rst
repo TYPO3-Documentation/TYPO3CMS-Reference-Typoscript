@@ -930,7 +930,7 @@ list from the property ".items".
          **nextsection\_last** / **prevsection\_last:** Where
          nextsection/prevsection links to the first page in a section, these
          link to the last pages. If there is only one page in the section that
-         will be both first and last.Will not work if the parent page of the
+         will be both first and last. Will not work if the parent page of the
          current page is the root page of the site.
 
          **first** / **last:** First / last page on the current level. If
@@ -940,7 +940,7 @@ list from the property ".items".
          **up:** Links to the parent (pid) page of the current page (up 1
          level). Will always be available.
 
-         **index:** Links to the parent of the parent pageof the current
+         **index:** Links to the parent of the parent page of the current
          page(up 2 levels). May not be available, if that page is out of the
          rootline.
 
@@ -1372,7 +1372,7 @@ like any other field.
          asc
 
    Description
-         Order in which the pages should be orderd, ascending or
+         Order in which the pages should be ordered, ascending or
          descending. Should be "asc" or "desc", case-insensitive.
          Will default to "asc" in case of invalid value.
 

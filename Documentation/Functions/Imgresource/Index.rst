@@ -162,7 +162,7 @@ noScale
    Description
          If set, the image itself will never be scaled. Only width and height
          are calculated according to the other properties, so that the image is
-         *displayed* resizedly, but the original file is used. Can be used for
+         *displayed* resized, but the original file is used. Can be used for
          creating PDFs or printing of pages, where the original file could
          provide much better quality than a rescaled one.
 
@@ -200,7 +200,7 @@ crop
 
    Description
          It is possible to define an area that should be taken (cropped) from the image.
-         When not defined in typoscript the value wil be taken from the file_reference when
+         When not defined in typoscript the value will be taken from the file_reference when
          possible. With this setting you can override this behavior.
 
    Examples

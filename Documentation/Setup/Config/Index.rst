@@ -893,7 +893,7 @@ disableLanguageHeader
 
    Description
          TYPO3 by default sends a `Content-language: XX` HTTP header,
-         where "XX" is the ISO code of the according lanuage.
+         where "XX" is the ISO code of the according language.
 
          For the default language (sys_language_uid = 0), this header is based
          on the value of :ts:`config.sys_language_isocode_default`. If this is unset,

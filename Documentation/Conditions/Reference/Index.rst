@@ -312,7 +312,7 @@ hour.
 year
 ====
 
-See "Hour" above. Uses the same syntax!For further information look at
+See "Hour" above. Uses the same syntax! For further information look at
 the date() function in the PHP manual, format string Y.
 
 

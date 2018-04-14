@@ -69,7 +69,7 @@ Lookout for usages of the function
 Terminology
 ===========
 
-It's useful to aggree about some terms first: delimiter string, mainpart, subpart.
+It's useful to agree about some terms first: delimiter string, mainpart, subpart.
 
 Mainparts
 ~~~~~~~~~
@@ -254,7 +254,7 @@ And again::
 Two by three items
 ~~~~~~~~~~~~~~~~~~
 
-Now the mainpart delimiter `|*|` occurrs only once. So we are
+Now the mainpart delimiter `|*|` occurs only once. So we are
 dealing with the first two mainparts A and R.
 
 According to rules 1 to 7 we get::
@@ -354,7 +354,7 @@ According to rules 1 to 7 we get::
 One by one items
 ~~~~~~~~~~~~~~~~
 
-With no delimiters at all we still have - implictely - one mainpart
+With no delimiters at all we still have - implicitly - one mainpart
 A with one subpart a::
 
    input:
