@@ -657,6 +657,8 @@ comma. The comma then acts as a logical disjunction, that means the
 whole condition evaluates to true, whenever *one or more* of its
 operands are true.
 
+For string comparisons you must use globalString instead of globalVar.
+
 
 .. ### BEGIN~OF~SIMPLE~TABLE ###
 
