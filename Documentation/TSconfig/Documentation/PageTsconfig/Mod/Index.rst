@@ -2,8 +2,9 @@
 
 .. _pagemod:
 
+=====
 ->MOD
-^^^^^
+=====
 
 Configuration for backend modules. Generally the syntax is
 *[module\_name].[property]*. The module name is defined in the
@@ -435,11 +436,21 @@ Web > Page (mod.web\_layout)
 
          This way you can even switch between previews for your plugins by supplying `list` as CType.
 
+         .. note::
+
+            This only works, if there is no hook registered for the content type under
+
+            .. code-block:: php
+
+               $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']
+                  ['cms/layout/class.tx_cms_layout.php']['tt_content_drawItem']
+                  ['content_element_xy'];
+
          **Example:**
 
          .. code-block:: typoscript
 
-            mod.web_layout.tt_content.preview.text = EXT:site_mysite/Resources/Private/Templates/Preview/Text.html
+            mod.web_layout.tt_content.preview.custom_ce = EXT:site_mysite/Resources/Private/Templates/Preview/CustomCe.html
             mod.web_layout.tt_content.preview.table = EXT:site_mysite/Resources/Private/Templates/Preview/Table.html
             mod.web_layout.tt_content.preview.list.tx_news = EXT:site_mysite/Resources/Private/Templates/Preview/TxNews.html
 
@@ -844,6 +855,53 @@ Web > List (mod.web\_list)
 
    Default
          0
+
+
+.. container:: table-row
+
+   Property
+         csvDelimiter
+
+   Data type
+         string
+
+   Description
+         Defines the delimiter for CSV exports (Microsoft Excel expects ; to be set).
+
+         **Example:**
+
+         .. code-block:: typoscript
+
+            mod.web_list {
+               csvDelimiter = ;
+            }
+
+
+   Default
+         ,
+
+
+.. container:: table-row
+
+   Property
+         csvQuote
+
+   Data type
+         string
+
+   Description
+         Defines the quoting character for CSV exports.
+
+         **Example:**
+
+         .. code-block:: typoscript
+
+            mod.web_list {
+               csvQuote = '
+            }
+
+   Default
+         "
 
 
 .. container:: table-row
