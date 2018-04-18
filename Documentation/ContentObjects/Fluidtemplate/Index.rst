@@ -525,7 +525,7 @@ dataProcessing
                         delimiter = ,
                         fieldName = bodytext
                         removeEmptyEntries = 1
-                        filterIntegers = 1
+                        filterIntegers = 0
                         filterUnique = 1
                         as = keywords
                     }
