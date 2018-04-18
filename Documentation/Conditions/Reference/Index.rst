@@ -657,6 +657,9 @@ comma. The comma then acts as a logical disjunction, that means the
 whole condition evaluates to true, whenever *one or more* of its
 operands are true.
 
+*Attention:* For string comparisons you must use :ts:`globalString` 
+instead of :ts:`globalVar`.
+
 
 .. ### BEGIN~OF~SIMPLE~TABLE ###
 
