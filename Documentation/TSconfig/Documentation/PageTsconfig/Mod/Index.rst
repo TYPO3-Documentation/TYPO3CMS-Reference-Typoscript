@@ -2,8 +2,9 @@
 
 .. _pagemod:
 
+=====
 ->MOD
-^^^^^
+=====
 
 Configuration for backend modules. Generally the syntax is
 *[module\_name].[property]*. The module name is defined in the
@@ -434,14 +435,16 @@ Web > Page (mod.web\_layout)
             mod.web_layout.tt_content.preview.[CTYPE].[list_type value] = EXT:site_mysite/Resources/Private/Templates/Preview/ExamplePlugin.html
 
          This way you can even switch between previews for your plugins by supplying `list` as CType.
-         
+
          .. note::
 
-            This only works, if there is no hook registered for the content type under 
-            
+            This only works, if there is no hook registered for the content type under
+
             .. code-block:: php
-            
-               $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['cms/layout/class.tx_cms_layout.php']['tt_content_drawItem']['content_element_xy']
+
+               $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']
+                  ['cms/layout/class.tx_cms_layout.php']['tt_content_drawItem']
+                  ['content_element_xy'];
 
          **Example:**
 
@@ -475,6 +478,30 @@ Web > Page (mod.web\_layout)
          .. code-block:: typoscript
 
             mod.web_layout.allowInconsistentLanguageHandling = 1
+
+
+.. rst-class:: dl-parameters
+
+hideRestrictedCols
+   :sep:`|` :aspect:`Condition:` optional
+   :sep:`|` :aspect:`Data type:` boolean
+   :sep:`|` :aspect:`Default:` false
+   :sep:`|` :aspect:`Location:` user typoscript
+   :sep:`|`
+
+   If activated, only columns will be shown in the backend that the editor is
+   allowed to access. All columns with access restriction are hidden in that case.
+
+   By default columns with restricted access are rendered with a message
+   telling *that* the user doesn't have access. This may be useless and
+   distracting or look repelling. Instead, all columns an editor doesn't have
+   access to can be hidden::
+
+      mod.web_layout.hideRestrictedCols = 1
+
+   .. attention::
+
+      This setting will break your layout if you are using backend layouts.
 
 
 .. container:: table-row
@@ -833,6 +860,53 @@ Web > List (mod.web\_list)
 .. container:: table-row
 
    Property
+         csvDelimiter
+
+   Data type
+         string
+
+   Description
+         Defines the delimiter for CSV exports (Microsoft Excel expects ; to be set).
+
+         **Example:**
+
+         .. code-block:: typoscript
+
+            mod.web_list {
+               csvDelimiter = ;
+            }
+
+
+   Default
+         ,
+
+
+.. container:: table-row
+
+   Property
+         csvQuote
+
+   Data type
+         string
+
+   Description
+         Defines the quoting character for CSV exports.
+
+         **Example:**
+
+         .. code-block:: typoscript
+
+            mod.web_list {
+               csvQuote = '
+            }
+
+   Default
+         "
+
+
+.. container:: table-row
+
+   Property
          noExportRecordsLinks
 
    Data type
@@ -1077,20 +1151,6 @@ Web > List (mod.web\_list)
             mod.web_list {
                deniedNewTables = tt_news,tt_content
             }
-
-
-.. container:: table-row
-
-   Property
-         newWizards
-
-   Data type
-         boolean
-
-   Description
-         If set, then the new-link over the control panel of the pages and
-         tt\_content listings in the List module will link to the wizards and
-         not create a record in the top of the list.
 
 
 .. container:: table-row
