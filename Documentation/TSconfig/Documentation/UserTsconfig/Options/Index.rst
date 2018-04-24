@@ -118,6 +118,7 @@ clearCache.system
    Description
          This will allow a non-admin user to clear frontend and page-related caches, plus some
          backend-related caches (that is everything including templates). This property is equivalent to clearCache.all.
+         **Note:** this option has been removed on TYPO3 8.7 and above.
 
    Default
          0
@@ -137,7 +138,8 @@ clearCache.all
 
    Description
          This will allow a non-admin user to clear frontend and page-related caches, plus some
-         backend-related caches (that is everything including templates).
+         backend-related caches (that is everything including templates); if it is explicitly set to 0 for an admin user,
+         it will remove the clear all option on toolbar for that user.
 
    Default
          0
