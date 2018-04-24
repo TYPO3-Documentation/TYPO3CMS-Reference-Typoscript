@@ -342,6 +342,8 @@ situations. The internal processing is handled by
 ===================== ==================================================================== ===============
 Name                  Definition                                                           Example or result
 ===================== ==================================================================== ===============
+\_ARRAY               Return an array with all available key-value pairs for debugging 
+                      purposes
 HTTP_ACCEPT_LANGUAGE  language(s) accepted by client
 HTTP_HOST             [host][:[port]]                                                      `192.168.1.4:8080`
 HTTP_REFERER          [scheme]://[host][:[port]][path]                                     `http://192.168.1.4:8080/typo3/32/temp/phpcheck/index.php/arg1/arg2/arg3/?arg1,arg2,arg3&p1=parameter1&p2[key]=value`
@@ -364,7 +366,6 @@ TYPO3_REV_PROXY       TRUE if this session runs over a well known proxy
 TYPO3_SITE_SCRIPT     [script / Speaking URL] of the TYPO3 website
 TYPO3_SITE_URL        [scheme]://[host][:[port]][path_dir] of the TYPO3 website frontend
 TYPO3_SSL             TRUE if this session uses SSL/TLS (https)
-_ARRAY                Return an array with all values for debugging purposes
 ===================== ==================================================================== ===============
 
 
