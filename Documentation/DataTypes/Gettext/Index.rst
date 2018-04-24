@@ -364,7 +364,7 @@ TYPO3_REV_PROXY       TRUE if this session runs over a well known proxy
 TYPO3_SITE_SCRIPT     [script / Speaking URL] of the TYPO3 website
 TYPO3_SITE_URL        [scheme]://[host][:[port]][path_dir] of the TYPO3 website frontend
 TYPO3_SSL             TRUE if this session uses SSL/TLS (https)
-1                     Return an array with all values for debugging purposes
+_ARRAY                Return an array with all values for debugging purposes
 ===================== ==================================================================== ===============
 
 
