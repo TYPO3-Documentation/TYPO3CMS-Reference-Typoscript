@@ -161,33 +161,33 @@ disable options, blind options in selector boxes etc.
 
          .. code-block:: typoscript
 
-         TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.myField {
-            # Remove
-            disabled = 1
+            TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.myField {
+               # Remove
+               disabled = 1
 
-            # Rename
-            label = LLL:fileadmin/locallang.xlf:tt_content.pi_flexform.my_ext_pi1.sDEF.myField
+               # Rename
+               label = LLL:fileadmin/locallang.xlf:tt_content.pi_flexform.my_ext_pi1.sDEF.myField
 
-            # Remove all items from select but these ones
-            keepItems = item1,item2,item3
+               # Remove all items from select but these ones
+               keepItems = item1,item2,item3
 
-            # Remove items from select
-            removeItems = item1,item2,item3
+               # Remove items from select
+               removeItems = item1,item2,item3
 
-            # Add new items to select
-            addItems {
-               item1 = LLL:fileadmin/locallang.xlf:tt_content.pi_flexform.my_ext_pi1.sDEF.myField.item1
-               item2 = LLL:fileadmin/locallang.xlf:tt_content.pi_flexform.my_ext_pi1.sDEF.myField.item2
-               item3 = LLL:fileadmin/locallang.xlf:tt_content.pi_flexform.my_ext_pi1.sDEF.myField.item3
+               # Add new items to select
+               addItems {
+                  item1 = LLL:fileadmin/locallang.xlf:tt_content.pi_flexform.my_ext_pi1.sDEF.myField.item1
+                  item2 = LLL:fileadmin/locallang.xlf:tt_content.pi_flexform.my_ext_pi1.sDEF.myField.item2
+                  item3 = LLL:fileadmin/locallang.xlf:tt_content.pi_flexform.my_ext_pi1.sDEF.myField.item3
+               }
+
+               # Rename existing items
+               altLabels {
+                  item1 = LLL:fileadmin/locallang.xlf:tt_content.pi_flexform.my_ext_pi1.sDEF.myField.item1
+                  item2 = LLL:fileadmin/locallang.xlf:tt_content.pi_flexform.my_ext_pi1.sDEF.myField.item2
+                  item3 = LLL:fileadmin/locallang.xlf:tt_content.pi_flexform.my_ext_pi1.sDEF.myField.item3
+               }
             }
-
-            # Rename existing items
-            altLabels {
-               item1 = LLL:fileadmin/locallang.xlf:tt_content.pi_flexform.my_ext_pi1.sDEF.myField.item1
-               item2 = LLL:fileadmin/locallang.xlf:tt_content.pi_flexform.my_ext_pi1.sDEF.myField.item2
-               item3 = LLL:fileadmin/locallang.xlf:tt_content.pi_flexform.my_ext_pi1.sDEF.myField.item3
-            }
-         }
 
 
 .. container:: table-row
