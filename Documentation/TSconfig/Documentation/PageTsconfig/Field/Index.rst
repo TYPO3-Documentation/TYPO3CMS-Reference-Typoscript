@@ -27,7 +27,7 @@ Overwriting and modifying values
 
 Properties, which are set in Page TSconfig, are valid for the page, on
 which they are set, and for all pages hierarchically below. You can
-overwrite and :ref:`modify <t3tssyntax:syntax-value-modification>` them
+overwrite and :ref:`modify <t3coreapi:typoscript-syntax-syntax-value-modification>` them
 in the Page TSconfig of the same page or a subpage.
 
 **Example:**

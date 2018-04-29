@@ -21,7 +21,7 @@ Properties, which are set in the TSconfig field of a group, are valid
 for all users of that group.
 
 Values, which are set in one group, can be overwritten and
-:ref:`modified <t3tssyntax:syntax-value-modification>` in the same or
+:ref:`modified <t3coreapi:typoscript-syntax-syntax-value-modification>` in the same or
 another group. If a user is member of multiple groups, the TSconfig
 settings are evaluated in *the* order, in which the groups are included
 in the user account: When you are editing the backend user, the
@@ -45,8 +45,7 @@ selected groups are evaluated from top to bottom.
 
 * You get the value "bold,italic".
 
-Finally you can overwrite or :ref:`modify
-<t3tssyntax:syntax-value-modification>` settings from groups, of which your
+Finally you can overwrite or :ref:`modify <t3coreapi:typoscript-syntax-syntax-value-modification>` settings from groups, of which your
 user is a member, in the User TSconfig field of that user himself.
 
 **Example:**
