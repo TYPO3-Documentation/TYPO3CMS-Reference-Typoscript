@@ -1,7 +1,7 @@
 .. include:: Includes.txt
 
-
 .. _start:
+.. _nextsteps:
 
 ==================
 TSconfig Reference
@@ -23,7 +23,7 @@ TSconfig Reference
       tsconfig, typoscript, reference, forDevelopers, forAdvanced
 
 :Copyright:
-      2000-2016
+      2000-2018
 
 :Author:
       Documentation Team
@@ -32,16 +32,14 @@ TSconfig Reference
       documentation@typo3.org
 
 :License:
-      Open Publication License available from `www.opencontent.org/openpub/`_.
-
-      .. _www.opencontent.org/openpub/: http://www.opencontent.org/openpub/
+      Open Publication License available from `www.opencontent.org/openpub/
+      <http://www.opencontent.org/openpub/>`_
 
 :Rendered:
       |today|
 
-The content of this document is related to TYPO3,
-
-a GNU/GPL CMS/Framework available from `www.typo3.org
+The content of this document is related to TYPO3 CMS,
+a GNU/GPL CMS/Framework available from `typo3.org
 <https://typo3.org/>`_
 
 
@@ -81,6 +79,5 @@ Please visit the complete :ref:`Sitemap`.
    Conditions/Index
    UserTsconfig/Index
    PageTsconfig/Index
-   NextSteps/Index
    Targets
 

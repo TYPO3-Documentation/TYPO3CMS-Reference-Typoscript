@@ -87,7 +87,7 @@ References
 ^^^^^^^^^^
 
 For a general discussion about TypoScript conditions, please refer to
-:ref:`TypoScript Syntax and In-depth Study <t3tssyntax:start>`.
+:ref:`TypoScript Syntax Study <t3coreapi:typoscript-syntax-conditions>` of the core API document.
 
 For a list of available conditions, please refer to the
 :ref:`TypoScript Reference <t3tsref:start>`.
