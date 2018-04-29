@@ -12,7 +12,18 @@ About this document
 -------------------
 
 This document describes TSconfig and its options: A TypoScript a-like configuration
-syntax to configure backend views for backend users based on a user, group and page level.
+syntax to configure details of the backend for backend users based on a user, group and page level.
+
+This document can be seen as detail below the main :ref:`Core API <t3coreapi:start>` document.
+It is too huge to be integrated into Core API directly.
+
+First parts of this document explain the concepts of TSconfig, the different places it can be
+found in the system, how it can be diagnosed, and goes a bit into the PHP API if developers
+need to access data from TSconfig.
+The rest of the document is a reference: A document to look-up and find properties on a daily basis.
+
+This document is especially important for integrators who want to make life as easy as possible
+for their dear backend users.
 
 
 .. _credits:
