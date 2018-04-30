@@ -37,20 +37,6 @@ These are the User TSconfig Top Level Objects (TLOs):
 .. container:: table-row
 
    Property
-         mod
-
-   Data type
-         *(see ->MOD of Page TSconfig)*
-
-   Description
-         Overriding values for the backend modules
-
-         **Deprecated.** Use page.mod instead!
-
-
-.. container:: table-row
-
-   Property
          setup.default
 
          setup.override
@@ -130,20 +116,6 @@ Example
       of an extension::
 
          $GLOBALS['TCA']['pages']['ctrl']['useColumnsForDefaultValues'] = 'doktype,fe_group';
-
-
-.. container:: table-row
-
-   Property
-         user
-
-   Data type
-         *(whatever)*
-
-   Description
-         This is for custom purposes.
-
-         Deprecated, use "tx\_\*" from extensions! See blow.
 
 
 .. container:: table-row
