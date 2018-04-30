@@ -14,6 +14,6 @@ Their details are listed below.
    :titlesonly:
 
    AdmPanel
+   Options
    TopLevelObjects/Index
-   Options/Index
    Setup/Index
