@@ -1,6 +1,7 @@
 .. include:: ../Includes.txt
 
 .. _usertsconfig:
+.. _usertoplevelobjects:
 
 =======================
 User TSconfig Reference
@@ -16,4 +17,7 @@ Their details are listed below.
    AdmPanel
    Options
    Setup
-   TopLevelObjects/Index
+   TcaDefaults
+   Page
+   Auth
+   Tx

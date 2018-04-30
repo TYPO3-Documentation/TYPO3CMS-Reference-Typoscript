@@ -816,7 +816,7 @@ file_list.enableDisplayBigControlPanel
     Determines whether the checkbox "Extended view" in the filelist module is shown or hidden.
     If it is hidden, you can predefine it to be always activated or always deactivated.
 
-    .. figure:: ../Images/manual_html_704dc544.png
+    .. figure:: ../Images/UserTsFileListExtendedView.png
         :alt: Checkbox "Extended view" in the filelist module
 
     The following values are possible:
