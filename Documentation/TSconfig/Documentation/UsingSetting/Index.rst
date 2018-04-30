@@ -3,8 +3,9 @@
 
 .. _typoscript-syntax-tsconfig:
 
+==========================
 Using and setting TSconfig
---------------------------
+==========================
 
 TSconfig can be used in page, it is then referred to as
 "Page TSconfig", or for backend users and backend user groups,
@@ -28,7 +29,7 @@ which are not available in TSconfig.
 .. _typoscript-syntax-tsconfig-page:
 
 Entering Page TSconfig
-^^^^^^^^^^^^^^^^^^^^^^
+----------------------
 
 There are two ways to attach Page TSconfig to any given page.
 When editing a page, move to the "Resources" tab. The first
@@ -57,7 +58,7 @@ of the page tree behave differently.
 .. _typoscript-syntax-tsconfig-user:
 
 Entering User TSconfig
-^^^^^^^^^^^^^^^^^^^^^^
+----------------------
 
 User TSconfig is entered in the "TSconfig" field of either
 BE users or BE user groups records. For both, this field
