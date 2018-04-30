@@ -776,7 +776,7 @@ feedit.popupHeight
 :aspect:`Description`
     Sets the height of the popup window of feedit.
 
-:apsect:`Example`
+:aspect:`Example`
 
     .. code-block:: typoscript
 
@@ -794,7 +794,7 @@ feedit.popupWidth
 :aspect:`Description`
     Sets the width of the popup window of feedit.
 
-:apsect:`Example`
+:aspect:`Example`
 
     .. code-block:: typoscript
 
