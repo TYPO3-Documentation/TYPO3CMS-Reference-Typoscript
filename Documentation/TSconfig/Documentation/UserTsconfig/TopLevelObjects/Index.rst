@@ -10,17 +10,6 @@ These are the User TSconfig Top Level Objects (TLOs):
 
 .. ### BEGIN~OF~TABLE ###
 
-.. container:: table-row
-
-   Property
-         options
-
-   Data type
-         ->OPTIONS
-
-   Description
-         Options for the user, various
-
 
 .. container:: table-row
 
