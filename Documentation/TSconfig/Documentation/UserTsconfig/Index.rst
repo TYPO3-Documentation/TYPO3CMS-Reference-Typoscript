@@ -2,8 +2,8 @@
 
 .. _usertsconfig:
 
-User TSconfig
--------------
+User TSconfig Reference
+-----------------------
 
 You can enter TSconfig for both backend users and groups. The
 resulting TSconfig for a certain backend user is the accumulated
@@ -17,9 +17,7 @@ configuration in the TSconfig field of the user himself.
    :titlesonly:
    :glob:
 
-   Field/Index
    TopLevelObjects/Index
    admPanel/Index
    Options/Index
    Setup/Index
-

@@ -2,8 +2,8 @@
 
 .. _pagetsconfig:
 
-Page TSconfig
--------------
+Page TSconfig Reference
+-----------------------
 
 The Page TSconfig primarily concerns configuration of the modules in
 the TYPO3 backend. It may also relate to values in the frontend
@@ -19,7 +19,6 @@ overridden further out).
    :titlesonly:
    :glob:
 
-   Field/Index
    TopLevelObjects/Index
    Mod/Index
    Options/Index
