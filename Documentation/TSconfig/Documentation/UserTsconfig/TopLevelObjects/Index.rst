@@ -8,32 +8,6 @@ Top Level Objects
 
 These are the User TSconfig Top Level Objects (TLOs):
 
-.. ### BEGIN~OF~TABLE ###
-
-
-.. container:: table-row
-
-   Property
-         setup.default
-
-         setup.override
-
-   Data type
-         ->SETUP
-
-   Description
-         Default values and override values for the user settings known from
-         the setup module.
-
-         .. attention::
-
-            There is a tricky aspect to these settings: If first you have set a
-            value by setup.override and then remove it again, you will experience
-            that the value persists to exist. This is because it is saved in the
-            backend user's profile. Therefore, if you have once set a value, do
-            *not* remove it again but rather set it blank if you want to disable
-            the effect again!
-
 
 .. container:: table-row
 
@@ -142,6 +116,3 @@ Example
 
    Description
          This is reserved space for extensions.
-
-
-.. ###### END~OF~TABLE ######

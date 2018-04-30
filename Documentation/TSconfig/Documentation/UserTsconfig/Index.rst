@@ -15,5 +15,5 @@ Their details are listed below.
 
    AdmPanel
    Options
+   Setup
    TopLevelObjects/Index
-   Setup/Index
