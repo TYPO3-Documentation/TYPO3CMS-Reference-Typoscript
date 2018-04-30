@@ -76,6 +76,7 @@ Please visit the complete :ref:`Sitemap`.
 
    Sitemap/Index
    Introduction/Index
+   UsingSetting/Index
    Conditions/Index
    UserTsconfig/Index
    PageTsconfig/Index
