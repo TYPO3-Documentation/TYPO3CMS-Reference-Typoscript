@@ -13,18 +13,6 @@ These are the User TSconfig Top Level Objects (TLOs):
 .. container:: table-row
 
    Property
-         admPanel
-
-   Data type
-         ->ADMPANEL
-
-   Description
-         Options regarding the frontend admin panel.
-
-
-.. container:: table-row
-
-   Property
          options
 
    Data type
