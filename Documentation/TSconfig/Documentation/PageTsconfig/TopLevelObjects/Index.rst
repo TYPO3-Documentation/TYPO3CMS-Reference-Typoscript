@@ -121,20 +121,6 @@ These are the Page TSconfig Top-Level Objects (TLOs):
 .. container:: table-row
 
    Property
-         user
-
-   Data type
-         *(whatever)*
-
-   Description
-         This is for custom purposes.
-
-         Deprecated, use "tx\_\*" below from extensions
-
-
-.. container:: table-row
-
-   Property
          tx\_[extension key with no underscore]
 
    Data type
