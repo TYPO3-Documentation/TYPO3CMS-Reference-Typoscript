@@ -1,16 +1,15 @@
-.. include:: ../../Includes.txt
+.. include:: ../Includes.txt
 
 .. _pagemod:
 
-=====
-->MOD
-=====
 
-Configuration for backend modules. Generally the syntax is
-*[module\_name].[property]*. The module name is defined in the
-ext\_tables.php file, inside the
-:code:`\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addModule()`
-call with the key name :code:`name`.
+===
+mod
+===
+
+Configuration for backend modules. This is the part of Page TSconfig
+with the most options, most sections affect the main TYPO3 editing modules
+like *Web > Page* and *Web > List*.
 
 
 .. _pageblindingfunctionmenuoptions:
@@ -26,7 +25,7 @@ user/group).
 
 In this case the main menu of the Web > Info module looks like this:
 
-.. figure:: ../../Images/FunctionMenuInfoModule.png
+.. figure:: ../Images/FunctionMenuInfoModule.png
    :alt: The function menu of the Web > Info module
 
    Function menu in the Web > Info module for the Introduction Package
@@ -41,7 +40,7 @@ By adding this Page TSconfig we can remove the "Page TSconfig" item
 
 so that we now have:
 
-.. figure:: ../../Images/FunctionMenuInfoModuleBlindedOption.png
+.. figure:: ../Images/FunctionMenuInfoModuleBlindedOption.png
    :alt: The function menu of the Web > Info module with blinded option
 
    Function menu in the Web > Info module without the Page TSconfig item
@@ -61,7 +60,7 @@ function menu item keys is to use the **SYSTEM > Configuration**
 module, in the *$GLOBALS['TBE\_MODULES\_EXT'] (BE Modules Extensions)* view.
 This will show you a tree like this:
 
-.. figure:: ../../Images/FunctionMenuKeysList.png
+.. figure:: ../Images/FunctionMenuKeysList.png
    :alt: List of function keys
 
    Viewing the list of function keys using the Configuration module
@@ -85,7 +84,7 @@ web\_layout.menu.function
 
 This is the function menu of the **WEB > Page** module.
 
-.. figure:: ../../Images/FunctionMenuPageModule.png
+.. figure:: ../Images/FunctionMenuPageModule.png
    :alt: The function menu of the Page module
 
    The default options of the Page module function menu
@@ -114,7 +113,7 @@ web\_info.menu.function
 
 This is the function menu of the **WEB > Info** module.
 
-.. figure:: ../../Images/FunctionMenuInfoModule.png
+.. figure:: ../Images/FunctionMenuInfoModule.png
    :alt: The function menu of the Info module
 
    The default options of the Info module function menu
@@ -140,7 +139,7 @@ web\_func.menu.function
 
 This is the function menu of the **WEB > Functions** module.
 
-.. figure:: ../../Images/FunctionMenuFunctionsModule.png
+.. figure:: ../Images/FunctionMenuFunctionsModule.png
    :alt: The function menu of the Functions module
 
    The default options of the Functions module function menu
@@ -160,7 +159,7 @@ web\_ts.menu.function
 
 This is the function menu of the **WEB > Template** module.
 
-.. figure:: ../../Images/FunctionMenuTemplateModule.png
+.. figure:: ../Images/FunctionMenuTemplateModule.png
    :alt: The function menu of the Template module
 
    The default options of the Template module function menu
@@ -172,55 +171,6 @@ This is the function menu of the **WEB > Template** module.
       TYPO3\CMS\Tstemplate\Controller\TemplateAnalyzerModuleFunctionController = 0
    }
 
-
-.. _pageoverridingpagetsconfigwithusertsconfig:
-
-Overriding Page TSconfig with User TSconfig
-"""""""""""""""""""""""""""""""""""""""""""
-
-In all standard modules the Page TSconfig values of the "mod." branch
-may be overridden by the same branch of values set for the backend
-user.
-
-To illustrate this feature let's consider the case from above where a
-menu item in the Web > Info module was disabled in the Page TSconfig
-with this value
-
-.. code-block:: typoscript
-
-   mod.web_info.menu.function {
-      tsconf = 0
-   }
-
-If however we activate this configuration in the TSconfig of a certain
-backend user (e.g. the admin user), that user would still be able to
-select this menu item because the value of his User TSconfig overrides
-the same value set in the Page TSconfig
-
-.. code-block:: typoscript
-
-   mod.web_info.menu.function {
-      tsconf = 1
-   }
-
-.. figure:: ../../Images/manual_html_m6b2884ce.png
-   :alt: Example 1: Overriding the Page TSconfig menu function
-
-   Example 1: Overriding the Page TSconfig menu function
-
-
-Here is another example: The value of
-'mod.web\_layout.editFieldsAtATime' has been set to '1' in Page
-TSconfig. Additionally it is also set in the User TSconfig of the
-user, who is currently logged in, but there to the value '5'. The
-upper image shows you how to check the Page TSconfig. In the lower
-image you see the result of this user's User TSconfig: It overrides
-the Page TSconfig and alters the configuration:
-
-.. figure:: ../../Images/manual_html_748558d0.png
-   :alt: Example 2: Overriding the Page TSconfig menu function
-
-   Example 2: Overriding the Page TSconfig menu function
 
 .. _pagesharedotionsformodules:
 
@@ -326,7 +276,7 @@ Shared options for modules (mod.SHARED)
          * Now the columns with colPos=1 and colPos=0 are displayed, labeled
            with "Left" and "Content".
 
-         .. figure:: ../../Images/simpleBackendLayout.png
+         .. figure:: ../Images/simpleBackendLayout.png
             :alt: A simple Backend Layout
 
             A simple Backend Layout
@@ -380,7 +330,7 @@ Shared options for modules (mod.SHARED)
             In general: Use the "Select flag icon" selector of a language
             record in the backend to find out what names are available.
 
-            .. figure:: ../../Images/SelectFlagIcon.png
+            .. figure:: ../Images/SelectFlagIcon.png
 
                The flag selector of a language record in the backend -
                a handy way to find out what flag names are available
@@ -848,7 +798,7 @@ Web > List (mod.web\_list)
          The result will be that records from tables are only listed in the
          single-table mode:
 
-         .. figure:: ../../Images/manual_html_165a5551.png
+         .. figure:: ../Images/manual_html_165a5551.png
             :alt: The list module after activating the single-table mode
 
             The list module after activating the single-table mode
@@ -929,7 +879,7 @@ Web > List (mod.web\_list)
          The buttons "Export" and "Download CSV file" are hidden
          in single table view inside the list module:
 
-         .. figure:: ../../Images/listModuleWithoutExportButtons.png
+         .. figure:: ../Images/listModuleWithoutExportButtons.png
             :alt: The list module without export buttons after activating the
                   single-table mode
 
@@ -1167,7 +1117,7 @@ Web > List (mod.web\_list)
          Only pages and tt\_news table elements will be linked to in the New
          record screen:
 
-         .. figure:: ../../Images/manual_html_6d60e8b.png
+         .. figure:: ../Images/manual_html_6d60e8b.png
             :alt: The New record screen after modifying the allowed elements
 
             The New record screen after modifying the allowed elements
@@ -1228,7 +1178,7 @@ Web > List (mod.web\_list)
          shown or hidden. If it is hidden, you can predefine it to be always
          activated or always deactivated.
 
-         .. figure:: ../../Images/manual_html_74103dfb.png
+         .. figure:: ../Images/manual_html_74103dfb.png
             :alt: "Extended view" is shown in the list module
 
             "Extended view" is shown in the list module
@@ -1413,7 +1363,7 @@ Web > View (mod.web\_view)
                <key>.height = 768
             }
 
-         .. figure:: ../../Images/WebViewTSConfigPreview.png
+         .. figure:: ../Images/WebViewTSConfigPreview.png
             :alt: Dropdown menu Width with added frame size called myPreview
 
             Dropdown menu Width with added frame size called myPreview
@@ -1510,7 +1460,7 @@ New record wizard (mod.wizards.newRecord)
          This places the tt\_news group at the top (after pages and content
          elements). The other groups follow unchanged:
 
-         .. figure:: ../../Images/manual_html_1c6e46bb.png
+         .. figure:: ../Images/manual_html_1c6e46bb.png
             :alt: The position of News changed after modifying the New record screen
 
             The position of News changed after modifying the New record screen
@@ -1728,7 +1678,7 @@ Create a new group and add a (pre-filled) element to it
 This will add the following at the bottom of the new content element
 wizard:
 
-.. figure:: ../../Images/manual_html_73b37d4e.png
+.. figure:: ../Images/manual_html_73b37d4e.png
    :alt: Added entry in the new content element wizard
 
    Added entry in the new content element wizard

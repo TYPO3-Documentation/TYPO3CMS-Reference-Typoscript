@@ -243,38 +243,50 @@ changed and simply inherited directly from the group.
 
 
 .. _userrelationshiptovaluessetinpagetsconfig:
+.. _pageoverridingpagetsconfigwithusertsconfig:
 
-Relationship to values set in Page TSconfig
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Overriding Page TSconfig in User TSconfig
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-All properties from Page TSconfig can be **overwritten** in User
-TSconfig (by prepending the property name with "page."). When a Page
-TSconfig property is set in **User** TSconfig that way (no matter, if
-in the TSconfig field of a group or a user), it **overwrites** the
-value of the according **Page** TSconfig property.
+All properties from Page TSconfig can be **overwritten** in User TSconfig by prepending the property
+name with "page.". When a Page TSconfig property is set in **User** TSconfig that way, no matter, if
+in the TSconfig field of a group or a user, it **overwrites** the value of the according **Page** TSconfig property.
+
+To illustrate this feature let's say the *Web > Info > Localization Overview* has been disabled via Page TSconfig:
+
+.. code-block:: typoscript
+
+   mod.web_info.menu.function {
+      TYPO3\CMS\Info\Controller\TranslationStatusController = 0
+   }
+
+If however we activate this configuration in the TSconfig of a certain backend user, that
+user would still be able to select this menu item because the value of his User TSconfig
+overrides the same value set in the Page TSconfig, just prefixed with `page.`:
+
+.. code-block:: typoscript
+
+   page.mod.web_info.menu.function {
+      TYPO3\CMS\Info\Controller\TranslationStatusController = 1
+   }
 
 .. important::
 
-   It is **not** possible to *reference* the value of a property from Page
-   TSconfig and to *modify* this value in User TSconfig!
-   If you set a property in User TSconfig, which already had been set in
-   *Page* TSconfig, then the value from Page TSconfig will be overwritten.
+    It is **not** possible to *reference* the value of a property from Page TSconfig and to *modify*
+    this value in User TSconfig! If you set a property in User TSconfig, which already had been set in
+    *Page* TSconfig, then the value from Page TSconfig will be overwritten.
 
-**Example:**
+    The result of the example below is *not* the value "bold,italic", but the value "italic".
 
-* Add in **Page TSconfig**
+    .. code-block:: typoscript
 
-.. code-block:: typoscript
+        # Enable the "bold" button in Page TSconfig (!)
+        RTE.default.showButtons = bold
 
-	RTE.default.showButtons = bold
+    .. code-block:: typoscript
 
-* Add in User TSconfig
-
-.. code-block:: typoscript
-
-	page.RTE.default.showButtons := addToList(italic)
-
-* Finally you do *not* get the value "bold,italic", but the value "italic".
+        # Try to additionally add the "italic" button in User TSconfig (!)
+        page.RTE.default.showButtons := addToList(italic)
 
 
 .. _usersettingdefaultusertsconfig:
