@@ -36,7 +36,7 @@ constants
 
     In the frontend TypoScript templates you can now insert this constant as `{$websiteConfig.id}`.
 
-    .. figure:: ../../Images/TypoScriptObjectBrowser.png
+    .. figure:: ../Images/TypoScriptObjectBrowser.png
         :alt: Showing TS constants with the TypoScript Object Browser
 
         Showing TS constants with the TypoScript Object Browser
