@@ -132,26 +132,6 @@ This is the function menu of the **WEB > Info** module.
    }
 
 
-.. _pageblindingfunctionmenuoptions-webfunc:
-
-web\_func.menu.function
-~~~~~~~~~~~~~~~~~~~~~~~
-
-This is the function menu of the **WEB > Functions** module.
-
-.. figure:: ../Images/FunctionMenuFunctionsModule.png
-   :alt: The function menu of the Functions module
-
-   The default options of the Functions module function menu
-
-.. code-block:: typoscript
-
-   # Disables the item "Sort pages":
-   mod.web_func.menu.function {
-      TYPO3\CMS\WizardSortpages\View\SortPagesWizardModuleFunction = 0
-   }
-
-
 .. _pageblindingfunctionmenuoptions-webts:
 
 web\_ts.menu.function
