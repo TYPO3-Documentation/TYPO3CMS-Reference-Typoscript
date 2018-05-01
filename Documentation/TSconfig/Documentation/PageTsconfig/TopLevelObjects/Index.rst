@@ -12,21 +12,6 @@ These are the Page TSconfig Top-Level Objects (TLOs):
 .. container:: table-row
 
    Property
-         mod
-
-   Data type
-         ->MOD
-
-   Description
-         Options for the backend modules.
-
-         *Notice that these options are merged with settings from User TSconfig
-         (TLO: mod) which takes precedence.*
-
-
-.. container:: table-row
-
-   Property
          RTE
 
    Data type
