@@ -22,8 +22,8 @@ User TSconfig again, for details, see section
    :titlesonly:
 
    Mod
+   Options
    TopLevelObjects/Index
-   Options/Index
    TCEmain/Index
    TCEform/Index
    TSFE/Index
