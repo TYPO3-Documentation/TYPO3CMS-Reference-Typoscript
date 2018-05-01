@@ -455,24 +455,6 @@ above).
          parameter array by the key "TSconfig".
 
 
-.. container:: table-row
-
-   Property
-         RTEfullScreenWidth
-
-   Data type
-         positive integer / %
-
-   Description
-         *(Applies for RTE text fields only with the RTE wizard configured.)*
-
-         The width of the RTE full screen display. If you set an integer value,
-         that indicates the pixels width. You can also set a percentage value.
-
-   Default
-         100%
-
-
 .. ###### END~OF~TABLE ######
 
 [page:TCEFORM.(table name).(field)/TCEFORM.(table name).(field).types.(type)]
