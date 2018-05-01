@@ -23,6 +23,8 @@ User TSconfig again, for details, see section
 
    Mod
    Options
+   Rte
+   TcaDefaults
    Tx
    TopLevelObjects/Index
    TCEmain/Index
