@@ -10,37 +10,6 @@
 .. container:: table-row
 
    Property
-         jumpUrl\_transferSession
-
-   Data type
-         boolean
-
-   Description
-         If set, the jumpUrl redirection to the URL will be prepended with a
-         parameter that transfers the current fe\_users session to that URL.
-         This URL should be the TYPO3 frontend in the same database, just at
-         another domain (else it makes no sense).
-
-         You can implement it in your own links if you like. This is how you
-         do:
-
-         You must send the parameter 'FE\_SESSION\_KEY' as GET or POST. The
-         parameter looks like this: [fe\_user-session-id]-[a hash made to
-         prevent misuse]
-
-         The parameter can be calculated like this:
-
-         .. code-block:: php
-
-			$param = '&FE_SESSION_KEY=' . rawurlencode(
-				$GLOBALS['TSFE']->fe_user->id . '-' .
-				md5( $GLOBALS['TSFE']->fe_user->id. '/' . $GLOBALS['TYPO3_CONF_VARS']['SYS']['encryptionKey'])
-			);
-
-
-.. container:: table-row
-
-   Property
          constants
 
    Data type
