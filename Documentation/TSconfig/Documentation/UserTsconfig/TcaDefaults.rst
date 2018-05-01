@@ -1,5 +1,7 @@
 .. include:: ../Includes.txt
 
+.. _userTsTcaDefaults:
+
 ===========
 TCAdefaults
 ===========
@@ -9,14 +11,14 @@ for various TCA types, for instance for :ref:`type=input <t3tca:columns-input-pr
 
 The full path of a setting include the table and the field name: `TCAdefaults.[table name].[field]`
 
-This key is also available on a page TSconfig level, the order of default values when creating
-new records in the backend is this:
+This key is also available on :ref:`Page TSconfig level <pageTsTcaDefaults>`, the order of default
+values when creating new records in the backend is this:
 
 #. Value from $GLOBALS['TCA']
 
 #. Value from User TSconfig (these settings)
 
-#. Value from Page TSconfig
+#. Value from :ref:`Page TSconfig <pageTsTcaDefaults>`
 
 #. Value from "defVals" GET variables
 
