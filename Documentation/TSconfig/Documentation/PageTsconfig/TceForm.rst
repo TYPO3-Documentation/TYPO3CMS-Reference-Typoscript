@@ -1,15 +1,18 @@
-.. include:: ../../Includes.txt
+.. include:: ../Includes.txt
 
 .. _tceform:
 
-->TCEFORM
-^^^^^^^^^
+=======
+TCEFORM
+=======
 
-Allows detailed configuration of how TCEforms are rendered for a page
+Allows detailed configuration of how editing forms are rendered for a page
 tree branch and for individual tables if you like. You can enable and
 disable options, blind options in selector boxes etc.
 
-.. ### BEGIN~OF~TABLE ###
+See the core API document section :ref:`FormEngine <t3coreapi:FormEngine>` for more
+details on how records are rendered in the backend.
+
 
 .. container:: table-row
 
@@ -69,7 +72,7 @@ disable options, blind options in selector boxes etc.
    Description
          Configuration for the "suggest" wizard.
 
-         .. figure:: ../../Images/manual_html_m4f51d09f.png
+         .. figure:: ../Images/manual_html_m4f51d09f.png
             :alt: Configured "suggest" wizard
 
          Each level of the configuration overwrites the values of the level
@@ -339,7 +342,7 @@ above).
 
          This example extends the options for Page types with two new items:
 
-         .. figure:: ../../Images/manual_html_32b14869.png
+         .. figure:: ../Images/manual_html_32b14869.png
             :alt: The Page types are extended by two new items
 
          .. warning::
@@ -366,7 +369,7 @@ above).
          the default behavior of TYPO3 is to preserve the value and to show a
          label which warns about this special state:
 
-         .. figure:: ../../Images/manual_html_m78bf4baf.png
+         .. figure:: ../Images/manual_html_m78bf4baf.png
             :alt: A missing selector box value is indicated by a warning message
 
          If disableNoMatchingValueElement is set, the element "INVALID VALUE"
@@ -384,7 +387,7 @@ above).
          Now the selector box will default to the first element in the selector
          box:
 
-         .. figure:: ../../Images/manual_html_m47a63dda.png
+         .. figure:: ../Images/manual_html_m47a63dda.png
             :alt: Instead of show a warning message the system choose the first element in the selector box
 
 
@@ -416,7 +419,7 @@ above).
 
          The result will be:
 
-         .. figure:: ../../Images/manual_html_m54280068.png
+         .. figure:: ../Images/manual_html_m54280068.png
             :alt:  A invalid selector box value is indicated by a warning message
 
 
@@ -449,7 +452,7 @@ above).
 
          Result will be:
 
-         .. figure:: ../../Images/manual_html_430ba952.png
+         .. figure:: ../Images/manual_html_430ba952.png
             :alt: The Page types with modified labels
 
 

@@ -1,6 +1,7 @@
 .. include:: ../Includes.txt
 
 .. _pagetsconfig:
+.. _pagetoplevelobjects:
 
 Page TSconfig Reference
 -----------------------
@@ -25,9 +26,7 @@ User TSconfig again, for details, see section
    Options
    Rte
    TcaDefaults
+   TceForm
    TceMain
    Tsfe
    Tx
-   TopLevelObjects/Index
-   TCEmain/Index
-   TCEform/Index

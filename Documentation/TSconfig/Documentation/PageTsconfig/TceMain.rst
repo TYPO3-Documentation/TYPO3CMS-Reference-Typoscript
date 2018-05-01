@@ -255,9 +255,9 @@ translateToMessage
     Defines the string that will be prepended to every field value if you copy an element to another
     language version. The special string "%s" will be replaced with the language title.
 
-    Default is `Translate to [language title]: `.
+    Default is `Translate to [language title]:`.
 
-:apsect:`Example`
+:aspect:`Example`
 
     .. code-block:: typoscript
 
