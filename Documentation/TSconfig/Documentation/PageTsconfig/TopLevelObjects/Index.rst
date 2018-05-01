@@ -8,17 +8,6 @@ Top-Level Objects
 These are the Page TSconfig Top-Level Objects (TLOs):
 
 
-.. container:: table-row
-
-   Property
-         TCEMAIN
-
-   Data type
-         ->TCEMAIN
-
-   Description
-         Configuration for the TYPO3 Core Engine (TCEmain).
-
 
 .. container:: table-row
 
