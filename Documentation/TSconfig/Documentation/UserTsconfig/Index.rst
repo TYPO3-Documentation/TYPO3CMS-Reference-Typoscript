@@ -15,9 +15,9 @@ Their details are listed below.
    :titlesonly:
 
    AdmPanel
+   Auth
    Options
+   Page
    Setup
    TcaDefaults
-   Page
-   Auth
    Tx
