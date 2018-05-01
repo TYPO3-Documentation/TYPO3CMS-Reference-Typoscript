@@ -7,8 +7,6 @@ Top-Level Objects
 
 These are the Page TSconfig Top-Level Objects (TLOs):
 
-.. ### BEGIN~OF~TABLE ###
-
 .. container:: table-row
 
    Property
@@ -103,18 +101,3 @@ These are the Page TSconfig Top-Level Objects (TLOs):
          	TCAdefaults.pages.hidden = 0
 
 
-.. container:: table-row
-
-   Property
-         tx\_[extension key with no underscore]
-
-   Data type
-         *(whatever)*
-
-   Description
-         This is reserved space for extensions.
-
-
-.. ###### END~OF~TABLE ######
-
-[page]

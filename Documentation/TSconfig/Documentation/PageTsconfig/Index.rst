@@ -23,6 +23,7 @@ User TSconfig again, for details, see section
 
    Mod
    Options
+   Tx
    TopLevelObjects/Index
    TCEmain/Index
    TCEform/Index
