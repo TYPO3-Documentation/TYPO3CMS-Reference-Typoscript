@@ -187,7 +187,6 @@ clearCacheCmd
     Attaching tags to page cache is described in the :ref:`TypoScript Reference <t3tsref:stdwrap-addpagecachetags>`.
 
 :aspect:`Examples`
-
     .. code-block:: typoscript
 
         TCEMAIN {
@@ -258,7 +257,6 @@ translateToMessage
     Default is `Translate to [language title]:`.
 
 :aspect:`Example`
-
     .. code-block:: typoscript
 
         TCEMAIN {
