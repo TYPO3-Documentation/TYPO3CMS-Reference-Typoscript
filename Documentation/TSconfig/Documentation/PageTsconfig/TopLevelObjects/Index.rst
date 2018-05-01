@@ -31,15 +31,3 @@ These are the Page TSconfig Top-Level Objects (TLOs):
    Description
          Extra configuration for the form fields rendered by the TCEforms-class
          in general.
-
-
-.. container:: table-row
-
-   Property
-         TSFE
-
-   Data type
-         ->TSFE
-
-   Description
-         Options for the TSFE frontend object.
