@@ -106,22 +106,6 @@ details on how records are rendered in the backend.
 .. container:: table-row
 
    Property
-         [table name].[field].[dataStructKey]
-
-   Data type
-         :ref:`TCEFORM_flexform <pagetceformflexform>`
-
-   Description
-         Properties for the TCEFORM FlexForm meta configuration.
-
-         FlexForms have a built in possibility to use different field
-         configuration for multiple languages. The handling of this multi-
-         language behavior is configurable in the meta settings of a FlexForm.
-
-
-.. container:: table-row
-
-   Property
          [table name].[field].[dataStructKey].[flexSheet]
 
    Data type
@@ -493,57 +477,6 @@ above).
 
 [page:TCEFORM.(table name).(field)/TCEFORM.(table name).(field).types.(type)]
 
-
-.. _pagetceformflexform:
-
-->TCEFORM\_flexform
-"""""""""""""""""""
-
-Properties for the TCEFORM FlexForm configuration object.
-
-.. ### BEGIN~OF~TABLE ###
-
-.. container:: table-row
-
-   Property
-         langDisable
-
-   Data type
-         boolean
-
-   Description
-         If set, then handling of localizations is disabled. Otherwise
-         FlexForms will not only allow editing the default language, but also
-         additional languages according to "sys\_languages" table contents.
-
-
-.. container:: table-row
-
-   Property
-         langChildren
-
-   Data type
-         boolean
-
-   Description
-         If set, then localizations are bound to the default values 1-1
-         ("value" level). Otherwise localizations are handled on "structure
-         level".
-
-         **Example:**
-
-         .. code-block:: typoscript
-
-            TCEFORM.tt_content.pi_flexform.login {
-               # Language settings plug-in configuration
-               langDisable  = 1
-               langChildren = 0
-            }
-
-
-.. ###### END~OF~TABLE ######
-
-[page:TCEFORM.[table name].[field].[dataStructKey]]
 
 .. _pagetceformflexformsheet:
 
