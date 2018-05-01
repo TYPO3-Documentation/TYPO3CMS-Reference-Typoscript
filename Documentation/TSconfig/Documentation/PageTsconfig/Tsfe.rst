@@ -29,7 +29,6 @@ constants
     the value twice. In such a case you can use this feature.
 
 :aspect:`Example`
-
     .. code-block:: typoscript
 
         TSFE.constants.websiteConfig.id = 123
