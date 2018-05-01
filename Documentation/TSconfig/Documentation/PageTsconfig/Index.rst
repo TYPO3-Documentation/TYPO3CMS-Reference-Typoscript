@@ -25,6 +25,7 @@ User TSconfig again, for details, see section
    Options
    Rte
    TcaDefaults
+   TceMain
    Tsfe
    Tx
    TopLevelObjects/Index
