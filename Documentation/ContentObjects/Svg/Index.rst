@@ -71,12 +71,10 @@ do not have native SVG support, so that it also works in e.g. IE
    Description
          Raw XML data for the SVG.
 
-         Will be ignored, if "src" is defined.
-         Requires `renderMode` to be set to `inline`.
+         Will be ignored, if "src" is defined. Requires `renderMode` to be set to `inline`.
 
-         **Deprecated: **
-         Usage without `renderMode` set to `inline is deprecated since
-         TYPO3 9, and will stop working in TYPO3 10.
+         Deprecated
+            Usage without `renderMode` set to `inline` is deprecated since TYPO3 9, and will stop working in TYPO3 10.
 
 .. container:: table-row
 
@@ -89,8 +87,8 @@ do not have native SVG support, so that it also works in e.g. IE
    Description
          Output, if SVG output is not possible.
 
-         **Deprecated:**
-         `noscript` is deprecated since TYPO3 9 and will be removed in TYPO3 10.
+         Deprecated
+            `noscript` is deprecated since TYPO3 9 and will be removed in TYPO3 10.
 
 
 .. container:: table-row

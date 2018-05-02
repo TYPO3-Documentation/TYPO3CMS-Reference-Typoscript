@@ -22,9 +22,8 @@ is raised to the maximum timestamp value of the respective records.
 Comprehensive example
 ---------------------
 
-See PHP source code for :ref:`TYPO3 \\ CMS \\ Frontend \\ Controller \\ 
-TypoScriptFrontendController \\ ContentContentObject
-<t3api:typo3\\cms\\frontend\\contentobject\\contentcontentobject>`.
+See PHP class :php:`\TYPO3\CMS\Frontend\Controller\TypoScriptFrontendController\ContentContentObject`
+for details on code level.
 
 Preamble::
 

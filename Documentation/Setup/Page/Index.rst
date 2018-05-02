@@ -461,7 +461,7 @@ includeJS.[array]
          Is automatically set to `anonymous` for external JavaScript files if an
          :ts:`.integrity` is set.
 
-         **defer** Allows to set the HTML5 attribute :html:**defer`.
+         **defer** Allows to set the HTML5 attribute :html:`defer`.
 
          **disableCompression**: If :ts:`config.compressJs` is enabled,
          this disables the compression of this file.
@@ -515,7 +515,7 @@ includeJSFooter.[array]
          :ref:`data-type-resource`
 
    Description
-         Same as :ref:`setup-page-includeJS` above, except that this block gets
+         Same as :ref:`includeJS <setup-page-includejs-array>` above, except that this block gets
          included at the bottom of the page (just before the closing :html:`</body>`
          tag).
 
@@ -535,7 +535,7 @@ includeJSFooterlibs.[array]
          :ref:`data-type-resource`
 
    Description
-         Same as :ref:`setup-page-includeJSLibs`, except that this block gets
+         Same as :ref:`includeJSLibs <setup-page-includejslibs-array>`, except that this block gets
          included at the bottom of the page (just before the closing :html:`</body>`
          tag).
 

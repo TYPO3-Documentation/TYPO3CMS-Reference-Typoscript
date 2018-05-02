@@ -400,7 +400,7 @@ JSwindow\_params
          JSwindow\_params
 
    Data type
-         :ref:`data-type-string
+         :ref:`data-type-string`
 
    Description
          Preset values for opening the window. This example lists almost all
@@ -420,7 +420,7 @@ returnLast
          returnLast
 
    Data type
-         :ref:`data-type-string
+         :ref:`data-type-string`
 
    Description
          If set to "url", then it will return the URL of the link

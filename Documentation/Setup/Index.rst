@@ -18,8 +18,6 @@ Setup
    Config/Index
    Constants/Index
    Page/Index
-   Frameset/Index
-   Frame/Index
    Meta/Index
    Carray/Index
 

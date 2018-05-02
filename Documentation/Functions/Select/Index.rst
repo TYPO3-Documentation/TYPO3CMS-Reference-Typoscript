@@ -18,7 +18,7 @@ in the :php:`$GLOBALS['TCA']`.
 
    Do not use GET or POST data like GPvar directly with this object!
    Avoid SQL injections! Don't trust any external data! Secure
-   any unknown data, for example with :ref:`intval`.
+   any unknown data, for example with :ref:`intval <stdwrap-intval>`.
 
 
 

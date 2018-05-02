@@ -138,7 +138,7 @@ absRefPrefix
 
          **Note:** If you're working on a server where you have different domain
          names or different path segments leading to the same page (e.g. for internal
-         and external access), you might do yourself a favor and set :ref:`absRefPrefix` to
+         and external access), you might do yourself a favor and set `absRefPrefix` to
          the URL and path of your site, e.g. `https://typo3.org/`. If you do not,
          you risk to render pages to cache from the internal network and thereby
          prefix image-references and links with a wrong path or a path not accessible
@@ -1566,8 +1566,6 @@ locale\_all
          It is possible to supply a comma-separated list of locales as a fallback chain
 
    Example
-         ::
-
          This will render dates in danish made with stdWrap/strftime::
 
             locale_all = danish
@@ -2309,8 +2307,8 @@ sys\_language\_isocode
         setting.
 
         The ISO code is also used for the language attribute of the HTML tag.
-        Therefore the setting :ref:`setup-config-htmlTag_langKey` is not needed
-        anymore, if it is the same as the ISO code.
+        Therefore the setting :ref:`htmlTag_langKey <setup-config-htmltag-langkey>`
+        is not needed anymore, if it is the same as the ISO code.
 
         See the example at sys\_language\_isocode\_default!
 
