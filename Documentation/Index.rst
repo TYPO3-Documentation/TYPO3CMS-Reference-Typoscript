@@ -80,6 +80,7 @@ Please visit the complete :ref:`Sitemap`
 
    Sitemap/Index
    Introduction/Index
+   UsingSetting/Index
    DataTypes/Index
    ObjectsAndProperties/Index
    Conditions/Index
