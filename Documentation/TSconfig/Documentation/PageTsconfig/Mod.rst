@@ -1167,7 +1167,7 @@ newRecord.order
 
         mod.wizards.newRecord.order = tt_news
 
-    .. figure:: ../Images/manual_html_1c6e46bb.png
+    .. figure:: ../Images/NewRecordWizardNewOrder.png
         :alt: The position of News changed after modifying the New record screen
 
         The position of News changed after modifying the New record screen
