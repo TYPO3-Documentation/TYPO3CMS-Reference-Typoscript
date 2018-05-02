@@ -2,6 +2,7 @@
 
 .. _tceform:
 .. _pagetceformconfobj:
+.. _pagetceformflexformsheet:
 
 =======
 TCEFORM
@@ -13,6 +14,32 @@ disable options, blind options in selector boxes etc.
 
 See the core API document section :ref:`FormEngine <t3coreapi:FormEngine>` for more
 details on how records are rendered in the backend.
+
+The properties listed below apply to various contexts which are explained per
+property. The full property path thus depends on the property and where it should
+apply. In general, a more specific property path overrides a less specific one:
+
+Some properties apply to single fields, those can be usually set per table or
+per table and record type. This leads to the property paths
+`TCEFORM.[tableName].[fieldName].[propertyName]` to configure the field for all types
+and `TCEFORM.[tabeName].[fieldName].types.[typeName]` to configure a fierd for a specific
+type, see the :ref:`TCA type section <t3tca:types>` for details on types.
+
+Other properties also apply to flex form fields, in this case the full property
+path including the data structure key has to be set:
+`TCEFORM.[tableName].[fieldName].[dataStructureKey].[flexSheet].[flexFieldName].[propertyName]`.
+The `[dataStructKey]` represents the key of a FlexForm in
+:php:`$GLOBALS['TCA'][<tableName>]['columns'][<field>]['config']['ds']`. This key will be split into up to
+two parts. By default the first part will be used as identifier of the FlexForm in TSconfig. The second part
+will override the identifier if it is not empty, `list` or `*`. For example the identifier of the key
+`my_ext_pi1,list` will be `my_ext_pi1` and of the key `*,my_CType` it will be `my_CType`. See section
+:ref:`Pointing to a data structure <t3tca:columns-flex-ds-pointer>` of the TCA reference for details.
+
+Some properties apply to whole FlexForm sheets, their property path is
+`TCEFORM.[tableName].[fieldName].[dataStructureKey].[flexSheet].[propertyName]`.
+
+While all that property path munging looks messy at first, it should become more
+clear if reading through the single properties below and looking at the examples.
 
 
 disabled
@@ -30,6 +57,9 @@ disabled
 
     table and record type level, example:
         `TCEFORM.tt_content.header.types.textpic.disabled`
+
+    Flex form sheet level. If set, the entire tab is not rendered, example:
+        `TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.disabled`
 
     Flex form field level, example:
         `TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.myField.disabled`
@@ -368,32 +398,57 @@ config
         `TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.myField.config.max`
 
 
-
-
-
-
-
-.. container:: table-row
-
-   Property
-         [*table name*].[*field*]
-
-         [*table name*].[*field*].types.[*type*]
+sheetTitle
+==========
 
 :aspect:`Datatype`
-         :ref:`TCEFORM_confObj <pagetceformconfobj>`
+    localized string
 
 :aspect:`Description`
-         These objects contain additional configuration of the TCEFORM
-         interface. For the properties available, refer to the table below.
-         This is a description of how you can customize in general and override
-         for specific types.
+    Set the title of the sheet / tab in a FlexForm configuration.
 
-         TCEFORM.[table name].[field] - configures the field in TCEFORM for all
-         types.
+    This property is only available on flex form sheet level, example:
+        `TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.sheetTitle`
 
-         TCEFORM.[table name].[field].types.[type] - configures the field in
-         TCEFORM in case the 'type'-value of the field matches type.
+:aspect:`Example`
+    .. code-block:: typoscript
+
+        TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF {
+            # Rename the first tab of the FlexForm plug-in configuration
+            sheetTitle = LLL:my_ext/Resource/Private/Language/locallang.xlf:tt_content.pi_flexform.my_ext_pi1.sDEF
+        }
+
+
+sheetDescription
+================
+
+:aspect:`Datatype`
+    localized string
+
+:aspect:`Description`
+    Specifies a description for the sheet shown in the FlexForm.
+
+    This property is only available on flex form sheet level, example:
+        `TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.sheetDescription`
+
+
+sheetShortDescr
+===============
+
+:aspect:`Datatype`
+    localized string
+
+:aspect:`Description`
+    Specifies a short description of the sheet used as link title in the tab-menu.
+
+    This property is only available on flex form sheet level, example:
+        `TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.sheetShortDescription`
+
+
+
+suggest
+=======
+
 
 
 
@@ -445,192 +500,20 @@ config
          [table name] listing records from [queryTable]
 
 
-.. container:: table-row
 
-   Property
-         [table name].[field].[dataStructKey].[flexSheet]
 
-:aspect:`Datatype`
-         :ref:`TCEFORM_flexformSheet <pagetceformflexformsheet>`
 
-:aspect:`Description`
-         Configuration for the data structure of a sheet with type "flex".
 
-         The [dataStructKey] represents the key of a FlexForm in
-         $GLOBALS['TCA'][<table name>]['columns'][<field>]['config']['ds'].
 
-         This key will be split into up to two parts. By default the first part
-         will be used as identifier of the FlexForm in TSconfig.
 
-         The second part will override the identifier if it is not empty,
-         "list" or "\*".
 
-         For example the identifier of the key "my\_ext\_pi1,list" will be
-         "my\_ext\_pi1" and of the key "\*,my\_CType" it will be "my\_CType".
 
-         TCEFORM.[table name].[field].[dataStructKey].[flexSheet] configures a
-         whole FlexForm sheet.
 
 
-.. container:: table-row
 
-   Property
-         [table name].[field].[dataStructKey].[flexSheet].[flexField]
 
-:aspect:`Datatype`
-         :ref:`TCEFORM_confObj <pagetceformconfobj>`
 
-:aspect:`Description`
-         Configuration for the data structure of a field with type "flex".
 
-         TCEFORM.[table name].[field].[dataStructKey].[flexSheet].[flexField]
-         configures a single FlexForm field.
-
-:aspect:`Example`
-
-         .. code-block:: typoscript
-
-            TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.myField {
-               # Remove
-               disabled = 1
-
-               # Rename
-               label = LLL:fileadmin/locallang.xlf:tt_content.pi_flexform.my_ext_pi1.sDEF.myField
-
-               # Remove all items from select but these ones
-               keepItems = item1,item2,item3
-
-               # Remove items from select
-               removeItems = item1,item2,item3
-
-               # Add new items to select
-               addItems {
-                  item1 = LLL:fileadmin/locallang.xlf:tt_content.pi_flexform.my_ext_pi1.sDEF.myField.item1
-                  item2 = LLL:fileadmin/locallang.xlf:tt_content.pi_flexform.my_ext_pi1.sDEF.myField.item2
-                  item3 = LLL:fileadmin/locallang.xlf:tt_content.pi_flexform.my_ext_pi1.sDEF.myField.item3
-               }
-
-               # Rename existing items
-               altLabels {
-                  item1 = LLL:fileadmin/locallang.xlf:tt_content.pi_flexform.my_ext_pi1.sDEF.myField.item1
-                  item2 = LLL:fileadmin/locallang.xlf:tt_content.pi_flexform.my_ext_pi1.sDEF.myField.item2
-                  item3 = LLL:fileadmin/locallang.xlf:tt_content.pi_flexform.my_ext_pi1.sDEF.myField.item3
-               }
-            }
-
-
-.. container:: table-row
-
-   Property
-         [table name].[field].[dataStructKey].[flexSheet].[flexField].config.[key]
-
-:aspect:`Datatype`
-         string / array
-
-:aspect:`Description`
-         This setting allows to override FlexForm field configuration.
-
-
-.. ###### END~OF~TABLE ######
-
-[page:TCEFORM]
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.. _pagetceformflexformsheet:
-
-->TCEFORM\_flexformSheet
-""""""""""""""""""""""""
-
-These are the properties for the TCEFORM FlexForm sheet configuration
-object (see ->TCEFORM section above).
-
-.. ### BEGIN~OF~TABLE ###
-
-.. container:: table-row
-
-   Property
-         disabled
-
-:aspect:`Datatype`
-         boolean
-
-:aspect:`Description`
-         If set, the FlexForm sheet is not rendered. One sheet represents one
-         tab in plug-in configuration.
-
-:aspect:`Example`
-
-         .. code-block:: typoscript
-
-            TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF {
-               # The tab with key "sDEF" of the FlexForm plug-in configuration is now hidden
-               disabled = 1
-            }
-
-
-.. container:: table-row
-
-   Property
-         sheetTitle
-
-:aspect:`Datatype`
-         string / getText
-
-:aspect:`Description`
-         Set the title of the tab in FlexForm plug-in configuration.
-
-:aspect:`Example`
-
-         .. code-block:: typoscript
-
-            TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF {
-               # Rename the first tab of the FlexForm plug-in configuration
-               sheetTitle = LLL:fileadmin/locallang.xlf:tt_content.pi_flexform.my_ext_pi1.sDEF
-            }
-
-
-.. container:: table-row
-
-   Property
-         sheetDescription
-
-:aspect:`Datatype`
-         string / getText
-
-:aspect:`Description`
-         Specifies a description for the sheet shown in the FlexForm.
-
-
-.. container:: table-row
-
-   Property
-         sheetShortDescr
-
-:aspect:`Datatype`
-         string / getText
-
-:aspect:`Description`
-         Specifies a short description of the sheet used as link title
-         in the tab-menu.
-
-
-.. ###### END~OF~TABLE ######
-
-[page:TCEFORM.[table name].[field].[dataStructKey].[flexSheet]]
 
 
 .. _pagetceformsuggest:
