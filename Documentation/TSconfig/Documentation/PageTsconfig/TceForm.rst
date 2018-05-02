@@ -313,10 +313,10 @@ altLabels
     This property is available for various levels:
 
     table level:
-        `TCEFORM.tableName.fieldName.altLables`
+        `TCEFORM.[tableName].[fieldName].altLables`
 
     table and record type level:
-        `TCEFORM.tableName.fieldName.types.typeName.altLabels`
+        `TCEFORM.[tableName].[fieldName].types.typeName.altLabels`
 
     Flex form field level, example:
         `TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.myField.altLables`
@@ -353,10 +353,10 @@ itemsProcFunc
     This property is available for various levels:
 
     table level:
-        `TCEFORM.tableName.fieldName.itemsProcFunc`
+        `TCEFORM.[tableName].[fieldName].itemsProcFunc`
 
     table and record type level:
-        `TCEFORM.tableName.fieldName.types.typeName.itemsProcFunc`
+        `TCEFORM.[tableName].[fieldName].types.[typeName].itemsProcFunc`
 
     Flex form field level, example:
         `TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.myField.itemsProcFunc`
@@ -446,315 +446,234 @@ sheetShortDescr
 
 
 
+.. _pagetceformsuggest:
+
 suggest
 =======
 
+Configuration of the suggest wizard that is available and often enabled
+for :ref:`TCA type=group <t3tca:columns-group>` fields.
+
+.. figure:: ../Images/TcaTypeGroupSuggest.png
+    :alt: A configured suggest wizard
+
+    A configured suggest wizard
+
+The properties listed below are available on various levels. A more specific setting overrides
+a less specific one:
+
+Configuration of all suggest wizards in all tables for all target query tables:
+    `TCEFORM.suggest.default`
+
+Configuration of all suggest wizards in all tables looking up records from a specific target table:
+    `TCEFORM.suggest.[queryTable]`
+
+Configuration of one suggest wizard field in one table for all target query tables:
+    `TCEFORM.[tableName].[fieldName].suggest.default`
+
+Configuration of one suggest wizard field in one table for a specific target query table:
+    `TCEFORM.[tableName].[fieldName].suggest.[queryTable]`
+
+Configuration of one suggest wizard field in a flex form field of one table for all target query tables:
+    `TCEFORM.[tableName].[fieldName].[dataStructureKey].[sheetName].[flexFieldName].suggest.default`
+
+Configuration of one suggest wizard field in a flex form field of one table for a specific target query table:
+    `TCEFORM.[tableName].[fieldName].[dataStructureKey].[sheetName].[flexFieldName].suggest.[queryTable]`
 
 
-
-.. container:: table-row
-
-   Property
-         suggest.default
-
-         suggest.[queryTable]
-
-         [table name].[field].suggest.default
-
-         [table name].[field].suggest.[queryTable]
-
-:aspect:`Datatype`
-         :ref:`TCEFORM_suggest <pagetceformsuggest>`
-
-:aspect:`Description`
-         Configuration for the "suggest" wizard.
-
-         .. figure:: ../Images/manual_html_m4f51d09f.png
-            :alt: Configured "suggest" wizard
-
-         Each level of the configuration overwrites the values of the level
-         below it:
-
-         - "suggest.default" is overwritten by "suggest.[queryTable]".
-
-         - Both are overwritten by "[table name].[field].suggest.default" which
-           itself is overwritten by "[table name].[field].suggest.[queryTable]"
-
-         suggest.default:
-
-         Configuration for all suggest wizards in all tables
-
-         suggest.[queryTable]:
-
-         Configuration for all suggest wizards from all tables listing records
-         from table [queryTable]
-
-         [table name].[field].suggest.default
-
-         Configuration for the suggest wizard for field [field] in table
-         [table name]
-
-         [table name].[field].suggest.[queryTable]
-
-         Configuration for the suggest wizard for field [field] in table
-         [table name] listing records from [queryTable]
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.. _pagetceformsuggest:
-
-->TCEFORM\_suggest
-""""""""""""""""""
-
-Properties for the suggest wizard (see introduction above).
-
-
-.. container:: table-row
-
-   Property
-         pidList
+pidList
+-------
 
 :aspect:`Datatype`
-         *(list of values)*
+    list of values
 
 :aspect:`Description`
-         Limit the search to certain pages (and their subpages). When pidList
-         is empty all pages will be included in the search (as long as the
-         be\_user is allowed to see them)
+    Limit the search to certain pages (and their subpages). When pidList is empty all pages will be included
+    in the search as long as the backend user is allowed to see them.
 
 :aspect:`Example`
+    .. code-block:: typoscript
 
-         .. code-block:: typoscript
-
-            TCEFORM.suggest.default {
-               # sets the pidList for a suggest fields in all tables
-               pidList = 1,2,3,45
-            }
+        TCEFORM.suggest.default {
+            # sets the pidList for a suggest fields in all tables
+            pidList = 1,2,3,45
+        }
 
 
-.. container:: table-row
-
-   Property
-         pidDepth
+pidDepth
+--------
 
 :aspect:`Datatype`
-         positive integer
+    positive integer
 
 :aspect:`Description`
-         Expand pidList by this number of levels. Only has an effect, if
-         pidList has a value.
+    Expand pidList by this number of levels. Only has an effect, if pidList has a value.
 
 :aspect:`Example`
+    .. code-block:: typoscript
 
-         .. code-block:: typoscript
-
-            TCEFORM.suggest.default {
-               pidList = 6,7
-               pidDepth = 4
-            }
+        TCEFORM.suggest.default {
+            pidList = 6,7
+            pidDepth = 4
+        }
 
 
-.. container:: table-row
-
-   Property
-         minimumCharacters
+minimumCharacters
+-----------------
 
 :aspect:`Datatype`
-         positive integer
+    positive integer
 
 :aspect:`Description`
-         Minimum number of characters needed to start the search. Works only
-         for single fields.
+    Minimum number of characters needed to start the search. Works only for single fields.
+
+:aspect:`Default`
+    2
 
 :aspect:`Example`
+    .. code-block:: typoscript
 
-         .. code-block:: typoscript
+        TCEFORM.pages.storage_pid.suggest.default {
+            minimumCharacters = 3
+        }
 
-            TCEFORM.pages.storage_pid.suggest.default {
-               minimumCharacters = 3
-            }
-
-   Default
-         2
-
-
-.. container:: table-row
-
-   Property
-         maxPathTitleLength
+maxPathTitleLength
+------------------
 
 :aspect:`Datatype`
-         positive integer
+    positive integer
 
 :aspect:`Description`
-         Maximum number of characters to display when a path element is too
-         long.
+    Maximum number of characters to display when a path element is too long.
 
 :aspect:`Example`
+    .. code-block:: typoscript
 
-         .. code-block:: typoscript
-
-            TCEFORM.suggest.default {
-               maxPathTitleLength = 30
-            }
+        TCEFORM.suggest.default {
+            maxPathTitleLength = 30
+        }
 
 
-.. container:: table-row
-
-   Property
-         searchWholePhrase
+searchWholePhrase
+-----------------
 
 :aspect:`Datatype`
-         boolean
+    boolean
 
 :aspect:`Description`
-         Whether to do a LIKE=%mystring% (searchWholePhrase = 1) or a
-         LIKE=mystring% (to do a real find as you type).
+    Whether to do a `LIKE=%mystring%` (searchWholePhrase = 1) or a `LIKE=mystring%` (to do a real find as you type).
+
+:aspect:`Default`
+    0
 
 :aspect:`Example`
+    .. code-block:: typoscript
 
-         .. code-block:: typoscript
-
-            TCEFORM.pages.storage_pid.suggest.default {
-               # configures the suggest wizard for the field "storage_pid" in table "pages" to search only for whole phrases
-               searchWholePhrase = 1
-            }
-
-   Default
-         0
+        TCEFORM.pages.storage_pid.suggest.default {
+            # Configure the suggest wizard for the field "storage_pid" in table "pages" to search only for whole phrases
+           searchWholePhrase = 1
+        }
 
 
-.. container:: table-row
-
-   Property
-         searchCondition
+searchCondition
+---------------
 
 :aspect:`Datatype`
-         string
+    string
 
 :aspect:`Description`
-         Additional WHERE clause (no AND needed to prepend).
+    Additional WHERE clause (no AND needed to prepend).
 
 :aspect:`Example`
+    .. code-block:: typoscript
 
-         .. code-block:: typoscript
-
-            TCEFORM.pages.storage_pid.suggest.default {
-               # configures the suggest wizard for the field "storage_pid" in table "pages"
-               # to search only for pages with doktype=1
-               searchCondition = doktype=1
-            }
+        TCEFORM.pages.storage_pid.suggest.default {
+            # Configure the suggest wizard for the field "storage_pid" in table "pages"
+            # to search only for pages with doktype=1
+            searchCondition = doktype=1
+        }
 
 
-.. container:: table-row
-
-   Property
-         addWhere
+addWhere
+--------
 
 :aspect:`Datatype`
-         string
+    string
 
 :aspect:`Description`
-         Additional WHERE clause (with AND at the beginning).
+    Additional WHERE clause (with AND at the beginning).
 
-         Markers that are possible for replacement
+    Markers possible for replacement:
 
-         * ###THIS_UID###
-         * ###CURRENT_PID###
-         * ###PAGE_TSCONFIG_ID###
-         * ###PAGE_TSCONFIG_IDLIST###
-         * ###PAGE_TSCONFIG_STR###
+    * ###THIS_UID###
+    * ###CURRENT_PID###
+    * ###PAGE_TSCONFIG_ID###
+    * ###PAGE_TSCONFIG_IDLIST###
+    * ###PAGE_TSCONFIG_STR###
 
 :aspect:`Example`
+    .. code-block:: typoscript
 
-         .. code-block:: typoscript
-
-            TCEFORM.pages.storage_pid.suggest.default {
-               addWhere = AND pages.pid=###PAGE_TSCONFIG_ID###
-            }
+        TCEFORM.pages.storage_pid.suggest.default {
+            addWhere = AND pages.pid=###PAGE_TSCONFIG_ID###
+        }
 
 
-.. container:: table-row
-
-   Property
-         cssClass
+cssClass
+--------
 
 :aspect:`Datatype`
-         string
+    string
 
 :aspect:`Description`
-         Add a CSS class to every list item of the result list.
+    Add a CSS class to every list item of the result list.
 
 :aspect:`Example`
+    .. code-block:: typoscript
 
-         .. code-block:: typoscript
-
-            TCEFORM.suggest.pages {
-               # configures all suggest wizards which list records from table "pages"
-               # to add the CSS class "pages" to every list item of the result list.
-               cssClass = pages
-            }
+        TCEFORM.suggest.pages {
+            # Configure all suggest wizards which list records from table "pages"
+            # to add the CSS class "pages" to every list item of the result list.
+            cssClass = pages
+        }
 
 
-.. container:: table-row
-
-   Property
-         receiverClass
+receiverClass
+-------------
 
 :aspect:`Datatype`
-         string
+    PHP class name
 
 :aspect:`Description`
-         PHP class alternative receiver class - the file that holds the class
-         needs to be included manually before calling the suggest feature,
-         should be derived from :code:`\TYPO3\CMS\Backend\Form\Element\SuggestDefaultReceiver`.
+    PHP class alternative receiver class - the file that holds the class should be derived
+    from :code:`\TYPO3\CMS\Backend\Form\Element\SuggestDefaultReceiver`.
 
-   Default
-         \\TYPO3\\CMS\\Backend\\Form\\Element\\SuggestDefaultReceiver
+:aspect:`Default`
+    :php:`\TYPO3\CMS\Backend\Form\Element\SuggestDefaultReceiver`
 
 
-.. container:: table-row
-
-   Property
-         renderFunc
+renderFunc
+----------
 
 :aspect:`Datatype`
-         string
+    string
 
 :aspect:`Description`
-         User function to manipulate the displayed records in the result.
+    User function to manipulate the displayed records in the result.
 
 
-.. container:: table-row
-
-   Property
-         hide
+hide
+----
 
 :aspect:`Datatype`
-         boolean
+    boolean
 
 :aspect:`Description`
-         Hide the suggest field. Works only for single fields.
+    Hide the suggest field. Works only for single fields.
 
 :aspect:`Example`
+    .. code-block:: typoscript
 
-         .. code-block:: typoscript
-
-            TCEFORM.pages.storage_pid.suggest.default {
-               hide = 1
-            }
+        TCEFORM.pages.storage_pid.suggest.default {
+            hide = 1
+        }
