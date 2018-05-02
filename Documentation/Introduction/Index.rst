@@ -15,7 +15,7 @@ This document is a complete reference to all objects and properties of
 TypoScript as used in TYPO3 TypoScript templates (and not in TSconfig).
 
 For explanations about the syntax of TypoScript itself, please refer
-to the :ref:`"TypoScript Syntax and In-Depth Study" <t3tssyntax:start>` manual.
+to the :ref:`TypoScript Syntax of the Core API <t3coreapi:typoscript-syntax-start>`.
 
 This version is updated for TYPO3 CMS version 7 LTS.
 
