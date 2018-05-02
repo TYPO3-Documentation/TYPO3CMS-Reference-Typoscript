@@ -7,49 +7,22 @@ Introduction
 ------------
 
 .. _about-tsref:
+.. _what-s-new:
 
 About this document
 ^^^^^^^^^^^^^^^^^^^
 
 This document is a complete reference to all objects and properties of
-TypoScript as used in TYPO3 TypoScript templates (and not in TSconfig).
+TypoScript as used in frontend TypoScript templates, and not in :ref:`TSconfig <t3tsconfig:start>`.
 
 For explanations about the syntax of TypoScript itself, please refer
 to the :ref:`TypoScript Syntax of the Core API <t3coreapi:typoscript-syntax-start>`.
 
-This version is updated for TYPO3 CMS version 7 LTS.
-
-
-.. _what-s-new:
-
-What's new
-^^^^^^^^^^
-
-During the development of TYPO3 7, a lot of properties have been added,
-changed, deprecated or removed.
-
-Additionally various descriptions were improved and many smaller
-mistakes were fixed.
+This document always refers to the latest released TYPO3 version. For older versions,
+use the version selector at the bottom left of the site.
 
 For a list of all changes see the `commit log on GitHub
 <https://github.com/TYPO3-Documentation/TYPO3CMS-Reference-Typoscript/commits/latest>`_.
-
-
-For more details about changes in the various TYPO3 versions please
-refer to the links below.
-
-.. tip::
-
-   **More information about changed properties**
-
-   - `Documentation changes in TYPO3 6.2 <https://forge.typo3.org/versions/1968>`__
-   - `Documentation changes in TYPO3 6.1 <https://forge.typo3.org/versions/1960>`__
-   - `Documentation changes in TYPO3 6.0 <https://forge.typo3.org/versions/1623>`__
-   - `Documentation changes in TYPO3 4.7 <https://forge.typo3.org/versions/1454>`__
-   - `Documentation changes in TYPO3 4.6 <https://wiki.typo3.org/Documentation_changes_in_4.6>`__
-   - `Documentation changes in TYPO3 4.4 and 4.5 <https://wiki.typo3.org/Documentation_changes_in_4.4_and_4.5>`__
-   - `Documentation changes in TYPO3 4.3 <https://wiki.typo3.org/Documentation_changes_in_4.3>`__
-   - `Documentation changes in TYPO3 4.2 <https://wiki.typo3.org/Documentation_changes_in_4.2>`__
 
 
 .. _credits:
@@ -64,22 +37,24 @@ François Suter and Christopher Stelmaszyk.
 
 .. _feedback:
 
-Feedback
-^^^^^^^^
-
-For general questions about the documentation get in touch by writing
-to `documentation@typo3.org <mailto:documentation@typo3.org>`_ .
+Feedback and Fixing
+^^^^^^^^^^^^^^^^^^^
 
 If you find a bug in this manual, please be so kind as to check the
-online version on https://docs.typo3.org/typo3cms/TyposcriptReference/.
+`online version on <https://docs.typo3.org/typo3cms/TyposcriptReference/>`__.
 From there you can hit the "Edit me on GitHub" button in the top right corner
-and submit a pull request via GitHub. Alternatively you can just file an issue
-using the bug tracker: https://github.com/TYPO3-Documentation/TYPO3CMS-Reference-Typoscript/issues.
+and submit a pull request via GitHub. Alternatively you can just `file an issue
+using the bug tracker <https://github.com/TYPO3-Documentation/TYPO3CMS-Reference-Typoscript/issues>`__.
 
 Maintaining high quality documentation requires time and effort
 and the TYPO3 Documentation Team always appreciates support.
-If you want to support us, please join the documentation
-mailing list/forum (https://forum.typo3.org/index.php/f/44/).
+
+If you want to support us, please join the slack channel **#typo3-documentation**
+on `Slack <https://typo3.slack.com/>`__.
+Visit `forger <https://forger.typo3.org/slack>`__ to gain access to Slack.
+
+And finally, as a last resort, you can get in touch with the documentation team
+`by mail <documentation@typo3.org>`_.
 
 
 .. _general-information:
