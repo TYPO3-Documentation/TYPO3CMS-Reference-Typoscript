@@ -106,7 +106,7 @@ allowTagsOutside
     address, article, aside, blockquote, footer, header, hr, nav, section, div
 
 :aspect:`Example`
-    .. code-block::
+    .. code-block:: typoscript
 
         # Allow only hr tags outside of p and div
         RTE.default.proc.allowTagsOutside = hr
