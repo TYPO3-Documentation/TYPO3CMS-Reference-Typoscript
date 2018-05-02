@@ -67,10 +67,12 @@ TSconfig is used in TYPO3 to configure and customize the backend on a page and
 a user or group basis. The syntax to do this is based on `TypoScript` that is also
 used to configure frontend output of the web site.
 
+The whole point of TSconfig is that it allows configuration of backend details
+by integrators, without asking developers for writing PHP code. Thus, some areas
+of TSconfig are rather powerful and offer vast possibilities of customizing the TYPO3 backend.
+
 TSconfig is divided into configuration for pages ("Page TSconfig") and configuration
 for users and groups ("User TSconfig"). Each variant is further detailed in this document.
-
-TSconfig is powerful and offers vast possibilities of customizing the TYPO3 backend.
 
 The general "dotted notation" of `TypoScript` is re-used for Page TSconfig and
 User TSconfig, it is possible to reference values, use conditions, and so on.

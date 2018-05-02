@@ -523,7 +523,6 @@ suggest
 
 Properties for the suggest wizard (see introduction above).
 
-.. ### BEGIN~OF~TABLE ###
 
 .. container:: table-row
 
@@ -759,10 +758,3 @@ Properties for the suggest wizard (see introduction above).
             TCEFORM.pages.storage_pid.suggest.default {
                hide = 1
             }
-
-
-.. ###### END~OF~TABLE ######
-
-[page:TCEFORM.suggest.default/TCEFORM.suggest.(queryTable)/TCEFORM.(ta
-blename).(field).suggest.default/TCEFORM.(table name).(field).(queryTab
-le)]
