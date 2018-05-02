@@ -332,6 +332,42 @@ itemsProcFunc
         `TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.myField.itemsProcFunc`
 
 
+config
+======
+
+:aspect:`Datatype`
+    string / array
+
+:aspect:`Description`
+    This setting allows to override TCA field configuration. This will influence configuration settings in
+    $GLOBALS['TCA'][<tableName>]['columns'][<fieldName>]['config'][<key>], see
+    :ref:`TCA reference <t3tca:columns-properties-config>` for details. Not all configuration options can
+    be overriden, the properties are restricted and depend on the field type:
+    :code:`typo3/sysext/backend/Classes/Form/Utility/FormEngineUtility.php->$allowOverrideMatrix`:
+
+    .. code-block:: php
+
+        'input' => ['size', 'max', 'readOnly'],
+        'text' => ['cols', 'rows', 'wrap', 'max', 'readOnly'],
+        'check' => ['cols', 'readOnly'],
+        'select' => ['size', 'autoSizeMax', 'maxitems', 'minitems', 'readOnly', 'treeConfig'],
+        'group' => ['size', 'autoSizeMax', 'max_size', 'maxitems', 'minitems', 'readOnly'],
+        'inline' => ['appearance', 'behaviour', 'foreign_label', 'foreign_selector', 'foreign_unique', 'maxitems', 'minitems', 'size', 'autoSizeMax', 'symmetric_label', 'readOnly'],
+        'imageManipulation' => ['ratios', 'cropVariants']
+
+
+    This property is available for various levels:
+
+    table level, example:
+        `TCEFORM.tt_content.header.config.max`
+
+    table and record type level, example:
+        `TCEFORM.tt_content.header.types.textpic.config.max`
+
+    Flex form field level, example:
+        `TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.myField.config.max`
+
+
 
 
 
@@ -359,23 +395,6 @@ itemsProcFunc
          TCEFORM.[table name].[field].types.[type] - configures the field in
          TCEFORM in case the 'type'-value of the field matches type.
 
-
-.. container:: table-row
-
-   Property
-         [*table name*].[*field*].config.[*key*]
-
-:aspect:`Datatype`
-         string / array
-
-:aspect:`Description`
-         This setting allows to override TCA field configuration and offers a
-         flexible opportunity to reuse tables and TCA definitions but adapt
-         them to individual demands. So this will influence configuration
-         settings in
-         $GLOBALS['TCA'][<table name>]['columns'][<field>]['config'][<key>].
-         Not all Properties are alowed to override: Find properties you're allowed to override in
-         pageTs in :code:`typo3/sysext/backend/Classes/Form/Utility/FormEngineUtility.php->$allowOverrideMatrix`
 
 
 .. container:: table-row
