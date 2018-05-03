@@ -1422,11 +1422,12 @@ error if tried accessed (depending on site configuration).
          value
 
    Data type
-         comma list of sys\_language uids /:ref:`stdWrap <stdwrap>`
+         comma list of sys\_language uids /:ref:`stdWrap <stdwrap>` or `auto`
 
    Description
          The number of elements in this list determines the number of menu
-         items.
+         items. Setting to `auto` will include all available languages from
+         the current site.
 
 
 .. container:: table-row
