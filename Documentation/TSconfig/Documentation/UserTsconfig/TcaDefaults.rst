@@ -1,5 +1,6 @@
 .. include:: ../Includes.txt
 
+.. highlight:: php
 .. _userTsTcaDefaults:
 
 ===========
@@ -14,7 +15,7 @@ The full path of a setting include the table and the field name: `TCAdefaults.[t
 This key is also available on :ref:`Page TSconfig level <pageTsTcaDefaults>`, the order of default
 values when creating new records in the backend is this:
 
-#. Value from $GLOBALS['TCA']
+#. Value from :php:`$GLOBALS['TCA']`
 
 #. Value from User TSconfig (these settings)
 
@@ -27,7 +28,7 @@ values when creating new records in the backend is this:
 However the order for default values used by :php:`\TYPO3\CMS\Core\DataHandling\DataHandler` if a certain
 field is not granted access to for user will be:
 
-#. Value from $GLOBALS['TCA']
+#. Value from :php:`$GLOBALS['TCA']`
 
 #. Value from User TSconfig (these settings)
 
