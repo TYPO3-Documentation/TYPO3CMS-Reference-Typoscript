@@ -497,7 +497,7 @@ dataProcessing
 
          - The FilesProcessor resolves File References, Files, or Files inside a folder or collection to
            be used for output in the Frontend. A FLUIDTEMPLATE can then simply iterate over processed data
-           automatically
+           automatically.
 
          - The DatabaseQueryProcessor works like the code from the Content Object CONTENT, except for just handing
            over the result as array. A FLUIDTEMPLATE can then simply iterate over processed data automatically.
@@ -506,9 +506,12 @@ dataProcessing
            It uses the files already present in the processedData array for his calculations.
            The FilesProcessor can be used to fetch the files.
            
-         - The MenuProcessor utilizes HMENU to generate a json encoded menu string that will be devoded again and
+         - The MenuProcessor utilizes HMENU to generate a json encoded menu string that will be decoded again and
            assigned to FLUIDTEMPLATE as variable. Additional DataProcessing is supported and will be applied to 
-           each record
+           each record.
+
+         - The LanguageMenuProcessor utilizes HMENU to generate a json encoded menu string based on the site
+           language configuration and will be decoded again and assigned to FLUIDTEMPLATE as variable. 
 
          **Using the SplitProcessor the following scenario is possible**
 
@@ -886,6 +889,47 @@ dataProcessing
                   </f:for>
                </ul>
             </nav>
+
+         **Using the LanguageMenuProcessor the following scenario is possible**
+
+         Options
+         .......
+
+         :`if`:         TypoScript if condition
+         :`languages`:  A list of comma separated language IDs (e.g. 0,1,2) to use for
+                        the menu creation or `auto` to load from site languages
+         :`as`:         The variable to be used within the result
+
+         .. code-block:: typoscript
+            
+            10 = TYPO3\CMS\Frontend\DataProcessing\LanguageMenuProcessor
+            10 {
+               languages = auto
+               as = languageNavigation
+            }
+         
+         This generated menu can be used in Fluid like that:
+         
+         .. code-block:: html
+            
+           <f:if condition="{languageNavigation}">
+              <ul id="language" class="language-menu">
+                 <f:for each="{languageNavigation}" as="item">
+                    <li class="{f:if(condition: item.active, then: 'active')}{f:if(condition: item.available, else: ' text-muted')}">
+                       <f:if condition="{item.available}">
+                          <f:then>
+                             <a href="{item.link}" hreflang="{item.hreflang}" title="{item.navigationTitle}">
+                                <span>{item.navigationTitle}</span>
+                             </a>
+                          </f:then>
+                          <f:else>
+                             <span>{item.navigationTitle}</span>
+                          </f:else>
+                       </f:if>
+                    </li>
+                 </f:for>
+              </ul>
+           </f:if>
 
 
 
