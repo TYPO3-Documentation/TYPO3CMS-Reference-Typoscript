@@ -371,9 +371,9 @@ pageTree.backgroundColor
 :aspect:`Example`
     .. code-block:: typoscript
 
-        options.pageTree.backgroundColor.2 = red
-        options.pageTree.backgroundColor.3 = #00FFFF
-        options.pageTree.backgroundColor.4 = rgba(0, 255, 0, 0.1)
+       options.pageTree.backgroundColor.147 = orange
+       options.pageTree.backgroundColor.148 = #AFAFAF
+       options.pageTree.backgroundColor.151 = rgba(0, 255, 0, 0.1)
 
     .. figure:: ../Images/optionsPageTreeBackgroundColor.png
         :alt: Tree branches with configured background colors
