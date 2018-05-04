@@ -646,6 +646,11 @@ noExportRecordsLinks
     The buttons "Export" and "Download CSV file" are hidden
     in single table view inside the list module:
 
+    .. figure:: ../Images/listModuleWithExportButtons.png
+        :alt: The list module wit export buttons after activating the single-table mode
+
+        The list module with export buttons after activating the single-table mode
+
     .. figure:: ../Images/listModuleWithoutExportButtons.png
         :alt: The list module without export buttons after activating the single-table mode
 
@@ -813,8 +818,8 @@ allowedNewTables
     .. code-block:: typoscript
 
         mod.web_list {
-            # Only pages and tt_news table elements will be linked to in the new record wizard
-            allowedNewTables = pages, tt_news
+            # Only pages and sys_category table elements will be linked to in the new record wizard
+            allowedNewTables = pages, sys_category
         }
 
     .. figure:: ../Images/PageTsModWebListAllowedNewTables.png
@@ -844,7 +849,7 @@ deniedNewTables
     .. code-block:: typoscript
 
         mod.web_list {
-            deniedNewTables = tt_news,tt_content
+            deniedNewTables = sys_category, tt_content
         }
 
 
