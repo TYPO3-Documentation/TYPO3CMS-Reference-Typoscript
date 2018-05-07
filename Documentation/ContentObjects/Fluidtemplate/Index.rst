@@ -258,8 +258,8 @@ format
    :sep:`|`
 
    :ts:`format` sets the format of the current request. It can be something
-       like "html", "xml", "png", "json". And it can even come in the form of
-       "rss.xml" or alike.
+   like "html", "xml", "png", "json". And it can even come in the form of
+   "rss.xml" or alike.
 
 
 .. _cobj-fluidtemplate-properties-extbase-pluginname:
@@ -875,10 +875,11 @@ stdWrap
 .. rst-class:: dl-parameters
 
 stdWrap
-   :sep:`|` :aspect:`Data type:` :ref:`->stdWrap <stdwrap>`
+   :sep:`|`
+   :aspect:`Data type:` :ref:`->stdWrap <stdwrap>`
    :sep:`|`
 
-
+   Offers the usual stdWrap functionality.
 
 
 .. _cobj-fluidtemplate-examples:
