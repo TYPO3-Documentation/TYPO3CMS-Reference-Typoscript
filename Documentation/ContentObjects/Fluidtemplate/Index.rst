@@ -497,7 +497,7 @@ dataProcessing
 
          - The FilesProcessor resolves File References, Files, or Files inside a folder or collection to
            be used for output in the Frontend. A FLUIDTEMPLATE can then simply iterate over processed data
-           automatically
+           automatically.
 
          - The DatabaseQueryProcessor works like the code from the Content Object CONTENT, except for just handing
            over the result as array. A FLUIDTEMPLATE can then simply iterate over processed data automatically.
@@ -505,39 +505,40 @@ dataProcessing
          - The GalleryProcessor bring the logic for working with galleries and calculates the maximum asset size.
            It uses the files already present in the processedData array for his calculations.
            The FilesProcessor can be used to fetch the files.
-           
-         - The MenuProcessor utilizes HMENU to generate a json encoded menu string that will be devoded again and
-           assigned to FLUIDTEMPLATE as variable. Additional DataProcessing is supported and will be applied to 
-           each record
 
-         **Using the SplitProcessor the following scenario is possible**
+         - The MenuProcessor utilizes HMENU to generate a json encoded menu string that will be decoded again and
+           assigned to FLUIDTEMPLATE as variable. Additional DataProcessing is supported and will be applied to
+           each record.
 
-         .. code-block:: typoscript
+         - The LanguageMenuProcessor utilizes HMENU to generate a json encoded menu string based on the site
+           language configuration that will be decoded again and assigned to FLUIDTEMPLATE as variable.
+
+         **With the help of the 'SplitProcessor' the following scenario is possible:** ::
 
             page {
-                10 = FLUIDTEMPLATE
-                10 {
-                    file = EXT:site_default/Resources/Private/Template/Default.html
+               10 = FLUIDTEMPLATE
+               10 {
+                  file = EXT:site_default/Resources/Private/Template/Default.html
 
-                    dataProcessing.2 = TYPO3\CMS\Frontend\DataProcessing\SplitProcessor
-                    dataProcessing.2 {
-                        if.isTrue.field = bodytext
-                        delimiter = ,
-                        fieldName = bodytext
-                        removeEmptyEntries = 1
-                        filterIntegers = 0
-                        filterUnique = 1
-                        as = keywords
-                    }
-                }
+                  dataProcessing.2 = TYPO3\CMS\Frontend\DataProcessing\SplitProcessor
+                  dataProcessing.2 {
+                     if.isTrue.field = bodytext
+                     delimiter = ,
+                     fieldName = bodytext
+                     removeEmptyEntries = 1
+                     filterIntegers = 0
+                     filterUnique = 1
+                     as = keywords
+                  }
+               }
             }
 
-         In the Fluid template then iterate over the split data
+         In the Fluid template then iterate over the splitted data:
 
          .. code-block:: html
 
             <f:for each="{keywords}" as="keyword">
-                <li>Keyword: {keyword}</li>
+               <li>Keyword: {keyword}</li>
             </f:for>
 
          **Using the CommaSeparatedValueProcessor the following scenario is possible**
@@ -857,11 +858,11 @@ dataProcessing
                     title="{column.media.title}"
                 />
             </f:section>
-            
+
          **Using the MenuProcessor the following scenario is possible**
 
          .. code-block:: typoscript
-            
+
             10 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
             10 {
                special = directory
@@ -872,11 +873,11 @@ dataProcessing
                includeSpacer = 1
                titleField = nav_title // title
             }
-         
+
          This generated menu can be used in Fluid like that:
-         
+
          .. code-block:: html
-            
+
             <nav>
                <ul class="header_navigation">
                   <f:for each="{headerMenu}" as="menuItem">
@@ -886,6 +887,47 @@ dataProcessing
                   </f:for>
                </ul>
             </nav>
+
+         **Using the LanguageMenuProcessor the following scenario is possible**
+
+         Options
+         .......
+
+         :`if`:         TypoScript if condition
+         :`languages`:  A list of comma separated language IDs (e.g. 0,1,2) to use for
+                        the menu creation or `auto` to load from site languages
+         :`as`:         The variable to be used within the result
+
+         .. code-block:: typoscript
+
+            10 = TYPO3\CMS\Frontend\DataProcessing\LanguageMenuProcessor
+            10 {
+               languages = auto
+               as = languageNavigation
+            }
+
+         This generated menu can be used in Fluid like that:
+
+         .. code-block:: html
+
+           <f:if condition="{languageNavigation}">
+              <ul id="language" class="language-menu">
+                 <f:for each="{languageNavigation}" as="item">
+                    <li class="{f:if(condition: item.active, then: 'active')}{f:if(condition: item.available, else: ' text-muted')}">
+                       <f:if condition="{item.available}">
+                          <f:then>
+                             <a href="{item.link}" hreflang="{item.hreflang}" title="{item.navigationTitle}">
+                                <span>{item.navigationTitle}</span>
+                             </a>
+                          </f:then>
+                          <f:else>
+                             <span>{item.navigationTitle}</span>
+                          </f:else>
+                       </f:if>
+                    </li>
+                 </f:for>
+              </ul>
+           </f:if>
 
 
 
