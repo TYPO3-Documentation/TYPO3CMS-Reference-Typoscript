@@ -844,26 +844,26 @@ dataProcessing
 
    .. code-block:: html
 
-     <f:if condition="{languageNavigation}">
-        <ul id="language" class="language-menu">
-           <f:for each="{languageNavigation}" as="item">
-              <li class="{f:if(condition: item.active, then: 'active')}
-{f:if(condition: item.available, else: ' text-muted')}">
-                 <f:if condition="{item.available}">
-                    <f:then>
-                       <a href="{item.link}" hreflang="{item.hreflang}"
-                          title="{item.navigationTitle}">
-                          <span>{item.navigationTitle}</span>
-                       </a>
-                    </f:then>
-                    <f:else>
-                       <span>{item.navigationTitle}</span>
-                    </f:else>
-                 </f:if>
-              </li>
-           </f:for>
-        </ul>
-     </f:if>
+      <f:if condition="{languageNavigation}">
+         <ul id="language" class="language-menu">
+            <f:for each="{languageNavigation}" as="item">
+               <li class="{f:if(condition: item.active, then: 'active')}
+                          {f:if(condition: item.available, else: ' text-muted')}">
+                  <f:if condition="{item.available}">
+                     <f:then>
+                        <a href="{item.link}" hreflang="{item.hreflang}"
+                           title="{item.navigationTitle}">
+                           <span>{item.navigationTitle}</span>
+                        </a>
+                     </f:then>
+                     <f:else>
+                        <span>{item.navigationTitle}</span>
+                     </f:else>
+                  </f:if>
+               </li>
+            </f:for>
+         </ul>
+      </f:if>
 
 
 
