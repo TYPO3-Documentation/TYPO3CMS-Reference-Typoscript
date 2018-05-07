@@ -1,10 +1,10 @@
 .. include:: ../../Includes.txt
 
-
 .. _cobj-fluidtemplate:
 
+=============
 FLUIDTEMPLATE
-^^^^^^^^^^^^^
+=============
 
 The TypoScript object FLUIDTEMPLATE works in a similar way to the
 regular "marker"-based :ref:`TEMPLATE <cobj-template>` object. However, it does not use
@@ -15,94 +15,87 @@ braces.
 .. _cobj-fluidtemplate-properties:
 
 Properties
-""""""""""
+==========
 
 .. _cobj-fluidtemplate-properties-templatename:
 
 templateName
-''''''''''''
+------------
 
-.. container:: table-row
+.. rst-class:: dl-parameters
 
-   Property
-         templateName
+templateName
+   :sep:`|` :aspect:`Data type` string /:ref:`stdWrap <stdwrap>`
+   :sep:`|`
 
-   Data type
-         string /:ref:`stdWrap <stdwrap>`
+   This name is used together with the set format to find the template in the given
+   templateRootPaths. Use this property to define a content object, which should be
+   used as template file. It is an alternative to :ts:`.file`. If :ts:`.templateName` is set,
+   it takes precedence.
 
-   Description
-         This name is used together with the set format to find the template in the given
-         templateRootPaths. Use this property to define a content object, which should be
-         used as template file. It is an alternative to ".file". If ".templateName" is set,
-         it takes precedence.
+   **Example 1:** ::
 
-         **Example:**
+      lib.stdContent = FLUIDTEMPLATE
+      lib.stdContent {
+         templateName = Default
+         layoutRootPaths {
+            10 = EXT:frontend/Resources/Private/Layouts
+            20 = EXT:sitemodification/Resources/Private/Layouts
+         }
+         partialRootPaths {
+            10 = EXT:frontend/Resources/Private/Partials
+            20 = EXT:sitemodification/Resources/Private/Partials
+         }
+         templateRootPaths {
+            10 = EXT:frontend/Resources/Private/Templates
+            20 = EXT:sitemodification/Resources/Private/Templates
+         }
+         variables {
+            foo = TEXT
+            foo.value = bar
+         }
+      }
 
-         .. code-block:: typoscript
+   **Example 2:** ::
 
-            lib.stdContent = FLUIDTEMPLATE
-            lib.stdContent {
-                templateName = Default
-                layoutRootPaths {
-                    10 = EXT:frontend/Resources/Private/Layouts
-                    20 = EXT:sitemodification/Resources/Private/Layouts
-                }
-                partialRootPaths {
-                    10 = EXT:frontend/Resources/Private/Partials
-                    20 = EXT:sitemodification/Resources/Private/Partials
-                }
-                templateRootPaths {
-                    10 = EXT:frontend/Resources/Private/Templates
-                    20 = EXT:sitemodification/Resources/Private/Templates
-                }
-                variables {
-                    foo = TEXT
-                    foo.value = bar
-                }
+      lib.stdContent = FLUIDTEMPLATE
+      lib.stdContent {
+         templateName = TEXT
+         templateName.stdWrap {
+            cObject = TEXT
+            cObject {
+               data = levelfield:-2,backend_layout_next_level,slide
+               override.field = backend_layout
+               split {
+                  token = frontend__
+                  1.current = 1
+                  1.wrap = |
+               }
             }
-
-         **Example:**
-
-         .. code-block:: typoscript
-
-            lib.stdContent = FLUIDTEMPLATE
-            lib.stdContent {
-                templateName = TEXT
-                templateName.stdWrap {
-                    cObject = TEXT
-                    cObject {
-                        data = levelfield:-2,backend_layout_next_level,slide
-                        override.field = backend_layout
-                        split {
-                            token = frontend__
-                            1.current = 1
-                            1.wrap = |
-                        }
-                    }
-                    ifEmpty = Default
-                }
-                layoutRootPaths {
-                    10 = EXT:frontend/Resources/Private/Layouts
-                    20 = EXT:sitemodification/Resources/Private/Layouts
-                }
-                partialRootPaths {
-                    10 = EXT:frontend/Resources/Private/Partials
-                    20 = EXT:sitemodification/Resources/Private/Partials
-                }
-                templateRootPaths {
-                    10 = EXT:frontend/Resources/Private/Templates
-                    20 = EXT:sitemodification/Resources/Private/Templates
-                }
-                variables {
-                    foo = bar
-                }
-            }
+            ifEmpty = Default
+         }
+         layoutRootPaths {
+            10 = EXT:frontend/Resources/Private/Layouts
+            20 = EXT:sitemodification/Resources/Private/Layouts
+         }
+         partialRootPaths {
+            10 = EXT:frontend/Resources/Private/Partials
+            20 = EXT:sitemodification/Resources/Private/Partials
+         }
+         templateRootPaths {
+            10 = EXT:frontend/Resources/Private/Templates
+            20 = EXT:sitemodification/Resources/Private/Templates
+         }
+         variables {
+            foo = bar
+         }
+      }
 
 
 .. _cobj-fluidtemplate-properties-template:
 
 template
-''''''''
+--------
 
 .. container:: table-row
 
@@ -123,7 +116,7 @@ template
 .. _cobj-fluidtemplate-properties-file:
 
 file
-''''
+----
 
 .. container:: table-row
 
@@ -141,7 +134,7 @@ file
 .. _cobj-fluidtemplate-properties-templaterootpaths:
 
 templateRootPaths
-'''''''''''''''''
+-----------------
 
 .. container:: table-row
 
@@ -184,7 +177,7 @@ templateRootPaths
 .. _cobj-fluidtemplate-properties-layoutrootpath:
 
 layoutRootPath
-''''''''''''''
+--------------
 
 .. container:: table-row
 
@@ -202,7 +195,7 @@ layoutRootPath
 .. _cobj-fluidtemplate-properties-layoutrootpaths:
 
 layoutRootPaths
-'''''''''''''''
+---------------
 
 .. container:: table-row
 
@@ -246,7 +239,7 @@ layoutRootPaths
 .. _cobj-fluidtemplate-properties-partialrootpath:
 
 partialRootPath
-'''''''''''''''
+---------------
 
 .. container:: table-row
 
@@ -264,7 +257,7 @@ partialRootPath
 .. _cobj-fluidtemplate-properties-partialrootpaths:
 
 partialRootPaths
-''''''''''''''''
+----------------
 
 .. container:: table-row
 
@@ -290,7 +283,7 @@ partialRootPaths
 .. _cobj-fluidtemplate-properties-format:
 
 format
-''''''
+------
 
 .. container:: table-row
 
@@ -313,7 +306,7 @@ format
 .. _cobj-fluidtemplate-properties-extbase-pluginname:
 
 extbase.pluginName
-''''''''''''''''''
+------------------
 
 .. container:: table-row
 
@@ -330,7 +323,7 @@ extbase.pluginName
 .. _cobj-fluidtemplate-properties-extbase-controllerextensionname:
 
 extbase.controllerExtensionName
-'''''''''''''''''''''''''''''''
+-------------------------------
 
 .. container:: table-row
 
@@ -350,7 +343,7 @@ extbase.controllerExtensionName
 .. _cobj-fluidtemplate-properties-extbase-controllername:
 
 extbase.controllerName
-''''''''''''''''''''''
+----------------------
 
 .. container:: table-row
 
@@ -367,7 +360,7 @@ extbase.controllerName
 .. _cobj-fluidtemplate-properties-extbase-controlleractionname:
 
 extbase.controllerActionName
-''''''''''''''''''''''''''''
+----------------------------
 
 .. container:: table-row
 
@@ -384,7 +377,7 @@ extbase.controllerActionName
 .. _cobj-fluidtemplate-properties-variables:
 
 variables
-'''''''''
+---------
 
 .. container:: table-row
 
@@ -405,7 +398,7 @@ variables
 .. _cobj-fluidtemplate-properties-settings:
 
 settings
-''''''''
+--------
 
 .. container:: table-row
 
@@ -447,7 +440,7 @@ settings
 .. _cobj-fluidtemplate-properties-dataprocessing:
 
 dataProcessing
-''''''''''''''
+--------------
 
 .. container:: table-row
 
@@ -934,7 +927,7 @@ dataProcessing
 .. _cobj-fluidtemplate-properties-stdwrap:
 
 stdWrap
-'''''''
+-------
 
 .. container:: table-row
 
@@ -950,8 +943,8 @@ stdWrap
 
 .. _cobj-fluidtemplate-examples:
 
-Example:
-""""""""
+Example
+=======
 
 The Fluid template (in EXT:site_default/Resources/Private/Templates/MyTemplate.html) could look
 like this:
@@ -986,4 +979,3 @@ You could use it with a TypoScript code like this:
 As a result the page title and the label from TypoScript will be
 inserted as headlines. The copyright year will be taken from the
 TypoScript constant "year".
-
