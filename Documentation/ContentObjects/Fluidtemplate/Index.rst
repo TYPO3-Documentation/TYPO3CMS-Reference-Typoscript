@@ -24,7 +24,7 @@ templateName
 .. rst-class:: dl-parameters
 
 templateName
-   :sep:`|` :aspect:`Data type` string /:ref:`stdWrap <stdwrap>`
+   :sep:`|` :aspect:`Data type:` string /:ref:`stdWrap <stdwrap>`
    :sep:`|`
 
    This name is used together with the set format to find the template in the
