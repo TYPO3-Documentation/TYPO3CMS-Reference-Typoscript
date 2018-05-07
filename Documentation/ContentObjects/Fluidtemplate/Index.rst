@@ -505,42 +505,40 @@ dataProcessing
          - The GalleryProcessor bring the logic for working with galleries and calculates the maximum asset size.
            It uses the files already present in the processedData array for his calculations.
            The FilesProcessor can be used to fetch the files.
-           
+
          - The MenuProcessor utilizes HMENU to generate a json encoded menu string that will be decoded again and
-           assigned to FLUIDTEMPLATE as variable. Additional DataProcessing is supported and will be applied to 
+           assigned to FLUIDTEMPLATE as variable. Additional DataProcessing is supported and will be applied to
            each record.
 
          - The LanguageMenuProcessor utilizes HMENU to generate a json encoded menu string based on the site
-           language configuration and will be decoded again and assigned to FLUIDTEMPLATE as variable. 
+           language configuration that will be decoded again and assigned to FLUIDTEMPLATE as variable.
 
-         **Using the SplitProcessor the following scenario is possible**
-
-         .. code-block:: typoscript
+         **With the help of the 'SplitProcessor' the following scenario is possible:** ::
 
             page {
-                10 = FLUIDTEMPLATE
-                10 {
-                    file = EXT:site_default/Resources/Private/Template/Default.html
+               10 = FLUIDTEMPLATE
+               10 {
+                  file = EXT:site_default/Resources/Private/Template/Default.html
 
-                    dataProcessing.2 = TYPO3\CMS\Frontend\DataProcessing\SplitProcessor
-                    dataProcessing.2 {
-                        if.isTrue.field = bodytext
-                        delimiter = ,
-                        fieldName = bodytext
-                        removeEmptyEntries = 1
-                        filterIntegers = 0
-                        filterUnique = 1
-                        as = keywords
-                    }
-                }
+                  dataProcessing.2 = TYPO3\CMS\Frontend\DataProcessing\SplitProcessor
+                  dataProcessing.2 {
+                     if.isTrue.field = bodytext
+                     delimiter = ,
+                     fieldName = bodytext
+                     removeEmptyEntries = 1
+                     filterIntegers = 0
+                     filterUnique = 1
+                     as = keywords
+                  }
+               }
             }
 
-         In the Fluid template then iterate over the split data
+         In the Fluid template then iterate over the splitted data:
 
          .. code-block:: html
 
             <f:for each="{keywords}" as="keyword">
-                <li>Keyword: {keyword}</li>
+               <li>Keyword: {keyword}</li>
             </f:for>
 
          **Using the CommaSeparatedValueProcessor the following scenario is possible**
@@ -860,11 +858,11 @@ dataProcessing
                     title="{column.media.title}"
                 />
             </f:section>
-            
+
          **Using the MenuProcessor the following scenario is possible**
 
          .. code-block:: typoscript
-            
+
             10 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
             10 {
                special = directory
@@ -875,11 +873,11 @@ dataProcessing
                includeSpacer = 1
                titleField = nav_title // title
             }
-         
+
          This generated menu can be used in Fluid like that:
-         
+
          .. code-block:: html
-            
+
             <nav>
                <ul class="header_navigation">
                   <f:for each="{headerMenu}" as="menuItem">
@@ -901,17 +899,17 @@ dataProcessing
          :`as`:         The variable to be used within the result
 
          .. code-block:: typoscript
-            
+
             10 = TYPO3\CMS\Frontend\DataProcessing\LanguageMenuProcessor
             10 {
                languages = auto
                as = languageNavigation
             }
-         
+
          This generated menu can be used in Fluid like that:
-         
+
          .. code-block:: html
-            
+
            <f:if condition="{languageNavigation}">
               <ul id="language" class="language-menu">
                  <f:for each="{languageNavigation}" as="item">
