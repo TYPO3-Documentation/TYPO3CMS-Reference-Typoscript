@@ -124,7 +124,7 @@ can call it like this to set default configuration:
 		}
 	');
 
-There is a global `TYPO3_CONF_VARS` value called :code:`$TYPO3_CONF_VARS['BE']['defaultPageTSconfig']`. The API
+There is a global `TYPO3_CONF_VARS` value called :php:`$GLOBALS['TYPO3_CONF_VARS']['BE']['defaultPageTSconfig']`. The API
 function above adds content to that array. The array value itself however should **not** be changed or set directly
 within :file:`LocalConfiguration.php`. Instead, it is good practice to use the above API method to add your default
 Page TSconfig for instance within your project extension that contains other local settings
@@ -319,7 +319,7 @@ like this to set a default configuration.
 		options.enableBookmarks = 1
 	');
 
-There is a global `TYPO3_CONF_VARS` value called :code:`$TYPO3_CONF_VARS['BE']['defaultUserTSconfig']`. The API
+There is a global `TYPO3_CONF_VARS` value called :php:`$GLOBALS['TYPO3_CONF_VARS']['BE']['defaultUserTSconfig']`. The API
 function above adds content to that array. The array value itself however should **not** be changed or set directly
 within :file:`LocalConfiguration.php`. Instead, it is good practice to use the above API method to add your default
 User TSconfig for instance within your project extension that contains other local settings
