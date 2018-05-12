@@ -102,7 +102,7 @@ lockToIP
 
     .. note::
 
-        This option is only enabled if the :php:`$TYPO3_CONF_VARS['BE']['enabledBeUserIPLock']` configuration is true.
+        This option is only enabled if the :php:`$GLOBALS['TYPO3_CONF_VARS']['BE']['enabledBeUserIPLock']` configuration is true.
 
 :aspect:`Example`
 
