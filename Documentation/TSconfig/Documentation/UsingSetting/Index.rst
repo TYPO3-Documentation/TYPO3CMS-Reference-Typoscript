@@ -249,7 +249,7 @@ Overriding Page TSconfig in User TSconfig
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 All properties from Page TSconfig can be **overwritten** in User TSconfig by prepending the property
-name with "page.". When a Page TSconfig property is set in **User** TSconfig that way, no matter, if
+name with `page.`. When a Page TSconfig property is set in **User** TSconfig that way, no matter, if
 in the TSconfig field of a group or a user, it **overwrites** the value of the according **Page** TSconfig property.
 
 To illustrate this feature let's say the *Web > Info > Localization Overview* has been disabled via Page TSconfig:
