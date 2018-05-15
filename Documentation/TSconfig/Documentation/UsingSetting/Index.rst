@@ -415,3 +415,59 @@ The following condition will apply only if the BE user is an admin.
 .. code-block:: typoscript
 
    [adminUser = 1]
+
+
+.. _phpapi:
+
+PHP API
+-------
+
+The PHP API to retrieve page and user TSconfig in a backend module is (nowadays) straight forward:
+
+.. code-block:: php
+
+    // Retrieve user TSconfig of currently logged in user
+    // Note its good practice to encapsulate the $GLOBALS['BE_USER'] access in a getter method that returns an instance
+    // of BackendUserAuthentication for IDE auto completion, until core provides a dependency injection solution
+    $userTsConfig = $GLOBALS['BE_USER']->getTSConfig();
+
+    // Retrieve page TSconfig of currently logged in user
+    $pageTsConfig = BackendUtility::getPagesTSconfig($currentPageId);
+
+
+There is one method each, both just return the entire TSconfig array. All the heavy lifting and merging
+is done, for instance overrides of page TSconfig by user TSconfig are already applied if retrieving the
+page Tsconfig for a given page id.
+
+Similar to other TypoScript related API methods, properties that contain sub properties return their sub
+properties using the property name with a trailing dot, while a single property is accessible by the property
+name itself. The example below gives more insight on this.
+
+If accessing TSconfig arrays, the PHP null coalescence operator `??` is almost always useful: TSconfig options
+may or not be set, accessing not existing array keys in PHP would thus raise PHP notice level warnings.
+Combining the array access with a fallback using `??` helps accessing these optional array structures.
+
+.. code-block:: php
+
+    // Incoming (user) TSconfig:
+    // options.someToggle = 1
+    // options.somePartWithSubToggles = foo
+    // options.somePartWithSubToggles.aValue = bar
+
+    // Parsed array returned by getTSConfig(), note the dot if a property has sub keys:
+    // [
+    //     'options.' => [
+    //         'someToggle' => '1',
+    //         'somePartWithSubToggles' => 'foo',
+    //         'somePartWithSubToggles.' => [
+    //             'aValue' => 'bar',
+    //         ],
+    //     ],
+    // ],
+    $userTsConfig = $this->getBackendUser->getTSConfig():
+
+    // Typical call to retrieve a sanitized value:
+    $isToggleEnabled = (bool)($userTsConfig['options.']['someToggle'] ?? false);
+
+    // Retrieve a sub set, note the dot at the end:
+    $subArray = $userTsConfig['options.']['somePartWithSubToggles.'] ?? [];
