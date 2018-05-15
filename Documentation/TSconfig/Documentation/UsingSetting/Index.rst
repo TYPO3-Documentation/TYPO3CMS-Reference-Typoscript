@@ -152,7 +152,6 @@ which will be shown in the page properties (the same way as TypoScript static te
 
 
 .. _userthetsconfigfield:
-.. _userverifyingthefinalconfiguration:
 
 User TSconfig
 -------------
@@ -179,6 +178,17 @@ If a user is member of several groups, the TSconfig from each
 group will simply be accumulated, identical properties from
 later groups taking precedence over definitions from earlier
 groups.
+
+.. _userverifyingthefinalconfiguration:
+
+Verify the final configuration
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The full User TSconfig of the currently logged in backend user can be viewed
+using the **SYSTEM > Configuration** module and choosing the "User TSconfig" action.
+
+.. figure:: ../Images/UserTSconfigOverview.png
+    :alt: Viewing User TSconfig using the Configuration module
 
 
 .. _useroverwritingandmodifyingvalues:
