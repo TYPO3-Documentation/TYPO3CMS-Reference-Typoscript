@@ -517,6 +517,17 @@ Configuration of one suggest wizard field in a flex form field of one table for 
     `TCEFORM.[tableName].[fieldName].[dataStructureKey].[sheetName].[flexFieldName].suggest.[queryTable]`
 
 
+additionalSearchFields
+----------------------
+
+:aspect:`Datatype`
+    string
+
+:aspect:`Description`
+    Comma-separated list of fields the suggest wizard should also search in. By default the wizard looks only in the
+    fields listed in the "label" and "label_alt" properties.
+
+
 addWhere
 --------
 
@@ -540,17 +551,6 @@ addWhere
         TCEFORM.pages.storage_pid.suggest.default {
             addWhere = AND pages.pid=###PAGE_TSCONFIG_ID###
         }
-
-
-additionalSearchFields
-----------------------
-
-:aspect:`Datatype`
-    string
-
-:aspect:`Description`
-    Comma-separated list of fields the suggest wizard should also search in. By default the wizard looks only in the
-    fields listed in the "label" and "label_alt" properties.
 
 
 cssClass
