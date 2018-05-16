@@ -525,7 +525,8 @@ additionalSearchFields
 
 :aspect:`Description`
     Comma-separated list of fields the suggest wizard should also search in. By default the wizard looks only in the
-    fields listed in the "label" and "label_alt" properties.
+    fields listed in the :ref:`label <t3tca:ctrl-reference-label>` and :ref:`label_alt <t3tca:ctrl-reference-label-alt>`
+    of TCA :ref:`ctrl properties <t3tca:ctrl-reference>`.
 
 
 addWhere
