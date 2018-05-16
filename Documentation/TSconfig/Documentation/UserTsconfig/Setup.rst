@@ -53,14 +53,34 @@ setup.fields.[fieldName].disabled
         setup.override.emailMeAtLogin = 1
 
 
-thumbnailsByDefault
-===================
+copyLevels
+==========
+
+:aspect:`Datatype`
+    positive integer
+
+:aspect:`Description`
+    Recursive Copy: Enter the number of page sub-levels to include, when a page is copied
+
+
+edit_docModuleUpload
+====================
 
 :aspect:`Datatype`
     boolean
 
 :aspect:`Description`
-    Show Thumbnails by default
+    File upload directly in Doc. module
+
+
+edit_RTE
+========
+
+:aspect:`Datatype`
+    boolean
+
+:aspect:`Description`
+    Enable Rich Text Editor
 
 
 emailMeAtLogin
@@ -83,36 +103,6 @@ helpText
     Show help text when applicable
 
 
-titleLen
-========
-
-:aspect:`Datatype`
-    positive integer
-
-:aspect:`Description`
-    Max. Title Length
-
-
-edit_RTE
-========
-
-:aspect:`Datatype`
-    boolean
-
-:aspect:`Description`
-    Enable Rich Text Editor
-
-
-edit_docModuleUpload
-====================
-
-:aspect:`Datatype`
-    boolean
-
-:aspect:`Description`
-    File upload directly in Doc. module
-
-
 lang
 ====
 
@@ -122,26 +112,6 @@ lang
 :aspect:`Description`
     One of the language-keys. For current options see
     :file:`typo3/sysext/core/Classes/Localization/Locales.php`, e.g. `dk`, `de`, `es` etc.
-
-
-copyLevels
-==========
-
-:aspect:`Datatype`
-    positive integer
-
-:aspect:`Description`
-    Recursive Copy: Enter the number of page sub-levels to include, when a page is copied
-
-
-recursiveDelete
-===============
-
-:aspect:`Datatype`
-    boolean
-
-:aspect:`Description`
-    Recursive Delete(!): Allow ALL subpages to be deleted when deleting a page
 
 
 neverHideAtCopy
@@ -154,14 +124,14 @@ neverHideAtCopy
     If set, then the hideAtCopy feature for records in TCE will not be used.
 
 
-startModule
-===========
+recursiveDelete
+===============
 
 :aspect:`Datatype`
-    string
+    boolean
 
 :aspect:`Description`
-    Name of the module that is called when the user logs into the Backend
+    Recursive Delete(!): Allow ALL subpages to be deleted when deleting a page
 
 
 resizeTextareas
@@ -174,6 +144,21 @@ resizeTextareas
     This option makes textareas resizable. When moving towards the right
     or bottom border of the textarea, the mouse cursor changes to a resize
     cursor. This is active by default.
+
+:aspect:`Default`
+    1
+
+
+resizeTextareas_Flexible
+========================
+
+:aspect:`Datatype`
+    boolean
+
+:aspect:`Description`
+    This option makes textareas flexible, which means that their height
+    grows automatically while typing. Limit is the maximal height set.
+    This is active by default.
 
 :aspect:`Default`
     1
@@ -192,16 +177,31 @@ resizeTextareas_MaxHeight
     600
 
 
-resizeTextareas_Flexible
-========================
+startModule
+===========
+
+:aspect:`Datatype`
+    string
+
+:aspect:`Description`
+    Name of the module that is called when the user logs into the Backend
+
+
+titleLen
+========
+
+:aspect:`Datatype`
+    positive integer
+
+:aspect:`Description`
+    Max. Title Length
+
+
+thumbnailsByDefault
+===================
 
 :aspect:`Datatype`
     boolean
 
 :aspect:`Description`
-    This option makes textareas flexible, which means that their height
-    grows automatically while typing. Limit is the maximal height set.
-    This is active by default.
-
-:aspect:`Default`
-    1
+    Show Thumbnails by default
