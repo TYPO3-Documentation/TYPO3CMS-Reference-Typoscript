@@ -81,14 +81,45 @@ Notice how many properties relate to specific transformations only! Also notice 
 This means that options limited to `ts_transform` will also work for `ts_css` of course.
 
 
-overruleMode
-------------
+allowedClasses
+--------------
 
 :aspect:`Datatype`
-    Comma list of RTE transformations
+    string with comma separated values
 
 :aspect:`Description`
-    This can overrule the RTE transformation set from TCA. Notice, this is a  *comma list* of transformation keys.
+    Applies for `ts_transform` and `css_transform` only.
+
+    Direction: From RTE to database, saving a record.
+
+    Allowed general class names when content is stored in database. Could be a list matching the
+    number of defined classes you have. Class names are case insensitive.
+
+    This might be a really good idea to do, because when pasting in content from MS word for
+    instance there are a lot of `<SPAN>` and `<P>` tags which may have class names in. So by
+    setting a list of allowed classes, such foreign class names are removed.
+
+    If a class name is not found in this list, the default is to remove the class.
+
+
+allowTags
+---------
+
+:aspect:`Datatype`
+    string with comma separated values
+
+:aspect:`Description`
+    Applies for `ts_transform` and `css_transform` only.
+
+    Tags to allow. Notice, this list is  *added* to the default list,
+    which you see here:
+
+    b,i,u,a,img,br,div,center,pre,font,hr,sub,sup,p,strong,em,li,ul,ol,blo
+    ckquote,strike,span
+
+    .. note::
+        This information is outdated, the default list depends on the used
+        rte_ckeditor YAML configuraton.
 
 
 allowTagsOutside
@@ -112,24 +143,15 @@ allowTagsOutside
         RTE.default.proc.allowTagsOutside = hr
 
 
-allowTags
----------
+blockElementList
+----------------
 
 :aspect:`Datatype`
     string with comma separated values
 
 :aspect:`Description`
-    Applies for `ts_transform` and `css_transform` only.
-
-    Tags to allow. Notice, this list is  *added* to the default list,
-    which you see here:
-
-    b,i,u,a,img,br,div,center,pre,font,hr,sub,sup,p,strong,em,li,ul,ol,blo
-    ckquote,strike,span
-
-    .. note::
-        This information is outdated, the default list depends on the used
-        rte_ckeditor YAML configuraton.
+    Comma-separated list of uppercase tags (e.g. :code:`P,HR`) that overrides the list of HTML
+    elements that will be treated as block elements by the RTE transformations.
 
 
 denyTags
@@ -144,39 +166,88 @@ denyTags
     Tags from above list to disallow.
 
 
-blockElementList
-----------------
+dontFetchExtPictures
+--------------------
 
 :aspect:`Datatype`
-    string with comma separated values
+    boolean
 
 :aspect:`Description`
-    Comma-separated list of uppercase tags (e.g. :code:`P,HR`) that overrides the list of HTML
-    elements that will be treated as block elements by the RTE transformations.
+    Applies for `ts_images` only.
+
+    If set, images from external urls are not fetched for the page if content is pasted from
+    external sources. Normally this process of copying is done.
 
 
-HTMLparser_rte
---------------
+dontRemoveUnknownTags_db
+------------------------
 
 :aspect:`Datatype`
-    :ref:`HTMLparser <t3tsref:htmlparser>`
+    boolean
 
 :aspect:`Description`
     Applies for `ts_transform` and `css_transform` only.
 
-    These are additional options to the HTML parser calls which strips of tags when the content is prepared
-    *from the database to the RTE* rendering. It is possible to configure additional rules like which other
-    tags to preserve, which attributes to preserve, which values are allowed as attributes of a certain tag etc.
+    Direction: From RTE to database, saving a record.
 
-    For the detailed list of properties, see the :ref:`section of the TypoScript reference <t3tsref:htmlparser>`.
+    Default is to remove all unknown tags in the content going to the database. Generally this
+    is a very useful thing, because all kinds of bogus tags from pasted content like that from Word etc.
+    will be removed to have clean content in the database.
 
-    .. note::
+    This property this disables that and allows all tags that are not in
+    the :ref:`HTMLparser_db list <pageTsRteProcHtmlParserDb>`.
 
-       This configuration is similar in frontend TypoScript and Page TSconfig.
-       This is why single properties can be looked up in the TypoScript reference.
 
-       Also note the :ref:`HTMLparser <t3tsref:htmlparser>` options :code:`keepNonMatchedTags`
-       and :code:`htmlSpecialChars` are *not* observed. They are preset internally.
+entryHTMLparser_db
+-------------------
+
+:aspect:`Datatype`
+    boolean / :ref:`HTMLparser <t3tsref:htmlparser>`
+
+:aspect:`Description`
+    Applies to all kinds of processing.
+
+    Allows to enable / disable the :ref:`HTMLparser <t3tsref:htmlparser>` *before* the
+    content is processed with the predefined processors (e.g. ts_images or ts_transform).
+
+
+entryHTMLparser_rte
+-------------------
+
+:aspect:`Datatype`
+    boolean / :ref:`HTMLparser <t3tsref:htmlparser>`
+
+:aspect:`Description`
+    Applies to all kinds of processing.
+
+    Allows to enable / disable the :ref:`HTMLparser <t3tsref:htmlparser>` *before* the
+    content is processed with the predefined processors (e.g. ts_images or ts_transform).
+
+
+exitHTMLparser_db
+-----------------
+
+:aspect:`Datatype`
+    boolean / :ref:`HTMLparser <t3tsref:htmlparser>`
+
+:aspect:`Description`
+    Applies to all kinds of processing.
+
+    Allows to enable / disable the :ref:`HTMLparser <t3tsref:htmlparser>` *after* the
+    content is processed with the predefined processors (e.g. ts_images or ts_transform).
+
+
+exitHTMLparser_rte
+------------------
+
+:aspect:`Datatype`
+    boolean / :ref:`HTMLparser <t3tsref:htmlparser>`
+
+:aspect:`Description`
+    Applies to all kinds of processing.
+
+    Allows to enable / disable the :ref:`HTMLparser <t3tsref:htmlparser>` *after* the
+    content is processed with the predefined processors (e.g. ts_images or ts_transform).
 
 
 .. _pageTsRteProcHtmlParserDb:
@@ -205,44 +276,28 @@ HTMLparser_db
        and :code:`htmlSpecialChars` are *not* observed. They are preset internally.
 
 
-dontRemoveUnknownTags_db
-------------------------
-
-:aspect:`Datatype`
-    boolean
-
-:aspect:`Description`
-    Applies for `ts_transform` and `css_transform` only.
-
-    Direction: From RTE to database, saving a record.
-
-    Default is to remove all unknown tags in the content going to the database. Generally this
-    is a very useful thing, because all kinds of bogus tags from pasted content like that from Word etc.
-    will be removed to have clean content in the database.
-
-    This property this disables that and allows all tags that are not in
-    the :ref:`HTMLparser_db list <pageTsRteProcHtmlParserDb>`.
-
-
-allowedClasses
+HTMLparser_rte
 --------------
 
 :aspect:`Datatype`
-    string with comma separated values
+    :ref:`HTMLparser <t3tsref:htmlparser>`
 
 :aspect:`Description`
     Applies for `ts_transform` and `css_transform` only.
 
-    Direction: From RTE to database, saving a record.
+    These are additional options to the HTML parser calls which strips of tags when the content is prepared
+    *from the database to the RTE* rendering. It is possible to configure additional rules like which other
+    tags to preserve, which attributes to preserve, which values are allowed as attributes of a certain tag etc.
 
-    Allowed general class names when content is stored in database. Could be a list matching the
-    number of defined classes you have. Class names are case insensitive.
+    For the detailed list of properties, see the :ref:`section of the TypoScript reference <t3tsref:htmlparser>`.
 
-    This might be a really good idea to do, because when pasting in content from MS word for
-    instance there are a lot of `<SPAN>` and `<P>` tags which may have class names in. So by
-    setting a list of allowed classes, such foreign class names are removed.
+    .. note::
 
-    If a class name is not found in this list, the default is to remove the class.
+       This configuration is similar in frontend TypoScript and Page TSconfig.
+       This is why single properties can be looked up in the TypoScript reference.
+
+       Also note the :ref:`HTMLparser <t3tsref:htmlparser>` options :code:`keepNonMatchedTags`
+       and :code:`htmlSpecialChars` are *not* observed. They are preset internally.
 
 
 keepPDIVattribs
@@ -258,17 +313,14 @@ keepPDIVattribs
     This property allows to specify a list of other attributes to preserve.
 
 
-dontFetchExtPictures
---------------------
+overruleMode
+------------
 
 :aspect:`Datatype`
-    boolean
+    Comma list of RTE transformations
 
 :aspect:`Description`
-    Applies for `ts_images` only.
-
-    If set, images from external urls are not fetched for the page if content is pasted from
-    external sources. Normally this process of copying is done.
+    This can overrule the RTE transformation set from TCA. Notice, this is a  *comma list* of transformation keys.
 
 
 plainImageMode
@@ -299,55 +351,3 @@ plainImageMode
 
     lockRatioWhenSmaller
         Like `lockRatio`, but will not allow any scaling larger than the original size of the image.
-
-
-entryHTMLparser_rte
--------------------
-
-:aspect:`Datatype`
-    boolean / :ref:`HTMLparser <t3tsref:htmlparser>`
-
-:aspect:`Description`
-    Applies to all kinds of processing.
-
-    Allows to enable / disable the :ref:`HTMLparser <t3tsref:htmlparser>` *before* the
-    content is processed with the predefined processors (e.g. ts_images or ts_transform).
-
-
-entryHTMLparser_db
--------------------
-
-:aspect:`Datatype`
-    boolean / :ref:`HTMLparser <t3tsref:htmlparser>`
-
-:aspect:`Description`
-    Applies to all kinds of processing.
-
-    Allows to enable / disable the :ref:`HTMLparser <t3tsref:htmlparser>` *before* the
-    content is processed with the predefined processors (e.g. ts_images or ts_transform).
-
-
-exitHTMLparser_rte
-------------------
-
-:aspect:`Datatype`
-    boolean / :ref:`HTMLparser <t3tsref:htmlparser>`
-
-:aspect:`Description`
-    Applies to all kinds of processing.
-
-    Allows to enable / disable the :ref:`HTMLparser <t3tsref:htmlparser>` *after* the
-    content is processed with the predefined processors (e.g. ts_images or ts_transform).
-
-
-exitHTMLparser_db
------------------
-
-:aspect:`Datatype`
-    boolean / :ref:`HTMLparser <t3tsref:htmlparser>`
-
-:aspect:`Description`
-    Applies to all kinds of processing.
-
-    Allows to enable / disable the :ref:`HTMLparser <t3tsref:htmlparser>` *after* the
-    content is processed with the predefined processors (e.g. ts_images or ts_transform).
