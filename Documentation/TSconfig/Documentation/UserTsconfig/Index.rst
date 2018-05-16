@@ -19,6 +19,7 @@ with most casual backend flags is the `options` part.
    Auth
    Options
    Page
+   Permissions
    Setup
    TcaDefaults
    Tx
