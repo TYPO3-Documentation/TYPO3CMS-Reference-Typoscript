@@ -128,6 +128,7 @@ altLabels
 
         The Page types with modified labels
 
+.. _pageTsConfigTceFormConfig:
 
 config
 ======
@@ -138,9 +139,12 @@ config
 :aspect:`Description`
     This setting allows to override TCA field configuration. This will influence configuration settings in
     $GLOBALS['TCA'][<tableName>]['columns'][<fieldName>]['config'][<key>], see
-    :ref:`TCA reference <t3tca:columns-properties-config>` for details. Not all configuration options can
-    be overriden, the properties are restricted and depend on the field type:
-    :code:`typo3/sysext/backend/Classes/Form/Utility/FormEngineUtility.php->$allowOverrideMatrix`:
+    :ref:`TCA reference <t3tca:columns-properties-config>` for details.
+
+    Not all configuration options can be overriden, the properties are restricted and depend on the
+    :ref:`field type <t3tca:columns-types>`. The array
+    :code:`typo3/sysext/backend/Classes/Form/Utility/FormEngineUtility.php->$allowOverrideMatrix`
+    within :ref:`FormEngine code <t3coreapi:FormEngine>` defines details:
 
     .. code-block:: php
 
@@ -163,6 +167,39 @@ config
 
     Flex form field level, example:
         `TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.myField.config.max`
+
+
+.. _pageTsConfigTceFormConfigTreeConfig:
+
+config.treeConfig
+=================
+
+:aspect:`Datatype`
+    int
+
+:aspect:`Description`
+    The `treeConfig` sub properties of :ref:`TCEFORM.config <pageTsConfigTceFormConfig>` are dedicated to the TCA config type
+    `select` with :ref:`renderType=selectTree <t3tca:columns-select-rendertype-selectTree>`. A couple of
+    :ref:`treeConfig <t3tca:columns-select-properties-treeconfig>` properties can be overriden on page TSconfig level, see their detailed description
+    in the :ref:`TCA reference <t3tca:columns-select-properties-treeconfig>`:
+
+    .. code-block:: typoscript
+
+        config.treeConfig.rootUid
+        config.treeConfig.appearance.expandAll
+        config.treeConfig.appearance.maxLevels
+        config.treeConfig.appearance.notSelectableLevels
+
+    This property is available for various levels:
+
+    table level, example:
+        `TCEFORM.tt_content.myField.config.treeConfig.rootUid`
+
+    table and record type level, example:
+        `TCEFORM.tt_content.header.types.config.treeConfig.rootUid`
+
+    Flex form field level, example:
+        `TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.myField.config.treeConfig.rootUid`
 
 
 disabled
