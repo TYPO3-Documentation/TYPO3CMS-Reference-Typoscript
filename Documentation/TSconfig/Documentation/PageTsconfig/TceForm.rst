@@ -542,6 +542,17 @@ addWhere
         }
 
 
+additionalSearchFields
+----------------------
+
+:aspect:`Datatype`
+    string
+
+:aspect:`Description`
+    Comma-separated list of fields the suggest wizard should also search in. By default the wizard looks only in the
+    fields listed in the "label" and "label_alt" properties.
+
+
 cssClass
 --------
 
