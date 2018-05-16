@@ -42,130 +42,6 @@ While all that property path munging looks messy at first, it should become more
 clear if reading through the single properties below and looking at the examples.
 
 
-disabled
-========
-
-:aspect:`Datatype`
-    boolean
-
-:aspect:`Description`
-    If set, the field is rendered, but not editable by the user.
-    This property is available for various levels:
-
-    table level, example:
-        `TCEFORM.tt_content.header.disabled`
-
-    table and record type level, example:
-        `TCEFORM.tt_content.header.types.textpic.disabled`
-
-    Flex form sheet level. If set, the entire tab is not rendered, example:
-        `TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.disabled`
-
-    Flex form field level, example:
-        `TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.myField.disabled`
-
-:aspect:`Example`
-    .. code-block:: typoscript
-
-        TCEFORM.pages.title {
-            # The title field of the pages table is not editable
-            disabled = 1
-        }
-
-
-label
-=====
-
-:aspect:`Datatype`
-    localized string
-
-:aspect:`Description`
-    This allows you to enter alternative labels for any field. The value can be a `LLL:` reference
-    to a localization file, the system will then look up the selected backend user language and tries
-    to fetch the localized string if available. However, it is also possible to override these by
-    appending the language key and hard setting a value, for example `label.de = Neuer Feldname`.
-
-    This property is available for various levels:
-
-    table level, example:
-        `TCEFORM.tt_content.header.label`
-
-    table and record type level, example:
-        `TCEFORM.tt_content.header.types.textpic.label`
-
-    Flex form field level, example:
-        `TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.myField.label`
-
-:aspect:`Example`
-    .. code-block:: typoscript
-
-        TCEFORM.pages.title {
-            label = LLL:EXT:my_ext/Resources/Private/Language/locallang.xlf:table.column
-            label.default = New Label
-            label.de = Neuer Feldname
-        }
-
-
-keepItems
-=========
-
-:aspect:`Datatype`
-    list of values
-
-:aspect:`Description`
-    Change the list of items in :ref:`TCA type=select <t3tca:columns-select>` fields. Using this property,
-    all items except those defined here are removed.
-
-    This property is available for various levels:
-
-    table level, example:
-        `TCEFORM.tt_content.header_layout.keepItems`
-
-    table and record type level, example:
-        `TCEFORM.tt_content.header_layout.types.textpic.keepItems`
-
-    Flex form field level, example:
-        `TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.myField.keepItems`
-
-:aspect:`Example`
-    .. code-block:: typoscript
-
-        TCEFORM.pages.doktype {
-            # Show only standard and "Spacer" page types
-            keepItems = 1, 199
-        }
-
-
-removeItems
-===========
-
-:aspect:`Datatype`
-    list of values
-
-:aspect:`Description`
-    Change the list of items in :ref:`TCA type=select <t3tca:columns-select>` fields. Using this property,
-    single items can be removed, leaving all others.
-
-    This property is available for various levels:
-
-    table level, example:
-        `TCEFORM.tt_content.header_layout.removeItems`
-
-    table and record type level, example:
-        `TCEFORM.tt_content.header_layout.types.textpic.removeItems`
-
-    Flex form field level, example:
-        `TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.myField.removeItems`
-
-:aspect:`Example`
-    .. code-block:: typoscript
-
-        TCEFORM.pages.doktype {
-            # Remove "Recycler" and "Spacer" page types
-            removeItems = 199, 255
-        }
-
-
 addItems
 ========
 
@@ -208,6 +84,115 @@ addItems
            # Add another one with localized label and icon
            addItems.1525216023 = LLL:EXT:my_ext/Resources/Private/Language/locallang.xlf:header_layout
            addItems.1525216023.icon = EXT:my_ext/icon.png
+        }
+
+
+altLabels
+=========
+
+:aspect:`Datatype`
+    localized string
+
+:aspect:`Description`
+    This property applies to :ref:`TCA type=select <t3tca:columns-select>`,
+    :ref:`TCA type=check <t3tca:columns-check>` and :ref:`TCA type=radio <t3tca:columns-radio>`.
+
+    This property allows you to enter alternative labels for the items in the list. For a single checkbox or radio
+    button, use `default`, for multiple checkboxes and radiobuttons, use an integer for their position starting at 0.
+
+    This property is available for various levels:
+
+    table level:
+        `TCEFORM.[tableName].[fieldName].altLables`
+
+    table and record type level:
+        `TCEFORM.[tableName].[fieldName].types.typeName.altLabels`
+
+    Flex form field level, example:
+        `TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.myField.altLables`
+
+:aspect:`Example`
+
+    .. code-block:: typoscript
+
+        TCEFORM.pages.doktype {
+            # Set a different item label
+            altLabels.1 = STANDARD Page Type
+            altLabels.254 = Folder (for various elements)
+            # Sets the default label for Recycler via "locallang":
+            altLabels.255 = LLL:EXT:my_ext/Resources/Private/Language/locallang_tca.xlf:recycler
+        }
+
+    .. figure:: ../Images/PagesDoktypeDifferentLabels.png
+        :alt: The Page types with modified labels
+
+        The Page types with modified labels
+
+
+config
+======
+
+:aspect:`Datatype`
+    string / array
+
+:aspect:`Description`
+    This setting allows to override TCA field configuration. This will influence configuration settings in
+    $GLOBALS['TCA'][<tableName>]['columns'][<fieldName>]['config'][<key>], see
+    :ref:`TCA reference <t3tca:columns-properties-config>` for details. Not all configuration options can
+    be overriden, the properties are restricted and depend on the field type:
+    :code:`typo3/sysext/backend/Classes/Form/Utility/FormEngineUtility.php->$allowOverrideMatrix`:
+
+    .. code-block:: php
+
+        'input' => ['size', 'max', 'readOnly'],
+        'text' => ['cols', 'rows', 'wrap', 'max', 'readOnly'],
+        'check' => ['cols', 'readOnly'],
+        'select' => ['size', 'autoSizeMax', 'maxitems', 'minitems', 'readOnly', 'treeConfig'],
+        'group' => ['size', 'autoSizeMax', 'max_size', 'maxitems', 'minitems', 'readOnly'],
+        'inline' => ['appearance', 'behaviour', 'foreign_label', 'foreign_selector', 'foreign_unique', 'maxitems', 'minitems', 'size', 'autoSizeMax', 'symmetric_label', 'readOnly'],
+        'imageManipulation' => ['ratios', 'cropVariants']
+
+
+    This property is available for various levels:
+
+    table level, example:
+        `TCEFORM.tt_content.header.config.max`
+
+    table and record type level, example:
+        `TCEFORM.tt_content.header.types.textpic.config.max`
+
+    Flex form field level, example:
+        `TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.myField.config.max`
+
+
+disabled
+========
+
+:aspect:`Datatype`
+    boolean
+
+:aspect:`Description`
+    If set, the field is rendered, but not editable by the user.
+    This property is available for various levels:
+
+    table level, example:
+        `TCEFORM.tt_content.header.disabled`
+
+    table and record type level, example:
+        `TCEFORM.tt_content.header.types.textpic.disabled`
+
+    Flex form sheet level. If set, the entire tab is not rendered, example:
+        `TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.disabled`
+
+    Flex form field level, example:
+        `TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.myField.disabled`
+
+:aspect:`Example`
+    .. code-block:: typoscript
+
+        TCEFORM.pages.title {
+            # The title field of the pages table is not editable
+            disabled = 1
         }
 
 
@@ -258,6 +243,92 @@ disableNoMatchingValueElement
         Instead of show a warning message the system choose the first element in the selector box
 
 
+itemsProcFunc
+=============
+
+:aspect:`Datatype`
+    custom
+
+:aspect:`Description`
+    This property applies only to items in :ref:`TCA type=select <t3tca:columns-select>` fields. The properties of
+    this key is passed on to the :ref:`itemsProcFunc <t3tca:columns-select-properties-itemsprocfunc>` in the
+    parameter array by the key "TSconfig".
+
+    This property is available for various levels:
+
+    table level:
+        `TCEFORM.[tableName].[fieldName].itemsProcFunc`
+
+    table and record type level:
+        `TCEFORM.[tableName].[fieldName].types.[typeName].itemsProcFunc`
+
+    Flex form field level, example:
+        `TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.myField.itemsProcFunc`
+
+
+keepItems
+=========
+
+:aspect:`Datatype`
+    list of values
+
+:aspect:`Description`
+    Change the list of items in :ref:`TCA type=select <t3tca:columns-select>` fields. Using this property,
+    all items except those defined here are removed.
+
+    This property is available for various levels:
+
+    table level, example:
+        `TCEFORM.tt_content.header_layout.keepItems`
+
+    table and record type level, example:
+        `TCEFORM.tt_content.header_layout.types.textpic.keepItems`
+
+    Flex form field level, example:
+        `TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.myField.keepItems`
+
+:aspect:`Example`
+    .. code-block:: typoscript
+
+        TCEFORM.pages.doktype {
+            # Show only standard and "Spacer" page types
+            keepItems = 1, 199
+        }
+
+
+label
+=====
+
+:aspect:`Datatype`
+    localized string
+
+:aspect:`Description`
+    This allows you to enter alternative labels for any field. The value can be a `LLL:` reference
+    to a localization file, the system will then look up the selected backend user language and tries
+    to fetch the localized string if available. However, it is also possible to override these by
+    appending the language key and hard setting a value, for example `label.de = Neuer Feldname`.
+
+    This property is available for various levels:
+
+    table level, example:
+        `TCEFORM.tt_content.header.label`
+
+    table and record type level, example:
+        `TCEFORM.tt_content.header.types.textpic.label`
+
+    Flex form field level, example:
+        `TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.myField.label`
+
+:aspect:`Example`
+    .. code-block:: typoscript
+
+        TCEFORM.pages.title {
+            label = LLL:EXT:my_ext/Resources/Private/Language/locallang.xlf:table.column
+            label.default = New Label
+            label.de = Neuer Feldname
+        }
+
+
 noMatchingValue_label
 =====================
 
@@ -297,125 +368,33 @@ noMatchingValue_label
         An invalid selector box value is indicated by a warning message
 
 
-altLabels
-=========
+removeItems
+===========
 
 :aspect:`Datatype`
-    localized string
+    list of values
 
 :aspect:`Description`
-    This property applies to :ref:`TCA type=select <t3tca:columns-select>`,
-    :ref:`TCA type=check <t3tca:columns-check>` and :ref:`TCA type=radio <t3tca:columns-radio>`.
-
-    This property allows you to enter alternative labels for the items in the list. For a single checkbox or radio
-    button, use `default`, for multiple checkboxes and radiobuttons, use an integer for their position starting at 0.
-
-    This property is available for various levels:
-
-    table level:
-        `TCEFORM.[tableName].[fieldName].altLables`
-
-    table and record type level:
-        `TCEFORM.[tableName].[fieldName].types.typeName.altLabels`
-
-    Flex form field level, example:
-        `TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.myField.altLables`
-
-:aspect:`Example`
-
-    .. code-block:: typoscript
-
-        TCEFORM.pages.doktype {
-            # Set a different item label
-            altLabels.1 = STANDARD Page Type
-            altLabels.254 = Folder (for various elements)
-            # Sets the default label for Recycler via "locallang":
-            altLabels.255 = LLL:EXT:my_ext/Resources/Private/Language/locallang_tca.xlf:recycler
-        }
-
-    .. figure:: ../Images/PagesDoktypeDifferentLabels.png
-        :alt: The Page types with modified labels
-
-        The Page types with modified labels
-
-
-itemsProcFunc
-=============
-
-:aspect:`Datatype`
-    custom
-
-:aspect:`Description`
-    This property applies only to items in :ref:`TCA type=select <t3tca:columns-select>` fields. The properties of
-    this key is passed on to the :ref:`itemsProcFunc <t3tca:columns-select-properties-itemsprocfunc>` in the
-    parameter array by the key "TSconfig".
-
-    This property is available for various levels:
-
-    table level:
-        `TCEFORM.[tableName].[fieldName].itemsProcFunc`
-
-    table and record type level:
-        `TCEFORM.[tableName].[fieldName].types.[typeName].itemsProcFunc`
-
-    Flex form field level, example:
-        `TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.myField.itemsProcFunc`
-
-
-config
-======
-
-:aspect:`Datatype`
-    string / array
-
-:aspect:`Description`
-    This setting allows to override TCA field configuration. This will influence configuration settings in
-    $GLOBALS['TCA'][<tableName>]['columns'][<fieldName>]['config'][<key>], see
-    :ref:`TCA reference <t3tca:columns-properties-config>` for details. Not all configuration options can
-    be overriden, the properties are restricted and depend on the field type:
-    :code:`typo3/sysext/backend/Classes/Form/Utility/FormEngineUtility.php->$allowOverrideMatrix`:
-
-    .. code-block:: php
-
-        'input' => ['size', 'max', 'readOnly'],
-        'text' => ['cols', 'rows', 'wrap', 'max', 'readOnly'],
-        'check' => ['cols', 'readOnly'],
-        'select' => ['size', 'autoSizeMax', 'maxitems', 'minitems', 'readOnly', 'treeConfig'],
-        'group' => ['size', 'autoSizeMax', 'max_size', 'maxitems', 'minitems', 'readOnly'],
-        'inline' => ['appearance', 'behaviour', 'foreign_label', 'foreign_selector', 'foreign_unique', 'maxitems', 'minitems', 'size', 'autoSizeMax', 'symmetric_label', 'readOnly'],
-        'imageManipulation' => ['ratios', 'cropVariants']
-
+    Change the list of items in :ref:`TCA type=select <t3tca:columns-select>` fields. Using this property,
+    single items can be removed, leaving all others.
 
     This property is available for various levels:
 
     table level, example:
-        `TCEFORM.tt_content.header.config.max`
+        `TCEFORM.tt_content.header_layout.removeItems`
 
     table and record type level, example:
-        `TCEFORM.tt_content.header.types.textpic.config.max`
+        `TCEFORM.tt_content.header_layout.types.textpic.removeItems`
 
     Flex form field level, example:
-        `TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.myField.config.max`
-
-
-sheetTitle
-==========
-
-:aspect:`Datatype`
-    localized string
-
-:aspect:`Description`
-    Set the title of the sheet / tab in a FlexForm configuration.
-
-    This property is only available on flex form sheet level, example:
-        `TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.sheetTitle`
+        `TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.myField.removeItems`
 
 :aspect:`Example`
     .. code-block:: typoscript
 
-        TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF {
-            # Rename the first tab of the FlexForm plug-in configuration
-            sheetTitle = LLL:my_ext/Resource/Private/Language/locallang.xlf:tt_content.pi_flexform.my_ext_pi1.sDEF
+        TCEFORM.pages.doktype {
+            # Remove "Recycler" and "Spacer" page types
+            removeItems = 199, 255
         }
 
 
@@ -444,6 +423,26 @@ sheetShortDescr
     This property is only available on flex form sheet level, example:
         `TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.sheetShortDescription`
 
+
+sheetTitle
+==========
+
+:aspect:`Datatype`
+    localized string
+
+:aspect:`Description`
+    Set the title of the sheet / tab in a FlexForm configuration.
+
+    This property is only available on flex form sheet level, example:
+        `TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.sheetTitle`
+
+:aspect:`Example`
+    .. code-block:: typoscript
+
+        TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF {
+            # Rename the first tab of the FlexForm plug-in configuration
+            sheetTitle = LLL:my_ext/Resource/Private/Language/locallang.xlf:tt_content.pi_flexform.my_ext_pi1.sDEF
+        }
 
 
 .. _pagetceformsuggest:
@@ -479,119 +478,6 @@ Configuration of one suggest wizard field in a flex form field of one table for 
 
 Configuration of one suggest wizard field in a flex form field of one table for a specific target query table:
     `TCEFORM.[tableName].[fieldName].[dataStructureKey].[sheetName].[flexFieldName].suggest.[queryTable]`
-
-
-pidList
--------
-
-:aspect:`Datatype`
-    list of values
-
-:aspect:`Description`
-    Limit the search to certain pages (and their subpages). When pidList is empty all pages will be included
-    in the search as long as the backend user is allowed to see them.
-
-:aspect:`Example`
-    .. code-block:: typoscript
-
-        TCEFORM.suggest.default {
-            # sets the pidList for a suggest fields in all tables
-            pidList = 1,2,3,45
-        }
-
-
-pidDepth
---------
-
-:aspect:`Datatype`
-    positive integer
-
-:aspect:`Description`
-    Expand pidList by this number of levels. Only has an effect, if pidList has a value.
-
-:aspect:`Example`
-    .. code-block:: typoscript
-
-        TCEFORM.suggest.default {
-            pidList = 6,7
-            pidDepth = 4
-        }
-
-
-minimumCharacters
------------------
-
-:aspect:`Datatype`
-    positive integer
-
-:aspect:`Description`
-    Minimum number of characters needed to start the search. Works only for single fields.
-
-:aspect:`Default`
-    2
-
-:aspect:`Example`
-    .. code-block:: typoscript
-
-        TCEFORM.pages.storage_pid.suggest.default {
-            minimumCharacters = 3
-        }
-
-maxPathTitleLength
-------------------
-
-:aspect:`Datatype`
-    positive integer
-
-:aspect:`Description`
-    Maximum number of characters to display when a path element is too long.
-
-:aspect:`Example`
-    .. code-block:: typoscript
-
-        TCEFORM.suggest.default {
-            maxPathTitleLength = 30
-        }
-
-
-searchWholePhrase
------------------
-
-:aspect:`Datatype`
-    boolean
-
-:aspect:`Description`
-    Whether to do a `LIKE=%mystring%` (searchWholePhrase = 1) or a `LIKE=mystring%` (to do a real find as you type).
-
-:aspect:`Default`
-    0
-
-:aspect:`Example`
-    .. code-block:: typoscript
-
-        TCEFORM.pages.storage_pid.suggest.default {
-            # Configure the suggest wizard for the field "storage_pid" in table "pages" to search only for whole phrases
-           searchWholePhrase = 1
-        }
-
-
-searchCondition
----------------
-
-:aspect:`Datatype`
-    string
-
-:aspect:`Description`
-    Additional WHERE clause (no AND needed to prepend).
-
-:aspect:`Example`
-    .. code-block:: typoscript
-
-        TCEFORM.pages.storage_pid.suggest.default {
-            # Configure the suggest wizard for the field "storage_pid" in table "pages"
-            # to search only for pages with doktype=1
-            searchCondition = doktype=1
-        }
 
 
 addWhere
@@ -638,6 +524,97 @@ cssClass
         }
 
 
+hide
+----
+
+:aspect:`Datatype`
+    boolean
+
+:aspect:`Description`
+    Hide the suggest field. Works only for single fields.
+
+:aspect:`Example`
+    .. code-block:: typoscript
+
+        TCEFORM.pages.storage_pid.suggest.default {
+            hide = 1
+        }
+
+
+maxPathTitleLength
+------------------
+
+:aspect:`Datatype`
+    positive integer
+
+:aspect:`Description`
+    Maximum number of characters to display when a path element is too long.
+
+:aspect:`Example`
+    .. code-block:: typoscript
+
+        TCEFORM.suggest.default {
+            maxPathTitleLength = 30
+        }
+
+
+minimumCharacters
+-----------------
+
+:aspect:`Datatype`
+    positive integer
+
+:aspect:`Description`
+    Minimum number of characters needed to start the search. Works only for single fields.
+
+:aspect:`Default`
+    2
+
+:aspect:`Example`
+    .. code-block:: typoscript
+
+        TCEFORM.pages.storage_pid.suggest.default {
+            minimumCharacters = 3
+        }
+
+
+pidDepth
+--------
+
+:aspect:`Datatype`
+    positive integer
+
+:aspect:`Description`
+    Expand pidList by this number of levels. Only has an effect, if pidList has a value.
+
+:aspect:`Example`
+    .. code-block:: typoscript
+
+        TCEFORM.suggest.default {
+            pidList = 6,7
+            pidDepth = 4
+        }
+
+
+pidList
+-------
+
+:aspect:`Datatype`
+    list of values
+
+:aspect:`Description`
+    Limit the search to certain pages (and their subpages). When pidList is empty all pages will be included
+    in the search as long as the backend user is allowed to see them.
+
+:aspect:`Example`
+    .. code-block:: typoscript
+
+        TCEFORM.suggest.default {
+            # sets the pidList for a suggest fields in all tables
+            pidList = 1,2,3,45
+        }
+
+
 receiverClass
 -------------
 
@@ -662,18 +639,41 @@ renderFunc
     User function to manipulate the displayed records in the result.
 
 
-hide
-----
+searchCondition
+---------------
 
 :aspect:`Datatype`
-    boolean
+    string
 
 :aspect:`Description`
-    Hide the suggest field. Works only for single fields.
+    Additional WHERE clause (no AND needed to prepend).
 
 :aspect:`Example`
     .. code-block:: typoscript
 
         TCEFORM.pages.storage_pid.suggest.default {
-            hide = 1
+            # Configure the suggest wizard for the field "storage_pid" in table "pages"
+            # to search only for pages with doktype=1
+            searchCondition = doktype=1
+        }
+
+
+searchWholePhrase
+-----------------
+
+:aspect:`Datatype`
+    boolean
+
+:aspect:`Description`
+    Whether to do a `LIKE=%mystring%` (searchWholePhrase = 1) or a `LIKE=mystring%` (to do a real find as you type).
+
+:aspect:`Default`
+    0
+
+:aspect:`Example`
+    .. code-block:: typoscript
+
+        TCEFORM.pages.storage_pid.suggest.default {
+            # Configure the suggest wizard for the field "storage_pid" in table "pages" to search only for whole phrases
+           searchWholePhrase = 1
         }
