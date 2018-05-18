@@ -132,15 +132,15 @@ Syntax:
 Comparison:
 ~~~~~~~~~~~
 
-Comparison with the application context, in which TYPO3 is running.
+Comparison with the application context that TYPO3 is running in.
 
 The values are compared to applicationContext, which is set at the
 very beginning of the bootstrap sequence based on
 :php:`getenv('TYPO3_CONTEXT')`.
 
-Value is comma-list of application contexts to match with.
+Value is a comma separated list of application contexts to match with.
 Wildcards + and \* are allowed, as well as regular expressions
-delimited with /PREG_PATTERN/.
+like /PREG_PATTERN/. The slash ('/') is used as delimiter.
 
 
 Examples:
