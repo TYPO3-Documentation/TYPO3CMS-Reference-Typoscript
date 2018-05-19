@@ -3,8 +3,9 @@
 
 .. _cobjects:
 
-Content Objects (cObject)
--------------------------
+===============
+Content Objects
+===============
 
 
 .. toctree::
