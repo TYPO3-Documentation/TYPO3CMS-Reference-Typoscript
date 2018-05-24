@@ -120,7 +120,14 @@ bodyTagAdd
          :ref:`data-type-string`
 
    Description
-         This content is added to the end of the :html:`<body>`-tag.
+         This content is added inside of the opening :html:`<body>` tag right 
+         before the :html:`>` character. This is mostly useful for adding 
+         attributes to the :html:`<body>` tag.
+
+   Example ::
+   
+         # This will lead to <body class="example">
+         page.bodyTagAdd = class="example"
 
 
 
