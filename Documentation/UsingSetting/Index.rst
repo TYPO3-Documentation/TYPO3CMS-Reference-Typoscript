@@ -4,7 +4,7 @@
 .. _typoscript-syntax-typoscript-templates:
 
 Using and setting TypoScript
-----------------------------
+============================
 
 TypoScript templates mainly consist of the Constants and the Setup field.
 Each template can include other (static) templates, which can again
@@ -21,6 +21,5 @@ The TypoScript template configuration can be viewed and edited in the
    Usage
    Entering
    Constants
-   UsingConstants
    TheConstantEditor
    Debugging
