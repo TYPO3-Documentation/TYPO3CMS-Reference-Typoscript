@@ -903,8 +903,8 @@ showDuplicate
 :aspect:`Description`
     If set, a button "Duplicate" will appear in TCEFORMs.
 
-    Note it is possible to set this for single tables using `options.duplicate.[tableName]`.
-    Any value set for a single table will override the default value set for "saveDocView".
+    Note that it is possible to set this for single tables using :ts:`options.duplicate.[tableName]`.
+    Any value set for a single table will override the default value set for :ts:`saveDocView`.
 
 :aspect:`Default`
     0
