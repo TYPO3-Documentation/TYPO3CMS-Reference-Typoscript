@@ -1009,3 +1009,56 @@ shows how quotes can be escaped::
 
     [userFunc = user_testFunctionWithThreeArgumentsEscapedQuotes(1, 2, "3, \"4, 5\", 6")]
 
+
+.. _condition-site:
+
+site
+====
+
+Syntax:
+~~~~~~~
+
+::
+
+    [site = identifier = someIdentifier, base = https://www.typo3.org/]
+
+Comparison:
+~~~~~~~~~~~
+
+The identifier of the site name is evaluated.
+
+Examples:
+~~~~~~~~~
+
+.. codeblock:: typoscript
+
+    [site = identifier = someIdentifier, base = https://www.typo3.org/]
+		page.30.value = fod
+	[global]
+
+
+.. _condition-site-language:
+
+siteLanguage
+============
+
+Syntax:
+~~~~~~~
+
+::
+
+    [siteLanguage = locale = de_CH.UTF-8, title = Switzerland]
+
+Comparison:
+~~~~~~~~~~~
+
+Any property of the current site language is evaluated.
+
+Examples:
+~~~~~~~~~
+
+.. codeblock:: typoscript
+
+    [siteLanguage = locale = de_CH.UTF-8, title = Switzerland]
+		page.40.value = bar
+	[global]
