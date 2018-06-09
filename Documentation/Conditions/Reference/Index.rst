@@ -657,7 +657,7 @@ comma. The comma then acts as a logical disjunction, that means the
 whole condition evaluates to true, whenever *one or more* of its
 operands are true.
 
-*Attention:* For string comparisons you must use :ts:`globalString` 
+*Attention:* For string comparisons you must use :ts:`globalString`
 instead of :ts:`globalVar`.
 
 
@@ -1015,26 +1015,17 @@ shows how quotes can be escaped::
 site
 ====
 
-Syntax:
-~~~~~~~
+Syntax::
 
-::
+   [site = identifier = someIdentifier, base = https://www.typo3.org/]
 
-    [site = identifier = someIdentifier, base = https://www.typo3.org/]
+Comparison: The identifier of the site name is evaluated.
 
-Comparison:
-~~~~~~~~~~~
+Example::
 
-The identifier of the site name is evaluated.
-
-Examples:
-~~~~~~~~~
-
-.. codeblock:: typoscript
-
-    [site = identifier = someIdentifier, base = https://www.typo3.org/]
-		page.30.value = fod
-	[global]
+   [site = identifier = someIdentifier, base = https://www.typo3.org/]
+      page.30.value = foo
+   [global]
 
 
 .. _condition-site-language:
@@ -1042,23 +1033,14 @@ Examples:
 siteLanguage
 ============
 
-Syntax:
-~~~~~~~
+Syntax::
 
-::
+   [siteLanguage = locale = de_CH.UTF-8, title = Switzerland]
 
-    [siteLanguage = locale = de_CH.UTF-8, title = Switzerland]
+Comparison: Any property of the current site language is evaluated.
 
-Comparison:
-~~~~~~~~~~~
+Example::
 
-Any property of the current site language is evaluated.
-
-Examples:
-~~~~~~~~~
-
-.. codeblock:: typoscript
-
-    [siteLanguage = locale = de_CH.UTF-8, title = Switzerland]
-		page.40.value = bar
-	[global]
+   [siteLanguage = locale = de_CH.UTF-8, title = Switzerland]
+      page.40.value = bar
+   [global]
