@@ -1024,7 +1024,8 @@ Comparison: The identifier of the site name is evaluated.
 Example::
 
    [site = identifier = someIdentifier, base = https://www.typo3.org/]
-      page.30.value = foo
+      page.30 = TEXT
+      page.30.value = some conditional value
    [global]
 
 
@@ -1042,5 +1043,6 @@ Comparison: Any property of the current site language is evaluated.
 Example::
 
    [siteLanguage = locale = de_CH.UTF-8, title = Switzerland]
-      page.40.value = bar
+      page.40 = TEXT
+      page.40.value = some value special for swiss german readers
    [global]
