@@ -520,7 +520,7 @@ __ https://github.com/georgringer/modernpackage/blob/master/Resources/Private/Ty
       JSwindow = 0
       directImageLink = 1
       linkParams.ATagParams {
-         dataWrap = class= "lightbox" rel="fancybox{field:uid}"
+         dataWrap = class= "lightbox" data-fancybox-group="lightbox{field:uid}"
       }
    }
 
