@@ -17,5 +17,5 @@ Conditions
 .. toctree::
    :titlesonly:
 
-   Syntax/Index
-   Reference/Index
+   Syntax
+   Reference
