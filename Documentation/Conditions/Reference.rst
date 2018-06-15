@@ -684,13 +684,15 @@ site
 :aspect:`Syntax:`
    ::
 
-      [site = identifier = someIdentifier, base = https://www.typo3.org/]
+      [site = identifier = siteIdentifier, property = value]
 
 :aspect:`Comparison:`
-   The identifier of the site name is evaluated.
+   The siteIdentifier is used to fetch the related site configuration, where the
+   value is compared to the actual value of the property of the fetched
+   configuration.
 
 :aspect:`Example:`
-   ::
+   Comparing the configured base for site with identifier `someIdentifier`::
 
       [site = identifier = someIdentifier, base = https://www.typo3.org/]
          page.30 = TEXT
@@ -705,13 +707,15 @@ siteLanguage
 :aspect:`Syntax:`
    ::
 
-      [siteLanguage = locale = de_CH.UTF-8, title = Switzerland]
+      [siteLanguage = locale = localeIdentifier, propery = value]
 
 :aspect:`Comparison:`
-   Any property of the current site language is evaluated.
+   The localeIdentifier is used to fetch the related site language, where the
+   value is compared to the actual value of the property of the fetched
+   language.
 
 :aspect:`Example:`
-   ::
+   Comparing the configured title for siteLanguage with locale `de_CH.UTF-8`::
 
       [siteLanguage = locale = de_CH.UTF-8, title = Switzerland]
          page.40 = TEXT
