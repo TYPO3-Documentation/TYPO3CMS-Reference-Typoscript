@@ -657,7 +657,7 @@ comma. The comma then acts as a logical disjunction, that means the
 whole condition evaluates to true, whenever *one or more* of its
 operands are true.
 
-*Attention:* For string comparisons you must use :ts:`globalString` 
+*Attention:* For string comparisons you must use :ts:`globalString`
 instead of :ts:`globalVar`.
 
 
@@ -1009,3 +1009,40 @@ shows how quotes can be escaped::
 
     [userFunc = user_testFunctionWithThreeArgumentsEscapedQuotes(1, 2, "3, \"4, 5\", 6")]
 
+
+.. _condition-site:
+
+site
+====
+
+Syntax::
+
+   [site = identifier = someIdentifier, base = https://www.typo3.org/]
+
+Comparison: The identifier of the site name is evaluated.
+
+Example::
+
+   [site = identifier = someIdentifier, base = https://www.typo3.org/]
+      page.30 = TEXT
+      page.30.value = some conditional value
+   [global]
+
+
+.. _condition-site-language:
+
+siteLanguage
+============
+
+Syntax::
+
+   [siteLanguage = locale = de_CH.UTF-8, title = Switzerland]
+
+Comparison: Any property of the current site language is evaluated.
+
+Example::
+
+   [siteLanguage = locale = de_CH.UTF-8, title = Switzerland]
+      page.40 = TEXT
+      page.40.value = some value special for swiss german readers
+   [global]
