@@ -1,5 +1,5 @@
 .. include:: ../Includes.txt
-.. highlight:: typoscript
+
 
 .. _conditions-about-the-syntax:
 
