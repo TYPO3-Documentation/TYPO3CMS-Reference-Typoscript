@@ -1,5 +1,4 @@
 .. include:: ../Includes.txt
-.. highlight:: typoscript
 
 .. _conditions:
 
@@ -15,7 +14,7 @@ Conditions
 **Topics:**
 
 .. toctree::
+   :glob:
    :titlesonly:
 
-   Syntax/Index
-   Reference/Index
+   *

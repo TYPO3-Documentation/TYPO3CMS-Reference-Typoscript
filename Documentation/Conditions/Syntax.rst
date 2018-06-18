@@ -1,9 +1,8 @@
-.. include:: ../../Includes.txt
-.. highlight:: typoscript
+.. include:: ../Includes.txt
+
 
 .. _conditions-about-the-syntax:
 
-==============================
 About The Syntax Of Conditions
 ==============================
 
@@ -16,7 +15,7 @@ About The Syntax Of Conditions
 .. _condition-syntax:
 
 General syntax
-==============
+--------------
 
 Each condition is encapsulated by square brackets. For a list of
 available conditions see below.
@@ -54,7 +53,7 @@ Test day of month::
 .. _condition-general-notes:
 
 Trimming, braces and condition operators
-========================================
+----------------------------------------
 
 Values are normally trimmed before comparison, so leading and trailing
 blanks are not taken into account.
