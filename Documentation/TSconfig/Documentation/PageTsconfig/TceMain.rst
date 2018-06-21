@@ -340,6 +340,7 @@ preview
                 additionalGetParameters {
                     tx_myext_pi1.special = HELLO # results in tx_myext_pi1[special]
                 }
+                useCacheHash = 1
             }
         }
 
@@ -359,6 +360,9 @@ preview
     The core automatically sets the "no_cache" and the "L" parameter. The language matches the language of
     the current record. You may override each parameter by using the :ts:`additionalGetParameters` configuration
     option.
+    
+    Enable :ts:`useCacheHash` to add a cHash. This is essential for records displayed using Extbase which enforces 
+    cHash usage. If useCacheHash = 1 is not set, the no_cache parameter will be added just like before.
 
     .. note::
 
