@@ -67,6 +67,8 @@ addItems
     Flex form field level, example:
         `TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.myField.addItems`
 
+        Where `sDEF` is the sheet name.
+
     .. warning::
         Do not add page types this way (using `TCEFORM.pages.doktype.addItems`), instead the proper
         PHP API should be used to do this, see :ref:`Core APIs <t3coreapi:page-types>` for details.
@@ -110,6 +112,8 @@ altLabels
 
     Flex form field level, example:
         `TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.myField.altLables`
+
+        Where `sDEF` is the sheet name.
 
 :aspect:`Example`
 
@@ -168,6 +172,8 @@ config
     Flex form field level, example:
         `TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.myField.config.max`
 
+        Where `sDEF` is the sheet name.
+
 
 .. _pageTsConfigTceFormConfigTreeConfig:
 
@@ -201,6 +207,8 @@ config.treeConfig
     Flex form field level, example:
         `TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.myField.config.treeConfig.rootUid`
 
+        Where `sDEF` is the sheet name.
+
 
 disabled
 ========
@@ -221,8 +229,12 @@ disabled
     Flex form sheet level. If set, the entire tab is not rendered, example:
         `TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.disabled`
 
+        Where `sDEF` is the sheet name.
+
     Flex form field level, example:
         `TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.myField.disabled`
+
+        Where `sDEF` is the sheet name.
 
 :aspect:`Example`
     .. code-block:: typoscript
@@ -264,6 +276,8 @@ disableNoMatchingValueElement
     Flex form field level, example:
         `TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.myField.disableNoMatchingValueElement`
 
+        Where `sDEF` is the sheet name.
+
 :aspect:`Example`
     .. code-block:: typoscript
 
@@ -302,6 +316,8 @@ itemsProcFunc
     Flex form field level, example:
         `TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.myField.itemsProcFunc`
 
+        Where `sDEF` is the sheet name.
+
 
 keepItems
 =========
@@ -323,6 +339,8 @@ keepItems
 
     Flex form field level, example:
         `TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.myField.keepItems`
+
+        Where `sDEF` is the sheet name.
 
 :aspect:`Example`
     .. code-block:: typoscript
@@ -355,6 +373,8 @@ label
 
     Flex form field level, example:
         `TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.myField.label`
+
+        Where `sDEF` is the sheet name.
 
 :aspect:`Example`
     .. code-block:: typoscript
@@ -389,6 +409,8 @@ noMatchingValue_label
 
     Flex form field level, example:
         `TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.myField.noMatchingValue_label`
+
+        Where `sDEF` is the sheet name.
 
 :aspect:`Example`
 
@@ -426,6 +448,8 @@ removeItems
     Flex form field level, example:
         `TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.myField.removeItems`
 
+        Where `sDEF` is the sheet name.
+
 :aspect:`Example`
     .. code-block:: typoscript
 
@@ -447,6 +471,8 @@ sheetDescription
     This property is only available on flex form sheet level, example:
         `TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.sheetDescription`
 
+        Where `sDEF` is the sheet name.
+
 
 sheetShortDescr
 ===============
@@ -460,6 +486,8 @@ sheetShortDescr
     This property is only available on flex form sheet level, example:
         `TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.sheetShortDescription`
 
+        Where `sDEF` is the sheet name.
+
 
 sheetTitle
 ==========
@@ -472,6 +500,8 @@ sheetTitle
 
     This property is only available on flex form sheet level, example:
         `TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.sheetTitle`
+
+        Where `sDEF` is the sheet name.
 
 :aspect:`Example`
     .. code-block:: typoscript
