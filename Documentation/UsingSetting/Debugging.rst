@@ -18,6 +18,7 @@ on the currently active page.
 
 .. figure:: ../Images/TemplatesConstants.png
    :alt: Overview of the defined constants
+   :class: with-shadow
 
 .. _typoscript-syntax-finding-errors:
 
@@ -29,6 +30,7 @@ correct. The TypoScript Object Browser will warn about syntax errors though:
 
 .. figure:: ../Images/TemplatesSyntaxError.png
    :alt: The TypoScript Object Browser showing a syntax error
+   :class: with-shadow
 
 Errors will also appear in the Template Analyzer, when viewing the content of a
 give template. It is also possible to see the full TypoScript code by clicking
@@ -37,12 +39,14 @@ Analyzer:
 
 .. figure:: ../Images/TemplatesViewFullListingButton.png
    :alt: The TypoScript Object Browser showing a syntax error
+   :class: with-shadow
 
 The result is a long listing with all compiled line numbers, which makes it
 possible to find the error reported by the TypoScript Object Browser.
 
 .. figure:: ../Images/TemplatesFullListing.png
    :alt: The TypoScript Object Browser showing a syntax error
+   :class: with-shadow
 
 In the frontend, the Admin Panel is another possibility to debug TypoScript; use
 its section called "TypoScript". It shows selected rendered (configuration)
