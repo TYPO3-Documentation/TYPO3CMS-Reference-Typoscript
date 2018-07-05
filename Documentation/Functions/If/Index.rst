@@ -115,7 +115,7 @@ isPositive
          :ref:`data-type-integer` / :ref:`stdwrap` \+ calc
 
    Description
-         Returns false, if the content is not positive.
+         Returns true, if the content is positive.
 
 .. _if-isgreaterthan:
 
@@ -131,7 +131,7 @@ isGreaterThan
          value / :ref:`stdwrap`
 
    Description
-         Returns false, if the content is not greater than :ts:`value`.
+         Returns true, if the content is greater than :ts:`value`.
 
 .. _if-islessthan:
 
@@ -147,7 +147,7 @@ isLessThan
          value / :ref:`stdwrap`
 
    Description
-         Returns false, if the content is not less than :ts:`value`.
+         Returns true, if the content is less than :ts:`value`.
 
 .. _if-equals:
 
@@ -163,7 +163,7 @@ equals
          value / :ref:`stdwrap`
 
    Description
-         Returns false, if the content does not equal :ts:`value`.
+         Returns true, if the content is equal to :ts:`value`.
 
          **Example:** ::
 
@@ -184,7 +184,7 @@ isInList
          value / :ref:`stdwrap`
 
    Description
-         Returns false, if the content is not in the comma-separated list
+         Returns true, if the content is in the comma-separated list
          :ts:`.value`.
 
          **Note:** The list in :ts:`value` may not have spaces between elements!
