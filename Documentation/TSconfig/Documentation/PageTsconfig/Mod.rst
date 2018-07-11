@@ -11,12 +11,12 @@ Configuration for backend modules. This is the part of Page TSconfig
 with the most options, most sections affect the main TYPO3 editing modules
 like *Web > Page* and *Web > List*.
 
-
-
 .. _pagesharedotionsformodules:
 
 SHARED
 ======
+
+.. youtube:: xJtsLlEtY5U
 
 colPos_list
 -----------

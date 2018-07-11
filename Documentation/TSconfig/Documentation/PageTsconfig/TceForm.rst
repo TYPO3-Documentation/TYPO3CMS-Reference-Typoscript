@@ -41,6 +41,7 @@ Some properties apply to whole FlexForm sheets, their property path is
 While all that property path munging looks messy at first, it should become more
 clear if reading through the single properties below and looking at the examples.
 
+.. youtube:: B3IQq7pIJ_o
 
 addItems
 ========
