@@ -77,7 +77,7 @@ template is one large chunk of text.
 
 A systematic naming scheme should be used for constants. As "paths" can be
 defined, it's also possible to structure constants and prefix them with a common
-path segment. This makes reading and fining of constants easier.
+path segment. This makes reading and finding of constants easier.
 
 Example
 """""""
