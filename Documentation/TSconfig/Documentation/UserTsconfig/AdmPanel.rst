@@ -71,8 +71,8 @@ enable
         admPanel.enable.tsdebug
         admPanel.enable.info
 
-:aspect:`Default`
-    For admin users, `admPanel.enable.all = 1` is default
+.. Attention::
+   For admin users, `admPanel.enable.all = 1` is default
 
 
 hide
