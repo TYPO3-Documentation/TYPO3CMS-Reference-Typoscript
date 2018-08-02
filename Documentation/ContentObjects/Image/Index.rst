@@ -173,8 +173,8 @@ layoutKey
               <img src="###SRC###"
                    srcset="|*|###SRC### ###SRCSETCANDIDATE###,|*|###SRC### ###SRCSETCANDIDATE###" ###PARAMS### ###ALTPARAMS######SELFCLOSINGTAGSLASH###>
 
-         - :ts:`picture` renders a picture tag containing source tags for each resolutions:
-           and a :html:`<img>` tag for the default image.
+         - :ts:`picture` renders a picture tag containing source tags for each resolution
+           and an :html:`<img>` tag for the default image.
 
            .. code-block:: html
 
