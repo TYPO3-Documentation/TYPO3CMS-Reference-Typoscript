@@ -174,8 +174,7 @@ layoutKey
                    srcset="|*|###SRC### ###SRCSETCANDIDATE###,|*|###SRC### ###SRCSETCANDIDATE###" ###PARAMS### ###ALTPARAMS######SELFCLOSINGTAGSLASH###>
 
          - :ts:`picture` renders a picture tag containing source tags for each resolutions:
-           and a :html:`<img>` tag for the default image. Picture is in the working draft
-           for HTML5 (http://www.w3.org/TR/html-picture-element/).
+           and a :html:`<img>` tag for the default image.
 
            .. code-block:: html
 
@@ -236,7 +235,7 @@ layout.layoutKey
 
           picture {
               element = <picture>###SOURCECOLLECTION###<img src="###SRC###" ###PARAMS### ###ALTPARAMS### ###SELFCLOSINGTAGSLASH###></picture>
-              source = <source src="###SRC###" media="###MEDIAQUERY###" ###SELFCLOSINGTAGSLASH###>
+              source = <source srcset="###SRC###" media="###MEDIAQUERY###" ###SELFCLOSINGTAGSLASH###>
           }
 
 
@@ -695,7 +694,7 @@ Responsive/adaptive rendering
 
             picture {
               element = <picture>###SOURCECOLLECTION###<img src="###SRC###" ###PARAMS### ###ALTPARAMS### ###SELFCLOSINGTAGSLASH###></picture>
-              source = <source src="###SRC###" media="###MEDIAQUERY###" ###SELFCLOSINGTAGSLASH###>
+              source = <source srcset="###SRC###" media="###MEDIAQUERY###" ###SELFCLOSINGTAGSLASH###>
             }
 
             data {
@@ -743,9 +742,9 @@ This returns as an example all per default possible HTML-Output:
      data-smallRetina="fileadmin/_processed_/imagefilenamename_42fb68d642.png"
      alt="" />
    <picture>
-     <source src="fileadmin/_processed_/imagefilenamename_595cc36c48.png"
+     <source srcset="fileadmin/_processed_/imagefilenamename_595cc36c48.png"
        media="(max-device-width: 600px)" />
-     <source src="fileadmin/_processed_/imagefilenamename_42fb68d642.png"
+     <source srcset="fileadmin/_processed_/imagefilenamename_42fb68d642.png"
        media="(max-device-width: 600px) AND (min-resolution: 192dpi)" />
      <img src="fileadmin/_processed_/imagefilenamename_595cc36c48.png"
        alt="" />
