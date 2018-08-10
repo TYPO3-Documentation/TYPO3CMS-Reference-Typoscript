@@ -28,5 +28,5 @@ Example:
 
     .. code-block:: typoscript
 
-        # Sets the default hidden flag for pages to "clear".
+        # Show newly created pages by default
         TCAdefaults.pages.hidden = 0
