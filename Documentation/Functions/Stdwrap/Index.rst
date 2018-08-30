@@ -25,7 +25,7 @@ stdWrap properties are executed in the order they appear in the table
 below. If you want to study this further please refer to
 :file:`typo3/sysext/frontend/Classes/ContentObject/ContentObjectRenderer.php`,
 where you will find the function :php:`stdWrap()` and the array :php:`$stdWrapOrder`,
-which represents the exact order of execution.
+which represents the exact order of execution. See `ContentObjectRenderer.php <https://api.typo3.org/typo3cms/8/html/_content_object_renderer_8php_source.html>`_ .
 
 Note that the :ts:`stdWrap` property "orderedStdWrap" allows you to execute
 multiple :ts:`stdWrap` functions in a freely selectable order.
