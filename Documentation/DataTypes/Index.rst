@@ -289,7 +289,7 @@ getText
 :aspect:`Description:`
    The getText data type is some kind of tool box allowing to retrieve
    values from a variety of sources, e.g. from GET/POST variables, from
-   registers, values from the page tree, items in the page menues, from the database, etc.
+   registers, values from the page tree, items in the page menus, records from any database table, etc.
 
    The general syntax is as follows::
 
