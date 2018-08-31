@@ -7,8 +7,7 @@
 User TSconfig Reference
 =======================
 
-The User TSconfig consists of a series of top level keys.
-Their details are listed below. 
+The User TSconfig uses several *top level keys*. Their details are listed below. 
 
 The most important section is the `options` part.
 
