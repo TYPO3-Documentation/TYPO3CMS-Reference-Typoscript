@@ -289,7 +289,7 @@ getText
 :aspect:`Description:`
    The getText data type is some kind of tool box allowing to retrieve
    values from a variety of sources, e.g. from GET/POST variables, from
-   registers, values from up the page tree, from the database, etc.
+   registers, values from the page tree, items in the page menus, records from any database table, etc.
 
    The general syntax is as follows::
 
@@ -431,11 +431,13 @@ field
    field : [field name from the current :php:`$cObj->data` array in the cObject, multi-dimensional.]
 
 :aspect:`Description:`
+   This gives read access to the current value of an internal global variable determined by the given key.
+
    - As default the :php:`$cObj->data` array is :php:`$GLOBALS['TSFE']->page`
      (record of the current page)
 
-   - In :ref:`TMENU <tmenu>` :php:`$cObj->data` is set to the page-record for
-     each menu item.
+   - In :ref:`TMENU <tmenu>` :php:`$cObj->data` is set in a loop to the page-record for
+     each menu item during its rendering process. 
 
    - In :ref:`cobj-content` / :ref:`cobj-records` :php:`$cObj->data` is set to
      the actual record
