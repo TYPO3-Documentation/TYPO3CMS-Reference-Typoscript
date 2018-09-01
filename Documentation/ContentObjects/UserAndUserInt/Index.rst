@@ -193,7 +193,7 @@ things contain:
          'header',
          'tt_content',
          'pid=' . intval($GLOBALS['TSFE']->id) .
-           $this->cObj->enableFields('tt_content'),
+           $GLOBALS['TSFE']->sys_page->enableFields('tt_content'),
          '',
          'sorting' . ($conf['reverseOrder'] ? ' DESC' : '')
        );
