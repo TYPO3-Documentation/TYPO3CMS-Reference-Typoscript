@@ -531,6 +531,8 @@ concatenateJs
          the Frontend in :ts:`page.includeJS` and the like together. Does not work
          on files, which are referenced in :ts:`page.headerData`.
 
+         If all files to be concatenated are marked with the async flag, the async attribute is assigned to the script tag.
+
          TYPO3 comes with a built-in concatenation handler, but you
          can also register your own one using
          :php:`$GLOBALS['TYPO3_CONF_VARS']['FE']['jsConcatenateHandler']`.
@@ -546,7 +548,14 @@ concatenateJs
 
             config.concatenateJs = 1
 
+            page = PAGE
+            page.includeJSFooter {
+                test = fileadmin/user_upload/test.js
+                test.async = 1
 
+                test2 = fileadmin/user_upload/test2.js
+                test2.async = 1
+            }
 
 
 .. _setup-config-concatenatejsandcss:
