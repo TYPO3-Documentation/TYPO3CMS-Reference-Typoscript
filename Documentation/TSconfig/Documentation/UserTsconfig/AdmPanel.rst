@@ -71,8 +71,12 @@ enable
         admPanel.enable.tsdebug
         admPanel.enable.info
 
-.. Attention::
-   For admin users, `admPanel.enable.all = 1` is default
+:aspect:`Default` 
+    For admin users, `admPanel.enable.all = 1` is default.
+
+    .. note::
+       The admin Panel is active for all admin users by default. If this does
+       not fit the necessary setup, the different modules can be disabled.
 
 
 hide
