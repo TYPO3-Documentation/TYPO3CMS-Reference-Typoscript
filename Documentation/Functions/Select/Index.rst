@@ -116,14 +116,14 @@ pidInList
          *list of page\_ids* / :ref:`stdWrap`
 
    Description
-         Comma-separated list of pids of the record. This will be page_ids. For
+         Comma-separated list of pids of the record. This will be page uids (pids). For
          example when the select function works on the table tt_content, then this
          will be pids of tt_content records, the parent pages of these records.
 
          Pages in the list, which are not visible for the website user, *are
          automatically removed* from the list. Thereby no records from hidden,
          timed or access-protected pages will be selected! Nor will be records
-         from recyclers.
+         from recyclers. Exception: The hidden pages will be listed in *preview mode*.
 
          **Special keyword:** "this" is replaced with the id of the current page.
 
