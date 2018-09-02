@@ -2378,7 +2378,7 @@ sys\_language\_mode
          It is only evaluated when :ts:`sys_language_uid` is greater than `0`
          and the requested page translation is NOT available.
          Internally this setting corresponds to
-         :php:`$GLOBALS['TSFE']->sys_language_content`.
+         :php:`LanguageAspect->contentId`.
 
          The syntax is "[keyword] ; [value]".
 
@@ -2387,8 +2387,8 @@ sys\_language\_mode
          [empty] (not set)
             If not set and the page is not translated, the system will
             behave as if the default language was requested.
-            In that case both :php:`$GLOBALS['TSFE']->sys_language_content`
-            and :php:`$GLOBALS['TSFE']->sys_language_uid` will be set to `0`.
+            In that case both :php:`LanguageAspect->contentId`
+            and :php:`LanguageAspect->id` will be set to `0`.
 
          content\_fallback
             Recommended. The system will always operate
@@ -2418,8 +2418,8 @@ sys\_language\_mode
             the page is not translated and there is no content available for this
             language, so you can handle that situation on your own then.
             The system will render the page and the content as if the translation would exist.
-            Internally :php:`$GLOBALS['TSFE']->sys_language_content` is set to the value of
-            :php:`$GLOBALS['TSFE']->sys_language_uid`.
+            Internally :php:`LanguageAspect->contentId` is set to the value of
+            :php:`LanguageAspect->id`.
 
          Refer to the
          :ref:`Frontend Localization Guide <t3l10n:localization-modes>`
@@ -2446,8 +2446,8 @@ sys\_language\_overlay
          from the default language first and then replacing specific fields
          with the translation if that is found.
 
-         It is only evaluated when :php:`$TSFE->sys_language_content > 0`.
-         Internally it sets the property :php:`$TSFE->sys_language_contentOL` at a request.
+         It is only evaluated when :php:`LanguageAspect->contentId > 0`.
+         Internally it sets the property :php:`LanguageAspect->overlayType` at a request.
          Further calls via :php:`$TSFE->sys_page->getRecordOverlay` receive this value
          to see if overlaying should take place.
 
@@ -2466,7 +2466,7 @@ sys\_language\_overlay
 
          0
             Just fetch records from the selected language as given by
-            :php:`$TSFE->sys_language_content`.
+            :php:`LanguageAspect->contentId`.
             No overlay will happen, no fetching of the records from the default language.
             This boils down to "free mode" language handling. This is the only mode which shows
             records without a default language parent.
@@ -2505,8 +2505,8 @@ sys\_language\_uid
          See ->SELECT
 
          Internally this value is used to initialize the TypoScriptFrontendController
-         :php:`$GLOBALS['TSFE']->sys_language_uid` property.
-         The :php:`$GLOBALS['TSFE']->sys_language_content` property is set based
+         :php:`LanguageAspect->id` property.
+         The :php:`LanguageAspect->contentId` property is set based
          on the value of the :ts:`sys_language_uid` and other settings like
          :ts:`sys_language_mode`.
 
