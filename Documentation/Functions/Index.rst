@@ -21,6 +21,7 @@ Functions
    Split/Index
    Replacement/Index
    If/Index
+   GetEnv/Index
    Typolink/Index
    Encapslines/Index
    Addparams/Index
