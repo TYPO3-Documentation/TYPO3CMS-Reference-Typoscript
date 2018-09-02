@@ -557,6 +557,8 @@ getenv
 :aspect:`Description:`
    Value from PHP environment variables.
 
+   For a cached variation of this feature, please refer to :ref:`getEnv <getenv>`.
+
 :aspect:`Example:`
    Get the env var `HTTP_REFERER`::
 

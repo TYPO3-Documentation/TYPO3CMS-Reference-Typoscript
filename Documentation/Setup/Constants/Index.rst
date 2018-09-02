@@ -8,7 +8,7 @@ constants
 =========
 
 This object can be used to define constants for replacement inside a
-:ref:`parsefunc`. If parseFunc somewhere is configured with:ts:`.constants = 1`,
+:ref:`parsefunc`. If parseFunc somewhere is configured with :ts:`.constants = 1`,
 then all occurrences of the constant in the text will be substituted
 with the actual value. This is useful, if you need one and the same
 value at many places in your website. With constants, you can
