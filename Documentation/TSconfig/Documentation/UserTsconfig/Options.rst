@@ -946,7 +946,7 @@ view.languageOrder
 
 :aspect:`Description`
     When a backend user clicks a view-page link in the backend (magnifying glass) the first language uid in this
-    list which the user has access to edit will be added as the parameter "&L=[UID]" to the view-link.
+    list which the user has access to edit will be added as the language parameter to the view-link.
 
     This is a useful setting for translators which primarily wish to see
     their translation when they click the view-links.
