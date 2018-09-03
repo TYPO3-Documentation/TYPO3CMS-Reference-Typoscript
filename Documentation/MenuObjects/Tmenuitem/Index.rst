@@ -325,7 +325,7 @@ the current page record, use stdWrap.data = page : [field name].
    Description
          The series of "before..." properties is duplicated to "after..."
          properties as well. The only difference is that the output generated
-         by the .after.... properties are placed after the link and not before.
+         by the "after..." properties is placed after the link and not before.
 
 
 .. container:: table-row
