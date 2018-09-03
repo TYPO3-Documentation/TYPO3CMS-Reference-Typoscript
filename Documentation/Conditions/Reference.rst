@@ -357,10 +357,10 @@ globalVar
 
       [globalVar = GP:style = ]
 
-   This will match, if the GET/POST variable "L" equals 8 or the GET/POST
+   This will match, if the GET/POST variable "foo" equals 8 or the GET/POST
    variable "M" equals 2 or both::
 
-      [globalVar = GP:L = 8, GP:M = 2]
+      [globalVar = GP:foo = 8, GP:M = 2]
 
    Similar to GP, but with array parts of tx_demo from GET and POST merged before matching::
 

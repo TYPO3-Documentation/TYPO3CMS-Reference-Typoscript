@@ -301,13 +301,3 @@ the field "newUntil" has a date less than the current date! ::
          negate = 1
      }
 
-
-In the next example the querystring parameter is used as a condition: A
-typolink or the link of a menu item links back to the default language
-(&L=0), if the currently active language ID is greater than 2. This is
-useful for example if only languages 0 to 2 are available in the target
-page. ::
-
-     additionalParams = &L=0
-     additionalParams.if.value = 2
-     additionalParams.if.isGreaterThan.data = GP:L
