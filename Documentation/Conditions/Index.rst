@@ -14,7 +14,7 @@ Conditions
 
 .. seealso::
 
-   For conditions inside of TypoScript please refer to chapter "Functions" :ref:`if`
+   TypoScript also offers the :ref:`"if" function <if>` to create conditions.
 
 
 **Topics:**
