@@ -726,7 +726,6 @@ defaultGetVars
 
             config.defaultGetVars {
                 test.var1.var2.p3 = 15
-                L = 3
             }
 
 
@@ -1530,20 +1529,15 @@ linkVars
    Examples
          ::
 
-            config.linkVars = L, print
+            config.linkVars = print
 
-         This will add `&L=[L-value]&print=[print-value]` to all links in
+         This will add `&print=[print-value]` to all links in
          TYPO3. ::
 
-            config.linkVars = L(1-3), print
-
-         Same as above, but `&L=[L-value]` will only be added if the current
-         value is 1, 2 or 3::
-
-            config.linkVars = L(1-3),tracking|green(0-5)
+            config.linkVars = tracking|green(0-5)
 
          With the above configuration the following example GET parameters will
-         be kept: `&L=1&tracking[green]=3`. But a get parameter like
+         be kept: `&tracking[green]=3`. But a get parameter like
          `tracking[blue]` will not be kept.
 
 
@@ -2349,14 +2343,9 @@ sys\_language\_isocode\_default
             config.sys_language_uid = 0
             config.sys_language_isocode_default = da
 
-            [globalVar = GP:L = 1]
-                # ISO code is filled by the respective DB value from sys_language (uid 1)
-                config.sys_language_uid = 1
-
-                # You can override this of course
-                config.sys_language_isocode = fr
+            [siteLanguage = locale = de_CH.UTF-8]
+                config.sys_language_isocode = ch
             [GLOBAL]
-
 
 
 .. _setup-config-sys-language-mode:
@@ -2510,18 +2499,8 @@ sys\_language\_uid
          on the value of the :ts:`sys_language_uid` and other settings like
          :ts:`sys_language_mode`.
 
-         It is usually set to the value of the `&L` request parameter,
-         using a TypoScript condition like in this example::
-
-            config.sys_language_uid = 0
-
-            [globalVar = GP:L = 1]
-                config.sys_language_uid = 1
-            [GLOBAL]
-            [globalVar = GP:L = 2]
-                config.sys_language_uid = 2
-            [GLOBAL]
-
+         It is usually resolved internally by a middleware during bootstrap, taking site configuration setting
+         into account. No manual interference necessary.
 
 
 .. _setup-config-titletagfunction:

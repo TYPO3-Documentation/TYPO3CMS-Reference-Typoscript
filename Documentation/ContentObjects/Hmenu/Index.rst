@@ -335,7 +335,7 @@ into account.
    Description
          If set, then for each page in the menu it will be checked if an
          Alternative Page Language record for the language defined in
-         "config.sys\_language\_uid" (typically defined via &L) exists for the
+         "config.sys\_language\_uid" exists for the
          page. If that is not the case and the pages "Localization settings"
          have the "Hide page if no translation for current language exists"
          flag set, then the menu item will link to a non accessible page that
@@ -1390,13 +1390,11 @@ special = language
 
 Creates a language selector menu. Typically this is made as a menu
 with flags for each language a page is translated to and when the user
-clicks any element the same page id is hit but with a change to the
-"&L" parameter in the URL.
+clicks any element the translated page is hit.
 
 The "language" type will create menu items based on the current page
 record but with the language record for each language overlaid if
-available. The items all link to the current page id and only "&L" is
-changed.
+available.
 
 Note on item states:
 

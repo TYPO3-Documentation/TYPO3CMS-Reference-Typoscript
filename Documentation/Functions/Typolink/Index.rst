@@ -55,6 +55,37 @@ fileTarget
 
 .. _typolink-target:
 
+.. _typolink-language:
+
+language
+========
+
+.. container:: table-row
+
+    Property
+        language
+
+    Data type
+        integer
+
+    Description
+        Language uid for link target
+
+        Omitting the parameter :typoscript:`language` will use the current language.
+
+
+    Example
+        .. code-block:: typoscript
+
+            page.10 = TEXT
+            page.10.value = Link to the page with the ID in the current language
+            page.10.typolink.parameter = 23
+            page.20 = TEXT
+            page.20.value = Link to the page with the ID in the language 3
+            page.20.typolink.parameter = 23
+            page.20.typolink.language = 3
+
+
 target
 ======
 
@@ -247,7 +278,8 @@ parameter
          Below are a few examples followed by full explanations.
 
    Examples
-         1. Most simple. Will create a link to page 51::
+         1. Most simple. Will create a link to page 51 (if this is not default language,
+             the correct target language will be resolved from the parameter)::
 
                parameter = t3://page?uid=51
 
@@ -270,6 +302,7 @@ parameter
          5. A mailto link with a title attribute (but no target and no class)::
 
                parameter = mailto:info@typo3.org - - "Send a mail to main TYPO3 contact"
+
 
          As you can see from the examples, each significant part of the
          parameter string is separated by a space. Values that can themselves
