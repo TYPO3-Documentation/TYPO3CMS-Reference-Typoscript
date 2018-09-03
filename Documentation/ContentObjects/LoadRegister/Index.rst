@@ -76,14 +76,15 @@ Example:
      10.renderObj = COA
      10.renderObj {
        10 = TEXT
-       10.stdWrap.field = the_id
+       10.stdWrap.field = tx_my_text_field
      }
 
 In this example we first load a special value, which is given as a
 GET/POST parameter, into the register. Then we use a
 :ref:`CONTENT object <cobj-content>` to render content based on this
-value. This CONTENT object loads data from a table and looks up a
-special entry using the value from the register.
+value. This CONTENT object loads data from a table "tx_my_table" and looks up
+the entry using the value from the register as a unique id. The field "tx_my_text_field" 
+of this record will be rendered as output.
 
 For an example in combination with :ref:`RESTORE_REGISTER <cobj-restore-register>`
 see the :ref:`example on the page RESTORE_REGISTER <cobj-restore-register-examples>`.
