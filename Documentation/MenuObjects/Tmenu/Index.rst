@@ -83,7 +83,7 @@ TMENU
          stdWrap
 
    Data type
-         ->stdWrap
+         :ref:`stdWrap <stdwrap>`
 
    Description
          Wraps the whole item using stdWrap
@@ -97,7 +97,7 @@ TMENU
          wrap
 
    Data type
-         wrap
+         :ref:`wrap <data-type-wrap>` /:ref:`stdWrap <stdwrap>`
 
    Description
          Wraps only if there were items in the menu!
