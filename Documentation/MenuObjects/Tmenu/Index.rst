@@ -97,7 +97,7 @@ TMENU
          wrap
 
    Data type
-         :ref:`wrap <data-type-wrap>` /:ref:`stdWrap <stdwrap>`
+         :ref:`wrap <data-type-wrap>`
 
    Description
          Wraps only if there were items in the menu!
