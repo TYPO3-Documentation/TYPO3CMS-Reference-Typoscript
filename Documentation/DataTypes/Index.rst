@@ -867,6 +867,9 @@ wrap
 
    Spaces between the wrap-parts and the divider ("|") are trimmed off
    from each part of the wrap.
+   
+   If you want to use more sophisticated data functions, then you
+   should use `stdWrap.dataWrap` instead of `wrap`.
 
 :aspect:`Example:`
    This will cause the value to be wrapped in a p-tag coloring the
