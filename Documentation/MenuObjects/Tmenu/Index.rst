@@ -86,7 +86,7 @@ TMENU
          ->stdWrap
 
    Description
-         Wraps the whole item using stdWrap
+         Wraps the whole block of sub items.
 
          **Example:** see GMENU.stdWrap
 
@@ -100,7 +100,7 @@ TMENU
          wrap
 
    Description
-         Wraps only if there were items in the menu!
+         Wraps the whole block of sub items, but only if there were items in the menu!
 
 
 .. container:: table-row
