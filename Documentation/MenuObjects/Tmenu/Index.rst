@@ -32,7 +32,7 @@ TMENU
          boolean
 
    Description
-         If set, "active" menu items that has expanded the next level on the
+         If set, the "active" menu item that has expanded the next level on the
          menu will now collapse that menu again.
 
 
