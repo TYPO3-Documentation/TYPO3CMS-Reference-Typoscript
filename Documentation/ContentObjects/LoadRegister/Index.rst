@@ -12,6 +12,9 @@ with values. It does not return anything!
 The register is working like a stack: With each call new content can be
 put on top of the stack. :ref:`RESTORE_REGISTER <cobj-restore-register>`
 can be used to remove the element at the topmost position again.
+The registers are processed in the reverse order. The register with the highest number
+will be processed as the first, and the register with the lowest number will be processed
+as the last one. This corresponds to the stack priciple Last In – First Out (LIFO).
 
 Registers are used at many different places, e.g. css_styled_content
 uses registers to enumerate the classes of the headlines. The
