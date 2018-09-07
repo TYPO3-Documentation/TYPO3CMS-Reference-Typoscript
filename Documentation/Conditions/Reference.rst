@@ -3,854 +3,195 @@
 
 .. _condition-reference:
 
-Condition reference
-===================
+Description
+===========
 
-.. _condition-applicationcontext:
+The `symfony expression language <https://symfony.com/doc/4.1/components/expression_language.html>`__
+has been implemented for TypoScript conditions in both frontend and backend since TYPO3 9.4.
 
-applicationContext
-------------------
+Upgrading
+---------
+The existing conditions are available as variables and/or functions but were already marked as deprecated. So expect deprecation messages when using the old syntax with TYPO3 9. The existing conditions will be removed early in version 10.
+If you want to know what your conditions did until now, have a look at an `older version of this document <https://docs.typo3.org/typo3cms/TyposcriptReference/8.7/Conditions/Reference/Index.html>`__ .
 
-:aspect:`Syntax:`
-   ::
-
-      [applicationContext = context1, context2, ...]
-
-:aspect:`Comparison:`
-   Comparison with the application context that TYPO3 is running in.
-
-   The values are compared to applicationContext, which is set at the
-   very beginning of the bootstrap sequence based on
-   :php:`getenv('TYPO3_CONTEXT')`.
-
-   Value is a comma separated list of application contexts to match with.
-   Wildcards + and \* are allowed, as well as regular expressions
-   like /PREG_PATTERN/. The slash ('/') is used as delimiter.
-
-:aspect:`Examples:`
-   Matches exactly the applicationContexts "Development/Debugging" or
-   "Development/Profiling"::
-
-      [applicationContext = Development/Debugging, Development/Profiling]
-
-   Matches any applicationContext with a rootContext of "Production",
-   for example "Production/Live" or "Production/Staging"::
-
-      [applicationContext = Production*]
-
-   Matches any applicationContext starting with "Production/Staging/Server"
-   and ending with one digit, for example "Production/Staging/Server3"::
-
-      [applicationContext = /^Production\/Staging\/Server\d+$/]
-
-.. _condition-compatversion:
-
-compatVersion
+General Usage
 -------------
 
-:aspect:`Syntax:`
-   ::
+To learn the full power of the symfony expression language please check the `documentation for the common expression syntax <https://symfony.com/doc/4.1/components/expression_language/syntax.html>`__.
+Here are some examples to understand the power of the expression language:
 
-      [compatVersion = x.y.z]
+.. code-block:: typoscript
 
-:aspect:`Comparison:`
-   Comparison with the compatibility version of the TYPO3 installation.
+   [page["uid"] in 18..45]
+   # This condition matches if current page uid is between 18 and 45
+   [END]
 
-   Require a *minimum* compatibility version; the condition will match, if
-   the set compatibility version is higher than or equal to x.y.z. The
-   compatibility version is not necessarily equal to the TYPO3 version,
-   which is used. Instead, it is a configurable value that can be changed
-   in the Upgrade Wizard of the Install Tool.
+   [userId in [1,5,7]]
+   # This condition matches if current logged in user has the uid 1, 5 or 7
+   [END]
 
-   "compatVersion" is especially useful if you want to provide new
-   default settings but keep the backwards compatibility for old versions
-   of TYPO3.
+   [not ("foo" matches "/bar/")]
+   # This condition does match if "foo" **not** matches the regExp: `/bar/`
+   [END]
 
-.. _condition-custom-conditions:
+   [applicationContext == "Production"] && [userId == 15]
+   # This condition match if application context is "Production" AND logged in user has the uid 15
+   # This condition could also be combined in one condition:
+   # [applicationContext == "Production" && userId == 15]
+   [END]
 
-Custom Conditions
------------------
+   [request.getNormalizedParams().getHttpHost() == 'typo3.org']
+   # This condition matches if current hostname is typo3.org
+   [END]
 
-You can add own TypoScript conditions via a separate API.
+   [like(request.getNormalizedParams().getHttpHost(), "*.devbox.local")]
+   # This condition matches if current hostname is any subdomain of devbox.local
+   [END]
 
-Instead of using the "userFunc" condition, it is encouraged to use
-this new API for your own TypoScript conditions.
-
-:aspect:`Syntax:`
-   ::
-
-      [YourVendor\YourPackage\YourCondition = var1 = value1, var2 != value2, ...]
-
-:aspect:`Comparison:`
-   An extension / package can ship an implementation of the abstract
-   class :php:`AbstractCondition`. Via the existing TypoScript condition
-   syntax the class is called by the simple full namespaced class name.
-
-   The main function :php:`matchCondition` of this class can then
-   evaluate any parameters given after the class name. The parameters
-   will be given in form of a numeric array, each entry containing the
-   strings that are split by the commas, e.g. array('= var1 = value1',
-   'var2 != value2').
-
-:aspect:`Examples:`
-   This example shows how to write own TypoScript conditions and how to
-   evaluate their parameters in PHP. With the PHP code following below,
-   these three conditions will match:
-
-   ::
-
-      [Documentation\Examples\TypoScript\ExampleCondition]
-         Your TypoScript code here
-      [global]
-
-      [Documentation\Examples\TypoScript\ExampleCondition TYPO3]
-         Your TypoScript code here
-      [global]
-
-      [Documentation\Examples\TypoScript\ExampleCondition = 42]
-         Your TypoScript code here
-      [global]
+   [request.getNormalizedParams().isHttps() == false]
+   # This condition matches if current request is **not** https
+   [END]
 
 
-   .. code-block:: php
-
-      <?php
-      namespace Documentation\Examples\TypoScript;
-
-      use \TYPO3\CMS\Core\Configuration\TypoScript\ConditionMatching\AbstractCondition;
-
-      class ExampleCondition extends AbstractCondition
-      {
-         /**
-          * Evaluate condition
-          *
-          * @param array $conditionParameters
-          * @return bool
-          */
-         public function matchCondition(array $conditionParameters)
-         {
-               $result = FALSE;
-               if (empty($conditionParameters)) {
-                  $result = TRUE;
-               }
-               if (!empty($conditionParameters) && $conditionParameters[0] === 'TYPO3') {
-                  $result = TRUE;
-               }
-               if (!empty($conditionParameters) && substr($conditionParameters[0], 0, 1) === '=') {
-                  $conditionParameters[0] = trim(substr($conditionParameters[0], 1));
-                  if ($conditionParameters[0] == '42') {
-                     $result = TRUE;
-                  }
-               }
-
-               return $result;
-         }
-      }
-
-.. _condition-dayofmonth:
-
-dayofmonth
-----------
-
-See "Hour" above. Uses the same syntax!
-
-:aspect:`Syntax:`
-   ::
-
-      [dayofmonth = ...]
-
-:aspect:`Comparison:`
-   Day of month, possible values are 1-31.
-
-   Apart from that this condition uses the same way of comparison as
-   hour.
-
-.. _condition-dayofweek:
-
-dayofweek
+Variables
 ---------
 
-See "Hour" above. Uses the same syntax!
+The following variables are available. The values are context related.
 
-:aspect:`Syntax:`
-   ::
++---------------------+------------+----------------------------------------------------------------+
+| Variable            | Type       | Description                                                    |
++=====================+============+================================================================+
+| applicationContext  | String     | current application context as string                          |
++---------------------+------------+----------------------------------------------------------------+
+| page                | Array      | current page record as array                                   |
++---------------------+------------+----------------------------------------------------------------+
+| {$foo.bar}          | Constant   | Any TypoScript constant is available like before.              |
+|                     |            | Depending on the type of the constant you have to use          |
+|                     |            | different conditions, see examples below:                      |
+|                     |            | - if constant is an integer:                                   |
+|                     |            | - [{$foo.bar} == 4711]                                         |
+|                     |            | - if constant is a string put constant in quotes:              |
+|                     |            | - ["{$foo.bar}" == "4711"]                                     |
++---------------------+------------+----------------------------------------------------------------+
+| tree                | Object     | object with tree information                                   |
+| .level              | Integer    | current tree level                                             |
+| .rootLine           | Array      | array of arrays with uid and pid                               |
+| .rootLineIds        | Array      | an array with UIDs of the rootline                             |
++---------------------+------------+----------------------------------------------------------------+
+| backend             | Object     | object with backend information (available in BE only)         |
+| .user               | Object     | object with current backend user information                   |
+| .user.isAdmin       | Boolean    | true if current user is admin                                  |
+| .user.isLoggedIn    | Boolean    | true if current user is logged in                              |
+| .user.userId        | Integer    | UID of current user                                            |
+| .user.userGroupList | String     | comma list of group UIDs                                       |
++---------------------+------------+----------------------------------------------------------------+
+| frontend            | Object     | object with frontend information (available in FE only)        |
+| .user               | Object     | object with current frontend user information                  |
+| .user.isLoggedIn    | Boolean    | true if current user is logged in                              |
+| .user.userId        | Integer    | UID of current user                                            |
+| .user.userGroupList | String     | comma list of group UIDs                                       |
++---------------------+------------+----------------------------------------------------------------+
+| typo3               | Object     | object with TYPO3 related information                          |
+| .version            | String     | TYPO3_version (e.g. 9.4.0-dev)                                 |
+| .branch             | String     | TYPO3_branch (e.g. 9.4)                                        |
+| .devIpMask          | String     | $GLOBALS['TYPO3_CONF_VARS']['SYS']['devIPmask']                |
++---------------------+------------+----------------------------------------------------------------+
 
-      [dayofweek = ...]
 
-:aspect:`Comparison:`
-   Day of week, starting with Sunday being 0 until Saturday being 6.
-
-   Apart from that this condition uses the same way of comparison as
-   hour.
-
-.. _condition-dayofyear:
-
-dayofyear
+Functions
 ---------
 
-See "Hour" above. Uses the same syntax! For further information look at
-the :php`date()` function in the PHP manual, format string z.
-
-:aspect:`Syntax:`
-   ::
-
-      [dayofyear = ...]
-
-:aspect:`Comparison:`
-   Day of year, 0-364 (or 365 in leap years). That this condition begins
-   with 0 for the first day of the year means that e.g. [dayofyear =
-   5] will be true on the 6 :sup:`th` of January.
-
-   Apart from that this condition uses the same way of comparison as
-   hour.
-
-.. _condition-globalstring:
-
-globalString
-------------
-
-:aspect:`Syntax:`
-   ::
-
-      [globalString = var1=value, var2= *value2, var3= *value3*, ...]
-
-:aspect:`Comparison:`
-   This is a direct match on global strings.
-
-   You have the options of putting a "\*" as a wildcard or using a PCRE
-   style regular expression (must be wrapped in "/") to the value.
-
-:aspect:`Examples:`
-   If the :php:`HTTP_HOST` is "www.typo3.org" this will match with::
-
-      [globalString = IENV:HTTP_HOST = www.typo3.org]
-
-   This will also match with it::
-
-      [globalString = IENV:HTTP_HOST = *typo3.org]
-
-   ... but this will also match with an :php:`HTTP_HOST` like this:
-   "demo.typo3.org"
-
-   If :php:`HTTP_REFERER` is set to an empty value, this will match with it::
-
-      [globalString = IENV:HTTP_REFERER = /^$/]
-
-   In contrast this will match with a non-empty value::
-
-      [globalString = IENV:HTTP_REFERER = /.+/]
-
-   .. note:: Important note on globalVar and globalString
-
-      You can use values from global arrays and objects by dividing the
-      variable name with a "\|" (vertical line).
-
-   The global variable :php:`$HTTP_POST_VARS['key']['levels']` would be
-   retrieved by "HTTP\_POST\_VARS\|key\|levels".
-
-   Also note that it's recommended to program your scripts in compliance
-   with the :file:`php.ini`-optimized settings. Please see that file (from your
-   distribution) for details.
-
-   Caring about this means that you would get values like :php:`HTTP_HOST` by
-   :php:`getenv()` and you would retrieve GET/POST values with
-   :php:`\TYPO3\CMS\Core\Utility\GeneralUtility::_GP()`.
-   Finally a lot of values from the TSFE object are
-   useful. In order to get those values for comparison with "globalVar"
-   and "globalString" conditions, you prefix that variable's name with
-   either "IENV:"/"ENV:", "GP:", "TSFE:" or "LIT:" respectively. Still
-   the "\|" divider may be used to separate keys in arrays and/or
-   objects. "LIT" means "literal" and the string after ":" is trimmed and
-   returned as the value (without being divided by "\|" or anything)
-
-   **Note:** Using the "IENV:" prefix is highly recommended to get
-   server/environment variables which are system-independent. Basically
-   this will get the value using
-   :php:`TYPO3\CMS\Core\Utility\GeneralUtility::getIndpEnv()`.
-   With "ENV:" you get the raw output from
-   :php:`getenv()` which is **not** always the same on all systems!
-
-   This will match with a remote address beginning with "192.168." ::
-
-      [globalString = IENV:REMOTE_ADDR = 192.168.*]
-
-   This will match with the frontend user whose username is "test"::
-
-      [globalString = TSFE:fe_user|user|username = test]
-
-.. _condition-globalvar:
-
-globalVar
----------
-
-:aspect:`Syntax:`
-   ::
-
-      [globalVar = var1 = value1, var2 > value2, var3 < value3, var4 <= value4, ...]
-
-:aspect:`Comparison:`
-   The values in floating point are compared to the global variables
-   "var1", "var2" ... from above.
-
-   You can use multiple conditions in one by separating them with a
-   comma. The comma then acts as a logical disjunction, that means the
-   whole condition evaluates to true, whenever *one or more* of its
-   operands are true.
-
-   *Attention:* For string comparisons you must use :ts:`globalString`
-   instead of :ts:`globalVar`.
-
-
-   .. ### BEGIN~OF~SIMPLE~TABLE ###
-
-   =============   ==============================================================
-   Operator:       Function:
-   =============   ==============================================================
-   =               Requires an exact match with the value. Comparison with a
-                  list of values is possible as well. The condition then
-                  returns true, if the value is in the list.
-                  Values must then be separated by "|".
-
-   >               The var must be greater than the value.
-
-   <               The var must be less than the value.
-
-   <=              The var must be less than or equal to the value.
-
-   >=              The var mast be greater than or equal to the value.
-
-   !=              The var must be not equal to the value. Comparison with a
-                  list of values is possible as well. The condition then
-                  returns true, if the value is not in the list.
-                  Values must then be separated by "|".
-   =============   ==============================================================
-
-   .. ###### END~OF~SIMPLE~TABLE ######
-
-:aspect:`Examples:`
-   This will match, if the page-id is equal to either 10, 12 or 15::
-
-      [globalVar = TSFE:id = 10|12|15]
-
-   This will match, if the page-id is not equal to 10, 12 and 15::
-
-      [globalVar = TSFE:id != 10|12|15]
-
-   This will match, if the page-id is higher than or equal to 10::
-
-      [globalVar = TSFE:id >= 10]
-
-   This will match, if the page-id is not equal to 316::
-
-      [globalVar = TSFE:id != 316]
-
-   This will match with the pages having the layout field set to "Layout
-   1"::
-
-      [globalVar = TSFE:page|layout = 1]
-
-   This will match with a URL like "...&print=1"::
-
-      [globalVar = GP:print > 0]
-
-   This will match the non-existing GET/POST variable "style"::
-
-      [globalVar = GP:style = ]
-
-   This will match, if the GET/POST variable "foo" equals 8 or the GET/POST
-   variable "M" equals 2 or both::
-
-      [globalVar = GP:foo = 8, GP:M = 2]
-
-   Similar to GP, but with array parts of tx_demo from GET and POST merged before matching::
-
-      [globalVar = GPmerged:tx_demo|foo = 1]
-
-   This will only check POST parameters::
-
-      [globalVar = _POST|tx_myext_pi1|showUid > 0]
-
-   This will only check GET parameters::
-
-      [globalVar = _GET|tx_myext_pi1|showUid > 0]
-
-   If the constant :ts:`{$constant_to_turnSomethingOn}` is "1" then this
-   matches::
-
-      [globalVar = LIT:1 = {$constant_to_turnSomethingOn}]
-
-   Find out if there currently is a valid backend login::
-
-      [globalVar = TSFE:beUserLogin = 1]
-
-   This will match only with the backend user with UID 13::
-
-      [globalVar = BE_USER|user|uid = 13]
-
-   This will match the session key ['foo']['bar'] = 1234567::
-
-      [globalVar = session:foo|bar = 1234567]
-
-.. _condition-hostname:
-
-hostname
---------
-
-:aspect:`Syntax:`
-   ::
-
-      [hostname = hostname1, hostname2, ...]
-
-:aspect:`Comparison:`
-   Comparison with the hostname, which the website visitor uses.
-
-   The values are compared to the fully qualified hostname, which is
-   retrieved by PHP based on :php:`getenv('REMOTE_HOST')`.
-
-   Value is comma-list of domain names to match with. \*-wildcard allowed
-   but cannot be part of a string, so it must match the full host name
-   (e.g. myhost.\*.com => correct, myhost.\*domain.com => wrong)
-
-.. _condition-hour:
-
-hour
-----
-
-See also :ref:`condition-minute` and :ref:`condition-month`.
-
-:aspect:`Syntax:`
-   ::
-
-      [hour = hour1, > hour2, < hour3, ...]
-
-   **Note:** The first "=" sign directly after the word "hour" is always
-   needed and is no operator. After that follow the operator and then the
-   hour.
-
-:aspect:`Comparison:`
-   Possible values are 0 to 23 (24-hours-format). The values in floating
-   point are compared with the current hour of the server time.
-
-   As you see in the section "Syntax" above, you can separate multiple
-   conditions in one with a comma. The comma will then connect them with
-   a logical disjunction (OR), that means the whole condition will be
-   true, when *one or more* of its operands are true.
-
-   .. ### BEGIN~OF~SIMPLE~TABLE ###
-
-   =============   ==============================================================
-   Operator:       Function:
-   =============   ==============================================================
-   [none]          Requires an exact match with the value. Comparison with a
-                  list of values is possible as well. The condition then
-                  returns true, if the value is in the list.
-                  Values must then be separated by "|".
-
-   >               The hour must be greater than the value.
-
-   <               The hour must be less than the value.
-
-   <=              The hour must be less than or equal to the value.
-
-   =>              The hour must be greater than or equal to the value.
-
-   !=              The hour must be not equal to the value. Comparison with a
-                  list of values is possible as well. The condition then
-                  returns true, if the value is not in the list.
-                  Values must then be separated by "|".
-   =============   ==============================================================
-
-   .. ###### END~OF~SIMPLE~TABLE ######
-
-:aspect:`Examples:`
-   This will match, if it is between 9 and 10 o'clock (according to the
-   server time)::
-
-      [hour = 9]
-
-   This will match, if it is not between 8 and 11 o'clock::
-
-      [hour = != 8|9|10]
-
-   This will match, if it is before 7 o'clock::
-
-      [hour = < 7]
-
-   This will match, if it is before 15 o'clock::
-
-      [hour = <= 14]
-
-   The following examples will demonstrate the usage of the comma inside
-   the condition:
-
-   This will match, if it is between 8 and 9 o'clock (the hour equals 8)
-   or after 16 o'clock (the hour is bigger than or equal to 16)::
-
-      [hour = 8, >= 16]
-
-   This will match between 16 and 8 o'clock (remember that the comma acts
-   as an OR)::
-
-      [hour = > 15, < 8]
-
-   In contrast a condition matching for 8 until 16 o'clock would be::
-
-      [hour = > 7] && [hour = < 16]
-
-.. _condition-ip:
-
-IP
---
-
-:aspect:`Syntax:`
-   ::
-
-      [IP = ipaddress1, ipaddress2, ...]
-
-:aspect:`Comparison:`
-   Comparison with the IP address, which the website visitor uses.
-
-   The values are compared with :php`getenv('REMOTE_ADDR')` from PHP.
-
-   You may include "\*" instead of one of the parts in values. You may
-   also list the first one, two or three parts and only they will be
-   tested.
-
-   The IP condition also supports the special keyword "devIP". If - instead
-   of using an actual IP address or range - you use this keyword, the IP
-   address, which the visitor uses, will be compared to
-   :php:`$GLOBALS['TYPO3_CONF_VARS']['SYS']['devIPmask']` as set in the Install Tool.
-
-:aspect:`Examples:`
-   These examples will match any IP address starting with "123"::
-
-      [IP = 123.*.*.*]
-
-   or ::
-
-      [IP = 123]
-
-   These examples will match any IP address ending with "123" or being
-   "192.168.1.34"::
-
-      [IP = *.*.*.123][IP = 192.168.1.34]
-
-   This example will match the IP address or range defined in
-   :php:`$GLOBALS['TYPO3_CONF_VARS']['SYS']['devIPmask']`::
-
-      [IP = devIP]
-
-.. _condition-language:
-
-language
---------
-
-:aspect:`Syntax:`
-   ::
-
-      [language = lang1, lang2, ...]
-:aspect:`Comparison:`
-   Comparison with the website visitor's preferred languages.
-
-   The values must be a straight match with the value of
-   :php:`getenv('HTTP_ACCEPT_LANGUAGE')` from PHP. Alternatively, if the value
-   is wrapped in "\*" (e.g. "\*en-us\*") then it will split all languages
-   found in the :php:`HTTP_ACCEPT_LANGUAGE` string and try to match the value
-   with any of those parts of the string. Such a string normally looks
-   like "de,en-us;q=0.7,en;q=0.3" and "\*en-us\*" would match with this
-   string.
-
-.. _condition-loginuser:
-
-loginUser
----------
-
-:aspect:`Syntax:`
-   ::
-
-      [loginUser = fe_users-uid, fe_users-uid, ...]
-
-:aspect:`Comparison:`
-   Matches on the uid of a logged in frontend user. Works like
-   'usergroup' above including the \* wildcard to select ANY user.
-
-:aspect:`Example:`
-   This matches any FE login (use this instead of "[usergroup = \*]" to
-   match when a FE user is logged in!)::
-
-      [loginUser = *]
-
-   Additionally it is possible to check if no FE user is logged in.
-
-   This matches when no FE user is logged in::
-
-      [loginUser = ]
-
-.. _condition-minute:
-
-minute
-------
-
-See also :ref:`condition-hour` and :ref:`condition-month`.
-
-:aspect:`Syntax:`
-   ::
-
-      [minute = ...]
-
-:aspect:`Comparison:`
-   Minute of hour, possible values are 0-59.
-
-   Apart from that this condition uses the same way of comparison as
-   hour.
-
-.. _condition-month:
-
-month
------
-
-See also :ref:`condition-hour` and :ref:`condition-minute`.
-
-:aspect:`Syntax:`
-   ::
-
-      [month = ...]
-
-:aspect:`Comparison:`
-   Month, from January being 1 until December being 12.
-
-   Apart from that this condition uses the same way of comparison as
-   hour.
-
-.. _condition-page:
-
-page
-----
-
-:aspect:`Syntax:`
-   ::
-
-      [page|field = value]
-
-:aspect:`Comparison:`
-   This condition checks values of the current page record. While you can
-   achieve the same with TSFE:[field] conditions in the frontend, this
-   condition is usable in both frontend and backend.
-
-:aspect:`Example:`
-   This condition matches, if the layout field is set to 1::
-
-      [page|layout = 1]
-
-.. _condition-pidinrootline:
-
-PIDinRootline
--------------
-
-:aspect:`Syntax:`
-   ::
-
-      [PIDinRootline = pages-uid, pages-uid, ...]
-
-:aspect:`Comparison:`
-   This checks if one of the figures in "treeLevel" is a PID (pages-uid)
-   in the rootline.
-
-:aspect:`Example:`
-   This condition matches, if the page viewed is or is a subpage to page
-   34 or page 36 ::
-
-      [PIDinRootline = 34,36]
-
-.. _condition-pidupinrootline:
-
-PIDupinRootline
----------------
-
-:aspect:`Syntax:`
-   ::
-
-      [PIDupinRootline = pages-uid, pages-uid, ...]
-
-:aspect:`Comparison:`
-   Does the same as PIDinRootline, except the current page-uid is excluded
-   from check.
-
-.. _condition-site:
-
-site
-----
-
-:aspect:`Syntax:`
-   ::
-
-      [site = identifier = siteIdentifier, property = value]
-
-:aspect:`Comparison:`
-   The siteIdentifier is used to fetch the related site configuration, where the
-   value is compared to the actual value of the property of the fetched
-   configuration.
-
-:aspect:`Example:`
-   Comparing the configured base for site with identifier `someIdentifier`::
-
-      [site = identifier = someIdentifier, base = https://www.typo3.org/]
-         page.30 = TEXT
-         page.30.value = some conditional value
-      [global]
-
-.. _condition-site-language:
-
-siteLanguage
-------------
-
-:aspect:`Syntax:`
-   ::
-
-      [siteLanguage = locale = localeIdentifier, propery = value]
-
-:aspect:`Comparison:`
-   The localeIdentifier is used to fetch the related site language, where the
-   value is compared to the actual value of the property of the fetched
-   language.
-
-:aspect:`Example:`
-   Comparing the configured title for siteLanguage with locale `de_CH.UTF-8`::
-
-      [siteLanguage = locale = de_CH.UTF-8, title = Switzerland]
-         page.40 = TEXT
-         page.40.value = some value special for swiss german readers
-      [global]
-
-.. _condition-treelevel:
-
-treeLevel
----------
-
-:aspect:`Syntax:`
-   ::
-
-      [treeLevel = levelnumber, levelnumber, ...]
-
-:aspect:`Comparison:`
-   This checks if the last element of the rootLine is at a level
-   corresponding to one of the figures in "treeLevel". Level = 0 is the
-   "root" of a website. Level = 1 is the first menu level.
-
-:aspect:`Example:`
-   This condition matches, if the page viewed is on either level 0 (root)
-   or on level 2 ::
-
-      [treeLevel = 0,2]
-
-.. _condition-userfunc:
-
-userFunc
---------
-
-:aspect:`Syntax:`
-   ::
-
-      [userFunc = user_function(argument1, argument2, ...)]
-
-:aspect:`Comparison:`
-   This calls a user-defined function (above called :php:`user_function`) and
-   passes the provided parameters to that function (e.g. the two
-   parameters "argument1" and "argument2"). Parameters can be enclosed
-   with quotes so that leading and trailing spaces and commas inside a
-   parameter can be used. Quotes can be escaped using the "\" character.
-   You write the function; you decide what it checks. The function should
-   return true or false. Otherwise the result is evaluated to true or
-   false.
-
-:aspect:`Examples:`
-   Put the following condition in your TypoScript. ::
-
-      [userFunc = user_match(checkLocalIP, 192.168)]
-
-   It will call the function "user_match" with "checkLocalIP" as first
-   argument and "192.168" as second argument. Whether the condition
-   returns true or false depends on what that function returns.
-
-   Put this function in your AdditionalConfiguration.php file:
-
-   .. code-block:: php
-
-      function user_match($command, $subnet)
-      {
-         switch($command) {
-               case 'checkLocalIP':
-                  if (strstr(getenv('REMOTE_ADDR'), $subnet)) {
-                     return TRUE;
-                  }
-               break;
-               case 'checkSomethingElse':
-                  // ....
-               break;
-         }
-         return FALSE;
-      }
-
-   If the remote address contains "192.168", the condition will return
-   true, otherwise it will return false.
-
-   The function in the following condition shows how quotes can be used.
-   It has three arguments::
-
-      [userFunc = user_testFunctionWithThreeArgumentsSpaces(1, 2, " 3, 4, 5, 6")]
-
-   The function in the next condition also has three arguments and it
-   shows how quotes can be escaped::
-
-      [userFunc = user_testFunctionWithThreeArgumentsEscapedQuotes(1, 2, "3, \"4, 5\", 6")]
-
-.. _condition-usergroup:
-
-usergroup
----------
-
-:aspect:`Syntax:`
-   ::
-
-      [usergroup = group1-uid, group2-uid, ...]
-
-:aspect:`Comparison:`
-   This matches on the uid of a usergroup of a logged in frontend user.
-
-   The comparison can only return true if the grouplist is not empty
-   (global var "gr\_list").
-
-   The values must either exist in the grouplist OR the value must be a
-   "\*".
-
-:aspect:`Example:`
-   This matches all FE logins::
-
-      [usergroup = *]
-
-   This matches logins of frontend users, which are members of frontend
-   user groups with uid's 1 and/or 2::
-
-      [usergroup = 1,2]
-
-.. _condition-year:
-
-year
-----
-
-See "Hour" above. Uses the same syntax! For further information look at
-the date() function in the PHP manual, format string Y.
-
-:aspect:`Syntax:`
-   ::
-
-      [year = ...]
-
-:aspect:`Comparison:`
-   Year, as a 4-digit number.
-
-   Apart from that this condition uses the same way of comparison as
-   hour.
+Functions take over the logic of the old conditions which do more than a simple comparison check.
+The following functions are available in **any** context:
+
++------------------------+-----------------------+--------------------------------------------------+
+| Function               | Parameter             | Description                                      |
++========================+=======================+==================================================+
+| request                | Custom Object         | This object provides 4 methods                   |
+| .getQueryParams()      |                       | - [request.getQueryParams()['foo'] == 1]         |
+| .getParsedBody()       |                       | - [request.getParsedBody()['foo'] == 1]          |
+| .getHeaders()          |                       | - [request.getHeaders()['Accept'] == 'json']     |
+| .getCookieParams()     |                       | - [request.getCookieParams()['foo'] == 1]        |
+| .getNormalizedParams() |                       | - [request.getNormalizedParams().isHttps()]      |
++------------------------+-----------------------+--------------------------------------------------+
+| date                   | String                | Get current date in given format.                |
+|                        |                       | Examples:                                        |
+|                        |                       | - true if day of current month is 7:             |
+|                        |                       | - [date("j") == 7]                               |
+|                        |                       | - true if day of current week is 7:              |
+|                        |                       | - [date("w") == 7]                               |
+|                        |                       | - true if day of current year is 7:              |
+|                        |                       | - [date("z") == 7]                               |
+|                        |                       | - true if current hour is 7:                     |
+|                        |                       | - [date("G") == 7]                               |
++------------------------+-----------------------+--------------------------------------------------+
+| like                   | String                | This function has two parameters:                |
+|                        |                       | the first parameter is the string to search in   |
+|                        |                       | the second parameter is the search string        |
+|                        |                       | Example:                                         |
+|                        |                       | - [like("foobarbaz", "*bar*")]                   |
++------------------------+-----------------------+--------------------------------------------------+
+| ip                     | String                | Value or Constraint, Wildcard or RegExp possible |
+|                        |                       | special value: devIP (match the devIPMask        |
++------------------------+-----------------------+--------------------------------------------------+
+| compatVersion          | String                | version constraint, e.g. 9.4 or 9.4.0            |
++------------------------+-----------------------+--------------------------------------------------+
+| loginUser              | String                | value or constraint, wildcard or RegExp possible |
+|                        |                       | Examples:                                        |
+|                        |                       | - [loginUser('*')]          // any logged in user|
+|                        |                       | - [loginUser(1)]            // user with uid 1   |
+|                        |                       | - [loginUser('1,3,5')]      // user 1, 3 or 5    |
+|                        |                       | - [loginUser('*') == false] // not logged in     |
++------------------------+-----------------------+--------------------------------------------------+
+| getTSFE                | Object                | TypoScriptFrontendController ($GLOBALS['TSFE'])  |
++------------------------+-----------------------+--------------------------------------------------+
+| getenv                 | String                | PHP function: getenv()                           |
++------------------------+-----------------------+--------------------------------------------------+
+| usergroup              | String                | value or constraint, wildcard or RegExp possible |
++------------------------+-----------------------+--------------------------------------------------+
+
+
+The following functions are only available in **frontend** context:
+
++--------------------+------------+-----------------------------------------------------------------+
+| Function           | Parameter  | Description                                                     |
++====================+============+=================================================================+
+| session            | String     | Get value from session                                          |
+|                    |            | Example, matches if session value = 1234567                     |
+|                    |            | - [session("session:foo|bar") == 1234567]                       |
++--------------------+------------+-----------------------------------------------------------------+
+| site               | String     | get value from site configuration, or null if                   |
+|                    |            | no site was found or property does not exists                   |
+|                    |            | Example, matches if site identifier = foo                       |
+|                    |            | - [site("identifier") == "foo"]                                 |
+|                    |            | Example, matches if site base = http://localhost                |
+|                    |            | - [site("base") == "http://localhost"]                          |
++--------------------+------------+-----------------------------------------------------------------+
+| siteLanguage       | String     | get vale from siteLanguage configuration, or                    |
+|                    |            | null if no site was found or property not exists                |
+|                    |            | Example, match if siteLanguage locale = foo                     |
+|                    |            | - [siteLanguage("locale") == "de_CH"]                           |
+|                    |            | Example, match if siteLanguage title = Italy                    |
+|                    |            | - [siteLanguage("title") == "Italy"]                            |
++--------------------+------------+-----------------------------------------------------------------+
+
+
+Extending the expression language with own functions (like old userFunc)
+------------------------------------------------------------------------
+
+It is possible to extend the expression language with own functions like before userFunc in the old conditions.
+An example could be :php:`TYPO3\CMS\Core\ExpressionLanguage\TypoScriptConditionFunctionsProvider` which implements
+the most core functions.
+
+Add new methods by implementing own providers which implement the :php:`ExpressionFunctionProviderInterface` and
+register the provider in :file:`ext_localconf.php`:
+
+.. code-block:: php
+
+   if (!is_array($GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['TYPO3\CMS\Core\ExpressionLanguage\TypoScriptConditionProvider']['additionalExpressionLanguageProvider'])) {
+      $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['TYPO3\CMS\Core\ExpressionLanguage\TypoScriptConditionProvider']['additionalExpressionLanguageProvider'] = [];
+   }
+   $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['TYPO3\CMS\Core\ExpressionLanguage\TypoScriptConditionProvider']['additionalExpressionLanguageProvider'][] = \My\NameSpace\Provider\TypoScriptConditionProvider::class;
 
 
 
