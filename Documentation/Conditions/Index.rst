@@ -23,4 +23,5 @@ Conditions
    :glob:
    :titlesonly:
 
-   *
+   Syntax
+   Reference
