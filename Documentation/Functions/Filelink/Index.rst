@@ -89,7 +89,7 @@ ATagParams
    ATagParams
 
 :aspect:`Data type:`
-   <A>-params / :ref:`stdwrap`
+   :ref:`<A>-params <data-type-tag-params>` / :ref:`stdwrap`
 
 :aspect:`Description:`
    Additional parameters
@@ -111,8 +111,13 @@ emptyTitleHandling
     :ref:`data-type-string` /:ref:`stdwrap`
 
 :aspect:`Description:`
-   Value can be "keepEmpty" to preserve an empty title attribute or
-   "useAlt" to use the alt attribute instead.
+   Value can be:
+
+   :ts:`keepEmpty`
+      To preserve an empty title attribute or
+
+   :ts:`useAlt`
+      To use the alt attribute instead.
 
 :aspect:`Default:`
    :ts:`useAlt`
@@ -131,9 +136,10 @@ file
    :ref:`stdwrap`
 
 :aspect:`Description:`
-   stdWrap of the label (by default the label is the filename) after
-   having been wrapped with A-tag!
+   stdWrap of the label after having been wrapped with A-tag.
 
+:aspect:`Default:`
+   The label is the filename.
 
 
 .. _filelink-icon:
@@ -176,15 +182,18 @@ icon
 
    The following sub-properties are available and have :ref:`stdwrap` functionality:
 
-   -  :ts:`path`:
-            Path to the icon set.
-            Default is :file:`typo3/sysext/frontend/Resources/Public/Icons/FileIcons/`.
+   :ts:`path`
+      Path to the icon set.
+      Default is :file:`typo3/sysext/frontend/Resources/Public/Icons/FileIcons/`.
 
-   -  :ts:`ext`: File extension of icons. Default is :file:`.gif`.
+   :ts:`ext`
+      File extension of icons. Default is :file:`.gif`.
 
-   -  :ts:`widthAttribute`: Width of the icons in pixels. Default: 18
+   :ts:`widthAttribute`
+      Width of the icons in pixels. Default: 18
 
-   -  :ts:`heightAttribute` Height of the icons in pixels. Default: 16
+   :ts:`heightAttribute`
+      Height of the icons in pixels. Default: 16
 
 
 
@@ -283,10 +292,11 @@ labelStdWrap
    :ref:`stdwrap`
 
 :aspect:`Description:`
-   stdWrap options for the label (by default the label is the filename)
-   before being wrapped with the A-tags.
+   stdWrap options for the label before being wrapped with the A-tags.
    Use this to for example import another label from a database field or such.
 
+:aspect:`Default:`
+   The label is the filename.
 
 
 .. _filelink-longdescurl:
@@ -301,11 +311,9 @@ longdescURL
    :ref:`data-type-string` / :ref:`stdwrap`
 
 :aspect:`Description:`
-   For icons (image made with "iconCObject" must have their own
-   properties).
-   "longdesc" attribute (URL pointing to document with extensive details
-   about image).
-
+   For icons (image made with :ref:`filelink-iconCObject` must have their own
+   properties). "longdesc" attribute (URL pointing to document with extensive
+   details about image).
 
 
 .. _filelink-path:
@@ -384,7 +392,7 @@ target
    :ref:`data-type-target` / :ref:`stdwrap`
 
 :aspect:`Description:`
-   Target for the <a>-tag.
+   Target for the :html:`<a>`-tag.
 
 
 

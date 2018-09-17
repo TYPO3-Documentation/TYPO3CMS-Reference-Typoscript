@@ -14,176 +14,159 @@ For each iteration the split index starting with 0 (zero) is stored in
 the register key :ts:`SPLIT_COUNT`.
 
 
-.. ### BEGIN~OF~TABLE ###
-
 .. _split-token:
 
 token
 =====
 
-.. container:: table-row
+:aspect:`Property`
+   token
 
-   Property
-         token
+:aspect:`Data type`
+   :ref:`data-type-string` / :ref:`stdwrap`
 
-   Data type
-         :ref:`data-type-string` / :ref:`stdwrap`
-
-   Description
-         String or character (token) used to split the value.
+:aspect:`Description`
+   String or character (token) used to split the value.
 
 .. _split-max:
 
 max
 ===
 
-.. container:: table-row
+:aspect:`Property`
+   max
 
-   Property
-         max
+:aspect:`Data type`
+   :ref:`data-type-integer` / :ref:`stdwrap`
 
-   Data type
-         :ref:`data-type-integer` / :ref:`stdwrap`
-
-   Description
-         Maximum number of splits.
+:aspect:`Description`
+   Maximum number of splits.
 
 .. _split-min:
 
 min
 ===
 
-.. container:: table-row
+:aspect:`Property`
+   min
 
-   Property
-         min
+:aspect:`Data type`
+   :ref:`data-type-integer` / :ref:`stdwrap`
 
-   Data type
-         :ref:`data-type-integer` / :ref:`stdwrap`
-
-   Description
-         Minimum number of splits.
+:aspect:`Description`
+   Minimum number of splits.
 
 .. _split-returnkey:
 
 returnKey
 =========
 
-.. container:: table-row
+:aspect:`Property`
+   returnKey
 
-   Property
-         returnKey
+:aspect:`Data type`
+   :ref:`data-type-integer` / :ref:`stdwrap`
 
-   Data type
-         :ref:`data-type-integer` / :ref:`stdwrap`
-
-   Description
-         Instead of parsing the split result, just return the element of the
-         index with this number immediately and stop processing of the split
-         function.
+:aspect:`Description`
+   Instead of parsing the split result, just return the element of the
+   index with this number immediately and stop processing of the split
+   function.
 
 .. _split-returncount:
 
 returnCount
 ===========
 
-.. container:: table-row
+:aspect:`Property`
+   returnCount
 
-   Property
-         returnCount
+:aspect:`Data type`
+   :ref:`data-type-bool` / :ref:`stdwrap`
 
-   Data type
-         :ref:`data-type-bool` / :ref:`stdwrap`
+:aspect:`Description`
+   Counts all elements resulting from the split, returns their number
+   and stops processing of the split function.
 
-   Description
-         Counts all elements resulting from the split, returns their number
-         and stops processing of the split function.
+:aspect:`Example`
 
-         **Example:** ::
+   ::
 
-            # returns 9
-            1 = TEXT
-            1 {
-                value = x,y,z,1,2,3,a,b,c
-                split.token = ,
-                split.returnCount = 1
-            }
+      # returns 9
+      1 = TEXT
+      1 {
+            value = x,y,z,1,2,3,a,b,c
+            split.token = ,
+            split.returnCount = 1
+      }
 
 .. _split-cobjnum:
 
 cObjNum
 =======
 
-.. container:: table-row
+:aspect:`Property`
+   cObjNum
 
-   Property
-         cObjNum
+:aspect:`Data type`
+   *cObjNum* + :ref:`objects-optionsplit` / :ref:`stdwrap`
 
-   Data type
-         *cObjNum* +optionSplit / :ref:`stdwrap`
-
-   Description
-         This is a pointer the array of this object ("1,2,3,4"), that should
-         treat the items, resulting from the split.
+:aspect:`Description`
+   This is a pointer the array of this object ("1,2,3,4"), that should
+   treat the items, resulting from the split.
 
 .. _split-1,2,3,4:
 
 1,2,3,4
 =======
 
-.. container:: table-row
+:aspect:`Property`
+   1,2,3,4
 
-   Property
-         1,2,3,4
+:aspect:`Data type`
+   :ref:`carray` / :ref:`stdwrap`
 
-   Data type
-         ->CARRAY / :ref:`stdwrap`
+:aspect:`Description`
+   The object that should treat the value.
 
-   Description
-         The object that should treat the value.
+   **Note:** The "current"-value is set to the value of current item,
+   when the objects are called. See :ref:`stdwrap` / current.
 
-         **Note:** The "current"-value is set to the value of current item,
-         when the objects are called. See :ref:`stdwrap` / current.
+:aspect:`Example for stdWrap`
 
-         **Example for stdWrap:** ::
+   ::
 
-            1.current = 1
-            1.wrap = <b> | </b>
+      1.current = 1
+      1.wrap = <b> | </b>
 
-         **Example for CARRAY:** ::
+:aspect:`Example for CARRAY`
 
-            1 {
-                10 = TEXT
-                10.stdWrap.current = 1
-                10.stdWrap.wrap = <b> | </b>
-            }
+   ::
+
+      1 {
+            10 = TEXT
+            10.stdWrap.current = 1
+            10.stdWrap.wrap = <b> | </b>
+      }
 
 .. _split-wrap:
 
 wrap
 ====
 
-.. container:: table-row
+:aspect:`Property`
+   wrap
 
-   Property
-         wrap
+:aspect:`Data type`
+   wrap + :ref:`objects-optionsplit` / :ref:`stdwrap`
 
-   Data type
-         wrap +optionSplit / :ref:`stdwrap`
-
-   Description
-         Defines a wrap for each item.
-
-
-.. ###### END~OF~TABLE ######
-
-[tsref:->split]
+:aspect:`Description`
+   Defines a wrap for each item.
 
 
 .. _split-examples:
 
-Example:
-========
+Example
+=======
 
 This is an example of TypoScript code that imports the content of
 field "bodytext" from the :php:`$cObj->data-array` (ln 2). The content is

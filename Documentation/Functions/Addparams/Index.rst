@@ -9,64 +9,53 @@ addParams
 
 Adds parameters to an HTML tag.
 
-.. ### BEGIN~OF~TABLE ###
-
 .. _addParams-\_offset:
 
 \_offset
 ========
 
-.. container:: table-row
+:aspect:`Property`
+   \_offset
 
-   Property
-         \_offset
+:aspect:`Data type`
+   :ref:`data-type-integer`
 
-   Data type
-         :ref:`data-type-integer`
+:aspect:`Description`
+   Use this to define which tag you want to manipulate.
 
-   Description
-         Use this to define which tag you want to manipulate.
+   1 is the first tag in the input, 2 is the second, -1 is the last, -2
+   is the second last.
 
-         1 is the first tag in the input, 2 is the second, -1 is the last, -2
-         is the second last.
-
-   Default
-         1
+:aspect:`Default`
+   1
 
 .. _addParams-*(array-of-strings)*:
 
 *(array of strings)*
 ====================
 
-.. container:: table-row
+:aspect:`Property`
+   *(array of strings)*
 
-   Property
-         *(array of strings)*
+:aspect:`Data type`
+   :ref:`data-type-string` / :ref:`stdwrap`
 
-   Data type
-         :ref:`data-type-string` / :ref:`stdwrap`
+:aspect:`Description`
+   The name of the property defines the property to be added to the
+   tag. The value is what will be set as content of the property.
 
-   Description
-         The name of the property defines the property to be added to the
-         tag. The value is what will be set as content of the property.
+   If the tag already has a property with this name (case-sensitive!),
+   that property will be overridden!
 
-         If the tag already has a property with this name (case-sensitive!),
-         that property will be overridden!
-
-         If the returned value is a blank string (but not zero!), then the
-         property will not be set and (if it exists already) not be
-         overridden.
-
-
-.. ###### END~OF~TABLE ######
-
-[tsref:->addParams]
+   If the returned value is a blank string (but not zero!), then the
+   property will not be set and (if it exists already) not be
+   overridden.
 
 
 .. _addparams-examples:
 
-Example:
-========
+Example
+=======
 
 ::
 

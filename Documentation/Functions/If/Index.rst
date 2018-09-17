@@ -17,231 +17,206 @@ The returned value may still be negated by the :ref:`if-negate`-property.
 
 Also check the explanations and the examples further below!
 
-.. ### BEGIN~OF~TABLE ###
-
 .. _if-directreturn:
 
 directReturn
 ============
 
-.. container:: table-row
+:aspect:`Property`
+   directReturn
 
-   Property
-         directReturn
+:aspect:`Data type`
+   :ref:`data-type-bool`
 
-   Data type
-         :ref:`data-type-bool`
-
-   Description
-         If this property exists, no other conditions will be checked. Instead
-         the true/false of this value is returned. Can be used to set
-         true/false with a TypoScript constant.
+:aspect:`Description`
+   If this property exists, no other conditions will be checked. Instead
+   the true/false of this value is returned. Can be used to set
+   true/false with a TypoScript constant.
 
 .. _if-isnull:
 
 isNull
 ======
 
-.. container:: table-row
+:aspect:`Property`
+   isNull
 
-   Property
-         isNull
+:aspect:`Data type`
+   :ref:`stdWrap`
 
-   Data type
-         :ref:`stdWrap`
+:aspect:`Description`
+   If the resulting content of the :ts:`stdWrap` is null (:php:`NULL` type in PHP).
 
-   Description
-         If the resulting content of the :ts:`stdWrap` is null (:php:`NULL` type in PHP)
-         ...
+   Since null values cannot be assigned in TypoScript, only the :ts:`stdWrap`
+   features are available below this property.
 
-         Since null values cannot be assigned in TypoScript, only the :ts:`stdWrap`
-         features are available below this property.
+:aspect:`Example`
 
-         **Example:** ::
+   ::
 
-            page.10 = COA_INT
-            page.10.10 = TEXT
-            page.10.10 {
-                stdWrap.if.isNull.field = description
-                value = No description available.
-            }
+      page.10 = COA_INT
+      page.10.10 = TEXT
+      page.10.10 {
+            stdWrap.if.isNull.field = description
+            value = No description available.
+      }
 
-         This example returns "No description available.", if the content of
-         the field "description" is :php:`NULL`.
+   This example returns "No description available.", if the content of
+   the field "description" is :php:`NULL`.
 
 .. _if-istrue:
 
 isTrue
 ======
 
-.. container:: table-row
+:aspect:`Property`
+   isTrue
 
-   Property
-         isTrue
+:aspect:`Data type`
+   :ref:`data-type-string` / :ref:`stdwrap`
 
-   Data type
-         :ref:`data-type-string` / :ref:`stdwrap`
-
-   Description
-         If the content is "true".... (not empty string and not zero)
+:aspect:`Description`
+   If the content is "true", which is not empty string and not zero.
 
 .. _if-isfalse:
 
 isFalse
 =======
 
-.. container:: table-row
+:aspect:`Property`
+   isFalse
 
-   Property
-         isFalse
+:aspect:`Data type`
+   :ref:`data-type-string` / :ref:`stdwrap`
 
-   Data type
-         :ref:`data-type-string` / :ref:`stdwrap`
-
-   Description
-         If the content is "false"... (empty or zero)
+:aspect:`Description`
+   If the content is "false", which is empty or zero.
 
 .. _if-ispositive:
 
 isPositive
 ==========
 
-.. container:: table-row
+:aspect:`Property`
+   isPositive
 
-   Property
-         isPositive
+:aspect:`Data type`
+   :ref:`data-type-integer` / :ref:`stdwrap` \+ :ref:`objects-calc`
 
-   Data type
-         :ref:`data-type-integer` / :ref:`stdwrap` \+ calc
-
-   Description
-         Returns true, if the content is positive.
+:aspect:`Description`
+   Returns true, if the content is positive.
 
 .. _if-isgreaterthan:
 
 isGreaterThan
 =============
 
-.. container:: table-row
+:aspect:`Property`
+   isGreaterThan
 
-   Property
-         isGreaterThan
+:aspect:`Data type`
+   value / :ref:`stdwrap`
 
-   Data type
-         value / :ref:`stdwrap`
-
-   Description
-         Returns true, if the content is greater than :ts:`value`.
+:aspect:`Description`
+   Returns true, if the content is greater than :ts:`value`.
 
 .. _if-islessthan:
 
 isLessThan
 ==========
 
-.. container:: table-row
+:aspect:`Property`
+   isLessThan
 
-   Property
-         isLessThan
+:aspect:`Data type`
+   value / :ref:`stdwrap`
 
-   Data type
-         value / :ref:`stdwrap`
-
-   Description
-         Returns true, if the content is less than :ts:`value`.
+:aspect:`Description`
+   Returns true, if the content is less than :ts:`value`.
 
 .. _if-equals:
 
 equals
 ======
 
-.. container:: table-row
+:aspect:`Property`
+   equals
 
-   Property
-         equals
+:aspect:`Data type`
+   value / :ref:`stdwrap`
 
-   Data type
-         value / :ref:`stdwrap`
+:aspect:`Description`
+   Returns true, if the content is equal to :ts:`value`.
 
-   Description
-         Returns true, if the content is equal to :ts:`value`.
+:aspect:`Example`
 
-         **Example:** ::
+   ::
 
-            if.equals = POST
-            if.value.data = GETENV:REQUEST_METHOD
+      if.equals = POST
+      if.value.data = GETENV:REQUEST_METHOD
 
 .. _if-isinlist:
 
 isInList
 ========
 
-.. container:: table-row
+:aspect:`Property`
+   isInList
 
-   Property
-         isInList
+:aspect:`Data type`
+   value / :ref:`stdwrap`
 
-   Data type
-         value / :ref:`stdwrap`
+:aspect:`Description`
+   Returns true, if the content is in the comma-separated list
+   :ts:`.value`.
 
-   Description
-         Returns true, if the content is in the comma-separated list
-         :ts:`.value`.
+   **Note:** The list in :ts:`value` may not have spaces between elements!
 
-         **Note:** The list in :ts:`value` may not have spaces between elements!
+:aspect:`Example`
 
-         **Example:** ::
+   ::
 
-            if.isInList.field = uid
-            if.value = 1,2,34,50,87
+      if.isInList.field = uid
+      if.value = 1,2,34,50,87
 
-         This returns true, if the uid is part of the list in :ts:`value`.
+   This returns true, if the uid is part of the list in :ts:`value`.
 
 .. _if-value:
 
 value
 =====
 
-.. container:: table-row
+:aspect:`Property`
+   value
 
-   Property
-         value
+:aspect:`Data type`
+   value / :ref:`stdwrap`
 
-   Data type
-         value / :ref:`stdwrap`
-
-   Description
-         The value to check. This is the comparison value mentioned above.
+:aspect:`Description`
+   The value to check. This is the comparison value mentioned above.
 
 .. _if-negate:
 
 negate
 ======
 
-.. container:: table-row
+:aspect:`Property`
+   negate
 
-   Property
-         negate
+:aspect:`Data type`
+   :ref:`data-type-bool`
 
-   Data type
-         :ref:`data-type-bool`
+:aspect:`Description`
+   This property is checked after all other properties. If set, it
+   negates the result, which is present before its execution.
 
-   Description
-         This property is checked after all other properties. If set, it
-         negates the result, which is present before its execution.
+   So if all other conditions, which were used, returned true, with
+   this property the overall return ends up being false. If at least
+   one of the other conditions, which were used, returned false, the
+   overall return ends up being true.
 
-         So if all other conditions, which were used, returned true, with
-         this property the overall return ends up being false. If at least
-         one of the other conditions, which were used, returned false, the
-         overall return ends up being true.
-
-   Default
-         0
-
-
-.. ###### END~OF~TABLE ######
-
-
-[tsref:->if]
+:aspect:`Default`
+   0
 
 
 .. _if-explanation:
@@ -286,8 +261,8 @@ BUT(!) then the result of the function in total would be false because the
 
 .. _if-examples:
 
-Examples:
-=========
+Examples
+========
 
 This is a GIFBUILDER object that will write "NEW" on a menu-item if
 the field "newUntil" has a date less than the current date! ::

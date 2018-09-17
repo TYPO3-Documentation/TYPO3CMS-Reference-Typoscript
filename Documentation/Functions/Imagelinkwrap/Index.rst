@@ -1,18 +1,5 @@
 .. include:: ../../Includes.txt
 
-
-
-.. _imagelinkwrap:
-
-=============
-imageLinkWrap
-=============
-
-.. contents::
-   :local:
-   :depth: 1
-
-
 Properties
 ==========
 
@@ -44,6 +31,7 @@ Properties
   stdWrap_ =                                            :ref:`stdwrap`                                                        yes
   ===================================================== ===================================================================== ======= ==================
 
+
 enable
 ======
 
@@ -51,7 +39,6 @@ enable
 
 Whether or not to link the image. Must be set to True to make
 :ts:`imageLinkWrap` do anything at all.
-
 
 
 file
@@ -82,7 +69,6 @@ Width of the image to be shown in pixels. If you add "m" to
 :ts:`width` or :ts:`height` or both then the width and
 height parameters will be interpreted as maximum and proportions of the
 image will be preserved.
-
 
 
 effects
@@ -165,7 +151,6 @@ Example:
    )
 
 
-
 wrap
 ====
 
@@ -200,7 +185,6 @@ Examples:
    imageLinkWrap.JSwindow.newWindow = 1
 
 
-
 JSwindow
 ========
 
@@ -209,7 +193,6 @@ JSwindow
 If true (:ts:`JSwindow = 1`) Javascript will be used to open
 the image in a new window. The window is automatically resized to match
 the dimensions of the image.
-
 
 
 JSwindow.expand
@@ -222,7 +205,6 @@ JSwindow.expand
 :ref:`data-type-integer`. The values are added to the width and height
 of the preview image when calculating the width and height of the
 preview window.
-
 
 
 JSwindow.newWindow
@@ -240,7 +222,6 @@ then a unique hash value is used as `target` value for each image.
 This guarantees that each image is opened in a new window.
 
 
-
 JSwindow.altUrl
 ===============
 
@@ -248,7 +229,6 @@ JSwindow.altUrl
 
 If this returns anything then it is used as URL of the preview window.
 Otherwise the default "showpic" script will be used.
-
 
 
 JSwindow.altUrl\_noDefaultParams
@@ -263,7 +243,6 @@ image parameters are not automatically appended to the
 in a special way.
 
 
-
 typolink
 ========
 
@@ -271,8 +250,6 @@ typolink
 
 If this returns anything it will be used as link and override
 everything else.
-
-
 
 
 directImageLink
@@ -283,7 +260,6 @@ directImageLink
 If true (:ts:`directImageLink = 1`) then a link will be
 generated that points directly to the image file. This means that no
 "showpic" script will be used.
-
 
 
 linkParams
@@ -324,7 +300,6 @@ This adds :ref:`stdwrap` functionality to the almost final
 result.
 
 
-
 What it does
 ============
 
@@ -347,7 +322,6 @@ features are available since the preview now is opened by Javascript.
 Then the Javascript window title, size, background-color and more can be set to
 special values.
 
-
 Implementation
 ==============
 
@@ -362,9 +336,6 @@ __ http://typo3.org/api/typo3cms/search/all_69.html?imageLinkWrap
 __ http://typo3.org/api/typo3cms/
 
 
-
-
-
 .. _imagelinkwrap-examples:
 
 Examples for imageLinkWrap
@@ -373,9 +344,6 @@ Examples for imageLinkWrap
 .. contents::
    :local:
    :depth: 1
-
-
-
 
 
 .. _imageLinkWrap-basic-example-showpic:
@@ -399,10 +367,6 @@ Basic example: Create a link to the showpic script
       }
    }
 
-
-
-
-
 .. _imageLinkWrap-basic-example-directImageLink:
 
 Basic example: Link directly to the original image
@@ -422,9 +386,6 @@ Basic example: Link directly to the original image
          # JSwindow = 1
       }
    }
-
-
-
 
 
 .. imageLinkWrap-example-popup-window:
@@ -463,9 +424,6 @@ Example: Larger display in a popup window
          # than what the image requires
          JSwindow.expand = 30,20
    }
-
-
-
 
 
 .. _imageLinkWrap-example-printlink:
@@ -525,8 +483,6 @@ __ https://github.com/georgringer/modernpackage/blob/master/Resources/Private/Ty
    }
 
 
-
-
 .. _imageLinkWrap-example-topup:
 
 Example: Images in lightbox "TopUp"
@@ -561,9 +517,6 @@ __ http://gettopup.com/
          ATagParams = target="_blank"
       }
    }
-
-
-
 
 
 .. COMMENT

@@ -12,115 +12,110 @@ from there. This allows you to reuse this content without prior
 rendering. The presence of :ts:`cache.key` will trigger this feature. It
 is evaluated twice:
 
-- Content is read from cache directly after the `stdWrapPreProcess` hook
-  and before `setContentToCurrent`. If there is a cache entry for the
-  given cache key, :ts:`stdWrap` processing will stop and the cached content
-  will be returned. If no cache content is found for this key, the
-  stdWrap processing continues as usual.
+Content is read from cache directly after the `stdWrapPreProcess` hook and
+before `setContentToCurrent`. If there is a cache entry for the given cache key,
+:ts:`stdWrap` processing will stop and the cached content will be returned. If
+no cache content is found for this key, the stdWrap processing continues as
+usual.
 
-- Writing to cache happens at the end of rendering, directly before the
-  `stdWrapPostProcess` hook is called and before the "debug\*" functions.
-  The rendered content will be stored in the cache, if cache.key was
-  set. The configuration options cache.tags and cache.lifetime allow to
-  control the caching.
+Writing to cache happens at the end of rendering, directly before the
+`stdWrapPostProcess` hook is called and before the "debug\*" functions.  The
+rendered content will be stored in the cache, if :ts:`cache.key` was set. The
+configuration options :ts:`cache.tags` and :ts:`cache.lifetime` allow to control
+the caching.
 
-
-.. ### BEGIN~OF~TABLE ###
 
 .. _cache-key:
 
 key
 ===
 
-.. container:: table-row
+:aspect:`Property`
+   key
 
-   Property
-         key
+:aspect:`Data type`
+   :ref:`data-type-string` / :ref:`stdwrap`
 
-   Data type
-         :ref:`data-type-string` / :ref:`stdwrap`
+:aspect:`Description`
+   The cache identifier that is used to store the rendered content into
+   the cache and to read it from there.
 
-   Description
-         The cache identifier that is used to store the rendered content into
-         the cache and to read it from there.
+   .. note::
 
-         **Note:** Make sure to use a valid cache identifier. Also take care
-         to choose a cache key that is accurate enough to distinguish different
-         versions of the rendered content while being generic enough to stay
-         efficient.
+      Make sure to use a valid cache identifier. Also take care to choose a
+      cache key that is accurate enough to distinguish different versions of the
+      rendered content while being generic enough to stay efficient.
 
 .. _cache-lifetime:
 
 lifetime
 ========
 
-.. container:: table-row
+:aspect:`Property`
+   lifetime
 
-   Property
-         lifetime
+:aspect:`Data type`
+   mixed / :ref:`stdwrap`
 
-   Data type
-         mixed / :ref:`stdwrap`
+:aspect:`Description`
+   Lifetime of the content in cache.
 
-   Description
-         Lifetime of the content in cache.
+   Allows you to determine the lifetime of the cached object
+   independently of the lifetime of the cached version of the page on
+   which it is used.
 
-         Allows you to determine the lifetime of the cached object
-         independently of the lifetime of the cached version of the page on
-         which it is used.
+   Possible values are any positive integer and the keywords `unlimited`
+   and `default`:
 
-         Possible values are any positive integer and the keywords "unlimited"
-         and "default":
+   integer
+      Lifetime in seconds.
 
-         **integer:** Lifetime in seconds.
+   `unlimited`
+      Cached content will not expire unless actively purged by id or by tag or
+      if the complete cache is flushed.
 
-         **"unlimited":** Cached content will not expire unless actively
-         purged by id or by tag or if the complete cache is flushed.
+   `default`
+      The default cache lifetime as configured in :ts:`config.cache_period` is
+      used.
 
-         **"default":** The default cache lifetime as configured in
-         :ts:`config.cache_period` is used.
-
-   Default
-         default
+:aspect:`Default`
+   default
 
 .. _cache-tags:
 
 tags
 ====
 
-.. container:: table-row
+:aspect:`Property`
+   tags
 
-   Property
-         tags
+:aspect:`Data type`
+   :ref:`data-type-string` / :ref:`stdwrap`
 
-   Data type
-         :ref:`data-type-string` /:ref:`stdwrap`
-
-   Description
-         Can hold a comma-separated list of tags. These tags will be attached
-         to the entry added to the `cache_hash` cache (but not to
-         `cache_pages` cache) and can be used to purge the cached content.
-
-
-.. ###### END~OF~TABLE ######
-
-[tsref:->cache]
+:aspect:`Description`
+   Can hold a comma-separated list of tags. These tags will be attached
+   to the entry added to the `cache_hash` cache (but not to
+   `cache_pages` cache) and can be used to purge the cached content.
 
 
 .. _cache-examples:
 
-Examples:
-=========
+Examples
+========
 
 ::
 
    5 = TEXT
    5 {
-       stdWrap.cache.key = mycurrenttimestamp
-       stdWrap.cache.tags = tag_a,tag_b,tag_c
-       stdWrap.cache.lifetime = 3600
-       stdWrap.data = date : U
-       stdWrap.strftime = %H:%M:%S
+       stdWrap {
+           cache {
+               key = mycurrenttimestamp
+               tags = tag_a,tag_b,tag_c
+               lifetime = 3600
+           }
+           data = date : U
+           strftime = %H:%M:%S
+       }
    }
 
 In the above example the current time will be cached with the key
@@ -131,15 +126,16 @@ timestamp). ::
 
    5 = TEXT
    5 {
-       stdWrap.cache.key = mycurrenttimestamp_{page:uid}_{TSFE:sys_language_uid}
-       stdWrap.cache.key.insertData = 1
+       stdWrap.cache {
+           key = mycurrenttimestamp_{page:uid}_{TSFE:sys_language_uid}
+           key.insertData = 1
    }
 
 Here a dynamic key is used. It takes the page id and the language uid
 into account making the object page and language specific.
 
-cache as first-class function:
-==============================
+cache as first-class function
+=============================
 
 The :ts:`stdWrap.cache.` property is also available as first-class function to all
 content objects. This skips the rendering even for content objects that evaluate

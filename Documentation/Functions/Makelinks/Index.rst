@@ -16,167 +16,147 @@ the text in the following form::
    mailto:name@example.com
 
 
-.. ### BEGIN~OF~TABLE ###
-
 .. _makelinks-http-extTarget:
 
 http.extTarget
 ==============
 
-.. container:: table-row
+:aspect:`Property`
+   http.extTarget
 
-   Property
-         http.extTarget
+:aspect:`Data type`
+   :ref:`data-type-target`
 
-   Data type
-         :ref:`data-type-target`
+:aspect:`Description`
+   The target of the link.
 
-   Description
-         The target of the link.
-
-   Default
-         \_top
+:aspect:`Default`
+   \_top
 
 .. _makelinks-http-wrap:
 
 http.wrap
 =========
 
-.. container:: table-row
+:aspect:`Property`
+   http.wrap
 
-   Property
-         http.wrap
+:aspect:`Data type`
+   :ref:`data-type-wrap` / :ref:`stdwrap`
 
-   Data type
-         :ref:`data-type-wrap` / :ref:`stdwrap`
-
-   Description
-         Wrap around the link.
+:aspect:`Description`
+   Wrap around the link.
 
 .. _makelinks-http-ATagBeforeWrap:
 
 http.ATagBeforeWrap
 ===================
 
-.. container:: table-row
+:aspect:`Property`
+   http.ATagBeforeWrap
 
-   Property
-         http.ATagBeforeWrap
+:aspect:`Data type`
+   :ref:`data-type-boolean`
 
-   Data type
-         :ref:`data-type-boolean`
+:aspect:`Description`
+   If set, the link is first wrapped with :ts:`http.wrap` and then the
+   :html:`<a>`-tag.
 
-   Description
-         If set, the link is first wrapped with :ts:`http.wrap` and then the
-         :html:`<a>`-tag.
-
-   Default
-         0
+:aspect:`Default`
+   0
 
 .. _makelinks-http-keep:
 
 http.keep
 =========
 
-.. container:: table-row
+:aspect:`Property`
+   http.keep
 
-   Property
-         http.keep
+:aspect:`Data type`
+   list: "scheme","path","query"
 
-   Data type
-         list: "scheme","path","query"
+:aspect:`Description`
+   As default the link-text will be the full domain-name of the link.
 
-   Description
-         As default the link-text will be the full domain-name of the link.
+:aspect:`Example`
 
-         **Example:**
+   With the URL http://www.example.com/test/doc.php?id=3 in our text we will
+   get the following results::
 
-         With the URL http://www.example.com/test/doc.php?id=3 in our text we will
-         get the following results::
-
-            http.keep = "":                   www.example.com
-            http.keep = "scheme":             http://www.example.com
-            http.keep = "scheme,path":        http://www.example.com/test/doc.php
-            http.keep = "scheme,path,query":  http://www.example.com/test/doc.php?id=3
+      http.keep = "":                   www.example.com
+      http.keep = "scheme":             http://www.example.com
+      http.keep = "scheme,path":        http://www.example.com/test/doc.php
+      http.keep = "scheme,path,query":  http://www.example.com/test/doc.php?id=3
 
 .. _makelinks-http-ATagParams:
 
 http.ATagParams
 ===============
 
-.. container:: table-row
+:aspect:`Property`
+   http.ATagParams
 
-   Property
-         http.ATagParams
+:aspect:`Data type`
+   :ref:`data-type-tag-params` / :ref:`stdwrap`
 
-   Data type
-         <A>-params / :ref:`stdwrap`
+:aspect:`Description`
+   Additional parameters
 
-   Description
-         Additional parameters
+:aspect:`Example`
 
-         **Example:** ::
+   ::
 
-            http.ATagParams = class="board"
+      http.ATagParams = class="board"
 
 .. _makelinks-mailto.wrap:
 
 mailto.wrap
 ===========
 
-.. container:: table-row
+:aspect:`Property`
+   mailto.wrap
 
-   Property
-         mailto.wrap
+:aspect:`Data type`
+   :ref:`data-type-wrap` / :ref:`stdwrap`
 
-   Data type
-         :ref:`data-type-wrap` / :ref:`stdwrap`
-
-   Description
-         Wrap around the link.
+:aspect:`Description`
+   Wrap around the link.
 
 .. _makelinks-mailto.ATagBeforeWrap:
 
 mailto.ATagBeforeWrap
 =====================
 
-.. container:: table-row
+:aspect:`Property`
+   mailto.ATagBeforeWrap
 
-   Property
-         mailto.ATagBeforeWrap
+:aspect:`Data type`
+   :ref:`data-type-boolean`
 
-   Data type
-         :ref:`data-type-boolean`
+:aspect:`Description`
+   If set, the link is first wrapped with mailto :ts:`wrap` and then the
+   :html:`<a>`-tag.
 
-   Description
-         If set, the link is first wrapped with mailto :ts:`wrap` and then the
-         :html:`<a>`-tag.
-
-   Default
-         0
+:aspect:`Default`
+   0
 
 .. _makelinks-mailto.ATagParams:
 
 mailto.ATagParams
 =================
 
-.. container:: table-row
+:aspect:`Property`
+   mailto.ATagParams
 
-   Property
-         mailto.ATagParams
+:aspect:`Data type`
+   :ref:`data-type-tag-params` / :ref:`stdwrap`
 
-   Data type
-         <A>-params / :ref:`stdwrap`
+:aspect:`Description`
+   Additional parameters
 
-   Description
-         Additional parameters
+:aspect:`Example`
 
-         **Example:** ::
+   ::
 
-            mailto.ATagParams = class="board"
-
-
-.. ###### END~OF~TABLE ######
-
-
-[tsref:->makelinks]
+      mailto.ATagParams = class="board"

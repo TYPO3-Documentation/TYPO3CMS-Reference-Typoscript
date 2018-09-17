@@ -20,8 +20,6 @@ in the :php:`$GLOBALS['TCA']`.
    Avoid SQL injections! Don't trust any external data! Secure
    any unknown data, for example with :ref:`intval <stdwrap-intval>`.
 
-
-
 Comprehensive example
 =====================
 
@@ -70,36 +68,30 @@ Condensed form::
 
 
 
-.. ### BEGIN~OF~TABLE ###
-
 .. _select-uidInList:
 
 uidInList
 =========
 
-.. container:: table-row
+:aspect:`Property`
+   uidInList
 
-   Property
-         uidInList
+:aspect:`Data type`
+   *list of record\_ids* / :ref:`stdWrap`
 
-   Data type
-         *list of record\_ids* / :ref:`stdWrap`
+:aspect:`Description`
+   Comma-separated list of record uids from the according database table.
+   For example when the select function works on the table `tt_content`, then
+   this will be uids of `tt_content` records.
 
-   Description
-         Comma-separated list of record uids from the according database table.
-         For example when the select function works on the table `tt_content`, then
-         this will be uids of `tt_content` records.
+   **Note:** :ts:`this` is a *special keyword* and replaced with the id of the
+   *current record*.
 
-         **Note:** :ts:`this` is a *special keyword* and replaced with the id of the
-         *current record*.
+:aspect:`Example`
+   ::
 
-   Example
-         ::
-
-            select.uidInList = 1,2,3
-            select.uidInList = this
-
-
+      select.uidInList = 1,2,3
+      select.uidInList = this
 
 
 .. _select-pidInList:
@@ -107,73 +99,69 @@ uidInList
 pidInList
 =========
 
-.. container:: table-row
+:aspect:`Property`
+   pidInList
 
-   Property
-         pidInList
+:aspect:`Data type`
+   *list of page\_ids* / :ref:`stdWrap`
 
-   Data type
-         *list of page\_ids* / :ref:`stdWrap`
+:aspect:`Description`
+   Comma-separated list of pids of the record. This will be page uids (pids). For
+   example when the select function works on the table tt_content, then this
+   will be pids of tt_content records, the parent pages of these records.
 
-   Description
-         Comma-separated list of pids of the record. This will be page uids (pids). For
-         example when the select function works on the table tt_content, then this
-         will be pids of tt_content records, the parent pages of these records.
+   Pages in the list, which are not visible for the website user, *are
+   automatically removed* from the list. Thereby no records from hidden,
+   timed or access-protected pages will be selected! Nor will be records
+   from recyclers. Exception: The hidden pages will be listed in *preview mode*.
 
-         Pages in the list, which are not visible for the website user, *are
-         automatically removed* from the list. Thereby no records from hidden,
-         timed or access-protected pages will be selected! Nor will be records
-         from recyclers. Exception: The hidden pages will be listed in *preview mode*.
+   **Special keyword:** :ts:`this`
+      Is replaced with the id of the current page.
 
-         **Special keyword:** "this" is replaced with the id of the current page.
+   **Special keyword:** :ts:`root`
+      Allows to select records from the root-page level (records with pid=0,
+      e.g. useful for the table "sys_category" and others).
 
-         **Special keyword:** "root" allows to select records from the root-page level
-         (records with pid=0, e.g. useful for the table "sys_category" and others).
+   **Special value:** :ts:`-1`
+      Allows to select versioned records in workspaces directly.
 
-         **Special value:** "-1" allows to select versioned records in workspaces
-         directly.
+:aspect:`Default`
+   :ts:`this`
 
-   Example
-      Fetch related `sys_category` records stored in the MM intermediate table::
+:aspect:`Example`
+   Fetch related `sys_category` records stored in the MM intermediate table::
 
-         10 = CONTENT
-         10 {
-            table = sys_category
-            select {
-               pidInList = root,-1
-               selectFields = sys_category.*
-               join = sys_category_record_mm ON sys_category_record_mm.uid_local = sys_category.uid
-               where.data = field:_ORIG_uid // field:uid
-               where.intval = 1
-               where.wrap = sys_category_record_mm.uid_foreign=|
-               orderBy = sys_category_record_mm.sorting_foreign
-               languageField = 0 # disable translation handling of sys_category
-            }
+      10 = CONTENT
+      10 {
+         table = sys_category
+         select {
+            pidInList = root,-1
+            selectFields = sys_category.*
+            join = sys_category_record_mm ON sys_category_record_mm.uid_local = sys_category.uid
+            where.data = field:_ORIG_uid // field:uid
+            where.intval = 1
+            where.wrap = sys_category_record_mm.uid_foreign=|
+            orderBy = sys_category_record_mm.sorting_foreign
+            languageField = 0 # disable translation handling of sys_category
          }
-
-
-   Default
-         :ts:`this`
-
+      }
 
 .. _select-recursive:
 
 recursive
 =========
 
-.. container:: table-row
+:aspect:`Property`
+   recursive
 
-   Property
-         recursive
+:aspect:`Data type`
+   :ref:`data-type-integer` / :ref:`stdWrap`
 
-   Data type
-         :ref:`data-type-integer` / :ref:`stdWrap`
+:aspect:`Description`
+   Number of recursive levels for the pidInList.
 
-   Description
-         Number of recursivity levels for the pidInList.
-
-   Default
-         0
+:aspect:`Default`
+   0
 
 
 .. _select-orderBy:
@@ -181,21 +169,19 @@ recursive
 orderBy
 =======
 
-.. container:: table-row
+:aspect:`Property`
+   orderBy
 
-   Property
-         orderBy
+:aspect:`Data type`
+   *SQL-orderBy* / :ref:`stdWrap`
 
-   Data type
-         *SQL-orderBy* / :ref:`stdWrap`
+:aspect:`Description`
+   ORDER BY clause without the words "ORDER BY".
 
-   Description
-         ORDER BY clause without the words "ORDER BY".
+:aspect:`Example`
+   ::
 
-   Example
-         ::
-
-            orderBy = sorting, title
+      orderBy = sorting, title
 
 
 .. _select-groupBy:
@@ -203,22 +189,19 @@ orderBy
 groupBy
 =======
 
-.. container:: table-row
+:aspect:`Property`
+   groupBy
 
-   Property
-         groupBy
+:aspect:`Data type`
+   *SQL-groupBy* / :ref:`stdWrap`
 
-   Data type
-         *SQL-groupBy* / :ref:`stdWrap`
+:aspect:`Description`
+   GROUP BY clause without the words "GROUP BY".
 
-   Description
-         GROUP BY clause without the words "GROUP BY".
+:aspect:`Example`
+   ::
 
-   Example
-         ::
-
-            groupBy = CType
-
+      groupBy = CType
 
 
 .. _select-max:
@@ -226,19 +209,16 @@ groupBy
 max
 ===
 
-.. container:: table-row
+:aspect:`Property`
+   max
 
-   Property
-         max
+:aspect:`Data type`
+   :ref:`data-type-integer` + :ref:`objects-calc` +"total" / :ref:`stdWrap`
 
-   Data type
-         :ref:`data-type-integer` +calc +"total" / :ref:`stdWrap`
+:aspect:`Description`
+   Max records
 
-   Description
-         Max records
-
-         **Special keyword:** "total" is substituted with :php:`count(*)`.
-
+   **Special keyword:** "total" is substituted with :php:`count(*)`.
 
 
 .. _select-begin:
@@ -246,19 +226,17 @@ max
 begin
 =====
 
+:aspect:`Property`
+      begin
 
-.. container:: table-row
+:aspect:`Data type`
+      :ref:`data-type-integer` + :ref:`objects-calc` +"total" / :ref:`stdWrap`
 
-   Property
-         begin
+:aspect:`Description`
+      Begin with record number *value*.
 
-   Data type
-         :ref:`data-type-integer` +calc +"total" / :ref:`stdWrap`
-
-   Description
-         Begin with record number *value*.
-
-         **Special keyword:** "total" is substituted with :php:`count(*)`.
+      **Special keyword:** :ts:`total`
+         Is substituted with :php:`count(*)`.
 
 
 .. _select-where:
@@ -266,21 +244,19 @@ begin
 where
 =====
 
-.. container:: table-row
+:aspect:`Property`
+      where
 
-   Property
-         where
+:aspect:`Data type`
+      *SQL-where* / :ref:`stdWrap`
 
-   Data type
-         *SQL-where* / :ref:`stdWrap`
+:aspect:`Description`
+      WHERE clause without the word "WHERE".
 
-   Description
-         WHERE clause without the word "WHERE".
+:aspect:`Example`
+      ::
 
-   Example
-         ::
-
-            where = (title LIKE '%SOMETHING%' AND NOT doktype)
+         where = (title LIKE '%SOMETHING%' AND NOT doktype)
 
 
 .. _select-languageField:
@@ -288,19 +264,17 @@ where
 languageField
 =============
 
-.. container:: table-row
+:aspect:`Property`
+   languageField
 
-   Property
-         languageField
+:aspect:`Data type`
+   :ref:`data-type-string` / :ref:`stdWrap`
 
-   Data type
-         :ref:`data-type-string` / :ref:`stdWrap`
+:aspect:`Description`
+   By default all records that have language-relevant information in the
+   TCA "ctrl"-section are translated on translated pages.
 
-   Description
-         By default all records that have language-relevant information in the
-         TCA "ctrl"-section are translated on translated pages.
-
-         This can be disabled by setting :ts:`languageField = 0`.
+   This can be disabled by setting :ts:`languageField = 0`.
 
 
 .. _select-includeRecordsWithoutDefaultTranslation:
@@ -308,22 +282,19 @@ languageField
 includeRecordsWithoutDefaultTranslation
 =======================================
 
-.. container:: table-row
+:aspect:`Property`
+   includeRecordsWithoutDefaultTranslation
 
-   Property
-         includeRecordsWithoutDefaultTranslation
+:aspect:`Data type`
+   :ref:`data-type-bool` / :ref:`stdWrap`
 
-   Data type
-         :ref:`data-type-bool` / :ref:`stdWrap`
+:aspect:`Description`
+   If content language overlay is activated and the option :ts:`languageField` is not disabled,
+   :ts:`includeRecordsWithoutDefaultTranslation` allows to additionally fetch records,
+   which do **not** have a parent in the default language.
 
-   Description
-         If content language overlay is activated and the option :ts:`languageField` is not disabled,
-         :ts:`includeRecordsWithoutDefaultTranslation` allows to additionally fetch records,
-         which do **not** have a parent in the default language.
-
-   Default
-         0
-
+:aspect:`Default`
+   0
 
 
 .. _select-selectFields:
@@ -331,25 +302,22 @@ includeRecordsWithoutDefaultTranslation
 selectFields
 ============
 
-.. container:: table-row
+:aspect:`Property`
+   selectFields
 
-   Property
-         selectFields
+:aspect:`Data type`
+   :ref:`data-type-string` / :ref:`stdWrap`
 
-   Data type
-         :ref:`data-type-string` / :ref:`stdWrap`
+:aspect:`Description`
+   List of fields to select, or :php:`count(*)`.
 
-   Description
-         List of fields to select, or :php:`count(*)`.
+   If the records need to be localized, please include the
+   relevant localization-fields (uid, pid, languageField and
+   transOrigPointerField). Otherwise the TYPO3 internal localization
+   will not succeed.
 
-         If the records need to be localized, please include the
-         relevant localization-fields (uid, pid, languageField and
-         transOrigPointerField). Otherwise the TYPO3 internal localization
-         will not succeed.
-
-   Default
-         \*
-
+:aspect:`Default`
+   \*
 
 
 .. _select-join:
@@ -359,18 +327,15 @@ selectFields
 join, leftjoin, rightjoin
 =========================
 
-.. container:: table-row
+:aspect:`Property`
+   join, leftjoin, rightjoin
 
-   Property
-         join, leftjoin, rightjoin
+:aspect:`Data type`
+   :ref:`data-type-string` / :ref:`stdWrap`
 
-   Data type
-         :ref:`data-type-string` / :ref:`stdWrap`
-
-   Description
-         Enter the table name for JOIN, LEFT OUTER JOIN and RIGHT OUTER JOIN
-         respectively.
-
+:aspect:`Description`
+   Enter the table name for JOIN, LEFT OUTER JOIN and RIGHT OUTER JOIN
+   respectively.
 
 
 .. _select-markers:
@@ -378,57 +343,50 @@ join, leftjoin, rightjoin
 markers
 =======
 
-.. container:: table-row
+:aspect:`Property`
+   markers
 
-   Property
-         markers
+:aspect:`Data type`
+   *(array of markers)*
 
-   Data type
-         *(array of markers)*
+:aspect:`Description`
+   The markers defined in this section can be used, wrapped in the usual
+   ###markername### way, in any other property of select. Each value is
+   properly escaped and quoted to prevent SQL injection problems. This
+   provides a way to safely use external data (e.g. database fields,
+   GET/POST parameters) in a query.
 
-   Description
-         The markers defined in this section can be used, wrapped in the usual
-         ###markername### way, in any other property of select. Each value is
-         properly escaped and quoted to prevent SQL injection problems. This
-         provides a way to safely use external data (e.g. database fields,
-         GET/POST parameters) in a query.
+   Available sub-properties:
 
-         **Available sub-properties:**
+   <markername>.value (value)
+      Sets the value directly.
 
-         **<markername>.value:** (value)
+   <markername>.commaSeparatedList (:ref:`data-type-boolean`)
+      If set, the value is interpreted as a comma-separated list of values.
+      Each value in the list is individually escaped and quoted.
 
-         Sets the value directly.
+   (stdWrap properties ...)
+      All stdWrap properties can be used for each markername.
 
-         **<markername>.commaSeparatedList:** (:ref:`data-type-boolean`)
+:aspect:`Example`
 
-         If set, the value is interpreted as a comma-separated list of values.
-         Each value in the list is individually escaped and quoted.
+   ::
 
-         **(stdWrap properties ...)**
-
-         All stdWrap properties can be used for each markername.
-
-   Example
-
-         ::
-
-            page.60 = CONTENT
-            page.60 {
-                table = tt_content
-                select {
-                    pidInList = 73
-                    where = header != ###whatever###
-                    orderBy = ###sortfield###
-                    markers {
-                        whatever.data = GP:first
-                        sortfield.value = sor
-                        sortfield.wrap = |ting
-                    }
-                }
+      page.60 = CONTENT
+      page.60 {
+            table = tt_content
+            select {
+               pidInList = 73
+               where = header != ###whatever###
+               orderBy = ###sortfield###
+               markers {
+                  whatever.data = GP:first
+                  sortfield.value = sor
+                  sortfield.wrap = |ting
+               }
             }
+      }
 
-         This example selects all records from table tt_content, which are on page 73 and
-         which don't have the header set to the value provided by the Get/Post variable
-         "first", ordered by the content of the column "sorting".
-
-.. ###### END~OF~TABLE ######
+   This example selects all records from table tt_content, which are on page 73 and
+   which don't have the header set to the value provided by the Get/Post variable
+   "first", ordered by the content of the column "sorting".

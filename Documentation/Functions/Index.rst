@@ -11,27 +11,26 @@ Functions
 .. toctree::
    :maxdepth: 5
    :titlesonly:
-   :glob:
 
-   Stdwrap/Index
-   Imgresource/Index
-   Imagelinkwrap/Index
-   Numrows/Index
-   Select/Index
-   Split/Index
-   Replacement/Index
-   If/Index
-   GetEnv/Index
-   Typolink/Index
-   Encapslines/Index
    Addparams/Index
+   Cache/Index
+   Encapslines/Index
    Filelink/Index
-   Strpad/Index
-   Round/Index
-   Numberformat/Index
-   Parsefunc/Index
-   Makelinks/Index
-   Tags/Index
+   GetEnv/Index
    Htmlparser/Index
    HtmlparserTags/Index
-   Cache/Index
+   If/Index
+   Imagelinkwrap/Index
+   Imgresource/Index
+   Makelinks/Index
+   Numberformat/Index
+   Numrows/Index
+   Parsefunc/Index
+   Replacement/Index
+   Round/Index
+   Select/Index
+   Split/Index
+   Stdwrap/Index
+   Strpad/Index
+   Tags/Index
+   Typolink/Index
