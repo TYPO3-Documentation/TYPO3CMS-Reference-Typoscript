@@ -1,4 +1,4 @@
-.. include:: ../../Includes.txt
+.. include:: ../Includes.txt
 
 .. highlight:: typoscript
 
@@ -903,7 +903,7 @@ age
    which you might want between the number and the unit stays.
 
 :aspect:`Example`
-   
+
    ::
 
       lib.ageFormat = TEXT

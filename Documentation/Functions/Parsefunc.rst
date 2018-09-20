@@ -1,4 +1,4 @@
-.. include:: ../../Includes.txt
+.. include:: ../Includes.txt
 
 
 .. _parsefunc:
@@ -372,4 +372,4 @@ through the :ref:`parsefunc-makelinks`-functions and substitutes all
                typolist.current = 1
            }
        }
-  
+
