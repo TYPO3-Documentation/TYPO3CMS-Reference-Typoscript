@@ -307,9 +307,9 @@ globalVar
    Operator:       Function:
    =============   ==============================================================
    =               Requires an exact match with the value. Comparison with a
-                  list of values is possible as well. The condition then
-                  returns true, if the value is in the list.
-                  Values must then be separated by "|".
+                   list of values is possible as well. The condition then
+                   returns true, if the value is in the list.
+                   Values must then be separated by "|".
 
    >               The var must be greater than the value.
 
@@ -320,9 +320,9 @@ globalVar
    >=              The var mast be greater than or equal to the value.
 
    !=              The var must be not equal to the value. Comparison with a
-                  list of values is possible as well. The condition then
-                  returns true, if the value is not in the list.
-                  Values must then be separated by "|".
+                   list of values is possible as well. The condition then
+                   returns true, if the value is not in the list.
+                   Values must then be separated by "|".
    =============   ==============================================================
 
    .. ###### END~OF~SIMPLE~TABLE ######
@@ -442,9 +442,9 @@ See also :ref:`condition-minute` and :ref:`condition-month`.
    Operator:       Function:
    =============   ==============================================================
    [none]          Requires an exact match with the value. Comparison with a
-                  list of values is possible as well. The condition then
-                  returns true, if the value is in the list.
-                  Values must then be separated by "|".
+                   list of values is possible as well. The condition then
+                   returns true, if the value is in the list.
+                   Values must then be separated by "|".
 
    >               The hour must be greater than the value.
 
@@ -455,9 +455,9 @@ See also :ref:`condition-minute` and :ref:`condition-month`.
    =>              The hour must be greater than or equal to the value.
 
    !=              The hour must be not equal to the value. Comparison with a
-                  list of values is possible as well. The condition then
-                  returns true, if the value is not in the list.
-                  Values must then be separated by "|".
+                   list of values is possible as well. The condition then
+                   returns true, if the value is not in the list.
+                   Values must then be separated by "|".
    =============   ==============================================================
 
    .. ###### END~OF~SIMPLE~TABLE ######
@@ -851,6 +851,4 @@ the date() function in the PHP manual, format string Y.
 
    Apart from that this condition uses the same way of comparison as
    hour.
-
-
 

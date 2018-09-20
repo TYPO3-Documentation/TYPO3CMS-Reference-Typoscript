@@ -253,7 +253,7 @@ parameter
 
 :aspect:`Examples`
    1. Most simple. Will create a link to page 51 (if this is not default language,
-         the correct target language will be resolved from the parameter)::
+      the correct target language will be resolved from the parameter)::
 
          parameter = t3://page?uid=51
 
@@ -642,7 +642,7 @@ possible to create the logic for this in that extension.
 So, in a link field (the "parameter" value for ->typolink) you could
 enter "pressrelease:123":
 
-.. figure:: ../../Images/LinkHandler.png
+.. figure:: ../Images/LinkHandler.png
    :alt: Screenshot of the "link" field in the TYPO3 Backend.
 
 Some TypoScript will usually transfer this value to the "parameter"
