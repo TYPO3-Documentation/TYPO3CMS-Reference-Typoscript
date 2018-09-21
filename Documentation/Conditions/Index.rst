@@ -20,7 +20,7 @@ Conditions
 **Topics:**
 
 .. toctree::
-   :glob:
    :titlesonly:
 
-   *
+   Syntax
+   Reference

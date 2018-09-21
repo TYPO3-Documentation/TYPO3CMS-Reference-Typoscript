@@ -1,4 +1,4 @@
-.. include:: ../../Includes.txt
+.. include:: ../Includes.txt
 
 
 .. _getenv:
@@ -22,8 +22,8 @@ As it is a syntax feature you can use it in both constants and setup plus it get
 
 .. _getEnv-examples:
 
-Example:
-========
+Example
+=======
 
 ::
 

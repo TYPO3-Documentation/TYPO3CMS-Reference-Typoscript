@@ -1,4 +1,4 @@
-.. include:: ../../Includes.txt
+.. include:: ../Includes.txt
 
 
 .. _replacement:
@@ -12,100 +12,86 @@ current content with the possibility of using PCRE regular expressions.
 An array with numeric indices defines the order of actions and thus
 allows multiple replacements at once.
 
-.. ### BEGIN~OF~TABLE ###
-
 .. _replacement-search:
 
 search
 ======
 
-.. container:: table-row
+:aspect:`Property`
+   search
 
-   Property
-         search
+:aspect:`Data type`
+   :ref:`data-type-string` / :ref:`stdwrap`
 
-   Data type
-         :ref:`data-type-string` / :ref:`stdwrap`
-
-   Description
-         Defines the string that shall be replaced.
+:aspect:`Description`
+   Defines the string that shall be replaced.
 
 .. _replacement-replace:
 
 replace
 =======
 
-.. container:: table-row
+:aspect:`Property`
+   replace
 
-   Property
-         replace
+:aspect:`Data type`
+   :ref:`data-type-string` / :ref:`stdwrap`
 
-   Data type
-         :ref:`data-type-string` / :ref:`stdwrap`
-
-   Description
-         Defines the string to be used for the replacement.
+:aspect:`Description`
+   Defines the string to be used for the replacement.
 
 .. _replacement-useregexp:
 
 useRegExp
 =========
 
-.. container:: table-row
+:aspect:`Property`
+   useRegExp
 
-   Property
-         useRegExp
+:aspect:`Data type`
+   :ref:`data-type-bool` / :ref:`stdwrap`
 
-   Data type
-         :ref:`data-type-bool` / :ref:`stdwrap`
+:aspect:`Description`
+   Defines that the search and replace strings are considered as PCRE
+   regular expressions.
 
-   Description
-         Defines that the search and replace strings are considered as PCRE
-         regular expressions.
+:aspect:`Default`
+   0
 
-         **Example:** ::
+:aspect:`Example`
 
-            10 {
-                search = #(a )CAT#i
-                replace = \1cat
-                useRegExp = 1
-            }
+   ::
 
-   Default
-         0
+      10 {
+            search = #(a )CAT#i
+            replace = \1cat
+            useRegExp = 1
+      }
 
 .. _replacement-useoptionsplitreplace:
 
 useOptionSplitReplace
 =====================
 
-.. container:: table-row
+:aspect:`Property`
+   useOptionSplitReplace
 
-   Property
-         useOptionSplitReplace
+:aspect:`Data type`
+   :ref:`data-type-bool` / :ref:`stdwrap`
 
-   Data type
-         :ref:`data-type-bool` / :ref:`stdwrap`
+:aspect:`Description`
+   This property allows to use :ref:`objects-optionsplit` for the replace
+   property. That way the replace property can be different depending on the
+   occurrence of the string (first/middle/last part, ...). This works for
+   both normal and regular expression replacements. For examples see below.
 
-   Description
-         This property allows to use :ref:`objects-optionsplit` for the replace
-         property. That way the replace property can be different depending on the
-         occurrence of the string (first/middle/last part, ...). This works for
-         both normal and regular expression replacements. For examples see below.
-
-   Default
-         0
-
-
-.. ###### END~OF~TABLE ######
-
-[tsref:->replacement]
-
+:aspect:`Default`
+   0
 
 .. _replacement-examples:
 
-Examples:
-=========
+Examples
+========
 
 ::
 

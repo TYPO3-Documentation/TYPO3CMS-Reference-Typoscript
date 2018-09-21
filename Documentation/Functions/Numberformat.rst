@@ -1,4 +1,4 @@
-.. include:: ../../Includes.txt
+.. include:: ../Includes.txt
 
 
 .. _numberformat:
@@ -18,81 +18,65 @@ Since the properties are finally used by the PHP function
 :php:`number_format()`, you need to make sure that they are valid parameters
 for that function. Consult the PHP manual, if unsure.
 
-
-.. ### BEGIN~OF~TABLE ###
-
 .. _numberformat-decimals:
 
 decimals
 ========
 
-.. container:: table-row
+:aspect:`Property`
+   decimals
 
-   Property
-         decimals
+:aspect:`Data type`
+   :ref:`data-type-integer` / :ref:`stdwrap`
 
-   Data type
-         :ref:`data-type-integer` / :ref:`stdwrap`
+:aspect:`Description`
+   Number of decimals the formatted number will have.
 
-   Description
-         Number of decimals the formatted number will have. Defaults to 0, so
-         that your input will in that case be rounded up or down to the next
-         integer.
+:aspect:`Default`
+   0
 
-   Default
-         0
+   Your input will in that case be rounded up or down to the next integer.
+
 
 .. _numberformat-dec\_point:
 
 dec\_point
 ==========
 
-.. container:: table-row
+:aspect:`Property`
+   dec\_point
 
-   Property
-         dec\_point
+:aspect:`Data type`
+   :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
 
-   Data type
-         :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
+:aspect:`Description`
+   Character that divides the decimals from the rest of the number.
 
-   Description
-         Character that divides the decimals from the rest of the number.
-         Defaults to ".".
-
-   Default
-         .
+:aspect:`Default`
+   .
 
 .. _numberformat-thousands\_sep:
 
 thousands\_sep
 ==============
 
-.. container:: table-row
+:aspect:`Property`
+   thousands\_sep
 
-   Property
-         thousands\_sep
+:aspect:`Data type`
+   :ref:`data-type-string` / :ref:`stdwrap`
 
-   Data type
-         :ref:`data-type-string` / :ref:`stdwrap`
+:aspect:`Description`
+   Character that divides the thousands of the number.
+   Set an empty value to have no thousands separator.
 
-   Description
-         Character that divides the thousands of the number. Defaults to ",";
-         set an empty value to have no thousands separator.
-
-   Default
-         ,
-
-
-.. ###### END~OF~TABLE ######
-
-
-[tsref:->numberFormat]
-
+:aspect:`Default`
+   ,
 
 .. _numberformat-examples:
 
-Examples:
-"""""""""
+Examples
+""""""""
 
 ::
 
