@@ -8,7 +8,7 @@ TMENUITEM
 
 The current record is the page-record of the menu item - just like you
 have it with GMENU/gifbuilder. Now, if you would like to get data from
-the current page record, use stdWrap.data = page : [field name].
+the current menu item's page record, use stdWrap.data = field : [field name].
 
 .. ### BEGIN~OF~TABLE ###
 
