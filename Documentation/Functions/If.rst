@@ -15,6 +15,8 @@ single condition is false, the value returned is false.
 
 The returned value may still be negated by the :ref:`if-negate`-property.
 
+There is no else property available. You can implement an else logic by the means of :ref:`stdwrap-override-conditions` .
+
 Also check the explanations and the examples further below!
 
 .. _if-directreturn:
