@@ -102,8 +102,8 @@ case
 Object types
 ------------
 
-These are some "data types" that might be mentioned and valid values
-are shown here below:
+These are complex "data types" which contain several member variables. The following types are descerned 
+according to their internal processing:
 
 .. _data-type-cobject:
 
