@@ -617,7 +617,7 @@ content\_from\_pid\_allowOutsideDomain
          allow content included from anywhere in the page tree!
 
          Another use case is mount points: By means of the page type "Mount Point" you can virtually
-         insert a whole subtree from somwhere else by just pointing to it. However, usually this
+         insert a whole subtree from somewhere else by just pointing to it. However, usually this
          only works within the page tree of the given domain. Setting
          :ts:`config.content_from_pid_allowOutsideDomain = 1` removes that restriction.
 
