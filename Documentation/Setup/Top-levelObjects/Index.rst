@@ -16,7 +16,6 @@ Top-level objects
    `((bcd ...?))`_          *(whatever)*
    `config`_                :ref:`config`
    `constants`_             :ref:`constants`
-   `FEData`_                *->FE\_DATA*
    `Other reserved TLO's:`_ *(whatever)*
    `resources`_             readonly
    `sitetitle`_             readonly
@@ -124,26 +123,6 @@ constants
          Site-specific constants, e.g. a general email address. These constants
          may be substituted in the text throughout the pages. The substitution
          is done by :ref:`parsefunc` (with :ts:`constants = 1` set).
-
-
-
-.. _top-level-objects-fedata:
-
-FEData
-======
-
-.. container:: table-row
-
-   Property
-         FEData
-
-   Data type
-         *->FE\_DATA*
-
-   Description
-         Here you can configure how data submitted from the front-end should be
-         processed, which script and so on.
-
 
 
 
