@@ -1,0 +1,6 @@
+{
+    "name": "typo3/reference-tsconfig",
+    "type": "typo3-cms-documentation",
+    "description": "Page TSconfig and User TSconfig reference.",
+    "license": "OPL-1.0"
+}
