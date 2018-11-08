@@ -925,16 +925,6 @@ showHistory
     Any value set for a single table will override the default value set for "showHistory".
 
 
-.. _useroptions-uploadFieldsInTopOfEB:
-
-uploadFieldsInTopOfEB
-=====================
-
-:aspect:`Datatype`
-    boolean
-
-:aspect:`Description`
-    If set, the upload-fields in the element browser are put in the top of the window.
 
 .. _useroptions-view-languageOrder:
 
