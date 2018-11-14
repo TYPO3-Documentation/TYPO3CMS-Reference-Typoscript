@@ -20,11 +20,11 @@ done by inserting this string in the TypoScript Template:
    # Note this is a frontend TypoScript template and not TSconfig!
    config.admPanel = 1
 
-Example TSconfig to disable the admin panel for a user:
+Example user TSconfig to disable the admin panel for a user:
 
 .. code-block:: typoscript
 
-   admPanel.enable = 0
+   admPanel.hide = 1
 
 .. note::
 
