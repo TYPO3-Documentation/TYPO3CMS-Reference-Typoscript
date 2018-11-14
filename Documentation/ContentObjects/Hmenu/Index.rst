@@ -1597,7 +1597,7 @@ The menu looks like this on a web page:
 The TypoScript code above generates this menu, but the items do not
 link straight to pages as usual. This is because the *whole* menu is
 generated from this array, which was returned from the function
-"menuMenuArray" called in TypoScript line 4+5 :
+"makeMenuArray" called in TypoScript line 5+6 :
 
 .. code-block:: php
    :linenos:
