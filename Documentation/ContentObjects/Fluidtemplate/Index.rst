@@ -416,38 +416,38 @@ dataProcessing
       }
 
    There are five DataProcessors available to allow flexible processing e.g.
-   for comma-separated values. To use e.g. with the FLUIDTEMPLATE content
+   for comma-separated values. To use e.g. with the :ts:`FLUIDTEMPLATE` content
    object.
 
-   - The SplitProcessor allows to split values separated with a delimiter
+   - The :php:`SplitProcessor` allows to split values separated with a delimiter
      inside a single database field into an array to loop over it.
 
-   - The CommaSeparatedValueProcessor allows to split values into a two-
+   - The :php:`CommaSeparatedValueProcessor` allows to split values into a two-
      dimensional array used for CSV files or tt_content records of CType
      "table".
 
-   - The FilesProcessor resolves File References, Files, or Files inside a
-     folder or collection to be used for output in the Frontend. A
-     FLUIDTEMPLATE can then simply iterate over processed data automatically.
+   - The :php:`FilesProcessor` resolves file references, files, or files inside a
+     folder or collection to be used for output in the frontend. A
+     :ts:`FLUIDTEMPLATE` can then simply iterate over processed data automatically.
 
-   - The DatabaseQueryProcessor works like the code from the Content Object
-     CONTENT, except for just handing over the result as array. A FLUIDTEMPLATE
+   - The :php:`DatabaseQueryProcessor` works like the code from the Content Object
+     CONTENT, except for just handing over the result as array. A :ts:`FLUIDTEMPLATE`
      can then simply iterate over processed data automatically.
 
-   - The GalleryProcessor bring the logic for working with galleries and
+   - The :php:`GalleryProcessor` provides the logic for working with galleries and
      calculates the maximum asset size. It uses the files already present in
-     the processedData array for his calculations. The FilesProcessor can be
+     the `processedData` array for his calculations. The :php:`FilesProcessor` can be
      used to fetch the files.
 
-   - The MenuProcessor utilizes HMENU to generate a json encoded menu string
-     that will be decoded again and assigned to FLUIDTEMPLATE as variable.
-     Additional DataProcessing is supported and will be applied to each record.
+   - The :php:`MenuProcessor` utilizes :ts:`HMENU` to generate a JSON encoded menu string
+     that will be decoded again and assigned to :ts:`FLUIDTEMPLATE` as variable.
+     Additional data processing is supported and will be applied to each record.
 
-   - The LanguageMenuProcessor utilizes HMENU to generate a json encoded menu
+   - The :php:`LanguageMenuProcessor` utilizes :ts:`HMENU` to generate a JSON encoded menu
      string based on the site language configuration that will be decoded again
-     and assigned to FLUIDTEMPLATE as variable.
+     and assigned to :ts:`FLUIDTEMPLATE` as variable.
 
-   **With the help of the 'SplitProcessor' the following scenario is
+   **With the help of the :php:`SplitProcessor` the following scenario is
    possible:** ::
 
       page {
@@ -476,7 +476,7 @@ dataProcessing
          <li>Keyword: {keyword}</li>
       </f:for>
 
-   **Using the CommaSeparatedValueProcessor the following scenario is
+   **Using the :php:`CommaSeparatedValueProcessor` the following scenario is
    possible:** ::
 
       page {
@@ -509,7 +509,7 @@ dataProcessing
          </f:for>
       </table>
 
-   **Using the FilesProcessor the following scenario is possible:** ::
+   **Using the :php:`FilesProcessor` the following scenario is possible:** ::
 
       tt_content.image.20 = FLUIDTEMPLATE
       tt_content.image.20 {
@@ -569,7 +569,7 @@ dataProcessing
          </f:for>
       </ul>
 
-   **Using the DatabaseQueryProcessor the following scenario is possible:** ::
+   **Using the :php:`DatabaseQueryProcessor` the following scenario is possible:** ::
 
       tt_content.mycontent.20 = FLUIDTEMPLATE
       tt_content.mycontent.20 {
@@ -619,7 +619,7 @@ dataProcessing
       </f:for>
       </ul>
 
-   **Using the GalleryProcessor the following scenario is possible** ::
+   **Using the :php:`GalleryProcessor` the following scenario is possible** ::
 
       tt_content.textmedia.20 = FLUIDTEMPLATE
       tt_content.textmedia.20 {
@@ -704,7 +704,7 @@ dataProcessing
       </div>
 
 
-   Content of partial MediaGallery:
+   Content of partial :file:`MediaGallery.html`:
 
    .. code-block:: html
 
@@ -796,7 +796,7 @@ dataProcessing
          />
       </f:section>
 
-   **Using the MenuProcessor the following scenario is possible:** ::
+   **Using the :php:`MenuProcessor` the following scenario is possible:** ::
 
       10 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
       10 {
@@ -823,7 +823,7 @@ dataProcessing
          </ul>
       </nav>
 
-   **Using the LanguageMenuProcessor the following scenario is possible:**
+   **Using the :php:`LanguageMenuProcessor` the following scenario is possible:**
 
    Options:
 
