@@ -6,6 +6,8 @@
 FILE
 ^^^^
 
+ **Note:** This object was deprecated in TYPO3 9 LTS and will be removed in TYPO3 v10.
+
 This object returns the content of the file specified in the property
 "file".
 
