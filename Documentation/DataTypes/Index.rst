@@ -260,7 +260,7 @@ function name
    .. Where is this feature mentioned? We should add a reference here.
 
 :aspect:`Examples:`
-   Method in class, namespaced and preferred version:
+   Method in namespaced class. This is the preferred version:
 
    .. code-block:: php
 
@@ -272,11 +272,11 @@ function name
 
       user_reverseString
 
-   Method in class:
+   Method in class without namespace:
 
    .. code-block:: php
 
-      user_stringReversing->reverseString
+      user_yourClass->reverseString
 
 .. _data-type-gettext:
 
