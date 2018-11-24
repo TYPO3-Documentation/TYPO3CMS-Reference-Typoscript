@@ -34,7 +34,7 @@ userFunc
          userFunc
        
    Data type      
-         function name
+         :ref:`function name`
       
    Description
          The name of the function, which should be called. If you specify the
