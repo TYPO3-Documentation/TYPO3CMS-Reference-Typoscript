@@ -22,7 +22,7 @@ apply. In general, a more specific property path overrides a less specific one:
 Some properties apply to single fields, those can be usually set per table or
 per table and record type. This leads to the property paths
 `TCEFORM.[tableName].[fieldName].[propertyName]` to configure the field for all types
-and `TCEFORM.[tabeName].[fieldName].types.[typeName]` to configure a field for a specific
+and `TCEFORM.[tableName].[fieldName].types.[typeName]` to configure a field for a specific
 type, see the :ref:`TCA type section <t3tca:types>` for details on types.
 
 Other properties also apply to flex form fields, in this case the full property
