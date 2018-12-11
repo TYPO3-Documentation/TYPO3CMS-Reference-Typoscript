@@ -6,7 +6,12 @@
 FILE
 ^^^^
 
- **Note:** This object was deprecated in TYPO3 9 LTS and will be removed in TYPO3 v10.
+.. important::
+
+   This object was deprecated in TYPO3 9 LTS and will be removed in TYPO3 v10.
+   See `Deprecation: #85970 - FILE content object
+   <https://docs.typo3.org/typo3cms/extensions/core/latest/Changelog/9.5/Deprecation-85970-FileContentObject.html>`__
+   in the ChangeLog.
 
 This object returns the content of the file specified in the property
 "file".
