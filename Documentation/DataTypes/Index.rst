@@ -240,7 +240,7 @@ function name
    Indicates a function or method in a class to call. See more information at
    the :ref:`USER cObject <cobj-user>`.
 
-   Depending on implementation the class or function name, but not the method
+   If no namespaces are used, then the class or function name, but not the method
    name, should probably be prefixed with :php:`user_`. The prefix can be
    changed in the :php:`$GLOBALS['TYPO3_CONF_VARS']` config though. The function
    / method is normally called with 2 parameters, :php:`$conf` which is the
@@ -251,7 +251,7 @@ function name
       should be mentioned. Looks like this entry has gone and this info no
       longer valid.
 
-   If a method in a class is called, it is checked (when using the
+   If no namespaces are used and if a method in a class is called, it is checked (when using the
    :ts:`USER`/:ts:`USER_INT` objects) whether a class with the same name, but
    prefixed with :php:`ux_` is present and if so, *this* class is instantiated
    instead. See the document "Inside TYPO3" for more information on extending
