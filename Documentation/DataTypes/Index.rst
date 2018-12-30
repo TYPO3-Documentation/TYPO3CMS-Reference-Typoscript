@@ -645,7 +645,7 @@ rotation
 .. _data-type-siteLanguage:
 
 siteLanguage
-----
+------------
 
 :aspect:`Data type:`
    siteLanguage
