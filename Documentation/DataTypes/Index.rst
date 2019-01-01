@@ -642,7 +642,45 @@ rotation
 :aspect:`Example:`
    180
 
-.. _data-type-space:
+.. _data-type-siteLanguage:
+
+siteLanguage
+------------
+
+:aspect:`Data type:`
+   siteLanguage
+
+:aspect:`Description:`
+   Accessing the current site language configuration.
+
+:aspect:`Possible values:`
+   ====================== ==========================================================
+   Value                  Effect
+   ====================== ==========================================================
+   :ts:`attributes`       Additional parameters configured for this site language
+   :ts:`base`             The Base URL for this language
+   :ts:`direction`        The direction for this language
+   :ts:`flagIdentifier`   The flag key (like "gb" or "fr") used to be used in TYPO3's Backend.
+   :ts:`hreflang`         Language tag for this language defined by RFC 1766 / 3066 for "lang"  and "hreflang" attributes
+   :ts:`languageId`       The language mapped to the sys_language DB entry.
+   :ts:`locale`           Locale, like 'de_CH' or 'en_GB'
+   :ts:`navigationTitle`  Label to be used within language menus
+   :ts:`title`            Label to be used within TYPO3 to identify the language
+   :ts:`twoLetterIsoCode` The iso code for this language (two letter) ISO-639-1
+   :ts:`typo3Language`    Prefix for TYPO3's language files "default" for english, otherwise one of TYPO3's internal language keys. Previously configured via TypoScript config.language = fr
+   ====================== ==========================================================
+
+:aspect:`Example:`
+   Code::
+   
+      page.10 = TEXT
+	   page.10.data = siteLanguage:navigationTitle
+	   page.10.wrap = This is the title of the current site language: |
+      
+      page.10 = TEXT
+	   page.10.dataWrap = The current site language direction is {siteLanguage:direction}
+
+.. _data-types-space:
 
 space
 -----
