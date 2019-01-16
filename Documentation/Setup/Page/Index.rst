@@ -777,8 +777,6 @@ shortcutIcon
          the browser, next to the name of the site in lists of bookmarks
          and next to the title of the page in the tab.
 
-         **Note:** The file must be a valid :file:`.ico` file (icon file).
-
          **Note:** The reference to this file will only be included in the
          output of your website, if the file actually exists! Should the
          file be missing, the tag will not be rendered.
