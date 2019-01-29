@@ -163,7 +163,7 @@ userFunc
          :ref:`data-type-string`
 
    Description
-         Can be used to override the default locallang labels for the plugin.
+         Can be used to override the default language labels for the plugin. The 'lang-key' setup part is 'default' for the default language of the website or the 2-letter (ISO 639-1) code for the language. 'label-key' is the 'trans-unit id' xml value in the XLF language file which resides in the path :file:`Resources/Private/Language` of the extension or in the :file:`typo3conf/l10n/[lang-key]` subfolder of the TYPO3 root folder. And on the right side of the equation sign '=' you put the new value string for the language key which you want to override.
 
    Example
          ::
