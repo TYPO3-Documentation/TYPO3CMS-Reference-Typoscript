@@ -400,7 +400,7 @@ levelfield
    field. In order that you can use this function, your fieldname 'user_myExtField' needs be included in the comma
    separated list of ['addRootLineFields']. ::
 
-   foo = levelfield : -1, user_myExtField, slide
+      foo = levelfield : -1, user_myExtField, slide
 
 .. _data-type-gettext-levelmedia:
 .. _data-type-gettext-leveluid:
