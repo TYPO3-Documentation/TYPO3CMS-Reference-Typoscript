@@ -397,7 +397,8 @@ levelfield
    Get the value of the user defined field user_myExtField in the root line.
    Requires additional configuration in
    :php:`$GLOBALS['TYPO3_CONF_VARS']['FE']['addRootLineFields']` to include
-   field.::
+   field. In order that you can use this function, your fieldname 'user_myExtField' needs be included in the comma
+   separated list of ['addRootLineFields']::
 
       foo = levelfield : -1, user_myExtField, slide
 
