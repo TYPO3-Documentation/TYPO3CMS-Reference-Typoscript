@@ -168,13 +168,15 @@ menu.function
 
         mod.web_info.menu.function {
             # Disable item "Page Tsconfig"
-            TYPO3\CMS\InfoPagetsconfig\Controller\InfoPageTyposcriptConfigController = 0
+            TYPO3\CMS\Info\Controller\InfoPageTyposcriptConfigController = 0
             # Disable item "Log"
             TYPO3\CMS\Belog\Module\BackendLogModuleBootstrap = 0
             # Disable item "Pagetree Overview"
-            TYPO3\CMS\Frontend\Controller\PageInformationController = 0
+            TYPO3\CMS\Info\Controller\PageInformationController = 0
             # Disable item "Localization Overview"
-            TYPO3\CMS\Frontend\Controller\TranslationStatusController = 0
+            TYPO3\CMS\Info\Controller\TranslationStatusController = 0
+            # Disable item "Linkvalidator"
+            TYPO3\CMS\Linkvalidator\Report\LinkValidatorReport = 0
         }
 
 
