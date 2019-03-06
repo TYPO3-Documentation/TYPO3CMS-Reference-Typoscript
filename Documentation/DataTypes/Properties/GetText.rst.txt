@@ -392,6 +392,7 @@ levelfield
 :aspect:`Description:`
    levelfield: Like :ref:`data-type-gettext-leveltitle` et al. but where the
    second parameter is the root line field to fetch.
+   If you use other fields than the usual be sure to add them in the InstallTool to the rootline fields. ( [FE][addRootLineFields] )
 
 :aspect:`Example:`
    Get the value of the user defined field user_myExtField in the root line.
@@ -400,7 +401,7 @@ levelfield
    field. In order that you can use this function, your fieldname 'user_myExtField' needs be included in the comma
    separated list of ['addRootLineFields']::
 
-      foo = levelfield : -1, user_myExtField, slide
+      foo.data = levelfield : -1, user_myExtField, slide
 
 .. _data-type-gettext-levelmedia:
 .. _data-type-gettext-leveluid:
@@ -423,17 +424,17 @@ leveltitle, leveluid, levelmedia
 :aspect:`Examples:`
    Get the title of the page on the first level of the root line::
 
-      foo = leveltitle : 1
+      foo.data = leveltitle : 1
 
    Get the title of the page on the level right below the current page AND if
    that is not present, walk to the bottom of the root line until there's a
    title::
 
-      foo = leveltitle : -2, slide
+      foo.data = leveltitle : -2, slide
 
    Get the id of the root-page of the website (level zero)::
 
-      foo = leveluid : 0
+      foo.data = leveluid : 0
 
 .. _data-type-gettext-lll:
 
