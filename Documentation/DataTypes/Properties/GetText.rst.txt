@@ -392,14 +392,12 @@ levelfield
 :aspect:`Description:`
    levelfield: Like :ref:`data-type-gettext-leveltitle` et al. but where the
    second parameter is the root line field to fetch.
-   If you use other fields than the usual be sure to add them in the InstallTool to the rootline fields. ( [FE][addRootLineFields] )
+   If you use other fields than the usual be sure to add them in the Global Configuration to
+   the rootline fields:
+   :php:`$GLOBALS['TYPO3_CONF_VARS']['FE']['addRootLineFields']`.
 
 :aspect:`Example:`
-   Get the value of the user defined field user_myExtField in the root line.
-   Requires additional configuration in
-   :php:`$GLOBALS['TYPO3_CONF_VARS']['FE']['addRootLineFields']` to include
-   field. In order that you can use this function, your fieldname 'user_myExtField' needs be included in the comma
-   separated list of ['addRootLineFields']::
+   Get the value of the user defined field user_myExtField in the root line::
 
       foo.data = levelfield : -1, user_myExtField, slide
 
