@@ -74,12 +74,7 @@ which they are set, and for all pages hierarchically below. You can
 overwrite and :ref:`modify <t3coreapi:typoscript-syntax-syntax-value-modification>` them
 in the Page TSconfig of the same page or a subpage.
 
-Page TSconfig itself can be overwritten by User TSconfig.
-
-.. important::
-
-   It is *not* possible to *modify* Page TSconfig in User TSconfig. Page TSconfig can only be
-   :ref:`overwritten in User TSconfig <userrelationshiptovaluessetinpagetsconfig>`.
+Page TSconfig itself can be :ref:`overwritten in User TSconfig <userrelationshiptovaluessetinpagetsconfig>`.
 
 
 **Example:**
