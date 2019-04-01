@@ -59,7 +59,7 @@ PHP-Code
 ========
 
 Lookout for usages of the function
-:php:`\TYPO3\CMS\Core\TypoScript\TemplateService::splitConfArray()`.
+:php:`\TYPO3\CMS\Core\TypoScript\TypoScriptService::explodeConfigurationForOptionSplit()`.
 
 
 
