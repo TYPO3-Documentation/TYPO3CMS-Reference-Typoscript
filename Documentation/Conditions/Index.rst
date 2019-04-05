@@ -739,7 +739,7 @@ like
 :aspect:`Example`
    Search a string with ``*`` within another string::
 
-      [like("fooBarBaz", "*Bar*")]
+      [like("fooBarBaz", "\*Bar\*")]
 
    Search string with single characters in between, using ``?``::
 
