@@ -1966,22 +1966,20 @@ pageTitleSeparator
          the end of the separator.
 
    Examples
-         ::
+
+         This produces a title tag with the content "website . page title"::
 
             config.pageTitleSeparator = .
 
-         This produces a title tag with the content "website. page title"::
+         This produces a title tag with the content "website - page title"::
 
             config.pageTitleSeparator = -
             config.pageTitleSeparator.noTrimWrap = | | |
 
-         This produces a title tag with the content "website - page title"::
+         This produces a title tag with the content "website*page title"::
 
             config.pageTitleSeparator = *
             config.pageTitleSeparator.noTrimWrap = |||
-
-         This produces a title tag with the content "website*page title".
-
 
 
 .. _setup-config-removedefaultcss:
