@@ -751,8 +751,8 @@ hideTranslations
     list of table names, or *
 
 :aspect:`Description`
-    For tables in this list all their records in additional website languages will be hidden
-    in the List module. Only records in default website languages are visible.
+    For tables in this list all their translated records in additional website languages will be hidden
+    in the List module.
 
     Use `*` to hide all records of additional website languages in all tables or set
     single table names as comma-separated list.
