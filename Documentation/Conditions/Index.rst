@@ -550,6 +550,7 @@ request.getHeaders()
       [request.getHeaders()['Accept'] == 'json']
 
    ::
+
       [request.getHeaders()['host'][0] == 'www.typo3lexikon.de']
 
 
@@ -795,9 +796,11 @@ compatVersion
 
 :aspect:`Example`
    ::
+
       [compatVersion("9.5")]
 
    Is same as::
+
       [compatVersion("9.5.0")]
 
    Another example::
@@ -853,7 +856,7 @@ getTSFE
    Object
 
 :aspect:`Description`
-   Provides access to TypoScriptFrontendController (:php`$GLOBALS['TSFE']`)
+   Provides access to TypoScriptFrontendController (:php:`$GLOBALS['TSFE']`)
 
 .. _condition-function-getenv:
 
