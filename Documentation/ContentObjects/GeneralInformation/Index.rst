@@ -24,6 +24,12 @@ depending on the situation. Say if you are creating a menu it's often
 loaded with the page-record of the actual menu item or if it's about
 content-rendering it will be the content-record.
 
+Caching
+"""""""
+
+Every cObject can be cached via :ts:`cache` sub property.
+
+TODO: Provide further insides.
 
 .. _reusing-cobjects:
 
