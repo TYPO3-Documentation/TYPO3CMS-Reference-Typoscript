@@ -176,14 +176,12 @@ additionalHeaders
 
          For each numeric index, there are the following sub-properties:
 
-         **header:** The header string (has :ref:`stdwrap` properties)
+         **header:** The header string
 
          **replace:** Optional. If set, previous headers with the same name
          are replaced with the current one. Default is "1".
-         (has :ref:`stdWrap <stdwrap>` properties)
 
          **httpResponseCode:** Optional. HTTP status code as an integer.
-         (has :ref:`stdwrap` properties)
 
          By default TYPO3 sends a "Content-Type" header with the defined
          encoding, unless this is disabled using :ref:`setup-config-disableCharsetHeader`.
@@ -197,8 +195,7 @@ additionalHeaders
             config.additionalHeaders {
                 10 {
                     # The header string
-                    header = foo:
-                    header.dataWrap = |{page:uid}
+                    header = foo
 
                     # Do not replace previous headers with the same name.
                     replace = 0
