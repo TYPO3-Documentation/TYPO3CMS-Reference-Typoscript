@@ -858,6 +858,11 @@ getTSFE
 :aspect:`Description`
    Provides access to TypoScriptFrontendController (:php:`$GLOBALS['TSFE']`)
 
+:aspect:`Example`
+   Current :ref:`setup-page-typenum`::
+
+      [getTSFE().type == 98]
+
 .. _condition-function-getenv:
 
 getenv
