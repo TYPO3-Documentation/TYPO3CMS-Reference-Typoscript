@@ -82,7 +82,7 @@ page
 :aspect:`Example`
    ::
 
-      [page["pid"] == 2]
+      [page["uid"] == 2]
 
 .. _condition-constant:
 
