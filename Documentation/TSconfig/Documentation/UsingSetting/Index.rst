@@ -136,7 +136,7 @@ which will be shown in the page properties (the same way as TypoScript static te
 
    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::registerPageTSConfigFile(
       'extension_name',
-      'Configuration/TSconfig/Page/myPageTSconfigFile.txt',
+      'Configuration/TSconfig/Page/myPageTSconfigFile.tsconfig',
       'My special config'
    );
 
