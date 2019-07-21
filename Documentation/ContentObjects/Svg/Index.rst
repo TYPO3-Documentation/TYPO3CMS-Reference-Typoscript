@@ -63,37 +63,6 @@ do not have native SVG support, so that it also works in e.g. IE
 .. container:: table-row
 
    Property
-         value
-
-   Data type
-         XML /:ref:`stdWrap <stdwrap>`
-
-   Description
-         Raw XML data for the SVG.
-
-         Will be ignored, if "src" is defined. Requires `renderMode` to be set to `inline`.
-
-         Deprecated
-            Usage without `renderMode` set to `inline` is deprecated since TYPO3 9, and will stop working in TYPO3 10.
-
-.. container:: table-row
-
-   Property
-         noscript
-
-   Data type
-         string /:ref:`stdWrap <stdwrap>`
-
-   Description
-         Output, if SVG output is not possible.
-
-         Deprecated
-            `noscript` is deprecated since TYPO3 9 and will be removed in TYPO3 10.
-
-
-.. container:: table-row
-
-   Property
          renderMode
 
    Data type
@@ -127,15 +96,7 @@ Example:
    10 {
      width = 600
      height = 600
-     value (
-       <rect x="100" y="100" width="500" height="200" fill="white" stroke="black"/>
-       <line x1="0" y1="200" x2="700" y2="200" stroke="red" stroke-width="20px"/>
-       <polygon points="185 0 125 25 185 100" transform="rotate(135 125 25)" />
-       <circle cx="190" cy="150" r="40" stroke="black" stroke-width="2" fill="yellow"/>
-     )
-     noscript.cObject = TEXT
-     noscript.cObject.value = No SVG rendering possible, please use a browser.
+     src = EXT:my_ext/Resources/Public/Images/example.svg
    }
 
-This example will show some geometric forms.
-
+This example will output the svg with the defined dimensions.
