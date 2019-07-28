@@ -488,7 +488,7 @@ More examples: Tricky stuff
 Three items A, no item R, three items Z
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-In this situation with still have **three** mainparts. We can tell this from the fact that we have
+In this situation we still have **three** mainparts. We can tell this from the fact that we have
 TWO occurrences of the mainpart delimiter. And the second mainpart R is really empty.
 
 As result we get::
