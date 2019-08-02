@@ -126,6 +126,7 @@ Page TSconfig for instance within your project extension that contains other loc
 like templates, frontend TypoScript and so on.
 
 
+.. _pagesettingstaticpagetsconfigfiles:
 Register static Page TSconfig files
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
