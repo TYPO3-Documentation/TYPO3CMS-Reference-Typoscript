@@ -1224,8 +1224,7 @@ encodeForJavaScriptValue
    Encodes content to be used safely inside strings in JavaScript.
    Characters, which can cause problems inside JavaScript strings, are
    replaced with their encoded equivalents. The resulting string is
-   *not* enclosed in quotes. If needed, quotes can be added using
-   TypoScript.
+   already quoted with single quotes.
 
    Passes the content through the core function
    :php:`\TYPO3\CMS\Core\Utility\GeneralUtility::quoteJSvalue`.
@@ -1235,10 +1234,10 @@ encodeForJavaScriptValue
    ::
 
       10 = TEXT
-      10 {
-            stdWrap.data = GP:sWord
-            stdWrap.encodeForJavaScriptValue = 1
-            stdWrap.wrap = setSearchWord(|);
+      10.stdWrap {
+            data = GP:sWord
+            encodeForJavaScriptValue = 1
+            wrap = setSearchWord(|);
       }
 
 
