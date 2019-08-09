@@ -74,10 +74,6 @@ addItems
         Do not add page types this way (using `TCEFORM.pages.doktype.addItems`), instead the proper
         PHP API should be used to do this, see :ref:`Core APIs <t3coreapi:page-types>` for details.
 
-    .. note::
-        The `icon` is probably outdated, this documentation should be checked, probably an icon
-        identifier is used nowadays.
-
 :aspect:`Example`
     .. code-block:: typoscript
 
@@ -89,6 +85,7 @@ addItems
            addItems.1525216023.icon = EXT:my_ext/icon.png
         }
 
+      Instead of adding files by path, icon identifiers should be used.
 
 altLabels
 =========
@@ -118,7 +115,7 @@ altLabels
 
 :aspect:`Example`
 
-    .. code-block:: typoscript
+   ::
 
         TCEFORM.pages.doktype {
             # Set a different item label
@@ -128,24 +125,19 @@ altLabels
             altLabels.255 = LLL:EXT:my_ext/Resources/Private/Language/locallang_tca.xlf:recycler
         }
 
-    .. figure:: ../Images/PagesDoktypeDifferentLabels.png
-        :alt: The Page types with modified labels
+   .. figure:: ../Images/PagesDoktypeDifferentLabels.png
+      :alt: The Page types with modified labels
 
-        The Page types with modified labels
-        
-    .. note::
-        If the item has an **empty** value, the syntax is slightly different and an additional dot must be provided, 
-        like on this example:
-        .. code-block:: typoscript
-           
-           TCEFORM.tt_content.space_before_class.altLabels.. = foo
+      The Page types with modified labels
 
-        Note the *double dot* after `altLabels`. See `this issue on forge.typo3.org <https://forge.typo3.org/issues/80427#note-10>`__.  for reference.
-        
-        The `icon` is probably outdated, this documentation should be checked, probably an icon
-        identifier is used nowadays.        
-        
-        
+   .. note::
+
+      If the item has an **empty** value, the syntax is slightly different and an additional dot must be provided, 
+      like on this example::
+
+         TCEFORM.tt_content.space_before_class.altLabels.. = foo
+
+      Note the *double dot* after `altLabels`.
 
 .. _pageTsConfigTceFormConfig:
 
