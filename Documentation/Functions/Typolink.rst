@@ -648,7 +648,7 @@ url
 
    `t3://url?url=https://example.org`
 
-   `t3://url?url=https://example.org%25parameter=value`
+   `t3://url?url=https://example.org%26parameter=value`
 
 record
 ------
