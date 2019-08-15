@@ -546,6 +546,9 @@ Resource handler key (`page`)
    - page
    - file
    - folder
+   - email
+   - url
+   - record
 
    More keys can be added via :php:`$GLOBALS['TYPO3_CONF_VARS']['SYS']['linkHandler']` in
    an associative array where the key is the handler key and the value is a
@@ -590,7 +593,7 @@ The page identifier is a compound string based on several optional settings.
 
    `t3://page?uid=13&type=3#c123`
 
-   `t3://page?uid=13&type3?my=param&will=get&added=here#c123`
+   `t3://page?uid=13&type=3&my=param&will=get&added=here#c123`
 
 file
 ----
@@ -603,9 +606,12 @@ file
 
 :aspect:`identifier` (string):
 
-   The identifier of a file when not indexed in FAL.
+   The identifier of a file using combined `<storage>:<path>` reference or a direct
+   reference to one file like `fileadmin/path/myfile.jpg`.
 
-   `t3://file?identifier=folder/myfile.jpg`
+   `t3://file?identifier=1:/path/myfile.jpg`
+
+   `t3://file?identifier=fileadmin/path/myfile.jpg`
 
 folder
 ------
@@ -622,7 +628,77 @@ folder
 
    `t3://folder?storage=1&identifier=myfolder`
 
+email
+-----
 
+:aspect:`email` (string):
+
+   Mail address to be used, prefixed with `mailto:`
+
+   `t3://email?email=mailto:user@example.org`
+
+url
+---
+
+:aspect:`url` (string):
+
+   URL to be used, if no scheme is used `http://` is prefixed automatically. Query parameters have to be URL-encoded.
+
+   `t3://url?url=example.org`
+
+   `t3://url?url=https://example.org`
+
+   `t3://url?url=https://example.org%25parameter=value`
+
+record
+------
+
+Aspects `identifier` and `uid` are mandatory for this link handler.
+
+:aspect:`identifier` (string):
+
+   The (individual) identifier of the link building configuration to be used.
+
+:aspect:`uid` (int):
+
+   The UID of the referenced record to be linked.
+
+:aspect:`Example`
+
+   The following reference relates to record `tx_myextension_content:123`. Tablename is retrieved
+   from Page TSconfig settings, actual link generation is defined in TypoScript configuration for
+   identifier `my_content`.
+
+   `t3://record?identifier=my_content&uid=123`
+
+   .. code-block:: typoscript
+      :caption: Page TSconfig definition for identifier `my_content`
+
+      TCEMAIN.linkHandler.my_content {
+          handler = TYPO3\CMS\Recordlist\LinkHandler\RecordLinkHandler
+          label = LLL:EXT:my_extension/Resources/Private/Language/locallang.xlf:link.customTab
+          configuration {
+              table = tx_myextension_content
+          }
+          scanBefore = page
+      }
+
+   .. code-block:: typoscript
+      :caption: Frontend TypoScript definition for identifier `my_content`
+
+      config.recordLinks.my_content {
+          // Do not force link generation when the record is hidden
+          forceLink = 0
+
+          typolink {
+              // pages.uid to be used to render result (basicially it contains the rendering plugin)
+              parameter = 234
+              // field values of tx_myextension_content record with uid 123
+              additionalParams.data = field:uid
+              additionalParams.wrap = &tx_myextension[uid]= | &tx_myextension[action]=show
+              useCacheHash = 1
+          }
+      }
 
 
 .. _typolink-link-handler:
