@@ -97,8 +97,8 @@ Examples:
 .. attention::
 
    The property `includeLibs` has been removed in TYPO3 8.0. In earlier versions
-   the userFunc classes sometimes were stored in :file:`fileadmin/` - this is no
-   longer the recommended and no longer possible out of the box.
+   the userFunc classes were sometimes stored in :file:`fileadmin/` - this is no 
+   longer possible out of the box and not recommended.
 
    For the best result you should *always*, without exception, place your class files in
    an extension, define composer class loading for this extension and add this extension as
