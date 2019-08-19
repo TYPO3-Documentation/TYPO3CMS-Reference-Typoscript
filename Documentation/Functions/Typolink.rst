@@ -691,7 +691,7 @@ Aspects `identifier` and `uid` are mandatory for this link handler.
           forceLink = 0
 
           typolink {
-              // pages.uid to be used to render result (basicially it contains the rendering plugin)
+              // pages.uid to be used to render result (basically it contains the rendering plugin)
               parameter = 234
               // field values of tx_myextension_content record with uid 123
               additionalParams.data = field:uid
