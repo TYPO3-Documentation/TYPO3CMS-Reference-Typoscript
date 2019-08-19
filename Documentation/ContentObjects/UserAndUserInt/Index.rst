@@ -96,17 +96,14 @@ Examples:
 
 .. attention::
 
-   The examples below reference class files located in :file:`fileadmin/` - this is no
-   longer the recommended best practice as it does not cause the class files to be loaded
-   or even be loadable by Composer.
+   The property `includeLibs` has been removed in TYPO3 8.0. In earlier versions
+   the userFunc classes were sometimes stored in :file:`fileadmin/` - this is no 
+   longer possible out of the box and not recommended.
 
    For the best result you should *always*, without exception, place your class files in
    an extension, define composer class loading for this extension and add this extension as
    a dependency of your project. Then, your classes will load without issues when you refer
    to them by their class name.
-
-   The examples below will work though - except that the classes will fail to load unless
-   manually included or manually added to composer autoload of the root composer.json.
 
 Example 1
 ---------
@@ -117,16 +114,16 @@ from TypoScript. Use this TypoScript configuration::
    page = PAGE
    page.10 = USER_INT
    page.10 {
-     userFunc = Your\NameSpace\YourClass->printTime
+     userFunc = Vendor\ExtensionName\ExampleTime->printTime
    }
 
-The file fileadmin/example_time.php might amongst other things
+The file typo3conf/ext/extension_name/Classes/ExampleTime.php might amongst other things
 contain:
 
 .. code-block:: php
 
-   namespace Your\NameSpace;
-   class YourClass {
+   namespace Vendor\ExtensionName;
+   class ExampleTime {
      /**
       * Output the current time in red letters
       *
@@ -134,7 +131,8 @@ contain:
       * @param	array		TypoScript configuration
       * @return	string		HTML output, showing the current server time.
       */
-     public function printTime($content, $conf) {
+     public function printTime(string $content, array $conf): string
+     {
        return '<p style="color: red;">Dynamic time: ' . date('H:i:s') . '</p><br />';
      }
    }
@@ -157,80 +155,65 @@ order. To do that we use the following TypoScript::
 
    page.30 = USER
    page.30 {
-      userFunc = Your\NameSpace\YourClass->listContentRecordsOnPage
+      userFunc = Vendor\ExtensionName\ExampleListRecords->listContentRecordsOnPage
       # reverseOrder is a boolean variable (see PHP code below)
       reverseOrder = 1
-      # debugOutput is a boolean variable with /stdWrap (see PHP code below)
-      debugOutput = 1
    }
 
-The file fileadmin/example_listRecords.php might amongst other
+The file typo3conf/ext/extension_name/Classes/ExampleListRecords.php might amongst other
 things contain:
 
 .. code-block:: php
 
-   namespace Your\NameSpace;
+   namespace Vendor\ExtensionName;
+
+   use TYPO3\CMS\Core\Database\ConnectionPool;
+   use TYPO3\CMS\Core\Utility\GeneralUtility;
+   use TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer;
+
    /**
     * Example of a method in a PHP class to be called from TypoScript
     *
     */
-   class YourClass {
+   class ExampleListRecords {
      /**
       * Reference to the parent (calling) cObject set from TypoScript
+      *
+      * @var ContentObjectRenderer
       */
      public $cObj;
 
      /**
-      * List the headers of the content elements on the page
-      *
-      *
-      * @param	string		Empty string (no content to process)
-      * @param	array		TypoScript configuration
-      * @return	string		HTML output, showing content elements (in reverse order, if configured)
-      */
-     public function listContentRecordsOnPage($content, $conf) {
-       $query = $GLOBALS['TYPO3_DB']->SELECTquery(
-         'header',
-         'tt_content',
-         'pid=' . intval($GLOBALS['TSFE']->id) .
-           $GLOBALS['TSFE']->sys_page->enableFields('tt_content'),
-         '',
-         'sorting' . ($conf['reverseOrder'] ? ' DESC' : '')
-       );
-
-       $output = '';
-       if (isset($conf['debugOutput.'])) {
-         $conf['debugOutput'] = $this->cObj->stdWrap($conf['debugOutput'], $conf['debugOutput.']);
-       }
-       if ($conf['debugOutput']) {
-         $output = 'This is the query: <strong>' . $query . '</strong><br /><br />';
-       }
-
-       return $output . $this->selectThem($query);
-     }
-
-     /**
-      * Select the records by input $query and returning the header field values
-      *
-      * @param	string		SQL query selecting the content elements
-      * @return	string		The header field values of the content elements imploded by a <br /> tag
-      */
-     protected function selectThem($query) {
-       $res = $GLOBALS['TYPO3_DB']->sql_query($query);
-       $output = array();
-       while ($row = $GLOBALS['TYPO3_DB']->sql_fetch_assoc($res)) {
-         $output[] = $row['header'];
-       }
-       return implode($output, '<br />');
+       * List the headers of the content elements on the page
+       *
+       *
+       * @param	string		Empty string (no content to process)
+       * @param	array		TypoScript configuration
+       * @return	string		HTML output, showing content elements (in reverse order, if configured)
+       */
+     public function listContentRecordsOnPage(string $content, array $conf): string
+     {
+         $connection = GeneralUtility::makeInstance(ConnectionPool::class)->getConnectionForTable('tt_content');
+         $result = $connection->select(
+             ['header'],
+             'tt_content',
+             ['pid' => (int)$GLOBALS['TSFE']->id],
+             [],
+             ['sorting' => $conf['reverseOrder'] ? 'DESC' : 'ASC']
+         );
+         $output = [];
+         foreach ($result as $row) {
+             $output[] = $row['header'];
+         }
+         return implode($output, '<br />');
      }
    }
 
 :ts:`page.30` will give back what the function :php:`listContentRecordsOnPage()` of
 the class YourClass returned. This example returns some debug output
 at the beginning and then the headers of the content elements on the
-page in reversed order. Note how we defined the properties
-"reverseOrder" and "debugOutput" for this USER object and how we used
-them in the PHP code.
+page in reversed order. Note how we defined the property
+"reverseOrder" for this USER object and how we used it in the PHP code.
 
 
 Example 3
@@ -248,14 +231,15 @@ the local machine". You can make it available like this::
 
    page.20 = USER_INT
    page.20 {
-      userFunc = MyVendorName\Hostname->get_hostname
+      userFunc = Vendor\ExtensionName\Hostname->getHostname
    }
 
-Contents of :file:`fileadmin/gethostname.php`:
+Contents of :file:`typo3conf/ext/extension_name/Classes/Hostname.php`:
 
 .. code-block:: php
 
-   namespace MyVendorName;
+   namespace Vendor\ExtensionName;
+
       class Hostname {
          /**
           * Return standard host name for the local machine
@@ -264,7 +248,8 @@ Contents of :file:`fileadmin/gethostname.php`:
           * @param  array           TypoScript configuration
           * @return string          HTML result
           */
-         public function get_hostname($content, $conf) {
-            return gethostname();
+         public function getHostname(string $content, array $conf): string
+         {
+            return gethostname() ?: '';
          }
       }
