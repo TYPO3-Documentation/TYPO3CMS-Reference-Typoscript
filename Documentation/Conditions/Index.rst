@@ -635,7 +635,7 @@ request.getNormalizedParams()
       ``getRemoteAddress()``
           IP Adress of client, in case of docker this could be ``172.18.0.6``.
 
-      ``getScripFileName()``
+      ``getScriptFileName()``
           Example: ``/var/www/html/public/typo3/index.php``
 
       ``getDocumentRoot()``
