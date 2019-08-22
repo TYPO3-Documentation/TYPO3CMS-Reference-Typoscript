@@ -371,29 +371,6 @@ preview
         will not be displayed when editing records of your table.
 
 
-.. _pagetcemain-previewdomain:
-
-previewDomain
-=============
-
-:aspect:`Datatype`
-    string
-
-:aspect:`Description`
-    Defines a preview domain used for frontend previews triggered from the backend, for instance
-    the "Save and View" button. The value must be a valid domain, optionally prefixed by a schema.
-
-    If the option is not specified, the first available domain record within the current rootline is used.
-    If there is no domain record either, the current domain (and schema) used for the backend will be chosen.
-
-:aspect:`Example`
-    .. code-block:: typoscript
-
-        TCEMAIN.previewDomain = dev.local
-        TCEMAIN.previewDomain = http://dev.local
-        TCEMAIN.previewDomain = https://example.com
-
-
 .. _pagetcemaintables:
 .. _pagetcemain-table-table-name:
 
