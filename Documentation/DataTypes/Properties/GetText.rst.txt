@@ -563,7 +563,7 @@ session
 .. _data-type-site:
 
 site
-----
+""""
 
 :aspect:`Data type:`
    site
@@ -603,7 +603,7 @@ site
 .. _data-type-siteLanguage:
 
 siteLanguage
-------------
+""""""""""""
 
 :aspect:`Data type:`
    siteLanguage
