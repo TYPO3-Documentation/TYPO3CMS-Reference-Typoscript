@@ -127,6 +127,7 @@ like templates, frontend TypoScript and so on.
 
 
 .. _pagesettingstaticpagetsconfigfiles:
+
 Register static Page TSconfig files
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
