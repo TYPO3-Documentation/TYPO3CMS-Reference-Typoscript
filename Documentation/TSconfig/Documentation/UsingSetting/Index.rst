@@ -25,16 +25,22 @@ which are not available in TSconfig.
 Page TSconfig
 -------------
 
+.. _pagetsconfig-enter-data:
+
 Entering data
 ^^^^^^^^^^^^^
 
 There are two ways to attach Page TSconfig to any given page.
-When editing a page, move to the "Resources" tab. The first
-way is to include a TSconfig file provided by an extension.
-The second is to directly enter code in the "Page TSConfig" field.
+When editing a page, move to the "Resources" tab.
+
+#. The first way is to include a static TSconfig file provided
+   by an extension. (The section :ref:`pagesettingstaticpagetsconfigfiles`
+   explains how to register a static TSconfig file.)
+#. The second is to directly enter code in the "Page TSConfig" field.
 
 .. figure:: ../Images/TSconfigPageInput.png
     :alt: TSconfig-related fields in the Resources tab of a page
+    :class: with-shadow
 
 
 Page TSconfig is inherited along the page tree. Consider
@@ -126,13 +132,15 @@ Page TSconfig for instance within your project extension that contains other loc
 like templates, frontend TypoScript and so on.
 
 
+
 .. _pagesettingstaticpagetsconfigfiles:
 
 Register static Page TSconfig files
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Register PageTS config files in :file:`Configuration/TCA/Overrides/pages.php` of any extension,
-which will be shown in the page properties (the same way as TypoScript static templates are included):
+Register PageTS config files in the :file:`Configuration/TCA/Overrides/pages.php` of any extension.
+These can be selected in the page properties in the "Resources" tab (the same way as TypoScript
+static templates are included):
 
 .. code-block:: php
 
