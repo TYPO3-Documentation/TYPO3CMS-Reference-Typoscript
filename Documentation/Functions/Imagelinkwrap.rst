@@ -1,5 +1,9 @@
 .. include:: ../Includes.txt
 
+=============
+imageLinkWrap
+=============
+
 Properties
 ==========
 
