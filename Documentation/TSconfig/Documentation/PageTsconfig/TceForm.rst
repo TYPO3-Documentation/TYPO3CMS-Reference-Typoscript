@@ -106,7 +106,7 @@ altLabels
         `TCEFORM.[tableName].[fieldName].altLabels`
 
     table and record type level:
-        `TCEFORM.[tableName].[fieldName].types.typeName.altLabels`
+        `TCEFORM.[tableName].[fieldName].types.[typeName].altLabels`
 
     Flex form field level, example:
         `TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.myField.altLabels`
@@ -373,10 +373,10 @@ label
     This property is available for various levels:
 
     table level, example:
-        `TCEFORM.tt_content.header.label`
+        `TCEFORM.[tableName].[fieldName].label`
 
     table and record type level, example:
-        `TCEFORM.tt_content.header.types.textpic.label`
+        `TCEFORM.[tableName].[fieldName].types.[typeName].label`
 
     Flex form field level, example:
         `TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.myField.label`
