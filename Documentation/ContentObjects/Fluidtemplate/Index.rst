@@ -415,7 +415,7 @@ dataProcessing
          }
       }
 
-   There are five DataProcessors available to allow flexible processing e.g.
+   There are eight DataProcessors available to allow flexible processing e.g.
    for comma-separated values. To use e.g. with the :ts:`FLUIDTEMPLATE` content
    object.
 
@@ -446,6 +446,8 @@ dataProcessing
    - The :php:`LanguageMenuProcessor` utilizes :ts:`HMENU` to generate a JSON encoded menu
      string based on the site language configuration that will be decoded again
      and assigned to :ts:`FLUIDTEMPLATE` as variable.
+
+   - The :php:`SiteProcessor` fetches data from the site entity.
 
    **With the help of the :php:`SplitProcessor` the following scenario is
    possible:** ::
@@ -865,6 +867,25 @@ dataProcessing
          </ul>
       </f:if>
 
+   **Using the :php:`SiteProcessor` the following scenario is possible:**
+
+   Options:
+
+   :`as`: The variable to be used within the result
+
+   .. code-block:: typoscript
+
+      10 = TYPO3\CMS\Frontend\DataProcessing\SiteProcessor
+      10 {
+         as = site
+      }
+
+   In the Fluid template the properties of the site entity can be accessed:
+
+   .. code-block:: html
+
+      <p>{site.rootPageId}</p>
+      <p>{site.someCustomConfiguration}</p>
 
 
 .. _cobj-fluidtemplate-properties-stdwrap:
