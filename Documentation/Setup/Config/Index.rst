@@ -2025,20 +2025,15 @@ pageTitleProviders
 
    Examples
 
-         By default, TYPO3 ships with three providers::
+         By default, TYPO3 ships with two providers::
 
             config.pageTitleProviders {
-               altPageTitle {
-                  provider = TYPO3\CMS\Core\PageTitle\AltPageTitleProvider
-                  before = record
-               }
                record {
                   provider = TYPO3\CMS\Core\PageTitle\RecordPageTitleProvider
                }
                seo {
                   provider = TYPO3\CMS\Seo\PageTitle\SeoTitlePageTitleProvider
                   before = record
-                  after = altPageTitle
                }
             }
 
