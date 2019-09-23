@@ -447,7 +447,7 @@ dataProcessing
      string based on the site language configuration that will be decoded again
      and assigned to :ts:`FLUIDTEMPLATE` as variable.
 
-   - The :php:`SiteProcessor` fetches data from the site entity.
+   - The :php:`SiteProcessor` fetches data from the :ref:`site<t3coreapi:sitehandling>` entity.
 
    **With the help of the :php:`SplitProcessor` the following scenario is
    possible:** ::
