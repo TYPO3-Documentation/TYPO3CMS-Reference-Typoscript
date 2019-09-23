@@ -81,6 +81,7 @@ Properties
    `pageRendererTemplateFile`_                           :ref:`data-type-string`
    `pageTitle`_                                          :ref:`stdWrap`
    `pageTitleFirst`_                                     :ref:`data-type-boolean`                           0
+   `pageTitleProviders`_                                 array
    `pageTitleSeparator`_                                 :ref:`data-type-string` / :ref:`stdwrap`           ": " *(colon with following space)*
    `removeDefaultCss`_                                   :ref:`data-type-boolean`
    `removeDefaultJS`_                                    :ref:`data-type-boolean` / :ref:`data-type-string`
@@ -1323,8 +1324,6 @@ htmlTag\_setParams
     Used to older TYPO3 versions? If you are using :ref:`site handling<t3coreapi:sitehandling>` you do not need to set
     `htmlTag_setParams` for language related configuration in TypoScript.
 
-
-
 .. _setup-config-htmltag-stdwrap:
 
 htmlTag\_stdWrap
@@ -2000,6 +1999,57 @@ pageTitleFirst
          If :ts:`pageTitleFirst` is set (and if the page title is printed), then the
          page title will be printed IN FRONT OF the template title. So it will
          look like "page title: website".
+
+
+
+.. _setup-config-pagetitleproviders:
+
+pageTitleProviders
+==================
+
+.. container:: table-row
+
+   Property
+         pageTitleProviders
+
+   Data type
+         array
+
+   Description
+         In order to keep setting the titles in control, an API to set the page title is available. The API uses
+         :ts:`PageTitleProviders` to define the page title based on page record and the content on the page.
+
+         Based on the priority of the providers, the :php:`PageTitleProviderManager` will check the providers if a title
+         is given by the provider. It will start with the highest priority :ts:`PageTitleProviders` and will end with
+         the lowest in priority.
+
+   Examples
+
+         By default, TYPO3 ships with three providers::
+
+            config.pageTitleProviders {
+               altPageTitle {
+                  provider = TYPO3\CMS\Core\PageTitle\AltPageTitleProvider
+                  before = record
+               }
+               record {
+                  provider = TYPO3\CMS\Core\PageTitle\RecordPageTitleProvider
+               }
+               seo {
+                  provider = TYPO3\CMS\Seo\PageTitle\SeoTitlePageTitleProvider
+                  before = record
+                  after = altPageTitle
+               }
+            }
+
+         The ordering of the providers is based on the :ts:`before` and :ts:`after` parameters. If you want a provider
+         to be handled before a specific other provider, just set that provider in the :ts:`before`, do the same with
+         :ts:`after`.
+
+         .. note::
+            The :ts:`seo` PageTitleProvider is only available with installed SEO system extension.
+
+         You can find information about creating own PageTitleProviders in the section :ref:`PageTitle API <t3coreapi:pagetitle>`.
 
 
 
