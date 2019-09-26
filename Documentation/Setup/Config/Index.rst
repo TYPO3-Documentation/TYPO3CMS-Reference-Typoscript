@@ -1114,7 +1114,7 @@ formMailCharset
 .. _setup-config-ftu:
 
 ftu
-"""
+===
 
 .. container:: table-row
 
