@@ -323,8 +323,8 @@ file_list
 
 .. _useroptions-file_list-enableClipBoard:
 
-file\_list.enableClipBoard
---------------------------
+file_list.enableClipBoard
+-------------------------
 
 :aspect:`Datatype`
     list of keywords
@@ -441,6 +441,24 @@ file_list.thumbnail.width
 :aspect:`Default`
     64
 
+.. _useroptions-file_list-uploader-defaultaction:
+
+file_list.uploader.defaultAction
+--------------------------------
+
+:aspect:`Datatype`
+    string
+
+:aspect:`Description`
+    Default action for the modal that appears when during file upload a name collision occurs.
+    Possible values:
+
+    * Cancel: abort the action
+    * Rename: append the file name with a numerical index
+    * Replace: override the file with the uploaded one
+
+:aspect:`Default`
+    Cancel
 
 folderTree
 ==========
