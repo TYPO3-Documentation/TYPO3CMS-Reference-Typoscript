@@ -166,13 +166,14 @@ language     Language specific options.
 
 There also exists a list of subcategories based on the default content elements:
 
-cheader, cheader\_g, ctext, ctextpic, cimage, cbullets, ctable, cuploads,
-cmultimedia, cmailform, csearch, clogin, csplash, cmenu, cshortcut, clist,
-cscript, chtml
+cheader, cheader\_g, ctext, cimage, ctextmedia, cbullets, ctable, cuploads,
+cmultimedia, cmedia, cmailform, csearch, clogin, cmenu, cshortcut, clist,
+chtml
 
 These are all categories reserved for options that relate to content
-rendering for each type of :code:`tt_content` element. See the static_template
-of extension "css\_styled\_content" for examples.
+rendering for each type of :ts:`tt_content` element. See the
+`static template <https://github.com/TYPO3/TYPO3.CMS/blob/master/typo3/sysext/fluid_styled_content/Configuration/TypoScript/constants.typoscript>`__
+of extension "fluid\_styled\_content" for examples.
 
 .. _typoscript-syntax-constant-editor-keys-cat-custom-subcategories:
 
