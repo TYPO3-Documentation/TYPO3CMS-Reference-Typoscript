@@ -283,6 +283,8 @@ parameter
    contain spaces must be enclosed in double quotes. Each of these values
    are described in more detail below.
 
+   Link targets that are external or contain `_blank` will be added :html:`rel="noopener noreferrer"` automatically.
+
 :aspect:`Resource reference`
    1. The link
 
