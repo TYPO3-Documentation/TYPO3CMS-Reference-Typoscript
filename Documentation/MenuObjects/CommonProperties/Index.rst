@@ -55,14 +55,14 @@ otherwise noted!
          minItems
 
    Data type
-         integer
+         integer /:ref:`stdWrap <stdwrap>`
 
    Description
          The minimum items in the menu. If the number of pages does not reach
          this level, a dummy-page with the title "..." and
          uid=[currentpage\_id] is inserted.
 
-         Takes precedence over HMENU.minItems.
+         Takes precedence over :ref:`HMENU.minItems <_hmenu-minitems>`.
 
 
 .. container:: table-row
@@ -71,7 +71,7 @@ otherwise noted!
          maxItems
 
    Data type
-         integer
+         integer /:ref:`stdWrap <stdwrap>`
 
    Description
          The maximum items in the menu. More items will be ignored.
@@ -85,7 +85,7 @@ otherwise noted!
          begin
 
    Data type
-         integer +calc
+         integer /:ref:`stdWrap <stdwrap>` :ref:`+calc <objects-calc>`
 
    Description
          The first item in the menu.
@@ -97,7 +97,7 @@ otherwise noted!
 
             begin = 3
 
-         Takes precedence over HMENU.begin.
+         Takes precedence over :ref:`HMENU.begin <_hmenu-begin>`.
 
 
 .. container:: table-row
@@ -131,8 +131,12 @@ otherwise noted!
 
    Default
          "img"
-         
+
    Description
+
+         .. warning::
+            `imgNamePrefix` is deprecated since version 9.4 and will be removed in version 10.
+
          Prefix for the image names. This prefix is appended with the uid of the
          page.
 
@@ -147,6 +151,10 @@ otherwise noted!
          boolean
 
    Description
+
+         .. warning::
+            `imgNameNotRandom` is deprecated since version 9.4 and will be removed in version 10.
+
          If set, the image names of menu items is not randomly assigned. Useful
          switch if you're manipulating these images with some external
          JavaScript.
@@ -231,7 +239,7 @@ showAccessRestrictedPages
 
          If the value is "NONE" the link will not be changed and the site will
          perform page-not-found handling when clicked (which can be used to
-         capture the event and act accordingly of course). This means that the 
+         capture the event and act accordingly of course). This means that the
          link's URL will point to the page even if it is not accessible by the
          current frontend user. Note that the default behavior of page-not-found
          handling is to show the parent page instead.
