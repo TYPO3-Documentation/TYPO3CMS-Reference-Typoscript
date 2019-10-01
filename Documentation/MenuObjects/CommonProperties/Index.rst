@@ -133,8 +133,8 @@ otherwise noted!
          "img"
 
    Description
+         .. important::
 
-         .. warning::
             `imgNamePrefix` is deprecated since version 9.4 and will be removed in version 10.
 
          Prefix for the image names. This prefix is appended with the uid of the
@@ -151,8 +151,8 @@ otherwise noted!
          boolean
 
    Description
+         .. important::
 
-         .. warning::
             `imgNameNotRandom` is deprecated since version 9.4 and will be removed in version 10.
 
          If set, the image names of menu items is not randomly assigned. Useful
