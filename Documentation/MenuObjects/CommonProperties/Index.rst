@@ -55,7 +55,7 @@ otherwise noted!
          minItems
 
    Data type
-         integer /:ref:`stdWrap <stdwrap>`
+         integer / :ref:`stdWrap <stdwrap>`
 
    Description
          The minimum items in the menu. If the number of pages does not reach
@@ -71,7 +71,7 @@ otherwise noted!
          maxItems
 
    Data type
-         integer /:ref:`stdWrap <stdwrap>`
+         integer / :ref:`stdWrap <stdwrap>`
 
    Description
          The maximum items in the menu. More items will be ignored.
@@ -85,7 +85,7 @@ otherwise noted!
          begin
 
    Data type
-         integer /:ref:`stdWrap <stdwrap>` :ref:`+calc <objects-calc>`
+         integer / :ref:`stdWrap <stdwrap>` :ref:`+calc <objects-calc>`
 
    Description
          The first item in the menu.
@@ -268,7 +268,7 @@ showAccessRestrictedPages
          additionalWhere
 
    Data type
-         string /:ref:`stdWrap <stdwrap>`
+         string / :ref:`stdWrap <stdwrap>`
 
    Description
          Adds an additional part to the WHERE clause for this menu.
