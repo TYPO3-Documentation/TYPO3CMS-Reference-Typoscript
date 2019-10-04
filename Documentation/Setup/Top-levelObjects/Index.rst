@@ -12,7 +12,7 @@ Top-level objects
    ======================== ================== ====================== =======
    Top-level object         Data Type          :ref:`stdwrap`         Default
    ======================== ================== ====================== =======
-   `((abc ...?))`_          :ref:`page`
+   `page, ...`_             :ref:`page`
    `((bcd ...?))`_          *(whatever)*
    `config`_                :ref:`config`
    `constants`_             :ref:`constants`
@@ -26,13 +26,13 @@ Top-level objects
 
 .. _top-level-objects-abc:
 
-((abc ...?))
-============
+page, ...
+=========
 
 .. container:: table-row
 
    Property
-         ...
+         page, ...
 
    Data type
          :ref:`page`
