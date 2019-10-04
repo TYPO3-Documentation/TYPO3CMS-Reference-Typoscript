@@ -44,6 +44,7 @@ different objects.
          properties consistently to those of the other cObjects by
          accessing them through the property "stdWrap".
 
+.. include:: ../../DataTypes/Properties/Cache.rst.txt
 
 .. ###### END~OF~TABLE ######
 

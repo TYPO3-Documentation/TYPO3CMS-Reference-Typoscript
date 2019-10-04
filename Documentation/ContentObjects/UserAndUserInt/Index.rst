@@ -32,10 +32,10 @@ userFunc
 
    Property
          userFunc
-       
-   Data type      
+
+   Data type
          :ref:`data-type-function-name`
-      
+
    Description
          The name of the function, which should be called. If you specify the
          name with a '->' in it, then it is interpreted as a call to a method in
@@ -88,6 +88,16 @@ stdWrap
 .. ###### END~OF~TABLE ######
 
 
+cache
+=====
+
+.. ### BEGIN~OF~TABLE ###
+
+.. include:: ../../DataTypes/Properties/Cache.rst.txt
+
+.. ###### END~OF~TABLE ######
+
+
 .. _cobj-user-examples:
 .. _cobj-user-int-examples:
 
@@ -97,7 +107,7 @@ Examples:
 .. attention::
 
    The property `includeLibs` has been removed in TYPO3 8.0. In earlier versions
-   the userFunc classes were sometimes stored in :file:`fileadmin/` - this is no 
+   the userFunc classes were sometimes stored in :file:`fileadmin/` - this is no
    longer possible out of the box and not recommended.
 
    For the best result you should *always*, without exception, place your class files in

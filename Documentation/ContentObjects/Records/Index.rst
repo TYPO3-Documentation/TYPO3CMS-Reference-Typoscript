@@ -232,6 +232,13 @@ stdWrap
          Executed after :ref:`wrap <cobj-records-properties-wrap>`.
 
 
+.. _cobj-records-properties-cache:
+
+cache
+~~~~~
+
+.. include:: ../../DataTypes/Properties/Cache.rst.txt
+
 .. _cobj-records-examples:
 
 Examples
