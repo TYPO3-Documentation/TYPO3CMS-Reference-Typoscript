@@ -11,8 +11,8 @@ Calc
 Calculating values (+calc)
 ==========================
 
-Sometimes a data type is set to `someType +calc`. The `+calc` indicates
-that the value is calculated with `+-/\*` operators. *Be aware that the
+Sometimes a data type is set to ``someType +calc``. The ``+calc`` indicates
+that the value is calculated with ``+-/\*`` operators. *Be aware that the
 operators have no "weight".* The calculation is just done from left to
 right.
 
@@ -29,7 +29,7 @@ how value is calculated:
 calc usage example:
 ~~~~~~~~~~~~~~~~~~~
 
-The :ts:`HMENU` :ts:`maxAge` property is of a type `integer +calc`, it's value in this example equals to 259200.
+The :ts:`HMENU` :ts:`maxAge` property is of a type ``integer +calc``, it's value in this example equals to 259200.
 
 ::
 
