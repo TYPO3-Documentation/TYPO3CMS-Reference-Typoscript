@@ -109,7 +109,7 @@ Expanded form::
    // STEP 6: Return 'totalResult'
 
 
-See also: :ref:`if`, :ref:`select`, :ref:`data-type-wrap`, :ref:`stdWrap`, 
+See also: :ref:`if`, :ref:`select`, :ref:`data-type-wrap`, :ref:`stdWrap`,
 :ref:`data-type-cobject`
 
 
@@ -272,6 +272,18 @@ stdWrap
 
    Description
       Apply `stdWrap` functionality.
+
+.. ###### END~OF~TABLE ######
+
+
+.. _cobj-content-cache:
+
+cache
+-----
+
+.. ### BEGIN~OF~TABLE ###
+
+.. include:: ../../DataTypes/Properties/Cache.rst.txt
 
 .. ###### END~OF~TABLE ######
 

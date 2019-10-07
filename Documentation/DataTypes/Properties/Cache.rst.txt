@@ -1,0 +1,14 @@
+
+.. container:: table-row
+
+   Property
+         cache
+
+   Data type
+         :ref:`cache <cache>`
+
+   Description
+         Stores the rendered content into the caching framework and reads it from there.
+         This allows you to reuse this content on different pages without prior rendering.
+         The presence of :ref:`cache.key <cache-key>` will trigger this feature.
+         See :ref:`cache function description <cache>` for details.

@@ -62,6 +62,7 @@ you to render *every* cObject non-cached.
    Data type
          :ref:`->stdWrap <stdwrap>`
 
+.. include:: ../../DataTypes/Properties/Cache.rst.txt
 
 .. ###### END~OF~TABLE ######
 
