@@ -120,12 +120,12 @@ bodyTagAdd
          :ref:`data-type-string`
 
    Description
-         This content is added inside of the opening :html:`<body>` tag right 
-         before the :html:`>` character. This is mostly useful for adding 
+         This content is added inside of the opening :html:`<body>` tag right
+         before the :html:`>` character. This is mostly useful for adding
          attributes to the :html:`<body>` tag.
 
    Example ::
-   
+
          # This will lead to <body class="example">
          page.bodyTagAdd = class="example"
 
@@ -487,7 +487,9 @@ includeJS.[array]
          not be included. Extensive usage might cause huge numbers of temporary
          files to be created. See ->if for details.
 
-         **type**: Setting the MIME type of the script (default: text/javascript).
+         **type**: Setting the MIME type of the script. Default: The attribute is
+         omitted for frontend rendering when :ts:`config.doctype` is not set or
+         set to :ts:`html5`. Otherwise :html:`text/javascript` is used as type.
 
          **integrity**: Adds the integrity attribute to the script element to let
          browsers ensure subresource integrity. Useful in hosting scenarios with
