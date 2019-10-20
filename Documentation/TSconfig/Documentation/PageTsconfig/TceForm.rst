@@ -85,7 +85,7 @@ addItems
            addItems.1525216023.icon = EXT:my_ext/icon.png
         }
 
-      Instead of adding files by path, icon identifiers should be used.
+    Instead of adding files by path, icon identifiers should be used.
 
 altLabels
 =========
