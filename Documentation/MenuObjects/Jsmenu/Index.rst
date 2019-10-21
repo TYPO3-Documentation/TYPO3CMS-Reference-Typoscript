@@ -6,6 +6,9 @@
 JSMENU
 ^^^^^^
 
+.. note::
+   JSMENU will be removed in TYPO3 9.5.
+
 .. ### BEGIN~OF~TABLE ###
 
 .. container:: table-row
