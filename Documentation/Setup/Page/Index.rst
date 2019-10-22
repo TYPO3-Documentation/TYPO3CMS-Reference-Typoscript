@@ -31,15 +31,15 @@ Properties
    ============================== ===================================== ====================== ========================
    Property                       Data Type                             :ref:`stdwrap`         Default
    ============================== ===================================== ====================== ========================
-   `1,2,3,4...`_                  cObject
+   `1,2,3,4...`_                  :ref:`cObject <data-type-cobject>`
    `bodyTag`_                     :ref:`data-type-tag`                                         <body>
    `bodyTagAdd`_                  :ref:`data-type-string`
-   `bodyTagCObject`_              cObject
+   `bodyTagCObject`_              :ref:`cObject <data-type-cobject>`
    `config`_                      :ref:`->CONFIG <config>`
    `CSS\_inlineStyle`_            :ref:`data-type-string`
-   `cssInline`_                   ->CARRAY
-   `footerData`_                  ->CARRAY
-   `headerData`_                  ->CARRAY
+   `cssInline.[array]`_           :ref:`cObject <data-type-cobject>`
+   `footerData.[array]`_          :ref:`cObject <data-type-cobject>`
+   `headerData.[array]`_          :ref:`cObject <data-type-cobject>`
    `headTag`_                     :ref:`data-type-tag` / :ref:`stdwrap`                        <head>
    `includeCSS.[array]`_          :ref:`data-type-resource`
    `includeCSSLibs.[array]`_      :ref:`data-type-resource`
@@ -49,9 +49,9 @@ Properties
    `includeJSLibs.[array]`_       :ref:`data-type-resource`
    `inlineLanguageLabelFiles`_    (array of strings)
    `inlineSettings`_              (array of strings)
-   `jsFooterInline`_              ->CARRAY
-   `jsInline`_                    ->CARRAY
-   `meta`_                        :ref:`->META <meta>`
+   `jsFooterInline.[array]`_      :ref:`cObject <data-type-cobject>`
+   `jsInline.[array]`_            :ref:`cObject <data-type-cobject>`
+   `meta`_                        (array of strings)
    `shortcutIcon`_                :ref:`data-type-resource`
    `stdWrap`_                     :ref:`stdwrap`
    `typeNum`_                     :ref:`data-type-integer`                                     0
@@ -72,7 +72,7 @@ Properties
          1,2,3,4...
 
    Data type
-         cObject
+         :ref:`cObject <data-type-cobject>`
 
    Description
          These properties can be used to define any number of objects,
@@ -198,19 +198,20 @@ CSS\_inlineStyle
 
 .. _setup-page-cssinline:
 
-cssInline
-=========
+cssInline.[array]
+=================
 
 .. container:: table-row
 
    Property
-         cssInline
+         cssInline.[array]
 
    Data type
-         ->CARRAY
+         :ref:`cObject <data-type-cobject>`
 
    Description
-         Use cObjects for creating inline CSS
+         Allows to add inline CSS to the page :html:`<head>` section.
+         The :ts:`cssInline` property contains any number of numeric keys, each representing one cObject.
 
    Example
          ::
@@ -230,39 +231,51 @@ cssInline
 
 .. _setup-page-footerdata:
 
-footerData
-==========
+footerData.[array]
+==================
 
 .. container:: table-row
 
    Property
-         footerData
+         footerData.[array]
 
    Data type
-         ->CARRAY
+         :ref:`cObject <data-type-cobject>`
 
    Description
          Same as :ref:`setup-page-headerData` above,
          except that this block gets included at the bottom of the page
          (just before the closing :html:`</body>` tag).
 
+         The :ts:`footerData` property contains any number of numeric keys, each representing one cObject.
+
+   Example
+         ::
+
+            footerData {
+               3 = TEXT
+               3.value = <script src="...."></script>
+
+               50 = TEXT
+               50.value = <!-- Hello from the comment! -->
+            }
+
 
 .. _setup-page-headerdata:
 
-headerData
-==========
+headerData.[array]
+==================
 
 .. container:: table-row
 
    Property
-         headerData
+         headerData.[array]
 
    Data type
-         ->CARRAY
+         :ref:`cObject <data-type-cobject>`
 
    Description
-         Inserts content in the head section of the website. Could e.g. be Meta
-         tags.
+         Inserts custom content in the head section of the website.
 
          While you can also use this to include stylesheet references or JavaScript,
          you should better use :ref:`page.includeCSS <setup-page-includecss-array>`
@@ -270,8 +283,22 @@ headerData
          Features like file concatenation and file compression will not work on files,
          which are included using :ts:`headerData`.
 
+         For meta tags, use the dedicated configuration :ref:`page.meta <meta>`.
+
          By default, gets inserted after all the style definitions.
 
+         The :ts:`headerData` property contains any number of numeric keys, each representing one cObject.
+
+   Example
+         ::
+
+            page.headerData {
+               3 = TEXT
+               3.value = <script src="...."></script>
+
+               50 = TEXT
+               50.value = <!-- Hello from the comment! -->
+            }
 
 
 .. _setup-page-headtag:
@@ -690,8 +717,8 @@ inlineSettings
 
 .. _setup-page-jsfooterinline:
 
-jsFooterInline
-==============
+jsFooterInline.[array]
+======================
 
 .. container:: table-row
 
@@ -699,18 +726,27 @@ jsFooterInline
          jsFooterInline
 
    Data type
-         ->CARRAY
+         :ref:`cObject <data-type-cobject>`
 
    Description
          Same :ts:`jsInline` above, except that the JavaScript gets inserted at the
-         bottom of the page (just before the closing :html:`</body` tag).
+         bottom of the page (just before the closing :html:`</body>` tag).
 
+         The :ts:`jsFooterInline` property contains any number of numeric keys, each representing one cObject.
+
+   Example
+         ::
+
+            page.jsFooterInline {
+                10 = TEXT
+                10.stdWrap.dataWrap = var pageId = {TSFE:id};
+            }
 
 
 .. _setup-page-jsinline:
 
-jsInline
-========
+jsInline.[array]
+================
 
 .. container:: table-row
 
@@ -718,15 +754,17 @@ jsInline
          jsInline
 
    Data type
-         ->CARRAY
+         :ref:`cObject <data-type-cobject>`
 
    Description
-         Use cObjects for creating inline JavaScript
+         Use array of cObjects for creating inline JavaScript.
 
          **Note:**
 
          With :ts:`config.removeDefaultJS = external`, the inline JavaScript is moved
          to an external file.
+
+         The :ts:`jsInline` property contains any number of numeric keys, each representing one cObject.
 
    Example
          ::
@@ -739,6 +777,7 @@ jsInline
 
 
 .. _setup-page-meta:
+.. _meta:
 
 meta
 ====
@@ -749,12 +788,98 @@ meta
          meta
 
    Data type
-         :ref:`->META <meta>`
+         array of key names (string / :ref:`stdWrap <stdwrap>`)
 
    Description
-         ./.
+            Use the scheme :ts:`meta.key = value` to define any HTML meta tag.
+
+            :ts:`value` is the content of the meta tag. If the value is empty (after
+            trimming), the meta tag is not generated.
+
+            The :ts:`key` can be the name of any meta tag, for example :html:`description` or
+            :html:`keywords`. If the key is :ts:`refresh` (case insensitive), then the
+            :html:`http-equiv` attribute is used in the meta tag instead of the :html:`name`
+            attribute.
+
+            For each key the following sub-properties are available:
+
+            :aspect:`httpEquivalent`
+               If set to 1, the :html:`http-equiv` attribute is used in the meta
+               tag instead of the :html:`name` attribute. Default: 0.
+
+            :aspect:`replace`
+               If set to 1, the tag will replace the one set earlier by a plugin. If set
+               to 0 (default), the meta tag generated by the plugin will be used. If
+               there is none yet, the one from TypoScript is set.
 
 
+         :aspect:`Examples:`
+            Simple definition::
+
+               meta.description = This is the description of the content in this document.
+               meta.keywords = These are the keywords.
+
+            Fetch data from the keywords field of the current or any parent page::
+
+               meta.keywords.data = levelfield:-1, keywords, slide
+
+            Make a meta.refresh entry::
+
+               meta.refresh = [seconds]; [URL, leave blank for same page]
+
+            Usage of :ts:`httpEquivalent`::
+
+               meta.X-UA-Compatible = IE=edge
+               meta.X-UA-Compatible.httpEquivalent = 1
+
+            Result:
+
+            .. code-block:: html
+
+               <meta http-equiv="X-UA-Compatible" content="IE=edge">.
+
+            Meta tags with a different attribute name are supported like the
+            Open Graph meta tags::
+
+               page {
+                  meta {
+                     X-UA-Compatible = IE=edge
+                     X-UA-Compatible.attribute = http-equiv
+                     keywords = TYPO3
+                     og:site_name = TYPO3
+                     og:site_name.attribute = property
+                     description = Inspiring people to share Normal
+                     dc.description = Inspiring people to share [DC tags]
+                     og:description = Inspiring people to share [OpenGraph]
+                     og:description.attribute = property
+                     og:locale = en_GB
+                     og:locale.attribute = property
+                     og:locale:alternate {
+                        attribute = property
+                        value {
+                           1 = fr_FR
+                           2 = de_DE
+                        }
+                     }
+                     refresh = 5; url=http://example.com/
+                     refresh.attribute = http-equiv
+                  }
+               }
+
+            They can be used like :ts:`property` used for OG tags in the example.
+
+            You may also supply multiple values for one name, which results in
+            multiple meta tags with the same name to be rendered.
+
+            Result for :ts:`og:description`:
+
+            .. code-block:: html
+
+                 <meta property="og:description"
+                       content="Inspiring people to share [OpenGraph]" />
+
+            See http://ogp.me/ for more information about the Open Graph
+            protocol and its properties.
 
 
 .. _setup-page-shortcuticon:
