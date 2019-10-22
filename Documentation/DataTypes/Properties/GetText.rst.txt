@@ -583,8 +583,8 @@ site
    ====================== ==========================================================
 
 :aspect:`Example:`
-   Code::
-   
+   Code:
+
    Example:
 
    .. code-block:: typoscript

@@ -62,7 +62,7 @@ otherwise noted!
          this level, a dummy-page with the title "..." and
          uid=[currentpage\_id] is inserted.
 
-         Takes precedence over :ref:`HMENU.minItems <_hmenu-minitems>`.
+         Takes precedence over :ref:`HMENU.minItems <hmenu-minitems>`.
 
 
 .. container:: table-row
@@ -97,7 +97,7 @@ otherwise noted!
 
             begin = 3
 
-         Takes precedence over :ref:`HMENU.begin <_hmenu-begin>`.
+         Takes precedence over :ref:`HMENU.begin <hmenu-begin>`.
 
 
 .. container:: table-row

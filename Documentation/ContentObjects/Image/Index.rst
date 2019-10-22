@@ -158,7 +158,7 @@ layoutKey
 
          - :ts:`default` renders a normal non-responsive image as a :html:`<img>` tag:
 
-           .. code-block:: html
+           .. code-block:: text
 
               <img src="###SRC###"
                    width="###WIDTH###"
@@ -168,7 +168,7 @@ layoutKey
            They are referenced inside the :ts:`srcset` attribute the :html:`<img>` tag for each defined resolution.
            Each image is actually rendered by TYPO3. Srcset is a proposed addition to HTML5 (http://www.w3.org/html/wg/drafts/srcset/w3c-srcset/).
 
-           .. code-block:: html
+           .. code-block:: text
 
               <img src="###SRC###"
                    srcset="|*|###SRC### ###SRCSETCANDIDATE###,|*|###SRC### ###SRCSETCANDIDATE###" ###PARAMS### ###ALTPARAMS######SELFCLOSINGTAGSLASH###>
@@ -176,7 +176,7 @@ layoutKey
          - :ts:`picture` renders a picture tag containing source tags for each resolution
            and an :html:`<img>` tag for the default image.
 
-           .. code-block:: html
+           .. code-block:: text
 
               <picture>
                  <source srcset="###SRC###"
@@ -186,7 +186,7 @@ layoutKey
 
          - :ts:`data` renders an image tag containing data-keys for the different resolutions:
 
-           .. code-block:: html
+           .. code-block:: text
 
               <img src="###SRC###"
                    data-###DATAKEY###="###SRC###" ###PARAMS### ###ALTPARAMS######SELFCLOSINGTAGSLASH###>
@@ -748,7 +748,7 @@ This returns as an example all per default possible HTML-Output:
        media="(max-device-width: 600px) AND (min-resolution: 192dpi)" />
      <img src="fileadmin/_processed_/imagefilenamename_595cc36c48.png"
        alt="" />
-   </picture><
+   </picture>
    <img src="fileadmin/_processed_/imagefilenamename_595cc36c48.png"
      srcset="fileadmin/_processed_/imagefilenamename_595cc36c48.png 600w,
        fileadmin/_processed_/imagefilenamename_42fb68d642.png 600w 2x"
