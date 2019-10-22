@@ -28,5 +28,4 @@ User TSconfig again, for details, see section
    TcaDefaults
    TceForm
    TceMain
-   Tsfe
    Tx
