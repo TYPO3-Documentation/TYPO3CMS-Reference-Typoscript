@@ -68,15 +68,13 @@ on the Table of Contents to identify what particular section will best
 address the task at hand.
 
 
-Table of Contents and Sitemap
-=============================
+.. rst-class:: horizbuttons-primary-m
 
-Please visit the complete :ref:`Sitemap`
+-  :ref:`Sitemap`
 
 .. toctree::
    :hidden:
 
-   Sitemap/Index
    Introduction/Index
    UsingSetting/Index
    DataTypes/Index
@@ -88,4 +86,5 @@ Please visit the complete :ref:`Sitemap`
    Gifbuilder/Index
    MenuObjects/Index
    AppendixA/Index
+   Sitemap/Index
    Targets
