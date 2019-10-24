@@ -18,6 +18,3 @@ Setup
    Config/Index
    Constants/Index
    Page/Index
-   Meta/Index
-   Carray/Index
-

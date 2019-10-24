@@ -3,8 +3,8 @@
 .. _data-types:
 .. _data-types-reference:
 
-Data types
-==========
+Data/value types
+================
 
 The values assigned to properties in TypoScript are often of a
 specific format. These formats are described in this chapter.
@@ -102,7 +102,7 @@ case
 Object types
 ------------
 
-These are complex "data types" which contain several member variables. The following types are descerned 
+These are complex "data types" which contain several member variables. The following types are descerned
 according to their internal processing:
 
 .. _data-type-cobject:

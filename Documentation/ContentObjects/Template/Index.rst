@@ -41,10 +41,10 @@ content by TYPO3.
 .. container:: table-row
 
    Property
-         subparts
+         subparts.[array]
 
    Data type
-         *(array of cObjects)*
+         array of :ref:`cObjects <data-type-cobject>`
 
    Description
          This is an array of subpart-markers (case-sensitive).
@@ -94,7 +94,7 @@ content by TYPO3.
          relPathPrefix
 
    Data type
-         *string / properties*
+         string / properties
 
    Description
          Finds all relative references (e.g. to images or stylesheets) and
@@ -127,7 +127,7 @@ content by TYPO3.
          marks
 
    Data type
-         *(array of cObjects)*
+         array of :ref:`cObjects <data-type-cobject>`
 
    Description
          This is an array of marks-markers (case-sensitive).
@@ -163,10 +163,10 @@ content by TYPO3.
 .. container:: table-row
 
    Property
-         wraps
+         wraps.[array]
 
    Data type
-         *(array of cObjects)*
+         array of :ref:`cObjects <data-type-cobject>`
 
    Description
          This is an array of wraps-markers (case-sensitive).
