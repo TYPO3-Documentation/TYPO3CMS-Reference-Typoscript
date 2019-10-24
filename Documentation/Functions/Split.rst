@@ -120,10 +120,10 @@ cObjNum
 =======
 
 :aspect:`Property`
-   1,2,3,4
+   1,2,3,4,...
 
 :aspect:`Data type`
-   :ref:`carray` / :ref:`stdwrap`
+   :ref:`cObject <data-type-cobject>` / :ref:`stdwrap`
 
 :aspect:`Description`
    The object that should treat the value.
@@ -138,7 +138,7 @@ cObjNum
       1.current = 1
       1.wrap = <b> | </b>
 
-:aspect:`Example for CARRAY`
+:aspect:`Example for cObject array`
 
    ::
 

@@ -7,7 +7,7 @@
 Objects and stdWrap
 ======================
 
-"... /stdWrap"
+"*type* /stdWrap"
 
 When a data type is set to "*type* / :ts:`stdWrap`" it means that the value
 is parsed through the :ts:`stdWrap` function with the properties of the
