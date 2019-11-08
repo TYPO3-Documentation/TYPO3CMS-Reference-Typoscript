@@ -21,7 +21,6 @@ Properties
   height_ =                                             :ref:`data-type-positive-integer`                                     yes
   effects_ =                                            like :ref:`gifbuilder-effect` of :ref:`GIFBUILDER`                    yes
   sample_ =                                             :ref:`data-type-boolean`                                              yes       0
-  alternativeTempPath_ =                                :ref:`data-type-path`                                                 yes
   title_ =                                              :ref:`data-type-string`                                               yes
   bodyTag_ =                                            :ref:`data-type-tag`                                                  yes
   wrap_ =                                               :ref:`data-type-wrap`                                                 (?)
@@ -113,15 +112,6 @@ GraphicsMagick or ImageMagick instead of `- geometry` to calculate the
 preview image. `sample` does not use antialiasing and is therefore
 much faster than the `geometry` procedure of
 GraphicsMagick or ImageMagick.
-
-
-alternativeTempPath
-===================
-
-:ts:`imageLinkWrap.alternativeTempPath =` :ref:`data-type-path`
-
-This is used to specify an alternative path to be used for temporary
-images.
 
 
 title
