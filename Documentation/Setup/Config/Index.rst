@@ -2024,7 +2024,6 @@ pageTitleProviders
          the lowest in priority.
 
    Examples
-
          By default, TYPO3 ships with two providers::
 
             config.pageTitleProviders {
