@@ -310,22 +310,21 @@ cache
          records for the cache lifetime of all pages.
 
    Examples
-         ::
-
-            config.cache.10 = fe_users:2
-
          This includes the fe\_users records on page 2 in the cache lifetime
          calculation for page 10::
 
-            config.cache.10 = fe_users:2,tt_news:11
+            config.cache.10 = fe_users:2
 
          This includes records from multiple sources, namely the fe\_users
          records on page 2 and the tt\_news records on page 11::
 
-            config.cache.all = fe_users:2
+            config.cache.10 = fe_users:2,tt_news:11
 
          Consider the fe\_user records on page 2 for the cache lifetime of all
-         pages.
+         pages::
+
+            config.cache.all = fe_users:2
+
 
 
 
