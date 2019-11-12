@@ -2071,7 +2071,6 @@ pageTitleSeparator
          the end of the separator.
 
    Examples
-
          This produces a title tag with the content "website . page title"::
 
             config.pageTitleSeparator = .
