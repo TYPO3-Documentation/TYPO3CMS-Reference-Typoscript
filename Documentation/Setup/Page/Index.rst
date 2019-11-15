@@ -533,6 +533,10 @@ includeJS.[array]
                 # in the TS constants field.
                 file2 = javascript_uploaded_to_template*.js
                 file2.if.isTrue = {$myConstant}
+                
+                twitter = http://twitter.com/javascripts/blogger.js
+                twitter.external = 1
+                twitter.integrity = sha256-C6CB9UYIS9UJeqinPHWTHVqh/E1uhG5Twh+Y5qFQmYg=
             }
 
 
@@ -551,6 +555,8 @@ includeJSFooter.[array]
          :ref:`data-type-resource`
 
    Description
+         Add JS files to footer (after possible files set in :ref:`includeJSFooterlibs <setup-page-includejsfooterlibs-array>`)
+
          Same as :ref:`includeJS <setup-page-includejs-array>` above, except that this block gets
          included at the bottom of the page (just before the closing :html:`</body>`
          tag).
@@ -571,6 +577,8 @@ includeJSFooterlibs.[array]
          :ref:`data-type-resource`
 
    Description
+         Add JS library files to footer.
+
          Same as :ref:`includeJSLibs <setup-page-includejslibs-array>`, except that this block gets
          included at the bottom of the page (just before the closing :html:`</body>`
          tag).
@@ -593,56 +601,9 @@ includeJSLibs.[array]
    Description
          Adds JS library files to head of page.
 
-         The file definition must be a valid :ref:`data-type-resource` data type,
-         otherwise nothing is inserted. This means that remote files cannot be
-         referenced (i.e. using `https://...`), except by using the :ts:`.external`
-         property.
-
-         Each file has *optional properties*:
-
-         **allWrap**: Wraps the complete tag, useful for conditional
-         comments.
-
-         **allWrap.splitChar**: Defines an alternative splitting character
-         (default is "\|" - the vertical line).
-
-         **async**: Allows the file to be loaded asynchronously.
-
-         **crossorigin**: Allows to set the crossorigin attribute in script
-         tags. Is automatically set to `anonymous` for external JavaScript
-         files if an :ts:`.integrity` is set.
-
-         **defer** Allows to set the HTML5 attribute :html:`defer`.
-
-         **disableCompression**: If :ts:`config.compressJs` is enabled, this
-         disables the compression of this file.
-
-         **excludeFromConcatenation**: If :ts:`config.concatenateJs` is enabled,
-         this prevents the file from being concatenated.
-
-         **.external:** If set, there is no file existence check. Useful for
-         inclusion of external files.
-
-         **.forceOnTop:** Boolean flag. If set, this file will be added on top
-         of all other files.
-
-         **.if:** Allows to define conditions, which must evaluate to TRUE for the
-         file to be included. If they do not evaluate to TRUE, the file will not be
-         included. Extensive usage might cause huge numbers of temporary files to be
-         created. See ->if for details.
-
-         **.integrity:** Adds the integrity attribute to the script element to let
-         browsers ensure subresource integrity. Useful in hosting scenarios with
-         resources externalized to CDN's. See `SRI <http://www.w3.org/TR/SRI/>`_ for
-         more details. Integrity hashes may be generated using `<https://srihash.org/>`_.
-
-         **Example:** ::
-
-            includeJSLibs.twitter = http://twitter.com/javascripts/blogger.js
-            includeJSLibs.twitter.external = 1
-            includeJSLibs.twitter.integrity = sha256-C6CB9UYIS9UJeqinPHWTHVqh/E1uhG5Twh+Y5qFQmYg=
-
-
+         Same as :ref:`includeJSLibs <setup-page-includejslibs-array>`, except that this block gets
+         included at the bottom of the page (just before the closing :html:`</body>`
+         tag).
 
 
 
