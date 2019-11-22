@@ -534,9 +534,9 @@ includeJS.[array]
                 file2 = javascript_uploaded_to_template*.js
                 file2.if.isTrue = {$myConstant}
                 
-                twitter = http://twitter.com/javascripts/blogger.js
-                twitter.external = 1
-                twitter.integrity = sha256-C6CB9UYIS9UJeqinPHWTHVqh/E1uhG5Twh+Y5qFQmYg=
+                jquery = https://code.jquery.com/jquery-3.4.1.min.js
+                jquery.external = 1
+                jquery.integrity = sha384-vk5WoKIaW/vJyUAd9n/wmopsmNhiy+L2Z+SBxGYnUkunIxVxAv/UtMOhba/xskxh
             }
 
 
