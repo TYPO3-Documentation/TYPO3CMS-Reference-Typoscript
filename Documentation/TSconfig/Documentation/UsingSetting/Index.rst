@@ -156,6 +156,11 @@ static templates are included):
    page TSconfig and before the normal TSconfig from the pages in the rootline.
 
 
+.. important::
+
+   You cannot use a language file as third parameter for :php:`registerPageTSConfigFile()`.
+   You must specify the text directly, see open issue on Forge: https://forge.typo3.org/issues/79928.
+
 .. _userthetsconfigfield:
 
 User TSconfig
