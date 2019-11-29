@@ -134,16 +134,12 @@ lang
    Array of language keys / :ref:`stdWrap`
 
 :aspect:`Description`
-   This is used to define optional language specific values.
-
-   If the global language key set by the :ref:`->config <config>` property .language is
-   found in this array, then this value is used instead of the default
-   input value to stdWrap.
+   This is used to define optional language specific values based on the
+   :ref:`current site language <t3coreapi:sitehandling-addingLanguages>`.
 
 :aspect:`Example`
    ::
 
-      config.language = de
       page.10 = TEXT
       page.10.value = I am a Berliner!
       page.10.stdWrap.lang.de = Ich bin ein Berliner!
