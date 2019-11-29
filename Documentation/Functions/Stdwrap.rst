@@ -134,7 +134,8 @@ lang
    Array of language keys / :ref:`stdWrap`
 
 :aspect:`Description`
-   This is used to define optional language specific values based on the current site language.
+   This is used to define optional language specific values based on the
+   :ref:`current site language <t3coreapi:sitehandling-addingLanguages>`.
 
 :aspect:`Example`
    ::
