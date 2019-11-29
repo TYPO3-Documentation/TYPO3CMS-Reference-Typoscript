@@ -15,7 +15,8 @@ loaded with the lowercased link-parameters!
 
 .. _typolink-extTarget:
 
-=========
+target
+======
 
 :aspect:`Property`
    extTarget
