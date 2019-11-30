@@ -151,8 +151,8 @@ templateRootPaths
          10 {
             templateName = Default
             templateRootPaths {
-               10 = EXT:sitedesign/Resources/Private/Layouts
-               20 = EXT:sitemodification/Resources/Private/Layouts
+               10 = EXT:sitedesign/Resources/Private/Templates
+               20 = EXT:sitemodification/Resources/Private/Templates
             }
          }
       }
