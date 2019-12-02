@@ -15,6 +15,13 @@ for more general information on RTE configuration and data processing.
    Some explanations and descriptions may contain slightly obsolete
    references. The principles are still valid though.
 
+The order in which configuration for the RTE is loaded is:
+
+1. preset defined for a specific field via PageTS 
+2. richtextConfiguration defined for a specific field via TCA 
+3. general preset defined via PageTS 
+4. default
+
 The full property path building is a bit more complex than for other
 property segments. The goal is that global options can be set that can
 also be overriden in more specific situations:
