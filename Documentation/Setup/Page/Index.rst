@@ -514,6 +514,9 @@ includeJS.[array]
          not be included. Extensive usage might cause huge numbers of temporary
          files to be created. See ->if for details.
 
+         **nomodule**: Will set the nomodule HTML-5 attribute preventing a
+         script from being executed in user agents that support module scripts.
+
          **type**: Setting the MIME type of the script. Default: The attribute is
          omitted for frontend rendering when :ts:`config.doctype` is not set or
          set to :ts:`html5`. Otherwise :html:`text/javascript` is used as type.
@@ -579,7 +582,7 @@ includeJSFooterlibs.[array]
    Description
          Add JS library files to footer.
 
-         Same as :ref:`includeJSLibs <setup-page-includejslibs-array>`, except that this block gets
+         Same as :ref:`includeJS <setup-page-includejs-array>`, except that this block gets
          included at the bottom of the page (just before the closing :html:`</body>`
          tag).
 
@@ -601,9 +604,8 @@ includeJSLibs.[array]
    Description
          Adds JS library files to head of page.
 
-         Same as :ref:`includeJSLibs <setup-page-includejslibs-array>`, except that this block gets
-         included at the bottom of the page (just before the closing :html:`</body>`
-         tag).
+         Same as :ref:`includeJS <setup-page-includejs-array>`, except that this
+         block will be included before `includeJS`.
 
 
 
