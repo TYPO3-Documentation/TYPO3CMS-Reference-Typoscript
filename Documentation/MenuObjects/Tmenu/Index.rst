@@ -3,8 +3,15 @@
 
 .. _tmenu:
 
+
+=====
 TMENU
-^^^^^
+=====
+
+.. note::
+
+   TMENU is a menu object type.
+
 
 .. ### BEGIN~OF~TABLE ###
 

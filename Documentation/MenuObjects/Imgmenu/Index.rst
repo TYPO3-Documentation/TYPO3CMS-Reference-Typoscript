@@ -3,10 +3,15 @@
 
 .. _imgmenu:
 
+=======
 IMGMENU
-^^^^^^^
+=======
 
-Imagemaps are made by creating one large GIFBUILDER object based on
+.. note::
+
+   IMGMENU is a menu object type.
+
+Imagemaps are made by creating one large :ref:`GIFBUILDER <gifbuilder>` object based on
 the GIFBUILDER object ".main" and adding the properties of the
 GIFBUILDER objects for each item (NO, ACT, SPC... and so on).
 

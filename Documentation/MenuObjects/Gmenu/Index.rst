@@ -3,8 +3,13 @@
 
 .. _gmenu:
 
+=====
 GMENU
-^^^^^
+=====
+
+.. note::
+
+   GMENU is a menu object type.
 
 GMENU works as an object under the cObject "HMENU" and it creates
 graphical navigation, where each link is a separate gif-file.

@@ -1,11 +1,18 @@
 .. include:: ../Includes.txt
 
+.. _data-type-cobject:
+.. _cobject:
 
-.. _cobjects:
+====================
+Content object types
+====================
 
-Content Objects (cObject)
--------------------------
 
+:aspect:`Description:`
+   "cObject" is a complex data type to describe content objects.
+
+:aspect:`Examples:`
+    :ref:`TEXT <cobj-text>` | :ref:`IMAGE <cobj-image>` | :ref:`FLUIDTEMPLATE <cobj-fluidtemplate>`
 
 .. toctree::
    :maxdepth: 5

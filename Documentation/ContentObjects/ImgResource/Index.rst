@@ -3,10 +3,11 @@
 
 .. _cobj-img-resource:
 
+=============
 IMG\_RESOURCE
-^^^^^^^^^^^^^
+=============
 
-Returns a reference to an image, possibly wrapped with stdWrap. Can
+Objects of type IMG_RESOURCE returns a reference to an image, possibly wrapped with stdWrap. Can
 for example be used for putting background images in tables or
 table-rows or to import an image in your own include-scripts.
 

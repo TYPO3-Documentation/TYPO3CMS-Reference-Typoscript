@@ -3,10 +3,11 @@
 
 .. _cobj-svg:
 
+===
 SVG
-^^^
+===
 
-With this element you can insert a SVG. You can use XML data directly
+With this object type you can insert a SVG. You can use XML data directly
 or reference a file. A flash fallback will be used for browsers which
 do not have native SVG support, so that it also works in e.g. IE
 6/7/8.

@@ -1,16 +1,11 @@
+:orphan:
+
 .. include:: ../../Includes.txt
 
 
-
-============
-Introduction
-============
-
-
-.. _objects-referencing:
-
+====================
 Reference to objects
---------------------
+====================
 
 Whenever you see *->[object name]* in the tables it means that the
 property is an object "*object name*" with properties from object

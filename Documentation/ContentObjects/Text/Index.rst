@@ -3,10 +3,12 @@
 
 .. _cobj-text:
 
+====
 TEXT
-^^^^
+====
 
-The content object "TEXT" can be used to output static text or HTML.
+
+A content object of the type "TEXT" can be used to output static text or HTML.
 
 stdWrap properties are available under the property "value" and on the
 very rootlevel of the object.

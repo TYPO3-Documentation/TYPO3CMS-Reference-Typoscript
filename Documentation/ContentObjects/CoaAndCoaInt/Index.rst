@@ -8,7 +8,14 @@
 COA, COA\_INT
 ^^^^^^^^^^^^^
 
-COA stands for "content object array" and is a cObject, in which you
+.. note::
+
+   * COA is an object type (= complex data type).
+   * It is a specific :ref:`cObject <cobject>` data type.
+
+COA stands for "content object array".
+
+An object with the content type COA is a cObject, in which you
 can place several other cObjects using numbers to enumerate them.
 
 You can also create this object as a COA\_INT in which case it works

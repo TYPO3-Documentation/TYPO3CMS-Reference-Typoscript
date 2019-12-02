@@ -3,10 +3,11 @@
 
 .. _cobj-image:
 
+=====
 IMAGE
-^^^^^
+=====
 
-Returns an image tag with the image file defined in the property
+Objects of type IMAGE return an image tag with the image file defined in the property
 "file" and processed according to the properties set.
 
 Defined as PHP function cImage() in

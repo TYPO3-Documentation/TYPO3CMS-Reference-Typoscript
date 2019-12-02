@@ -4,9 +4,9 @@
 .. _data-types:
 .. _data-types-reference:
 
-==========
-Data types
-==========
+=================
+Simple data types
+=================
 
 The values you assign to properties in TypoScript are often of a
 specific format. The following table describes these formats.

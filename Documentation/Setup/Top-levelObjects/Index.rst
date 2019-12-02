@@ -3,14 +3,10 @@
 
 .. _top-level-objects:
 
+=================
 Top-level objects
 =================
 
-.. only:: html
-
-   .. contents::
-      :local:
-      :depth: 1
 
 Properties
 ^^^^^^^^^^
@@ -263,6 +259,12 @@ types
          Types (internal)
 
          type=99 reserved for plaintext display
+=======
+:orphan:
+>>>>>>> 746d0f1... Clearly differentiate between objects and data types
 
+.. include:: ../../Includes.txt
+ 
+ 
+See :ref:`top-level-objects`
 
-.. ###### END~OF~TABLE ######
