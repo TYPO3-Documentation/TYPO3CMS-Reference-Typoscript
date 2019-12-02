@@ -3,8 +3,9 @@
 
 .. _section-index:
 
+==========================
 [menu object].sectionIndex
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+==========================
 
 This is a property that all menu objects share. If it is set, then the
 menu will not consist of links to pages on the "next level" but rather

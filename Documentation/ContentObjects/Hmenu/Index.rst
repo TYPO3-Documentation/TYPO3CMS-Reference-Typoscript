@@ -3,10 +3,11 @@
 
 .. _cobj-hmenu:
 
+=====
 HMENU
-^^^^^
+=====
 
-This cObject generates hierarchical menus. It is the one usually being
+Objects of type HMENU generate hierarchical menus. It is the one usually being
 used to create the navigation menu of websites.
 
 The cObject HMENU allows you to define the global settings of the menu

@@ -3,8 +3,9 @@
 .. _data-types:
 .. _data-types-reference:
 
-Data/value types
-================
+=================
+Simple data types
+=================
 
 The values assigned to properties in TypoScript are often of a
 specific format. These formats are described in this chapter.
@@ -97,58 +98,6 @@ case
 
       HELLO WORLD!
 
-.. _data-types-object-types:
-
-Object types
-------------
-
-These are complex "data types" which contain several member variables. The following types are descerned
-according to their internal processing:
-
-.. _data-type-cobject:
-
-cObject
-"""""""
-
-:aspect:`Data type:`
-   cObject
-
-:aspect:`Description:`
-   "cObjects" are also called "Content Objects". See the section
-   ":ref:`cobjects`".
-
-:aspect:`Examples:`
-    TEXT / IMAGE / TEMPLATE ...
-
-.. _data-type-frameobj:
-
-frameObj
-""""""""
-
-:aspect:`Data type:`
-   FRAMESET / FRAME
-
-.. _data-type-gifbuilderobj:
-
-Gifbuilder Object
-"""""""""""""""""
-
-:aspect:`Description:`
-   See section :ref:`GIFBUILDER` in this manual.
-
-:aspect:`Examples:`
-    TEXT / SHADOW / OUTLINE / EMBOSS / BOX / IMAGE / EFFECT
-
-.. _data-type-menuobj:
-
-menu object
-"""""""""""
-
-:aspect:`Description:`
-   See the section ":ref:`Menu Objects <menu-objects>`".
-
-:aspect:`Examples:`
-    GMENU / TMENU / IMGMENU
 
 .. _data-type-date-conf:
 

@@ -2,6 +2,9 @@
 
 
 .. _page:
+.. _page-datatype:
+.. _object-type-page:
+
 
 ====
 PAGE

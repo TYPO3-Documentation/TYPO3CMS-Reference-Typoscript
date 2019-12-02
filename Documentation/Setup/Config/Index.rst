@@ -1,10 +1,24 @@
 .. include:: ../../Includes.txt
 
+.. config object type
+
+
 .. _config:
+.. _config-object-type:
+.. _config-datatype:
+.. _top-level-objects-config:
 
 ======
-config
+CONFIG
 ======
+
+.. todo:: move this file to the new location: TopLevelObjects/ConfigObjectType.rst
+
+.. note::
+
+   * This is an object type (= complex data type).
+   * TYPO3 by default creates a top level object "config"
+     of the object type CONFIG.
 
 In :file:`typo3/sysext/frontend/Classes/` this is known as
 :php:`$GLOBALS['TSFE']->config['config']`, thus the property :ts:`debug` below is
@@ -671,11 +685,11 @@ contentObjectExceptionHandler
             # Disable the exception handling for an individual plugin/ content object
             tt_content.login.20.exceptionHandler = 0
 
-            # ignoreCodes and errorMessage can be both configured globally …
+            # ignoreCodes and errorMessage can be both configured globally â€¦
             config.contentObjectExceptionHandler.errorMessage = Oops an error occurred. Code: %s
             config.contentObjectExceptionHandler.ignoreCodes.10 = 1414512813
 
-            # … or locally for individual content objects
+            # â€¦ or locally for individual content objects
             tt_content.login.20.exceptionHandler.errorMessage = Oops an error occurred. Code: %s
             tt_content.login.20.exceptionHandler.ignoreCodes.10 = 1414512813
 
@@ -1282,7 +1296,7 @@ htmlTag.attributes
 
    Data type
         .. data-type-array does not exist. Does a data type "array" exist???
-        .. :ref:`data-type-array`
+.. :ref:`data-type-array`
 
         array
 
@@ -2289,7 +2303,7 @@ spamProtectEmailAddresses
 
          (It is recommended to set the value in the range from -5 to 1 since
          setting it to >= 2 means a "z" is converted to "\|" which is a special
-         character in TYPO3 tables syntax – and that might confuse columns in
+         character in TYPO3 tables syntax â€“ and that might confuse columns in
          tables. Now hardcoded range)
 
          Alternatively you can set this value to the keyword "ascii". This way
@@ -2637,7 +2651,7 @@ tx\_[extension key with no underscores]\_[\*]
          array
 
    Description
-         Configuration space for extensions. This can be used – for example –
+         Configuration space for extensions. This can be used â€“ for example â€“
          by plugins that need some TypoScript configuration, but that don't
          actually display anything in the frontend (i.e. don't receive their
          configuration as an argument from the frontend rendering process).

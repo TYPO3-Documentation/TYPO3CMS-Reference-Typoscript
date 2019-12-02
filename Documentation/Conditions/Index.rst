@@ -686,7 +686,7 @@ request.getNormalizedParams()
 .. _condition-function-request-getPageArguments():
 
 request.getPageArguments()
-"""""""""""""""""""""""""
+""""""""""""""""""""""""""
 
 :aspect:`Function`
    request.getPageArguments()

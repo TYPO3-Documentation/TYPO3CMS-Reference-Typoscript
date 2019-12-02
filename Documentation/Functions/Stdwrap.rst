@@ -2,6 +2,12 @@
 
 .. highlight:: typoscript
 
+
+.. The label objects-stdwrap should no longer be used.
+.. Use the label stdwrap instead.
+.. It only remains here, in case it is still being used.
+
+.. _objects-stdwrap:
 .. _stdwrap:
 
 =======

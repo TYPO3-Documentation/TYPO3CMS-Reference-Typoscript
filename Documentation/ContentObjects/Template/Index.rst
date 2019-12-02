@@ -3,8 +3,15 @@
 
 .. _cobj-template:
 
+========
 TEMPLATE
-^^^^^^^^
+========
+
+.. tip::
+
+  It is recommended to use :ref:`cobj-fluidtemplate` instead of TEMPLATE.
+  FLUIDTEMPLATE combines Fluid templates with TypoScript. This works very
+  similar to TEMPLATE.
 
 With this cObject you can define a template (e.g. an HTML file) which
 should be used as a basis for your whole website. Inside the template

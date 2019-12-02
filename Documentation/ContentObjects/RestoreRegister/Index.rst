@@ -3,8 +3,9 @@
 
 .. _cobj-restore-register:
 
+=================
 RESTORE\_REGISTER
-^^^^^^^^^^^^^^^^^
+=================
 
 This unsets the latest changes in the register-array as set by
 :ref:`LOAD_REGISTER <cobj-load-register>`.

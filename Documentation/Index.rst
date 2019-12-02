@@ -17,7 +17,6 @@ TypoScript Template Reference
 * :ref:`PAGE`
 * :ref:`cobj-text`
 
-
 :Version:
       |release|
 
@@ -34,7 +33,7 @@ TypoScript Template Reference
       since 2000
 
 :Author:
-      :ref:`Documentation Team <feedback>` & Community, see :ref:`Credits <credits>`
+      :ref:`Documentation Team <contact>` & TYPO3 community (see :ref:`credits`)
 
 :License:
       Open Publication License available from `www.opencontent.org/openpub/
@@ -43,11 +42,9 @@ TypoScript Template Reference
 The content of this document is related to TYPO3,
 a GNU/GPL CMS/Framework available from https://typo3.org/.
 
-
 .. rst-class:: horizbuttons-primary-m
 
 -  :ref:`Sitemap`
-
 
 .. _about-tsref:
 
@@ -132,25 +129,23 @@ on the Table of Contents to identify what particular section will best
 address the task at hand.
 
 
-Table of Contents and Sitemap
-=============================
-
-Please visit the complete :ref:`Sitemap`
+**Table of Contents**
 
 .. toctree::
-   :hidden:
+   :maxdepth: 1
 
    Introduction/Index
+   Glossary
    UsingSetting/Index
    DataTypes/Index
-   ObjectsAndProperties/Index
-   Conditions/Index
-   Functions/Index
-   Setup/Index
+   TopLevelObjects/Index
    ContentObjects/Index
-   Gifbuilder/Index
    MenuObjects/Index
+   Gifbuilder/Index
+   Functions/Index
+   Conditions/Index
    AppendixA/Index
+
 
 .. toctree::
    :caption: _________________

@@ -3,8 +3,14 @@
 
 .. _cobj-case:
 
+====
 CASE
-^^^^
+====
+
+.. note::
+
+   * CASE is an object type (= complex data type).
+   * It is a specific :ref:`cObject <cobject>` data type.
 
 This is a very flexible object whose rendering can vary depending on a
 given key. The principle is similar to that of the "switch" construct
