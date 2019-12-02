@@ -3,8 +3,9 @@
 
 .. _cobj-load-register:
 
+==============
 LOAD\_REGISTER
-^^^^^^^^^^^^^^
+==============
 
 This provides a way to load the array $GLOBALS['TSFE']->register[]
 with values. It does not return anything! 

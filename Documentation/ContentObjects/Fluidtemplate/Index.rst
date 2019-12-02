@@ -6,7 +6,7 @@
 FLUIDTEMPLATE
 =============
 
-The TypoScript object FLUIDTEMPLATE works in a similar way to the regular
+An object of type FLUIDTEMPLATE works in a similar way to the regular
 "marker"-based :ref:`TEMPLATE <cobj-template>` object. However, it does not use
 markers or subparts, but allows Fluid-style variables with curly braces.
 
