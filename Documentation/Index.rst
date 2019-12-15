@@ -8,9 +8,6 @@
 TypoScript Template Reference
 =============================
 
-:Previous Key:
-      doc_core_tsref
-
 :Version:
       |release|
 
@@ -27,17 +24,11 @@ TypoScript Template Reference
       2000-2015
 
 :Author:
-      Documentation Team
-
-:Email:
-      documentation@typo3.org
+      :ref:`Documentation Team <feedback>` & Community, see :ref:`Credits <credits>`
 
 :License:
       Open Publication License available from `www.opencontent.org/openpub/
       <http://www.opencontent.org/openpub/>`_
-
-:Rendered:
-      |today|
 
 The content of this document is related to TYPO3,
 
