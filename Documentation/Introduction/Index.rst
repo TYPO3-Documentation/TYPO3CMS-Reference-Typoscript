@@ -159,7 +159,13 @@ Always remember: In this manual the case of objects **is** important.
 Version numbers
 """""""""""""""
 
+<<<<<<< HEAD
 For new features TSref includes a note in which TYPO3 version the
 feature was added. If such a note is missing, the feature is part of
 TYPO3 since version 4.5 at least.
 
+=======
+For new features the "TypoScript Template Reference" includes a note in which TYPO3 version the
+feature was added. If such a note is missing, the feature is part of TYPO3 since
+version 7.6 at least.
+>>>>>>> e8f826f... Change title to "TypoScript Template Reference"
