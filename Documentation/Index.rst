@@ -7,9 +7,6 @@
 TypoScript Template Reference
 =============================
 
-:Previous Key:
-      doc_core_tsref
-
 :Version:
       |release|
 
@@ -26,17 +23,11 @@ TypoScript Template Reference
       since 2000
 
 :Author:
-      Documentation Team
-
-:Email:
-      documentation@typo3.org
+      :ref:`Documentation Team <feedback>` & Community, see :ref:`Credits <credits>`
 
 :License:
       Open Publication License available from `www.opencontent.org/openpub/
       <http://www.opencontent.org/openpub/>`_
-
-:Rendered:
-      |today|
 
 The content of this document is related to TYPO3,
 a GNU/GPL CMS/Framework available from https://typo3.org/.
