@@ -12,9 +12,6 @@
 TypoScript Template Reference
 =============================
 
-:Previous Key:
-      doc_core_tsref
-
 :Version:
       6.2
 
@@ -31,17 +28,11 @@ TypoScript Template Reference
       2000-2014
 
 :Author:
-      Documentation Team
-
-:Email:
-      documentation@typo3.org
+      :ref:`Documentation Team <feedback>` & Community, see :ref:`Credits <credits>`
 
 :License:
       Open Content License available from `www.opencontent.org/opl.shtml
       <http://www.opencontent.org/opl.shtml>`_
-
-:Rendered:
-      |today|
 
 The content of this document is related to TYPO3,
 
