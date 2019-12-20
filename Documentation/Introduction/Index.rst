@@ -93,6 +93,6 @@ Always remember: In this manual the case of objects **is** important.
 Version numbers
 """""""""""""""
 
-For new features TypoScript Reference includes a note in which TYPO3 version the
+For new features the "TypoScript Template Reference" includes a note in which TYPO3 version the
 feature was added. If such a note is missing, the feature is part of TYPO3 since
 version 7.6 at least.
