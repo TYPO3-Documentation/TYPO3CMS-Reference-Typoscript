@@ -201,7 +201,7 @@ config.treeConfig
         config.treeConfig.rootUid
         config.treeConfig.appearance.expandAll
         config.treeConfig.appearance.maxLevels
-        config.treeConfig.appearance.notSelectableLevels
+        config.treeConfig.appearance.nonSelectableLevels
 
     This property is available for various levels:
 
