@@ -318,14 +318,14 @@ settings
 
          .. code-block:: typoscript
 
-         page = PAGE
-         page.10 = FLUIDTEMPLATE
-         page.10 {
-            file = fileadmin/templates/MyTemplate.html
-            settings {
-               copyrightYear = 2013
-            }
-         }
+             page = PAGE
+             page.10 = FLUIDTEMPLATE
+             page.10 {
+                file = fileadmin/templates/MyTemplate.html
+                settings {
+                   copyrightYear = 2013
+                }
+             }
 
          To access copyrightYear in the template file use this:
 
