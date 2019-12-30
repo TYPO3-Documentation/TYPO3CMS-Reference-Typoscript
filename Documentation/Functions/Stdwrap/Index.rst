@@ -1344,7 +1344,7 @@ encodeForJavaScriptValue
          TypoScript.
 
          Passes the content through the core function
-         :ref:`t3api:TYPO3\\CMS\\Core\\Utility\\GeneralUtility::quoteJSvalue`.
+         :php:`GeneralUtility::quoteJSvalue`.
 
          **Example:** ::
 

@@ -66,9 +66,7 @@ TypoScript as used in frontend TypoScript templates, and not in :ref:`TSconfig <
 .. seealso::
 
     * For explanations about the syntax of TypoScript itself,
-      please refer to the
-      :ref:`TypoScript Syntax <t3coreapi:typoscript-syntax-start>`
-      chapter in "TYPO3 Explained"
+      please refer to :ref:`t3tssyntax:start`
     * For an introduction to TypoScript Templates, see :ref:`t3ts45:start`
 
 
