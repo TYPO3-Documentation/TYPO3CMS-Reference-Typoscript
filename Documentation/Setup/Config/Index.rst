@@ -1281,7 +1281,10 @@ htmlTag.attributes
          htmlTag.attributes
 
    Data type
-         :ref:`data-type-array`
+        .. data-type-array does not exist. Does a data type "array" exist???
+        .. :ref:`data-type-array`
+
+        array
 
    Description
          Sets the attributes for the :html:`<html>` tag on the page. Allows to override

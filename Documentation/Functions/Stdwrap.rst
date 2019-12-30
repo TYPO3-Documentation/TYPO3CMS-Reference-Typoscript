@@ -770,8 +770,6 @@ numberFormat
 date
 ~~~~
 
-.. container:: table-row
-
 :aspect:`Property`
    date
 
@@ -916,8 +914,6 @@ age
 case
 ~~~~
 
-.. container:: table-row
-
 :aspect:`Property`
    case
 
@@ -934,8 +930,6 @@ case
 
 bytes
 ~~~~~
-
-.. container:: table-row
 
 :aspect:`Property`
    bytes

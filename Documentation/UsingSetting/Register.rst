@@ -1,6 +1,5 @@
 .. include:: ../Includes.txt
 
-.. _typoscript-syntax-typoscript-templates-structure:
 
 Register
 ========

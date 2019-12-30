@@ -21,6 +21,7 @@ used to define the rendering of each single menu level.
    CommonItemStates/Index
    Sectionindex/Index
    Gmenu/Index
+   Gmenuitem/Index
    Tmenu/Index
    Tmenuitem/Index
    Imgmenu/Index
