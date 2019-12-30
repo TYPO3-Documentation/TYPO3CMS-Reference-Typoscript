@@ -1198,10 +1198,7 @@ substring
          [p1], [p2] /stdWrap
 
    Description
-         Returns the substring with [p1] and [p2] sent as the 2nd and 3rd
-         parameter to the PHP `mb_substr <http://www.php.net/mb_substr>`_ function.
-
-         Uses "UTF-8" for the operation.
+         Returns the substring with [p1] and [p2] sent as the 2nd and 3rd parameter to the PHP `mb_substr <http://www.php.net/mb_substr>`_ function. Uses "UTF-8" for the operation.
 
 
 .. _stdwrap-removebadhtml:
@@ -1374,7 +1371,7 @@ encodeForJavaScriptValue
          TypoScript.
 
          Passes the content through the core function
-         :ref:`t3api:TYPO3\\CMS\\Core\\Utility\\GeneralUtility::quoteJSvalue`.
+         :php:`GeneralUtility::quoteJSvalue`.
 
          **Example:** ::
 

@@ -99,7 +99,7 @@ Properties
    `sys\_language\_isocode\_default`_                    :ref:`data-type-string`
    `sys\_language\_mode`_                                :ref:`data-type-string`
    `sys\_language\_overlay`_                             boolean / keyword
-   `sys\_language\_softMergeIfNotBlank`_                 :ref:`data-type-string`
+   sys_language_softMergeIfNotBlank                      :ref:`data-type-string`
    `sys\_language\_uid`_                                 :ref:`data-type-integer`
    `titleTagFunction`_                                   function name
    `tx\_[extension key with no underscores]\_[\*]`_      \-

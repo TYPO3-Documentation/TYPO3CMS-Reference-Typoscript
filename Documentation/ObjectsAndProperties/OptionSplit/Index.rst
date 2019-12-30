@@ -59,8 +59,7 @@ PHP-Code
 ========
 
 Lookout for usages of the function :php:`splitConfArray` which is part of the :php:`Core TypoScript TemplateService`
-class: :ref:`TYPO3 \\ CMS \\ Core \\ TypoScript \\ TemplateService :: splitConfArray()
-<t3api:TYPO3\\CMS\\Core\\TypoScript\\TemplateService::splitConfArray>`.
+class: :php:`TYPO3\CMS\Core\TypoScript\TemplateService::splitConfArray()`.
 
 
 

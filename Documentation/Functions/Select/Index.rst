@@ -16,18 +16,19 @@ in the :php:`$GLOBALS['TCA']`.
 .. warning::
 
    Do not use GET or POST data like GPvar directly with this object!
-   Avoid SQL injections! Don't trust any external data! Secure
-   any unknown data, for example with :ref:`intval`.
+   Avoid SQL injections! Don't trust any external data!
+   Sanitize your input first!
 
 
 
 Comprehensive example
 ---------------------
 
-See PHP source code for
-:ref:`TYPO3 \\ CMS \\ Frontend \\ ContentObject \\ ContentObjectRenderer <t3api:typo3\\cms\\frontend\\ContentObject\\ContentObjectRenderer>`,
-:ref:`ContentObjectRenderer::getQuery() <t3api:typo3\\cms\\frontend\\ContentObject\\ContentObjectRenderer::getQuery>`,
-:ref:`ContentObjectRenderer::getWhere() <t3api:typo3\\cms\\frontend\\ContentObject\\ContentObjectRenderer::getWhere>`.
+See PHP source code for:
+
+* ContentObjectRenderer (full namespace: :php:`\TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer`)
+* :php:`ContentObjectRenderer::getQuery()`
+* :php:`ContentObjectRenderer::getWhere()`
 
 
 .. Preamble: :
