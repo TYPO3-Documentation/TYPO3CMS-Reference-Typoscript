@@ -478,8 +478,8 @@ dataProcessing
          <li>Keyword: {keyword}</li>
       </f:for>
 
-   **Using the :php:`CommaSeparatedValueProcessor` the following scenario is
-   possible:** ::
+   Using the :php:`CommaSeparatedValueProcessor` the following scenario is
+   possible::
 
       page {
          10 = FLUIDTEMPLATE
@@ -511,7 +511,7 @@ dataProcessing
          </f:for>
       </table>
 
-   **Using the :php:`FilesProcessor` the following scenario is possible:** ::
+   Using the :php:`FilesProcessor` the following scenario is possible::
 
       tt_content.image.20 = FLUIDTEMPLATE
       tt_content.image.20 {
@@ -571,7 +571,7 @@ dataProcessing
          </f:for>
       </ul>
 
-   **Using the :php:`DatabaseQueryProcessor` the following scenario is possible:** ::
+   Using the :php:`DatabaseQueryProcessor` the following scenario is possible::
 
       tt_content.mycontent.20 = FLUIDTEMPLATE
       tt_content.mycontent.20 {
@@ -621,7 +621,7 @@ dataProcessing
       </f:for>
       </ul>
 
-   **Using the :php:`GalleryProcessor` the following scenario is possible** ::
+   Using the :php:`GalleryProcessor` the following scenario is possible::
 
       tt_content.textmedia.20 = FLUIDTEMPLATE
       tt_content.textmedia.20 {
@@ -798,7 +798,7 @@ dataProcessing
          />
       </f:section>
 
-   **Using the :php:`MenuProcessor` the following scenario is possible:** ::
+   Using the :php:`MenuProcessor` the following scenario is possible::
 
       10 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
       10 {
@@ -825,7 +825,7 @@ dataProcessing
          </ul>
       </nav>
 
-   **Using the :php:`LanguageMenuProcessor` the following scenario is possible:**
+   Using the :php:`LanguageMenuProcessor` the following scenario is possible:
 
    Options:
 
@@ -867,7 +867,7 @@ dataProcessing
          </ul>
       </f:if>
 
-   **Using the :php:`SiteProcessor` the following scenario is possible:**
+   Using the :php:`SiteProcessor` the following scenario is possible:
 
    Options:
 
