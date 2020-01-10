@@ -7,11 +7,15 @@
 typolink
 ========
 
-Wraps the incoming value with a link.
+Wraps the incoming value with a link without or inside of HTML 'a' tags.
 
 *Attention:*
 If this is used from :ts:`parseFunc` the :php:`$cObj->parameters` array is
 loaded with the lowercased link-parameters!
+
+*Attention:*
+If you do not want to have the HTML 'a' tag around the link, then you must set the property by :ts:`returnLast = 'url'` or :php:`$lconf['returnLast'] = 'url'`.
+
 
 .. _typolink-extTarget:
 
