@@ -7,11 +7,42 @@
 typolink
 ========
 
-Wraps the incoming value with a link.
+Wraps the incoming value in a link with an HTML 'a' tag.
+
+If you do not want to have the HTML 'a' tag around the link, then you
+must set the property by :ts:`returnLast = url` or
+:php:`$lconf['returnLast'] = 'url'`.
 
 *Attention:*
 If this is used from :ts:`parseFunc` the :php:`$cObj->parameters` array is
 loaded with the lowercased link-parameters!
+
+Examples
+========
+
+Create a link to page with uid 2::
+
+   page.20 = TEXT
+   page.20.value = anchor text
+   page.20.typolink.parameter = 2
+
+Output:
+
+.. code-block:: html
+
+   <a href="/somepage">anchor text</a>
+
+Just display the URL::
+
+   page.30 = TEXT
+   page.30.typolink.parameter = 2
+   page.30.typolink.returnLast = url
+
+Output:
+
+.. code-block:: html
+
+   /somepage
 
 .. _typolink-extTarget:
 
