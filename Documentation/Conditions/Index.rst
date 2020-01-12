@@ -680,6 +680,31 @@ request.getNormalizedParams()
    ::
 
       [request.getNormalizedParams().getHttpHost() == "typo395.ddev.local"]
+ 
+ 
+
+.. _condition-function-request-getPageArguments():
+
+request.getPageArguments()
+"""""""""""""""""""""""""
+
+:aspect:`Function`
+   request.getPageArguments()
+
+:aspect:`Parameter`
+   None
+
+:aspect:`Type`
+   Array
+ 
+:aspect:`Description`
+   Get current `PageArguments` object with resolved route parts from enhancers.
+   
+:aspect:`Example`
+   [request.getPageArguments().get('foo_id') > 0]
+   
+   Allows migration from old condition syntax using `[globalVar = GP:singlepartner > 0]`
+   to `[request.getPageArguments().get('singlepartner') > 0]`.
 
 .. _condition-function-date:
 
