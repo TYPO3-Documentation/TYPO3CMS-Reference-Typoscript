@@ -576,6 +576,9 @@ global:
 global: [GLOBAL variable, split with \| if you want to get from an
 array! Deprecated, use GP, TSFE or getenv!]
 
+
+.. _data-type-gettext-flexform:
+
 flexform:
 ---------
 
