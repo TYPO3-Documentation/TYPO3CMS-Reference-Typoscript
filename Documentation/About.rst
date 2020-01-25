@@ -7,9 +7,17 @@
 About This Manual
 =================
 
-The TypoScript Reference (TSref) is a true reference
-describing the core Content Objects and functions available
-for Template building using the TypoScript template engine.
+This document is a complete reference to all objects types and properties of
+TypoScript as used in frontend TypoScript template building, and not in
+:ref:`TSconfig <t3tsconfig:start>`.
+
+.. seealso::
+
+    * For explanations about the syntax of TypoScript itself,
+      please refer to the
+      :ref:`TypoScript Syntax <t3coreapi:typoscript-syntax-start>`
+      chapter in "TYPO3 Explained"
+    * For an introduction to TypoScript Templates, see :ref:`t3ts45:start`
 
 .. _credits:
 
