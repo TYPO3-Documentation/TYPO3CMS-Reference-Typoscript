@@ -37,7 +37,6 @@ an HTML color code or comma-separated RGB-values.
    Linkwrap/Index
    List/Index
    Margins/Index
-   Objecttypes/Index
    Pageid/Index
    Path/Index
    Pixels/Index

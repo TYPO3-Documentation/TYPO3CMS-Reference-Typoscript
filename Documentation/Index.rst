@@ -141,7 +141,7 @@ address the task at hand.
    TopLevelObjects/Index
    ContentObjects/Index
    MenuObjects/Index
-   Gifbuilder/Index
+   ObjectTypesOther/Index
    Functions/Index
    Conditions/Index
    AppendixA/Index

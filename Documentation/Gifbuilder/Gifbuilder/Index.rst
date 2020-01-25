@@ -2,6 +2,7 @@
 
 
 .. _gifbuilder:
+.. _data-type-gifbuilderobj:
 
 ==========
 GIFBUILDER

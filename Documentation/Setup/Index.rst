@@ -2,7 +2,6 @@
 
 .. include:: ../Includes.txt
 
-.. _setup:
 
 =====
 Setup

@@ -54,12 +54,5 @@ example `config` or `plugin`.
    ../Setup/Plugin/Index
    Other
 
-.. move files in Setup to here:
 
-.. todo:: move Setup/Config/Index > TopLevelObjects/ConfigObjectType
-
-.. todo:: move Setup/Constants/Index > TopLevelObjects/Constants
-
-.. todo:: move Setup/Page/Index >> TopLevelObjects/PageObjectType
-
-.. todo:: move Setup/Plugin >> TopLevelObjects/Plugin
+.. todo:: move Setup/Config/Index > TopLevelObjects/ConfigObjectType, move Setup/Constants/Index > TopLevelObjects/Constants, move Setup/Page/Index >> TopLevelObjects/PageObjectType, move Setup/Plugin >> TopLevelObjects/Plugin

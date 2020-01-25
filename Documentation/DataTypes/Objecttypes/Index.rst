@@ -1,3 +1,5 @@
+:orphan:
+
 .. include:: ../../Includes.txt
 
 
@@ -6,16 +8,6 @@
 Data types: Object types
 ========================
 
-These are some "data types" that might be mentioned and valid values
-are shown here below:
-
-
-.. toctree::
-   :maxdepth: 5
-   :titlesonly:
-   :glob:
-
-   Cobject/Index
-   Frameobject/Index
-   Gifbuilderobject/Index
-   Menuobject/Index
+* :ref:`cobject`
+* :ref:`menu-objects`
+* :ref:`gifbuilder-toc`

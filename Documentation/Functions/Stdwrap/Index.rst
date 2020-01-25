@@ -3,9 +3,11 @@
 .. highlight:: typoscript
 
 .. _stdwrap:
+.. _objects-stdwrap:
 
+=======
 stdWrap
-^^^^^^^
+=======
 
 This function is often added as a property to values in TypoScript.
 
