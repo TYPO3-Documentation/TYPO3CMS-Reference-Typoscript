@@ -12,6 +12,17 @@
 TypoScript Template Reference
 =============================
 
+.. rst-class:: horizbuttons-primary-m
+ 
+* :ref:`CONFIG <config>`
+* :ref:`cobj-content`
+* :ref:`cobj-fluidtemplate`
+* :ref:`cobj-hmenu`
+* :ref:`cobj-image`
+* :ref:`PAGE`
+* :ref:`cobj-text`
+
+
 :Version:
       6.2
 
@@ -41,26 +52,12 @@ a GNU/GPL CMS/Framework available from `www.typo3.org
 
 
 
-Quick Links
-===========
-
-.. rst-class:: horizbuttons-primary-m
-
-* :ref:`CONFIG <config>`
-* :ref:`cobj-content`
-* :ref:`cobj-fluidtemplate`
-* :ref:`cobj-hmenu`
-* :ref:`cobj-image`
-* :ref:`PAGE`
-* :ref:`cobj-text`
-
-
 .. rst-class:: horizbuttons-primary-m
 
 -  :ref:`Sitemap`
 
-.. _about-tsref:
 
+.. _about-tsref:
 
 About This Manual
 =================
