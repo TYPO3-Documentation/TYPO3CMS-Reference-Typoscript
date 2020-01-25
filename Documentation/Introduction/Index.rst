@@ -7,8 +7,6 @@
 Introduction
 ============
 
-TypoScript templates are used to build a custom theme
-
 What is to be rendered on a page in the frontend,
 the menu structure, how content objects are displayed, etc. can be
 defined with TypoScript - often it is used in
@@ -34,11 +32,12 @@ Additionally, in TypoScript templates, you must differentiate between
 
 Though TypoScript does include "functions" and "objects" and "conditions"
 it is not a programming language. Think of it more as a configuration
-language. The results of the TypoScript setup
+language. The results of the TypoScript setup are used to build a PHP
+array.
 
 Basically think of TypoScript as a means to "configure" the **frontend**,
-while TSconfig is used to configure the **backend**. (This is not 100%
-true, but gives you the basic idea.)
+while TSconfig is used to configure the **backend** (with a few exceptions
+to this principle)
 
 Please read the following for an introduction:
 
