@@ -52,7 +52,7 @@ Quick Links
 -  :ref:`Sitemap`
 
 .. _about-tsref:
-.. _introduction:
+
 
 About This Manual
 =================
@@ -143,6 +143,7 @@ Please visit the complete :ref:`Sitemap`
 .. toctree::
    :hidden:
 
+   Introduction/Index
    UsingSetting/Index
    DataTypes/Index
    ObjectsAndProperties/Index
