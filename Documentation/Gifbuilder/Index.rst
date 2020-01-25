@@ -3,7 +3,7 @@
 .. _gifbuilder-toc:
 
 ======================
-GIFBUILDER Object Type
+GIFBUILDER object type
 ======================
 
 
