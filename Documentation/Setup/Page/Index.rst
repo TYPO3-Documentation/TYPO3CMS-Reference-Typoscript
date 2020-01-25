@@ -6,11 +6,14 @@
 .. _object-type-page:
 
 
-====
-PAGE
-====
+===========
+PAGE & page
+===========
 
 This defines what is rendered in the frontend.
+
+PAGE is an object type. A good habit is to use :ts:`page` as the top-level object name for
+the content-page on a website.
 
 TYPO3 does not initialize :ts:`page` by default. You must initialize this
 explicitly, e.g.::
@@ -22,10 +25,6 @@ Pages are referenced by two main values. The "id" and "type".
 
 **The "id"** points to the uid of the page (or the alias). Thus the
 page is found.
-
-
-A good habit is to use :ts:`page` as the top-level object name for
-the content-page on a website.
 
 Most of this code is executed in the PHP script
 :file:`typo3/sysext/frontend/Classes/Page/PageGenerator.php`.
