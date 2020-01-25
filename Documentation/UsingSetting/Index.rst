@@ -1,7 +1,7 @@
 .. include:: ../Includes.txt
 
 
-.. _typoscript-syntax-typoscript-templates:
+.. _using-and-setting:
 
 Using and setting TypoScript
 ============================
