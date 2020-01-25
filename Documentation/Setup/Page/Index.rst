@@ -8,16 +8,74 @@
 PAGE & page
 ===========
 
-.. note::
+This defines what is rendered in the frontend.
 
-   * PAGE is an object type
-   * It is common practice to define a top level object **page**
-     of the data type PAGE::
+PAGE is an object type. A good habit is to use :ts:`page` as the top-level object name for
+the content-page on a website.
 
-        page = PAGE
+TYPO3 does not initialize :ts:`page` by default. You must initialize this
+explicitly, e.g.::
+
+    page = PAGE
+
+
+Pages are referenced by two main values. The "id" and "type".
+
+**The "id"** points to the uid of the page (or the alias). Thus the
+page is found.
 
 Most of this code is executed in the PHP script
 :file:`typo3/sysext/frontend/Classes/Page/PageGenerator.php`.
+
+
+Multiple pages
+==============
+
+
+**The "type"** is used to define how the page should be rendered. This
+is primarily used with different representations of the same content.
+Your default page will most likely have type 0 while a JSON stream with the same
+content could go with type 1.
+
+When rendering pages in the frontend, TYPO3 uses the GET parameter **"type"**
+to define how the page should be rendered. This
+is primarily used with different representations of the same content.
+Your default page will most likely have type 0 (which is the default) while a JSON
+stream with the same content could go with type 1.
+
+The property :ref:`typeNum <setup-page-typenum>`  defines for which type,
+the page will be used.
+
+Example::
+
+    page = PAGE
+    page.typeNum = 0
+    page {
+       # set properties ...
+    }
+
+    json = PAGE
+    json.typeNum = 1
+    # ...
+
+In the frontend, the original URLs that are generated will include the type and
+an id parameter (for the page id), example (for json and page id 22):
+
+``/index.php?id=22&type=1``
+
+
+Guidelines
+----------
+
+Good, general PAGE object names to use are:
+
+* **page** for the main page with content
+* **json** for a json stream with content
+* **xml** for a XML stream with content
+
+These are just recommendations. However, especially the name page for the content bearing page
+is very common and most documentation will imply that your main page object is called page.
+
 
 
 Examples
