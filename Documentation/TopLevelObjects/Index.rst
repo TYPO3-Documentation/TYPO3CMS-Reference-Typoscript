@@ -26,8 +26,8 @@ example `config` or `plugin`.
    ===================================== =========================
    Top-level object                      Top-level object type
    ===================================== =========================
-   :ref:`page | ... <tlo-page>`          :ref:`page-datatype`
-   config                                :ref:`config-datatype`
+   page, ...                             :ref:`PAGE <page-datatype>`
+   config                                :ref:`CONFIG <config-datatype>`
    :ref:`tlo-constants`
    :ref:`plugin`
    :ref:`tlo-module`
