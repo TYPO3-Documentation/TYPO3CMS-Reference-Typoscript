@@ -184,6 +184,25 @@ tree.rootLineIds
 
       [2 in tree.rootLineIds]
 
+.. _condition-tree-rootLineParentIds:
+
+tree.rootLineParentIds
+""""""""""""""""""""""
+
+:aspect:`Variable`
+   tree.rootLineParentIds
+
+:aspect:`Type`
+   Array
+
+:aspect:`Description`
+   An array with parent UIDs of the root line.
+
+:aspect:`Example`
+   Check whether page with uid 2 is the parent of a page inside the root line::
+
+      [2 in tree.rootLineParentIds]
+
 .. _condition-backend:
 
 backend
