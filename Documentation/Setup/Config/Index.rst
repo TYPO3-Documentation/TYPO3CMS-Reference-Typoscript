@@ -11,7 +11,6 @@ CONFIG & config
 
 .. note::
 
-   * This is an object type (= complex data type).
    * TYPO3 by default creates a top level object "config"
      of the object type CONFIG.
 
