@@ -132,7 +132,6 @@ address the task at hand.
 **Table of Contents**
 
 .. toctree::
-   :titlesonly:
    :maxdepth: 1
 
    Introduction/Index
