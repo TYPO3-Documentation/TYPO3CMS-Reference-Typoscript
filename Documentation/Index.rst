@@ -136,6 +136,7 @@ address the task at hand.
    :maxdepth: 1
 
    Introduction/Index
+   UsingSetting/Index
    Glossary
    DataTypes/Index
    TopLevelObjects/Index
