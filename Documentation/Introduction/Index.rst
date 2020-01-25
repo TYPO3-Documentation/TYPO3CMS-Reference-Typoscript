@@ -45,16 +45,6 @@ Please read the following for an introduction:
 * :ref:`TypoScript Syntax <t3coreapi:typoscript-syntax-start>`
   chapter in "TYPO3 Explained" for an introduction to the TypoScript
   syntax
-* :ref:`t3start:Templating` in the "Getting Started Tutorial" for an
-  introduction into templating in general.
 * :ref:`t3ts45:start` for an introduction to TypoScript Templating
-* The chapter :ref:`using-and-setting` describes how to use, set
-  and extend TypoScript.
 
 
-Further information may also be helpful:
-
-* :ref:`t3sitepackage:start` for a complete walkthrough of creating a
-  sitepackage, which is the basis for a custom theme for your site.
-* :ref:`t3coreapi:config-overview` in "TYPO3 Explained" for an overview
-  of various configuration languages and methods in TYPO3
