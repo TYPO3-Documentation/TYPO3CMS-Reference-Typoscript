@@ -1,10 +1,10 @@
 .. include:: ../Includes.txt
 
-
 .. _gifbuilder-toc:
 
-GIFBUILDER
-----------
+======================
+GIFBUILDER Object Type
+======================
 
 
 .. toctree::

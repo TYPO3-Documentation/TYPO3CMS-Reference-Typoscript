@@ -3,17 +3,18 @@
 
 .. _cobj-files:
 
+=====
 FILES
-^^^^^
+=====
 
-This content object was integrated with the File Abstraction Layer (FAL)
+A content object of type FILE was integrated with the File Abstraction Layer (FAL)
 and is there to output information about files.
 
 
 .. note::
 
-   Do not mix this up with the cObject :ref:`FILE <cobj-file>`; both are
-   different cObjects.
+   Do not mix this up with the cObject data type :ref:`FILE <cobj-file>`; both are
+   different cObject data types.
 
 
 .. container:: table-row
