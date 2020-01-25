@@ -142,6 +142,8 @@ Please visit the complete :ref:`Sitemap`.
    :hidden:
 
    Introduction/Index
+   UsingSetting/Index
+   Glossary
    DataTypes/Index
    ObjectsAndProperties/Index
    Conditions/Index
