@@ -12,7 +12,7 @@
 CONFIG
 ======
 
-.. todo:: move this file to the new location: TopLevelObjects/ConfigObjectType.rst
+.. todo:: move this file to the new location: TopLevelObjects/Config.rst
 
 .. note::
 

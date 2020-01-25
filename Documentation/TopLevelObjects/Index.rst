@@ -27,7 +27,7 @@ example `config` or `plugin`.
    Top-level object                      Top-level object type
    ===================================== =========================
    :ref:`page | ... <tlo-page>`          :ref:`page-datatype`
-   :ref:`config <tlo-config>`            :ref:`config-datatype`
+   config                                :ref:`config-datatype`
    :ref:`tlo-constants`
    :ref:`plugin`
    :ref:`tlo-module`
@@ -46,12 +46,10 @@ example `config` or `plugin`.
 .. toctree::
    :hidden:
 
-   Config
    ../Setup/Config/Index
    ../Setup/Constants/Index
    GifbuilderTopLevelObject
    Module
-   Page
    ../Setup/Page/Index
    ../Setup/Plugin/Index
    Other
