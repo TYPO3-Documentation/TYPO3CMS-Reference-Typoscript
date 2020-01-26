@@ -2,6 +2,7 @@
 
 .. _introduction:
 .. _typoscript-syntax-typoscript-templates:
+.. _objects-introduction:
 
 ============
 Introduction

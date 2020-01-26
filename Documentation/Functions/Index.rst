@@ -19,6 +19,7 @@ Functions
 
    Addparams/Index
    Cache/Index
+   Calc
    Encapslines/Index
    Filelink/Index
    Htmlparser/Index

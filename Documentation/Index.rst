@@ -145,7 +145,6 @@ Please visit the complete :ref:`Sitemap`.
    UsingSetting/Index
    Glossary
    DataTypes/Index
-   ObjectsAndProperties/Index
    Conditions/Index
    Functions/Index
    Setup/Index
