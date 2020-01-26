@@ -16,10 +16,9 @@ General information
 PHP information
 """""""""""""""
 
-The content objects (cObjects) are primarily controlled by the PHP-
-script "typo3/sysext/frontend/Classes/ContentObject/ContentObjectRenderer.php"
-("typo3/sysext/cms/tslib/class.tslib\_content.php"). The PHP-
-class is named "ContentObjectRenderer" ("tslib\_cObj") and often this is also
+The content objects (data type: cObject) are primarily controlled by the PHP-
+script "typo3/sysext/frontend/Classes/ContentObject/ContentObjectRenderer.php".
+The PHP-class is named "ContentObjectRenderer" and often this is also
 the variable-name of the objects ($cObj).
 
 The $cObj in PHP has an array, $this->data, which holds records of

@@ -1,15 +1,14 @@
-.. ==================================================
-.. FOR YOUR INFORMATION
-.. --------------------------------------------------
-.. -*- coding: utf-8 -*- with BOM.
-
 .. include:: ../Includes.txt
 
-
+.. _data-type-menuobj:
 .. _menu-objects:
 
-MENU Objects
-------------
+====
+MENU
+====
+
+This chapter describes the various MENU object types that can be used to
+build menus in TypoScript.
 
 
 .. toctree::

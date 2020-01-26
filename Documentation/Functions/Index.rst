@@ -8,8 +8,12 @@
 
 .. _functions:
 
+============================
 Functions
----------
+============================
+
+Sometimes a data type is defined as having a modifier. This is typically a function
+that can be used additionally.
 
 
 .. toctree::

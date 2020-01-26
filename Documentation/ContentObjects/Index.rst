@@ -1,15 +1,17 @@
-.. ==================================================
-.. FOR YOUR INFORMATION
-.. --------------------------------------------------
-.. -*- coding: utf-8 -*- with BOM.
-
 .. include:: ../Includes.txt
-
 
 .. _cobjects:
 
-Content Objects (cObject)
--------------------------
+=======
+cObject
+=======
+
+:aspect:`Description:`
+   "cObject" is an (abstract) object type used to define content objects. Following are some
+   object types that can be used, when the reference calls for a cObject data type.
+
+   Please see the :ref:`cobjects-general-information` for an introduction.
+
 
 
 .. toctree::
