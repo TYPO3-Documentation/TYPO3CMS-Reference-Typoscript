@@ -60,10 +60,14 @@ About This Manual
 This document is a complete reference to all objects types and properties of
 TypoScript as used in frontend TypoScript templates, and not in :ref:`TSconfig <t3tsconfig:start>`.
 
+The :ref:`introduction` chapter in this manuals contains an introduction
+into the topic TypoScript.
+
 .. seealso::
 
     * For explanations about the syntax of TypoScript itself,
-      please refer to :ref:`t3tssyntax:start`
+      please refer to
+      :ref:`t3coreapi:typoscript-syntax-start` in "TYPO3 Explained"!
     * For an introduction to TypoScript Templates, see :ref:`t3ts45:start`
 
 

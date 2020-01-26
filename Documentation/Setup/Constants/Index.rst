@@ -44,8 +44,7 @@ maintain it easily.
    The constants defined here are **not** the ones, which can be defined
    in the constants section of your template and which then in the setup
    section can be used as :ts:`{$myconstant}`. For these constants see
-   :ref:`the according chapter in "TypoScript Syntax and In-depth Study"
-   <t3tssyntax:constants>`.
+   :ref:`the according chapter :ref:`typoscript-syntax-what-are-constants`.
 
 .. only:: html
 
