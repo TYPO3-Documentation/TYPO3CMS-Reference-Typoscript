@@ -1,6 +1,7 @@
 .. include:: ../Includes.txt
 
 .. _objects-calc:
+.. _calc:
 
 ====
 Calc
