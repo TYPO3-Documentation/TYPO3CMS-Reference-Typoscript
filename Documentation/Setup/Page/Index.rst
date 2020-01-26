@@ -7,9 +7,40 @@
 
 
 .. _page:
+.. _top-level-objects-abc:
 
+====
 page
 ====
+.. container:: table-row
+
+   Property
+         page, ...
+
+   Data type
+         ->PAGE
+
+   Description
+         PAGE is used to define what is to be rendered in the frontend.
+
+
+**Example:** ::
+
+            page = PAGE
+            page.typeNum = 1
+
+**Guidelines:**
+
+Good, general PAGE object names to use are such as:
+
+*page* for the main page with content
+
+*frameset, frameset2* for framesets.
+
+*top, left, menu, right, bottom, border* for top and menu frames etc.
+
+These are just recommendations. However, especially the name 'page'
+for the content bearing page is very common.
 
 Pages are referenced by two main values. The "id" and "type".
 
@@ -39,6 +70,9 @@ Most of this code is executed in the PHP script
    .. contents::
       :local:
       :depth: 1
+
+PAGE
+====
 
 Properties
 ^^^^^^^^^^

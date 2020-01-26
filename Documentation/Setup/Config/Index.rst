@@ -6,20 +6,38 @@
 .. include:: ../../Includes.txt
 
 
+
+.. _top-level-objects-config:
 .. _config:
 
+======
 config
 ======
+
+
+.. container:: table-row
+
+   Property
+         config
+
+   Data type
+         ->CONFIG
+
+   Description
+         Config is used to set general configuration options for the frontend.
+
+         These values are stored with cached pages which means they are also
+         accessible when retrieving a cached page.
+
 
 In typo3/sysext/frontend/Classes/ (typo3/sysext/cms/tslib/) this is known
 as $GLOBALS['TSFE']->config['config'], thus the property "debug" below is
 accessible as $GLOBALS['TSFE']->config['config']['debug'].
 
-.. only:: html
 
-   .. contents::
-      :local:
-      :depth: 1
+CONFIG
+======
+
 
 Properties
 ^^^^^^^^^^

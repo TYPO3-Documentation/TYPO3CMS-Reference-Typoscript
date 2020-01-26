@@ -1,31 +1,13 @@
-.. ==================================================
-.. FOR YOUR INFORMATION
-.. --------------------------------------------------
-.. -*- coding: utf-8 -*- with BOM.
+:orphan:
 
 .. include:: ../Includes.txt
 
 
-.. _setup:
+
 
 Setup
 -----
 
+The content was moved to :ref:`setup`.
 
-.. toctree::
-   :maxdepth: 5
-   :titlesonly:
-   :glob:
-
-   Top-levelObjects/Index
-   Plugin/Index
-   Config/Index
-   Constants/Index
-   Page/Index
-   FeData/Index
-   FeTable/Index
-   Frameset/Index
-   Frame/Index
-   Meta/Index
-   Carray/Index
 
