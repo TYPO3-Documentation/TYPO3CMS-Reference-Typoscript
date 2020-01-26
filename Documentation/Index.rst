@@ -156,11 +156,6 @@ Please visit the complete :ref:`Sitemap`.
    Conditions/Index
    Functions/Index
    AppendixA/Index
-
-.. toctree::
-   :caption: ____________
-   :hidden:
-
    About
    Sitemap/Index
    Targets
