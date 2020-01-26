@@ -14,9 +14,15 @@
 stdWrap
 =======
 
-This function is often added as a property to values in TypoScript.
+When a data type is set to "*type* /stdWrap" it means that the value
+is parsed through the stdWrap function with the properties of the
+value as parameters.
+
 
 .. _stdwrap-examples:
+
+Example
+=======
 
 Example with the property "value" of the content object ":ref:`cobj-text`"::
 
@@ -27,8 +33,21 @@ Example with the property "value" of the content object ":ref:`cobj-text`"::
 Here the content of the object "10" is uppercased before it is
 returned.
 
-stdWrap properties are executed in the order they appear in the table
-below. If you want to study this further please refer to
+
+.. _stdwrap-content-supplying:
+
+Content-supplying properties of stdWrap
+=======================================
+
+stdWrap contains properties which determine what is applied. The properties
+are listed below.
+
+The properties are parsed in the listed order. The
+properties :ts:`data`, :ts:`field`, :ts:`current`, :ts:`cObject`
+(in that order!) are special as they are used to import content
+from variables or arrays.
+
+If you want to study this further please refer to
 :file:`typo3/sysext/frontend/Classes/ContentObject/ContentObjectRenderer.php`,
 where you will find the function :php:`stdWrap()` and the array :php:`$stdWrapOrder`,
 which represents the exact order of execution.
@@ -36,16 +55,7 @@ which represents the exact order of execution.
 Note that the :ts:`stdWrap` property "orderedStdWrap" allows you to execute
 multiple :ts:`stdWrap` functions in a freely selectable order.
 
-
-.. _stdwrap-content-supplying:
-
-Content-supplying properties of stdWrap
-=======================================
-
-The properties in this table are parsed in the listed order. The
-properties :ts:`data`, :ts:`field`, :ts:`current`, :ts:`cObject`
-(in that order!) are special as they are used to import content
-from variables or arrays. The above example could be rewritten to this::
+The above example could be rewritten to this::
 
    10 = TEXT
    10.value = some text
