@@ -8,8 +8,9 @@
 
 .. _gifbuilder-toc:
 
+==========
 GIFBUILDER
-----------
+==========
 
 
 .. toctree::
