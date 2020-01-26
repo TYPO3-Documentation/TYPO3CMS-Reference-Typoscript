@@ -17,27 +17,32 @@ Functions
    :titlesonly:
    :glob:
 
-   Stdwrap/Index
-   Imgresource/Index
-   Imagelinkwrap/Index
-   Numrows/Index
-   Select/Index
-   Split/Index
-   Replacement/Index
-   If/Index
-   Typolink/Index
-   Textstyle/Index
-   Encapslines/Index
-   Tablestyle/Index
    Addparams/Index
+   Cache/Index
+   Encapslines/Index
    Filelink/Index
-   Strpad/Index
-   Round/Index
-   Numberformat/Index
-   Parsefunc/Index
-   Makelinks/Index
-   Tags/Index
    Htmlparser/Index
    HtmlparserTags/Index
-   Cache/Index
+   If/Index
+   Imagelinkwrap/Index
+   Imgresource/Index
+   Makelinks/Index
+   Numberformat/Index
+   Numrows/Index
+   Parsefunc/Index
+   Replacement/Index
+   Round/Index
+   Select/Index
+   Stdwrap/Index
+   Split/Index
+   Strpad/Index
+   Tablestyle/Index
+   Tags/Index
+   Textstyle/Index
+   Typolink/Index
+
+
+
+
+
 
