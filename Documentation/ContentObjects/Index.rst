@@ -3,13 +3,16 @@
 .. _data-type-cobject:
 .. _cobject:
 
-====================
-Content object types
-====================
+=======
+cObject
+=======
 
 
 :aspect:`Description:`
-   "cObject" is a complex data type to describe content objects.
+   "cObject" is an (abstract) object type used to define content objects. Following are some
+   object types that can be used, when the reference calls for a cObject data type.
+
+   Please see the :ref:`cobjects-general-information` for an introduction.
 
 :aspect:`Examples:`
     :ref:`TEXT <cobj-text>` | :ref:`IMAGE <cobj-image>` | :ref:`FLUIDTEMPLATE <cobj-fluidtemplate>`

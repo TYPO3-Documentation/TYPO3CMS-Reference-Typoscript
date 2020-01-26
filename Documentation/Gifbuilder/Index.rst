@@ -2,9 +2,9 @@
 
 .. _gifbuilder-toc:
 
-======================
-GIFBUILDER object type
-======================
+==========
+GIFBUILDER
+==========
 
 
 .. toctree::
