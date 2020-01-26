@@ -74,7 +74,7 @@ Version Numbers
 ===============
 
 This document always refers to the latest released TYPO3 version. For older versions,
-use the version selector at the bottom left of the site.
+use the :ref:`version selector <t3home:usage-version-selector>`.
 
 For new features TypoScript Reference includes a note in which TYPO3 version the
 feature was added. If such a note is missing, the feature is part of TYPO3 since
