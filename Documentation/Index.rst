@@ -148,7 +148,7 @@ Please visit the complete :ref:`Sitemap`.
    Setup/Top-levelObjects/Index
    ContentObjects/Index
    MenuObjects/Index
-   Gifbuilder/Index
+   ObjectTypes/Other
    Conditions/Index
    Functions/Index
    AppendixA/Index

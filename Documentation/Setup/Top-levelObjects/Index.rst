@@ -21,6 +21,8 @@ Top-level objects
    page, ...                          -> :ref:`PAGE <page>`
    config                             -> :ref:`CONFIG <config>`
    constants                          -> :ref:`CONSTANTS <constants>`
+   :ref:`plugin`                      see :ref:`plugin`
+   :ref:`meta`                        see :ref:`meta`
    :ref:`includeLibs <includelibs>`   *Array of strings*
    `Other reserved TLO's:`_           :ref:`top-level-objects-other`
    `resources`_                       readonly, see :ref:`top-level-objects-other`
@@ -33,11 +35,8 @@ Top-level objects
    :hidden:
    :titlesonly:
 
-   ../Carray/Index
    ../Config/Index
    ../Constants/Index
-   ../Frame/Index
-   ../Frameset/Index
    ../Meta/Index
    ../Page/Index
    ../Plugin/Index
