@@ -145,12 +145,6 @@ address the task at hand.
    Functions/Index
    Conditions/Index
    AppendixA/Index
-
-
-.. toctree::
-   :caption: ____________
-   :hidden:
-
    About
    Sitemap/Index
    Targets
