@@ -4,7 +4,7 @@
 .. _functions:
 
 ============================
-Type modifiers & functions
+Functions
 ============================
 
 

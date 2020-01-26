@@ -40,7 +40,6 @@ is primarily used with different representations of the same content.
 Your default page will most likely have type 0 while a JSON stream with the same
 content could go with type 1.
 
-<<<<<<< HEAD
 A good habit is to use "page" as the top-level object name for
 the content-page on a website.
 
@@ -86,7 +85,7 @@ Good, general PAGE object names to use are:
 These are just recommendations. However, especially the name page for the content bearing page
 is very common and most documentation will imply that your main page object is called page.
 
->>>>>>> 746d0f1... Clearly differentiate between objects and data types
+
 
 Properties
 ^^^^^^^^^^
