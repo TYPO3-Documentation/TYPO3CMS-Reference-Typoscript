@@ -9,9 +9,9 @@
 .. _data-types:
 .. _data-types-reference:
 
-==========
-Data types
-==========
+=================
+Simple data types
+=================
 
 Introduction
 ============
