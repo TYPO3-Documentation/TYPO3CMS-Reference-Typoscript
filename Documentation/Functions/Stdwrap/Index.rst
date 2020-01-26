@@ -8,6 +8,7 @@
 .. highlight:: typoscript
 
 .. _stdwrap:
+.. _objects-stdwrap:
 
 =======
 stdWrap

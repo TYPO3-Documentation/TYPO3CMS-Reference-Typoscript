@@ -149,7 +149,6 @@ Please visit the complete :ref:`Sitemap`.
    Introduction/Index
    Glossary
    DataTypes/Index
-   ObjectsAndProperties/Index
    Conditions/Index
    Functions/Index
    Setup/Index
