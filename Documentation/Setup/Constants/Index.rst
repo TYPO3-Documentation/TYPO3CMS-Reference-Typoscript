@@ -6,12 +6,33 @@
 .. include:: ../../Includes.txt
 
 
+.. _top-level-objects-constants:
 .. _constants:
 
+=========
 constants
 =========
 
-This object can be used to define constants for replacement inside a
+
+.. container:: table-row
+
+   Property
+         constants
+
+   Data type
+         ->CONSTANTS
+
+   Description
+         Site-specific constants, e.g. a general email address. These constants
+         may be substituted in the text throughout the pages. The substitution
+         is done by parseFunc (with .constants = 1 set).
+
+
+
+CONSTANTS
+=========
+
+This object type can be used to define constants for replacement inside a
 parseFunc. If parseFunc somewhere is configured with .constants = 1,
 then all occurrences of the constant in the text will be substituted
 with the actual value. This is useful, if you need one and the same

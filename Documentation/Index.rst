@@ -145,9 +145,9 @@ Please visit the complete :ref:`Sitemap`.
    UsingSetting/Index
    Glossary
    DataTypes/Index
+   Setup/Top-levelObjects/Index
    Conditions/Index
    Functions/Index
-   Setup/Index
    ContentObjects/Index
    Gifbuilder/Index
    MenuObjects/Index
