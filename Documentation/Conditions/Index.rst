@@ -10,8 +10,8 @@ Conditions
 .. seealso::
 
    For full explanations about conditions, especially about condition
-   syntax, please refer to :ref:`the according chapter in "TypoScript
-   Syntax and In-depth Study" <t3tssyntax:conditions>`.
+   syntax, please refer to :ref:`the according chapter in
+   "TYPO3 Explained" <t3coreapi:typoscript-syntax-conditions>`.
 
 **Topics:**
 

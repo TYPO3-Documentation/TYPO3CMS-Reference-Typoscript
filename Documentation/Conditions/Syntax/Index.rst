@@ -10,8 +10,8 @@ About The Syntax Of Conditions
 .. seealso::
 
    For full explanations about conditions, especially about condition
-   syntax, please refer to :ref:`the according chapter in "TypoScript
-   Syntax and In-depth Study" <t3tssyntax:conditions>`.
+   syntax, please refer to :ref:`the according chapter in
+   "TYPO3 Explained" <t3coreapi:typoscript-syntax-conditions>`.
 
 
 .. _condition-syntax:
@@ -37,7 +37,9 @@ The *Template Analyzer* shows this very well: TYPO3 places a
 
 As a developer you can use `[GLOBAL]` for testing purposes
 to ensure that your own condition works as expected.
-See :ref:`t3tssyntax:The-Global-Condition` for additional documentation.
+See
+:ref:`the according chapter in "TYPO3 Explained" <t3coreapi:typoscript-syntax-conditions>`
+for additional documentation.
 
 
 Example
