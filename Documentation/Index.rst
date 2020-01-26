@@ -146,11 +146,11 @@ Please visit the complete :ref:`Sitemap`.
    Glossary
    DataTypes/Index
    Setup/Top-levelObjects/Index
+   ContentObjects/Index
+   MenuObjects/Index
+   Gifbuilder/Index
    Conditions/Index
    Functions/Index
-   ContentObjects/Index
-   Gifbuilder/Index
-   MenuObjects/Index
    AppendixA/Index
 
 .. toctree::
