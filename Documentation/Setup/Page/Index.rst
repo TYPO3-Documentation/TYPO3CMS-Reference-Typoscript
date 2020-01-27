@@ -33,11 +33,8 @@ page
 
 Good, general PAGE object names to use are such as:
 
-*page* for the main page with content
-
-*frameset, frameset2* for framesets.
-
-*top, left, menu, right, bottom, border* for top and menu frames etc.
+* *page* for the main page with content
+* *top, left, menu, right, bottom, border* for top etc.
 
 These are just recommendations. However, especially the name 'page'
 for the content bearing page is very common.
@@ -47,18 +44,9 @@ Pages are referenced by two main values. The "id" and "type".
 **The "id"** points to the uid of the page (or the alias). Thus the
 page is found.
 
-**The "type"** is used to define how the page should be rendered. This
-is primarily used with framesets. Here the frameset normally has the
-type=0 (or not set) and the documents in the frameset would be defined
-with another type, e.g. type=1 for the content-page.
+**The "type"** is used to define how the page should be rendered.
 
-You should explore the framesets of the TYPO3-sites around. Also look
-in the standard-templates for framesets.
-
-It's a good habit to use type=1 for the main-page of a website with
-frames. With no-frames sites type is normally zero.
-
-Another good habit is to use "page" as the top-level object name for
+A good habit is to use "page" as the top-level object name for
 the content-page on a website.
 
 Most of this code is executed in the PHP script
@@ -411,6 +399,19 @@ footerData
 
 frameSet
 """"""""
+
+FRAME is an object type.
+
+.. attention::
+
+   FRAME, FRAMESET and frameSet have been deprecated in version 8.5
+   of the TYPO3 core. Using this is no longer considered good practice.
+
+   Additionally, frameset and frame are no longer supported in HTML
+
+   See `Deprecation: #78217 - frameset and frame <https://docs.typo3.org/c/typo3/cms-core/master/en-us/Changelog/8.5/Deprecation-78217-FramesetAndFrame.html>`__
+   (8.5 Changelog).
+
 
 .. container:: table-row
 
@@ -1241,8 +1242,7 @@ typeNum
          This determines the typeId of the page. The *&type=* parameter in the URL
          determines, which page object will be rendered. The value defaults to 0 for
          the first found PAGE object, but it **must** be set and be unique as
-         soon as you use *more* than one such object (watch this if you use frames
-         on your page)!
+         soon as you use *more* than one such object.
 
    Default
          0
