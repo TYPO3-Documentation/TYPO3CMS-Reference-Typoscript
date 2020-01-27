@@ -32,9 +32,9 @@ syntax with TYPO3 9. The existing conditions will be removed early in version
 <https://docs.typo3.org/typo3cms/TyposcriptReference/8.7/Conditions/Reference/Index.html>`__
 
 .. hint::
-   If it is not possible yet to fully migrate to Symfony expression language, 
-   the feature flag `[SYS][features][TypoScript.strictSyntax]` can be disabled via 
-   Settings -> Configure Installation-Wide Options or directly in :file:`LocalConfiguration.php`. 
+   If it is not possible yet to fully migrate to Symfony expression language,
+   the feature flag `[SYS][features][TypoScript.strictSyntax]` can be disabled via
+   Settings -> Configure Installation-Wide Options or directly in :file:`LocalConfiguration.php`.
 
 .. _condition-reference:
 
@@ -231,13 +231,13 @@ backend.user
 :aspect:`Description`
    Object with current backend user information.
 
-.. _condition-backend-user-admin:
+.. _condition-backend-user-isAdmin:
 
-backend.user.admin
-""""""""""""""""""
+backend.user.isAdmin
+""""""""""""""""""""
 
 :aspect:`Variable`
-   backend.user.admin
+   backend.user.isAdmin
 
 :aspect:`Type`
    Boolean
@@ -397,6 +397,82 @@ frontend.user.userGroupList
    ::
 
       [like(","~frontend.user.userGroupList~",", "*,1,*")]
+
+
+.. _condition-workspace:
+
+workspace
+~~~~~~~~~
+
+:aspect:`Variable`
+   workspace
+
+:aspect:`Type`
+   Object
+
+:aspect:`Description`
+   object with workspace information
+
+
+.. _condition-workspace-workspaceId:
+
+workspace.workspaceId
+"""""""""""""""""""""
+
+:aspect:`Variable`
+   .workspaceId
+
+:aspect:`Type`
+   Integer
+
+:aspect:`Description`
+   id of current workspace
+
+:aspect:`Example`
+   ::
+
+      [workspace.workspaceId == 0]
+
+
+.. _condition-workspace-isLive:
+
+workspace.isLive
+""""""""""""""""
+
+:aspect:`Variable`
+   workspace.isLive
+
+:aspect:`Type`
+   Boolean
+
+:aspect:`Description`
+   True if current workspace is live
+
+:aspect:`Example`
+   ::
+
+      [workspace.isLive]
+
+
+.. _condition-workspace-isOffline:
+
+workspace.isOffline
+"""""""""""""""""""
+
+:aspect:`Variable`
+   workspace.isOffline
+
+:aspect:`Type`
+   Boolean
+
+:aspect:`Description`
+   True if current workspace is offline
+
+:aspect:`Example`
+   ::
+
+      [workspace.isOffline]
+
 
 .. _condition-typo3:
 
@@ -699,8 +775,8 @@ request.getNormalizedParams()
    ::
 
       [request.getNormalizedParams().getHttpHost() == "typo395.ddev.local"]
- 
- 
+
+
 
 .. _condition-function-request-getPageArguments():
 
@@ -715,13 +791,13 @@ request.getPageArguments()
 
 :aspect:`Type`
    Array
- 
+
 :aspect:`Description`
    Get current `PageArguments` object with resolved route parts from enhancers.
-   
+
 :aspect:`Example`
    [request.getPageArguments().get('foo_id') > 0]
-   
+
    Allows migration from old condition syntax using `[globalVar = GP:singlepartner > 0]`
    to `[request.getPageArguments().get('singlepartner') > 0]`.
 
@@ -797,6 +873,35 @@ like
    Search string using regular expression::
 
       [like("fooBarBaz", "/f[o]{2,2}[aBrz]+/")]
+
+.. _condition-function-traverse:
+
+traverse
+~~~~~~~~
+
+:aspect:`Function`
+   traverse
+
+:aspect:`Parameter`
+   Array, String
+
+:aspect:`Type`
+   Custom
+
+:aspect:`Description`
+   This function has two parameters:
+
+   The first parameter
+      Is the array to traverse
+
+   The second parameter
+      Is the path to traverse
+
+:aspect:`Example`
+   Traverse query parameters of current request along ``tx_news_pi1[news]``::
+
+      [traverse(request.getQueryParams(), 'tx_news_pi/news') > 0]
+
 
 .. _condition-function-ip:
 
@@ -905,6 +1010,8 @@ getTSFE
 
 :aspect:`Description`
    Provides access to TypoScriptFrontendController (:php:`$GLOBALS['TSFE']`)
+
+   Conditions based on ``getTSFE()`` used in a context where TSFE is not available will always evaluate to ``false``.
 
 :aspect:`Example`
    Current :ref:`setup-page-typenum`::
@@ -1050,7 +1157,7 @@ site
       Returns array of available and unavailable languages for current site.
       For deeper information, see :ref:`condition-functions-in-frontend-context-function-siteLanguage`.
 
-   site("defaultLanguage") 
+   site("defaultLanguage")
       Returns the default language for current site.
       For deeper information, see :ref:`condition-functions-in-frontend-context-function-siteLanguage`.
 
