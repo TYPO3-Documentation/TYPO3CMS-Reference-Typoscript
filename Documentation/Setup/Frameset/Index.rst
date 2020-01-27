@@ -8,14 +8,22 @@
 
 .. _frameset:
 
-frameset
+FRAMESET
 ========
 
-.. only:: html
+FRAME is an object type.
 
-   .. contents::
-      :local:
-      :depth: 1
+.. attention::
+
+   FRAME, FRAMESET and frameSet have been deprecated in version 8.5
+   of the TYPO3 core. Using this is no longer considered good practice.
+
+   Additionally, frameset and frame are no longer supported in HTML
+
+   See `Deprecation: #78217 - frameset and frame <https://docs.typo3.org/c/typo3/cms-core/master/en-us/Changelog/8.5/Deprecation-78217-FramesetAndFrame.html>`__
+   (8.5 Changelog).
+
+
 
 Properties
 ^^^^^^^^^^
