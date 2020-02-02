@@ -38,10 +38,8 @@ The *Template Analyzer* shows this very well: TYPO3 places a
 
 As a developer you can use `[GLOBAL]` for testing purposes
 to ensure that your own condition works as expected.
-See :ref:`t3tssyntax:The-Global-Condition` for additional documentation.
 
-.. There's more in Patrick Lobacher's "integrator book" (german only).
-   Corresponding information still needs to be added here.
+.. todo:: Add more information and links
 
 Example
 -------
