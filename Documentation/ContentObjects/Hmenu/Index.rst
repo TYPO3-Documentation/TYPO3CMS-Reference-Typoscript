@@ -248,8 +248,7 @@ into account.
 
    Description
          Enter the list of page document types (doktype) to exclude from menus.
-         By default pages that are "not in menu" (5) are excluded and those
-         marked for backend user access only (6).
+         By default pages that are "backend user access only" (6) are excluded.
 
    Default
          5,6
