@@ -758,7 +758,7 @@ inlineSettings
          (array of strings)
 
    Description
-         ExtJS specific, adds settings to the page.
+         Adds settings to the page as inline javascript, which is accessible within the variable :js:`TYPO3.settings`.
 
    Example
          ::
