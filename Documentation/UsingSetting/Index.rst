@@ -22,6 +22,7 @@ The TypoScript template configuration can be viewed and edited in the
    :titlesonly:
 
    Entering
+   AddTypoScriptWithExtensions
    Constants
    TheConstantEditor
    Register
