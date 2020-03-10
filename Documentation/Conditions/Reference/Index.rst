@@ -60,10 +60,11 @@ You may include "\*" instead of one of the parts in values. You may
 also list the first one, two or three parts and only they will be
 tested.
 
-The IP condition also supports the special keyword "devIP". If - instead
-of using an actual IP address or range - you use this keyword, the IP
-address, which the visitor uses, will be compared to
-:php:`$TYPO3_CONF_VARS['SYS']['devIPmask']` as set in the Install Tool.
+Since TYPO3 6.2 the IP condition also supports the special keyword
+"devIP". If - instead of using an actual IP address or range - you use
+this keyword, the IP address, which the visitor uses, will be compared
+to :php:`$TYPO3_CONF_VARS['SYS']['devIPmask']` as set in the Install
+Tool.
 
 Examples:
 ~~~~~~~~~
@@ -107,7 +108,7 @@ Comparison:
 Comparison with the hostname, which the website visitor uses.
 
 The values are compared to the fully qualified hostname, which is
-retrieved by PHP based on ``getenv('REMOTE\_HOST')``.
+retrieved by PHP based on :php:`getenv('REMOTE_HOST')`.
 
 Value is comma-list of domain names to match with. \*-wildcard allowed
 but cannot be part of a string, so it must match the full host name
