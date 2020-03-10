@@ -209,7 +209,7 @@ cropVariant
 
 :aspect:`Description`
    Since it's possible to define certain `crop variants
-   <https://docs.typo3.org/typo3cms/extensions/core/8.7/Changelog/8.6/Feature-75880-ImplementMultipleCroppingVariantsInImageManipulationTool.html>`__
+   <https://docs.typo3.org/c/typo3/cms-core/master/en-us/Changelog/8.6/Feature-75880-ImplementMultipleCroppingVariantsInImageManipulationTool.html>`__
    you can specify which one to use here.
 
 :aspect:`Default`
