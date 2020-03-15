@@ -7,8 +7,6 @@
 Introduction
 ============
 
-TypoScript templates are used to build a custom theme
-
 What is to be rendered on a page in the frontend,
 the menu structure, how content objects are displayed, etc. can be
 defined with TypoScript - often it is used in
@@ -19,6 +17,9 @@ This document is a **reference**, used to lookup TypoScript templating
 :ref:`functions <functions>` and :ref:`conditions <conditions>`. This
 reference is not intended to give you a full introduction into the topic
 TypoScript.
+
+What is TypoScript?
+===================
 
 TypoScript can have 2 meanings:
 
@@ -34,11 +35,12 @@ Additionally, in TypoScript templates, you must differentiate between
 
 Though TypoScript does include "functions" and "objects" and "conditions"
 it is not a programming language. Think of it more as a configuration
-language. The results of the TypoScript setup
+language. The results of the TypoScript setup are used to build a PHP
+array.
 
 Basically think of TypoScript as a means to "configure" the **frontend**,
-while TSconfig is used to configure the **backend**. (This is not 100%
-true, but gives you the basic idea.)
+while TSconfig is used to configure the **backend** (with a few exceptions
+to this principle)
 
 Please read the following for an introduction:
 
@@ -51,10 +53,51 @@ Please read the following for an introduction:
 * The chapter :ref:`using-and-setting` describes how to use, set
   and extend TypoScript.
 
+.. _typoscript-syntax-typoscript-templates-usage:
 
-Further information may also be helpful:
+Templating methods in TYPO3
+===========================
 
-* :ref:`t3sitepackage:start` for a complete walkthrough of creating a
-  sitepackage, which is the basis for a custom theme for your site.
-* :ref:`t3coreapi:config-overview` in "TYPO3 Explained" for an overview
-  of various configuration languages and methods in TYPO3
+
+TypoScript templates are used to drive frontend rendering.
+
+A a minimal amount of TypoScript will *always* be necessary to
+tell TYPO3 CMS which templating method to use.
+It could be any of the following.
+
+Best practice:
+
+- **Fluid templates:** Configure TYPO3 to use `Fluid <https://typo3.org/fluid>`__
+  for templating. This allows to use external HTML templates, but
+  with fluid-style variables with curly braces. A content object type
+  :ref:`cobj-fluidtemplate` is available, which uses Fluid
+  from inside TypoScript.
+
+  * See :ref:`t3sitepackage:start` for a complete walkthrough of creating a
+    sitepackage, which is the basis for a custom theme for your site.
+  * See :ref:`t3coreapi:adding-your-own-content-elements` for an
+    introduction on how to create your own content element types using
+    TypoScript FLUIDTEMPLATE, Fluid and data processors.
+
+Other methods:
+
+
+- **External Templating Engines:** Any other templating system can be
+  used. It will be provided via an extension. In such a case TypoScript
+  may be used just to delegate the rendering to that system.
+
+- **Custom PHP:** Configure TYPO3 to call your own PHP code which
+  generates content in any way you may prefer. This might include using
+  third party templating engines!
+
+- **TS content objects:** Build the page entirely using TypoScript
+  content objects. All these objects are highly configurable.
+
+Outdated methods:
+
+
+- **HTML templates:** Configure TYPO3 CMS to facilitate external HTML-
+  templates with markers and subparts using the :ref:`cobj-template`
+  content object type. This method is considered outdated and no
+  longer recoemmended
+

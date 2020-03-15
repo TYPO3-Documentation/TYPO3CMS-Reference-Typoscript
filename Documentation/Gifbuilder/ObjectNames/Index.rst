@@ -364,7 +364,7 @@ Renders a text.
          Nimbus (Arial-clone)         
 
    Description
-         Font face (truetype font you can upload!)
+         Font face (truetype *.ttf and opentype *.otf font you can upload!)
 
 
 

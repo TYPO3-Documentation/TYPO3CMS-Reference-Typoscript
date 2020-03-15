@@ -1,6 +1,7 @@
 .. include:: ../Includes.txt
 
 .. _typoscript-syntax-constant-editor:
+.. _constant-editor:
 
 The Constant Editor
 ===================
