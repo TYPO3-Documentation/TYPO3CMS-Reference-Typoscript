@@ -8,12 +8,9 @@ Conditions
 
 .. seealso::
 
-   For full explanations about conditions, especially about condition syntax, please refer to
-   :ref:`the TypoScript Syntax chapter of the Core API <t3coreapi:typoscript-syntax-conditions>`.
-
-.. seealso::
-
-   TypoScript also offers the :ref:`"if" function <if>` to create conditions.
+   * For full explanations about conditions, especially about condition syntax, please refer to
+     :ref:`the TypoScript Syntax chapter of the Core API <t3coreapi:typoscript-syntax-conditions>`.
+   * TypoScript also offers the :ref:`"if" function <if>` to create conditions.
 
 Description
 ===========
@@ -188,6 +185,12 @@ tree.rootLineIds
 
 tree.rootLineParentIds
 """"""""""""""""""""""
+
+.. versionadded:: 10.3
+
+   This implements the old :ts:`PIDupinRootline` condition within the Symfony
+   expression language, see
+   :doc:`t3core:Changelog/10.3/Feature-88962-Re-implementOldPIDupinRootlineTypoScriptCondition`
 
 :aspect:`Variable`
    tree.rootLineParentIds
@@ -404,6 +407,9 @@ frontend.user.userGroupList
 workspace
 ~~~~~~~~~
 
+.. versionadded:: 10.3
+   :doc:`t3core:Changelog/10.3/Feature-90203-MakeWorkspaceAvailableInTypoScriptConditions`
+
 :aspect:`Variable`
    workspace
 
@@ -418,6 +424,10 @@ workspace
 
 workspace.workspaceId
 """""""""""""""""""""
+
+.. versionadded:: 10.3
+   :doc:`t3core:Changelog/10.3/Feature-90203-MakeWorkspaceAvailableInTypoScriptConditions`
+
 
 :aspect:`Variable`
    .workspaceId
@@ -439,6 +449,10 @@ workspace.workspaceId
 workspace.isLive
 """"""""""""""""
 
+.. versionadded:: 10.3
+   :doc:`t3core:Changelog/10.3/Feature-90203-MakeWorkspaceAvailableInTypoScriptConditions`
+
+
 :aspect:`Variable`
    workspace.isLive
 
@@ -458,6 +472,10 @@ workspace.isLive
 
 workspace.isOffline
 """""""""""""""""""
+
+.. versionadded:: 10.3
+   :doc:`t3core:Changelog/10.3/Feature-90203-MakeWorkspaceAvailableInTypoScriptConditions`
+
 
 :aspect:`Variable`
    workspace.isOffline
