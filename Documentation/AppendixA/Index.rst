@@ -84,10 +84,10 @@ Example:
 
 .. _appendix-include-cobjgetsingle:
 
-$this->cObjGetSingle(value, properties)
-"""""""""""""""""""""""""""""""""""""""
+$this->cObjGetSingle(value, properties[, TSkey = '__'])
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-Gets a content object from the $conf array.
+Gets a content object from the $conf array. $TSkey is an optional string label used for the internal debugging tracking.
 
 
 Example:
@@ -95,7 +95,7 @@ Example:
 
 .. code-block:: php
 
-   $content = $this->cObjGetSingle($conf['image'], $conf['image.']);
+   $content = $this->cObjGetSingle($conf['image'], $conf['image.'], 'My Image 2');
 
 This would return any IMAGE cObject at the property "image" of the
 $conf array for the include script!
