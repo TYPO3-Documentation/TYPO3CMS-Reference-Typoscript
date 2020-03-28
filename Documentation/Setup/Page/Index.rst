@@ -790,7 +790,7 @@ jsFooterInline.[array]
          :ref:`cObject <data-type-cobject>`
 
    Description
-         Same :ts:`jsInline`, except that the JavaScript gets inserted at the
+         Same as :ts:`jsInline`, except that the JavaScript gets inserted at the
          bottom of the page (just before the closing :html:`</body>` tag).
 
          The :ts:`jsFooterInline` property contains any number of numeric keys, each representing one cObject.
