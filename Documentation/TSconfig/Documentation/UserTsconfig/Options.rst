@@ -284,45 +284,6 @@ enableBookmarks
    1
 
 
-feedit
-======
-
-.. _useroptions-feedit-popupHeight:
-
-feedit.popupHeight
-------------------
-
-:aspect:`Datatype`
-   integer
-
-:aspect:`Description`
-   Sets the height of the popup window of feedit.
-
-:aspect:`Example`
-
-   .. code-block:: typoscript
-
-      options.feedit.popupHeight = 700
-
-
-.. _useroptions-feedit-popupWidth:
-
-feedit.popupWidth
------------------
-
-:aspect:`Datatype`
-   integer
-
-:aspect:`Description`
-   Sets the width of the popup window of feedit.
-
-:aspect:`Example`
-
-   .. code-block:: typoscript
-
-      options.feedit.popupWidth = 700
-
-
 file_list
 =========
 
