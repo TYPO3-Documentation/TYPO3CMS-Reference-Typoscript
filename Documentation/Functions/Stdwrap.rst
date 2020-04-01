@@ -1867,13 +1867,6 @@ editIcons
       to the content. If zero (0), the icon is appended in the end of the
       content.
 
-   :ts:`.styleAttribute:` String.
-      Adds a style-attribute to the icon image with this value. For instance you
-      can set "position:absolute" if you want a non-destructive insertion of the
-      icon. Notice: For general styling all edit icons has the class
-      "frontEndEditIcons" which can be addressed from the stylesheet of the
-      site.
-
    :ts:`.iconTitle:` String.
       The title attribute of the image tag.
 
@@ -1882,7 +1875,6 @@ editIcons
       set another icon for editing (for instance a red dot or otherwise... :-)
 
 :aspect:`Example`
-
    This will insert an edit icon which links to a form where the header
    and bodytext fields are displayed and made available for editing
    (provided the user has access!). ::
