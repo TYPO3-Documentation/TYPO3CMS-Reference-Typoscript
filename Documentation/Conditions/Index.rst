@@ -918,7 +918,7 @@ traverse
 :aspect:`Example`
    Traverse query parameters of current request along ``tx_news_pi1[news]``::
 
-      [traverse(request.getQueryParams(), 'tx_news_pi/news') > 0]
+      [traverse(request.getQueryParams(), 'tx_news_pi1/news') > 0]
 
 
 .. _condition-function-ip:
