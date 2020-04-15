@@ -584,9 +584,9 @@ dataProcessing
             # + stdWrap
             table = tt_address
 
-            # All properties from .select can be used directly
+            # All properties from .select :ref:`select` can be used directly
             # + stdWrap
-            colPos = 1
+            orderBy = sorting
             pidInList = 13,14
 
             # The target variable to be handed to the ContentObject again, can
