@@ -302,7 +302,7 @@ into account.
          includeNotInMenu
 
    Data type
-         boolean
+         boolean /:ref:`stdWrap <stdwrap>`
 
    Description
          If set, pages with the checkbox "Not in menu" checked will be included
