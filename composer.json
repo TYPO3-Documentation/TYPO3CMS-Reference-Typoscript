@@ -4,6 +4,6 @@
     "description": "The TypoScript Reference (TSref) is a true reference describing the core Content Objects and functions available for Template building using the TypoScript template engine.",
     "license": "OPL-1.0",
     "require": {
-      "typo3/cms-core": "^10.0"
+      "typo3/cms-core": "^10.4"
     }
 }
