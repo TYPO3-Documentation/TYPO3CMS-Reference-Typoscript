@@ -926,9 +926,13 @@ You could use it with a TypoScript code like this:
    page = PAGE
    page.10 = FLUIDTEMPLATE
    page.10 {
-      template = FILE
-      template.file = EXT:site_default/Resources/Private/Templates/MyTemplate.html
-      partialRootPath = EXT:site_default/Resources/Private/Partials/
+      templateName = MyTemplate
+      templateRootPaths {
+         10 = EXT:site_default/Resources/Private/Templates
+      }
+      partialRootPaths {
+         10 = EXT:site_default/Resources/Private/Partials
+      }
       variables {
          mylabel = TEXT
          mylabel.value = Label coming from TypoScript!
