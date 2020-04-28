@@ -196,7 +196,7 @@ backend
    Object
 
 :aspect:`Description`
-   Object with backend information (available in BE only).
+   Object with backend information.
 
 .. _condition-backend-user:
 
