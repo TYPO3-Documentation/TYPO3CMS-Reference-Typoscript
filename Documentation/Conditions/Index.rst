@@ -61,7 +61,7 @@ applicationContext
 
    See :ref:`t3coreapi:bootstrapping-context`.
 
-:aspect:`Beispiel`
+:aspect:`Example`
    ::
 
       [applicationContext == "Development"]
