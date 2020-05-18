@@ -788,7 +788,7 @@ of a GET parameter, `&tx_pressrelease[showUid]` and the "parameter"
 value of a new ->typolink call is set to "34" which assumes that on
 page ID 34 a plugin is put that will display pressrelease 123 when
 called with `&tx_pressrelease[showUid]=123`. In addition you can see
-the "userCacheHash" attribute for the typolink function used in order
+the "useCacheHash" attribute for the typolink function used in order
 to produce a cached display.
 
 The link that results from this operation will look like this:
