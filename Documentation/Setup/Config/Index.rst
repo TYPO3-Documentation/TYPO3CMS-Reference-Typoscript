@@ -84,7 +84,6 @@ Properties
    `linkVars`_                                           :ref:`data-type-list`
    `locale\_all`_                                        :ref:`data-type-string`
    `lockFilePath`_                                       :ref:`data-type-string`            fileadmin/
-   `message\_page\_is\_being\_generated`_                :ref:`data-type-string`
    `message\_preview`_                                   :ref:`data-type-string`
    `message\_preview\_workspace`_                        :ref:`data-type-string`
    `metaCharset`_                                        :ref:`data-type-string`            utf-8
@@ -1671,33 +1670,6 @@ lockFilePath
          Set :ts:`lockFilePath` to the **relative** path of a folder.
          `filelist` will only return values for a folder that starts with the path
          given by :ts:`lockFilePath`.
-
-
-
-.. _setup-config-message-page-is-being-generated:
-
-message\_page\_is\_being\_generated
-"""""""""""""""""""""""""""""""""""
-
-.. container:: table-row
-
-   Property
-         message\_page\_is\_being\_generated
-
-   Data type
-         string
-
-   Description
-         Alternative HTML message that appears if a page is being generated.
-
-         Normally when a page is being generated a temporary copy is stored in
-         the cache-table with an expire-time of 30 seconds.
-
-         It is possible to use some keywords that are replaced with the
-         corresponding values. Possible keywords are: ###TITLE###,
-         ###REQUEST\_URI###
-
-
 
 .. _setup-config-message-preview:
 
