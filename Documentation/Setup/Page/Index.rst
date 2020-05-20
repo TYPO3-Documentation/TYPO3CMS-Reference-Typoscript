@@ -268,6 +268,7 @@ cssInline.[array]
    Description
          Allows to add inline CSS to the page :html:`<head>` section.
          The :ts:`cssInline` property contains any number of numeric keys, each representing one cObject.
+         Internally handled as PHP integer, maximum number is therefore restricted to :php:`PHP_INT_MAX`.
 
    Example
          ::
@@ -304,6 +305,7 @@ footerData.[array]
          (just before the closing :html:`</body>` tag).
 
          The :ts:`footerData` property contains any number of numeric keys, each representing one cObject.
+         Internally handled as PHP integer, maximum number is therefore restricted to :php:`PHP_INT_MAX`.
 
    Example
          ::
@@ -344,6 +346,7 @@ headerData.[array]
          By default, gets inserted after all the style definitions.
 
          The :ts:`headerData` property contains any number of numeric keys, each representing one cObject.
+         Internally handled as PHP integer, maximum number is therefore restricted to :php:`PHP_INT_MAX`.
 
    Example
          ::
@@ -789,6 +792,7 @@ jsFooterInline.[array]
          bottom of the page (just before the closing :html:`</body>` tag).
 
          The :ts:`jsFooterInline` property contains any number of numeric keys, each representing one cObject.
+         Internally handled as PHP integer, maximum number is therefore restricted to :php:`PHP_INT_MAX`.
 
    Example
          ::
@@ -821,6 +825,7 @@ jsInline.[array]
          to an external file.
 
          The :ts:`jsInline` property contains any number of numeric keys, each representing one cObject.
+         Internally handled as PHP integer, maximum number is therefore restricted to :php:`PHP_INT_MAX`.
 
    Example
          ::
