@@ -306,7 +306,9 @@ cssInline
          ->CARRAY
 
    Description
-         Use cObjects for creating inline CSS
+         Allows to add inline CSS to the page :html:`<head>` section.
+         The :ts:`cssInline` property contains any number of numeric keys, each representing one cObject.
+         Internally handled as PHP integer, maximum number is therefore restricted to :php:`PHP_INT_MAX`.
 
          **Example:** ::
 
@@ -340,6 +342,8 @@ footerData
          Same as headerData above, except that this block gets included at the
          bottom of the page (just before the closing body tag).
 
+         The :ts:`footerData` property contains any number of numeric keys, each representing one cObject.
+         Internally handled as PHP integer, maximum number is therefore restricted to :php:`PHP_INT_MAX`.
 
 
 .. _setup-page-frameset:
@@ -386,6 +390,19 @@ headerData
 
          By default, gets inserted after all the style definitions.
 
+         The :ts:`headerData` property contains any number of numeric keys, each representing one cObject.
+         Internally handled as PHP integer, maximum number is therefore restricted to :php:`PHP_INT_MAX`.
+
+   Example
+         ::
+
+            page.headerData {
+               3 = TEXT
+               3.value = <script src="...."></script>
+
+               50 = TEXT
+               50.value = <!-- Hello from the comment! -->
+            }
 
 
 .. _setup-page-headtag:
@@ -793,27 +810,11 @@ javascriptLibs
          *(array of strings)*
 
    Description
-         This allows to include the JavaScript libraries that are shipped with
-         the TYPO3 Core. ::
+         Same as :ts:`jsInline`, except that the JavaScript gets inserted at the
+         bottom of the page (just before the closing :html:`</body>` tag).
 
-            javascriptLibs {
-               # include jQuery (boolean)
-               jQuery = 1
-               # Change the version
-               # (possible values: latest|1.7.2|…, default: latest)
-               # Note: jQuery.source has to be a CDN like "google"
-               # when jQuery.version is not "latest"
-               jQuery.version = latest
-               # Include from local or different CDNs
-               # (possible values: local|google|jquery|msn, default: local)
-               jQuery.source = local
-               # Set jQuery into its own scope to avoid conflicts (boolean)
-               jQuery.noConflict = 1
-               # Change the namespace when noConflict is activated
-               # and use jQuery with "TYPO3.###NAMESPACE###(…);"
-               # (string, default: jQuery)
-               jQuery.noConflict.namespace = ownNamespace
-            }
+         The :ts:`jsFooterInline` property contains any number of numeric keys, each representing one cObject.
+         Internally handled as PHP integer, maximum number is therefore restricted to :php:`PHP_INT_MAX`.
 
 
 
@@ -836,6 +837,8 @@ jsFooterInline
          bottom of the page (just before the closing body tag).
 
 
+         The :ts:`jsInline` property contains any number of numeric keys, each representing one cObject.
+         Internally handled as PHP integer, maximum number is therefore restricted to :php:`PHP_INT_MAX`.
 
 .. _setup-page-jsinline:
 
