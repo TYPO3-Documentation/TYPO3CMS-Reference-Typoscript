@@ -27,7 +27,6 @@ exclude
     Use the uid/identifier of the record in the default data provider.
 
 :aspect:`Example`
-
     .. figure:: ../Images/BackendLayoutID.png
         :alt: Two backend layout records shown in list module
 
