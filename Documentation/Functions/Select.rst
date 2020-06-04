@@ -125,6 +125,9 @@ pidInList
    **Special value:** :ts:`-1`
       Allows to select versioned records in workspaces directly.
 
+   **Special value:** :ts:`0`
+      Allows to disable the :sql:`pid` constraint completely.
+
 :aspect:`Default`
    :ts:`this`
 
