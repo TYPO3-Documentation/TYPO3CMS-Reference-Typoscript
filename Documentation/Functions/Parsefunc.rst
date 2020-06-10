@@ -205,7 +205,7 @@ nonTypoTagStdWrap
 :aspect:`Description`
    Like :ref:`parsefunc-plainTextStdWrap`. Difference:
 
-   :ref:`parsefunc-plainTextStdWrap` works an ALL non-tag pieces in the text.
+   :ref:`parsefunc-plainTextStdWrap` works on ALL non-tag pieces in the text.
    :ref:`parsefunc-nonTypoTagStdWrap` is post processing of all text
    (including tags) between special TypoTags
    (unless :ts:`breakoutTypoTagContent` is not set for the TypoTag).
