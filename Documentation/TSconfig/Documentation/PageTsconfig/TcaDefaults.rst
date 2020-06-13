@@ -26,7 +26,7 @@ values when creating new records in the backend is this:
 
 Example:
 
-    .. code-block:: typoscript
+.. code-block:: typoscript
 
-        # Show newly created pages by default
-        TCAdefaults.pages.hidden = 0
+    # Show newly created pages by default
+    TCAdefaults.pages.hidden = 0

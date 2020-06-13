@@ -114,7 +114,6 @@ altLabels
         Where `sDEF` is the sheet name.
 
 :aspect:`Example`
-
    ::
 
         TCEFORM.pages.doktype {
@@ -420,7 +419,6 @@ noMatchingValue_label
         Where `sDEF` is the sheet name.
 
 :aspect:`Example`
-
     .. code-block:: typoscript
 
         TCEFORM.pages.doktype {

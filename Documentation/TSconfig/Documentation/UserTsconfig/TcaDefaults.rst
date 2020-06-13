@@ -36,27 +36,27 @@ So these values will be authoritative if the user has no access to the field any
 
 Example:
 
-    .. code-block:: typoscript
+.. code-block:: typoscript
 
-        # Show newly created pages by default
-        TCAdefaults.pages.hidden = 0
+    # Show newly created pages by default
+    TCAdefaults.pages.hidden = 0
 
-    .. important::
+.. important::
 
-        This example will not work when creating the page from the context menu
-        since this is triggered by the values listed in the `ctrl` section of
-        :file:`typo3/sysext/core/Configuration/TCA/pages.php`::
+    This example will not work when creating the page from the context menu
+    since this is triggered by the values listed in the `ctrl` section of
+    :file:`typo3/sysext/core/Configuration/TCA/pages.php`::
 
-            'ctrl' => [
-                'useColumnsForDefaultValues' => 'doktype,fe_group,hidden',
-                ...
-            ]
+        'ctrl' => [
+            'useColumnsForDefaultValues' => 'doktype,fe_group,hidden',
+            ...
+        ]
 
-        If 'hidden' is in the list, it gets overwritten with the "neighbor" record value (see
-        :php:`\TYPO3\CMS\Backend\Form\FormDataProvider\DatabaseRowInitializeNew::setDefaultsFromNeighborRow`)
-        and as the value is set - usually to '0' - it will not be overwritten
-        again. To make it work as expected, that value must be overridden. This
-        can be done for example in the :file:`Configuration/TCA/Overrides` folder
-        of an extension::
+    If 'hidden' is in the list, it gets overwritten with the "neighbor" record value (see
+    :php:`\TYPO3\CMS\Backend\Form\FormDataProvider\DatabaseRowInitializeNew::setDefaultsFromNeighborRow`)
+    and as the value is set - usually to '0' - it will not be overwritten
+    again. To make it work as expected, that value must be overridden. This
+    can be done for example in the :file:`Configuration/TCA/Overrides` folder
+    of an extension::
 
-            $GLOBALS['TCA']['pages']['ctrl']['useColumnsForDefaultValues'] = 'doktype,fe_group';
+        $GLOBALS['TCA']['pages']['ctrl']['useColumnsForDefaultValues'] = 'doktype,fe_group';
