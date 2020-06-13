@@ -98,7 +98,6 @@ defaultLanguageFlag
         The flag selector of a language record in the backend
 
 :aspect:`Example`
-
     This will show the German flag, and the text "deutsch" on hover.
 
     .. code-block:: typoscript
@@ -162,7 +161,6 @@ fieldDefinitions
     The string `###ALL_TABLES###` is replaced with a list of all table names an editor has access to.
 
 :aspect:`Example`
-
     .. code-block:: typoscript
 
         mod.web_info.fieldDefinitions {
@@ -210,7 +208,6 @@ menu.function
         option of blinding elements mostly to remove otherwise distracting options.
 
 :aspect:`Example`
-
     .. code-block:: typoscript
 
         mod.web_info.menu.function {
@@ -249,7 +246,6 @@ allowInconsistentLanguageHandling
     If you want to go back to the old, inconsistent behavior, you can toggle it back on via this switch.
 
 :aspect:`Example`
-
     Allows to set TYPO3s page module back to inconsistent language mode
 
     .. code-block:: typoscript
@@ -267,7 +263,6 @@ BackendLayouts
     Allows to define backend layouts via Page TSconfig directly without using database records.
 
 :aspect:`Example`
-
     .. code-block:: typoscript
 
         mod.web_layout.BackendLayouts {
@@ -400,7 +395,6 @@ editFieldsAtATime
     1
 
 :aspect:`Example`
-
     .. code-block:: typoscript
 
         mod.web_layout {
@@ -549,8 +543,8 @@ preview
 
     .. note::
 
-        This only works, if there is no hook registered for this content type, you may want to check this
-        section in the "System > Configuration" module:
+       This only works, if there is no hook registered for this content type, you may want to check this
+       section in the "System > Configuration" module:
 
        .. code-block:: php
 
@@ -558,7 +552,6 @@ preview
               ['tt_content_drawItem']['content_element_xy'];
 
 :aspect:`Example`
-
     .. code-block:: typoscript
 
         mod.web_layout.tt_content.preview.custom_ce = EXT:site_mysite/Resources/Private/Templates/Preview/CustomCe.html
@@ -588,13 +581,12 @@ allowedNewTables
 
     This is the opposite of :ref:`deniedNewTables property <pageTsConfigWebListDeniedNewTables>`.
 
-        .. note::
+    .. note::
 
-            Technically records can be created (e.g. by copying/moving), so this is not a security feature.
-            The point is to reduce the number of options for new records visually.
+       Technically records can be created (e.g. by copying/moving), so this is not a security feature.
+       The point is to reduce the number of options for new records visually.
 
 :aspect:`Example`
-
     .. code-block:: typoscript
 
         mod.web_list {
@@ -645,7 +637,6 @@ csvDelimiter
     ,
 
 :aspect:`Example`
-
     .. code-block:: typoscript
 
         mod.web_list {
@@ -690,7 +681,6 @@ deniedNewTables
     If `allowedNewTables` and `deniedNewTables` contain a common subset, `deniedNewTables` takes precedence.
 
 :aspect:`Example`
-
     .. code-block:: typoscript
 
         mod.web_list {
@@ -805,7 +795,6 @@ hideTranslations
     single table names as comma-separated list.
 
 :aspect:`Example`
-
     .. code-block:: typoscript
 
         mod.web_list.hideTranslations = *
@@ -855,7 +844,6 @@ listOnlyInSingleTableView
     very practical for pages containing many records from many tables!
 
 :aspect:`Example`
-
     .. code-block:: typoscript
 
         mod.web_list {
@@ -884,7 +872,6 @@ newContentElementWizard.override
     new content elements.
 
 :aspect:`Example`
-
     .. code-block:: typoscript
 
         mod.newContentElementWizard.override = my_custom_module
@@ -915,7 +902,6 @@ noCreateRecordsLink
     0
 
 :aspect:`Example`
-
     .. code-block:: typoscript
 
         mod.web_list {
@@ -951,7 +937,6 @@ noExportRecordsLinks
     0
 
 :aspect:`Example`
-
     .. code-block:: typoscript
 
         mod.web_list {
@@ -983,7 +968,6 @@ table.[tableName].hideTable
     even if table name is listed in "hideTables" list.
 
 :aspect:`Example`
-
     .. code-block:: typoscript
 
         mod.web_list.table.tt_content.hideTable = 1
@@ -1001,7 +985,6 @@ tableDisplayOrder
     The keywords `before` and `after` can be used to specify an order relative to other table names.
 
 :aspect:`Example`
-
     .. code-block:: typoscript
 
         mod.web_list.tableDisplayOrder.<tableName> {
@@ -1076,7 +1059,6 @@ menu.function
         option of blinding elements mostly to remove otherwise distracting options.
 
 :aspect:`Example`
-
     .. code-block:: typoscript
 
         # Disable the item "Template Analyzer"
@@ -1115,7 +1097,6 @@ previewFrameWidths
         Height of the preset
 
 :aspect:`Example`
-
     With this configuration a new preset '1014' with size 1027x768 will be configured with a label
     loaded from an xlf file and the category 'desktop'.
 
@@ -1144,7 +1125,6 @@ type
     Enter the value of the &type parameter passed to the webpage.
 
 :aspect:`Example`
-
     .. code-block:: typoscript
 
         mod.web_view {
@@ -1312,7 +1292,6 @@ newRecord.pages
         Show or hide the link to create new pages at a selected position.
 
 :aspect:`Example`
-
     .. code-block:: typoscript
 
         mod.wizards.newRecord.pages.show {

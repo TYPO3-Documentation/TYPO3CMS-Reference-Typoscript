@@ -83,7 +83,6 @@ bookmarkGroups
    default) or "string" to change the label accordingly.
 
 :aspect:`Example`
-
    .. code-block:: typoscript
 
       bookmarkGroups {
@@ -187,7 +186,6 @@ contextMenu disableItems
    options become available: `exportT3d` and `importT3d`
 
 :aspect:`Example`
-
    .. code-block:: typoscript
 
       # Remove "New" and "Create New wizard" for pages context menu (list module)
@@ -231,7 +229,6 @@ defaultUploadFolder
    The syntax is "storage_uid:file_path".
 
 :aspect:`Example`
-
    .. code-block:: typoscript
 
       options.defaultUploadFolder = 2:user_folders/my_folder/
@@ -261,7 +258,6 @@ dontMountAdminMounts
    boolean
 
 :aspect:`Description`
-
    This options prevents the root to be mounted for an admin user.
 
    .. note::
@@ -452,7 +448,6 @@ folderTree.altElementBrowserMountPoints
    The alternative filemounts are added to the existing filemounts.
 
 :aspect:`Example`
-
    .. code-block:: typoscript
 
       options.folderTree.altElementBrowserMountPoints = _temp_/, 2:/templates, 1:/files/images
@@ -507,7 +502,6 @@ hideModules.[moduleGroup]
    *SYSTEM -> Configuration -> $GLOBALS['TBE_MODULES'] (BE Modules)*
 
 :aspect:`Example`
-
    .. code-block:: typoscript
 
       # Hide module groups "file" and "help"
@@ -542,7 +536,6 @@ hideRecords.pages
    - New record wizard
 
 :aspect:`Example`
-
    .. code-block:: typoscript
 
       options.hideRecords.pages = 12,45
@@ -581,7 +574,6 @@ lockToIP
       This option is only enabled if the :php:`$GLOBALS['TYPO3_CONF_VARS']['BE']['enabledBeUserIPLock']` configuration is true.
 
 :aspect:`Example`
-
    .. code-block:: typoscript
 
       # Allow all from 192.168-network
@@ -636,7 +628,6 @@ overridePageModule
       and can be achieved using :ref:`hideModules <useroptions-hideModules>`, too.
 
 :aspect:`Example`
-
    .. code-block:: typoscript
 
       # Enable TemplaVoila page module as default page module.
@@ -664,8 +655,7 @@ pageTree.altElementBrowserMountPoints
    unless you use the ``altElementBrowserMountPoints.append`` option
    described below.
 
-   **Example**
-
+:aspect:`Example`
    .. code-block:: typoscript
 
       options.pageTree.altElementBrowserMountPoints = 34,123
@@ -686,7 +676,6 @@ pageTree.altElementBrowserMountPoints.append
    existing UserTSconfig option.
 
 :aspect:`Example`
-
    .. code-block:: typoscript
 
       options.pageTree.altElementBrowserMountPoints = 34,123
@@ -824,7 +813,6 @@ saveClipboard
    boolean
 
 :aspect:`Description`
-
    If set, the clipboard content will be preserved for the next login.
    Normally the clipboard content lasts only during the session.
 
@@ -847,7 +835,6 @@ saveDocNew
    1
 
 :aspect:`Example`
-
    In this example the button is disabled for all tables, except
    tt\_content where it will appear, and in addition create the records
    in the top of the page (default is after instead of top).
@@ -926,7 +913,6 @@ view.languageOrder
    their translation when they click the view-links.
 
 :aspect:`Example`
-
    .. code-block:: typoscript
 
       options.view.languageOrder = 2,1
