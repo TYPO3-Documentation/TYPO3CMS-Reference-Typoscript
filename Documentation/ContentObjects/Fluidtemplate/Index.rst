@@ -104,8 +104,7 @@ template
 
    Use this property to define a content object, which should be used as
    template file. It is an alternative to ".file"; if ".template" is set, it
-   takes precedence. While any content object can be used here, the cObject
-   :ref:`FILE <cobj-file>` might be the usual choice.
+   takes precedence.
 
 
 .. _cobj-fluidtemplate-properties-file:
@@ -905,8 +904,10 @@ You could use it with a TypoScript code like this:
    page = PAGE
    page.10 = FLUIDTEMPLATE
    page.10 {
-      template = FILE
-      template.file = EXT:site_default/Resources/Private/Templates/MyTemplate.html
+      templateName = MyTemplate
+      templateRootPaths {
+            10 = EXT:site_default/Resources/Private/Templates
+         }
       partialRootPath = EXT:site_default/Resources/Private/Partials/
       variables {
          mylabel = TEXT

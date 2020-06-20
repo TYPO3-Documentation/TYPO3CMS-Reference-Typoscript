@@ -1,15 +1,17 @@
 .. include:: ../../Includes.txt
 
-
 .. _cobj-template:
 
 ========
 TEMPLATE
 ========
 
-.. tip::
+.. warning::
 
   It is recommended to use :ref:`cobj-fluidtemplate` instead of TEMPLATE.
+
+  TEMPLATE will be removed in TYPO3 11.
+
   FLUIDTEMPLATE combines Fluid templates with TypoScript. This works very
   similar to TEMPLATE.
 
@@ -17,6 +19,7 @@ With this cObject you can define a template (e.g. an HTML file) which
 should be used as a basis for your whole website. Inside the template
 file you can define markers, which later will be replaced with dynamic
 content by TYPO3.
+
 
 .. ### BEGIN~OF~TABLE ###
 
@@ -29,20 +32,15 @@ content by TYPO3.
          :ref:`cObject <data-type-cobject>`
 
    Description
-         This must be loaded with the template-code. Usually this is done
-         with a :ref:`FILE cObject <cobj-file>`. If it is not loaded with
-         code, the object returns nothing.
+         This must be loaded with the template-code.
 
-         **Example:** ::
+         .. warning::
 
-            page.10 = TEMPLATE
-            page.10 {
-               template = FILE
-               template.file = fileadmin/template.html
-            }
+            The content object type :typoscript:`FILE` was deprecated in TYPO3 9
+            and removed in TYPO3 10. The previously used method of loading the
+            template using a :typoscript:`FILE` object will no longer work!
 
-         This will use the file fileadmin/template.html as template for your
-         website.
+            See :doc:`t3core:Changelog/9.5/Deprecation-85970-FileContentObject`
 
 
 .. container:: table-row
