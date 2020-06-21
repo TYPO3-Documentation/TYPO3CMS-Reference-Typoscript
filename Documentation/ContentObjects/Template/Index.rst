@@ -7,9 +7,13 @@
 TEMPLATE
 ========
 
-.. tip::
+.. warning::
+
 
   It is recommended to use :ref:`cobj-fluidtemplate` instead of TEMPLATE.
+
+  TEMPLATE was removed in TYPO3 11.
+
   FLUIDTEMPLATE combines Fluid templates with TypoScript. This works very
   similar to TEMPLATE.
 
@@ -30,19 +34,19 @@ content by TYPO3.
 
    Description
          This must be loaded with the template-code. Usually this is done
-         with a :ref:`FILE cObject <cobj-file>`. If it is not loaded with
+         with a :ts:`FILE` cObject. If it is not loaded with
          code, the object returns nothing.
 
-         **Example:** ::
+         .. warning::
 
-            page.10 = TEMPLATE
-            page.10 {
-               template = FILE
-               template.file = fileadmin/template.html
-            }
+            The content object type :typoscript:`FILE` was deprecated in TYPO3 9
+            and removed in TYPO3 10. The previously used method of loading the
+            template using a :typoscript:`FILE` object will no longer work!
 
-         This will use the file fileadmin/template.html as template for your
-         website.
+            It is generally recommended to use :ref:`cobj-fluidtemplate`
+            instead of TEMPLATE.
+
+
 
 
 .. container:: table-row
