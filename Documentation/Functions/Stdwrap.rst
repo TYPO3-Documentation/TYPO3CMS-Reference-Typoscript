@@ -401,7 +401,6 @@ listNum
       Returns a random item out of a list.
 
    **.splitChar** (string):
-
       Defines the string used to explode the value. If splitChar is an
       integer, the character with that number is used (e.g. "10" to split
       lines...).
