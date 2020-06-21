@@ -30,7 +30,8 @@ templateName
    This name is used together with the set format to find the template in the
    given templateRootPaths. Use this property to define a content object, which
    should be used as template file. It is an alternative to :ts:`.file`. If
-   :ts:`.templateName` is set, it takes precedence.
+   
+   `.templateName` is set, it takes precedence.
 
    **Example 1:** ::
 
@@ -108,7 +109,7 @@ template
 
    .. warning::
 
-      The ts:`FILE` object type has been removed in TYPO3 10. As the :ts:`.template`
+      The :ts:`FILE` object type has been removed in TYPO3 10. As the :ts:`.template`
       property used :ts:`FILE`, you should generally check your code if
       using this and switch to using :ref:`.templateName <cobj-fluidtemplate-properties-templatename>`
       with :ref:`.templateRootPaths <cobj-fluidtemplate-properties-templaterootpaths>` or use
