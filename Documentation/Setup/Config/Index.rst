@@ -68,7 +68,6 @@ Properties
    `inlineStyle2TempFile`_                               :ref:`data-type-boolean`
    `intTarget`_                                          :ref:`data-type-target`
    `linkVars`_                                           :ref:`data-type-list`
-   `message\_page\_is\_being\_generated`_                :ref:`data-type-string`
    `message\_preview`_                                   :ref:`data-type-string`
    `message\_preview\_workspace`_                        :ref:`data-type-string`
    `metaCharset`_                                        :ref:`data-type-string`                            utf-8
@@ -1379,32 +1378,6 @@ linkVars
          With the above configuration the following example GET parameters will
          be kept: `&tracking[green]=3`. But a get parameter like
          `tracking[blue]` will not be kept.
-
-
-
-.. _setup-config-message-page-is-being-generated:
-
-message\_page\_is\_being\_generated
-===================================
-
-.. container:: table-row
-
-   Property
-         message\_page\_is\_being\_generated
-
-   Data type
-         :ref:`data-type-string`
-
-   Description
-         Alternative HTML message that appears if a page is being generated.
-
-         Normally when a page is being generated a temporary copy is stored in
-         the cache-table with an expire-time of 30 seconds.
-
-         It is possible to use some keywords that are replaced with the
-         corresponding values. Possible keywords are: ###TITLE###,
-         ###REQUEST\_URI###
-
 
 
 .. _setup-config-message-preview:
