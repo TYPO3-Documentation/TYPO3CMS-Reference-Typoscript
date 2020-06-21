@@ -321,9 +321,6 @@ cssInline.[array]
 
                 20 = TEXT
                 20.value = h1 span {color: blue;}
-
-                30 = FILE
-                30.file = EXT:mysite/Resources/Public/StyleSheets/styles.css
             }
 
 

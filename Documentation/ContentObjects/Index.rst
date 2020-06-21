@@ -27,7 +27,6 @@ cObject
    CoaAndCoaInt/Index
    Content/Index
    Editpanel/Index
-   File/Index
    Files/Index
    Fluidtemplate/Index
    Hmenu/Index
