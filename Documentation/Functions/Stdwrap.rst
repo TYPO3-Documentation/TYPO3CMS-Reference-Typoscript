@@ -412,7 +412,6 @@ listNum
       Default: "," (comma)
 
    **.stdWrap** (stdWrap properties):
-
       stdWrap properties of the listNum...
 
 :aspect:`Examples`

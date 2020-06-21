@@ -597,7 +597,6 @@ request.getNormalizedParams()
 
 :aspect:`Description`
    Provides access to NormalizedParams object which contains a bunch of methods:
-
       ``getHttpHost()``
           Example: ``docs.typo3.org``
 
