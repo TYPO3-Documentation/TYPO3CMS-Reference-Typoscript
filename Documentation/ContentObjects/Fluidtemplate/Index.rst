@@ -104,9 +104,15 @@ template
 
    Use this property to define a content object, which should be used as
    template file. It is an alternative to ".file"; if ".template" is set, it
-   takes precedence. While any content object can be used here, the cObject
-   :ref:`FILE <cobj-file>` might be the usual choice.
+   takes precedence.
 
+   .. warning::
+
+      The ts:`FILE` object type has been removed in TYPO3 10. As the :ts:`.template`
+      property used :ts:`FILE`, you should generally check your code if
+      using this and switch to using :ref:`.templateName <cobj-fluidtemplate-properties-templatename>`
+      with :ref:`.templateRootPaths <cobj-fluidtemplate-properties-templaterootpaths>` or use
+      :ref:`.file <cobj-fluidtemplate-properties-file>`.
 
 .. _cobj-fluidtemplate-properties-file:
 
@@ -121,6 +127,16 @@ file
 
    The fluid template file. It is an alternative to ".template" and is used
    only, if ".template" is not set.
+
+   **Example:** ::
+
+      page = PAGE
+      page {
+         10 = FLUIDTEMPLATE
+         10 {
+            file = EXT:site_package/Resources/Private/Templates/Page/MyTemplate.html
+         }
+      }
 
 
 .. _cobj-fluidtemplate-properties-templaterootpaths:
