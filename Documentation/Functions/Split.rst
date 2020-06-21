@@ -88,7 +88,6 @@ returnCount
    and stops processing of the split function.
 
 :aspect:`Example`
-
    ::
 
       # returns 9
@@ -132,14 +131,12 @@ cObjNum
    when the objects are called. See :ref:`stdwrap` / current.
 
 :aspect:`Example for stdWrap`
-
    ::
 
       1.current = 1
       1.wrap = <b> | </b>
 
 :aspect:`Example for cObject array`
-
    ::
 
       1 {

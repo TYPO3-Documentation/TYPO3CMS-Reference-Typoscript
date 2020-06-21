@@ -13,9 +13,10 @@ If you do not want to have the HTML 'a' tag around the link, then you
 must set the property by :ts:`returnLast = url` or
 :php:`$lconf['returnLast'] = 'url'`.
 
-*Attention:*
-If this is used from :ts:`parseFunc` the :php:`$cObj->parameters` array is
-loaded with the lowercased link-parameters!
+.. important::
+
+   If this is used from :ts:`parseFunc` the :php:`$cObj->parameters` array is
+   loaded with the lowercased link-parameters!
 
 Examples
 ========
@@ -599,27 +600,22 @@ page
 The page identifier is a compound string based on several optional settings.
 
 :aspect:`uid` (int):
-
    The **uid** of a page record.
 
    `t3://page?uid=13`
 
 :aspect:`alias` (string):
-
    The **alias** of a page record (as an alternative to the UID).
 
    `t3://page?alias=myfunkyalias`
 
 :aspect:`type` (int) *(optional)*:
-
    `t3://page?uid=13&type=3` will reference page 13 in type 3.
 
 :aspect:`parameters` (string) *(optional, prefixed with &)*:
-
    `t3://page?uid=1313&my=param&will=get&added=here`
 
 :aspect:`fragment` (string) *(optional, prefixed with #)*:
-
    `t3://page?alias=myfunkyalias#c123`
 
    `t3://page?uid=13&type=3#c123`
@@ -630,13 +626,11 @@ file
 ----
 
 :aspect:`uid` (int):
-
    The UID of a file within the FAL database table `sys_file`.
 
    `t3://file?uid=13`
 
 :aspect:`identifier` (string):
-
    The identifier of a file using combined `<storage>:<path>` reference or a direct
    reference to one file like `fileadmin/path/myfile.jpg`.
 
@@ -648,13 +642,11 @@ folder
 ------
 
 :aspect:`identifier` (string):
-
    The identifier of a given folder.
 
    `t3://folder?identifier=fileadmin`
 
 :aspect:`storage` (string) *(optional)*:
-
    The FAL storage to the given folder.
 
    `t3://folder?storage=1&identifier=myfolder`
@@ -663,7 +655,6 @@ email
 -----
 
 :aspect:`email` (string):
-
    Mail address to be used, prefixed with `mailto:`
 
    `t3://email?email=mailto:user@example.org`
@@ -672,7 +663,6 @@ url
 ---
 
 :aspect:`url` (string):
-
    URL to be used, if no scheme is used `http://` is prefixed automatically. Query parameters have to be URL-encoded.
 
    `t3://url?url=example.org`
@@ -687,15 +677,12 @@ record
 Aspects `identifier` and `uid` are mandatory for this link handler.
 
 :aspect:`identifier` (string):
-
    The (individual) identifier of the link building configuration to be used.
 
 :aspect:`uid` (int):
-
    The UID of the referenced record to be linked.
 
 :aspect:`Example`
-
    The following reference relates to record `tx_myextension_content:123`. Tablename is retrieved
    from Page TSconfig settings, actual link generation is defined in TypoScript configuration for
    identifier `my_content`.

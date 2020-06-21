@@ -29,53 +29,51 @@ externalBlocks
 
    **.[tagname]** {
 
-      **callRecursive:** :ref:`data-type-boolean`. If set, the content of the block is
-      directed into parseFunc again. Otherwise the content is just passed
-      through with no other processing than :ref:`stdwrap` (see below).
+   * **callRecursive:** :ref:`data-type-boolean`. If set, the content of the block is
+     directed into parseFunc again. Otherwise the content is just passed
+     through with no other processing than :ref:`stdwrap` (see below).
 
-      **callRecursive.dontWrapSelf:** :ref:`data-type-boolean`. If set, the tags of the
-      block is *not* wrapped around the content returned from parseFunc.
+   * **callRecursive.dontWrapSelf:** :ref:`data-type-boolean`. If set, the tags of the
+     block is *not* wrapped around the content returned from parseFunc.
 
-      **callRecursive.alternativeWrap:** Alternative wrapping instead of
-      the original tags.
+   * **callRecursive.alternativeWrap:** Alternative wrapping instead of
+     the original tags.
 
-      **callRecursive.tagStdWrap:** :ref:`stdwrap` processing of the block-tags.
+   * **callRecursive.tagStdWrap:** :ref:`stdwrap` processing of the block-tags.
 
-      **stdWrap:** :ref:`stdwrap` processing of the whole block (regardless of
-      whether callRecursive was set.)
+   * **stdWrap:** :ref:`stdwrap` processing of the whole block (regardless of
+     whether callRecursive was set.)
 
-      **stripNLprev:** :ref:`data-type-boolean`. Strips off last line break of the previous
-      outside block.
+   * **stripNLprev:** :ref:`data-type-boolean`. Strips off last line break of the previous
+     outside block.
 
-      **stripNLnext:** :ref:`data-type-boolean`. Strips off first line break of the next
-      outside block.
+   * **stripNLnext:** :ref:`data-type-boolean`. Strips off first line break of the next
+     outside block.
 
-      **stripNL:** :ref:`data-type-boolean`. Does both of the above.
+   * **stripNL:** :ref:`data-type-boolean`. Does both of the above.
 
-      **HTMLtableCells:** :ref:`data-type-boolean`. If set, then the content is expected
-      to be a table and every table-cell is traversed.
+   * **HTMLtableCells:** :ref:`data-type-boolean`. If set, then the content is expected
+     to be a table and every table-cell is traversed.
 
-      Below, "default" means all cells and "1", "2", "3", ... overrides
-      for specific columns.
+   Below, "default" means all cells and "1", "2", "3", ... overrides
+   for specific columns.
 
-      **HTMLtableCells.[default/1/2/3/...]** {
+   * **HTMLtableCells.[default/1/2/3/...]** {
 
-         **callRecursive:** :ref:`data-type-boolean`. The content is parsed through current
-         parseFunc.
+     * **callRecursive:** :ref:`data-type-boolean`. The content is parsed through current
+       parseFunc.
 
-         **stdWrap:** :ref:`stdwrap` processing of the content in the cell.
+     * **stdWrap:** :ref:`stdwrap` processing of the content in the cell.
 
-         **tagStdWrap:** -> The :html:`<TD>` tag is processed by :ref:`stdwrap`.
+     * **tagStdWrap:** -> The :html:`<TD>` tag is processed by :ref:`stdwrap`.
 
-      }
 
-   **HTMLtableCells.addChr10BetweenParagraphs:** :ref:`data-type-boolean`. If set, then
-   all appearances of :html:`</P><P>` will have a :php:`chr(10)` inserted between them.
+   * **HTMLtableCells.addChr10BetweenParagraphs:** :ref:`data-type-boolean`. If set, then
+     all appearances of :html:`</P><P>` will have a :php:`chr(10)` inserted between them.
 
-   }
+
 
 :aspect:`Example`
-
    This example is used to split regular bodytext content so that tables
    and blockquotes in the bodytext are processed correctly. The
    blockquotes are passed into parseFunc again (recursively) and further
@@ -83,7 +81,7 @@ externalBlocks
    seen)
 
    The tables are also displayed with a number of properties of the cells
-   overridden. ::
+   overridden::
 
       tt_content.text.20.parseFunc.externalBlocks {
             blockquote.callRecursive = 1
@@ -124,7 +122,6 @@ constants
    with the value of the according constant.
 
 :aspect:`Example`
-
    ::
 
       constants.EMAIL = email@email.com
@@ -151,7 +148,6 @@ short
    Like constants above, but local.
 
 :aspect:`Example`
-
    This substitutes all occurrences of "T3" with "TYPO3 CMS" and "T3web"
    with a link to typo3.org. ::
 
@@ -315,7 +311,6 @@ denyTags
    If denyTags is not :ts:`*` and the tag is not found in the list, the tag may exist!
 
 :aspect:`Example`
-
    This allows :html:`<b>`, :html:`<i>`, :html:`<a>` and :html:`<img>` -tags to exist ::
 
       .allowTags = b,i,a,img

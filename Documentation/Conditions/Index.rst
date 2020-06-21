@@ -797,7 +797,6 @@ ip
    Value or Constraint, Wildcard or RegExp possible special value: devIP (match the devIPMask).
 
 :aspect:`Example`
-
    Check whether IP matches::
 
       [ip("172.18.*")]

@@ -54,10 +54,10 @@ Definition:
 
 In other words:
 
-   1. We have an **input sequence of M items**. M is known.
-   2. We have an **output sequence of 0 to N items**. N is unknown and may be zero, one, or "large".
-   3. We have a **ruleset** delivered with :ts:`optionSplit` that specifies how the input sequence
-      should be applied to the output sequence.
+1. We have an **input sequence of M items**. M is known.
+2. We have an **output sequence of 0 to N items**. N is unknown and may be zero, one, or "large".
+3. We have a **ruleset** delivered with :ts:`optionSplit` that specifies how the input sequence
+   should be applied to the output sequence.
 
 In the following we'll try to shed light on this.
 

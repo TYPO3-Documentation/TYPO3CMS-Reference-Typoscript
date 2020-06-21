@@ -22,7 +22,6 @@ encapsTagList
    List of tags which qualify as encapsulating tags. Must be lowercase.
 
 :aspect:`Example`
-
    ::
 
       encapsTagList = div, p
@@ -151,7 +150,6 @@ wrapNonWrappedLines
    Wrapping for non-encapsulated lines
 
 :aspect:`Example`
-
    ::
 
       wrapNonWrappedLines = <p>|</p>
