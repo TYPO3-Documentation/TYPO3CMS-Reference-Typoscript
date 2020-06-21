@@ -38,11 +38,9 @@ Properties
    `compressJs`_                                         :ref:`data-type-boolean`
    `concatenateCss`_                                     :ref:`data-type-boolean`
    `concatenateJs`_                                      :ref:`data-type-boolean`
-   `concatenateJsAndCss`_                                :ref:`data-type-boolean`                           0
    `content\_from\_pid\_allowOutsideDomain`_             :ref:`data-type-boolean`
    `contentObjectExceptionHandler`_                      array
    `debug`_                                              :ref:`data-type-boolean`
-   `defaultGetVars`_                                     array
    `disableAllHeaderCode`_                               :ref:`data-type-boolean`                           false
    `disableBodyTag`_                                     :ref:`data-type-boolean`                           0
    `disableCharsetHeader`_                               :ref:`data-type-boolean`
@@ -61,8 +59,6 @@ Properties
    `ftu`_                                                :ref:`data-type-boolean`                           false
    `headerComment`_                                      :ref:`data-type-string`
    `htmlTag.attributes`_                                 array
-   `htmlTag\_dir`_                                       :ref:`data-type-string`
-   `htmlTag\_langKey`_                                   :ref:`data-type-string`                            en
    `htmlTag\_setParams`_                                 :ref:`data-type-string`
    `htmlTag\_stdWrap`_                                   :ref:`stdwrap`
    `index\_descrLgd`_                                    :ref:`data-type-integer`                           200
@@ -71,10 +67,7 @@ Properties
    `index\_metatags`_                                    :ref:`data-type-boolean`                           true
    `inlineStyle2TempFile`_                               :ref:`data-type-boolean`
    `intTarget`_                                          :ref:`data-type-target`
-   `language`_                                           :ref:`data-type-string`
-   `language\_alt`_                                      :ref:`data-type-string`
    `linkVars`_                                           :ref:`data-type-list`
-   `locale\_all`_                                        :ref:`data-type-string`
    `message\_preview`_                                   :ref:`data-type-string`
    `message\_preview\_workspace`_                        :ref:`data-type-string`
    `metaCharset`_                                        :ref:`data-type-string`                            utf-8
@@ -100,19 +93,9 @@ Properties
    `spamProtectEmailAddresses\_lastDotSubst`_            :ref:`data-type-string`                            . *(just a simple dot)*
    `sword\_noMixedCase`_                                 :ref:`data-type-boolean`
    `sword\_standAlone`_                                  :ref:`data-type-boolean`
-   `sys\_language\_isocode`_                             :ref:`data-type-string`
-   `sys\_language\_isocode\_default`_                    :ref:`data-type-string`
-   `sys\_language\_mode`_                                :ref:`data-type-string`
-   `sys\_language\_overlay`_                             :ref:`data-type-boolean` / keyword
-   `sys\_language\_uid`_                                 :ref:`data-type-integer`
-   `titleTagFunction`_                                   :ref:`data-type-function-name`
    `tx\_[extension key with no underscores]\_[\*]`_      array
-   `typolinkCheckRootline`_                              :ref:`data-type-boolean`
-   `typolinkEnableLinksAcrossDomains`_                   :ref:`data-type-boolean`                           0
    `typolinkLinkAccessRestrictedPages`_                  integer (page id) / keyword "NONE"
    `typolinkLinkAccessRestrictedPages\_addParams`_       :ref:`data-type-string`
-   `USERNAME\_substToken`_                               :ref:`data-type-string`                            <!--###USERNAME###-->
-   `USERUID\_substToken`_                                :ref:`data-type-string`
    `xhtmlDoctype`_                                       :ref:`data-type-string`
    `xmlprologue`_                                        :ref:`data-type-string`
    ===================================================== ================================================== ======================================================================
@@ -563,45 +546,6 @@ concatenateJs
             }
 
 
-.. _setup-config-concatenatejsandcss:
-
-concatenateJsAndCss
-===================
-
-.. container:: table-row
-
-   Property
-         concatenateJsAndCss
-
-   Data type
-         :ref:`data-type-boolean`
-
-   Default
-         0
-
-   Description
-         **Note:** This property was deprecated and is planned to be removed!
-         Use :ts:`config.concatenateJs` and :ts:`config.concatenateCss` instead.
-
-         Setting :ts:`config.concatenateJsAndCss` bundles JS and CSS files in the FE.
-
-         TYPO3 comes with a built-in concatenation handler, but you
-         can also register your own one using
-         :php:`$GLOBALS['TYPO3_CONF_VARS']['FE']['concatenateHandler']`.
-
-         .. code-block:: php
-
-            $GLOBALS['TYPO3_CONF_VARS']['FE']['concatenateHandler'] =
-               \TYPO3\CMS\Core\Extension\ExtensionManager::extPath($_EXTKEY) .
-               'Classes/ConcatenateHandler.php:Vendor\MyExt\ConcatenateHandler->concatenateFiles';
-
-   Example
-         ::
-
-            config.concatenateJsAndCss = 1
-
-
-
 
 .. _setup-config-content-from-pid-allowoutsidedomain:
 
@@ -703,35 +647,6 @@ debug
          If set then debug information in the TypoScript code is sent.
          This applies e.g. to menu objects and the parsetime output.
          The parsetime will be sent as HTTP response header `X-TYPO3-Parsetime`.
-
-
-
-.. _setup-config-defaultgetvars:
-
-defaultGetVars
-==============
-
-.. container:: table-row
-
-   Property
-         defaultGetVars
-
-   Data type
-         array
-
-   Description
-         Allows to set default values for GET parameters. Default value is
-         taken only if the GET parameter isn't defined. Array notation is done
-         with dots, e.g.:
-
-         :php:`test['var1']` will be written as :ts:`test.var1`
-
-   Example
-         ::
-
-            config.defaultGetVars {
-                test.var1.var2.p3 = 15
-            }
 
 
 
@@ -906,15 +821,9 @@ disableLanguageHeader
 
    Description
          TYPO3 by default sends a `Content-language: XX` HTTP header,
-         where "XX" is the ISO code of the according language.
-
-         For the default language (sys_language_uid = 0), this header is based
-         on the value of :ts:`config.sys_language_isocode_default`. If this is unset,
-         config.language is used. If that is unset as well, it finally falls
-         back to "en".
-
-         For other languages, it uses the value from language_isocode from
-         sys_language. That value may be overwritten by :ts:`config.sys_language_isocode`.
+         where "XX" is the ISO code of the according language. The
+         value is based on the language defined in the
+         :ref:`Site Configuration <t3coreapi:sitehandling>`.
 
          If :ts:`config.disableLanguageHeader` is set, this header will not be sent.
 
@@ -956,9 +865,8 @@ doctype
             XHTML tags to ensure valid XML. If you set doctype to a string, then
             you must also set :ts:`config.xhtmlDoctype` (see below).
 
-         See :ref:`config.htmlTag_setParams <setup-config-htmltag-setparams>` and
-         :ref:`config.htmlTag_langKey <setup-config-htmltag-langkey>` for more
-         details on the effect on the HTML tag.
+         See :ref:`config.htmlTag_setParams <setup-config-htmltag-setparams>`
+         for more details on the effect on the HTML tag.
 
          Default is the HTML 5 doctype:
 
@@ -1230,71 +1138,6 @@ htmlTag.attributes
 
 .. _setup-config-htmltag-dir:
 
-htmlTag\_dir
-============
-
-.. container:: table-row
-
-   Property
-         htmlTag\_dir
-
-   Data type
-         :ref:`data-type-string`
-
-   Description
-         Sets text direction for whole document (useful for display of Arabic,
-         Hebrew pages).
-
-         Basically the value becomes the attribute value of "dir" for the
-         :html:`<html>` tag.
-
-         **Values:**
-
-         :ts:`rtl` = Right-To-Left (for Arabic / Hebrew)
-
-         :ts:`ltr` = Left-To-Right (Default for other languages)
-
-   Example
-         ::
-
-            config.htmlTag_dir = rtl
-
-.. note::
-    Used to older TYPO3 versions? If you are using :ref:`site handling<t3coreapi:sitehandling>` you do not need to set
-    `htmlTag_dir` in TypoScript.
-
-.. _setup-config-htmltag-langkey:
-
-htmlTag\_langKey
-================
-
-.. container:: table-row
-
-   Property
-         htmlTag\_langKey
-
-   Data type
-         :ref:`data-type-string`
-
-   Default
-         en
-
-   Description
-         Allows you to set the language value for the attributes `xml:lang` and
-         `lang` in the :html:`<html>` tag (when using :ts:`config.doctype = xhtml*`).
-
-         The values must follow the format specified in `IETF RFC 3066
-         <http://www.ietf.org/rfc/rfc3066.txt>`_
-
-   Example
-         ::
-
-            config.htmlTag_langKey = en-US
-
-
-.. note::
-    Used to older TYPO3 versions? If you are using :ref:`site handling<t3coreapi:sitehandling>` you do not need to set
-    `htmlTag_langKey` in TypoScript.
 
 .. _setup-config-htmltag-setparams:
 
@@ -1480,76 +1323,6 @@ intTarget
          Default internal target. Used by typolink if no target is set
 
 
-
-.. _setup-config-language:
-
-language
-========
-
-.. container:: table-row
-
-   Property
-         language
-
-   Data type
-         :ref:`data-type-string`
-
-   Description
-         Language key. See :ref:`stdwrap-lang` for more information.
-
-         Select between:
-
-         English (default) = [empty]
-
-         Danish = dk
-
-         German = de
-
-         Norwegian = no
-
-         Italian = it
-
-         etc...
-
-         The value must correspond to the key used for the backend system language if
-         there is one. See inside :file:`typo3/sysext/core/Classes/Localization/Locales.php`
-         or look at the translation page on typo3.org for the official 2-byte key for
-         a given language. Notice that selecting the official key is important if you
-         want to get labels in the correct language from "locallang" files.
-
-         If the language you need is not yet a system language in TYPO3 you can
-         use an artificial string of your choice and provide values for it via
-         the TypoScript template where the property :ts:`_LOCAL_LANG` for most
-         plugins will provide a way to override/add values for labels. The keys
-         to use must be looked up in the locallang-file used by the plugin of
-         course.
-
-
-
-.. _setup-config-language-alt:
-
-language\_alt
-=============
-
-.. container:: table-row
-
-   Property
-         language\_alt
-
-   Data type
-         :ref:`data-type-string`
-
-   Description
-         If :ref:`setup-config-language` is used, this can be set to another
-         language key which will be used for labels if a label was not found
-         for the main language. For instance a brazil portuguese website might
-         specify "pt" as alternative language which means the portuguese label
-         will be shown if none was available in the main language, brazil
-         portuguese. This feature makes sense if one language is incompletely
-         translated and close to another language.
-
-
-
 .. _setup-config-linkvars:
 
 linkVars
@@ -1605,40 +1378,6 @@ linkVars
          With the above configuration the following example GET parameters will
          be kept: `&tracking[green]=3`. But a get parameter like
          `tracking[blue]` will not be kept.
-
-
-
-.. _setup-config-locale-all:
-
-locale\_all
-===========
-
-.. container:: table-row
-
-   Property
-         locale\_all
-
-   Data type
-         :ref:`data-type-string`
-
-   Description
-         :php:`setlocale("LC_ALL", [value]);`
-
-         value-examples: deutsch, de\_DE, danish, portuguese, spanish, french,
-         norwegian, italian. See www.php.net for other value. Also on linux,
-         look at :file:`/usr/share/locale/`
-
-         :php:`$GLOBALS['TSFE']->localeCharset` is intelligently set to the assumed charset of the
-         locale strings. This is used in :ref:`stdwrap-strftime` to convert locale
-         strings to the UTF-8 of the frontend.
-
-         It is possible to supply a comma-separated list of locales as a fallback chain
-
-   Example
-         This will render dates in danish made with stdWrap/strftime::
-
-            locale_all = danish
-            locale_all = da_DK
 
 
 .. _setup-config-message-preview:
@@ -1952,8 +1691,7 @@ pageTitle
 
    Description
          stdWrap for the page title. This option will be executed *after* all
-         other processing options like :ref:`setup-config-titleTagFunction` and
-         :ref:`setup-config-pageTitleFirst`.
+         other processing options like :ref:`setup-config-pageTitleFirst`.
 
 
 
@@ -2372,238 +2110,6 @@ sword\_standAlone
 
 
 
-.. _setup-config-sys-language-isocode:
-
-sys\_language\_isocode
-======================
-
-.. container:: table-row
-
-   Property
-         sys\_language\_isocode
-
-   Data type
-         :ref:`data-type-string`
-
-   Description
-        ISO 639-1 language code for the according language. By default this
-        is being set by :ts:`TSFE:sys_language_isocode`. The value is derived
-        from the ISO code that is stored within the sys_language record.
-        You can override the value, which was retrieved that way, with this
-        setting.
-
-        The ISO code is also used for the language attribute of the HTML tag.
-        Therefore the setting :ref:`htmlTag_langKey <setup-config-htmltag-langkey>`
-        is not needed anymore, if it is the same as the ISO code.
-
-        See the example at sys\_language\_isocode\_default!
-
-
-.. _setup-config-sys-language-isocode-default:
-
-sys\_language\_isocode\_default
-===============================
-
-.. container:: table-row
-
-   Property
-         sys\_language\_isocode\_default
-
-   Data type
-         :ref:`data-type-string`
-
-   Default
-         en
-
-   Description
-         ISO 639-1 language code for the default language (that is
-         :ts:`sys_language_uid = 0`).
-
-   Example
-         ::
-
-            # Danish by default
-            config.sys_language_uid = 0
-            config.sys_language_isocode_default = da
-
-            [siteLanguage = locale = de_CH.UTF-8]
-                config.sys_language_isocode = ch
-            [GLOBAL]
-
-
-.. _setup-config-sys-language-mode:
-
-sys\_language\_mode
-===================
-
-.. container:: table-row
-
-   Property
-         sys\_language\_mode
-
-   Data type
-         :ref:`data-type-string`
-
-   Description
-         Configures what the system should do when a page is not translated
-         to the requested language.
-         It is only evaluated when :ts:`sys_language_uid` is greater than `0`
-         and the requested page translation is NOT available.
-         Internally this setting corresponds to
-         :php:`LanguageAspect->contentId`.
-
-         The syntax is "[keyword] ; [value]".
-
-         **Possible keywords are:**
-
-         [empty] (not set)
-            If not set and the page is not translated, the system will
-            behave as if the default language was requested.
-            In that case both :php:`LanguageAspect->contentId`
-            and :php:`LanguageAspect->id` will be set to `0`.
-
-         content\_fallback
-            Recommended. The system will always operate
-            with the selected language even if the page is not translated and has no
-            page overlay record. This will keep menus etc. translated. However,
-            the *content* on the page can still fall back to another language,
-            defined by the value of this keyword, e.g. :ts:`content_fallback;1,3,0`,
-            to fall back to the content of sys\_language\_uid 1, after that to the
-            content of sys\_language\_uid 3 and if that is not present either,
-            to default (0).
-
-            Note that the fallback affects all content of the page.
-            This means that once a translated page record is found in the fallback
-            chain, the system will try to use this language for the rendering even
-            if there is no properly translated content.
-
-         strict
-            If the requested translation does not exist the system
-            will report a *Page Not Found (404)* error.
-            Basically this means that all pages with
-            gray background in the Web > Info / Localization overview module will
-            fail (they would otherwise fall back to default language in one way
-            or another).
-
-         ignore
-            The system will stay with the selected language even if
-            the page is not translated and there is no content available for this
-            language, so you can handle that situation on your own then.
-            The system will render the page and the content as if the translation would exist.
-            Internally :php:`LanguageAspect->contentId` is set to the value of
-            :php:`LanguageAspect->id`.
-
-         Refer to the
-         :ref:`Frontend Localization Guide <t3l10n:localization-modes>`
-         for an in-depth discussion.
-
-
-
-.. _setup-config-sys-language-overlay:
-
-sys\_language\_overlay
-======================
-
-.. container:: table-row
-
-   Property
-         sys\_language\_overlay
-
-   Data type
-         :ref:`data-type-boolean` / keyword
-
-   Description
-         Defines whether TYPO3 should use the *content overlay* technique when
-         fetching translated content. *Content overlay* means fetching records
-         from the default language first and then replacing specific fields
-         with the translation if that is found.
-
-         It is only evaluated when :php:`LanguageAspect->contentId > 0`.
-         Internally it sets the property :php:`LanguageAspect->overlayType` at a request.
-         Further calls via :php:`$TSFE->sys_page->getRecordOverlay` receive this value
-         to see if overlaying should take place.
-
-         The requirements for this is that the table is configured with
-         `languageField` and `transOrigPointerField` in the :php:`['ctrl']` section of
-         :php:`$GLOBALS['TCA']`. Also, exclusion of certain fields can be done with the
-         "l10n\_mode" directive in the field-configuration of :php:`$GLOBALS['TCA']`.
-
-         For backend administration this requires that you configure the
-         "Web > Page" module to display content elements accordingly; That each
-         default element is shown and next to it any translation found. This
-         configuration can be done with Page TSconfig for a section of the
-         website using the object path :ts:`mod.web_layout.defLangBinding = 1`.
-
-         **Possible values:**
-
-         0
-            Just fetch records from the selected language as given by
-            :php:`LanguageAspect->contentId`.
-            No overlay will happen, no fetching of the records from the default language.
-            This boils down to "free mode" language handling. This is the only mode which shows
-            records without a default language parent.
-
-            An exception to this rule can be made with the TypoScript
-            :ref:`cobj-content` object if you manually set
-            :ts:`select.includeRecordsWithoutDefaultTranslation = 1`.
-
-         1
-            Fetch records from the default language and overlay them with translations.
-            If a record is not translated the default language will be used.
-
-         hideNonTranslated
-            Fetch records from the default language and overlay
-            them with translations. If some record is not translated it will not be shown.
-
-
-
-.. _setup-config-sys-language-uid:
-
-sys\_language\_uid
-==================
-
-.. container:: table-row
-
-   Property
-         sys\_language\_uid
-
-   Data type
-         :ref:`data-type-integer`
-
-   Description
-         This property holds the value of the field "uid" of a record of table "sys\_language".
-         Various parts of the frontend rendering code will select records
-         which are assigned to this language.
-         See ->SELECT
-
-         Internally this value is used to initialize the TypoScriptFrontendController
-         :php:`LanguageAspect->id` property.
-         The :php:`LanguageAspect->contentId` property is set based
-         on the value of the :ts:`sys_language_uid` and other settings like
-         :ts:`sys_language_mode`.
-
-         It is usually resolved internally by a middleware during bootstrap, taking site configuration setting
-         into account. No manual interference necessary.
-
-
-.. _setup-config-titletagfunction:
-
-titleTagFunction
-================
-
-.. container:: table-row
-
-   Property
-         titleTagFunction
-
-   Data type
-         :ref:`data-type-function-name`
-
-   Description
-         Passes the default :html:`<title>` tag content to this function.
-         No TypoScript parameters are passed though.
-
-
 .. _setup-config-tx-extension-key-with-no-underscores:
 
 tx\_[extension key with no underscores]\_[\*]
@@ -2629,70 +2135,6 @@ tx\_[extension key with no underscores]\_[\*]
             config.tx_realurl_enable = 1
             config.tx_myextension.width  = 10
             config.tx_myextension.length = 20
-
-
-
-.. _setup-config-typolinkcheckrootline:
-
-typolinkCheckRootline
-=====================
-
-.. container:: table-row
-
-   Property
-         typolinkCheckRootline
-
-   Data type
-         :ref:`data-type-boolean`
-
-   Description
-         For every link created with "typolink" a check will be done to
-         verify that the target page is within the current rootline of the site.
-
-         This option is always enabled since TYPO3 9. Setting it nevertheless
-         will trigger a deprecation warning.
-
-
-.. _setup-config-typolinkenablelinksacrossdomains:
-
-typolinkEnableLinksAcrossDomains
-================================
-
-.. container:: table-row
-
-   Property
-         typolinkEnableLinksAcrossDomains
-
-   Data type
-         :ref:`data-type-boolean`
-
-   Default
-         0
-
-   Description
-         This option enables to create links across domains using current
-         domain's linking scheme.
-
-         If this option is not set, then all cross-domain links will be
-         generated as
-
-         `http://domain.tld/index.php?id=12345` (where `12345` is page id).
-         Setting this option requires that domains, where pages are linked,
-         have the same configuration for:
-
-         - linking scheme (i.e. all use RealURL or CoolURI but not any
-           mixture)
-
-         - all domains have identical localization settings
-           (:ts:`sys_language_XXX` directives)
-
-         - all domains have the same set of languages defined
-
-         Disclaimer: it must be understood that while link is generated to
-         another domain, it is still generated in the context of current
-         domain. No side effects are known at the time of writing of this
-         documentation but they may exist. If any side effects are found, this
-         documentation will be updated to include them.
 
 
 
@@ -2749,52 +2191,6 @@ typolinkLinkAccessRestrictedPages\_addParams
 
    Description
          See :ref:`setup-config-typolinklinkaccessrestrictedpages` above.
-
-
-
-.. _setup-config-username-substtoken:
-
-USERNAME\_substToken
-====================
-
-.. container:: table-row
-
-   Property
-         USERNAME\_substToken
-
-   Data type
-         :ref:`data-type-string`
-
-   Default
-         <!--###USERNAME###-->
-
-   Description
-         The is the token used on the page, which should be substituted with
-         the current username *if* a front-end user is logged in! If no login,
-         the substitution will not happen.
-
-
-
-.. _setup-config-useruid-substtoken:
-
-USERUID\_substToken
-===================
-
-.. container:: table-row
-
-   Property
-         USERUID\_substToken
-
-   Data type
-         :ref:`data-type-string`
-
-   Description
-         The is the token used on the page, which should be substituted with
-         the current users UID *if* a front-end user is logged in! If no login,
-         the substitution will not happen.
-
-         This value has no default value and only if you specify a value for
-         this token will a substitution process take place.
 
 
 
