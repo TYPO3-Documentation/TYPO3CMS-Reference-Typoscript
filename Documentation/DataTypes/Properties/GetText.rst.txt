@@ -14,7 +14,6 @@ cObj
    :ts:`parentRecordNumber` is the only key available.
 
 :aspect:`Example:`
-
    Get the number of the current cObject record::
 
       foo = cObj : parentRecordNumber
@@ -187,7 +186,6 @@ file
    See the :ref:`FILES <cobj-files-examples>` cObject for usage examples.
 
 :aspect:`Example:`
-
    Get the file size of the file with the sys\_file UID 17::
 
       foo = file : 17 : size
@@ -244,7 +242,6 @@ fullRootLine
    :ref:`data-type-gettext-levelfield` property.
 
 :aspect:`Example:`
-
    Get the title of the page right before the start of the current website::
 
       foo = fullRootLine : -1, title

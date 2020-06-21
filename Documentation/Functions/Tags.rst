@@ -56,7 +56,6 @@ The best known is the "link" tag, which is used to create links.
    content and that the content after this must be re-wrapped.
 
 :aspect:`Examples`
-
    ::
 
       tags.bold = TEXT

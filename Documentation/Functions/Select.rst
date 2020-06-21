@@ -369,7 +369,6 @@ markers
       All stdWrap properties can be used for each markername.
 
 :aspect:`Example`
-
    ::
 
       page.60 = CONTENT

@@ -80,7 +80,6 @@ http.keep
    As default the link-text will be the full domain-name of the link.
 
 :aspect:`Example`
-
    With the URL http://www.example.com/test/doc.php?id=3 in our text we will
    get the following results::
 
@@ -104,7 +103,6 @@ http.ATagParams
    Additional parameters
 
 :aspect:`Example`
-
    ::
 
       http.ATagParams = class="board"
@@ -156,7 +154,6 @@ mailto.ATagParams
    Additional parameters
 
 :aspect:`Example`
-
    ::
 
       mailto.ATagParams = class="board"

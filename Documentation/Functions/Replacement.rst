@@ -59,7 +59,6 @@ useRegExp
    0
 
 :aspect:`Example`
-
    ::
 
       10 {
