@@ -104,7 +104,6 @@ addPageCacheTags
    cache.
 
 :aspect:`Example`
-
    .. code-block:: typoscript
 
       addPageCacheTags = pagetag1,pagetag2,pagetag3
@@ -194,7 +193,6 @@ field
    See the description for the data type ":ref:`data-type-gettext`"/field!
 
 :aspect:`Example`
-
    ::
 
       .field = title
@@ -205,7 +203,6 @@ field
    by "//".
 
 :aspect:`Example`
-
    ::
 
       .field = nav_title // title
@@ -335,7 +332,6 @@ ifNull
    with the value defined here.
 
 :aspect:`Example`
-
    ::
 
       page.10 = COA_INT
@@ -417,7 +413,6 @@ listNum
       stdWrap properties of the listNum...
 
 :aspect:`Examples`
-
    We have a value of "item 1, item 2, item 3, item 4":
 
    This would return "item 3"::
@@ -577,7 +572,6 @@ parseFunc
    content elements.
 
 :aspect:`Example`
-
    ::
 
       parseFunc = < lib.parseFunc_RTE
@@ -662,7 +656,6 @@ prioriCalc
    operators and features.
 
 :aspect:`Examples`
-
    ::
 
       100%7 = 2
@@ -734,7 +727,6 @@ hash
    <http://www.php.net/manual/en/function.hash-algos.php>`_ .
 
 :aspect:`Example`
-
    ::
 
       page.10 = TEXT
@@ -869,7 +861,6 @@ strtotime
       }
 
 :aspect:`Example`
-
    ::
 
       next_weekday = TEXT
@@ -913,7 +904,6 @@ age
    which you might want between the number and the unit stays.
 
 :aspect:`Example`
-
    ::
 
       lib.ageFormat = TEXT
@@ -1167,7 +1157,6 @@ crop
    in the middle, is removed completely.
 
 :aspect:`Examples`
-
    :ts:`20 | ...` => max 20 characters. If more, the value will be truncated
    to the first 20 characters and prepended with "..."
 
@@ -1236,7 +1225,6 @@ encodeForJavaScriptValue
    :php:`\TYPO3\CMS\Core\Utility\GeneralUtility::quoteJSvalue`.
 
 :aspect:`Example`
-
    ::
 
       10 = TEXT
@@ -1494,7 +1482,6 @@ noTrimWrap
    by :ref:`objects-optionsplit` (which takes precedence over :ts:`noTrimWrap`).
 
 :aspect:`Example`
-
    ::
 
       noTrimWrap = | val1 | val2 |
@@ -1503,7 +1490,6 @@ noTrimWrap
    wrapped; including the whitespaces.
 
 :aspect:`Example`
-
    ::
 
       noTrimWrap = ^ val1 ^ val2 ^ || ^ val3 ^ val4 ^
@@ -1546,7 +1532,6 @@ dataWrap
    of :ref:`data-type-gettext`.
 
 :aspect:`Example`
-
    ::
 
       <div id="{tsfe : id}"> | </div>
@@ -1618,7 +1603,6 @@ orderedStdWrap
    order in which the :ts:`stdWrap` functions are executed.
 
 :aspect:`Example`
-
    ::
 
       10 = TEXT
@@ -1671,7 +1655,6 @@ insertData
    If set, then the content string is parsed like :ts:`dataWrap` above.
 
 :aspect:`Example`
-
    Displays the page title::
 
       10 = TEXT
@@ -1708,7 +1691,6 @@ postUserFunc
    more in-depth information.
 
 :aspect:`Example`
-
    You can paste this example directly into a new template record::
 
       page = PAGE
@@ -1829,7 +1811,6 @@ prefixComment
    The content is parsed through :ref:`stdwrap-insertData`.
 
 :aspect:`Example`
-
    ::
 
       prefixComment = 2 | CONTENT ELEMENT, uid:{field:uid}/{field:CType}
