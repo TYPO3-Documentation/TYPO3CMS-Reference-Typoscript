@@ -1,6 +1,7 @@
 .. include:: ../Includes.txt
 
 .. _extdev-add-typoscript:
+.. _add-typoscript-in-extension:
 
 ================================
 Add TypoScript in your extension
