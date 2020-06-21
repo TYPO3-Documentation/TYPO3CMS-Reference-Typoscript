@@ -53,7 +53,6 @@ isNull
    features are available below this property.
 
 :aspect:`Example`
-
    ::
 
       page.10 = COA_INT
@@ -151,7 +150,6 @@ equals
    Returns true, if the content is equal to :ts:`value`.
 
 :aspect:`Example`
-
    ::
 
       if.equals = POST
@@ -175,7 +173,6 @@ isInList
    **Note:** The list in :ts:`value` may not have spaces between elements!
 
 :aspect:`Example`
-
    ::
 
       if.isInList.field = uid

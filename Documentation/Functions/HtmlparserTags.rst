@@ -241,7 +241,6 @@ fixAttrib.[attribute].prefixRelPathWith
    will be prefixed the attribute.
 
 :aspect:`Example`
-
    ::
 
       ...fixAttrib.src.prefixRelPathWith = http://192.168.230.3/typo3/32/dummy/

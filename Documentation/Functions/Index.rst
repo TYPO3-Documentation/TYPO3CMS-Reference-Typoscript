@@ -12,7 +12,6 @@ Sometimes a data type is defined as having a modifier. This is typically a funct
 that can be used additionally.
 
 Example:
-
    The complex data type :ref:`TEXT <cobj-text>` has a property "value" which is defined as having a simple
    data type "string" with the optional type modifier "stdWrap":
 

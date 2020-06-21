@@ -624,33 +624,33 @@ Renders a text.
 
          **Properties:**
 
-         **splitRendering.compX:** Integer. Additional pixelspace between
-         parts, x direction.
+         * **splitRendering.compX:** Integer. Additional pixelspace between
+           parts, x direction.
 
-         **splitRendering.compY:** Integer. Additional pixelspace between
-         parts, y direction.
+         * **splitRendering.compY:** Integer. Additional pixelspace between
+           parts, y direction.
 
-         **splitRendering.[array] = keyword** with keyword being [charRange,
-         highlightWord]
+         * **splitRendering.[array] = keyword** with keyword being [charRange,
+           highlightWord]
 
-         **splitRendering.[array] {**
+         * **splitRendering.[array] {**
 
-            **fontFile:** Alternative font file for this rendering.
+           * **fontFile:** Alternative font file for this rendering.
 
-            **fontSize:** Alternative font size for this rendering.
+           * **fontSize:** Alternative font size for this rendering.
 
-            **color:** Alternative color for this rendering, works *only*
-            without "niceText".
+           * **color:** Alternative color for this rendering, works *only*
+             without "niceText".
 
-            **xSpaceBefore:** x-Space before this part.
+           * **xSpaceBefore:** x-Space before this part.
 
-            **xSpaceAfter:** x-Space after this part.
+           * **xSpaceAfter:** x-Space after this part.
 
-            **ySpaceBefore:** y-Space before this part.
+           * **ySpaceBefore:** y-Space before this part.
 
-            **ySpaceAfter:** y-Space after this part.
+           * **ySpaceAfter:** y-Space after this part.
 
-         }
+
 
          **Keyword: charRange**
 
