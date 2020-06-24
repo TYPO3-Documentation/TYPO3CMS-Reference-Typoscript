@@ -54,7 +54,6 @@ Properties
    `extTarget`_                                          :ref:`data-type-target`                            \_top
    `fileTarget`_                                         :ref:`data-type-target`
    `forceTypeValue`_                                     :ref:`data-type-integer`
-   `formMailCharset`_                                    :ref:`data-type-string`
    `ftu`_                                                :ref:`data-type-boolean`                           false
    `headerComment`_                                      :ref:`data-type-string`
    `htmlTag.attributes`_                                 array
@@ -977,28 +976,6 @@ forceTypeValue
          Useful if you run a template with special content at - say `&type=95` -
          but still wants to keep your targets neutral. Then you set your
          targets to blank and this value to the type value you wish.
-
-
-
-.. _setup-config-formmailcharset:
-
-formMailCharset
-===============
-
-.. container:: table-row
-
-   Property
-         formMailCharset
-
-   Data type
-         :ref:`data-type-string`
-
-   Default
-         "" *(unset)*
-
-   Description
-         Character set of mails sent through TYPO3 mail forms. If it is
-         unset, the character set defined in :ref:`setup-config-metacharset` is used.
 
 
 
