@@ -24,13 +24,16 @@ description for the constant.
 
 .. code-block:: typoscript
 
-   styles.content.textStyle {
-      # cat=content/cText/1; type=; label= Bodytext font: This is the font face used for text!
-      face =
-      # cat=content/cText/2; type=int[1-5]; label= Bodytext size
-      size =
-      # cat=content/cText/3; type=color; label= Bodytext color
-      color =
+   styles.content {
+      # cat=content/cHeader/h0; type=int[1-5]; label=Default Header type: Enter the number of the header layout to be used by default
+      defaultHeaderType = 2
+
+      # cat=content/cShortcut/t0; type=string; label=List of accepted tables
+      shortcut.tables = tt_content
+
+      # cat=content/cTextmedia/i1; type=color; label= Media element border, color: Bordercolor of media elements in content elements when "Border"-option for an element is set
+      textmedia.borderColor = #000000
+
       color1 =
       color2 = blue
       properties =
