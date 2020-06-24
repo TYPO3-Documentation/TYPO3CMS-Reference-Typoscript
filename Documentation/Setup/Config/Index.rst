@@ -54,7 +54,6 @@ Properties
    `extTarget`_                                          :ref:`data-type-target`                            \_top
    `fileTarget`_                                         :ref:`data-type-target`
    `forceTypeValue`_                                     :ref:`data-type-integer`
-   `ftu`_                                                :ref:`data-type-boolean`                           false
    `headerComment`_                                      :ref:`data-type-string`
    `htmlTag.attributes`_                                 array
    `htmlTag\_setParams`_                                 :ref:`data-type-string`
@@ -976,44 +975,6 @@ forceTypeValue
          Useful if you run a template with special content at - say `&type=95` -
          but still wants to keep your targets neutral. Then you set your
          targets to blank and this value to the type value you wish.
-
-
-
-.. _setup-config-ftu:
-
-ftu
-===
-
-.. container:: table-row
-
-   Property
-         ftu
-
-   Data type
-         :ref:`data-type-boolean`
-
-   Default
-         false
-
-   Description
-         If set, the "&ftu=...." GET-fallback identification is inserted.
-
-         "&ftu=[hash]" is always inserted in the links on the first page a user
-         hits. If it turns out in the next hit that the user has cookies
-         enabled, this variable is not set anymore as the cookies does the job.
-         If no cookies is accepted the "ftu" remains set for all links on the
-         site and thereby we can still track the user.
-
-         **You should not set this feature if grabber-spiders like Teleport are
-         going to grab your site!**
-
-         **You should not set this feature if you want search-engines to index
-         your site.**
-
-         You can also ignore this feature if you're certain, website users will
-         use cookies.
-
-         "ftu" means fe\_typo\_user ("fe" is "frontend").
 
 
 
