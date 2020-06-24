@@ -38,7 +38,6 @@ Properties
    `compressJs`_                                         :ref:`data-type-boolean`
    `concatenateCss`_                                     :ref:`data-type-boolean`
    `concatenateJs`_                                      :ref:`data-type-boolean`
-   `content\_from\_pid\_allowOutsideDomain`_             :ref:`data-type-boolean`
    `contentObjectExceptionHandler`_                      array
    `debug`_                                              :ref:`data-type-boolean`
    `disableAllHeaderCode`_                               :ref:`data-type-boolean`                           false
@@ -545,30 +544,6 @@ concatenateJs
                 test2.async = 1
             }
 
-
-
-.. _setup-config-content-from-pid-allowoutsidedomain:
-
-content\_from\_pid\_allowOutsideDomain
-======================================
-
-.. container:: table-row
-
-   Property
-         content\_from\_pid\_allowOutsideDomain
-
-   Data type
-         :ref:`data-type-boolean`
-
-   Description
-         Using the "Show content from this page instead" feature allows you to
-         insert content from the current domain only. Setting this option will
-         allow content included from anywhere in the page tree!
-
-         Another use case is mount points: By means of the page type "Mount Point" you can virtually
-         insert a whole subtree from somewhere else by just pointing to it. However, usually this
-         only works within the page tree of the given domain. Setting
-         :ts:`config.content_from_pid_allowOutsideDomain = 1` removes that restriction.
 
 
 
@@ -1561,12 +1536,6 @@ MP\_mapRootPoints
       processed again.
 
       The configured IDs have to be the uids of Mount Point pages itself, not the targets.
-
-      .. tip::
-
-         To mount content from parts of the page tree that don't belong to the current
-         domain set :ref:`setup-config-content-from-pid-allowoutsidedomain` to true.
-
 
 
 
