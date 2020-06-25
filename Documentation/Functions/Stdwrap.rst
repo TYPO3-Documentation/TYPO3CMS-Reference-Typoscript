@@ -1357,25 +1357,6 @@ addParams
    Lets you add tag parameters to the content *if* the content is a tag!
 
 
-.. _stdwrap-filelink:
-
-filelink
-~~~~~~~~
-
-.. warning:: 
-   `addParams` is deprecated since version 9 and will be removed in version 10. 
-   Use DataProcessors or Fluid Styled Content instead.
-
-:aspect:`Property`
-   filelink
-
-:aspect:`Data type`
-   :ref:`filelink` / :ref:`stdWrap`
-
-:aspect:`Description`
-   Used to make lists of links to files.
-
-
 .. _stdwrap-precobject:
 
 preCObject
