@@ -124,49 +124,6 @@ otherwise noted!
 .. container:: table-row
 
    Property
-         imgNamePrefix
-
-   Data type
-         string
-
-   Default
-         "img"
-
-   Description
-         .. important::
-
-            `imgNamePrefix` is deprecated since version 9.4 and will be removed in version 10.
-
-         Prefix for the image names. This prefix is appended with the uid of the
-         page.
-
-
-
-.. container:: table-row
-
-   Property
-         imgNameNotRandom
-
-   Data type
-         boolean
-
-   Description
-         .. important::
-
-            `imgNameNotRandom` is deprecated since version 9.4 and will be removed in version 10.
-
-         If set, the image names of menu items is not randomly assigned. Useful
-         switch if you're manipulating these images with some external
-         JavaScript.
-
-         **Note:** Don't set this if you're working with a menu with
-         sectionIndex! In that case you need special unique names of items
-         based on something else than the uid of the parent page of course!
-
-
-.. container:: table-row
-
-   Property
          debugItemConf
 
    Data type
