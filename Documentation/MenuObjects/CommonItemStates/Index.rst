@@ -1,12 +1,12 @@
 .. include:: ../../Includes.txt
 
 
-.. _tmenu-gmenu-imgmenu-common-properties:
+.. _tmenu-common-properties:
 
-Common item states for TMENU, GMENU and IMGMENU
+Common item states
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-These properties are in common for TMENU, GMENU and IMGMENU.
+These properties are all the item states used by TMENU.
 
 .. ### BEGIN~OF~TABLE ###
 
@@ -155,8 +155,6 @@ These properties are in common for TMENU, GMENU and IMGMENU.
 
          Spacers are pages of the doktype "Spacer". These are not viewable
          pages but "placeholders" which can be used to divide menu items.
-
-         **Note:** Rollovers do not work with spacers, if you use GMENU!
 
 
 

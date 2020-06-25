@@ -95,7 +95,16 @@ TMENU
    Description
          Wraps the whole block of sub items.
 
-         **Example:** see GMENU.stdWrap
+         **Example:** ::
+
+         2 = TMENU
+         2 {
+           stdWrap.dataWrap = <ul class="{register :
+              parentProperty}"> | </ul>
+           NO {
+             ...
+           }
+         }
 
 
 .. container:: table-row

@@ -133,8 +133,6 @@ otherwise noted!
          Outputs (by the debug()-function) the configuration arrays for each
          menu item. Useful to debug optionSplit things and such...
 
-         Applies to GMENU, TMENU and IMGMENU.
-
 
 .. container:: table-row
 
@@ -151,8 +149,6 @@ otherwise noted!
          This feature is smart, if you have inserted a menu from somewhere
          else, perhaps a shared menu, but wants the menu items to call the same
          page, which then generates a proper output based on the real\_uid.
-
-         Applies to GMENU, TMENU and IMGMENU.
 
 
 .. container:: table-row
@@ -171,8 +167,6 @@ otherwise noted!
          "&some\_var=some%20value"
 
          Must be rawurlencoded.
-
-         Applies to GMENU, TMENU and IMGMENU.
 
 .. _menu-common-properties-showaccessrestrictedpages:
 
@@ -315,7 +309,7 @@ showAccessRestrictedPages
          .. figure:: ../../Images/MenuObjectsCommonPropertiesSubmenuObjSuffixes.png
             :alt: Output of the above example.
 
-         Applies to GMENU and TMENU on >= 2 :sup:`nd` level in a menu.
+         Applies to TMENU on >= 2 :sup:`nd` level in a menu.
 
 
 .. ###### END~OF~TABLE ######

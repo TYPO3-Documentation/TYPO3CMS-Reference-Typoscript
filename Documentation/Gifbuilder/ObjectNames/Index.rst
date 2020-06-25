@@ -235,7 +235,7 @@ Renders a text.
          if this string is not empty.
 
          The $cObj->data-array is loaded with the page-record, if for example
-         the GIFBUILDER object is used by GMENU or IMGMENU.
+         the GIFBUILDER object is used in TypoScript.
 
 
 .. container:: table-row
@@ -359,9 +359,9 @@ Renders a text.
 
    Data type
          resource /:ref:`stdWrap <stdwrap>`
-         
+
    Default
-         Nimbus (Arial-clone)         
+         Nimbus (Arial-clone)
 
    Description
          Font face (truetype *.ttf and opentype *.otf font you can upload!)
@@ -1389,7 +1389,7 @@ Example:
          positive integer
 
    Description
-         Detect edges within an image. This is a grey-scale operator, so it is 
+         Detect edges within an image. This is a grey-scale operator, so it is
          applied to each of the three color channels separately. The value defines
          the radius for the edge detection.
 
