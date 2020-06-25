@@ -223,20 +223,6 @@ cropVariant
           cropVariant = desktop
       }
 
-.. _imgresource-alternativetemppath:
-
-alternativeTempPath
-===================
-
-:aspect:`Property`
-   alternativeTempPath
-
-:aspect:`Data type`
-   :ref:`data-type-string`
-
-:aspect:`Description`
-   Enter an alternative path to use for temporary images.
-
 .. _imgresource-frame:
 
 frame
