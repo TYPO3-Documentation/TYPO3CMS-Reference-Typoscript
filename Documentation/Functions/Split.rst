@@ -166,12 +166,12 @@ Example
 =======
 
 This is an example of TypoScript code that imports the content of
-field "bodytext" from the :php:`$cObj->data-array` (ln 2). The content is
-split by the line break character (ln 4). The items should all be
-treated with a :ts:`stdWrap` (ln 5) which imports the value of the item (ln
-6). This value is wrapped in a table row where the first column is a
-bullet-gif (ln 7). Finally the whole thing is wrapped in the proper
-table-tags (ln 9). :
+field "bodytext" from the :php:`$cObj->data-array` (ln 3). The content is
+split by the line break character (ln 5). The items should all be
+treated with a :ts:`stdWrap` (ln 6) which imports the value of the item (ln
+7). This value is wrapped in a table row where the first column is a
+bullet-gif (ln 8). Finally the whole thing is wrapped in the proper
+table-tags (ln 10). :
 
 .. code-block:: typoscript
    :linenos:
