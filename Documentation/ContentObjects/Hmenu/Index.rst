@@ -1579,12 +1579,14 @@ generated from this array, which was returned from the function
 
    <?php
 
+   declare(strict_types=1);
+
    namespace Vendor\MyExtension\Userfuncs;
 
    class CustomMenu
    {
 
-       public function makeMenuArray($content, $conf)
+       public function makeMenuArray(array $content, array $conf) : array
        {
            return [
                [

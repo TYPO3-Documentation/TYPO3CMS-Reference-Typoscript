@@ -99,8 +99,7 @@ TMENU
 
          2 = TMENU
          2 {
-           stdWrap.dataWrap = <ul class="{register :
-              parentProperty}"> | </ul>
+           stdWrap.dataWrap = <ul class="{register : parentProperty}"> | </ul>
            NO {
              ...
            }
