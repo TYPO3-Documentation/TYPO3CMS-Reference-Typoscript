@@ -274,10 +274,13 @@ languageField
    :ref:`data-type-string` / :ref:`stdWrap`
 
 :aspect:`Description`
+   This defaults to whatever is defined in TCA "ctrl"-section in the
+   "languageField". Change it to overwrite the behaviour in your query.
+
    By default all records that have language-relevant information in the
    TCA "ctrl"-section are translated on translated pages.
 
-   This can be disabled by setting :ts:`languageField = 0`.
+   This behaviour can be disabled by setting :ts:`languageField = 0`.
 
 
 .. _select-includeRecordsWithoutDefaultTranslation:
