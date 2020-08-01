@@ -38,7 +38,6 @@ Properties
    `compressJs`_                                         :ref:`data-type-boolean`
    `concatenateCss`_                                     :ref:`data-type-boolean`
    `concatenateJs`_                                      :ref:`data-type-boolean`
-   `content\_from\_pid\_allowOutsideDomain`_             :ref:`data-type-boolean`
    `contentObjectExceptionHandler`_                      array
    `debug`_                                              :ref:`data-type-boolean`
    `disableAllHeaderCode`_                               :ref:`data-type-boolean`                           false
@@ -55,8 +54,6 @@ Properties
    `extTarget`_                                          :ref:`data-type-target`                            \_top
    `fileTarget`_                                         :ref:`data-type-target`
    `forceTypeValue`_                                     :ref:`data-type-integer`
-   `formMailCharset`_                                    :ref:`data-type-string`
-   `ftu`_                                                :ref:`data-type-boolean`                           false
    `headerComment`_                                      :ref:`data-type-string`
    `htmlTag.attributes`_                                 array
    `htmlTag\_setParams`_                                 :ref:`data-type-string`
@@ -547,30 +544,6 @@ concatenateJs
 
 
 
-.. _setup-config-content-from-pid-allowoutsidedomain:
-
-content\_from\_pid\_allowOutsideDomain
-======================================
-
-.. container:: table-row
-
-   Property
-         content\_from\_pid\_allowOutsideDomain
-
-   Data type
-         :ref:`data-type-boolean`
-
-   Description
-         Using the "Show content from this page instead" feature allows you to
-         insert content from the current domain only. Setting this option will
-         allow content included from anywhere in the page tree!
-
-         Another use case is mount points: By means of the page type "Mount Point" you can virtually
-         insert a whole subtree from somewhere else by just pointing to it. However, usually this
-         only works within the page tree of the given domain. Setting
-         :ts:`config.content_from_pid_allowOutsideDomain = 1` removes that restriction.
-
-
 
 .. _setup-config-contentObjectExceptionHandler:
 
@@ -1002,66 +975,6 @@ forceTypeValue
          Useful if you run a template with special content at - say `&type=95` -
          but still wants to keep your targets neutral. Then you set your
          targets to blank and this value to the type value you wish.
-
-
-
-.. _setup-config-formmailcharset:
-
-formMailCharset
-===============
-
-.. container:: table-row
-
-   Property
-         formMailCharset
-
-   Data type
-         :ref:`data-type-string`
-
-   Default
-         "" *(unset)*
-
-   Description
-         Character set of mails sent through TYPO3 mail forms. If it is
-         unset, the character set defined in :ref:`setup-config-metacharset` is used.
-
-
-
-.. _setup-config-ftu:
-
-ftu
-===
-
-.. container:: table-row
-
-   Property
-         ftu
-
-   Data type
-         :ref:`data-type-boolean`
-
-   Default
-         false
-
-   Description
-         If set, the "&ftu=...." GET-fallback identification is inserted.
-
-         "&ftu=[hash]" is always inserted in the links on the first page a user
-         hits. If it turns out in the next hit that the user has cookies
-         enabled, this variable is not set anymore as the cookies does the job.
-         If no cookies is accepted the "ftu" remains set for all links on the
-         site and thereby we can still track the user.
-
-         **You should not set this feature if grabber-spiders like Teleport are
-         going to grab your site!**
-
-         **You should not set this feature if you want search-engines to index
-         your site.**
-
-         You can also ignore this feature if you're certain, website users will
-         use cookies.
-
-         "ftu" means fe\_typo\_user ("fe" is "frontend").
 
 
 
@@ -1561,12 +1474,6 @@ MP\_mapRootPoints
       processed again.
 
       The configured IDs have to be the uids of Mount Point pages itself, not the targets.
-
-      .. tip::
-
-         To mount content from parts of the page tree that don't belong to the current
-         domain set :ref:`setup-config-content-from-pid-allowoutsidedomain` to true.
-
 
 
 

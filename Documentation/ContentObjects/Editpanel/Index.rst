@@ -10,24 +10,35 @@ EDITPANEL
 A content object of type EDITPANEL is inserted only if a backend user is logged in
 and if a FE-editing extension is installed and loaded. What gets
 displayed exactly may depend on which FE-editing extension is used.
-The reference below is related to the "feedit" system extension. In
-such a case the EDITPANEL also requires that the Admin Panel be
-displayed (config.admPanel = 1) and that the user has checked the
+The reference below is related to EDITPANEL settings found in the TYPO3 core.
+Different FE-editing extension may include their own settings that are not
+present in this list. In such a case, it is advised to look up that extensions
+documentation for more information.
+
+In the case of the "feedit" extension, the EDITPANEL also requires that the
+Admin Panel be displayed (config.admPanel = 1) and that the user has checked the
 "Display Edit Icons" option. Whenever the edit panel is inserted, page
 caching is disabled.
 
 The edit panel inserts icons for moving, editing, deleting, hiding and
 creating records.
 
-In conjunction with css\_styled\_content, an EDITPANEL will appear for
-each content element on the page. It is also possible to insert an
-EDITPANEL as cObject in the template, using TypoScript.
+An EDITPANEL will appear for each content element on the page. It is also
+possible to insert an EDITPANEL as cObject in the template, using TypoScript.
 
 
 .. note::
 
-   The extension "feedit" needs to be installed for this to work.
+   A FE-editing extension needs to be installed for this to work. The
+   former "feedit" system extension has been dropped from the TYPO3 core
+   since v10, but is still available as third-party extension:
 
+   `ext:feedit <https://extensions.typo3.org/extension/feedit/>`__
+
+   There are other, more "up to date" FE-editing extensions, as well. For
+   instance you can try out "frontend_editing":
+
+   `ext:frontend_editing <https://extensions.typo3.org/extension/frontend_editing/>`__
 
 .. ### BEGIN~OF~TABLE ###
 
@@ -113,18 +124,6 @@ EDITPANEL as cObject in the template, using TypoScript.
 .. container:: table-row
 
    Property
-         edit.displayRecord
-
-   Data type
-         boolean
-
-   Description
-         If set, then the record edited is displayed above the editing form.
-
-
-.. container:: table-row
-
-   Property
          onlyCurrentPid
 
    Data type
@@ -157,66 +156,6 @@ EDITPANEL as cObject in the template, using TypoScript.
 
    Description
          Wraps the whole edit panel including the black line (if configured).
-
-
-.. container:: table-row
-
-   Property
-         printBeforeContent
-
-   Data type
-         boolean
-
-   Description
-         Normally the edit panel is displayed below the content element it
-         belongs to. If this option is set, the panel is printed in front of
-         the according element.
-
-         **Example:** ::
-
-            tt_content.stdWrap.editPanel.printBeforeContent = 1
-
-         This displays the edit panels in front of the according elements, if
-         you use css\_styled\_content.
-
-   Default
-         0
-
-
-.. container:: table-row
-
-   Property
-         previewBorder
-
-   Data type
-         boolean / integer
-
-   Description
-         If set, the hidden/starttime/endtime/fe\_user elements which are
-         previewed will have a border around them.
-
-         The integer value denotes the thickness of the border.
-
-
-.. container:: table-row
-
-   Property
-         previewBorder.innerWrap
-
-         previewBorder.outerWrap
-
-         previewBorder.color
-
-   Data type
-         :ref:`wrap <data-type-wrap>` / HTML color
-
-   Description
-         **innerWrap:** Wraps the content elements (including the icons) inside
-         the preview border (an HTML table).
-
-         **outerWrap:** Wraps the whole content element including the border.
-
-         **color:** Denotes the color of the border.
 
 
 .. container:: table-row

@@ -1,12 +1,12 @@
 .. include:: ../../Includes.txt
 
 
-.. _tmenu-gmenu-imgmenu-common-properties:
+.. _tmenu-common-properties:
 
-Common item states for TMENU, GMENU and IMGMENU
+Common item states
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-These properties are in common for TMENU, GMENU and IMGMENU.
+These properties are all the item states used by TMENU.
 
 .. ### BEGIN~OF~TABLE ###
 
@@ -17,9 +17,9 @@ These properties are in common for TMENU, GMENU and IMGMENU.
 
    Data type
          boolean / (config)
-         
+
    Default
-         1 (true)         
+         1 (true)
 
    Description
          The default "Normal" state rendering of Item. This is required for all
@@ -45,8 +45,6 @@ These properties are in common for TMENU, GMENU and IMGMENU.
    Property
          IFSUB
 
-         IFSUBRO
-
    Data type
          boolean / (config)
 
@@ -63,8 +61,6 @@ These properties are in common for TMENU, GMENU and IMGMENU.
    Property
          ACT
 
-         ACTRO
-
    Data type
          boolean / (config)
 
@@ -80,8 +76,6 @@ These properties are in common for TMENU, GMENU and IMGMENU.
 
    Property
          ACTIFSUB
-
-         ACTIFSUBRO
 
    Data type
          boolean / (config)
@@ -100,8 +94,6 @@ These properties are in common for TMENU, GMENU and IMGMENU.
    Property
          CUR
 
-         CURRO
-
    Data type
          boolean / (config)
 
@@ -118,13 +110,11 @@ These properties are in common for TMENU, GMENU and IMGMENU.
    Property
          CURIFSUB
 
-         CURIFSUBRO
-
    Data type
          boolean / (config)
-         
+
    Default
-         0         
+         0
 
    Description
          Enable/Configuration for a menu item if the item is the current page
@@ -136,8 +126,6 @@ These properties are in common for TMENU, GMENU and IMGMENU.
 
    Property
          USR
-
-         USRRO
 
    Data type
          boolean / (config)
@@ -168,16 +156,12 @@ These properties are in common for TMENU, GMENU and IMGMENU.
          Spacers are pages of the doktype "Spacer". These are not viewable
          pages but "placeholders" which can be used to divide menu items.
 
-         **Note:** Rollovers do not work with spacers, if you use GMENU!
-
 
 
 .. container:: table-row
 
    Property
          USERDEF1
-
-         USERDEF1RO
 
    Data type
          boolean / (config)
@@ -194,8 +178,6 @@ These properties are in common for TMENU, GMENU and IMGMENU.
 
    Property
          USERDEF2
-
-         USERDEF2RO
 
    Data type
          boolean / (config)

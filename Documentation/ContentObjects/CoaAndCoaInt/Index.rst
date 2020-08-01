@@ -86,33 +86,23 @@ Examples:
 
 ::
 
-   lib.menutable = COA
-   lib.menutable {
+   lib.contentexample = COA
+   lib.contentexample {
      10 = TEXT
-     10.value = <table border="0" style="border-spacing: 0px;">
+     10.value = <h1>Header</h1>
 
-     20 = HMENU
-     20.entryLevel = 0
-     20.1 = GMENU
-     20.1.NO {
-       wrap = <tr><td> | </td></tr>
-       XY = {$menuXY}
-       backColor = {$bgCol}
-       20 = TEXT
-       20 {
-         text.field = title
-         fontFile = fileadmin/fonts/hatten.ttf
-         fontSize = 23
-         fontColor = {$menuCol}
-         offset = |*| 5,18 || 25,18
-       }
+     20 = CONTENT
+     20 {
+       table = tt_content
+       select.orderBy = sorting
+       select.where = {#colPos}=0
      }
 
      30 = TEXT
-     30.value = </table>
+     30.value = <footer>Footer text</footer>
    }
 
-The previous example will print a table with a graphical menu in it.
+The previous example will print a simple h1 header, followed by the page content records and a footer element.
 
 ::
 

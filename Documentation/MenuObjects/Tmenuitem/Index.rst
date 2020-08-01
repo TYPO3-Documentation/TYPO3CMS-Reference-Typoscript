@@ -6,9 +6,9 @@
 TMENUITEM
 ^^^^^^^^^
 
-The current record is the page-record of the menu item - just like you
-have it with GMENU/gifbuilder. Now, if you would like to get data from
-the current menu item's page record, use stdWrap.data = field : [field name].
+The current record is the page-record of the menu item. Now, if you would
+like to get data from the current menu item's page record, use
+stdWrap.data = field : [field name].
 
 .. ### BEGIN~OF~TABLE ###
 
@@ -43,9 +43,9 @@ the current menu item's page record, use stdWrap.data = field : [field name].
 
    Data type
          boolean
-         
+
    Default
-         0 (false)         
+         0 (false)
 
    Description
          If set, all appearances of the string '{elementUid}' in the total
@@ -60,96 +60,10 @@ the current menu item's page record, use stdWrap.data = field : [field name].
 .. container:: table-row
 
    Property
-         RO\_chBgColor
-
-   Data type
-         string
-
-   Description
-         If property RO is set (see below) then you can set this property to a
-         certain set of parameters which will allow you to change the
-         background color of e.g. the table cell when the mouse rolls over your
-         text-link.
-
-         **Syntax:** ::
-
-            [over-color] | [out-color] | [id-prefix]
-
-         **Example:** ::
-
-            page = PAGE
-            page.typeNum = 0
-            page.10 = HMENU
-            page.10.wrap = <table>|</table>
-            page.10.1 = TMENU
-            page.10.1.NO {
-              allWrap = <tr><td id="tmenu{elementUid}" style="background: #eeeeee;">|</td></tr>
-              subst_elementUid = 1
-              RO_chBgColor = #cccccc | #eeeeee | tmenu
-              RO = 1
-            }
-
-         This example will start out with the table cells in #eeeeee and change
-         them to #cccccc (and back) when rolled over. The "tmenu" string is a
-         unique id for the menu items. You may not need it (unless the same
-         menu items are more than once on a page), but the important thing is
-         that the id of the table cell has the exact same label before the
-         {elementUid} (red marks). The other important thing is that you DO set
-         a default background color for the cell with the style-attribute (blue
-         marking). If you do not, Mozilla browsers will behave a little strange
-         by not capturing the mouseout event the first time it's triggered.
-
-
-.. container:: table-row
-
-   Property
          before
 
    Data type
          HTML /:ref:`stdWrap <stdwrap>`
-
-
-.. container:: table-row
-
-   Property
-         beforeImg
-
-   Data type
-         imgResource
-
-
-.. container:: table-row
-
-   Property
-         beforeImgTagParams
-
-   Data type
-         <img>-params
-
-
-.. container:: table-row
-
-   Property
-         beforeImgLink
-
-   Data type
-         boolean
-
-   Description
-         If set, this image is linked with the same <A> tag as the text
-
-
-.. container:: table-row
-
-   Property
-         beforeROImg
-
-   Data type
-         imgResource
-
-   Description
-         If set, ".beforeImg" and ".beforeROImg" is expected to create a
-         rollOver-pair.
 
 
 .. container:: table-row
@@ -300,32 +214,6 @@ the current menu item's page record, use stdWrap.data = field : [field name].
          stdWrap to the total link-text and ATag. (Notice that the plain
          default value passed to the stdWrap function is "\|".)
 
-
-
-.. container:: table-row
-
-   Property
-         RO
-
-   Data type
-         boolean
-
-   Description
-         If set, rollOver is enabled for this link
-
-
-.. container:: table-row
-
-   Property
-         after...
-
-   Data type
-         [mixed]
-
-   Description
-         The series of "before..." properties is duplicated to "after..."
-         properties as well. The only difference is that the output generated
-         by the "after..." properties is placed after the link and not before.
 
 
 .. container:: table-row
