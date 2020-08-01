@@ -13,7 +13,7 @@ IMGMAP
 """"""
 
 This is used by the Gifbuilder Object "TEXT" to create an image-map for
-the image file. This is especially used with the IMGMENU menu object.
+the image file.
 
 .. ### BEGIN~OF~TABLE ###
 
@@ -28,9 +28,6 @@ the image file. This is especially used with the IMGMENU menu object.
    Description
          The URL to link.
 
-   Default
-         For IMGMENU menu objects provided automatically
-
 
 .. container:: table-row
 
@@ -42,9 +39,6 @@ the image file. This is especially used with the IMGMENU menu object.
 
    Description
          target for link
-
-   Default
-         For IMGMENU menu objects provided automatically
 
 
 .. container:: table-row

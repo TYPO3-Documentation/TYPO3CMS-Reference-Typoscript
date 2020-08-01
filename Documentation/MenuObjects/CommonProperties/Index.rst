@@ -124,49 +124,6 @@ otherwise noted!
 .. container:: table-row
 
    Property
-         imgNamePrefix
-
-   Data type
-         string
-
-   Default
-         "img"
-
-   Description
-         .. important::
-
-            `imgNamePrefix` is deprecated since version 9.4 and will be removed in version 10.
-
-         Prefix for the image names. This prefix is appended with the uid of the
-         page.
-
-
-
-.. container:: table-row
-
-   Property
-         imgNameNotRandom
-
-   Data type
-         boolean
-
-   Description
-         .. important::
-
-            `imgNameNotRandom` is deprecated since version 9.4 and will be removed in version 10.
-
-         If set, the image names of menu items is not randomly assigned. Useful
-         switch if you're manipulating these images with some external
-         JavaScript.
-
-         **Note:** Don't set this if you're working with a menu with
-         sectionIndex! In that case you need special unique names of items
-         based on something else than the uid of the parent page of course!
-
-
-.. container:: table-row
-
-   Property
          debugItemConf
 
    Data type
@@ -175,8 +132,6 @@ otherwise noted!
    Description
          Outputs (by the debug()-function) the configuration arrays for each
          menu item. Useful to debug optionSplit things and such...
-
-         Applies to GMENU, TMENU and IMGMENU.
 
 
 .. container:: table-row
@@ -195,8 +150,6 @@ otherwise noted!
          else, perhaps a shared menu, but wants the menu items to call the same
          page, which then generates a proper output based on the real\_uid.
 
-         Applies to GMENU, TMENU and IMGMENU.
-
 
 .. container:: table-row
 
@@ -214,8 +167,6 @@ otherwise noted!
          "&some\_var=some%20value"
 
          Must be rawurlencoded.
-
-         Applies to GMENU, TMENU and IMGMENU.
 
 .. _menu-common-properties-showaccessrestrictedpages:
 
@@ -358,7 +309,7 @@ showAccessRestrictedPages
          .. figure:: ../../Images/MenuObjectsCommonPropertiesSubmenuObjSuffixes.png
             :alt: Output of the above example.
 
-         Applies to GMENU and TMENU on >= 2 :sup:`nd` level in a menu.
+         Applies to TMENU on >= 2 :sup:`nd` level in a menu.
 
 
 .. ###### END~OF~TABLE ######

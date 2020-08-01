@@ -319,30 +319,43 @@ CONTENT object example 2
 
 Here is an example of record-rendering objects::
 
-   // Configuration for records with the "field" type value
-   // (often "CType") set to "header"
-   tt_content.header.default {
+   page = PAGE
+   page.typeNum = 0
+
+   # The CONTENT object executes a database query and loads the content.
+   page.10 = CONTENT
+   page.10.table = tt_content
+   page.10.select {
+
+      # "sorting" is a column from the tt_content table and
+      # keeps track of the sorting order, which was specified in
+      # the backend.
+      orderBy = sorting
+
+      # Only select content from column "0" (the column called
+      # "normal") and quote the database identifier (column name)
+      # "colPos" (indicated by wrapping with {#})
+      where = {#colPos}=0
+   }
+
+   # For every result line from the database query (that means for every content
+   # element) the renderObj is executed and the internal data array is filled
+   # with the content. This ensures that we can call the .field property and we
+   # get the according value.
+   page.10.renderObj = COA
+   page.10.renderObj {
+
       10 = TEXT
+
+      # The field tt_content.header normally holds the headline.
       10.stdWrap.field = header
-      # ...
-   }
 
-   // Configuration for records with the "field" type value
-   // (often "CType") set to "bullets"
-   // If field "layout" is set to "1" or "2", a special configuration is used,
-   // else defaults are being used.
-   tt_content.bullets.subTypeField = layout
-   tt_content.bullets.default {
-      # ...
-   }
-   tt_content.bullets.1 {
-      # ...
-   }
-   tt_content.bullets.2 {
-      # ...
-   }
+      10.stdWrap.wrap = <h1>|</h1>
 
-   // This is what happens if the "field" type value does not match any of the above
-   tt_content.default.default {
-      # ...
+      20 = TEXT
+
+      # The field tt_content.bodytext holds the content text.
+      20.stdWrap.field = bodytext
+
+      20.stdWrap.wrap = <p>|</p>
    }

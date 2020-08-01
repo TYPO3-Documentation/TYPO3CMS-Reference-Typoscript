@@ -50,9 +50,9 @@ into account.
          **Example:** ::
 
             temp.sidemenu = HMENU
-            temp.sidemenu.1 = GMENU
+            temp.sidemenu.1 = TMENU
             temp.sidemenu.1 {
-              # Configuration of that GMENU here...
+              # Configuration of that TMENU here...
             }
             temp.sidemenu.2 = TMENU
             temp.sidemenu.2 {
@@ -63,8 +63,8 @@ into account.
               # Configuration of that TMENU here...
             }
 
-         This creates a menu with up to three levels: The first level being a GMENU,
-         the second and third level being TMENUs.
+         This creates a menu with up to three levels: Each TMENU level can hold a
+         different menu configuration.
 
          TYPO3 offers :ref:`a variety of menu objects <menu-objects>`.
 
@@ -560,8 +560,7 @@ most recently updated pages.
 
 **A note on ordering:** The sorting menu is by default done in reverse
 order (desc) with the field specified by "mode", but setting
-"alternativeSortingField" for the menu object (e.g. TMENU or GMENU,
-see later) will override that.
+"alternativeSortingField" for the TMENU object will override that.
 
 Mount pages are supported.
 
@@ -957,7 +956,7 @@ list from the property ".items".
          prevsection and prevsection\_last are not present because id = 3 has
          no subpages!
 
-         **TypoScript (only "browse"-part, needs also TMENU/GMENU):** ::
+         **TypoScript (only "browse"-part, needs also TMENU):** ::
 
             xxx = HMENU
             xxx.special = browse
@@ -1068,7 +1067,7 @@ on the current page.
 
 **Ordering** is by default done in reverse order (desc) with the field
 specified by "mode", but setting "alternativeSortingField" for the
-menu object (e.g. for a GMENU, see later) will override that.
+TMENU object will override that.
 
 Mount pages are supported.
 
@@ -1456,33 +1455,31 @@ error if tried accessed (depending on site configuration).
 Example:
 ''''''''
 
-Creates a language menu with flags (notice that some lines break):
-
-.. figure:: ../../Images/ContentObjectsHmenuFlags.png
-   :alt: Output of the language menu with flags.
+Creates a language menu:
 
 ::
 
    lib.langMenu = HMENU
    lib.langMenu.special = language
    lib.langMenu.special.value = 0,1,2
-   lib.langMenu.1 = GMENU
+   lib.langMenu.1 = TMENU
+
+   lib.langMenu.1.NO = 1
    lib.langMenu.1.NO {
-     XY = [5.w]+4, [5.h]+4
-     backColor = white
-     5 = IMAGE
-     5.file = flag_uk.gif || flag_fr.gif || flag_es.gif
-     5.offset = 2,2
+     doNotLinkIt = 1
+     stdWrap.override = en || de || fr
+     stdWrap.typolink {
+         parameter.data = page:uid
+         additionalParams = &L=0 || &L=1 || &L=2
+         addQueryString = 1
+         addQueryString.exclude = L,id
+         addQueryString.method = GET
+     }
    }
 
    lib.langMenu.1.ACT < lib.langMenu.1.NO
    lib.langMenu.1.ACT = 1
-   lib.langMenu.1.ACT.backColor = black
-
-   lib.langMenu.1.USERDEF1 < lib.langMenu.1.NO
-   lib.langMenu.1.USERDEF1 = 1
-   lib.langMenu.1.USERDEF1.5.file = flag_uk_d.gif  || flag_fr_d.gif  || flag_es_d.gif
-   lib.langMenu.1.USERDEF1.noLink = 1
+   lib.langMenu.1.ACT.stdWrap.typolink.ATagParams = class="active"
 
 
 .. _hmenu-special-userfunction:
@@ -1538,58 +1535,33 @@ are graphical items:
    :linenos:
 
    # ************************
-   # MENU LEFT
+   # CUSTOM MENU
    # ************************
-   lib.leftmenu.20 = HMENU
-   lib.leftmenu.20.special = userfunction
-   lib.leftmenu.20.special.userFunc = user_3dsplm_pi2->makeMenuArray
-   lib.leftmenu.20.1 = GMENU
-   lib.leftmenu.20.1.NO {
-     wrap = <tr><td>|</td></tr><tr><td class="bckgdgrey1" height="1"></td></tr>
-     XY = 163,19
-     backColor = white
-     10 = TEXT
-     10.text.field = title
-     10.text.case = upper
-     10.fontColor = red
-     10.fontFile = fileadmin/fonts/ARIALNB.TTF
-     10.niceText = 1
-     10.offset = 14,12
-     10.fontSize = 10
-   }
-   lib.leftmenu.20.2 = GMENU
-   lib.leftmenu.20.2.wrap = | <tr><td></td></tr><tr><td></td></tr>
-   lib.leftmenu.20.2.NO {
-     wrap = <tr><td class="bckgdwhite" height="4"></td></tr><tr><td>|</td></tr>
-     XY = 163,16
-     backColor = white
-     10 = TEXT
-     10.text.field = title
-     10.text.case = upper
-     10.fontColor = #666666
-     10.fontFile = fileadmin/fonts/ARIALNB.TTF
-     10.niceText = 1
-     10.offset = 14,12
-     10.fontSize = 11
-   }
-   lib.leftmenu.20.2.RO < lib.leftmenu.20.2.NO
-   lib.leftmenu.20.2.RO = 1
-   lib.leftmenu.20.2.RO.backColor = #eeeeee
-   lib.leftmenu.20.2.ACT < lib.leftmenu.20.2.NO
-   lib.leftmenu.20.2.ACT = 1
-   lib.leftmenu.20.2.ACT.10.fontColor = red
-   lib.leftmenu.20.3 = TMENU
-   lib.leftmenu.20.3.NO {
-     allWrap = <tr><td>|</td></tr>
-     linkWrap (
-      <table border="0" cellpadding="0" cellspacing="0">
-         <tr>
-           <td><img src="clear.gif" width="15" height="1" /></td>
-           <td><img src="fileadmin/arrow_gray.gif" height="9" width="9" /></td>
-           <td>|</td>
-         </tr>
-      </table>
-     )
+   lib.custommenu = HMENU
+   lib.custommenu {
+      special = userfunction
+      special.userFunc = Vendor\MyExtension\Userfuncs\CustomMenu->makeMenuArray
+
+      1 = TMENU
+      1.wrap = <ul class="level-1">|</ul>
+      1.NO = 1
+      1.NO {
+         wrapItemAndSub = <li>|</li>
+      }
+
+      2 = TMENU
+      2.wrap = <ul class="level-2">|</ul>
+      2.NO = 1
+      2.NO {
+         wrapItemAndSub = <li>|</li>
+      }
+
+      3 = TMENU
+      3.wrap = <ul class="level-3">|</ul>
+      3.NO = 1
+      3.NO {
+         wrapItemAndSub = <li>|</li>
+      }
    }
 
 The menu looks like this on a web page:
@@ -1605,49 +1577,63 @@ generated from this array, which was returned from the function
 .. code-block:: php
    :linenos:
 
-   function makeMenuArray($content, $conf) {
-     return array(
-       array(
-           'title' => 'Contact',
-           '_OVERRIDE_HREF' => 'index.php?id=10',
-           '_SUB_MENU' => array(
-               array(
-                   'title' => 'Offices',
-                   '_OVERRIDE_HREF' => 'index.php?id=11',
-                   '_OVERRIDE_TARGET' => '_top',
-                   'ITEM_STATE' => 'ACT',
-                   '_SUB_MENU' => array(
-                       array(
-                           'title' => 'Copenhagen Office',
-                           '_OVERRIDE_HREF' => 'index.php?id=11&officeId=cph',
-                       ),
-                       array(
-                           'title' => 'Paris Office',
-                           '_OVERRIDE_HREF' => 'index.php?id=11&officeId=paris',
-                       ),
-                       array(
-                           'title' => 'New York Office',
-                           '_OVERRIDE_HREF' => 'http://www.example.com',
-                           '_OVERRIDE_TARGET' => '_blank',
-                       )
-                   )
-               ),
-               array(
-                   'title' => 'Form',
-                   '_OVERRIDE_HREF' => 'index.php?id=10&cmd=showform',
-               ),
-               array(
-                   'title' => 'Thank you',
-                   '_OVERRIDE_HREF' => 'index.php?id=10&cmd=thankyou',
-               ),
-           ),
-       ),
-       array(
-           'title' => 'Products',
-           '_OVERRIDE_HREF' => 'index.php?id=14',
-       )
-     );
+   <?php
+
+   declare(strict_types=1);
+
+   namespace Vendor\MyExtension\Userfuncs;
+
+   class CustomMenu
+   {
+
+       public function makeMenuArray(array $content, array $conf) : array
+       {
+           return [
+               [
+                   'title' => 'Contact',
+                   '_OVERRIDE_HREF' => 'index.php?id=10',
+                   '_SUB_MENU' => [
+                       [
+                           'title' => 'Offices',
+                           '_OVERRIDE_HREF' => 'index.php?id=11',
+                           '_OVERRIDE_TARGET' => '_top',
+                           'ITEM_STATE' => 'ACT',
+                           '_SUB_MENU' => [
+                               [
+                                   'title' => 'Copenhagen Office',
+                                   '_OVERRIDE_HREF' => 'index.php?id=11&officeId=cph',
+                               ],
+                               [
+                                   'title' => 'Paris Office',
+                                   '_OVERRIDE_HREF' => 'index.php?id=11&officeId=paris',
+                               ],
+                               [
+                                   'title' => 'New York Office',
+                                   '_OVERRIDE_HREF' => 'http://www.example.com',
+                                   '_OVERRIDE_TARGET' => '_blank',
+                               ]
+                           ]
+                       ],
+                       [
+                           'title' => 'Form',
+                           '_OVERRIDE_HREF' => 'index.php?id=10&cmd=showform',
+                       ],
+                       [
+                           'title' => 'Thank you',
+                           '_OVERRIDE_HREF' => 'index.php?id=10&cmd=thankyou',
+                       ],
+                   ],
+               ],
+               [
+                   'title' => 'Products',
+                   '_OVERRIDE_HREF' => 'index.php?id=14',
+               ]
+           ];
+       }
+
    }
+
+
 
 Notice how the array contains "fake" page-records which has *no* uid
 field, only a "title" and "\_OVERRIDE\_HREF" as required and some
