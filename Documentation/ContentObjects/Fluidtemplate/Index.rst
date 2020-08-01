@@ -6,9 +6,18 @@
 FLUIDTEMPLATE
 =============
 
-An object of type FLUIDTEMPLATE works in a similar way to the regular
-"marker"-based :ref:`TEMPLATE <cobj-template>` object. However, it does not use
-markers or subparts, but allows Fluid-style variables with curly braces.
+An object of type FLUIDTEMPLATE combines TypoScript with the Fluid
+templating engine. It has replaced the older and now deprecated
+:ref:`cobj-template` content object.
+
+FLUIDTEMPLATE generates content using Fluid templates.
+It can be used in :ref:`content elements <t3coreapi:adding-your-own-content-elements>`
+or to generate content within the top-level object page
+(see :ref:`the example on this page <cobj-fluidtemplate-examples>`).
+
+The functionality can be further augmented and customized with
+:ref:`data processors <cobj-fluidtemplate-properties-dataprocessing>`.
+
 
 .. contents:: On this page:
    :local:
