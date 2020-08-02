@@ -26,9 +26,8 @@ dataProcessing
    :depth: 1
 
 
-There are eight DataProcessors available to allow flexible processing e.g.
-for comma-separated values. To use e.g. with the :ts:`FLUIDTEMPLATE` content
-object.
+There are several DataProcessors available to allow flexible processing e.g.
+for comma-separated values.
 
 
 .. _CommaSeparatedValueProcessor:
@@ -74,42 +73,6 @@ In the Fluid template then iterate over the processed data:
    </table>
 
 
-.. _splitProcessor:
-
-SplitProcessor
-==============
-
-The :php:`SplitProcessor` allows to split values separated with a delimiter
-inside a single database field into an array to loop over it.
-
-With the help of the :php:`SplitProcessor` the following scenario is
-possible::
-
-   page {
-      10 = FLUIDTEMPLATE
-      10 {
-         file = EXT:site_default/Resources/Private/Template/Default.html
-
-         dataProcessing.2 = TYPO3\CMS\Frontend\DataProcessing\SplitProcessor
-         dataProcessing.2 {
-            if.isTrue.field = bodytext
-            delimiter = ,
-            fieldName = bodytext
-            removeEmptyEntries = 1
-            filterIntegers = 0
-            filterUnique = 1
-            as = keywords
-         }
-      }
-   }
-
-In the Fluid template then iterate over the splitted data:
-
-.. code-block:: html
-
-   <f:for each="{keywords}" as="keyword">
-      <li>Keyword: {keyword}</li>
-   </f:for>
 
 
 .. _DatabaseQueryProcessor:
@@ -548,6 +511,44 @@ In the Fluid template the properties of the site entity can be accessed:
    <p>{site.rootPageId}</p>
    <p>{site.someCustomConfiguration}</p>
 
+.. _splitProcessor:
+
+SplitProcessor
+==============
+
+The :php:`SplitProcessor` allows to split values separated with a delimiter
+inside a single database field into an array to loop over it.
+
+With the help of the :php:`SplitProcessor` the following scenario is
+possible::
+
+   page {
+      10 = FLUIDTEMPLATE
+      10 {
+         file = EXT:site_default/Resources/Private/Template/Default.html
+
+         dataProcessing.2 = TYPO3\CMS\Frontend\DataProcessing\SplitProcessor
+         dataProcessing.2 {
+            if.isTrue.field = bodytext
+            delimiter = ,
+            fieldName = bodytext
+            removeEmptyEntries = 1
+            filterIntegers = 0
+            filterUnique = 1
+            as = keywords
+         }
+      }
+   }
+
+In the Fluid template then iterate over the splitted data:
+
+.. code-block:: html
+
+   <f:for each="{keywords}" as="keyword">
+      <li>Keyword: {keyword}</li>
+   </f:for>
+
+
 
 .. _CustomDataProcessors:
 
@@ -555,7 +556,7 @@ Custom dataProcessors
 =====================
 
 Last but not least, it is possible to create your own data processors and
-use them in FLUIDTEMPLATE::
+use them in a `FLUIDTEMPLATE` content object::
 
       my_custom_ctype = FLUIDTEMPLATE
       my_custom_ctype {
