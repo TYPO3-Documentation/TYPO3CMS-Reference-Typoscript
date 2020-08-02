@@ -18,20 +18,6 @@ Description
 The `symfony expression language <https://symfony.com/doc/4.1/components/expression_language.html>`__
 has been implemented for TypoScript conditions in both frontend and backend since TYPO3 9.4.
 
-Upgrading
-=========
-
-The existing conditions are available as variables and/or functions but were
-already marked as deprecated. So expect deprecation messages when using the old
-syntax with TYPO3 9. The existing conditions will be removed early in version
-10. If you want to know what your conditions did until now, have a look at an
-`older version of this document
-<https://docs.typo3.org/typo3cms/TyposcriptReference/8.7/Conditions/Reference/Index.html>`__
-
-.. hint::
-   If it is not possible yet to fully migrate to Symfony expression language,
-   the feature flag `[SYS][features][TypoScript.strictSyntax]` can be disabled via
-   Settings -> Configure Installation-Wide Options or directly in :file:`LocalConfiguration.php`.
 
 .. _condition-reference:
 
