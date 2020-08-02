@@ -305,7 +305,7 @@ into account.
          boolean /:ref:`stdWrap <stdwrap>`
 
    Description
-         If set, pages with the checkbox "Not in menu" checked will be included
+         If set, pages with the checkbox "Page enabled in menus" disabled will still be included
          in menus.
 
 
