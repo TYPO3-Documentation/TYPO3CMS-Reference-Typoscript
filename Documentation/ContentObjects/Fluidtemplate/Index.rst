@@ -25,8 +25,7 @@ The functionality can be further augmented and customized with
    :depth: 1
 
 .. toctree::
-   :caption:  Subchapters:
-   :maxdepth: 1
+   :hidden:
 
    DataProcessing
 
@@ -36,30 +35,9 @@ The functionality can be further augmented and customized with
 Properties
 ==========
 
-.. container:: ts-properties
-
-  ====================================================================== ================================================================
-  Property                                                               Data types
-  ====================================================================== ================================================================
-  :ref:`dataProcessing`                                                  array of class references by full namespace
-  :ref:`cobj-fluidtemplate-properties-extbase-controlleractionname`      string /:ref:`stdWrap <stdwrap>`
-  :ref:`cobj-fluidtemplate-properties-extbase-controllerextensionname`   string /:ref:`stdWrap <stdwrap>`
-  :ref:`cobj-fluidtemplate-properties-extbase-controllername`            string /:ref:`stdWrap <stdwrap>`
-  :ref:`cobj-fluidtemplate-properties-extbase-pluginname`                string /:ref:`stdWrap <stdwrap>`
-  :ref:`cobj-fluidtemplate-properties-file`                              string /:ref:`stdWrap <stdwrap>`
-  :ref:`cobj-fluidtemplate-properties-format`                            keyword /:ref:`stdWrap <stdwrap>`
-  :ref:`cobj-fluidtemplate-properties-layoutrootpath`                    file path /:ref:`stdWrap <stdwrap>`
-  :ref:`cobj-fluidtemplate-properties-layoutrootpaths`                   array of file paths with :ref:`stdWrap <stdwrap>`
-  :ref:`cobj-fluidtemplate-properties-partialrootpath`                   file path /:ref:`stdWrap <stdwrap>`
-  :ref:`cobj-fluidtemplate-properties-partialrootpaths`                  array of file paths with :ref:`stdWrap <stdwrap>`
-  :ref:`cobj-fluidtemplate-properties-settings`                          array of keys
-  :ref:`cobj-fluidtemplate-properties-stdwrap`                           :ref:`->stdWrap <stdwrap>`
-  :ref:`cobj-fluidtemplate-properties-template`                          :ref:`cObject <data-type-cobject>`
-  :ref:`cobj-fluidtemplate-properties-templatename`                      string /:ref:`stdWrap <stdwrap>`
-  :ref:`cobj-fluidtemplate-properties-templaterootpaths`                 array of file paths with :ref:`stdWrap <stdwrap>`
-  :ref:`cobj-fluidtemplate-properties-variables`                         array of cObjects
-  ====================================================================== ================================================================
-
+.. contents:: 
+   :local:
+   :depth: 1
 
 .. _fluidtemplate-dataProcessing:
 
