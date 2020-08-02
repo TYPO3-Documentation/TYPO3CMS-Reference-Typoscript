@@ -24,17 +24,60 @@ has been implemented for TypoScript conditions in both frontend and backend sinc
 Upgrading
 =========
 
-The existing conditions are available as variables and/or functions but were
-already marked as deprecated. So expect deprecation messages when using the old
-syntax with TYPO3 9. The existing conditions will be removed early in version
-10. If you want to know what your conditions did until now, have a look at an
-`older version of this document
-<https://docs.typo3.org/typo3cms/TyposcriptReference/8.7/Conditions/Reference/Index.html>`__
+The "old" condition syntax has been :doc:`deprecated <t3core:Changelog/9.5/Deprecation-86068-OldConditionSyntax>`
+in 9 and will be removed in 10.
 
 .. hint::
-   If it is not possible yet to fully migrate to Symfony expression language, 
-   the feature flag `[SYS][features][TypoScript.strictSyntax]` can be disabled via 
-   Settings -> Configure Installation-Wide Options or directly in :file:`LocalConfiguration.php`. 
+   If it is not possible yet to fully migrate to Symfony expression language,
+   the feature toggle `[SYS][features][TypoScript.strictSyntax]` can be disabled via
+   Settings -> Configure Installation-Wide Options or directly in :file:`LocalConfiguration.php`.
+
+Before updating from 9 to 10, you *MUST* change your templates to use the "new"
+condition syntax.
+
+Look for notices in the deprecation log, such as:
+
+.. code-block:: none
+
+    Mon, 27 Jul 2020 15:58:06 +0200 [NOTICE] request="a4130429dafc6" component="TYPO3.CMS.deprecations":
+      Core: Error handler (BE): TYPO3 Deprecation Notice:
+      Multiple conditions blocks combined with AND, OR, && or || will be removed in TYPO3 v10.0, use
+      the new expression language. in ....
+
+However, the deprecation log will only show you deprecations for pages that
+are being rendered. To get a full overview of old conditions, you should
+search through your own extensions and possibly the TypoScript templates
+in the database (available through the "Templates" backend module).
+
+
+old::
+
+   # page uid == 2
+   [page|uid = 2]
+
+::
+
+   # page layout == 1
+   [page|layout = 1]
+
+::
+
+   # applicationContext is "Production"
+   [applicationContext = Production*]
+
+new::
+
+   [page["uid"] == 2]
+
+::
+
+   [page["layout"] == 1]
+
+::
+
+   [applicationContext == "Production"]
+
+
 
 .. _condition-reference:
 
