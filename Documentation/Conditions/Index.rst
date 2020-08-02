@@ -10,14 +10,9 @@ Conditions
 
    * For full explanations about conditions, especially about condition syntax, please refer to
      :ref:`the TypoScript Syntax chapter of the Core API <t3coreapi:typoscript-syntax-conditions>`.
+     The "new" condition syntax (since TYPO3 9.4) is based on the
+     `symfony expression language <https://symfony.com/doc/4.1/components/expression_language.html>`__
    * TypoScript also offers the :ref:`"if" function <if>` to create conditions.
-
-Description
-===========
-
-The `symfony expression language <https://symfony.com/doc/4.1/components/expression_language.html>`__
-has been implemented for TypoScript conditions in both frontend and backend since TYPO3 9.4.
-
 
 .. _condition-reference:
 
