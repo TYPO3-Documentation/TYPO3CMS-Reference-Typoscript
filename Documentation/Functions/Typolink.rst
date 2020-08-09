@@ -152,7 +152,7 @@ useCacheHash
    hash string appended to the URL, like "&cHash=ae83fd7s87". When the
    caching mechanism sees this value, it calculates the same value on the
    server based on incoming values in :php:`HTTP_GET_VARS`, excluding
-   id, type, no\_cache, ftu, cHash, MP values. If the incoming cHash value
+   id, type, no\_cache, cHash, MP values. If the incoming cHash value
    matches the calculated value, the page may be cached based on this.
 
    The :php:`$GLOBALS['TYPO3_CONF_VARS']['SYS']['encryptionKey']`
