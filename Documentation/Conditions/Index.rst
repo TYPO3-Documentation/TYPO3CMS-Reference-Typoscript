@@ -23,8 +23,8 @@ in 9 and will be removed in 10.
 
 .. hint::
    If it is not possible yet to fully migrate to Symfony expression language,
-   the feature toggle `[SYS][features][TypoScript.strictSyntax]` can be disabled via
-   Settings -> Configure Installation-Wide Options or directly in :file:`LocalConfiguration.php`.
+   the :ref:`feature toggle <feature-toggles-enable>` `[SYS][features][TypoScript.strictSyntax]` can be disabled via
+   :guilabel:`Settings -> Feature Toggles` or directly in :file:`LocalConfiguration.php` or :file:`AdditionalConfiguration.php`.
 
 Before updating from 9 to 10, you *MUST* change your templates to use the "new"
 condition syntax.
