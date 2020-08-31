@@ -374,6 +374,12 @@ markers
    (stdWrap properties ...)
       All stdWrap properties can be used for each markername.
 
+
+   .. warning::
+
+      Since TYPO3 8 there is a problem combining orderBy with markers caused
+      by the quoting of the fields, see :issue:`87799`.
+
 :aspect:`Example`
    ::
 
@@ -383,15 +389,32 @@ markers
             select {
                pidInList = 73
                where = header != ###whatever###
-               orderBy = ###sortfield###
                markers {
                   whatever.data = GP:first
-                  sortfield.value = sor
-                  sortfield.wrap = |ting
                }
             }
       }
 
    This example selects all records from table tt_content, which are on page 73 and
    which don't have the header set to the value provided by the Get/Post variable
-   "first", ordered by the content of the column "sorting".
+   "first".
+
+   ::
+
+      page.60 = CONTENT
+      page.60 {
+            table = tt_content
+            select {
+               pidInList = 73
+               where = header != ###whatever###
+               markers {
+                  whatever.value = some
+                  whatever.wrap = |thing
+               }
+            }
+      }
+
+
+   This examples selects all records from the table tt_content which are on page 73
+   and which don't have a header set to a value constructed by whatever.value and
+   whatever.wrap ('something').
