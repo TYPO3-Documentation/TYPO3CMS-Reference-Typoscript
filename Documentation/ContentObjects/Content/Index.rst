@@ -8,7 +8,7 @@ CONTENT
 
 .. note::
 
-   * CASE is an object type (= complex data type).
+   * CONTENT is an object type (= complex data type).
    * It is a specific :ref:`cObject <cobject>` data type.
 
 
