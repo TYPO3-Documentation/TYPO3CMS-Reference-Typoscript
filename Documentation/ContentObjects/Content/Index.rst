@@ -28,7 +28,7 @@ is raised to the maximum timestamp value of the respective records.
 Comprehensive example
 ---------------------
 
-See PHP class :php:`\TYPO3\CMS\Frontend\Controller\TypoScriptFrontendController\ContentContentObject`
+See PHP class :php:`\TYPO3\CMS\Frontend\ContentObject\ContentContentObject`
 for details on code level.
 
 Preamble::
