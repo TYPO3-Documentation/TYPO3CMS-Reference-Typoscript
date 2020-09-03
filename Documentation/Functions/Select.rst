@@ -20,6 +20,30 @@ in the :php:`$GLOBALS['TCA']`.
    Avoid SQL injections! Don't trust any external data! Secure
    any unknown data, for example with :ref:`intval <stdwrap-intval>`.
 
+.. _selectQuotingOfFields:
+
+Quoting of fields
+=================
+
+.. versionadded:: 8.7
+
+   It is possible to use `{#fieldname}` to make the database
+   framework quote these fields (see :doc:`t3core:Changelog/8.7/Important-80506-DbalCompatibleFieldQuotingInTypoScript`)::
+
+      select.where = ({#title} LIKE {#%SOMETHING%} AND NOT {#doktype})
+
+This applies to:
+
+* :ts:`select.where`
+
+but not to:
+
+* :ts:`select.groupBy`
+* :ts:`select.orderBy`
+
+as these parameters already follow a stricter syntax that allow automatic parsing and
+quoting.
+
 Comprehensive example
 =====================
 
@@ -260,6 +284,11 @@ where
       ::
 
          where = (title LIKE '%SOMETHING%' AND NOT doktype)
+
+      Use `{#fieldname}` to make the database
+      framework quote these fields::
+
+         where = ({#title} LIKE {#%SOMETHING%} AND NOT {#doktype})
 
 
 .. _select-languageField:
