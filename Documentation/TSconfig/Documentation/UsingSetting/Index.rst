@@ -436,6 +436,10 @@ The PHP API to retrieve page and user TSconfig in a backend module is (nowadays)
 
 .. code-block:: php
 
+   use TYPO3\CMS\Backend\Utility\BackendUtility;
+
+.. code-block:: php
+
     // Retrieve user TSconfig of currently logged in user
     // Note its good practice to encapsulate the $GLOBALS['BE_USER'] access in a getter method that returns an instance
     // of BackendUserAuthentication for IDE auto completion, until core provides a dependency injection solution
