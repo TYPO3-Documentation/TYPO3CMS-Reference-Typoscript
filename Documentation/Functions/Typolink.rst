@@ -47,7 +47,7 @@ Output:
 
 .. _typolink-extTarget:
 
-target
+extTarget
 ======
 
 :aspect:`Property`
