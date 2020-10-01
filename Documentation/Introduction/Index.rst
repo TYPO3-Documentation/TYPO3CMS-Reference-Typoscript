@@ -61,7 +61,7 @@ Templating methods in TYPO3
 
 TypoScript templates are used to drive frontend rendering.
 
-As a minimal amount of TypoScript will *always* be necessary to
+A minimal amount of TypoScript will *always* be necessary to
 tell TYPO3 CMS which templating method to use.
 It could be any of the following.
 
