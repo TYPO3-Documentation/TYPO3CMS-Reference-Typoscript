@@ -107,6 +107,13 @@ defaultLanguageFlag
             defaultLanguageLabel = deutsch
         }
 
+.. warning::
+
+   Note that this option has largely been superseded by site configuration since **TYPO3 10** and will only
+   work in the Backend for a "NullSite". For instance a global sysfolder in the page tree without an
+   attached site configuration. Once a page tree has a site configuration, the default language icon is
+   set from the site configuration's language settings and this option will have no effect at all.
+
 
 defaultLanguageLabel
 --------------------
@@ -119,6 +126,12 @@ defaultLanguageLabel
 
     Used in Web > List and Web > Page module.
 
+.. warning::
+
+   Note that this option has largely been superseded by site configuration since **TYPO3 10** and will only
+   work in the Backend for a "NullSite". For instance a global sysfolder in the page tree without an
+   attached site configuration. Once a page tree has a site configuration, the default language label is
+   set from the site configuration's language settings and this option will have no effect at all.
 
 disableLanguages
 ----------------
@@ -129,7 +142,12 @@ disableLanguages
 :aspect:`Description`
     Comma-separated list of language UID which will be disabled in the given page tree.
 
+.. warning::
 
+   Note that this option has largely been superseded by site configuration since **TYPO3 10** and will only
+   work in the Backend for a "NullSite". For instance a global sysfolder in the page tree without an
+   attached site configuration. Once a page tree has a site configuration, the language settings
+   from the site configuration are applied and this option will have no effect at all.
 
 web_info
 ========
@@ -310,6 +328,12 @@ defaultLanguageLabel
 
     Overrides the same property from :ref:`mod.SHARED <pageTsConfigSharedDefaultLanguageLabel>` if set.
 
+.. warning::
+
+   Note that this option has largely been superseded by site configuration since **TYPO3 10** and will only
+   work in the Backend for a "NullSite". For instance a global sysfolder in the page tree without an
+   attached site configuration. Once a page tree has a site configuration, the default language label is
+   set from the site configuration's language settings and this option will have no effect at all.
 
 defLangBinding
 --------------
@@ -378,18 +402,6 @@ disableSearchBox
 
 :aspect:`Default`
     0
-
-
-editFieldsAtATime
------------------
-
-:aspect:`Datatype`
-    positive integer
-
-:aspect:`Description`
-    Specifies the number of subsequent content elements to load in the
-    edit form when clicking the edit icon of a content element in the
-    'Columns' view of the module.
 
 :aspect:`Default`
     1

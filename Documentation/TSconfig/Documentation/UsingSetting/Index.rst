@@ -331,9 +331,6 @@ like this to set a default configuration.
 	\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addUserTSConfig('
 		admPanel {
 			enable.edit = 1
-			module.edit.forceNoPopup = 1
-			module.edit.forceDisplayFieldIcons = 1
-			module.edit.forceDisplayIcons = 0
 			hide = 1
 		}
 		options.enableBookmarks = 1
@@ -369,7 +366,7 @@ Examples
 
 .. code-block:: typoscript
 
-	[treeLevel = 1]
+	[tree.level == 1]
 	TCEFORM.tt_content.section_frame.disabled = 1
 	[GLOBAL]
 
@@ -385,46 +382,43 @@ Differences to conditions in TypoScript templates
 There are some slight differences between conditions in TSconfig and
 conditions in TypoScript templates, which must be taken into account:
 
-- Conditions "usergroup" and "loginUser" apply to BE groups and BE users
-  – respectively – and not to FE groups and FE users, quite obviously.
+- The values of ``frontend.user`` will not be available, because they
+  are limited to frontend context.
 
-- In the "globalString" condition, key "TSFE:" will not work because the
-  TSFE global object only exists in the FE context. The "LIT:" key will
-  not work either as it is used to compare TypoScript constants, which
+- The function "getTSFE()" will not work because the
+  TSFE global object only exists in the FE context.
+
+- Accessing TypoScript constants inside a condition like
+  ``[{$myTypoScriptConstant} == '1']`` will not work either as they
   are not available in the BE context.
 
-- Note that conditions such as "PIDupinRootline" or "treeLevel" will
+- Note that the values in the tree object like ``tree.rootLineParentIds``
+  and ``tree.level`` will
   apply correctly to pages that are being created but are not yet saved.
 
-- You *can* use custom conditions, though.
-  ``[BigCompanyName\TypoScriptLovePackage\MyCustomTypoScriptCondition = 7]``
+- You *can* still use custom conditions. For doing so, look up the page
+  :ref:`Symfony Expression Language <t3coreapi:symfony-expression-language>` on how to register
+  custom conditions.
 
-Furthermore the following condition is available **only** in
-TSconfig:
+Furthermore, you can access the current backend user inside a TSConfig condition:
 
 
-.. _condition-adminuser:
+.. _condition-backend-user:
 
-adminUser
+backend.user
 """""""""
 
-Checks whether the current BE user has admin rights or not. Value is 1
-if the user is an admin, 0 if he is not.
-
-Syntax:
+Check whether the current BE user has the uid 5:
 
 .. code-block:: typoscript
 
-   [adminUser = 0/1]
+   [backend.user.userId == 5]
 
-
-Example:
-
-The following condition will apply only if the BE user is an admin.
+The following condition will apply only if the BE user is an admin:
 
 .. code-block:: typoscript
 
-   [adminUser = 1]
+   [backend.user.isAdmin]
 
 
 .. _phpapi:
