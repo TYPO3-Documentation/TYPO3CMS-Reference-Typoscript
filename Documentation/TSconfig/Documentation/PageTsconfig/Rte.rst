@@ -17,9 +17,9 @@ for more general information on RTE configuration and data processing.
 
 The order in which configuration for the RTE is loaded is:
 
-1. preset defined for a specific field via PageTS 
-2. richtextConfiguration defined for a specific field via TCA 
-3. general preset defined via PageTS 
+1. preset defined for a specific field via PageTS
+2. richtextConfiguration defined for a specific field via TCA
+3. general preset defined via PageTS
 4. default
 
 The full property path building is a bit more complex than for other
@@ -173,38 +173,6 @@ denyTags
     Tags from above list to disallow.
 
 
-dontFetchExtPictures
---------------------
-
-:aspect:`Datatype`
-    boolean
-
-:aspect:`Description`
-    Applies for `ts_images` only.
-
-    If set, images from external urls are not fetched for the page if content is pasted from
-    external sources. Normally this process of copying is done.
-
-
-dontRemoveUnknownTags_db
-------------------------
-
-:aspect:`Datatype`
-    boolean
-
-:aspect:`Description`
-    Applies for `ts_transform` and `css_transform` only.
-
-    Direction: From RTE to database, saving a record.
-
-    Default is to remove all unknown tags in the content going to the database. Generally this
-    is a very useful thing, because all kinds of bogus tags from pasted content like that from Word etc.
-    will be removed to have clean content in the database.
-
-    This property this disables that and allows all tags that are not in
-    the :ref:`HTMLparser_db list <pageTsRteProcHtmlParserDb>`.
-
-
 entryHTMLparser_db
 -------------------
 
@@ -307,19 +275,6 @@ HTMLparser_rte
        and :code:`htmlSpecialChars` are *not* observed. They are preset internally.
 
 
-keepPDIVattribs
----------------
-
-:aspect:`Datatype`
-    comma separated list of tag attributes
-
-:aspect:`Description`
-    Applies for `ts_transform` and `css_transform` only.
-
-    `align` and `class` are the only attributes preserved for `<P>` and `<DIV>` tags.
-    This property allows to specify a list of other attributes to preserve.
-
-
 overruleMode
 ------------
 
@@ -329,32 +284,3 @@ overruleMode
 :aspect:`Description`
     This can overrule the RTE transformation set from TCA. Notice, this is a  *comma list* of transformation keys.
 
-
-plainImageMode
---------------
-
-:aspect:`Datatype`
-    boolean/string
-
-:aspect:`Description`
-    Applies for `ts_images` only.
-
-    If set, all "plain" local images (those that are not magic images) will be cleaned up in some way.
-
-    If the value is just set, then the style attribute will be removed after detecting any special
-    width/height CSS attributes (which is what the RTE will set if you scale the image manually) and
-    the border attribute is set to zero.
-
-    You can also configure with special keywords. So setting `plainImageMode` to any of the value below
-    will perform special processing:
-
-    lockDimensions
-        This will read the real dimensions of the image file and force these values into the `<img>` tag.
-        Thus this option will prevent any user applied scaling in the image!
-
-    lockRatio
-        This will allow users to scale the image but will automatically correct the height dimension so
-        the aspect ratio from the original image file is preserved.
-
-    lockRatioWhenSmaller
-        Like `lockRatio`, but will not allow any scaling larger than the original size of the image.

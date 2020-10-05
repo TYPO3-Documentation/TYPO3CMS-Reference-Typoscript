@@ -788,22 +788,6 @@ pageTree.showPathAboveMounts
       :alt: Active user db mount
 
 
-.. _useroptions-popupWindowSize:
-
-popupWindowSize
-===============
-
-:aspect:`Datatype`
-   string
-
-:aspect:`Description`
-   Defines the size of the element browser.
-
-   .. note::
-
-      This property is outdated.
-
-
 .. _useroptions-saveClipboard:
 
 saveClipboard
@@ -896,23 +880,3 @@ showHistory
    Any value set for a single table will override the default value set for "showHistory".
 
 
-
-.. _useroptions-view-languageOrder:
-
-view.languageOrder
-==================
-
-:aspect:`Datatype`
-   list of sys_language ids
-
-:aspect:`Description`
-   When a backend user clicks a view-page link in the backend (magnifying glass) the first language uid in this
-   list which the user has access to edit will be added as the language parameter to the view-link.
-
-   This is a useful setting for translators which primarily wish to see
-   their translation when they click the view-links.
-
-:aspect:`Example`
-   .. code-block:: typoscript
-
-      options.view.languageOrder = 2,1

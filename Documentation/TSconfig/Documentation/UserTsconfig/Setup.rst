@@ -93,16 +93,6 @@ emailMeAtLogin
     Notify me by email, when somebody logs in from my account
 
 
-helpText
-========
-
-:aspect:`Datatype`
-    boolean
-
-:aspect:`Description`
-    Show help text when applicable
-
-
 lang
 ====
 
