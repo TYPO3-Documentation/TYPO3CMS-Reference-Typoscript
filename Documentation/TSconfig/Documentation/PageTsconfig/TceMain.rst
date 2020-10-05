@@ -83,7 +83,7 @@ clearCache_pageSiblingChildren
 :aspect:`Description`
     If set, then children of all siblings of a page being edited will have the page cache cleared.
 
-    Default is that when a page record is edited, the cache for itself and siblings (same level) is cleared.
+    Default is that when a page record is edited, the cache for itself, the parent, and siblings (same level) is cleared.
 
 
 .. _pagetcemaintables-disablehideatcopy:
