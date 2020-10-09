@@ -1463,7 +1463,7 @@ MP\_mapRootPoints
 
       The result is used just like :ref:`MP\_defaults <setup-config-mp-defaults>` are used to
       find MP-vars if none has been specified prior to the call to
-      `TYPO3\CMS\Core\TypoScript\TemplateService::linkData()`.
+      `\TYPO3\CMS\Frontend\Typolink\PageLinkBuilder`.
 
       You can specify `root` as a special keyword in the list of IDs and
       that will create a map-tree for the whole site (but this may be VERY
