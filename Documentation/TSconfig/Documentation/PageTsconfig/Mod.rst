@@ -1017,12 +1017,12 @@ searchLevel.items
     .. code-block:: typoscript
 
         mod.web_list.searchLevel.items {
-            -1 = EXT:lang/locallang_core.xlf:labels.searchLevel.infinite
-            0 = EXT:lang/locallang_core.xlf:labels.searchLevel.0
-            1 = EXT:lang/locallang_core.xlf:labels.searchLevel.1
-            2 = EXT:lang/locallang_core.xlf:labels.searchLevel.2
-            3 = EXT:lang/locallang_core.xlf:labels.searchLevel.3
-            4 = EXT:lang/locallang_core.xlf:labels.searchLevel.4
+            -1 = EXT:core/Resources/Private/Language/locallang_core.xlf:labels.searchLevel.infinite
+            0 = EXT:core/Resources/Private/Language/locallang_core.xlf:labels.searchLevel.0
+            1 = EXT:core/Resources/Private/Language/locallang_core.xlf:labels.searchLevel.1
+            2 = EXT:core/Resources/Private/Language/locallang_core.xlf:labels.searchLevel.2
+            3 = EXT:core/Resources/Private/Language/locallang_core.xlf:labels.searchLevel.3
+            4 = EXT:core/Resources/Private/Language/locallang_core.xlf:labels.searchLevel.4
         }
 
 
