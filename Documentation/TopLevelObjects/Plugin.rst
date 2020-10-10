@@ -73,13 +73,13 @@ userFunc
          this will provide an acceptable default display from the plugin, but
          should ideally be cleared and moved to an external stylesheet.
 
-         This value is for all plugins read by the PageGenerator script when
-         making the header of the document.
+         This value is read by the :php:`Frontend/RequestHandler` script when
+         collecting the CSS for the document to be rendered.
 
-         This is e.g. used by *css_styled_content* and *indexed_search*. Their
+         This is e.g. used by *frontend* and *indexed_search*. Their
          default styles can be removed with::
 
-            plugin.tx_cssstyledcontent._CSS_DEFAULT_STYLE >
+            plugin.tx_frontend._CSS_DEFAULT_STYLE >
             plugin.tx_indexedsearch._CSS_DEFAULT_STYLE >
 
          However, you will then have to define according styles yourself.
@@ -110,8 +110,8 @@ userFunc
          especially for this page, but should ideally be cleared and moved to
          an external stylesheet.
 
-         This value is for all plugins read by the PageGenerator script when
-         making the header of the document.
+         This value is read by the :php:`Frontend/RequestHandler` when
+         collecting the CSS of the document to be rendered.
 
 
 
