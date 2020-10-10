@@ -74,7 +74,7 @@ userFunc
          should ideally be cleared and moved to an external stylesheet.
 
          This value is read by the :php:`Frontend/RequestHandler` script when
-         collecting the CSS for the document to be rendered.
+         collecting the CSS of the document to be rendered.
 
          This is e.g. used by *frontend* and *indexed_search*. Their
          default styles can be removed with::
