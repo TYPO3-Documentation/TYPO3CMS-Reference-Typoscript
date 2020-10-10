@@ -131,6 +131,12 @@ Frontend), you might need to know about. These ARE ALL READ-ONLY!
 (Read: Don't change them!) See the class :php:`TypoScriptFrontendController`
 for the full descriptions.
 
+.. important::
+
+   In previous versions, you used the keys `gr_list`, `loginUser` and `beUserLogin`
+   for context specific information. Since TYPO3 v9 these variables have been replaced
+   by the :ref:`TYPO3 Context API <t3coreapi:context-api>`.
+
 If you for instance want to access the variable "id", you can do so by
 writing: :php:`$GLOBALS['TSFE']->id`
 
@@ -189,21 +195,6 @@ writing: :php:`$GLOBALS['TSFE']->id`
 .. container:: table-row
 
    Variable
-         loginUser
-
-   PHP-Type
-         boolean
-
-   Description
-         Flag indicating that a front-end user is logged in.
-
-   Default
-         0
-
-
-.. container:: table-row
-
-   Variable
          rootLine
 
    PHP-Type
@@ -225,33 +216,6 @@ writing: :php:`$GLOBALS['TSFE']->id`
    Description
          The object with page functions (object) See
          :file:`typo3/sysext/frontend/Classes/Page/PageRepository.php`.
-
-
-.. container:: table-row
-
-   Variable
-         gr\_list
-
-   PHP-Type
-         string (list)
-
-   Description
-         The group list, sorted numerically. Group -1 = no login
-
-
-.. container:: table-row
-
-   Variable
-         beUserLogin
-
-   PHP-Type
-         boolean
-
-   Description
-         Flag that indicates if a Backend user is logged in!
-
-   Default
-         0
 
 
 .. ###### END~OF~TABLE ######
