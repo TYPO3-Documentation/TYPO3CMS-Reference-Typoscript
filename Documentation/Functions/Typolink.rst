@@ -577,12 +577,13 @@ Resource handler key (`page`)
    The resource handler key is a list of available handlers that TYPO3 can work
    with. At the time of writing these handlers are:
 
-   - page
-   - file
-   - folder
-   - email
-   - url
-   - record
+   - 'page' (see :php:`\TYPO3\CMS\Core\LinkHandling\PageLinkHandler::class`)
+   - 'file' (see :php:`\TYPO3\CMS\Core\LinkHandling\FileLinkHandler::class`)
+   - 'folder' (see :php:`\TYPO3\CMS\Core\LinkHandling\FolderLinkHandler::class`)
+   - 'url' (see :php:`\TYPO3\CMS\Core\LinkHandling\UrlLinkHandler::class`)
+   - 'email' (see :php:`\TYPO3\CMS\Core\LinkHandling\EmailLinkHandler::class`)
+   - 'record' (see :php:`\TYPO3\CMS\Core\LinkHandling\RecordLinkHandler::class`)
+   - 'telephone' (see :php:`\TYPO3\CMS\Core\LinkHandling\TelephoneLinkHandler::class`)
 
    More keys can be added via :php:`$GLOBALS['TYPO3_CONF_VARS']['SYS']['linkHandler']` in
    an associative array where the key is the handler key and the value is a
