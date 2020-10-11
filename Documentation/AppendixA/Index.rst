@@ -224,7 +224,7 @@ writing: :php:`$GLOBALS['TSFE']->id`
 
    Description
          The object with page functions (object) See
-         :file:`typo3/sysext/frontend/Classes/Page/PageRepository.php`.
+         :file:`typo3/sysext/core/Classes/Domain/Repository/PageRepository.php`.
 
 
 .. container:: table-row
