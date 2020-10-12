@@ -73,7 +73,7 @@ userFunc
          this will provide an acceptable default display from the plugin, but
          should ideally be cleared and moved to an external stylesheet.
 
-         This value is read by the :php:`Frontend/RequestHandler` script when
+         This value is read by the frontend :php:`RequestHandler` script when
          collecting the CSS of the document to be rendered.
 
          This is e.g. used by *frontend* and *indexed_search*. Their
@@ -110,7 +110,7 @@ userFunc
          especially for this page, but should ideally be cleared and moved to
          an external stylesheet.
 
-         This value is read by the :php:`Frontend/RequestHandler` when
+         This value is read by the frontend :php:`RequestHandler` when
          collecting the CSS of the document to be rendered.
 
 
