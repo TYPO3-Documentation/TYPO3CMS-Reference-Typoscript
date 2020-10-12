@@ -133,9 +133,9 @@ for the full descriptions.
 
 .. important::
 
-   In previous versions, you used the keys `gr_list`, `loginUser` and `beUserLogin`
-   for context specific information. Since TYPO3 v9 these variables have been replaced
-   by the :ref:`TYPO3 Context API <t3coreapi:context-api>`.
+   In previous versions, the properties `gr_list`, `loginUser` and `beUserLogin` where
+   used for context specific information. Since TYPO3 v9 these variables have been
+   replaced by the :ref:`TYPO3 Context API <t3coreapi:context-api>`.
 
 If you for instance want to access the variable "id", you can do so by
 writing: :php:`$GLOBALS['TSFE']->id`
