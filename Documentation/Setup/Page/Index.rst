@@ -25,7 +25,7 @@ Pages are referenced by two main values. The "id" and "type".
 page is found.
 
 Most of this code is executed in the PHP script
-:file:`typo3/sysext/frontend/Classes/Page/PageGenerator.php`.
+:php:`\TYPO3\CMS\Frontend\Http\RequestHandler`.
 
 
 Multiple pages
@@ -631,7 +631,7 @@ includeJS.[array]
                 # in the TS constants field.
                 file2 = javascript_uploaded_to_template*.js
                 file2.if.isTrue = {$myConstant}
-                
+
                 jquery = https://code.jquery.com/jquery-3.4.1.min.js
                 jquery.external = 1
                 jquery.integrity = sha384-vk5WoKIaW/vJyUAd9n/wmopsmNhiy+L2Z+SBxGYnUkunIxVxAv/UtMOhba/xskxh
