@@ -135,6 +135,37 @@ isLessThan
 :aspect:`Description`
    Returns true, if the content is less than :ts:`value`.
 
+.. _if-bitand:
+
+bitAnd
+======
+
+:aspect:`Property`
+   bitAnd
+
+:aspect:`Data type`
+   value / :ref:`stdwrap`
+
+:aspect:`Description`
+   Returns true, if the value is part of the bit set.
+
+:aspect:`Example`
+   TYPO3 uses bits to store radio and checkboxes via TCA, `bitAnd` can be used to test against these fields.
+   ::
+
+      hideDefaultLanguageOfPage = TEXT
+      hideDefaultLanguageOfPage {
+          value = 0
+          value {
+              override = 1
+              override.if {
+                  bitAnd.field = l18n_cfg
+                  value = 1
+              }
+          }
+      }
+
+
 .. _if-equals:
 
 equals
