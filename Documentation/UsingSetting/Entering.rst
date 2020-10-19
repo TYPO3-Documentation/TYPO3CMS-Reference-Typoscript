@@ -49,11 +49,11 @@ used to include TypoScript contained inside files::
    # Import multiple files of a single directory in file name order
    @import 'EXT:myproject/Configuration/TypoScript/*.typoscript'
 
-   # Import all files of a directory
-   @import 'EXT:myproject/Configuration/TypoScript/'
-
    # The filename extension can be omitted and defaults to .typoscript
    @import 'EXT:myproject/Configuration/TypoScript/'
+
+   # Import TypoScript files with legacy ".txt" extension
+   @import 'EXT:myproject/Configuration/TypoScript/Setup/*.txt'
 
 
 .. _static-includes:
