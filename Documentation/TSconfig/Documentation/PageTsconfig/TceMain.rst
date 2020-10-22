@@ -361,7 +361,8 @@ preview
     the GET-parameter name.
 
     Finally :ts:`additionalGetParameters` allow you to add arbitrary GET-parameters and even override others.
-    If your target page shows by default a list you also have to set something like :ts:`tx_myext_pi1.action = show`.
+    If the plugin on your target page shows a list of records by default you will also need something like
+    :ts:`tx_myext_pi1.action = show` to ensure the record details are displayed.
 
     The core automatically sets the "no_cache" and the "L" parameter. The language matches the language of
     the current record. You may override each parameter by using the :ts:`additionalGetParameters` configuration
