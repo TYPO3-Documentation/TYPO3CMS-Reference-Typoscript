@@ -1880,7 +1880,7 @@ sendCacheHeaders\_onlyWhenLoginDeniedInBranch
 
          Another way to solve the problem is using this option in combination
          with disabling and enabling logins in various sections of the site. In
-         the page records ("Advanced" page types) you can disable frontend user
+         the page records you can disable frontend user
          logins for branches of the page tree. Since many sites only need the
          login in a certain branch of the page tree, disabling it in all other
          branches makes it much easier to use cache-headers in combination with
