@@ -111,5 +111,5 @@ The "Display constants" function is not available if "Crop lines" is selected.
    The TypoScript constants are evaluated in this order:
 
    #. Global :php:`'defaultTypoScript_constants'`
-   #. Site specific :ref:`settings from the site configuration<t3coreapi:sitehandling>`
+   #. Site specific :ref:`settings from the site configuration <t3coreapi:sitehandling>`
    #. Constants from :sql:`sys_template` database records
