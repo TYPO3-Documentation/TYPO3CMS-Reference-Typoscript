@@ -10,9 +10,6 @@ IMAGE
 Objects of type IMAGE return an image tag with the image file defined in the property
 "file" and processed according to the properties set.
 
-Defined as PHP function cImage() in
-typo3/sysext/frontend/Classes/ContentObject/ContentObjectRenderer.php.
-
 The array :php:`$GLOBALS['TSFE']->lastImageInfo` is set with the info-array
 of the returning image (if any) and contains width, height and so on:
 
