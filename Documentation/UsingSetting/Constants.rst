@@ -105,3 +105,11 @@ Constants in the setup code are substituted, marked in green. In the Object
 Browser, it's possible to show constants substituted and unsubstituted.
 
 The "Display constants" function is not available if "Crop lines" is selected.
+
+.. note::
+
+   The TypoScript constants are evaluated in this order:
+
+   #. :php:`$GLOBALS['TYPO3_CONF_VARS']['FE']['defaultTypoScript_constants']` via :php:`\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTypoScriptConstants()`
+   #. Site specific :ref:`settings from the site configuration <t3coreapi:sitehandling>`
+   #. Constants from :sql:`sys_template` database records
