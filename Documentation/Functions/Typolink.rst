@@ -728,4 +728,4 @@ Aspects `identifier` and `uid` are mandatory for this link handler.
 Using link handlers
 ===================
 
-see :ref:`Link Handler Documentation in TYPO3 Explained<t3coreapi:linkhandler>`
+See :ref:`Link handler documentation in "TYPO3 Explained" <t3coreapi:linkhandler>`.
