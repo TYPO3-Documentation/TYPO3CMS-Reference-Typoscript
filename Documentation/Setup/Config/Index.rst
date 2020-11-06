@@ -1522,12 +1522,17 @@ no\_cache
          :ref:`data-type-boolean`
 
    Default
-         \-
+         0
 
    Description
-         If this is set to true, the page will not be cached. If set to false,
-         it's ignored. Other parameters may have set it to true of other
-         reasons.
+         If this is set to 1, it disables the `pages` cache, meaning that the rendered result/response
+         will not be saved to cache.
+         If set to 0, it's ignored. Rendered result (e.g. full html of a page) is stored in the `pages` cache.
+         Other parameters may have set it to true for other reasons.
+         Note that setting this to 1 doesn't disable other TYPO3 caches.
+         Instead of setting `config.no_cache` you might consider changing dynamic (non-cacheable) content
+         from USER to USER_INT (COA to COA_INT)
+         For more information about cache types see :ref:`cache types chapter <t3coreapi:caching-architecture-core>`.
 
 
 
