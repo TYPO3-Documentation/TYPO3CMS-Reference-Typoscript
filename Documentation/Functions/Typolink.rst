@@ -136,30 +136,6 @@ no\_cache
    Adds ``&no_cache=1`` to the link
 
 
-.. _typolink-useCacheHash:
-
-useCacheHash
-============
-
-:aspect:`Property`
-   useCacheHash
-
-:aspect:`Data type`
-   :ref:`data-type-bool`
-
-:aspect:`Description`
-   If set, the additionalParams list is exploded and calculated into a
-   hash string appended to the URL, like "&cHash=ae83fd7s87". When the
-   caching mechanism sees this value, it calculates the same value on the
-   server based on incoming values in :php:`HTTP_GET_VARS`, excluding
-   id, type, no\_cache, cHash, MP values. If the incoming cHash value
-   matches the calculated value, the page may be cached based on this.
-
-   The :php:`$GLOBALS['TYPO3_CONF_VARS']['SYS']['encryptionKey']`
-   is included in the hash in order to make it unique for the
-   server and non-predictable.
-
-
 .. _typolink-additionalParams:
 
 additionalParams
@@ -717,7 +693,6 @@ Aspects `identifier` and `uid` are mandatory for this link handler.
               // field values of tx_myextension_content record with uid 123
               additionalParams.data = field:uid
               additionalParams.wrap = &tx_myextension[uid]= | &tx_myextension[action]=show
-              useCacheHash = 1
           }
       }
 
