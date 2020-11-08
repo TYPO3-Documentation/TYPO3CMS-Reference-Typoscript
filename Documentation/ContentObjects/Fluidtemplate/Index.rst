@@ -1,6 +1,7 @@
 .. include:: ../../Includes.txt
 
 .. _cobj-fluidtemplate:
+.. _cobj-template:
 
 =============
 FLUIDTEMPLATE
@@ -34,7 +35,7 @@ The functionality can be further augmented and customized with
 Properties
 ==========
 
-.. contents:: 
+.. contents::
    :local:
    :depth: 1
 
@@ -346,7 +347,7 @@ templateName
    This name is used together with the set format to find the template in the
    given templateRootPaths. Use this property to define a content object, which
    should be used as template file. It is an alternative to :ts:`.file`. If
-   
+
    `.templateName` is set, it takes precedence.
 
    **Example 1:** ::
