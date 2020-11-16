@@ -97,6 +97,17 @@ bookmarkGroups
    Group 5 has not been set, so it will be displayed by default, just
    like group 1.
 
+   .. versionadded:: 11.0
+
+   Custom language labels can also be used instead of a fixed label:
+
+   .. code-block:: typoscript
+
+      bookmarkGroups {
+         2 = LLL:EXT:sitepackage/Resources/Private/Language/locallang_be.xlf:bookmarkGroups.2
+      }
+
+
 
 .. _useroptions-clearCache-all:
 
