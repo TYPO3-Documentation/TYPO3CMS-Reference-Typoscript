@@ -124,6 +124,40 @@ tree.level
 
       [tree.level == 0]
 
+
+.. _condition-tree-pagelayout:
+
+tree.pagelayout
+"""""""""""""""
+
+.. versionadded:: 11.0
+
+:aspect:`Variable`
+   tree.pagelayout
+
+:aspect:`Type`
+   Integer / String
+
+:aspect:`Description`
+   Check for the defined backend layout of a page including the inheritance of
+   the field `Backend Layout (subpages of this page)`. The condition is enabled
+   for frontend and backend.
+
+:aspect:`Example`
+   ::
+
+      # Using backend_layout records
+      [tree.pagelayout == 2]
+         page.1 = TEXT
+         page.1.value = Layout 2
+      [END]
+
+      # Using TSconfig provider of backend layouts
+      [tree.pagelayout == "pagets__Home"]
+         page.1 = TEXT
+         page.1.value = Layout Home
+      [END]
+
 .. _condition-tree-rootLine:
 
 tree.rootLine
@@ -601,11 +635,11 @@ request.getQueryParams()
    Check if query parameter skipSessionUpdate equals 1::
 
       [request.getQueryParams()['skipSessionUpdate'] == 1]
-      
+
    Safely check query parameter array to avoid error logs in case key is not
    defined (see :ref:`condition-function-traverse`). This will check if
    `tx_news_pi1['news'] > 0`::
-   
+
       [traverse(request.getQueryParams(), 'tx_news_pi1/news') > 0]
 
 .. _condition-function-request-getParsedBody():
