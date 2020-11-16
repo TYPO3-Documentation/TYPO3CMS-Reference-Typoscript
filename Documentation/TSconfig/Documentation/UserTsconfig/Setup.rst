@@ -114,16 +114,6 @@ neverHideAtCopy
     If set, then the hideAtCopy feature for records in TCE will not be used.
 
 
-recursiveDelete
-===============
-
-:aspect:`Datatype`
-    boolean
-
-:aspect:`Description`
-    Recursive Delete(!): Allow ALL subpages to be deleted when deleting a page
-
-
 resizeTextareas
 ===============
 
