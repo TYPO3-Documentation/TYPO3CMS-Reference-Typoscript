@@ -354,22 +354,6 @@ defLangBinding
     0
 
 
-disableAdvanced
----------------
-
-:aspect:`Datatype`
-    boolean
-
-:aspect:`Description`
-    Disables the clear cache advanced function in the bottom of the page
-    in the module, including the "Create new record" link. As well removes
-    the "Clear cache for this page" icon in the right top of the page
-    module.
-
-:aspect:`Default`
-    0
-
-
 disableIconToolbar
 ------------------
 
