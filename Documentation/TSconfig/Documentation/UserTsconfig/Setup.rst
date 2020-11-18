@@ -138,22 +138,6 @@ resizeTextareas
 :aspect:`Default`
     1
 
-
-resizeTextareas_Flexible
-========================
-
-:aspect:`Datatype`
-    boolean
-
-:aspect:`Description`
-    This option makes textareas flexible, which means that their height
-    grows automatically while typing. Limit is the maximal height set.
-    This is active by default.
-
-:aspect:`Default`
-    1
-
-
 resizeTextareas_MaxHeight
 =========================
 
