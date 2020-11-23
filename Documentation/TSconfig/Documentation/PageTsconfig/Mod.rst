@@ -149,6 +149,16 @@ disableLanguages
    attached site configuration. Once a page tree has a site configuration, the language settings
    from the site configuration are applied and this option will have no effect at all.
 
+disableSysNoteButton
+--------------------
+
+:aspect:`Datatype`
+   boolean
+
+:aspect:`Description`
+   Disables the `sys_note` creation button in the modules' top button bar in the :guilabel:`Page`, :guilabel:`List` and :guilabel:`Info`
+   modules.
+
 web_info
 ========
 
