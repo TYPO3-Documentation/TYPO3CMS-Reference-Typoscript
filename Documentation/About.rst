@@ -51,7 +51,7 @@ Contact
 
 If you want to support us, please join the slack channel **#typo3-documentation**
 on `Slack <https://typo3.slack.com/>`__.
-Visit `forger <https://forger.typo3.org/slack>`__ to gain access to Slack.
+Visit `forger <https://forger.typo3.com/slack>`__ to gain access to Slack.
 
 And finally, as a last resort, you can get in touch with the documentation team
 `by mail <documentation@typo3.org>`_.
