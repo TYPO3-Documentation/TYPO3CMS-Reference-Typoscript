@@ -639,8 +639,7 @@ siteLanguage
       
       # Website title for the current language with fallback to the website title of the site configuration.
       page.10 = TEXT
-      page.10.data = site:websiteTitle
-      page.10.override.data = siteLanguage:websiteTitle
+      page.10.data = siteLanguage:websiteTitle // site:websiteTitle
 
 .. _data-type-gettext-tsfe:
 
