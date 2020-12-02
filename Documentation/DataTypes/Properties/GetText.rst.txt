@@ -577,7 +577,7 @@ site
    :ts:`baseVariants`     The Base Variants for this site
    :ts:`rootPageId`       The Root Page ID of this site
    :ts:`identifier`       The identifier (name) of this site configuration
-   :ts:`websiteTitle`     The website title of this site configuration
+   :ts:`websiteTitle`     The website title of this site
    ====================== ==========================================================
 
 :aspect:`Example:`
