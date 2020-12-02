@@ -577,6 +577,7 @@ site
    :ts:`baseVariants`     The Base Variants for this site
    :ts:`rootPageId`       The Root Page ID of this site
    :ts:`identifier`       The identifier (name) of this site configuration
+   :ts:`websiteTitle`     The website title of this site
    ====================== ==========================================================
 
 :aspect:`Example:`
@@ -623,6 +624,7 @@ siteLanguage
    :ts:`title`            Label to be used within TYPO3 to identify the language
    :ts:`twoLetterIsoCode` The iso code for this language (two letter) ISO-639-1
    :ts:`typo3Language`    Prefix for TYPO3's language files "default" for english, otherwise one of TYPO3's internal language keys. Previously configured via TypoScript config.language = fr
+   :ts:`websiteTitle`     The website title for this language. No automatic fallback to the `site:websiteTitle`!
    ====================== ==========================================================
 
 :aspect:`Example:`
@@ -634,6 +636,10 @@ siteLanguage
       
       page.10 = TEXT
 	   page.10.dataWrap = The current site language direction is {siteLanguage:direction}
+      
+      # Website title for the current language with fallback to the website title of the site configuration.
+      page.10 = TEXT
+      page.10.data = siteLanguage:websiteTitle // site:websiteTitle
 
 .. _data-type-gettext-tsfe:
 
