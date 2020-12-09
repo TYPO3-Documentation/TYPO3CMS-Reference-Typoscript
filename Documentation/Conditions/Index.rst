@@ -752,7 +752,7 @@ request.getPageArguments()
 Functions in all contexts
 -------------------------
 
-The following functions are available in **all** contexts: frontend, backend and CLI
+The following functions are available in **any** context:
 
 .. _condition-function-date:
 
