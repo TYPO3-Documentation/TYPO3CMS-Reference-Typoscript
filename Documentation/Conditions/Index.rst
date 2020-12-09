@@ -490,11 +490,11 @@ typo3.devIpMask
 
 .. _condition-functions-in-all-contexts:
 
-Functions in all contexts
+Functions in frontend and backend context
 -------------------------
 
 Functions take over the logic of the old conditions which do more than a simple comparison check.
-The following functions are available in **any** context:
+The following functions are available in frontend and backend context, but not CLI.
 
 .. _condition-function-request:
 
@@ -747,6 +747,12 @@ request.getPageArguments()
    
    Allows migration from old condition syntax using `[globalVar = GP:singlepartner > 0]`
    to `[request.getPageArguments().get('singlepartner') > 0]`.
+   
+   
+Functions in all contexts
+-------------------------
+
+The following functions are available in **all** contexts: frontend, backend and CLI
 
 .. _condition-function-date:
 
