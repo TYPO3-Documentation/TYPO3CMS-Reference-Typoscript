@@ -494,7 +494,7 @@ Functions in frontend and backend context
 -------------------------
 
 Functions take over the logic of the old conditions which do more than a simple comparison check.
-The following functions are available in frontend and backend context, but not CLI.
+The following functions are available in frontend and backend context, but not CLI:
 
 .. _condition-function-request:
 
