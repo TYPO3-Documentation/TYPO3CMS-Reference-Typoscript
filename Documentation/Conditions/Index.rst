@@ -491,7 +491,7 @@ typo3.devIpMask
 .. _condition-functions-in-all-contexts:
 
 Functions in frontend and backend context
--------------------------
+-----------------------------------------
 
 Functions take over the logic of the old conditions which do more than a simple comparison check.
 The following functions are available in frontend and backend context, but not CLI:
