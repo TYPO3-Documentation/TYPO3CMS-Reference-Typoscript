@@ -42,7 +42,7 @@ Make TypoScript available for static includes
 .. code-block:: php
 
    <?php
-   defined('TYPO3_MODE') || die();
+   defined('TYPO3') or die();
 
    call_user_func(function()
    {
@@ -83,7 +83,7 @@ If this is not the case, use the method described in the previous section
 
 .. code-block:: php
 
-   defined('TYPO3_MODE') || die();
+   defined('TYPO3') or die();
 
    call_user_func(function()
    {
