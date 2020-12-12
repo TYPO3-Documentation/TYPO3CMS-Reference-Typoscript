@@ -183,18 +183,6 @@ addQueryString
    not check for any duplicate parameters! This is not a problem: Only
    the last parameter of the same name will be applied.
 
-   .method
-      If set to GET or POST, then the parsed query arguments
-      (GET or POST data) will be used. This setting is useful, if you use
-      URL processing extensions like Real URL, which translate part of the
-      path into query arguments.
-
-      It's also possible to get both, POST and GET data, on setting this to
-
-      "POST,GET" or "GET,POST". The last method in this sequence takes
-      precedence and overwrites the parts that are also present for the
-      first method.
-
    .exclude
       List of query arguments to exclude from the link. Typical examples
       are 'L' or 'cHash'.
@@ -203,7 +191,7 @@ addQueryString
 
       This property should not be used for cached contents without a valid
       cHash. Otherwise the page is cached for the first set of parameters
-      and subsubsequently taken from the cache no matter what parameters
+      and subsequently taken from the cache no matter what parameters
       are given. Additionally the security risk of cache poisoning has to
       be considered.
 

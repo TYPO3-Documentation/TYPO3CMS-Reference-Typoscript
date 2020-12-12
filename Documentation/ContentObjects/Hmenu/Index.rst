@@ -1473,7 +1473,6 @@ Creates a language menu:
          additionalParams = &L=0 || &L=1 || &L=2
          addQueryString = 1
          addQueryString.exclude = L,id
-         addQueryString.method = GET
      }
    }
 
