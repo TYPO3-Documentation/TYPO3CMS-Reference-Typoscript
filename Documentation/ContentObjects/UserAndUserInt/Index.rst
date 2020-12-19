@@ -41,11 +41,18 @@ userFunc
          name with a '->' in it, then it is interpreted as a call to a method in
          a class.
 
-         Two parameters are sent to the PHP function: First a content variable
+         Three parameters are sent to the PHP function: First a :php:`string $content` variable
          (which is empty for USER/USER\_INT objects, but not when the user
          function is called from stdWrap functions .postUserFunc or
-         .preUserFunc). The second parameter is an array with the properties of
-         this cObject, if any.
+         .preUserFunc). The second parameter is an array (:php:`$configuration`) with the properties
+         of this cObject, if any. As third parameter, the current :php:`ServerRequestInterface $request`
+         is passed.
+
+.. note::
+
+   The :php:`$request` object should be used to access request related variables instead of directly accessing
+   the superglobal variables like :php:`$_GET` / :php:`$_POST` / :php:`$_SERVER`, or TYPO3’s API methods :php:`GeneralUtility::_GP()`
+   and :php:`GeneralUtility::getIndpEnv()`.
 
 .. ###### END~OF~TABLE ######
 
