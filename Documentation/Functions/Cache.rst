@@ -129,6 +129,7 @@ timestamp). ::
        stdWrap.cache {
            key = mycurrenttimestamp_{page:uid}_{TSFE:sys_language_uid}
            key.insertData = 1
+       }
    }
 
 Here a dynamic key is used. It takes the page id and the language uid
