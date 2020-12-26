@@ -1,4 +1,4 @@
-.. include:: Includes.txt
+.. include:: /Includes.rst.txt
 
 .. _start:
 
@@ -74,5 +74,6 @@ Alternatively you can `file an issue
    UsingSetting/Index
    PageTsconfig/Index
    UserTsconfig/Index
+   GenIndex
    Sitemap
 
