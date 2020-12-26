@@ -70,7 +70,6 @@ Alternatively you can `file an issue
 .. toctree::
    :hidden:
 
-   Sitemap/Index
    Introduction/Index
    UsingSetting/Index
    PageTsconfig/Index

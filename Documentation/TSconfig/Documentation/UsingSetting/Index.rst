@@ -406,7 +406,7 @@ Furthermore, you can access the current backend user inside a TSConfig condition
 .. _condition-backend-user:
 
 backend.user
-"""""""""
+""""""""""""
 
 Check whether the current BE user has the uid 5:
 
