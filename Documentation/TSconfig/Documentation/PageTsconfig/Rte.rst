@@ -75,7 +75,7 @@ proc
 ====
 
 The `proc` section allows customization of the server processing of the content, see
-the :ref:`transformation section <t3coreapi:transformations-process>` of the RTE chapter in
+the :ref:`transformation section <t3coreapi:transformations-tsconfig>` of the RTE chapter in
 the core API document for more general information on server processing.
 
 The `proc` properties are in :code:`\TYPO3\CMS\Core\Html\RteHtmlParser` and
