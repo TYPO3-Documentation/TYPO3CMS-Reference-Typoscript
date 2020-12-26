@@ -1,4 +1,4 @@
-.. include:: ../Includes.txt
+.. include:: /Includes.rst.txt
 
 .. _introduction:
 
@@ -25,6 +25,7 @@ The rest of the document is a reference: A document to look-up and find properti
 This document is especially important for integrators who want to make life as easy as possible
 for their dear backend users.
 
+.. index:: ! TSconfig
 .. _about-tsconfig:
 
 About TSconfig
