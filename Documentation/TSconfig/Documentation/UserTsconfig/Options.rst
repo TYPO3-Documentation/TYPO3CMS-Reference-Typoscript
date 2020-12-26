@@ -568,35 +568,6 @@ impexp.enableImportForNonAdminUser
 :aspect:`Default`
    0
 
-
-.. _useroptions-lockToIP:
-
-lockToIP
-========
-
-:aspect:`Datatype`
-   string
-
-:aspect:`Description`
-   Comma separated list of IP-numbers with wildcards.
-
-   .. note::
-
-      This option is only enabled if the :php:`$GLOBALS['TYPO3_CONF_VARS']['BE']['enabledBeUserIPLock']` configuration is true.
-
-:aspect:`Example`
-   .. code-block:: typoscript
-
-      # Allow all from 192.168-network
-      options.lockToIP = 192.168.*.*
-
-      # Allow all from 192.168-network plus all from REMOTE_ADDR 212.22.33.44
-      options.lockToIP = 192.168.\*.\*, 212.22.33.44
-
-      # Same as the previous. Leaving out parts of the IP address is the same as wild cards.
-      options.lockToIP = 192.168, 212.22.33.44
-
-
 .. _useroptions-mayNotCreateEditBookmarks:
 
 mayNotCreateEditBookmarks
