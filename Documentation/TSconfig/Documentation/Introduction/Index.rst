@@ -9,7 +9,7 @@ Introduction
 .. _about:
 
 About this document
--------------------
+===================
 
 This document describes TSconfig and its options: A TypoScript a-like configuration
 syntax to configure details of the backend for backend users based on a user, group and page level.
@@ -25,43 +25,10 @@ The rest of the document is a reference: A document to look-up and find properti
 This document is especially important for integrators who want to make life as easy as possible
 for their dear backend users.
 
-
-.. _credits:
-
-Credits
-^^^^^^^
-
-This document was originally written by Kasper Skårhøj. It has since
-then been maintained successively by Michael Stucki, François Suter,
-Christopher Stelmaszyk and Christian Wöbbeking.
-
-
-.. _feedback:
-
-Feedback and Fixing
-^^^^^^^^^^^^^^^^^^^
-
-If you find a bug in this manual, please be so kind as to check the
-`online version on <https://docs.typo3.org/typo3cms/TSconfigReference/>`__.
-From there you can hit the "Edit me on GitHub" button in the top right corner
-and submit a pull request via GitHub. Alternatively you can just `file an issue
-using the bug tracker <https://github.com/TYPO3-Documentation/TYPO3CMS-Reference-TSconfig/issues>`__.
-
-Maintaining high quality documentation requires time and effort
-and the TYPO3 Documentation Team always appreciates support.
-
-If you want to support us, please join the slack channel **#typo3-documentation**
-on `Slack <https://typo3.slack.com/>`__.
-Visit `forger <https://forger.typo3.org/slack>`__ to gain access to Slack.
-
-And finally, as a last resort, you can get in touch with the documentation team
-`by mail <documentation@typo3.org>`_.
-
-
 .. _about-tsconfig:
 
 About TSconfig
---------------
+==============
 
 TSconfig is used in TYPO3 to configure and customize the backend on a page and
 a user or group basis. The syntax to do this is based on `TypoScript` that is also
