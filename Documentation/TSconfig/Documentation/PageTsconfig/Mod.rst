@@ -364,16 +364,6 @@ defLangBinding
     0
 
 
-disableIconToolbar
-------------------
-
-:aspect:`Datatype`
-    boolean
-
-:aspect:`Description`
-    Disables the topmost icon toolbar with the "view"-Icon and the icon toolbar below.
-
-
 disableNewContentElementWizard
 ------------------------------
 
@@ -383,29 +373,6 @@ disableNewContentElementWizard
 :aspect:`Description`
     Disables the fact that the new-content-element icons links to the
     content element wizard and not directly to a blank "NEW" form.
-
-
-disableSearchBox
-----------------
-
-:aspect:`Datatype`
-    boolean
-
-:aspect:`Description`
-    Disables the search box in Columns view.
-
-:aspect:`Default`
-    0
-
-:aspect:`Default`
-    1
-
-:aspect:`Example`
-    .. code-block:: typoscript
-
-        mod.web_layout {
-            editFieldsAtATime = 2
-        }
 
 
 hideRestrictedCols
@@ -692,19 +659,6 @@ deniedNewTables
         mod.web_list {
             deniedNewTables = sys_category, tt_content
         }
-
-
-disableSearchBox
-----------------
-
-:aspect:`Datatype`
-    boolean
-
-:aspect:`Description`
-    Disables the search and search icon in the doc header.
-
-:aspect:`Default`
-    0
 
 
 disableSingleTableView
