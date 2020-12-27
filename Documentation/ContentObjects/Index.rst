@@ -36,7 +36,6 @@ cObject
    Records/Index
    RestoreRegister/Index
    Svg/Index
-   Template/Index
    Text/Index
    UserAndUserInt/Index
 

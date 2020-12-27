@@ -10,13 +10,6 @@ FILES
 A content object of type FILE was integrated with the File Abstraction Layer (FAL)
 and is there to output information about files.
 
-
-.. note::
-
-   Do not mix this up with the cObject data type :ref:`FILE <cobj-file>`; both are
-   different cObject data types.
-
-
 .. container:: table-row
 
    Property

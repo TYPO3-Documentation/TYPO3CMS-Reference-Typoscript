@@ -83,7 +83,7 @@ It is also possible to "Include static" templates from extensions.
 
 .. tip::
 
-   The section :ref:`add-typoscript-in-extension` explains how extension
+   The section :ref:`extdev-add-typoscript` explains how extension
    developers can make TypoScript available for inclusion in their
    extensions.
 

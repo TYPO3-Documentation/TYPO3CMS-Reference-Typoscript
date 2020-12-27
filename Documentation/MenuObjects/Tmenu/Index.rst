@@ -97,13 +97,13 @@ TMENU
 
          **Example:** ::
 
-         2 = TMENU
-         2 {
-           stdWrap.dataWrap = <ul class="{register : parentProperty}"> | </ul>
-           NO {
-             ...
-           }
-         }
+            2 = TMENU
+            2 {
+               stdWrap.dataWrap = <ul class="{register : parentProperty}"> | </ul>
+               NO {
+                  // ...
+               }
+            }
 
 
 .. container:: table-row
