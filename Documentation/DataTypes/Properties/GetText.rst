@@ -1,6 +1,6 @@
 :orphan:
 
-.. include:: ../../Includes.txt
+.. include:: /Includes.rst.txt
 .. index:: Simple data types; getText
 .. _data-type-gettext:
 

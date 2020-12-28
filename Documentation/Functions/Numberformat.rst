@@ -1,4 +1,4 @@
-.. include:: ../Includes.txt
+.. include:: /Includes.rst.txt
 .. index:: Functions; numberFormat
 .. _numberformat:
 

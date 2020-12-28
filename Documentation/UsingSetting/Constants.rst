@@ -1,4 +1,4 @@
-.. include:: ../Includes.txt
+.. include:: /Includes.rst.txt
 .. index:: Constants
 .. _typoscript-syntax-what-are-constants:
 .. _typoscript-syntax-constants:

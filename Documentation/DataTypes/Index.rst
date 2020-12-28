@@ -1,4 +1,4 @@
-.. include:: ../Includes.txt
+.. include:: /Includes.rst.txt
 .. index:: Simple data types
 .. _data-types:
 .. _data-types-reference:

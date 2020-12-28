@@ -1,4 +1,4 @@
-.. include:: ../Includes.txt
+.. include:: /Includes.rst.txt
 .. index:: TypoScript; Using and setting
 .. _using-and-setting:
 

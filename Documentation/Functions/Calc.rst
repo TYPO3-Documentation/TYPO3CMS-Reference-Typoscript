@@ -1,4 +1,4 @@
-.. include:: ../Includes.txt
+.. include:: /Includes.rst.txt
 .. index:: Functions; Calc
 
 .. The label objects-calc should no longer be used.

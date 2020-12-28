@@ -1,4 +1,4 @@
-.. include:: ../Includes.txt
+.. include:: /Includes.rst.txt
 .. index:: TypoScript; Add in the backend
 .. _typoscript-syntax-typoscript-templates-structure:
 

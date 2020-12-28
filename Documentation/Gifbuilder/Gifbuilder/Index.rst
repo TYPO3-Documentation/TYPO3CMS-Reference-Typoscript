@@ -1,4 +1,4 @@
-.. include:: ../../Includes.txt
+.. include:: /Includes.rst.txt
 .. index:: GIFBUILDER
 .. _gifbuilder:
 

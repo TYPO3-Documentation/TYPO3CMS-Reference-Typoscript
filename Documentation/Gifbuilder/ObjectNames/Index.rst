@@ -1,4 +1,4 @@
-.. include:: ../../Includes.txt
+.. include:: /Includes.rst.txt
 .. index:: GIFBUILDER; Objects
 .. _gifbuilder-object-names:
 

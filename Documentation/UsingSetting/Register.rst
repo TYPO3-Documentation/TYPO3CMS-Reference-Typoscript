@@ -1,4 +1,4 @@
-.. include:: ../Includes.txt
+.. include:: /Includes.rst.txt
 .. index:: TypoScript; Register usage
 .. _using-setting-register:
 

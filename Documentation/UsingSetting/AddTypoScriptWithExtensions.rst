@@ -1,4 +1,4 @@
-.. include:: ../Includes.txt
+.. include:: /Includes.rst.txt
 .. index:: TypoScript in extensions
 .. _extdev-add-typoscript:
 

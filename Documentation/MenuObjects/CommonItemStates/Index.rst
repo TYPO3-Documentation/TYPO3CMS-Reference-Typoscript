@@ -1,4 +1,4 @@
-.. include:: ../../Includes.txt
+.. include:: /Includes.rst.txt
 .. index:: TMENU; Item states
 .. _tmenu-common-properties:
 

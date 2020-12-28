@@ -1,4 +1,4 @@
-.. include:: ../../Includes.txt
+.. include:: /Includes.rst.txt
 .. index::
    Content objects; HMENU
    Content objects; Menu without Data Processor
