@@ -1,9 +1,9 @@
 .. include:: ../Includes.txt
-
 .. _typoscript-syntax-constant-editor:
 .. _constant-editor:
 
-The Constant Editor
+===================
+The constant editor
 ===================
 
 It's possible to add comments in TypoScript. Comments are always ignored by the
@@ -50,7 +50,7 @@ usability gain.
 .. _typoscript-syntax-constant-editor-default-values:
 
 Default values
---------------
+==============
 
 A constant may be given a default value when it is defined, as is the case for
 the :ts:`color2` constant in the above example.
@@ -62,7 +62,7 @@ constant has before the last template is parsed.
 .. _typoscript-syntax-constant-editor-comments:
 
 Comment Syntax
---------------
+==============
 
 How the comments are perceived by the module:
 
@@ -80,7 +80,7 @@ The possible keys are described below.
 .. _typoscript-syntax-constant-editor-keys-cat:
 
 cat
----
+===
 
 - Comma-separated list of the categories (case-insensitive) that the constant is
   a member of. Only one category should be used, because it usually turns out to
@@ -94,7 +94,7 @@ cat
 .. _typoscript-syntax-constant-editor-keys-cat-predefined-categories:
 
 Predefined categories
-"""""""""""""""""""""
+---------------------
 
 =========  ======================================================================
 Category   Description
@@ -112,7 +112,7 @@ advanced   Advanced functions, which are seldom used.
 .. _typoscript-syntax-constant-editor-keys-cat-custom-categories:
 
 Custom categories
-"""""""""""""""""
+-----------------
 
 To define a new category, a comment including the parameter :ts:`customcategory`
 has to be added. Example::
@@ -130,7 +130,7 @@ Usage example::
 .. _typoscript-syntax-constant-editor-keys-cat-subcategories:
 
 Subcategories
-"""""""""""""
+-------------
 
 There are a number of subcategories one can use. Subcategories are entered
 after the category separated by a slash :ts:`/`. Example::
@@ -147,7 +147,7 @@ non-existing subcategory us used, the constant will go into the subcategory
 .. _typoscript-syntax-constant-editor-keys-cat-predefined-subcategories:
 
 Predefined subcategories
-""""""""""""""""""""""""
+------------------------
 
 Standard subcategories (in the order they get listed in the Constant
 Editor):
@@ -182,7 +182,7 @@ of extension "fluid\_styled\_content" for examples.
 .. _typoscript-syntax-constant-editor-keys-cat-custom-subcategories:
 
 Custom subcategories
-""""""""""""""""""""
+--------------------
 
 Defining a custom subcategory is similar to defining a custom category,
 using the :ts:`customsubcategory` parameter. Example::
@@ -203,7 +203,7 @@ Will look in the Constant Editor like this:
 .. _typoscript-syntax-constant-editor-keys-cat-constants-ordering:
 
 Ordering
-""""""""
+--------
 
 The third part of the category definition is optional and represents
 the order in which the constants are displayed in the Constant Editor.
@@ -225,7 +225,7 @@ has letter "a". Constants without any ordering information will come last.
 .. _typoscript-syntax-constant-editor-keys-type:
 
 type
-----
+====
 
 There exists a number of predefined types, which define what kind of field is
 rendered for inputting the constant.
@@ -265,7 +265,7 @@ user                         Path to the file and method which renders the optio
 .. _typoscript-syntax-constant-editor-keys-label:
 
 label
------
+=====
 
 The label is a trimmed text string. It gets split on the first :ts:`:` (colon)
 to separate header and body of the comment. The header is displayed on its own

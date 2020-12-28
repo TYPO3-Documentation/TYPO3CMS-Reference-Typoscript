@@ -1,6 +1,5 @@
 .. include:: ../Includes.txt
-
-
+.. index:: Top-level objects; constants
 .. _tlo-constants:
 .. _constants:
 

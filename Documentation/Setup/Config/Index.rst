@@ -1,5 +1,7 @@
 .. include:: ../../Includes.txt
-.. index:: config
+.. index::
+   config
+   Top-level objects; config
 .. _config:
 .. _config-object-type:
 .. _config-datatype:

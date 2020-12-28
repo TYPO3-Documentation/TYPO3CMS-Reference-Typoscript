@@ -1,6 +1,5 @@
 .. include:: ../Includes.txt
-
-
+.. index:: Top-level objects
 .. _setup:
 .. _top-level-objects:
 

@@ -1,5 +1,8 @@
 .. include:: ../Includes.txt
-
+.. index::
+   Top-level objects; temp
+   Top-level objects; styles
+   Top-level objects; lib
 .. _top-level-objects-other-reserved-tlo-s:
 .. _top-level-objects-temp:
 .. _tlo-temp:
@@ -31,6 +34,8 @@ temp, styles & lib
          :ts:`lib` can be used for a "library" of code, you can reference in
          TypoScript (unlike :ts:`styles` which is unset).
 
+
+.. index:: Top-level objects; tt_content
 .. _tlo-tt:
 
 ====
@@ -39,6 +44,8 @@ tt_*
 
 ``tt_``, e.g. ``tt_content`` (from “content (default)”) is used to render content from tables.
 
+
+.. index:: Top-level objects; resources
 .. _top-level-objects-resources:
 .. _tlo-resources:
 
@@ -59,6 +66,7 @@ resources
 
 
 
+.. index:: Top-level objects; sitetitle
 .. _top-level-objects-sitetitle:
 .. _tlo-sitetitle:
 
@@ -79,6 +87,7 @@ sitetitle
 
 
 
+.. index:: Top-level objects; types
 .. _top-level-objects-types:
 .. _tlo-types:
 

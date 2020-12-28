@@ -1,11 +1,13 @@
 .. include:: ../../Includes.txt
-
+.. index::
+   PAGE
+   Top-level objects; page
 .. _page:
 .. _page-datatype:
 .. _object-type-page:
 
 ===========
-PAGE & page
+PAGE & PAGE
 ===========
 
 This defines what is rendered in the frontend.
@@ -28,11 +30,14 @@ Most of this code is executed in the PHP script
 :php:`\TYPO3\CMS\Frontend\Http\RequestHandler`.
 
 
+.. index::
+   PAGE; typeNum
+   PAGE; Multiple pages
+
 Multiple pages
 ==============
 
-
-**The "type"** is used to define how the page should be rendered. This
+The **type** is used to define how the page should be rendered. This
 is primarily used with different representations of the same content.
 Your default page will most likely have type 0 while a JSON stream with the same
 content could go with type 1.
@@ -77,7 +82,6 @@ These are just recommendations. However, especially the name page for the conten
 is very common and most documentation will imply that your main page object is called page.
 
 
-
 Examples
 ========
 
@@ -111,6 +115,8 @@ Examples
    }
 
 
+.. index:: PAGE; Properties
+
 Properties
 ==========
 
@@ -124,7 +130,7 @@ Properties
    `bodyTagAdd`_                  :ref:`data-type-string`
    `bodyTagCObject`_              :ref:`cObject <data-type-cobject>`
    `config`_                      :ref:`->CONFIG <config>`
-   `CSS\_inlineStyle`_            :ref:`data-type-string`
+   `setup-page-css-inlinestyle`_  :ref:`data-type-string`
    `cssInline.[array]`_           :ref:`cObject <data-type-cobject>`
    `footerData.[array]`_          :ref:`cObject <data-type-cobject>`
    `headerData.[array]`_          :ref:`cObject <data-type-cobject>`
@@ -149,6 +155,7 @@ Properties
 .. ### BEGIN~OF~TABLE ###
 
 
+.. index:: PAGE; Content objects
 .. _setup-page-1-2-3-4:
 
 1,2,3,4...
@@ -178,6 +185,7 @@ Properties
          }
 
 
+.. index:: PAGE; bodyTag
 .. _setup-page-bodytag:
 
 bodyTag
@@ -200,10 +208,12 @@ bodyTag
    Example
          ::
 
-            <body bgcolor="{$bgCol}">
+         # This will lead to <body class="example">
+         page.bodyTag = <body class="{$bodyClass}">
 
 
 
+.. index:: PAGE;
 .. _setup-page-bodytagadd:
 
 bodyTagAdd
@@ -229,6 +239,7 @@ bodyTagAdd
 
 
 
+.. index:: PAGE; bodyTagCObject
 .. _setup-page-bodytagcobject:
 
 bodyTagCObject
@@ -252,6 +263,7 @@ bodyTagCObject
          from what might be set here.
 
 
+.. index:: PAGE; config
 .. _setup-page-config:
 
 config
@@ -271,6 +283,7 @@ config
 
 
 
+.. index:: PAGE; CSS_inlineStyle
 .. _setup-page-css-inlinestyle:
 
 CSS\_inlineStyle
@@ -294,6 +307,7 @@ CSS\_inlineStyle
 
 
 
+.. index:: PAGE; cssInline.[array]
 .. _setup-page-cssinline:
 
 cssInline.[array]
@@ -325,6 +339,7 @@ cssInline.[array]
 
 
 
+.. index:: PAGE; footerData.[array]
 .. _setup-page-footerdata:
 
 footerData.[array]
@@ -358,6 +373,7 @@ footerData.[array]
             }
 
 
+.. index:: PAGE; headerData.[array]
 .. _setup-page-headerdata:
 
 headerData.[array]
@@ -399,6 +415,7 @@ headerData.[array]
             }
 
 
+.. index:: PAGE; headTag
 .. _setup-page-headtag:
 
 headTag
@@ -420,6 +437,7 @@ headTag
 
 
 
+.. index:: PAGE; includeCSS.[array]
 .. _setup-page-includecss-array:
 
 includeCSS.[array]
@@ -495,6 +513,7 @@ includeCSS.[array]
 
 
 
+.. index:: PAGE; includeCSSLibs.[array]
 .. _setup-page-includecsslibs-array:
 
 includeCSSLibs.[array]
@@ -558,6 +577,7 @@ includeCSSLibs.[array]
 
 
 
+.. index:: PAGE; includeJS.[array]
 .. _setup-page-includejs-array:
 
 includeJS.[array]
@@ -639,6 +659,7 @@ includeJS.[array]
 
 
 
+.. index:: PAGE; includeJSFooter.[array]
 .. _setup-page-includejsfooter-array:
 
 includeJSFooter.[array]
@@ -661,6 +682,7 @@ includeJSFooter.[array]
 
 
 
+.. index:: PAGE; includeJSFooterlibs.[array]
 .. _setup-page-includejsfooterlibs-array:
 
 includeJSFooterlibs.[array]
@@ -683,6 +705,7 @@ includeJSFooterlibs.[array]
 
 
 
+.. index:: PAGE; includeJSLibs.[array]
 .. _setup-page-includejslibs-array:
 
 includeJSLibs.[array]
@@ -705,6 +728,7 @@ includeJSLibs.[array]
 
 
 
+.. index:: PAGE; inlineLanguageLabelFiles
 .. _setup-page-inlinelanguagelabelfiles:
 
 inlineLanguageLabelFiles
@@ -720,7 +744,7 @@ inlineLanguageLabelFiles
 
    Description
          Adds language labels to the page. All labels will be then be available in
-         the Javascript object :js:`TYPO3.lang`.
+         the JavaScript object :js:`TYPO3.lang`.
 
          **Available sub-properties:**
 
@@ -744,6 +768,8 @@ inlineLanguageLabelFiles
                 someLabels.errorMode = 2
             }
 
+
+.. index:: PAGE; inlineSettings
 .. _setup-page-inlinesettings:
 
 inlineSettings
@@ -776,6 +802,7 @@ inlineSettings
 
 
 
+.. index:: PAGE; jsFooterInline.[array]
 .. _setup-page-jsfooterinline:
 
 jsFooterInline.[array]
@@ -805,6 +832,7 @@ jsFooterInline.[array]
             }
 
 
+.. index:: PAGE; jsInline.[array]
 .. _setup-page-jsinline:
 
 jsInline.[array]
@@ -839,6 +867,7 @@ jsInline.[array]
 
 
 
+.. index:: PAGE; meta
 .. _setup-page-meta:
 .. _meta:
 
@@ -944,6 +973,7 @@ meta
          protocol and its properties.
 
 
+.. index:: PAGE; shortcutIcon
 .. _setup-page-shortcuticon:
 
 shortcutIcon
@@ -987,6 +1017,7 @@ stdWrap
          Wraps the content of the cObject array with stdWrap options.
 
 
+.. index:: PAGE; typeNum
 .. _setup-page-typenum:
 
 typeNum

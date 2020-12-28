@@ -1,7 +1,8 @@
 .. include:: ../Includes.txt
-
+.. index:: TypoScript; Register usage
 .. _using-setting-register:
 
+========
 Register
 ========
 
@@ -12,7 +13,7 @@ Some TYPO3 cObjects use internal registers. Esp.  the menus are built be
 registers (e.g. count_HMENU, count_HMENU_MENUOBJ, count_menuItems).
 
 Defining registers
-------------------
+==================
 
 Registers in TypoScript can be seen as stack array variables in programming
 languages. Each register can store a complex TypoScript block. Use
@@ -24,7 +25,7 @@ variable. You need a :ref:`stdWrap.data <stdwrap-data>` or a
 on other places than inside of these cObjects.
 
 Example
--------
+=======
 
 .. code-block:: typoscript
 
