@@ -1403,22 +1403,6 @@ innerWrap2
 
 
 .. index:: stdWrap;
-.. _stdwrap-addparams:
-
-addParams
----------
-
-:aspect:`Property`
-   addParams
-
-:aspect:`Data type`
-   :ref:`addparams` / :ref:`stdWrap`
-
-:aspect:`Description`
-   Lets you add tag parameters to the content *if* the content is a tag!
-
-
-.. index:: stdWrap;
 .. _stdwrap-precobject:
 
 preCObject
