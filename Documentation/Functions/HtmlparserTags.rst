@@ -1,6 +1,7 @@
 .. include:: ../Includes.txt
-
-
+.. index::
+   Functions; HTMLparser_tags
+   HTMLparser_tags
 .. _htmlparser-tags:
 
 ================
@@ -8,6 +9,7 @@ HTMLparser\_tags
 ================
 
 
+.. index:: HTMLparser_tags; overrideAttribs
 .. _htmlparser-tags-overrideattribs:
 
 overrideAttribs
@@ -22,6 +24,8 @@ overrideAttribs
 :aspect:`Description`
    If set, this string is preset as the attributes of the tag.
 
+
+.. index:: HTMLparser_tags; allowedAttribs
 .. _htmlparser-tags-allowedattribs:
 
 allowedAttribs
@@ -47,6 +51,8 @@ allowedAttribs
    (blank/not set)
       All attributes are allowed.
 
+
+.. index:: HTMLparser_tags; fixAttrib.[attribute].set
 .. _htmlparser-tags-fixattrib-attribute-set:
 
 fixAttrib.[attribute].set
@@ -61,6 +67,8 @@ fixAttrib.[attribute].set
 :aspect:`Description`
    Force the attribute value to this value.
 
+
+.. index:: HTMLparser_tags; fixAttrib.[attribute].unset
 .. _htmlparser-tags-fixattrib-attribute-unset:
 
 fixAttrib.[attribute].unset
@@ -75,6 +83,8 @@ fixAttrib.[attribute].unset
 :aspect:`Description`
    If set, the attribute is unset.
 
+
+.. index:: HTMLparser_tags; fixAttrib.[attribute].default
 .. _htmlparser-tags-fixattrib-attribute-default:
 
 fixAttrib.[attribute].default
@@ -90,6 +100,8 @@ fixAttrib.[attribute].default
    If no attribute exists by this name, this value is set as default
    value (if this value is not blank)
 
+
+.. index:: HTMLparser_tags; fixAttrib.[attribute].always
 .. _htmlparser-tags-fixattrib-attribute-always:
 
 fixAttrib.[attribute].always
@@ -121,6 +133,8 @@ fixAttrib.[attribute].always
    If any of these keys are set, the value is passed through the
    respective PHP-functions.
 
+
+.. index:: HTMLparser_tags; fixAttrib.[attribute].range
 .. _htmlparser-tags-fixattrib-attribute-range:
 
 fixAttrib.[attribute].range
@@ -135,6 +149,8 @@ fixAttrib.[attribute].range
 :aspect:`Description`
    Setting integer range.
 
+
+.. index:: HTMLparser_tags; fixAttrib.[attribute].list
 .. _htmlparser-tags-fixattrib-attribute-list:
 
 fixAttrib.[attribute].list
@@ -150,6 +166,8 @@ fixAttrib.[attribute].list
    Attribute value must be in this list. If not, the value is set to the
    first element.
 
+
+.. index:: HTMLparser_tags; fixAttrib.[attribute].removeIfFalse
 .. _htmlparser-tags-fixattrib-attribute-removeiffalse:
 
 fixAttrib.[attribute].removeIfFalse
@@ -166,6 +184,8 @@ fixAttrib.[attribute].removeIfFalse
    If this value is set to :ts:`blank` then the value must be a blank string
    (that means a "zero" value will not be removed).
 
+
+.. index:: HTMLparser_tags; fixAttrib.[attribute].removeIfEquals
 .. _htmlparser-tags-fixattrib-attribute-removeifequals:
 
 fixAttrib.[attribute].removeIfEquals
@@ -180,6 +200,8 @@ fixAttrib.[attribute].removeIfEquals
 :aspect:`Description`
    If the attribute value matches the value set here, then it is removed.
 
+
+.. index:: HTMLparser_tags; fixAttrib.[attribute].casesensitiveComp
 .. _htmlparser-tags-fixattrib-attribute-casesensitivecomp:
 
 fixAttrib.[attribute].casesensitiveComp
@@ -196,6 +218,8 @@ fixAttrib.[attribute].casesensitiveComp
    and :ref:`htmlparser-tags-fixattrib-attribute-list` will be case-sensitive.
    At this point, it's insensitive.
 
+
+.. index:: HTMLparser_tags; fixAttrib.[attribute].prefixLocalAnchors
 .. _htmlparser-tags-fixattrib-attribute-prefixlocalanchors:
 
 fixAttrib.[attribute].prefixLocalAnchors
@@ -224,6 +248,8 @@ fixAttrib.[attribute].prefixLocalAnchors
 
       ...fixAttrib.href.prefixLocalAnchors = 1
 
+
+.. index:: HTMLparser_tags; fixAttrib.[attribute].prefixRelPathWith
 .. _htmlparser-tags-fixattrib-attribute-prefixrelpathwith:
 
 fixAttrib.[attribute].prefixRelPathWith
@@ -245,6 +271,8 @@ fixAttrib.[attribute].prefixRelPathWith
 
       ...fixAttrib.src.prefixRelPathWith = http://192.168.230.3/typo3/32/dummy/
 
+
+.. index:: HTMLparser_tags; fixAttrib.[attribute].userFunc
 .. _htmlparser-tags-fixattrib-attribute-userfunc:
 
 fixAttrib.[attribute].userFunc
@@ -280,6 +308,8 @@ fixAttrib.[attribute].userFunc
    In that case the first parameter passed to the user function will
    be an array containing these values:
 
+
+.. index:: HTMLparser_tags; protect
 .. _htmlparser-tags-protect:
 
 protect
@@ -294,6 +324,8 @@ protect
 :aspect:`Description`
    If set, the tag :html:`<>` is converted to :html:`&lt;` and :html:`&gt;`
 
+
+.. index:: HTMLparser_tags; remap
 .. _htmlparser-tags-remap:
 
 remap
@@ -308,6 +340,8 @@ remap
 :aspect:`Description`
    If set, the tagname is remapped to this tagname
 
+
+.. index:: HTMLparser_tags; rmTagIfNoAttrib
 .. _htmlparser-tags-rmtagifnoattrib:
 
 rmTagIfNoAttrib
@@ -322,6 +356,8 @@ rmTagIfNoAttrib
 :aspect:`Description`
    If set, then the tag is removed if no attributes happened to be there.
 
+
+.. index:: HTMLparser_tags; nesting
 .. _htmlparser-tags-nesting:
 
 nesting

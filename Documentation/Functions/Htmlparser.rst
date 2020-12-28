@@ -1,12 +1,14 @@
 .. include:: ../Includes.txt
-
-
+.. index::
+   Functions; HTMLparser
+   HTMLparser
 .. _htmlparser:
 
 ==========
 HTMLparser
 ==========
 
+.. index:: HTMLparser; allowTags
 .. _htmlparser-allowtags:
 
 allowTags
@@ -21,6 +23,8 @@ allowTags
 :aspect:`Description`
    Default allowed tags
 
+
+.. index:: HTMLparser; stripEmptyTags
 .. _htmlparser-stripemptytags:
 
 stripEmptyTags
@@ -35,6 +39,8 @@ stripEmptyTags
 :aspect:`Description`
    Passes the content to PHPs :php:`strip_tags()`.
 
+
+.. index:: HTMLparser; stripEmptyTags.keepTags
 .. _htmlparser-stripemptytags.keeptags:
 
 stripEmptyTags.keepTags
@@ -49,6 +55,8 @@ stripEmptyTags.keepTags
 :aspect:`Description`
    Comma separated list of tags to keep when applying :php:`strip_tags()`.
 
+
+.. index:: HTMLparser; tags
 .. _htmlparser-tags.[tagname]:
 
 tags.[tagname]
@@ -67,6 +75,8 @@ tags.[tagname]
 
    [tagname] in lowercase.
 
+
+.. index:: HTMLparser; localNesting
 .. _htmlparser-localnesting:
 
 localNesting
@@ -82,6 +92,8 @@ localNesting
    List of tags (among the already set tags), which will be forced to
    have the nesting-flag set to true
 
+
+.. index:: HTMLparser; globalNesting
 .. _htmlparser-globalnesting:
 
 globalNesting
@@ -97,6 +109,8 @@ globalNesting
    List of tags (among the already set tags), which will be forced to
    have the nesting-flag set to "global"
 
+
+.. index:: HTMLparser; rmTagIfNoAttrib
 .. _htmlparser-rmtagifnoattrib:
 
 rmTagIfNoAttrib
@@ -112,6 +126,8 @@ rmTagIfNoAttrib
    List of tags (among the already set tags), which will be forced to
    have the :ref:`htmlparser-rmTagIfNoAttrib` set to true
 
+
+.. index:: HTMLparser; noAttrib
 .. _htmlparser-noattrib:
 
 noAttrib
@@ -128,6 +144,8 @@ noAttrib
    have the allowedAttribs value set to zero (which means, all attributes
    will be removed.
 
+
+.. index:: HTMLparser; removeTags
 .. _htmlparser-removetags:
 
 removeTags
@@ -143,6 +161,8 @@ removeTags
    List of tags (among the already set tags), which will be configured so
    they are surely removed.
 
+
+.. index:: HTMLparser; keepNonMatchedTags
 .. _htmlparser-keepnonmatchedtags:
 
 keepNonMatchedTags
@@ -164,6 +184,8 @@ keepNonMatchedTags
    Default is to REMOVE all tags, which are not specifically assigned to
    be allowed! So you might probably want to set this value!
 
+
+.. index:: HTMLparser; htmlSpecialChars
 .. _htmlparser-htmlspecialchars:
 
 htmlSpecialChars

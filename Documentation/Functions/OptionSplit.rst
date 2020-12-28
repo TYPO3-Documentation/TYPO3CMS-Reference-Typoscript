@@ -1,5 +1,5 @@
 .. include:: ../Includes.txt
-
+.. index:: Functions; optionSplit
 .. we keep the old label objects-optionsplit,
    in case it is still used.
 
@@ -78,8 +78,8 @@ Terminology
 
 It's useful to agree about some terms first: delimiter string, mainpart, subpart.
 
-Mainparts
-~~~~~~~~~
+Main parts
+----------
 
 :ts:`optionSplit` uses the string `|*|` to split the total string into **mainparts**.
 Up to **three** mainparts will be used. If there are more they
@@ -108,7 +108,7 @@ the cases:
 
 
 Subparts
-~~~~~~~~
+--------
 
 Each mainpart may be split further into **subparts**. The delimiter for splitting a mainpart into
 subparts is `||`.
@@ -132,7 +132,7 @@ Let's look at a full example that visualizes what we have said so far.
 
 
 Three by three items
-~~~~~~~~~~~~~~~~~~~~
+--------------------
 
 We have all three mainparts A, R and Z. And each mainpart is split into three
 subparts::
@@ -194,7 +194,7 @@ More Examples
 =============
 
 Three by two items
-~~~~~~~~~~~~~~~~~~
+------------------
 
 Rules 1 to 7 define this behavior::
 
@@ -226,7 +226,7 @@ Rules 1 to 7 define this behavior::
 
 
 Three by one items
-~~~~~~~~~~~~~~~~~~
+------------------
 
 And again::
 
@@ -259,7 +259,7 @@ And again::
 
 
 Two by three items
-~~~~~~~~~~~~~~~~~~
+------------------
 
 Now the mainpart delimiter `|*|` occurs only once. So we are
 dealing with the first two mainparts A and R.
@@ -294,7 +294,7 @@ According to rules 1 to 7 we get::
 
 
 Two by two items
-~~~~~~~~~~~~~~~~
+----------------
 
 According to rules 1 to 7 we get::
 
@@ -326,7 +326,7 @@ According to rules 1 to 7 we get::
 
 
 Two by one items
-~~~~~~~~~~~~~~~~
+----------------
 
 According to rules 1 to 7 we get::
 
@@ -359,7 +359,7 @@ According to rules 1 to 7 we get::
 
 
 One by one items
-~~~~~~~~~~~~~~~~
+----------------
 
 With no delimiters at all we still have - implicitly - one mainpart
 A with one subpart a::
@@ -393,7 +393,7 @@ A with one subpart a::
 
 
 One by two items
-~~~~~~~~~~~~~~~~
+----------------
 
 One mainpart A with two subparts a and b::
 
@@ -425,7 +425,7 @@ One mainpart A with two subparts a and b::
 
 
 One by three items
-~~~~~~~~~~~~~~~~~~
+------------------
 
 More::
 
@@ -456,7 +456,7 @@ More::
       20     a b c c c c c c c c c c c c c c c c c c
 
 One by four items
-~~~~~~~~~~~~~~~~~
+-----------------
 
 More::
 
@@ -493,7 +493,7 @@ More examples: Tricky stuff
 
 
 Three items A, no item R, three items Z
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+---------------------------------------
 
 In this situation with still have **three** mainparts. We can tell this from the fact that we have
 TWO occurrences of the mainpart delimiter. And the second mainpart R is really empty.
@@ -533,7 +533,7 @@ As result we get::
 
 
 One item A, no item R, one items Z
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-----------------------------------
 
 With rules 1 to 8 we get::
 
@@ -566,7 +566,7 @@ With rules 1 to 8 we get::
 
 
 One item A, one (unexpected!?) item R, one item Z
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-------------------------------------------------
 
 .. attention::
 
@@ -603,7 +603,7 @@ What happens if there IS a space? Normal behavior of a three by one case! ::
 
 
 More
-~~~~
+----
 
 ::
 

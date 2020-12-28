@@ -1,10 +1,14 @@
 .. include:: ../Includes.txt
-
+.. index::
+   Functions; imageLinkWrap
+   imageLinkWrap
 .. _imagelinkwrap:
 
 =============
 imageLinkWrap
 =============
+
+.. index:: imageLinkWrap; Properties
 
 Properties
 ==========
@@ -29,7 +33,7 @@ Properties
   JSwindow.expand_ =                                    :ts:`x`, :ts:`y` (both :ref:`data-type-integer`)                      yes
   JSwindow.newWindow_ =                                 :ref:`data-type-boolean`                                              yes
   JSwindow.altUrl_ =                                    :ref:`data-type-string`                                               yes
-  `JSwindow.altUrl\_noDefaultParams`_ =                 :ref:`data-type-boolean`                                              (?)       0
+  JSwindow.altUrl\_noDefaultParams_ =                   :ref:`data-type-boolean`                                              (?)       0
   typolink_ =                                           like :ref:`typolink`                                                  (?)
   directImageLink_ =                                    :ref:`data-type-boolean`                                              yes       0
   linkParams_ =                                         any of the options of :ref:`typolink`                                 (?)
@@ -76,6 +80,8 @@ height parameters will be interpreted as maximum and proportions of the
 image will be preserved.
 
 
+.. index:: imageLinkWrap; effects
+
 effects
 =======
 
@@ -85,7 +91,7 @@ effects
 Apply image effects to the preview image.
 
 Example for effects
-~~~~~~~~~~~~~~~~~~~
+-------------------
 
 .. code-block:: typoscript
 
@@ -99,6 +105,8 @@ Example for effects
       height = 600m
    }
 
+
+.. index:: imageLinkWrap; sample
 
 sample
 ======
@@ -180,6 +188,8 @@ Examples:
    imageLinkWrap.JSwindow = 1
    imageLinkWrap.JSwindow.newWindow = 1
 
+
+.. index:: imageLinkWrap; JSwindow
 
 JSwindow
 ========
@@ -345,7 +355,7 @@ Examples for imageLinkWrap
 .. _imageLinkWrap-basic-example-showpic:
 
 Basic example: Create a link to the showpic script
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+--------------------------------------------------
 
 .. code-block:: typoscript
 
@@ -366,7 +376,7 @@ Basic example: Create a link to the showpic script
 .. _imageLinkWrap-basic-example-directImageLink:
 
 Basic example: Link directly to the original image
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+--------------------------------------------------
 
 .. code-block:: typoscript
 
@@ -387,7 +397,7 @@ Basic example: Link directly to the original image
 .. imageLinkWrap-example-popup-window:
 
 Example: Larger display in a popup window
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-----------------------------------------
 
 .. code-block:: typoscript
 
@@ -425,7 +435,7 @@ Example: Larger display in a popup window
 .. _imageLinkWrap-example-printlink:
 
 Example: Printlink
-~~~~~~~~~~~~~~~~~~
+------------------
 
 .. code-block:: typoscript
 
@@ -451,7 +461,7 @@ Example: Printlink
 .. _imageLinkWrap-example-fancybox:
 
 Example: Images in lightbox "fancybox"
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+--------------------------------------
 
 Let's follow this `lightbox.ts example`__ and use `fancybox <http://fancybox.net>`_:
 
@@ -482,7 +492,7 @@ __ https://github.com/georgringer/modernpackage/blob/master/Resources/Private/Ty
 .. _imageLinkWrap-example-topup:
 
 Example: Images in lightbox "TopUp"
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-----------------------------------
 
 In this `blog post`__ (german) Paul Lunow shows a way to integrate the
 `jQuery`__ `TopUp lightbox`__:

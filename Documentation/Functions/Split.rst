@@ -1,6 +1,5 @@
 .. include:: ../Includes.txt
-
-
+.. index:: Functions; split
 .. _split:
 
 =====

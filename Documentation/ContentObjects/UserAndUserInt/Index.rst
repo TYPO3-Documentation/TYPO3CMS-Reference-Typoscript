@@ -100,11 +100,7 @@ stdWrap
 cache
 =====
 
-.. ### BEGIN~OF~TABLE ###
-
-.. include:: ../../DataTypes/Properties/Cache.rst.txt
-
-.. ###### END~OF~TABLE ######
+See :ref:`data-type-cache`
 
 
 .. _cobj-user-examples:

@@ -1,6 +1,7 @@
 .. include:: ../Includes.txt
-
-
+.. index::
+   Functions; numRows
+   Database; count
 .. _numrows:
 
 =======

@@ -1,4 +1,14 @@
+:Orphan:
 
+.. include:: ../../Includes.txt
+
+.. _data-type-cache:
+
+==============
+Property cache
+==============
+
+.. ### BEGIN~OF~TABLE ###
 .. container:: table-row
 
    Property
@@ -12,3 +22,5 @@
          This allows you to reuse this content on different pages without prior rendering.
          The presence of :ref:`cache.key <cache-key>` will trigger this feature.
          See :ref:`cache function description <cache>` for details.
+
+.. ###### END~OF~TABLE ######

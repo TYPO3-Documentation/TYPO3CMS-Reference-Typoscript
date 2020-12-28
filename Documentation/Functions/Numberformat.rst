@@ -1,6 +1,5 @@
 .. include:: ../Includes.txt
-
-
+.. index:: Functions; numberFormat
 .. _numberformat:
 
 ============
@@ -76,7 +75,7 @@ thousands\_sep
 .. _numberformat-examples:
 
 Examples
-""""""""
+--------
 
 ::
 
