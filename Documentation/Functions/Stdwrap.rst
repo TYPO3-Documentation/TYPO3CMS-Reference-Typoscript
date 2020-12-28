@@ -1360,15 +1360,14 @@ addParams
 :aspect:`Description`
    Lets you add tag parameters to the content *if* the content is a tag!
 
+.. deprecated:: 9.5
+   Use `Fluid styled content <https://docs.typo3.org/c/typo3/cms-fluid-styled-content/master/en-us/>`__, or :ref:`dataProcessing` instead.
+
 
 .. _stdwrap-filelink:
 
 filelink
 ~~~~~~~~
-
-.. warning:: 
-   `addParams` is deprecated since version 9 and will be removed in version 10. 
-   Use DataProcessors or Fluid Styled Content instead.
 
 :aspect:`Property`
    filelink
@@ -1378,6 +1377,9 @@ filelink
 
 :aspect:`Description`
    Used to make lists of links to files.
+
+.. deprecated:: 9.5
+   Use `Fluid styled content <https://docs.typo3.org/c/typo3/cms-fluid-styled-content/master/en-us/>`__, or :ref:`dataProcessing` instead.
 
 
 .. _stdwrap-precobject:
