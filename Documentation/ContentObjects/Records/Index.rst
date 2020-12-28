@@ -1,20 +1,23 @@
 .. include:: /Includes.rst.txt
-
-
+.. index::
+   Content objects; RECORDS
+   RECORDS
 .. _cobj-records:
 
+=======
 RECORDS
-^^^^^^^
+=======
 
 .. contents::
    :local:
    :depth: 1
 
 
+.. index:: RECORDS; Properties
 .. _cobj-records-properties:
 
 Properties
-""""""""""
+==========
 
 .. container:: ts-properties
 
@@ -34,7 +37,7 @@ Properties
 .. _cobj-records-introduction:
 
 Introduction
-""""""""""""
+============
 
 This object is meant for displaying lists of records from a variety of
 tables. Contrary to the :ref:`CONTENT <cobj-content>` object, it does
@@ -55,17 +58,18 @@ the records selected which has a higher value than the current.
 .. _cobj-records-details:
 
 Property details
-""""""""""""""""
+================
 
 .. contents::
    :local:
    :depth: 1
 
 
+.. index:: RECORDS; source
 .. _cobj-records-properties-source:
 
 source
-~~~~~~
+------
 
 .. container:: table-row
 
@@ -85,10 +89,11 @@ source
             source = tt_content_34, 45, tt_links_56
 
 
+.. index:: RECORDS; categories
 .. _cobj-records-properties-categories:
 
 categories
-~~~~~~~~~~
+----------
 
 .. container:: table-row
 
@@ -120,10 +125,11 @@ categories
             more precisely targeted.
 
 
+.. index:: RECORDS; tables
 .. _cobj-records-properties-tables:
 
 tables
-~~~~~~
+------
 
 .. container:: table-row
 
@@ -154,10 +160,11 @@ tables
          tx\_myexttable.
 
 
+.. index:: RECORDS; conf
 .. _cobj-records-properties-conf:
 
 conf
-~~~~
+----
 
 .. container:: table-row
 
@@ -177,10 +184,11 @@ conf
          not set for the cObject :ref:`CONTENT <cobj-content>`!
 
 
+.. index:: RECORDS; dontCheckPid
 .. _cobj-records-properties-dontcheckpid:
 
 dontCheckPid
-~~~~~~~~~~~~
+------------
 
 .. container:: table-row
 
@@ -201,7 +209,7 @@ dontCheckPid
 .. _cobj-records-properties-wrap:
 
 wrap
-~~~~
+----
 
 .. container:: table-row
 
@@ -218,7 +226,7 @@ wrap
 .. _cobj-records-properties-stdwrap:
 
 stdWrap
-~~~~~~~
+-------
 
 .. container:: table-row
 
@@ -235,20 +243,22 @@ stdWrap
 .. _cobj-records-properties-cache:
 
 cache
-~~~~~
+-----
 
 .. include:: ../../DataTypes/Properties/Cache.rst.txt
+
 
 .. _cobj-records-examples:
 
 Examples
-""""""""
+========
 
 
+.. index:: RECORDS; Selection with source
 .. _cobj-records-examples-source:
 
 Selection with source
-~~~~~~~~~~~~~~~~~~~~~
+---------------------
 
 Taken from the rendering of the "Insert records" content element
 as defined in "css_styled_content".
@@ -272,10 +282,11 @@ look for a top-level TypoScript object bearing the name of the
 table to be rendered (e.g. "tt_content").
 
 
+.. index:: RECORDS; Selection with source
 .. _cobj-records-examples-source-ii:
 
 Selection with source II
-~~~~~~~~~~~~~~~~~~~~~~~~
+------------------------
 
 .. code-block:: typoscript
 
@@ -291,10 +302,11 @@ matter where these elements are located and whether these pages are
 accessible for the current user.
 
 
+.. index:: RECORDS; Selection with categories
 .. _cobj-records-examples-categories:
 
 Selection with categories
-~~~~~~~~~~~~~~~~~~~~~~~~~
+-------------------------
 
 Taken from the rendering of the "Categorized content elements"
 special menu as defined in "css_styled_content".
