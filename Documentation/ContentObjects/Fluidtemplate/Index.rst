@@ -1,5 +1,7 @@
 .. include:: ../../Includes.txt
-
+.. index::
+   Content objects; FLUIDTEMPLATE
+   FLUIDTEMPLATE
 .. _cobj-fluidtemplate:
 .. _cobj-template:
 
@@ -19,8 +21,6 @@ or to generate content within the top-level object page
 The functionality can be further augmented and customized with
 :ref:`data processors <cobj-fluidtemplate-properties-dataprocessing>`.
 
-
-
 .. contents:: On this page:
    :local:
    :depth: 1
@@ -30,6 +30,7 @@ The functionality can be further augmented and customized with
 
    DataProcessing
 
+.. index:: FLUIDTEMPLATE; Properties
 .. _cobj-fluidtemplate-properties:
 
 Properties
@@ -39,6 +40,7 @@ Properties
    :local:
    :depth: 1
 
+.. index:: FLUIDTEMPLATE; dataProcessing
 .. _fluidtemplate-dataProcessing:
 
 dataProcessing
@@ -60,6 +62,7 @@ dataProcessing
       The content was moved to the subpage :ref:`dataProcessing`.
 
 
+.. index:: FLUIDTEMPLATE; extbase.controllerActionName
 .. _cobj-fluidtemplate-properties-extbase-controlleractionname:
 
 extbase.controllerActionName
@@ -75,6 +78,7 @@ extbase.controllerActionName
 
 
 
+.. index:: FLUIDTEMPLATE; extbase.controllerExtensionName
 .. _cobj-fluidtemplate-properties-extbase-controllerextensionname:
 
 extbase.controllerExtensionName
@@ -93,6 +97,7 @@ extbase.controllerExtensionName
    template via `<f:translate/>`.
 
 
+.. index:: FLUIDTEMPLATE; extbase.controllerName
 .. _cobj-fluidtemplate-properties-extbase-controllername:
 
 extbase.controllerName
@@ -108,6 +113,7 @@ extbase.controllerName
 
 
 
+.. index:: FLUIDTEMPLATE; extbase.pluginName
 .. _cobj-fluidtemplate-properties-extbase-pluginname:
 
 extbase.pluginName
@@ -122,8 +128,7 @@ extbase.pluginName
    Sets variables for initializing extbase.
 
 
-
-
+.. index:: FLUIDTEMPLATE; file
 .. _cobj-fluidtemplate-properties-file:
 
 file
@@ -149,6 +154,7 @@ file
       }
 
 
+.. index:: FLUIDTEMPLATE; format
 .. _cobj-fluidtemplate-properties-format:
 
 format
@@ -166,6 +172,7 @@ format
    "rss.xml" or alike.
 
 
+.. index:: FLUIDTEMPLATE; layoutRootPath
 .. _cobj-fluidtemplate-properties-layoutrootpath:
 
 layoutRootPath
@@ -181,6 +188,7 @@ layoutRootPath
    file.
 
 
+.. index:: FLUIDTEMPLATE; layoutRootPaths
 .. _cobj-fluidtemplate-properties-layoutrootpaths:
 
 layoutRootPaths
@@ -218,6 +226,7 @@ layoutRootPaths
    in the list of fall back paths.
 
 
+.. index:: FLUIDTEMPLATE; partialRootPath
 .. _cobj-fluidtemplate-properties-partialrootpath:
 
 partialRootPath
@@ -233,6 +242,7 @@ partialRootPath
    template file.
 
 
+.. index:: FLUIDTEMPLATE; partialRootPaths
 .. _cobj-fluidtemplate-properties-partialrootpaths:
 
 partialRootPaths
@@ -255,6 +265,7 @@ partialRootPaths
 
 
 
+.. index:: FLUIDTEMPLATE; settings
 .. _cobj-fluidtemplate-properties-settings:
 
 settings
@@ -292,6 +303,7 @@ settings
    also reference objects or access constants as well.
 
 
+.. index:: FLUIDTEMPLATE; stdWrap
 .. _cobj-fluidtemplate-properties-stdwrap:
 
 stdWrap
@@ -308,6 +320,7 @@ stdWrap
 
 
 
+.. index:: FLUIDTEMPLATE; template
 .. _cobj-fluidtemplate-properties-template:
 
 template
@@ -333,6 +346,7 @@ template
 
 
 
+.. index:: FLUIDTEMPLATE; templateName
 .. _cobj-fluidtemplate-properties-templatename:
 
 templateName
@@ -412,6 +426,7 @@ templateName
 
 
 
+.. index:: FLUIDTEMPLATE; templateRootPaths
 .. _cobj-fluidtemplate-properties-templaterootpaths:
 
 templateRootPaths
@@ -450,6 +465,7 @@ templateRootPaths
 
 
 
+.. index:: FLUIDTEMPLATE; variables
 .. _cobj-fluidtemplate-properties-variables:
 
 variables

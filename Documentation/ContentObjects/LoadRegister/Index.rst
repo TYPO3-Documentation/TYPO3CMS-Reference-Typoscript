@@ -1,6 +1,7 @@
 .. include:: ../../Includes.txt
-
-
+.. index::
+   Content objects; LOAD_REGISTER
+   Registers; Loading
 .. _cobj-load-register:
 
 ==============
@@ -57,7 +58,7 @@ values as the values of the register can change during page rendering.
 .. _cobj-load-register-examples:
 
 Example:
-""""""""
+========
 
 ::
 

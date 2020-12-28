@@ -1,11 +1,14 @@
 .. include:: ../Includes.txt
-
+.. index::
+   Content Objects
+   cObject
+   see: cObject; Content Objects
 .. _data-type-cobject:
 .. _cobject:
 
-=======
-cObject
-=======
+=========================
+Content Objects (cObject)
+=========================
 
 
 :aspect:`Description:`

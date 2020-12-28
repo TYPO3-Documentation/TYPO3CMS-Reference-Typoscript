@@ -1,6 +1,5 @@
 .. include:: ../../Includes.txt
-
-
+.. index:: Content objects; IMAGE_RESOURCE
 .. _cobj-img-resource:
 
 =============

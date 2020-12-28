@@ -1,6 +1,5 @@
 .. include:: ../../Includes.txt
-
-
+.. index:: Content objects; EDITPANEL
 .. _cobj-editpanel:
 
 =========

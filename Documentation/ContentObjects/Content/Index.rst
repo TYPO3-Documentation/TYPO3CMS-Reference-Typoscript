@@ -1,8 +1,12 @@
 .. include:: ../../Includes.txt
-
-
+.. index::
+   Content objects; CONTENT
+   CONTENT
+   Content objects; SQL
+   Content objects; Database
 .. _cobj-content:
 
+=======
 CONTENT
 =======
 
@@ -26,7 +30,7 @@ is raised to the maximum timestamp value of the respective records.
 
 
 Comprehensive example
----------------------
+=====================
 
 See PHP class :php:`\TYPO3\CMS\Frontend\ContentObject\ContentContentObject`
 for details on code level.
@@ -119,10 +123,11 @@ See also: :ref:`if`, :ref:`select`, :ref:`data-type-wrap`, :ref:`stdWrap`,
 :ref:`data-type-cobject`
 
 
+.. index:: CONTENT; select
 .. _cobj-content-select:
 
 select
-------
+======
 
 .. ### BEGIN~OF~TABLE ###
 
@@ -141,10 +146,11 @@ select
 .. ###### END~OF~TABLE ######
 
 
+.. index:: CONTENT; table
 .. _cobj-content-table:
 
 table
------
+=====
 
 .. ### BEGIN~OF~TABLE ###
 
@@ -165,10 +171,11 @@ table
 .. ###### END~OF~TABLE ######
 
 
+.. index:: CONTENT; renderObj
 .. _cobj-content-renderObj:
 
 renderObj
----------
+=========
 
 .. ### BEGIN~OF~TABLE ###
 
@@ -194,10 +201,11 @@ renderObj
 .. ###### END~OF~TABLE ######
 
 
+.. index:: CONTENT; slide
 .. _cobj-content-slide:
 
 slide
------
+=====
 
 .. ### BEGIN~OF~TABLE ###
 
@@ -240,10 +248,11 @@ slide
 .. ###### END~OF~TABLE ######
 
 
+.. index:: CONTENT; wrap
 .. _cobj-content-wrap:
 
 wrap
-----
+====
 
 .. ### BEGIN~OF~TABLE ###
 
@@ -261,10 +270,11 @@ wrap
 .. ###### END~OF~TABLE ######
 
 
+.. index:: CONTENT; stdWrap
 .. _cobj-content-stdWrap:
 
 stdWrap
--------
+=======
 
 .. ### BEGIN~OF~TABLE ###
 
@@ -282,10 +292,11 @@ stdWrap
 .. ###### END~OF~TABLE ######
 
 
+.. index:: CONTENT; cache
 .. _cobj-content-cache:
 
 cache
------
+=====
 
 .. ### BEGIN~OF~TABLE ###
 
@@ -297,7 +308,7 @@ cache
 .. _cobj-content-examples:
 
 CONTENT object example 1
-------------------------
+========================
 
 Here is an example of the CONTENT object::
 
@@ -315,7 +326,7 @@ according TypoScript configuration will be copied to `renderObj`.
 
 
 CONTENT object example 2
-------------------------
+========================
 
 Here is an example of record-rendering objects::
 

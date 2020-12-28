@@ -1,6 +1,7 @@
 .. include:: ../../Includes.txt
-
-
+.. index::
+   Content objects; IMAGE
+   IMAGE
 .. _cobj-image:
 
 =====
@@ -129,10 +130,11 @@ for.
          about image).
 
 
+.. index:: IMAGE; layoutKey
 .. _cobj-image-layoutkey:
 
 layoutKey
-"""""""""
+=========
 
 .. container:: table-row
 
@@ -193,10 +195,11 @@ layoutKey
          default
 
 
+.. index:: IMAGE; layout
 .. _cobj-image-layout:
 
 layout
-""""""
+======
 
 .. container:: table-row
 
@@ -210,10 +213,11 @@ layout
          HTML code definition for the different :ref:`cobj-image-layoutkey`.
 
 
+.. index:: IMAGE; layout.layoutKey
 .. _cobj-image-layout-layoutkey:
 
 layout.layoutKey
-""""""""""""""""
+----------------
 
 .. container:: table-row
 
@@ -237,10 +241,11 @@ layout.layoutKey
           }
 
 
+.. index:: IMAGE; layout.layoutKey.element
 .. _cobj-image-layout-layoutkey-element:
 
 layout.layoutKey.element
-""""""""""""""""""""""""
+------------------------
 
 .. container:: table-row
 
@@ -282,10 +287,11 @@ layout.layoutKey.element
            :ref:`layout.layoutKey.source <cobj-image-layout-layoutkey-source>`
 
 
+.. index:: IMAGE; layout.layoutKey.source
 .. _cobj-image-layout-layoutkey-source:
 
 layout.layoutKey.source
-"""""""""""""""""""""""
+-----------------------
 
 .. container:: table-row
 
@@ -320,10 +326,11 @@ layout.layoutKey.source
         overwritten by your typoscript.
 
 
+.. index:: IMAGE; sourceCollection
 .. _cobj-image-sourcecollection:
 
 sourceCollection
-""""""""""""""""
+================
 
 .. container:: table-row
 
@@ -375,10 +382,11 @@ sourceCollection
             }
 
 
+.. index:: IMAGE; sourceCollection.dataKey
 .. _cobj-image-datakey:
 
-dataKey
-"""""""
+sourceCollection.dataKey
+------------------------
 
 .. container:: table-row
 
@@ -393,10 +401,11 @@ dataKey
          layout, breakpoints and display density.
 
 
+.. index:: IMAGE; sourceCollection.dataKey.if
 .. _cobj-image-datakey-if:
 
-dataKey.if
-""""""""""
+sourceCollection.dataKey.if
+---------------------------
 
 .. container:: table-row
 
@@ -411,10 +420,11 @@ dataKey.if
          execution of code.
 
 
+.. index:: IMAGE; sourceCollection.dataKey.pixelDensity
 .. _cobj-image-datakey-pixeldensity:
 
-dataKey.pixelDensity
-""""""""""""""""""""
+sourceCollection.dataKey.pixelDensity
+-------------------------------------
 
 .. container:: table-row
 
@@ -434,10 +444,12 @@ dataKey.pixelDensity
    Default
          1
 
+
+.. index:: IMAGE; sourceCollection.dataKey.width
 .. _cobj-image-datakey-width:
 
-dataKey.width
-"""""""""""""
+sourceCollection.dataKey.width
+------------------------------
 
 .. container:: table-row
 
@@ -452,10 +464,12 @@ dataKey.width
          source collection. For the image file itself the width will be multiplied by
          :ref:`dataKey.pixelDensity <cobj-image-datakey-pixeldensity>`.
 
+
+.. index:: IMAGE; sourceCollection.dataKey.height
 .. _cobj-image-datakey-height:
 
-dataKey.height
-""""""""""""""
+sourceCollection.dataKey.height
+-------------------------------
 
 .. container:: table-row
 
@@ -470,10 +484,12 @@ dataKey.height
          source collection. For the image file itself the height will be multiplied by
          :ref:`dataKey.pixelDensity <cobj-image-datakey-pixeldensity>`.
 
+
+.. index:: IMAGE; sourceCollection.dataKey.maxW
 .. _cobj-image-datakey-maxW:
 
-dataKey.maxW
-""""""""""""
+sourceCollection.dataKey.maxW
+-----------------------------
 
 .. container:: table-row
 
@@ -488,10 +504,12 @@ dataKey.maxW
          source collection. For the image file itself the maxW will be multiplied by
          :ref:`dataKey.pixelDensity <cobj-image-datakey-pixeldensity>`.
 
+
+.. index:: IMAGE; sourceCollection.dataKey.maxH
 .. _cobj-image-datakey-maxH:
 
-dataKey.maxH
-""""""""""""
+sourceCollection.dataKey.maxH
+-----------------------------
 
 .. container:: table-row
 
@@ -507,10 +525,11 @@ dataKey.maxH
          :ref:`dataKey.pixelDensity <cobj-image-datakey-pixeldensity>`.
 
 
+.. index:: IMAGE; sourceCollection.dataKey.minW
 .. _cobj-image-datakey-minW:
 
-dataKey.minW
-""""""""""""
+sourceCollection.dataKey.minW
+-----------------------------
 
 .. container:: table-row
 
@@ -525,10 +544,12 @@ dataKey.minW
          source collection. For the image file itself the minW will be multiplied by
          :ref:`dataKey.pixelDensity <cobj-image-datakey-pixeldensity>`.
 
+
+.. index:: IMAGE; sourceCollection.dataKey.minH
 .. _cobj-image-datakey-minH:
 
-dataKey.minH
-""""""""""""
+sourceCollection.dataKey.minH
+-----------------------------
 
 .. container:: table-row
 
@@ -543,10 +564,12 @@ dataKey.minH
          source collection. For the image file itself the minH will be multiplied by
          :ref:`dataKey.pixelDensity <cobj-image-datakey-pixeldensity>`.
 
+
+.. index:: IMAGE; sourceCollection.dataKey.quality
 .. _cobj-image-datakey-quality:
 
-dataKey.quality
-"""""""""""""""
+sourceCollection.dataKey.quality
+--------------------------------
 
 .. container:: table-row
 
@@ -559,10 +582,12 @@ dataKey.quality
    Description
          Defines the quality of the rendered images on a scale from 1-100.
 
+
+.. index:: IMAGE; sourceCollection.dataKey.*
 .. _cobj-image-datakey-others:
 
-dataKey.*
-"""""""""
+sourceCollection.dataKey.*
+---------------------------
 
 .. container:: table-row
 
@@ -624,10 +649,6 @@ dataKey.*
    Data type
          :ref:`->stdWrap <stdwrap>`
 
-
-
-
-
 .. ###### END~OF~TABLE ######
 
 
@@ -637,13 +658,14 @@ dataKey.*
 .. _cobj-image-examples:
 
 Examples:
-"""""""""
+=========
 
 
+.. index:: IMAGE; Standard rendering example
 .. _cobj-image-examples-standard:
 
 Standard rendering
-~~~~~~~~~~~~~~~~~~
+------------------
 
 ::
 
@@ -665,10 +687,11 @@ This returns:
         alt=""><br>
 
 
+.. index:: IMAGE; Responsive rendering example
 .. _cobj-image-examples-responsive:
 
 Responsive/adaptive rendering
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-----------------------------
 
 ::
 

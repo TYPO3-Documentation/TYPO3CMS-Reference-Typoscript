@@ -1,16 +1,16 @@
 .. include:: ../../Includes.txt
-
-
+.. index:: Content objects; General
 .. _cobjects-general-information:
 
 =====================================
 Content objects (general information)
 =====================================
 
+.. index:: Content objects; PHP
 .. _cobjects-php:
 
 PHP information
-"""""""""""""""
+===============
 
 The content objects (data type: cObject) are primarily controlled by the PHP-
 script "typo3/sysext/frontend/Classes/ContentObject/ContentObjectRenderer.php".
@@ -26,10 +26,11 @@ loaded with the page-record of the actual menu item or if it's about
 content-rendering it will be the content-record.
 
 
+.. index:: Content objects; Reusing
 .. _reusing-cobjects:
 
-REUSING cOBJECTS
-""""""""""""""""
+Reusing content objects
+=======================
 
 When dealing with "cObjects", you're allowed to use a special syntax
 in order to reuse cObjects without actually creating a copy. This has
@@ -97,7 +98,7 @@ where only a pointer is created.
 .. _reusing-cobjects-temp-objects:
 
 Note:
-~~~~~
+-----
 
 If *lib.stdheader* was *temp.stdheader* instead, the pointer would
 not work! This is due to the fact that the runtime-reference would
@@ -117,7 +118,7 @@ reference will be merged with the configuration of the reference.
 .. _reusing-cobjects-examples:
 
 Example:
-~~~~~~~~
+--------
 
 ::
 

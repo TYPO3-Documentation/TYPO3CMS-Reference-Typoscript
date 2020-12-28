@@ -1,6 +1,5 @@
 .. include:: ../../Includes.txt
-
-
+.. index:: Content objects; TEXT
 .. _cobj-text:
 
 ====
@@ -54,7 +53,7 @@ different objects.
 
 
 Examples:
-"""""""""
+=========
 
 ::
 

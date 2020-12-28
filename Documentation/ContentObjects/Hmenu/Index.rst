@@ -1,6 +1,8 @@
 .. include:: ../../Includes.txt
-
-
+.. index::
+   Content objects; HMENU
+   Content objects; Menu without Data Processor
+   HMENU
 .. _cobj-hmenu:
 
 =====
@@ -427,7 +429,7 @@ into account.
 .. _hmenu-examples:
 
 Example:
-""""""""
+========
 
 ::
 
@@ -446,11 +448,11 @@ Example:
      ACT.linkWrap = <b>{$fontTag}</b>
    }
 
-
+.. index:: HMENU; special
 .. _hmenu-special-property:
 
 The .special property
-"""""""""""""""""""""
+=====================
 
 This property makes it possible to create menus that are not strictly
 reflecting the current page-structure, but rather creating menus with
@@ -467,10 +469,11 @@ Also be aware that this property selects pages for the first level in
 the menu. Submenus by menuObjects 2+ will be created as usual.
 
 
+.. index:: HMENU; special = directory
 .. _hmenu-special-directory:
 
 special = directory
-~~~~~~~~~~~~~~~~~~~
+-------------------
 
 A HMENU of type special = directory lets you create a menu listing the
 subpages of one or more parent pages. The parent pages are defined in
@@ -507,10 +510,11 @@ Mount pages are supported.
 [tsref:(cObject).HMENU.special = directory]
 
 
+.. index:: HMENU; special = list
 .. _hmenu-special-list:
 
 special = list
-~~~~~~~~~~~~~~
+--------------
 
 A HMENU of type special = list lets you create a menu that lists the
 pages you define in the property ".value".
@@ -550,10 +554,11 @@ Mount pages are supported.
 [tsref:(cObject).HMENU.special = list]
 
 
+.. index:: HMENU; special = updated
 .. _hmenu-special-updated:
 
 special = updated
-~~~~~~~~~~~~~~~~~
+-----------------
 
 An HMENU with the property special = updated will create a menu of the
 most recently updated pages.
@@ -757,10 +762,11 @@ within the last three days (3600\*24\*3)::
    }
 
 
+.. index:: HMENU; special = rootline
 .. _hmenu-special-rootline:
 
 special = rootline
-~~~~~~~~~~~~~~~~~~
+------------------
 
 The path of pages from the current page to the root page of the page
 tree is called "rootline".
@@ -859,10 +865,11 @@ have the image appended. ::
    }
 
 
+.. index:: HMENU; special = browse
 .. _hmenu-special-browse:
 
 special = browse
-~~~~~~~~~~~~~~~~
+----------------
 
 **Warning:** Mount pages are *not* supported!
 
@@ -1057,10 +1064,11 @@ list from the property ".items".
 [tsref:(cObject).HMENU.special = browse]
 
 
+.. index:: HMENU; special = keywords
 .. _hmenu-special-keywords:
 
 special = keywords
-~~~~~~~~~~~~~~~~~~
+------------------
 
 Makes a menu of pages, which contain one or more keywords also found
 on the current page.
@@ -1275,11 +1283,11 @@ Mount pages are supported.
 
 [tsref:(cObject).HMENU.special = keywords]
 
-
+.. index:: HMENU; special = categories
 .. _hmenu-special-categories:
 
 special = categories
-~~~~~~~~~~~~~~~~~~~~
+--------------------
 
 Makes a menu of pages belonging to one or more categories. If a page
 belongs to several of the selected categories, it will appear only once.
@@ -1385,10 +1393,11 @@ like any other field.
 [tsref:(cObject).HMENU.special = categories]
 
 
+.. index:: HMENU; special = categories
 .. _hmenu-special-language:
 
 special = language
-~~~~~~~~~~~~~~~~~~
+------------------
 
 Creates a language selector menu. Typically this is made as a menu
 with flags for each language a page is translated to and when the user
@@ -1481,10 +1490,11 @@ Creates a language menu:
    lib.langMenu.1.ACT.stdWrap.typolink.ATagParams = class="active"
 
 
+.. index:: HMENU; special = userfunction
 .. _hmenu-special-userfunction:
 
 special = userfunction
-~~~~~~~~~~~~~~~~~~~~~~
+----------------------
 
 Calls a user function/method in class which should return an array with
 page records for the menu.
@@ -1513,7 +1523,7 @@ page records for the menu.
 .. _hmenu-special-userfunction-examples:
 
 Example: Creating hierarchical menus of custom links
-''''''''''''''''''''''''''''''''''''''''''''''''''''
+----------------------------------------------------
 
 By default the HMENU object is designed to create menus from pages in
 TYPO3. Such pages are represented by their page-record contents.

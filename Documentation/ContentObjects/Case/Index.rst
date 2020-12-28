@@ -1,6 +1,5 @@
 .. include:: ../../Includes.txt
-
-
+.. index:: Content objects; CASE
 .. _cobj-case:
 
 ====
@@ -131,7 +130,7 @@ from the "default" property will be used.
 .. _cobj-case-examples:
 
 Example:
-""""""""
+========
 
 If in this example the field "header" turns out not to be set ("false"), an
 empty string is returned. Otherwise TYPO3 chooses between two different
