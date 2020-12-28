@@ -120,7 +120,7 @@ from the "default" property will be used.
          stdWrap around any object that was rendered no matter what the "key"
          value is.
 
-See :ref:`data-type-cache`
+.. include:: ../../DataTypes/Properties/Cache.rst.txt
 
 .. ###### END~OF~TABLE ######
 

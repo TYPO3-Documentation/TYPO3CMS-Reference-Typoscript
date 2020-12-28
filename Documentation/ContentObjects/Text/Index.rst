@@ -45,7 +45,7 @@ different objects.
          properties consistently to those of the other cObjects by
          accessing them through the property "stdWrap".
 
-See :ref:`data-type-cache`
+.. include:: ../../DataTypes/Properties/Cache.rst.txt
 
 .. ###### END~OF~TABLE ######
 

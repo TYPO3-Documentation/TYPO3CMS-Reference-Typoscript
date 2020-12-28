@@ -93,7 +93,7 @@ into account.
          3) 86400 (= 1 day)
 
 
-See :ref:`data-type-cache`
+.. include:: ../../DataTypes/Properties/Cache.rst.txt
 
 
 .. container:: table-row

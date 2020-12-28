@@ -237,7 +237,7 @@ stdWrap
 cache
 ~~~~~
 
-See :ref:`data-type-cache`
+.. include:: ../../DataTypes/Properties/Cache.rst.txt
 
 .. _cobj-records-examples:
 
