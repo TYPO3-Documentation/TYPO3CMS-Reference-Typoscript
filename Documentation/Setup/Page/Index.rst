@@ -205,8 +205,7 @@ bodyTag
    Description
          Body tag on the page
 
-   Example
-         ::
+   Example ::
 
          # This will lead to <body class="example">
          page.bodyTag = <body class="{$bodyClass}">

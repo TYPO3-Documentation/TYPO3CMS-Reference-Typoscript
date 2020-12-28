@@ -1,4 +1,4 @@
-:Orphan:
+:orphan:
 
 .. include:: ../../Includes.txt
 
