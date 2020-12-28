@@ -19,6 +19,8 @@ In :file:`typo3/sysext/frontend/Classes/` this is known as
 accessible as :php:`$GLOBALS['TSFE']->config['config']['debug']`.
 
 
+.. index:: config; Properties
+
 Properties
 ==========
 
@@ -102,6 +104,7 @@ Properties
 
 
 
+.. index:: config; absRefPrefix
 .. _setup-config-absrefprefix:
 
 absRefPrefix
@@ -148,6 +151,7 @@ absRefPrefix
               config.absRefPrefix = http://example.com/
 
 
+.. index:: config; additionalHeaders
 .. _setup-config-additionalheaders:
 
 additionalHeaders
@@ -199,6 +203,7 @@ additionalHeaders
 
 
 
+.. index:: config; admPanel
 .. _setup-config-admpanel:
 
 admPanel
@@ -221,6 +226,7 @@ admPanel
 
 
 
+.. index:: config; ATagParams
 .. _setup-config-atagparams:
 
 ATagParams
@@ -239,6 +245,7 @@ ATagParams
 
 
 
+.. index:: config; baseURL
 .. _setup-config-baseurl:
 
 baseURL
@@ -263,6 +270,7 @@ baseURL
             config.baseURL = http://typo3.org/sub_dir/
 
 
+.. index:: config; cache
 .. _setup-config-cache:
 
 cache
@@ -316,6 +324,7 @@ cache
 
 
 
+.. index:: config; cache_clearAtMidnight
 .. _setup-config-cache-clearatmidnight:
 
 cache\_clearAtMidnight
@@ -339,6 +348,7 @@ cache\_clearAtMidnight
 
 
 
+.. index:: config; cache_period
 .. _setup-config-cache-period:
 
 cache\_period
@@ -364,6 +374,7 @@ cache\_period
 
 
 
+.. index:: config; compressCss
 .. _setup-config-compresscss:
 
 compressCss
@@ -408,6 +419,7 @@ compressCss
             config.compressCss = 1
 
 
+.. index:: config; compressJs
 .. _setup-config-compressjs:
 
 compressJs
@@ -455,6 +467,7 @@ compressJs
             config.compressJs = 1
 
 
+.. index:: config; concatenateCss
 .. _setup-config-concatenatecss:
 
 concatenateCss
@@ -496,6 +509,7 @@ concatenateCss
 
 
 
+.. index:: config; concatenateJs
 .. _setup-config-concatenatejs:
 
 concatenateJs
@@ -546,6 +560,7 @@ concatenateJs
 
 
 
+.. index:: config; contentObjectExceptionHandler
 .. _setup-config-contentObjectExceptionHandler:
 
 contentObjectExceptionHandler
@@ -604,6 +619,8 @@ contentObjectExceptionHandler
             tt_content.login.20.exceptionHandler.errorMessage = Oops an error occurred. Code: %s
             tt_content.login.20.exceptionHandler.ignoreCodes.10 = 1414512813
 
+
+.. index:: config; debug
 .. _setup-config-debug:
 
 debug
@@ -624,6 +641,7 @@ debug
 
 
 
+.. index:: config; disableAllHeaderCode
 .. _setup-config-disableallheadercode:
 
 disableAllHeaderCode
@@ -652,6 +670,7 @@ disableAllHeaderCode
 
 
 
+.. index:: config; disableBodyTag
 .. _setup-config-disablebodytag:
 
 disableBodyTag
@@ -680,6 +699,7 @@ disableBodyTag
 
 
 
+.. index:: config; disableCharsetHeader
 .. _setup-config-disablecharsetheader:
 
 disableCharsetHeader
@@ -699,6 +719,7 @@ disableCharsetHeader
 
 
 
+.. index:: config; disableImgBorderAttr
 .. _setup-config-disableimgborderattr:
 
 disableImgBorderAttr
@@ -719,6 +740,7 @@ disableImgBorderAttr
 
 
 
+.. index:: config; disablePageExternalUrl
 .. _setup-config-disablepageexternalurl:
 
 disablePageExternalUrl
@@ -738,6 +760,7 @@ disablePageExternalUrl
 
 
 
+.. index:: config; disablePrefixComment
 .. _setup-config-disableprefixcomment:
 
 disablePrefixComment
@@ -758,6 +781,7 @@ disablePrefixComment
 
 
 
+.. index:: config; disablePreviewNotification
 .. _setup-config-disablepreviewnotification:
 
 disablePreviewNotification
@@ -777,6 +801,8 @@ disablePreviewNotification
    Description
          Disables the "preview" notification box completely.
 
+
+.. index:: config; disableLanguageHeader
 .. _disableLanguageHeader:
 
 disableLanguageHeader
@@ -801,6 +827,8 @@ disableLanguageHeader
 
          If :ts:`config.disableLanguageHeader` is set, this header will not be sent.
 
+
+.. index:: config; doctype
 .. _setup-config-doctype:
 
 doctype
@@ -849,6 +877,7 @@ doctype
             <!DOCTYPE html>
 
 
+.. index:: config; doctypeSwitch
 .. _setup-config-doctypeswitch:
 
 doctypeSwitch
@@ -892,6 +921,7 @@ doctypeSwitch
 
 
 
+.. index:: config; enableContentLengthHeader
 .. _setup-config-enablecontentlengthheader:
 
 enableContentLengthHeader
@@ -917,6 +947,7 @@ enableContentLengthHeader
          document in some browsers.
 
 
+.. index:: config; extTarget
 .. _setup-config-exttarget:
 
 extTarget
@@ -938,6 +969,7 @@ extTarget
 
 
 
+.. index:: config; fileTarget
 .. _setup-config-filetarget:
 
 fileTarget
@@ -956,6 +988,7 @@ fileTarget
 
 
 
+.. index:: config; forceTypeValue
 .. _setup-config-forcetypevalue:
 
 forceTypeValue
@@ -979,6 +1012,7 @@ forceTypeValue
 
 
 
+.. index:: config; headerComment
 .. _setup-config-headercomment:
 
 headerComment
@@ -999,6 +1033,7 @@ headerComment
 
 
 
+.. index:: config; htmlTag.attributes
 .. _setup-config-htmltag-attributes:
 
 htmlTag.attributes
@@ -1050,9 +1085,8 @@ htmlTag.attributes
     :ref:`site handling<t3coreapi:sitehandling>`, depending on the value added there.
 
 
+.. index:: config; htmlTag_setParams
 .. _setup-config-htmltag-dir:
-
-
 .. _setup-config-htmltag-setparams:
 
 htmlTag\_setParams
@@ -1087,6 +1121,8 @@ htmlTag\_setParams
     Used to older TYPO3 versions? If you are using :ref:`site handling<t3coreapi:sitehandling>` you do not need to set
     `htmlTag_setParams` for language related configuration in TypoScript.
 
+
+.. index:: config; htmlTag_stdWrap
 .. _setup-config-htmltag-stdwrap:
 
 htmlTag\_stdWrap
@@ -1106,6 +1142,7 @@ htmlTag\_stdWrap
 
 
 
+.. index:: config; index_descrLgd
 .. _setup-config-index-descrlgd:
 
 index\_descrLgd
@@ -1128,6 +1165,7 @@ index\_descrLgd
 
 
 
+.. index:: config; index_enable
 .. _setup-config-index-enable:
 
 index\_enable
@@ -1148,6 +1186,7 @@ index\_enable
 
 
 
+.. index:: config; index_externals
 .. _setup-config-index-externals:
 
 index\_externals
@@ -1168,6 +1207,7 @@ index\_externals
 
 
 
+.. index:: config; index_metatags
 .. _setup-config-index-metatags:
 
 index\_metatags
@@ -1190,6 +1230,7 @@ index\_metatags
 
 
 
+.. index:: config; inlineStyle2TempFile
 .. _setup-config-inlinestyle2tempfile:
 
 inlineStyle2TempFile
@@ -1220,6 +1261,7 @@ inlineStyle2TempFile
 
 
 
+.. index:: config; intTarget
 .. _setup-config-inttarget:
 
 intTarget
@@ -1237,6 +1279,7 @@ intTarget
          Default internal target. Used by typolink if no target is set
 
 
+.. index:: config; linkVars
 .. _setup-config-linkvars:
 
 linkVars
@@ -1294,6 +1337,7 @@ linkVars
          `tracking[blue]` will not be kept.
 
 
+.. index:: config; message_preview
 .. _setup-config-message-preview:
 
 message\_preview
@@ -1313,6 +1357,7 @@ message\_preview
 
 
 
+.. index:: config; message_preview_workspace
 .. _setup-config-message-preview-workspace:
 
 message\_preview\_workspace
@@ -1339,6 +1384,7 @@ message\_preview\_workspace
 
 
 
+.. index:: config; metaCharset
 .. _setup-config-metacharset:
 
 metaCharset
@@ -1375,6 +1421,7 @@ metaCharset
 
 
 
+.. index:: config; moveJsFromHeaderToFooter
 .. _setup-config-movejsfromheadertofooter:
 
 moveJsFromHeaderToFooter
@@ -1395,6 +1442,7 @@ moveJsFromHeaderToFooter
 
 
 
+.. index:: config; MP_defaults
 .. _setup-config-mp-defaults:
 
 MP\_defaults
@@ -1426,6 +1474,7 @@ MP\_defaults
 
 
 
+.. index:: config; MP_disableTypolinkClosestMPvalue
 .. _setup-config-mp-disabletypolinkclosestmpvalue:
 
 MP\_disableTypolinkClosestMPvalue
@@ -1445,6 +1494,7 @@ MP\_disableTypolinkClosestMPvalue
 
 
 
+.. index:: config; MP_mapRootPoints
 .. _setup-config-mp-maprootpoints:
 
 MP\_mapRootPoints
@@ -1478,6 +1528,7 @@ MP\_mapRootPoints
 
 
 
+.. index:: config; namespaces
 .. _setup-config-namespaces:
 
 namespaces
@@ -1509,6 +1560,7 @@ namespaces
 
 
 
+.. index:: config; no_cache
 .. _setup-config-no-cache:
 
 no\_cache
@@ -1537,6 +1589,7 @@ no\_cache
 
 
 
+.. index:: config; noPageTitle
 .. _setup-config-nopagetitle:
 
 noPageTitle
@@ -1563,6 +1616,7 @@ noPageTitle
          manually already.
 
 
+.. index:: config; pageRendererTemplateFile
 .. _setup-config-pagerenderertemplatefile:
 
 pageRendererTemplateFile
@@ -1589,6 +1643,7 @@ pageRendererTemplateFile
             pageRendererTemplateFile = fileadmin/test_pagerender.html
 
 
+.. index:: config; pageTitle
 .. _setup-config-pagetitle:
 
 pageTitle
@@ -1608,6 +1663,7 @@ pageTitle
 
 
 
+.. index:: config; pageTitleFirst
 .. _setup-config-pagetitlefirst:
 
 pageTitleFirst
@@ -1634,6 +1690,7 @@ pageTitleFirst
 
 
 
+.. index:: config; pageTitleProviders
 .. _setup-config-pagetitleproviders:
 
 pageTitleProviders
@@ -1679,6 +1736,7 @@ pageTitleProviders
 
 
 
+.. index:: config; pageTitleSeparator
 .. _setup-config-pagetitleseparator:
 
 pageTitleSeparator
@@ -1718,6 +1776,7 @@ pageTitleSeparator
             config.pageTitleSeparator.noTrimWrap = |||
 
 
+.. index:: config; removeDefaultCss
 .. _setup-config-removedefaultcss:
 
 removeDefaultCss
@@ -1739,6 +1798,7 @@ removeDefaultCss
 
 
 
+.. index:: config; removeDefaultJS
 .. _setup-config-removedefaultjs:
 
 removeDefaultJS
@@ -1771,7 +1831,7 @@ removeDefaultJS
             config.removeDefaultJS = 1
 
 
-
+.. index:: config; removePageCss
 .. _setup-config-removepagecss:
 
 removePageCss
@@ -1795,6 +1855,7 @@ removePageCss
 
 
 
+.. index:: config; sendCacheHeaders
 .. _setup-config-sendcacheheaders:
 
 sendCacheHeaders
@@ -1856,6 +1917,7 @@ sendCacheHeaders
 
 
 
+.. index:: config; endCacheHeaders_onlyWhenLoginDeniedInBranch
 .. _setup-config-sendcacheheaders-onlywhenlogindeniedinbranch:
 
 sendCacheHeaders\_onlyWhenLoginDeniedInBranch
@@ -1896,6 +1958,7 @@ sendCacheHeaders\_onlyWhenLoginDeniedInBranch
 
 
 
+.. index:: config; spamProtectEmailAddresses
 .. _setup-config-spamprotectemailaddresses:
 
 spamProtectEmailAddresses
@@ -1937,6 +2000,7 @@ spamProtectEmailAddresses
 
 
 
+.. index:: config; spamProtectEmailAddresses_atSubst
 .. _setup-config-spamprotectemailaddresses-atsubst:
 
 spamProtectEmailAddresses\_atSubst
@@ -1957,7 +2021,7 @@ spamProtectEmailAddresses\_atSubst
          Substitute label for the at-sign (@).
 
 
-
+.. index:: config; spamProtectEmailAddresses_lastDotSubst
 .. _setup-config-spamprotectemailaddresses-lastdotsubst:
 
 spamProtectEmailAddresses\_lastDotSubst
@@ -1982,6 +2046,7 @@ spamProtectEmailAddresses\_lastDotSubst
 
 
 
+.. index:: config; sword_noMixedCase
 .. _setup-config-sword-nomixedcase:
 
 sword\_noMixedCase
@@ -2002,6 +2067,7 @@ sword\_noMixedCase
 
 
 
+.. index:: config; sword_standAlone
 .. _setup-config-sword-standalone:
 
 sword\_standAlone
@@ -2023,6 +2089,7 @@ sword\_standAlone
 
 
 
+.. index:: config; Extension configuration
 .. _setup-config-tx-extension-key-with-no-underscores:
 
 tx\_[extension key with no underscores]\_[\*]
@@ -2051,6 +2118,7 @@ tx\_[extension key with no underscores]\_[\*]
 
 
 
+.. index:: config; typolinkLinkAccessRestrictedPages
 .. _setup-config-typolinklinkaccessrestrictedpages:
 
 typolinkLinkAccessRestrictedPages
@@ -2089,6 +2157,7 @@ typolinkLinkAccessRestrictedPages
 
 
 
+.. index:: config; typolinkLinkAccessRestrictedPages_addParams
 .. _setup-config-typolinklinkaccessrestrictedpages-addparams:
 
 typolinkLinkAccessRestrictedPages\_addParams
@@ -2107,6 +2176,7 @@ typolinkLinkAccessRestrictedPages\_addParams
 
 
 
+.. index:: config; xhtmlDoctype
 .. _setup-config-xhtmldoctype:
 
 xhtmlDoctype
@@ -2149,6 +2219,7 @@ xhtmlDoctype
 
 
 
+.. index:: config; xmlprologue
 .. _setup-config-xmlprologue:
 
 xmlprologue
