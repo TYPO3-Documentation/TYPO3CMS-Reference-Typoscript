@@ -1,13 +1,10 @@
 .. include:: ../../Includes.txt
-
-
+.. index:: TMENU; properties
 .. _menu-common-properties:
 
-Common properties
-^^^^^^^^^^^^^^^^^
-
-These properties are in common for *all* menu objects unless
-otherwise noted!
+================
+TMENU properties
+================
 
 .. ### BEGIN~OF~TABLE ###
 
@@ -168,6 +165,8 @@ otherwise noted!
 
          Must be rawurlencoded.
 
+
+.. index:: TMENU; showAccessRestrictedPages
 .. _menu-common-properties-showaccessrestrictedpages:
 
 showAccessRestrictedPages

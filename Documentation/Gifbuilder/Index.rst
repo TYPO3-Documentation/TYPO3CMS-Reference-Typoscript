@@ -1,5 +1,4 @@
 .. include:: ../Includes.txt
-
 .. _gifbuilder-toc:
 
 ==========

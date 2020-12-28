@@ -1,6 +1,5 @@
 .. include:: ../../Includes.txt
-
-
+.. index:: TMENU
 .. _tmenu:
 
 

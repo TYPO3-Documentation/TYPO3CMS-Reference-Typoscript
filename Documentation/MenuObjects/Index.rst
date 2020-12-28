@@ -1,5 +1,8 @@
 .. include:: ../Includes.txt
-
+.. index::
+   MENU
+   HMENU
+   see: MENU; HMENU
 .. _data-type-menuobj:
 .. _menu-objects:
 

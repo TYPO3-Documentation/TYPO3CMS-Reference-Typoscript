@@ -18,6 +18,7 @@ This document is a **reference**, used to lookup TypoScript templating
 reference is not intended to give you a full introduction into the topic
 TypoScript.
 
+
 What is TypoScript?
 ===================
 
@@ -53,6 +54,7 @@ Please read the following for an introduction:
 * The chapter :ref:`using-and-setting` describes how to use, set
   and extend TypoScript.
 
+
 .. _typoscript-syntax-typoscript-templates-usage:
 
 Templating methods in TYPO3
@@ -77,7 +79,7 @@ Best practice:
     sitepackage, which is the basis for a custom theme for your site.
   * See :ref:`t3coreapi:adding-your-own-content-elements` for an
     introduction on how to create your own content element types using
-    TypoScript FLUIDTEMPLATE, Fluid and data processors.
+    TypoScript :ref:`cobj-template`, Fluid and data processors.
 
 Other methods:
 
@@ -99,5 +101,5 @@ Outdated methods:
 - **HTML templates:** Configure TYPO3 CMS to facilitate external HTML-
   templates with markers and subparts using the :ref:`cobj-template`
   content object type. This method is considered outdated and no
-  longer recoemmended
+  longer recommended.
 

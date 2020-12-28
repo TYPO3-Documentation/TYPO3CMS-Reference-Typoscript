@@ -1,10 +1,10 @@
 .. include:: ../../Includes.txt
-
-
+.. index:: TMENU; Item states
 .. _tmenu-common-properties:
 
-Common item states
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+=================
+TMENU item states
+=================
 
 These properties are all the item states used by TMENU.
 

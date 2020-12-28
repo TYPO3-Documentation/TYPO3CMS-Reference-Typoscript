@@ -1,10 +1,10 @@
 .. include:: ../../Includes.txt
-
-
+.. index:: GIFBUILDER; Objects
 .. _gifbuilder-object-names:
 
+============================
 Object names in this section
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+============================
 
 Whenever you see a reference to anything named an "object" in this
 section it's a reference to a "Gifbuilder Object" and not the
@@ -213,10 +213,11 @@ different each time!
 [tsref:->GIFBUILDER]
 
 
+.. index:: GIFBUILDER; TEXT
 .. _gifbuilder-text:
 
 TEXT
-""""
+====
 
 Renders a text.
 
@@ -697,10 +698,12 @@ Renders a text.
 [tsref:->GIFBUILDER.(GBObj).TEXT]
 
 
+
+.. index:: GIFBUILDER; SHADOW
 .. _gifbuilder-shadow:
 
 SHADOW
-""""""
+======
 
 Creates a shadow under the associated text.
 
@@ -794,10 +797,11 @@ Creates a shadow under the associated text.
 [tsref:->GIFBUILDER.(GBObj).SHADOW]
 
 
+.. index:: GIFBUILDER; EMBOSS
 .. _gifbuilder-emboss:
 
 EMBOSS
-""""""
+======
 
 Our emboss are actually two shadows offset in opposite directions and with
 different colors as to create an effect of light cast onto an embossed
@@ -905,10 +909,11 @@ text.
 [tsref:->GIFBUILDER.(GBObj).EMBOSS]
 
 
+.. index:: GIFBUILDER; OUTLINE
 .. _gifbuilder-outline:
 
 OUTLINE
-"""""""
+=======
 
 Creates a colored contour line around the shapes of the associated text.
 
@@ -964,10 +969,11 @@ high intensity instead. That works better!
 [tsref:->GIFBUILDER.(GBObj).OUTLINE]
 
 
+.. index:: GIFBUILDER; BOX
 .. _gifbuilder-box:
 
 BOX
-"""
+===
 
 Prints a filled box.
 
@@ -1058,10 +1064,11 @@ Prints a filled box.
 [tsref:->GIFBUILDER.(GBObj).BOX]
 
 
+.. index:: GIFBUILDER; ELLIPSE
 .. _gifbuilder-ellipse:
 
 ELLIPSE
-"""""""
+=======
 
 Prints a filled ellipse.
 
@@ -1106,7 +1113,7 @@ Prints a filled ellipse.
 
 
 Example:
-~~~~~~~~
+--------
 
 ::
 
@@ -1121,10 +1128,11 @@ Example:
    }
 
 
+.. index:: GIFBUILDER; IMAGE
 .. _gifbuilder-image:
 
 IMAGE
-"""""
+=====
 
 Renders an image file.
 
@@ -1203,10 +1211,11 @@ Renders an image file.
 [tsref:->GIFBUILDER.(GBObj).IMAGE]
 
 
+.. index:: GIFBUILDER; EFFECT
 .. _gifbuilder-effect:
 
 EFFECT
-""""""
+======
 
 Allows you to apply one or more of the following effects to the image.
 
@@ -1214,7 +1223,7 @@ The EFFECT object only has one property: "value". stdWrap is available for
 "value".
 
 Syntax:
-~~~~~~~
+-------
 
 ::
 
@@ -1225,7 +1234,7 @@ All effects are defined as properties or property-value pairs inside
 "\|".
 
 Example:
-~~~~~~~~
+--------
 
 ::
 
@@ -1493,10 +1502,11 @@ Example:
 [tsref:->GIFBUILDER.(GBObj).EFFECT]
 
 
+.. index:: GIFBUILDER; WORKAREA
 .. _gifbuilder-workarea:
 
 WORKAREA
-""""""""
+========
 
 Sets another workarea.
 
@@ -1541,10 +1551,11 @@ Sets another workarea.
 [tsref:->GIFBUILDER.(GBObj).WORKAREA]
 
 
+.. index:: GIFBUILDER; CROP
 .. _gifbuilder-crop:
 
 CROP
-""""
+====
 
 **Note:** This object resets workArea to the new dimensions of the
 image!
@@ -1608,10 +1619,11 @@ image!
 [tsref:->GIFBUILDER.(GBObj).CROP]
 
 
+.. index:: GIFBUILDER; SCALE
 .. _gifbuilder-scale:
 
 SCALE
-"""""
+=====
 
 This scales the GIFBUILDER object to the provided dimensions.
 
@@ -1661,10 +1673,11 @@ image!
 [tsref:->GIFBUILDER.(GBObj).SCALE]
 
 
+.. index:: GIFBUILDER; ADJUST
 .. _gifbuilder-adjust:
 
 ADJUST
-""""""
+======
 
 This lets you adjust the tonal range like in the "levels"-dialog of
 Photoshop. You can set the input- and output-levels and that way remap
@@ -1673,7 +1686,7 @@ have a look at the EFFECT object.
 
 
 Example:
-~~~~~~~~
+--------
 
 ::
 

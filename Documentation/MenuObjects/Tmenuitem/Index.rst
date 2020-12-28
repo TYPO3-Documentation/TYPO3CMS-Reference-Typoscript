@@ -1,10 +1,10 @@
 .. include:: ../../Includes.txt
-
-
+.. index:: TMENU; TMENUITEM
 .. _tmenuitem:
 
+=========
 TMENUITEM
-^^^^^^^^^
+=========
 
 The current record is the page-record of the menu item. Now, if you would
 like to get data from the current menu item's page record, use
