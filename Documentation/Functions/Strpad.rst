@@ -1,6 +1,5 @@
 .. include:: ../Includes.txt
-
-
+.. index:: Functions; strPad
 .. _strpad:
 
 ======

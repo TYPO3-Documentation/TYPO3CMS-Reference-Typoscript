@@ -183,7 +183,7 @@ data
    :ref:`data-type-gettext` / :ref:`stdWrap`
 
 
-.. index:: stdWrap;
+.. index:: stdWrap; field
 .. _stdwrap-field:
 
 field
@@ -222,7 +222,7 @@ field
    the title field is returned.
 
 
-.. index:: stdWrap;
+.. index:: stdWrap; current
 .. _stdwrap-current:
 
 current
@@ -238,7 +238,7 @@ current
    Sets the content to the "current"-value (see :ref:`->split <split>`)
 
 
-.. index:: stdWrap;
+.. index:: stdWrap; cObject
 .. _stdwrap-cobject:
 
 cObject
@@ -254,7 +254,7 @@ cObject
    Loads content from a content object.
 
 
-.. index:: stdWrap;
+.. index:: stdWrap; numRows
 .. _stdwrap-numrows:
 
 numRows
@@ -269,7 +269,7 @@ numRows
 :aspect:`Description`
    Returns the number of rows resulting from the supplied SELECT query.
 
-.. index:: stdWrap;
+.. index:: stdWrap; preUserFunc
 .. _stdwrap-preuserfunc:
 
 preUserFunc
@@ -293,14 +293,14 @@ preUserFunc
    See :ref:`stdwrap-postUserFunc`.
 
 
-.. index:: stdWrap;
+.. index:: stdWrap; Override and conditions
 .. _stdwrap-override-conditions:
 
 Override and conditions
 =======================
 
 
-.. index:: stdWrap;
+.. index:: stdWrap; override
 .. _stdwrap-override:
 
 override
@@ -317,7 +317,7 @@ override
    content is loaded with this!
 
 
-.. index:: stdWrap;
+.. index:: stdWrap; preIfEmptyListNum
 .. _stdwrap-preifemptylistnum:
 
 preIfEmptyListNum
@@ -333,7 +333,7 @@ preIfEmptyListNum
    (as ":ref:`stdwrap-listNum`" below)
 
 
-.. index:: stdWrap;
+.. index:: stdWrap; ifNull
 .. _stdwrap-ifnull:
 
 ifNull
@@ -365,7 +365,7 @@ ifNull
    field contains the value :php:`NULL`, the text "No description defined.".
 
 
-.. index:: stdWrap;
+.. index:: stdWrap; ifEmpty
 .. _stdwrap-ifempty:
 
 ifEmpty
@@ -382,7 +382,7 @@ ifEmpty
    with :ts:`ifEmpty`. Zeros are treated as empty values!
 
 
-.. index:: stdWrap;
+.. index:: stdWrap; ifBlank
 .. _stdwrap-ifblank:
 
 ifBlank
@@ -399,7 +399,7 @@ ifBlank
    treated as blank values!
 
 
-.. index:: stdWrap;
+.. index:: stdWrap; listNum
 .. _stdwrap-listnum:
 
 listNum
@@ -451,7 +451,7 @@ listNum
       }
 
 
-.. index:: stdWrap;
+.. index:: stdWrap; trim
 .. _stdwrap-trim:
 
 trim
@@ -468,7 +468,7 @@ trim
    around the value.
 
 
-.. index:: stdWrap;
+.. index:: stdWrap; strPad
 .. _stdwrap-strpad:
 
 strPad
@@ -485,7 +485,7 @@ strPad
    characters and the side(s), on which the padding should be added.
 
 
-.. index:: stdWrap;
+.. index:: stdWrap; Recursive call
 .. _stdwrap-stdwrap:
 
 stdWrap
@@ -501,7 +501,7 @@ stdWrap
    Recursive call to the :ts:`stdWrap` function.
 
 
-.. index:: stdWrap;
+.. index:: stdWrap; required
 .. _stdwrap-required:
 
 required
@@ -522,7 +522,7 @@ required
    If the content is empty, "" is returned immediately.
 
 
-.. index:: stdWrap;
+.. index:: stdWrap; if
 .. _stdwrap-if:
 
 if
@@ -538,7 +538,7 @@ if
    If the if-object returns false, stdWrap returns "" immediately.
 
 
-.. index:: stdWrap;
+.. index:: stdWrap; fieldRequired
 .. _stdwrap-fieldrequired:
 
 fieldRequired
@@ -554,14 +554,14 @@ fieldRequired
    The value in this field **must** be set.
 
 
-.. index:: stdWrap;
+.. index:: stdWrap; Parsing data
 .. _stdwrap-parsedata:
 
 Parsing data
 ============
 
 
-.. index:: stdWrap;
+.. index:: stdWrap; csConv
 .. _stdwrap-csconv:
 
 csConv
@@ -578,7 +578,7 @@ csConv
    the current rendering charset of the frontend (UTF-8).
 
 
-.. index:: stdWrap;
+.. index:: pair: stdWrap; parseFunc
 .. _stdwrap-parsefunc:
 
 parseFunc
@@ -607,7 +607,7 @@ parseFunc
       parseFunc.tags.myTag.value = This will be inserted when &lt;myTag&gt; is found!
 
 
-.. index:: stdWrap;
+.. index:: pair: stdWrap; HTMLparser
 .. _stdwrap-htmlparser:
 
 HTMLparser
@@ -628,7 +628,7 @@ HTMLparser
    (See :ref:`t3coreapi:rte` for more information about RTE transformations)
 
 
-.. index:: stdWrap;
+.. index:: pair: stdWrap; split
 .. _stdwrap-split:
 
 split
@@ -641,7 +641,7 @@ split
    :ref:`split` / :ref:`stdWrap`
 
 
-.. index:: stdWrap;
+.. index:: pair: stdWrap; replacement
 .. _stdwrap-replacement:
 
 replacement
@@ -660,7 +660,7 @@ replacement
    replacements at once.
 
 
-.. index:: stdWrap;
+.. index:: stdWrap; prioriCalc
 .. _stdwrap-prioricalc:
 
 prioriCalc
@@ -699,7 +699,7 @@ prioriCalc
       -5 * ((-4+6) ^ 2) - 100%7 = -22
 
 
-.. index:: stdWrap;
+.. index:: stdWrap; char
 .. _stdwrap-char:
 
 char
@@ -723,7 +723,7 @@ char
       $content = chr((int)$conf['char']);
 
 
-.. index:: stdWrap;
+.. index:: stdWrap; intval
 .. _stdwrap-intval:
 
 intval
@@ -743,7 +743,7 @@ intval
       $content = intval($content);
 
 
-.. index:: stdWrap;
+.. index:: stdWrap; hash
 .. _stdwrap-hash:
 
 hash
@@ -772,7 +772,7 @@ hash
       }
 
 
-.. index:: stdWrap;
+.. index:: pair: stdWrap; round
 .. _stdwrap-round:
 
 round
@@ -789,7 +789,7 @@ round
    decimals.
 
 
-.. index:: stdWrap;
+.. index:: pair: stdWrap; numberFormat
 .. _stdwrap-numberformat:
 
 numberFormat
@@ -806,7 +806,7 @@ numberFormat
    prices).
 
 
-.. index:: stdWrap;
+.. index:: stdWrap; date
 .. _stdwrap-date:
 
 date
@@ -842,7 +842,7 @@ date
       }
 
 
-.. index:: stdWrap;
+.. index:: stdWrap; strftime
 .. _stdwrap-strftime:
 
 strftime
@@ -874,7 +874,7 @@ strftime
       `strftime() <http://www.php.net/strftime>`_.
 
 
-.. index:: stdWrap;
+.. index:: stdWrap; strtotime
 .. _stdwrap-strtotime:
 
 strtotime
@@ -911,7 +911,7 @@ strtotime
       }
 
 
-.. index:: stdWrap;
+.. index:: stdWrap; age
 .. _stdwrap-age:
 
 age
@@ -952,7 +952,7 @@ age
       lib.ageFormat.stdWrap.age = " Minuten | Stunden | Tage | Jahre | Minute | Stunde | Tag | Jahr"
 
 
-.. index:: stdWrap;
+.. index:: stdWrap; case
 .. _stdwrap-case:
 
 case
@@ -970,7 +970,7 @@ case
    Uses "UTF-8" for the operation.
 
 
-.. index:: stdWrap;
+.. index:: stdWrap; bytes
 .. _stdwrap-bytes:
 
 bytes
@@ -1113,7 +1113,7 @@ Format value 1000 with custom label and base=1024. Shows
    }
 
 
-.. index:: stdWrap;
+.. index:: stdWrap; substring
 .. _stdwrap-substring:
 
 substring
@@ -1132,7 +1132,7 @@ substring
    Uses "UTF-8" for the operation.
 
 
-.. index:: stdWrap;
+.. index:: stdWrap; cropHTML
 .. _stdwrap-crophtml:
 
 cropHTML
@@ -1154,7 +1154,7 @@ cropHTML
    already used.
 
 
-.. index:: stdWrap;
+.. index:: stdWrap; stripHtml
 .. _stdwrap-striphtml:
 
 stripHtml
@@ -1170,7 +1170,7 @@ stripHtml
    Strips all HTML tags.
 
 
-.. index:: stdWrap;
+.. index:: stdWrap; crop
 .. _stdwrap-crop:
 
 crop
@@ -1219,7 +1219,7 @@ crop
    Uses "UTF-8" for the operation.
 
 
-.. index:: stdWrap;
+.. index:: stdWrap; rawUrlEncode
 .. _stdwrap-rawurlencode:
 
 rawUrlEncode
@@ -1235,7 +1235,7 @@ rawUrlEncode
    Passes the content through the PHP function `rawurlencode() <http://www.php.net/rawurlencode>`_.
 
 
-.. index:: stdWrap;
+.. index:: stdWrap; htmlSpecialChars
 .. _stdwrap-htmlspecialchars:
 
 htmlSpecialChars
@@ -1254,7 +1254,7 @@ htmlSpecialChars
    non-entity characters are affected.
 
 
-.. index:: stdWrap;
+.. index:: stdWrap; encodeForJavaScriptValue
 .. _stdwrap-encodeforjavascriptvalue:
 
 encodeForJavaScriptValue
@@ -1286,7 +1286,7 @@ encodeForJavaScriptValue
       }
 
 
-.. index:: stdWrap;
+.. index:: stdWrap; doubleBrTag
 .. _stdwrap-doublebrtag:
 
 doubleBrTag
@@ -1302,7 +1302,7 @@ doubleBrTag
    All double-line-breaks are substituted with this value.
 
 
-.. index:: stdWrap;
+.. index:: stdWrap; br
 .. _stdwrap-br:
 
 br
@@ -1319,7 +1319,7 @@ br
    converts each line break to a :html:`<br />` or a :html:`<br>` tag depending on doctype.
 
 
-.. index:: stdWrap;
+.. index:: stdWrap; brTag
 .. _stdwrap-brtag:
 
 brTag
@@ -1336,7 +1336,7 @@ brTag
    *value*, which has been provided in this property.
 
 
-.. index:: stdWrap;
+.. index:: pair: stdWrap; encapsLines
 .. _stdwrap-encapslines:
 
 encapsLines
@@ -1353,7 +1353,7 @@ encapsLines
    independently. Used to format content made with the RTE.
 
 
-.. index:: stdWrap;
+.. index:: stdWrap; keywords
 .. _stdwrap-keywords:
 
 keywords
@@ -1370,7 +1370,7 @@ keywords
    each value and returns a comma-separated list of the values.
 
 
-.. index:: stdWrap;
+.. index:: stdWrap; innerWrap
 .. _stdwrap-innerwrap:
 
 innerWrap
@@ -1386,7 +1386,7 @@ innerWrap
    Wraps the content.
 
 
-.. index:: stdWrap;
+.. index:: stdWrap; innerWrap2
 .. _stdwrap-innerwrap2:
 
 innerWrap2
@@ -1402,7 +1402,7 @@ innerWrap2
    Same as :ts:`innerWrap` (but watch the order in which they are executed).
 
 
-.. index:: stdWrap;
+.. index:: stdWrap; preCObject
 .. _stdwrap-precobject:
 
 preCObject
@@ -1418,7 +1418,7 @@ preCObject
    :ref:`stdwrap-cObject` prepended the content.
 
 
-.. index:: stdWrap;
+.. index:: stdWrap; postCObject
 .. _stdwrap-postcobject:
 
 postCObject
@@ -1434,7 +1434,7 @@ postCObject
    :ref:`stdwrap-cObject` appended the content.
 
 
-.. index:: stdWrap;
+.. index:: stdWrap; wrapAlign
 .. _stdwrap-wrapalign:
 
 wrapAlign
@@ -1451,7 +1451,7 @@ wrapAlign
    *if* align is set.
 
 
-.. index:: stdWrap;
+.. index:: pair: stdWrap; typolink
 .. _stdwrap-typolink:
 
 typolink
@@ -1467,7 +1467,7 @@ typolink
    Wraps the content with a link-tag.
 
 
-.. index:: stdWrap;
+.. index:: stdWrap; wrap
 .. _stdwrap-wrap:
 
 wrap
@@ -1484,7 +1484,7 @@ wrap
    - the vertical line)
 
 
-.. index:: stdWrap;
+.. index:: stdWrap; noTrimWrap
 .. _stdwrap-notrimwrap:
 
 noTrimWrap
@@ -1531,7 +1531,7 @@ noTrimWrap
    special character.
 
 
-.. index:: stdWrap;
+.. index:: stdWrap; wrap2
 .. _stdwrap-wrap2:
 
 wrap2
@@ -1547,7 +1547,7 @@ wrap2
    same as :ref:`stdwrap-wrap` (but watch the order in which they are executed)
 
 
-.. index:: stdWrap;
+.. index:: stdWrap; dataWrap
 .. _stdwrap-datawrap:
 
 dataWrap
@@ -1573,7 +1573,7 @@ dataWrap
    that contains the number of the current page.
 
 
-.. index:: stdWrap;
+.. index:: stdWrap; prepend
 .. _stdwrap-prepend:
 
 prepend
@@ -1589,7 +1589,7 @@ prepend
    :ref:`stdwrap-cobject` prepended to content (before)
 
 
-.. index:: stdWrap;
+.. index:: stdWrap; append
 .. _stdwrap-append:
 
 append
@@ -1605,7 +1605,7 @@ append
    :ref:`stdwrap-cobject` appended to content (after)
 
 
-.. index:: stdWrap;
+.. index:: stdWrap; wrap3
 .. _stdwrap-wrap3:
 
 wrap3
@@ -1621,7 +1621,7 @@ wrap3
    same as :ts:`wrap` (but watch the order in which they are executed)
 
 
-.. index:: stdWrap;
+.. index:: stdWrap; orderedStdWrap
 .. _stdwrap-orderedstdwrap:
 
 orderedStdWrap
@@ -1662,7 +1662,7 @@ orderedStdWrap
    This results in "This is a working solution."
 
 
-.. index:: stdWrap;
+.. index:: stdWrap; outerWrap
 .. _stdwrap-outerwrap:
 
 outerWrap
@@ -1678,7 +1678,7 @@ outerWrap
    *Wraps the complete content*
 
 
-.. index:: stdWrap;
+.. index:: stdWrap; insertData
 .. _stdwrap-insertdata:
 
 insertData
@@ -1700,13 +1700,13 @@ insertData
       10.value = This is the page title: {page:title}
       10.stdWrap.insertData = 1
 
-   .. warning:
-      Never use this on content that can be edited in backend. This allows editors to disclose
-      normally hidden information. Never use this to insert data into wraps.
-      Use :ref:`dataWrap <stdwrap-datawrap>` instead.
+.. warning::
+   Never use this on content that can be edited in backend. This allows editors to disclose
+   normally hidden information. Never use this to insert data into wraps.
+   Use :ref:`dataWrap <stdwrap-datawrap>` instead.
 
 
-.. index:: stdWrap;
+.. index:: stdWrap; postUserFunc
 .. _stdwrap-postuserfunc:
 
 postUserFunc
@@ -1804,7 +1804,7 @@ postUserFunc
    :file:`ContentObjectRenderer.php`!
 
 
-.. index:: stdWrap;
+.. index:: stdWrap; postUserFuncInt
 .. _stdwrap-postuserfuncint:
 
 postUserFuncInt
@@ -1832,7 +1832,7 @@ postUserFuncInt
    Supplied by Jens Ellerbrock
 
 
-.. index:: stdWrap;
+.. index:: stdWrap; prefixComment
 .. _stdwrap-preficomment:
 .. _stdwrap-prefixcomment:
 
@@ -1860,7 +1860,7 @@ prefixComment
    Will indent the comment with 1 tab (and the next line with 2+1 tabs)
 
 
-.. index:: stdWrap;
+.. index:: stdWrap; editIcons
 .. _stdwrap-editicons:
 
 editIcons
@@ -1912,7 +1912,7 @@ editIcons
       editIcons = header[header_align|date], bodytext
 
 
-.. index:: stdWrap;
+.. index:: stdWrap; editPanel
 .. _stdwrap-editpanel:
 
 editPanel
@@ -1928,7 +1928,7 @@ editPanel
    See :ts:`cObject` :ref:`cobj-editpanel`.
 
 
-.. index:: stdWrap;
+.. index:: stdWrap; cache
 .. _stdwrap-cache:
 
 cache
@@ -1944,7 +1944,7 @@ cache
    Caches rendered content in the caching framework.
 
 
-.. index:: stdWrap;
+.. index:: stdWrap; debug
 .. _stdwrap-debug:
 
 debug
@@ -1964,7 +1964,7 @@ debug
    Should be used under construction only.
 
 
-.. index:: stdWrap;
+.. index:: stdWrap; debugFunc
 .. _stdwrap-debugfunc:
 
 debugFunc
@@ -1984,7 +1984,7 @@ debugFunc
    Set to value "2" the content will be printed in a table - looks nicer.
 
 
-.. index:: stdWrap;
+.. index:: stdWrap; debugData
 .. _stdwrap-debugdata:
 
 debugData
