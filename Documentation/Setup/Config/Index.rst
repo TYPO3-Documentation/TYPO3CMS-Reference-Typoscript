@@ -1,5 +1,5 @@
 .. include:: ../../Includes.txt
-
+.. index:: config
 .. _config:
 .. _config-object-type:
 .. _config-datatype:
@@ -18,84 +18,85 @@ In :file:`typo3/sysext/frontend/Classes/` this is known as
 :php:`$GLOBALS['TSFE']->config['config']`, thus the property :ts:`debug` below is
 accessible as :php:`$GLOBALS['TSFE']->config['config']['debug']`.
 
+
 Properties
 ==========
 
 .. container:: ts-properties
 
-   ===================================================== ================================================== ======================================================================
-   Property                                              Data Type                                          Default
-   ===================================================== ================================================== ======================================================================
-   `absRefPrefix`_                                       :ref:`data-type-string`
-   `additionalHeaders`_                                  array with numeric indices
-   `admPanel`_                                           :ref:`data-type-boolean`
-   `ATagParams`_                                         *<A>-params*
-   `baseURL`_                                            :ref:`data-type-string`
-   `cache`_                                              array
-   `cache\_clearAtMidnight`_                             :ref:`data-type-boolean`                           false
-   `cache\_period`_                                      :ref:`data-type-integer`                           86400 *(= 24 hours)*
-   `compressCss`_                                        :ref:`data-type-boolean`
-   `compressJs`_                                         :ref:`data-type-boolean`
-   `concatenateCss`_                                     :ref:`data-type-boolean`
-   `concatenateJs`_                                      :ref:`data-type-boolean`
-   `contentObjectExceptionHandler`_                      array
-   `debug`_                                              :ref:`data-type-boolean`
-   `disableAllHeaderCode`_                               :ref:`data-type-boolean`                           false
-   `disableBodyTag`_                                     :ref:`data-type-boolean`                           0
-   `disableCharsetHeader`_                               :ref:`data-type-boolean`
-   `disableImgBorderAttr`_                               :ref:`data-type-boolean`
-   `disablePageExternalUrl`_                             :ref:`data-type-boolean`
-   `disablePrefixComment`_                               :ref:`data-type-boolean`
-   `disablePreviewNotification`_                         :ref:`data-type-boolean`                           0
-   `disableLanguageHeader`_                              :ref:`data-type-boolean`                           0
-   `doctype`_                                            :ref:`data-type-string`
-   `doctypeSwitch`_                                      :ref:`data-type-boolean` / :ref:`data-type-string`
-   `enableContentLengthHeader`_                          :ref:`data-type-boolean`                           1
-   `extTarget`_                                          :ref:`data-type-target`                            \_top
-   `fileTarget`_                                         :ref:`data-type-target`
-   `forceTypeValue`_                                     :ref:`data-type-integer`
-   `headerComment`_                                      :ref:`data-type-string`
-   `htmlTag.attributes`_                                 array
-   `htmlTag\_setParams`_                                 :ref:`data-type-string`
-   `htmlTag\_stdWrap`_                                   :ref:`stdwrap`
-   `index\_descrLgd`_                                    :ref:`data-type-integer`                           200
-   `index\_enable`_                                      :ref:`data-type-boolean`
-   `index\_externals`_                                   :ref:`data-type-boolean`
-   `index\_metatags`_                                    :ref:`data-type-boolean`                           true
-   `inlineStyle2TempFile`_                               :ref:`data-type-boolean`
-   `intTarget`_                                          :ref:`data-type-target`
-   `linkVars`_                                           :ref:`data-type-list`
-   `message\_preview`_                                   :ref:`data-type-string`
-   `message\_preview\_workspace`_                        :ref:`data-type-string`
-   `metaCharset`_                                        :ref:`data-type-string`                            utf-8
-   `moveJsFromHeaderToFooter`_                           :ref:`data-type-boolean`
-   `MP\_defaults`_                                       :ref:`data-type-string`
-   `MP\_disableTypolinkClosestMPvalue`_                  :ref:`data-type-boolean`
-   `MP\_mapRootPoints`_                                  list of PIDs / :ref:`data-type-string`
-   `namespaces`_                                         *(array of strings)*
-   `no\_cache`_                                          :ref:`data-type-boolean`                           0
-   `noPageTitle`_                                        :ref:`data-type-integer`                           0
-   `pageRendererTemplateFile`_                           :ref:`data-type-string`
-   `pageTitle`_                                          :ref:`stdWrap`
-   `pageTitleFirst`_                                     :ref:`data-type-boolean`                           0
-   `pageTitleProviders`_                                 array
-   `pageTitleSeparator`_                                 :ref:`data-type-string` / :ref:`stdwrap`           ": " *(colon with following space)*
-   `removeDefaultCss`_                                   :ref:`data-type-boolean`
-   `removeDefaultJS`_                                    :ref:`data-type-boolean` / :ref:`data-type-string`
-   `removePageCss`_                                      :ref:`data-type-boolean`
-   `sendCacheHeaders`_                                   :ref:`data-type-boolean`
-   `sendCacheHeaders\_onlyWhenLoginDeniedInBranch`_      :ref:`data-type-boolean`
-   `spamProtectEmailAddresses`_                          "ascii" /
-   `spamProtectEmailAddresses\_atSubst`_                 :ref:`data-type-string`                            (at)
-   `spamProtectEmailAddresses\_lastDotSubst`_            :ref:`data-type-string`                            . *(just a simple dot)*
-   `sword\_noMixedCase`_                                 :ref:`data-type-boolean`
-   `sword\_standAlone`_                                  :ref:`data-type-boolean`
-   `tx\_[extension key with no underscores]\_[\*]`_      array
-   `typolinkLinkAccessRestrictedPages`_                  integer (page id) / keyword "NONE"
-   `typolinkLinkAccessRestrictedPages\_addParams`_       :ref:`data-type-string`
-   `xhtmlDoctype`_                                       :ref:`data-type-string`
-   `xmlprologue`_                                        :ref:`data-type-string`
-   ===================================================== ================================================== ======================================================================
+   ================================================================= ================================================== ======================================================================
+   Property                                                          Data Type                                          Default
+   ================================================================= ================================================== ======================================================================
+   `absRefPrefix`_                                                   :ref:`data-type-string`
+   `additionalHeaders`_                                              array with numeric indices
+   `admPanel`_                                                       :ref:`data-type-boolean`
+   `ATagParams`_                                                     *<A>-params*
+   `baseURL`_                                                        :ref:`data-type-string`
+   `cache`_                                                          array
+   `setup-config-cache-clearatmidnight`_                             :ref:`data-type-boolean`                           false
+   `setup-config-cache-period`_                                      :ref:`data-type-integer`                           86400 *(= 24 hours)*
+   `compressCss`_                                                    :ref:`data-type-boolean`
+   `compressJs`_                                                     :ref:`data-type-boolean`
+   `concatenateCss`_                                                 :ref:`data-type-boolean`
+   `concatenateJs`_                                                  :ref:`data-type-boolean`
+   `contentObjectExceptionHandler`_                                  array
+   `debug`_                                                          :ref:`data-type-boolean`
+   `disableAllHeaderCode`_                                           :ref:`data-type-boolean`                           false
+   `disableBodyTag`_                                                 :ref:`data-type-boolean`                           0
+   `disableCharsetHeader`_                                           :ref:`data-type-boolean`
+   `disableImgBorderAttr`_                                           :ref:`data-type-boolean`
+   `disablePageExternalUrl`_                                         :ref:`data-type-boolean`
+   `disablePrefixComment`_                                           :ref:`data-type-boolean`
+   `disablePreviewNotification`_                                     :ref:`data-type-boolean`                           0
+   `disableLanguageHeader`_                                          :ref:`data-type-boolean`                           0
+   `doctype`_                                                        :ref:`data-type-string`
+   `doctypeSwitch`_                                                  :ref:`data-type-boolean` / :ref:`data-type-string`
+   `enableContentLengthHeader`_                                      :ref:`data-type-boolean`                           1
+   `extTarget`_                                                      :ref:`data-type-target`                            \_top
+   `fileTarget`_                                                     :ref:`data-type-target`
+   `forceTypeValue`_                                                 :ref:`data-type-integer`
+   `headerComment`_                                                  :ref:`data-type-string`
+   `htmlTag.attributes`_                                             array
+   `setup-config-htmltag-setparams`_                                 :ref:`data-type-string`
+   `setup-config-htmlTag-stdWrap`_                                   :ref:`stdwrap`
+   `setup-config-index-descrLgd`_                                    :ref:`data-type-integer`                           200
+   `setup-config-index-enable`_                                      :ref:`data-type-boolean`
+   `setup-config-index-externals`_                                   :ref:`data-type-boolean`
+   `setup-config-index-metatags`_                                    :ref:`data-type-boolean`                           true
+   `inlineStyle2TempFile`_                                           :ref:`data-type-boolean`
+   `intTarget`_                                                      :ref:`data-type-target`
+   `linkVars`_                                                       :ref:`data-type-list`
+   `setup-config-message-preview`_                                   :ref:`data-type-string`
+   `setup-config-message-preview-workspace`_                         :ref:`data-type-string`
+   `metaCharset`_                                                    :ref:`data-type-string`                            utf-8
+   `moveJsFromHeaderToFooter`_                                       :ref:`data-type-boolean`
+   `setup-config-MP-defaults`_                                       :ref:`data-type-string`
+   `setup-config-MP-disableTypolinkClosestMPvalue`_                  :ref:`data-type-boolean`
+   `setup-config-MP-mapRootPoints`_                                  list of PIDs / :ref:`data-type-string`
+   `namespaces`_                                                     *(array of strings)*
+   `setup-config-no-cache`_                                          :ref:`data-type-boolean`                           0
+   `noPageTitle`_                                                    :ref:`data-type-integer`                           0
+   `pageRendererTemplateFile`_                                       :ref:`data-type-string`
+   `pageTitle`_                                                      :ref:`stdWrap`
+   `pageTitleFirst`_                                                 :ref:`data-type-boolean`                           0
+   `pageTitleProviders`_                                             array
+   `pageTitleSeparator`_                                             :ref:`data-type-string` / :ref:`stdwrap`           ": " *(colon with following space)*
+   `removeDefaultCss`_                                               :ref:`data-type-boolean`
+   `removeDefaultJS`_                                                :ref:`data-type-boolean` / :ref:`data-type-string`
+   `removePageCss`_                                                  :ref:`data-type-boolean`
+   `sendCacheHeaders`_                                               :ref:`data-type-boolean`
+   `setup-config-sendCacheHeaders-onlyWhenLoginDeniedInBranch`_      :ref:`data-type-boolean`
+   `spamProtectEmailAddresses`_                                      "ascii" /
+   `setup-config-spamProtectEmailAddresses-atSubst`_                 :ref:`data-type-string`                            (at)
+   `setup-config-spamProtectEmailAddresses-lastDotSubst`_            :ref:`data-type-string`                            . *(just a simple dot)*
+   `setup-config-sword-noMixedCase`_                                 :ref:`data-type-boolean`
+   `setup-config-sword-standAlone`_                                  :ref:`data-type-boolean`
+   `setup-config-tx-extension-key-with-no-underscores`_              array
+   `typolinkLinkAccessRestrictedPages`_                              integer (page id) / keyword "NONE"
+   `setup-config-typolinkLinkAccessRestrictedPages-addParams`_       :ref:`data-type-string`
+   `xhtmlDoctype`_                                                   :ref:`data-type-string`
+   `xmlprologue`_                                                    :ref:`data-type-string`
+   ================================================================= ================================================== ======================================================================
 
 .. ### BEGIN~OF~TABLE ###
 
