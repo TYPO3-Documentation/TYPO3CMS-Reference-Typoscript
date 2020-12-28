@@ -1,5 +1,5 @@
 .. include:: ../Includes.txt
-
+.. index:: Conditions
 .. _conditions:
 
 ==========
@@ -19,6 +19,7 @@ Conditions
 Reference
 =========
 
+.. index:: Conditions; Variables
 .. _condition-variables:
 
 Variables
@@ -26,6 +27,7 @@ Variables
 
 The following variables are available. The values are context related.
 
+.. index:: Conditions; applicationContext
 .. _condition-applicationContext:
 
 applicationContext
@@ -47,6 +49,8 @@ applicationContext
 
       [applicationContext == "Development"]
 
+
+.. index:: Conditions; page
 .. _condition-page:
 
 page
@@ -66,6 +70,8 @@ page
 
       [page["uid"] == 2]
 
+
+.. index:: Conditions; Constant
 .. _condition-constant:
 
 Constant
@@ -91,6 +97,8 @@ Constant
 
       ["{$foo.bar}" == "4711"]
 
+
+.. index:: Conditions; tree
 .. _condition-tree:
 
 tree
@@ -104,6 +112,11 @@ tree
 
 :aspect:`Description`
    Object with tree information.
+
+
+.. index::
+   Conditions; tree.level
+   Conditions; Page level
 
 .. _condition-tree-level:
 
@@ -125,6 +138,8 @@ tree.level
       [tree.level == 0]
 
 
+
+.. index:: Conditions; tree.pagelayout
 .. _condition-tree-pagelayout:
 
 tree.pagelayout
@@ -158,6 +173,9 @@ tree.pagelayout
          page.1.value = Layout Home
       [END]
 
+
+.. index::
+   Conditions; tree.rootLine
 .. _condition-tree-rootLine:
 
 tree.rootLine
@@ -177,6 +195,10 @@ tree.rootLine
 
       [tree.rootLine[0]["uid"] == 1]
 
+
+.. index::
+   Conditions; tree.rootLineIds
+   Conditions; Pid in rootline
 .. _condition-tree-rootLineIds:
 
 tree.rootLineIds
@@ -196,6 +218,10 @@ tree.rootLineIds
 
       [2 in tree.rootLineIds]
 
+
+.. index::
+   Conditions; tree.rootLineParentIds
+   Conditions; Pid up in rootline
 .. _condition-tree-rootLineParentIds:
 
 tree.rootLineParentIds
@@ -221,6 +247,8 @@ tree.rootLineParentIds
 
       [2 in tree.rootLineParentIds]
 
+
+.. index:: Conditions; backend
 .. _condition-backend:
 
 backend
@@ -235,6 +263,8 @@ backend
 :aspect:`Description`
    Object with backend information.
 
+
+.. index:: Conditions; backend.user
 .. _condition-backend-user:
 
 backend.user
@@ -249,6 +279,10 @@ backend.user
 :aspect:`Description`
    Object with current backend user information.
 
+
+.. index::
+   Conditions; backend.user.isAdmin
+   Conditions; Admin logged in
 .. _condition-backend-user-isAdmin:
 
 backend.user.isAdmin
@@ -268,6 +302,8 @@ backend.user.isAdmin
 
       [backend.user.isAdmin]
 
+
+.. index:: Conditions; backend.user.isLoggedIn
 .. _condition-backend-user-isLoggedIn:
 
 backend.user.isLoggedIn
@@ -288,6 +324,7 @@ backend.user.isLoggedIn
       [backend.user.isLoggedIn]
 
 
+.. index:: Conditions; backend.user.userId
 .. _condition-backend-user-userId:
 
 backend.user.userId
@@ -308,6 +345,7 @@ backend.user.userId
       [backend.user.userId == 5]
 
 
+.. index:: Conditions; backend.user.userGroupList
 .. _condition-backend-user-userGroupList:
 
 backend.user.userGroupList
@@ -328,6 +366,7 @@ backend.user.userGroupList
       [like(","~backend.user.userGroupList~",", "*,1,*")]
 
 
+.. index:: Conditions; frontend
 .. _condition-frontend:
 
 frontend
@@ -342,6 +381,8 @@ frontend
 :aspect:`Description`
    object with frontend information (available in FE only)
 
+
+.. index:: Conditions; frontend.user
 .. _condition-frontend-user:
 
 frontend.user
@@ -357,6 +398,7 @@ frontend.user
    Object with current frontend user information.
 
 
+.. index:: Conditions; frontend.user.isLoggedIn
 .. _condition-frontend-user-isLoggedIn:
 
 frontend.user.isLoggedIn
@@ -377,6 +419,7 @@ frontend.user.isLoggedIn
       [frontend.user.isLoggedIn]
 
 
+.. index:: Conditions; frontend.user.userId
 .. _condition-frontend-user-userId:
 
 frontend.user.userId
@@ -397,6 +440,7 @@ frontend.user.userId
       [frontend.user.userId == 5]
 
 
+.. index:: Conditions; frontend.user.userGroupList
 .. _condition-frontend-user-userGroupList:
 
 frontend.user.userGroupList
@@ -417,6 +461,7 @@ frontend.user.userGroupList
       [like(","~frontend.user.userGroupList~",", "*,1,*")]
 
 
+.. index:: Conditions; workspace
 .. _condition-workspace:
 
 workspace
@@ -435,6 +480,7 @@ workspace
    object with workspace information
 
 
+.. index:: Conditions; workspace.workspaceId
 .. _condition-workspace-workspaceId:
 
 workspace.workspaceId
@@ -459,6 +505,7 @@ workspace.workspaceId
       [workspace.workspaceId == 0]
 
 
+.. index:: Conditions; workspace.isLive
 .. _condition-workspace-isLive:
 
 workspace.isLive
@@ -483,6 +530,7 @@ workspace.isLive
       [workspace.isLive]
 
 
+.. index:: Conditions; workspace.isOffline
 .. _condition-workspace-isOffline:
 
 workspace.isOffline
@@ -507,6 +555,7 @@ workspace.isOffline
       [workspace.isOffline]
 
 
+.. index:: Conditions; typo3
 .. _condition-typo3:
 
 typo3
@@ -522,6 +571,7 @@ typo3
    object with TYPO3 related information
 
 
+.. index:: Conditions; typo3.version
 .. _condition-typo3-version:
 
 typo3.version
@@ -541,6 +591,8 @@ typo3.version
 
       [typo3.version == "9.5.5"]
 
+
+.. index:: Conditions; typo3.branch
 .. _condition-typo3-branch:
 
 typo3.branch
@@ -560,6 +612,8 @@ typo3.branch
 
       [typo3.branch == "9.5"]
 
+
+.. index:: Conditions; typo3.devIpMask
 .. _condition-typo3-devIpMask:
 
 typo3.devIpMask
@@ -579,6 +633,8 @@ typo3.devIpMask
 
       [typo3.devIpMask == "172.18.0.6"]
 
+
+.. index:: Conditions; Functions
 .. _condition-functions-in-all-contexts:
 
 Functions in all contexts
@@ -587,6 +643,8 @@ Functions in all contexts
 Functions take over the logic of the old conditions which do more than a simple comparison check.
 The following functions are available in **any** context:
 
+
+.. index:: Conditions; request
 .. _condition-function-request:
 
 request
@@ -601,6 +659,8 @@ request
 :aspect:`Description`
    Allows to fetch information from current request.
 
+
+.. index:: Conditions; request.getQueryParams()
 .. _condition-function-request-getQueryParams():
 
 request.getQueryParams()
@@ -642,6 +702,8 @@ request.getQueryParams()
 
       [traverse(request.getQueryParams(), 'tx_news_pi1/news') > 0]
 
+
+.. index:: Conditions; request.getParsedBody()
 .. _condition-function-request-getParsedBody():
 
 request.getParsedBody()
@@ -665,6 +727,8 @@ request.getParsedBody()
 
       [request.getParsedBody()['foo'] == 1]
 
+
+.. index:: Conditions; request.getHeaders()
 .. _condition-function-request-getHeaders():
 
 request.getHeaders()
@@ -692,6 +756,8 @@ request.getHeaders()
       [request.getHeaders()['host'][0] == 'www.typo3lexikon.de']
 
 
+
+.. index:: Conditions; request.getCookieParams()
 .. _condition-function-request-getCookieParams():
 
 request.getCookieParams()
@@ -715,6 +781,7 @@ request.getCookieParams()
       [request.getCookieParams()['foo'] == 1]
 
 
+.. index:: Conditions; request.getNormalizedParams()
 .. _condition-function-request-getNormalizedParams():
 
 request.getNormalizedParams()
@@ -816,6 +883,7 @@ request.getNormalizedParams()
 
 
 
+.. index:: Conditions; request.getPageArguments()
 .. _condition-function-request-getPageArguments():
 
 request.getPageArguments()
@@ -839,6 +907,8 @@ request.getPageArguments()
    Allows migration from old condition syntax using `[globalVar = GP:singlepartner > 0]`
    to `[request.getPageArguments().get('singlepartner') > 0]`.
 
+
+.. index:: Conditions; date
 .. _condition-function-date:
 
 date
@@ -876,6 +946,8 @@ date
 
       [date("G") == 7]
 
+
+.. index:: Conditions; like
 .. _condition-function-like:
 
 like
@@ -912,6 +984,8 @@ like
 
       [like("fooBarBaz", "/f[o]{2,2}[aBrz]+/")]
 
+
+.. index:: Conditions; traverse
 .. _condition-function-traverse:
 
 traverse
@@ -941,6 +1015,8 @@ traverse
       [traverse(request.getQueryParams(), 'tx_news_pi1/news') > 0]
 
 
+
+.. index:: Conditions; ip
 .. _condition-function-ip:
 
 ip
@@ -967,6 +1043,8 @@ ip
 
       [ip("devIP")]
 
+
+.. index:: Conditions; compatVersion
 .. _condition-function-compatVersion:
 
 compatVersion
@@ -997,6 +1075,8 @@ compatVersion
 
       [compatVersion("9.5.1")]
 
+
+.. index:: Conditions; loginUser
 .. _condition-function-loginUser:
 
 loginUser
@@ -1034,6 +1114,8 @@ loginUser
 
       [loginUser('*') == false]
 
+
+.. index:: Conditions; getTSFE
 .. _condition-function-getTSFE:
 
 getTSFE
@@ -1055,6 +1137,8 @@ getTSFE
 
       [getTSFE().type == 98]
 
+
+.. index:: Conditions; getenv
 .. _condition-function-getenv:
 
 getenv
@@ -1074,6 +1158,8 @@ getenv
 
       [getenv("VIRTUAL_HOST") == "docs.typo3.org"]
 
+
+.. index:: Conditions; feature
 .. _condition-function-feature:
 
 feature
@@ -1093,6 +1179,8 @@ feature
 
       [feature("TypoScript.strictSyntax") === false]
 
+
+.. index:: Conditions; usergroup
 .. _condition-function-usergroup:
 
 usergroup
@@ -1126,6 +1214,8 @@ usergroup
 
       [usergroup("12,15,18")]
 
+
+.. index:: Conditions; Functions frontend
 .. _condition-functions-in-frontend-context:
 
 Functions in frontend context
@@ -1133,6 +1223,8 @@ Functions in frontend context
 
 The following functions are only available in **frontend** context:
 
+
+.. index:: Conditions; session
 .. _condition-functions-in-frontend-context-function-session:
 
 session
@@ -1160,6 +1252,8 @@ session
 
       [session("foo|bar") == 1234567]
 
+
+.. index:: Conditions; site
 .. _condition-functions-in-frontend-context-function-site:
 
 site
@@ -1222,6 +1316,8 @@ site
 
       [site("configuration")["enabled"] == true]
 
+
+.. index:: Conditions; siteLanguage
 .. _condition-functions-in-frontend-context-function-siteLanguage:
 
 siteLanguage

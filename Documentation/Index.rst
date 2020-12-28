@@ -1,10 +1,11 @@
 .. include:: Includes.txt
-
-
+.. index::
+   TypoScript
+   TSref
 .. _start:
 
 =============================
-TypoScript Template Reference
+TypoScript template reference
 =============================
 
 .. rst-class:: horizbuttons-primary-m
@@ -24,7 +25,8 @@ TypoScript Template Reference
       en
 
 :Description:
-      The TypoScript Template Reference (TSref) is a true reference describing the core Content Objects and functions available for Template building using the TypoScript template engine.
+      The TypoScript template reference (TSref) is a true reference describing the Core content objects and functions
+      available for template building using the TypoScript template engine.
 
 :Keywords:
       forAdmins, forIntermediates
@@ -46,9 +48,10 @@ a GNU/GPL CMS/Framework available from https://typo3.org/.
 
 -  :ref:`Sitemap`
 
+
 .. _about-tsref:
 
-About This Manual
+About this manual
 =================
 
 This document is a complete reference to all objects types and properties of
@@ -66,7 +69,7 @@ TypoScript as used in frontend TypoScript templates, and not in :ref:`TSconfig <
 
 .. _version-numbers:
 
-Version Numbers
+Version numbers
 ===============
 
 This document always refers to the latest released TYPO3 version. For older versions,
@@ -79,7 +82,7 @@ version 7.6 at least.
 
 .. _case-sensitivity:
 
-Case Sensitivity
+Case sensitivity
 ================
 
 All names and references in TypoScript are **case sensitive!** This
@@ -114,18 +117,18 @@ Documentation Team (documentation@typo3.org). Official documents are
 kept up-to-date to the best of the Documentation Team's abilities.
 
 
-Core Manual
+Core manual
 ===========
 
-This document is a Core Manual. Core Manuals address the built in
+This document is a Core manual. Core manuals address the built in
 functionality of TYPO3 and are designed to provide the reader with in-
-depth information. Each Core Manual addresses a particular process or
+depth information. Each Core manual addresses a particular process or
 function and how it is implemented within the TYPO3 source code. These
 may include information on available APIs, specific configuration
 options, etc.
 
-Core Manuals are written as reference manuals. The reader should rely
-on the Table of Contents to identify what particular section will best
+Core manuals are written as reference manuals. The reader should rely
+on the table of contents to identify what particular section will best
 address the task at hand.
 
 
