@@ -288,16 +288,13 @@ cache
          To include records of type <table name> on page <pid> into the cache
          lifetime calculation of page <page-id>, add the following TypoScript::
 
-            config.cache.<page-id> = <table name>:<storage-pid>
+            config.cache.<page-id> = <table name>:<pid>
 
          Multiple record sources can be added as comma-separated list, see the
          examples.
 
          You can use the keyword "all" instead of a <page-id> to consider
          records for the cache lifetime of all pages.
-
-         You can use the keyword "current" instead of a <storage-pid> to consider
-         records on the current page for the cache life of it-self.
 
    Examples
          This includes the fe\_users records on page 2 in the cache lifetime
@@ -310,15 +307,10 @@ cache
 
             config.cache.10 = fe_users:2,tt_news:11
 
-         Consider the fe\_user records on the storage page 2 for the cache lifetime of all
+         Consider the fe\_user records on page 2 for the cache lifetime of all
          pages::
 
             config.cache.all = fe_users:2
-
-         Each pages cache lifetime is influenced if fe_users stored on the page itself get
-         changed::
-
-            config.cache.all = fe_users:current
 
 
 
