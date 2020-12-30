@@ -187,24 +187,9 @@ addQueryString
 
       With version 10.0 a breaking change was introduced. Setting
       :typoscript:`addQueryString.method` to any value but :typoscript:`GET` will
-      trigger a `E_USER_WARNING`. Any POST-parameters will be ignored. Formerly this option
-      was set to :typoscript:`POST` or some combination in order to forward
-      POST-parameters as GET parameters.
-
-      In terms of correctly using HTTP verbs it’s bad practise in
-      general to treat GET and POST equally, besides that documentation
-      already mentioned potential side-effects like accidentally exposing
-      sensitive data submitted via POST to proxies or log files.
-
-      That’s why values :typoscript:`POST`, :typoscript:`GET,POST` and
-      :typoscript:`POST,GET` are not allowed anymore
-      for typolink.addQueryString.method. Maintaining functionality - if
-      required at all - has to be done using domain specific logic in
-      according controllers or middleware implementations.
-
-      Setting :typoscript:`addQueryString.method = GET` will forward GET
-      parameters and have the same functionality like not setting it at all.
-
+      trigger a `E_USER_WARNING`. Any POST-parameters will be ignored. Maintaining
+      functionality - if required at all - has to be done using domain specific
+      logic in according controllers or middleware implementations.
 
    .exclude
       List of query arguments to exclude from the link. Typical examples
