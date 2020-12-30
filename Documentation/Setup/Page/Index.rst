@@ -612,6 +612,12 @@ includeJS.[array]
          not be included. Extensive usage might cause huge numbers of temporary
          files to be created. See ->if for details.
 
+         **nomodule**: When set the `HTML5 attribute nomodule
+         <https://html.spec.whatwg.org/multipage/scripting.html#attr-script-nomodule>`__
+         is is added. This prevents a script from being executed in user agents
+         that support module scripts, allowing selective execution of module scripts
+         in modern user agents and classic scripts in older user agents.
+
          **type**: Setting the MIME type of the script. Default: The attribute is
          omitted for frontend rendering when :ts:`config.doctype` is not set or
          set to :ts:`html5`. Otherwise :html:`text/javascript` is used as type.
@@ -637,6 +643,8 @@ includeJS.[array]
                 jquery.integrity = sha384-vk5WoKIaW/vJyUAd9n/wmopsmNhiy+L2Z+SBxGYnUkunIxVxAv/UtMOhba/xskxh
             }
 
+.. versionchanged:: 10.2
+   The option :typoscript:`nomodule` option was added.
 
 
 .. _setup-page-includejsfooter-array:
