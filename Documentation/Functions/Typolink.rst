@@ -183,17 +183,28 @@ addQueryString
    not check for any duplicate parameters! This is not a problem: Only
    the last parameter of the same name will be applied.
 
-   .method
-      If set to GET or POST, then the parsed query arguments
-      (GET or POST data) will be used. This setting is useful, if you use
-      URL processing extensions like Real URL, which translate part of the
-      path into query arguments.
+   .. versionchanged:: 10.0
 
-      It's also possible to get both, POST and GET data, on setting this to
+      With version 10.0 a breaking change was introduced. Setting
+      :typoscript:`addQueryString.method` to any value but :typoscript:`GET` will
+      trigger a `E_USER_WARNING`. Any POST-parameters will be ignored. Formerly this option
+      was set to :typoscript:`POST` or some combination in order to forward
+      POST-parameters as GET parameters.
 
-      "POST,GET" or "GET,POST". The last method in this sequence takes
-      precedence and overwrites the parts that are also present for the
-      first method.
+      In terms of correctly using HTTP verbs it’s bad practise in
+      general to treat GET and POST equally, besides that documentation
+      already mentioned potential side-effects like accidentally exposing
+      sensitive data submitted via POST to proxies or log files.
+
+      That’s why values :typoscript:`POST`, :typoscript:`GET,POST` and
+      :typoscript:`POST,GET` are not allowed anymore
+      for typolink.addQueryString.method. Maintaining functionality - if
+      required at all - has to be done using domain specific logic in
+      according controllers or middleware implementations.
+
+      Setting :typoscript:`addQueryString.method = GET` will forward GET
+      parameters and have the same functionality like not setting it at all.
+
 
    .exclude
       List of query arguments to exclude from the link. Typical examples
@@ -203,7 +214,7 @@ addQueryString
 
       This property should not be used for cached contents without a valid
       cHash. Otherwise the page is cached for the first set of parameters
-      and subsubsequently taken from the cache no matter what parameters
+      and subsequently taken from the cache no matter what parameters
       are given. Additionally the security risk of cache poisoning has to
       be considered.
 
