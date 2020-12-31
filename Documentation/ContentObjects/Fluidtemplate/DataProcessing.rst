@@ -205,6 +205,31 @@ In the Fluid template then iterate over the files:
       </f:for>
    </ul>
 
+
+Example: use stdWrap property on references
+-------------------------------------------
+
+.. versionadded:: 10.3
+
+   :ref:`stdWrap` properties added to the :php:`FilesProcessor`.
+
+The following example implements a slide-functionality on rootline
+for file resources::
+
+   page.10.dataProcessing {
+      10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+      10 {
+         references.data = levelmedia: -1, slide
+         as = myfiles
+      }
+   }
+
+The :php:`FilesProcessor` can slide up the rootline to collect
+images for FLUID templates. One usual feature is to use images
+attached to pages and use them down the page tree for
+header images in the frontend.
+
+
 .. _GalleryProcessor:
 
 GalleryProcessor
