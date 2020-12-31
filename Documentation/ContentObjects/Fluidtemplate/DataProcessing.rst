@@ -224,10 +224,10 @@ for file resources::
       }
    }
 
-The :php:`FilesProcessor` can slide up and down the rootline to collect
+The :php:`FilesProcessor` can slide up the rootline to collect
 images for FLUID templates. One usual feature is to use images
-attached to pages and use them up and down the page tree for
-header images in frontend.
+attached to pages and use them down the page tree for
+header images in the frontend.
 
 
 .. _GalleryProcessor:
