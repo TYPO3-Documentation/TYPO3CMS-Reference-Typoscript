@@ -40,8 +40,11 @@ references
 
    The corresponding file records are added to the output array.
 
-references.fieldName
+   .. versionadded:: 10.3
 
+      :ref:`stdWrap` properties got added to the references property .
+
+references.fieldName
    :sep:`|` :aspect:`Required:` false
    :sep:`|` :aspect:`Type:` string, :ref:`stdWrap`
    :sep:`|` :aspect:`Default:` ''
@@ -54,7 +57,6 @@ references.fieldName
 
 
 references.table
-
    :sep:`|` :aspect:`Required:` false
    :sep:`|` :aspect:`Type:` string, :ref:`stdWrap`
    :sep:`|` :aspect:`Default:` ''
@@ -90,22 +92,21 @@ collections
 folders
    :sep:`|` :aspect:`Required:` false
    :sep:`|` :aspect:`Type:` string (comma separated folders), :ref:`stdWrap`
-   :sep:`|` :aspect:`Default:` ''
-   :sep:`|` :aspect:`Example:` 't3://folder?storage=2&identifier=/my/folder/,23:/other/folder/'
+   :sep:`|` :aspect:`Default:` ""
+   :sep:`|` :aspect:`Example:` "23:/other/folder/"
    :sep:`|`
 
    Fetches all files from the referenced folders. The following syntax is possible:
 
    * `t3://folder?storage=2&identifier=/my/folder/` folder "/my/folder/" from storage with uid 2
    * `23:/other/folder/` folder "/other/folder/" from storage with uid 23
-   * `/folderInMyFileadmin/something/` folder "/folderInMyFileadmin/something/" from the default
-      storage 0 (fileadmin)
+   * `/folderInMyFileadmin/something/` folder "/folderInMyFileadmin/something/" from the default storage 0 (fileadmin)
 
 folders.recursive
    :sep:`|` :aspect:`Required:` false
    :sep:`|` :aspect:`Type:` string, :ref:`stdWrap`
-   :sep:`|` :aspect:`Default:`  ''
-   :sep:`|` :aspect:`Example:` '1'
+   :sep:`|` :aspect:`Default:`  ""
+   :sep:`|` :aspect:`Example:` "1"
    :sep:`|`
 
    If set to a non-empty value file records will be added from folders recursively.
@@ -114,8 +115,8 @@ folders.recursive
 sorting
    :sep:`|` :aspect:`Required:` false
    :sep:`|` :aspect:`Type:` string, :ref:`stdWrap`
-   :sep:`|` :aspect:`Default:`  ''
-   :sep:`|` :aspect:`Example:` 'filesize'
+   :sep:`|` :aspect:`Default:`  ""
+   :sep:`|` :aspect:`Example:` "filesize"
    :sep:`|`
 
    The property of the file records by which they should be sorted. For example
@@ -125,8 +126,8 @@ sorting
 sorting.direction
    :sep:`|` :aspect:`Required:` false
    :sep:`|` :aspect:`Type:` string, :ref:`stdWrap`
-   :sep:`|` :aspect:`Default:`  'ascending'
-   :sep:`|` :aspect:`Example:` 'descending'
+   :sep:`|` :aspect:`Default:`  "ascending"
+   :sep:`|` :aspect:`Example:` "descending"
    :sep:`|`
 
    The sorting direction ('ascending' or 'descending')
@@ -134,7 +135,7 @@ sorting.direction
 as
    :sep:`|` :aspect:`Required:` false
    :sep:`|` :aspect:`Type:` string, :ref:`stdWrap`
-   :sep:`|` :aspect:`Default:` 'files'
+   :sep:`|` :aspect:`Default:` "files"
    :sep:`|`
 
    Name the variable in the Fluid template will have
@@ -142,7 +143,7 @@ as
 dataProcessing
    :sep:`|` :aspect:`Required:` false
    :sep:`|` :aspect:`Type:` array of :ref:`dataProcessing`
-   :sep:`|` :aspect:`Default:` ''
+   :sep:`|` :aspect:`Default:` ""
    :sep:`|`
 
    Array of DataProcessors to be applied to all fetched records.
