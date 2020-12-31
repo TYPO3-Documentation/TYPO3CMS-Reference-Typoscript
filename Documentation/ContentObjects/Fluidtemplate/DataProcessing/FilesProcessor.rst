@@ -5,9 +5,150 @@
 FilesProcessor
 ==============
 
-The :php:`FilesProcessor` resolves file references, files, or files inside a
-folder or collection to be used for output in the frontend. A
-:ts:`FLUIDTEMPLATE` can then simply iterate over processed data automatically.
+This data processor can be used for processing file information:
+
+* relations to file records (sys_file_reference)
+* fetch files records by their uids in table (sys_file)
+* all files from a certain folder
+* all files from a collection
+
+A :ts:`FLUIDTEMPLATE` can then simply iterate over processed data automatically.
+
+
+Options:
+========
+
+.. rst-class:: dl-parameters
+
+if
+   :sep:`|` :aspect:`Required:` false
+   :sep:`|` :aspect:`Type:` :ref:`if` condition
+   :sep:`|` :aspect:`Default:` ''
+   :sep:`|`
+
+   If the condition is not met the data is not processed
+
+references
+   :sep:`|` :aspect:`Required:` false
+   :sep:`|` :aspect:`Type:` string (comma separated integers), :ref:`stdWrap`
+   :sep:`|` :aspect:`Default:` ''
+   :sep:`|` :aspect:`Example:` '1,303,42'
+   :sep:`|`
+
+   If this option contains a comma separated list
+   of integers these are treated as uids of file references (sys_file_reference).
+
+   The corresponding file records are added to the output array.
+
+references.fieldName
+
+   :sep:`|` :aspect:`Required:` false
+   :sep:`|` :aspect:`Type:` string, :ref:`stdWrap`
+   :sep:`|` :aspect:`Default:` ''
+   :sep:`|` :aspect:`Example:` 'media'
+   :sep:`|`
+
+   If both `references.fieldName` and `references.table` are set the file records
+   are fetched from the referenced table and field, for example the `media` field
+   of a `tt_content` record.
+
+
+references.table
+
+   :sep:`|` :aspect:`Required:` false
+   :sep:`|` :aspect:`Type:` string, :ref:`stdWrap`
+   :sep:`|` :aspect:`Default:` ''
+   :sep:`|` :aspect:`Example:` 'tt_content'
+   :sep:`|`
+
+   If :typoscript:`references` should be interpreted as TypoScript
+   :ref:`select` function, references.fieldName must be set to the
+   desired field's name of the table to be queried.
+
+files
+   :sep:`|` :aspect:`Required:` false
+   :sep:`|` :aspect:`Type:` string (comma separated integers), :ref:`stdWrap`
+   :sep:`|` :aspect:`Default:` ''
+   :sep:`|` :aspect:`Example:` '1,303,42'
+   :sep:`|`
+
+   If this option contains a comma separated list of integers,
+   these are treated as uids of files (sys_files).
+
+collections
+   :sep:`|` :aspect:`Required:` false
+   :sep:`|` :aspect:`Type:` string (comma separated integers), :ref:`stdWrap`
+   :sep:`|` :aspect:`Default:` ''
+   :sep:`|` :aspect:`Example:` '1,303,42'
+   :sep:`|`
+
+   If this option contains a comma separated list of integers,
+   these are treated as uids of collections. The file records in each
+   collection are then being added to the the output array.
+
+
+folders
+   :sep:`|` :aspect:`Required:` false
+   :sep:`|` :aspect:`Type:` string (comma separated folders), :ref:`stdWrap`
+   :sep:`|` :aspect:`Default:` ''
+   :sep:`|` :aspect:`Example:` 't3://folder?storage=2&identifier=/my/folder/,23:/other/folder/'
+   :sep:`|`
+
+   Fetches all files from the referenced folders. The following syntax is possible:
+
+   * `t3://folder?storage=2&identifier=/my/folder/` folder "/my/folder/" from storage with uid 2
+   * `23:/other/folder/` folder "/other/folder/" from storage with uid 23
+   * `/folderInMyFileadmin/something/` folder "/folderInMyFileadmin/something/" from the default
+      storage 0 (fileadmin)
+
+folders.recursive
+   :sep:`|` :aspect:`Required:` false
+   :sep:`|` :aspect:`Type:` string, :ref:`stdWrap`
+   :sep:`|` :aspect:`Default:`  ''
+   :sep:`|` :aspect:`Example:` '1'
+   :sep:`|`
+
+   If set to a non-empty value file records will be added from folders recursively.
+
+
+sorting
+   :sep:`|` :aspect:`Required:` false
+   :sep:`|` :aspect:`Type:` string, :ref:`stdWrap`
+   :sep:`|` :aspect:`Default:`  ''
+   :sep:`|` :aspect:`Example:` 'filesize'
+   :sep:`|`
+
+   The property of the file records by which they should be sorted. For example
+   filesize or title.
+
+
+sorting.direction
+   :sep:`|` :aspect:`Required:` false
+   :sep:`|` :aspect:`Type:` string, :ref:`stdWrap`
+   :sep:`|` :aspect:`Default:`  'ascending'
+   :sep:`|` :aspect:`Example:` 'descending'
+   :sep:`|`
+
+   The sorting direction ('ascending' or 'descending')
+
+as
+   :sep:`|` :aspect:`Required:` false
+   :sep:`|` :aspect:`Type:` string, :ref:`stdWrap`
+   :sep:`|` :aspect:`Default:` 'files'
+   :sep:`|`
+
+   Name the variable in the Fluid template will have
+
+dataProcessing
+   :sep:`|` :aspect:`Required:` false
+   :sep:`|` :aspect:`Type:` array of :ref:`dataProcessing`
+   :sep:`|` :aspect:`Default:` ''
+   :sep:`|`
+
+   Array of DataProcessors to be applied to all fetched records.
+
+Examples
+========
 
 Using the :php:`FilesProcessor` the following scenario is possible::
 
