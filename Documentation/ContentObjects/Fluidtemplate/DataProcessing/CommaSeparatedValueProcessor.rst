@@ -14,11 +14,7 @@ before it is passed to the view.
 
 
 Options:
-
-:`if`:         TypoScript if condition
-:`languages`:  A list of comma separated language IDs (e.g. 0,1,2) to use
-               for the menu creation or `auto` to load from site languages
-:`as`:         The variable to be used within the result
+========
 
 .. rst-class:: dl-parameters
 
@@ -84,7 +80,7 @@ An example of such a field is "bodytext" in the CType "table".
 Example field data:
 -------------------
 
-.. code-block::csv
+Field :php:`bodytext` in table :php:`tt_content`::
 
    This is row 1 column 1|This is row 1 column 2|This is row 1 column 3
    This is row 2 column 1|This is row 2 column 2|This is row 2 column 3
