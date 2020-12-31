@@ -183,6 +183,14 @@ addQueryString
    not check for any duplicate parameters! This is not a problem: Only
    the last parameter of the same name will be applied.
 
+   .. versionchanged:: 10.0
+
+      With version 10.0 a breaking change was introduced. Setting
+      :typoscript:`addQueryString.method` to any value but :typoscript:`GET` will
+      trigger a `E_USER_WARNING`. Any POST-parameters will be ignored. Maintaining
+      functionality - if required at all - has to be done using domain specific
+      logic in according controllers or middleware implementations.
+
    .exclude
       List of query arguments to exclude from the link. Typical examples
       are 'L' or 'cHash'.
