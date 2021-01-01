@@ -14,42 +14,40 @@ used to fetch the files.
 Options:
 ========
 
-.. rst-class:: dl-parameters
+.. confval:: if
 
-if
-   :sep:`|` :aspect:`Required:` false
-   :sep:`|` :aspect:`Type:` :ref:`if` condition
-   :sep:`|` :aspect:`Default:` ''
-   :sep:`|`
+   :Required: false
+   :type: :ref:`if` condition
+   :default: ''
 
    If the condition is not met the data is not processed
 
-filesProcessedDataKey
-   :sep:`|` :aspect:`Required:` true
-   :sep:`|` :aspect:`Type:` string, :ref:`stdWrap`
-   :sep:`|` :aspect:`Default:` 'files'
-   :sep:`|` :aspect:`Example:` 'myImages'
-   :sep:`|`
+.. confval:: filesProcessedDataKey
+
+   :Required: true
+   :type: string, :ref:`stdWrap`
+   :default: 'files'
+   :Example: 'myImages'
 
    Key of the array previously processed by the
    FilesProcessor
 
-numberOfColumns
-   :sep:`|` :aspect:`Required:` false
-   :sep:`|` :aspect:`Type:` int, :ref:`stdWrap`
-   :sep:`|` :aspect:`Default:` field:imagecols
-   :sep:`|` :aspect:`Example:` 4
-   :sep:`|`
+.. confval:: numberOfColumns
+
+   :Required: false
+   :type: int, :ref:`stdWrap`
+   :default: field:imagecols
+   :Example: 4
 
    Expects the desired number of columns. Defaults to the value of the field
    `imagecols` / "Number of Columns" if used with content elements.
 
-mediaOrientation
-   :sep:`|` :aspect:`Required:` false
-   :sep:`|` :aspect:`Type:` int, :ref:`stdWrap`
-   :sep:`|` :aspect:`Default:` field:imageorient
-   :sep:`|` :aspect:`Example:` 2
-   :sep:`|`
+.. confval:: mediaOrientation
+
+   :Required: false
+   :type: int, :ref:`stdWrap`
+   :default: field:imageorient
+   :Example: 2
 
    Expects the image orientation as used in the field imageorient
    in content elements such as text with images. Defaults to the value of the field
@@ -59,28 +57,28 @@ mediaOrientation
       :alt: Media orientation in the content elements such as text with images
       :class: with-shadow
 
-maxGalleryWidth
-   :sep:`|` :aspect:`Required:` false
-   :sep:`|` :aspect:`Type:` int, :ref:`stdWrap`
-   :sep:`|` :aspect:`Default:` 600
-   :sep:`|`
+.. confval:: maxGalleryWidth
+
+   :Required: false
+   :type: int, :ref:`stdWrap`
+   :default: 600
 
    Maximal gallery width in pixels
 
-maxGalleryWidthInText
-   :sep:`|` :aspect:`Required:` false
-   :sep:`|` :aspect:`Type:` int, :ref:`stdWrap`
-   :sep:`|` :aspect:`Default:` 300
-   :sep:`|`
+.. confval:: maxGalleryWidthInText
+
+   :Required: false
+   :type: int, :ref:`stdWrap`
+   :default: 300
 
    Maximal gallery width in pixels if displayed in a text
 
-equalMediaHeight, equalMediaWidth
-   :sep:`|` :aspect:`Required:` false
-   :sep:`|` :aspect:`Type:` int, :ref:`stdWrap`
-   :sep:`|` :aspect:`Default:` field:imageheight, field:imagewidth
-   :sep:`|` :aspect:`Example:` 300
-   :sep:`|`
+.. confval:: equalMediaHeight, equalMediaWidth
+
+   :Required: false
+   :type: int, :ref:`stdWrap`
+   :default: field:imageheight, field:imagewidth
+   :Example: 300
 
    If set all images get scaled to a uniform height / width. Defaults
    to the value of the fields `imageheight` / "Height of each element (px)",
@@ -91,67 +89,66 @@ equalMediaHeight, equalMediaWidth
       :alt: Media height and width in the content element Text and Images
       :class: with-shadow
 
-columnSpacing
-   :sep:`|` :aspect:`Required:` false
-   :sep:`|` :aspect:`Type:` int, :ref:`stdWrap`
-   :sep:`|` :aspect:`Default:` 0
-   :sep:`|` :aspect:`Example:` 4
-   :sep:`|`
+.. confval:: columnSpacing
+
+   :Required: false
+   :type: int, :ref:`stdWrap`
+   :default: 0
+   :Example: 4
 
    Space between columns in pixels
 
-borderEnabled
-   :sep:`|` :aspect:`Required:` false
-   :sep:`|` :aspect:`Type:` int, :ref:`stdWrap`
-   :sep:`|` :aspect:`Default:` field:imageborder
-   :sep:`|` :aspect:`Example:` 1
-   :sep:`|`
+.. confval:: borderEnabled
+
+   :Required: false
+   :type: int, :ref:`stdWrap`
+   :default: field:imageborder
+   :Example: 1
 
    Should there be a border around the images? Defaults
    to the value of the fields `imageborder` / "Number of Columns"
    if used with content elements.
 
 
-borderWidth
-   :sep:`|` :aspect:`Required:` false
-   :sep:`|` :aspect:`Type:` int, :ref:`stdWrap`
-   :sep:`|` :aspect:`Default:` 0
-   :sep:`|` :aspect:`Example:` 2
-   :sep:`|`
+.. confval:: borderWidth
+
+   :Required: false
+   :type: int, :ref:`stdWrap`
+   :default: 0
+   :Example: 2
 
    Width of the border in pixels
 
-borderPadding
-   :sep:`|` :aspect:`Required:` false
-   :sep:`|` :aspect:`Type:` int, :ref:`stdWrap`
-   :sep:`|` :aspect:`Default:` 0
-   :sep:`|` :aspect:`Example:` 20
-   :sep:`|`
+.. confval:: borderPadding
+
+   :Required: false
+   :type: int, :ref:`stdWrap`
+   :default: 0
+   :Example: 20
 
    padding around the border in pixels
 
-cropVariant
-   :sep:`|` :aspect:`Required:` false
-   :sep:`|` :aspect:`Type:` int, :ref:`stdWrap`
-   :sep:`|` :aspect:`Default:` "default"
-   :sep:`|` :aspect:`Example:`
-   :sep:`|`
+.. confval:: cropVariant
+
+   :Required: false
+   :type: int, :ref:`stdWrap`
+   :default: "default" :aspect:`Example:`
 
    See :ref:`cropt variant in the TCA reference<t3tca:columns-imageManipulation-properties-cropVariants>`
 
-as
-   :sep:`|` :aspect:`Required:` false
-   :sep:`|` :aspect:`Type:` string, :ref:`stdWrap`
-   :sep:`|` :aspect:`Default:` "files"
-   :sep:`|`
+.. confval:: as
+
+   :Required: false
+   :type: string, :ref:`stdWrap`
+   :default: "files"
 
    The variable's name to be used in the Fluid template
 
-dataProcessing
-   :sep:`|` :aspect:`Required:` false
-   :sep:`|` :aspect:`Type:` array of :ref:`dataProcessing`
-   :sep:`|` :aspect:`Default:` ""
-   :sep:`|`
+.. confval:: dataProcessing
+
+   :Required: false
+   :type: array of :ref:`dataProcessing`
+   :default: ""
 
    Array of DataProcessors to be applied to all fetched records.
 

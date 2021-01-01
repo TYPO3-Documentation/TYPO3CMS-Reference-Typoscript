@@ -13,50 +13,48 @@ Additional data processing is supported and will be applied to each record.
 Options:
 ========
 
-.. rst-class:: dl-parameters
+.. confval:: levels
 
-levels
-   :sep:`|` :aspect:`Required:` true
-   :sep:`|` :aspect:`Type:` int, :ref:`stdWrap`
-   :sep:`|` :aspect:`Default:` 1
-   :sep:`|` :aspect:`Example:` 5
-   :sep:`|`
+   :Required: true
+   :type: int, :ref:`stdWrap`
+   :default: 1
+   :Example: 5
 
-Maximal number of levels to be included in the output array
+   Maximal number of levels to be included in the output array
 
 
-expandAll
-   :sep:`|` :aspect:`Required:` true
-   :sep:`|` :aspect:`Type:` int, :ref:`stdWrap`
-   :sep:`|` :aspect:`Default:` 1
-   :sep:`|` :aspect:`Example:` 0
-   :sep:`|`
+.. confval:: expandAll
 
-Should all submenus be included or only those of the active pages?
+   :Required: true
+   :type: int, :ref:`stdWrap`
+   :default: 1
+   :Example: 0
 
-includeSpacer
-   :sep:`|` :aspect:`Required:` true
-   :sep:`|` :aspect:`Type:` int, :ref:`stdWrap`
-   :sep:`|` :aspect:`Default:` 0
-   :sep:`|` :aspect:`Example:` 1
-   :sep:`|`
+   Should all submenus be included or only those of the active pages?
 
-Include pages with type "spacer"
+.. confval:: includeSpacer
 
-titleField
-   :sep:`|` :aspect:`Required:` true
-   :sep:`|` :aspect:`Type:` int, :ref:`stdWrap`
-   :sep:`|` :aspect:`Default:` "nav_title // title"
-   :sep:`|` :aspect:`Example:` "subtitle"
-   :sep:`|`
+   :Required: true
+   :type: int, :ref:`stdWrap`
+   :default: 0
+   :Example: 1
 
-Fields to be used as title
+   Include pages with type "spacer"
 
-as
-   :sep:`|` :aspect:`Required:` false
-   :sep:`|` :aspect:`Type:` string
-   :sep:`|` :aspect:`Default:` "menu"
-   :sep:`|`
+.. confval:: titleField
+
+   :Required: true
+   :type: int, :ref:`stdWrap`
+   :default: "nav_title // title"
+   :Example: "subtitle"
+
+   Fields to be used as title
+
+.. confval:: as
+
+   :Required: false
+   :type: string
+   :default: "menu"
 
    Name the variable in the Fluid template will have
 

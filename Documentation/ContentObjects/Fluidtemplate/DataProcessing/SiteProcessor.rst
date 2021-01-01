@@ -12,13 +12,11 @@ configuration.
 Options:
 ========
 
-.. rst-class:: dl-parameters
+.. confval:: as
 
-as
-   :sep:`|` :aspect:`Required:` false
-   :sep:`|` :aspect:`Type:` string
-   :sep:`|` :aspect:`Default:` "site"
-   :sep:`|`
+   :Required: false
+   :type: string
+   :default: "site"
 
    The variable's name to be used in the Fluid template
 

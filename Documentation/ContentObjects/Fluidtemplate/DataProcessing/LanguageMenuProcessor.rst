@@ -12,31 +12,29 @@ decoded again and assigned to the :ts:`FLUIDTEMPLATE` as variable.
 Options:
 ========
 
-.. rst-class:: dl-parameters
+.. confval:: if
 
-if
-   :sep:`|` :aspect:`Required:` false
-   :sep:`|` :aspect:`Type:` :ref:`if` condition
-   :sep:`|` :aspect:`Default:` ""
-   :sep:`|`
+   :Required: false
+   :type: :ref:`if` condition
+   :default: ""
 
    If the condition is not met the data is not processed
 
-languages
-   :sep:`|` :aspect:`Required:` true
-   :sep:`|` :aspect:`Type:` string, :ref:`stdWrap`
-   :sep:`|` :aspect:`Default:` "auto"
-   :sep:`|` :aspect:`Example:` "0,1,2"
-   :sep:`|`
+.. confval:: languages
+
+   :Required: true
+   :type: string, :ref:`stdWrap`
+   :default: "auto"
+   :Example: "0,1,2"
 
    A list of comma separated language IDs (e.g. 0,1,2) to use
    for the menu creation or `auto` to load from site configuration
 
-as
-   :sep:`|` :aspect:`Required:` false
-   :sep:`|` :aspect:`Type:` string
-   :sep:`|` :aspect:`Default:` defaults to the fieldName
-   :sep:`|`
+.. confval:: as
+
+   :Required: false
+   :type: string
+   :default: defaults to the fieldName
 
    The variable's name to be used in the Fluid template
 

@@ -18,22 +18,19 @@ A :ts:`FLUIDTEMPLATE` can then simply iterate over processed data automatically.
 Options:
 ========
 
-.. rst-class:: dl-parameters
+.. confval:: if
 
-if
-   :sep:`|` :aspect:`Required:` false
-   :sep:`|` :aspect:`Type:` :ref:`if` condition
-   :sep:`|` :aspect:`Default:` ''
-   :sep:`|`
+   :Required: false
+   :type: :ref:`if` condition
+   :default: ''
 
    If the condition is not met the data is not processed
 
-references
-   :sep:`|` :aspect:`Required:` false
-   :sep:`|` :aspect:`Type:` string (comma separated integers), :ref:`stdWrap`
-   :sep:`|` :aspect:`Default:` ''
-   :sep:`|` :aspect:`Example:` '1,303,42'
-   :sep:`|`
+.. confval:: references
+
+   :Required: false
+   :type: string (comma separated integers), :ref:`stdWrap`
+   :default: '' '1,303,42'
 
    If this option contains a comma separated list
    of integers these are treated as uids of file references (sys_file_reference).
@@ -44,57 +41,57 @@ references
 
       :ref:`stdWrap` properties got added to the references property .
 
-references.fieldName
-   :sep:`|` :aspect:`Required:` false
-   :sep:`|` :aspect:`Type:` string, :ref:`stdWrap`
-   :sep:`|` :aspect:`Default:` ''
-   :sep:`|` :aspect:`Example:` 'media'
-   :sep:`|`
+.. confval:: references.fieldName
+
+   :Required: false
+   :type: string, :ref:`stdWrap`
+   :default: ''
+   :Example: 'media'
 
    If both `references.fieldName` and `references.table` are set the file records
    are fetched from the referenced table and field, for example the `media` field
    of a `tt_content` record.
 
 
-references.table
-   :sep:`|` :aspect:`Required:` false
-   :sep:`|` :aspect:`Type:` string, :ref:`stdWrap`
-   :sep:`|` :aspect:`Default:` ''
-   :sep:`|` :aspect:`Example:` 'tt_content'
-   :sep:`|`
+.. confval:: references.table
+
+   :Required: false
+   :type: string, :ref:`stdWrap`
+   :default: ''
+   :Example: 'tt_content'
 
    If :typoscript:`references` should be interpreted as TypoScript
    :ref:`select` function, references.fieldName must be set to the
    desired field's name of the table to be queried.
 
-files
-   :sep:`|` :aspect:`Required:` false
-   :sep:`|` :aspect:`Type:` string (comma separated integers), :ref:`stdWrap`
-   :sep:`|` :aspect:`Default:` ''
-   :sep:`|` :aspect:`Example:` '1,303,42'
-   :sep:`|`
+.. confval:: files
+
+   :Required: false
+   :type: string (comma separated integers), :ref:`stdWrap`
+   :default: ''
+   :Example: '1,303,42'
 
    If this option contains a comma separated list of integers,
    these are treated as uids of files (sys_files).
 
-collections
-   :sep:`|` :aspect:`Required:` false
-   :sep:`|` :aspect:`Type:` string (comma separated integers), :ref:`stdWrap`
-   :sep:`|` :aspect:`Default:` ''
-   :sep:`|` :aspect:`Example:` '1,303,42'
-   :sep:`|`
+.. confval:: collections
+
+   :Required: false
+   :type: string (comma separated integers), :ref:`stdWrap`
+   :default: ''
+   :Example: '1,303,42'
 
    If this option contains a comma separated list of integers,
    these are treated as uids of collections. The file records in each
    collection are then being added to the the output array.
 
 
-folders
-   :sep:`|` :aspect:`Required:` false
-   :sep:`|` :aspect:`Type:` string (comma separated folders), :ref:`stdWrap`
-   :sep:`|` :aspect:`Default:` ""
-   :sep:`|` :aspect:`Example:` "23:/other/folder/"
-   :sep:`|`
+.. confval:: folders
+
+   :Required: false
+   :type: string (comma separated folders), :ref:`stdWrap`
+   :default: ""
+   :Example: "23:/other/folder/"
 
    Fetches all files from the referenced folders. The following syntax is possible:
 
@@ -102,49 +99,49 @@ folders
    * `23:/other/folder/` folder "/other/folder/" from storage with uid 23
    * `/folderInMyFileadmin/something/` folder "/folderInMyFileadmin/something/" from the default storage 0 (fileadmin)
 
-folders.recursive
-   :sep:`|` :aspect:`Required:` false
-   :sep:`|` :aspect:`Type:` string, :ref:`stdWrap`
-   :sep:`|` :aspect:`Default:`  ""
-   :sep:`|` :aspect:`Example:` "1"
-   :sep:`|`
+.. confval:: folders.recursive
+
+   :Required: false
+   :type: string, :ref:`stdWrap`
+   :default:  ""
+   :Example: "1"
 
    If set to a non-empty value file records will be added from folders recursively.
 
 
-sorting
-   :sep:`|` :aspect:`Required:` false
-   :sep:`|` :aspect:`Type:` string, :ref:`stdWrap`
-   :sep:`|` :aspect:`Default:`  ""
-   :sep:`|` :aspect:`Example:` "filesize"
-   :sep:`|`
+.. confval:: sorting
+
+   :Required: false
+   :type: string, :ref:`stdWrap`
+   :default:  ""
+   :Example: "filesize"
 
    The property of the file records by which they should be sorted. For example
    filesize or title.
 
 
-sorting.direction
-   :sep:`|` :aspect:`Required:` false
-   :sep:`|` :aspect:`Type:` string, :ref:`stdWrap`
-   :sep:`|` :aspect:`Default:`  "ascending"
-   :sep:`|` :aspect:`Example:` "descending"
-   :sep:`|`
+.. confval:: sorting.direction
+
+   :Required: false
+   :type: string, :ref:`stdWrap`
+   :default:  "ascending"
+   :Example: "descending"
 
    The sorting direction ('ascending' or 'descending')
 
-as
-   :sep:`|` :aspect:`Required:` false
-   :sep:`|` :aspect:`Type:` string, :ref:`stdWrap`
-   :sep:`|` :aspect:`Default:` "files"
-   :sep:`|`
+.. confval:: as
+
+   :Required: false
+   :type: string, :ref:`stdWrap`
+   :default: "files"
 
    The variable's name to be used in the Fluid template
 
-dataProcessing
-   :sep:`|` :aspect:`Required:` false
-   :sep:`|` :aspect:`Type:` array of :ref:`dataProcessing`
-   :sep:`|` :aspect:`Default:` ""
-   :sep:`|`
+.. confval:: dataProcessing
+
+   :Required: false
+   :type: array of :ref:`dataProcessing`
+   :default: ""
 
    Array of DataProcessors to be applied to all fetched records.
 

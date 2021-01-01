@@ -16,57 +16,56 @@ before it is passed to the view.
 Options:
 ========
 
-.. rst-class:: dl-parameters
+.. confval:: if
 
-if
-   :sep:`|` :aspect:`Required:` false
-   :sep:`|` :aspect:`Type:` :ref:`if` condition
-   :sep:`|` :aspect:`Default:` ''
-   :sep:`|`
+   :Required: false
+   :type: :ref:`if` condition
+   :default: ""
 
    If the condition is not met the data is not processed
 
-fieldName
-   :sep:`|` :aspect:`Required:` true
-   :sep:`|` :aspect:`Type:` string, :ref:`stdWrap`
-   :sep:`|` :aspect:`Default:` ''
-   :sep:`|`
+.. confval:: fieldName
+
+   :Required:  true
+   :type: string, :ref:`stdWrap`
+   :default: ''
 
    Name of the field in the processed ContentObjectRenderer
 
-as
-   :sep:`|` :aspect:`Required:` false
-   :sep:`|` :aspect:`Type:` string
-   :sep:`|` :aspect:`Default:` defaults to the fieldName
-   :sep:`|`
+.. confval:: as
+
+   :Required:  false
+   :type: string
+   :default: defaults to the fieldName
 
    The variable's name to be used in the Fluid template
 
-maximumColumns
-   :sep:`|` :aspect:`Required:` false
-   :sep:`|` :aspect:`Type:` int, :ref:`stdWrap`
-   :sep:`|` :aspect:`Default:` 0
-   :sep:`|`
+.. confval:: maximumColumns
+
+   :Required:  false
+   :type: int, :ref:`stdWrap`
+   :default: 0
 
    Maximal number of columns to be transformed. Excess columns will be
    silently dropped. When set to 0 (default) all columns will be
    transformed.
 
-fieldDelimiter
-   :sep:`|` :aspect:`Required:` false
-   :sep:`|` :aspect:`Type:` string(1), :ref:`stdWrap`
-   :sep:`|` :aspect:`Default:` ','
-   :sep:`|`
+.. confval:: fieldDelimiter
+
+   :Required:  false
+   :type: string(1), :ref:`stdWrap`
+   :default: ','
 
    The field delimiter, a character separating the values.
 
-fieldEnclosure
-   :sep:`|` :aspect:`Required:` false
-   :sep:`|` :aspect:`Type:` string(1), :ref:`stdWrap`
-   :sep:`|` :aspect:`Default:` '"'
-   :sep:`|`
+.. confval:: fieldEnclosure
+
+   :Required:  false
+   :type: string(1), :ref:`stdWrap`
+   :default: '"'
 
    The field enclosure, a character surrounding the values.
+
 
 .. note:: It is currently not possible to unset the fieldEnclosure.
    See: `Issue 93190 <https://forge.typo3.org/issues/93190>`__

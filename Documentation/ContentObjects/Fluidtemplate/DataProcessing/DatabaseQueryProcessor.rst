@@ -16,43 +16,41 @@ array of records.
 Options:
 ========
 
-.. rst-class:: dl-parameters
+.. confval:: if
 
-if
-   :sep:`|` :aspect:`Required:` false
-   :sep:`|` :aspect:`Type:` :ref:`if` condition
-   :sep:`|` :aspect:`Default:` ''
-   :sep:`|`
+   :Required: false
+   :type: :ref:`if` condition
+   :default: ''
 
    If the condition is not met the data is not processed
 
-table
-   :sep:`|` :aspect:`Required:` true
-   :sep:`|` :aspect:`Type:` string, :ref:`stdWrap`
-   :sep:`|` :aspect:`Default:` ''
-   :sep:`|`
+.. confval:: table
+
+   :Required: true
+   :type: string, :ref:`stdWrap`
+   :default: ''
 
    Name of the table from which the records should be fetched
 
-as
-   :sep:`|` :aspect:`Required:` false
-   :sep:`|` :aspect:`Type:` string, :ref:`stdWrap`
-   :sep:`|` :aspect:`Default:` 'records'
-   :sep:`|`
+.. confval:: as
+
+   :Required: false
+   :type: string, :ref:`stdWrap`
+   :default: 'records'
 
    The variable's name to be used in the Fluid template
 
-dataProcessing
-   :sep:`|` :aspect:`Required:` false
-   :sep:`|` :aspect:`Type:` array of :ref:`dataProcessing`
-   :sep:`|` :aspect:`Default:` ''
-   :sep:`|`
+.. confval:: dataProcessing
+
+   :Required: false
+   :type: array of :ref:`dataProcessing`
+   :default: ''
 
    Array of DataProcessors to be applied to all fetched records.
 
 
-.. note:: all other options will be interpreted as in the typoscript function
-   "select", including :typoscript:`pidInList``, :typoscript:`orderBy`,
+.. note:: all other options will be interpreted as in the TypoScript function
+   "select", including :typoscript:`pidInList`, :typoscript:`orderBy`,
    :typoscript:`where` etc. See the reference of ref:`select`.
 
 
