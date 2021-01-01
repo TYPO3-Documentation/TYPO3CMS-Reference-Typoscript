@@ -7,10 +7,157 @@ GalleryProcessor
 
 The :php:`GalleryProcessor` provides the logic for working with galleries and
 calculates the maximum asset size. It uses the files already present in
-the `processedData` array for his calculations. The :php:`FilesProcessor` can be
+the `processedData` array for its calculations. The :php:`FilesProcessor` can be
 used to fetch the files.
 
 
+Options:
+========
+
+.. rst-class:: dl-parameters
+
+if
+   :sep:`|` :aspect:`Required:` false
+   :sep:`|` :aspect:`Type:` :ref:`if` condition
+   :sep:`|` :aspect:`Default:` ''
+   :sep:`|`
+
+   If the condition is not met the data is not processed
+
+filesProcessedDataKey
+   :sep:`|` :aspect:`Required:` true
+   :sep:`|` :aspect:`Type:` string, :ref:`stdWrap`
+   :sep:`|` :aspect:`Default:` 'files'
+   :sep:`|` :aspect:`Example:` 'myImages'
+   :sep:`|`
+
+   Key of the array previously processed by the
+   FilesProcessor
+
+numberOfColumns
+   :sep:`|` :aspect:`Required:` false
+   :sep:`|` :aspect:`Type:` int, :ref:`stdWrap`
+   :sep:`|` :aspect:`Default:` field:imagecols
+   :sep:`|` :aspect:`Example:` 4
+   :sep:`|`
+
+   Expects the desired number of columns. Defaults to the value of the field
+   `imagecols` / "Number of Columns" if used with content elements.
+
+mediaOrientation
+   :sep:`|` :aspect:`Required:` false
+   :sep:`|` :aspect:`Type:` int, :ref:`stdWrap`
+   :sep:`|` :aspect:`Default:` field:imageorient
+   :sep:`|` :aspect:`Example:` 2
+   :sep:`|`
+
+   Expects the image orientation as used in the field imageorient
+   in content elements such as text with images. Defaults to the value of the field
+   `imageorient` / "Position and Alignment" if used with content elements.
+
+   .. image:: Images/ImageOrientation.png
+      :alt: Media orientation in the content elements such as text with images
+      :class: with-shadow
+
+maxGalleryWidth
+   :sep:`|` :aspect:`Required:` false
+   :sep:`|` :aspect:`Type:` int, :ref:`stdWrap`
+   :sep:`|` :aspect:`Default:` 600
+   :sep:`|`
+
+   Maximal gallery width in pixels
+
+maxGalleryWidthInText
+   :sep:`|` :aspect:`Required:` false
+   :sep:`|` :aspect:`Type:` int, :ref:`stdWrap`
+   :sep:`|` :aspect:`Default:` 300
+   :sep:`|`
+
+   Maximal gallery width in pixels if displayed in a text
+
+equalMediaHeight, equalMediaWidth
+   :sep:`|` :aspect:`Required:` false
+   :sep:`|` :aspect:`Type:` int, :ref:`stdWrap`
+   :sep:`|` :aspect:`Default:` field:imageheight, field:imagewidth
+   :sep:`|` :aspect:`Example:` 300
+   :sep:`|`
+
+   If set all images get scaled to a uniform height / width. Defaults
+   to the value of the fields `imageheight` / "Height of each element (px)",
+   `imagewidth` / "Width of each element (px)"
+   if used with content elements.
+
+   .. image:: Images/MediaHeight.png
+      :alt: Media height and width in the content element Text and Images
+      :class: with-shadow
+
+columnSpacing
+   :sep:`|` :aspect:`Required:` false
+   :sep:`|` :aspect:`Type:` int, :ref:`stdWrap`
+   :sep:`|` :aspect:`Default:` 0
+   :sep:`|` :aspect:`Example:` 4
+   :sep:`|`
+
+   Space between columns in pixels
+
+borderEnabled
+   :sep:`|` :aspect:`Required:` false
+   :sep:`|` :aspect:`Type:` int, :ref:`stdWrap`
+   :sep:`|` :aspect:`Default:` field:imageborder
+   :sep:`|` :aspect:`Example:` 1
+   :sep:`|`
+
+   Should there be a border around the images? Defaults
+   to the value of the fields `imageborder` / "Number of Columns"
+   if used with content elements.
+
+
+borderWidth
+   :sep:`|` :aspect:`Required:` false
+   :sep:`|` :aspect:`Type:` int, :ref:`stdWrap`
+   :sep:`|` :aspect:`Default:` 0
+   :sep:`|` :aspect:`Example:` 2
+   :sep:`|`
+
+   Width of the border in pixels
+
+borderPadding
+   :sep:`|` :aspect:`Required:` false
+   :sep:`|` :aspect:`Type:` int, :ref:`stdWrap`
+   :sep:`|` :aspect:`Default:` 0
+   :sep:`|` :aspect:`Example:` 20
+   :sep:`|`
+
+   padding around the border in pixels
+
+cropVariant
+   :sep:`|` :aspect:`Required:` false
+   :sep:`|` :aspect:`Type:` int, :ref:`stdWrap`
+   :sep:`|` :aspect:`Default:` "default"
+   :sep:`|` :aspect:`Example:`
+   :sep:`|`
+
+   See :ref:`cropt variant in the TCA reference<t3tca:columns-imageManipulation-properties-cropVariants>`
+
+as
+   :sep:`|` :aspect:`Required:` false
+   :sep:`|` :aspect:`Type:` string, :ref:`stdWrap`
+   :sep:`|` :aspect:`Default:` "files"
+   :sep:`|`
+
+   The variable's name to be used in the Fluid template
+
+dataProcessing
+   :sep:`|` :aspect:`Required:` false
+   :sep:`|` :aspect:`Type:` array of :ref:`dataProcessing`
+   :sep:`|` :aspect:`Default:` ""
+   :sep:`|`
+
+   Array of DataProcessors to be applied to all fetched records.
+
+
+Example
+=======
 
 Using the :php:`GalleryProcessor` the following scenario is possible::
 
@@ -68,6 +215,58 @@ Using the :php:`GalleryProcessor` the following scenario is possible::
       }
    }
 
+   
+Example output:
+---------------
+
+.. code-block:: typoscript
+
+   gallery {
+      position {
+         horizontal = center
+         vertical = above
+         noWrap = FALSE
+      }
+      width = 600
+      count {
+         files = 2
+         columns = 1
+         rows = 2
+      }
+      rows {
+         1 {
+            columns {
+               1 {
+                  media = TYPO3\CMS\Core\Resource\FileReference
+                  dimensions {
+                     width = 600
+                     height = 400
+                  }
+               }
+            }
+         }
+         2 {
+            columns {
+               1 {
+                  media = TYPO3\CMS\Core\Resource\FileReference
+                  dimensions {
+                     width = 600
+                     height = 400
+                  }
+               }
+            }
+         }
+      }
+      columnSpacing = 0
+      border {
+         enabled = FALSE
+         width = 0
+         padding = 0
+      }
+   }
+
+Example of corresponding Fluid templates
+----------------------------------------
 
 Content of the basic Fluid template of the gallery (rendering of the gallery
 will be done in partial MediaGallery):

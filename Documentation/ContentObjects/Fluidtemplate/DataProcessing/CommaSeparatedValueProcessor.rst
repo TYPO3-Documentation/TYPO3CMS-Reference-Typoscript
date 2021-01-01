@@ -40,7 +40,7 @@ as
    :sep:`|` :aspect:`Default:` defaults to the fieldName
    :sep:`|`
 
-   Name the variable in the Fluid template will have
+   The variable's name to be used in the Fluid template
 
 maximumColumns
    :sep:`|` :aspect:`Required:` false

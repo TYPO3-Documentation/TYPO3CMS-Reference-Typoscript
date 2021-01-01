@@ -40,7 +40,7 @@ as
    :sep:`|` :aspect:`Default:` 'records'
    :sep:`|`
 
-   Name the variable in the Fluid template will have
+   The variable's name to be used in the Fluid template
 
 dataProcessing
    :sep:`|` :aspect:`Required:` false

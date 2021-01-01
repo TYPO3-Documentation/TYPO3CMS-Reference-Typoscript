@@ -5,23 +5,50 @@
 LanguageMenuProcessor
 =====================
 
-The :php:`LanguageMenuProcessor` utilizes :ts:`HMENU` to generate a JSON encoded menu
-string based on the site language configuration that will be decoded again
-and assigned to :ts:`FLUIDTEMPLATE` as variable.
+This menu processor generates a json encoded menu string that will be
+decoded again and assigned to the :ts:`FLUIDTEMPLATE` as variable.
+
 
 Options:
+========
 
-:`if`:         TypoScript if condition
-:`languages`:  A list of comma separated language IDs (e.g. 0,1,2) to use
-               for the menu creation or `auto` to load from site languages
-:`as`:         The variable to be used within the result
+.. rst-class:: dl-parameters
 
+if
+   :sep:`|` :aspect:`Required:` false
+   :sep:`|` :aspect:`Type:` :ref:`if` condition
+   :sep:`|` :aspect:`Default:` ""
+   :sep:`|`
+
+   If the condition is not met the data is not processed
+
+languages
+   :sep:`|` :aspect:`Required:` true
+   :sep:`|` :aspect:`Type:` string, :ref:`stdWrap`
+   :sep:`|` :aspect:`Default:` "auto"
+   :sep:`|` :aspect:`Example:` "0,1,2"
+   :sep:`|`
+
+   A list of comma separated language IDs (e.g. 0,1,2) to use
+   for the menu creation or `auto` to load from site configuration
+
+as
+   :sep:`|` :aspect:`Required:` false
+   :sep:`|` :aspect:`Type:` string
+   :sep:`|` :aspect:`Default:` defaults to the fieldName
+   :sep:`|`
+
+   The variable's name to be used in the Fluid template
+
+
+Example: Menu of all language from site configuration
+=====================================================
 
 Using the :php:`LanguageMenuProcessor` the following scenario is possible::
 
    10 = TYPO3\CMS\Frontend\DataProcessing\LanguageMenuProcessor
    10 {
-      languages = auto
+      languages = 0,1,2
       as = languageNavigation
    }
 
