@@ -35,7 +35,7 @@ The functionality can be further augmented and customized with
 Properties
 ==========
 
-.. contents:: 
+.. contents::
    :local:
    :depth: 1
 
@@ -318,13 +318,47 @@ template
    template file. It is an alternative to ".file"; if ".template" is set, it
    takes precedence.
 
-   .. warning::
+   This property can be used to create the Fluid template dynamically
+   from a TypoScript object.
 
-      The ts:`FILE` object type has been removed in TYPO3 10. As the :ts:`.template`
-      property used :ts:`FILE`, you should generally check your code if
-      using this and switch to using :ref:`.templateName <cobj-fluidtemplate-properties-templatename>`
-      with :ref:`.templateRootPaths <cobj-fluidtemplate-properties-templaterootpaths>` or use
-      :ref:`.file <cobj-fluidtemplate-properties-file>`.
+   Example::
+
+      page.10 = FLUIDTEMPLATE
+      page.10 {
+        template = TEXT
+        template.value (
+          <f:debug>{_all}</f:debug>
+          <h1>{data.title}</h1>
+          <p>{foo}</p>
+         )
+        variables {
+            foo = TEXT
+            foo.value = bar
+         }
+      }
+
+   .. deprecated:: 9.5
+
+      Before TYPO3 9 the template property was sometimes used with the
+      deprecated content element type :ref:`cobj-file`. Migrate them
+      as follows::
+
+         page.10 = FLUIDTEMPLATE
+         page.10 {
+            // FILE is deprecated, don't use it anymore
+            // template = FILE
+            // template.file = fileadmin/Templates/MyTemplate.html
+            file = fileadmin/Templates/MyTemplate.html
+         }
+
+      or::
+
+         page.10 = FLUIDTEMPLATE
+         page.10 {
+            templateRootPaths.200 = fileadmin/Templates/
+            templateName = MyTemplate
+         }
+
 
 .. _cobj-fluidtemplate-properties-templatename:
 
