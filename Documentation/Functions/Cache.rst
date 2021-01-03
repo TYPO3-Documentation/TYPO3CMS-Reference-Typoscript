@@ -127,7 +127,7 @@ timestamp). ::
    5 = TEXT
    5 {
        stdWrap.cache {
-           key = mycurrenttimestamp_{page:uid}_{TSFE:sys_language_uid}
+           key = mycurrenttimestamp_{page:uid}_{siteLanguage:languageId}
            key.insertData = 1
    }
 
