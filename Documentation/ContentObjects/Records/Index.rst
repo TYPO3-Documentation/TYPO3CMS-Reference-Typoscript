@@ -250,22 +250,16 @@ Examples
 Selection with source
 ~~~~~~~~~~~~~~~~~~~~~
 
-Taken from the rendering of the "Insert records" content element
-as defined in "css_styled_content".
+The following example would display some related content
+referenced from the :guilabel:`page properties`.
 
 .. code-block:: typoscript
 
-	tt_content.shortcut = COA
-	tt_content.shortcut {
-		20 = CASE
-		20.key.field = layout
-		20.0 = RECORDS
-		20.0 {
-			source.field = records
-			tables = {$content.shortcut.tables}
-		}
-		...
-	}
+   page.42 = RECORDS
+   page.42 {
+      source.field = tx_examples_related_content
+		tables = tt_content
+   }
 
 Since no :code:`conf` property is defined, the rendering will
 look for a top-level TypoScript object bearing the name of the
@@ -296,10 +290,8 @@ accessible for the current user.
 Selection with categories
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Taken from the rendering of the "Categorized content elements"
-special menu as defined in "css_styled_content".
-
-.. code-block:: typoscript
+If you would want to display categorized content with a RECORDS obeject
+you could do it like this::
 
 	categorized_content = RECORDS
 	categorized_content {
@@ -319,3 +311,28 @@ special menu as defined in "css_styled_content".
 Contrary to the previous example, in this case the :code:`conf` property
 is present and defines a very simple rendering of each content element
 (i.e. the header with a direct link to the content element).
+
+However the same can be achieved with a :ref:`cobj-fluidtemplate` and 
+data processing. This way templating is much more flexible. See the following
+example from the system extension :file:`fluid_styled_content`::
+
+   tt_content.menu_categorized_content =< lib.contentElement
+   tt_content.menu_categorized_content {
+      templateName = MenuCategorizedContent
+      dataProcessing {
+         10 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor
+         10 {
+            table = tt_content
+            selectFields = tt_content.*
+            groupBy = uid
+            pidInList.data = leveluid : 0
+            recursive = 99
+            join.data = field:selected_categories
+            join.wrap = sys_category_record_mm ON uid = sys_category_record_mm.uid_foreign AND sys_category_record_mm.uid_local IN(|)
+            where.data = field:category_field
+            where.wrap = tablenames='tt_content' and fieldname='|'
+            orderBy = tt_content.sorting
+            as = content
+         }
+      }
+   }
