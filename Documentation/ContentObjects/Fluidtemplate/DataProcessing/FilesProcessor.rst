@@ -145,72 +145,81 @@ Options:
 
    Array of DataProcessors to be applied to all fetched records.
 
-Examples
-========
+
+Example 1: Render the images stored in field image
+==================================================
+
+Please see also :ref:`dataProcessing-about-examples`.
+
+
+TypoScript
+----------
 
 Using the :php:`FilesProcessor` the following scenario is possible::
 
-   tt_content.image.20 = FLUIDTEMPLATE
-   tt_content.image.20 {
-      file = EXT:site_default/Resources/Private/Templates/ContentObjects/Image.html
-
-      dataProcessing.10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
-      dataProcessing.10 {
-         # the field name where relations are set
-         # + stdWrap
-         references.fieldName = image
-
-         # the table name where relations are put, defaults to the currently
-         # selected record from $cObj->getTable()
-         # + stdWrap
-         references.table = tt_content
-
-         # A list of sys_file UID records
-         # + stdWrap
-         files = 21,42
-
-         # A list of File Collection UID records
-         # + stdWrap
-         collections = 13,14
-
-         # A list of FAL Folder identifiers and files fetched recursive from
-         # all folders
-         # + stdWrap
-         folders = 1:introduction/images/,1:introduction/posters/
-         folders.recursive = 1
-
-         # Property of which the files should be sorted after they have been
-         # accumulated
-         # can be any property of sys_file, sys_file_metadata
-         # + stdWrap
-         sorting = description
-
-         # Can be "ascending", "descending" or "random", defaults to
-         # "ascending" if none given
-         # + stdWrap
-         sorting.direction = descending
-
-         # The target variable to be handed to the ContentObject again, can
-         # be used in Fluid e.g. to iterate over the objects. defaults to
-         # "files" when not defined
-         # + stdWrap
-         as = myfiles
+   tt_content {
+      examples_dataprocfiles =< lib.contentElement
+      examples_dataprocfiles {
+         templateName = DataProcFiles
+         dataProcessing.10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+         dataProcessing.10 {
+            as = images
+            references.fieldName = image
+            references.table = tt_content
+            sorting = title
+            sorting.direction = descending
+         }
       }
    }
+
+
+The Fluid template
+------------------
 
 In the Fluid template then iterate over the files:
 
 .. code-block:: html
 
-   <ul>
-      <f:for each="{myfiles}" as="file">
-         <li><a href="{file.publicUrl}">{file.name}</a></li>
-      </f:for>
-   </ul>
+   <html data-namespace-typo3-fluid="true" xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+      <h2>Data in variable images</h2>
+      <f:debug inline="true">{images}</f:debug>
+      <h2>Data in variable images</h2>
+
+      <div class="row">
+         <div class="row">
+            <f:for each="{images}" as="image">
+               <div class="col-12 col-md-3">
+                  <div class="card">
+                     <f:image image="{image}" class="card-img-top" height="250"/>
+                     <div class="card-body">
+                        <h5 class="card-title">{image.title}</h5>
+                        <div class="card-text">{image.description}</div>
+                     </div>
+                  </div>
+               </div>
+            </f:for>
+         </div>
+      </div>
+   </html>
 
 
-Example: use stdWrap property on references
--------------------------------------------
+Output
+------
+
+The array :php:`images` contains the data of the files now.
+
+.. image:: Images/FilesProcessor.png
+   :class: with-shadow
+   :alt: files dump and output
+
+.. note::
+
+   For technical reasons FileReferences do not show all available data on
+   using debug. See :ref:`t3coreapi:fal-using-fal-frontend`.
+
+
+Example 2: use stdWrap property on references
+=============================================
 
 .. versionadded:: 10.3
 

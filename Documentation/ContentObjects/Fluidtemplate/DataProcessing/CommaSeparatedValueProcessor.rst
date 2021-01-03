@@ -71,78 +71,85 @@ Options:
    See: `Issue 93190 <https://forge.typo3.org/issues/93190>`__
 
 
-Example: Transforming the content of CType "table" into an array
-=================================================================
+Example: Transforming comma separated content into a html table
+===============================================================
 
-An example of such a field is "bodytext" in the CType "table".
+Please see also :ref:`dataProcessing-about-examples`.
 
-Example field data:
--------------------
+In this example the field :php:`bodytext` contains comma separated
+values (CSV) data. To support different formats the separator between
+the values can be chosen.
+
+This example is also described in-depth in :ref:`TYPO3 Explained:
+Extended content element example <t3coreapi:AddingCE-Extended-Example>`.
+
+
+Example data in the field :php:`bodytext`
+-----------------------------------------
 
 Field :php:`bodytext` in table :php:`tt_content`::
 
-   This is row 1 column 1|This is row 1 column 2|This is row 1 column 3
-   This is row 2 column 1|This is row 2 column 2|This is row 2 column 3
-   This is row 3 column 1|This is row 3 column 2|This is row 3 column 3
+   This is row 1 column 1,This is row 1 column 2,This is row 1 column 3
+   This is row 2 column 1,This is row 2 column 2,This is row 2 column 3
+   This is row 3 column 1,This is row 3 column 2,This is row 3 column 3
 
 
 TypoScript
 ----------
 
-Using the :php:`CommaSeparatedValueProcessor` the following scenario is
-possible::
+We define the dataProcessing property to use the CommaSeparatedValueProcessor::
 
-   page {
-      10 = FLUIDTEMPLATE
-      10 {
-         file = EXT:site_default/Resources/Private/Template/Default.html
-         dataProcessing.4 = TYPO3\CMS\Frontend\DataProcessing\CommaSeparatedValueProcessor
-         dataProcessing.4 {
+   tt_content {
+     # lib.contentElement = FLUIDTEMPLATE
+      examples_newcontentcsv =< lib.contentElement
+      examples_newcontentcsv {
+         templateName = DataProcCsv
+         dataProcessing.10 = TYPO3\CMS\Frontend\DataProcessing\CommaSeparatedValueProcessor
+         dataProcessing.10 {
             if.isTrue.field = bodytext
             fieldName = bodytext
-            fieldDelimiter = |
-            fieldEnclosure =
-            maximumColumns = 2
-            as = myContentTable
+            fieldDelimiter.field = tx_examples_separator
+            fieldEnclosure = "
+            maximumColumns.field = imagecols
+            as = myTable
          }
       }
    }
 
 
-Fluid template
---------------
+The Fluid template
+------------------
 
 In the Fluid template you can iterate over the processed data. "myContentTable" can
 be used as a variable :html:`{myContentTable}` inside Fluid for iteration.
 
 .. code-block:: html
 
-   <table>
-      <f:for each="{myContentTable}" as="columns">
-         <tr>
-            <f:for each="{columns}" as="column">
-               <td>{column}</td>
-            </f:for>
-         <tr>
-      </f:for>
-   </table>
+   <html data-namespace-typo3-fluid="true"
+         xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+      <h2>Data in variable "myTable"</h2>
+      <f:debug inline="true">{myTable}</f:debug>
 
-Using maximumColumns limits the amount of columns in the multi dimensional array.
+      <h2>Output, {data.imagecols} columns separated by char {data.tx_examples_separator}</h2>
+      <table class="table table-hover">
+         <f:for each="{myTable}" as="columns" iteration="i">
+            <tr>
+               <th scope="row">{i.cycle}</th>
+               <f:for as="column" each="{columns}">
+                  <td>{column}</td>
+               </f:for>
+            <tr>
+         </f:for>
+      </table>
+   </html>
+
+
+Output
+------
+
+Using :typoscript:`maximumColumns` limits the amount of columns in the multi dimensional array.
 In this example, the field data of the last column will be stripped off. Therefore the output would be:
 
-.. code-block:: html
-
-   <table>
-      <tr>
-         <td>This is row 1 column 1</td>
-         <td>This is row 1 column 2</td>
-      <tr>
-      <tr>
-         <td>This is row 2 column 1</td>
-         <td>This is row 2 column 2</td>
-      <tr>
-      <tr>
-         <td>This is row 3 column 1</td>
-         <td>This is row 3 column 2</td>
-      <tr>
-   </table>
+.. image:: Images/CsvProcessor.png
+   :class: with-shadow
+   :alt: CSV data as HTML table

@@ -54,56 +54,75 @@ Options:
    :typoscript:`where` etc. See the reference of ref:`select`.
 
 
-Example: Selecting all tt_address records from pid 13 and 14
-============================================================
+Example: Display haiku records
+==============================
 
+Please see also :ref:`dataProcessing-about-examples`.
 
-Using the :php:`DatabaseQueryProcessor` the following scenario is possible::
+TypoScript
+----------
 
-   tt_content.mycontent.20 = FLUIDTEMPLATE
-   tt_content.mycontent.20 {
-      file = EXT:site_default/Resources/Private/Templates/ContentObjects/MyContent.html
+We define the dataProcessing property to use the DatabaseQueryProcessor::
 
-      dataProcessing.10 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor
-      dataProcessing.10 {
-         # regular if syntax
-         if.isTrue.field = records
-
-         # the table name from which the data is fetched from
-         # + stdWrap
-         table = tt_address
-
-         # All properties from .select :ref:`select` can be used directly
-         # + stdWrap
-         orderBy = sorting
-         pidInList = 13,14
-
-         # The target variable to be handed to the ContentObject again, can
-         # be used in Fluid e.g. to iterate over the objects. defaults to
-         # "records" when not defined
-         # + stdWrap
-         as = myRecords
-
-         # The fetched records can also be processed by DataProcessors.
-         # All configured processors are applied to every row of the result.
-         dataProcessing {
-            10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
-            10 {
-               references.fieldName = image
+   tt_content {
+      examples_dataprocdb =< lib.contentElement
+      examples_dataprocdb {
+         templateName = DataProcDb
+         dataProcessing.10 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor
+         dataProcessing.10 {
+            if.isTrue.field = pages
+            table = tx_examples_haiku
+            orderBy = title
+            pidInList.field = pages
+            as = myHaikus
+            // recursively process the images in the records with the FilesProcessor
+            dataProcessing {
+               10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+               10 {
+                  references.fieldName = image
+               }
             }
          }
       }
    }
 
-In the Fluid template then iterate over the files:
+
+The Fluid template
+------------------
+
+In the Fluid template then iterate over the records. As we used the recursive data
+processor :ref:`FilesProcessor` on the image records we also can output the images.
 
 .. code-block:: html
 
-   <ul>
-      <f:for each="{myRecords}" as="record">
-         <li>
-            <f:image image="{record.files.0}" />
-            <a href="{record.data.www}">{record.data.first_name} {record.data.last_name}</a>
-         </li>
-      </f:for>
-   </ul>
+   <html data-namespace-typo3-fluid="true" xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+      <h2>Data in variable myHaikus</h2>
+      <f:debug inline="true">{myHaikus}</f:debug>
+      <h2>Output</h2>
+      <div class="row">
+         <f:for each="{myHaikus}" as="haiku">
+            <div class="col-12 col-md-3">
+               <div class="card" style="backgorund-color: {haiku.color};">
+                  <f:if condition="{haiku.files.0}">
+                     <f:image image="{haiku.files.0}" class="card-img-top" height="300"/>
+                  </f:if>
+                  <div class="card-body">
+                     <h5 class="card-title">{haiku.data.title}</h5>
+                     <div class="card-text"><f:format.html>{haiku.data.poem}</f:format.html></div>
+                  </div>
+               </div>
+            </div>
+         </f:for>
+      </div>
+   </html>
+
+
+Output
+------
+
+The array of records each contains the data of the table in :php:`data` and
+the data of the images in :php:`files`.
+
+.. image:: Images/DatabaseProcessor.png
+   :class: with-shadow
+   :alt: haiku record data dump and output

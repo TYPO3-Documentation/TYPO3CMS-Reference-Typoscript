@@ -153,233 +153,92 @@ Options:
    Array of DataProcessors to be applied to all fetched records.
 
 
-Example
-=======
+Example: display images in rows and columns
+===========================================
 
-Using the :php:`GalleryProcessor` the following scenario is possible::
+Please see also :ref:`dataProcessing-about-examples`.
 
-   tt_content.textmedia.20 = FLUIDTEMPLATE
-   tt_content.textmedia.20 {
-      file = EXT:site_default/Resources/Private/Templates/ContentObjects/Image.html
 
-      dataProcessing {
-         # Process files
-         10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+TypoScript
+----------
 
-         # Calculate gallery info
-         20 = TYPO3\CMS\Frontend\DataProcessing\GalleryProcessor
-         20 {
-            # filesProcessedDataKey :: Key in processedData array that holds
-            # the files (default: files) + stdWrap
-            filesProcessedDataKey = files
+As the :php:`GalleryProcessor` expects the data of the files to be
+present in the the `processedData` array, the :php:`FilesProcessor`
+always has to be called first. Execution depends on the key in the
+dataProcessing array, not the order in which they are put there.
 
-            # mediaOrientation :: Media orientation, see:
-            # TCA[tt_content][column][imageorient] (default: data.imageorient) + stdWrap
-            mediaOrientation.field = imageorient
+The content of :typoscript:`filesProcessedDataKey` in the GalleryProcessor
+has to be equal the content of :typoscript:`as` in the FilesProcessor.
 
-            # numberOfColumns :: Number of columns (default: data.imagecols) + stdWrap
-            numberOfColumns.field = imagecols
+   tt_content {
+      examples_dataprocgallery =< lib.contentElement
+      examples_dataprocgallery {
+         templateName = DataProcGallery
+         dataProcessing {
+            # Process files
+            10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+            10 {
+               as = images
+               references.fieldName = image
+               references.table = tt_content
+               sorting = title
+               sorting.direction = descending
+            }
 
-            # equalMediaHeight :: Equal media height in pixels (default: data.imageheight) + stdWrap
-            equalMediaHeight.field = imageheight
-
-            # equalMediaWidth :: Equal media width in pixels (default: data.imagewidth) + stdWrap
-            equalMediaWidth.field = imagewidth
-
-            # maxGalleryWidth :: Max gallery width in pixels (default: 600) + stdWrap
-            maxGalleryWidth = 1000
-
-            # maxGalleryWidthInText :: Max gallery width in pixels when
-            # orientation intext (default: 300) + stdWrap
-            maxGalleryWidthInText = 1000
-
-            # columnSpacing :: Column spacing width in pixels (default: 0) + stdWrap
-            columnSpacing = 0
-
-            # borderEnabled :: Border enabled (default: data.imageborder) + stdWrap
-            borderEnabled.field = imageborder
-
-            # borderWidth :: Border width in pixels (default: 0) + stdWrap
-            borderWidth = 0
-
-            # borderPadding :: Border padding in pixels  (default: 0) + stdWrap
-            borderPadding = 10
-
-            # as :: Name of key in processedData array where result is
-            # placed (default: gallery) + stdWrap
-            as = gallery
+            # Calculate gallery info
+            20 = TYPO3\CMS\Frontend\DataProcessing\GalleryProcessor
+            20 {
+               filesProcessedDataKey = images
+               mediaOrientation.field = imageorient
+               numberOfColumns.field = imagecols
+               equalMediaHeight.field = imageheight
+               equalMediaWidth.field = imagewidth
+               maxGalleryWidth = 1000
+               maxGalleryWidthInText = 1000
+               columnSpacing = 0
+               borderEnabled.field = imageborder
+               borderWidth = 5
+               borderPadding = 3
+               as = gallery
+            }
          }
       }
    }
 
-   
-Example output:
----------------
 
-.. code-block:: typoscript
-
-   gallery {
-      position {
-         horizontal = center
-         vertical = above
-         noWrap = FALSE
-      }
-      width = 600
-      count {
-         files = 2
-         columns = 1
-         rows = 2
-      }
-      rows {
-         1 {
-            columns {
-               1 {
-                  media = TYPO3\CMS\Core\Resource\FileReference
-                  dimensions {
-                     width = 600
-                     height = 400
-                  }
-               }
-            }
-         }
-         2 {
-            columns {
-               1 {
-                  media = TYPO3\CMS\Core\Resource\FileReference
-                  dimensions {
-                     width = 600
-                     height = 400
-                  }
-               }
-            }
-         }
-      }
-      columnSpacing = 0
-      border {
-         enabled = FALSE
-         width = 0
-         padding = 0
-      }
-   }
-
-Example of corresponding Fluid templates
-----------------------------------------
-
-Content of the basic Fluid template of the gallery (rendering of the gallery
-will be done in partial MediaGallery):
+The Fluid template
+------------------
 
 .. code-block:: html
 
-   <f:if condition="{gallery.position.noWrap} != 1">
-      <f:render partial="Header" arguments="{_all}" />
-   </f:if>
+   <html data-namespace-typo3-fluid="true" xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+      <h2>Data in variable gallery</h2>
+      <f:debug inline="true">{gallery}</f:debug>
 
-   <div class="ce-textpic ce-{gallery.position.horizontal}
-        ce-{gallery.position.vertical}{f:if(condition: '{gallery.position.noWrap}',
-        then: ' ce-nowrap')}">
+      <h2>Output</h2>
+      <f:for each="{gallery.rows}" as="row">
+         <div class="row">
+            <f:for each="{row.columns}" as="column">
+               <div class="col-auto p-{gallery.border.padding}">
+                  <f:image image="{column.media}" width="{column.dimensions.width}"
+                           class="{f:if(condition: '{gallery.border.enabled}',
+                              then:'border border-success rounded')}"
+                           style="border-width: {gallery.border.width}px!important;"/>
+               </div>
+            </f:for>
+         </div>
+      </f:for>
 
-      <f:if condition="{gallery.position.vertical} != 'below'">
-         <f:render partial="MediaGallery" arguments="{_all}" />
-      </f:if>
-      <div class="ce-bodytext">
-         <f:if condition="{gallery.position.noWrap}">
-            <f:render partial="Header" arguments="{_all}" />
-         </f:if>
-         <f:format.html>{data.bodytext}</f:format.html>
-      </div>
-      <f:if condition="{gallery.position.vertical} == 'below'">
-         <f:render partial="MediaGallery" arguments="{_all}" />
-      </f:if>
-   </div>
+   </html>
 
-Content of partial :file:`MediaGallery.html`:
 
-.. code-block:: html
+Output
+------
 
-   <f:if condition="{gallery.rows}">
-      <div class="ce-gallery{f:if(condition: '{data.imageborder}',
-           then: ' ce-border')}" data-ce-columns="{gallery.count.columns}"
-           data-ce-images="{gallery.count.files}">
-         <f:if condition="{gallery.position.horizontal} == 'center'">
-            <div class="ce-outer">
-               <div class="ce-inner">
-         </f:if>
-         <f:for each="{gallery.rows}" as="row">
-            <div class="ce-row">
-               <f:for each="{row.columns}" as="column">
-                  <f:if condition="{column.media}">
-                     <div class="ce-column">
-                        <f:if condition="{column.media.description}">
-                           <f:then>
-                              <figure>
-                           </f:then>
-                           <f:else>
-                              <div class="ce-media">
-                           </f:else>
-                        </f:if>
-                        <f:if condition="{column.media.type} == 2">
-                           <f:render section="imageType" arguments="{_all}" />
-                        </f:if>
-                        <f:if condition="{column.media.type} == 4">
-                           <f:render section="videoType" arguments="{_all}" />
-                        </f:if>
+The array now contains the images ordered in rows and columns. For each image there is a desired
+width and height supplied.
 
-                        <f:if condition="{column.media.description}">
-                           <f:then>
-                                 <figcaption>
-                                    {column.media.description}
-                                 </figcaption>
-                              </figure>
-                           </f:then>
-                           <f:else>
-                              </div>
-                           </f:else>
-                        </f:if>
-                     </div>
-                  </f:if>
-               </f:for>
-            </div>
-         </f:for>
-         <f:if condition="{gallery.position.horizontal} == 'center'">
-                 </div>
-             </div>
-         </f:if>
-      </div>
-   </f:if>
 
-   <f:section name="imageType">
-      <f:if condition="{column.media.link}">
-         <f:then>
-            <f:link.typolink parameter="{column.media.link}">
-               <f:render section="media" arguments="{_all}" />
-            </f:link.typolink>
-         </f:then>
-         <f:else>
-            <f:if condition="{data.image_zoom}">
-               <f:then>
-                  <ce:link.clickEnlarge image="{column.media}"
-                        configuration="{settings.media.popup}">
-                     <f:render section="media" arguments="{_all}" />
-                  </ce:link.clickEnlarge>
-               </f:then>
-               <f:else>
-                  <f:render section="media" arguments="{_all}" />
-               </f:else>
-            </f:if>
-         </f:else>
-      </f:if>
-   </f:section>
-
-   <f:section name="videoType">
-      <f:render section="media" arguments="{_all}" />
-   </f:section>
-
-   <f:section name="media">
-      <f:image
-         image="{column.media}"
-         width="{column.dimensions.width}"
-         height="{column.dimensions.height}"
-         alt="{column.media.alternative}"
-         title="{column.media.title}"
-      />
-   </f:section>
+.. image:: Images/GalleryProcessor.png
+   :class: with-shadow
+   :alt: files dump and output
