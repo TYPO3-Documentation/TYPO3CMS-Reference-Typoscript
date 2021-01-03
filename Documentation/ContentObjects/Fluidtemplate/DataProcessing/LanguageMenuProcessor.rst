@@ -30,6 +30,17 @@ Options:
    A list of comma separated language IDs (e.g. 0,1,2) to use
    for the menu creation or `auto` to load from site configuration
 
+
+.. confval:: addQueryString.exclude
+
+   :Required: true
+   :type: string, :ref:`stdWrap`
+   :default: ""
+   :Example: "gclid,contrast"
+
+   A list of comma separated parameter names to be excluded from
+   the language menu urls.
+
 .. confval:: as
 
    :Required: false
