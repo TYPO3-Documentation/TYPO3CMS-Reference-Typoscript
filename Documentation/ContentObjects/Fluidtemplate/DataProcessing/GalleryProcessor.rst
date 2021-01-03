@@ -168,7 +168,7 @@ always has to be called first. Execution depends on the key in the
 dataProcessing array, not the order in which they are put there.
 
 The content of :typoscript:`filesProcessedDataKey` in the GalleryProcessor
-has to be equal the content of :typoscript:`as` in the FilesProcessor.
+has to be equal the content of :typoscript:`as` in the FilesProcessor::
 
    tt_content {
       examples_dataprocgallery =< lib.contentElement
@@ -241,4 +241,4 @@ width and height supplied.
 
 .. image:: Images/GalleryProcessor.png
    :class: with-shadow
-   :alt: files dump and output
+   :alt: Gallery dump and output

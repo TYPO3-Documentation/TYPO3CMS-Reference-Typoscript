@@ -63,41 +63,101 @@ Options:
    Additionally all :ref:`HMENU options <cobj-hmenu-options>` are available.
 
 
-Example: Menu of all language from site configuration
-=====================================================
+Example: Two level menu of the web page
+=======================================
+
+Please see also :ref:`dataProcessing-about-examples`.
+
+
+TypoScript
+----------
 
 Using the :php:`MenuProcessor` the following scenario is possible::
 
-   10 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
-   10 {
-       special = list
-       special.value.field = pages
-       levels = 7
-       as = myMenu
-       expandAll = 1
-       includeSpacer = 1
-       titleField = nav_title // subtitle // title
-       dataProcessing {
-           10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
-           10 {
-                references.fieldName = media
-           }
-       }
+   tt_content {
+      examples_dataprocmenu =< lib.contentElement
+      examples_dataprocmenu {
+         templateName = DataProcMenu
+         dataProcessing.10 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+         dataProcessing.10 {
+            levels = 2
+            as = headerMenu
+            expandAll = 1
+            includeSpacer = 1
+            titleField = nav_title // title
+            dataProcessing {
+               10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+               10 {
+                  references.fieldName = media
+               }
+            }
+         }
+      }
    }
 
-This generated menu can be used in Fluid like that:
+
+The Fluid template
+------------------
+
+This generated menu can be used in Fluid like this:
 
 .. code-block:: html
 
-   <nav>
-      <ul class="header_navigation">
-         <f:for each="{myMenu}" as="menuItem">
-            <li class="{f:if(condition:'{menuItem.active}',then:'active')}">
-               <f:if condition="{menuItem.media.0}">
-                  <a href="{menuItem.media.0.publicUrl}">{menuItem.media.0.name}</a>
-               </f>
-               <f:link.page pageUid="{menuItem.uid}">{menuItem.title}</f:link.page>
+   <html data-namespace-typo3-fluid="true" xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+      <h2>Data in variable headerMenu</h2>
+      <f:debug inline="true">{headerMenu}</f:debug>
+
+      <h2>Output</h2>
+      <ul class="nav nav-pills">
+         <f:for each="{headerMenu}" as="menuItem">
+            <li class="nav-item {f:if(condition:'{menuItem.children}',then:'dropdown')}">
+               <f:if condition="{menuItem.children}">
+                  <f:then>
+                     <!-- Item has children -->
+                     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
+                        aria-haspopup="true" aria-expanded="false">
+                        <f:if condition="{menuItem.files}">
+                           <f:image image="{menuItem.files.0}" class="" width="20"/>
+                        </f:if>
+                        {menuItem.title}</a>
+                     <div class="dropdown-menu">
+                        <f:for each="{menuItem.children}" as="menuItemLevel2">
+                           <f:if condition="{menuItemLevel2.spacer}">
+                              <f:then><div class="dropdown-divider"></div></f:then>
+                              <f:else>
+                                 <f:link.page pageUid="{menuItemLevel2.uid}"
+                                              class="dropdown-item {f:if(condition:'{menuItemLevel2.active}',then:'active')}">
+                                    {menuItemLevel2.title}
+                                 </f:link.page>
+                              </f:else>
+                           </f:if>
+                        </f:for>
+                     </div>
+                  </f:then>
+                  <f:else>
+                     <!-- Item has no children -->
+                     <f:link.page pageUid="{menuItem.data.uid}"  class="nav-link {f:if(condition:'{menuItem.active}',then:'active')}">
+                        <f:if condition="{menuItem.files}">
+                           <f:image image="{menuItem.files.0}" class="" width="20"/>
+                        </f:if>
+                        {menuItem.title}
+                     </f:link.page>
+                  </f:else>
+               </f:if>
             </li>
          </f:for>
       </ul>
-   </nav>
+
+   </html>
+
+
+Output
+------
+
+The array now contains the menu items on level one. Each item in return has the menu
+items of level 2 in an array called :php:`children`.
+
+.. image:: Images/MenuProcessor.png
+   :class: with-shadow
+   :alt: language menu dump and output
+

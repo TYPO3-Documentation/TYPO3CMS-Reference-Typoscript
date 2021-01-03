@@ -1,30 +1,37 @@
 .. include:: /Includes.txt
 .. _CustomDataProcessors:
 
-=====================
-Custom dataProcessors
-=====================
+======================
+Custom data processors
+======================
 
-Last but not least, it is possible to create your own data processors and
-use them in a `FLUIDTEMPLATE` content object::
+Implementing a custom data processor is out of scope in this reference.
+You can find information on the implementation in :ref:`TYPO3 Explained
+<t3coreapi:content-elements-custom-data-processor>`.
 
-      my_custom_ctype = FLUIDTEMPLATE
-      my_custom_ctype {
-         templateName = CustomName
-         templateRootPaths {
-            10 = EXT:site_default/Resources/Private/Templates
-         }
-         settings {
-            extraParam = 1
-         }
-         dataProcessing {
-            1 = Vendor\YourExtensionKey\DataProcessing\MyFirstCustomProcessor
-            2 = Vendor2\AnotherExtensionKey\DataProcessing\MySecondCustomProcessor
-            2 {
-               options {
-                  myOption = SomeValue
-               }
-            }
+Custom data processors can be used in TypoScript just like any other
+data processor::
+
+   tt_content {
+      examples_dataproccustom =< lib.contentElement
+      examples_dataproccustom {
+         templateName = DataProcCustom
+         dataProcessing.10 = T3docs\Examples\DataProcessing\CustomCategoryProcessor
+         dataProcessing.10 {
+            as = categories
+            categoryList.field = tx_examples_main_category
          }
       }
+   }
+
+The available configuration depends on the implementation of the
+specific custom data processor, of course.
+
+
+Example output
+==============
+
+.. image:: Images/CustomDataProcessor.png
+   :class: with-shadow
+   :alt: custom data processor output
 

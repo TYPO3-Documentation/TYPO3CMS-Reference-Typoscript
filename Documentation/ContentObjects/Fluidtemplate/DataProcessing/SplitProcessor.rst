@@ -76,34 +76,60 @@ Options:
 
 
 
-Example: Splitting keywords into an array
-=========================================
+Example: Splitting an URL
+=========================
+
+Please see also :ref:`dataProcessing-about-examples`.
+
+
+TypoScript
+----------
 
 With the help of the :php:`SplitProcessor` the following scenario is
 possible::
 
-   page {
-      10 = FLUIDTEMPLATE
-      10 {
-         file = EXT:site_default/Resources/Private/Template/Default.html
-
-         dataProcessing.2 = TYPO3\CMS\Frontend\DataProcessing\SplitProcessor
-         dataProcessing.2 {
-            if.isTrue.field = bodytext
-            delimiter = ,
-            fieldName = bodytext
-            removeEmptyEntries = 1
+   tt_content {
+      examples_dataprocsplit =< lib.contentElement
+      examples_dataprocsplit {
+         templateName = DataProcSplit
+         dataProcessing.10 = TYPO3\CMS\Frontend\DataProcessing\SplitProcessor
+         dataProcessing.10 {
+            as = urlParts
+            delimiter = /
+            fieldName = header_link
+            removeEmptyEntries = 0
             filterIntegers = 0
-            filterUnique = 1
-            as = keywords
+            filterUnique = 0
          }
       }
    }
+
+
+The Fluid template
+------------------
 
 In the Fluid template then iterate over the splitted data:
 
 .. code-block:: html
 
-   <f:for each="{keywords}" as="keyword">
-      <li>Keyword: {keyword}</li>
-   </f:for>
+   <html data-namespace-typo3-fluid="true" xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+      <h2>Data in variable urlParts</h2>
+      <f:debug inline="true">{urlParts}</f:debug>
+
+      <h2>Output</h2>
+      <f:for each="{urlParts}" as="part" iteration="i">
+         <span class="text-primary">{part}</span>
+         <f:if condition="{i.isLast} == false">/</f:if>
+      </f:for>
+
+   </html>
+
+
+Output
+------
+
+The array now contains the split strings:
+
+.. image:: Images/SplitProcessor.png
+   :class: with-shadow
+   :alt: split dump and output
