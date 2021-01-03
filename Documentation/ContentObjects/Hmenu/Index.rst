@@ -816,6 +816,36 @@ Mount pages are supported.
          If set to true, the order of the rootline menu elements will be
          reversed.
 
+.. container:: table-row
+
+   Property
+         .. _hmenu-special-rootline-targets:
+
+         targets.[level number]
+
+   Data type
+         string
+
+   Description
+         For framesets. You can set a default target and a target for each
+         level by using the level number as sub-property.
+
+         **Example:**
+
+         Here the links to pages on level 3 will have target="page", while all
+         other levels will have target="\_top" as defined for the TMENU
+         property .target. ::
+
+            page.2 = HMENU
+            page.2.special = rootline
+            page.2.special.range = 1|-2
+            page.2.special.targets.3 = page
+            page.2.1 = TMENU
+            page.2.1.target = _top
+            page.2.1.wrap = <HR> | <HR>
+            page.2.1.NO {
+              linkWrap = | >
+            }
 
 
 .. ###### END~OF~TABLE ######
