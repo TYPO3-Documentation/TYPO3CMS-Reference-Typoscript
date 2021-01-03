@@ -34,13 +34,29 @@ content by TYPO3.
    Description
          This must be loaded with the template-code.
 
-         .. warning::
+         Example::
+
+            page.10 = TEMPLATE
+            page.10 {
+               // cObject FILE got deprecated in 9.5 and removed in 10.4
+               // template = FILE
+               // template.file = fileadmin/helloworld.html
+               template = TEXT
+               template.value (
+                  <div id="helloWorld">
+                    ###HELLO_WORLD### !!!
+                  </div>
+               )
+               marks {
+                 HELLO_WORLD = TEXT
+                 HELLO_WORLD.value = Hello FLUIDTEMPLATE, good bye TEMPLATE
+            }
+
+         .. deprecated:: 9.5
 
             The content object type :typoscript:`FILE` was deprecated in TYPO3 9
             and removed in TYPO3 10. The previously used method of loading the
-            template using a :typoscript:`FILE` object will no longer work!
-
-            See :doc:`t3core:Changelog/9.5/Deprecation-85970-FileContentObject`
+            template using a :typoscript:`FILE` object will no longer work.
 
 
 .. container:: table-row
