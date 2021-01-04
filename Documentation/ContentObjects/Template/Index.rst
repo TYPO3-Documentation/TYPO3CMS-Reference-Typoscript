@@ -48,8 +48,9 @@ content by TYPO3.
                   </div>
                )
                marks {
-                 HELLO_WORLD = TEXT
-                 HELLO_WORLD.value = Hello FLUIDTEMPLATE, good bye TEMPLATE
+                  HELLO_WORLD = TEXT
+                  HELLO_WORLD.value = Hello FLUIDTEMPLATE, good bye TEMPLATE
+               }
             }
 
          .. deprecated:: 9.5
