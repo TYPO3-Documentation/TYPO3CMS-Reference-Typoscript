@@ -4,7 +4,7 @@ TypoScript Reference
 
 
 :Repository:  https://github.com/TYPO3-Documentation/TYPO3CMS-Reference-Typoscript
-:Read online: https://docs.typo3.org/typo3cms/TyposcriptReference/
+:Read online: https://docs.typo3.org/m/typo3/reference-typoscript/master/en-us/
 
 Additional information
 ======================
