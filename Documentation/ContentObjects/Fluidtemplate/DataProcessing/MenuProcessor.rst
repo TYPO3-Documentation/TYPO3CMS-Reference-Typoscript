@@ -56,7 +56,7 @@ Options:
    :type: string
    :default: "menu"
 
-   Name the variable in the Fluid template will have
+   Name for the variable in the Fluid template.
 
 .. important:: 
    
