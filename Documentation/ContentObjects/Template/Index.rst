@@ -37,7 +37,26 @@ content by TYPO3.
          with a :ts:`FILE` cObject. If it is not loaded with
          code, the object returns nothing.
 
-         .. warning::
+         Example::
+
+            page.10 = TEMPLATE
+            page.10 {
+               // cObject FILE got deprecated in 9.5 and removed in 10.4
+               // template = FILE
+               // template.file = fileadmin/helloworld.html
+               template = TEXT
+               template.value (
+                  <div id="helloWorld">
+                    ###HELLO_WORLD### !!!
+                  </div>
+               )
+               marks {
+                  HELLO_WORLD = TEXT
+                  HELLO_WORLD.value = Hello FLUIDTEMPLATE, good bye TEMPLATE
+               }
+            }
+
+         .. deprecated:: 9.5
 
             The content object type :typoscript:`FILE` was deprecated in TYPO3 9
             and removed in TYPO3 10. The previously used method of loading the
@@ -121,15 +140,35 @@ content by TYPO3.
 
             page.10 = TEMPLATE
             page.10 {
-              template = FILE
-              template.file = fileadmin/template.html
-              relPathPrefix = fileadmin/
-              relPathPrefix.IMG = fileadmin/img/
+               template = TEXT
+               template.value (
+                  <script src="fallingHearts.js"></script>
+                  <div id="helloWorld">
+                     ###HELLO_WORLD### !!!
+                  </div>
+                  <img src="my-image.gif" alt="My Image" />
+               )
+               relPathPrefix = fileadmin/
+               relPathPrefix.IMG = fileadmin/img/
+               marks {
+                  HELLO_WORLD = TEXT
+                  HELLO_WORLD.value = Hello World
+               }
             }
 
          In this example all relative paths found are prefixed with "fileadmin/"
          unless it was the src attribute of an img tag in which case the path
          is prefixed with "fileadmin/img/"
+
+         So the above Example would output:
+
+         .. code-block:: html
+
+            <script src="fileadmin/fallingHearts.js"></script>
+            <div id="helloWorld">
+               Hello World !!!
+            </div>
+            <img src="fileadmin/img/my-image.gif" alt="My Image" />
 
 
 .. container:: table-row
@@ -301,20 +340,28 @@ Example:
 
    page.10 = TEMPLATE
    page.10 {
-     template = FILE
-     template.file = fileadmin/test.tmpl
-     subparts {
-       HELLO = TEXT
-       HELLO.value = This is the replaced subpart-code.
-     }
-     marks {
-       Testmark = TEXT
-       Testmark.value = This is replacing a simple marker in the HTML code.
-     }
-     workOnSubpart = DOCUMENT
+      template = TEXT
+      template.value (
+         <div id="helloWorld">
+           ###Testmark### !!!
+         </div>
+         <!-- start of subpart ###HELLO### -->
+            This is the HTML code, that will be loaded in the register
+            and will be replaced with the result...
+         <!-- end ###HELLO### -->
+      )
+      subparts {
+         HELLO = TEXT
+         HELLO.value = This is the replaced subpart-code.
+      }
+      marks {
+         Testmark = TEXT
+         Testmark.value = This is replacing a simple marker in the HTML code.
+      }
+      workOnSubpart = DOCUMENT
    }
 
-In this example a template named test.tmpl is loaded and used. The
-subpart "HELLO" and the mark "Testmark" in the template file will be
+In this example the template is created via the content object TEXT. The
+subpart "HELLO" and the mark "Testmark" in the template will be
 replaced with the output of the according cObjects.
 
