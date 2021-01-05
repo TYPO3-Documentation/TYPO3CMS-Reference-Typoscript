@@ -7,7 +7,7 @@ MenuProcessor
 
 
 The :php:`MenuProcessor` utilizes :ts:`HMENU` to generate a JSON encoded menu string
-that will be decoded again and assigned to :ts:`FLUIDTEMPLATE` as variable.
+that will be decoded again and assigned to :ts:`FLUIDTEMPLATE` as a variable.
 Additional data processing is supported and will be applied to each record.
 
 Options:
@@ -160,4 +160,3 @@ items of level 2 in an array called :php:`children`.
 .. image:: Images/MenuProcessor.png
    :class: with-shadow
    :alt: language menu dump and output
-
