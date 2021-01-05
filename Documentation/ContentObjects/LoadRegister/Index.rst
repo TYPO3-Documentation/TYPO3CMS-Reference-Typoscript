@@ -18,7 +18,7 @@ will be processed as the first, and the register with the lowest number will be 
 as the last one. This corresponds to the stack priciple Last In – First Out (LIFO).
 
 With the advent of Fluid templating registers are used less often then
-they used to. In the core they are not being used anymore.
+they used to be. In the core they are not being used anymore.
 
 .. ### BEGIN~OF~TABLE ###
 

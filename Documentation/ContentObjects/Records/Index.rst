@@ -258,7 +258,7 @@ referenced from the :guilabel:`page properties`.
    page.42 = RECORDS
    page.42 {
       source.field = tx_examples_related_content
-		tables = tt_content
+      tables = tt_content
    }
 
 Since no :code:`conf` property is defined, the rendering will
@@ -312,7 +312,7 @@ Contrary to the previous example, in this case the :code:`conf` property
 is present and defines a very simple rendering of each content element
 (i.e. the header with a direct link to the content element).
 
-However the same can be achieved with a :ref:`cobj-fluidtemplate` and 
+However, the same can be achieved with a :ref:`cobj-fluidtemplate` and
 data processing. This way templating is much more flexible. See the following
 example from the system extension :file:`fluid_styled_content`::
 
