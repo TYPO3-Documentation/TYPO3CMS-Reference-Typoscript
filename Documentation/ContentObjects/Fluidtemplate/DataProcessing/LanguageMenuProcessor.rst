@@ -6,7 +6,7 @@ LanguageMenuProcessor
 =====================
 
 This menu processor generates a json encoded menu string that will be
-decoded again and assigned to the :ts:`FLUIDTEMPLATE` as variable.
+decoded again and assigned to the :ts:`FLUIDTEMPLATE` as a variable.
 
 
 Options:
