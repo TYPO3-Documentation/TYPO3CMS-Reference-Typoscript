@@ -113,7 +113,7 @@ This generated menu can be used in Fluid like this:
 Output
 ------
 
-The array now contains information on all language as defined in the site
+The array now contains information on all languages as defined in the site
 configuration. As the current page is not translated into German, the
 German language has the :php:`item.available` set to false. It therefore
 doesn't get linked in the template.
