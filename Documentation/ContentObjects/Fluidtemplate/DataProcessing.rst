@@ -22,7 +22,7 @@ dataProcessing
    class.
 
 There are several data processors available to allow flexible processing,
-for example of comma-separated values, related files or related records.
+for example for comma-separated values, related files or related records.
 
 .. toctree::
    :titlesonly:
