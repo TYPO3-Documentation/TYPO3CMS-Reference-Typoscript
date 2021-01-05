@@ -297,7 +297,7 @@ cache
          records for the cache lifetime of all pages.
 
          You can use the keyword "current" instead of a <storage-pid> to consider
-         records on the current page for the cache life of it-self.
+         records on the current page for the cache life of itself.
 
    Examples
          This includes the fe\_users records on page 2 in the cache lifetime
