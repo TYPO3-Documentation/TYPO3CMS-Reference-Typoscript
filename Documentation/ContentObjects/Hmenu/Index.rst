@@ -21,6 +21,11 @@ menus. These special menus take characteristics of special menu types
 into account.
 
 
+.. _cobj-hmenu-options:
+
+Options
+=======
+
 .. ### BEGIN~OF~TABLE ###
 
 .. container:: table-row
