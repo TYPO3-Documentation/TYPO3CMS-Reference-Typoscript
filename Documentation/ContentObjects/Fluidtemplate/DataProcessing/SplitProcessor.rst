@@ -5,8 +5,8 @@
 SplitProcessor
 ==============
 
-The :php:`SplitProcessor` allows to split values separated with a delimiter
-inside a single database field into an array to loop over it. Whitespaces will
+The :php:`SplitProcessor` allows split values separated with a delimiter
+inside a single database field to be put into an array and looped over. Whitespaces will
 be automatically trimmed.
 
 
