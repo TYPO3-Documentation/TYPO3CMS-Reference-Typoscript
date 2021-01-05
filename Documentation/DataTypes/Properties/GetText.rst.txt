@@ -618,12 +618,14 @@ siteLanguage
    :ts:`direction`        The direction for this language
    :ts:`flagIdentifier`   The flag key (like "gb" or "fr") used to be used in TYPO3's Backend.
    :ts:`hreflang`         Language tag for this language defined by RFC 1766 / 3066 for "lang"  and "hreflang" attributes
-   :ts:`languageId`       The language mapped to the sys_language DB entry.
+   :ts:`languageId`       The language mapped to the id of the language in the current site configuration.
    :ts:`locale`           Locale, like 'de_CH' or 'en_GB'
    :ts:`navigationTitle`  Label to be used within language menus
    :ts:`title`            Label to be used within TYPO3 to identify the language
    :ts:`twoLetterIsoCode` The iso code for this language (two letter) ISO-639-1
-   :ts:`typo3Language`    Prefix for TYPO3's language files "default" for english, otherwise one of TYPO3's internal language keys. Previously configured via TypoScript config.language = fr
+   :ts:`typo3Language`    Prefix for TYPO3's language files - "default" for English, otherwise one of TYPO3's
+                          internal language keys. Can be configured in the site configuration in each language
+                          with the key :yaml:`typo3Language`.
    :ts:`websiteTitle`     The website title for this language. No automatic fallback to the `site:websiteTitle`!
    ====================== ==========================================================
 
