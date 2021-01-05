@@ -237,6 +237,6 @@ for file resources::
    }
 
 The :php:`FilesProcessor` can slide up the rootline to collect
-images for FLUID templates. One usual feature is to use images
-attached to pages and use them down the page tree for
+images for FLUID templates. One usual feature is to take images
+attached to pages and use them on the page tree as
 header images in the frontend.
