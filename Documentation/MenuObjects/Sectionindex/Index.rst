@@ -1,15 +1,14 @@
-.. include:: ../../Includes.txt
-
-
+.. include:: /Includes.rst.txt
+.. index:: TMENU; sectionIndex
 .. _section-index:
 
 ==========================
-[menu object].sectionIndex
+TMENU.sectionIndex
 ==========================
 
-This is a property that all menu objects share. If it is set, then the
+If this property is set, then the
 menu will not consist of links to pages on the "next level" but rather
-of links to the parent page to the menu, but in addition "#"-links to
+of links to the parent page to the menu, and in addition "#"-links to
 the cObjects rendered on the page. In other words, the menu items will
 be a section index with links to the content elements on the page (by
 default with colPos=0!).
@@ -53,8 +52,8 @@ drops the filter "colPos=x" completely.
    tt_content.menu.20.3.1.sectionIndex.useColPos = -1
 
 
-The data-record /Behind the scene
-"""""""""""""""""""""""""""""""""
+The data-record / behind the scene
+==================================
 
 When the menu-records are selected it works like this: The parent page
 record is used as the "base" for the menu-record. That means that any
@@ -98,4 +97,3 @@ hash-mark and the number of the field.
 You cannot create submenus to sectionIndex-menus. That does not make
 any sense as these elements are not pages and thereby have no
 children.
-

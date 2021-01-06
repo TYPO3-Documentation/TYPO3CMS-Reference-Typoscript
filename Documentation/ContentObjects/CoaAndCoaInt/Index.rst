@@ -1,12 +1,16 @@
-.. include:: ../../Includes.txt
-
-
+.. include:: /Includes.rst.txt
+.. index::
+   Content objects; Array
+   Content objects; Content object array
+   Content objects; COA
+   Content objects; COA_INT
 .. _cobj-cobj-array:
 .. _cobj-coa:
 .. _cobj-coa-int:
 
-COA, COA\_INT
-^^^^^^^^^^^^^
+====================================
+Content object array - COA, COA\_INT
+====================================
 
 .. note::
 
@@ -82,7 +86,7 @@ you to render *every* cObject non-cached.
 .. _cobj-coa-int-examples:
 
 Examples:
-"""""""""
+=========
 
 ::
 

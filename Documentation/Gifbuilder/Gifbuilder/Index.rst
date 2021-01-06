@@ -1,6 +1,5 @@
-.. include:: ../../Includes.txt
-
-
+.. include:: /Includes.rst.txt
+.. index:: GIFBUILDER
 .. _gifbuilder:
 
 ==========
@@ -23,7 +22,7 @@ format supported. PNG and JPG can just as well be created today
 .. _gifbuilder-calc:
 
 Note on (+calc)
-"""""""""""""""
+===============
 
 Whenever the "+calc"-function is added to a value in the data type of
 the properties underneath, you can use the dimensions of TEXT and
@@ -66,12 +65,12 @@ As you see, the image has a width defined as the width of the text
 printed onto it + 10 pixels. The height is fixed by the value of the
 constant {$styles.header.gfx1.itemH}
 
-
+.. index:: GIFBUILDER; Top level object
 .. _gifbuilder-top-level-object:
 .. _tlo-gifbuilder:
 
-_GIFBUILDER top level object
-============================
+\_GIFBUILDER top level object
+=============================
 
 You can configure some global settings for GIFBUILDER by a top-level
 object named "\_GIFBUILDER". One of the available properties of the

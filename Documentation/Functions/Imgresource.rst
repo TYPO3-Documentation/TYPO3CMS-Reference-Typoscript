@@ -1,6 +1,7 @@
-.. include:: ../Includes.txt
-
-
+.. include:: /Includes.rst.txt
+.. index::
+   Functions; imgResource
+   imgResource
 .. _imgresource:
 
 ===========
@@ -10,6 +11,8 @@ imgResource
 imgResource contains the properties that are used with the data type
 imgResource.
 
+
+.. index:: imgResource;
 .. _imgresource-ext:
 
 ext
@@ -97,6 +100,8 @@ height
 :aspect:`Description`
    See :ref:`imgresource-width`
 
+
+.. index:: imgResource; params
 .. _imgresource-params:
 
 params
@@ -112,6 +117,7 @@ params
    GraphicsMagick/ImageMagick command-line:
 
    fx. `-rotate 90`, `-negate` or `-quality 90`
+
 
 .. _imgresource-sample:
 
@@ -130,6 +136,7 @@ sample
 
 :aspect:`Default`
    0
+
 
 .. _imgresource-noscale:
 
@@ -167,6 +174,8 @@ noScale
 
       <img src="fileadmin/test.jpg" width="240" height="180" />
 
+
+.. index:: imgResource; crop
 .. _imgresource-crop:
 
 crop
@@ -223,6 +232,7 @@ cropVariant
           cropVariant = desktop
       }
 
+
 .. _imgresource-frame:
 
 frame
@@ -239,6 +249,8 @@ frame
 
    "" = first frame (zero)
 
+
+.. index:: imgResource; import
 .. _imgresource-import:
 
 import
@@ -263,6 +275,8 @@ import
       .import.field = image
       .import.listNum = 0
 
+
+.. index:: imgResource; treatIdAsReference
 .. _imgresource-treatidasreference:
 
 treatIdAsReference
@@ -338,6 +352,8 @@ minH
 :aspect:`Description`
    Minimum height (overrules maxW/maxH)
 
+
+.. index:: imgResource; stripProfile
 .. _imgresource-stripprofile:
 
 stripProfile

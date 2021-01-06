@@ -1,4 +1,4 @@
-.. include:: /Includes.txt
+.. include:: /Includes.rst.txt
 
 .. _cobj-fluidtemplate-properties-dataprocessing:
 .. _dataProcessing:

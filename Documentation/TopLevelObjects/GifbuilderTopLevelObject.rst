@@ -1,9 +1,9 @@
-.. include:: ../Includes.txt
+.. include:: /Includes.rst.txt
+.. index:: Top-level objects; _GIFBUILDER
 
-
-===========
-_GIFBUILDER
-===========
+============
+\_GIFBUILDER
+============
 
 .. seealso::
 

@@ -1,5 +1,5 @@
-.. include:: ../Includes.txt
-
+.. include:: /Includes.rst.txt
+.. index:: Simple data types
 .. _data-types:
 .. _data-types-reference:
 
@@ -19,10 +19,12 @@ RGB-values have to be provided.
 The following is a list of available data types, their usage, purpose and
 examples.
 
+
+.. index:: Simple data types; align
 .. _data-type-align:
 
 align
------
+=====
 
 :aspect:`Data type:`
    align
@@ -37,11 +39,12 @@ align
    :ts:`left`
 
 
+.. index:: Simple data types; boolean
 .. _data-type-boolean:
 .. _data-type-bool:
 
 boolean
--------
+=======
 
 :aspect:`Data type:`
    boolean
@@ -63,10 +66,12 @@ boolean
       dummy.enable = 1   # true,  preferred notation
       dummy.enable =     # false, because the value is empty
 
+
+.. index:: Simple data types; case
 .. _data-type-case:
 
 case
-----
+====
 
 :aspect:`Data type:`
    case
@@ -99,10 +104,11 @@ case
       HELLO WORLD!
 
 
+.. index:: Simple data types; date-conf
 .. _data-type-date-conf:
 
 date-conf
----------
+=========
 
 :aspect:`Data type:`
    date-conf
@@ -140,10 +146,12 @@ date-conf
 
       d-m-y
 
+
+.. index:: Simple data types; degree
 .. _data-type-degree:
 
 degree
-------
+======
 
 :aspect:`Data type:`
    degree
@@ -156,8 +164,11 @@ degree
 
 .. _data-type-dir:
 
+
+.. index:: Simple data types; dir
+
 dir
----
+===
 
 :aspect:`Data type:`
    dir
@@ -177,10 +188,12 @@ dir
 
       fileadmin/files/ | pdf,gif,jpg | name | r | true
 
+
+.. index:: Simple data types; function name
 .. _data-type-function-name:
 
 function name
--------------
+=============
 
 :aspect:`Data type:`
    function name
@@ -227,53 +240,18 @@ function name
 
       user_yourClass->reverseString
 
-.. _data-type-gettext:
-
 getText
--------
+=======
 
-:aspect:`Data type:`
-   getText
-
-:aspect:`Description:`
-   The getText data type is some kind of tool box allowing to retrieve
-   values from a variety of sources, e.g. from GET/POST variables, from
-   registers, values from the page tree, items in the page menus, records from any database table, etc.
-
-   The general syntax is as follows::
-
-      key : code
-
-   where :ts:`key` indicates the source and :ts:`code` is some form of path or
-   pointer to the value, which depends on the key used. The various keys and
-   their possible codes are described below.
-
-   The :ts:`code` can contain pipe characters :ts:`|` to separate keys
-   in a multi-dimensional array. This e.g. works with :ts:`TSFE`::
-
-      foo = TSFE : fe_user|user|username
-
-   Some codes work with different separator, which is documented right at the
-   code.
-   Spaces around the colon (:ts:`:`) are irrelevant. The :ts:`key` is
-   case-insensitive.
-
-   By separating the value of getText with :ts:`//` (double slash) a number of
-   codes can be supplied and getText will return the first one, which is not
-   empty ("" or zero).
-
-   To get the content of the field "header". If "header is empty, "title" is
-   retrieved. If "title" is empty as well, it finally gets the field "uid"::
-
-      foo = field : header // field : title // field : uid
+The getText data type is some kind of tool box allowing to retrieve
+values from a variety of sources. Read more: :ref:`data-type-gettext`
 
 
-.. include:: Properties/GetText.rst.txt
-
+.. index:: Simple data types; GraphicColor
 .. _data-type-graphiccolor:
 
 GraphicColor
-------------
+============
 
 :aspect:`Data type:`
    GraphicColor
@@ -303,10 +281,12 @@ GraphicColor
 
    #ffeecc *: +16 ("ffeecc" is going to #fffedc because 16 is added)*
 
+
+.. index:: Simple data types; HTML code
 .. _data-type-html-code:
 
 HTML code
----------
+=========
 
 :aspect:`Data type:`
    HTML code
@@ -319,10 +299,12 @@ HTML code
 
       <b>Some text in bold</b>
 
+
+.. index:: Simple data types; HTML-color
 .. _data-type-html-color:
 
 HTML-color
-----------
+==========
 
 :aspect:`Data type:`
    HTML-color
@@ -358,10 +340,12 @@ HTML-color
 
    #ffeecc
 
+
+.. index:: Simple data types; imageExtension
 .. _data-type-imageextension:
 
 imageExtension
---------------
+==============
 
 :aspect:`Data type:`
    imageExtension
@@ -379,10 +363,12 @@ imageExtension
 
    web *(gif or jpg ..)*
 
+
+.. index:: Simple data types; imgResource
 .. _data-type-imgresource:
 
 imgResource
------------
+===========
 
 :aspect:`Data type:`
    imgResource
@@ -414,11 +400,13 @@ imgResource
           # GIFBUILDER properties here...
       }
 
+
+.. index:: Simple data types; integer
 .. _data-type-integer:
 .. _data-type-int:
 
 integer
--------
+=======
 
 :aspect:`Data type:`
    integer / int
@@ -430,10 +418,12 @@ integer
    This data type is sometimes used generally though another type would have
    been more appropriate, like :ref:`data-type-pixels`.
 
+
+.. index:: Simple data types; linkWrap
 .. _data-type-linkwrap:
 
 linkWrap
---------
+========
 
 :aspect:`Data type:`
    linkWrap
@@ -456,10 +446,12 @@ linkWrap
 
       <a href="?id={0}"> | </a>
 
+
+.. index:: Simple data types; list
 .. _data-type-list:
 
 list
-----
+====
 
 :aspect:`Data type:`
    list
@@ -474,10 +466,12 @@ list
 
       item,item2,item3
 
+
+.. index:: Simple data types; margins
 .. _data-type-margins:
 
 margins
--------
+=======
 
 :aspect:`Data type:`
    margins
@@ -491,10 +485,12 @@ margins
 
       10,0,0,5
 
+
+.. index:: Simple data types; page_id
 .. _data-type-page-id:
 
 page\_id
---------
+========
 
 :aspect:`Data type:`
    page\_id
@@ -511,10 +507,12 @@ page\_id
 
       34
 
+
+.. index:: Simple data types; path
 .. _data-type-path:
 
 path
-----
+====
 
 :aspect:`Data type:`
    path
@@ -527,10 +525,12 @@ path
 
       fileadmin/stuff/
 
+
+.. index:: Simple data types; pixels
 .. _data-type-pixels:
 
 pixels
-------
+======
 
 :aspect:`Data type:`
    pixels
@@ -543,12 +543,16 @@ pixels
 
       345
 
+
+.. index::
+   Simple data types; positive integer
+   Simple data types; int+
 .. _data-type-positive-integer:
 .. _data-type-posint:
 .. _data-type-intplus:
 
 positive integer
-----------------
+================
 
 :aspect:`Data type:`
    positive integer / posint / int+
@@ -559,10 +563,12 @@ positive integer
 :aspect:`Examples:`
    42, 8, 9
 
+
+.. index:: Simple data types; resource
 .. _data-type-resource:
 
 resource
---------
+========
 
 :aspect:`Data type:`
    resource
@@ -577,10 +583,12 @@ resource
 
       fileadmin/picture.gif
 
+
+.. index:: Simple data types; rotation
 .. _data-type-rotation:
 
 rotation
---------
+========
 
 :aspect:`Data type:`
    rotation
@@ -591,10 +599,12 @@ rotation
 :aspect:`Example:`
    180
 
+
+.. index:: Simple data types; space
 .. _data-types-space:
 
 space
------
+=====
 
 :aspect:`Data type:`
    space
@@ -611,10 +621,12 @@ space
 
       5 | 5
 
+
+.. index:: Simple data types; strftime-conf
 .. _data-type-strftime-conf:
 
 strftime-conf
--------------
+=============
 
 :aspect:`Data type:`
    strftime-conf
@@ -671,12 +683,14 @@ strftime-conf
 
       %T
 
+
+.. index:: Simple data types; string
 .. _data-type-string:
 .. _data-type-str:
 .. _data-type-value:
 
 string
-------
+======
 
 :aspect:`Data type:`
    string / str / value
@@ -688,10 +702,12 @@ string
 :aspect:`Example:`
    The quick brown fox jumps over the lazy dog.
 
+
+.. index:: Simple data types; tag
 .. _data-type-tag:
 
 <tag>
------
+=====
 
 :aspect:`Data type:`
    <tag>
@@ -704,10 +720,12 @@ string
 
       <body lang="de">
 
+
+.. index:: Simple data types; tag-data
 .. _data-type-tag-data:
 
 <tag>-data
-------------
+============
 
 :aspect:`Data type:`
    <tag>-data
@@ -717,10 +735,12 @@ string
 
    *could be '150,\*'*
 
+
+.. index:: Simple data types; tag-params
 .. _data-type-tag-params:
 
 <tag>-params
---------------
+==============
 
 :aspect:`Data type:`
    <tag>-params
@@ -733,10 +753,12 @@ string
 
       border="0" framespacing="0"
 
+
+.. index:: Simple data types; target
 .. _data-type-target:
 
 target
-------
+======
 
 :aspect:`Data type:`
    target
@@ -750,10 +772,12 @@ target
    This is normally the same value as the name of the root-level object
    that defines the frame.
 
+
+.. index:: Simple data types; UNIX-time
 .. _data-type-unix-time:
 
 UNIX-time
----------
+=========
 
 :aspect:`Data type:`
    UNIX-time
@@ -766,10 +790,12 @@ UNIX-time
 
       1462790096
 
+
+.. index:: Simple data types; VHalign
 .. _data-type-vhalign:
 
 VHalign
--------
+=======
 
 :aspect:`Data type:`
    VHalign
@@ -798,10 +824,12 @@ VHalign
 
       r , c
 
+
+.. index:: Simple data types; wrap
 .. _data-type-wrap:
 
 wrap
-----
+====
 
 :aspect:`Data type:`
    wrap
@@ -829,10 +857,12 @@ wrap
 
       <p style="color: red;"> | </p>
 
+
+.. index:: Simple data types; x,y,w,h
 .. _data-type-xywh:
 
 x,y,w,h
--------
+=======
 
 :aspect:`Data type:`
    x,y,w,h

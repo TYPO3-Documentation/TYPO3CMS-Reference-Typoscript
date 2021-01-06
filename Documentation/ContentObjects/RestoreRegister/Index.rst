@@ -1,6 +1,7 @@
-.. include:: ../../Includes.txt
-
-
+.. include:: /Includes.rst.txt
+.. index::
+   Content objects; RESTORE_REGISTER
+   Registers; Restoring
 .. _cobj-restore-register:
 
 =================
@@ -21,7 +22,7 @@ RESTORE\_REGISTER has no properties.
 .. _cobj-restore-register-examples:
 
 Example:
-""""""""
+========
 
 The following example shows how LOAD_REGISTER and RESTORE_REGISTER can
 be used to load values into the register and to restore previous values

@@ -1,5 +1,5 @@
-.. include:: ../Includes.txt
-
+.. include:: /Includes.rst.txt
+.. index:: Top-level objects; module
 
 .. _tlo-module:
 

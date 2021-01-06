@@ -1,19 +1,28 @@
-.. include:: ../Includes.txt
-
-
+.. include:: /Includes.rst.txt
+.. index:: Constants
 .. _typoscript-syntax-what-are-constants:
 .. _typoscript-syntax-constants:
 
+=========
 Constants
 =========
 
-Constants are values defined in the "Constants" field of a template.  They
+Constants are values defined in the  :guilabel:`Constants` field of a template.  They
 follow the :ref:`syntax of ordinary TypoScript
 <t3coreapi:typoscript-syntax-syntax>` and are case sensitive! They are used to
 manage *in a single place* values, which are later used in *several places*.
 
+.. note::
+
+   The constants defined in the :guilabel:`Constants` field of a template are not
+   the same like the top-level object :ts:`constants`. Here you can find the
+   :ref:`top-level constants <tlo-constants>`
+
+
+.. index:: Constants; Definition
+
 Defining constants
-------------------
+==================
 
 Other than constants in programming languages, values of constants in TypoScript
 can be overwritten. Constants in TypoScript can more be seen as variables in
@@ -32,8 +41,9 @@ Constants do not support multiline values!
 You can use environment variables to provide instance specific values to your constants.
 Refer to :ref:`getEnv <getenv>` for further information.
 
+
 Example
-"""""""
+-------
 
 Here :ts:`bgCol` is set to "red", :ts:`file.toplogo` is set to
 :file:`fileadmin/logo.gif` and :ts:`topimg.file.pic2` is set to
@@ -55,12 +65,14 @@ expected location.
 The objects in the highlighted lines contain the reserved word "file" and the
 properties are always of data type ":ref:`resource <data-type-resource>`".
 
+
+.. index:: Constants; Usage
 .. _typoscript-syntax-using-constants:
 
 Using constants
----------------
+===============
 
-When a TypoScript Template is parsed by TYPO3 CMS, constants are replaced, as
+When a TypoScript Template is parsed by the TYPO3 CMS, constants are replaced, as
 one would perform any ordinary string replacement. Constants are used in the
 "Setup" field by placing them inside curly braces and prepending them with a
 :ts:`$` sign:
@@ -72,7 +84,7 @@ one would perform any ordinary string replacement. Constants are used in the
    {$topimg.file.pic2}
    {$file.toplogo}
 
-Only constants, which are actually defined in the "Constants" field, are
+Only constants, which are actually defined in the :guilabel:`Constants` field, are
 substituted.
 
 Constants in included templates are also substituted, as the whole
@@ -83,7 +95,7 @@ defined, it's also possible to structure constants and prefix them with a common
 path segment. This makes reading and finding of constants easier.
 
 Example
-"""""""
+-------
 
 .. code-block:: typoscript
 
@@ -110,6 +122,15 @@ The "Display constants" function is not available if "Crop lines" is selected.
 
    The TypoScript constants are evaluated in this order:
 
-   #. :php:`$GLOBALS['TYPO3_CONF_VARS']['FE']['defaultTypoScript_constants']` via :php:`\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTypoScriptConstants()`
+   #. :php:`$GLOBALS['TYPO3_CONF_VARS']['FE']['defaultTypoScript_constants']`
+      via :php:`\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTypoScriptConstants()`
    #. Site specific :ref:`settings from the site configuration <t3coreapi:sitehandling>`
    #. Constants from :sql:`sys_template` database records
+
+
+The constant editor
+===================
+
+Most constants can be edited in the :guilabel:`Template` module using the :guilabel:`constant editor`.
+If you keep your constants in a sitepackage extension you can also make them :ref:`available for the
+constant editor <typoscript-syntax-constant-editor>`.

@@ -1,6 +1,7 @@
-.. include:: ../Includes.txt
-
-
+.. include:: /Includes.rst.txt
+.. index::
+   Functions; parseFunc
+   parseFunc
 .. _parsefunc:
 
 =========
@@ -10,6 +11,8 @@ parseFunc
 This object is used to parse some content for stuff like special typo
 tags, the :ref:`parsefunc-makeLinks`-things and so on...
 
+
+.. index:: parseFunc; externalBlocks
 .. _parsefunc-externalBlocks:
 
 externalBlocks
@@ -102,6 +105,8 @@ externalBlocks
             }
       }
 
+
+.. index:: parseFunc; constants
 .. _parsefunc-constants:
 
 constants
@@ -133,6 +138,8 @@ constants
    string ###EMAIL### in the text will be substituted with the actual
    address.
 
+
+.. index:: parseFunc; short
 .. _parsefunc-short:
 
 short
@@ -156,6 +163,8 @@ short
             T3web = <a href="http://typo3.org">typo3.org</a>
       }
 
+
+.. index:: parseFunc; plainTextStdWrap
 .. _parsefunc-plainTextStdWrap:
 
 plainTextStdWrap
@@ -169,6 +178,7 @@ plainTextStdWrap
 
 :aspect:`Description`
    This is :ref:`stdwrap` properties for all non-tag content.
+
 
 .. _parsefunc-userFunc:
 
@@ -186,6 +196,7 @@ userFunc
    Similar to e.g. :ref:`stdwrap-postuserfunc` in :ref:`stdWrap`.
 
    Remember the function name must possibly be prepended :php:`user_`.
+
 
 .. _parsefunc-nonTypoTagStdWrap:
 
@@ -206,6 +217,7 @@ nonTypoTagStdWrap
    (including tags) between special TypoTags
    (unless :ts:`breakoutTypoTagContent` is not set for the TypoTag).
 
+
 .. _parsefunc-nonTypoTagUserFunc:
 
 nonTypoTagUserFunc
@@ -225,6 +237,8 @@ nonTypoTagUserFunc
    (Notice: :ts:`breakoutTypoTagContent` must be set for the TypoTag
    if it's excluded from :ts:`nonTypoTagContent`).
 
+
+.. index:: parseFunc; sword
 .. _parsefunc-sword:
 
 sword
@@ -245,6 +259,8 @@ sword
 :aspect:`Default`
    :ts:`<font color="red">|</font>`
 
+
+.. index:: parseFunc; makelinks
 .. _parsefunc-makelinks:
 
 makelinks
@@ -259,6 +275,7 @@ makelinks
 :aspect:`Description`
    Convert web addresses prefixed with `http://` and mail addresses
    prefixed with `mailto:` to links.
+
 
 .. _parsefunc-tags:
 
@@ -275,6 +292,8 @@ tags
    Here you can define **custom tags** that will parse the content to
    something.
 
+
+.. index:: parseFunc; allowTags
 .. _parsefunc-allowTags:
 
 allowTags
@@ -292,6 +311,8 @@ allowTags
    Highest priority: If a tag is found in :ref:`parsefunc-allowTags`,
    :ref:`parsefunc-denyTags` is ignored!
 
+
+.. index:: parseFunc; denyTags
 .. _parsefunc-denyTags:
 
 denyTags
@@ -315,6 +336,7 @@ denyTags
 
       .allowTags = b,i,a,img
       .denyTags = *
+
 
 .. _parsefunc-if:
 

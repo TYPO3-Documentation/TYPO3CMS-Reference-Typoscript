@@ -1,6 +1,5 @@
-.. include:: ../../Includes.txt
-
-
+.. include:: /Includes.rst.txt
+.. index:: Content objects; SVG
 .. _cobj-svg:
 
 ===
@@ -89,7 +88,7 @@ do not have native SVG support, so that it also works in e.g. IE
 .. _cobj-svg-examples:
 
 Example:
-""""""""
+========
 
 ::
 

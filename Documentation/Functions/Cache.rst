@@ -1,6 +1,5 @@
-.. include:: ../Includes.txt
-
-
+.. include:: /Includes.rst.txt
+.. index:: Functions; cache
 .. _cache:
 
 =====
@@ -134,6 +133,7 @@ timestamp). ::
 
 Here a dynamic key is used. It takes the page id and the language uid
 into account making the object page and language specific.
+
 
 cache as first-class function
 =============================

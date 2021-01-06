@@ -1,6 +1,7 @@
-.. include:: ../Includes.txt
-
-
+.. include:: /Includes.rst.txt
+.. index::
+   Functions; select
+   Database; select
 .. _select:
 
 ======

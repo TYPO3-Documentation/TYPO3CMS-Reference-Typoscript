@@ -1,5 +1,6 @@
-.. include:: ../Includes.txt
+.. include:: /Includes.rst.txt
 
+.. index:: Functions; getEnv
 
 .. _getenv:
 

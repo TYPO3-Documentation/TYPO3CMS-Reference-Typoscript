@@ -1,6 +1,5 @@
-.. include:: ../Includes.txt
-
-
+.. include:: /Includes.rst.txt
+.. index:: Top-level objects; constants
 .. _tlo-constants:
 .. _constants:
 

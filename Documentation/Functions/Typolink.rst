@@ -1,6 +1,7 @@
-.. include:: ../Includes.txt
-
-
+.. include:: /Includes.rst.txt
+.. index::
+   Functions; typolink
+   typolink
 .. _typolink:
 
 ========
@@ -45,6 +46,8 @@ Output:
 
    /somepage
 
+
+.. index:: typolink; extTarget
 .. _typolink-extTarget:
 
 extTarget
@@ -63,6 +66,7 @@ extTarget
    \_top
 
 
+.. index:: typolink; fileTarget
 .. _typolink-fileTarget:
 
 fileTarget
@@ -78,6 +82,7 @@ fileTarget
    Target used for file links
 
 
+.. index:: typolink; language
 .. _typolink-language:
 
 language
@@ -106,6 +111,7 @@ language
       page.20.typolink.language = 3
 
 
+.. index:: typolink; target
 .. _typolink-target:
 
 target
@@ -121,6 +127,7 @@ target
    Target used for internal links
 
 
+.. index:: typolink; no_cache
 .. _typolink-no-cache:
 
 no\_cache
@@ -136,6 +143,7 @@ no\_cache
    Adds ``&no_cache=1`` to the link
 
 
+.. index:: typolink; additionalParams
 .. _typolink-additionalParams:
 
 additionalParams
@@ -167,6 +175,7 @@ additionalParams
       *Note:* This is only active for internal links.
 
 
+.. index:: typolink; addQueryString
 .. _typolink-addQueryString:
 
 addQueryString
@@ -203,7 +212,6 @@ addQueryString
       are given. Additionally the security risk of cache poisoning has to
       be considered.
 
-
 .. _typolink-wrap:
 
 wrap
@@ -219,6 +227,7 @@ wrap
    Wraps the links.
 
 
+.. index:: typolink; ATagBeforeWrap
 .. _typolink-ATagBeforeWrap:
 
 ATagBeforeWrap
@@ -237,6 +246,8 @@ ATagBeforeWrap
 :aspect:`Default`
    0
 
+
+.. index:: typolink; parameter
 .. _typolink-parameter:
 
 parameter
@@ -352,6 +363,7 @@ parameter
          typolink.parameter.data = parameters : allParams
 
 
+.. index:: typolink; forceAbsoluteUrl
 .. _typolink-forceAbsoluteUrl:
 
 forceAbsoluteUrl
@@ -383,6 +395,7 @@ forceAbsoluteUrl
    0
 
 
+.. index:: typolink; title
 .. _typolink-title:
 
 title
@@ -398,6 +411,7 @@ title
    Sets the title parameter of the A-tag.
 
 
+.. index:: typolink; JSwindow_params
 .. _typolink-JSwindow-params:
 
 JSwindow\_params
@@ -416,6 +430,7 @@ JSwindow\_params
       status=1,menubar=1,scrollbars=1,resizable=1,location=1,directories=1,toolbar=1
 
 
+.. index:: typolink; returnLast
 .. _typolink-returnLast:
 
 returnLast
@@ -437,6 +452,7 @@ returnLast
    or target value returned!
 
 
+.. index:: typolink; section
 .. _typolink-section:
 
 section
@@ -456,6 +472,7 @@ section
    section on another page.
 
 
+.. index:: typolink; ATagParams
 .. _typolink-ATagParams:
 
 ATagParams
@@ -475,6 +492,7 @@ ATagParams
       class="board"
 
 
+.. index:: typolink; linkAccessRestrictedPages
 .. _typolink-linkAccessRestrictedPages:
 
 linkAccessRestrictedPages
@@ -491,6 +509,7 @@ linkAccessRestrictedPages
    to the page even though the page cannot be accessed.
 
 
+.. index:: typolink; userFunc
 .. _typolink-userFunc:
 
 userFunc
@@ -526,7 +545,8 @@ userFunc
    The userfunction must return an <A>-tag.
 
 
-.. _typolink-resource_references: `Resource references`
+.. index:: typolink; Resource references
+.. _typolink-resource_references:
 
 Resource references
 ===================
@@ -566,8 +586,15 @@ Resource parameters (`?uid=13&campaignCode=ABC123`)
    handler. Note that these may carry additional parameters in order to
    configure the behavior of any handler.
 
+
+.. index::
+   typolink; Link handler syntax
+   Link handler
+
 Handler syntax
 ==============
+
+.. index:: Link handler; page
 
 page
 ----
@@ -597,6 +624,9 @@ The page identifier is a compound string based on several optional settings.
 
    `t3://page?uid=13&type=3&my=param&will=get&added=here#c123`
 
+
+.. index:: Link handler; file
+
 file
 ----
 
@@ -613,6 +643,9 @@ file
 
    `t3://file?identifier=fileadmin/path/myfile.jpg`
 
+
+.. index:: Link handler; folder
+
 folder
 ------
 
@@ -626,6 +659,9 @@ folder
 
    `t3://folder?storage=1&identifier=myfolder`
 
+
+.. index:: Link handler; email
+
 email
 -----
 
@@ -633,6 +669,9 @@ email
    Mail address to be used, prefixed with `mailto:`
 
    `t3://email?email=mailto:user@example.org`
+
+
+.. index:: Link handler; url
 
 url
 ---
@@ -645,6 +684,9 @@ url
    `t3://url?url=https://example.org`
 
    `t3://url?url=https://example.org%26parameter=value`
+
+
+.. index:: Link handler; record
 
 record
 ------

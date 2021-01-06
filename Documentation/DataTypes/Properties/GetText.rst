@@ -1,3 +1,49 @@
+:orphan:
+
+.. include:: /Includes.rst.txt
+.. index:: Simple data types; getText
+.. _data-type-gettext:
+
+=======
+getText
+=======
+
+:aspect:`Data type:`
+   getText
+
+:aspect:`Description:`
+   The getText data type is some kind of tool box allowing to retrieve
+   values from a variety of sources, e.g. from GET/POST variables, from
+   registers, values from the page tree, items in the page menus, records from any database table, etc.
+
+   The general syntax is as follows::
+
+      key : code
+
+   where :ts:`key` indicates the source and :ts:`code` is some form of path or
+   pointer to the value, which depends on the key used. The various keys and
+   their possible codes are described below.
+
+   The :ts:`code` can contain pipe characters :ts:`|` to separate keys
+   in a multi-dimensional array. This e.g. works with :ts:`TSFE`::
+
+      foo = TSFE : fe_user|user|username
+
+   Some codes work with a different separator, which is documented right at the
+   code.
+   Spaces around the colon (:ts:`:`) are irrelevant. The :ts:`key` is
+   case-insensitive.
+
+   By separating the value of getText with :ts:`//` (double slash) a number of
+   codes can be supplied and getText will return the first one, which is not
+   empty ("" or zero).
+
+   To get the content of the field "header". If "header is empty, "title" is
+   retrieved. If "title" is empty as well, it finally gets the field "uid"::
+
+      foo = field : header // field : title // field : uid
+
+
 .. _data-type-gettext-cobj:
 
 cObj

@@ -1,5 +1,7 @@
-.. include:: ../Includes.txt
-
+.. include:: /Includes.rst.txt
+.. index::
+   Top-level objects; plugin
+   plugin
 .. _plugin:
 
 ======
@@ -23,15 +25,15 @@ Properties
 
 .. container:: ts-properties
 
-   ======================================= ======================================== ====================== =======
-   Property                                Data Type                                :ref:`stdwrap`         Default
-   ======================================= ======================================== ====================== =======
-   `userFunc`_                             (array of keys)
-   `\_CSS\_DEFAULT\_STYLE`_                :ref:`data-type-string` / :ref:`stdwrap`
-   `\_CSS\_PAGE\_STYLE`_                   :ref:`data-type-string`
-   `\_DEFAULT\_PI\_VARS.[piVar-key]`_      :ref:`data-type-string` / :ref:`stdwrap`
-   `\_LOCAL\_LANG.[lang-key].[label-key]`_ :ref:`data-type-string`
-   ======================================= ======================================== ====================== =======
+   =============================================== ======================================== ====================== =======
+   Property                                        Data Type                                :ref:`stdwrap`         Default
+   =============================================== ======================================== ====================== =======
+   `userFunc`_                                     (array of keys)
+   `setup-plugin-css-default-style`_               :ref:`data-type-string`                  :ref:`stdwrap`
+   `setup-plugin-css-page-style`_                  :ref:`data-type-string`
+   `setup-plugin-default-pi-vars-pivar-key`_       :ref:`data-type-string`                  :ref:`stdwrap`
+   `setup-plugin-local-lang-lang-key-label-key`_   :ref:`data-type-string`
+   =============================================== ======================================== ====================== =======
 
 .. ### BEGIN~OF~TABLE ###
 

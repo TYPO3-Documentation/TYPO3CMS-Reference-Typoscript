@@ -1,6 +1,5 @@
-.. include:: ../Includes.txt
-
-
+.. include:: /Includes.rst.txt
+.. index:: Functions; replacement
 .. _replacement:
 
 ===========

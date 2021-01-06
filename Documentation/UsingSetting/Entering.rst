@@ -1,6 +1,5 @@
-.. include:: ../Includes.txt
-
-
+.. include:: /Includes.rst.txt
+.. index:: TypoScript; Add in the backend
 .. _typoscript-syntax-typoscript-templates-structure:
 
 =============================
@@ -8,7 +7,7 @@ Add TypoScript in the backend
 =============================
 
 At its most basic, TypoScript is entered manually in both the
-"Constants" and "Setup" fields of template records (which are
+:guilabel:`Constants` and :guilabel:`Setup` fields of template records (which are
 stored in the database in table "sys_template").
 
 This can be done in the :guilabel:`Web > Template` module in
@@ -27,13 +26,14 @@ the TYPO3 backend.
    :alt: The Constants and Setup fields of a TypoScript template
 
 If the "t3editor" system extension is not installed or has been
-disabled via configuration options, the "Constants" and "Setup" fields
+disabled via configuration options, the :guilabel:`Constants` and :guilabel:`Setup` fields
 will be normal multi-line text fields.
 
 .. figure:: ../Images/TemplatesInputNoT3Editor.png
    :alt: The Constants and Setup fields without the t3editor enabled
 
 
+.. index:: TypoScript; Include as file
 .. _typoscript-syntax-typoscript-templates-structure-includes:
 
 Include TypoScript files
@@ -56,6 +56,7 @@ used to include TypoScript contained inside files::
    @import 'EXT:myproject/Configuration/TypoScript/Setup/*.txt'
 
 
+.. index:: TypoScript; Include from extensions
 .. _static-includes:
 
 Include TypoScript from extensions
@@ -88,6 +89,8 @@ It is also possible to "Include static" templates from extensions.
    extensions.
 
 
+.. index:: TypoScript; Include other TypoScript templates
+
 Include other TypoScript templates
 ==================================
 
@@ -98,9 +101,10 @@ records (in the field called "Include Basis Template").
    :alt: Templates included from another template
 
 
+.. index:: TypoScript; Analyzer
 .. _typoscript-syntax-typoscript-templates-structure-analyzer:
 
-Template Analyzer
+Template analyzer
 =================
 
 With all those inclusions, it may happen that you lose the overview of the

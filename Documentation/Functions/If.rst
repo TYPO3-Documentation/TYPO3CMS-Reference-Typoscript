@@ -1,6 +1,7 @@
-.. include:: ../Includes.txt
-
-
+.. include:: /Includes.rst.txt
+.. index::
+   Functions; if
+   if
 .. _if:
 
 ==
@@ -19,6 +20,7 @@ There is no else property available. The else branch of an if statement is a mis
 
 Also check the explanations and the examples further below!
 
+.. index:: if; directReturn
 .. _if-directreturn:
 
 directReturn
@@ -35,6 +37,8 @@ directReturn
    the true/false of this value is returned. Can be used to set
    true/false with a TypoScript constant.
 
+
+.. index:: if; isNull
 .. _if-isnull:
 
 isNull
@@ -65,6 +69,8 @@ isNull
    This example returns "No description available.", if the content of
    the field "description" is :php:`NULL`.
 
+
+.. index:: if; isTrue
 .. _if-istrue:
 
 isTrue
@@ -79,6 +85,8 @@ isTrue
 :aspect:`Description`
    If the content is "true", which is not empty string and not zero.
 
+
+.. index:: if; isFalse
 .. _if-isfalse:
 
 isFalse
@@ -93,6 +101,8 @@ isFalse
 :aspect:`Description`
    If the content is "false", which is empty or zero.
 
+
+.. index:: if; isPositive
 .. _if-ispositive:
 
 isPositive
@@ -107,6 +117,8 @@ isPositive
 :aspect:`Description`
    Returns true, if the content is positive.
 
+
+.. index:: if; isGreaterThan
 .. _if-isgreaterthan:
 
 isGreaterThan
@@ -121,6 +133,8 @@ isGreaterThan
 :aspect:`Description`
    Returns true, if the content is greater than :ts:`value`.
 
+
+.. index:: if; isLessThan
 .. _if-islessthan:
 
 isLessThan
@@ -135,6 +149,8 @@ isLessThan
 :aspect:`Description`
    Returns true, if the content is less than :ts:`value`.
 
+
+.. index:: if; bitAnd
 .. _if-bitand:
 
 bitAnd
@@ -166,6 +182,8 @@ bitAnd
       }
 
 
+
+.. index:: if; equals
 .. _if-equals:
 
 equals
@@ -186,6 +204,8 @@ equals
       if.equals = POST
       if.value.data = GETENV:REQUEST_METHOD
 
+
+.. index:: if; isInList
 .. _if-isinlist:
 
 isInList
@@ -211,6 +231,8 @@ isInList
 
    This returns true, if the uid is part of the list in :ts:`value`.
 
+
+.. index:: if; value
 .. _if-value:
 
 value
@@ -225,6 +247,8 @@ value
 :aspect:`Description`
    The value to check. This is the comparison value mentioned above.
 
+
+.. index:: if; negate
 .. _if-negate:
 
 negate
@@ -249,6 +273,7 @@ negate
    0
 
 
+.. index:: if; Explanation
 .. _if-explanation:
 
 Explanation

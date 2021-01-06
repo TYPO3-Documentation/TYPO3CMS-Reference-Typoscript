@@ -1,16 +1,17 @@
-.. include:: ../../Includes.txt
-
-
+.. include:: /Includes.rst.txt
 .. _gifbuilder-non-gifbuilder:
 
+======================
 NON-Gifbuilder Objects
-^^^^^^^^^^^^^^^^^^^^^^
+======================
 
 
+
+.. index:: GIFBUILDER; IMGMAP
 .. _gifbuilder-imgmap:
 
 IMGMAP
-""""""
+======
 
 This is used by the Gifbuilder Object "TEXT" to create an image-map for
 the image file.

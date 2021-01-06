@@ -1,16 +1,14 @@
-.. include:: ../Includes.txt
-
-
+.. include:: /Includes.rst.txt
 .. _appendix-a:
 
+================================
 Appendix A – PHP include scripts
---------------------------------
-
+================================
 
 .. _appendix-include-scripts:
 
 Including your script
-^^^^^^^^^^^^^^^^^^^^^
+=====================
 
 This section should give you some pointers on what you can process in
 your script and which functions and variables you can access.
@@ -27,7 +25,7 @@ check it with is\_array()!)
 .. _appendix-include-content:
 
 $content
-""""""""
+--------
 
 Contains the content, which was passed to the object, if any. All
 content, which you want to return, must be in this variable!
@@ -39,7 +37,7 @@ script!
 .. _appendix-include-conf:
 
 $conf
-"""""
+-----
 
 The array $conf contains the configuration for the USER cObject.
 Try debug($conf) to see the content printed out for debugging!
@@ -48,19 +46,20 @@ Try debug($conf) to see the content printed out for debugging!
 .. _appendix-include-white-spaces:
 
 White spaces
-""""""""""""
+------------
 
 Because nothing is sent off to the browser before everything is
 rendered and returned to :php:`\TYPO3\CMS\Frontend\Http\RequestHandler`
 (which originally set off the rendering process), you must ensure
-that there's no whitespace before and after your <?php...?> tags
-in your include or library scripts!
+that there's no whitespace before your :php:`<?php` tag
+in your include or library scripts! You should not use the closing PHP tag
+:php:`?>`.
 
 
 .. _appendix-include-tsfe:
 
 $GLOBALS['TSFE']->set\_no\_cache()
-""""""""""""""""""""""""""""""""""
+----------------------------------
 
 Call the function :php:`$GLOBALS['TSFE']->set_no_cache()`, if you want to
 disable caching of the page. Call this during development only! And
@@ -85,7 +84,7 @@ Example:
 .. _appendix-include-cobjgetsingle:
 
 $this->cObjGetSingle(value, properties[, TSkey = '__'])
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+-------------------------------------------------------
 
 Gets a content object from the $conf array. $TSkey is an optional string label used for the internal debugging tracking.
 
@@ -104,7 +103,7 @@ $conf array for the include script!
 .. _appendix-include-stdwrap:
 
 $this->stdWrap(value, properties)
-"""""""""""""""""""""""""""""""""
+---------------------------------
 
 Hands the content in "value" to the stdWrap function, which will
 process it according to the configuration of the array "properties".
@@ -124,7 +123,7 @@ $conf array!
 .. _appendix-include-internal-variables:
 
 Internal variables in the main frontend object, TSFE
-""""""""""""""""""""""""""""""""""""""""""""""""""""
+====================================================
 
 There are some variables in the global object, TSFE (TypoScript
 Frontend), you might need to know about. These ARE ALL READ-ONLY!
@@ -224,7 +223,7 @@ writing: :php:`$GLOBALS['TSFE']->id`
 .. _appendix-include-global-variables:
 
 Global variables
-""""""""""""""""
+================
 
 .. ### BEGIN~OF~TABLE ###
 

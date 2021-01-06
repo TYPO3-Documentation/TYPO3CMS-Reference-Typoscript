@@ -1,5 +1,7 @@
-.. include:: ../Includes.txt
-
+.. include:: /Includes.rst.txt
+.. index:: 
+   Functions; stdWrap
+   stdWrap
 .. highlight:: typoscript
 
 
@@ -34,6 +36,7 @@ Here the content of the object "10" is uppercased before it is
 returned.
 
 
+.. index:: stdWrap; Content-supplying properties
 .. _stdwrap-content-supplying:
 
 Content-supplying properties of stdWrap
@@ -67,16 +70,18 @@ value is "imported" from the field called "header" from the
 :php:`$cObj->data-array`.
 
 
+.. index:: stdWrap; Getting data
 .. _stdwrap-get-data:
 
 Getting data
 ============
 
 
+.. index:: stdWrap; setContentToCurrent
 .. _stdwrap-setcontenttocurrent:
 
 setContentToCurrent
-~~~~~~~~~~~~~~~~~~~
+-------------------
 
 :aspect:`Property`
    setContentToCurrent
@@ -88,10 +93,11 @@ setContentToCurrent
    Sets the current value to the incoming content of the function.
 
 
+.. index:: stdWrap; addPageCacheTags
 .. _stdwrap-addpagecachetags:
 
 addPageCacheTags
-~~~~~~~~~~~~~~~~
+----------------
 
 :aspect:`Property`
    addPageCacheTags
@@ -121,10 +127,11 @@ addPageCacheTags
       caching framework, see the :ref:`stdWrap feature cache <stdwrap-cache>`.
 
 
+.. index:: stdWrap; setCurrent
 .. _stdwrap-setcurrent:
 
 setCurrent
-~~~~~~~~~~
+----------
 
 :aspect:`Property`
    setCurrent
@@ -137,10 +144,11 @@ setCurrent
    routine, so be careful with this. But it might be handy to do this
 
 
+.. index:: stdWrap; lang
 .. _stdwrap-lang:
 
 lang
-~~~~
+----
 
 :aspect:`Property`
    lang
@@ -162,10 +170,11 @@ lang
    Output will be "Ich bin..." instead of "I am..."
 
 
+.. index:: stdWrap; data
 .. _stdwrap-data:
 
 data
-~~~~
+----
 
 :aspect:`Property`
    data
@@ -174,10 +183,11 @@ data
    :ref:`data-type-gettext` / :ref:`stdWrap`
 
 
+.. index:: stdWrap; field
 .. _stdwrap-field:
 
 field
-~~~~~
+-----
 
 :aspect:`Property`
    field
@@ -212,10 +222,11 @@ field
    the title field is returned.
 
 
+.. index:: stdWrap; current
 .. _stdwrap-current:
 
 current
-~~~~~~~
+-------
 
 :aspect:`Property`
    current
@@ -227,10 +238,11 @@ current
    Sets the content to the "current"-value (see :ref:`->split <split>`)
 
 
+.. index:: stdWrap; cObject
 .. _stdwrap-cobject:
 
 cObject
-~~~~~~~
+-------
 
 :aspect:`Property`
    cObject
@@ -242,10 +254,11 @@ cObject
    Loads content from a content object.
 
 
+.. index:: stdWrap; numRows
 .. _stdwrap-numrows:
 
 numRows
-~~~~~~~
+-------
 
 :aspect:`Property`
    numRows
@@ -256,10 +269,11 @@ numRows
 :aspect:`Description`
    Returns the number of rows resulting from the supplied SELECT query.
 
+.. index:: stdWrap; preUserFunc
 .. _stdwrap-preuserfunc:
 
 preUserFunc
-~~~~~~~~~~~
+-----------
 
 :aspect:`Property`
    preUserFunc
@@ -279,16 +293,18 @@ preUserFunc
    See :ref:`stdwrap-postUserFunc`.
 
 
+.. index:: stdWrap; Override and conditions
 .. _stdwrap-override-conditions:
 
 Override and conditions
 =======================
 
 
+.. index:: stdWrap; override
 .. _stdwrap-override:
 
 override
-~~~~~~~~
+--------
 
 :aspect:`Property`
    override
@@ -301,10 +317,11 @@ override
    content is loaded with this!
 
 
+.. index:: stdWrap; preIfEmptyListNum
 .. _stdwrap-preifemptylistnum:
 
 preIfEmptyListNum
-~~~~~~~~~~~~~~~~~
+-----------------
 
 :aspect:`Property`
    preIfEmptyListNum
@@ -316,10 +333,11 @@ preIfEmptyListNum
    (as ":ref:`stdwrap-listNum`" below)
 
 
+.. index:: stdWrap; ifNull
 .. _stdwrap-ifnull:
 
 ifNull
-~~~~~~
+------
 
 :aspect:`Property`
    ifNull
@@ -347,10 +365,11 @@ ifNull
    field contains the value :php:`NULL`, the text "No description defined.".
 
 
+.. index:: stdWrap; ifEmpty
 .. _stdwrap-ifempty:
 
 ifEmpty
-~~~~~~~
+-------
 
 :aspect:`Property`
    ifEmpty
@@ -363,10 +382,11 @@ ifEmpty
    with :ts:`ifEmpty`. Zeros are treated as empty values!
 
 
+.. index:: stdWrap; ifBlank
 .. _stdwrap-ifblank:
 
 ifBlank
-~~~~~~~
+-------
 
 :aspect:`Property`
    ifBlank
@@ -379,10 +399,11 @@ ifBlank
    treated as blank values!
 
 
+.. index:: stdWrap; listNum
 .. _stdwrap-listnum:
 
 listNum
-~~~~~~~
+-------
 
 :aspect:`Property`
    listNum
@@ -430,10 +451,11 @@ listNum
       }
 
 
+.. index:: stdWrap; trim
 .. _stdwrap-trim:
 
 trim
-~~~~
+----
 
 :aspect:`Property`
    trim
@@ -446,10 +468,11 @@ trim
    around the value.
 
 
+.. index:: stdWrap; strPad
 .. _stdwrap-strpad:
 
 strPad
-~~~~~~
+------
 
 :aspect:`Property`
    strPad
@@ -462,10 +485,11 @@ strPad
    characters and the side(s), on which the padding should be added.
 
 
+.. index:: stdWrap; Recursive call
 .. _stdwrap-stdwrap:
 
 stdWrap
-~~~~~~~
+-------
 
 :aspect:`Property`
    stdWrap
@@ -477,10 +501,11 @@ stdWrap
    Recursive call to the :ts:`stdWrap` function.
 
 
+.. index:: stdWrap; required
 .. _stdwrap-required:
 
 required
-~~~~~~~~
+--------
 
 :aspect:`Property`
    required
@@ -497,10 +522,11 @@ required
    If the content is empty, "" is returned immediately.
 
 
+.. index:: stdWrap; if
 .. _stdwrap-if:
 
 if
-~~
+--
 
 :aspect:`Property`
    if
@@ -512,10 +538,11 @@ if
    If the if-object returns false, stdWrap returns "" immediately.
 
 
+.. index:: stdWrap; fieldRequired
 .. _stdwrap-fieldrequired:
 
 fieldRequired
-~~~~~~~~~~~~~
+-------------
 
 :aspect:`Property`
    fieldRequired
@@ -527,16 +554,18 @@ fieldRequired
    The value in this field **must** be set.
 
 
+.. index:: stdWrap; Parsing data
 .. _stdwrap-parsedata:
 
 Parsing data
 ============
 
 
+.. index:: stdWrap; csConv
 .. _stdwrap-csconv:
 
 csConv
-~~~~~~
+------
 
 :aspect:`Property`
    csConv
@@ -549,10 +578,11 @@ csConv
    the current rendering charset of the frontend (UTF-8).
 
 
+.. index:: pair: stdWrap; parseFunc
 .. _stdwrap-parsefunc:
 
 parseFunc
-~~~~~~~~~
+---------
 
 :aspect:`Property`
    parseFunc
@@ -577,10 +607,11 @@ parseFunc
       parseFunc.tags.myTag.value = This will be inserted when &lt;myTag&gt; is found!
 
 
+.. index:: pair: stdWrap; HTMLparser
 .. _stdwrap-htmlparser:
 
 HTMLparser
-~~~~~~~~~~
+----------
 
 :aspect:`Property`
    HTMLparser
@@ -597,10 +628,11 @@ HTMLparser
    (See :ref:`t3coreapi:rte` for more information about RTE transformations)
 
 
+.. index:: pair: stdWrap; split
 .. _stdwrap-split:
 
 split
-~~~~~
+-----
 
 :aspect:`Property`
    split
@@ -609,10 +641,11 @@ split
    :ref:`split` / :ref:`stdWrap`
 
 
+.. index:: pair: stdWrap; replacement
 .. _stdwrap-replacement:
 
 replacement
-~~~~~~~~~~~
+-----------
 
 :aspect:`Property`
    replacement
@@ -627,10 +660,11 @@ replacement
    replacements at once.
 
 
+.. index:: stdWrap; prioriCalc
 .. _stdwrap-prioricalc:
 
 prioriCalc
-~~~~~~~~~~
+----------
 
 :aspect:`Property`
    prioriCalc
@@ -665,10 +699,11 @@ prioriCalc
       -5 * ((-4+6) ^ 2) - 100%7 = -22
 
 
+.. index:: stdWrap; char
 .. _stdwrap-char:
 
 char
-~~~~
+----
 
 :aspect:`Property`
    char
@@ -688,10 +723,11 @@ char
       $content = chr((int)$conf['char']);
 
 
+.. index:: stdWrap; intval
 .. _stdwrap-intval:
 
 intval
-~~~~~~
+------
 
 :aspect:`Property`
    intval
@@ -707,10 +743,11 @@ intval
       $content = intval($content);
 
 
+.. index:: stdWrap; hash
 .. _stdwrap-hash:
 
 hash
-~~~~
+----
 
 :aspect:`Property`
    hash
@@ -735,10 +772,11 @@ hash
       }
 
 
+.. index:: pair: stdWrap; round
 .. _stdwrap-round:
 
 round
-~~~~~
+-----
 
 :aspect:`Property`
    round
@@ -751,10 +789,11 @@ round
    decimals.
 
 
+.. index:: pair: stdWrap; numberFormat
 .. _stdwrap-numberformat:
 
 numberFormat
-~~~~~~~~~~~~
+------------
 
 :aspect:`Property`
    numberFormat
@@ -767,10 +806,11 @@ numberFormat
    prices).
 
 
+.. index:: stdWrap; date
 .. _stdwrap-date:
 
 date
-~~~~
+----
 
 :aspect:`Property`
    date
@@ -802,10 +842,11 @@ date
       }
 
 
+.. index:: stdWrap; strftime
 .. _stdwrap-strftime:
 
 strftime
-~~~~~~~~
+--------
 
 :aspect:`Property`
    strftime
@@ -833,10 +874,11 @@ strftime
       `strftime() <http://www.php.net/strftime>`_.
 
 
+.. index:: stdWrap; strtotime
 .. _stdwrap-strtotime:
 
 strtotime
-~~~~~~~~~
+---------
 
 :aspect:`Property`
    strtotime
@@ -869,10 +911,11 @@ strtotime
       }
 
 
+.. index:: stdWrap; age
 .. _stdwrap-age:
 
 age
-~~~
+---
 
 :aspect:`Property`
    age
@@ -909,10 +952,11 @@ age
       lib.ageFormat.stdWrap.age = " Minuten | Stunden | Tage | Jahre | Minute | Stunde | Tag | Jahr"
 
 
+.. index:: stdWrap; case
 .. _stdwrap-case:
 
 case
-~~~~
+----
 
 :aspect:`Property`
    case
@@ -926,10 +970,11 @@ case
    Uses "UTF-8" for the operation.
 
 
+.. index:: stdWrap; bytes
 .. _stdwrap-bytes:
 
 bytes
-~~~~~
+-----
 
 :aspect:`Property`
    bytes
@@ -1068,10 +1113,11 @@ Format value 1000 with custom label and base=1024. Shows
    }
 
 
+.. index:: stdWrap; substring
 .. _stdwrap-substring:
 
 substring
-~~~~~~~~~
+---------
 
 :aspect:`Property`
    substring
@@ -1085,10 +1131,12 @@ substring
 
    Uses "UTF-8" for the operation.
 
+
+.. index:: stdWrap; cropHTML
 .. _stdwrap-crophtml:
 
 cropHTML
-~~~~~~~~
+--------
 
 :aspect:`Property`
    cropHTML
@@ -1106,10 +1154,11 @@ cropHTML
    already used.
 
 
+.. index:: stdWrap; stripHtml
 .. _stdwrap-striphtml:
 
 stripHtml
-~~~~~~~~~
+---------
 
 :aspect:`Property`
    stripHtml
@@ -1121,10 +1170,11 @@ stripHtml
    Strips all HTML tags.
 
 
+.. index:: stdWrap; crop
 .. _stdwrap-crop:
 
 crop
-~~~~
+----
 
 :aspect:`Property`
    crop
@@ -1169,10 +1219,11 @@ crop
    Uses "UTF-8" for the operation.
 
 
+.. index:: stdWrap; rawUrlEncode
 .. _stdwrap-rawurlencode:
 
 rawUrlEncode
-~~~~~~~~~~~~
+------------
 
 :aspect:`Property`
    rawUrlEncode
@@ -1184,10 +1235,11 @@ rawUrlEncode
    Passes the content through the PHP function `rawurlencode() <http://www.php.net/rawurlencode>`_.
 
 
+.. index:: stdWrap; htmlSpecialChars
 .. _stdwrap-htmlspecialchars:
 
 htmlSpecialChars
-~~~~~~~~~~~~~~~~
+----------------
 
 :aspect:`Property`
    htmlSpecialChars
@@ -1202,10 +1254,11 @@ htmlSpecialChars
    non-entity characters are affected.
 
 
+.. index:: stdWrap; encodeForJavaScriptValue
 .. _stdwrap-encodeforjavascriptvalue:
 
 encodeForJavaScriptValue
-~~~~~~~~~~~~~~~~~~~~~~~~
+------------------------
 
 :aspect:`Property`
    encodeForJavaScriptValue
@@ -1233,10 +1286,11 @@ encodeForJavaScriptValue
       }
 
 
+.. index:: stdWrap; doubleBrTag
 .. _stdwrap-doublebrtag:
 
 doubleBrTag
-~~~~~~~~~~~
+-----------
 
 :aspect:`Property`
    doubleBrTag
@@ -1248,10 +1302,11 @@ doubleBrTag
    All double-line-breaks are substituted with this value.
 
 
+.. index:: stdWrap; br
 .. _stdwrap-br:
 
 br
-~~
+--
 
 :aspect:`Property`
    br
@@ -1264,10 +1319,11 @@ br
    converts each line break to a :html:`<br />` or a :html:`<br>` tag depending on doctype.
 
 
+.. index:: stdWrap; brTag
 .. _stdwrap-brtag:
 
 brTag
-~~~~~
+-----
 
 :aspect:`Property`
    brTag
@@ -1280,10 +1336,11 @@ brTag
    *value*, which has been provided in this property.
 
 
+.. index:: pair: stdWrap; encapsLines
 .. _stdwrap-encapslines:
 
 encapsLines
-~~~~~~~~~~~
+-----------
 
 :aspect:`Property`
    encapsLines
@@ -1296,10 +1353,11 @@ encapsLines
    independently. Used to format content made with the RTE.
 
 
+.. index:: stdWrap; keywords
 .. _stdwrap-keywords:
 
 keywords
-~~~~~~~~
+--------
 
 :aspect:`Property`
    keywords
@@ -1312,10 +1370,11 @@ keywords
    each value and returns a comma-separated list of the values.
 
 
+.. index:: stdWrap; innerWrap
 .. _stdwrap-innerwrap:
 
 innerWrap
-~~~~~~~~~
+---------
 
 :aspect:`Property`
    innerWrap
@@ -1327,10 +1386,11 @@ innerWrap
    Wraps the content.
 
 
+.. index:: stdWrap; innerWrap2
 .. _stdwrap-innerwrap2:
 
 innerWrap2
-~~~~~~~~~~
+----------
 
 :aspect:`Property`
    innerWrap2
@@ -1342,25 +1402,11 @@ innerWrap2
    Same as :ts:`innerWrap` (but watch the order in which they are executed).
 
 
-.. _stdwrap-addparams:
-
-addParams
-~~~~~~~~~
-
-:aspect:`Property`
-   addParams
-
-:aspect:`Data type`
-   :ref:`addparams` / :ref:`stdWrap`
-
-:aspect:`Description`
-   Lets you add tag parameters to the content *if* the content is a tag!
-
-
+.. index:: stdWrap; preCObject
 .. _stdwrap-precobject:
 
 preCObject
-~~~~~~~~~~
+----------
 
 :aspect:`Property`
    preCObject
@@ -1372,10 +1418,11 @@ preCObject
    :ref:`stdwrap-cObject` prepended the content.
 
 
+.. index:: stdWrap; postCObject
 .. _stdwrap-postcobject:
 
 postCObject
-~~~~~~~~~~~
+-----------
 
 :aspect:`Property`
    postCObject
@@ -1387,10 +1434,11 @@ postCObject
    :ref:`stdwrap-cObject` appended the content.
 
 
+.. index:: stdWrap; wrapAlign
 .. _stdwrap-wrapalign:
 
 wrapAlign
-~~~~~~~~~
+---------
 
 :aspect:`Property`
    wrapAlign
@@ -1403,10 +1451,11 @@ wrapAlign
    *if* align is set.
 
 
+.. index:: pair: stdWrap; typolink
 .. _stdwrap-typolink:
 
 typolink
-~~~~~~~~
+--------
 
 :aspect:`Property`
    typolink
@@ -1417,10 +1466,12 @@ typolink
 :aspect:`Description`
    Wraps the content with a link-tag.
 
+
+.. index:: stdWrap; wrap
 .. _stdwrap-wrap:
 
 wrap
-~~~~
+----
 
 :aspect:`Property`
    wrap
@@ -1433,10 +1484,11 @@ wrap
    - the vertical line)
 
 
+.. index:: stdWrap; noTrimWrap
 .. _stdwrap-notrimwrap:
 
 noTrimWrap
-~~~~~~~~~~
+----------
 
 :aspect:`Property`
    noTrimWrap
@@ -1479,10 +1531,11 @@ noTrimWrap
    special character.
 
 
+.. index:: stdWrap; wrap2
 .. _stdwrap-wrap2:
 
 wrap2
-~~~~~
+-----
 
 :aspect:`Property`
    wrap2
@@ -1494,10 +1547,11 @@ wrap2
    same as :ref:`stdwrap-wrap` (but watch the order in which they are executed)
 
 
+.. index:: stdWrap; dataWrap
 .. _stdwrap-datawrap:
 
 dataWrap
-~~~~~~~~
+--------
 
 :aspect:`Property`
    dataWrap
@@ -1519,10 +1573,11 @@ dataWrap
    that contains the number of the current page.
 
 
+.. index:: stdWrap; prepend
 .. _stdwrap-prepend:
 
 prepend
-~~~~~~~
+-------
 
 :aspect:`Property`
    prepend
@@ -1534,10 +1589,11 @@ prepend
    :ref:`stdwrap-cobject` prepended to content (before)
 
 
+.. index:: stdWrap; append
 .. _stdwrap-append:
 
 append
-~~~~~~
+------
 
 :aspect:`Property`
    append
@@ -1549,10 +1605,11 @@ append
    :ref:`stdwrap-cobject` appended to content (after)
 
 
+.. index:: stdWrap; wrap3
 .. _stdwrap-wrap3:
 
 wrap3
-~~~~~
+-----
 
 :aspect:`Property`
    wrap3
@@ -1564,10 +1621,11 @@ wrap3
    same as :ts:`wrap` (but watch the order in which they are executed)
 
 
+.. index:: stdWrap; orderedStdWrap
 .. _stdwrap-orderedstdwrap:
 
 orderedStdWrap
-~~~~~~~~~~~~~~
+--------------
 
 :aspect:`Property`
    orderedStdWrap
@@ -1604,10 +1662,11 @@ orderedStdWrap
    This results in "This is a working solution."
 
 
+.. index:: stdWrap; outerWrap
 .. _stdwrap-outerwrap:
 
 outerWrap
-~~~~~~~~~
+---------
 
 :aspect:`Property`
    outerWrap
@@ -1619,10 +1678,11 @@ outerWrap
    *Wraps the complete content*
 
 
+.. index:: stdWrap; insertData
 .. _stdwrap-insertdata:
 
 insertData
-~~~~~~~~~~
+----------
 
 :aspect:`Property`
    insertData
@@ -1640,16 +1700,17 @@ insertData
       10.value = This is the page title: {page:title}
       10.stdWrap.insertData = 1
 
-   .. warning:
-      Never use this on content that can be edited in backend. This allows editors to disclose
-      normally hidden information. Never use this to insert data into wraps.
-      Use :ref:`dataWrap <stdwrap-datawrap>` instead.
+.. warning::
+   Never use this on content that can be edited in the backend. This allows editors to disclose
+   normally hidden information. Never use this to insert data into wraps.
+   Use :ref:`dataWrap <stdwrap-datawrap>` instead.
 
 
+.. index:: stdWrap; postUserFunc
 .. _stdwrap-postuserfunc:
 
 postUserFunc
-~~~~~~~~~~~~
+------------
 
 :aspect:`Property`
    postUserFunc
@@ -1743,10 +1804,11 @@ postUserFunc
    :file:`ContentObjectRenderer.php`!
 
 
+.. index:: stdWrap; postUserFuncInt
 .. _stdwrap-postuserfuncint:
 
 postUserFuncInt
-~~~~~~~~~~~~~~~
+---------------
 
 :aspect:`Property`
    postUserFuncInt
@@ -1770,11 +1832,12 @@ postUserFuncInt
    Supplied by Jens Ellerbrock
 
 
+.. index:: stdWrap; prefixComment
 .. _stdwrap-preficomment:
 .. _stdwrap-prefixcomment:
 
 prefixComment
-~~~~~~~~~~~~~
+-------------
 
 :aspect:`Property`
    prefixComment
@@ -1797,10 +1860,11 @@ prefixComment
    Will indent the comment with 1 tab (and the next line with 2+1 tabs)
 
 
+.. index:: stdWrap; editIcons
 .. _stdwrap-editicons:
 
 editIcons
-~~~~~~~~~
+---------
 
 :aspect:`Property`
    editIcons
@@ -1848,10 +1912,11 @@ editIcons
       editIcons = header[header_align|date], bodytext
 
 
+.. index:: stdWrap; editPanel
 .. _stdwrap-editpanel:
 
 editPanel
-~~~~~~~~~
+---------
 
 :aspect:`Property`
    editPanel
@@ -1863,10 +1928,11 @@ editPanel
    See :ts:`cObject` :ref:`cobj-editpanel`.
 
 
+.. index:: stdWrap; cache
 .. _stdwrap-cache:
 
 cache
-~~~~~
+-----
 
 :aspect:`Property`
    cache
@@ -1878,10 +1944,11 @@ cache
    Caches rendered content in the caching framework.
 
 
+.. index:: stdWrap; debug
 .. _stdwrap-debug:
 
 debug
-~~~~~
+-----
 
 :aspect:`Property`
    debug
@@ -1897,10 +1964,11 @@ debug
    Should be used under construction only.
 
 
+.. index:: stdWrap; debugFunc
 .. _stdwrap-debugfunc:
 
 debugFunc
-~~~~~~~~~
+---------
 
 :aspect:`Property`
    debugFunc
@@ -1916,10 +1984,11 @@ debugFunc
    Set to value "2" the content will be printed in a table - looks nicer.
 
 
+.. index:: stdWrap; debugData
 .. _stdwrap-debugdata:
 
 debugData
-~~~~~~~~~
+---------
 
 :aspect:`Property`
    debugData

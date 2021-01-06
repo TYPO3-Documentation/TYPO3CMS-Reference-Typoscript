@@ -1,12 +1,14 @@
-.. include:: ../Includes.txt
-
-
+.. include:: /Includes.rst.txt
+.. index::
+   Functions; encapsLines
+   encapsLines
 .. _encapslines:
 
 ===========
 encapsLines
 ===========
 
+.. index:: encapsLines; encapsTagList
 .. _encapstaglist:
 
 encapsTagList
@@ -35,6 +37,9 @@ encapsTagList
       <p>Some text</p>
       <div>Some text</div>
       <B>Some text</B>
+
+
+.. index:: encapsLines; remapTag
 
 remapTag.[*tagname*]
 ====================
@@ -65,6 +70,8 @@ remapTag.[*tagname*]
 
    ([*tagname*] is in uppercase.)
 
+
+.. index:: encapsLines; addAttributes
 .. _addattributes.[*tagname*]:
 
 addAttributes.[*tagname*]
@@ -101,6 +108,8 @@ addAttributes.[*tagname*]
             align = center
       }
 
+
+.. index:: encapsLines; removeWrapping
 .. _removewrapping:
 
 removeWrapping
@@ -135,6 +144,8 @@ removeWrapping
       Some text
       <b>Some text</b>
 
+
+.. index:: encapsLines; wrapNonWrappedLines
 .. _wrapnonwrappedlines:
 
 wrapNonWrappedLines
@@ -168,6 +179,8 @@ wrapNonWrappedLines
       <P>First line of text</P>
       <p>Some text</p>
 
+
+.. index:: encapsLines; innerStdWrap_all
 .. _innerstdwrap\_all:
 
 innerStdWrap\_all
@@ -183,6 +196,8 @@ innerStdWrap\_all
    Wraps the content inside all lines, whether they are encapsulated or
    not.
 
+
+.. index:: encapsLines; encapsLinesStdWrap
 .. _encapslinesstdwrap.[*tagname*]:
 
 encapsLinesStdWrap.[*tagname*]
@@ -200,6 +215,7 @@ encapsLinesStdWrap.[*tagname*]
    ([*tagname*] is in uppercase.)
 
 
+.. index:: encapsLines; defaultAlign
 .. _defaultalign:
 
 defaultAlign
@@ -216,6 +232,8 @@ defaultAlign
    tags, both from :ref:`encapsTagList`, :ts:`bypassEncapsTagList` and
    :ref:`nonWrappedTag`
 
+
+.. index:: encapsLines; nonWrappedTag
 .. _nonwrappedtag:
 
 nonWrappedTag
@@ -234,7 +252,6 @@ nonWrappedTag
    set by :ts:`addAttributes` as well as :ts:`defaultAlign`.
    Thus you can match the wrapping tags used for non-wrapped and wrapped
    lines more easily.
-
 
 
 .. _encapslines-examples:

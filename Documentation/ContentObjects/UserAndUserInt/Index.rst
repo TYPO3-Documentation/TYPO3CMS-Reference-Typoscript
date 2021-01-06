@@ -1,5 +1,7 @@
-.. include:: ../../Includes.txt
-
+.. include:: /Includes.rst.txt
+.. index::
+   Content objects; USER
+   Content objects; USER_INT
 .. _cobj-user:
 .. _cobj-user-int:
 

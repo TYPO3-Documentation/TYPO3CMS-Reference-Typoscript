@@ -1,11 +1,10 @@
-.. include:: ../Includes.txt
-
-
+.. include:: /Includes.rst.txt
+.. index:: Functions
 .. _functions:
 
-============================
+=========
 Functions
-============================
+=========
 
 
 Sometimes a data type is defined as having a modifier. This is typically a function
@@ -30,11 +29,9 @@ Example:
    :maxdepth: 5
    :titlesonly:
 
-   Addparams
    Cache
    Calc
    Encapslines
-   Filelink
    GetEnv
    Htmlparser
    HtmlparserTags

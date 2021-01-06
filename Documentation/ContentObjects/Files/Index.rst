@@ -1,13 +1,14 @@
-.. include:: ../../Includes.txt
-
-
+.. include:: /Includes.rst.txt
+.. index::
+   Content objects; FILES
+   FILES
 .. _cobj-files:
 
 =====
 FILES
 =====
 
-A content object of type FILE was integrated with the File Abstraction Layer (FAL)
+A content object of type FILES was integrated with the File Abstraction Layer (FAL)
 and is there to output information about files.
 
 .. container:: table-row
@@ -223,10 +224,11 @@ and is there to output information about files.
 [tsref:(cObject).FILES]
 
 
+.. index:: FILES; references
 .. _cobj-files-references:
 
 Special key: "references"
-"""""""""""""""""""""""""
+=========================
 
 
 .. container:: table-row
@@ -277,7 +279,7 @@ Examples:
 .. _cobj-files-examples-files:
 
 Usage with files
-~~~~~~~~~~~~~~~~
+================
 
 In this example, we first load files using several of the methods
 explained above (using sys_file UIDs, collection UIDs, and folders).
@@ -302,7 +304,7 @@ the file size of all files that were found:
 .. _cobj-files-examples-references:
 
 Usage with references
-~~~~~~~~~~~~~~~~~~~~~
+=====================
 
 In this second example, we use "references" to get the images related
 to a given page (in this case, the current page). We start with the
@@ -336,7 +338,7 @@ the file itself or from the reference to it (title):
 .. _cobj-files-examples-sliding:
 
 Usage with sliding
-~~~~~~~~~~~~~~~~~~
+==================
 
 One usual feature is to use images attached to pages and use
 them up and down the page tree, a process called "sliding".

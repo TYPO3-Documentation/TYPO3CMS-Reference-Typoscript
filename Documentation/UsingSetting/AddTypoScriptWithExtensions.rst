@@ -1,5 +1,5 @@
-.. include:: ../Includes.txt
-
+.. include:: /Includes.rst.txt
+.. index:: TypoScript in extensions
 .. _extdev-add-typoscript:
 
 ================================
@@ -9,6 +9,9 @@ Add TypoScript in your extension
 .. note::
 
    This part is written for extension developers.
+
+
+.. index:: TypoScript in extensions; File locations
 
 Create TypoScript files in your extension
 =========================================
@@ -32,6 +35,7 @@ Usually, you will have the following structure:
 * :file:`setup.typoscript` contains the TypoScript setup
 
 
+.. index:: TypoScript in extensions; Static includes
 .. _extdev-static-includes:
 
 Make TypoScript available for static includes
@@ -70,6 +74,8 @@ included statically.
 
    You may also want to make several different templates available.
 
+
+.. index:: TypoScript in extensions; Load always
 .. _extdev-always-load:
 
 Make TypoScript available (always load)
