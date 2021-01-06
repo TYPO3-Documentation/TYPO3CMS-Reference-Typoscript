@@ -78,7 +78,7 @@ Terminology
 
 It's useful to agree about some terms first: delimiter string, mainpart, subpart.
 
-Main parts
+Mainparts
 ----------
 
 :ts:`optionSplit` uses the string `|*|` to split the total string into **mainparts**.
