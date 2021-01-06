@@ -1701,7 +1701,7 @@ insertData
       10.stdWrap.insertData = 1
 
 .. warning::
-   Never use this on content that can be edited in backend. This allows editors to disclose
+   Never use this on content that can be edited in the backend. This allows editors to disclose
    normally hidden information. Never use this to insert data into wraps.
    Use :ref:`dataWrap <stdwrap-datawrap>` instead.
 
