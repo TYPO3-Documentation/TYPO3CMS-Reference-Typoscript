@@ -29,7 +29,7 @@ getText
 
       foo = TSFE : fe_user|user|username
 
-   Some codes work with different separator, which is documented right at the
+   Some codes work with a different separator, which is documented right at the
    code.
    Spaces around the colon (:ts:`:`) are irrelevant. The :ts:`key` is
    case-insensitive.
