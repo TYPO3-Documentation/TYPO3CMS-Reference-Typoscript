@@ -8,7 +8,7 @@ TMENU.sectionIndex
 
 If this property is set, then the
 menu will not consist of links to pages on the "next level" but rather
-of links to the parent page to the menu, but in addition "#"-links to
+of links to the parent page to the menu, and in addition "#"-links to
 the cObjects rendered on the page. In other words, the menu items will
 be a section index with links to the content elements on the page (by
 default with colPos=0!).
@@ -97,4 +97,3 @@ hash-mark and the number of the field.
 You cannot create submenus to sectionIndex-menus. That does not make
 any sense as these elements are not pages and thereby have no
 children.
-
