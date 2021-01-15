@@ -1,12 +1,10 @@
+:orphan:
+
 .. include:: /Includes.rst.txt
+.. index:: Link targets
+.. _Link-Targets:
 
-===========
-Linktargets
-===========
-
-
-Targets For Cross-Referencing
-=============================
+Link Targets
+============
 
 .. ref-targets-list::
-
