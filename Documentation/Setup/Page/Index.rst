@@ -897,6 +897,13 @@ meta
 
              meta.refresh = [seconds]; [URL, leave blank for same page]
 
+         Override the :html:`twitter:card` metatag set by the system extension :file:`seo`::
+
+            page.meta {
+               twitter:card = summary_large_image
+               twitter:card.replace = 1
+            }
+
          Usage of :ts:`httpEquivalent`::
 
              meta.X-UA-Compatible = IE=edge
