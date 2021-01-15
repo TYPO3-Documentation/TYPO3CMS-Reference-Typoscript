@@ -189,7 +189,7 @@ addQueryString
 
          With version 10.0 a breaking change was introduced. Setting
          :typoscript:`addQueryString.method` to any value but :typoscript:`GET` will
-         trigger a `E_USER_WARNING`. Any POST-parameters will be ignored. Formerly this option
+         trigger an `E_USER_WARNING`. Any POST-parameters will be ignored. Formerly this option
          was set to :typoscript:`POST` or some combination in order to forward
          POST-parameters as GET parameters.
 
