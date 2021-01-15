@@ -193,10 +193,10 @@ addQueryString
          was set to :typoscript:`POST` or some combination in order to forward
          POST-parameters as GET parameters.
 
-         In terms of correctly using HTTP verbs it’s bad practise in
-         general to treat GET and POST equally, besides that documentation
-         already mentioned potential side-effects like accidentally exposing
-         sensitive data submitted via POST to proxies or log files.
+         In terms of correctly using HTTP verbs, it is bad practice in
+         general to treat GET and POST equally. In addition, there can be
+         potential side-effects like accidentally exposing sensitive data 
+         submitted via POST to proxies or log files.
 
          That’s why values :typoscript:`POST`, :typoscript:`GET,POST` and
          :typoscript:`POST,GET` are not allowed anymore
