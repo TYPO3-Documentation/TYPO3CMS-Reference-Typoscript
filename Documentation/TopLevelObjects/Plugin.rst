@@ -102,15 +102,14 @@ userFunc
          :ref:`data-type-string`
 
    Description
-         Use this to have some page-specific CSS styles inserted in the header
-         section of the document. :ts:`_CSS_PAGE_STYLE` can be used to render
-         certain styles not just because an extension is installed, but only in
-         a special situation, e.g. some styles will be output, when
-         css_styled_content is installed **and** a textpic element with an
-         image positioned alongside the text is present on the current page.
-         Most likely this will provide an acceptable display from the plugin
-         especially for this page, but should ideally be cleared and moved to
-         an external stylesheet.
+         `_CSS_PAGE_STYLE` is included only on the affected pages. Depending
+         on your configuration it will be written in an external file and included
+         on the page or directly added as inline CSS block. Compression
+         for page specific CSS also depends on the global :ts:`config.compressCss`
+         setting.
+
+         This setting can be used to only include the CSS when the plugin of a
+         certain extension is included on that page.
 
          This value is read by the frontend :php:`RequestHandler` when
          collecting the CSS of the document to be rendered.

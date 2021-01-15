@@ -18,11 +18,8 @@ The registers are processed in the reverse order. The register with the highest 
 will be processed as the first, and the register with the lowest number will be processed
 as the last one. This corresponds to the stack priciple Last In – First Out (LIFO).
 
-Registers are used at many different places, e.g. css_styled_content
-uses registers to enumerate the classes of the headlines. The
-usefulness of registers is that some predefined configurations (like
-the page-content) can be used in various places but use different
-values as the values of the register can change during page rendering.
+With the advent of Fluid templating, registers are used less often than
+they used to be. In the Core they are not being used anymore.
 
 .. ### BEGIN~OF~TABLE ###
 
@@ -93,4 +90,3 @@ of this record will be rendered as output.
 
 For an example in combination with :ref:`RESTORE_REGISTER <cobj-restore-register>`
 see the :ref:`example on the page RESTORE_REGISTER <cobj-restore-register-examples>`.
-
