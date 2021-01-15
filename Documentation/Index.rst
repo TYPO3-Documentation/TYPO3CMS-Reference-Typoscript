@@ -151,4 +151,4 @@ address the task at hand.
    About
    Sitemap/Index
    Targets
-   GenIndex
+   genindex
