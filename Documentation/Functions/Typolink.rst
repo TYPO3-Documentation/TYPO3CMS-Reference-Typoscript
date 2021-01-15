@@ -205,7 +205,7 @@ addQueryString
          according controllers or middleware implementations.
 
          Setting :typoscript:`addQueryString.method = GET` will forward GET
-         parameters and have the same functionality like not setting it at all.
+         parameters and have the same functionality as if not setting it at all.
 
 
    .exclude
