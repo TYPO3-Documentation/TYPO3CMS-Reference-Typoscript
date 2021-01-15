@@ -290,7 +290,7 @@ accessible for the current user.
 Selection with categories
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-If you would want to display categorized content with a RECORDS object
+If you want to display categorized content with a :ts:`RECORDS` object
 you could do it like this::
 
 	categorized_content = RECORDS

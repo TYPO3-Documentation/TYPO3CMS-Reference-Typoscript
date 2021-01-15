@@ -17,8 +17,8 @@ The registers are processed in the reverse order. The register with the highest 
 will be processed as the first, and the register with the lowest number will be processed
 as the last one. This corresponds to the stack priciple Last In – First Out (LIFO).
 
-With the advent of Fluid templating registers are used less often then
-they used to be. In the core they are not being used anymore.
+With the advent of Fluid templating, registers are used less often than
+they used to be. In the Core they are not being used anymore.
 
 .. ### BEGIN~OF~TABLE ###
 
@@ -89,4 +89,3 @@ of this record will be rendered as output.
 
 For an example in combination with :ref:`RESTORE_REGISTER <cobj-restore-register>`
 see the :ref:`example on the page RESTORE_REGISTER <cobj-restore-register-examples>`.
-

@@ -103,7 +103,7 @@ userFunc
          `_CSS_PAGE_STYLE` is included only on the affected pages. Depending
          on your configuration it will be written in an external file and included
          on the page or directly added as inline CSS block. Compression
-         for page specific CSS also depends on the global `config.compressCss`
+         for page specific CSS also depends on the global :ts:`config.compressCss`
          setting.
 
          This setting can be used to only include the CSS when the plugin of a
