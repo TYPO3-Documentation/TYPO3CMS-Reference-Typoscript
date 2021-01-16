@@ -41,9 +41,7 @@ TypoScript template reference
       Open Publication License available from `www.opencontent.org/openpub/
       <http://www.opencontent.org/openpub/>`_
 
-:Rendered:
-      |today|
-      
+     
 The content of this document is related to TYPO3, a GNU/GPL CMS framework 
 available from https://typo3.org/.
 
@@ -149,5 +147,4 @@ address the task at hand.
    AppendixA/Index
    About
    Sitemap/Index
-   Targets
    genindex
