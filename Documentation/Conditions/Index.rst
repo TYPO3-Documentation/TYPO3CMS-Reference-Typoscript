@@ -1350,9 +1350,9 @@ siteLanguage
 
    * ``siteLanguage("flagIdentifier")``
 
-   * ``siteLanguage("typo3Language")``
-
-   * ``siteLanguage("twoLetterIsoCode")``
+   * ``siteLanguage("typo3Language")`` : default or 2 letter language code
+   
+   * ``siteLanguage("twoLetterIsoCode")`` : 2 letter language code
 
    * ``siteLanguage("hreflang")``
 
