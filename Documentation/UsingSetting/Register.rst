@@ -7,7 +7,7 @@ Register
 
 It is possible to store variable values into a memory stack which is called
 "register".  The cObjects :ref:`LOAD_REGISTER <cobj-load-register>` and
-:ref:`RESTORE_REGISTER <cobj-load-register>` provide this storage functionality.
+:ref:`RESTORE_REGISTER <cobj-restore-register>` provide this storage functionality.
 Some TYPO3 cObjects use internal registers. Esp.  the menus are built be
 registers (e.g. count_HMENU, count_HMENU_MENUOBJ, count_menuItems).
 
@@ -17,7 +17,7 @@ Defining registers
 Registers in TypoScript can be seen as stack array variables in programming
 languages. Each register can store a complex TypoScript block. Use
 :ref:`LOAD_REGISTER <cobj-load-register>` to put a variable to the stack, use
-:ref:`RESTORE_REGISTER <cobj-load-register>` to pull a variable from the stack
+:ref:`RESTORE_REGISTER <cobj-restore-register>` to pull a variable from the stack
 and curly braces around a variable name to read the current value of the
 variable. You need a :ref:`stdWrap.data <stdwrap-data>` or a
 :ref:`stdWrap.dataWrap <stdwrap-datawrap>` cObject. The registers cannot be read
