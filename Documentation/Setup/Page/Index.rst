@@ -6,9 +6,9 @@
 .. _page-datatype:
 .. _object-type-page:
 
-===========
-PAGE & PAGE
-===========
+====
+PAGE
+====
 
 This defines what is rendered in the frontend.
 
