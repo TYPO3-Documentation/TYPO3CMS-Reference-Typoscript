@@ -5,10 +5,9 @@
 .. _page-datatype:
 .. _object-type-page:
 
-
-===========
-PAGE & page
-===========
+====
+PAGE
+====
 
 This defines what is rendered in the frontend.
 
@@ -186,12 +185,12 @@ bodyTagAdd
          :ref:`data-type-string`
 
    Description
-         This content is added inside of the opening :html:`<body>` tag right 
-         before the :html:`>` character. This is mostly useful for adding 
+         This content is added inside of the opening :html:`<body>` tag right
+         before the :html:`>` character. This is mostly useful for adding
          attributes to the :html:`<body>` tag.
 
    Example ::
-   
+
          # This will lead to <body class="example">
          page.bodyTagAdd = class="example"
 
