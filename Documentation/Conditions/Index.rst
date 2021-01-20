@@ -49,6 +49,10 @@ applicationContext
 
       [applicationContext == "Development"]
 
+   Any context that is "Production" or starts with "Production" (eg Production/Staging"). ::
+
+      [applicationContext == "#^Production(/|$)#"]
+
 
 .. index:: Conditions; page
 .. _condition-page:
