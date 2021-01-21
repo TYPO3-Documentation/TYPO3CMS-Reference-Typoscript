@@ -51,7 +51,7 @@ applicationContext
 
    Any context that is "Production" or starts with "Production" (eg Production/Staging"). ::
 
-      [applicationContext == "#^Production(/|$)#"]
+      [applicationContext matches "/^Production/"]
 
 
 .. index:: Conditions; page
