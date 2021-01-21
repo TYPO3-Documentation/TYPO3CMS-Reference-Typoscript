@@ -104,6 +104,12 @@ applicationContext
 
       [applicationContext == "Development"]
 
+   Any context that is "Production" or starts with "Production" (eg Production/Staging"). ::
+
+      [applicationContext matches "/^Production/"]
+
+
+.. index:: Conditions; page
 .. _condition-page:
 
 page
@@ -658,11 +664,11 @@ request.getQueryParams()
    Check if query parameter skipSessionUpdate equals 1::
 
       [request.getQueryParams()['skipSessionUpdate'] == 1]
-      
+
    Safely check query parameter array to avoid error logs in case key is not
    defined (see :ref:`condition-function-traverse`). This will check if
    `tx_news_pi1['news'] > 0`::
-   
+
       [traverse(request.getQueryParams(), 'tx_news_pi1/news') > 0]
 
 .. _condition-function-request-getParsedBody():
