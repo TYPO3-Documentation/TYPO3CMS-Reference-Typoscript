@@ -82,7 +82,7 @@ First :typoscript:`lib.stdheader` is defined. This is (and must be) a cObject! (
 this case it is :ref:`COA <cobj-coa>`.)
 
 Now :typoscript:`lib.stdheader` is copied to :typoscript:`tt_content.header.10` with the
-"<" operator. This means that an actual copy of :typoscript:`lib.stdheader` is
+":typoscript:`<`" operator. This means that an actual copy of :typoscript:`lib.stdheader` is
 created at *parsetime*.
 
 But this is not the case with :typoscript:`tt_content.bullets.10`. Here
