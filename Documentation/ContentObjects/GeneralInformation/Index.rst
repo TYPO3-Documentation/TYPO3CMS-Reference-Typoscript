@@ -14,7 +14,7 @@ PHP information
 
 The content objects (data type: cObject) are primarily controlled by the PHP-
 script :file:`typo3/sysext/frontend/Classes/ContentObject/ContentObjectRenderer.php`.
-The PHP-class is named :file:`ContentObjectRenderer` and often this is also
+The PHP-class is named :php:`ContentObjectRenderer` and often this is also
 the variable-name of the objects (:php:`$cObj`).
 
 The $cObj in PHP has an array, :php:`$this->data`, which holds records of
@@ -143,4 +143,3 @@ which are joined:
    :alt: The arrays, which are merged.
 
 So hence the line :typoscript:`page.20.value >` in the above example is useless.
-
