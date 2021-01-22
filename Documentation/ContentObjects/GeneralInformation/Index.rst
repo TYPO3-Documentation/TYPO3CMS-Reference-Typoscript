@@ -13,11 +13,11 @@ PHP information
 ===============
 
 The content objects (data type: cObject) are primarily controlled by the PHP-
-script "typo3/sysext/frontend/Classes/ContentObject/ContentObjectRenderer.php".
-The PHP-class is named "ContentObjectRenderer" and often this is also
-the variable-name of the objects ($cObj).
+script :file:`typo3/sysext/frontend/Classes/ContentObject/ContentObjectRenderer.php`.
+The PHP-class is named :file:`ContentObjectRenderer` and often this is also
+the variable-name of the objects (:php:`$cObj`).
 
-The $cObj in PHP has an array, $this->data, which holds records of
+The $cObj in PHP has an array, :php:`$this->data`, which holds records of
 various kind. See data type :ref:`"getText" <data-type-gettext>`.
 
 This record is normally "loaded" with the record from a table
@@ -78,20 +78,20 @@ This example will show you how it works::
      20 < styles.content.bulletlist_gr
    }
 
-First lib.stdheader is defined. This is (and must be) a cObject! (In
+First :typoscript:`lib.stdheader` is defined. This is (and must be) a cObject! (In
 this case it is :ref:`COA <cobj-coa>`.)
 
-Now *lib.stdheader* is copied to *tt\_content.header.10* with the
-"<" operator. This means that an actual copy of *lib.stdheader* is
+Now :typoscript:`lib.stdheader` is copied to :typoscript:`tt_content.header.10` with the
+"<" operator. This means that an actual copy of :typoscript:`lib.stdheader` is
 created at *parsetime*.
 
-But this is not the case with *tt\_content.bullets.10*. Here
-lib.stdheader is just pointed to and lib.stdheader will be used as the
+But this is not the case with :typoscript:`tt_content.bullets.10`. Here
+:typoscript:`lib.stdheader` is just pointed to and :typoscript:`lib.stdheader` will be used as the
 cObject at *runtime*.
 
 The reason why lib.stdheader was copied in the first case is the fact
 that it's needed to unset ".stdWrap.space" inside the cObject
-("10.stdWrap.space >"). This could **not** be done in the second case
+(:typoscript:`10.stdWrap.space >`). This could **not** be done in the second case
 where only a pointer is created.
 
 
@@ -100,12 +100,12 @@ where only a pointer is created.
 Note:
 -----
 
-If *lib.stdheader* was *temp.stdheader* instead, the pointer would
+If :typoscript:`lib.stdheader` was :typoscript:`temp.stdheader` instead, the pointer would
 not work! This is due to the fact that the runtime-reference would
-find nothing in "temp." as this is unset before the template is stored
+find nothing in `temp.` as this is unset before the template is stored
 in cache!
 
-This goes for "temp." and "styles." (see the top-level object
+This goes for :typoscript:`temp.` and :typoscript:`styles.` (see the top-level object
 definition elsewhere).
 
 Overriding values anyway:
@@ -136,11 +136,11 @@ The result is this configuration:
 .. figure:: ../../Images/ContentObjectsExampleMerge1.png
    :alt: Resulting configuration.
 
-Notice that .value was *not* cleared, because it's simply two arrays
+Notice that :typoscript:`.value` was *not* cleared, because it's simply two arrays
 which are joined:
 
 .. figure:: ../../Images/ContentObjectsExampleMerge2.png
    :alt: The arrays, which are merged.
 
-So hence the line *page.20.value >* in the above example is useless.
+So hence the line :typoscript:`page.20.value >` in the above example is useless.
 
