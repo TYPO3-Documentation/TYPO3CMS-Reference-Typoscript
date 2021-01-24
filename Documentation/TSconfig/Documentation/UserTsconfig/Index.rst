@@ -1,10 +1,10 @@
 .. include:: /Includes.rst.txt
-
+.. index:: User TSconfig
 .. _usertsconfig:
 .. _usertoplevelobjects:
 
 =======================
-User TSconfig Reference
+User TSconfig rference
 =======================
 
 The User TSconfig uses several *top level keys*. Their details are listed below. 

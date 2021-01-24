@@ -1,5 +1,5 @@
 .. include:: /Includes.rst.txt
-
+.. index:: Admin panel
 .. _useradmpanel:
 
 admPanel
@@ -26,6 +26,8 @@ Example user TSconfig to disable the admin panel for a user:
 
    admPanel.hide = 1
 
+
+.. index:: Admin panel; enable
 
 enable
 ------
@@ -72,9 +74,11 @@ enable
     For admin users, `admPanel.enable.all = 1` is default.
 
     .. note::
-       The admin Panel is active for all admin users by default. If this does
+       The admin panel is active for all admin users by default. If this does
        not fit the necessary setup, the different modules can be disabled.
 
+
+.. index:: Admin panel; hide
 
 hide
 ----
@@ -85,6 +89,8 @@ hide
 :aspect:`Description`
     If set, the panel will not be displayed in the bottom of the page. This only has a visual effect.
 
+
+.. index:: Admin panel; Settings override
 
 override
 --------

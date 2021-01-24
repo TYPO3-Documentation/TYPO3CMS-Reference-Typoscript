@@ -1,6 +1,7 @@
 .. include:: /Includes.rst.txt
-
-
+.. index:: 
+   TSconfig; Setting
+   TSconfig; Using
 .. _typoscript-syntax-using-setting:
 
 ==========================
@@ -20,15 +21,19 @@ TypoScript in frontend TypoScript templates, except for constants,
 which are not available in TSconfig.
 
 
+
+.. index:: Page TSconfig
 .. _pagethetsconfigfield:
 
 Page TSconfig
--------------
+=============
 
+
+.. index:: pair: Page TSconfig; Enter data
 .. _pagetsconfig-enter-data:
 
 Entering data
-^^^^^^^^^^^^^
+-------------
 
 There are two ways to attach Page TSconfig to any given page.
 When editing a page, move to the "Resources" tab.
@@ -58,10 +63,11 @@ Page TSconfig is thus very convenient to have separate branches
 of the page tree behave differently.
 
 
+.. index:: pair: Page TSconfig; Verify configuration
 .. _pageverifyingthefinalconfiguration:
 
 Verify the final configuration
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+------------------------------
 
 The full Page TSconfig for any given page can be viewed using the
 **WEB > Info** module and choosing the "Page TSconfig" action.
@@ -70,10 +76,11 @@ The full Page TSconfig for any given page can be viewed using the
    :alt: Viewing Page TSconfig using the Info module
 
 
+.. index:: pair: Page TSconfig; Override values
 .. _pageoverwritingandmodifyingvalues:
 
 Overwriting and modifying values
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+--------------------------------
 
 Properties, which are set in Page TSconfig, are valid for the page, on
 which they are set, and for all pages hierarchically below. You can
@@ -102,10 +109,11 @@ Page TSconfig itself can be :ref:`overwritten in User TSconfig <userrelationship
 * Finally you get the value "bold,italic".
 
 
+.. index:: pair: Page TSconfig; Default values
 .. _pagesettingdefaultpagetsconfig:
 
 Setting default Page TSconfig
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-----------------------------
 
 Page TSconfig is designed to be individual for branches of the page
 tree. However it can be very handy to set global values that will be
@@ -133,10 +141,11 @@ like templates, frontend TypoScript and so on.
 
 
 
+.. index:: pair: Page TSconfig; Static TSconfig files
 .. _pagesettingstaticpagetsconfigfiles:
 
 Register static Page TSconfig files
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-----------------------------------
 
 Register PageTS config files in the :file:`Configuration/TCA/Overrides/pages.php` of any extension.
 These can be selected in the page properties in the "Resources" tab (the same way as TypoScript
@@ -161,13 +170,18 @@ static templates are included):
    You cannot use a language file as third parameter for :php:`registerPageTSConfigFile()`.
    You must specify the text directly, see open issue on Forge: https://forge.typo3.org/issues/79928.
 
+
+.. index:: User TSconfig
 .. _userthetsconfigfield:
 
 User TSconfig
--------------
+=============
+
+
+.. index:: pair: User TSconfig; Enter data
 
 Entering data
-^^^^^^^^^^^^^
+-------------
 
 User TSconfig is entered in the "TSconfig" field of either
 BE users or BE user groups records. For both, this field
@@ -189,10 +203,12 @@ group will simply be accumulated, identical properties from
 later groups taking precedence over definitions from earlier
 groups.
 
+
+.. index:: pair: User TSconfig; Verify configuration
 .. _userverifyingthefinalconfiguration:
 
 Verify the final configuration
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+------------------------------
 
 The full User TSconfig of the currently logged in backend user can be viewed
 using the **SYSTEM > Configuration** module and choosing the "User TSconfig" action.
@@ -201,10 +217,11 @@ using the **SYSTEM > Configuration** module and choosing the "User TSconfig" act
     :alt: Viewing User TSconfig using the Configuration module
 
 
+.. index:: pair: User TSconfig; Override values
 .. _useroverwritingandmodifyingvalues:
 
 Overwriting and modifying values
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+--------------------------------
 
 Properties, which are set in the TSconfig field of a group, are valid
 for all users of that group.
@@ -262,11 +279,12 @@ clear cache option. The default value of the hidden field is not
 changed and simply inherited directly from the group.
 
 
+.. index:: User TSconfig; Override page TSconfig
 .. _userrelationshiptovaluessetinpagetsconfig:
 .. _pageoverridingpagetsconfigwithusertsconfig:
 
 Overriding Page TSconfig in User TSconfig
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-----------------------------------------
 
 All properties from Page TSconfig can be **overwritten** in User TSconfig by prepending the property
 name with `page.`. When a Page TSconfig property is set in **User** TSconfig that way, no matter, if
@@ -309,10 +327,11 @@ overrides the same value set in the Page TSconfig, just prefixed with `page.`:
         page.RTE.default.showButtons := addToList(italic)
 
 
+.. index:: pair: User TSconfig; Default values
 .. _usersettingdefaultusertsconfig:
 
-Setting default User TSconfig
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Setting default user TSconfig
+-----------------------------
 
 User TSconfig is designed to be individual for users or groups of
 users. However it can be very handy to set global values that will be
@@ -343,11 +362,12 @@ User TSconfig for instance within your project extension that contains other loc
 like templates, frontend TypoScript and so on.
 
 
+.. index:: Conditions
 .. _conditions:
 .. _condition-references:
 
 Conditions
-----------
+==========
 
 It is possible to use TypoScript :ref:`conditions <t3coreapi:typoscript-syntax-conditions>`
 in both User TSconfig and Page TSconfig, just as it is done in TypoScript for templates.
@@ -362,7 +382,7 @@ For a list of available conditions, please refer to the
 .. _conditions-example:
 
 Examples
-^^^^^^^^
+--------
 
 .. code-block:: typoscript
 
@@ -374,10 +394,11 @@ The above TSconfig will hide the "section\_frame" field of content
 elements only on the first level of the page tree.
 
 
+.. index:: Conditions; Difference to TypoScript templates
 .. _condition-differences:
 
 Differences to conditions in TypoScript templates
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-------------------------------------------------
 
 There are some slight differences between conditions in TSconfig and
 conditions in TypoScript templates, which must be taken into account:
@@ -403,6 +424,8 @@ conditions in TypoScript templates, which must be taken into account:
 Furthermore, you can access the current backend user inside a TSConfig condition:
 
 
+.. todo:: Does this still work with the changed Conditions syntax?
+.. index:: Conditions; Access backend user
 .. _condition-backend-user:
 
 backend.user
@@ -424,7 +447,7 @@ The following condition will apply only if the BE user is an admin:
 .. _phpapi:
 
 PHP API
--------
+=======
 
 The PHP API to retrieve page and user TSconfig in a backend module is (nowadays) straight forward:
 

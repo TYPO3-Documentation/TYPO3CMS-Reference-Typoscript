@@ -8,7 +8,9 @@ options
 
 Various options for the page affecting the core at various points.
 
-
+.. index::
+   options.backendLayout
+   Backend; Layout
 .. _pagebackendlayout:
 
 backendLayout

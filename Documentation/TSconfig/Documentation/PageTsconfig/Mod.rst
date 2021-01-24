@@ -1,5 +1,8 @@
 .. include:: /Includes.rst.txt
 
+.. index::
+   Page TSconfig; mod
+   mod
 .. _pagemod:
 
 
@@ -7,16 +10,25 @@
 mod
 ===
 
-Configuration for backend modules. This is the part of Page TSconfig
+Configuration for backend modules. This is the part of page TSconfig
 with the most options, most sections affect the main TYPO3 editing modules
 like *Web > Page* and *Web > List*.
 
+
+.. index::
+   mod; SHARED
+   Modules; All
 .. _pagesharedotionsformodules:
 
 SHARED
 ======
 
 .. youtube:: xJtsLlEtY5U
+
+
+.. index::
+   colPos_list
+   Columns; Disable
 
 colPos_list
 -----------
@@ -64,8 +76,8 @@ colPos_list
 
           Backend layout used in page module
 
-    * Now set the "Left" column to be not editable using Page TSconfig in the "Resources" tab of the page,
-      by restricting `colPos_list` to `0` (the "Content" colums as defined above):
+    * Now set the "Left" column to be not editable using page TSconfig in the "Resources" tab of the page,
+      by restricting `colPos_list` to `0` (the "Content" columns as defined above):
 
       .. code-block:: typoscript
 
@@ -79,6 +91,9 @@ colPos_list
           One column not editable in a backend layout
 
 
+.. index::
+   defaultLanguageFlag
+   Localization; Default language flag
 .. _pageTsConfigSharedDefaultLanguageLabel:
 
 defaultLanguageFlag
@@ -115,6 +130,10 @@ defaultLanguageFlag
    set from the site configuration's language settings and this option will have no effect at all.
 
 
+.. index::
+   defaultLanguageLabel
+   Localization; Default language label
+
 defaultLanguageLabel
 --------------------
 
@@ -129,9 +148,14 @@ defaultLanguageLabel
 .. warning::
 
    Note that this option has largely been superseded by site configuration since **TYPO3 10** and will only
-   work in the Backend for a "NullSite". For instance a global sysfolder in the page tree without an
+   work in the backend for a "NullSite". For instance a global sysfolder in the page tree without an
    attached site configuration. Once a page tree has a site configuration, the default language label is
    set from the site configuration's language settings and this option will have no effect at all.
+
+
+.. index::
+   disableLanguages
+   Localization; disable languages
 
 disableLanguages
 ----------------
@@ -149,6 +173,11 @@ disableLanguages
    attached site configuration. Once a page tree has a site configuration, the language settings
    from the site configuration are applied and this option will have no effect at all.
 
+
+.. index::
+   disableSysNoteButton
+   Buttons; disable sys_note
+
 disableSysNoteButton
 --------------------
 
@@ -159,11 +188,20 @@ disableSysNoteButton
    Disables the `sys_note` creation button in the modules' top button bar in the :guilabel:`Page`, :guilabel:`List` and :guilabel:`Info`
    modules.
 
+
+.. index::
+   mod; web_info
+   Modules; Info
+
 web_info
 ========
 
 Configuration options of the "Web > Info" module.
 
+
+.. index::
+   fieldDefinitions
+   Pagetree overview; Available fields
 .. _fieldDefinitions-webinfo:
 
 fieldDefinitions
@@ -181,7 +219,7 @@ fieldDefinitions
 
         Default entries of Pagetree Overview
 
-    By using `PageTsConfig` it is now possible to change the available fields and add additional entries to the selectbox.
+    By using page TsConfig it is now possible to change the available fields and add additional entries to the select box.
 
     Next to using a list of fields from the `pages` table you can add counters for records in a given table by prefixing a
     table name with `table_` and adding it to the list of fields.
@@ -210,6 +248,9 @@ fieldDefinitions
         }
 
 
+.. index::
+   web_info.menu.function
+   Module menu; Info
 .. _pageblindingfunctionmenuoptions-webinfo:
 
 menu.function
@@ -229,7 +270,7 @@ menu.function
 
     .. warning::
 
-        Blinding Function Menu items is not hardcore access control! All it
+        Blinding the function mMenu items is not hardcore access control! All it
         does is hide the possibility of accessing that module functionality
         from the interface. It might be possible for users to hack their way
         around it and access the functionality anyways. You should use the
@@ -252,13 +293,21 @@ menu.function
         }
 
 
-
+.. index::
+   mod; web_layout
+   Modules; Page
 .. _pagewebpage:
 
 web_layout
 ==========
 
 Configuration options of the "Web > Page" module.
+
+
+.. index::
+   Localization; Inconsistent language mode
+   Localization; Independently translated contend
+   allowInconsistentLanguageHandling
 
 allowInconsistentLanguageHandling
 ---------------------------------
@@ -268,7 +317,7 @@ allowInconsistentLanguageHandling
 
 :aspect:`Description`
     By default, TYPO3 will not allow you to mix translated content and independent content in the page module.
-    Content elements violating this behavior will be marked in the Page Module and there is no UI control (yet)
+    Content elements violating this behavior will be marked in the page module and there is no UI control (yet)
     allowing you to create independent content elements in a given language.
 
     If you want to go back to the old, inconsistent behavior, you can toggle it back on via this switch.
@@ -280,6 +329,8 @@ allowInconsistentLanguageHandling
 
         mod.web_layout.allowInconsistentLanguageHandling = 1
 
+
+.. index:: BackendLayouts
 
 BackendLayouts
 --------------
@@ -327,6 +378,10 @@ BackendLayouts
         }
 
 
+.. index::
+   defaultLanguageLabel
+   Localization; Default language label
+
 defaultLanguageLabel
 --------------------
 
@@ -344,6 +399,11 @@ defaultLanguageLabel
    work in the Backend for a "NullSite". For instance a global sysfolder in the page tree without an
    attached site configuration. Once a page tree has a site configuration, the default language label is
    set from the site configuration's language settings and this option will have no effect at all.
+
+
+.. index::
+   defLangBinding
+   Localization; Show default content element
 
 defLangBinding
 --------------
@@ -364,6 +424,10 @@ defLangBinding
     0
 
 
+.. index::
+   disableNewContentElementWizard
+   New content element wizard; Disable
+
 disableNewContentElementWizard
 ------------------------------
 
@@ -374,6 +438,10 @@ disableNewContentElementWizard
     Disables the fact that the new-content-element icons links to the
     content element wizard and not directly to a blank "NEW" form.
 
+
+.. index::
+   hideRestrictedCols
+   Page columns; Hide restricted
 
 hideRestrictedCols
 ------------------
@@ -402,6 +470,11 @@ hideRestrictedCols
     false
 
 
+.. index::
+   localization.enableCopy
+   Localization; Free mode
+   Localization; Copy content elements
+
 localization.enableCopy
 -----------------------
 
@@ -423,6 +496,11 @@ localization.enableCopy
         }
 
 
+.. index::
+   localization.enableTranslate
+   Localization; Connected mode
+   Localization; Translate content elements
+
 localization.enableTranslate
 ----------------------------
 
@@ -443,6 +521,9 @@ localization.enableTranslate
         }
 
 
+.. index::
+   web_layout.menu.functions
+   Module menu; Pages
 .. _pageblindingfunctionmenuoptions-weblayout:
 
 menu.functions
@@ -482,6 +563,10 @@ menu.functions
         }
 
 
+.. index::
+   noCreateRecordsLink
+   Buttons; Create new record
+
 noCreateRecordsLink
 -------------------
 
@@ -494,6 +579,10 @@ noCreateRecordsLink
 :aspect:`Default`
     0
 
+
+.. index::
+   preview
+   Content elements; Preview definition
 
 preview
 -------
@@ -533,6 +622,9 @@ preview
 
 
 
+.. index::
+   mod; web_list
+   Modules; List
 .. _pageweblist:
 
 web_list
@@ -540,6 +632,10 @@ web_list
 
 Configuration options of the "Web > List" module.
 
+
+.. index::
+   allowedNewTables
+   Buttons; Create new
 .. _pageTsConfigWebListAllowedNewTables:
 
 allowedNewTables
@@ -573,6 +669,8 @@ allowedNewTables
         The New record screen after modifying the allowed elements
 
 
+.. index:: clickTitleMode
+
 clickTitleMode
 --------------
 
@@ -597,6 +695,10 @@ clickTitleMode
     edit
 
 
+.. index::
+   csvDelimiter
+   CSV Exports; Delimiter
+
 csvDelimiter
 ------------
 
@@ -616,6 +718,10 @@ csvDelimiter
             csvDelimiter = ;
         }
 
+
+.. index::
+   csvQuote
+   CSV Exports; Quoting character
 
 csvQuote
 --------
@@ -637,6 +743,9 @@ csvQuote
         }
 
 
+.. index::
+   deniedNewTables
+   Buttons; Create new
 .. _pageTsConfigWebListDeniedNewTables:
 
 deniedNewTables
@@ -661,6 +770,8 @@ deniedNewTables
         }
 
 
+.. index:: disableSingleTableView
+
 disableSingleTableView
 ----------------------
 
@@ -672,6 +783,11 @@ disableSingleTableView
     listing will not be available - including sorting links on columns
     titles, because these links jumps to the table-only view.
 
+
+.. index::
+   enableClipBoard
+   Buttons; Show clipboard
+   Clipboard; Enable
 
 enableClipBoard
 ---------------
@@ -698,6 +814,10 @@ enableClipBoard
 :aspect:`Default`
     selectable
 
+
+.. index::
+   enableDisplayBigControlPanel
+   List module; Extended view
 
 enableDisplayBigControlPanel
 ----------------------------
@@ -729,6 +849,10 @@ enableDisplayBigControlPanel
     selectable
 
 
+.. index::
+   hideTables
+   List module; Hide tables
+
 hideTables
 ----------
 
@@ -740,6 +864,11 @@ hideTables
 
     If `*` is used, all tables will be hidden
 
+
+.. index::
+   hideTranslations
+   List module; Hide translations
+   Localization; Hide translations in List module
 
 hideTranslations
 ----------------
@@ -764,6 +893,10 @@ hideTranslations
        mod.web_list.hideTranslations = tt_content, tt_news
 
 
+.. index::
+   itemsLimitPerTable
+   List module; Items per table
+
 itemsLimitPerTable
 ------------------
 
@@ -785,6 +918,9 @@ itemsLimitPerTable
            itemsLimitPerTable = 10
         }
 
+.. index::
+   itemsLimitSingleTable
+   List module; Items per table in single table view
 
 itemsLimitSingleTable
 ---------------------
@@ -807,6 +943,10 @@ itemsLimitSingleTable
            itemsLimitSingleTable = 10
         }
 
+
+.. index::
+   listOnlyInSingleTableView
+   List module; Records in single table view only
 
 listOnlyInSingleTableView
 -------------------------
@@ -839,6 +979,10 @@ listOnlyInSingleTableView
     0
 
 
+.. index::
+   newContentElementWizard.override
+   Content elements; New wizard
+
 newContentElementWizard.override
 --------------------------------
 
@@ -856,6 +1000,10 @@ newContentElementWizard.override
         mod.newContentElementWizard.override = my_module_route
 
 
+.. index::
+   newPageWizard.override
+   Pages; New wizard
+
 newPageWizard.override
 ----------------------
 
@@ -866,6 +1014,10 @@ newPageWizard.override
     If set to an extension key, then the specified module or route will be used for creating
     new elements on the page.
 
+
+.. index::
+   noCreateRecordsLink
+   Buttons; Create new record
 
 noCreateRecordsLink
 -------------------
@@ -886,6 +1038,11 @@ noCreateRecordsLink
            noCreateRecordsLink = 1
         }
 
+
+.. index::
+   noExportRecordsLinks
+   Buttons; Export
+   Buttons; Download CSV file
 
 noExportRecordsLinks
 --------------------
@@ -922,6 +1079,10 @@ noExportRecordsLinks
         }
 
 
+.. index::
+   noViewWithDokTypes
+   Buttons; View page
+
 noViewWithDokTypes
 ------------------
 
@@ -934,6 +1095,10 @@ noViewWithDokTypes
 :aspect:`Default`
     254,255
 
+
+.. index::
+   table.[tableName].hideTable
+   List module; Hide tables
 
 table.[tableName].hideTable
 ------------------------------
@@ -950,6 +1115,10 @@ table.[tableName].hideTable
 
         mod.web_list.table.tt_content.hideTable = 1
 
+
+.. index::
+   tableDisplayOrder
+   List module; Order tables
 
 tableDisplayOrder
 -----------------
@@ -970,6 +1139,9 @@ tableDisplayOrder
             after = <tableA>, <tableB>, ...
         }
 
+.. index::
+   searchLevel.items
+   Items; Search level
 
 searchLevel.items
 -----------------
@@ -992,6 +1164,10 @@ searchLevel.items
         }
 
 
+.. index::
+   showClipControlPanelsDespiteOfCMlayers
+   Clipboard; Show control panel
+
 showClipControlPanelsDespiteOfCMlayers
 --------------------------------------
 
@@ -1004,6 +1180,9 @@ showClipControlPanelsDespiteOfCMlayers
     are disabled unless extended mode is set.
 
 
+.. index::
+   mod; web_ts
+   Modules; Template
 
 web_ts
 ======
@@ -1011,6 +1190,9 @@ web_ts
 Configuration options of the "Web > Template" module.
 
 
+.. index::
+   web_info.menu.function
+   Module menu; Template
 .. _pageblindingfunctionmenuoptions-webts:
 
 menu.function
@@ -1046,12 +1228,22 @@ menu.function
 
 
 
+.. index::
+   mod; web_view
+   Modules; View
 .. _pagewebview:
 
 web_view
 ========
 
 Configuration options of the "Web > View" module.
+
+
+.. index::
+   previewFrameWidths
+   Preview; Frame widths
+   Preview; Tablet
+   Preview; Mobile
 
 previewFrameWidths
 ------------------
@@ -1093,6 +1285,10 @@ previewFrameWidths
         Dropdown menu Width with added frame size called myPreview
 
 
+
+.. index::
+   View module; type parameter
+
 type
 ----
 
@@ -1111,6 +1307,7 @@ type
         }
 
 
+.. index:: Wizards
 
 wizards
 =======
@@ -1119,6 +1316,7 @@ The `wizards` section allows to customize the *New record wizard* and the
 *New content element wizard*.
 
 
+.. index:: Wizards; new content element
 .. _pagenewcontentelementwizard:
 
 newContentElement.wizardItems
@@ -1219,6 +1417,9 @@ newContentElement.wizardItems
         Added entry in the new content element wizard
 
 
+.. index::
+   Wizards; record
+   New Record wizard; order
 .. _pagewebrecordwizard:
 
 newRecord.order
@@ -1248,6 +1449,11 @@ newRecord.order
 
         The position of News changed after modifying the New record screen
 
+
+.. index::
+   Wizards; record
+   New Record wizard; After page button
+   New Record wizard; Inside page button
 
 newRecord.pages
 ---------------
@@ -1280,4 +1486,4 @@ newRecord.pages
     .. figure:: ../Images/PageTsModWizardsNewRecordHideInside.png
         :alt: The modified New record screen without Page (inside)
 
-        The modified New record screen without Page (inside)
+        The modified new record screen without page (inside)
