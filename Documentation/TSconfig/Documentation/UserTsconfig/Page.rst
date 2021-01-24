@@ -1,4 +1,5 @@
 .. include:: /Includes.rst.txt
+.. index:: user TSconfig; Overrider page TSconfig
 
 ====
 page

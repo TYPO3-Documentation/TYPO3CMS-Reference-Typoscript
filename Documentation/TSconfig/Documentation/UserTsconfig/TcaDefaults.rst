@@ -1,5 +1,5 @@
 .. include:: /Includes.rst.txt
-
+.. index:: TCAdefaults
 .. highlight:: php
 .. _userTsTcaDefaults:
 

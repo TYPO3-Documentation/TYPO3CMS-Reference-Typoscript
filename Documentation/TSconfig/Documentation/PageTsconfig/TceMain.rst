@@ -1,5 +1,5 @@
 .. include:: /Includes.rst.txt
-
+.. index:: TCEMAIN
 .. _pagetcemain:
 .. _pagetcemain-properties:
 
@@ -12,6 +12,8 @@ the :ref:`according section of the TYPO3 Core API document <t3coreapi:tce>`.
 
 .. youtube:: HnAdDHkes5A
 
+
+.. index:: Clear cache; On saving record
 .. _pagetcemain-clearcachecmd:
 
 clearCacheCmd
@@ -51,6 +53,7 @@ clearCacheCmd
         in the user TSconfig.
 
 
+.. index:: Clear cache; Disable
 .. _pagetcemain-clearcache-disable:
 
 clearCache_disable
@@ -66,6 +69,7 @@ clearCache_disable
     and :ref:`clearCache_pageGrandParent <pagetcemain-clearcache-pagegrandparent>`
 
 
+.. index:: Clear cache; On saving child page
 .. _pagetcemain-clearcache-pagegrandparent:
 
 clearCache_pageGrandParent
@@ -78,6 +82,7 @@ clearCache_pageGrandParent
     If set, then the grand parent of a page being edited will have the page cache cleared.
 
 
+.. index:: Clear cache; On saving sibling page
 .. _pagetcemain-clearcache-pagesiblingchildren:
 
 clearCache_pageSiblingChildren
@@ -92,6 +97,7 @@ clearCache_pageSiblingChildren
     Default is that when a page record is edited, the cache for itself, the parent, and siblings (same level) is cleared.
 
 
+.. index:: Copy record; Disable hide
 .. _pagetcemaintables-disablehideatcopy:
 
 disableHideAtCopy
@@ -127,6 +133,7 @@ disableHideAtCopy
         Hidden page with added suffix after copying its original page
 
 
+.. index:: Copy record; Disable prepend string (copy)
 .. _pagetcemaintables-disableprependatcopy:
 
 disablePrependAtCopy
@@ -164,11 +171,14 @@ disablePrependAtCopy
         Hidden page with added suffix after copying its original page
 
 
+.. index:: Page permissions
 .. _pagetcemain-permissions-user-group:
 
 permissions
 ===========
 
+
+.. index:: Page permissions; everybody
 
 everybody
 ---------
@@ -204,6 +214,8 @@ everybody
         Page with altered permissions for backend users, groups and everybody
 
 
+.. index:: Page permissions; Group
+
 group
 -----
 
@@ -237,6 +249,7 @@ group
 
         Page with altered permissions for backend users, groups and everybody
 
+.. index:: Page permissions; Group id
 
 groupid
 -------
@@ -267,6 +280,7 @@ groupid
         Page with altered permissions for backend groups
 
 
+.. index:: Page permissions; User
 .. _pagetcemain-permissions-actions:
 
 user
@@ -291,6 +305,8 @@ user
             # User can do anything, this is identical to the default value
             user = 31
         }
+
+.. index:: Page permissions; User id
 
 userid
 ------
@@ -321,6 +337,7 @@ userid
         Page with altered permissions for backend users
 
 
+.. index:: Page preview
 .. _pagetcemain-preview:
 
 preview
@@ -379,6 +396,7 @@ preview
         will not be displayed when editing records of your table.
 
 
+.. index:: Copy record; Table based configuration
 .. _pagetcemaintables:
 .. _pagetcemain-table-table-name:
 
@@ -389,6 +407,7 @@ Processing options for tables. The table name is added, for instance `TCEMAIN.ta
 or `TCEMAIN.table.tt_content.disablePrependAtCopy = 1`.
 
 
+.. index:: Localization; Translate to message
 .. _pagetcemain-translatetomessage:
 
 translateToMessage

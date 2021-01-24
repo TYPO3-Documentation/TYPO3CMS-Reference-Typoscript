@@ -1,5 +1,8 @@
 .. include:: /Includes.rst.txt
-
+.. index::
+   RTE
+   Rich text editor
+   see: Rich text editor; RTE
 .. _pageTsRte:
 
 ===
@@ -58,6 +61,7 @@ Consider the following Page TSconfig examples:
     # But disable RTE for tt_content bodytext again if the record type is "text"
     RTE.config.tt_content.bodytext.types.text.disabled = 1
 
+.. index:: RTE; disable
 
 disabled
 ========
@@ -70,6 +74,10 @@ disabled
     where it determines whether the RTE is rendered or not. Note that a backend user can also ultimately
     disable RTE's in his user settings.
 
+
+.. index::
+   RTE; Server processing
+   RTE; proc
 
 proc
 ====
@@ -87,6 +95,9 @@ Notice how many properties relate to specific transformations only! Also notice 
 `ts_css` imply other transformations :ref:`as explained in the overview <transformations-overview-meta>`.
 This means that options limited to `ts_transform` will also work for `ts_css` of course.
 
+
+.. index::
+   RTE; Classes allowed
 
 allowedClasses
 --------------
@@ -109,6 +120,10 @@ allowedClasses
     If a class name is not found in this list, the default is to remove the class.
 
 
+.. index::
+   RTE; HTML tags allowed
+   RTE; Tags allowed
+
 allowTags
 ---------
 
@@ -128,6 +143,9 @@ allowTags
         This information is outdated, the default list depends on the used
         rte_ckeditor YAML configuraton.
 
+
+.. index::
+   RTE; Tags outside paragraphs
 
 allowTagsOutside
 ----------------
@@ -149,6 +167,8 @@ allowTagsOutside
         # Allow only hr tags outside of p and div
         RTE.default.proc.allowTagsOutside = hr
 
+.. index::
+   RTE; block elements
 
 blockElementList
 ----------------
@@ -160,6 +180,8 @@ blockElementList
     Comma-separated list of uppercase tags (e.g. :code:`P,HR`) that overrides the list of HTML
     elements that will be treated as block elements by the RTE transformations.
 
+.. index::
+   RTE; tags denyed
 
 denyTags
 --------
@@ -173,6 +195,9 @@ denyTags
     Tags from above list to disallow.
 
 
+.. index::
+   RTE; HTMLparser DB entry
+
 entryHTMLparser_db
 -------------------
 
@@ -185,6 +210,8 @@ entryHTMLparser_db
     Allows to enable / disable the :ref:`HTMLparser <t3tsref:htmlparser>` *before* the
     content is processed with the predefined processors (e.g. ts_images or ts_transform).
 
+.. index::
+   RTE; HTMLparser RTE entry
 
 entryHTMLparser_rte
 -------------------
@@ -199,6 +226,9 @@ entryHTMLparser_rte
     content is processed with the predefined processors (e.g. ts_images or ts_transform).
 
 
+.. index::
+   RTE; HTMLparser DB exit
+
 exitHTMLparser_db
 -----------------
 
@@ -211,6 +241,9 @@ exitHTMLparser_db
     Allows to enable / disable the :ref:`HTMLparser <t3tsref:htmlparser>` *after* the
     content is processed with the predefined processors (e.g. ts_images or ts_transform).
 
+
+.. index::
+   RTE; HTMLparser RTE exit
 
 exitHTMLparser_rte
 ------------------
@@ -225,6 +258,8 @@ exitHTMLparser_rte
     content is processed with the predefined processors (e.g. ts_images or ts_transform).
 
 
+.. index::
+   RTE; HTMLparser DB
 .. _pageTsRteProcHtmlParserDb:
 
 HTMLparser_db
@@ -251,6 +286,9 @@ HTMLparser_db
        and :code:`htmlSpecialChars` are *not* observed. They are preset internally.
 
 
+.. index::
+   RTE; HTMLparser RTE
+
 HTMLparser_rte
 --------------
 
@@ -274,6 +312,8 @@ HTMLparser_rte
        Also note the :ref:`HTMLparser <t3tsref:htmlparser>` options :code:`keepNonMatchedTags`
        and :code:`htmlSpecialChars` are *not* observed. They are preset internally.
 
+.. index::
+   RTE; Transformations overruled
 
 overruleMode
 ------------
