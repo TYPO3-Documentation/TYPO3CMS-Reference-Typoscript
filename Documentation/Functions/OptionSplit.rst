@@ -1,5 +1,5 @@
 .. include:: /Includes.rst.txt
-.. index:: Functions; optionSplit
+.. index:: pair:Functions; optionSplit
 .. we keep the old label objects-optionsplit,
    in case it is still used.
 
@@ -180,14 +180,22 @@ The optionSplit ruleset
 From the full example we can deduce the **builtin ruleset**:
 
 1. The items of mainpart Z are used first.
+
 2. The items of mainpart A are used second.
+
 3. The items of mainpart R are used third.
+
 4. The *order* in which input items appear in the output is from left to right
    exactly as in the input.
+
 5. For mainpart Z the *start position* is as close to the *end* as possible.
+
 6. For mainpart A subparts are taken from the beginning.
+
 7. For mainpart R subparts are taken from the beginning and the whole
    sequence R is *repeated* from the beginning as long as necessary.
+
+8. If mainpart R is empty the last subpart of A is repeated.
 
 
 More Examples
