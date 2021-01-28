@@ -1141,6 +1141,10 @@ getTSFE
 
       [getTSFE().type == 98]
 
+   Current page id equals to 17. :ref:`PAGE`::
+
+      [getTSFE().id == 17]
+
 
 .. index:: Conditions; getenv
 .. _condition-function-getenv:
