@@ -1141,7 +1141,7 @@ getTSFE
 
       [getTSFE().type == 98]
 
-   Current page id equals to 17. :ref:`PAGE`::
+   Current page id equals to 17. However the recommended way is with :ref:`_condition-page`::
 
       [getTSFE().id == 17]
 
