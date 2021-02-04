@@ -2,6 +2,9 @@
 .. index::
    Content objects; USER
    Content objects; USER_INT
+   PHP
+   pair: PHP; Call a PHP function
+   pair: PHP; Call a PHP method
 .. _cobj-user:
 .. _cobj-user-int:
 
