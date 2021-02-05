@@ -151,7 +151,9 @@ pidInList
       Allows to select versioned records in workspaces directly.
 
    **Special value:** :ts:`0`
-      Allows to disable the :sql:`pid` constraint completely. Requirements: `uidInList` *must* be set or the `table` *must* have the prefix `static\_\*`.
+      Allows to disable the :sql:`pid` constraint completely. Requirements: 
+      :ts:`uidInList` *must* be set or the table *must* have the prefix 
+      "static\_\*".
 
 :aspect:`Default`
    :ts:`this`
