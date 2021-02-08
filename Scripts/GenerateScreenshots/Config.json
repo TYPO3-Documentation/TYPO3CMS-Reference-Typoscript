@@ -1,0 +1,38 @@
+{
+  "comments": {
+    "php": "// Automatic screenshot: Remove this comment if you wand to manually change this file",
+    "rst.txt": ".. Automatic screenshot: Remove this line if you wand to manually change this file",
+    "general": "Automatic screenshot:"
+  },
+  "extensions": [
+    {
+      "extension": "frontend",
+      "paths": {
+        "imageSource": "Documentation/Includes/Images/AutomaticScreenshots/",
+        "relativeImagePath": "/Includes/Images/AutomaticScreenshots/",
+        "imageRst": "Documentation/Includes/Images/RstIncludes/"
+      },
+      "modules": [
+        {
+          "module": "/module/web/ts",
+          "screens": [
+            {
+              "filename": "TemplateAnalyzer",
+              "caption": "All templates applying to a page, as used by the Introduction Package",
+              "parameters": [
+                {
+                  "key": "id",
+                  "value": 223
+                },
+                {
+                  "key": "SET[function]",
+                  "value": "TYPO3\\CMS\\Tstemplate\\Controller\\TemplateAnalyzerModuleFunctionController"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
