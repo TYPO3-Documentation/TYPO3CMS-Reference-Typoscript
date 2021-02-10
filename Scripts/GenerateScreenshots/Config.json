@@ -1,7 +1,7 @@
 {
   "comments": {
-    "php": "// Automatic screenshot: Remove this comment if you wand to manually change this file",
-    "rst.txt": ".. Automatic screenshot: Remove this line if you wand to manually change this file",
+    "php": "// Automatic screenshot: Remove this comment if you want to manually change this file",
+    "rst.txt": ".. Automatic screenshot: Remove this line if you want to manually change this file",
     "general": "Automatic screenshot:"
   },
   "extensions": [
@@ -19,6 +19,7 @@
             {
               "filename": "TemplateAnalyzer",
               "caption": "All templates applying to a page, as used by the Introduction Package",
+              "viewport": {"width": 960, "height": 640},
               "parameters": [
                 {
                   "key": "id",
@@ -29,6 +30,108 @@
                   "value": "TYPO3\\CMS\\Tstemplate\\Controller\\TemplateAnalyzerModuleFunctionController"
                 }
               ]
+            },
+            {
+              "filename": "TemplatesAnalyzerDetails",
+              "caption": "Viewing the content of a given template in the Template Analyzer",
+              "viewport": {"width": 960, "height": 640},
+              "selector": "#TypoScriptTemplateModuleController",
+              "parameters": [
+                {
+                  "key": "id",
+                  "value": 223
+                },
+                {
+                  "key": "template",
+                  "value": "sys_4"
+                }
+              ]
+            },
+            {
+              "filename": "TemplatesConstantEditor",
+              "caption": "The Constant Editor showing some categories with constants",
+              "viewport": {"width": 640, "height": 640},
+              "parameters": [
+                {
+                  "key": "id",
+                  "value": 223
+                },
+                {
+                  "key": "SET[function]",
+                  "value": "TYPO3\\CMS\\Tstemplate\\Controller\\TypoScriptTemplateConstantEditorModuleFunctionController"
+                }
+              ]
+            },
+            {
+              "filename": "TemplatesConstants",
+              "caption": "Overview of the defined constants",
+              "viewport": {"width": 640, "height": 640},
+              "selector": "#TypoScriptTemplateModuleController",
+              "parameters": [
+                {
+                  "key": "id",
+                  "value": 223
+                },
+                {
+                  "key": "SET[function]",
+                  "value": "TYPO3\\CMS\\Tstemplate\\Controller\\TypoScriptTemplateObjectBrowserModuleFunctionController"
+                },
+                {
+                  "key": "SET[ts_browser_type]",
+                  "value": "const"
+                }
+              ]
+            },
+            {
+              "filename": "TemplatesSetup",
+              "caption": "Overview of the defined setup",
+              "viewport": {"width": 640, "height": 640},
+              "selector": "#TypoScriptTemplateModuleController",
+              "parameters": [
+                {
+                  "key": "id",
+                  "value": 223
+                },
+                {
+                  "key": "SET[function]",
+                  "value": "TYPO3\\CMS\\Tstemplate\\Controller\\TypoScriptTemplateObjectBrowserModuleFunctionController"
+                },
+                {
+                  "key": "SET[ts_browser_type]",
+                  "value": "setup"
+                },
+                {
+                  "key": "SET[ts_browser_const]",
+                  "value": "subst"
+                },
+                {
+                  "key": "tsbr[page]",
+                  "value": 1
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "tables": [
+        {
+          "table": "sys_template",
+          "screens": [
+            {
+              "name": "TemplatesIncludes",
+              "view": "record",
+              "uid": 4,
+              "actions": [
+                {
+                  "action": "click",
+                  "tab": "Includes"
+                },
+                {
+                  "action": "wait",
+                  "timeout": "500"
+                }
+              ],
+              "selector": "[role=\"tabpanel\"]"
             }
           ]
         }

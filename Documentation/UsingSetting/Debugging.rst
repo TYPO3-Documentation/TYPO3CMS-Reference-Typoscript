@@ -22,9 +22,8 @@ Analyzing defined constants
 The *TypoScript Object Browser* provides an tree view to all defined constants
 on the currently active page.
 
-.. figure:: ../Images/TemplatesConstants.png
-   :alt: Overview of the defined constants
-   :class: with-shadow
+.. include:: /Includes/Images/RstIncludes/TemplatesConstants.rst.txt
+
 
 .. index:: TypoScript; Syntax errors
 .. _typoscript-syntax-finding-errors:

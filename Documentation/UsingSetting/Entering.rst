@@ -112,8 +112,7 @@ template structure. The "Template Analyzer" provides an overview of this
 structure. It shows all the templates that apply to the currently selected page,
 taking into account inclusions and inheritance along the page tree.
 
-.. figure:: ../Images/TemplatesAnalyzer.png
-   :alt: All templates applying to a page, as used by the Introduction Package
+.. include:: /Includes/Images/RstIncludes/TemplateAnalyzer.rst.txt
 
 
 Templates are taken into consideration from top to bottom, which means
@@ -123,8 +122,7 @@ considered at a later point by the TypoScript parser.
 In the Template Analyzer, you can click on any listed template to view
 the content of its "Setup" and "Constants" fields.
 
-.. figure:: ../Images/TemplatesAnalyzerDetails.png
-   :alt: Viewing the content of a given template in the Template Analyzer
+.. include:: /Includes/Images/RstIncludes/TemplatesAnalyzerDetails.rst.txt
 
 
 The line numbers are compiled from the first template to be included,
