@@ -1567,7 +1567,7 @@ used to create a link to that page in the menu.
 
 However the HMENU and sub-menu objects are so powerful that it would
 be very useful to use these objects for creating menus of links which
-does not relate to pages in TYPO3 by their ids. This could be a menu
+do not relate to pages in TYPO3 by their ids. This could be a menu
 reflecting a menu structure of a plugin where each link might link to
 the same page id in TYPO3 but where the difference would be in some
 parameter value.
