@@ -30,6 +30,7 @@ for example for comma-separated values, related files or related records.
    DataProcessing/CommaSeparatedValueProcessor
    DataProcessing/DatabaseQueryProcessor
    DataProcessing/FilesProcessor
+   DataProcessing/FlexFormProcessor
    DataProcessing/GalleryProcessor
    DataProcessing/LanguageMenuProcessor
    DataProcessing/MenuProcessor
