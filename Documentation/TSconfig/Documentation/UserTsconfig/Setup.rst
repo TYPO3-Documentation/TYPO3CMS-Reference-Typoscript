@@ -51,7 +51,7 @@ setup.fields.[fieldName].disabled
         # Do not show the 'emailMeAtLogin' field to the user in "User Settings" module
         setup.fields.emailMeAtLogin.disabled = 1
 
-        # And fore the value of this field to be set to 1
+        # And force the value of this field to be set to 1
         setup.override.emailMeAtLogin = 1
 
 
