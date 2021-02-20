@@ -910,7 +910,7 @@ itemsLimitPerTable
 
 :aspect:`Default`
     20
-    
+
 :aspect:`Example`
     .. code-block:: typoscript
 
@@ -935,7 +935,7 @@ itemsLimitSingleTable
 
 :aspect:`Default`
     100
-    
+
 :aspect:`Example`
     .. code-block:: typoscript
 
@@ -1359,6 +1359,9 @@ newContentElement.wizardItems
 
     mod.wizards.newContentElement.wizardItems.[group].elements.[name].iconIdentifier
         (string) The icon identifier of the icon you want to display.
+
+    mod.wizards.newContentElement.wizardItems.[group].elements.[name].iconOverlay
+        (string) The icon identifier of the overlay icon you want to use.
 
     mod.wizards.newContentElement.wizardItems.[group].elements.[name].title
         (localized string) Name of the item.
