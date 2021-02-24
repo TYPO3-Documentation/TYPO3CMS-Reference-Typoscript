@@ -956,13 +956,15 @@ traverse
    Custom
 
 :aspect:`Description`
-   This function has two parameters:
+   This function gets a value from an array with arbitrary depth. It has two parameters:
 
    The first parameter
       Is the array to traverse
 
    The second parameter
       Is the path to traverse
+   
+   In case the path is not found in the array, an empty string is returned.
 
 :aspect:`Example`
    Traverse query parameters of current request along ``tx_news_pi1[news]``::
