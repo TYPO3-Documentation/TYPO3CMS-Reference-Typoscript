@@ -48,6 +48,7 @@ Properties
    `disableAllHeaderCode`_                                           :ref:`data-type-boolean`                           false
    `disableBodyTag`_                                                 :ref:`data-type-boolean`                           0
    `disableCharsetHeader`_                                           :ref:`data-type-boolean`
+   `disableHrefLang`_                                                :ref:`data-type-boolean`
    `disableImgBorderAttr`_                                           :ref:`data-type-boolean`
    `disablePageExternalUrl`_                                         :ref:`data-type-boolean`
    `disablePrefixComment`_                                           :ref:`data-type-boolean`
@@ -726,6 +727,27 @@ disableCharsetHeader
    Description
          By default a HTTP header `content-type:text/html; charset...` is sent.
          This option will disable that.
+
+
+
+.. index:: config; disableHrefLang
+.. _setup-config-disableHrefLang:
+
+disableHrefLang
+===============
+
+.. container:: table-row
+
+   Property
+         disableHrefLang
+
+   Data type
+         :ref:`data-type-boolean`
+
+   Description
+         When the system extension SEO is installed, hreflang tags are generated
+         automatically in multi-language setups. By settings this option to true
+         the rendering of those tags will be skipped.
 
 
 
