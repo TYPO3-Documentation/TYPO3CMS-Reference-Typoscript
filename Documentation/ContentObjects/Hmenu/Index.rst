@@ -7,8 +7,10 @@
 HMENU
 =====
 
-Objects of type HMENU generate hierarchical menus. It is the one usually being
-used to create the navigation menu of websites.
+Objects of type HMENU generate hierarchical menus. In a 
+:ref:`FLUIDTEMPLATE <cobj-fluidtemplate>` the HMENU can be used as
+a DataProcessor called :ref:`MenuProcessor <MenuProcessor>`, which
+internally uses the HMENU functionality.
 
 The cObject HMENU allows you to define the global settings of the menu
 as a whole. For the rendering of the single menu levels, different
