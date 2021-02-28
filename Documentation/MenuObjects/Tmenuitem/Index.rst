@@ -76,8 +76,27 @@ stdWrap.data = field : [field name].
 
    Description
          wrap around the ".before"-code
+         
+.. container:: table-row
+
+   Property
+         after
+
+   Data type
+         HTML /:ref:`stdWrap <stdwrap>`
 
 
+.. container:: table-row
+
+   Property
+         afterWrap
+
+   Data type
+         wrap
+
+   Description
+         wrap around the ".after"-code         
+         
 .. container:: table-row
 
    Property
