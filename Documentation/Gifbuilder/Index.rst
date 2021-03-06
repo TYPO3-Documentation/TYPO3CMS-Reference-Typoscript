@@ -13,5 +13,6 @@ GIFBUILDER
 
    Gifbuilder/Index
    ObjectNames/Index
+   Examples
    NonGifbuilderObject/Index
 
