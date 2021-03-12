@@ -12,18 +12,27 @@ auth.BE.redirectToURL
     has been used in the past to redirect a backend user to the frontend to use frontend editing.
 
 auth.mfa.required
-    Require multi-factor authentication for a user.
+    Require multi-factor authentication for a user. This overrules the global configuration
+    and can therefore also be used to unset the requirement by using `0` as value. 
+    
+     .. code-block:: typoscript
+
+         auth.mfa.required = 1
 
 auth.mfa.disableProviders
     Disable multi-factor authentication providers for the current user or group.
-    It overrules the configuration from the "Access Rights/List", which means if
-    a provider is allowed in "Access Rights/List" but disallowed here,
+    It overrules the configuration from the Backend usergroup "Access List". This
+    means, if a provider is allowed in "Access List" but disallowed with TSconfig,
     it will be disallowed for the user or user group.
 
      .. code-block:: typoscript
 
          auth.mfa.disableProviders := addToList(totp)
 
-auth.mfa.recommendedProvider = totp
+auth.mfa.recommendedProvider
    Set a recommended multi-factor authentication provider on a per user or user group basis, which overrules
    the global configuration.
+
+     .. code-block:: typoscript
+
+         auth.mfa.recommendedProvider = totp
