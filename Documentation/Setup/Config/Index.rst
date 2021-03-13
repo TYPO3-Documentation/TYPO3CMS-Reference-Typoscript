@@ -1636,9 +1636,10 @@ locale\_all
          :ref:`data-type-string`
 
    Description
-        This setting will be removed in v10. In v9, language settings
-        from the :ref:`Site configuration <t3coreapi:sitehandling>` are used by default and the TypoScript settings
-        act as fallback, see also :php:`TYPO3\CMS\Core\Site\Entity\SiteLanguage->getLocale()`.
+         .. deprecated:: 9
+            This setting will be removed in v10. In v9, language settings
+            from the :ref:`Site configuration <t3coreapi:sitehandling>` are used by default and the TypoScript settings
+            act as fallback, see also :php:`TYPO3\CMS\Core\Site\Entity\SiteLanguage->getLocale()`.
 
          :php:`setlocale("LC_ALL", [value]);`
 
@@ -2443,9 +2444,10 @@ sys\_language\_isocode\_default
          en
 
    Description
-        This setting will be removed in v10. In v9, language settings
-        from the :ref:`Site configuration <t3coreapi:sitehandling>` are used by default and the TypoScript settings
-        act as fallback.
+         .. deprecated:: 9
+            This setting will be removed in v10. In v9, language settings
+            from the :ref:`Site configuration <t3coreapi:sitehandling>` are used by default and the TypoScript settings
+            act as fallback.
 
          ISO 639-1 language code for the default language (that is
          :ts:`sys_language_uid = 0`).
