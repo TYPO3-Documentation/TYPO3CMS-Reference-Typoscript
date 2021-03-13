@@ -1197,6 +1197,9 @@ htmlTag\_dir
          :ref:`data-type-string`
 
    Description
+         .. deprecated:: 9
+            See note below.
+
          Sets text direction for whole document (useful for display of Arabic,
          Hebrew pages).
 
@@ -1235,6 +1238,9 @@ htmlTag\_langKey
          en
 
    Description
+         .. deprecated:: 9
+            See note below.
+
          Allows you to set the language value for the attributes `xml:lang` and
          `lang` in the :html:`<html>` tag (when using :ts:`config.doctype = xhtml*`).
 
@@ -1249,7 +1255,7 @@ htmlTag\_langKey
 
 .. note::
     Used to older TYPO3 versions? If you are using site configuration you do not need to set `htmlTag_langKey` in TypoScript - use
-    the site configuration instead.
+    the site configuration instead. Instead of htmlTag_langKey, the ISO code is used, see :ref:`setup-config-sys-language-isocode`.
 
 .. _setup-config-htmltag-setparams:
 
@@ -1498,6 +1504,11 @@ language
          :ref:`data-type-string`
 
    Description
+         .. deprecated:: 9
+            This setting will be removed in TYPO3 v10. In TYPO3 9 it acts as fallback.
+            Language settings should be configured in the
+            :ref:`Site configuration <t3coreapi:sitehandling>`.
+
          Language key. See :ref:`stdwrap-lang` for more information.
 
          Select between:
@@ -1625,6 +1636,11 @@ locale\_all
          :ref:`data-type-string`
 
    Description
+         .. deprecated:: 9
+            This setting will be removed in v10. In v9, language settings
+            from the :ref:`Site configuration <t3coreapi:sitehandling>` are used by default and the TypoScript settings
+            act as fallback, see also :php:`TYPO3\CMS\Core\Site\Entity\SiteLanguage->getLocale()`.
+
          :php:`setlocale("LC_ALL", [value]);`
 
          value-examples: deutsch, de\_DE, danish, portuguese, spanish, french,
@@ -2393,6 +2409,11 @@ sys\_language\_isocode
          :ref:`data-type-string`
 
    Description
+        This setting will be deprecated in v10 and removed in v11. In v9, language settings
+        from the :ref:`Site configuration <t3coreapi:sitehandling>` are used by default and the TypoScript setting
+        act as fallback, see also :php:`TYPO3\CMS\Core\Site\Entity\SiteLanguage->getTwoLetterIsoCode()`
+        (changelog: :doc:`t3core:Changelog/10.0/Deprecation-88559-TSFE-sys_language_isocode`).
+
         ISO 639-1 language code for the according language. By default this
         is being set by :ts:`TSFE:sys_language_isocode`. The value is derived
         from the ISO code that is stored within the sys_language record.
@@ -2423,6 +2444,11 @@ sys\_language\_isocode\_default
          en
 
    Description
+         .. deprecated:: 9
+            This setting will be removed in v10. In v9, language settings
+            from the :ref:`Site configuration <t3coreapi:sitehandling>` are used by default and the TypoScript settings
+            act as fallback.
+
          ISO 639-1 language code for the default language (that is
          :ts:`sys_language_uid = 0`).
 
@@ -2452,6 +2478,13 @@ sys\_language\_mode
          :ref:`data-type-string`
 
    Description
+         .. deprecated:: 9.4
+            Will be removed in TYPO3 v10.0.
+            The language settings are now configured in the :ref:`Site configuration <t3coreapi:sitehandling>`.
+            In PHP code, the function :ref:`LanguageAspect <t3coreapi:context_api_aspects_language>`->getFallbackChain()
+            can be used instead.
+
+
          Configures what the system should do when a page is not translated
          to the requested language.
          It is only evaluated when :ts:`sys_language_uid` is greater than `0`
@@ -2520,6 +2553,13 @@ sys\_language\_overlay
          :ref:`data-type-boolean` / keyword
 
    Description
+         .. deprecated:: 9.4
+            Will be removed in TYPO3 v10.0.
+            The language settings are now configured in the :ref:`Site configuration <t3coreapi:sitehandling>`.
+            In PHP code, the function
+            :ref:`LanguageAspect <t3coreapi:context_api_aspects_language>`->getOverlayType() can be used instead.
+
+
          Defines whether TYPO3 should use the *content overlay* technique when
          fetching translated content. *Content overlay* means fetching records
          from the default language first and then replacing specific fields
@@ -2578,6 +2618,13 @@ sys\_language\_uid
          :ref:`data-type-integer`
 
    Description
+         .. deprecated:: 9.4
+            Will be removed in TYPO3 v10.0.
+            The language settings are now configured in the :ref:`Site configuration <t3coreapi:sitehandling>`.
+            In PHP code, the function
+            :ref:`LanguageAspect <t3coreapi:context_api_aspects_language>`->getid() can be used instead.
+
+
          This property holds the value of the field "uid" of a record of table "sys\_language".
          Various parts of the frontend rendering code will select records
          which are assigned to this language.
