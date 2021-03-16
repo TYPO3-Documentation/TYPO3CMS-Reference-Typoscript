@@ -228,6 +228,27 @@ createFoldersInEB
    admin-users this is always enabled).
 
 
+.. index:: Dashboard; Presets
+.. _useroptions-dashboard-dashboardPresetsForNewUsers:
+
+dashboard.dashboardPresetsForNewUsers
+=====================================
+
+:aspect:`Datatype`
+   list of dashboard identifiers
+
+:aspect:`Description`
+   List of dashboard identifiers to be used on initial dashboard module access.
+
+:aspect:`Default`
+   default
+
+:aspect:`Example`
+   .. code-block:: typoscript
+
+      options.dashboard.dashboardPresetsForNewUsers := addToList(customDashboard)
+
+
 .. index:: Upload folder; Default
 .. _useroptions-defaultUploadFolder:
 
