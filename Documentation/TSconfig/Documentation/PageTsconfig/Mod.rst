@@ -68,7 +68,7 @@ colPos_list
 
           A simple backend layout
 
-    * Create a page and select this new backend layout in the "Appearance" tab. The page modul then
+    * Create a page and select this new backend layout in the "Appearance" tab. The page module then
       looks like this, displaying the two defined columns:
 
       .. figure:: ../Images/SimpleBackendLayoutInPageModule.png
@@ -125,7 +125,7 @@ defaultLanguageFlag
 .. warning::
 
    Note that this option has largely been superseded by site configuration since **TYPO3 10** and will only
-   work in the Backend for a "NullSite". For instance a global sysfolder in the page tree without an
+   work in the Backend for a "NullSite". For instance, a global sysfolder in the page tree without an
    attached site configuration. Once a page tree has a site configuration, the default language icon is
    set from the site configuration's language settings and this option will have no effect at all.
 
@@ -141,7 +141,7 @@ defaultLanguageLabel
     string
 
 :aspect:`Description`
-    Alternative label for "Default" when language labels are shown in the interface.
+    Alternate label for "Default" when language labels are shown in the interface.
 
     Used in Web > List and Web > Page module.
 
@@ -164,12 +164,12 @@ disableLanguages
     string
 
 :aspect:`Description`
-    Comma-separated list of language UID which will be disabled in the given page tree.
+    Comma-separated list of language UIDs which will be disabled in the given page tree.
 
 .. warning::
 
    Note that this option has largely been superseded by site configuration since **TYPO3 10** and will only
-   work in the Backend for a "NullSite". For instance a global sysfolder in the page tree without an
+   work in the Backend for a "NullSite". For instance, a global sysfolder in the page tree without an
    attached site configuration. Once a page tree has a site configuration, the language settings
    from the site configuration are applied and this option will have no effect at all.
 
@@ -211,15 +211,15 @@ fieldDefinitions
     array
 
 :aspect:`Description`
-    The available fields in the module "Pagetree overview" in the Info module by default ship with the entries
-    "Basic settings", "Record overview" and "Cache and age".
+    The available fields in the "Pagetree overview" module under the Info module, by default ship with the entries
+    "Basic settings", "Record overview", and "Cache and age".
 
     .. figure:: ../Images/PageTsModWebInfoFieldDefinitions.png
         :alt: Default entries of Pagetree Overview
 
         Default entries of Pagetree Overview
 
-    By using page TsConfig it is now possible to change the available fields and add additional entries to the select box.
+    By using page TsConfig it is possible to change the available fields and add additional entries to the select box.
 
     Next to using a list of fields from the `pages` table you can add counters for records in a given table by prefixing a
     table name with `table_` and adding it to the list of fields.
@@ -320,7 +320,7 @@ allowInconsistentLanguageHandling
     Content elements violating this behavior will be marked in the page module and there is no UI control (yet)
     allowing you to create independent content elements in a given language.
 
-    If you want to go back to the old, inconsistent behavior, you can toggle it back on via this switch.
+    If you want to go back to the old, inconsistent behavior, you can toggle it back on using this switch.
 
 :aspect:`Example`
     Allows to set TYPO3s page module back to inconsistent language mode
@@ -339,7 +339,7 @@ BackendLayouts
     array
 
 :aspect:`Description`
-    Allows to define backend layouts via Page TSconfig directly without using database records.
+    Allows to define backend layouts via Page TSconfig directly, without using database records.
 
 :aspect:`Example`
     .. code-block:: typoscript
@@ -389,14 +389,14 @@ defaultLanguageLabel
     string
 
 :aspect:`Description`
-    Alternative label for "Default" when language labels are shown in the interface.
+    Alternate label for "Default" when language labels are shown in the interface.
 
     Overrides the same property from :ref:`mod.SHARED <pageTsConfigSharedDefaultLanguageLabel>` if set.
 
 .. warning::
 
    Note that this option has largely been superseded by site configuration since **TYPO3 10** and will only
-   work in the Backend for a "NullSite". For instance a global sysfolder in the page tree without an
+   work in the Backend for a "NullSite". For instance, a global sysfolder in the page tree without an
    attached site configuration. Once a page tree has a site configuration, the default language label is
    set from the site configuration's language settings and this option will have no effect at all.
 
