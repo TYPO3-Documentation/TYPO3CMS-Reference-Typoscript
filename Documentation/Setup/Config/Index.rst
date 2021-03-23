@@ -47,6 +47,7 @@ Properties
    `debug`_                                                          :ref:`data-type-boolean`
    `disableAllHeaderCode`_                                           :ref:`data-type-boolean`                           false
    `disableBodyTag`_                                                 :ref:`data-type-boolean`                           0
+   `disableCanonical`_                                               :ref:`data-type-boolean`
    `disableCharsetHeader`_                                           :ref:`data-type-boolean`
    `disableHrefLang`_                                                :ref:`data-type-boolean`
    `disableImgBorderAttr`_                                           :ref:`data-type-boolean`
@@ -707,6 +708,29 @@ disableBodyTag
          :ts:`bodyTagCObject`, :ts:`bodyTag` and
          :ts:`bodyTagAdd`. With :ts:`config.disableBodyTag = 1` the others are
          ignored and don't have any effect.
+
+
+
+.. index:: config; disableCanonical
+.. _setup-config-disableCanonical:
+
+disableCanonical
+===============
+
+.. container:: table-row
+
+   Property
+         disableCanonical
+
+   Data type
+         :ref:`data-type-boolean`
+
+   Description
+         When the system extension SEO is installed, canonical tags are generated
+         automatically to prevent duplicate content. The right canonical should be
+         rendered in almost all cases. If you have an edge case though, you might
+         want to disable the rendering of this tag. You can do this by setting this
+         property to true.
 
 
 
