@@ -147,7 +147,12 @@ DB
    Get the value of the header field of record with uid 234 from table
    "tt\_content"::
 
-      foo = DB : tt_content:234:header
+      foo.data = DB : tt_content:234:header
+      
+   Get the value of the header field of a record, whose uid is stored in a GET
+   parameter `myContentId`::
+   
+      foo.data.dataWrap = DB : tt_content:{GP : myContentId}:header
 
 .. _data-type-gettext-debug:
 
