@@ -356,7 +356,7 @@ backend.user.userGroupIds
 """"""""""""""""""""""""""
 
 :aspect:`Variable`
-   frontend.user.userGroupList
+   backend.user.userGroupList
 
 :aspect:`Type`
    array
@@ -383,7 +383,7 @@ backend.user.userGroupList
    Starting with TYPO3 11.2 `backend.user.userGroupIds`,
    an array has been added. Use this instead of `like`
    expressions to test for the user group of the current
-   frontend user.
+   backend user.
 
 :aspect:`Variable`
    backend.user.userGroupList
