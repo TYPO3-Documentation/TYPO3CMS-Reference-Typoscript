@@ -74,6 +74,6 @@ Alternatively you can `file an issue
    UsingSetting/Index
    PageTsconfig/Index
    UserTsconfig/Index
-   GenIndex
+   genindex
    Sitemap
 
