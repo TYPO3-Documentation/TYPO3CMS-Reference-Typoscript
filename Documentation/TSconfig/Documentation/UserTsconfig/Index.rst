@@ -4,7 +4,7 @@
 .. _usertoplevelobjects:
 
 =======================
-User TSconfig rference
+User TSconfig reference
 =======================
 
 The User TSconfig uses several *top level keys*. Their details are listed below. 
