@@ -349,11 +349,41 @@ backend.user.userId
       [backend.user.userId == 5]
 
 
+.. index:: Conditions; backend.user.userGroupIds
+.. _condition-backend-user-userGroupIds:
+
+backend.user.userGroupIds
+""""""""""""""""""""""""""
+
+:aspect:`Variable`
+   backend.user.userGroupList
+
+:aspect:`Type`
+   array
+
+:aspect:`Description`
+   Array of user group ids of the current backend user
+
+:aspect:`Context`
+   Frontend, Backend
+
+:aspect:`Example`
+   ::
+
+      [2 in backend.user.userGroupIds]
+
+
 .. index:: Conditions; backend.user.userGroupList
 .. _condition-backend-user-userGroupList:
 
 backend.user.userGroupList
 """"""""""""""""""""""""""
+
+.. versionadded:: 11.2
+   Starting with TYPO3 11.2 `backend.user.userGroupIds`,
+   an array has been added. Use this instead of `like`
+   expressions to test for the user group of the current
+   backend user.
 
 :aspect:`Variable`
    backend.user.userGroupList
@@ -443,12 +473,40 @@ frontend.user.userId
 
       [frontend.user.userId == 5]
 
+.. index:: Conditions; frontend.user.userGroupIds
+.. _condition-frontend-user-userGroupIds:
+
+frontend.user.userGroupIds
+""""""""""""""""""""""""""
+
+:aspect:`Variable`
+   frontend.user.userGroupList
+
+:aspect:`Type`
+   array
+
+:aspect:`Description`
+   Array of user group ids of the current frontend user
+
+:aspect:`Context`
+   Frontend
+
+:aspect:`Example`
+   ::
+
+      [4 in frontend.user.userGroupIds]
 
 .. index:: Conditions; frontend.user.userGroupList
 .. _condition-frontend-user-userGroupList:
 
 frontend.user.userGroupList
 """""""""""""""""""""""""""
+
+.. versionadded:: 11.2
+   Starting with TYPO3 11.2 `frontend.user.userGroupIds`,
+   an array has been added. Use this instead of `like`
+   expressions to test for the user group of the current
+   frontend user.
 
 :aspect:`Variable`
    frontend.user.userGroupList
@@ -1012,7 +1070,7 @@ traverse
 
    The second parameter
       Is the path to traverse
-   
+
    In case the path is not found in the array, an empty string is returned.
 
 :aspect:`Example`
@@ -1361,7 +1419,7 @@ siteLanguage
    * ``siteLanguage("flagIdentifier")``
 
    * ``siteLanguage("typo3Language")`` : default or 2 letter language code
-   
+
    * ``siteLanguage("twoLetterIsoCode")`` : 2 letter language code
 
    * ``siteLanguage("hreflang")``
