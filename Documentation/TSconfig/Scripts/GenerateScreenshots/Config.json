@@ -1,0 +1,42 @@
+{
+  "comments": {
+    "php": "// Automatic screenshot: Remove this comment if you wand to manually change this file",
+    "rst.txt": ".. Automatic screenshot: Remove this line if you wand to manually change this file",
+    "general": "Automatic screenshot:"
+  },
+  "extensions": [
+    {
+      "extension": "styleguide",
+      "paths": {
+        "imageSource": "Documentation/Includes/Images/Styleguide/AutomaticScreenshots/",
+        "relativeImagePath": "/Includes/Images/Styleguide/AutomaticScreenshots/",
+        "imageRst": "Documentation/Includes/Images/Styleguide/RstIncludes/",
+        "codeRst": "Documentation/Includes/Snippets/Styleguide/RstIncludes/",
+        "codeSource": "Documentation/Includes/Snippets/Styleguide/Sources/",
+        "relativeCodeSource": "/Includes/Snippets/Styleguide/Sources/",
+        "source": "typo3conf/ext/styleguide/Configuration/TCA/"
+      },
+      "tables": [
+        {
+          "table": "tx_styleguide_elements_basic",
+          "screens": [
+            {
+              "view": "fields",
+              "selectRecord": {
+                "by": "sys_language_uid",
+                "sys_language_uid": 0
+              }
+            }
+          ],
+          "fields": [
+            {
+              "field": "sys_language_uid",
+              "caption": "A typical sys_language_uid field"
+            },
+            "input_1"
+          ]
+        }
+      ]
+    }
+  ]
+}

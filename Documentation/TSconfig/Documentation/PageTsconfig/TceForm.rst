@@ -141,7 +141,7 @@ altLabels
 
    .. note::
 
-      If the item has an **empty** value, the syntax is slightly different and an additional dot must be provided, 
+      If the item has an **empty** value, the syntax is slightly different and an additional dot must be provided,
       like on this example::
 
          TCEFORM.tt_content.space_before_class.altLabels.. = foo
@@ -232,7 +232,48 @@ config.treeConfig
 
 
 .. index::
+   Records; field description
+
+description
+===========
+
+.. include:: /Includes/Images/Styleguide/RstIncludes/Input1.rst.txt
+
+:aspect:`Datatype`
+    string
+
+:aspect:`Description`
+   This property sets or overrides the TCA property
+   :ref:`TCA description <3tca:columns-properties-description>`, which allows to
+   define a description for a TCA field, next to its label.
+
+   .. code-block:: typoscript
+
+      TCEFORM.tt_content.header.description = override description
+
+   As already known from other properties, this can also be configured for a
+   specific language.
+
+   .. code-block:: typoscript
+
+      TCEFORM.tt_content.header.description.de = override description for DE
+
+   The option can be used on a per record type basis, too.
+
+   .. code-block:: typoscript
+
+      TCEFORM.tt_content.header.types.textpic.description = override description for textpic
+
+   Also referencing language labels is supported.
+
+   .. code-block:: typoscript
+
+      TCEFORM.tt_content.header.description = LLL:EXT:my_ext/Resources/Private/Language/locallang.xlf:override_description
+
+
+.. index::
    Records; field disabled
+
 
 disabled
 ========
