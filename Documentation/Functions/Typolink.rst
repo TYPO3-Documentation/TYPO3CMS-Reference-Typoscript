@@ -272,11 +272,11 @@ parameter
 
          parameter = t3://page?uid=51
 
-   2. A full example. A link to page 51 that will open in a new window.
+   2. A full example. A link to the *current* page that will open in a new window.
       The link will have a class attribute with value "specialLink" and a
       title attribute reading "Very important information"::
 
-         parameter = t3://page?uid=51 _blank specialLink "Very important information"
+         parameter = t3://page?uid=current _blank specialLink "Very important information"
 
    3. which is converted to a link like this::
 
@@ -601,10 +601,12 @@ page
 
 The page identifier is a compound string based on several optional settings.
 
-:aspect:`uid` (int):
-   The **uid** of a page record.
+:aspect:`uid` (int|string):
+   The **uid** of a page record, or "current" to reference the current page.
 
    `t3://page?uid=13`
+   
+   `t3://page?uid=current`
 
 :aspect:`alias` (string):
    The **alias** of a page record (as an alternative to the UID).
