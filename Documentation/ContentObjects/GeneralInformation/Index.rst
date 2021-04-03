@@ -133,11 +133,11 @@ Example:
 
 The result is this configuration:
 
-.. include:: /Includes/Images/Manual/RstIncludes/ContentObjectsExampleMerge1.rst.txt
+.. include:: /Includes/Images/RstIncludes/ContentObjectsExampleMerge1.rst.txt
 
 Notice that :typoscript:`.value` was *not* cleared, because it's simply two arrays
 which are joined:
 
-.. include:: /Includes/Images/Manual/RstIncludes/ContentObjectsExampleMerge2.rst.txt
+.. include:: /Includes/Images/RstIncludes/ContentObjectsExampleMerge2.rst.txt
 
 So hence the line :typoscript:`page.20.value >` in the above example is useless.

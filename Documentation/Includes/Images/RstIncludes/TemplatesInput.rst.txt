@@ -1,0 +1,7 @@
+.. Automatic screenshot: Remove this line if you want to manually change this file
+
+.. figure:: /Includes/Images/AutomaticScreenshots/TemplatesInput.png
+   :alt: Screenshot of  table sys_template
+   :class: with-shadow
+
+   Screenshot of  table sys_template

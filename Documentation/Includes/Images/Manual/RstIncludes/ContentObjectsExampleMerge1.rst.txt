@@ -1,5 +1,0 @@
-
-.. figure:: ../../Images/ContentObjectsExampleMerge1.png
-   :alt: Resulting configuration of page.10
-
-   Resulting configuration of :ts:`page.10`

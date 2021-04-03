@@ -1,5 +1,0 @@
-
-.. figure:: ../../Images/ContentObjectsExampleMerge2.png
-   :alt: The arrays, which are merged.
-
-   The array page.20, produced by merging page.10 and page.20

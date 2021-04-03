@@ -7,6 +7,8 @@
 Constants
 =========
 
+.. include:: /Includes/Images/RstIncludes/TemplatesConstants.rst.txt
+
 Constants are values defined in the  :guilabel:`Constants` field of a template.  They
 follow the :ref:`syntax of ordinary TypoScript
 <t3coreapi:typoscript-syntax-syntax>` and are case sensitive! They are used to
@@ -133,3 +135,6 @@ The constant editor
 Most constants can be edited in the :guilabel:`Template` module using the :guilabel:`constant editor`.
 If you keep your constants in a sitepackage extension you can also make them :ref:`available for the
 constant editor <typoscript-syntax-constant-editor>`.
+
+.. include:: /Includes/Images/RstIncludes/TemplatesConstantEditor.rst.txt
+

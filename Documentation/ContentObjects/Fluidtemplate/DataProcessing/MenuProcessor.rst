@@ -1,4 +1,4 @@
-.. include:: /Includes.txt
+.. include:: /Includes.rst.txt
 .. _MenuProcessor:
 
 =============
@@ -58,8 +58,8 @@ Options:
 
    Name for the variable in the Fluid template.
 
-.. important:: 
-   
+.. important::
+
    Additionally all :ref:`HMENU options <cobj-hmenu-options>` are available.
 
 
