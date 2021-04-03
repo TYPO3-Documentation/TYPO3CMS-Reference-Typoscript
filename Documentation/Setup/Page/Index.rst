@@ -63,6 +63,9 @@ Example::
     json.typeNum = 1
     # ...
 
+See :ref:`An example page type used for JSON data <page_examples_json>`
+about an example for the latter page.
+
 In the frontend, the original URLs that are generated will include the type and
 an id parameter (for the page id), example (for json and page id 22):
 
@@ -85,34 +88,8 @@ is very common and most documentation will imply that your main page object is c
 Examples
 ========
 
-.. code-block:: typoscript
-
-   # Default PAGE object:
-   page = PAGE
-   page.10 = TEXT
-   page.10.value = HELLO WORLD!
-
-
-.. code-block:: typoscript
-
-   page = PAGE
-   page.10 = FLUIDTEMPLATE
-   page.10 {
-      templateName = Default
-      layoutRootPaths {
-         10 = EXT:sitepackage/Resources/Private/Layouts
-      }
-      partialRootPaths {
-         10 = EXT:sitepackage/Resources/Private/Partials
-      }
-      templateRootPaths {
-         10 = EXT:sitepackage/Resources/Private/Templates
-      }
-      variables {
-         foo = TEXT
-         foo.value = bar
-      }
-   }
+Please see the dedicated example page about examples how to use the
+PAGE object: :ref:`page_examples`
 
 
 .. index:: PAGE; Properties
@@ -1063,3 +1040,9 @@ wrap
 
 
 .. ###### END~OF~TABLE ######
+
+
+.. toctree::
+   :hidden:
+
+   Examples
