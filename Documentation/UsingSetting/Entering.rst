@@ -19,11 +19,9 @@ the TYPO3 backend.
    various configuration in an extension. See :ref:`t3sitepackage:start`.
 
 
-.. figure:: ../Images/TemplatesRecordListView.png
-   :alt: A TypoScript template as seen in the Web > List module.
+.. include:: /Includes/Images/RstIncludes/TemplatesRecordListView.rst.txt
 
-.. figure:: ../Images/TemplatesInput.png
-   :alt: The Constants and Setup fields of a TypoScript template
+.. include:: /Includes/Images/RstIncludes/TemplatesInput.rst.txt
 
 If the "t3editor" system extension is not installed or has been
 disabled via configuration options, the :guilabel:`Constants` and :guilabel:`Setup` fields
@@ -64,23 +62,22 @@ Include TypoScript from extensions
 
 It is also possible to "Include static" templates from extensions.
 
+
 .. rst-class:: bignums-xxl
 
-#. Edit the whole template record
+#. In the :guilabel:`Web > Template` module, select :guilabel:`Info / Modify`
 
-   In the :guilabel:`Web > Template` module, select :guilabel:`Info / Modify`
-   and click :guilabel:`Edit the whole template record`.
+#. Click :guilabel:`Edit the whole template record`
 
-   .. image:: ../Images/TemplatesStaticIncludes1.png
+   .. include:: /Includes/Images/RstIncludes/TemplatesStaticIncludes1.rst.txt
+
+.. rst-class:: bignums-xxl
 
 #. Chose the tab :guilabel:`Includes`
 
-   .. image:: ../Images/TemplatesStaticIncludes2.png
-
 #. Click the templates to include in :guilabel:`Available Items`.
 
-
-   .. image:: ../Images/TemplatesStaticIncludes3.png
+   .. include:: /Includes/Images/RstIncludes/TemplatesStaticIncludes2.rst.txt
 
 .. tip::
 
@@ -97,9 +94,7 @@ Include other TypoScript templates
 Apart from this, it is also possible to include other TypoScript template
 records (in the field called "Include Basis Template").
 
-.. figure:: ../Images/TemplatesIncludes.png
-   :alt: Templates included from another template
-
+.. include:: /Includes/Images/RstIncludes/TemplatesIncludes.rst.txt
 
 .. index:: TypoScript; Analyzer
 .. _typoscript-syntax-typoscript-templates-structure-analyzer:
@@ -108,23 +103,19 @@ Template analyzer
 =================
 
 With all those inclusions, it may happen that you lose the overview of the
-template structure. The "Template Analyzer" provides an overview of this
+template structure. The :guilabel:`Template Analyzer` (1) provides an overview
+of this
 structure. It shows all the templates that apply to the currently selected page,
 taking into account inclusions and inheritance along the page tree.
 
-.. figure:: ../Images/TemplatesAnalyzer.png
-   :alt: All templates applying to a page, as used by the Introduction Package
-
+.. include:: /Includes/Images/RstIncludes/TemplatesAnalyzerDetails.rst.txt
 
 Templates are taken into consideration from top to bottom, which means
 that properties defined in one template may be overridden in templates
 considered at a later point by the TypoScript parser.
 
-In the Template Analyzer, you can click on any listed template to view
+In the Template Analyzer, you can click on any listed template (2) to view
 the content of its "Setup" and "Constants" fields.
-
-.. figure:: ../Images/TemplatesAnalyzerDetails.png
-   :alt: Viewing the content of a given template in the Template Analyzer
 
 
 The line numbers are compiled from the first template to be included,

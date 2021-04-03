@@ -1,0 +1,386 @@
+{
+  "comments": {
+    "php": "// Automatic screenshot: Remove this comment if you want to manually change this file",
+    "rst.txt": ".. Automatic screenshot: Remove this line if you want to manually change this file",
+    "general": "Automatic screenshot:"
+  },
+  "extensions": [
+    {
+      "extension": "frontend",
+      "paths": {
+        "imageSource": "Documentation/Includes/Images/AutomaticScreenshots/",
+        "relativeImagePath": "/Includes/Images/AutomaticScreenshots/",
+        "imageRst": "Documentation/Includes/Images/RstIncludes/"
+      },
+      "modules": [
+        {
+          "module": "/module/web/ts",
+          "screens": [
+            {
+              "filename": "TemplatesStaticIncludes1",
+              "caption": "Edit the whole template record",
+              "parameters": [
+                {
+                  "key": "id",
+                  "value": 141
+                },
+                {
+                  "key": "SET[function]",
+                  "value": "TYPO3\\CMS\\Tstemplate\\Controller\\TypoScriptTemplateInformationModuleFunctionController"
+                }
+              ],
+              "actions": [
+                {
+                  "action": "draw",
+                  "item": "box",
+                  "selector": ".t3js-module-docheader-bar-navigation"
+                },
+                {
+                  "action": "draw",
+                  "item": "label",
+                  "selector": ".t3js-module-docheader-bar-navigation",
+                  "content": "1"
+                },
+                {
+                  "action": "draw",
+                  "item": "box",
+                  "selector": "#TypoScriptTemplateModuleController .row:contains(\"whole template\")"
+                },
+                {
+                  "action": "draw",
+                  "item": "label",
+                  "selector": "#TypoScriptTemplateModuleController .row:contains(\"whole template\")",
+                  "content": "2"
+                },
+                {
+                  "action": "wait",
+                  "timeout": 100
+                }
+              ]
+            },
+            {
+              "filename": "TemplatesViewFullListingButton",
+              "caption": "\"View the complete TS listing\" button",
+              "viewport": {"width": 640, "height": 400},
+              "parameters": [
+                {
+                  "key": "id",
+                  "value": 141
+                },
+                {
+                  "key": "template",
+                  "value": "sys_2"
+                }
+              ],
+              "actions": [
+                {
+                  "action": "draw",
+                  "item": "box",
+                  "selector": ".t3js-module-docheader-bar-navigation .col .col"
+                },
+                {
+                  "action": "draw",
+                  "item": "label",
+                  "position": "outerRight",
+                  "selector": ".t3js-module-docheader-bar-navigation .col .col",
+                  "content": "1"
+                },
+                {
+                  "action": "draw",
+                  "item": "box",
+                  "selector": ".btn-default:contains(\"View the complete TS Listing\")"
+                },
+                {
+                  "action": "draw",
+                  "item": "label",
+                  "position": "outerRight",
+                  "selector": ".btn-default:contains(\"View the complete TS Listing\")",
+                  "content": "2"
+                },
+                {
+                  "action": "wait",
+                  "timeout": 100
+                }
+              ]
+            },
+            {
+              "filename": "TemplateAnalyzer",
+              "caption": "All templates applying to a page, as used by the Introduction Package",
+              "parameters": [
+                {
+                  "key": "id",
+                  "value": 141
+                },
+                {
+                  "key": "template",
+                  "value": "sys_2"
+                }
+              ],
+              "actions": [
+                {
+                  "action": "draw",
+                  "item": "box",
+                  "selector": ".t3js-module-docheader-bar-navigation .col .col"
+                },
+                {
+                  "action": "draw",
+                  "item": "label",
+                  "position": "outerRight",
+                  "selector": ".t3js-module-docheader-bar-navigation .col .col",
+                  "content": "1"
+                },
+                {
+                  "action": "draw",
+                  "item": "box",
+                  "selector": "#ts-analyzer td:contains(\"Introduction Package\")"
+                },
+                {
+                  "action": "draw",
+                  "item": "label",
+                  "position": "outerRight",
+                  "selector": "td:contains(\"Introduction Package\")",
+                  "content": "2"
+                },
+                {
+                  "action": "wait",
+                  "timeout": 100
+                }
+              ]
+            },
+            {
+              "filename": "TemplatesAnalyzerDetails",
+              "caption": "Viewing the content of a given template in the Template Analyzer",
+              "selector": "#TypoScriptTemplateModuleController",
+              "parameters": [
+                {
+                  "key": "id",
+                  "value": 141
+                },
+                {
+                  "key": "template",
+                  "value": "sys_2"
+                }
+              ],
+              "actions": [
+                {
+                  "action": "draw",
+                  "item": "box",
+                  "selector": ".t3js-module-docheader-bar-navigation .col .col"
+                },
+                {
+                  "action": "draw",
+                  "item": "label",
+                  "position": "outerRight",
+                  "selector": ".t3js-module-docheader-bar-navigation .col .col",
+                  "content": "1"
+                },
+                {
+                  "action": "draw",
+                  "item": "box",
+                  "selector": "#ts-analyzer td:contains(\"Introduction Package\")"
+                },
+                {
+                  "action": "draw",
+                  "item": "label",
+                  "position": "outerRight",
+                  "selector": "td:contains(\"Introduction Package\")",
+                  "content": "2"
+                },
+                {
+                  "action": "wait",
+                  "timeout": 100
+                }
+              ]
+            },
+            {
+              "filename": "TemplatesConstantEditor",
+              "caption": "The Constant Editor showing some categories with constants",
+              "viewport": {"width": 640, "height": 640},
+              "parameters": [
+                {
+                  "key": "id",
+                  "value": 141
+                },
+                {
+                  "key": "SET[function]",
+                  "value": "TYPO3\\CMS\\Tstemplate\\Controller\\TypoScriptTemplateConstantEditorModuleFunctionController"
+                }
+              ]
+            },
+            {
+              "filename": "TemplatesConstants",
+              "caption": "Overview of the defined constants",
+              "viewport": {"width": 640, "height": 640},
+              "selector": "#TypoScriptTemplateModuleController",
+              "parameters": [
+                {
+                  "key": "id",
+                  "value": 141
+                },
+                {
+                  "key": "SET[function]",
+                  "value": "TYPO3\\CMS\\Tstemplate\\Controller\\TypoScriptTemplateObjectBrowserModuleFunctionController"
+                },
+                {
+                  "key": "SET[ts_browser_type]",
+                  "value": "const"
+                }
+              ]
+            },
+            {
+              "filename": "TemplatesSetup",
+              "caption": "Overview of the defined setup",
+              "viewport": {"width": 640, "height": 640},
+              "selector": "#TypoScriptTemplateModuleController",
+              "parameters": [
+                {
+                  "key": "id",
+                  "value": 141
+                },
+                {
+                  "key": "SET[function]",
+                  "value": "TYPO3\\CMS\\Tstemplate\\Controller\\TypoScriptTemplateObjectBrowserModuleFunctionController"
+                },
+                {
+                  "key": "SET[ts_browser_type]",
+                  "value": "setup"
+                },
+                {
+                  "key": "SET[ts_browser_const]",
+                  "value": "subst"
+                },
+                {
+                  "key": "tsbr[page]",
+                  "value": 1
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "tables": [
+        {
+          "table": "sys_template",
+          "filename": "TemplatesStaticIncludes2",
+          "screens": [
+            {
+              "view": "table",
+              "filename": "TemplatesRecordListView",
+              "selectRecord": {
+                "by": "title",
+                "title": "Congratulations"
+              },
+              "selector": ".recordlist",
+              "caption": "A TypoScript template as seen in the Web > List module"
+            },
+            {
+              "view": "record",
+              "filename": "TemplatesStaticIncludes2",
+              "selectRecord": {
+                "by": "title",
+                "title": "Introduction Package"
+              },
+
+              "clip": {
+                "height": 600
+              },
+              "actions": [
+                {
+                  "action": "click",
+                  "tab": "Includes"
+                },
+                {
+                  "action": "hide",
+                  "selector": ".module-docheader"
+                },
+                {
+                  "action": "draw",
+                  "item": "box",
+                  "selector": ".t3js-tabmenu-item:contains(\"Includes\")"
+                },
+                {
+                  "action": "draw",
+                  "item": "label",
+                  "position": "outerRight",
+                  "selector": ".t3js-tabmenu-item:contains(\"Includes\")",
+                  "content": "3"
+                },
+                {
+                  "action": "draw",
+                  "item": "box",
+                  "selector": ".form-multigroup-item:contains(\"Available\")"
+                },
+                {
+                  "action": "draw",
+                  "item": "label",
+                  "selector": ".form-multigroup-item:contains(\"Available\")",
+                  "content": "4"
+                },
+                {
+                  "action": "wait",
+                  "timeout": "500"
+                }
+              ],
+              "selector": "[role=\"tabpanel\"]"
+            },
+            {
+              "view": "record",
+              "filename": "TemplatesIncludes",
+              "description": "Templates included from another template",
+              "selectRecord": {
+                "by": "title",
+                "title": "Introduction Package"
+              },
+              "actions": [
+                {
+                  "action": "click",
+                  "tab": "Includes"
+                },
+                {
+                  "action": "hide",
+                  "selector": ".module-docheader"
+                },
+                {
+                  "action": "draw",
+                  "item": "box",
+                  "selector": ".form-section:contains(\"Include Basis Template\")"
+                },
+                {
+                  "action": "draw",
+                  "item": "label",
+                  "selector": ".form-section:contains(\"Include Basis Template\")",
+                  "content": "1"
+                },
+                {
+                  "action": "wait",
+                  "timeout": "500"
+                }
+              ],
+              "selector": "[role=\"tabpanel\"]"
+            },
+            {
+              "view": "record",
+              "filename": "TemplatesInput",
+              "description": "The Constants and Setup fields of a TypoScript template",
+              "selectRecord": {
+                "by": "title",
+                "title": "Introduction Package"
+              },
+              "actions": [
+                {
+                  "action": "hide",
+                  "selector": ".module-docheader"
+                },
+                {
+                  "action": "wait",
+                  "timeout": "100"
+                }
+              ],
+              "selector": "[role=\"tabpanel\"]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
