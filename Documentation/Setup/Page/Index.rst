@@ -216,8 +216,8 @@ Properties
 
       It is considered best practise to leave space between the numbers such
       that it will be possible to place objects before and after other objects
-      in future. Therefore you will often see that people use the number 10 and
-      no number 1 is found.
+      in the future. Therefore you will often see that people use the number 
+      10 and no number 1 is found.
 
    Example
       ::
