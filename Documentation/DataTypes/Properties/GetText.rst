@@ -147,7 +147,18 @@ DB
    Get the value of the header field of record with uid 234 from table
    "tt\_content"::
 
-      foo = DB : tt_content:234:header
+      foo.data = DB : tt_content:234:header
+
+   Get the value of the header field of a record, whose uid is stored in a GET
+   parameter `myContentId`::
+
+      foo.data.dataWrap = DB : tt_content:{GP : myContentId}:header
+
+   .. note::
+      It is safe to directly use a client-/user-provided input for the id of a DB
+      record here. The function :php:`ContentObjectRenderer->getData` internally
+      calls the function :php:`PageRepository->getRawRecord`, which converts the
+      parameter to int via :php:`QueryBuilder->createNamedParameter`
 
 .. _data-type-gettext-debug:
 
@@ -675,14 +686,14 @@ siteLanguage
 
 :aspect:`Example:`
    Code::
-   
+
       page.10 = TEXT
 	   page.10.data = siteLanguage:navigationTitle
 	   page.10.wrap = This is the title of the current site language: |
-      
+
       page.10 = TEXT
 	   page.10.dataWrap = The current site language direction is {siteLanguage:direction}
-      
+
       # Website title for the current language with fallback to the website title of the site configuration.
       page.10 = TEXT
       page.10.data = siteLanguage:websiteTitle // site:websiteTitle
