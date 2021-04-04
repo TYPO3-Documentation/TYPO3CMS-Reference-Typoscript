@@ -205,6 +205,17 @@ additionalHeaders
                 20.header = Cache-control: Private
             }
 
+         Set HTTP content type for a page type offering json::
+
+            json = PAGE
+            json {
+               typeNum = 1617455215
+               10 =< tt_content.list.20.tx_myextension_myjsonplugin
+               config {
+                  disableAllHeaderCode = 1
+                  additionalHeaders.10.header = Content-type:application/json
+               }
+            }
 
 
 .. index:: config; admPanel
@@ -671,14 +682,32 @@ disableAllHeaderCode
          false
 
    Description
-         If this is set, none of the features of the :ref:`page` object is processed
-         and the content of the page will be the result of the cObject array
-         (1,2,3,4...) of the :ref:`page` object. This means that the result of the
-         cObject should include everything from the :html:`<HTML>` .... to the :html:`</HTML>`
-         tag!
+         If this is not set or set to false the :ref:`page` object automatically
+         outputs a HTML skeleton, see :ref:`page_output`.
+
+         To disable this default behaviour set :ts:`disableAllHeaderCode = 1`.
+         The page outputs only the result of the cObject array
+         (1,2,3,4...) of the :ref:`page` object.
 
          Use this feature in templates supplying other content-types than HTML.
-         That could be an image or a WAP-page!
+         That could be an image, a WAP-page, an ajax request or a JSON response.
+
+         This property can also be used to generate the complete HTML page,
+         including the :html:`<html>` and :html:`<body>` tags manually.
+
+
+   Example
+         A page type providing JSON::
+
+            json = PAGE
+            json {
+               typeNum = 1617455215
+               10 =< tt_content.list.20.tx_myextension_myjsonplugin
+               config {
+                  disableAllHeaderCode = 1
+                  additionalHeaders.10.header = Content-type:application/json
+               }
+            }
 
 
 
