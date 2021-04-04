@@ -16,10 +16,9 @@ PAGE is an object type. A good habit is to use :ts:`page` as the top-level objec
 the content-page on a website.
 
 TYPO3 does not initialize :ts:`page` by default. You must initialize this
-explicitly, e.g.::
+explicitly, for example::
 
     page = PAGE
-
 
 Pages are referenced by two main values. The "id" and "type".
 
@@ -28,6 +27,44 @@ page is found.
 
 Most of this code is executed in the PHP script
 :php:`\TYPO3\CMS\Frontend\Http\RequestHandler`.
+
+.. _page_output:
+
+Output of the PAGE object
+=========================
+
+An empty :ts:`PAGE` object without further configuration renders a HTML page
+like the following:
+
+.. code-block:: html
+
+   <!DOCTYPE html>
+   <html lang="en">
+   <head>
+   <meta charset="utf-8">
+   <!--
+       This website is powered by TYPO3 - inspiring people to share!
+       TYPO3 is a free open source Content Management Framework initially created by Kasper Skaarhoj and licensed under GNU/GPL.
+       TYPO3 is copyright 1998-2019 of Kasper Skaarhoj. Extensions are copyright of their respective owners.
+       Information and contribution at https://typo3.org/
+   -->
+   <title>Page title</title>
+   <meta name="generator" content="TYPO3 CMS">
+   </head>
+   <body>
+   </body>
+   </html>
+
+This default behaviour can be changed by setting the property
+:ref:`setup-config-disableallheadercode`::
+
+   page.config.disableAllHeaderCode = 1
+
+If the output represents another format different from HTML the HTTP header
+should also be set, for example::
+
+   page.config.additionalHeaders.10.header = Content-type:application/json
+
 
 
 .. index::
@@ -173,16 +210,25 @@ Properties
       These properties can be used to define any number of objects,
       just like you can do with a :ref:`COA content object <cobj-coa>`.
 
-      The content of these objects will be rendered on the page.
+      The content of these objects will be rendered on the page in the
+      order of the numbers, not in the order they get defined in the TypoScript
+      definition.
+
+      It is considered best practise to leave space between the numbers such
+      that it will be possible to place objects before and after other objects
+      in future. Therefore you will often see that people use the number 10 and
+      no number 1 is found.
 
    Example
       ::
 
          page = PAGE
-         page.10 = FLUIDTEMPLATE
-         page.10 {
-                # ...
-         }
+         page.20 = TEXT
+         page.20.value = World
+         page.10 = TEXT
+         page.10.value = Hello
+
+      This renders to :html:`HelloWorld`.
 
 
 .. index:: PAGE; bodyTag
