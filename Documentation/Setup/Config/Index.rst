@@ -690,7 +690,8 @@ disableAllHeaderCode
          (1,2,3,4...) of the :ref:`page` object.
 
          Use this feature in templates supplying other content-types than HTML.
-         That could be an image, a WAP-page, an ajax request or a JSON response.
+         That could be an image, a RSS-feed, an ajax request in a format like 
+         XML or JSON.
 
          This property can also be used to generate the complete HTML page,
          including the :html:`<html>` and :html:`<body>` tags manually.
