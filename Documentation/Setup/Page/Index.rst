@@ -88,7 +88,7 @@ is very common and most documentation will imply that your main page object is c
 Examples
 ========
 
-Please see the dedicated example page about examples how to use the
+Please see the dedicated example page about examples of how to use the
 PAGE object: :ref:`page_examples`
 
 

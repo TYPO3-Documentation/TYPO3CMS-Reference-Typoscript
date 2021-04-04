@@ -53,18 +53,25 @@ A page using a Fluid template
 A page type used for ajax requests
 ==================================
 
+While many examples found in the internet promote to set
+:ts:`config.no_cache = 1` it is better to only disable the cache for objects
+where it absolutely needs to be disabled, leaving all other caches untouched.
+This can be achieved for example by using a non-cacheable array, the
+:ref:`COA_INT <cobj-coa-int>`.
+
 .. code-block:: typoscript
 
    myAjax = PAGE
    myAjax {
-       typeNum = 1617455214
-       config {
-           disableAllHeaderCode = 1
-           admPanel = 0
-           debug = 0
-           no_cache = 1
-       }
-       10 < plugin.tx_myextension_myajaxplugin
+      typeNum = 1617455214
+      config {
+         disableAllHeaderCode = 1
+         admPanel = 0
+         debug = 0
+      }
+      # Prevent caching if necessary
+      10 = COA_INT
+      10 < plugin.tx_myextension_myajaxplugin
    }
 
 
