@@ -85,7 +85,6 @@ header with `Content-type:application/json` has to be set:
       config {
          disableAllHeaderCode = 1
          additionalHeaders.10.header = Content-type:application/json
-         xhtml_cleaning = 0
          admPanel = 0
       }
    }
