@@ -60,7 +60,6 @@ A page type used for ajax requests
        typeNum = 1617455214
        config {
            disableAllHeaderCode = 1
-           xhtml_cleaning = 0
            admPanel = 0
            debug = 0
            no_cache = 1
