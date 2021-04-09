@@ -144,7 +144,7 @@ Properties
    `bodyTagAdd`_                  :ref:`data-type-string`
    `bodyTagCObject`_              :ref:`cObject <data-type-cobject>`
    `config`_                      :ref:`->CONFIG <config>`
-   `setup-page-css-inlinestyle`_  :ref:`data-type-string`
+   `css\_inlinestyle`_            :ref:`data-type-string`
    `cssInline.[array]`_           :ref:`cObject <data-type-cobject>`
    `footerData.[array]`_          :ref:`cObject <data-type-cobject>`
    `headerData.[array]`_          :ref:`cObject <data-type-cobject>`
@@ -193,7 +193,7 @@ Properties
 
       It is considered best practise to leave space between the numbers such
       that it will be possible to place objects before and after other objects
-      in the future. Therefore you will often see that people use the number 
+      in the future. Therefore you will often see that people use the number
       10 and no number 1 is found.
 
    Example
