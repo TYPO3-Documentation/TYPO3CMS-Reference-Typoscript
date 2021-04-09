@@ -1,4 +1,4 @@
-.. include:: /Includes.txt
+.. include:: /Includes.rst.txt
 .. _FlexFormProcessor:
 .. index:: FlexForm, DataProcessing
 
@@ -15,6 +15,7 @@ Options
 ========
 
 .. confval:: fieldname
+
    :Required: false
    :type: string
    :default: 'pi_flexform'
@@ -22,6 +23,7 @@ Options
    Field name of the column the FlexForm data is stored in
 
 .. confval:: as
+
    :Required: false
    :type: string
    :default: 'flexFormData'
