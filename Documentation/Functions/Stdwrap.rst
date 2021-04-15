@@ -716,7 +716,7 @@ char
    string containing the character specified by ascii code. Reliable
    results will be obtained only for character codes in the integer
    range 0 - 127. See
-   `the PHP manual <http://php.net/manual/en/function.chr.php>`_:
+   `the PHP manual <https://php.net/manual/en/function.chr.php>`_:
 
    .. code-block:: php
 
@@ -758,8 +758,8 @@ hash
 :aspect:`Description`
    Returns a hashed value of the current content. Set to one of the
    algorithms which are available in PHP. For a list of supported
-   algorithms see `http://www.php.net/manual/en/function.hash-algos.php
-   <http://www.php.net/manual/en/function.hash-algos.php>`_ .
+   algorithms see `https://www.php.net/manual/en/function.hash-algos.php
+   <https://www.php.net/manual/en/function.hash-algos.php>`_ .
 
 :aspect:`Example`
    ::
@@ -768,7 +768,7 @@ hash
       page.10 {
          value = test@example.com
          stdWrap.hash = md5
-         stdWrap.wrap = <img src="http://www.gravatar.com/avatar/|" />
+         stdWrap.wrap = <img src="https://www.gravatar.com/avatar/|" />
       }
 
 
@@ -820,7 +820,9 @@ date
 
 :aspect:`Description`
    The content should be data-type "UNIX-time". Returns the content
-   formatted as a date:
+   formatted as a date. See the PHP manual (`datetime.format <https://www.php.net/manual/function.date-create-from-format.php>`_) 
+   for the format codes.
+
 
    .. code-block:: php
 
@@ -828,8 +830,8 @@ date
 
    Properties:
 
-   **.GMT:** If set, the PHP function `gmdate() <http://www.php.net/gmdate>`_ will be
-   used instead of `date() <http://www.php.net/date>`_.
+   **.GMT:** If set, the PHP function `gmdate() <https://www.php.net/gmdate>`_ will be
+   used instead of `date() <https://www.php.net/date>`_.
 
 :aspect:`Example`
    Render in human readable form::
@@ -855,8 +857,8 @@ strftime
    :ref:`data-type-strftime-conf` / :ref:`stdWrap`
 
 :aspect:`Description`
-   Exactly like "date" above. See the PHP manual (`strftime <http://www.php.net/strftime>`_) for the
-   codes, or data type ":ref:`data-type-strftime-conf`".
+   Very similar to "date", but using a different format. See the PHP manual (`strftime <https://www.php.net/strftime>`_) for the
+   format codes.
 
    This formatting is useful if the locale is set in advance in the
    :ref:`CONFIG <config>` object. See there.
@@ -870,8 +872,8 @@ strftime
 
    .GMT
       If set, the PHP function `gmstrftime()
-      <http://www.php.net/gmstrftime>`_ will be used instead of
-      `strftime() <http://www.php.net/strftime>`_.
+      <https://www.php.net/gmstrftime>`_ will be used instead of
+      `strftime() <https://www.php.net/strftime>`_.
 
 
 .. index:: stdWrap; strtotime
@@ -1127,7 +1129,7 @@ substring
 
 :aspect:`Description`
    Returns the substring with [p1] and [p2] sent as the 2nd and 3rd
-   parameter to the PHP `mb_substr <http://www.php.net/mb_substr>`_ function.
+   parameter to the PHP `mb_substr <https://www.php.net/mb_substr>`_ function.
 
    Uses "UTF-8" for the operation.
 
@@ -1232,7 +1234,7 @@ rawUrlEncode
    :ref:`boolean <data-type-bool>` / :ref:`stdWrap`
 
 :aspect:`Description`
-   Passes the content through the PHP function `rawurlencode() <http://www.php.net/rawurlencode>`_.
+   Passes the content through the PHP function `rawurlencode() <https://www.php.net/rawurlencode>`_.
 
 
 .. index:: stdWrap; htmlSpecialChars
@@ -1248,7 +1250,7 @@ htmlSpecialChars
    :ref:`boolean <data-type-bool>` / :ref:`stdWrap`
 
 :aspect:`Description`
-   Passes the content through the PHP function `htmlspecialchars() <http://www.php.net/htmlspecialchars>`_.
+   Passes the content through the PHP function `htmlspecialchars() <https://www.php.net/htmlspecialchars>`_.
 
    Additional property :ts:`preserveEntities` will preserve entities so only
    non-entity characters are affected.
@@ -1315,7 +1317,7 @@ br
    :ref:`boolean <data-type-bool>` / :ref:`stdWrap`
 
 :aspect:`Description`
-   Pass the value through the PHP function `nl2br() <http://www.php.net/nl2br>`_. This
+   Pass the value through the PHP function `nl2br() <https://www.php.net/nl2br>`_. This
    converts each line break to a :html:`<br />` or a :html:`<br>` tag depending on doctype.
 
 
