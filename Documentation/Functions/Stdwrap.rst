@@ -820,7 +820,7 @@ date
 
 :aspect:`Description`
    The content should be data-type "UNIX-time". Returns the content
-   formatted as a date. See the PHP manual (`datetime.format <https://www.php.net/manual/function.date-create-from-format.php>`_) 
+   formatted as a date. See the PHP manual (`datetime.format <https://www.php.net/manual/en/datetime.createfromformat.php>`_) 
    for the format codes.
 
 
