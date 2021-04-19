@@ -285,8 +285,13 @@ disableDelete
 :aspect:`Description`
    Disables the "Delete" button in TCEFORMs.
 
-   Note it is possible to set this for single tables using `options.disableDelete.[tableName]`.
+   Note it is possible to set this for single tables using `options.disableDelete.<tableName>`.
    Any value set for a single table will override the default value set for "disableDelete".
+
+:aspect:`Example`
+   .. code-block:: typoscript
+
+      options.disableDelete.tt_content = 1
 
 
 .. index:: DB mounts; Hide root from admins
