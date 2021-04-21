@@ -74,7 +74,7 @@ page
 
       [page["uid"] == 2]
       
-      # Or when you need the page backend layout in V9.4 or V10:
+      # Check the page backend layout
       [page["backend_layout"] == 5]
       
       # Or the backend layout has a name:
