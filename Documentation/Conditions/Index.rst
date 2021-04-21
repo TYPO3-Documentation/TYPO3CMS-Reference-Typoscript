@@ -78,7 +78,7 @@ page
       [page["backend_layout"] == 5]
       [page["backend_layout"] == "example_layout"]
       
-      #Maybe you want to check the page title 
+      # Check the page title 
       [page["title"] == "foo"]
 
 .. index:: Conditions; Constant
