@@ -76,8 +76,6 @@ page
       
       # Check the page backend layout
       [page["backend_layout"] == 5]
-      
-      # Or the backend layout has a name:
       [page["backend_layout"] == "example_layout"]
       
       #Maybe you want to check the page title 
