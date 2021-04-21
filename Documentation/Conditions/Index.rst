@@ -67,13 +67,19 @@ page
    Array
 
 :aspect:`Description`
-   Current page record as array.
+   All data of the current page record as array. To find out which fields are available, you can enable the debug mode in the TYPO3 backend which will display the field names.
 
 :aspect:`Example`
    ::
 
       [page["uid"] == 2]
-
+      
+      # Check the page backend layout
+      [page["backend_layout"] == 5]
+      [page["backend_layout"] == "example_layout"]
+      
+      # Check the page title 
+      [page["title"] == "foo"]
 
 .. index:: Conditions; Constant
 .. _condition-constant:
