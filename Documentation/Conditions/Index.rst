@@ -67,7 +67,7 @@ page
    Array
 
 :aspect:`Description`
-   You can read all page information from the page array. To find out, what variable has which name, you can simply check the input fields in backend by inspecting the input name. Or you can enable BE Debug Mode, to see the name of the variables.
+   All data of the current page record as array. To find out which fields are available, you can enable the debug mode in the TYPO3 backend which will display the field names.
 
 :aspect:`Example`
    ::
