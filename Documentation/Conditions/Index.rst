@@ -67,13 +67,21 @@ page
    Array
 
 :aspect:`Description`
-   Current page record as array.
+   You can read all page information from the page array. To find out, what variable has which name, you can simply check the input fields in backend by inspecting the input name. Or you can enable BE Debug Mode, to see the name of the variables.
 
 :aspect:`Example`
    ::
 
       [page["uid"] == 2]
-
+      
+      # Or when you need the page backend layout in V9.4 or V10:
+      [page["backend_layout"] == 5]
+      
+      # Or the backend layout has a name:
+      [page["backend_layout"] == "example_layout"]
+      
+      #Maybe you want to check the page title 
+      [page["title"] == "foo"]
 
 .. index:: Conditions; Constant
 .. _condition-constant:
