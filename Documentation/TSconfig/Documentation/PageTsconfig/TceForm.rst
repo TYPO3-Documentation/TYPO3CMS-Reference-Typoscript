@@ -363,6 +363,7 @@ disableNoMatchingValueElement
 
 .. index::
    Records; select items user function
+.. _itemsProcFunc:
 
 itemsProcFunc
 =============
