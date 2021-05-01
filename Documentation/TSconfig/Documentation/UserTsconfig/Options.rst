@@ -497,18 +497,24 @@ folderTree.altElementBrowserMountPoints
    list of "storageUid:folderName" items
 
 :aspect:`Description`
-   Sets alternative filemounts for use in the file list and in the
-   element browser. Each item consists of storage Uid followed by a colon
-   and the folder name inside that storage. You separate multiple items by
+   Sets alternative filemounts for use in any folder tree, including in the
+   :guilabel:`Filelist` list module, in the element browser and in file
+   selectors.
+
+   Each item consists of storage UID followed by a colon
+   and the folder name inside that storage. Separate multiple items by
    a comma.
 
-   For backwards compatibility, defining only a folder name but without a
-   storage Uid and colon prepended is still supported as well. Folders
-   without a storage Uid prepended are assumed to be located in the default
-   storage, which by default is the fileadmin/ folder. If a folder you specify
-   does not exist it will not get mounted. Effective in workspaces too.
+   For backwards compatibility, defining only a folder name but no
+   storage uid and colon prepended is still supported. Folders
+   without a storage UID prepended are assumed to be located in the default
+   storage, which by default is the :file:`fileadmin/` folder. If a folder
+   you specify does not exist it will not get mounted.
 
-   The alternative filemounts are added to the existing filemounts.
+   Settings this option is effective in workspaces too.
+
+   The alternative file mounts are added to the existing ones defined in
+   the user or group configuration.
 
 :aspect:`Example`
    .. code-block:: typoscript
