@@ -5,15 +5,18 @@
 admPanel
 ========
 
-Configuration of the Admin Panel in the Frontend for the user.
+Configuration of the Admin Panel in the Frontend for the user. This is what
+the Admin Panel looks like:
 
 .. figure:: ../Images/UserTsAdminPanel.png
     :alt: The TYPO3 admin panel
 
-This is what the admin panel looks like. Notice the fact that the
-visibility of the admin panel is ultimately depending on being
-configured in your frontentd TypoScript template for the website! This is easily
-done by inserting this string in the TypoScript Template:
+For more information about the Admin Panel, see the :ref:`Admin Panel manual
+<t3adminpanel>`.
+
+The visibility of the Admin Panel depends on being configured in your
+frontend TypoScript template for the website. You can do this by inserting this
+string in the TypoScript Template:
 
 .. code-block:: typoscript
 
