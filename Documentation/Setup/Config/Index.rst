@@ -231,7 +231,7 @@ admPanel
          :ref:`data-type-boolean`
 
    Description
-         If set, the :ref:`Admin Panel <admpanel>` displays at the bottom of
+         If set, the :ref:`Admin Panel <t3admpanel>` displays at the bottom of
          pages.
 
          **Note:** In addition, the panel must be enabled for the user as well,
