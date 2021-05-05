@@ -231,11 +231,12 @@ admPanel
          :ref:`data-type-boolean`
 
    Description
-         If set, the admin panel appears in the bottom of pages.
+         If set, the :ref:`Admin Panel <admpanel>` displays at the bottom of
+         pages.
 
-         **Note:** In addition the panel must be enabled for the user as well,
-         using the TSconfig for the user! See the TSconfig reference about
-         additional admin panel properties.
+         **Note:** In addition, the panel must be enabled for the user as well,
+         using the TSconfig for the user. See the :ref:`TSconfig
+         reference <t3tsconfig:useradmpanel>` for more information.
 
 
 
