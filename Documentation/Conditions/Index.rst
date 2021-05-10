@@ -963,7 +963,7 @@ traverse
 
    The second parameter
       Is the path to traverse
-   
+
    In case the path is not found in the array, an empty string is returned.
 
 :aspect:`Example`
@@ -1251,8 +1251,14 @@ site
 
    Configuration property::
 
-      [site("configuration")["enabled"] == true]
+      [traverse(site("configuration"), "myCustomProperty") == true]
 
+.. warning::
+   It might seem straight-forward to use `site("configuration")["myCustomProperty"]` to access
+   configuration properties. However, if the property has not been set, this will trigger a runtime
+   exception, and your log will fill up quickly. Using :ref:`condition-function-traverse` will silence the error messages.
+
+.. index:: Conditions; siteLanguage
 .. _condition-functions-in-frontend-context-function-siteLanguage:
 
 siteLanguage
