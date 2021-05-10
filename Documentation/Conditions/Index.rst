@@ -970,10 +970,11 @@ request.getPageArguments()
    Get current `PageArguments` object with resolved route parts from enhancers.
 
 :aspect:`Example`
-   [request.getPageArguments().get('foo_id') > 0]
+   [traverse(request.getPageArguments(), 'foo_id') > 0]
 
    Allows migration from old condition syntax using `[globalVar = GP:singlepartner > 0]`
-   to `[request.getPageArguments().get('singlepartner') > 0]`.
+   to `[traverse(request.getPageArguments(), 'singlepartner') > 0]` (See 
+   :ref:`condition-function-traverse`).
 
 
 .. index:: Conditions; date
