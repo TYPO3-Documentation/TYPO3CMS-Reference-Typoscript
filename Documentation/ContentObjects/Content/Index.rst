@@ -50,6 +50,7 @@ Condensed form::
       table = tt_content
       select {
          pidInList = this
+         where = colPos = 1
          orderBy = sorting
       }
       renderObj = < tt_content
@@ -81,6 +82,7 @@ Expanded form::
 
    1.select {
       pidInList = this
+      where = colPos = 1
       orderBy = sorting
    }
 
