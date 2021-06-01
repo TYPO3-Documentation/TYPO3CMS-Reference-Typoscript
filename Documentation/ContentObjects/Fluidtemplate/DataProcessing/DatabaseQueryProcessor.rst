@@ -51,7 +51,7 @@ Options:
 
 .. note:: all other options will be interpreted as in the TypoScript function
    "select", including :typoscript:`pidInList`, :typoscript:`orderBy`,
-   :typoscript:`where` etc. See the reference of ref:`select`.
+   :typoscript:`where` etc. See the reference of :ref:`select`.
 
 
 Example: Display haiku records
