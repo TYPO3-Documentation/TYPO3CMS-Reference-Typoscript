@@ -1518,6 +1518,7 @@ Creates a language menu:
          parameter.data = page:uid
          additionalParams = &L=0 || &L=1 || &L=2
          addQueryString = 1
+         addQueryString.method = GET
          addQueryString.exclude = L,id
      }
    }
