@@ -72,7 +72,12 @@ page
 :aspect:`Example`
    ::
 
+      # Check single page uid
       [page["uid"] == 2]
+      # Check list of page uids
+      [page["uid"] in [17,24]]
+      # Check range of pages (example: page uid from 10 to 20)
+      [page["uid"] in 10..20]
       
       # Check the page backend layout
       [page["backend_layout"] == 5]
