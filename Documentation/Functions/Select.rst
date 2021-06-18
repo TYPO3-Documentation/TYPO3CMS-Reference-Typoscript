@@ -157,14 +157,14 @@ pidInList
       
    .. note::
       Check the doktype of your backend page. If you are trying to fetch records from
-      e.g. a folder, the :php:`$cObj->checkPid_badDoktypeList` method will insert the
+      e.g. a sys_folder, the :php:`$cObj->checkPid_badDoktypeList` method will insert the
       following SQL into your query:
 
       .. code-block:: sql
 
       [...]WHERE (`your_requested_table_name`.`uid` = 0) AND [...]
 
-      Which will always result in an empty query result!
+      Which might result in an empty query result, depending on your records.
    
 :aspect:`Default`
    :ts:`this`
