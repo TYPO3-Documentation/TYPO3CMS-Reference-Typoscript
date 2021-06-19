@@ -173,7 +173,7 @@ contextMenu disableItems
 :aspect:`Description`
    List of context menu ("clickmenu") items to disable.
 
-   .. figure:: ../Images/PagesContextMenu.png
+   .. figure:: /Images/ManualScreenshots/PagesContextMenu.png
       :alt: Context menu of the page tree
 
       Context menu of the page tree
@@ -372,7 +372,7 @@ file_list.enableDisplayBigControlPanel
    Determines whether the checkbox "Extended view" in the filelist module is shown or hidden.
    If it is hidden, you can predefine it to be always activated or always deactivated.
 
-   .. figure:: ../Images/UserTsFileListExtendedView.png
+   .. figure:: /Images/ManualScreenshots/UserTsFileListExtendedView.png
       :alt: Checkbox "Extended view" in the filelist module
 
    The following values are possible:
@@ -757,7 +757,7 @@ pageTree.backgroundColor
       options.pageTree.backgroundColor.148 = #AFAFAF
       options.pageTree.backgroundColor.151 = rgba(0, 255, 0, 0.1)
 
-   .. figure:: ../Images/optionsPageTreeBackgroundColor.png
+   .. figure:: /Images/ManualScreenshots/optionsPageTreeBackgroundColor.png
       :alt: Tree branches with configured background colors
 
       Tree branches with configured background colors
@@ -776,10 +776,10 @@ pageTree.doktypesToShowInNewPageDragArea
    If set, the node top panel feature can be configured by a comma-separated list.
    Each number stands for a doctype id that should be added to the node top panel.
 
-   .. figure:: ../Images/PanelNormal.png
+   .. figure:: /Images/ManualScreenshots/PanelNormal.png
       :alt: Top panel in normal mode
 
-   .. figure:: ../Images/PanelModified.png
+   .. figure:: /Images/ManualScreenshots/PanelModified.png
       :alt: Top panel modified
 
 :aspect:`Default`
@@ -843,7 +843,7 @@ pageTree.showPathAboveMounts
    If set, the user db mount path above the mount itself is shown.
    This is useful if you work a lot with user db mounts.
 
-   .. figure:: ../Images/PanelUserDB.png
+   .. figure:: /Images/ManualScreenshots/PanelUserDB.png
       :alt: Active user db mount
 
 

@@ -29,7 +29,7 @@ exclude
     Use the uid/identifier of the record in the default data provider.
 
 :aspect:`Example`
-    .. figure:: ../Images/BackendLayoutID.png
+    .. figure:: /Images/ManualScreenshots/BackendLayoutID.png
         :alt: Two backend layout records shown in list module
 
         Two backend layout records shown in list module
@@ -39,7 +39,7 @@ exclude
         # Exclude two backend layouts from drop down selector
         options.backendLayout.exclude = 1,2
 
-    .. figure:: ../Images/BackendLayoutsExcluded.png
+    .. figure:: /Images/ManualScreenshots/BackendLayoutsExcluded.png
         :alt: Drop down without backend layouts
 
         Drop down without backend layouts
