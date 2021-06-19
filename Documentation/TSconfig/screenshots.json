@@ -1,0 +1,31 @@
+{
+    "suites": {
+        "Styleguide": {
+            "screenshots": {
+                "_default": [
+                    {"action": "resizeWindow", "width": 1024,"height": 768},
+                    {"action": "setScreenshotsDocumentationPath", "path": "Documentation"},
+                    {"action": "setScreenshotsImagePath","path": "Images/AutomaticScreenshots"},
+                    {"action": "setScreenshotsRstPath","path": "Images/AutomaticScreenshots"},
+                    {"action": "setCodeSnippetsSourcePath","path": "typo3conf/ext/styleguide"},
+                    {"action": "setCodeSnippetsTargetPath", "path": "CodeSnippets"}
+                ],
+                "fields": [
+                    {"include": "_default"},
+                    {
+                        "action": "makeScreenshotOfField",
+                        "table": "tx_styleguide_elements_basic",
+                        "uid": {
+                            "action": "getUidByField",
+                            "table": "tx_styleguide_elements_basic",
+                            "field": "sys_language_uid",
+                            "value": 0
+                        },
+                        "fields": "input_1",
+                        "fileName": "Input1"
+                    }
+                ]
+            }
+        }
+    }
+}
