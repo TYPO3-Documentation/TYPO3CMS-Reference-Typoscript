@@ -53,7 +53,7 @@ Options:
    in content elements such as text with images. Defaults to the value of the field
    `imageorient` / "Position and Alignment" if used with content elements.
 
-   .. image:: Images/ImageOrientation.png
+   .. figure:: /Images/ManualScreenshots/Fluidtemplate/ImageOrientation.png
       :alt: Media orientation in the content elements such as text with images
       :class: with-shadow
 
@@ -85,7 +85,7 @@ Options:
    `imagewidth` / "Width of each element (px)"
    if used with content elements.
 
-   .. image:: Images/MediaHeight.png
+   .. figure:: /Images/ManualScreenshots/Fluidtemplate/MediaHeight.png
       :alt: Media height and width in the content element Text and Images
       :class: with-shadow
 
@@ -239,6 +239,6 @@ The array now contains the images ordered in rows and columns. For each image th
 width and height supplied.
 
 
-.. image:: Images/GalleryProcessor.png
+.. figure:: /Images/ManualScreenshots/Fluidtemplate/GalleryProcessor.png
    :class: with-shadow
    :alt: Gallery dump and output

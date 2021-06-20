@@ -9,7 +9,7 @@
 HMENU
 =====
 
-Objects of type HMENU generate hierarchical menus. In a 
+Objects of type HMENU generate hierarchical menus. In a
 :ref:`FLUIDTEMPLATE <cobj-fluidtemplate>` the HMENU can be used as
 a DataProcessor called :ref:`MenuProcessor <MenuProcessor>`, which
 internally uses the HMENU functionality.
@@ -970,7 +970,7 @@ list from the property ".items".
          work if the parent page of the current page is the root page of the
          site.
 
-         .. figure:: ../../Images/ContentObjectsHmenuSpecialBrowse.png
+         .. figure:: /Images/ManualScreenshots/ContentObjectsHmenuSpecialBrowse.png
             :alt: Example for the usage of the property "items".
 
          **nextsection\_last** / **prevsection\_last:** Where
@@ -1612,7 +1612,7 @@ are graphical items:
 
 The menu looks like this on a web page:
 
-.. figure:: ../../Images/ContentObjectsHmenuExampleMenu.png
+.. figure:: /Images/ManualScreenshots/ContentObjectsHmenuExampleMenu.png
    :alt: Output of the example menu.
 
 The TypoScript code above generates this menu, but the items do not

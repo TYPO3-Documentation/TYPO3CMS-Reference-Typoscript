@@ -130,6 +130,6 @@ Output
 
 The array now contains the split strings:
 
-.. image:: Images/SplitProcessor.png
+.. figure:: /Images/ManualScreenshots/Fluidtemplate/SplitProcessor.png
    :class: with-shadow
    :alt: split dump and output

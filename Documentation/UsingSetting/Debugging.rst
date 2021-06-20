@@ -34,7 +34,7 @@ Finding errors
 There are no tools that will tell whether the given TypoScript code is 100%
 correct. The :guilabel:`TypoScript object browser` will warn about syntax errors though:
 
-.. figure:: ../Images/TemplatesSyntaxError.png
+.. figure:: /Images/ManualScreenshots/TemplatesSyntaxError.png
    :alt: The TypoScript Object Browser showing a syntax error
    :class: with-shadow
 
@@ -48,7 +48,7 @@ analyzer:
 The result is a long listing with all compiled line numbers, which makes it
 possible to find the error reported by the :guilabel:`TypoScript object browser`.
 
-.. figure:: ../Images/TemplatesFullListing.png
+.. figure:: /Images/ManualScreenshots/TemplatesFullListing.png
    :alt: The TypoScript Object Browser showing a syntax error
    :class: with-shadow
 

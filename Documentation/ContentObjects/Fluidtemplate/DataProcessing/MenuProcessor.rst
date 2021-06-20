@@ -157,6 +157,6 @@ Output
 The array now contains the menu items on level one. Each item in return has the menu
 items of level 2 in an array called :php:`children`.
 
-.. image:: Images/MenuProcessor.png
+.. figure:: /Images/ManualScreenshots/Fluidtemplate/MenuProcessor.png
    :class: with-shadow
    :alt: language menu dump and output

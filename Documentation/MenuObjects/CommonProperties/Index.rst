@@ -305,7 +305,7 @@ showAccessRestrictedPages
 
          The result can be seen in the image below:
 
-         .. figure:: ../../Images/MenuObjectsCommonPropertiesSubmenuObjSuffixes.png
+         .. figure:: /Images/ManualScreenshots/MenuObjectsCommonPropertiesSubmenuObjSuffixes.png
             :alt: Output of the above example.
 
          Applies to TMENU on >= 2 :sup:`nd` level in a menu.

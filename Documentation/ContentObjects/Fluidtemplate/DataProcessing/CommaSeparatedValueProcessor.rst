@@ -150,6 +150,6 @@ Output
 Using :typoscript:`maximumColumns` limits the amount of columns in the multi dimensional array.
 In this example, the field data of the last column will be stripped off. Therefore the output would be:
 
-.. image:: Images/CsvProcessor.png
+.. figure:: /Images/ManualScreenshots/Fluidtemplate/CsvProcessor.png
    :class: with-shadow
    :alt: CSV data as HTML table

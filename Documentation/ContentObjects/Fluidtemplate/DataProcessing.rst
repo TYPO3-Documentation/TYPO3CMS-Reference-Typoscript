@@ -50,7 +50,7 @@ extension `examples <https://extensions.typo3.org/extension/examples/>`__.
 Once the extension t3docs/examples is installed the examples are available
 as content elements:
 
-.. image:: Images/DataProcessingExamples.png
+.. figure:: /Images/ManualScreenshots/Fluidtemplate/DataProcessingExamples.png
    :class: with-shadow
    :alt: Overview of all data processing examples
 

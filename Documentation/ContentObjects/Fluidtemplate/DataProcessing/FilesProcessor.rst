@@ -208,7 +208,7 @@ Output
 
 The array :php:`images` contains the data of the files now.
 
-.. image:: Images/FilesProcessor.png
+.. figure:: /Images/ManualScreenshots/Fluidtemplate/FilesProcessor.png
    :class: with-shadow
    :alt: files dump and output
 

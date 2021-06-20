@@ -1,0 +1,4 @@
+.. Manual Screenshot
+
+.. figure:: /Images/ManualScreenshots/ContentObjectsExampleMerge1.png
+   :class: with-shadow
