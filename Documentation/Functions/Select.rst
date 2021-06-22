@@ -157,7 +157,7 @@ pidInList
       
    .. note::
       Check the doktype of your backend page. If you are trying to fetch records from
-      e.g. a sys_folder, the :php:`$cObj->checkPid_badDoktypeList` method will insert the
+      a sys_folder for example, the :php:`$cObj->checkPid_badDoktypeList` method will insert the
       following SQL into your query:
 
       .. code-block:: sql
