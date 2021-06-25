@@ -847,6 +847,43 @@ pageTree.showPathAboveMounts
       :alt: Active user db mount
 
 
+.. index:: Password; Reset
+.. _useroptions-passwordReset:
+
+passwordReset
+-------------
+
+:aspect:`Datatype`
+   boolean
+
+:aspect:`Default`
+   true
+
+:aspect:`Description`
+   If set to `0` the initiating of the password reset in the backend
+   will be disabled. This does not affect the password reset by
+   cli command.
+
+   To completely disable the password reset in the backend for all users, you can
+   set the user TSconfig globally in your :file:`ext_localconf.php`:
+
+   .. code-block:: php
+
+      \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addUserTSConfig(
+         'options.passwordReset = 0'
+      );
+
+   If required, this setting can be overwritten on a per user basis
+   in the corresponding :guilabel:`TSconfig` field of the backend
+   usergroup or user.
+
+   The password reset functionality can also be disabled globally by setting:
+
+   .. code-block:: php
+
+      $GLOBALS['TYPO3_CONF_VARS']['BE']['passwordReset'] = false
+
+
 .. index:: Clipboard; Save for next login
 .. _useroptions-saveClipboard:
 
