@@ -1,0 +1,105 @@
+{
+  "suites": {
+    "Introduction": {
+      "screenshots": {
+        "_default": [
+          {"action": "resizeWindow", "width": 1024,"height": 768},
+          {"action": "setScreenshotsDocumentationPath", "path": "Documentation"},
+          {"action": "setScreenshotsImagePath","path": "Images/AutomaticScreenshots"},
+          {"action": "setScreenshotsRstPath","path": "Images/AutomaticScreenshots"},
+          {"action": "setCodeSnippetsSourcePath","path": "typo3conf/ext/styleguide"},
+          {"action": "setCodeSnippetsTargetPath", "path": "CodeSnippets"}
+        ],
+        "templatesModul": [
+          {"include": "_default"},
+          {"action": "resizeWindow", "width": 640,"height": 400},
+          {"action":  "amOnPage", "page": "/typo3/module/web/ts?id=1&SET[function]=TYPO3\\CMS\\Tstemplate\\Controller\\TypoScriptTemplateInformationModuleFunctionController&token=x"},
+          {"action": "drawBox", "selector": ".t3js-module-docheader-bar-navigation select"},
+          {"action": "drawBadge", "selector": ".t3js-module-docheader-bar-navigation .col .col", "label": "1", "position": "right"},
+          {"action": "drawBox", "selector": ".row.row-cols-auto.g-3 a"},
+          {"action": "drawBadge", "selector": ".row.row-cols-auto.g-3 a", "label": "2", "position": "right"},
+          {
+            "action": "makeScreenshotOfElement",
+            "fileName": "TemplatesStaticIncludes1",
+            "altText": "Edit the whole template record",
+            "captionText": "Edit the whole template record"
+          },
+          {"action": "clearDrawings"},
+          {"action":  "amOnPage", "page": "/typo3/module/web/ts?id=1&template=sys_2&token=x"},
+          {"action": "drawBox", "selector": ".btn.btn-default.mb-2"},
+          {
+            "action": "makeScreenshotOfElement",
+            "fileName": "TemplatesViewFullListingButton",
+            "altText": "\"View the complete TS listing\" button",
+            "captionText": "\"View the complete TS listing\" button"
+          },
+          {"action": "clearDrawings"},
+
+          {"action": "resizeWindow", "width": 640,"height": 640},
+          {"action":  "amOnPage", "page": "/typo3/module/web/ts?token=x&id=1&template=sys_2&SET[function]=TYPO3\\CMS\\Tstemplate\\Controller\\TemplateAnalyzerModuleFunctionController"},
+          {
+            "action": "makeScreenshotOfElement",
+            "fileName": "TemplatesAnalyzerDetails",
+            "selector": "#TypoScriptTemplateModuleController",
+            "altText": "Viewing the content of a given template in the Template Analyzer",
+            "captionText": "Viewing the content of a given template in the Template Analyzer"
+          },
+          {"action": "clearDrawings"},
+          {"action": "resizeWindow", "width": 640,"height": 600},
+          {"action":  "amOnPage", "page": "/typo3/module/web/ts?id=1&SET[function]=TYPO3\\CMS\\Tstemplate\\Controller\\TypoScriptTemplateConstantEditorModuleFunctionController&token=x"},
+          {
+            "action": "makeScreenshotOfElement",
+            "fileName": "TemplatesConstantEditor",
+            "altText": "The Constant Editor showing some categories with constants",
+            "captionText": "The Constant Editor showing some categories with constants"
+          },
+          {"action": "clearDrawings"},
+          {"action": "resizeWindow", "width": 640,"height": 600},
+          {"action":  "amOnPage", "page": "/typo3/module/web/ts?id=1&SET[ts_browser_type]=const&SET[function]=TYPO3\\CMS\\Tstemplate\\Controller\\TypoScriptTemplateObjectBrowserModuleFunctionController&token=x"},
+          {"action": "wait", "timeout":  1},
+          {
+            "action": "makeScreenshotOfElement",
+            "fileName": "TemplatesConstants",
+            "selector": "#TypoScriptTemplateModuleController",
+            "altText": "Overview of the defined constants",
+            "captionText": "Overview of the defined constants"
+          },
+          {"action": "clearDrawings"},
+          {"action":  "amOnPage", "page": "/typo3/module/web/ts?id=1&tsbr[page]=1&SET[ts_browser_const]=subst&SET[ts_browser_type]=setup&SET[function]=TYPO3\\CMS\\Tstemplate\\Controller\\TypoScriptTemplateObjectBrowserModuleFunctionController&token=x"},
+          {
+            "action": "makeScreenshotOfElement",
+            "fileName": "TemplatesSetup",
+            "selector": "#TypoScriptTemplateModuleController",
+            "altText": "Overview of the defined constants",
+            "captionText": "Overview of the defined constants"
+          },
+          {"action": "clearDrawings"}
+        ],
+        "templatesRecords": [
+          {"include": "_default"},
+          {"action": "resizeWindow", "width": 640,"height": 768},
+          {"action": "setNavigationDefaultTable", "table": "sys_template"},
+          {"action": "setNavigationDefaultUid", "uid": 2},
+          {"action": "goToRecord"},
+          {"action": "click", "link": "Includes"},
+          {"action": "waitForText", "text": "Include static"},
+          {"action": "drawBox", "selector":  "a.nav-link.active"},
+          {"action": "drawBadge", "selector":  "a.nav-link.active", "label":  "3"},
+          {"action": "drawBox", "selector":  "//*[contains(@class, 'form-multigroup-item') and contains(., 'Available')]"},
+          {"action": "drawBadge", "selector":  "//*[contains(@class, 'form-multigroup-item') and contains(., 'Available')]", "label":  "4"},
+          {
+            "action": "makeScreenshotOfElement",
+            "fileName": "TemplatesStaticIncludes2",
+            "selector": ".t3js-module-body",
+            "captionText": "Screenshot of table sys_template",
+            "altText": "Screenshot of table sys_template"
+          },
+          {"action": "clearDrawings"}
+        ]
+      }
+    },
+    "Styleguide": {
+      "screenshots": {}
+    }
+  }
+}

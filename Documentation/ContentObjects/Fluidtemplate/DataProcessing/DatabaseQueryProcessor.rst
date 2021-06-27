@@ -123,6 +123,6 @@ Output
 The array of records each contains the data of the table in :php:`data` and
 the data of the images in :php:`files`.
 
-.. image:: Images/DatabaseProcessor.png
+.. figure:: /Images/ManualScreenshots/Fluidtemplate/DatabaseProcessor.png
    :class: with-shadow
    :alt: haiku record data dump and output

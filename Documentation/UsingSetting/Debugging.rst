@@ -22,7 +22,7 @@ Analyzing defined constants
 The *TypoScript Object Browser* provides an tree view to all defined constants
 on the currently active page.
 
-.. include:: /Includes/Images/RstIncludes/TemplatesConstants.rst.txt
+.. include:: /Images/AutomaticScreenshots/TemplatesConstants.rst.txt
 
 
 .. index:: TypoScript; Syntax errors
@@ -34,7 +34,7 @@ Finding errors
 There are no tools that will tell whether the given TypoScript code is 100%
 correct. The :guilabel:`TypoScript object browser` will warn about syntax errors though:
 
-.. figure:: ../Images/TemplatesSyntaxError.png
+.. figure:: /Images/ManualScreenshots/TemplatesSyntaxError.png
    :alt: The TypoScript Object Browser showing a syntax error
    :class: with-shadow
 
@@ -43,12 +43,12 @@ given template. It is also possible to see the full TypoScript code by clicking
 on the :guilabel:`View the complete TS listing` button at the bottom of the template
 analyzer:
 
-.. include:: /Includes/Images/RstIncludes/TemplatesViewFullListingButton.rst.txt
+.. include:: /Images/AutomaticScreenshots/TemplatesViewFullListingButton.rst.txt
 
 The result is a long listing with all compiled line numbers, which makes it
 possible to find the error reported by the :guilabel:`TypoScript object browser`.
 
-.. figure:: ../Images/TemplatesFullListing.png
+.. figure:: /Images/ManualScreenshots/TemplatesFullListing.png
    :alt: The TypoScript Object Browser showing a syntax error
    :class: with-shadow
 
