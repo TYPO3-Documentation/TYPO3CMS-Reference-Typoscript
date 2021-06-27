@@ -26,6 +26,7 @@
           },
           {"action": "clearDrawings"},
           {"action":  "amOnPage", "page": "/typo3/module/web/ts?id=1&template=sys_2&token=x"},
+          {"action": "drawBox", "selector": ".btn.btn-default.mb-2"},
           {
             "action": "makeScreenshotOfElement",
             "fileName": "TemplatesViewFullListingButton",
@@ -33,23 +34,9 @@
             "captionText": "\"View the complete TS listing\" button"
           },
           {"action": "clearDrawings"},
-          {"action":  "amOnPage", "page": "/typo3/module/web/ts?id=1&template=&token=sys_2"},
-          {
-            "action": "makeScreenshotOfElement",
-            "fileName": "TemplateAnalyzer",
-            "altText": "All templates applying to a page, as used by the Introduction Package",
-            "captionText": "All templates applying to a page, as used by the Introduction Package"
-          },
-          {"action": "clearDrawings"},
-          {"action":  "amOnPage", "page": "/typo3/module/web/ts?id=1&template=sys_2&token=x"},
-          {
-            "action": "makeScreenshotOfElement",
-            "fileName": "TemplateAnalyzer",
-            "altText": "All templates applying to a page, as used by the Introduction Package",
-            "captionText": "All templates applying to a page, as used by the Introduction Package"
-          },
-          {"action": "clearDrawings"},
-          {"action":  "amOnPage", "page": "/typo3/module/web/ts?id=1&template=sys_2&token=x"},
+
+          {"action": "resizeWindow", "width": 640,"height": 640},
+          {"action":  "amOnPage", "page": "/typo3/module/web/ts?token=x&id=1&template=sys_2&SET[function]=TYPO3\\CMS\\Tstemplate\\Controller\\TemplateAnalyzerModuleFunctionController"},
           {
             "action": "makeScreenshotOfElement",
             "fileName": "TemplatesAnalyzerDetails",
@@ -67,7 +54,7 @@
             "captionText": "The Constant Editor showing some categories with constants"
           },
           {"action": "clearDrawings"},
-          {"action": "resizeWindow", "width": 640,"height": 400},
+          {"action": "resizeWindow", "width": 640,"height": 600},
           {"action":  "amOnPage", "page": "/typo3/module/web/ts?id=1&SET[ts_browser_type]=const&SET[function]=TYPO3\\CMS\\Tstemplate\\Controller\\TypoScriptTemplateObjectBrowserModuleFunctionController&token=x"},
           {"action": "wait", "timeout":  1},
           {
@@ -85,6 +72,27 @@
             "selector": "#TypoScriptTemplateModuleController",
             "altText": "Overview of the defined constants",
             "captionText": "Overview of the defined constants"
+          },
+          {"action": "clearDrawings"}
+        ],
+        "templatesRecords": [
+          {"include": "_default"},
+          {"action": "resizeWindow", "width": 640,"height": 768},
+          {"action": "setNavigationDefaultTable", "table": "sys_template"},
+          {"action": "setNavigationDefaultUid", "uid": 2},
+          {"action": "goToRecord"},
+          {"action": "click", "link": "Includes"},
+          {"action": "waitForText", "text": "Include static"},
+          {"action": "drawBox", "selector":  "a.nav-link.active"},
+          {"action": "drawBadge", "selector":  "a.nav-link.active", "label":  "3"},
+          {"action": "drawBox", "selector":  "//*[contains(@class, 'form-multigroup-item') and contains(., 'Available')]"},
+          {"action": "drawBadge", "selector":  "//*[contains(@class, 'form-multigroup-item') and contains(., 'Available')]", "label":  "4"},
+          {
+            "action": "makeScreenshotOfElement",
+            "fileName": "TemplatesStaticIncludes2",
+            "selector": ".t3js-module-body",
+            "captionText": "Screenshot of table sys_template",
+            "altText": "Screenshot of table sys_template"
           },
           {"action": "clearDrawings"}
         ]

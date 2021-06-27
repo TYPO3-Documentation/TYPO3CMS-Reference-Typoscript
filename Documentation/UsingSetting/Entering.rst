@@ -69,7 +69,7 @@ It is also possible to "Include static" templates from extensions.
 
 #. Click :guilabel:`Edit the whole template record`
 
-   .. include:: /Includes/Images/RstIncludes/TemplatesStaticIncludes1.rst.txt
+   .. include:: /Images/AutomaticScreenshots/TemplatesStaticIncludes1.rst.txt
 
 .. rst-class:: bignums-xxl
 
@@ -77,7 +77,7 @@ It is also possible to "Include static" templates from extensions.
 
 #. Click the templates to include in :guilabel:`Available Items`.
 
-   .. include:: /Includes/Images/RstIncludes/TemplatesStaticIncludes2.rst.txt
+   .. include:: /Images/AutomaticScreenshots/TemplatesStaticIncludes2.rst.txt
 
 .. tip::
 
@@ -108,7 +108,7 @@ of this
 structure. It shows all the templates that apply to the currently selected page,
 taking into account inclusions and inheritance along the page tree.
 
-.. include:: /Includes/Images/RstIncludes/TemplatesAnalyzerDetails.rst.txt
+.. include:: /Images/AutomaticScreenshots/TemplatesAnalyzerDetails.rst.txt
 
 Templates are taken into consideration from top to bottom, which means
 that properties defined in one template may be overridden in templates

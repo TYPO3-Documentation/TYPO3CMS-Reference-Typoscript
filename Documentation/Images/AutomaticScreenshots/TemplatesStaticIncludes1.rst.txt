@@ -1,6 +1,6 @@
 .. Automatic screenshot: Remove this line if you want to manually change this file
 
-.. figure:: /Includes/Images/AutomaticScreenshots/TemplatesStaticIncludes1.png
+.. figure:: /Images/AutomaticScreenshots/TemplatesStaticIncludes1.png
    :alt: Edit the whole template record
    :class: with-shadow
 
