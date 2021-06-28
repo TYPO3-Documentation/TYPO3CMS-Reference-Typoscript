@@ -57,8 +57,8 @@ Properties
 
             constants.EMAIL = email@email.com
 
-         If now :ref:`parsefunc` somewhere is configured with :ts:`.constants = 1`,
-         then all occurrences of the string ###EMAIL### in the text
+         If :ref:`parsefunc` is configured with :ts:`.constants = 1`,
+         then all occurrences of the string `###EMAIL###` in the text
          will be substituted with the actual address.
 
 
