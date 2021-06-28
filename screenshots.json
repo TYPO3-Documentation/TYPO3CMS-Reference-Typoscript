@@ -39,6 +39,14 @@
           {"action":  "amOnPage", "page": "/typo3/module/web/ts?token=x&id=1&template=sys_2&SET[function]=TYPO3\\CMS\\Tstemplate\\Controller\\TemplateAnalyzerModuleFunctionController"},
           {
             "action": "makeScreenshotOfElement",
+            "fileName": "TemplatesAnalyzer",
+            "selector": "#TypoScriptTemplateModuleController",
+            "altText": "All templates applying to a page, as used by the Introduction Package",
+            "captionText": "Viewing the content of a given template in the Template Analyzer"
+          },
+          {"action":  "amOnPage", "page": "/typo3/module/web/ts?token=x&id=1&template=sys_2&SET[function]=TYPO3\\CMS\\Tstemplate\\Controller\\TemplateAnalyzerModuleFunctionController"},
+          {
+            "action": "makeScreenshotOfElement",
             "fileName": "TemplatesAnalyzerDetails",
             "selector": "#TypoScriptTemplateModuleController",
             "altText": "Viewing the content of a given template in the Template Analyzer",
@@ -80,13 +88,30 @@
           {"action": "resizeWindow", "width": 640,"height": 768},
           {"action": "setNavigationDefaultTable", "table": "sys_template"},
           {"action": "setNavigationDefaultUid", "uid": 2},
+          {"action": "wait", "timeout":  0.1},
+          {
+            "action": "makeScreenshotOfTable",
+            "pid": "1",
+            "selector": ".recordlist",
+            "fileName": "TemplatesRecordListView",
+            "captionText": "A TypoScript template as seen in the Web > List module",
+            "altText": "A TypoScript template as seen in the Web > List module"
+          },
           {"action": "goToRecord"},
+          {
+            "action": "makeScreenshotOfElement",
+            "fileName": "TemplatesInput",
+            "selector": ".t3js-module-body",
+            "captionText": "Screenshot of table sys_template",
+            "altText": "The Constants and Setup fields of a TypoScript template"
+          },
           {"action": "click", "link": "Includes"},
           {"action": "waitForText", "text": "Include static"},
           {"action": "drawBox", "selector":  "a.nav-link.active"},
           {"action": "drawBadge", "selector":  "a.nav-link.active", "label":  "3"},
           {"action": "drawBox", "selector":  "//*[contains(@class, 'form-multigroup-item') and contains(., 'Available')]"},
           {"action": "drawBadge", "selector":  "//*[contains(@class, 'form-multigroup-item') and contains(., 'Available')]", "label":  "4"},
+          {"action": "resizeWindow", "width": 640,"height": 768},
           {
             "action": "makeScreenshotOfElement",
             "fileName": "TemplatesStaticIncludes2",
@@ -94,7 +119,17 @@
             "captionText": "Screenshot of table sys_template",
             "altText": "Screenshot of table sys_template"
           },
-          {"action": "clearDrawings"}
+          {"action": "clearDrawings"},
+          {"action": "drawBox", "selector":  "//*[contains(@class, 'form-group') and contains(., 'Include Basis Template')]"},
+          {"action": "drawBadge", "selector":  "//*[contains(@class, 'form-group') and contains(., 'Include Basis Template')]", "label":  "1"},
+          {"action": "resizeWindow", "width": 640,"height": 1024},
+          {
+            "action": "makeScreenshotOfElement",
+            "fileName": "TemplatesIncludes",
+            "selector": ".t3js-module-body",
+            "altText": "Screenshot of table sys_template",
+            "captionText": "Templates included from another template"
+          }
         ]
       }
     },

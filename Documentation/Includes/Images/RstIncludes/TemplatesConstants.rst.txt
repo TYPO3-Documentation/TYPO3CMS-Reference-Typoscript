@@ -1,7 +1,0 @@
-.. Automatic screenshot: Remove this line if you want to manually change this file
-
-.. figure:: /Includes/Images/AutomaticScreenshots/TemplatesConstants.png
-   :alt: Overview of the defined constants
-   :class: with-shadow
-
-   Overview of the defined constants
