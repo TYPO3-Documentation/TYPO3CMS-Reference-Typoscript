@@ -675,7 +675,7 @@ siteLanguage
    :ts:`direction`        The direction for this language
    :ts:`flagIdentifier`   The flag key (like "gb" or "fr") used to be used in TYPO3's Backend.
    :ts:`hreflang`         Language tag for this language defined by RFC 1766 / 3066 for "lang"  and "hreflang" attributes
-   :ts:`languageId`       The language mapped to the sys_language DB entry.
+   :ts:`languageId`       The language mapped to id of the site languge, as defined in the :ref:`config.yaml languageId <languageid>` 
    :ts:`locale`           Locale, like 'de_CH' or 'en_GB'
    :ts:`navigationTitle`  Label to be used within language menus
    :ts:`title`            Label to be used within TYPO3 to identify the language
