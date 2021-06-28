@@ -112,7 +112,7 @@ Example
 For the above example to work, the constants from the last example have to be
 defined in the constants field.
 
-.. include:: /Includes/Images/RstIncludes/TemplatesSetup.rst.txt
+.. include:: /Images/AutomaticScreenshots/TemplatesSetup.rst.txt
 
 Constants in the setup code are substituted, marked in green. In the Object
 Browser, it's possible to show constants substituted and unsubstituted.
