@@ -30,7 +30,7 @@ type, see the :ref:`TCA type section <t3tca:types>` for details on types.
 Other properties also apply to flex form fields, in this case the full property
 path including the data structure key has to be set:
 `TCEFORM.[tableName].[fieldName].[dataStructureKey].[flexSheet].[flexFieldName].[propertyName]`.
-The `[dataStructKey]` represents the key of a FlexForm in
+The `[dataStructureKey]` represents the key of a FlexForm in
 :php:`$GLOBALS['TCA'][<tableName>]['columns'][<field>]['config']['ds']`. This key will be split into up to
 two parts. By default the first part will be used as identifier of the FlexForm in TSconfig. The second part
 will override the identifier if it is not empty, `list` or `*`. For example the identifier of the key
