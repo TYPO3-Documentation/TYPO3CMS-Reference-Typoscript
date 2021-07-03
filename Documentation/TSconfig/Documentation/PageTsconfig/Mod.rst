@@ -784,6 +784,30 @@ disableSingleTableView
     titles, because these links jumps to the table-only view.
 
 
+
+.. index:: displayColumnSelector
+
+displayColumnSelector
+---------------------
+
+:aspect:`Datatype`
+    boolean
+
+:aspect:`Default`
+   true
+
+:aspect:`Description`
+   The column selector is enabled by default and can be disabled with this
+   option. The column selector is displayed at the top of each record list in
+   the :guilabel:`List` module. It can be used to compare different fields of
+   the listed records.
+
+:aspect:`Example`
+    .. code-block:: typoscript
+
+      # disable the column selector completely
+      mod.web_list.displayColumnSelector = 0
+
 .. index::
    enableClipBoard
    Buttons; Show clipboard
@@ -1114,6 +1138,35 @@ table.[tableName].hideTable
     .. code-block:: typoscript
 
         mod.web_list.table.tt_content.hideTable = 1
+
+
+.. index::
+   table.[tableName].displayColumnSelector
+   List module; columns selector
+
+table.[tableName].displayColumnSelector
+---------------------------------------
+
+:aspect:`Datatype`
+    boolean
+
+:aspect:`Description`
+   If set to false, the column selector in the title row of the specified
+   table gets hidden. If the column selctors have been disabled globally
+   this option can be used to enable it for a specific table.
+
+:aspect:`Example`
+   .. code-block:: typoscript
+
+      # disable the column selector for tt_content
+      mod.web_list.table.tt_content.displayColumnSelector = 0
+
+
+   .. code-block:: typoscript
+
+      # Disable the column selector everywhere except for a specific table
+      mod.web_list.displayColumnSelector = 0
+      mod.web_list.table.sys_category.displayColumnSelector = 1
 
 
 .. index::
