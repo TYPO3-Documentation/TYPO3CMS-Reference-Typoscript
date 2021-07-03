@@ -846,32 +846,10 @@ enableClipBoard
 enableDisplayBigControlPanel
 ----------------------------
 
-:aspect:`Datatype`
-    list of keywords
-
-:aspect:`Description`
-    Determines whether the checkbox "Extended view" in the list module is shown or hidden. If it is hidden,
-    you can predefine it to be always activated or always deactivated.
-
-    .. figure:: /Images/ManualScreenshots/PageTsModWebListExtendedView.png
-        :alt: Extended view is shown in the list module
-
-        Extended view is shown in the list module
-
-    The following values are possible:
-
-    activated
-        The option is activated and the checkbox is hidden.
-
-    deactivated
-        The option is deactivated and the checkbox is hidden.
-
-    selectable
-        The checkbox is shown so that the option can be selected by the user.
-
-:aspect:`Default`
-    selectable
-
+.. versionchanged:: 11.3
+   The checkbox :guilabel:`Extended view` was removed with TYPO3 11.3.
+   Therefore the option :typoscript:`mod.web_list.enableDisplayBigControlPanel`
+   has no effect anymore.
 
 .. index::
    hideTables
