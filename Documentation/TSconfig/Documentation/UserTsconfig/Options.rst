@@ -366,27 +366,10 @@ file_list.enableClipBoard
 file_list.enableDisplayBigControlPanel
 --------------------------------------
 
-:aspect:`Datatype`
-   *(list of keywords)*
-
-:aspect:`Description`
-   Determines whether the checkbox "Extended view" in the filelist module is shown or hidden.
-   If it is hidden, you can predefine it to be always activated or always deactivated.
-
-   .. figure:: /Images/ManualScreenshots/UserTsFileListExtendedView.png
-      :alt: Checkbox "Extended view" in the filelist module
-
-   The following values are possible:
-
-   - activated: The option is activated and the checkbox is hidden.
-
-   - deactivated: The option is deactivated and the checkbox is hidden.
-
-   - selectable: The checkbox is shown so that the option can be selected by the user.
-
-:aspect:`Default`
-   selectable
-
+.. versionchanged:: 11.3
+   The checkbox :guilabel:`Extended view` was removed with TYPO3 11.3.
+   Therefore the option :typoscript:`file_list.enableDisplayBigControlPanel`
+   has no effect anymore.
 
 .. index:: File list; Thumbnails enable
 .. _useroptions-file_list-enableDisplayThumbnails:
