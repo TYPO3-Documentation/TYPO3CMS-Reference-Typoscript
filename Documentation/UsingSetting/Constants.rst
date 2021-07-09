@@ -7,7 +7,7 @@
 Constants
 =========
 
-.. include:: /Images/AutomaticScreenshots/TemplatesConstants.rst.txt
+.. include:: /Images/AutomaticScreenshots/TemplatesModul/TemplatesConstants.rst.txt
 
 Constants are values defined in the  :guilabel:`Constants` field of a template.  They
 follow the :ref:`syntax of ordinary TypoScript
@@ -112,7 +112,7 @@ Example
 For the above example to work, the constants from the last example have to be
 defined in the constants field.
 
-.. include:: /Images/AutomaticScreenshots/TemplatesSetup.rst.txt
+.. include:: /Images/AutomaticScreenshots/TemplatesModul/TemplatesSetup.rst.txt
 
 Constants in the setup code are substituted, marked in green. In the Object
 Browser, it's possible to show constants substituted and unsubstituted.
@@ -136,5 +136,5 @@ Most constants can be edited in the :guilabel:`Template` module using the :guila
 If you keep your constants in a sitepackage extension you can also make them :ref:`available for the
 constant editor <typoscript-syntax-constant-editor>`.
 
-.. include:: /Images/AutomaticScreenshots/TemplatesConstantEditor.rst.txt
+.. include:: /Images/AutomaticScreenshots/TemplatesModul/TemplatesConstantEditor.rst.txt
 

@@ -12,7 +12,7 @@ has the ability to use comments in the constant editor to make simple
 configuration of a template even easier than constants already make it
 themselves.
 
-.. include:: /Images/AutomaticScreenshots/TemplatesConstantEditor.rst.txt
+.. include:: /Images/AutomaticScreenshots/TemplatesModul/TemplatesConstantEditor.rst.txt
 
 When the "Constant Editor" parses the template, *all* comments before every
 constant-definition are registered.  A certain syntax is available to define

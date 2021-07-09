@@ -19,9 +19,9 @@ the TYPO3 backend.
    various configuration in an extension. See :ref:`t3sitepackage:start`.
 
 
-.. include:: /Images/AutomaticScreenshots/TemplatesRecordListView.rst.txt
+.. include:: /Images/AutomaticScreenshots/TemplatesRecords/TemplatesRecordListView.rst.txt
 
-.. include:: /Images/AutomaticScreenshots/TemplatesInput.rst.txt
+.. include:: /Images/AutomaticScreenshots/TemplatesRecords/TemplatesInput.rst.txt
 
 If the "t3editor" system extension is not installed or has been
 disabled via configuration options, the :guilabel:`Constants` and :guilabel:`Setup` fields
@@ -69,7 +69,7 @@ It is also possible to "Include static" templates from extensions.
 
 #. Click :guilabel:`Edit the whole template record`
 
-   .. include:: /Images/AutomaticScreenshots/TemplatesStaticIncludes1.rst.txt
+   .. include:: /Images/AutomaticScreenshots/TemplatesModul/TemplatesStaticIncludes1.rst.txt
 
 .. rst-class:: bignums-xxl
 
@@ -77,7 +77,7 @@ It is also possible to "Include static" templates from extensions.
 
 #. Click the templates to include in :guilabel:`Available Items`.
 
-   .. include:: /Images/AutomaticScreenshots/TemplatesStaticIncludes2.rst.txt
+   .. include:: /Images/AutomaticScreenshots/TemplatesRecords/TemplatesStaticIncludes2.rst.txt
 
 .. tip::
 
@@ -94,7 +94,7 @@ Include other TypoScript templates
 Apart from this, it is also possible to include other TypoScript template
 records (in the field called "Include Basis Template").
 
-.. include:: /Images/AutomaticScreenshots/TemplatesIncludes.rst.txt
+.. include:: /Images/AutomaticScreenshots/TemplatesRecords/TemplatesIncludes.rst.txt
 
 .. index:: TypoScript; Analyzer
 .. _typoscript-syntax-typoscript-templates-structure-analyzer:
@@ -108,7 +108,7 @@ of this
 structure. It shows all the templates that apply to the currently selected page,
 taking into account inclusions and inheritance along the page tree.
 
-.. include:: /Images/AutomaticScreenshots/TemplatesAnalyzer.rst.txt
+.. include:: /Images/AutomaticScreenshots/TemplatesModul/TemplatesAnalyzer.rst.txt
 
 Templates are taken into consideration from top to bottom, which means
 that properties defined in one template may be overridden in templates
@@ -117,7 +117,7 @@ considered at a later point by the TypoScript parser.
 In the Template Analyzer, you can click on any listed template (2) to view
 the content of its "Setup" and "Constants" fields.
 
-.. include:: /Images/AutomaticScreenshots/TemplatesAnalyzerDetails.rst.txt
+.. include:: /Images/AutomaticScreenshots/TemplatesModul/TemplatesAnalyzerDetails.rst.txt
 
 The line numbers are compiled from the first template to be included,
 which is why the numbers are so high.

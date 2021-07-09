@@ -1,6 +1,6 @@
 .. Automatic screenshot: Remove this line if you want to manually change this file
 
-.. figure:: /Images/AutomaticScreenshots/TemplatesViewFullListingButton.png
+.. figure:: /Images/AutomaticScreenshots/TemplatesModul/TemplatesViewFullListingButton.png
    :alt: "View the complete TS listing" button
    :class: with-shadow
 

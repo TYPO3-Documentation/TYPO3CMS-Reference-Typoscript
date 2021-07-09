@@ -13,7 +13,9 @@
         "templatesModul": [
           {"include": "_default"},
           {"action": "resizeWindow", "width": 640,"height": 400},
-          {"action":  "amOnPage", "page": "/typo3/module/web/ts?id=1&SET[function]=TYPO3\\CMS\\Tstemplate\\Controller\\TypoScriptTemplateInformationModuleFunctionController&token=x"},
+          {"action": "setScreenshotsImagePath","path": "Images/AutomaticScreenshots/TemplatesModul"},
+          {"action": "setScreenshotsRstPath","path": "Images/AutomaticScreenshots/TemplatesModul"},
+          {"action": "amOnPage", "page": "/typo3/module/web/ts?id=1&SET[function]=TYPO3\\CMS\\Tstemplate\\Controller\\TypoScriptTemplateInformationModuleFunctionController&token=x"},
           {"action": "drawBox", "selector": ".t3js-module-docheader-bar-navigation select"},
           {"action": "drawBadge", "selector": ".t3js-module-docheader-bar-navigation .col .col", "label": "1", "position": "right"},
           {"action": "drawBox", "selector": ".row.row-cols-auto.g-3 a"},
@@ -86,6 +88,8 @@
         "templatesRecords": [
           {"include": "_default"},
           {"action": "resizeWindow", "width": 640,"height": 768},
+          {"action": "setScreenshotsImagePath","path": "Images/AutomaticScreenshots/TemplatesRecords"},
+          {"action": "setScreenshotsRstPath","path": "Images/AutomaticScreenshots/TemplatesRecords"},
           {"action": "setNavigationDefaultTable", "table": "sys_template"},
           {"action": "setNavigationDefaultUid", "uid": 2},
           {"action": "wait", "timeout":  0.1},
@@ -130,11 +134,65 @@
             "altText": "Screenshot of table sys_template",
             "captionText": "Templates included from another template"
           }
+        ],
+        "pageContent": [
+          {"include": "_default"},
+          {"action": "resizeWindow", "width": 640,"height": 2048},
+          {"action": "setScreenshotsImagePath","path": "Images/AutomaticScreenshots/Fluidtemplate"},
+          {"action": "setScreenshotsRstPath","path": "Images/AutomaticScreenshots/Fluidtemplate"},
+
+          {
+            "action": "goToRecord",
+            "table": "tt_content",
+            "uid": {"action": "getUidByField", "table": "tt_content", "field": "header", "value": "Deliver business value"}
+          },
+          {
+            "action": "click",
+            "link": "Images"
+          },
+          {
+            "action": "makeScreenshotOfElement",
+            "selector": "//fieldset[contains(., \"Gallery Settings\")]",
+            "fileName": "ImageOrientation",
+            "altText": "Media orientation Palette",
+            "captionText": "Media orientation in the content elements such as text with images"
+          }
         ]
       }
     },
-    "Styleguide": {
-      "screenshots": {}
+    "Examples": {
+      "screenshots": {
+        "_default": [
+          {"action": "resizeWindow", "width": 1024,"height": 768},
+          {"action": "setScreenshotsDocumentationPath", "path": "Documentation"},
+          {"action": "setScreenshotsImagePath","path": "Images/AutomaticScreenshots"},
+          {"action": "setScreenshotsRstPath","path": "Images/AutomaticScreenshots"},
+          {"action": "setCodeSnippetsSourcePath","path": "typo3conf/ext/styleguide"},
+          {"action": "setCodeSnippetsTargetPath", "path": "CodeSnippets"}
+        ],
+        "mediaHeight": [
+          {"include": "_default"},
+          {"action": "resizeWindow", "width": 780,"height": 2048},
+          {"action": "setScreenshotsImagePath","path": "Images/AutomaticScreenshots/Fluidtemplate"},
+          {"action": "setScreenshotsRstPath","path": "Images/AutomaticScreenshots/Fluidtemplate"},
+
+          {
+            "action": "goToRecord",
+            "table": "tt_content",
+            "uid": {"action": "getUidByField", "table": "tt_content", "field": "header", "value": "The TYPO3 Documentation Team"}
+          },
+          {
+            "action": "click",
+            "link": "Images"
+          },
+          {
+            "action": "makeScreenshotOfElement",
+            "selector": "//fieldset[contains(., \"Media Adjustments\")]",
+            "fileName": "MediaHeight",
+            "altText": "Media height and width in the content element Text and Images",
+            "captionText": "Media height and width in the content element Text and Images"
+          }
+        ]}
     }
   }
 }
