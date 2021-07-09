@@ -63,7 +63,7 @@ colPos_list
 
     * Use the wizard to create a two column backend layout, the result may look like this:
 
-      .. figure:: /Images/ManualScreenshots/SimpleBackendLayout.png
+      .. figure:: /Images/ManualScreenshots/List/SimpleBackendLayout.png
           :alt: A simple backend layout
 
           A simple backend layout
@@ -71,7 +71,7 @@ colPos_list
     * Create a page and select this new backend layout in the "Appearance" tab. The page module then
       looks like this, displaying the two defined columns:
 
-      .. figure:: /Images/ManualScreenshots/SimpleBackendLayoutInPageModule.png
+      .. figure:: /Images/ManualScreenshots/Page/SimpleBackendLayoutInPageModule.png
           :alt: Backend layout used in page module
 
           Backend layout used in page module
@@ -85,7 +85,7 @@ colPos_list
 
     * The result in the page module then looks like this:
 
-      .. figure:: /Images/ManualScreenshots/SimpleBackendLayoutLeftNotEditable.png
+      .. figure:: /Images/ManualScreenshots/Page/SimpleBackendLayoutLeftNotEditable.png
           :alt: One column not editable in a backend layout
 
           One column not editable in a backend layout
@@ -107,7 +107,7 @@ defaultLanguageFlag
     Values as listed in the "Select flag icon" of a language record in the backend are allowed, including
     the value "multiple".
 
-    .. figure:: /Images/ManualScreenshots/SelectFlagIcon.png
+    .. figure:: /Images/ManualScreenshots/List/SelectFlagIcon.png
         :alt: The flag selector of a language record in the backend
 
         The flag selector of a language record in the backend
@@ -214,7 +214,7 @@ fieldDefinitions
     The available fields in the "Pagetree overview" module under the Info module, by default ship with the entries
     "Basic settings", "Record overview", and "Cache and age".
 
-    .. figure:: /Images/ManualScreenshots/PageTsModWebInfoFieldDefinitions.png
+    .. figure:: /Images/ManualScreenshots/Info/PageTsModWebInfoFieldDefinitions.png
         :alt: Default entries of Pagetree Overview
 
         Default entries of Pagetree Overview
@@ -263,7 +263,7 @@ menu.function
     Disable elements of the "Function selector" in the document header of the module. The keys for single
     items can be found by browsing *System > Configuration > $GLOBALS['TBE_MODULES_EXT']*.
 
-    .. figure:: /Images/ManualScreenshots/FunctionMenuInfoModule.png
+    .. figure:: /Images/ManualScreenshots/Info/FunctionMenuInfoModule.png
         :alt: The function menu of the Info module
 
         The function menu of the Info module
@@ -535,7 +535,7 @@ menu.functions
 :aspect:`Description`
     Disable elements of the "Function selector" in the document header of the module.
 
-    .. figure:: /Images/ManualScreenshots/FunctionMenuPageModule.png
+    .. figure:: /Images/ManualScreenshots/Page/FunctionMenuPageModule.png
         :alt: The function menu of the Page module
 
     The function keys are numerical:
@@ -663,7 +663,7 @@ allowedNewTables
             allowedNewTables = pages, sys_category
         }
 
-    .. figure:: /Images/ManualScreenshots/PageTsModWebListAllowedNewTables.png
+    .. figure:: /Images/ManualScreenshots/List/PageTsModWebListAllowedNewTables.png
         :alt: The New record screen after modifying the allowed elements
 
         The New record screen after modifying the allowed elements
@@ -972,7 +972,7 @@ listOnlyInSingleTableView
 
     The result will be that records from tables are only listed in the single-table mode:
 
-    .. figure:: /Images/ManualScreenshots/PageTsModWebListListOnlyInSingleTableView.png
+    .. figure:: /Images/ManualScreenshots/List/PageTsModWebListListOnlyInSingleTableView.png
         :alt: The list module after activating the single-table mode
 
         The list module after activating the single-table mode
@@ -1060,12 +1060,12 @@ noExportRecordsLinks
     The buttons "Export" and "Download CSV file" are hidden
     in single table view inside the list module:
 
-    .. figure:: /Images/ManualScreenshots/listModuleWithExportButtons.png
+    .. figure:: /Images/ManualScreenshots/List/listModuleWithExportButtons.png
         :alt: The list module wit export buttons after activating the single-table mode
 
         The list module with export buttons after activating the single-table mode
 
-    .. figure:: /Images/ManualScreenshots/listModuleWithoutExportButtons.png
+    .. figure:: /Images/ManualScreenshots/List/listModuleWithoutExportButtons.png
         :alt: The list module without export buttons after activating the single-table mode
 
         The list module without export buttons after activating the single-table mode
@@ -1236,7 +1236,7 @@ menu.function
     Disable elements of the "Function selector" in the document header of the module. The keys for single
     items can be found by browsing *System > Configuration > $GLOBALS['TBE_MODULES_EXT']*.
 
-    .. figure:: /Images/ManualScreenshots/FunctionMenuTemplateModule.png
+    .. figure:: /Images/ManualScreenshots/Template/FunctionMenuTemplateModule.png
         :alt: The function menu of the Template module
 
         The function menu of the Template module
@@ -1310,7 +1310,7 @@ previewFrameWidths
             1024.height = 768
         }
 
-    .. figure:: /Images/ManualScreenshots/WebViewTSConfigPreview.png
+    .. figure:: /Images/ManualScreenshots/View/WebViewTSConfigPreview.png
         :alt: Dropdown menu Width with added frame size called myPreview
 
         Dropdown menu Width with added frame size called myPreview
@@ -1445,7 +1445,7 @@ newContentElement.wizardItems
 
     With the second example, the bottom of the new content element wizard shows:
 
-    .. figure:: /Images/ManualScreenshots/PageTsModWizardsNewContentElementExample2.png
+    .. figure:: /Images/ManualScreenshots/List/PageTsModWizardsNewContentElementExample2.png
         :alt: Added entry in the new content element wizard
 
         Added entry in the new content element wizard
@@ -1478,7 +1478,7 @@ newRecord.order
 
         mod.wizards.newRecord.order = tt_news
 
-    .. figure:: /Images/ManualScreenshots/NewRecordWizardNewOrder.png
+    .. figure:: /Images/ManualScreenshots/List/NewRecordWizardNewOrder.png
         :alt: The position of News changed after modifying the New record screen
 
         The position of News changed after modifying the New record screen
@@ -1517,7 +1517,7 @@ newRecord.pages
             pageInside = 0
         }
 
-    .. figure:: /Images/ManualScreenshots/PageTsModWizardsNewRecordHideInside.png
+    .. figure:: /Images/ManualScreenshots/List/PageTsModWizardsNewRecordHideInside.png
         :alt: The modified New record screen without Page (inside)
 
         The modified new record screen without page (inside)

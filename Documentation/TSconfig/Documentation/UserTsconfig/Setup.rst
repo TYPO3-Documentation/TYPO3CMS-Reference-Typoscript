@@ -12,7 +12,7 @@ Default values and override values for the *User Settings* module.
 
 The "User tools > User settings" module may only represent a subset of the options from the table below.
 
-.. figure:: /Images/ManualScreenshots/UserSettings.png
+.. figure:: /Images/ManualScreenshots/UserSettings/UserSettings.png
     :alt: Default values and overriding values for the "User tools > User settings" module
 
 Properties from the list below are available the different prefixes `setup.default` and `setup.override`,

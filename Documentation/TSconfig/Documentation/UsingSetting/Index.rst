@@ -43,7 +43,7 @@ When editing a page, move to the "Resources" tab.
    explains how to register a static TSconfig file.)
 #. The second is to directly enter code in the "Page TSConfig" field.
 
-.. figure:: /Images/ManualScreenshots/TSconfigPageInput.png
+.. figure:: /Images/ManualScreenshots/List/TSconfigPageInput.png
     :alt: TSconfig-related fields in the Resources tab of a page
     :class: with-shadow
 
@@ -72,7 +72,7 @@ Verify the final configuration
 The full Page TSconfig for any given page can be viewed using the
 **WEB > Info** module and choosing the "Page TSconfig" action.
 
-.. figure:: /Images/ManualScreenshots/TSconfigOverview.png
+.. figure:: /Images/ManualScreenshots/Info/TSconfigOverview.png
    :alt: Viewing Page TSconfig using the Info module
 
 
@@ -187,7 +187,7 @@ User TSconfig is entered in the "TSconfig" field of either
 BE users or BE user groups records. For both, this field
 is located in the "Options" tab.
 
-.. figure:: /Images/ManualScreenshots/TSconfigUserInput.png
+.. figure:: /Images/ManualScreenshots/BackendUsers/TSconfigUserInput.png
     :alt: The TSconfig field in the Options tab of a BE user
 
 
@@ -213,7 +213,7 @@ Verify the final configuration
 The full User TSconfig of the currently logged in backend user can be viewed
 using the **SYSTEM > Configuration** module and choosing the "User TSconfig" action.
 
-.. figure:: /Images/ManualScreenshots/UserTSconfigOverview.png
+.. figure:: /Images/ManualScreenshots/Configuration/UserTSconfigOverview.png
     :alt: Viewing User TSconfig using the Configuration module
 
 

@@ -8,7 +8,7 @@ admPanel
 Configuration of the Admin Panel in the Frontend for the user. This is what
 the Admin Panel looks like:
 
-.. figure:: /Images/ManualScreenshots/UserTsAdminPanel.png
+.. figure:: /Images/ManualScreenshots/AdminPanel/UserTsAdminPanel.png
     :alt: The TYPO3 admin panel
 
 For more information about the Admin Panel, see the :ref:`Admin Panel manual
