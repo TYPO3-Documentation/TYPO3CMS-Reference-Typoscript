@@ -134,7 +134,7 @@ altLabels
             altLabels.255 = LLL:EXT:my_ext/Resources/Private/Language/locallang_tca.xlf:recycler
         }
 
-   .. figure:: /Images/ManualScreenshots/PagesDoktypeDifferentLabels.png
+   .. figure:: /Images/ManualScreenshots/List/PagesDoktypeDifferentLabels.png
       :alt: The Page types with modified labels
 
       The Page types with modified labels
@@ -325,7 +325,7 @@ disableNoMatchingValueElement
     If a selector box value is not available among the options in the box, the default behavior
     of TYPO3 is to preserve the value and to show a label which warns about this special state:
 
-    .. figure:: /Images/ManualScreenshots/SelectInvalidValue.png
+    .. figure:: /Images/ManualScreenshots/List/SelectInvalidValue.png
         :alt: A missing selector box value is indicated by a warning message
 
         A missing selector box value is indicated by a warning message
@@ -355,7 +355,7 @@ disableNoMatchingValueElement
 
     Now the selector box will default to the first element in the selector box:
 
-    .. figure:: /Images/ManualScreenshots/SelectNoInvalidValue.png
+    .. figure:: /Images/ManualScreenshots/List/SelectNoInvalidValue.png
         :alt: Instead of show a warning message the system choose the first element in the selector box
 
         Instead of show a warning message the system choose the first element in the selector box
@@ -500,7 +500,7 @@ noMatchingValue_label
             noMatchingValue_label = VALUE "%s" was not available!
         }
 
-    .. figure:: /Images/ManualScreenshots/SelectInvalidValueDifferentLabel.png
+    .. figure:: /Images/ManualScreenshots/List/SelectInvalidValueDifferentLabel.png
         :alt:  An invalid selector box value is indicated by a warning message
 
         An invalid selector box value is indicated by a warning message
@@ -612,7 +612,7 @@ suggest
 Configuration of the suggest wizard that is available and often enabled
 for :ref:`TCA type=group <t3tca:columns-group>` fields.
 
-.. figure:: /Images/ManualScreenshots/TcaTypeGroupSuggest.png
+.. figure:: /Images/ManualScreenshots/List/TcaTypeGroupSuggest.png
     :alt: A configured suggest wizard
 
     A configured suggest wizard

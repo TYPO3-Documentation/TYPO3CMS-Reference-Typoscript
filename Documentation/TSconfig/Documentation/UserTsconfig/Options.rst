@@ -28,7 +28,7 @@ additionalPreviewLanguages
 :aspect:`Description`
    The user will see these additional languages when localizing stuff in
    TCEforms. The list are ids of site languages, as defined in the
-   :ref:`config.yaml languageId <languageid>` 
+   :ref:`config.yaml languageId <languageid>`
 
 
 .. index:: Backend; Alert popups
@@ -174,7 +174,7 @@ contextMenu disableItems
 :aspect:`Description`
    List of context menu ("clickmenu") items to disable.
 
-   .. figure:: /Images/ManualScreenshots/PagesContextMenu.png
+   .. figure:: /Images/ManualScreenshots/List/PagesContextMenu.png
       :alt: Context menu of the page tree
 
       Context menu of the page tree
@@ -741,7 +741,7 @@ pageTree.backgroundColor
       options.pageTree.backgroundColor.148 = #AFAFAF
       options.pageTree.backgroundColor.151 = rgba(0, 255, 0, 0.1)
 
-   .. figure:: /Images/ManualScreenshots/optionsPageTreeBackgroundColor.png
+   .. figure:: /Images/ManualScreenshots/List/optionsPageTreeBackgroundColor.png
       :alt: Tree branches with configured background colors
 
       Tree branches with configured background colors
@@ -760,10 +760,10 @@ pageTree.doktypesToShowInNewPageDragArea
    If set, the node top panel feature can be configured by a comma-separated list.
    Each number stands for a doctype id that should be added to the node top panel.
 
-   .. figure:: /Images/ManualScreenshots/PanelNormal.png
+   .. figure:: /Images/ManualScreenshots/List/PanelNormal.png
       :alt: Top panel in normal mode
 
-   .. figure:: /Images/ManualScreenshots/PanelModified.png
+   .. figure:: /Images/ManualScreenshots/List/PanelModified.png
       :alt: Top panel modified
 
 :aspect:`Default`
@@ -827,7 +827,7 @@ pageTree.showPathAboveMounts
    If set, the user db mount path above the mount itself is shown.
    This is useful if you work a lot with user db mounts.
 
-   .. figure:: /Images/ManualScreenshots/PanelUserDB.png
+   .. figure:: /Images/ManualScreenshots/List/PanelUserDB.png
       :alt: Active user db mount
 
 

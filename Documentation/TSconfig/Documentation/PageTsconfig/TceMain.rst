@@ -127,7 +127,7 @@ disableHideAtCopy
     the original page. The page "Test (copy 2)" in the middle was in contrast copied in default mode:
     The page is hidden and the "(copy X)" suffix is added, if another page with the same named existed already.
 
-    .. figure:: /Images/ManualScreenshots/PageCopyWithSuffix.png
+    .. figure:: /Images/ManualScreenshots/List/PageCopyWithSuffix.png
         :alt: Hidden page with added suffix after copying its original page
 
         Hidden page with added suffix after copying its original page
@@ -165,7 +165,7 @@ disablePrependAtCopy
     the original page. The page "Test (copy 2)" in the middle was in contrast copied in default mode:
     The page is hidden and the "(copy X)" suffix is added, if another page with the same named existed already.
 
-    .. figure:: /Images/ManualScreenshots/PageCopyWithSuffix.png
+    .. figure:: /Images/ManualScreenshots/List/PageCopyWithSuffix.png
         :alt: Hidden page with added suffix after copying its original page
 
         Hidden page with added suffix after copying its original page
@@ -208,7 +208,7 @@ everybody
     above. Compared to the two other pages created with default
     permissions you can see the effect: "Everybody" has read access:
 
-    .. figure:: /Images/ManualScreenshots/AccessDefaultActions.png
+    .. figure:: /Images/ManualScreenshots/Access/AccessDefaultActions.png
         :alt: Page with altered permissions for backend users, groups and everybody
 
         Page with altered permissions for backend users, groups and everybody
@@ -244,7 +244,7 @@ group
     permissions you can see the effect: The Backend Group can now also
     delete the page by default:
 
-    .. figure:: /Images/ManualScreenshots/AccessDefaultActions.png
+    .. figure:: /Images/ManualScreenshots/Access/AccessDefaultActions.png
         :alt: Page with altered permissions for backend users, groups and everybody
 
         Page with altered permissions for backend users, groups and everybody
@@ -274,7 +274,7 @@ groupid
     above a new page would be created with this group setting instead of the default,
     even if a user who is not member of that group creates the page:
 
-    .. figure:: /Images/ManualScreenshots/AccessDefaultPermissions.png
+    .. figure:: /Images/ManualScreenshots/Access/AccessDefaultPermissions.png
         :alt: Page with altered permissions for backend users and groups
 
         Page with altered permissions for backend groups
@@ -331,7 +331,7 @@ userid
     above a new page would be created with this owner setting instead of the default,
     even if another user creates the page:
 
-    .. figure:: /Images/ManualScreenshots/AccessDefaultPermissions.png
+    .. figure:: /Images/ManualScreenshots/Access/AccessDefaultPermissions.png
         :alt: Page with altered permissions for backend users
 
         Page with altered permissions for backend users
