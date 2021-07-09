@@ -1,6 +1,6 @@
 .. Automatic screenshot: Remove this line if you want to manually change this file
 
-.. figure:: /Images/AutomaticScreenshots/TemplatesSetup.png
+.. figure:: /Images/AutomaticScreenshots/TemplatesModul/TemplatesConstants.png
    :alt: Overview of the defined constants
    :class: with-shadow
 

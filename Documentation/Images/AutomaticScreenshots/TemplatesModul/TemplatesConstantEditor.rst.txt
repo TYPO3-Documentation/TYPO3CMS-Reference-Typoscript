@@ -1,6 +1,6 @@
 .. Automatic screenshot: Remove this line if you want to manually change this file
 
-.. figure:: /Images/AutomaticScreenshots/TemplatesConstantEditor.png
+.. figure:: /Images/AutomaticScreenshots/TemplatesModul/TemplatesConstantEditor.png
    :alt: The Constant Editor showing some categories with constants
    :class: with-shadow
 

@@ -1,6 +1,6 @@
 .. Automatic screenshot: Remove this line if you want to manually change this file
 
-.. figure:: /Images/AutomaticScreenshots/TemplatesAnalyzer.png
+.. figure:: /Images/AutomaticScreenshots/TemplatesModul/TemplatesAnalyzer.png
    :alt: All templates applying to a page, as used by the Introduction Package
    :class: with-shadow
 

@@ -1,0 +1,7 @@
+.. Automatic screenshot: Remove this line if you want to manually change this file
+
+.. figure:: /Images/AutomaticScreenshots/Fluidtemplate/MediaHeight.png
+   :alt: Media height and width in the content element Text and Images
+   :class: with-shadow
+
+   Media height and width in the content element Text and Images

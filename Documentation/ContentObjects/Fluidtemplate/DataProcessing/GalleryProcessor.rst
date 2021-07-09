@@ -53,9 +53,7 @@ Options:
    in content elements such as text with images. Defaults to the value of the field
    `imageorient` / "Position and Alignment" if used with content elements.
 
-   .. figure:: /Images/ManualScreenshots/Fluidtemplate/ImageOrientation.png
-      :alt: Media orientation in the content elements such as text with images
-      :class: with-shadow
+   .. include:: /Images/AutomaticScreenshots/Fluidtemplate/ImageOrientation.rst.txt
 
 .. confval:: maxGalleryWidth
 
@@ -85,9 +83,7 @@ Options:
    `imagewidth` / "Width of each element (px)"
    if used with content elements.
 
-   .. figure:: /Images/ManualScreenshots/Fluidtemplate/MediaHeight.png
-      :alt: Media height and width in the content element Text and Images
-      :class: with-shadow
+   .. include:: /Images/AutomaticScreenshots/Fluidtemplate/MediaHeight.rst.txt
 
 .. confval:: columnSpacing
 

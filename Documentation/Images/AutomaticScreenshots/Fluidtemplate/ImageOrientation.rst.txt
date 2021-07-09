@@ -1,0 +1,7 @@
+.. Automatic screenshot: Remove this line if you want to manually change this file
+
+.. figure:: /Images/AutomaticScreenshots/Fluidtemplate/ImageOrientation.png
+   :alt: Media orientation Palette
+   :class: with-shadow
+
+   Media orientation in the content elements such as text with images
