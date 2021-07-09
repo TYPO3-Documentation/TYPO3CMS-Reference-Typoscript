@@ -970,7 +970,7 @@ list from the property ".items".
          work if the parent page of the current page is the root page of the
          site.
 
-         .. figure:: /Images/ManualScreenshots/ContentObjectsHmenuSpecialBrowse.png
+         .. figure:: /Images/ManualScreenshots/FrontendOutput/Hmenu/ContentObjectsHmenuSpecialBrowse.png
             :alt: Example for the usage of the property "items".
 
          **nextsection\_last** / **prevsection\_last:** Where
@@ -1612,7 +1612,7 @@ are graphical items:
 
 The menu looks like this on a web page:
 
-.. figure:: /Images/ManualScreenshots/ContentObjectsHmenuExampleMenu.png
+.. figure:: /Images/ManualScreenshots/FrontendOutput/Hmenu/ContentObjectsHmenuExampleMenu.png
    :alt: Output of the example menu.
 
 The TypoScript code above generates this menu, but the items do not

@@ -31,7 +31,7 @@ specific custom data processor, of course.
 Example output
 ==============
 
-.. figure:: /Images/ManualScreenshots/Fluidtemplate/CustomDataProcessor.png
+.. figure:: /Images/ManualScreenshots/FrontendOutput/DataProcessing/CustomDataProcessor.png
    :class: with-shadow
    :alt: custom data processor output
 

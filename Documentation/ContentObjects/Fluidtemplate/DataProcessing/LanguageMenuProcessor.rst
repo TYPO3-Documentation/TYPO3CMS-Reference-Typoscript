@@ -119,6 +119,6 @@ German language has the :php:`item.available` set to false. It therefore
 doesn't get linked in the template.
 
 
-.. figure:: /Images/ManualScreenshots/Fluidtemplate/LanguageMenuProcessor.png
+.. figure:: /Images/ManualScreenshots/FrontendOutput/DataProcessing/LanguageMenuProcessor.png
    :class: with-shadow
    :alt: language menu dump and output
