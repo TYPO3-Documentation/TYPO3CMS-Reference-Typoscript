@@ -27,7 +27,7 @@ If the "t3editor" system extension is not installed or has been
 disabled via configuration options, the :guilabel:`Constants` and :guilabel:`Setup` fields
 will be normal multi-line text fields.
 
-.. figure:: /Images/ManualScreenshots/TemplatesInputNoT3Editor.png
+.. figure:: /Images/ManualScreenshots/Templates/InputNoT3Editor.png
    :alt: The Constants and Setup fields without the t3editor enabled
 
 

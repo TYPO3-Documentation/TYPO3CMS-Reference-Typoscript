@@ -193,7 +193,7 @@ Usage example::
 
 Will look in the Constant Editor like this:
 
-.. figure:: /Images/ManualScreenshots/TemplatesCustomSubcategory.png
+.. figure:: /Images/ManualScreenshots/Templates/CustomSubcategory.png
    :alt: The Constant Editor showing a custom category.
 
 

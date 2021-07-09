@@ -239,6 +239,6 @@ The array now contains the images ordered in rows and columns. For each image th
 width and height supplied.
 
 
-.. figure:: /Images/ManualScreenshots/Fluidtemplate/GalleryProcessor.png
+.. figure:: /Images/ManualScreenshots/FrontendOutput/DataProcessing/GalleryProcessor.png
    :class: with-shadow
    :alt: Gallery dump and output

@@ -72,6 +72,6 @@ Output
 
 The array now contains the information from the site configuration:
 
-.. figure:: /Images/ManualScreenshots/Fluidtemplate/SiteProcessor.png
+.. figure:: /Images/ManualScreenshots/FrontendOutput/DataProcessing/SiteProcessor.png
    :class: with-shadow
    :alt: site configuration dump and output

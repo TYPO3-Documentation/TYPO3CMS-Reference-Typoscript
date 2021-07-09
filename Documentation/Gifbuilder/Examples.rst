@@ -393,17 +393,17 @@ create much better quality images:
    without the niceText property of the GIFBUILDER
    :ref:`TEXT <gifbuilder-text>` object enabled as a side effect).
 
-.. |A Background Image| image:: /Images/ManualScreenshots/GifbuilderExamples/Backimage.jpg
+.. |A Background Image| image:: /Images/ThirdParty/GifbuilderExamples/Backimage.jpg
    :target: /File:Backimage.jpg
-.. |A overlay image| image:: /Images/ManualScreenshots/GifbuilderExamples/Logo.png
+.. |A overlay image| image:: /Images/ThirdParty/GifbuilderExamples/Logo.png
    :target: /File:Logo.png
-.. |A normal mask| image:: /Images/ManualScreenshots/GifbuilderExamples/Mask.png
+.. |A normal mask| image:: /Images/ThirdParty/GifbuilderExamples/Mask.png
    :target: /File:Mask.png
-.. |Description| image:: /Images/ManualScreenshots/GifbuilderExamples/Mask_i.png
+.. |Description| image:: /Images/ThirdParty/GifbuilderExamples/Mask_i.png
    :target: /File:Mask_i.png
-.. |image1| image:: /Images/ManualScreenshots/GifbuilderExamples/Result.jpg
+.. |image1| image:: /Images/ThirdParty/GifbuilderExamples/Result.jpg
    :target: /File:Result.jpg
-.. |Variant 1| image:: /Images/ManualScreenshots/GifbuilderExamples/Typo3_shadow1.png
+.. |Variant 1| image:: /Images/ThirdParty/GifbuilderExamples/Typo3_shadow1.png
    :target: /File:Typo3_shadow1.png
-.. |Variant 2| image:: /Images/ManualScreenshots/GifbuilderExamples/Typo3_shadow2.png
+.. |Variant 2| image:: /Images/ThirdParty/GifbuilderExamples/Typo3_shadow2.png
    :target: /File:Typo3_shadow2.png
