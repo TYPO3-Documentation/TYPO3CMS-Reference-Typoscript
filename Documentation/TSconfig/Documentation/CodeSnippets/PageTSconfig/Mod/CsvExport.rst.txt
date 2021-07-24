@@ -1,0 +1,9 @@
+.. Automatic screenshot: Remove this line if you want to manually change this file
+
+.. code-block:: typoscript
+
+   mod.web_list {
+      csvDelimiter = ;
+      csvQuote = '
+   }
+   

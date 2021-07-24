@@ -703,25 +703,25 @@ csvDelimiter
 ------------
 
 :aspect:`Datatype`
-    string
+   string
 
 :aspect:`Description`
-    Defines the delimiter for CSV exports (Microsoft Excel expects `;` to be set).
+   Defines the default delimiter for CSV downloads (Microsoft Excel expects
+   `;` to be set). The value set will be displayed as default delimiter in the
+   download dialog in the list module.
 
 :aspect:`Default`
-    ,
+   ,
 
 :aspect:`Example`
-    .. code-block:: typoscript
+   .. include:: /CodeSnippets/PageTSconfig/Mod/CsvExport.rst.txt
 
-        mod.web_list {
-            csvDelimiter = ;
-        }
+   .. include:: /Images/AutomaticScreenshots/WebList/ExportDialog.rst.txt
 
 
 .. index::
    csvQuote
-   CSV Exports; Quoting character
+   CSV Downloads; Quoting character
 
 csvQuote
 --------
@@ -730,18 +730,17 @@ csvQuote
     string
 
 :aspect:`Description`
-    Defines the quoting character for CSV exports.
+   Defines the default quoting character for CSV downloads. The value set will
+   be displayed as default quoting in the download dialog in the list module.
+
 
 :aspect:`Default`
     "
 
 :aspect:`Example`
-    .. code-block:: typoscript
+   .. include:: /CodeSnippets/PageTSconfig/Mod/CsvExport.rst.txt
 
-        mod.web_list {
-            csvQuote = '
-        }
-
+   .. include:: /Images/AutomaticScreenshots/WebList/ExportDialog.rst.txt
 
 .. index::
    deniedNewTables
@@ -1044,7 +1043,7 @@ noCreateRecordsLink
 .. index::
    noExportRecordsLinks
    Buttons; Export
-   Buttons; Download CSV file
+   Buttons; Download
 
 noExportRecordsLinks
 --------------------
@@ -1053,32 +1052,29 @@ noExportRecordsLinks
     boolean
 
 :aspect:`Description`
-    If set, the "Export" and "Download CSV file" buttons are hidden in single table
-    view inside the list module. This option is for example important to disable batch
-    download of sensitive data via csv or t3d exports.
+   If set, the :guilabel:`Download` and :guilabel:`Export` buttons are hidden
+   in the list module. This applies to
+   the :guilabel:`Export` button located at the top left for t3d exports, the
+   :guilabel:`Download` button directly on the table
+   listing for csv download and the :guilabel:`Download` button in the tables
+   single view.
 
-    The buttons "Export" and "Download CSV file" are hidden
-    in single table view inside the list module:
+   This option is for example important to disable batch
+   download of sensitive data via CSV or t3d exports.
 
-    .. figure:: /Images/ManualScreenshots/List/listModuleWithExportButtons.png
-        :alt: The list module wit export buttons after activating the single-table mode
+   .. include:: /Images/AutomaticScreenshots/WebList/WithExportButtons.rst.txt
 
-        The list module with export buttons after activating the single-table mode
+   .. include:: /Images/AutomaticScreenshots/WebList/NoExportButtons.rst.txt
 
-    .. figure:: /Images/ManualScreenshots/List/listModuleWithoutExportButtons.png
-        :alt: The list module without export buttons after activating the single-table mode
-
-        The list module without export buttons after activating the single-table mode
+   .. note::
+      This option only hides the buttons in the list module. Bulk export of
+      data is still possible via the context menu of the page tree.
 
 :aspect:`Default`
     0
 
 :aspect:`Example`
-    .. code-block:: typoscript
-
-        mod.web_list {
-            noExportRecordsLinks = 1
-        }
+    .. include:: /CodeSnippets/PageTSconfig/Mod/noExportRecordsLinks.rst.txt
 
 
 .. index::
