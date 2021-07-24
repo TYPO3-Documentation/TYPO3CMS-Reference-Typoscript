@@ -26,6 +26,61 @@
                     }
                 ]
             }
+        },
+        "Examples": {
+            "screenshots": {
+                "_default": [
+                    {"action": "resizeWindow", "width": 1024,"height": 768},
+                    {"action": "setScreenshotsDocumentationPath", "path": "Documentation"},
+                    {"action": "setScreenshotsImagePath","path": "Images/AutomaticScreenshots"},
+                    {"action": "setScreenshotsRstPath","path": "Images/AutomaticScreenshots"},
+                    {"action": "setCodeSnippetsSourcePath","path": "typo3conf/ext/examples"},
+                    {"action": "setCodeSnippetsTargetPath", "path": "CodeSnippets"}
+                ],
+                "fileListExport": [
+                    {"include": "_default"},
+                    {"action": "resizeWindow", "width": 640,"height": 480},
+                    {
+                        "action": "goToTable",
+                        "table": "tt_content",
+                        "pid" : {
+                            "action": "getUidByField",
+                            "table": "pages",
+                            "field": "title",
+                            "value": "with ExportRecordsLinks"
+                        }
+                    },
+                    {
+                        "action": "makeScreenshotOfElement",
+                        "fileName": "WebList/WithExportButtons",
+                        "captionText": "The list module with export buttons after activating the single-table mode"
+                    },
+                    {"action": "click", "link": "//button[contains(.,'Download')]"},
+                    {"action": "waitForModalDialogInMainFrame"},
+                    {
+                        "action": "makeScreenshotOfElement",
+                        "fileName": "WebList/ExportDialog"
+                    },
+                    {
+                        "action": "goToTable",
+                        "table": "tt_content",
+                        "pid" : {
+                            "action": "getUidByField",
+                            "table": "pages",
+                            "field": "title",
+                            "value": "no ExportRecordsLinks"
+                        }
+                    },
+                    {
+                        "action": "makeScreenshotOfElement",
+                        "fileName": "WebList/NoExportButtons",
+                        "captionText": "The list module without export buttons after activating the single-table mode"
+                    },
+                    {"action": "setCodeSnippetsTargetPath", "path": "CodeSnippets/PageTSconfig/Mod"},
+                    {"action": "createCodeSnippet", "sourceFile": "Configuration/TSconfig/Page/Mod/csvExport.tsconfig", "targetFileName": "CsvExport", "language": "typoscript"},
+                    {"action": "createCodeSnippet", "sourceFile": "Configuration/TSconfig/Page/Mod/noExportRecordsLinks.tsconfig", "targetFileName": "noExportRecordsLinks", "language": "typoscript"}
+                ]
+            }
         }
     }
 }
