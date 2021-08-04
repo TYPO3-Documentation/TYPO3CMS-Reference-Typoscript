@@ -96,6 +96,6 @@ header with `Content-type:application/json` has to be set:
       }
    }
 
-The build in :php:`JsonView` can be used to create the content
-via Extbase. See :ref:`Using built in JsonView
+The built-in :php:`JsonView` can be used to create the content
+via Extbase. See :ref:`Using built-in JsonView
 <t3extbasebook:using-built-in-jsonview>`
