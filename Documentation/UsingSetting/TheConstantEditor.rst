@@ -173,7 +173,7 @@ chtml
 
 These are all categories reserved for options that relate to content
 rendering for each type of :ts:`tt_content` element. See the
-`static template <https://github.com/TYPO3/TYPO3.CMS/blob/master/typo3/sysext/fluid_styled_content/Configuration/TypoScript/constants.typoscript>`__
+`static template <https://github.com/typo3/typo3/blob/master/typo3/sysext/fluid_styled_content/Configuration/TypoScript/constants.typoscript>`__
 of extension "fluid\_styled\_content" for examples.
 
 .. _typoscript-syntax-constant-editor-keys-cat-custom-subcategories:
