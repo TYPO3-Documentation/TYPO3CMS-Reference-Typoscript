@@ -362,6 +362,52 @@ disableNoMatchingValueElement
 
 
 .. index::
+   Records; fileFolderConfig
+.. _fileFolderConfig:
+
+fileFolderConfig
+================
+
+:aspect:`Datatype`
+    array
+
+:aspect:`Description`
+   The special :ref:`fileFolder configuration options
+   <t3tca:columns-select-properties-fileFolderConfig>`
+   for TCA columns of type :ref:`TCA type=select <t3tca:columns-select>` can
+   be used to fill a select field with files (images / icons) from a defined
+   folder.
+
+   The `fileFolderConfig` TCA configuration can be overridden with page
+   TSconfig, allowing administrators to use different folders or different file
+   extensions, per site.
+
+   The same sub properties as in the `fileFolderConfig` TCA configuration are
+   available:
+
+    .. code-block:: typoscript
+
+      fileFolderConfig {
+         folder = 'EXT:styleguide/Resources/Public/Icons'
+         allowedExtensions = 'svg'
+         depth = 1
+      }
+
+   This property is available for various levels:
+
+   table level:
+      `TCEFORM.[tableName].[fieldName].fileFolderConfig.folder`
+
+   table and record type level:
+      `TCEFORM.[tableName].[fieldName].types.[typeName].fileFolderConfig.folder`
+
+   Flex form field level, example:
+      `TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.myField.fileFolderConfig.folder`
+
+      Where `sDEF` is the sheet name.
+
+
+.. index::
    Records; select items user function
 .. _itemsProcFunc:
 
