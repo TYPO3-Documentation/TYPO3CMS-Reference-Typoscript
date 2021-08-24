@@ -395,6 +395,10 @@ preview
         Make sure not to set :ts:`options.saveDocView.<table name> = 0`, otherwise the save+view button
         will not be displayed when editing records of your table.
 
+    .. important::
+
+        The configuration has to be defined for the page containing the records and :ts:`previewPageId`
+        (for example sysfolder holding the records is located outside of your root)
 
 .. index:: Copy record; Table based configuration
 .. _pagetcemaintables:
