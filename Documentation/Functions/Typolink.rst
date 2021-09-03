@@ -192,6 +192,11 @@ addQueryString
    not check for any duplicate parameters! This is not a problem: Only
    the last parameter of the same name will be applied.
 
+   .method
+      If empty, the URL will be build with just the TYPO3 internal params like id,
+      type, M. If there are further params in URL (f.e. tx_news_pi1 for news) you should
+      set this value to :typoscript:`GET` to add all GET parameters.
+
    .. versionchanged:: 10.0
 
       With version 10.0 a breaking change was introduced. Setting
