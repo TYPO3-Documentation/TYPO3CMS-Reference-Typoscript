@@ -1,5 +1,5 @@
 .. include:: /Includes.rst.txt
-.. index:: 
+.. index::
    Functions; stdWrap
    stdWrap
 .. highlight:: typoscript
@@ -820,7 +820,7 @@ date
 
 :aspect:`Description`
    The content should be data-type "UNIX-time". Returns the content
-   formatted as a date. See the PHP manual (`datetime.format <https://www.php.net/manual/en/datetime.createfromformat.php>`_) 
+   formatted as a date. See the PHP manual (`datetime.format <https://www.php.net/manual/en/datetime.createfromformat.php>`_)
    for the format codes.
 
 
@@ -1865,8 +1865,16 @@ prefixComment
 .. index:: stdWrap; editIcons
 .. _stdwrap-editicons:
 
+.. index:: stdWrap; editIcons
+.. _stdwrap-editicons:
+
 editIcons
 ---------
+
+.. deprecated:: 11.4
+   With the extraction of the :file:`feedit` extension from TYPO3 Core in v10
+   this related TypoScript property have been rendered unused. Extensions that
+   provide a frontend editing approach should implement this on their own.
 
 :aspect:`Property`
    editIcons
@@ -1875,43 +1883,7 @@ editIcons
    :ref:`data-type-string` / :ref:`stdWrap`
 
 :aspect:`Description`
-   If not empty, then insert an icon linking to
-   :file:`typo3/sysext/backend/Classes/Controller/EditDocumentController.php`
-   with some parameters to build and backend user edit form for certain
-   fields.
-
-   The value of this property is a list of fields from a table to edit.
-   It's assumed that the current record of the cObject is the record to
-   be edited.
-
-   Syntax: *optional table name* : *comma list of field names [list of
-   pallette-field names separated by \| ]*
-
-   :ts:`.beforeLastTag:`
-      Possible values are 1, 0 and -1. If set (1), the icon will be inserted
-      before the last HTML tag in the content. If -1, the icon will be prepended
-      to the content. If zero (0), the icon is appended in the end of the
-      content.
-
-   :ts:`.iconTitle:` String.
-      The title attribute of the image tag.
-
-   :ts:`.iconImg:` HTML.
-      Alternative HTML code instead of the default icon shown. Can be used to
-      set another icon for editing (for instance a red dot or otherwise... :-)
-
-:aspect:`Example`
-   This will insert an edit icon which links to a form where the header
-   and bodytext fields are displayed and made available for editing
-   (provided the user has access!). ::
-
-      editIcons = tt_content : header, bodytext
-
-   Or this line that puts the header\_align and date field into a
-   "palette" which means they are displayed on a single line below the
-   header field. This saves some space. ::
-
-      editIcons = header[header_align|date], bodytext
+   See :ref:`Migration from the build-in EDITPANEL<cobj-editpanel_migration>`.
 
 
 .. index:: stdWrap; editPanel
@@ -1920,6 +1892,11 @@ editIcons
 editPanel
 ---------
 
+.. deprecated:: 11.4
+   With the extraction of the :file:`feedit` extension from TYPO3 Core in v10
+   this related TypoScript property have been rendered unused. Extensions that
+   provide a frontend editing approach should implement this on their own.
+
 :aspect:`Property`
    editPanel
 
@@ -1927,7 +1904,7 @@ editPanel
    :ref:`boolean <data-type-bool>` / :ref:`cobj-editpanel`
 
 :aspect:`Description`
-   See :ts:`cObject` :ref:`cobj-editpanel`.
+   See :ref:`Migration from the build-in EDITPANEL<cobj-editpanel_migration>`.
 
 
 .. index:: stdWrap; cache
