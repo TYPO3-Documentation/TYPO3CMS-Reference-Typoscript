@@ -359,6 +359,36 @@ file_list.enableClipBoard
 :aspect:`Default`
    selectable
 
+.. index:: File list; Column Selector
+.. _useroptions-file_list-displayColumnSelector:
+
+file_list.displayColumnSelector
+-------------------------------
+
+:aspect:`Datatype`
+    boolean
+
+:aspect:`Default`
+   true
+
+:aspect:`Description`
+   The column selector is enabled by default and can be disabled with this
+   option. The column selector is displayed at the top of each file list.
+
+   It can be used to manage the fields displayed for each file / folder,
+   while containing convenience actions such as "filter", "check all / none"
+   and "toggle selection".
+
+   The fields to be selected are a combination of special fields, such as
+   `references` or `read/write` permissions, the corresponding `sys_file`
+   record fields, as well as all available `sys_file_metadata` fields.
+
+:aspect:`Example`
+    .. code-block:: typoscript
+
+      # disable the column selector
+      file_list.displayColumnSelector = 0
+
 
 .. index:: File list; Extended view enable
 .. _useroptions-file_list-enableDisplayBigControlPanel:
