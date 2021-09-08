@@ -1191,26 +1191,6 @@ searchLevel.items
         }
 
 
-.. index::
-   showClipControlPanelsDespiteOfCMlayers
-   Clipboard; Show control panel
-
-showClipControlPanelsDespiteOfCMlayers
---------------------------------------
-
-:aspect:`Datatype`
-    boolean
-
-:aspect:`Description`
-    If set, then the control- and clipboard panels of the module is shown even if the
-    context-popups (ClickMenu) are available. Normally the control- and clipboard panels
-    are disabled unless extended mode is set.
-
-
-.. index::
-   mod; web_ts
-   Modules; Template
-
 web_ts
 ======
 
