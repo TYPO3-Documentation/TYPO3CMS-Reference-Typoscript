@@ -295,11 +295,12 @@ Options
          list of integers
 
    Default
-         5,6
+         6,254
 
    Description
          Enter the list of page document types (doktype) to exclude from menus.
-         By default pages that are "backend user access only" (6) are excluded.
+         By default pages that are "backend user access only" (6) or "folder"
+         (254) are excluded.
 
 
 
