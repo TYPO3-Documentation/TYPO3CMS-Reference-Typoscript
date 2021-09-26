@@ -688,11 +688,11 @@ siteLanguage
    Code::
 
       page.10 = TEXT
-	   page.10.data = siteLanguage:navigationTitle
-	   page.10.wrap = This is the title of the current site language: |
+      page.10.data = siteLanguage:navigationTitle
+      page.10.wrap = This is the title of the current site language: |
 
       page.10 = TEXT
-	   page.10.dataWrap = The current site language direction is {siteLanguage:direction}
+      page.10.dataWrap = The current site language direction is {siteLanguage:direction}
 
       # Website title for the current language with fallback to the website title of the site configuration.
       page.10 = TEXT
