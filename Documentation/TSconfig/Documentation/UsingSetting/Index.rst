@@ -495,7 +495,7 @@ Combining the array access with a fallback using `??` helps accessing these opti
     //         ],
     //     ],
     // ],
-    $userTsConfig = $this->getBackendUser->getTSConfig():
+    $userTsConfig = $this->getBackendUser->getTSConfig();
 
     // Typical call to retrieve a sanitized value:
     $isToggleEnabled = (bool)($userTsConfig['options.']['someToggle'] ?? false);
