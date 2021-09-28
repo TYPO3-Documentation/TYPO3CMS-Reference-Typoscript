@@ -96,6 +96,9 @@ TMENU properties
 
          Takes precedence over :ref:`HMENU.begin <hmenu-begin>`.
 
+.. deprecated:: 11.5
+  Property JSWindow has been deprecated. Use an external JavaScript file with an 
+  event listener to achieve the same functionality.
 
 .. container:: table-row
 
