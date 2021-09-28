@@ -512,8 +512,8 @@ includeCSS.[array]
          .. deprecated:: 11.5
             The option to use the `@import` syntax for including external CSS
             files through TypoScript has been deprecated. It is recommended to use
-            the :html:`<link>` tag or create a inlineCSS TypoScript manually
-            to load such a file with the `@import` syntax.
+            the :html:`<link>` tag or instead create an inline CSS entry with TypoScript
+            to load a file with the `@import` syntax.
 
          **import**: If set (boolean) then the `@import` way of including a
          stylesheet is used instead of :html:`<link>`
