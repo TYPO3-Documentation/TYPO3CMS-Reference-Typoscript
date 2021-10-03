@@ -1940,7 +1940,9 @@ debug
    Useful for debugging which value :ts:`stdWrap` actually ends up with,
    if you are constructing a website with TypoScript.
 
-   Should be used under construction only.
+.. attention::
+
+   Only for debugging during development, otherwise output can break.
 
 
 .. index:: stdWrap; debugFunc
@@ -1958,9 +1960,11 @@ debugFunc
 :aspect:`Description`
    Prints the content directly to browser with the :php:`debug()` function.
 
-   Should be used under construction only.
+   Set to value "2" the content will be printed in a table which looks nicer.
 
-   Set to value "2" the content will be printed in a table - looks nicer.
+.. attention::
+
+   Only for debugging during development, otherwise output can break.
 
 
 .. index:: stdWrap; debugData
@@ -1979,4 +1983,6 @@ debugData
    Prints the current data-array, :php:`$cObj->data`, directly to browser. This
    is where :ts:`field` gets data from.
 
-   Should be used under construction only.
+.. attention::
+
+   Only for debugging during development, otherwise output can break.
