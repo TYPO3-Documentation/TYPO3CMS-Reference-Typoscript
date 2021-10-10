@@ -13,7 +13,7 @@
                 "fields": [
                     {"include": "_default"},
                     {
-                        "action": "makeScreenshotOfField",
+                        "action": "goToField",
                         "table": "tx_styleguide_elements_basic",
                         "uid": {
                             "action": "getUidByField",
@@ -21,9 +21,18 @@
                             "field": "sys_language_uid",
                             "value": 0
                         },
-                        "fields": "input_1",
+                        "fields": "input_1"
+                    },
+                    {"action": "switchToMainFrame"},
+                    {"action": "click", "link":  "button.t3js-topbar-button-modulemenu"},
+                    {"action": "switchToContentFrame"},
+                    {
+                        "action": "makeScreenshotOfElement",
+                        "selector": ".typo3-TCEforms",
                         "fileName": "Input1"
-                    }
+                    },
+                    {"action": "switchToMainFrame"},
+                    {"action": "click", "link":  "button.t3js-topbar-button-modulemenu"}
                 ]
             }
         },
@@ -50,6 +59,8 @@
                             "value": "with ExportRecordsLinks"
                         }
                     },
+                    {"action": "switchToMainFrame"},
+                    {"action": "click", "link":  "button.t3js-topbar-button-modulemenu"},
                     {
                         "action": "makeScreenshotOfElement",
                         "fileName": "WebList/WithExportButtons",
@@ -76,6 +87,8 @@
                         "fileName": "WebList/NoExportButtons",
                         "captionText": "The list module without export buttons after activating the single-table mode"
                     },
+                    {"action": "switchToMainFrame"},
+                    {"action": "click", "link":  "button.t3js-topbar-button-modulemenu"},
                     {"action": "setCodeSnippetsTargetPath", "path": "CodeSnippets/PageTSconfig/Mod"},
                     {"action": "createCodeSnippet", "sourceFile": "Configuration/TSconfig/Page/Mod/csvExport.tsconfig", "targetFileName": "CsvExport", "language": "typoscript"},
                     {"action": "createCodeSnippet", "sourceFile": "Configuration/TSconfig/Page/Mod/noExportRecordsLinks.tsconfig", "targetFileName": "noExportRecordsLinks", "language": "typoscript"}
