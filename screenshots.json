@@ -94,18 +94,26 @@
           {"action": "setNavigationDefaultUid", "uid": 2},
           {"action": "wait", "timeout":  0.1},
           {
-            "action": "makeScreenshotOfTable",
-            "pid": "1",
+            "action": "GoToTable",
+            "pid": "1"
+          },
+          {"action": "switchToMainFrame"},
+          {"action": "click", "link":  "button.t3js-topbar-button-modulemenu"},
+          {"action": "click", "link":  "Hide Navigation"},
+          {"action": "switchToContentFrame"},
+          {
+            "action": "makeScreenshotOfElement",
             "selector": ".recordlist",
             "fileName": "TemplatesRecordListView",
             "captionText": "A TypoScript template as seen in the Web > List module",
             "altText": "A TypoScript template as seen in the Web > List module"
           },
           {"action": "goToRecord"},
+          {"action": "switchToContentFrame"},
           {
             "action": "makeScreenshotOfElement",
             "fileName": "TemplatesInput",
-            "selector": ".t3js-module-body",
+            "selector": ".module-body",
             "captionText": "Screenshot of table sys_template",
             "altText": "The Constants and Setup fields of a TypoScript template"
           },
@@ -133,7 +141,11 @@
             "selector": ".t3js-module-body",
             "altText": "Screenshot of table sys_template",
             "captionText": "Templates included from another template"
-          }
+          },
+          {"action": "switchToMainFrame"},
+          {"action": "resizeWindow", "width": 1200,"height": 2048},
+          {"action": "reloadBackend"},
+          {"action": "click", "link":  "button.t3js-topbar-button-modulemenu"}
         ],
         "pageContent": [
           {"include": "_default"},
@@ -146,6 +158,8 @@
             "table": "tt_content",
             "uid": {"action": "getUidByField", "table": "tt_content", "field": "header", "value": "Deliver business value"}
           },
+          {"action": "click", "link":  "button.t3js-topbar-button-modulemenu"},
+          {"action": "switchToContentFrame"},
           {
             "action": "click",
             "link": "Images"
@@ -156,7 +170,9 @@
             "fileName": "ImageOrientation",
             "altText": "Media orientation Palette",
             "captionText": "Media orientation in the content elements such as text with images"
-          }
+          },
+          {"action": "switchToMainFrame"},
+          {"action": "click", "link":  "button.t3js-topbar-button-modulemenu"}
         ]
       }
     },
@@ -181,6 +197,9 @@
             "table": "tt_content",
             "uid": {"action": "getUidByField", "table": "tt_content", "field": "header", "value": "The TYPO3 Documentation Team"}
           },
+          {"action": "switchToMainFrame"},
+          {"action": "click", "link":  "button.t3js-topbar-button-modulemenu"},
+          {"action": "switchToContentFrame"},
           {
             "action": "click",
             "link": "Images"
@@ -191,7 +210,9 @@
             "fileName": "MediaHeight",
             "altText": "Media height and width in the content element Text and Images",
             "captionText": "Media height and width in the content element Text and Images"
-          }
+          },
+          {"action": "switchToMainFrame"},
+          {"action": "click", "link":  "button.t3js-topbar-button-modulemenu"}
         ]}
     }
   }
