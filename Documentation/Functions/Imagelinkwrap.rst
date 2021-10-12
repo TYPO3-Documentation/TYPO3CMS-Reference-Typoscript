@@ -427,6 +427,7 @@ Example: Larger display in a popup window
          # make the preview window 30px wider and 20px higher
          # than what the image requires
          JSwindow.expand = 30,20
+      }
    }
 
 
