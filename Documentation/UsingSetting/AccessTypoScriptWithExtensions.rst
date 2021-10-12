@@ -2,23 +2,23 @@
 .. index:: TypoScript in extensions
 .. _extdev-access-typoscript:
 
-===================================
-Access TypoScript in your extension
-===================================
+=================================
+Access TypoScript in an extension
+=================================
 
 .. note::
 
    This part is written for extension developers.
 
-This page explains how to access TypoScript settings in extensions.
+This page explains how to access TypoScript settings in an extension.
 
 Extbase controllers
 ===================
 
 In Extbase controllers, :ref:`Flexform settings <t3coreapi:read-flexforms-extbase>` and TypoScript settings will be
-merged together. If a settings exists in both, the Flexform takes precedence (and overrides the TypoScript setting).
-Keep in mind that both Flexform and TypoScript settings must use the convention of preceding the setting with
-`setting.` (e.g. `settings.threshold`).
+merged together. If settings exists in both, the Flexform takes precedence and overrides the TypoScript setting.
+Note that both Flexform and TypoScript settings must use the convention of preceding the setting with
+`settings.` (e.g. `settings.threshold`).
 
 Extbase offers some advantages: Some things work automatically out-of-the-box. However, you must stick to the
 Extbase conventions ("conventions over configuration").
@@ -58,7 +58,7 @@ In order to access TypoScript settings from an Extbase Controller.
 Fluid
 =====
 
-If Extbase controllers are used, :php:`$this->settings` is automatically passed to the Fluid template. Thus, you can
+If Extbase controllers are used, :php:`$this->settings` is automatically passed to the Fluid template. Allowing you to
 access settings like this:
 
 .. code-block:: xml
