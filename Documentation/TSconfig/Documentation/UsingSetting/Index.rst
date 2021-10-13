@@ -139,6 +139,24 @@ within :file:`LocalConfiguration.php`. Instead, it is good practice to use the a
 Page TSconfig for instance within your project extension that contains other local settings
 like templates, frontend TypoScript and so on.
 
+You can also include TSconfig files like this:
+
+.. code-block:: php
+
+   \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
+       "@import 'EXT:myexample/Configuration/TSconfig/Page/Mod/Wizards/NewContentElement.tsconfig'"
+   );
+
+   \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
+       "@import 'EXT:myexample/Configuration/TSconfig/Page/Basic.tsconfig'
+       @import 'EXT:myexample/Configuration/TSconfig/Page/TCEFORM.tsconfig'"
+   );
+
+   if (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('linkvalidator')) {
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
+            "@import 'EXT:myexample/Configuration/TSconfig/Page/Linkvalidator.tsconfig'"
+        );
+    }
 
 
 .. index:: pair: Page TSconfig; Static TSconfig files
