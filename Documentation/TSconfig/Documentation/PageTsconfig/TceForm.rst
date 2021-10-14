@@ -387,11 +387,11 @@ fileFolderConfig
 
     .. code-block:: typoscript
 
-      fileFolderConfig {
+       fileFolderConfig {
          folder = 'EXT:styleguide/Resources/Public/Icons'
          allowedExtensions = 'svg'
          depth = 1
-      }
+       }
 
    This property is available for various levels:
 
