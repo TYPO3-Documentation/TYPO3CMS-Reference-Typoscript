@@ -51,26 +51,22 @@ enable
 
     .. code-block:: typoscript
 
-        admPanel.enable.preview
-        admPanel.enable.cache
-        admPanel.enable.publish
-        admPanel.enable.edit
-        admPanel.enable.tsdebug
-        admPanel.enable.info
-        admPanel.enable.cache
-        admPanel.enable.debug
-        admPanel.enable.info
-        admPanel.enable.preview
-        admPanel.enable.tsdebug
-        admPanel.enable.debug_events
-        admPanel.enable.debug_log
-        admPanel.enable.debug_pagetitle
-        admPanel.enable.debug_queryinformation
-        admPanel.enable.info_general
-        admPanel.enable.info_php
-        admPanel.enable.info-request
-        admPanel.enable.info_userint
-        admPanel.enable.typoscript-waterfall
+        admPanel.enable.cache = 1
+        admPanel.enable.debug = 1
+        admPanel.enable.debug_events = 1
+        admPanel.enable.debug_log = 1
+        admPanel.enable.debug_pagetitle = 1
+        admPanel.enable.debug_queryinformation = 1
+        admPanel.enable.edit = 1
+        admPanel.enable.info = 1
+        admPanel.enable.info-request = 1
+        admPanel.enable.info_general = 1
+        admPanel.enable.info_php = 1
+        admPanel.enable.info_userint = 1
+        admPanel.enable.preview = 1
+        admPanel.enable.publish = 1
+        admPanel.enable.tsdebug = 1
+        admPanel.enable.typoscript-waterfall = 1
 
 
 :aspect:`Default`
