@@ -385,7 +385,7 @@ fileFolderConfig
    The same sub properties as in the `fileFolderConfig` TCA configuration are
    available:
 
-    .. code-block:: typoscript
+   .. code-block:: typoscript
 
        fileFolderConfig {
          folder = 'EXT:styleguide/Resources/Public/Icons'
