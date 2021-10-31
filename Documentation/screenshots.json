@@ -4,6 +4,7 @@
       "screenshots": {
         "_default": [
           {"action": "resizeWindow", "width": 1024,"height": 768},
+          {"action": "setScreenshotsDocumentationPath", "path": ""},
           {"action": "setScreenshotsImagePath","path": "Images/AutomaticScreenshots"},
           {"action": "setScreenshotsRstPath","path": "Images/AutomaticScreenshots"},
           {"action": "setCodeSnippetsSourcePath","path": "typo3conf/ext/styleguide"},
@@ -11,14 +12,14 @@
         ],
         "templatesModul": [
           {"include": "_default"},
-          {"action": "resizeWindow", "width": 640,"height": 400},
+          {"action": "resizeWindow", "width": 640,"height": 500},
           {"action": "setScreenshotsImagePath","path": "Images/AutomaticScreenshots/TemplatesModul"},
           {"action": "setScreenshotsRstPath","path": "Images/AutomaticScreenshots/TemplatesModul"},
           {"action": "amOnPage", "page": "/typo3/module/web/ts?id=1&SET[function]=TYPO3\\CMS\\Tstemplate\\Controller\\TypoScriptTemplateInformationModuleFunctionController&token=x"},
           {"action": "drawBox", "selector": ".t3js-module-docheader-bar-navigation select"},
           {"action": "drawBadge", "selector": ".t3js-module-docheader-bar-navigation .col .col", "label": "1", "position": "right"},
-          {"action": "drawBox", "selector": ".row.row-cols-auto.g-3 a"},
-          {"action": "drawBadge", "selector": ".row.row-cols-auto.g-3 a", "label": "2", "position": "right"},
+          {"action": "drawBox", "selector": "//a[contains(., 'Edit the whole')]"},
+          {"action": "drawBadge", "selector": "//a[contains(., 'Edit the whole')]", "label": "2", "position": "right"},
           {
             "action": "makeScreenshotOfElement",
             "fileName": "TemplatesStaticIncludes1",
@@ -31,6 +32,7 @@
           {
             "action": "makeScreenshotOfElement",
             "fileName": "TemplatesViewFullListingButton",
+            "selector": ".module-body",
             "altText": "\"View the complete TS listing\" button",
             "captionText": "\"View the complete TS listing\" button"
           },
@@ -82,33 +84,31 @@
             "altText": "Overview of the defined constants",
             "captionText": "Overview of the defined constants"
           },
-          {"action": "clearDrawings"}
+          {"action": "clearDrawings"},
+          {"action": "reloadBackend"}
         ],
         "templatesRecords": [
           {"include": "_default"},
-          {"action": "resizeWindow", "width": 640,"height": 768},
+          {"action": "resizeWindow", "width": 1024,"height": 2000},
           {"action": "setScreenshotsImagePath","path": "Images/AutomaticScreenshots/TemplatesRecords"},
           {"action": "setScreenshotsRstPath","path": "Images/AutomaticScreenshots/TemplatesRecords"},
           {"action": "setNavigationDefaultTable", "table": "sys_template"},
           {"action": "setNavigationDefaultUid", "uid": 2},
-          {"action": "wait", "timeout":  0.1},
-          {
-            "action": "GoToTable",
-            "pid": "1"
-          },
-          {"action": "switchToMainFrame"},
+          {"action": "see", "text": "List"},
+          {"action": "click", "link": "List"},
+          {"action": "openPageTreePath", "path": ["Congratulations"]},
           {"action": "click", "link":  "button.t3js-topbar-button-modulemenu"},
           {"action": "click", "link":  "Hide Navigation"},
           {"action": "switchToContentFrame"},
           {
             "action": "makeScreenshotOfElement",
-            "selector": ".recordlist",
+            "selector": "#t3-table-sys_template",
             "fileName": "TemplatesRecordListView",
             "captionText": "A TypoScript template as seen in the Web > List module",
             "altText": "A TypoScript template as seen in the Web > List module"
           },
           {"action": "goToRecord"},
-          {"action": "switchToContentFrame"},
+          {"action": "resizeWindow", "width": 640,"height": 768},
           {
             "action": "makeScreenshotOfElement",
             "fileName": "TemplatesInput",
@@ -118,11 +118,11 @@
           },
           {"action": "click", "link": "Includes"},
           {"action": "waitForText", "text": "Include static"},
+          {"action": "resizeWindow", "width": 640,"height": 768},
           {"action": "drawBox", "selector":  "a.nav-link.active"},
           {"action": "drawBadge", "selector":  "a.nav-link.active", "label":  "3"},
           {"action": "drawBox", "selector":  "//*[contains(@class, 'form-multigroup-item') and contains(., 'Available')]"},
           {"action": "drawBadge", "selector":  "//*[contains(@class, 'form-multigroup-item') and contains(., 'Available')]", "label":  "4"},
-          {"action": "resizeWindow", "width": 640,"height": 768},
           {
             "action": "makeScreenshotOfElement",
             "fileName": "TemplatesStaticIncludes2",
@@ -131,9 +131,9 @@
             "altText": "Screenshot of table sys_template"
           },
           {"action": "clearDrawings"},
+          {"action": "resizeWindow", "width": 640,"height": 1024},
           {"action": "drawBox", "selector":  "//*[contains(@class, 'form-group') and contains(., 'Include Basis Template')]"},
           {"action": "drawBadge", "selector":  "//*[contains(@class, 'form-group') and contains(., 'Include Basis Template')]", "label":  "1"},
-          {"action": "resizeWindow", "width": 640,"height": 1024},
           {
             "action": "makeScreenshotOfElement",
             "fileName": "TemplatesIncludes",
@@ -157,8 +157,6 @@
             "table": "tt_content",
             "uid": {"action": "getUidByField", "table": "tt_content", "field": "header", "value": "Deliver business value"}
           },
-          {"action": "click", "link":  "button.t3js-topbar-button-modulemenu"},
-          {"action": "switchToContentFrame"},
           {
             "action": "click",
             "link": "Images"
@@ -169,9 +167,7 @@
             "fileName": "ImageOrientation",
             "altText": "Media orientation Palette",
             "captionText": "Media orientation in the content elements such as text with images"
-          },
-          {"action": "switchToMainFrame"},
-          {"action": "click", "link":  "button.t3js-topbar-button-modulemenu"}
+          }
         ]
       }
     },
@@ -179,6 +175,7 @@
       "screenshots": {
         "_default": [
           {"action": "resizeWindow", "width": 1024,"height": 768},
+          {"action": "setScreenshotsDocumentationPath", "path": "Documentation"},
           {"action": "setScreenshotsImagePath","path": "Images/AutomaticScreenshots"},
           {"action": "setScreenshotsRstPath","path": "Images/AutomaticScreenshots"},
           {"action": "setCodeSnippetsSourcePath","path": "typo3conf/ext/styleguide"},
@@ -195,9 +192,6 @@
             "table": "tt_content",
             "uid": {"action": "getUidByField", "table": "tt_content", "field": "header", "value": "The TYPO3 Documentation Team"}
           },
-          {"action": "switchToMainFrame"},
-          {"action": "click", "link":  "button.t3js-topbar-button-modulemenu"},
-          {"action": "switchToContentFrame"},
           {
             "action": "click",
             "link": "Images"
@@ -208,10 +202,9 @@
             "fileName": "MediaHeight",
             "altText": "Media height and width in the content element Text and Images",
             "captionText": "Media height and width in the content element Text and Images"
-          },
-          {"action": "switchToMainFrame"},
-          {"action": "click", "link":  "button.t3js-topbar-button-modulemenu"}
-        ]}
+          }
+        ]
+      }
     }
   }
 }
