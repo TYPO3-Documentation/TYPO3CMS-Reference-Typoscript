@@ -4,7 +4,6 @@
       "screenshots": {
         "_default": [
           {"action": "resizeWindow", "width": 1024,"height": 768},
-          {"action": "setScreenshotsDocumentationPath", "path": ""},
           {"action": "setScreenshotsImagePath","path": "Images/AutomaticScreenshots"},
           {"action": "setScreenshotsRstPath","path": "Images/AutomaticScreenshots"},
           {"action": "setCodeSnippetsSourcePath","path": "typo3conf/ext/styleguide"},
@@ -175,7 +174,6 @@
       "screenshots": {
         "_default": [
           {"action": "resizeWindow", "width": 1024,"height": 768},
-          {"action": "setScreenshotsDocumentationPath", "path": "Documentation"},
           {"action": "setScreenshotsImagePath","path": "Images/AutomaticScreenshots"},
           {"action": "setScreenshotsRstPath","path": "Images/AutomaticScreenshots"},
           {"action": "setCodeSnippetsSourcePath","path": "typo3conf/ext/styleguide"},
