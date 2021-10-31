@@ -46,42 +46,30 @@
                 ],
                 "fileListExport": [
                     {"include": "_default"},
-                    {"action": "resizeWindow", "width": 640,"height": 480},
-                    {
-                        "action": "goToTable",
-                        "table": "tt_content",
-                        "pid" : {
-                            "action": "getUidByField",
-                            "table": "pages",
-                            "field": "title",
-                            "value": "with ExportRecordsLinks"
-                        }
-                    },
+                    {"action": "resizeWindow", "width": 1024,"height": 480},
+                    {"action": "see", "text": "List"},
+                    {"action": "click", "link": "List"},
+                    {"action": "openPageTreePath", "path": ["Root page", "TSconfig Reference", "with ExportRecordsLinks"]},
                     {"action": "switchToMainFrame"},
                     {"action": "click", "link":  "button.t3js-topbar-button-modulemenu"},
                     {
-                        "action": "makeScreenshotOfElement",
+                        "action": "makeScreenshotOfContentFrame",
                         "fileName": "WebList/WithExportButtons",
                         "captionText": "The list module with export buttons after activating the single-table mode"
                     },
+                    {"action": "switchToContentFrame"},
                     {"action": "click", "link": "//button[contains(.,'Download')]"},
                     {"action": "waitForModalDialogInMainFrame"},
                     {
                         "action": "makeScreenshotOfElement",
                         "fileName": "WebList/ExportDialog"
                     },
+                    {"action": "click", "link": "Cancel"},
+                    {"action": "switchToMainFrame"},
+                    {"action": "openPageTreePath", "path": ["Root page", "TSconfig Reference", "no ExportRecordsLinks"]},
+                    {"action": "switchToContentFrame"},
                     {
-                        "action": "goToTable",
-                        "table": "tt_content",
-                        "pid" : {
-                            "action": "getUidByField",
-                            "table": "pages",
-                            "field": "title",
-                            "value": "no ExportRecordsLinks"
-                        }
-                    },
-                    {
-                        "action": "makeScreenshotOfElement",
+                        "action": "makeScreenshotOfContentFrame",
                         "fileName": "WebList/NoExportButtons",
                         "captionText": "The list module without export buttons after activating the single-table mode"
                     },
