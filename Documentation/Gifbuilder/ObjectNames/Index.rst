@@ -37,7 +37,7 @@ different each time!
          x,y +calc /:ref:`stdWrap <stdwrap>`
 
    Default
-         100,20
+         120,50
 
    Description
          Size of the image file.
