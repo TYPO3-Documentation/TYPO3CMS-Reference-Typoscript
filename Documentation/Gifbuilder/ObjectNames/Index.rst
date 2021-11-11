@@ -34,7 +34,7 @@ different each time!
          XY
 
    Data type
-         x,y +calc /:ref:`stdWrap <stdwrap>`
+         x,y +calc (1-2000) /:ref:`stdWrap <stdwrap>`
 
    Default
          100,20
