@@ -28,7 +28,7 @@ The following data will be available in the called Fluid template:
    *  On page level it contains the current page record. 
    *  If the :typoscript:`FLUIDTEMPLATE` is used in the 
       context of the Fluid ViewHelper :html:`<f:cObject>` it contains the data set 
-      in the Fluid Property :ref:`data <<t3viewhelper:cobject_data>`.
+      in the Fluid Property :ref:`data <t3viewhelper:cobject_data>`.
    *  If called in the context of Extbase it contains the data assigned to the view 
       in the :ref:`Controller <t3extbasebook:controllers>`.
       
