@@ -25,8 +25,7 @@ The following data will be available in the called Fluid template:
 
 *  The content of the current :php:`data` array. 
 
-   *  On page level it would contain
-      the content of the current page record. 
+   *  On page level it contains the current page record. 
    *  If the FLUIDTEMPLATE is used in the 
       context of the Fluid ViewHelper :html:`<f:cObject>` it contains the data set 
       in the Fluid Property :ref:`data <<t3viewhelper:cobject_data>`.
