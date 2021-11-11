@@ -40,7 +40,7 @@ The following data will be available in the called Fluid template:
    :ref:`data processors <cobj-fluidtemplate-properties-dataprocessing>`
    
 You can use the ViewHelper :ref:`debug <t3viewhelper:typo3fluid-fluid-debug>` to 
-receive a complete listing of the availible data:
+receive a complete listing of the available data using the magic `{_all}` variable:
 
 .. code-block:: html
 
