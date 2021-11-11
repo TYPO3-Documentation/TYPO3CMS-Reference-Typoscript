@@ -18,8 +18,33 @@ It can be used in :ref:`content elements <t3coreapi:adding-your-own-content-elem
 or to generate content within the top-level object page
 (see :ref:`the example on this page <cobj-fluidtemplate-examples>`).
 
-The functionality can be further augmented and customized with
-:ref:`data processors <cobj-fluidtemplate-properties-dataprocessing>`.
+Data available in Fluid templates
+=================================
+
+The following data will be available in the called Fluid template:
+
+*  The content of the current :php:`data` array. 
+
+   *  On page level it contains the current page record. 
+   *  If the :typoscript:`FLUIDTEMPLATE` is used in the 
+      context of the Fluid ViewHelper :html:`<f:cObject>` it contains the data set 
+      in the Fluid Property :ref:`data <t3viewhelper:cobject_data>`.
+   *  If called in the context of Extbase it contains the data assigned to the view 
+      in the :ref:`Controller <t3extbasebook:controllers>`.
+      
+*  The :php:`settings` array set by the parameter 
+   :ref:`settings <cobj-fluidtemplate-properties-settings>`
+*  Variables set by the setting 
+   :ref:`variables <cobj-fluidtemplate-properties-variables>`
+*  Additional data retrieved by 
+   :ref:`data processors <cobj-fluidtemplate-properties-dataprocessing>`
+   
+You can use the ViewHelper :ref:`debug <t3viewhelper:typo3fluid-fluid-debug>` to 
+receive a complete listing of the available data using the magic `{_all}` variable:
+
+.. code-block:: html
+
+   <f:debug>{_all}</f:debug>
 
 .. contents:: On this page:
    :local:
