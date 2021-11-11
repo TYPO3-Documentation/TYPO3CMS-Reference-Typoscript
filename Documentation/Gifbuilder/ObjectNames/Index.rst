@@ -1174,6 +1174,9 @@ Renders an image file.
    Data type
          x,y /:ref:`stdWrap <stdwrap>`
 
+   Default
+         1,1
+
    Description
          Repeat the image x,y times (which creates the look of tiles).
 
@@ -1244,6 +1247,7 @@ Example:
      file {
        XY = 1024,768
        format = jpg
+
        10 = IMAGE
        10.file = fileadmin/image.jpg
 
