@@ -26,7 +26,7 @@ The following data will be available in the called Fluid template:
 *  The content of the current :php:`data` array. 
 
    *  On page level it contains the current page record. 
-   *  If the :ts:`FLUIDTEMPLATE` is used in the 
+   *  If the :typoscript:`FLUIDTEMPLATE` is used in the 
       context of the Fluid ViewHelper :html:`<f:cObject>` it contains the data set 
       in the Fluid Property :ref:`data <<t3viewhelper:cobject_data>`.
    *  If called in the context of Extbase it contains the data assigned to the view 
