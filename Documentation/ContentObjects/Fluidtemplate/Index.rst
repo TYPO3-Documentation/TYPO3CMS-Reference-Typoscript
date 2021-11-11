@@ -16,8 +16,6 @@ templating engine.
    The content object FLUIDTEMPLATE has replaced `TEMPLATE
    <https://docs.typo3.org/m/typo3/reference-typoscript/10.4/en-us/ContentObjects/Template/Index.html>`__
    which was removed with version 11.0.
-   `TEMPLATE <https://docs.typo3.org/m/typo3/reference-typoscript/10.4/en-us/ContentObjects/Template/Index.html>`__ 
-   content object. Which was removed with version 11.0.
 
 FLUIDTEMPLATE generates content using Fluid templates.
 It can be used in :ref:`content elements <t3coreapi:adding-your-own-content-elements>`
