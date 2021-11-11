@@ -121,9 +121,12 @@ extbase.controllerExtensionName
 
    Sets the extension name of the controller.
 
-   **Important:** This is for example essential if you have translations at the
-   usual paths in your extension and want to use them right away in your
-   template via `<f:translate/>`.
+   .. tip::
+      Setting this allows you to skip the `extensionName` argument for the
+      :ref:`<t3vh:translate>` and the :ref:`<t3vh:uri-resource>` viewhelpers.
+      
+      This requires you to put translations and public images in the
+      :ref:`usual paths in your extension <t3coreapi:reserved-folders>`.
 
 
 .. index:: FLUIDTEMPLATE; extbase.controllerName
