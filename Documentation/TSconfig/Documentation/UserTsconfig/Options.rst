@@ -799,6 +799,21 @@ pageTree.doktypesToShowInNewPageDragArea
 :aspect:`Default`
    1,6,4,7,3,254,255,199
 
+.. index:: Page tree; Exclude doktypes
+.. _useroptions-pageTree-excludeDoktypes:
+
+pageTree.excludeDoktypes
+------------------------
+:aspect:`Datatype`
+   list of integers
+
+:aspect:`Description`
+   Excludes nodes (pages) with one of the defined doktypes from the pagetree. Can be used for example for hiding custom doktypes.
+
+:aspect:`Example`
+   .. code-block:: typoscript
+
+      options.pageTree.excludeDoktypes = 254,1
 
 .. todo:: does this still work with site configuration?
 .. index:: Page tree; Show domain names
