@@ -299,21 +299,21 @@ config.treeConfig
 
     .. code-block:: typoscript
 
-        config.treeConfig.rootUid
-        config.treeConfig.appearance.expandAll
-        config.treeConfig.appearance.maxLevels
-        config.treeConfig.appearance.nonSelectableLevels
+        config.treeConfig.startingPoints = 1,42
+        config.treeConfig.appearance.expandAll = 1
+        config.treeConfig.appearance.maxLevels = 2
+        config.treeConfig.appearance.nonSelectableLevels = 1
 
     This property is available for various levels:
 
     table level, example:
-        `TCEFORM.tt_content.myField.config.treeConfig.rootUid`
+        `TCEFORM.tt_content.myField.config.treeConfig.startingPoints`
 
     table and record type level, example:
-        `TCEFORM.tt_content.header.types.config.treeConfig.rootUid`
+        `TCEFORM.tt_content.header.types.config.treeConfig.startingPoints`
 
     Flex form field level, example:
-        `TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.myField.config.treeConfig.rootUid`
+        `TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.myField.config.treeConfig.startingPoints`
 
         Where `sDEF` is the sheet name.
 
