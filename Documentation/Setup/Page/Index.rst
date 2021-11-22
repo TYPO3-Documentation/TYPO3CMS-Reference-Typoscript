@@ -927,7 +927,7 @@ meta
                            2 = de_DE
                         }
                      }
-                     refresh = 5; url=http://example.com/
+                     refresh = 5; url=https://example.org/
                      refresh.attribute = http-equiv
                   }
               }
