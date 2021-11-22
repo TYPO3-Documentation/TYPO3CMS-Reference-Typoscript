@@ -846,7 +846,7 @@ hash
 
             page.10 = TEXT
             page.10 {
-              value = test@example.com
+              value = test@example.org
               stdWrap.hash = md5
               stdWrap.wrap = <img src="http://www.gravatar.com/avatar/|" />
             }

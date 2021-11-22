@@ -112,7 +112,7 @@ retrieved by PHP based on :php:`getenv('REMOTE_HOST')`.
 
 Value is comma-list of domain names to match with. \*-wildcard allowed
 but cannot be part of a string, so it must match the full host name
-(e.g. myhost.\*.com => correct, myhost.\*domain.com => wrong)
+(e.g. login.\*.org => correct, login.\*example.org => wrong)
 
 
 .. _condition-applicationcontext:
