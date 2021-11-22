@@ -1000,7 +1000,7 @@ page content record of the type "FORMMAIL"::
   mail header.
 
 - "redirect": With this option you can define a TYPO3 page (page id) or
-  external URL (example.org) as redirect URL after submit. If this
+  external URL (:samp:`https://example.org`) as redirect URL after submit. If this
   option isn't set the form will be shown again.
 
 - "priority": With this option you can set the priority of the mail from
