@@ -78,12 +78,12 @@ page
       [page["uid"] in [17,24]]
       # Check range of pages (example: page uid from 10 to 20)
       [page["uid"] in 10..20]
-      
+
       # Check the page backend layout
       [page["backend_layout"] == 5]
       [page["backend_layout"] == "example_layout"]
-      
-      # Check the page title 
+
+      # Check the page title
       [page["title"] == "foo"]
 
 .. index:: Conditions; Constant
@@ -928,7 +928,7 @@ request.getNormalizedParams()
           Ist bei mir leer gewesen
 
       ``getHttpReferer()``
-          If enabled, delivers the prior visited url, e.g. ``typo395.ddev.local/typo3/index.php``
+          If enabled, delivers the prior visited url, e.g. ``example.local/typo3/index.php``
 
       ``getHttpUserAgent()``
           Example: ``Mozilla/5.0 (X11; Linux x86_64) Chrome/73.0.3683.86 Safari/537.36``
@@ -952,7 +952,7 @@ request.getNormalizedParams()
 
    ::
 
-      [request.getNormalizedParams().getHttpHost() == "typo395.ddev.local"]
+      [request.getNormalizedParams().getHttpHost() == "example.local"]
 
 
 
@@ -1396,7 +1396,7 @@ site
       [traverse(site("configuration"), "myCustomProperty") == true]
 
 .. warning::
-   It might seem straight-forward to use `site("configuration")["myCustomProperty"]` to access 
+   It might seem straight-forward to use `site("configuration")["myCustomProperty"]` to access
    configuration properties. However, if the property has not been set, this will trigger a runtime
    exception, and your log will fill up quickly. Using :ref:`condition-function-traverse` will silence the error messages.
 
