@@ -697,7 +697,7 @@ request.getNormalizedParams()
           Ist bei mir leer gewesen
 
       ``getHttpReferer()``
-          If enabled, delivers the prior visited url, e.g. ``example.local/typo3/index.php``
+          If enabled, delivers the prior visited url, e.g. ``example.localhost/typo3/index.php``
 
       ``getHttpUserAgent()``
           Example: ``Mozilla/5.0 (X11; Linux x86_64) Chrome/73.0.3683.86 Safari/537.36``
@@ -721,7 +721,7 @@ request.getNormalizedParams()
 
    ::
 
-      [request.getNormalizedParams().getHttpHost() == "example.local"]
+      [request.getNormalizedParams().getHttpHost() == "example.localhost"]
 
 
 
