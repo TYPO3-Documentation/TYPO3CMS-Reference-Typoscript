@@ -1650,7 +1650,7 @@ generated from this array, which was returned from the function
      20:                      ),
      21:                      array(
      22:                          'title' => 'New York Office',
-     23:                          '_OVERRIDE_HREF' => 'http://www.example.com',
+     23:                          '_OVERRIDE_HREF' => 'https://example.com',
      24:                          '_OVERRIDE_TARGET' => '_blank',
      25:                      )
      26:                  )
