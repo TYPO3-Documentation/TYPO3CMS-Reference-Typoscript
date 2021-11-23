@@ -150,7 +150,7 @@ absRefPrefix
 
          3. Prefixing all links with a URI scheme::
 
-              config.absRefPrefix = http://example.com/
+              config.absRefPrefix = https://example.org/
 
 
 .. index:: config; additionalHeaders
