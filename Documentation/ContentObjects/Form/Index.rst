@@ -102,7 +102,7 @@ Example:
        100.type = submit=submit
        100.value = Absenden
      }
-     recipient = info@example.com
+     recipient = info@example.org
      layout = <div class="some-class">###LABEL### ###FIELD###</div>
    }
 
@@ -1000,7 +1000,7 @@ page content record of the type "FORMMAIL"::
   mail header.
 
 - "redirect": With this option you can define a TYPO3 page (page id) or
-  external URL (www.example.com) as redirect URL after submit. If this
+  external URL (:samp:`https://example.org`) as redirect URL after submit. If this
   option isn't set the form will be shown again.
 
 - "priority": With this option you can set the priority of the mail from

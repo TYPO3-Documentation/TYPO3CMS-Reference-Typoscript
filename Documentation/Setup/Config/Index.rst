@@ -188,7 +188,7 @@ absRefPrefix
 
          3. Prefixing all links with a URI scheme::
 
-              config.absRefPrefix = http://example.com/
+              config.absRefPrefix = https://example.org/
 
          **Special keyword:** "auto" (Since TYPO3 CMS 7.1)
          lets TYPO3 autodetect the site root based
@@ -2974,7 +2974,7 @@ typolinkEnableLinksAcrossDomains
          If this option is not set, then all cross-domain links will be
          generated as
 
-         "http://domain.tld/index.php?id=12345" (where 12345 is page id).
+         :samp:`https://example.com/index.php?id=12345` (where 12345 is page id).
          Setting this option requires that domains, where pages are linked,
          have the same configuration for:
 
