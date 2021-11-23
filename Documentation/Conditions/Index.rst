@@ -544,11 +544,11 @@ request.getQueryParams()
    Check if query parameter skipSessionUpdate equals 1::
 
       [request.getQueryParams()['skipSessionUpdate'] == 1]
-      
+
    Safely check query parameter array to avoid error logs in case key is not
    defined (see :ref:`condition-function-traverse`). This will check if
    `tx_news_pi1['news'] > 0`::
-   
+
       [traverse(request.getQueryParams(), 'tx_news_pi1/news') > 0]
 
 .. _condition-function-request-getParsedBody():
@@ -697,7 +697,7 @@ request.getNormalizedParams()
           Ist bei mir leer gewesen
 
       ``getHttpReferer()``
-          If enabled, delivers the prior visited url, e.g. ``typo395.ddev.local/typo3/index.php``
+          If enabled, delivers the prior visited url, e.g. ``example.local/typo3/index.php``
 
       ``getHttpUserAgent()``
           Example: ``Mozilla/5.0 (X11; Linux x86_64) Chrome/73.0.3683.86 Safari/537.36``
@@ -721,9 +721,9 @@ request.getNormalizedParams()
 
    ::
 
-      [request.getNormalizedParams().getHttpHost() == "typo395.ddev.local"]
- 
- 
+      [request.getNormalizedParams().getHttpHost() == "example.local"]
+
+
 
 .. _condition-function-request-getPageArguments():
 
@@ -738,17 +738,17 @@ request.getPageArguments()
 
 :aspect:`Type`
    Array
- 
+
 :aspect:`Description`
    Get current `PageArguments` object with resolved route parts from enhancers.
-   
+
 :aspect:`Example`
    [request.getPageArguments().get('foo_id') > 0]
-   
+
    Allows migration from old condition syntax using `[globalVar = GP:singlepartner > 0]`
    to `[request.getPageArguments().get('singlepartner') > 0]`.
-   
-   
+
+
 Functions in all contexts
 -------------------------
 
@@ -1078,7 +1078,7 @@ site
       Returns array of available and unavailable languages for current site.
       For deeper information, see :ref:`condition-functions-in-frontend-context-function-siteLanguage`.
 
-   site("defaultLanguage") 
+   site("defaultLanguage")
       Returns the default language for current site.
       For deeper information, see :ref:`condition-functions-in-frontend-context-function-siteLanguage`.
 

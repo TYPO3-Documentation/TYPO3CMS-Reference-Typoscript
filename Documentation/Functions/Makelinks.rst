@@ -11,9 +11,9 @@ makelinks substitutes all appearances of web addresses or mail links
 with a real link-tag. Web addresses and mail links must be contained in
 the text in the following form::
 
-   http://www.example.com
+   https://example.org
 
-   mailto:name@example.com
+   mailto:name@example.org
 
 
 .. _makelinks-http-extTarget:
@@ -80,13 +80,13 @@ http.keep
    As default the link-text will be the full domain-name of the link.
 
 :aspect:`Example`
-   With the URL http://www.example.com/test/doc.php?id=3 in our text we will
+   With the URL :samp:`https://example.org/test/doc.php?id=3` in our text we will
    get the following results::
 
-      http.keep = "":                   www.example.com
-      http.keep = "scheme":             http://www.example.com
-      http.keep = "scheme,path":        http://www.example.com/test/doc.php
-      http.keep = "scheme,path,query":  http://www.example.com/test/doc.php?id=3
+      http.keep = "":                   example.org
+      http.keep = "scheme":             https://example.org
+      http.keep = "scheme,path":        https://example.org/test/doc.php
+      http.keep = "scheme,path,query":  https://example.org/test/doc.php?id=3
 
 .. _makelinks-http-ATagParams:
 
