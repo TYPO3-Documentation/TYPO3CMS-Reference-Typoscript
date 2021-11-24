@@ -774,16 +774,16 @@ style regular expression (must be wrapped in "/") to the value.
 Examples:
 ~~~~~~~~~
 
-If the HTTP\_HOST is "www.typo3.org" this will match with::
+If the HTTP\_HOST is "www.example.org" this will match with::
 
-   [globalString = IENV:HTTP_HOST = www.typo3.org]
+   [globalString = IENV:HTTP_HOST = www.example.org]
 
 This will also match with it::
 
-   [globalString = IENV:HTTP_HOST = *typo3.org]
+   [globalString = IENV:HTTP_HOST = *example.org]
 
 ... but this will also match with an HTTP\_HOST like this:
-"demo.typo3.org"
+"demo.example.org"
 
 If HTTP\_REFERER is set to an empty value, this will match with it::
 

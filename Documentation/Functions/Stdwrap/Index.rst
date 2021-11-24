@@ -795,7 +795,7 @@ char
          string containing the character specified by ascii code. Reliable
          results will be obtained only for character codes in the integer
          range 0 - 127. See
-         `the PHP manual <http://php.net/manual/en/function.chr.php>`_:
+         `the PHP manual <https://www.php.net/manual/en/function.chr.php>`_:
 
          .. code-block:: php
 
@@ -839,8 +839,7 @@ hash
    Description
          Returns a hashed value of the current content. Set to one of the
          algorithms which are available in PHP. For a list of supported
-         algorithms see `http://www.php.net/manual/en/function.hash-algos.php
-         <http://www.php.net/manual/en/function.hash-algos.php>`_ .
+         algorithms see https://www.php.net/manual/en/function.hash-algos.php.
 
          **Example:** ::
 
@@ -848,7 +847,7 @@ hash
             page.10 {
               value = test@example.org
               stdWrap.hash = md5
-              stdWrap.wrap = <img src="http://www.gravatar.com/avatar/|" />
+              stdWrap.wrap = <img src="https://www.gravatar.com/avatar/|" />
             }
 
 
@@ -911,8 +910,8 @@ date
 
          Properties:
 
-         **.GMT:** If set, the PHP function `gmdate() <http://www.php.net/gmdate>`_ will be
-         used instead of `date() <http://www.php.net/date>`_.
+         **.GMT:** If set, the PHP function `gmdate() <https://www.php.net/gmdate>`_ will be
+         used instead of `date() <https://www.php.net/manual/en/function.date.php>`_.
 
    Example
          Render in human readable form::
@@ -939,7 +938,7 @@ strftime
          :ref:`data-type-strftime-conf` /stdWrap
 
    Description
-         Exactly like "date" above. See the PHP manual (`strftime <http://www.php.net/strftime>`_) for the
+         Exactly like "date" above. See the PHP manual (`strftime <https://www.php.net/strftime>`_) for the
          codes, or data type ":ref:`data-type-strftime-conf`".
 
          This formatting is useful if the locale is set in advance in the
@@ -952,8 +951,8 @@ strftime
          intelligently guessed charset from
          TYPO3\CMS\Core\Charset\CharsetConverter.
 
-         **.GMT:** If set, the PHP function `gmstrftime() <http://www.php.net/gmstrftime>`_ will be used instead
-         of `strftime() <http://www.php.net/strftime>`_.
+         **.GMT:** If set, the PHP function `gmstrftime() <https://www.php.net/gmstrftime>`_ will be used instead
+         of `strftime() <https://www.php.net/strftime>`_.
 
 
 .. _stdwrap-strtotime:
@@ -1210,7 +1209,7 @@ substring
          [p1], [p2] /stdWrap
 
    Description
-         Returns the substring with [p1] and [p2] sent as the 2nd and 3rd parameter to the PHP `mb_substr <http://www.php.net/mb_substr>`_ function. Uses "UTF-8" for the operation.
+         Returns the substring with [p1] and [p2] sent as the 2nd and 3rd parameter to the PHP `mb_substr <https://www.php.net/mb_substr>`_ function. Uses "UTF-8" for the operation.
 
 
 .. _stdwrap-removebadhtml:
@@ -1339,7 +1338,7 @@ rawUrlEncode
          boolean /stdWrap
 
    Description
-         Passes the content through the PHP function `rawurlencode() <http://www.php.net/rawurlencode>`_.
+         Passes the content through the PHP function `rawurlencode() <https://www.php.net/rawurlencode>`_.
 
 
 .. _stdwrap-htmlspecialchars:
@@ -1356,7 +1355,7 @@ htmlSpecialChars
          boolean /stdWrap
 
    Description
-         Passes the content through the PHP function `htmlspecialchars() <http://www.php.net/htmlspecialchars>`_.
+         Passes the content through the PHP function `htmlspecialchars() <https://www.php.net/htmlspecialchars>`_.
 
          Additional property ".preserveEntities" will preserve entities so only
          non-entity characters are affected.
@@ -1426,7 +1425,7 @@ br
          boolean /stdWrap
 
    Description
-         Pass the value through the PHP function `nl2br() <http://www.php.net/nl2br>`_. This
+         Pass the value through the PHP function `nl2br() <https://www.php.net/nl2br>`_. This
          converts each line break to a <br /> or a <br> tag depending on doctype.
 
 
