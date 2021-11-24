@@ -219,7 +219,7 @@ HTMLparser\_tags
          **Example:**
 
          ...fixAttrib.src.prefixRelPathWith =
-         http://192.168.230.3/typo3/32/dummy/
+         https://example.org/typo3/32/dummy/
 
 
 .. container:: table-row

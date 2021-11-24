@@ -942,10 +942,10 @@ page content record of the type "FORMMAIL"::
 
    | html_enabled=hidden | 1
    | subject=hidden| This is the subject
-   | recipient_copy=hidden | copy@email.com
+   | recipient_copy=hidden | copy@example.org
    | auto_respond_msg=hidden|  Hello / We have received your mail.
    | from_name=hidden | Website XY
-   | from_email=hidden | noreply@website.com
+   | from_email=hidden | noreply@example.org
    | organization=hidden | Organization XY
    | redirect=hidden | 16
    | priority=hidden | 5

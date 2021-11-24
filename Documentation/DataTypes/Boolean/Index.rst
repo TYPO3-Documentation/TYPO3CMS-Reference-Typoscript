@@ -19,7 +19,7 @@ boolean
    Non-empty strings (except `0` [zero]) are treated as TRUE,
    empty strings are evaluated to FALSE.
 
-   __ http://php.net/manual/en/language.types.boolean.php
+   __ https://www.php.net/manual/en/language.types.boolean.php
 
 
 :aspect:`Examples:`

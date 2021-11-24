@@ -9,7 +9,7 @@ TypoScript Template Reference
 =============================
 
 .. rst-class:: horizbuttons-primary-m
- 
+
 * :ref:`CONFIG <config>`
 * :ref:`cobj-content`
 * :ref:`cobj-fluidtemplate`
@@ -39,7 +39,7 @@ TypoScript Template Reference
 
 :License:
       Open Publication License available from `www.opencontent.org/openpub/
-      <http://www.opencontent.org/openpub/>`_
+      <https://www.opencontent.org/openpub/>`_
 
 The content of this document is related to TYPO3,
 
