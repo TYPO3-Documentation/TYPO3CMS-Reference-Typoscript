@@ -23,7 +23,7 @@ exclude
     list of identifiers / uids
 
 :aspect:`Description`
-    Exclude a list of backend layouts form being selectable when assigning a backend layout
+    Exclude a list of backend layouts from being selectable when assigning a backend layout
     to a page record.
 
     Use the uid/identifier of the record in the default data provider.
