@@ -134,7 +134,7 @@ absRefPrefix
          **Note:** If you're working on a server where you have different domain
          names or different path segments leading to the same page (e.g. for internal
          and external access), you might do yourself a favor and set `absRefPrefix` to
-         the URL and path of your site, e.g. `https://typo3.org/`. If you do not,
+         the URL and path of your site, e.g. :samp:`https://example.org/`. If you do not,
          you risk to render pages to cache from the internal network and thereby
          prefix image-references and links with a wrong path or a path not accessible
          from outside.
@@ -281,7 +281,7 @@ baseURL
    Example
          ::
 
-            config.baseURL = http://typo3.org/sub_dir/
+            config.baseURL = https://example.org/sub_dir/
 
 
 .. index:: config; cache
