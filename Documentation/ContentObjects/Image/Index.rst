@@ -164,7 +164,7 @@ layoutKey
 
          - :ts:`srcset` renders an image tag pointing to a set of images for the different resolutions.
            They are referenced inside the :ts:`srcset` attribute the :html:`<img>` tag for each defined resolution.
-           Each image is actually rendered by TYPO3. Srcset is a proposed addition to HTML5 (http://www.w3.org/html/wg/drafts/srcset/w3c-srcset/).
+           Each image is actually rendered by TYPO3. Srcset is a proposed addition to HTML5 (https://www.w3.org/TR/html-srcset/).
 
            .. code-block:: text
 

@@ -153,7 +153,7 @@ short
 
       short {
             T3 = TYPO3 CMS
-            T3web = <a href="http://typo3.org">typo3.org</a>
+            T3web = <a href="https://typo3.org">typo3.org</a>
       }
 
 .. _parsefunc-plainTextStdWrap:
