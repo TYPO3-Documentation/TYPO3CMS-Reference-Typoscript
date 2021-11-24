@@ -346,18 +346,18 @@ getIndpEnv
    ===================== ============================================================================= =================
    \_ARRAY               Return an array with all available key-value pairs for debugging purposes
    HTTP_ACCEPT_LANGUAGE  language(s) accepted by client
-   HTTP_HOST             [host][:[port]]                                                               `192.168.1.4:8080`
-   HTTP_REFERER          [scheme]://[host][:[port]][path]                                              `http://192.168.1.4:8080/typo3/32/temp/phpcheck/index.php/arg1/arg2/arg3/?arg1,arg2,arg3&p1=parameter1&p2[key]=value`
+   HTTP_HOST             [host][:[port]]                                                               :samp:`example.org:8080`
+   HTTP_REFERER          [scheme]://[host][:[port]][path]                                              :samp:`https://example.org:8080/typo3/32/temp/phpcheck/index.php/arg1/arg2/arg3/?arg1,arg2,arg3&p1=parameter1&p2[key]=value`
    HTTP_USER_AGENT       client user agent
-   PATH_INFO             [path_info]                                                                   `/arg1/arg2/arg3/`
-   QUERY_STRING          [query]                                                                       `arg1,arg2,arg3&p1=parameter1&p2[key]=value`
+   PATH_INFO             [path_info]                                                                   :samp:`/arg1/arg2/arg3/`
+   QUERY_STRING          [query]                                                                       :samp:`arg1,arg2,arg3&p1=parameter1&p2[key]=value`
    REMOTE_ADDR           client IP
    REMOTE_HOST           client host
-   REQUEST_URI           [path]?[query]                                                                `/typo3/32/temp/phpcheck/index.php/arg1/arg2/arg3/?arg1,arg2,arg3&p1=parameter1&p2[key]=value`
+   REQUEST_URI           [path]?[query]                                                                :samp:`/typo3/32/temp/phpcheck/index.php/arg1/arg2/arg3/?arg1,arg2,arg3&p1=parameter1&p2[key]=value`
    SCRIPT_FILENAME       absolute filename of script
-   SCRIPT_NAME           [path_script]                                                                 `/typo3/32/temp/phpcheck/[index.php]`
+   SCRIPT_NAME           [path_script]                                                                 :samp:`/typo3/32/temp/phpcheck/[index.php]`
    TYPO3_DOCUMENT_ROOT   absolute path of root of documents
-   TYPO3_HOST_ONLY       [host]                                                                        `192.168.1.4`
+   TYPO3_HOST_ONLY       [host]                                                                        :samp:`example.org`
    TYPO3_PORT            [port]                                                                        `8080`
    TYPO3_REQUEST_DIR     [scheme]://[host][:[port]][path_dir]
    TYPO3_REQUEST_HOST    [scheme]://[host][:[port]]
@@ -675,7 +675,7 @@ siteLanguage
    :ts:`direction`        The direction for this language
    :ts:`flagIdentifier`   The flag key (like "gb" or "fr") used to be used in TYPO3's Backend.
    :ts:`hreflang`         Language tag for this language defined by RFC 1766 / 3066 for "lang"  and "hreflang" attributes
-   :ts:`languageId`       The language mapped to id of the site languge, as defined in the :ref:`config.yaml languageId <languageid>` 
+   :ts:`languageId`       The language mapped to id of the site languge, as defined in the :ref:`config.yaml languageId <languageid>`
    :ts:`locale`           Locale, like 'de_CH' or 'en_GB'
    :ts:`navigationTitle`  Label to be used within language menus
    :ts:`title`            Label to be used within TYPO3 to identify the language

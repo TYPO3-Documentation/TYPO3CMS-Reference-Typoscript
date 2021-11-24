@@ -291,11 +291,11 @@ parameter
       replaces the second value (the target). This makes it possible to
       define a class (third value) without having to define a target::
 
-         parameter = http://typo3.org/ - specialLink
+         parameter = https://example.com/ - specialLink
 
    5. A mailto link with a title attribute (but no target and no class)::
 
-         parameter = mailto:info@typo3.org - - "Send a mail to main TYPO3 contact"
+         parameter = mailto:info@example.org - - "Send a mail to main TYPO3 contact"
 
 
    As you can see from the examples, each significant part of the
@@ -316,7 +316,7 @@ parameter
 
       -  `http(s)://`: regular external links
 
-      -  `mailto:info@typo3.org`: regular mailto links
+      -  `mailto:info@example.org`: regular mailto links
 
       It's also possible to direct the typolink to use a custom function (a
       "link handler") to build the link. This is described in more detail
@@ -610,7 +610,7 @@ The page identifier is a compound string based on several optional settings.
    The **uid** of a page record, or "current" to reference the current page.
 
    `t3://page?uid=13`
-   
+
    `t3://page?uid=current`
 
 :aspect:`alias` (string):
