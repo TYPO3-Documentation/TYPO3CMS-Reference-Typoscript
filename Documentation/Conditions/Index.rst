@@ -641,35 +641,35 @@ request.getNormalizedParams()
 :aspect:`Description`
    Provides access to NormalizedParams object which contains a bunch of methods:
       ``getHttpHost()``
-          Example: ``docs.typo3.org``
+          Example: ``www.example.org``
 
       ``isHttps()``
          Returns boolean whether SSL was used.
 
       ``getRequestHost()``
-          Example: ``docs.typo3.org``
+          Example: ``www.example.org``
 
       ``getRequestHostOnly()``
-          Example: ``docs.typo3.org``
+          Example: ``www.example.org``
 
       ``getRequestPort()``
           Returns the port, mostly ``80`` or ``443``, but can be whatever is
           configured.
 
       ``getScriptName()``
-          Example: ``/typo3/index.php``
+          Example: :samp:`/typo3/index.php`
 
       ``getRequestUri()``
-          Example: ``/typo3/index.php?route=%2Fajax%2Fsystem-information%2Frender``
+          Example: :samp:`/typo3/index.php?route=%2Fajax%2Fsystem-information%2Frender`
 
       ``getRequestUrl()``
-          Example: ``https://typo3.org/typo3/index.php?route=%2Fajax%2Fsystem-information%2Frender``
+          Example: :samp:`https://example.org/typo3/index.php?route=%2Fajax%2Fsystem-information%2Frender`
 
       ``getRequestScript()``
-          Example: ``https://typo3.org/typo3/index.php``
+          Example: :samp:`https://example.org/typo3/index.php`
 
       ``getRequestDir()``
-          Example: ``https://typo3.org/typo3/``
+          Example: :samp:`https://example.org/typo3/`
 
       ``isBehindReverseProxy()``
           Returns boolean.
@@ -684,7 +684,7 @@ request.getNormalizedParams()
           Example: ``/var/www/html/public``
 
       ``getSiteUrl()``
-          Example: ``typo3.org``
+          Example: ``example.org``
 
       ``getSitePath()``
           Example: ``/``
@@ -697,7 +697,7 @@ request.getNormalizedParams()
           Ist bei mir leer gewesen
 
       ``getHttpReferer()``
-          If enabled, delivers the prior visited url, e.g. :samp:`example.localhost/typo3/index.php`
+          If enabled, delivers the prior visited url, e.g. :samp:`example.org/typo3/index.php`
 
       ``getHttpUserAgent()``
           Example: ``Mozilla/5.0 (X11; Linux x86_64) Chrome/73.0.3683.86 Safari/537.36``
@@ -721,7 +721,7 @@ request.getNormalizedParams()
 
    ::
 
-      [request.getNormalizedParams().getHttpHost() == "example.localhost"]
+      [request.getNormalizedParams().getHttpHost() == "example.org"]
 
 
 
@@ -956,7 +956,7 @@ getenv
 :aspect:`Example`
    ::
 
-      [getenv("VIRTUAL_HOST") == "docs.typo3.org"]
+      [getenv("VIRTUAL_HOST") == "www.example.org"]
 
 .. _condition-function-feature:
 
@@ -1092,7 +1092,7 @@ site
 
    Matches if site base host::
 
-      [site("base").getHost() == "docs.typo3.org"]
+      [site("base").getHost() == "www.example.org"]
 
    Base path::
 

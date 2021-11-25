@@ -62,7 +62,7 @@ Example::
 In the frontend, the original URLs that are generated will include the type and
 an id parameter (for the page id), example (for json and page id 22):
 
-``/index.php?id=22&type=1``
+:samp:`/index.php?id=22&type=1`
 
 
 Guidelines
@@ -480,7 +480,7 @@ includeCSSLibs.[array]
 
          The file definition must be a valid :ref:`data-type-resource` data type,
          otherwise nothing is inserted. This means that remote files cannot be referenced
-         (i.e. using `https://...`), except by using the :ts:`.external` property.
+         (i.e. using :samp:`https://...`), except by using the :ts:`.external` property.
 
          Each file has *optional properties*:
 
@@ -544,7 +544,7 @@ includeJS.[array]
          will be moved to the footer.
          The file definition must be a valid :ref:`data-type-resource` data type,
          otherwise nothing is inserted. This means that remote files cannot be referenced
-         (i.e. using `https://...`), except by using the :ts:`.external` property.
+         (i.e. using :samp:`https://...`), except by using the :ts:`.external` property.
 
          Each file has *optional properties*:
 
@@ -583,7 +583,7 @@ includeJS.[array]
 
          **integrity**: Adds the integrity attribute to the script element to let
          browsers ensure subresource integrity. Useful in hosting scenarios with
-         resources externalized to CDN's. See `SRI <http://www.w3.org/TR/SRI/>`_ for
+         resources externalized to CDN's. See `SRI <https://www.w3.org/TR/SRI/>`_ for
          more details. Integrity hashes may be generated using `<https://srihash.org/>`_.
 
    Example
@@ -696,12 +696,12 @@ includeJSLibs.[array]
 
          **.integrity:** Adds the integrity attribute to the script element to let
          browsers ensure subresource integrity. Useful in hosting scenarios with
-         resources externalized to CDN's. See `SRI <http://www.w3.org/TR/SRI/>`_ for
+         resources externalized to CDN's. See `SRI <https://www.w3.org/TR/SRI/>`_ for
          more details. Integrity hashes may be generated using `<https://srihash.org/>`_.
 
          **Example:** ::
 
-            includeJSLibs.twitter = http://twitter.com/javascripts/blogger.js
+            includeJSLibs.twitter = https://twitter.com/javascripts/blogger.js
             includeJSLibs.twitter.external = 1
             includeJSLibs.twitter.integrity = sha256-C6CB9UYIS9UJeqinPHWTHVqh/E1uhG5Twh+Y5qFQmYg=
 
@@ -944,7 +944,7 @@ meta
               <meta property="og:description"
                   content="Inspiring people to share [OpenGraph]" />
 
-         See http://ogp.me/ for more information about the Open Graph
+         See https://ogp.me/ for more information about the Open Graph
          protocol and its properties.
 
 
