@@ -721,8 +721,7 @@ hash
 :aspect:`Description`
    Returns a hashed value of the current content. Set to one of the
    algorithms which are available in PHP. For a list of supported
-   algorithms see `https://www.php.net/manual/en/function.hash-algos.php
-   <https://www.php.net/manual/en/function.hash-algos.php>`_ .
+   algorithms see https://www.php.net/manual/en/function.hash-algos.php.
 
 :aspect:`Example`
    ::
