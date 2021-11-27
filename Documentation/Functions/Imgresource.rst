@@ -382,12 +382,16 @@ stripProfile
          10.file = fileadmin/images/image1.jpg
          10.file.stripProfile = 1
 
+Masking
+=======
 
 :aspect:`Property`
    Masking:
 
    (Black hides, white shows)
 
+m.mask
+------
 
 :aspect:`Property`
    m.mask
@@ -401,6 +405,8 @@ stripProfile
 
    **Note:** Both :ts:`m.mask` and :ts:`m.bgImg` must be valid images.
 
+m.bgImg
+-------
 
 :aspect:`Property`
    m.bgImg
@@ -411,6 +417,8 @@ stripProfile
 :aspect:`Description`
    **Note:** Both :ts:`m.mask` and :ts:`m.bgImg` must be valid images.
 
+m.bottomImg
+-----------
 
 :aspect:`Property`
    m.bottomImg
@@ -430,6 +438,8 @@ stripProfile
    **Note:** Both "m.bottomImg" and :ts:`m.bottomImg_mask` must be valid
    images.
 
+m.bottomImg\_mask
+-----------------
 
 :aspect:`Property`
    m.bottomImg\_mask
