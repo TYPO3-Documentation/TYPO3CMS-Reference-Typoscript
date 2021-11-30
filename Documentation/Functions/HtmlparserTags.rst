@@ -269,7 +269,7 @@ fixAttrib.[attribute].prefixRelPathWith
 :aspect:`Example`
    ::
 
-      ...fixAttrib.src.prefixRelPathWith = http://192.168.230.3/typo3/32/dummy/
+      ...fixAttrib.src.prefixRelPathWith = https://example.org/typo3/32/dummy/
 
 
 .. index:: HTMLparser_tags; fixAttrib.[attribute].userFunc
