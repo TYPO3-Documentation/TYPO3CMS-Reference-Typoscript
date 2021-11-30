@@ -241,13 +241,13 @@ Output:
 
             <a href="?id=51" target="_blank" class="specialLink" title="Very important information">
 
-            parameter = http://typo3.org/ - specialLink
+            parameter = https://example.org/ - specialLink
 
          *An external link with a class attribute. Note the dash (-) that
          replaces the second value (the target). This makes it possible to
          define a class (third value) without having to define a target.* ::
 
-            parameter = info@typo3.org - - "Send a mail to main TYPO3 contact"
+            parameter = info@example.org - - "Send a mail to main TYPO3 contact"
 
          *Creates a mailto link with a title attribute (but no target and no
          class).*

@@ -373,8 +373,8 @@ Implementation
 - file :file:`ContentObjectRenderer.php` in
 - folder :file:`typo3/sysext/frontend/Classes/ContentObject`.
 
-__ http://typo3.org/api/typo3cms/search/all_69.html?imageLinkWrap
-__ http://typo3.org/api/typo3cms/
+__ https://typo3.org/api/typo3cms/search/all_69.html?imageLinkWrap
+__ https://typo3.org/api/typo3cms/
 
 
 
@@ -550,9 +550,9 @@ Example: Images in lightbox "TopUp"
 In this `blog post`__ (german) Paul Lunow shows a way to integrate the
 `jQuery`__ `TopUp lightbox`__:
 
-__ http://www.interaktionsdesigner.de/2009/typo3-klickvergrossern-durch-eine-jquery-lightbox-ersetzen/
-__ http://jquery.com/
-__ http://gettopup.com/
+__ https://www.interaktionsdesigner.de/2009/typo3-klickvergrossern-durch-eine-jquery-lightbox-ersetzen
+__ https://jquery.com/
+__ https://jquery-plugins.net/topup-jquery-lightbox-pop-up-plugin
 
 .. code-block:: typoscript
 
