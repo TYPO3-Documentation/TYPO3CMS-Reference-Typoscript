@@ -115,5 +115,5 @@ array of key names
         <meta property="og:description"
               content="Inspiring people to share [OpenGraph]" />
 
-   See http://ogp.me/ for more information about the Open Graph
+   See https://ogp.me/ for more information about the Open Graph
    protocol and its properties.
