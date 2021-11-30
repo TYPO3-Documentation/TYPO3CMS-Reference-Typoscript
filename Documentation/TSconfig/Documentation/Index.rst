@@ -14,7 +14,7 @@ Page TSconfig and User TSconfig reference.
       TYPO3 community (see :ref:`credits`)
 :License:
       Open Publication License available from `www.opencontent.org/openpub/
-      <http://www.opencontent.org/openpub/>`_
+      <https://www.opencontent.org/openpub/>`_
 
 .. rst-class:: horizbuttons-primary-xxl
 
