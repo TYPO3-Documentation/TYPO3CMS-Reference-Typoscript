@@ -178,6 +178,40 @@ permissions
 ===========
 
 
+.. index:: Page permissions; copyFromParent
+.. _pagetcemain-permissions-copyFromParent:
+
+Value copyFromParent
+--------------------
+
+The value :typoscript:`copyFromParent` can be set for each of the
+page TSconfig :typoscript:`TCEMAIN.permissions.*` sub keys. If this value is
+set, the page access permissions are copied from the parent page.
+
+Example: Inherit the group id of the parent page
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. code-block:: php
+
+   $GLOBALS['TYPO3_CONF_VARS']['BE']['defaultPageTSconfig'] .= '
+       TCEMAIN.permissions.groupid = copyFromParent
+       TCEMAIN.permissions.group = 31
+       TCEMAIN.permissions.everybody = 0
+   ';
+
+By default all new pages created by users will inherit the group of the parent
+page. Members of this group get all permissions. Users not in the group get no
+permissions.
+
+When an administrator creates a new page she can use the module
+:guilabel:`System > Access` to set a different owner group for this new page.
+
+All subpages created to this new page will now automatically have the new pages
+group. The administrator does not have to set custom TSconfig to achieve this.
+
+This behaviour is similar to the "group sticky bit" in Unix for directories.
+
+
 .. index:: Page permissions; everybody
 
 everybody
@@ -187,11 +221,16 @@ everybody
     list of strings or integer 0-31
 
 :aspect:`Description`
-    Default permissions for everybody who is not the owner user or member of the owning group,
-    key list: `show`, `edit`, `delete`, `new`, `editcontent`
+   Default permissions for everybody who is not the owner user or member of
+   the owning group, key list: `show`, `edit`, `delete`, `new`, `editcontent`.
 
-    Alternatively, it is allowed to set an integer between 0 and 31, indicating which bits
-    corresponding to the key list should be set: `show = 1`, `edit = 2`, `delete = 4`, `new = 8`, `editcontent = 16`
+   Alternatively, it is allowed to set an integer between 0 and 31, indicating
+   which bits corresponding to the key list should be set: `show = 1`,
+   `edit = 2`, `delete = 4`, `new = 8`, `editcontent = 16`.
+
+   It also possible to set the value
+   :ref:`copyFromParent <pagetcemain-permissions-copyFromParent>` to inherit
+   the value from the parent page.
 
 :aspect:`Default`
     0
@@ -220,13 +259,19 @@ group
 -----
 
 :aspect:`Datatype`
-    list of strings or integer 0-31
+   list of strings or integer 0-31
 
 :aspect:`Description`
-    Default permissions for group members, key list: `show`, `edit`, `delete`, `new`, `editcontent`
+   Default permissions for group members, key list: `show`, `edit`, `delete`,
+   `new`, `editcontent`.
 
-    Alternatively, it is allowed to set an integer between 0 and 31, indicating which bits
-    corresponding to the key list should be set: `show = 1`, `edit = 2`, `delete = 4`, `new = 8`, `editcontent = 16`
+   Alternatively, it is allowed to set an integer between 0 and 31, indicating
+   which bits corresponding to the key list should be set: `show = 1`,
+   `edit = 2`, `delete = 4`, `new = 8`, `editcontent = 16`.
+
+   It also possible to set the value
+   :ref:`copyFromParent <pagetcemain-permissions-copyFromParent>` to inherit
+   the value from the parent page.
 
 :aspect:`Default`
     show,edit,new,editcontent
@@ -255,12 +300,18 @@ groupid
 -------
 
 :aspect:`Datatype`
-    positive integer
+    positive integer or string
 
 :aspect:`Description`
-    Hard code the default group of new and copied pages: The default user group is
-    the "main group" of the backend user - the group in the very top of the users
-    group-list. This setting allows to override this default and set a specific group uid.
+   By default the owner group of a newly created page is set to the main group
+   of the backend user creating the page.
+
+   By setting the value of this property to
+   :ref:`copyFromParent <pagetcemain-permissions-copyFromParent>` the owner
+   group is copied from the newly created pages parent page.
+
+   The owner group of a newly created page can be hardcoded by setting this
+   property to a positive integer greater then zero.
 
 :aspect:`Example`
     .. code-block:: typoscript
@@ -287,13 +338,19 @@ user
 ----
 
 :aspect:`Datatype`
-    list of strings or integer 0-31
+   list of strings or integer 0-31
 
 :aspect:`Description`
-    Default permissions for owner user, key list: `show`, `edit`, `delete`, `new`, `editcontent`
+   Default permissions for owner user, key list: `show`, `edit`, `delete`,
+   `new`, `editcontent`.
 
-    Alternatively, it is allowed to set an integer between 0 and 31, indicating which bits
-    corresponding to the key list should be set: `show = 1`, `edit = 2`, `delete = 4`, `new = 8`, `editcontent = 16`
+   Alternatively, it is allowed to set an integer between 0 and 31, indicating
+   which bits corresponding to the key list should be set: `show = 1`,
+   `edit = 2`, `delete = 4`, `new = 8`, `editcontent = 16`.
+
+   It also possible to set the value
+   :ref:`copyFromParent <pagetcemain-permissions-copyFromParent>` to inherit
+   the value from the parent page.
 
 :aspect:`Default`
     show,edit,delete,new,editcontent
@@ -312,12 +369,18 @@ userid
 ------
 
 :aspect:`Datatype`
-    positive integer
+    positive integer or string
 
 :aspect:`Description`
-    Hard code the default owner of new and copied pages: The default owner is
-    usually the user that creates / copies the page, this setting allows to
-    override this.
+   By default the owner of a newly created page is the user that created or
+   copied the page.
+
+   By setting the value of this property to
+   :ref:`copyFromParent <pagetcemain-permissions-copyFromParent>` the owner
+   group is copied from the newly created pages parent page.
+
+   When this property is set to a positive integer the owner of new pages is
+   hardcoded to the user of that uid.
 
 :aspect:`Example`
     .. code-block:: typoscript
@@ -335,7 +398,6 @@ userid
         :alt: Page with altered permissions for backend users
 
         Page with altered permissions for backend users
-
 
 .. index:: Page preview
 .. _pagetcemain-preview:
