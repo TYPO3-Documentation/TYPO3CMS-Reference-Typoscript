@@ -237,29 +237,6 @@ nonTypoTagUserFunc
    (Notice: :ts:`breakoutTypoTagContent` must be set for the TypoTag
    if it's excluded from :ts:`nonTypoTagContent`).
 
-
-.. index:: parseFunc; sword
-.. _parsefunc-sword:
-
-sword
-=====
-
-:aspect:`Property`
-   sword
-
-:aspect:`Data type`
-   :ref:`data-type-wrap`
-
-:aspect:`Description`
-   Marks up any words from the GET-method send array :php:`sword_list[]` in the
-   text. The word MUST be at least two characters long!
-
-   **Note:** works only with :php:`$GLOBALS['TSFE']->no_cache = 1`.
-
-:aspect:`Default`
-   :ts:`<font color="red">|</font>`
-
-
 .. index:: parseFunc; makelinks
 .. _parsefunc-makelinks:
 

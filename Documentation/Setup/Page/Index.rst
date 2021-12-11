@@ -509,15 +509,6 @@ includeCSS.[array]
          will not be included. Extensive usage might cause huge numbers of
          temporary files to be created. See ->if for details.
 
-         .. deprecated:: 11.5
-            The option to use the `@import` syntax for including external CSS
-            files through TypoScript has been deprecated. It is recommended to use
-            the :html:`<link>` tag or instead create an inline CSS entry with TypoScript
-            to load a file with the `@import` syntax.
-
-         **import**: If set (boolean) then the `@import` way of including a
-         stylesheet is used instead of :html:`<link>`
-
          **inline**: If set, the content of the CSS file is inlined using
          :html:`<style>` tags. Note that external files are not inlined.
 
@@ -589,15 +580,6 @@ includeCSSLibs.[array]
          evaluate to TRUE for the file to be included. If they do not evaluate
          to TRUE, the file will not be included. Extensive usage might cause
          huge numbers of temporary files to be created. See ->if for details.
-
-         .. deprecated:: 11.5
-            The option to use the @import syntax for including external CSS
-            files through TypoScript has been deprecated. It is recommended to use
-            the :html:`<link>` tag or instead create an inline CSS entry with TypoScript
-            to load a file with the `@import` syntax.
-
-         **import**: If set (boolean) then the @import way of including a
-         stylesheet is used instead of :html:`<link>`
 
          **media**: Setting the media attribute of the :html:`<style>` tag.
 
