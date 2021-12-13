@@ -244,6 +244,13 @@ nonTypoTagUserFunc
 sword
 =====
 
+.. deprecated:: 11.5
+   This functionality has been marked as deprecated as this feature only works
+   in non_cached environments, which is not a recommended solution by TYPO3.
+
+   It is recommended to implement this functionality on the client-side via
+   JavaScript as a custom solution, when this feature is needed.
+
 :aspect:`Property`
    sword
 
