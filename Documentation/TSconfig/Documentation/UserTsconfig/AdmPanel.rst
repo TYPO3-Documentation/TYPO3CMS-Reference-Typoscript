@@ -53,20 +53,11 @@ enable
 
         admPanel.enable.cache = 1
         admPanel.enable.debug = 1
-        admPanel.enable.debug_events = 1
-        admPanel.enable.debug_log = 1
-        admPanel.enable.debug_pagetitle = 1
-        admPanel.enable.debug_queryinformation = 1
         admPanel.enable.edit = 1
         admPanel.enable.info = 1
-        admPanel.enable.info-request = 1
-        admPanel.enable.info_general = 1
-        admPanel.enable.info_php = 1
-        admPanel.enable.info_userint = 1
         admPanel.enable.preview = 1
         admPanel.enable.publish = 1
         admPanel.enable.tsdebug = 1
-        admPanel.enable.typoscript-waterfall = 1
 
 
 :aspect:`Default`
