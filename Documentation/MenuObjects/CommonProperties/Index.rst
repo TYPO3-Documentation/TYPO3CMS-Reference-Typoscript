@@ -96,31 +96,6 @@ TMENU properties
 
          Takes precedence over :ref:`HMENU.begin <hmenu-begin>`.
 
-.. deprecated:: 11.5
-  Property JSWindow has been deprecated. Use an external JavaScript file with an 
-  event listener to achieve the same functionality.
-
-.. container:: table-row
-
-   Property
-         JSWindow
-
-   Data type
-         boolean
-
-   Description
-         If set, the links of the menu-items will open by JavaScript in a pop-
-         up window.
-
-         **.newWindow:** Boolean. Lets every menu item open in its own
-         window opposite to opening in the same window for each click.
-
-         **.params:** The list of parameters sent to the JavaScript open-
-         window function, e.g.::
-
-            JSWindow.params = width=200,height=300,status=0,menubar=0
-
-
 .. container:: table-row
 
    Property

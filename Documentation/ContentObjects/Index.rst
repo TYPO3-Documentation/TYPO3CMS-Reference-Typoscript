@@ -29,7 +29,6 @@ Content Objects (cObject)
    Case/Index
    CoaAndCoaInt/Index
    Content/Index
-   Editpanel/Index
    Files/Index
    Fluidtemplate/Index
    Hmenu/Index

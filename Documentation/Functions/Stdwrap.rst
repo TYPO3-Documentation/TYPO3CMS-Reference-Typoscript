@@ -1861,51 +1861,6 @@ prefixComment
    Will indent the comment with 1 tab (and the next line with 2+1 tabs)
 
 
-.. index:: stdWrap; editIcons
-.. _stdwrap-editicons:
-
-.. index:: stdWrap; editIcons
-.. _stdwrap-editicons:
-
-editIcons
----------
-
-.. deprecated:: 11.4
-   With the extraction of the :file:`feedit` extension from TYPO3 Core in v10
-   this related TypoScript property have been rendered unused. Extensions that
-   provide a frontend editing approach should implement this on their own.
-
-:aspect:`Property`
-   editIcons
-
-:aspect:`Data type`
-   :ref:`data-type-string` / :ref:`stdWrap`
-
-:aspect:`Description`
-   See :ref:`Migration from the build-in EDITPANEL<cobj-editpanel_migration>`.
-
-
-.. index:: stdWrap; editPanel
-.. _stdwrap-editpanel:
-
-editPanel
----------
-
-.. deprecated:: 11.4
-   With the extraction of the :file:`feedit` extension from TYPO3 Core in v10
-   this related TypoScript property have been rendered unused. Extensions that
-   provide a frontend editing approach should implement this on their own.
-
-:aspect:`Property`
-   editPanel
-
-:aspect:`Data type`
-   :ref:`boolean <data-type-bool>` / :ref:`cobj-editpanel`
-
-:aspect:`Description`
-   See :ref:`Migration from the build-in EDITPANEL<cobj-editpanel_migration>`.
-
-
 .. index:: stdWrap; cache
 .. _stdwrap-cache:
 

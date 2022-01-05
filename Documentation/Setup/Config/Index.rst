@@ -2130,50 +2130,6 @@ spamProtectEmailAddresses\_lastDotSubst
          (dot)
 
 
-
-.. index:: config; sword_noMixedCase
-.. _setup-config-sword-nomixedcase:
-
-sword\_noMixedCase
-==================
-
-.. container:: table-row
-
-   Property
-         sword\_noMixedCase
-
-   Data type
-         :ref:`data-type-boolean`
-
-   Description
-         Used by the parseFunc-substitution of search Words (sword):
-
-         If set, the words MUST be the exact same case as the search word was.
-
-
-
-.. index:: config; sword_standAlone
-.. _setup-config-sword-standalone:
-
-sword\_standAlone
-=================
-
-.. container:: table-row
-
-   Property
-         sword\_standAlone
-
-   Data type
-         :ref:`data-type-boolean`
-
-   Description
-         Used by the parseFunc-substitution of search Words (sword):
-
-         If set, the words MUST be surrounded by whitespace in order to be
-         marked up.
-
-
-
 .. index:: config; Extension configuration
 .. _setup-config-tx-extension-key-with-no-underscores:
 
