@@ -481,17 +481,37 @@ translateToMessage
 
 :aspect:`Datatype`
     string
+    
+:aspect:`Default`
+    Translate to %s:
 
 :aspect:`Description`
-    Defines the string that will be prepended to every field value if you copy an element to another
-    language version. The special string "%s" will be replaced with the language title.
+    Defines the string that will be prepended to some field values if you copy an element to another
+    language version. This applies to all fields where the TCA columns property 
+    :ref:`l10n_mode <t3tca:columns-properties-l10n-mode>` is set to :php:`prefixLangTitle`.
+    
+    The special string "%s" will be replaced with the language title.
+    
+    You can globally disable the prepending of the string by setting `translateToMessage` to
+    an empty string. You can disable the message to a certain field by setting the `l10n_mode`
+    to an empty string.
 
-    Default is `Translate to [language title]:`.
 
 :aspect:`Example`
+    Set a German prefix:
+    
     .. code-block:: typoscript
+       :caption: PageTSconfig
 
         TCEMAIN {
-            # Set a German label
             translateToMessage = Bitte in "%s" übersetzen:
+        }
+      
+    Disable the [Translate to ...] prefix:
+    
+    .. code-block:: typoscript
+       :caption: PageTSconfig
+
+        TCEMAIN {
+            translateToMessage = 
         }
