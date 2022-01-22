@@ -219,36 +219,6 @@ fixAttrib.[attribute].casesensitiveComp
    At this point, it's insensitive.
 
 
-.. index:: HTMLparser_tags; fixAttrib.[attribute].prefixLocalAnchors
-.. _htmlparser-tags-fixattrib-attribute-prefixlocalanchors:
-
-fixAttrib.[attribute].prefixLocalAnchors
-========================================
-
-:aspect:`Property`
-   fixAttrib.[attribute].prefixLocalAnchors
-
-:aspect:`Data type`
-   :ref:`data-type-integer`
-
-:aspect:`Description`
-   If the first char is a "#" character (anchor of fx. :html:`<a>` tags) this
-   will prefix either a relative or absolute path.
-
-   :ts:`1`
-      will get the absolute path
-      (:php:`TYPO3\CMS\Core\Utility\GeneralUtility::getIndpEnv('TYPO3_REQUEST_URL')`).
-
-   :ts:`2`
-      will get the relative path (stripping of
-      :php:`TYPO3\CMS\Core\Utility\GeneralUtility::getIndpEnv('TYPO3_SITE_URL')`).
-
-:aspect:`Example`
-   ::
-
-      ...fixAttrib.href.prefixLocalAnchors = 1
-
-
 .. index:: HTMLparser_tags; fixAttrib.[attribute].prefixRelPathWith
 .. _htmlparser-tags-fixattrib-attribute-prefixrelpathwith:
 
