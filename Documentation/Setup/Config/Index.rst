@@ -89,7 +89,6 @@ Properties
    `removeDefaultJS`_                                    :ref:`data-type-boolean` / :ref:`data-type-string`
    `removePageCss`_                                      :ref:`data-type-boolean`
    `sendCacheHeaders`_                                   :ref:`data-type-boolean`
-   `sendCacheHeaders\_onlyWhenLoginDeniedInBranch`_      :ref:`data-type-boolean`
    `spamProtectEmailAddresses`_                          "ascii" /
    `spamProtectEmailAddresses\_atSubst`_                 :ref:`data-type-string`                            (at)
    `spamProtectEmailAddresses\_lastDotSubst`_            :ref:`data-type-string`                            . *(just a simple dot)*
@@ -1999,48 +1998,6 @@ sendCacheHeaders
          the page. Teach them that trick!
 
          Thanks to Ole Tange, www.forbrug.dk for co-authoring this feature.
-
-
-
-.. index:: config; endCacheHeaders_onlyWhenLoginDeniedInBranch
-.. _setup-config-sendcacheheaders-onlywhenlogindeniedinbranch:
-
-sendCacheHeaders\_onlyWhenLoginDeniedInBranch
-=============================================
-
-.. container:: table-row
-
-   Property
-         sendCacheHeaders\_onlyWhenLoginDeniedInBranch
-
-   Data type
-         :ref:`data-type-boolean`
-
-   Description
-         If this is set, then cache-control headers allowing client caching is
-         sent only if user-logins are disabled for the branch. This feature
-         makes it easier to manage client caching on sites where you have a
-         mixture of static pages and dynamic sections with user logins.
-
-         The background problem is this: In TYPO3 the same URL can show
-         different content depending on whether a user is logged in or not. If
-         a user is logged in, cache-headers will never allow client caching.
-         But if the same URL was visited without a login prior to the login
-         (allowing caching) the user will still see the page from cache when
-         logged in (and so thinks he is not logged in anyway)! The only general
-         way to prevent this is to have a different URL for pages when users
-         are logged in.
-
-         Another way to solve the problem is using this option in combination
-         with disabling and enabling logins in various sections of the site. In
-         the page records you can disable frontend user
-         logins for branches of the page tree. Since many sites only need the
-         login in a certain branch of the page tree, disabling it in all other
-         branches makes it much easier to use cache-headers in combination with
-         logins; Cache-headers should simply be sent when logins are not
-         allowed and never be send when logins are allowed! Then there will
-         never be problems with logins and same-URLs.
-
 
 
 .. index:: config; spamProtectEmailAddresses
