@@ -1990,13 +1990,13 @@ spamProtectEmailAddresses
          spamProtectEmailAddresses
 
    Data type
-         "ascii" / -10 to 10
+         "-10 to 10
 
    Description
          If set, then all email addresses in typolinks will be encrypted so
-         spam bots cannot detect them.
+         that it is harder for spam bots to detect them.
 
-         If you set this value to a number, then the encryption is simply an
+         If you set this value to a number, then the encryption is an
          offset of character values. If you set this value to "-2" then all
          characters will have their ASCII value offset by "-2". To make this
          possible, a little JavaScript code is added to every generated web
@@ -2005,19 +2005,7 @@ spamProtectEmailAddresses
          (It is recommended to set the value in the range from -5 to 1 since
          setting it to >= 2 means a "z" is converted to "\|" which is a special
          character in TYPO3 tables syntax – and that might confuse columns in
-         tables. Now hardcoded range)
-
-         Alternatively you can set this value to the keyword "ascii". This way
-         every character of the "mailto:" address will be translated to a
-         Unicode HTML notation.  Have a look at the example to see how this
-         works.
-
-   Example
-         `mailto:a@b.c` will be converted to `mailto:&#97;&#64;&#98;&#46;&#99;`
-
-         The big advantage of this method is that it does not need any
-         JavaScript!
-
+         tables.)
 
 
 .. index:: config; spamProtectEmailAddresses_atSubst
