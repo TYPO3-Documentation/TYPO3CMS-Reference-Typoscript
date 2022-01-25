@@ -49,7 +49,6 @@ Properties
    `disableBodyTag`_                                     :ref:`data-type-boolean`                           0
    `disableCharsetHeader`_                               :ref:`data-type-boolean`
    `disableImgBorderAttr`_                               :ref:`data-type-boolean`
-   `disablePageExternalUrl`_                             :ref:`data-type-boolean`
    `disablePrefixComment`_                               :ref:`data-type-boolean`
    `disablePreviewNotification`_                         :ref:`data-type-boolean`                           0
    `disableLanguageHeader`_                              :ref:`data-type-boolean`                           0
@@ -821,27 +820,6 @@ disableImgBorderAttr
          Returns the `border` attribute for an :html:`<img>` tag only if the doctype is
          not `xhtml_strict` or `xhtml_11` or if the config parameter
          :ts:`disableImgBorderAttr` is not set
-
-
-
-.. index:: config; disablePageExternalUrl
-.. _setup-config-disablepageexternalurl:
-
-disablePageExternalUrl
-======================
-
-.. container:: table-row
-
-   Property
-         disablePageExternalUrl
-
-   Data type
-         :ref:`data-type-boolean`
-
-   Description
-         If set, pages with doktype "External Url" will not trigger jumpUrl in
-         TSFE.
-
 
 
 .. index:: config; disablePrefixComment
