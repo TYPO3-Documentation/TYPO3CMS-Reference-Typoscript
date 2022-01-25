@@ -2059,7 +2059,7 @@ spamProtectEmailAddresses
 
    Description
          If set, then all email addresses in typolinks will be encrypted so
-         it is harder for spam bots to detect them.
+         that it is harder for spam bots to detect them.
 
          If you set this value to a number, then the encryption is an
          offset of character values. If you set this value to "-2" then all
