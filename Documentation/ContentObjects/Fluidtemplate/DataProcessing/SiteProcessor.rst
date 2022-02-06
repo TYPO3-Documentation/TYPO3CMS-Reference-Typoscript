@@ -36,18 +36,9 @@ Please see also :ref:`dataProcessing-about-examples`.
 TypoScript
 ----------
 
-Using the :php:`SiteProcessor` the following scenario is possible::
+Using the :php:`SiteProcessor` the following scenario is possible:
 
-   tt_content {
-      examples_dataprocsite =< lib.contentElement
-      examples_dataprocsite {
-         templateName = DataProcSite
-         dataProcessing.10 = TYPO3\CMS\Frontend\DataProcessing\SiteProcessor
-         dataProcessing.10 {
-            as = site
-         }
-      }
-   }
+.. include:: /CodeSnippets/DataProcessing/TypoScript/SiteProcessor.rst.txt
 
 
 The Fluid template
@@ -55,16 +46,7 @@ The Fluid template
 
 In the Fluid template the properties of the site configuration can be accessed:
 
-.. code-block:: html
-
-   <html data-namespace-typo3-fluid="true" xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
-      <h2>Data in variable site</h2>
-      <f:debug inline="true">{site}</f:debug>
-
-      <h2>Output</h2>
-      <p>Base url: <f:link.page pageUid="{site.rootPageId}">{site.configuration.base}</f:link.page></p>
-
-   </html>
+.. include:: /CodeSnippets/DataProcessing/Template/DataProcSite.rst.txt
 
 
 Output

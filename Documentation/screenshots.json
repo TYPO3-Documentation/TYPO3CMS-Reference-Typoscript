@@ -176,7 +176,7 @@
           {"action": "resizeWindow", "width": 1024,"height": 768},
           {"action": "setScreenshotsImagePath","path": "Images/AutomaticScreenshots"},
           {"action": "setScreenshotsRstPath","path": "Images/AutomaticScreenshots"},
-          {"action": "setCodeSnippetsSourcePath","path": "typo3conf/ext/styleguide"},
+          {"action": "setCodeSnippetsSourcePath","path": "typo3conf/ext/examples/"},
           {"action": "setCodeSnippetsTargetPath", "path": "CodeSnippets"}
         ],
         "mediaHeight": [
@@ -184,7 +184,6 @@
           {"action": "resizeWindow", "width": 780,"height": 2048},
           {"action": "setScreenshotsImagePath","path": "Images/AutomaticScreenshots/Fluidtemplate"},
           {"action": "setScreenshotsRstPath","path": "Images/AutomaticScreenshots/Fluidtemplate"},
-
           {
             "action": "goToRecord",
             "table": "tt_content",
@@ -200,6 +199,142 @@
             "fileName": "MediaHeight",
             "altText": "Media height and width in the content element Text and Images",
             "captionText": "Media height and width in the content element Text and Images"
+          }
+        ],
+        "DataProcessing": [
+          {"include": "_default"},
+          {"action": "resizeWindow", "width": 1200,"height": 2048},
+          {"action": "setScreenshotsImagePath","path": "Images/AutomaticScreenshots/DataProcessing"},
+          {"action": "setScreenshotsRstPath","path": "Images/AutomaticScreenshots/DataProcessing"},
+          {"action": "goToModule", "module": "Page", "path": ["Root page"]},
+          {"action": "wait", "timeout":  1},
+          {"action": "click", "link": "typo3-backend-new-content-element-wizard-button"},
+          {"action": "waitForModalDialogInMainFrame"},
+          {"action": "click", "link": "DataProcessing examples"},
+          {
+            "action": "makeScreenshotOfElement",
+            "selector": ".t3js-modal-content",
+            "fileName": "DataProcessingExamples",
+            "altText": "Overview of all data processing examples",
+            "captionText": "Overview of all data processing examples"
+          }
+        ],
+        "DataProcessingCodeSnippets": [
+          {"include": "_default"},
+          {"action": "setCodeSnippetsTargetPath", "path": "CodeSnippets/DataProcessing"},
+          {
+            "action": "createCodeSnippet",
+            "caption": "EXT:examples/Configuration/TypoScript/DataProcessors/General.typoscript",
+            "sourceFile": "Configuration/TypoScript/DataProcessors/General.typoscript",
+            "targetFileName": "DataProcessingTemplates"
+          },
+          {
+            "action": "createCodeSnippet",
+            "caption": "EXT:examples/Configuration/TypoScript/DataProcessors/Processors/CommaSeparatedValueProcessor.typoscript",
+            "sourceFile": "Configuration/TypoScript/DataProcessors/Processors/CommaSeparatedValueProcessor.typoscript",
+            "targetFileName": "TypoScript/CommaSeparatedValueProcessor"
+          },
+          {
+            "action": "createCodeSnippet",
+            "caption": "EXT:examples/Configuration/TypoScript/DataProcessors/Processors/DatabaseQueryProcessor.typoscript",
+            "sourceFile": "Configuration/TypoScript/DataProcessors/Processors/DatabaseQueryProcessor.typoscript",
+            "targetFileName": "TypoScript/DatabaseQueryProcessor"
+          },
+          {
+            "action": "createCodeSnippet",
+            "caption": "EXT:examples/Configuration/TypoScript/DataProcessors/Processors/CommaSeparatedValueProcessor.typoscript",
+            "sourceFile": "Configuration/TypoScript/DataProcessors/Processors/CommaSeparatedValueProcessor.typoscript",
+            "targetFileName": "TypoScript/CommaSeparatedValueProcessor"
+          },
+          {
+            "action": "createCodeSnippet",
+            "caption": "EXT:examples/Configuration/TypoScript/DataProcessors/Processors/FilesProcessor.typoscript",
+            "sourceFile": "Configuration/TypoScript/DataProcessors/Processors/FilesProcessor.typoscript",
+            "targetFileName": "TypoScript/FilesProcessor"
+          },
+          {
+            "action": "createCodeSnippet",
+            "caption": "EXT:examples/Configuration/TypoScript/DataProcessors/Processors/GalleryProcessor.typoscript",
+            "sourceFile": "Configuration/TypoScript/DataProcessors/Processors/GalleryProcessor.typoscript",
+            "targetFileName": "TypoScript/GalleryProcessor"
+          },
+          {
+            "action": "createCodeSnippet",
+            "caption": "EXT:examples/Configuration/TypoScript/DataProcessors/Processors/LanguageMenuProcessor.typoscript",
+            "sourceFile": "Configuration/TypoScript/DataProcessors/Processors/LanguageMenuProcessor.typoscript",
+            "targetFileName": "TypoScript/LanguageMenuProcessor"
+          },
+          {
+            "action": "createCodeSnippet",
+            "caption": "EXT:examples/Configuration/TypoScript/DataProcessors/Processors/MenuProcessor.typoscript",
+            "sourceFile": "Configuration/TypoScript/DataProcessors/Processors/MenuProcessor.typoscript",
+            "targetFileName": "TypoScript/MenuProcessor"
+          },
+          {
+            "action": "createCodeSnippet",
+            "caption": "EXT:examples/Configuration/TypoScript/DataProcessors/Processors/SiteProcessor.typoscript",
+            "sourceFile": "Configuration/TypoScript/DataProcessors/Processors/SiteProcessor.typoscript",
+            "targetFileName": "TypoScript/SiteProcessor"
+          },
+          {
+            "action": "createCodeSnippet",
+            "caption": "EXT:examples/Configuration/TypoScript/DataProcessors/Processors/SplitProcessor.typoscript",
+            "sourceFile": "Configuration/TypoScript/DataProcessors/Processors/SplitProcessor.typoscript",
+            "targetFileName": "TypoScript/SplitProcessor"
+          },
+          {
+            "action": "createCodeSnippet",
+            "caption": "EXT:examples/Resources/Private/Templates/ContentElements/DataProcCsv.html",
+            "sourceFile": "Resources/Private/Templates/ContentElements/DataProcCsv.html",
+            "targetFileName": "Template/DataProcCsv"
+          },
+          {
+            "action": "createCodeSnippet",
+            "caption": "EXT:examples/Resources/Private/Templates/ContentElements/DataProcCustom.html",
+            "sourceFile": "Resources/Private/Templates/ContentElements/DataProcCustom.html",
+            "targetFileName": "Template/DataProcCustom"
+          },
+          {
+            "action": "createCodeSnippet",
+            "caption": "EXT:examples/Resources/Private/Templates/ContentElements/DataProcDb.html",
+            "sourceFile": "Resources/Private/Templates/ContentElements/DataProcDb.html",
+            "targetFileName": "Template/DataProcDb"
+          },
+          {
+            "action": "createCodeSnippet",
+            "caption": "EXT:examples/Resources/Private/Templates/ContentElements/DataProcFiles.html",
+            "sourceFile": "Resources/Private/Templates/ContentElements/DataProcFiles.html",
+            "targetFileName": "Template/DataProcFiles"
+          },
+          {
+            "action": "createCodeSnippet",
+            "caption": "EXT:examples/Resources/Private/Templates/ContentElements/DataProcGallery.html",
+            "sourceFile": "Resources/Private/Templates/ContentElements/DataProcGallery.html",
+            "targetFileName": "Template/DataProcGallery"
+          },
+          {
+            "action": "createCodeSnippet",
+            "caption": "EXT:examples/Resources/Private/Templates/ContentElements/DataProcLangMenu.html",
+            "sourceFile": "Resources/Private/Templates/ContentElements/DataProcLangMenu.html",
+            "targetFileName": "Template/DataProcLangMenu"
+          },
+          {
+            "action": "createCodeSnippet",
+            "caption": "EXT:examples/Resources/Private/Templates/ContentElements/DataProcMenu.html",
+            "sourceFile": "Resources/Private/Templates/ContentElements/DataProcMenu.html",
+            "targetFileName": "Template/DataProcMenu"
+          },
+          {
+            "action": "createCodeSnippet",
+            "caption": "EXT:examples/Resources/Private/Templates/ContentElements/DataProcSite.html",
+            "sourceFile": "Resources/Private/Templates/ContentElements/DataProcSite.html",
+            "targetFileName": "Template/DataProcSite"
+          },
+          {
+            "action": "createCodeSnippet",
+            "caption": "EXT:examples/Resources/Private/Templates/ContentElements/DataProcSplit.html",
+            "sourceFile": "Resources/Private/Templates/ContentElements/DataProcSplit.html",
+            "targetFileName": "Template/DataProcSplit"
           }
         ]
       }

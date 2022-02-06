@@ -50,9 +50,7 @@ extension `examples <https://extensions.typo3.org/extension/examples/>`__.
 Once the extension t3docs/examples is installed the examples are available
 as content elements:
 
-.. figure:: /Images/ManualScreenshots/DataProcessing/DataProcessingExamples.png
-   :class: with-shadow
-   :alt: Overview of all data processing examples
+.. include:: /Images/AutomaticScreenshots/DataProcessing/DataProcessingExamples.rst.txt
 
 All examples listing here depend on
 :ref:`t3coreapi:adding-your-own-content-elements`.  Data processors can
@@ -72,10 +70,6 @@ In this system extension it is defined as follows::
       // ...
    }
 
-The extension `examples` also sets the paths to the additional templates::
+The extension `examples` also sets the paths to the additional templates:
 
-   lib.contentElement {
-      templateRootPaths.200 = EXT:examples/Resources/Private/Templates/ContentElements/
-      partialRootPaths.200 = EXT:examples/Resources/Private/Partials/ContentElements/
-      layoutRootPaths.200 = EXT:examples/Resources/Private/Layout/
-   }
+.. include:: /CodeSnippets/DataProcessing/DataProcessingTemplates.rst.txt

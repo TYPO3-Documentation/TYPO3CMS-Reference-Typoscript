@@ -62,29 +62,9 @@ Please see also :ref:`dataProcessing-about-examples`.
 TypoScript
 ----------
 
-We define the dataProcessing property to use the DatabaseQueryProcessor::
+We define the dataProcessing property to use the DatabaseQueryProcessor:
 
-   tt_content {
-      examples_dataprocdb =< lib.contentElement
-      examples_dataprocdb {
-         templateName = DataProcDb
-         dataProcessing.10 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor
-         dataProcessing.10 {
-            if.isTrue.field = pages
-            table = tx_examples_haiku
-            orderBy = title
-            pidInList.field = pages
-            as = myHaikus
-            // recursively process the images in the records with the FilesProcessor
-            dataProcessing {
-               10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
-               10 {
-                  references.fieldName = image
-               }
-            }
-         }
-      }
-   }
+.. include:: /CodeSnippets/DataProcessing/TypoScript/DatabaseQueryProcessor.rst.txt
 
 
 The Fluid template
@@ -93,28 +73,7 @@ The Fluid template
 In the Fluid template then iterate over the records. As we used the recursive data
 processor :ref:`FilesProcessor` on the image records we also can output the images.
 
-.. code-block:: html
-
-   <html data-namespace-typo3-fluid="true" xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
-      <h2>Data in variable myHaikus</h2>
-      <f:debug inline="true">{myHaikus}</f:debug>
-      <h2>Output</h2>
-      <div class="row">
-         <f:for each="{myHaikus}" as="haiku">
-            <div class="col-12 col-md-3">
-               <div class="card" style="backgorund-color: {haiku.color};">
-                  <f:if condition="{haiku.files.0}">
-                     <f:image image="{haiku.files.0}" class="card-img-top" height="300"/>
-                  </f:if>
-                  <div class="card-body">
-                     <h5 class="card-title">{haiku.data.title}</h5>
-                     <div class="card-text"><f:format.html>{haiku.data.poem}</f:format.html></div>
-                  </div>
-               </div>
-            </div>
-         </f:for>
-      </div>
-   </html>
+.. include:: /CodeSnippets/DataProcessing/Template/DataProcDb.rst.txt
 
 
 Output

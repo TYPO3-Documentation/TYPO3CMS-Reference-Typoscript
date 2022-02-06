@@ -86,24 +86,9 @@ TypoScript
 ----------
 
 With the help of the :php:`SplitProcessor` the following scenario is
-possible::
+possible:
 
-   tt_content {
-      examples_dataprocsplit =< lib.contentElement
-      examples_dataprocsplit {
-         templateName = DataProcSplit
-         dataProcessing.10 = TYPO3\CMS\Frontend\DataProcessing\SplitProcessor
-         dataProcessing.10 {
-            as = urlParts
-            delimiter = /
-            fieldName = header_link
-            removeEmptyEntries = 0
-            filterIntegers = 0
-            filterUnique = 0
-         }
-      }
-   }
-
+.. include:: /CodeSnippets/DataProcessing/TypoScript/SplitProcessor.rst.txt
 
 The Fluid template
 ------------------
@@ -112,17 +97,7 @@ In the Fluid template then iterate over the splitted data:
 
 .. code-block:: html
 
-   <html data-namespace-typo3-fluid="true" xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
-      <h2>Data in variable urlParts</h2>
-      <f:debug inline="true">{urlParts}</f:debug>
-
-      <h2>Output</h2>
-      <f:for each="{urlParts}" as="part" iteration="i">
-         <span class="text-primary">{part}</span>
-         <f:if condition="{i.isLast} == false">/</f:if>
-      </f:for>
-
-   </html>
+.. include:: /CodeSnippets/DataProcessing/Template/DataProcSplit.rst.txt
 
 
 Output
