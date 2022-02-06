@@ -105,6 +105,4 @@ Output
 
 The array now contains the split strings:
 
-.. figure:: /Images/ManualScreenshots/FrontendOutput/DataProcessing/SplitProcessor.png
-   :class: with-shadow
-   :alt: split dump and output
+.. include:: /Images/AutomaticScreenshots/DataProcessing/SplitProcessor.rst.txt

@@ -217,7 +217,27 @@
             "fileName": "DataProcessingExamples",
             "altText": "Overview of all data processing examples",
             "captionText": "Overview of all data processing examples"
-          }
+          },
+
+          {"action": "resizeWindow", "width": 1024,"height": 2000},
+          {"action": "amOnPage", "page": "/?id=53"},
+          {"action": "makeScreenshotOfElement","selector": ".container","fileName": "CommaSeparatedValueProcessor"},
+          {"action": "amOnPage", "page": "/?id=52"},
+          {"action": "makeScreenshotOfElement","selector": ".container","fileName": "DatabaseQueryProcessor"},
+          {"action": "amOnPage", "page": "/?id=51"},
+          {"action": "makeScreenshotOfElement","selector": ".container","fileName": "FilesProcessor"},
+          {"action": "amOnPage", "page": "/?id=49"},
+          {"action": "makeScreenshotOfElement","selector": ".container","fileName": "GalleryProcessor"},
+          {"action": "amOnPage", "page": "/?id=48"},
+          {"action": "makeScreenshotOfElement","selector": ".container","fileName": "LanguageMenuProcessor"},
+          {"action": "amOnPage", "page": "/?id=47"},
+          {"action": "makeScreenshotOfElement","selector": ".container","fileName": "MenuProcessor"},
+          {"action": "amOnPage", "page": "/?id=46"},
+          {"action": "makeScreenshotOfElement","selector": ".container","fileName": "SiteProcessor"},
+          {"action": "amOnPage", "page": "/?id=45"},
+          {"action": "makeScreenshotOfElement","selector": ".container","fileName": "SplitProcessor"},
+          {"action": "amOnPage", "page": "/?id=44"},
+          {"action": "makeScreenshotOfElement","selector": ".container","fileName": "Custom data processors"}
         ],
         "DataProcessingCodeSnippets": [
           {"include": "_default"},
