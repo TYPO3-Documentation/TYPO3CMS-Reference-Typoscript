@@ -45,18 +45,6 @@ TMENU
 .. container:: table-row
 
    Property
-         accessKey
-
-   Data type
-         boolean
-
-   Description
-         If set access-keys are set on the menu-links
-
-
-.. container:: table-row
-
-   Property
          target
 
    Data type
