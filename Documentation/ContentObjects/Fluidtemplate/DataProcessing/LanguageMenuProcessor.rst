@@ -8,6 +8,14 @@ LanguageMenuProcessor
 This menu processor generates a json encoded menu string that will be
 decoded again and assigned to the :ts:`FLUIDTEMPLATE` as a variable.
 
+.. hint:: The third party extension
+   `b13/menus <https://extensions.typo3.org/extension/menus>`__ also provides
+   a language menu processors: :php:`B13\Menus\DataProcessing\LanguageMenu`.
+
+   Refer to the
+   `manual of the extension b13/menus <https://github.com/b13/menus/blob/master/README.md>`__
+   for more information.
+
 
 Options:
 ========
@@ -59,19 +67,9 @@ Please see also :ref:`dataProcessing-about-examples`.
 TypoScript
 ----------
 
-Using the :php:`LanguageMenuProcessor` the following scenario is possible::
+Using the :php:`LanguageMenuProcessor` the following scenario is possible:
 
-   tt_content {
-      examples_dataproclang =< lib.contentElement
-      examples_dataproclang {
-         templateName = DataProcLangMenu
-         dataProcessing.10 = TYPO3\CMS\Frontend\DataProcessing\LanguageMenuProcessor
-         dataProcessing.10 {
-            languages = auto
-            as = languageNavigation
-         }
-      }
-   }
+.. include:: /CodeSnippets/DataProcessing/TypoScript/LanguageMenuProcessor.rst.txt
 
 
 The Fluid template
@@ -79,36 +77,8 @@ The Fluid template
 
 This generated menu can be used in Fluid like this:
 
-.. code-block:: html
 
-   <html data-namespace-typo3-fluid="true" xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
-      <h2>Data in variable languageNavigation</h2>
-      <f:debug inline="true">{languageNavigation}</f:debug>
-
-      <h2>Output</h2>
-      <f:if condition="{languageNavigation}">
-         <ul id="language" class="language-menu">
-            <f:for each="{languageNavigation}" as="item">
-               <li class="{f:if(condition: item.active, then: 'active')}
-                       {f:if(condition: item.available, else: ' text-muted')}">
-                  <f:if condition="{item.available}">
-                     <f:then>
-                        <a href="{item.link}" hreflang="{item.hreflang}"
-                           title="{item.navigationTitle}">
-                           <span>{item.navigationTitle}</span>
-                        </a>
-                     </f:then>
-                     <f:else>
-                        <span>{item.navigationTitle}</span>
-                     </f:else>
-                  </f:if>
-               </li>
-            </f:for>
-         </ul>
-      </f:if>
-
-   </html>
-
+.. include:: /CodeSnippets/DataProcessing/Template/DataProcLangMenu.rst.txt
 
 Output
 ------
@@ -118,7 +88,4 @@ configuration. As the current page is not translated into German, the
 German language has the :php:`item.available` set to false. It therefore
 doesn't get linked in the template.
 
-
-.. figure:: /Images/ManualScreenshots/FrontendOutput/DataProcessing/LanguageMenuProcessor.png
-   :class: with-shadow
-   :alt: language menu dump and output
+.. include:: /Images/AutomaticScreenshots/DataProcessing/LanguageMenuProcessor.rst.txt

@@ -164,69 +164,14 @@ always has to be called first. Execution depends on the key in the
 dataProcessing array, not the order in which they are put there.
 
 The content of :typoscript:`filesProcessedDataKey` in the GalleryProcessor
-has to be equal to the content of :typoscript:`as` in the FilesProcessor::
+has to be equal to the content of :typoscript:`as` in the FilesProcessor:
 
-   tt_content {
-      examples_dataprocgallery =< lib.contentElement
-      examples_dataprocgallery {
-         templateName = DataProcGallery
-         dataProcessing {
-            # Process files
-            10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
-            10 {
-               as = images
-               references.fieldName = image
-               references.table = tt_content
-               sorting = title
-               sorting.direction = descending
-            }
-
-            # Calculate gallery info
-            20 = TYPO3\CMS\Frontend\DataProcessing\GalleryProcessor
-            20 {
-               filesProcessedDataKey = images
-               mediaOrientation.field = imageorient
-               numberOfColumns.field = imagecols
-               equalMediaHeight.field = imageheight
-               equalMediaWidth.field = imagewidth
-               maxGalleryWidth = 1000
-               maxGalleryWidthInText = 1000
-               columnSpacing = 0
-               borderEnabled.field = imageborder
-               borderWidth = 5
-               borderPadding = 3
-               as = gallery
-            }
-         }
-      }
-   }
-
+.. include:: /CodeSnippets/DataProcessing/TypoScript/GalleryProcessor.rst.txt
 
 The Fluid template
 ------------------
 
-.. code-block:: html
-
-   <html data-namespace-typo3-fluid="true" xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
-      <h2>Data in variable gallery</h2>
-      <f:debug inline="true">{gallery}</f:debug>
-
-      <h2>Output</h2>
-      <f:for each="{gallery.rows}" as="row">
-         <div class="row">
-            <f:for each="{row.columns}" as="column">
-               <div class="col-auto p-{gallery.border.padding}">
-                  <f:image image="{column.media}" width="{column.dimensions.width}"
-                           class="{f:if(condition: '{gallery.border.enabled}',
-                              then:'border border-success rounded')}"
-                           style="border-width: {gallery.border.width}px!important;"/>
-               </div>
-            </f:for>
-         </div>
-      </f:for>
-
-   </html>
-
+.. include:: /CodeSnippets/DataProcessing/Template/DataProcGallery.rst.txt
 
 Output
 ------

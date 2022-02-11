@@ -31,7 +31,5 @@ specific custom data processor, of course.
 Example output
 ==============
 
-.. figure:: /Images/ManualScreenshots/FrontendOutput/DataProcessing/CustomDataProcessor.png
-   :class: with-shadow
-   :alt: custom data processor output
+.. include:: /Images/AutomaticScreenshots/DataProcessing/Custom data processors.rst.txt
 
