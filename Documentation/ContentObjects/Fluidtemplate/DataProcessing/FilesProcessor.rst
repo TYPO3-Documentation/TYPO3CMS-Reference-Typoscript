@@ -155,22 +155,9 @@ Please see also :ref:`dataProcessing-about-examples`.
 TypoScript
 ----------
 
-Using the :php:`FilesProcessor` the following scenario is possible::
+Using the :php:`FilesProcessor` the following scenario is possible:
 
-   tt_content {
-      examples_dataprocfiles =< lib.contentElement
-      examples_dataprocfiles {
-         templateName = DataProcFiles
-         dataProcessing.10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
-         dataProcessing.10 {
-            as = images
-            references.fieldName = image
-            references.table = tt_content
-            sorting = title
-            sorting.direction = descending
-         }
-      }
-   }
+.. include:: /CodeSnippets/DataProcessing/TypoScript/FilesProcessor.rst.txt
 
 
 The Fluid template
@@ -178,29 +165,7 @@ The Fluid template
 
 In the Fluid template then iterate over the files:
 
-.. code-block:: html
-
-   <html data-namespace-typo3-fluid="true" xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
-      <h2>Data in variable images</h2>
-      <f:debug inline="true">{images}</f:debug>
-      <h2>Data in variable images</h2>
-
-      <div class="row">
-         <div class="row">
-            <f:for each="{images}" as="image">
-               <div class="col-12 col-md-3">
-                  <div class="card">
-                     <f:image image="{image}" class="card-img-top" height="250"/>
-                     <div class="card-body">
-                        <h5 class="card-title">{image.title}</h5>
-                        <div class="card-text">{image.description}</div>
-                     </div>
-                  </div>
-               </div>
-            </f:for>
-         </div>
-      </div>
-   </html>
+.. include:: /CodeSnippets/DataProcessing/Template/DataProcFiles.rst.txt
 
 
 Output

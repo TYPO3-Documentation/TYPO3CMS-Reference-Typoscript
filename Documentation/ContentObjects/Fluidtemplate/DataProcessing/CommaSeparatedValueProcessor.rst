@@ -97,24 +97,9 @@ Field :php:`bodytext` in table :php:`tt_content`::
 TypoScript
 ----------
 
-We define the dataProcessing property to use the CommaSeparatedValueProcessor::
+We define the dataProcessing property to use the CommaSeparatedValueProcessor:
 
-   tt_content {
-     # lib.contentElement = FLUIDTEMPLATE
-      examples_newcontentcsv =< lib.contentElement
-      examples_newcontentcsv {
-         templateName = DataProcCsv
-         dataProcessing.10 = TYPO3\CMS\Frontend\DataProcessing\CommaSeparatedValueProcessor
-         dataProcessing.10 {
-            if.isTrue.field = bodytext
-            fieldName = bodytext
-            fieldDelimiter.field = tx_examples_separator
-            fieldEnclosure = "
-            maximumColumns.field = imagecols
-            as = myTable
-         }
-      }
-   }
+.. include:: /CodeSnippets/DataProcessing/TypoScript/CommaSeparatedValueProcessor.rst.txt
 
 
 The Fluid template
@@ -123,25 +108,7 @@ The Fluid template
 In the Fluid template you can iterate over the processed data. "myContentTable" can
 be used as a variable :html:`{myContentTable}` inside Fluid for iteration.
 
-.. code-block:: html
-
-   <html data-namespace-typo3-fluid="true"
-         xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
-      <h2>Data in variable "myTable"</h2>
-      <f:debug inline="true">{myTable}</f:debug>
-
-      <h2>Output, {data.imagecols} columns separated by char {data.tx_examples_separator}</h2>
-      <table class="table table-hover">
-         <f:for each="{myTable}" as="columns" iteration="i">
-            <tr>
-               <th scope="row">{i.cycle}</th>
-               <f:for as="column" each="{columns}">
-                  <td>{column}</td>
-               </f:for>
-            <tr>
-         </f:for>
-      </table>
-   </html>
+.. include:: /CodeSnippets/DataProcessing/Template/DataProcCsv.rst.txt
 
 
 Output
@@ -150,6 +117,4 @@ Output
 Using :typoscript:`maximumColumns` limits the amount of columns in the multi dimensional array.
 In this example, the field data of the last column will be stripped off. Therefore the output would be:
 
-.. figure:: /Images/ManualScreenshots/FrontendOutput/DataProcessing/CsvProcessor.png
-   :class: with-shadow
-   :alt: CSV data as HTML table
+.. include:: /Images/AutomaticScreenshots/DataProcessing/CommaSeparatedValueProcessor.rst.txt
