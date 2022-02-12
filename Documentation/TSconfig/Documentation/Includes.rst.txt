@@ -10,6 +10,8 @@
 .. role:: rst(code)
 .. role:: sep (strong)
 .. role:: typoscript(code)
+.. role:: tsconfig(code)
+.. role:: sql(code)
 
 .. role:: ts(typoscript)
    :class: typoscript
