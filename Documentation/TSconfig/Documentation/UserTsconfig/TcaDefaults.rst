@@ -52,9 +52,9 @@ Example:
             ...
         ]
 
-    If 'hidden' is in the list, it gets overwritten with the "neighbor" record value (see
+    If 'hidden' is in the list, it gets overridden with the "neighbor" record value (see
     :php:`\TYPO3\CMS\Backend\Form\FormDataProvider\DatabaseRowInitializeNew::setDefaultsFromNeighborRow`)
-    and as the value is set - usually to '0' - it will not be overwritten
+    and as the value is set - usually to '0' - it will not be overridden
     again. To make it work as expected, that value must be overridden. This
     can be done for example in the :file:`Configuration/TCA/Overrides` folder
     of an extension::
