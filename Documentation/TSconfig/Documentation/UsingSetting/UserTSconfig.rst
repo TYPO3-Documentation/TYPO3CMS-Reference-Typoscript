@@ -66,7 +66,7 @@ like this to set a default configuration.
 	 * Adding the default User TSconfig
 	 */
 	\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addUserTSConfig('
-      @import 'EXT:my_sitepackage/Configuration/TSconfig/User/default.tsconfig'
+      @import "EXT:my_sitepackage/Configuration/TSconfig/User/default.tsconfig"
 	');
 
 There is a global :ref:`TYPO3_CONF_VARS <t3coreapi:typo3ConfVars>` value called
