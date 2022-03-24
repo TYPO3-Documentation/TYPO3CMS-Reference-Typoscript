@@ -160,32 +160,6 @@ extbase.pluginName
    Sets variables for initializing extbase.
 
 
-.. index:: FLUIDTEMPLATE; file
-.. _cobj-fluidtemplate-properties-file:
-
-file
-----
-
-.. rst-class:: dl-parameters
-
-file
-   :sep:`|` :aspect:`Data type:` string /:ref:`stdWrap <stdwrap>`
-   :sep:`|`
-
-   The fluid template file. It is an alternative to ".template" and is used
-   only, if ".template" is not set.
-
-   **Example:** ::
-
-      page = PAGE
-      page {
-         10 = FLUIDTEMPLATE
-         10 {
-            file = EXT:site_package/Resources/Private/Templates/Page/MyTemplate.html
-         }
-      }
-
-
 .. index:: FLUIDTEMPLATE; format
 .. _cobj-fluidtemplate-properties-format:
 
