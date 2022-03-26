@@ -246,7 +246,7 @@ tree.rootLineParentIds
 
    This implements the old :ts:`PIDupinRootline` condition within the Symfony
    expression language, see
-   :doc:`t3core:Changelog/10.3/Feature-88962-Re-implementOldPIDupinRootlineTypoScriptCondition`
+   :doc:`ext_core:Changelog/10.3/Feature-88962-Re-implementOldPIDupinRootlineTypoScriptCondition`
 
 :aspect:`Variable`
    tree.rootLineParentIds
@@ -541,7 +541,7 @@ workspace
 ~~~~~~~~~
 
 .. versionadded:: 10.3
-   :doc:`t3core:Changelog/10.3/Feature-90203-MakeWorkspaceAvailableInTypoScriptConditions`
+   :doc:`ext_core:Changelog/10.3/Feature-90203-MakeWorkspaceAvailableInTypoScriptConditions`
 
 :aspect:`Variable`
    workspace
@@ -560,7 +560,7 @@ workspace.workspaceId
 """""""""""""""""""""
 
 .. versionadded:: 10.3
-   :doc:`t3core:Changelog/10.3/Feature-90203-MakeWorkspaceAvailableInTypoScriptConditions`
+   :doc:`ext_core:Changelog/10.3/Feature-90203-MakeWorkspaceAvailableInTypoScriptConditions`
 
 
 :aspect:`Variable`
@@ -585,7 +585,7 @@ workspace.isLive
 """"""""""""""""
 
 .. versionadded:: 10.3
-   :doc:`t3core:Changelog/10.3/Feature-90203-MakeWorkspaceAvailableInTypoScriptConditions`
+   :doc:`ext_core:Changelog/10.3/Feature-90203-MakeWorkspaceAvailableInTypoScriptConditions`
 
 
 :aspect:`Variable`
@@ -610,7 +610,7 @@ workspace.isOffline
 """""""""""""""""""
 
 .. versionadded:: 10.3
-   :doc:`t3core:Changelog/10.3/Feature-90203-MakeWorkspaceAvailableInTypoScriptConditions`
+   :doc:`ext_core:Changelog/10.3/Feature-90203-MakeWorkspaceAvailableInTypoScriptConditions`
 
 
 :aspect:`Variable`
