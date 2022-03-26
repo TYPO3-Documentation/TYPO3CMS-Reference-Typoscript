@@ -1,4 +1,4 @@
-.. include:: ../Includes.txt
+.. include:: /Includes.rst.txt
 
 
 .. _select:
@@ -150,8 +150,8 @@ pidInList
       Allows to select versioned records in workspaces directly.
 
    **Special value:** :ts:`0`
-      Allows to disable the :sql:`pid` constraint completely. Requirements: 
-      :ts:`uidInList` *must* be set or the table *must* have the prefix 
+      Allows to disable the :sql:`pid` constraint completely. Requirements:
+      :ts:`uidInList` *must* be set or the table *must* have the prefix
       "static\_\*".
 
 :aspect:`Default`

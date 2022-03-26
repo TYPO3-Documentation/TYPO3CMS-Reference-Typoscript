@@ -1,4 +1,4 @@
-.. include:: ../../Includes.txt
+.. include:: /Includes.rst.txt
 
 
 .. _menu-common-properties:
@@ -131,7 +131,7 @@ otherwise noted!
 
    Default
          "img"
-         
+
    Description
          Prefix for the image names. This prefix is appended with the uid of the
          page.
@@ -231,7 +231,7 @@ showAccessRestrictedPages
 
          If the value is "NONE" the link will not be changed and the site will
          perform page-not-found handling when clicked (which can be used to
-         capture the event and act accordingly of course). This means that the 
+         capture the event and act accordingly of course). This means that the
          link's URL will point to the page even if it is not accessible by the
          current frontend user. Note that the default behavior of page-not-found
          handling is to show the parent page instead.

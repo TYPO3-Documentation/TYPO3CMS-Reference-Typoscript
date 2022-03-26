@@ -1,4 +1,4 @@
-.. include:: ../Includes.txt
+.. include:: /Includes.rst.txt
 
 .. we keep the old label objects-optionsplit,
    in case it is still used.

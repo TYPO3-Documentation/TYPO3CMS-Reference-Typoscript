@@ -1,4 +1,4 @@
-.. include:: ../Includes.txt
+.. include:: /Includes.rst.txt
 
 
 
@@ -8,8 +8,8 @@
 filelink
 ========
 
-.. warning:: 
-   `filelink` is deprecated since version 9 and will be removed in version 10. 
+.. warning::
+   `filelink` is deprecated since version 9 and will be removed in version 10.
    Use DataProcessors or Fluid Styled Content instead.
 
 :aspect:`Function:`
