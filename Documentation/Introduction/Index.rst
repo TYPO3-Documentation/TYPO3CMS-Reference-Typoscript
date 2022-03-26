@@ -72,8 +72,6 @@ Best practice:
   :ref:`cobj-fluidtemplate` is available, which uses Fluid
   from inside TypoScript.
 
-  * See :doc:`t3sitepackage:Index` for a complete walkthrough of creating a
-    sitepackage, which is the basis for a custom theme for your site.
   * See :ref:`t3coreapi:adding-your-own-content-elements` for an
     introduction on how to create your own content element types using
     TypoScript FLUIDTEMPLATE, Fluid and data processors.

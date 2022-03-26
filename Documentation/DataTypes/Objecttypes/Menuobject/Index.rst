@@ -1,8 +1,6 @@
 .. include:: /Includes.rst.txt
 
 
-.. _data-type-menuobj:
-
 menu object
 ===========
 

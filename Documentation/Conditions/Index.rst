@@ -14,8 +14,6 @@ Conditions
    "TYPO3 Explained" <t3coreapi:typoscript-syntax-conditions>`.
 
 
-.. _condition-syntax:
-
 General syntax
 ==============
 
@@ -51,8 +49,6 @@ Test browser::
      # TypoScript Code for users of other browsers.
    [END]
 
-
-.. _condition-general-notes:
 
 General notes
 =============

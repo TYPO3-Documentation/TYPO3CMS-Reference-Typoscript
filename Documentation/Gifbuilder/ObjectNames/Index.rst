@@ -352,7 +352,7 @@ Renders a text.
          resource /:ref:`stdWrap <stdwrap>`
 
    Description
-         Font face (truetype *.ttf and opentype *.otf font you can upload!)
+         Font face (truetype \*.ttf and opentype \*.otf font you can upload!)
 
    Default
          Nimbus (Arial-clone)

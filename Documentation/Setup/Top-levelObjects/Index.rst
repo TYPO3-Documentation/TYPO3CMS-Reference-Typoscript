@@ -10,20 +10,20 @@ Top-level objects
 
 .. container:: ts-properties
 
-   ================================== ==================
-   Property                           Data Type
-   ================================== ==================
-   page, ...                          -> :ref:`PAGE <page>`
-   config                             -> :ref:`CONFIG <config>`
-   constants                          -> :ref:`CONSTANTS <constants>`
-   :ref:`plugin`                      see :ref:`plugin`
-   :ref:`meta`                        see :ref:`meta`
-   :ref:`includeLibs <includelibs>`   *Array of strings*
-   `Other reserved TLO's:`_           :ref:`top-level-objects-other`
-   `resources`_                       readonly, see :ref:`top-level-objects-other`
-   `sitetitle`_                       readonly, see :ref:`top-level-objects-other`
-   `types`_                           readonly, see :ref:`top-level-objects-other`
-   ================================== ==================
+   =================================================== ==================
+   Property                                            Data Type
+   =================================================== ==================
+   page, ...                                           -> :ref:`PAGE <page>`
+   config                                              -> :ref:`CONFIG <config>`
+   constants                                           -> :ref:`CONSTANTS <constants>`
+   :ref:`plugin`                                       see :ref:`plugin`
+   :ref:`meta`                                         see :ref:`meta`
+   :ref:`includeLibs <includelibs>`                    *Array of strings*
+   :ref:`top-level-objects-other-reserved-tlo-s`       :ref:`top-level-objects-other`
+   :ref:`top-level-objects-resources`                  readonly, see :ref:`top-level-objects-other`
+   :ref:`top-level-objects-sitetitle`                  readonly, see :ref:`top-level-objects-other`
+   :ref:`top-level-objects-types`                      readonly, see :ref:`top-level-objects-other`
+   =================================================== ==================
 
 
 .. toctree::

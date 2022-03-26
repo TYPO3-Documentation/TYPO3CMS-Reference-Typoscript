@@ -30,7 +30,7 @@ in the TYPO3 CMS installation.
 Constants do not support multiline values!
 
 You can use environment variables to provide instance specific values to your constants.
-Refer to :ref:`getEnv <getenv>` for further information.
+Refer to :ref:`getEnv <data-type-gettext-getenv>` for further information.
 
 Example
 """""""
