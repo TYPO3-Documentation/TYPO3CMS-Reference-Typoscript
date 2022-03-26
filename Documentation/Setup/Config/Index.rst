@@ -2412,7 +2412,7 @@ sys\_language\_isocode
         This setting will be deprecated in v10 and removed in v11. In v9, language settings
         from the :ref:`Site configuration <t3coreapi:sitehandling>` are used by default and the TypoScript setting
         act as fallback, see also :php:`TYPO3\CMS\Core\Site\Entity\SiteLanguage->getTwoLetterIsoCode()`
-        (changelog: :doc:`t3core:Changelog/10.0/Deprecation-88559-TSFE-sys_language_isocode`).
+        (changelog: :doc:`ext_core:Changelog/10.0/Deprecation-88559-TSFE-sys_language_isocode`).
 
         ISO 639-1 language code for the according language. By default this
         is being set by :ts:`TSFE:sys_language_isocode`. The value is derived

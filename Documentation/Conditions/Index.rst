@@ -18,7 +18,7 @@ Conditions
 Upgrading
 =========
 
-The "old" condition syntax has been :doc:`deprecated <t3core:Changelog/9.5/Deprecation-86068-OldConditionSyntax>`
+The "old" condition syntax has been :doc:`deprecated <ext_core:Changelog/9.5/Deprecation-86068-OldConditionSyntax>`
 in 9 and will be removed in 10.
 
 .. hint::

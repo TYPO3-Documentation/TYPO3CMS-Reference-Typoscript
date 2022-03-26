@@ -28,7 +28,7 @@ Quoting of fields
 .. versionadded:: 8.7
 
    It is possible to use `{#fieldname}` to make the database
-   framework quote these fields (see :doc:`t3core:Changelog/8.7/Important-80506-DbalCompatibleFieldQuotingInTypoScript`)::
+   framework quote these fields (see :doc:`ext_core:Changelog/8.7/Important-80506-DbalCompatibleFieldQuotingInTypoScript`)::
 
       select.where = ({#title} LIKE {#%SOMETHING%} AND NOT {#doktype})
 
