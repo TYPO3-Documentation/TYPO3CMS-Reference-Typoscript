@@ -19,10 +19,10 @@ Upgrading
 
 .. versionchanged:: 10.0
 
-The "old" condition syntax has been :doc:`deprecated <t3core:Changelog/9.5/Deprecation-86068-OldConditionSyntax>`
+The "old" condition syntax has been :doc:`deprecated <ext_core:Changelog/9.5/Deprecation-86068-OldConditionSyntax>`
 in 9 and removed in 10.
 The feature toggle `[SYS][features][TypoScript.strictSyntax]`
-:doc:`has been dropped in 10.0 <t3core:Changelog/10.0/Breaking-87193-DeprecatedFunctionalityRemoved>`.
+:doc:`has been dropped in 10.0 <ext_core:Changelog/10.0/Breaking-87193-DeprecatedFunctionalityRemoved>`.
 
 Before updating from 9 to 10, you *MUST* change your templates to use the "new"
 condition syntax.
@@ -234,7 +234,7 @@ tree.rootLineParentIds
 
    This implements the old :ts:`PIDupinRootline` condition within the Symfony
    expression language, see
-   :doc:`t3core:Changelog/10.3/Feature-88962-Re-implementOldPIDupinRootlineTypoScriptCondition`
+   :doc:`ext_core:Changelog/10.3/Feature-88962-Re-implementOldPIDupinRootlineTypoScriptCondition`
 
 :aspect:`Variable`
    tree.rootLineParentIds
@@ -452,7 +452,7 @@ workspace
 ~~~~~~~~~
 
 .. versionadded:: 10.3
-   :doc:`t3core:Changelog/10.3/Feature-90203-MakeWorkspaceAvailableInTypoScriptConditions`
+   :doc:`ext_core:Changelog/10.3/Feature-90203-MakeWorkspaceAvailableInTypoScriptConditions`
 
 :aspect:`Variable`
    workspace
@@ -470,7 +470,7 @@ workspace.workspaceId
 """""""""""""""""""""
 
 .. versionadded:: 10.3
-   :doc:`t3core:Changelog/10.3/Feature-90203-MakeWorkspaceAvailableInTypoScriptConditions`
+   :doc:`ext_core:Changelog/10.3/Feature-90203-MakeWorkspaceAvailableInTypoScriptConditions`
 
 
 :aspect:`Variable`
@@ -494,7 +494,7 @@ workspace.isLive
 """"""""""""""""
 
 .. versionadded:: 10.3
-   :doc:`t3core:Changelog/10.3/Feature-90203-MakeWorkspaceAvailableInTypoScriptConditions`
+   :doc:`ext_core:Changelog/10.3/Feature-90203-MakeWorkspaceAvailableInTypoScriptConditions`
 
 
 :aspect:`Variable`
@@ -518,7 +518,7 @@ workspace.isOffline
 """""""""""""""""""
 
 .. versionadded:: 10.3
-   :doc:`t3core:Changelog/10.3/Feature-90203-MakeWorkspaceAvailableInTypoScriptConditions`
+   :doc:`ext_core:Changelog/10.3/Feature-90203-MakeWorkspaceAvailableInTypoScriptConditions`
 
 
 :aspect:`Variable`

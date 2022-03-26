@@ -102,4 +102,4 @@ More information
 
 * :ref:`t3sitepackage:typoscript-configuration` (in "Sitepackage Tutorial")`
 * :ref:`t3sitepackage:extension-configuration` (in "Sitepackage Tutorial")`
-* :doc:`t3core:Changelog/9.0/Feature-82812-NewSyntaxForImportingTypoScriptFiles`
+* :doc:`ext_core:Changelog/9.0/Feature-82812-NewSyntaxForImportingTypoScriptFiles`
