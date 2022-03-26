@@ -3,7 +3,7 @@
 .. --------------------------------------------------
 .. -*- coding: utf-8 -*- with BOM.
 
-.. include:: ../../Includes.txt
+.. include:: /Includes.rst.txt
 
 
 .. _cobj-load-register:
@@ -12,7 +12,7 @@ LOAD\_REGISTER
 ^^^^^^^^^^^^^^
 
 This provides a way to load the array $GLOBALS['TSFE']->register[]
-with values. It does not return anything! 
+with values. It does not return anything!
 
 The register is working like a stack: With each call new content can be
 put on top of the stack. :ref:`RESTORE_REGISTER <cobj-restore-register>`

@@ -1,4 +1,4 @@
-.. include:: ../Includes.txt
+.. include:: /Includes.rst.txt
 
 .. _top-level-objects-bcd:
 .. _top-level-objects-other:
