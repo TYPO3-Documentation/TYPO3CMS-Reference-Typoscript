@@ -624,8 +624,8 @@ siteLanguage
    :typoscript:`title`            Label to be used within TYPO3 to identify the language
    :typoscript:`twoLetterIsoCode` The iso code for this language (two letter) ISO-639-1
    :typoscript:`typo3Language`    Prefix for TYPO3's language files - "default" for English, otherwise one of TYPO3's
-                          internal language keys. Can be configured in the site configuration in each language
-                          with the key :yaml:`typo3Language`.
+                                  internal language keys. Can be configured in the site configuration in each language
+                                  with the key :yaml:`typo3Language`.
    :typoscript:`websiteTitle`     The website title for this language. No automatic fallback to the `site:websiteTitle`!
    ============================== ==========================================================
 
