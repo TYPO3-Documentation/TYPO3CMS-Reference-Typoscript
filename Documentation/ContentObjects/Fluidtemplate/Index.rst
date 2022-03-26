@@ -10,7 +10,7 @@ FLUIDTEMPLATE
 =============
 
 An object of type FLUIDTEMPLATE combines TypoScript with the Fluid
-templating engine. 
+templating engine.
 
 .. versionchanged:: 11.0
    The content object FLUIDTEMPLATE has replaced `TEMPLATE
@@ -536,4 +536,4 @@ headlines. The copyright year will be taken from the TypoScript constant
 
    * :ref:`dataProcessing` examples
    * :ref:`t3coreapi:adding-your-own-content-elements`
-   * :ref:`t3sitepackage:start`
+   * :doc:`t3sitepackage:Index`
