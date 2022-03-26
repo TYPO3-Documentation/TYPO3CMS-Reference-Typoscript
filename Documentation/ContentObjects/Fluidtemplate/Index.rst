@@ -123,10 +123,11 @@ extbase.controllerExtensionName
 
    .. tip::
       Setting this allows you to skip the `extensionName` argument for the
-      :ref:`<t3viewhelper:translate>` and the :ref:`<t3viewhelper:uri-resource>` viewhelpers.
+      :ref:`<t3viewhelper:typo3-fluid-translate>` and the :ref:`<t3viewhelper:typo3-fluid-uri-resource>`
+      viewhelpers.
 
       This requires you to put translations and public images in the
-      :ref:`usual paths in your extension <t3coreapi:reserved-folders>`.
+      :ref:`usual paths in your extension <t3coreapi:extension-reserved-folders>`.
 
 
 .. index:: FLUIDTEMPLATE; extbase.controllerName
