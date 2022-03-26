@@ -1,4 +1,4 @@
-.. include:: ../../Includes.txt
+.. include:: /Includes.rst.txt
 
 
 .. _cobj-load-register:
@@ -8,7 +8,7 @@ LOAD\_REGISTER
 ==============
 
 This provides a way to load the array $GLOBALS['TSFE']->register[]
-with values. It does not return anything! 
+with values. It does not return anything!
 
 The register is working like a stack: With each call new content can be
 put on top of the stack. :ref:`RESTORE_REGISTER <cobj-restore-register>`
@@ -84,7 +84,7 @@ In this example we first load a special value, which is given as a
 GET/POST parameter, into the register. Then we use a
 :ref:`CONTENT object <cobj-content>` to render content based on this
 value. This CONTENT object loads data from a table "tx_my_table" and looks up
-the entry using the value from the register as a unique id. The field "tx_my_text_field" 
+the entry using the value from the register as a unique id. The field "tx_my_text_field"
 of this record will be rendered as output.
 
 For an example in combination with :ref:`RESTORE_REGISTER <cobj-restore-register>`

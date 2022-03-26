@@ -1,4 +1,4 @@
-.. include:: ../Includes.txt
+.. include:: /Includes.rst.txt
 
 .. The label objects-calc should no longer be used.
 .. Use the label calc instead.
