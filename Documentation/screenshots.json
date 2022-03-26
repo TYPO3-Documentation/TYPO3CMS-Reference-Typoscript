@@ -237,7 +237,7 @@
           {"action": "amOnPage", "page": "/?id=45"},
           {"action": "makeScreenshotOfElement","selector": ".container","fileName": "SplitProcessor"},
           {"action": "amOnPage", "page": "/?id=44"},
-          {"action": "makeScreenshotOfElement","selector": ".container","fileName": "Custom data processors"}
+          {"action": "makeScreenshotOfElement","selector": ".container","fileName": "CustomDataProcessors"}
         ],
         "DataProcessingCodeSnippets": [
           {"include": "_default"},

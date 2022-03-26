@@ -675,7 +675,7 @@ siteLanguage
    :typoscript:`direction`        The direction for this language
    :typoscript:`flagIdentifier`   The flag key (like "gb" or "fr") used to be used in TYPO3's Backend.
    :typoscript:`hreflang`         Language tag for this language defined by RFC 1766 / 3066 for "lang"  and "hreflang" attributes
-   :typoscript:`languageId`       The language mapped to id of the site languge, as defined in the :ref:`config.yaml languageId <languageid>`
+   :typoscript:`languageId`       The language mapped to id of the site languge, as defined in the :ref:`config.yaml languageId <t3coreapi:sitehandling-addingLanguages>`
    :typoscript:`locale`           Locale, like 'de_CH' or 'en_GB'
    :typoscript:`navigationTitle`  Label to be used within language menus
    :typoscript:`title`            Label to be used within TYPO3 to identify the language

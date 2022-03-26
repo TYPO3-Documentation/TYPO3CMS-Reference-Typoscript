@@ -31,5 +31,5 @@ specific custom data processor, of course.
 Example output
 ==============
 
-.. include:: /Images/AutomaticScreenshots/DataProcessing/Custom data processors.rst.txt
+.. include:: /Images/AutomaticScreenshots/DataProcessing/CustomDataProcessors.rst.txt
 

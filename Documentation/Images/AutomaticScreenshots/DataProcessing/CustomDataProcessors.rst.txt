@@ -3,5 +3,5 @@
 .. https://github.com/TYPO3-Documentation/t3docs-screenshots
 .. =========================================================
 
-.. figure:: /Images/AutomaticScreenshots/DataProcessing/Custom data processors.png
+.. figure:: /Images/AutomaticScreenshots/DataProcessing/CustomDataProcessors.png
    :class: with-shadow

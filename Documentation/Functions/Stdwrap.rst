@@ -1864,9 +1864,6 @@ prefixComment
 .. index:: stdWrap; editIcons
 .. _stdwrap-editicons:
 
-.. index:: stdWrap; editIcons
-.. _stdwrap-editicons:
-
 editIcons
 ---------
 
