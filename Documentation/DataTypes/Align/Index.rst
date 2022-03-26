@@ -13,7 +13,7 @@ align
    Decides about alignment.
 
 :aspect:`Examples:`
-   :ts:`left`, :ts:`center`, :ts:`right`
+   :typoscript:`left`, :typoscript:`center`, :typoscript:`right`
 
 :aspect:`Default:`
-   :ts:`left`
+   :typoscript:`left`

@@ -13,10 +13,10 @@ PAGE & page
 
 This defines what is rendered in the frontend.
 
-PAGE is an object type. A good habit is to use :ts:`page` as the top-level object name for
+PAGE is an object type. A good habit is to use :typoscript:`page` as the top-level object name for
 the content-page on a website.
 
-TYPO3 does not initialize :ts:`page` by default. You must initialize this
+TYPO3 does not initialize :typoscript:`page` by default. You must initialize this
 explicitly, e.g.::
 
     page = PAGE
@@ -307,7 +307,7 @@ cssInline
 
    Description
          Allows to add inline CSS to the page :html:`<head>` section.
-         The :ts:`cssInline` property contains any number of numeric keys, each representing one cObject.
+         The :typoscript:`cssInline` property contains any number of numeric keys, each representing one cObject.
          Internally handled as PHP integer, maximum number is therefore restricted to :php:`PHP_INT_MAX`.
 
          **Example:** ::
@@ -342,7 +342,7 @@ footerData
          Same as headerData above, except that this block gets included at the
          bottom of the page (just before the closing body tag).
 
-         The :ts:`footerData` property contains any number of numeric keys, each representing one cObject.
+         The :typoscript:`footerData` property contains any number of numeric keys, each representing one cObject.
          Internally handled as PHP integer, maximum number is therefore restricted to :php:`PHP_INT_MAX`.
 
 
@@ -390,7 +390,7 @@ headerData
 
          By default, gets inserted after all the style definitions.
 
-         The :ts:`headerData` property contains any number of numeric keys, each representing one cObject.
+         The :typoscript:`headerData` property contains any number of numeric keys, each representing one cObject.
          Internally handled as PHP integer, maximum number is therefore restricted to :php:`PHP_INT_MAX`.
 
    Example
@@ -810,10 +810,10 @@ javascriptLibs
          *(array of strings)*
 
    Description
-         Same as :ts:`jsInline`, except that the JavaScript gets inserted at the
+         Same as :typoscript:`jsInline`, except that the JavaScript gets inserted at the
          bottom of the page (just before the closing :html:`</body>` tag).
 
-         The :ts:`jsFooterInline` property contains any number of numeric keys, each representing one cObject.
+         The :typoscript:`jsFooterInline` property contains any number of numeric keys, each representing one cObject.
          Internally handled as PHP integer, maximum number is therefore restricted to :php:`PHP_INT_MAX`.
 
 
@@ -837,7 +837,7 @@ jsFooterInline
          bottom of the page (just before the closing body tag).
 
 
-         The :ts:`jsInline` property contains any number of numeric keys, each representing one cObject.
+         The :typoscript:`jsInline` property contains any number of numeric keys, each representing one cObject.
          Internally handled as PHP integer, maximum number is therefore restricted to :php:`PHP_INT_MAX`.
 
 .. _setup-page-jsinline:

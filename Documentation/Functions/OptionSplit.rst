@@ -23,9 +23,9 @@ optionSplit
 Introduction
 ============
 
-:ts:`optionSplit` is the codename of a very tricky - but very useful! - function
+:typoscript:`optionSplit` is the codename of a very tricky - but very useful! - function
 and functionality. It is primarily used with the menu objects where it is
-enabled for MANY properties. This make :ts:`optionSplit` really powerful.
+enabled for MANY properties. This make :typoscript:`optionSplit` really powerful.
 
 So let's take an example from menu building.
 As a result all A-tags generated from this definition will have the `class` attribute
@@ -40,14 +40,14 @@ as we cannot know how long the list of menu items is. From zero to many everythi
 is possible. Let's describe this as: We have an **output sequence of 0 to N items**.
 
 In real life one more thing is important: We often want to have a different properties
-for the first and the last or odd and even elements. :ts:`optionSplit` tries to offer
+for the first and the last or odd and even elements. :typoscript:`optionSplit` tries to offer
 an easy solution for this task as well. We can specify more than just one shaping
 of a value for a property. Let's describe this as: We have an **input sequence M items**.
 
-Now we can precisely define what :ts:`optionSplit` is.
+Now we can precisely define what :typoscript:`optionSplit` is.
 
 Definition:
-   :ts:`optionSplit` is a **syntax** to define an input sequence of a fixed amount **M**
+   :typoscript:`optionSplit` is a **syntax** to define an input sequence of a fixed amount **M**
    of values. It has a fixed, builtin **ruleset**. Its **functionality** is to
    apply ONE of the input values to each output item according to the position of
    the output item and the ruleset.
@@ -56,7 +56,7 @@ In other words:
 
    1. We have an **input sequence of M items**. M is known.
    2. We have an **output sequence of 0 to N items**. N is unknown and may be zero, one, or "large".
-   3. We have a **ruleset** delivered with :ts:`optionSplit` that specifies how the input sequence
+   3. We have a **ruleset** delivered with :typoscript:`optionSplit` that specifies how the input sequence
       should be applied to the output sequence.
 
 In the following we'll try to shed light on this.
@@ -81,7 +81,7 @@ It's useful to agree about some terms first: delimiter string, mainpart, subpart
 Mainparts
 ~~~~~~~~~
 
-:ts:`optionSplit` uses the string `|*|` to split the total string into **mainparts**.
+:typoscript:`optionSplit` uses the string `|*|` to split the total string into **mainparts**.
 Up to **three** mainparts will be used. If there are more they
 will be ignored.
 On the input side we may have for example::

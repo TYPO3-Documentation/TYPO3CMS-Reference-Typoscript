@@ -304,7 +304,7 @@ format
          html
 
    Description
-         :ts:`format` sets the format of the current request. It can be
+         :typoscript:`format` sets the format of the current request. It can be
          something like "html", "xml", "png", "json". And it can even come in the
          form of "rss.xml" or alike.
 
@@ -460,7 +460,7 @@ dataProcessing
    Description
          Add one or multiple processors to manipulate the :php:`$data` variable
          of the currently rendered content object, like tt_content or page.
-         The sub-property :ts:`options` can be used to pass parameters to the processor class.
+         The sub-property :typoscript:`options` can be used to pass parameters to the processor class.
 
          **Example:**
 

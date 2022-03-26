@@ -80,7 +80,7 @@ uidInList
 .. container:: table-row
 
    Property
-         :ts:`uidInList`
+         :typoscript:`uidInList`
 
    Data type
          *list of record\_ids* /:ref:`stdWrap`
@@ -90,12 +90,12 @@ uidInList
          For example when the select function works on the table `tt_content`, then
          this will be uids of `tt_content` records.
 
-         **Note:** :ts:`this` is a *special keyword* and replaced with the id of the
+         **Note:** :typoscript:`this` is a *special keyword* and replaced with the id of the
          *current record*.
 
    Examples
-         | :ts:`select.uidInList = 1,2,3`
-         | :ts:`select.uidInList = this`
+         | :typoscript:`select.uidInList = 1,2,3`
+         | :typoscript:`select.uidInList = this`
 
 
 
@@ -108,7 +108,7 @@ pidInList
 .. container:: table-row
 
    Property
-         :ts:`pidInList`
+         :typoscript:`pidInList`
 
    Data type
          *list of page\_ids* /:ref:`stdWrap`
@@ -151,7 +151,7 @@ pidInList
 
 
    Default
-         :ts:`this`
+         :typoscript:`this`
 
 
 .. _select-recursive:
@@ -162,7 +162,7 @@ recursive
 .. container:: table-row
 
    Property
-         :ts:`recursive`
+         :typoscript:`recursive`
 
    Data type
          integer /:ref:`stdWrap`
@@ -182,7 +182,7 @@ orderBy
 .. container:: table-row
 
    Property
-         :ts:`orderBy`
+         :typoscript:`orderBy`
 
    Data type
          *SQL-orderBy* /:ref:`stdWrap`
@@ -203,7 +203,7 @@ groupBy
 .. container:: table-row
 
    Property
-         :ts:`groupBy`
+         :typoscript:`groupBy`
 
    Data type
          *SQL-groupBy* /:ref:`stdWrap`
@@ -225,7 +225,7 @@ max
 .. container:: table-row
 
    Property
-         :ts:`max`
+         :typoscript:`max`
 
    Data type
          integer +calc +"total" /:ref:`stdWrap`
@@ -246,7 +246,7 @@ begin
 .. container:: table-row
 
    Property
-         :ts:`begin`
+         :typoscript:`begin`
 
    Data type
          integer +calc +"total" /:ref:`stdWrap`
@@ -265,7 +265,7 @@ where
 .. container:: table-row
 
    Property
-         :ts:`where`
+         :typoscript:`where`
 
    Data type
          *SQL-where* /:ref:`stdWrap`
@@ -286,7 +286,7 @@ languageField
 .. container:: table-row
 
    Property
-         :ts:`languageField`
+         :typoscript:`languageField`
 
    Data type
          string /:ref:`stdWrap`
@@ -306,7 +306,7 @@ includeRecordsWithoutDefaultTranslation
 .. container:: table-row
 
    Property
-         :ts:`includeRecordsWithoutDefaultTranslation`
+         :typoscript:`includeRecordsWithoutDefaultTranslation`
 
    Data type
          boolean /:ref:`stdWrap`
@@ -329,7 +329,7 @@ selectFields
 .. container:: table-row
 
    Property
-         :ts:`selectFields`
+         :typoscript:`selectFields`
 
    Data type
          string /:ref:`stdWrap`
@@ -357,7 +357,7 @@ join, leftjoin, rightjoin
 .. container:: table-row
 
    Property
-         :ts:`join`, :ts:`leftjoin`, :ts:`rightjoin`
+         :typoscript:`join`, :typoscript:`leftjoin`, :typoscript:`rightjoin`
 
    Data type
          string /:ref:`stdWrap`
@@ -376,7 +376,7 @@ markers
 .. container:: table-row
 
    Property
-         :ts:`markers`
+         :typoscript:`markers`
 
    Data type
          *(array of markers)*

@@ -38,7 +38,7 @@ stdWrap contains properties which determine what is applied. The properties
 are listed below.
 
 The properties are parsed in the listed order. The
-properties :ts:`data`, :ts:`field`, :ts:`current`, :ts:`cObject`
+properties :typoscript:`data`, :typoscript:`field`, :typoscript:`current`, :typoscript:`cObject`
 (in that order!) are special as they are used to import content
 from variables or arrays.
 
@@ -47,8 +47,8 @@ If you want to study this further please refer to
 where you will find the function :php:`stdWrap()` and the array :php:`$stdWrapOrder`,
 which represents the exact order of execution.
 
-Note that the :ts:`stdWrap` property "orderedStdWrap" allows you to execute
-multiple :ts:`stdWrap` functions in a freely selectable order.
+Note that the :typoscript:`stdWrap` property "orderedStdWrap" allows you to execute
+multiple :typoscript:`stdWrap` functions in a freely selectable order.
 
 The above example could be rewritten to this::
 
@@ -57,7 +57,7 @@ The above example could be rewritten to this::
    10.stdWrap.case = upper
    10.stdWrap.field = header
 
-Now the line :ts:`10.value = some text` is obsolete, because the whole
+Now the line :typoscript:`10.value = some text` is obsolete, because the whole
 value is "imported" from the field called "header" from the
 :php:`$cObj->data-array`.
 
@@ -971,7 +971,7 @@ strtotime
    Description
          Allows conversion of formatted dates to timestamp, e.g. to perform date calculations.
 
-         Possible values are :ts:`1` or any time string valid as first argument of the PHP :php:`strtotime()` function.
+         Possible values are :typoscript:`1` or any time string valid as first argument of the PHP :php:`strtotime()` function.
 
          **Example:** ::
 
@@ -1078,17 +1078,17 @@ bytes
 
          .labels = iec
             This is the default. IEC labels and base 1024 are used.
-            Built in IEC labels are :ts:`" | Ki| Mi| Gi| Ti| Pi| Ei| Zi| Yi"`.
+            Built in IEC labels are :typoscript:`" | Ki| Mi| Gi| Ti| Pi| Ei| Zi| Yi"`.
             You need to append a final string like 'B' or '-Bytes' yourself.
 
          .labels = si
             In this case SI labels and base 1000 are used.
-            Built in IEC labels are :ts:`" | k| M| G| T| P| E| Z| Y"`.
+            Built in IEC labels are :typoscript:`" | k| M| G| T| P| E| Z| Y"`.
             You need to append a final string like 'B' yourself.
 
          .labels = "..."
             Custom values can be defined as well like with
-            :ts:`.labels = " Byte| Kilobyte| Megabyte| Gigabyte"`. Use a
+            :typoscript:`.labels = " Byte| Kilobyte| Megabyte| Gigabyte"`. Use a
             vertical bar to separate the labels. Enclose the whole string in
             double quotes.
 
