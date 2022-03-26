@@ -50,7 +50,7 @@ Please read the following for an introduction:
   syntax
 * :ref:`t3start:Templating` in the "Getting Started Tutorial" for an
   introduction into templating in general.
-* :ref:`t3ts45:start` for an introduction to TypoScript Templating
+* :doc:`t3ts45:Index` for an introduction to TypoScript Templating
 * The chapter :ref:`using-and-setting` describes how to use, set
   and extend TypoScript.
 
@@ -75,7 +75,7 @@ Best practice:
   :ref:`cobj-fluidtemplate` is available, which uses Fluid
   from inside TypoScript.
 
-  * See :ref:`t3sitepackage:start` for a complete walkthrough of creating a
+  * See :doc:`t3sitepackage:Index` for a complete walkthrough of creating a
     sitepackage, which is the basis for a custom theme for your site.
   * See :ref:`t3coreapi:adding-your-own-content-elements` for an
     introduction on how to create your own content element types using

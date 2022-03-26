@@ -59,7 +59,7 @@ would be the page record and all fields of the :typoscript:`pages` table
 are available.
 
 All examples base on :typoscript:`lib.contentElement`, which is provided by
-the system extension :ref:`fluid_styled_content <ext_fsc:start>`.
+the system extension :doc:`fluid_styled_content <ext_fsc:Index>`.
 
 In this system extension it is defined as follows::
 
