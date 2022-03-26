@@ -29,7 +29,7 @@ Quoting of fields
 .. versionadded:: 8.7
 
    It is possible to use `{#fieldname}` to make the database
-   framework quote these fields (see :doc:`t3core:Changelog/8.7/Important-80506-DbalCompatibleFieldQuotingInTypoScript`)::
+   framework quote these fields (see :doc:`ext_core:Changelog/8.7/Important-80506-DbalCompatibleFieldQuotingInTypoScript`)::
 
       select.where = ({#title} LIKE {#%SOMETHING%} AND NOT {#doktype})
 
@@ -151,10 +151,10 @@ pidInList
       Allows to select versioned records in workspaces directly.
 
    **Special value:** :ts:`0`
-      Allows to disable the :sql:`pid` constraint completely. Requirements: 
-      :ts:`uidInList` *must* be set or the table *must* have the prefix 
+      Allows to disable the :sql:`pid` constraint completely. Requirements:
+      :ts:`uidInList` *must* be set or the table *must* have the prefix
       "static\_\*".
-      
+
    .. note::
       Check the doktype of your backend page. If you are trying to fetch records from
       a sys_folder for example, the :php:`$cObj->checkPid_badDoktypeList` method will insert the
@@ -165,7 +165,7 @@ pidInList
          [...]WHERE (`your_requested_table_name`.`uid` = 0) AND [...]
 
       Which might result in an empty query result, depending on your records.
-   
+
 :aspect:`Default`
    :ts:`this`
 
