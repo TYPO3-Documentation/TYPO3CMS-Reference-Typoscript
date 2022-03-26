@@ -48,8 +48,8 @@ clearCacheCmd
 
     .. note::
 
-        In order for the :ts:`pages` and :ts:`all` commands to work for non-admin users,
-        make sure to set :ts:`options.clearCache.pages = 1` or :ts:`options.clearCache.all = 1` accordingly
+        In order for the :typoscript:`pages` and :typoscript:`all` commands to work for non-admin users,
+        make sure to set :typoscript:`options.clearCache.pages = 1` or :typoscript:`options.clearCache.all = 1` accordingly
         in the user TSconfig.
 
 
@@ -430,36 +430,36 @@ preview
             }
         }
 
-    The :ts:`previewPageId` is the uid of the page to use for preview. If this setting is omitted the
+    The :typoscript:`previewPageId` is the uid of the page to use for preview. If this setting is omitted the
     current page will be used. If the current page is not a normal page, the root page will be chosen.
 
-    The :ts:`disableButtonForDokType` setting allows you to disable the preview button for a given list
+    The :typoscript:`disableButtonForDokType` setting allows you to disable the preview button for a given list
     of doktypes. If none are configured, this defaults to: 199, 254, 255 (Spacer, Folder and Recycler).
 
-    The :ts:`useDefaultLanguageRecord` defaults to `1` and ensures that translated records will use the
+    The :typoscript:`useDefaultLanguageRecord` defaults to `1` and ensures that translated records will use the
     uid of the default record for the preview link. You may disable this, if your extension can deal
     with the uid of translated records.
 
-    The :ts:`fieldToParameterMap` is a mapping which allows you to select fields of the record to be
+    The :typoscript:`fieldToParameterMap` is a mapping which allows you to select fields of the record to be
     included as GET-parameters in the preview link. The key specifies the field name and the value specifies
     the GET-parameter name.
 
-    Finally :ts:`additionalGetParameters` allow you to add arbitrary GET-parameters and even override others.
+    Finally :typoscript:`additionalGetParameters` allow you to add arbitrary GET-parameters and even override others.
     If the plugin on your target page shows a list of records by default you will also need something like
-    :ts:`tx_myext_pi1.action = show` to ensure the record details are displayed.
+    :typoscript:`tx_myext_pi1.action = show` to ensure the record details are displayed.
 
     The core automatically sets the "no_cache" and the "L" parameter. The language matches the language of
-    the current record. You may override each parameter by using the :ts:`additionalGetParameters` configuration
+    the current record. You may override each parameter by using the :typoscript:`additionalGetParameters` configuration
     option.
 
     .. note::
 
-        Make sure not to set :ts:`options.saveDocView.<table name> = 0`, otherwise the save+view button
+        Make sure not to set :typoscript:`options.saveDocView.<table name> = 0`, otherwise the save+view button
         will not be displayed when editing records of your table.
 
     .. important::
 
-        The configuration has to be defined for the page containing the records and :ts:`previewPageId`
+        The configuration has to be defined for the page containing the records and :typoscript:`previewPageId`
         (for example sysfolder holding the records is located outside of your root)
 
 .. index:: Copy record; Table based configuration
@@ -481,17 +481,17 @@ translateToMessage
 
 :aspect:`Datatype`
     string
-    
+
 :aspect:`Default`
     Translate to %s:
 
 :aspect:`Description`
     Defines the string that will be prepended to some field values if you copy an element to another
-    language version. This applies to all fields where the TCA columns property 
+    language version. This applies to all fields where the TCA columns property
     :ref:`l10n_mode <t3tca:columns-properties-l10n-mode>` is set to :php:`prefixLangTitle`.
-    
+
     The special string "%s" will be replaced with the language title.
-    
+
     You can globally disable the prepending of the string by setting `translateToMessage` to
     an empty string. You can disable the message to a certain field by setting the `l10n_mode`
     to an empty string.
@@ -499,19 +499,19 @@ translateToMessage
 
 :aspect:`Example`
     Set a German prefix:
-    
+
     .. code-block:: typoscript
        :caption: PageTSconfig
 
         TCEMAIN {
             translateToMessage = Bitte in "%s" übersetzen:
         }
-      
+
     Disable the [Translate to ...] prefix:
-    
+
     .. code-block:: typoscript
        :caption: PageTSconfig
 
         TCEMAIN {
-            translateToMessage = 
+            translateToMessage =
         }
