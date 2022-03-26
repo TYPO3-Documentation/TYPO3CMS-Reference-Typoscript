@@ -21,7 +21,7 @@ CONFIG & config
      of the object type CONFIG.
 
 In :file:`typo3/sysext/frontend/Classes/` this is known as
-:php:`$GLOBALS['TSFE']->config['config']`, thus the property :ts:`debug` below is
+:php:`$GLOBALS['TSFE']->config['config']`, thus the property :typoscript:`debug` below is
 accessible as :php:`$GLOBALS['TSFE']->config['config']['debug']`.
 
 Properties
@@ -147,7 +147,7 @@ absRefPrefix
          on path prefixes (and not based on host name variables from the
          server, making this value safe for multi-domain environments).
 
-         **Note:** Using an URI in :ts:`absRefPrefix` will require additional conditions
+         **Note:** Using an URI in :typoscript:`absRefPrefix` will require additional conditions
          if you use different domains for your deployment stages in CI environments.
 
          **Note:** If you're working on a server where you have different domain
@@ -406,9 +406,9 @@ compressCss
          0
 
    Description
-         If set, CSS files referenced in :ts:`page.includeCSS` and the like will be
+         If set, CSS files referenced in :typoscript:`page.includeCSS` and the like will be
          minified and compressed. Does not work on files, which are referenced
-         in :ts:`page.headerData`.
+         in :typoscript:`page.headerData`.
 
          Minification will remove all excess space. The more significant
          compression step (using gzip compression) requires
@@ -452,9 +452,9 @@ compressJs
    Description
          Enabling this option together with
          :php:`$GLOBALS['TYPO3_CONF_VARS']['FE']['compressionLevel']` in the Install Tool
-         delivers Frontend JavaScript files referenced in :ts:`page.includeJS` and
+         delivers Frontend JavaScript files referenced in :typoscript:`page.includeJS` and
          the like using GZIP compression. Does not work on files, which are
-         referenced in :ts:`page.headerData`.
+         referenced in :typoscript:`page.headerData`.
 
          This can significantly reduce file sizes of linked JavaScript files
          and thus decrease loading times.
@@ -497,11 +497,11 @@ concatenateCss
          0
 
    Description
-         Setting :ts:`config.concatenateCss` merges Stylesheet files referenced in
+         Setting :typoscript:`config.concatenateCss` merges Stylesheet files referenced in
          the Frontend in page.includeCSS and the like together. Files are merged
          only, if their media attribute has the same value, e.g. if it is "all"
          for several files. Does not work on files, which are referenced in
-         :ts:`page.headerData`.
+         :typoscript:`page.headerData`.
 
          TYPO3 comes with a built-in concatenation handler, but you
          can also register your own one using
@@ -538,9 +538,9 @@ concatenateJs
          0
 
    Description
-         Setting :ts:`config.concatenateJs` merges JavaScript files referenced in
-         the Frontend in :ts:`page.includeJS` and the like together. Does not work
-         on files, which are referenced in :ts:`page.headerData`.
+         Setting :typoscript:`config.concatenateJs` merges JavaScript files referenced in
+         the Frontend in :typoscript:`page.includeJS` and the like together. Does not work
+         on files, which are referenced in :typoscript:`page.headerData`.
 
          If all files to be concatenated are marked with the async flag, the async attribute is assigned to the script tag.
 
@@ -587,9 +587,9 @@ concatenateJsAndCss
 
    Description
          **Note:** This property was deprecated and is planned to be removed!
-         Use :ts:`config.concatenateJs` and :ts:`config.concatenateCss` instead.
+         Use :typoscript:`config.concatenateJs` and :typoscript:`config.concatenateCss` instead.
 
-         Setting :ts:`config.concatenateJsAndCss` bundles JS and CSS files in the FE.
+         Setting :typoscript:`config.concatenateJsAndCss` bundles JS and CSS files in the FE.
 
          TYPO3 comes with a built-in concatenation handler, but you
          can also register your own one using
@@ -630,7 +630,7 @@ content\_from\_pid\_allowOutsideDomain
          Another use case is mount points: By means of the page type "Mount Point" you can virtually
          insert a whole subtree from somewhere else by just pointing to it. However, usually this
          only works within the page tree of the given domain. Setting
-         :ts:`config.content_from_pid_allowOutsideDomain = 1` removes that restriction.
+         :typoscript:`config.content_from_pid_allowOutsideDomain = 1` removes that restriction.
 
 
 
@@ -730,7 +730,7 @@ defaultGetVars
          taken only if the GET parameter isn't defined. Array notation is done
          with dots, e.g.:
 
-         :php:`test['var1']` will be written as :ts:`test.var1`
+         :php:`test['var1']` will be written as :typoscript:`test.var1`
 
    Example
          ::
@@ -790,9 +790,9 @@ disableBodyTag
          opening :html:`<body ...>` part of the body tag. The closing :html:`</body>`
          is not affected and will still be issued.
 
-         :ts:`disableBodyTag` takes precedence over the :ref:`page` properties
-         :ts:`bodyTagCObject`, :ts:`bodyTag` and
-         :ts:`bodyTagAdd`. With :ts:`config.disableBodyTag = 1` the others are
+         :typoscript:`disableBodyTag` takes precedence over the :ref:`page` properties
+         :typoscript:`bodyTagCObject`, :typoscript:`bodyTag` and
+         :typoscript:`bodyTagAdd`. With :typoscript:`config.disableBodyTag = 1` the others are
          ignored and don't have any effect.
 
 
@@ -832,7 +832,7 @@ disableImgBorderAttr
    Description
          Returns the `border` attribute for an :html:`<img>` tag only if the doctype is
          not `xhtml_strict` or `xhtml_11` or if the config parameter
-         :ts:`disableImgBorderAttr` is not set
+         :typoscript:`disableImgBorderAttr` is not set
 
 
 
@@ -915,14 +915,14 @@ disableLanguageHeader
          where "XX" is the ISO code of the according language.
 
          For the default language (sys_language_uid = 0), this header is based
-         on the value of :ts:`config.sys_language_isocode_default`. If this is unset,
+         on the value of :typoscript:`config.sys_language_isocode_default`. If this is unset,
          config.language is used. If that is unset as well, it finally falls
          back to "en".
 
          For other languages, it uses the value from language_isocode from
-         sys_language. That value may be overwritten by :ts:`config.sys_language_isocode`.
+         sys_language. That value may be overwritten by :typoscript:`config.sys_language_isocode`.
 
-         If :ts:`config.disableLanguageHeader` is set, this header will not be sent.
+         If :typoscript:`config.disableLanguageHeader` is set, this header will not be sent.
 
 .. _setup-config-doctype:
 
@@ -960,7 +960,7 @@ doctype
 
             Keywords also change the way TYPO3 generates some of the
             XHTML tags to ensure valid XML. If you set doctype to a string, then
-            you must also set :ts:`config.xhtmlDoctype` (see below).
+            you must also set :typoscript:`config.xhtmlDoctype` (see below).
 
          See :ref:`config.htmlTag_setParams <setup-config-htmltag-setparams>` and
          :ref:`config.htmlTag_langKey <setup-config-htmltag-langkey>` for more
@@ -1095,7 +1095,7 @@ forceTypeValue
 
    Description
          Force the `&type` value of all TYPO3 generated links to a specific value
-         (except if overruled by local :ts:`forceTypeValue` values).
+         (except if overruled by local :typoscript:`forceTypeValue` values).
 
          Useful if you run a template with special content at - say `&type=95` -
          but still wants to keep your targets neutral. Then you set your
@@ -1208,9 +1208,9 @@ htmlTag\_dir
 
          **Values:**
 
-         :ts:`rtl` = Right-To-Left (for Arabic / Hebrew)
+         :typoscript:`rtl` = Right-To-Left (for Arabic / Hebrew)
 
-         :ts:`ltr` = Left-To-Right (Default for other languages)
+         :typoscript:`ltr` = Left-To-Right (Default for other languages)
 
    Example
          ::
@@ -1242,7 +1242,7 @@ htmlTag\_langKey
             See note below.
 
          Allows you to set the language value for the attributes `xml:lang` and
-         `lang` in the :html:`<html>` tag (when using :ts:`config.doctype = xhtml*`).
+         `lang` in the :html:`<html>` tag (when using :typoscript:`config.doctype = xhtml*`).
 
          The values must follow the format specified in `IETF RFC 3066
          <https://www.ietf.org/rfc/rfc3066.txt>`_
@@ -1533,7 +1533,7 @@ language
 
          If the language you need is not yet a system language in TYPO3 you can
          use an artificial string of your choice and provide values for it via
-         the TypoScript template where the property :ts:`_LOCAL_LANG` for most
+         the TypoScript template where the property :typoscript:`_LOCAL_LANG` for most
          plugins will provide a way to override/add values for labels. The keys
          to use must be looked up in the locallang-file used by the plugin of
          course.
@@ -1996,7 +1996,7 @@ pageTitleFirst
          TYPO3 by default prints a title tag in the format "website: page
          title".
 
-         If :ts:`pageTitleFirst` is set (and if the page title is printed), then the
+         If :typoscript:`pageTitleFirst` is set (and if the page title is printed), then the
          page title will be printed IN FRONT OF the template title. So it will
          look like "page title: website".
 
@@ -2017,10 +2017,10 @@ pageTitleProviders
 
    Description
          In order to keep setting the titles in control, an API to set the page title is available. The API uses
-         :ts:`PageTitleProviders` to define the page title based on page record and the content on the page.
+         :typoscript:`PageTitleProviders` to define the page title based on page record and the content on the page.
 
          Based on the priority of the providers, the :php:`PageTitleProviderManager` will check the providers if a title
-         is given by the provider. It will start with the highest priority :ts:`PageTitleProviders` and will end with
+         is given by the provider. It will start with the highest priority :typoscript:`PageTitleProviders` and will end with
          the lowest in priority.
 
    Examples
@@ -2041,12 +2041,12 @@ pageTitleProviders
                }
             }
 
-         The ordering of the providers is based on the :ts:`before` and :ts:`after` parameters. If you want a provider
-         to be handled before a specific other provider, just set that provider in the :ts:`before`, do the same with
-         :ts:`after`.
+         The ordering of the providers is based on the :typoscript:`before` and :typoscript:`after` parameters. If you want a provider
+         to be handled before a specific other provider, just set that provider in the :typoscript:`before`, do the same with
+         :typoscript:`after`.
 
          .. note::
-            The :ts:`seo` PageTitleProvider is only available with installed SEO system extension.
+            The :typoscript:`seo` PageTitleProvider is only available with installed SEO system extension.
 
          You can find information about creating own PageTitleProviders in the section :ref:`PageTitle API <t3coreapi:pagetitle>`.
 
@@ -2069,7 +2069,7 @@ pageTitleSeparator
 
    Description
          The signs which should be printed in the title tag between the website
-         name and the page title. If :ts:`pageTitleSeparator` is set, but *no*
+         name and the page title. If :typoscript:`pageTitleSeparator` is set, but *no*
          sub-properties are defined, then a space will be added to the end of the
          separator. stdWrap is useful to adjust whitespaces at the beginning and
          the end of the separator.
@@ -2106,7 +2106,7 @@ removeDefaultCss
    Description
          Remove CSS generated by :ref:`\_CSS\_DEFAULT\_STYLE
          <setup-plugin-css-default-style>` configuration of extensions.
-         (:ts:`_CSS_DEFAULT_STYLE` outputs a set of default styles, just because
+         (:typoscript:`_CSS_DEFAULT_STYLE` outputs a set of default styles, just because
          an extension is installed.)
 
 
@@ -2160,7 +2160,7 @@ removePageCss
    Description
          Remove CSS generated by :ref:`\_CSS\_PAGE\_STYLE
          <setup-plugin-css-page-style>` configuration of extensions.
-         (:ts:`_CSS_PAGE_STYLE` renders certain styles not just because an
+         (:typoscript:`_CSS_PAGE_STYLE` renders certain styles not just because an
          extension is installed, but only in a special situation. E.g. some
          styles will be output, when a textpic element with an image
          positioned alongside the text is present on the current page.)
@@ -2415,7 +2415,7 @@ sys\_language\_isocode
         (changelog: :doc:`ext_core:Changelog/10.0/Deprecation-88559-TSFE-sys_language_isocode`).
 
         ISO 639-1 language code for the according language. By default this
-        is being set by :ts:`TSFE:sys_language_isocode`. The value is derived
+        is being set by :typoscript:`TSFE:sys_language_isocode`. The value is derived
         from the ISO code that is stored within the sys_language record.
         You can override the value, which was retrieved that way, with this
         setting.
@@ -2450,7 +2450,7 @@ sys\_language\_isocode\_default
             act as fallback.
 
          ISO 639-1 language code for the default language (that is
-         :ts:`sys_language_uid = 0`).
+         :typoscript:`sys_language_uid = 0`).
 
    Example
          ::
@@ -2487,7 +2487,7 @@ sys\_language\_mode
 
          Configures what the system should do when a page is not translated
          to the requested language.
-         It is only evaluated when :ts:`sys_language_uid` is greater than `0`
+         It is only evaluated when :typoscript:`sys_language_uid` is greater than `0`
          and the requested page translation is NOT available.
          Internally this setting corresponds to
          :php:`LanguageAspect->contentId`.
@@ -2507,7 +2507,7 @@ sys\_language\_mode
             with the selected language even if the page is not translated and has no
             page overlay record. This will keep menus etc. translated. However,
             the *content* on the page can still fall back to another language,
-            defined by the value of this keyword, e.g. :ts:`content_fallback;1,3,0`,
+            defined by the value of this keyword, e.g. :typoscript:`content_fallback;1,3,0`,
             to fall back to the content of sys\_language\_uid 1, after that to the
             content of sys\_language\_uid 3 and if that is not present either,
             to default (0).
@@ -2579,7 +2579,7 @@ sys\_language\_overlay
          "Web > Page" module to display content elements accordingly; That each
          default element is shown and next to it any translation found. This
          configuration can be done with Page TSconfig for a section of the
-         website using the object path :ts:`mod.web_layout.defLangBinding = 1`.
+         website using the object path :typoscript:`mod.web_layout.defLangBinding = 1`.
 
          **Possible values:**
 
@@ -2592,7 +2592,7 @@ sys\_language\_overlay
 
             An exception to this rule can be made with the TypoScript
             :ref:`cobj-content` object if you manually set
-            :ts:`select.includeRecordsWithoutDefaultTranslation = 1`.
+            :typoscript:`select.includeRecordsWithoutDefaultTranslation = 1`.
 
          1
             Fetch records from the default language and overlay them with translations.
@@ -2633,8 +2633,8 @@ sys\_language\_uid
          Internally this value is used to initialize the TypoScriptFrontendController
          :php:`LanguageAspect->id` property.
          The :php:`LanguageAspect->contentId` property is set based
-         on the value of the :ts:`sys_language_uid` and other settings like
-         :ts:`sys_language_mode`.
+         on the value of the :typoscript:`sys_language_uid` and other settings like
+         :typoscript:`sys_language_mode`.
 
          It is usually resolved internally by a middleware during bootstrap, taking site configuration setting
          into account. No manual interference necessary.
@@ -2738,7 +2738,7 @@ typolinkEnableLinksAcrossDomains
            mixture)
 
          - all domains have identical localization settings
-           (:ts:`sys_language_XXX` directives)
+           (:typoscript:`sys_language_XXX` directives)
 
          - all domains have the same set of languages defined
 
@@ -2769,7 +2769,7 @@ typolinkLinkAccessRestrictedPages
          this setting is an integer it will be interpreted as a page id to
          which the link will be directed.
 
-         If the value is :ts:`NONE` the original link to the page will be kept
+         If the value is :typoscript:`NONE` the original link to the page will be kept
          although it will generate a page-not-found situation (which can of
          course be picked up properly by the page-not-found handler and present
          a nice login form).
@@ -2871,7 +2871,7 @@ xhtmlDoctype
    Description
          Sets the document type for the XHTML version of the generated page.
 
-         If :ref:`setup-config-doctype` is set to a string then :ts:`xhtmlDoctype`
+         If :ref:`setup-config-doctype` is set to a string then :typoscript:`xhtmlDoctype`
          must be set to one of these keywords:
 
          **xhtml\_trans** for XHTML 1.0 Transitional doctype.
@@ -2909,7 +2909,7 @@ xmlprologue
 
    Description
          If empty (not set) then the default XML 1.0 prologue is set, when the
-         doctype is set to a known keyword (e.g. :ts:`xhtml_11`)::
+         doctype is set to a known keyword (e.g. :typoscript:`xhtml_11`)::
 
             <?xml version="1.0" encoding="utf-8">
 

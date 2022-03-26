@@ -159,11 +159,11 @@ fixAttrib.[attribute].removeIfFalse
    fixAttrib.[attribute].removeIfFalse
 
 :aspect:`Data type`
-   :ref:`data-type-boolean` / :ts:`blank` string
+   :ref:`data-type-boolean` / :typoscript:`blank` string
 
 :aspect:`Description`
-   If set, then the attribute is removed if it is false (= :ts:`0`).
-   If this value is set to :ts:`blank` then the value must be a blank string
+   If set, then the attribute is removed if it is false (= :typoscript:`0`).
+   If this value is set to :typoscript:`blank` then the value must be a blank string
    (that means a "zero" value will not be removed).
 
 .. _htmlparser-tags-fixattrib-attribute-removeifequals:
@@ -211,11 +211,11 @@ fixAttrib.[attribute].prefixLocalAnchors
    If the first char is a "#" character (anchor of fx. :html:`<a>` tags) this
    will prefix either a relative or absolute path.
 
-   :ts:`1`
+   :typoscript:`1`
       will get the absolute path
       (:php:`TYPO3\CMS\Core\Utility\GeneralUtility::getIndpEnv('TYPO3_REQUEST_URL')`).
 
-   :ts:`2`
+   :typoscript:`2`
       will get the relative path (stripping of
       :php:`TYPO3\CMS\Core\Utility\GeneralUtility::getIndpEnv('TYPO3_SITE_URL')`).
 

@@ -49,7 +49,7 @@ remapTag.[*tagname*]
    Enter a new tag name here if you wish the tagname of any encapsulation
    to be unified to a single tag name.
 
-   For instance, setting this value to :ts:`remapTag.P=DIV` would convert:
+   For instance, setting this value to :typoscript:`remapTag.P=DIV` would convert:
 
    .. code-block:: html
 
@@ -213,7 +213,7 @@ defaultAlign
 
 :aspect:`Description`
    If set, this value is set as the default "align" value of the wrapping
-   tags, both from :ref:`encapsTagList`, :ts:`bypassEncapsTagList` and
+   tags, both from :ref:`encapsTagList`, :typoscript:`bypassEncapsTagList` and
    :ref:`nonWrappedTag`
 
 .. _nonwrappedtag:
@@ -225,13 +225,13 @@ nonWrappedTag
    nonWrappedTag
 
 :aspect:`Data type`
-   :ts:`tagname`
+   :typoscript:`tagname`
 
 :aspect:`Description`
    For all non-wrapped lines, you can here set a tag in which they
    should be wrapped. Example would be "p". This is an alternative to
-   :ts:`wrapNonWrappedLines` and has the advantage that its attributes are
-   set by :ts:`addAttributes` as well as :ts:`defaultAlign`.
+   :typoscript:`wrapNonWrappedLines` and has the advantage that its attributes are
+   set by :typoscript:`addAttributes` as well as :typoscript:`defaultAlign`.
    Thus you can match the wrapping tags used for non-wrapped and wrapped
    lines more easily.
 

@@ -74,5 +74,5 @@ Result example:
 
    <tr><td bgcolor="white">
 
-This example adds the :ts:`bgColor` property to the value of the :ref:`cobj-text`
+This example adds the :typoscript:`bgColor` property to the value of the :ref:`cobj-text`
 :ref:`data-type-cobject`.
