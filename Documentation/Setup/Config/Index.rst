@@ -17,7 +17,7 @@ CONFIG & config
      of the object type CONFIG.
 
 In :file:`typo3/sysext/frontend/Classes/` this is known as
-:php:`$GLOBALS['TSFE']->config['config']`, thus the property :ts:`debug` below is
+:php:`$GLOBALS['TSFE']->config['config']`, thus the property :typoscript:`debug` below is
 accessible as :php:`$GLOBALS['TSFE']->config['config']['debug']`.
 
 
@@ -128,7 +128,7 @@ absRefPrefix
          on path prefixes (and not based on host name variables from the
          server, making this value safe for multi-domain environments).
 
-         **Note:** Using an URI in :ts:`absRefPrefix` will require additional conditions
+         **Note:** Using an URI in :typoscript:`absRefPrefix` will require additional conditions
          if you use different domains for your deployment stages in CI environments.
 
          **Note:** If you're working on a server where you have different domain
@@ -414,9 +414,9 @@ compressCss
          0
 
    Description
-         If set, CSS files referenced in :ts:`page.includeCSS` and the like will be
+         If set, CSS files referenced in :typoscript:`page.includeCSS` and the like will be
          minified and compressed. Does not work on files, which are referenced
-         in :ts:`page.headerData`.
+         in :typoscript:`page.headerData`.
 
          Minification will remove all excess space. The more significant
          compression step (using gzip compression) requires
@@ -461,9 +461,9 @@ compressJs
    Description
          Enabling this option together with
          :php:`$GLOBALS['TYPO3_CONF_VARS']['FE']['compressionLevel']` in the Install Tool
-         delivers Frontend JavaScript files referenced in :ts:`page.includeJS` and
+         delivers Frontend JavaScript files referenced in :typoscript:`page.includeJS` and
          the like using GZIP compression. Does not work on files, which are
-         referenced in :ts:`page.headerData`.
+         referenced in :typoscript:`page.headerData`.
 
          This can significantly reduce file sizes of linked JavaScript files
          and thus decrease loading times.
@@ -507,11 +507,11 @@ concatenateCss
          0
 
    Description
-         Setting :ts:`config.concatenateCss` merges Stylesheet files referenced in
+         Setting :typoscript:`config.concatenateCss` merges Stylesheet files referenced in
          the Frontend in page.includeCSS and the like together. Files are merged
          only, if their media attribute has the same value, e.g. if it is "all"
          for several files. Does not work on files, which are referenced in
-         :ts:`page.headerData`.
+         :typoscript:`page.headerData`.
 
          TYPO3 comes with a built-in concatenation handler, but you
          can also register your own one using
@@ -549,9 +549,9 @@ concatenateJs
          0
 
    Description
-         Setting :ts:`config.concatenateJs` merges JavaScript files referenced in
-         the Frontend in :ts:`page.includeJS` and the like together. Does not work
-         on files, which are referenced in :ts:`page.headerData`.
+         Setting :typoscript:`config.concatenateJs` merges JavaScript files referenced in
+         the Frontend in :typoscript:`page.includeJS` and the like together. Does not work
+         on files, which are referenced in :typoscript:`page.headerData`.
 
          If all files to be concatenated are marked with the async flag, the async attribute is assigned to the script tag.
 
@@ -684,7 +684,7 @@ disableAllHeaderCode
          If this is not set or set to false the :ref:`page` object automatically
          outputs a HTML skeleton, see :ref:`page_output`.
 
-         To disable this default behaviour set :ts:`disableAllHeaderCode = 1`.
+         To disable this default behaviour set :typoscript:`disableAllHeaderCode = 1`.
          The page outputs only the result of the cObject array
          (1,2,3,4...) of the :ref:`page` object.
 
@@ -733,9 +733,9 @@ disableBodyTag
          opening :html:`<body ...>` part of the body tag. The closing :html:`</body>`
          is not affected and will still be issued.
 
-         :ts:`disableBodyTag` takes precedence over the :ref:`page` properties
-         :ts:`bodyTagCObject`, :ts:`bodyTag` and
-         :ts:`bodyTagAdd`. With :ts:`config.disableBodyTag = 1` the others are
+         :typoscript:`disableBodyTag` takes precedence over the :ref:`page` properties
+         :typoscript:`bodyTagCObject`, :typoscript:`bodyTag` and
+         :typoscript:`bodyTagAdd`. With :typoscript:`config.disableBodyTag = 1` the others are
          ignored and don't have any effect.
 
 
@@ -821,7 +821,7 @@ disableImgBorderAttr
    Description
          Returns the `border` attribute for an :html:`<img>` tag only if the doctype is
          not `xhtml_strict` or `xhtml_11` or if the config parameter
-         :ts:`disableImgBorderAttr` is not set
+         :typoscript:`disableImgBorderAttr` is not set
 
 
 
@@ -910,7 +910,7 @@ disableLanguageHeader
          value is based on the language defined in the
          :ref:`Site Configuration <t3coreapi:sitehandling>`.
 
-         If :ts:`config.disableLanguageHeader` is set, this header will not be sent.
+         If :typoscript:`config.disableLanguageHeader` is set, this header will not be sent.
 
 
 .. index:: config; doctype
@@ -950,7 +950,7 @@ doctype
 
             Keywords also change the way TYPO3 generates some of the
             XHTML tags to ensure valid XML. If you set doctype to a string, then
-            you must also set :ts:`config.xhtmlDoctype` (see below).
+            you must also set :typoscript:`config.xhtmlDoctype` (see below).
 
          See :ref:`config.htmlTag_setParams <setup-config-htmltag-setparams>`
          for more details on the effect on the HTML tag.
@@ -1089,7 +1089,7 @@ forceTypeValue
 
    Description
          Force the `&type` value of all TYPO3 generated links to a specific value
-         (except if overruled by local :ts:`forceTypeValue` values).
+         (except if overruled by local :typoscript:`forceTypeValue` values).
 
          Useful if you run a template with special content at - say `&type=95` -
          but still wants to keep your targets neutral. Then you set your
@@ -1137,7 +1137,7 @@ htmlTag.attributes
          and add custom attributes via TypoScript without having to re-add the
          existing attributes generated by SiteHandling.
 
-         This property supersedes the previous :ts:`config.htmlTag_setParams` option by providing
+         This property supersedes the previous :typoscript:`config.htmlTag_setParams` option by providing
          a more flexible API to add attributes.
 
    Example
@@ -1163,7 +1163,7 @@ htmlTag.attributes
 
 
 .. warning::
-    If you are using :ts:`htmlTag.attributes` the property :ref:`setup-config-htmltag-setparams` will not have any effect.
+    If you are using :typoscript:`htmlTag.attributes` the property :ref:`setup-config-htmltag-setparams` will not have any effect.
 
 .. note::
     Please note that the `lang` attribute in these examples are auto-generated by
@@ -1769,7 +1769,7 @@ pageTitleFirst
          TYPO3 by default prints a title tag in the format "website: page
          title".
 
-         If :ts:`pageTitleFirst` is set (and if the page title is printed), then the
+         If :typoscript:`pageTitleFirst` is set (and if the page title is printed), then the
          page title will be printed IN FRONT OF the template title. So it will
          look like "page title: website".
 
@@ -1791,10 +1791,10 @@ pageTitleProviders
 
    Description
          In order to keep setting the titles in control, an API to set the page title is available. The API uses
-         :ts:`PageTitleProviders` to define the page title based on page record and the content on the page.
+         :typoscript:`PageTitleProviders` to define the page title based on page record and the content on the page.
 
          Based on the priority of the providers, the :php:`PageTitleProviderManager` will check the providers if a title
-         is given by the provider. It will start with the highest priority :ts:`PageTitleProviders` and will end with
+         is given by the provider. It will start with the highest priority :typoscript:`PageTitleProviders` and will end with
          the lowest in priority.
 
    Examples
@@ -1810,12 +1810,12 @@ pageTitleProviders
                }
             }
 
-         The ordering of the providers is based on the :ts:`before` and :ts:`after` parameters. If you want a provider
-         to be handled before a specific other provider, just set that provider in the :ts:`before`, do the same with
-         :ts:`after`.
+         The ordering of the providers is based on the :typoscript:`before` and :typoscript:`after` parameters. If you want a provider
+         to be handled before a specific other provider, just set that provider in the :typoscript:`before`, do the same with
+         :typoscript:`after`.
 
          .. note::
-            The :ts:`seo` PageTitleProvider is only available with installed SEO system extension.
+            The :typoscript:`seo` PageTitleProvider is only available with installed SEO system extension.
 
          You can find information about creating own PageTitleProviders in the section :ref:`PageTitle API <t3coreapi:pagetitle>`.
 
@@ -1840,7 +1840,7 @@ pageTitleSeparator
 
    Description
          The signs which should be printed in the title tag between the website
-         name and the page title. If :ts:`pageTitleSeparator` is set, but *no*
+         name and the page title. If :typoscript:`pageTitleSeparator` is set, but *no*
          sub-properties are defined, then a space will be added to the end of the
          separator. stdWrap is useful to adjust whitespaces at the beginning and
          the end of the separator.
@@ -1878,7 +1878,7 @@ removeDefaultCss
    Description
          Remove CSS generated by :ref:`\_CSS\_DEFAULT\_STYLE
          <setup-plugin-css-default-style>` configuration of extensions.
-         (:ts:`_CSS_DEFAULT_STYLE` outputs a set of default styles, just because
+         (:typoscript:`_CSS_DEFAULT_STYLE` outputs a set of default styles, just because
          an extension is installed.)
 
 
@@ -1933,7 +1933,7 @@ removePageCss
    Description
          Remove CSS generated by :ref:`\_CSS\_PAGE\_STYLE
          <setup-plugin-css-page-style>` configuration of extensions.
-         (:ts:`_CSS_PAGE_STYLE` renders certain styles not just because an
+         (:typoscript:`_CSS_PAGE_STYLE` renders certain styles not just because an
          extension is installed, but only in a special situation. E.g. some
          styles will be output, when a textpic element with an image
          positioned alongside the text is present on the current page.)
@@ -2238,7 +2238,7 @@ typolinkLinkAccessRestrictedPages
          this setting is an integer it will be interpreted as a page id to
          which the link will be directed.
 
-         If the value is :ts:`NONE` the original link to the page will be kept
+         If the value is :typoscript:`NONE` the original link to the page will be kept
          although it will generate a page-not-found situation (which can of
          course be picked up properly by the page-not-found handler and present
          a nice login form).
@@ -2296,7 +2296,7 @@ xhtmlDoctype
    Description
          Sets the document type for the XHTML version of the generated page.
 
-         If :ref:`setup-config-doctype` is set to a string then :ts:`xhtmlDoctype`
+         If :ref:`setup-config-doctype` is set to a string then :typoscript:`xhtmlDoctype`
          must be set to one of these keywords:
 
          **xhtml\_trans** for XHTML 1.0 Transitional doctype.
@@ -2335,7 +2335,7 @@ xmlprologue
 
    Description
          If empty (not set) then the default XML 1.0 prologue is set, when the
-         doctype is set to a known keyword (e.g. :ts:`xhtml_11`)::
+         doctype is set to a known keyword (e.g. :typoscript:`xhtml_11`)::
 
             <?xml version="1.0" encoding="utf-8">
 

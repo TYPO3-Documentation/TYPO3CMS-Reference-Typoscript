@@ -175,10 +175,10 @@ keepNonMatchedTags
    :ref:`data-type-boolean` / "protect"
 
 :aspect:`Description`
-   If set (:ts:`1`), then all tags are kept regardless of tags present as
+   If set (:typoscript:`1`), then all tags are kept regardless of tags present as
    keys in :php:`$tags`-array.
 
-   If :ts:`protect`, then the preserved tags have their :html:`<>`
+   If :typoscript:`protect`, then the preserved tags have their :html:`<>`
    converted to :html:`&lt;` and :html:`&gt;`
 
    Default is to REMOVE all tags, which are not specifically assigned to

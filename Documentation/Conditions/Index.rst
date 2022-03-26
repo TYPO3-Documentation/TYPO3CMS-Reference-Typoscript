@@ -244,7 +244,7 @@ tree.rootLineParentIds
 
 .. versionadded:: 10.3
 
-   This implements the old :ts:`PIDupinRootline` condition within the Symfony
+   This implements the old :typoscript:`PIDupinRootline` condition within the Symfony
    expression language, see
    :doc:`ext_core:Changelog/10.3/Feature-88962-Re-implementOldPIDupinRootlineTypoScriptCondition`
 

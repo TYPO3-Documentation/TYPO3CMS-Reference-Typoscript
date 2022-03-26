@@ -10,9 +10,9 @@ Simple data types
 The values assigned to properties in TypoScript are often of a
 specific format. These formats are described in this chapter.
 
-For example, if a value is defined as the type :ts:`<tag>`, HTML code has to be
-supplied. If it is of the type :ts:`resource`, it's a reference to a file from
-the resource-field in the template. If the type is :ts:`GraphicColor`, a
+For example, if a value is defined as the type :typoscript:`<tag>`, HTML code has to be
+supplied. If it is of the type :typoscript:`resource`, it's a reference to a file from
+the resource-field in the template. If the type is :typoscript:`GraphicColor`, a
 color-definition is expected and an HTML color code or comma-separated
 RGB-values have to be provided.
 
@@ -33,10 +33,10 @@ align
    Decides about alignment.
 
 :aspect:`Examples:`
-   :ts:`left`, :ts:`center`, :ts:`right`
+   :typoscript:`left`, :typoscript:`center`, :typoscript:`right`
 
 :aspect:`Default:`
-   :ts:`left`
+   :typoscript:`left`
 
 
 .. index:: Simple data types; boolean
@@ -80,17 +80,17 @@ case
    Do a case conversion.
 
 :aspect:`Possible values:`
-   ===================== ==========================================================
-   Value                 Effect
-   ===================== ==========================================================
-   :ts:`upper`           Convert all letters of the string to upper case
-   :ts:`lower`           Convert all letters of the string to lower case
-   :ts:`capitalize`      Uppercase the first character of each word in the string
-   :ts:`ucfirst`         Convert the first letter of the string to upper case
-   :ts:`lcfirst`         Convert the first letter of the string to lower case
-   :ts:`uppercamelcase`  Convert underscored `upper_camel_case` to `UpperCamelCase`
-   :ts:`lowercamelcase`  Convert underscored `lower_camel_case` to `lowerCamelCase`
-   ===================== ==========================================================
+   ============================= ==========================================================
+   Value                         Effect
+   ============================= ==========================================================
+   :typoscript:`upper`           Convert all letters of the string to upper case
+   :typoscript:`lower`           Convert all letters of the string to lower case
+   :typoscript:`capitalize`      Uppercase the first character of each word in the string
+   :typoscript:`ucfirst`         Convert the first letter of the string to upper case
+   :typoscript:`lcfirst`         Convert the first letter of the string to lower case
+   :typoscript:`uppercamelcase`  Convert underscored `upper_camel_case` to `UpperCamelCase`
+   :typoscript:`lowercamelcase`  Convert underscored `lower_camel_case` to `lowerCamelCase`
+   ============================= ==========================================================
 
 :aspect:`Example:`
    Code::
@@ -214,7 +214,7 @@ function name
       longer valid.
 
    If no namespaces are used and if a method in a class is called, it is checked (when using the
-   :ts:`USER`/:ts:`USER_INT` objects) whether a class with the same name, but
+   :typoscript:`USER`/:typoscript:`USER_INT` objects) whether a class with the same name, but
    prefixed with :php:`ux_` is present and if so, *this* class is instantiated
    instead. See the document "Inside TYPO3" for more information on extending
    classes in TYPO3!
@@ -260,7 +260,7 @@ GraphicColor
    [colordef] : [modifier]
 
    Where modifier can be an integer which is added or subtracted to the three
-   RGB-channels or a floating point with an :ts:`*` before, which will then
+   RGB-channels or a floating point with an :typoscript:`*` before, which will then
    multiply the values with that factor.
 
 :aspect:`Description:`
@@ -496,7 +496,7 @@ page\_id
    page\_id
 
 :aspect:`Description:`
-   A page id (integer) or :ts:`this` (=current page id).
+   A page id (integer) or :typoscript:`this` (=current page id).
 
 :aspect:`Examples:`
    ::
@@ -764,7 +764,7 @@ target
    target
 
 :aspect:`Examples:`
-   :ts:`_top`, :ts:`_blank`, :ts:`content`
+   :typoscript:`_top`, :typoscript:`_blank`, :typoscript:`content`
 
 :aspect:`Description:`
    Target in an :html:`<a>`-tag.

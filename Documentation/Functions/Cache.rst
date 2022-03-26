@@ -8,19 +8,19 @@ cache
 
 Stores the rendered content into the caching framework and reads it
 from there. This allows you to reuse this content without prior
-rendering. The presence of :ts:`cache.key` will trigger this feature. It
+rendering. The presence of :typoscript:`cache.key` will trigger this feature. It
 is evaluated twice:
 
 Content is read from cache directly after the `stdWrapPreProcess` hook and
 before `setContentToCurrent`. If there is a cache entry for the given cache key,
-:ts:`stdWrap` processing will stop and the cached content will be returned. If
+:typoscript:`stdWrap` processing will stop and the cached content will be returned. If
 no cache content is found for this key, the stdWrap processing continues as
 usual.
 
 Writing to cache happens at the end of rendering, directly before the
 `stdWrapPostProcess` hook is called and before the "debug\*" functions.  The
-rendered content will be stored in the cache, if :ts:`cache.key` was set. The
-configuration options :ts:`cache.tags` and :ts:`cache.lifetime` allow to control
+rendered content will be stored in the cache, if :typoscript:`cache.key` was set. The
+configuration options :typoscript:`cache.tags` and :typoscript:`cache.lifetime` allow to control
 the caching.
 
 
@@ -74,7 +74,7 @@ lifetime
       if the complete cache is flushed.
 
    `default`
-      The default cache lifetime as configured in :ts:`config.cache_period` is
+      The default cache lifetime as configured in :typoscript:`config.cache_period` is
       used.
 
 :aspect:`Default`
@@ -138,9 +138,9 @@ into account making the object page and language specific.
 cache as first-class function
 =============================
 
-The :ts:`stdWrap.cache.` property is also available as first-class function to all
+The :typoscript:`stdWrap.cache.` property is also available as first-class function to all
 content objects. This skips the rendering even for content objects that evaluate
-:ts:`stdWrap` after rendering (e.g. :ts:`COA`).
+:typoscript:`stdWrap` after rendering (e.g. :typoscript:`COA`).
 
 Usage:
 
@@ -169,23 +169,23 @@ Usage:
        }
    }
 
-The commented part is :ts:`stdWrap.cache.` property available since 4.7,
-that does not stop the rendering of :ts:`COA` including all sub-cObjects.
+The commented part is :typoscript:`stdWrap.cache.` property available since 4.7,
+that does not stop the rendering of :typoscript:`COA` including all sub-cObjects.
 
-Additionally, :ts:`stdWrap` support is added to key, lifetime and tags.
+Additionally, :typoscript:`stdWrap` support is added to key, lifetime and tags.
 
-If you've previously used the :ts:`cache.` property in your custom cObject,
-this will now fail, because :ts:`cache.` is unset to avoid double caching.
+If you've previously used the :typoscript:`cache.` property in your custom cObject,
+this will now fail, because :typoscript:`cache.` is unset to avoid double caching.
 You are encouraged to rely on the core methods for caching cObjects or
 rename your property.
 
-:ts:`stdWrap.cache` continues to exists and can be used as before. However
-the top level :ts:`stdWrap` of certain cObjects (e.g. :ts:`TEXT` cObject)
-will not evaluate :ts:`cache.` as part of :ts:`stdWrap`, but before starting
+:typoscript:`stdWrap.cache` continues to exists and can be used as before. However
+the top level :typoscript:`stdWrap` of certain cObjects (e.g. :typoscript:`TEXT` cObject)
+will not evaluate :typoscript:`cache.` as part of :typoscript:`stdWrap`, but before starting
 the rendering of the :ref:`data-type-cobject`.
 In conjunction the storing will happen after the :ref:`stdwrap`
 processing right before the content is returned.
 
-Top level :ts:`cache.` will not evaluate the hook
+Top level :typoscript:`cache.` will not evaluate the hook
 :php:`$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['tslib/class.tslib_content.php']['stdWrap_cacheStore']`
 any more.

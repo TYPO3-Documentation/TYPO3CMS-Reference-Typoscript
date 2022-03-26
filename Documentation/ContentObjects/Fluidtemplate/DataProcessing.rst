@@ -18,7 +18,7 @@ dataProcessing
 
    Add one or multiple processors to manipulate the :php:`$data` variable of
    the currently rendered content object, like tt_content or page. The sub-
-   property :ts:`options` can be used to pass parameters to the processor
+   property :typoscript:`options` can be used to pass parameters to the processor
    class.
 
 There are several data processors available to allow flexible processing,

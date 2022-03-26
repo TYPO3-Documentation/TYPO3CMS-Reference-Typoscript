@@ -58,7 +58,7 @@ http.ATagBeforeWrap
    :ref:`data-type-boolean`
 
 :aspect:`Description`
-   If set, the link is first wrapped with :ts:`http.wrap` and then the
+   If set, the link is first wrapped with :typoscript:`http.wrap` and then the
    :html:`<a>`-tag.
 
 :aspect:`Default`
@@ -132,7 +132,7 @@ mailto.ATagBeforeWrap
    :ref:`data-type-boolean`
 
 :aspect:`Description`
-   If set, the link is first wrapped with mailto :ts:`wrap` and then the
+   If set, the link is first wrapped with mailto :typoscript:`wrap` and then the
    :html:`<a>`-tag.
 
 :aspect:`Default`
