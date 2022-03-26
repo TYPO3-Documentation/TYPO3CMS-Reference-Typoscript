@@ -331,7 +331,7 @@ description
 
 :aspect:`Description`
    This property sets or overrides the TCA property
-   :ref:`TCA description <3tca:columns-properties-description>`, which allows to
+   :ref:`TCA description <t3tca:columns-properties-description>`, which allows to
    define a description for a TCA field, next to its label.
 
    .. code-block:: typoscript

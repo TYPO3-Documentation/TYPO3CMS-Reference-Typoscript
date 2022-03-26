@@ -10,7 +10,7 @@ Setting Page TSconfig
 =====================
 
 It is recommended to always define custom page TSconfig in a project-specific
-:ref:`sitepackage <t3sitepackage:start>` extension. This way the Page TSconfig
+:doc:`sitepackage <t3sitepackage:Index>` extension. This way the Page TSconfig
 settings can be kept under version control.
 
 The options described below are available for setting Page TSconfig in
@@ -60,7 +60,7 @@ however should **not** be changed or set directly (for example in the
 
 It is best practice to use the above API method to add your default
 Page TSconfig in a project-specific
-:ref:`sitepackage <t3sitepackage:start>` extension.
+:doc:`sitepackage <t3sitepackage:Index>` extension.
 
 Use the :typoscript:`@import '...'` syntax to keep the Page TSconfig in a
 separate file.

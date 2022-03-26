@@ -12,7 +12,7 @@ the Admin Panel looks like:
     :alt: The TYPO3 admin panel
 
 For more information about the Admin Panel, see the :ref:`Admin Panel manual
-<t3adminpanel:introduction>`.
+<ext_adminpanel:introduction>`.
 
 The visibility of the Admin Panel depends on being configured in your
 frontend TypoScript template for the website. You can do this by inserting this
