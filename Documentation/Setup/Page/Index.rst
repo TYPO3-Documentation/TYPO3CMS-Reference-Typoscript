@@ -1,4 +1,4 @@
-.. include:: ../../Includes.txt
+.. include:: /Includes.rst.txt
 
 
 .. _page:
@@ -882,10 +882,10 @@ meta
 
    Data type
          :ref:`->META <meta>`
-         
+
    Description
          ./.
-   
+
 
 
 
@@ -967,9 +967,9 @@ typeNum
 
    Data type
          integer
-         
+
    Default
-         0         
+         0
 
    Description
          This determines the typeId of the page. The *&type=* parameter in the URL

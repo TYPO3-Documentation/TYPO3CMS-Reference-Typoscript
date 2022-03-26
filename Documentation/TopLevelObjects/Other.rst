@@ -1,4 +1,4 @@
-.. include:: ../Includes.txt
+.. include:: /Includes.rst.txt
 
 .. _top-level-objects-other-reserved-tlo-s:
 .. _top-level-objects-temp:

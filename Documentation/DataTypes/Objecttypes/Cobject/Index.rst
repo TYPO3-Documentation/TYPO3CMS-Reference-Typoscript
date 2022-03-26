@@ -1,6 +1,6 @@
 :orphan:
 
-.. include:: ../../../Includes.txt
+.. include:: /Includes.rst.txt
 
 
 The information on this page has moved to :ref:`cobject`.

@@ -1,4 +1,4 @@
-.. include:: ../../Includes.txt
+.. include:: /Includes.rst.txt
 
 .. _cobj-user:
 .. _cobj-user-int:
@@ -32,10 +32,10 @@ userFunc
 
    Property
          userFunc
-       
-   Data type      
+
+   Data type
          function name
-      
+
    Description
          The name of the function, which should be called. If you specify the
          name with a '->' in it, then it is interpreted as a call to a method in
