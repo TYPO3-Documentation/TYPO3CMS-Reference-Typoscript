@@ -161,7 +161,7 @@ pidInList
 
       .. code-block:: sql
 
-      [...]WHERE (`your_requested_table_name`.`uid` = 0) AND [...]
+         [...]WHERE (`your_requested_table_name`.`uid` = 0) AND [...]
 
       Which might result in an empty query result, depending on your records.
    
