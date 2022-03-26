@@ -26,13 +26,13 @@ temp, styles & lib
    Description
          This top-level object name is reserved.
 
-         :ts:`temp` and :ts:`styles` are used for code-libraries you can
+         :typoscript:`temp` and :typoscript:`styles` are used for code-libraries you can
          copy during parse-time, but they are not saved with the template in
-         cache. :ts:`temp` and :ts:`styles` are unset before the template is
+         cache. :typoscript:`temp` and :typoscript:`styles` are unset before the template is
          cached! Therefore use these names to store temporary data.
 
-         :ts:`lib` can be used for a "library" of code, you can reference in
-         TypoScript (unlike :ts:`styles` which is unset).
+         :typoscript:`lib` can be used for a "library" of code, you can reference in
+         TypoScript (unlike :typoscript:`styles` which is unset).
 
 
 .. index:: Top-level objects; tt_content
@@ -106,7 +106,7 @@ types
    Description
          Types (internal)
 
-         :ts:`type=99` reserved for plaintext display
+         :typoscript:`type=99` reserved for plaintext display
 
 
 .. ###### END~OF~TABLE ######

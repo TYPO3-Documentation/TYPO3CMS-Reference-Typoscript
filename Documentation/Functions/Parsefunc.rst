@@ -134,7 +134,7 @@ constants
    *(The definition of the constant above is top-level TypoScript. It
    belongs on one level with the objects "config" and "page".)*
 
-   If you now use parseFunc with :ts:`constants = 1`, all occurrences of the
+   If you now use parseFunc with :typoscript:`constants = 1`, all occurrences of the
    string ###EMAIL### in the text will be substituted with the actual
    address.
 
@@ -215,7 +215,7 @@ nonTypoTagStdWrap
    :ref:`parsefunc-plainTextStdWrap` works on ALL non-tag pieces in the text.
    :ref:`parsefunc-nonTypoTagStdWrap` is post processing of all text
    (including tags) between special TypoTags
-   (unless :ts:`breakoutTypoTagContent` is not set for the TypoTag).
+   (unless :typoscript:`breakoutTypoTagContent` is not set for the TypoTag).
 
 
 .. _parsefunc-nonTypoTagUserFunc:
@@ -234,8 +234,8 @@ nonTypoTagUserFunc
    Differences is (like :ref:`parsefunc-nonTypoTagStdWrap`)
    that this is post processing of all content pieces around TypoTags while
    :ref:`parsefunc-userFunc` processes all non-tag content.
-   (Notice: :ts:`breakoutTypoTagContent` must be set for the TypoTag
-   if it's excluded from :ts:`nonTypoTagContent`).
+   (Notice: :typoscript:`breakoutTypoTagContent` must be set for the TypoTag
+   if it's excluded from :typoscript:`nonTypoTagContent`).
 
 .. index:: parseFunc; makelinks
 .. _parsefunc-makelinks:
@@ -302,11 +302,11 @@ denyTags
    list of strings
 
 :aspect:`Description`
-   List of tags, which may **not** exist in code! (use :ts:`*` for all.)
+   List of tags, which may **not** exist in code! (use :typoscript:`*` for all.)
 
    Lowest priority: If a tag is **not** found in :ref:`parsefunc-allowTags`,
    :ref:`parsefunc-denyTags` is checked.
-   If denyTags is not :ts:`*` and the tag is not found in the list, the tag may exist!
+   If denyTags is not :typoscript:`*` and the tag is not found in the list, the tag may exist!
 
 :aspect:`Example`
    This allows :html:`<b>`, :html:`<i>`, :html:`<a>` and :html:`<img>` -tags to exist ::
