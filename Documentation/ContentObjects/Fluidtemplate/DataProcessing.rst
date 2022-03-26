@@ -476,7 +476,7 @@ This generated menu can be used in Fluid like that:
 .. _SplitProcessor:
 
 SplitProcessor
-=============
+==============
 
 The :php:`SplitProcessor` allows to split values separated with a delimiter
 inside a single database field into an array to loop over it.
