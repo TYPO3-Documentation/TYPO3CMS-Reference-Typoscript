@@ -18,7 +18,7 @@ dataProcessing
 
    Add one or multiple processors to manipulate the :php:`$data` variable of
    the currently rendered content object, like tt_content or page. The sub-
-   property :ts:`options` can be used to pass parameters to the processor
+   property :typoscript:`options` can be used to pass parameters to the processor
    class.
 
 .. contents:: On this page:
@@ -81,7 +81,7 @@ DatabaseQueryProcessor
 ======================
 
 The :php:`DatabaseQueryProcessor` works like the code from the Content Object
-CONTENT, except for just handing over the result as array. A :ts:`FLUIDTEMPLATE`
+CONTENT, except for just handing over the result as array. A :typoscript:`FLUIDTEMPLATE`
 can then simply iterate over processed data automatically.
 
 
@@ -143,7 +143,7 @@ FilesProcessor
 
 The :php:`FilesProcessor` resolves file references, files, or files inside a
 folder or collection to be used for output in the frontend. A
-:ts:`FLUIDTEMPLATE` can then simply iterate over processed data automatically.
+:typoscript:`FLUIDTEMPLATE` can then simply iterate over processed data automatically.
 
 Using the :php:`FilesProcessor` the following scenario is possible::
 
@@ -424,9 +424,9 @@ Content of partial :file:`MediaGallery.html`:
 LanguageMenuProcessor
 =====================
 
-The :php:`LanguageMenuProcessor` utilizes :ts:`HMENU` to generate a JSON encoded menu
+The :php:`LanguageMenuProcessor` utilizes :typoscript:`HMENU` to generate a JSON encoded menu
 string based on the site language configuration that will be decoded again
-and assigned to :ts:`FLUIDTEMPLATE` as variable.
+and assigned to :typoscript:`FLUIDTEMPLATE` as variable.
 
 Options:
 
@@ -475,8 +475,8 @@ This generated menu can be used in Fluid like this:
 MenuProcessor
 =============
 
-The :php:`MenuProcessor` utilizes :ts:`HMENU` to generate a JSON encoded menu string
-that will be decoded again and assigned to :ts:`FLUIDTEMPLATE` as variable.
+The :php:`MenuProcessor` utilizes :typoscript:`HMENU` to generate a JSON encoded menu string
+that will be decoded again and assigned to :typoscript:`FLUIDTEMPLATE` as variable.
 Additional data processing is supported and will be applied to each record.
 
 Using the :php:`MenuProcessor` the following scenario is possible::

@@ -11,7 +11,7 @@ This object is used to split the input by a character and then parse
 the result onto some functions.
 
 For each iteration the split index starting with 0 (zero) is stored in
-the register key :ts:`SPLIT_COUNT`.
+the register key :typoscript:`SPLIT_COUNT`.
 
 
 .. _split-token:
@@ -168,7 +168,7 @@ Example
 This is an example of TypoScript code that imports the content of
 field "bodytext" from the :php:`$cObj->data-array` (ln 3). The content is
 split by the line break character (ln 5). The items should all be
-treated with a :ts:`stdWrap` (ln 6) which imports the value of the item (ln
+treated with a :typoscript:`stdWrap` (ln 6) which imports the value of the item (ln
 7). This value is wrapped in a table row where the first column is a
 bullet-gif (ln 8). Finally the whole thing is wrapped in the proper
 table-tags (ln 10). :

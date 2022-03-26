@@ -118,7 +118,7 @@ and is there to output information about files.
          folder is often equivalent to the relative path of the
          folder.
 
-         The property folders has the option :ts:`recursive` to get
+         The property folders has the option :typoscript:`recursive` to get
          files recursively.
 
          **Example:**
@@ -128,7 +128,7 @@ and is there to output information about files.
             page.10 = FILES
             page.10.folders = 2:mypics/,4:myimages/
 
-         Example for option :ts:`recursive`:
+         Example for option :typoscript:`recursive`:
 
          .. code-block:: typoscript
 

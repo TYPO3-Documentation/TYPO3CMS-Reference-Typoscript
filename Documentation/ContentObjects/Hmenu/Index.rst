@@ -7,7 +7,7 @@
 HMENU
 =====
 
-Objects of type HMENU generate hierarchical menus. In a 
+Objects of type HMENU generate hierarchical menus. In a
 :ref:`FLUIDTEMPLATE <cobj-fluidtemplate>` the HMENU can be used as
 a DataProcessor called :ref:`MenuProcessor <MenuProcessor>`, which
 internally uses the HMENU functionality.
@@ -119,8 +119,8 @@ into account.
          rootLine. Thus "-1" is a menu with items from the outermost level,
          "-2" is the level before the outermost...
 
-         **Note:** :ts:`entryLevel` does not show a menu **of a certain level of pages**
-         (use :ts:`special = directory` for that)
+         **Note:** :typoscript:`entryLevel` does not show a menu **of a certain level of pages**
+         (use :typoscript:`special = directory` for that)
          but it means that it will start to be visible **from that level on**.
 
          So, for example if you build a simple "sitemap" menu like this one::
@@ -141,7 +141,7 @@ into account.
             }
 
          it will start to be visible from the 4th level (and will contain only the subpages from that level).
-         Please note also that this affects also the menu generated with :ts:`MenuProcessor`. Example::
+         Please note also that this affects also the menu generated with :typoscript:`MenuProcessor`. Example::
 
             page.10{
                dataProcessing {
@@ -463,8 +463,8 @@ certain page" and so on.
 
 .. note::
 
-   :ts:`.entryLevel` generally is not supported together with the
-   :ts:`.special` property! The only exception is :ts:`special = keywords`.
+   :typoscript:`.entryLevel` generally is not supported together with the
+   :typoscript:`.special` property! The only exception is :typoscript:`special = keywords`.
 
 Also be aware that this property selects pages for the first level in
 the menu. Submenus by menuObjects 2+ will be created as usual.

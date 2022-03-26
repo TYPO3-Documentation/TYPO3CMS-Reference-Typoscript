@@ -34,7 +34,7 @@ content by TYPO3.
 
    Description
          This must be loaded with the template-code. Usually this is done
-         with a :ts:`FILE` cObject. If it is not loaded with
+         with a :typoscript:`FILE` cObject. If it is not loaded with
          code, the object returns nothing.
 
          Example::

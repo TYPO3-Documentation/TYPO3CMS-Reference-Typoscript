@@ -47,9 +47,9 @@ isNull
    :ref:`stdWrap`
 
 :aspect:`Description`
-   If the resulting content of the :ts:`stdWrap` is null (:php:`NULL` type in PHP).
+   If the resulting content of the :typoscript:`stdWrap` is null (:php:`NULL` type in PHP).
 
-   Since null values cannot be assigned in TypoScript, only the :ts:`stdWrap`
+   Since null values cannot be assigned in TypoScript, only the :typoscript:`stdWrap`
    features are available below this property.
 
 :aspect:`Example`
@@ -119,7 +119,7 @@ isGreaterThan
    value / :ref:`stdwrap`
 
 :aspect:`Description`
-   Returns true, if the content is greater than :ts:`value`.
+   Returns true, if the content is greater than :typoscript:`value`.
 
 .. _if-islessthan:
 
@@ -133,7 +133,7 @@ isLessThan
    value / :ref:`stdwrap`
 
 :aspect:`Description`
-   Returns true, if the content is less than :ts:`value`.
+   Returns true, if the content is less than :typoscript:`value`.
 
 .. _if-bitand:
 
@@ -178,7 +178,7 @@ equals
    value / :ref:`stdwrap`
 
 :aspect:`Description`
-   Returns true, if the content is equal to :ts:`value`.
+   Returns true, if the content is equal to :typoscript:`value`.
 
 :aspect:`Example`
    ::
@@ -199,9 +199,9 @@ isInList
 
 :aspect:`Description`
    Returns true, if the content is in the comma-separated list
-   :ts:`.value`.
+   :typoscript:`.value`.
 
-   **Note:** The list in :ts:`value` may not have spaces between elements!
+   **Note:** The list in :typoscript:`value` may not have spaces between elements!
 
 :aspect:`Example`
    ::
@@ -209,7 +209,7 @@ isInList
       if.isInList.field = uid
       if.value = 1,2,34,50,87
 
-   This returns true, if the uid is part of the list in :ts:`value`.
+   This returns true, if the uid is part of the list in :typoscript:`value`.
 
 .. _if-value:
 
@@ -263,17 +263,17 @@ a value (see the :ref:`data-type-cobject` and :ref:`stdWrap`).
 Here is how it works:
 
 The function returns true or false. Whether it returns true or false
-depends on the properties of this function. Say if you set :ts:`isTrue = 1`
-then the result is true. If you set :ts:`isTrue.field = header`, the
+depends on the properties of this function. Say if you set :typoscript:`isTrue = 1`
+then the result is true. If you set :typoscript:`isTrue.field = header`, the
 function returns true if the field "header" in :php:`$cObj->data` is set!
 
 If you want to compare values, you must load a base-value in the
-:ts:`value`-property. Example::
+:typoscript:`value`-property. Example::
 
    .value = 10
    .isGreaterThan = 11
 
-This would return true because the value of :ts:`isGreaterThan` is
+This would return true because the value of :typoscript:`isGreaterThan` is
 greater than 10, which is the base-value.
 
 More complex is this::
@@ -283,10 +283,10 @@ More complex is this::
    .isTrue.field = header
    .negate = 1
 
-There are two conditions - :ts:`isGreaterThan` and :ts:`isTrue`.
+There are two conditions - :typoscript:`isGreaterThan` and :typoscript:`isTrue`.
 If they are both true, the total is true (both are connected with an AND).
 BUT(!) then the result of the function in total would be false because the
-:ts:`negate`-flag inverts the result!
+:typoscript:`negate`-flag inverts the result!
 
 
 .. _if-examples:

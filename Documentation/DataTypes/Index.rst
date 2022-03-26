@@ -10,9 +10,9 @@ Simple data types
 The values assigned to properties in TypoScript are often of a
 specific format. These formats are described in this chapter.
 
-For example, if a value is defined as the type :ts:`<tag>`, HTML code has to be
-supplied. If it is of the type :ts:`resource`, it's a reference to a file from
-the resource-field in the template. If the type is :ts:`GraphicColor`, a
+For example, if a value is defined as the type :typoscript:`<tag>`, HTML code has to be
+supplied. If it is of the type :typoscript:`resource`, it's a reference to a file from
+the resource-field in the template. If the type is :typoscript:`GraphicColor`, a
 color-definition is expected and an HTML color code or comma-separated
 RGB-values have to be provided.
 
@@ -31,10 +31,10 @@ align
    Decides about alignment.
 
 :aspect:`Examples:`
-   :ts:`left`, :ts:`center`, :ts:`right`
+   :typoscript:`left`, :typoscript:`center`, :typoscript:`right`
 
 :aspect:`Default:`
-   :ts:`left`
+   :typoscript:`left`
 
 
 .. _data-type-boolean:
@@ -75,17 +75,17 @@ case
    Do a case conversion.
 
 :aspect:`Possible values:`
-   ===================== ==========================================================
-   Value                 Effect
-   ===================== ==========================================================
-   :ts:`upper`           Convert all letters of the string to upper case
-   :ts:`lower`           Convert all letters of the string to lower case
-   :ts:`capitalize`      Uppercase the first character of each word in the string
-   :ts:`ucfirst`         Convert the first letter of the string to upper case
-   :ts:`lcfirst`         Convert the first letter of the string to lower case
-   :ts:`uppercamelcase`  Convert underscored `upper_camel_case` to `UpperCamelCase`
-   :ts:`lowercamelcase`  Convert underscored `lower_camel_case` to `lowerCamelCase`
-   ===================== ==========================================================
+   ============================= ==========================================================
+   Value                         Effect
+   ============================= ==========================================================
+   :typoscript:`upper`           Convert all letters of the string to upper case
+   :typoscript:`lower`           Convert all letters of the string to lower case
+   :typoscript:`capitalize`      Uppercase the first character of each word in the string
+   :typoscript:`ucfirst`         Convert the first letter of the string to upper case
+   :typoscript:`lcfirst`         Convert the first letter of the string to lower case
+   :typoscript:`uppercamelcase`  Convert underscored `upper_camel_case` to `UpperCamelCase`
+   :typoscript:`lowercamelcase`  Convert underscored `lower_camel_case` to `lowerCamelCase`
+   ============================= ==========================================================
 
 :aspect:`Example:`
    Code::
@@ -201,7 +201,7 @@ function name
       longer valid.
 
    If no namespaces are used and if a method in a class is called, it is checked (when using the
-   :ts:`USER`/:ts:`USER_INT` objects) whether a class with the same name, but
+   :typoscript:`USER`/:typoscript:`USER_INT` objects) whether a class with the same name, but
    prefixed with :php:`ux_` is present and if so, *this* class is instantiated
    instead. See the document "Inside TYPO3" for more information on extending
    classes in TYPO3!
@@ -244,21 +244,21 @@ getText
 
       key : code
 
-   where :ts:`key` indicates the source and :ts:`code` is some form of path or
+   where :typoscript:`key` indicates the source and :typoscript:`code` is some form of path or
    pointer to the value, which depends on the key used. The various keys and
    their possible codes are described below.
 
-   The :ts:`code` can contain pipe characters :ts:`|` to separate keys
-   in a multi-dimensional array. This e.g. works with :ts:`TSFE`::
+   The :typoscript:`code` can contain pipe characters :typoscript:`|` to separate keys
+   in a multi-dimensional array. This e.g. works with :typoscript:`TSFE`::
 
       foo = TSFE : fe_user|user|username
 
    Some codes work with different separator, which is documented right at the
    code.
-   Spaces around the colon (:ts:`:`) are irrelevant. The :ts:`key` is
+   Spaces around the colon (:typoscript:`:`) are irrelevant. The :typoscript:`key` is
    case-insensitive.
 
-   By separating the value of getText with :ts:`//` (double slash) a number of
+   By separating the value of getText with :typoscript:`//` (double slash) a number of
    codes can be supplied and getText will return the first one, which is not
    empty ("" or zero).
 
@@ -282,7 +282,7 @@ GraphicColor
    [colordef] : [modifier]
 
    Where modifier can be an integer which is added or subtracted to the three
-   RGB-channels or a floating point with an :ts:`*` before, which will then
+   RGB-channels or a floating point with an :typoscript:`*` before, which will then
    multiply the values with that factor.
 
 :aspect:`Description:`
@@ -500,7 +500,7 @@ page\_id
    page\_id
 
 :aspect:`Description:`
-   A page id (integer) or :ts:`this` (=current page id).
+   A page id (integer) or :typoscript:`this` (=current page id).
 
 :aspect:`Examples:`
    ::
@@ -742,7 +742,7 @@ target
    target
 
 :aspect:`Examples:`
-   :ts:`_top`, :ts:`_blank`, :ts:`content`
+   :typoscript:`_top`, :typoscript:`_blank`, :typoscript:`content`
 
 :aspect:`Description:`
    Target in an :html:`<a>`-tag.
