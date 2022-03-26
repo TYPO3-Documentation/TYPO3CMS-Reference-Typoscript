@@ -14,11 +14,11 @@ with the link-parameters (lowercased)!
 Wraps the incoming value in a link with an HTML 'a' tag.
 
 If you do not want to have the HTML 'a' tag around the link, then you
-must set the property by :ts:`returnLast = url` or
+must set the property by :typoscript:`returnLast = url` or
 :php:`$lconf['returnLast'] = 'url'`.
 
 *Attention:*
-If this is used from :ts:`parseFunc` the :php:`$cObj->parameters` array is
+If this is used from :typoscript:`parseFunc` the :php:`$cObj->parameters` array is
 loaded with the lowercased link-parameters!
 
 Examples

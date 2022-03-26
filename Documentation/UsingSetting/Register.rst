@@ -78,7 +78,7 @@ a spacer page. A class is added to the ul tag depending on the value of the
 register variable `ulClass`. The first pages will have the class `col-left` and
 the pages following the spacer page will get the class `col-right`.
 
-:ts:`{register:variablename}` returns the "current" value of the variable
+:typoscript:`{register:variablename}` returns the "current" value of the variable
 `variablename`. A register stack can be like any TypoScript setup.
 
 .. code-block:: typoscript

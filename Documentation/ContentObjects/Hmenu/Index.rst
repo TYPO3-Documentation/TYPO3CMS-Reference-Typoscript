@@ -415,8 +415,8 @@ certain page" and so on.
 
 .. note::
 
-   :ts:`.entryLevel` generally is not supported together with the
-   :code:.special` property! The only exception is :ts:`special = keywords`.
+   :typoscript:`.entryLevel` generally is not supported together with the
+   :code:.special` property! The only exception is :typoscript:`special = keywords`.
 
 Also be aware that this property selects pages for the first level in
 the menu. Submenus by menuObjects 2+ will be created as usual.
