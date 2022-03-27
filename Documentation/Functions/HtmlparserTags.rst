@@ -177,11 +177,11 @@ fixAttrib.[attribute].removeIfFalse
    fixAttrib.[attribute].removeIfFalse
 
 :aspect:`Data type`
-   :ref:`data-type-boolean` / :ts:`blank` string
+   :ref:`data-type-boolean` / :typoscript:`blank` string
 
 :aspect:`Description`
-   If set, then the attribute is removed if it is false (= :ts:`0`).
-   If this value is set to :ts:`blank` then the value must be a blank string
+   If set, then the attribute is removed if it is false (= :typoscript:`0`).
+   If this value is set to :typoscript:`blank` then the value must be a blank string
    (that means a "zero" value will not be removed).
 
 

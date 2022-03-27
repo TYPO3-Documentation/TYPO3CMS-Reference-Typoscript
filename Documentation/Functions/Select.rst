@@ -29,18 +29,18 @@ Quoting of fields
 .. versionadded:: 8.7
 
    It is possible to use `{#fieldname}` to make the database
-   framework quote these fields (see :doc:`t3core:Changelog/8.7/Important-80506-DbalCompatibleFieldQuotingInTypoScript`)::
+   framework quote these fields (see :doc:`ext_core:Changelog/8.7/Important-80506-DbalCompatibleFieldQuotingInTypoScript`)::
 
       select.where = ({#title} LIKE {#%SOMETHING%} AND NOT {#doktype})
 
 This applies to:
 
-* :ts:`select.where`
+* :typoscript:`select.where`
 
 but not to:
 
-* :ts:`select.groupBy`
-* :ts:`select.orderBy`
+* :typoscript:`select.groupBy`
+* :typoscript:`select.orderBy`
 
 as these parameters already follow a stricter syntax that allow automatic parsing and
 quoting.
@@ -109,7 +109,7 @@ uidInList
    For example when the select function works on the table `tt_content`, then
    this will be uids of `tt_content` records.
 
-   **Note:** :ts:`this` is a *special keyword* and replaced with the id of the
+   **Note:** :typoscript:`this` is a *special keyword* and replaced with the id of the
    *current record*.
 
 :aspect:`Example`
@@ -140,21 +140,21 @@ pidInList
    timed or access-protected pages will be selected! Nor will be records
    from recyclers. Exception: The hidden pages will be listed in *preview mode*.
 
-   **Special keyword:** :ts:`this`
+   **Special keyword:** :typoscript:`this`
       Is replaced with the id of the current page.
 
-   **Special keyword:** :ts:`root`
+   **Special keyword:** :typoscript:`root`
       Allows to select records from the root-page level (records with pid=0,
       e.g. useful for the table "sys_category" and others).
 
-   **Special value:** :ts:`-1`
+   **Special value:** :typoscript:`-1`
       Allows to select versioned records in workspaces directly.
 
-   **Special value:** :ts:`0`
-      Allows to disable the :sql:`pid` constraint completely. Requirements: 
-      :ts:`uidInList` *must* be set or the table *must* have the prefix 
+   **Special value:** :typoscript:`0`
+      Allows to disable the :sql:`pid` constraint completely. Requirements:
+      :typoscript:`uidInList` *must* be set or the table *must* have the prefix
       "static\_\*".
-      
+
    .. note::
       Check the doktype of your backend page. If you are trying to fetch records from
       a sys_folder for example, the :php:`$cObj->checkPid_badDoktypeList` method will insert the
@@ -165,9 +165,9 @@ pidInList
          [...]WHERE (`your_requested_table_name`.`uid` = 0) AND [...]
 
       Which might result in an empty query result, depending on your records.
-   
+
 :aspect:`Default`
-   :ts:`this`
+   :typoscript:`this`
 
 :aspect:`Example`
    Fetch related `sys_category` records stored in the MM intermediate table::
@@ -276,7 +276,7 @@ begin
 :aspect:`Description`
       Begin with record number *value*.
 
-      **Special keyword:** :ts:`total`
+      **Special keyword:** :typoscript:`total`
          Is substituted with :php:`count(*)`.
 
 
@@ -323,7 +323,7 @@ languageField
    By default all records that have language-relevant information in the
    TCA "ctrl"-section are translated on translated pages.
 
-   This behaviour can be disabled by setting :ts:`languageField = 0`.
+   This behaviour can be disabled by setting :typoscript:`languageField = 0`.
 
 
 .. _select-includeRecordsWithoutDefaultTranslation:
@@ -338,8 +338,8 @@ includeRecordsWithoutDefaultTranslation
    :ref:`data-type-bool` / :ref:`stdWrap`
 
 :aspect:`Description`
-   If content language overlay is activated and the option :ts:`languageField` is not disabled,
-   :ts:`includeRecordsWithoutDefaultTranslation` allows to additionally fetch records,
+   If content language overlay is activated and the option :typoscript:`languageField` is not disabled,
+   :typoscript:`includeRecordsWithoutDefaultTranslation` allows to additionally fetch records,
    which do **not** have a parent in the default language.
 
 :aspect:`Default`

@@ -27,9 +27,9 @@ In order to access TypoScript settings from an Extbase Controller.
 
 .. rst-class:: bignums-xxl
 
-#. Use the convention of defining your TypoScript settings in :ts:`settings`
+#. Use the convention of defining your TypoScript settings in :typoscript:`settings`
 
-   .. code-block:: ts
+   .. code-block:: typoscript
 
       plugin.tx_myextension {
          view {

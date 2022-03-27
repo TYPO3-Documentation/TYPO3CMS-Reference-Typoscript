@@ -17,7 +17,7 @@ manage *in a single place* values, which are later used in *several places*.
 .. note::
 
    The constants defined in the :guilabel:`Constants` field of a template are not
-   the same like the top-level object :ts:`constants`. Here you can find the
+   the same like the top-level object :typoscript:`constants`. Here you can find the
    :ref:`top-level constants <tlo-constants>`
 
 
@@ -47,8 +47,8 @@ Refer to :ref:`getEnv <getenv>` for further information.
 Example
 -------
 
-Here :ts:`bgCol` is set to "red", :ts:`file.toplogo` is set to
-:file:`fileadmin/logo.gif` and :ts:`topimg.file.pic2` is set to
+Here :typoscript:`bgCol` is set to "red", :typoscript:`file.toplogo` is set to
+:file:`fileadmin/logo.gif` and :typoscript:`topimg.file.pic2` is set to
 :file:`fileadmin/logo2.gif`, assuming these files are indeed available at the
 expected location.
 
@@ -77,7 +77,7 @@ Using constants
 When a TypoScript Template is parsed by the TYPO3 CMS, constants are replaced, as
 one would perform any ordinary string replacement. Constants are used in the
 "Setup" field by placing them inside curly braces and prepending them with a
-:ts:`$` sign:
+:typoscript:`$` sign:
 
 .. code-block:: typoscript
 

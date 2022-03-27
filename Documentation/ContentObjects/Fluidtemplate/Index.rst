@@ -10,7 +10,7 @@ FLUIDTEMPLATE
 =============
 
 An object of type FLUIDTEMPLATE combines TypoScript with the Fluid
-templating engine. 
+templating engine.
 
 .. versionchanged:: 11.0
    The content object FLUIDTEMPLATE has replaced `TEMPLATE
@@ -27,23 +27,23 @@ Data available in Fluid templates
 
 The following data will be available in the called Fluid template:
 
-*  The content of the current :php:`data` array. 
+*  The content of the current :php:`data` array.
 
-   *  On page level it contains the current page record. 
-   *  If the :typoscript:`FLUIDTEMPLATE` is used in the 
-      context of the Fluid ViewHelper :html:`<f:cObject>` it contains the data set 
+   *  On page level it contains the current page record.
+   *  If the :typoscript:`FLUIDTEMPLATE` is used in the
+      context of the Fluid ViewHelper :html:`<f:cObject>` it contains the data set
       in the Fluid Property :ref:`data <t3viewhelper:cobject_data>`.
-   *  If called in the context of Extbase it contains the data assigned to the view 
+   *  If called in the context of Extbase it contains the data assigned to the view
       in the :ref:`Controller <t3extbasebook:controllers>`.
-      
-*  The :php:`settings` array set by the parameter 
+
+*  The :php:`settings` array set by the parameter
    :ref:`settings <cobj-fluidtemplate-properties-settings>`
-*  Variables set by the setting 
+*  Variables set by the setting
    :ref:`variables <cobj-fluidtemplate-properties-variables>`
-*  Additional data retrieved by 
+*  Additional data retrieved by
    :ref:`data processors <cobj-fluidtemplate-properties-dataprocessing>`
-   
-You can use the ViewHelper :ref:`debug <t3viewhelper:typo3fluid-fluid-debug>` to 
+
+You can use the ViewHelper :ref:`debug <t3viewhelper:typo3fluid-fluid-debug>` to
 receive a complete listing of the available data using the magic `{_all}` variable:
 
 .. code-block:: html
@@ -83,7 +83,7 @@ dataProcessing
 
    Add one or multiple processors to manipulate the :php:`$data` variable of
    the currently rendered content object, like tt_content or page. The sub-
-   property :ts:`options` can be used to pass parameters to the processor
+   property :typoscript:`options` can be used to pass parameters to the processor
    class.
 
    .. note::
@@ -123,10 +123,11 @@ extbase.controllerExtensionName
 
    .. tip::
       Setting this allows you to skip the `extensionName` argument for the
-      :ref:`<t3vh:translate>` and the :ref:`<t3vh:uri-resource>` viewhelpers.
-      
+      :ref:`<t3viewhelper:typo3-fluid-translate>` and the :ref:`<t3viewhelper:typo3-fluid-uri-resource>`
+      viewhelpers.
+
       This requires you to put translations and public images in the
-      :ref:`usual paths in your extension <t3coreapi:reserved-folders>`.
+      :ref:`usual paths in your extension <t3coreapi:extension-reserved-folders>`.
 
 
 .. index:: FLUIDTEMPLATE; extbase.controllerName
@@ -199,7 +200,7 @@ format
    :sep:`|` :aspect:`Default:` html
    :sep:`|`
 
-   :ts:`format` sets the format of the current request. It can be something
+   :typoscript:`format` sets the format of the current request. It can be something
    like "html", "xml", "png", "json". And it can even come in the form of
    "rss.xml" or alike.
 
@@ -370,8 +371,8 @@ template
 
    .. warning::
 
-      The :ts:`FILE` object type has been removed in TYPO3 10. As the :ts:`.template`
-      property used :ts:`FILE`, you should generally check your code if
+      The :typoscript:`FILE` object type has been removed in TYPO3 10. As the :typoscript:`.template`
+      property used :typoscript:`FILE`, you should generally check your code if
       using this and switch to using :ref:`.templateName <cobj-fluidtemplate-properties-templatename>`
       with :ref:`.templateRootPaths <cobj-fluidtemplate-properties-templaterootpaths>` or use
       :ref:`.file <cobj-fluidtemplate-properties-file>`.
@@ -392,7 +393,7 @@ templateName
 
    This name is used together with the set format to find the template in the
    given templateRootPaths. Use this property to define a content object, which
-   should be used as template file. It is an alternative to :ts:`.file`. If
+   should be used as template file. It is an alternative to :typoscript:`.file`. If
 
    `.templateName` is set, it takes precedence.
 
@@ -564,4 +565,4 @@ headlines. The copyright year will be taken from the TypoScript constant
 
    * :ref:`dataProcessing` examples
    * :ref:`t3coreapi:adding-your-own-content-elements`
-   * :ref:`t3sitepackage:start`
+   * :doc:`t3sitepackage:Index`

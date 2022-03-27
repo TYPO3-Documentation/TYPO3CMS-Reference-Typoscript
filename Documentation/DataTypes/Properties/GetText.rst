@@ -20,21 +20,21 @@ getText
 
       key : code
 
-   where :ts:`key` indicates the source and :ts:`code` is some form of path or
+   where :typoscript:`key` indicates the source and :typoscript:`code` is some form of path or
    pointer to the value, which depends on the key used. The various keys and
    their possible codes are described below.
 
-   The :ts:`code` can contain pipe characters :ts:`|` to separate keys
-   in a multi-dimensional array. This e.g. works with :ts:`TSFE`::
+   The :typoscript:`code` can contain pipe characters :typoscript:`|` to separate keys
+   in a multi-dimensional array. This e.g. works with :typoscript:`TSFE`::
 
       foo = TSFE : fe_user|user|username
 
    Some codes work with a different separator, which is documented right at the
    code.
-   Spaces around the colon (:ts:`:`) are irrelevant. The :ts:`key` is
+   Spaces around the colon (:typoscript:`:`) are irrelevant. The :typoscript:`key` is
    case-insensitive.
 
-   By separating the value of getText with :ts:`//` (double slash) a number of
+   By separating the value of getText with :typoscript:`//` (double slash) a number of
    codes can be supplied and getText will return the first one, which is not
    empty ("" or zero).
 
@@ -57,7 +57,7 @@ cObj
    a select query, this returns the row number (1,2,3,...) of the current
    cObject record.
 
-   :ts:`parentRecordNumber` is the only key available.
+   :typoscript:`parentRecordNumber` is the only key available.
 
 :aspect:`Example:`
    Get the number of the current cObject record::
@@ -170,8 +170,8 @@ debug
 
 :aspect:`Description:`
    Returns HTML-formatted content of the PHP variable defined by the keyword.
-   Available keywords are :ts:`rootLine`, :ts:`fullRootLine`, :ts:`data`,
-   :ts:`register` and :ts:`page`.
+   Available keywords are :typoscript:`rootLine`, :typoscript:`fullRootLine`, :typoscript:`data`,
+   :typoscript:`register` and :typoscript:`page`.
 
 :aspect:`Example:`
    Outputs the current root-line visually in HTML::
@@ -228,7 +228,7 @@ file
    Retrieves a property from a file object (FAL) by identifying it through its
    sys\_file UID. Note that during execution of the :ref:`cobj-files` cObject,
    it's also possible to reference the current file with "current" as UID like
-   :ts:`file : current : size`.
+   :typoscript:`file : current : size`.
 
    The following properties are available: name, uid, originalUid, size, sha1,
    extension, mimetype, contents, publicUrl, modification_date, creation_date
@@ -283,7 +283,7 @@ fullRootLine
    root. Take the below page tree and assume that we are on the page "Here you
    are!". Using the :ref:`data-type-gettext-levelfield` property, it is possible
    to go up only to the page "Site root", because it is the root of a new
-   (sub-)site.  With :ts:`fullRootLine` it is possible to go all the way up to page
+   (sub-)site.  With :typoscript:`fullRootLine` it is possible to go all the way up to page
    tree root.  The numbers between square brackets indicate to which page each
    value of *pointer* would point to:
 
@@ -606,7 +606,7 @@ session
    session : [key]
 
 :aspect:`Description:`
-   The :ts:`key` refers to the session key used to store the value.
+   The :typoscript:`key` refers to the session key used to store the value.
 
 :aspect:`Example:`
    Get the number of items of a stored shopping cart array/object::
@@ -626,16 +626,16 @@ site
    Accessing the current site configuration.
 
 :aspect:`Possible values:`
-   ====================== ==========================================================
-   Value                  Effect
-   ====================== ==========================================================
-   :ts:`attributes`       Additional parameters configured for this site
-   :ts:`base`             The Base URL for this site
-   :ts:`baseVariants`     The Base Variants for this site
-   :ts:`rootPageId`       The Root Page ID of this site
-   :ts:`identifier`       The identifier (name) of this site configuration
-   :ts:`websiteTitle`     The website title of this site
-   ====================== ==========================================================
+   ============================== ==========================================================
+   Value                          Effect
+   ============================== ==========================================================
+   :typoscript:`attributes`       Additional parameters configured for this site
+   :typoscript:`base`             The Base URL for this site
+   :typoscript:`baseVariants`     The Base Variants for this site
+   :typoscript:`rootPageId`       The Root Page ID of this site
+   :typoscript:`identifier`       The identifier (name) of this site configuration
+   :typoscript:`websiteTitle`     The website title of this site
+   ============================== ==========================================================
 
 :aspect:`Example:`
    Code:
@@ -667,22 +667,22 @@ siteLanguage
    Accessing the current site language configuration.
 
 :aspect:`Possible values:`
-   ====================== ==========================================================
-   Value                  Effect
-   ====================== ==========================================================
-   :ts:`attributes`       Additional parameters configured for this site language
-   :ts:`base`             The Base URL for this language
-   :ts:`direction`        The direction for this language
-   :ts:`flagIdentifier`   The flag key (like "gb" or "fr") used to be used in TYPO3's Backend.
-   :ts:`hreflang`         Language tag for this language defined by RFC 1766 / 3066 for "lang"  and "hreflang" attributes
-   :ts:`languageId`       The language mapped to id of the site languge, as defined in the :ref:`config.yaml languageId <languageid>`
-   :ts:`locale`           Locale, like 'de_CH' or 'en_GB'
-   :ts:`navigationTitle`  Label to be used within language menus
-   :ts:`title`            Label to be used within TYPO3 to identify the language
-   :ts:`twoLetterIsoCode` The iso code for this language (two letter) ISO-639-1
-   :ts:`typo3Language`    Prefix for TYPO3's language files "default" for english, otherwise one of TYPO3's internal language keys. Previously configured via TypoScript config.language = fr
-   :ts:`websiteTitle`     The website title for this language. No automatic fallback to the `site:websiteTitle`!
-   ====================== ==========================================================
+   ============================== ==========================================================
+   Value                          Effect
+   ============================== ==========================================================
+   :typoscript:`attributes`       Additional parameters configured for this site language
+   :typoscript:`base`             The Base URL for this language
+   :typoscript:`direction`        The direction for this language
+   :typoscript:`flagIdentifier`   The flag key (like "gb" or "fr") used to be used in TYPO3's Backend.
+   :typoscript:`hreflang`         Language tag for this language defined by RFC 1766 / 3066 for "lang"  and "hreflang" attributes
+   :typoscript:`languageId`       The language mapped to id of the site languge, as defined in the :ref:`config.yaml languageId <t3coreapi:sitehandling-addingLanguages>`
+   :typoscript:`locale`           Locale, like 'de_CH' or 'en_GB'
+   :typoscript:`navigationTitle`  Label to be used within language menus
+   :typoscript:`title`            Label to be used within TYPO3 to identify the language
+   :typoscript:`twoLetterIsoCode` The iso code for this language (two letter) ISO-639-1
+   :typoscript:`typo3Language`    Prefix for TYPO3's language files "default" for english, otherwise one of TYPO3's internal language keys. Previously configured via TypoScript config.language = fr
+   :typoscript:`websiteTitle`     The website title for this language. No automatic fallback to the `site:websiteTitle`!
+   ============================== ==========================================================
 
 :aspect:`Example:`
    Code::

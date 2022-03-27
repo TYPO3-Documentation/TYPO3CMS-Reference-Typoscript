@@ -69,7 +69,7 @@ call it, if the content you create may not be cached.
 from executing it, then the :php:`$GLOBALS['TSFE']->set_no_cache()`
 function is not executed and the page *is* cached! So in these
 situations, correct the error, clear the page-cache and try again.
-This is true only for :ts:`USER` and not for :ts:`USER_INT`, which is
+This is true only for :typoscript:`USER` and not for :typoscript:`USER_INT`, which is
 rendered *after* the cached page!
 
 
