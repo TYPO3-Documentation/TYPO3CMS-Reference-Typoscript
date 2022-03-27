@@ -1,4 +1,4 @@
-.. include:: ../../Includes.txt
+.. include:: /Includes.rst.txt
 
 
 .. _tmenuitem:
@@ -43,9 +43,9 @@ the current menu item's page record, use stdWrap.data = field : [field name].
 
    Data type
          boolean
-         
+
    Default
-         0 (false)         
+         0 (false)
 
    Description
          If set, all appearances of the string '{elementUid}' in the total

@@ -1,4 +1,4 @@
-.. include:: ../Includes.txt
+.. include:: /Includes.rst.txt
 
 
 .. _addparams:
@@ -7,8 +7,8 @@
 addParams
 =========
 
-.. warning:: 
-   `addParams` is deprecated since version 9 and will be removed in version 10. 
+.. warning::
+   `addParams` is deprecated since version 9 and will be removed in version 10.
    Use DataProcessors or Fluid Styled Content instead.
 
 Adds parameters to an HTML tag.
@@ -74,5 +74,5 @@ Result example:
 
    <tr><td bgcolor="white">
 
-This example adds the :ts:`bgColor` property to the value of the :ref:`cobj-text`
+This example adds the :typoscript:`bgColor` property to the value of the :ref:`cobj-text`
 :ref:`data-type-cobject`.

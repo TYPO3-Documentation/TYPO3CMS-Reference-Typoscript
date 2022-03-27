@@ -1,4 +1,4 @@
-.. include:: ../Includes.txt
+.. include:: /Includes.rst.txt
 
 
 .. _numrows:
@@ -39,5 +39,5 @@ select
 :aspect:`Description`
    Select query for the operation.
 
-   The sub-property :ts:`selectFields` is overridden internally with
+   The sub-property :typoscript:`selectFields` is overridden internally with
    :php:`count(*)`.

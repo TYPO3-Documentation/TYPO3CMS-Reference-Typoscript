@@ -1,4 +1,4 @@
-.. include:: ../Includes.txt
+.. include:: /Includes.rst.txt
 
 .. highlight:: typoscript
 
@@ -43,7 +43,7 @@ stdWrap contains properties which determine what is applied. The properties
 are listed below.
 
 The properties are parsed in the listed order. The
-properties :ts:`data`, :ts:`field`, :ts:`current`, :ts:`cObject`
+properties :typoscript:`data`, :typoscript:`field`, :typoscript:`current`, :typoscript:`cObject`
 (in that order!) are special as they are used to import content
 from variables or arrays.
 
@@ -52,8 +52,8 @@ If you want to study this further please refer to
 where you will find the function :php:`stdWrap()` and the array :php:`$stdWrapOrder`,
 which represents the exact order of execution.
 
-Note that the :ts:`stdWrap` property "orderedStdWrap" allows you to execute
-multiple :ts:`stdWrap` functions in a freely selectable order.
+Note that the :typoscript:`stdWrap` property "orderedStdWrap" allows you to execute
+multiple :typoscript:`stdWrap` functions in a freely selectable order.
 
 The above example could be rewritten to this::
 
@@ -62,7 +62,7 @@ The above example could be rewritten to this::
    10.stdWrap.case = upper
    10.stdWrap.field = header
 
-Now the line :ts:`10.value = some text` is obsolete, because the whole
+Now the line :typoscript:`10.value = some text` is obsolete, because the whole
 value is "imported" from the field called "header" from the
 :php:`$cObj->data-array`.
 
@@ -364,7 +364,7 @@ ifEmpty
 
 :aspect:`Description`
    If the trimmed content is empty at this point, the content is loaded
-   with :ts:`ifEmpty`. Zeros are treated as empty values!
+   with :typoscript:`ifEmpty`. Zeros are treated as empty values!
 
 
 .. _stdwrap-ifblank:
@@ -379,7 +379,7 @@ ifBlank
    :ref:`data-type-string` / :ref:`stdWrap`
 
 :aspect:`Description`
-   Same as :ts:`ifEmpty` but the check is done against ''. Zeros are not
+   Same as :typoscript:`ifEmpty` but the check is done against ''. Zeros are not
    treated as blank values!
 
 
@@ -398,10 +398,10 @@ listNum
    Explodes the content with "," (comma) and the content is set to the
    item[*value*].
 
-   **Special keyword:** :ts:`last`
+   **Special keyword:** :typoscript:`last`
       Is set to the last element of the array!
 
-   **Special keyword:** :ts:`rand`
+   **Special keyword:** :typoscript:`rand`
       Returns a random item out of a list.
 
    **.splitChar** (string):
@@ -478,7 +478,7 @@ stdWrap
    :ref:`stdWrap`
 
 :aspect:`Description`
-   Recursive call to the :ts:`stdWrap` function.
+   Recursive call to the :typoscript:`stdWrap` function.
 
 
 .. _stdwrap-required:
@@ -650,7 +650,7 @@ prioriCalc
 
    Returns a doublevalue.
 
-   If :ts:`prioriCalc` is set to "intval" an integer is returned.
+   If :typoscript:`prioriCalc` is set to "intval" an integer is returned.
 
    There is no error checking and division by zero or other invalid
    values may generate strange results. Also you should use a proper syntax
@@ -852,7 +852,7 @@ strtotime
 :aspect:`Description`
    Allows conversion of formatted dates to timestamp, e.g. to perform date calculations.
 
-   Possible values are :ts:`1` or any time string valid as first argument of the PHP :php:`strtotime()` function.
+   Possible values are :typoscript:`1` or any time string valid as first argument of the PHP :php:`strtotime()` function.
 
 :aspect:`Example`
    ::
@@ -956,17 +956,17 @@ bytes
 
    .labels = iec
       This is the default. IEC labels and base 1024 are used.
-      Built in IEC labels are :ts:`" | Ki| Mi| Gi| Ti| Pi| Ei| Zi| Yi"`.
+      Built in IEC labels are :typoscript:`" | Ki| Mi| Gi| Ti| Pi| Ei| Zi| Yi"`.
       You need to append a final string like 'B' or '-Bytes' yourself.
 
    .labels = si
       In this case SI labels and base 1000 are used.
-      Built in IEC labels are :ts:`" | k| M| G| T| P| E| Z| Y"`.
+      Built in IEC labels are :typoscript:`" | k| M| G| T| P| E| Z| Y"`.
       You need to append a final string like 'B' yourself.
 
    .labels = "..."
       Custom values can be defined as well like with
-      :ts:`.labels = " Byte| Kilobyte| Megabyte| Gigabyte"`. Use a
+      :typoscript:`.labels = " Byte| Kilobyte| Megabyte| Gigabyte"`. Use a
       vertical bar to separate the labels. Enclose the whole string in
       double quotes.
 
@@ -1102,12 +1102,12 @@ cropHTML
    :ref:`data-type-string` / :ref:`stdWrap`
 
 :aspect:`Description`
-   Crops the content to a certain length. In contrast to :ts:`stdWrap.crop` it
+   Crops the content to a certain length. In contrast to :typoscript:`stdWrap.crop` it
    respects HTML tags. It does not crop inside tags and closes open tags.
-   Entities (like ">") are counted as one char. See :ts:`stdWrap.crop` below
+   Entities (like ">") are counted as one char. See :typoscript:`stdWrap.crop` below
    for a syntax description and examples.
 
-   Note that :ts:`stdWrap.crop` should not be used if :ts:`stdWrap.cropHTML` is
+   Note that :typoscript:`stdWrap.crop` should not be used if :typoscript:`stdWrap.cropHTML` is
    already used.
 
 
@@ -1160,13 +1160,13 @@ crop
    in the middle, is removed completely.
 
 :aspect:`Examples`
-   :ts:`20 | ...` => max 20 characters. If more, the value will be truncated
+   :typoscript:`20 | ...` => max 20 characters. If more, the value will be truncated
    to the first 20 characters and prepended with "..."
 
-   :ts:`-20 | ...` => max 20 characters. If more, the value will be truncated
+   :typoscript:`-20 | ...` => max 20 characters. If more, the value will be truncated
    to the last 20 characters and appended with "..."
 
-   :ts:`20 | ... | 1` => max 20 characters. If more, the value will be
+   :typoscript:`20 | ... | 1` => max 20 characters. If more, the value will be
    truncated to the first 20 characters and prepended with "...". If
    the division is in the middle of a word, the remains of that word is
    removed.
@@ -1203,7 +1203,7 @@ htmlSpecialChars
 :aspect:`Description`
    Passes the content through the PHP function `htmlspecialchars() <https://www.php.net/htmlspecialchars>`_.
 
-   Additional property :ts:`preserveEntities` will preserve entities so only
+   Additional property :typoscript:`preserveEntities` will preserve entities so only
    non-entity characters are affected.
 
 
@@ -1344,7 +1344,7 @@ innerWrap2
    :ref:`wrap <data-type-wrap>` / :ref:`stdWrap`
 
 :aspect:`Description`
-   Same as :ts:`innerWrap` (but watch the order in which they are executed).
+   Same as :typoscript:`innerWrap` (but watch the order in which they are executed).
 
 
 .. _stdwrap-addparams:
@@ -1425,7 +1425,7 @@ wrapAlign
    :ref:`align <data-type-align>` / :ref:`stdWrap`
 
 :aspect:`Description`
-   Wraps content with :ts:`<div style=text-align:[*value*];"> | </div>`
+   Wraps content with :typoscript:`<div style=text-align:[*value*];"> | </div>`
    *if* align is set.
 
 
@@ -1455,7 +1455,7 @@ wrap
    :ref:`wrap <data-type-wrap>` /+.splitChar / :ref:`stdWrap`
 
 :aspect:`Description`
-   :ts:`splitChar` defines an alternative splitting character (default is "\|"
+   :typoscript:`splitChar` defines an alternative splitting character (default is "\|"
    - the vertical line)
 
 
@@ -1479,12 +1479,12 @@ noTrimWrap
 
    **Additional property:**
 
-   :ts:`splitChar`
+   :typoscript:`splitChar`
 
-   Can be set to define an alternative special character. :ts:`stdWrap` is
+   Can be set to define an alternative special character. :typoscript:`stdWrap` is
    available. Default is "\|" - the vertical line. This sub-property is
    useful in cases when the default special character would be recognized
-   by :ref:`objects-optionsplit` (which takes precedence over :ts:`noTrimWrap`).
+   by :ref:`objects-optionsplit` (which takes precedence over :typoscript:`noTrimWrap`).
 
 :aspect:`Example`
    ::
@@ -1501,7 +1501,7 @@ noTrimWrap
       noTrimWrap.splitChar = ^
 
    :ref:`objects-optionsplit` will use the "\|\|" to have two subparts in
-   the first part. In each subpart :ts:`noTrimWrap` will then use the "^" as
+   the first part. In each subpart :typoscript:`noTrimWrap` will then use the "^" as
    special character.
 
 
@@ -1587,7 +1587,7 @@ wrap3
    :ref:`wrap <data-type-wrap>` /+.splitChar / :ref:`stdWrap`
 
 :aspect:`Description`
-   same as :ts:`wrap` (but watch the order in which they are executed)
+   same as :typoscript:`wrap` (but watch the order in which they are executed)
 
 
 .. _stdwrap-orderedstdwrap:
@@ -1602,10 +1602,10 @@ orderedStdWrap
    Array of numeric keys with / :ref:`stdWrap` each
 
 :aspect:`Description`
-   Execute multiple :ts:`stdWrap` statements in a freely selectable order. The order
+   Execute multiple :typoscript:`stdWrap` statements in a freely selectable order. The order
    is determined by the numeric order of the keys. This allows to use multiple
    stdWrap statements without having to remember the rather complex sorting
-   order in which the :ts:`stdWrap` functions are executed.
+   order in which the :typoscript:`stdWrap` functions are executed.
 
 :aspect:`Example`
    ::
@@ -1623,8 +1623,8 @@ orderedStdWrap
       }
 
    In this example orderedStdWrap is executed on the value "a".
-   :ts:`10.innerWrap` is executed first, followed by :ts:`10.wrap`.
-   Then the next key is processed which is 20. Afterwards :ts:`30.wrap`
+   :typoscript:`10.innerWrap` is executed first, followed by :typoscript:`10.wrap`.
+   Then the next key is processed which is 20. Afterwards :typoscript:`30.wrap`
    is executed on what already was created.
 
    This results in "This is a working solution."
@@ -1657,7 +1657,7 @@ insertData
    :ref:`boolean <data-type-bool>` / :ref:`stdWrap`
 
 :aspect:`Description`
-   If set, then the content string is parsed like :ts:`dataWrap` above.
+   If set, then the content string is parsed like :typoscript:`dataWrap` above.
 
 :aspect:`Example`
    Displays the page title::
@@ -1690,9 +1690,9 @@ postUserFunc
    Two parameters are sent to the PHP function: As first parameter a
    content variable, which contains the current content. This is the
    value to be processed. As second parameter any sub-properties of
-   :ts:`postUserFunc` are provided to the function.
+   :typoscript:`postUserFunc` are provided to the function.
 
-   The description of the :ts:`cObject` :ref:`USER <cobj-user>` contains some
+   The description of the :typoscript:`cObject` :ref:`USER <cobj-user>` contains some
    more in-depth information.
 
 :aspect:`Example`
@@ -1755,17 +1755,17 @@ postUserFunc
          }
       }
 
-   For :ts:`page.10` the content, which is present when :ts:`postUserFunc` is
+   For :typoscript:`page.10` the content, which is present when :typoscript:`postUserFunc` is
    executed, will be given to the PHP function
    :php:`reverseString()`. The result will be "!DLROW OLLEH".
 
-   The content of :ts:`page.20` will be processed by the function
+   The content of :typoscript:`page.20` will be processed by the function
    :php:`reverseString()` from the class :php:`YourClass`. This also returns
    the text "!DLROW OLLEH", but wrapped into a link to the page
    with the ID 11. The result will be :html:`<a href="index.php?id=11">!DLROW OLLEH</a>`.
 
    Note how in the second example :php:`$cObj`, the reference to the
-   calling :ts:`cObject`, is utilised to use functions from
+   calling :typoscript:`cObject`, is utilised to use functions from
    :file:`ContentObjectRenderer.php`!
 
 
@@ -1790,7 +1790,7 @@ postUserFuncInt
    postUserFuncInt are provided to the function.
 
    The result will be rendered non-cached, outside the main
-   page-rendering. Please see the description of the :ts:`cObject`
+   page-rendering. Please see the description of the :typoscript:`cObject`
    :ref:`USER_INT <cobj-user-int>`.
 
    Supplied by Jens Ellerbrock
@@ -1847,23 +1847,23 @@ editIcons
    Syntax: *optional table name* : *comma list of field names [list of
    pallette-field names separated by \| ]*
 
-   :ts:`.beforeLastTag:`
+   :typoscript:`.beforeLastTag:`
       Possible values are 1, 0 and -1. If set (1), the icon will be inserted
       before the last HTML tag in the content. If -1, the icon will be prepended
       to the content. If zero (0), the icon is appended in the end of the
       content.
 
-   :ts:`.styleAttribute:` String.
+   :typoscript:`.styleAttribute:` String.
       Adds a style-attribute to the icon image with this value. For instance you
       can set "position:absolute" if you want a non-destructive insertion of the
       icon. Notice: For general styling all edit icons has the class
       "frontEndEditIcons" which can be addressed from the stylesheet of the
       site.
 
-   :ts:`.iconTitle:` String.
+   :typoscript:`.iconTitle:` String.
       The title attribute of the image tag.
 
-   :ts:`.iconImg:` HTML.
+   :typoscript:`.iconImg:` HTML.
       Alternative HTML code instead of the default icon shown. Can be used to
       set another icon for editing (for instance a red dot or otherwise... :-)
 
@@ -1893,7 +1893,7 @@ editPanel
    :ref:`boolean <data-type-bool>` / :ref:`cobj-editpanel`
 
 :aspect:`Description`
-   See :ts:`cObject` :ref:`cobj-editpanel`.
+   See :typoscript:`cObject` :ref:`cobj-editpanel`.
 
 
 .. _stdwrap-cache:
@@ -1924,7 +1924,7 @@ debug
 
 :aspect:`Description`
    Prints content with :php:`HTMLSpecialChars()` and :html:`<pre></pre>`:
-   Useful for debugging which value :ts:`stdWrap` actually ends up with,
+   Useful for debugging which value :typoscript:`stdWrap` actually ends up with,
    if you are constructing a website with TypoScript.
 
    Should be used under construction only.
@@ -1962,6 +1962,6 @@ debugData
 
 :aspect:`Description`
    Prints the current data-array, :php:`$cObj->data`, directly to browser. This
-   is where :ts:`field` gets data from.
+   is where :typoscript:`field` gets data from.
 
    Should be used under construction only.
