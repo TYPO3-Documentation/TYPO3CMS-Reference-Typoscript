@@ -1,4 +1,4 @@
-.. include:: ../Includes.txt
+.. include:: /Includes.rst.txt
 
 .. _typoscript-syntax-constant-editor:
 .. _constant-editor:
@@ -50,7 +50,7 @@ Default values
 --------------
 
 A constant may be given a default value when it is defined, as is the case for
-the :ts:`color2` constant in the above example.
+the :typoscript:`color2` constant in the above example.
 
 More generally, the default value of a constant is determined by the value the
 constant has before the last template is parsed.
@@ -111,13 +111,13 @@ advanced   Advanced functions, which are seldom used.
 Custom categories
 """""""""""""""""
 
-To define a new category, a comment including the parameter :ts:`customcategory`
+To define a new category, a comment including the parameter :typoscript:`customcategory`
 has to be added. Example::
 
    # customcategory=mysite=LLL:EXT:myext/locallang.xlf:mysite
 
 This line defines the new category "mysite" which will be available for any
-constant defined **after** this line. The :ts:`LLL:` reference points to the
+constant defined **after** this line. The :typoscript:`LLL:` reference points to the
 localized string used to "name" the custom category in the Constant Editor.
 Usage example::
 
@@ -130,7 +130,7 @@ Subcategories
 """""""""""""
 
 There are a number of subcategories one can use. Subcategories are entered
-after the category separated by a slash :ts:`/`. Example::
+after the category separated by a slash :typoscript:`/`. Example::
 
    "basic/color/a"
 
@@ -181,7 +181,7 @@ Custom subcategories
 """"""""""""""""""""
 
 Defining a custom subcategory is similar to defining a custom category,
-using the :ts:`customsubcategory` parameter. Example::
+using the :typoscript:`customsubcategory` parameter. Example::
 
    # customsubcategory=cache=LLL:EXT:myext/locallang.xlf:cache
 
@@ -252,7 +252,7 @@ comment                      Boolean, checked= "", not-checked = "#".
 string (the default)         A string value
 
 user                         Path to the file and method which renders the option HTML,
-                             for example :ts:`type=user[Vendor\Extension\Namespace\ClassName->myCustomField]`.
+                             for example :typoscript:`type=user[Vendor\Extension\Namespace\ClassName->myCustomField]`.
                              The method should have following signature:
                              :php:`public function myCustomField(array $params)`.
 ===========================  ============================================================================
@@ -263,7 +263,7 @@ user                         Path to the file and method which renders the optio
 label
 -----
 
-The label is a trimmed text string. It gets split on the first :ts:`:` (colon)
+The label is a trimmed text string. It gets split on the first :typoscript:`:` (colon)
 to separate header and body of the comment. The header is displayed on its own
 line in bold.
 

@@ -1,5 +1,4 @@
-
-.. include:: ../../Includes.txt
+.. include:: /Includes.rst.txt
 
 
 .. _cache:
@@ -128,9 +127,9 @@ into account making the object page and language specific.
 cache as first-class function:
 """"""""""""""""""""""""""""""
 
-The :ts:`stdWrap.cache.` property is also available as first-class function to all
+The :typoscript:`stdWrap.cache.` property is also available as first-class function to all
 content objects. This skips the rendering even for content objects that evaluate
-:ts:`stdWrap` after rendering (e.g. :ts:`COA`).
+:typoscript:`stdWrap` after rendering (e.g. :typoscript:`COA`).
 
 Usage:
 
@@ -159,22 +158,22 @@ Usage:
 		}
 	}
 
-The commented part is :ts:`stdWrap.cache.` property available since 4.7,
-that does not stop the rendering of :ts:`COA` including all sub-cObjects.
+The commented part is :typoscript:`stdWrap.cache.` property available since 4.7,
+that does not stop the rendering of :typoscript:`COA` including all sub-cObjects.
 
 Additionally, stdWrap support is added to key, lifetime and tags.
 
-If you've previously used the :ts:`cache.` property in your custom cObject,
-this will now fail, because :ts:`cache.` is unset to avoid double caching.
+If you've previously used the :typoscript:`cache.` property in your custom cObject,
+this will now fail, because :typoscript:`cache.` is unset to avoid double caching.
 You are encouraged to rely on the core methods for caching cObjects or
 rename your property.
 
-:ts:`stdWrap.cache` continues to exists and can be used as before. However
-the top level :ts:`stdWrap` of certain cObjects (e.g. :ts:`TEXT` cObject)
-will not evaluate :ts:`cache.` as part of :ts:`stdWrap`, but before starting
+:typoscript:`stdWrap.cache` continues to exists and can be used as before. However
+the top level :typoscript:`stdWrap` of certain cObjects (e.g. :typoscript:`TEXT` cObject)
+will not evaluate :typoscript:`cache.` as part of :typoscript:`stdWrap`, but before starting
 the rendering of the cObject. In conjunction the storing will happen
-after the :ts:`stdWrap` processing right before the content is returned.
+after the :typoscript:`stdWrap` processing right before the content is returned.
 
-Top level :ts:`cache.` will not evaluate the hook
+Top level :typoscript:`cache.` will not evaluate the hook
 :php:`$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['tslib/class.tslib_content.php']['stdWrap_cacheStore']`
 any more.

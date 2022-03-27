@@ -1,9 +1,4 @@
-.. ==================================================
-.. FOR YOUR INFORMATION
-.. --------------------------------------------------
-.. -*- coding: utf-8 -*- with BOM.
-
-.. include:: ../../Includes.txt
+.. include:: /Includes.rst.txt
 
 
 .. _top-level-objects-constants:
@@ -43,8 +38,8 @@ maintain it easily.
 
    The constants defined here are **not** the ones, which can be defined
    in the constants section of your template and which then in the setup
-   section can be used as :ts:`{$myconstant}`. For these constants see
-   :ref:`the according chapter :ref:`typoscript-syntax-what-are-constants`.
+   section can be used as :typoscript:`{$myconstant}`. For these constants see
+   :ref:`the according chapter <typoscript-syntax-what-are-constants>`.
 
 .. only:: html
 

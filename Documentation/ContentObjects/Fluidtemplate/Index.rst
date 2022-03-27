@@ -1,9 +1,4 @@
-.. ==================================================
-.. FOR YOUR INFORMATION
-.. --------------------------------------------------
-.. -*- coding: utf-8 -*- with BOM.
-
-.. include:: ../../Includes.txt
+.. include:: /Includes.rst.txt
 
 
 .. _cobj-fluidtemplate:
@@ -451,7 +446,7 @@ dataProcessing
    Description
          Add one or multiple processors to manipulate the :php:`$data` variable
          of the currently rendered content object, like tt_content or page.
-         The sub-property :ts:`options` can be used to add further parameter to the processor class.
+         The sub-property :typoscript:`options` can be used to add further parameter to the processor class.
 
          **Example:**
 

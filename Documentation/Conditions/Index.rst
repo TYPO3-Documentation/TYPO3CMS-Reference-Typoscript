@@ -1,5 +1,4 @@
-
-.. include:: ../Includes.txt
+.. include:: /Includes.rst.txt
 .. highlight:: typoscript
 
 .. _conditions:
@@ -14,8 +13,6 @@ Conditions
    syntax, please refer to :ref:`the according chapter in
    "TYPO3 Explained" <t3coreapi:typoscript-syntax-conditions>`.
 
-
-.. _condition-syntax:
 
 General syntax
 ==============
@@ -52,8 +49,6 @@ Test browser::
      # TypoScript Code for users of other browsers.
    [END]
 
-
-.. _condition-general-notes:
 
 General notes
 =============

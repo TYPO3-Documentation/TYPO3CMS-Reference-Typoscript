@@ -1,5 +1,4 @@
-﻿
-.. include:: ../../Includes.txt
+﻿.. include:: /Includes.rst.txt
 
 
 .. _meta:
@@ -35,13 +34,13 @@ array of key names
 :aspect:`Description:`
    To define meta tags.
 
-   Use the scheme :ts:`meta.key = value`.
+   Use the scheme :typoscript:`meta.key = value`.
 
-   :ts:`value` is the content of the meta tag. If the value is empty (after
+   :typoscript:`value` is the content of the meta tag. If the value is empty (after
    trimming), the meta tag is not generated.
 
-   The :ts:`key` can be the name of any meta tag, for example :html:`description` or
-   :html:`keywords`. If the key is :ts:`refresh` (case insensitive), then the
+   The :typoscript:`key` can be the name of any meta tag, for example :html:`description` or
+   :html:`keywords`. If the key is :typoscript:`refresh` (case insensitive), then the
    :html:`http-equiv` attribute is used in the meta tag instead of the :html:`name`
    attribute.
 
@@ -66,7 +65,7 @@ array of key names
 
       meta.refresh = [seconds]; [URL, leave blank for same page]
 
-   Usage of :ts:`httpEquivalent`::
+   Usage of :typoscript:`httpEquivalent`::
 
       meta.X-UA-Compatible = IE=edge
       meta.X-UA-Compatible.httpEquivalent = 1
@@ -105,11 +104,11 @@ array of key names
          }
       }
 
-   They can be used like :ts:`property` used for OG tags in the example.
+   They can be used like :typoscript:`property` used for OG tags in the example.
    You may also supply multiple values for one name, which results in
    multiple meta tags with the same name to be rendered.
 
-   Result for :ts:`og:description`:
+   Result for :typoscript:`og:description`:
 
    .. code-block:: html
 

@@ -1,12 +1,5 @@
-.. ==================================================
-.. FOR YOUR INFORMATION
-.. --------------------------------------------------
-.. -*- coding: utf-8 -*- with BOM.
+.. include:: /Includes.rst.txt
 
-.. include:: ../../../Includes.txt
-
-
-.. _data-type-menuobj:
 
 menu object
 ===========
