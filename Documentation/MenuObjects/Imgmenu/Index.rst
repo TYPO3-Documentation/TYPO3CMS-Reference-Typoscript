@@ -1,4 +1,6 @@
-.. include:: ../../Includes.txt
+:orphan:
+
+.. include:: /Includes.rst.txt
 
 
 .. _imgmenu:

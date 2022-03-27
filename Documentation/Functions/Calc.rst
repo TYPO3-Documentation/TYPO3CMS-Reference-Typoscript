@@ -1,4 +1,4 @@
-.. include:: ../Includes.txt
+.. include:: /Includes.rst.txt
 
 .. The label objects-calc should no longer be used.
 .. Use the label calc instead.
@@ -33,7 +33,7 @@ How value is calculated
 calc usage example
 ~~~~~~~~~~~~~~~~~~
 
-The :ts:`HMENU` :ts:`maxAge` property is of a type ``integer +calc``, it's value in this example equals to 259200.
+The :typoscript:`HMENU` :typoscript:`maxAge` property is of a type ``integer +calc``, it's value in this example equals to 259200.
 
 ::
 

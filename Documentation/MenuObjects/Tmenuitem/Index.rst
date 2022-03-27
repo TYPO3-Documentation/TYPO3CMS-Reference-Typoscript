@@ -1,4 +1,4 @@
-.. include:: ../../Includes.txt
+.. include:: /Includes.rst.txt
 
 
 .. _tmenuitem:
@@ -76,7 +76,7 @@ stdWrap.data = field : [field name].
 
    Description
          wrap around the ".before"-code
-         
+
 .. container:: table-row
 
    Property
@@ -95,8 +95,8 @@ stdWrap.data = field : [field name].
          wrap
 
    Description
-         wrap around the ".after"-code         
-         
+         wrap around the ".after"-code
+
 .. container:: table-row
 
    Property

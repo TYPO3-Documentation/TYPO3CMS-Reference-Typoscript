@@ -1,4 +1,4 @@
-.. include:: ../../Includes.txt
+.. include:: /Includes.rst.txt
 
 
 .. _cobj-content:
@@ -183,13 +183,13 @@ renderObj
       :ref:`data-type-cObject`
 
    Default
-      :ts:`< [table name]`
+      :typoscript:`< [table name]`
 
    Description
       The cObject used for rendering the records resulting from the query in
       .select.
 
-      If :ts:`renderObj` is not set explicitly, then :ts:`< [table name]` is used. So
+      If :typoscript:`renderObj` is not set explicitly, then :typoscript:`< [table name]` is used. So
       in this case the configuration of the according table is being copied.
       See the notes on the example below.
 
@@ -215,16 +215,16 @@ slide
       If set and no content element is found by the select command, the
       rootLine will be traversed back until some content is found.
 
-      Possible values are :ts:`-1` (slide back up to the siteroot), :ts:`1` (only
-      the current level) and :ts:`2` (up from one level back).
+      Possible values are :typoscript:`-1` (slide back up to the siteroot), :typoscript:`1` (only
+      the current level) and :typoscript:`2` (up from one level back).
 
-      Use :ts:`-1` in combination with collect.
+      Use :typoscript:`-1` in combination with collect.
 
       slide.collect
          (integer /:ref:`stdWrap`) If set, all content elements found
          on the current and parent pages will be collected. Otherwise, the sliding
          would stop after the first hit. Set this value to the amount of levels
-         to collect on, or use :ts:`-1` to collect up to the siteroot.
+         to collect on, or use :typoscript:`-1` to collect up to the siteroot.
 
       slide.collectFuzzy
          (boolean /:ref:`stdWrap`) Only useful in collect mode. If
@@ -311,7 +311,7 @@ Here is an example of the CONTENT object::
    }
 
 Since in the above example .renderObj is not set explicitly, TYPO3
-will automatically set :ts:`1.renderObj < tt_content`, so that `renderObj`
+will automatically set :typoscript:`1.renderObj < tt_content`, so that `renderObj`
 will reference the TypoScript configuration of `tt_content`. The
 according TypoScript configuration will be copied to `renderObj`.
 

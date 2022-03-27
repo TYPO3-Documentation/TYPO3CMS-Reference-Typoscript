@@ -1,4 +1,4 @@
-.. include:: ../Includes.txt
+.. include:: /Includes.rst.txt
 
 
 .. _typoscript-syntax-typoscript-templates-structure:
@@ -17,7 +17,7 @@ the TYPO3 backend.
 .. hint::
 
    It is best practice to use a Sitepackage extension to bundle
-   various configuration in an extension. See :ref:`t3sitepackage:start`.
+   various configuration in an extension. See :doc:`t3sitepackage:Index`.
 
 
 .. figure:: ../Images/TemplatesRecordListView.png
@@ -83,7 +83,7 @@ It is also possible to "Include static" templates from extensions.
 
 .. tip::
 
-   The section :ref:`add-typoscript-in-extension` explains how extension
+   The section :ref:`extdev-add-typoscript` explains how extension
    developers can make TypoScript available for inclusion in their
    extensions.
 

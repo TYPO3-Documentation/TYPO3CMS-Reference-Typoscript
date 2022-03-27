@@ -1,4 +1,4 @@
-.. include:: ../Includes.txt
+.. include:: /Includes.rst.txt
 
 
 .. _tags:
@@ -29,9 +29,9 @@ The best known is the "link" tag, which is used to create links.
 
    Every entry must be set to a content object.
 
-   :ts:`current` is set to the content of the tag, eg :html:`<TAG>content</TAG>`:
-   here :ts:`current` is set to :ts:`content`. It can be used with
-   :ts:`stdWrap.current = 1`.
+   :typoscript:`current` is set to the content of the tag, eg :html:`<TAG>content</TAG>`:
+   here :typoscript:`current` is set to :typoscript:`content`. It can be used with
+   :typoscript:`stdWrap.current = 1`.
 
    **Parameters:**
 
@@ -48,7 +48,7 @@ The best known is the "link" tag, which is used to create links.
 
    **Special properties for each content object:**
 
-   **[cObject].stripNL:** :ref:`data-type-boolean` option, which tells :ts:`parseFunc` that
+   **[cObject].stripNL:** :ref:`data-type-boolean` option, which tells :typoscript:`parseFunc` that
    newlines before and after the content of the tag should be stripped.
 
    **[cObject].breakoutTypoTagContent:** :ref:`data-type-boolean` option, which tells

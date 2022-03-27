@@ -1,4 +1,4 @@
-.. include:: ../Includes.txt
+.. include:: /Includes.rst.txt
 
 .. _plugin:
 
@@ -10,7 +10,7 @@ This is used for extensions in TYPO3 set up as frontend plugins.
 Typically you can set configuration properties of the plugin here. Say
 you have an extension with the key "myext" and it has a frontend
 plugin named "tx\_myext\_pi1" then you would find the TypoScript
-configuration at the position :ts:`plugin.tx_myext_pi1` in the object
+configuration at the position :typoscript:`plugin.tx_myext_pi1` in the object
 tree!
 
 Most plugins are :ref:`cobj-user` objects
@@ -68,7 +68,7 @@ userFunc
 
    Description
          Use this to have some default CSS styles inserted in the header
-         section of the document. :ts:`_CSS_DEFAULT_STYLE` outputs a set of
+         section of the document. :typoscript:`_CSS_DEFAULT_STYLE` outputs a set of
          default styles, just because an extension is installed. Most likely
          this will provide an acceptable default display from the plugin, but
          should ideally be cleared and moved to an external stylesheet.

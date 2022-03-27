@@ -1,4 +1,4 @@
-.. include:: ../../Includes.txt
+.. include:: /Includes.rst.txt
 
 .. _page:
 .. _page-datatype:
@@ -10,10 +10,10 @@ PAGE
 
 This defines what is rendered in the frontend.
 
-PAGE is an object type. A good habit is to use :ts:`page` as the top-level object name for
+PAGE is an object type. A good habit is to use :typoscript:`page` as the top-level object name for
 the content-page on a website.
 
-TYPO3 does not initialize :ts:`page` by default. You must initialize this
+TYPO3 does not initialize :typoscript:`page` by default. You must initialize this
 explicitly, e.g.::
 
     page = PAGE
@@ -317,7 +317,7 @@ cssInline.[array]
 
    Description
          Allows to add inline CSS to the page :html:`<head>` section.
-         The :ts:`cssInline` property contains any number of numeric keys, each representing one cObject.
+         The :typoscript:`cssInline` property contains any number of numeric keys, each representing one cObject.
          Internally handled as PHP integer, maximum number is therefore restricted to :php:`PHP_INT_MAX`.
 
    Example
@@ -352,7 +352,7 @@ footerData.[array]
          except that this block gets included at the bottom of the page
          (just before the closing :html:`</body>` tag).
 
-         The :ts:`footerData` property contains any number of numeric keys, each representing one cObject.
+         The :typoscript:`footerData` property contains any number of numeric keys, each representing one cObject.
          Internally handled as PHP integer, maximum number is therefore restricted to :php:`PHP_INT_MAX`.
 
    Example
@@ -388,13 +388,13 @@ headerData.[array]
          you should better use :ref:`page.includeCSS <setup-page-includecss-array>`
          and :ref:`page.includeJS <setup-page-includejs-array>` for such files.
          Features like file concatenation and file compression will not work on files,
-         which are included using :ts:`headerData`.
+         which are included using :typoscript:`headerData`.
 
          For meta tags, use the dedicated configuration :ref:`page.meta <meta>`.
 
          By default, gets inserted after all the style definitions.
 
-         The :ts:`headerData` property contains any number of numeric keys, each representing one cObject.
+         The :typoscript:`headerData` property contains any number of numeric keys, each representing one cObject.
          Internally handled as PHP integer, maximum number is therefore restricted to :php:`PHP_INT_MAX`.
 
    Example
@@ -446,7 +446,7 @@ includeCSS.[array]
          :ref:`data-type-resource`
 
    Description
-         Inserts a stylesheet (just like the :ts:`stylesheet` property), but allows
+         Inserts a stylesheet (just like the :typoscript:`stylesheet` property), but allows
          setting up more than a single stylesheet, because you can enter files
          in an array.
 
@@ -464,10 +464,10 @@ includeCSS.[array]
          **alternate**: If set (boolean) then the rel-attribute will be
          "alternate stylesheet".
 
-         **disableCompression**: If :ts:`config.compressCss` is enabled, this
+         **disableCompression**: If :typoscript:`config.compressCss` is enabled, this
          disables the compression of this file.
 
-         **excludeFromConcatenation**: If :ts:`config.concatenateCss` is
+         **excludeFromConcatenation**: If :typoscript:`config.concatenateCss` is
          enabled, this prevents the file from being concatenated.
 
          **external**: If set, there is no file existence check. Useful for
@@ -526,7 +526,7 @@ includeCSSLibs.[array]
 
          The file definition must be a valid :ref:`data-type-resource` data type,
          otherwise nothing is inserted. This means that remote files cannot be referenced
-         (i.e. using :samp:`https://...`), except by using the :ts:`.external` property.
+         (i.e. using :samp:`https://...`), except by using the :typoscript:`.external` property.
 
          Each file has *optional properties*:
 
@@ -539,10 +539,10 @@ includeCSSLibs.[array]
          **alternate**: If set (boolean) then the rel-attribute will be
          "alternate stylesheet".
 
-         **disableCompression**: If :ts:`config.compressCss` is
+         **disableCompression**: If :typoscript:`config.compressCss` is
          enabled, this disables the compression of this file.
 
-         **excludeFromConcatenation**: If :ts:`config.concatenateCss`
+         **excludeFromConcatenation**: If :typoscript:`config.concatenateCss`
          is enabled, this prevents the file from being concatenated.
 
          **external**: If set, there is no file existence check. Useful for
@@ -591,7 +591,7 @@ includeJS.[array]
          will be moved to the footer.
          The file definition must be a valid :ref:`data-type-resource` data type,
          otherwise nothing is inserted. This means that remote files cannot be referenced
-         (i.e. using :samp:`https://...`), except by using the :ts:`.external` property.
+         (i.e. using :samp:`https://...`), except by using the :typoscript:`.external` property.
 
          Each file has *optional properties*:
 
@@ -605,14 +605,14 @@ includeJS.[array]
 
          **crossorigin**: Allows to set the crossorigin attribute in script tags.
          Is automatically set to `anonymous` for external JavaScript files if an
-         :ts:`.integrity` is set.
+         :typoscript:`.integrity` is set.
 
          **defer** Allows to set the HTML5 attribute :html:`defer`.
 
-         **disableCompression**: If :ts:`config.compressJs` is enabled,
+         **disableCompression**: If :typoscript:`config.compressJs` is enabled,
          this disables the compression of this file.
 
-         **excludeFromConcatenation**: If :ts:`config.concatenateJs` is enabled,
+         **excludeFromConcatenation**: If :typoscript:`config.concatenateJs` is enabled,
          this prevents the file from being concatenated.
 
          **external**: If set, there is no file existence check. Useful for
@@ -634,8 +634,8 @@ includeJS.[array]
 
 
          **type**: Setting the MIME type of the script. Default: The attribute is
-         omitted for frontend rendering when :ts:`config.doctype` is not set or
-         set to :ts:`html5`. Otherwise :html:`text/javascript` is used as type.
+         omitted for frontend rendering when :typoscript:`config.doctype` is not set or
+         set to :typoscript:`html5`. Otherwise :html:`text/javascript` is used as type.
 
          **integrity**: Adds the integrity attribute to the script element to let
          browsers ensure subresource integrity. Useful in hosting scenarios with
@@ -820,10 +820,10 @@ jsFooterInline.[array]
          :ref:`cObject <data-type-cobject>`
 
    Description
-         Same as :ts:`jsInline`, except that the JavaScript gets inserted at the
+         Same as :typoscript:`jsInline`, except that the JavaScript gets inserted at the
          bottom of the page (just before the closing :html:`</body>` tag).
 
-         The :ts:`jsFooterInline` property contains any number of numeric keys, each representing one cObject.
+         The :typoscript:`jsFooterInline` property contains any number of numeric keys, each representing one cObject.
          Internally handled as PHP integer, maximum number is therefore restricted to :php:`PHP_INT_MAX`.
 
    Example
@@ -854,10 +854,10 @@ jsInline.[array]
 
          **Note:**
 
-         With :ts:`config.removeDefaultJS = external`, the inline JavaScript is moved
+         With :typoscript:`config.removeDefaultJS = external`, the inline JavaScript is moved
          to an external file.
 
-         The :ts:`jsInline` property contains any number of numeric keys, each representing one cObject.
+         The :typoscript:`jsInline` property contains any number of numeric keys, each representing one cObject.
          Internally handled as PHP integer, maximum number is therefore restricted to :php:`PHP_INT_MAX`.
 
    Example
@@ -886,13 +886,13 @@ meta
          array of key names (string / :ref:`stdWrap <stdwrap>`)
 
    Description
-         Use the scheme :ts:`meta.key = value` to define any HTML meta tag.
+         Use the scheme :typoscript:`meta.key = value` to define any HTML meta tag.
 
-         :ts:`value` is the content of the meta tag. If the value is empty (after
+         :typoscript:`value` is the content of the meta tag. If the value is empty (after
          trimming), the meta tag is not generated.
 
-         The :ts:`key` can be the name of any meta tag, for example :html:`description` or
-         :html:`keywords`. If the key is :ts:`refresh` (case insensitive), then the
+         The :typoscript:`key` can be the name of any meta tag, for example :html:`description` or
+         :html:`keywords`. If the key is :typoscript:`refresh` (case insensitive), then the
          :html:`http-equiv` attribute is used in the meta tag instead of the :html:`name`
          attribute.
 
@@ -928,7 +928,7 @@ meta
                twitter:card.replace = 1
             }
 
-         Usage of :ts:`httpEquivalent`::
+         Usage of :typoscript:`httpEquivalent`::
 
              meta.X-UA-Compatible = IE=edge
              meta.X-UA-Compatible.httpEquivalent = 1
@@ -967,12 +967,12 @@ meta
                   }
               }
 
-         They can be used like :ts:`property` used for OG tags in the example.
+         They can be used like :typoscript:`property` used for OG tags in the example.
 
          You may also supply multiple values for one name, which results in
          multiple meta tags with the same name to be rendered.
 
-         Result for :ts:`og:description`:
+         Result for :typoscript:`og:description`:
 
          .. code-block:: html
 

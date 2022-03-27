@@ -1,4 +1,4 @@
-.. include:: ../Includes.txt
+.. include:: /Includes.rst.txt
 
 
 .. _imgresource:
@@ -25,7 +25,7 @@ ext
    web
 
 :aspect:`Description`
-   Target file extension for the processed image. The value :ts:`web` checks if
+   Target file extension for the processed image. The value :typoscript:`web` checks if
    the file extension is one of gif, jpg, jpeg, or png and if not it will find
    the best target extension.  The target extension must be in the list of file
    extensions perceived as images.  This is defined in
@@ -46,23 +46,23 @@ width
 
 :aspect:`Description`
    If both the width and the height are set and one of the numbers is
-   appended by an :ts:`m`, the proportions will be preserved and thus
+   appended by an :typoscript:`m`, the proportions will be preserved and thus
    width and height are treated as maximum dimensions for the image. The
    image will be scaled to fit into the rectangle of the dimensions
    width and height.
 
    If both the width and the height are set and at least one of the
-   numbers is appended by a :ts:`c`, crop-scaling will be enabled. This means
+   numbers is appended by a :typoscript:`c`, crop-scaling will be enabled. This means
    that the proportions will be preserved and the image will be scaled to
    fit **around** a rectangle with width/height dimensions. Then, a
    centered portion from **inside** of the image (size defined by
    width/height) will be cut out.
 
-   The :ts:`c` can have a percentage value (-100 ... +100) after it, which
+   The :typoscript:`c` can have a percentage value (-100 ... +100) after it, which
    defines how much the cropping will be moved off the center to the
    border.
 
-   Notice that you can only use either :ts:`m` *or* :ts:`c` at the same time!
+   Notice that you can only use either :typoscript:`m` *or* :typoscript:`c` at the same time!
 
 :aspect:`Examples`
    This crops 120x80px from the center of the scaled image::
@@ -276,7 +276,7 @@ treatIdAsReference
 :aspect:`Description`
    If set, given UIDs are interpreted as UIDs to sys_file_reference
    instead of to sys_file. This allows using file references, for
-   example with :ts:`import.data = levelmedia: ...`.
+   example with :typoscript:`import.data = levelmedia: ...`.
 
 :aspect:`Default`
    0
@@ -353,8 +353,8 @@ stripProfile
       stripProfile-command which shrinks the generated thumbnails. See the
       Install Tool for options and details.
 
-      If :ts:`processor_stripColorProfileByDefault` is set in the
-      Install Tool, you can deactivate it by setting :ts:`stripProfile=0`.
+      If :typoscript:`processor_stripColorProfileByDefault` is set in the
+      Install Tool, you can deactivate it by setting :typoscript:`stripProfile=0`.
 
 :aspect:`Default`
       0
@@ -380,10 +380,10 @@ stripProfile
    :ref:`data-type-imgresource`
 
 :aspect:`Description`
-   The mask with which the image is masked onto :ts:`m.bgImg`. Both :ts:`m.mask`
-   and :ts:`m.bgImg` **is scaled to fit** the size of the imgResource image!
+   The mask with which the image is masked onto :typoscript:`m.bgImg`. Both :typoscript:`m.mask`
+   and :typoscript:`m.bgImg` **is scaled to fit** the size of the imgResource image!
 
-   **Note:** Both :ts:`m.mask` and :ts:`m.bgImg` must be valid images.
+   **Note:** Both :typoscript:`m.mask` and :typoscript:`m.bgImg` must be valid images.
 
 
 :aspect:`Property`
@@ -393,7 +393,7 @@ stripProfile
    :ref:`data-type-imgresource`
 
 :aspect:`Description`
-   **Note:** Both :ts:`m.mask` and :ts:`m.bgImg` must be valid images.
+   **Note:** Both :typoscript:`m.mask` and :typoscript:`m.bgImg` must be valid images.
 
 
 :aspect:`Property`
@@ -403,15 +403,15 @@ stripProfile
    :ref:`data-type-imgresource`
 
 :aspect:`Description`
-   An image masked by :ts:`m.bottomImg_mask` onto :ts:`m.bgImg` before the
-   imgResources is masked by :ts:`m.mask`.
+   An image masked by :typoscript:`m.bottomImg_mask` onto :typoscript:`m.bgImg` before the
+   imgResources is masked by :typoscript:`m.mask`.
 
-   Both :ts:`m.bottomImg` and :ts:`m.bottomImg_mask` **is scaled to fit** the
+   Both :typoscript:`m.bottomImg` and :typoscript:`m.bottomImg_mask` **is scaled to fit** the
    size of the imgResource image!
 
    This is most often used to create an underlay for the imgResource.
 
-   **Note:** Both "m.bottomImg" and :ts:`m.bottomImg_mask` must be valid
+   **Note:** Both "m.bottomImg" and :typoscript:`m.bottomImg_mask` must be valid
    images.
 
 
@@ -424,7 +424,7 @@ stripProfile
 :aspect:`Description`
    (optional)
 
-   **Note:** Both :ts:`m.bottomImg` and :ts:`m.bottomImg_mask` must be valid
+   **Note:** Both :typoscript:`m.bottomImg` and :typoscript:`m.bottomImg_mask` must be valid
    images.
 
 

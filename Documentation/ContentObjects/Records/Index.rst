@@ -1,4 +1,4 @@
-.. include:: ../../Includes.txt
+.. include:: /Includes.rst.txt
 
 
 .. _cobj-records:
@@ -312,7 +312,7 @@ Contrary to the previous example, in this case the :code:`conf` property
 is present and defines a very simple rendering of each content element
 (i.e. the header with a direct link to the content element).
 
-However the same can be achieved with a :ref:`cobj-fluidtemplate` and 
+However the same can be achieved with a :ref:`cobj-fluidtemplate` and
 data processing. This way templating is much more flexible. See the following
 example from the system extension :file:`fluid_styled_content`::
 
