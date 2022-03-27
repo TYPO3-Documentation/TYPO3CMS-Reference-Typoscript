@@ -1,4 +1,4 @@
-.. include:: ../../Includes.txt
+.. include:: /Includes.rst.txt
 
 .. config object type
 
@@ -21,7 +21,7 @@ CONFIG & config
      of the object type CONFIG.
 
 In :file:`typo3/sysext/frontend/Classes/` this is known as
-:php:`$GLOBALS['TSFE']->config['config']`, thus the property :ts:`debug` below is
+:php:`$GLOBALS['TSFE']->config['config']`, thus the property :typoscript:`debug` below is
 accessible as :php:`$GLOBALS['TSFE']->config['config']['debug']`.
 
 Properties
@@ -691,7 +691,7 @@ content\_from\_pid\_allowOutsideDomain
 
       Another use case is mount points: By means of the page type "Mount Point" you can virtually
       insert a whole subtree from somwhere else by just pointing to it. However, usually this
-      only works within the page tree of the given domain. Setting :ts:`config.content_from_pid_allowOutsideDomain = 1`
+      only works within the page tree of the given domain. Setting :typoscript:`config.content_from_pid_allowOutsideDomain = 1`
       removes that restriction.
 
 Keywords: mountpoint
@@ -857,9 +857,9 @@ disableBodyTag
       opening `<body ...>` part of the body tag. The closing `</body>`
       is not affected and will still be issued.
 
-      :ts:`disableBodyTag` takes precedence over the *page* properties
-      :ts:`bodyTagCObject`, :ts:`bodyTag`, :ts:`bodyTagMargins` and
-      :ts:`bodyTagAdd`. With :ts:`config.disableBodyTag =1` the others are
+      :typoscript:`disableBodyTag` takes precedence over the *page* properties
+      :typoscript:`bodyTagCObject`, :typoscript:`bodyTag`, :typoscript:`bodyTagMargins` and
+      :typoscript:`bodyTagAdd`. With :typoscript:`config.disableBodyTag =1` the others are
       ignored and don't have any effect.
 
 
@@ -1667,9 +1667,9 @@ lockFilePath
          This value affects the functionality of :ref:`stdwrap-filelist` which is
          part of the :ref:`stdWrap` suite.
 
-         Set :ts:`lockFilePath` to the **relative** path of a folder.
+         Set :typoscript:`lockFilePath` to the **relative** path of a folder.
          `filelist` will only return values for a folder that starts with the path
-         given by :ts:`lockFilePath`.
+         given by :typoscript:`lockFilePath`.
 
 .. _setup-config-message-preview:
 
@@ -2414,7 +2414,7 @@ sys\_language\_isocode
 
    Description
         ISO 639-1 language code for the according language. By default this
-        is being set by :ts:`TSFE:sys_language_isocode`. The value is derived
+        is being set by :typoscript:`TSFE:sys_language_isocode`. The value is derived
         from the ISO code that is stored within the sys_language record.
         You can override the value, which was retrieved that way, with this
         setting.
@@ -2444,7 +2444,7 @@ sys\_language\_isocode\_default
 
    Description
          ISO 639-1 language code for the default language (that is
-         :ts:`sys_language_uid = 0`).
+         :typoscript:`sys_language_uid = 0`).
 
          **Example**::
 
@@ -2479,7 +2479,7 @@ sys\_language\_mode
    Description
          Configures what the system should do when a page is not translated
          to the requested language.
-         It is only evaluated when :ts:`sys_language_uid` is greater than `0`
+         It is only evaluated when :typoscript:`sys_language_uid` is greater than `0`
          and the requested page translation is NOT available.
          Internally this setting corresponds to
          :php:`$GLOBALS['TSFE']->sys_language_content`.
@@ -2499,7 +2499,7 @@ sys\_language\_mode
             with the selected language even if the page is not translated and has no
             page overlay record. This will keep menus etc. translated. However,
             the *content* on the page can still fall back to another language,
-            defined by the value of this keyword, e.g. :ts:`content_fallback;1,3,0`,
+            defined by the value of this keyword, e.g. :typoscript:`content_fallback;1,3,0`,
             to fall back to the content of sys\_language\_uid 1, after that to the
             content of sys\_language\_uid 3 and if that is not present either,
             to default (0).
@@ -2577,7 +2577,7 @@ sys\_language\_overlay
 
             An exception to this rule can be made with the TypoScript CONTENT object
             if you manually set
-            :ts:`select.includeRecordsWithoutDefaultTranslation = 1`.
+            :typoscript:`select.includeRecordsWithoutDefaultTranslation = 1`.
 
          1
             Fetch records from the default language and overlay them with translations.
@@ -2611,8 +2611,8 @@ sys\_language\_uid
          Internally this value is used to initialize the TypoScriptFrontendController
          :php:`$GLOBALS['TSFE']->sys_language_uid` property.
          The :php:`$GLOBALS['TSFE']->sys_language_content` property is set based
-         on the value of the :ts:`sys_language_uid` and other settings like
-         :ts:`sys_language_mode`.
+         on the value of the :typoscript:`sys_language_uid` and other settings like
+         :typoscript:`sys_language_mode`.
 
          It is usually set to the value of the `&L` request parameter,
          using a TypoScript condition like in this example::

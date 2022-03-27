@@ -1,4 +1,4 @@
-.. include:: ../../Includes.txt
+.. include:: /Includes.rst.txt
 
 
 .. _cobj-hmenu:
@@ -35,7 +35,7 @@ into account.
 
    Default
          (no menu)
-         
+
    Description
          For every menu level, that should be rendered, an according entry must
          exist. It defines the menu object that should render the menu items on
@@ -100,7 +100,7 @@ into account.
 
    Data type
          integer /:ref:`stdWrap <stdwrap>`
-         
+
    Default
          0
 
@@ -114,8 +114,8 @@ into account.
          rootLine. Thus "-1" is a menu with items from the outermost level,
          "-2" is the level before the outermost...
 
-         **Note:** :ts:`entryLevel` does not show a menu **of a certain level of pages** 
-         (use :ts:`special = directory` for that)
+         **Note:** :typoscript:`entryLevel` does not show a menu **of a certain level of pages**
+         (use :typoscript:`special = directory` for that)
          but it means that it will start to be visible **from that level on**.
 
          So, for example if you build a simple "sitemap" menu like this one::
@@ -134,10 +134,10 @@ into account.
               6 < .5
               7 < .6
             }
-            
+
          it will start to be visible from the 4th level (and will contain only the subpages from that level).
-         Please note also that this affects also the menu generated with :ts:`MenuProcessor`. Example::
-        
+         Please note also that this affects also the menu generated with :typoscript:`MenuProcessor`. Example::
+
             page.10{
                dataProcessing {
                 10 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
@@ -151,8 +151,8 @@ into account.
                    titleField = nav_title // title
                 }
               }
-            }         
-            
+            }
+
 
 .. container:: table-row
 
@@ -458,8 +458,8 @@ certain page" and so on.
 
 .. note::
 
-   :ts:`.entryLevel` generally is not supported together with the
-   :ts:`.special` property! The only exception is :ts:`special = keywords`.
+   :typoscript:`.entryLevel` generally is not supported together with the
+   :typoscript:`.special` property! The only exception is :typoscript:`special = keywords`.
 
 Also be aware that this property selects pages for the first level in
 the menu. Submenus by menuObjects 2+ will be created as usual.
@@ -594,9 +594,9 @@ Mount pages are supported.
 
    Data type
          string
-         
+
    Default
-         SYS\_LASTCHANGED         
+         SYS\_LASTCHANGED
 
    Description
          The field in the database which should be used to get the information
@@ -630,9 +630,9 @@ Mount pages are supported.
 
    Data type
          integer
-         
+
    Default
-         20         
+         20
 
    Description
          Defines the tree depth.
@@ -701,9 +701,9 @@ Mount pages are supported.
 
    Data type
          integer
-         
+
    Default
-         10         
+         10
 
    Description
          Maximal number of items in the menu. Default is 10, max is 100.
@@ -808,9 +808,9 @@ Mount pages are supported.
 
    Data type
          boolean
-         
+
    Default
-         0 (false)         
+         0 (false)
 
    Description
          If set to true, the order of the rootline menu elements will be
@@ -1072,9 +1072,9 @@ list from the property ".items".
 
    Data type
          boolean
-         
+
    Default
-         0 (false)         
+         0 (false)
 
    Description
          If set, pages marked with the "no search" checkbox will be excluded from the menu.
@@ -1206,9 +1206,9 @@ Mount pages are supported.
 
    Data type
          integer
-         
+
    Default
-         10         
+         10
 
    Description
          (same as in section "special = updated")

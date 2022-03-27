@@ -1,4 +1,4 @@
-.. include:: ../../Includes.txt
+.. include:: /Includes.rst.txt
 
 
 .. _typolink:
@@ -10,17 +10,17 @@ typolink
 Wraps the incoming value with a link.
 
 *Attention:*
-If this is used from :ts:`parseFunc` the :php:`$cObj->parameters` array is
+If this is used from :typoscript:`parseFunc` the :php:`$cObj->parameters` array is
 loaded with the lowercased link-parameters!
 
 Wraps the incoming value in a link with an HTML 'a' tag.
 
 If you do not want to have the HTML 'a' tag around the link, then you
-must set the property by :ts:`returnLast = url` or
+must set the property by :typoscript:`returnLast = url` or
 :php:`$lconf['returnLast'] = 'url'`.
 
 *Attention:*
-If this is used from :ts:`parseFunc` the :php:`$cObj->parameters` array is
+If this is used from :typoscript:`parseFunc` the :php:`$cObj->parameters` array is
 loaded with the lowercased link-parameters!
 
 Examples
@@ -211,7 +211,7 @@ Output:
          boolean
 
    Description
-         If set, the link is first wrapped with :ts:`.wrap` and then the
+         If set, the link is first wrapped with :typoscript:`.wrap` and then the
          <A>-tag.
 
    Default
@@ -314,12 +314,12 @@ Output:
          4. Title
 
             The standard way of defining the title attribute of the link would
-            be to use the :ts:`title` property or even the :ts:`ATagParams`
+            be to use the :typoscript:`title` property or even the :typoscript:`ATagParams`
             property. However it can also be set in this fourth value, in which
             case it will override the other settings. Note that the title
             should be wrapped in double quotes (") if it contains blanks.
 
-            *Attention:* When used from :ts:`parseFunc`, the value should not
+            *Attention:* When used from :typoscript:`parseFunc`, the value should not
             be defined explicitly, but imported like this::
 
                typolink.parameter.data = parameters : allParams

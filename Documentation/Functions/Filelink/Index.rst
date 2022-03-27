@@ -1,4 +1,4 @@
-.. include:: ../../Includes.txt
+.. include:: /Includes.rst.txt
 
 
 
@@ -11,7 +11,7 @@ filelink
    filelink
 
 :aspect:`Description:`
-   Creates a list of file links. Input is a filename specified in :ts:`path`.
+   Creates a list of file links. Input is a filename specified in :typoscript:`path`.
    icon, size and file are rendered in the listed order.
 
 :aspect:`Overview:`
@@ -100,11 +100,11 @@ emptyTitleHandling
 string /:ref:`stdWrap <stdwrap>`
 
 :aspect:`Description:`
-   Value can be :ts:`keepEmpty` to preserve an empty title attribute or
-   :ts:`useAlt` to use the alt attribute instead.
+   Value can be :typoscript:`keepEmpty` to preserve an empty title attribute or
+   :typoscript:`useAlt` to use the alt attribute instead.
 
 :aspect:`Default:`
-   :ts:`useAlt`
+   :typoscript:`useAlt`
 
 
 
@@ -154,20 +154,20 @@ icon
    given in path_ (see above) plus extension (by default :file:`.gif`).
    For example for CSS files the icon file :file:`css.gif` will be used
    by default.
-   If for a certain filetype no icon file is found in :ts:`icon.path`, the file
+   If for a certain filetype no icon file is found in :typoscript:`icon.path`, the file
    :file:`default` plus extension (for example :file:`default.gif`) will be used.
 
    The following sub-properties are available and have stdWrap functionality:
 
-   -  :ts:`path`:
+   -  :typoscript:`path`:
             Path to the icon set.
             Default is :file:`typo3/sysext/frontend/Resources/Public/Icons/FileIcons/`.
 
-   -  :ts:`ext`: File extension of icons. Default is :file:`.gif`.
+   -  :typoscript:`ext`: File extension of icons. Default is :file:`.gif`.
 
-   -  :ts:`widthAttribute`: Width of the icons in pixels. Default: 18
+   -  :typoscript:`widthAttribute`: Width of the icons in pixels. Default: 18
 
-   -  :ts:`heightAttribute` Height of the icons in pixels. Default: 16
+   -  :typoscript:`heightAttribute` Height of the icons in pixels. Default: 16
 
 
 
@@ -215,8 +215,8 @@ icon\_thumbSize
 :aspect:`Description:`
    Defines the size of the thumbnail in pixels.
 
-   :ts:`icon` needs to be set for the option to take effect and the file
-   extension of the image file must be part of :ts:`icon_image_ext_list`.
+   :typoscript:`icon` needs to be set for the option to take effect and the file
+   extension of the image file must be part of :typoscript:`icon_image_ext_list`.
    You can set one or two values, see the examples. If you set two
    values, the first value will define the maximum width and the second
    one the maximum height. The aspect ratio of the original image will be
@@ -289,7 +289,7 @@ path
    path /:ref:`stdWrap <stdwrap>`
 
 :aspect:`Example:`
-   :ts:`path = "uploads/media/`
+   :typoscript:`path = "uploads/media/`
 
 
 
@@ -370,10 +370,10 @@ typolinkConfiguration
    the generated file link.
    Please note that the following properties will be ignored because they are
    set by the filelink function:
-   :ts:`ATagParams`,
-   :ts:`fileTarget`,
-   :ts:`parameter`,
-   :ts:`title`.
+   :typoscript:`ATagParams`,
+   :typoscript:`fileTarget`,
+   :typoscript:`parameter`,
+   :typoscript:`title`.
 
 
 

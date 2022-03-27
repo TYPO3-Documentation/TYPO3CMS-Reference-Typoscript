@@ -1,4 +1,4 @@
-.. include:: ../../Includes.txt
+.. include:: /Includes.rst.txt
 
 .. _cobj-user:
 .. _cobj-user-int:
@@ -17,10 +17,10 @@ If you call a method in a class (which is of course instantiated as an
 object), the internal variable :php:`$cObj` of that class is set with a
 *reference* to the parent cObject. This offers you an API of functions,
 which might be more or less relevant for you. See
-:file:`ContentObjectRenderer.php` in the TYPO3 source code; access to :ts:`typolink`
-or :ts:`stdWrap` are only two of the gimmicks you get.
+:file:`ContentObjectRenderer.php` in the TYPO3 source code; access to :typoscript:`typolink`
+or :typoscript:`stdWrap` are only two of the gimmicks you get.
 
-If you create this object as :ts:`USER_INT`, it will be rendered non-cached,
+If you create this object as :typoscript:`USER_INT`, it will be rendered non-cached,
 outside the main page-rendering.
 
 userFunc
@@ -32,10 +32,10 @@ userFunc
 
    Property
          userFunc
-       
-   Data type      
+
+   Data type
          function name
-      
+
    Description
          The name of the function, which should be called. If you specify the
          name with a '->' in it, then it is interpreted as a call to a method in
@@ -225,7 +225,7 @@ things contain:
      }
    }
 
-:ts:`page.30` will give back what the function :php:`listContentRecordsOnPage()` of
+:typoscript:`page.30` will give back what the function :php:`listContentRecordsOnPage()` of
 the class YourClass returned. This example returns some debug output
 at the beginning and then the headers of the content elements on the
 page in reversed order. Note how we defined the properties

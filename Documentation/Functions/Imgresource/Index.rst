@@ -1,4 +1,4 @@
-.. include:: ../../Includes.txt
+.. include:: /Includes.rst.txt
 
 
 .. _imgresource:
@@ -265,7 +265,7 @@ imgResource.
    Description
          If set, given UIDs are interpreted as UIDs to sys_file_reference
          instead of to sys_file. This allows using file references, for
-         example with :ts:`import.data = levelmedia: ...`.
+         example with :typoscript:`import.data = levelmedia: ...`.
 
 
 
@@ -333,8 +333,8 @@ imgResource.
          stripProfile-command which shrinks the generated thumbnails. See the
          Install Tool for options and details.
 
-         If :ts:`processor_stripColorProfileByDefault` is set in the
-         Install Tool, you can deactivate it by setting :ts:`stripProfile=0`.
+         If :typoscript:`processor_stripColorProfileByDefault` is set in the
+         Install Tool, you can deactivate it by setting :typoscript:`stripProfile=0`.
 
    Example
          ::

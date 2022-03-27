@@ -1,4 +1,4 @@
-.. include:: ../../Includes.txt
+.. include:: /Includes.rst.txt
 
 
 .. highlight:: typoscript
@@ -22,26 +22,26 @@ getText
 
             key:code
 
-         where :ts:`key` indicates the source we are trying to retrieve the
-         value from and :ts:`code` is some form of path or pointer to the value,
-         which depends on the key used. The various keys (e.g. :ts:`field`,
-         :ts:`parameter`, :ts:`register`...) and their possible codes are
+         where :typoscript:`key` indicates the source we are trying to retrieve the
+         value from and :typoscript:`code` is some form of path or pointer to the value,
+         which depends on the key used. The various keys (e.g. :typoscript:`field`,
+         :typoscript:`parameter`, :typoscript:`register`...) and their possible codes are
          described below.
 
-         The :ts:`code` can contain pipe characters (\|) to separate keys
-         in a multi-dimensional array. This e.g. works with :ts:`gp` and
-         :ts:`tsfe`.
+         The :typoscript:`code` can contain pipe characters (\|) to separate keys
+         in a multi-dimensional array. This e.g. works with :typoscript:`gp` and
+         :typoscript:`tsfe`.
 
          **Example:** ::
 
             foo = TSFE:fe_user|user|username
 
-         Spaces around the colon (:) are irrelevant. The :ts:`key` is
+         Spaces around the colon (:) are irrelevant. The :typoscript:`key` is
          case-insensitive.
 
          **Getting alternative values**
 
-         By separating the value of getText with :ts:`//` (double slash) you can
+         By separating the value of getText with :typoscript:`//` (double slash) you can
          supply a number of codes and getText will return the first one, which is not
          empty ("" or zero).
 
@@ -539,7 +539,7 @@ session:
 
 session: key
 
-The :ts:`key` refers to the session key used to store the value. Subelements may be accessed by using the :ts:`|` symbol to access nested values of arrays or objects in the session
+The :typoscript:`key` refers to the session key used to store the value. Subelements may be accessed by using the :typoscript:`|` symbol to access nested values of arrays or objects in the session
 
 **Example**::
 

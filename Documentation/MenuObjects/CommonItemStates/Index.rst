@@ -1,4 +1,4 @@
-.. include:: ../../Includes.txt
+.. include:: /Includes.rst.txt
 
 
 .. _tmenu-gmenu-imgmenu-common-properties:
@@ -18,9 +18,9 @@ That means they are not used by for instance the JSMENU.
 
    Data type
          boolean / (config)
-         
+
    Default
-         1 (true)         
+         1 (true)
 
    Description
          The default "Normal" state rendering of Item. This is required for all
@@ -123,9 +123,9 @@ That means they are not used by for instance the JSMENU.
 
    Data type
          boolean / (config)
-         
+
    Default
-         0         
+         0
 
    Description
          Enable/Configuration for a menu item if the item is the current page
