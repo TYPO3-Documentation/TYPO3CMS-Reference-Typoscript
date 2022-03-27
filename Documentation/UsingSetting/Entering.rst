@@ -16,7 +16,7 @@ the TYPO3 backend.
 .. hint::
 
    It is best practice to use a Sitepackage extension to bundle
-   various configuration in an extension. See :ref:`t3sitepackage:start`.
+   various configuration in an extension. See :doc:`t3sitepackage:Index`.
 
 
 .. include:: /Images/AutomaticScreenshots/TemplatesRecords/TemplatesRecordListView.rst.txt

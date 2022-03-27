@@ -10,7 +10,7 @@ FLUIDTEMPLATE
 =============
 
 An object of type FLUIDTEMPLATE combines TypoScript with the Fluid
-templating engine. 
+templating engine.
 
 .. versionchanged:: 11.0
    The content object FLUIDTEMPLATE has replaced `TEMPLATE
@@ -58,7 +58,7 @@ dataProcessing
 
    Add one or multiple processors to manipulate the :php:`$data` variable of
    the currently rendered content object, like tt_content or page. The sub-
-   property :ts:`options` can be used to pass parameters to the processor
+   property :typoscript:`options` can be used to pass parameters to the processor
    class.
 
    .. note::
@@ -171,7 +171,7 @@ format
    :sep:`|` :aspect:`Default:` html
    :sep:`|`
 
-   :ts:`format` sets the format of the current request. It can be something
+   :typoscript:`format` sets the format of the current request. It can be something
    like "html", "xml", "png", "json". And it can even come in the form of
    "rss.xml" or alike.
 
@@ -342,8 +342,8 @@ template
 
    .. warning::
 
-      The :ts:`FILE` object type has been removed in TYPO3 10. As the :ts:`.template`
-      property used :ts:`FILE`, you should generally check your code if
+      The :typoscript:`FILE` object type has been removed in TYPO3 10. As the :typoscript:`.template`
+      property used :typoscript:`FILE`, you should generally check your code if
       using this and switch to using :ref:`.templateName <cobj-fluidtemplate-properties-templatename>`
       with :ref:`.templateRootPaths <cobj-fluidtemplate-properties-templaterootpaths>` or use
       :ref:`.file <cobj-fluidtemplate-properties-file>`.
@@ -364,7 +364,7 @@ templateName
 
    This name is used together with the set format to find the template in the
    given templateRootPaths. Use this property to define a content object, which
-   should be used as template file. It is an alternative to :ts:`.file`. If
+   should be used as template file. It is an alternative to :typoscript:`.file`. If
 
    `.templateName` is set, it takes precedence.
 
@@ -536,4 +536,4 @@ headlines. The copyright year will be taken from the TypoScript constant
 
    * :ref:`dataProcessing` examples
    * :ref:`t3coreapi:adding-your-own-content-elements`
-   * :ref:`t3sitepackage:start`
+   * :doc:`t3sitepackage:Index`

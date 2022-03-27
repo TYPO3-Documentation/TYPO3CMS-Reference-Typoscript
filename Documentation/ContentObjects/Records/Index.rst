@@ -302,7 +302,7 @@ accessible for the current user.
 Selection with categories
 -------------------------
 
-If you want to display categorized content with a :ts:`RECORDS` object
+If you want to display categorized content with a :typoscript:`RECORDS` object
 you could do it like this::
 
 	categorized_content = RECORDS

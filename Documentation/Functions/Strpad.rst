@@ -44,8 +44,8 @@ padWith
 :aspect:`Description`
    The character(s) to pad with. The value of :ref:`strpad-padWith` may be
    truncated, if the required number of padding characters cannot
-   be evenly divided by the length of the value of :ts:`padWith`. Note
-   that leading and trailing spaces of :ts:`padWith` are stripped! If
+   be evenly divided by the length of the value of :typoscript:`padWith`. Note
+   that leading and trailing spaces of :typoscript:`padWith` are stripped! If
    you want to pad with spaces, omit this option.
 
 :aspect:`Default`

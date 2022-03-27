@@ -9,7 +9,7 @@ About This Manual
 
 This document is a complete reference to all objects types and properties of
 TypoScript as used in frontend TypoScript template building, and not in
-:ref:`TSconfig <t3tsconfig:start>`.
+:doc:`TSconfig <t3tsconfig:Index>`.
 
 .. seealso::
 
@@ -17,7 +17,7 @@ TypoScript as used in frontend TypoScript template building, and not in
       please refer to the
       :ref:`TypoScript Syntax <t3coreapi:typoscript-syntax-start>`
       chapter in "TYPO3 Explained"
-    * For an introduction to TypoScript Templates, see :ref:`t3ts45:start`
+    * For an introduction to TypoScript Templates, see :doc:`t3ts45:Index`
 
 .. _credits:
 
