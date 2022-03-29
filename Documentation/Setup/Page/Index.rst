@@ -725,7 +725,7 @@ includeJSLibs.[array]
    Description
          Adds JS library files to head of page.
 
-         Same as :ref:`includeJSFooterLibs <setup-page-includejsfooterlibs-array>`, except that this block gets
+         Same as :ref:`includeJSFooterlibs <setup-page-includejsfooterlibs-array>`, except that this block gets
          included inside :html:`<head>`.
          tag).
 
