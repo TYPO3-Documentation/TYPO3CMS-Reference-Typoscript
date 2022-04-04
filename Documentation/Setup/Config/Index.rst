@@ -71,7 +71,6 @@ Properties
    `linkVars`_                                           :ref:`data-type-list`
    `message\_preview`_                                   :ref:`data-type-string`
    `message\_preview\_workspace`_                        :ref:`data-type-string`
-   `metaCharset`_                                        :ref:`data-type-string`                            utf-8
    `moveJsFromHeaderToFooter`_                           :ref:`data-type-boolean`
    `MP\_defaults`_                                       :ref:`data-type-string`
    `MP\_disableTypolinkClosestMPvalue`_                  :ref:`data-type-boolean`
@@ -1445,42 +1444,20 @@ message\_preview\_workspace
             config.message_preview_workspace = <div class="previewbox">Displaying workspace number %2$s named "%1$s"!</div>
 
 
-
-.. index:: config; metaCharset
 .. _setup-config-metacharset:
 
 metaCharset
 ===========
 
-.. container:: table-row
+.. versionchanged:: 12.0
+   The TYPO3 Frontend always rendered in UTF-8, therefore setting
+   :typoscript:`config.metaCharset` has no effect anymore.
 
-   Property
-         metaCharset
+**Migration:**
 
-   Data type
-         :ref:`data-type-string`
-
-   Default
-         utf-8
-
-   Description
-         Charset used for the output document. For example in the meta tag::
-
-            <meta charset=... />
-
-         It is used for a) HTML meta tag, b) HTTP header (unless disabled with
-         :ref:`setup-config-disableCharsetHeader`) and c) xhtml prologues (if available).
-
-         If metaCharset is not UTF-8, the output content is
-         automatically converted to metaCharset before output and likewise are
-         values posted back to the page converted from metaCharset to
-         UTF-8 for internal processing. This conversion takes time of
-         course so there is another good reason to use the same charset for
-         both.
-
-         If an unknown charset is provided a :php:`\RuntimeException` will be
-         thrown.
-
+TYPO3 Installations with a different charset than UTF-8 should convert their
+own content in a custom middleware, as this specific use-case is not supported
+by TYPO3 Core anymore.
 
 
 .. index:: config; moveJsFromHeaderToFooter
