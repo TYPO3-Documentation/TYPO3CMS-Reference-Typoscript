@@ -25,6 +25,13 @@ TSconfig Reference
 This document describes TSconfig: A TypoScript-like syntax for configuring
 details of the TYPO3 backend.
 
+In addition, you can find a quick reference guide to TypoScript templates in
+:doc:`t3ts45:Index`, a complete reference of all object types and properties of
+TypoScript in :doc:`TypoScript Reference <t3tsref:Index>` and explanations of
+TypoScript syntax in the chapter
+":ref:`TypoScript Syntax <t3coreapi:typoscript-syntax-start>`" of TYPO3
+Explained.
+
 ----
 
 **Table of Contents:**
