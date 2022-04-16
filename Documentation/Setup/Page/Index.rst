@@ -16,7 +16,10 @@ PAGE is an object type. A good habit is to use :typoscript:`page` as the top-lev
 the content-page on a website.
 
 TYPO3 does not initialize :typoscript:`page` by default. You must initialize this
-explicitly, for example::
+explicitly, for example:
+
+.. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
     page = PAGE
 
@@ -56,16 +59,20 @@ like the following:
    </html>
 
 This default behaviour can be changed by setting the property
-:ref:`setup-config-disableallheadercode`::
+:ref:`setup-config-disableallheadercode`:
+
+.. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
    page.config.disableAllHeaderCode = 1
 
 If the output represents another format different from HTML the HTTP header
-should also be set, for example::
+should also be set, for example:
+
+.. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
    page.config.additionalHeaders.10.header = Content-type:application/json
-
-
 
 .. index::
    PAGE; typeNum
@@ -88,7 +95,10 @@ stream with the same content could go with type 1.
 The property :ref:`typeNum <setup-page-typenum>`  defines for which type,
 the page will be used.
 
-Example::
+Example:
+
+.. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
     page = PAGE
     page.typeNum = 0
@@ -197,7 +207,8 @@ Properties
       10 and no number 1 is found.
 
    Example
-      ::
+      .. code-block:: typoscript
+         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
          page = PAGE
          page.20 = TEXT
@@ -228,7 +239,10 @@ bodyTag
    Description
          Body tag on the page
 
-   Example ::
+   Example :
+
+      .. code-block:: typoscript
+         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
          # This will lead to <body class="example">
          page.bodyTag = <body class="{$bodyClass}">
@@ -254,7 +268,9 @@ bodyTagAdd
          before the :html:`>` character. This is mostly useful for adding
          attributes to the :html:`<body>` tag.
 
-   Example ::
+   Example
+      .. code-block:: typoscript
+         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
          # This will lead to <body class="example">
          page.bodyTagAdd = class="example"
@@ -349,7 +365,8 @@ cssInline.[array]
          Internally handled as PHP integer, maximum number is therefore restricted to :php:`PHP_INT_MAX`.
 
    Example
-         ::
+         .. code-block:: typoscript
+            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
             cssInline {
                 10 = TEXT
@@ -384,7 +401,8 @@ footerData.[array]
          Internally handled as PHP integer, maximum number is therefore restricted to :php:`PHP_INT_MAX`.
 
    Example
-         ::
+         .. code-block:: typoscript
+            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
             footerData {
                3 = TEXT
@@ -426,7 +444,8 @@ headerData.[array]
          Internally handled as PHP integer, maximum number is therefore restricted to :php:`PHP_INT_MAX`.
 
    Example
-         ::
+         .. code-block:: typoscript
+            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
             page.headerData {
                3 = TEXT
@@ -517,7 +536,8 @@ includeCSS.[array]
          **title**: Setting the title of the :html:`<style>` tag.
 
    Example
-         ::
+         .. code-block:: typoscript
+            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
             includeCSS {
                 file1 = fileadmin/mystylesheet1.css
@@ -586,7 +606,8 @@ includeCSSLibs.[array]
          **title**: Setting the title of the :html:`<style>` tag.
 
    Example
-         ::
+         .. code-block:: typoscript
+            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
             includeCSSLibs.twitter = https://twitter.com/styles/blogger.css
             includeCSSLibs.twitter.external = 1
@@ -658,7 +679,8 @@ includeJS.[array]
          more details. Integrity hashes may be generated using `<https://srihash.org/>`_.
 
    Example
-         ::
+         .. code-block:: typoscript
+            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
             includeJS {
                 file1 = fileadmin/helloworld.js
@@ -775,7 +797,8 @@ inlineLanguageLabelFiles
          Default: 0
 
    Example
-         ::
+         .. code-block:: typoscript
+            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
             inlineLanguageLabelFiles {
                 someLabels = EXT:myExt/Resources/Private/Language/locallang.xlf
@@ -803,7 +826,8 @@ inlineSettings
          Adds settings to the page as inline javascript, which is accessible within the variable :js:`TYPO3.settings`.
 
    Example
-         ::
+         .. code-block:: typoscript
+            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
             page.inlineSettings {
                 setting1 = Hello
@@ -840,7 +864,8 @@ jsFooterInline.[array]
          Internally handled as PHP integer, maximum number is therefore restricted to :php:`PHP_INT_MAX`.
 
    Example
-         ::
+         .. code-block:: typoscript
+            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
             page.jsFooterInline {
                 10 = TEXT
@@ -874,7 +899,8 @@ jsInline.[array]
          Internally handled as PHP integer, maximum number is therefore restricted to :php:`PHP_INT_MAX`.
 
    Example
-         ::
+         .. code-block:: typoscript
+            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
             page.jsInline {
                 10 = TEXT
@@ -921,20 +947,32 @@ meta
          there is none yet, the one from TypoScript is set.
 
    Examples:
-         Simple definition::
+         Simple definition:
+
+         .. code-block:: typoscript
+            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
              meta.description = This is the description of the content in this document.
              meta.keywords = These are the keywords.
 
-         Fetch data from the keywords field of the current or any parent page::
+         Fetch data from the keywords field of the current or any parent page:
+
+         .. code-block:: typoscript
+            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
              meta.keywords.data = levelfield:-1, keywords, slide
 
-         Make a meta.refresh entry::
+         Make a meta.refresh entry:
+
+         .. code-block:: typoscript
+            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
              meta.refresh = [seconds]; [URL, leave blank for same page]
 
-         Usage of :typoscript:`httpEquivalent`::
+         Usage of :typoscript:`httpEquivalent`:
+
+         .. code-block:: typoscript
+            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
              meta.X-UA-Compatible = IE=edge
              meta.X-UA-Compatible.httpEquivalent = 1
@@ -942,36 +980,40 @@ meta
          Result:
 
          .. code-block:: html
+            :caption: Example output
 
               <meta http-equiv="X-UA-Compatible" content="IE=edge">.
 
          Meta tags with a different attribute name are supported like the
-         Open Graph meta tags::
+         Open Graph meta tags:
 
-              page {
-                  meta {
-                     X-UA-Compatible = IE=edge
-                     X-UA-Compatible.attribute = http-equiv
-                     keywords = TYPO3
-                     og:site_name = TYPO3
-                     og:site_name.attribute = property
-                     description = Inspiring people to share Normal
-                     dc.description = Inspiring people to share [DC tags]
-                     og:description = Inspiring people to share [OpenGraph]
-                     og:description.attribute = property
-                     og:locale = en_GB
-                     og:locale.attribute = property
-                     og:locale:alternate {
-                        attribute = property
-                        value {
-                           1 = fr_FR
-                           2 = de_DE
-                        }
-                     }
-                     refresh = 5; url=https://example.org/
-                     refresh.attribute = http-equiv
-                  }
-              }
+         .. code-block:: typoscript
+            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+            page {
+                meta {
+                   X-UA-Compatible = IE=edge
+                   X-UA-Compatible.attribute = http-equiv
+                   keywords = TYPO3
+                   og:site_name = TYPO3
+                   og:site_name.attribute = property
+                   description = Inspiring people to share Normal
+                   dc.description = Inspiring people to share [DC tags]
+                   og:description = Inspiring people to share [OpenGraph]
+                   og:description.attribute = property
+                   og:locale = en_GB
+                   og:locale.attribute = property
+                   og:locale:alternate {
+                      attribute = property
+                      value {
+                         1 = fr_FR
+                         2 = de_DE
+                      }
+                   }
+                   refresh = 5; url=https://example.org/
+                   refresh.attribute = http-equiv
+                }
+            }
 
          They can be used like :typoscript:`property` used for OG tags in the example.
 
@@ -1010,7 +1052,10 @@ shortcutIcon
       the browser, next to the name of the site in lists of bookmarks
       and next to the title of the page in the tab.
 
-      Example::
+      Example:
+
+      .. code-block:: typoscript
+         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
          page.shortcutIcon = fileadmin/Icons/favicon.ico
 

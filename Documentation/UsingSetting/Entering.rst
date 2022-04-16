@@ -39,7 +39,10 @@ Include TypoScript files
 
 In both the "Constants" and "Setup" fields, the
 :ref:`@import <t3coreapi:typoscript-syntax-includes>` syntax can be
-used to include TypoScript contained inside files::
+used to include TypoScript contained inside files:
+
+.. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
    # Import a single file
    @import 'EXT:myproject/Configuration/TypoScript/randomfile.typoscript'

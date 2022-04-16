@@ -22,7 +22,10 @@ must set the property by :typoscript:`returnLast = url` or
 Examples
 ========
 
-Create a link to page with uid 2::
+Create a link to page with uid 2:
+
+.. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
    page.20 = TEXT
    page.20.value = anchor text
@@ -31,10 +34,14 @@ Create a link to page with uid 2::
 Output:
 
 .. code-block:: html
+   :caption: Example output
 
    <a href="/somepage">anchor text</a>
 
-Just display the URL::
+Just display the URL:
+
+.. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
    page.30 = TEXT
    page.30.typolink.parameter = 2
@@ -43,6 +50,7 @@ Just display the URL::
 Output:
 
 .. code-block:: html
+   :caption: Example output
 
    /somepage
 
@@ -160,19 +168,24 @@ additionalParams
    code ready to insert after the last parameter.
 
 :aspect:`Example`
-      ::
 
-         '&print=1'
-         '&sword_list[]=word1&sword_list[]=word2'
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+      page.10.typolink.additionalParams = '&print=1'
+      page.20.typolink.additionalParams = '&sword_list[]=word1&sword_list[]=word2'
 
 :aspect:`Applications`
-      This is very useful – for example – when linking to pages from a
-      search result. The search words are stored in the register-key
-      SWORD\_PARAMS and can be insert directly like this::
+   This is very useful – for example – when linking to pages from a
+   search result. The search words are stored in the register-key
+   SWORD\_PARAMS and can be insert directly like this:
 
-         .additionalParams.data = register:SWORD_PARAMS
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-      *Note:* This is only active for internal links.
+         page.20.typolink.additionalParams.data = register:SWORD_PARAMS
+
+   .. note:: This is only active for internal links.
 
 
 .. index:: typolink; addQueryString
@@ -272,30 +285,45 @@ parameter
    Below are a few examples followed by full explanations.
 
 :aspect:`Examples`
-   1. Most simple. Will create a link to page 51 (if this is not default language,
-      the correct target language will be resolved from the parameter)::
+   #. Most simple. Will create a link to page 51 (if this is not default language,
+      the correct target language will be resolved from the parameter):
 
-         parameter = t3://page?uid=51
+      .. code-block:: typoscript
+         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-   2. A full example. A link to the *current* page that will open in a new window.
+         page.10.typolink.parameter = t3://page?uid=51
+
+   #. A full example. A link to the *current* page that will open in a new window.
       The link will have a class attribute with value "specialLink" and a
-      title attribute reading "Very important information"::
+      title attribute reading "Very important information":
 
-         parameter = t3://page?uid=current _blank specialLink "Very important information"
+      .. code-block:: typoscript
+         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-   3. which is converted to a link like this::
+         page.10.typolink.parameter = t3://page?uid=current _blank specialLink "Very important information"
+
+      which is converted to a link like this:
+
+      .. code-block:: html
+         :caption: Example output
 
          <a href="?id=51" target="_blank" class="specialLink" title="Very important information">
 
-   4. An external link with a class attribute. Note the dash (-) that
+   #. An external link with a class attribute. Note the dash (-) that
       replaces the second value (the target). This makes it possible to
-      define a class (third value) without having to define a target::
+      define a class (third value) without having to define a target:
 
-         parameter = https://example.com/ - specialLink
+      .. code-block:: typoscript
+         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-   5. A mailto link with a title attribute (but no target and no class)::
+         page.10.typolink.parameter = https://example.com/ - specialLink
 
-         parameter = mailto:info@example.org - - "Send a mail to main TYPO3 contact"
+   #. A mailto link with a title attribute (but no target and no class):
+
+      .. code-block:: typoscript
+         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+         page.10.typolink.parameter = mailto:info@example.org - - "Send a mail to main TYPO3 contact"
 
 
    As you can see from the examples, each significant part of the
@@ -337,12 +365,18 @@ parameter
       JavaScript function. Also see property "Jswindow".
 
       Examples
-         Open page 51 in a popup window measuring 400 by 300 pixels::
+         Open page 51 in a popup window measuring 400 by 300 pixels:
+
+         .. code-block:: typoscript
+            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
             typolink.parameter = 51 400x300
 
          Open page 51 in a popup window measuring 400 by 300 pixels. Do
-         not make the window resizable and show the location bar::
+         not make the window resizable and show the location bar:
+
+         .. code-block:: typoscript
+            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
             typolink.parameter = 51 400x300:resizable=0,location=1
 
@@ -363,7 +397,10 @@ parameter
       should be wrapped in double quotes (") if it contains blanks.
 
       *Attention:* When used from :typoscript:`parseFunc`, the value should not
-      be defined explicitly, but imported like this::
+      be defined explicitly, but imported like this:
+
+      .. code-block:: typoscript
+         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
          typolink.parameter.data = parameters : allParams
 
@@ -388,7 +425,10 @@ forceAbsoluteUrl
 
    .scheme
       Defines the URL scheme to be used (https or http). http is the
-      default value. Example::
+      default value. Example:
+
+      .. code-block:: typoscript
+         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
          typolink {
             parameter = 13
@@ -430,9 +470,12 @@ JSwindow\_params
 
 :aspect:`Description`
    Preset values for opening the window. This example lists almost all
-   possible attributes::
+   possible attributes:
 
-      status=1,menubar=1,scrollbars=1,resizable=1,location=1,directories=1,toolbar=1
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+      page.10.typolink.JSwindow_params = status=1,menubar=1,scrollbars=1,resizable=1,location=1,directories=1,toolbar=1
 
 
 .. index:: typolink; returnLast
@@ -492,9 +535,12 @@ ATagParams
 :aspect:`Description`
    Additional parameters
 
-   Example::
+   Example:
 
-      class="board"
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+      page.10.typolink.ATagParams = class="board"
 
 
 .. index:: typolink; linkAccessRestrictedPages

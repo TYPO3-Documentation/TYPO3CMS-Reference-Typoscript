@@ -191,7 +191,10 @@ Example 2: use stdWrap property on references
    :ref:`stdWrap` properties added to the :php:`FilesProcessor`.
 
 The following example implements a slide-functionality on rootline
-for file resources::
+for file resources:
+
+.. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
    page.10.dataProcessing {
       10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor

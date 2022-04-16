@@ -38,7 +38,10 @@ the advantage of minimizing the size of the cached template. But on
 the other hand it does not give you the flexibility of overriding
 values.
 
-This example will show you how it works::
+This example will show you how it works:
+
+.. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
    #
    # Temporary objects are defined:
@@ -120,7 +123,8 @@ reference will be merged with the configuration of the reference.
 Example:
 --------
 
-::
+.. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
    page.10 = TEXT
    page.10.value = kasper

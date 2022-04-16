@@ -26,7 +26,9 @@ As it is a syntax feature you can use it in both constants and setup plus it get
 Example
 =======
 
-::
+
+.. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
    # Define default value
    myConstant = defaultValue

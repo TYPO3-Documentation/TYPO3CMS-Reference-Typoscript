@@ -26,7 +26,10 @@ value as parameters.
 Example
 =======
 
-Example with the property "value" of the content object ":ref:`cobj-text`"::
+Example with the property "value" of the content object ":ref:`cobj-text`":
+
+.. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
    10 = TEXT
    10.value = some text
@@ -58,7 +61,10 @@ which represents the exact order of execution.
 Note that the :typoscript:`stdWrap` property "orderedStdWrap" allows you to execute
 multiple :typoscript:`stdWrap` functions in a freely selectable order.
 
-The above example could be rewritten to this::
+The above example could be rewritten to this:
+
+.. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
    10 = TEXT
    10.value = some text
@@ -161,7 +167,9 @@ lang
    :ref:`current site language <t3coreapi:sitehandling-addingLanguages>`.
 
 :aspect:`Example`
-   ::
+
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
       page.10 = TEXT
       page.10.value = I am a Berliner!
@@ -203,9 +211,11 @@ field
    See the description for the data type ":ref:`data-type-gettext`"/field!
 
 :aspect:`Example`
-   ::
 
-      .field = title
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+      page.10.field = title
 
    This sets the content to the value of the field "title".
 
@@ -213,9 +223,11 @@ field
    by "//".
 
 :aspect:`Example`
-   ::
 
-      .field = nav_title // title
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+      page.10.field = nav_title // title
 
    Here the content from the field nav\_title will be returned
    unless it is a blank string. If a blank string, the value of
@@ -350,7 +362,9 @@ ifNull
    with the value defined here.
 
 :aspect:`Example`
-   ::
+
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
       page.10 = COA_INT
       page.10 {
@@ -434,12 +448,20 @@ listNum
 :aspect:`Examples`
    We have a value of "item 1, item 2, item 3, item 4":
 
-   This would return "item 3"::
+   This would return "item 3"
 
-      .listNum = last – 1
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+      page.10 = TEXT
+      page.10.value = item 1, item 2, item 3, item 4
+      page.10.listNum = last – 1
 
    That way the subtitle field to be displayed is chosen randomly upon
-   every reload::
+   every reload:
+
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
       page.5 = COA_INT
       page.5 {
@@ -600,11 +622,15 @@ parseFunc
    content elements.
 
 :aspect:`Example`
-   ::
 
-      parseFunc = < lib.parseFunc_RTE
-      parseFunc.tags.myTag = TEXT
-      parseFunc.tags.myTag.value = This will be inserted when &lt;myTag&gt; is found!
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+      page.10 {
+          parseFunc = < lib.parseFunc_RTE
+          parseFunc.tags.myTag = TEXT
+          parseFunc.tags.myTag.value = This will be inserted when &lt;myTag&gt; is found!
+      }
 
 
 .. index:: pair: stdWrap; HTMLparser
@@ -688,7 +714,9 @@ prioriCalc
    operators and features.
 
 :aspect:`Examples`
-   ::
+
+   .. code-block:: none
+      :caption: Example Output for different calculations
 
       100%7 = 2
       -5*-4 = 20
@@ -761,7 +789,8 @@ hash
    algorithms see https://www.php.net/manual/en/function.hash-algos.php.
 
 :aspect:`Example`
-   ::
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
       page.10 = TEXT
       page.10 {
@@ -833,7 +862,10 @@ date
    used instead of `date() <https://www.php.net/date>`_.
 
 :aspect:`Example`
-   Render in human readable form::
+   Render in human readable form:
+
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
       page.10 = TEXT
       page.10.value {
@@ -893,19 +925,23 @@ strtotime
    Possible values are :typoscript:`1` or any time string valid as first argument of the PHP :php:`strtotime()` function.
 
 :aspect:`Example`
-   ::
 
-      date_as_timestamp = TEXT
-      date_as_timestamp {
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+      lib.date_as_timestamp = TEXT
+      lib.date_as_timestamp {
          value = 2015-04-15
          strtotime = 1
       }
 
 :aspect:`Example`
-   ::
 
-      next_weekday = TEXT
-      next_weekday {
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+      lib.next_weekday = TEXT
+      lib.next_weekday {
          data = GP:selected_date
          strtotime = + 2 weekdays
          strftime = %Y-%m-%d
@@ -937,16 +973,20 @@ age
 
    If you set this property with a non-integer, it is used to format the
    eight units. The first four values are the plural values and the last
-   four are singular. This is the default string::
+   four are singular. This is the default string:
 
-      " min| hrs| days| yrs| min| hour| day| year"
+   .. code-block:: none
+      :caption: Default string for age format
+
+      min| hrs| days| yrs| min| hour| day| year
 
    Set another string if you want to change the units. You may include
    the "-signs. They are removed anyway, but they make sure that a space
    which you might want between the number and the unit stays.
 
 :aspect:`Example`
-   ::
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
       lib.ageFormat = TEXT
       lib.ageFormat.stdWrap.data = page:tstamp
@@ -1019,15 +1059,23 @@ bytes
 
       If the value isn't a number the internal PHP function may issue a
       warning which - depending on you error handling settings - can
-      interrupt execution. Example::
+      interrupt execution. Example:
 
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+      page.10 {
          value = abc
          bytes = 1
+      }
 
       will show `0` but may raise a warning or an exception.
 
 :aspect:`Examples`
-Output value 1000 without special formatting. Shows `1000`::
+Output value 1000 without special formatting. Shows `1000`:
+
+.. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
    page = PAGE
    page.10 = TEXT
@@ -1035,7 +1083,10 @@ Output value 1000 without special formatting. Shows `1000`::
       value = 1000
    }
 
-Format value 1000 in IEC style with base=1024. Shows `0.98 Ki`::
+Format value 1000 in IEC style with base=1024. Shows `0.98 Ki`:
+
+.. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
    page = PAGE
    page.10 = TEXT
@@ -1045,7 +1096,10 @@ Format value 1000 in IEC style with base=1024. Shows `0.98 Ki`::
    }
 
 Format value 1000 in IEC style with base=1024 and 'B' supplied by us.
-Shows `0.98 KiB`::
+Shows `0.98 KiB`:
+
+.. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
    page = PAGE
    page.10 = TEXT
@@ -1055,7 +1109,10 @@ Shows `0.98 KiB`::
       noTrimWrap = ||B|
    }
 
-Format value 1000 in SI style with base=1000. Shows `1.00 k`::
+Format value 1000 in SI style with base=1000. Shows `1.00 k`:
+
+.. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
    page = PAGE
    page.10 = TEXT
@@ -1066,7 +1123,10 @@ Format value 1000 in SI style with base=1000. Shows `1.00 k`::
    }
 
 Format value 1000 in SI style with base=1000 and 'b' supplied by us.
-Shows `1.00 kb`::
+Shows `1.00 kb`:
+
+.. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
    page = PAGE
    page.10 = TEXT
@@ -1078,7 +1138,10 @@ Shows `1.00 kb`::
    }
 
 Format value 1000 with custom label and base=1000. Shows
-`1.00 x 1000 Bytes`::
+`1.00 x 1000 Bytes`:
+
+.. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
    page = PAGE
    page.10 = TEXT
@@ -1090,7 +1153,10 @@ Format value 1000 with custom label and base=1000. Shows
    }
 
 Format value 1000 with custom label and base=1000. Shows
-`1.00 kilobyte (kB)`::
+`1.00 kilobyte (kB)`:
+
+.. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
    page = PAGE
    page.10 = TEXT
@@ -1102,7 +1168,10 @@ Format value 1000 with custom label and base=1000. Shows
    }
 
 Format value 1000 with custom label and base=1024. Shows
-`0.98 kibibyte (KiB)`::
+`0.98 kibibyte (KiB)`:
+
+.. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
    page = PAGE
    page.10 = TEXT
@@ -1277,7 +1346,9 @@ encodeForJavaScriptValue
    :php:`\TYPO3\CMS\Core\Utility\GeneralUtility::quoteJSvalue`.
 
 :aspect:`Example`
-   ::
+
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
       10 = TEXT
       10.stdWrap {
@@ -1514,18 +1585,24 @@ noTrimWrap
    by :ref:`objects-optionsplit` (which takes precedence over :typoscript:`noTrimWrap`).
 
 :aspect:`Example`
-   ::
 
-      noTrimWrap = | val1 | val2 |
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+      page.10.noTrimWrap = | val1 | val2 |
 
    In this example the content with the values val1 and val2 will be
    wrapped; including the whitespaces.
 
 :aspect:`Example`
-   ::
 
-      noTrimWrap = ^ val1 ^ val2 ^ || ^ val3 ^ val4 ^
-      noTrimWrap.splitChar = ^
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+      page.10 {
+         noTrimWrap = ^ val1 ^ val2 ^ || ^ val3 ^ val4 ^
+         noTrimWrap.splitChar = ^
+      }
 
    :ref:`objects-optionsplit` will use the "\|\|" to have two subparts in
    the first part. In each subpart :typoscript:`noTrimWrap` will then use the "^" as
@@ -1566,9 +1643,11 @@ dataWrap
    of :ref:`data-type-gettext`.
 
 :aspect:`Example`
-   ::
 
-      <div id="{tsfe : id}"> | </div>
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+      page.10.dataWrap = <div id="{tsfe : id}"> | </div>
 
    This will produce a :html:`<div>` tag around the content with an id attribute
    that contains the number of the current page.
@@ -1641,7 +1720,9 @@ orderedStdWrap
    order in which the :typoscript:`stdWrap` functions are executed.
 
 :aspect:`Example`
-   ::
+
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
       10 = TEXT
       10.value = a
@@ -1695,7 +1776,10 @@ insertData
    If set, then the content string is parsed like :typoscript:`dataWrap` above.
 
 :aspect:`Example`
-   Displays the page title::
+   Displays the page title:
+
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
       10 = TEXT
       10.value = This is the page title: {page:title}
@@ -1732,7 +1816,10 @@ postUserFunc
    more in-depth information.
 
 :aspect:`Example`
-   You can paste this example directly into a new template record::
+   You can paste this example directly into a new template record:
+
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
       page = PAGE
       page.typeNum = 0
@@ -1756,8 +1843,9 @@ postUserFunc
    (in that order) and need to return a string.
 
    .. code-block:: php
+      :caption: EXT:site_package/Classes/UserFunctions/YourClass.php
 
-      namespace Your\NameSpace;
+      namespace Vendor\SitePackage\UserFunctions;
       /**
          * Example of a method in a PHP class to be called from TypoScript
          *
@@ -1854,7 +1942,9 @@ prefixComment
    The content is parsed through :ref:`stdwrap-insertData`.
 
 :aspect:`Example`
-   ::
+
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
       prefixComment = 2 | CONTENT ELEMENT, uid:{field:uid}/{field:CType}
 

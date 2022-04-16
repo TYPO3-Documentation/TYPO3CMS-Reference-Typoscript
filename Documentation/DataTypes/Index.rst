@@ -60,7 +60,9 @@ boolean
    __ https://www.php.net/manual/en/language.types.boolean.php
 
 :aspect:`Examples:`
-   ::
+
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
       dummy.enable = 0   # false, preferred notation
       dummy.enable = 1   # true,  preferred notation
@@ -93,13 +95,19 @@ case
    ============================= ==========================================================
 
 :aspect:`Example:`
-   Code::
+   Code:
+
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
       10 = TEXT
       10.value = Hello world!
       10.case = upper
 
-   Result::
+   Result:
+
+   .. code-block:: html
+      :caption: Example Output
 
       HELLO WORLD!
 
@@ -142,9 +150,11 @@ date-conf
    === ===========================================================
 
 :aspect:`Example:`
-   ::
 
-      d-m-y
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+      page.10.date-conf = d-m-y
 
 
 .. index:: Simple data types; degree
@@ -184,9 +194,13 @@ dir
 :aspect:`Example:`
    This example returns a list of all pdf, gif and jpg-files from
    :file:`fileadmin/files/` sorted by their name reversely and with the full path (with
-   :file:`fileadmin/files/` prepended)::
+   :file:`fileadmin/files/` prepended):
 
-      fileadmin/files/ | pdf,gif,jpg | name | r | true
+
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+      page.10.dir = fileadmin/files/ | pdf,gif,jpg | name | r | true
 
 
 .. index:: Simple data types; function name
@@ -295,7 +309,9 @@ HTML code
    Pure HTML code
 
 :aspect:`Example:`
-   ::
+
+   .. code-block:: html
+      :caption: Example HTML code
 
       <b>Some text in bold</b>
 
@@ -384,7 +400,10 @@ imgResource
    #. A GIFBUILDER object. See the object reference for :ref:`gifbuilder` below.
 
 :aspect:`Examples:`
-   Here "file" is an imgResource::
+   Here "file" is an imgResource:
+
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
       10 = IMAGE
       10 {
@@ -392,7 +411,10 @@ imgResource
           file.width = 200
       }
 
-   GIFBUILDER::
+   GIFBUILDER:
+
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
       10 = IMAGE
       10.file = GIFBUILDER
@@ -442,9 +464,12 @@ linkWrap
    Thus we can insert page\_ids from previous levels.
 
 :aspect:`Example:`
-   This will make a link to the root-level of a website::
+   This will make a link to the root-level of a website:
 
-      <a href="?id={0}"> | </a>
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+      page.10.linkWrap = <a href="?id={0}"> | </a>
 
 
 .. index:: Simple data types; list
@@ -462,9 +487,11 @@ list
    each comma.
 
 :aspect:`Example:`
-   ::
 
-      item,item2,item3
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+      page.10.myList = item,item2,item3
 
 
 .. index:: Simple data types; margins
@@ -481,9 +508,12 @@ margins
 
 :aspect:`Example:`
    This sets margin-left to 10 and margin-bottom to 5. Top and right are
-   not set (zero)::
+   not set (zero):
 
-      10,0,0,5
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+      page.10.myMargins = 10,0,0,5
 
 
 .. index:: Simple data types; page_id
@@ -499,13 +529,12 @@ page\_id
    A page id (integer) or :typoscript:`this` (=current page id).
 
 :aspect:`Examples:`
-   ::
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-      this
+      page.10.settings.pid = this
 
-   ::
-
-      34
+      page.20.settings.pid = 34
 
 
 .. index:: Simple data types; path
@@ -521,9 +550,10 @@ path
    Path relative to the root directory from which we operate.
 
 :aspect:`Example:`
-   ::
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-      fileadmin/stuff/
+      page.10.settings.somePath = fileadmin/stuff/
 
 
 .. index:: Simple data types; pixels
@@ -539,9 +569,10 @@ pixels
    pixel-distance
 
 :aspect:`Example:`
-   ::
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-      345
+      page.10.someWidth = 345
 
 
 .. index::
@@ -579,9 +610,12 @@ resource
    characters in the name of the reference.
 
 :aspect:`Example:`
-   Reference to a file in the file system::
+   Reference to a file in the file system:
 
-      fileadmin/picture.gif
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+      page.10.settings.someFile = fileadmin/picture.gif
 
 
 .. index:: Simple data types; rotation
@@ -617,9 +651,10 @@ space
    "before \| after".
 
 :aspect:`Example:`
-   ::
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-      5 | 5
+      page.10.someSpace = 5 | 5
 
 
 .. index:: Simple data types; strftime-conf
@@ -671,17 +706,26 @@ strftime-conf
    ==== ==========================================================
 
 :aspect:`Examples:`
-   Date "DD-MM-YY" = ::
+   Date "DD-MM-YY" = :
 
-      %e:%m:%y
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-   Time "HH:MM:SS" = ::
+      page.10.settings.myDate = %e:%m:%y
 
-      %H:%M:%S
+   Time "HH:MM:SS" = :
 
-   or just ::
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-      %T
+      page.10.settings.myTime = %H:%M:%S
+
+   or just :
+
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+      page.10.settings.someTime = %T
 
 
 .. index:: Simple data types; string
@@ -716,9 +760,10 @@ string
    An HTML tag.
 
 :aspect:`Example:`
-   ::
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-      <body lang="de">
+      page.10.settings.bodyTag = <body lang="de">
 
 
 .. index:: Simple data types; tag-data
@@ -749,9 +794,12 @@ string
    Parameters for a tag.
 
 :aspect:`Example:`
-   For <frameset>-params::
+   For <frameset>-params:
 
-      border="0" framespacing="0"
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+      page.10.settings.someParams = border="0" framespacing="0"
 
 
 .. index:: Simple data types; target
@@ -786,7 +834,9 @@ UNIX-time
    Seconds since January 1st 1970.
 
 :aspect:`Example:`
-   Seconds to May 09th 2016 12:34::
+   Seconds to May 09th 2016 12:34:
+
+   .. code-block:: none
 
       1462790096
 
@@ -814,15 +864,15 @@ VHalign
 
    Vertical values standing for: top, center, bottom
 
-:aspect:`Default:`
-   ::
-
-      l , t
+:aspect:`Default:` :typoscript:`l , t`
 
 :aspect:`Example:`
-   Horizontal alignment = right and Vertical alignment = center::
+   Horizontal alignment = right and Vertical alignment = center:
 
-      r , c
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+      page.10.settings.someAlignment = r , c
 
 
 .. index:: Simple data types; wrap
@@ -853,9 +903,12 @@ wrap
 
 :aspect:`Example:`
    This will cause the value to be wrapped in a p-tag coloring the
-   value red::
+   value red:
 
-      <p style="color: red;"> | </p>
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+      page.10.stdWrap.wrap = <p class="bg-red"> | </p>
 
 
 .. index:: Simple data types; x,y,w,h
@@ -873,6 +926,8 @@ x,y,w,h
    w,h is the width and height
 
 :aspect:`Example:`
-   ::
 
-      10,10,5,5
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+      page.10.someDimensions = 10,10,5,5

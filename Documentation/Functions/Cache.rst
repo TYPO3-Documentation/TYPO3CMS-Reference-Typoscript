@@ -102,7 +102,8 @@ tags
 Examples
 ========
 
-::
+.. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
    5 = TEXT
    5 {
@@ -121,7 +122,10 @@ In the above example the current time will be cached with the key
 "mycurrenttimestamp". This key is fixed and does not take the current
 page id into account. So if you add this to your TypoScript, the
 cObject will be cached and reused on all pages (showing you the same
-timestamp). ::
+timestamp). :
+
+.. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
    5 = TEXT
    5 {
@@ -145,6 +149,7 @@ content objects. This skips the rendering even for content objects that evaluate
 Usage:
 
 .. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
    page = PAGE
    page.10 = COA

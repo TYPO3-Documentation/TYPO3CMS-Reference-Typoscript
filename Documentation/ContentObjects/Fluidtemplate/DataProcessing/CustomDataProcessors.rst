@@ -10,7 +10,10 @@ You can find information on the implementation in :ref:`TYPO3 Explained
 <t3coreapi:content-elements-custom-data-processor>`.
 
 Custom data processors can be used in TypoScript just like any other
-data processor::
+data processor:
+
+.. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
    tt_content {
       examples_dataproccustom =< lib.contentElement
