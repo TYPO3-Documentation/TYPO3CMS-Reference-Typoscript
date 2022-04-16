@@ -84,7 +84,11 @@ externalBlocks
    seen)
 
    The tables are also displayed with a number of properties of the cells
-   overridden::
+   overridden
+
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
 
       tt_content.text.20.parseFunc.externalBlocks {
             blockquote.callRecursive = 1
@@ -127,7 +131,9 @@ constants
    with the value of the according constant.
 
 :aspect:`Example`
-   ::
+
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
       constants.EMAIL = email@email.com
 
@@ -156,7 +162,10 @@ short
 
 :aspect:`Example`
    This substitutes all occurrences of "T3" with "TYPO3 CMS" and "T3web"
-   with a link to typo3.org. ::
+   with a link to typo3.org.
+
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
       short {
             T3 = TYPO3 CMS
@@ -339,10 +348,15 @@ denyTags
    If denyTags is not :typoscript:`*` and the tag is not found in the list, the tag may exist!
 
 :aspect:`Example`
-   This allows :html:`<b>`, :html:`<i>`, :html:`<a>` and :html:`<img>` -tags to exist ::
+   This allows :html:`<b>`, :html:`<i>`, :html:`<a>` and :html:`<img>` -tags to exist:
 
-      .allowTags = b,i,a,img
-      .denyTags = *
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+      tt_content.text.20.parseFunc {
+          allowTags = b,i,a,img
+          denyTags = *
+      }
 
 
 .. _parsefunc-if:
@@ -368,7 +382,10 @@ Example
 
 This example takes the content of the field "bodytext" and parses it
 through the :ref:`parsefunc-makelinks`-functions and substitutes all
-:html:`<LINK>` and :html:`<TYPOLIST>`-tags with something else. ::
+:html:`<LINK>` and :html:`<TYPOLIST>`-tags with something else.
+
+.. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
    tt_content.text.default {
        20 = TEXT

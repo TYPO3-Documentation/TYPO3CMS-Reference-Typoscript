@@ -24,13 +24,17 @@ encapsTagList
    List of tags which qualify as encapsulating tags. Must be lowercase.
 
 :aspect:`Example`
-   ::
+
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
       encapsTagList = div, p
 
-   This setting will recognize the red line below as encapsulated lines:
+   This setting will recognize the highlighted lines below as encapsulated lines:
 
    .. code-block:: html
+      :caption: Example Output
+      :emphasize-lines: 3,4
 
       First line of text
       Some <div>text</div>
@@ -86,9 +90,12 @@ addAttributes.[*tagname*]
 :aspect:`Description`
    Attributes to set in the encapsulation tag.
 
-   ([*tagname*] is in uppercase.) ::
+   ([*tagname*] is in uppercase.)
 
-      .setOnly =
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+      addAttributes.P.setOnly = exists
 
    exists
       This will set the value ONLY if the property does not already exist.
@@ -101,7 +108,9 @@ addAttributes.[*tagname*]
    Always override/set the value of the attributes.
 
 :aspect:`Example`
-   ::
+
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
       addAttributes.P {
             style = padding-bottom: 0px; margin-top: 1px; margin-bottom: 1px;
@@ -161,7 +170,9 @@ wrapNonWrappedLines
    Wrapping for non-encapsulated lines
 
 :aspect:`Example`
-   ::
+
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
       wrapNonWrappedLines = <p>|</p>
 
@@ -259,7 +270,8 @@ nonWrappedTag
 Example
 =======
 
-::
+.. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
    encapsLines {
        encapsTagList = div,p
@@ -271,7 +283,10 @@ Example
 This example shows how to handle content rendered by TYPO3 and
 stylesheets where the <p> tag is used to encapsulate each line.
 
-Say, you have made this content with the Rich Text Editor::
+Say, you have made this content with the Rich Text Editor:
+
+.. code-block:: none
+   :caption: Example input
 
    This is line # 1
 
@@ -282,6 +297,7 @@ After being processed by encapsLines with the above configuration, the
 content looks like this:
 
 .. code-block:: html
+   :caption: Example output
 
    <p>This is line # 1 </p>
    <p>&nbsp;</p>
@@ -299,7 +315,8 @@ remains as human readable as possible.
 Example
 =======
 
-::
+.. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
    # Make sure nonTypoTagStdWrap operates
    # on content outside <typolist> and <typohead> only:

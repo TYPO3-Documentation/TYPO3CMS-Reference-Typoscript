@@ -233,12 +233,15 @@ layout.layoutKey
          existing pre-defined layoutKey or you can define your own element for
          your responsive layout.
 
-         **Example:** ::
+         **Example:**
 
-          picture {
-              element = <picture>###SOURCECOLLECTION###<img src="###SRC###" ###PARAMS### ###ALTPARAMS### ###SELFCLOSINGTAGSLASH###></picture>
-              source = <source srcset="###SRC###" media="###MEDIAQUERY###" ###SELFCLOSINGTAGSLASH###>
-          }
+         .. code-block:: typoscript
+            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+            picture {
+                element = <picture>###SOURCECOLLECTION###<img src="###SRC###" ###PARAMS### ###ALTPARAMS### ###SELFCLOSINGTAGSLASH###></picture>
+                source = <source srcset="###SRC###" media="###MEDIAQUERY###" ###SELFCLOSINGTAGSLASH###>
+            }
 
 
 .. index:: IMAGE; layout.layoutKey.element
@@ -356,10 +359,8 @@ sourceCollection
          different :ref:`dataKey <cobj-image-datakey>` properties which you can
          define to suit your needs.
 
-
-
-
-         **Example:** ::
+         .. code-block:: typoscript
+            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
             sourceCollection {
                 small {
@@ -667,7 +668,8 @@ Examples:
 Standard rendering
 ------------------
 
-::
+.. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
        10 = IMAGE
        # toplogo.gif has the dimensions 300 x 150 pixels.
@@ -693,63 +695,64 @@ This returns:
 Responsive/adaptive rendering
 -----------------------------
 
-::
+.. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-        30 = IMAGE
-        30 {
-          file = fileadmin/imagefilenamename.jpg
-          file.width = 100
+   30 = IMAGE
+   30 {
+     file = fileadmin/imagefilenamename.jpg
+     file.width = 100
 
-          layoutKey = default
-          layout {
+     layoutKey = default
+     layout {
 
-            default {
-             element = <img src="###SRC###" width="###WIDTH###" height="###HEIGHT###" ###PARAMS### ###ALTPARAMS### ###BORDER### ###SELFCLOSINGTAGSLASH###>
-             source =
-            }
+       default {
+        element = <img src="###SRC###" width="###WIDTH###" height="###HEIGHT###" ###PARAMS### ###ALTPARAMS### ###BORDER### ###SELFCLOSINGTAGSLASH###>
+        source =
+       }
 
-            srcset {
-              element = <img src="###SRC###" srcset="###SOURCECOLLECTION###" ###PARAMS### ###ALTPARAMS### ###SELFCLOSINGTAGSLASH###>
-              source = |*|###SRC### ###SRCSETCANDIDATE###,|*|###SRC### ###SRCSETCANDIDATE###
-            }
+       srcset {
+         element = <img src="###SRC###" srcset="###SOURCECOLLECTION###" ###PARAMS### ###ALTPARAMS### ###SELFCLOSINGTAGSLASH###>
+         source = |*|###SRC### ###SRCSETCANDIDATE###,|*|###SRC### ###SRCSETCANDIDATE###
+       }
 
-            picture {
-              element = <picture>###SOURCECOLLECTION###<img src="###SRC###" ###PARAMS### ###ALTPARAMS### ###SELFCLOSINGTAGSLASH###></picture>
-              source = <source srcset="###SRC###" media="###MEDIAQUERY###" ###SELFCLOSINGTAGSLASH###>
-            }
+       picture {
+         element = <picture>###SOURCECOLLECTION###<img src="###SRC###" ###PARAMS### ###ALTPARAMS### ###SELFCLOSINGTAGSLASH###></picture>
+         source = <source srcset="###SRC###" media="###MEDIAQUERY###" ###SELFCLOSINGTAGSLASH###>
+       }
 
-            data {
-              element = <img src="###SRC###" ###SOURCECOLLECTION### ###PARAMS### ###ALTPARAMS### ###SELFCLOSINGTAGSLASH###>
-              source.noTrimWrap = | data-###DATAKEY###="###SRC###"|
-            }
-          }
+       data {
+         element = <img src="###SRC###" ###SOURCECOLLECTION### ###PARAMS### ###ALTPARAMS### ###SELFCLOSINGTAGSLASH###>
+         source.noTrimWrap = | data-###DATAKEY###="###SRC###"|
+       }
+     }
 
-          sourceCollection {
-            small {
-              width = 200
+     sourceCollection {
+       small {
+         width = 200
 
-              srcsetCandidate = 800w
-              mediaQuery = (min-device-width: 800px)
-              dataKey = small
-            }
-            smallHires {
-              if.directReturn = 1
-              width = 300
-              pixelDensity = 2
+         srcsetCandidate = 800w
+         mediaQuery = (min-device-width: 800px)
+         dataKey = small
+       }
+       smallHires {
+         if.directReturn = 1
+         width = 300
+         pixelDensity = 2
 
-              srcsetCandidate = 800w 2x
-              mediaQuery = (min-device-width: 800px) AND (foobar)
-              dataKey = smallHires
-              pictureFoo = bar
-            }
-          }
-        }
-        40 < 30
-        40.layoutKey = data
-        50 < 30
-        50.layoutKey = picture
-        60 < 30
-        60.layoutKey = srcset
+         srcsetCandidate = 800w 2x
+         mediaQuery = (min-device-width: 800px) AND (foobar)
+         dataKey = smallHires
+         pictureFoo = bar
+       }
+     }
+   }
+   40 < 30
+   40.layoutKey = data
+   50 < 30
+   50.layoutKey = picture
+   60 < 30
+   60.layoutKey = srcset
 
 
 This returns as an example all per default possible HTML-Output:

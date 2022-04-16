@@ -88,7 +88,8 @@ you to render *every* cObject non-cached.
 Examples:
 =========
 
-::
+.. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
    lib.contentexample = COA
    lib.contentexample {
@@ -108,7 +109,8 @@ Examples:
 
 The previous example will print a simple h1 header, followed by the page content records and a footer element.
 
-::
+.. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
    lib.currentDate = COA_INT
    lib.currentDate {

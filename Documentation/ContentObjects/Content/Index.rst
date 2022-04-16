@@ -35,7 +35,10 @@ Comprehensive example
 See PHP class :php:`\TYPO3\CMS\Frontend\ContentObject\ContentContentObject`
 for details on code level.
 
-Preamble::
+Preamble:
+
+.. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
    # Note: TypoScript (TS) is just another way to define an array of settings which
    #       is later on INTERPRETED by TYPO3. TypoScript can be written in ANY order
@@ -45,7 +48,10 @@ Preamble::
    #       The order of TS in this example however tries to reflect execution order.
    #       The denoted steps are taking place in that order at execution time.
 
-Condensed form::
+Condensed form:
+
+.. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
    1 = CONTENT
    1 {
@@ -68,7 +74,10 @@ Condensed form::
       stdWrap =
    }
 
-Expanded form::
+Expanded form:
+
+.. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
    1 = CONTENT
 
@@ -78,7 +87,9 @@ Expanded form::
       # ifclause =
    }
 
-::
+
+.. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
    // STEP 2: define parameters
 
@@ -105,7 +116,9 @@ Expanded form::
    # slideCollectFuzzy = false    # default! #stdWrap
    1.slide.collectFuzzy =
 
-::
+
+.. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
    // STEP 3: find all records
 
@@ -312,7 +325,10 @@ cache
 CONTENT object example 1
 ========================
 
-Here is an example of the CONTENT object::
+Here is an example of the CONTENT object:
+
+.. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
    1 = CONTENT
    1.table = tt_content
@@ -330,7 +346,10 @@ according TypoScript configuration will be copied to `renderObj`.
 CONTENT object example 2
 ========================
 
-Here is an example of record-rendering objects::
+Here is an example of record-rendering objects:
+
+.. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
    page = PAGE
    page.typeNum = 0

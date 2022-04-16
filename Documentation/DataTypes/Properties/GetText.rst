@@ -16,18 +16,24 @@ getText
    values from a variety of sources, e.g. from GET/POST variables, from
    registers, values from the page tree, items in the page menus, records from any database table, etc.
 
-   The general syntax is as follows::
+   The general syntax is as follows:
 
-      key : code
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-   where :typoscript:`key` indicates the source and :typoscript:`code` is some form of path or
+      lib.foo.data = <key> : <code>
+
+   where :typoscript:`<key>` indicates the source and :typoscript:`<code>` is some form of path or
    pointer to the value, which depends on the key used. The various keys and
    their possible codes are described below.
 
    The :typoscript:`code` can contain pipe characters :typoscript:`|` to separate keys
-   in a multi-dimensional array. This e.g. works with :typoscript:`TSFE`::
+   in a multi-dimensional array. This e.g. works with :typoscript:`TSFE`:
 
-      foo = TSFE : fe_user|user|username
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+      lib.foo.data = TSFE : fe_user|user|username
 
    Some codes work with a different separator, which is documented right at the
    code.
@@ -39,9 +45,12 @@ getText
    empty ("" or zero).
 
    To get the content of the field "header". If "header is empty, "title" is
-   retrieved. If "title" is empty as well, it finally gets the field "uid"::
+   retrieved. If "title" is empty as well, it finally gets the field "uid":
 
-      foo = field : header // field : title // field : uid
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+      lib.foo.data = field : header // field : title // field : uid
 
 
 .. _data-type-gettext-cobj:
@@ -60,9 +69,12 @@ cObj
    :typoscript:`parentRecordNumber` is the only key available.
 
 :aspect:`Example:`
-   Get the number of the current cObject record::
+   Get the number of the current cObject record:
 
-      foo = cObj : parentRecordNumber
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+      lib.foo.data = cObj : parentRecordNumber
 
 .. _data-type-gettext-context:
 
@@ -76,12 +88,18 @@ context
    access values from context API (:ref:`see <t3coreapi:context-api>`).
    If a property is an array, it is converted into a comma-separated list.
 
-   Syntax::
+   Syntax:
 
-     data = context:[aspectName]:[propertyName]
+   .. code-block:: none
+      :caption: TypoScript Syntax
+
+      lib.foo.data = context:<aspectName>:<propertyName>
 
 :aspect:`Example:`
-   Retrieve current workspace id::
+   Retrieve current workspace id:
+
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
       page.10 = TEXT
       page.10.data = context:workspace:id
@@ -101,9 +119,12 @@ current
    .. What is the "current" value? We should explain that.
 
 :aspect:`Example:`
-   Get the current value::
+   Get the current value:
 
-      foo = current
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+      lib.foo.data = current
 
 .. _data-type-gettext-date:
 
@@ -117,14 +138,15 @@ date
    Can be used with a colon and :ref:`data-type-date-conf`.
 
 :aspect:`Default:`
-   ::
-
-      d/m Y
+   :typoscript:`d/m Y`
 
 :aspect:`Example:`
-   Get the current time formatted dd-mm-yy::
+   Get the current time formatted dd-mm-yy:
 
-      foo = date : d-m-y
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+      lib.foo.data = date : d-m-y
 
 .. _data-type-gettext-db:
 
@@ -145,14 +167,20 @@ DB
 
 :aspect:`Example:`
    Get the value of the header field of record with uid 234 from table
-   "tt\_content"::
+   :sql:`tt_content`:
 
-      foo.data = DB : tt_content:234:header
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+      lib.foo.data = DB : tt_content:234:header
 
    Get the value of the header field of a record, whose uid is stored in a GET
-   parameter `myContentId`::
+   parameter `myContentId`:
 
-      foo.data.dataWrap = DB : tt_content:{GP : myContentId}:header
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+      lib.foo.data.dataWrap = DB : tt_content:{GP : myContentId}:header
 
    .. note::
       It is safe to directly use a client-/user-provided input for the id of a DB
@@ -174,9 +202,12 @@ debug
    :typoscript:`register` and :typoscript:`page`.
 
 :aspect:`Example:`
-   Outputs the current root-line visually in HTML::
+   Outputs the current root-line visually in HTML:
 
-      foo = debug : rootLine
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+      lib.foo.data = debug : rootLine
 
 .. _data-type-gettext-field:
 
@@ -205,13 +236,19 @@ field
      :ref:`GIFBUILDER <gifbuilder>` is supplied with.
 
 :aspect:`Examples:`
-   Get content from :php:`$cObj->data['header']`::
+   Get content from :php:`$cObj->data['header']`:
 
-      foo = field : header
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-   Get content from :php:`$cObj->data['fieldname']['level1']['level2']`::
+      lib.foo.data = field : header
 
-      foo = field : fieldname|level1|level2
+   Get content from :php:`$cObj->data['fieldname']['level1']['level2']`:
+
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+      lib.foo.data = field : fieldname|level1|level2
 
 .. _data-type-gettext-file:
 
@@ -243,9 +280,12 @@ file
    See the :ref:`FILES <cobj-files-examples>` cObject for usage examples.
 
 :aspect:`Example:`
-   Get the file size of the file with the sys\_file UID 17::
+   Get the file size of the file with the sys\_file UID 17:
 
-      foo = file : 17 : size
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+      lib.foo.data = file : 17 : size
 
 .. _data-type-gettext-flexform:
 
@@ -263,9 +303,12 @@ flexform
    to most parts, deeper levels are accessed through dots, not pipes.
 
 :aspect:`Example:`
-   Return the flexform value of given name::
+   Return the flexform value of given name:
 
-      foo = flexform : pi_flexform:settings.categories
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+      lib.foo.data = flexform : pi_flexform:settings.categories
 
 .. _data-type-gettext-fullrootline:
 
@@ -299,9 +342,12 @@ fullRootLine
    :ref:`data-type-gettext-levelfield` property.
 
 :aspect:`Example:`
-   Get the title of the page right before the start of the current website::
+   Get the title of the page right before the start of the current website:
 
-      foo = fullRootLine : -1, title
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+      lib.foo.data = fullRootLine : -1, title
 
 .. _data-type-gettext-getenv:
 
@@ -317,9 +363,12 @@ getenv
    For a cached variation of this feature, please refer to :ref:`getEnv <getenv>`.
 
 :aspect:`Example:`
-   Get the env var `HTTP_REFERER`::
+   Get the env var `HTTP_REFERER`:
 
-      foo = getenv : HTTP_REFERER
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+      lib.foo.data = getenv : HTTP_REFERER
 
 .. _data-type-gettext-getindpenv:
 
@@ -370,7 +419,9 @@ getIndpEnv
    ===================== ============================================================================= =================
 
 :aspect:`Examples:`
-   ::
+
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
       # get and output the client IP
       page = PAGE
@@ -408,13 +459,19 @@ GP
    exists in both arrays, is returned from :php:`$_POST`.
 
 :aspect:`Examples:`
-   Get input value from query string &stuff=...::
+   Get input value from query string &stuff=...
 
-      foo = GP : stuff
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-   Get input value from query string &stuff[bar]=...::
+      lib.foo.data = GP : stuff
 
-      foo = GP : stuff|bar
+   Get input value from query string &stuff[bar]=...
+
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+      lib.foo.data = GP : stuff|bar
 
 .. _data-type-gettext-level:
 
@@ -428,9 +485,12 @@ level
    Get the root line level of the current page.
 
 :aspect:`Example:`
-   Get the root line level of the current page::
+   Get the root line level of the current page:
 
-      foo = level
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+      lib.foo.data = level
 
 .. _data-type-gettext-levelfield:
 
@@ -452,9 +512,12 @@ levelfield
    Requires additional configuration in
    :php:`$GLOBALS['TYPO3_CONF_VARS']['FE']['addRootLineFields']` to include
    field. In order that you can use this function, your fieldname 'user_myExtField' needs be included in the comma
-   separated list of ['addRootLineFields']::
+   separated list of ['addRootLineFields']:
 
-      foo = levelfield : -1, user_myExtField, slide
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+      lib.foo.data = levelfield : -1, user_myExtField, slide
 
 .. _data-type-gettext-levelmedia:
 .. _data-type-gettext-leveluid:
@@ -475,19 +538,28 @@ leveltitle, leveluid, levelmedia
    Returns values from up or down the page tree.
 
 :aspect:`Examples:`
-   Get the title of the page on the first level of the root line::
+   Get the title of the page on the first level of the root line:
 
-      foo = leveltitle : 1
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+      lib.foo.data = leveltitle : 1
 
    Get the title of the page on the level right below the current page AND if
    that is not present, walk to the bottom of the root line until there's a
-   title::
+   title:
 
-      foo = leveltitle : -2, slide
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-   Get the id of the root-page of the website (level zero)::
+      lib.foo.data = leveltitle : -2, slide
 
-      foo = leveluid : 0
+   Get the id of the root-page of the website (level zero):
+
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+      lib.foo.data = leveluid : 0
 
 .. _data-type-gettext-lll:
 
@@ -502,9 +574,12 @@ LLL
    [fileref]:[labelkey]
 
 :aspect:`Example:`
-   Get localized label for logout button::
+   Get localized label for logout button:
 
-      foo = LLL : EXT:felogin/pi1/locallang.xlf:logout
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+      lib.foo.data = LLL : EXT:felogin/pi1/locallang.xlf:logout
 
 .. _data-type-gettext-page:
 
@@ -518,9 +593,12 @@ page
    page: [field in the current page record]
 
 :aspect:`Example:`
-   Get the current page title::
+   Get the current page title:
 
-      foo = page : title
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+      lib.foo.data = page : title
 
 .. _data-type-gettext-pagelayout:
 
@@ -533,9 +611,12 @@ pagelayout
    pagelayout
 
 :aspect:`Example:`
-   Get the current backend layout::
+   Get the current backend layout:
 
-      foo = pagelayout
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+      lib.foo.data = pagelayout
 
 .. _data-type-gettext-parameters:
 
@@ -554,9 +635,12 @@ parameters
    .. Why is parsefunc usefull here?
 
 :aspect:`Example:`
-   Get content from :php:`$cObj->parameters['color']`::
+   Get content from :php:`$cObj->parameters['color']`:
 
-      foo = parameters : color
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+      lib.foo.data = parameters : color
 
 .. _data-type-gettext-path:
 
@@ -571,9 +655,12 @@ path
    does not exist.
 
 :aspect:`Example:`
-   Get path to file rsaauth.js (inside extension rsaauth) relative to siteroot::
+   Get path to file rsaauth.js (inside extension rsaauth) relative to siteroot:
 
-      foo = path : EXT:rsaauth/resources/rsaauth.js
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+      lib.foo.data = path : EXT:rsaauth/resources/rsaauth.js
 
 .. _data-type-gettext-register:
 
@@ -590,9 +677,12 @@ register
    See :ref:`LOAD_REGISTER <cobj-load-register>`.
 
 :aspect:`Example:`
-   Get content from :php:`$GLOBALS['TSFE']->register['color']`::
+   Get content from :php:`$GLOBALS['TSFE']->register['color']`:
 
-      foo = register : color
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+      lib.foo.data = register : color
 
 .. _data-type-gettext-session:
 
@@ -609,9 +699,12 @@ session
    The :typoscript:`key` refers to the session key used to store the value.
 
 :aspect:`Example:`
-   Get the number of items of a stored shopping cart array/object::
+   Get the number of items of a stored shopping cart array/object:
 
-      foo = session : shop_cart|itemCount
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+      lib.foo.data = session : shop_cart|itemCount
 
 
 .. _data-type-site:
@@ -685,7 +778,10 @@ siteLanguage
    ============================== ==========================================================
 
 :aspect:`Example:`
-   Code::
+   Code:
+
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
       page.10 = TEXT
       page.10.data = siteLanguage:navigationTitle
@@ -714,6 +810,9 @@ TSFE
    :php:`TYPO3\CMS\Frontend\Controller\TypoScriptFrontendController`.
 
 :aspect:`Example:`
-   Get the "username" field of the current FE user::
+   Get the "username" field of the current FE user:
 
-      foo = TSFE : fe_user|user|username
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+      lib.foo.data = TSFE : fe_user|user|username

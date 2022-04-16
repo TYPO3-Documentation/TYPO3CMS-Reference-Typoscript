@@ -56,7 +56,10 @@ Options
          The entry 1 for the first level always must exist. All other levels only
          will be generated when they are configured.
 
-         **Example:** ::
+         **Example:**
+
+         .. code-block:: typoscript
+            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
             temp.sidemenu = HMENU
             temp.sidemenu.1 = TMENU
@@ -130,7 +133,10 @@ Options
          (use :typoscript:`special = directory` for that)
          but it means that it will start to be visible **from that level on**.
 
-         So, for example if you build a simple "sitemap" menu like this one::
+         So, for example if you build a simple "sitemap" menu like this one:
+
+         .. code-block:: typoscript
+            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
             page.10 = HMENU
             page.10 {
@@ -148,9 +154,12 @@ Options
             }
 
          it will start to be visible from the 4th level (and will contain only the subpages from that level).
-         Please note also that this affects also the menu generated with :typoscript:`MenuProcessor`. Example::
+         Please note also that this affects also the menu generated with :typoscript:`MenuProcessor`. Example:
 
-            page.10{
+         .. code-block:: typoscript
+            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+            page.10 {
                dataProcessing {
                 10 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
                 10 {
@@ -253,7 +262,10 @@ Options
          **Example:**
 
          This results in a menu, where the first two items are skipped starting
-         with item number 3::
+         with item number 3:
+
+         .. code-block:: typoscript
+            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
             begin = 3
 
@@ -279,7 +291,10 @@ Options
          **Example:**
 
          The pages with these uid-numbers will **not** be within the menu!
-         Additionally the current page is always excluded too. ::
+         Additionally the current page is always excluded too.
+
+         .. code-block:: typoscript
+            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
             excludeUidList = 34,2,current
 
@@ -439,7 +454,8 @@ Options
 Example:
 ========
 
-::
+.. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
    temp.sidemenu = HMENU
    temp.sidemenu.entryLevel = 1
@@ -505,7 +521,10 @@ Mount pages are supported.
          current page id
 
    Description
-         This will generate a menu of all pages with pid = 35 and pid = 56. ::
+         This will generate a menu of all pages with pid = 35 and pid = 56.
+
+         .. code-block:: typoscript
+            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
             20 = HMENU
             20.special = directory
@@ -546,7 +565,10 @@ Mount pages are supported.
 
    Description
          This will generate a menu with the two pages (uid=35 and uid=56)
-         listed::
+         listed:
+
+         .. code-block:: typoscript
+            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
             20 = HMENU
             20.special = list
@@ -592,7 +614,10 @@ Mount pages are supported.
    Description
          This will generate a menu of the most recently updated pages from the
          branches in the tree starting with the uid's (uid=35 and uid=56)
-         listed. ::
+         listed.
+
+         .. code-block:: typoscript
+            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
             20 = HMENU
             20.special = updated
@@ -757,7 +782,10 @@ updated pages from the branches in the tree starting with the uid's
 (uid=35 and uid=56) listed. Furthermore the field "tstamp" is used
 (default is SYS\_LASTCHANGED) and the tree depth is 2 levels. Also a
 maximum of 8 pages will be shown and they must have been updated
-within the last three days (3600\*24\*3)::
+within the last three days (3600\*24\*3):
+
+.. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
    20 = HMENU
    20.special = updated
@@ -807,7 +835,10 @@ Mount pages are supported.
    Description
          [begin-level] \| [end-level] (same way as you reference the
          .entryLevel for an HMENU). The following example will start at level 1
-         and not show the page the user is currently on::
+         and not show the page the user is currently on:
+
+         .. code-block:: typoscript
+            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
             temp.breadcrumbs = HMENU
             temp.breadcrumbs.special = rootline
@@ -849,7 +880,10 @@ Mount pages are supported.
 
          Here the links to pages on level 3 will have target="page", while all
          other levels will have target="\_top" as defined for the TMENU
-         property .target. ::
+         property .target.
+
+         .. code-block:: typoscript
+            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
             page.2 = HMENU
             page.2.special = rootline
@@ -881,7 +915,10 @@ website. The last page in the menu is the current page.
 After each link there is an image, which could contain a small arrow.
 
 The current page is not linked, but wrapped in em tags. It does not
-have the image appended. ::
+have the image appended.
+
+.. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
    20 = HMENU
    20.wrap = <ul>|</ul>
@@ -1001,7 +1038,10 @@ list from the property ".items".
          prevsection and prevsection\_last are not present because id = 3 has
          no subpages!
 
-         **TypoScript (only "browse"-part, needs also TMENU):** ::
+         **TypoScript (only "browse"-part, needs also TMENU):**
+
+         .. code-block:: typoscript
+            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
             xxx = HMENU
             xxx.special = browse
@@ -1072,7 +1112,10 @@ list from the property ".items".
    Description
          Override field "field name" in pagerecord.
 
-         **Example:** ::
+         **Example:**
+
+         .. code-block:: typoscript
+            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
             prev.fields.title = « zurück
 
@@ -1132,7 +1175,10 @@ Mount pages are supported.
    Description
          Page for which keywords to find similar pages
 
-         **Example:** ::
+         **Example:**
+
+         .. code-block:: typoscript
+            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
             20 = HMENU
             20.special = keywords
@@ -1504,7 +1550,8 @@ Example:
 
 Creates a language menu:
 
-::
+.. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
    lib.langMenu = HMENU
    lib.langMenu.special = language

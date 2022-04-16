@@ -90,7 +90,10 @@ TMENU properties
          **Example:**
 
          This results in a menu, where the first two items are skipped starting
-         with item number 3::
+         with item number 3:
+
+         .. code-block:: typoscript
+            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
             begin = 3
 
@@ -205,7 +208,10 @@ showAccessRestrictedPages
          holding the page id of the page coming from (could be used to look up
          which fe\_groups was required for access.
 
-         **Example:** ::
+         **Example:** :
+
+         .. code-block:: typoscript
+            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
             showAccessRestrictedPages = 22
             showAccessRestrictedPages.addParams = &return_url=###RETURN_URL###&pageId=###PAGE_ID###
@@ -227,7 +233,10 @@ showAccessRestrictedPages
          Adds an additional part to the WHERE clause for this menu.
          Make sure to start the part with "AND "!
 
-         **Example:** ::
+         **Example:** :
+
+         .. code-block:: typoscript
+            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
             lib.authormenu = HMENU
             lib.authormenu.1 = TMENU
@@ -286,7 +295,10 @@ showAccessRestrictedPages
          is used is defined by "1.submenuObjSuffixes" which has the
          configuration "a \|\*\| \|\*\| b". This configuration means that the
          first menu element will use configuration "2a" and the last will use
-         "2b" while anything in between will use "2" (no suffix applied) ::
+         "2b" while anything in between will use "2" (no suffix applied) :
+
+         .. code-block:: typoscript
+            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
             page.200 = HMENU
             page.200 {

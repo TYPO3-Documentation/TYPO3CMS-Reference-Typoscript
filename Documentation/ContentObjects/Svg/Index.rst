@@ -55,7 +55,10 @@ do not have native SVG support, so that it also works in e.g. IE
          SVG file resource, can also be referenced via :file:`EXT:` prefix to
          point to files of extensions.
 
-         **Example:** ::
+         **Example:**
+
+         .. code-block:: typoscript
+            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
             src = fileadmin/svg/tiger.svg
 
@@ -90,7 +93,8 @@ do not have native SVG support, so that it also works in e.g. IE
 Example:
 ========
 
-::
+.. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
    10 = SVG
    10 {

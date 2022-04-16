@@ -112,14 +112,20 @@ Custom categories
 -----------------
 
 To define a new category, a comment including the parameter :typoscript:`customcategory`
-has to be added. Example::
+has to be added. Example:
+
+.. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/TypoScript/constants.typoscript
 
    # customcategory=mysite=LLL:EXT:myext/locallang.xlf:mysite
 
 This line defines the new category "mysite" which will be available for any
 constant defined **after** this line. The :typoscript:`LLL:` reference points to the
 localized string used to "name" the custom category in the Constant Editor.
-Usage example::
+Usage example:
+
+.. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/TypoScript/constants.typoscript
 
    #cat=mysite//a; type=boolean; label=Global no_cache
    config.no_cache = 0
@@ -130,7 +136,10 @@ Subcategories
 -------------
 
 There are a number of subcategories one can use. Subcategories are entered
-after the category separated by a slash :typoscript:`/`. Example::
+after the category separated by a slash :typoscript:`/`. Example:
+
+.. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/TypoScript/constants.typoscript
 
    "basic/color/a"
 
@@ -182,11 +191,17 @@ Custom subcategories
 --------------------
 
 Defining a custom subcategory is similar to defining a custom category,
-using the :typoscript:`customsubcategory` parameter. Example::
+using the :typoscript:`customsubcategory` parameter. Example:
+
+.. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/TypoScript/constants.typoscript
 
    # customsubcategory=cache=LLL:EXT:myext/locallang.xlf:cache
 
-Usage example::
+Usage example:
+
+.. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/TypoScript/constants.typoscript
 
    #cat=mysite/cache/a; type=boolean; label=Global no_cache
    config.no_cache = 0
@@ -208,6 +223,7 @@ The values are sorted alphabetically, so it is traditional to use letters.
 Example:
 
 .. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/TypoScript/constants.typoscript
 
    #cat=mysite/cache/b; type=boolean; label=Special cache
    config.no_cache = 0
@@ -268,7 +284,10 @@ The label is a trimmed text string. It gets split on the first :typoscript:`:` (
 to separate header and body of the comment. The header is displayed on its own
 line in bold.
 
-The string can be localized by using the traditional "LLL" syntax. Example::
+The string can be localized by using the traditional "LLL" syntax. Example:
+
+.. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/TypoScript/constants.typoscript
 
    #cat=Site conf/cache/a; type=boolean; label=LLL:EXT:examples/locallang.xlf:config.no_cache
    config.no_cache = 0
@@ -278,6 +297,7 @@ description. This means that the localized string must contain the colon
 separator (:code:`:`). Example:
 
 .. code-block:: xml
+   :caption: EXT:examples/locallang.xlf
 
    <trans-unit id="config.no_cache" xml:space="preserve">
        <source>Global no_cache: Check the box to turn off all caches.</source>

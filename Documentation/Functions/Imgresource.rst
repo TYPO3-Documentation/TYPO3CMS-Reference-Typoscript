@@ -68,23 +68,37 @@ width
    Notice that you can only use either :typoscript:`m` *or* :typoscript:`c` at the same time!
 
 :aspect:`Examples`
-   This crops 120x80px from the center of the scaled image::
+   This crops 120x80px from the center of the scaled image:
 
-      .width = 120c
-      .height = 80c
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+      lib.image {
+          width = 120c
+          height = 80c
+      }
 
    This crops 100x100px; from landscape-images at the left and portrait-
-   images centered::
+   images centered:
 
-      .width = 100c-100
-      .height = 100c
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+      lib.image {
+          width = 100c-100
+          height = 100c
+      }
 
    This crops 100x100px; from landscape-images a bit right of the center
-   and portrait-images a bit higher than centered::
+   and portrait-images a bit higher than centered:
 
-      .width = 100c+30
-      .height = 100c-25
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
+      lib.image {
+          width = 100c+30
+          height = 100c-25
+      }
 
 .. _imgresource-height:
 
@@ -160,7 +174,10 @@ noScale
    0
 
 :aspect:`Example`
-   Here :file:`test.jpg` could have 1600 x 1200 pixels for example::
+   Here :file:`test.jpg` could have 1600 x 1200 pixels for example:
+
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
       file = fileadmin/test.jpg
       file.width = 240m
@@ -197,11 +214,17 @@ crop
    the file reference is used)
 
 :aspect:`Examples`
-   Disable cropping set by the editor in the back-end::
+   Disable cropping set by the editor in the back-end:
+
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
       tt_content.image.20.1.file.crop =
 
-   Overrule/set cropping for all images::
+   Overrule/set cropping for all images:
+
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
       tt_content.image.20.1.file.crop = 50,50,100,100
 
@@ -224,7 +247,10 @@ cropVariant
    default
 
 :aspect:`Examples`
-   Use 'desktop' crop variant::
+   Use 'desktop' crop variant:
+
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
       tt_content.image.20.1.file {
           crop.data = file:current:crop
@@ -268,11 +294,16 @@ import
 
 :aspect:`Example`
    This returns the first image in the field "image" from the
-   data-array::
+   data-array:
 
-      .import = uploads/pics/
-      .import.field = image
-      .import.listNum = 0
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+      tt_content.image.20.1.file {
+          import = uploads/pics/
+          import.field = image
+          import.listNum = 0
+      }
 
 
 .. index:: imgResource; treatIdAsReference
@@ -376,11 +407,13 @@ stripProfile
       0
 
 :aspect:`Example`
-      ::
 
-         10 = IMAGE
-         10.file = fileadmin/images/image1.jpg
-         10.file.stripProfile = 1
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+      10 = IMAGE
+      10.file = fileadmin/images/image1.jpg
+      10.file.stripProfile = 1
 
 Masking
 =======
@@ -460,7 +493,10 @@ Examples
 ========
 
 This scales the image :file:`fileadmin/toplogo.gif` to the width of 200
-pixels::
+pixels:
+
+.. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
    file = fileadmin/toplogo.gif
    file.width = 200
