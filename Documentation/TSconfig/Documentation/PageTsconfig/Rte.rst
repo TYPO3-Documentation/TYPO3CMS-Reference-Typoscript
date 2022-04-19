@@ -41,25 +41,28 @@ Configure RTE for a specific field in a table for a specific :ref:`record type <
 Consider the following Page TSconfig examples:
 
 .. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/page.tsconfig
 
-    # Disable all RTEs
-    RTE.default.disabled = 1
-
-.. code-block:: typoscript
-
-    # Disable all RTEs
-    RTE.default.disabled = 1
-    # Enable RTE for the tt_content bodytext field only
-    RTE.config.tt_content.bodytext.disabled = 0
+   # Disable all RTEs
+   RTE.default.disabled = 1
 
 .. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/page.tsconfig
 
-    # Disable all RTEs
-    RTE.default.disabled = 1
-    # Enable RTE for the tt_content bodytext field only
-    RTE.config.tt_content.bodytext.disabled = 0
-    # But disable RTE for tt_content bodytext again if the record type is "text"
-    RTE.config.tt_content.bodytext.types.text.disabled = 1
+   # Disable all RTEs
+   RTE.default.disabled = 1
+   # Enable RTE for the tt_content bodytext field only
+   RTE.config.tt_content.bodytext.disabled = 0
+
+.. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/page.tsconfig
+
+   # Disable all RTEs
+   RTE.default.disabled = 1
+   # Enable RTE for the tt_content bodytext field only
+   RTE.config.tt_content.bodytext.disabled = 0
+   # But disable RTE for tt_content bodytext again if the record type is "text"
+   RTE.config.tt_content.bodytext.types.text.disabled = 1
 
 .. index:: RTE; disable
 
@@ -163,9 +166,10 @@ allowTagsOutside
 
 :aspect:`Example`
     .. code-block:: typoscript
+       :caption: EXT:site_package/Configuration/page.tsconfig
 
-        # Allow only hr tags outside of p and div
-        RTE.default.proc.allowTagsOutside = hr
+       # Allow only hr tags outside of p and div
+       RTE.default.proc.allowTagsOutside = hr
 
 .. index::
    RTE; block elements

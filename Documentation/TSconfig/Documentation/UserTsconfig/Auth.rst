@@ -13,11 +13,12 @@ auth.BE.redirectToURL
 
 auth.mfa.required
     Require multi-factor authentication for a user. This overrules the global configuration
-    and can therefore also be used to unset the requirement by using `0` as value. 
-    
-     .. code-block:: typoscript
+    and can therefore also be used to unset the requirement by using `0` as value.
 
-         auth.mfa.required = 1
+     .. code-block:: typoscript
+        :caption: EXT:site_package/Configuration/user.tsconfig
+
+        auth.mfa.required = 1
 
 auth.mfa.disableProviders
     Disable multi-factor authentication providers for the current user or group.
@@ -26,13 +27,15 @@ auth.mfa.disableProviders
     it will be disallowed for the user or user group.
 
      .. code-block:: typoscript
+        :caption: EXT:site_package/Configuration/user.tsconfig
 
-         auth.mfa.disableProviders := addToList(totp)
+        auth.mfa.disableProviders := addToList(totp)
 
 auth.mfa.recommendedProvider
    Set a recommended multi-factor authentication provider on a per user or user group basis, which overrules
    the global configuration.
 
-     .. code-block:: typoscript
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/user.tsconfig
 
-         auth.mfa.recommendedProvider = totp
+      auth.mfa.recommendedProvider = totp

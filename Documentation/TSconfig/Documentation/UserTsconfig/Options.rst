@@ -12,6 +12,7 @@ As an example, this enables the "Flush frontend caches" button in the upper righ
 cache menu for non admin users:
 
 .. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/user.tsconfig
 
    options.clearCache.pages = 1
 
@@ -88,6 +89,7 @@ bookmarkGroups
 
 :aspect:`Example`
    .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/user.tsconfig
 
       bookmarkGroups {
          1 = 1
@@ -106,6 +108,7 @@ bookmarkGroups
    Custom language labels can also be used instead of a fixed label:
 
    .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/user.tsconfig
 
       bookmarkGroups {
          2 = LLL:EXT:sitepackage/Resources/Private/Language/locallang_be.xlf:bookmarkGroups.2
@@ -205,6 +208,7 @@ contextMenu disableItems
 
 :aspect:`Example`
    .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/user.tsconfig
 
       # Remove "New" and "Create New wizard" for pages context menu (list module)
       options.contextMenu.table.pages.disableItems = new,newWizard
@@ -246,6 +250,7 @@ dashboard.dashboardPresetsForNewUsers
 
 :aspect:`Example`
    .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/user.tsconfig
 
       options.dashboard.dashboardPresetsForNewUsers := addToList(customDashboard)
 
@@ -270,6 +275,7 @@ defaultUploadFolder
 
 :aspect:`Example`
    .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/user.tsconfig
 
       options.defaultUploadFolder = 2:user_folders/my_folder/
 
@@ -291,6 +297,7 @@ disableDelete
 
 :aspect:`Example`
    .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/user.tsconfig
 
       options.disableDelete.tt_content = 1
 
@@ -385,9 +392,10 @@ file_list.displayColumnSelector
 
 :aspect:`Example`
     .. code-block:: typoscript
+       :caption: EXT:site_package/Configuration/user.tsconfig
 
-      # disable the column selector
-      file_list.displayColumnSelector = 0
+       # disable the column selector
+       file_list.displayColumnSelector = 0
 
 
 .. index:: File list; Extended view enable
@@ -532,6 +540,7 @@ folderTree.altElementBrowserMountPoints
 
 :aspect:`Example`
    .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/user.tsconfig
 
       options.folderTree.altElementBrowserMountPoints = _temp_/, 2:/templates, 1:/files/images
 
@@ -590,6 +599,7 @@ hideModules.[moduleGroup]
 
 :aspect:`Example`
    .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/user.tsconfig
 
       # Hide module groups "file" and "help"
       options.hideModules = file, help
@@ -624,6 +634,7 @@ hideRecords.pages
 
 :aspect:`Example`
    .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/user.tsconfig
 
       options.hideRecords.pages = 12,45
 
@@ -691,6 +702,7 @@ overridePageModule
 
 :aspect:`Example`
    .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/user.tsconfig
 
       # Enable TemplaVoila page module as default page module.
       options.overridePageModule = web_txtemplavoilaM1
@@ -722,6 +734,7 @@ pageTree.altElementBrowserMountPoints
 
 :aspect:`Example`
    .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/user.tsconfig
 
       options.pageTree.altElementBrowserMountPoints = 34,123
 
@@ -743,6 +756,7 @@ pageTree.altElementBrowserMountPoints.append
 
 :aspect:`Example`
    .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/user.tsconfig
 
       options.pageTree.altElementBrowserMountPoints = 34,123
       options.pageTree.altElementBrowserMountPoints.append = 1
@@ -766,6 +780,7 @@ pageTree.backgroundColor
 
 :aspect:`Example`
    .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/user.tsconfig
 
       options.pageTree.backgroundColor.147 = orange
       options.pageTree.backgroundColor.148 = #AFAFAF
@@ -812,6 +827,7 @@ pageTree.excludeDoktypes
 
 :aspect:`Example`
    .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/user.tsconfig
 
       options.pageTree.excludeDoktypes = 254,1
 
@@ -897,6 +913,7 @@ passwordReset
    set the user TSconfig globally in your :file:`ext_localconf.php`:
 
    .. code-block:: php
+      :caption: EXT:site_package/ext_localconf.php
 
       \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addUserTSConfig(
          'options.passwordReset = 0'
@@ -909,6 +926,7 @@ passwordReset
    The password reset functionality can also be disabled globally by setting:
 
    .. code-block:: php
+      :caption: typo3conf/LocalConfiguration.php
 
       $GLOBALS['TYPO3_CONF_VARS']['BE']['passwordReset'] = false
 
@@ -951,6 +969,7 @@ saveDocNew
    in the top of the page (default is after instead of top).
 
    .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/user.tsconfig
 
       options.saveDocNew = 0
       options.saveDocNew.tt_content = top

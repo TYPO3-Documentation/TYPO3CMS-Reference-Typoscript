@@ -35,9 +35,10 @@ exclude
         Two backend layout records shown in list module
 
     .. code-block:: typoscript
+       :caption: EXT:site_package/Configuration/page.tsconfig
 
-        # Exclude two backend layouts from drop down selector
-        options.backendLayout.exclude = 1,2
+       # Exclude two backend layouts from drop down selector
+       options.backendLayout.exclude = 1,2
 
     .. figure:: /Images/ManualScreenshots/List/BackendLayoutsExcluded.png
         :alt: Drop down without backend layouts

@@ -34,17 +34,18 @@ clearCacheCmd
 
 :aspect:`Examples`
     .. code-block:: typoscript
+       :caption: EXT:site_package/Configuration/page.tsconfig
 
-        TCEMAIN {
-            # Clear the cache for page uid 12 and 23 when saving a record in this page
-            clearCacheCmd = 12, 23
-            # Clear all frontent page caches of pages
-            clearCacheCmd = pages
-            # Clear ALL caches
-            clearCacheCmd = all
-            # Clear cache for all pages tagged with tag "pagetag1"
-            clearCacheCmd = cacheTag:pagetag1
-        }
+       TCEMAIN {
+           # Clear the cache for page uid 12 and 23 when saving a record in this page
+           clearCacheCmd = 12, 23
+           # Clear all frontent page caches of pages
+           clearCacheCmd = pages
+           # Clear ALL caches
+           clearCacheCmd = all
+           # Clear cache for all pages tagged with tag "pagetag1"
+           clearCacheCmd = cacheTag:pagetag1
+       }
 
     .. note::
 
@@ -112,13 +113,14 @@ disableHideAtCopy
 
 :aspect:`Example`
     .. code-block:: typoscript
+       :caption: EXT:site_package/Configuration/page.tsconfig
 
-        TCEMAIN.table.pages {
-           # Pages will *not* have "(copy)" appended:
-           disablePrependAtCopy = 1
-           # Pages will *not* be hidden upon copy:
-           disableHideAtCopy = 1
-        }
+       TCEMAIN.table.pages {
+          # Pages will *not* have "(copy)" appended:
+          disablePrependAtCopy = 1
+          # Pages will *not* be hidden upon copy:
+          disableHideAtCopy = 1
+       }
 
     These settings adjust that a page which is copied will neither have "(copy X)" appended nor be hidden.
 
@@ -150,13 +152,14 @@ disablePrependAtCopy
 
 :aspect:`Example`
     .. code-block:: typoscript
+       :caption: EXT:site_package/Configuration/page.tsconfig
 
-        TCEMAIN.table.pages {
-           # Pages will *not* have "(copy)" appended:
-           disablePrependAtCopy = 1
-           # Pages will *not* be hidden upon copy:
-           disableHideAtCopy = 1
-        }
+       TCEMAIN.table.pages {
+          # Pages will *not* have "(copy)" appended:
+          disablePrependAtCopy = 1
+          # Pages will *not* be hidden upon copy:
+          disableHideAtCopy = 1
+       }
 
     These settings adjust that a page which is copied will neither have "(copy X)" appended nor be hidden.
 
@@ -192,6 +195,7 @@ Example: Inherit the group id of the parent page
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. code-block:: php
+   :caption: typo3conf/LocalConfiguration.php
 
    $GLOBALS['TYPO3_CONF_VARS']['BE']['defaultPageTSconfig'] .= '
        TCEMAIN.permissions.groupid = copyFromParent
@@ -237,11 +241,12 @@ everybody
 
 :aspect:`Example`
     .. code-block:: typoscript
+       :caption: EXT:site_package/Configuration/page.tsconfig
 
-        TCEMAIN.permissions {
-            # Everybody can at least see the page, normally everybody can do nothing
-            everybody = show
-        }
+       TCEMAIN.permissions {
+           # Everybody can at least see the page, normally everybody can do nothing
+           everybody = show
+       }
 
     The page "Community" was created with the settings from the example
     above. Compared to the two other pages created with default
@@ -278,11 +283,12 @@ group
 
 :aspect:`Example`
     .. code-block:: typoscript
+       :caption: EXT:site_package/Configuration/page.tsconfig
 
-        TCEMAIN.permissions {
-            # Group can do anything, normally "delete" is disabled
-            group = 31
-        }
+       TCEMAIN.permissions {
+           # Group can do anything, normally "delete" is disabled
+           group = 31
+       }
 
     The page "Community" was created with the settings from the example
     above. Compared to the two other pages created with default
@@ -315,11 +321,12 @@ groupid
 
 :aspect:`Example`
     .. code-block:: typoscript
+       :caption: EXT:site_package/Configuration/page.tsconfig
 
-        TCEMAIN {
-            # Owner be_groups UID for new pages
-            permissions.groupid = 3
-        }
+       TCEMAIN {
+           # Owner be_groups UID for new pages
+           permissions.groupid = 3
+       }
 
     In this instance, backend group with UID 3 is "test_group". With the configuration
     above a new page would be created with this group setting instead of the default,
@@ -357,11 +364,12 @@ user
 
 :aspect:`Example`
     .. code-block:: typoscript
+       :caption: EXT:site_package/Configuration/page.tsconfig
 
-        TCEMAIN.permissions {
-            # User can do anything, this is identical to the default value
-            user = 31
-        }
+       TCEMAIN.permissions {
+           # User can do anything, this is identical to the default value
+           user = 31
+       }
 
 .. index:: Page permissions; User id
 
@@ -384,11 +392,12 @@ userid
 
 :aspect:`Example`
     .. code-block:: typoscript
+       :caption: EXT:site_package/Configuration/page.tsconfig
 
-        TCEMAIN {
-            # Owner be_users UID for new pages
-            permissions.userid = 2
-        }
+       TCEMAIN {
+           # Owner be_users UID for new pages
+           permissions.userid = 2
+       }
 
     In this instance, backend user with UID 2 is "test". With the configuration
     above a new page would be created with this owner setting instead of the default,
@@ -415,20 +424,21 @@ preview
     preview page for content elements as well, which might be handy if those are stored in a sysfolder.
 
     .. code-block:: typoscript
+       :caption: EXT:site_package/Configuration/page.tsconfig
 
-        TCEMAIN.preview {
-            <table name> {
-                previewPageId = 123
-                disableButtonForDokType = 199, 254, 255
-                useDefaultLanguageRecord = 0
-                fieldToParameterMap {
-                    uid = tx_myext_pi1[showUid]
-                }
-                additionalGetParameters {
-                    tx_myext_pi1.special = HELLO # results in tx_myext_pi1[special]
-                }
-            }
-        }
+       TCEMAIN.preview {
+           <table name> {
+               previewPageId = 123
+               disableButtonForDokType = 199, 254, 255
+               useDefaultLanguageRecord = 0
+               fieldToParameterMap {
+                   uid = tx_myext_pi1[showUid]
+               }
+               additionalGetParameters {
+                   tx_myext_pi1.special = HELLO # results in tx_myext_pi1[special]
+               }
+           }
+       }
 
     The :typoscript:`previewPageId` is the uid of the page to use for preview. If this setting is omitted the
     current page will be used. If the current page is not a normal page, the root page will be chosen.
@@ -503,9 +513,9 @@ translateToMessage
     .. code-block:: typoscript
        :caption: PageTSconfig
 
-        TCEMAIN {
-            translateToMessage = Bitte in "%s" übersetzen:
-        }
+       TCEMAIN {
+           translateToMessage = Bitte in "%s" übersetzen:
+       }
 
     Disable the [Translate to ...] prefix:
 

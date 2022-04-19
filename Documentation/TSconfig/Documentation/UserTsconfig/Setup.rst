@@ -47,12 +47,13 @@ setup.fields.[fieldName].disabled
     You can find the names of the fields in the "Configuration" module by browsing the "User Settings" array, example:
 
     .. code-block:: typoscript
+       :caption: EXT:site_package/Configuration/user.tsconfig
 
-        # Do not show the 'emailMeAtLogin' field to the user in "User Settings" module
-        setup.fields.emailMeAtLogin.disabled = 1
+       # Do not show the 'emailMeAtLogin' field to the user in "User Settings" module
+       setup.fields.emailMeAtLogin.disabled = 1
 
-        # And force the value of this field to be set to 1
-        setup.override.emailMeAtLogin = 1
+       # And force the value of this field to be set to 1
+       setup.override.emailMeAtLogin = 1
 
 
 .. index::

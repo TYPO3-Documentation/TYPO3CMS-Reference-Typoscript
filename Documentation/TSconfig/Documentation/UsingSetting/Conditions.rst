@@ -23,6 +23,7 @@ Examples
 ========
 
 .. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/page.tsconfig
 
 	[tree.level == 1]
 	TCEFORM.tt_content.section_frame.disabled = 1
@@ -70,12 +71,14 @@ backend.user
 Check whether the current BE user has the uid 5:
 
 .. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/page.tsconfig
 
    [backend.user.userId == 5]
 
 The following condition will apply only if the BE user is an admin:
 
 .. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/page.tsconfig
 
    [backend.user.isAdmin]
 
