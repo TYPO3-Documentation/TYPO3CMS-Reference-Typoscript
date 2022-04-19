@@ -1,0 +1,16 @@
+
+.. Manually Extracted from typo3conf/ext/examples/Configuration/TypoScript/DataProcessors/Processors/SiteLanguageProcessor.typoscript
+
+.. code-block:: typoscript
+   :caption: EXT:examples/Configuration/TypoScript/DataProcessors/Processors/SiteProcessor.typoscript
+
+   tt_content {
+      examples_dataprocsitelanguage =< lib.contentElement
+      examples_dataprocsitelanguage {
+         templateName = DataProcSiteLanguage
+         dataProcessing.10 = TYPO3\CMS\Frontend\DataProcessing\SiteLanguageProcessor
+         dataProcessing.10 {
+            as = language
+         }
+      }
+   }

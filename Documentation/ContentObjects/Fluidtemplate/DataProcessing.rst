@@ -35,6 +35,7 @@ for example for comma-separated values, related files or related records.
    DataProcessing/LanguageMenuProcessor
    DataProcessing/MenuProcessor
    DataProcessing/SiteProcessor
+   DataProcessing/SiteLanguageProcessor
    DataProcessing/SplitProcessor
    DataProcessing/CustomDataProcessors
 
@@ -50,7 +51,8 @@ extension `examples <https://extensions.typo3.org/extension/examples/>`__.
 Once the extension t3docs/examples is installed the examples are available
 as content elements:
 
-.. include:: /Images/AutomaticScreenshots/DataProcessing/DataProcessingExamples.rst.txt
+.. figure:: /Images/ManualScreenshots/DataProcessors.png
+   :class: with-shadow
 
 All examples listing here depend on
 :ref:`t3coreapi:adding-your-own-content-elements`.  Data processors can
