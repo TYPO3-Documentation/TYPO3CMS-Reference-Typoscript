@@ -211,12 +211,14 @@ Example
 Default page TSconfig
 
 .. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/page.tsconfig
 
 	RTE.default.showButtons = bold
 
 Static page TSconfig included on the parent page
 
 .. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/page.tsconfig
 
 	RTE.default.showButtons := addToList(italic)
 

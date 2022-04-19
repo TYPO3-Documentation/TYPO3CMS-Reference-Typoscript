@@ -82,14 +82,15 @@ addItems
 
 :aspect:`Example`
     .. code-block:: typoscript
+       :caption: EXT:site_package/Configuration/page.tsconfig
 
-        TCEFORM.tt_content.header_layout {
-           # Add another header_layout option:
-           addItems.1525215969 = Another header layout
-           # Add another one with localized label and icon
-           addItems.1525216023 = LLL:EXT:my_ext/Resources/Private/Language/locallang.xlf:header_layout
-           addItems.1525216023.icon = EXT:my_ext/icon.png
-        }
+       TCEFORM.tt_content.header_layout {
+          # Add another header_layout option:
+          addItems.1525215969 = Another header layout
+          # Add another one with localized label and icon
+          addItems.1525216023 = LLL:EXT:my_ext/Resources/Private/Language/locallang.xlf:header_layout
+          addItems.1525216023.icon = EXT:my_ext/icon.png
+       }
 
     Instead of adding files by path, icon identifiers should be used.
 
@@ -124,15 +125,16 @@ altLabels
         Where `sDEF` is the sheet name.
 
 :aspect:`Example`
-   ::
+    .. code-block:: typoscript
+       :caption: EXT:site_package/Configuration/page.tsconfig
 
-        TCEFORM.pages.doktype {
-            # Set a different item label
-            altLabels.1 = STANDARD Page Type
-            altLabels.254 = Folder (for various elements)
-            # Sets the default label for Recycler via "locallang":
-            altLabels.255 = LLL:EXT:my_ext/Resources/Private/Language/locallang_tca.xlf:recycler
-        }
+       TCEFORM.pages.doktype {
+           # Set a different item label
+           altLabels.1 = STANDARD Page Type
+           altLabels.254 = Folder (for various elements)
+           # Sets the default label for Recycler via "locallang":
+           altLabels.255 = LLL:EXT:my_ext/Resources/Private/Language/locallang_tca.xlf:recycler
+       }
 
    .. figure:: /Images/ManualScreenshots/List/PagesDoktypeDifferentLabels.png
       :alt: The Page types with modified labels
@@ -142,7 +144,10 @@ altLabels
    .. note::
 
       If the item has an **empty** value, the syntax is slightly different and an additional dot must be provided,
-      like on this example::
+      like on this example:
+
+      .. code-block:: typoscript
+         :caption: EXT:site_package/Configuration/page.tsconfig
 
          TCEFORM.tt_content.space_before_class.altLabels.. = foo
 
@@ -168,14 +173,16 @@ PAGE_TSCONFIG_ID
 
 :aspect:`Example`
     .. code-block:: typoscript
+       :caption: EXT:site_package/Configuration/page.tsconfig
 
-        TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.myField.PAGE_TSCONFIG_ID = 22
+       TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.myField.PAGE_TSCONFIG_ID = 22
 
     In this example, the value will substitute the marker in a plugin FlexForm.
 
     .. code-block:: typoscript
+       :caption: EXT:site_package/Configuration/page.tsconfig
 
-        TCEFORM.tx_myext_table.myfield.PAGE_TSCONFIG_ID = 22
+       TCEFORM.tx_myext_table.myfield.PAGE_TSCONFIG_ID = 22
 
     This example might be used for a record in an extension. It refers to a
     table called `tx_myext_table` and the field `myfield`. Here the marker will
@@ -195,14 +202,16 @@ PAGE_TSCONFIG_IDLIST
 
 :aspect:`Example`
     .. code-block:: typoscript
+       :caption: EXT:site_package/Configuration/page.tsconfig
 
-        TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.myField.PAGE_TSCONFIG_IDLIST = 20,21,22
+       TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.myField.PAGE_TSCONFIG_IDLIST = 20,21,22
 
     In this example, the value will substitute the marker in a plugin FlexForm.
 
     .. code-block:: typoscript
+       :caption: EXT:site_package/Configuration/page.tsconfig
 
-        TCEFORM.tx_myext_table.myfield.PAGE_TSCONFIG_IDLIST = 20,21,22
+       TCEFORM.tx_myext_table.myfield.PAGE_TSCONFIG_IDLIST = 20,21,22
 
     This example might be used for a record in an extension. It refers to a
     table called `tx_myext_table` and the field `myfield`. Here the marker will
@@ -222,14 +231,16 @@ PAGE_TSCONFIG_STR
 
 :aspect:`Example`
     .. code-block:: typoscript
+       :caption: EXT:site_package/Configuration/page.tsconfig
 
-        TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.myField.PAGE_TSCONFIG_STR = %hello%
+       TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.myField.PAGE_TSCONFIG_STR = %hello%
 
     In this example, the value will substitute the marker in a plugin FlexForm.
 
     .. code-block:: typoscript
+       :caption: EXT:site_package/Configuration/page.tsconfig
 
-        TCEFORM.tx_myext_table.myfield.PAGE_TSCONFIG_STR = %hello%
+       TCEFORM.tx_myext_table.myfield.PAGE_TSCONFIG_STR = %hello%
 
     This example might be used for a record in an extension. It refers to a
     table called `tx_myext_table` and the field `myfield`. Here the marker will
@@ -298,11 +309,12 @@ config.treeConfig
     in the :ref:`TCA reference <t3tca:columns-select-properties-treeconfig>`:
 
     .. code-block:: typoscript
+       :caption: EXT:site_package/Configuration/page.tsconfig
 
-        config.treeConfig.startingPoints = 1,42
-        config.treeConfig.appearance.expandAll = 1
-        config.treeConfig.appearance.maxLevels = 2
-        config.treeConfig.appearance.nonSelectableLevels = 1
+       config.treeConfig.startingPoints = 1,42
+       config.treeConfig.appearance.expandAll = 1
+       config.treeConfig.appearance.maxLevels = 2
+       config.treeConfig.appearance.nonSelectableLevels = 1
 
     This property is available for various levels:
 
@@ -335,6 +347,7 @@ description
    define a description for a TCA field, next to its label.
 
    .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/page.tsconfig
 
       TCEFORM.tt_content.header.description = override description
 
@@ -342,18 +355,21 @@ description
    specific language.
 
    .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/page.tsconfig
 
       TCEFORM.tt_content.header.description.de = override description for DE
 
    The option can be used on a per record type basis, too.
 
    .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/page.tsconfig
 
       TCEFORM.tt_content.header.types.textpic.description = override description for textpic
 
    Also referencing language labels is supported.
 
    .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/page.tsconfig
 
       TCEFORM.tt_content.header.description = LLL:EXT:my_ext/Resources/Private/Language/locallang.xlf:override_description
 
@@ -397,11 +413,12 @@ disabled
 
 :aspect:`Example`
     .. code-block:: typoscript
+       :caption: EXT:site_package/Configuration/page.tsconfig
 
-        TCEFORM.pages.title {
-            # The title field of the pages table is not editable
-            disabled = 1
-        }
+       TCEFORM.pages.title {
+           # The title field of the pages table is not editable
+           disabled = 1
+       }
 
 
 .. index::
@@ -441,11 +458,12 @@ disableNoMatchingValueElement
 
 :aspect:`Example`
     .. code-block:: typoscript
+       :caption: EXT:site_package/Configuration/page.tsconfig
 
-        TCEFORM.pages.doktype {
-            # "INVALID VALUE ..." label will never show up
-            disableNoMatchingValueElement = 1
-        }
+       TCEFORM.pages.doktype {
+           # "INVALID VALUE ..." label will never show up
+           disableNoMatchingValueElement = 1
+       }
 
     Now the selector box will default to the first element in the selector box:
 
@@ -480,12 +498,13 @@ fileFolderConfig
    available:
 
    .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/page.tsconfig
 
-       fileFolderConfig {
-         folder = 'EXT:styleguide/Resources/Public/Icons'
-         allowedExtensions = 'svg'
-         depth = 1
-       }
+      fileFolderConfig {
+        folder = 'EXT:styleguide/Resources/Public/Icons'
+        allowedExtensions = 'svg'
+        depth = 1
+      }
 
    This property is available for various levels:
 
@@ -558,11 +577,12 @@ keepItems
 
 :aspect:`Example`
     .. code-block:: typoscript
+       :caption: EXT:site_package/Configuration/page.tsconfig
 
-        TCEFORM.pages.doktype {
-            # Show only standard and "Spacer" page types
-            keepItems = 1, 199
-        }
+       TCEFORM.pages.doktype {
+           # Show only standard and "Spacer" page types
+           keepItems = 1, 199
+       }
 
 
 .. index::
@@ -595,12 +615,13 @@ label
 
 :aspect:`Example`
     .. code-block:: typoscript
+       :caption: EXT:site_package/Configuration/page.tsconfig
 
-        TCEFORM.pages.title {
-            label = LLL:EXT:my_ext/Resources/Private/Language/locallang.xlf:table.column
-            label.default = New Label
-            label.de = Neuer Feldname
-        }
+       TCEFORM.pages.title {
+           label = LLL:EXT:my_ext/Resources/Private/Language/locallang.xlf:table.column
+           label.default = New Label
+           label.de = Neuer Feldname
+       }
 
 
 .. index::
@@ -634,11 +655,12 @@ noMatchingValue_label
 
 :aspect:`Example`
     .. code-block:: typoscript
+       :caption: EXT:site_package/Configuration/page.tsconfig
 
-        TCEFORM.pages.doktype {
-            # Different "INVALID VALUE ..." label:
-            noMatchingValue_label = VALUE "%s" was not available!
-        }
+       TCEFORM.pages.doktype {
+           # Different "INVALID VALUE ..." label:
+           noMatchingValue_label = VALUE "%s" was not available!
+       }
 
     .. figure:: /Images/ManualScreenshots/List/SelectInvalidValueDifferentLabel.png
         :alt:  An invalid selector box value is indicated by a warning message
@@ -674,11 +696,12 @@ removeItems
 
 :aspect:`Example`
     .. code-block:: typoscript
+       :caption: EXT:site_package/Configuration/page.tsconfig
 
-        TCEFORM.pages.doktype {
-            # Remove "Recycler" and "Spacer" page types
-            removeItems = 199, 255
-        }
+       TCEFORM.pages.doktype {
+           # Remove "Recycler" and "Spacer" page types
+           removeItems = 199, 255
+       }
 
 .. index::
    FlexForm; Sheet description
@@ -734,11 +757,12 @@ sheetTitle
 
 :aspect:`Example`
     .. code-block:: typoscript
+       :caption: EXT:site_package/Configuration/page.tsconfig
 
-        TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF {
-            # Rename the first tab of the FlexForm plug-in configuration
-            sheetTitle = LLL:my_ext/Resource/Private/Language/locallang.xlf:tt_content.pi_flexform.my_ext_pi1.sDEF
-        }
+       TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF {
+           # Rename the first tab of the FlexForm plug-in configuration
+           sheetTitle = LLL:my_ext/Resource/Private/Language/locallang.xlf:tt_content.pi_flexform.my_ext_pi1.sDEF
+       }
 
 
 .. index::
@@ -817,10 +841,11 @@ addWhere
 
 :aspect:`Example`
     .. code-block:: typoscript
+       :caption: EXT:site_package/Configuration/page.tsconfig
 
-        TCEFORM.pages.storage_pid.suggest.default {
-            addWhere = AND pages.pid=###PAGE_TSCONFIG_ID###
-        }
+       TCEFORM.pages.storage_pid.suggest.default {
+           addWhere = AND pages.pid=###PAGE_TSCONFIG_ID###
+       }
 
 .. index::
    Suggest wizard; CSS class
@@ -836,12 +861,13 @@ cssClass
 
 :aspect:`Example`
     .. code-block:: typoscript
+       :caption: EXT:site_package/Configuration/page.tsconfig
 
-        TCEFORM.suggest.pages {
-            # Configure all suggest wizards which list records from table "pages"
-            # to add the CSS class "pages" to every list item of the result list.
-            cssClass = pages
-        }
+       TCEFORM.suggest.pages {
+           # Configure all suggest wizards which list records from table "pages"
+           # to add the CSS class "pages" to every list item of the result list.
+           cssClass = pages
+       }
 
 
 .. index::
@@ -858,10 +884,11 @@ hide
 
 :aspect:`Example`
     .. code-block:: typoscript
+       :caption: EXT:site_package/Configuration/page.tsconfig
 
-        TCEFORM.pages.storage_pid.suggest.default {
-            hide = 1
-        }
+       TCEFORM.pages.storage_pid.suggest.default {
+           hide = 1
+       }
 
 
 .. index::
@@ -878,10 +905,11 @@ maxPathTitleLength
 
 :aspect:`Example`
     .. code-block:: typoscript
+       :caption: EXT:site_package/Configuration/page.tsconfig
 
-        TCEFORM.suggest.default {
-            maxPathTitleLength = 30
-        }
+       TCEFORM.suggest.default {
+           maxPathTitleLength = 30
+       }
 
 .. index::
    Suggest wizard; Characters min
@@ -900,10 +928,11 @@ minimumCharacters
 
 :aspect:`Example`
     .. code-block:: typoscript
+       :caption: EXT:site_package/Configuration/page.tsconfig
 
-        TCEFORM.pages.storage_pid.suggest.default {
-            minimumCharacters = 3
-        }
+       TCEFORM.pages.storage_pid.suggest.default {
+           minimumCharacters = 3
+       }
 
 
 .. index::
@@ -920,11 +949,12 @@ pidDepth
 
 :aspect:`Example`
     .. code-block:: typoscript
+       :caption: EXT:site_package/Configuration/page.tsconfig
 
-        TCEFORM.suggest.default {
-            pidList = 6,7
-            pidDepth = 4
-        }
+       TCEFORM.suggest.default {
+           pidList = 6,7
+           pidDepth = 4
+       }
 
 .. index::
    Suggest wizard; pid list
@@ -941,11 +971,12 @@ pidList
 
 :aspect:`Example`
     .. code-block:: typoscript
+       :caption: EXT:site_package/Configuration/page.tsconfig
 
-        TCEFORM.suggest.default {
-            # sets the pidList for a suggest fields in all tables
-            pidList = 1,2,3,45
-        }
+       TCEFORM.suggest.default {
+           # sets the pidList for a suggest fields in all tables
+           pidList = 1,2,3,45
+       }
 
 
 .. index::
@@ -992,12 +1023,13 @@ searchCondition
 
 :aspect:`Example`
     .. code-block:: typoscript
+       :caption: EXT:site_package/Configuration/page.tsconfig
 
-        TCEFORM.pages.storage_pid.suggest.default {
-            # Configure the suggest wizard for the field "storage_pid" in table "pages"
-            # to search only for pages with doktype=1
-            searchCondition = doktype=1
-        }
+       TCEFORM.pages.storage_pid.suggest.default {
+           # Configure the suggest wizard for the field "storage_pid" in table "pages"
+           # to search only for pages with doktype=1
+           searchCondition = doktype=1
+       }
 
 .. index::
    Suggest wizard; Search whole phrase
@@ -1016,8 +1048,9 @@ searchWholePhrase
 
 :aspect:`Example`
     .. code-block:: typoscript
+       :caption: EXT:site_package/Configuration/page.tsconfig
 
-        TCEFORM.pages.storage_pid.suggest.default {
-            # Configure the suggest wizard for the field "storage_pid" in table "pages" to search only for whole phrases
-           searchWholePhrase = 1
-        }
+       TCEFORM.pages.storage_pid.suggest.default {
+           # Configure the suggest wizard for the field "storage_pid" in table "pages" to search only for whole phrases
+          searchWholePhrase = 1
+       }

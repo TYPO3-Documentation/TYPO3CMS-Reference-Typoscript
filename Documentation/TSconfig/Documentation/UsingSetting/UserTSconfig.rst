@@ -111,6 +111,7 @@ selected groups are evaluated from top to bottom.
 * Add in User TSconfig
 
 .. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/page.tsconfig
 
 	page.RTE.default.showButtons = bold
 
@@ -119,6 +120,7 @@ selected groups are evaluated from top to bottom.
 * Add later in User TSconfig
 
 .. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/user.tsconfig
 
 	page.RTE.default.showButtons := addToList(italic)
 
@@ -135,6 +137,7 @@ Let's say the user is a member of a *usergroup* with this
 configuration
 
 .. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/page.tsconfig
 
 	TCAdefaults.tt_content {
 		hidden = 1
@@ -144,6 +147,7 @@ configuration
 Then we set the following values in the TSconfig field of the specific *user*.
 
 .. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/user.tsconfig
 
 	TCAdefaults.tt_content.header = 234
 	options.clearCache.all = 1
@@ -172,6 +176,7 @@ To illustrate this feature let's say the action
 TSconfig:
 
 .. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/page.tsconfig
 
    mod.web_info.menu.function {
       TYPO3\CMS\Info\Controller\TranslationStatusController = 0
@@ -182,6 +187,7 @@ user would still be able to select this menu item because the value of his User 
 overrides the same value set in the Page TSconfig, just prefixed with `page.`:
 
 .. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/user.tsconfig
 
    page.mod.web_info.menu.function {
       TYPO3\CMS\Info\Controller\TranslationStatusController = 1
@@ -198,11 +204,13 @@ overrides the same value set in the Page TSconfig, just prefixed with `page.`:
    but the value "italic".
 
    .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/page.tsconfig
 
-     # Enable the "bold" button in Page TSconfig (!)
-     RTE.default.showButtons = bold
+      # Enable the "bold" button in Page TSconfig (!)
+      RTE.default.showButtons = bold
 
    .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/user.tsconfig
 
-     # Try to additionally add the "italic" button in User TSconfig (!)
-     page.RTE.default.showButtons := addToList(italic)
+      # Try to additionally add the "italic" button in User TSconfig (!)
+      page.RTE.default.showButtons := addToList(italic)

@@ -29,6 +29,7 @@ values when creating new records in the backend is this:
 Example:
 
 .. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/page.tsconfig
 
-    # Show newly created pages by default
-    TCAdefaults.pages.hidden = 0
+   # Show newly created pages by default
+   TCAdefaults.pages.hidden = 0

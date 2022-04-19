@@ -19,6 +19,7 @@ frontend TypoScript template for the website. You can do this by inserting this
 string in the TypoScript Template:
 
 .. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/user.tsconfig
 
    # Note this is a frontend TypoScript template and not TSconfig!
    config.admPanel = 1
@@ -26,6 +27,7 @@ string in the TypoScript Template:
 Example user TSconfig to disable the admin panel for a user:
 
 .. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/user.tsconfig
 
    admPanel.hide = 1
 
@@ -44,20 +46,22 @@ enable
     Enable / disable all modules:
 
     .. code-block:: typoscript
+       :caption: EXT:site_package/Configuration/user.tsconfig
 
-        admPanel.enable.all = 1
+       admPanel.enable.all = 1
 
     Enable / disable single parts of the admin panel:
 
     .. code-block:: typoscript
+       :caption: EXT:site_package/Configuration/user.tsconfig
 
-        admPanel.enable.cache = 1
-        admPanel.enable.debug = 1
-        admPanel.enable.edit = 1
-        admPanel.enable.info = 1
-        admPanel.enable.preview = 1
-        admPanel.enable.publish = 1
-        admPanel.enable.tsdebug = 1
+       admPanel.enable.cache = 1
+       admPanel.enable.debug = 1
+       admPanel.enable.edit = 1
+       admPanel.enable.info = 1
+       admPanel.enable.preview = 1
+       admPanel.enable.publish = 1
+       admPanel.enable.tsdebug = 1
 
 
 :aspect:`Default`
@@ -92,23 +96,26 @@ override
     Override single admin panel settings:
 
     .. code-block:: typoscript
+       :caption: EXT:site_package/Configuration/user.tsconfig
 
-        admPanel.override.[modulename].[propertyname]
+       admPanel.override.[modulename].[propertyname]
 
     You have to activate a module first by setting
 
     .. code-block:: typoscript
+       :caption: EXT:site_package/Configuration/user.tsconfig
 
-        admPanel.override.[modulename] = 1
+       admPanel.override.[modulename] = 1
 
     **Most common options**
 
     .. code-block:: typoscript
+       :caption: EXT:site_package/Configuration/user.tsconfig
 
-        admPanel.override.preview.showFluidDebug (boolean)
-        admPanel.override.preview.showHiddenPages (boolean)
-        admPanel.override.preview.showHiddenRecords (boolean)
-        admPanel.override.preview.simulateDate (timestamp)
-        admPanel.override.preview.simulateUserGroup (integer)
-        admPanel.override.cache.noCache (boolean)
-        admPanel.override.tsdebug.forceTemplateParsing (boolean)
+       admPanel.override.preview.showFluidDebug (boolean)
+       admPanel.override.preview.showHiddenPages (boolean)
+       admPanel.override.preview.showHiddenRecords (boolean)
+       admPanel.override.preview.simulateDate (timestamp)
+       admPanel.override.preview.simulateUserGroup (integer)
+       admPanel.override.cache.noCache (boolean)
+       admPanel.override.tsdebug.forceTemplateParsing (boolean)

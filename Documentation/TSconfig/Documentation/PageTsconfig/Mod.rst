@@ -53,37 +53,39 @@ colPos_list
 
 
 :aspect:`Example`
-    .. _example_for_backend_layout:
+   .. _example_for_backend_layout:
 
-    The example creates a basic backend layout and sets the "Left" column to be not editable:
+   The example creates a basic backend layout and sets the "Left" column to be not editable:
 
-    * Create a record of type "Backend Layout", for instance in the root page of your website
+   *  Create a record of type "Backend Layout", for instance in the root page of your website
 
-    * Add a title, e.g. "My Layout"
+   *  Add a title, e.g. "My Layout"
 
-    * Use the wizard to create a two column backend layout, the result may look like this:
+   *  Use the wizard to create a two column backend layout, the result may look like this:
 
       .. figure:: /Images/ManualScreenshots/List/SimpleBackendLayout.png
-          :alt: A simple backend layout
+         :alt: A simple backend layout
 
-          A simple backend layout
+         A simple backend layout
 
-    * Create a page and select this new backend layout in the "Appearance" tab. The page module then
-      looks like this, displaying the two defined columns:
+   *  Create a page and select this new backend layout in the "Appearance" tab.
+      The page module then looks like this, displaying the two defined columns:
 
       .. figure:: /Images/ManualScreenshots/Page/SimpleBackendLayoutInPageModule.png
-          :alt: Backend layout used in page module
+         :alt: Backend layout used in page module
 
-          Backend layout used in page module
+         Backend layout used in page module
 
-    * Now set the "Left" column to be not editable using page TSconfig in the "Resources" tab of the page,
-      by restricting `colPos_list` to `0` (the "Content" columns as defined above):
+   *  Now set the "Left" column to be not editable using page TSconfig in the
+      :guilabel:`Resources` tab of the page, by restricting `colPos_list` to
+      `0` (the "Content" columns as defined above):
 
       .. code-block:: typoscript
+         :caption: EXT:site_package/Configuration/page.tsconfig
 
           mod.SHARED.colPos_list = 0
 
-    * The result in the page module then looks like this:
+   *  The result in the page module then looks like this:
 
       .. figure:: /Images/ManualScreenshots/Page/SimpleBackendLayoutLeftNotEditable.png
           :alt: One column not editable in a backend layout
@@ -116,11 +118,12 @@ defaultLanguageFlag
     This will show the German flag, and the text "deutsch" on hover.
 
     .. code-block:: typoscript
+       :caption: EXT:site_package/Configuration/page.tsconfig
 
-        mod.SHARED {
-            defaultLanguageFlag = de
-            defaultLanguageLabel = deutsch
-        }
+       mod.SHARED {
+           defaultLanguageFlag = de
+           defaultLanguageLabel = deutsch
+       }
 
 .. warning::
 
@@ -227,25 +230,27 @@ fieldDefinitions
     The string `###ALL_TABLES###` is replaced with a list of all table names an editor has access to.
 
 :aspect:`Example`
-    .. code-block:: typoscript
 
-        mod.web_info.fieldDefinitions {
-            0 {
-                # Basic settings
-                label = LLL:EXT:info/Resources/Private/Language/locallang_webinfo.xlf:pages_0
-                fields = title,uid,slug,alias,starttime,endtime,fe_group,target,url,shortcut,shortcut_mode
-            }
-            1 {
-                # Record overview
-                label = LLL:EXT:info/Resources/Private/Language/locallang_webinfo.xlf:pages_1
-                fields = title,uid,###ALL_TABLES###
-            }
-            2 {
-                # Cache and age
-                label = LLL:EXT:info/Resources/Private/Language/locallang_webinfo.xlf:pages_2
-                fields = title,uid,table_tt_content,table_fe_users
-            }
-        }
+    .. code-block:: typoscript
+       :caption: EXT:site_package/Configuration/page.tsconfig
+
+       mod.web_info.fieldDefinitions {
+           0 {
+               # Basic settings
+               label = LLL:EXT:info/Resources/Private/Language/locallang_webinfo.xlf:pages_0
+               fields = title,uid,slug,alias,starttime,endtime,fe_group,target,url,shortcut,shortcut_mode
+           }
+           1 {
+               # Record overview
+               label = LLL:EXT:info/Resources/Private/Language/locallang_webinfo.xlf:pages_1
+               fields = title,uid,###ALL_TABLES###
+           }
+           2 {
+               # Cache and age
+               label = LLL:EXT:info/Resources/Private/Language/locallang_webinfo.xlf:pages_2
+               fields = title,uid,table_tt_content,table_fe_users
+           }
+       }
 
 
 .. index::
@@ -278,6 +283,7 @@ menu.function
 
 :aspect:`Example`
     .. code-block:: typoscript
+       :caption: EXT:site_package/Configuration/page.tsconfig
 
         mod.web_info.menu.function {
             # Disable item "Page Tsconfig"
@@ -326,8 +332,9 @@ allowInconsistentLanguageHandling
     Allows to set TYPO3s page module back to inconsistent language mode
 
     .. code-block:: typoscript
+       :caption: EXT:site_package/Configuration/page.tsconfig
 
-        mod.web_layout.allowInconsistentLanguageHandling = 1
+       mod.web_layout.allowInconsistentLanguageHandling = 1
 
 
 .. index:: BackendLayouts
@@ -343,39 +350,40 @@ BackendLayouts
 
 :aspect:`Example`
     .. code-block:: typoscript
+       :caption: EXT:site_package/Configuration/page.tsconfig
 
-        mod.web_layout.BackendLayouts {
-            exampleKey {
-                title = Example
-                icon = EXT:example_extension/Resources/Public/Images/BackendLayouts/default.gif
-                config {
-                    backend_layout {
-                        colCount = 1
-                        rowCount = 2
-                        rows {
-                            1 {
-                                columns {
-                                    1 {
-                                        name = LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:colPos.I.3
-                                        colPos = 3
-                                        colspan = 1
-                                    }
-                                }
-                            }
-                            2 {
-                                columns {
-                                    1 {
-                                        name = Main
-                                        colPos = 0
-                                        colspan = 1
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
+       mod.web_layout.BackendLayouts {
+           exampleKey {
+               title = Example
+               icon = EXT:example_extension/Resources/Public/Images/BackendLayouts/default.gif
+               config {
+                   backend_layout {
+                       colCount = 1
+                       rowCount = 2
+                       rows {
+                           1 {
+                               columns {
+                                   1 {
+                                       name = LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:colPos.I.3
+                                       colPos = 3
+                                       colspan = 1
+                                   }
+                               }
+                           }
+                           2 {
+                               columns {
+                                   1 {
+                                       name = Main
+                                       colPos = 0
+                                       colspan = 1
+                                   }
+                               }
+                           }
+                       }
+                   }
+               }
+           }
+       }
 
 
 .. index::
@@ -459,6 +467,7 @@ hideRestrictedCols
     access to can be hidden:
 
     .. code-block:: typoscript
+       :caption: EXT:site_package/Configuration/page.tsconfig
 
         mod.web_layout.hideRestrictedCols = 1
 
@@ -490,10 +499,11 @@ localization.enableCopy
 
 :aspect:`Example`
     .. code-block:: typoscript
+       :caption: EXT:site_package/Configuration/page.tsconfig
 
-        mod.web_layout {
-            localization.enableCopy = 0
-        }
+       mod.web_layout {
+           localization.enableCopy = 0
+       }
 
 
 .. index::
@@ -515,10 +525,11 @@ localization.enableTranslate
 
 :aspect:`Example`
     .. code-block:: typoscript
+       :caption: EXT:site_package/Configuration/page.tsconfig
 
-        mod.web_layout {
-            localization.enableTranslate = 0
-        }
+       mod.web_layout {
+           localization.enableTranslate = 0
+       }
 
 
 .. index::
@@ -556,11 +567,12 @@ menu.functions
 
 :aspect:`Example`
     .. code-block:: typoscript
+       :caption: EXT:site_package/Configuration/page.tsconfig
 
-        # Disables "Languages" from function menu
-        mod.web_layout.menu.functions {
-            2 = 0
-        }
+       # Disables "Languages" from function menu
+       mod.web_layout.menu.functions {
+           2 = 0
+       }
 
 
 .. index::
@@ -598,27 +610,33 @@ preview
     The syntax is as follows:
 
     .. code-block:: typoscript
+       :caption: EXT:site_package/Configuration/page.tsconfig
 
-        mod.web_layout.tt_content.preview.[CTYPE].[list_type value] = EXT:site_mysite/Resources/Private/Templates/Preview/ExamplePlugin.html
+       mod.web_layout.tt_content.preview.[CTYPE].[list_type value] = EXT:site_mysite/Resources/Private/Templates/Preview/ExamplePlugin.html
 
     This way you can even switch between previews for your plugins by supplying `list` as CType.
 
     .. note::
 
        This only works, if there is no hook registered for this content type, you may want to check this
-       section in the "System > Configuration" module:
+       section in the :guilabel:`System > Configuration` module:
 
        .. code-block:: php
+          :caption: Search for registrations of this hook
 
           $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['cms/layout/class.tx_cms_layout.php']
               ['tt_content_drawItem']['content_element_xy'];
 
 :aspect:`Example`
-    .. code-block:: typoscript
 
-        mod.web_layout.tt_content.preview.custom_ce = EXT:site_mysite/Resources/Private/Templates/Preview/CustomCe.html
-        mod.web_layout.tt_content.preview.table = EXT:site_mysite/Resources/Private/Templates/Preview/Table.html
-        mod.web_layout.tt_content.preview.list.tx_news = EXT:site_mysite/Resources/Private/Templates/Preview/TxNews.html
+    .. code-block:: typoscript
+       :caption: EXT:site_package/Configuration/page.tsconfig
+
+       mod.web_layout.tt_content {
+           preview.custom_ce = EXT:site_mysite/Resources/Private/Templates/Preview/CustomCe.html
+           preview.table = EXT:site_mysite/Resources/Private/Templates/Preview/Table.html
+           preview.list.tx_news = EXT:site_mysite/Resources/Private/Templates/Preview/TxNews.html
+       }
 
 
 
@@ -657,11 +675,12 @@ allowedNewTables
 
 :aspect:`Example`
     .. code-block:: typoscript
+       :caption: EXT:site_package/Configuration/page.tsconfig
 
-        mod.web_list {
-            # Only pages and sys_category table elements will be linked to in the new record wizard
-            allowedNewTables = pages, sys_category
-        }
+       mod.web_list {
+           # Only pages and sys_category table elements will be linked to in the new record wizard
+           allowedNewTables = pages, sys_category
+       }
 
     .. figure:: /Images/ManualScreenshots/List/PageTsModWebListAllowedNewTables.png
         :alt: The New record screen after modifying the allowed elements
@@ -763,10 +782,11 @@ deniedNewTables
 
 :aspect:`Example`
     .. code-block:: typoscript
+       :caption: EXT:site_package/Configuration/page.tsconfig
 
-        mod.web_list {
-            deniedNewTables = sys_category, tt_content
-        }
+       mod.web_list {
+           deniedNewTables = sys_category, tt_content
+       }
 
 
 .. index:: disableSingleTableView
@@ -803,9 +823,10 @@ displayColumnSelector
 
 :aspect:`Example`
     .. code-block:: typoscript
+       :caption: EXT:site_package/Configuration/page.tsconfig
 
-      # disable the column selector completely
-      mod.web_list.displayColumnSelector = 0
+       # disable the column selector completely
+       mod.web_list.displayColumnSelector = 0
 
 .. index::
    enableClipBoard
@@ -886,10 +907,12 @@ hideTranslations
 
 :aspect:`Example`
     .. code-block:: typoscript
+       :caption: EXT:site_package/Configuration/page.tsconfig
 
-        mod.web_list.hideTranslations = *
+       mod.web_list.hideTranslations = *
 
     .. code-block:: typoscript
+       :caption: EXT:site_package/Configuration/page.tsconfig
 
        mod.web_list.hideTranslations = tt_content, tt_news
 
@@ -914,10 +937,11 @@ itemsLimitPerTable
 
 :aspect:`Example`
     .. code-block:: typoscript
+       :caption: EXT:site_package/Configuration/page.tsconfig
 
-        mod.web_list {
-           itemsLimitPerTable = 10
-        }
+       mod.web_list {
+          itemsLimitPerTable = 10
+       }
 
 .. index::
    itemsLimitSingleTable
@@ -939,10 +963,11 @@ itemsLimitSingleTable
 
 :aspect:`Example`
     .. code-block:: typoscript
+       :caption: EXT:site_package/Configuration/page.tsconfig
 
-        mod.web_list {
-           itemsLimitSingleTable = 10
-        }
+       mod.web_list {
+          itemsLimitSingleTable = 10
+       }
 
 
 .. index::
@@ -964,10 +989,11 @@ listOnlyInSingleTableView
 
 :aspect:`Example`
     .. code-block:: typoscript
+       :caption: EXT:site_package/Configuration/page.tsconfig
 
-        mod.web_list {
-            listOnlyInSingleTableView = 1
-        }
+       mod.web_list {
+           listOnlyInSingleTableView = 1
+       }
 
     The result will be that records from tables are only listed in the single-table mode:
 
@@ -996,9 +1022,10 @@ newContentElementWizard.override
 
 :aspect:`Example`
     .. code-block:: typoscript
+       :caption: EXT:site_package/Configuration/page.tsconfig
 
-        mod.newContentElementWizard.override = my_custom_module
-        mod.newContentElementWizard.override = my_module_route
+       mod.newContentElementWizard.override = my_custom_module
+       mod.newContentElementWizard.override = my_module_route
 
 
 .. index::
@@ -1034,10 +1061,11 @@ noCreateRecordsLink
 
 :aspect:`Example`
     .. code-block:: typoscript
+       :caption: EXT:site_package/Configuration/page.tsconfig
 
-        mod.web_list {
-           noCreateRecordsLink = 1
-        }
+       mod.web_list {
+          noCreateRecordsLink = 1
+       }
 
 
 .. index::
@@ -1110,8 +1138,9 @@ table.[tableName].hideTable
 
 :aspect:`Example`
     .. code-block:: typoscript
+       :caption: EXT:site_package/Configuration/page.tsconfig
 
-        mod.web_list.table.tt_content.hideTable = 1
+       mod.web_list.table.tt_content.hideTable = 1
 
 
 .. index::
@@ -1131,16 +1160,18 @@ table.[tableName].displayColumnSelector
 
 :aspect:`Example`
    .. code-block:: typoscript
+       :caption: EXT:site_package/Configuration/page.tsconfig
 
-      # disable the column selector for tt_content
-      mod.web_list.table.tt_content.displayColumnSelector = 0
+       # disable the column selector for tt_content
+       mod.web_list.table.tt_content.displayColumnSelector = 0
 
 
    .. code-block:: typoscript
+       :caption: EXT:site_package/Configuration/page.tsconfig
 
-      # Disable the column selector everywhere except for a specific table
-      mod.web_list.displayColumnSelector = 0
-      mod.web_list.table.sys_category.displayColumnSelector = 1
+       # Disable the column selector everywhere except for a specific table
+       mod.web_list.displayColumnSelector = 0
+       mod.web_list.table.sys_category.displayColumnSelector = 1
 
 
 .. index::
@@ -1180,15 +1211,16 @@ searchLevel.items
     Sets labels for each level label in the search level select box
 
     .. code-block:: typoscript
+       :caption: EXT:site_package/Configuration/page.tsconfig
 
-        mod.web_list.searchLevel.items {
-            -1 = EXT:core/Resources/Private/Language/locallang_core.xlf:labels.searchLevel.infinite
-            0 = EXT:core/Resources/Private/Language/locallang_core.xlf:labels.searchLevel.0
-            1 = EXT:core/Resources/Private/Language/locallang_core.xlf:labels.searchLevel.1
-            2 = EXT:core/Resources/Private/Language/locallang_core.xlf:labels.searchLevel.2
-            3 = EXT:core/Resources/Private/Language/locallang_core.xlf:labels.searchLevel.3
-            4 = EXT:core/Resources/Private/Language/locallang_core.xlf:labels.searchLevel.4
-        }
+       mod.web_list.searchLevel.items {
+           -1 = EXT:core/Resources/Private/Language/locallang_core.xlf:labels.searchLevel.infinite
+           0 = EXT:core/Resources/Private/Language/locallang_core.xlf:labels.searchLevel.0
+           1 = EXT:core/Resources/Private/Language/locallang_core.xlf:labels.searchLevel.1
+           2 = EXT:core/Resources/Private/Language/locallang_core.xlf:labels.searchLevel.2
+           3 = EXT:core/Resources/Private/Language/locallang_core.xlf:labels.searchLevel.3
+           4 = EXT:core/Resources/Private/Language/locallang_core.xlf:labels.searchLevel.4
+       }
 
 
 web_ts
@@ -1227,11 +1259,12 @@ menu.function
 
 :aspect:`Example`
     .. code-block:: typoscript
+       :caption: EXT:site_package/Configuration/page.tsconfig
 
-        # Disable the item "Template Analyzer"
-        mod.web_ts.menu.function {
-            TYPO3\CMS\Tstemplate\Controller\TemplateAnalyzerModuleFunctionController = 0
-        }
+       # Disable the item "Template Analyzer"
+       mod.web_ts.menu.function {
+           TYPO3\CMS\Tstemplate\Controller\TemplateAnalyzerModuleFunctionController = 0
+       }
 
 
 
@@ -1278,13 +1311,14 @@ previewFrameWidths
     loaded from an xlf file and the category 'desktop'.
 
     .. code-block:: typoscript
+       :caption: EXT:site_package/Configuration/page.tsconfig
 
-        mod.web_view.previewFrameWidths {
-            1024.label = LLL:EXT:viewpage/Resources/Private/Language/locallang.xlf:computer
-            1024.type = desktop
-            1024.width = 1024
-            1024.height = 768
-        }
+       mod.web_view.previewFrameWidths {
+           1024.label = LLL:EXT:viewpage/Resources/Private/Language/locallang.xlf:computer
+           1024.type = desktop
+           1024.width = 1024
+           1024.height = 768
+       }
 
     .. figure:: /Images/ManualScreenshots/View/WebViewTSConfigPreview.png
         :alt: Dropdown menu Width with added frame size called myPreview
@@ -1307,11 +1341,12 @@ type
 
 :aspect:`Example`
     .. code-block:: typoscript
+       :caption: EXT:site_package/Configuration/page.tsconfig
 
-        mod.web_view {
-            # Frontend link will be something like index.php?id=123&type=1
-            type = 1
-        }
+       mod.web_view {
+           # Frontend link will be something like index.php?id=123&type=1
+           type = 1
+       }
 
 
 .. index:: Wizards
@@ -1352,6 +1387,7 @@ newContentElement.wizardItems
         (string) Comma-separated list of items to show in the group. Use `*` to show all, example:
 
         .. code-block:: typoscript
+           :caption: EXT:site_package/Configuration/page.tsconfig
 
             # Hide bulletList
             mod.wizards.newContentElement.wizardItems.common.show := removeFromList(bullets)
@@ -1383,41 +1419,43 @@ newContentElement.wizardItems
     .. _pageexample1:
 
     .. code-block:: typoscript
+       :caption: EXT:site_package/Configuration/page.tsconfig
 
-        # Add a new element (header) to the "common" group
-        mod.wizards.newContentElement.wizardItems.common.elements.header {
-            iconIdentifier = content-header
-            title = Header
-            description = Adds a header element only
-            tt_content_defValues {
-                CType = header
-            }
-        }
-        mod.wizards.newContentElement.wizardItems.common.show := addToList(header)
+       # Add a new element (header) to the "common" group
+       mod.wizards.newContentElement.wizardItems.common.elements.header {
+           iconIdentifier = content-header
+           title = Header
+           description = Adds a header element only
+           tt_content_defValues {
+               CType = header
+           }
+       }
+       mod.wizards.newContentElement.wizardItems.common.show := addToList(header)
 
     .. _pageexample2:
 
     .. code-block:: typoscript
+       :caption: EXT:site_package/Configuration/page.tsconfig
 
-        # Create a new group and add a (pre-filled) element to it
-        mod.wizards.newContentElement.wizardItems.myGroup {
-            header = LLL:EXT:cms/layout/locallang.xlf:advancedFunctions
-            elements.customText {
-                iconIdentifier = content-text
-                title = Introductory text for national startpage
-                description = Use this element for all national startpages
-                tt_content_defValues {
-                    CType = text
-                    bodytext (
-                        <h2>Section Header</h2>
-                        <p class="bodytext">Lorem ipsum dolor sit amet, consectetur, sadipisci velit ...</p>
-                    )
-                    header = Section Header
-                    header_layout = 100
-                }
-            }
-        }
-        mod.wizards.newContentElement.wizardItems.myGroup.show = customText
+       # Create a new group and add a (pre-filled) element to it
+       mod.wizards.newContentElement.wizardItems.myGroup {
+           header = LLL:EXT:cms/layout/locallang.xlf:advancedFunctions
+           elements.customText {
+               iconIdentifier = content-text
+               title = Introductory text for national startpage
+               description = Use this element for all national startpages
+               tt_content_defValues {
+                   CType = text
+                   bodytext (
+                       <h2>Section Header</h2>
+                       <p class="bodytext">Lorem ipsum dolor sit amet, consectetur, sadipisci velit ...</p>
+                   )
+                   header = Section Header
+                   header_layout = 100
+               }
+           }
+       }
+       mod.wizards.newContentElement.wizardItems.myGroup.show = customText
 
     With the second example, the bottom of the new content element wizard shows:
 
@@ -1451,8 +1489,9 @@ newRecord.order
     elements), other groups follow unchanged:
 
     .. code-block:: typoscript
+       :caption: EXT:site_package/Configuration/page.tsconfig
 
-        mod.wizards.newRecord.order = tt_news
+       mod.wizards.newRecord.order = tt_news
 
     .. figure:: /Images/ManualScreenshots/List/NewRecordWizardNewOrder.png
         :alt: The position of News changed after modifying the New record screen
@@ -1487,11 +1526,12 @@ newRecord.pages
 
 :aspect:`Example`
     .. code-block:: typoscript
+       :caption: EXT:site_package/Configuration/page.tsconfig
 
-        mod.wizards.newRecord.pages.show {
-            # Hide the "Page (inside)" link.
-            pageInside = 0
-        }
+       mod.wizards.newRecord.pages.show {
+           # Hide the "Page (inside)" link.
+           pageInside = 0
+       }
 
     .. figure:: /Images/ManualScreenshots/List/PageTsModWizardsNewRecordHideInside.png
         :alt: The modified New record screen without Page (inside)
