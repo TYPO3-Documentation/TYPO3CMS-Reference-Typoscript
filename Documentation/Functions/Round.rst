@@ -82,7 +82,9 @@ round
 Examples
 """"""""
 
-::
+
+.. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
    lib.number = TEXT
    lib.number {
@@ -92,5 +94,5 @@ Examples
        stdWrap.round.decimals = 2
    }
 
-This returns 3.14.
+This returns :code:`3.14`.
 

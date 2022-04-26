@@ -237,9 +237,11 @@ fixAttrib.[attribute].prefixRelPathWith
    will be prefixed the attribute.
 
 :aspect:`Example`
-   ::
 
-      ...fixAttrib.src.prefixRelPathWith = https://example.org/typo3/32/dummy/
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+      lib.parser.fixAttrib.src.prefixRelPathWith = https://example.org/typo3/32/dummy/
 
 
 .. index:: HTMLparser_tags; fixAttrib.[attribute].userFunc
@@ -259,9 +261,11 @@ fixAttrib.[attribute].userFunc
    of this function will be used as the new tag value.
 
 :aspect:`Example`
-   ::
 
-      ...fixAttrib.href.userFunc = \Vendor\ExtName\ClassName->function
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+      lib.parser.fixAttrib.href.userFunc = \Vendor\ExtName\ClassName->function
 
    Two parameters are passed to the function:
 
@@ -271,9 +275,12 @@ fixAttrib.[attribute].userFunc
 
    By default the first parameter is the value of the processed tag.
    This changes when you pass additional configuration options to the
-   user function::
+   user function:
 
-      ...fixAttrib.href.userFunc.myCustomParm = myCustomValue
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+      lib.parser.fixAttrib.href.userFunc.myCustomParm = myCustomValue
 
    In that case the first parameter passed to the user function will
    be an array containing these values:

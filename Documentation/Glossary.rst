@@ -33,7 +33,10 @@ To reuse the OOP analogy and compare with PHP:
 | text = TEXT            | $text = new Text()     |
 +------------------------+------------------------+
 
-Example 1 (assign value to property in object1::
+Example 1 (assign value to property in object1:
+
+.. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
    object1 = OBJECTTYPE1
    object1 {
@@ -41,7 +44,10 @@ Example 1 (assign value to property in object1::
    }
 
 
-Example 2::
+Example 2:
+
+.. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
    # here, object1 is defined as type OBJECTTYPE1
    #   "OBJECTTYPE1" is an object type, so is OTHER

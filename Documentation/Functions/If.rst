@@ -57,7 +57,9 @@ isNull
    features are available below this property.
 
 :aspect:`Example`
-   ::
+
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
       page.10 = COA_INT
       page.10.10 = TEXT
@@ -167,7 +169,9 @@ bitAnd
 
 :aspect:`Example`
    TYPO3 uses bits to store radio and checkboxes via TCA, `bitAnd` can be used to test against these fields.
-   ::
+
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
       hideDefaultLanguageOfPage = TEXT
       hideDefaultLanguageOfPage {
@@ -199,7 +203,9 @@ equals
    Returns true, if the content is equal to :typoscript:`value`.
 
 :aspect:`Example`
-   ::
+
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
       if.equals = POST
       if.value.data = GETENV:REQUEST_METHOD
@@ -224,7 +230,9 @@ isInList
    **Note:** The list in :typoscript:`value` may not have spaces between elements!
 
 :aspect:`Example`
-   ::
+
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
       if.isInList.field = uid
       if.value = 1,2,34,50,87
@@ -293,20 +301,28 @@ then the result is true. If you set :typoscript:`isTrue.field = header`, the
 function returns true if the field "header" in :php:`$cObj->data` is set!
 
 If you want to compare values, you must load a base-value in the
-:typoscript:`value`-property. Example::
+:typoscript:`value`-property. Example:
 
-   .value = 10
-   .isGreaterThan = 11
+.. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+   page.10.value = 10
+   page.10.isGreaterThan = 11
 
 This would return true because the value of :typoscript:`isGreaterThan` is
 greater than 10, which is the base-value.
 
-More complex is this::
+More complex is this:
 
-   .value = 10
-   .isGreaterThan = 11
-   .isTrue.field = header
-   .negate = 1
+.. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+   page.10 {
+       value = 10
+       isGreaterThan = 11
+       isTrue.field = header
+       negate = 1
+   }
 
 There are two conditions - :typoscript:`isGreaterThan` and :typoscript:`isTrue`.
 If they are both true, the total is true (both are connected with an AND).
@@ -320,14 +336,17 @@ Examples
 ========
 
 This is a GIFBUILDER object that will write "NEW" on a menu-item if
-the field "newUntil" has a date less than the current date! ::
+the field "newUntil" has a date less than the current date!
 
-     30 = TEXT
-     30.text = NEW!
-     30.offset = 10,10
-     30.if {
-         value.data = date: U
-         isLessThan.field = newUntil
-         negate = 1
-     }
+.. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+   30 = TEXT
+   30.text = NEW!
+   30.offset = 10,10
+   30.if {
+       value.data = date: U
+       isLessThan.field = newUntil
+       negate = 1
+   }
 

@@ -135,7 +135,10 @@ Example:
 If in this example the field "header" turns out not to be set ("false"), an
 empty string is returned. Otherwise TYPO3 chooses between two different
 renderings of some content depending on whether the field "layout" is "1"
-or not ("default"). The result is in either case wrapped with "\|<br>".  ::
+or not ("default"). The result is in either case wrapped with "\|<br>".
+
+.. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
    stuff = CASE
    stuff.if.isTrue.field = header

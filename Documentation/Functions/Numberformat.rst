@@ -77,7 +77,9 @@ thousands\_sep
 Examples
 --------
 
-::
+
+.. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
    lib.myPrice = TEXT
    lib.myPrice {

@@ -131,7 +131,10 @@ Example 1
 ---------
 
 This example shows how to include your own PHP script and how to use it
-from TypoScript. Use this TypoScript configuration::
+from TypoScript. Use this TypoScript configuration:
+
+.. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
    page = PAGE
    page.10 = USER_INT
@@ -170,7 +173,10 @@ Example 2
 Now let us have a look at another example:
 
 We want to display all content element headers of a page in reversed
-order. To do that we use the following TypoScript::
+order. To do that we use the following TypoScript:
+
+.. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
    page = PAGE
    page.typeNum = 0
@@ -249,7 +255,10 @@ Example 4
 ---------
 
 PHP has a function :php:`gethostname()` to "get the standard host name for
-the local machine". You can make it available like this::
+the local machine". You can make it available like this:
+
+.. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
    page.20 = USER_INT
    page.20 {

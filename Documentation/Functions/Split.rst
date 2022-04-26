@@ -87,7 +87,9 @@ returnCount
    and stops processing of the split function.
 
 :aspect:`Example`
-   ::
+
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
       # returns 9
       1 = TEXT
@@ -130,13 +132,17 @@ cObjNum
    when the objects are called. See :ref:`stdwrap` / current.
 
 :aspect:`Example for stdWrap`
-   ::
+
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
       1.current = 1
       1.wrap = <b> | </b>
 
 :aspect:`Example for cObject array`
-   ::
+
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
       1 {
             10 = TEXT

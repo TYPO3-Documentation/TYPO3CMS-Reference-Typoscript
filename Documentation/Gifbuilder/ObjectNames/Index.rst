@@ -675,7 +675,10 @@ Renders a text.
 
          - The color override works only without "niceText".
 
-         **Example:** ::
+         **Example:**
+
+         .. code-block:: typoscript
+            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
             10.splitRendering.compX = 2
             10.splitRendering.compY = -2
@@ -1053,7 +1056,10 @@ Prints a filled box.
 
          **Example:**
 
-         Horizontally centered, vertically at the bottom::
+         Horizontally centered, vertically at the bottom:
+
+         .. code-block:: typoscript
+            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
             align = c, b
 
@@ -1115,7 +1121,8 @@ Prints a filled ellipse.
 Example:
 --------
 
-::
+.. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
    file = GIFBUILDER
    file {
@@ -1228,9 +1235,10 @@ The EFFECT object only has one property: "value". stdWrap is available for
 Syntax:
 -------
 
-::
+.. code-block:: none
+   :caption: Syntax
 
-   .value = [Property] = [value] | [Property] = [value]
+   20.value = <property> = <value> | <property> = <value>
 
 All effects are defined as properties or property-value pairs inside
 "value". Multiple properties or property-value pairs are separated by
@@ -1239,7 +1247,8 @@ All effects are defined as properties or property-value pairs inside
 Example:
 --------
 
-::
+.. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
    lib.image = IMAGE
    lib.image {
@@ -1355,7 +1364,10 @@ Example:
 
          Maximum value for amplitude and length is 100.
 
-         **Example:** ::
+         **Example:**
+
+         .. code-block:: typoscript
+            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
             20 = EFFECT
             20.value = wave=1,20
@@ -1387,7 +1399,10 @@ Example:
 
          **Example:**
 
-         This gives the image a slight wave and renders it in gray. ::
+         This gives the image a slight wave and renders it in gray.
+
+         .. code-block:: typoscript
+            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
             20 = EFFECT
             20.value = wave=1,20 | gray
@@ -1692,7 +1707,8 @@ have a look at the EFFECT object.
 Example:
 --------
 
-::
+.. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
    20 = ADJUST
    20.value = inputLevels = 13, 230
@@ -1721,7 +1737,10 @@ Example:
 
          This example will cause the tonal range of the resulting image to
          begin at 50 of the original (which is set as 0 for the new image) and
-         to end at 190 of the original (which is set as 255 for the new image). ::
+         to end at 190 of the original (which is set as 255 for the new image).
+
+         .. code-block:: typoscript
+            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
             20 = ADJUST
             20.value = inputLevels = 50, 190
@@ -1750,7 +1769,10 @@ Example:
 
          This example will cause the resulting image to have a tonal range,
          where there is no pixel with a tone below 50 and no pixel with a tone
-         above 190 in the image. ::
+         above 190 in the image.
+
+         .. code-block:: typoscript
+            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
             20 = ADJUST
             20.value = outputLevels = 50, 190

@@ -8,7 +8,9 @@ makelinks
 
 makelinks substitutes all appearances of web addresses or mail links
 with a real link-tag. Web addresses and mail links must be contained in
-the text in the following form::
+the text in the following form:
+
+.. code-block:: none
 
    https://example.org
 
@@ -80,12 +82,15 @@ http.keep
 
 :aspect:`Example`
    With the URL :samp:`https://example.org/test/doc.php?id=3` in our text we will
-   get the following results::
+   get the following results:
 
-      http.keep = "":                   example.org
-      http.keep = "scheme":             https://example.org
-      http.keep = "scheme,path":        https://example.org/test/doc.php
-      http.keep = "scheme,path,query":  https://example.org/test/doc.php?id=3
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+      http.keep = "":                   # example.org
+      http.keep = "scheme":             # https://example.org
+      http.keep = "scheme,path":        # https://example.org/test/doc.php
+      http.keep = "scheme,path,query":  # https://example.org/test/doc.php?id=3
 
 .. _makelinks-http-ATagParams:
 
@@ -102,7 +107,9 @@ http.ATagParams
    Additional parameters
 
 :aspect:`Example`
-   ::
+
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
       http.ATagParams = class="board"
 
@@ -153,6 +160,8 @@ mailto.ATagParams
    Additional parameters
 
 :aspect:`Example`
-   ::
+
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
       mailto.ATagParams = class="board"

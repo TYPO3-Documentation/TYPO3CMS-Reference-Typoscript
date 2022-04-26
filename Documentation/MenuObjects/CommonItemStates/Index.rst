@@ -29,7 +29,10 @@ These properties are all the item states used by TMENU.
          it "1". Otherwise with no properties setting "NO=1" will render the
          menu anyways (for TMENU this may make sense).
 
-         The simplest menu TYPO3 can generate is then::
+         The simplest menu TYPO3 can generate is then:
+
+         .. code-block:: typoscript
+            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
             page.20 = HMENU
             page.20.1 = TMENU

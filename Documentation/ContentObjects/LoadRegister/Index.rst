@@ -9,7 +9,7 @@ LOAD\_REGISTER
 ==============
 
 This provides a way to load the array $GLOBALS['TSFE']->register[]
-with values. It does not return anything! 
+with values. It does not return anything!
 
 The register is working like a stack: With each call new content can be
 put on top of the stack. :ref:`RESTORE_REGISTER <cobj-restore-register>`
@@ -34,7 +34,10 @@ they used to be. In the Core they are not being used anymore.
    Description
          **Example:**
 
-         This sets "contentWidth", "label" and "head". ::
+         This sets "contentWidth", "label" and "head".
+
+         .. code-block:: typoscript
+            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
             page.27 = LOAD_REGISTER
             page.27 {
@@ -57,35 +60,36 @@ they used to be. In the Core they are not being used anymore.
 Example:
 ========
 
-::
+.. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-     1 = LOAD_REGISTER
-     1.param.cObject = TEXT
-     1.param.cObject.stdWrap.data = GP:the_id
-     # To avoid SQL injections we use intval - so the parameter
-     # will always be an integer.
-     1.param.cObject.stdWrap.intval = 1
+   1 = LOAD_REGISTER
+   1.param.cObject = TEXT
+   1.param.cObject.stdWrap.data = GP:the_id
+   # To avoid SQL injections we use intval - so the parameter
+   # will always be an integer.
+   1.param.cObject.stdWrap.intval = 1
 
-     10 = CONTENT
-     10.table = tx_my_table
-     10.select {
-       pidInList = this
-       orderBy = sorting
-       # Now we use the registered parameter
-       where = uid = {REGISTER:param}
-       where.insertData = 1
-     }
-     10.renderObj = COA
-     10.renderObj {
-       10 = TEXT
-       10.stdWrap.field = tx_my_text_field
-     }
+   10 = CONTENT
+   10.table = tx_my_table
+   10.select {
+     pidInList = this
+     orderBy = sorting
+     # Now we use the registered parameter
+     where = uid = {REGISTER:param}
+     where.insertData = 1
+   }
+   10.renderObj = COA
+   10.renderObj {
+     10 = TEXT
+     10.stdWrap.field = tx_my_text_field
+   }
 
 In this example we first load a special value, which is given as a
 GET/POST parameter, into the register. Then we use a
 :ref:`CONTENT object <cobj-content>` to render content based on this
 value. This CONTENT object loads data from a table "tx_my_table" and looks up
-the entry using the value from the register as a unique id. The field "tx_my_text_field" 
+the entry using the value from the register as a unique id. The field "tx_my_text_field"
 of this record will be rendered as output.
 
 For an example in combination with :ref:`RESTORE_REGISTER <cobj-restore-register>`
