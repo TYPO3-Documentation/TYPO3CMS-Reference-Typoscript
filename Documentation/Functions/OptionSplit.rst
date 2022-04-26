@@ -29,7 +29,10 @@ enabled for MANY properties. This make :typoscript:`optionSplit` really powerful
 
 So let's take an example from menu building.
 As a result all A-tags generated from this definition will have the `class` attribute
-set like this: :html:`<a class="z" ... >`::
+set like this: :html:`<a class="z" ... >`:
+
+.. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
    topmenu.1.NO {
        ATagParams = class="z"
@@ -84,13 +87,16 @@ Mainparts
 :typoscript:`optionSplit` uses the string `|*|` to split the total string into **mainparts**.
 Up to **three** mainparts will be used. If there are more they
 will be ignored.
-On the input side we may have for example::
+On the input side we may have for example:
 
-   wrap =                      We have: M=0  items; 1  mainpart : A      ; mainpart is empty
-   wrap = A                    We have: M=1  items; 1  mainpart : A      ;
-   wrap = A |*| R              We have: M=2  items; 2  mainparts: A, R   ;
-   wrap = A |*| R |*| Z        We have: M=3  items; 3  mainparts: A, R, Z;
-   wrap = A |*| R |*| Z |*| X  We have: M=3! items; 3! mainparts: A, R, Z; only two delimiters are important
+.. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+   wrap =                      # We have: M=0  items; 1  mainpart : A      ; mainpart is empty
+   wrap = A                    # We have: M=1  items; 1  mainpart : A      ;
+   wrap = A |*| R              # We have: M=2  items; 2  mainparts: A, R   ;
+   wrap = A |*| R |*| Z        # We have: M=3  items; 3  mainparts: A, R, Z;
+   wrap = A |*| R |*| Z |*| X  # We have: M=3! items; 3! mainparts: A, R, Z; only two delimiters are important
 
 
 Our terminology:
@@ -113,13 +119,16 @@ Subparts
 Each mainpart may be split further into **subparts**. The delimiter for splitting a mainpart into
 subparts is `||`.
 
-Example::
+Example:
 
-   wrap = a                       We have: M=1  item,  1 mainpart,  1 subparts
-   wrap = a || b                  We have: M=2  items, 1 mainpart,  2 subparts
-   wrap = a || b || c             We have: M=3  items, 1 mainpart,  3 subparts
-   wrap = a || b || c || d        We have: M=4  items, 1 mainpart,  4 subparts
-   wrap = a || b || c || d || ... We have: M>4  items, 1 mainpart, >4 subparts
+.. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+   wrap = a                       # We have: M=1  item,  1 mainpart,  1 subparts
+   wrap = a || b                  # We have: M=2  items, 1 mainpart,  2 subparts
+   wrap = a || b || c             # We have: M=3  items, 1 mainpart,  3 subparts
+   wrap = a || b || c || d        # We have: M=4  items, 1 mainpart,  4 subparts
+   wrap = a || b || c || d || ... # We have: M>4  items, 1 mainpart, >4 subparts
 
 **Rule:** There can be any number of subparts.
 
@@ -135,7 +144,10 @@ Three by three items
 --------------------
 
 We have all three mainparts A, R and Z. And each mainpart is split into three
-subparts::
+subparts:
+
+.. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
    wrap = a || b || c  |*|  r || s || t  |*|  x || y || z
 
@@ -145,33 +157,39 @@ Mainpart R (the second one) consists of the three subparts r, s, t.
 
 Mainpart Z (the third one) consists of the three subparts x, y, z.
 
-And this is what happens::
+And this is what happens:
 
-   input:
-      wrap = a || b || c  |*|  r || s || t  |*|  x || y || z
 
-   output:
-       N     output sequence
-       1     z
-       2     y z
-       3     x y z
-       4     a x y z
-       5     a b x y z
-       6     a b c x y z
-       7     a b c r x y z
-       8     a b c r s x y z
-       9     a b c r s t x y z
-      10     a b c r s t r x y z
-      11     a b c r s t r s x y z
-      12     a b c r s t r s t x y z
-      13     a b c r s t r s t r x y z
-      14     a b c r s t r s t r s x y z
-      15     a b c r s t r s t r s t x y z
-      16     a b c r s t r s t r s t r x y z
-      17     a b c r s t r s t r s t r s x y z
-      18     a b c r s t r s t r s t r s t x y z
-      19     a b c r s t r s t r s t r s t r x y z
-      20     a b c r s t r s t r s t r s t r s x y z
+.. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+   wrap = a || b || c  |*|  r || s || t  |*|  x || y || z
+
+
+.. code-block:: none
+   :caption: Output
+
+    N     output sequence
+    1     z
+    2     y z
+    3     x y z
+    4     a x y z
+    5     a b x y z
+    6     a b c x y z
+    7     a b c r x y z
+    8     a b c r s x y z
+    9     a b c r s t x y z
+   10     a b c r s t r x y z
+   11     a b c r s t r s x y z
+   12     a b c r s t r s t x y z
+   13     a b c r s t r s t r x y z
+   14     a b c r s t r s t r s x y z
+   15     a b c r s t r s t r s t x y z
+   16     a b c r s t r s t r s t r x y z
+   17     a b c r s t r s t r s t r s x y z
+   18     a b c r s t r s t r s t r s t x y z
+   19     a b c r s t r s t r s t r s t r x y z
+   20     a b c r s t r s t r s t r s t r s x y z
 
 
 The optionSplit ruleset
@@ -204,7 +222,9 @@ More Examples
 Three by two items
 ------------------
 
-Rules 1 to 7 define this behavior::
+Rules 1 to 7 define this behavior:
+
+.. code-block:: none
 
    input:
       wrap = a || b  |*|  r || s  |*|  y || z
@@ -236,7 +256,9 @@ Rules 1 to 7 define this behavior::
 Three by one items
 ------------------
 
-And again::
+And again:
+
+.. code-block:: none
 
    input:
       wrap = a   |*|  r   |*|  z
@@ -272,7 +294,9 @@ Two by three items
 Now the mainpart delimiter `|*|` occurs only once. So we are
 dealing with the first two mainparts A and R.
 
-According to rules 1 to 7 we get::
+According to rules 1 to 7 we get:
+
+.. code-block:: none
 
    input:
       wrap = a || b || c  |*|  r || s || t
@@ -304,7 +328,9 @@ According to rules 1 to 7 we get::
 Two by two items
 ----------------
 
-According to rules 1 to 7 we get::
+According to rules 1 to 7 we get:
+
+.. code-block:: none
 
    input:
       wrap = a || b  |*|  r || s
@@ -336,7 +362,9 @@ According to rules 1 to 7 we get::
 Two by one items
 ----------------
 
-According to rules 1 to 7 we get::
+According to rules 1 to 7 we get:
+
+.. code-block:: none
 
    input:
       wrap = a  |*|  r
@@ -370,7 +398,9 @@ One by one items
 ----------------
 
 With no delimiters at all we still have - implicitly - one mainpart
-A with one subpart a::
+A with one subpart a:
+
+.. code-block:: none
 
    input:
       wrap = a
@@ -403,7 +433,9 @@ A with one subpart a::
 One by two items
 ----------------
 
-One mainpart A with two subparts a and b::
+One mainpart A with two subparts a and b:
+
+.. code-block:: none
 
    input:
       wrap = a || b
@@ -435,7 +467,9 @@ One mainpart A with two subparts a and b::
 One by three items
 ------------------
 
-More::
+More:
+
+.. code-block:: none
 
    input:
       wrap = a || b || c
@@ -466,7 +500,9 @@ More::
 One by four items
 -----------------
 
-More::
+More:
+
+.. code-block:: none
 
    input:
       wrap = a || b || c || d
@@ -506,7 +542,9 @@ Three items A, no item R, three items Z
 In this situation with still have **three** mainparts. We can tell this from the fact that we have
 TWO occurrences of the mainpart delimiter. And the second mainpart R is really empty.
 
-As result we get::
+As result we get:
+
+.. code-block:: none
 
    input:
       wrap = a || b || c  |*||*|  x || y || z
@@ -543,7 +581,9 @@ As result we get::
 One item A, no item R, one items Z
 -----------------------------------
 
-With rules 1 to 8 we get::
+With rules 1 to 8 we get:
+
+.. code-block:: none
 
    input:
       wrap = a  |*||*|  z
@@ -581,7 +621,9 @@ One item A, one (unexpected!?) item R, one item Z
    To really make mainpart R empty there must not be a space
    in the middle of `|*||*|`!
 
-What happens if there IS a space? Normal behavior of a three by one case! ::
+What happens if there IS a space? Normal behavior of a three by one case! :
+
+.. code-block:: none
 
    input:
       wrap = a  |*| |*|  z
@@ -613,7 +655,7 @@ What happens if there IS a space? Normal behavior of a three by one case! ::
 More
 ----
 
-::
+.. code-block:: none
 
    input:
       wrap = |*||*|  z
@@ -642,7 +684,7 @@ More
       20     z z z z z z z z z z z z z z z z z z z z
 
 
-::
+.. code-block:: none
 
    input:
       wrap = |*| |*|  z
@@ -670,7 +712,7 @@ More
       19                       z
       20                        z
 
-::
+.. code-block:: none
 
    input:
       wrap = |*| r || s || t  |*|
@@ -699,7 +741,7 @@ More
       20     r s t r s t r s t r s t r s t r s t r s
 
 
-::
+.. code-block:: none
 
    input:
       wrap = a || b || c  |*||*|
@@ -727,7 +769,8 @@ More
       19     a b c c c c c c c c c c c c c c c c c
       20     a b c c c c c c c c c c c c c c c c c c
 
-::
+
+.. code-block:: none
 
    input:
       wrap = |*||*|  x || y || z
@@ -755,7 +798,8 @@ More
       19     x x x x x x x x x x x x x x x x x y z
       20     x x x x x x x x x x x x x x x x x x y z
 
-::
+
+.. code-block:: none
 
    input:
       wrap = a   |*|||s|*|  z
@@ -784,7 +828,8 @@ More
       20     a  s  s  s  s  s  s  s  s  s z
 
 
-::
+
+.. code-block:: none
 
    input:
       wrap = a   |*|r|||*|  z
@@ -812,7 +857,8 @@ More
       19     a r  r  r  r  r  r  r  r  r z
       20     a r  r  r  r  r  r  r  r  r  z
 
-::
+
+.. code-block:: none
 
    input:
       wrap = a   |*|r|||||*|  z
@@ -841,7 +887,8 @@ More
       20     a r   r   r   r   r   r   z
 
 
-::
+
+.. code-block:: none
 
    input:
       wrap = a   |*|r|||||||*|  z
@@ -871,15 +918,11 @@ More
 
 
 
-
-
-
 Test Code 1 (TypoScript)
 ========================
 
-.. highlight:: typoscript
-
-Constants::
+.. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/TypoScript/constants.typoscript
 
    os_1 = a
    os_2 = a || b || c
@@ -895,8 +938,8 @@ Constants::
    os5 = a||b|*||*|d||e
    os6 = a||b|*|c|*|d||e
 
-
-Setup::
+.. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
    temp.marray = HMENU
    temp.marray {
@@ -1187,9 +1230,8 @@ Setup::
 Test Code 1 Result
 ==================
 
-.. highlight:: none
-
-output::
+.. code-block:: none
+   :caption: Output
 
     optionsplit       1      2        3          4            5              6                7                  8                    9
    a                 [a_]  [a_a_]  [a_a_a_]  [a_a_a_a_]  [a_a_a_a_a_]  [a_a_a_a_a_a_]  [a_a_a_a_a_a_a_]  [a_a_a_a_a_a_a_a_]  [a_a_a_a_a_a_a_a_a_]
@@ -1215,10 +1257,8 @@ Test Code 2 (TypoScript)
 
 This is the code that was used to produce many of the above examples.
 
-
-.. highlight:: typoscript
-
-Constants::
+.. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/TypoScript/constants.typoscript
 
    os1 = a
    os2 = a||b||c
@@ -1279,8 +1319,8 @@ Constants::
    os6 = a   |*|r|||||*|  z
    os6 = a   |*|r|||||||*|  z
 
-
-Setup::
+.. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
    lib.marray = HMENU
    lib.marray {
@@ -1421,9 +1461,9 @@ Setup::
 Test Code 2 Result
 ==================
 
-.. highlight:: none
 
-output::
+.. code-block:: none
+   :caption: Result
 
    input:
       wrap = a   |*|r|||||||*|  z

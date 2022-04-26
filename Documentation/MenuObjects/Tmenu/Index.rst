@@ -94,7 +94,10 @@ TMENU
    Description
          Wraps the whole block of sub items.
 
-         **Example:** ::
+         **Example:** :
+
+         .. code-block:: typoscript
+            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
             2 = TMENU
             2 {

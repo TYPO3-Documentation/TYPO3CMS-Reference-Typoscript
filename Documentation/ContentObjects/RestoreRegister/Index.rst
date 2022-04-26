@@ -26,7 +26,10 @@ Example:
 
 The following example shows how LOAD_REGISTER and RESTORE_REGISTER can
 be used to load values into the register and to restore previous values
-again. ::
+again.
+
+.. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
      # Put first block into the register
      10 = LOAD_REGISTER

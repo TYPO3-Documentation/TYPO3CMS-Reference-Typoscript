@@ -55,7 +55,8 @@ different objects.
 Examples:
 =========
 
-::
+.. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
    10 = TEXT
    10.value = This is a text in uppercase
@@ -65,7 +66,8 @@ The above example uses the stdWrap property "case". It returns "THIS
 IS A TEXT IN UPPERCASE".
 
 
-::
+.. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
    10 = TEXT
    10.value.field = title
@@ -76,7 +78,10 @@ stored in the database field "title"). The header is then wrapped in
 <strong> tags, before it is returned.
 
 
-Now let us have a look at an extract from a more complex example::
+Now let us have a look at an extract from a more complex example:
+
+.. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
    10 = TEXT
    10.value.field = bodytext
@@ -88,7 +93,10 @@ The above example returns the content, which was found in the field
 shall be the current record from the database table tt_content. This
 is useful inside :ref:`COA <cobj-coa>` objects.
 
-Here is the same example in its context::
+Here is the same example in its context:
+
+.. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
    10 = CONTENT
    10 {

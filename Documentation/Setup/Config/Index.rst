@@ -140,17 +140,26 @@ absRefPrefix
          from outside.
 
    Examples
-         1. Prefixing all links with a "/" results in absolute link paths::
+         1. Prefixing all links with a "/" results in absolute link paths:
 
-              config.absRefPrefix = /
+            .. code-block:: typoscript
+               :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-         2. Prefixing all links with the path to a subdirectory::
+               config.absRefPrefix = /
 
-              config.absRefPrefix = /some-subsite/
+         2. Prefixing all links with the path to a subdirectory:
 
-         3. Prefixing all links with a URI scheme::
+            .. code-block:: typoscript
+               :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-              config.absRefPrefix = https://example.org/
+               config.absRefPrefix = /some-subsite/
+
+         3. Prefixing all links with a URI scheme:
+
+            .. code-block:: typoscript
+               :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+               config.absRefPrefix = https://example.org/
 
 
 .. index:: config; additionalHeaders
@@ -186,7 +195,8 @@ additionalHeaders
          header, if enabled via :ref:`setup-config-enablecontentlengthheader`.
 
    Example
-         ::
+         .. code-block:: typoscript
+            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
             config.additionalHeaders {
                 10 {
@@ -203,7 +213,10 @@ additionalHeaders
                 20.header = Cache-control: Private
             }
 
-         Set HTTP content type for a page type offering json::
+         Set HTTP content type for a page type offering json:
+
+         .. code-block:: typoscript
+            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
             json = PAGE
             json {
@@ -279,7 +292,8 @@ baseURL
          of the string.
 
    Example
-         ::
+         .. code-block:: typoscript
+            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
             config.baseURL = https://example.org/sub_dir/
 
@@ -309,7 +323,10 @@ cache
          start/stop date already passed by.
 
          To include records of type <table name> on page <pid> into the cache
-         lifetime calculation of page <page-id>, add the following TypoScript::
+         lifetime calculation of page <page-id>, add the following TypoScript:
+
+         .. code-block:: typoscript
+            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
             config.cache.<page-id> = <table name>:<storage-pid>
 
@@ -324,26 +341,36 @@ cache
 
    Examples
          This includes the fe\_users records on page 2 in the cache lifetime
-         calculation for page 10::
+         calculation for page 10:
+
+         .. code-block:: typoscript
+            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
             config.cache.10 = fe_users:2
 
          This includes records from multiple sources, namely the fe\_users
-         records on page 2 and the tt\_news records on page 11::
+         records on page 2 and the tt\_news records on page 11:
+
+         .. code-block:: typoscript
+            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
             config.cache.10 = fe_users:2,tt_news:11
 
          Consider the fe\_user records on the storage page 2 for the cache lifetime of all
-         pages::
+         pages:
+
+         .. code-block:: typoscript
+            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
             config.cache.all = fe_users:2
 
          Each pages cache lifetime is influenced if fe_users stored on the page itself get
-         changed::
+         changed:
+
+         .. code-block:: typoscript
+            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
             config.cache.all = fe_users:current
-
-
 
 
 .. index:: config; cache_clearAtMidnight
@@ -436,7 +463,8 @@ compressCss
                'Classes/CssCompressHandler.php:Vendor\MyExt\CssCompressHandler->compressCss';
 
    Example
-         ::
+         .. code-block:: typoscript
+            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
             config.compressCss = 1
 
@@ -484,7 +512,8 @@ compressJs
                'Classes/JsCompressHandler.php:Vendor\MyExt\JsCompressHandler->compressJs';
 
    Example
-         ::
+         .. code-block:: typoscript
+            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
             config.compressJs = 1
 
@@ -524,7 +553,8 @@ concatenateCss
                'Classes/CssCompressHandler.php:Vendor\MyExt\CssCompressHandler->compressCss';
 
    Example
-         ::
+         .. code-block:: typoscript
+            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
             config.concatenateCss = 1
 
@@ -566,7 +596,8 @@ concatenateJs
                'Classes/JsConcatenateHandler.php:Vendor\MyExt\JsConcatenateHandler->concatenateJs';
 
    Example
-         ::
+         .. code-block:: typoscript
+            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
             config.concatenateJs = 1
 
@@ -616,7 +647,8 @@ contentObjectExceptionHandler
             but the cache must be cleared for this page.
 
    Examples
-         ::
+         .. code-block:: typoscript
+            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
             # Use 1 for the default exception handler (enabled by default in production context)
             config.contentObjectExceptionHandler = 1
@@ -697,7 +729,10 @@ disableAllHeaderCode
 
 
    Example
-         A page type providing JSON::
+         A page type providing JSON:
+
+         .. code-block:: typoscript
+            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
             json = PAGE
             json {
@@ -992,7 +1027,10 @@ doctypeSwitch
 
          If you want to check the compatibility-mode of your webbrowser you can
          do so with a simple JavaScript that can be inserted on a TYPO3 page
-         like this::
+         like this:
+
+         .. code-block:: typoscript
+            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
             page.headerData.1 = TEXT
             page.headerData.1.value = <script>alert(document.compatMode);</script>
@@ -1141,23 +1179,28 @@ htmlTag.attributes
          a more flexible API to add attributes.
 
    Example
-         ::
+
+         .. code-block:: typoscript
+            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
             config.htmlTag.attributes.class = no-js
 
          Results in :
 
          .. code-block:: html
+            :caption: Example output
 
             <html lang="fr" class="no-js">
 
-         ::
+         .. code-block:: typoscript
+            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
             config.htmlTag.attributes.amp =
 
          Results in :
 
          .. code-block:: html
+            :caption: Example output
 
             <html lang="fr" amp>
 
@@ -1195,7 +1238,9 @@ htmlTag\_setParams
          any event.
 
    Example
-         ::
+
+         .. code-block:: typoscript
+            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
             config.htmlTag_setParams = xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US"
 
@@ -1340,7 +1385,8 @@ inlineStyle2TempFile
          The file hash is based solely on the content of the styles.
 
    Example
-         ::
+         .. code-block:: typoscript
+            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
             config.inlineStyle2TempFile = 0
 
@@ -1408,12 +1454,17 @@ linkVars
             list, as this can result in unexpected behavior.
 
    Examples
-         ::
+
+         .. code-block:: typoscript
+            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
             config.linkVars = print
 
          This will add `&print=[print-value]` to all links in
-         TYPO3. ::
+         TYPO3.
+
+         .. code-block:: typoscript
+            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
             config.linkVars = tracking|green(0-5)
 
@@ -1462,7 +1513,9 @@ message\_preview\_workspace
          Workspace title (first) and number (second).
 
    Examples
-         ::
+
+         .. code-block:: typoscript
+            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
             config.message_preview_workspace = <div class="previewbox">Displaying workspace named "%s" (number %s)!</div>
             config.message_preview_workspace = <div class="previewbox">Displaying workspace number %2$s named "%1$s"!</div>
@@ -1550,7 +1603,8 @@ MP\_defaults
          [id],[id],... : [MP-var] \| [id],[id],... : [MP-var] \| ...
 
    Example
-         ::
+         .. code-block:: typoscript
+            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
             config.MP_defaults = 36,37,48 : 2-207
 
@@ -1633,12 +1687,16 @@ namespaces
          to your HTML.
 
    Example
-         ::
+         .. code-block:: typoscript
+            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
             config.namespaces.dc = http://purl.org/dc/elements/1.1/
             config.namespaces.foaf = http://xmlns.com/foaf/0.1/
 
-         This configuration will result in an :html:`<html>` tag like::
+         This configuration will result in an :html:`<html>` tag like:
+
+         .. code-block:: typoscript
+            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
             <html xmlns:dc="http://purl.org/dc/elements/1.1/"
                xmlns:foaf="http://xmlns.com/foaf/0.1/">
@@ -1723,7 +1781,8 @@ pageRendererTemplateFile
          :php:`TYPO3\CMS\Core\Page\PageRenderer`.
 
    Example
-         ::
+         .. code-block:: typoscript
+            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
             pageRendererTemplateFile = fileadmin/test_pagerender.html
 
@@ -1798,7 +1857,10 @@ pageTitleProviders
          the lowest in priority.
 
    Examples
-         By default, TYPO3 ships with two providers::
+         By default, TYPO3 ships with two providers:
+
+         .. code-block:: typoscript
+            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
             config.pageTitleProviders {
                record {
@@ -1846,16 +1908,25 @@ pageTitleSeparator
          the end of the separator.
 
    Examples
-         This produces a title tag with the content "website . page title"::
+         This produces a title tag with the content "website . page title":
+
+         .. code-block:: typoscript
+            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
             config.pageTitleSeparator = .
 
-         This produces a title tag with the content "website - page title"::
+         This produces a title tag with the content "website - page title":
+
+         .. code-block:: typoscript
+            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
             config.pageTitleSeparator = -
             config.pageTitleSeparator.noTrimWrap = | | |
 
-         This produces a title tag with the content "website*page title"::
+         This produces a title tag with the content "website*page title":
+
+         .. code-block:: typoscript
+            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
             config.pageTitleSeparator = *
             config.pageTitleSeparator.noTrimWrap = |||
@@ -1910,7 +1981,8 @@ removeDefaultJS
          See :ref:`setup-config-inlineStyle2TempFile`.
 
    Examples
-         ::
+         .. code-block:: typoscript
+            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
             config.removeDefaultJS = external
             config.removeDefaultJS = 1
@@ -2210,7 +2282,8 @@ tx\_[extension key with no underscores]\_[\*]
          configuration as an argument from the frontend rendering process).
 
    Example
-         ::
+         .. code-block:: typoscript
+            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
             config.tx_realurl_enable = 1
             config.tx_myextension.width  = 10
@@ -2247,7 +2320,8 @@ typolinkLinkAccessRestrictedPages
          for menu objects as well (similar feature for menus)
 
    Example
-         ::
+         .. code-block:: typoscript
+            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
             config.typolinkLinkAccessRestrictedPages = 29
             config.typolinkLinkAccessRestrictedPages_addParams = &return_url=###RETURN_URL###&pageId=###PAGE_ID###
@@ -2308,7 +2382,10 @@ xhtmlDoctype
          **xhtml\_11** for XHTML 1.1 doctype.
 
    Example
-         This is an example to use MathML 2.0 in an XHTML 1.1 document::
+         This is an example to use MathML 2.0 in an XHTML 1.1 document:
+
+         .. code-block:: typoscript
+            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
             config.doctype (
               <!DOCTYPE html
@@ -2335,7 +2412,10 @@ xmlprologue
 
    Description
          If empty (not set) then the default XML 1.0 prologue is set, when the
-         doctype is set to a known keyword (e.g. :typoscript:`xhtml_11`)::
+         doctype is set to a known keyword (e.g. :typoscript:`xhtml_11`):
+
+         .. code-block:: html
+            :caption: Output
 
             <?xml version="1.0" encoding="utf-8">
 

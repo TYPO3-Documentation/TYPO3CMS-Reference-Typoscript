@@ -147,7 +147,10 @@ file
    The fluid template file. It is an alternative to ".template" and is used
    only, if ".template" is not set.
 
-   **Example:** ::
+   **Example:**
+
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
       page = PAGE
       page {
@@ -211,7 +214,10 @@ layoutRootPaths
    the desired layout is found, is used. If the array keys are numeric, they
    are first sorted and then tried in reversed order.
 
-   **Example:** ::
+   **Example:**
+
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
       page {
          10 = FLUIDTEMPLATE
@@ -284,7 +290,10 @@ settings
    Sets the given settings array in the fluid template. In the view, the value
    can then be used.
 
-   **Example:** ::
+   **Example:**
+
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
       page = PAGE
       page {
@@ -368,7 +377,10 @@ templateName
 
    `.templateName` is set, it takes precedence.
 
-   **Example 1:** ::
+   **Example 1:**
+
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
       lib.stdContent = FLUIDTEMPLATE
       lib.stdContent {
@@ -391,7 +403,10 @@ templateName
          }
       }
 
-   **Example 2:** ::
+   **Example 2:**
+
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
       lib.stdContent = FLUIDTEMPLATE
       lib.stdContent {
@@ -452,7 +467,10 @@ templateRootPaths
    Useful in combination with the
    :ref:`templateName <cobj-fluidtemplate-properties-templatename>` property.
 
-   **Example:** ::
+   **Example:**
+
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
       page {
          10 = FLUIDTEMPLATE

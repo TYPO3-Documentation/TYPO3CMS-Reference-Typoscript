@@ -45,11 +45,16 @@ applicationContext
    See :ref:`t3coreapi:bootstrapping-context`.
 
 :aspect:`Example`
-   ::
+
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
       [applicationContext == "Development"]
 
-   Any context that is "Production" or starts with "Production" (eg Production/Staging"). ::
+   Any context that is "Production" or starts with "Production" (eg Production/Staging").
+
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
       [applicationContext matches "/^Production/"]
 
@@ -70,7 +75,9 @@ page
    All data of the current page record as array. To find out which fields are available, you can enable the debug mode in the TYPO3 backend which will display the field names.
 
 :aspect:`Example`
-   ::
+
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
       # Check single page uid
       [page["uid"] == 2]
@@ -104,11 +111,17 @@ Constant
    different conditions.
 
 :aspect:`Example`
-   If constant is an integer::
+   If constant is an integer:
+
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
       [{$foo.bar} == 4711]
 
-   If constant is a string put constant in quotes::
+   If constant is a string put constant in quotes:
+
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
       ["{$foo.bar}" == "4711"]
 
@@ -148,7 +161,10 @@ tree.level
    Current tree level.
 
 :aspect:`Example`
-   Check whether page is on level 0::
+   Check whether page is on level 0:
+
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
       [tree.level == 0]
 
@@ -174,7 +190,9 @@ tree.pagelayout
    for frontend and backend.
 
 :aspect:`Example`
-   ::
+
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
       # Using backend_layout records
       [tree.pagelayout == 2]
@@ -206,7 +224,9 @@ tree.rootLine
    Array of arrays with uid and pid.
 
 :aspect:`Example`
-   ::
+
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
       [tree.rootLine[0]["uid"] == 1]
 
@@ -229,7 +249,10 @@ tree.rootLineIds
    An array with UIDs of the rootline.
 
 :aspect:`Example`
-   Check whether page with uid 2 is inside the root line::
+   Check whether page with uid 2 is inside the root line:
+
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
       [2 in tree.rootLineIds]
 
@@ -258,7 +281,10 @@ tree.rootLineParentIds
    An array with parent UIDs of the root line.
 
 :aspect:`Example`
-   Check whether page with uid 2 is the parent of a page inside the root line::
+   Check whether page with uid 2 is the parent of a page inside the root line:
+
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
       [2 in tree.rootLineParentIds]
 
@@ -313,7 +339,10 @@ backend.user.isAdmin
    True if current user is admin
 
 :aspect:`Example`
-   Evaluates to true if current BE-User is administrator::
+   Evaluates to true if current BE-User is administrator:
+
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
       [backend.user.isAdmin]
 
@@ -334,7 +363,10 @@ backend.user.isLoggedIn
    true if current user is logged in
 
 :aspect:`Example`
-   Evaluates to true if an BE-User is logged in::
+   Evaluates to true if an BE-User is logged in:
+
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
       [backend.user.isLoggedIn]
 
@@ -355,7 +387,10 @@ backend.user.userId
    UID of current user
 
 :aspect:`Example`
-   Evaluates to true if user uid of current logged in BE-User is equal to 5::
+   Evaluates to true if user uid of current logged in BE-User is equal to 5:
+
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
       [backend.user.userId == 5]
 
@@ -379,7 +414,8 @@ backend.user.userGroupIds
    Frontend, Backend
 
 :aspect:`Example`
-   ::
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
       [2 in backend.user.userGroupIds]
 
@@ -406,7 +442,8 @@ backend.user.userGroupList
    Comma list of group UIDs
 
 :aspect:`Example`
-   ::
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
       [like(","~backend.user.userGroupList~",", "*,1,*")]
 
@@ -459,7 +496,9 @@ frontend.user.isLoggedIn
    True if current user is logged in
 
 :aspect:`Example`
-   ::
+
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
       [frontend.user.isLoggedIn]
 
@@ -480,7 +519,9 @@ frontend.user.userId
    UID of current user
 
 :aspect:`Example`
-   ::
+
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
       [frontend.user.userId == 5]
 
@@ -503,7 +544,9 @@ frontend.user.userGroupIds
    Frontend
 
 :aspect:`Example`
-   ::
+
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
       [4 in frontend.user.userGroupIds]
 
@@ -529,7 +572,9 @@ frontend.user.userGroupList
    Comma list of group UIDs
 
 :aspect:`Example`
-   ::
+
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
       [like(","~frontend.user.userGroupList~",", "*,1,*")]
 
@@ -573,7 +618,9 @@ workspace.workspaceId
    id of current workspace
 
 :aspect:`Example`
-   ::
+
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
       [workspace.workspaceId == 0]
 
@@ -598,7 +645,9 @@ workspace.isLive
    True if current workspace is live
 
 :aspect:`Example`
-   ::
+
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
       [workspace.isLive]
 
@@ -623,7 +672,9 @@ workspace.isOffline
    True if current workspace is offline
 
 :aspect:`Example`
-   ::
+
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
       [workspace.isOffline]
 
@@ -660,7 +711,9 @@ typo3.version
    TYPO3_version (e.g. 9.4.0-dev)
 
 :aspect:`Example`
-   ::
+
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
       [typo3.version == "9.5.5"]
 
@@ -681,9 +734,11 @@ typo3.branch
    TYPO3_branch (e.g. 9.4)
 
 :aspect:`Example`
-   ::
 
-      [typo3.branch == "9.5"]
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+      [typo3.branch == "11.5"]
 
 
 .. index:: Conditions; typo3.devIpMask
@@ -702,7 +757,9 @@ typo3.devIpMask
    :php:`$GLOBALS['TYPO3_CONF_VARS']['SYS']['devIPmask']`
 
 :aspect:`Example`
-   ::
+
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
       [typo3.devIpMask == "172.18.0.6"]
 
@@ -765,13 +822,19 @@ request.getQueryParams()
       Value: ``1``
 
 :aspect:`Example`
-   Check if query parameter skipSessionUpdate equals 1::
+   Check if query parameter skipSessionUpdate equals 1:
+
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
       [request.getQueryParams()['skipSessionUpdate'] == 1]
 
    Safely check query parameter array to avoid error logs in case key is not
    defined (see :ref:`condition-function-traverse`). This will check if
-   `tx_news_pi1['news'] > 0`::
+   `tx_news_pi1['news'] > 0`:
+
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
       [traverse(request.getQueryParams(), 'tx_news_pi1/news') > 0]
 
@@ -796,7 +859,9 @@ request.getParsedBody()
    form via POST, the submitted values.
 
 :aspect:`Example`
-   ::
+
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
       [request.getParsedBody()['foo'] == 1]
 
@@ -820,13 +885,18 @@ request.getHeaders()
    Provides all values from request headers.
 
 :aspect:`Example`
-   ::
+
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
       [request.getHeaders()['Accept'] == 'json']
+         page.10.value = Accepts json
+      [end]
 
-   ::
+      [request.getHeaders()['host'][0] == 'www.example.org']
+         page.20.value = The host is www.example.org
+      [end]
 
-      [request.getHeaders()['host'][0] == 'www.typo3lexikon.de']
 
 
 
@@ -849,7 +919,9 @@ request.getCookieParams()
    Provides all available cookies.
 
 :aspect:`Example`
-   ::
+
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
       [request.getCookieParams()['foo'] == 1]
 
@@ -946,13 +1018,17 @@ request.getNormalizedParams()
           Example: ``route=%2Fajax%2Fsystem-information%2Frender``
 
 :aspect:`Example`
-   ::
+
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
       [request.getNormalizedParams().isHttps()]
-
-   ::
+         page.10.value = HTTPS is being used
+      [end]
 
       [request.getNormalizedParams().getHttpHost() == "example.org"]
+         page.10.value = The host is "example.org"
+      [end]
 
 
 
@@ -1003,21 +1079,25 @@ date
    reference for possible usage.
 
 :aspect:`Example`
-   True if day of current month is 7::
+
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
       [date("j") == 7]
-
-   True if day of current week is 7::
+         page.10.value = True if day of current month is 7
+      [end]
 
       [date("w") == 7]
-
-   True if day of current year is 7::
+         page.10.value = True if day of current week is
+      [end]
 
       [date("z") == 7]
-
-   True if current hour is 7::
+         page.10.value = True if day of current year is 7
+      [end]
 
       [date("G") == 7]
+         page.10.value = rue if current hour is 7
+      [end]
 
 
 .. index:: Conditions; like
@@ -1045,15 +1125,24 @@ like
       Is the search string
 
 :aspect:`Example`
-   Search a string with ``*`` within another string::
+   Search a string with ``*`` within another string:
+
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
       [like("fooBarBaz", "*Bar*")]
 
-   Search string with single characters in between, using ``?``::
+   Search string with single characters in between, using ``?``:
+
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
       [like("fooBarBaz", "f?oBa?Baz")]
 
-   Search string using regular expression::
+   Search string using regular expression:
+
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
       [like("fooBarBaz", "/f[o]{2,2}[aBrz]+/")]
 
@@ -1085,7 +1174,10 @@ traverse
    In case the path is not found in the array, an empty string is returned.
 
 :aspect:`Example`
-   Traverse query parameters of current request along ``tx_news_pi1[news]``::
+   Traverse query parameters of current request along `tx_news_pi1[news]`:
+
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
       [traverse(request.getQueryParams(), 'tx_news_pi1/news') > 0]
 
@@ -1110,13 +1202,17 @@ ip
    Value or Constraint, Wildcard or RegExp possible special value: devIP (match the devIPMask).
 
 :aspect:`Example`
-   Check whether IP matches::
+
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
       [ip("172.18.*")]
-
-   Check whether IP matches configured devIp::
+         page.10.value = Your IP matches "172.18.*"
+      [end]
 
       [ip("devIP")]
+         page.10.value = Your IP matches the configured devIp
+      [end]
 
 
 .. index:: Conditions; compatVersion
@@ -1138,17 +1234,31 @@ compatVersion
    Compares against the current TYPO3 branch.
 
 :aspect:`Example`
-   ::
 
-      [compatVersion("9.5")]
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-   Is same as::
+      [compatVersion("11.5")]
+         page.10.value = You are using TYPO3 11.5
+      [end]
 
-      [compatVersion("9.5.0")]
+   Is same as:
 
-   Another example::
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-      [compatVersion("9.5.1")]
+      [compatVersion("11.5.0")]
+         page.10.value = You are using TYPO3 11.5
+      [end]
+
+   Another example:
+
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+      [compatVersion("11.5.1")]
+         page.10.value = You are using TYPO3 11.5
+      [end]
 
 
 .. index:: Conditions; loginUser
@@ -1173,21 +1283,26 @@ loginUser
    TypoScript.
 
 :aspect:`Example`
-   Any logged in user::
+
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
       [loginUser('*')]
-
-   User with uid 1::
+         # matches any login user
+         page.10.value = You are logged in!
+      [end]
 
       [loginUser(1)]
-
-   User 1, 3 or 5::
+         page.10.value = Your frontend user has the uid 1
+      [end]
 
       [loginUser('1,3,5')]
-
-   Not logged in::
+         page.10.value = Your frontend user has the uid 1, 3 or 5
+      [end]
 
       [loginUser('*') == false]
+         page.10.value = You are logged out!
+      [end]
 
 
 .. index:: Conditions; getTSFE
@@ -1208,11 +1323,17 @@ getTSFE
    Conditions based on ``getTSFE()`` used in a context where TSFE is not available will always evaluate to ``false``.
 
 :aspect:`Example`
-   Current :ref:`setup-page-typenum`::
+   Current :ref:`setup-page-typenum`:
+
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
       [getTSFE().type == 98]
 
-   Current page id equals to 17. However, :ref:`condition-page` should be preferred::
+   Current page id equals to 17. However, :ref:`condition-page` should be preferred:
+
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
       [getTSFE().id == 17]
 
@@ -1233,7 +1354,9 @@ getenv
    PHP function:  `getenv <https://www.php.net/manual/en/function.getenv.php>`_
 
 :aspect:`Example`
-   ::
+
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
       [getenv("VIRTUAL_HOST") == "www.example.org"]
 
@@ -1254,7 +1377,10 @@ feature
    Provides access to feature toggles current state.
 
 :aspect:`Example`
-   Check if feature toggle for strict TypoScript syntax is enabled::
+   Check if feature toggle for strict TypoScript syntax is enabled:
+
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
       [feature("TypoScript.strictSyntax") === false]
 
@@ -1281,17 +1407,22 @@ usergroup
    usergroup.
 
 :aspect:`Example`
-   Any usergroup::
+   Any usergroup:
+
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
       [usergroup("*")]
-
-   Usergroup 12::
+         page.10.value = You are logged in and belong to some usergroup.
+      [end]
 
       [usergroup("12")]
-
-   Usergroup 12, 15 or 18::
+         page.10.value = You are in the usergroup with uid 12.
+      [end]
 
       [usergroup("12,15,18")]
+         page.10.value = You are in the usergroup with uid 12, 15 or 18.
+      [end]
 
 
 .. index:: Conditions; Functions frontend
@@ -1327,7 +1458,10 @@ session
    .. TODO: Once available again, add reference to session handling, e.g. retrieving and storing values
 
 :aspect:`Example`
-   Example, matches if session has value 1234567 in structure :php:`$foo['bar']`::
+   Example, matches if session has value 1234567 in structure :php:`$foo['bar']`:
+
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
       [session("foo|bar") == 1234567]
 
@@ -1375,23 +1509,38 @@ site
       Returns an array with all available configuration for current site.
 
 :aspect:`Example`
-   Site identifier::
+   Site identifier:
+
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
       [site("identifier") == "typo395"]
 
-   Matches if site base host::
+   Matches if site base host:
+
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
       [site("base").getHost() == "www.example.org"]
 
-   Base path::
+   Base path:
+
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
       [site("base").getPath() == "/"]
 
-   Rootpage uid::
+   Rootpage uid:
+
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
       [site("rootPageId") == 1]
 
-   Configuration property::
+   Configuration property:
+
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
       [traverse(site("configuration"), "myCustomProperty") == true]
 
@@ -1446,10 +1595,14 @@ siteLanguage
    * ``siteLanguage("fallbackLanguageIds")``
 
 :aspect:`Example`
-   Example, match if siteLanguage locale = foo::
+
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
       [siteLanguage("locale") == "de_CH"]
-
-   Example, match if siteLanguage title = Italy::
+         page.10.value = This site has the locale "de_CH"
+      [end]
 
       [siteLanguage("title") == "Italy"]
+         page.10.value = This site has the title "Italy"
+      [end]

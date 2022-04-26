@@ -35,11 +35,19 @@ The special property "lineHeight" (e.g. "[10.lineHeight]") uses the
 height a single line of text would take.
 
 On using the special function max(), the maximum of multiple values
-can be determined. Example::
+can be determined. Example:
 
-   XY: [10.w]+[20.w], max([10.h], [20.h])
+.. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-Here's a full example (taken from "styles.content (default)")::
+   XY = [10.w]+[20.w], max([10.h], [20.h])
+
+Here's a full example (taken from "styles.content (default)"):
+
+
+.. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+   :emphasize-lines: 6
 
    styles.header.gfx1 = IMAGE
    styles.header.gfx1 {
@@ -122,7 +130,10 @@ match the basename of the main font face with an alternative font.
          Thus you can make local configurations which override the global
          setting.
 
-         **Example:** ::
+         **Example:** :
+
+         .. code-block:: typoscript
+            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
             _GIFBUILDER.charRangeMap {
               123 = vera.ttf
@@ -141,7 +152,10 @@ match the basename of the main font face with an alternative font.
          splitRendering configuration to set. See GIFBUILDER TEXT object for
          details.
 
-         **Example:** ::
+         **Example:** :
+
+         .. code-block:: typoscript
+            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
             _GIFBUILDER.charRangeMap {
               123 = arial.ttf
@@ -193,7 +207,10 @@ match the basename of the main font face with an alternative font.
          space settings are optimized and for other fontsizes this will
          automatically be adjusted according to this font size.
 
-         **Example:** ::
+         **Example:** :
+
+         .. code-block:: typoscript
+            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
             _GIFBUILDER.charRangeMap {
               123 = arial.ttf

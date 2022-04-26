@@ -29,7 +29,10 @@ Quoting of fields
 .. versionadded:: 8.7
 
    It is possible to use `{#fieldname}` to make the database
-   framework quote these fields (see :doc:`ext_core:Changelog/8.7/Important-80506-DbalCompatibleFieldQuotingInTypoScript`)::
+   framework quote these fields (see :doc:`ext_core:Changelog/8.7/Important-80506-DbalCompatibleFieldQuotingInTypoScript`):
+
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
       select.where = ({#title} LIKE {#%SOMETHING%} AND NOT {#doktype})
 
@@ -63,7 +66,10 @@ See PHP source code for
    #       The order of TS in this example however tries to reflect execution order.
    #       The denoted steps are taking place in that order at execution time.
 
-Condensed form::
+Condensed form:
+
+.. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
    10 = CONTENT
    10 {
@@ -113,7 +119,8 @@ uidInList
    *current record*.
 
 :aspect:`Example`
-   ::
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
       select.uidInList = 1,2,3
       select.uidInList = this
@@ -170,7 +177,10 @@ pidInList
    :typoscript:`this`
 
 :aspect:`Example`
-   Fetch related `sys_category` records stored in the MM intermediate table::
+   Fetch related `sys_category` records stored in the MM intermediate table:
+
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
       10 = CONTENT
       10 {
@@ -220,7 +230,8 @@ orderBy
    ORDER BY clause without the words "ORDER BY".
 
 :aspect:`Example`
-   ::
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
       orderBy = sorting, title
 
@@ -240,7 +251,8 @@ groupBy
    GROUP BY clause without the words "GROUP BY".
 
 :aspect:`Example`
-   ::
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
       groupBy = CType
 
@@ -295,12 +307,17 @@ where
       WHERE clause without the word "WHERE".
 
 :aspect:`Example`
-      ::
+
+      .. code-block:: typoscript
+         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
          where = (title LIKE '%SOMETHING%' AND NOT doktype)
 
       Use `{#fieldname}` to make the database
-      framework quote these fields::
+      framework quote these fields:
+
+      .. code-block:: typoscript
+         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
          where = ({#title} LIKE {#%SOMETHING%} AND NOT {#doktype})
 
@@ -424,7 +441,9 @@ markers
       by the quoting of the fields, see :issue:`87799`.
 
 :aspect:`Example`
-   ::
+
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
       page.60 = CONTENT
       page.60 {
@@ -442,7 +461,8 @@ markers
    which don't have the header set to the value provided by the Get/Post variable
    "first".
 
-   ::
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
       page.60 = CONTENT
       page.60 {

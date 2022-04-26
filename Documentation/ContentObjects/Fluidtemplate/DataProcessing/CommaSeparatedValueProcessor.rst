@@ -87,7 +87,10 @@ Extended content element example <t3coreapi:AddingCE-Extended-Example>`.
 Example data in the field :php:`bodytext`
 -----------------------------------------
 
-Field :php:`bodytext` in table :php:`tt_content`::
+Field :php:`bodytext` in table :php:`tt_content`:
+
+.. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
    This is row 1 column 1,This is row 1 column 2,This is row 1 column 3
    This is row 2 column 1,This is row 2 column 2,This is row 2 column 3

@@ -264,6 +264,7 @@ The following example would display some related content
 referenced from the :guilabel:`page properties`.
 
 .. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
    page.42 = RECORDS
    page.42 {
@@ -283,6 +284,7 @@ Selection with source II
 ------------------------
 
 .. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
 	20 = RECORDS
 	20 {
@@ -303,7 +305,10 @@ Selection with categories
 -------------------------
 
 If you want to display categorized content with a :typoscript:`RECORDS` object
-you could do it like this::
+you could do it like this:
+
+.. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
 	categorized_content = RECORDS
 	categorized_content {
@@ -326,7 +331,10 @@ is present and defines a very simple rendering of each content element
 
 However, the same can be achieved with a :ref:`cobj-fluidtemplate` and
 data processing. This way templating is much more flexible. See the following
-example from the system extension :file:`fluid_styled_content`::
+example from the system extension :file:`fluid_styled_content`:
+
+.. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
    tt_content.menu_categorized_content =< lib.contentElement
    tt_content.menu_categorized_content {

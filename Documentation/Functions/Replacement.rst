@@ -58,7 +58,9 @@ useRegExp
    0
 
 :aspect:`Example`
-   ::
+
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
       10 {
             search = #(a )CAT#i
@@ -91,7 +93,8 @@ useOptionSplitReplace
 Examples
 ========
 
-::
+.. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
    10 = TEXT
    10 {
@@ -119,7 +122,9 @@ block! Yeah!".
 
 The following examples demonstrate the use of :ref:`objects-optionsplit`:
 
-::
+
+.. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
    20 = TEXT
    20.value = There_are_a_cat,_a_dog_and_a_tiger_in_da_hood!_Yeah!
@@ -131,7 +136,8 @@ The following examples demonstrate the use of :ref:`objects-optionsplit`:
 
 This returns: "There1are2a3cat,3a3dog3and3a3tiger3in3da3hood!3Yeah!"
 
-::
+.. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
    30 = TEXT
    30.value = There are a cat, a dog and a tiger in da hood! Yeah!
