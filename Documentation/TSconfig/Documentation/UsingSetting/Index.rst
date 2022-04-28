@@ -36,7 +36,7 @@ in which case it is known as "User TSconfig".
 
          .. rst-class:: card-header h3
 
-            .. rubric:: :ref:`Setting User TSconfig <setting-page-tsconfig>`
+            .. rubric:: :ref:`Setting User TSconfig <setting-user-tsconfig>`
 
          .. container:: card-body
 
