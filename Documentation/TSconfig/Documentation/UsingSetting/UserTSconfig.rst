@@ -1,6 +1,6 @@
 
 .. index:: User TSconfig
-.. _setting-page-tsconfig:
+.. _setting-user-tsconfig:
 
 =============
 User TSconfig
