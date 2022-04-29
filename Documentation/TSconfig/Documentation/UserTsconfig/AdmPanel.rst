@@ -19,7 +19,7 @@ frontend TypoScript template for the website. You can do this by inserting this
 string in the TypoScript Template:
 
 .. code-block:: typoscript
-   :caption: EXT:site_package/Configuration/user.tsconfig
+   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
    # Note this is a frontend TypoScript template and not TSconfig!
    config.admPanel = 1
