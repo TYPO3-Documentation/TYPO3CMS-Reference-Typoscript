@@ -1872,8 +1872,8 @@ postUserFunc
             $content = $this->cObj->caseshift($content, 'upper');
             }
             if (isset($conf['typolink'])) {
-            // Use the method getTypoLink() from ContentObjectRenderer.php.
-            $content = $this->cObj->getTypoLink($content, $conf['typolink']);
+            // Use the method typoLink() from ContentObjectRenderer.php.
+            $content = $this->cObj->typoLink($content, $conf['typolink']);
             }
             return $content;
          }
