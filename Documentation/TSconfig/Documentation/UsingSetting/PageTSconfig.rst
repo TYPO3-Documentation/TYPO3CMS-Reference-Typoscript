@@ -73,7 +73,7 @@ TYPO3 11 and 12 by importing the content of this file with the API function
    // Only include page.tsconfig if TYPO3 version is below 12 so that it is not imported twice.
    if ($versionInformation->getMajorVersion() < 12) {
       ExtensionManagementUtility::addPageTSConfig('
-         "@import 'EXT:myexample/Configuration/page.tsconfig'"
+         @import "EXT:myexample/Configuration/page.tsconfig"
       ');
    }
 
