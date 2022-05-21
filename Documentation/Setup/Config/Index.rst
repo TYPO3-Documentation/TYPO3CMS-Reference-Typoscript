@@ -47,7 +47,6 @@ Properties
    `debug`_                                              :ref:`data-type-boolean`
    `disableAllHeaderCode`_                               :ref:`data-type-boolean`                           false
    `disableBodyTag`_                                     :ref:`data-type-boolean`                           0
-   `disableCharsetHeader`_                               :ref:`data-type-boolean`
    `disableImgBorderAttr`_                               :ref:`data-type-boolean`
    `disablePrefixComment`_                               :ref:`data-type-boolean`
    `disablePreviewNotification`_                         :ref:`data-type-boolean`                           0
@@ -186,8 +185,8 @@ additionalHeaders
          **httpResponseCode:** Optional. HTTP status code as an integer.
 
          By default TYPO3 sends a "Content-Type" header with the defined
-         encoding, unless this is disabled using :ref:`setup-config-disableCharsetHeader`.
-         It then sends cache headers, if configured via :ref:`setup-config-sendcacheheaders`.
+         encoding. It then sends cache headers, if configured via 
+         :ref:`setup-config-sendcacheheaders`.
          Then additional headers are send, plus finally a "Content-Length"
          header, if enabled via :ref:`setup-config-enablecontentlengthheader`.
 
@@ -792,27 +791,6 @@ disableCanonical
          rendered in almost all cases. If you have an edge case though, you might
          want to disable the rendering of this tag. You can do this by setting this
          property to true.
-
-
-
-.. index:: config; disableCharsetHeader
-.. _setup-config-disablecharsetheader:
-
-disableCharsetHeader
-====================
-
-.. container:: table-row
-
-   Property
-         disableCharsetHeader
-
-   Data type
-         :ref:`data-type-boolean`
-
-   Description
-         By default a HTTP header `content-type:text/html; charset...` is sent.
-         This option will disable that.
-
 
 
 .. index:: config; disableHrefLang
