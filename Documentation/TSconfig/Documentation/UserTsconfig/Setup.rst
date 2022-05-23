@@ -145,20 +145,6 @@ resizeTextareas
 :aspect:`Default`
     1
 
-.. index:: Textareas; Resize max height
-
-resizeTextareas_MaxHeight
-=========================
-
-:aspect:`Datatype`
-    positive integer
-
-:aspect:`Description`
-    Defines the maximal height of textarea (in pixels).
-
-:aspect:`Default`
-    600
-
 .. index:: Start module
 
 startModule
