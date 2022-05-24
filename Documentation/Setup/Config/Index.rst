@@ -86,6 +86,7 @@ Properties
    `removeDefaultJS`_                                    :ref:`data-type-boolean` / :ref:`data-type-string`
    `removePageCss`_                                      :ref:`data-type-boolean`
    `sendCacheHeaders`_                                   :ref:`data-type-boolean`
+   `showWebsiteTitle`_                                   :ref:`data-type-boolean`                           1
    `spamProtectEmailAddresses`_                          "ascii" /
    `spamProtectEmailAddresses\_atSubst`_                 :ref:`data-type-string`                            (at)
    `spamProtectEmailAddresses\_lastDotSubst`_            :ref:`data-type-string`                            . *(just a simple dot)*
@@ -185,7 +186,7 @@ additionalHeaders
          **httpResponseCode:** Optional. HTTP status code as an integer.
 
          By default TYPO3 sends a "Content-Type" header with the defined
-         encoding. It then sends cache headers, if configured via 
+         encoding. It then sends cache headers, if configured via
          :ref:`setup-config-sendcacheheaders`.
          Then additional headers are send, plus finally a "Content-Length"
          header, if enabled via :ref:`setup-config-enablecontentlengthheader`.
@@ -2003,6 +2004,35 @@ sendCacheHeaders
          the page. Teach them that trick!
 
          Thanks to Ole Tange, www.forbrug.dk for co-authoring this feature.
+
+
+.. index:: config; showWebsiteTitle
+.. _setup-config-showwebsitetitle:
+
+showWebsiteTitle
+================
+
+.. versionadded:: 12.0
+
+.. container:: table-row
+
+   Property
+         showWebsiteTitle
+
+   Data type
+         :ref:`data-type-boolean`
+
+   Default
+         1
+
+   Description
+         The option allows to define whether the website title, which is defined
+         in the :ref:`site configuration <t3coreapi:sitehandling>`, should be
+         added to the page title, which is e.g. used for the :html:`<title>`
+         tag.
+
+         By default, the website title is added. To omit the website title, the
+         option has to be set to `0`.
 
 
 .. index:: config; spamProtectEmailAddresses
