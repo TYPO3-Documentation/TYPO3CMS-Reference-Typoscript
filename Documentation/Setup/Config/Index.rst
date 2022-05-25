@@ -2026,10 +2026,9 @@ showWebsiteTitle
          1
 
    Description
-         The option allows to define whether the website title, which is defined
-         in the :ref:`site configuration <t3coreapi:sitehandling>`, should be
-         added to the page title, which is e.g. used for the :html:`<title>`
-         tag.
+         The option can be used to specify whether the website title defined in
+         the :ref:`site configuration <t3coreapi:sitehandling>` should be added
+         to the page title (used for the :html:`<title>` tag, for example).
 
          By default, the website title is added. To omit the website title, the
          option has to be set to `0`.
