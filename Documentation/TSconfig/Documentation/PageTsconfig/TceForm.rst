@@ -53,46 +53,46 @@ addItems
 ========
 
 :aspect:`Datatype`
-    localized string
+   localized string
 
 :aspect:`Description`
-    Change the list of items in :ref:`TCA type=select <t3tca:columns-select>` fields. Using this property,
-    items can be added to the list. Note that the added elements might be removed if the selector represents
-    records: If the select box is a relation to another table. In that case only existing records
-    will be preserved.
+   Change the list of items in :ref:`TCA type=select <t3tca:columns-select>` fields. Using this property,
+   items can be added to the list. Note that the added elements might be removed if the selector represents
+   records: If the select box is a relation to another table. In that case only existing records
+   will be preserved.
 
-    The subkey `icon` will allow to add your own icons to new values.
+   The subkey `icon` will allow to add your own icons to new values.
 
-    This property is available for various levels:
+   This property is available for various levels:
 
-    table level, example:
-        `TCEFORM.tt_content.header_layout.addItems`
+   table level, example:
+      `TCEFORM.tt_content.header_layout.addItems`
 
-    table and record type level, example:
-        `TCEFORM.tt_content.header_layout.types.textpic.addItems`
+   table and record type level, example:
+      `TCEFORM.tt_content.header_layout.types.textpic.addItems`
 
-    Flex form field level, example:
-        `TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.myField.addItems`
+   Flex form field level, example:
+      `TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.myField.addItems`
 
-        Where `sDEF` is the sheet name.
+      Where `sDEF` is the sheet name.
 
-    .. warning::
-        Do not add page types this way (using `TCEFORM.pages.doktype.addItems`), instead the proper
-        PHP API should be used to do this, see :ref:`Core APIs <t3coreapi:page-types>` for details.
+   .. warning::
+      Do not add page types this way (using `TCEFORM.pages.doktype.addItems`), instead the proper
+      PHP API should be used to do this, see :ref:`Core APIs <t3coreapi:page-types>` for details.
 
 :aspect:`Example`
-    .. code-block:: typoscript
-       :caption: EXT:site_package/Configuration/page.tsconfig
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/page.tsconfig
 
-       TCEFORM.tt_content.header_layout {
-          # Add another header_layout option:
-          addItems.1525215969 = Another header layout
-          # Add another one with localized label and icon
-          addItems.1525216023 = LLL:EXT:my_ext/Resources/Private/Language/locallang.xlf:header_layout
-          addItems.1525216023.icon = EXT:my_ext/icon.png
-       }
+      TCEFORM.tt_content.header_layout {
+         # Add another header_layout option:
+         addItems.1525215969 = Another header layout
+         # Add another one with localized label and icon
+         addItems.1525216023 = LLL:EXT:my_ext/Resources/Private/Language/locallang.xlf:header_layout
+         addItems.1525216023.icon = EXT:my_ext/icon.png
+      }
 
-    Instead of adding files by path, icon identifiers should be used.
+      Instead of adding files by path, icon identifiers should be used.
 
 
 .. index::
@@ -102,39 +102,39 @@ altLabels
 =========
 
 :aspect:`Datatype`
-    localized string
+   localized string
 
 :aspect:`Description`
-    This property applies to :ref:`TCA type=select <t3tca:columns-select>`,
-    :ref:`TCA type=check <t3tca:columns-check>` and :ref:`TCA type=radio <t3tca:columns-radio>`.
+   This property applies to :ref:`TCA type=select <t3tca:columns-select>`,
+   :ref:`TCA type=check <t3tca:columns-check>` and :ref:`TCA type=radio <t3tca:columns-radio>`.
 
-    This property allows you to enter alternative labels for the items in the list. For a single checkbox or radio
-    button, use `default`, for multiple checkboxes and radiobuttons, use an integer for their position starting at 0.
+   This property allows you to enter alternative labels for the items in the list. For a single checkbox or radio
+   button, use `default`, for multiple checkboxes and radiobuttons, use an integer for their position starting at 0.
 
-    This property is available for various levels:
+   This property is available for various levels:
 
-    table level:
-        `TCEFORM.[tableName].[fieldName].altLabels`
+   table level:
+      `TCEFORM.[tableName].[fieldName].altLabels`
 
-    table and record type level:
-        `TCEFORM.[tableName].[fieldName].types.[typeName].altLabels`
+   table and record type level:
+      `TCEFORM.[tableName].[fieldName].types.[typeName].altLabels`
 
-    Flex form field level, example:
-        `TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.myField.altLabels`
+   Flex form field level, example:
+      `TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.myField.altLabels`
 
-        Where `sDEF` is the sheet name.
+      Where `sDEF` is the sheet name.
 
 :aspect:`Example`
-    .. code-block:: typoscript
-       :caption: EXT:site_package/Configuration/page.tsconfig
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/page.tsconfig
 
-       TCEFORM.pages.doktype {
-           # Set a different item label
-           altLabels.1 = STANDARD Page Type
-           altLabels.254 = Folder (for various elements)
-           # Sets the default label for Recycler via "locallang":
-           altLabels.255 = LLL:EXT:my_ext/Resources/Private/Language/locallang_tca.xlf:recycler
-       }
+      TCEFORM.pages.doktype {
+         # Set a different item label
+         altLabels.1 = STANDARD Page Type
+         altLabels.254 = Folder (for various elements)
+         # Sets the default label for Recycler via "locallang":
+         altLabels.255 = LLL:EXT:my_ext/Resources/Private/Language/locallang_tca.xlf:recycler
+      }
 
    .. figure:: /Images/ManualScreenshots/List/PagesDoktypeDifferentLabels.png
       :alt: The Page types with modified labels
@@ -146,12 +146,12 @@ altLabels
       If the item has an **empty** value, the syntax is slightly different and an additional dot must be provided,
       like on this example:
 
-      .. code-block:: typoscript
-         :caption: EXT:site_package/Configuration/page.tsconfig
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/page.tsconfig
 
-         TCEFORM.tt_content.space_before_class.altLabels.. = foo
+      TCEFORM.tt_content.space_before_class.altLabels.. = foo
 
-      Note the *double dot* after `altLabels`.
+   Note the *double dot* after `altLabels`.
 
 .. _page_tsconfig_id:
 
@@ -159,34 +159,34 @@ PAGE_TSCONFIG_ID
 ================
 
 :aspect:`Datatype`
-    integer
+   integer
 
 :aspect:`Description`
-    This option allows to provide a value for dynamic SQL-WHERE parameters. The
-    value is defined for a specific field of a table. For usage with flexform
-    fields, the entire path to a sub-field must be provided.
+   This option allows to provide a value for dynamic SQL-WHERE parameters. The
+   value is defined for a specific field of a table. For usage with flexform
+   fields, the entire path to a sub-field must be provided.
 
-    .. note::
+   .. note::
 
-       This value can be used for the TCA property :ref:`foreign_table_where <t3tca:columns-select-properties-foreign-table-where>`
-       and for the `addWhere` part of the :ref:`suggest wizard <pagetceformsuggest>`.
+      This value can be used for the TCA property :ref:`foreign_table_where <t3tca:columns-select-properties-foreign-table-where>`
+      and for the `addWhere` part of the :ref:`suggest wizard <pagetceformsuggest>`.
 
 :aspect:`Example`
-    .. code-block:: typoscript
-       :caption: EXT:site_package/Configuration/page.tsconfig
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/page.tsconfig
 
-       TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.myField.PAGE_TSCONFIG_ID = 22
+      TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.myField.PAGE_TSCONFIG_ID = 22
 
-    In this example, the value will substitute the marker in a plugin FlexForm.
+   In this example, the value will substitute the marker in a plugin FlexForm.
 
-    .. code-block:: typoscript
-       :caption: EXT:site_package/Configuration/page.tsconfig
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/page.tsconfig
 
-       TCEFORM.tx_myext_table.myfield.PAGE_TSCONFIG_ID = 22
+      TCEFORM.tx_myext_table.myfield.PAGE_TSCONFIG_ID = 22
 
-    This example might be used for a record in an extension. It refers to a
-    table called `tx_myext_table` and the field `myfield`. Here the marker will
-    be substituted by the value `22`.
+   This example might be used for a record in an extension. It refers to a
+   table called `tx_myext_table` and the field `myfield`. Here the marker will
+   be substituted by the value `22`.
 
 
 .. _page_tsconfig_idlist:
@@ -195,27 +195,27 @@ PAGE_TSCONFIG_IDLIST
 ====================
 
 :aspect:`Datatype`
-    list of integers
+   list of integers
 
 :aspect:`Description`
-    See above.
+   See above.
 
 :aspect:`Example`
-    .. code-block:: typoscript
-       :caption: EXT:site_package/Configuration/page.tsconfig
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/page.tsconfig
 
-       TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.myField.PAGE_TSCONFIG_IDLIST = 20,21,22
+      TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.myField.PAGE_TSCONFIG_IDLIST = 20,21,22
 
-    In this example, the value will substitute the marker in a plugin FlexForm.
+   In this example, the value will substitute the marker in a plugin FlexForm.
 
-    .. code-block:: typoscript
-       :caption: EXT:site_package/Configuration/page.tsconfig
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/page.tsconfig
 
-       TCEFORM.tx_myext_table.myfield.PAGE_TSCONFIG_IDLIST = 20,21,22
+      TCEFORM.tx_myext_table.myfield.PAGE_TSCONFIG_IDLIST = 20,21,22
 
-    This example might be used for a record in an extension. It refers to a
-    table called `tx_myext_table` and the field `myfield`. Here the marker will
-    be substituted by the list of integers.
+   This example might be used for a record in an extension. It refers to a
+   table called `tx_myext_table` and the field `myfield`. Here the marker will
+   be substituted by the list of integers.
 
 
 .. _page_tsconfig_str:
@@ -224,27 +224,27 @@ PAGE_TSCONFIG_STR
 =================
 
 :aspect:`Datatype`
-    string
+   string
 
 :aspect:`Description`
-    See above.
+   See above.
 
 :aspect:`Example`
-    .. code-block:: typoscript
-       :caption: EXT:site_package/Configuration/page.tsconfig
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/page.tsconfig
 
-       TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.myField.PAGE_TSCONFIG_STR = %hello%
+      TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.myField.PAGE_TSCONFIG_STR = %hello%
 
-    In this example, the value will substitute the marker in a plugin FlexForm.
+   In this example, the value will substitute the marker in a plugin FlexForm.
 
-    .. code-block:: typoscript
-       :caption: EXT:site_package/Configuration/page.tsconfig
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/page.tsconfig
 
-       TCEFORM.tx_myext_table.myfield.PAGE_TSCONFIG_STR = %hello%
+      TCEFORM.tx_myext_table.myfield.PAGE_TSCONFIG_STR = %hello%
 
-    This example might be used for a record in an extension. It refers to a
-    table called `tx_myext_table` and the field `myfield`. Here the marker will
-    be substituted by the given value.
+   This example might be used for a record in an extension. It refers to a
+   table called `tx_myext_table` and the field `myfield`. Here the marker will
+   be substituted by the given value.
 
 
 .. index::
@@ -255,41 +255,41 @@ config
 ======
 
 :aspect:`Datatype`
-    string / array
+   string / array
 
 :aspect:`Description`
-    This setting allows to override TCA field configuration. This will influence configuration settings in
-    $GLOBALS['TCA'][<tableName>]['columns'][<fieldName>]['config'][<key>], see
-    :ref:`TCA reference <t3tca:columns-properties-config>` for details.
+   This setting allows to override TCA field configuration. This will influence configuration settings in
+   $GLOBALS['TCA'][<tableName>]['columns'][<fieldName>]['config'][<key>], see
+   :ref:`TCA reference <t3tca:columns-properties-config>` for details.
 
-    Not all configuration options can be overriden, the properties are restricted and depend on the
-    :ref:`field type <t3tca:columns-types>`. The array
-    :code:`typo3/sysext/backend/Classes/Form/Utility/FormEngineUtility.php->$allowOverrideMatrix`
-    within :ref:`FormEngine code <t3coreapi:FormEngine>` defines details:
+   Not all configuration options can be overriden, the properties are restricted and depend on the
+   :ref:`field type <t3tca:columns-types>`. The array
+   :code:`typo3/sysext/backend/Classes/Form/Utility/FormEngineUtility.php->$allowOverrideMatrix`
+   within :ref:`FormEngine code <t3coreapi:FormEngine>` defines details:
 
     .. code-block:: php
 
-        'input' => ['size', 'max', 'readOnly'],
-        'text' => ['cols', 'rows', 'wrap', 'max', 'readOnly'],
-        'check' => ['cols', 'readOnly'],
-        'select' => ['size', 'autoSizeMax', 'maxitems', 'minitems', 'readOnly', 'treeConfig'],
-        'group' => ['size', 'autoSizeMax', 'max_size', 'maxitems', 'minitems', 'readOnly'],
-        'inline' => ['appearance', 'behaviour', 'foreign_label', 'foreign_selector', 'foreign_unique', 'maxitems', 'minitems', 'size', 'autoSizeMax', 'symmetric_label', 'readOnly'],
-        'imageManipulation' => ['ratios', 'cropVariants']
+      'input' => ['size', 'max', 'readOnly'],
+      'text' => ['cols', 'rows', 'wrap', 'max', 'readOnly'],
+      'check' => ['cols', 'readOnly'],
+      'select' => ['size', 'autoSizeMax', 'maxitems', 'minitems', 'readOnly', 'treeConfig'],
+      'group' => ['size', 'autoSizeMax', 'max_size', 'maxitems', 'minitems', 'readOnly'],
+      'inline' => ['appearance', 'behaviour', 'foreign_label', 'foreign_selector', 'foreign_unique', 'maxitems', 'minitems', 'size', 'autoSizeMax', 'symmetric_label', 'readOnly'],
+      'imageManipulation' => ['ratios', 'cropVariants']
 
 
-    This property is available for various levels:
+   This property is available for various levels:
 
-    table level, example:
-        `TCEFORM.tt_content.header.config.max`
+   table level, example:
+      `TCEFORM.tt_content.header.config.max`
 
-    table and record type level, example:
-        `TCEFORM.tt_content.header.types.textpic.config.max`
+   table and record type level, example:
+      `TCEFORM.tt_content.header.types.textpic.config.max`
 
-    Flex form field level, example:
-        `TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.myField.config.max`
+   Flex form field level, example:
+      `TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.myField.config.max`
 
-        Where `sDEF` is the sheet name.
+      Where `sDEF` is the sheet name.
 
 
 .. index::
@@ -300,34 +300,34 @@ config.treeConfig
 =================
 
 :aspect:`Datatype`
-    int
+   int
 
 :aspect:`Description`
-    The `treeConfig` sub properties of :ref:`TCEFORM.config <pageTsConfigTceFormConfig>` are dedicated to the TCA config type
-    `select` with :ref:`renderType=selectTree <t3tca:columns-select-rendertype-selectTree>`. A couple of
-    :ref:`treeConfig <t3tca:columns-select-properties-treeconfig>` properties can be overriden on page TSconfig level, see their detailed description
-    in the :ref:`TCA reference <t3tca:columns-select-properties-treeconfig>`:
+   The `treeConfig` sub properties of :ref:`TCEFORM.config <pageTsConfigTceFormConfig>` are dedicated to the TCA config type
+   `select` with :ref:`renderType=selectTree <t3tca:columns-select-rendertype-selectTree>`. A couple of
+   :ref:`treeConfig <t3tca:columns-select-properties-treeconfig>` properties can be overriden on page TSconfig level, see their detailed description
+   in the :ref:`TCA reference <t3tca:columns-select-properties-treeconfig>`:
 
-    .. code-block:: typoscript
-       :caption: EXT:site_package/Configuration/page.tsconfig
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/page.tsconfig
 
-       config.treeConfig.startingPoints = 1,42
-       config.treeConfig.appearance.expandAll = 1
-       config.treeConfig.appearance.maxLevels = 2
-       config.treeConfig.appearance.nonSelectableLevels = 1
+      config.treeConfig.startingPoints = 1,42
+      config.treeConfig.appearance.expandAll = 1
+      config.treeConfig.appearance.maxLevels = 2
+      config.treeConfig.appearance.nonSelectableLevels = 1
 
-    This property is available for various levels:
+   This property is available for various levels:
 
-    table level, example:
-        `TCEFORM.tt_content.myField.config.treeConfig.startingPoints`
+   table level, example:
+      `TCEFORM.tt_content.myField.config.treeConfig.startingPoints`
 
-    table and record type level, example:
-        `TCEFORM.tt_content.header.types.config.treeConfig.startingPoints`
+   table and record type level, example:
+      `TCEFORM.tt_content.header.types.config.treeConfig.startingPoints`
 
-    Flex form field level, example:
-        `TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.myField.config.treeConfig.startingPoints`
+   Flex form field level, example:
+      `TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.myField.config.treeConfig.startingPoints`
 
-        Where `sDEF` is the sheet name.
+      Where `sDEF` is the sheet name.
 
 
 .. index::
@@ -339,7 +339,7 @@ description
 .. include:: /Images/AutomaticScreenshots/Input1.rst.txt
 
 :aspect:`Datatype`
-    string
+   string
 
 :aspect:`Description`
    This property sets or overrides the TCA property
@@ -382,43 +382,43 @@ disabled
 ========
 
 :aspect:`Datatype`
-    boolean
+   boolean
 
 :aspect:`Description`
-    If set, the field is not displayed in the backend form of the record.
-    However, the field can still be set by other means. For example if
-    this property is set:
-    :typoscript:`TCEFORM.tt_content.colPos.disabled = 1` the :guilabel:`Column` field
-    will not be displayed in the content elements form. The
-    content element can still be moved to another column which internally also
-    sets the field :sql:`colPos`. Fields with the TSconfig property
-    :tsconfig:`TCEFORM.<table>.<field>.disable` therefore show the same
-    behaviour as fields of the TCA type :ref:`passthrough <t3tca:columns-passthrough>`.
+   If set, the field is not displayed in the backend form of the record.
+   However, the field can still be set by other means. For example if
+   this property is set:
+   :typoscript:`TCEFORM.tt_content.colPos.disabled = 1` the :guilabel:`Column` field
+   will not be displayed in the content elements form. The
+   content element can still be moved to another column which internally also
+   sets the field :sql:`colPos`. Fields with the TSconfig property
+   :tsconfig:`TCEFORM.<table>.<field>.disable` therefore show the same
+   behaviour as fields of the TCA type :ref:`passthrough <t3tca:columns-passthrough>`.
 
-    table level, example:
-        `TCEFORM.tt_content.header.disabled`
+   table level, example:
+      `TCEFORM.tt_content.header.disabled`
 
-    table and record type level, example:
-        `TCEFORM.tt_content.header.types.textpic.disabled`
+   table and record type level, example:
+      `TCEFORM.tt_content.header.types.textpic.disabled`
 
-    Flex form sheet level. If set, the entire tab is not rendered, example:
-        `TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.disabled`
+   Flex form sheet level. If set, the entire tab is not rendered, example:
+      `TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.disabled`
 
-        Where `sDEF` is the sheet name.
+      Where `sDEF` is the sheet name.
 
-    Flex form field level, example:
-        `TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.myField.disabled`
+   Flex form field level, example:
+      `TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.myField.disabled`
 
-        Where `sDEF` is the sheet name.
+      Where `sDEF` is the sheet name.
 
 :aspect:`Example`
-    .. code-block:: typoscript
-       :caption: EXT:site_package/Configuration/page.tsconfig
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/page.tsconfig
 
-       TCEFORM.pages.title {
-           # The title field of the pages table is not editable
-           disabled = 1
-       }
+      TCEFORM.pages.title {
+         # The title field of the pages table is not editable
+         disabled = 1
+      }
 
 
 .. index::
@@ -429,48 +429,48 @@ disableNoMatchingValueElement
 =============================
 
 :aspect:`Datatype`
-    boolean
+   boolean
 
 :aspect:`Description`
-    This property applies only to items in :ref:`TCA type=select <t3tca:columns-select>` fields.
-    If a selector box value is not available among the options in the box, the default behavior
-    of TYPO3 is to preserve the value and to show a label which warns about this special state:
+   This property applies only to items in :ref:`TCA type=select <t3tca:columns-select>` fields.
+   If a selector box value is not available among the options in the box, the default behavior
+   of TYPO3 is to preserve the value and to show a label which warns about this special state:
 
-    .. figure:: /Images/ManualScreenshots/List/SelectInvalidValue.png
-        :alt: A missing selector box value is indicated by a warning message
+   .. figure:: /Images/ManualScreenshots/List/SelectInvalidValue.png
+      :alt: A missing selector box value is indicated by a warning message
 
-        A missing selector box value is indicated by a warning message
+      A missing selector box value is indicated by a warning message
 
-    If disableNoMatchingValueElement is set, the element "INVALID VALUE" will not be added to the list.
+   If disableNoMatchingValueElement is set, the element "INVALID VALUE" will not be added to the list.
 
-    This property is available for various levels:
+   This property is available for various levels:
 
-    table level, example:
-        `TCEFORM.tt_content.header_layout.disableNoMatchingValueElement`
+   table level, example:
+      `TCEFORM.tt_content.header_layout.disableNoMatchingValueElement`
 
-    table and record type level, example:
-        `TCEFORM.tt_content.header_layout.types.textpic.disableNoMatchingValueElement`
+   table and record type level, example:
+      `TCEFORM.tt_content.header_layout.types.textpic.disableNoMatchingValueElement`
 
-    Flex form field level, example:
-        `TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.myField.disableNoMatchingValueElement`
+   Flex form field level, example:
+      `TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.myField.disableNoMatchingValueElement`
 
-        Where `sDEF` is the sheet name.
+      Where `sDEF` is the sheet name.
 
 :aspect:`Example`
-    .. code-block:: typoscript
-       :caption: EXT:site_package/Configuration/page.tsconfig
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/page.tsconfig
 
-       TCEFORM.pages.doktype {
-           # "INVALID VALUE ..." label will never show up
-           disableNoMatchingValueElement = 1
-       }
+      TCEFORM.pages.doktype {
+         # "INVALID VALUE ..." label will never show up
+         disableNoMatchingValueElement = 1
+      }
 
-    Now the selector box will default to the first element in the selector box:
+   Now the selector box will default to the first element in the selector box:
 
-    .. figure:: /Images/ManualScreenshots/List/SelectNoInvalidValue.png
-        :alt: Instead of show a warning message the system choose the first element in the selector box
+   .. figure:: /Images/ManualScreenshots/List/SelectNoInvalidValue.png
+      :alt: Instead of show a warning message the system choose the first element in the selector box
 
-        Instead of show a warning message the system choose the first element in the selector box
+      Instead of show a warning message the system choose the first element in the selector box
 
 
 .. index::
@@ -481,7 +481,7 @@ fileFolderConfig
 ================
 
 :aspect:`Datatype`
-    array
+   array
 
 :aspect:`Description`
    The special :ref:`fileFolder configuration options
@@ -501,9 +501,9 @@ fileFolderConfig
       :caption: EXT:site_package/Configuration/page.tsconfig
 
       fileFolderConfig {
-        folder = 'EXT:styleguide/Resources/Public/Icons'
-        allowedExtensions = 'svg'
-        depth = 1
+         folder = 'EXT:styleguide/Resources/Public/Icons'
+         allowedExtensions = 'svg'
+         depth = 1
       }
 
    This property is available for various levels:
@@ -528,25 +528,25 @@ itemsProcFunc
 =============
 
 :aspect:`Datatype`
-    custom
+   custom
 
 :aspect:`Description`
-    This property applies only to items in :ref:`TCA type=select <t3tca:columns-select>` fields. The properties of
-    this key is passed on to the :ref:`itemsProcFunc <t3tca:columns-select-properties-itemsprocfunc>` in the
-    parameter array by the key "TSconfig".
+   This property applies only to items in :ref:`TCA type=select <t3tca:columns-select>` fields. The properties of
+   this key is passed on to the :ref:`itemsProcFunc <t3tca:columns-select-properties-itemsprocfunc>` in the
+   parameter array by the key "TSconfig".
 
-    This property is available for various levels:
+   This property is available for various levels:
 
-    table level:
-        `TCEFORM.[tableName].[fieldName].itemsProcFunc`
+   table level:
+      `TCEFORM.[tableName].[fieldName].itemsProcFunc`
 
-    table and record type level:
-        `TCEFORM.[tableName].[fieldName].types.[typeName].itemsProcFunc`
+   table and record type level:
+      `TCEFORM.[tableName].[fieldName].types.[typeName].itemsProcFunc`
 
-    Flex form field level, example:
-        `TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.myField.itemsProcFunc`
+   Flex form field level, example:
+      `TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.myField.itemsProcFunc`
 
-        Where `sDEF` is the sheet name.
+      Where `sDEF` is the sheet name.
 
 
 .. index::
@@ -556,33 +556,33 @@ keepItems
 =========
 
 :aspect:`Datatype`
-    list of values
+   list of values
 
 :aspect:`Description`
-    Change the list of items in :ref:`TCA type=select <t3tca:columns-select>` fields. Using this property,
-    all items except those defined here are removed.
+   Change the list of items in :ref:`TCA type=select <t3tca:columns-select>` fields. Using this property,
+   all items except those defined here are removed.
 
-    This property is available for various levels:
+   This property is available for various levels:
 
-    table level, example:
-        `TCEFORM.tt_content.header_layout.keepItems`
+   table level, example:
+      `TCEFORM.tt_content.header_layout.keepItems`
 
-    table and record type level, example:
-        `TCEFORM.tt_content.header_layout.types.textpic.keepItems`
+   table and record type level, example:
+      `TCEFORM.tt_content.header_layout.types.textpic.keepItems`
 
-    Flex form field level, example:
-        `TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.myField.keepItems`
+   Flex form field level, example:
+      `TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.myField.keepItems`
 
-        Where `sDEF` is the sheet name.
+      Where `sDEF` is the sheet name.
 
 :aspect:`Example`
     .. code-block:: typoscript
        :caption: EXT:site_package/Configuration/page.tsconfig
 
-       TCEFORM.pages.doktype {
-           # Show only standard and "Spacer" page types
-           keepItems = 1, 199
-       }
+      TCEFORM.pages.doktype {
+         # Show only standard and "Spacer" page types
+         keepItems = 1, 199
+      }
 
 
 .. index::
@@ -592,36 +592,36 @@ label
 =====
 
 :aspect:`Datatype`
-    localized string
+   localized string
 
 :aspect:`Description`
-    This allows you to enter alternative labels for any field. The value can be a `LLL:` reference
-    to a localization file, the system will then look up the selected backend user language and tries
-    to fetch the localized string if available. However, it is also possible to override these by
-    appending the language key and hard setting a value, for example `label.de = Neuer Feldname`.
+   This allows you to enter alternative labels for any field. The value can be a `LLL:` reference
+   to a localization file, the system will then look up the selected backend user language and tries
+   to fetch the localized string if available. However, it is also possible to override these by
+   appending the language key and hard setting a value, for example `label.de = Neuer Feldname`.
 
-    This property is available for various levels:
+   This property is available for various levels:
 
-    table level, example:
-        `TCEFORM.[tableName].[fieldName].label`
+   table level, example:
+      `TCEFORM.[tableName].[fieldName].label`
 
-    table and record type level, example:
-        `TCEFORM.[tableName].[fieldName].types.[typeName].label`
+   table and record type level, example:
+      `TCEFORM.[tableName].[fieldName].types.[typeName].label`
 
-    Flex form field level, example:
-        `TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.myField.label`
+   Flex form field level, example:
+      `TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.myField.label`
 
-        Where `sDEF` is the sheet name.
+      Where `sDEF` is the sheet name.
 
 :aspect:`Example`
-    .. code-block:: typoscript
-       :caption: EXT:site_package/Configuration/page.tsconfig
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/page.tsconfig
 
-       TCEFORM.pages.title {
-           label = LLL:EXT:my_ext/Resources/Private/Language/locallang.xlf:table.column
-           label.default = New Label
-           label.de = Neuer Feldname
-       }
+      TCEFORM.pages.title {
+         label = LLL:EXT:my_ext/Resources/Private/Language/locallang.xlf:table.column
+         label.default = New Label
+         label.de = Neuer Feldname
+      }
 
 
 .. index::
@@ -631,41 +631,41 @@ noMatchingValue_label
 =====================
 
 :aspect:`Datatype`
-    localized string
+   localized string
 
 :aspect:`Description`
-    This property applies only to items in :ref:`TCA type=select <t3tca:columns-select>` fields, it allows defining
-    a different label of the :ref:`noMatchingValue <pageFormEngineDisableNoMatchingElement>` element.
+   This property applies only to items in :ref:`TCA type=select <t3tca:columns-select>` fields, it allows defining
+   a different label of the :ref:`noMatchingValue <pageFormEngineDisableNoMatchingElement>` element.
 
-    It is possible to use the placeholder `%s` to insert the value. If the property is set to empty,
-    the label will be blank.
+   It is possible to use the placeholder `%s` to insert the value. If the property is set to empty,
+   the label will be blank.
 
-    This property is available for various levels:
+   This property is available for various levels:
 
-    table level, example:
-        `TCEFORM.tt_content.header_layout.noMatchingValue_label`
+   table level, example:
+      `TCEFORM.tt_content.header_layout.noMatchingValue_label`
 
-    table and record type level, example:
-        `TCEFORM.tt_content.header_layout.types.textpic.noMatchingValue_label`
+   table and record type level, example:
+      `TCEFORM.tt_content.header_layout.types.textpic.noMatchingValue_label`
 
-    Flex form field level, example:
-        `TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.myField.noMatchingValue_label`
+   Flex form field level, example:
+      `TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.myField.noMatchingValue_label`
 
-        Where `sDEF` is the sheet name.
+      Where `sDEF` is the sheet name.
 
 :aspect:`Example`
-    .. code-block:: typoscript
-       :caption: EXT:site_package/Configuration/page.tsconfig
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/page.tsconfig
 
-       TCEFORM.pages.doktype {
-           # Different "INVALID VALUE ..." label:
-           noMatchingValue_label = VALUE "%s" was not available!
-       }
+      TCEFORM.pages.doktype {
+         # Different "INVALID VALUE ..." label:
+         noMatchingValue_label = VALUE "%s" was not available!
+      }
 
-    .. figure:: /Images/ManualScreenshots/List/SelectInvalidValueDifferentLabel.png
-        :alt:  An invalid selector box value is indicated by a warning message
+   .. figure:: /Images/ManualScreenshots/List/SelectInvalidValueDifferentLabel.png
+      :alt:  An invalid selector box value is indicated by a warning message
 
-        An invalid selector box value is indicated by a warning message
+      An invalid selector box value is indicated by a warning message
 
 
 .. index::
@@ -675,33 +675,33 @@ removeItems
 ===========
 
 :aspect:`Datatype`
-    list of values
+   list of values
 
 :aspect:`Description`
-    Change the list of items in :ref:`TCA type=select <t3tca:columns-select>` fields. Using this property,
-    single items can be removed, leaving all others.
+   Change the list of items in :ref:`TCA type=select <t3tca:columns-select>` fields. Using this property,
+   single items can be removed, leaving all others.
 
-    This property is available for various levels:
+   This property is available for various levels:
 
-    table level, example:
-        `TCEFORM.tt_content.header_layout.removeItems`
+   table level, example:
+      `TCEFORM.tt_content.header_layout.removeItems`
 
-    table and record type level, example:
-        `TCEFORM.tt_content.header_layout.types.textpic.removeItems`
+   table and record type level, example:
+      `TCEFORM.tt_content.header_layout.types.textpic.removeItems`
 
-    Flex form field level, example:
-        `TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.myField.removeItems`
+   Flex form field level, example:
+      `TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.myField.removeItems`
 
-        Where `sDEF` is the sheet name.
+      Where `sDEF` is the sheet name.
 
 :aspect:`Example`
-    .. code-block:: typoscript
-       :caption: EXT:site_package/Configuration/page.tsconfig
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/page.tsconfig
 
-       TCEFORM.pages.doktype {
-           # Remove "Recycler" and "Spacer" page types
-           removeItems = 199, 255
-       }
+      TCEFORM.pages.doktype {
+         # Remove "Recycler" and "Spacer" page types
+         removeItems = 199, 255
+      }
 
 .. index::
    FlexForm; Sheet description
@@ -710,15 +710,15 @@ sheetDescription
 ================
 
 :aspect:`Datatype`
-    localized string
+   localized string
 
 :aspect:`Description`
-    Specifies a description for the sheet shown in the FlexForm.
+   Specifies a description for the sheet shown in the FlexForm.
 
-    This property is only available on flex form sheet level, example:
-        `TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.sheetDescription`
+   This property is only available on flex form sheet level, example:
+      `TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.sheetDescription`
 
-        Where `sDEF` is the sheet name.
+      Where `sDEF` is the sheet name.
 
 
 .. index::
@@ -728,15 +728,15 @@ sheetShortDescr
 ===============
 
 :aspect:`Datatype`
-    localized string
+   localized string
 
 :aspect:`Description`
-    Specifies a short description of the sheet used as link title in the tab-menu.
+   Specifies a short description of the sheet used as link title in the tab-menu.
 
-    This property is only available on flex form sheet level, example:
-        `TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.sheetShortDescription`
+   This property is only available on flex form sheet level, example:
+      `TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.sheetShortDescription`
 
-        Where `sDEF` is the sheet name.
+      Where `sDEF` is the sheet name.
 
 .. index::
    FlexForm; Sheet title
@@ -745,24 +745,24 @@ sheetTitle
 ==========
 
 :aspect:`Datatype`
-    localized string
+   localized string
 
 :aspect:`Description`
-    Set the title of the sheet / tab in a FlexForm configuration.
+   Set the title of the sheet / tab in a FlexForm configuration.
 
-    This property is only available on flex form sheet level, example:
-        `TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.sheetTitle`
+   This property is only available on flex form sheet level, example:
+      `TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.sheetTitle`
 
-        Where `sDEF` is the sheet name.
+      Where `sDEF` is the sheet name.
 
 :aspect:`Example`
-    .. code-block:: typoscript
-       :caption: EXT:site_package/Configuration/page.tsconfig
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/page.tsconfig
 
-       TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF {
-           # Rename the first tab of the FlexForm plug-in configuration
-           sheetTitle = LLL:my_ext/Resource/Private/Language/locallang.xlf:tt_content.pi_flexform.my_ext_pi1.sDEF
-       }
+      TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF {
+         # Rename the first tab of the FlexForm plug-in configuration
+         sheetTitle = LLL:my_ext/Resource/Private/Language/locallang.xlf:tt_content.pi_flexform.my_ext_pi1.sDEF
+      }
 
 
 .. index::
@@ -777,30 +777,30 @@ Configuration of the suggest wizard that is available and often enabled
 for :ref:`TCA type=group <t3tca:columns-group>` fields.
 
 .. figure:: /Images/ManualScreenshots/List/TcaTypeGroupSuggest.png
-    :alt: A configured suggest wizard
+   :alt: A configured suggest wizard
 
-    A configured suggest wizard
+   A configured suggest wizard
 
 The properties listed below are available on various levels. A more specific setting overrides
 a less specific one:
 
 Configuration of all suggest wizards in all tables for all target query tables:
-    `TCEFORM.suggest.default`
+   `TCEFORM.suggest.default`
 
 Configuration of all suggest wizards in all tables looking up records from a specific target table:
-    `TCEFORM.suggest.[queryTable]`
+   `TCEFORM.suggest.[queryTable]`
 
 Configuration of one suggest wizard field in one table for all target query tables:
-    `TCEFORM.[tableName].[fieldName].suggest.default`
+   `TCEFORM.[tableName].[fieldName].suggest.default`
 
 Configuration of one suggest wizard field in one table for a specific target query table:
-    `TCEFORM.[tableName].[fieldName].suggest.[queryTable]`
+   `TCEFORM.[tableName].[fieldName].suggest.[queryTable]`
 
 Configuration of one suggest wizard field in a flex form field of one table for all target query tables:
-    `TCEFORM.[tableName].[fieldName].[dataStructureKey].[sheetName].[flexFieldName].suggest.default`
+   `TCEFORM.[tableName].[fieldName].[dataStructureKey].[sheetName].[flexFieldName].suggest.default`
 
 Configuration of one suggest wizard field in a flex form field of one table for a specific target query table:
-    `TCEFORM.[tableName].[fieldName].[dataStructureKey].[sheetName].[flexFieldName].suggest.[queryTable]`
+   `TCEFORM.[tableName].[fieldName].[dataStructureKey].[sheetName].[flexFieldName].suggest.[queryTable]`
 
 
 
@@ -811,12 +811,12 @@ additionalSearchFields
 ----------------------
 
 :aspect:`Datatype`
-    string
+   string
 
 :aspect:`Description`
-    Comma-separated list of fields the suggest wizard should also search in. By default the wizard looks only in the
-    fields listed in the :ref:`label <t3tca:ctrl-reference-label>` and :ref:`label_alt <t3tca:ctrl-reference-label-alt>`
-    of TCA :ref:`ctrl properties <t3tca:ctrl-reference>`.
+   Comma-separated list of fields the suggest wizard should also search in. By default the wizard looks only in the
+   fields listed in the :ref:`label <t3tca:ctrl-reference-label>` and :ref:`label_alt <t3tca:ctrl-reference-label-alt>`
+   of TCA :ref:`ctrl properties <t3tca:ctrl-reference>`.
 
 
 .. index::
@@ -826,26 +826,26 @@ addWhere
 --------
 
 :aspect:`Datatype`
-    string
+   string
 
 :aspect:`Description`
-    Additional WHERE clause (with AND at the beginning).
+   Additional WHERE clause (with AND at the beginning).
 
-    Markers possible for replacement:
+   Markers possible for replacement:
 
-    * ###THIS_UID###
-    * ###CURRENT_PID###
-    * :ref:`###PAGE_TSCONFIG_ID### <page_tsconfig_id>`
-    * :ref:`###PAGE_TSCONFIG_IDLIST### <page_tsconfig_idlist>`
-    * :ref:`###PAGE_TSCONFIG_STR### <page_tsconfig_str>`
+   *  ###THIS_UID###
+   *  ###CURRENT_PID###
+   *  :ref:`###PAGE_TSCONFIG_ID### <page_tsconfig_id>`
+   *  :ref:`###PAGE_TSCONFIG_IDLIST### <page_tsconfig_idlist>`
+   *  :ref:`###PAGE_TSCONFIG_STR### <page_tsconfig_str>`
 
 :aspect:`Example`
-    .. code-block:: typoscript
-       :caption: EXT:site_package/Configuration/page.tsconfig
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/page.tsconfig
 
-       TCEFORM.pages.storage_pid.suggest.default {
-           addWhere = AND pages.pid=###PAGE_TSCONFIG_ID###
-       }
+      TCEFORM.pages.storage_pid.suggest.default {
+         addWhere = AND pages.pid=###PAGE_TSCONFIG_ID###
+      }
 
 .. index::
    Suggest wizard; CSS class
@@ -854,20 +854,20 @@ cssClass
 --------
 
 :aspect:`Datatype`
-    string
+   string
 
 :aspect:`Description`
-    Add a CSS class to every list item of the result list.
+   Add a CSS class to every list item of the result list.
 
 :aspect:`Example`
-    .. code-block:: typoscript
-       :caption: EXT:site_package/Configuration/page.tsconfig
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/page.tsconfig
 
-       TCEFORM.suggest.pages {
-           # Configure all suggest wizards which list records from table "pages"
-           # to add the CSS class "pages" to every list item of the result list.
-           cssClass = pages
-       }
+      TCEFORM.suggest.pages {
+         # Configure all suggest wizards which list records from table "pages"
+         # to add the CSS class "pages" to every list item of the result list.
+         cssClass = pages
+      }
 
 
 .. index::
@@ -877,18 +877,18 @@ hide
 ----
 
 :aspect:`Datatype`
-    boolean
+   boolean
 
 :aspect:`Description`
-    Hide the suggest field. Works only for single fields.
+   Hide the suggest field. Works only for single fields.
 
 :aspect:`Example`
-    .. code-block:: typoscript
-       :caption: EXT:site_package/Configuration/page.tsconfig
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/page.tsconfig
 
-       TCEFORM.pages.storage_pid.suggest.default {
-           hide = 1
-       }
+      TCEFORM.pages.storage_pid.suggest.default {
+         hide = 1
+      }
 
 
 .. index::
@@ -898,18 +898,18 @@ maxPathTitleLength
 ------------------
 
 :aspect:`Datatype`
-    positive integer
+   positive integer
 
 :aspect:`Description`
-    Maximum number of characters to display when a path element is too long.
+   Maximum number of characters to display when a path element is too long.
 
 :aspect:`Example`
-    .. code-block:: typoscript
-       :caption: EXT:site_package/Configuration/page.tsconfig
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/page.tsconfig
 
-       TCEFORM.suggest.default {
-           maxPathTitleLength = 30
-       }
+      TCEFORM.suggest.default {
+         maxPathTitleLength = 30
+      }
 
 .. index::
    Suggest wizard; Characters min
@@ -918,21 +918,21 @@ minimumCharacters
 -----------------
 
 :aspect:`Datatype`
-    positive integer
+   positive integer
 
 :aspect:`Description`
-    Minimum number of characters needed to start the search. Works only for single fields.
+   Minimum number of characters needed to start the search. Works only for single fields.
 
 :aspect:`Default`
-    2
+   2
 
 :aspect:`Example`
-    .. code-block:: typoscript
-       :caption: EXT:site_package/Configuration/page.tsconfig
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/page.tsconfig
 
-       TCEFORM.pages.storage_pid.suggest.default {
-           minimumCharacters = 3
-       }
+      TCEFORM.pages.storage_pid.suggest.default {
+         minimumCharacters = 3
+      }
 
 
 .. index::
@@ -942,19 +942,19 @@ pidDepth
 --------
 
 :aspect:`Datatype`
-    positive integer
+   positive integer
 
 :aspect:`Description`
-    Expand pidList by this number of levels. Only has an effect, if pidList has a value.
+   Expand pidList by this number of levels. Only has an effect, if pidList has a value.
 
 :aspect:`Example`
-    .. code-block:: typoscript
-       :caption: EXT:site_package/Configuration/page.tsconfig
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/page.tsconfig
 
-       TCEFORM.suggest.default {
-           pidList = 6,7
-           pidDepth = 4
-       }
+      TCEFORM.suggest.default {
+         pidList = 6,7
+         pidDepth = 4
+      }
 
 .. index::
    Suggest wizard; pid list
@@ -963,20 +963,20 @@ pidList
 -------
 
 :aspect:`Datatype`
-    list of values
+   list of values
 
 :aspect:`Description`
-    Limit the search to certain pages (and their subpages). When pidList is empty all pages will be included
-    in the search as long as the backend user is allowed to see them.
+   Limit the search to certain pages (and their subpages). When pidList is empty all pages will be included
+   in the search as long as the backend user is allowed to see them.
 
 :aspect:`Example`
-    .. code-block:: typoscript
-       :caption: EXT:site_package/Configuration/page.tsconfig
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/page.tsconfig
 
-       TCEFORM.suggest.default {
-           # sets the pidList for a suggest fields in all tables
-           pidList = 1,2,3,45
-       }
+      TCEFORM.suggest.default {
+         # sets the pidList for a suggest fields in all tables
+         pidList = 1,2,3,45
+      }
 
 
 .. index::
@@ -986,14 +986,14 @@ receiverClass
 -------------
 
 :aspect:`Datatype`
-    PHP class name
+   PHP class name
 
 :aspect:`Description`
-    PHP class alternative receiver class - the file that holds the class should be derived
-    from :code:`\TYPO3\CMS\Backend\Form\Element\SuggestDefaultReceiver`.
+   PHP class alternative receiver class - the file that holds the class should be derived
+   from :code:`\TYPO3\CMS\Backend\Form\Element\SuggestDefaultReceiver`.
 
 :aspect:`Default`
-    :php:`\TYPO3\CMS\Backend\Form\Element\SuggestDefaultReceiver`
+   :php:`\TYPO3\CMS\Backend\Form\Element\SuggestDefaultReceiver`
 
 
 .. index::
@@ -1003,10 +1003,10 @@ renderFunc
 ----------
 
 :aspect:`Datatype`
-    string
+   string
 
 :aspect:`Description`
-    User function to manipulate the displayed records in the result.
+   User function to manipulate the displayed records in the result.
 
 
 .. index::
@@ -1016,20 +1016,20 @@ searchCondition
 ---------------
 
 :aspect:`Datatype`
-    string
+   string
 
 :aspect:`Description`
-    Additional WHERE clause (no AND needed to prepend).
+   Additional WHERE clause (no AND needed to prepend).
 
 :aspect:`Example`
-    .. code-block:: typoscript
-       :caption: EXT:site_package/Configuration/page.tsconfig
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/page.tsconfig
 
-       TCEFORM.pages.storage_pid.suggest.default {
-           # Configure the suggest wizard for the field "storage_pid" in table "pages"
-           # to search only for pages with doktype=1
-           searchCondition = doktype=1
-       }
+      TCEFORM.pages.storage_pid.suggest.default {
+         # Configure the suggest wizard for the field "storage_pid" in table "pages"
+         # to search only for pages with doktype=1
+         searchCondition = doktype=1
+      }
 
 .. index::
    Suggest wizard; Search whole phrase
@@ -1038,19 +1038,19 @@ searchWholePhrase
 -----------------
 
 :aspect:`Datatype`
-    boolean
+   boolean
 
 :aspect:`Description`
-    Whether to do a `LIKE=%mystring%` (searchWholePhrase = 1) or a `LIKE=mystring%` (to do a real find as you type).
+   Whether to do a `LIKE=%mystring%` (searchWholePhrase = 1) or a `LIKE=mystring%` (to do a real find as you type).
 
 :aspect:`Default`
-    0
+   0
 
 :aspect:`Example`
-    .. code-block:: typoscript
-       :caption: EXT:site_package/Configuration/page.tsconfig
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/page.tsconfig
 
-       TCEFORM.pages.storage_pid.suggest.default {
-           # Configure the suggest wizard for the field "storage_pid" in table "pages" to search only for whole phrases
-          searchWholePhrase = 1
-       }
+      TCEFORM.pages.storage_pid.suggest.default {
+         # Configure the suggest wizard for the field "storage_pid" in table "pages" to search only for whole phrases
+         searchWholePhrase = 1
+      }
