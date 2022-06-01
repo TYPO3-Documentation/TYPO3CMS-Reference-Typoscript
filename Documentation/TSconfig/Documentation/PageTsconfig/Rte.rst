@@ -13,11 +13,6 @@ The `RTE` prefix key is used for configuration of the Rich Text Editor.
 Please refer to the :ref:`RTE chapter <t3coreapi:rte>` in Core API document
 for more general information on RTE configuration and data processing.
 
-.. warning::
-
-   Some explanations and descriptions may contain slightly obsolete
-   references. The principles are still valid though.
-
 The order in which configuration for the RTE is loaded is:
 
 1. preset defined for a specific field via PageTS
@@ -141,11 +136,6 @@ allowTags
 
     b,i,u,a,img,br,div,center,pre,font,hr,sub,sup,p,strong,em,li,ul,ol,blo
     ckquote,strike,span
-
-    .. note::
-        This information is outdated, the default list depends on the used
-        rte_ckeditor YAML configuraton.
-
 
 .. index::
    RTE; Tags outside paragraphs
