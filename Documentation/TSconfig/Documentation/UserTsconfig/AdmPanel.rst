@@ -2,6 +2,7 @@
 .. index:: Admin panel
 .. _useradmpanel:
 
+========
 admPanel
 ========
 
@@ -30,6 +31,13 @@ Example user TSconfig to disable the admin panel for a user:
    :caption: EXT:site_package/Configuration/user.tsconfig
 
    admPanel.hide = 1
+
+Properties
+==========
+
+.. contents::
+   :depth: 2
+   :local:
 
 
 .. index:: Admin panel; enable
