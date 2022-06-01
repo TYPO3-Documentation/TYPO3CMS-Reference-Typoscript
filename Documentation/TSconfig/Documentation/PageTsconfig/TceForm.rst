@@ -45,12 +45,18 @@ clear if reading through the single properties below and looking at the examples
 
 .. youtube:: B3IQq7pIJ_o
 
+Properties
+==========
+
+.. contents::
+   :depth: 2
+   :local:
 
 .. index::
    Records; select items added
 
 addItems
-========
+--------
 
 :aspect:`Datatype`
    localized string
@@ -99,7 +105,7 @@ addItems
    Records; labels changed
 
 altLabels
-=========
+---------
 
 :aspect:`Datatype`
    localized string
@@ -156,7 +162,7 @@ altLabels
 .. _page_tsconfig_id:
 
 PAGE_TSCONFIG_ID
-================
+----------------
 
 :aspect:`Datatype`
    integer
@@ -192,7 +198,7 @@ PAGE_TSCONFIG_ID
 .. _page_tsconfig_idlist:
 
 PAGE_TSCONFIG_IDLIST
-====================
+--------------------
 
 :aspect:`Datatype`
    list of integers
@@ -221,7 +227,7 @@ PAGE_TSCONFIG_IDLIST
 .. _page_tsconfig_str:
 
 PAGE_TSCONFIG_STR
-=================
+-----------------
 
 :aspect:`Datatype`
    string
@@ -252,7 +258,7 @@ PAGE_TSCONFIG_STR
 .. _pageTsConfigTceFormConfig:
 
 config
-======
+------
 
 :aspect:`Datatype`
    string / array
@@ -297,7 +303,7 @@ config
 .. _pageTsConfigTceFormConfigTreeConfig:
 
 config.treeConfig
-=================
+-----------------
 
 :aspect:`Datatype`
    int
@@ -334,7 +340,7 @@ config.treeConfig
    Records; field description
 
 description
-===========
+-----------
 
 .. include:: /Images/AutomaticScreenshots/Input1.rst.txt
 
@@ -379,7 +385,7 @@ description
 
 
 disabled
-========
+--------
 
 :aspect:`Datatype`
    boolean
@@ -426,7 +432,7 @@ disabled
 .. _pageFormEngineDisableNoMatchingElement:
 
 disableNoMatchingValueElement
-=============================
+-----------------------------
 
 :aspect:`Datatype`
    boolean
@@ -478,7 +484,7 @@ disableNoMatchingValueElement
 .. _fileFolderConfig:
 
 fileFolderConfig
-================
+----------------
 
 :aspect:`Datatype`
    array
@@ -525,7 +531,7 @@ fileFolderConfig
 .. _itemsProcFunc:
 
 itemsProcFunc
-=============
+-------------
 
 :aspect:`Datatype`
    custom
@@ -553,7 +559,7 @@ itemsProcFunc
    Records; select items remove
 
 keepItems
-=========
+---------
 
 :aspect:`Datatype`
    list of values
@@ -589,7 +595,7 @@ keepItems
    Records; Field label
 
 label
-=====
+-----
 
 :aspect:`Datatype`
    localized string
@@ -628,7 +634,7 @@ label
    Records; label for no matching value
 
 noMatchingValue_label
-=====================
+---------------------
 
 :aspect:`Datatype`
    localized string
@@ -672,7 +678,7 @@ noMatchingValue_label
    Records; select items remove
 
 removeItems
-===========
+-----------
 
 :aspect:`Datatype`
    list of values
@@ -707,7 +713,7 @@ removeItems
    FlexForm; Sheet description
 
 sheetDescription
-================
+----------------
 
 :aspect:`Datatype`
    localized string
@@ -725,7 +731,7 @@ sheetDescription
    FlexForm; Sheet short description
 
 sheetShortDescr
-===============
+---------------
 
 :aspect:`Datatype`
    localized string
@@ -742,7 +748,7 @@ sheetShortDescr
    FlexForm; Sheet title
 
 sheetTitle
-==========
+----------
 
 :aspect:`Datatype`
    localized string
@@ -771,7 +777,7 @@ sheetTitle
 .. _pagetceformsuggest:
 
 suggest
-=======
+-------
 
 Configuration of the suggest wizard that is available and often enabled
 for :ref:`TCA type=group <t3tca:columns-group>` fields.
@@ -808,7 +814,7 @@ Configuration of one suggest wizard field in a flex form field of one table for 
    Suggest wizard; Search fields additional
 
 additionalSearchFields
-----------------------
+~~~~~~~~~~~~~~~~~~~~~~
 
 :aspect:`Datatype`
    string
@@ -823,7 +829,7 @@ additionalSearchFields
    Suggest wizard;  Where statement
 
 addWhere
---------
+~~~~~~~~
 
 :aspect:`Datatype`
    string
@@ -851,7 +857,7 @@ addWhere
    Suggest wizard; CSS class
 
 cssClass
---------
+~~~~~~~~
 
 :aspect:`Datatype`
    string
@@ -874,7 +880,7 @@ cssClass
    Suggest wizard; hide
 
 hide
-----
+~~~~
 
 :aspect:`Datatype`
    boolean
@@ -895,7 +901,7 @@ hide
    Suggest wizard; Characters max
 
 maxPathTitleLength
-------------------
+~~~~~~~~~~~~~~~~~~
 
 :aspect:`Datatype`
    positive integer
@@ -915,7 +921,7 @@ maxPathTitleLength
    Suggest wizard; Characters min
 
 minimumCharacters
------------------
+~~~~~~~~~~~~~~~~~
 
 :aspect:`Datatype`
    positive integer
@@ -939,7 +945,7 @@ minimumCharacters
    Suggest wizard; pid levels
 
 pidDepth
---------
+~~~~~~~~
 
 :aspect:`Datatype`
    positive integer
@@ -960,7 +966,7 @@ pidDepth
    Suggest wizard; pid list
 
 pidList
--------
+~~~~~~~
 
 :aspect:`Datatype`
    list of values
@@ -983,7 +989,7 @@ pidList
    Suggest wizard; receiver php class
 
 receiverClass
--------------
+~~~~~~~~~~~~~
 
 :aspect:`Datatype`
    PHP class name
@@ -1000,7 +1006,7 @@ receiverClass
    Suggest wizard; rendering user function
 
 renderFunc
-----------
+~~~~~~~~~~
 
 :aspect:`Datatype`
    string
@@ -1013,7 +1019,7 @@ renderFunc
    Suggest wizard; Where statement
 
 searchCondition
----------------
+~~~~~~~~~~~~~~~
 
 :aspect:`Datatype`
    string
@@ -1035,7 +1041,7 @@ searchCondition
    Suggest wizard; Search whole phrase
 
 searchWholePhrase
------------------
+~~~~~~~~~~~~~~~~~
 
 :aspect:`Datatype`
    boolean
