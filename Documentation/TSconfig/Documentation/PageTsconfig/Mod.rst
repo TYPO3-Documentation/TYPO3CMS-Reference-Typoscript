@@ -16,6 +16,12 @@ Configuration for backend modules. This is the part of page TSconfig
 with the most options, most sections affect the main TYPO3 editing modules
 like *Web > Page* and *Web > List*.
 
+Properties
+==========
+
+.. contents::
+   :depth: 2
+   :local:
 
 .. index::
    mod; SHARED
@@ -23,7 +29,7 @@ like *Web > Page* and *Web > List*.
 .. _pagesharedotionsformodules:
 
 SHARED
-======
+------
 
 .. youtube:: xJtsLlEtY5U
 
@@ -33,7 +39,7 @@ SHARED
    Columns; Disable
 
 colPos_list
------------
+~~~~~~~~~~~
 
 :aspect:`Datatype`
    list of integers
@@ -101,7 +107,7 @@ colPos_list
 .. _pageTsConfigSharedDefaultLanguageLabel:
 
 defaultLanguageFlag
--------------------
+~~~~~~~~~~~~~~~~~~~
 
 :aspect:`Datatype`
    string
@@ -140,7 +146,7 @@ defaultLanguageFlag
    Localization; Default language label
 
 defaultLanguageLabel
---------------------
+~~~~~~~~~~~~~~~~~~~~
 
 :aspect:`Datatype`
    string
@@ -163,7 +169,7 @@ defaultLanguageLabel
    Localization; disable languages
 
 disableLanguages
-----------------
+~~~~~~~~~~~~~~~~
 
 :aspect:`Datatype`
    string
@@ -184,7 +190,7 @@ disableLanguages
    Buttons; disable sys_note
 
 disableSysNoteButton
---------------------
+~~~~~~~~~~~~~~~~~~~~
 
 :aspect:`Datatype`
    boolean
@@ -199,7 +205,7 @@ disableSysNoteButton
    Modules; Info
 
 web_info
-========
+--------
 
 Configuration options of the "Web > Info" module.
 
@@ -210,7 +216,7 @@ Configuration options of the "Web > Info" module.
 .. _fieldDefinitions-webinfo:
 
 fieldDefinitions
-----------------
+~~~~~~~~~~~~~~~~
 
 :aspect:`Datatype`
    array
@@ -260,7 +266,7 @@ fieldDefinitions
 .. _pageblindingfunctionmenuoptions-webinfo:
 
 menu.function
--------------
+~~~~~~~~~~~~~
 
 :aspect:`Datatype`
    array
@@ -306,7 +312,7 @@ menu.function
 .. _pagewebpage:
 
 web_layout
-==========
+----------
 
 Configuration options of the "Web > Page" module.
 
@@ -317,7 +323,7 @@ Configuration options of the "Web > Page" module.
    allowInconsistentLanguageHandling
 
 allowInconsistentLanguageHandling
----------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 :aspect:`Datatype`
    boolean
@@ -341,7 +347,7 @@ allowInconsistentLanguageHandling
 .. index:: BackendLayouts
 
 BackendLayouts
---------------
+~~~~~~~~~~~~~~
 
 :aspect:`Datatype`
    array
@@ -392,7 +398,7 @@ BackendLayouts
    Localization; Default language label
 
 defaultLanguageLabel
---------------------
+~~~~~~~~~~~~~~~~~~~~
 
 :aspect:`Datatype`
    string
@@ -415,7 +421,7 @@ defaultLanguageLabel
    Localization; Show default content element
 
 defLangBinding
---------------
+~~~~~~~~~~~~~~
 
 :aspect:`Datatype`
    boolean
@@ -438,7 +444,7 @@ defLangBinding
    New content element wizard; Disable
 
 disableNewContentElementWizard
-------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 :aspect:`Datatype`
    boolean
@@ -453,7 +459,7 @@ disableNewContentElementWizard
    Page columns; Hide restricted
 
 hideRestrictedCols
-------------------
+~~~~~~~~~~~~~~~~~~
 
 :aspect:`Datatype`
    boolean
@@ -486,7 +492,7 @@ hideRestrictedCols
    Localization; Copy content elements
 
 localization.enableCopy
------------------------
+~~~~~~~~~~~~~~~~~~~~~~~
 
 :aspect:`Datatype`
    boolean
@@ -513,7 +519,7 @@ localization.enableCopy
    Localization; Translate content elements
 
 localization.enableTranslate
-----------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 :aspect:`Datatype`
    boolean
@@ -539,7 +545,7 @@ localization.enableTranslate
 .. _pageblindingfunctionmenuoptions-weblayout:
 
 menu.functions
---------------
+~~~~~~~~~~~~~~
 
 :aspect:`Datatype`
    array
@@ -581,7 +587,7 @@ menu.functions
    Buttons; Create new record
 
 noCreateRecordsLink
--------------------
+~~~~~~~~~~~~~~~~~~~
 
 :aspect:`Datatype`
    boolean
@@ -598,7 +604,7 @@ noCreateRecordsLink
    Content elements; Preview definition
 
 preview
--------
+~~~~~~~
 
 :aspect:`Datatype`
    string
@@ -645,7 +651,7 @@ preview
 .. _pageweblist:
 
 web_list
-========
+--------
 
 Configuration options of the "Web > List" module.
 
@@ -656,7 +662,7 @@ Configuration options of the "Web > List" module.
 .. _pageTsConfigWebListAllowedNewTables:
 
 allowedNewTables
-----------------
+~~~~~~~~~~~~~~~~
 
 :aspect:`Datatype`
    list of table names
@@ -690,7 +696,7 @@ allowedNewTables
 .. index:: clickTitleMode
 
 clickTitleMode
---------------
+~~~~~~~~~~~~~~
 
 :aspect:`Datatype`
    string
@@ -718,7 +724,7 @@ clickTitleMode
    CSV Exports; Delimiter
 
 csvDelimiter
-------------
+~~~~~~~~~~~~
 
 :aspect:`Datatype`
    string
@@ -742,7 +748,7 @@ csvDelimiter
    CSV Downloads; Quoting character
 
 csvQuote
---------
+~~~~~~~~
 
 :aspect:`Datatype`
    string
@@ -766,7 +772,7 @@ csvQuote
 .. _pageTsConfigWebListDeniedNewTables:
 
 deniedNewTables
----------------
+~~~~~~~~~~~~~~~
 
 :aspect:`Datatype`
    list of table names
@@ -791,7 +797,7 @@ deniedNewTables
 .. index:: disableSingleTableView
 
 disableSingleTableView
-----------------------
+~~~~~~~~~~~~~~~~~~~~~~
 
 :aspect:`Datatype`
    boolean
@@ -806,7 +812,7 @@ disableSingleTableView
 .. index:: displayColumnSelector
 
 displayColumnSelector
----------------------
+~~~~~~~~~~~~~~~~~~~~~
 
 :aspect:`Datatype`
    boolean
@@ -833,7 +839,7 @@ displayColumnSelector
    Clipboard; Enable
 
 enableClipBoard
----------------
+~~~~~~~~~~~~~~~
 
 :aspect:`Datatype`
    list of keywords
@@ -863,7 +869,7 @@ enableClipBoard
    List module; Extended view
 
 enableDisplayBigControlPanel
-----------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. versionchanged:: 11.3
    The checkbox :guilabel:`Extended view` was removed with TYPO3 11.3.
@@ -875,7 +881,7 @@ enableDisplayBigControlPanel
    List module; Hide tables
 
 hideTables
-----------
+~~~~~~~~~~
 
 :aspect:`Datatype`
    list of table names, or *
@@ -892,7 +898,7 @@ hideTables
    Localization; Hide translations in List module
 
 hideTranslations
-----------------
+~~~~~~~~~~~~~~~~
 
 :aspect:`Datatype`
    list of table names, or *
@@ -921,7 +927,7 @@ hideTranslations
    List module; Items per table
 
 itemsLimitPerTable
-------------------
+~~~~~~~~~~~~~~~~~~
 
 :aspect:`Datatype`
    positive integer
@@ -947,7 +953,7 @@ itemsLimitPerTable
    List module; Items per table in single table view
 
 itemsLimitSingleTable
----------------------
+~~~~~~~~~~~~~~~~~~~~~
 
 :aspect:`Datatype`
    positive integer
@@ -974,7 +980,7 @@ itemsLimitSingleTable
    List module; Records in single table view only
 
 listOnlyInSingleTableView
--------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 :aspect:`Datatype`
    boolean
@@ -1010,7 +1016,7 @@ listOnlyInSingleTableView
    Content elements; New wizard
 
 newContentElementWizard.override
---------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 :aspect:`Datatype`
    string
@@ -1032,7 +1038,7 @@ newContentElementWizard.override
    Pages; New wizard
 
 newPageWizard.override
-----------------------
+~~~~~~~~~~~~~~~~~~~~~~
 
 :aspect:`Datatype`
    string
@@ -1047,7 +1053,7 @@ newPageWizard.override
    Buttons; Create new record
 
 noCreateRecordsLink
--------------------
+~~~~~~~~~~~~~~~~~~~
 
 :aspect:`Datatype`
    boolean
@@ -1073,7 +1079,7 @@ noCreateRecordsLink
    Buttons; Download
 
 noExportRecordsLinks
---------------------
+~~~~~~~~~~~~~~~~~~~~
 
 :aspect:`Datatype`
    boolean
@@ -1109,7 +1115,7 @@ noExportRecordsLinks
    Buttons; View page
 
 noViewWithDokTypes
-------------------
+~~~~~~~~~~~~~~~~~~
 
 :aspect:`Datatype`
    string
@@ -1126,7 +1132,7 @@ noViewWithDokTypes
    List module; Hide tables
 
 table.[tableName].hideTable
-------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 :aspect:`Datatype`
    boolean
@@ -1147,7 +1153,7 @@ table.[tableName].hideTable
    List module; columns selector
 
 table.[tableName].displayColumnSelector
----------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 :aspect:`Datatype`
    boolean
@@ -1178,7 +1184,7 @@ table.[tableName].displayColumnSelector
    List module; Order tables
 
 tableDisplayOrder
------------------
+~~~~~~~~~~~~~~~~~
 
 :aspect:`Datatype`
    array
@@ -1201,7 +1207,7 @@ tableDisplayOrder
    Items; Search level
 
 searchLevel.items
------------------
+~~~~~~~~~~~~~~~~~
 
 :aspect:`Datatype`
    array
@@ -1223,7 +1229,7 @@ searchLevel.items
 
 
 web_ts
-======
+------
 
 Configuration options of the "Web > Template" module.
 
@@ -1234,7 +1240,7 @@ Configuration options of the "Web > Template" module.
 .. _pageblindingfunctionmenuoptions-webts:
 
 menu.function
--------------
+~~~~~~~~~~~~~
 
 :aspect:`Datatype`
    array
@@ -1273,7 +1279,7 @@ menu.function
 .. _pagewebview:
 
 web_view
-========
+--------
 
 Configuration options of the "Web > View" module.
 
@@ -1285,7 +1291,7 @@ Configuration options of the "Web > View" module.
    Preview; Mobile
 
 previewFrameWidths
-------------------
+~~~~~~~~~~~~~~~~~~
 
 :aspect:`Datatype`
    array
@@ -1330,7 +1336,7 @@ previewFrameWidths
    View module; type parameter
 
 type
-----
+~~~~
 
 :aspect:`Datatype`
    positive integer
@@ -1351,7 +1357,7 @@ type
 .. index:: Wizards
 
 wizards
-=======
+-------
 
 The `wizards` section allows to customize the *New record wizard* and the
 *New content element wizard*.
@@ -1361,7 +1367,7 @@ The `wizards` section allows to customize the *New record wizard* and the
 .. _pagenewcontentelementwizard:
 
 newContentElement.wizardItems
------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 :aspect:`Datatype`
    array
@@ -1470,7 +1476,7 @@ newContentElement.wizardItems
 .. _pagewebrecordwizard:
 
 newRecord.order
----------------
+~~~~~~~~~~~~~~~
 
 :aspect:`Datatype`
    list of values
@@ -1504,7 +1510,7 @@ newRecord.order
    New Record wizard; Inside page button
 
 newRecord.pages
----------------
+~~~~~~~~~~~~~~~
 
 :aspect:`Datatype`
    boolean
