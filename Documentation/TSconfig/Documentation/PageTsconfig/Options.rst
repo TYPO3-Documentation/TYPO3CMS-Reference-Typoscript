@@ -8,16 +8,23 @@ options
 
 Various options for the page affecting the core at various points.
 
+Properties
+==========
+
+.. contents::
+   :depth: 2
+   :local:
+
 .. index::
    options.backendLayout
    Backend; Layout
 .. _pagebackendlayout:
 
 backendLayout
-=============
+-------------
 
 exclude
--------
+~~~~~~~
 
 :aspect:`Datatype`
     list of identifiers / uids
