@@ -12,12 +12,19 @@ the :ref:`according section of the TYPO3 Core API document <t3coreapi:tce>`.
 
 .. youtube:: HnAdDHkes5A
 
+Properties
+==========
+
+.. contents::
+   :depth: 2
+   :local:
+
 
 .. index:: Clear cache; On saving record
 .. _pagetcemain-clearcachecmd:
 
 clearCacheCmd
-=============
+-------------
 
 :aspect:`Datatype`
     List of integers, `all`, `pages` or tags
@@ -58,7 +65,7 @@ clearCacheCmd
 .. _pagetcemain-clearcache-disable:
 
 clearCache_disable
-==================
+------------------
 
 :aspect:`Datatype`
     boolean
@@ -74,7 +81,7 @@ clearCache_disable
 .. _pagetcemain-clearcache-pagegrandparent:
 
 clearCache_pageGrandParent
-==========================
+--------------------------
 
 :aspect:`Datatype`
     boolean
@@ -87,7 +94,7 @@ clearCache_pageGrandParent
 .. _pagetcemain-clearcache-pagesiblingchildren:
 
 clearCache_pageSiblingChildren
-==============================
+------------------------------
 
 :aspect:`Datatype`
     boolean
@@ -178,21 +185,21 @@ disablePrependAtCopy
 .. _pagetcemain-permissions-user-group:
 
 permissions
-===========
+-----------
 
 
 .. index:: Page permissions; copyFromParent
 .. _pagetcemain-permissions-copyFromParent:
 
 Value copyFromParent
---------------------
+~~~~~~~~~~~~~~~~~~~~
 
 The value :typoscript:`copyFromParent` can be set for each of the
 page TSconfig :typoscript:`TCEMAIN.permissions.*` sub keys. If this value is
 set, the page access permissions are copied from the parent page.
 
 Example: Inherit the group id of the parent page
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+""""""""""""""""""""""""""""""""""""""""""""""""
 
 .. code-block:: php
    :caption: typo3conf/LocalConfiguration.php
@@ -219,7 +226,7 @@ This behaviour is similar to the "group sticky bit" in Unix for directories.
 .. index:: Page permissions; everybody
 
 everybody
----------
+~~~~~~~~~
 
 :aspect:`Datatype`
     list of strings or integer 0-31
@@ -261,7 +268,7 @@ everybody
 .. index:: Page permissions; Group
 
 group
------
+~~~~~
 
 :aspect:`Datatype`
    list of strings or integer 0-31
@@ -303,7 +310,7 @@ group
 .. index:: Page permissions; Group id
 
 groupid
--------
+~~~~~~~
 
 :aspect:`Datatype`
     positive integer or string
@@ -342,7 +349,7 @@ groupid
 .. _pagetcemain-permissions-actions:
 
 user
-----
+~~~~
 
 :aspect:`Datatype`
    list of strings or integer 0-31
@@ -374,7 +381,7 @@ user
 .. index:: Page permissions; User id
 
 userid
-------
+~~~~~~
 
 :aspect:`Datatype`
     positive integer or string
@@ -412,7 +419,7 @@ userid
 .. _pagetcemain-preview:
 
 preview
-=======
+-------
 
 :aspect:`Datatype`
     array
@@ -477,7 +484,7 @@ preview
 .. _pagetcemain-table-table-name:
 
 table
-=====
+-----
 
 Processing options for tables. The table name is added, for instance `TCEMAIN.table.pages.disablePrependAtCopy = 1`
 or `TCEMAIN.table.tt_content.disablePrependAtCopy = 1`.
@@ -487,7 +494,7 @@ or `TCEMAIN.table.tt_content.disablePrependAtCopy = 1`.
 .. _pagetcemain-translatetomessage:
 
 translateToMessage
-==================
+------------------
 
 :aspect:`Datatype`
     string
