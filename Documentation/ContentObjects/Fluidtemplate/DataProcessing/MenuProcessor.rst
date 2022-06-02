@@ -6,8 +6,9 @@ MenuProcessor
 =============
 
 
-The :php:`MenuProcessor` utilizes :ref:`HMENU <cobj-hmenu>` to generate a JSON encoded menu string
-that will be decoded again and assigned to :typoscript:`FLUIDTEMPLATE` as a variable.
+The :php:`MenuProcessor` utilizes :ref:`HMENU <cobj-hmenu>` to generate a list of
+menu items which can be assigned to :typoscript:`FLUIDTEMPLATE` as a variable.
+
 Additional data processing is supported and will be applied to each record.
 
 .. hint:: The third party extension
