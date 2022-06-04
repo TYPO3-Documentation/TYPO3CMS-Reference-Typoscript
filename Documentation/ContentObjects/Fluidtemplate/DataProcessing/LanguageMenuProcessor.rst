@@ -5,8 +5,8 @@
 LanguageMenuProcessor
 =====================
 
-This menu processor generates a json encoded menu string that will be
-decoded again and assigned to the :typoscript:`FLUIDTEMPLATE` as a variable.
+This menu processor generates a list of language menu items which can be
+assigned to the :typoscript:`FLUIDTEMPLATE` as a variable.
 
 .. hint:: The third party extension
    `b13/menus <https://extensions.typo3.org/extension/menus>`__ also provides
