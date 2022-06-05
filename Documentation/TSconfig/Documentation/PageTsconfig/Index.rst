@@ -28,4 +28,5 @@ user TSconfig again, for details, see section
    TcaDefaults
    TceForm
    TceMain
+   Templates
    Tx
