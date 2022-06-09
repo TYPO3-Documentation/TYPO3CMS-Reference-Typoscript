@@ -54,10 +54,10 @@ view.templateRootPaths
    :sep:`|` :aspect:`Data type:` array of file paths with :ref:`stdWrap <stdwrap>`
    :sep:`|`
 
-   Used to define several paths for templates, which will be tried in reversed
+   Used to define several paths for templates, which are executed in reverse
    order (the paths are searched from bottom to top). The first folder where
-   the desired layout is found, is used. If the array keys are numeric, they
-   are first sorted and then tried in reversed order.
+   the desired layout is found is immediately used. If the array keys are numeric, they
+   are first sorted and then executed in reverse order.
 
    **Example:**
 
@@ -84,7 +84,7 @@ view.partialRootPaths
    :sep:`|` :aspect:`Data type:` array of file paths with :ref:`stdWrap <stdwrap>`
    :sep:`|`
 
-   Used to define several paths for partials, which will be tried in reversed
+   Used to define several paths for partials, which will be executed in reverse
    order. The first folder where the desired partial is found, is used. The
    keys of the array define the order.
    **Example:**
@@ -114,7 +114,7 @@ to read, more in line with non-Extbase modules and allowing Extbase modules
 to directly access outside information like the `id` parameter handed over
 by the page tree.
 
-To allow Extbase modules to configure this behaviour, the Extbase feature
+To allow Extbase modules to configure this behavior, the Extbase feature
 flag :typoscript:`enableNamespacedArgumentsForBackend` can be set in the module
 configuration, turning the namespacing off or on.
 
@@ -169,13 +169,13 @@ features.enableNamespacedArgumentsForBackend
 settings
 --------
 
-Here reside are all the settings. These settings are
+Here resides all of the settings. These settings are
 available in the Controller of the backend module as the array variable
 :php:`$this->settings`.
 
 Example:
 
-Show 25 news in the backend module of extension news:
+Show 25 news records in the backend module of the news extension:
 
 .. code-block:: typoscript
    :caption: EXT:my_extension/ext_typoscript_setup.typoscript
