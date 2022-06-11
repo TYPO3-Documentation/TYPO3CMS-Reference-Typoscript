@@ -1873,7 +1873,7 @@ postUserFunc
             }
             if (isset($conf['typolink'])) {
             // Use the method typoLink() from ContentObjectRenderer.php.
-            $content = $this->cObj->typoLink($content, $conf['typolink']);
+            $content = $this->cObj->typoLink($content, ['parameter' => $conf['typolink']]);
             }
             return $content;
          }
