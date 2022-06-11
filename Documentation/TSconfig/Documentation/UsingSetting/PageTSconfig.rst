@@ -46,7 +46,7 @@ file:
 .. code-block:: tsconfig
    :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
-   @import 'EXT:myexample/Configuration/TSconfig/Page/Basic.tsconfig
+   @import 'EXT:myexample/Configuration/TSconfig/Page/Basic.tsconfig'
    @import 'EXT:myexample/Configuration/TSconfig/Page/Mod/Wizards/NewContentElement.tsconfig'
 
 
