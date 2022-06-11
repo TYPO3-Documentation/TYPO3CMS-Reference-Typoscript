@@ -1878,14 +1878,14 @@ postUserFunc
       page.10 = TEXT
       page.10 {
          value = Hello World!
-         stdWrap.postUserFunc = Your\NameSpace\YourClass->reverseString
+         stdWrap.postUserFunc = Vendor\SitePackage\UserFunctions\YourClass->reverseString
          stdWrap.postUserFunc.uppercase = 1
       }
 
       page.20 = TEXT
       page.20 {
          value = Hello World!
-         stdWrap.postUserFunc = Your\NameSpace\YourClass->reverseString
+         stdWrap.postUserFunc = Vendor\SitePackage\UserFunctions\YourClass->reverseString
          stdWrap.postUserFunc.uppercase = 1
          stdWrap.postUserFunc.typolink = 11
       }
@@ -1897,51 +1897,59 @@ postUserFunc
       :caption: EXT:site_package/Classes/UserFunctions/YourClass.php
 
       namespace Vendor\SitePackage\UserFunctions;
+
       /**
-         * Example of a method in a PHP class to be called from TypoScript
-         *
-         */
-      class YourClass
+       * Example of a method in a PHP class to be called from TypoScript
+       */
+      final class YourClass
       {
-         /**
-         * Reference to the parent (calling) cObject set from TypoScript
-         */
-         public $cObj;
+         /*
+          * Reference to the parent (calling) cObject set from TypoScript
+          *
+          * @var ContentObjectRenderer
+          */
+         private $cObj;
+
+         public function setContentObjectRenderer(ContentObjectRenderer $cObj): void
+         {
+             $this->cObj = $cObj;
+         }
 
          /**
-         * Custom method for data processing. Also demonstrates how this gives us the ability to use methods in the parent object.
-         *
-         * @param	string		When custom methods are used for data processing (like in stdWrap functions), the $content variable will hold the value to be processed. When methods are meant to just return some generated content (like in USER and USER_INT objects), this variable is empty.
-         * @param	array		TypoScript properties passed to this method.
-         * @return	string	The input string reversed. If the TypoScript property "uppercase" was set, it will also be in uppercase. May also be linked.
-         */
-         public function reverseString($content, $conf)
+          * Custom method for data processing. Also demonstrates how this gives us the
+          * ability to use methods in the parent object.
+          *
+          * @param  string When custom methods are used for data processing (like in stdWrap functions), the $content variable will hold the value to be processed. When methods are meant to just return some generated content (like in USER and USER_INT objects), this variable is empty.
+          * @param  array  TypoScript properties passed to this method.
+          * @return string The input string reversed. If the TypoScript property "uppercase" was set, it will also be in uppercase. May also be linked.
+          */
+         public function reverseString(string $content, array $conf): string
          {
             $content = strrev($content);
             if (isset($conf['uppercase']) && $conf['uppercase'] === '1') {
-            // Use the method caseshift() from ContentObjectRenderer.php.
-            $content = $this->cObj->caseshift($content, 'upper');
+               // Use the method caseshift() from ContentObjectRenderer
+               $content = $this->cObj->caseshift($content, 'upper');
             }
             if (isset($conf['typolink'])) {
-            // Use the method typoLink() from ContentObjectRenderer.php.
-            $content = $this->cObj->typoLink($content, ['parameter' => $conf['typolink']]);
+               // Use the method typoLink() from ContentObjectRenderer
+               $content = $this->cObj->typoLink($content, ['parameter' => $conf['typolink']]);
             }
             return $content;
          }
       }
 
-   For :typoscript:`page.10` the content, which is present when :typoscript:`postUserFunc` is
-   executed, will be given to the PHP function
-   :php:`reverseString()`. The result will be "!DLROW OLLEH".
+   For :typoscript:`page.10` the content, which is present when
+   :typoscript:`postUserFunc` is executed, will be given to the PHP function
+   :php:`reverseString()`. The result will be `!DLROW OLLEH`.
 
    The content of :typoscript:`page.20` will be processed by the function
    :php:`reverseString()` from the class :php:`YourClass`. This also returns
-   the text "!DLROW OLLEH", but wrapped into a link to the page
-   with the ID 11. The result will be :html:`<a href="index.php?id=11">!DLROW OLLEH</a>`.
+   the text `!DLROW OLLEH`, but wrapped into a link to the page with the ID 11.
+   The result will be :html:`<a href="/path/to/page/id/11">!DLROW OLLEH</a>`.
 
-   Note how in the second example :php:`$cObj`, the reference to the
+   Note how in the second example :php:`$this->cObj`, the reference to the
    calling :typoscript:`cObject`, is utilised to use functions from
-   :file:`ContentObjectRenderer.php`!
+   :php:`ContentObjectRenderer` class!
 
 
 .. index:: stdWrap; postUserFuncInt
