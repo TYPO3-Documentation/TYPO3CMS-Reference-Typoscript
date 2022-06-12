@@ -142,6 +142,7 @@ The file :file:`EXT:site_package/Classes/UserFunctions/ExampleTime.php` might
 amongst other things contain:
 
 .. code-block:: php
+   :caption:  EXT:site_package/Classes/UserFunctions/ExampleTime.php
 
    namespace Vendor\SitePackage\UserFunctions;
 
