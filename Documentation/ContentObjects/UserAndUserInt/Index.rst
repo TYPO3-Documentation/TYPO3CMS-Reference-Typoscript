@@ -277,6 +277,7 @@ the local machine". You can make it available like this:
 Contents of :file:`EXT:site_package/Classes/UserFunctions/Hostname.php`:
 
 .. code-block:: php
+   :caption: EXT:site_package/Classes/UserFunctions/Hostname.php
 
    namespace Vendor\SitePackage\UserFunctions;
 
