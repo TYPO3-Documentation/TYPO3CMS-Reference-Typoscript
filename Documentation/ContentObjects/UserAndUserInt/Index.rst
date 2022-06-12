@@ -194,6 +194,7 @@ The file :file:`EXT:site_package/Classes/UserFunctions/ExampleListRecords.php`
 might amongst other things contain:
 
 .. code-block:: php
+   :caption: EXT:site_package/Classes/UserFunctions/ExampleListRecords.php
 
    namespace Vendor\SitePackage\UserFunctions;
 
