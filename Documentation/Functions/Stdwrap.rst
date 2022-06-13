@@ -622,7 +622,6 @@ parseFunc
    content elements.
 
 :aspect:`Example`
-
    .. code-block:: typoscript
       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
@@ -631,6 +630,58 @@ parseFunc
           parseFunc.tags.myTag = TEXT
           parseFunc.tags.myTag.value = This will be inserted when &lt;myTag&gt; is found!
       }
+
+Sanitization
+''''''''''''
+
+.. versionadded:: 9.5.29/10.4.19
+
+:ref:`stdWrap.htmlSanitize <stdwrap-htmlsanitize>` is enabled by default when
+:typoscript:`stdWrap.parseFunc` is invoked. This also includes the Fluid Viewhelper 
+:html:`<f:format.html>`, since it invokes :typoscript:`parseFunc`
+directly using :typoscript:`lib.parseFunc_RTE`.
+
+The following example shows how to disable the sanitization behavior that is
+enabled by default. This is not recommended, but it can be disabled when required.
+
+.. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+   // either disable globally
+   lib.parseFunc.htmlSanitize = 0
+   lib.parseFunc_RTE.htmlSanitize = 0
+
+   // or disable individually per use case
+   10 = TEXT
+   10 {
+       value = <div><img src="invalid.file" onerror="alert(1)"></div>
+       parseFunc =< lib.parseFunc_RTE
+       parseFunc.htmlSanitize = 0
+   }
+
+Since any invocation of :typoscript:`stdWrap.parseFunc` triggers HTML
+sanitization automatically; unless explicitly disabled
+the following example causes a lot of generated markup to be sanitized and can be
+solved by explicitly disabling it with :typoscript:`htmlSanitize = 0`.
+
+.. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+   10 = FLUIDTEMPLATE
+   10 {
+       templateRootPaths {
+           // ...
+       }
+       variables {
+           // ...
+       }
+       stdWrap.parseFunc {
+           // replace --- with soft-hyphen
+           short.--- = &shy;
+           // sanitization of ALL MARKUP is NOT DESIRED here
+           htmlSanitize = 0
+       }
+   }
 
 
 .. index:: pair: stdWrap; HTMLparser
@@ -1995,6 +2046,66 @@ editPanel
 
 .. index:: stdWrap; cache
 .. _stdwrap-cache:
+
+htmlSanitize
+------------
+
+.. index:: stdWrap; htmlSanitize
+.. _stdwrap-htmlsanitize:
+
+.. versionadded:: 9.5.29/10.4.19
+
+:aspect:`Property`
+   htmlSanitize
+
+:aspect:`Data type`
+   :ref:`boolean <data-type-bool>` / array with key "build"
+
+:aspect:`Description`
+   The property controls the sanitization and removal of XSS from markup. It
+   strips tags, attributes and values that are not explicitly allowed.
+
+   * :typoscript:`htmlSanitize = [boolean]`: whether to invoke sanitization
+     (enabled per default when invoked via :typoscript:`stdWrap.parseFunc`).
+   * :typoscript:`htmlSanitize.build = [string]`: defines which specific builder
+     (must be an instance of :php:`\TYPO3\HtmlSanitizer\Builder\BuilderInterface`)
+     to be used for building a :php:`\TYPO3\HtmlSanitizer\Sanitizer` instance
+     using a particular :php:`\TYPO3\HtmlSanitizer\Behavior`. This can either be
+     a fully qualified class name or the name of a preset as defined in
+     :php:`$GLOBALS['TYPO3_CONF_VARS']['SYS']['htmlSanitizer']` - per default,
+     :php:`\TYPO3\CMS\Core\Html\DefaultSanitizerBuilder` is used.
+
+:aspect:`Examples`
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+      10 = TEXT
+      10 {
+          value = <div><img src="invalid.file" onerror="alert(1)"></div>
+          htmlSanitize = 1
+      }
+
+   will result in the following output:
+
+   .. code-block:: html
+
+      <div><img src="invalid.file"></div>
+
+   The following code is equivalent to above, but with a builder specified:
+
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+      10 = TEXT
+      10 {
+          value = <div><img src="invalid.file" onerror="alert(1)"></div>
+          htmlSanitize = 1
+          // Use either "default" for the default builder
+          htmlSanitize.build = default
+          // or use the full class name of the default builder
+          // htmlSanitize.build = TYPO3\CMS\Core\Html\DefaultSanitizerBuilder
+      }
+
 
 cache
 -----
