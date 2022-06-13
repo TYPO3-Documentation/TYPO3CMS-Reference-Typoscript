@@ -135,16 +135,18 @@ from TypoScript. Use this TypoScript configuration:
    page = PAGE
    page.10 = USER_INT
    page.10 {
-     userFunc = Vendor\ExtensionName\ExampleTime->printTime
+     userFunc = Vendor\SitePackage\UserFunctions\ExampleTime->printTime
    }
 
-The file typo3conf/ext/extension_name/Classes/ExampleTime.php might amongst other things
-contain:
+The file :file:`EXT:site_package/Classes/UserFunctions/ExampleTime.php` might
+amongst other things contain:
 
 .. code-block:: php
+   :caption:  EXT:site_package/Classes/UserFunctions/ExampleTime.php
 
-   namespace Vendor\ExtensionName;
-   class ExampleTime {
+   namespace Vendor\SitePackage\UserFunctions;
+
+   final class ExampleTime {
      /**
       * Output the current time in red letters
       *
@@ -158,10 +160,10 @@ contain:
      }
    }
 
-Here page.10 will give back what the PHP function printTime()
-returned. Since we did not use a USER object, but a USER\_INT object,
-this function is executed on every page hit. So this example each time
-outputs the current time in red letters.
+Here :typoscript:`page.10` will give back what the PHP function :php:`printTime()`
+returned. Since we did not use a :typoscript:`USER` object, but a
+:typoscript:`USER_INT` object, this function is executed on every page hit.
+Thus, in this example, the current time is displayed in red letters each time.
 
 Example 2
 ---------
@@ -169,7 +171,7 @@ Example 2
 Now let us have a look at another example:
 
 We want to display all content element headers of a page in reversed
-order. To do that we use the following TypoScript:
+order. For this we use the following TypoScript:
 
 .. code-block:: typoscript
    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
@@ -179,17 +181,18 @@ order. To do that we use the following TypoScript:
 
    page.30 = USER
    page.30 {
-      userFunc = Vendor\ExtensionName\ExampleListRecords->listContentRecordsOnPage
+      userFunc = Vendor\SitePackage\UserFunctions\ExampleListRecords->listContentRecordsOnPage
       # reverseOrder is a boolean variable (see PHP code below)
       reverseOrder = 1
    }
 
-The file typo3conf/ext/extension_name/Classes/ExampleListRecords.php might amongst other
-things contain:
+The file :file:`EXT:site_package/Classes/UserFunctions/ExampleListRecords.php`
+may contain amongst other things:
 
 .. code-block:: php
+   :caption: EXT:site_package/Classes/UserFunctions/ExampleListRecords.php
 
-   namespace Vendor\ExtensionName;
+   namespace Vendor\SitePackage\UserFunctions;
 
    use TYPO3\CMS\Core\Database\ConnectionPool;
    use TYPO3\CMS\Core\Utility\GeneralUtility;
@@ -199,24 +202,30 @@ things contain:
     * Example of a method in a PHP class to be called from TypoScript
     *
     */
-   class ExampleListRecords {
-     /**
-      * Reference to the parent (calling) cObject set from TypoScript
-      *
-      * @var ContentObjectRenderer
-      */
-     public $cObj;
+   final class ExampleListRecords {
 
-     /**
-       * List the headers of the content elements on the page
+      /**
+       * Reference to the parent (calling) cObject set from TypoScript
        *
-       *
-       * @param	string		Empty string (no content to process)
-       * @param	array		TypoScript configuration
-       * @return	string		HTML output, showing content elements (in reverse order, if configured)
+       * @var ContentObjectRenderer
        */
-     public function listContentRecordsOnPage(string $content, array $conf): string
-     {
+      private $cObj;
+
+      public function setContentObjectRenderer(ContentObjectRenderer $cObj): void
+      {
+         $this->cObj = $cObj;
+      }
+
+      /**
+        * List the headers of the content elements on the page
+        *
+        *
+        * @param  string Empty string (no content to process)
+        * @param  array  TypoScript configuration
+        * @return string HTML output, showing content elements (in reverse order, if configured)
+        */
+      public function listContentRecordsOnPage(string $content, array $conf): string
+      {
          $connection = GeneralUtility::makeInstance(ConnectionPool::class)->getConnectionForTable('tt_content');
          $result = $connection->select(
              ['header'],
@@ -230,8 +239,12 @@ things contain:
              $output[] = $row['header'];
          }
          return implode($output, '<br />');
-     }
+      }
    }
+
+Since we need an instance of the :php:`ContentObjectRenderer` class, we are using
+the :php:`setContentObjectRenderer()` method to get it and store it in the
+:php:`cObj` class property for later use.
 
 :typoscript:`page.30` will give back what the function :php:`listContentRecordsOnPage()` of
 the class YourClass returned. This example returns some debug output
@@ -258,24 +271,25 @@ the local machine". You can make it available like this:
 
    page.20 = USER_INT
    page.20 {
-      userFunc = Vendor\ExtensionName\Hostname->getHostname
+      userFunc = Vendor\SitePackage\UserFunctions\Hostname->getHostname
    }
 
-Contents of :file:`typo3conf/ext/extension_name/Classes/Hostname.php`:
+Contents of :file:`EXT:site_package/Classes/UserFunctions/Hostname.php`:
 
 .. code-block:: php
+   :caption: EXT:site_package/Classes/UserFunctions/Hostname.php
 
-   namespace Vendor\ExtensionName;
+   namespace Vendor\SitePackage\UserFunctions;
 
-      class Hostname {
-         /**
-          * Return standard host name for the local machine
-          *
-          * @param  string          Empty string (no content to process)
-          * @param  array           TypoScript configuration
-          * @return string          HTML result
-          */
-         public function getHostname(string $content, array $conf): string
+   final class Hostname {
+      /**
+       * Return standard host name for the local machine
+       *
+       * @param  string Empty string (no content to process)
+       * @param  array  TypoScript configuration
+       * @return string HTML result
+       */
+      public function getHostname(string $content, array $conf): string
          {
             return gethostname() ?: '';
          }
