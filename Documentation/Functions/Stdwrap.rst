@@ -637,12 +637,12 @@ Sanitization
 .. versionadded:: 9.5.29/10.4.19
 
 :ref:`stdWrap.htmlSanitize <stdwrap-htmlsanitize>` is enabled by default when
-:typoscript:`stdWrap.parseFunc` is invoked. This also includes the Fluid view
-helper :html:`<f:format.html>`, since it invokes :typoscript:`parseFunc`
+:typoscript:`stdWrap.parseFunc` is invoked. This also includes the Fluid Viewhelper 
+:html:`<f:format.html>`, since it invokes :typoscript:`parseFunc`
 directly using :typoscript:`lib.parseFunc_RTE`.
 
 The following example shows how to disable the sanitization behavior that is
-enabled by default. This is not recommended, but may occasionally be necessary.
+enabled by default. This is not recommended, but it can be disabled when required.
 
 .. code-block:: typoscript
    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
@@ -660,8 +660,8 @@ enabled by default. This is not recommended, but may occasionally be necessary.
    }
 
 Since any invocation of :typoscript:`stdWrap.parseFunc` triggers HTML
-sanitization per default - unless explicitly disabled - the following example
-the following example caused a lot of generated markup to be sanitized - and was
+sanitization automatically; unless explicitly disabled
+the following example causes a lot of generated markup to be sanitized and can be
 solved by explicitly disabling it with :typoscript:`htmlSanitize = 0`.
 
 .. code-block:: typoscript
@@ -2063,7 +2063,7 @@ htmlSanitize
 
 :aspect:`Description`
    The property controls the sanitization and removal of XSS from markup. It
-   strips tags, attributes or values that were not explicitly allowed.
+   strips tags, attributes and values that are not explicitly allowed.
 
    * :typoscript:`htmlSanitize = [boolean]`: whether to invoke sanitization
      (enabled per default when invoked via :typoscript:`stdWrap.parseFunc`).
