@@ -187,7 +187,7 @@ order. For this we use the following TypoScript:
    }
 
 The file :file:`EXT:site_package/Classes/UserFunctions/ExampleListRecords.php`
-might amongst other things contain:
+may contain amongst other things:
 
 .. code-block:: php
    :caption: EXT:site_package/Classes/UserFunctions/ExampleListRecords.php
