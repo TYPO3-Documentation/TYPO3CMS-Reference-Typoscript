@@ -286,6 +286,43 @@ HTMLparser_db
        Also note the :ref:`HTMLparser <t3tsref:htmlparser>` options :code:`keepNonMatchedTags`
        and :code:`htmlSpecialChars` are *not* observed. They are preset internally.
 
+Sanitization
+''''''''''''
+
+.. versionadded:: 9.5.29/10.4.19
+
+An HTML sanitizer is available to sanitize and remove XSS from markup. It
+strips tags, attributes and values that are not explicitly allowed.
+
+Sanitizatin for persisting data is disabled by default and can be enabled
+globally by using the corresponding feature flag in
+:file:`typo3conf/LocalConfiguration.php` or
+:file:`typo3conf/AdditionalConfiguration.php`:
+
+.. code-block:: php
+
+   $GLOBALS['TYPO3_CONF_VARS']['SYS']['features']['security.backend.htmlSanitizeRte'] = true;
+
+It can then be disabled per use case with a custom processing instruction:
+
+.. code-block:: yaml
+   :caption: EXT:site_package/Configuration/Processing.yaml
+
+   processing:
+     allowTags:
+       # ...
+     HTMLparser_db:
+       # ...
+       # disable individually per use case
+       htmlSanitize: false
+
+       # This is the default configuration,
+       # the feature flag has to be enabled
+       htmlSanitize:
+         # use default builder as configured in
+         # $GLOBALS['TYPO3_CONF_VARS']['SYS']['htmlSanitizer']
+         build: default
+
 
 .. index::
    RTE; HTMLparser RTE
