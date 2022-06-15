@@ -647,17 +647,41 @@ hideRecords.pages
       options.hideRecords.pages = 12,45
 
 .. index:: Import export; Enable for non admins
-.. _useroptions-impexp-enableImportForNonAdminUser:
+.. _useroptions-impexp-enableExportForNonAdminUser:
 
-impexp.enableImportForNonAdminUser
+impexp.enableExportForNonAdminUser
 ----------------------------------
+
+.. versionadded:: 10.4.29/11.5.11
+   This option was introduced to avoid `information disclosure
+   <https://typo3.org/security/advisory/typo3-core-sa-2022-001>`_.
 
 :aspect:`Datatype`
    boolean
 
 :aspect:`Description`
    The import/export module of `EXT:impext` is disabled by default for non-admin users. Enable this
-   option, if non-admin users need to use the module. This should only be enabled for trustworthy
+   option, if non-admin users need to use the module and export data. This should only be enabled for trustworthy
+   backend users, as it might impose a security risk.
+
+:aspect:`Default`
+   0
+
+.. index:: Import export; Enable for non admins
+.. _useroptions-impexp-enableImportForNonAdminUser:
+
+impexp.enableImportForNonAdminUser
+----------------------------------
+
+This option was introduced to avoid `information disclosure
+<https://typo3.org/article/typo3-core-sa-2016-015>`_.
+
+:aspect:`Datatype`
+   boolean
+
+:aspect:`Description`
+   The import/export module of `EXT:impext` is disabled by default for non-admin users. Enable this
+   option, if non-admin users need to use the module and import data. This should only be enabled for trustworthy
    backend users, as it might impose a security risk.
 
 :aspect:`Default`
