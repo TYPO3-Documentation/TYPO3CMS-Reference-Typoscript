@@ -131,7 +131,6 @@ constants
    with the value of the according constant.
 
 :aspect:`Example`
-
    .. code-block:: typoscript
       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 

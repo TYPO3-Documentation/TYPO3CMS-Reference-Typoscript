@@ -58,14 +58,13 @@ useRegExp
    0
 
 :aspect:`Example`
-
    .. code-block:: typoscript
       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
       10 {
-            search = #(a )CAT#i
-            replace = \1cat
-            useRegExp = 1
+          search = #(a )CAT#i
+          replace = \1cat
+          useRegExp = 1
       }
 
 .. _replacement-useoptionsplitreplace:

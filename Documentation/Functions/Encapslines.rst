@@ -24,7 +24,6 @@ encapsTagList
    List of tags which qualify as encapsulating tags. Must be lowercase.
 
 :aspect:`Example`
-
    .. code-block:: typoscript
       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
@@ -108,7 +107,6 @@ addAttributes.[*tagname*]
    Always override/set the value of the attributes.
 
 :aspect:`Example`
-
    .. code-block:: typoscript
       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
@@ -170,7 +168,6 @@ wrapNonWrappedLines
    Wrapping for non-encapsulated lines
 
 :aspect:`Example`
-
    .. code-block:: typoscript
       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 

@@ -307,7 +307,6 @@ where
       WHERE clause without the word "WHERE".
 
 :aspect:`Example`
-
       .. code-block:: typoscript
          :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
@@ -441,20 +440,19 @@ markers
       by the quoting of the fields, see :issue:`87799`.
 
 :aspect:`Example`
-
    .. code-block:: typoscript
       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
       page.60 = CONTENT
       page.60 {
-            table = tt_content
-            select {
-               pidInList = 73
-               where = header != ###whatever###
-               markers {
+          table = tt_content
+          select {
+              pidInList = 73
+              where = header != ###whatever###
+              markers {
                   whatever.data = GP:first
-               }
-            }
+              }
+          }
       }
 
    This example selects all records from table tt_content, which are on page 73 and
@@ -466,15 +464,15 @@ markers
 
       page.60 = CONTENT
       page.60 {
-            table = tt_content
-            select {
-               pidInList = 73
-               where = header != ###whatever###
-               markers {
+          table = tt_content
+          select {
+              pidInList = 73
+              where = header != ###whatever###
+              markers {
                   whatever.value = some
                   whatever.wrap = |thing
-               }
-            }
+              }
+          }
       }
 
 

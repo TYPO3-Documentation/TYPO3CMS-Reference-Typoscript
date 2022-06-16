@@ -55,14 +55,13 @@ The best known is the "link" tag, which is used to create links.
    content and that the content after this must be re-wrapped.
 
 :aspect:`Examples`
-
    .. code-block:: typoscript
       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
       tags.bold = TEXT
       tags.bold {
-            stdWrap.current = 1
-            stdWrap.wrap = <p style="font-weight: bold;"> | </p>
+          stdWrap.current = 1
+          stdWrap.wrap = <p style="font-weight: bold;"> | </p>
       }
       tags.bold.stdWrap.stripNL = 1
 
