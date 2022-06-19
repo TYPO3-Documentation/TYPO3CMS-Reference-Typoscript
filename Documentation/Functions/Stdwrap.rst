@@ -167,7 +167,6 @@ lang
    :ref:`current site language <t3coreapi:sitehandling-addingLanguages>`.
 
 :aspect:`Example`
-
    .. code-block:: typoscript
       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
@@ -211,7 +210,6 @@ field
    See the description for the data type ":ref:`data-type-gettext`"/field!
 
 :aspect:`Example`
-
    .. code-block:: typoscript
       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
@@ -223,7 +221,6 @@ field
    by "//".
 
 :aspect:`Example`
-
    .. code-block:: typoscript
       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
@@ -362,7 +359,6 @@ ifNull
    with the value defined here.
 
 :aspect:`Example`
-
    .. code-block:: typoscript
       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
@@ -637,7 +633,7 @@ Sanitization
 .. versionadded:: 9.5.29/10.4.19
 
 :ref:`stdWrap.htmlSanitize <stdwrap-htmlsanitize>` is enabled by default when
-:typoscript:`stdWrap.parseFunc` is invoked. This also includes the Fluid Viewhelper 
+:typoscript:`stdWrap.parseFunc` is invoked. This also includes the Fluid Viewhelper
 :html:`<f:format.html>`, since it invokes :typoscript:`parseFunc`
 directly using :typoscript:`lib.parseFunc_RTE`.
 
@@ -765,7 +761,6 @@ prioriCalc
    operators and features.
 
 :aspect:`Examples`
-
    .. code-block:: none
       :caption: Example Output for different calculations
 
@@ -976,7 +971,6 @@ strtotime
    Possible values are :typoscript:`1` or any time string valid as first argument of the PHP :php:`strtotime()` function.
 
 :aspect:`Example`
-
    .. code-block:: typoscript
       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
@@ -987,7 +981,6 @@ strtotime
       }
 
 :aspect:`Example`
-
    .. code-block:: typoscript
       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
@@ -1397,7 +1390,6 @@ encodeForJavaScriptValue
    :php:`\TYPO3\CMS\Core\Utility\GeneralUtility::quoteJSvalue`.
 
 :aspect:`Example`
-
    .. code-block:: typoscript
       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
@@ -1636,7 +1628,6 @@ noTrimWrap
    by :ref:`objects-optionsplit` (which takes precedence over :typoscript:`noTrimWrap`).
 
 :aspect:`Example`
-
    .. code-block:: typoscript
       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
@@ -1646,7 +1637,6 @@ noTrimWrap
    wrapped; including the whitespaces.
 
 :aspect:`Example`
-
    .. code-block:: typoscript
       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
@@ -1694,7 +1684,6 @@ dataWrap
    of :ref:`data-type-gettext`.
 
 :aspect:`Example`
-
    .. code-block:: typoscript
       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
@@ -1771,7 +1760,6 @@ orderedStdWrap
    order in which the :typoscript:`stdWrap` functions are executed.
 
 :aspect:`Example`
-
    .. code-block:: typoscript
       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
@@ -2001,7 +1989,6 @@ prefixComment
    The content is parsed through :ref:`stdwrap-insertData`.
 
 :aspect:`Example`
-
    .. code-block:: typoscript
       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 

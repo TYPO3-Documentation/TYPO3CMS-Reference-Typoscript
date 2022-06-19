@@ -107,7 +107,6 @@ http.ATagParams
    Additional parameters
 
 :aspect:`Example`
-
    .. code-block:: typoscript
       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
@@ -160,7 +159,6 @@ mailto.ATagParams
    Additional parameters
 
 :aspect:`Example`
-
    .. code-block:: typoscript
       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 

@@ -57,7 +57,6 @@ isNull
    features are available below this property.
 
 :aspect:`Example`
-
    .. code-block:: typoscript
       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
@@ -203,7 +202,6 @@ equals
    Returns true, if the content is equal to :typoscript:`value`.
 
 :aspect:`Example`
-
    .. code-block:: typoscript
       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
@@ -230,7 +228,6 @@ isInList
    **Note:** The list in :typoscript:`value` may not have spaces between elements!
 
 :aspect:`Example`
-
    .. code-block:: typoscript
       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 

@@ -45,7 +45,6 @@ applicationContext
    See :ref:`t3coreapi:bootstrapping-context`.
 
 :aspect:`Example`
-
    .. code-block:: typoscript
       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
@@ -75,7 +74,6 @@ page
    All data of the current page record as array. To find out which fields are available, you can enable the debug mode in the TYPO3 backend which will display the field names.
 
 :aspect:`Example`
-
    .. code-block:: typoscript
       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
@@ -192,7 +190,6 @@ tree.pagelayout
    for frontend and backend.
 
 :aspect:`Example`
-
    .. code-block:: typoscript
       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
@@ -226,7 +223,6 @@ tree.rootLine
    Array of arrays with uid and pid.
 
 :aspect:`Example`
-
    .. code-block:: typoscript
       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
@@ -498,7 +494,6 @@ frontend.user.isLoggedIn
    True if current user is logged in
 
 :aspect:`Example`
-
    .. code-block:: typoscript
       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
@@ -521,7 +516,6 @@ frontend.user.userId
    UID of current user
 
 :aspect:`Example`
-
    .. code-block:: typoscript
       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
@@ -546,7 +540,6 @@ frontend.user.userGroupIds
    Frontend
 
 :aspect:`Example`
-
    .. code-block:: typoscript
       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
@@ -574,7 +567,6 @@ frontend.user.userGroupList
    Comma list of group UIDs
 
 :aspect:`Example`
-
    .. code-block:: typoscript
       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
@@ -620,7 +612,6 @@ workspace.workspaceId
    id of current workspace
 
 :aspect:`Example`
-
    .. code-block:: typoscript
       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
@@ -647,7 +638,6 @@ workspace.isLive
    True if current workspace is live
 
 :aspect:`Example`
-
    .. code-block:: typoscript
       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
@@ -674,7 +664,6 @@ workspace.isOffline
    True if current workspace is offline
 
 :aspect:`Example`
-
    .. code-block:: typoscript
       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
@@ -713,7 +702,6 @@ typo3.version
    TYPO3_version (e.g. 9.4.0-dev)
 
 :aspect:`Example`
-
    .. code-block:: typoscript
       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
@@ -736,7 +724,6 @@ typo3.branch
    TYPO3_branch (e.g. 9.4)
 
 :aspect:`Example`
-
    .. code-block:: typoscript
       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
@@ -759,7 +746,6 @@ typo3.devIpMask
    :php:`$GLOBALS['TYPO3_CONF_VARS']['SYS']['devIPmask']`
 
 :aspect:`Example`
-
    .. code-block:: typoscript
       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
@@ -861,7 +847,6 @@ request.getParsedBody()
    form via POST, the submitted values.
 
 :aspect:`Example`
-
    .. code-block:: typoscript
       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
@@ -887,7 +872,6 @@ request.getHeaders()
    Provides all values from request headers.
 
 :aspect:`Example`
-
    .. code-block:: typoscript
       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
@@ -921,7 +905,6 @@ request.getCookieParams()
    Provides all available cookies.
 
 :aspect:`Example`
-
    .. code-block:: typoscript
       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
@@ -1020,7 +1003,6 @@ request.getNormalizedParams()
           Example: ``route=%2Fajax%2Fsystem-information%2Frender``
 
 :aspect:`Example`
-
    .. code-block:: typoscript
       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
@@ -1053,7 +1035,10 @@ request.getPageArguments()
    Get current `PageArguments` object with resolved route parts from enhancers.
 
 :aspect:`Example`
-   [request.getPageArguments().get('foo_id') > 0]
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+      [request.getPageArguments().get('foo_id') > 0]
 
    Allows migration from old condition syntax using `[globalVar = GP:singlepartner > 0]`
    to `[request.getPageArguments().get('singlepartner') > 0]`.
@@ -1081,7 +1066,6 @@ date
    reference for possible usage.
 
 :aspect:`Example`
-
    .. code-block:: typoscript
       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
@@ -1204,7 +1188,6 @@ ip
    Value or Constraint, Wildcard or RegExp possible special value: devIP (match the devIPMask).
 
 :aspect:`Example`
-
    .. code-block:: typoscript
       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
@@ -1236,7 +1219,6 @@ compatVersion
    Compares against the current TYPO3 branch.
 
 :aspect:`Example`
-
    .. code-block:: typoscript
       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
@@ -1285,7 +1267,6 @@ loginUser
    TypoScript.
 
 :aspect:`Example`
-
    .. code-block:: typoscript
       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
@@ -1356,7 +1337,6 @@ getenv
    PHP function:  `getenv <https://www.php.net/manual/en/function.getenv.php>`_
 
 :aspect:`Example`
-
    .. code-block:: typoscript
       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
@@ -1597,7 +1577,6 @@ siteLanguage
    * ``siteLanguage("fallbackLanguageIds")``
 
 :aspect:`Example`
-
    .. code-block:: typoscript
       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 

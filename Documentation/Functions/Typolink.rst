@@ -168,7 +168,6 @@ additionalParams
    code ready to insert after the last parameter.
 
 :aspect:`Example`
-
    .. code-block:: typoscript
       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
