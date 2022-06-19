@@ -407,7 +407,6 @@ stripProfile
       0
 
 :aspect:`Example`
-
    .. code-block:: typoscript
       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 

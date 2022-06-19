@@ -87,16 +87,15 @@ returnCount
    and stops processing of the split function.
 
 :aspect:`Example`
-
    .. code-block:: typoscript
       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
       # returns 9
       1 = TEXT
       1 {
-            value = x,y,z,1,2,3,a,b,c
-            split.token = ,
-            split.returnCount = 1
+          value = x,y,z,1,2,3,a,b,c
+          split.token = ,
+          split.returnCount = 1
       }
 
 .. _split-cobjnum:
@@ -132,7 +131,6 @@ cObjNum
    when the objects are called. See :ref:`stdwrap` / current.
 
 :aspect:`Example for stdWrap`
-
    .. code-block:: typoscript
       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
@@ -140,14 +138,13 @@ cObjNum
       1.wrap = <b> | </b>
 
 :aspect:`Example for cObject array`
-
    .. code-block:: typoscript
       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
       1 {
-            10 = TEXT
-            10.stdWrap.current = 1
-            10.stdWrap.wrap = <b> | </b>
+          10 = TEXT
+          10.stdWrap.current = 1
+          10.stdWrap.wrap = <b> | </b>
       }
 
 .. _split-wrap:

@@ -237,7 +237,6 @@ fixAttrib.[attribute].prefixRelPathWith
    will be prefixed the attribute.
 
 :aspect:`Example`
-
    .. code-block:: typoscript
       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
@@ -261,7 +260,6 @@ fixAttrib.[attribute].userFunc
    of this function will be used as the new tag value.
 
 :aspect:`Example`
-
    .. code-block:: typoscript
       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
