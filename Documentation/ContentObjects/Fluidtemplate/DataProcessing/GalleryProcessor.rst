@@ -130,7 +130,7 @@ Options:
    :type: int, :ref:`stdWrap`
    :default: "default" :aspect:`Example:`
 
-   See :ref:`cropt variant in the TCA reference<t3tca:columns-imageManipulation-properties-cropVariants>`
+   See :ref:`crop variants in the TCA reference<t3tca:columns-imageManipulation-properties-cropVariants>`
 
 .. confval:: as
 
