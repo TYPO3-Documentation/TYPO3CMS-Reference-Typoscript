@@ -5,9 +5,7 @@
                 "_default": [
                     {"action": "resizeWindow", "width": 1024,"height": 768},
                     {"action": "setScreenshotsImagePath","path": "Images/AutomaticScreenshots"},
-                    {"action": "setScreenshotsRstPath","path": "Images/AutomaticScreenshots"},
-                    {"action": "setCodeSnippetsSourcePath","path": "typo3conf/ext/styleguide"},
-                    {"action": "setCodeSnippetsTargetPath", "path": "CodeSnippets"}
+                    {"action": "setScreenshotsRstPath","path": "Images/AutomaticScreenshots"}
                 ],
                 "fields": [
                     {"include": "_default"},
@@ -40,9 +38,7 @@
                 "_default": [
                     {"action": "resizeWindow", "width": 1024,"height": 768},
                     {"action": "setScreenshotsImagePath","path": "Images/AutomaticScreenshots"},
-                    {"action": "setScreenshotsRstPath","path": "Images/AutomaticScreenshots"},
-                    {"action": "setCodeSnippetsSourcePath","path": "typo3conf/ext/examples"},
-                    {"action": "setCodeSnippetsTargetPath", "path": "CodeSnippets"}
+                    {"action": "setScreenshotsRstPath","path": "Images/AutomaticScreenshots"}
                 ],
                 "fileListExport": [
                     {"include": "_default"},
@@ -74,10 +70,7 @@
                         "captionText": "The list module without export buttons after activating the single-table mode"
                     },
                     {"action": "switchToMainFrame"},
-                    {"action": "click", "link":  "button.t3js-topbar-button-modulemenu"},
-                    {"action": "setCodeSnippetsTargetPath", "path": "CodeSnippets/PageTSconfig/Mod"},
-                    {"action": "createCodeSnippet", "sourceFile": "Configuration/TSconfig/Page/Mod/csvExport.tsconfig", "targetFileName": "CsvExport", "language": "typoscript"},
-                    {"action": "createCodeSnippet", "sourceFile": "Configuration/TSconfig/Page/Mod/noExportRecordsLinks.tsconfig", "targetFileName": "noExportRecordsLinks", "language": "typoscript"}
+                    {"action": "click", "link":  "button.t3js-topbar-button-modulemenu"}
                 ]
             }
         }
