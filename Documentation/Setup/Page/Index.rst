@@ -706,6 +706,8 @@ includeJSFooterlibs.[array]
          included at the bottom of the page (just before the closing :html:`</body>`
          tag).
 
+         The optional properties from :ref:`includeJS <setup-page-includejs-array>`
+         can be applied.
 
 
 .. index:: PAGE; includeJSLibs.[array]
@@ -729,6 +731,8 @@ includeJSLibs.[array]
          included inside :html:`<head>`.
          tag).
 
+         The optional properties from :ref:`includeJS <setup-page-includejs-array>`
+         can be applied.
 
 
 .. index:: PAGE; inlineLanguageLabelFiles
