@@ -115,6 +115,11 @@ applicationContext
 page
 ~~~~
 
+.. note::
+   :typoscript:`page` is only available in the frontend context. As the TypoScript setup may be
+   loaded in some backend modules or the CLI context, it is considered best practice to always
+   guard the property by using the function :ref:`traverse() <condition-function-traverse>`
+
 :aspect:`Variable`
    page
 
@@ -122,13 +127,29 @@ page
    Array
 
 :aspect:`Description`
-   Current page record as array.
+   All data of the current page record as array. To find out which fields are available, you can
+   enable the debug mode in the TYPO3 backend which will display the field names.
 
 :aspect:`Example`
    ::
 
-      [page["uid"] == 2]
+      # Check single page uid
+      [traverse(page, "uid") == 2]
+      # Check list of page uids
+      traverse(page, "uid") in [17,24]]
+      # Check list of page uids NOT in
+      [traverse(page, "uid") not in [17,24]]
+      # Check range of pages (example: page uid from 10 to 20)
+      [traverse(page, "uid") in 10..20]
 
+      # Check the page backend layout
+      [traverse(page, "backend_layout") == 5]
+      [traverse(page, "backend_layout") == "example_layout"]
+
+      # Check the page title
+      [traverse(page, "title") == "foo"]
+
+.. index:: Conditions; Constant
 .. _condition-constant:
 
 Constant
