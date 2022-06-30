@@ -66,7 +66,7 @@ page
 
 .. note::
    :typoscript:`page` is only available in the frontend context. As the TypoScript setup may be 
-   loaded in some backend modules or the CLI context, it is considered best practise to always 
+   loaded in some backend modules or the CLI context, it is considered best practice to always 
    guard the property by using the function :ref:`traverse() <condition-function-traverse>`
 
 :aspect:`Variable`
