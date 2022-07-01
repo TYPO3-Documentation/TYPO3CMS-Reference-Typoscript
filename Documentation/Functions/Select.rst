@@ -117,12 +117,20 @@ uidInList
 
    **Note:** :typoscript:`this` is a *special keyword* and replaced with the id of the
    *current record*.
+   
+   .. important:: 
+      :ref:`pidInList` has to be set or there will be no results. Setting
+      :typoscript:`pidInList = 0` explicitely disables the check for the pid.
 
 :aspect:`Example`
    .. code-block:: typoscript
       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-      select.uidInList = 1,2,3
+      select {
+         uidInList = 1,2,3
+         pidInList = 0
+      }
+      
       select.uidInList = this
 
 
