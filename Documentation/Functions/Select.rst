@@ -119,7 +119,7 @@ uidInList
    *current record*.
    
    .. important:: 
-      :ref:`pidInList` is set to :typoscript:`this`. Therefore by defalault only records
+      :ref:`pidInList` is set to :typoscript:`this`. Therefore by default only records
       from the current page are available for uidInList. Setting
       :typoscript:`pidInList = 0` explicitely disables the check for the pid.
 
