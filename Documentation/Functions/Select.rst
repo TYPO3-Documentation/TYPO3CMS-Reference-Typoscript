@@ -119,9 +119,9 @@ uidInList
    *current record*.
    
    .. important:: 
-      :ref:`pidInList` is set to :typoscript:`this`. Therefore by default only records
-      from the current page are available for uidInList. Setting
-      :typoscript:`pidInList = 0` explicitely disables the check for the pid.
+      :ref:`pidInList` defaults to :typoscript:`this`. Therefore by default only records
+      from the current page are available for :typoscript:`uidInList`. If records
+      should be fetched globally, :typoscript:`pidInList = 0` should also be set.
 
 :aspect:`Example`
    .. code-block:: typoscript
