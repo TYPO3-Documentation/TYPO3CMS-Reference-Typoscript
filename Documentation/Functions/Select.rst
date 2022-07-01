@@ -117,12 +117,21 @@ uidInList
 
    **Note:** :typoscript:`this` is a *special keyword* and replaced with the id of the
    *current record*.
+   
+   .. attention:: 
+      :ref:`pidInList` defaults to :typoscript:`this`. Therefore by default only records
+      from the current page are available for :typoscript:`uidInList`. If records
+      should be fetched globally, :typoscript:`pidInList = 0` should also be set.
 
 :aspect:`Example`
    .. code-block:: typoscript
       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-      select.uidInList = 1,2,3
+      select {
+         uidInList = 1,2,3
+         pidInList = 0
+      }
+      
       select.uidInList = this
 
 
@@ -136,6 +145,9 @@ pidInList
 
 :aspect:`Data type`
    *list of page\_ids* / :ref:`stdWrap`
+   
+:aspect:`Default`
+   this
 
 :aspect:`Description`
    Comma-separated list of pids of the record. This will be page uids (pids). For
