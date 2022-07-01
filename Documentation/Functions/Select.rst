@@ -119,7 +119,8 @@ uidInList
    *current record*.
    
    .. important:: 
-      :ref:`pidInList` has to be set or there will be no results. Setting
+      :ref:`pidInList` is set to :typoscript:`this`. Therefore by defalault only records
+      from the current page are available for uidInList. Setting
       :typoscript:`pidInList = 0` explicitely disables the check for the pid.
 
 :aspect:`Example`
@@ -144,6 +145,9 @@ pidInList
 
 :aspect:`Data type`
    *list of page\_ids* / :ref:`stdWrap`
+   
+:aspect:`Default`
+   this
 
 :aspect:`Description`
    Comma-separated list of pids of the record. This will be page uids (pids). For
