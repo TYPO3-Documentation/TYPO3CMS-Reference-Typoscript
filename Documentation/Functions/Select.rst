@@ -118,7 +118,7 @@ uidInList
    **Note:** :typoscript:`this` is a *special keyword* and replaced with the id of the
    *current record*.
    
-   .. important:: 
+   .. attention:: 
       :ref:`pidInList` defaults to :typoscript:`this`. Therefore by default only records
       from the current page are available for :typoscript:`uidInList`. If records
       should be fetched globally, :typoscript:`pidInList = 0` should also be set.
