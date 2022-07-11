@@ -438,22 +438,6 @@ defLangBinding
 :aspect:`Default`
    0
 
-
-.. index::
-   disableNewContentElementWizard
-   New content element wizard; Disable
-
-disableNewContentElementWizard
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-:aspect:`Datatype`
-   boolean
-
-:aspect:`Description`
-   Disables the fact that the new-content-element icons links to the
-   content element wizard and not directly to a blank "NEW" form.
-
-
 .. index::
    hideRestrictedCols
    Page columns; Hide restricted
@@ -1009,29 +993,6 @@ listOnlyInSingleTableView
 
 :aspect:`Default`
    0
-
-
-.. index::
-   newContentElementWizard.override
-   Content elements; New wizard
-
-newContentElementWizard.override
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-:aspect:`Datatype`
-   string
-
-:aspect:`Description`
-   If set to an extension key, then the specified module or route for creating
-   new content elements.
-
-:aspect:`Example`
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/page.tsconfig
-
-      mod.newContentElementWizard.override = my_custom_module
-      mod.newContentElementWizard.override = my_module_route
-
 
 .. index::
    newPageWizard.override
