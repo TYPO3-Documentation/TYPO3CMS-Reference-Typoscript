@@ -52,7 +52,6 @@ Properties
    `disablePreviewNotification`_                         :ref:`data-type-boolean`                           0
    `disableLanguageHeader`_                              :ref:`data-type-boolean`                           0
    `doctype`_                                            :ref:`data-type-string`
-   `doctypeSwitch`_                                      :ref:`data-type-boolean` / :ref:`data-type-string`
    `enableContentLengthHeader`_                          :ref:`data-type-boolean`                           1
    `extTarget`_                                          :ref:`data-type-target`                            \_top
    `fileTarget`_                                         :ref:`data-type-target`
@@ -950,54 +949,6 @@ doctype
          .. code-block:: html
 
             <!DOCTYPE html>
-
-
-.. index:: config; doctypeSwitch
-.. _setup-config-doctypeswitch:
-
-doctypeSwitch
-=============
-
-.. container:: table-row
-
-   Property
-         doctypeSwitch
-
-   Data type
-         :ref:`data-type-boolean` / :ref:`data-type-string`
-
-   Description
-         If set, the order of <?xml...> and <!DOCTYPE...> will be reversed.
-         This is needed for MSIE to be standards compliant with XHTML.
-
-         **Background:**
-
-         By default TYPO3 outputs the XML/DOCTYPE in compliance with the
-         standards of XHTML. However a browser like MSIE will still run in
-         "quirks-mode" unless the <?xml> and <DOCTYPE> tags are ordered
-         opposite. But this breaks CSS validation...
-
-         With this option designers can decide for themselves what they want
-         then.
-
-         If you want to check the compatibility-mode of your webbrowser you can
-         do so with a simple JavaScript that can be inserted on a TYPO3 page
-         like this:
-
-         .. code-block:: typoscript
-            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-            page.headerData.1 = TEXT
-            page.headerData.1.value = <script>alert(document.compatMode);</script>
-
-         If your browser has detected the DOCTYPE correctly it will report
-         "CSS1Compat"
-
-         If you are not running in compliance mode you will get some other
-         message. MSIE will report "BackCompat" for instance - this means it
-         runs in quirks-mode, supporting all the old "browser-bugs".
-
-
 
 .. index:: config; enableContentLengthHeader
 .. _setup-config-enablecontentlengthheader:
