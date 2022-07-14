@@ -1003,6 +1003,9 @@ doctype
 doctypeSwitch
 =============
 
+.. attention:: This option will be removed with with TYPO3 12.0 without replacement
+   It was only needed for the Internet Explorer for which Microsoft has dropped support.
+
 .. container:: table-row
 
    Property
