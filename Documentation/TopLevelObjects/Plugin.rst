@@ -20,20 +20,12 @@ which means that they have at least 1 or 2 reserved properties.
 Furthermore this table outlines some other default properties.
 Generally system properties are prefixed with an underscore:
 
+
+.. contents::
+   :local:
+
 Properties for all frontend plugin types
 ========================================
-
-.. container:: ts-properties
-
-   =============================================== ======================================== ====================== =======
-   Property                                        Data Type                                :ref:`stdwrap`         Default
-   =============================================== ======================================== ====================== =======
-   `userFunc`_                                     (array of keys)
-   `setup-plugin-css-default-style`_               :ref:`data-type-string`                  :ref:`stdwrap`
-   `setup-plugin-css-page-style`_                  :ref:`data-type-string`
-   `setup-plugin-default-pi-vars-pivar-key`_       :ref:`data-type-string`                  :ref:`stdwrap`
-   `setup-plugin-local-lang-lang-key-label-key`_   :ref:`data-type-string`
-   =============================================== ======================================== ====================== =======
 
 .. ### BEGIN~OF~TABLE ###
 
@@ -170,7 +162,6 @@ userFunc
          Can be used to override the default language labels for the plugin. The 'lang-key' setup part is 'default' for the default language of the website or the 2-letter (ISO 639-1) code for the language. 'label-key' is the 'trans-unit id' xml value in the XLF language file which resides in the path :file:`Resources/Private/Language` of the extension or in the :file:`typo3conf/l10n/[lang-key]` (:file:`var/labels/[lang-key]` in composer mode) subfolder of the TYPO3 root folder. And on the right side of the equation sign '=' you put the new value string for the language key which you want to override.
 
    Example
-
          .. code-block:: typoscript
             :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
@@ -202,28 +193,27 @@ features.skipDefaultArguments
 .. container:: table-row
 
    Property
-      features.skipDefaultArguments
+         features.skipDefaultArguments
 
    Data type
-      :ref:`data-type-boolean`
+         :ref:`data-type-boolean`
 
    Default
-      false
+         false
 
    Description
-      **Only for Extbase plugins**. Skip default arguments in URLs.
-      If a link to the default controller or action is created, the parameters are omitted.
+         **Only for Extbase plugins**. Skip default arguments in URLs.
+         If a link to the default controller or action is created, the parameters are omitted.
 
    Example
+         .. code-block:: typoscript
+            :caption: EXT:blog_example/Configuration/TypoScript/setup.typoscript
 
-      .. code-block:: typoscript
-         :caption: EXT:blog_example/Configuration/TypoScript/setup.typoscript
-
-         plugin.tx_blogexample_rssfeed {
-           features {
-             skipDefaultArguments = 1
-           }
-         }
+            plugin.tx_blogexample_rssfeed {
+              features {
+                skipDefaultArguments = 1
+              }
+            }
 
 .. _setup-plugin-features-ignoreAllEnableFieldsInBe:
 
@@ -246,7 +236,6 @@ features.ignoreAllEnableFieldsInBe
 
 
    Example
-
       .. code-block:: typoscript
          :caption: EXT:blog_example/Configuration/TypoScript/setup.typoscript
 
@@ -287,7 +276,6 @@ persistence.enableAutomaticCacheClearing
 
 
    Example
-
       .. code-block:: typoscript
          :caption: EXT:blog_example/Configuration/TypoScript/setup.typoscript
 
@@ -319,7 +307,6 @@ persistence.storagePid
 
 
    Example
-
       .. code-block:: typoscript
          :caption: EXT:blog_example/Configuration/TypoScript/setup.typoscript
 
@@ -426,8 +413,6 @@ view.templateRootPaths
 view.pluginNamespace
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. todo: Does this still work? I could find no trace of it in the source.
-
 .. container:: table-row
 
    Property
@@ -470,7 +455,6 @@ mvc.callDefaultActionIfActionCantBeResolved
       its default action if the called action is not allowed by the controller.
 
    Example
-
       .. code-block:: typoscript
          :caption: EXT:blog_example/Configuration/TypoScript/setup.typoscript
 
@@ -502,7 +486,6 @@ mvc.throwPageNotFoundExceptionIfActionCantBeResolved
       but this will raise a "page not found" error.
 
    Example
-
       .. code-block:: typoscript
          :caption: EXT:blog_example/Configuration/TypoScript/setup.typoscript
 
