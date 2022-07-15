@@ -335,7 +335,7 @@ fullRootLine
       - Page tree root [-2]
       |- 1. page before [-1]
          |- Site root (root template here!) [0]
-         |- Here you are! [1]
+            |- Here you are! [1]
 
 
    A "slide" parameter can be added just as for the
