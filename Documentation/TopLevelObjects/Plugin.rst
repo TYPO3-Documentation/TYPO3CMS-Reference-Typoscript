@@ -496,6 +496,45 @@ mvc.throwPageNotFoundExceptionIfActionCantBeResolved
          }
 
 
+.. _extbase_format:
+
+Format
+------
+
+.. warning::
+   Using this parameter is considered bad practice. In most cases it is better
+   use different actions for different output formats.
+
+.. container:: table-row
+
+   Property
+      format
+
+   Data type
+      :ref:`data-type-string`
+
+   Default
+      html
+
+   Description
+      Define the default file ending of the template files. The template files
+      have to take care of creating the desired format output.
+
+   Example
+      .. code-block:: typoscript
+         :caption: EXT:blog_example/Configuration/TypoScript/setup.typoscript
+
+         plugin.tx_blogexample_rssfeedxml {
+           // Use template List.xml
+           format = xml
+         }
+         plugin.tx_blogexample_rssfeedatom {
+           // Use template List.atom
+           format = atom
+         }
+
+
+
 .. _extbase_typoscript_configuration-settings:
 
 Settings
