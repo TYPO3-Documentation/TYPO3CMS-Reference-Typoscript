@@ -364,7 +364,7 @@ view.layoutRootPaths
       view.layoutRootPaths
 
    Data type
-      :ref:`data-type-array`
+      (array of indexes)
 
    Description
       **Only for Extbase plugins**. This can be used to specify the root paths
@@ -382,7 +382,7 @@ view.partialRootPaths
       view.partialRootPaths
 
    Data type
-      :ref:`data-type-array`
+      (array of indexes)
 
    Description
       **Only for Extbase plugins**. This can be used to specify the root
@@ -400,7 +400,7 @@ view.templateRootPaths
       view.templateRootPaths
 
    Data type
-      :ref:`data-type-array`
+      (array of indexes)
 
    Description
       This can be used to specify the root paths for all Fluid templates in this
@@ -419,7 +419,7 @@ view.pluginNamespace
       view.pluginNamespace
 
    Data type
-      :ref:`data-type-array`
+      (array of indexes)
 
    Description
       This can be used to specify an alternative namespace for the plugin.
