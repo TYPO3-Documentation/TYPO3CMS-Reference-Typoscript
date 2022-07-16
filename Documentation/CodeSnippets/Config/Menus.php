@@ -74,4 +74,23 @@ return [
         'sourceFile'=> 'typo3conf/ext/site_package/Configuration/TypoScript/Seo/Setup/RelPrevNextMenu.typoscript',
         'targetFileName' => 'CodeSnippets/Menu/TypoScript/RelPrevNextMenu.rst.txt'
     ],
+    // special = rootline
+    [
+        'action' => 'createCodeSnippet',
+        'caption' => 'EXT:site_package/Configuration/TypoScript/Menus/Setup/BreadcrumbLib.typoscript',
+        'sourceFile'=> 'typo3conf/ext/site_package/Configuration/TypoScript/Menus/Setup/BreadcrumbLib.typoscript',
+        'targetFileName' => 'CodeSnippets/Menu/TypoScript/BreadcrumbLib.rst.txt'
+    ],
+    [
+        'action' => 'createCodeSnippet',
+        'caption' => 'EXT:site_package/Configuration/TypoScript/Menus/Setup/BreadcrumbDataProcessor.typoscript',
+        'sourceFile'=> 'typo3conf/ext/site_package/Configuration/TypoScript/Menus/Setup/BreadcrumbDataProcessor.typoscript',
+        'targetFileName' => 'CodeSnippets/Menu/TypoScript/BreadcrumbDataProcessor.rst.txt'
+    ],
+    [
+        'action' => 'createCodeSnippet',
+        'caption' => 'EXT:site_package/Resources/Private/Partials/Page/Navigation/Breadcrumb.html',
+        'sourceFile'=> 'typo3conf/ext/site_package/Resources/Private/Partials/Page/Navigation/Breadcrumb.html',
+        'targetFileName' => 'CodeSnippets/Menu/Template/BreadcrumbDataProcessor.rst.txt'
+    ],
 ];
