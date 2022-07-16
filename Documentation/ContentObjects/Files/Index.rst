@@ -8,8 +8,17 @@
 FILES
 =====
 
-A content object of type FILES was integrated with the File Abstraction Layer (FAL)
-and is there to output information about files.
+A content object of type FILES was integrated with the File Abstraction Layer
+(FAL) and is there to output information about files.
+
+.. contents::
+   :local:
+
+Properties
+==========
+
+files
+------
 
 .. container:: table-row
 
@@ -30,6 +39,8 @@ and is there to output information about files.
             page.10 = FILES
             page.10.files = 12,15,16
 
+references
+-----------
 
 .. container:: table-row
 
@@ -78,6 +89,8 @@ and is there to output information about files.
 
          This will fetch all items related to the page.media field.
 
+collections
+------------
 
 .. container:: table-row
 
@@ -91,6 +104,8 @@ and is there to output information about files.
          Comma-separated list of sys_file_collection UIDs, which
          are loaded into the FILES object.
 
+folders
+--------
 
 .. container:: table-row
 
@@ -137,6 +152,8 @@ and is there to output information about files.
                }
             }
 
+sorting
+--------
 
 .. container:: table-row
 
@@ -155,6 +172,8 @@ and is there to output information about files.
          files should be sorted. Possible values are "asc" for ascending and
          "desc" for descending. Ascending is the default.
 
+begin
+------
 
 .. container:: table-row
 
@@ -168,6 +187,8 @@ and is there to output information about files.
          The first item to return. If not set (default), items beginning
          with the first one are returned.
 
+maxItems
+---------
 
 .. container:: table-row
 
@@ -183,6 +204,8 @@ and is there to output information about files.
          number of available items, no items beyond the last available item will
          be returned - output won't continue with the first available item.
 
+renderObj
+----------
 
 .. container:: table-row
 
@@ -211,6 +234,8 @@ and is there to output information about files.
 
          This returns the size of the current file.
 
+stdWrap
+--------
 
 .. container:: table-row
 
@@ -230,6 +255,8 @@ and is there to output information about files.
 Special key: "references"
 =========================
 
+table
+------
 
 .. container:: table-row
 
@@ -242,6 +269,8 @@ Special key: "references"
    Description
          The table name of the table having the file field.
 
+uid
+----
 
 .. container:: table-row
 
@@ -254,6 +283,8 @@ Special key: "references"
    Description
          The UID of the record from which to fetch the referenced files.
 
+fieldName
+----------
 
 .. container:: table-row
 
@@ -273,13 +304,13 @@ Special key: "references"
 .. _cobj-files-examples:
 
 Examples:
-"""""""""
+==========
 
 
 .. _cobj-files-examples-files:
 
 Usage with files
-================
+-----------------
 
 In this example, we first load files using several of the methods
 explained above (using sys_file UIDs, collection UIDs, and folders).
@@ -304,7 +335,7 @@ the file size of all files that were found:
 .. _cobj-files-examples-references:
 
 Usage with references
-=====================
+----------------------
 
 In this second example, we use "references" to get the images related
 to a given page (in this case, the current page). We start with the
@@ -338,7 +369,7 @@ the file itself or from the reference to it (title):
 .. _cobj-files-examples-sliding:
 
 Usage with sliding
-==================
+--------------------
 
 One usual feature is to use images attached to pages and use
 them up and down the page tree, a process called "sliding".
