@@ -2,19 +2,35 @@
 .. index:: HMENU; special = userfunction
 .. _hmenu-special-userfunction:
 
-special = userfunction
-----------------------
+=======================
+Userfunction menu
+=======================
+
+.. attention::
+   It is still possible to create a menu with :typoscript:`special = userfunction`
+   for backward compatibility reasons.
+
+   However we would advise you to write a customized MenuProcessor and style
+   the output with Fluid instead.
 
 Calls a user function/method in class which should return an array with
 page records for the menu.
+
+.. contents::
+   :local:
+
+Properties
+==========
+
+.. _hmenu-special-userfunction-userfunc:
+special.userFunc
+----------------
 
 .. ### BEGIN~OF~TABLE ###
 
 .. container:: table-row
 
    Property
-         .. _hmenu-special-userfunction-userfunc:
-
          special.userFunc
 
    Data type
@@ -28,6 +44,8 @@ page records for the menu.
 
 [tsref:(cObject).HMENU.special = userfunction]
 
+Examples
+========
 
 .. _hmenu-special-userfunction-examples:
 
@@ -127,7 +145,7 @@ generated from this array, which was returned from the function
                                ],
                                [
                                    'title' => 'New York Office',
-                                   '_OVERRIDE_HREF' => 'https://example.com',
+                                   '_OVERRIDE_HREF' => 'https://example.org',
                                    '_OVERRIDE_TARGET' => '_blank',
                                ]
                            ]
