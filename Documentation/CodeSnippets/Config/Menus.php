@@ -93,4 +93,11 @@ return [
         'sourceFile'=> 'typo3conf/ext/site_package/Resources/Private/Partials/Page/Navigation/Breadcrumb.html',
         'targetFileName' => 'CodeSnippets/Menu/Template/BreadcrumbDataProcessor.rst.txt'
     ],
+    // special = language
+    [
+        'action' => 'createCodeSnippet',
+        'caption' => 'EXT:site_package/Configuration/TypoScript/Menus/Setup/LanguageMenuLib.typoscript',
+        'sourceFile'=> 'typo3conf/ext/site_package/Configuration/TypoScript/Menus/Setup/LanguageMenuLib.typoscript',
+        'targetFileName' => 'CodeSnippets/Menu/TypoScript/LanguageMenuLib.rst.txt'
+    ],
 ];
