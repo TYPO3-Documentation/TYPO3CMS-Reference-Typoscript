@@ -52,6 +52,7 @@ special.value
             }
 
 .. _hmenu-special-keywords-mode:
+
 special.mode
 -------------
 
@@ -91,6 +92,7 @@ special.mode
 
 
 .. _hmenu-special-keywords-entrylevel:
+
 special.entryLevel
 -------------------
 
@@ -108,6 +110,7 @@ special.entryLevel
          See property :ref:`entryLevel in the HMENU <hmenu-entrylevel>`.
 
 .. _hmenu-special-keywords-depth:
+
 special.depth
 --------------
 
@@ -127,6 +130,7 @@ special.depth
 
 
 .. _hmenu-special-keywords-limit:
+
 special.limit
 --------------
 
@@ -146,6 +150,7 @@ special.limit
 
 
 .. _hmenu-special-keywords-excludenosearchpages:
+
 special.excludeNoSearchPages
 -----------------------------
 
@@ -161,6 +166,7 @@ special.excludeNoSearchPages
          (same as in section "special = updated")
 
 .. _hmenu-special-keywords-begin:
+
 special.begin
 --------------
 
@@ -176,6 +182,7 @@ special.begin
          (same as in section "special = updated")
 
 .. _hmenu-special-keywords-setkeywords:
+
 special.setKeywords
 --------------------
 
@@ -194,6 +201,7 @@ special.setKeywords
          which is the keywords of the current page.
 
 .. _hmenu-special-keywords-keywordsfield:
+
 special.keywordsField
 ----------------------
 
@@ -215,6 +223,7 @@ special.keywordsField
 
 
 .. _hmenu-special-keywords-sourcefield:
+
 special.keywordsField.sourceField
 ----------------------------------
 

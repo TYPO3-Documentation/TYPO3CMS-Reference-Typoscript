@@ -56,6 +56,7 @@ special.value
             }
 
 .. _hmenu-special-categories-relation:
+
 special.relation
 -----------------
 

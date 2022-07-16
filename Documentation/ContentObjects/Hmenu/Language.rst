@@ -6,7 +6,7 @@
 Language menu
 ===================
 
-.. see-also::
+.. seealso::
    The :ref:`LanguageMenuProcessor <LanguageMenuProcessor>` can be used to
    create a language menu styled by Fluid.
 
@@ -70,7 +70,7 @@ Creates a language menu with pure Typoscript:
 
 .. include:: /CodeSnippets/Menu/TypoScript/LanguageMenuLib.rst.txt
 
-.. note::
+.. seealso::
    For a langauge menu styled by Fluid see
    :ref:`LanguageMenuProcessor <LanguageMenuProcessor>`.
 

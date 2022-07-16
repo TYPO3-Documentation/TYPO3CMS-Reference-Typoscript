@@ -23,6 +23,7 @@ Properties
 ==========
 
 .. _hmenu-special-userfunction-userfunc:
+
 special.userFunc
 ----------------
 

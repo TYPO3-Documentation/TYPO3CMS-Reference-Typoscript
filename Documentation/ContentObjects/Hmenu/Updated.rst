@@ -205,6 +205,7 @@ special.excludeNoSearchPages
 
 [tsref:(cObject).HMENU.special = updated]
 
+.. _hmenu-special-updated-examples:
 
 Examples
 =========

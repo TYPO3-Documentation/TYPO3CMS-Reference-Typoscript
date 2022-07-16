@@ -22,6 +22,7 @@ Properties
 ==========
 
 .. _hmenu-special-browse-value:
+
 special.value
 --------------
 
@@ -45,6 +46,7 @@ special.value
 
 
 .. _hmenu-special-browse-items:
+
 special.items
 ---------------
 
@@ -126,6 +128,7 @@ special.items
 
 
 .. _hmenu-special-browse-prevnexttosection:
+
 special.items.prevnextToSection
 --------------------------------
 
@@ -145,6 +148,7 @@ special.items.prevnextToSection
 
 
 .. _hmenu-special-browse-target:
+
 special.[itemname].target
 --------------------------
 
@@ -160,6 +164,7 @@ special.[itemname].target
          Optional/alternative target of the item.
 
 .. _hmenu-special-browse-uid:
+
 special.[itemname].uid
 -----------------------
 
@@ -175,6 +180,7 @@ special.[itemname].uid
          (uid of page) - optional/alternative page-uid to link to.
 
 .. _hmenu-special-browse-fields:
+
 special.[itemname].fields.[field name]
 ---------------------------------------
 

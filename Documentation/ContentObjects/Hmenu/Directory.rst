@@ -31,27 +31,27 @@ special.value
 
 .. container:: table-row
 
-Property
-   special.value
+   Property
+      special.value
 
-Data type
-   list of page ids /:ref:`stdWrap <stdwrap>`
+   Data type
+      list of page ids /:ref:`stdWrap <stdwrap>`
 
-Default
-   current page id
+   Default
+      current page id
 
-Description
-   This will generate a menu of all pages with pid = 35 and pid = 56.
+   Description
+      This will generate a menu of all pages with pid = 35 and pid = 56.
 
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+      .. code-block:: typoscript
+         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-      lib.metaMenu = HMENU
-      lib.metaMenu {
-         special = directory
-         special.value = 35, 56
-         // render the menu
-      }
+         lib.metaMenu = HMENU
+         lib.metaMenu {
+            special = directory
+            special.value = 35, 56
+            // render the menu
+         }
 
 .. ###### END~OF~TABLE ######
 
