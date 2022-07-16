@@ -28,20 +28,16 @@ rendered non-cached! That way you cannot only render non-cached
 :ref:`USER_INT <cobj-user-int>` objects, but COA\_INT allows
 you to render *every* cObject non-cached.
 
+.. contents::
+   :local:
 
 .. ### BEGIN~OF~TABLE ###
 
-.. container:: table-row
+Properties
+==========
 
-   Property
-         if
-
-   Data type
-         :ref:`->if <if>`
-
-   Description
-         If "if" returns false, the COA is **not** rendered.
-
+1,2,3,4...
+-----------
 
 .. container:: table-row
 
@@ -55,15 +51,27 @@ you to render *every* cObject non-cached.
          Numbered properties to define the different cObjects, which should be
          rendered.
 
+cache
+-----
+
+.. include:: ../../DataTypes/Properties/Cache.rst.txt
+
+if
+--
 
 .. container:: table-row
 
    Property
-         wrap
+         if
 
    Data type
-         :ref:`wrap <data-type-wrap>` /:ref:`stdWrap <stdwrap>`
+         :ref:`->if <if>`
 
+   Description
+         If "if" returns false, the COA is **not** rendered.
+
+stdWrap
+-------
 
 .. container:: table-row
 
@@ -73,7 +81,22 @@ you to render *every* cObject non-cached.
    Data type
          :ref:`->stdWrap <stdwrap>`
 
-.. include:: ../../DataTypes/Properties/Cache.rst.txt
+   Description
+         Executed on all rendered cObjects after property wrap.
+
+wrap
+-----
+
+.. container:: table-row
+
+   Property
+         wrap
+
+   Data type
+         :ref:`wrap <data-type-wrap>` /:ref:`stdWrap <stdwrap>`
+
+   Description
+         Wraps all rendered cObjects. Executed before property stdWrap.
 
 .. ###### END~OF~TABLE ######
 
@@ -107,7 +130,8 @@ Examples:
      30.value = <footer>Footer text</footer>
    }
 
-The previous example will print a simple h1 header, followed by the page content records and a footer element.
+The previous example will print a simple h1 header, followed by the page
+content records and a footer element.
 
 .. code-block:: typoscript
    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
