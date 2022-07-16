@@ -14,6 +14,10 @@ Conditions
      `symfony expression language <https://symfony.com/doc/4.1/components/expression_language.html>`__
    * TypoScript also offers the :ref:`"if" function <if>` to create conditions.
 
+.. contents::
+   :local:
+   :depth: 3
+
 .. _condition-reference:
 
 Reference
@@ -65,8 +69,8 @@ page
 ~~~~
 
 .. note::
-   :typoscript:`page` is only available in the frontend context. As the TypoScript setup may be 
-   loaded in some backend modules or the CLI context, it is considered best practice to always 
+   :typoscript:`page` is only available in the frontend context. As the TypoScript setup may be
+   loaded in some backend modules or the CLI context, it is considered best practice to always
    guard the property by using the function :ref:`traverse() <condition-function-traverse>`
 
 :aspect:`Variable`
@@ -76,7 +80,7 @@ page
    Array
 
 :aspect:`Description`
-   All data of the current page record as array. To find out which fields are available, you can 
+   All data of the current page record as array. To find out which fields are available, you can
    enable the debug mode in the TYPO3 backend which will display the field names.
 
 :aspect:`Example`
