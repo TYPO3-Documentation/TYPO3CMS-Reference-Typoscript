@@ -2,23 +2,34 @@
 .. index:: HMENU; special = browse
 .. _hmenu-special-browse:
 
-special = browse
-----------------
-
-**Warning:** Mount pages are *not* supported!
+=================================
+Browse - previous and next links
+=================================
 
 This menu contains pages which give your user the possibility to
 browse to the previous page, to the next page, to a page with the
 table of contents and so on. The menu is built of items given by a
 list from the property ".items".
 
+.. attention::
+   Mount pages are *not* supported!
+
+
+.. contents::
+   :local:
+
+Properties
+==========
+
+.. _hmenu-special-browse-value:
+special.value
+--------------
+
 .. ### BEGIN~OF~TABLE ###
 
 .. container:: table-row
 
    Property
-         .. _hmenu-special-browse-value:
-
          special.value
 
    Data type
@@ -33,12 +44,13 @@ list from the property ".items".
          the menu and the predefined items.
 
 
+.. _hmenu-special-browse-items:
+special.items
+---------------
 
 .. container:: table-row
 
    Property
-         .. _hmenu-special-browse-items:
-
          special.items
 
    Data type
@@ -113,11 +125,13 @@ list from the property ".items".
             }
 
 
+.. _hmenu-special-browse-prevnexttosection:
+special.items.prevnextToSection
+--------------------------------
+
 .. container:: table-row
 
    Property
-         .. _hmenu-special-browse-prevnexttosection:
-
          special.items.prevnextToSection
 
    Data type
@@ -130,11 +144,13 @@ list from the property ".items".
          / to the last page of the previous section.
 
 
+.. _hmenu-special-browse-target:
+special.[itemname].target
+--------------------------
+
 .. container:: table-row
 
    Property
-         .. _hmenu-special-browse-target:
-
          special.[itemname].target
 
    Data type
@@ -143,12 +159,13 @@ list from the property ".items".
    Description
          Optional/alternative target of the item.
 
+.. _hmenu-special-browse-uid:
+special.[itemname].uid
+-----------------------
 
 .. container:: table-row
 
    Property
-         .. _hmenu-special-browse-uid:
-
          special.[itemname].uid
 
    Data type
@@ -157,12 +174,13 @@ list from the property ".items".
    Description
          (uid of page) - optional/alternative page-uid to link to.
 
+.. _hmenu-special-browse-fields:
+special.[itemname].fields.[field name]
+---------------------------------------
 
 .. container:: table-row
 
    Property
-         .. _hmenu-special-browse-fields:
-
          special.[itemname].fields.[field name]
 
    Data type
@@ -180,12 +198,14 @@ list from the property ".items".
 
          This gives the link to the previous page the linktext "« zurück".
 
+.. _hmenu-special-browser-excludenosearchpages:
+
+special.excludeNoSearchPages
+-----------------------------
 
 .. container:: table-row
 
    Property
-         .. _hmenu-special-browser-excludenosearchpages:
-
          special.excludeNoSearchPages
 
    Data type
@@ -198,7 +218,27 @@ list from the property ".items".
          If set, pages marked with the "no search" checkbox will be excluded from the menu.
 
 
-
 .. ###### END~OF~TABLE ######
 
 [tsref:(cObject).HMENU.special = browse]
+
+
+Examples
+=========
+
+Pagination with rel="next" and rel="prev"
+-----------------------------------------
+
+The following snippet uses a :ref:`HMENU <cobj-hmenu>` with
+:typoscript:`special = browse` to display links like the following:
+
+.. code-block:: html
+   :caption: Example HTML output
+
+   <link rel="prev" href="http://www.example.org/page1" />
+   <link rel="next" href="http://www.example.org/page2" />
+
+The menu excludes pages with the flag :guilabel:`Include in Search` removed
+and jumps to the next section when the last of subpages is reached.
+
+.. include:: /CodeSnippets/Menu/TypoScript/RelPrevNextMenu.rst.txt

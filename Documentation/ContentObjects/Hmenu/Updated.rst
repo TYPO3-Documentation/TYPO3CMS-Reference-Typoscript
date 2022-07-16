@@ -217,30 +217,8 @@ Extension EXT:fluid_styled_content is configured with a :php:`MenuProcessor`
 which is based on the options of the :ref:`HMENU <cobj-hmenu>` and provides
 all its properties:
 
+.. include:: /CodeSnippets/Menu/TypoScript/MenuRecentlyUpdated.rst.txt
 
+The following Fluid template can be used to style the menu:
 
-.. _hmenu-special-updated-examples:
-
-Example for special = updated:
-''''''''''''''''''''''''''''''
-
-The following example will generate a menu of the most recently
-updated pages from the branches in the tree starting with the uid's
-(uid=35 and uid=56) listed. Furthermore the field :sql:`tstamp` is used
-(default is :sql:`SYS_LASTCHANGED`) and the tree depth is 2 levels. Also a
-maximum of 8 pages will be shown and they must have been updated
-within the last three days (3600\*24\*3):
-
-.. code-block:: typoscript
-   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-   20 = HMENU
-   20.special = updated
-   20.special.value = 35, 56
-   20.special {
-     mode = tstamp
-     depth = 2
-     maxAge = 3600*24*3
-     limit = 8
-   }
-
+.. include:: /CodeSnippets/Menu/Template/MenuRecentlyUpdated.rst.txt

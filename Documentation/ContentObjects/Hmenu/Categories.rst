@@ -3,8 +3,9 @@
 .. index:: HMENU; special = categories
 .. _hmenu-special-categories:
 
-special = categories
---------------------
+==================
+Categories HMENU
+==================
 
 Makes a menu of pages belonging to one or more categories. If a page
 belongs to several of the selected categories, it will appear only once.
@@ -16,14 +17,22 @@ as a comma-separated list of uid's. It can be accessed with
 :ref:`stdWrap.field <stdwrap-field>` or :ref:`getText <data-type-gettext-field>`
 like any other field.
 
+.. contents::
+   :local:
+
+Properties
+==========
+
+.. _hmenu-special-categories-value:
+
+special.value
+--------------
 
 .. ### BEGIN~OF~TABLE ###
 
 .. container:: table-row
 
    Property
-         .. _hmenu-special-categories-value:
-
          special.value
 
    Data type
@@ -46,12 +55,13 @@ like any other field.
             	}
             }
 
+.. _hmenu-special-categories-relation:
+special.relation
+-----------------
 
 .. container:: table-row
 
    Property
-         .. _hmenu-special-categories-relation:
-
          special.relation
 
    Data type
@@ -65,13 +75,15 @@ like any other field.
          building the list of categorized pages, as there can
          be several such fields on a given table.
 
+.. _hmenu-special-categories-sorting:
+
+special.sorting
+----------------
 
 
 .. container:: table-row
 
    Property
-         .. _hmenu-special-categories-sorting:
-
          special.sorting
 
    Data type
@@ -84,12 +96,14 @@ like any other field.
 
          If an unknown field is defined, the pages will not be sorted.
 
+.. _hmenu-special-categories-order:
+
+special.order
+--------------
 
 .. container:: table-row
 
    Property
-         .. _hmenu-special-categories-order:
-
          special.order
 
    Data type
@@ -108,3 +122,11 @@ like any other field.
 .. ###### END~OF~TABLE ######
 
 [tsref:(cObject).HMENU.special = categories]
+
+
+Examples
+=========
+
+rel=prev, rel=next links in HTML header
+--------------------------------------------
+

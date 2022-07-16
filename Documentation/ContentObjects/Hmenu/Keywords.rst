@@ -2,25 +2,30 @@
 .. index:: HMENU; special = keywords
 .. _hmenu-special-keywords:
 
-special = keywords
-------------------
+Keywords - menu of related pages
+---------------------------------
 
 Makes a menu of pages, which contain one or more keywords also found
 on the current page.
 
-**Ordering** is by default done in reverse order (desc) with the field
-specified by "mode", but setting "alternativeSortingField" for the
-TMENU object will override that.
-
 Mount pages are supported.
+
+.. contents::
+   :local:
+
+Properties
+==========
+
+.. _hmenu-special-keywords-value:
+
+special.value
+-------------
 
 .. ### BEGIN~OF~TABLE ###
 
 .. container:: table-row
 
    Property
-         .. _hmenu-special-keywords-value:
-
          special.value
 
    Data type
@@ -34,24 +39,24 @@ Mount pages are supported.
          .. code-block:: typoscript
             :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-            20 = HMENU
-            20.special = keywords
-            20.special {
-              value.data = TSFE:id
-              entryLevel = 1
-              mode = manual
-            }
-            20.1 = TMENU
-            20.1.NO {
-              ...
+            lib.relatedPagesMenu = HMENU
+            lib.relatedPagesMenu {
+              special = keywords
+              special {
+                value.data = TSFE:id
+                entryLevel = 1
+                mode = manual
+              }
+              // render the menu
             }
 
+.. _hmenu-special-keywords-mode:
+special.mode
+-------------
 
 .. container:: table-row
 
    Property
-         .. _hmenu-special-keywords-mode:
-
          special.mode
 
    Data type
@@ -65,26 +70,32 @@ Mount pages are supported.
 
          Possible values are:
 
-         **SYS\_LASTCHANGED:** Is updated to the youngest tstamp of the
-         records on the page when a page is generated.
+         SYS\_LASTCHANGED:
+            Is updated to the youngest tstamp of the
+            records on the page when a page is generated.
 
-         **manual** or **lastUpdated:** Uses the field "lastUpdated", which
-         can be set manually in the page-record.
+         manual or lastUpdated:
+            Uses the field "lastUpdated", which
+            can be set manually in the page-record.
 
-         **tstamp:** Uses the "tstamp"-field of the pagerecord, which is set
-         automatically when the record is changed.
+         tstamp:
+            Uses the "tstamp"-field of the pagerecord, which is set
+            automatically when the record is changed.
 
-         **crdate:** Uses the "crdate"-field of the pagerecord.
+         crdate:
+            Uses the "crdate"-field of the pagerecord.
 
-         **starttime:** Uses the starttime field.
+         starttime:
+            Uses the starttime field.
 
 
+.. _hmenu-special-keywords-entrylevel:
+special.entryLevel
+-------------------
 
 .. container:: table-row
 
    Property
-         .. _hmenu-special-keywords-entrylevel:
-
          special.entryLevel
 
    Data type
@@ -93,14 +104,15 @@ Mount pages are supported.
    Description
          Where in the rootline the search begins.
 
-         *See property entryLevel in the section "HMENU" above.*
+         See property :ref:`entryLevel in the HMENU <hmenu-entrylevel>`.
 
+.. _hmenu-special-keywords-depth:
+special.depth
+--------------
 
 .. container:: table-row
 
    Property
-         .. _hmenu-special-keywords-depth:
-
          special.depth
 
    Data type
@@ -113,12 +125,13 @@ Mount pages are supported.
          (same as in section "special = updated")
 
 
+.. _hmenu-special-keywords-limit:
+special.limit
+--------------
 
 .. container:: table-row
 
    Property
-         .. _hmenu-special-keywords-limit:
-
          special.limit
 
    Data type
@@ -131,12 +144,13 @@ Mount pages are supported.
          (same as in section "special = updated")
 
 
+.. _hmenu-special-keywords-excludenosearchpages:
+special.excludeNoSearchPages
+-----------------------------
 
 .. container:: table-row
 
    Property
-         .. _hmenu-special-keywords-excludenosearchpages:
-
          special.excludeNoSearchPages
 
    Data type
@@ -145,12 +159,13 @@ Mount pages are supported.
    Description
          (same as in section "special = updated")
 
+.. _hmenu-special-keywords-begin:
+special.begin
+--------------
 
 .. container:: table-row
 
    Property
-         .. _hmenu-special-keywords-begin:
-
          special.begin
 
    Data type
@@ -159,11 +174,13 @@ Mount pages are supported.
    Description
          (same as in section "special = updated")
 
+.. _hmenu-special-keywords-setkeywords:
+special.setKeywords
+--------------------
 
 .. container:: table-row
 
    Property
-         .. _hmenu-special-keywords-setkeywords:
 
          special.setKeywords
 
@@ -175,12 +192,13 @@ Mount pages are supported.
          separated list. If this property is defined, it overrides the default,
          which is the keywords of the current page.
 
+.. _hmenu-special-keywords-keywordsfield:
+special.keywordsField
+----------------------
 
 .. container:: table-row
 
    Property
-         .. _hmenu-special-keywords-keywordsfield:
-
          special.keywordsField
 
    Data type
@@ -195,12 +213,13 @@ Mount pages are supported.
          if the field you enter here exists, so make sure to enter an existing field!
 
 
+.. _hmenu-special-keywords-sourcefield:
+special.keywordsField.sourceField
+----------------------------------
 
 .. container:: table-row
 
    Property
-         .. _hmenu-special-keywords-sourcefield:
-
          special.keywordsField.sourceField
 
    Data type
@@ -220,3 +239,20 @@ Mount pages are supported.
 .. ###### END~OF~TABLE ######
 
 [tsref:(cObject).HMENU.special = keywords]
+
+Examples
+=========
+
+Menu of all subpages
+--------------------
+
+The content element :guilabel:`Menu > Related pages` provided by the system
+Extension EXT:fluid_styled_content is configured with a :php:`MenuProcessor`
+which is based on the options of the :ref:`HMENU <cobj-hmenu>` and provides
+all its properties:
+
+.. include:: /CodeSnippets/Menu/TypoScript/MenuRelatedPages.rst.txt
+
+The following Fluid template can be used to style the menu:
+
+.. include:: /CodeSnippets/Menu/Template/MenuRelatedPages.rst.txt
