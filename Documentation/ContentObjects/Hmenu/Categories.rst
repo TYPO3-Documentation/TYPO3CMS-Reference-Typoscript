@@ -127,6 +127,16 @@ special.order
 Examples
 =========
 
-rel=prev, rel=next links in HTML header
---------------------------------------------
+Menu of pages in a certain category
+-----------------------------------
 
+The content element :guilabel:`Menu > Categorized pages` provided by the system
+Extension EXT:fluid_styled_content is configured with a :php:`MenuProcessor`
+which is based on the options of the :ref:`HMENU <cobj-hmenu>` and provides
+all its properties:
+
+.. include:: /CodeSnippets/Menu/TypoScript/MenuCategorizedPages.rst.txt
+
+The following Fluid template can be used to style the menu:
+
+.. include:: /CodeSnippets/Menu/Template/MenuCategorizedPages.rst.txt

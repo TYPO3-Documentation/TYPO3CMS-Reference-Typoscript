@@ -2,8 +2,9 @@
 .. index:: HMENU; special = keywords
 .. _hmenu-special-keywords:
 
+=================================
 Keywords - menu of related pages
----------------------------------
+=================================
 
 Makes a menu of pages, which contain one or more keywords also found
 on the current page.
@@ -243,8 +244,8 @@ special.keywordsField.sourceField
 Examples
 =========
 
-Menu of all subpages
---------------------
+Menu of related pages
+----------------------
 
 The content element :guilabel:`Menu > Related pages` provided by the system
 Extension EXT:fluid_styled_content is configured with a :php:`MenuProcessor`

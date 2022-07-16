@@ -3,7 +3,7 @@
 .. _hmenu-special-directory:
 
 ==================================
-directory menu - menu of subpages
+Directory menu - menu of subpages
 ==================================
 
 A :ref:`HMENU <cobj-hmenu>` of type :typoscript:`special = directory`
