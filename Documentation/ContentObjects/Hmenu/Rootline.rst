@@ -2,8 +2,8 @@
 .. index:: HMENU; special = rootline
 .. _hmenu-special-rootline:
 
-special = rootline
-------------------
+rootline - breadcrumb menu
+---------------------------
 
 The path of pages from the current page to the root page of the page
 tree is called "rootline".
@@ -21,12 +21,18 @@ and makes navigation to a certain page level easier.
 
 Mount pages are supported.
 
+.. contents::
+   :local:
+
+Properties
+==========
+
+.. _hmenu-special-rootline-range:
 .. ### BEGIN~OF~TABLE ###
 
 .. container:: table-row
 
    Property
-         .. _hmenu-special-rootline-range:
 
          special.range
 
@@ -45,12 +51,12 @@ Mount pages are supported.
             temp.breadcrumbs.special = rootline
             temp.breadcrumbs.special.range = 1|-2
 
+.. _hmenu-special-rootline-reverseorder:
+
 
 .. container:: table-row
 
    Property
-         .. _hmenu-special-rootline-reverseorder:
-
          special.reverseOrder
 
    Data type
@@ -63,11 +69,11 @@ Mount pages are supported.
          If set to true, the order of the rootline menu elements will be
          reversed.
 
+.. _hmenu-special-rootline-targets:
+
 .. container:: table-row
 
    Property
-         .. _hmenu-special-rootline-targets:
-
          special.targets.[level number]
 
    Data type
@@ -103,40 +109,26 @@ Mount pages are supported.
 [tsref:(cObject).HMENU.special = rootline]
 
 
-
 .. _hmenu-special-rootline-examples:
 
-Example for special = rootline:
-'''''''''''''''''''''''''''''''
+Examples
+=========
 
-The following example will generate an accessible rootline menu: It
-will be wrapped as an unordered list. The first page in the menu is
-the page on level 1, that is one level below the root page of the
-website. The last page in the menu is the current page.
+Breadcrumb styled with Fluid
+-----------------------------
 
-After each link there is an image, which could contain a small arrow.
+The following breadcrumb menu is created with the MenuProcessor, based on
+the HMENU. It is styled via Fluid:
 
-The current page is not linked, but wrapped in em tags. It does not
-have the image appended.
+.. include:: /CodeSnippets/Menu/TypoScript/BreadcrumbDataProcessor.rst.txt
 
-.. code-block:: typoscript
-   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+The following Fluid partial can be used to style the breadcrumb menu:
 
-   20 = HMENU
-   20.wrap = <ul>|</ul>
-   20.special = rootline
-   20.special.range = 1|-1
+.. include:: /CodeSnippets/Menu/Template/BreadcrumbDataProcessor.rst.txt
 
-   20 {
-     1 = TMENU
+Breadcrumb with pure TypoScript
+--------------------------------
 
-     1.NO.wrapItemAndSub = <li>|</li>
-     1.NO.ATagTitle.field = description // subtitle // title
-     1.NO.afterImg = fileadmin/arrow.jpg
+The following breadcrumb menu is styled with pure Typoscript:
 
-     1.CUR = 1
-     1.CUR < .1.NO
-     1.CUR.doNotLinkIt = 1
-     1.CUR.wrapItemAndSub = <li><em>|</em></li>
-     1.CUR.afterImg >
-   }
+.. include:: /CodeSnippets/Menu/TypoScript/BreadcrumbLib.rst.txt
