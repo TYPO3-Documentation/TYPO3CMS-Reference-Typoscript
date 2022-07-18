@@ -8,7 +8,7 @@
 FILES
 =====
 
-A content object of type FILES was integrated with the File Abstraction Layer
+A content object of type FILES uses the File Abstraction Layer
 (FAL) and is there to output information about files.
 
 .. contents::
