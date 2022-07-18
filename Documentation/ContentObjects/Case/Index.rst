@@ -34,9 +34,8 @@ from the "default" property will be used.
 Properties
 ==========
 
-
-1,2,3,4...
-------------
+(array of cObjects)
+-------------------
 
 .. container:: table-row
 
