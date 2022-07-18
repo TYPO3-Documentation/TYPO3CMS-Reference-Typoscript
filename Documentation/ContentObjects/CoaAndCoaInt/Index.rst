@@ -130,7 +130,7 @@ Examples:
      30.value = <footer>Footer text</footer>
    }
 
-The previous example will print a simple h1 header, followed by the page
+The previous example will print a simple :html:`<h1>` header, followed by the page
 content records and a footer element.
 
 .. code-block:: typoscript
