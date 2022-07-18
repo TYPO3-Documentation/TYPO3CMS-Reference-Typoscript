@@ -131,7 +131,7 @@ Examples:
    }
 
 The previous example will print a simple :html:`<h1>` header, followed by the page
-content records and a footer element.
+content records and a :html:`footer` element.
 
 .. code-block:: typoscript
    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
