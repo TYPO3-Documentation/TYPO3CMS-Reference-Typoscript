@@ -340,7 +340,7 @@ Here is an example of the CONTENT object:
       where = {#colPos}=0
    }
 
-Since in the above example .renderObj is not set explicitly, TYPO3
+Since in the above example `.renderObj` is not set explicitly, TYPO3
 will automatically set :typoscript:`1.renderObj < tt_content`, so that `renderObj`
 will reference the TypoScript configuration of `tt_content`. The
 according TypoScript configuration will be copied to `renderObj`.
