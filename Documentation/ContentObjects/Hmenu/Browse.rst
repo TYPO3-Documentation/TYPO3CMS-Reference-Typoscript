@@ -200,9 +200,9 @@ special.[itemname].fields.[field name]
          .. code-block:: typoscript
             :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-            prev.fields.title = « zurück
+            prev.fields.title = « back
 
-         This gives the link to the previous page the linktext "« zurück".
+         This gives the link to the previous page the linktext "« back".
 
 .. _hmenu-special-browser-excludenosearchpages:
 
@@ -229,8 +229,8 @@ special.excludeNoSearchPages
 [tsref:(cObject).HMENU.special = browse]
 
 
-Examples
-=========
+Example
+=======
 
 Pagination with rel="next" and rel="prev"
 -----------------------------------------

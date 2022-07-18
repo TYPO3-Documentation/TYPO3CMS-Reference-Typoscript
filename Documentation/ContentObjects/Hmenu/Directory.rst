@@ -11,8 +11,8 @@ lets you create a menu listing the subpages of one or more parent pages.
 
 The parent pages are defined in the property :typoscript:`special.value`.
 
-This menu type can be used for example to display all subpages of a certain page
-as meta menu or footer menu.
+This menu type can be used, for example, to display all subpages of a certain
+page as meta menu or footer menu.
 
 Mount pages are supported.
 
@@ -58,14 +58,14 @@ special.value
 [tsref:(cObject).HMENU.special = directory]
 
 
-Examples
-=========
+Example
+=======
 
 Menu of all subpages
 --------------------
 
 The content element :guilabel:`Menu > Subpages` provided by the system
-Extension EXT:fluid_styled_content is configured with a :php:`MenuProcessor`
+extension EXT:fluid_styled_content is configured with a :php:`MenuProcessor`
 which is based on the options of the :ref:`HMENU <cobj-hmenu>` and provides
 all its properties:
 

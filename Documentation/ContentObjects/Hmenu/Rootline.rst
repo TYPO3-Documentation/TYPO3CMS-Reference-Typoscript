@@ -3,7 +3,7 @@
 .. _hmenu-special-rootline:
 
 ===========================
-rootline - breadcrumb menu
+Rootline - breadcrumb menu
 ===========================
 
 The path of pages from the current page to the root page of the page
@@ -34,7 +34,6 @@ Properties
 .. container:: table-row
 
    Property
-
          special.range
 
    Data type

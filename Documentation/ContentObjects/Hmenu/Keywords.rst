@@ -189,7 +189,6 @@ special.setKeywords
 .. container:: table-row
 
    Property
-
          special.setKeywords
 
    Data type
@@ -250,8 +249,8 @@ special.keywordsField.sourceField
 
 [tsref:(cObject).HMENU.special = keywords]
 
-Examples
-=========
+Example
+=======
 
 Menu of related pages
 ----------------------

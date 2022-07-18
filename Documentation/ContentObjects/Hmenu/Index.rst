@@ -42,7 +42,6 @@ Properties
 .. container:: table-row
 
    Property:
-
          1, 2, 3, ...
 
    Data type
@@ -94,7 +93,6 @@ cache_period
 .. container:: table-row
 
    Property
-
          cache_period
 
    Data type
@@ -125,7 +123,6 @@ entryLevel
 .. container:: table-row
 
    Property
-
          entryLevel
 
    Data type
@@ -216,7 +213,6 @@ special.value
 .. container:: table-row
 
    Property
-
          special.value
 
    Data type
@@ -235,7 +231,6 @@ minItems
 .. container:: table-row
 
    Property
-
          minItems
 
    Data type
@@ -462,7 +457,6 @@ wrap
 .. container:: table-row
 
    Property
-
          wrap
 
    Data type

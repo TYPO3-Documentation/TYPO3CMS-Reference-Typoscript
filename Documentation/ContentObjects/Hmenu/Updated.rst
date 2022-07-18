@@ -207,14 +207,14 @@ special.excludeNoSearchPages
 
 .. _hmenu-special-updated-examples:
 
-Examples
-=========
+Example
+=======
 
 Recently updated pages styled with Fluid
 -----------------------------------------
 
 The content element :guilabel:`Recently Updated Pages` provided by the system
-Extension EXT:fluid_styled_content is configured with a :php:`MenuProcessor`
+extension EXT:fluid_styled_content is configured with a :php:`MenuProcessor`
 which is based on the options of the :ref:`HMENU <cobj-hmenu>` and provides
 all its properties:
 

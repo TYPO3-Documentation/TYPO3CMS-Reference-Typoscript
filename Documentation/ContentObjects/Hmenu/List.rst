@@ -62,7 +62,7 @@ Menu of all subpages
 --------------------
 
 The content element :guilabel:`Menu > Pages` provided by the system
-Extension EXT:fluid_styled_content is configured with a :php:`MenuProcessor`
+extension EXT:fluid_styled_content is configured with a :php:`MenuProcessor`
 which is based on the options of the :ref:`HMENU <cobj-hmenu>` and provides
 all its properties:
 

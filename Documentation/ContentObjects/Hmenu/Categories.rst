@@ -125,14 +125,14 @@ special.order
 [tsref:(cObject).HMENU.special = categories]
 
 
-Examples
-=========
+Example
+=======
 
 Menu of pages in a certain category
 -----------------------------------
 
 The content element :guilabel:`Menu > Categorized pages` provided by the system
-Extension EXT:fluid_styled_content is configured with a :php:`MenuProcessor`
+extension EXT:fluid_styled_content is configured with a :php:`MenuProcessor`
 which is based on the options of the :ref:`HMENU <cobj-hmenu>` and provides
 all its properties:
 

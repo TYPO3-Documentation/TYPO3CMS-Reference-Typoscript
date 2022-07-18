@@ -45,8 +45,8 @@ special.userFunc
 
 [tsref:(cObject).HMENU.special = userfunction]
 
-Examples
-========
+Example
+=======
 
 .. _hmenu-special-userfunction-examples:
 
