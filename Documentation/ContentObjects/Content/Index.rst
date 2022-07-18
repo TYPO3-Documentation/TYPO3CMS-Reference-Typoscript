@@ -219,21 +219,6 @@ CONTENT explained in detail
 See PHP class :php:`\TYPO3\CMS\Frontend\ContentObject\ContentContentObject`
 for details on code level.
 
-Preamble:
-
-.. code-block:: typoscript
-   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-   # Note: TypoScript (TS) is just another way to define an array of settings which
-   #       is later on INTERPRETED by TYPO3. TypoScript can be written in ANY order
-   #       as long as it leads to the same array. Actual execution order is TOTALLY
-   #       INDEPENDENT of TypoScript code order.
-   #
-   #       The order of TS in this example however tries to reflect execution order.
-   #       The denoted steps are taking place in that order at execution time.
-
-Condensed form:
-
 .. code-block:: typoscript
    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
