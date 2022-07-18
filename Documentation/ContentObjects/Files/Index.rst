@@ -303,7 +303,7 @@ fieldName
 
 .. _cobj-files-examples:
 
-Examples:
+Examples
 ==========
 
 
