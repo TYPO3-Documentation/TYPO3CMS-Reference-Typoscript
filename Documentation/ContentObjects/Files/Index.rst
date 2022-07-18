@@ -9,7 +9,7 @@ FILES
 =====
 
 A content object of type FILES uses the File Abstraction Layer
-(FAL) and is there to output information about files.
+(FAL) and is used to display information about files.
 
 .. contents::
    :local:
