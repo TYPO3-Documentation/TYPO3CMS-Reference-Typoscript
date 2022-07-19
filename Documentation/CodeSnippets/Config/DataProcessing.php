@@ -1,132 +1,131 @@
 <?php
-// https=>//github.com/TYPO3-Documentation/t3docs-codesnippets
-// ddev exec vendor/bin/typo3  restructured_api_tools=>php_domain public/fileadmin/TYPO3CMS-Reference-Typoscript/Documentation/CodeSnippets/
+// included in codesnippets.php
 
 return [
     [
         'action' => 'createCodeSnippet',
         'sourceFile' => 'typo3conf/ext/examples/Configuration/TypoScript/DataProcessors/General.typoscript',
-        'targetFileName' => 'DataProcessing/DataProcessingTemplates.rst.txt',
+        'targetFileName' => 'CodeSnippets/DataProcessing/DataProcessingTemplates.rst.txt',
         'caption' => 'EXT:examples/Configuration/TypoScript/DataProcessors/General.typoscript'
     ],
     [
         'action' => 'createCodeSnippet',
         'caption' => 'EXT:examples/Configuration/TypoScript/DataProcessors/Processors/CommaSeparatedValueProcessor.typoscript',
         'sourceFile' => 'typo3conf/ext/examples/Configuration/TypoScript/DataProcessors/Processors/CommaSeparatedValueProcessor.typoscript',
-        'targetFileName' => 'DataProcessing/TypoScript/CommaSeparatedValueProcessor.rst.txt'
+        'targetFileName' => 'CodeSnippets/DataProcessing/TypoScript/CommaSeparatedValueProcessor.rst.txt'
     ],
     [
         'action' => 'createCodeSnippet',
         'caption' => 'EXT:examples/Configuration/TypoScript/DataProcessors/Processors/DatabaseQueryProcessor.typoscript',
         'sourceFile' => 'typo3conf/ext/examples/Configuration/TypoScript/DataProcessors/Processors/DatabaseQueryProcessor.typoscript',
-        'targetFileName' => 'DataProcessing/TypoScript/DatabaseQueryProcessor.rst.txt'
+        'targetFileName' => 'CodeSnippets/DataProcessing/TypoScript/DatabaseQueryProcessor.rst.txt'
     ],
     [
         'action' => 'createCodeSnippet',
         'caption' => 'EXT:examples/Configuration/TypoScript/DataProcessors/Processors/CommaSeparatedValueProcessor.typoscript',
         'sourceFile' => 'typo3conf/ext/examples/Configuration/TypoScript/DataProcessors/Processors/CommaSeparatedValueProcessor.typoscript',
-        'targetFileName' => 'DataProcessing/TypoScript/CommaSeparatedValueProcessor.rst.txt'
+        'targetFileName' => 'CodeSnippets/DataProcessing/TypoScript/CommaSeparatedValueProcessor.rst.txt'
     ],
     [
         'action' => 'createCodeSnippet',
         'caption' => 'EXT:examples/Configuration/TypoScript/DataProcessors/Processors/FilesProcessor.typoscript',
         'sourceFile' => 'typo3conf/ext/examples/Configuration/TypoScript/DataProcessors/Processors/FilesProcessor.typoscript',
-        'targetFileName' => 'DataProcessing/TypoScript/FilesProcessor.rst.txt'
+        'targetFileName' => 'CodeSnippets/DataProcessing/TypoScript/FilesProcessor.rst.txt'
     ],
     [
         'action' => 'createCodeSnippet',
         'caption' => 'EXT:examples/Configuration/TypoScript/DataProcessors/Processors/GalleryProcessor.typoscript',
         'sourceFile' => 'typo3conf/ext/examples/Configuration/TypoScript/DataProcessors/Processors/GalleryProcessor.typoscript',
-        'targetFileName' => 'DataProcessing/TypoScript/GalleryProcessor.rst.txt'
+        'targetFileName' => 'CodeSnippets/DataProcessing/TypoScript/GalleryProcessor.rst.txt'
     ],
     [
         'action' => 'createCodeSnippet',
         'caption' => 'EXT:examples/Configuration/TypoScript/DataProcessors/Processors/LanguageMenuProcessor.typoscript',
         'sourceFile' => 'typo3conf/ext/examples/Configuration/TypoScript/DataProcessors/Processors/LanguageMenuProcessor.typoscript',
-        'targetFileName' => 'DataProcessing/TypoScript/LanguageMenuProcessor.rst.txt'
+        'targetFileName' => 'CodeSnippets/DataProcessing/TypoScript/LanguageMenuProcessor.rst.txt'
     ],
     [
         'action' => 'createCodeSnippet',
         'caption' => 'EXT:examples/Configuration/TypoScript/DataProcessors/Processors/MenuProcessor.typoscript',
         'sourceFile' => 'typo3conf/ext/examples/Configuration/TypoScript/DataProcessors/Processors/MenuProcessor.typoscript',
-        'targetFileName' => 'DataProcessing/TypoScript/MenuProcessor.rst.txt'
+        'targetFileName' => 'CodeSnippets/DataProcessing/TypoScript/MenuProcessor.rst.txt'
     ],
     [
         'action' => 'createCodeSnippet',
         'caption' => 'EXT:examples/Configuration/TypoScript/DataProcessors/Processors/SiteProcessor.typoscript',
         'sourceFile' => 'typo3conf/ext/examples/Configuration/TypoScript/DataProcessors/Processors/SiteProcessor.typoscript',
-        'targetFileName' => 'DataProcessing/TypoScript/SiteProcessor.rst.txt'
+        'targetFileName' => 'CodeSnippets/DataProcessing/TypoScript/SiteProcessor.rst.txt'
     ],
     [
         'action' => 'createCodeSnippet',
         'caption' => 'EXT:examples/Configuration/TypoScript/DataProcessors/Processors/SiteLanguageProcessor.typoscript',
         'sourceFile' => 'typo3conf/ext/examples/Configuration/TypoScript/DataProcessors/Processors/SiteLanguageProcessor.typoscript',
-        'targetFileName' => 'DataProcessing/TypoScript/SiteLanguageProcessor.rst.txt'
+        'targetFileName' => 'CodeSnippets/DataProcessing/TypoScript/SiteLanguageProcessor.rst.txt'
     ],
     [
         'action' => 'createCodeSnippet',
         'caption' => 'EXT:examples/Configuration/TypoScript/DataProcessors/Processors/SplitProcessor.typoscript',
         'sourceFile' => 'typo3conf/ext/examples/Configuration/TypoScript/DataProcessors/Processors/SplitProcessor.typoscript',
-        'targetFileName' => 'DataProcessing/TypoScript/SplitProcessor.rst.txt'
+        'targetFileName' => 'CodeSnippets/DataProcessing/TypoScript/SplitProcessor.rst.txt'
     ],
     [
         'action' => 'createCodeSnippet',
         'caption' => 'EXT:examples/Resources/Private/Templates/ContentElements/DataProcCsv.html',
         'sourceFile'=> 'typo3conf/ext/examples/Resources/Private/Templates/ContentElements/DataProcCsv.html',
-        'targetFileName' => 'DataProcessing/Template/DataProcCsv.rst.txt'
+        'targetFileName' => 'CodeSnippets/DataProcessing/Template/DataProcCsv.rst.txt'
     ],
     [
         'action' => 'createCodeSnippet',
         'caption' => 'EXT:examples/Resources/Private/Templates/ContentElements/DataProcCustom.html',
         'sourceFile'=> 'typo3conf/ext/examples/Resources/Private/Templates/ContentElements/DataProcCustom.html',
-        'targetFileName' => 'DataProcessing/Template/DataProcCustom.rst.txt'
+        'targetFileName' => 'CodeSnippets/DataProcessing/Template/DataProcCustom.rst.txt'
     ],
     [
         'action' => 'createCodeSnippet',
         'caption' => 'EXT:examples/Resources/Private/Templates/ContentElements/DataProcDb.html',
         'sourceFile'=> 'typo3conf/ext/examples/Resources/Private/Templates/ContentElements/DataProcDb.html',
-        'targetFileName' => 'DataProcessing/Template/DataProcDb.rst.txt'
+        'targetFileName' => 'CodeSnippets/DataProcessing/Template/DataProcDb.rst.txt'
     ],
     [
         'action' => 'createCodeSnippet',
         'caption' => 'EXT:examples/Resources/Private/Templates/ContentElements/DataProcFiles.html',
         'sourceFile'=> 'typo3conf/ext/examples/Resources/Private/Templates/ContentElements/DataProcFiles.html',
-        'targetFileName' => 'DataProcessing/Template/DataProcFiles.rst.txt'
+        'targetFileName' => 'CodeSnippets/DataProcessing/Template/DataProcFiles.rst.txt'
     ],
     [
         'action' => 'createCodeSnippet',
         'caption' => 'EXT:examples/Resources/Private/Templates/ContentElements/DataProcGallery.html',
         'sourceFile'=> 'typo3conf/ext/examples/Resources/Private/Templates/ContentElements/DataProcGallery.html',
-        'targetFileName' => 'DataProcessing/Template/DataProcGallery.rst.txt'
+        'targetFileName' => 'CodeSnippets/DataProcessing/Template/DataProcGallery.rst.txt'
     ],
     [
         'action' => 'createCodeSnippet',
         'caption' => 'EXT:examples/Resources/Private/Templates/ContentElements/DataProcLangMenu.html',
         'sourceFile'=> 'typo3conf/ext/examples/Resources/Private/Templates/ContentElements/DataProcLangMenu.html',
-        'targetFileName' => 'DataProcessing/Template/DataProcLangMenu.rst.txt'
+        'targetFileName' => 'CodeSnippets/DataProcessing/Template/DataProcLangMenu.rst.txt'
     ],
     [
         'action' => 'createCodeSnippet',
         'caption' => 'EXT:examples/Resources/Private/Templates/ContentElements/DataProcMenu.html',
         'sourceFile'=> 'typo3conf/ext/examples/Resources/Private/Templates/ContentElements/DataProcMenu.html',
-        'targetFileName' => 'DataProcessing/Template/DataProcMenu.rst.txt'
+        'targetFileName' => 'CodeSnippets/DataProcessing/Template/DataProcMenu.rst.txt'
     ],
     [
         'action' => 'createCodeSnippet',
         'caption' => 'EXT:examples/Resources/Private/Templates/ContentElements/DataProcSite.html',
         'sourceFile'=> 'typo3conf/ext/examples/Resources/Private/Templates/ContentElements/DataProcSite.html',
-        'targetFileName' => 'DataProcessing/Template/DataProcSite.rst.txt'
+        'targetFileName' => 'CodeSnippets/DataProcessing/Template/DataProcSite.rst.txt'
     ],
     [
         'action' => 'createCodeSnippet',
         'caption' => 'EXT:examples/Resources/Private/Templates/ContentElements/DataProcSplit.html',
         'sourceFile'=> 'typo3conf/ext/examples/Resources/Private/Templates/ContentElements/DataProcSplit.html',
-        'targetFileName' => 'DataProcessing/Template/DataProcSplit.rst.txt'
+        'targetFileName' => 'CodeSnippets/DataProcessing/Template/DataProcSplit.rst.txt'
     ],
     [
         'action' => 'createCodeSnippet',
         'caption' => 'EXT:examples/Resources/Private/Templates/ContentElements/DataProcSiteLanguage.html',
         'sourceFile'=> 'typo3conf/ext/examples/Resources/Private/Templates/ContentElements/DataProcSiteLanguage.html',
-        'targetFileName' => 'DataProcessing/Template/DataProcSiteLanguage.rst.txt'
+        'targetFileName' => 'CodeSnippets/DataProcessing/Template/DataProcSiteLanguage.rst.txt'
     ],
 ];
