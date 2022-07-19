@@ -10,12 +10,6 @@
 CONTENT
 =======
 
-.. note::
-
-   * CONTENT is an object type (= complex data type).
-   * It is a specific :ref:`cObject <cobject>` data type.
-
-
 An object with the content type CONTENT is designed to generate content by allowing to
 finely select records and have them rendered.
 
@@ -29,26 +23,201 @@ is raised to the maximum timestamp value of the respective records.
    lists of records from a variety of tables without fine graining.
 
 
-Comprehensive example
-=====================
+.. contents::
+   :local:
+
+Properties
+==========
+
+.. index:: CONTENT; select
+.. _cobj-content-select:
+
+select
+------
+
+.. ### BEGIN~OF~TABLE ###
+
+.. container:: table-row
+
+   Property
+         select
+
+   Data type
+         :ref:`select`
+
+   Description
+      The SQL-statement, a SELECT query, is set here,
+      including automatic visibility control.
+
+.. ###### END~OF~TABLE ######
+
+
+.. index:: CONTENT; table
+.. _cobj-content-table:
+
+table
+-----
+
+.. ### BEGIN~OF~TABLE ###
+
+.. container:: table-row
+
+   Property
+      table
+
+   Data type
+      *table name* /:ref:`stdwrap`
+
+   Description
+      The table, the content should come from. Any table can be used;
+      a check for a table prefix is not done.
+
+      In standard configuration this will be `tt_content`.
+
+.. ###### END~OF~TABLE ######
+
+
+.. index:: CONTENT; renderObj
+.. _cobj-content-renderObj:
+
+renderObj
+---------
+
+.. ### BEGIN~OF~TABLE ###
+
+.. container:: table-row
+
+   Property
+      renderObj
+
+   Data type
+      :ref:`data-type-cObject`
+
+   Default
+      :typoscript:`< [table name]`
+
+   Description
+      The cObject used for rendering the records resulting from the query in
+      .select.
+
+      If :typoscript:`renderObj` is not set explicitly, then :typoscript:`< [table name]` is used. So
+      in this case the configuration of the according table is being copied.
+      See the notes on the example below.
+
+.. ###### END~OF~TABLE ######
+
+
+.. index:: CONTENT; slide
+.. _cobj-content-slide:
+
+slide
+-----
+
+.. ### BEGIN~OF~TABLE ###
+
+.. container:: table-row
+
+   Property
+      slide
+
+   Data type
+      integer /:ref:`stdWrap`
+
+   Description
+      If set and no content element is found by the select command, the
+      rootLine will be traversed back until some content is found.
+
+      Possible values are :typoscript:`-1` (slide back up to the siteroot), :typoscript:`1` (only
+      the current level) and :typoscript:`2` (up from one level back).
+
+      Use :typoscript:`-1` in combination with collect.
+
+      slide.collect
+         (integer /:ref:`stdWrap`) If set, all content elements found
+         on the current and parent pages will be collected. Otherwise, the sliding
+         would stop after the first hit. Set this value to the amount of levels
+         to collect on, or use :typoscript:`-1` to collect up to the siteroot.
+
+      slide.collectFuzzy
+         (boolean /:ref:`stdWrap`) Only useful in collect mode. If
+         no content elements have been found for the specified depth in collect
+         mode, traverse further until at least one match has occurred.
+
+      slide.collectReverse
+         (boolean /:ref:`stdWrap`) Reverse
+         order of elements in collect mode. If set, elements of the current
+         page will be at the bottom.
+
+      **Note:** Up to Version 9 of TYPO3 the sliding stopped when reaching a folder. Beginning with TYPO3 10 this is not longer the case.
+      See :php:`$cObj->checkPid_badDoktypeList`.
+
+.. ###### END~OF~TABLE ######
+
+
+.. index:: CONTENT; wrap
+.. _cobj-content-wrap:
+
+wrap
+----
+
+.. ### BEGIN~OF~TABLE ###
+
+.. container:: table-row
+
+   Property
+      wrap
+
+   Data type
+      :ref:`wrap <data-type-wrap>` /:ref:`stdWrap`
+
+   Description
+      Wrap the whole content.
+
+.. ###### END~OF~TABLE ######
+
+
+.. index:: CONTENT; stdWrap
+.. _cobj-content-stdWrap:
+
+stdWrap
+-------
+
+.. ### BEGIN~OF~TABLE ###
+
+.. container:: table-row
+
+   Property
+      stdWrap
+
+   Data type
+      :ref:`stdwrap`
+
+   Description
+      Apply `stdWrap` functionality.
+
+.. ###### END~OF~TABLE ######
+
+
+.. index:: CONTENT; cache
+.. _cobj-content-cache:
+
+cache
+-----
+
+.. ### BEGIN~OF~TABLE ###
+
+.. include:: ../../DataTypes/Properties/Cache.rst.txt
+
+.. ###### END~OF~TABLE ######
+
+Examples
+========
+
+CONTENT explained in detail
+----------------------------
 
 See PHP class :php:`\TYPO3\CMS\Frontend\ContentObject\ContentContentObject`
 for details on code level.
-
-Preamble:
-
-.. code-block:: typoscript
-   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-   # Note: TypoScript (TS) is just another way to define an array of settings which
-   #       is later on INTERPRETED by TYPO3. TypoScript can be written in ANY order
-   #       as long as it leads to the same array. Actual execution order is TOTALLY
-   #       INDEPENDENT of TypoScript code order.
-   #
-   #       The order of TS in this example however tries to reflect execution order.
-   #       The denoted steps are taking place in that order at execution time.
-
-Condensed form:
 
 .. code-block:: typoscript
    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
@@ -138,192 +307,10 @@ See also: :ref:`if`, :ref:`select`, :ref:`data-type-wrap`, :ref:`stdWrap`,
 :ref:`data-type-cobject`
 
 
-.. index:: CONTENT; select
-.. _cobj-content-select:
-
-select
-======
-
-.. ### BEGIN~OF~TABLE ###
-
-.. container:: table-row
-
-   Property
-         select
-
-   Data type
-         :ref:`select`
-
-   Description
-      The SQL-statement, a SELECT query, is set here,
-      including automatic visibility control.
-
-.. ###### END~OF~TABLE ######
-
-
-.. index:: CONTENT; table
-.. _cobj-content-table:
-
-table
-=====
-
-.. ### BEGIN~OF~TABLE ###
-
-.. container:: table-row
-
-   Property
-      table
-
-   Data type
-      *table name* /:ref:`stdwrap`
-
-   Description
-      The table, the content should come from. Any table can be used;
-      a check for a table prefix is not done.
-
-      In standard configuration this will be `tt_content`.
-
-.. ###### END~OF~TABLE ######
-
-
-.. index:: CONTENT; renderObj
-.. _cobj-content-renderObj:
-
-renderObj
-=========
-
-.. ### BEGIN~OF~TABLE ###
-
-.. container:: table-row
-
-   Property
-      renderObj
-
-   Data type
-      :ref:`data-type-cObject`
-
-   Default
-      :typoscript:`< [table name]`
-
-   Description
-      The cObject used for rendering the records resulting from the query in
-      .select.
-
-      If :typoscript:`renderObj` is not set explicitly, then :typoscript:`< [table name]` is used. So
-      in this case the configuration of the according table is being copied.
-      See the notes on the example below.
-
-.. ###### END~OF~TABLE ######
-
-
-.. index:: CONTENT; slide
-.. _cobj-content-slide:
-
-slide
-=====
-
-.. ### BEGIN~OF~TABLE ###
-
-.. container:: table-row
-
-   Property
-      slide
-
-   Data type
-      integer /:ref:`stdWrap`
-
-   Description
-      If set and no content element is found by the select command, the
-      rootLine will be traversed back until some content is found.
-
-      Possible values are :typoscript:`-1` (slide back up to the siteroot), :typoscript:`1` (only
-      the current level) and :typoscript:`2` (up from one level back).
-
-      Use :typoscript:`-1` in combination with collect.
-
-      slide.collect
-         (integer /:ref:`stdWrap`) If set, all content elements found
-         on the current and parent pages will be collected. Otherwise, the sliding
-         would stop after the first hit. Set this value to the amount of levels
-         to collect on, or use :typoscript:`-1` to collect up to the siteroot.
-
-      slide.collectFuzzy
-         (boolean /:ref:`stdWrap`) Only useful in collect mode. If
-         no content elements have been found for the specified depth in collect
-         mode, traverse further until at least one match has occurred.
-
-      slide.collectReverse
-         (boolean /:ref:`stdWrap`) Reverse
-         order of elements in collect mode. If set, elements of the current
-         page will be at the bottom.
-
-      **Note:** Up to Version 9 of TYPO3 the sliding stopped when reaching a folder. Beginning with TYPO3 10 this is not longer the case.
-      See :php:`$cObj->checkPid_badDoktypeList`.
-
-.. ###### END~OF~TABLE ######
-
-
-.. index:: CONTENT; wrap
-.. _cobj-content-wrap:
-
-wrap
-====
-
-.. ### BEGIN~OF~TABLE ###
-
-.. container:: table-row
-
-   Property
-      wrap
-
-   Data type
-      :ref:`wrap <data-type-wrap>` /:ref:`stdWrap`
-
-   Description
-      Wrap the whole content.
-
-.. ###### END~OF~TABLE ######
-
-
-.. index:: CONTENT; stdWrap
-.. _cobj-content-stdWrap:
-
-stdWrap
-=======
-
-.. ### BEGIN~OF~TABLE ###
-
-.. container:: table-row
-
-   Property
-      stdWrap
-
-   Data type
-      :ref:`stdwrap`
-
-   Description
-      Apply `stdWrap` functionality.
-
-.. ###### END~OF~TABLE ######
-
-
-.. index:: CONTENT; cache
-.. _cobj-content-cache:
-
-cache
-=====
-
-.. ### BEGIN~OF~TABLE ###
-
-.. include:: ../../DataTypes/Properties/Cache.rst.txt
-
-.. ###### END~OF~TABLE ######
-
-
 .. _cobj-content-examples:
 
-CONTENT object example 1
-========================
+Display all tt_content records from this page
+----------------------------------------------
 
 Here is an example of the CONTENT object:
 
@@ -335,15 +322,16 @@ Here is an example of the CONTENT object:
    1.select {
       pidInList = this
       orderBy = sorting
+      where = {#colPos}=0
    }
 
-Since in the above example .renderObj is not set explicitly, TYPO3
+Since in the above example `.renderObj` is not set explicitly, TYPO3
 will automatically set :typoscript:`1.renderObj < tt_content`, so that `renderObj`
 will reference the TypoScript configuration of `tt_content`. The
 according TypoScript configuration will be copied to `renderObj`.
 
 
-CONTENT object example 2
+Apply special rendering
 ========================
 
 Here is an example of record-rendering objects:

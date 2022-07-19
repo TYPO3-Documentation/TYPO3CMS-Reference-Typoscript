@@ -26,8 +26,55 @@ be used as it has a special meaning: If the value of the "key"
 property is *not* found in the array of cObjects, then the cObject
 from the "default" property will be used.
 
+.. contents::
+   :local:
 
 .. ### BEGIN~OF~TABLE ###
+
+Properties
+==========
+
+(array of cObjects)
+-------------------
+
+.. container:: table-row
+
+   Property
+         *(array of cObjects)*
+
+   Data type
+         :ref:`cObject <data-type-cobject>`
+
+   Description
+         Array of cObjects. Use this to define cObjects for the different
+         values of "key". If "key" has a certain value, the according
+         cObject will be rendered. The cObjects can have any name, but not
+         the names of the other properties of the cObject CASE.
+
+cache
+-----
+
+.. include:: /DataTypes/Properties/Cache.rst.txt
+
+default
+-------
+
+.. container:: table-row
+
+   Property
+         default
+
+   Data type
+         :ref:`cObject <data-type-cobject>`
+
+   Description
+         Use this to define the rendering for *those* values of "key" that
+         do *not* match any of the values of the "array of cObjects". If no
+         default cObject is defined, an empty string will be returned for
+         the default case.
+
+if
+--
 
 .. container:: table-row
 
@@ -40,18 +87,8 @@ from the "default" property will be used.
    Description
          If "if" returns false, nothing is returned.
 
-
-.. container:: table-row
-
-   Property
-         setCurrent
-
-   Data type
-         string /:ref:`stdWrap <stdwrap>`
-
-   Description
-         Sets the "current"-value.
-
+key
+---
 
 .. container:: table-row
 
@@ -77,36 +114,22 @@ from the "default" property will be used.
    Default
          default
 
+setCurrent
+----------
 
 .. container:: table-row
 
    Property
-         *(array of cObjects)*
+         setCurrent
 
    Data type
-         :ref:`cObject <data-type-cobject>`
+         string /:ref:`stdWrap <stdwrap>`
 
    Description
-         Array of cObjects. Use this to define cObjects for the different
-         values of "key". If "key" has a certain value, the according
-         cObject will be rendered. The cObjects can have any name, but not
-         the names of the other properties of the cObject CASE.
+         Sets the "current"-value.
 
-
-.. container:: table-row
-
-   Property
-         default
-
-   Data type
-         :ref:`cObject <data-type-cobject>`
-
-   Description
-         Use this to define the rendering for *those* values of "key" that
-         do *not* match any of the values of the "array of cObjects". If no
-         default cObject is defined, an empty string will be returned for
-         the default case.
-
+stdWrap
+-------
 
 .. container:: table-row
 
@@ -119,8 +142,6 @@ from the "default" property will be used.
    Description
          stdWrap around any object that was rendered no matter what the "key"
          value is.
-
-.. include:: ../../DataTypes/Properties/Cache.rst.txt
 
 .. ###### END~OF~TABLE ######
 
