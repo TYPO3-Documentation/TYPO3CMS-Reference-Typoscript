@@ -20,7 +20,6 @@ which means that they have at least 1 or 2 reserved properties.
 Furthermore this table outlines some other default properties.
 Generally system properties are prefixed with an underscore:
 
-
 .. contents::
    :local:
 
