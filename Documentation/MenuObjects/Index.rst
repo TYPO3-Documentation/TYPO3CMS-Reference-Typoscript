@@ -27,9 +27,7 @@ The following menu object types are used inside an
 .. toctree::
    :titlesonly:
 
-   CommonProperties/Index
-   CommonItemStates/Index
-   Sectionindex/Index
    Tmenu/Index
    Tmenuitem/Index
+   Sectionindex/Index
 
