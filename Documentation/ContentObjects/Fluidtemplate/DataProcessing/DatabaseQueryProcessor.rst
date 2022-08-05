@@ -53,6 +53,11 @@ Options:
    "select", including :typoscript:`pidInList`, :typoscript:`orderBy`,
    :typoscript:`where` etc. See the reference of :ref:`select`.
 
+.. warning:: When using the DatabaseQueryProcessor, you may encounter
+   issues with language and/or versioning overlays, that currently
+   can not be resolved. See `here <https://forge.typo3.org/issues/85284#note-5>`__
+   for more information.
+
 
 Example: Display haiku records
 ==============================
