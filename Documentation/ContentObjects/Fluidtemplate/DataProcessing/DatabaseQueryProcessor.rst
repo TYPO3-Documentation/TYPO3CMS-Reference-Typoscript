@@ -53,7 +53,7 @@ Options:
    "select", including :typoscript:`pidInList`, :typoscript:`orderBy`,
    :typoscript:`where` etc. See the reference of :ref:`select`.
 
-.. warning:: Be careful when the DatabaseQueryProcessor, as you may run
+.. warning:: Be careful when using the DatabaseQueryProcessor, as you may run
    into issues with language and/or versioning overlays, that currently
    can not be resolved. See `here <https://forge.typo3.org/issues/85284#note-5>`__
    for more information.
