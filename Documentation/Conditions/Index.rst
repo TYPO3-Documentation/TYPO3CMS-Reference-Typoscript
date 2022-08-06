@@ -152,7 +152,7 @@ Constant
 
    If constant is a string put constant in quotes::
 
-      ["{$foo.bar}" == "4711"]
+      [{$foo.bar} == "4711"]
 
 .. _condition-tree:
 
