@@ -390,20 +390,20 @@ transferred. This is how it is mapped:
 
 Basically this shows that
 
-\- the field "header" and "subheader" from tt\_content are mapped to
-"title" and "subtitle" in the pages-record. Thus you shouldn't need to
-change your standard menu objects to fit this thing...
+-  the field "header" and "subheader" from tt\_content are mapped to
+   "title" and "subtitle" in the pages-record. Thus you shouldn't need to
+   change your standard menu objects to fit this thing.
 
-\- the fields "starttime", "endtime", "fe\_group", "media" from
-tt\_content are mapped to the same fields in a pages-record.
+-  the fields "starttime", "endtime", "fe\_group", "media" from
+   tt\_content are mapped to the same fields in a pages-record.
 
-\- the fields "header\_layout", "bodytext" and "image" are mapped to
-non-existing fields in the page-record
+-  the fields "header\_layout", "bodytext" and "image" are mapped to
+   non-existing fields in the page-record
 
-\- a new field, "sectionIndex\_uid" is introduced in the page record
-which is detected by the `\TYPO3\CMS\Frontend\Typolink\PageLinkBuilder`. If this field
-is present in a page record, the `PageLinkBuilder` will prepend a
-hash-mark and the number of the field.
+-  a new field, "sectionIndex\_uid" is introduced in the page record
+   which is detected by the `\TYPO3\CMS\Frontend\Typolink\PageLinkBuilder`. If this field
+   is present in a page record, the `PageLinkBuilder` will prepend a
+   hash-mark and the number of the field.
 
 .. note::
    You cannot create submenus to sectionIndex menus. These elements are not
