@@ -79,7 +79,7 @@ params
          params
 
    Data type
-         string /:ref:`stdWrap <stdwrap>`
+         string / :ref:`stdWrap <stdwrap>`
 
    Description
          HTML <IMG> parameters
@@ -112,7 +112,7 @@ altText / titleText
          titleText
 
    Data type
-         string /:ref:`stdWrap <stdwrap>`
+         string / :ref:`stdWrap <stdwrap>`
 
    Description
          If no alt text is specified, an empty alt text will be used.
@@ -126,7 +126,7 @@ emptyTitleHandling
          emptyTitleHandling
 
    Data type
-         string /:ref:`stdWrap <stdwrap>`
+         string / :ref:`stdWrap <stdwrap>`
 
    Description
          Value can be "keepEmpty" to preserve an empty title attribute, or
@@ -144,7 +144,7 @@ longdescURL
          longdescURL
 
    Data type
-         :ref:`string <data-type-string>`/:ref:`stdWrap <stdwrap>`
+         :ref:`string <data-type-string>` / :ref:`stdWrap <stdwrap>`
 
    Description
          "longdesc" attribute (URL pointing to document with extensive details
@@ -163,7 +163,7 @@ layoutKey
          layoutKey
 
    Data type
-         :ref:`string <data-type-string>`/:ref:`stdWrap <stdwrap>`
+         :ref:`string <data-type-string>` / :ref:`stdWrap <stdwrap>`
 
    Description
          Defines the render layout for the IMAGE. The render layout is the HTML Code for the IMAGE itself.
@@ -633,7 +633,7 @@ linkWrap
          linkWrap
 
    Data type
-         :ref:`linkWrap <data-type-linkwrap>` /:ref:`stdWrap <stdwrap>`
+         :ref:`linkWrap <data-type-linkwrap>` / :ref:`stdWrap <stdwrap>`
 
    Description
          (before ".wrap")
@@ -663,7 +663,7 @@ wrap
          wrap
 
    Data type
-         :ref:`wrap <data-type-wrap>` /:ref:`stdWrap <stdwrap>`
+         :ref:`wrap <data-type-wrap>` / :ref:`stdWrap <stdwrap>`
 
    Description
          Wrap for the image tag.
