@@ -27,5 +27,4 @@ The following menu object types are used inside an
 
    Tmenu/Index
    Tmenuitem/Index
-   Sectionindex/Index
 
