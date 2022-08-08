@@ -260,8 +260,8 @@ layout.layoutKey
             :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
             picture {
-                element = <picture>###SOURCECOLLECTION###<img src="###SRC###" ###PARAMS### ###ALTPARAMS### ###SELFCLOSINGTAGSLASH###></picture>
-                source = <source srcset="###SRC###" media="###MEDIAQUERY###" ###SELFCLOSINGTAGSLASH###>
+              element = <picture>###SOURCECOLLECTION###<img src="###SRC###" ###PARAMS### ###ALTPARAMS### ###SELFCLOSINGTAGSLASH###></picture>
+              source = <source srcset="###SRC###" media="###MEDIAQUERY###" ###SELFCLOSINGTAGSLASH###>
             }
 
 
@@ -384,23 +384,23 @@ sourceCollection
             :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
             sourceCollection {
-                small {
-                    width = 200
+              small {
+                width = 200
 
-                    srcsetCandidate = 600w
-                    mediaQuery = (max-device-width: 600px)
-                    dataKey = small
-                }
-                smallRetina {
-                    if.directReturn = 1
+                srcsetCandidate = 600w
+                mediaQuery = (max-device-width: 600px)
+                dataKey = small
+              }
+              smallRetina {
+                if.directReturn = 1
 
-                    width = 200
-                    pixelDensity = 2
+                width = 200
+                pixelDensity = 2
 
-                    srcsetCandidate = 600w 2x
-                    mediaQuery = (max-device-width: 600px) AND (min-resolution: 192dpi)
-                    dataKey = smallRetina
-                }
+                srcsetCandidate = 600w 2x
+                mediaQuery = (max-device-width: 600px) AND (min-resolution: 192dpi)
+                dataKey = smallRetina
+              }
             }
 
 
@@ -703,9 +703,9 @@ Standard rendering
    page.10 = IMAGE
    # toplogo.png has the dimensions 300 x 150 pixels.
    page.10 {
-      file = fileadmin/toplogo.png
-      params = style="margin: 0px 20px;"
-      wrap = |<br>
+     file = fileadmin/toplogo.png
+     params = style="margin: 0px 20px;"
+     wrap = |<br>
    }
 
 This returns:
@@ -738,8 +738,8 @@ Responsive/adaptive rendering
      layout {
 
        default {
-        element = <img src="###SRC###" width="###WIDTH###" height="###HEIGHT###" ###PARAMS### ###ALTPARAMS### ###BORDER### ###SELFCLOSINGTAGSLASH###>
-        source =
+         element = <img src="###SRC###" width="###WIDTH###" height="###HEIGHT###" ###PARAMS### ###ALTPARAMS### ###BORDER### ###SELFCLOSINGTAGSLASH###>
+         source =
        }
 
        srcset {
@@ -786,25 +786,25 @@ Responsive/adaptive rendering
    60.layoutKey = srcset
 
 
-This returns as an example all per default possible HTML-Output:
+This returns as an example all per default possible HTML output:
 
 .. code-block:: html
 
-   <img src="fileadmin/_processed_/imagefilenamename_595cc36c48.png"
-     width="600" height="423"    alt=""  border="0" />
-   <img src="fileadmin/_processed_/imagefilenamename_595cc36c48.png"
-     data-small="fileadmin/_processed_/imagefilenamename_595cc36c48.png"
-     data-smallRetina="fileadmin/_processed_/imagefilenamename_42fb68d642.png"
-     alt="" />
+   <img src="/fileadmin/_processed_/imagefilenamename_595cc36c48.png"
+        width="600" height="423" alt="" border="0">
+   <img src="/fileadmin/_processed_/imagefilenamename_595cc36c48.png"
+        data-small="/fileadmin/_processed_/imagefilenamename_595cc36c48.png"
+        data-smallRetina="/fileadmin/_processed_/imagefilenamename_42fb68d642.png"
+        alt="">
    <picture>
-     <source srcset="fileadmin/_processed_/imagefilenamename_595cc36c48.png"
-       media="(max-device-width: 600px)" />
-     <source srcset="fileadmin/_processed_/imagefilenamename_42fb68d642.png"
-       media="(max-device-width: 600px) AND (min-resolution: 192dpi)" />
-     <img src="fileadmin/_processed_/imagefilenamename_595cc36c48.png"
-       alt="" />
+     <source srcset="/fileadmin/_processed_/imagefilenamename_595cc36c48.png"
+             media="(max-device-width: 600px)">
+     <source srcset="/fileadmin/_processed_/imagefilenamename_42fb68d642.png"
+             media="(max-device-width: 600px) AND (min-resolution: 192dpi)">
+     <img src="/fileadmin/_processed_/imagefilenamename_595cc36c48.png"
+          alt="">
    </picture>
-   <img src="fileadmin/_processed_/imagefilenamename_595cc36c48.png"
-     srcset="fileadmin/_processed_/imagefilenamename_595cc36c48.png 600w,
-       fileadmin/_processed_/imagefilenamename_42fb68d642.png 600w 2x"
-     alt="" />
+   <img src="/fileadmin/_processed_/imagefilenamename_595cc36c48.png"
+        srcset="/fileadmin/_processed_/imagefilenamename_595cc36c48.png 600w,
+                /fileadmin/_processed_/imagefilenamename_42fb68d642.png 600w 2x"
+        alt="">
