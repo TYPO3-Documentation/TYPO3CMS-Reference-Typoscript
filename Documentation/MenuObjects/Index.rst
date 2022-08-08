@@ -22,14 +22,9 @@ build menus in TypoScript.
 The following menu object types are used inside an
 :ref:`HMENU cObject <cobj-hmenu>`.
 
-
-
 .. toctree::
    :titlesonly:
 
-   CommonProperties/Index
-   CommonItemStates/Index
-   Sectionindex/Index
    Tmenu/Index
    Tmenuitem/Index
 
