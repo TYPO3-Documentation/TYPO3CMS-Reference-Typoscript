@@ -37,7 +37,16 @@ otherwise adjusted) image, the cObject
 for.
 
 
+.. contents::
+   :local:
+
+Properties
+==========
+
 .. ### BEGIN~OF~TABLE ###
+
+if
+--
 
 .. container:: table-row
 
@@ -50,6 +59,8 @@ for.
    Description
          If "if" returns false, the image is not shown!
 
+file
+----
 
 .. container:: table-row
 
@@ -59,6 +70,8 @@ for.
    Data type
          :ref:`->imgResource <imgresource>`
 
+params
+------
 
 .. container:: table-row
 
@@ -71,6 +84,8 @@ for.
    Description
          HTML <IMG> parameters
 
+border
+------
 
 .. container:: table-row
 
@@ -86,6 +101,8 @@ for.
    Default
          0
 
+altText / titleText
+--------------------
 
 .. container:: table-row
 
@@ -100,6 +117,8 @@ for.
    Description
          If no alt text is specified, an empty alt text will be used.
 
+emptyTitleHandling
+------------------
 
 .. container:: table-row
 
@@ -116,6 +135,8 @@ for.
    Default
          useAlt
 
+longdescURL
+-----------
 
 .. container:: table-row
 
@@ -134,7 +155,7 @@ for.
 .. _cobj-image-layoutkey:
 
 layoutKey
-=========
+---------
 
 .. container:: table-row
 
@@ -199,7 +220,7 @@ layoutKey
 .. _cobj-image-layout:
 
 layout
-======
+------
 
 .. container:: table-row
 
@@ -217,7 +238,7 @@ layout
 .. _cobj-image-layout-layoutkey:
 
 layout.layoutKey
-----------------
+~~~~~~~~~~~~~~~~
 
 .. container:: table-row
 
@@ -248,7 +269,7 @@ layout.layoutKey
 .. _cobj-image-layout-layoutkey-element:
 
 layout.layoutKey.element
-------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. container:: table-row
 
@@ -294,7 +315,7 @@ layout.layoutKey.element
 .. _cobj-image-layout-layoutkey-source:
 
 layout.layoutKey.source
------------------------
+~~~~~~~~~~~~~~~~~~~~~~~
 
 .. container:: table-row
 
@@ -333,7 +354,7 @@ layout.layoutKey.source
 .. _cobj-image-sourcecollection:
 
 sourceCollection
-================
+----------------
 
 .. container:: table-row
 
@@ -387,7 +408,7 @@ sourceCollection
 .. _cobj-image-datakey:
 
 sourceCollection.dataKey
-------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. container:: table-row
 
@@ -406,7 +427,7 @@ sourceCollection.dataKey
 .. _cobj-image-datakey-if:
 
 sourceCollection.dataKey.if
----------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. container:: table-row
 
@@ -425,7 +446,7 @@ sourceCollection.dataKey.if
 .. _cobj-image-datakey-pixeldensity:
 
 sourceCollection.dataKey.pixelDensity
--------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. container:: table-row
 
@@ -450,7 +471,7 @@ sourceCollection.dataKey.pixelDensity
 .. _cobj-image-datakey-width:
 
 sourceCollection.dataKey.width
-------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. container:: table-row
 
@@ -470,7 +491,7 @@ sourceCollection.dataKey.width
 .. _cobj-image-datakey-height:
 
 sourceCollection.dataKey.height
--------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. container:: table-row
 
@@ -490,7 +511,7 @@ sourceCollection.dataKey.height
 .. _cobj-image-datakey-maxW:
 
 sourceCollection.dataKey.maxW
------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. container:: table-row
 
@@ -510,7 +531,7 @@ sourceCollection.dataKey.maxW
 .. _cobj-image-datakey-maxH:
 
 sourceCollection.dataKey.maxH
------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. container:: table-row
 
@@ -530,7 +551,7 @@ sourceCollection.dataKey.maxH
 .. _cobj-image-datakey-minW:
 
 sourceCollection.dataKey.minW
------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. container:: table-row
 
@@ -550,7 +571,7 @@ sourceCollection.dataKey.minW
 .. _cobj-image-datakey-minH:
 
 sourceCollection.dataKey.minH
------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. container:: table-row
 
@@ -570,7 +591,7 @@ sourceCollection.dataKey.minH
 .. _cobj-image-datakey-quality:
 
 sourceCollection.dataKey.quality
---------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. container:: table-row
 
@@ -588,7 +609,7 @@ sourceCollection.dataKey.quality
 .. _cobj-image-datakey-others:
 
 sourceCollection.dataKey.*
----------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. container:: table-row
 
@@ -603,6 +624,8 @@ sourceCollection.dataKey.*
          setting the image size, but will be available as additional markers for
          the image template. See example mediaquery.
 
+linkWrap
+--------
 
 .. container:: table-row
 
@@ -615,6 +638,8 @@ sourceCollection.dataKey.*
    Description
          (before ".wrap")
 
+imageLinkWrap
+-------------
 
 .. container:: table-row
 
@@ -629,6 +654,8 @@ sourceCollection.dataKey.*
          **not** :ref:`GIFBUILDER <gifbuilder>` (as it works with the original
          image file).
 
+wrap
+----
 
 .. container:: table-row
 
@@ -641,6 +668,8 @@ sourceCollection.dataKey.*
    Description
          Wrap for the image tag.
 
+stdWrap
+-------
 
 .. container:: table-row
 
@@ -671,11 +700,13 @@ Standard rendering
 .. code-block:: typoscript
    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-       10 = IMAGE
-       # toplogo.gif has the dimensions 300 x 150 pixels.
-       10.file = fileadmin/toplogo.gif
-       10.params = style="margin: 0px 20px;"
-       10.wrap = |<br>
+   page.10 = IMAGE
+   # toplogo.gif has the dimensions 300 x 150 pixels.
+   page.10 {
+      file = fileadmin/toplogo.gif
+      params = style="margin: 0px 20px;"
+      wrap = |<br>
+   }
 
 This returns:
 
@@ -777,4 +808,3 @@ This returns as an example all per default possible HTML-Output:
      srcset="fileadmin/_processed_/imagefilenamename_595cc36c48.png 600w,
        fileadmin/_processed_/imagefilenamename_42fb68d642.png 600w 2x"
      alt="" />
-
