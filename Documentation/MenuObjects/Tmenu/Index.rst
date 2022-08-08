@@ -9,7 +9,7 @@ TMENU
 
 .. note::
 
-   :typoscript:`TMENU` is a menu object type. In TYPO3 10 the remaining other menu types
+   :typoscript:`TMENU` is a menu object type. In TYPO3 v10 the remaining other menu types
    got removed so :typoscript:`TMENU` is the only menu type left.
 
 
