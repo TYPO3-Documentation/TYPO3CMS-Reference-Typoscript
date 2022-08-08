@@ -701,9 +701,9 @@ Standard rendering
    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
    page.10 = IMAGE
-   # toplogo.gif has the dimensions 300 x 150 pixels.
+   # toplogo.png has the dimensions 300 x 150 pixels.
    page.10 {
-      file = fileadmin/toplogo.gif
+      file = fileadmin/toplogo.png
       params = style="margin: 0px 20px;"
       wrap = |<br>
    }
@@ -712,12 +712,12 @@ This returns:
 
 .. code-block:: html
 
-   <img src="fileadmin/toplogo.gif"
+   <img src="/fileadmin/toplogo.png"
         width="300"
         height="150"
-        border="0"
         style="margin: 0px 20px;"
-        alt=""><br>
+        alt=""
+        border="0"><br>
 
 
 .. index:: IMAGE; Responsive rendering example
