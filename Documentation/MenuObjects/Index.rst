@@ -22,8 +22,6 @@ build menus in TypoScript.
 The following menu object types are used inside an
 :ref:`HMENU cObject <cobj-hmenu>`.
 
-
-
 .. toctree::
    :titlesonly:
 
