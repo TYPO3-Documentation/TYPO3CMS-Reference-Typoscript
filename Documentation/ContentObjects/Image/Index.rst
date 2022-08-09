@@ -28,7 +28,7 @@ processedFile                  The FAL object referencing the processed file
 =============================  =============================================
 
 **Note:** Gifbuilder also has an :ref:`IMAGE object <gifbuilder-image>` -
-it is no the same as the cObject described here; both are completely
+it is not the same as the cObject described here; both are completely
 different objects.
 
 If you only need the file path to the image; regardless of whether it's been resized, the cObject
