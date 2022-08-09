@@ -9,10 +9,10 @@ IMAGE
 =====
 
 Objects of type IMAGE return an image tag with the image file defined in the property
-"file" and processed according to the properties set.
+"file" and is processed using the properties that are set on the object.
 
 The array :php:`$GLOBALS['TSFE']->lastImageInfo` is set with the info-array
-of the returning image (if any) and contains width, height and so on:
+of the returning image (if any) and contains width, height and other properties:
 
 =============================  =============================================
 Name of the getText property   Content
@@ -28,14 +28,11 @@ processedFile                  The FAL object referencing the processed file
 =============================  =============================================
 
 **Note:** Gifbuilder also has an :ref:`IMAGE object <gifbuilder-image>` -
-do not mix that one up with the cObject described here; both are
+it is no the same as the cObject described here; both are completely
 different objects.
 
-If you only need the file path to the (possibly resized and also
-otherwise adjusted) image, the cObject
-:ref:`IMG_RESOURCE <cobj-img-resource>` might be what you are looking
-for.
-
+If you only need the file path to the image; regardless of whether it's been resized, the cObject
+:ref:`IMG_RESOURCE <cobj-img-resource>` will return the file path.
 
 .. contents::
    :local:
@@ -167,13 +164,13 @@ layoutKey
 
    Description
          Defines the render layout for the IMAGE. The render layout is the HTML Code for the IMAGE itself.
-         Possible "out of the box" values are :typoscript:`default`, :typoscript:`srcset`, :typoscript:`picture`, :typoscript:`data`.
-         Each possibility represents a different solution to render the HTML Code of the IMAGE. The default code
-         renders the img-tag as plain old html tag with the different attributes.
+         Default values include :typoscript:`default`, :typoscript:`srcset`, :typoscript:`picture`, :typoscript:`data`.
+         Each option represents a different solution to render the HTML Code of the IMAGE. The default code
+         renders the img-tag as a plain html tag with the different attributes.
 
          When implementing a responsive layout you need different image sizes for the different displays and resolutions of your layout. Depending on
          the HTML framework, the capabilities of desired browsers and the used javascript library for progressive enhancement you can choose either one of the predefined layouts
-         or can define a new layout of your own by adding an additional layout key.
+         or you can define a new layout of your own by adding an additional layout key.
 
          If you don't have a responsive HTML layout you should use the default layout.
 
@@ -368,7 +365,7 @@ sourceCollection
          For responsive images you need different image resolutions for each
          output device and output mode (portrait vs. landscape).
          :typoscript:`sourceCollection` defines the different resolutions for image
-         rendering, normally you would define al least one
+         rendering, normally you would define at least one
          :typoscript:`sourceCollection` per layout breakpoint. The amount of
          sourceCollections, the name and the specification for the
          sourceCollections will be defined by the HTML/CSS/JS code you are
@@ -457,11 +454,11 @@ sourceCollection.dataKey.pixelDensity
          integer / :ref:`stdWrap <stdWrap>`
 
    Description
-         Defines the density of the rendered Image, e.g. retina display would
-         have a density of 2, the density is a multiplicator for the image
+         Defines the density of the rendered Image, e.g. a retina display would
+         have a density of 2, the density is a multiplier for the image
          dimensions: If the pixelDensity is set to 2 and the width is set to
          200 the generated image file will have a width of 400 but will be
-         treated inside the html code as 200 pixel.
+         treated inside the html code as 200 pixels.
 
    Default
          1
@@ -622,7 +619,7 @@ sourceCollection.dataKey.*
    Description
          You can define additional key value pairs which won't be used for
          setting the image size, but will be available as additional markers for
-         the image template. See example mediaquery.
+         the image template. See the example mediaquery.
 
 linkWrap
 --------
