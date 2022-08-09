@@ -9,10 +9,10 @@ IMAGE
 =====
 
 Objects of type IMAGE return an image tag with the image file defined in the property
-"file" and processed according to the properties set.
+"file" and is processed using the properties that are set on the object.
 
 The array :php:`$GLOBALS['TSFE']->lastImageInfo` is set with the info-array
-of the returning image (if any) and contains width, height and so on:
+of the returning image (if any) and contains width, height and other properties:
 
 =============================  =============================================
 Name of the getText property   Content
@@ -28,16 +28,22 @@ processedFile                  The FAL object referencing the processed file
 =============================  =============================================
 
 **Note:** Gifbuilder also has an :ref:`IMAGE object <gifbuilder-image>` -
-do not mix that one up with the cObject described here; both are
+it is not the same as the cObject described here; both are completely
 different objects.
 
-If you only need the file path to the (possibly resized and also
-otherwise adjusted) image, the cObject
-:ref:`IMG_RESOURCE <cobj-img-resource>` might be what you are looking
-for.
+If you only need the file path to the image; regardless of whether it's been resized, the cObject
+:ref:`IMG_RESOURCE <cobj-img-resource>` will return the file path.
 
+.. contents::
+   :local:
+
+Properties
+==========
 
 .. ### BEGIN~OF~TABLE ###
+
+if
+--
 
 .. container:: table-row
 
@@ -50,6 +56,8 @@ for.
    Description
          If "if" returns false, the image is not shown!
 
+file
+----
 
 .. container:: table-row
 
@@ -59,6 +67,8 @@ for.
    Data type
          :ref:`->imgResource <imgresource>`
 
+params
+------
 
 .. container:: table-row
 
@@ -66,11 +76,13 @@ for.
          params
 
    Data type
-         string /:ref:`stdWrap <stdwrap>`
+         string / :ref:`stdWrap <stdwrap>`
 
    Description
          HTML <IMG> parameters
 
+border
+------
 
 .. container:: table-row
 
@@ -86,6 +98,8 @@ for.
    Default
          0
 
+altText / titleText
+--------------------
 
 .. container:: table-row
 
@@ -95,11 +109,13 @@ for.
          titleText
 
    Data type
-         string /:ref:`stdWrap <stdwrap>`
+         string / :ref:`stdWrap <stdwrap>`
 
    Description
          If no alt text is specified, an empty alt text will be used.
 
+emptyTitleHandling
+------------------
 
 .. container:: table-row
 
@@ -107,7 +123,7 @@ for.
          emptyTitleHandling
 
    Data type
-         string /:ref:`stdWrap <stdwrap>`
+         string / :ref:`stdWrap <stdwrap>`
 
    Description
          Value can be "keepEmpty" to preserve an empty title attribute, or
@@ -116,6 +132,8 @@ for.
    Default
          useAlt
 
+longdescURL
+-----------
 
 .. container:: table-row
 
@@ -123,7 +141,7 @@ for.
          longdescURL
 
    Data type
-         :ref:`string <data-type-string>`/:ref:`stdWrap <stdwrap>`
+         :ref:`string <data-type-string>` / :ref:`stdWrap <stdwrap>`
 
    Description
          "longdesc" attribute (URL pointing to document with extensive details
@@ -134,7 +152,7 @@ for.
 .. _cobj-image-layoutkey:
 
 layoutKey
-=========
+---------
 
 .. container:: table-row
 
@@ -142,17 +160,17 @@ layoutKey
          layoutKey
 
    Data type
-         :ref:`string <data-type-string>`/:ref:`stdWrap <stdwrap>`
+         :ref:`string <data-type-string>` / :ref:`stdWrap <stdwrap>`
 
    Description
          Defines the render layout for the IMAGE. The render layout is the HTML Code for the IMAGE itself.
-         Possible "out of the box" values are :typoscript:`default`, :typoscript:`srcset`, :typoscript:`picture`, :typoscript:`data`.
-         Each possibility represents a different solution to render the HTML Code of the IMAGE. The default code
-         renders the img-tag as plain old html tag with the different attributes.
+         Default values include :typoscript:`default`, :typoscript:`srcset`, :typoscript:`picture`, :typoscript:`data`.
+         Each option represents a different solution to render the HTML Code of the IMAGE. The default code
+         renders the img-tag as a plain html tag with the different attributes.
 
          When implementing a responsive layout you need different image sizes for the different displays and resolutions of your layout. Depending on
          the HTML framework, the capabilities of desired browsers and the used javascript library for progressive enhancement you can choose either one of the predefined layouts
-         or can define a new layout of your own by adding an additional layout key.
+         or you can define a new layout of your own by adding an additional layout key.
 
          If you don't have a responsive HTML layout you should use the default layout.
 
@@ -199,7 +217,7 @@ layoutKey
 .. _cobj-image-layout:
 
 layout
-======
+------
 
 .. container:: table-row
 
@@ -217,7 +235,7 @@ layout
 .. _cobj-image-layout-layoutkey:
 
 layout.layoutKey
-----------------
+~~~~~~~~~~~~~~~~
 
 .. container:: table-row
 
@@ -239,8 +257,8 @@ layout.layoutKey
             :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
             picture {
-                element = <picture>###SOURCECOLLECTION###<img src="###SRC###" ###PARAMS### ###ALTPARAMS### ###SELFCLOSINGTAGSLASH###></picture>
-                source = <source srcset="###SRC###" media="###MEDIAQUERY###" ###SELFCLOSINGTAGSLASH###>
+              element = <picture>###SOURCECOLLECTION###<img src="###SRC###" ###PARAMS### ###ALTPARAMS### ###SELFCLOSINGTAGSLASH###></picture>
+              source = <source srcset="###SRC###" media="###MEDIAQUERY###" ###SELFCLOSINGTAGSLASH###>
             }
 
 
@@ -248,7 +266,7 @@ layout.layoutKey
 .. _cobj-image-layout-layoutkey-element:
 
 layout.layoutKey.element
-------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. container:: table-row
 
@@ -294,7 +312,7 @@ layout.layoutKey.element
 .. _cobj-image-layout-layoutkey-source:
 
 layout.layoutKey.source
------------------------
+~~~~~~~~~~~~~~~~~~~~~~~
 
 .. container:: table-row
 
@@ -333,7 +351,7 @@ layout.layoutKey.source
 .. _cobj-image-sourcecollection:
 
 sourceCollection
-================
+----------------
 
 .. container:: table-row
 
@@ -347,7 +365,7 @@ sourceCollection
          For responsive images you need different image resolutions for each
          output device and output mode (portrait vs. landscape).
          :typoscript:`sourceCollection` defines the different resolutions for image
-         rendering, normally you would define al least one
+         rendering, normally you would define at least one
          :typoscript:`sourceCollection` per layout breakpoint. The amount of
          sourceCollections, the name and the specification for the
          sourceCollections will be defined by the HTML/CSS/JS code you are
@@ -363,23 +381,23 @@ sourceCollection
             :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
             sourceCollection {
-                small {
-                    width = 200
+              small {
+                width = 200
 
-                    srcsetCandidate = 600w
-                    mediaQuery = (max-device-width: 600px)
-                    dataKey = small
-                }
-                smallRetina {
-                    if.directReturn = 1
+                srcsetCandidate = 600w
+                mediaQuery = (max-device-width: 600px)
+                dataKey = small
+              }
+              smallRetina {
+                if.directReturn = 1
 
-                    width = 200
-                    pixelDensity = 2
+                width = 200
+                pixelDensity = 2
 
-                    srcsetCandidate = 600w 2x
-                    mediaQuery = (max-device-width: 600px) AND (min-resolution: 192dpi)
-                    dataKey = smallRetina
-                }
+                srcsetCandidate = 600w 2x
+                mediaQuery = (max-device-width: 600px) AND (min-resolution: 192dpi)
+                dataKey = smallRetina
+              }
             }
 
 
@@ -387,7 +405,7 @@ sourceCollection
 .. _cobj-image-datakey:
 
 sourceCollection.dataKey
-------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. container:: table-row
 
@@ -406,7 +424,7 @@ sourceCollection.dataKey
 .. _cobj-image-datakey-if:
 
 sourceCollection.dataKey.if
----------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. container:: table-row
 
@@ -425,7 +443,7 @@ sourceCollection.dataKey.if
 .. _cobj-image-datakey-pixeldensity:
 
 sourceCollection.dataKey.pixelDensity
--------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. container:: table-row
 
@@ -436,11 +454,11 @@ sourceCollection.dataKey.pixelDensity
          integer / :ref:`stdWrap <stdWrap>`
 
    Description
-         Defines the density of the rendered Image, e.g. retina display would
-         have a density of 2, the density is a multiplicator for the image
+         Defines the density of the rendered Image, e.g. a retina display would
+         have a density of 2, the density is a multiplier for the image
          dimensions: If the pixelDensity is set to 2 and the width is set to
          200 the generated image file will have a width of 400 but will be
-         treated inside the html code as 200 pixel.
+         treated inside the html code as 200 pixels.
 
    Default
          1
@@ -450,7 +468,7 @@ sourceCollection.dataKey.pixelDensity
 .. _cobj-image-datakey-width:
 
 sourceCollection.dataKey.width
-------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. container:: table-row
 
@@ -470,7 +488,7 @@ sourceCollection.dataKey.width
 .. _cobj-image-datakey-height:
 
 sourceCollection.dataKey.height
--------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. container:: table-row
 
@@ -490,7 +508,7 @@ sourceCollection.dataKey.height
 .. _cobj-image-datakey-maxW:
 
 sourceCollection.dataKey.maxW
------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. container:: table-row
 
@@ -510,7 +528,7 @@ sourceCollection.dataKey.maxW
 .. _cobj-image-datakey-maxH:
 
 sourceCollection.dataKey.maxH
------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. container:: table-row
 
@@ -530,7 +548,7 @@ sourceCollection.dataKey.maxH
 .. _cobj-image-datakey-minW:
 
 sourceCollection.dataKey.minW
------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. container:: table-row
 
@@ -550,7 +568,7 @@ sourceCollection.dataKey.minW
 .. _cobj-image-datakey-minH:
 
 sourceCollection.dataKey.minH
------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. container:: table-row
 
@@ -570,7 +588,7 @@ sourceCollection.dataKey.minH
 .. _cobj-image-datakey-quality:
 
 sourceCollection.dataKey.quality
---------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. container:: table-row
 
@@ -588,7 +606,7 @@ sourceCollection.dataKey.quality
 .. _cobj-image-datakey-others:
 
 sourceCollection.dataKey.*
----------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. container:: table-row
 
@@ -601,8 +619,10 @@ sourceCollection.dataKey.*
    Description
          You can define additional key value pairs which won't be used for
          setting the image size, but will be available as additional markers for
-         the image template. See example mediaquery.
+         the image template. See the example mediaquery.
 
+linkWrap
+--------
 
 .. container:: table-row
 
@@ -610,11 +630,13 @@ sourceCollection.dataKey.*
          linkWrap
 
    Data type
-         :ref:`linkWrap <data-type-linkwrap>` /:ref:`stdWrap <stdwrap>`
+         :ref:`linkWrap <data-type-linkwrap>` / :ref:`stdWrap <stdwrap>`
 
    Description
          (before ".wrap")
 
+imageLinkWrap
+-------------
 
 .. container:: table-row
 
@@ -629,6 +651,8 @@ sourceCollection.dataKey.*
          **not** :ref:`GIFBUILDER <gifbuilder>` (as it works with the original
          image file).
 
+wrap
+----
 
 .. container:: table-row
 
@@ -636,11 +660,13 @@ sourceCollection.dataKey.*
          wrap
 
    Data type
-         :ref:`wrap <data-type-wrap>` /:ref:`stdWrap <stdwrap>`
+         :ref:`wrap <data-type-wrap>` / :ref:`stdWrap <stdwrap>`
 
    Description
          Wrap for the image tag.
 
+stdWrap
+-------
 
 .. container:: table-row
 
@@ -671,22 +697,24 @@ Standard rendering
 .. code-block:: typoscript
    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-       10 = IMAGE
-       # toplogo.gif has the dimensions 300 x 150 pixels.
-       10.file = fileadmin/toplogo.gif
-       10.params = style="margin: 0px 20px;"
-       10.wrap = |<br>
+   page.10 = IMAGE
+   # toplogo.png has the dimensions 300 x 150 pixels.
+   page.10 {
+     file = fileadmin/toplogo.png
+     params = style="margin: 0px 20px;"
+     wrap = |<br>
+   }
 
 This returns:
 
 .. code-block:: html
 
-   <img src="fileadmin/toplogo.gif"
+   <img src="/fileadmin/toplogo.png"
         width="300"
         height="150"
-        border="0"
         style="margin: 0px 20px;"
-        alt=""><br>
+        alt=""
+        border="0"><br>
 
 
 .. index:: IMAGE; Responsive rendering example
@@ -707,8 +735,8 @@ Responsive/adaptive rendering
      layout {
 
        default {
-        element = <img src="###SRC###" width="###WIDTH###" height="###HEIGHT###" ###PARAMS### ###ALTPARAMS### ###BORDER### ###SELFCLOSINGTAGSLASH###>
-        source =
+         element = <img src="###SRC###" width="###WIDTH###" height="###HEIGHT###" ###PARAMS### ###ALTPARAMS### ###BORDER### ###SELFCLOSINGTAGSLASH###>
+         source =
        }
 
        srcset {
@@ -755,26 +783,25 @@ Responsive/adaptive rendering
    60.layoutKey = srcset
 
 
-This returns as an example all per default possible HTML-Output:
+This returns as an example all per default possible HTML output:
 
 .. code-block:: html
 
-   <img src="fileadmin/_processed_/imagefilenamename_595cc36c48.png"
-     width="600" height="423"    alt=""  border="0" />
-   <img src="fileadmin/_processed_/imagefilenamename_595cc36c48.png"
-     data-small="fileadmin/_processed_/imagefilenamename_595cc36c48.png"
-     data-smallRetina="fileadmin/_processed_/imagefilenamename_42fb68d642.png"
-     alt="" />
+   <img src="/fileadmin/_processed_/imagefilenamename_595cc36c48.png"
+        width="600" height="423" alt="" border="0">
+   <img src="/fileadmin/_processed_/imagefilenamename_595cc36c48.png"
+        data-small="/fileadmin/_processed_/imagefilenamename_595cc36c48.png"
+        data-smallRetina="/fileadmin/_processed_/imagefilenamename_42fb68d642.png"
+        alt="">
    <picture>
-     <source srcset="fileadmin/_processed_/imagefilenamename_595cc36c48.png"
-       media="(max-device-width: 600px)" />
-     <source srcset="fileadmin/_processed_/imagefilenamename_42fb68d642.png"
-       media="(max-device-width: 600px) AND (min-resolution: 192dpi)" />
-     <img src="fileadmin/_processed_/imagefilenamename_595cc36c48.png"
-       alt="" />
+     <source srcset="/fileadmin/_processed_/imagefilenamename_595cc36c48.png"
+             media="(max-device-width: 600px)">
+     <source srcset="/fileadmin/_processed_/imagefilenamename_42fb68d642.png"
+             media="(max-device-width: 600px) AND (min-resolution: 192dpi)">
+     <img src="/fileadmin/_processed_/imagefilenamename_595cc36c48.png"
+          alt="">
    </picture>
-   <img src="fileadmin/_processed_/imagefilenamename_595cc36c48.png"
-     srcset="fileadmin/_processed_/imagefilenamename_595cc36c48.png 600w,
-       fileadmin/_processed_/imagefilenamename_42fb68d642.png 600w 2x"
-     alt="" />
-
+   <img src="/fileadmin/_processed_/imagefilenamename_595cc36c48.png"
+        srcset="/fileadmin/_processed_/imagefilenamename_595cc36c48.png 600w,
+                /fileadmin/_processed_/imagefilenamename_42fb68d642.png 600w 2x"
+        alt="">
