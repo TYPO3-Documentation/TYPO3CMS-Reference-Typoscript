@@ -56,6 +56,8 @@ installations that contain only one site and use only one sitepackage extension.
 Extensions supplying custom default page TSconfig that should always be included,
 can also set the page TSconfig globally.
 
+.. _page-tsconfig-v11-v12:
+
 Global page TSconfig, compatible with TYPO3 11 and 12
 -----------------------------------------------------
 
