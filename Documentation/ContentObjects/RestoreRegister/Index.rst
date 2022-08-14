@@ -17,7 +17,11 @@ RESTORE\_REGISTER cObject is called, the last element is pulled off
 that stack and the register is replaced with the content of the
 previous element.
 
-RESTORE\_REGISTER has no properties.
+.. note::
+   :typoscript:`RESTORE_REGISTER` has no properties.
+
+.. contents::
+   :local:
 
 .. _cobj-restore-register-examples:
 

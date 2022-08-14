@@ -18,7 +18,16 @@ does for the cObject IMAGE).
 Depending on your use case you might prefer using the cObject
 :ref:`IMAGE <cobj-image>`, which creates a complete img-tag.
 
+.. contents::
+   :local:
+
+Properties
+==========
+
 .. ### BEGIN~OF~TABLE ###
+
+file
+----
 
 .. container:: table-row
 
@@ -28,6 +37,8 @@ Depending on your use case you might prefer using the cObject
    Data type
          imgResource
 
+stdWrap
+-------
 
 .. container:: table-row
 

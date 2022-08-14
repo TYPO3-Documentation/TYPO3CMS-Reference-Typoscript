@@ -21,7 +21,16 @@ as the last one. This corresponds to the stack priciple Last In – First Out (L
 With the advent of Fluid templating, registers are used less often than
 they used to be. In the Core they are not being used anymore.
 
+.. contents::
+   :local:
+
+Properties
+==========
+
 .. ### BEGIN~OF~TABLE ###
+
+(array of field names)
+----------------------
 
 .. container:: table-row
 

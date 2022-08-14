@@ -3,41 +3,11 @@
    Content objects; RECORDS
    RECORDS
 .. _cobj-records:
+.. _cobj-records-introduction:
 
 =======
 RECORDS
 =======
-
-.. contents::
-   :local:
-   :depth: 1
-
-
-.. index:: RECORDS; Properties
-.. _cobj-records-properties:
-
-Properties
-==========
-
-.. container:: ts-properties
-
-  ============================ ================================================================ ======= ==================
-  Property                     Data types                                                       stdWrap Default
-  ============================ ================================================================ ======= ==================
-  categories_ =                *categories-list* /:ref:`stdWrap <stdwrap>`                      yes
-  conf_ =                      :ref:`cObject <data-type-cobject>`                               no
-  dontCheckPid_ =              boolean /:ref:`stdWrap <stdwrap>`                                yes     0
-  source_ =                    *records-list* /:ref:`stdWrap <stdwrap>`                         yes
-  stdWrap_ =                   :ref:`stdwrap`                                                   yes
-  tables_ =                    *list of tables* /:ref:`stdWrap <stdwrap>`                       yes
-  wrap_ =                      :ref:`wrap <data-type-wrap>` /:ref:`stdWrap <stdwrap>`           yes
-  ============================ ================================================================ ======= ==================
-
-
-.. _cobj-records-introduction:
-
-Introduction
-============
 
 This object is meant for displaying lists of records from a variety of
 tables. Contrary to the :ref:`CONTENT <cobj-content>` object, it does
@@ -54,16 +24,15 @@ the records selected which has a higher value than the current.
    selected. Pages may be of any type, except recycler. Disable the check
    with the :ref:`dontCheckPid option <cobj-records-properties-dontcheckpid>`.
 
-
-.. _cobj-records-details:
-
-Property details
-================
-
 .. contents::
    :local:
-   :depth: 1
 
+.. index:: RECORDS; Properties
+.. _cobj-records-properties:
+.. _cobj-records-details:
+
+Properties
+==========
 
 .. index:: RECORDS; source
 .. _cobj-records-properties-source:
