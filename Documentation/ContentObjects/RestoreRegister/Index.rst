@@ -8,7 +8,7 @@
 RESTORE\_REGISTER
 =================
 
-This unsets the latest changes in the register-array as set by
+This unsets the latest changes in the register array as set by
 :ref:`LOAD_REGISTER <cobj-load-register>`.
 
 Internally registers work like a stack where the original register is

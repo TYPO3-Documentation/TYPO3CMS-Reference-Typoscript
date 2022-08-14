@@ -11,10 +11,10 @@ RECORDS
 
 This object is meant for displaying lists of records from a variety of
 tables. Contrary to the :ref:`CONTENT <cobj-content>` object, it does
-not allow very fine selections of records (as it has no "select"
+not allow very fine selections of records (as it has no :typoscript:`select`
 property).
 
-The register-key :code:`SYS_LASTCHANGED` is updated with the tstamp-field of
+The register key :code:`SYS_LASTCHANGED` is updated with the :sql:`tstamp` field of
 the records selected which has a higher value than the current.
 
 .. note::
@@ -49,7 +49,7 @@ source
          *records-list* /:ref:`stdWrap <stdwrap>`
 
    Description
-         List of record-id's, optionally with prepended table-names.
+         List of record id's, optionally with prepended table names.
 
          **Example:**
 
@@ -83,7 +83,7 @@ categories
          This property has the following sub-property:
 
          relation
-           Name of the categories-relation field to use for
+           Name of the categories relation field to use for
            building the list of categorized records, as there can
            be several such fields on a given table.
 
@@ -125,8 +125,8 @@ tables
             conf.tx_myexttable = TEXT
             conf.tx_myexttable.value = Hello world
 
-         This adds the tables tt\_content, tt\_address, tt\_links and
-         tx\_myexttable.
+         This adds the tables :sql:`tt_content`, :sql:`tt_address`, :sql:`tt_links` and
+         :sql:`tx_myexttable`.
 
 
 .. index:: RECORDS; conf
@@ -149,7 +149,7 @@ conf
 
    Default
          If this is *not* defined, the rendering of the records is done with
-         the top-level object *[table name]* - just like when ".renderObj" is
+         the top-level object *[table name]* - just like when :typoscript:`.renderObj` is
          not set for the cObject :ref:`CONTENT <cobj-content>`!
 
 
@@ -241,9 +241,9 @@ referenced from the :guilabel:`page properties`.
       tables = tt_content
    }
 
-Since no :code:`conf` property is defined, the rendering will
+Since no :typoscript:`conf` property is defined, the rendering will
 look for a top-level TypoScript object bearing the name of the
-table to be rendered (e.g. "tt_content").
+table to be rendered (e.g. :sql:`tt_content`).
 
 
 .. index:: RECORDS; Selection with source
@@ -294,7 +294,7 @@ you could do it like this:
 		wrap = <ul>|</ul>
 	}
 
-Contrary to the previous example, in this case the :code:`conf` property
+Contrary to the previous example, in this case the :typoscript:`conf` property
 is present and defines a very simple rendering of each content element
 (i.e. the header with a direct link to the content element).
 

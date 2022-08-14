@@ -8,7 +8,7 @@
 LOAD\_REGISTER
 ==============
 
-This provides a way to load the array $GLOBALS['TSFE']->register[]
+This provides a way to load the array :php:`$GLOBALS['TSFE']->register[]`
 with values. It does not return anything!
 
 The register is working like a stack: With each call new content can be
@@ -16,7 +16,7 @@ put on top of the stack. :ref:`RESTORE_REGISTER <cobj-restore-register>`
 can be used to remove the element at the topmost position again.
 The registers are processed in the reverse order. The register with the highest number
 will be processed as the first, and the register with the lowest number will be processed
-as the last one. This corresponds to the stack priciple Last In – First Out (LIFO).
+as the last one. This corresponds to the stack principle Last In – First Out (LIFO).
 
 With the advent of Fluid templating, registers are used less often than
 they used to be. In the Core they are not being used anymore.
@@ -97,8 +97,8 @@ Example:
 In this example we first load a special value, which is given as a
 GET/POST parameter, into the register. Then we use a
 :ref:`CONTENT object <cobj-content>` to render content based on this
-value. This CONTENT object loads data from a table "tx_my_table" and looks up
-the entry using the value from the register as a unique id. The field "tx_my_text_field"
+value. This CONTENT object loads data from a table :sql:`tx_my_table` and looks up
+the entry using the value from the register as a unique id. The field :sql:`tx_my_text_field`
 of this record will be rendered as output.
 
 For an example in combination with :ref:`RESTORE_REGISTER <cobj-restore-register>`
