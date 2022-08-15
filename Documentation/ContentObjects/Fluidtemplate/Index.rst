@@ -380,7 +380,7 @@ template
 
    .. warning::
 
-      The :typoscript:`FILE` object type has been removed in TYPO3 10. As the :typoscript:`.template`
+      The :typoscript:`FILE` object type has been removed in TYPO3 v10. As the :typoscript:`.template`
       property used :typoscript:`FILE`, you should generally check your code if
       using this and switch to using :ref:`.templateName <cobj-fluidtemplate-properties-templatename>`
       with :ref:`.templateRootPaths <cobj-fluidtemplate-properties-templaterootpaths>` or use
