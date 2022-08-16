@@ -148,8 +148,10 @@ slide
          order of elements in collect mode. If set, elements of the current
          page will be at the bottom.
 
-      **Note:** Up to Version 9 of TYPO3 the sliding stopped when reaching a folder. Beginning with TYPO3 10 this is not longer the case.
-      See :php:`$cObj->checkPid_badDoktypeList`.
+      .. note::
+         Up to version 9 of TYPO3 the sliding stopped when reaching a folder.
+         Beginning with TYPO3 v10 this is not longer the case.
+         See :php:`$cObj->checkPid_badDoktypeList`.
 
 .. ###### END~OF~TABLE ######
 
