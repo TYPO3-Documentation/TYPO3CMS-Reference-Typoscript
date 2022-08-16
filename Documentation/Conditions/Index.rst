@@ -90,7 +90,7 @@ page
       # Check single page uid
       [traverse(page, "uid") == 2]
       # Check list of page uids
-      traverse(page, "uid") in [17,24]]
+      [traverse(page, "uid") in [17,24]]
       # Check list of page uids NOT in
       [traverse(page, "uid") not in [17,24]]
       # Check range of pages (example: page uid from 10 to 20)
