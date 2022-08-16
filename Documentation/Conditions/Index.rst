@@ -10,8 +10,8 @@ Conditions
 
    * For full explanations about conditions, especially about condition syntax, please refer to
      :ref:`the TypoScript Syntax chapter of the Core API <t3coreapi:typoscript-syntax-conditions>`.
-     The "new" condition syntax (since TYPO3 9.4) is based on the
-     `symfony expression language <https://symfony.com/doc/4.1/components/expression_language.html>`__
+     The "new" condition syntax (since TYPO3 v9.4) is based on the
+     `Symfony expression language <https://symfony.com/doc/5.4/components/expression_language.html>`__.
    * TypoScript also offers the :ref:`"if" function <if>` to create conditions.
 
 .. contents::
@@ -435,7 +435,7 @@ backend.user.userGroupList
 """"""""""""""""""""""""""
 
 .. versionadded:: 11.2
-   Starting with TYPO3 11.2 `backend.user.userGroupIds`,
+   Starting with TYPO3 v11.2 `backend.user.userGroupIds`,
    an array has been added. Use this instead of `like`
    expressions to test for the user group of the current
    backend user.
@@ -562,7 +562,7 @@ frontend.user.userGroupList
 """""""""""""""""""""""""""
 
 .. versionadded:: 11.2
-   Starting with TYPO3 11.2 `frontend.user.userGroupIds`,
+   Starting with TYPO3 v11.2 `frontend.user.userGroupIds`,
    an array has been added. Use this instead of `like`
    expressions to test for the user group of the current
    frontend user.
@@ -1233,7 +1233,7 @@ compatVersion
       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
       [compatVersion("11.5")]
-         page.10.value = You are using TYPO3 11.5
+         page.10.value = You are using TYPO3 v11.5
       [end]
 
    Is same as:
@@ -1242,7 +1242,7 @@ compatVersion
       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
       [compatVersion("11.5.0")]
-         page.10.value = You are using TYPO3 11.5
+         page.10.value = You are using TYPO3 v11.5
       [end]
 
    Another example:
@@ -1251,7 +1251,7 @@ compatVersion
       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
       [compatVersion("11.5.1")]
-         page.10.value = You are using TYPO3 11.5
+         page.10.value = You are using TYPO3 v11.5
       [end]
 
 
