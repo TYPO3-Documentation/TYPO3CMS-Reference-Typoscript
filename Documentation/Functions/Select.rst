@@ -117,8 +117,8 @@ uidInList
 
    **Note:** :typoscript:`this` is a *special keyword* and replaced with the id of the
    *current record*.
-   
-   .. attention:: 
+
+   .. attention::
       :ref:`pidInList` defaults to :typoscript:`this`. Therefore by default only records
       from the current page are available for :typoscript:`uidInList`. If records
       should be fetched globally, :typoscript:`pidInList = 0` should also be set.
@@ -131,7 +131,7 @@ uidInList
          uidInList = 1,2,3
          pidInList = 0
       }
-      
+
       select.uidInList = this
 
 
@@ -145,7 +145,7 @@ pidInList
 
 :aspect:`Data type`
    *list of page\_ids* / :ref:`stdWrap`
-   
+
 :aspect:`Default`
    this
 
@@ -448,7 +448,7 @@ markers
 
    .. warning::
 
-      Since TYPO3 8 there is a problem combining orderBy with markers caused
+      Since TYPO3 v8 there is a problem combining orderBy with markers caused
       by the quoting of the fields, see :issue:`87799`.
 
 :aspect:`Example`
