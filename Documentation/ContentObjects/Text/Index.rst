@@ -6,18 +6,29 @@
 TEXT
 ====
 
-
 A content object of the type "TEXT" can be used to output static text or HTML.
 
 stdWrap properties are available under the property "value" and on the
 very rootlevel of the object.
 
-**Note:** Gifbuilder also has a :ref:`TEXT object <gifbuilder-text>` -
-do not mix that one up with the cObject described here; both are
-different objects.
+..  note::
+    Gifbuilder also has a :ref:`TEXT object <gifbuilder-text>` -
+    do not mix that one up with the cObject described here; both are
+    different objects.
 
+.. contents::
+   :local:
+
+.. index:: TEXT; Properties
+.. _cobj-text-properties:
+
+Properties
+==========
 
 .. ### BEGIN~OF~TABLE ###
+
+value
+-----
 
 .. container:: table-row
 
@@ -30,6 +41,8 @@ different objects.
    Description
          Text, which you want to output.
 
+(stdWrap properties...)
+-----------------------
 
 .. container:: table-row
 
@@ -52,8 +65,8 @@ different objects.
 [tsref:(cObject).TEXT]
 
 
-Examples:
-=========
+Examples
+========
 
 .. code-block:: typoscript
    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
@@ -64,7 +77,6 @@ Examples:
 
 The above example uses the stdWrap property "case". It returns "THIS
 IS A TEXT IN UPPERCASE".
-
 
 .. code-block:: typoscript
    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript

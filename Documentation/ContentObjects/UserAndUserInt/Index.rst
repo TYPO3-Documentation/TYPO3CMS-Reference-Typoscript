@@ -28,8 +28,20 @@ or :typoscript:`stdWrap` are only two of the gimmicks you get.
 If you create this object as :typoscript:`USER_INT`, it will be rendered non-cached,
 outside the main page-rendering.
 
+
+.. contents::
+   :local:
+
+..  index::
+    USER; Properties
+    USER_INT; Properties
+..  _cobj-user-properties:
+
+Properties
+==========
+
 userFunc
-========
+--------
 
 .. ### BEGIN~OF~TABLE ###
 
@@ -62,7 +74,7 @@ userFunc
 .. ###### END~OF~TABLE ######
 
 (properties you define)
-=======================
+-----------------------
 
 .. ### BEGIN~OF~TABLE ###
 
@@ -85,7 +97,7 @@ userFunc
 .. ###### END~OF~TABLE ######
 
 stdWrap
-=======
+-------
 
 .. ### BEGIN~OF~TABLE ###
 
@@ -101,7 +113,7 @@ stdWrap
 
 
 cache
-=====
+-----
 
 .. ### BEGIN~OF~TABLE ###
 
