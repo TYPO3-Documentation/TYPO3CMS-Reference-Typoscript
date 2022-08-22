@@ -7,9 +7,21 @@ SVG
 ===
 
 With this object type you can insert a SVG. You can use XML data directly
-or reference a file. 
+or reference a file.
+
+.. contents::
+   :local:
+
+.. index:: SVG; Properties
+.. _cobj-svg-properties:
+
+Properties
+==========
 
 .. ### BEGIN~OF~TABLE ###
+
+width
+-----
 
 .. container:: table-row
 
@@ -25,6 +37,8 @@ or reference a file.
    Default
          600
 
+height
+------
 
 .. container:: table-row
 
@@ -40,6 +54,8 @@ or reference a file.
    Default
          400
 
+src
+---
 
 .. container:: table-row
 
@@ -60,6 +76,8 @@ or reference a file.
 
             src = fileadmin/svg/tiger.svg
 
+renderMode
+----------
 
 .. container:: table-row
 
@@ -71,6 +89,9 @@ or reference a file.
 
    Description
          Setting `renderMode` to inline will render an inline version of the SVG.
+
+stdWrap
+-------
 
 .. container:: table-row
 
