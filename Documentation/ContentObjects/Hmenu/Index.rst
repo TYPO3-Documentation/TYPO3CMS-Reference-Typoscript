@@ -1509,7 +1509,7 @@ Creates a language menu with flags (notice that some lines break):
    lib.langMenu.1.USERDEF1 < lib.langMenu.1.NO
    lib.langMenu.1.USERDEF1 = 1
    lib.langMenu.1.USERDEF1.5.file = flag_uk_d.gif  || flag_fr_d.gif  || flag_es_d.gif
-   lib.langMenu.1.USERDEF1.noLink = 1
+   lib.langMenu.1.USERDEF1.doNotLinkIt = 1
 
 
 .. _hmenu-special-userfunction:
