@@ -251,10 +251,16 @@ layoutRootPaths
       page {
          10 = FLUIDTEMPLATE
          10 {
-            file = EXT:site_default/Resources/Private/Templates/Main.html
+            file = EXT:site_package/Resources/Private/Templates/Main.html
             layoutRootPaths {
-               10 = EXT:site_default/Resources/Private/Layouts
-               20 = EXT:site_modification/Resources/Private/Layouts
+               10 = EXT:site_package/Resources/Private/Layouts
+               20 = EXT:site_modification/Resources/Private/Layouts/Overrides
+
+               // One can also use stdWrap functionality
+               // This must not be mixed with a key without dot (.) like above
+               30.cObject = TEXT
+               30.cObject.value = EXT:another_modification/Resources/Private/Layouts/Overrides
+               30.cObject.if.isTrue = {$valueOfSomeConstant}
             }
          }
       }
@@ -506,8 +512,14 @@ templateRootPaths
          10 {
             templateName = Default
             templateRootPaths {
-               10 = EXT:sitedesign/Resources/Private/Templates
-               20 = EXT:sitemodification/Resources/Private/Templates
+               10 = EXT:site_package/Resources/Private/Templates
+               20 = EXT:site_modification/Resources/Private/Templates/Overrides
+
+               // One can also use stdWrap functionality
+               // This must not be mixed with a key without dot (.) like above
+               30.cObject = TEXT
+               30.cObject.value = EXT:another_modification/Resources/Private/Templates/Overrides
+               30.cObject.if.isTrue = {$valueOfSomeConstant}
             }
          }
       }
