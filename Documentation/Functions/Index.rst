@@ -25,29 +25,8 @@ Example:
             :ref:`data-type-string` /:ref:`stdWrap <stdwrap>`
 
 
-.. toctree::
-   :maxdepth: 5
-   :titlesonly:
+..  toctree::
+    :glob:
+    :titlesonly:
 
-   Cache
-   Calc
-   Encapslines
-   GetEnv
-   Htmlparser
-   HtmlparserTags
-   If
-   Imagelinkwrap
-   Imgresource
-   Makelinks
-   Numberformat
-   Numrows
-   OptionSplit
-   Parsefunc
-   Replacement
-   Round
-   Select
-   Split
-   Stdwrap
-   Strpad
-   Tags
-   Typolink
+    *

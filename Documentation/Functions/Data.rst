@@ -1,12 +1,10 @@
-:orphan:
-
 .. include:: /Includes.rst.txt
-.. index:: Simple data types; getText
+.. index:: Function; getText
 .. _data-type-gettext:
 
-=======
-getText
-=======
+==============
+Data / getText
+==============
 
 :aspect:`Data type:`
    getText
@@ -816,7 +814,7 @@ TSFE
       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
       lib.foo.data = TSFE : fe_user|user|username
-      
+
 .. deprecated:: 12.0
    The following properties within TypoScriptFrontendController (TSFE) have been deprecated:
 
@@ -825,7 +823,7 @@ TSFE
    *  :php:`extTarget`
    *  :php:`fileTarget`
    *  :php:`baseUrl`
-   
+
    Migrate the access to these properties to use the config property:
 
    You can access the TypoScript properties directly via
