@@ -14,11 +14,13 @@
 *.project
 *.swp
 .buildpath
+.Build
 .cache
 .project
 .session
 .settings
 .TemporaryItems
 .webprj
+composer.lock
 nbproject
 /Documentation-GENERATED-temp/
