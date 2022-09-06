@@ -1,12 +1,10 @@
-:orphan:
-
 .. include:: /Includes.rst.txt
-.. index:: Simple data types; getText
+.. index:: Function; getText
 .. _data-type-gettext:
 
-=======
-getText
-=======
+==============
+Data / getText
+==============
 
 :aspect:`Data type:`
    getText
