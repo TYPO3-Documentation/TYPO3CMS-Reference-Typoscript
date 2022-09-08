@@ -79,6 +79,42 @@ disabled
     where it determines whether the RTE is rendered or not. Note that a backend user can also ultimately
     disable RTE's in his user settings.
 
+.. index::
+   RTE; Configuration
+   RTE; config
+
+config
+------
+
+.. index::
+   RTE; Content language direction
+   RTE config; contentsLanguageDirection
+
+contentsLanguageDirection
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+:aspect:`Datatype`
+    :typoscript:`rtl` or :typoscript:`ltr`
+
+:aspect:`Description`
+
+    The configuration `contentsLangDirection` of the ckeditor is used to define the
+    direction of the content. It is filled by the direction defined in the site
+    language of the current element.
+
+    As fallback the following page TsConfig configuration can be used:
+
+    ..  code-block:: typoscript
+        :caption: EXT:my_sitepackage/Configuration/page.tsconfig
+
+        # always use right to left
+        RTE.config.contentsLanguageDirection = rtl
+
+        # except for the following language:
+        [siteLanguage("locale") == "en_US"]
+            RTE.config.contentsLanguageDirection = ltr
+        [end]
 
 .. index::
    RTE; Server processing
