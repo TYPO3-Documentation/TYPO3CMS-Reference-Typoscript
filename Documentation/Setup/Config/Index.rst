@@ -812,28 +812,6 @@ disableHrefLang
          automatically in multi-language setups. By settings this option to true
          the rendering of those tags will be skipped.
 
-
-
-.. index:: config; disableImgBorderAttr
-.. _setup-config-disableimgborderattr:
-
-disableImgBorderAttr
-====================
-
-.. container:: table-row
-
-   Property
-         disableImgBorderAttr
-
-   Data type
-         :ref:`data-type-boolean`
-
-   Description
-         Returns the `border` attribute for an :html:`<img>` tag only if the doctype is
-         not `xhtml_strict` or `xhtml_11` or if the config parameter
-         :typoscript:`disableImgBorderAttr` is not set
-
-
 .. index:: config; disablePrefixComment
 .. _setup-config-disableprefixcomment:
 
