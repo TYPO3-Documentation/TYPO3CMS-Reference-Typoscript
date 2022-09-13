@@ -327,6 +327,14 @@ config
 CSS\_inlineStyle
 ================
 
+..  versionchanged:: 12.0
+    The TypoScript setting :typoscript:`page.CSS_inlineStyle` which was used to
+    inject a inline CSS string into the TYPO3 Frontend will be removed with
+    TYPO3 v12.
+
+    Use :ref:`page.cssInline <setup-page-cssinline>` instead, which has
+    been around since TYPO3 v4.
+
 .. container:: table-row
 
    Property
