@@ -81,23 +81,6 @@ params
    Description
          HTML <IMG> parameters
 
-border
-------
-
-.. container:: table-row
-
-   Property
-         border
-
-   Data type
-         integer
-
-   Description
-         Value of the "border" attribute of the image tag.
-
-   Default
-         0
-
 altText / titleText
 --------------------
 
@@ -132,22 +115,6 @@ emptyTitleHandling
    Default
          useAlt
 
-longdescURL
------------
-
-.. container:: table-row
-
-   Property
-         longdescURL
-
-   Data type
-         :ref:`string <data-type-string>` / :ref:`stdWrap <stdwrap>`
-
-   Description
-         "longdesc" attribute (URL pointing to document with extensive details
-         about image).
-
-
 .. index:: IMAGE; layoutKey
 .. _cobj-image-layoutkey:
 
@@ -180,7 +147,7 @@ layoutKey
 
               <img src="###SRC###"
                    width="###WIDTH###"
-                   height="###HEIGHT###" ###PARAMS### ###ALTPARAMS### ###BORDER### ###SELFCLOSINGTAGSLASH###>
+                   height="###HEIGHT###" ###PARAMS### ###ALTPARAMS### ###SELFCLOSINGTAGSLASH###>
 
          - :typoscript:`srcset` renders an image tag pointing to a set of images for the different resolutions.
            They are referenced inside the :typoscript:`srcset` attribute the :html:`<img>` tag for each defined resolution.
@@ -294,8 +261,6 @@ layout.layoutKey.element
 
          - :html:`###ALTPARAMS###` additional alt params defined in the IMAGE object
            (as complete attribute)
-
-         - :html:`###BORDER###` border for the image tag (as complete attribute)
 
          - :html:`###SELFCLOSINGTAGSLASH###` renders the closing slash of the tag,
            depending on the setting of
@@ -713,8 +678,7 @@ This returns:
         width="300"
         height="150"
         style="margin: 0px 20px;"
-        alt=""
-        border="0"><br>
+        alt=""><br>
 
 
 .. index:: IMAGE; Responsive rendering example
@@ -735,7 +699,7 @@ Responsive/adaptive rendering
      layout {
 
        default {
-         element = <img src="###SRC###" width="###WIDTH###" height="###HEIGHT###" ###PARAMS### ###ALTPARAMS### ###BORDER### ###SELFCLOSINGTAGSLASH###>
+         element = <img src="###SRC###" width="###WIDTH###" height="###HEIGHT###" ###PARAMS### ###ALTPARAMS### ###SELFCLOSINGTAGSLASH###>
          source =
        }
 
@@ -788,7 +752,7 @@ This returns as an example all per default possible HTML output:
 .. code-block:: html
 
    <img src="/fileadmin/_processed_/imagefilenamename_595cc36c48.png"
-        width="600" height="423" alt="" border="0">
+        width="600" height="423" alt="">
    <img src="/fileadmin/_processed_/imagefilenamename_595cc36c48.png"
         data-small="/fileadmin/_processed_/imagefilenamename_595cc36c48.png"
         data-smallRetina="/fileadmin/_processed_/imagefilenamename_42fb68d642.png"
