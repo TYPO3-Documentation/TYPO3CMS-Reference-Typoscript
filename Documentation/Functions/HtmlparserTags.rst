@@ -8,12 +8,17 @@
 HTMLparser\_tags
 ================
 
+.. contents::
+   :local:
+
+Properties
+==========
 
 .. index:: HTMLparser_tags; overrideAttribs
 .. _htmlparser-tags-overrideattribs:
 
 overrideAttribs
-===============
+---------------
 
 :aspect:`Property`
    overrideAttribs
@@ -29,7 +34,7 @@ overrideAttribs
 .. _htmlparser-tags-allowedattribs:
 
 allowedAttribs
-==============
+--------------
 
 :aspect:`Property`
    allowedAttribs
@@ -56,7 +61,7 @@ allowedAttribs
 .. _htmlparser-tags-fixattrib-attribute-set:
 
 fixAttrib.[attribute].set
-=========================
+-------------------------
 
 :aspect:`Property`
    fixAttrib.[attribute].set
@@ -72,7 +77,7 @@ fixAttrib.[attribute].set
 .. _htmlparser-tags-fixattrib-attribute-unset:
 
 fixAttrib.[attribute].unset
-===========================
+---------------------------
 
 :aspect:`Property`
    fixAttrib.[attribute].unset
@@ -88,7 +93,7 @@ fixAttrib.[attribute].unset
 .. _htmlparser-tags-fixattrib-attribute-default:
 
 fixAttrib.[attribute].default
-=============================
+-----------------------------
 
 :aspect:`Property`
    fixAttrib.[attribute].default
@@ -105,7 +110,7 @@ fixAttrib.[attribute].default
 .. _htmlparser-tags-fixattrib-attribute-always:
 
 fixAttrib.[attribute].always
-============================
+----------------------------
 
 :aspect:`Property`
    fixAttrib.[attribute].always
@@ -138,7 +143,7 @@ fixAttrib.[attribute].always
 .. _htmlparser-tags-fixattrib-attribute-range:
 
 fixAttrib.[attribute].range
-===========================
+---------------------------
 
 :aspect:`Property`
    fixAttrib.[attribute].range
@@ -154,7 +159,7 @@ fixAttrib.[attribute].range
 .. _htmlparser-tags-fixattrib-attribute-list:
 
 fixAttrib.[attribute].list
-==========================
+--------------------------
 
 :aspect:`Property`
    fixAttrib.[attribute].list
@@ -171,7 +176,7 @@ fixAttrib.[attribute].list
 .. _htmlparser-tags-fixattrib-attribute-removeiffalse:
 
 fixAttrib.[attribute].removeIfFalse
-===================================
+-----------------------------------
 
 :aspect:`Property`
    fixAttrib.[attribute].removeIfFalse
@@ -189,7 +194,7 @@ fixAttrib.[attribute].removeIfFalse
 .. _htmlparser-tags-fixattrib-attribute-removeifequals:
 
 fixAttrib.[attribute].removeIfEquals
-====================================
+------------------------------------
 
 :aspect:`Property`
    fixAttrib.[attribute].removeIfEquals
@@ -205,7 +210,7 @@ fixAttrib.[attribute].removeIfEquals
 .. _htmlparser-tags-fixattrib-attribute-casesensitivecomp:
 
 fixAttrib.[attribute].casesensitiveComp
-=======================================
+---------------------------------------
 
 :aspect:`Property`
    fixAttrib.[attribute].casesensitiveComp
@@ -253,7 +258,7 @@ fixAttrib.[attribute].prefixLocalAnchors
 .. _htmlparser-tags-fixattrib-attribute-prefixrelpathwith:
 
 fixAttrib.[attribute].prefixRelPathWith
-=======================================
+---------------------------------------
 
 :aspect:`Property`
    fixAttrib.[attribute].prefixRelPathWith
@@ -277,7 +282,7 @@ fixAttrib.[attribute].prefixRelPathWith
 .. _htmlparser-tags-fixattrib-attribute-userfunc:
 
 fixAttrib.[attribute].userFunc
-==============================
+------------------------------
 
 :aspect:`Property`
    fixAttrib.[attribute].userFunc
@@ -318,7 +323,7 @@ fixAttrib.[attribute].userFunc
 .. _htmlparser-tags-protect:
 
 protect
-=======
+-------
 
 :aspect:`Property`
    protect
@@ -334,7 +339,7 @@ protect
 .. _htmlparser-tags-remap:
 
 remap
-=====
+-----
 
 :aspect:`Property`
    remap
@@ -350,7 +355,7 @@ remap
 .. _htmlparser-tags-rmtagifnoattrib:
 
 rmTagIfNoAttrib
-===============
+---------------
 
 :aspect:`Property`
    rmTagIfNoAttrib
@@ -366,7 +371,7 @@ rmTagIfNoAttrib
 .. _htmlparser-tags-nesting:
 
 nesting
-=======
+-------
 
 :aspect:`Property`
    nesting

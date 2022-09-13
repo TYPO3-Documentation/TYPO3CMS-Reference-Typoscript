@@ -8,11 +8,18 @@
 HTMLparser
 ==========
 
+
+.. contents::
+   :local:
+
+Properties
+==========
+
 .. index:: HTMLparser; allowTags
 .. _htmlparser-allowtags:
 
 allowTags
-=========
+---------
 
 :aspect:`Property`
    allowTags
@@ -28,7 +35,7 @@ allowTags
 .. _htmlparser-stripemptytags:
 
 stripEmptyTags
-==============
+--------------
 
 :aspect:`Property`
    stripEmptyTags
@@ -44,7 +51,7 @@ stripEmptyTags
 .. _htmlparser-stripemptytags.keeptags:
 
 stripEmptyTags.keepTags
-=======================
+-----------------------
 
 :aspect:`Property`
    stripEmptyTags.keepTags
@@ -60,7 +67,7 @@ stripEmptyTags.keepTags
 .. _htmlparser-tags.[tagname]:
 
 tags.[tagname]
-==============
+--------------
 
 :aspect:`Property`
    tags.[tagname]
@@ -80,7 +87,7 @@ tags.[tagname]
 .. _htmlparser-localnesting:
 
 localNesting
-============
+------------
 
 :aspect:`Property`
    localNesting
@@ -97,7 +104,7 @@ localNesting
 .. _htmlparser-globalnesting:
 
 globalNesting
-=============
+-------------
 
 :aspect:`Property`
    globalNesting
@@ -114,7 +121,7 @@ globalNesting
 .. _htmlparser-rmtagifnoattrib:
 
 rmTagIfNoAttrib
-===============
+---------------
 
 :aspect:`Property`
    rmTagIfNoAttrib
@@ -131,7 +138,7 @@ rmTagIfNoAttrib
 .. _htmlparser-noattrib:
 
 noAttrib
-========
+--------
 
 :aspect:`Property`
    noAttrib
@@ -149,7 +156,7 @@ noAttrib
 .. _htmlparser-removetags:
 
 removeTags
-==========
+----------
 
 :aspect:`Property`
    removeTags
@@ -166,7 +173,7 @@ removeTags
 .. _htmlparser-keepnonmatchedtags:
 
 keepNonMatchedTags
-==================
+------------------
 
 :aspect:`Property`
    keepNonMatchedTags
@@ -189,7 +196,7 @@ keepNonMatchedTags
 .. _htmlparser-htmlspecialchars:
 
 htmlSpecialChars
-================
+----------------
 
 :aspect:`Property`
    htmlSpecialChars

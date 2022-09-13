@@ -8,11 +8,39 @@
 encapsLines
 ===========
 
+This function is a sub function of :typoscript:`stdWrap` it can be called
+like this:
+
+..  code-block:: typoscript
+    :caption: EXT:my_extension/Configuration/TypoScript/setup.typoscript
+
+    page.20 = TEXT
+    page.20 {
+        value (
+            First line of text
+            Some <div>text</div>
+            <p>Some text</p>
+            <div>Some text</div>
+            <B>Some text</B>
+        )
+        stdWrap.encapsLines {
+            encapsTagList = div, p
+            remapTag.P=DIV
+        }
+    }
+
+
+.. contents::
+   :local:
+
+Properties
+==========
+
 .. index:: encapsLines; encapsTagList
 .. _encapstaglist:
 
 encapsTagList
-=============
+-------------
 
 :aspect:`Property`
    encapsTagList
@@ -45,7 +73,7 @@ encapsTagList
 .. index:: encapsLines; remapTag
 
 remapTag.[*tagname*]
-====================
+--------------------
 
 :aspect:`Property`
    remapTag.[*tagname*]
@@ -78,7 +106,7 @@ remapTag.[*tagname*]
 .. _addattributes.[*tagname*]:
 
 addAttributes.[*tagname*]
-=========================
+-------------------------
 
 :aspect:`Property`
    addAttributes.[*tagname*]
@@ -120,7 +148,7 @@ addAttributes.[*tagname*]
 .. _removewrapping:
 
 removeWrapping
-==============
+--------------
 
 :aspect:`Property`
    removeWrapping
@@ -156,7 +184,7 @@ removeWrapping
 .. _wrapnonwrappedlines:
 
 wrapNonWrappedLines
-===================
+-------------------
 
 :aspect:`Property`
    wrapNonWrappedLines
@@ -192,7 +220,7 @@ wrapNonWrappedLines
 .. _innerstdwrap\_all:
 
 innerStdWrap\_all
-=================
+-----------------
 
 :aspect:`Property`
    innerStdWrap\_all
@@ -209,7 +237,7 @@ innerStdWrap\_all
 .. _encapslinesstdwrap.[*tagname*]:
 
 encapsLinesStdWrap.[*tagname*]
-==============================
+------------------------------
 
 :aspect:`Property`
    encapsLinesStdWrap.[*tagname*]
@@ -227,7 +255,7 @@ encapsLinesStdWrap.[*tagname*]
 .. _defaultalign:
 
 defaultAlign
-============
+------------
 
 :aspect:`Property`
    defaultAlign
@@ -245,7 +273,7 @@ defaultAlign
 .. _nonwrappedtag:
 
 nonWrappedTag
-=============
+-------------
 
 :aspect:`Property`
    nonWrappedTag
