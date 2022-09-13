@@ -23,11 +23,16 @@ rendered content will be stored in the cache, if :typoscript:`cache.key` was set
 configuration options :typoscript:`cache.tags` and :typoscript:`cache.lifetime` allow to control
 the caching.
 
+.. contents::
+   :local:
+
+Properties
+==========
 
 .. _cache-key:
 
 key
-===
+---
 
 :aspect:`Property`
    key
@@ -48,7 +53,7 @@ key
 .. _cache-lifetime:
 
 lifetime
-========
+--------
 
 :aspect:`Property`
    lifetime
@@ -83,7 +88,7 @@ lifetime
 .. _cache-tags:
 
 tags
-====
+----
 
 :aspect:`Property`
    tags
