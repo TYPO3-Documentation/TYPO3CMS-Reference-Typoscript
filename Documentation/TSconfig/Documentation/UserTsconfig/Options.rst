@@ -457,6 +457,26 @@ file_list.filesPerPage
 :aspect:`Default`
    40
 
+..  index::
+    File list; Primary actions
+    File list; Allowed actions
+..  _useroptions-file_list-primaryActions:
+
+file_list.primaryActions
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+:aspect:`Datatype`
+    string
+
+:aspect:`Description`
+    Option to add more primary actions to the list view.
+    The list of actions to be displayed can be given in the TSConfig of
+    the backend user. The actions that can be added are `view`, `metadata`,
+    `delete`, `copy` and `cut`. `translations` is always active.
+
+:aspect:`Default`
+    :typoscript:`view,metadata,translations,delete`
+
 
 .. index:: File list; Thumbnails height
 .. _useroptions-file_list-thumbnail-height:
