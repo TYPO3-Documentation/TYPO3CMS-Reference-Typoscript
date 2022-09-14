@@ -7,54 +7,61 @@ Data / getText
 ==============
 
 :aspect:`Data type:`
-   getText
+    getText
 
 :aspect:`Description:`
-   The getText data type is some kind of tool box allowing to retrieve
-   values from a variety of sources, e.g. from GET/POST variables, from
-   registers, values from the page tree, items in the page menus, records from any database table, etc.
+    The getText data type is some kind of tool box allowing to retrieve
+    values from a variety of sources, e.g. from GET/POST variables, from
+    registers, values from the page tree, items in the page menus, records
+    from any database table, etc.
 
-   The general syntax is as follows:
+    The general syntax is as follows:
 
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-      lib.foo.data = <key> : <code>
+        lib.foo.data = <key> : <code>
 
-   where :typoscript:`<key>` indicates the source and :typoscript:`<code>` is some form of path or
-   pointer to the value, which depends on the key used. The various keys and
-   their possible codes are described below.
+    where :typoscript:`<key>` indicates the source and :typoscript:`<code>` is some form of path or
+    pointer to the value, which depends on the key used. The various keys and
+    their possible codes are described below.
 
-   The :typoscript:`code` can contain pipe characters :typoscript:`|` to separate keys
-   in a multi-dimensional array. This e.g. works with :typoscript:`TSFE`:
+    The :typoscript:`code` can contain pipe characters :typoscript:`|` to separate keys
+    in a multidimensional array. This e.g. works with :typoscript:`TSFE`:
 
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-      lib.foo.data = TSFE : fe_user|user|username
+        lib.foo.data = TSFE : fe_user|user|username
 
-   Some codes work with a different separator, which is documented right at the
-   code.
-   Spaces around the colon (:typoscript:`:`) are irrelevant. The :typoscript:`key` is
-   case-insensitive.
+    Some codes work with a different separator, which is documented right at the
+    code.
+    Spaces around the colon (:typoscript:`:`) are irrelevant. The :typoscript:`key` is
+    case-insensitive.
 
-   By separating the value of getText with :typoscript:`//` (double slash) a number of
-   codes can be supplied and getText will return the first one, which is not
-   empty ("" or zero).
+    By separating the value of getText with :typoscript:`//` (double slash) a number of
+    codes can be supplied and getText will return the first one, which is not
+    empty ("" or zero).
 
-   To get the content of the field "header". If "header is empty, "title" is
-   retrieved. If "title" is empty as well, it finally gets the field "uid":
+    To get the content of the field "header". If "header is empty, "title" is
+    retrieved. If "title" is empty as well, it finally gets the field "uid":
 
-   .. code-block:: typoscript
+    .. code-block:: typoscript
       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
       lib.foo.data = field : header // field : title // field : uid
 
 
+.. contents::
+   :local:
+
+Properties
+==========
+
 .. _data-type-gettext-cobj:
 
 cObj
-""""
+====
 
 :aspect:`getText Key:`
    cObj
@@ -77,7 +84,7 @@ cObj
 .. _data-type-gettext-context:
 
 context
-"""""""
+=======
 
 :aspect:`getText Key:`
    context
@@ -106,7 +113,7 @@ context
 .. _data-type-gettext-current:
 
 current
-"""""""
+=======
 
 :aspect:`getText Key:`
    current
@@ -127,7 +134,7 @@ current
 .. _data-type-gettext-date:
 
 date
-""""
+====
 
 :aspect:`getText Key:`
    date
@@ -149,7 +156,7 @@ date
 .. _data-type-gettext-db:
 
 DB
-""
+==
 :aspect:`getText Key:`
    DB
 
@@ -189,7 +196,7 @@ DB
 .. _data-type-gettext-debug:
 
 debug
-"""""
+=====
 
 :aspect:`getText Key:`
    debug
@@ -210,7 +217,7 @@ debug
 .. _data-type-gettext-field:
 
 field
-"""""
+=====
 
 :aspect:`getText Key:`
    field
@@ -251,7 +258,7 @@ field
 .. _data-type-gettext-file:
 
 file
-""""
+====
 
 :aspect:`getText Key:`
    file
@@ -288,7 +295,7 @@ file
 .. _data-type-gettext-flexform:
 
 flexform
-""""""""
+========
 
 :aspect:`getText Key:`
    flexform
@@ -311,7 +318,7 @@ flexform
 .. _data-type-gettext-fullrootline:
 
 fullRootLine
-""""""""""""
+============
 
 :aspect:`getText Key:`
    fullRootLine
@@ -350,7 +357,7 @@ fullRootLine
 .. _data-type-gettext-getenv:
 
 getenv
-""""""
+======
 
 :aspect:`getText Key:`
    getenv
@@ -371,7 +378,7 @@ getenv
 .. _data-type-gettext-getindpenv:
 
 getIndpEnv
-""""""""""
+==========
 :aspect:`getText Key:`
    getIndpEnv
 
@@ -430,7 +437,7 @@ getIndpEnv
 .. _data-type-gettext-global:
 
 global
-""""""
+======
 
 :aspect:`getText Key:`
    global
@@ -445,7 +452,7 @@ global
 .. _data-type-gettext-gp:
 
 GP
-""
+==
 :aspect:`getText Key:`
    GP
 
@@ -474,7 +481,7 @@ GP
 .. _data-type-gettext-level:
 
 level
-"""""
+=====
 
 :aspect:`getText Key:`
    level
@@ -493,7 +500,7 @@ level
 .. _data-type-gettext-levelfield:
 
 levelfield
-""""""""""
+==========
 
 :aspect:`getText Key:`
    levelfield
@@ -522,7 +529,7 @@ levelfield
 .. _data-type-gettext-leveltitle:
 
 leveltitle, leveluid, levelmedia
-""""""""""""""""""""""""""""""""
+================================
 :aspect:`getText Key:`
    leveltitle, leveluid or levelmedia
 
@@ -562,7 +569,7 @@ leveltitle, leveluid, levelmedia
 .. _data-type-gettext-lll:
 
 LLL
-"""
+===
 
 :aspect:`getText Key:`
    LLL
@@ -582,7 +589,7 @@ LLL
 .. _data-type-gettext-page:
 
 page
-""""
+====
 
 :aspect:`getText Key:`
    page
@@ -601,7 +608,7 @@ page
 .. _data-type-gettext-pagelayout:
 
 pagelayout
-""""""""""
+==========
 :aspect:`getText Key:`
    pagelayout
 
@@ -619,7 +626,7 @@ pagelayout
 .. _data-type-gettext-parameters:
 
 parameters
-""""""""""
+==========
 
 :aspect:`getText Key:`
    parameters
@@ -630,7 +637,7 @@ parameters
 :aspect:`Description:`
    See :ref:`parsefunc`.
 
-   .. Why is parsefunc usefull here?
+   .. Why is parsefunc useful here?
 
 :aspect:`Example:`
    Get content from :php:`$cObj->parameters['color']`:
@@ -643,7 +650,7 @@ parameters
 .. _data-type-gettext-path:
 
 path
-""""
+====
 
 :aspect:`getText Key:`
    path
@@ -663,7 +670,7 @@ path
 .. _data-type-gettext-register:
 
 register
-""""""""
+========
 
 :aspect:`getText Key:`
    register
@@ -685,7 +692,7 @@ register
 .. _data-type-gettext-session:
 
 session
-"""""""
+=======
 
 :aspect:`getText Key:`
    session
@@ -708,7 +715,7 @@ session
 .. _data-type-site:
 
 site
-""""
+====
 
 :aspect:`Data type:`
    site
@@ -749,7 +756,7 @@ site
 .. _data-type-siteLanguage:
 
 siteLanguage
-""""""""""""
+============
 
 :aspect:`Data type:`
    siteLanguage
@@ -795,7 +802,7 @@ siteLanguage
 .. _data-type-gettext-tsfe:
 
 TSFE
-""""
+====
 
 :aspect:`getText Key:`
    TSFE
