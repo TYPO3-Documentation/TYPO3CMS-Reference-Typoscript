@@ -27,7 +27,7 @@ Data / getText
     their possible codes are described below.
 
     The :typoscript:`code` can contain pipe characters :typoscript:`|` to separate keys
-    in a multi-dimensional array. This e.g. works with :typoscript:`TSFE`:
+    in a multidimensional array. This e.g. works with :typoscript:`TSFE`:
 
     ..  code-block:: typoscript
         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
@@ -637,7 +637,7 @@ parameters
 :aspect:`Description:`
    See :ref:`parsefunc`.
 
-   .. Why is parsefunc usefull here?
+   .. Why is parsefunc useful here?
 
 :aspect:`Example:`
    Get content from :php:`$cObj->parameters['color']`:
