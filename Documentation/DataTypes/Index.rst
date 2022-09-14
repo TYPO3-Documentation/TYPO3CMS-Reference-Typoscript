@@ -19,6 +19,8 @@ RGB-values have to be provided.
 The following is a list of available data types, their usage, purpose and
 examples.
 
+.. contents::
+   :local:
 
 .. index:: Simple data types; align
 .. _data-type-align:
