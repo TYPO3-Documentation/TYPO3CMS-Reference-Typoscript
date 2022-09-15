@@ -6,7 +6,7 @@
 makelinks
 =========
 
-makelinks substitutes all appearances of web addresses or mail links
+:typoscript:`makelinks` substitutes all appearances of web addresses or mail links
 with a real link-tag. Web addresses and mail links must be contained in
 the text in the following form:
 
@@ -17,10 +17,35 @@ the text in the following form:
    mailto:name@example.org
 
 
+.. contents::
+   :local:
+
+.. index:: makelinks; Properties
+.. _makelinks-properties:
+
+Properties
+==========
+
+.. _makelinks-http:
+
+http
+----
+
+Substitutes all external web addresses with a link tag so they are displayed
+as a link.
+
+Can handle links of the form:
+
+..  code-block:: none
+
+    https://example.org
+    http://example.org
+
+
 .. _makelinks-http-extTarget:
 
 http.extTarget
-==============
+~~~~~~~~~~~~~~
 
 :aspect:`Property`
    http.extTarget
@@ -37,7 +62,7 @@ http.extTarget
 .. _makelinks-http-wrap:
 
 http.wrap
-=========
+~~~~~~~~~
 
 :aspect:`Property`
    http.wrap
@@ -51,7 +76,7 @@ http.wrap
 .. _makelinks-http-ATagBeforeWrap:
 
 http.ATagBeforeWrap
-===================
+~~~~~~~~~~~~~~~~~~~
 
 :aspect:`Property`
    http.ATagBeforeWrap
@@ -69,7 +94,7 @@ http.ATagBeforeWrap
 .. _makelinks-http-keep:
 
 http.keep
-=========
+~~~~~~~~~
 
 :aspect:`Property`
    http.keep
@@ -95,7 +120,7 @@ http.keep
 .. _makelinks-http-ATagParams:
 
 http.ATagParams
-===============
+~~~~~~~~~~~~~~~
 
 :aspect:`Property`
    http.ATagParams
@@ -112,10 +137,23 @@ http.ATagParams
 
       http.ATagParams = class="board"
 
+.. _makelinks-mailto:
+
+mailto
+------
+
+Substitutes all appearances of mail addresses
+with a link tag. Mail addresses must be contained in
+the text in the following form:
+
+.. code-block:: none
+
+   mailto:name@example.org
+
 .. _makelinks-mailto.wrap:
 
 mailto.wrap
-===========
+~~~~~~~~~~~
 
 :aspect:`Property`
    mailto.wrap
@@ -129,7 +167,7 @@ mailto.wrap
 .. _makelinks-mailto.ATagBeforeWrap:
 
 mailto.ATagBeforeWrap
-=====================
+~~~~~~~~~~~~~~~~~~~~~
 
 :aspect:`Property`
    mailto.ATagBeforeWrap
@@ -147,7 +185,7 @@ mailto.ATagBeforeWrap
 .. _makelinks-mailto.ATagParams:
 
 mailto.ATagParams
-=================
+~~~~~~~~~~~~~~~~~
 
 :aspect:`Property`
    mailto.ATagParams

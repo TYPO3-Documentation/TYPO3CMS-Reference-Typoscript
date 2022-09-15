@@ -10,11 +10,19 @@ This property returns the input value padded to a certain length. The
 padding is added on the left side, the right side or on both sides.
 strPad uses the PHP function :php:`str_pad()` for the operation.
 
+.. contents::
+   :local:
+
+.. index:: strPad; Properties
+.. _strPad-properties:
+
+Properties
+==========
 
 .. _strpad-length:
 
 length
-======
+------
 
 :aspect:`Property`
    length
@@ -33,7 +41,7 @@ length
 .. _strpad-padwith:
 
 padWith
-=======
+-------
 
 :aspect:`Property`
    padWith
@@ -54,7 +62,7 @@ padWith
 .. _strpad-type:
 
 type
-====
+----
 
 :aspect:`Property`
    type
@@ -68,7 +76,6 @@ type
 
 :aspect:`Default`
    right
-
 
 .. _strpad-examples:
 

@@ -11,12 +11,20 @@ parseFunc
 This object is used to parse some content for stuff like special typo
 tags, the :ref:`parsefunc-makeLinks`-things and so on...
 
+.. contents::
+   :local:
+
+.. index:: parsefunc; Properties
+.. _parsefunc-properties:
+
+Properties
+==========
 
 .. index:: parseFunc; externalBlocks
 .. _parsefunc-externalBlocks:
 
 externalBlocks
-==============
+--------------
 
 :aspect:`Property`
    externalBlocks
@@ -114,7 +122,7 @@ externalBlocks
 .. _parsefunc-constants:
 
 constants
-=========
+---------
 
 :aspect:`Property`
    constants
@@ -148,7 +156,7 @@ constants
 .. _parsefunc-short:
 
 short
-=====
+-----
 
 :aspect:`Property`
    short
@@ -176,7 +184,7 @@ short
 .. _parsefunc-plainTextStdWrap:
 
 plainTextStdWrap
-================
+----------------
 
 :aspect:`Property`
    plainTextStdWrap
@@ -191,7 +199,7 @@ plainTextStdWrap
 .. _parsefunc-userFunc:
 
 userFunc
-========
+--------
 
 :aspect:`Property`
    userFunc
@@ -209,7 +217,7 @@ userFunc
 .. _parsefunc-nonTypoTagStdWrap:
 
 nonTypoTagStdWrap
-=================
+-----------------
 
 :aspect:`Property`
    nonTypoTagStdWrap
@@ -229,7 +237,7 @@ nonTypoTagStdWrap
 .. _parsefunc-nonTypoTagUserFunc:
 
 nonTypoTagUserFunc
-==================
+------------------
 
 :aspect:`Property`
    nonTypoTagUserFunc
@@ -249,7 +257,7 @@ nonTypoTagUserFunc
 .. _parsefunc-makelinks:
 
 makelinks
-=========
+---------
 
 :aspect:`Property`
    makelinks
@@ -265,7 +273,7 @@ makelinks
 .. _parsefunc-tags:
 
 tags
-====
+----
 
 :aspect:`Property`
    tags
@@ -282,7 +290,7 @@ tags
 .. _parsefunc-allowTags:
 
 allowTags
-=========
+---------
 
 :aspect:`Property`
    allowTags
@@ -301,7 +309,7 @@ allowTags
 .. _parsefunc-denyTags:
 
 denyTags
-========
+--------
 
 :aspect:`Property`
    denyTags
@@ -331,7 +339,7 @@ denyTags
 .. _parsefunc-if:
 
 if
-==
+--
 
 :aspect:`Property`
    if

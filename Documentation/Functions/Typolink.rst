@@ -19,47 +19,20 @@ must set the property by :typoscript:`returnLast = url` or
    If this is used from :typoscript:`parseFunc` the :php:`$cObj->parameters` array is
    loaded with the lowercased link-parameters!
 
-Examples
-========
+.. contents::
+   :local:
 
-Create a link to page with uid 2:
+.. index:: tags; Properties
+.. _tags-properties:
 
-.. code-block:: typoscript
-   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-   page.20 = TEXT
-   page.20.value = anchor text
-   page.20.typolink.parameter = 2
-
-Output:
-
-.. code-block:: html
-   :caption: Example output
-
-   <a href="/somepage">anchor text</a>
-
-Just display the URL:
-
-.. code-block:: typoscript
-   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-   page.30 = TEXT
-   page.30.typolink.parameter = 2
-   page.30.typolink.returnLast = url
-
-Output:
-
-.. code-block:: html
-   :caption: Example output
-
-   /somepage
-
+Properties
+==========
 
 .. index:: typolink; extTarget
 .. _typolink-extTarget:
 
 extTarget
-=========
+---------
 
 :aspect:`Property`
    extTarget
@@ -78,7 +51,7 @@ extTarget
 .. _typolink-fileTarget:
 
 fileTarget
-==========
+----------
 
 :aspect:`Property`
    fileTarget
@@ -94,7 +67,7 @@ fileTarget
 .. _typolink-language:
 
 language
-========
+--------
 
 :aspect:`Property`
    language
@@ -123,7 +96,7 @@ language
 .. _typolink-target:
 
 target
-======
+------
 
 :aspect:`Property`
    target
@@ -139,7 +112,7 @@ target
 .. _typolink-no-cache:
 
 no\_cache
-=========
+---------
 
 :aspect:`Property`
    no\_cache
@@ -155,7 +128,7 @@ no\_cache
 .. _typolink-additionalParams:
 
 additionalParams
-================
+----------------
 
 :aspect:`Property`
    additionalParams
@@ -191,7 +164,7 @@ additionalParams
 .. _typolink-addQueryString:
 
 addQueryString
-==============
+--------------
 
 :aspect:`Property`
    addQueryString
@@ -232,7 +205,7 @@ addQueryString
 .. _typolink-wrap:
 
 wrap
-====
+----
 
 :aspect:`Property`
    wrap
@@ -248,7 +221,7 @@ wrap
 .. _typolink-ATagBeforeWrap:
 
 ATagBeforeWrap
-==============
+--------------
 
 :aspect:`Property`
    ATagBeforeWrap
@@ -268,7 +241,7 @@ ATagBeforeWrap
 .. _typolink-parameter:
 
 parameter
-=========
+---------
 
 :aspect:`Property`
    parameter
@@ -408,7 +381,7 @@ parameter
 .. _typolink-forceAbsoluteUrl:
 
 forceAbsoluteUrl
-================
+----------------
 
 :aspect:`Property`
    forceAbsoluteUrl
@@ -443,7 +416,7 @@ forceAbsoluteUrl
 .. _typolink-title:
 
 title
-=====
+-----
 
 :aspect:`Property`
    title
@@ -459,7 +432,7 @@ title
 .. _typolink-JSwindow-params:
 
 JSwindow\_params
-================
+----------------
 
 :aspect:`Property`
    JSwindow\_params
@@ -481,7 +454,7 @@ JSwindow\_params
 .. _typolink-returnLast:
 
 returnLast
-==========
+----------
 
 :aspect:`Property`
    returnLast
@@ -503,7 +476,7 @@ returnLast
 .. _typolink-section:
 
 section
-=======
+-------
 
 :aspect:`Property`
    section
@@ -523,7 +496,7 @@ section
 .. _typolink-ATagParams:
 
 ATagParams
-==========
+----------
 
 :aspect:`Property`
    ATagParams
@@ -546,7 +519,7 @@ ATagParams
 .. _typolink-linkAccessRestrictedPages:
 
 linkAccessRestrictedPages
-=========================
+-------------------------
 
 :aspect:`Property`
    linkAccessRestrictedPages
@@ -563,7 +536,7 @@ linkAccessRestrictedPages
 .. _typolink-userFunc:
 
 userFunc
-========
+--------
 
 :aspect:`Property`
    userFunc
@@ -785,6 +758,42 @@ Aspects `identifier` and `uid` are mandatory for this link handler.
               additionalParams.wrap = &tx_myextension[uid]= | &tx_myextension[action]=show
           }
       }
+
+
+Examples
+========
+
+Create a link to page with uid 2:
+
+.. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+   page.20 = TEXT
+   page.20.value = anchor text
+   page.20.typolink.parameter = 2
+
+Output:
+
+.. code-block:: html
+   :caption: Example output
+
+   <a href="/somepage">anchor text</a>
+
+Just display the URL:
+
+.. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+   page.30 = TEXT
+   page.30.typolink.parameter = 2
+   page.30.typolink.returnLast = url
+
+Output:
+
+.. code-block:: html
+   :caption: Example output
+
+   /somepage
 
 
 .. _typolink-link-handler:

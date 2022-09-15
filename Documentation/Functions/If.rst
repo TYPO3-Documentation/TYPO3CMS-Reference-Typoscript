@@ -20,11 +20,17 @@ There is no else property available. The else branch of an if statement is a mis
 
 Also check the explanations and the examples further below!
 
+.. contents::
+   :local:
+
+Properties
+==========
+
 .. index:: if; directReturn
 .. _if-directreturn:
 
 directReturn
-============
+------------
 
 :aspect:`Property`
    directReturn
@@ -42,7 +48,7 @@ directReturn
 .. _if-isnull:
 
 isNull
-======
+------
 
 :aspect:`Property`
    isNull
@@ -75,7 +81,7 @@ isNull
 .. _if-istrue:
 
 isTrue
-======
+------
 
 :aspect:`Property`
    isTrue
@@ -91,7 +97,7 @@ isTrue
 .. _if-isfalse:
 
 isFalse
-=======
+-------
 
 :aspect:`Property`
    isFalse
@@ -107,7 +113,7 @@ isFalse
 .. _if-ispositive:
 
 isPositive
-==========
+----------
 
 :aspect:`Property`
    isPositive
@@ -123,7 +129,7 @@ isPositive
 .. _if-isgreaterthan:
 
 isGreaterThan
-=============
+-------------
 
 :aspect:`Property`
    isGreaterThan
@@ -139,7 +145,7 @@ isGreaterThan
 .. _if-islessthan:
 
 isLessThan
-==========
+----------
 
 :aspect:`Property`
    isLessThan
@@ -155,7 +161,7 @@ isLessThan
 .. _if-bitand:
 
 bitAnd
-======
+------
 
 :aspect:`Property`
    bitAnd
@@ -190,7 +196,7 @@ bitAnd
 .. _if-equals:
 
 equals
-======
+------
 
 :aspect:`Property`
    equals
@@ -213,7 +219,7 @@ equals
 .. _if-isinlist:
 
 isInList
-========
+--------
 
 :aspect:`Property`
    isInList
@@ -241,7 +247,7 @@ isInList
 .. _if-value:
 
 value
-=====
+-----
 
 :aspect:`Property`
    value
@@ -252,12 +258,11 @@ value
 :aspect:`Description`
    The value to check. This is the comparison value mentioned above.
 
-
 .. index:: if; negate
 .. _if-negate:
 
 negate
-======
+------
 
 :aspect:`Property`
    negate
@@ -326,7 +331,6 @@ If they are both true, the total is true (both are connected with an AND).
 BUT(!) then the result of the function in total would be false because the
 :typoscript:`negate`-flag inverts the result!
 
-
 .. _if-examples:
 
 Examples
@@ -346,4 +350,3 @@ the field "newUntil" has a date less than the current date!
        isLessThan.field = newUntil
        negate = 1
    }
-

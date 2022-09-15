@@ -11,10 +11,19 @@ current content with the possibility of using PCRE regular expressions.
 An array with numeric indices defines the order of actions and thus
 allows multiple replacements at once.
 
+.. contents::
+   :local:
+
+.. index:: replacement; Properties
+.. _replacement-properties:
+
+Properties
+==========
+
 .. _replacement-search:
 
 search
-======
+------
 
 :aspect:`Property`
    search
@@ -28,7 +37,7 @@ search
 .. _replacement-replace:
 
 replace
-=======
+-------
 
 :aspect:`Property`
    replace
@@ -42,7 +51,7 @@ replace
 .. _replacement-useregexp:
 
 useRegExp
-=========
+---------
 
 :aspect:`Property`
    useRegExp
@@ -70,7 +79,7 @@ useRegExp
 .. _replacement-useoptionsplitreplace:
 
 useOptionSplitReplace
-=====================
+---------------------
 
 :aspect:`Property`
    useOptionSplitReplace
