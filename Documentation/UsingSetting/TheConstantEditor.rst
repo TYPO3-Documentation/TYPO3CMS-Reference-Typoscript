@@ -264,8 +264,6 @@ options [item1,item2,...]    Selectbox with values/labels item1, item2 etc. Comm
 
 boolean [truevalue]          Boolean, optional can define the value of "true", default is 1.
 
-comment                      Boolean, checked= "", not-checked = "#".
-
 string (the default)         A string value
 
 user                         Path to the file and method which renders the option HTML,
