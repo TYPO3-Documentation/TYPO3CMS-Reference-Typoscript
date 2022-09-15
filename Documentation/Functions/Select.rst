@@ -21,88 +21,19 @@ in the :php:`$GLOBALS['TCA']`.
    Avoid SQL injections! Don't trust any external data! Secure
    any unknown data, for example with :ref:`intval <stdwrap-intval>`.
 
-.. _selectQuotingOfFields:
+.. contents::
+   :local:
 
-Quoting of fields
-=================
+.. index:: select; Properties
+.. _select-properties:
 
-.. versionadded:: 8.7
-
-   It is possible to use `{#fieldname}` to make the database
-   framework quote these fields (see :doc:`ext_core:Changelog/8.7/Important-80506-DbalCompatibleFieldQuotingInTypoScript`):
-
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-      select.where = ({#title} LIKE {#%SOMETHING%} AND NOT {#doktype})
-
-This applies to:
-
-* :typoscript:`select.where`
-
-but not to:
-
-* :typoscript:`select.groupBy`
-* :typoscript:`select.orderBy`
-
-as these parameters already follow a stricter syntax that allow automatic parsing and
-quoting.
-
-Comprehensive example
-=====================
-
-See PHP source code for
-:php:`\TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer`,
-:php:`ContentObjectRenderer::getQuery()`,
-:php:`ContentObjectRenderer::getWhere()`.
-
-
-.. Preamble: :
-   # Note: TypoScript (TS) is just another way to define an array of settings which
-   #       is later on INTERPRETED by TYPO3. TypoScript can be written in ANY order
-   #       as long as it leads to the same array. Actual execution order is TOTALLY
-   #       INDEPENDENT of TypoScript code order.
-   #
-   #       The order of TS in this example however tries to reflect execution order.
-   #       The denoted steps are taking place in that order at execution time.
-
-Condensed form:
-
-.. code-block:: typoscript
-   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-   10 = CONTENT
-   10 {
-      table =
-      select {
-         uidInList =
-         pidInList =
-         recursive =
-         orderBy =
-         groupBy =
-         max =
-         begin =
-         where =
-         languageField =
-         includeRecordsWithoutDefaultTranslation =
-         selectFields =
-         join =
-         leftjoin =
-         rightjoin =
-      }
-   }
-
-
-.. Expanded form::
-   //
-   See also: :ref:`if`, :ref:`select`, :ref:`data-type-wrap`, :ref:`stdWrap`, :ref:`data-type-cobject`
-
-
+Properties
+==========
 
 .. _select-uidInList:
 
 uidInList
-=========
+---------
 
 :aspect:`Property`
    uidInList
@@ -138,7 +69,7 @@ uidInList
 .. _select-pidInList:
 
 pidInList
-=========
+---------
 
 :aspect:`Property`
    pidInList
@@ -212,7 +143,7 @@ pidInList
 .. _select-recursive:
 
 recursive
-=========
+---------
 
 :aspect:`Property`
    recursive
@@ -230,7 +161,7 @@ recursive
 .. _select-orderBy:
 
 orderBy
-=======
+-------
 
 :aspect:`Property`
    orderBy
@@ -251,7 +182,7 @@ orderBy
 .. _select-groupBy:
 
 groupBy
-=======
+-------
 
 :aspect:`Property`
    groupBy
@@ -272,7 +203,7 @@ groupBy
 .. _select-max:
 
 max
-===
+---
 
 :aspect:`Property`
    max
@@ -289,7 +220,7 @@ max
 .. _select-begin:
 
 begin
-=====
+-----
 
 :aspect:`Property`
       begin
@@ -307,7 +238,7 @@ begin
 .. _select-where:
 
 where
-=====
+-----
 
 :aspect:`Property`
       where
@@ -336,7 +267,7 @@ where
 .. _select-languageField:
 
 languageField
-=============
+-------------
 
 :aspect:`Property`
    languageField
@@ -357,7 +288,7 @@ languageField
 .. _select-includeRecordsWithoutDefaultTranslation:
 
 includeRecordsWithoutDefaultTranslation
-=======================================
+---------------------------------------
 
 :aspect:`Property`
    includeRecordsWithoutDefaultTranslation
@@ -377,7 +308,7 @@ includeRecordsWithoutDefaultTranslation
 .. _select-selectFields:
 
 selectFields
-============
+------------
 
 :aspect:`Property`
    selectFields
@@ -402,7 +333,7 @@ selectFields
 .. _select-rightjoin:
 
 join, leftjoin, rightjoin
-=========================
+-------------------------
 
 :aspect:`Property`
    join, leftjoin, rightjoin
@@ -418,7 +349,7 @@ join, leftjoin, rightjoin
 .. _select-markers:
 
 markers
-=======
+-------
 
 :aspect:`Property`
    markers
@@ -491,3 +422,78 @@ markers
    This examples selects all records from the table tt_content which are on page 73
    and which don't have a header set to a value constructed by whatever.value and
    whatever.wrap ('something').
+
+
+.. _selectQuotingOfFields:
+
+Quoting of fields
+=================
+
+It is possible to use `{#fieldname}` to make the database
+framework quote these fields (see :doc:`ext_core:Changelog/8.7/Important-80506-DbalCompatibleFieldQuotingInTypoScript`):
+
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+    select.where = ({#title} LIKE {#%SOMETHING%} AND NOT {#doktype})
+
+This applies to:
+
+* :typoscript:`select.where`
+
+but not to:
+
+* :typoscript:`select.groupBy`
+* :typoscript:`select.orderBy`
+
+as these parameters already follow a stricter syntax that allow automatic parsing and
+quoting.
+
+Example
+=======
+
+See PHP source code for
+:php:`\TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer`,
+:php:`ContentObjectRenderer::getQuery()`,
+:php:`ContentObjectRenderer::getWhere()`.
+
+
+.. Preamble: :
+# Note: TypoScript (TS) is just another way to define an array of settings which
+#       is later on INTERPRETED by TYPO3. TypoScript can be written in ANY order
+#       as long as it leads to the same array. Actual execution order is TOTALLY
+#       INDEPENDENT of TypoScript code order.
+#
+#       The order of TS in this example however tries to reflect execution order.
+#       The denoted steps are taking place in that order at execution time.
+
+Condensed form:
+
+.. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+   10 = CONTENT
+   10 {
+      table =
+      select {
+         uidInList =
+         pidInList =
+         recursive =
+         orderBy =
+         groupBy =
+         max =
+         begin =
+         where =
+         languageField =
+         includeRecordsWithoutDefaultTranslation =
+         selectFields =
+         join =
+         leftjoin =
+         rightjoin =
+      }
+   }
+
+
+.. Expanded form::
+//
+See also: :ref:`if`, :ref:`select`, :ref:`data-type-wrap`, :ref:`stdWrap`, :ref:`data-type-cobject`

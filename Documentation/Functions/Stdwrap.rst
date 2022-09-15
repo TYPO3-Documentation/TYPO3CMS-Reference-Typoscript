@@ -4,12 +4,6 @@
    stdWrap
 .. highlight:: typoscript
 
-
-.. The label objects-stdwrap should no longer be used.
-.. Use the label stdwrap instead.
-.. It only remains here, in case it is still being used.
-
-.. _objects-stdwrap:
 .. _stdwrap:
 
 =======
@@ -21,73 +15,24 @@ is parsed through the stdWrap function with the properties of the
 value as parameters.
 
 
-.. _stdwrap-examples:
+.. index:: select; Properties
+.. _select-properties:
 
-Example
-=======
-
-Example with the property "value" of the content object ":ref:`cobj-text`":
-
-.. code-block:: typoscript
-   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-   10 = TEXT
-   10.value = some text
-   10.stdWrap.case = upper
-
-Here the content of the object "10" is uppercased before it is
-returned.
-
-
-.. index:: stdWrap; Content-supplying properties
-.. _stdwrap-content-supplying:
-
-Content-supplying properties of stdWrap
-=======================================
-
-stdWrap contains properties which determine what is applied. The properties
-are listed below.
-
-The properties are parsed in the listed order. The
-properties :typoscript:`data`, :typoscript:`field`, :typoscript:`current`, :typoscript:`cObject`
-(in that order!) are special as they are used to import content
-from variables or arrays.
-
-If you want to study this further please refer to
-:file:`typo3/sysext/frontend/Classes/ContentObject/ContentObjectRenderer.php`,
-where you will find the function :php:`stdWrap()` and the array :php:`$stdWrapOrder`,
-which represents the exact order of execution.
-
-Note that the :typoscript:`stdWrap` property "orderedStdWrap" allows you to execute
-multiple :typoscript:`stdWrap` functions in a freely selectable order.
-
-The above example could be rewritten to this:
-
-.. code-block:: typoscript
-   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-   10 = TEXT
-   10.value = some text
-   10.stdWrap.case = upper
-   10.stdWrap.field = header
-
-Now the line :typoscript:`10.value = some text` is obsolete, because the whole
-value is "imported" from the field called "header" from the
-:php:`$cObj->data-array`.
-
+Properties
+==========
 
 .. index:: stdWrap; Getting data
 .. _stdwrap-get-data:
 
-Getting data
-============
+Properties for getting data
+----------------------------
 
 
 .. index:: stdWrap; setContentToCurrent
 .. _stdwrap-setcontenttocurrent:
 
 setContentToCurrent
--------------------
+~~~~~~~~~~~~~~~~~~~
 
 :aspect:`Property`
    setContentToCurrent
@@ -103,7 +48,7 @@ setContentToCurrent
 .. _stdwrap-addpagecachetags:
 
 addPageCacheTags
-----------------
+~~~~~~~~~~~~~~~~
 
 :aspect:`Property`
    addPageCacheTags
@@ -137,7 +82,7 @@ addPageCacheTags
 .. _stdwrap-setcurrent:
 
 setCurrent
-----------
+~~~~~~~~~~
 
 :aspect:`Property`
    setCurrent
@@ -154,7 +99,7 @@ setCurrent
 .. _stdwrap-lang:
 
 lang
-----
+~~~~
 
 :aspect:`Property`
    lang
@@ -181,7 +126,7 @@ lang
 .. _stdwrap-data:
 
 data
-----
+~~~~
 
 :aspect:`Property`
    data
@@ -194,7 +139,7 @@ data
 .. _stdwrap-field:
 
 field
------
+~~~~~
 
 :aspect:`Property`
    field
@@ -235,7 +180,7 @@ field
 .. _stdwrap-current:
 
 current
--------
+~~~~~~~
 
 :aspect:`Property`
    current
@@ -251,7 +196,7 @@ current
 .. _stdwrap-cobject:
 
 cObject
--------
+~~~~~~~
 
 :aspect:`Property`
    cObject
@@ -267,7 +212,7 @@ cObject
 .. _stdwrap-numrows:
 
 numRows
--------
+~~~~~~~
 
 :aspect:`Property`
    numRows
@@ -282,7 +227,7 @@ numRows
 .. _stdwrap-preuserfunc:
 
 preUserFunc
------------
+~~~~~~~~~~~
 
 :aspect:`Property`
    preUserFunc
@@ -305,15 +250,14 @@ preUserFunc
 .. index:: stdWrap; Override and conditions
 .. _stdwrap-override-conditions:
 
-Override and conditions
-=======================
-
+Properties for overriding and conditions
+----------------------------------------
 
 .. index:: stdWrap; override
 .. _stdwrap-override:
 
 override
---------
+~~~~~~~~
 
 :aspect:`Property`
    override
@@ -330,7 +274,7 @@ override
 .. _stdwrap-preifemptylistnum:
 
 preIfEmptyListNum
------------------
+~~~~~~~~~~~~~~~~~
 
 :aspect:`Property`
    preIfEmptyListNum
@@ -346,7 +290,7 @@ preIfEmptyListNum
 .. _stdwrap-ifnull:
 
 ifNull
-------
+~~~~~~
 
 :aspect:`Property`
    ifNull
@@ -379,7 +323,7 @@ ifNull
 .. _stdwrap-ifempty:
 
 ifEmpty
--------
+~~~~~~~
 
 :aspect:`Property`
    ifEmpty
@@ -396,7 +340,7 @@ ifEmpty
 .. _stdwrap-ifblank:
 
 ifBlank
--------
+~~~~~~~
 
 :aspect:`Property`
    ifBlank
@@ -413,7 +357,7 @@ ifBlank
 .. _stdwrap-listnum:
 
 listNum
--------
+~~~~~~~
 
 :aspect:`Property`
    listNum
@@ -473,7 +417,7 @@ listNum
 .. _stdwrap-trim:
 
 trim
-----
+~~~~
 
 :aspect:`Property`
    trim
@@ -490,7 +434,7 @@ trim
 .. _stdwrap-strpad:
 
 strPad
-------
+~~~~~~
 
 :aspect:`Property`
    strPad
@@ -507,7 +451,7 @@ strPad
 .. _stdwrap-stdwrap:
 
 stdWrap
--------
+~~~~~~~
 
 :aspect:`Property`
    stdWrap
@@ -523,7 +467,7 @@ stdWrap
 .. _stdwrap-required:
 
 required
---------
+~~~~~~~~
 
 :aspect:`Property`
    required
@@ -560,7 +504,7 @@ if
 .. _stdwrap-fieldrequired:
 
 fieldRequired
--------------
+~~~~~~~~~~~~~
 
 :aspect:`Property`
    fieldRequired
@@ -575,15 +519,14 @@ fieldRequired
 .. index:: stdWrap; Parsing data
 .. _stdwrap-parsedata:
 
-Parsing data
-============
-
+Properies for parsing data
+--------------------------
 
 .. index:: stdWrap; csConv
 .. _stdwrap-csconv:
 
 csConv
-------
+~~~~~~
 
 :aspect:`Property`
    csConv
@@ -600,7 +543,7 @@ csConv
 .. _stdwrap-parsefunc:
 
 parseFunc
----------
+~~~~~~~~~
 
 :aspect:`Property`
    parseFunc
@@ -684,7 +627,7 @@ solved by explicitly disabling it with :typoscript:`htmlSanitize = 0`.
 .. _stdwrap-htmlparser:
 
 HTMLparser
-----------
+~~~~~~~~~~
 
 :aspect:`Property`
    HTMLparser
@@ -705,7 +648,7 @@ HTMLparser
 .. _stdwrap-split:
 
 split
------
+~~~~~
 
 :aspect:`Property`
    split
@@ -718,7 +661,7 @@ split
 .. _stdwrap-replacement:
 
 replacement
------------
+~~~~~~~~~~~
 
 :aspect:`Property`
    replacement
@@ -737,7 +680,7 @@ replacement
 .. _stdwrap-prioricalc:
 
 prioriCalc
-----------
+~~~~~~~~~~
 
 :aspect:`Property`
    prioriCalc
@@ -777,7 +720,7 @@ prioriCalc
 .. _stdwrap-char:
 
 char
-----
+~~~~
 
 :aspect:`Property`
    char
@@ -801,7 +744,7 @@ char
 .. _stdwrap-intval:
 
 intval
-------
+~~~~~~
 
 :aspect:`Property`
    intval
@@ -821,7 +764,7 @@ intval
 .. _stdwrap-hash:
 
 hash
-----
+~~~~
 
 :aspect:`Property`
    hash
@@ -850,7 +793,7 @@ hash
 .. _stdwrap-round:
 
 round
------
+~~~~~
 
 :aspect:`Property`
    round
@@ -867,7 +810,7 @@ round
 .. _stdwrap-numberformat:
 
 numberFormat
-------------
+~~~~~~~~~~~~
 
 :aspect:`Property`
    numberFormat
@@ -884,7 +827,7 @@ numberFormat
 .. _stdwrap-date:
 
 date
-----
+~~~~
 
 :aspect:`Property`
    date
@@ -925,7 +868,7 @@ date
 .. _stdwrap-strftime:
 
 strftime
---------
+~~~~~~~~
 
 :aspect:`Property`
    strftime
@@ -957,7 +900,7 @@ strftime
 .. _stdwrap-strtotime:
 
 strtotime
----------
+~~~~~~~~~
 
 :aspect:`Property`
    strtotime
@@ -996,7 +939,7 @@ strtotime
 .. _stdwrap-age:
 
 age
----
+~~~
 
 :aspect:`Property`
    age
@@ -1041,7 +984,7 @@ age
 .. _stdwrap-case:
 
 case
-----
+~~~~
 
 :aspect:`Property`
    case
@@ -1059,7 +1002,7 @@ case
 .. _stdwrap-bytes:
 
 bytes
------
+~~~~~
 
 :aspect:`Property`
    bytes
@@ -1231,7 +1174,7 @@ Format value 1000 with custom label and base=1024. Shows
 .. _stdwrap-substring:
 
 substring
----------
+~~~~~~~~~
 
 :aspect:`Property`
    substring
@@ -1250,7 +1193,7 @@ substring
 .. _stdwrap-crophtml:
 
 cropHTML
---------
+~~~~~~~~
 
 :aspect:`Property`
    cropHTML
@@ -1272,7 +1215,7 @@ cropHTML
 .. _stdwrap-striphtml:
 
 stripHtml
----------
+~~~~~~~~~
 
 :aspect:`Property`
    stripHtml
@@ -1288,7 +1231,7 @@ stripHtml
 .. _stdwrap-crop:
 
 crop
-----
+~~~~
 
 :aspect:`Property`
    crop
@@ -1337,7 +1280,7 @@ crop
 .. _stdwrap-rawurlencode:
 
 rawUrlEncode
-------------
+~~~~~~~~~~~~
 
 :aspect:`Property`
    rawUrlEncode
@@ -1353,7 +1296,7 @@ rawUrlEncode
 .. _stdwrap-htmlspecialchars:
 
 htmlSpecialChars
-----------------
+~~~~~~~~~~~~~~~~
 
 :aspect:`Property`
    htmlSpecialChars
@@ -1372,7 +1315,7 @@ htmlSpecialChars
 .. _stdwrap-encodeforjavascriptvalue:
 
 encodeForJavaScriptValue
-------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 :aspect:`Property`
    encodeForJavaScriptValue
@@ -1405,7 +1348,7 @@ encodeForJavaScriptValue
 .. _stdwrap-doublebrtag:
 
 doubleBrTag
------------
+~~~~~~~~~~~
 
 :aspect:`Property`
    doubleBrTag
@@ -1421,7 +1364,7 @@ doubleBrTag
 .. _stdwrap-br:
 
 br
---
+~~
 
 :aspect:`Property`
    br
@@ -1438,7 +1381,7 @@ br
 .. _stdwrap-brtag:
 
 brTag
------
+~~~~~
 
 :aspect:`Property`
    brTag
@@ -1455,7 +1398,7 @@ brTag
 .. _stdwrap-encapslines:
 
 encapsLines
------------
+~~~~~~~~~~~
 
 :aspect:`Property`
    encapsLines
@@ -1472,7 +1415,7 @@ encapsLines
 .. _stdwrap-keywords:
 
 keywords
---------
+~~~~~~~~
 
 :aspect:`Property`
    keywords
@@ -1489,7 +1432,7 @@ keywords
 .. _stdwrap-innerwrap:
 
 innerWrap
----------
+~~~~~~~~~
 
 :aspect:`Property`
    innerWrap
@@ -1505,7 +1448,7 @@ innerWrap
 .. _stdwrap-innerwrap2:
 
 innerWrap2
-----------
+~~~~~~~~~~
 
 :aspect:`Property`
    innerWrap2
@@ -1521,7 +1464,7 @@ innerWrap2
 .. _stdwrap-precobject:
 
 preCObject
-----------
+~~~~~~~~~~
 
 :aspect:`Property`
    preCObject
@@ -1537,7 +1480,7 @@ preCObject
 .. _stdwrap-postcobject:
 
 postCObject
------------
+~~~~~~~~~~~
 
 :aspect:`Property`
    postCObject
@@ -1553,7 +1496,7 @@ postCObject
 .. _stdwrap-wrapalign:
 
 wrapAlign
----------
+~~~~~~~~~
 
 :aspect:`Property`
    wrapAlign
@@ -1570,7 +1513,7 @@ wrapAlign
 .. _stdwrap-typolink:
 
 typolink
---------
+~~~~~~~~
 
 :aspect:`Property`
    typolink
@@ -1586,7 +1529,7 @@ typolink
 .. _stdwrap-wrap:
 
 wrap
-----
+~~~~
 
 :aspect:`Property`
    wrap
@@ -1603,7 +1546,7 @@ wrap
 .. _stdwrap-notrimwrap:
 
 noTrimWrap
-----------
+~~~~~~~~~~
 
 :aspect:`Property`
    noTrimWrap
@@ -1654,7 +1597,7 @@ noTrimWrap
 .. _stdwrap-wrap2:
 
 wrap2
------
+~~~~~
 
 :aspect:`Property`
    wrap2
@@ -1670,7 +1613,7 @@ wrap2
 .. _stdwrap-datawrap:
 
 dataWrap
---------
+~~~~~~~~
 
 :aspect:`Property`
    dataWrap
@@ -1697,7 +1640,7 @@ dataWrap
 .. _stdwrap-prepend:
 
 prepend
--------
+~~~~~~~
 
 :aspect:`Property`
    prepend
@@ -1713,7 +1656,7 @@ prepend
 .. _stdwrap-append:
 
 append
-------
+~~~~~~
 
 :aspect:`Property`
    append
@@ -1729,7 +1672,7 @@ append
 .. _stdwrap-wrap3:
 
 wrap3
------
+~~~~~
 
 :aspect:`Property`
    wrap3
@@ -1745,7 +1688,7 @@ wrap3
 .. _stdwrap-orderedstdwrap:
 
 orderedStdWrap
---------------
+~~~~~~~~~~~~~~
 
 :aspect:`Property`
    orderedStdWrap
@@ -1787,7 +1730,7 @@ orderedStdWrap
 .. _stdwrap-outerwrap:
 
 outerWrap
----------
+~~~~~~~~~
 
 :aspect:`Property`
    outerWrap
@@ -1803,7 +1746,7 @@ outerWrap
 .. _stdwrap-insertdata:
 
 insertData
-----------
+~~~~~~~~~~
 
 :aspect:`Property`
    insertData
@@ -1834,7 +1777,7 @@ insertData
 .. _stdwrap-postuserfunc:
 
 postUserFunc
-------------
+~~~~~~~~~~~~
 
 :aspect:`Property`
    postUserFunc
@@ -1944,7 +1887,7 @@ postUserFunc
 .. _stdwrap-postuserfuncint:
 
 postUserFuncInt
----------------
+~~~~~~~~~~~~~~~
 
 :aspect:`Property`
    postUserFuncInt
@@ -1973,7 +1916,7 @@ postUserFuncInt
 .. _stdwrap-prefixcomment:
 
 prefixComment
--------------
+~~~~~~~~~~~~~
 
 :aspect:`Property`
    prefixComment
@@ -2001,7 +1944,7 @@ prefixComment
 .. _stdwrap-cache:
 
 htmlSanitize
-------------
+~~~~~~~~~~~~
 
 .. index:: stdWrap; htmlSanitize
 .. _stdwrap-htmlsanitize:
@@ -2061,7 +2004,7 @@ htmlSanitize
 
 
 cache
------
+~~~~~
 
 :aspect:`Property`
    cache
@@ -2077,7 +2020,7 @@ cache
 .. _stdwrap-debug:
 
 debug
------
+~~~~~
 
 :aspect:`Property`
    debug
@@ -2099,7 +2042,7 @@ debug
 .. _stdwrap-debugfunc:
 
 debugFunc
----------
+~~~~~~~~~
 
 :aspect:`Property`
    debugFunc
@@ -2121,7 +2064,7 @@ debugFunc
 .. _stdwrap-debugdata:
 
 debugData
----------
+~~~~~~~~~
 
 :aspect:`Property`
    debugData
@@ -2136,3 +2079,59 @@ debugData
 .. attention::
 
    Only for debugging during development, otherwise output can break.
+
+
+
+.. _stdwrap-examples:
+
+Example
+=======
+
+Example with the property "value" of the content object ":ref:`cobj-text`":
+
+.. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+   10 = TEXT
+   10.value = some text
+   10.stdWrap.case = upper
+
+Here the content of the object "10" is uppercased before it is
+returned.
+
+
+.. index:: stdWrap; Content-supplying properties
+.. _stdwrap-content-supplying:
+
+Content-supplying properties of stdWrap
+=======================================
+
+stdWrap contains properties which determine what is applied. The properties
+are listed below.
+
+The properties are parsed in the listed order. The
+properties :typoscript:`data`, :typoscript:`field`, :typoscript:`current`, :typoscript:`cObject`
+(in that order!) are special as they are used to import content
+from variables or arrays.
+
+If you want to study this further please refer to
+:file:`typo3/sysext/frontend/Classes/ContentObject/ContentObjectRenderer.php`,
+where you will find the function :php:`stdWrap()` and the array :php:`$stdWrapOrder`,
+which represents the exact order of execution.
+
+Note that the :typoscript:`stdWrap` property "orderedStdWrap" allows you to execute
+multiple :typoscript:`stdWrap` functions in a freely selectable order.
+
+The above example could be rewritten to this:
+
+.. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+   10 = TEXT
+   10.value = some text
+   10.stdWrap.case = upper
+   10.stdWrap.field = header
+
+Now the line :typoscript:`10.value = some text` is obsolete, because the whole
+value is "imported" from the field called "header" from the
+:php:`$cObj->data-array`.

@@ -11,10 +11,19 @@ is used in conjunction with :ref:`parseFunc`.
 
 The best known is the "link" tag, which is used to create links.
 
+.. contents::
+   :local:
+
+.. index:: tags; Properties
+.. _tags-properties:
+
+Properties
+==========
+
 .. _tags-array-of-strings:
 
 *(array of strings)*
-====================
+--------------------
 
 :aspect:`Property`
    *(array of strings)*

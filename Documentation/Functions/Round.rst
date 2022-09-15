@@ -13,10 +13,19 @@ be used.
 The value will be converted to a float value before applying the
 selected round method.
 
+.. contents::
+   :local:
+
+.. index:: round; Properties
+.. _round-properties:
+
+Properties
+==========
+
 .. _round-roundtype:
 
 roundType
-=========
+---------
 
 :aspect:`Property`
    roundType
@@ -44,7 +53,7 @@ roundType
 .. _round-decimals:
 
 decimals
-========
+--------
 
 :aspect:`Property`
    decimals
@@ -63,7 +72,7 @@ decimals
 .. _round-round:
 
 round
-=====
+-----
 
 :aspect:`Property`
    round
@@ -80,8 +89,7 @@ round
 .. _round-examples:
 
 Examples
-""""""""
-
+========
 
 .. code-block:: typoscript
    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
@@ -95,4 +103,3 @@ Examples
    }
 
 This returns :code:`3.14`.
-

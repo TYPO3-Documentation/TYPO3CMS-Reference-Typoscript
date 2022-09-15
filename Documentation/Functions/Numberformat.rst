@@ -17,10 +17,19 @@ Since the properties are finally used by the PHP function
 :php:`number_format()`, you need to make sure that they are valid parameters
 for that function. Consult the PHP manual, if unsure.
 
+.. contents::
+   :local:
+
+.. index:: numberformat; Properties
+.. _numberformat-properties:
+
+Properties
+==========
+
 .. _numberformat-decimals:
 
 decimals
-========
+--------
 
 :aspect:`Property`
    decimals
@@ -40,7 +49,7 @@ decimals
 .. _numberformat-dec\_point:
 
 dec\_point
-==========
+----------
 
 :aspect:`Property`
    dec\_point
@@ -57,7 +66,7 @@ dec\_point
 .. _numberformat-thousands\_sep:
 
 thousands\_sep
-==============
+--------------
 
 :aspect:`Property`
    thousands\_sep
@@ -75,8 +84,7 @@ thousands\_sep
 .. _numberformat-examples:
 
 Examples
---------
-
+========
 
 .. code-block:: typoscript
    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript

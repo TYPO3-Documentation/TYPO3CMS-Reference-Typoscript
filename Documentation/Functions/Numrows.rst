@@ -12,10 +12,19 @@ This object allows you to specify a SELECT query, which will be
 executed in the database. The object then returns the number of
 rows, which were returned by the query.
 
+.. contents::
+   :local:
+
+.. index:: _numRows; Properties
+.. _numRows-properties:
+
+Properties
+==========
+
 .. _numrows-table:
 
 table
-=====
+-----
 
 :aspect:`Property`
    table
@@ -29,7 +38,7 @@ table
 .. _numrows-select:
 
 select
-======
+------
 
 :aspect:`Property`
    select

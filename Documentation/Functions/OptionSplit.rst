@@ -1,13 +1,6 @@
 .. include:: /Includes.rst.txt
 .. index:: pair:Functions; optionSplit
-.. we keep the old label objects-optionsplit,
-   in case it is still used.
 
-.. The label objects-optionsplit should no longer be used.
-.. Use the label optionsplit instead.
-.. It only remains here, in case it is still being used.
-
-.. _objects-optionsplit:
 .. _optionsplit:
 
 ===========

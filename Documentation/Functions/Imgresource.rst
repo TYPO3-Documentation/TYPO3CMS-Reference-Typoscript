@@ -11,12 +11,20 @@ imgResource
 imgResource contains the properties that are used with the data type
 imgResource.
 
+.. contents::
+   :local:
+
+.. index:: imgResource; Properties
+.. _imgresource-properties:
+
+Properties
+==========
 
 .. index:: imgResource;
 .. _imgresource-ext:
 
 ext
-===
+---
 
 :aspect:`Property`
    ext
@@ -39,7 +47,7 @@ ext
 .. _imgresource-width:
 
 width
-=====
+-----
 
 :aspect:`Property`
    width
@@ -103,7 +111,7 @@ width
 .. _imgresource-height:
 
 height
-======
+------
 
 :aspect:`Property`
    height
@@ -119,7 +127,7 @@ height
 .. _imgresource-params:
 
 params
-======
+------
 
 :aspect:`Property`
    params
@@ -136,7 +144,7 @@ params
 .. _imgresource-sample:
 
 sample
-======
+------
 
 :aspect:`Property`
    sample
@@ -155,7 +163,7 @@ sample
 .. _imgresource-noscale:
 
 noScale
-=======
+-------
 
 :aspect:`Property`
    noScale
@@ -196,7 +204,7 @@ noScale
 .. _imgresource-crop:
 
 crop
-====
+----
 
 :aspect:`Property`
    crop
@@ -231,7 +239,7 @@ crop
 .. _imgresource-cropvariant:
 
 cropVariant
-===========
+-----------
 
 :aspect:`Property`
    cropVariant
@@ -261,7 +269,7 @@ cropVariant
 .. _imgresource-frame:
 
 frame
-=====
+-----
 
 :aspect:`Property`
    frame
@@ -279,7 +287,7 @@ frame
 .. _imgresource-import:
 
 import
-======
+------
 
 :aspect:`Property`
    import
@@ -310,7 +318,7 @@ import
 .. _imgresource-treatidasreference:
 
 treatIdAsReference
-==================
+------------------
 
 :aspect:`Property`
    treatIdAsReference
@@ -329,7 +337,7 @@ treatIdAsReference
 .. _imgresource-maxw:
 
 maxW
-====
+----
 
 :aspect:`Property`
    maxW
@@ -343,7 +351,7 @@ maxW
 .. _imgresource-maxh:
 
 maxH
-====
+----
 
 :aspect:`Property`
    maxH
@@ -357,7 +365,7 @@ maxH
 .. _imgresource-minw:
 
 minW
-====
+----
 
 :aspect:`Property`
    minW
@@ -371,7 +379,7 @@ minW
 .. _imgresource-minh:
 
 minH
-====
+----
 
 :aspect:`Property`
    minH
@@ -387,7 +395,7 @@ minH
 .. _imgresource-stripprofile:
 
 stripProfile
-============
+------------
 
 :aspect:`Property`
       stripProfile
@@ -414,8 +422,8 @@ stripProfile
       10.file = fileadmin/images/image1.jpg
       10.file.stripProfile = 1
 
-Masking
-=======
+Masking (m)
+-----------
 
 :aspect:`Property`
    Masking:
@@ -423,7 +431,7 @@ Masking
    (Black hides, white shows)
 
 m.mask
-------
+~~~~~~
 
 :aspect:`Property`
    m.mask
@@ -438,7 +446,7 @@ m.mask
    **Note:** Both :typoscript:`m.mask` and :typoscript:`m.bgImg` must be valid images.
 
 m.bgImg
--------
+~~~~~~~
 
 :aspect:`Property`
    m.bgImg
@@ -450,7 +458,7 @@ m.bgImg
    **Note:** Both :typoscript:`m.mask` and :typoscript:`m.bgImg` must be valid images.
 
 m.bottomImg
------------
+~~~~~~~~~~~
 
 :aspect:`Property`
    m.bottomImg
@@ -471,7 +479,7 @@ m.bottomImg
    images.
 
 m.bottomImg\_mask
------------------
+~~~~~~~~~~~~~~~~~
 
 :aspect:`Property`
    m.bottomImg\_mask
