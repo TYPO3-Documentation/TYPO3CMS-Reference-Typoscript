@@ -8,7 +8,6 @@
 HTMLparser
 ==========
 
-
 .. contents::
    :local:
 
