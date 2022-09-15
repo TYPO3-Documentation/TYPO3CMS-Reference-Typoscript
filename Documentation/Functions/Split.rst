@@ -12,11 +12,19 @@ the result onto some functions.
 For each iteration the split index starting with 0 (zero) is stored in
 the register key :typoscript:`SPLIT_COUNT`.
 
+.. contents::
+   :local:
+
+.. index:: select; Properties
+.. _select-properties:
+
+Properties
+==========
 
 .. _split-token:
 
 token
-=====
+-----
 
 :aspect:`Property`
    token
@@ -30,7 +38,7 @@ token
 .. _split-max:
 
 max
-===
+---
 
 :aspect:`Property`
    max
@@ -44,7 +52,7 @@ max
 .. _split-min:
 
 min
-===
+---
 
 :aspect:`Property`
    min
@@ -58,7 +66,7 @@ min
 .. _split-returnkey:
 
 returnKey
-=========
+---------
 
 :aspect:`Property`
    returnKey
@@ -74,7 +82,7 @@ returnKey
 .. _split-returncount:
 
 returnCount
-===========
+-----------
 
 :aspect:`Property`
    returnCount
@@ -101,7 +109,7 @@ returnCount
 .. _split-cobjnum:
 
 cObjNum
-=======
+-------
 
 :aspect:`Property`
    cObjNum
@@ -116,7 +124,7 @@ cObjNum
 .. _split-1,2,3,4:
 
 1,2,3,4
-=======
+-------
 
 :aspect:`Property`
    1,2,3,4,...
@@ -150,7 +158,7 @@ cObjNum
 .. _split-wrap:
 
 wrap
-====
+----
 
 :aspect:`Property`
    wrap
