@@ -52,8 +52,7 @@ In order to access TypoScript settings from an Extbase Controller.
 
 .. seealso::
 
-   * :ref:`settings in Extbase extensions <t3extbasebook:configuration>`
-   * :ref:`Extbase TypoScript reference <t3extbasebook:typoscript_configuration>`
+   * :ref:`Extbase TypoScript configuration <t3coreapi:extbase_typoscript_configuration>`
 
 Fluid
 =====
