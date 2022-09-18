@@ -108,41 +108,6 @@ userFunc
          This value is read by the frontend :php:`RequestHandler` when
          collecting the CSS of the document to be rendered.
 
-.. _setup-plugin-default-pi-vars-pivar-key:
-
-\_DEFAULT\_PI\_VARS.[piVar-key]
--------------------------------
-
-..  todo: This property is only used in AbstractPlugin, I will make a Core Change to
-    remove it. Then this can be removed.
-
-.. container:: table-row
-
-   Property
-         \_DEFAULT\_PI\_VARS.[piVar-key]
-
-   Data type
-         :ref:`data-type-string` / :ref:`stdwrap`
-
-   Description
-         Allows you to set default values of the piVars array which most
-         plugins are using (and should use) for data exchange with themselves.
-
-         This works only if the plugin calls :php:`$this->pi_setPiVarDefaults()`.
-
-         The values have :ref:`stdWrap`, which also works recursively for multilevel
-         keys.
-
-   Example
-         .. code-block:: typoscript
-            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-            plugin.tt_news._DEFAULT_PI_VARS {
-                year.stdWrap.data = date:Y
-            }
-
-         This sets the key "year" to the current year.
-
 .. _setup-plugin-extbase:
 
 Properties for all frontend plugins based on Extbase
