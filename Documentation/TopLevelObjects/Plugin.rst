@@ -108,70 +108,6 @@ userFunc
          This value is read by the frontend :php:`RequestHandler` when
          collecting the CSS of the document to be rendered.
 
-
-
-.. _setup-plugin-default-pi-vars-pivar-key:
-
-\_DEFAULT\_PI\_VARS.[piVar-key]
--------------------------------
-
-.. container:: table-row
-
-   Property
-         \_DEFAULT\_PI\_VARS.[piVar-key]
-
-   Data type
-         :ref:`data-type-string` / :ref:`stdwrap`
-
-   Description
-         Allows you to set default values of the piVars array which most
-         plugins are using (and should use) for data exchange with themselves.
-
-         This works only if the plugin calls :php:`$this->pi_setPiVarDefaults()`.
-
-         The values have :ref:`stdWrap`, which also works recursively for multilevel
-         keys.
-
-   Example
-         .. code-block:: typoscript
-            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-            plugin.tt_news._DEFAULT_PI_VARS {
-                year.stdWrap.data = date:Y
-            }
-
-         This sets the key "year" to the current year.
-
-
-
-.. _setup-plugin-local-lang-lang-key-label-key:
-
-\_LOCAL\_LANG.[lang-key].[label-key]
-------------------------------------
-
-.. container:: table-row
-
-   Property
-         \_LOCAL\_LANG.[lang-key].[label-key]
-
-   Data type
-         :ref:`data-type-string`
-
-   Description
-         Can be used to override the default language labels for the plugin. The 'lang-key' setup part is 'default' for the default language of the website or the 2-letter (ISO 639-1) code for the language. 'label-key' is the 'trans-unit id' xml value in the XLF language file which resides in the path :file:`Resources/Private/Language` of the extension or in the :file:`typo3conf/l10n/[lang-key]` (:file:`var/labels/[lang-key]` in composer mode) subfolder of the TYPO3 root folder. And on the right side of the equation sign '=' you put the new value string for the language key which you want to override.
-
-   Example
-         .. code-block:: typoscript
-            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-            plugin.tx_myext_pi1._LOCAL_LANG.de.list_mode_1 = Der erste Modus
-
-         All variables, which are used inside an extension with
-         :php:`$this->pi_getLL('list_mode_1', 'Text, if no entry in locallang.xlf', true);`
-         can that way be overwritten with TypoScript. The :file:`locallang.xlf` file in
-         the plugin folder in the file system can be used to get an overview of
-         the entries the extension uses.
-
 .. _setup-plugin-extbase:
 
 Properties for all frontend plugins based on Extbase
@@ -287,7 +223,7 @@ persistence.enableAutomaticCacheClearing
 .. _setup-plugin-persistence-storagePid:
 
 persistence.storagePid
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~
 
 .. container:: table-row
 
@@ -355,7 +291,7 @@ The root paths work just like the one in the
 .. _setup-plugin-view-layoutRootPaths:
 
 view.layoutRootPaths
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~
 
 .. container:: table-row
 
@@ -373,7 +309,7 @@ view.layoutRootPaths
 .. _setup-plugin-view-partialRootPaths:
 
 view.partialRootPaths
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~
 
 .. container:: table-row
 
@@ -391,7 +327,7 @@ view.partialRootPaths
 .. _setup-plugin-view-templateRootPaths:
 
 view.templateRootPaths
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~
 
 .. container:: table-row
 
@@ -410,7 +346,7 @@ view.templateRootPaths
 .. _setup-plugin-view-pluginNamespace:
 
 view.pluginNamespace
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~
 
 .. container:: table-row
 
@@ -533,6 +469,41 @@ Format
          }
 
 
+.. _setup-plugin-local-lang-lang-key-label-key:
+
+\_LOCAL\_LANG.[lang-key].[label-key]
+------------------------------------
+
+..  container:: table-row
+
+    Property
+        \_LOCAL\_LANG.[lang-key].[label-key]
+
+    Data type
+        :ref:`data-type-string`
+
+    Description
+        Can be used to override the default language labels for Extbase plugins.
+        The 'lang-key' setup part is 'default' for the default language of the
+        website or the 2-letter (ISO 639-1) code for the language. 'label-key'
+        is the 'trans-unit id' xml value in the XLF language file which
+        resides in the path :file:`Resources/Private/Language` of the
+        extension or in the :file:`typo3conf/l10n/[lang-key]`
+        (:file:`var/labels/[lang-key]` in composer mode) subfolder of the
+        TYPO3 root folder. And on the right side of the equation sign '=' you
+        put the new value string for the language key which you want to override.
+
+    Example
+    ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+        plugin.tx_myext_pi1._LOCAL_LANG.de.list_mode_1 = Der erste Modus
+
+    All variables, which are used inside an Extbase extension with
+    the ViewHelper `<f:translate>` can that way be overwritten with
+    TypoScript. The :file:`locallang.xlf` file in
+    the plugin folder in the file system can be used to get an overview of
+    the entries the extension uses.
 
 .. _extbase_typoscript_configuration-settings:
 
