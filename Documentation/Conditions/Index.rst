@@ -187,6 +187,7 @@ tree.pagelayout
 """""""""""""""
 
 .. versionadded:: 11.0
+   :doc:`Changelog/11.0/Feature-88276-TypoScriptConditionForPageLayout`
 
 :aspect:`Variable`
    tree.pagelayout
