@@ -607,36 +607,41 @@ folderTree.uploadFieldsInLinkBrowser
 :aspect:`Default`
    3
 
-.. index:: Modules; Hide
-.. _useroptions-hideModules:
+..  index:: Modules; Hide
+..  _useroptions-hideModules:
 
-hideModules.[moduleGroup]
--------------------------
+hideModules
+-----------
 
 :aspect:`Datatype`
-   list of module groups or modules
+    list of module groups or modules
 
 :aspect:`Description`
-   Configure which module groups or modules should be hidden from the main menu.
+    Configure which module groups or modules should be hidden from the main menu.
 
-   It is not an access restriction but makes defined modules invisible. That means in principle
-   those modules can still be accessed if the rights allow.
+    ..  important::
+        It is not an access restriction but makes defined modules invisible.
+        This means that in principle these modules can still be accessed if the
+        rights allow this.
 
-   A list of all available module groups and modules can be found in in the backend module
-   *SYSTEM -> Configuration -> $GLOBALS['TBE_MODULES'] (BE Modules)*
+    ..  hint::
+        A list of all available module groups and modules can be found in in the
+        backend module :guilabel:`System > Configuration > Backend Modules`. The
+        system extension "lowlevel" has to be available for accessing this list.
 
 :aspect:`Example`
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/user.tsconfig
+    ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/user.tsconfig
 
-      # Hide module groups "file" and "help"
-      options.hideModules = file, help
+        # Hide only module groups "file" and "help"
+        options.hideModules = file, help
 
-      # Hide module "func" and "info" from the "web" group
-      options.hideModules.web := addToList(func,info)
+        # Hide additional modules "info" and "ts" from the "web" group
+        options.hideModules := addToList(web_info, web_ts)
 
-      # Hide module BELogLog from "system" group
-      options.hideModules.system = BelogLog
+        # Hide only module BeLogLog from "system" group
+        options.hideModules = system_BelogLog
+
 
 .. index:: Records; Hide on pages
 .. _useroptions-hideRecords-pages:
