@@ -613,6 +613,14 @@ folderTree.uploadFieldsInLinkBrowser
 hideModules
 -----------
 
+..  versionchanged:: 12.0
+    In TYPO3 versions before 12.0 the :typoscript:`hideModules` option was
+    appended with the module group. This changed with the introduction of the
+    new :ref:`module registration API <t3coreapi:backend-modules-configuration>`
+    in TYPO3 v12. If you are using an older version of TYPO3 please use the
+    version switcher on the top left of this document to go to the respective
+    version.
+
 :aspect:`Datatype`
     list of module groups or modules
 
