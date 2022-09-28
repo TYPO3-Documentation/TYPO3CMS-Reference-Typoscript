@@ -30,7 +30,7 @@ Importing the User TSconfig into a backend user or group
    .. code-block:: typoscript
       :caption: TsConfig added in the backend record of a backend user or group
 
-      @import 'EXT:my_sitepackage/Configuration/TSconfig/User/my_editor.tsconfig'
+      @import 'EXT:my_sitepackage/Configuration/TsConfig/User/my_editor.tsconfig'
 
 This will make all settings from the file available for the user. The file
 itself can be kept under version control together with your sitepackage.
@@ -66,7 +66,7 @@ like this to set a default configuration.
 	 * Adding the default User TSconfig
 	 */
 	\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addUserTSConfig('
-      @import "EXT:my_sitepackage/Configuration/TSconfig/User/default.tsconfig"
+      @import "EXT:my_sitepackage/Configuration/TsConfig/User/default.tsconfig"
 	');
 
 There is a global :ref:`TYPO3_CONF_VARS <t3coreapi:typo3ConfVars>` value called

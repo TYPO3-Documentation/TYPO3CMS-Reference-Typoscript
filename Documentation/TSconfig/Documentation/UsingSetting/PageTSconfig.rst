@@ -46,8 +46,8 @@ file:
 .. code-block:: tsconfig
    :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
-   @import 'EXT:myexample/Configuration/TSconfig/Page/Basic.tsconfig'
-   @import 'EXT:myexample/Configuration/TSconfig/Page/Mod/Wizards/NewContentElement.tsconfig'
+   @import 'EXT:myexample/Configuration/TsConfig/Page/Basic.tsconfig'
+   @import 'EXT:myexample/Configuration/TsConfig/Page/Mod/Wizards/NewContentElement.tsconfig'
 
 
 Many page TSconfig settings can be set globally. This is useful for
@@ -118,7 +118,7 @@ These can be :ref:`selected in the page properties <include-static-page-tsconfig
 
    ExtensionManagementUtility::registerPageTSConfigFile(
       'extension_name',
-      'Configuration/TSconfig/Page/myPageTSconfigFile.tsconfig',
+      'Configuration/TsConfig/Page/myPageTSconfigFile.tsconfig',
       'My special config'
    );
 
@@ -134,7 +134,7 @@ the API function:
    $GLOBALS['TCA']['pages']['columns']['tsconfig_includes']['config']['items'][] =
    [
       'LLL:EXT:my_sitepackage/Resources/Private/Language/locallang_db.xlf:pages.pageTSconfig.my_ext_be_layouts'
-      'EXT:my_sitepackage/Configuration/TSconfig/Page/myPageTSconfigFile.tsconfig',
+      'EXT:my_sitepackage/Configuration/TsConfig/Page/myPageTSconfigFile.tsconfig',
    ];
 
 .. index:: pair: Page TSconfig; Enter data
