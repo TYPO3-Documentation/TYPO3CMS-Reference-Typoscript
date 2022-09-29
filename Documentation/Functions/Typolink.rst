@@ -726,7 +726,7 @@ Aspects `identifier` and `uid` are mandatory for this link handler.
 
 :aspect:`Example`
    The following reference relates to record `tx_myextension_content:123`. Tablename is retrieved
-   from Page TSconfig settings, actual link generation is defined in TypoScript configuration for
+   from page TSconfig settings, actual link generation is defined in TypoScript configuration for
    identifier `my_content`.
 
    `t3://record?identifier=my_content&uid=123`
@@ -735,13 +735,22 @@ Aspects `identifier` and `uid` are mandatory for this link handler.
       :caption: Page TSconfig definition for identifier `my_content`
 
       TCEMAIN.linkHandler.my_content {
-          handler = TYPO3\CMS\Recordlist\LinkHandler\RecordLinkHandler
+          handler = TYPO3\CMS\Backend\LinkHandler\RecordLinkHandler
           label = LLL:EXT:my_extension/Resources/Private/Language/locallang.xlf:link.customTab
           configuration {
               table = tx_myextension_content
           }
           scanBefore = page
       }
+
+   ..  versionchanged:: 12.0
+       Due to the integration of EXT:recordlist into EXT:backend the namespace
+       of the link handler changed from
+       :php:`TYPO3\CMS\Recordlist\LinkHandler\RecordLinkHandler`
+       to
+       :php:`TYPO3\CMS\Backend\LinkHandler\RecordLinkHandler`.
+       For TYPO3 v12 the moved class is available as an alias under the old
+       namespace to allow extensions to be compatible with TYPO3 v11 and v12.
 
    .. code-block:: typoscript
       :caption: Frontend TypoScript definition for identifier `my_content`
