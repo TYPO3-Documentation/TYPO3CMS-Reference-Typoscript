@@ -423,8 +423,7 @@ getIndpEnv
    TYPO3_SSL             TRUE if this session uses SSL/TLS (https)
    ===================== ============================================================================= =================
 
-:aspect:`Examples:`
-
+:aspect:`Example:`
    .. code-block:: typoscript
       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
