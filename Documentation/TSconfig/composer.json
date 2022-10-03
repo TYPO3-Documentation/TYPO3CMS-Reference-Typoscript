@@ -10,8 +10,8 @@
     "prefer-stable": true,
     "extra": {
         "typo3/cms": {
-            "app-dir": ".Build",
-            "web-dir": ".Build/public"
+            "web-dir": ".Build/public",
+            "extension-key": "t3docs-reference-tsconfig"
         }
     },
     "config": {
@@ -57,5 +57,13 @@
         "typo3/cms-viewpage": "^12.0",
         "typo3/cms-workspaces": "^12.0",
         "t3docs/examples": "dev-main"
+    },
+    "scripts": {
+        "generate:codesnippets": [
+            ".Build/vendor/bin/typo3 codesnippet:create Documentation/CodeSnippets/"
+        ],
+        "generate": [
+            "@generate:codesnippets"
+        ]
     }
 }
