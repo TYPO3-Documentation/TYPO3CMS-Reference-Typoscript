@@ -1381,6 +1381,9 @@ newContentElement.wizardItems
    mod.wizards.newContentElement.wizardItems.[group].elements.[name].tt_content_defValues
       (array) Default values for tt_content fields.
 
+   mod.wizards.newContentElement.wizardItems.[group].elements.[name].saveAndClose
+      (boolean) If `1`, directs the user back to the :guilabel:`Page` module directly instead of showing the FormEngine. Default `0`.
+
 :aspect:`Example`
    .. _pageexample1:
 
