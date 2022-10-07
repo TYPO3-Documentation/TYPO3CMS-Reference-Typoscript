@@ -540,14 +540,17 @@ includeCSS.[array]
             :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
             includeCSS {
-                file1 = fileadmin/mystylesheet1.css
-                file2 = stylesheet_uploaded_to_template*.css
-                file2.title = High contrast
-                file2.media = print
-                ie6Style = fileadmin/css/style3.css
-                ie6Style.allWrap = <!--[if lte IE 7]>|<![endif]-->
-                cooliris = http://www.cooliris.com/shared/resources/css/global.css
-                cooliris.external = 1
+                styles = EXT:site_package/Resources/Public/Css/styles.css
+
+                print = EXT:site_package/Resources/Public/Css/print.css
+                print.title = High contrast
+                print.media = print
+
+                ie6 = EXT:site_package/Resources/Public/Css/ie6.css
+                ie6.allWrap = <!--[if lte IE 7]>|<![endif]-->
+
+                example = https://example.org/some_external_styles.css
+                example.external = 1
             }
 
 
@@ -683,12 +686,12 @@ includeJS.[array]
             :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
             includeJS {
-                file1 = fileadmin/helloworld.js
-                file1.type = application/x-javascript
-                # Include a second file, but only if myConstant is set
-                # in the TS constants field.
-                file2 = javascript_uploaded_to_template*.js
-                file2.if.isTrue = {$myConstant}
+                helloworld = EXT:site_package/Resources/Public/JavaScript/helloworld.js
+                helloworld.type = application/x-javascript
+
+                # Include the file only if myConstant is set in the TS constants field.
+                conditional = EXT:site_package/Resources/Public/JavaScript/conditional.js
+                conditional.if.isTrue = {$myConstant}
 
                 jquery = https://code.jquery.com/jquery-3.4.1.min.js
                 jquery.external = 1
@@ -1061,7 +1064,7 @@ shortcutIcon
       .. code-block:: typoscript
          :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-         page.shortcutIcon = fileadmin/Icons/favicon.ico
+         page.shortcutIcon = EXT:site_package/Resources/Public/Images/favicon.ico
 
       **Note:** The reference to this file will only be included in the
       output of your website, if the file actually exists! Should the
