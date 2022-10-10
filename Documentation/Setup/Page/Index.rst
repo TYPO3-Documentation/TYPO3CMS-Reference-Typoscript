@@ -535,6 +535,10 @@ includeCSS.[array]
 
          **title**: Setting the title of the :html:`<style>` tag.
 
+         ..  versionadded:: 12.1
+
+         Additional data attributes can be configured using a key-value list.
+
    Example
          .. code-block:: typoscript
             :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
@@ -545,6 +549,9 @@ includeCSS.[array]
                 print = EXT:site_package/Resources/Public/Css/print.css
                 print.title = High contrast
                 print.media = print
+
+                additional = EXT:site_package/Resources/Public/Css/additional_styles.css
+                additional.data-foo = bar
 
                 ie6 = EXT:site_package/Resources/Public/Css/ie6.css
                 ie6.allWrap = <!--[if lte IE 7]>|<![endif]-->
@@ -608,14 +615,21 @@ includeCSSLibs.[array]
 
          **title**: Setting the title of the :html:`<style>` tag.
 
+         ..  versionadded:: 12.1
+
+         Additional data attributes can be configured using a key-value list.
+
    Example
          .. code-block:: typoscript
             :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-            includeCSSLibs.twitter = https://twitter.com/styles/blogger.css
-            includeCSSLibs.twitter.external = 1
+            includeCSSLibs {
+                twitter = https://twitter.com/styles/blogger.css
+                twitter.external = 1
 
-
+                additional = EXT:site_package/Resources/Public/Css/additional_styles.css
+                additional.data-foo = bar
+            }
 
 .. index:: PAGE; includeJS.[array]
 .. _setup-page-includejs-array:
@@ -632,7 +646,7 @@ includeJS.[array]
          :ref:`data-type-resource`
 
    Description
-         Inserts one or more (Java)Scripts in <script> tags.
+         Inserts one or more (Java)Scripts in :html:`<script>` tags.
          With :ref:`setup-config-movejsfromheadertofooter` set to TRUE all files
          will be moved to the footer.
          The file definition must be a valid :ref:`data-type-resource` data type,
@@ -649,8 +663,8 @@ includeJS.[array]
 
          **async**: Allows the file to be loaded asynchronously.
 
-         **crossorigin**: Allows to set the crossorigin attribute in script tags.
-         Is automatically set to `anonymous` for external JavaScript files if an
+         **crossorigin**: Allows to set the cross-origin attribute in script tags.
+         It is automatically set to `anonymous` for external JavaScript files if an
          :typoscript:`.integrity` is set.
 
          **defer** Allows to set the HTML5 attribute :html:`defer`.
@@ -681,6 +695,10 @@ includeJS.[array]
          resources externalized to CDN's. See `SRI <https://www.w3.org/TR/SRI/>`_ for
          more details. Integrity hashes may be generated using `<https://srihash.org/>`_.
 
+         ..  versionadded:: 12.1
+
+         Additional data attributes can be configured using a key-value list.
+
    Example
          .. code-block:: typoscript
             :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
@@ -692,6 +710,12 @@ includeJS.[array]
                 # Include the file only if myConstant is set in the TS constants field.
                 conditional = EXT:site_package/Resources/Public/JavaScript/conditional.js
                 conditional.if.isTrue = {$myConstant}
+
+                # Include another file for consent management
+                # A data attribute enriches the tag with additional information
+                # which can be used in the according JavaScript
+                consent = EXT:site_package/Resources/Public/JavaScript/consent.js
+                consent.data-consent-type = essential
 
                 jquery = https://code.jquery.com/jquery-3.4.1.min.js
                 jquery.external = 1
