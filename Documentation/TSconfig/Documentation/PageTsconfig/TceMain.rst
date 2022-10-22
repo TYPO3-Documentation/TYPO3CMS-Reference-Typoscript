@@ -202,7 +202,7 @@ Example: Inherit the group id of the parent page
 """"""""""""""""""""""""""""""""""""""""""""""""
 
 .. code-block:: php
-   :caption: typo3conf/LocalConfiguration.php
+   :caption: config/system/settings.php | typo3conf/system/settings.php
 
    $GLOBALS['TYPO3_CONF_VARS']['BE']['defaultPageTSconfig'] .= '
        TCEMAIN.permissions.groupid = copyFromParent

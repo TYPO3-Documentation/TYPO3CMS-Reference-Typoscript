@@ -330,10 +330,11 @@ Sanitization
 An HTML sanitizer is available to sanitize and remove XSS from markup. It
 strips tags, attributes and values that are not explicitly allowed.
 
-Sanitizatin for persisting data is disabled by default and can be enabled
-globally by using the corresponding feature flag in
-:file:`typo3conf/LocalConfiguration.php` or
-:file:`typo3conf/AdditionalConfiguration.php`:
+Sanitization for persisting data is disabled by default and can be enabled
+globally by using the corresponding feature flag in the :ref:`configuration
+files <t3coreapi:configuration-files>`
+:file:`config/system/settings.php` or
+:file:`config/system/additional.php`:
 
 .. code-block:: php
 
