@@ -992,7 +992,7 @@ passwordReset
    The password reset functionality can also be disabled globally by setting:
 
    .. code-block:: php
-      :caption: typo3conf/LocalConfiguration.php
+      :caption: config/system/settings.php | typo3conf/system/settings.php
 
       $GLOBALS['TYPO3_CONF_VARS']['BE']['passwordReset'] = false
 
