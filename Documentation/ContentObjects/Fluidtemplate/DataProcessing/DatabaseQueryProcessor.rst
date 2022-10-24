@@ -22,7 +22,7 @@ Options:
    :type: :ref:`if` condition
    :default: ''
 
-   If the condition is not met the data is not processed
+   Only if the condition is met the data processor is executed.
 
 .. confval:: table
 
