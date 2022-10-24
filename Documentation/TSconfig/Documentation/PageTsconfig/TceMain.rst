@@ -274,8 +274,8 @@ group
    list of strings or integer 0-31
 
 :aspect:`Description`
-   Default permissions for group members, key list: `show`, `edit`, `delete`,
-   `new`, `editcontent`.
+    Default permissions for group members, key list: `show`, `edit`, `new`,
+    `editcontent`.
 
    Alternatively, it is allowed to set an integer between 0 and 31, indicating
    which bits corresponding to the key list should be set: `show = 1`,
