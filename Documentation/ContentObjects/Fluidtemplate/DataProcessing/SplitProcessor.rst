@@ -1,83 +1,82 @@
-.. include:: /Includes.rst.txt
-.. _splitProcessor:
+..  include:: /Includes.rst.txt
+..  _splitProcessor:
 
 ==============
 SplitProcessor
 ==============
 
-The :php:`SplitProcessor` allows split values separated with a delimiter
-inside a single database field to be put into an array and looped over. Whitespaces will
-be automatically trimmed.
+The :php:`SplitProcessor` allows to split values separated with a delimiter
+from a single database field. The result is an array that can be iterated over.
+Whitespaces are automatically trimmed.
 
 
-Options:
-========
+Options
+=======
 
-.. confval:: if
+..  confval:: if
 
-   :Required: false
-   :type: :ref:`if` condition
-   :default: ''
+    :Required: false
+    :type: :ref:`if` condition
+    :default: ''
 
-   If the condition is not met the data is not processed
+    Only if the condition is met the data processor is executed.
 
-.. confval:: fieldName
+..  confval:: fieldName
 
-   :Required: true
-   :type: string, :ref:`stdWrap`
-   :default: ''
+    :Required: true
+    :type: string, :ref:`stdWrap`
+    :default: ''
 
-   Name of the field to be used
+    Name of the field to be used.
 
-.. confval:: as
+..  confval:: as
 
-   :Required: false
-   :type: string
-   :default: defaults to the fieldName
+    :Required: false
+    :type: string
+    :default: defaults to the fieldName
 
-   The variable's name to be used in the Fluid template
+    The variable name to be used in the Fluid template.
 
-.. confval:: delimiter
+..  confval:: delimiter
 
-   :Required: false
-   :type: string(1), :ref:`stdWrap`
-   :default: Line Feed
-   :Example: ","
+    :Required: false
+    :type: string(1), :ref:`stdWrap`
+    :default: Line Feed
+    :Example: ","
 
-   The field delimiter, a character separating the values.
+    The field delimiter, a character separating the values.
 
-.. confval:: filterIntegers
+..  confval:: filterIntegers
 
-   :Required: false
-   :type: bool, :ref:`stdWrap`
-   :default: false
-   :Example: true
+    :Required: false
+    :type: bool, :ref:`stdWrap`
+    :default: false
+    :Example: true
 
-   If set to true all values are being cast to int
-
-
-.. confval:: filterUnique
-
-   :Required: false
-   :type: bool, :ref:`stdWrap`
-   :default: false
-   :Example: true
-
-   All duplicates will be removed
-
-.. confval:: removeEmptyEntries
-
-   :Required: false
-   :type: bool, :ref:`stdWrap`
-   :default: false
-   :Example: true
-
-   All empty values will be removed
+    If set to `true`, all values are being cast to int.
 
 
+..  confval:: filterUnique
 
-Example: Splitting an URL
-=========================
+    :Required: false
+    :type: bool, :ref:`stdWrap`
+    :default: false
+    :Example: true
+
+    All duplicates will be removed.
+
+..  confval:: removeEmptyEntries
+
+    :Required: false
+    :type: bool, :ref:`stdWrap`
+    :default: false
+    :Example: true
+
+    All empty values will be removed.
+
+
+Example: Splitting a URL
+========================
 
 Please see also :ref:`dataProcessing-about-examples`.
 
@@ -88,16 +87,14 @@ TypoScript
 With the help of the :php:`SplitProcessor` the following scenario is
 possible:
 
-.. include:: /CodeSnippets/DataProcessing/TypoScript/SplitProcessor.rst.txt
+..  include:: /CodeSnippets/DataProcessing/TypoScript/SplitProcessor.rst.txt
 
 The Fluid template
 ------------------
 
-In the Fluid template then iterate over the splitted data:
+In the Fluid template then iterate over the split data:
 
-.. code-block:: html
-
-.. include:: /CodeSnippets/DataProcessing/Template/DataProcSplit.rst.txt
+..  include:: /CodeSnippets/DataProcessing/Template/DataProcSplit.rst.txt
 
 
 Output
@@ -105,4 +102,4 @@ Output
 
 The array now contains the split strings:
 
-.. include:: /Images/AutomaticScreenshots/DataProcessing/SplitProcessor.rst.txt
+..  include:: /Images/AutomaticScreenshots/DataProcessing/SplitProcessor.rst.txt
