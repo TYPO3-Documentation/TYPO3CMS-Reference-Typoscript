@@ -86,6 +86,11 @@ Using the :php:`MenuProcessor` the following scenario is possible:
 
 ..  include:: /CodeSnippets/DataProcessing/TypoScript/MenuProcessor.rst.txt
 
+..  versionadded:: 12.1
+    One can use the alias :typoscript:`menu` instead
+    of the fully-qualified class name
+    :php:`\TYPO3\CMS\Frontend\DataProcessing\MenuProcessor`.
+
 
 The Fluid template
 ------------------

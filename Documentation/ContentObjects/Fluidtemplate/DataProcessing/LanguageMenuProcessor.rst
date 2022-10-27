@@ -73,6 +73,11 @@ Using the :php:`LanguageMenuProcessor` the following scenario is possible:
 
 ..  include:: /CodeSnippets/DataProcessing/TypoScript/LanguageMenuProcessor.rst.txt
 
+..  versionadded:: 12.1
+    One can use the alias :typoscript:`language-menu` instead
+    of the fully-qualified class name
+    :php:`\TYPO3\CMS\Frontend\DataProcessing\LanguageMenuProcessor`.
+
 
 The Fluid template
 ------------------

@@ -89,6 +89,11 @@ possible:
 
 ..  include:: /CodeSnippets/DataProcessing/TypoScript/SplitProcessor.rst.txt
 
+..  versionadded:: 12.1
+    One can use the alias :typoscript:`split` instead
+    of the fully-qualified class name
+    :php:`\TYPO3\CMS\Frontend\DataProcessing\SplitProcessor`.
+
 The Fluid template
 ------------------
 

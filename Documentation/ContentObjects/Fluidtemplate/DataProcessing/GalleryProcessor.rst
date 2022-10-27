@@ -169,6 +169,11 @@ the :php:`FilesProcessor`:
 
 ..  include:: /CodeSnippets/DataProcessing/TypoScript/GalleryProcessor.rst.txt
 
+..  versionadded:: 12.1
+    One can use the alias :typoscript:`gallery` instead
+    of the fully-qualified class name
+    :php:`\TYPO3\CMS\Frontend\DataProcessing\GalleryProcessor`.
+
 The Fluid template
 ------------------
 
