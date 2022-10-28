@@ -254,20 +254,13 @@ expAll
          has clicked a menu item and the menu folds out the next level. This
          can enable that to happen on all items as default.
 
-collapse
---------
+collapse (removed)
+------------------
 
-.. container:: table-row
-
-   Property
-         collapse
-
-   Data type
-         boolean
-
-   Description
-         If set, the "active" menu item that has expanded the next level on the
-         menu will now collapse that menu again.
+..  versionchanged:: 12.0
+    The property was removed with TYPO3 v12.0. Use a custom user function or
+    the PSR-14 event :ref:`t3coreapi:FilterMenuItemsEvent` to modify the menu
+    items.
 
 
 .. index:: TMENU; sectionIndex
