@@ -75,6 +75,11 @@ We define the :typoscript:`dataProcessing` property to use the
 
 ..  include:: /CodeSnippets/DataProcessing/TypoScript/DatabaseQueryProcessor.rst.txt
 
+..  versionadded:: 12.1
+    One can use the alias :typoscript:`database-query` instead
+    of the fully-qualified class name
+    :php:`\TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor`.
+
 
 The Fluid template
 ------------------

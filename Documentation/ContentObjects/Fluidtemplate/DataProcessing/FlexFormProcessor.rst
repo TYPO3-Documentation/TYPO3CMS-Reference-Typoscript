@@ -39,7 +39,15 @@ Example of a minimal TypoScript configuration
 ..  code-block:: typoscript
     :caption: EXT:my_extension/Configuration/TypoScript/setup.typoscript
 
-    10 = TYPO3\CMS\Frontend\DataProcessing\FlexFormProcessor
+    # Before TYPO3 v12.1 you have to specify the fully-qualified class name of the processor
+    # dataProcessing.10 = TYPO3\CMS\Frontend\DataProcessing\FlexFormProcessor
+    # Since TYPO3 v12.1 one can also use the available alias
+    10 = flex-form
+
+..  versionadded:: 12.1
+    One can use the alias :typoscript:`flex-form` instead
+    of the fully-qualified class name
+    :php:`\TYPO3\CMS\Frontend\DataProcessing\FlexFormProcessor`.
 
 The converted array can be accessed within the Fluid template with the
 :html:`{flexFormData}` variable.
@@ -50,7 +58,10 @@ Example of an advanced TypoScript configuration
 ..  code-block:: typoscript
     :caption: EXT:my_extension/Configuration/TypoScript/setup.typoscript
 
-    10 = TYPO3\CMS\Frontend\DataProcessing\FlexFormProcessor
+    # Before TYPO3 v12.1 you have to specify the fully-qualified class name of the processor
+    # dataProcessing.10 = TYPO3\CMS\Frontend\DataProcessing\FlexFormProcessor
+    # Since TYPO3 v12.1 one can also use the available alias
+    10 = flex-form
     10 {
         fieldName = my_flexform_field
         as = myOutputVariable
@@ -65,7 +76,10 @@ Example with a custom sub-processor
 ..  code-block:: typoscript
     :caption: EXT:my_extension/Configuration/TypoScript/setup.typoscript
 
-    10 = TYPO3\CMS\Frontend\DataProcessing\FlexFormProcessor
+    # Before TYPO3 v12.1 you have to specify the fully-qualified class name of the processor
+    # dataProcessing.10 = TYPO3\CMS\Frontend\DataProcessing\FlexFormProcessor
+    # Since TYPO3 v12.1 one can also use the available alias
+    10 = flex-form
     10 {
         fieldName = my_flexform_field
         as = myOutputVariable

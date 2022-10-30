@@ -32,9 +32,14 @@ Please see also :ref:`dataProcessing-about-examples`.
 TypoScript
 ----------
 
-Using the :php:`SiteProcessor` the following scenario is possible:
+Using the :php:`SiteLanguageProcessor` the following scenario is possible:
 
 ..  include:: /CodeSnippets/DataProcessing/TypoScript/SiteLanguageProcessor.rst.txt
+
+..  versionadded:: 12.1
+    One can use the alias :typoscript:`site-language` instead
+    of the fully-qualified class name
+    :php:`\TYPO3\CMS\Frontend\DataProcessing\SiteLanguageProcessor`.
 
 
 The Fluid template

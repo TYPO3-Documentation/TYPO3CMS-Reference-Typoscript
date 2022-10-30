@@ -70,6 +70,12 @@ return [
     ],
     [
         'action' => 'createCodeSnippet',
+        'caption' => 'EXT:examples/Configuration/TypoScript/DataProcessors/Processors/CustomCategoryProcessor.typoscript',
+        'sourceFile' => 'EXT:examples/Configuration/TypoScript/DataProcessors/Processors/CustomCategoryProcessor.typoscript',
+        'targetFileName' => 'CodeSnippets/DataProcessing/TypoScript/CustomCategoryProcessor.rst.txt'
+    ],
+    [
+        'action' => 'createCodeSnippet',
         'caption' => 'EXT:examples/Resources/Private/Templates/ContentElements/DataProcCsv.html',
         'sourceFile'=> 'EXT:examples/Resources/Private/Templates/ContentElements/DataProcCsv.html',
         'targetFileName' => 'CodeSnippets/DataProcessing/Template/DataProcCsv.rst.txt'

@@ -34,6 +34,11 @@ Using the :php:`SiteProcessor` the following scenario is possible:
 
 ..  include:: /CodeSnippets/DataProcessing/TypoScript/SiteProcessor.rst.txt
 
+..  versionadded:: 12.1
+    One can use the alias :typoscript:`site` instead
+    of the fully-qualified class name
+    :php:`\TYPO3\CMS\Frontend\DataProcessing\SiteProcessor`.
+
 
 The Fluid template
 ------------------
