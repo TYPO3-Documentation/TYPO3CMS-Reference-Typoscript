@@ -132,8 +132,8 @@ Frontend), you might need to know about. These ARE ALL READ-ONLY!
 full descriptions.
 
 You can retrieve the :php:`TypoScriptFrontendController` via the
-:ref:`request <typo3-request>` attribute
-:ref:`frontend.controller <typo3-request-attribute-frontend-controller>`.
+:ref:`request <t3coreapi:typo3-request>` attribute
+:ref:`frontend.controller <t3coreapi:typo3-request-attribute-frontend-controller>`.
 
 
 For instance, if you want to access the variable :php:`id`, you can do so by
@@ -189,8 +189,8 @@ writing: :php:`TypoScriptFrontendController->id`.
          The current front-end user.
 
          User record in :php:`$GLOBALS['TSFE']->fe_user->user`, if any login.
-         Better use the :ref:`request <typo3-request>` attribute
-         :ref:`frontend.user <typo3-request-attribute-frontend-user>` instead.
+         Better use the :ref:`request <t3coreapi:typo3-request>` attribute
+         :ref:`frontend.user <t3coreapi:typo3-request-attribute-frontend-user>` instead.
 
 
 .. container:: table-row
@@ -267,8 +267,8 @@ Global variables
 
    Description
          Main frontend object. Whenever possible, use the
-         :ref:`request <typo3-request>` attribute
-         :ref:`frontend.controller <typo3-request-attribute-frontend-controller>`
+         :ref:`request <t3coreapi:typo3-request>` attribute
+         :ref:`frontend.controller <t3coreapi:typo3-request-attribute-frontend-controller>`
          instead.
 
 
