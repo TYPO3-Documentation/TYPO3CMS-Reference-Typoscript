@@ -127,17 +127,17 @@ Internal variables in the main frontend object, TSFE
 
 There are some variables in the global object, TSFE (TypoScript
 Frontend), you might need to know about. These ARE ALL READ-ONLY!
-(Read: Don't change them!) See the class :php:`TypoScriptFrontendController`
-for the full descriptions.
+(Read: Don't change them!) See the class
+:php:`\TYPO3\CMS\Frontend\Controller\TypoScriptFrontendController` for the
+full descriptions.
 
-.. important::
+You can retrieve the :php:`TypoScriptFrontendController` via the
+:ref:`request <typo3-request>` attribute
+:ref:`frontend.controller <typo3-request-attribute-frontend-controller>`.
 
-   In previous versions, the properties `gr_list`, `loginUser` and `beUserLogin` where
-   used for context specific information. Since TYPO3 v9 these variables have been
-   replaced by the :ref:`TYPO3 Context API <t3coreapi:context-api>`.
 
-If you for instance want to access the variable "id", you can do so by
-writing: :php:`$GLOBALS['TSFE']->id`
+For instance, if you want to access the variable :php:`id`, you can do so by
+writing: :php:`TypoScriptFrontendController->id`.
 
 .. ### BEGIN~OF~TABLE ###
 
@@ -189,6 +189,8 @@ writing: :php:`$GLOBALS['TSFE']->id`
          The current front-end user.
 
          User record in :php:`$GLOBALS['TSFE']->fe_user->user`, if any login.
+         Better use the :ref:`request <typo3-request>` attribute
+         :ref:`frontend.user <typo3-request-attribute-frontend-user>` instead.
 
 
 .. container:: table-row
@@ -200,8 +202,9 @@ writing: :php:`$GLOBALS['TSFE']->id`
          array
 
    Description
-         The rootLine (all the way to tree root, not only the current site!).
-         Current site root line is in :php:`$GLOBALS['TSFE']->tmpl->rootLine`
+         The root line (all the way to tree root, not only the current site!).
+         Current site root line is in
+         :php:`\TYPO3\CMS\Frontend\Controller\TypoScriptFrontendController->config['rootLine']`.
 
 
 .. container:: table-row
@@ -214,7 +217,7 @@ writing: :php:`$GLOBALS['TSFE']->id`
 
    Description
          The object with page functions (object) See
-         :file:`typo3/sysext/core/Classes/Domain/Repository/PageRepository.php`.
+         :file:`EXT:core/Classes/Domain/Repository/PageRepository.php`.
 
 
 .. ###### END~OF~TABLE ######
@@ -263,7 +266,10 @@ Global variables
          object
 
    Description
-         Main frontend object.
+         Main frontend object. Whenever possible, use the
+         :ref:`request <typo3-request>` attribute
+         :ref:`frontend.controller <typo3-request-attribute-frontend-controller>`
+         instead.
 
 
 .. ###### END~OF~TABLE ######
