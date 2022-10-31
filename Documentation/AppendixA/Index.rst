@@ -127,7 +127,7 @@ Internal variables in the main frontend object, TSFE
 
 There are some variables in the global object, TSFE (TypoScript
 Frontend), you might need to know about. These ARE ALL READ-ONLY!
-(Read: Don't change them!) See the class
+(Read: Do not change them!) See the class
 :php:`\TYPO3\CMS\Frontend\Controller\TypoScriptFrontendController` for the
 full descriptions.
 
