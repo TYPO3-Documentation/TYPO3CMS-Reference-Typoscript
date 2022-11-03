@@ -57,15 +57,6 @@ different each time!
          Thus you can make local configurations which override the global
          setting.
 
-         **Example:** :
-
-         .. code-block:: typoscript
-            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-            _GIFBUILDER.charRangeMap {
-              123 = vera.ttf
-            ....
-
 
 .. container:: table-row
 
@@ -78,28 +69,6 @@ different each time!
    Description
          splitRendering configuration to set. See GIFBUILDER TEXT object for
          details.
-
-         **Example:** :
-
-         .. code-block:: typoscript
-            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-            _GIFBUILDER.charRangeMap {
-              123 = arial.ttf
-              123 {
-                charMapConfig {
-                  fontFile = typo3/sysext/install/Resources/Private/Font/vera.ttf
-                  value = -65
-                  fontSize = 45
-                }
-                fontSizeMultiplicator = 2.3
-              }
-            }
-
-         This example configuration shows that GIFBUILDER TEXT objects with
-         font faces matching "arial.ttf" will have a splitConfiguration that
-         uses "typo3/sysext/install/Resources/Private/Font/vera.ttf" for all
-         characters that fall below/equal to 65 in Unicode value.
 
 
 .. container:: table-row
@@ -134,29 +103,6 @@ different each time!
          space settings are optimized and for other fontsizes this will
          automatically be adjusted according to this font size.
 
-         **Example:** :
-
-         .. code-block:: typoscript
-            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-            _GIFBUILDER.charRangeMap {
-              123 = arial.ttf
-              123 {
-                charMapConfig {
-                  fontFile = typo3/sysext/install/Resources/Private/Font/vera.ttf
-                  value = 48-57
-                  color = green
-                  xSpaceBefore = 3
-                  xSpaceAfter = 3
-                }
-                pixelSpaceFontSizeRef = 24
-              }
-            }
-
-         In this example xSpaceBefore and xSpaceAfter will be "3" when the font
-         size is 24. If this configuration is used on a GIFBUILDER TEXT object
-         where the font size is only 16, the spacing values will be corrected
-         by "16/24", effectively reducing the pixelspace to "2" in that case.
 
 .. container:: table-row
 
