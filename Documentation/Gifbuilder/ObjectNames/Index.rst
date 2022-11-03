@@ -31,6 +31,82 @@ different each time!
 .. container:: table-row
 
    Property
+         charRangeMap.[array]
+
+   Data type
+         string
+
+   Description
+         Basename of font file to match for this configuration. Notice that
+         only the *filename* of the font file is used - the path is stripped
+         off. This is done to make matching easier and avoid problems when font
+         files might move to other locations in extensions etc.
+
+         So if you use the font file "EXT:myext/fonts/vera.ttf" or
+         "typo3/sysext/install/Resources/Private/Font/vera.ttf" both of them will
+         match with this configuration.
+
+         **The key:**
+
+         The value of the array key will be the key used when forcing the
+         configuration into "splitRendering" configuration of the individual
+         GIFBUILDER objects. In the example below the key is "123".
+
+         Notice: If the key is already found in the local GIFBUILDER
+         configuration the content of that key is respected and not overridden.
+         Thus you can make local configurations which override the global
+         setting.
+
+
+.. container:: table-row
+
+   Property
+         charRangeMap.[array].charMapConfig
+
+   Data type
+         TEXT / splitRendering.[array] configuration
+
+   Description
+         splitRendering configuration to set. See GIFBUILDER TEXT object for
+         details.
+
+
+.. container:: table-row
+
+   Property
+         charRangeMap.[array].fontSizeMultiplicator
+
+   Data type
+         double
+
+   Description
+         If set, this will take the font size of the TEXT GIFBUILDER object and
+         multiply with this amount (xx.xx) and override the "fontSize" property
+         inside "charMapConfig".
+
+
+.. container:: table-row
+
+   Property
+         charRangeMap.[array].pixelSpaceFontSizeRef
+
+   Data type
+         double
+
+   Description
+         If set, this will multiply the four [x/y]Space[Before/After]
+         properties of split rendering with the relationship between the
+         fontsize and this value.
+
+         In other words: Since pixel space may vary depending on the font size
+         used you can simply specify by this value at what fontsize the pixel
+         space settings are optimized and for other fontsizes this will
+         automatically be adjusted according to this font size.
+
+
+.. container:: table-row
+
+   Property
          XY
 
    Data type
