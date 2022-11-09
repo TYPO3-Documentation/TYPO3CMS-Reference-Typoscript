@@ -1933,6 +1933,20 @@ pageTitleSeparator
 
             config.pageTitleSeparator = *
             config.pageTitleSeparator.noTrimWrap = |||
+            
+         If you want to get rid of the web page title, you must choose a separator that is not included in the web page title. 
+         You then split the title from that character and return everything after it:
+
+         .. code-block:: typoscript
+            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+            config.pageTitleSeparator = *
+            config.pageTitle.stdWrap {
+                split {
+                    token = *
+                    returnKey = 1
+                }
+            }       
 
 
 .. index:: config; removeDefaultCss
