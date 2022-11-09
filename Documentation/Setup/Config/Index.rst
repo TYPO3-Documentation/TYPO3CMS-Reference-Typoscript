@@ -1793,7 +1793,7 @@ pageTitleSeparator
             config.pageTitleSeparator = *
             config.pageTitleSeparator.noTrimWrap = |||
             
-         If you want to get rid of the web page title, you must choose a separator that is not included in the web page title. 
+         If you want to remove the web page title from the displayed title, choose a separator that is not included in the web page title. 
          You then split the title from that character and return everything after it:
 
          .. code-block:: typoscript
