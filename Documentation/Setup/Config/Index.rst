@@ -1935,7 +1935,7 @@ pageTitleSeparator
             config.pageTitleSeparator.noTrimWrap = |||
             
          If you want to remove the web page title from the displayed title, choose a separator that is not included in the web page title. 
-         You then split the title from that character and return everything after it:
+         Then split the title from that character and return the second part only:
 
          .. code-block:: typoscript
             :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
