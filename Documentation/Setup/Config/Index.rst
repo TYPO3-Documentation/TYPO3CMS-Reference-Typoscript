@@ -1792,8 +1792,8 @@ pageTitleSeparator
 
             config.pageTitleSeparator = *
             config.pageTitleSeparator.noTrimWrap = |||
-            
-         If you want to remove the web page title from the displayed title, choose a separator that is not included in the web page title. 
+
+         If you want to remove the web page title from the displayed title, choose a separator that is not included in the web page title.
          Then split the title from that character and return the second part only:
 
          .. code-block:: typoscript
@@ -1805,7 +1805,7 @@ pageTitleSeparator
                     token = *
                     returnKey = 1
                 }
-            }       
+            }
 
 
 .. index:: config; removeDefaultCss
@@ -1869,6 +1869,9 @@ removeDefaultJS
 
 removePageCss
 =============
+
+..  deprecated:: 12.1
+    For more information see :ref:`setup-plugin-css-page-style`.
 
 .. container:: table-row
 
