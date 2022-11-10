@@ -411,6 +411,10 @@ forceAbsoluteUrl
 :aspect:`Default`
    0
 
+..  note::
+    If the option :ref:`config.forceAbsoluteUrls <setup-config-forceAbsoluteUrls>`
+    is enabled, :typoscript:`typolink.forceAbsoluteUrl` is overridden.
+
 
 .. index:: typolink; title
 .. _typolink-title:
