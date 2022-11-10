@@ -1020,13 +1020,13 @@ forceAbsoluteUrls
          0
 
    Description
-         If set, all links, reference to images or assets, which previously were
-         built with a relative or absolute path (for example,
-         :file:`/fileadmin/my-pdf.pdf`) are then rendered as absolute URLs
+         If this option is set, all links, reference to images or assets
+         previously built with a relative or absolute path (for example,
+         :file:`/fileadmin/my-pdf.pdf`) will be rendered as absolute URLs
          with the site prefix / current domain.
 
-         Examples for such use-cases are the generation of a full static version
-         of a TYPO3 site for sending a page via email.
+         Examples for such use cases are the generation of a complete static
+         version of a TYPO3 site for sending a page via email.
 
 .. note::
    Setting this option will override any setting in :ref:`config.absRefPrefix
