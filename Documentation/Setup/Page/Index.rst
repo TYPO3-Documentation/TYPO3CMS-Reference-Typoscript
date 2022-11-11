@@ -239,8 +239,7 @@ bodyTag
    Description
          Body tag on the page
 
-   Example :
-
+   Example
       .. code-block:: typoscript
          :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
