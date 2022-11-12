@@ -1063,7 +1063,6 @@ htmlTag.attributes
          a more flexible API to add attributes.
 
    Example
-
          .. code-block:: typoscript
             :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
@@ -1122,7 +1121,6 @@ htmlTag\_setParams
          any event.
 
    Example
-
          .. code-block:: typoscript
             :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
@@ -1338,7 +1336,6 @@ linkVars
             list, as this can result in unexpected behavior.
 
    Examples
-
          .. code-block:: typoscript
             :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
@@ -1397,7 +1394,6 @@ message\_preview\_workspace
          Workspace title (first) and number (second).
 
    Examples
-
          .. code-block:: typoscript
             :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
@@ -1792,8 +1788,8 @@ pageTitleSeparator
 
             config.pageTitleSeparator = *
             config.pageTitleSeparator.noTrimWrap = |||
-            
-         If you want to remove the web page title from the displayed title, choose a separator that is not included in the web page title. 
+
+         If you want to remove the web page title from the displayed title, choose a separator that is not included in the web page title.
          Then split the title from that character and return the second part only:
 
          .. code-block:: typoscript
@@ -1805,7 +1801,7 @@ pageTitleSeparator
                     token = *
                     returnKey = 1
                 }
-            }       
+            }
 
 
 .. index:: config; removeDefaultCss

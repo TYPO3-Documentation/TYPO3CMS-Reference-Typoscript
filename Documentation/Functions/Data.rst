@@ -737,8 +737,6 @@ site
 :aspect:`Example:`
    Code:
 
-   Example:
-
    .. code-block:: typoscript
 
       page.10 = TEXT
