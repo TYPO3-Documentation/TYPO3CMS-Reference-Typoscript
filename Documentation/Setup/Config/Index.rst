@@ -55,6 +55,7 @@ Properties
    `enableContentLengthHeader`_                          :ref:`data-type-boolean`                           1
    `extTarget`_                                          :ref:`data-type-target`                            \_top
    `fileTarget`_                                         :ref:`data-type-target`
+   `forceAbsoluteUrls`_                                  :ref:`data-type-boolean`                           0
    `forceTypeValue`_                                     :ref:`data-type-integer`
    `headerComment`_                                      :ref:`data-type-string`
    `htmlTag.attributes`_                                 array
@@ -156,6 +157,10 @@ absRefPrefix
                :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
                config.absRefPrefix = https://example.org/
+
+..  note::
+    If the option :ref:`config.forceAbsoluteUrls <setup-config-forceAbsoluteUrls>`
+    is enabled, :typoscript:`absRefPrefix` is overridden.
 
 
 .. index:: config; additionalHeaders
@@ -995,6 +1000,40 @@ fileTarget
 
 
 
+.. index:: config; forceAbsoluteUrls
+.. _setup-config-forceAbsoluteUrls:
+
+forceAbsoluteUrls
+=================
+
+.. versionadded:: 12.1
+
+.. container:: table-row
+
+   Property
+         forceAbsoluteUrls
+
+   Data type
+         :ref:`data-type-boolean`
+
+   Default
+         0
+
+   Description
+         If this option is set, all links, reference to images or assets
+         previously built with a relative or absolute path (for example,
+         :file:`/fileadmin/my-pdf.pdf`) will be rendered as absolute URLs
+         with the site prefix / current domain.
+
+         Examples for such use cases are the generation of a complete static
+         version of a TYPO3 site for sending a page via email.
+
+.. note::
+   Setting this option will override any setting in :ref:`config.absRefPrefix
+   <setup-config-absrefprefix>` and any :ref:`typolink.forceAbsoluteUrl
+   <typolink-forceAbsoluteUrl>` options.
+
+
 .. index:: config; forceTypeValue
 .. _setup-config-forcetypevalue:
 
@@ -1792,8 +1831,8 @@ pageTitleSeparator
 
             config.pageTitleSeparator = *
             config.pageTitleSeparator.noTrimWrap = |||
-            
-         If you want to remove the web page title from the displayed title, choose a separator that is not included in the web page title. 
+
+         If you want to remove the web page title from the displayed title, choose a separator that is not included in the web page title.
          Then split the title from that character and return the second part only:
 
          .. code-block:: typoscript
@@ -1805,7 +1844,7 @@ pageTitleSeparator
                     token = *
                     returnKey = 1
                 }
-            }       
+            }
 
 
 .. index:: config; removeDefaultCss
