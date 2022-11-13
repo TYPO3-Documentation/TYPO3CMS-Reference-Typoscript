@@ -1085,7 +1085,6 @@ shortcutIcon
       and next to the title of the page in the tab.
 
       Example:
-
       .. code-block:: typoscript
          :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
