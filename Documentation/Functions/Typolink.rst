@@ -511,8 +511,7 @@ ATagParams
 :aspect:`Description`
    Additional parameters
 
-   Example:
-
+:aspect:`Example`
    .. code-block:: typoscript
       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 

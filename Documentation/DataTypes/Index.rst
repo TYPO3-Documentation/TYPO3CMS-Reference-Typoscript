@@ -62,7 +62,6 @@ boolean
    __ https://www.php.net/manual/en/language.types.boolean.php
 
 :aspect:`Examples:`
-
    .. code-block:: typoscript
       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
@@ -152,7 +151,6 @@ date-conf
    === ===========================================================
 
 :aspect:`Example:`
-
    .. code-block:: typoscript
       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
@@ -311,7 +309,6 @@ HTML code
    Pure HTML code
 
 :aspect:`Example:`
-
    .. code-block:: html
       :caption: Example HTML code
 
@@ -489,7 +486,6 @@ list
    each comma.
 
 :aspect:`Example:`
-
    .. code-block:: typoscript
       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
@@ -928,7 +924,6 @@ x,y,w,h
    w,h is the width and height
 
 :aspect:`Example:`
-
    .. code-block:: typoscript
       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 

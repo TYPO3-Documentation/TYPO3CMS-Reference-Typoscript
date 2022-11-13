@@ -53,7 +53,6 @@ Properties
          :typoscript:`value` is the actual output, which you want to get in your website.
 
    Examples:
-
          .. code-block:: typoscript
             :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 

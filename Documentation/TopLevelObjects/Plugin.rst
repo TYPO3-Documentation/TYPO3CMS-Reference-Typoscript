@@ -494,10 +494,10 @@ Format
         put the new value string for the language key which you want to override.
 
     Example
-    ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        ..  code-block:: typoscript
+            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-        plugin.tx_myext_pi1._LOCAL_LANG.de.list_mode_1 = Der erste Modus
+            plugin.tx_myext_pi1._LOCAL_LANG.de.list_mode_1 = Der erste Modus
 
     All variables, which are used inside an Extbase extension with
     the ViewHelper `<f:translate>` can that way be overwritten with
@@ -512,7 +512,7 @@ Settings
 
 Here reside are all the settings, both extension-wide and plugin-specific.
 These settings are available in the controllers as the array variable
-:php:``$this->settings` and in any Fluid template with `{settings}`.
+:php:`$this->settings` and in any Fluid template with `{settings}`.
 
 The settings for a specific plugin can be overridden by FlexForm values of the
 same name.
