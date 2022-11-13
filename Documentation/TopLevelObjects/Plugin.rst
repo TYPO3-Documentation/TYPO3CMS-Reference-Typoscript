@@ -541,7 +541,7 @@ Settings
 
 Here reside are all the settings, both extension-wide and plugin-specific.
 These settings are available in the controllers as the array variable
-:php:``$this->settings` and in any Fluid template with `{settings}`.
+:php:`$this->settings` and in any Fluid template with `{settings}`.
 
 The settings for a specific plugin can be overridden by FlexForm values of the
 same name.
