@@ -1182,7 +1182,6 @@ htmlTag.attributes
          a more flexible API to add attributes.
 
    Example
-
          .. code-block:: typoscript
             :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
@@ -1241,7 +1240,6 @@ htmlTag\_setParams
          any event.
 
    Example
-
          .. code-block:: typoscript
             :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
@@ -1457,7 +1455,6 @@ linkVars
             list, as this can result in unexpected behavior.
 
    Examples
-
          .. code-block:: typoscript
             :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
@@ -1516,7 +1513,6 @@ message\_preview\_workspace
          Workspace title (first) and number (second).
 
    Examples
-
          .. code-block:: typoscript
             :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
