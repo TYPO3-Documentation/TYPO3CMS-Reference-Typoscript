@@ -1905,6 +1905,9 @@ removeDefaultJS
 removePageCss
 =============
 
+..  deprecated:: 12.1
+    For more information see :ref:`setup-plugin-css-page-style`.
+
 .. container:: table-row
 
    Property
