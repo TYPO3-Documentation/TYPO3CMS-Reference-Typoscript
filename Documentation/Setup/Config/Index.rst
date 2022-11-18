@@ -47,7 +47,6 @@ Properties
    `debug`_                                              :ref:`data-type-boolean`
    `disableAllHeaderCode`_                               :ref:`data-type-boolean`                           false
    `disableBodyTag`_                                     :ref:`data-type-boolean`                           0
-   `disableImgBorderAttr`_                               :ref:`data-type-boolean`
    `disablePrefixComment`_                               :ref:`data-type-boolean`
    `disablePreviewNotification`_                         :ref:`data-type-boolean`                           0
    `disableLanguageHeader`_                              :ref:`data-type-boolean`                           0
