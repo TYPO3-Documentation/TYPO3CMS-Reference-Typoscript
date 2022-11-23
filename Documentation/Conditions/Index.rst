@@ -827,9 +827,9 @@ request.getQueryParams()
 
       [request.getQueryParams()['skipSessionUpdate'] == 1]
 
-   Safely check query parameter array to avoid error logs in case key is not
-   defined (see :ref:`condition-function-traverse`). This will check if
-   `tx_news_pi1['news'] > 0`:
+   Safely check the query parameter array to avoid error logs in case key is not
+   defined (see :ref:`condition-function-traverse`). This will check if the GET parameter
+   `tx_news_pi1[news]` in the URL is greater than `0`:
 
    .. code-block:: typoscript
       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
