@@ -829,7 +829,7 @@ request.getQueryParams()
 
    Safely check the query parameter array to avoid error logs in case key is not
    defined (see :ref:`condition-function-traverse`). This will check if the GET parameter
-   `tx_news_pi1[news]` of the URL is greater than `0`:
+   `tx_news_pi1[news]` in the URL is greater than `0`:
 
    .. code-block:: typoscript
       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
