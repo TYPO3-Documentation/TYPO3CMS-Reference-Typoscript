@@ -319,7 +319,7 @@ Configuration options of the "Web > Page" module.
 
 .. index::
    Localization; Inconsistent language mode
-   Localization; Independently translated contend
+   Localization; Independently translated content
    allowInconsistentLanguageHandling
 
 allowInconsistentLanguageHandling
