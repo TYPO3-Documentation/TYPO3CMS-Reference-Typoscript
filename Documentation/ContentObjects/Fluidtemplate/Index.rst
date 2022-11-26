@@ -468,7 +468,7 @@ templateRootPath
     :sep:`|` :aspect:`Data type:` file path /:ref:`stdWrap <stdwrap>`
     :sep:`|`
 
-    Sets a specific layout path, usually
+    Sets a specific template path, usually
     :file:`EXT:some_extension/Resources/Private/Templates/` or a folder below that
     path.
 
