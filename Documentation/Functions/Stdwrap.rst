@@ -1767,6 +1767,11 @@ insertData
       10.value = This is the page title: {page:title}
       10.stdWrap.insertData = 1
 
+      # TEXT is already stdWrap'able, so we can also use insertData right away
+      20 = TEXT
+      20.value = <link rel="preload" href="{path : EXT:site/Resources/Public/Fonts/Roboto.woff2}" as="font" type="font/woff2" crossorigin="anonymous">
+      20.insertData = 1
+
 .. warning::
    Never use this on content that can be edited in the backend. This allows editors to disclose
    normally hidden information. Never use this to insert data into wraps.
