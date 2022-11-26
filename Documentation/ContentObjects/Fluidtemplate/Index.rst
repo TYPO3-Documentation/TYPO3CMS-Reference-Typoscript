@@ -255,7 +255,7 @@ partialRootPath
     :sep:`|` :aspect:`Data type:` file path /:ref:`stdWrap <stdwrap>`
     :sep:`|`
 
-    Sets a specific layout path, usually
+    Sets a specific partial path, usually
     :file:`EXT:some_extension/Resources/Private/Partials/` or a folder below that
     path.
 
