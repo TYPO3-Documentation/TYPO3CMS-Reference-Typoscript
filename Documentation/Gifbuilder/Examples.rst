@@ -99,7 +99,7 @@ explain the required steps for GIMP:
    up colored - the alpha layer mask)
 
 #. Insert a new layer and color it opposite of the filling (black or
-   white). Move the layer tothe correct position so it is below the just
+   white). Move the layer to the correct position so it is below the just
    filled regions.
 
 #. Now you should have a black white image containing the mask from the
@@ -133,9 +133,8 @@ box which could probably be semi-transparent so the background shines
 through, And insert some "transparent" letters which will let the
 background image shine through into the box.
 
-Here's an example. It is just done with an simple IMAGE cObject but
-could also get used for GMENUs for example. Then you could retrieve the
-background image from the media field for example.
+Here is an example: It is done with an :ref:`IMAGE cObject <cobj-image>`. Then
+you could retrieve the background image from the media field, for example.
 
 The base image is the same as above. Below's the result - just see
 yourself:
@@ -148,10 +147,10 @@ yourself:
      file {
        XY = 640,480
        format = png
-   
+
        10 = IMAGE
        10.file = fileadmin/backimage.jpg
-   
+
        # Example 1, Light grey  box (#cccccc) no box transparency
        20 = IMAGE
        20 {
@@ -185,7 +184,7 @@ yourself:
            }
          }
        }
-   
+
        # Example 2, light green box / half transparent
        30 = IMAGE
        30 {
@@ -213,7 +212,7 @@ yourself:
            }
          }
        }
-   
+
        # Example 2, light red box / no box transparency, bold + not antialiased text
        40 = IMAGE
        40 {
@@ -341,7 +340,7 @@ Setup
      XY = [10.w]+20,[10.h]+20
      # The background color of the image/content
      backColor = #ffffff
-   
+
      # Create a "dummy" image from the real image which is 20 pixel
      # smaller than the set width.
      10 = IMAGE
@@ -364,13 +363,13 @@ Setup
        # You have to set lib.shadowIntensity in your constants.
        color = {$lib.shadowIntensity}
      }
-   
+
      # Blur the black box
      30 = EFFECT
      30.value = blur=99 |
      #   Blur again if required (wider blurred edge/shadow)
      #   31 < .30
-   
+
      # Put the image on top again at a slightly more left top position.
      50 < .10
      50.offset = 5,5
