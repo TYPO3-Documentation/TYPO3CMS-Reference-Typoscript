@@ -12,7 +12,7 @@ This data processor can be used for processing file information:
 *   all files from a certain folder
 *   all files from a collection
 
-A :typoscript:`FLUIDTEMPLATE` can then simply iterate over processed data
+A :typoscript:`FLUIDTEMPLATE` can then iterate over processed data
 automatically.
 
 

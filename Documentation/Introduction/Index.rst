@@ -86,7 +86,7 @@ Other methods:
 
 - **External Templating Engines:** Any other templating system can be
   used. It will be provided via an extension. In such a case TypoScript
-  may be used just to delegate the rendering to that system.
+  may be used to delegate the rendering to that system.
 
 - **Custom PHP:** Configure TYPO3 to call your own PHP code which
   generates content in any way you may prefer. This might include using

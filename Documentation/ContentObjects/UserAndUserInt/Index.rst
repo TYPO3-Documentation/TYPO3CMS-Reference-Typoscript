@@ -16,7 +16,7 @@ This calls either a PHP function or a method in a class. This is very
 useful if you want to incorporate your own data processing or content.
 
 Basically USER and USER\_INT are user defined cObjects, because they
-just call a function or method, which you control!
+call a function or method, which you control!
 
 If you call a method in a class (which is of course instantiated as an
 object), the internal variable :php:`$cObj` of that class is set with a

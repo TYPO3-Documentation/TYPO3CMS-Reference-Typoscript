@@ -89,7 +89,7 @@ Now :typoscript:`lib.stdheader` is copied to :typoscript:`tt_content.header.10` 
 created at *parsetime*.
 
 But this is not the case with :typoscript:`tt_content.bullets.10`. Here
-:typoscript:`lib.stdheader` is just pointed to and :typoscript:`lib.stdheader` will be used as the
+:typoscript:`lib.stdheader` is referenced and :typoscript:`lib.stdheader` will be used as the
 cObject at *runtime*.
 
 The reason why lib.stdheader was copied in the first case is the fact
