@@ -666,6 +666,18 @@ path
 
       lib.foo.data = path : EXT:rsaauth/resources/rsaauth.js
 
+   It can also be helpful in combination with
+   :ref:`stdWrap.insertData <stdwrap-insertdata>`:
+
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+      page.headerData.10 = TEXT
+      page.headerData.10 {
+        value = <link rel="preload" href="{path : EXT:site/Resources/Public/Fonts/Roboto.woff2}" as="font" type="font/woff2" crossorigin="anonymous">
+        insertData = 1
+      }
+
 .. _data-type-gettext-register:
 
 register
