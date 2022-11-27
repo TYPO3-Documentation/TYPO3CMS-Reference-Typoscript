@@ -14,13 +14,6 @@ follow the :ref:`syntax of ordinary TypoScript
 <t3coreapi:typoscript-syntax-syntax>` and are case sensitive! They are used to
 manage *in a single place* values, which are later used in *several places*.
 
-.. note::
-
-   The constants defined in the :guilabel:`Constants` field of a template are not
-   the same like the top-level object :typoscript:`constants`. Here you can find the
-   :ref:`top-level constants <tlo-constants>`
-
-
 .. index:: Constants; Definition
 
 Defining constants

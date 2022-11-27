@@ -124,6 +124,15 @@ externalBlocks
 constants
 ---------
 
+..  attention::
+    ..  deprecated:: 12.1
+        Using the :typoscript:`constants` top-level-object in combination with the
+        :typoscript:`constants = 1` in :ref:`parseFunc` to substitute strings
+        like :typoscript:`###MY_CONSTANT###` triggers a deprecation level log error
+        in TYPO3 v12 and will stop working in v13.
+
+        See section :ref:`Top level object constants, migration <tlo-constants-migration>`.
+
 :aspect:`Property`
    constants
 
@@ -138,20 +147,6 @@ constants
    wrapped in "###") in your text. TYPO3 then substitutes the markers
    with the value of the according constant.
 
-:aspect:`Example`
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-      constants.EMAIL = email@email.com
-
-   *(The definition of the constant above is top-level TypoScript. It
-   belongs on one level with the objects "config" and "page".)*
-
-   If you now use parseFunc with :typoscript:`constants = 1`, all occurrences of the
-   string ###EMAIL### in the text will be substituted with the actual
-   address.
-
-
 .. index:: parseFunc; short
 .. _parsefunc-short:
 
@@ -165,19 +160,24 @@ short
    *(array of strings)*
 
 :aspect:`Description`
-   Like constants above, but local.
+   If this property is set, you can use markers (the short name
+   wrapped in "###") in your text. TYPO3 then substitutes the markers
+   with the value of the according constant.
 
 :aspect:`Example`
-   This substitutes all occurrences of "T3" with "TYPO3 CMS" and "T3web"
-   with a link to typo3.org.
+   This substitutes all occurrences of "###T3###" with "TYPO3 CMS"
+   and "###T3web###" with a link to typo3.org.
 
    .. code-block:: typoscript
       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-      short {
+      page.10 = TEXT
+      page.10.value = Learn more about ###T3###, look here: ###T3web###
+      page.10.userFunc.short {
             T3 = TYPO3 CMS
             T3web = <a href="https://typo3.org">typo3.org</a>
       }
+      # Output: Learn more about TYPO3 CMS, look here: <a href="https://typo3.org">typo3.org</a>
 
 
 .. index:: parseFunc; plainTextStdWrap
