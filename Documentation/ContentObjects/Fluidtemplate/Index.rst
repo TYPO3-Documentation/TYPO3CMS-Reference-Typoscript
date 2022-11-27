@@ -198,11 +198,18 @@ layoutRootPath
 .. rst-class:: dl-parameters
 
 layoutRootPath
-   :sep:`|` :aspect:`Data type:` file path /:ref:`stdWrap <stdwrap>`
-   :sep:`|`
+    :sep:`|` :aspect:`Data type:` file path /:ref:`stdWrap <stdwrap>`
+    :sep:`|`
 
-   Sets a specific layout path; usually it is Layouts/ underneath the template
-   file.
+    Sets a specific layout path, usually
+    :file:`EXT:some_extension/Resources/Private/Layouts/` or a folder below that
+    path.
+
+    ..  note::
+        It is recommended to use
+        :ref:`cobj-fluidtemplate-properties-layoutrootpaths` (mind the
+        plural "s") as it can be easily extended by custom templates provided
+        by the sitepackage.
 
 
 .. _cobj-fluidtemplate-properties-layoutrootpaths:
@@ -249,10 +256,18 @@ partialRootPath
 .. rst-class:: dl-parameters
 
 partialRootPath
-   file path /:ref:`stdWrap <stdwrap>`
+    :sep:`|` :aspect:`Data type:` file path /:ref:`stdWrap <stdwrap>`
+    :sep:`|`
 
-   Sets a specific partials path; usually it is Partials/ underneath the
-   template file.
+    Sets a specific partial path, usually
+    :file:`EXT:some_extension/Resources/Private/Partials/` or a folder below that
+    path.
+
+    ..  note::
+        It is recommended to use
+        :ref:`cobj-fluidtemplate-properties-partialrootpaths` (mind the
+        plural "s") as it can be easily extended by custom templates provided
+        by the sitepackage.
 
 
 .. _cobj-fluidtemplate-properties-partialrootpaths:
@@ -461,7 +476,26 @@ templateName
 
 
 
+.. index:: FLUIDTEMPLATE; templateRootPath
+.. _cobj-fluidtemplate-properties-templaterootpath:
+templateRootPath
+----------------
 
+.. rst-class:: dl-parameters
+
+templateRootPath
+    :sep:`|` :aspect:`Data type:` file path /:ref:`stdWrap <stdwrap>`
+    :sep:`|`
+
+    Sets a specific template path, usually
+    :file:`EXT:some_extension/Resources/Private/Templates/` or a folder below that
+    path.
+
+    ..  note::
+        It is recommended to use
+        :ref:`cobj-fluidtemplate-properties-templaterootpaths` (mind the
+        plural "s") as it can be easily extended by custom templates provided
+        by the sitepackage.
 
 
 .. _cobj-fluidtemplate-properties-templaterootpaths:
@@ -502,6 +536,7 @@ templateRootPaths
 
 
 
+.. index:: FLUIDTEMPLATE; variables
 .. _cobj-fluidtemplate-properties-variables:
 
 variables
