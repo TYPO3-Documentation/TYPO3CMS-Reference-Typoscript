@@ -578,7 +578,7 @@ Resource references
 ===================
 
 TYPO3 supports a modern and future-proof way of referencing resources using an
-extensible and expressive syntax which is easy to understand.
+extensible and expressive syntax.
 
 In order to understand the syntax, we will guide you through using a simple
 page link.

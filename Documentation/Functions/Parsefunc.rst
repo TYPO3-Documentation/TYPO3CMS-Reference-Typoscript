@@ -41,7 +41,7 @@ externalBlocks
    **.[tagname]** {
 
    * **callRecursive:** :ref:`data-type-boolean`. If set, the content of the block is
-     directed into parseFunc again. Otherwise the content is just passed
+     directed into parseFunc again. Otherwise the content is passed
      through with no other processing than :ref:`stdwrap` (see below).
 
    * **callRecursive.dontWrapSelf:** :ref:`data-type-boolean`. If set, the tags of the

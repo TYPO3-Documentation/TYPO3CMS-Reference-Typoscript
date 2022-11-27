@@ -75,7 +75,7 @@ returnKey
    :ref:`data-type-integer` / :ref:`stdwrap`
 
 :aspect:`Description`
-   Instead of parsing the split result, just return the element of the
+   Instead of parsing the split result, return the element of the
    index with this number immediately and stop processing of the split
    function.
 

@@ -99,8 +99,8 @@ different each time!
          fontsize and this value.
 
          In other words: Since pixel space may vary depending on the font size
-         used you can simply specify by this value at what fontsize the pixel
-         space settings are optimized and for other fontsizes this will
+         used, you can specify by this value at what fontsize the pixel
+         space settings are optimized and for other font sizes this will
          automatically be adjusted according to this font size.
 
 

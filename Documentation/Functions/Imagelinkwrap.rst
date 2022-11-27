@@ -367,7 +367,7 @@ linkParams
 Example: Use alternative parameters for the a-tag
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-This way it is easy to use a lightbox and to display
+This way it is possible to use a lightbox and to display
 resized images in the frontend. More complete examples are
 :ref:`imageLinkWrap-example-fancybox` and
 :ref:`imageLinkWrap-example-topup`.

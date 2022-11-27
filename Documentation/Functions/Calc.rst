@@ -18,7 +18,7 @@ Calculating values (+calc)
 
 Sometimes a data type is set to ``someType +calc``. The ``+calc`` indicates
 that the value is calculated with ``+-/\*`` operators. *Be aware that the
-operators have no "weight".* The calculation is just done from left to
+operators have no "weight".* The calculation is done from left to
 right.
 
 

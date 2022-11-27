@@ -1769,7 +1769,7 @@ pageTitleProviders
             }
 
          The ordering of the providers is based on the :typoscript:`before` and :typoscript:`after` parameters. If you want a provider
-         to be handled before a specific other provider, just set that provider in the :typoscript:`before`, do the same with
+         to be handled before a specific other provider, set that provider in the :typoscript:`before`, do the same with
          :typoscript:`after`.
 
          .. note::

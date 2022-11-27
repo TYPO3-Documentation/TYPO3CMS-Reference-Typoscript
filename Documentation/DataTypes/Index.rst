@@ -370,7 +370,7 @@ imageExtension
    global variable :php:`$GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext']`.
    Standard is pdf, gif, jpg, jpeg, tif, bmp, ai, pcx, tga, png.
 
-   The value **"web"** is special. This will just ensure that an image is
+   The value **"web"** is special. This will ensure that an image is
    converted to a web image format (gif or jpg) if it happens not to be already!
 
 :aspect:`Examples:`
