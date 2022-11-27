@@ -355,7 +355,7 @@ settings
 
       {settings.copyrightYear}
 
-   Apart from just setting a key-value pair as done in the example, you can
+   Apart from setting a key-value pair as done in the example, you can
    also reference objects or access constants as well.
 
 

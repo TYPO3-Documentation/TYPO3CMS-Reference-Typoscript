@@ -18,7 +18,7 @@ The cObject HMENU allows you to define the global settings of the menu
 as a whole. For the rendering of the single menu levels, different
 :ref:`menu objects <menu-objects>` can be used.
 
-Apart from just creating a hierarchical menu of the pages as they are
+Apart from creating a hierarchical menu of the pages as they are
 structured in the page tree, HMENU also allows you to use the
 :ref:`.special property <hmenu-special-property>` to create special
 menus. These special menus take characteristics of special menu types
@@ -399,7 +399,7 @@ protectLvar
          have the "Hide page if no translation for current language exists"
          flag set, then the menu item will link to a non accessible page that
          will yield an error page to the user. Setting this option will prevent
-         that situation by simply adding "&L=0" for such pages, meaning that
+         that situation by adding "&L=0" for such pages, meaning that
          they will switch to the default language rather than keeping the
          current language.
 

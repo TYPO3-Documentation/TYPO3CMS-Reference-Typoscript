@@ -37,7 +37,7 @@ is possible. Let's describe this as: We have an **output sequence of 0 to N item
 
 In real life one more thing is important: We often want to have a different properties
 for the first and the last or odd and even elements. :typoscript:`optionSplit` tries to offer
-an easy solution for this task as well. We can specify more than just one shaping
+a solution for this task as well. We can specify more than just one shaping
 of a value for a property. Let's describe this as: We have an **input sequence M items**.
 
 Now we can precisely define what :typoscript:`optionSplit` is.
