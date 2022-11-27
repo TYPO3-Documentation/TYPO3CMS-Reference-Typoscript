@@ -7,60 +7,72 @@
 constants
 =========
 
-This object can be used to define constants for replacement inside a
-:ref:`parsefunc`. If parseFunc somewhere is configured with :typoscript:`.constants = 1`,
-then all occurrences of the constant in the text will be substituted
-with the actual value. This is useful, if you need one and the same
-value at many places in your website. With constants, you can
-maintain it easily.
+..  attention::
+    ..  deprecated:: 12.1
+        Using the :typoscript:`constants` top-level-object in combination with the
+        :typoscript:`constants = 1` in :ref:`parseFunc` to substitute strings
+        like :typoscript:`###MY_CONSTANT###` triggers a deprecation level log error
+        in TYPO3 v12 and will stop working in v13.
 
-.. note::
+The Frontend TypoScript setup (!) top-level-object :typoscript:`constants` can be
+used to define constants for replacement inside a :ref:`parseFunc`.
+If :typoscript:`parseFunc` somewhere is configured with :typoscript:`.constants = 1`,
+then all occurrences of the constant in the text will be substituted with the
+actual value.
 
-   The constants defined here are **not** the ones, which can be defined
-   in the constants section of your template and which then in the setup
-   section can be used as :typoscript:`{$myconstant}`.
+.. _tlo-constants-migration:
 
-Properties
-----------
+Migration
+=========
 
-.. container:: ts-properties
+One possible solution is to switch to TypoScript constants / settings instead
+for simple cases.
 
-   ==================== =============================== ====================== =======
-   Property             Data Type                       :ref:`stdwrap`         Default
-   ==================== =============================== ====================== =======
-   `(array of keys)`_   :ref:`data-type-string`
-   ==================== =============================== ====================== =======
+A simple example usage before:
 
-.. ### BEGIN~OF~TABLE ###
+.. code-block:: typoscript
 
-.. _setup-constants-array-of-keys:
+    TypoScript setup:
 
-(array of keys)
----------------
+    constants.EMAIL = mail@example.com
+    page = PAGE
+    page.10 = TEXT
+    page.10.value = Write an email to ###EMAIL###
+    page.10.parseFunc.constants = 1
 
-.. container:: table-row
+Switching to a TypoScript constant / setting:
 
-   Property
-         (array of keys)
+.. code-block:: typoscript
 
-   Data type
-         :ref:`data-type-string`
+    TypoScript constants / settings:
 
-   Description
-         Constants in the form :typoscript:`constants.key = value`.
+    myEmail = mail@example.com
 
-         The :typoscript:`key` is the constant name, which you write in your texts. The
-         :typoscript:`value` is the actual output, which you want to get in your website.
+    TypoScript setup:
 
-   Examples:
-         .. code-block:: typoscript
-            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    page = PAGE
+    page.10 = TEXT
+    page.10.value = Write an email to {$myEmail}
 
-            constants.EMAIL = email@email.com
+The main usage of this feature has been a "magic" substitution within
+:typoscript:`lib.parseFunc_RTE`:
 
-         If :ref:`parsefunc` is configured with :typoscript:`.constants = 1`,
-         then all occurrences of the string `###EMAIL###` in the text
-         will be substituted with the actual address.
+When :sql:`tt_content` rich-text editor (RTE) content elements contain such
+substitution strings, they are replaced by :typoscript:`parseFunc` accordingly.
+For instance, a :sql:`tt_content` RTE element with the content
+`Send an email to ###EMAIL###` would substitute to
+`Send an email to email@example.org` *if*
+the top-level setup :typoscript:`constants` object has been set up.
 
+This substitution relies on the the fact that editors actively know about
+and use this construct: If only one content element did not prepare for this
+- since an editor forgot or have not been trained about it, changing
+such a constant on TypoScript level would still lead to faulty frontend output,
+rendering the entire substitution approach useless.
 
-.. ###### END~OF~TABLE ######
+In case instances still rely on this magic substitution principle, and made sure all editors
+always know and follow this approach, instances can use the :typoscript:`userFunc`
+property of :typoscript:`parseFunc` to re-implement the functionality:
+
+Basically by copying the deprecated code to an own class and registering the
+:typoscript:`userFunc` in :typoscript:`lib.parseFunc_RTE`.
