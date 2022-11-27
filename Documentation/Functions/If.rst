@@ -215,6 +215,108 @@ equals
       if.value.data = GETENV:REQUEST_METHOD
 
 
+..  index:: if; contains
+..  _if-contains:
+
+contains
+--------
+
+..  versionadded:: 12.1
+
+:aspect:`Property`
+    contains
+
+:aspect:`Data type`
+    value / :ref:`stdwrap`
+
+:aspect:`Description`
+    Returns true, if the content contains :typoscript:`value`.
+
+:aspect:`Example`
+    ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :emphasize-lines: 11
+
+        # Add a span tag before the page title if the page title
+        # contains the string "media"
+        page.10 = TEXT
+        page.10 {
+            data = page:title
+            htmlSpecialChars = 1
+            prepend = TEXT
+            prepend {
+                value = <span class="icon-video"></span>
+                if.value.data = page:title
+                if.contains = Media
+            }
+            outerWrap = <h1>|</h1>
+        }
+
+
+..  index:: if; startsWith
+..  _if-startsWith:
+
+startsWith
+----------
+
+..  versionadded:: 12.1
+
+:aspect:`Property`
+    startsWith
+
+:aspect:`Data type`
+    value / :ref:`stdwrap`
+
+:aspect:`Description`
+    Returns true, if the content starts with :typoscript:`value`.
+
+:aspect:`Example`
+    ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :emphasize-lines: 6
+
+        page.10 = TEXT
+        page.10 {
+            value = Your editor added the magic word in the header field
+            htmlSpecialChars = 1
+            if.value.data = DB:tt_content:1234:header
+            if.startsWith = Bazinga
+        }
+
+
+..  index:: if; endsWith
+..  _if-endsWith:
+
+endsWith
+--------
+
+..  versionadded:: 12.1
+
+:aspect:`Property`
+    endsWith
+
+:aspect:`Data type`
+    value / :ref:`stdwrap`
+
+:aspect:`Description`
+    Returns true, if the content ends with :typoscript:`value`.
+
+:aspect:`Example`
+    ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :emphasize-lines: 7
+
+        # Add a footer note, if the page author ends with "Kott"
+        page.100 = TEXT
+        page.100 {
+            value = This is an article from Benji
+            htmlSpecialChars = 1
+            if.value.data = page:author
+            if.endsWith = Kott
+            wrap = <footer>|</footer>
+        }
+
+
 .. index:: if; isInList
 .. _if-isinlist:
 
