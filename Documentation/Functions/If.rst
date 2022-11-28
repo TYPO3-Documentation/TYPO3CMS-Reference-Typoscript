@@ -10,13 +10,15 @@ if
 
 Allows you to check multiple conditions.
 
-This function returns true, if ALL of the present conditions are met
+This function returns true, if **all** of the present conditions are met
 (they are connected with an "AND", a logical conjunction). If a
 single condition is false, the value returned is false.
 
 The returned value may still be negated by the :ref:`if-negate`-property.
 
-There is no else property available. The else branch of an if statement is a missing feature. You can implement a workaround by a logic based on the :ref:`stdwrap-override-conditions` .
+There is no else property available. The "else" branch of an "if" statement is a
+missing feature. You can implement a workaround by a logic based on the
+:ref:`stdwrap-override-conditions`.
 
 Also check the explanations and the examples further below!
 
@@ -25,137 +27,6 @@ Also check the explanations and the examples further below!
 
 Properties
 ==========
-
-.. index:: if; directReturn
-.. _if-directreturn:
-
-directReturn
-------------
-
-:aspect:`Property`
-   directReturn
-
-:aspect:`Data type`
-   :ref:`data-type-bool`
-
-:aspect:`Description`
-   If this property exists, no other conditions will be checked. Instead
-   the true/false of this value is returned. Can be used to set
-   true/false with a TypoScript constant.
-
-
-.. index:: if; isNull
-.. _if-isnull:
-
-isNull
-------
-
-:aspect:`Property`
-   isNull
-
-:aspect:`Data type`
-   :ref:`stdWrap`
-
-:aspect:`Description`
-   If the resulting content of the :typoscript:`stdWrap` is null (:php:`NULL` type in PHP).
-
-   Since null values cannot be assigned in TypoScript, only the :typoscript:`stdWrap`
-   features are available below this property.
-
-:aspect:`Example`
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-      page.10 = COA_INT
-      page.10.10 = TEXT
-      page.10.10 {
-            stdWrap.if.isNull.field = description
-            value = No description available.
-      }
-
-   This example returns "No description available.", if the content of
-   the field "description" is :php:`NULL`.
-
-
-.. index:: if; isTrue
-.. _if-istrue:
-
-isTrue
-------
-
-:aspect:`Property`
-   isTrue
-
-:aspect:`Data type`
-   :ref:`data-type-string` / :ref:`stdwrap`
-
-:aspect:`Description`
-   If the content is "true", which is not empty string and not zero.
-
-
-.. index:: if; isFalse
-.. _if-isfalse:
-
-isFalse
--------
-
-:aspect:`Property`
-   isFalse
-
-:aspect:`Data type`
-   :ref:`data-type-string` / :ref:`stdwrap`
-
-:aspect:`Description`
-   If the content is "false", which is empty or zero.
-
-
-.. index:: if; isPositive
-.. _if-ispositive:
-
-isPositive
-----------
-
-:aspect:`Property`
-   isPositive
-
-:aspect:`Data type`
-   :ref:`data-type-integer` / :ref:`stdwrap` \+ :ref:`objects-calc`
-
-:aspect:`Description`
-   Returns true, if the content is positive.
-
-
-.. index:: if; isGreaterThan
-.. _if-isgreaterthan:
-
-isGreaterThan
--------------
-
-:aspect:`Property`
-   isGreaterThan
-
-:aspect:`Data type`
-   value / :ref:`stdwrap`
-
-:aspect:`Description`
-   Returns true, if the content is greater than :typoscript:`value`.
-
-
-.. index:: if; isLessThan
-.. _if-islessthan:
-
-isLessThan
-----------
-
-:aspect:`Property`
-   isLessThan
-
-:aspect:`Data type`
-   value / :ref:`stdwrap`
-
-:aspect:`Description`
-   Returns true, if the content is less than :typoscript:`value`.
-
 
 .. index:: if; bitAnd
 .. _if-bitand:
@@ -189,30 +60,6 @@ bitAnd
               }
           }
       }
-
-
-
-.. index:: if; equals
-.. _if-equals:
-
-equals
-------
-
-:aspect:`Property`
-   equals
-
-:aspect:`Data type`
-   value / :ref:`stdwrap`
-
-:aspect:`Description`
-   Returns true, if the content is equal to :typoscript:`value`.
-
-:aspect:`Example`
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-      if.equals = POST
-      if.value.data = GETENV:REQUEST_METHOD
 
 
 ..  index:: if; contains
@@ -253,35 +100,22 @@ contains
         }
 
 
-..  index:: if; startsWith
-..  _if-startsWith:
+.. index:: if; directReturn
+.. _if-directreturn:
 
-startsWith
-----------
-
-..  versionadded:: 12.1
+directReturn
+------------
 
 :aspect:`Property`
-    startsWith
+   directReturn
 
 :aspect:`Data type`
-    value / :ref:`stdwrap`
+   :ref:`data-type-bool`
 
 :aspect:`Description`
-    Returns true, if the content starts with :typoscript:`value`.
-
-:aspect:`Example`
-    ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-        :emphasize-lines: 6
-
-        page.10 = TEXT
-        page.10 {
-            value = Your editor added the magic word in the header field
-            htmlSpecialChars = 1
-            if.value.data = DB:tt_content:1234:header
-            if.startsWith = Bazinga
-        }
+   If this property exists, no other conditions will be checked. Instead
+   the true/false of this value is returned. Can be used to set
+   true/false with a TypoScript constant.
 
 
 ..  index:: if; endsWith
@@ -317,6 +151,61 @@ endsWith
         }
 
 
+.. index:: if; equals
+.. _if-equals:
+
+equals
+------
+
+:aspect:`Property`
+   equals
+
+:aspect:`Data type`
+   value / :ref:`stdwrap`
+
+:aspect:`Description`
+   Returns true, if the content is equal to :typoscript:`value`.
+
+:aspect:`Example`
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+      if.equals = POST
+      if.value.data = GETENV:REQUEST_METHOD
+
+
+.. index:: if; isFalse
+.. _if-isfalse:
+
+isFalse
+-------
+
+:aspect:`Property`
+   isFalse
+
+:aspect:`Data type`
+   :ref:`data-type-string` / :ref:`stdwrap`
+
+:aspect:`Description`
+   If the content is "false", which is empty or zero.
+
+
+.. index:: if; isGreaterThan
+.. _if-isgreaterthan:
+
+isGreaterThan
+-------------
+
+:aspect:`Property`
+   isGreaterThan
+
+:aspect:`Data type`
+   value / :ref:`stdwrap`
+
+:aspect:`Description`
+   Returns true, if the content is greater than :typoscript:`value`.
+
+
 .. index:: if; isInList
 .. _if-isinlist:
 
@@ -345,20 +234,86 @@ isInList
    This returns true, if the uid is part of the list in :typoscript:`value`.
 
 
-.. index:: if; value
-.. _if-value:
+.. index:: if; isLessThan
+.. _if-islessthan:
 
-value
------
+isLessThan
+----------
 
 :aspect:`Property`
-   value
+   isLessThan
 
 :aspect:`Data type`
    value / :ref:`stdwrap`
 
 :aspect:`Description`
-   The value to check. This is the comparison value mentioned above.
+   Returns true, if the content is less than :typoscript:`value`.
+
+
+.. index:: if; isNull
+.. _if-isnull:
+
+isNull
+------
+
+:aspect:`Property`
+   isNull
+
+:aspect:`Data type`
+   :ref:`stdWrap`
+
+:aspect:`Description`
+   If the resulting content of the :typoscript:`stdWrap` is null (:php:`NULL` type in PHP).
+
+   Since null values cannot be assigned in TypoScript, only the :typoscript:`stdWrap`
+   features are available below this property.
+
+:aspect:`Example`
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+      page.10 = COA_INT
+      page.10.10 = TEXT
+      page.10.10 {
+            stdWrap.if.isNull.field = description
+            value = No description available.
+      }
+
+   This example returns "No description available.", if the content of
+   the field "description" is :php:`NULL`.
+
+
+.. index:: if; isPositive
+.. _if-ispositive:
+
+isPositive
+----------
+
+:aspect:`Property`
+   isPositive
+
+:aspect:`Data type`
+   :ref:`data-type-integer` / :ref:`stdwrap` \+ :ref:`objects-calc`
+
+:aspect:`Description`
+   Returns true, if the content is positive.
+
+
+.. index:: if; isTrue
+.. _if-istrue:
+
+isTrue
+------
+
+:aspect:`Property`
+   isTrue
+
+:aspect:`Data type`
+   :ref:`data-type-string` / :ref:`stdwrap`
+
+:aspect:`Description`
+   If the content is "true", which is not empty string and not zero.
+
 
 .. index:: if; negate
 .. _if-negate:
@@ -383,6 +338,53 @@ negate
 
 :aspect:`Default`
    0
+
+
+..  index:: if; startsWith
+..  _if-startsWith:
+
+startsWith
+----------
+
+..  versionadded:: 12.1
+
+:aspect:`Property`
+    startsWith
+
+:aspect:`Data type`
+    value / :ref:`stdwrap`
+
+:aspect:`Description`
+    Returns true, if the content starts with :typoscript:`value`.
+
+:aspect:`Example`
+    ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :emphasize-lines: 6
+
+        page.10 = TEXT
+        page.10 {
+            value = Your editor added the magic word in the header field
+            htmlSpecialChars = 1
+            if.value.data = DB:tt_content:1234:header
+            if.startsWith = Bazinga
+        }
+
+
+.. index:: if; value
+.. _if-value:
+
+value
+-----
+
+:aspect:`Property`
+   value
+
+:aspect:`Data type`
+   value / :ref:`stdwrap`
+
+:aspect:`Description`
+   The value to check. This is the comparison value mentioned above.
 
 
 .. index:: if; Explanation
