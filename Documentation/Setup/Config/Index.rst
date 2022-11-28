@@ -278,6 +278,8 @@ ATagParams
 baseURL
 =======
 
+.. deprecated:: 12.1
+
 .. container:: table-row
 
    Property
@@ -291,11 +293,36 @@ baseURL
          the value that is expected to be the URL and append a "/" to the end
          of the string.
 
+         .. note::
+            In general it is not recommended to use the :html:`<base>` tag as
+            certain crawlers cannot interpret this HTML tag properly.
+
    Example
          .. code-block:: typoscript
             :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
             config.baseURL = https://example.org/sub_dir/
+
+   Migration
+         Use the :ref:`site configuration <t3coreapi:sitehandling>` with
+         fully-qualified domain names to achieve the same result.
+
+         If you are already use the site configuration, but need to build
+         fully-qualified URLs, you can safely remove this option without any
+         impact in 99% of the use cases.
+
+         In special cases the option :ref:`config.forceAbsoluteUrls = 1
+         <setup-config-forceAbsoluteUrls>` can help you to achieve the same
+         result.
+
+         If you need to manually set a :html:`<base>` tag, this is still
+         possible via TypoScript:
+
+         .. code-block:: typoscript
+
+            page = PAGE
+            page.headTag.append = TEXT
+            page.headTag.append.value = <base href="https://static.example.com/">
 
 
 .. index:: config; cache
