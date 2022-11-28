@@ -19,7 +19,7 @@ automatically.
 Options:
 ========
 
-..  confval:: if
+..  data-processor-files:: if
 
     :Required: false
     :type: :ref:`if` condition
@@ -27,7 +27,7 @@ Options:
 
     Only if the condition is met the data processor is executed.
 
-..  confval:: references
+..  data-processor-files:: references
 
     :Required: false
     :type: string (comma separated integers), :ref:`stdWrap`
@@ -43,7 +43,7 @@ Options:
     :ref:`FilesProcessor-stdWrap-on-references`.
 
 
-..  confval:: references.fieldName
+..  data-processor-files:: references.fieldName
 
     :Required: false
     :type: string, :ref:`stdWrap`
@@ -56,7 +56,7 @@ Options:
     :sql:`tt_content` record.
 
 
-..  confval:: references.table
+..  data-processor-files:: references.table
 
     :Required: false
     :type: string, :ref:`stdWrap`
@@ -67,7 +67,7 @@ Options:
     :ref:`select` function, :typoscript:`references.fieldName` must be set to
     the desired field name of the table to be queried.
 
-..  confval:: files
+..  data-processor-files:: files
 
     :Required: false
     :type: string (comma-separated integers), :ref:`stdWrap`
@@ -77,7 +77,7 @@ Options:
     If this option contains a comma-separated list of integers,
     these are treated as uids of files (:sql:`sys_file`).
 
-..  confval:: collections
+..  data-processor-files:: collections
 
     :Required: false
     :type: string (comma-separated integers), :ref:`stdWrap`
@@ -89,7 +89,7 @@ Options:
     collection are then being added to the output array.
 
 
-..  confval:: folders
+..  data-processor-files:: folders
 
     :Required: false
     :type: string (comma-separated folders), :ref:`stdWrap`
@@ -109,7 +109,7 @@ Options:
         folder :file:`/folderInMyFileadmin/something/` from the default storage
         `0` (:file:`fileadmin`)
 
-..  confval:: folders.recursive
+..  data-processor-files:: folders.recursive
 
     :Required: false
     :type: string, :ref:`stdWrap`
@@ -120,7 +120,7 @@ Options:
     recursively.
 
 
-..  confval:: sorting
+..  data-processor-files:: sorting
 
     :Required: false
     :type: string, :ref:`stdWrap`
@@ -131,7 +131,7 @@ Options:
     For example, filesize or title.
 
 
-..  confval:: sorting.direction
+..  data-processor-files:: sorting.direction
 
     :Required: false
     :type: string, :ref:`stdWrap`
@@ -140,7 +140,7 @@ Options:
 
     The sorting direction (:typoscript:`ascending` or :typoscript:`descending`).
 
-..  confval:: as
+..  data-processor-files:: as
 
     :Required: false
     :type: string, :ref:`stdWrap`
@@ -148,7 +148,7 @@ Options:
 
     The variable name to be used in the Fluid template.
 
-..  confval:: dataProcessing
+..  data-processor-files:: dataProcessing
 
     :Required: false
     :type: array of :ref:`dataProcessing`

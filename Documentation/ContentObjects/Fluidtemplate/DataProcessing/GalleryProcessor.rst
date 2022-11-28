@@ -14,7 +14,7 @@ be used to fetch the files.
 Options:
 ========
 
-..  confval:: if
+..  data-processor-gallery:: if
 
     :Required: false
     :type: :ref:`if` condition
@@ -22,7 +22,7 @@ Options:
 
     Only if the condition is met the data processor is executed.
 
-..  confval:: filesProcessedDataKey
+..  data-processor-gallery:: filesProcessedDataKey
 
     :Required: true
     :type: string, :ref:`stdWrap`
@@ -31,7 +31,7 @@ Options:
 
     Key of the array previously processed by the :php:`FilesProcessor`.
 
-..  confval:: numberOfColumns
+..  data-processor-gallery:: numberOfColumns
 
     :Required: false
     :type: int, :ref:`stdWrap`
@@ -41,7 +41,7 @@ Options:
     Expects the desired number of columns. Defaults to the value of the field
     `imagecols` (:guilabel:`Number of Columns`) if used with content elements.
 
-..  confval:: mediaOrientation
+..  data-processor-gallery:: mediaOrientation
 
     :Required: false
     :type: int, :ref:`stdWrap`
@@ -55,7 +55,7 @@ Options:
 
     .. include:: /Images/AutomaticScreenshots/Fluidtemplate/ImageOrientation.rst.txt
 
-..  confval:: maxGalleryWidth
+..  data-processor-gallery:: maxGalleryWidth
 
     :Required: false
     :type: int, :ref:`stdWrap`
@@ -63,7 +63,7 @@ Options:
 
     Maximal gallery width in pixels.
 
-..  confval:: maxGalleryWidthInText
+..  data-processor-gallery:: maxGalleryWidthInText
 
     :Required: false
     :type: int, :ref:`stdWrap`
@@ -71,7 +71,7 @@ Options:
 
     Maximal gallery width in pixels if displayed in a text.
 
-..  confval:: equalMediaHeight, equalMediaWidth
+..  data-processor-gallery:: equalMediaHeight, equalMediaWidth
 
     :Required: false
     :type: int, :ref:`stdWrap`
@@ -85,7 +85,7 @@ Options:
 
     .. include:: /Images/AutomaticScreenshots/Fluidtemplate/MediaHeight.rst.txt
 
-..  confval:: columnSpacing
+..  data-processor-gallery:: columnSpacing
 
     :Required: false
     :type: int, :ref:`stdWrap`
@@ -94,7 +94,7 @@ Options:
 
     Space between columns in pixels
 
-..  confval:: borderEnabled
+..  data-processor-gallery:: borderEnabled
 
     :Required: false
     :type: int, :ref:`stdWrap`
@@ -105,7 +105,7 @@ Options:
     fields `imageborder` (:guilabel:`Number of Columns`) if used with content
     elements.
 
-..  confval:: borderWidth
+..  data-processor-gallery:: borderWidth
 
     :Required: false
     :type: int, :ref:`stdWrap`
@@ -114,7 +114,7 @@ Options:
 
     Width of the border in pixels.
 
-..  confval:: borderPadding
+..  data-processor-gallery:: borderPadding
 
     :Required: false
     :type: int, :ref:`stdWrap`
@@ -123,7 +123,7 @@ Options:
 
     Padding around the border in pixels.
 
-..  confval:: cropVariant
+..  data-processor-gallery:: cropVariant
 
     :Required: false
     :type: int, :ref:`stdWrap`
@@ -132,7 +132,7 @@ Options:
 
     See :ref:`crop variants in the TCA reference <t3tca:columns-imageManipulation-properties-cropVariants>`
 
-..  confval:: as
+..  data-processor-gallery:: as
 
     :Required: false
     :type: string, :ref:`stdWrap`
@@ -140,7 +140,7 @@ Options:
 
     The variable name to be used in the Fluid template.
 
-..  confval:: dataProcessing
+..  data-processor-gallery:: dataProcessing
 
     :Required: false
     :type: array of :ref:`dataProcessing`
@@ -161,11 +161,11 @@ TypoScript
 As the :php:`GalleryProcessor` expects the data of the files to be
 present in the the `processedData` array, the :php:`FilesProcessor`
 always has to be called first. Execution depends on the key in the
-:typoscript:`dataProcessing` array, not the order in which they are put there.
+:data-processor-gallery:`dataProcessing` array, not the order in which they are put there.
 
-The content of :typoscript:`filesProcessedDataKey` in the
-:php:`GalleryProcessor` has to be equal to the content of :typoscript:`as` in
-the :php:`FilesProcessor`:
+The content of :data-processor-gallery:`filesProcessedDataKey` in the
+:php:`GalleryProcessor` has to be equal to the content of
+:data-processor-files:`as` in the :php:`FilesProcessor`:
 
 ..  include:: /CodeSnippets/DataProcessing/TypoScript/GalleryProcessor.rst.txt
 

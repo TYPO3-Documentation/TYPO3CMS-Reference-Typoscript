@@ -24,7 +24,7 @@ Additional data processing is supported and will be applied to each record.
 Options
 =======
 
-..  confval:: levels
+..  data-processor-menu:: levels
 
     :Required: true
     :type: int, :ref:`stdWrap`
@@ -34,7 +34,7 @@ Options
     Maximal number of levels to be included in the output array.
 
 
-..  confval:: expandAll
+..  data-processor-menu:: expandAll
 
     :Required: true
     :type: int, :ref:`stdWrap`
@@ -43,7 +43,7 @@ Options
 
     Include all submenus (`1`) or only those of the active pages (`0`).
 
-..  confval:: includeSpacer
+..  data-processor-menu:: includeSpacer
 
     :Required: true
     :type: int, :ref:`stdWrap`
@@ -52,7 +52,7 @@ Options
 
     Include pages with type "spacer".
 
-..  confval:: titleField
+..  data-processor-menu:: titleField
 
     :Required: true
     :type: int, :ref:`stdWrap`
@@ -61,7 +61,7 @@ Options
 
     Fields to be used as title.
 
-..  confval:: as
+..  data-processor-menu:: as
 
     :Required: false
     :type: string
@@ -69,8 +69,8 @@ Options
 
     Name for the variable in the Fluid template.
 
-.. important::
-   Additionally, all :ref:`HMENU options <cobj-hmenu-options>` are available.
+..  attention::
+    Additionally, all :ref:`HMENU options <cobj-hmenu-options>` are available.
 
 
 Example: Two level menu of the web page
