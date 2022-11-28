@@ -77,4 +77,4 @@ TypoScript itself offers a number of debug functions:
 - :ref:`TMENU <tmenu>` comes with the property
   :ref:`debugItemConf <menu-common-properties>`.
   If set to :typoscript:`1`, it outputs the configuration arrays for each menu item.
-  Useful to debug :ref:`optionSplit <objects-optionsplit>` things and such.
+  Useful to debug :ref:`optionSplit <optionsplit>` things and such.
