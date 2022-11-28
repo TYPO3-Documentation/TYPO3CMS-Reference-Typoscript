@@ -291,6 +291,10 @@ baseURL
          the value that is expected to be the URL and append a "/" to the end
          of the string.
 
+         .. note::
+            In general it is not recommended to use the :html:`<base>` tag as
+            certain crawlers cannot interpret this HTML tag properly.
+
    Example
          .. code-block:: typoscript
             :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
@@ -1929,8 +1933,8 @@ pageTitleSeparator
 
             config.pageTitleSeparator = *
             config.pageTitleSeparator.noTrimWrap = |||
-            
-         If you want to remove the web page title from the displayed title, choose a separator that is not included in the web page title. 
+
+         If you want to remove the web page title from the displayed title, choose a separator that is not included in the web page title.
          Then split the title from that character and return the second part only:
 
          .. code-block:: typoscript
@@ -1942,7 +1946,7 @@ pageTitleSeparator
                     token = *
                     returnKey = 1
                 }
-            }       
+            }
 
 
 .. index:: config; removeDefaultCss
