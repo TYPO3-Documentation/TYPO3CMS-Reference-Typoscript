@@ -1382,7 +1382,7 @@ newContentElement.wizardItems
       (array) Default values for tt_content fields.
 
    mod.wizards.newContentElement.wizardItems.[group].elements.[name].saveAndClose
-      (boolean) If `1`, directs the user back to the :guilabel:`Page` module directly instead of showing the FormEngine. Default `0`.
+      (boolean) If `true`, directs the user back to the :guilabel:`Page` module directly instead of showing the FormEngine. Default `false`.
 
 :aspect:`Example`
    .. _pageexample1:
