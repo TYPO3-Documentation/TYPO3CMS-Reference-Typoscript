@@ -457,16 +457,6 @@ See PHP source code for
 :php:`ContentObjectRenderer::getQuery()`,
 :php:`ContentObjectRenderer::getWhere()`.
 
-
-.. Preamble: :
-# Note: TypoScript (TS) is just another way to define an array of settings which
-#       is later on INTERPRETED by TYPO3. TypoScript can be written in ANY order
-#       as long as it leads to the same array. Actual execution order is TOTALLY
-#       INDEPENDENT of TypoScript code order.
-#
-#       The order of TS in this example however tries to reflect execution order.
-#       The denoted steps are taking place in that order at execution time.
-
 Condensed form:
 
 .. code-block:: typoscript
@@ -494,6 +484,4 @@ Condensed form:
    }
 
 
-.. Expanded form::
-//
 See also: :ref:`if`, :ref:`select`, :ref:`data-type-wrap`, :ref:`stdWrap`, :ref:`data-type-cobject`

@@ -88,7 +88,7 @@ useOptionSplitReplace
    :ref:`data-type-bool` / :ref:`stdwrap`
 
 :aspect:`Description`
-   This property allows to use :ref:`objects-optionsplit` for the replace
+   This property allows to use :ref:`optionsplit` for the replace
    property. That way the replace property can be different depending on the
    occurrence of the string (first/middle/last part, ...). This works for
    both normal and regular expression replacements. For examples see below.
@@ -128,7 +128,7 @@ This returns: "There are an animal, an animal and an animal around the
 block! Yeah!".
 
 
-The following examples demonstrate the use of :ref:`objects-optionsplit`:
+The following examples demonstrate the use of :ref:`optionsplit`:
 
 
 .. code-block:: typoscript
