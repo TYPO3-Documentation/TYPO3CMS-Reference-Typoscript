@@ -16,7 +16,7 @@ array of records.
 Options:
 ========
 
-..  data-processor-db:: if
+..  t3-data-processor-db:: if
 
     :Required: false
     :type: :ref:`if` condition
@@ -24,7 +24,7 @@ Options:
 
     Only if the condition is met the data processor is executed.
 
-..  data-processor-db:: table
+..  t3-data-processor-db:: table
 
     :Required: true
     :type: string, :ref:`stdWrap`
@@ -32,7 +32,7 @@ Options:
 
     Name of the table from which the records should be fetched.
 
-..  data-processor-db:: as
+..  t3-data-processor-db:: as
 
     :Required: false
     :type: string, :ref:`stdWrap`
@@ -40,7 +40,7 @@ Options:
 
     The variable's name to be used in the Fluid template.
 
-..  data-processor-db:: dataProcessing
+..  t3-data-processor-db:: dataProcessing
 
     :Required: false
     :type: array of :ref:`dataProcessing`

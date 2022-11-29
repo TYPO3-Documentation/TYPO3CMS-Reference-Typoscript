@@ -16,7 +16,7 @@ and enclosure into account, before it is passed to the view.
 Options:
 ========
 
-..  data-processor-csv:: if
+..  t3-data-processor-csv:: if
 
     :Required: false
     :type: :ref:`if` condition
@@ -24,7 +24,7 @@ Options:
 
     If the condition is met the data processor is processed.
 
-..  data-processor-csv:: fieldName
+..  t3-data-processor-csv:: fieldName
 
     :Required: true
     :type: string, :ref:`stdWrap`
@@ -32,7 +32,7 @@ Options:
 
     Name of the field in the processed ContentObjectRenderer.
 
-..  data-processor-csv:: as
+..  t3-data-processor-csv:: as
 
     :Required: false
     :type: string
@@ -40,7 +40,7 @@ Options:
 
     The variable's name to be used in the Fluid template.
 
-..  data-processor-csv:: maximumColumns
+..  t3-data-processor-csv:: maximumColumns
 
     :Required: false
     :type: int, :ref:`stdWrap`
@@ -50,7 +50,7 @@ Options:
     silently dropped. When set to `0` (default) all columns will be
     transformed.
 
-..  data-processor-csv:: fieldDelimiter
+..  t3-data-processor-csv:: fieldDelimiter
 
     :Required:  false
     :type: string(1), :ref:`stdWrap`
@@ -58,7 +58,7 @@ Options:
 
     The field delimiter, a character separating the values.
 
-..  data-processor-csv:: fieldEnclosure
+..  t3-data-processor-csv:: fieldEnclosure
 
     :Required:  false
     :type: string(1), :ref:`stdWrap`

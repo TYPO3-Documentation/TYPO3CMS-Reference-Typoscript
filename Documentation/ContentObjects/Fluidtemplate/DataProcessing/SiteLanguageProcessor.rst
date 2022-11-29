@@ -14,7 +14,7 @@ The :php:`SiteLanguageProcessor` fetches language-related data from the
 Options
 =======
 
-..  data-processor-sitelang:: as
+..  t3-data-processor-sitelang:: as
 
     :Required: false
     :type: string

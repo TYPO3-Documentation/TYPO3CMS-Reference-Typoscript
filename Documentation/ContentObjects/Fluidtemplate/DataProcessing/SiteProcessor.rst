@@ -12,7 +12,7 @@ The :php:`SiteProcessor` fetches data from the :ref:`site configuration
 Options
 =======
 
-..  data-processor-site:: as
+..  t3-data-processor-site:: as
 
     :Required: false
     :type: string

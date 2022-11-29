@@ -24,7 +24,7 @@ Additional data processing is supported and will be applied to each record.
 Options
 =======
 
-..  data-processor-menu:: levels
+..  t3-data-processor-menu:: levels
 
     :Required: true
     :type: int, :ref:`stdWrap`
@@ -34,7 +34,7 @@ Options
     Maximal number of levels to be included in the output array.
 
 
-..  data-processor-menu:: expandAll
+..  t3-data-processor-menu:: expandAll
 
     :Required: true
     :type: int, :ref:`stdWrap`
@@ -43,7 +43,7 @@ Options
 
     Include all submenus (`1`) or only those of the active pages (`0`).
 
-..  data-processor-menu:: includeSpacer
+..  t3-data-processor-menu:: includeSpacer
 
     :Required: true
     :type: int, :ref:`stdWrap`
@@ -52,7 +52,7 @@ Options
 
     Include pages with type "spacer".
 
-..  data-processor-menu:: titleField
+..  t3-data-processor-menu:: titleField
 
     :Required: true
     :type: int, :ref:`stdWrap`
@@ -61,7 +61,7 @@ Options
 
     Fields to be used as title.
 
-..  data-processor-menu:: as
+..  t3-data-processor-menu:: as
 
     :Required: false
     :type: string

@@ -14,7 +14,7 @@ be used to fetch the files.
 Options:
 ========
 
-..  data-processor-gallery:: if
+..  t3-data-processor-gallery:: if
 
     :Required: false
     :type: :ref:`if` condition
@@ -22,7 +22,7 @@ Options:
 
     Only if the condition is met the data processor is executed.
 
-..  data-processor-gallery:: filesProcessedDataKey
+..  t3-data-processor-gallery:: filesProcessedDataKey
 
     :Required: true
     :type: string, :ref:`stdWrap`
@@ -31,7 +31,7 @@ Options:
 
     Key of the array previously processed by the :php:`FilesProcessor`.
 
-..  data-processor-gallery:: numberOfColumns
+..  t3-data-processor-gallery:: numberOfColumns
 
     :Required: false
     :type: int, :ref:`stdWrap`
@@ -41,7 +41,7 @@ Options:
     Expects the desired number of columns. Defaults to the value of the field
     `imagecols` (:guilabel:`Number of Columns`) if used with content elements.
 
-..  data-processor-gallery:: mediaOrientation
+..  t3-data-processor-gallery:: mediaOrientation
 
     :Required: false
     :type: int, :ref:`stdWrap`
@@ -55,7 +55,7 @@ Options:
 
     .. include:: /Images/AutomaticScreenshots/Fluidtemplate/ImageOrientation.rst.txt
 
-..  data-processor-gallery:: maxGalleryWidth
+..  t3-data-processor-gallery:: maxGalleryWidth
 
     :Required: false
     :type: int, :ref:`stdWrap`
@@ -63,7 +63,7 @@ Options:
 
     Maximal gallery width in pixels.
 
-..  data-processor-gallery:: maxGalleryWidthInText
+..  t3-data-processor-gallery:: maxGalleryWidthInText
 
     :Required: false
     :type: int, :ref:`stdWrap`
@@ -71,7 +71,7 @@ Options:
 
     Maximal gallery width in pixels if displayed in a text.
 
-..  data-processor-gallery:: equalMediaHeight, equalMediaWidth
+..  t3-data-processor-gallery:: equalMediaHeight, equalMediaWidth
 
     :Required: false
     :type: int, :ref:`stdWrap`
@@ -85,7 +85,7 @@ Options:
 
     .. include:: /Images/AutomaticScreenshots/Fluidtemplate/MediaHeight.rst.txt
 
-..  data-processor-gallery:: columnSpacing
+..  t3-data-processor-gallery:: columnSpacing
 
     :Required: false
     :type: int, :ref:`stdWrap`
@@ -94,7 +94,7 @@ Options:
 
     Space between columns in pixels
 
-..  data-processor-gallery:: borderEnabled
+..  t3-data-processor-gallery:: borderEnabled
 
     :Required: false
     :type: int, :ref:`stdWrap`
@@ -105,7 +105,7 @@ Options:
     fields `imageborder` (:guilabel:`Number of Columns`) if used with content
     elements.
 
-..  data-processor-gallery:: borderWidth
+..  t3-data-processor-gallery:: borderWidth
 
     :Required: false
     :type: int, :ref:`stdWrap`
@@ -114,7 +114,7 @@ Options:
 
     Width of the border in pixels.
 
-..  data-processor-gallery:: borderPadding
+..  t3-data-processor-gallery:: borderPadding
 
     :Required: false
     :type: int, :ref:`stdWrap`
@@ -123,7 +123,7 @@ Options:
 
     Padding around the border in pixels.
 
-..  data-processor-gallery:: cropVariant
+..  t3-data-processor-gallery:: cropVariant
 
     :Required: false
     :type: int, :ref:`stdWrap`
@@ -132,7 +132,7 @@ Options:
 
     See :ref:`crop variants in the TCA reference <t3tca:columns-imageManipulation-properties-cropVariants>`
 
-..  data-processor-gallery:: as
+..  t3-data-processor-gallery:: as
 
     :Required: false
     :type: string, :ref:`stdWrap`
@@ -140,7 +140,7 @@ Options:
 
     The variable name to be used in the Fluid template.
 
-..  data-processor-gallery:: dataProcessing
+..  t3-data-processor-gallery:: dataProcessing
 
     :Required: false
     :type: array of :ref:`dataProcessing`
@@ -161,11 +161,11 @@ TypoScript
 As the :php:`GalleryProcessor` expects the data of the files to be
 present in the the `processedData` array, the :php:`FilesProcessor`
 always has to be called first. Execution depends on the key in the
-:data-processor-gallery:`dataProcessing` array, not the order in which they are put there.
+:t3-data-processor-gallery:`dataProcessing` array, not the order in which they are put there.
 
-The content of :data-processor-gallery:`filesProcessedDataKey` in the
+The content of :t3-data-processor-gallery:`filesProcessedDataKey` in the
 :php:`GalleryProcessor` has to be equal to the content of
-:data-processor-files:`as` in the :php:`FilesProcessor`:
+:t3-data-processor-files:`as` in the :php:`FilesProcessor`:
 
 ..  include:: /CodeSnippets/DataProcessing/TypoScript/GalleryProcessor.rst.txt
 
