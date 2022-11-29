@@ -6,7 +6,8 @@
 IMG\_RESOURCE
 =============
 
-Objects of type IMG_RESOURCE returns a reference to an image, possibly wrapped with :typoscript:`stdWrap`. Can
+Objects of type IMG_RESOURCE returns a reference to an image, possibly
+wrapped with :t3-cobj-img-resource:`stdWrap`. Can
 for example be used for putting background images in tables or
 table rows or to import an image in your own include scripts.
 
@@ -24,32 +25,16 @@ Depending on your use case you might prefer using the cObject
 Properties
 ==========
 
-.. ### BEGIN~OF~TABLE ###
-
 file
 ----
 
-.. container:: table-row
+..  t3-cobj-img-resource:: file
 
-   Property
-         file
-
-   Data type
-         imgResource
+    :Data type: imgResource
 
 stdWrap
 -------
 
-.. container:: table-row
+..  t3-cobj-img-resource:: stdWrap
 
-   Property
-         stdWrap
-
-   Data type
-         :ref:`->stdWrap <stdwrap>`
-
-
-.. ###### END~OF~TABLE ######
-
-[tsref:(cObject).IMG\_RESOURCE]
-
+    :Data type: :ref:`->stdWrap <stdwrap>`

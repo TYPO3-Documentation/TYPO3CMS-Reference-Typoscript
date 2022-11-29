@@ -1,8 +1,8 @@
-.. include:: /Includes.rst.txt
-.. index::
-   Content objects; LOAD_REGISTER
-   Registers; Loading
-.. _cobj-load-register:
+..  include:: /Includes.rst.txt
+..  index::
+    Content objects; LOAD_REGISTER
+    Registers; Loading
+..  _cobj-load-register:
 
 ==============
 LOAD\_REGISTER
@@ -21,78 +21,65 @@ as the last one. This corresponds to the stack principle Last In – First Out (
 With the advent of Fluid templating, registers are used less often than
 they used to be. In the Core they are not being used anymore.
 
-.. contents::
-   :local:
+..  contents::
+    :local:
 
 Properties
 ==========
 
-.. ### BEGIN~OF~TABLE ###
-
 (array of field names)
 ----------------------
 
-.. container:: table-row
+..  t3-cobj-load-register:: array of field names
 
-   Property
-         *(array of field names)*
+    :Data type: string /:ref:`stdWrap <stdwrap>`
 
-   Data type
-         string /:ref:`stdWrap <stdwrap>`
+    **Example:**
 
-   Description
-         **Example:**
+    This sets "contentWidth", "label" and "head".
 
-         This sets "contentWidth", "label" and "head".
+    ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-         .. code-block:: typoscript
-            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        page.27 = LOAD_REGISTER
+        page.27 {
+          contentWidth = 500
 
-            page.27 = LOAD_REGISTER
-            page.27 {
-              contentWidth = 500
+          label.field = header
 
-              label.field = header
+          head = some text
+          head.wrap = <b> | </b>
+        }
 
-              head = some text
-              head.wrap = <b> | </b>
-            }
-
-
-.. ###### END~OF~TABLE ######
-
-[tsref:(cObject).LOAD\_REGISTER]
-
-
-.. _cobj-load-register-examples:
+..  _cobj-load-register-examples:
 
 Example:
 ========
 
-.. code-block:: typoscript
-   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-   1 = LOAD_REGISTER
-   1.param.cObject = TEXT
-   1.param.cObject.stdWrap.data = GP:the_id
-   # To avoid SQL injections we use intval - so the parameter
-   # will always be an integer.
-   1.param.cObject.stdWrap.intval = 1
+    1 = LOAD_REGISTER
+    1.param.cObject = TEXT
+    1.param.cObject.stdWrap.data = GP:the_id
+    # To avoid SQL injections we use intval - so the parameter
+    # will always be an integer.
+    1.param.cObject.stdWrap.intval = 1
 
-   10 = CONTENT
-   10.table = tx_my_table
-   10.select {
-     pidInList = this
-     orderBy = sorting
-     # Now we use the registered parameter
-     where = uid = {REGISTER:param}
-     where.insertData = 1
-   }
-   10.renderObj = COA
-   10.renderObj {
-     10 = TEXT
-     10.stdWrap.field = tx_my_text_field
-   }
+    10 = CONTENT
+    10.table = tx_my_table
+    10.select {
+      pidInList = this
+      orderBy = sorting
+      # Now we use the registered parameter
+      where = uid = {REGISTER:param}
+      where.insertData = 1
+    }
+    10.renderObj = COA
+    10.renderObj {
+      10 = TEXT
+      10.stdWrap.field = tx_my_text_field
+    }
 
 In this example we first load a special value, which is given as a
 GET/POST parameter, into the register. Then we use a
