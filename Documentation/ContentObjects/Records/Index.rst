@@ -175,7 +175,11 @@ stdWrap
 cache
 -----
 
-.. include:: ../../DataTypes/Properties/Cache.rst.txt
+..  t3-cobj-records:: cache
+
+    :Data type: :ref:`cache <cache>`
+
+    See :ref:`cache function description <cache>` for details.
 
 
 .. _cobj-records-examples:

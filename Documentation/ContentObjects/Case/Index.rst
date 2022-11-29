@@ -92,7 +92,7 @@ key
     the values of the :t3-cobj-case:`array of cObjects`. It will generally not be a
     simple string, but use its :ref:`stdWrap` properties to retrieve a
     dynamic value from some specific source, typically a field of the
-    current record. See the :ref:`example below <t3-cobj-case-examples>`.
+    current record. See the :ref:`example below <cobj-case-examples>`.
 
 
 setCurrent

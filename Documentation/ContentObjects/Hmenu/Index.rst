@@ -100,7 +100,11 @@ cache_period
 cache
 ------
 
-.. include:: /DataTypes/Properties/Cache.rst.txt
+..  t3-cobj-hmenu:: cache
+
+    :Data type: :ref:`cache <cache>`
+
+    See :ref:`cache function description <cache>` for details.
 
 .. _hmenu-entrylevel:
 

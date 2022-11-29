@@ -71,6 +71,7 @@ userFunc
 ..  t3-cobj-user:: (properties you define)
 
     :Data type: (the data type you want)
+
     Apart from the properties "userFunc" and "stdWrap", which are defined for
     all USER/USER\_INT objects by default, you can add additional properties
     with any name and any data type to your USER/USER\_INT object. These
@@ -88,7 +89,11 @@ stdWrap
 cache
 -----
 
-.. include:: ../../DataTypes/Properties/Cache.rst.txt
+..  t3-cobj-user:: cache
+
+    :Data type: :ref:`cache <cache>`
+
+    See :ref:`cache function description <cache>` for details.
 
 
 .. _cobj-user-examples:
