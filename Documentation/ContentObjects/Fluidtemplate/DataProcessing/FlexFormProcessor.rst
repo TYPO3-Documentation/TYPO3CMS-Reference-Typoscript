@@ -14,7 +14,7 @@ FlexForm data of a given field into a Fluid-readable array.
 Options
 ========
 
-..  confval:: fieldname
+..  t3-data-processor-flex:: fieldname
 
     :Required: false
     :type: string
@@ -22,7 +22,7 @@ Options
 
     Field name of the column the FlexForm data is stored in.
 
-..  confval:: as
+..  t3-data-processor-flex:: as
 
     :Required: false
     :type: string
