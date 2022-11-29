@@ -13,7 +13,7 @@ Whitespaces are automatically trimmed.
 Options
 =======
 
-..  confval:: if
+..  t3-data-processor-split:: if
 
     :Required: false
     :type: :ref:`if` condition
@@ -21,7 +21,7 @@ Options
 
     Only if the condition is met the data processor is executed.
 
-..  confval:: fieldName
+..  t3-data-processor-split:: fieldName
 
     :Required: true
     :type: string, :ref:`stdWrap`
@@ -29,7 +29,7 @@ Options
 
     Name of the field to be used.
 
-..  confval:: as
+..  t3-data-processor-split:: as
 
     :Required: false
     :type: string
@@ -37,7 +37,7 @@ Options
 
     The variable name to be used in the Fluid template.
 
-..  confval:: delimiter
+..  t3-data-processor-split:: delimiter
 
     :Required: false
     :type: string(1), :ref:`stdWrap`
@@ -46,7 +46,7 @@ Options
 
     The field delimiter, a character separating the values.
 
-..  confval:: filterIntegers
+..  t3-data-processor-split:: filterIntegers
 
     :Required: false
     :type: bool, :ref:`stdWrap`
@@ -56,7 +56,7 @@ Options
     If set to `true`, all values are being cast to int.
 
 
-..  confval:: filterUnique
+..  t3-data-processor-split:: filterUnique
 
     :Required: false
     :type: bool, :ref:`stdWrap`
@@ -65,7 +65,7 @@ Options
 
     All duplicates will be removed.
 
-..  confval:: removeEmptyEntries
+..  t3-data-processor-split:: removeEmptyEntries
 
     :Required: false
     :type: bool, :ref:`stdWrap`

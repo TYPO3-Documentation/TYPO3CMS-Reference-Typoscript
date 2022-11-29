@@ -21,15 +21,14 @@ assigned to the :typoscript:`FLUIDTEMPLATE` as a variable.
 Options:
 ========
 
-..  confval:: if
+..  t3-data-processor-lang:: if
 
     :Required: false
     :type: :ref:`if` condition
-    :default: ""
 
     Only if the condition is met the data processor is executed.
 
-..  confval:: languages
+..  t3-data-processor-lang:: languages
 
     :Required: true
     :type: string, :ref:`stdWrap`
@@ -41,7 +40,7 @@ Options:
     <t3coreapi:sitehandling>`.
 
 
-..  confval:: addQueryString.exclude
+..  t3-data-processor-lang:: addQueryString.exclude
 
     :Required: true
     :type: string, :ref:`stdWrap`
@@ -51,7 +50,7 @@ Options:
     A list of comma-separated parameter names to be excluded from the language
     menu URLs.
 
-..  confval:: as
+..  t3-data-processor-lang:: as
 
     :Required: false
     :type: string
