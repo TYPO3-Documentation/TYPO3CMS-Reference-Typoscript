@@ -213,7 +213,7 @@ renderObj
          renderObj
 
    Data type
-         :ref:`cObject <data-type-cobject>` :ref:`+optionSplit <objects-optionsplit>`
+         :ref:`cObject <data-type-cobject>` :ref:`+optionSplit <optionsplit>`
 
    Description
          The cObject used for rendering the files. It is executed

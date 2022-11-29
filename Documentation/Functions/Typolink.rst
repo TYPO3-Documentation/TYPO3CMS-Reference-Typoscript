@@ -23,7 +23,7 @@ must set the property by :typoscript:`returnLast = url` or
    :local:
 
 .. index:: tags; Properties
-.. _tags-properties:
+.. _typolink-properties:
 
 Properties
 ==========
