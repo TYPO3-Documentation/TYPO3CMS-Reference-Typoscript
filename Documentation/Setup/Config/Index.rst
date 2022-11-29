@@ -11,95 +11,42 @@
 CONFIG & config
 ===============
 
-.. note::
+The 'config' top-level-object
+#############################
 
-   * TYPO3 by default creates a top level object "config"
-     of the object type CONFIG.
+Internally TYPO3 always creates an array `config` with various configuration
+values which are evaluated during the rendering process and treated in some
+special, predefined and predictive way. This is what we mean when we say the
+property `config`, actually the array `'config'` is of type CONFIG. It is a
+"top-level-object" because it is not subordinate to any other configuration
+setting.
 
-In :file:`typo3/sysext/frontend/Classes/` this is known as
-:php:`$GLOBALS['TSFE']->config['config']`, thus the property :typoscript:`debug` below is
-accessible as :php:`$GLOBALS['TSFE']->config['config']['debug']`.
+In PHP you can refer to the array within :file:`typo3/sysext/frontend/Classes/`
+files by writing :php:`$GLOBALS['TSFE']->config['config']`.
+
+This typoscript "top level object" `config` provides access to the internal
+array. This means, that configuration settings can be made easily. For example:
+
+.. code-block::
+
+   # TypoScript
+   config.debug = 1
+
+   # will produce, in php
+   $GLOBALS['TSFE']->config['config']['debug'] // with value 1
 
 
-.. index:: config; Properties
+Known properties of 'config'
+############################
 
-Properties
-==========
+.. contents::
+   :backlinks: top
+   :class: compact-list
+   :local:
 
-.. container:: ts-properties
 
-   ===================================================== ================================================== ======================================================================
-   Property                                              Data Type                                          Default
-   ===================================================== ================================================== ======================================================================
-   `absRefPrefix`_                                       :ref:`data-type-string`
-   `additionalHeaders`_                                  array with numeric indices
-   `admPanel`_                                           :ref:`data-type-boolean`
-   `ATagParams`_                                         *<A>-params*
-   `baseURL`_                                            :ref:`data-type-string`
-   `cache`_                                              array
-   `cache\_clearAtMidnight`_                             :ref:`data-type-boolean`                           false
-   `cache\_period`_                                      :ref:`data-type-integer`                           86400 *(= 24 hours)*
-   `compressCss`_                                        :ref:`data-type-boolean`
-   `compressJs`_                                         :ref:`data-type-boolean`
-   `concatenateCss`_                                     :ref:`data-type-boolean`
-   `concatenateJs`_                                      :ref:`data-type-boolean`
-   `contentObjectExceptionHandler`_                      array
-   `debug`_                                              :ref:`data-type-boolean`
-   `disableAllHeaderCode`_                               :ref:`data-type-boolean`                           false
-   `disableBodyTag`_                                     :ref:`data-type-boolean`                           0
-   `disablePrefixComment`_                               :ref:`data-type-boolean`
-   `disablePreviewNotification`_                         :ref:`data-type-boolean`                           0
-   `disableLanguageHeader`_                              :ref:`data-type-boolean`                           0
-   `doctype`_                                            :ref:`data-type-string`
-   `enableContentLengthHeader`_                          :ref:`data-type-boolean`                           1
-   `extTarget`_                                          :ref:`data-type-target`                            \_top
-   `fileTarget`_                                         :ref:`data-type-target`
-   `forceAbsoluteUrls`_                                  :ref:`data-type-boolean`                           0
-   `forceTypeValue`_                                     :ref:`data-type-integer`
-   `headerComment`_                                      :ref:`data-type-string`
-   `htmlTag.attributes`_                                 array
-   `htmlTag\_setParams`_                                 :ref:`data-type-string`
-   `htmlTag\_stdWrap`_                                   :ref:`stdwrap`
-   `index\_descrLgd`_                                    :ref:`data-type-integer`                           200
-   `index\_enable`_                                      :ref:`data-type-boolean`
-   `index\_externals`_                                   :ref:`data-type-boolean`
-   `index\_metatags`_                                    :ref:`data-type-boolean`                           true
-   `inlineStyle2TempFile`_                               :ref:`data-type-boolean`
-   `intTarget`_                                          :ref:`data-type-target`
-   `linkVars`_                                           :ref:`data-type-list`
-   `message\_preview`_                                   :ref:`data-type-string`
-   `message\_preview\_workspace`_                        :ref:`data-type-string`
-   `moveJsFromHeaderToFooter`_                           :ref:`data-type-boolean`
-   `MP\_defaults`_                                       :ref:`data-type-string`
-   `MP\_disableTypolinkClosestMPvalue`_                  :ref:`data-type-boolean`
-   `MP\_mapRootPoints`_                                  list of PIDs / :ref:`data-type-string`
-   `namespaces`_                                         *(array of strings)*
-   `no\_cache`_                                          :ref:`data-type-boolean`                           0
-   `noPageTitle`_                                        :ref:`data-type-integer`                           0
-   `pageRendererTemplateFile`_                           :ref:`data-type-string`
-   `pageTitle`_                                          :ref:`stdWrap`
-   `pageTitleFirst`_                                     :ref:`data-type-boolean`                           0
-   `pageTitleProviders`_                                 array
-   `pageTitleSeparator`_                                 :ref:`data-type-string` / :ref:`stdwrap`           ": " *(colon with following space)*
-   `removeDefaultCss`_                                   :ref:`data-type-boolean`
-   `removeDefaultJS`_                                    :ref:`data-type-boolean` / :ref:`data-type-string`
-   `removePageCss`_                                      :ref:`data-type-boolean`
-   `sendCacheHeaders`_                                   :ref:`data-type-boolean`
-   `showWebsiteTitle`_                                   :ref:`data-type-boolean`                           1
-   `spamProtectEmailAddresses`_                          "ascii" /
-   `spamProtectEmailAddresses\_atSubst`_                 :ref:`data-type-string`                            (at)
-   `spamProtectEmailAddresses\_lastDotSubst`_            :ref:`data-type-string`                            . *(just a simple dot)*
-   `sword\_noMixedCase`_                                 :ref:`data-type-boolean`
-   `sword\_standAlone`_                                  :ref:`data-type-boolean`
-   `tx\_[extension key with no underscores]\_[\*]`_      array
-   `typolinkLinkAccessRestrictedPages`_                  integer (page id) / keyword "NONE"
-   `typolinkLinkAccessRestrictedPages\_addParams`_       :ref:`data-type-string`
-   `xhtmlDoctype`_                                       :ref:`data-type-string`
-   `xmlprologue`_                                        :ref:`data-type-string`
-   ===================================================== ================================================== ======================================================================
 
 .. ### BEGIN~OF~TABLE ###
-
 
 
 .. index:: config; absRefPrefix
