@@ -34,7 +34,6 @@ example `config` or `plugin`.
    :ref:`styles <tlo-styles>`
    :ref:`lib <tlo-lib>`
    :ref:`tt_* <tlo-tt>`
-   :ref:`_GIFBUILDER <tlo-gifbuilder>`
    :ref:`resources <tlo-resources>`      readonly
    :ref:`sitetitle <tlo-sitetitle>`      readonly
    :ref:`types <tlo-types>`              readonly
@@ -47,7 +46,6 @@ example `config` or `plugin`.
 
    ../Setup/Config/Index
    Constants
-   GifbuilderTopLevelObject
    Module
    ../Setup/Page/Index
    Plugin
