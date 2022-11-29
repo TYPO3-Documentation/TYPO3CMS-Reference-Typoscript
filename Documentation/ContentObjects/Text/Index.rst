@@ -28,7 +28,7 @@ Properties
 value
 -----
 
-..  cobj-text:: value
+..  t3-cobj-text:: value
 
     :Data type: string /:ref:`stdWrap <stdwrap>`
 
@@ -37,7 +37,7 @@ value
 stdWrap
 -------
 
-..  cobj-text:: stdWrap
+..  t3-cobj-text:: stdWrap
 
     :Data type: :ref:`stdWrap <stdwrap>`
 
@@ -49,7 +49,7 @@ stdWrap
 cache
 -----
 
-..  cobj-text:: cache
+..  t3-cobj-text:: cache
 
     :Data type: :ref:`cache <cache>`
 
