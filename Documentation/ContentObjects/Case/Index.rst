@@ -35,19 +35,19 @@ Properties
 (array of cObjects)
 -------------------
 
-..  t3-cobj-case-:: array of cObjects
+..  t3-cobj-case:: array of cObjects
 
     :Data type: :ref:`cObject <data-type-cobject>`
 
     Array of cObjects. Use this to define cObjects for the different
-    values of :t3-cobj-case-:`key`. If :t3-cobj-case-:`key` has a certain value,
+    values of :t3-cobj-case:`key`. If :t3-cobj-case:`key` has a certain value,
     the according cObject will be rendered. The cObjects can have any name, but not
     the names of the other properties of the cObject CASE.
 
 cache
 -----
 
-..  t3-cobj-case-:: cache
+..  t3-cobj-case:: cache
 
     :Data type: :ref:`cache <cache>`
 
@@ -56,19 +56,19 @@ cache
 default
 -------
 
-..  t3-cobj-case-:: default
+..  t3-cobj-case:: default
 
     :Data type: :ref:`cObject <data-type-cobject>`
 
-     Use this to define the rendering for *those* values of :t3-cobj-case-:`key` that
-     do *not* match any of the values of the :t3-cobj-case-:`array of cObjects`. If no
+     Use this to define the rendering for *those* values of :t3-cobj-case:`key` that
+     do *not* match any of the values of the :t3-cobj-case:`array of cObjects`. If no
      default cObject is defined, an empty string will be returned for
      the default case.
 
 if
 --
 
-..  t3-cobj-case-:: if
+..  t3-cobj-case:: if
 
     :Data type: :ref:`->if <if>`
 
@@ -77,7 +77,7 @@ if
 key
 ---
 
-..  t3-cobj-case-:: key
+..  t3-cobj-case:: key
 
     :Data type: string /:ref:`stdWrap <stdwrap>`
     :Default: default
@@ -85,20 +85,20 @@ key
     The key, which determines, which cObject will be rendered. Its
     value is expected to match the name of one of the cObjects from
     the array of cObjects; this cObject is then rendered. If no name
-    of a cObject is matched, the cObject from the property :t3-cobj-case-:`default`
+    of a cObject is matched, the cObject from the property :t3-cobj-case:`default`
     is rendered.
 
     This property defines the source of the value that will be matched against
-    the values of the :t3-cobj-case-:`array of cObjects`. It will generally not be a
+    the values of the :t3-cobj-case:`array of cObjects`. It will generally not be a
     simple string, but use its :ref:`stdWrap` properties to retrieve a
     dynamic value from some specific source, typically a field of the
-    current record. See the :ref:`example below <t3-cobj-case--examples>`.
+    current record. See the :ref:`example below <t3-cobj-case-examples>`.
 
 
 setCurrent
 ----------
 
-..  t3-cobj-case-:: setCurrent
+..  t3-cobj-case:: setCurrent
 
     :Data type: string /:ref:`stdWrap <stdwrap>`
 
@@ -108,12 +108,12 @@ stdWrap
 -------
 
 
-..  t3-cobj-case-:: stdWrap
+..  t3-cobj-case:: stdWrap
 
     :Data type: :ref:`stdWrap <stdwrap>`
 
     :ref:`stdWrap` around any object that was rendered no matter what the
-    :t3-cobj-case-:`key` value is.
+    :t3-cobj-case:`key` value is.
 
 ..  _cobj-case-examples:
 
@@ -122,8 +122,8 @@ Example:
 
 If in this example the field :sql:`header` turns out not to be set ("false"), an
 empty string is returned. Otherwise TYPO3 chooses between two different
-renderings of some content depending on whether the :t3-cobj-case-:`key` field
-`layout` is "1" or not (:t3-cobj-case-:`default`).
+renderings of some content depending on whether the :t3-cobj-case:`key` field
+`layout` is "1" or not (:t3-cobj-case:`default`).
 
 The result is in either case wrapped with "\|<br>".
 

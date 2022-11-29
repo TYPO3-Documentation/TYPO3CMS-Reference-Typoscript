@@ -37,7 +37,7 @@ Properties
 1,2,3,4...
 -----------
 
-..  t3-cobj-coa-:: 1,2,3,4...
+..  t3-cobj-coa:: 1,2,3,4...
 
     :Data type: :ref:`cObject <data-type-cobject>`
 
@@ -47,7 +47,7 @@ Properties
 cache
 -----
 
-..  t3-cobj-coa-:: cache
+..  t3-cobj-coa:: cache
 
     :Data type: :ref:`cache <cache>`
 
@@ -56,7 +56,7 @@ cache
 if
 --
 
-..  t3-cobj-coa-:: if
+..  t3-cobj-coa:: if
 
     :Data type: :ref:`->if <if>`
 
@@ -65,20 +65,20 @@ if
 stdWrap
 -------
 
-..  t3-cobj-coa-:: stdWrap
+..  t3-cobj-coa:: stdWrap
 
     :Data type: :ref:`->stdWrap <stdwrap>`
 
-    Executed on all rendered cObjects after property :t3-cobj-coa-:`wrap`.
+    Executed on all rendered cObjects after property :t3-cobj-coa:`wrap`.
 
 wrap
 -----
 
-..  t3-cobj-coa-:: wrap
+..  t3-cobj-coa:: wrap
 
     :Data type: :ref:`wrap <data-type-wrap>` /:ref:`stdWrap <stdwrap>`
 
-     Wraps all rendered cObjects. Executed before property :t3-cobj-coa-:`stdWrap`.
+     Wraps all rendered cObjects. Executed before property :t3-cobj-coa:`stdWrap`.
 
 .. _cobj-cobj-array-examples:
 .. _cobj-coa-examples:
