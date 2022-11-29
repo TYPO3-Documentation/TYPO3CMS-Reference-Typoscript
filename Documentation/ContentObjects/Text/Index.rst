@@ -1,6 +1,6 @@
 ..  include:: /Includes.rst.txt
 ..  index:: Content objects; TEXT
-.. _    cobj-text:
+..  _cobj-text:
 
 ====
 TEXT
