@@ -103,71 +103,78 @@ absRefPrefix
          config.absRefPrefix = https://example.org/
 
 
-.. index:: config; additionalHeaders
 .. _setup-config-additionalheaders:
 
-additionalHeaders
-=================
+.. tlo-config:: additionalHeaders
 
-.. container:: table-row
+   :Data type: numerically indexed array of "http header entries".
 
-   Property
-         additionalHeaders
+   By means of `config.additionalHeaders` as series of additional http headers
+   can be configured. An entry has this structure:
 
-   Data type
-         array with numeric indices
+   `10.header = the header string`
+      This value is required.
 
-   Description
-         This property can be used to define additional HTTP headers.
+   `10.replace = 0 | 1`
+      Optional, boolean, default is `1`.
+      If true, the header will replace an existing one that has the same name.
 
-         For each numeric index, there are the following sub-properties:
+   `10.httpResponseCode = 201`
+      Optional, integer, a http status code that the page should return.
 
-         **header:** The header string
+   By default TYPO3 sends a "Content-Type" header with the defined
+   encoding. It then sends cache headers, if configured via
+   :ref:`setup-config-sendcacheheaders`.
+   Then additional headers are send, plus finally a "Content-Length"
+   header, if enabled via :ref:`setup-config-enablecontentlengthheader`.
 
-         **replace:** Optional. If set, previous headers with the same name
-         are replaced with the current one. Default is "1".
+   .. rubric:: Examples
 
-         **httpResponseCode:** Optional. HTTP status code as an integer.
+   1. General usage
 
-         By default TYPO3 sends a "Content-Type" header with the defined
-         encoding. It then sends cache headers, if configured via
-         :ref:`setup-config-sendcacheheaders`.
-         Then additional headers are send, plus finally a "Content-Length"
-         header, if enabled via :ref:`setup-config-enablecontentlengthheader`.
+      .. code-block:: typoscript
+         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-   Example
-         .. code-block:: typoscript
-            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+         config.additionalHeaders {
+             10 {
+                 # The header string
+                 header = foo
 
-            config.additionalHeaders {
-                10 {
-                    # The header string
-                    header = foo
+                 # Do not replace previous headers with the same name.
+                 replace = 0
 
-                    # Do not replace previous headers with the same name.
-                    replace = 0
+                 # Force a 401 HTTP response code
+                 httpResponseCode = 401
+             }
+             # Always set cache headers to private, overwriting the default TYPO3 Cache-control header
+             20.header = Cache-control: Private
+         }
 
-                    # Force a 401 HTTP response code
-                    httpResponseCode = 401
-                }
-                # Always set cache headers to private, overwriting the default TYPO3 Cache-control header
-                20.header = Cache-control: Private
+   2. General usage, same usage, alternate notation
+
+      .. code-block:: typoscript
+         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+         config.additionalHeaders.10.header = foo
+         config.additionalHeaders.10.replace = 0
+         config.additionalHeaders.10.httpResponseCode = 401
+         config.additionalHeaders.20.header = Cache-control: Private
+
+
+   3. Set content type for a page returning json
+
+      .. code-block:: typoscript
+         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+         json = PAGE
+         json {
+            typeNum = 1617455215
+            10 =< tt_content.list.20.tx_myextension_myjsonplugin
+            config {
+               disableAllHeaderCode = 1
+               additionalHeaders.10.header = Content-type:application/json
             }
-
-         Set HTTP content type for a page type offering json:
-
-         .. code-block:: typoscript
-            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-            json = PAGE
-            json {
-               typeNum = 1617455215
-               10 =< tt_content.list.20.tx_myextension_myjsonplugin
-               config {
-                  disableAllHeaderCode = 1
-                  additionalHeaders.10.header = Content-type:application/json
-               }
-            }
+         }
 
 
 .. index:: config; admPanel
