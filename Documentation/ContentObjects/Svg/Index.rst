@@ -18,108 +18,74 @@ or reference a file.
 Properties
 ==========
 
-.. ### BEGIN~OF~TABLE ###
-
 width
 -----
 
-.. container:: table-row
+..  t3-cobj-svg:: width
 
-   Property
-         width
+    :Data type: integer /:ref:`stdWrap <stdwrap>`
+    :Default: 600
 
-   Data type
-         integer /:ref:`stdWrap <stdwrap>`
+    Width of the SVG.
 
-   Description
-         Width of the SVG.
-
-   Default
-         600
 
 height
 ------
 
-.. container:: table-row
+..  t3-cobj-svg:: height
 
-   Property
-         height
+    :Data type: integer /:ref:`stdWrap <stdwrap>`
+    :Default: 400
 
-   Data type
-         integer /:ref:`stdWrap <stdwrap>`
+    Height of the SVG.
 
-   Description
-         Height of the SVG.
-
-   Default
-         400
 
 src
 ---
 
-.. container:: table-row
+..  t3-cobj-svg:: src
 
-   Property
-         src
+    :Data type: :ref:`file resource <data-type-resource>` /:ref:`stdWrap <stdwrap>`
 
-   Data type
-         :ref:`file resource <data-type-resource>` /:ref:`stdWrap <stdwrap>`
+    SVG file resource, can also be referenced via :file:`EXT:` prefix to
+    point to files of extensions.
 
-   Description
-         SVG file resource, can also be referenced via :file:`EXT:` prefix to
-         point to files of extensions.
+    **Example:**
 
-         **Example:**
+    ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-         .. code-block:: typoscript
-            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-            src = fileadmin/svg/tiger.svg
+        src = fileadmin/svg/tiger.svg
 
 renderMode
 ----------
 
-.. container:: table-row
+..  t3-cobj-svg:: renderMode
 
-   Property
-         renderMode
+    :Data type: string /:ref:`stdWrap <stdwrap>`
 
-   Data type
-         string /:ref:`stdWrap <stdwrap>`
-
-   Description
-         Setting `renderMode` to inline will render an inline version of the SVG.
+    Setting `renderMode` to inline will render an inline version of the SVG.
 
 stdWrap
 -------
 
-.. container:: table-row
+..  t3-cobj-svg:: stdWrap
 
-   Property
-         stdWrap
-
-   Data type
-         :ref:`->stdWrap <stdwrap>`
-
-
-.. ###### END~OF~TABLE ######
-
-[tsref:(cObject).SVG]
-
+    :Data type: :ref:`->stdWrap <stdwrap>`
 
 .. _cobj-svg-examples:
 
 Example:
 ========
 
-.. code-block:: typoscript
-   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-   10 = SVG
-   10 {
-     width = 600
-     height = 600
-     src = EXT:my_ext/Resources/Public/Images/example.svg
-   }
+    10 = SVG
+    10 {
+      width = 600
+      height = 600
+      src = EXT:my_ext/Resources/Public/Images/example.svg
+    }
 
 This example will output the svg with the defined dimensions.

@@ -1,10 +1,10 @@
-.. include:: /Includes.rst.txt
-.. index::
-   Content objects; CONTENT
-   CONTENT
-   Content objects; SQL
-   Content objects; Database
-.. _cobj-content:
+..  include:: /Includes.rst.txt
+..  index::
+    Content objects; CONTENT
+    CONTENT
+    Content objects; SQL
+    Content objects; Database
+..  _cobj-content:
 
 =======
 CONTENT
@@ -29,188 +29,125 @@ is raised to the maximum timestamp value of the respective records.
 Properties
 ==========
 
-.. index:: CONTENT; select
-.. _cobj-content-select:
+..  _cobj-content-select:
 
 select
 ------
 
-.. ### BEGIN~OF~TABLE ###
+..  t3-cobj-content:: select
 
-.. container:: table-row
+    :Data type: :ref:`select`
 
-   Property
-         select
+    The SQL-statement, a :sql:`SELECT` query, is set here,
+    including automatic visibility control.
 
-   Data type
-         :ref:`select`
-
-   Description
-      The SQL-statement, a SELECT query, is set here,
-      including automatic visibility control.
-
-.. ###### END~OF~TABLE ######
-
-
-.. index:: CONTENT; table
-.. _cobj-content-table:
+..  _cobj-content-table:
 
 table
 -----
 
-.. ### BEGIN~OF~TABLE ###
+..  t3-cobj-content:: table
 
-.. container:: table-row
+    :Data type:  *table name* /:ref:`stdwrap`
 
-   Property
-      table
+    The table, the content should come from. Any table can be used;
+    a check for a table prefix is not done.
 
-   Data type
-      *table name* /:ref:`stdwrap`
+    In standard configuration this will be :sql:`tt_content`.
 
-   Description
-      The table, the content should come from. Any table can be used;
-      a check for a table prefix is not done.
-
-      In standard configuration this will be `tt_content`.
-
-.. ###### END~OF~TABLE ######
-
-
-.. index:: CONTENT; renderObj
 .. _cobj-content-renderObj:
 
 renderObj
 ---------
 
-.. ### BEGIN~OF~TABLE ###
+..  t3-cobj-content:: renderObj
 
-.. container:: table-row
+    :Data type: :ref:`data-type-cObject`
+    :Default: :typoscript:`< [table name]`
 
-   Property
-      renderObj
+    The cObject used for rendering the records resulting from the query in
+    :t3-cobj-content:`select`.
 
-   Data type
-      :ref:`data-type-cObject`
+    If :typoscript:`renderObj` is not set explicitly, then
+    :typoscript:`< [table name]` is used. So
+    in this case the configuration of the according :t3-cobj-content:`table`
+    is being copied.
 
-   Default
-      :typoscript:`< [table name]`
+    See the notes on the example below.
 
-   Description
-      The cObject used for rendering the records resulting from the query in
-      .select.
-
-      If :typoscript:`renderObj` is not set explicitly, then :typoscript:`< [table name]` is used. So
-      in this case the configuration of the according table is being copied.
-      See the notes on the example below.
-
-.. ###### END~OF~TABLE ######
-
-
-.. index:: CONTENT; slide
-.. _cobj-content-slide:
+..  _cobj-content-slide:
 
 slide
 -----
 
-.. ### BEGIN~OF~TABLE ###
+..  t3-cobj-content:: slide
 
-.. container:: table-row
+    :Data type: integer /:ref:`stdWrap`
 
-   Property
-      slide
+    If set and no content element is found by the select command, the
+    rootLine will be traversed back until some content is found.
 
-   Data type
-      integer /:ref:`stdWrap`
+    Possible values are :typoscript:`-1` (slide back up to the siteroot), :typoscript:`1` (only
+    the current level) and :typoscript:`2` (up from one level back).
 
-   Description
-      If set and no content element is found by the select command, the
-      rootLine will be traversed back until some content is found.
+    Use :typoscript:`-1` in combination with collect.
 
-      Possible values are :typoscript:`-1` (slide back up to the siteroot), :typoscript:`1` (only
-      the current level) and :typoscript:`2` (up from one level back).
+..  t3-cobj-content:: slide.collect
 
-      Use :typoscript:`-1` in combination with collect.
+    :Data type: integer /:ref:`stdWrap`
 
-      slide.collect
-         (integer /:ref:`stdWrap`) If set, all content elements found
-         on the current and parent pages will be collected. Otherwise, the sliding
-         would stop after the first hit. Set this value to the amount of levels
-         to collect on, or use :typoscript:`-1` to collect up to the siteroot.
+    If set, all content elements found on the current and parent pages will be
+    collected. Otherwise, the sliding would stop after the first hit. Set this
+    value to the amount of levels to collect on, or use :typoscript:`-1`
+    to collect up to the site root.
 
-      slide.collectFuzzy
-         (boolean /:ref:`stdWrap`) Only useful in collect mode. If
-         no content elements have been found for the specified depth in collect
-         mode, traverse further until at least one match has occurred.
+..  t3-cobj-content:: slide.collectFuzzy
 
-      slide.collectReverse
-         (boolean /:ref:`stdWrap`) Reverse
-         order of elements in collect mode. If set, elements of the current
-         page will be at the bottom.
+    :Data type: boolean /:ref:`stdWrap`
 
-      .. note::
-         Up to version 9 of TYPO3 the sliding stopped when reaching a folder.
-         Beginning with TYPO3 v10 this is not longer the case.
-         See :php:`$cObj->checkPid_badDoktypeList`.
+    Only useful in with :t3-cobj-content:`slide.collect`. If no content
+    elements have been found for the specified depth in collect mode, traverse
+    further until at least one match has occurred.
 
-.. ###### END~OF~TABLE ######
+..  t3-cobj-content:: slide.collectReverse
 
+    :Data type: boolean /:ref:`stdWrap`
 
-.. index:: CONTENT; wrap
-.. _cobj-content-wrap:
+    Reverse order of elements in collect mode. If set, elements of the current
+    page will be at the bottom.
+
+..  _cobj-content-wrap:
 
 wrap
 ----
 
-.. ### BEGIN~OF~TABLE ###
+..  t3-cobj-content:: wrap
 
-.. container:: table-row
+    :Data type: :ref:`wrap <data-type-wrap>` /:ref:`stdWrap`
 
-   Property
-      wrap
+    Wrap the whole content.
 
-   Data type
-      :ref:`wrap <data-type-wrap>` /:ref:`stdWrap`
-
-   Description
-      Wrap the whole content.
-
-.. ###### END~OF~TABLE ######
-
-
-.. index:: CONTENT; stdWrap
-.. _cobj-content-stdWrap:
+..  _cobj-content-stdWrap:
 
 stdWrap
 -------
 
-.. ### BEGIN~OF~TABLE ###
+..  t3-cobj-content:: stdWrap
 
-.. container:: table-row
+    :Data type: ::ref:`stdWrap`
 
-   Property
-      stdWrap
+    Apply `stdWrap` functionality.
 
-   Data type
-      :ref:`stdwrap`
-
-   Description
-      Apply `stdWrap` functionality.
-
-.. ###### END~OF~TABLE ######
-
-
-.. index:: CONTENT; cache
-.. _cobj-content-cache:
+..  _cobj-content-cache:
 
 cache
 -----
 
-.. ### BEGIN~OF~TABLE ###
+..  t3-cobj-content:: cache
 
-.. include:: ../../DataTypes/Properties/Cache.rst.txt
+    :Data type: :ref:`cache <cache>`
 
-.. ###### END~OF~TABLE ######
+    See :ref:`cache function description <cache>` for details.
 
 Examples
 ========
@@ -221,111 +158,111 @@ CONTENT explained in detail
 See PHP class :php:`\TYPO3\CMS\Frontend\ContentObject\ContentContentObject`
 for details on code level.
 
-.. code-block:: typoscript
-   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-   1 = CONTENT
-   1 {
-      if {
-      }
-      table = tt_content
-      select {
-         pidInList = this
-         where = colPos = 1
-         orderBy = sorting
-      }
-      renderObj = < tt_content
-      slide = 0
-      slide {
-         collect = 0
-         collectReverse = 0
-         collectFuzzy = 0
-      }
-      wrap =
-      stdWrap =
-   }
+    1 = CONTENT
+    1 {
+       if {
+       }
+       table = tt_content
+       select {
+          pidInList = this
+          where = colPos = 1
+          orderBy = sorting
+       }
+       renderObj = < tt_content
+       slide = 0
+       slide {
+          collect = 0
+          collectReverse = 0
+          collectFuzzy = 0
+       }
+       wrap =
+       stdWrap =
+    }
 
 Expanded form:
 
-.. code-block:: typoscript
-   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-   1 = CONTENT
+    1 = CONTENT
 
-   // STEP 1: do nothing if 'if' evaluates to false
+    // STEP 1: do nothing if 'if' evaluates to false
 
-   1.if {
-      # ifclause =
-   }
-
-
-.. code-block:: typoscript
-   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-   // STEP 2: define parameters
-
-   1.table = tt_content           # default='' #stdWrap
-
-   1.select {
-      pidInList = this
-      where = colPos = 1
-      orderBy = sorting
-   }
-
-   # renderObj = <TABLEVALUE      # default!
-   1.renderObj =
-
-   # slide = 0                    # default! #stdWrap
-   1.slide = -1
-
-   # slideCollect = 0             # default! #stdWrap
-   1.slide.collect =
-
-   # slideCollectReverse = false  # default! #stdWrap
-   1.slide.collectReverse =
-
-   # slideCollectFuzzy = false    # default! #stdWrap
-   1.slide.collectFuzzy =
+    1.if {
+       # ifclause =
+    }
 
 
-.. code-block:: typoscript
-   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-   // STEP 3: find all records
+    // STEP 2: define parameters
 
-   // STEP 4: apply the renderObj to each record and collect
-   //         the results as string 'totalResult'
+    1.table = tt_content           # default='' #stdWrap
 
-   // STEP 5: Apply wrap to the 'totalResult'
-   1.wrap = |                     # default!
+    1.select {
+       pidInList = this
+       where = colPos = 1
+       orderBy = sorting
+    }
 
-   // STEP 6: Apply stdWrap to the 'totalResult'
-   1.stdWrap =                    # default! #stdWrap
+    # renderObj = <TABLEVALUE      # default!
+    1.renderObj =
 
-   // STEP 6: Return 'totalResult'
+    # slide = 0                    # default! #stdWrap
+    1.slide = -1
+
+    # slideCollect = 0             # default! #stdWrap
+    1.slide.collect =
+
+    # slideCollectReverse = false  # default! #stdWrap
+    1.slide.collectReverse =
+
+    # slideCollectFuzzy = false    # default! #stdWrap
+    1.slide.collectFuzzy =
+
+
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+    // STEP 3: find all records
+
+    // STEP 4: apply the renderObj to each record and collect
+    //         the results as string 'totalResult'
+
+    // STEP 5: Apply wrap to the 'totalResult'
+    1.wrap = |                     # default!
+
+    // STEP 6: Apply stdWrap to the 'totalResult'
+    1.stdWrap =                    # default! #stdWrap
+
+    // STEP 6: Return 'totalResult'
 
 
 See also: :ref:`if`, :ref:`select`, :ref:`data-type-wrap`, :ref:`stdWrap`,
 :ref:`data-type-cobject`
 
 
-.. _cobj-content-examples:
+..  _cobj-content-examples:
 
 Display all tt_content records from this page
 ----------------------------------------------
 
 Here is an example of the CONTENT object:
 
-.. code-block:: typoscript
-   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-   1 = CONTENT
-   1.table = tt_content
-   1.select {
-      pidInList = this
-      orderBy = sorting
-      where = {#colPos}=0
-   }
+    1 = CONTENT
+    1.table = tt_content
+    1.select {
+       pidInList = this
+       orderBy = sorting
+       where = {#colPos}=0
+    }
 
 Since in the above example `.renderObj` is not set explicitly, TYPO3
 will automatically set :typoscript:`1.renderObj < tt_content`, so that `renderObj`
@@ -338,46 +275,46 @@ Apply special rendering
 
 Here is an example of record-rendering objects:
 
-.. code-block:: typoscript
-   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-   page = PAGE
-   page.typeNum = 0
+    page = PAGE
+    page.typeNum = 0
 
-   # The CONTENT object executes a database query and loads the content.
-   page.10 = CONTENT
-   page.10.table = tt_content
-   page.10.select {
+    # The CONTENT object executes a database query and loads the content.
+    page.10 = CONTENT
+    page.10.table = tt_content
+    page.10.select {
 
-      # "sorting" is a column from the tt_content table and
-      # keeps track of the sorting order, which was specified in
-      # the backend.
-      orderBy = sorting
+       # "sorting" is a column from the tt_content table and
+       # keeps track of the sorting order, which was specified in
+       # the backend.
+       orderBy = sorting
 
-      # Only select content from column "0" (the column called
-      # "normal") and quote the database identifier (column name)
-      # "colPos" (indicated by wrapping with {#})
-      where = {#colPos}=0
-   }
+       # Only select content from column "0" (the column called
+       # "normal") and quote the database identifier (column name)
+       # "colPos" (indicated by wrapping with {#})
+       where = {#colPos}=0
+    }
 
-   # For every result line from the database query (that means for every content
-   # element) the renderObj is executed and the internal data array is filled
-   # with the content. This ensures that we can call the .field property and we
-   # get the according value.
-   page.10.renderObj = COA
-   page.10.renderObj {
+    # For every result line from the database query (that means for every content
+    # element) the renderObj is executed and the internal data array is filled
+    # with the content. This ensures that we can call the .field property and we
+    # get the according value.
+    page.10.renderObj = COA
+    page.10.renderObj {
 
-      10 = TEXT
+       10 = TEXT
 
-      # The field tt_content.header normally holds the headline.
-      10.stdWrap.field = header
+       # The field tt_content.header normally holds the headline.
+       10.stdWrap.field = header
 
-      10.stdWrap.wrap = <h1>|</h1>
+       10.stdWrap.wrap = <h1>|</h1>
 
-      20 = TEXT
+       20 = TEXT
 
-      # The field tt_content.bodytext holds the content text.
-      20.stdWrap.field = bodytext
+       # The field tt_content.bodytext holds the content text.
+       20.stdWrap.field = bodytext
 
-      20.stdWrap.wrap = <p>|</p>
-   }
+       20.stdWrap.wrap = <p>|</p>
+    }

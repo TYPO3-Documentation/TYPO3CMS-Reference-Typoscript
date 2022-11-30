@@ -1,9 +1,9 @@
-.. include:: /Includes.rst.txt
-.. index::
-   Content objects; HMENU
-   Content objects; Menu without Data Processor
-   HMENU
-.. _cobj-hmenu:
+..  include:: /Includes.rst.txt
+..  index::
+    Content objects; HMENU
+    Content objects; Menu without Data Processor
+    HMENU
+..  _cobj-hmenu:
 
 =====
 HMENU
@@ -32,487 +32,394 @@ into account.
 Properties
 ===========
 
-.. ### BEGIN~OF~TABLE ###
-
 .. _hmenu-number:
 
 1, 2, 3, ...
 -------------
 
-.. container:: table-row
+..  t3-cobj-hmenu:: 1, 2, 3, ...
 
-   Property:
-         1, 2, 3, ...
+    :Data type: :ref:`menu object <data-type-menuobj>`
 
-   Data type
-         :ref:`menu object <data-type-menuobj>`
+    :Default: (no menu)
 
-   Default
-         (no menu)
+    For every menu level, that should be rendered, an according entry must
+    exist. It defines the menu object that should render the menu items on
+    the according level. 1 is the first level, 2 is the second level, 3 is
+    the third level and so on.
 
-   Description
-         For every menu level, that should be rendered, an according entry must
-         exist. It defines the menu object that should render the menu items on
-         the according level. 1 is the first level, 2 is the second level, 3 is
-         the third level and so on.
+    **The property "1" is required!**
 
-         **The property "1" is required!**
+    The entry 1 for the first level always must exist. All other levels only
+    will be generated when they are configured.
 
-         The entry 1 for the first level always must exist. All other levels only
-         will be generated when they are configured.
+    **Example:**
 
-         **Example:**
+    .. code-block:: typoscript
+       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-         .. code-block:: typoscript
-            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+       temp.sidemenu = HMENU
+       temp.sidemenu.1 = TMENU
+       temp.sidemenu.1 {
+         # Configuration of that TMENU here...
+       }
+       temp.sidemenu.2 = TMENU
+       temp.sidemenu.2 {
+         # Configuration of that TMENU here...
+       }
+       temp.sidemenu.3 = TMENU
+       temp.sidemenu.3 {
+         # Configuration of that TMENU here...
+       }
 
-            temp.sidemenu = HMENU
-            temp.sidemenu.1 = TMENU
-            temp.sidemenu.1 {
-              # Configuration of that TMENU here...
-            }
-            temp.sidemenu.2 = TMENU
-            temp.sidemenu.2 {
-              # Configuration of that TMENU here...
-            }
-            temp.sidemenu.3 = TMENU
-            temp.sidemenu.3 {
-              # Configuration of that TMENU here...
-            }
+    This creates a menu with up to three levels: Each TMENU level can hold a
+    different menu configuration.
 
-         This creates a menu with up to three levels: Each TMENU level can hold a
-         different menu configuration.
-
-         TYPO3 offers :ref:`a variety of menu objects <menu-objects>`.
+    TYPO3 offers :ref:`a variety of menu objects <menu-objects>`.
 
 .. _hmenu-cache-period:
 
 cache_period
 -------------
 
-.. container:: table-row
+..  t3-cobj-hmenu:: cache_period
 
-   Property
-         cache_period
+    :Data type: integer
 
-   Data type
-         integer
+    The number of seconds a menu may remain in cache. If this value is not
+    set, the first available value of the following will be used:
 
-   Description
-         The number of seconds a menu may remain in cache. If this value is not
-         set, the first available value of the following will be used:
+    1) cache\_timeout of the current page
 
-         1) cache\_timeout of the current page
+    2) config.cache\_period defined globally
 
-         2) config.cache\_period defined globally
-
-         3) 86400 (= 1 day)
+    3) 86400 (= 1 day)
 
 .. _hmenu-cache:
 
 cache
 ------
 
-.. include:: /DataTypes/Properties/Cache.rst.txt
+..  t3-cobj-hmenu:: cache
+
+    :Data type: :ref:`cache <cache>`
+
+    See :ref:`cache function description <cache>` for details.
 
 .. _hmenu-entrylevel:
 
 entryLevel
 -----------
 
-.. container:: table-row
+..  t3-cobj-hmenu:: entryLevel
 
-   Property
-         entryLevel
+    :Data type: integer /:ref:`stdWrap <stdwrap>`
 
-   Data type
-         integer /:ref:`stdWrap <stdwrap>`
+    :Default: 0
 
-   Default
-         0
+    Defines at which level in the rootLine the menu should start.
 
-   Description
-         Defines at which level in the rootLine the menu should start.
+    Default is "0" which gives us a menu of the very first pages on the
+    site.
 
-         Default is "0" which gives us a menu of the very first pages on the
-         site.
+    If the value is < 0, entryLevel is chosen from "behind" in the
+    rootLine. Thus "-1" is a menu with items from the outermost level,
+    "-2" is the level before the outermost...
 
-         If the value is < 0, entryLevel is chosen from "behind" in the
-         rootLine. Thus "-1" is a menu with items from the outermost level,
-         "-2" is the level before the outermost...
+    **Note:** :typoscript:`entryLevel` does not show a menu **of a certain level of pages**
+    (use :typoscript:`special = directory` for that)
+    but it means that it will start to be visible **from that level on**.
 
-         **Note:** :typoscript:`entryLevel` does not show a menu **of a certain level of pages**
-         (use :typoscript:`special = directory` for that)
-         but it means that it will start to be visible **from that level on**.
+    So, for example if you build a simple "sitemap" menu like this one:
 
-         So, for example if you build a simple "sitemap" menu like this one:
+    ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-         .. code-block:: typoscript
-            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        page.10 = HMENU
+        page.10 {
+          entryLevel = 4
+          1 = TMENU
+          1.wrap = <ul> | </ul>
+          1.NO.wrapItemAndSub = <li> | </li>
+          1.expAll = 1
+          2 < .1
+          3 < .2
+          4 < .3
+          5 < .4
+          6 < .5
+          7 < .6
+        }
 
-            page.10 = HMENU
-            page.10 {
-              entryLevel = 4
-              1 = TMENU
-              1.wrap = <ul> | </ul>
-              1.NO.wrapItemAndSub = <li> | </li>
-              1.expAll = 1
-              2 < .1
-              3 < .2
-              4 < .3
-              5 < .4
-              6 < .5
-              7 < .6
+    it will start to be visible from the 4th level (and will contain only the subpages from that level).
+    Please note also that this affects also the menu generated with :typoscript:`MenuProcessor`. Example:
+
+    ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+        page.10 {
+           dataProcessing {
+            10 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+            10 {
+               special = list
+               special.value.field = pages
+               levels = 7
+               entryLevel = 4
+               as = menu
+               expandAll = 1
+               titleField = nav_title // title
             }
-
-         it will start to be visible from the 4th level (and will contain only the subpages from that level).
-         Please note also that this affects also the menu generated with :typoscript:`MenuProcessor`. Example:
-
-         .. code-block:: typoscript
-            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-            page.10 {
-               dataProcessing {
-                10 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
-                10 {
-                   special = list
-                   special.value.field = pages
-                   levels = 7
-                   entryLevel = 4
-                   as = menu
-                   expandAll = 1
-                   titleField = nav_title // title
-                }
-              }
-            }
+          }
+        }
 
 .. _hmenu-special:
 
 special
 --------
 
-.. container:: table-row
+..  t3-cobj-hmenu:: special
 
-   Property
-         special
-
-   Data type
-         *"directory" / "list" / "updated" / "rootline" / "browse" / "keywords"
+    :Data type: *"directory" / "list" / "updated" / "rootline" / "browse" / "keywords"
          / "categories" / "language" / "userfunction"*
 
-   Description
-         Lets you define special types of menus.
+    Lets you define special types of menus.
 
-         See the section about the :ref:`.special property <hmenu-special-property>`!
+    See the section about the :ref:`.special property <hmenu-special-property>`!
 
 .. _hmenu-special-value:
 
 special.value
 ~~~~~~~~~~~~~~
 
-.. container:: table-row
+..  t3-cobj-hmenu:: special.value
 
-   Property
-         special.value
+    :Data type: *list of page-uid's* /:ref:`stdWrap <stdwrap>`
 
-   Data type
-         *list of page-uid's* /:ref:`stdWrap <stdwrap>`
-
-   Description
-         List of page uid's to use for the special menu. What they are used
-         for depends on the menu type as defined by ".special"; see the
-         section about the :ref:`.special property <hmenu-special-property>`!
+    List of page uid's to use for the special menu. What they are used
+    for depends on the menu type as defined by ".special"; see the
+    section about the :ref:`.special property <hmenu-special-property>`!
 
 .. _hmenu-minitems:
 
 minItems
 ---------
 
-.. container:: table-row
+..  t3-cobj-hmenu:: minItems
 
-   Property
-         minItems
+    :Data type: integer /:ref:`stdWrap <stdwrap>`
 
-   Data type
-         integer /:ref:`stdWrap <stdwrap>`
+    The minimum number of items in the menu. If the number of pages does
+    not reach this level, a dummy-page with the title "..." and
+    uid=[currentpage\_id] is inserted.
 
-   Description
-         The minimum number of items in the menu. If the number of pages does
-         not reach this level, a dummy-page with the title "..." and
-         uid=[currentpage\_id] is inserted.
-
-         **Note:** Affects all sub menus as well. To set the value for each
-         menu level individually, set the properties in the menu objects (see
-         "Common properties" table).
+    **Note:** Affects all sub menus as well. To set the value for each
+    menu level individually, set the properties in the menu objects (see
+    "Common properties" table).
 
 .. _hmenu-maxitems:
 
 maxItems
 ---------
 
-.. container:: table-row
+..  t3-cobj-hmenu:: maxItems
 
-   Property
-         maxItems
+    :Data type: integer /:ref:`stdWrap <stdwrap>`
 
-   Data type
-         integer /:ref:`stdWrap <stdwrap>`
+    The maximum number of items in the menu. Additional items will be
+    ignored.
 
-   Description
-         The maximum number of items in the menu. Additional items will be
-         ignored.
-
-         **Note:** Affects all sub menus as well. (See "minItems" for a
-         notice.)
+    **Note:** Affects all sub menus as well. (See "minItems" for a
+    notice.)
 
 .. _hmenu-begin:
 
 begin
 ------
 
-.. container:: table-row
+..  t3-cobj-hmenu:: begin
 
-   Property
-         begin
+    :Data type: integer /:ref:`stdWrap <stdwrap>` :ref:`+calc <objects-calc>`
 
-   Data type
-         integer /:ref:`stdWrap <stdwrap>` :ref:`+calc <objects-calc>`
+    The first item in the menu.
 
-   Description
-         The first item in the menu.
+    **Example:**
 
-         **Example:**
+    This results in a menu, where the first two items are skipped starting
+    with item number 3:
 
-         This results in a menu, where the first two items are skipped starting
-         with item number 3:
+    ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-         .. code-block:: typoscript
-            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        begin = 3
 
-            begin = 3
-
-         **Note:** Affects all sub menus as well. (See "minItems" for a
-         notice.)
+    **Note:** Affects all sub menus as well. (See "minItems" for a
+    notice.)
 
 .. _hmenu-excludeuidlist:
 
 excludeUidList
 ---------------
 
-.. container:: table-row
+..  t3-cobj-hmenu:: excludeUidList
 
-   Property
-         excludeUidList
+    :Data type: list of integers /:ref:`stdWrap <stdwrap>`
 
-   Data type
-         list of integers /:ref:`stdWrap <stdwrap>`
+    This is a list of page uid's to exclude when the select statement is
+    done. Comma-separated. You may add "current" to the list to exclude
+    the current page.
 
-   Description
-         This is a list of page uid's to exclude when the select statement is
-         done. Comma-separated. You may add "current" to the list to exclude
-         the current page.
+    **Example:**
 
-         **Example:**
+    The pages with these uid-numbers will **not** be within the menu!
+    Additionally the current page is always excluded too.
 
-         The pages with these uid-numbers will **not** be within the menu!
-         Additionally the current page is always excluded too.
+    ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-         .. code-block:: typoscript
-            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-            excludeUidList = 34,2,current
+        excludeUidList = 34,2,current
 
 .. _hmenu-excludedoktypes:
 
 excludeDoktypes
 ---------------
 
-.. container:: table-row
+..  t3-cobj-hmenu:: excludeDoktypes
 
-   Property
-         excludeDoktypes
+    :Data type: list of integers
 
-   Data type
-         list of integers
+    :Default: 6,254
 
-   Default
-         6,254
-
-   Description
-         Enter the list of page document types (doktype) to exclude from menus.
-         By default pages that are "backend user access only" (6) or "folder"
-         (254) are excluded.
+    Enter the list of page document types (doktype) to exclude from menus.
+    By default pages that are "backend user access only" (6) or "folder"
+    (254) are excluded.
 
 .. _hmenu-includenotinmenu:
 
 includeNotInMenu
 -----------------
 
-.. container:: table-row
+..  t3-cobj-hmenu:: includeNotInMenu
 
-   Property
-         includeNotInMenu
+    :Data type: boolean /:ref:`stdWrap <stdwrap>`
 
-   Data type
-         boolean /:ref:`stdWrap <stdwrap>`
-
-   Description
-         If set, pages with the checkbox "Page enabled in menus" disabled will still be included
-         in menus.
+    If set, pages with the checkbox "Page enabled in menus" disabled will still be included
+    in menus.
 
 .. _hmenu-alwaysactivepidlist:
 
 alwaysActivePIDlist
 --------------------
 
-.. container:: table-row
+..  t3-cobj-hmenu:: alwaysActivePIDlist
 
-   Property
-         alwaysActivePIDlist
+    :Data type: list of integers /:ref:`stdWrap <stdwrap>`
 
-   Data type
-         list of integers /:ref:`stdWrap <stdwrap>`
-
-   Description
-         This is a list of page UID numbers that will always be regarded as
-         active menu items and thereby automatically opened regardless of the
-         rootline.
+    This is a list of page UID numbers that will always be regarded as
+    active menu items and thereby automatically opened regardless of the
+    rootline.
 
 .. _hmenu-protectlvar:
 
 protectLvar
 ------------
 
-.. container:: table-row
+..  t3-cobj-hmenu:: protectLvar
 
-   Property
-         protectLvar
+    :Data type: boolean / keyword
 
-   Data type
-         boolean / keyword
+    If set, then for each page in the menu it will be checked if an
+    Alternative Page Language record for the language defined in
+    "config.sys\_language\_uid" exists for the
+    page. If that is not the case and the pages "Localization settings"
+    have the "Hide page if no translation for current language exists"
+    flag set, then the menu item will link to a non accessible page that
+    will yield an error page to the user. Setting this option will prevent
+    that situation by adding "&L=0" for such pages, meaning that
+    they will switch to the default language rather than keeping the
+    current language.
 
-   Description
-         If set, then for each page in the menu it will be checked if an
-         Alternative Page Language record for the language defined in
-         "config.sys\_language\_uid" exists for the
-         page. If that is not the case and the pages "Localization settings"
-         have the "Hide page if no translation for current language exists"
-         flag set, then the menu item will link to a non accessible page that
-         will yield an error page to the user. Setting this option will prevent
-         that situation by adding "&L=0" for such pages, meaning that
-         they will switch to the default language rather than keeping the
-         current language.
+    The check is only carried out if a translation is requested
+    ("config.sys\_language\_uid" is not zero).
 
-         The check is only carried out if a translation is requested
-         ("config.sys\_language\_uid" is not zero).
+    **Keyword: "all"**
 
-         **Keyword: "all"**
+    When set to "all" the same check is carried out but it will not look
+    if "Hide page if no translation for current language exists" is set -
+    it always reverts to default language if no translation is found.
 
-         When set to "all" the same check is carried out but it will not look
-         if "Hide page if no translation for current language exists" is set -
-         it always reverts to default language if no translation is found.
-
-         For these options to make sense, they should only be used when
-         "config.sys\_language\_mode" is not set to "content\_fallback".
+    For these options to make sense, they should only be used when
+    "config.sys\_language\_mode" is not set to "content\_fallback".
 
 .. _hmenu-addquerystring:
 
 addQueryString
 ---------------
 
-.. container:: table-row
+..  t3-cobj-hmenu:: addQueryString
 
-   Property
-         addQueryString
+    :Data type: string
 
-   Data type
-         string
+    *see typolink.addQueryString*
 
-   Description
-         *see typolink.addQueryString*
-
-         **Note:** This works only for *special=language*.
+    **Note:** This works only for *special=language*.
 
 .. _hmenu-if:
 
 if
 --
 
-.. container:: table-row
+..  t3-cobj-hmenu:: if
 
-   Property
-         if
+    :Data type: :ref:`->if <if>`
 
-   Data type
-         :ref:`->if <if>`
-
-   Description
-         If "if" returns false, the menu is not generated.
+    If "if" returns false, the menu is not generated.
 
 .. _hmenu-wrap:
 
 wrap
 ----
 
-.. container:: table-row
+..  t3-cobj-hmenu:: wrap
 
-   Property
-         wrap
+    :Data type: :ref:`wrap <data-type-wrap>` /:ref:`stdWrap <stdwrap>`
 
-   Data type
-         :ref:`wrap <data-type-wrap>` /:ref:`stdWrap <stdwrap>`
-
-   Description
-         Wrap for the HMENU.
+    Wrap for the HMENU.
 
 .. _hmenu-stdwrap:
 
 stdWrap
 --------
 
-.. container:: table-row
+..  t3-cobj-hmenu:: stdWrap
 
-   Property
-         stdWrap
+    :Data type: :ref:`->stdWrap <stdwrap>`
 
-   Data type
-         :ref:`->stdWrap <stdwrap>`
-
-   Description
-         (Executed after ".wrap".)
-
-
-.. ###### END~OF~TABLE ######
-
-
-[tsref:(cObject).HMENU]
-
+    (Executed after ".wrap".)
 
 .. _hmenu-examples:
 
 Example:
 ========
 
-.. code-block:: typoscript
-   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-   temp.sidemenu = HMENU
-   temp.sidemenu.entryLevel = 1
-   temp.sidemenu.1 = TMENU
-   temp.sidemenu.1 {
-     target = page
-     NO.afterImg = media/bullets/dots2.gif |*||*| _
-     NO.afterImgTagParams = style="margin: 0px 20px;"
-     NO.linkWrap = {$fontTag}
-     NO.ATagBeforeWrap = 1
+    temp.sidemenu = HMENU
+    temp.sidemenu.entryLevel = 1
+    temp.sidemenu.1 = TMENU
+    temp.sidemenu.1 {
+      target = page
+      NO.afterImg = media/bullets/dots2.gif |*||*| _
+      NO.afterImgTagParams = style="margin: 0px 20px;"
+      NO.linkWrap = {$fontTag}
+      NO.ATagBeforeWrap = 1
 
-     ACT < .NO
-     ACT = 1
-     ACT.linkWrap = <b>{$fontTag}</b>
-   }
+      ACT < .NO
+      ACT = 1
+      ACT.linkWrap = <b>{$fontTag}</b>
+    }
 
-.. index:: HMENU; special
-.. _hmenu-special-property:
+..  index:: HMENU; special
+..  _hmenu-special-property:
 
 The .special property
 =====================
@@ -525,18 +432,18 @@ links to pages like :ref:`next/previous <hmenu-special-browse>`,
 :ref:`last modified <hmenu-special-updated-examples>`,
 :ref:`all subpages of a page <hmenu-special-directory>` and so on.
 
-.. note::
+..  note::
 
-   :typoscript:`.entryLevel` generally is not supported together with the
-   :typoscript:`.special` property! The only exception is :typoscript:`special = keywords`.
+    :typoscript:`.entryLevel` generally is not supported together with the
+    :typoscript:`.special` property! The only exception is :typoscript:`special = keywords`.
 
 Also be aware that this property selects pages for the first level in
 the menu. Submenus by menuObjects 2+ will be created as usual.
 
 See the following menus types based on the :typoscript:`special` property:
 
-.. toctree::
-   :titlesonly:
-   :glob:
+..  toctree::
+    :titlesonly:
+    :glob:
 
-   *
+    *
