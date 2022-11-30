@@ -49,64 +49,58 @@ Known properties of 'config'
 .. ### BEGIN~OF~TABLE ###
 
 
-.. index:: config; absRefPrefix
 .. _setup-config-absrefprefix:
 
 absRefPrefix
 ============
 
-.. container:: table-row
+.. tlo-config:: absRefPrefix
 
-   Property
-         absRefPrefix
+   :Data type: :ref:`data-type-string`
+   :Special value: "auto"
 
-   Data type
-         :ref:`data-type-string`
+   If set the string is prepended to all relative links that TYPO3 generates.
 
-   Description
-         If this value is set, then all relative links in TypoScript are
-         prepended with this string.
+   `config.absRefPrefix = auto` lets TYPO3 autodetect
+   the site root based on path prefixes and not based on host name variables
+   from the server, making this value safe for multi-domain environments.
 
-         **Special keyword:** "auto" lets TYPO3 autodetect the site root based
-         on path prefixes (and not based on host name variables from the
-         server, making this value safe for multi-domain environments).
+   If the option :ref:`config.forceAbsoluteUrls <setup-config-forceAbsoluteUrls>`
+   is enabled, :typoscript:`absRefPrefix` is overridden.
 
-         **Note:** Using an URI in :typoscript:`absRefPrefix` will require additional conditions
-         if you use different domains for your deployment stages in CI environments.
+   Using an URI in :typoscript:`absRefPrefix` will require additional conditions
+   if you use different domains for your deployment stages in CI environments.
 
-         **Note:** If you're working on a server where you have different domain
-         names or different path segments leading to the same page (e.g. for internal
-         and external access), you might do yourself a favor and set `absRefPrefix` to
-         the URL and path of your site, e.g. :samp:`https://example.org/`. If you do not,
-         you risk to render pages to cache from the internal network and thereby
-         prefix image-references and links with a wrong path or a path not accessible
-         from outside.
+   If you're working on a server where you have different domain
+   names or different path segments leading to the same page (e.g. for internal
+   and external access), you may do yourself a favor and set `absRefPrefix` to
+   the URL and path of your site, e.g. :samp:`https://example.org/`. If you do not,
+   you risk to render pages to cache from the internal network and thereby
+   prefix image-references and links with a wrong path or a path not accessible
+   from outside.
 
-   Examples
-         1. Prefixing all links with a "/" results in absolute link paths:
+   .. rubric:: Examples
 
-            .. code-block:: typoscript
-               :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+   1. Prefixing all links with a "/" results in absolute link paths:
 
-               config.absRefPrefix = /
+      .. code-block:: typoscript
+         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-         2. Prefixing all links with the path to a subdirectory:
+         config.absRefPrefix = /
 
-            .. code-block:: typoscript
-               :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+   2. Prefixing all links with the path to a subdirectory:
 
-               config.absRefPrefix = /some-subsite/
+      .. code-block:: typoscript
+         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-         3. Prefixing all links with a URI scheme:
+         config.absRefPrefix = /some-subsite/
 
-            .. code-block:: typoscript
-               :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+   3. Prefixing all links with a URI scheme:
 
-               config.absRefPrefix = https://example.org/
+      .. code-block:: typoscript
+         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-..  note::
-    If the option :ref:`config.forceAbsoluteUrls <setup-config-forceAbsoluteUrls>`
-    is enabled, :typoscript:`absRefPrefix` is overridden.
+         config.absRefPrefix = https://example.org/
 
 
 .. index:: config; additionalHeaders
