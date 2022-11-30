@@ -38,7 +38,7 @@ setContentToCurrent
    setContentToCurrent
 
 :aspect:`Data type`
-   :ref:`boolean <data-type-bool>` / :ref:`stdWrap`
+   :t3-data-type:`boolean` / :ref:`stdWrap`
 
 :aspect:`Description`
    Sets the current value to the incoming content of the function.
@@ -186,7 +186,7 @@ current
    current
 
 :aspect:`Data type`
-   :ref:`boolean <data-type-bool>` / :ref:`stdWrap`
+   :t3-data-type:`boolean` / :ref:`stdWrap`
 
 :aspect:`Description`
    Sets the content to the "current"-value (see :ref:`->split <split>`)
@@ -233,7 +233,7 @@ preUserFunc
    preUserFunc
 
 :aspect:`Data type`
-   :t3-data-type:`function-name`
+   :t3-data-type:`function name`
 
 :aspect:`Description`
    Calls the provided PHP function. If you specify the name with a '->'
@@ -423,7 +423,7 @@ trim
    trim
 
 :aspect:`Data type`
-   :ref:`boolean <data-type-bool>` / :ref:`stdWrap`
+   :t3-data-type:`boolean` / :ref:`stdWrap`
 
 :aspect:`Description`
    If set, the PHP-function :php:`trim()` will be used to remove whitespaces
@@ -473,7 +473,7 @@ required
    required
 
 :aspect:`Data type`
-   :ref:`boolean <data-type-bool>` / :ref:`stdWrap`
+   :t3-data-type:`boolean` / :ref:`stdWrap`
 
 :aspect:`Description`
    This flag requires the content to be set to some value after any
@@ -633,7 +633,7 @@ HTMLparser
    HTMLparser
 
 :aspect:`Data type`
-   :ref:`boolean <data-type-bool>` / :ref:`htmlparser` / :ref:`stdWrap`
+   :t3-data-type:`boolean` / :ref:`htmlparser` / :ref:`stdWrap`
 
 :aspect:`Description`
    This object allows you to parse the HTML-content and perform all kinds of
@@ -686,7 +686,7 @@ prioriCalc
    prioriCalc
 
 :aspect:`Data type`
-   :ref:`boolean <data-type-bool>` / :ref:`stdWrap`
+   :t3-data-type:`boolean` / :ref:`stdWrap`
 
 :aspect:`Description`
    Calculation of the value using operators -+\*/%^ plus respects
@@ -750,7 +750,7 @@ intval
    intval
 
 :aspect:`Data type`
-   :ref:`boolean <data-type-bool>` / :ref:`stdWrap`
+   :t3-data-type:`boolean` / :ref:`stdWrap`
 
 :aspect:`Description`
    PHP function :php:`intval()` returns an integer:
@@ -945,7 +945,7 @@ age
    age
 
 :aspect:`Data type`
-   :ref:`boolean <data-type-bool>` or :t3-data-type:`string` / :ref:`stdWrap`
+   :t3-data-type:`boolean` or :t3-data-type:`string` / :ref:`stdWrap`
 
 :aspect:`Description`
    If enabled with a "1" (number, integer) the content is seen as a date
@@ -1008,7 +1008,7 @@ bytes
    bytes
 
 :aspect:`Data type`
-   :ref:`boolean <data-type-bool>` / :ref:`stdWrap`
+   :t3-data-type:`boolean` / :ref:`stdWrap`
 
 :aspect:`Default`
    iec, 1024
@@ -1221,7 +1221,7 @@ stripHtml
    stripHtml
 
 :aspect:`Data type`
-   :ref:`boolean <data-type-bool>` / :ref:`stdWrap`
+   :t3-data-type:`boolean` / :ref:`stdWrap`
 
 :aspect:`Description`
    Strips all HTML tags.
@@ -1286,7 +1286,7 @@ rawUrlEncode
    rawUrlEncode
 
 :aspect:`Data type`
-   :ref:`boolean <data-type-bool>` / :ref:`stdWrap`
+   :t3-data-type:`boolean` / :ref:`stdWrap`
 
 :aspect:`Description`
    Passes the content through the PHP function `rawurlencode() <https://www.php.net/rawurlencode>`_.
@@ -1302,7 +1302,7 @@ htmlSpecialChars
    htmlSpecialChars
 
 :aspect:`Data type`
-   :ref:`boolean <data-type-bool>` / :ref:`stdWrap`
+   :t3-data-type:`boolean` / :ref:`stdWrap`
 
 :aspect:`Description`
    Passes the content through the PHP function `htmlspecialchars() <https://www.php.net/htmlspecialchars>`_.
@@ -1321,7 +1321,7 @@ encodeForJavaScriptValue
    encodeForJavaScriptValue
 
 :aspect:`Data type`
-   :ref:`boolean <data-type-bool>` / :ref:`stdWrap`
+   :t3-data-type:`boolean` / :ref:`stdWrap`
 
 :aspect:`Description`
    Encodes content to be used safely inside strings in JavaScript.
@@ -1370,7 +1370,7 @@ br
    br
 
 :aspect:`Data type`
-   :ref:`boolean <data-type-bool>` / :ref:`stdWrap`
+   :t3-data-type:`boolean` / :ref:`stdWrap`
 
 :aspect:`Description`
    Pass the value through the PHP function `nl2br() <https://www.php.net/nl2br>`_. This
@@ -1421,7 +1421,7 @@ keywords
    keywords
 
 :aspect:`Data type`
-   :ref:`boolean <data-type-bool>` / :ref:`stdWrap`
+   :t3-data-type:`boolean` / :ref:`stdWrap`
 
 :aspect:`Description`
    Splits the content by characters "," ";" and php:`chr(10)` (return), trims
@@ -1752,7 +1752,7 @@ insertData
    insertData
 
 :aspect:`Data type`
-   :ref:`boolean <data-type-bool>` / :ref:`stdWrap`
+   :t3-data-type:`boolean` / :ref:`stdWrap`
 
 :aspect:`Description`
    If set, then the content string is parsed like :typoscript:`dataWrap` above.
@@ -1788,7 +1788,7 @@ postUserFunc
    postUserFunc
 
 :aspect:`Data type`
-   :t3-data-type:`function-name`
+   :t3-data-type:`function name`
 
 :aspect:`Description`
    Calls the provided PHP function. If you specify the name with a '->'
@@ -1898,7 +1898,7 @@ postUserFuncInt
    postUserFuncInt
 
 :aspect:`Data type`
-   :t3-data-type:`function-name`
+   :t3-data-type:`function name`
 
 :aspect:`Description`
    Calls the provided PHP function. If you specify the name with a '->'
@@ -1960,7 +1960,7 @@ htmlSanitize
    htmlSanitize
 
 :aspect:`Data type`
-   :ref:`boolean <data-type-bool>` / array with key "build"
+   :t3-data-type:`boolean` / array with key "build"
 
 :aspect:`Description`
    The property controls the sanitization and removal of XSS from markup. It
@@ -2031,7 +2031,7 @@ debug
    debug
 
 :aspect:`Data type`
-   :ref:`boolean <data-type-bool>` / :ref:`stdWrap`
+   :t3-data-type:`boolean` / :ref:`stdWrap`
 
 :aspect:`Description`
    Prints content with :php:`HTMLSpecialChars()` and :html:`<pre></pre>`:
@@ -2053,7 +2053,7 @@ debugFunc
    debugFunc
 
 :aspect:`Data type`
-   :ref:`boolean <data-type-bool>` / :ref:`stdWrap`
+   :t3-data-type:`boolean` / :ref:`stdWrap`
 
 :aspect:`Description`
    Prints the content directly to browser with the :php:`debug()` function.
@@ -2075,7 +2075,7 @@ debugData
    debugData
 
 :aspect:`Data type`
-   :ref:`boolean <data-type-bool>` / :ref:`stdWrap`
+   :t3-data-type:`boolean` / :ref:`stdWrap`
 
 :aspect:`Description`
    Prints the current data-array, :php:`$cObj->data`, directly to browser. This

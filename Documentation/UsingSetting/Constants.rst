@@ -25,8 +25,7 @@ programming languages.
 
 **Reserved name**
 
-The object or property "file" is always interpreted as data type ":ref:`resource
-<data-type-resource>`". That means it refers to a file, which has to be uploaded
+The object or property "file" is always interpreted as data type :t3-data-type:`resource`. That means it refers to a file, which has to be uploaded
 in the TYPO3 CMS installation.
 
 **Multi-line values: The ( ) signs**
@@ -58,7 +57,7 @@ expected location.
    }
 
 The objects in the highlighted lines contain the reserved word "file" and the
-properties are always of data type ":ref:`resource <data-type-resource>`".
+properties are always of data type ":t3-data-type:`resource`".
 
 
 .. index:: Constants; Usage

@@ -258,7 +258,7 @@ fixAttrib.[attribute].userFunc
    fixAttrib.[attribute].userFunc
 
 :aspect:`Data type`
-   :t3-data-type:`function-name`
+   :t3-data-type:`function name`
 
 :aspect:`Description`
    User function for processing of the attribute. The return value

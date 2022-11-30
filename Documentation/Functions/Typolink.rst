@@ -387,7 +387,7 @@ forceAbsoluteUrl
    forceAbsoluteUrl
 
 :aspect:`Data type`
-   :ref:`boolean <data-type-bool>`
+   :t3-data-type:`boolean`
 
 :aspect:`Description`
    Forces links to internal pages to be absolute, thus having a proper
@@ -545,7 +545,7 @@ userFunc
    userFunc
 
 :aspect:`Data type`
-   :t3-data-type:`function-name`
+   :t3-data-type:`function name`
 
 :aspect:`Description`
    This passes the link-data compiled by the typolink function to a user-

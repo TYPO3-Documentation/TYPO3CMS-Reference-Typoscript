@@ -373,7 +373,7 @@ strftime-conf
 string
 ======
 
-..  t3-data-type:: string / str / value
+..  t3-data-type:: string
 
 
     Sometimes used generally though another type would have been more

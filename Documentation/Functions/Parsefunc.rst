@@ -205,7 +205,7 @@ userFunc
    userFunc
 
 :aspect:`Data type`
-   :t3-data-type:`function-name`
+   :t3-data-type:`function name`
 
 :aspect:`Description`
    This passes the non-tag content to a function of your own choice.
@@ -243,7 +243,7 @@ nonTypoTagUserFunc
    nonTypoTagUserFunc
 
 :aspect:`Data type`
-   :t3-data-type:`function-name`
+   :t3-data-type:`function name`
 
 :aspect:`Description`
    Like :ref:`parsefunc-userFunc`.

@@ -150,7 +150,7 @@ Properties
    Property                       Data Type                             :ref:`stdwrap`         Default
    ============================== ===================================== ====================== ========================
    `1,2,3,4...`_                  :ref:`cObject <data-type-cobject>`
-   `bodyTag`_                     :t3-data-type:`tag`                                         <body>
+   `bodyTag`_                     :t3-data-type:`tag`                                          <body>
    `bodyTagAdd`_                  :t3-data-type:`string`
    `bodyTagCObject`_              :ref:`cObject <data-type-cobject>`
    `config`_                      :ref:`->CONFIG <config>`
@@ -158,7 +158,7 @@ Properties
    `cssInline.[array]`_           :ref:`cObject <data-type-cobject>`
    `footerData.[array]`_          :ref:`cObject <data-type-cobject>`
    `headerData.[array]`_          :ref:`cObject <data-type-cobject>`
-   `headTag`_                     :t3-data-type:`tag` / :ref:`stdwrap`                        <head>
+   `headTag`_                     :t3-data-type:`tag` / :ref:`stdwrap`                         <head>
    `includeCSS.[array]`_          :t3-data-type:`resource`
    `includeCSSLibs.[array]`_      :t3-data-type:`resource`
    `includeJS.[array]`_           :t3-data-type:`resource`
@@ -172,7 +172,7 @@ Properties
    `meta`_                        (array of strings)
    `shortcutIcon`_                :t3-data-type:`resource`
    `stdWrap`_                     :ref:`stdwrap`
-   `typeNum`_                     :t3-data-type:`integer`                                     0
+   `typeNum`_                     :t3-data-type:`integer`                                      0
    `wrap`_                        :t3-data-type:`wrap`
    ============================== ===================================== ====================== ========================
 
