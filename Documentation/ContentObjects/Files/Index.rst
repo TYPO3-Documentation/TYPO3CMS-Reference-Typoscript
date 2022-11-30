@@ -20,233 +20,190 @@ Properties
 files
 ------
 
-.. container:: table-row
+..  t3-cobj-files:: files
 
-   Property
-         files
+    :Data type: string /:ref:`stdWrap <stdwrap>`
 
-   Data type
-         string /:ref:`stdWrap <stdwrap>`
+    Comma-separated list of sys_file UIDs, which are loaded
+    into the FILES object.
 
-   Description
-         Comma-separated list of sys_file UIDs, which are loaded
-         into the FILES object.
+    **Example:**
 
-         **Example:**
+    ..  code-block:: typoscript
 
-         .. code-block:: typoscript
-
-            page.10 = FILES
-            page.10.files = 12,15,16
+        page.10 = FILES
+        page.10.files = 12,15,16
 
 references
 -----------
 
-.. container:: table-row
+..  t3-cobj-files:: references
 
-   Property
-         references
+    :Data type: string /:ref:`stdWrap <stdwrap>` or array
 
-   Data type
-         string /:ref:`stdWrap <stdwrap>` or array
+    Provides a way to load files from a file field (of type
+    IRRE with sys_file_reference as child table). You can either
+    provide a UID or a comma-separated list of UIDs from the
+    database table sys_file_reference or you have to specify a
+    table, uid and field name in the according sub-properties of
+    "references". See further documentation of these
+    sub-properties in the table below.
 
-   Description
-         Provides a way to load files from a file field (of type
-         IRRE with sys_file_reference as child table). You can either
-         provide a UID or a comma-separated list of UIDs from the
-         database table sys_file_reference or you have to specify a
-         table, uid and field name in the according sub-properties of
-         "references". See further documentation of these
-         sub-properties in the table below.
+    **Examples:**
 
-         **Examples:**
+    ..  code-block:: typoscript
 
-         .. code-block:: typoscript
+        references = 27,28
 
-            references = 27,28
+    This will get the items from the database table
+    sys_file_reference with the UIDs 27 and 28.
 
-         This will get the items from the database table
-         sys_file_reference with the UIDs 27 and 28.
+    ..  code-block:: typoscript
 
-         .. code-block:: typoscript
+        references {
+          table = tt_content
+          uid = 256
+          fieldName = image
+        }
 
-            references {
-              table = tt_content
-              uid = 256
-              fieldName = image
-            }
+    This will fetch all relations to the image field of the
+    tt_content record "256".
 
-         This will fetch all relations to the image field of the
-         tt_content record "256".
+    ..  code-block:: typoscript
 
-         .. code-block:: typoscript
+        references {
+          table = pages
+          uid.data = page:uid
+          fieldName = media
+        }
 
-            references {
-              table = pages
-              uid.data = page:uid
-              fieldName = media
-            }
-
-         This will fetch all items related to the page.media field.
+    This will fetch all items related to the page.media field.
 
 collections
 ------------
 
-.. container:: table-row
+..  t3-cobj-files:: collections
 
-   Property
-         collections
+    :Data type: string /:ref:`stdWrap <stdwrap>`
 
-   Data type
-         string /:ref:`stdWrap <stdwrap>`
-
-   Description
-         Comma-separated list of sys_file_collection UIDs, which
-         are loaded into the FILES object.
+    Comma-separated list of :sql:`sys_file_collection` UIDs, which
+    are loaded into the :typoscript:`FILES` object.
 
 folders
 --------
 
-.. container:: table-row
+..  t3-cobj-files:: folders
 
-   Property
-         folders
+    :Data type: string /:ref:`stdWrap <stdwrap>`
 
-   Data type
-         string /:ref:`stdWrap <stdwrap>`
+    Comma-separated list of combined folder identifiers which
+    are loaded into the FILES object.
 
-   Description
-         Comma-separated list of combined folder identifiers which
-         are loaded into the FILES object.
+    A combined folder identifier looks like this:
+    [storageUid]:[folderIdentifier].
 
-         A combined folder identifier looks like this:
-         [storageUid]:[folderIdentifier].
+    The first part is the UID of the storage and the second
+    part the identifier of the folder. The identifier of the
+    folder is often equivalent to the relative path of the
+    folder.
 
-         The first part is the UID of the storage and the second
-         part the identifier of the folder. The identifier of the
-         folder is often equivalent to the relative path of the
-         folder.
+    The property folders has the option :typoscript:`recursive` to get
+    files recursively.
 
-         The property folders has the option :typoscript:`recursive` to get
-         files recursively.
+    **Example:**
 
-         **Example:**
+    ..  code-block:: typoscript
 
-         .. code-block:: typoscript
+        page.10 = FILES
+        page.10.folders = 2:mypics/,4:myimages/
 
-            page.10 = FILES
-            page.10.folders = 2:mypics/,4:myimages/
+    Example for option :typoscript:`recursive`:
 
-         Example for option :typoscript:`recursive`:
+    ..  code-block:: typoscript
 
-         .. code-block:: typoscript
+        filecollection = FILES
+        filecollection {
+           folders = 1:images/
+           folders.recursive = 1
 
-            filecollection = FILES
-            filecollection {
-               folders = 1:images/
-               folders.recursive = 1
-
-               renderObj = IMAGE
-               renderObj {
-                  file.import.data = file:current:uid
-               }
-            }
+           renderObj = IMAGE
+           renderObj {
+              file.import.data = file:current:uid
+           }
+        }
 
 sorting
 --------
 
-.. container:: table-row
+..  t3-cobj-files:: sorting
 
-   Property
-         sorting
+    :Data type: string /:ref:`stdWrap <stdwrap>`
 
-   Data type
-         string /:ref:`stdWrap <stdwrap>`
+    Name of the field, which should be used to sort the files.
 
-   Description
-         Name of the field, which should be used to sort the files.
+..  t3-cobj-files:: sorting.direction
 
-         Available sub-property:
+    :Data type: string /:ref:`stdWrap <stdwrap>`
+    :Default: asc
 
-         **direction:** string /stdWrap. The direction, in which the
-         files should be sorted. Possible values are "asc" for ascending and
-         "desc" for descending. Ascending is the default.
+    The direction, in which the
+    files should be sorted. Possible values are "asc" for ascending and
+    "desc" for descending.
+
 
 begin
 ------
 
-.. container:: table-row
+..  t3-cobj-files:: begin
 
-   Property
-         begin
+    :Data type: integer /:ref:`stdWrap <stdwrap>`
 
-   Data type
-         integer /:ref:`stdWrap <stdwrap>`
-
-   Description
-         The first item to return. If not set (default), items beginning
-         with the first one are returned.
+    The first item to return. If not set (default), items beginning
+    with the first one are returned.
 
 maxItems
 ---------
 
-.. container:: table-row
+..  t3-cobj-files:: maxItems
 
-   Property
-         maxItems
+    :Data type: integer /:ref:`stdWrap <stdwrap>`
 
-   Data type
-         integer /:ref:`stdWrap <stdwrap>`
-
-   Description
-         Maximum number of items to return. If not set (default), items until
-         the last one are returned. If begin and maxItems together exceed the
-         number of available items, no items beyond the last available item will
-         be returned - output won't continue with the first available item.
+    Maximum number of items to return. If not set (default), all items
+    are returned. If :t3-cobj-files:`begin` and t3-cobj-files`maxItems`
+    together exceed the number of available items, no items beyond the
+    last available item will be returned.
 
 renderObj
 ----------
 
-.. container:: table-row
+..  t3-cobj-files:: renderObj
 
-   Property
-         renderObj
+    :Data type: :ref:`cObject <data-type-cobject>` :ref:`+optionSplit <optionsplit>`
 
-   Data type
-         :ref:`cObject <data-type-cobject>` :ref:`+optionSplit <objects-optionsplit>`
+    The cObject used for rendering the files. It is executed
+    once for every file. Note that during each execution you can
+    find information about the current file using the getText
+    property "file" :ref:`data-type-gettext-file` with the "current" keyword.
+    Look there to find out which properties of the file are available.
 
-   Description
-         The cObject used for rendering the files. It is executed
-         once for every file. Note that during each execution you can
-         find information about the current file using the getText
-         property "file" :ref:`data-type-gettext-file` with the "current" keyword.
-         Look there to find out which properties of the file are available.
+    **Example:**
 
-         **Example:**
+    ..  code-block:: typoscript
 
-         .. code-block:: typoscript
+        page.10.renderObj = TEXT
+        page.10.renderObj {
+          stdWrap.data = file:current:size
+          stdWrap.wrap = <p>File size:<strong>|</strong></p>
+        }
 
-            page.10.renderObj = TEXT
-            page.10.renderObj {
-              stdWrap.data = file:current:size
-              stdWrap.wrap = <p>File size:<strong>|</strong></p>
-            }
-
-         This returns the size of the current file.
+    This returns the size of the current file.
 
 stdWrap
 --------
 
-.. container:: table-row
+..  t3-cobj-files:: stdWrap
 
-   Property
-         stdWrap
-
-   Data type
-         :ref:`->stdWrap <stdwrap>`
-
-
-[tsref:(cObject).FILES]
+    :Data type: :ref:`->stdWrap <stdwrap>`
 
 
 .. index:: FILES; references
@@ -255,51 +212,32 @@ stdWrap
 Special key: "references"
 =========================
 
-table
-------
+references.table
+----------------
 
-.. container:: table-row
+..  t3-cobj-files:: references.table
 
-   Property
-         table
+    :Data type: string /:ref:`stdWrap <stdwrap>`
 
-   Data type
-         string /:ref:`stdWrap <stdwrap>`
+    The table name of the table having the file field.
 
-   Description
-         The table name of the table having the file field.
+references.uid
+--------------
 
-uid
-----
+..  t3-cobj-files:: references.uid
 
-.. container:: table-row
+    :Data type: integer /:ref:`stdWrap <stdwrap>`
 
-   Property
-         uid
+    The UID of the record from which to fetch the referenced files.
 
-   Data type
-         string /:ref:`stdWrap <stdwrap>`
+references.fieldName
+--------------------
 
-   Description
-         The UID of the record from which to fetch the referenced files.
+..  t3-cobj-files:: references.fieldName
 
-fieldName
-----------
+    :Data type: string /:ref:`stdWrap <stdwrap>`
 
-.. container:: table-row
-
-   Property
-         fieldName
-
-   Data type
-         string /:ref:`stdWrap <stdwrap>`
-
-   Description
-         Field name of the file field in the table.
-
-
-[tsref:(cObject).FILES.references]
-
+    Field name of the file field in the table.
 
 .. _cobj-files-examples:
 
@@ -314,8 +252,8 @@ Usage with files
 
 In this example, we first load files using several of the methods
 explained above (using sys_file UIDs, collection UIDs, and folders).
-Then we use the :ref:`TEXT <cobj-text>` cObject as renderObj to output
-the file size of all files that were found:
+Then we use the :ref:`TEXT <cobj-text>` cObject as :t3-cobj-files:`renderObj`
+to output the file size of all files that were found:
 
 .. code-block:: typoscript
 

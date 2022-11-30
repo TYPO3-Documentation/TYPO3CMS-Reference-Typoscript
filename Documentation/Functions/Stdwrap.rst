@@ -2134,7 +2134,7 @@ debugData
 Example
 =======
 
-Example with the property "value" of the content object ":ref:`t3-cobj-text`":
+Example with the property "value" of the content object ":ref:`cobj-text`":
 
 .. code-block:: typoscript
    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
