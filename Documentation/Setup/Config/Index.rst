@@ -59,9 +59,9 @@ absRefPrefix
    :Data type: :ref:`data-type-string`
    :Special value: "auto"
 
-   If set the string is prepended to all relative links that TYPO3 generateds.
+   If set the string is prepended to all relative links that TYPO3 generates.
 
-   `config.absRefPrefix = auto` has a special meaning. It lets TYPO3 autodetect
+   `config.absRefPrefix = auto` lets TYPO3 autodetect
    the site root based on path prefixes and not based on host name variables
    from the server, making this value safe for multi-domain environments.
 
