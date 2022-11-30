@@ -107,7 +107,7 @@ absRefPrefix
 
 .. tlo-config:: additionalHeaders
 
-   :Data type: numerically indexed array of "http header entries".
+   :Data type: numerically indexed array of "HTTP header entries".
 
    By means of `config.additionalHeaders` as series of additional http headers
    can be configured. An entry has the following structure:
