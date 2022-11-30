@@ -109,7 +109,7 @@ absRefPrefix
 
    :Data type: numerically indexed array of "HTTP header entries".
 
-   By means of `config.additionalHeaders` as series of additional http headers
+   By means of `config.additionalHeaders` as series of additional HTTP headers
    can be configured. An entry has the following structure:
 
    `10.header = the header string`
