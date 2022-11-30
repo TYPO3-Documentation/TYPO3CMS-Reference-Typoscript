@@ -22,7 +22,7 @@ Example:
             value
 
       Data type
-            :ref:`data-type-string` /:ref:`stdWrap <stdwrap>`
+            :t3-data-type:`string` /:ref:`stdWrap <stdwrap>`
 
 
 ..  toctree::

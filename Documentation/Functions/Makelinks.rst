@@ -51,7 +51,7 @@ http.extTarget
    http.extTarget
 
 :aspect:`Data type`
-   :ref:`data-type-target`
+   :t3-data-type:`target`
 
 :aspect:`Description`
    The target of the link.
@@ -68,7 +68,7 @@ http.wrap
    http.wrap
 
 :aspect:`Data type`
-   :ref:`data-type-wrap` / :ref:`stdwrap`
+   :t3-data-type:`wrap` / :ref:`stdwrap`
 
 :aspect:`Description`
    Wrap around the link.
@@ -82,7 +82,7 @@ http.ATagBeforeWrap
    http.ATagBeforeWrap
 
 :aspect:`Data type`
-   :ref:`data-type-boolean`
+   :t3-data-type:`boolean`
 
 :aspect:`Description`
    If set, the link is first wrapped with :typoscript:`http.wrap` and then the
@@ -126,7 +126,7 @@ http.ATagParams
    http.ATagParams
 
 :aspect:`Data type`
-   :ref:`data-type-tag-params` / :ref:`stdwrap`
+   :t3-data-type:`tag-params` / :ref:`stdwrap`
 
 :aspect:`Description`
    Additional parameters
@@ -159,7 +159,7 @@ mailto.wrap
    mailto.wrap
 
 :aspect:`Data type`
-   :ref:`data-type-wrap` / :ref:`stdwrap`
+   :t3-data-type:`wrap` / :ref:`stdwrap`
 
 :aspect:`Description`
    Wrap around the link.
@@ -173,7 +173,7 @@ mailto.ATagBeforeWrap
    mailto.ATagBeforeWrap
 
 :aspect:`Data type`
-   :ref:`data-type-boolean`
+   :t3-data-type:`boolean`
 
 :aspect:`Description`
    If set, the link is first wrapped with mailto :typoscript:`wrap` and then the
@@ -191,7 +191,7 @@ mailto.ATagParams
    mailto.ATagParams
 
 :aspect:`Data type`
-   :ref:`data-type-tag-params` / :ref:`stdwrap`
+   :t3-data-type:`tag-params` / :ref:`stdwrap`
 
 :aspect:`Description`
    Additional parameters

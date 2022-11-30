@@ -38,7 +38,7 @@ key
    key
 
 :aspect:`Data type`
-   :ref:`data-type-string` / :ref:`stdwrap`
+   :t3-data-type:`string` / :ref:`stdwrap`
 
 :aspect:`Description`
    The cache identifier that is used to store the rendered content into
@@ -94,7 +94,7 @@ tags
    tags
 
 :aspect:`Data type`
-   :ref:`data-type-string` / :ref:`stdwrap`
+   :t3-data-type:`string` / :ref:`stdwrap`
 
 :aspect:`Description`
    Can hold a comma-separated list of tags. These tags will be attached

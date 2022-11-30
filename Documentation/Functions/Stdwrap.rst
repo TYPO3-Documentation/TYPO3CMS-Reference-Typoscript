@@ -54,7 +54,7 @@ addPageCacheTags
    addPageCacheTags
 
 :aspect:`Data type`
-   :ref:`data-type-string` / :ref:`stdWrap`
+   :t3-data-type:`string` / :ref:`stdWrap`
 
 :aspect:`Description`
    Comma-separated list of cache tags, which should be added to the page
@@ -88,7 +88,7 @@ setCurrent
    setCurrent
 
 :aspect:`Data type`
-   :ref:`data-type-string` / :ref:`stdWrap`
+   :t3-data-type:`string` / :ref:`stdWrap`
 
 :aspect:`Description`
    Sets the "current"-value. This is normally set from some outside
@@ -233,7 +233,7 @@ preUserFunc
    preUserFunc
 
 :aspect:`Data type`
-   :ref:`data-type-function-name`
+   :t3-data-type:`function-name`
 
 :aspect:`Description`
    Calls the provided PHP function. If you specify the name with a '->'
@@ -263,7 +263,7 @@ override
    override
 
 :aspect:`Data type`
-   :ref:`data-type-string` / :ref:`stdWrap`
+   :t3-data-type:`string` / :ref:`stdWrap`
 
 :aspect:`Description`
    if "override" returns something else than "" or zero (trimmed), the
@@ -296,7 +296,7 @@ ifNull
    ifNull
 
 :aspect:`Data type`
-   :ref:`data-type-string` / :ref:`stdWrap`
+   :t3-data-type:`string` / :ref:`stdWrap`
 
 :aspect:`Description`
    If the content is null (:php:`NULL` type in PHP), the content is overridden
@@ -329,7 +329,7 @@ ifEmpty
    ifEmpty
 
 :aspect:`Data type`
-   :ref:`data-type-string` / :ref:`stdWrap`
+   :t3-data-type:`string` / :ref:`stdWrap`
 
 :aspect:`Description`
    If the trimmed content is empty at this point, the content is loaded
@@ -346,7 +346,7 @@ ifBlank
    ifBlank
 
 :aspect:`Data type`
-   :ref:`data-type-string` / :ref:`stdWrap`
+   :t3-data-type:`string` / :ref:`stdWrap`
 
 :aspect:`Description`
    Same as :typoscript:`ifEmpty` but the check is done against ''. Zeros are not
@@ -363,7 +363,7 @@ listNum
    listNum
 
 :aspect:`Data type`
-   :ref:`data-type-integer` :ref:`+calc <objects-calc>` +"last" +"rand" / :ref:`stdWrap`
+   :t3-data-type:`integer` :ref:`+calc <objects-calc>` +"last" +"rand" / :ref:`stdWrap`
 
 :aspect:`Description`
    Explodes the content with "," (comma) and the content is set to the
@@ -532,7 +532,7 @@ csConv
    csConv
 
 :aspect:`Data type`
-   :ref:`data-type-string` / :ref:`stdWrap`
+   :t3-data-type:`string` / :ref:`stdWrap`
 
 :aspect:`Description`
    Convert the charset of the string from the charset given as value to
@@ -726,7 +726,7 @@ char
    char
 
 :aspect:`Data type`
-   :ref:`data-type-integer` / :ref:`stdWrap`
+   :t3-data-type:`integer` / :ref:`stdWrap`
 
 :aspect:`Description`
    Content is set to :php:`chr(*value*)`. This returns a one-character
@@ -770,7 +770,7 @@ hash
    hash
 
 :aspect:`Data type`
-   :ref:`data-type-string` / :ref:`stdWrap`
+   :t3-data-type:`string` / :ref:`stdWrap`
 
 :aspect:`Description`
    Returns a hashed value of the current content. Set to one of the
@@ -833,7 +833,7 @@ date
    date
 
 :aspect:`Data type`
-   :ref:`data-type-date-conf` / :ref:`stdWrap`
+   :t3-data-type:`date-conf` / :ref:`stdWrap`
 
 :aspect:`Description`
    The content should be data-type "UNIX-time". Returns the content
@@ -874,7 +874,7 @@ strftime
    strftime
 
 :aspect:`Data type`
-   :ref:`data-type-strftime-conf` / :ref:`stdWrap`
+   :t3-data-type:`strftime-conf` / :ref:`stdWrap`
 
 :aspect:`Description`
    Very similar to "date", but using a different format. See the PHP manual (`strftime <https://www.php.net/strftime>`_) for the
@@ -906,7 +906,7 @@ strtotime
    strtotime
 
 :aspect:`Data type`
-   :ref:`data-type-string`
+   :t3-data-type:`string`
 
 :aspect:`Description`
    Allows conversion of formatted dates to timestamp, e.g. to perform date calculations.
@@ -945,7 +945,7 @@ age
    age
 
 :aspect:`Data type`
-   :ref:`boolean <data-type-bool>` or :ref:`data-type-string` / :ref:`stdWrap`
+   :ref:`boolean <data-type-bool>` or :t3-data-type:`string` / :ref:`stdWrap`
 
 :aspect:`Description`
    If enabled with a "1" (number, integer) the content is seen as a date
@@ -990,7 +990,7 @@ case
    case
 
 :aspect:`Data type`
-   :ref:`data-type-case` / :ref:`stdWrap`
+   :t3-data-type:`case` / :ref:`stdWrap`
 
 :aspect:`Description`
    Converts case
@@ -1199,7 +1199,7 @@ cropHTML
    cropHTML
 
 :aspect:`Data type`
-   :ref:`data-type-string` / :ref:`stdWrap`
+   :t3-data-type:`string` / :ref:`stdWrap`
 
 :aspect:`Description`
    Crops the content to a certain length. In contrast to :typoscript:`stdWrap.crop` it
@@ -1237,7 +1237,7 @@ crop
    crop
 
 :aspect:`Data type`
-   :ref:`data-type-string` / :ref:`stdWrap`
+   :t3-data-type:`string` / :ref:`stdWrap`
 
 :aspect:`Description`
    Crops the content to a certain length.
@@ -1354,7 +1354,7 @@ doubleBrTag
    doubleBrTag
 
 :aspect:`Data type`
-   :ref:`data-type-string` / :ref:`stdWrap`
+   :t3-data-type:`string` / :ref:`stdWrap`
 
 :aspect:`Description`
    All double-line-breaks are substituted with this value.
@@ -1387,7 +1387,7 @@ brTag
    brTag
 
 :aspect:`Data type`
-   :ref:`data-type-string` / :ref:`stdWrap`
+   :t3-data-type:`string` / :ref:`stdWrap`
 
 :aspect:`Description`
    All ASCII codes of "10" (line feed, LF) are substituted with the
@@ -1502,7 +1502,7 @@ wrapAlign
    wrapAlign
 
 :aspect:`Data type`
-   :ref:`align <data-type-align>` / :ref:`stdWrap`
+   :t3-data-type:`align` / :ref:`stdWrap`
 
 :aspect:`Description`
    Wraps content with :typoscript:`<div style=text-align:[*value*];"> | </div>`
@@ -1788,7 +1788,7 @@ postUserFunc
    postUserFunc
 
 :aspect:`Data type`
-   :ref:`data-type-function-name`
+   :t3-data-type:`function-name`
 
 :aspect:`Description`
    Calls the provided PHP function. If you specify the name with a '->'
@@ -1898,7 +1898,7 @@ postUserFuncInt
    postUserFuncInt
 
 :aspect:`Data type`
-   :ref:`data-type-function-name`
+   :t3-data-type:`function-name`
 
 :aspect:`Description`
    Calls the provided PHP function. If you specify the name with a '->'
@@ -1927,7 +1927,7 @@ prefixComment
    prefixComment
 
 :aspect:`Data type`
-   :ref:`data-type-string` / :ref:`stdWrap`
+   :t3-data-type:`string` / :ref:`stdWrap`
 
 :aspect:`Description`
    Prefixes content with an HTML comment with the second part of input

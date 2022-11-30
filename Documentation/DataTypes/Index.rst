@@ -22,237 +22,176 @@ examples.
 .. contents::
    :local:
 
-.. index:: Simple data types; align
-.. _data-type-align:
-
 align
 =====
 
-:aspect:`Data type:`
-   align
+..  t3-data-type:: align
 
-:aspect:`Description:`
-   Decides about alignment.
+    :Default: :typoscript:`left`
+    :Allowed values: :typoscript:`left`, :typoscript:`center`, :typoscript:`right`
 
-:aspect:`Examples:`
-   :typoscript:`left`, :typoscript:`center`, :typoscript:`right`
-
-:aspect:`Default:`
-   :typoscript:`left`
-
-
-.. index:: Simple data types; boolean
-.. _data-type-boolean:
-.. _data-type-bool:
+    Decides about alignment.
 
 boolean
 =======
 
-:aspect:`Data type:`
-   boolean
+..  t3-data-type:: boolean
 
-:aspect:`Description:`
-   Possible values for boolean variables are `1` and `0`
-   meaning TRUE and FALSE.
+    Possible values for boolean variables are `1` and `0`
+    meaning TRUE and FALSE.
 
-   Everything else is `evaluated to one of these values by PHP`__:
-   Non-empty strings (except `0` [zero]) are treated as TRUE,
-   empty strings are evaluated to FALSE.
+    Everything else is `evaluated to one of these values by PHP`__:
+    Non-empty strings (except `0` [zero]) are treated as TRUE,
+    empty strings are evaluated to FALSE.
 
-   __ https://www.php.net/manual/en/language.types.boolean.php
+    __ https://www.php.net/manual/en/language.types.boolean.php
 
-:aspect:`Examples:`
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    ..  rubric:: Examples
 
-      dummy.enable = 0   # false, preferred notation
-      dummy.enable = 1   # true,  preferred notation
-      dummy.enable =     # false, because the value is empty
+    .. code-block:: typoscript
+       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-
-.. index:: Simple data types; case
-.. _data-type-case:
+       dummy.enable = 0   # false, preferred notation
+       dummy.enable = 1   # true,  preferred notation
+       dummy.enable =     # false, because the value is empty
 
 case
 ====
 
-:aspect:`Data type:`
-   case
-
-:aspect:`Description:`
-   Do a case conversion.
-
-:aspect:`Possible values:`
-   ============================= ==========================================================
-   Value                         Effect
-   ============================= ==========================================================
-   :typoscript:`upper`           Convert all letters of the string to upper case
-   :typoscript:`lower`           Convert all letters of the string to lower case
-   :typoscript:`capitalize`      Uppercase the first character of each word in the string
-   :typoscript:`ucfirst`         Convert the first letter of the string to upper case
-   :typoscript:`lcfirst`         Convert the first letter of the string to lower case
-   :typoscript:`uppercamelcase`  Convert underscored `upper_camel_case` to `UpperCamelCase`
-   :typoscript:`lowercamelcase`  Convert underscored `lower_camel_case` to `lowerCamelCase`
-   ============================= ==========================================================
-
-:aspect:`Example:`
-   Code:
-
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-      10 = TEXT
-      10.value = Hello world!
-      10.case = upper
-
-   Result:
-
-   .. code-block:: html
-      :caption: Example Output
-
-      HELLO WORLD!
+..  t3-data-type:: case
 
 
-.. index:: Simple data types; date-conf
-.. _data-type-date-conf:
+    Do a case conversion.
+
+    ..  rubric:: Possible values:
+
+    ============================= ==========================================================
+    Value                         Effect
+    ============================= ==========================================================
+    :typoscript:`upper`           Convert all letters of the string to upper case
+    :typoscript:`lower`           Convert all letters of the string to lower case
+    :typoscript:`capitalize`      Uppercase the first character of each word in the string
+    :typoscript:`ucfirst`         Convert the first letter of the string to upper case
+    :typoscript:`lcfirst`         Convert the first letter of the string to lower case
+    :typoscript:`uppercamelcase`  Convert underscored `upper_camel_case` to `UpperCamelCase`
+    :typoscript:`lowercamelcase`  Convert underscored `lower_camel_case` to `lowerCamelCase`
+    ============================= ==========================================================
+
+     ..  rubric:: Example
+
+    Code:
+
+    ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+        10 = TEXT
+        10.value = Hello world!
+        10.case = upper
+
+    Result:
+
+    ..  code-block:: html
+        :caption: Example Output
+
+        HELLO WORLD!
 
 date-conf
 =========
 
-:aspect:`Data type:`
-   date-conf
+..  t3-data-type:: date-conf
 
-:aspect:`Description:`
-   Used to format a date, see PHP function :php:`date()`.
-   The following abbreviations are available:
+    Used to format a date, see PHP function :php:`date()`. See the
+    documentation of `allowed date time formats in
+    PHP <https://www.php.net/manual/en/datetime.format.php>`__.
 
-   === ===========================================================
-   Abb The abbreviation is expanded to:
-   === ===========================================================
-   a   "am" or "pm"
-   A   "AM" or "PM"
-   d   01 - 31, day of the month, numeric, 2 digits with leading zeros
-   D   day of the week, textual, 3 letters like "Fri"
-   F   month, textual, long, like "January"
-   h   hour, numeric, 12 hour format
-   H   hour, numeric, 24 hour format
-   i   minutes, numeric
-   j   1 - 31, day of the month, numeric, without leading zeros
-   l   (lowercase 'L'), day of the week, textual, long, like "Friday"
-   m   month, numeric
-   M   month, textual, 3 letters, like "Jan"
-   s   seconds, numeric
-   S   English ordinal suffix, textual, 2 characters, like "th" or "nd"
-   U   seconds since the epoch
-   Y   year, numeric, 4 digits, like "2013"
-   w   day of the week, numeric, 0 represents Sunday
-   y   year, numeric, 2 digits, like "13"
-   z   day of the year, numeric, like "299"
-   === ===========================================================
+    ..  rubric:: Example
 
-:aspect:`Example:`
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-      page.10.date-conf = d-m-y
-
-
-.. index:: Simple data types; degree
-.. _data-type-degree:
+        page.10.date-conf = d-m-y
 
 degree
 ======
 
-:aspect:`Data type:`
-   degree
+..  t3-data-type:: degree
 
-:aspect:`Description:`
-   -90 to 90, integers
+    `-90` to `90`, integers
 
-:aspect:`Example:`
-   45
-
-.. _data-type-dir:
-
-
-.. index:: Simple data types; dir
+    Example: `45`
 
 dir
 ===
 
-:aspect:`Data type:`
-   dir
+..  t3-data-type:: dir
 
-:aspect:`Syntax:`
-   [path relative to the web root of the site] \| [list of valid
-   extensions] \| [sorting: name, size, ext, date] \| [reverse: "r"] \|
-   [return full path: boolean]
+    ..  rubric:: Syntax
 
-:aspect:`Description:`
-   Files matching are returned in a comma-separated string.
-
-:aspect:`Example:`
-   This example returns a list of all pdf, gif and jpg-files from
-   :file:`fileadmin/files/` sorted by their name reversely and with the full path (with
-   :file:`fileadmin/files/` prepended):
+    [path relative to the web root of the site] \| [list of valid
+    extensions] \| [sorting: name, size, ext, date] \| [reverse: "r"] \|
+    [return full path: boolean]
 
 
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    Files matching are returned in a comma-separated string.
 
-      page.10.dir = fileadmin/files/ | pdf,gif,jpg | name | r | true
+    ..  rubric:: Example
+
+    This example returns a list of all pdf, gif and jpg-files from
+    :file:`fileadmin/files/` sorted by their name reversely and with the full path (with
+    :file:`fileadmin/files/` prepended):
 
 
-.. index:: Simple data types; function name
-.. _data-type-function-name:
+    ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+        page.10.dir = fileadmin/files/ | pdf,gif,jpg | name | r | true
 
 function name
 =============
 
-:aspect:`Data type:`
-   function name
+..  t3-data-type:: function name
 
-:aspect:`Description:`
-   Indicates a function or method in a class to call. See more information at
-   the :ref:`USER cObject <cobj-user>`.
+    Indicates a function or method in a class to call. See more information at
+    the :ref:`USER cObject <cobj-user>`.
 
-   If no namespaces are used, then the class or function name, but not the method
-   name, should probably be prefixed with :php:`user_`. The prefix can be
-   changed in the :php:`$GLOBALS['TYPO3_CONF_VARS']` config though. The function
-   / method is normally called with 2 parameters, :php:`$conf` which is the
-   TypoScript configuration and :php:`$content`, some content to be processed and
-   returned.
+    If no namespaces are used, then the class or function name, but not the method
+    name, should probably be prefixed with :php:`user_`. The prefix can be
+    changed in the :php:`$GLOBALS['TYPO3_CONF_VARS']` config though. The function
+    / method is normally called with 2 parameters, :php:`$conf` which is the
+    TypoScript configuration and :php:`$content`, some content to be processed and
+    returned.
 
-   .. Which entry in TYPO3_CONF_VARS enables the user-prefix to be changed? This
-      should be mentioned. Looks like this entry has gone and this info no
-      longer valid.
+    ..  Which entry in TYPO3_CONF_VARS enables the user-prefix to be changed? This
+        should be mentioned. Looks like this entry has gone and this info no
+        longer valid.
 
-   If no namespaces are used and if a method in a class is called, it is checked (when using the
-   :typoscript:`USER`/:typoscript:`USER_INT` objects) whether a class with the same name, but
-   prefixed with :php:`ux_` is present and if so, *this* class is instantiated
-   instead. See the document "Inside TYPO3" for more information on extending
-   classes in TYPO3!
+    If no namespaces are used and if a method in a class is called, it is checked (when using the
+    :typoscript:`USER`/:typoscript:`USER_INT` objects) whether a class with the same name, but
+    prefixed with :php:`ux_` is present and if so, *this* class is instantiated
+    instead. See the document "Inside TYPO3" for more information on extending
+    classes in TYPO3!
 
-   .. Where is this feature mentioned? We should add a reference here.
+    .. Where is this feature mentioned? We should add a reference here.
 
-:aspect:`Examples:`
-   Method in namespaced class. This is the preferred version:
+    ..  rubric:: Examples
 
-   .. code-block:: php
+    Method in namespaced class. This is the preferred version:
 
-      Your\NameSpace\YourClass->reverseString
+    ..  code-block:: php
 
-   Single Function:
+        Your\NameSpace\YourClass->reverseString
 
-   .. code-block:: php
+    Single Function:
 
-      user_reverseString
+    ..  code-block:: php
 
-   Method in class without namespace:
+        user_reverseString
 
-   .. code-block:: php
+    Method in class without namespace:
 
-      user_yourClass->reverseString
+    ..  code-block:: php
+
+        user_yourClass->reverseString
 
 getText
 =======
@@ -260,400 +199,166 @@ getText
 The getText data type is some kind of tool box allowing to retrieve
 values from a variety of sources. Read more: :ref:`data-type-gettext`
 
-
-.. index:: Simple data types; GraphicColor
-.. _data-type-graphiccolor:
-
 GraphicColor
 ============
 
-:aspect:`Data type:`
-   GraphicColor
+..  t3-data-type:: GraphicColor
 
-:aspect:`Syntax:`
-   [colordef] : [modifier]
+    ..  rubric:: Syntax:
 
-   Where modifier can be an integer which is added or subtracted to the three
-   RGB-channels or a floating point with an :typoscript:`*` before, which will then
-   multiply the values with that factor.
+    [colordef] : [modifier]
 
-:aspect:`Description:`
-   The color can be given as HTML-color or as a comma-separated list of
-   RGB-values (integers). An extra parameter can be given, that will modify the
-   color mathematically:
-
-:aspect:`Examples:`
-   red *(HTML-color)*
-
-   #ffeecc *(HTML-color)*
-
-   255,0,255 *(RGB-integers)*
-
-   *Extra:*
-
-   red *: \*0.8 ("red" is darkened by factor 0.8)*
-
-   #ffeecc *: +16 ("ffeecc" is going to #fffedc because 16 is added)*
+    Where modifier can be an integer which is added or subtracted to the three
+    RGB-channels or a floating point with an :typoscript:`*` before, which will then
+    multiply the values with that factor.
 
 
-.. index:: Simple data types; HTML code
-.. _data-type-html-code:
+    The color can be given as HTML-color or as a comma-separated list of
+    RGB-values (integers). An extra parameter can be given, that will modify the
+    color mathematically:
 
-HTML code
-=========
+     ..  rubric:: Examples
 
-:aspect:`Data type:`
-   HTML code
+    red *(HTML-color)*
 
-:aspect:`Description:`
-   Pure HTML code
+    #ffeecc *(HTML-color)*
 
-:aspect:`Example:`
-   .. code-block:: html
-      :caption: Example HTML code
+    255,0,255 *(RGB-integers)*
 
-      <b>Some text in bold</b>
+    *Extra:*
 
+    red *: \*0.8 ("red" is darkened by factor 0.8)*
 
-.. index:: Simple data types; HTML-color
-.. _data-type-html-color:
-
-HTML-color
-==========
-
-:aspect:`Data type:`
-   HTML-color
-
-:aspect:`Description:`
-   Named colors or color codes.
-
-   Some HTML color codes are:
-
-   =============  ================
-   Color name     Hexadecimal code
-   =============  ================
-   Black             #000000
-   Silver            #C0C0C0
-   Gray              #808080
-   White             #FFFFFF
-   Maroon            #800000
-   Red               #FF0000
-   Purple            #800080
-   Fuchsia           #FF00FF
-   Green             #008000
-   Lime              #00FF00
-   Olive             #808000
-   Yellow            #FFFF00
-   Navy              #000080
-   Blue              #0000FF
-   Teal              #008080
-   Aqua              #00FFFF
-   =============  ================
-
-:aspect:`Examples:`
-   red
-
-   #ffeecc
-
-
-.. index:: Simple data types; imageExtension
-.. _data-type-imageextension:
+    #ffeecc *: +16 ("ffeecc" is going to #fffedc because 16 is added)*
 
 imageExtension
 ==============
 
-:aspect:`Data type:`
-   imageExtension
+..  t3-data-type:: imageExtension
 
-:aspect:`Description:`
-   Image extensions can be anything among the allowed types defined in the
-   global variable :php:`$GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext']`.
-   Standard is pdf, gif, jpg, jpeg, tif, bmp, ai, pcx, tga, png.
+    Image extensions can be anything among the allowed types defined in the
+    global variable :php:`$GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext']`.
+    Standard is pdf, gif, jpg, jpeg, tif, bmp, ai, pcx, tga, png.
 
-   The value **"web"** is special. This will ensure that an image is
-   converted to a web image format (gif or jpg) if it happens not to be already!
+    The value **"web"** is special. This will ensure that an image is
+    converted to a web image format (gif or jpg) if it happens not to be already!
 
-:aspect:`Examples:`
-   jpg
+     ..  rubric:: Examples
 
-   web *(gif or jpg ..)*
+    jpg
 
-
-.. index:: Simple data types; imgResource
-.. _data-type-imgresource:
+    web *(gif or jpg ..)*
 
 imgResource
 ===========
 
-:aspect:`Data type:`
-   imgResource
+..  t3-data-type:: imgResource
 
-:aspect:`Description:`
-   #. A :ref:`data-type-resource` plus imgResource properties.
+    #.  A :t3-data-type:`resource` plus imgResource properties.
 
-      Filetypes can be anything among the allowed types defined in the
-      configuration variable
-      :php:`$GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext']`.  Standard is
-      pdf, gif, jpg, jpeg, tif, bmp, ai, pcx, tga, png.
+        Filetypes can be anything among the allowed types defined in the
+        configuration variable
+        :php:`$GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext']`.  Standard is
+        pdf, gif, jpg, jpeg, tif, bmp, ai, pcx, tga, png.
 
-   #. A GIFBUILDER object. See the object reference for :ref:`gifbuilder` below.
+    #.  A GIFBUILDER object. See the object reference for :ref:`gifbuilder` below.
 
-:aspect:`Examples:`
-   Here "file" is an imgResource:
+    ..  rubric:: Examples
 
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    Here "file" is an imgResource:
 
-      10 = IMAGE
-      10 {
-          file = fileadmin/toplogo.gif
-          file.width = 200
-      }
+    ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-   GIFBUILDER:
+        10 = IMAGE
+        10 {
+            file = fileadmin/toplogo.gif
+            file.width = 200
+        }
 
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    GIFBUILDER:
 
-      10 = IMAGE
-      10.file = GIFBUILDER
-      10.file {
-          # GIFBUILDER properties here...
-      }
+    ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-
-.. index:: Simple data types; integer
-.. _data-type-integer:
-.. _data-type-int:
+        10 = IMAGE
+        10.file = GIFBUILDER
+        10.file {
+            # GIFBUILDER properties here...
+        }
 
 integer
 =======
 
-:aspect:`Data type:`
-   integer / int
+..  t3-data-type:: integer
 
-:aspect:`Examples:`
-   42, -8, -9, 0
+    ..  rubric:: Examples
 
-:aspect:`Description:`
-   This data type is sometimes used generally though another type would have
-   been more appropriate, like :ref:`data-type-pixels`.
+    42, -8, -9, 0
 
 
-.. index:: Simple data types; linkWrap
-.. _data-type-linkwrap:
-
-linkWrap
-========
-
-:aspect:`Data type:`
-   linkWrap
-
-:aspect:`Syntax:`
-   <.. {x}.> \| </...>
-
-:aspect:`Description:`
-   {x}; x is an integer (0-9) and points to a key in the PHP array
-   root line. The key is equal to the level the current page is on
-   measured relatively to the root of the website.
-
-   If the key exists the uid of the level that key pointed to is inserted
-   instead of {x}.
-
-   Thus we can insert page\_ids from previous levels.
-
-:aspect:`Example:`
-   This will make a link to the root-level of a website:
-
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-      page.10.linkWrap = <a href="?id={0}"> | </a>
-
-
-.. index:: Simple data types; list
-.. _data-type-list:
-
-list
-====
-
-:aspect:`Data type:`
-   list
-
-:aspect:`Description:`
-   List of values, comma separated.
-   Values are trimmed, leading whitespace is therefore ignored before and after
-   each comma.
-
-:aspect:`Example:`
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-      page.10.myList = item,item2,item3
-
-
-.. index:: Simple data types; margins
-.. _data-type-margins:
-
-margins
-=======
-
-:aspect:`Data type:`
-   margins
-
-:aspect:`Syntax:`
-   left, top, right, bottom
-
-:aspect:`Example:`
-   This sets margin-left to 10 and margin-bottom to 5. Top and right are
-   not set (zero):
-
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-      page.10.myMargins = 10,0,0,5
-
-
-.. index:: Simple data types; page_id
-.. _data-type-page-id:
-
-page\_id
-========
-
-:aspect:`Data type:`
-   page\_id
-
-:aspect:`Description:`
-   A page id (integer) or :typoscript:`this` (=current page id).
-
-:aspect:`Examples:`
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-      page.10.settings.pid = this
-
-      page.20.settings.pid = 34
-
-
-.. index:: Simple data types; path
-.. _data-type-path:
+    This data type is sometimes used generally though another type would have
+    been more appropriate, like :t3-data-type:`pixels`.
 
 path
 ====
 
-:aspect:`Data type:`
-   path
-
-:aspect:`Description:`
-   Path relative to the root directory from which we operate.
-
-:aspect:`Example:`
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-      page.10.settings.somePath = fileadmin/stuff/
+..  t3-data-type:: path
 
 
-.. index:: Simple data types; pixels
-.. _data-type-pixels:
+    Path relative to the root directory from which we operate.
+
+    ..  rubric:: Example
+
+    ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+        page.10.settings.somePath = fileadmin/stuff/
 
 pixels
 ======
 
-:aspect:`Data type:`
-   pixels
-
-:aspect:`Description:`
-   pixel-distance
-
-:aspect:`Example:`
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-      page.10.someWidth = 345
+..  t3-data-type:: pixels
 
 
-.. index::
-   Simple data types; positive integer
-   Simple data types; int+
-.. _data-type-positive-integer:
-.. _data-type-posint:
-.. _data-type-intplus:
+    pixel-distance
+
+    ..  rubric:: Example
+
+    ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+        page.10.someWidth = 345
 
 positive integer
 ================
 
-:aspect:`Data type:`
-   positive integer / posint / int+
-
-:aspect:`Description:`
-   Positive :ref:`data-type-integer`.
-
-:aspect:`Examples:`
-   42, 8, 9
+..  t3-data-type:: positive integer
 
 
-.. index:: Simple data types; resource
-.. _data-type-resource:
+    Positive :t3-data-type:`integer`.
+
+    ..  rubric:: Examples
+
+    42, 8, 9
 
 resource
 ========
 
-:aspect:`Data type:`
-   resource
+..  t3-data-type:: resource
 
-:aspect:`Description:`
-   If the value contains a "/", it is expected to be a reference (absolute or
-   relative) to a file in the file system. There is no support for wildcard
-   characters in the name of the reference.
+    If the value contains a "/", it is expected to be a reference (absolute or
+    relative) to a file in the file system. There is no support for wildcard
+    characters in the name of the reference.
 
-:aspect:`Example:`
-   Reference to a file in the file system:
+    ..  rubric:: Example
 
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    Reference to a file in the file system:
 
-      page.10.settings.someFile = fileadmin/picture.gif
+    .. code-block:: typoscript
+       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-
-.. index:: Simple data types; rotation
-.. _data-type-rotation:
-
-rotation
-========
-
-:aspect:`Data type:`
-   rotation
-
-:aspect:`Description:`
-   :ref:`data-type-integer`, degrees from 0 - 360
-
-:aspect:`Example:`
-   180
-
-
-.. index:: Simple data types; space
-.. _data-types-space:
-
-space
-=====
-
-:aspect:`Data type:`
-   space
-
-:aspect:`Syntax:`
-   "space before \| space after"
-
-:aspect:`Description:`
-   Used for content and sets the according number of pixels space
-   "before \| after".
-
-:aspect:`Example:`
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-      page.10.someSpace = 5 | 5
-
+       page.10.settings.someFile = fileadmin/picture.gif
 
 .. index:: Simple data types; strftime-conf
 .. _data-type-strftime-conf:
@@ -661,143 +366,56 @@ space
 strftime-conf
 =============
 
-:aspect:`Data type:`
-   strftime-conf
+..  t3-data-type:: strftime-conf
 
-:aspect:`Description:`
-   ==== ==========================================================
-   Abb  The abbreviation is expanded to:
-   ==== ==========================================================
-   %a   abbreviated weekday name according to the current locale
-   %A   full weekday name according to the current locale
-   %b   abbreviated month name according to the current locale
-   %B   full month name according to the current locale
-   %c   preferred date and time representation for the current locale
-   %C   century number (the year divided by 100 and truncated to an integer, range 00 to 99)
-   %d   day of the month as a decimal number (range 00 to 31)
-   %D   same as %m/%d/%y
-   %e   day of the month as a decimal number, a single digit is preceded by a space (range ' 1' to '31'). Note that the %e modifier is not supported in the Windows implementation of 'strftime'.
-   %h   same as %b
-   %H   hour as a decimal number using a 24-hour clock (range 00 to 23)
-   %I   hour as a decimal number using a 12-hour clock (range 01 to 12)
-   %j   day of the year as a decimal number (range 001 to 366)
-   %m   month as a decimal number (range 01 to 12)
-   %M   minute as a decimal number
-   %n   newline character
-   %p   either \`am' or \`pm' according to the given time value, or the corresponding strings for the current locale
-   %r   time in a.m. and p.m. notation
-   %R   time in 24 hour notation
-   %S   second as a decimal number
-   %t   tab character
-   %T   current time, equal to %H:%M:%S
-   %u   weekday as a decimal number [1,7], with 1 representing Monday
-   %U   week number of the current year as a decimal number, starting with the first Sunday as the first day of the first week
-   %V   The ISO 8601:1988 week number of the current year as a decimal number, range 01 to 53, where week 1 is the first week that has at least 4 days in the current year, and with Monday as the first day of the week.
-   %W   week number of the current year as a decimal number, starting with the first Monday as the first day of the first week
-   %w   day of the week as a decimal, Sunday being 0
-   %x   preferred date representation for the current locale without the time
-   %X   preferred time representation for the current locale without the date
-   %y   year as a decimal number without a century (range 00 to 99)
-   %Y   year as a decimal number including the century
-   %Z   time zone or name or abbreviation
-   %%   a literal \`%' character
-   ==== ==========================================================
-
-:aspect:`Examples:`
-   Date "DD-MM-YY" = :
-
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-      page.10.settings.myDate = %e:%m:%y
-
-   Time "HH:MM:SS" = :
-
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-      page.10.settings.myTime = %H:%M:%S
-
-   or just :
-
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-      page.10.settings.someTime = %T
-
-
-.. index:: Simple data types; string
-.. _data-type-string:
-.. _data-type-str:
-.. _data-type-value:
+    See function `srftime on php.net <https://www.php.net/manual/en/function.strftime>`.
 
 string
 ======
 
-:aspect:`Data type:`
-   string / str / value
-
-:aspect:`Description:`
-   Sometimes used generally though another type would have been more
-   appropriate, like "align".
-
-:aspect:`Example:`
-   The quick brown fox jumps over the lazy dog.
+..  t3-data-type:: string / str / value
 
 
-.. index:: Simple data types; tag
-.. _data-type-tag:
+    Sometimes used generally though another type would have been more
+    appropriate, like "align".
 
-<tag>
-=====
+    ..  rubric:: Example
 
-:aspect:`Data type:`
-   <tag>
+    The quick brown fox jumps over the lazy dog.
 
-:aspect:`Description:`
-   An HTML tag.
+tag
+===
 
-:aspect:`Example:`
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+..  t3-data-type:: tag
 
-      page.10.settings.bodyTag = <body lang="de">
+    An HTML tag.
 
+    ..  rubric:: Example
 
-.. index:: Simple data types; tag-data
-.. _data-type-tag-data:
+    ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-<tag>-data
-============
-
-:aspect:`Data type:`
-   <tag>-data
-
-:aspect:`Examples:`
-   *<frameset>-data: row*
-
-   *could be '150,\*'*
-
+        page.10.settings.bodyTag = <body lang="de">
 
 .. index:: Simple data types; tag-params
 .. _data-type-tag-params:
 
-<tag>-params
-==============
+tag-params
+==========
 
-:aspect:`Data type:`
-   <tag>-params
+..  t3-data-type:: tag-params
 
-:aspect:`Description:`
-   Parameters for a tag.
 
-:aspect:`Example:`
-   For <frameset>-params:
+    Parameters for a tag.
 
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    ..  rubric:: Examples
 
-      page.10.settings.someParams = border="0" framespacing="0"
+    For <frameset>-params:
+
+    ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+        page.10.settings.someParams = border="0" framespacing="0"
 
 
 .. index:: Simple data types; target
@@ -806,72 +424,17 @@ string
 target
 ======
 
-:aspect:`Data type:`
-   target
+..  t3-data-type:: target
 
-:aspect:`Examples:`
-   :typoscript:`_top`, :typoscript:`_blank`, :typoscript:`content`
+    ..  rubric:: Examples
 
-:aspect:`Description:`
-   Target in an :html:`<a>`-tag.
-
-   This is normally the same value as the name of the root-level object
-   that defines the frame.
+    :typoscript:`_top`, :typoscript:`_blank`, :typoscript:`content`
 
 
-.. index:: Simple data types; UNIX-time
-.. _data-type-unix-time:
+    Target in an :html:`<a>`-tag.
 
-UNIX-time
-=========
-
-:aspect:`Data type:`
-   UNIX-time
-
-:aspect:`Description:`
-   Seconds since January 1st 1970.
-
-:aspect:`Example:`
-   Seconds to May 09th 2016 12:34:
-
-   .. code-block:: none
-
-      1462790096
-
-
-.. index:: Simple data types; VHalign
-.. _data-type-vhalign:
-
-VHalign
-=======
-
-:aspect:`Data type:`
-   VHalign
-
-:aspect:`Description:`
-   Pair of values separated by a comma. The first value determines the
-   horizontal alignment, the second one the vertical alignment.
-
-   Possible values:
-
-   - r/c/l
-
-   - t/c/b
-
-   Horizontal values standing for: right, center, left
-
-   Vertical values standing for: top, center, bottom
-
-:aspect:`Default:` :typoscript:`l , t`
-
-:aspect:`Example:`
-   Horizontal alignment = right and Vertical alignment = center:
-
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-      page.10.settings.someAlignment = r , c
-
+    This is normally the same value as the name of the root-level object
+    that defines the frame.
 
 .. index:: Simple data types; wrap
 .. _data-type-wrap:
@@ -879,52 +442,30 @@ VHalign
 wrap
 ====
 
-:aspect:`Data type:`
-   wrap
+..  t3-data-type:: wrap
 
-:aspect:`Syntax:`
-   <...> \| </...>
-
-:aspect:`Description:`
-   Used to wrap something. The vertical bar ("|") is the place, where
-   your content will be inserted; the parts on the left and right of the
-   vertical line are placed on the left and right side of the content.
-
-   Spaces between the wrap-parts and the divider ("|") are trimmed off
-   from each part of the wrap.
-
-   If you want to use more sophisticated data functions, then you
-   should use `stdWrap.dataWrap` instead of `wrap`.
-
-   A `wrap` is processed and rendered as the last of the other components of
-   a cObject.
-
-:aspect:`Example:`
-   This will cause the value to be wrapped in a p-tag coloring the
-   value red:
-
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-      page.10.stdWrap.wrap = <p class="bg-red"> | </p>
+    :Syntax: <...> \| </...>
 
 
-.. index:: Simple data types; x,y,w,h
-.. _data-type-xywh:
+    Used to wrap something. The vertical bar ("|") is the place, where
+    your content will be inserted; the parts on the left and right of the
+    vertical line are placed on the left and right side of the content.
 
-x,y,w,h
-=======
+    Spaces between the wrap-parts and the divider ("|") are trimmed off
+    from each part of the wrap.
 
-:aspect:`Data type:`
-   x,y,w,h
+    If you want to use more sophisticated data functions, then you
+    should use `stdWrap.dataWrap` instead of `wrap`.
 
-:aspect:`Description:`
-   x,y is the offset from the upper left corner.
+    A `wrap` is processed and rendered as the last of the other components of
+    a cObject.
 
-   w,h is the width and height
+    ..  rubric:: Examples
 
-:aspect:`Example:`
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    This will cause the value to be wrapped in a p-tag coloring the
+    value red:
 
-      page.10.someDimensions = 10,10,5,5
+    ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+        page.10.stdWrap.wrap = <p class="bg-red"> | </p>

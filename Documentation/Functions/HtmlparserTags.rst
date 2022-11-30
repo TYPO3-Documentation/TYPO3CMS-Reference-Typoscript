@@ -24,7 +24,7 @@ overrideAttribs
    overrideAttribs
 
 :aspect:`Data type`
-   :ref:`data-type-string`
+   :t3-data-type:`string`
 
 :aspect:`Description`
    If set, this string is preset as the attributes of the tag.
@@ -67,7 +67,7 @@ fixAttrib.[attribute].set
    fixAttrib.[attribute].set
 
 :aspect:`Data type`
-   :ref:`data-type-string`
+   :t3-data-type:`string`
 
 :aspect:`Description`
    Force the attribute value to this value.
@@ -83,7 +83,7 @@ fixAttrib.[attribute].unset
    fixAttrib.[attribute].unset
 
 :aspect:`Data type`
-   :ref:`data-type-boolean`
+   :t3-data-type:`boolean`
 
 :aspect:`Description`
    If set, the attribute is unset.
@@ -99,7 +99,7 @@ fixAttrib.[attribute].default
    fixAttrib.[attribute].default
 
 :aspect:`Data type`
-   :ref:`data-type-string`
+   :t3-data-type:`string`
 
 :aspect:`Description`
    If no attribute exists by this name, this value is set as default
@@ -116,7 +116,7 @@ fixAttrib.[attribute].always
    fixAttrib.[attribute].always
 
 :aspect:`Data type`
-   :ref:`data-type-boolean`
+   :t3-data-type:`boolean`
 
 :aspect:`Description`
    If set, the attribute is always processed. Normally an attribute is
@@ -132,7 +132,7 @@ fixAttrib.[attribute].always
    fixAttrib.[attribute].lower
 
 :aspect:`Data type`
-   :ref:`data-type-boolean`
+   :t3-data-type:`boolean`
 
 :aspect:`Description`
    If any of these keys are set, the value is passed through the
@@ -182,7 +182,7 @@ fixAttrib.[attribute].removeIfFalse
    fixAttrib.[attribute].removeIfFalse
 
 :aspect:`Data type`
-   :ref:`data-type-boolean` / :typoscript:`blank` string
+   :t3-data-type:`boolean` / :typoscript:`blank` string
 
 :aspect:`Description`
    If set, then the attribute is removed if it is false (= :typoscript:`0`).
@@ -200,7 +200,7 @@ fixAttrib.[attribute].removeIfEquals
    fixAttrib.[attribute].removeIfEquals
 
 :aspect:`Data type`
-   :ref:`data-type-string`
+   :t3-data-type:`string`
 
 :aspect:`Description`
    If the attribute value matches the value set here, then it is removed.
@@ -216,7 +216,7 @@ fixAttrib.[attribute].casesensitiveComp
    fixAttrib.[attribute].casesensitiveComp
 
 :aspect:`Data type`
-   :ref:`data-type-boolean`
+   :t3-data-type:`boolean`
 
 :aspect:`Description`
    If set, the comparison in :ref:`htmlparser-tags-fixattrib-attribute-removeifequals`
@@ -234,7 +234,7 @@ fixAttrib.[attribute].prefixRelPathWith
    fixAttrib.[attribute].prefixRelPathWith
 
 :aspect:`Data type`
-   :ref:`data-type-string`
+   :t3-data-type:`string`
 
 :aspect:`Description`
    If the value of the attribute seems to be a relative URL (no scheme
@@ -258,7 +258,7 @@ fixAttrib.[attribute].userFunc
    fixAttrib.[attribute].userFunc
 
 :aspect:`Data type`
-   :ref:`data-type-function-name`
+   :t3-data-type:`function-name`
 
 :aspect:`Description`
    User function for processing of the attribute. The return value
@@ -299,7 +299,7 @@ protect
    protect
 
 :aspect:`Data type`
-   :ref:`data-type-boolean`
+   :t3-data-type:`boolean`
 
 :aspect:`Description`
    If set, the tag :html:`<>` is converted to :html:`&lt;` and :html:`&gt;`
@@ -315,7 +315,7 @@ remap
    remap
 
 :aspect:`Data type`
-   :ref:`data-type-string`
+   :t3-data-type:`string`
 
 :aspect:`Description`
    If set, the tagname is remapped to this tagname
@@ -331,7 +331,7 @@ rmTagIfNoAttrib
    rmTagIfNoAttrib
 
 :aspect:`Data type`
-   :ref:`data-type-boolean`
+   :t3-data-type:`boolean`
 
 :aspect:`Description`
    If set, then the tag is removed if no attributes happened to be there.

@@ -44,7 +44,7 @@ userFunc
 
 ..  t3-cobj-user:: userFunc
 
-    :Data type: :ref:`data-type-function-name`
+    :Data type: :t3-data-type:`function-name`
 
     The name of the function, which should be called. If you specify the
     name with a '->' in it, then it is interpreted as a call to a method in

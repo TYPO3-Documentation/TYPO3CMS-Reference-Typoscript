@@ -30,7 +30,7 @@ token
    token
 
 :aspect:`Data type`
-   :ref:`data-type-string` / :ref:`stdwrap`
+   :t3-data-type:`string` / :ref:`stdwrap`
 
 :aspect:`Description`
    String or character (token) used to split the value.
@@ -44,7 +44,7 @@ max
    max
 
 :aspect:`Data type`
-   :ref:`data-type-integer` / :ref:`stdwrap`
+   :t3-data-type:`integer` / :ref:`stdwrap`
 
 :aspect:`Description`
    Maximum number of splits.
@@ -58,7 +58,7 @@ min
    min
 
 :aspect:`Data type`
-   :ref:`data-type-integer` / :ref:`stdwrap`
+   :t3-data-type:`integer` / :ref:`stdwrap`
 
 :aspect:`Description`
    Minimum number of splits.
@@ -72,7 +72,7 @@ returnKey
    returnKey
 
 :aspect:`Data type`
-   :ref:`data-type-integer` / :ref:`stdwrap`
+   :t3-data-type:`integer` / :ref:`stdwrap`
 
 :aspect:`Description`
    Instead of parsing the split result, return the element of the
@@ -88,7 +88,7 @@ returnCount
    returnCount
 
 :aspect:`Data type`
-   :ref:`data-type-bool` / :ref:`stdwrap`
+   :t3-data-type:`boolean` / :ref:`stdwrap`
 
 :aspect:`Description`
    Counts all elements resulting from the split, returns their number

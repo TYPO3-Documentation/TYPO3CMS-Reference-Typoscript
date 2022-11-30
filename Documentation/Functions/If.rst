@@ -110,7 +110,7 @@ directReturn
    directReturn
 
 :aspect:`Data type`
-   :ref:`data-type-bool`
+   :t3-data-type:`boolean`
 
 :aspect:`Description`
    If this property exists, no other conditions will be checked. Instead
@@ -184,7 +184,7 @@ isFalse
    isFalse
 
 :aspect:`Data type`
-   :ref:`data-type-string` / :ref:`stdwrap`
+   :t3-data-type:`string` / :ref:`stdwrap`
 
 :aspect:`Description`
    If the content is "false", which is empty or zero.
@@ -293,7 +293,7 @@ isPositive
    isPositive
 
 :aspect:`Data type`
-   :ref:`data-type-integer` / :ref:`stdwrap` \+ :ref:`objects-calc`
+   :t3-data-type:`integer` / :ref:`stdwrap` \+ :ref:`objects-calc`
 
 :aspect:`Description`
    Returns true, if the content is positive.
@@ -309,7 +309,7 @@ isTrue
    isTrue
 
 :aspect:`Data type`
-   :ref:`data-type-string` / :ref:`stdwrap`
+   :t3-data-type:`string` / :ref:`stdwrap`
 
 :aspect:`Description`
    If the content is "true", which is not empty string and not zero.
@@ -325,7 +325,7 @@ negate
    negate
 
 :aspect:`Data type`
-   :ref:`data-type-bool`
+   :t3-data-type:`boolean`
 
 :aspect:`Description`
    This property is checked after all other properties. If set, it
