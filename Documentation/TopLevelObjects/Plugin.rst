@@ -57,7 +57,7 @@ userFunc
          \_CSS\_DEFAULT\_STYLE
 
    Data type
-         :ref:`data-type-string` / :ref:`stdwrap`
+         :t3-data-type:`string` / :ref:`stdwrap`
 
    Description
          Use this to have some default CSS styles inserted in the header
@@ -93,7 +93,7 @@ userFunc
          \_CSS\_PAGE\_STYLE
 
    Data type
-         :ref:`data-type-string`
+         :t3-data-type:`string`
 
    Description
          `_CSS_PAGE_STYLE` is included only on the affected pages. Depending
@@ -195,7 +195,7 @@ features.skipDefaultArguments
          features.skipDefaultArguments
 
    Data type
-         :ref:`data-type-boolean`
+         :t3-data-type:`boolean`
 
    Default
          false
@@ -225,7 +225,7 @@ features.ignoreAllEnableFieldsInBe
       features.ignoreAllEnableFieldsInBe
 
    Data type
-      :ref:`data-type-boolean`
+      :t3-data-type:`boolean`
 
    Default
       false
@@ -263,7 +263,7 @@ persistence.enableAutomaticCacheClearing
       persistence.enableAutomaticCacheClearing
 
    Data type
-      :ref:`data-type-boolean`
+      :t3-data-type:`boolean`
 
    Default
       true
@@ -287,7 +287,7 @@ persistence.enableAutomaticCacheClearing
 .. _setup-plugin-persistence-storagePid:
 
 persistence.storagePid
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~
 
 .. container:: table-row
 
@@ -295,7 +295,7 @@ persistence.storagePid
       persistence.storagePid
 
    Data type
-      :ref:`data-type-boolean`
+      :t3-data-type:`boolean`
 
    Default
       true
@@ -355,7 +355,7 @@ The root paths work just like the one in the
 .. _setup-plugin-view-layoutRootPaths:
 
 view.layoutRootPaths
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~
 
 .. container:: table-row
 
@@ -373,7 +373,7 @@ view.layoutRootPaths
 .. _setup-plugin-view-partialRootPaths:
 
 view.partialRootPaths
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~
 
 .. container:: table-row
 
@@ -391,7 +391,7 @@ view.partialRootPaths
 .. _setup-plugin-view-templateRootPaths:
 
 view.templateRootPaths
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~
 
 .. container:: table-row
 
@@ -410,7 +410,7 @@ view.templateRootPaths
 .. _setup-plugin-view-pluginNamespace:
 
 view.pluginNamespace
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~
 
 .. container:: table-row
 
@@ -444,7 +444,7 @@ mvc.callDefaultActionIfActionCantBeResolved
       mvc.callDefaultActionIfActionCantBeResolved
 
    Data type
-      :ref:`data-type-boolean`
+      :t3-data-type:`boolean`
 
    Default
       false
@@ -475,7 +475,7 @@ mvc.throwPageNotFoundExceptionIfActionCantBeResolved
       mvc.callDefaultActionIfActionCantBeResolved
 
    Data type
-      :ref:`data-type-boolean`
+      :t3-data-type:`boolean`
 
    Default
       false
@@ -510,7 +510,7 @@ Format
       format
 
    Data type
-      :ref:`data-type-string`
+      :t3-data-type:`string`
 
    Default
       html
@@ -531,8 +531,6 @@ Format
            // Use template List.atom
            format = atom
          }
-
-
 
 .. _extbase_typoscript_configuration-settings:
 

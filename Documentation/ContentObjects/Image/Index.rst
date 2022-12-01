@@ -109,7 +109,7 @@ layoutKey
 
 ..  t3-cobj-image:: layoutKey
 
-    :Data type: :ref:`string <data-type-string>` / :ref:`stdWrap <stdwrap>`
+    :Data type: :t3-data-type:`string` / :ref:`stdWrap <stdwrap>`
     :Default: default
 
     Defines the render layout for the IMAGE. The render layout is the HTML Code for the IMAGE itself.
@@ -205,7 +205,7 @@ layout.layoutKey.element
 
 ..  t3-cobj-image:: layout.layoutKey.element
 
-    :Data type: :ref:`string <data-type-string>`
+    :Data type: :t3-data-type:`string`
 
     The outer element definition for the HTML rendering of the image.
     Possible markers are mainly all parameters which can be defined in the
@@ -487,7 +487,7 @@ linkWrap
 
 ..  t3-cobj-image:: linkWrap
 
-    :Data type: :ref:`linkWrap <data-type-linkwrap>` / :ref:`stdWrap <stdwrap>`
+    :Data type: :t3-data-type:`wrap` / :ref:`stdWrap <stdwrap>`
 
     (before ".wrap")
 

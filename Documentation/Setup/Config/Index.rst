@@ -11,96 +11,36 @@
 CONFIG & config
 ===============
 
-.. note::
+The 'config' top-level-object
+#############################
 
-   * TYPO3 by default creates a top level object "config"
-     of the object type CONFIG.
+Internally TYPO3 always creates an array `config` with various configuration
+values which are evaluated during the rendering process and treated in some
+special, predefined and predictive way. This is what we mean when we say the
+property `config`, actually the array `'config'` is of type CONFIG. It is a
+"top-level-object" because it is not subordinate to any other configuration
+setting.
 
-In :file:`typo3/sysext/frontend/Classes/` this is known as
-:php:`$GLOBALS['TSFE']->config['config']`, thus the property :typoscript:`debug` below is
-accessible as :php:`$GLOBALS['TSFE']->config['config']['debug']`.
+In PHP you can refer to the array within :file:`typo3/sysext/frontend/Classes/`
+files by writing :php:`$GLOBALS['TSFE']->config['config']`.
 
+This typoscript "top level object" `config` provides access to the internal
+array. This means, that configuration settings can be made easily. For example:
+
+.. code-block::
+
+   # TypoScript
+   config.debug = 1
+
+   # will produce, in php
+   $GLOBALS['TSFE']->config['config']['debug'] // with value 1
 
 .. index:: config; Properties
 
-Properties
-==========
+Known properties of 'config'
+############################
 
-.. container:: ts-properties
 
-   ===================================================== ================================================== ======================================================================
-   Property                                              Data Type                                          Default
-   ===================================================== ================================================== ======================================================================
-   `absRefPrefix`_                                       :ref:`data-type-string`
-   `additionalHeaders`_                                  array with numeric indices
-   `admPanel`_                                           :ref:`data-type-boolean`
-   `ATagParams`_                                         *<A>-params*
-   `baseURL`_                                            :ref:`data-type-string`
-   `cache`_                                              array
-   `cache\_clearAtMidnight`_                             :ref:`data-type-boolean`                           false
-   `cache\_period`_                                      :ref:`data-type-integer`                           86400 *(= 24 hours)*
-   `compressCss`_                                        :ref:`data-type-boolean`
-   `compressJs`_                                         :ref:`data-type-boolean`
-   `concatenateCss`_                                     :ref:`data-type-boolean`
-   `concatenateJs`_                                      :ref:`data-type-boolean`
-   `contentObjectExceptionHandler`_                      array
-   `debug`_                                              :ref:`data-type-boolean`
-   `disableAllHeaderCode`_                               :ref:`data-type-boolean`                           false
-   `disableBodyTag`_                                     :ref:`data-type-boolean`                           0
-   `disableCharsetHeader`_                               :ref:`data-type-boolean`
-   `disableImgBorderAttr`_                               :ref:`data-type-boolean`
-   `disablePageExternalUrl`_                             :ref:`data-type-boolean`
-   `disablePrefixComment`_                               :ref:`data-type-boolean`
-   `disablePreviewNotification`_                         :ref:`data-type-boolean`                           0
-   `disableLanguageHeader`_                              :ref:`data-type-boolean`                           0
-   `doctype`_                                            :ref:`data-type-string`
-   `doctypeSwitch`_                                      :ref:`data-type-boolean` / :ref:`data-type-string`
-   `enableContentLengthHeader`_                          :ref:`data-type-boolean`                           1
-   `extTarget`_                                          :ref:`data-type-target`                            \_top
-   `fileTarget`_                                         :ref:`data-type-target`
-   `forceTypeValue`_                                     :ref:`data-type-integer`
-   `headerComment`_                                      :ref:`data-type-string`
-   `htmlTag.attributes`_                                 array
-   `htmlTag\_setParams`_                                 :ref:`data-type-string`
-   `htmlTag\_stdWrap`_                                   :ref:`stdwrap`
-   `index\_descrLgd`_                                    :ref:`data-type-integer`                           200
-   `index\_enable`_                                      :ref:`data-type-boolean`
-   `index\_externals`_                                   :ref:`data-type-boolean`
-   `index\_metatags`_                                    :ref:`data-type-boolean`                           true
-   `inlineStyle2TempFile`_                               :ref:`data-type-boolean`
-   `intTarget`_                                          :ref:`data-type-target`
-   `linkVars`_                                           :ref:`data-type-list`
-   `message\_preview`_                                   :ref:`data-type-string`
-   `message\_preview\_workspace`_                        :ref:`data-type-string`
-   `metaCharset`_                                        :ref:`data-type-string`                            utf-8
-   `moveJsFromHeaderToFooter`_                           :ref:`data-type-boolean`
-   `MP\_defaults`_                                       :ref:`data-type-string`
-   `MP\_disableTypolinkClosestMPvalue`_                  :ref:`data-type-boolean`
-   `MP\_mapRootPoints`_                                  list of PIDs / :ref:`data-type-string`
-   `namespaces`_                                         *(array of strings)*
-   `no\_cache`_                                          :ref:`data-type-boolean`                           0
-   `noPageTitle`_                                        :ref:`data-type-integer`                           0
-   `pageRendererTemplateFile`_                           :ref:`data-type-string`
-   `pageTitle`_                                          :ref:`stdWrap`
-   `pageTitleFirst`_                                     :ref:`data-type-boolean`                           0
-   `pageTitleProviders`_                                 array
-   `pageTitleSeparator`_                                 :ref:`data-type-string` / :ref:`stdwrap`           ": " *(colon with following space)*
-   `removeDefaultCss`_                                   :ref:`data-type-boolean`
-   `removeDefaultJS`_                                    :ref:`data-type-boolean` / :ref:`data-type-string`
-   `removePageCss`_                                      :ref:`data-type-boolean`
-   `sendCacheHeaders`_                                   :ref:`data-type-boolean`
-   `sendCacheHeaders\_onlyWhenLoginDeniedInBranch`_      :ref:`data-type-boolean`
-   `spamProtectEmailAddresses`_                          "ascii" /
-   `spamProtectEmailAddresses\_atSubst`_                 :ref:`data-type-string`                            (at)
-   `spamProtectEmailAddresses\_lastDotSubst`_            :ref:`data-type-string`                            . *(just a simple dot)*
-   `sword\_noMixedCase`_                                 :ref:`data-type-boolean`
-   `sword\_standAlone`_                                  :ref:`data-type-boolean`
-   `tx\_[extension key with no underscores]\_[\*]`_      array
-   `typolinkLinkAccessRestrictedPages`_                  integer (page id) / keyword "NONE"
-   `typolinkLinkAccessRestrictedPages\_addParams`_       :ref:`data-type-string`
-   `xhtmlDoctype`_                                       :ref:`data-type-string`
-   `xmlprologue`_                                        :ref:`data-type-string`
-   ===================================================== ================================================== ======================================================================
 
 .. ### BEGIN~OF~TABLE ###
 
@@ -110,9 +50,9 @@ Properties
 absRefPrefix
 ============
 
-.. tlo-config:: absRefPrefix
+.. t3-tlo-config:: absRefPrefix
 
-   :Data type: :ref:`data-type-string`
+   :Data type: :t3-data-type:`string`
    :Special value: "auto"
 
    If set the string is prepended to all relative links that TYPO3 generates.
@@ -161,7 +101,7 @@ absRefPrefix
 
 .. _setup-config-additionalheaders:
 
-.. tlo-config:: additionalHeaders
+.. t3-tlo-config:: additionalHeaders
 
    :Data type: numerically indexed array of "HTTP header entries".
 
@@ -245,7 +185,7 @@ admPanel
          admPanel
 
    Data type
-         :ref:`data-type-boolean`
+         :t3-data-type:`boolean`
 
    Description
          If set, the :ref:`Admin Panel <ext_adminpanel:introduction>` displays at the
@@ -288,7 +228,7 @@ baseURL
          baseURL
 
    Data type
-         :ref:`data-type-string`
+         :t3-data-type:`string`
 
    Description
          This writes the :html:`<base>` tag in the header of the document. Set this to
@@ -393,7 +333,7 @@ cache\_clearAtMidnight
          cache\_clearAtMidnight
 
    Data type
-         :ref:`data-type-boolean`
+         :t3-data-type:`boolean`
 
    Default
          false
@@ -417,7 +357,7 @@ cache\_period
          cache\_period
 
    Data type
-         :ref:`data-type-integer`
+         :t3-data-type:`integer`
 
    Default
          86400 *(= 24 hours)*
@@ -443,7 +383,7 @@ compressCss
          compressCss
 
    Data type
-         :ref:`data-type-boolean`
+         :t3-data-type:`boolean`
 
    Default
          0
@@ -489,7 +429,7 @@ compressJs
          compressJs
 
    Data type
-         :ref:`data-type-boolean`
+         :t3-data-type:`boolean`
 
    Default
          0
@@ -538,7 +478,7 @@ concatenateCss
          concatenateCss
 
    Data type
-         :ref:`data-type-boolean`
+         :t3-data-type:`boolean`
 
    Default
          0
@@ -581,7 +521,7 @@ concatenateJs
          concatenateJs
 
    Data type
-         :ref:`data-type-boolean`
+         :t3-data-type:`boolean`
 
    Default
          0
@@ -694,7 +634,7 @@ debug
          debug
 
    Data type
-         :ref:`data-type-boolean`
+         :t3-data-type:`boolean`
 
    Description
          If set then debug information in the TypoScript code is sent.
@@ -715,7 +655,7 @@ disableAllHeaderCode
          disableAllHeaderCode
 
    Data type
-         :ref:`data-type-boolean`
+         :t3-data-type:`boolean`
 
    Default
          false
@@ -766,7 +706,7 @@ disableBodyTag
          disableBodyTag
 
    Data type
-         :ref:`data-type-boolean`
+         :t3-data-type:`boolean`
 
    Default
          0 (false)
@@ -795,7 +735,7 @@ disableCanonical
          disableCanonical
 
    Data type
-         :ref:`data-type-boolean`
+         :t3-data-type:`boolean`
 
    Description
          When the system extension SEO is installed, canonical tags are generated
@@ -838,7 +778,7 @@ disableHrefLang
          disableHrefLang
 
    Data type
-         :ref:`data-type-boolean`
+         :t3-data-type:`boolean`
 
    Description
          When the system extension SEO is installed, hreflang tags are generated
@@ -900,7 +840,7 @@ disablePrefixComment
          disablePrefixComment
 
    Data type
-         :ref:`data-type-boolean`
+         :t3-data-type:`boolean`
 
    Description
          If set, the stdWrap property :ref:`stdwrap-prefixcomment` will be disabled, thus
@@ -921,7 +861,7 @@ disablePreviewNotification
          disablePreviewNotification
 
    Data type
-         :ref:`data-type-boolean`
+         :t3-data-type:`boolean`
 
    Default
          0
@@ -942,7 +882,7 @@ disableLanguageHeader
          disableLanguageHeader
 
    Data type
-         :ref:`data-type-boolean`
+         :t3-data-type:`boolean`
 
    Default
          0
@@ -968,7 +908,7 @@ doctype
          doctype
 
    Data type
-         :ref:`data-type-string`
+         :t3-data-type:`string`
 
    Description
          If set, then a document type declaration (and an XML prologue) will be
@@ -1004,57 +944,6 @@ doctype
 
             <!DOCTYPE html>
 
-
-.. index:: config; doctypeSwitch
-.. _setup-config-doctypeswitch:
-
-doctypeSwitch
-=============
-
-.. attention:: This option will be removed with with TYPO3 12.0 without replacement
-   It was only needed for the Internet Explorer for which Microsoft has dropped support.
-
-.. container:: table-row
-
-   Property
-         doctypeSwitch
-
-   Data type
-         :ref:`data-type-boolean` / :ref:`data-type-string`
-
-   Description
-         If set, the order of <?xml...> and <!DOCTYPE...> will be reversed.
-         This is needed for MSIE to be standards compliant with XHTML.
-
-         **Background:**
-
-         By default TYPO3 outputs the XML/DOCTYPE in compliance with the
-         standards of XHTML. However a browser like MSIE will still run in
-         "quirks-mode" unless the <?xml> and <DOCTYPE> tags are ordered
-         opposite. But this breaks CSS validation...
-
-         With this option designers can decide for themselves what they want
-         then.
-
-         If you want to check the compatibility-mode of your webbrowser you can
-         do so with a simple JavaScript that can be inserted on a TYPO3 page
-         like this:
-
-         .. code-block:: typoscript
-            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-            page.headerData.1 = TEXT
-            page.headerData.1.value = <script>alert(document.compatMode);</script>
-
-         If your browser has detected the DOCTYPE correctly it will report
-         "CSS1Compat"
-
-         If you are not running in compliance mode you will get some other
-         message. MSIE will report "BackCompat" for instance - this means it
-         runs in quirks-mode, supporting all the old "browser-bugs".
-
-
-
 .. index:: config; enableContentLengthHeader
 .. _setup-config-enablecontentlengthheader:
 
@@ -1067,7 +956,7 @@ enableContentLengthHeader
          enableContentLengthHeader
 
    Data type
-         :ref:`data-type-boolean`
+         :t3-data-type:`boolean`
 
    Default
          1
@@ -1134,7 +1023,7 @@ forceTypeValue
          forceTypeValue
 
    Data type
-         :ref:`data-type-integer`
+         :t3-data-type:`integer`
 
    Description
          Force the `&type` value of all TYPO3 generated links to a specific value
@@ -1158,7 +1047,7 @@ headerComment
          headerComment
 
    Data type
-         :ref:`data-type-string`
+         :t3-data-type:`string`
 
    Description
          The content is added before the "TYPO3 Content Management Framework"
@@ -1236,7 +1125,7 @@ htmlTag\_setParams
          htmlTag\_setParams
 
    Data type
-         :ref:`data-type-string`
+         :t3-data-type:`string`
 
    Description
          Sets the attributes for the :html:`<html>` tag on the page. If you set
@@ -1293,7 +1182,7 @@ index\_descrLgd
          index\_descrLgd
 
    Data type
-         :ref:`data-type-integer`
+         :t3-data-type:`integer`
 
    Default
          200
@@ -1316,7 +1205,7 @@ index\_enable
          index\_enable
 
    Data type
-         :ref:`data-type-boolean`
+         :t3-data-type:`boolean`
 
    Description
          Enables cached pages to be indexed.
@@ -1337,7 +1226,7 @@ index\_externals
          index\_externals
 
    Data type
-         :ref:`data-type-boolean`
+         :t3-data-type:`boolean`
 
    Description
          If set, external media linked to on the pages is indexed as well.
@@ -1358,7 +1247,7 @@ index\_metatags
          index\_metatags
 
    Data type
-         :ref:`data-type-boolean`
+         :t3-data-type:`boolean`
 
    Default
          true
@@ -1381,7 +1270,7 @@ inlineStyle2TempFile
          inlineStyle2TempFile
 
    Data type
-         :ref:`data-type-boolean`
+         :t3-data-type:`boolean`
 
    Default
          1
@@ -1493,7 +1382,7 @@ message\_preview
          message\_preview
 
    Data type
-         :ref:`data-type-string`
+         :t3-data-type:`string`
 
    Description
          Alternative message in HTML that appears when the preview function is
@@ -1513,7 +1402,7 @@ message\_preview\_workspace
          message\_preview\_workspace
 
    Data type
-         :ref:`data-type-string`
+         :t3-data-type:`string`
 
    Description
          Alternative message in HTML that appears when the preview function is
@@ -1528,8 +1417,6 @@ message\_preview\_workspace
             config.message_preview_workspace = <div class="previewbox">Displaying workspace number %2$s named "%1$s"!</div>
 
 
-
-.. index:: config; metaCharset
 .. _setup-config-metacharset:
 
 metaCharset
@@ -1578,7 +1465,7 @@ moveJsFromHeaderToFooter
          moveJsFromHeaderToFooter
 
    Data type
-         :ref:`data-type-boolean`
+         :t3-data-type:`boolean`
 
    Description
          If set, all JavaScript (includes and inline) will be moved to the
@@ -1599,7 +1486,7 @@ MP\_defaults
          MP\_defaults
 
    Data type
-         :ref:`data-type-string`
+         :t3-data-type:`string`
 
    Description
          Allows you to set a list of page id numbers which will always have a
@@ -1632,7 +1519,7 @@ MP\_disableTypolinkClosestMPvalue
          MP\_disableTypolinkClosestMPvalue
 
    Data type
-         :ref:`data-type-boolean`
+         :t3-data-type:`boolean`
 
    Description
          If set, the typolink function will not try to find the closest MP
@@ -1652,7 +1539,7 @@ MP\_mapRootPoints
       MP\_mapRootPoints
 
    Data type
-      list of PIDs / :ref:`data-type-string`
+      list of PIDs / :t3-data-type:`string`
 
    Description
       Defines a list of ID numbers from which the MP-vars are automatically
@@ -1722,7 +1609,7 @@ no\_cache
          no\_cache
 
    Data type
-         :ref:`data-type-boolean`
+         :t3-data-type:`boolean`
 
    Default
          0
@@ -1751,7 +1638,7 @@ noPageTitle
          noPageTitle
 
    Data type
-         :ref:`data-type-integer`
+         :t3-data-type:`integer`
 
    Default
          0
@@ -1778,7 +1665,7 @@ pageRendererTemplateFile
          pageRendererTemplateFile
 
    Data type
-         :ref:`data-type-string`
+         :t3-data-type:`string`
 
    Default
          :file:`EXT:core/Resources/Private/Templates/PageRenderer.html`
@@ -1826,7 +1713,7 @@ pageTitleFirst
          pageTitleFirst
 
    Data type
-         :ref:`data-type-boolean`
+         :t3-data-type:`boolean`
 
    Default
          0
@@ -1902,7 +1789,7 @@ pageTitleSeparator
          pageTitleSeparator
 
    Data type
-         :ref:`data-type-string` / :ref:`stdwrap`
+         :t3-data-type:`string` / :ref:`stdwrap`
 
    Default
          : *(colon with following space)*
@@ -1965,7 +1852,7 @@ removeDefaultCss
          removeDefaultCss
 
    Data type
-         :ref:`data-type-boolean`
+         :t3-data-type:`boolean`
 
    Description
          Remove CSS generated by :ref:`\_CSS\_DEFAULT\_STYLE
@@ -1987,7 +1874,7 @@ removeDefaultJS
          removeDefaultJS
 
    Data type
-         :ref:`data-type-boolean` / :ref:`data-type-string`
+         :t3-data-type:`boolean` / :t3-data-type:`string`
 
    Default
          external
@@ -2021,7 +1908,7 @@ removePageCss
          removePageCss
 
    Data type
-         :ref:`data-type-boolean`
+         :t3-data-type:`boolean`
 
    Description
          Remove CSS generated by :ref:`\_CSS\_PAGE\_STYLE
@@ -2045,7 +1932,7 @@ sendCacheHeaders
          sendCacheHeaders
 
    Data type
-         :ref:`data-type-boolean`
+         :t3-data-type:`boolean`
 
    Description
          If set, TYPO3 will output cache-control headers to the client based
@@ -2107,7 +1994,7 @@ sendCacheHeaders\_onlyWhenLoginDeniedInBranch
          sendCacheHeaders\_onlyWhenLoginDeniedInBranch
 
    Data type
-         :ref:`data-type-boolean`
+         :t3-data-type:`boolean`
 
    Description
          If this is set, then cache-control headers allowing client caching is
@@ -2148,13 +2035,13 @@ spamProtectEmailAddresses
          spamProtectEmailAddresses
 
    Data type
-         "ascii" / -10 to 10
+         "-10 to 10
 
    Description
          If set, then all email addresses in typolinks will be encrypted so
-         spam bots cannot detect them.
+         that it is harder for spam bots to detect them.
 
-         If you set this value to a number, then the encryption is simply an
+         If you set this value to a number, then the encryption is an
          offset of character values. If you set this value to "-2" then all
          characters will have their ASCII value offset by "-2". To make this
          possible, a little JavaScript code is added to every generated web
@@ -2163,19 +2050,7 @@ spamProtectEmailAddresses
          (It is recommended to set the value in the range from -5 to 1 since
          setting it to >= 2 means a "z" is converted to "\|" which is a special
          character in TYPO3 tables syntax – and that might confuse columns in
-         tables. Now hardcoded range)
-
-         Alternatively you can set this value to the keyword "ascii". This way
-         every character of the "mailto:" address will be translated to a
-         Unicode HTML notation.  Have a look at the example to see how this
-         works.
-
-   Example
-         `mailto:a@b.c` will be converted to `mailto:&#97;&#64;&#98;&#46;&#99;`
-
-         The big advantage of this method is that it does not need any
-         JavaScript!
-
+         tables.)
 
 
 .. index:: config; spamProtectEmailAddresses_atSubst
@@ -2190,7 +2065,7 @@ spamProtectEmailAddresses\_atSubst
          spamProtectEmailAddresses\_atSubst
 
    Data type
-         :ref:`data-type-string`
+         :t3-data-type:`string`
 
    Default
          (at)
@@ -2211,7 +2086,7 @@ spamProtectEmailAddresses\_lastDotSubst
          spamProtectEmailAddresses\_lastDotSubst
 
    Data type
-         :ref:`data-type-string`
+         :t3-data-type:`string`
 
    Default
          . *(just a simple dot)*
@@ -2324,7 +2199,7 @@ typolinkLinkAccessRestrictedPages
          typolinkLinkAccessRestrictedPages
 
    Data type
-         :ref:`data-type-integer` (page id) / keyword "NONE"
+         :t3-data-type:`integer` (page id) / keyword "NONE"
 
    Description
          If set, typolinks pointing to access restricted pages will still link
@@ -2364,7 +2239,7 @@ typolinkLinkAccessRestrictedPages\_addParams
          typolinkLinkAccessRestrictedPages\_addParams
 
    Data type
-         :ref:`data-type-string`
+         :t3-data-type:`string`
 
    Description
          See :ref:`setup-config-typolinklinkaccessrestrictedpages` above.
@@ -2383,7 +2258,7 @@ xhtmlDoctype
          xhtmlDoctype
 
    Data type
-         :ref:`data-type-string`
+         :t3-data-type:`string`
 
    Default
          (same as config.doctype if set to a keyword)
@@ -2429,7 +2304,7 @@ xmlprologue
          xmlprologue
 
    Data type
-         :ref:`data-type-string`
+         :t3-data-type:`string`
 
    Description
          If empty (not set) then the default XML 1.0 prologue is set, when the

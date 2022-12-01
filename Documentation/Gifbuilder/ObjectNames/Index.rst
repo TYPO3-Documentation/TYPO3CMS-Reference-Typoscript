@@ -143,7 +143,7 @@ different each time!
          backColor
 
    Data type
-         GraphicColor /:ref:`stdWrap <stdwrap>`
+         :t3-data-type:`GraphicColor` /:ref:`stdWrap <stdwrap>`
 
    Default
          white
@@ -343,7 +343,7 @@ Renders a text.
          fontColor
 
    Data type
-         GraphicColor /:ref:`stdWrap <stdwrap>`
+         :t3-data-type:`GraphicColor` /:ref:`stdWrap <stdwrap>`
 
    Default
          black
@@ -375,7 +375,7 @@ Renders a text.
          angle
 
    Data type
-         degree
+         :t3-data-type:`degree`
 
    Default
          0
@@ -747,7 +747,7 @@ Creates a shadow under the associated text.
          color
 
    Data type
-         GraphicColor /:ref:`stdWrap <stdwrap>`
+         :t3-data-type:`GraphicColor` /:ref:`stdWrap <stdwrap>`
 
    Description
          The color of the shadow.
@@ -847,7 +847,7 @@ text.
          highColor
 
    Data type
-         GraphicColor /:ref:`stdWrap <stdwrap>`
+         :t3-data-type:`GraphicColor` /:ref:`stdWrap <stdwrap>`
 
    Description
          Upper border-color
@@ -859,7 +859,7 @@ text.
          lowColor
 
    Data type
-         GraphicColor /:ref:`stdWrap <stdwrap>`
+         :t3-data-type:`GraphicColor` /:ref:`stdWrap <stdwrap>`
 
    Description
          lower border-color
@@ -961,7 +961,7 @@ high intensity instead. That works better!
          color
 
    Data type
-         GraphicColor /:ref:`stdWrap <stdwrap>`
+         :t3-data-type:`GraphicColor` /:ref:`stdWrap <stdwrap>`
 
    Description
          Outline color
@@ -1005,7 +1005,7 @@ Prints a filled box.
          color
 
    Data type
-         GraphicColor /:ref:`stdWrap <stdwrap>`
+         :t3-data-type:`GraphicColor` /:ref:`stdWrap <stdwrap>`
 
    Default
          black
@@ -1103,7 +1103,7 @@ Prints a filled ellipse.
          color
 
    Data type
-         GraphicColor /:ref:`stdWrap <stdwrap>`
+         :t3-data-type:`GraphicColor` /:ref:`stdWrap <stdwrap>`
 
    Default
          black
@@ -1587,7 +1587,7 @@ image!
          backColor
 
    Data type
-         GraphicColor /:ref:`stdWrap <stdwrap>`
+         :t3-data-type:`GraphicColor` /:ref:`stdWrap <stdwrap>`
 
    Default
          The original backColor

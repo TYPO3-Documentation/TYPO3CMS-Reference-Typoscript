@@ -149,7 +149,7 @@ recursive
    recursive
 
 :aspect:`Data type`
-   :ref:`data-type-integer` / :ref:`stdWrap`
+   :t3-data-type:`integer` / :ref:`stdWrap`
 
 :aspect:`Description`
    Number of recursive levels for the pidInList.
@@ -209,7 +209,7 @@ max
    max
 
 :aspect:`Data type`
-   :ref:`data-type-integer` + :ref:`objects-calc` +"total" / :ref:`stdWrap`
+   :t3-data-type:`integer` + :ref:`objects-calc` +"total" / :ref:`stdWrap`
 
 :aspect:`Description`
    Max records
@@ -226,7 +226,7 @@ begin
       begin
 
 :aspect:`Data type`
-      :ref:`data-type-integer` + :ref:`objects-calc` +"total" / :ref:`stdWrap`
+      :t3-data-type:`integer` + :ref:`objects-calc` +"total" / :ref:`stdWrap`
 
 :aspect:`Description`
       Begin with record number *value*.
@@ -273,7 +273,7 @@ languageField
    languageField
 
 :aspect:`Data type`
-   :ref:`data-type-string` / :ref:`stdWrap`
+   :t3-data-type:`string` / :ref:`stdWrap`
 
 :aspect:`Description`
    This defaults to whatever is defined in TCA "ctrl"-section in the
@@ -294,7 +294,7 @@ includeRecordsWithoutDefaultTranslation
    includeRecordsWithoutDefaultTranslation
 
 :aspect:`Data type`
-   :ref:`data-type-bool` / :ref:`stdWrap`
+   :t3-data-type:`boolean` / :ref:`stdWrap`
 
 :aspect:`Description`
    If content language overlay is activated and the option :typoscript:`languageField` is not disabled,
@@ -314,7 +314,7 @@ selectFields
    selectFields
 
 :aspect:`Data type`
-   :ref:`data-type-string` / :ref:`stdWrap`
+   :t3-data-type:`string` / :ref:`stdWrap`
 
 :aspect:`Description`
    List of fields to select, or :php:`count(*)`.
@@ -339,7 +339,7 @@ join, leftjoin, rightjoin
    join, leftjoin, rightjoin
 
 :aspect:`Data type`
-   :ref:`data-type-string` / :ref:`stdWrap`
+   :t3-data-type:`string` / :ref:`stdWrap`
 
 :aspect:`Description`
    Enter the table name for JOIN, LEFT OUTER JOIN and RIGHT OUTER JOIN
@@ -369,7 +369,7 @@ markers
    <markername>.value (value)
       Sets the value directly.
 
-   <markername>.commaSeparatedList (:ref:`data-type-boolean`)
+   <markername>.commaSeparatedList (:t3-data-type:`boolean`)
       If set, the value is interpreted as a comma-separated list of values.
       Each value in the list is individually escaped and quoted.
 
@@ -457,16 +457,6 @@ See PHP source code for
 :php:`ContentObjectRenderer::getQuery()`,
 :php:`ContentObjectRenderer::getWhere()`.
 
-
-.. Preamble: :
-# Note: TypoScript (TS) is just another way to define an array of settings which
-#       is later on INTERPRETED by TYPO3. TypoScript can be written in ANY order
-#       as long as it leads to the same array. Actual execution order is TOTALLY
-#       INDEPENDENT of TypoScript code order.
-#
-#       The order of TS in this example however tries to reflect execution order.
-#       The denoted steps are taking place in that order at execution time.
-
 Condensed form:
 
 .. code-block:: typoscript
@@ -494,6 +484,4 @@ Condensed form:
    }
 
 
-.. Expanded form::
-//
-See also: :ref:`if`, :ref:`select`, :ref:`data-type-wrap`, :ref:`stdWrap`, :ref:`data-type-cobject`
+See also: :ref:`if`, :ref:`select`, :t3-data-type:`wrap`, :ref:`stdWrap`, :ref:`data-type-cobject`

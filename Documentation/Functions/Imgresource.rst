@@ -30,7 +30,7 @@ ext
    ext
 
 :aspect:`Data type`
-   :ref:`data-type-imageextension` / :ref:`stdwrap`
+   :t3-data-type:`imageExtension` / :ref:`stdwrap`
 
 :aspect:`Default`
    web
@@ -53,7 +53,7 @@ width
    width
 
 :aspect:`Data type`
-   :ref:`data-type-pixels` / :ref:`stdwrap`
+   :t3-data-type:`pixels` / :ref:`stdwrap`
 
 :aspect:`Description`
    If both the width and the height are set and one of the numbers is
@@ -117,7 +117,7 @@ height
    height
 
 :aspect:`Data type`
-   :ref:`data-type-pixels` / :ref:`stdwrap`
+   :t3-data-type:`pixels` / :ref:`stdwrap`
 
 :aspect:`Description`
    See :ref:`imgresource-width`
@@ -133,7 +133,7 @@ params
    params
 
 :aspect:`Data type`
-   :ref:`data-type-string` / :ref:`stdwrap`
+   :t3-data-type:`string` / :ref:`stdwrap`
 
 :aspect:`Description`
    GraphicsMagick/ImageMagick command-line:
@@ -150,7 +150,7 @@ sample
    sample
 
 :aspect:`Data type`
-   :ref:`data-type-bool`
+   :t3-data-type:`boolean`
 
 :aspect:`Description`
    If set, `-sample` is used to scale images instead of `-geometry`. Sample
@@ -169,7 +169,7 @@ noScale
    noScale
 
 :aspect:`Data type`
-   :ref:`data-type-bool` / :ref:`stdwrap`
+   :t3-data-type:`boolean` / :ref:`stdwrap`
 
 :aspect:`Description`
    If set, the image itself will never be scaled. Only width and height
@@ -210,7 +210,7 @@ crop
    crop
 
 :aspect:`Data type`
-   :ref:`data-type-string` / :ref:`stdwrap`
+   :t3-data-type:`string` / :ref:`stdwrap`
 
 :aspect:`Description`
    It is possible to define an area that should be taken (cropped) from the image.
@@ -245,7 +245,7 @@ cropVariant
    cropVariant
 
 :aspect:`Data type`
-   :ref:`data-type-string`
+   :t3-data-type:`string`
 
 :aspect:`Description`
    Since it's possible to define certain :ref:`crop variants <t3coreapi:cropvariants>`
@@ -275,7 +275,7 @@ frame
    frame
 
 :aspect:`Data type`
-   :ref:`data-type-integer` / :ref:`stdwrap`
+   :t3-data-type:`integer` / :ref:`stdwrap`
 
 :aspect:`Description`
    Chooses the frame in a PDF or GIF file.
@@ -293,7 +293,7 @@ import
    import
 
 :aspect:`Data type`
-   :ref:`data-type-path` / :ref:`stdwrap`
+   :t3-data-type:`path` / :ref:`stdwrap`
 
 :aspect:`Description`
    *value* should be set to the path of the file
@@ -324,7 +324,7 @@ treatIdAsReference
    treatIdAsReference
 
 :aspect:`Data type`
-   :ref:`data-type-bool` / :ref:`stdwrap`
+   :t3-data-type:`boolean` / :ref:`stdwrap`
 
 :aspect:`Description`
    If set, given UIDs are interpreted as UIDs to sys_file_reference
@@ -343,7 +343,7 @@ maxW
    maxW
 
 :aspect:`Data type`
-   :ref:`data-type-pixels` / :ref:`stdwrap`
+   :t3-data-type:`pixels` / :ref:`stdwrap`
 
 :aspect:`Description`
    Maximum width
@@ -357,7 +357,7 @@ maxH
    maxH
 
 :aspect:`Data type`
-   :ref:`data-type-pixels` / :ref:`stdwrap`
+   :t3-data-type:`pixels` / :ref:`stdwrap`
 
 :aspect:`Description`
    Maximum height
@@ -371,7 +371,7 @@ minW
    minW
 
 :aspect:`Data type`
-   :ref:`data-type-pixels` / :ref:`stdwrap`
+   :t3-data-type:`pixels` / :ref:`stdwrap`
 
 :aspect:`Description`
    Minimum width (overrules maxW/maxH)
@@ -385,7 +385,7 @@ minH
    minH
 
 :aspect:`Data type`
-   :ref:`data-type-pixels` / :ref:`stdwrap`
+   :t3-data-type:`pixels` / :ref:`stdwrap`
 
 :aspect:`Description`
    Minimum height (overrules maxW/maxH)
@@ -401,7 +401,7 @@ stripProfile
       stripProfile
 
 :aspect:`Data type`
-      :ref:`data-type-bool`
+      :t3-data-type:`boolean`
 
 :aspect:`Description`
       If set, the GraphicsMagick/ImageMagick-command will use a
@@ -437,7 +437,7 @@ m.mask
    m.mask
 
 :aspect:`Data type`
-   :ref:`data-type-imgresource`
+   :t3-data-type:`imgResource`
 
 :aspect:`Description`
    The mask with which the image is masked onto :typoscript:`m.bgImg`. Both :typoscript:`m.mask`
@@ -452,7 +452,7 @@ m.bgImg
    m.bgImg
 
 :aspect:`Data type`
-   :ref:`data-type-imgresource`
+   :t3-data-type:`imgResource`
 
 :aspect:`Description`
    **Note:** Both :typoscript:`m.mask` and :typoscript:`m.bgImg` must be valid images.
@@ -464,7 +464,7 @@ m.bottomImg
    m.bottomImg
 
 :aspect:`Data type`
-   :ref:`data-type-imgresource`
+   :t3-data-type:`imgResource`
 
 :aspect:`Description`
    An image masked by :typoscript:`m.bottomImg_mask` onto :typoscript:`m.bgImg` before the
@@ -485,7 +485,7 @@ m.bottomImg\_mask
    m.bottomImg\_mask
 
 :aspect:`Data type`
-   :ref:`data-type-imgresource`
+   :t3-data-type:`imgResource`
 
 :aspect:`Description`
    (optional)

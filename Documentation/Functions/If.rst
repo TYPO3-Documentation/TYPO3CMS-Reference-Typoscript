@@ -71,7 +71,7 @@ directReturn
    directReturn
 
 :aspect:`Data type`
-   :ref:`data-type-bool`
+   :t3-data-type:`boolean`
 
 :aspect:`Description`
    If this property exists, no other conditions will be checked. Instead
@@ -100,6 +100,38 @@ equals
 
       if.equals = POST
       if.value.data = GETENV:REQUEST_METHOD
+
+
+.. index:: if; isFalse
+.. _if-isfalse:
+
+isFalse
+-------
+
+:aspect:`Property`
+   isFalse
+
+:aspect:`Data type`
+   :t3-data-type:`string` / :ref:`stdwrap`
+
+:aspect:`Description`
+   If the content is "false", which is empty or zero.
+
+
+.. index:: if; isGreaterThan
+.. _if-isgreaterthan:
+
+isGreaterThan
+-------------
+
+:aspect:`Property`
+   isGreaterThan
+
+:aspect:`Data type`
+   value / :ref:`stdwrap`
+
+:aspect:`Description`
+   Returns true, if the content is greater than :typoscript:`value`.
 
 
 .. index:: if; isInList
@@ -189,7 +221,7 @@ isPositive
    isPositive
 
 :aspect:`Data type`
-   :ref:`data-type-integer` / :ref:`stdwrap` \+ :ref:`objects-calc`
+   :t3-data-type:`integer` / :ref:`stdwrap` \+ :ref:`objects-calc`
 
 :aspect:`Description`
    Returns true, if the content is positive.
@@ -205,7 +237,7 @@ isTrue
    isTrue
 
 :aspect:`Data type`
-   :ref:`data-type-string` / :ref:`stdwrap`
+   :t3-data-type:`string` / :ref:`stdwrap`
 
 :aspect:`Description`
    If the content is "true", which is not empty string and not zero.
@@ -221,7 +253,7 @@ negate
    negate
 
 :aspect:`Data type`
-   :ref:`data-type-bool`
+   :t3-data-type:`boolean`
 
 :aspect:`Description`
    This property is checked after all other properties. If set, it

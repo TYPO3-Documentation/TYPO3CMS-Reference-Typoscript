@@ -23,7 +23,7 @@ enable
     imageLinkWrap.enable
 
 :aspect:`Data type`
-    :ref:`data-type-bool` / :ref:`stdwrap`
+    :t3-data-type:`boolean` / :ref:`stdwrap`
 
 :aspect:`Default`
     0
@@ -51,7 +51,7 @@ width
     imageLinkWrap.width
 
 :aspect:`Data type`
-    :ref:`data-type-positive-integer` / :ref:`stdwrap`
+    :t3-data-type:`positive integer` / :ref:`stdwrap`
 
 :aspect:`Default`
     0
@@ -69,7 +69,7 @@ height
     imageLinkWrap.height
 
 :aspect:`Data type`
-    :ref:`data-type-positive-integer` / :ref:`stdwrap`
+    :t3-data-type:`positive integer` / :ref:`stdwrap`
 
 :aspect:`Default`
     0
@@ -122,7 +122,7 @@ sample
     imageLinkWrap.sample
 
 :aspect:`Data type`
-    :ref:`data-type-positive-integer` / :ref:`stdwrap`
+    :t3-data-type:`positive integer` / :ref:`stdwrap`
 
 :aspect:`Default`
     0
@@ -144,7 +144,7 @@ title
     imageLinkWrap.title
 
 :aspect:`Data type`
-    :ref:`data-type-string` / :ref:`stdwrap`
+    :t3-data-type:`string` / :ref:`stdwrap`
 
 :aspect:`Description`
     Specifies the html-page-title of the preview window.
@@ -158,7 +158,7 @@ bodyTag
     imageLinkWrap.bodyTag
 
 :aspect:`Data type`
-    :ref:`data-type-tag` / :ref:`stdwrap`
+    :t3-data-type:`tag` / :ref:`stdwrap`
 
 :aspect:`Description`
     This is the `<body>`-tag of the preview window.
@@ -184,7 +184,7 @@ wrap
     imageLinkWrap.bodyTag
 
 :aspect:`Data type`
-    :ref:`data-type-wrap`
+    :t3-data-type:`wrap`
 
 :aspect:`Description`
     This wrap is placed around the `<img>`-tag in the preview window.
@@ -197,7 +197,7 @@ target
     imageLinkWrap.target
 
 :aspect:`Data type`
-    :ref:`data-type-target` / :ref:`stdwrap`
+    :t3-data-type:`target` / :ref:`stdwrap`
 
 :aspect:`Default`
     :typoscript:`thePicture`
@@ -230,7 +230,7 @@ JSwindow
     imageLinkWrap.JSwindow
 
 :aspect:`Data type`
-    :ref:`data-type-boolean` / :ref:`stdwrap`
+    :t3-data-type:`boolean` / :ref:`stdwrap`
 
 :aspect:`Default`
     0
@@ -255,7 +255,7 @@ JSwindow.expand
 
 :aspect:`Description`
     :typoscript:`x` and :typoscript:`x` are of data type
-    :ref:`data-type-integer`. The values are added to the width and height
+    :t3-data-type:`integer`. The values are added to the width and height
     of the preview image when calculating the width and height of the
     preview window.
 
@@ -267,16 +267,16 @@ JSwindow.newWindow
     imageLinkWrap.JSwindow.expand
 
 :aspect:`Data type`
-    :ref:`data-type-boolean` / :ref:`stdwrap`
+    :t3-data-type:`boolean` / :ref:`stdwrap`
 
 :aspect:`Default`
     0
 
 :aspect:`Description`
-    If the :ref:`Doctype <setup-config-doctype>` allows the :ref:`data-type-target`
+    If the :ref:`Doctype <setup-config-doctype>` allows the :t3-data-type:`target`
     attribute then the image will be opened in a window with the name given
     by `target`. If that windows is kept open and the next image with the
-    same :ref:`data-type-target` attribute is to be shown then it will appear
+    same :t3-data-type:`target` attribute is to be shown then it will appear
     in the same preview window.
     If :typoscript:`JSwindow.newWindow` is set to True,
     then a unique hash value is used as `target` value for each image.
@@ -290,7 +290,7 @@ JSwindow.altUrl
     imageLinkWrap.JSwindow.altUrl
 
 :aspect:`Data type`
-    :ref:`data-type-string` / :ref:`stdwrap`
+    :t3-data-type:`string` / :ref:`stdwrap`
 
 :aspect:`Description`
     If this returns anything then it is used as URL of the preview window.
@@ -304,7 +304,7 @@ JSwindow.altUrl\_noDefaultParams
     imageLinkWrap.JSwindow.altUrl_noDefaultParams
 
 :aspect:`Data type`
-    :ref:`data-type-boolean` / :ref:`stdwrap`
+    :t3-data-type:`boolean` / :ref:`stdwrap`
 
 :aspect:`Default`
     0
@@ -337,7 +337,7 @@ directImageLink
     imageLinkWrap.directImageLink
 
 :aspect:`Data type`
-    :ref:`data-type-boolean` / :ref:`stdwrap`
+    :t3-data-type:`boolean` / :ref:`stdwrap`
 
 :aspect:`Default`
     0

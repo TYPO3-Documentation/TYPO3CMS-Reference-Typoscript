@@ -31,7 +31,7 @@ roundType
    roundType
 
 :aspect:`Data type`
-   :ref:`data-type-string` / :ref:`stdwrap`
+   :t3-data-type:`string` / :ref:`stdwrap`
 
 :aspect:`Description`
    Round method which should be used.
@@ -59,7 +59,7 @@ decimals
    decimals
 
 :aspect:`Data type`
-   :ref:`data-type-integer` / :ref:`stdwrap`
+   :t3-data-type:`integer` / :ref:`stdwrap`
 
 :aspect:`Description`
    Number of decimals the rounded value will have. Only used with the
@@ -78,7 +78,7 @@ round
    round
 
 :aspect:`Data type`
-   :ref:`data-type-boolean`
+   :t3-data-type:`boolean`
 
 :aspect:`Description`
    Set round = 1 to enable rounding.

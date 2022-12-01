@@ -28,7 +28,7 @@ length
    length
 
 :aspect:`Data type`
-   :ref:`data-type-integer` / :ref:`stdwrap`
+   :t3-data-type:`integer` / :ref:`stdwrap`
 
 :aspect:`Description`
    The length of the output string. If the value is negative, less
@@ -47,7 +47,7 @@ padWith
    padWith
 
 :aspect:`Data type`
-   :ref:`data-type-string` / :ref:`stdwrap`
+   :t3-data-type:`string` / :ref:`stdwrap`
 
 :aspect:`Description`
    The character(s) to pad with. The value of :ref:`strpad-padWith` may be

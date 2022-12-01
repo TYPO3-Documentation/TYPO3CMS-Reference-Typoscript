@@ -66,7 +66,7 @@ special.relation
          special.relation
 
    Data type
-         :ref:`string <data-type-string>` / :ref:`stdWrap <stdwrap>`
+         :t3-data-type:`string` / :ref:`stdWrap <stdwrap>`
 
    Default
          special.categories
@@ -88,7 +88,7 @@ special.sorting
          special.sorting
 
    Data type
-         :ref:`string <data-type-string>` / :ref:`stdWrap <stdwrap>`
+         :t3-data-type:`string` / :ref:`stdWrap <stdwrap>`
 
    Description
          Which field from the "pages" table should be used for sorting.
