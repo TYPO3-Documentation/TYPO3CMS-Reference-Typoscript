@@ -368,7 +368,7 @@ strftime-conf
 
 ..  t3-data-type:: strftime-conf
 
-    See function `srftime on php.net <https://www.php.net/manual/en/function.strftime>`.
+    See function `strftime on php.net <https://www.php.net/manual/en/function.strftime>`__.
 
 string
 ======
