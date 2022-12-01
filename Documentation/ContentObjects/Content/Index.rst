@@ -242,7 +242,7 @@ Expanded form:
     // STEP 6: Return 'totalResult'
 
 
-See also: :ref:`if`, :ref:`select`, :ref:`data-type-wrap`, :ref:`stdWrap`,
+See also: :ref:`if`, :ref:`select`, :t3-data-type:`wrap`, :ref:`stdWrap`,
 :ref:`data-type-cobject`
 
 

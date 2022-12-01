@@ -140,7 +140,7 @@ date
    date
 
 :aspect:`Description:`
-   Can be used with a colon and :ref:`data-type-date-conf`.
+   Can be used with a colon and :t3-data-type:`date-conf`.
 
 :aspect:`Default:`
    :typoscript:`d/m Y`

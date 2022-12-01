@@ -40,11 +40,11 @@ externalBlocks
 
    **.[tagname]** {
 
-   * **callRecursive:** :ref:`data-type-boolean`. If set, the content of the block is
+   * **callRecursive:** :t3-data-type:`boolean`. If set, the content of the block is
      directed into parseFunc again. Otherwise the content is passed
      through with no other processing than :ref:`stdwrap` (see below).
 
-   * **callRecursive.dontWrapSelf:** :ref:`data-type-boolean`. If set, the tags of the
+   * **callRecursive.dontWrapSelf:** :t3-data-type:`boolean`. If set, the tags of the
      block is *not* wrapped around the content returned from parseFunc.
 
    * **callRecursive.alternativeWrap:** Alternative wrapping instead of
@@ -55,15 +55,15 @@ externalBlocks
    * **stdWrap:** :ref:`stdwrap` processing of the whole block (regardless of
      whether callRecursive was set.)
 
-   * **stripNLprev:** :ref:`data-type-boolean`. Strips off last line break of the previous
+   * **stripNLprev:** :t3-data-type:`boolean`. Strips off last line break of the previous
      outside block.
 
-   * **stripNLnext:** :ref:`data-type-boolean`. Strips off first line break of the next
+   * **stripNLnext:** :t3-data-type:`boolean`. Strips off first line break of the next
      outside block.
 
-   * **stripNL:** :ref:`data-type-boolean`. Does both of the above.
+   * **stripNL:** :t3-data-type:`boolean`. Does both of the above.
 
-   * **HTMLtableCells:** :ref:`data-type-boolean`. If set, then the content is expected
+   * **HTMLtableCells:** :t3-data-type:`boolean`. If set, then the content is expected
      to be a table and every table-cell is traversed.
 
    Below, "default" means all cells and "1", "2", "3", ... overrides
@@ -71,7 +71,7 @@ externalBlocks
 
    * **HTMLtableCells.[default/1/2/3/...]** {
 
-     * **callRecursive:** :ref:`data-type-boolean`. The content is parsed through current
+     * **callRecursive:** :t3-data-type:`boolean`. The content is parsed through current
        parseFunc.
 
      * **stdWrap:** :ref:`stdwrap` processing of the content in the cell.
@@ -79,7 +79,7 @@ externalBlocks
      * **tagStdWrap:** -> The :html:`<TD>` tag is processed by :ref:`stdwrap`.
 
 
-   * **HTMLtableCells.addChr10BetweenParagraphs:** :ref:`data-type-boolean`. If set, then
+   * **HTMLtableCells.addChr10BetweenParagraphs:** :t3-data-type:`boolean`. If set, then
      all appearances of :html:`</P><P>` will have a :php:`chr(10)` inserted between them.
 
 
@@ -137,7 +137,7 @@ constants
    constants
 
 :aspect:`Data type`
-   :ref:`data-type-boolean`
+   :t3-data-type:`boolean`
 
 :aspect:`Description`
    You can define constants in the :ref:`top-level object "constants"
@@ -205,7 +205,7 @@ userFunc
    userFunc
 
 :aspect:`Data type`
-   :ref:`data-type-function-name`
+   :t3-data-type:`function name`
 
 :aspect:`Description`
    This passes the non-tag content to a function of your own choice.
@@ -243,7 +243,7 @@ nonTypoTagUserFunc
    nonTypoTagUserFunc
 
 :aspect:`Data type`
-   :ref:`data-type-function-name`
+   :t3-data-type:`function name`
 
 :aspect:`Description`
    Like :ref:`parsefunc-userFunc`.
@@ -263,7 +263,7 @@ makelinks
    makelinks
 
 :aspect:`Data type`
-   :ref:`data-type-boolean` / :ref:`makelinks`
+   :t3-data-type:`boolean` / :ref:`makelinks`
 
 :aspect:`Description`
    Convert web addresses prefixed with `http://` and mail addresses
