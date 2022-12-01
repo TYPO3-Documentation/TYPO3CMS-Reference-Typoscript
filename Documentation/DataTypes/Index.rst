@@ -77,7 +77,7 @@ case
     :typoscript:`lowercamelcase`  Convert underscored `lower_camel_case` to `lowerCamelCase`
     ============================= ==========================================================
 
-     ..  rubric:: Example
+    ..  rubric:: Example
 
     Code:
 
@@ -217,7 +217,7 @@ GraphicColor
     RGB-values (integers). An extra parameter can be given, that will modify the
     color mathematically:
 
-     ..  rubric:: Examples
+    ..  rubric:: Examples
 
     red *(HTML-color)*
 
@@ -243,7 +243,7 @@ imageExtension
     The value **"web"** is special. This will ensure that an image is
     converted to a web image format (gif or jpg) if it happens not to be already!
 
-     ..  rubric:: Examples
+    ..  rubric:: Examples
 
     jpg
 
