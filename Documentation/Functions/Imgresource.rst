@@ -1,8 +1,8 @@
-.. include:: /Includes.rst.txt
-.. index::
-   Functions; imgResource
-   imgResource
-.. _imgresource:
+..  include:: /Includes.rst.txt
+..  index::
+    Functions; imgResource
+    imgResource
+..  _imgresource:
 
 ===========
 imgResource
@@ -11,259 +11,207 @@ imgResource
 imgResource contains the properties that are used with the data type
 imgResource.
 
-.. contents::
-   :local:
+..  contents::
+    :local:
 
-.. index:: imgResource; Properties
-.. _imgresource-properties:
+..  index:: imgResource; Properties
+..  _imgresource-properties:
 
 Properties
 ==========
 
-.. index:: imgResource;
-.. _imgresource-ext:
-
 ext
 ---
 
-:aspect:`Property`
-   ext
+..  t3-function-imgresource::ext
 
-:aspect:`Data type`
-   :t3-data-type:`imageExtension` / :ref:`stdwrap`
+    :Data type: :t3-data-type:`imageExtension` / :ref:`stdwrap`
 
-:aspect:`Default`
-   web
+    :Default: web
 
-:aspect:`Description`
-   Target file extension for the processed image. The value :typoscript:`web` checks if
-   the file extension is one of gif, jpg, jpeg, or png and if not it will find
-   the best target extension.  The target extension must be in the list of file
-   extensions perceived as images.  This is defined in
-   :php:`$GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext']` in the install
-   tool.
-
-
-.. _imgresource-width:
+    Target file extension for the processed image. The value :typoscript:`web` checks if
+    the file extension is one of gif, jpg, jpeg, or png and if not it will find
+    the best target extension.  The target extension must be in the list of file
+    extensions perceived as images.  This is defined in
+    :php:`$GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext']` in the install
+    tool.
 
 width
 -----
 
-:aspect:`Property`
-   width
+..  t3-function-imgresource::width
 
-:aspect:`Data type`
-   :t3-data-type:`pixels` / :ref:`stdwrap`
+    :Data type: :t3-data-type:`pixels` / :ref:`stdwrap`
 
-:aspect:`Description`
-   If both the width and the height are set and one of the numbers is
-   appended by an :typoscript:`m`, the proportions will be preserved and thus
-   width and height are treated as maximum dimensions for the image. The
-   image will be scaled to fit into the rectangle of the dimensions
-   width and height.
+    If both the width and the height are set and one of the numbers is
+    appended by an :typoscript:`m`, the proportions will be preserved and thus
+    width and height are treated as maximum dimensions for the image. The
+    image will be scaled to fit into the rectangle of the dimensions
+    width and height.
 
-   If both the width and the height are set and at least one of the
-   numbers is appended by a :typoscript:`c`, crop-scaling will be enabled. This means
-   that the proportions will be preserved and the image will be scaled to
-   fit **around** a rectangle with width/height dimensions. Then, a
-   centered portion from **inside** of the image (size defined by
-   width/height) will be cut out.
+    If both the width and the height are set and at least one of the
+    numbers is appended by a :typoscript:`c`, crop-scaling will be enabled. This means
+    that the proportions will be preserved and the image will be scaled to
+    fit **around** a rectangle with width/height dimensions. Then, a
+    centered portion from **inside** of the image (size defined by
+    width/height) will be cut out.
 
-   The :typoscript:`c` can have a percentage value (-100 ... +100) after it, which
-   defines how much the cropping will be moved off the center to the
-   border.
+    The :typoscript:`c` can have a percentage value (-100 ... +100) after it, which
+    defines how much the cropping will be moved off the center to the
+    border.
 
-   Notice that you can only use either :typoscript:`m` *or* :typoscript:`c` at the same time!
+    Notice that you can only use either :typoscript:`m` *or* :typoscript:`c` at the same time!
 
-:aspect:`Examples`
-   This crops 120x80px from the center of the scaled image:
+    ..  rubric:: Examples
 
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    This crops 120x80px from the center of the scaled image:
 
-      lib.image {
-          width = 120c
-          height = 80c
-      }
+    .. code-block:: typoscript
+       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-   This crops 100x100px; from landscape-images at the left and portrait-
-   images centered:
+       lib.image {
+           width = 120c
+           height = 80c
+       }
 
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    This crops 100x100px; from landscape-images at the left and portrait-
+    images centered:
 
-      lib.image {
-          width = 100c-100
-          height = 100c
-      }
+    .. code-block:: typoscript
+       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-   This crops 100x100px; from landscape-images a bit right of the center
-   and portrait-images a bit higher than centered:
+       lib.image {
+           width = 100c-100
+           height = 100c
+       }
 
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    This crops 100x100px; from landscape-images a bit right of the center
+    and portrait-images a bit higher than centered:
 
-      lib.image {
-          width = 100c+30
-          height = 100c-25
-      }
+    .. code-block:: typoscript
+       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-.. _imgresource-height:
+       lib.image {
+           width = 100c+30
+           height = 100c-25
+       }
 
 height
 ------
 
-:aspect:`Property`
-   height
+..  t3-function-imgresource::height
 
-:aspect:`Data type`
-   :t3-data-type:`pixels` / :ref:`stdwrap`
+    :Data type: :t3-data-type:`pixels` / :ref:`stdwrap`
 
-:aspect:`Description`
-   See :ref:`imgresource-width`
-
-
-.. index:: imgResource; params
-.. _imgresource-params:
+    See :t3-function-imgresource:`imgresource-width`
 
 params
 ------
 
-:aspect:`Property`
-   params
+..  t3-function-imgresource::params
 
-:aspect:`Data type`
-   :t3-data-type:`string` / :ref:`stdwrap`
+    :Data type: :t3-data-type:`string` / :ref:`stdwrap`
 
-:aspect:`Description`
-   GraphicsMagick/ImageMagick command-line:
+    GraphicsMagick/ImageMagick command-line:
 
-   fx. `-rotate 90`, `-negate` or `-quality 90`
-
-
-.. _imgresource-sample:
+    fx. `-rotate 90`, `-negate` or `-quality 90`
 
 sample
 ------
 
-:aspect:`Property`
-   sample
+..  t3-function-imgresource::sample
 
-:aspect:`Data type`
-   :t3-data-type:`boolean`
+    :Data type: :t3-data-type:`boolean`
+    :Default: 0
 
-:aspect:`Description`
-   If set, `-sample` is used to scale images instead of `-geometry`. Sample
-   does not use anti-aliasing and is therefore much faster.
-
-:aspect:`Default`
-   0
-
-
-.. _imgresource-noscale:
+    If set, `-sample` is used to scale images instead of `-geometry`. Sample
+    does not use anti-aliasing and is therefore much faster.
 
 noScale
 -------
 
-:aspect:`Property`
-   noScale
+..  t3-function-imgresource::noScale
 
-:aspect:`Data type`
-   :t3-data-type:`boolean` / :ref:`stdwrap`
+    :Data type: :t3-data-type:`boolean` / :ref:`stdwrap`
+    :Default: 0
 
-:aspect:`Description`
-   If set, the image itself will never be scaled. Only width and height
-   are calculated according to the other properties, so that the image is
-   *displayed* resized, but the original file is used. Can be used for
-   creating PDFs or printing of pages, where the original file could
-   provide much better quality than a rescaled one.
+    If set, the image itself will never be scaled. Only width and height
+    are calculated according to the other properties, so that the image is
+    *displayed* resized, but the original file is used. Can be used for
+    creating PDFs or printing of pages, where the original file could
+    provide much better quality than a rescaled one.
 
-:aspect:`Default`
-   0
+    ..  rubric:: Examples
 
-:aspect:`Example`
-   Here :file:`test.jpg` could have 1600 x 1200 pixels for example:
+    Here :file:`test.jpg` could have 1600 x 1200 pixels for example:
 
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    .. code-block:: typoscript
+       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-      file = fileadmin/test.jpg
-      file.width = 240m
-      file.height = 240m
-      file.noScale = 1
+       file = fileadmin/test.jpg
+       file.width = 240m
+       file.height = 240m
+       file.noScale = 1
 
-   This example results in an image tag like the following. Note that
-   `src="fileadmin/test.jpg"` is the *original* file:
+    This example results in an image tag like the following. Note that
+    `src="fileadmin/test.jpg"` is the *original* file:
 
-   .. code-block:: html
+    .. code-block:: html
 
-      <img src="fileadmin/test.jpg" width="240" height="180" />
-
-
-.. index:: imgResource; crop
-.. _imgresource-crop:
+       <img src="fileadmin/test.jpg" width="240" height="180" />
 
 crop
 ----
 
-:aspect:`Property`
-   crop
+..  t3-function-imgresource::crop
 
-:aspect:`Data type`
-   :t3-data-type:`string` / :ref:`stdwrap`
+    :Data type: :t3-data-type:`string` / :ref:`stdwrap`
+    :Default: not-set (when file/image is a file_reference the crop value of
 
-:aspect:`Description`
-   It is possible to define an area that should be taken (cropped) from the image.
-   When not defined in typoscript the value will be taken from the file_reference when
-   possible. With this setting you can override this behavior.
+    It is possible to define an area that should be taken (cropped) from the image.
+    When not defined in typoscript the value will be taken from the file_reference when
+    possible. With this setting you can override this behavior.
 
-:aspect:`Default`
-   not-set (when file/image is a file_reference the crop value of
-   the file reference is used)
+    the file reference is used)
 
-:aspect:`Examples`
-   Disable cropping set by the editor in the back-end:
+    ..  rubric:: Examples
+    Disable cropping set by the editor in the back-end:
 
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-      tt_content.image.20.1.file.crop =
+        tt_content.image.20.1.file.crop =
 
-   Overrule/set cropping for all images:
+    Overrule/set cropping for all images:
 
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-      tt_content.image.20.1.file.crop = 50,50,100,100
-
-.. _imgresource-cropvariant:
+        tt_content.image.20.1.file.crop = 50,50,100,100
 
 cropVariant
 -----------
 
-:aspect:`Property`
-   cropVariant
+..  t3-function-imgresource::cropVariant
 
-:aspect:`Data type`
-   :t3-data-type:`string`
+    :Data type: :t3-data-type:`string`
+    :Default: default
 
-:aspect:`Description`
-   Since it's possible to define certain :ref:`crop variants <t3coreapi:cropvariants>`
-   you can specify which one to use here.
+    Since it's possible to define certain :ref:`crop variants <t3coreapi:cropvariants>`
+    you can specify which one to use here.
 
-:aspect:`Default`
-   default
 
-:aspect:`Examples`
-   Use 'desktop' crop variant:
+    ..  rubric:: Examples
 
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    Use 'desktop' crop variant:
 
-      tt_content.image.20.1.file {
-          crop.data = file:current:crop
-          cropVariant = desktop
-      }
+    ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+        tt_content.image.20.1.file {
+            crop.data = file:current:crop
+            cropVariant = desktop
+        }
 
 
 .. _imgresource-frame:
@@ -271,227 +219,169 @@ cropVariant
 frame
 -----
 
-:aspect:`Property`
-   frame
+..  t3-function-imgresource::frame
 
-:aspect:`Data type`
-   :t3-data-type:`integer` / :ref:`stdwrap`
+    :Data type: :t3-data-type:`integer` / :ref:`stdwrap`
 
-:aspect:`Description`
-   Chooses the frame in a PDF or GIF file.
+    Chooses the frame in a PDF or GIF file.
 
-   "" = first frame (zero)
-
-
-.. index:: imgResource; import
-.. _imgresource-import:
+    "" = first frame (zero)
 
 import
 ------
 
-:aspect:`Property`
-   import
+..  t3-function-imgresource::import
 
-:aspect:`Data type`
-   :t3-data-type:`path` / :ref:`stdwrap`
+    :Data type: :t3-data-type:`path` / :ref:`stdwrap`
 
-:aspect:`Description`
-   *value* should be set to the path of the file
+    *value* should be set to the path of the file
 
-   with :ref:`stdwrap` you get the filename from the data-array
+    with :ref:`stdwrap` you get the filename from the data-array
 
-:aspect:`Example`
-   This returns the first image in the field "image" from the
-   data-array:
+    ..  rubric:: Examples
 
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    This returns the first image in the field "image" from the
+    data-array:
 
-      tt_content.image.20.1.file {
-          import = uploads/pics/
-          import.field = image
-          import.listNum = 0
-      }
+    ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-
-.. index:: imgResource; treatIdAsReference
-.. _imgresource-treatidasreference:
+        tt_content.image.20.1.file {
+            import = uploads/pics/
+            import.field = image
+            import.listNum = 0
+        }
 
 treatIdAsReference
 ------------------
 
-:aspect:`Property`
-   treatIdAsReference
+..  t3-function-imgresource::treatIdAsReference
 
-:aspect:`Data type`
-   :t3-data-type:`boolean` / :ref:`stdwrap`
+    :Data type: :t3-data-type:`boolean` / :ref:`stdwrap`
+    :Default: 0
 
-:aspect:`Description`
-   If set, given UIDs are interpreted as UIDs to sys_file_reference
-   instead of to sys_file. This allows using file references, for
-   example with :typoscript:`import.data = levelmedia: ...`.
-
-:aspect:`Default`
-   0
-
-.. _imgresource-maxw:
+    If set, given UIDs are interpreted as UIDs to sys_file_reference
+    instead of to sys_file. This allows using file references, for
+    example with :typoscript:`import.data = levelmedia: ...`.
 
 maxW
 ----
 
-:aspect:`Property`
-   maxW
+..  t3-function-imgresource::maxW
 
-:aspect:`Data type`
-   :t3-data-type:`pixels` / :ref:`stdwrap`
+    :Data type: :t3-data-type:`pixels` / :ref:`stdwrap`
 
-:aspect:`Description`
-   Maximum width
-
-.. _imgresource-maxh:
+    Maximum width
 
 maxH
 ----
 
-:aspect:`Property`
-   maxH
+..  t3-function-imgresource::maxH
 
-:aspect:`Data type`
-   :t3-data-type:`pixels` / :ref:`stdwrap`
+    :Data type: :t3-data-type:`pixels` / :ref:`stdwrap`
 
-:aspect:`Description`
-   Maximum height
-
-.. _imgresource-minw:
+    Maximum height
 
 minW
 ----
 
-:aspect:`Property`
-   minW
+..  t3-function-imgresource::minW
 
-:aspect:`Data type`
-   :t3-data-type:`pixels` / :ref:`stdwrap`
+    :Data type: :t3-data-type:`pixels` / :ref:`stdwrap`
 
-:aspect:`Description`
-   Minimum width (overrules maxW/maxH)
-
-.. _imgresource-minh:
+    Minimum width (overrules maxW/maxH)
 
 minH
 ----
 
-:aspect:`Property`
-   minH
+..  t3-function-imgresource::minH
 
-:aspect:`Data type`
-   :t3-data-type:`pixels` / :ref:`stdwrap`
+    :Data type: :t3-data-type:`pixels` / :ref:`stdwrap`
 
-:aspect:`Description`
-   Minimum height (overrules maxW/maxH)
-
-
-.. index:: imgResource; stripProfile
-.. _imgresource-stripprofile:
+    Minimum height (overrules maxW/maxH)
 
 stripProfile
 ------------
 
-:aspect:`Property`
-      stripProfile
+..  t3-function-imgresource::   stripProfile
 
-:aspect:`Data type`
-      :t3-data-type:`boolean`
+    :Data type:    :t3-data-type:`boolean`
+    :Default:    0
 
-:aspect:`Description`
-      If set, the GraphicsMagick/ImageMagick-command will use a
-      stripProfile-command which shrinks the generated thumbnails. See the
-      Install Tool for options and details.
+    If set, the GraphicsMagick/ImageMagick-command will use a
+    stripProfile-command which shrinks the generated thumbnails. See the
+    Install Tool for options and details.
 
-      If :typoscript:`processor_stripColorProfileByDefault` is set in the
-      Install Tool, you can deactivate it by setting :typoscript:`stripProfile=0`.
+    If :typoscript:`processor_stripColorProfileByDefault` is set in the
+    Install Tool, you can deactivate it by setting :typoscript:`stripProfile=0`.
 
-:aspect:`Default`
-      0
 
-:aspect:`Example`
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    ..  rubric:: Examples
 
-      10 = IMAGE
-      10.file = fileadmin/images/image1.jpg
-      10.file.stripProfile = 1
+    ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+        10 = IMAGE
+        10.file = fileadmin/images/image1.jpg
+        10.file.stripProfile = 1
 
 Masking (m)
 -----------
 
-:aspect:`Property`
-   Masking:
+..  t3-function-imgresource::Masking:
 
-   (Black hides, white shows)
+    (Black hides, white shows)
 
 m.mask
 ~~~~~~
 
-:aspect:`Property`
-   m.mask
+..  t3-function-imgresource::m.mask
 
-:aspect:`Data type`
-   :t3-data-type:`imgResource`
+    :Data type: :t3-data-type:`imgResource`
 
-:aspect:`Description`
-   The mask with which the image is masked onto :typoscript:`m.bgImg`. Both :typoscript:`m.mask`
-   and :typoscript:`m.bgImg` **is scaled to fit** the size of the imgResource image!
+    The mask with which the image is masked onto :typoscript:`m.bgImg`. Both :typoscript:`m.mask`
+    and :typoscript:`m.bgImg` **is scaled to fit** the size of the imgResource image!
 
-   **Note:** Both :typoscript:`m.mask` and :typoscript:`m.bgImg` must be valid images.
+    **Note:** Both :typoscript:`m.mask` and :typoscript:`m.bgImg` must be valid images.
 
 m.bgImg
 ~~~~~~~
 
-:aspect:`Property`
-   m.bgImg
+..  t3-function-imgresource::m.bgImg
 
-:aspect:`Data type`
-   :t3-data-type:`imgResource`
+    :Data type: :t3-data-type:`imgResource`
 
-:aspect:`Description`
-   **Note:** Both :typoscript:`m.mask` and :typoscript:`m.bgImg` must be valid images.
+    **Note:** Both :typoscript:`m.mask` and :typoscript:`m.bgImg` must be valid images.
 
 m.bottomImg
 ~~~~~~~~~~~
 
-:aspect:`Property`
-   m.bottomImg
+..  t3-function-imgresource::m.bottomImg
 
-:aspect:`Data type`
-   :t3-data-type:`imgResource`
+    :Data type: :t3-data-type:`imgResource`
 
-:aspect:`Description`
-   An image masked by :typoscript:`m.bottomImg_mask` onto :typoscript:`m.bgImg` before the
-   imgResources is masked by :typoscript:`m.mask`.
+    An image masked by :typoscript:`m.bottomImg_mask` onto :typoscript:`m.bgImg` before the
+    imgResources is masked by :typoscript:`m.mask`.
 
-   Both :typoscript:`m.bottomImg` and :typoscript:`m.bottomImg_mask` **is scaled to fit** the
-   size of the imgResource image!
+    Both :typoscript:`m.bottomImg` and :typoscript:`m.bottomImg_mask` **is scaled to fit** the
+    size of the imgResource image!
 
-   This is most often used to create an underlay for the imgResource.
+    This is most often used to create an underlay for the imgResource.
 
-   **Note:** Both "m.bottomImg" and :typoscript:`m.bottomImg_mask` must be valid
-   images.
+    **Note:** Both "m.bottomImg" and :typoscript:`m.bottomImg_mask` must be valid
+    images.
 
 m.bottomImg\_mask
 ~~~~~~~~~~~~~~~~~
 
-:aspect:`Property`
-   m.bottomImg\_mask
+..  t3-function-imgresource::m.bottomImg\_mask
 
-:aspect:`Data type`
-   :t3-data-type:`imgResource`
+    :Data type: :t3-data-type:`imgResource`
 
-:aspect:`Description`
-   (optional)
+    (optional)
 
-   **Note:** Both :typoscript:`m.bottomImg` and :typoscript:`m.bottomImg_mask` must be valid
-   images.
+    **Note:** Both :typoscript:`m.bottomImg` and :typoscript:`m.bottomImg_mask` must be valid
+    images.
 
 
 .. _imgresource-examples:
@@ -502,8 +392,8 @@ Examples
 This scales the image :file:`fileadmin/toplogo.gif` to the width of 200
 pixels:
 
-.. code-block:: typoscript
-   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-   file = fileadmin/toplogo.gif
-   file.width = 200
+    file = fileadmin/toplogo.gif
+    file.width = 200

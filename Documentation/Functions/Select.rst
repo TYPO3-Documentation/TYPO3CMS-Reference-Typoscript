@@ -1,8 +1,8 @@
-.. include:: /Includes.rst.txt
-.. index::
-   Functions; select
-   Database; select
-.. _select:
+..  include:: /Includes.rst.txt
+..  index::
+    Functions; select
+    Database; select
+..  _select:
 
 ======
 select
@@ -15,14 +15,14 @@ Some records are hidden or timed by start- and end-times. This is
 automatically added to the SQL-select by looking for "enablefields"
 in the :php:`$GLOBALS['TCA']`.
 
-.. warning::
+..  warning::
 
-   Do not use GET or POST data like GPvar directly with this object!
-   Avoid SQL injections! Don't trust any external data! Secure
-   any unknown data, for example with :ref:`intval <stdwrap-intval>`.
+    Do not use GET or POST data like GPvar directly with this object!
+    Avoid SQL injections! Don't trust any external data! Secure
+    any unknown data, for example with :ref:`intval <stdwrap-intval>`.
 
-.. contents::
-   :local:
+..  contents::
+    :local:
 
 .. index:: select; Properties
 .. _select-properties:
@@ -30,398 +30,316 @@ in the :php:`$GLOBALS['TCA']`.
 Properties
 ==========
 
-.. _select-uidInList:
-
 uidInList
 ---------
 
-:aspect:`Property`
-   uidInList
+..  t3-function-select:: uidInList
 
-:aspect:`Data type`
-   *list of record\_ids* / :ref:`stdWrap`
+    :Data type: *list of record\_ids* / :ref:`stdWrap`
 
-:aspect:`Description`
-   Comma-separated list of record uids from the according database table.
-   For example when the select function works on the table `tt_content`, then
-   this will be uids of `tt_content` records.
+    Comma-separated list of record uids from the according database table.
+    For example when the select function works on the table `tt_content`, then
+    this will be uids of `tt_content` records.
 
-   **Note:** :typoscript:`this` is a *special keyword* and replaced with the id of the
-   *current record*.
+    **Note:** :typoscript:`this` is a *special keyword* and replaced with the id of the
+    *current record*.
 
-   .. attention::
-      :ref:`pidInList` defaults to :typoscript:`this`. Therefore by default only records
-      from the current page are available for :typoscript:`uidInList`. If records
-      should be fetched globally, :typoscript:`pidInList = 0` should also be set.
+    ..  attention::
+        :ref:`pidInList` defaults to :typoscript:`this`. Therefore by default only records
+        from the current page are available for :typoscript:`uidInList`. If records
+        should be fetched globally, :typoscript:`pidInList = 0` should also be set.
 
-:aspect:`Example`
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    ..  rubric:: Example
 
-      select {
-         uidInList = 1,2,3
-         pidInList = 0
-      }
+    ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-      select.uidInList = this
+        select {
+           uidInList = 1,2,3
+           pidInList = 0
+        }
 
-
-.. _select-pidInList:
+        select.uidInList = this
 
 pidInList
 ---------
 
-:aspect:`Property`
-   pidInList
+..  t3-function-select:: pidInList
 
-:aspect:`Data type`
-   *list of page\_ids* / :ref:`stdWrap`
+    :Data type: *list of page\_ids* / :ref:`stdWrap`
+    :Default: :typoscript:`this`
 
-:aspect:`Default`
-   this
+    Comma-separated list of pids of the record. This will be page uids (pids). For
+    example when the select function works on the table tt_content, then this
+    will be pids of tt_content records, the parent pages of these records.
 
-:aspect:`Description`
-   Comma-separated list of pids of the record. This will be page uids (pids). For
-   example when the select function works on the table tt_content, then this
-   will be pids of tt_content records, the parent pages of these records.
+    Pages in the list, which are not visible for the website user, *are
+    automatically removed* from the list. Thereby no records from hidden,
+    timed or access-protected pages will be selected! Nor will be records
+    from recyclers. Exception: The hidden pages will be listed in *preview mode*.
 
-   Pages in the list, which are not visible for the website user, *are
-   automatically removed* from the list. Thereby no records from hidden,
-   timed or access-protected pages will be selected! Nor will be records
-   from recyclers. Exception: The hidden pages will be listed in *preview mode*.
+    **Special keyword:** :typoscript:`this`
+        Is replaced with the id of the current page.
 
-   **Special keyword:** :typoscript:`this`
-      Is replaced with the id of the current page.
+    **Special keyword:** :typoscript:`root`
+        Allows to select records from the root-page level (records with pid=0,
+        e.g. useful for the table "sys_category" and others).
 
-   **Special keyword:** :typoscript:`root`
-      Allows to select records from the root-page level (records with pid=0,
-      e.g. useful for the table "sys_category" and others).
+    **Special value:** :typoscript:`-1`
+        Allows to select versioned records in workspaces directly.
 
-   **Special value:** :typoscript:`-1`
-      Allows to select versioned records in workspaces directly.
+    **Special value:** :typoscript:`0`
+        Allows to disable the :sql:`pid` constraint completely. Requirements:
+        :typoscript:`uidInList` *must* be set or the table *must* have the prefix
+        "static\_\*".
 
-   **Special value:** :typoscript:`0`
-      Allows to disable the :sql:`pid` constraint completely. Requirements:
-      :typoscript:`uidInList` *must* be set or the table *must* have the prefix
-      "static\_\*".
+    ..  note::
+        Check the doktype of your backend page. If you are trying to fetch records from
+        a sys_folder for example, the :php:`$cObj->checkPid_badDoktypeList` method will insert the
+        following SQL into your query:
 
-   .. note::
-      Check the doktype of your backend page. If you are trying to fetch records from
-      a sys_folder for example, the :php:`$cObj->checkPid_badDoktypeList` method will insert the
-      following SQL into your query:
+        ..  code-block:: sql
 
-      .. code-block:: sql
+            [...]WHERE (`your_requested_table_name`.`uid` = 0) AND [...]
 
-         [...]WHERE (`your_requested_table_name`.`uid` = 0) AND [...]
+        Which might result in an empty query result, depending on your records.
 
-      Which might result in an empty query result, depending on your records.
 
-:aspect:`Default`
-   :typoscript:`this`
+    ..  rubric:: Example
 
-:aspect:`Example`
-   Fetch related `sys_category` records stored in the MM intermediate table:
+    Fetch related `sys_category` records stored in the MM intermediate table:
 
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-      10 = CONTENT
-      10 {
-         table = sys_category
-         select {
-            pidInList = root,-1
-            selectFields = sys_category.*
-            join = sys_category_record_mm ON sys_category_record_mm.uid_local = sys_category.uid
-            where.data = field:_ORIG_uid // field:uid
-            where.intval = 1
-            where.wrap = sys_category_record_mm.uid_foreign=|
-            orderBy = sys_category_record_mm.sorting_foreign
-            languageField = 0 # disable translation handling of sys_category
-         }
-      }
-
-.. _select-recursive:
+        10 = CONTENT
+        10 {
+           table = sys_category
+           select {
+              pidInList = root,-1
+              selectFields = sys_category.*
+              join = sys_category_record_mm ON sys_category_record_mm.uid_local = sys_category.uid
+              where.data = field:_ORIG_uid // field:uid
+              where.intval = 1
+              where.wrap = sys_category_record_mm.uid_foreign=|
+              orderBy = sys_category_record_mm.sorting_foreign
+              languageField = 0 # disable translation handling of sys_category
+           }
+        }
 
 recursive
 ---------
 
-:aspect:`Property`
-   recursive
+..  t3-function-select:: recursive
 
-:aspect:`Data type`
-   :t3-data-type:`integer` / :ref:`stdWrap`
+    :Data type: :t3-data-type:`integer` / :ref:`stdWrap`
+    :Default: 0
 
-:aspect:`Description`
-   Number of recursive levels for the pidInList.
-
-:aspect:`Default`
-   0
-
-
-.. _select-orderBy:
+    Number of recursive levels for the pidInList.
 
 orderBy
 -------
 
-:aspect:`Property`
-   orderBy
+..  t3-function-select:: orderBy
 
-:aspect:`Data type`
-   *SQL-orderBy* / :ref:`stdWrap`
+    :Data type: *SQL-orderBy* / :ref:`stdWrap`
 
-:aspect:`Description`
-   ORDER BY clause without the words "ORDER BY".
+    ORDER BY clause without the words "ORDER BY".
 
-:aspect:`Example`
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    ..  rubric:: Example
 
-      orderBy = sorting, title
+    ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-
-.. _select-groupBy:
+        orderBy = sorting, title
 
 groupBy
 -------
 
-:aspect:`Property`
-   groupBy
+..  t3-function-select:: groupBy
 
-:aspect:`Data type`
-   *SQL-groupBy* / :ref:`stdWrap`
+    :Data type: *SQL-groupBy* / :ref:`stdWrap`
 
-:aspect:`Description`
-   GROUP BY clause without the words "GROUP BY".
+    GROUP BY clause without the words "GROUP BY".
 
-:aspect:`Example`
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    ..  rubric:: Example
 
-      groupBy = CType
+    ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-
-.. _select-max:
+        groupBy = CType
 
 max
 ---
 
-:aspect:`Property`
-   max
+..  t3-function-select:: max
 
-:aspect:`Data type`
-   :t3-data-type:`integer` + :ref:`objects-calc` +"total" / :ref:`stdWrap`
+    :Data type: :t3-data-type:`integer` + :ref:`objects-calc` +"total" / :ref:`stdWrap`
 
-:aspect:`Description`
-   Max records
+    Max records
 
-   **Special keyword:** "total" is substituted with :php:`count(*)`.
-
-
-.. _select-begin:
+    **Special keyword:** "total" is substituted with :php:`count(*)`.
 
 begin
 -----
 
-:aspect:`Property`
-      begin
+..  t3-function-select::    begin
 
-:aspect:`Data type`
-      :t3-data-type:`integer` + :ref:`objects-calc` +"total" / :ref:`stdWrap`
+    :Data type:    :t3-data-type:`integer` + :ref:`objects-calc` +"total" / :ref:`stdWrap`
 
-:aspect:`Description`
-      Begin with record number *value*.
+    Begin with record number *value*.
 
-      **Special keyword:** :typoscript:`total`
-         Is substituted with :php:`count(*)`.
-
-
-.. _select-where:
+    **Special keyword:** :typoscript:`total`
+        Is substituted with :php:`count(*)`.
 
 where
 -----
 
-:aspect:`Property`
-      where
+..  t3-function-select::    where
 
-:aspect:`Data type`
-      *SQL-where* / :ref:`stdWrap`
+    :Data type:    *SQL-where* / :ref:`stdWrap`
 
-:aspect:`Description`
-      WHERE clause without the word "WHERE".
+    WHERE clause without the word "WHERE".
 
-:aspect:`Example`
-      .. code-block:: typoscript
-         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+   ..  rubric:: Example
 
-         where = (title LIKE '%SOMETHING%' AND NOT doktype)
+   ..  code-block:: typoscript
+       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-      Use `{#fieldname}` to make the database
-      framework quote these fields:
+       where = (title LIKE '%SOMETHING%' AND NOT doktype)
 
-      .. code-block:: typoscript
-         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+   Use `{#fieldname}` to make the database
+   framework quote these fields:
 
-         where = ({#title} LIKE {#%SOMETHING%} AND NOT {#doktype})
+   ..  code-block:: typoscript
+       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-
-.. _select-languageField:
+       where = ({#title} LIKE {#%SOMETHING%} AND NOT {#doktype})
 
 languageField
 -------------
 
-:aspect:`Property`
-   languageField
+..  t3-function-select:: languageField
 
-:aspect:`Data type`
-   :t3-data-type:`string` / :ref:`stdWrap`
+    :Data type: :t3-data-type:`string` / :ref:`stdWrap`
 
-:aspect:`Description`
-   This defaults to whatever is defined in TCA "ctrl"-section in the
-   "languageField". Change it to overwrite the behaviour in your query.
+    This defaults to whatever is defined in TCA "ctrl"-section in the
+    "languageField". Change it to overwrite the behaviour in your query.
 
-   By default all records that have language-relevant information in the
-   TCA "ctrl"-section are translated on translated pages.
+    By default all records that have language-relevant information in the
+    TCA "ctrl"-section are translated on translated pages.
 
-   This behaviour can be disabled by setting :typoscript:`languageField = 0`.
-
-
-.. _select-includeRecordsWithoutDefaultTranslation:
+    This behaviour can be disabled by setting :typoscript:`languageField = 0`.
 
 includeRecordsWithoutDefaultTranslation
 ---------------------------------------
 
-:aspect:`Property`
-   includeRecordsWithoutDefaultTranslation
+..  t3-function-select:: includeRecordsWithoutDefaultTranslation
 
-:aspect:`Data type`
-   :t3-data-type:`boolean` / :ref:`stdWrap`
+    :Data type: :t3-data-type:`boolean` / :ref:`stdWrap`
+    :Default: 0
 
-:aspect:`Description`
-   If content language overlay is activated and the option :typoscript:`languageField` is not disabled,
-   :typoscript:`includeRecordsWithoutDefaultTranslation` allows to additionally fetch records,
-   which do **not** have a parent in the default language.
-
-:aspect:`Default`
-   0
-
-
-.. _select-selectFields:
+    If content language overlay is activated and the option :typoscript:`languageField` is not disabled,
+    :typoscript:`includeRecordsWithoutDefaultTranslation` allows to additionally fetch records,
+    which do **not** have a parent in the default language.
 
 selectFields
 ------------
 
-:aspect:`Property`
-   selectFields
+..  t3-function-select:: selectFields
 
-:aspect:`Data type`
-   :t3-data-type:`string` / :ref:`stdWrap`
+    :Data type: :t3-data-type:`string` / :ref:`stdWrap`
+    :Default: \*
 
-:aspect:`Description`
-   List of fields to select, or :php:`count(*)`.
+    List of fields to select, or :php:`count(*)`.
 
-   If the records need to be localized, please include the
-   relevant localization-fields (uid, pid, languageField and
-   transOrigPointerField). Otherwise the TYPO3 internal localization
-   will not succeed.
-
-:aspect:`Default`
-   \*
-
-
-.. _select-join:
-.. _select-leftjoin:
-.. _select-rightjoin:
+    If the records need to be localized, please include the
+    relevant localization-fields (uid, pid, languageField and
+    transOrigPointerField). Otherwise the TYPO3 internal localization
+    will not succeed.
 
 join, leftjoin, rightjoin
 -------------------------
 
-:aspect:`Property`
-   join, leftjoin, rightjoin
+..  t3-function-select:: join, leftjoin, rightjoin
 
-:aspect:`Data type`
-   :t3-data-type:`string` / :ref:`stdWrap`
+    :Data type: :t3-data-type:`string` / :ref:`stdWrap`
 
-:aspect:`Description`
-   Enter the table name for JOIN, LEFT OUTER JOIN and RIGHT OUTER JOIN
-   respectively.
-
-
-.. _select-markers:
+    Enter the table name for JOIN, LEFT OUTER JOIN and RIGHT OUTER JOIN
+    respectively.
 
 markers
 -------
 
-:aspect:`Property`
-   markers
+..  t3-function-select:: markers
 
-:aspect:`Data type`
-   *(array of markers)*
+    :Data type: *(array of markers)*
 
-:aspect:`Description`
-   The markers defined in this section can be used, wrapped in the usual
-   ###markername### way, in any other property of select. Each value is
-   properly escaped and quoted to prevent SQL injection problems. This
-   provides a way to safely use external data (e.g. database fields,
-   GET/POST parameters) in a query.
+    The markers defined in this section can be used, wrapped in the usual
+    ###markername### way, in any other property of select. Each value is
+    properly escaped and quoted to prevent SQL injection problems. This
+    provides a way to safely use external data (e.g. database fields,
+    GET/POST parameters) in a query.
 
-   Available sub-properties:
+    Available sub-properties:
 
-   <markername>.value (value)
-      Sets the value directly.
+    <markername>.value (value)
+       Sets the value directly.
 
-   <markername>.commaSeparatedList (:t3-data-type:`boolean`)
-      If set, the value is interpreted as a comma-separated list of values.
-      Each value in the list is individually escaped and quoted.
+    <markername>.commaSeparatedList (:t3-data-type:`boolean`)
+       If set, the value is interpreted as a comma-separated list of values.
+       Each value in the list is individually escaped and quoted.
 
-   (stdWrap properties ...)
-      All stdWrap properties can be used for each markername.
+    (stdWrap properties ...)
+       All stdWrap properties can be used for each markername.
 
 
-   .. warning::
+    ..  warning::
 
-      Since TYPO3 v8 there is a problem combining orderBy with markers caused
-      by the quoting of the fields, see :issue:`87799`.
+        Since TYPO3 v8 there is a problem combining orderBy with markers caused
+        by the quoting of the fields, see :issue:`87799`.
 
-:aspect:`Example`
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    ..  rubric:: Example
 
-      page.60 = CONTENT
-      page.60 {
-          table = tt_content
-          select {
-              pidInList = 73
-              where = header != ###whatever###
-              markers {
-                  whatever.data = GP:first
-              }
-          }
-      }
+    ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-   This example selects all records from table tt_content, which are on page 73 and
-   which don't have the header set to the value provided by the Get/Post variable
-   "first".
+        page.60 = CONTENT
+        page.60 {
+            table = tt_content
+            select {
+                pidInList = 73
+                where = header != ###whatever###
+                markers {
+                    whatever.data = GP:first
+                }
+            }
+        }
 
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    This example selects all records from table tt_content, which are on page 73 and
+    which don't have the header set to the value provided by the Get/Post variable
+    "first".
 
-      page.60 = CONTENT
-      page.60 {
-          table = tt_content
-          select {
-              pidInList = 73
-              where = header != ###whatever###
-              markers {
-                  whatever.value = some
-                  whatever.wrap = |thing
-              }
-          }
-      }
+    ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+        page.60 = CONTENT
+        page.60 {
+            table = tt_content
+            select {
+                pidInList = 73
+                where = header != ###whatever###
+                markers {
+                    whatever.value = some
+                    whatever.wrap = |thing
+                }
+            }
+        }
 
 
-   This examples selects all records from the table tt_content which are on page 73
-   and which don't have a header set to a value constructed by whatever.value and
-   whatever.wrap ('something').
+    This examples selects all records from the table tt_content which are on page 73
+    and which don't have a header set to a value constructed by whatever.value and
+    whatever.wrap ('something').
 
 
 .. _selectQuotingOfFields:
@@ -459,29 +377,29 @@ See PHP source code for
 
 Condensed form:
 
-.. code-block:: typoscript
-   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-   10 = CONTENT
-   10 {
-      table =
-      select {
-         uidInList =
-         pidInList =
-         recursive =
-         orderBy =
-         groupBy =
-         max =
-         begin =
-         where =
-         languageField =
-         includeRecordsWithoutDefaultTranslation =
-         selectFields =
-         join =
-         leftjoin =
-         rightjoin =
-      }
-   }
+    10 = CONTENT
+    10 {
+       table =
+       select {
+          uidInList =
+          pidInList =
+          recursive =
+          orderBy =
+          groupBy =
+          max =
+          begin =
+          where =
+          languageField =
+          includeRecordsWithoutDefaultTranslation =
+          selectFields =
+          join =
+          leftjoin =
+          rightjoin =
+       }
+    }
 
 
 See also: :ref:`if`, :ref:`select`, :t3-data-type:`wrap`, :ref:`stdWrap`, :ref:`data-type-cobject`

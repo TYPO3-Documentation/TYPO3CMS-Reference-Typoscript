@@ -1,6 +1,6 @@
-.. include:: /Includes.rst.txt
-.. index:: Functions; round
-.. _round:
+..  include:: /Includes.rst.txt
+..  index:: Functions; round
+..  _round:
 
 =====
 round
@@ -13,93 +13,72 @@ be used.
 The value will be converted to a float value before applying the
 selected round method.
 
-.. contents::
-   :local:
+..  contents::
+    :local:
 
-.. index:: round; Properties
-.. _round-properties:
+..  index:: round; Properties
+..  _round-properties:
 
 Properties
 ==========
 
-.. _round-roundtype:
-
 roundType
 ---------
 
-:aspect:`Property`
-   roundType
+..  t3-function-round:: roundType
 
-:aspect:`Data type`
-   :t3-data-type:`string` / :ref:`stdwrap`
+    :Data type: :t3-data-type:`string` / :ref:`stdwrap`
+    :Default: round
 
-:aspect:`Description`
-   Round method which should be used.
+    Round method which should be used.
 
-   Possible keywords:
+    Possible keywords:
 
-   ceil
-      Round the value up to the next integer.
+    ceil
+        Round the value up to the next integer.
 
-   floor
-      Round the value down to the previous integer.
+    floor
+        Round the value down to the previous integer.
 
-   round
-      Round the value to the specified number of decimals.
-
-:aspect:`Default`
-   round
-
-.. _round-decimals:
+    round
+        Round the value to the specified number of decimals.
 
 decimals
 --------
 
-:aspect:`Property`
-   decimals
+..  t3-function-round:: decimals
 
-:aspect:`Data type`
-   :t3-data-type:`integer` / :ref:`stdwrap`
+    :Data type: :t3-data-type:`integer` / :ref:`stdwrap`
+    :Default: 0
 
-:aspect:`Description`
-   Number of decimals the rounded value will have. Only used with the
-   roundType "round". Defaults to 0, so that your input will in that case
-   be rounded up or down to the next integer.
-
-:aspect:`Default`
-   0
-
-.. _round-round:
+    Number of decimals the rounded value will have. Only used with the
+    roundType "round". Defaults to 0, so that your input will in that case
+    be rounded up or down to the next integer.
 
 round
 -----
 
-:aspect:`Property`
-   round
+..  t3-function-round:: round
 
-:aspect:`Data type`
-   :t3-data-type:`boolean`
+    :Data type: :t3-data-type:`boolean`
+    :Default: 0
 
-:aspect:`Description`
-   Set round = 1 to enable rounding.
-
-:aspect:`Default`
-   0
+    Set round = 1 to enable rounding.
 
 .. _round-examples:
 
 Examples
 ========
 
-.. code-block:: typoscript
-   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-   lib.number = TEXT
-   lib.number {
-       value = 3.14159
-       stdWrap.round = 1
-       stdWrap.round.roundType = round
-       stdWrap.round.decimals = 2
-   }
+    lib.number = TEXT
+    lib.number {
+        value = 3.14159
+        stdWrap.round = 1
+        stdWrap.round.roundType = round
+        stdWrap.round.decimals = 2
+    }
 
 This returns :code:`3.14`.
