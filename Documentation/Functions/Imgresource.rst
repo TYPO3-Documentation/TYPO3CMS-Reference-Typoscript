@@ -23,7 +23,7 @@ Properties
 ext
 ---
 
-..  t3-function-imgresource::ext
+..  t3-function-imgresource:: ext
 
     :Data type: :t3-data-type:`imageExtension` / :ref:`stdwrap`
 
@@ -39,7 +39,7 @@ ext
 width
 -----
 
-..  t3-function-imgresource::width
+..  t3-function-imgresource:: width
 
     :Data type: :t3-data-type:`pixels` / :ref:`stdwrap`
 
@@ -99,7 +99,7 @@ width
 height
 ------
 
-..  t3-function-imgresource::height
+..  t3-function-imgresource:: height
 
     :Data type: :t3-data-type:`pixels` / :ref:`stdwrap`
 
@@ -108,7 +108,7 @@ height
 params
 ------
 
-..  t3-function-imgresource::params
+..  t3-function-imgresource:: params
 
     :Data type: :t3-data-type:`string` / :ref:`stdwrap`
 
@@ -119,7 +119,7 @@ params
 sample
 ------
 
-..  t3-function-imgresource::sample
+..  t3-function-imgresource:: sample
 
     :Data type: :t3-data-type:`boolean`
     :Default: 0
@@ -130,7 +130,7 @@ sample
 noScale
 -------
 
-..  t3-function-imgresource::noScale
+..  t3-function-imgresource:: noScale
 
     :Data type: :t3-data-type:`boolean` / :ref:`stdwrap`
     :Default: 0
@@ -163,7 +163,7 @@ noScale
 crop
 ----
 
-..  t3-function-imgresource::crop
+..  t3-function-imgresource:: crop
 
     :Data type: :t3-data-type:`string` / :ref:`stdwrap`
     :Default: not-set (when file/image is a file_reference the crop value of
@@ -192,7 +192,7 @@ crop
 cropVariant
 -----------
 
-..  t3-function-imgresource::cropVariant
+..  t3-function-imgresource:: cropVariant
 
     :Data type: :t3-data-type:`string`
     :Default: default
@@ -219,7 +219,7 @@ cropVariant
 frame
 -----
 
-..  t3-function-imgresource::frame
+..  t3-function-imgresource:: frame
 
     :Data type: :t3-data-type:`integer` / :ref:`stdwrap`
 
@@ -230,7 +230,7 @@ frame
 import
 ------
 
-..  t3-function-imgresource::import
+..  t3-function-imgresource:: import
 
     :Data type: :t3-data-type:`path` / :ref:`stdwrap`
 
@@ -255,7 +255,7 @@ import
 treatIdAsReference
 ------------------
 
-..  t3-function-imgresource::treatIdAsReference
+..  t3-function-imgresource:: treatIdAsReference
 
     :Data type: :t3-data-type:`boolean` / :ref:`stdwrap`
     :Default: 0
@@ -267,7 +267,7 @@ treatIdAsReference
 maxW
 ----
 
-..  t3-function-imgresource::maxW
+..  t3-function-imgresource:: maxW
 
     :Data type: :t3-data-type:`pixels` / :ref:`stdwrap`
 
@@ -276,7 +276,7 @@ maxW
 maxH
 ----
 
-..  t3-function-imgresource::maxH
+..  t3-function-imgresource:: maxH
 
     :Data type: :t3-data-type:`pixels` / :ref:`stdwrap`
 
@@ -285,7 +285,7 @@ maxH
 minW
 ----
 
-..  t3-function-imgresource::minW
+..  t3-function-imgresource:: minW
 
     :Data type: :t3-data-type:`pixels` / :ref:`stdwrap`
 
@@ -294,7 +294,7 @@ minW
 minH
 ----
 
-..  t3-function-imgresource::minH
+..  t3-function-imgresource:: minH
 
     :Data type: :t3-data-type:`pixels` / :ref:`stdwrap`
 
@@ -303,7 +303,7 @@ minH
 stripProfile
 ------------
 
-..  t3-function-imgresource::   stripProfile
+..  t3-function-imgresource::    stripProfile
 
     :Data type:    :t3-data-type:`boolean`
     :Default:    0
@@ -328,14 +328,14 @@ stripProfile
 Masking (m)
 -----------
 
-..  t3-function-imgresource::Masking:
+..  t3-function-imgresource:: Masking:
 
     (Black hides, white shows)
 
 m.mask
 ~~~~~~
 
-..  t3-function-imgresource::m.mask
+..  t3-function-imgresource:: m.mask
 
     :Data type: :t3-data-type:`imgResource`
 
@@ -347,7 +347,7 @@ m.mask
 m.bgImg
 ~~~~~~~
 
-..  t3-function-imgresource::m.bgImg
+..  t3-function-imgresource:: m.bgImg
 
     :Data type: :t3-data-type:`imgResource`
 
@@ -356,7 +356,7 @@ m.bgImg
 m.bottomImg
 ~~~~~~~~~~~
 
-..  t3-function-imgresource::m.bottomImg
+..  t3-function-imgresource:: m.bottomImg
 
     :Data type: :t3-data-type:`imgResource`
 
@@ -374,7 +374,7 @@ m.bottomImg
 m.bottomImg\_mask
 ~~~~~~~~~~~~~~~~~
 
-..  t3-function-imgresource::m.bottomImg\_mask
+..  t3-function-imgresource:: m.bottomImg_mask
 
     :Data type: :t3-data-type:`imgResource`
 
