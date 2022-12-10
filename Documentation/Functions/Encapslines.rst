@@ -39,7 +39,7 @@ Properties
 encapsTagList
 -------------
 
-..  t3-function-encapslines::encapsTagList
+..  t3-function-encapslines:: encapsTagList
 
     :Data type: list of strings
 
@@ -68,7 +68,7 @@ encapsTagList
 remapTag.[*tagname*]
 --------------------
 
-..  t3-function-encapslines::remapTag
+..  t3-function-encapslines:: remapTag
 
     :Data type: array of :t3-data-type:`string`
 
@@ -94,7 +94,7 @@ remapTag.[*tagname*]
 addAttributes.[*tagname*]
 -------------------------
 
-..  t3-function-encapslines::addAttributes
+..  t3-function-encapslines:: addAttributes
 
     :Data type: *(array of strings)*
     :Default: Always override/set the value of the attributes.
@@ -128,7 +128,7 @@ addAttributes.[*tagname*]
 removeWrapping
 --------------
 
-..  t3-function-encapslines::removeWrapping
+..  t3-function-encapslines:: removeWrapping
 
     :Data type: :t3-data-type:`boolean`
 
@@ -157,7 +157,7 @@ removeWrapping
 wrapNonWrappedLines
 -------------------
 
-..  t3-function-encapslines::wrapNonWrappedLines
+..  t3-function-encapslines:: wrapNonWrappedLines
 
     :Data type: :ref:`stdwrap-wrap`
 
@@ -187,7 +187,7 @@ wrapNonWrappedLines
 innerStdWrap\_all
 -----------------
 
-..  t3-function-encapslines::innerStdWrap\_all
+..  t3-function-encapslines:: innerStdWrap_all
 
     :Data type: :ref:`stdWrap`
 
@@ -197,7 +197,7 @@ innerStdWrap\_all
 encapsLinesStdWrap.[*tagname*]
 ------------------------------
 
-..  t3-function-encapslines::encapsLinesStdWrap
+..  t3-function-encapslines:: encapsLinesStdWrap
 
     :Data type: array of string / :ref:`stdWrap`
 
@@ -208,7 +208,7 @@ encapsLinesStdWrap.[*tagname*]
 defaultAlign
 ------------
 
-..  t3-function-encapslines::defaultAlign
+..  t3-function-encapslines:: defaultAlign
 
     :Data type: :t3-data-type:`string` / :ref:`stdWrap`
 
@@ -219,7 +219,7 @@ defaultAlign
 nonWrappedTag
 -------------
 
-..  t3-function-encapslines::nonWrappedTag
+..  t3-function-encapslines:: nonWrappedTag
 
     :Data type: :typoscript:`tagname`
 
