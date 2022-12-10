@@ -201,20 +201,20 @@ where
 
     WHERE clause without the word "WHERE".
 
-   ..  rubric:: Example
+    ..  rubric:: Example
 
-   ..  code-block:: typoscript
-       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-       where = (title LIKE '%SOMETHING%' AND NOT doktype)
+        where = (title LIKE '%SOMETHING%' AND NOT doktype)
 
-   Use `{#fieldname}` to make the database
-   framework quote these fields:
+    Use `{#fieldname}` to make the database
+    framework quote these fields:
 
-   ..  code-block:: typoscript
-       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-       where = ({#title} LIKE {#%SOMETHING%} AND NOT {#doktype})
+        where = ({#title} LIKE {#%SOMETHING%} AND NOT {#doktype})
 
 languageField
 -------------
