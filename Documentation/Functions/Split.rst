@@ -37,7 +37,7 @@ max
 
     :Data type: :t3-data-type:`integer` / :ref:`stdwrap`
 
-   Maximum number of splits.
+    Maximum number of splits.
 
 min
 ---
