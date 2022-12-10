@@ -42,17 +42,17 @@ decimals
 dec\_point
 ----------
 
-..  t3-function-numberformat:: dec\_point
+..  t3-function-numberformat:: dec_point
 
     :Data type: :t3-data-type:`string` / :ref:`stdWrap <stdwrap>`
     :Default: .
 
-   Character that divides the decimals from the rest of the number.
+    Character that divides the decimals from the rest of the number.
 
 thousands\_sep
 --------------
 
-..  t3-function-numberformat:: thousands\_sep
+..  t3-function-numberformat:: thousands_sep
 
     :Data type: :t3-data-type:`string` / :ref:`stdwrap`
     :Default: ,
