@@ -252,7 +252,7 @@ imageExtension
 imgResource
 ===========
 
-.. todo: This seems to be a suplicate of Documentation/Functions/Imgresource.rst?
+.. todo: This seems to be a duplicate of Documentation/Functions/Imgresource.rst?
 
 ..  t3-data-type:: imgResource
 
