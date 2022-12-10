@@ -67,7 +67,12 @@ addItems
    records: If the select box is a relation to another table. In that case only existing records
    will be preserved.
 
-   The subkey `icon` will allow to add your own icons to new values.
+   The subkey :typoscript:`icon` will allow to add your own icons to new values.
+
+   ..  versionadded:: 12.1
+       The subkey :typoscript:`group` can be used to insert a new element into an
+       existing select item group by settings the value to the group identifier.
+       The grouping is usually displayed in select fields with groups available.
 
    This property is available for various levels:
 
@@ -93,9 +98,10 @@ addItems
       TCEFORM.tt_content.header_layout {
          # Add another header_layout option:
          addItems.1525215969 = Another header layout
-         # Add another one with localized label and icon
+         # Add another one with localized label, icon and group
          addItems.1525216023 = LLL:EXT:my_ext/Resources/Private/Language/locallang.xlf:header_layout
          addItems.1525216023.icon = EXT:my_ext/icon.png
+         addItems.1525216023.group = special
       }
 
       Instead of adding files by path, icon identifiers should be used.
