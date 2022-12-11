@@ -103,7 +103,7 @@ height
 
     :Data type: :t3-data-type:`pixels` / :ref:`stdwrap`
 
-    See :t3-function-imgresource:`imgresource-width`
+    See :t3-function-imgresource:`width`
 
 params
 ------
@@ -175,6 +175,7 @@ crop
     the file reference is used)
 
     ..  rubric:: Examples
+
     Disable cropping set by the editor in the back-end:
 
     ..  code-block:: typoscript

@@ -19,7 +19,7 @@ in the :php:`$GLOBALS['TCA']`.
 
     Do not use GET or POST data like GPvar directly with this object!
     Avoid SQL injections! Don't trust any external data! Secure
-    any unknown data, for example with :ref:`intval <stdwrap-intval>`.
+    any unknown data, for example with :t3-function-stdwrap:`intval`.
 
 ..  contents::
     :local:
@@ -45,7 +45,8 @@ uidInList
     *current record*.
 
     ..  attention::
-        :ref:`pidInList` defaults to :typoscript:`this`. Therefore by default only records
+        :t3-function-select:`pidInList` defaults to :typoscript:`this`.
+        Therefore by default only records
         from the current page are available for :typoscript:`uidInList`. If records
         should be fetched globally, :typoscript:`pidInList = 0` should also be set.
 
