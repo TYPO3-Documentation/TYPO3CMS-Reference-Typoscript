@@ -8,10 +8,11 @@
 imageLinkWrap
 =============
 
-.. index:: imageLinkWrap; Properties
 
 .. contents::
    :local:
+
+.. index:: imageLinkWrap; Properties
 
 Properties
 ==========
@@ -19,44 +20,33 @@ Properties
 enable
 ------
 
-:aspect:`Property`
-    imageLinkWrap.enable
+..  t3-function-imagelinkwrap:: imageLinkWrap.enable
 
-:aspect:`Data type`
-    :t3-data-type:`boolean` / :ref:`stdwrap`
+    :Data type: :t3-data-type:`boolean` / :ref:`stdwrap`
 
-:aspect:`Default`
-    0
+    :Default: 0
 
-:aspect:`Description`
     Whether or not to link the image. Must be set to True to make
     :typoscript:`imageLinkWrap` do anything at all.
 
 file
 ----
 
-:aspect:`Property`
-    imageLinkWrap.file
+..  t3-function-imagelinkwrap:: imageLinkWrap.file
 
-:aspect:`Data type`
-    ref:`stdwrap`
+    :Data type: ref:`stdwrap`
 
-:aspect:`Description`
     Apply :ref:`stdwrap` functionality to the file path.
 
 width
 -----
 
-:aspect:`Property`
-    imageLinkWrap.width
+..  t3-function-imagelinkwrap:: imageLinkWrap.width
 
-:aspect:`Data type`
-    :t3-data-type:`positive integer` / :ref:`stdwrap`
+    :Data type: :t3-data-type:`positive integer` / :ref:`stdwrap`
 
-:aspect:`Default`
-    0
+    :Default: 0
 
-:aspect:`Description`
     Width of the image to be shown in pixels. If you add "m" to
     :typoscript:`width` or :typoscript:`height` or both then the width and
     height parameters will be interpreted as maximum and proportions of the
@@ -65,69 +55,52 @@ width
 height
 ------
 
-:aspect:`Property`
-    imageLinkWrap.height
+..  t3-function-imagelinkwrap:: imageLinkWrap.height
 
-:aspect:`Data type`
-    :t3-data-type:`positive integer` / :ref:`stdwrap`
+    :Data type: :t3-data-type:`positive integer` / :ref:`stdwrap`
 
-:aspect:`Default`
-    0
+    :Default: 0
 
-:aspect:`Description`
     Width of the image to be shown in pixels. If you add "m" to
     :typoscript:`width` or :typoscript:`height` or both then the width and
     height parameters will be interpreted as maximum and proportions of the
     image will be preserved.
 
-.. index:: imageLinkWrap; effects
-
 effects
 -------
 
-:aspect:`Property`
-    imageLinkWrap.effects
+..  t3-function-imagelinkwrap:: imageLinkWrap.effects
 
-:aspect:`Data type`
-    like :ref:`gifbuilder-effect` of :ref:`GIFBUILDER`
+    :Data type: like :ref:`gifbuilder-effect` of :ref:`GIFBUILDER`
 
-:aspect:`Default`
-    0
+    :Default: 0
 
-:aspect:`Description`
     Apply image effects to the preview image.
 
 Example for effects
 ~~~~~~~~~~~~~~~~~~~
 
-.. code-block:: typoscript
+..  code-block:: typoscript
 
-   imageLinkWrap {
-      effects = gamma=1.3 | sharpen=80 | solarize=70
-         # effects only works when directImageLink is FALSE
-      directImageLink = 0
-         # at most 800 pixels wide. Keep proportions.
-      width = 800m
-         # at most 600 pixels wide. Keep proportions.
-      height = 600m
-   }
-
-
-.. index:: imageLinkWrap; sample
+    imageLinkWrap {
+        effects = gamma=1.3 | sharpen=80 | solarize=70
+           # effects only works when directImageLink is FALSE
+        directImageLink = 0
+           # at most 800 pixels wide. Keep proportions.
+        width = 800m
+           # at most 600 pixels wide. Keep proportions.
+        height = 600m
+    }
 
 sample
 ------
 
-:aspect:`Property`
-    imageLinkWrap.sample
+..  t3-function-imagelinkwrap:: imageLinkWrap.sample
 
-:aspect:`Data type`
-    :t3-data-type:`positive integer` / :ref:`stdwrap`
+    :Data type: :t3-data-type:`positive integer` / :ref:`stdwrap`
 
-:aspect:`Default`
-    0
+    :Default: 0
 
-:aspect:`Description`
     :typoscript:`sample` is a switch which determines how the image
     processor (often GraphicsMagick or ImageMagick) calculates the preview
     image. If :typoscript:`sample` is true then `- sample` is used with
@@ -140,13 +113,10 @@ sample
 title
 -----
 
-:aspect:`Property`
-    imageLinkWrap.title
+..  t3-function-imagelinkwrap:: imageLinkWrap.title
 
-:aspect:`Data type`
-    :t3-data-type:`string` / :ref:`stdwrap`
+    :Data type: :t3-data-type:`string` / :ref:`stdwrap`
 
-:aspect:`Description`
     Specifies the html-page-title of the preview window.
     Needs :typoscript:`JSwindow = 1`.
 
@@ -154,13 +124,10 @@ title
 bodyTag
 -------
 
-:aspect:`Property`
-    imageLinkWrap.bodyTag
+..  t3-function-imagelinkwrap:: imageLinkWrap.bodyTag
 
-:aspect:`Data type`
-    :t3-data-type:`tag` / :ref:`stdwrap`
+    :Data type: :t3-data-type:`tag` / :ref:`stdwrap`
 
-:aspect:`Description`
     This is the `<body>`-tag of the preview window.
     Needs :typoscript:`JSwindow = 1`.
 
@@ -180,29 +147,22 @@ Example setting a bodytag for the preview window
 wrap
 ----
 
-:aspect:`Property`
-    imageLinkWrap.bodyTag
+..  t3-function-imagelinkwrap:: imageLinkWrap.wrap
 
-:aspect:`Data type`
-    :t3-data-type:`wrap`
+    :Data type: :t3-data-type:`wrap`
 
-:aspect:`Description`
     This wrap is placed around the `<img>`-tag in the preview window.
     Needs :typoscript:`JSwindow = 1`.
 
 target
 ------
 
-:aspect:`Property`
-    imageLinkWrap.target
+..  t3-function-imagelinkwrap:: imageLinkWrap.target
 
-:aspect:`Data type`
-    :t3-data-type:`target` / :ref:`stdwrap`
+    :Data type: :t3-data-type:`target` / :ref:`stdwrap`
 
-:aspect:`Default`
-    :typoscript:`thePicture`
+    :Default: :typoscript:`thePicture`
 
-:aspect:`Description`
     This specifies the `target` attribute of the link. The attribute
     will only be created if the current :ref:`Doctype <setup-config-doctype>`
     allows it. Needs :typoscript:`JSwindow = 1`. Default: 'thePicture'.
@@ -220,59 +180,42 @@ Example: Use an alternative target for the JavaScript Window
     imageLinkWrap.JSwindow = 1
     imageLinkWrap.JSwindow.newWindow = 1
 
-
-.. index:: imageLinkWrap; JSwindow
-
 JSwindow
 --------
 
-:aspect:`Property`
-    imageLinkWrap.JSwindow
+..  t3-function-imagelinkwrap:: imageLinkWrap.JSwindow
 
-:aspect:`Data type`
-    :t3-data-type:`boolean` / :ref:`stdwrap`
+    :Data type: :t3-data-type:`boolean` / :ref:`stdwrap`
 
-:aspect:`Default`
-    0
+    :Default: 0
 
-:aspect:`Description`
     If true (:typoscript:`JSwindow = 1`) Javascript will be used to open
     the image in a new window. The window is automatically resized to match
     the dimensions of the image.
 
-
 JSwindow.expand
 ---------------
 
-:aspect:`Property`
-    imageLinkWrap.JSwindow.expand
+..  t3-function-imagelinkwrap:: imageLinkWrap.JSwindow.expand
 
-:aspect:`Data type`
-    :typoscript:`x`, :typoscript:`y` / :ref:`stdwrap`
+    :Data type: :typoscript:`x`, :typoscript:`y` / :ref:`stdwrap`
 
-:aspect:`Default`
-    0
+    :Default: 0
 
-:aspect:`Description`
     :typoscript:`x` and :typoscript:`x` are of data type
     :t3-data-type:`integer`. The values are added to the width and height
     of the preview image when calculating the width and height of the
     preview window.
 
-
 JSwindow.newWindow
 ------------------
 
-:aspect:`Property`
-    imageLinkWrap.JSwindow.expand
+..  t3-function-imagelinkwrap:: JSwindow.newWindow
 
-:aspect:`Data type`
-    :t3-data-type:`boolean` / :ref:`stdwrap`
+    :Data type: :t3-data-type:`boolean` / :ref:`stdwrap`
 
-:aspect:`Default`
-    0
+    :Default: 0
 
-:aspect:`Description`
     If the :ref:`Doctype <setup-config-doctype>` allows the :t3-data-type:`target`
     attribute then the image will be opened in a window with the name given
     by `target`. If that windows is kept open and the next image with the
@@ -286,13 +229,10 @@ JSwindow.newWindow
 JSwindow.altUrl
 ---------------
 
-:aspect:`Property`
-    imageLinkWrap.JSwindow.altUrl
+..  t3-function-imagelinkwrap:: imageLinkWrap.JSwindow.altUrl
 
-:aspect:`Data type`
-    :t3-data-type:`string` / :ref:`stdwrap`
+    :Data type: :t3-data-type:`string` / :ref:`stdwrap`
 
-:aspect:`Description`
     If this returns anything then it is used as URL of the preview window.
     Otherwise the default "showpic" script will be used.
 
@@ -300,16 +240,12 @@ JSwindow.altUrl
 JSwindow.altUrl\_noDefaultParams
 --------------------------------
 
-:aspect:`Property`
-    imageLinkWrap.JSwindow.altUrl_noDefaultParams
+..  t3-function-imagelinkwrap:: imageLinkWrap.JSwindow.altUrl_noDefaultParams
 
-:aspect:`Data type`
-    :t3-data-type:`boolean` / :ref:`stdwrap`
+    :Data type: :t3-data-type:`boolean` / :ref:`stdwrap`
 
-:aspect:`Default`
-    0
+    :Default: 0
 
-:aspect:`Description`
     If true (:typoscript:`JSwindow.altUrl_noDefaultParams = 1`) then the
     image parameters are not automatically appended to the
     :typoscript:`altUrl`. This is useful if you want to add them yourself
@@ -319,13 +255,10 @@ JSwindow.altUrl\_noDefaultParams
 typolink
 --------
 
-:aspect:`Property`
-    imageLinkWrap.typolink
+..  t3-function-imagelinkwrap:: imageLinkWrap.typolink
 
-:aspect:`Data type`
-    :ref:`typolink` / :ref:`stdwrap`
+    :Data type: :ref:`typolink` / :ref:`stdwrap`
 
-:aspect:`Description`
     If this returns anything it will be used as link and override
     everything else.
 
@@ -333,16 +266,12 @@ typolink
 directImageLink
 ---------------
 
-:aspect:`Property`
-    imageLinkWrap.directImageLink
+..  t3-function-imagelinkwrap:: imageLinkWrap.directImageLink
 
-:aspect:`Data type`
-    :t3-data-type:`boolean` / :ref:`stdwrap`
+    :Data type: :t3-data-type:`boolean` / :ref:`stdwrap`
 
-:aspect:`Default`
-    0
+    :Default: 0
 
-:aspect:`Description`
     If true (:typoscript:`directImageLink = 1`) then a link will be
     generated that points directly to the image file. This means that no
     "showpic" script will be used.
@@ -351,13 +280,10 @@ directImageLink
 linkParams
 ----------
 
-:aspect:`Property`
-    imageLinkWrap.linkParams
+..  t3-function-imagelinkwrap:: imageLinkWrap.linkParams
 
-:aspect:`Data type`
-    :ref:`typolink` / :ref:`stdwrap`
+    :Data type: :ref:`typolink` / :ref:`stdwrap`
 
-:aspect:`Description`
     When the direct link for the preview image is calculated all
     attributes of :typoscript:`linkParams` are used as settings for the
     :ref:`typolink` function. In other words: Use the same parameters
@@ -385,13 +311,10 @@ resized images in the frontend. More complete examples are
 stdWrap
 -------
 
-:aspect:`Property`
-    imageLinkWrap.stdWrap
+..  t3-function-imagelinkwrap:: imageLinkWrap.stdWrap
 
-:aspect:`Data type`
-    :ref:`stdwrap`
+    :Data type: :ref:`stdwrap`
 
-:aspect:`Description`
     This adds :ref:`stdwrap` functionality to the almost final
     result.
 
@@ -420,12 +343,12 @@ special values.
 Implementation
 ==============
 
-- `imageLinkWrap <https://github.com/TYPO3/typo3/blob/83d36733d7700a49a2d312d09c93ab4d87953e9a/typo3/sysext/frontend/Classes/ContentObject/ContentObjectRenderer.php#L939>`__ in API,
-- method `imageLinkWrap` in
-- class :php:`ContentObjectRenderer` in
-- namespace :php:`namespace TYPO3\CMS\Frontend\ContentObject;` in
-- file :file:`ContentObjectRenderer.php` in
-- folder :file:`typo3/sysext/frontend/Classes/ContentObject`.
+-   `imageLinkWrap <https://github.com/TYPO3/typo3/blob/83d36733d7700a49a2d312d09c93ab4d87953e9a/typo3/sysext/frontend/Classes/ContentObject/ContentObjectRenderer.php#L939>`__ in API,
+-   method `imageLinkWrap` in
+-   class :php:`ContentObjectRenderer` in
+-   namespace :php:`namespace TYPO3\CMS\Frontend\ContentObject;` in
+-   file :file:`ContentObjectRenderer.php` in
+-   folder :file:`typo3/sysext/frontend/Classes/ContentObject`.
 
 .. _imagelinkwrap-examples:
 
@@ -437,41 +360,41 @@ Examples for imageLinkWrap
 Basic example: Create a link to the showpic script
 --------------------------------------------------
 
-.. code-block:: typoscript
+..  code-block:: typoscript
 
-   10 = IMAGE
-   10 {
-      # point to the image
-      file = fileadmin/demo/lorem_ipsum/images/a4.jpg
-      # make it rather small
-      file.width = 80
-      # add a link to tx_cms_showpic.php that shows the original image
-      imageLinkWrap = 1
-      imageLinkWrap {
-         enable = 1
-         # JSwindow = 1
-      }
-   }
+    10 = IMAGE
+    10 {
+       # point to the image
+       file = fileadmin/demo/lorem_ipsum/images/a4.jpg
+       # make it rather small
+       file.width = 80
+       # add a link to tx_cms_showpic.php that shows the original image
+       imageLinkWrap = 1
+       imageLinkWrap {
+          enable = 1
+          # JSwindow = 1
+       }
+    }
 
 .. _imageLinkWrap-basic-example-directImageLink:
 
 Basic example: Link directly to the original image
 --------------------------------------------------
 
-.. code-block:: typoscript
+..  code-block:: typoscript
 
-   10 = IMAGE
-   10 {
-      file = fileadmin/demo/lorem_ipsum/images/a4.jpg
-      file.width = 80
-      imageLinkWrap = 1
-      imageLinkWrap {
-         enable = 1
-         # link directly to the image
-         directImageLink = 1
-         # JSwindow = 1
-      }
-   }
+    10 = IMAGE
+    10 {
+       file = fileadmin/demo/lorem_ipsum/images/a4.jpg
+       file.width = 80
+       imageLinkWrap = 1
+       imageLinkWrap {
+          enable = 1
+          # link directly to the image
+          directImageLink = 1
+          # JSwindow = 1
+       }
+    }
 
 
 .. _imageLinkWrap-example-popup-window:
@@ -479,38 +402,38 @@ Basic example: Link directly to the original image
 Example: Larger display in a popup window
 -----------------------------------------
 
-.. code-block:: typoscript
+..  code-block:: typoscript
 
-   page = PAGE
-   page.10 = IMAGE
-   page.10 {
-      # the relative path to the image
-      # find the images in the 'lorem_ipsum' extension an copy them here
-      file = fileadmin/demo/lorem_ipsum/images/b1.jpg
-      # let's make the normal image small
-      file.width = 80
-      # yes, we want to have a preview link on the image
-      imageLinkWrap = 1
-      imageLinkWrap {
-         # must be TRUE for anything to happen
-         enable = 1
-         # "m" = at most 400px wide - keep proportions
-         width = 400m
-         # "m" = at most 300px high - keep proportions
-         height = 300
-         # let's use fancy Javascript features
-         JSwindow = 1
-         # black background
-         bodyTag = <body style="background-color:black; margin:0; padding:0;">
-         # place a Javascript "close window" link onto the image
-         wrap = <a href="javascript:close();"> | </a>
-         # let there be a new and unique window for each image
-         JSwindow.newWindow = 1
-         # make the preview window 30px wider and 20px higher
-         # than what the image requires
-         JSwindow.expand = 30,20
-      }
-   }
+    page = PAGE
+    page.10 = IMAGE
+    page.10 {
+       # the relative path to the image
+       # find the images in the 'lorem_ipsum' extension an copy them here
+       file = fileadmin/demo/lorem_ipsum/images/b1.jpg
+       # let's make the normal image small
+       file.width = 80
+       # yes, we want to have a preview link on the image
+       imageLinkWrap = 1
+       imageLinkWrap {
+          # must be TRUE for anything to happen
+          enable = 1
+          # "m" = at most 400px wide - keep proportions
+          width = 400m
+          # "m" = at most 300px high - keep proportions
+          height = 300
+          # let's use fancy Javascript features
+          JSwindow = 1
+          # black background
+          bodyTag = <body style="background-color:black; margin:0; padding:0;">
+          # place a Javascript "close window" link onto the image
+          wrap = <a href="javascript:close();"> | </a>
+          # let there be a new and unique window for each image
+          JSwindow.newWindow = 1
+          # make the preview window 30px wider and 20px higher
+          # than what the image requires
+          JSwindow.expand = 30,20
+       }
+    }
 
 
 .. _imageLinkWrap-example-printlink:
@@ -518,24 +441,24 @@ Example: Larger display in a popup window
 Example: Printlink
 ------------------
 
-.. code-block:: typoscript
+..  code-block:: typoscript
 
-   5 = IMAGE
-   5 {
-      file = fileadmin/images/printlink.png
-      imageLinkWrap = 1
-      imageLinkWrap {
-         enable = 1
-         typolink {
-            target = _blank
-            parameter.data = page:alias // TSFE:id
-            additionalParams = &type=98
-         }
-      }
-      altText = print version
-      titleText = Open print version of this page in a new window
-      params = class="printlink"
-   }
+    5 = IMAGE
+    5 {
+       file = fileadmin/images/printlink.png
+       imageLinkWrap = 1
+       imageLinkWrap {
+          enable = 1
+          typolink {
+             target = _blank
+             parameter.data = page:alias // TSFE:id
+             additionalParams = &type=98
+          }
+       }
+       altText = print version
+       titleText = Open print version of this page in a new window
+       params = class="printlink"
+    }
 
 
 
@@ -547,26 +470,26 @@ Example: Images in lightbox "fancybox"
 Let's follow this `lightbox.ts example <https://github.com/georgringer/modernpackage/blob/master/Resources/Private/TypoScript/content/lightbox.ts>`__
 and use `fancybox <http://fancybox.net>`_:
 
-.. code-block:: typoscript
+..  code-block:: typoscript
 
-   # Add the CSS and JS files
-   page {
-      includeCSS {
-         file99 = fileadmin/your-fancybox.css
-      }
-      includeJSFooter {
-         fancybox = fileadmin/your-fancybox.js
-      }
-   }
+    # Add the CSS and JS files
+    page {
+       includeCSS {
+          file99 = fileadmin/your-fancybox.css
+       }
+       includeJSFooter {
+          fancybox = fileadmin/your-fancybox.js
+       }
+    }
 
-   # Change the default rendering of images to match lightbox requirements
-   tt_content.image.20.1.imageLinkWrap {
-      JSwindow = 0
-      directImageLink = 1
-      linkParams.ATagParams {
-         dataWrap = class= "lightbox" data-fancybox-group="lightbox{field:uid}"
-      }
-   }
+    # Change the default rendering of images to match lightbox requirements
+    tt_content.image.20.1.imageLinkWrap {
+       JSwindow = 0
+       directImageLink = 1
+       linkParams.ATagParams {
+          dataWrap = class= "lightbox" data-fancybox-group="lightbox{field:uid}"
+       }
+    }
 
 .. _imageLinkWrap-example-topup:
 
@@ -578,26 +501,25 @@ In this `blog post <https://www.interaktionsdesigner.de/2009/typo3-klickvergross
 `jQuery <https://jquery.com/>`__
 `TopUp lightbox <https://jquery-plugins.net/topup-jquery-lightbox-pop-up-plugin>`__:
 
-.. code-block:: typoscript
+..  code-block:: typoscript
 
-   tt_content.image.20.1.imageLinkWrap >
-   tt_content.image.20.1.imageLinkWrap = 1
-   tt_content.image.20.1.imageLinkWrap {
-      enable = 1
-      typolink {
-         # directly link to the recent image
-         parameter.cObject = IMG_RESOURCE
-         parameter.cObject.file.import.data = TSFE:lastImageInfo|origFile
-         parameter.cObject.file.maxW = {$styles.content.imgtext.maxW}
-         parameter.override.listNum.stdWrap.data = register : IMAGE_NUM_CURRENT
-         title.field = imagecaption // title
-         title.split.token.char = 10
-         title.if.isTrue.field = imagecaption // header
-         title.split.token.char = 10
-         title.split.returnKey.data = register : IMAGE_NUM_CURRENT
-         parameter.cObject = IMG_RESOURCE
-         parameter.cObject.file.import.data = TSFE:lastImageInfo|origFile
-         ATagParams = target="_blank"
-      }
-   }
-
+    tt_content.image.20.1.imageLinkWrap >
+    tt_content.image.20.1.imageLinkWrap = 1
+    tt_content.image.20.1.imageLinkWrap {
+       enable = 1
+       typolink {
+          # directly link to the recent image
+          parameter.cObject = IMG_RESOURCE
+          parameter.cObject.file.import.data = TSFE:lastImageInfo|origFile
+          parameter.cObject.file.maxW = {$styles.content.imgtext.maxW}
+          parameter.override.listNum.stdWrap.data = register : IMAGE_NUM_CURRENT
+          title.field = imagecaption // title
+          title.split.token.char = 10
+          title.if.isTrue.field = imagecaption // header
+          title.split.token.char = 10
+          title.split.returnKey.data = register : IMAGE_NUM_CURRENT
+          parameter.cObject = IMG_RESOURCE
+          parameter.cObject.file.import.data = TSFE:lastImageInfo|origFile
+          ATagParams = target="_blank"
+       }
+    }

@@ -19,63 +19,46 @@ strPad uses the PHP function :php:`str_pad()` for the operation.
 Properties
 ==========
 
-.. _strpad-length:
-
 length
 ------
 
-:aspect:`Property`
-   length
+..  t3-function-strpad:: length
 
-:aspect:`Data type`
-   :t3-data-type:`integer` / :ref:`stdwrap`
+    :Data type: :t3-data-type:`integer` / :ref:`stdwrap`
 
-:aspect:`Description`
-   The length of the output string. If the value is negative, less
-   than, or equal to the length of the input value, no padding
-   takes place.
+    :Default: 0
 
-:aspect:`Default`
-   0
-
-.. _strpad-padwith:
+    The length of the output string. If the value is negative, less
+    than, or equal to the length of the input value, no padding
+    takes place.
 
 padWith
 -------
 
-:aspect:`Property`
-   padWith
+..  t3-function-strpad:: padWith
 
-:aspect:`Data type`
-   :t3-data-type:`string` / :ref:`stdwrap`
+    :Data type: :t3-data-type:`string` / :ref:`stdwrap`
+    :Default: (space character)
 
-:aspect:`Description`
-   The character(s) to pad with. The value of :ref:`strpad-padWith` may be
-   truncated, if the required number of padding characters cannot
-   be evenly divided by the length of the value of :typoscript:`padWith`. Note
-   that leading and trailing spaces of :typoscript:`padWith` are stripped! If
-   you want to pad with spaces, omit this option.
 
-:aspect:`Default`
-   (space character)
-
-.. _strpad-type:
+    The character(s) to pad with. The value of :typoscript:`padWith` may be
+    truncated, if the required number of padding characters cannot
+    be evenly divided by the length of the value of :typoscript:`padWith`. Note
+    that leading and trailing spaces of :typoscript:`padWith` are stripped! If
+    you want to pad with spaces, omit this option.
 
 type
 ----
 
-:aspect:`Property`
-   type
+..  t3-function-strpad:: type
 
-:aspect:`Data type`
-   *(list of keywords)* / :ref:`stdwrap`
+    :Data type: *(list of keywords)* / :ref:`stdwrap`
+    :Default: right
 
-:aspect:`Description`
-   The side(s) of the input value, on which the padding should be
-   added. Possible keywords are "left", "right" or "both".
 
-:aspect:`Default`
-   right
+    The side(s) of the input value, on which the padding should be
+    added. Possible keywords are "left", "right" or "both".
+
 
 .. _strpad-examples:
 
@@ -83,16 +66,16 @@ Examples
 ========
 
 
-.. code-block:: typoscript
-   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-   10 = TEXT
-   # The input value is 34 signs long.
-   10.value = TYPO3 - inspiring people to share.
-   10.value.strPad {
-        length = 37
-        padWith = =
-        type = both
-   }
+    10 = TEXT
+    # The input value is 34 signs long.
+    10.value = TYPO3 - inspiring people to share.
+    10.value.strPad {
+         length = 37
+         padWith = =
+         type = both
+    }
 
 This results in "=TYPO3 - inspiring people to share.==".

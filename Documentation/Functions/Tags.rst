@@ -20,62 +20,58 @@ The best known is the "link" tag, which is used to create links.
 Properties
 ==========
 
-.. _tags-array-of-strings:
-
 *(array of strings)*
 --------------------
 
-:aspect:`Property`
-   *(array of strings)*
+..  t3-function-tags:: array of strings
 
-:aspect:`Data type`
-   :ref:`data-type-cobject`
+    :Data type: :ref:`data-type-cobject`
 
-:aspect:`Description`
-   Every entry in the array of strings corresponds to a tag, that will
-   be parsed. The elements **must** be in lowercase.
+    Every entry in the array of strings corresponds to a tag, that will
+    be parsed. The elements **must** be in lowercase.
 
-   Every entry must be set to a content object.
+    Every entry must be set to a content object.
 
-   :typoscript:`current` is set to the content of the tag, eg :html:`<TAG>content</TAG>`:
-   here :typoscript:`current` is set to :typoscript:`content`. It can be used with
-   :typoscript:`stdWrap.current = 1`.
+    :typoscript:`current` is set to the content of the tag, eg :html:`<TAG>content</TAG>`:
+    here :typoscript:`current` is set to :typoscript:`content`. It can be used with
+    :typoscript:`stdWrap.current = 1`.
 
-   **Parameters:**
+    **Parameters:**
 
-   Parameters of the tag are set in :php:`$cObj->parameters` (key is lowercased):
+    Parameters of the tag are set in :php:`$cObj->parameters` (key is lowercased):
 
-   .. code-block:: html
+    .. code-block:: html
 
-      <TAG COLOR="red">content</TAG>
+       <TAG COLOR="red">content</TAG>
 
-   This sets :php:`$cObj->parameters['color'] = 'red'`.
+    This sets :php:`$cObj->parameters['color'] = 'red'`.
 
-   :php:`$cObj->parameters['allParams']` is automatically set to the whole
-   parameter-string of the tag. Here it is :html:`color="red"`
+    :php:`$cObj->parameters['allParams']` is automatically set to the whole
+    parameter-string of the tag. Here it is :html:`color="red"`
 
-   **Special properties for each content object:**
+    **Special properties for each content object:**
 
-   **[cObject].stripNL:** :t3-data-type:`boolean` option, which tells :typoscript:`parseFunc` that
-   newlines before and after the content of the tag should be stripped.
+    **[cObject].stripNL:** :t3-data-type:`boolean` option, which tells :typoscript:`parseFunc` that
+    newlines before and after the content of the tag should be stripped.
 
-   **[cObject].breakoutTypoTagContent:** :t3-data-type:`boolean` option, which tells
-   :ref:`parseFunc` that this block of content is breaking up the nonTypoTag
-   content and that the content after this must be re-wrapped.
+    **[cObject].breakoutTypoTagContent:** :t3-data-type:`boolean` option, which tells
+    :ref:`parseFunc` that this block of content is breaking up the nonTypoTag
+    content and that the content after this must be re-wrapped.
 
-:aspect:`Examples`
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    .. rubric:: Examples
 
-      tags.bold = TEXT
-      tags.bold {
-          stdWrap.current = 1
-          stdWrap.wrap = <p style="font-weight: bold;"> | </p>
-      }
-      tags.bold.stdWrap.stripNL = 1
+    .. code-block:: typoscript
+       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-   This example would e.g. transform :html:`<BOLD>Important!</BOLD>`
-   to :html:`<p style="font-weight: bold;">Important!</p>`.
+       tags.bold = TEXT
+       tags.bold {
+           stdWrap.current = 1
+           stdWrap.wrap = <p style="font-weight: bold;"> | </p>
+       }
+       tags.bold.stdWrap.stripNL = 1
+
+    This example would e.g. transform :html:`<BOLD>Important!</BOLD>`
+    to :html:`<p style="font-weight: bold;">Important!</p>`.
 
 .. _tags-examples:
 

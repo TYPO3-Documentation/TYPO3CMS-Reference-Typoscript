@@ -1,222 +1,146 @@
-.. include:: /Includes.rst.txt
-.. index::
-   Functions; HTMLparser
-   HTMLparser
-.. _htmlparser:
+..  include:: /Includes.rst.txt
+..  index::
+    Functions; HTMLparser
+    HTMLparser
+..  _htmlparser:
 
 ==========
 HTMLparser
 ==========
 
-.. contents::
-   :local:
+..  contents::
+    :local:
 
 Properties
 ==========
 
-.. index:: HTMLparser; allowTags
-.. _htmlparser-allowtags:
-
 allowTags
 ---------
 
-:aspect:`Property`
-   allowTags
+..  t3-function-htmlparser:: allowTags
 
-:aspect:`Data type`
-   list of tags
+    :Data type: list of tags
 
-:aspect:`Description`
-   Default allowed tags
-
-
-.. index:: HTMLparser; stripEmptyTags
-.. _htmlparser-stripemptytags:
+    Default allowed tags
 
 stripEmptyTags
 --------------
 
-:aspect:`Property`
-   stripEmptyTags
+..  t3-function-htmlparser:: stripEmptyTags
 
-:aspect:`Data type`
-   :t3-data-type:`boolean`
+    :Data type: :t3-data-type:`boolean`
 
-:aspect:`Description`
-   Passes the content to PHPs :php:`strip_tags()`.
-
-
-.. index:: HTMLparser; stripEmptyTags.keepTags
-.. _htmlparser-stripemptytags.keeptags:
+    Passes the content to PHPs :php:`strip_tags()`.
 
 stripEmptyTags.keepTags
 -----------------------
 
-:aspect:`Property`
-   stripEmptyTags.keepTags
+..  t3-function-htmlparser:: stripEmptyTags.keepTags
 
-:aspect:`Data type`
-   :t3-data-type:`string`
+    :Data type: :t3-data-type:`string`
 
-:aspect:`Description`
-   Comma separated list of tags to keep when applying :php:`strip_tags()`.
-
-
-.. index:: HTMLparser; tags
-.. _htmlparser-tags.[tagname]:
+    Comma separated list of tags to keep when applying :php:`strip_tags()`.
 
 tags.[tagname]
 --------------
 
-:aspect:`Property`
-   tags.[tagname]
+..  t3-function-htmlparser:: tags
 
-:aspect:`Data type`
-   :t3-data-type:`boolean` / :ref:`htmlparser-tags`
+    :Data type: :t3-data-type:`boolean` / string of :ref:`htmlparser-tags`
 
-:aspect:`Description`
-   Either set this property to `0` or `1` to allow or deny the tag. If you
-   enter :ref:`htmlparser-tags` properties, those will automatically overrule
-   this option, thus it's not needed then.
+    Either set this property to `0` or `1` to allow or deny the tag. If you
+    enter :ref:`htmlparser-tags` properties, those will automatically overrule
+    this option, thus it's not needed then.
 
-   [tagname] in lowercase.
-
-
-.. index:: HTMLparser; localNesting
-.. _htmlparser-localnesting:
+    [tagname] in lowercase.
 
 localNesting
 ------------
 
-:aspect:`Property`
-   localNesting
+..  t3-function-htmlparser:: localNesting
 
-:aspect:`Data type`
-   list of tags, must be among preserved tags
+    :Data type: list of tags, must be among preserved tags
 
-:aspect:`Description`
-   List of tags (among the already set tags), which will be forced to
-   have the nesting-flag set to true
-
-
-.. index:: HTMLparser; globalNesting
-.. _htmlparser-globalnesting:
+    List of tags (among the already set tags), which will be forced to
+    have the nesting-flag set to true
 
 globalNesting
 -------------
 
-:aspect:`Property`
-   globalNesting
+..  t3-function-htmlparser:: globalNesting
 
-:aspect:`Data type`
-   (ibid)
+    :Data type: (ibid)
 
-:aspect:`Description`
-   List of tags (among the already set tags), which will be forced to
-   have the nesting-flag set to "global"
-
-
-.. index:: HTMLparser; rmTagIfNoAttrib
-.. _htmlparser-rmtagifnoattrib:
+    List of tags (among the already set tags), which will be forced to
+    have the nesting-flag set to "global"
 
 rmTagIfNoAttrib
 ---------------
 
-:aspect:`Property`
-   rmTagIfNoAttrib
+..  t3-function-htmlparser:: rmTagIfNoAttrib
 
-:aspect:`Data type`
-   (ibid)
+    :Data type: (ibid)
 
-:aspect:`Description`
-   List of tags (among the already set tags), which will be forced to
-   have the :ref:`htmlparser-rmTagIfNoAttrib` set to true
-
-
-.. index:: HTMLparser; noAttrib
-.. _htmlparser-noattrib:
+    List of tags (among the already set tags), which will be forced to
+    have the :t3-function-htmlparser:`rmTagIfNoAttrib` set to true
 
 noAttrib
 --------
 
-:aspect:`Property`
-   noAttrib
+..  t3-function-htmlparser:: noAttrib
 
-:aspect:`Data type`
-   (ibid)
+    :Data type: (ibid)
 
-:aspect:`Description`
-   List of tags (among the already set tags), which will be forced to
-   have the allowedAttribs value set to zero (which means, all attributes
-   will be removed.
-
-
-.. index:: HTMLparser; removeTags
-.. _htmlparser-removetags:
+    List of tags (among the already set tags), which will be forced to
+    have the allowedAttribs value set to zero (which means, all attributes
+    will be removed.
 
 removeTags
 ----------
 
-:aspect:`Property`
-   removeTags
+..  t3-function-htmlparser:: removeTags
 
-:aspect:`Data type`
-   (ibid)
+    :Data type: (ibid)
 
-:aspect:`Description`
-   List of tags (among the already set tags), which will be configured so
-   they are surely removed.
-
-
-.. index:: HTMLparser; keepNonMatchedTags
-.. _htmlparser-keepnonmatchedtags:
+    List of tags (among the already set tags), which will be configured so
+    they are surely removed.
 
 keepNonMatchedTags
 ------------------
 
-:aspect:`Property`
-   keepNonMatchedTags
+..  t3-function-htmlparser:: keepNonMatchedTags
 
-:aspect:`Data type`
-   :t3-data-type:`boolean` / "protect"
+    :Data type: :t3-data-type:`boolean` / "protect"
 
-:aspect:`Description`
-   If set (:typoscript:`1`), then all tags are kept regardless of tags present as
-   keys in :php:`$tags`-array.
+    If set (:typoscript:`1`), then all tags are kept regardless of tags present as
+    keys in :php:`$tags`-array.
 
-   If :typoscript:`protect`, then the preserved tags have their :html:`<>`
-   converted to :html:`&lt;` and :html:`&gt;`
+    If :typoscript:`protect`, then the preserved tags have their :html:`<>`
+    converted to :html:`&lt;` and :html:`&gt;`
 
-   Default is to REMOVE all tags, which are not specifically assigned to
-   be allowed! So you might probably want to set this value!
-
-
-.. index:: HTMLparser; htmlSpecialChars
-.. _htmlparser-htmlspecialchars:
+    Default is to REMOVE all tags, which are not specifically assigned to
+    be allowed! So you might probably want to set this value!
 
 htmlSpecialChars
 ----------------
 
-:aspect:`Property`
-   htmlSpecialChars
+..  t3-function-htmlparser:: htmlSpecialChars
 
-:aspect:`Data type`
-   -1 / 0 / 1 / 2
+    :Data type: -1 / 0 / 1 / 2
 
-:aspect:`Description`
-   This regards all content which is **not** tags:
+    This regards all content which is **not** tags:
 
-   -1
-      Does the opposite of "1". It converts :html:`&lt;` to :html:`<`,
-      :html:`&gt;` to :html:`>`, :html:`&quot;` to :html:`"` etc.
+    -1
+       Does the opposite of "1". It converts :html:`&lt;` to :html:`<`,
+       :html:`&gt;` to :html:`>`, :html:`&quot;` to :html:`"` etc.
 
-   0
-      Disabled - nothing is done.
+    0
+       Disabled - nothing is done.
 
-   1
-      The content outside tags is :php:`htmlspecialchar()`'ed (PHP-function
-      which converts :html:`&"<>` to :html:`&...;`).
+    1
+       The content outside tags is :php:`htmlspecialchar()`'ed (PHP-function
+       which converts :html:`&"<>` to :html:`&...;`).
 
-   2
-      Same as "1", but entities like :html:`&amp;` or :html:`&#234` are
-      untouched.
+    2
+       Same as "1", but entities like :html:`&amp;` or :html:`&#234` are
+       untouched.

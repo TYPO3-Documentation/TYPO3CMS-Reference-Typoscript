@@ -26,28 +26,22 @@ Properties
 table
 -----
 
-:aspect:`Property`
-   table
+..  t3-function-numrows:: table
 
-:aspect:`Data type`
-   Table name
+    :Data type: Table name
 
-:aspect:`Description`
-   Name of the database table to query.
+    Name of the database table to query.
 
 .. _numrows-select:
 
 select
 ------
 
-:aspect:`Property`
-   select
+..  t3-function-numrows:: select
 
-:aspect:`Data type`
-   :ref:`select`
+    :Data type: :ref:`select`
 
-:aspect:`Description`
-   Select query for the operation.
+    Select query for the operation.
 
-   The sub-property :typoscript:`selectFields` is overridden internally with
-   :php:`count(*)`.
+    The sub-property :typoscript:`selectFields` is overridden internally with
+    :php:`count(*)`.

@@ -1,6 +1,6 @@
-.. include:: /Includes.rst.txt
-.. index:: Functions; makelinks
-.. _makelinks:
+..  include:: /Includes.rst.txt
+..  index:: Functions; makelinks
+..  _makelinks:
 
 =========
 makelinks
@@ -17,11 +17,11 @@ the text in the following form:
    mailto:name@example.org
 
 
-.. contents::
-   :local:
+..  contents::
+    :local:
 
-.. index:: makelinks; Properties
-.. _makelinks-properties:
+..  index:: makelinks; Properties
+..  _makelinks-properties:
 
 Properties
 ==========
@@ -47,95 +47,80 @@ Can handle links of the form:
 http.extTarget
 ~~~~~~~~~~~~~~
 
-:aspect:`Property`
-   http.extTarget
+..  t3-function-makelinks:: http.extTarget
 
-:aspect:`Data type`
-   :t3-data-type:`target`
+    :Data type: :t3-data-type:`target`
+    :Default: \_top
 
-:aspect:`Description`
-   The target of the link.
+    The target of the link.
 
-:aspect:`Default`
-   \_top
 
 .. _makelinks-http-wrap:
 
 http.wrap
 ~~~~~~~~~
 
-:aspect:`Property`
-   http.wrap
+..  t3-function-makelinks:: http.wrap
 
-:aspect:`Data type`
-   :t3-data-type:`wrap` / :ref:`stdwrap`
+    :Data type: :t3-data-type:`wrap` / :ref:`stdwrap`
 
-:aspect:`Description`
-   Wrap around the link.
+    Wrap around the link.
 
 .. _makelinks-http-ATagBeforeWrap:
 
 http.ATagBeforeWrap
 ~~~~~~~~~~~~~~~~~~~
 
-:aspect:`Property`
-   http.ATagBeforeWrap
+..  t3-function-makelinks:: http.ATagBeforeWrap
 
-:aspect:`Data type`
-   :t3-data-type:`boolean`
+    :Data type: :t3-data-type:`boolean`
+    :Default: 0
 
-:aspect:`Description`
-   If set, the link is first wrapped with :typoscript:`http.wrap` and then the
-   :html:`<a>`-tag.
+    If set, the link is first wrapped with :typoscript:`http.wrap` and then the
+    :html:`<a>`-tag.
 
-:aspect:`Default`
-   0
 
 .. _makelinks-http-keep:
 
 http.keep
 ~~~~~~~~~
 
-:aspect:`Property`
-   http.keep
+..  t3-function-makelinks:: http.keep
 
-:aspect:`Data type`
-   list: "scheme","path","query"
+    :Data type: list: "scheme","path","query"
 
-:aspect:`Description`
-   As default the link-text will be the full domain-name of the link.
+    As default the link-text will be the full domain-name of the link.
 
-:aspect:`Example`
-   With the URL :samp:`https://example.org/test/doc.php?id=3` in our text we will
-   get the following results:
+    ..  rubric:: Examples
 
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    With the URL :samp:`https://example.org/test/doc.php?id=3` in our text we will
+    get the following results:
 
-      http.keep = "":                   # example.org
-      http.keep = "scheme":             # https://example.org
-      http.keep = "scheme,path":        # https://example.org/test/doc.php
-      http.keep = "scheme,path,query":  # https://example.org/test/doc.php?id=3
+    .. code-block:: typoscript
+       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+       http.keep = "":                   # example.org
+       http.keep = "scheme":             # https://example.org
+       http.keep = "scheme,path":        # https://example.org/test/doc.php
+       http.keep = "scheme,path,query":  # https://example.org/test/doc.php?id=3
 
 .. _makelinks-http-ATagParams:
 
 http.ATagParams
 ~~~~~~~~~~~~~~~
 
-:aspect:`Property`
-   http.ATagParams
+..  t3-function-makelinks:: http.ATagParams
 
-:aspect:`Data type`
-   :t3-data-type:`tag-params` / :ref:`stdwrap`
+    :Data type: :t3-data-type:`tag-params` / :ref:`stdwrap`
 
-:aspect:`Description`
-   Additional parameters
+    Additional parameters
 
-:aspect:`Example`
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    ..  rubric:: Examples
 
-      http.ATagParams = class="board"
+    ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+        http.ATagParams = class="board"
 
 .. _makelinks-mailto:
 
@@ -146,58 +131,49 @@ Substitutes all appearances of mail addresses
 with a link tag. Mail addresses must be contained in
 the text in the following form:
 
-.. code-block:: none
+..  code-block:: none
 
-   mailto:name@example.org
+    mailto:name@example.org
 
 .. _makelinks-mailto.wrap:
 
 mailto.wrap
 ~~~~~~~~~~~
 
-:aspect:`Property`
-   mailto.wrap
+..  t3-function-makelinks:: mailto.wrap
 
-:aspect:`Data type`
-   :t3-data-type:`wrap` / :ref:`stdwrap`
+    :Data type: :t3-data-type:`wrap` / :ref:`stdwrap`
 
-:aspect:`Description`
-   Wrap around the link.
+    Wrap around the link.
 
 .. _makelinks-mailto.ATagBeforeWrap:
 
 mailto.ATagBeforeWrap
 ~~~~~~~~~~~~~~~~~~~~~
 
-:aspect:`Property`
-   mailto.ATagBeforeWrap
+..  t3-function-makelinks:: mailto.ATagBeforeWrap
 
-:aspect:`Data type`
-   :t3-data-type:`boolean`
+    :Data type: :t3-data-type:`boolean`
+    :Default: 0
 
-:aspect:`Description`
-   If set, the link is first wrapped with mailto :typoscript:`wrap` and then the
-   :html:`<a>`-tag.
+    If set, the link is first wrapped with mailto :typoscript:`wrap` and then the
+    :html:`<a>`-tag.
 
-:aspect:`Default`
-   0
 
 .. _makelinks-mailto.ATagParams:
 
 mailto.ATagParams
 ~~~~~~~~~~~~~~~~~
 
-:aspect:`Property`
-   mailto.ATagParams
+..  t3-function-makelinks:: mailto.ATagParams
 
-:aspect:`Data type`
-   :t3-data-type:`tag-params` / :ref:`stdwrap`
+    :Data type: :t3-data-type:`tag-params` / :ref:`stdwrap`
 
-:aspect:`Description`
-   Additional parameters
+    Additional parameters
 
-:aspect:`Example`
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    ..  rubric:: Examples
 
-      mailto.ATagParams = class="board"
+    ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+        mailto.ATagParams = class="board"

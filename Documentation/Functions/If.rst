@@ -14,7 +14,7 @@ This function returns true, if **all** of the present conditions are met
 (they are connected with an "AND", a logical conjunction). If a
 single condition is false, the value returned is false.
 
-The returned value may still be negated by the :ref:`if-negate`-property.
+The returned value may still be negated by the :t3-function-if:`negate`-property.
 
 There is no else property available. The "else" branch of an "if" statement is a
 missing feature. You can implement a workaround by a logic based on the
@@ -28,58 +28,47 @@ Also check the explanations and the examples further below!
 Properties
 ==========
 
-.. index:: if; bitAnd
-.. _if-bitand:
-
 bitAnd
 ------
 
-:aspect:`Property`
-   bitAnd
+..  t3-function-if:: bitAnd
 
-:aspect:`Data type`
-   value / :ref:`stdwrap`
+    :Data type: value / :ref:`stdwrap`
 
-:aspect:`Description`
-   Returns true, if the value is part of the bit set.
+    Returns true, if the value is part of the bit set.
 
-:aspect:`Example`
-   TYPO3 uses bits to store radio and checkboxes via TCA, `bitAnd` can be used to test against these fields.
+    ..  rubric:: Example
 
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    TYPO3 uses bits to store radio and checkboxes via TCA, `bitAnd` can be used to test against these fields.
 
-      hideDefaultLanguageOfPage = TEXT
-      hideDefaultLanguageOfPage {
-          value = 0
-          value {
-              override = 1
-              override.if {
-                  bitAnd.field = l18n_cfg
-                  value = 1
-              }
-          }
-      }
+    .. code-block:: typoscript
+       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-
-..  index:: if; contains
-..  _if-contains:
+       hideDefaultLanguageOfPage = TEXT
+       hideDefaultLanguageOfPage {
+           value = 0
+           value {
+               override = 1
+               override.if {
+                   bitAnd.field = l18n_cfg
+                   value = 1
+               }
+           }
+       }
 
 contains
 --------
 
 ..  versionadded:: 12.1
 
-:aspect:`Property`
-    contains
+..  t3-function-if::  contains
 
-:aspect:`Data type`
-    value / :ref:`stdwrap`
+    :Data type:  value / :ref:`stdwrap`
 
-:aspect:`Description`
     Returns true, if the content contains :typoscript:`value`.
 
-:aspect:`Example`
+    ..  rubric:: Example
+
     ..  code-block:: typoscript
         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
         :emphasize-lines: 11
@@ -99,43 +88,30 @@ contains
             outerWrap = <h1>|</h1>
         }
 
-
-.. index:: if; directReturn
-.. _if-directreturn:
-
 directReturn
 ------------
 
-:aspect:`Property`
-   directReturn
+..  t3-function-if:: directReturn
 
-:aspect:`Data type`
-   :t3-data-type:`boolean`
+    :Data type: :t3-data-type:`boolean`
 
-:aspect:`Description`
-   If this property exists, no other conditions will be checked. Instead
-   the true/false of this value is returned. Can be used to set
-   true/false with a TypoScript constant.
-
-
-..  index:: if; endsWith
-..  _if-endsWith:
+    If this property exists, no other conditions will be checked. Instead
+    the true/false of this value is returned. Can be used to set
+    true/false with a TypoScript constant.
 
 endsWith
 --------
 
 ..  versionadded:: 12.1
 
-:aspect:`Property`
-    endsWith
+..  t3-function-if::  endsWith
 
-:aspect:`Data type`
-    value / :ref:`stdwrap`
+    :Data type:  value / :ref:`stdwrap`
 
-:aspect:`Description`
     Returns true, if the content ends with :typoscript:`value`.
 
-:aspect:`Example`
+    ..  rubric:: Example
+
     ..  code-block:: typoscript
         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
         :emphasize-lines: 7
@@ -150,214 +126,146 @@ endsWith
             wrap = <footer>|</footer>
         }
 
-
-.. index:: if; equals
-.. _if-equals:
-
 equals
 ------
 
-:aspect:`Property`
-   equals
+..  t3-function-if:: equals
 
-:aspect:`Data type`
-   value / :ref:`stdwrap`
+    :Data type: value / :ref:`stdwrap`
 
-:aspect:`Description`
-   Returns true, if the content is equal to :typoscript:`value`.
+    Returns true, if the content is equal to :typoscript:`value`.
 
-:aspect:`Example`
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    ..  rubric:: Example
 
-      if.equals = POST
-      if.value.data = GETENV:REQUEST_METHOD
+    ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-
-.. index:: if; isFalse
-.. _if-isfalse:
+        if.equals = POST
+        if.value.data = GETENV:REQUEST_METHOD
 
 isFalse
 -------
 
-:aspect:`Property`
-   isFalse
+..  t3-function-if:: isFalse
 
-:aspect:`Data type`
-   :t3-data-type:`string` / :ref:`stdwrap`
+    :Data type: :t3-data-type:`string` / :ref:`stdwrap`
 
-:aspect:`Description`
-   If the content is "false", which is empty or zero.
-
-
-.. index:: if; isGreaterThan
-.. _if-isgreaterthan:
+    If the content is "false", which is empty or zero.
 
 isGreaterThan
 -------------
 
-:aspect:`Property`
-   isGreaterThan
+..  t3-function-if:: isGreaterThan
 
-:aspect:`Data type`
-   value / :ref:`stdwrap`
+    :Data type: value / :ref:`stdwrap`
 
-:aspect:`Description`
-   Returns true, if the content is greater than :typoscript:`value`.
-
-
-.. index:: if; isInList
-.. _if-isinlist:
+    Returns true, if the content is greater than :typoscript:`value`.
 
 isInList
 --------
 
-:aspect:`Property`
-   isInList
+..  t3-function-if:: isInList
 
-:aspect:`Data type`
-   value / :ref:`stdwrap`
+    :Data type: value / :ref:`stdwrap`
 
-:aspect:`Description`
-   Returns true, if the content is in the comma-separated list
-   :typoscript:`.value`.
+    Returns true, if the content is in the comma-separated list
+    :typoscript:`.value`.
 
-   **Note:** The list in :typoscript:`value` may not have spaces between elements!
+    **Note:** The list in :typoscript:`value` may not have spaces between elements!
 
-:aspect:`Example`
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    ..  rubric:: Example
 
-      if.isInList.field = uid
-      if.value = 1,2,34,50,87
+    ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-   This returns true, if the uid is part of the list in :typoscript:`value`.
+        if.isInList.field = uid
+        if.value = 1,2,34,50,87
 
-
-.. index:: if; isLessThan
-.. _if-islessthan:
+    This returns true, if the uid is part of the list in :typoscript:`value`.
 
 isLessThan
 ----------
 
-:aspect:`Property`
-   isLessThan
+..  t3-function-if:: isLessThan
 
-:aspect:`Data type`
-   value / :ref:`stdwrap`
+    :Data type: value / :ref:`stdwrap`
 
-:aspect:`Description`
-   Returns true, if the content is less than :typoscript:`value`.
-
-
-.. index:: if; isNull
-.. _if-isnull:
+    Returns true, if the content is less than :typoscript:`value`.
 
 isNull
 ------
 
-:aspect:`Property`
-   isNull
+..  t3-function-if:: isNull
 
-:aspect:`Data type`
-   :ref:`stdWrap`
+    :Data type: :ref:`stdWrap`
 
-:aspect:`Description`
-   If the resulting content of the :typoscript:`stdWrap` is null (:php:`NULL` type in PHP).
+    If the resulting content of the :typoscript:`stdWrap` is null (:php:`NULL` type in PHP).
 
-   Since null values cannot be assigned in TypoScript, only the :typoscript:`stdWrap`
-   features are available below this property.
+    Since null values cannot be assigned in TypoScript, only the :typoscript:`stdWrap`
+    features are available below this property.
 
-:aspect:`Example`
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    ..  rubric:: Example
 
-      page.10 = COA_INT
-      page.10.10 = TEXT
-      page.10.10 {
-            stdWrap.if.isNull.field = description
-            value = No description available.
-      }
+    ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-   This example returns "No description available.", if the content of
-   the field "description" is :php:`NULL`.
+        page.10 = COA_INT
+        page.10.10 = TEXT
+        page.10.10 {
+              stdWrap.if.isNull.field = description
+              value = No description available.
+        }
 
-
-.. index:: if; isPositive
-.. _if-ispositive:
+    This example returns "No description available.", if the content of
+    the field "description" is :php:`NULL`.
 
 isPositive
 ----------
 
-:aspect:`Property`
-   isPositive
+..  t3-function-if:: isPositive
 
-:aspect:`Data type`
-   :t3-data-type:`integer` / :ref:`stdwrap` \+ :ref:`objects-calc`
+    :Data type: :t3-data-type:`integer` / :ref:`stdwrap` \+ :ref:`objects-calc`
 
-:aspect:`Description`
-   Returns true, if the content is positive.
-
-
-.. index:: if; isTrue
-.. _if-istrue:
+    Returns true, if the content is positive.
 
 isTrue
 ------
 
-:aspect:`Property`
-   isTrue
+..  t3-function-if:: isTrue
 
-:aspect:`Data type`
-   :t3-data-type:`string` / :ref:`stdwrap`
+    :Data type: :t3-data-type:`string` / :ref:`stdwrap`
 
-:aspect:`Description`
-   If the content is "true", which is not empty string and not zero.
-
-
-.. index:: if; negate
-.. _if-negate:
+    If the content is "true", which is not empty string and not zero.
 
 negate
 ------
 
-:aspect:`Property`
-   negate
+..  t3-function-if:: negate
 
-:aspect:`Data type`
-   :t3-data-type:`boolean`
+    :Data type: :t3-data-type:`boolean`
+    :Default: 0
 
-:aspect:`Description`
-   This property is checked after all other properties. If set, it
-   negates the result, which is present before its execution.
+    This property is checked after all other properties. If set, it
+    negates the result, which is present before its execution.
 
-   So if all other conditions, which were used, returned true, with
-   this property the overall return ends up being false. If at least
-   one of the other conditions, which were used, returned false, the
-   overall return ends up being true.
-
-:aspect:`Default`
-   0
-
-
-..  index:: if; startsWith
-..  _if-startsWith:
+    So if all other conditions, which were used, returned true, with
+    this property the overall return ends up being false. If at least
+    one of the other conditions, which were used, returned false, the
+    overall return ends up being true.
 
 startsWith
 ----------
 
 ..  versionadded:: 12.1
 
-:aspect:`Property`
-    startsWith
+..  t3-function-if::  startsWith
 
-:aspect:`Data type`
-    value / :ref:`stdwrap`
+    :Data type:  value / :ref:`stdwrap`
 
-:aspect:`Description`
     Returns true, if the content starts with :typoscript:`value`.
 
-:aspect:`Example`
+    ..  rubric:: Example
+
     ..  code-block:: typoscript
         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
         :emphasize-lines: 6
@@ -370,21 +278,14 @@ startsWith
             if.startsWith = Bazinga
         }
 
-
-.. index:: if; value
-.. _if-value:
-
 value
 -----
 
-:aspect:`Property`
-   value
+..  t3-function-if:: value
 
-:aspect:`Data type`
-   value / :ref:`stdwrap`
+    :Data type: value / :ref:`stdwrap`
 
-:aspect:`Description`
-   The value to check. This is the comparison value mentioned above.
+    The value to check. This is the comparison value mentioned above.
 
 
 .. index:: if; Explanation

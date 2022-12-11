@@ -252,6 +252,8 @@ imageExtension
 imgResource
 ===========
 
+.. todo: This seems to be a duplicate of Documentation/Functions/Imgresource.rst?
+
 ..  t3-data-type:: imgResource
 
     #.  A :t3-data-type:`resource` plus imgResource properties.
