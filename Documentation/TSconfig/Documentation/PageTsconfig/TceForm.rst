@@ -600,6 +600,8 @@ keepItems
 .. index::
    Records; Field label
 
+..  _tceform_label:
+
 label
 -----
 
