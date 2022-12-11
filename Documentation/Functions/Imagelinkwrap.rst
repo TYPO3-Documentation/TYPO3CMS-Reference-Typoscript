@@ -34,7 +34,7 @@ file
 
 ..  t3-function-imagelinkwrap:: imageLinkWrap.file
 
-    :Data type: ref:`stdwrap`
+    :Data type: :ref:`stdwrap`
 
     Apply :ref:`stdwrap` functionality to the file path.
 
@@ -497,7 +497,7 @@ Example: Images in lightbox "TopUp"
 -----------------------------------
 
 In this `blog post <https://www.interaktionsdesigner.de/2009/typo3-klickvergrossern-durch-eine-jquery-lightbox-ersetzen>`__
-(german) Paul Lunow shows a way to integrate the
+(German) Paul Lunow shows a way to integrate the
 `jQuery <https://jquery.com/>`__
 `TopUp lightbox <https://jquery-plugins.net/topup-jquery-lightbox-pop-up-plugin>`__:
 
