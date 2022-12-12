@@ -1002,10 +1002,10 @@ forceAbsoluteUrls
          Examples for such use cases are the generation of a complete static
          version of a TYPO3 site for sending a page via email.
 
-.. note::
-   Setting this option will override any setting in :ref:`config.absRefPrefix
-   <setup-config-absrefprefix>` and any :ref:`typolink.forceAbsoluteUrl
-   <typolink-forceAbsoluteUrl>` options.
+..  note::
+    Setting this option will override any setting in :ref:`config.absRefPrefix
+    <setup-config-absrefprefix>` and any typolink
+    :t3-function-typolink:`forceAbsoluteUrl` options.
 
 
 .. index:: config; forceTypeValue
@@ -1815,6 +1815,29 @@ pageTitleSeparator
                     returnKey = 1
                 }
             }
+
+recordLinks
+===========
+
+..  t3-tlo-config:: recordLinks
+
+    :Data Type: array of link configurations
+
+    ..  code-block:: typoscript
+        :caption: Frontend TypoScript definition for identifier `my_content`
+
+        config.recordLinks.my_content {
+            // Do not force link generation when the record is hidden
+            forceLink = 0
+
+            typolink {
+                // pages.uid to be used to render result (basically it contains the rendering plugin)
+                parameter = 234
+                // field values of tx_myextension_content record with uid 123
+                additionalParams.data = field:uid
+                additionalParams.wrap = &tx_myextension[uid]= | &tx_myextension[action]=show
+            }
+        }
 
 
 .. index:: config; removeDefaultCss
