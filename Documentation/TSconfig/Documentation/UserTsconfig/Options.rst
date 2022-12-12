@@ -687,7 +687,7 @@ impexp.enableExportForNonAdminUser
 
 .. versionadded:: 10.4.29/11.5.11
    This option was introduced to avoid `information disclosure
-   <https://typo3.org/security/advisory/typo3-core-sa-2022-001>`_.
+   <https://typo3.org/security/advisory/typo3-core-sa-2022-001>`__.
 
 :aspect:`Datatype`
    boolean
@@ -707,7 +707,7 @@ impexp.enableImportForNonAdminUser
 ----------------------------------
 
 This option was introduced to avoid `information disclosure
-<https://typo3.org/article/typo3-core-sa-2016-015>`_.
+<https://typo3.org/article/typo3-core-sa-2016-015>`__.
 
 :aspect:`Datatype`
    boolean

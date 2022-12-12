@@ -133,7 +133,8 @@ configuration of the transformations. For instance you may disable the mapping b
 :code:`<b>-<strong>` and :code:`<i>-<em>` tags which is done by the `ts_transform` transformation.
 
 Notice how many properties relate to specific transformations only! Also notice that the meta-transformations
-`ts_css` imply other transformations :ref:`as explained in the overview <transformations-overview-meta>`.
+`ts_css` imply other transformations.
+
 This means that options limited to `ts_transform` will also work for `ts_css` of course.
 
 

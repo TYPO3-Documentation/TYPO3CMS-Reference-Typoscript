@@ -43,7 +43,7 @@ an extension is automatically loaded during build time.
 It is possible to load other TSconfig files with the import syntax within this
 file:
 
-.. code-block:: tsconfig
+.. code-block:: typoscript
    :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
    @import 'EXT:myexample/Configuration/TsConfig/Page/Basic.tsconfig'
