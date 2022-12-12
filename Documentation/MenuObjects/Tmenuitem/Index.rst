@@ -10,262 +10,196 @@ The current record is the page-record of the menu item. Now, if you would
 like to get data from the current menu item's page record, use
 stdWrap.data = field : [field name].
 
-.. ### BEGIN~OF~TABLE ###
+Properties
+==========
 
-.. container:: table-row
+allWrap
+-------
 
-   Property
-         allWrap
+..  t3-menu-tmenu-item:: allWrap
 
-   Data type
-         wrap /:ref:`stdWrap <stdwrap>`
+    :Data type: wrap /:ref:`stdWrap <stdwrap>`
 
-   Description
-         Wraps the whole item.
+    Wraps the whole item.
 
+wrapItemAndSub
+--------------
 
-.. container:: table-row
+..  t3-menu-tmenu-item:: wrapItemAndSub
 
-   Property
-         wrapItemAndSub
+    :Data type: wrap /:ref:`stdWrap <stdwrap>`
 
-   Data type
-         wrap /:ref:`stdWrap <stdwrap>`
+    Wraps the whole item and any submenu concatenated to it.
 
-   Description
-         Wraps the whole item and any submenu concatenated to it.
+subst_elementUid
+----------------
 
+..  t3-menu-tmenu-item:: subst_elementUid
 
-.. container:: table-row
+    :Data type: boolean
 
-   Property
-         subst\_elementUid
+    :Default: 0 (false)
 
-   Data type
-         boolean
+     If set, all appearances of the string '{elementUid}' in the total
+     element HTML code (after wrapped in .allWrap} are substituted with the
+     uid number of the menu item.
 
-   Default
-         0 (false)
+     This is useful if you want to insert an identification code in the
+     HTML in order to manipulate properties with JavaScript.
 
-   Description
-         If set, all appearances of the string '{elementUid}' in the total
-         element HTML code (after wrapped in .allWrap} are substituted with the
-         uid number of the menu item.
+before
+------
 
-         This is useful if you want to insert an identification code in the
-         HTML in order to manipulate properties with JavaScript.
+..  t3-menu-tmenu-item:: before
 
+    :Data type: HTML /:ref:`stdWrap <stdwrap>`
 
+beforeWrap
+----------
 
-.. container:: table-row
+..  t3-menu-tmenu-item:: beforeWrap
 
-   Property
-         before
+    :Data type: wrap
 
-   Data type
-         HTML /:ref:`stdWrap <stdwrap>`
+    wrap around the ".before"-code
 
+after
+-----
 
-.. container:: table-row
+..  t3-menu-tmenu-item:: after
 
-   Property
-         beforeWrap
+    :Data type: HTML /:ref:`stdWrap <stdwrap>`
 
-   Data type
-         wrap
+afterWrap
+---------
 
-   Description
-         wrap around the ".before"-code
+..  t3-menu-tmenu-item:: afterWrap
 
-.. container:: table-row
+    :Data type: wrap
 
-   Property
-         after
+    wrap around the ".after"-code
 
-   Data type
-         HTML /:ref:`stdWrap <stdwrap>`
+linkWrap
+--------
 
+..  t3-menu-tmenu-item:: linkWrap
 
-.. container:: table-row
+    :Data type: wrap
 
-   Property
-         afterWrap
+stdWrap
+-------
 
-   Data type
-         wrap
+..  t3-menu-tmenu-item:: stdWrap
 
-   Description
-         wrap around the ".after"-code
+    :Data type: :ref:`stdWrap`
 
-.. container:: table-row
+    stdWrap to the link-text
 
-   Property
-         linkWrap
+ATagBeforeWrap
+--------------
 
-   Data type
-         wrap
+..  t3-menu-tmenu-item:: ATagBeforeWrap
 
+    :Data type: boolean
 
-.. container:: table-row
+    :Default: 0 (false)
 
-   Property
-         stdWrap
+    If set, the link is first wrapped with "*.linkWrap*" and then the
+    <A>-tag.
 
-   Data type
-         ->stdWrap
+ATagParams
+----------
 
-   Description
-         stdWrap to the link-text!
+..  t3-menu-tmenu-item:: ATagParams
 
+    :Data type: *<A>-params* /:ref:`stdWrap <stdwrap>`
 
-.. container:: table-row
+    Additional parameters
 
-   Property
-         ATagBeforeWrap
+    **Example:** :
 
-   Data type
-         boolean
+    ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-   Default
-         0 (false)
+        ATagParams = class="board"
 
-   Description
-         If set, the link is first wrapped with "*.linkWrap*" and then the
-         <A>-tag.
+ATagTitle
+---------
 
+..  t3-menu-tmenu-item:: ATagTitle
 
+    :Data type: string /:ref:`stdWrap <stdwrap>`
 
-.. container:: table-row
+    Allows you to specify the "title" attribute of the <a> tag around the
+    menu item.
 
-   Property
-         ATagParams
+    **Example:** :
 
-   Data type
-         *<A>-params* /:ref:`stdWrap <stdwrap>`
+    ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-   Description
-         Additional parameters
+        ATagTitle.field = abstract // description
 
-         **Example:** :
+    This would use the abstract or description field for the <a title="">
+    attribute.
 
-         .. code-block:: typoscript
-            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+additionalParams
+----------------
 
-            ATagParams = class="board"
+..  t3-menu-tmenu-item:: additionalParams
 
+    :Data type: string /:ref:`stdWrap <stdwrap>`
 
-.. container:: table-row
+    Define parameters that are added to the end of the URL. This must be
+    code ready to insert after the last parameter.
 
-   Property
-         ATagTitle
+    For details, see typolink->additionalParams
 
-   Data type
-         string /:ref:`stdWrap <stdwrap>`
+doNotLinkIt
+-----------
 
-   Description
-         Allows you to specify the "title" attribute of the <a> tag around the
-         menu item.
+..  t3-menu-tmenu-item:: doNotLinkIt
 
-         **Example:** :
+    :Data type: boolean /:ref:`stdWrap <stdwrap>`
+    :Default: 0
 
-         .. code-block:: typoscript
-            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    If set, the link texts are not linked at all
 
-            ATagTitle.field = abstract // description
+doNotShowLink
+-------------
 
-         This would use the abstract or description field for the <a title="">
-         attribute.
+..  t3-menu-tmenu-item:: doNotShowLink
 
+    :Data type: boolean /:ref:`stdWrap <stdwrap>`
+    :Default: 0
 
-.. container:: table-row
+    If set, the text will not be shown at all (smart with spacers).
 
-   Property
-         additionalParams
+stdWrap2
+--------
 
-   Data type
-         string /:ref:`stdWrap <stdwrap>`
+..  t3-menu-tmenu-item:: stdWrap2
 
-   Description
-         Define parameters that are added to the end of the URL. This must be
-         code ready to insert after the last parameter.
+    :Data type: wrap /:ref:`stdWrap <stdwrap>`
+    :Default: \|
 
-         For details, see typolink->additionalParams
+    stdWrap to the total link-text and ATag. (Notice that the plain
+    default value passed to the stdWrap function is "\|".)
 
+altTarget
+---------
 
-.. container:: table-row
+..  t3-menu-tmenu-item:: altTarget
 
-   Property
-         doNotLinkIt
+    :Data type: target
 
-   Data type
-         boolean /:ref:`stdWrap <stdwrap>`
+    Alternative target overriding the target property of the TMENU if set.
 
-   Default
-         0
+allStdWrap
+----------
 
-   Description
-         If set, the linktexts are not linked at all!
+..  t3-menu-tmenu-item:: allStdWrap
 
+    :Data type: ->stdWrap
 
-
-.. container:: table-row
-
-   Property
-         doNotShowLink
-
-   Data type
-         boolean /:ref:`stdWrap <stdwrap>`
-
-   Default
-         0
-
-   Description
-         If set, the text will not be shown at all (smart with spacers).
-
-
-
-.. container:: table-row
-
-   Property
-         stdWrap2
-
-   Data type
-         wrap /:ref:`stdWrap <stdwrap>`
-
-   Default
-         \|
-
-   Description
-         stdWrap to the total link-text and ATag. (Notice that the plain
-         default value passed to the stdWrap function is "\|".)
-
-
-
-.. container:: table-row
-
-   Property
-         altTarget
-
-   Data type
-         target
-
-   Description
-         Alternative target overriding the target property of the TMENU if set.
-
-
-.. container:: table-row
-
-   Property
-         allStdWrap
-
-   Data type
-         ->stdWrap
-
-   Description
-         stdWrap of the whole item
-
-
-.. ###### END~OF~TABLE ######
-
-[tsref:(cObject).HMENU.(mObj).TMENUITEM]
-
+    stdWrap of the whole item
