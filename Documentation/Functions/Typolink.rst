@@ -59,17 +59,18 @@ language
 
     Omitting the parameter :typoscript:`language` will use the current language.
 
-   ..  rubric:: Example
+    ..  rubric:: Example
 
-   .. code-block:: typoscript
+    ..  code-block:: typoscript
 
-      page.10 = TEXT
-      page.10.value = Link to the page with the ID 23 in the current language
-      page.10.typolink.parameter = 23
-      page.20 = TEXT
-      page.20.value = Link to the page with the ID 23 in the language 3
-      page.20.typolink.parameter = 23
-      page.20.typolink.language = 3
+        page.10 = TEXT
+        page.10.value = Link to the page with the ID 23 in the current language
+        page.10.typolink.parameter = 23
+
+        page.20 = TEXT
+        page.20.value = Link to the page with the ID 23 in the language 3
+        page.20.typolink.parameter = 23
+        page.20.typolink.language = 3
 
 target
 ------
