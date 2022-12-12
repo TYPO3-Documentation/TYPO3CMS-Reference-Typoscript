@@ -588,13 +588,13 @@ keepItems
       Where `sDEF` is the sheet name.
 
 :aspect:`Example`
-    .. code-block:: typoscript
-       :caption: EXT:site_package/Configuration/page.tsconfig
+    ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/page.tsconfig
 
-      TCEFORM.pages.doktype {
-         # Show only standard and "Spacer" page types
-         keepItems = 1, 199
-      }
+        TCEFORM.pages.doktype {
+           # Show only standard and "Spacer" page types
+           keepItems = 1, 199
+        }
 
 
 .. index::
