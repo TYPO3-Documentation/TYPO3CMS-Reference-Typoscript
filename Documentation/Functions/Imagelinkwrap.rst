@@ -8,10 +8,11 @@
 imageLinkWrap
 =============
 
-.. index:: imageLinkWrap; Properties
 
 .. contents::
    :local:
+
+.. index:: imageLinkWrap; Properties
 
 Properties
 ==========
@@ -39,7 +40,7 @@ file
     imageLinkWrap.file
 
 :aspect:`Data type`
-    ref:`stdwrap`
+    :ref:`stdwrap`
 
 :aspect:`Description`
     Apply :ref:`stdwrap` functionality to the file path.
@@ -574,7 +575,7 @@ Example: Images in lightbox "TopUp"
 -----------------------------------
 
 In this `blog post <https://www.interaktionsdesigner.de/2009/typo3-klickvergrossern-durch-eine-jquery-lightbox-ersetzen>`__
-(german) Paul Lunow shows a way to integrate the
+(German) Paul Lunow shows a way to integrate the
 `jQuery <https://jquery.com/>`__
 `TopUp lightbox <https://jquery-plugins.net/topup-jquery-lightbox-pop-up-plugin>`__:
 
