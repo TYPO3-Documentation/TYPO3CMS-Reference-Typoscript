@@ -9,7 +9,7 @@ parseFunc
 =========
 
 This object is used to parse some content for stuff like special typo
-tags, the :t3-function-parsefunc:`makeLinks`-things and so on...
+tags, the :ref:`makeLinks`-things and so on...
 
 ..  contents::
     :local:
@@ -177,7 +177,7 @@ userFunc
     :Data type: :t3-data-type:`function name`
 
     This passes the non-tag content to a function of your own choice.
-    Similar to e.g. :ref:`stdwrap-postuserfunc` in :ref:`stdWrap`.
+    Similar to e.g. :t3-function-stdwrap:`postUserFunc` in :ref:`stdWrap`.
 
     Remember the function name must possibly be prepended :php:`user_`.
 
