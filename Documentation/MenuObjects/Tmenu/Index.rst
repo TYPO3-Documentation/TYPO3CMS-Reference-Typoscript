@@ -24,207 +24,139 @@ TMENU item states
 
 These properties are all the item states used by TMENU.
 
-.. note::
-   Order of priority: USERDEF2, USERDEF1, SPC, USR, CURIFSUB, CUR,
-   ACTIFSUB, ACT, IFSUB, NO.
-
-
-.. ### BEGIN~OF~TABLE ###
+..  note::
+    Order of priority: :confval:`tmenu-common-property-USERDEF2`, :confval:`tmenu-common-property-USERDEF1`,
+    :confval:`tmenu-common-property-SPC`, :confval:`tmenu-common-property-USR`, :confval:`tmenu-common-property-CURIFSUB`,
+    :confval:`tmenu-common-property-CUR`, :confval:`tmenu-common-property-ACTIFSUB`, :confval:`tmenu-common-property-ACT`,
+    :confval:`tmenu-common-property-IFSUB`, :confval:`tmenu-common-property-NO`.
 
 NO
 --
 
-.. container:: table-row
+..  confval:: NO
+    :name: tmenu-common-property-no
+    :type: boolean / (config)
+    :Default: 1 (true)
 
-   Property
-         NO
 
-   Data type
-         boolean / (config)
+    The default "Normal" state rendering of Item. This is required for all
+    menus.
 
-   Default
-         1 (true)
+    If you specify properties for the "NO" property you do not have to set
+    it "1". Otherwise with no properties setting "NO=1" will render the
+    menu anyways (for TMENU this may make sense).
 
-   Description
-         The default "Normal" state rendering of Item. This is required for all
-         menus.
+    The simplest menu TYPO3 can generate is then:
 
-         If you specify properties for the "NO" property you do not have to set
-         it "1". Otherwise with no properties setting "NO=1" will render the
-         menu anyways (for TMENU this may make sense).
+    ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-         The simplest menu TYPO3 can generate is then:
+        page.20 = HMENU
+        page.20.1 = TMENU
+        page.20.1.NO = 1
 
-         .. code-block:: typoscript
-            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-            page.20 = HMENU
-            page.20.1 = TMENU
-            page.20.1.NO = 1
-
-         That will be pure <a> tags wrapped around page titles.
+    That will be pure `<a>` tags wrapped around page titles.
 
 IFSUB
 -----
 
-.. container:: table-row
+..  confval:: IFSUB
+    :name: tmenu-common-property-ifsub
+    :type: boolean / (config)
 
-   Property
-         IFSUB
+    :Default: 0
 
-   Data type
-         boolean / (config)
-
-   Default
-         0
-
-   Description
-         Enable/Configuration for menu items which has subpages.
+    Enable/Configuration for menu items which has subpages.
 
 ACT
 ---
 
-.. container:: table-row
+..  confval:: ACT
+    :name: tmenu-common-property-act
+    :type: boolean / (config)
+    :Default: 0
 
-   Property
-         ACT
-
-   Data type
-         boolean / (config)
-
-   Default
-         0
-
-   Description
-         Enable/Configuration for menu items which are found in the rootLine.
+    Enable/Configuration for menu items which are found in the rootLine.
 
 ACTIFSUB
 --------
 
-.. container:: table-row
+..  confval:: ACTIFSUB
+    :name: tmenu-common-property-actifsub
+    :type: boolean / (config)
+    :Default: 0
 
-   Property
-         ACTIFSUB
-
-   Data type
-         boolean / (config)
-
-   Default
-         0
-
-   Description
-         Enable/Configuration for menu items which are found in the rootLine
-         and have subpages.
+    Enable/Configuration for menu items which are found in the rootLine
+    and have subpages.
 
 CUR
 ---
 
-.. container:: table-row
+..  confval:: CUR
+    :name: tmenu-common-property-cur
+    :type: boolean / (config)
+    :Default: 0
 
-   Property
-         CUR
 
-   Data type
-         boolean / (config)
-
-   Default
-         0
-
-   Description
-         Enable/Configuration for a menu item if the item is the current page.
+    Enable/Configuration for a menu item if the item is the current page.
 
 CURIFSUB
 --------
 
-.. container:: table-row
+..  confval:: CURIFSUB
+    :name: tmenu-common-property-curifsub
+    :type: boolean / (config)
+    :Default: 0
 
-   Property
-         CURIFSUB
-
-   Data type
-         boolean / (config)
-
-   Default
-         0
-
-   Description
-         Enable/Configuration for a menu item if the item is the current page
-         and has subpages.
+    Enable/Configuration for a menu item if the item is the current page
+    and has subpages.
 
 USR
 ---
 
-.. container:: table-row
+..  confval:: USR
+    :name: tmenu-common-property-usr
+    :type: boolean / (config)
+    :Default: 0
 
-   Property
-         USR
-
-   Data type
-         boolean / (config)
-
-   Default
-         0
-
-   Description
-         Enable/Configuration for menu items which are access restricted pages
-         that a user has access to.
+    Enable/Configuration for menu items which are access restricted pages
+    that a user has access to.
 
 SPC
 ---
 
-.. container:: table-row
+..  confval:: SPC
+    :name: tmenu-common-property-spc
+    :type: boolean / (config)
+    :Default: 0
 
-   Property
-         SPC
+    Enable/Configuration for 'Spacer' pages.
 
-   Data type
-         boolean / (config)
-
-   Default
-         0
-
-   Description
-         Enable/Configuration for 'Spacer' pages.
-
-         Spacers are pages of the doktype "Spacer". These are not viewable
-         pages but "placeholders" which can be used to divide menu items.
+    Spacers are pages of the doktype "Spacer". These are not viewable
+    pages but "placeholders" which can be used to divide menu items.
 
 USERDEF1
 --------
 
-.. container:: table-row
+..  confval:: USERDEF1
+    :name: tmenu-common-property-userdef1
+    :type: boolean / (config)
 
-   Property
-         USERDEF1
+    User defined, see :confval:`menu-common-properties-itemArrayProcFunc` for details on how
+    to use this.
 
-   Data type
-         boolean / (config)
-
-   Description
-         Userdefined, see .itemArrayProcFunc for details on how to use this.
-
-         You can set the ITEM\_STATE values USERDEF1 and USERDEF2 (+...RO) from
-         a script/user function processing the menu item array. See the property
-         .itemArrayProcFunc of the menu objects.
+    You can set the ITEM\_STATE values USERDEF1 and USERDEF2 (+...RO) from
+    a script/user function processing the menu item array. See the property
+    :confval:`menu-common-properties-itemArrayProcFunc` of the menu objects.
 
 USERDEF2
 --------
 
-.. container:: table-row
+..  confval:: USERDEF2
+    :name: tmenu-common-property-userdef2
+    :type: boolean / (config)
 
-   Property
-         USERDEF2
-
-   Data type
-         boolean / (config)
-
-   Description
-         (See above)
-
-
-.. ###### END~OF~TABLE ######
-
-[tsref:(cObject).HMENU.(mObj\_itemStates)]
+    Same like :confval:`tmenu-common-property-USERDEF1` but has a higher priority.
 
 
 .. _menu-common-properties:
@@ -234,44 +166,27 @@ USERDEF2
 Properties
 ==========
 
-
-.. ### BEGIN~OF~TABLE ###
-
 expAll
 ------
 
-.. container:: table-row
+..  confval:: expAll
+    :name: menu-common-properties-expAll
+    :type: boolean /:ref:`stdWrap <stdwrap>`
 
-   Property
-         expAll
-
-   Data type
-         boolean /:ref:`stdWrap <stdwrap>`
-
-   Description
-         If this is true, the menu will always show the menu on the level
-         underneath the menu item. This corresponds to a situation where a user
-         has clicked a menu item and the menu folds out the next level. This
-         can enable that to happen on all items as default.
+    If this is true, the menu will always show the menu on the level
+    underneath the menu item. This corresponds to a situation where a user
+    has clicked a menu item and the menu folds out the next level. This
+    can enable that to happen on all items as default.
 
 collapse
 --------
 
-.. container:: table-row
+..  confval:: collapse
+    :name: menu-common-properties-collapse
+    :type: boolean
 
-   Property
-         collapse
-
-   Data type
-         boolean
-
-   Description
-         If set, the "active" menu item that has expanded the next level on the
-         menu will now collapse that menu again.
-
-
-.. index:: TMENU; sectionIndex
-.. _section-index:
+     If set, the "active" menu item that has expanded the next level on the
+     menu will now collapse that menu again.
 
 sectionIndex
 ------------
@@ -283,84 +198,63 @@ the cObjects rendered on the page. In other words, the menu items will
 be a section index with links to the content elements on the page (by
 default with colPos=0!).
 
-.. container:: table-row
+..  confval:: sectionIndex
+    :name: menu-common-properties-sectionIndex
+    :type: boolean
 
-   Property
-         sectionIndex
-
-   Data type
-         boolean
-
-   Description
-         If you set this, all content elements (from tt\_content table) of
-         "Column" = "Normal" *and* the "Index"-check box clicked are selected.
-         This corresponds to the "Menu/Sitemap" content element when "Section
-         index" is selected as type.
+    If you set this, all content elements (from tt\_content table) of
+    "Column" = "Normal" *and* the "Index"-check box clicked are selected.
+    This corresponds to the "Menu/Sitemap" content element when "Section
+    index" is selected as type.
 
 sectionIndex.type
 ~~~~~~~~~~~~~~~~~
 
-.. container:: table-row
+..  confval:: sectionIndex.type
+    :name: menu-common-properties-sectionIndex-type
+    :type: string ("all" / "header")
 
-   Property
-         sectionIndex.type
+    "all"
+        The "Index"-checkbox is not considered and all content elements - by
+        default with colPos=0 - are selected.
 
-   Data type
-         string ("all" / "header")
-
-   Description
-         "all"
-            The "Index"-checkbox is not considered and all content elements - by
-            default with colPos=0 - are selected.
-
-         "header"
-            Only content elements with a visible header-layout (and a
-            non-empty 'header'-field!) are selected. In other words, if the
-            header layout of an element is set to "Hidden" then the
-            page will not appear in the menu.
+    "header"
+        Only content elements with a visible header-layout (and a
+        non-empty 'header'-field!) are selected. In other words, if the
+        header layout of an element is set to "Hidden" then the
+        page will not appear in the menu.
 
 sectionIndex.includeHiddenHeaders
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. container:: table-row
+..  confval:: sectionIndex.includeHiddenHeaders
+    :name: menu-common-properties-sectionIndex-includeHiddenHeaders
+    :type: boolean
 
-   Property
-         sectionIndex.includeHiddenHeaders
-
-   Data type
-         boolean
-
-   Description
-         If you set this and sectionIndex.type is set to "header",
-         also elements with a header layout set to "Hidden" will appear
-         in the menu.
+     If you set this and sectionIndex.type is set to "header",
+     also elements with a header layout set to "Hidden" will appear
+     in the menu.
 
 sectionIndex.useColPos
 ~~~~~~~~~~~~~~~~~~~~~~
 
-.. container:: table-row
+..  confval:: sectionIndex.useColPos
+    :name: menu-common-properties-sectionIndex-useColPos
+    :type: integer /:ref:`stdWrap <stdwrap>`
 
-   Property
-         sectionIndex.useColPos
+    :Default: 0
 
-   Data type
-         integer /:ref:`stdWrap <stdwrap>`
+    This property allows you to set the colPos which should be used in the
+    where clause of the query. Possible values are integers, default is "0".
 
-   Default
-         0
+    Any positive integer and 0 will lead to a where clause containing
+    "colPos=x" with x being the aforementioned integer. A negative value
+    drops the filter "colPos=x" completely.
 
-   Description
-         This property allows you to set the colPos which should be used in the
-         where clause of the query. Possible values are integers, default is "0".
+    ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-         Any positive integer and 0 will lead to a where clause containing
-         "colPos=x" with x being the aforementioned integer. A negative value
-         drops the filter "colPos=x" completely.
-
-         .. code-block:: typoscript
-            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-            tt_content.menu.20.3.1.sectionIndex.useColPos = -1
+        tt_content.menu.20.3.1.sectionIndex.useColPos = -1
 
 The data record in sectionIndex menus
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -373,41 +267,41 @@ whole menu.
 But of course some fields from the tt\_content records are
 transferred. This is how it is mapped:
 
-.. code-block:: none
-   :caption: Example of data mapping
+..  code-block:: none
+    :caption: Example of data mapping
 
-   $temp[$row[uid]]=$basePageRow;
-   $temp[$row[uid]]['title']=$row['header'];
-   $temp[$row[uid]]['subtitle']=$row['subheader'];
-   $temp[$row[uid]]['starttime']=$row['starttime'];
-   $temp[$row[uid]]['endtime']=$row['endtime'];
-   $temp[$row[uid]]['fe_group']=$row['fe_group'];
-   $temp[$row[uid]]['media']=$row['media'];
-   $temp[$row[uid]]['header_layout']=$row['header_layout'];
-   $temp[$row[uid]]['bodytext']=$row['bodytext'];
-   $temp[$row[uid]]['image']=$row['image'];
-   $temp[$row[uid]]['sectionIndex_uid']=$row['uid'];
+    $temp[$row[uid]]=$basePageRow;
+    $temp[$row[uid]]['title']=$row['header'];
+    $temp[$row[uid]]['subtitle']=$row['subheader'];
+    $temp[$row[uid]]['starttime']=$row['starttime'];
+    $temp[$row[uid]]['endtime']=$row['endtime'];
+    $temp[$row[uid]]['fe_group']=$row['fe_group'];
+    $temp[$row[uid]]['media']=$row['media'];
+    $temp[$row[uid]]['header_layout']=$row['header_layout'];
+    $temp[$row[uid]]['bodytext']=$row['bodytext'];
+    $temp[$row[uid]]['image']=$row['image'];
+    $temp[$row[uid]]['sectionIndex_uid']=$row['uid'];
 
 Basically this shows that
 
--  the field "header" and "subheader" from tt\_content are mapped to
-   "title" and "subtitle" in the pages-record. Thus you shouldn't need to
-   change your standard menu objects to fit this thing.
+-   the field "header" and "subheader" from tt\_content are mapped to
+    "title" and "subtitle" in the pages-record. Thus you shouldn't need to
+    change your standard menu objects to fit this thing.
 
--  the fields "starttime", "endtime", "fe\_group", "media" from
-   tt\_content are mapped to the same fields in a pages-record.
+-   the fields "starttime", "endtime", "fe\_group", "media" from
+    tt\_content are mapped to the same fields in a pages-record.
 
--  the fields "header\_layout", "bodytext" and "image" are mapped to
-   non-existing fields in the page-record
+-   the fields "header\_layout", "bodytext" and "image" are mapped to
+    non-existing fields in the page-record
 
--  a new field, "sectionIndex\_uid" is introduced in the page record
-   which is detected by the `\TYPO3\CMS\Frontend\Typolink\PageLinkBuilder`. If this field
-   is present in a page record, the `PageLinkBuilder` will prepend a
-   hash-mark and the number of the field.
+-   a new field, "sectionIndex\_uid" is introduced in the page record
+    which is detected by the `\TYPO3\CMS\Frontend\Typolink\PageLinkBuilder`. If this field
+    is present in a page record, the `PageLinkBuilder` will prepend a
+    hash-mark and the number of the field.
 
-.. note::
-   You cannot create submenus to sectionIndex menus. These elements are not
-   pages and thereby have no children.
+..  note::
+    You cannot create submenus to sectionIndex menus. These elements are not
+    pages and thereby have no children.
 
 
 .. _tmenu-target:
@@ -415,270 +309,195 @@ Basically this shows that
 target
 ------
 
-.. container:: table-row
+..  confval:: target
+    :name: menu-common-properties-target
+    :type: target
+    :Default: self
 
-   Property
-         accessKey
-
-   Data type
-         boolean
-
-   Description
-         If set access-keys are set on the menu-links
-
-
-.. container:: table-row
-
-   Property
-         target
-
-   Data type
-         target
-
-   Default
-         self
-
-   Description
-         Target of the menu links
+    Target of the menu links
 
 forceTypeValue
 ---------------
 
-.. container:: table-row
+..  confval:: forceTypeValue
+    :name: menu-common-properties-forceTypeValue
+    :type: integer
 
-   Property
-         forceTypeValue
-
-   Data type
-         integer
-
-   Description
-         If set, the &type parameter of the link is forced to this value
-         regardless of target.
+    If set, the `&type` parameter of the link is forced to this value
+    regardless of target.
 
 stdWrap
 -------
 
-.. container:: table-row
+..  confval:: stdWrap
+    :name: menu-common-properties-stdWrap
+    :type: :ref:`stdWrap <stdwrap>`
 
-   Property
-         stdWrap
 
-   Data type
-         :ref:`stdWrap <stdwrap>`
+    Wraps the whole block of sub items.
 
-   Description
-         Wraps the whole block of sub items.
+    ..  rubric:: Example
 
-         **Example:** :
+    ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-         .. code-block:: typoscript
-            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-            2 = TMENU
-            2 {
-               stdWrap.dataWrap = <ul class="{register : parentProperty}"> | </ul>
-               NO {
-                  // ...
-               }
-            }
+        2 = TMENU
+        2 {
+           stdWrap.dataWrap = <ul class="{register : parentProperty}"> | </ul>
+           NO {
+              // ...
+           }
+        }
 
 wrap
 ----
 
-.. container:: table-row
+..  confval:: wrap
+    :name: menu-common-properties-wrap
+    :type: :ref:`wrap <data-type-wrap>`
 
-   Property
-         wrap
-
-   Data type
-         :ref:`wrap <data-type-wrap>`
-
-   Description
-         Wraps the whole block of sub items, but only if there were items in the menu!
+    Wraps the whole block of sub items, but only if there were items in the menu!
 
 IProcFunc
 ---------
 
-.. container:: table-row
+..  confval:: IProcFunc
+    :name: menu-common-properties-IProcFunc
+    :type: function name
 
-   Property
-         IProcFunc
-
-   Data type
-         function name
-
-   Description
-         The internal array "I" is passed to this function and expected
-         returned as well. Subsequent to this function call the menu item is
-         compiled by implode()'ing the array $I[parts] in the passed array.
-         Thus you may modify this if you need to.
-
-         See example in the extension statictemplates
-         (statictemplates/media/scripts/example\_itemArrayProcFunc.php).
+    The internal array "I" is passed to this function and expected
+    returned as well. Subsequent to this function call the menu item is
+    compiled by implode()'ing the array $I[parts] in the passed array.
+    Thus you may modify this if you need to.
 
 Item States
 -----------
 
-.. container:: table-row
+..  todo: This does not seem to make sense?  Remove? Item states are already
+    listed above
 
-   Property
-         [Item States, like NO, ACT, CUR etc]
+..  confval:: [Item States, like NO, ACT, CUR etc]
+    :name: menu-common-properties-item-states
+    :type: ->TMENUITEM
 
-   Data type
-         ->TMENUITEM
 
-   Description
-         This is the TMENUITEM-options for each category of a menu item that can
-         be generated.
+     This is the TMENUITEM-options for each category of a menu item that can
+     be generated.
 
-         **Special:**
+     **Special:**
 
-         The ->OptionSplit function is run on the whole configuration before
-         the items are generated.
+     The ->OptionSplit function is run on the whole configuration before
+     the items are generated.
 
 
 alternativeSortingField
 -----------------------
 
-.. container:: table-row
+..  confval:: alternativeSortingField
+    :name: menu-common-properties-alternativeSortingField
+    :type: string
 
-   Property
-         alternativeSortingField
+    Normally the menu items are sorted by the fields "sorting" in the
+    pages- and tt\_content-table. Here you can enter a list of fields that
+    is used in the SQL- "ORDER BY" statement instead. You can also provide
+    the sorting order.
 
-   Data type
-         string
+    **Examples (for "pages" table):**
 
-   Description
-         Normally the menu items are sorted by the fields "sorting" in the
-         pages- and tt\_content-table. Here you can enter a list of fields that
-         is used in the SQL- "ORDER BY" statement instead. You can also provide
-         the sorting order.
+    alternativeSortingField = title desc
 
-         **Examples (for "pages" table):**
+    (This will render the menu in reversed alphabetical order.)
 
-         alternativeSortingField = title desc
+    **Limitations:**
 
-         (This will render the menu in reversed alphabetical order.)
-
-         **Limitations:**
-
-         This property works with normal menus, sectionsIndex menus and
-         special-menus of type "directory".
+    This property works with normal menus, sectionsIndex menus and
+    special-menus of type "directory".
 
 minItems
 --------
 
-.. container:: table-row
+..  confval:: minItems
+    :name: menu-common-properties-minItems
+    :type: integer / :ref:`stdWrap <stdwrap>`
 
-   Property
-         minItems
+    The minimum items in the menu. If the number of pages does not reach
+    this level, a dummy-page with the title "..." and
+    uid=[currentpage\_id] is inserted.
 
-   Data type
-         integer / :ref:`stdWrap <stdwrap>`
-
-   Description
-         The minimum items in the menu. If the number of pages does not reach
-         this level, a dummy-page with the title "..." and
-         uid=[currentpage\_id] is inserted.
-
-         Takes precedence over :ref:`HMENU.minItems <hmenu-minitems>`.
+    Takes precedence over HMENU property :t3-cobj-hmenu:`minitems`.
 
 maxItems
 --------
 
-.. container:: table-row
+..  confval:: maxItems
+    :name: menu-common-properties-maxItems
+    :type: integer / :ref:`stdWrap <stdwrap>`
 
-   Property
-         maxItems
 
-   Data type
-         integer / :ref:`stdWrap <stdwrap>`
+    The maximum items in the menu. More items will be ignored.
 
-   Description
-         The maximum items in the menu. More items will be ignored.
-
-         Takes precedence over HMENU.maxItems.
+    Takes precedence over HMENU property :t3-cobj-hmenu:`maxItems`.
 
 begin
 -----
 
-.. container:: table-row
+..  confval:: begin
+    :name: menu-common-properties-begin
+    :type: integer / :ref:`stdWrap <stdwrap>` :ref:`+calc <objects-calc>`
 
-   Property
-         begin
 
-   Data type
-         integer / :ref:`stdWrap <stdwrap>` :ref:`+calc <objects-calc>`
+    The first item in the menu.
 
-   Description
-         The first item in the menu.
+    **Example:**
 
-         **Example:**
+    This results in a menu, where the first two items are skipped starting
+    with item number 3:
 
-         This results in a menu, where the first two items are skipped starting
-         with item number 3:
+    ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-         .. code-block:: typoscript
-            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        begin = 3
 
-            begin = 3
-
-         Takes precedence over :ref:`HMENU.begin <hmenu-begin>`.
+    Takes precedence over :HMENU property :t3-cobj-hmenu:`begin`.
 
 debugItemConf
 -------------
 
-.. container:: table-row
+..  confval:: debugItemConf
+    :name: menu-common-properties-debugItemConf
+    :type: boolean
 
-   Property
-         debugItemConf
-
-   Data type
-         boolean
-
-   Description
-         Outputs (by the :php:`debug()` function) the configuration arrays for each
-         menu item. Useful to debug :ref:`optionsplit` things and such...
+    Outputs (by the debug()-function) the configuration arrays for each
+    menu item. Useful to debug optionSplit things and such...
 
 overrideId
 ----------
 
-.. container:: table-row
+..  confval:: overrideId
+    :name: menu-common-properties-overrideId
+    :type: integer (page-id)
 
-   Property
-         overrideId
+    If set, then all links in the menu will point to this pageid. Instead
+    the real uid of the page is sent by the parameter "&real\_uid=[uid]".
 
-   Data type
-         integer (page-id)
-
-   Description
-         If set, then all links in the menu will point to this pageid. Instead
-         the real uid of the page is sent by the parameter "&real\_uid=[uid]".
-
-         This feature is smart, if you have inserted a menu from somewhere
-         else, perhaps a shared menu, but wants the menu items to call the same
-         page, which then generates a proper output based on the real\_uid.
+    This feature is smart, if you have inserted a menu from somewhere
+    else, perhaps a shared menu, but wants the menu items to call the same
+    page, which then generates a proper output based on the real\_uid.
 
 addParams
 ---------
 
-.. container:: table-row
+..  confval:: addParams
+    :name: menu-common-properties-addParams
+    :type: string
 
-   Property
-         addParams
+    Additional parameter for the menu-links.
 
-   Data type
-         string
+    **Example:**
 
-   Description
-         Additional parameter for the menu-links.
+    "&some\_var=some%20value"
 
-         **Example:**
-
-         "&some\_var=some%20value"
-
-         Must be rawurlencoded.
+    Must be rawurlencoded.
 
 
 .. index:: TMENU; showAccessRestrictedPages
@@ -687,161 +506,135 @@ addParams
 showAccessRestrictedPages
 --------------------------
 
-.. container:: table-row
+..  confval:: showAccessRestrictedPages
+    :name: menu-common-properties-showAccessRestrictedPages
+    :type: integer (page id) / keyword "NONE"
 
-   Property
-         showAccessRestrictedPages
 
-   Data type
-         integer (page id) / keyword "NONE"
+    If set, pages in the menu will include pages with frontend user group
+    access enabled. However the page is of course not accessible and
+    therefore the URL in the menu will be linked to the page with the ID
+    of this value. On that page you could put a login form or other
+    message.
 
-   Description
-         If set, pages in the menu will include pages with frontend user group
-         access enabled. However the page is of course not accessible and
-         therefore the URL in the menu will be linked to the page with the ID
-         of this value. On that page you could put a login form or other
-         message.
+    If the value is "NONE" the link will not be changed and the site will
+    perform page-not-found handling when clicked (which can be used to
+    capture the event and act accordingly of course). This means that the
+    link's URL will point to the page even if it is not accessible by the
+    current frontend user. Note that the default behavior of page-not-found
+    handling is to show the parent page instead.
 
-         If the value is "NONE" the link will not be changed and the site will
-         perform page-not-found handling when clicked (which can be used to
-         capture the event and act accordingly of course). This means that the
-         link's URL will point to the page even if it is not accessible by the
-         current frontend user. Note that the default behavior of page-not-found
-         handling is to show the parent page instead.
+    **Properties:**
 
-         **Properties:**
+    .addParam = Additional parameter for the URL, which can hold two
+    markers; ###RETURN\_URL### which will be substituted with the link the
+    page would have had if it had been accessible and ###PAGE\_ID###
+    holding the page id of the page coming from (could be used to look up
+    which fe\_groups was required for access.
 
-         .addParam = Additional parameter for the URL, which can hold two
-         markers; ###RETURN\_URL### which will be substituted with the link the
-         page would have had if it had been accessible and ###PAGE\_ID###
-         holding the page id of the page coming from (could be used to look up
-         which fe\_groups was required for access.
+    ..  rubric:: Example
 
-         **Example:** :
+    ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-         .. code-block:: typoscript
-            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        showAccessRestrictedPages = 22
+        showAccessRestrictedPages.addParams = &return_url=###RETURN_URL###&pageId=###PAGE_ID###
 
-            showAccessRestrictedPages = 22
-            showAccessRestrictedPages.addParams = &return_url=###RETURN_URL###&pageId=###PAGE_ID###
-
-         The example will link access restricted menu items to page id 22 with
-         the return URL in the GET var "return\_url" and the page id in the GET
-         var "pageId".
+    The example will link access restricted menu items to page id 22 with
+    the return URL in the GET var "return\_url" and the page id in the GET
+    var "pageId".
 
 additionalWhere
 ---------------
 
-.. container:: table-row
+..  confval:: additionalWhere
+    :name: menu-common-properties-additionalWhere
+    :type: string / :ref:`stdWrap <stdwrap>`
 
-   Property
-         additionalWhere
+    Adds an additional part to the WHERE clause for this menu.
+    Make sure to start the part with "AND "!
 
-   Data type
-         string / :ref:`stdWrap <stdwrap>`
+    ..  rubric:: Example
 
-   Description
-         Adds an additional part to the WHERE clause for this menu.
-         Make sure to start the part with "AND "!
+    ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-         **Example:** :
-
-         .. code-block:: typoscript
-            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-            lib.authormenu = HMENU
-            lib.authormenu.1 = TMENU
-            lib.authormenu.1.additionalWhere = AND author!=""
+        lib.authormenu = HMENU
+        lib.authormenu.1 = TMENU
+        lib.authormenu.1.additionalWhere = AND author!=""
 
 itemArrayProcFunc
 -----------------
 
-.. container:: table-row
+..  confval:: itemArrayProcFunc
+    :name: menu-common-properties-itemArrayProcFunc
+    :type: function name
 
-   Property
-         itemArrayProcFunc
 
-   Data type
-         function name
+    The first variable passed to this function is the "menuArr" array with
+    the menu items as they are collected based on the type of menu.
 
-   Description
-         The first variable passed to this function is the "menuArr" array with
-         the menu items as they are collected based on the type of menu.
+    You're free to manipulate or add to this array as you like. Just
+    remember to return the array again!
 
-         You're free to manipulate or add to this array as you like. Just
-         remember to return the array again!
+    **Note:**
 
-         **Note:**
+    .parentObj property is **hardcoded** to be a reference to the calling
+    typo3/sysext/frontend/Classes/ContentObject/Menu/ object. Here you'll
+    find e.g. ->id to be the uid of the menu item generating a submenu and
+    such.
 
-         .parentObj property is **hardcoded** to be a reference to the calling
-         typo3/sysext/frontend/Classes/ContentObject/Menu/ object. Here you'll
-         find e.g. ->id to be the uid of the menu item generating a submenu and
-         such.
+    **Presetting element state**
 
-         **Presetting element state**
-
-         You can override element states like SPC, IFSUB, ACT, CUR or USR by
-         setting the key ITEM\_STATE in the page records.
+    You can override element states like SPC, IFSUB, ACT, CUR or USR by
+    setting the key ITEM\_STATE in the page records.
 
 submenuObjSuffixes
 ------------------
 
-.. container:: table-row
+..  confval:: submenuObjSuffixes
+    :name: menu-common-properties-submenuObjSuffixes
+    :type: string / optionSplit
 
-   Property
-         submenuObjSuffixes
+    Defines a suffix for alternative sub-level menu objects. Useful to
+    create special submenus depending on their parent menu element. See
+    example below.
 
-   Data type
-         string
+    ..  rubric:: Example
 
-         +optionSplit
+    This example will generate a menu where the menu objects for the
+    second level will differ depending on the number of the first level
+    item for which the submenu is rendered. The second level objects used
+    are "2" (the default), "2a" and "2b" (the alternatives). Which of them
+    is used is defined by "1.submenuObjSuffixes" which has the
+    configuration "a \|\*\| \|\*\| b". This configuration means that the
+    first menu element will use configuration "2a" and the last will use
+    "2b" while anything in between will use "2" (no suffix applied) :
 
-   Description
-         Defines a suffix for alternative sub-level menu objects. Useful to
-         create special submenus depending on their parent menu element. See
-         example below.
+    ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-         **Example:**
+        page.200 = HMENU
+        page.200 {
+            1 = TMENU
+            1.wrap = <div style="width:200px; border: 1px solid;">|</div>
+            1.expAll = 1
+            1.submenuObjSuffixes = a |*|  |*| b
+            1.NO.allWrap = <b>|</b><br/>
 
-         This example will generate a menu where the menu objects for the
-         second level will differ depending on the number of the first level
-         item for which the submenu is rendered. The second level objects used
-         are "2" (the default), "2a" and "2b" (the alternatives). Which of them
-         is used is defined by "1.submenuObjSuffixes" which has the
-         configuration "a \|\*\| \|\*\| b". This configuration means that the
-         first menu element will use configuration "2a" and the last will use
-         "2b" while anything in between will use "2" (no suffix applied) :
+            2 = TMENU
+            2.NO.allWrap = <div style="background:red;">|</div>
 
-         .. code-block:: typoscript
-            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+            2a = TMENU
+            2a.NO.allWrap = <div style="background:yellow;">|</div>
 
-            page.200 = HMENU
-            page.200 {
-              1 = TMENU
-              1.wrap = <div style="width:200px; border: 1px solid;">|</div>
-              1.expAll = 1
-              1.submenuObjSuffixes = a |*|  |*| b
-              1.NO.allWrap = <b>|</b><br/>
+            2b = TMENU
+            2b.NO.allWrap = <div style="background:green;">|</div>
+        }
 
-              2 = TMENU
-              2.NO.allWrap = <div style="background:red;">|</div>
+    The result can be seen in the image below:
 
-              2a = TMENU
-              2a.NO.allWrap = <div style="background:yellow;">|</div>
+    ..  figure:: /Images/ManualScreenshots/FrontendOutput/Hmenu/MenuObjectsCommonPropertiesSubmenuObjSuffixes.png
+        :alt: Output of the above example.
 
-              2b = TMENU
-              2b.NO.allWrap = <div style="background:green;">|</div>
-            }
-
-         The result can be seen in the image below:
-
-         .. figure:: /Images/ManualScreenshots/FrontendOutput/Hmenu/MenuObjectsCommonPropertiesSubmenuObjSuffixes.png
-            :alt: Output of the above example.
-
-         Applies to TMENU on >= 2 :sup:`nd` level in a menu.
-
-
-.. ###### END~OF~TABLE ######
-
-[tsref:(cObject).HMENU.(mObj).TMENU]
-
+    Applies to TMENU on >= 2 :sup:`nd` level in a menu.

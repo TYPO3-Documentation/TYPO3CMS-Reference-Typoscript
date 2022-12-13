@@ -10,262 +10,196 @@ The current record is the page-record of the menu item. Now, if you would
 like to get data from the current menu item's page record, use
 stdWrap.data = field : [field name].
 
-.. ### BEGIN~OF~TABLE ###
+Properties
+==========
 
-.. container:: table-row
+allWrap
+-------
 
-   Property
-         allWrap
+..  confval:: allWrap
+    :name: tmenuitem-allWrap
+    :type: wrap /:ref:`stdWrap <stdwrap>`
 
-   Data type
-         wrap /:ref:`stdWrap <stdwrap>`
+    Wraps the whole item.
 
-   Description
-         Wraps the whole item.
+wrapItemAndSub
+--------------
 
+..  confval:: wrapItemAndSub
+    :name: tmenuitem-wrapItemAndSub
+    :type: wrap /:ref:`stdWrap <stdwrap>`
 
-.. container:: table-row
+    Wraps the whole item and any submenu concatenated to it.
 
-   Property
-         wrapItemAndSub
+subst_elementUid
+----------------
 
-   Data type
-         wrap /:ref:`stdWrap <stdwrap>`
+..  confval:: subst_elementUid
+    :name: tmenuitem-subst-elementUid
+    :type: boolean
 
-   Description
-         Wraps the whole item and any submenu concatenated to it.
+    :Default: 0 (false)
 
+     If set, all appearances of the string '{elementUid}' in the total
+     element HTML code (after wrapped in .allWrap} are substituted with the
+     uid number of the menu item.
 
-.. container:: table-row
+     This is useful if you want to insert an identification code in the
+     HTML in order to manipulate properties with JavaScript.
 
-   Property
-         subst\_elementUid
+before
+------
 
-   Data type
-         boolean
+..  confval:: before
+    :name: tmenuitem-before
+    :type: HTML /:ref:`stdWrap <stdwrap>`
 
-   Default
-         0 (false)
+beforeWrap
+----------
 
-   Description
-         If set, all appearances of the string '{elementUid}' in the total
-         element HTML code (after wrapped in .allWrap} are substituted with the
-         uid number of the menu item.
+..  confval:: beforeWrap
+    :name: tmenuitem-beforeWrap
+    :type: wrap
 
-         This is useful if you want to insert an identification code in the
-         HTML in order to manipulate properties with JavaScript.
+    wrap around the ".before"-code
 
+after
+-----
 
+..  confval:: after
+    :name: tmenuitem-after
+    :type: HTML /:ref:`stdWrap <stdwrap>`
 
-.. container:: table-row
+afterWrap
+---------
 
-   Property
-         before
+..  confval:: afterWrap
+    :name: tmenuitem-afterWrap
+    :type: wrap
 
-   Data type
-         HTML /:ref:`stdWrap <stdwrap>`
+    wrap around the ".after"-code
 
+linkWrap
+--------
 
-.. container:: table-row
+..  confval:: linkWrap
+    :name: tmenuitem-linkWrap
+    :type: wrap
 
-   Property
-         beforeWrap
+stdWrap
+-------
 
-   Data type
-         wrap
+..  confval:: stdWrap
+    :name: tmenuitem-stdWrap
+    :type: :ref:`stdWrap`
 
-   Description
-         wrap around the ".before"-code
+    stdWrap to the link-text
 
-.. container:: table-row
+ATagBeforeWrap
+--------------
 
-   Property
-         after
+..  confval:: ATagBeforeWrap
+    :name: tmenuitem-ATagBeforeWrap
+    :type: boolean
 
-   Data type
-         HTML /:ref:`stdWrap <stdwrap>`
+    :Default: 0 (false)
 
+    If set, the link is first wrapped with "*.linkWrap*" and then the
+    <A>-tag.
 
-.. container:: table-row
+ATagParams
+----------
 
-   Property
-         afterWrap
+..  confval:: ATagParams
+    :name: tmenuitem-ATagParams
+    :type: *<A>-params* /:ref:`stdWrap <stdwrap>`
 
-   Data type
-         wrap
+    Additional parameters
 
-   Description
-         wrap around the ".after"-code
+    **Example:** :
 
-.. container:: table-row
+    ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-   Property
-         linkWrap
+        ATagParams = class="board"
 
-   Data type
-         wrap
+ATagTitle
+---------
 
+..  confval:: ATagTitle
+    :name: tmenuitem-ATagTitle
+    :type: string /:ref:`stdWrap <stdwrap>`
 
-.. container:: table-row
+    Allows you to specify the "title" attribute of the <a> tag around the
+    menu item.
 
-   Property
-         stdWrap
+    **Example:** :
 
-   Data type
-         ->stdWrap
+    ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-   Description
-         stdWrap to the link-text!
+        ATagTitle.field = abstract // description
 
+    This would use the abstract or description field for the <a title="">
+    attribute.
 
-.. container:: table-row
+additionalParams
+----------------
 
-   Property
-         ATagBeforeWrap
+..  confval:: additionalParams
+    :name: tmenuitem-additionalParams
+    :type: string /:ref:`stdWrap <stdwrap>`
 
-   Data type
-         boolean
+    Define parameters that are added to the end of the URL. This must be
+    code ready to insert after the last parameter.
 
-   Default
-         0 (false)
+    For details, see typolink->additionalParams
 
-   Description
-         If set, the link is first wrapped with "*.linkWrap*" and then the
-         <A>-tag.
+doNotLinkIt
+-----------
 
+..  confval:: doNotLinkIt
+    :name: tmenuitem-doNotLinkIt
+    :type: boolean /:ref:`stdWrap <stdwrap>`
+    :Default: 0
 
+    If set, the link texts are not linked at all
 
-.. container:: table-row
+doNotShowLink
+-------------
 
-   Property
-         ATagParams
+..  confval:: doNotShowLink
+    :name: tmenuitem-doNotShowLink
+    :type: boolean /:ref:`stdWrap <stdwrap>`
+    :Default: 0
 
-   Data type
-         *<A>-params* /:ref:`stdWrap <stdwrap>`
+    If set, the text will not be shown at all (smart with spacers).
 
-   Description
-         Additional parameters
+stdWrap2
+--------
 
-         **Example:** :
+..  confval:: stdWrap2
+    :name: tmenuitem-stdWrap2
+    :type: wrap /:ref:`stdWrap <stdwrap>`
+    :Default: \|
 
-         .. code-block:: typoscript
-            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    stdWrap to the total link-text and ATag. (Notice that the plain
+    default value passed to the stdWrap function is "\|".)
 
-            ATagParams = class="board"
+altTarget
+---------
 
+..  confval:: altTarget
+    :name: tmenuitem-altTarget
+    :type: target
 
-.. container:: table-row
+    Alternative target overriding the target property of the TMENU if set.
 
-   Property
-         ATagTitle
+allStdWrap
+----------
 
-   Data type
-         string /:ref:`stdWrap <stdwrap>`
+..  confval:: allStdWrap
+    :name: tmenuitem-allStdWrap
+    :type: ->stdWrap
 
-   Description
-         Allows you to specify the "title" attribute of the <a> tag around the
-         menu item.
-
-         **Example:** :
-
-         .. code-block:: typoscript
-            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-            ATagTitle.field = abstract // description
-
-         This would use the abstract or description field for the <a title="">
-         attribute.
-
-
-.. container:: table-row
-
-   Property
-         additionalParams
-
-   Data type
-         string /:ref:`stdWrap <stdwrap>`
-
-   Description
-         Define parameters that are added to the end of the URL. This must be
-         code ready to insert after the last parameter.
-
-         For details, see typolink->additionalParams
-
-
-.. container:: table-row
-
-   Property
-         doNotLinkIt
-
-   Data type
-         boolean /:ref:`stdWrap <stdwrap>`
-
-   Default
-         0
-
-   Description
-         If set, the linktexts are not linked at all!
-
-
-
-.. container:: table-row
-
-   Property
-         doNotShowLink
-
-   Data type
-         boolean /:ref:`stdWrap <stdwrap>`
-
-   Default
-         0
-
-   Description
-         If set, the text will not be shown at all (smart with spacers).
-
-
-
-.. container:: table-row
-
-   Property
-         stdWrap2
-
-   Data type
-         wrap /:ref:`stdWrap <stdwrap>`
-
-   Default
-         \|
-
-   Description
-         stdWrap to the total link-text and ATag. (Notice that the plain
-         default value passed to the stdWrap function is "\|".)
-
-
-
-.. container:: table-row
-
-   Property
-         altTarget
-
-   Data type
-         target
-
-   Description
-         Alternative target overriding the target property of the TMENU if set.
-
-
-.. container:: table-row
-
-   Property
-         allStdWrap
-
-   Data type
-         ->stdWrap
-
-   Description
-         stdWrap of the whole item
-
-
-.. ###### END~OF~TABLE ######
-
-[tsref:(cObject).HMENU.(mObj).TMENUITEM]
-
+    stdWrap of the whole item
