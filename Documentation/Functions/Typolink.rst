@@ -16,8 +16,8 @@ must set the property by :typoscript:`returnLast = url` or
 
 ..  attention::
 
-    If this is used from :typoscript:`parseFunc` the :php:`$cObj->parameters` array is
-    loaded with the lowercase link-parameters!
+    If typolink is used from :typoscript:`parseFunc` the :php:`$cObj->parameters` array is
+    loaded with the lowercase link parameters!
 
 .. contents::
    :local:
@@ -119,7 +119,7 @@ additionalParams
 
            page.20.typolink.additionalParams.data = register:SWORD_PARAMS
 
-    ..  note:: This is only active for internal links.
+    ..  note:: additionalParams are only considered for internal links.
 
 addQueryString
 --------------
