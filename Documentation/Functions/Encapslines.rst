@@ -159,7 +159,7 @@ wrapNonWrappedLines
 
 ..  t3-function-encapslines:: wrapNonWrappedLines
 
-    :Data type: :ref:`stdwrap-wrap`
+    :Data type: :t3-function-stdwrap:`wrap`
 
     Wrapping for non-encapsulated lines
 
@@ -213,8 +213,8 @@ defaultAlign
     :Data type: :t3-data-type:`string` / :ref:`stdWrap`
 
     If set, this value is set as the default "align" value of the wrapping
-    tags, both from :ref:`encapsTagList`, :typoscript:`bypassEncapsTagList` and
-    :ref:`nonWrappedTag`
+    tags, both from :t3-function-encapslines:`encapsTagList` and
+    :t3-function-encapslines:`nonWrappedTag`
 
 nonWrappedTag
 -------------
