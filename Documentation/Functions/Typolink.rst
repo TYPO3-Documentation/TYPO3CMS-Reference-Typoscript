@@ -636,7 +636,7 @@ folder
 
     The identifier of a given folder.
 
-..  t3-typolink-handler:: folder.identifier
+..  t3-typolink-handler:: folder.storage
 
     :Data Type: string
     :Example: `t3://folder?storage=1&identifier=myfolder`
@@ -715,6 +715,19 @@ record
 
     The UID of the referenced record to be linked.
 
+
+.. index:: Link handler; url
+
+phone
+-----
+
+..  t3-typolink-handler:: phone
+
+    :Data Type: string of parameters
+    :Implementation: :t3src:`core/LinkHandling/TelephoneLinkHandler.php`
+    :Example:  `t3://phone?phone=tel:+4912345678`
+
+    This link handler sets links to phone numbers using the `tel:` protocol.
 
 Examples
 ========
