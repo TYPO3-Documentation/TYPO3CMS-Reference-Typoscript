@@ -1023,8 +1023,8 @@ saveDocNew
 :aspect:`Description`
    If set, a button "Save and create new" will appear in TCEFORMs.
 
-   Note it is possible to set this for single tables using `options.saveDocNew.[tableName]`.
-   Any value set for a single table will override the default value set for "saveDocNew".
+   Note it is possible to set this for single tables using :typoscript:`options.saveDocNew.[tableName]`.
+   Any value set for a single table will override the default value set for :typoscript:`saveDocNew`.
 
 :aspect:`Default`
    1
@@ -1053,8 +1053,8 @@ saveDocView
 :aspect:`Description`
    If set, a button "Save and view" will appear in TCEFORMs.
 
-   Note it is possible to set this for single tables using `options.saveDocView.[tableName]`.
-   Any value set for a single table will override the default value set for "saveDocView".
+   Note it is possible to set this for single tables using :typoscript:`options.saveDocView.[tableName]`.
+   Any value set for a single table will override the default value set for :typoscript:`saveDocView`.
 
 :aspect:`Default`
    1
@@ -1073,7 +1073,7 @@ showDuplicate
    If set, a button "Duplicate" will appear in TCEFORMs.
 
    Note that it is possible to set this for single tables using :typoscript:`options.showDuplicate.[tableName]`.
-   Any value set for a single table will override the default value set for :typoscript:`saveDocView`.
+   Any value set for a single table will override the default value set for :typoscript:`showDuplicate`.
 
 :aspect:`Default`
    0
@@ -1091,7 +1091,7 @@ showHistory
 :aspect:`Description`
    Shows link to the history for the record in TCEFORMs.
 
-   Note it is possible to set this for single tables using `options.showHistory.[tableName]`.
-   Any value set for a single table will override the default value set for "showHistory".
+   Note it is possible to set this for single tables using :typoscript:`options.showHistory.[tableName]`.
+   Any value set for a single table will override the default value set for :typoscript:`showHistory`.
 
 
