@@ -495,7 +495,7 @@ Resource handler key (`page`)
     -   :t3-typolink-handler:`url`
     -   :t3-typolink-handler:`email`
     -   :t3-typolink-handler:`record` (see :php:`\TYPO3\CMS\Core\LinkHandling\RecordLinkHandler`)
-    -   :t3-typolink-handler:`telephone` (see :php:`\TYPO3\CMS\Core\LinkHandling\TelephoneLinkHandler`)
+    -   :t3-typolink-handler:`phone` (see :php:`\TYPO3\CMS\Core\LinkHandling\TelephoneLinkHandler`)
 
     More keys can be added via :php:`$GLOBALS['TYPO3_CONF_VARS']['SYS']['linkHandler']` in
     an associative array where the key is the handler key and the value is a
