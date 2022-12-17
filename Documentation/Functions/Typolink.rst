@@ -1,8 +1,8 @@
-.. include:: /Includes.rst.txt
-.. index::
-   Functions; typolink
-   typolink
-.. _typolink:
+..  include:: /Includes.rst.txt
+..  index::
+    Functions; typolink
+    typolink
+..  _typolink:
 
 ========
 typolink
@@ -14,568 +14,462 @@ If you do not want to have the HTML 'a' tag around the link, then you
 must set the property by :typoscript:`returnLast = url` or
 :php:`$lconf['returnLast'] = 'url'`.
 
-.. important::
+..  attention::
 
-   If this is used from :typoscript:`parseFunc` the :php:`$cObj->parameters` array is
-   loaded with the lowercased link-parameters!
+    If typolink is used from :typoscript:`parseFunc` the :php:`$cObj->parameters` array is
+    loaded with the lowercase link parameters!
 
 .. contents::
    :local:
 
-.. index:: tags; Properties
-.. _typolink-properties:
+..  index:: tags; Properties
+..  _typolink-properties:
 
 Properties
 ==========
 
-.. index:: typolink; extTarget
-.. _typolink-extTarget:
-
 extTarget
 ---------
 
-:aspect:`Property`
-   extTarget
+..  t3-function-typolink:: extTarget
 
-:aspect:`Data type`
-   target / :ref:`stdwrap`
+    :Data type: target / :ref:`stdwrap`
 
-:aspect:`Description`
-   Target used for external links
+    :Default: `_top`
 
-:aspect:`Default`
-   \_top
-
-
-.. index:: typolink; fileTarget
-.. _typolink-fileTarget:
+    Target used for external links
 
 fileTarget
 ----------
 
-:aspect:`Property`
-   fileTarget
+..  t3-function-typolink:: fileTarget
 
-:aspect:`Data type`
-   target / :ref:`stdwrap`
+    :Data type: target / :ref:`stdwrap`
 
-:aspect:`Description`
-   Target used for file links
-
-
-.. index:: typolink; language
-.. _typolink-language:
+    Target used for file links
 
 language
 --------
 
-:aspect:`Property`
-   language
+..  t3-function-typolink:: language
 
-:aspect:`Data type`
-   integer
+    :Data type: integer
 
-:aspect:`Description`
-   Language uid for link target
+    Language uid for link target
 
-   Omitting the parameter :typoscript:`language` will use the current language.
+    Omitting the parameter :typoscript:`language` will use the current language.
 
-:aspect:`Example`
-   .. code-block:: typoscript
+    ..  rubric:: Example
 
-      page.10 = TEXT
-      page.10.value = Link to the page with the ID 23 in the current language
-      page.10.typolink.parameter = 23
-      page.20 = TEXT
-      page.20.value = Link to the page with the ID 23 in the language 3
-      page.20.typolink.parameter = 23
-      page.20.typolink.language = 3
+    ..  code-block:: typoscript
 
+        page.10 = TEXT
+        page.10.value = Link to the page with the ID 23 in the current language
+        page.10.typolink.parameter = 23
 
-.. index:: typolink; target
-.. _typolink-target:
+        page.20 = TEXT
+        page.20.value = Link to the page with the ID 23 in the language 3
+        page.20.typolink.parameter = 23
+        page.20.typolink.language = 3
 
 target
 ------
 
-:aspect:`Property`
-   target
+..  t3-function-typolink:: target
 
-:aspect:`Data type`
-   target / :ref:`stdwrap`
+    :Data type: target / :ref:`stdwrap`
 
-:aspect:`Description`
-   Target used for internal links
-
-
-.. index:: typolink; no_cache
-.. _typolink-no-cache:
+    Target used for internal links
 
 no\_cache
 ---------
 
-:aspect:`Property`
-   no\_cache
+..  t3-function-typolink:: no_cache
 
-:aspect:`Data type`
-   :t3-data-type:`boolean` / :ref:`stdwrap`
+    :Data type: :t3-data-type:`boolean` / :ref:`stdwrap`
 
-:aspect:`Description`
-   Adds ``&no_cache=1`` to the link
-
-
-.. index:: typolink; additionalParams
-.. _typolink-additionalParams:
+    Adds `&no_cache=1` to the link
 
 additionalParams
 ----------------
 
-:aspect:`Property`
-   additionalParams
+..  t3-function-typolink:: additionalParams
 
-:aspect:`Data type`
-   :t3-data-type:`string` / :ref:`stdwrap`
+    :Data type: :t3-data-type:`string` / :ref:`stdwrap`
 
-:aspect:`Description`
-   This is parameters that are added to the end of the URL. This must be
-   code ready to insert after the last parameter.
+    This is parameters that are added to the end of the URL. This must be
+    code ready to insert after the last parameter.
 
-:aspect:`Example`
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    ..  rubric:: Example
 
-      page.10.typolink.additionalParams = '&print=1'
-      page.20.typolink.additionalParams = '&sword_list[]=word1&sword_list[]=word2'
+    ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-:aspect:`Applications`
-   This is very useful – for example – when linking to pages from a
-   search result. The search words are stored in the register-key
-   SWORD\_PARAMS and can be insert directly like this:
+        page.10.typolink.additionalParams = '&print=1'
+        page.20.typolink.additionalParams = '&sword_list[]=word1&sword_list[]=word2'
 
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    ..  rubric:: Applications
 
-         page.20.typolink.additionalParams.data = register:SWORD_PARAMS
+    This is very useful – for example – when linking to pages from a
+    search result. The search words are stored in the register-key
+    SWORD\_PARAMS and can be insert directly like this:
 
-   .. note:: This is only active for internal links.
+    ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
+           page.20.typolink.additionalParams.data = register:SWORD_PARAMS
 
-.. index:: typolink; addQueryString
-.. _typolink-addQueryString:
+    ..  note:: additionalParams are only considered for internal links.
 
 addQueryString
 --------------
 
-:aspect:`Property`
-   addQueryString
+..  t3-function-typolink:: addQueryString
 
-:aspect:`Data type`
-   :t3-data-type:`boolean`
+    :Data type: :t3-data-type:`boolean`
 
-:aspect:`Description`
-   Add the QUERY\_STRING to the start of the link. Notice that this does
-   not check for any duplicate parameters! This is not a problem: Only
-   the last parameter of the same name will be applied.
+    Add the current querry string to the start of the link. Notice that this does
+    not check for any duplicate parameters! This is not a problem: Only
+    the last parameter of the same name will be applied.
 
-   .method
-      If empty, the URL will be build with just the TYPO3 internal params like id,
-      type, M. If there are further params in URL (f.e. tx_news_pi1 for news) you should
-      set this value to :typoscript:`GET` to add all GET parameters.
+    .method
+        If empty, the URL will be build with just the TYPO3 internal params like id,
+        type, M. If there are further params in URL (f.e. tx_news_pi1 for news) you should
+        set this value to :typoscript:`GET` to add all GET parameters.
 
-   .. versionchanged:: 10.0
+    ..  versionchanged:: 10.0
 
-      With version 10.0 a breaking change was introduced. Setting
-      :typoscript:`addQueryString.method` to any value but :typoscript:`GET` will
-      trigger a `E_USER_WARNING`. Any POST-parameters will be ignored. Maintaining
-      functionality - if required at all - has to be done using domain specific
-      logic in according controllers or middleware implementations.
+        With version 10.0 a breaking change was introduced. Setting
+        :typoscript:`addQueryString.method` to any value but :typoscript:`GET` will
+        trigger a `E_USER_WARNING`. Any POST-parameters will be ignored. Maintaining
+        functionality - if required at all - has to be done using domain specific
+        logic in according controllers or middleware implementations.
 
-   .exclude
-      List of query arguments to exclude from the link. Typical examples
-      are 'L' or 'cHash'.
+    .exclude
+        List of query arguments to exclude from the link. Typical examples
+        are 'L' or 'cHash'.
 
-   .. attention::
+    ..  attention::
 
-      This property should not be used for cached contents without a valid
-      cHash. Otherwise the page is cached for the first set of parameters
-      and subsequently taken from the cache no matter what parameters
-      are given. Additionally the security risk of cache poisoning has to
-      be considered.
-
-.. _typolink-wrap:
+        This property should not be used for cached contents without a valid
+        cHash. Otherwise the page is cached for the first set of parameters
+        and subsequently taken from the cache no matter what parameters
+        are given. Additionally the security risk of cache poisoning has to
+        be considered.
 
 wrap
 ----
 
-:aspect:`Property`
-   wrap
+..  t3-function-typolink:: wrap
 
-:aspect:`Data type`
-   wrap / :ref:`stdwrap`
+    :Data type: wrap / :ref:`stdwrap`
 
-:aspect:`Description`
-   Wraps the links.
-
-
-.. index:: typolink; ATagBeforeWrap
-.. _typolink-ATagBeforeWrap:
+    Wraps the links.
 
 ATagBeforeWrap
 --------------
 
-:aspect:`Property`
-   ATagBeforeWrap
+..  t3-function-typolink:: ATagBeforeWrap
 
-:aspect:`Data type`
-   :t3-data-type:`boolean`
+    :Data type: :t3-data-type:`boolean`
+    :Default: 0
 
-:aspect:`Description`
-   If set, the link is first wrapped with :typoscript:`wrap` and then the
-   <A>-tag.
-
-:aspect:`Default`
-   0
-
-
-.. index:: typolink; parameter
-.. _typolink-parameter:
+    If set, the link is first wrapped with :typoscript:`wrap` and then the
+    <A>-tag.
 
 parameter
 ---------
 
-:aspect:`Property`
-   parameter
+..  t3-function-typolink:: parameter
 
-:aspect:`Data type`
-   :t3-data-type:`string` / :ref:`stdwrap`
+    :Data type: :t3-data-type:`string` / :ref:`stdwrap`
 
-:aspect:`Description`
-   This is the main data that is used for creating the link. It can be
-   the id of a page, the URL of some external page, an email address or
-   a reference to a file on the server. On top of this there can be
-   additional information for specifying a target, a class and a title.
-   Below are a few examples followed by full explanations.
+    This is the main data that is used for creating the link. It can be
+    the id of a page, the URL of some external page, an email address or
+    a reference to a file on the server. On top of this there can be
+    additional information for specifying a target, a class and a title.
+    Below are a few examples followed by full explanations.
 
-:aspect:`Examples`
-   #. Most simple. Will create a link to page 51 (if this is not default language,
-      the correct target language will be resolved from the parameter):
+    ..  rubric:: Examples
 
-      .. code-block:: typoscript
-         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    #.  Most simple. Will create a link to page 51 (if this is not default language,
+        the correct target language will be resolved from the parameter):
 
-         page.10.typolink.parameter = t3://page?uid=51
+        ..  code-block:: typoscript
+            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-   #. A full example. A link to the *current* page that will open in a new window.
-      The link will have a class attribute with value "specialLink" and a
-      title attribute reading "Very important information":
+            page.10.typolink.parameter = t3://page?uid=51
 
-      .. code-block:: typoscript
-         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    #.  A full example. A link to the *current* page that will open in a new window.
+        The link will have a class attribute with value "specialLink" and a
+        title attribute reading "Very important information":
 
-         page.10.typolink.parameter = t3://page?uid=current _blank specialLink "Very important information"
+        ..  code-block:: typoscript
+            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-      which is converted to a link like this:
+            page.10.typolink.parameter = t3://page?uid=current _blank specialLink "Very important information"
 
-      .. code-block:: html
-         :caption: Example output
+        which is converted to a link like this:
 
-         <a href="?id=51" target="_blank" class="specialLink" title="Very important information">
+        ..  code-block:: html
+            :caption: Example output
 
-   #. An external link with a class attribute. Note the dash (-) that
-      replaces the second value (the target). This makes it possible to
-      define a class (third value) without having to define a target:
+            <a href="?id=51" target="_blank" class="specialLink" title="Very important information">
 
-      .. code-block:: typoscript
-         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    #.  An external link with a class attribute. Note the dash (-) that
+        replaces the second value (the target). This makes it possible to
+        define a class (third value) without having to define a target:
 
-         page.10.typolink.parameter = https://example.com/ - specialLink
+        ..  code-block:: typoscript
+            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-   #. A mailto link with a title attribute (but no target and no class):
+            page.10.typolink.parameter = https://example.com/ - specialLink
 
-      .. code-block:: typoscript
-         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    #.  A mailto link with a title attribute (but no target and no class):
 
-         page.10.typolink.parameter = mailto:info@example.org - - "Send a mail to main TYPO3 contact"
+        ..  code-block:: typoscript
+            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+            page.10.typolink.parameter = mailto:info@example.org - - "Send a mail to main TYPO3 contact"
 
 
-   As you can see from the examples, each significant part of the
-   parameter string is separated by a space. Values that can themselves
-   contain spaces must be enclosed in double quotes. Each of these values
-   are described in more detail below.
+    As you can see from the examples, each significant part of the
+    parameter string is separated by a space. Values that can themselves
+    contain spaces must be enclosed in double quotes. Each of these values
+    are described in more detail below.
 
-   Link targets that are external or contain `_blank` will be added :html:`rel="noopener noreferrer"` automatically.
+    Link targets that are external or contain `_blank` will be added
+    :html:`rel="noopener noreferrer"` automatically.
 
-:aspect:`Resource reference`
-   1. The link
+    ..  rubric:: Resource reference
 
-      The first value is the destination of the link. It may start with:
+    1.  The link
 
-      -  `t3://`: internal TYPO3 resource references.
-         See `Resource references`_ for an in depth explanation on the
-         syntax of these references.
+        The first value is the destination of the link. It may start with:
 
-      -  `http(s)://`: regular external links
+        -   `t3://`: internal TYPO3 resource references.
+            See `Resource references`_ for an in depth explanation on the
+            syntax of these references.
 
-      -  `mailto:info@example.org`: regular mailto links
+        -   `http(s)://`: regular external links
 
-      It's also possible to direct the typolink to use a custom function (a
-      "link handler") to build the link. This is described in more detail
-      below.
+        -   `mailto:info@example.org`: regular mailto links
 
-   2. Target or popup settings
+        It's also possible to direct the typolink to use a custom function (a
+        "link handler") to build the link. This is described in more detail
+        below.
 
-      Targets are normally as described above (extTarget, fileTarget,
-      target). But it is possible to override them by explicitly defining
-      a target in the parameter property. It's possible to use a dash (-)
-      to skip this value when one wants to define a third or fourth
-      value, but no target.
+    2.  Target or popup settings
 
-      Instead of a target, this second value can be used to define the
-      parameters of a JavaScript popup window into which the link will be
-      opened (using window.open). The height and width of the window can be
-      defined, as well as additional parameters to be passed to the
-      JavaScript function. Also see property "Jswindow".
+        Targets are normally as described above (extTarget, fileTarget,
+        target). But it is possible to override them by explicitly defining
+        a target in the parameter property. It's possible to use a dash (-)
+        to skip this value when one wants to define a third or fourth
+        value, but no target.
 
-      Examples
-         Open page 51 in a popup window measuring 400 by 300 pixels:
+        Instead of a target, this second value can be used to define the
+        parameters of a JavaScript popup window into which the link will be
+        opened (using window.open). The height and width of the window can be
+        defined, as well as additional parameters to be passed to the
+        JavaScript function. Also see property "Jswindow".
 
-         .. code-block:: typoscript
+        ..  rubric:: Examples
+
+        Open page 51 in a popup window measuring 400 by 300 pixels:
+
+        ..  code-block:: typoscript
             :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
             typolink.parameter = 51 400x300
 
-         Open page 51 in a popup window measuring 400 by 300 pixels. Do
-         not make the window resizable and show the location bar:
+        Open page 51 in a popup window measuring 400 by 300 pixels. Do
+        not make the window resizable and show the location bar:
 
-         .. code-block:: typoscript
+        ..  code-block:: typoscript
             :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
             typolink.parameter = 51 400x300:resizable=0,location=1
 
-   3. Class
+    3.  Class
 
-      The third value can be used to define a class name for the link tag.
-      This class is inserted in the tag before any other value from the
-      "ATagParams" property. Beware of conflicting class attributes. It's
-      possible to use a dash (-) to skip this value when one wants to define
-      a fourth value, but no class (see examples above).
+        The third value can be used to define a class name for the link tag.
+        This class is inserted in the tag before any other value from the
+        "ATagParams" property. Beware of conflicting class attributes. It's
+        possible to use a dash (-) to skip this value when one wants to define
+        a fourth value, but no class (see examples above).
 
-   4. Title
+    4.  Title
 
-      The standard way of defining the title attribute of the link would
-      be to use the :typoscript:`title` property or even the :typoscript:`ATagParams`
-      property. However it can also be set in this fourth value, in which
-      case it will override the other settings. Note that the title
-      should be wrapped in double quotes (") if it contains blanks.
+        The standard way of defining the title attribute of the link would
+        be to use the :typoscript:`title` property or even the :typoscript:`ATagParams`
+        property. However it can also be set in this fourth value, in which
+        case it will override the other settings. Note that the title
+        should be wrapped in double quotes (") if it contains blanks.
 
-      *Attention:* When used from :typoscript:`parseFunc`, the value should not
-      be defined explicitly, but imported like this:
+        .. attention::
+            When used from :typoscript:`parseFunc`, the value should not
+            be defined explicitly, but imported like this:
 
-      .. code-block:: typoscript
-         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+            ..  code-block:: typoscript
+                :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-         typolink.parameter.data = parameters : allParams
-
-
-.. index:: typolink; forceAbsoluteUrl
-.. _typolink-forceAbsoluteUrl:
+                typolink.parameter.data = parameters : allParams
 
 forceAbsoluteUrl
 ----------------
 
-:aspect:`Property`
-   forceAbsoluteUrl
+..  t3-function-typolink:: forceAbsoluteUrl
 
-:aspect:`Data type`
-   :t3-data-type:`boolean`
+    :Data type: :t3-data-type:`boolean`
 
-:aspect:`Description`
-   Forces links to internal pages to be absolute, thus having a proper
-   URL scheme and domain prepended.
+    :Default: :php:`false`
 
-   Additional sub-property:
+    Forces links to internal pages to be absolute, thus having a proper
+    URL scheme and domain prepended.
 
-   .scheme
-      Defines the URL scheme to be used (https or http). http is the
-      default value. Example:
-
-      .. code-block:: typoscript
-         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-         typolink {
-            parameter = 13
-            forceAbsoluteUrl = 1
-            forceAbsoluteUrl.scheme = https
-         }
-
-:aspect:`Default`
-   0
+    Additional sub-property: :t3-function-typolink:`forceAbsoluteUrl.scheme`
 
 ..  note::
     If the option :ref:`config.forceAbsoluteUrls <setup-config-forceAbsoluteUrls>`
-    is enabled, :typoscript:`typolink.forceAbsoluteUrl` is overridden.
+    is enabled, :t3-function-typolink:`forceAbsoluteUrl` is overridden.
 
+forceAbsoluteUrl.scheme
+~~~~~~~~~~~~~~~~~~~~~~~
 
-.. index:: typolink; title
-.. _typolink-title:
+..  t3-function-typolink:: forceAbsoluteUrl.scheme
+
+    :Data type: string
+
+    :Values: :php:`http` / :php:`https`
+    :Default: :php:`http`
+
+    Defines the URL scheme to be used (https or http). http is the
+    default value. Example:
+
+    ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+        typolink {
+           parameter = 13
+           forceAbsoluteUrl = 1
+           forceAbsoluteUrl.scheme = https
+        }
 
 title
 -----
 
-:aspect:`Property`
-   title
+..  t3-function-typolink:: title
 
-:aspect:`Data type`
-   :t3-data-type:`string` / :ref:`stdwrap`
+    :Data type: :t3-data-type:`string` / :ref:`stdwrap`
 
-:aspect:`Description`
-   Sets the title parameter of the A-tag.
-
-
-.. index:: typolink; JSwindow_params
-.. _typolink-JSwindow-params:
+    Sets the title parameter of the A-tag.
 
 JSwindow\_params
 ----------------
 
-:aspect:`Property`
-   JSwindow\_params
+..  t3-function-typolink:: JSwindow_params
 
-:aspect:`Data type`
-   :t3-data-type:`string`
+    :Data type: :t3-data-type:`string`
 
-:aspect:`Description`
-   Preset values for opening the window. This example lists almost all
-   possible attributes:
+    Preset values for opening the window. This example lists almost all
+    possible attributes:
 
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-      page.10.typolink.JSwindow_params = status=1,menubar=1,scrollbars=1,resizable=1,location=1,directories=1,toolbar=1
-
-
-.. index:: typolink; returnLast
-.. _typolink-returnLast:
+        page.10.typolink.JSwindow_params = status=1,menubar=1,scrollbars=1,resizable=1,location=1,directories=1,toolbar=1
 
 returnLast
 ----------
 
-:aspect:`Property`
-   returnLast
+..  t3-function-typolink:: returnLast
 
-:aspect:`Data type`
-   :t3-data-type:`string`
+    :Data type: :t3-data-type:`string`
 
-:aspect:`Description`
-   If set to "url", then it will return the URL of the link
-   (:php:`$this->lastTypoLinkUrl`).
+    If set to "url", then it will return the URL of the link
+    (:php:`$this->lastTypoLinkUrl`).
 
-   If set to ``target``, it will return the target of the link.
+    If set to ``target``, it will return the target of the link.
 
-   So, in these two cases you will not get the value wrapped but the URL
-   or target value returned!
-
-
-.. index:: typolink; section
-.. _typolink-section:
+    So, in these two cases you will not get the value wrapped but the URL
+    or target value returned!
 
 section
 -------
 
-:aspect:`Property`
-   section
+..  t3-function-typolink:: section
 
-:aspect:`Data type`
-   :t3-data-type:`string` / :ref:`stdwrap`
+    :Data type: :t3-data-type:`string` / :ref:`stdwrap`
 
-:aspect:`Description`
-   If this value is present, it's prepended with a "#" and placed after
-   any internal URL to another page in TYPO3.
+    If this value is present, it's prepended with a "#" and placed after
+    any internal URL to another page in TYPO3.
 
-   This is used create a link, which jumps from one page directly the
-   section on another page.
-
-
-.. index:: typolink; ATagParams
-.. _typolink-ATagParams:
+    This is used create a link, which jumps from one page directly the
+    section on another page.
 
 ATagParams
 ----------
 
-:aspect:`Property`
-   ATagParams
+..  t3-function-typolink:: ATagParams
 
-:aspect:`Data type`
-   <A>-params / :ref:`stdwrap`
+    :Data type: <A>-params / :ref:`stdwrap`
 
-:aspect:`Description`
-   Additional parameters
+    Additional parameters
 
-:aspect:`Example`
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    ..  rubric:: Example
 
-      page.10.typolink.ATagParams = class="board"
+    ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-
-.. index:: typolink; linkAccessRestrictedPages
-.. _typolink-linkAccessRestrictedPages:
+        page.10.typolink.ATagParams = class="board"
 
 linkAccessRestrictedPages
 -------------------------
 
-:aspect:`Property`
-   linkAccessRestrictedPages
+..  t3-function-typolink:: linkAccessRestrictedPages
 
-:aspect:`Data type`
-   :t3-data-type:`boolean`
+    :Data type: :t3-data-type:`boolean`
 
-:aspect:`Description`
-   If set, typolinks pointing to access restricted pages will still link
-   to the page even though the page cannot be accessed.
-
-
-.. index:: typolink; userFunc
-.. _typolink-userFunc:
+    If set, typolinks pointing to access restricted pages will still link
+    to the page even though the page cannot be accessed.
 
 userFunc
 --------
 
-:aspect:`Property`
-   userFunc
+..  t3-function-typolink:: userFunc
 
-:aspect:`Data type`
-   :t3-data-type:`function name`
+    :Data type: :t3-data-type:`function name`
 
-:aspect:`Description`
-   This passes the link-data compiled by the typolink function to a user-
-   defined function for final manipulation.
+    This passes the link-data compiled by the typolink function to a user-
+    defined function for final manipulation.
 
-   The :php:`$content` variable passed to the user-function (first parameter) is
-   an array with the keys "TYPE", "TAG", "url", "targetParams" and
-   "aTagParams".
+    The :php:`$content` variable passed to the user-function (first parameter) is
+    an array with the keys "TYPE", "TAG", "url", "targetParams" and
+    "aTagParams".
 
-   TYPE is an indication of link-kind: mailto, url, file, page
+    TYPE is an indication of link-kind: mailto, url, file, page
 
-   TAG is the full <A>-tag as generated and ready from the typolink
-   function.
+    TAG is the full <A>-tag as generated and ready from the typolink
+    function.
 
-   The actual tag value is constructed like this:
+    The actual tag value is constructed like this:
 
-   .. code-block:: php
+    ..  code-block:: php
 
-      $contents = '<a href="' . $finalTagParts['url'] . '"'
-                  . $finalTagParts['targetParams']
-                  . $finalTagParts['aTagParams'] . '>';
+        $contents = '<a href="' . $finalTagParts['url'] . '"'
+                   . $finalTagParts['targetParams']
+                   . $finalTagParts['aTagParams'] . '>';
 
-   The userfunction must return an <A>-tag.
-
+    The userfunction must return an <A>-tag.
 
 .. index:: typolink; Resource references
 .. _typolink-resource_references:
 
 Resource references
 ===================
+
+..  todo: Move the link handler syntax to TYPO3 explained? It is also used in
+    in the Fluid ViewHelpers etc
 
 TYPO3 supports a modern and future-proof way of referencing resources using an
 extensible and expressive syntax.
@@ -588,69 +482,96 @@ page link.
 The syntax consists of three main parts, much like parts on an URL:
 
 Syntax Namespace (`t3://`)
-   The namespace is set to `t3://` to ensure the `LinkService` should be called
-   to parse the URL. This value is fixed and mandatory.
+    The namespace is set to `t3://` to ensure the `LinkService` should be called
+    to parse the URL. This value is fixed and mandatory.
 
 Resource handler key (`page`)
-   The resource handler key is a list of available handlers that TYPO3 can work
-   with. At the time of writing these handlers are:
+    The resource handler key is a list of available handlers that TYPO3 can work
+    with. At the time of writing these handlers are:
 
-   - 'page' (see :php:`\TYPO3\CMS\Core\LinkHandling\PageLinkHandler`)
-   - 'file' (see :php:`\TYPO3\CMS\Core\LinkHandling\FileLinkHandler`)
-   - 'folder' (see :php:`\TYPO3\CMS\Core\LinkHandling\FolderLinkHandler`)
-   - 'url' (see :php:`\TYPO3\CMS\Core\LinkHandling\UrlLinkHandler`)
-   - 'email' (see :php:`\TYPO3\CMS\Core\LinkHandling\EmailLinkHandler`)
-   - 'record' (see :php:`\TYPO3\CMS\Core\LinkHandling\RecordLinkHandler`)
-   - 'telephone' (see :php:`\TYPO3\CMS\Core\LinkHandling\TelephoneLinkHandler`)
+    -   :t3-typolink-handler:`page`
+    -   :t3-typolink-handler:`file`
+    -   :t3-typolink-handler:`folder`
+    -   :t3-typolink-handler:`url`
+    -   :t3-typolink-handler:`email`
+    -   :t3-typolink-handler:`record` (see :php:`\TYPO3\CMS\Core\LinkHandling\RecordLinkHandler`)
+    -   :t3-typolink-handler:`phone` (see :php:`\TYPO3\CMS\Core\LinkHandling\TelephoneLinkHandler`)
 
-   More keys can be added via :php:`$GLOBALS['TYPO3_CONF_VARS']['SYS']['linkHandler']` in
-   an associative array where the key is the handler key and the value is a
-   class implementing the LinkHandlerInterface.
+    More keys can be added via :php:`$GLOBALS['TYPO3_CONF_VARS']['SYS']['linkHandler']` in
+    an associative array where the key is the handler key and the value is a
+    class implementing the LinkHandlerInterface.
 
 Resource parameters (`?uid=13&campaignCode=ABC123`)
-   These are the specific identification parameters that are used by any
-   handler. Note that these may carry additional parameters in order to
-   configure the behavior of any handler.
+    These are the specific identification parameters that are used by any
+    handler. Note that these may carry additional parameters in order to
+    configure the behavior of any handler.
 
 
 .. index::
-   typolink; Link handler syntax
-   Link handler
+    typolink; Link handler syntax
+    Link handler
 
 Handler syntax
 ==============
 
-.. index:: Link handler; page
+..  index:: Link handler; page
 
 page
 ----
 
-The page identifier is a compound string based on several optional settings.
+..  t3-typolink-handler:: page
 
-:aspect:`uid` (int|string):
-   The **uid** of a page record, or "current" to reference the current page.
+    :Data Type: string of parameters
+    :Implementation: :t3src:`core/LinkHandling/PageLinkHandler.php`
+    :Example:  `t3://page?uid=42&type=3`
 
-   `t3://page?uid=13`
+    The page identifier is a compound string based on several optional settings.
 
-   `t3://page?uid=current`
+..  t3-typolink-handler:: page.uid
 
-:aspect:`alias` (string):
-   The **alias** of a page record (as an alternative to the UID).
+    :Data Type: int / string
+    :Example:  `t3://page?uid=13`
 
-   `t3://page?alias=myfunkyalias`
+    The UID (field :sql:`uid`) of a page record, or "current" to reference
+    the current page.
 
-:aspect:`type` (int) *(optional)*:
-   `t3://page?uid=13&type=3` will reference page 13 in type 3.
+    *   `t3://page?uid=13`
+    *   `t3://page?uid=current`
 
-:aspect:`parameters` (string) *(optional, prefixed with &)*:
-   `t3://page?uid=1313&my=param&will=get&added=here`
 
-:aspect:`fragment` (string) *(optional, prefixed with #)*:
-   `t3://page?alias=myfunkyalias#c123`
+..  t3-typolink-handler:: page.alias
 
-   `t3://page?uid=13&type=3#c123`
+    :Data Type: string
+    :Example: `t3://page?alias=myfunkyalias`
 
-   `t3://page?uid=13&type=3&my=param&will=get&added=here#c123`
+    The alias (field :sql:`alias`) of a page record (as an alternative to
+    :t3-typolink-handler:`page.uid`).
+
+
+..  t3-typolink-handler:: page.type
+
+    :Data Type: int
+    :Default: 0
+    :Example: `t3://page?uid=13&type=3`
+
+    The type (:ref:`setup-page-typenum` property of the :ref:`page` top level
+    object). `t3://page?uid=13&type=3` will reference page 13 in type 3.
+
+
+..  t3-typolink-handler:: page.parameters
+
+    :Data Type: string of parameters
+    :Example: `t3://page?uid=1313&my=param&will=get&added=here`
+
+    String of parameters, prefixed with `&`, to be added to the URL. If the
+    parameters
+
+..  t3-typolink-handler:: page.fragment
+
+    :Data Type: string
+    :Example: `t3://page?uid=13&type=3#c123`
+
+    The anchor or section to jump to. Must be prefixed with `#`.
 
 
 .. index:: Link handler; file
@@ -658,18 +579,41 @@ The page identifier is a compound string based on several optional settings.
 file
 ----
 
-:aspect:`uid` (int):
-   The UID of a file within the FAL database table `sys_file`.
+..  t3-typolink-handler:: file
 
-   `t3://file?uid=13`
+    :Data Type: string of parameters
+    :Implementation: :t3src:`core/LinkHandling/FileLinkHandler.php`
+    :Example:  `t3://file?uid=13`
 
-:aspect:`identifier` (string):
-   The identifier of a file using combined `<storage>:<path>` reference or a direct
-   reference to one file like `fileadmin/path/myfile.jpg`.
+    Links to a file to download.
 
-   `t3://file?identifier=1:/path/myfile.jpg`
 
-   `t3://file?identifier=fileadmin/path/myfile.jpg`
+..  t3-typolink-handler:: file.uid
+
+    :Data Type: int
+    :Example:  `t3://file?uid=13`
+
+    The UID of a file within the file abstraction layer (FAL) database table
+    :sql:`sys_file`.
+
+
+..  t3-typolink-handler:: file.identifier
+
+    :Data Type: int
+    :Example: `t3://file?identifier=fileadmin/path/myfile.jpg`
+
+    The identifier of a file using combined `<storage>:<path>` reference or a direct
+    reference to a file in the default storage with UID `0` as a fallback.
+
+    Examples:
+
+    *    `t3://file?identifier=1:/path/myfile.jpg`
+    *    `t3://file?identifier=fileadmin/path/myfile.jpg`
+
+    ..  attention::
+        :t3-typolink-handler:`file` cannot resolve links to files in extensions.
+        The files must lie in a storage and be accessible via the backend module
+        :guilabel:`Filelist`.
 
 
 .. index:: Link handler; folder
@@ -677,139 +621,152 @@ file
 folder
 ------
 
-:aspect:`identifier` (string):
-   The identifier of a given folder.
+..  t3-typolink-handler:: folder
 
-   `t3://folder?identifier=fileadmin`
+    :Data Type: string of parameters
+    :Implementation: :t3src:`core/LinkHandling/FolderLinkHandler.php`
+    :Example:  `t3://folder?storage=1&identifier=myfolder`
 
-:aspect:`storage` (string) *(optional)*:
-   The FAL storage to the given folder.
+    Links to a folder.
 
-   `t3://folder?storage=1&identifier=myfolder`
+..  t3-typolink-handler:: folder.identifier
 
+    :Data Type: string
+    :Example:  `t3://folder?identifier=fileadmin`
+
+    The identifier of a given folder.
+
+..  t3-typolink-handler:: folder.storage
+
+    :Data Type: string
+    :Example: `t3://folder?storage=1&identifier=myfolder`
+    :Default: 0
+
+    The file abstraction layer (FAL) storage UID to the given folder.
 
 .. index:: Link handler; email
 
 email
 -----
 
-:aspect:`email` (string):
-   Mail address to be used, prefixed with `mailto:`
+..  t3-typolink-handler:: email
 
-   `t3://email?email=mailto:user@example.org`
+    :Data Type: string of parameters
+    :Implementation: :t3src:`core/LinkHandling/EmailLinkHandler.php`
+    :Example:  `t3://email?email=mailto:user@example.org`
 
+    Mail address to be used, prefixed with `mailto:`
 
 .. index:: Link handler; url
 
 url
 ---
 
-:aspect:`url` (string):
-   URL to be used, if no scheme is used `http://` is prefixed automatically. Query parameters have to be URL-encoded.
+..  t3-typolink-handler:: url
 
-   `t3://url?url=example.org`
+    :Data Type: string of parameters
+    :Implementation: :t3src:`core/LinkHandling/EmailLinkHandler.php`
+    :Example:  `t3://url?url=example.org`
 
-   `t3://url?url=https://example.org`
+    URL to be used, if no scheme is used
+    :php:`$GLOBALS['TYPO3_CONF_VARS']['SYS']['defaultScheme']` is prefixed
+    automatically. The schemes `javascript:` and `data:` are forbidden for
+    security reasons and result in an empty url.
 
-   `t3://url?url=https://example.org%26parameter=value`
+    Query parameters have to be URL-encoded.
 
+    Examples:
+
+    *   `t3://url?url=example.org`
+    *   `t3://url?url=https://example.org`
+    *   `t3://url?url=https://example.org%26parameter=value`
 
 .. index:: Link handler; record
 
 record
 ------
 
-Aspects `identifier` and `uid` are mandatory for this link handler.
+..  t3-typolink-handler:: record
 
-:aspect:`identifier` (string):
-   The (individual) identifier of the link building configuration to be used.
+    :Data Type: string of parameters
+    :Implementation: :t3src:`core/LinkHandling/RecordLinkHandler.php`
+    :Example: `t3://record?identifier=my_content&uid=123`
 
-:aspect:`uid` (int):
-   The UID of the referenced record to be linked.
+    Can be used to link to a record of a certain table. See also the
+    :ref:`Record link tutorial in TYPO3 Explained
+    <t3coreapi:TableRecordLinkBrowserTutorials>`.
 
-:aspect:`Example`
-   The following reference relates to record `tx_myextension_content:123`. Tablename is retrieved
-   from page TSconfig settings, actual link generation is defined in TypoScript configuration for
-   identifier `my_content`.
+    Parameters :t3-typolink-handler:`record.identifier` and
+    :t3-typolink-handler:`record.uid` are mandatory for this link handler.
 
-   `t3://record?identifier=my_content&uid=123`
+..  t3-typolink-handler:: record.identifier
 
-   .. code-block:: typoscript
-      :caption: Page TSconfig definition for identifier `my_content`
+    :Data Type: string
 
-      TCEMAIN.linkHandler.my_content {
-          handler = TYPO3\CMS\Backend\LinkHandler\RecordLinkHandler
-          label = LLL:EXT:my_extension/Resources/Private/Language/locallang.xlf:link.customTab
-          configuration {
-              table = tx_myextension_content
-          }
-          scanBefore = page
-      }
+    The (individual) identifier of the link building configuration to be used.
 
-   ..  versionchanged:: 12.0
-       Due to the integration of EXT:recordlist into EXT:backend the namespace
-       of the link handler changed from
-       :php:`TYPO3\CMS\Recordlist\LinkHandler\RecordLinkHandler`
-       to
-       :php:`TYPO3\CMS\Backend\LinkHandler\RecordLinkHandler`.
-       For TYPO3 v12 the moved class is available as an alias under the old
-       namespace to allow extensions to be compatible with TYPO3 v11 and v12.
+    The same identifier is used as key in the TypoScript configuration of
+    the frontend rendering: :t3-tlo-config:`recordLinks` and the :ref:`TSconfig
+    backend link handler configuration <t3tsconfig:pagetcemaintables-linkhandler>`
 
-   .. code-block:: typoscript
-      :caption: Frontend TypoScript definition for identifier `my_content`
+..  t3-typolink-handler:: record.uid
 
-      config.recordLinks.my_content {
-          // Do not force link generation when the record is hidden
-          forceLink = 0
+    :Data Type: int
 
-          typolink {
-              // pages.uid to be used to render result (basically it contains the rendering plugin)
-              parameter = 234
-              // field values of tx_myextension_content record with uid 123
-              additionalParams.data = field:uid
-              additionalParams.wrap = &tx_myextension[uid]= | &tx_myextension[action]=show
-          }
-      }
+    The UID of the referenced record to be linked.
 
+
+.. index:: Link handler; url
+
+phone
+-----
+
+..  t3-typolink-handler:: phone
+
+    :Data Type: string of parameters
+    :Implementation: :t3src:`core/LinkHandling/TelephoneLinkHandler.php`
+    :Example:  `t3://phone?phone=tel:+4912345678`
+
+    This link handler sets links to phone numbers using the `tel:` protocol.
 
 Examples
 ========
 
 Create a link to page with uid 2:
 
-.. code-block:: typoscript
-   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-   page.20 = TEXT
-   page.20.value = anchor text
-   page.20.typolink.parameter = 2
+    page.20 = TEXT
+    page.20.value = anchor text
+    page.20.typolink.parameter = 2
 
 Output:
 
-.. code-block:: html
-   :caption: Example output
+..  code-block:: html
+    :caption: Example output
 
-   <a href="/somepage">anchor text</a>
+    <a href="/somepage">anchor text</a>
 
 Just display the URL:
 
-.. code-block:: typoscript
-   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-   page.30 = TEXT
-   page.30.typolink.parameter = 2
-   page.30.typolink.returnLast = url
+    page.30 = TEXT
+    page.30.typolink.parameter = 2
+    page.30.typolink.returnLast = url
 
 Output:
 
-.. code-block:: html
-   :caption: Example output
+..  code-block:: html
+    :caption: Example output
 
-   /somepage
+    /somepage
 
 
-.. _typolink-link-handler:
-.. _link-handler:
+..  _typolink-link-handler:
+..  _link-handler:
 
 Using link handlers
 ===================
