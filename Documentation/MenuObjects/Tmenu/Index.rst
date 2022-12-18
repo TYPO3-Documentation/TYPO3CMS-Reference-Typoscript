@@ -25,10 +25,10 @@ TMENU item states
 These properties are all the item states used by TMENU.
 
 ..  note::
-    Order of priority: :t3-menu-tmenu:`USERDEF2`, :t3-menu-tmenu:`USERDEF1`,
-    :t3-menu-tmenu:`SPC`, :t3-menu-tmenu:`USR`, :t3-menu-tmenu:`CURIFSUB`,
-    :t3-menu-tmenu:`CUR`, :t3-menu-tmenu:`ACTIFSUB`, :t3-menu-tmenu:`ACT`,
-    :t3-menu-tmenu:`IFSUB`, :t3-menu-tmenu:`NO`.
+    Order of priority: :t3-menu-tmenu-state:`USERDEF2`, :t3-menu-tmenu-state:`USERDEF1`,
+    :t3-menu-tmenu-state:`SPC`, :t3-menu-tmenu-state:`USR`, :t3-menu-tmenu-state:`CURIFSUB`,
+    :t3-menu-tmenu-state:`CUR`, :t3-menu-tmenu-state:`ACTIFSUB`, :t3-menu-tmenu-state:`ACT`,
+    :t3-menu-tmenu-state:`IFSUB`, :t3-menu-tmenu-state:`NO`.
 
 NO
 --
@@ -420,7 +420,7 @@ minItems
     this level, a dummy-page with the title "..." and
     uid=[currentpage\_id] is inserted.
 
-    Takes precedence over HMENU property :t3-cobj-hmenu:`minitems`.
+    Takes precedence over HMENU property :t3-cobj-hmenu:`minItems`.
 
 maxItems
 --------

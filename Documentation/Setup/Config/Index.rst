@@ -2240,7 +2240,7 @@ xmlprologue
          If empty (not set) then the default XML 1.0 prologue is set, when the
          doctype is set to a known keyword (e.g. :typoscript:`xhtml_11`):
 
-         .. code-block:: html
+         .. code-block:: none
             :caption: Output
 
             <?xml version="1.0" encoding="utf-8">
