@@ -101,6 +101,9 @@ absRefPrefix
 
 .. _setup-config-additionalheaders:
 
+additionalHeaders
+=================
+
 .. t3-tlo-config:: additionalHeaders
 
    :Data type: numerically indexed array of "HTTP header entries".
