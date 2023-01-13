@@ -173,22 +173,11 @@ addQueryString
    :t3-data-type:`boolean`
 
 :aspect:`Description`
-   Add the QUERY\_STRING to the start of the link. Notice that this does
-   not check for any duplicate parameters! This is not a problem: Only
-   the last parameter of the same name will be applied.
+   Add the current query string to the start of the link.
 
-   .method
-      If empty, the URL will be build with just the TYPO3 internal params like id,
-      type, M. If there are further params in URL (f.e. tx_news_pi1 for news) you should
-      set this value to :typoscript:`GET` to add all GET parameters.
-
-   .. versionchanged:: 10.0
-
-      With version 10.0 a breaking change was introduced. Setting
-      :typoscript:`addQueryString.method` to any value but :typoscript:`GET` will
-      trigger a `E_USER_WARNING`. Any POST-parameters will be ignored. Maintaining
-      functionality - if required at all - has to be done using domain specific
-      logic in according controllers or middleware implementations.
+   ..  note::
+       This option does not check for any duplicate parameters! This is not a
+       problem: Only the last parameter of the same name will be applied.
 
    .exclude
       List of query arguments to exclude from the link. Typical examples
@@ -201,6 +190,17 @@ addQueryString
       and subsequently taken from the cache no matter what parameters
       are given. Additionally the security risk of cache poisoning has to
       be considered.
+
+   ..  rubric:: Example
+
+   ..  code-block:: typoscript
+
+       # Pass all GET parameters to the link
+       typolink.addQueryString = 1
+
+       # Remove parameter "gclid" from query string
+       typolink.addQueryString.exclude = gclid
+
 
 .. _typolink-wrap:
 
