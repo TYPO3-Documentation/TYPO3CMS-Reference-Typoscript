@@ -126,20 +126,57 @@ addQueryString
 
 ..  t3-function-typolink:: addQueryString
 
-    :Data type: :t3-data-type:`boolean`
+    :Data type: :t3-data-type:`boolean` / :t3-data-type:`string`
 
     Add the current query string to the start of the link.
 
     ..  note::
-        This option does not check for any duplicate parameters! This is not a
+        This option does not check for any duplicate parameters. This is not a
         problem: Only the last parameter of the same name will be applied.
 
-    .exclude
-        List of query arguments to exclude from the link. Typical examples
-        are 'L' or 'cHash'.
+    Possible values:
+
+    :typoscript:`0`
+        No query parameters are added.
+
+    :typoscript:`1`
+        Only query parameters resolved by
+        :ref:`route enhancers <t3coreapi:routing-advanced-routing-configuration-enhancers>`
+        are added, any other query arguments are rejected. This way, additional
+        query arguments are never added by default. This is the recommended
+        behaviour.
+
+        ..  versionchanged:: 12.0
+            Before TYPO3 v12 this setting added all query parameters. To ensure
+            the previous behaviour use :typoscript:`untrusted`.
+
+    :typoscript:`untrusted`
+        ..  versionadded:: 12.0
+
+        Any given query parameters of the current request are added.
+
+    ..  rubric:: Example
+
+    ..  code-block:: typoscript
+
+        # Pass resolved query parameters to the link
+        typolink.addQueryString = 1
+
+        # Pass all query parameters to the link
+        typolink.addQueryString = untrusted
+
+
+addQueryString.exclude
+~~~~~~~~~~~~~~~~~~~~~~
+
+..  t3-function-typolink:: addQueryString.exclude
+
+    :Data type: :t3-data-type:`string`
+
+    List of query arguments to exclude from the link. Typical examples are
+    :typoscript:`L` or :typoscript:`cHash`.
 
     ..  attention::
-
         This property should not be used for cached contents without a valid
         cHash. Otherwise the page is cached for the first set of parameters
         and subsequently taken from the cache no matter what parameters
@@ -149,9 +186,6 @@ addQueryString
     ..  rubric:: Example
 
     ..  code-block:: typoscript
-
-        # Pass all GET parameters to the link
-        typolink.addQueryString = 1
 
         # Remove parameter "gclid" from query string
         typolink.addQueryString.exclude = gclid
