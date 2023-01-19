@@ -210,23 +210,9 @@ additionalHeaders
 admPanel
 ========
 
-.. container:: table-row
-
-   Property
-         admPanel
-
-   Data type
-         :t3-data-type:`boolean`
-
-   Description
-         If set, the :ref:`Admin Panel <ext_adminpanel:introduction>` displays at the
-         bottom of pages.
-
-         **Note:** In addition, the panel must be enabled for the user as well,
-         using the TSconfig for the user. See the :ref:`TSconfig
-         reference <t3tsconfig:useradmpanel>` for more information.
-
-
+:typoscript:`config.admPanel = 1` can
+be used to enable the admin panel. See chapter :ref:`Configuration in
+the Admin Panel manual <ext_adminpanel:typoscript-config-admpanel>`.
 
 .. index:: config; ATagParams
 .. _setup-config-atagparams:
