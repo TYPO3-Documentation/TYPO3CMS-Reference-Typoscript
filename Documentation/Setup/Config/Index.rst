@@ -211,7 +211,7 @@ admPanel
 ========
 
 :typoscript:`config.admPanel = 1` can
-be used to enable the admin panel. See chapter :ref:`Configuration in
+be used to enable the admin panel. See :ref:`Configuration in
 the Admin Panel manual <ext_adminpanel:typoscript-config-admpanel>`.
 
 .. index:: config; ATagParams
