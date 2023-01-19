@@ -299,7 +299,7 @@ config
       `TCEFORM.tt_content.header.types.textpic.config.max`
 
    Flex form field level, example:
-      `TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.myField.config.max`
+      `TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.myInputField.config.max`
 
       Where `sDEF` is the sheet name.
 
