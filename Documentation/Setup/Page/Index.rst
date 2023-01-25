@@ -1028,7 +1028,7 @@ meta
                    og:site_name = TYPO3
                    og:site_name.attribute = property
                    description = Inspiring people to share Normal
-                   dc.description = Inspiring people to share [DC tags]
+                   dc\.description = Inspiring people to share [DC tags]
                    og:description = Inspiring people to share [OpenGraph]
                    og:description.attribute = property
                    og:locale = en_GB
