@@ -2054,6 +2054,8 @@ spamProtectEmailAddresses
          setting it to >= 2 means a "z" is converted to "\|" which is a special
          character in TYPO3 tables syntax – and that might confuse columns in
          tables.)
+         
+         It is required to enable the default JS and not disable it. (see `removeDefaultJS`)
 
 
 .. index:: config; spamProtectEmailAddresses_atSubst
