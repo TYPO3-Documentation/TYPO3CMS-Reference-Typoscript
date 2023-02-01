@@ -1092,7 +1092,7 @@ date
       [end]
 
       [date("G") == 7]
-         page.10.value = rue if current hour is 7
+         page.10.value = True if current hour is 7
       [end]
 
 
