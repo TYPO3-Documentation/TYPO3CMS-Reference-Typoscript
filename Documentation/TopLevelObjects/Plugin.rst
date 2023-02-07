@@ -392,6 +392,27 @@ view.pluginNamespace
       arguments from other extensions by setting this option to their namespace.
 
 
+.. _setup-plugin-view-defaultPid:
+
+view.defaultPid
+~~~~~~~~~~~~~~~
+
+.. container:: table-row
+
+   Property
+      view.defaultPid
+
+   Data type
+      "auto" | :t3-data-type:`integer`
+
+   Description
+      This can be used to specify a default target page ID. If this value is
+      set, this value will be used as target page ID. If :typoscript:`defaultPid`
+      is set to :typoscript:`auto`, a pid is determined by loading the
+      :sql:`tt_content` record that contains this plugin. An error will be
+      thrown if more than one record matches the :sql:`list_type`.
+
+
 .. _extbase_typoscript_configuration-mvc:
 
 MVC
