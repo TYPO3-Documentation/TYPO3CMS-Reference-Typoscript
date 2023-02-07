@@ -115,15 +115,15 @@ additionalHeaders
    By means of `config.additionalHeaders` as series of additional HTTP headers
    can be configured. An entry has the following structure:
 
-   :typoscript:`10.header = the header string`
+   `10.header = the header string`
       This value is required.
 
-   :typoscript:`10.replace = 0 | 1`
+   `10.replace = 0 | 1`
       Optional, boolean, default is `1`.
       If true, the header will replace an existing one that has the same name.
 
-   :typoscript:`10.httpResponseCode = 201`
-      Optional, integer, a HTTP status code that the page should return.
+   `10.httpResponseCode = 201`
+      Optional, integer, a http status code that the page should return.
 
    By default TYPO3 sends a "Content-Type" header with the defined
    encoding. It then sends cache headers, if configured via
@@ -131,78 +131,54 @@ additionalHeaders
    Then additional headers are send, plus finally a "Content-Length"
    header, if enabled via :ref:`setup-config-enablecontentlengthheader`.
 
-   .. versionadded:: 12.2
-      Additionally, :ref:`stdWrap <stdwrap>` properties can be used to send
-      dynamic HTTP headers, especially headers that contain paths to extension
-      files. See below for an example.
-
    .. rubric:: Examples
 
-   *    General usage
+   1. General usage
 
-        .. code-block:: typoscript
-            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+      .. code-block:: typoscript
+         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-            config.additionalHeaders {
-                10 {
-                    # The header string
-                    header = foo
+         config.additionalHeaders {
+             10 {
+                 # The header string
+                 header = foo
 
-                    # Do not replace previous headers with the same name.
-                    replace = 0
+                 # Do not replace previous headers with the same name.
+                 replace = 0
 
-                    # Force a 401 HTTP response code
-                    httpResponseCode = 401
-                }
-                # Always set cache headers to private, overwriting the default TYPO3 Cache-control header
-                20.header = Cache-control: Private
+                 # Force a 401 HTTP response code
+                 httpResponseCode = 401
+             }
+             # Always set cache headers to private, overwriting the default TYPO3 Cache-control header
+             20.header = Cache-control: Private
+         }
+
+   2. General usage, same usage, alternate notation
+
+      .. code-block:: typoscript
+         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+         config.additionalHeaders.10.header = foo
+         config.additionalHeaders.10.replace = 0
+         config.additionalHeaders.10.httpResponseCode = 401
+         config.additionalHeaders.20.header = Cache-control: Private
+
+
+   3. Set content type for a page returning json
+
+      .. code-block:: typoscript
+         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+         json = PAGE
+         json {
+            typeNum = 1617455215
+            10 =< tt_content.list.20.tx_myextension_myjsonplugin
+            config {
+               disableAllHeaderCode = 1
+               additionalHeaders.10.header = Content-type:application/json
             }
+         }
 
-   *    General usage, same usage, alternate notation
-
-        .. code-block:: typoscript
-            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-            config.additionalHeaders {
-                10.header = foo
-                10.replace = 0
-                10.httpResponseCode = 401
-
-                20.header = Cache-control: Private
-            }
-
-
-   *    Set content type for a page returning json
-
-        .. code-block:: typoscript
-            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-            json = PAGE
-            json {
-                typeNum = 1617455215
-                10 =< tt_content.list.20.tx_myextension_myjsonplugin
-                config {
-                    disableAllHeaderCode = 1
-                    additionalHeaders.10.header = Content-type:application/json
-                }
-            }
-
-   *    Send a dynamic link preload header
-
-        .. code-block:: typoscript
-
-            config.additionalHeaders {
-                10 {
-                    header = link: <{path : EXT:site/Resources/Public/Fonts/icon.woff2}>; rel=preload; as=font; crossorigin
-                    header.insertData = 1
-                }
-
-                20 {
-                    header.data = path : EXT:site/Resources/Public/Fonts/gothic.woff2
-                    header.wrap = link: <|>; rel=preload; as=font; crossorigin
-                    replace = 0
-                }
-            }
 
 .. index:: config; admPanel
 .. _setup-config-admpanel:
