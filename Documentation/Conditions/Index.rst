@@ -207,13 +207,13 @@ tree.pagelayout
       [tree.pagelayout == 2]
          page.1 = TEXT
          page.1.value = Layout 2
-      [END]
+      [end]
 
       # Using TSconfig provider of backend layouts
       [tree.pagelayout == "pagets__Home"]
          page.1 = TEXT
          page.1.value = Layout Home
-      [END]
+      [end]
 
 
 .. index::
