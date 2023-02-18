@@ -114,7 +114,7 @@ contentsLanguageDirection
         # except for the following language:
         [siteLanguage("locale") == "en_US"]
             RTE.config.contentsLanguageDirection = ltr
-        [end]
+        [END]
 
 .. index::
    RTE; Server processing
@@ -399,4 +399,3 @@ overruleMode
 
 :aspect:`Description`
     This can overrule the RTE transformation set from TCA. Notice, this is a  *comma list* of transformation keys.
-
