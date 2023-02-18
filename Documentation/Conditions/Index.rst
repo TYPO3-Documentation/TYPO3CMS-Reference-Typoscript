@@ -887,11 +887,11 @@ request.getHeaders()
 
       [request.getHeaders()['Accept'] == 'json']
          page.10.value = Accepts json
-      [end]
+      [END]
 
       [request.getHeaders()['host'][0] == 'www.example.org']
          page.20.value = The host is www.example.org
-      [end]
+      [END]
 
 
 
@@ -1018,11 +1018,11 @@ request.getNormalizedParams()
 
       [request.getNormalizedParams().isHttps()]
          page.10.value = HTTPS is being used
-      [end]
+      [END]
 
       [request.getNormalizedParams().getHttpHost() == "example.org"]
          page.10.value = The host is "example.org"
-      [end]
+      [END]
 
 
 
@@ -1081,19 +1081,19 @@ date
 
       [date("j") == 7]
          page.10.value = True if day of current month is 7
-      [end]
+      [END]
 
       [date("w") == 7]
          page.10.value = True if day of current week is
-      [end]
+      [END]
 
       [date("z") == 7]
          page.10.value = True if day of current year is 7
-      [end]
+      [END]
 
       [date("G") == 7]
          page.10.value = True if current hour is 7
-      [end]
+      [END]
 
 
 .. index:: Conditions; like
@@ -1203,11 +1203,11 @@ ip
 
       [ip("172.18.*")]
          page.10.value = Your IP matches "172.18.*"
-      [end]
+      [END]
 
       [ip("devIP")]
          page.10.value = Your IP matches the configured devIp
-      [end]
+      [END]
 
 
 .. index:: Conditions; compatVersion
@@ -1234,7 +1234,7 @@ compatVersion
 
       [compatVersion("11.5")]
          page.10.value = You are using TYPO3 v11.5
-      [end]
+      [END]
 
    Is same as:
 
@@ -1243,7 +1243,7 @@ compatVersion
 
       [compatVersion("11.5.0")]
          page.10.value = You are using TYPO3 v11.5
-      [end]
+      [END]
 
    Another example:
 
@@ -1252,7 +1252,7 @@ compatVersion
 
       [compatVersion("11.5.1")]
          page.10.value = You are using TYPO3 v11.5
-      [end]
+      [END]
 
 
 .. index:: Conditions; loginUser
@@ -1283,19 +1283,19 @@ loginUser
       [loginUser('*')]
          # matches any login user
          page.10.value = You are logged in!
-      [end]
+      [END]
 
       [loginUser(1)]
          page.10.value = Your frontend user has the uid 1
-      [end]
+      [END]
 
       [loginUser('1,3,5')]
          page.10.value = Your frontend user has the uid 1, 3 or 5
-      [end]
+      [END]
 
       [loginUser('*') == false]
          page.10.value = You are logged out!
-      [end]
+      [END]
 
 
 .. index:: Conditions; getTSFE
@@ -1406,15 +1406,15 @@ usergroup
 
       [usergroup("*")]
          page.10.value = You are logged in and belong to some usergroup.
-      [end]
+      [END]
 
       [usergroup("12")]
          page.10.value = You are in the usergroup with uid 12.
-      [end]
+      [END]
 
       [usergroup("12,15,18")]
          page.10.value = You are in the usergroup with uid 12, 15 or 18.
-      [end]
+      [END]
 
 
 .. index:: Conditions; Functions frontend
@@ -1592,8 +1592,8 @@ siteLanguage
 
       [siteLanguage("locale") == "de_CH"]
          page.10.value = This site has the locale "de_CH"
-      [end]
+      [END]
 
       [siteLanguage("title") == "Italy"]
          page.10.value = This site has the title "Italy"
-      [end]
+      [END]
