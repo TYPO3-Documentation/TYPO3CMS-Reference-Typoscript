@@ -532,4 +532,4 @@ headlines. The copyright year will be taken from the TypoScript constant
 
     *   :ref:`dataProcessing` examples
     *   :ref:`t3coreapi:adding-your-own-content-elements`
-    *   :doc:`t3sitepackage:Index`
+    *   :ref:`t3sitepackage:start`
