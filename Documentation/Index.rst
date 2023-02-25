@@ -28,8 +28,8 @@ This document is a complete reference of all object types and properties of
 TypoScript as used in frontend TypoScript templates.
 
 Furthermore, you can find a quick guide to TypoScript templates at
-:doc:`t3ts45:Index`, insights into TYPO3 backend configuration with
-TypoScript in the :doc:`TSconfig <t3tsconfig:Index>` documentation and
+:ref:`t3ts45:start`, insights into TYPO3 backend configuration with
+TypoScript in the :ref:`TSconfig <t3tsconfig:start>` documentation and
 explanations of TypoScript syntax in the ":ref:`TypoScript Syntax <t3coreapi:typoscript-syntax-start>`"
 chapter of TYPO3 Explained.
 
