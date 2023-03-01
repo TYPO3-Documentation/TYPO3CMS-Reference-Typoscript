@@ -772,11 +772,394 @@ Functions take over the logic of the old conditions which do more than a simple 
 The following functions are available in **any** context:
 
 
+.. index:: Conditions; date
+.. _condition-function-date:
+
+date
+~~~~
+
+:aspect:`Function`
+   date
+
+:aspect:`Parameter`
+   String
+
+:aspect:`Type`
+   String / Integer
+
+:aspect:`Description`
+   Get current date in given format.
+
+   See PHP `date <https://www.php.net/manual/en/function.date.php>`_ function as
+   reference for possible usage.
+
+:aspect:`Example`
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+      [date("j") == 7]
+         page.10.value = True if day of current month is 7
+      [END]
+
+      [date("w") == 7]
+         page.10.value = True if day of current week is
+      [END]
+
+      [date("z") == 7]
+         page.10.value = True if day of current year is 7
+      [END]
+
+      [date("G") == 7]
+         page.10.value = True if current hour is 7
+      [END]
+
+
+.. index:: Conditions; like
+.. _condition-function-like:
+
+like
+~~~~
+
+:aspect:`Function`
+   like
+
+:aspect:`Parameter`
+   String, String
+
+:aspect:`Type`
+   Boolean
+
+:aspect:`Description`
+   This function has two parameters:
+
+   The first parameter
+      Is the string to search in
+
+   The second parameter
+      Is the search string
+
+:aspect:`Example`
+   Search a string with ``*`` within another string:
+
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+      [like("fooBarBaz", "*Bar*")]
+
+   Search string with single characters in between, using ``?``:
+
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+      [like("fooBarBaz", "f?oBa?Baz")]
+
+   Search string using regular expression:
+
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+      [like("fooBarBaz", "/f[o]{2,2}[aBrz]+/")]
+
+
+.. index:: Conditions; traverse
+.. _condition-function-traverse:
+
+traverse
+~~~~~~~~
+
+:aspect:`Function`
+   traverse
+
+:aspect:`Parameter`
+   Array, String
+
+:aspect:`Type`
+   Custom
+
+:aspect:`Description`
+   This function gets a value from an array with arbitrary depth. It has two parameters:
+
+   The first parameter
+      Is the array to traverse
+
+   The second parameter
+      Is the path to traverse
+
+   In case the path is not found in the array, an empty string is returned.
+
+:aspect:`Example`
+   Traverse query parameters of current request along `tx_news_pi1[news]`:
+
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+      [traverse(request.getQueryParams(), 'tx_news_pi1/news') > 0]
+
+
+.. index:: Conditions; compatVersion
+.. _condition-function-compatVersion:
+
+compatVersion
+~~~~~~~~~~~~~
+
+:aspect:`Function`
+   compatVersion
+
+:aspect:`Parameter`
+   String
+
+:aspect:`Type`
+   Boolean
+
+:aspect:`Description`
+   Compares against the current TYPO3 branch.
+
+:aspect:`Example`
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+      [compatVersion("11.5")]
+         page.10.value = You are using TYPO3 v11.5
+      [END]
+
+   Is same as:
+
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+      [compatVersion("11.5.0")]
+         page.10.value = You are using TYPO3 v11.5
+      [END]
+
+   Another example:
+
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+      [compatVersion("11.5.1")]
+         page.10.value = You are using TYPO3 v11.5
+      [END]
+
+
+.. index:: Conditions; loginUser
+.. _condition-function-loginUser:
+
+loginUser
+~~~~~~~~~
+
+:aspect:`Function`
+   loginUser
+
+:aspect:`Parameter`
+   String
+
+:aspect:`Type`
+   Boolean
+
+:aspect:`Description`
+   value or constraint, wildcard or RegExp possible
+
+   Context dependent, uses BE-User within TSconfig, and FE-User within
+   TypoScript.
+
+:aspect:`Example`
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+      [loginUser('*')]
+         # matches any login user
+         page.10.value = You are logged in!
+      [END]
+
+      [loginUser(1)]
+         page.10.value = Your frontend user has the uid 1
+      [END]
+
+      [loginUser('1,3,5')]
+         page.10.value = Your frontend user has the uid 1, 3 or 5
+      [END]
+
+      [loginUser('*') == false]
+         page.10.value = You are logged out!
+      [END]
+
+
+.. index:: Conditions; getTSFE
+.. _condition-function-getTSFE:
+
+getTSFE
+~~~~~~~
+
+:aspect:`Function`
+   getTSFE
+
+:aspect:`Parameter`
+   Object
+
+:aspect:`Description`
+   Provides access to TypoScriptFrontendController (:php:`$GLOBALS['TSFE']`)
+
+   Conditions based on ``getTSFE()`` used in a context where TSFE is not available will always evaluate to ``false``.
+
+:aspect:`Example`
+   Current :ref:`setup-page-typenum`:
+
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+      [getTSFE().type == 98]
+
+   Current page id equals to 17. However, :ref:`condition-page` should be preferred:
+
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+      [getTSFE().id == 17]
+
+
+.. index:: Conditions; getenv
+.. _condition-function-getenv:
+
+getenv
+~~~~~~
+
+:aspect:`Function`
+   getenv
+
+:aspect:`Parameter`
+   String
+
+:aspect:`Description`
+   PHP function:  `getenv <https://www.php.net/manual/en/function.getenv.php>`_
+
+:aspect:`Example`
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+      [getenv("VIRTUAL_HOST") == "www.example.org"]
+
+
+.. index:: Conditions; feature
+.. _condition-function-feature:
+
+feature
+~~~~~~~
+
+:aspect:`Function`
+   feature
+
+:aspect:`Parameter`
+   String
+
+:aspect:`Description`
+   Provides access to feature toggles current state.
+
+:aspect:`Example`
+   Check if feature toggle for strict TypoScript syntax is enabled:
+
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+      [feature("TypoScript.strictSyntax") === false]
+
+
+.. index:: Conditions; usergroup
+.. _condition-function-usergroup:
+
+usergroup
+~~~~~~~~~
+
+:aspect:`Function`
+   usergroup
+
+:aspect:`Parameter`
+   String
+
+:aspect:`Value`
+   Boolean
+
+:aspect:`Description`
+   Value or constraint, wildcard or RegExp possible
+
+   Allows to check whether current user (FE or BE) is part of the expected
+   usergroup.
+
+:aspect:`Example`
+   Any usergroup:
+
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+      [usergroup("*")]
+         page.10.value = You are logged in and belong to some usergroup.
+      [END]
+
+      [usergroup("12")]
+         page.10.value = You are in the usergroup with uid 12.
+      [END]
+
+      [usergroup("12,15,18")]
+         page.10.value = You are in the usergroup with uid 12, 15 or 18.
+      [END]
+
+
+.. index:: Conditions; Functions frontend
+.. _condition-functions-in-frontend-context:
+
+Functions in frontend context
+-----------------------------
+
+The following functions are only available in **frontend** context:
+
+
+.. index:: Conditions; ip
+.. _condition-function-ip:
+
+ip
+~~
+
+..  versionchanged:: 12.3
+    Using this function in **page TSconfig** or **user TSconfig** conditions is
+    deprecated. Such conditions will stop working with TYPO3 v13 and will then
+    always evaluate to false. For migration hints see the
+    :ref:`changelog <ext_core:deprecation-100047-1677608959>`.
+
+:aspect:`Function`
+   ip
+
+:aspect:`Parameter`
+   String
+
+:aspect:`Type`
+   Boolean
+
+:aspect:`Description`
+   Value or Constraint, Wildcard or RegExp possible special value: devIP (match the devIPMask).
+
+:aspect:`Example`
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+      [ip("172.18.*")]
+         page.10.value = Your IP matches "172.18.*"
+      [END]
+
+      [ip("devIP")]
+         page.10.value = Your IP matches the configured devIp
+      [END]
+
+
 .. index:: Conditions; request
 .. _condition-function-request:
 
 request
 ~~~~~~~
+
+..  versionchanged:: 12.3
+    Using this function in **page TSconfig** or **user TSconfig** conditions is
+    deprecated. Such conditions will stop working with TYPO3 v13 and will then
+    always evaluate to false. For migration hints see the
+    :ref:`changelog <ext_core:deprecation-100047-1677608959>`.
 
 :aspect:`Function`
    request
@@ -1052,378 +1435,6 @@ request.getPageArguments()
 
    Allows migration from old condition syntax using `[globalVar = GP:singlepartner > 0]`
    to `[request.getPageArguments().get('singlepartner') > 0]`.
-
-
-.. index:: Conditions; date
-.. _condition-function-date:
-
-date
-~~~~
-
-:aspect:`Function`
-   date
-
-:aspect:`Parameter`
-   String
-
-:aspect:`Type`
-   String / Integer
-
-:aspect:`Description`
-   Get current date in given format.
-
-   See PHP `date <https://www.php.net/manual/en/function.date.php>`_ function as
-   reference for possible usage.
-
-:aspect:`Example`
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-      [date("j") == 7]
-         page.10.value = True if day of current month is 7
-      [END]
-
-      [date("w") == 7]
-         page.10.value = True if day of current week is
-      [END]
-
-      [date("z") == 7]
-         page.10.value = True if day of current year is 7
-      [END]
-
-      [date("G") == 7]
-         page.10.value = True if current hour is 7
-      [END]
-
-
-.. index:: Conditions; like
-.. _condition-function-like:
-
-like
-~~~~
-
-:aspect:`Function`
-   like
-
-:aspect:`Parameter`
-   String, String
-
-:aspect:`Type`
-   Boolean
-
-:aspect:`Description`
-   This function has two parameters:
-
-   The first parameter
-      Is the string to search in
-
-   The second parameter
-      Is the search string
-
-:aspect:`Example`
-   Search a string with ``*`` within another string:
-
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-      [like("fooBarBaz", "*Bar*")]
-
-   Search string with single characters in between, using ``?``:
-
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-      [like("fooBarBaz", "f?oBa?Baz")]
-
-   Search string using regular expression:
-
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-      [like("fooBarBaz", "/f[o]{2,2}[aBrz]+/")]
-
-
-.. index:: Conditions; traverse
-.. _condition-function-traverse:
-
-traverse
-~~~~~~~~
-
-:aspect:`Function`
-   traverse
-
-:aspect:`Parameter`
-   Array, String
-
-:aspect:`Type`
-   Custom
-
-:aspect:`Description`
-   This function gets a value from an array with arbitrary depth. It has two parameters:
-
-   The first parameter
-      Is the array to traverse
-
-   The second parameter
-      Is the path to traverse
-
-   In case the path is not found in the array, an empty string is returned.
-
-:aspect:`Example`
-   Traverse query parameters of current request along `tx_news_pi1[news]`:
-
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-      [traverse(request.getQueryParams(), 'tx_news_pi1/news') > 0]
-
-
-
-.. index:: Conditions; ip
-.. _condition-function-ip:
-
-ip
-~~
-
-:aspect:`Function`
-   ip
-
-:aspect:`Parameter`
-   String
-
-:aspect:`Type`
-   Boolean
-
-:aspect:`Description`
-   Value or Constraint, Wildcard or RegExp possible special value: devIP (match the devIPMask).
-
-:aspect:`Example`
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-      [ip("172.18.*")]
-         page.10.value = Your IP matches "172.18.*"
-      [END]
-
-      [ip("devIP")]
-         page.10.value = Your IP matches the configured devIp
-      [END]
-
-
-.. index:: Conditions; compatVersion
-.. _condition-function-compatVersion:
-
-compatVersion
-~~~~~~~~~~~~~
-
-:aspect:`Function`
-   compatVersion
-
-:aspect:`Parameter`
-   String
-
-:aspect:`Type`
-   Boolean
-
-:aspect:`Description`
-   Compares against the current TYPO3 branch.
-
-:aspect:`Example`
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-      [compatVersion("11.5")]
-         page.10.value = You are using TYPO3 v11.5
-      [END]
-
-   Is same as:
-
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-      [compatVersion("11.5.0")]
-         page.10.value = You are using TYPO3 v11.5
-      [END]
-
-   Another example:
-
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-      [compatVersion("11.5.1")]
-         page.10.value = You are using TYPO3 v11.5
-      [END]
-
-
-.. index:: Conditions; loginUser
-.. _condition-function-loginUser:
-
-loginUser
-~~~~~~~~~
-
-:aspect:`Function`
-   loginUser
-
-:aspect:`Parameter`
-   String
-
-:aspect:`Type`
-   Boolean
-
-:aspect:`Description`
-   value or constraint, wildcard or RegExp possible
-
-   Context dependent, uses BE-User within TSconfig, and FE-User within
-   TypoScript.
-
-:aspect:`Example`
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-      [loginUser('*')]
-         # matches any login user
-         page.10.value = You are logged in!
-      [END]
-
-      [loginUser(1)]
-         page.10.value = Your frontend user has the uid 1
-      [END]
-
-      [loginUser('1,3,5')]
-         page.10.value = Your frontend user has the uid 1, 3 or 5
-      [END]
-
-      [loginUser('*') == false]
-         page.10.value = You are logged out!
-      [END]
-
-
-.. index:: Conditions; getTSFE
-.. _condition-function-getTSFE:
-
-getTSFE
-~~~~~~~
-
-:aspect:`Function`
-   getTSFE
-
-:aspect:`Parameter`
-   Object
-
-:aspect:`Description`
-   Provides access to TypoScriptFrontendController (:php:`$GLOBALS['TSFE']`)
-
-   Conditions based on ``getTSFE()`` used in a context where TSFE is not available will always evaluate to ``false``.
-
-:aspect:`Example`
-   Current :ref:`setup-page-typenum`:
-
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-      [getTSFE().type == 98]
-
-   Current page id equals to 17. However, :ref:`condition-page` should be preferred:
-
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-      [getTSFE().id == 17]
-
-
-.. index:: Conditions; getenv
-.. _condition-function-getenv:
-
-getenv
-~~~~~~
-
-:aspect:`Function`
-   getenv
-
-:aspect:`Parameter`
-   String
-
-:aspect:`Description`
-   PHP function:  `getenv <https://www.php.net/manual/en/function.getenv.php>`_
-
-:aspect:`Example`
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-      [getenv("VIRTUAL_HOST") == "www.example.org"]
-
-
-.. index:: Conditions; feature
-.. _condition-function-feature:
-
-feature
-~~~~~~~
-
-:aspect:`Function`
-   feature
-
-:aspect:`Parameter`
-   String
-
-:aspect:`Description`
-   Provides access to feature toggles current state.
-
-:aspect:`Example`
-   Check if feature toggle for strict TypoScript syntax is enabled:
-
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-      [feature("TypoScript.strictSyntax") === false]
-
-
-.. index:: Conditions; usergroup
-.. _condition-function-usergroup:
-
-usergroup
-~~~~~~~~~
-
-:aspect:`Function`
-   usergroup
-
-:aspect:`Parameter`
-   String
-
-:aspect:`Value`
-   Boolean
-
-:aspect:`Description`
-   Value or constraint, wildcard or RegExp possible
-
-   Allows to check whether current user (FE or BE) is part of the expected
-   usergroup.
-
-:aspect:`Example`
-   Any usergroup:
-
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-      [usergroup("*")]
-         page.10.value = You are logged in and belong to some usergroup.
-      [END]
-
-      [usergroup("12")]
-         page.10.value = You are in the usergroup with uid 12.
-      [END]
-
-      [usergroup("12,15,18")]
-         page.10.value = You are in the usergroup with uid 12, 15 or 18.
-      [END]
-
-
-.. index:: Conditions; Functions frontend
-.. _condition-functions-in-frontend-context:
-
-Functions in frontend context
------------------------------
-
-The following functions are only available in **frontend** context:
 
 
 .. index:: Conditions; session
