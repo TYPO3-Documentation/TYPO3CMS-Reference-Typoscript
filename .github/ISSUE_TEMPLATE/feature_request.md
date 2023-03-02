@@ -4,7 +4,7 @@ about: Suggest an idea for this documentation (and may want to implement it 🙂
 
 ---
 
-### Is your feature request related to a problem? Please describe.
+### Is your feature request related to an issue? Please describe.
 
 A clear and concise description about your idea, possibly related to some problem.
 
