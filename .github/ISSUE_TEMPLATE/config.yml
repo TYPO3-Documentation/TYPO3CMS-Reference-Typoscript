@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: ❓ Ask question
+    url: https://app.slack.com/client/T024TUMLZ/C028JEPJL
+    about: Please ask questions in the Slack channel `#typo3-documentation` 🤗
