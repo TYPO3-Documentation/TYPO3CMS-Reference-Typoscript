@@ -428,7 +428,18 @@ returnLast
     So, in these two cases you will not get the value wrapped but the URL
     or target value returned!
     
-    If set to ``result``, it will return the ``LinkResult`` object (only since TYPO3 11.4)
+    If set to ``result``, it will return the json_encoded output of the ``LinkResult`` object (only since TYPO3 11.4)
+    
+    ..  code-block:: json
+
+        {
+            "href": "\/my-page",
+            "target": null,
+            "class": null,
+            "title": null,
+            "linkText": "My page",
+            "additionalAttributes": []
+        }
 
 section
 -------
