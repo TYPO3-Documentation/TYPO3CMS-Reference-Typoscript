@@ -428,6 +428,22 @@ returnLast
     So, in these two cases you will not get the value wrapped but the URL
     or target value returned!
 
+    ..  versionadded:: 11.4
+
+    If set to ``result``, it will return the json_encoded output of the
+    internal ``LinkResult`` object.
+
+    ..  code-block:: json
+
+        {
+            "href": "/my-page",
+            "target": null,
+            "class": null,
+            "title": null,
+            "linkText": "My page",
+            "additionalAttributes": []
+        }
+
 section
 -------
 
