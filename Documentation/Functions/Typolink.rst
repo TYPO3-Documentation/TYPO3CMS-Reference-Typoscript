@@ -435,7 +435,7 @@ returnLast
         ..  code-block:: json
 
             {
-                "href": "\/my-page",
+                "href": "/my-page",
                 "target": null,
                 "class": null,
                 "title": null,
