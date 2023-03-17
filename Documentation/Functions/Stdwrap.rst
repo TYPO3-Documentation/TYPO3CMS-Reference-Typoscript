@@ -864,38 +864,6 @@ date
       }
 
 
-.. index:: stdWrap; strftime
-.. _stdwrap-strftime:
-
-strftime
-~~~~~~~~
-
-:aspect:`Property`
-   strftime
-
-:aspect:`Data type`
-   :t3-data-type:`strftime-conf` / :ref:`stdWrap`
-
-:aspect:`Description`
-   Very similar to "date", but using a different format. See the PHP manual (`strftime <https://www.php.net/strftime>`_) for the
-   format codes.
-
-   This formatting is useful if the locale is set in advance in the
-   :ref:`CONFIG <config>` object. See there.
-
-   Properties:
-
-   .charset
-      Can be set to the charset of the output string if you need to
-      convert it to UTF-8. Default is to take the intelligently guessed
-      charset from :php:`TYPO3\CMS\Core\Charset\CharsetConverter`.
-
-   .GMT
-      If set, the PHP function `gmstrftime()
-      <https://www.php.net/gmstrftime>`_ will be used instead of
-      `strftime() <https://www.php.net/strftime>`_.
-
-
 .. index:: stdWrap; strtotime
 .. _stdwrap-strtotime:
 
@@ -933,6 +901,38 @@ strtotime
          strtotime = + 2 weekdays
          strftime = %Y-%m-%d
       }
+
+
+.. index:: stdWrap; strftime
+.. _stdwrap-strftime:
+
+strftime
+~~~~~~~~
+
+:aspect:`Property`
+   strftime
+
+:aspect:`Data type`
+   :t3-data-type:`strftime-conf` / :ref:`stdWrap`
+
+:aspect:`Description`
+   Very similar to "date", but using a different format. See the PHP manual (`strftime <https://www.php.net/strftime>`_) for the
+   format codes.
+
+   This formatting is useful if the locale is set in advance in the
+   :ref:`CONFIG <config>` object. See there.
+
+   Properties:
+
+   .charset
+      Can be set to the charset of the output string if you need to
+      convert it to UTF-8. Default is to take the intelligently guessed
+      charset from :php:`TYPO3\CMS\Core\Charset\CharsetConverter`.
+
+   .GMT
+      If set, the PHP function `gmstrftime()
+      <https://www.php.net/gmstrftime>`_ will be used instead of
+      `strftime() <https://www.php.net/strftime>`_.
 
 
 .. index:: stdWrap; age
