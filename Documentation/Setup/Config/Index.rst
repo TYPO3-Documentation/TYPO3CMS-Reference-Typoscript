@@ -12,7 +12,7 @@ CONFIG & config
 ===============
 
 The 'config' top-level-object
-#############################
+=============================
 
 Internally TYPO3 always creates an array `config` with various configuration
 values which are evaluated during the rendering process and treated in some
@@ -36,8 +36,8 @@ array. This means, that configuration settings can be made easily. For example:
    $GLOBALS['TSFE']->config['config']['debug'] // with value 1
 
 
-Known properties of 'config'
-############################
+Properties of 'config'
+======================
 
 .. contents::
    :backlinks: top
@@ -52,7 +52,7 @@ Known properties of 'config'
 .. _setup-config-absrefprefix:
 
 absRefPrefix
-============
+------------
 
 .. t3-tlo-config:: absRefPrefix
 
@@ -106,7 +106,7 @@ absRefPrefix
 .. _setup-config-additionalheaders:
 
 additionalHeaders
-=================
+-----------------
 
 .. t3-tlo-config:: additionalHeaders
 
@@ -184,7 +184,7 @@ additionalHeaders
 .. _setup-config-admpanel:
 
 admPanel
-========
+--------
 
 :typoscript:`config.admPanel = 1` can
 be used to enable the admin panel. See :ref:`Configuration in
@@ -194,7 +194,7 @@ the Admin Panel manual <ext_adminpanel:typoscript-config-admpanel>`.
 .. _setup-config-atagparams:
 
 ATagParams
-==========
+----------
 
 .. container:: table-row
 
@@ -213,7 +213,7 @@ ATagParams
 .. _setup-config-baseurl:
 
 baseURL
-=======
+-------
 
 .. deprecated:: 12.1
 
@@ -266,7 +266,7 @@ baseURL
 .. _setup-config-cache:
 
 cache
-=====
+-----
 
 .. container:: table-row
 
@@ -341,7 +341,7 @@ cache
 .. _setup-config-cache-clearatmidnight:
 
 cache\_clearAtMidnight
-======================
+----------------------
 
 .. container:: table-row
 
@@ -365,7 +365,7 @@ cache\_clearAtMidnight
 .. _setup-config-cache-period:
 
 cache\_period
-=============
+-------------
 
 .. container:: table-row
 
@@ -391,7 +391,7 @@ cache\_period
 .. _setup-config-compresscss:
 
 compressCss
-===========
+-----------
 
 .. container:: table-row
 
@@ -437,7 +437,7 @@ compressCss
 .. _setup-config-compressjs:
 
 compressJs
-==========
+----------
 
 .. container:: table-row
 
@@ -486,7 +486,7 @@ compressJs
 .. _setup-config-concatenatecss:
 
 concatenateCss
-==============
+--------------
 
 .. container:: table-row
 
@@ -529,7 +529,7 @@ concatenateCss
 .. _setup-config-concatenatejs:
 
 concatenateJs
-=============
+-------------
 
 .. container:: table-row
 
@@ -581,7 +581,7 @@ concatenateJs
 .. _setup-config-contentObjectExceptionHandler:
 
 contentObjectExceptionHandler
-=============================
+-----------------------------
 
 .. container:: table-row
 
@@ -642,7 +642,7 @@ contentObjectExceptionHandler
 .. _setup-config-debug:
 
 debug
-=====
+-----
 
 .. container:: table-row
 
@@ -663,7 +663,7 @@ debug
 .. _setup-config-disableallheadercode:
 
 disableAllHeaderCode
-====================
+--------------------
 
 .. container:: table-row
 
@@ -714,7 +714,7 @@ disableAllHeaderCode
 .. _setup-config-disablebodytag:
 
 disableBodyTag
-==============
+--------------
 
 .. container:: table-row
 
@@ -743,7 +743,7 @@ disableBodyTag
 .. _setup-config-disableCanonical:
 
 disableCanonical
-================
+----------------
 
 .. container:: table-row
 
@@ -765,7 +765,7 @@ disableCanonical
 .. _setup-config-disableHrefLang:
 
 disableHrefLang
-===============
+---------------
 
 .. container:: table-row
 
@@ -784,7 +784,7 @@ disableHrefLang
 .. _setup-config-disableprefixcomment:
 
 disablePrefixComment
-====================
+--------------------
 
 .. container:: table-row
 
@@ -805,7 +805,7 @@ disablePrefixComment
 .. _setup-config-disablepreviewnotification:
 
 disablePreviewNotification
-==========================
+--------------------------
 
 .. container:: table-row
 
@@ -826,7 +826,7 @@ disablePreviewNotification
 .. _disableLanguageHeader:
 
 disableLanguageHeader
-=====================
+---------------------
 
 .. container:: table-row
 
@@ -852,7 +852,7 @@ disableLanguageHeader
 .. _setup-config-doctype:
 
 doctype
-=======
+-------
 
 .. container:: table-row
 
@@ -900,7 +900,7 @@ doctype
 .. _setup-config-enablecontentlengthheader:
 
 enableContentLengthHeader
-=========================
+-------------------------
 
 .. container:: table-row
 
@@ -926,7 +926,7 @@ enableContentLengthHeader
 .. _setup-config-exttarget:
 
 extTarget
-=========
+---------
 
 .. container:: table-row
 
@@ -948,7 +948,7 @@ extTarget
 .. _setup-config-filetarget:
 
 fileTarget
-==========
+----------
 
 .. container:: table-row
 
@@ -967,7 +967,7 @@ fileTarget
 .. _setup-config-forceAbsoluteUrls:
 
 forceAbsoluteUrls
-=================
+-----------------
 
 .. versionadded:: 12.1
 
@@ -1001,7 +1001,7 @@ forceAbsoluteUrls
 .. _setup-config-forcetypevalue:
 
 forceTypeValue
-==============
+--------------
 
 .. container:: table-row
 
@@ -1025,7 +1025,7 @@ forceTypeValue
 .. _setup-config-headercomment:
 
 headerComment
-=============
+-------------
 
 .. container:: table-row
 
@@ -1046,7 +1046,7 @@ headerComment
 .. _setup-config-htmltag-attributes:
 
 htmlTag.attributes
-==================
+------------------
 
 .. container:: table-row
 
@@ -1103,7 +1103,7 @@ htmlTag.attributes
 .. _setup-config-htmltag-setparams:
 
 htmlTag\_setParams
-==================
+------------------
 
 .. container:: table-row
 
@@ -1140,7 +1140,7 @@ htmlTag\_setParams
 .. _setup-config-htmltag-stdwrap:
 
 htmlTag\_stdWrap
-================
+----------------
 
 .. container:: table-row
 
@@ -1160,7 +1160,7 @@ htmlTag\_stdWrap
 .. _setup-config-index-descrlgd:
 
 index\_descrLgd
-===============
+---------------
 
 .. container:: table-row
 
@@ -1183,7 +1183,7 @@ index\_descrLgd
 .. _setup-config-index-enable:
 
 index\_enable
-=============
+-------------
 
 .. container:: table-row
 
@@ -1204,7 +1204,7 @@ index\_enable
 .. _setup-config-index-externals:
 
 index\_externals
-================
+----------------
 
 .. container:: table-row
 
@@ -1225,7 +1225,7 @@ index\_externals
 .. _setup-config-index-metatags:
 
 index\_metatags
-===============
+---------------
 
 .. container:: table-row
 
@@ -1248,7 +1248,7 @@ index\_metatags
 .. _setup-config-inlinestyle2tempfile:
 
 inlineStyle2TempFile
-====================
+--------------------
 
 .. container:: table-row
 
@@ -1280,7 +1280,7 @@ inlineStyle2TempFile
 .. _setup-config-inttarget:
 
 intTarget
-=========
+---------
 
 .. container:: table-row
 
@@ -1298,7 +1298,7 @@ intTarget
 .. _setup-config-linkvars:
 
 linkVars
-========
+--------
 
 .. container:: table-row
 
@@ -1360,7 +1360,7 @@ linkVars
 .. _setup-config-message-preview:
 
 message\_preview
-================
+----------------
 
 .. container:: table-row
 
@@ -1380,7 +1380,7 @@ message\_preview
 .. _setup-config-message-preview-workspace:
 
 message\_preview\_workspace
-===========================
+---------------------------
 
 .. container:: table-row
 
@@ -1406,7 +1406,7 @@ message\_preview\_workspace
 .. _setup-config-metacharset:
 
 metaCharset
-===========
+-----------
 
 .. versionchanged:: 12.0
    The TYPO3 Frontend always rendered in UTF-8, therefore setting
@@ -1423,7 +1423,7 @@ by TYPO3 Core anymore.
 .. _setup-config-movejsfromheadertofooter:
 
 moveJsFromHeaderToFooter
-========================
+------------------------
 
 .. container:: table-row
 
@@ -1444,7 +1444,7 @@ moveJsFromHeaderToFooter
 .. _setup-config-mp-defaults:
 
 MP\_defaults
-============
+------------
 
 .. container:: table-row
 
@@ -1477,7 +1477,7 @@ MP\_defaults
 .. _setup-config-mp-disabletypolinkclosestmpvalue:
 
 MP\_disableTypolinkClosestMPvalue
-=================================
+---------------------------------
 
 .. container:: table-row
 
@@ -1497,7 +1497,7 @@ MP\_disableTypolinkClosestMPvalue
 .. _setup-config-mp-maprootpoints:
 
 MP\_mapRootPoints
-=================
+-----------------
 
 .. container:: table-row
 
@@ -1531,7 +1531,7 @@ MP\_mapRootPoints
 .. _setup-config-namespaces:
 
 namespaces
-==========
+----------
 
 .. container:: table-row
 
@@ -1567,7 +1567,7 @@ namespaces
 .. _setup-config-no-cache:
 
 no\_cache
-=========
+---------
 
 .. container:: table-row
 
@@ -1596,7 +1596,7 @@ no\_cache
 .. _setup-config-nopagetitle:
 
 noPageTitle
-===========
+-----------
 
 .. container:: table-row
 
@@ -1623,7 +1623,7 @@ noPageTitle
 .. _setup-config-pagerenderertemplatefile:
 
 pageRendererTemplateFile
-========================
+------------------------
 
 .. container:: table-row
 
@@ -1651,7 +1651,7 @@ pageRendererTemplateFile
 .. _setup-config-pagetitle:
 
 pageTitle
-=========
+---------
 
 .. container:: table-row
 
@@ -1671,7 +1671,7 @@ pageTitle
 .. _setup-config-pagetitlefirst:
 
 pageTitleFirst
-==============
+--------------
 
 .. container:: table-row
 
@@ -1698,7 +1698,7 @@ pageTitleFirst
 .. _setup-config-pagetitleproviders:
 
 pageTitleProviders
-==================
+------------------
 
 .. container:: table-row
 
@@ -1747,7 +1747,7 @@ pageTitleProviders
 .. _setup-config-pagetitleseparator:
 
 pageTitleSeparator
-==================
+------------------
 
 .. container:: table-row
 
@@ -1806,7 +1806,7 @@ pageTitleSeparator
             }
 
 recordLinks
-===========
+-----------
 
 ..  t3-tlo-config:: recordLinks
 
@@ -1833,7 +1833,7 @@ recordLinks
 .. _setup-config-removedefaultcss:
 
 removeDefaultCss
-================
+----------------
 
 .. container:: table-row
 
@@ -1855,7 +1855,7 @@ removeDefaultCss
 .. _setup-config-removedefaultjs:
 
 removeDefaultJS
-===============
+---------------
 
 .. container:: table-row
 
@@ -1889,7 +1889,7 @@ removeDefaultJS
 .. _setup-config-removepagecss:
 
 removePageCss
-=============
+-------------
 
 ..  deprecated:: 12.1
     For more information see :ref:`setup-plugin-css-page-style`.
@@ -1916,7 +1916,7 @@ removePageCss
 .. _setup-config-sendcacheheaders:
 
 sendCacheHeaders
-================
+----------------
 
 .. container:: table-row
 
@@ -1977,7 +1977,7 @@ sendCacheHeaders
 .. _setup-config-showwebsitetitle:
 
 showWebsiteTitle
-================
+----------------
 
 .. versionadded:: 12.0
 
@@ -2005,7 +2005,7 @@ showWebsiteTitle
 .. _setup-config-spamprotectemailaddresses:
 
 spamProtectEmailAddresses
-=========================
+-------------------------
 
 .. container:: table-row
 
@@ -2029,7 +2029,7 @@ spamProtectEmailAddresses
          setting it to >= 2 means a "z" is converted to "\|" which is a special
          character in TYPO3 tables syntax – and that might confuse columns in
          tables.)
-         
+
          It is required to enable the default JavaScript and not disable it. (see :ref:`removeDefaultJS <setup-config-removedefaultjs>`)
 
 
@@ -2037,7 +2037,7 @@ spamProtectEmailAddresses
 .. _setup-config-spamprotectemailaddresses-atsubst:
 
 spamProtectEmailAddresses\_atSubst
-==================================
+----------------------------------
 
 .. container:: table-row
 
@@ -2058,7 +2058,7 @@ spamProtectEmailAddresses\_atSubst
 .. _setup-config-spamprotectemailaddresses-lastdotsubst:
 
 spamProtectEmailAddresses\_lastDotSubst
-=======================================
+---------------------------------------
 
 .. container:: table-row
 
@@ -2082,7 +2082,7 @@ spamProtectEmailAddresses\_lastDotSubst
 .. _setup-config-tx-extension-key-with-no-underscores:
 
 tx\_[extension key with no underscores]\_[\*]
-=============================================
+---------------------------------------------
 
 .. container:: table-row
 
@@ -2112,7 +2112,7 @@ tx\_[extension key with no underscores]\_[\*]
 .. _setup-config-typolinklinkaccessrestrictedpages:
 
 typolinkLinkAccessRestrictedPages
-=================================
+---------------------------------
 
 .. container:: table-row
 
@@ -2152,7 +2152,7 @@ typolinkLinkAccessRestrictedPages
 .. _setup-config-typolinklinkaccessrestrictedpages-addparams:
 
 typolinkLinkAccessRestrictedPages\_addParams
-============================================
+--------------------------------------------
 
 .. container:: table-row
 
@@ -2171,7 +2171,7 @@ typolinkLinkAccessRestrictedPages\_addParams
 .. _setup-config-xhtmldoctype:
 
 xhtmlDoctype
-============
+------------
 
 .. container:: table-row
 
@@ -2217,7 +2217,7 @@ xhtmlDoctype
 .. _setup-config-xmlprologue:
 
 xmlprologue
-===========
+-----------
 
 .. container:: table-row
 
