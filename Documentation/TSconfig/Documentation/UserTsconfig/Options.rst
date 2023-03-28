@@ -263,29 +263,33 @@ dashboard.dashboardPresetsForNewUsers
       options.dashboard.dashboardPresetsForNewUsers := addToList(customDashboard)
 
 
-.. index:: Upload folder; Default
-.. _useroptions-defaultUploadFolder:
+..  index:: Upload folder; Default
+..  _useroptions-defaultUploadFolder:
 
 defaultUploadFolder
 -------------------
 
 :aspect:`Datatype`
-   string
+    string
 
 :aspect:`Description`
-   When a user uploads files they are stored in the default upload folder
-   of the first file storage that user may access. The folder is used for
-   uploads in the TCEforms fields. In general, this will be :file:`fileadmin/user_upload`.
+    When a user uploads files they are stored in the default upload folder
+    of the first file storage that user may access. The folder is used for
+    uploads in the TCEforms fields. In general, this will be :file:`fileadmin/user_upload`.
 
-   With this property it is possible to set a specific upload folder.
+    With this property it is possible to set a specific upload folder.
 
-   The syntax is "storage_uid:file_path".
+    The syntax is "storage_uid:file_path".
+
+    ..  note::
+        It is also possible to set a default upload folder for a page via
+        :ref:`page TSconfig <pagedefaultuploadfolder>`.
 
 :aspect:`Example`
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/user.tsconfig
+    ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/user.tsconfig
 
-      options.defaultUploadFolder = 2:user_folders/my_folder/
+        options.defaultUploadFolder = 2:user_folders/my_folder/
 
 
 .. index:: Records; Delete disabled
