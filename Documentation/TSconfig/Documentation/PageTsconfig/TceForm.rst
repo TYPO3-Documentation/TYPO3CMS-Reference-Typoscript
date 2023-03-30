@@ -259,49 +259,59 @@ PAGE_TSCONFIG_STR
    be substituted by the given value.
 
 
-.. index::
-   Records; field configuration
-.. _pageTsConfigTceFormConfig:
+..  index::
+    Records; field configuration
+..  _pageTsConfigTceFormConfig:
 
 config
 ------
 
 :aspect:`Datatype`
-   string / array
+    string / array
 
 :aspect:`Description`
-   This setting allows to override TCA field configuration. This will influence configuration settings in
-   $GLOBALS['TCA'][<tableName>]['columns'][<fieldName>]['config'][<key>], see
-   :ref:`TCA reference <t3tca:columns-properties-config>` for details.
+    This setting allows to override TCA field configuration. This will influence configuration settings in
+    :php:`$GLOBALS['TCA'][<tableName>]['columns'][<fieldName>]['config'][<key>]`, see
+    :ref:`TCA reference <t3tca:columns-properties-config>` for details.
 
-   Not all configuration options can be overriden, the properties are restricted and depend on the
-   :ref:`field type <t3tca:columns-types>`. The array
-   :code:`typo3/sysext/backend/Classes/Form/Utility/FormEngineUtility.php->$allowOverrideMatrix`
-   within :ref:`FormEngine code <t3coreapi:FormEngine>` defines details:
+    Not all configuration options can be overriden, the properties are restricted and depend on the
+    :ref:`field type <t3tca:columns-types>`. The array
+    :code:`typo3/sysext/backend/Classes/Form/Utility/FormEngineUtility.php->$allowOverrideMatrix`
+    within :ref:`FormEngine code <t3coreapi:FormEngine>` defines details:
 
-    .. code-block:: php
+    ..  code-block:: php
 
-      'input' => ['size', 'max', 'readOnly'],
-      'text' => ['cols', 'rows', 'wrap', 'max', 'readOnly'],
-      'check' => ['cols', 'readOnly'],
-      'select' => ['size', 'autoSizeMax', 'maxitems', 'minitems', 'readOnly', 'treeConfig'],
-      'group' => ['size', 'autoSizeMax', 'max_size', 'maxitems', 'minitems', 'readOnly'],
-      'inline' => ['appearance', 'behaviour', 'foreign_label', 'foreign_selector', 'foreign_unique', 'maxitems', 'minitems', 'size', 'autoSizeMax', 'symmetric_label', 'readOnly'],
-      'imageManipulation' => ['ratios', 'cropVariants']
+        'input' => ['size', 'max', 'readOnly'],
+        'number' => ['size', 'readOnly'],
+        'email' => ['size', 'readOnly'],
+        'link' => ['size', 'readOnly'],
+        'password' => ['size', 'readOnly'],
+        'datetime' => ['size', 'readOnly'],
+        'color' => ['size', 'readOnly'],
+        'uuid' => ['size', 'enableCopyToClipboard'],
+        'text' => ['cols', 'rows', 'wrap', 'max', 'readOnly'],
+        'json' => ['cols', 'rows', 'readOnly'],
+        'check' => ['cols', 'readOnly'],
+        'select' => ['size', 'autoSizeMax', 'maxitems', 'minitems', 'readOnly', 'treeConfig', 'fileFolderConfig'],
+        'category' => ['size', 'maxitems', 'minitems', 'readOnly', 'treeConfig'],
+        'group' => ['size', 'autoSizeMax', 'maxitems', 'minitems', 'readOnly', 'elementBrowserEntryPoints'],
+        'folder' => ['size', 'autoSizeMax', 'maxitems', 'minitems', 'readOnly', 'elementBrowserEntryPoints'],
+        'inline' => ['appearance', 'behaviour', 'foreign_label', 'foreign_selector', 'foreign_unique', 'maxitems', 'minitems', 'size', 'autoSizeMax', 'symmetric_label', 'readOnly'],
+        'file' => ['appearance', 'behaviour', 'maxitems', 'minitems', 'readOnly'],
+        'imageManipulation' => ['ratios', 'cropVariants'],
 
+    This property is available for various levels:
 
-   This property is available for various levels:
+    table level, example:
+        :typoscript:`TCEFORM.tt_content.header.config.max`
 
-   table level, example:
-      `TCEFORM.tt_content.header.config.max`
+    table and record type level, example:
+        :typoscript:`TCEFORM.tt_content.header.types.textpic.config.max`
 
-   table and record type level, example:
-      `TCEFORM.tt_content.header.types.textpic.config.max`
+    Flex form field level, example:
+        :typoscript:`TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.myInputField.config.max`
 
-   Flex form field level, example:
-      `TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.myInputField.config.max`
-
-      Where `sDEF` is the sheet name.
+        Where :typoscript:`sDEF` is the sheet name.
 
 
 .. index::
