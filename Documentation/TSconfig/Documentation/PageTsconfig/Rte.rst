@@ -83,6 +83,222 @@ disabled
    RTE; Configuration
    RTE; config
 
+
+buttons
+-------
+
+
+
+.. _buttons-link-options-removeitems:
+
+buttons.link.options.removeItems
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. container:: table-row
+
+   Property
+         buttons.link.options.removeItems
+
+   Data type
+         list of strings
+
+   Description
+         List of tab items to remove from the dialog of the link button.
+         Possible tab items are: page, file, url, email, folder, telephone.
+
+         Note: More tabs may be provided by extensions.
+
+
+
+.. _buttons-link-targetselector-disabled:
+
+buttons.link.targetSelector.disabled
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. container:: table-row
+
+   Property
+         buttons.link.targetSelector.disabled
+
+   Data type
+         boolean
+
+   Description
+         If set, the selection of link target is removed from the link
+         insertion/update dialog.
+
+         Default : 0
+
+
+
+.. _buttons-link-pageidselector-enabled:
+
+buttons.link.pageIdSelector.enabled
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. container:: table-row
+
+   Property
+         buttons.link.pageIdSelector.enabled
+
+   Data type
+         boolean
+
+   Description
+         If set, the specification of a page id, without using the page tree,
+         is enabled in the link insertion/update dialog.
+
+         Note: This feature is intended for authors who have to deal with a
+         very large page tree. Note that the feature is disabled by default.
+
+         Default: 0
+
+
+
+.. _buttons-link-queryparametersselector-enabled:
+
+buttons.link.queryParametersSelector.enabled
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. container:: table-row
+
+   Property
+         buttons.link.queryParametersSelector.enabled
+
+   Data type
+         boolean
+
+   Description
+         If set, an additional field is enabbled in the link insertion/update
+         dialogue allowing authors to specify query parameters to be added on
+         the link
+
+         Default: 0
+
+
+
+.. _buttons-link-relattribute-enabled:
+
+buttons.link.relAttribute.enabled
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. container:: table-row
+
+   Property
+         buttons.link.relAttribute.enabled
+
+   Data type
+         boolean
+
+   Description
+         If set, an additional field is enabled in the link insertion/update
+         dialogue allowing authors to specify a rel attribute to be added to
+         the link.
+
+         Default: 0
+
+
+
+.. _buttons-link-properties-class-allowedclasses:
+
+buttons.link.properties.class.allowedClasses
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. container:: table-row
+
+   Property
+         buttons.link.properties.class.allowedClasses
+
+   Data type
+         list of id-strings
+
+   Description
+         Classes available in the Insert/Modify link dialogue.
+
+
+
+
+
+.. _buttons-link-properties-class-required:
+
+buttons.link.properties.class.required
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. container:: table-row
+
+   Property
+         buttons.link.properties.class.required
+
+   Data type
+         boolean
+
+   Description
+         If set, a class must be selected for any link. Therefore, the empty
+         option is removed from the class selector.
+
+
+
+.. _buttons-link-type-properties-class-required:
+
+buttons.link.[ *type* ].properties.class.required
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. container:: table-row
+
+   Property
+         buttons.link.[ *type* ].properties.class.required
+
+   Data type
+         boolean
+
+   Description
+         If set, a class must be selected for any link of the given type.
+         Therefore, the empty option is removed from the class selector.
+         Possible types are: page, file, url, email, folder, telephone.
+
+
+
+
+
+.. _buttons-link-properties-target-default:
+
+buttons.link.properties.target.default
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. container:: table-row
+
+   Property
+         buttons.link.properties.target.default
+
+   Data type
+         string
+
+   Description
+         This sets the default target for new links in the RTE.
+
+
+.. _buttons-link-type-properties-target-default:
+
+buttons.link.[ *type* ].properties.target.default
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. container:: table-row
+
+   Property
+         buttons.link.[ *type* ].properties.target.default
+
+   Data type
+         string
+
+   Description
+         Specifies a default target for links of the given type.
+         Possible types are: page, file, url, mail, spec. More types may be
+         provided by extensions.
+
+
+
+
+
 config
 ------
 
