@@ -660,6 +660,11 @@ date
            date = Y-m-d H:i
         }
 
+    ..  note::
+        You should consider using the more flexible function
+        :t3-function-stdwrap:`formattedDate`.
+
+
 strtotime
 ~~~~~~~~~
 
@@ -716,6 +721,87 @@ strftime
         If set, the PHP function `gmstrftime()
         <https://www.php.net/gmstrftime>`_ will be used instead of
         `strftime() <https://www.php.net/strftime>`_.
+
+    ..  note::
+        You should consider using the more flexible function
+        :t3-function-stdwrap:`formattedDate`.
+
+formattedDate
+~~~~~~~~~~~~~
+
+..  versionadded:: 12.3
+
+..  t3-function-stdwrap:: formattedDate
+
+    :Data type: :t3-data-type:`string`
+
+    The function renders date and time based on formats/patterns defined by
+    the International Components for Unicode standard (ICU). ICU-based date and
+    time formatting is much more flexible in rendering as
+    :t3-function-stdwrap:`date` or :t3-function-stdwrap:`strftime`, as it ships
+    with default patterns for date and time based on the given locale (given
+    examples for locale `en-US` and timezone `America/Los_Angeles`):
+
+    *   `FULL`, for example: `Friday, March 17, 2023 at 3:00:00 AM Pacific Daylight Time`
+    *   `LONG`, for example: `March 17, 2023 at 3:00:00 AM PDT`
+    *   `MEDIUM`, for example: `Mar 17, 2023, 3:00:00 AM`
+    *   `SHORT`, for example: `3/17/23, 3:00 AM`
+
+    TYPO3 also adds prepared custom patterns:
+
+    *   `FULLDATE`, for example: `Friday, March 17, 2023`
+    *   `FULLTIME`, for example: `3:00:00 AM Pacific Daylight Time`
+    *   `LONGDATE`, for example: `March 17, 2023`
+    *   `LONGTIME`, for example: `3:00:00 AM PDT`
+    *   `MEDIUMDATE`, for example: `Mar 17, 2023`
+    *   `MEDIUMTIME`, for example: `3:00:00 AM`
+    *   `SHORTDATE`, for example: `3/17/23`
+    *   `SHORTTIME`, for example: `3:00 AM`
+
+    ..  note::
+        You can specify an own pattern to suit your requirements, for example:
+        `qqqq, yyyy` will result in `1st quarter, 2023`. Have a look into the
+        `available options <https://unicode-org.github.io/icu/userguide/format_parse/datetime/#datetime-format-syntax>`__.
+
+    The locale is typically fetched from the
+    :ref:`locale setting <t3coreapi:sitehandling-addingLanguages-locale>` in the
+    site configuration.
+
+    Properties:
+
+    .locale
+        A locale other than the locale of the site language.
+
+    ..  rubric:: Examples
+
+    ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+        lib.my_formatted_date = TEXT
+        lib.my_formatted_date {
+            value = 2023-03-17 3:00:00
+            formattedDate = FULL
+            # Optional, if a different locale is wanted other than the site language's locale
+            formattedDate.locale = de-DE
+        }
+
+    will result in "Freitag, 17. März 2023 um 03:00:00 Nordamerikanische Westküsten-Sommerzeit".
+
+    ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+        lib.my_formatted_date = TEXT
+        lib.my_formatted_date {
+            value = -5 days
+            formattedDate = FULL
+            formattedDate.locale = fr-FR
+        }
+
+        will result in "dimanche 12 mars 2023 à 11:16:44 heure d’été du Pacifique".
+
+    ..  note::
+        The timezone will be taken from the setting `date.timezone` in your
+        :file:`php.ini`.
 
 age
 ~~~
