@@ -542,7 +542,7 @@ showAccessRestrictedPages
         showAccessRestrictedPages.ATagParams = class="restricted"
 
     The example will link access restricted menu items to page ID 22 with
-    the return URL in the GET variable "return\_url" and the page ID in the GET
+    the return URL in the GET variable `return_url` and the page ID in the GET
     variable "pageId". Additionally, a CSS class "restricted" is added to the
     anchor tag.
 
