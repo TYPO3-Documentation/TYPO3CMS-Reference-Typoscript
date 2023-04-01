@@ -1261,6 +1261,14 @@ compatVersion
 loginUser
 ~~~~~~~~~
 
+..  note::
+    This method is deprecated in TYPO3 v12.4. The transition can be done in
+    existing TYPO3 v11 projects already. You should use either
+    :ref:`frontend.user <condition-frontend-user>` to test for frontend user
+    state (available in frontend TypoScript), or
+    :ref:`backend.user <condition-backend-user>` (available in frontend
+    TypoScript and TSconfig).
+
 :aspect:`Function`
    loginUser
 
@@ -1382,6 +1390,14 @@ feature
 
 usergroup
 ~~~~~~~~~
+
+..  note::
+    This method is deprecated in TYPO3 v12.4. The transition can be done in
+    existing TYPO3 v11 projects already. You should use either
+    :ref:`frontend.user <condition-frontend-user>` to test for frontend user
+    state (available in frontend TypoScript), or
+    :ref:`backend.user <condition-backend-user>` (available in frontend
+    TypoScript and TSconfig).
 
 :aspect:`Function`
    usergroup
