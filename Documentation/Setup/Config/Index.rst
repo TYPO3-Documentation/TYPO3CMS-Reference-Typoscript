@@ -2136,15 +2136,23 @@ typolinkLinkAccessRestrictedPages
          See :ref:`menu-common-properties-showaccessrestrictedpages`
          for menu objects as well (similar feature for menus)
 
+         **Property:**
+
+         ..  versionadded:: 12.3
+
+         **.ATagParams**: Add custom attributes to the anchor tag.
+
    Example
          .. code-block:: typoscript
             :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
             config.typolinkLinkAccessRestrictedPages = 29
+            config.typolinkLinkAccessRestrictedPages.ATagParams = class="restricted"
             config.typolinkLinkAccessRestrictedPages_addParams = &return_url=###RETURN_URL###&pageId=###PAGE_ID###
 
          Will create a link to page with id 29 and add GET parameters where the
-         return URL and original page id is a part of it.
+         return URL and original page id is a part of it. Additionally, a CSS
+         class "restricted" is added to the anchor tag.
 
 
 

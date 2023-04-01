@@ -504,7 +504,7 @@ showAccessRestrictedPages
 
 ..  t3-menu-tmenu:: showAccessRestrictedPages
 
-    :Data type: integer (page id) / keyword "NONE"
+    :Data type: integer (page ID) / keyword "NONE"
 
 
     If set, pages in the menu will include pages with frontend user group
@@ -522,11 +522,15 @@ showAccessRestrictedPages
 
     **Properties:**
 
-    .addParam = Additional parameter for the URL, which can hold two
+    **.addParam**: Additional parameter for the URL, which can hold two
     markers; ###RETURN\_URL### which will be substituted with the link the
     page would have had if it had been accessible and ###PAGE\_ID###
-    holding the page id of the page coming from (could be used to look up
+    holding the page ID of the page coming from (could be used to look up
     which fe\_groups was required for access.
+
+    ..  versionadded:: 12.3
+
+    **.ATagParams**: Add custom attributes to the anchor tag.
 
     ..  rubric:: Example
 
@@ -535,10 +539,12 @@ showAccessRestrictedPages
 
         showAccessRestrictedPages = 22
         showAccessRestrictedPages.addParams = &return_url=###RETURN_URL###&pageId=###PAGE_ID###
+        showAccessRestrictedPages.ATagParams = class="restricted"
 
-    The example will link access restricted menu items to page id 22 with
-    the return URL in the GET var "return\_url" and the page id in the GET
-    var "pageId".
+    The example will link access restricted menu items to page ID 22 with
+    the return URL in the GET variable `return_url` and the page ID in the GET
+    variable "pageId". Additionally, a CSS class "restricted" is added to the
+    anchor tag.
 
 additionalWhere
 ---------------
