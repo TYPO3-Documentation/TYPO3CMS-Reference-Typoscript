@@ -947,6 +947,8 @@ compatVersion
 loginUser
 ~~~~~~~~~
 
+..  deprecated:: 12.4
+
 :aspect:`Function`
    loginUser
 
@@ -959,30 +961,61 @@ loginUser
 :aspect:`Description`
    value or constraint, wildcard or RegExp possible
 
-   Context dependent, uses BE-User within TSconfig, and FE-User within
-   TypoScript.
+   Context dependent, uses backend user within TSconfig, and frontend user
+   within TypoScript.
 
-:aspect:`Example`
+:aspect:`Migration`
+   Switch to either :ref:`frontend.user <condition-frontend-user>` to test for
+   frontend user state (available in frontend TypoScript), or to
+   :ref:`backend.user <condition-backend-user>` (available in frontend
+   TypoScript and TSconfig).
+
+   .. note::
+      The transition can be done in existing TYPO3 v11 projects already.
+
+   Examples:
+
    .. code-block:: typoscript
       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
+      # Before
       [loginUser('*')]
-         # matches any login user
-         page.10.value = You are logged in!
+        page = PAGE
+        page.10 = TEXT
+        page.10.value = User is logged in
+      [END]
+      # After
+      [frontend.user.isLoggedIn]
+        page = PAGE
+        page.11 = TEXT
+        page.11.value = User is logged in
       [END]
 
-      [loginUser(1)]
-         page.10.value = Your frontend user has the uid 1
+      # Before
+      [loginUser(13)]
+        page = PAGE
+        page.20 = TEXT
+        page.20.value = Frontend user has the uid 13
+      [END]
+      # After
+      [frontend.user.userId == 13]
+        page = PAGE
+        page.21 = TEXT
+        page.21.value = Frontend user has the uid 13
       [END]
 
-      [loginUser('1,3,5')]
-         page.10.value = Your frontend user has the uid 1, 3 or 5
+      # Before
+      [loginUser('1,13')]
+        page = PAGE
+        page.30 = TEXT
+        page.30.value = Frontend user uid is 1 or 13
       [END]
-
-      [loginUser('*') == false]
-         page.10.value = You are logged out!
+      # After
+      [frontend.user.userId in [1,13]]
+        page = PAGE
+        page.31 = TEXT
+        page.31.value = Frontend user uid is 1 or 13
       [END]
-
 
 .. index:: Conditions; getTSFE
 .. _condition-function-getTSFE:
@@ -1069,6 +1102,8 @@ feature
 usergroup
 ~~~~~~~~~
 
+..  deprecated:: 12.4
+
 :aspect:`Function`
    usergroup
 
@@ -1084,22 +1119,58 @@ usergroup
    Allows to check whether current user (FE or BE) is part of the expected
    usergroup.
 
-:aspect:`Example`
-   Any usergroup:
+:aspect:`Migration`
+   Switch to either :ref:`frontend.user <condition-frontend-user>` to test for
+   frontend user state (available in frontend TypoScript), or to
+   :ref:`backend.user <condition-backend-user>` (available in frontend
+   TypoScript and TSconfig).
+
+   .. note::
+      The transition can be done in existing TYPO3 v11 projects already.
+
+   Examples:
 
    .. code-block:: typoscript
       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-      [usergroup("*")]
-         page.10.value = You are logged in and belong to some usergroup.
+      # Before
+      [usergroup('*')]
+        page = PAGE
+        page.10 = TEXT
+        page.10.value = A frontend user is logged in and belongs to some user group.
+      [END]
+      # After
+      # Prefer [frontend.user.isLoggedIn] to not rely on magic array values.
+      [frontend.user.userGroupIds !== [0, -1]]
+        page = PAGE
+        page.11 = TEXT
+        page.11.value = A frontend user is logged in and belongs to some user group.
+      [end]
+
+      # Before
+      [usergroup(11)]
+        page = PAGE
+        page.20 = TEXT
+        page.20.value = Frontend user is member of group with uid 11
+      [END]
+      # After
+      [11 in frontend.user.userGroupIds]
+        page = PAGE
+        page.21 = TEXT
+        page.21.value = Frontend user is member of group with uid 11
       [END]
 
-      [usergroup("12")]
-         page.10.value = You are in the usergroup with uid 12.
+      # Before
+      [usergroup('1,11')]
+        page = PAGE
+        page.30 = TEXT
+        page.30.value = Frontend user is member of group 1 or 11
       [END]
-
-      [usergroup("12,15,18")]
-         page.10.value = You are in the usergroup with uid 12, 15 or 18.
+      # After
+      [1 in frontend.user.userGroupIds || 11 in frontend.user.userGroupIds]
+        page = PAGE
+        page.31 = TEXT
+        page.31.value = Frontend user is member of group 1 or 11
       [END]
 
 
