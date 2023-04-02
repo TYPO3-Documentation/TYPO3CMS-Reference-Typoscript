@@ -1,41 +1,41 @@
 .. include:: /Includes.rst.txt
-.. index:: Conditions
+.. index::
+   Conditions
+   Conditions; Variables
+   Conditions; Constant
+   Conditions; Functions
+   Conditions; Functions frontend
 .. _conditions:
+.. _condition-reference:
+.. _condition-variables:
+.. _condition-constant:
+.. _condition-functions-in-all-contexts:
+.. _condition-functions-in-frontend-context:
+
 
 ==========
 Conditions
 ==========
 
-.. seealso::
+Frontend TypoScript conditions offer a way to conditionally change TypoScript based
+on current context. See the :ref:`TypoScript syntax condition chapter <t3coreapi:typoscript-syntax-conditions>`
+for the basic syntax of conditions. Do not confuse conditions with the :ref:`"if" function <if>`,
+which is a stdWrap property to act on current data.
 
-   * For full explanations about conditions, especially about condition syntax, please refer to
-     :ref:`the TypoScript Syntax chapter of the Core API <t3coreapi:typoscript-syntax-conditions>`.
-     The "new" condition syntax (since TYPO3 v9.4) is based on the
-     `Symfony expression language <https://symfony.com/doc/5.4/components/expression_language.html>`__.
-   * TypoScript also offers the :ref:`"if" function <if>` to create conditions.
+The symfony expression language tends to throw warnings when sub arrays are
+checked in a condition that do not exist. Use the :ref:`traverse <condition-function-traverse>`
+function to avoid this.
 
 .. contents::
    :local:
-   :depth: 3
+   :depth: 2
 
-.. _condition-reference:
-
-Reference
-=========
-
-.. index:: Conditions; Variables
-.. _condition-variables:
-
-Variables
----------
-
-The following variables are available. The values are context related.
 
 .. index:: Conditions; applicationContext
 .. _condition-applicationContext:
 
 applicationContext
-~~~~~~~~~~~~~~~~~~
+==================
 
 :aspect:`Variable`
    applicationContext
@@ -44,9 +44,7 @@ applicationContext
    String
 
 :aspect:`Description`
-   Current application context as string.
-
-   See :ref:`t3coreapi:bootstrapping-context`.
+   Current application context as string. See :ref:`t3coreapi:bootstrapping-context`.
 
 :aspect:`Example`
    .. code-block:: typoscript
@@ -54,11 +52,7 @@ applicationContext
 
       [applicationContext == "Development"]
 
-   Any context that is "Production" or starts with "Production" (eg Production/Staging").
-
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
+      # Any context that is "Production" or starts with "Production" (eg Production/Staging").
       [applicationContext matches "/^Production/"]
 
 
@@ -66,12 +60,7 @@ applicationContext
 .. _condition-page:
 
 page
-~~~~
-
-.. note::
-   :typoscript:`page` is only available in the frontend context. As the TypoScript setup may be
-   loaded in some backend modules or the CLI context, it is considered best practice to always
-   guard the property by using the function :ref:`traverse() <condition-function-traverse>`
+====
 
 :aspect:`Variable`
    page
@@ -80,8 +69,7 @@ page
    Array
 
 :aspect:`Description`
-   All data of the current page record as array. To find out which fields are available, you can
-   enable the debug mode in the TYPO3 backend which will display the field names.
+   All data of the current page record as array.
 
 :aspect:`Example`
    .. code-block:: typoscript
@@ -103,44 +91,12 @@ page
       # Check the page title
       [traverse(page, "title") == "foo"]
 
-.. index:: Conditions; Constant
-.. _condition-constant:
-
-Constant
-~~~~~~~~
-
-:aspect:`Variable`
-   {$foo.bar}
-
-:aspect:`Type`
-   Constant
-
-:aspect:`Description`
-   Any TypoScript constant is available like before.
-   Depending on the type of the constant you have to use
-   different conditions.
-
-:aspect:`Example`
-   If constant is an integer:
-
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-      [{$foo.bar} == 4711]
-
-   If constant is a string put constant in quotes:
-
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-      ["{$foo.bar}" == "4711"]
-
 
 .. index:: Conditions; tree
 .. _condition-tree:
 
 tree
-~~~~
+====
 
 :aspect:`Variable`
    tree
@@ -159,7 +115,7 @@ tree
 .. _condition-tree-level:
 
 tree.level
-""""""""""
+----------
 
 :aspect:`Variable`
    tree.level
@@ -171,22 +127,18 @@ tree.level
    Current tree level.
 
 :aspect:`Example`
-   Check whether page is on level 0:
-
    .. code-block:: typoscript
       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
+      # Check if page is on level 0:
       [tree.level == 0]
-
 
 
 .. index:: Conditions; tree.pagelayout
 .. _condition-tree-pagelayout:
 
 tree.pagelayout
-"""""""""""""""
-
-.. versionadded:: 11.0
+---------------
 
 :aspect:`Variable`
    tree.pagelayout
@@ -196,8 +148,7 @@ tree.pagelayout
 
 :aspect:`Description`
    Check for the defined backend layout of a page including the inheritance of
-   the field `Backend Layout (subpages of this page)`. The condition is enabled
-   for frontend and backend.
+   the field `Backend Layout (subpages of this page)`.
 
 :aspect:`Example`
    .. code-block:: typoscript
@@ -205,15 +156,9 @@ tree.pagelayout
 
       # Using backend_layout records
       [tree.pagelayout == 2]
-         page.1 = TEXT
-         page.1.value = Layout 2
-      [END]
 
       # Using TSconfig provider of backend layouts
       [tree.pagelayout == "pagets__Home"]
-         page.1 = TEXT
-         page.1.value = Layout Home
-      [END]
 
 
 .. index::
@@ -221,7 +166,7 @@ tree.pagelayout
 .. _condition-tree-rootLine:
 
 tree.rootLine
-"""""""""""""
+-------------
 
 :aspect:`Variable`
    tree.rootLine
@@ -245,7 +190,7 @@ tree.rootLine
 .. _condition-tree-rootLineIds:
 
 tree.rootLineIds
-""""""""""""""""
+----------------
 
 :aspect:`Variable`
    tree.rootLineIds
@@ -257,11 +202,10 @@ tree.rootLineIds
    An array with UIDs of the rootline.
 
 :aspect:`Example`
-   Check whether page with uid 2 is inside the root line:
-
    .. code-block:: typoscript
       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
+      # Check if page with uid 2 is inside the root line
       [2 in tree.rootLineIds]
 
 
@@ -271,13 +215,7 @@ tree.rootLineIds
 .. _condition-tree-rootLineParentIds:
 
 tree.rootLineParentIds
-""""""""""""""""""""""
-
-.. versionadded:: 10.3
-
-   This implements the old :typoscript:`PIDupinRootline` condition within the Symfony
-   expression language, see
-   :doc:`ext_core:Changelog/10.3/Feature-88962-Re-implementOldPIDupinRootlineTypoScriptCondition`
+----------------------
 
 :aspect:`Variable`
    tree.rootLineParentIds
@@ -289,11 +227,10 @@ tree.rootLineParentIds
    An array with parent UIDs of the root line.
 
 :aspect:`Example`
-   Check whether page with uid 2 is the parent of a page inside the root line:
-
    .. code-block:: typoscript
       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
+      # Check if page with uid 2 is the parent of a page inside the root line
       [2 in tree.rootLineParentIds]
 
 
@@ -301,7 +238,7 @@ tree.rootLineParentIds
 .. _condition-backend:
 
 backend
-~~~~~~~
+=======
 
 :aspect:`Variable`
    backend
@@ -317,7 +254,7 @@ backend
 .. _condition-backend-user:
 
 backend.user
-""""""""""""
+------------
 
 :aspect:`Variable`
    backend.user
@@ -335,7 +272,7 @@ backend.user
 .. _condition-backend-user-isAdmin:
 
 backend.user.isAdmin
-""""""""""""""""""""
+--------------------
 
 :aspect:`Variable`
    backend.user.isAdmin
@@ -344,14 +281,13 @@ backend.user.isAdmin
    Boolean
 
 :aspect:`Description`
-   True if current user is admin
+   True if current user is admin.
 
 :aspect:`Example`
-   Evaluates to true if current BE-User is administrator:
-
    .. code-block:: typoscript
       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
+      # Evaluates to true if current BE-User is administrator
       [backend.user.isAdmin]
 
 
@@ -359,7 +295,7 @@ backend.user.isAdmin
 .. _condition-backend-user-isLoggedIn:
 
 backend.user.isLoggedIn
-"""""""""""""""""""""""
+-----------------------
 
 :aspect:`Variable`
    backend.user.isLoggedIn
@@ -368,14 +304,13 @@ backend.user.isLoggedIn
    Boolean
 
 :aspect:`Description`
-   true if current user is logged in
+   True if current user is logged in.
 
 :aspect:`Example`
-   Evaluates to true if an BE-User is logged in:
-
    .. code-block:: typoscript
       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
+      # Evaluates to true if an BE-User is logged in
       [backend.user.isLoggedIn]
 
 
@@ -383,7 +318,7 @@ backend.user.isLoggedIn
 .. _condition-backend-user-userId:
 
 backend.user.userId
-"""""""""""""""""""
+-------------------
 
 :aspect:`Variable`
    backend.user.userId
@@ -392,14 +327,13 @@ backend.user.userId
    Integer
 
 :aspect:`Description`
-   UID of current user
+   UID of current user.
 
 :aspect:`Example`
-   Evaluates to true if user uid of current logged in BE-User is equal to 5:
-
    .. code-block:: typoscript
       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
+      # Evaluates to true if user uid of current logged in BE-User is equal to 5
       [backend.user.userId == 5]
 
 
@@ -407,7 +341,7 @@ backend.user.userId
 .. _condition-backend-user-userGroupIds:
 
 backend.user.userGroupIds
-""""""""""""""""""""""""""
+-------------------------
 
 :aspect:`Variable`
    backend.user.userGroupList
@@ -416,7 +350,7 @@ backend.user.userGroupIds
    array
 
 :aspect:`Description`
-   Array of user group ids of the current backend user
+   Array of user group ids of the current backend user.
 
 :aspect:`Context`
    Frontend, Backend
@@ -432,13 +366,7 @@ backend.user.userGroupIds
 .. _condition-backend-user-userGroupList:
 
 backend.user.userGroupList
-""""""""""""""""""""""""""
-
-.. versionadded:: 11.2
-   Starting with TYPO3 v11.2 `backend.user.userGroupIds`,
-   an array has been added. Use this instead of `like`
-   expressions to test for the user group of the current
-   backend user.
+--------------------------
 
 :aspect:`Variable`
    backend.user.userGroupList
@@ -460,7 +388,7 @@ backend.user.userGroupList
 .. _condition-frontend:
 
 frontend
-~~~~~~~~
+========
 
 :aspect:`Variable`
    frontend
@@ -469,14 +397,14 @@ frontend
    Object
 
 :aspect:`Description`
-   object with frontend information (available in FE only)
+   Object with frontend information.
 
 
 .. index:: Conditions; frontend.user
 .. _condition-frontend-user:
 
 frontend.user
-"""""""""""""
+-------------
 
 :aspect:`Variable`
    frontend.user
@@ -492,7 +420,7 @@ frontend.user
 .. _condition-frontend-user-isLoggedIn:
 
 frontend.user.isLoggedIn
-""""""""""""""""""""""""
+------------------------
 
 :aspect:`Variable`
    frontend.user.isLoggedIn
@@ -501,7 +429,7 @@ frontend.user.isLoggedIn
    Boolean
 
 :aspect:`Description`
-   True if current user is logged in
+   True if current user is logged in.
 
 :aspect:`Example`
    .. code-block:: typoscript
@@ -514,7 +442,7 @@ frontend.user.isLoggedIn
 .. _condition-frontend-user-userId:
 
 frontend.user.userId
-""""""""""""""""""""
+--------------------
 
 :aspect:`Variable`
    .user.userId
@@ -523,7 +451,7 @@ frontend.user.userId
    Integer
 
 :aspect:`Description`
-   UID of current user
+   UID of current user.
 
 :aspect:`Example`
    .. code-block:: typoscript
@@ -535,7 +463,7 @@ frontend.user.userId
 .. _condition-frontend-user-userGroupIds:
 
 frontend.user.userGroupIds
-""""""""""""""""""""""""""
+--------------------------
 
 :aspect:`Variable`
    frontend.user.userGroupList
@@ -544,7 +472,7 @@ frontend.user.userGroupIds
    array
 
 :aspect:`Description`
-   Array of user group ids of the current frontend user
+   Array of user group ids of the current frontend user.
 
 :aspect:`Context`
    Frontend
@@ -559,13 +487,7 @@ frontend.user.userGroupIds
 .. _condition-frontend-user-userGroupList:
 
 frontend.user.userGroupList
-"""""""""""""""""""""""""""
-
-.. versionadded:: 11.2
-   Starting with TYPO3 v11.2 `frontend.user.userGroupIds`,
-   an array has been added. Use this instead of `like`
-   expressions to test for the user group of the current
-   frontend user.
+---------------------------
 
 :aspect:`Variable`
    frontend.user.userGroupList
@@ -574,7 +496,7 @@ frontend.user.userGroupList
    String
 
 :aspect:`Description`
-   Comma list of group UIDs
+   Comma list of group UIDs.
 
 :aspect:`Example`
    .. code-block:: typoscript
@@ -587,10 +509,7 @@ frontend.user.userGroupList
 .. _condition-workspace:
 
 workspace
-~~~~~~~~~
-
-.. versionadded:: 10.3
-   :doc:`ext_core:Changelog/10.3/Feature-90203-MakeWorkspaceAvailableInTypoScriptConditions`
+=========
 
 :aspect:`Variable`
    workspace
@@ -606,11 +525,7 @@ workspace
 .. _condition-workspace-workspaceId:
 
 workspace.workspaceId
-"""""""""""""""""""""
-
-.. versionadded:: 10.3
-   :doc:`ext_core:Changelog/10.3/Feature-90203-MakeWorkspaceAvailableInTypoScriptConditions`
-
+---------------------
 
 :aspect:`Variable`
    .workspaceId
@@ -619,7 +534,7 @@ workspace.workspaceId
    Integer
 
 :aspect:`Description`
-   id of current workspace
+   UID of current workspace.
 
 :aspect:`Example`
    .. code-block:: typoscript
@@ -632,11 +547,7 @@ workspace.workspaceId
 .. _condition-workspace-isLive:
 
 workspace.isLive
-""""""""""""""""
-
-.. versionadded:: 10.3
-   :doc:`ext_core:Changelog/10.3/Feature-90203-MakeWorkspaceAvailableInTypoScriptConditions`
-
+----------------
 
 :aspect:`Variable`
    workspace.isLive
@@ -645,7 +556,7 @@ workspace.isLive
    Boolean
 
 :aspect:`Description`
-   True if current workspace is live
+   True if current workspace is live.
 
 :aspect:`Example`
    .. code-block:: typoscript
@@ -658,11 +569,7 @@ workspace.isLive
 .. _condition-workspace-isOffline:
 
 workspace.isOffline
-"""""""""""""""""""
-
-.. versionadded:: 10.3
-   :doc:`ext_core:Changelog/10.3/Feature-90203-MakeWorkspaceAvailableInTypoScriptConditions`
-
+-------------------
 
 :aspect:`Variable`
    workspace.isOffline
@@ -684,7 +591,7 @@ workspace.isOffline
 .. _condition-typo3:
 
 typo3
-~~~~~
+=====
 
 :aspect:`Variable`
    typo3
@@ -693,14 +600,14 @@ typo3
    Object
 
 :aspect:`Description`
-   object with TYPO3 related information
+   Object with TYPO3 related information
 
 
 .. index:: Conditions; typo3.version
 .. _condition-typo3-version:
 
 typo3.version
-"""""""""""""
+-------------
 
 :aspect:`Variable`
    typo3.version
@@ -722,7 +629,7 @@ typo3.version
 .. _condition-typo3-branch:
 
 typo3.branch
-""""""""""""
+------------
 
 :aspect:`Variable`
    typo3.branch
@@ -744,7 +651,7 @@ typo3.branch
 .. _condition-typo3-devIpMask:
 
 typo3.devIpMask
-"""""""""""""""
+---------------
 
 :aspect:`Variable`
    typo3.devIpMask
@@ -762,24 +669,14 @@ typo3.devIpMask
       [typo3.devIpMask == "172.18.0.6"]
 
 
-.. index:: Conditions; Functions
-.. _condition-functions-in-all-contexts:
-
-Functions in all contexts
--------------------------
-
-Functions take over the logic of the old conditions which do more than a simple comparison check.
-The following functions are available in **any** context:
-
-
 .. index:: Conditions; date
 .. _condition-function-date:
 
-date
-~~~~
+date()
+======
 
 :aspect:`Function`
-   date
+   date()
 
 :aspect:`Parameter`
    String
@@ -788,40 +685,33 @@ date
    String / Integer
 
 :aspect:`Description`
-   Get current date in given format.
-
-   See PHP `date <https://www.php.net/manual/en/function.date.php>`_ function as
-   reference for possible usage.
+   Get current date in given format. See PHP `date <https://www.php.net/manual/en/function.date.php>`_
+   function as reference for possible usage.
 
 :aspect:`Example`
    .. code-block:: typoscript
       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
+      # True if day of current month is 7
       [date("j") == 7]
-         page.10.value = True if day of current month is 7
-      [END]
 
+      # True if day of current week is 7
       [date("w") == 7]
-         page.10.value = True if day of current week is
-      [END]
 
+      # True if day of current year is 7
       [date("z") == 7]
-         page.10.value = True if day of current year is 7
-      [END]
 
+      # True if current hour is 7
       [date("G") == 7]
-         page.10.value = True if current hour is 7
-      [END]
-
 
 .. index:: Conditions; like
 .. _condition-function-like:
 
-like
-~~~~
+like()
+======
 
 :aspect:`Function`
-   like
+   like()
 
 :aspect:`Parameter`
    String, String
@@ -830,45 +720,31 @@ like
    Boolean
 
 :aspect:`Description`
-   This function has two parameters:
-
-   The first parameter
-      Is the string to search in
-
-   The second parameter
-      Is the search string
+   This function has two parameters: The first parameter is the string to search in,
+   the second parameter is the search string.
 
 :aspect:`Example`
-   Search a string with ``*`` within another string:
-
    .. code-block:: typoscript
       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
+      # Search a string with * within another string
       [like("fooBarBaz", "*Bar*")]
 
-   Search string with single characters in between, using ``?``:
-
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
+      # Search string with single characters in between, using ?
       [like("fooBarBaz", "f?oBa?Baz")]
 
-   Search string using regular expression:
-
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
+      # Search string using regular expression
       [like("fooBarBaz", "/f[o]{2,2}[aBrz]+/")]
 
 
 .. index:: Conditions; traverse
 .. _condition-function-traverse:
 
-traverse
-~~~~~~~~
+traverse()
+==========
 
 :aspect:`Function`
-   traverse
+   traverse()
 
 :aspect:`Parameter`
    Array, String
@@ -877,33 +753,28 @@ traverse
    Custom
 
 :aspect:`Description`
-   This function gets a value from an array with arbitrary depth. It has two parameters:
-
-   The first parameter
-      Is the array to traverse
-
-   The second parameter
-      Is the path to traverse
+   This function gets a value from an array with arbitrary depth and suppresses
+   PHP warning when sub arrays do not exist. It has two parameters: The first parameter
+   is the array to traverse, the second parameter is the path to traverse.
 
    In case the path is not found in the array, an empty string is returned.
 
 :aspect:`Example`
-   Traverse query parameters of current request along `tx_news_pi1[news]`:
-
    .. code-block:: typoscript
       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
+      # Traverse query parameters of current request along tx_news_pi1[news]
       [traverse(request.getQueryParams(), 'tx_news_pi1/news') > 0]
 
 
 .. index:: Conditions; compatVersion
 .. _condition-function-compatVersion:
 
-compatVersion
-~~~~~~~~~~~~~
+compatVersion()
+===============
 
 :aspect:`Function`
-   compatVersion
+   compatVersion()
 
 :aspect:`Parameter`
    String
@@ -918,37 +789,20 @@ compatVersion
    .. code-block:: typoscript
       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
+      # True if current version is 11.5.x
       [compatVersion("11.5")]
-         page.10.value = You are using TYPO3 v11.5
-      [END]
-
-   Is same as:
-
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
       [compatVersion("11.5.0")]
-         page.10.value = You are using TYPO3 v11.5
-      [END]
-
-   Another example:
-
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
       [compatVersion("11.5.1")]
-         page.10.value = You are using TYPO3 v11.5
-      [END]
 
 
 .. index:: Conditions; loginUser
 .. _condition-function-loginUser:
 
-loginUser
-~~~~~~~~~
+loginUser()
+===========
 
 :aspect:`Function`
-   loginUser
+   loginUser()
 
 :aspect:`Parameter`
    String
@@ -957,80 +811,75 @@ loginUser
    Boolean
 
 :aspect:`Description`
-   value or constraint, wildcard or RegExp possible
+   Value or constraint, wildcard or RegExp.
 
-   Context dependent, uses BE-User within TSconfig, and FE-User within
-   TypoScript.
+   .. versionchanged:: 12.4
+      Function loginUser() has been marked as deprecated with TYPO v12
+      and should not be used anymore. Use variable :typoscript:`frontend.user`
+      and :typoscript:`backend.user` instead. See
+      :doc:`ext_core:Changelog/12.4/Deprecation-100349-TypoScriptLoginUserAndUsergroupConditions.rst`
+      for more details.
 
 :aspect:`Example`
    .. code-block:: typoscript
       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
+      # True if a user is logged in
       [loginUser('*')]
-         # matches any login user
-         page.10.value = You are logged in!
-      [END]
 
+      # True if logged in user uid is 1
       [loginUser(1)]
-         page.10.value = Your frontend user has the uid 1
-      [END]
 
+      # True if logged in user uid is 1 or 3 or 5
       [loginUser('1,3,5')]
-         page.10.value = Your frontend user has the uid 1, 3 or 5
-      [END]
 
+      # True if user is not logged in
       [loginUser('*') == false]
-         page.10.value = You are logged out!
-      [END]
 
 
 .. index:: Conditions; getTSFE
 .. _condition-function-getTSFE:
 
-getTSFE
-~~~~~~~
+getTSFE()
+=========
 
 :aspect:`Function`
-   getTSFE
+   getTSFE()
 
 :aspect:`Parameter`
    Object
 
 :aspect:`Description`
-   Provides access to TypoScriptFrontendController (:php:`$GLOBALS['TSFE']`)
-
-   Conditions based on ``getTSFE()`` used in a context where TSFE is not available will always evaluate to ``false``.
+   Provides access to TypoScriptFrontendController :php:`$GLOBALS['TSFE']`. This
+   function can directly access methods of TypoScriptFrontendController. This class
+   is target of a mid-term refactoring. It should be used with care since it will
+   eventually vanish in the future.
 
 :aspect:`Example`
-   Current :ref:`setup-page-typenum`:
-
    .. code-block:: typoscript
       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
+      # True if current typenum is 98
       [getTSFE().type == 98]
 
-   Current page id equals to 17. However, :ref:`condition-page` should be preferred:
-
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
+      # True if current page uid is 17. Use the page variable instead
       [getTSFE().id == 17]
 
 
 .. index:: Conditions; getenv
 .. _condition-function-getenv:
 
-getenv
-~~~~~~
+getenv()
+========
 
 :aspect:`Function`
-   getenv
+   getenv()
 
 :aspect:`Parameter`
    String
 
 :aspect:`Description`
-   PHP function:  `getenv <https://www.php.net/manual/en/function.getenv.php>`_
+   PHP function `getenv <https://www.php.net/manual/en/function.getenv.php>`_.
 
 :aspect:`Example`
    .. code-block:: typoscript
@@ -1042,11 +891,11 @@ getenv
 .. index:: Conditions; feature
 .. _condition-function-feature:
 
-feature
-~~~~~~~
+feature()
+=========
 
 :aspect:`Function`
-   feature
+   feature()
 
 :aspect:`Parameter`
    String
@@ -1055,22 +904,21 @@ feature
    Provides access to feature toggles current state.
 
 :aspect:`Example`
-   Check if feature toggle for strict TypoScript syntax is enabled:
-
    .. code-block:: typoscript
       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
+      # True if feature toggle for strict TypoScript syntax is enabled:
       [feature("TypoScript.strictSyntax") === false]
 
 
 .. index:: Conditions; usergroup
 .. _condition-function-usergroup:
 
-usergroup
-~~~~~~~~~
+usergroup()
+===========
 
 :aspect:`Function`
-   usergroup
+   usergroup()
 
 :aspect:`Parameter`
    String
@@ -1079,53 +927,38 @@ usergroup
    Boolean
 
 :aspect:`Description`
-   Value or constraint, wildcard or RegExp possible
+   Value or constraint, wildcard or RegExp. Allows to check whether current user
+   is member of the expected usergroup.
 
-   Allows to check whether current user (FE or BE) is part of the expected
-   usergroup.
+   .. versionchanged:: 12.4
+      Function loginUser() has been marked as deprecated with TYPO v12
+      and should not be used anymore. Use variable :typoscript:`frontend.user`
+      and :typoscript:`backend.user` instead. See
+      :doc:`ext_core:Changelog/12.4/Deprecation-100349-TypoScriptLoginUserAndUsergroupConditions.rst`
+      for more details.
 
 :aspect:`Example`
-   Any usergroup:
-
    .. code-block:: typoscript
       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
+      # True if a logged in user is member of some group
       [usergroup("*")]
-         page.10.value = You are logged in and belong to some usergroup.
-      [END]
 
+      # True if a logged in user is member of group 12
       [usergroup("12")]
-         page.10.value = You are in the usergroup with uid 12.
-      [END]
 
+      # True if a logged in user is member of group 12 or 15 or 18
       [usergroup("12,15,18")]
-         page.10.value = You are in the usergroup with uid 12, 15 or 18.
-      [END]
-
-
-.. index:: Conditions; Functions frontend
-.. _condition-functions-in-frontend-context:
-
-Functions in frontend context
------------------------------
-
-The following functions are only available in **frontend** context:
 
 
 .. index:: Conditions; ip
 .. _condition-function-ip:
 
-ip
-~~
-
-..  versionchanged:: 12.3
-    Using this function in **page TSconfig** or **user TSconfig** conditions is
-    deprecated. Such conditions will stop working with TYPO3 v13 and will then
-    always evaluate to false. For migration hints see the
-    :ref:`changelog <ext_core:deprecation-100047-1677608959>`.
+ip()
+====
 
 :aspect:`Function`
-   ip
+   ip()
 
 :aspect:`Parameter`
    String
@@ -1152,17 +985,11 @@ ip
 .. index:: Conditions; request
 .. _condition-function-request:
 
-request
-~~~~~~~
-
-..  versionchanged:: 12.3
-    Using this function in **page TSconfig** or **user TSconfig** conditions is
-    deprecated. Such conditions will stop working with TYPO3 v13 and will then
-    always evaluate to false. For migration hints see the
-    :ref:`changelog <ext_core:deprecation-100047-1677608959>`.
+request()
+=========
 
 :aspect:`Function`
-   request
+   request()
 
 :aspect:`Parameter`
    Custom
@@ -1175,7 +1002,7 @@ request
 .. _condition-function-request-getQueryParams():
 
 request.getQueryParams()
-""""""""""""""""""""""""
+------------------------
 
 :aspect:`Function`
    request.getQueryParams()
@@ -1187,7 +1014,7 @@ request.getQueryParams()
    Array
 
 :aspect:`Description`
-   Allows to access all available GET-Parameters from current request.
+   Allows to access GET parameters from current request.
 
    Assuming the following query within url:
 
@@ -1203,20 +1030,12 @@ request.getQueryParams()
       Value: ``1``
 
 :aspect:`Example`
-   Check if query parameter skipSessionUpdate equals 1:
-
    .. code-block:: typoscript
       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-      [request.getQueryParams()['skipSessionUpdate'] == 1]
-
-   Safely check the query parameter array to avoid error logs in case key is not
-   defined (see :ref:`condition-function-traverse`). This will check if the GET parameter
-   `tx_news_pi1[news]` in the URL is greater than `0`:
-
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
+      # Safely check the query parameter array to avoid error logs in case key is not
+      # defined. This will check if the GET parameter
+      # tx_news_pi1[news] in the URL is greater than 0:
       [traverse(request.getQueryParams(), 'tx_news_pi1/news') > 0]
 
 
@@ -1224,7 +1043,7 @@ request.getQueryParams()
 .. _condition-function-request-getParsedBody():
 
 request.getParsedBody()
-"""""""""""""""""""""""
+-----------------------
 
 :aspect:`Function`
    request.getParsedBody()
@@ -1250,7 +1069,7 @@ request.getParsedBody()
 .. _condition-function-request-getHeaders():
 
 request.getHeaders()
-""""""""""""""""""""
+--------------------
 
 :aspect:`Function`
    request.getHeaders()
@@ -1277,13 +1096,11 @@ request.getHeaders()
       [END]
 
 
-
-
 .. index:: Conditions; request.getCookieParams()
 .. _condition-function-request-getCookieParams():
 
 request.getCookieParams()
-"""""""""""""""""""""""""
+-------------------------
 
 :aspect:`Function`
    request.getCookieParams()
@@ -1295,7 +1112,7 @@ request.getCookieParams()
    Array
 
 :aspect:`Description`
-   Provides all available cookies.
+   Provides available cookies.
 
 :aspect:`Example`
    .. code-block:: typoscript
@@ -1308,7 +1125,7 @@ request.getCookieParams()
 .. _condition-function-request-getNormalizedParams():
 
 request.getNormalizedParams()
-"""""""""""""""""""""""""""""
+-----------------------------
 
 :aspect:`Function`
    request.getNormalizedParams()
@@ -1413,7 +1230,7 @@ request.getNormalizedParams()
 .. _condition-function-request-getPageArguments():
 
 request.getPageArguments()
-""""""""""""""""""""""""""
+--------------------------
 
 :aspect:`Function`
    request.getPageArguments()
@@ -1433,18 +1250,15 @@ request.getPageArguments()
 
       [request.getPageArguments().get('foo_id') > 0]
 
-   Allows migration from old condition syntax using `[globalVar = GP:singlepartner > 0]`
-   to `[request.getPageArguments().get('singlepartner') > 0]`.
-
 
 .. index:: Conditions; session
 .. _condition-functions-in-frontend-context-function-session:
 
-session
-~~~~~~~
+session()
+=========
 
 :aspect:`Function`
-   session
+   session()
 
 :aspect:`Parameter`
    String
@@ -1453,27 +1267,23 @@ session
    Mixed
 
 :aspect:`Description`
-   Allows to access values of the current session.
-   Available values depend on values written to the session, e.g. by extensions.
-
-   Use ``|`` to dig deeper into the structure for stored values.
-
-   .. TODO: Once available again, add reference to session handling, e.g. retrieving and storing values
+   Allows to access values of the current session. Available values depend on values
+   written to the session, e.g. by extensions. Use :typoscript:``|`` to dig deeper
+   into the structure for stored values.
 
 :aspect:`Example`
-   Example, matches if session has value 1234567 in structure :php:`$foo['bar']`:
-
    .. code-block:: typoscript
       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
+      # Match if session has value 1234567 in structure :php:`$foo['bar']`:
       [session("foo|bar") == 1234567]
 
 
 .. index:: Conditions; site
 .. _condition-functions-in-frontend-context-function-site:
 
-site
-~~~~
+site()
+======
 
 :aspect:`Function`
    site
@@ -1483,9 +1293,7 @@ site
 
 :aspect:`Description`
    Get value from site configuration, or null if no site was found or property
-   does not exists.
-
-   Available Information:
+   does not exists. Available Information:
 
    site("identifier")
       Returns the identifier of current site as string.
@@ -1512,54 +1320,33 @@ site
       Returns an array with all available configuration for current site.
 
 :aspect:`Example`
-   Site identifier:
-
    .. code-block:: typoscript
       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
+      # Site identifier
       [site("identifier") == "typo395"]
 
-   Matches if site base host:
-
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
+      # Match site base host
       [site("base").getHost() == "www.example.org"]
 
-   Base path:
-
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
+      # Match base path
       [site("base").getPath() == "/"]
 
-   Rootpage uid:
-
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
+      # Match root page uid
       [site("rootPageId") == 1]
 
-   Configuration property:
-
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
+      # Match a configuration property
       [traverse(site("configuration"), "myCustomProperty") == true]
 
-.. warning::
-   It might seem straight-forward to use `site("configuration")["myCustomProperty"]` to access
-   configuration properties. However, if the property has not been set, this will trigger a runtime
-   exception, and your log will fill up quickly. Using :ref:`condition-function-traverse` will silence the error messages.
 
 .. index:: Conditions; siteLanguage
 .. _condition-functions-in-frontend-context-function-siteLanguage:
 
-siteLanguage
-~~~~~~~~~~~~
+siteLanguage()
+==============
 
 :aspect:`Function`
-   siteLanguage
+   siteLanguage()
 
 :aspect:`Parameter`
    String
