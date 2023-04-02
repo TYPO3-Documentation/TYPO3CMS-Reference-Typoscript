@@ -723,90 +723,123 @@ session
       lib.foo.data = session : shop_cart|itemCount
 
 
-.. _data-type-site:
+..  _data-type-site:
 
 site
 ====
 
 :aspect:`Data type:`
-   site
+    site
 
 :aspect:`Description:`
-   Accessing the current site configuration.
+    Accessing the current
+    :ref:`site configuration <t3coreapi:sitehandling-basics>`.
 
 :aspect:`Possible values:`
-   ============================== ==========================================================
-   Value                          Effect
-   ============================== ==========================================================
-   :typoscript:`attributes`       Additional parameters configured for this site
-   :typoscript:`base`             The Base URL for this site
-   :typoscript:`baseVariants`     The Base Variants for this site
-   :typoscript:`rootPageId`       The Root Page ID of this site
-   :typoscript:`identifier`       The identifier (name) of this site configuration
-   :typoscript:`websiteTitle`     The website title of this site
-   ============================== ==========================================================
+    :typoscript:`attributes`
+        Additional parameters configured for this site.
+
+    :typoscript:`base`
+        The base URL for this site.
+
+    :typoscript:`baseVariants`
+        The base variants for this site.
+
+    :typoscript:`rootPageId`
+        The root page ID of this site.
+
+    :typoscript:`identifier`
+        The identifier (name) of this site configuration.
+
+    :typoscript:`websiteTitle`
+        The website title of this site.
 
 :aspect:`Example:`
-   Code:
+    ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-   .. code-block:: typoscript
+        page.10 = TEXT
+        page.10.data = site:base
+        page.10.wrap = This is your base URL: |
 
-      page.10 = TEXT
-      page.10.data = site:base
-      page.10.wrap = This is your base URL: |
+    Where :typoscript:`site` is the keyword for accessing an aspect, and the
+    following parts are the configuration key(s) to access.
 
-   Where :typoscript:`site` is the keyword for accessing an aspect, and the following parts are the configuration key(s) to access.
+    .. code-block:: typoscript
+        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-   .. code-block:: typoscript
+        page.10 = TEXT
+        page.10.data = site:customConfigKey.nested.value
 
-      data = site:customConfigKey.nested.value
 
-
-.. _data-type-siteLanguage:
+..  _data-type-siteLanguage:
 
 siteLanguage
 ============
 
 :aspect:`Data type:`
-   siteLanguage
+    siteLanguage
 
 :aspect:`Description:`
-   Accessing the current site language configuration.
+    Accessing the current
+    :ref:`site language configuration <t3coreapi:sitehandling-addingLanguages>`.
 
 :aspect:`Possible values:`
-   ============================== ==========================================================
-   Value                          Effect
-   ============================== ==========================================================
-   :typoscript:`attributes`       Additional parameters configured for this site language
-   :typoscript:`base`             The Base URL for this language
-   :typoscript:`direction`        The direction for this language
-   :typoscript:`flagIdentifier`   The flag key (like "gb" or "fr") used to be used in TYPO3's Backend.
-   :typoscript:`hreflang`         Language tag for this language defined by RFC 1766 / 3066 for "lang"  and "hreflang" attributes
-   :typoscript:`languageId`       The language mapped to id of the site languge, as defined in the :ref:`config.yaml languageId <t3coreapi:sitehandling-addingLanguages>`
-   :typoscript:`locale`           Locale, like 'de_CH' or 'en_GB'
-   :typoscript:`navigationTitle`  Label to be used within language menus
-   :typoscript:`title`            Label to be used within TYPO3 to identify the language
-   :typoscript:`twoLetterIsoCode` The iso code for this language (two letter) ISO-639-1
-   :typoscript:`typo3Language`    Prefix for TYPO3's language files "default" for english, otherwise one of TYPO3's internal language keys. Previously configured via TypoScript config.language = fr
-   :typoscript:`websiteTitle`     The website title for this language. No automatic fallback to the `site:websiteTitle`!
-   ============================== ==========================================================
+    :typoscript:`attributes`
+        Additional parameters configured for this site language.
+
+    :typoscript:`base`
+        The base URL for this language.
+
+    :typoscript:`direction`
+        The direction for this language.
+
+    :typoscript:`flagIdentifier`
+        The flag key (like `gb` or `fr`) used to be used in the TYPO3 backend.
+
+    :typoscript:`hreflang`
+        The language tag for this language defined by RFC 1766 / 3066 for
+        :html:`lang` and :html:`hreflang` attributes
+
+    :typoscript:`languageId`
+        The language mapped to the ID of the site language.
+
+    :typoscript:`locale`
+        The locale, like `de_CH` or `en_GB`.
+
+    :typoscript:`navigationTitle`
+        The label to be used within language menus.
+
+    :typoscript:`title`
+        The label to be used within TYPO3 to identify the language.
+
+    :typoscript:`twoLetterIsoCode`
+        The ISO-639-1 code for this language (two letters).
+
+    :typoscript:`typo3Language`
+        The prefix for TYPO3's language files (`default` for English), otherwise
+        one of TYPO3's internal language keys. Previously configured via
+        TypoScript :typoscript:`config.language = fr`.
+
+    :typoscript:`websiteTitle`
+        The website title for this language. No automatic fallback to the
+        :typoscript:`site:websiteTitle`!
 
 :aspect:`Example:`
-   Code:
+    ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        page.10 = TEXT
+        page.10.data = siteLanguage:navigationTitle
+        page.10.wrap = This is the title of the current site language: |
 
-      page.10 = TEXT
-      page.10.data = siteLanguage:navigationTitle
-      page.10.wrap = This is the title of the current site language: |
+        page.20 = TEXT
+        page.20.dataWrap = The current site language direction is {siteLanguage:direction}
 
-      page.10 = TEXT
-      page.10.dataWrap = The current site language direction is {siteLanguage:direction}
-
-      # Website title for the current language with fallback to the website title of the site configuration.
-      page.10 = TEXT
-      page.10.data = siteLanguage:websiteTitle // site:websiteTitle
+        # Website title for the current language with fallback
+        # to the website title of the site configuration.
+        page.30 = TEXT
+        page.30.data = siteLanguage:websiteTitle // site:websiteTitle
 
 .. _data-type-gettext-tsfe:
 
