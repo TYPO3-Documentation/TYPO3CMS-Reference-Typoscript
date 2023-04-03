@@ -801,6 +801,12 @@ compatVersion()
 loginUser()
 ===========
 
+..  deprecated:: 12.4
+    This function has been marked as deprecated with TYPO3 v12 and should not be
+    used anymore. Use the variables :typoscript:`frontend.user` and
+    :typoscript:`backend.user` instead. See the
+    :ref:`changelog <ext_core:deprecation-100349-1680097287>` for more details.
+
 :aspect:`Function`
    loginUser()
 
@@ -813,29 +819,48 @@ loginUser()
 :aspect:`Description`
    Value or constraint, wildcard or RegExp.
 
-   .. versionchanged:: 12.4
-      Function loginUser() has been marked as deprecated with TYPO v12
-      and should not be used anymore. Use variable :typoscript:`frontend.user`
-      and :typoscript:`backend.user` instead. See
-      :doc:`ext_core:Changelog/12.4/Deprecation-100349-TypoScriptLoginUserAndUsergroupConditions.rst`
-      for more details.
-
-:aspect:`Example`
+:aspect:`Migration`
    .. code-block:: typoscript
       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-      # True if a user is logged in
+      # Before
       [loginUser('*')]
+        page = PAGE
+        page.10 = TEXT
+        page.10.value = User is logged in
+      [END]
+      # After
+      [frontend.user.isLoggedIn]
+        page = PAGE
+        page.11 = TEXT
+        page.11.value = User is logged in
+      [END]
 
-      # True if logged in user uid is 1
-      [loginUser(1)]
+      # Before
+      [loginUser(13)]
+        page = PAGE
+        page.20 = TEXT
+        page.20.value = Frontend user has the uid 13
+      [END]
+      # After
+      [frontend.user.userId == 13]
+        page = PAGE
+        page.21 = TEXT
+        page.21.value = Frontend user has the uid 13
+      [END]
 
-      # True if logged in user uid is 1 or 3 or 5
-      [loginUser('1,3,5')]
-
-      # True if user is not logged in
-      [loginUser('*') == false]
-
+      # Before
+      [loginUser('1,13')]
+        page = PAGE
+        page.30 = TEXT
+        page.30.value = Frontend user uid is 1 or 13
+      [END]
+      # After
+      [frontend.user.userId in [1,13]]
+        page = PAGE
+        page.31 = TEXT
+        page.31.value = Frontend user uid is 1 or 13
+      [END]
 
 .. index:: Conditions; getTSFE
 .. _condition-function-getTSFE:
@@ -917,6 +942,12 @@ feature()
 usergroup()
 ===========
 
+..  deprecated:: 12.4
+    This function has been marked as deprecated with TYPO3 v12 and should not be
+    used anymore. Use the variables :typoscript:`frontend.user` and
+    :typoscript:`backend.user` instead. See the
+    :ref:`changelog <ext_core:deprecation-100349-1680097287>` for more details.
+
 :aspect:`Function`
    usergroup()
 
@@ -930,32 +961,61 @@ usergroup()
    Value or constraint, wildcard or RegExp. Allows to check whether current user
    is member of the expected usergroup.
 
-   .. versionchanged:: 12.4
-      Function loginUser() has been marked as deprecated with TYPO v12
-      and should not be used anymore. Use variable :typoscript:`frontend.user`
-      and :typoscript:`backend.user` instead. See
-      :doc:`ext_core:Changelog/12.4/Deprecation-100349-TypoScriptLoginUserAndUsergroupConditions.rst`
-      for more details.
-
-:aspect:`Example`
+:aspect:`Migration`
    .. code-block:: typoscript
       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-      # True if a logged in user is member of some group
-      [usergroup("*")]
+      # Before
+      [usergroup('*')]
+        page = PAGE
+        page.10 = TEXT
+        page.10.value = A frontend user is logged in and belongs to some user group.
+      [END]
+      # After
+      # Prefer [frontend.user.isLoggedIn] to not rely on magic array values.
+      [frontend.user.userGroupIds !== [0, -1]]
+        page = PAGE
+        page.11 = TEXT
+        page.11.value = A frontend user is logged in and belongs to some user group.
+      [END]
 
-      # True if a logged in user is member of group 12
-      [usergroup("12")]
+      # Before
+      [usergroup(11)]
+        page = PAGE
+        page.20 = TEXT
+        page.20.value = Frontend user is member of group with uid 11
+      [END]
+      # After
+      [11 in frontend.user.userGroupIds]
+        page = PAGE
+        page.21 = TEXT
+        page.21.value = Frontend user is member of group with uid 11
+      [END]
 
-      # True if a logged in user is member of group 12 or 15 or 18
-      [usergroup("12,15,18")]
-
+      # Before
+      [usergroup('1,11')]
+        page = PAGE
+        page.30 = TEXT
+        page.30.value = Frontend user is member of group 1 or 11
+      [END]
+      # After
+      [1 in frontend.user.userGroupIds || 11 in frontend.user.userGroupIds]
+        page = PAGE
+        page.31 = TEXT
+        page.31.value = Frontend user is member of group 1 or 11
+      [END]
 
 .. index:: Conditions; ip
 .. _condition-function-ip:
 
 ip()
 ====
+
+..  deprecated:: 12.3
+    Using this function in **page TSconfig** or **user TSconfig** conditions is
+    deprecated. Such conditions will stop working with TYPO3 v13 and will then
+    always evaluate to false. For migration hints see the
+    :ref:`changelog <ext_core:deprecation-100047-1677608959>`.
 
 :aspect:`Function`
    ip()
@@ -987,6 +1047,12 @@ ip()
 
 request()
 =========
+
+..  deprecated:: 12.3
+    Using this function in **page TSconfig** or **user TSconfig** conditions is
+    deprecated. Such conditions will stop working with TYPO3 v13 and will then
+    always evaluate to false. For migration hints see the
+    :ref:`changelog <ext_core:deprecation-100047-1677608959>`.
 
 :aspect:`Function`
    request()
