@@ -881,12 +881,6 @@ doctype
 
          **none** for *no* doctype at all.
 
-         .. note::
-
-            Keywords also change the way TYPO3 generates some of the
-            XHTML tags to ensure valid XML. If you set doctype to a string, then
-            you must also set :typoscript:`config.xhtmlDoctype` (see below).
-
          See :ref:`config.htmlTag_setParams <setup-config-htmltag-setparams>`
          for more details on the effect on the HTML tag.
 
@@ -2180,6 +2174,9 @@ typolinkLinkAccessRestrictedPages\_addParams
 
 xhtmlDoctype
 ------------
+
+..  deprecated:: 12.4
+    Replace this property with :ref:`config.doctype <setup-config-doctype>`.
 
 .. container:: table-row
 
