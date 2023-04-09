@@ -141,7 +141,66 @@ userFunc
 .. _setup-plugin-extbase:
 
 Properties for all frontend plugins based on Extbase
-=====================================================
+====================================================
+
+:ref:`Extbase <t3coreapi:extbase>` is an extension framework to create frontend
+plugins.
+
+..  _extbase_typoscript_configuration-general:
+
+General
+-------
+
+.. _setup-plugin-configuration-ignoreFlexFormSettingsIfEmpty:
+
+ignoreFlexFormSettingsIfEmpty
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+..  versionadded:: 12.3
+
+.. container:: table-row
+
+   Property
+         ignoreFlexFormSettingsIfEmpty
+
+   Data type
+         :t3-data-type:`string`
+
+   Description
+         Define :ref:`FlexForm <t3coreapi:flexforms>` settings that will be
+         ignored in the extension settings merge process, if their value is
+         considered empty (either an empty string or a string containing `0`).
+
+         Additionally, there is the PSR-14 event
+         :ref:`BeforeFlexFormConfigurationOverrideEvent <t3coreapi:BeforeFlexFormConfigurationOverrideEvent>`
+         available to further manipulate the merged configuration after standard
+         override logic is applied.
+
+   Examples
+         Definition for *all* plugins of an extension:
+
+         .. code-block:: typoscript
+            :caption: EXT:my_extension/Configuration/TypoScript/setup.typoscript
+
+            plugin.tx_myextension.ignoreFlexFormSettingsIfEmpty = field1,field2
+
+         Definition for *one* plugin of an extension:
+
+         .. code-block:: typoscript
+            :caption: EXT:my_extension/Configuration/TypoScript/setup.typoscript
+
+            plugin.tx_myextension_myplugin.ignoreFlexFormSettingsIfEmpty = field1,field2
+
+         If an extension already defined :typoscript:`ignoreFlexFormSettingsIfEmpty`,
+         integrators are advised to use :typoscript:`addToList` or
+         :typoscript:`removeFromList` to modify existing settings:
+
+         .. code-block:: typoscript
+            :caption: EXT:my_extension/Configuration/TypoScript/setup.typoscript
+
+            plugin.tx_myextension_myplugin.ignoreFlexFormSettingsIfEmpty := removeFromList(field1)
+            plugin.tx_myextension_myplugin.ignoreFlexFormSettingsIfEmpty := addToList(field3)
+
 
 .. _extbase_typoscript_configuration-features:
 
