@@ -158,44 +158,44 @@ ignoreFlexFormSettingsIfEmpty
 
 ..  versionadded:: 12.3
 
-.. container:: table-row
+..  container:: table-row
 
-   Property
-         ignoreFlexFormSettingsIfEmpty
+    Property
+        ignoreFlexFormSettingsIfEmpty
 
-   Data type
-         :t3-data-type:`string`
+    Data type
+        :t3-data-type:`string`
 
-   Description
-         Define :ref:`FlexForm <t3coreapi:flexforms>` settings that will be
-         ignored in the extension settings merge process, if their value is
-         considered empty (either an empty string or a string containing `0`).
+    Description
+        Define :ref:`FlexForm <t3coreapi:flexforms>` settings that will be
+        ignored in the extension settings merge process, if their value is
+        considered empty (either an empty string or a string containing `0`).
 
-         Additionally, there is the PSR-14 event
-         :ref:`BeforeFlexFormConfigurationOverrideEvent <t3coreapi:BeforeFlexFormConfigurationOverrideEvent>`
-         available to further manipulate the merged configuration after standard
-         override logic is applied.
+        Additionally, there is the PSR-14 event
+        :ref:`BeforeFlexFormConfigurationOverrideEvent <t3coreapi:BeforeFlexFormConfigurationOverrideEvent>`
+        available to further manipulate the merged configuration after standard
+        override logic is applied.
 
-   Examples
-         Definition for *all* plugins of an extension:
+    Examples
+        Definition for *all* plugins of an extension:
 
-         .. code-block:: typoscript
+        ..  code-block:: typoscript
             :caption: EXT:my_extension/Configuration/TypoScript/setup.typoscript
 
             plugin.tx_myextension.ignoreFlexFormSettingsIfEmpty = field1,field2
 
-         Definition for *one* plugin of an extension:
+        Definition for *one* plugin of an extension:
 
-         .. code-block:: typoscript
+        ..  code-block:: typoscript
             :caption: EXT:my_extension/Configuration/TypoScript/setup.typoscript
 
             plugin.tx_myextension_myplugin.ignoreFlexFormSettingsIfEmpty = field1,field2
 
-         If an extension already defined :typoscript:`ignoreFlexFormSettingsIfEmpty`,
-         integrators are advised to use :typoscript:`addToList` or
-         :typoscript:`removeFromList` to modify existing settings:
+        If an extension already defined :typoscript:`ignoreFlexFormSettingsIfEmpty`,
+        integrators are advised to use :typoscript:`addToList` or
+        :typoscript:`removeFromList` to modify existing settings:
 
-         .. code-block:: typoscript
+        ..  code-block:: typoscript
             :caption: EXT:my_extension/Configuration/TypoScript/setup.typoscript
 
             plugin.tx_myextension_myplugin.ignoreFlexFormSettingsIfEmpty := removeFromList(field1)
