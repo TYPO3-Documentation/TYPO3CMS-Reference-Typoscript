@@ -417,7 +417,7 @@ file_list.enableDisplayBigControlPanel
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. versionchanged:: 11.3
-   The checkbox :guilabel:`Extended view` was removed with TYPO3 11.3.
+   The checkbox :guilabel:`Extended view` was removed with TYPO3 v11.3.
    Therefore the option :typoscript:`file_list.enableDisplayBigControlPanel`
    has no effect anymore.
 
