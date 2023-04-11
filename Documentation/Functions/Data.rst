@@ -841,6 +841,28 @@ siteLanguage
         page.30 = TEXT
         page.30.data = siteLanguage:websiteTitle // site:websiteTitle
 
+..  _data-type-siteSettings:
+
+siteSettings
+============
+
+..  versionadded:: 12.1
+
+:aspect:`Data type:`
+    siteSettings
+
+:aspect:`Description:`
+    Access the :ref:`site settings <t3coreapi:sitehandling-settings>` for the
+    current site.
+
+:aspect:`Example:`
+    ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+        page.10 = TEXT
+        page.10.data = siteSettings:redirects.httpStatusCode
+
+
 .. _data-type-gettext-tsfe:
 
 TSFE
