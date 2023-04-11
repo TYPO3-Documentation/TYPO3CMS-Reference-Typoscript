@@ -32,7 +32,7 @@ Setting the page TSconfig globally
 ==================================
 
 .. versionadded:: 12.0
-   Starting with TYPO3 12.0 page TSconfig in a file named
+   Starting with TYPO3 v12.0 page TSconfig in a file named
    :file:`Configuration/page.tsconfig` in an extension is automatically
    loaded during build time.
 
@@ -58,12 +58,12 @@ can also set the page TSconfig globally.
 
 .. _page-tsconfig-v11-v12:
 
-Global page TSconfig, compatible with TYPO3 11 and 12
------------------------------------------------------
+Global page TSconfig, compatible with TYPO3 v11 and v12
+-------------------------------------------------------
 
-In TYPO3 11 installations the content of file:`Configuration/page.tsconfig`
+In TYPO3 v11 installations the content of file:`Configuration/page.tsconfig`
 is not loaded automatically yet. You can achive compatibility with both
-TYPO3 11 and 12 by importing the content of this file with the API function
+TYPO3 v11 and v12 by importing the content of this file with the API function
 :php:`ExtensionManagementUtility::addPageTSConfig`:
 
 .. code-block:: php
