@@ -22,6 +22,7 @@ functions is different, though.
 
 The Symfony expression language tends to throw warnings when sub arrays are
 checked in a condition that do not exist. Use the :ref:`traverse <condition-function-traverse>`
+function to avoid this.
 
 .. contents::
    :local:
