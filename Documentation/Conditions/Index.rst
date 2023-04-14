@@ -884,9 +884,6 @@ getTSFE()
    .. code-block:: typoscript
       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-      # True if current typenum is 98
-      [getTSFE().type == 98]
-
       # True if current page uid is 17. Use the page variable instead
       [getTSFE().id == 17]
 
@@ -1315,6 +1312,9 @@ request.getPageArguments()
       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
       [request.getPageArguments().get('foo_id') > 0]
+
+      # True if current typenum is 98
+      [request.getPageArguments()?.getPageType() == 98]
 
 
 .. index:: Conditions; session
