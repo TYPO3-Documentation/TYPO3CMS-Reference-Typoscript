@@ -62,7 +62,7 @@ Global page TSconfig, compatible with TYPO3 v11 and v12
 -------------------------------------------------------
 
 In TYPO3 v11 installations the content of file:`Configuration/page.tsconfig`
-is not loaded automatically yet. You can achive compatibility with both
+is not loaded automatically yet. You can achieve compatibility with both
 TYPO3 v11 and v12 by importing the content of this file with the API function
 :php:`ExtensionManagementUtility::addPageTSConfig`:
 
