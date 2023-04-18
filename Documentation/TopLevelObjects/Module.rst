@@ -105,7 +105,7 @@ features.skipDefaultArguments
 
 .. rst-class:: dl-parameters
 
-features.enableNamespacedArgumentsForBackend
+features.skipDefaultArguments
    :sep:`|` :aspect:`Data type:` boolean
    :sep:`|`
 
