@@ -103,7 +103,12 @@ view.partialRootPaths
 features.enableNamespacedArgumentsForBackend
 --------------------------------------------
 
-.. versionadded:: 12.0
+..  versionadded:: 12.0
+
+..  deprecated:: 12.4
+    Extbase backend modules should no longer expect the namespace to be set. It
+    may be necessary to adapt some Ajax calls and request-related argument
+    checks in custom modules.
 
 Extbase plugins and backend modules traditionally use the plugin / module
 namespace to prefix their get parameters and form data. In the frontend context,
@@ -147,9 +152,13 @@ features.enableNamespacedArgumentsForBackend
 features.skipDefaultArguments
 -----------------------------
 
+..  deprecated:: 12.4
+    Switch to proper :ref:`routing configuration <t3coreapi:routing-extbase-plugin-enhancer>`
+    instead.
+
 .. rst-class:: dl-parameters
 
-features.enableNamespacedArgumentsForBackend
+features.skipDefaultArguments
    :sep:`|` :aspect:`Data type:` boolean
    :sep:`|`
 
