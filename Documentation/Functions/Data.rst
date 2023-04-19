@@ -797,6 +797,10 @@ siteLanguage
     :typoscript:`flagIdentifier`
         The flag key (like `gb` or `fr`) used to be used in the TYPO3 backend.
 
+        ..  versionadded:: 12.4
+            You can also use :typoscript:`flag` to match the corresponding site
+            configuration setting.
+
     :typoscript:`hreflang`
         The language tag for this language defined by RFC 1766 / 3066 for
         :html:`lang` and :html:`hreflang` attributes
