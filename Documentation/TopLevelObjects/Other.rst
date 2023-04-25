@@ -37,12 +37,14 @@ temp, styles & lib
 
 .. index:: Top-level objects; tt_content
 .. _tlo-tt:
+.. _tlo-tt_content:
 
-====
-tt_*
-====
 
-``tt_``, e.g. ``tt_content`` (from “content (default)”) is used to render content from tables.
+==========
+tt_content
+==========
+
+The top level keyword :typoscript:`tt_content` is used to render content from the table :sql:`tt_content`.
 
 
 .. index:: Top-level objects; resources
