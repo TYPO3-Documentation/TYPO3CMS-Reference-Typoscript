@@ -44,7 +44,7 @@ temp, styles & lib
 tt_content
 ==========
 
-The top level keyword :typoscript:`tt_content`, is used to render content from the table :sql:`tt_content`.
+The top level keyword :typoscript:`tt_content` is used to render content from the table :sql:`tt_content`.
 
 
 .. index:: Top-level objects; resources
