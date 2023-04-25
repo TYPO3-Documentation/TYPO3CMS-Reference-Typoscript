@@ -862,30 +862,37 @@ loginUser()
         page.31.value = Frontend user uid is 1 or 13
       [END]
 
-.. index:: Conditions; getTSFE
-.. _condition-function-getTSFE:
+..  index:: Conditions; getTSFE
+..  _condition-function-getTSFE:
 
 getTSFE()
 =========
 
 :aspect:`Function`
-   getTSFE()
+    getTSFE()
 
 :aspect:`Parameter`
-   Object
+    Object
 
 :aspect:`Description`
-   Provides access to TypoScriptFrontendController :php:`$GLOBALS['TSFE']`. This
-   function can directly access methods of TypoScriptFrontendController. This class
-   is target of a mid-term refactoring. It should be used with care since it will
-   eventually vanish in the future.
+    Provides access to :ref:`TypoScriptFrontendController <t3coreapi:tsfe>`
+    :php:`$GLOBALS['TSFE']`. This function can directly access methods of
+    :php:`TypoScriptFrontendController`. This class is target of a mid-term refactoring.
+    It should be used with care since it will eventually vanish in the future.
+
+    Using the :typoscript:`getTSFE()` function, developers have to ensure that
+    "TSFE" is available before accessing its properties. A missing "TSFE", for
+    example, in backend context, does no longer automatically evaluate the whole
+    condition to :php:`false`. Instead, the function returns  :php:`null`, which can be checked
+    using either :typoscript:`[getTSFE() && getTSFE().id == 17]` or the
+    null-safe operator :typoscript:`[getTSFE()?.id == 17]`.
 
 :aspect:`Example`
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-      # True if current page uid is 17. Use the page variable instead
-      [getTSFE().id == 17]
+        # True, if current page uid is 17. Use the page variable instead
+        [getTSFE()?.id == 17]
 
 
 .. index:: Conditions; getenv
