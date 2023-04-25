@@ -214,6 +214,10 @@ Activate features for Extbase or a specific plugin.
 features.skipDefaultArguments
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+..  deprecated:: 12.4
+    Switch to proper :ref:`routing configuration <t3coreapi:routing-extbase-plugin-enhancer>`
+    instead.
+
 .. container:: table-row
 
    Property
@@ -244,30 +248,55 @@ features.skipDefaultArguments
 features.ignoreAllEnableFieldsInBe
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. container:: table-row
+..  deprecated:: 12.4
 
-   Property
-      features.ignoreAllEnableFieldsInBe
+..  container:: table-row
 
-   Data type
-      :t3-data-type:`boolean`
+    Property
+        features.ignoreAllEnableFieldsInBe
 
-   Default
-      false
+    Data type
+        :t3-data-type:`boolean`
 
-   Description
-      **Only for Extbase plugins**. Ignore the enable fields in backend.
+    Default
+        false
+
+    Description
+        **Only for Extbase plugins**. Ignore the enable fields in backend.
 
 
-   Example
-      .. code-block:: typoscript
-         :caption: EXT:blog_example/Configuration/TypoScript/setup.typoscript
+    Example
+        ..  code-block:: typoscript
+            :caption: EXT:blog_example/Configuration/TypoScript/setup.typoscript
 
-         plugin.tx_blogexample_admin {
-           features {
-             ignoreAllEnableFieldsInBe = 1
-           }
-         }
+            plugin.tx_blogexample_admin {
+              features {
+                ignoreAllEnableFieldsInBe = 1
+              }
+            }
+
+    Migration
+        When the repository in question is only used in **backend context**, the
+        code below should trigger the same behavior. Note as with other query
+        settings, this toggle needs to be **used with care**, otherwise backend
+        users may see records they are not supposed to see.
+
+        ..  code-block:: php
+            :caption: EXT:my_extension/Classes/Domain/Repository/MyRepository.php
+
+            /**
+             * Overwrite createQuery to not respect enable fields.
+             */
+            public function createQuery(): QueryInterface
+            {
+                $query = parent::createQuery();
+                $query->getQuerySettings()->setIgnoreEnableFields(true);
+                return $query;
+            }
+
+        When the repository is used in **both backend and frontend context**,
+        the code should be refactored a bit towards a public method that can be
+        set by the Extbase backend controller only.
 
 .. _extbase_typoscript_configuration-persistence:
 
