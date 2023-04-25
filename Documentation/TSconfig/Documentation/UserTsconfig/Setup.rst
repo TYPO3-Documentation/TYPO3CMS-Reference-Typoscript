@@ -101,18 +101,6 @@ edit_docModuleUpload
     File upload directly in Doc. module
 
 
-.. index:: RTE; Enable
-
-edit_RTE
-========
-
-:aspect:`Datatype`
-    boolean
-
-:aspect:`Description`
-    Enable Rich Text Editor
-
-
 .. index:: Email me at login
 
 emailMeAtLogin
