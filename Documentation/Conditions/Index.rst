@@ -883,7 +883,7 @@ getTSFE()
     Using the :typoscript:`getTSFE()` function, developers have to ensure that
     "TSFE" is available before accessing its properties. A missing "TSFE", for
     example, in backend context, does no longer automatically evaluate the whole
-    condition to FALSE. Instead, the function returns NULL, which can be checked
+    condition to :php:`false`. Instead, the function returns  :php:`null`, which can be checked
     using either :typoscript:`[getTSFE() && getTSFE().id == 17]` or the
     null-safe operator :typoscript:`[getTSFE()?.id == 17]`.
 
