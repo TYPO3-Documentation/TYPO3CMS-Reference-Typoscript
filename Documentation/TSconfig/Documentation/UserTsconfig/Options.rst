@@ -233,12 +233,10 @@ contextMenu disableItems
 createFoldersInEB
 -----------------
 
-:aspect:`Datatype`
-   boolean
-
-:aspect:`Description`
-   If set, a createFolders option appears in the element browser (for
-   admin-users this is always enabled).
+..  versionchanged:: 12.4
+    With the :ref:`migration of the "Create folder" view into a separate modal <ext_core:feature-99191-1669906308>`
+    used in EXT:filelist, which is based on the element browser as well, this
+    option became useless and is not evaluated anymore.
 
 
 .. index:: Dashboard; Presets
@@ -583,14 +581,10 @@ folderTree.altElementBrowserMountPoints
 folderTree.hideCreateFolder
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-:aspect:`Datatype`
-   boolean
-
-:aspect:`Description`
-   If set, the user can't create new folders.
-
-:aspect:`Default`
-   false
+..  versionchanged:: 12.4
+    With the :ref:`migration of the "Create folder" view into a separate modal <ext_core:feature-99191-1669906308>`
+    used in EXT:filelist, which is based on the element browser as well, this
+    option became useless and is not evaluated anymore.
 
 
 .. index::
