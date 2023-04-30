@@ -13,7 +13,7 @@
    tt_content.menu_related_pages {
        templateName = MenuRelatedPages
        dataProcessing {
-           10 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+           10 = menu
            10 {
                special = keywords
                special {
@@ -22,7 +22,7 @@
                }
                alternativeSortingField = title
                dataProcessing {
-                   10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+                   10 = files
                    10 {
                        references.fieldName = media
                    }
