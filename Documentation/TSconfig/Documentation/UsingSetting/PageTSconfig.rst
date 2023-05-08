@@ -66,20 +66,9 @@ is not loaded automatically yet. You can achieve compatibility with both
 TYPO3 v11 and v12 by importing the content of this file with the API function
 :php:`ExtensionManagementUtility::addPageTSConfig`:
 
-.. code-block:: php
-   :caption: EXT:my_sitepackage/ext_localconf.php
-
-   use TYPO3\CMS\Core\Information\Typo3Version;
-   use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
-   use TYPO3\CMS\Core\Utility\GeneralUtility;
-
-   $versionInformation = GeneralUtility::makeInstance(Typo3Version::class);
-   // Only include page.tsconfig if TYPO3 version is below 12 so that it is not imported twice.
-   if ($versionInformation->getMajorVersion() < 12) {
-      ExtensionManagementUtility::addPageTSConfig('
-         @import "EXT:my_sitepackage/Configuration/page.tsconfig"
-      ');
-   }
+..  literalinclude:: _PageTSconfig/_ext_localconf_page_tsconfig_v11.php
+    :language: php
+    :caption: EXT:my_sitepackage/ext_localconf.php
 
 .. index:: pair: Page TSconfig; Static TSconfig files
 .. _pagesettingstaticpagetsconfigfiles:
@@ -111,16 +100,9 @@ of any extension.
 
 These can be :ref:`selected in the page properties <include-static-page-tsconfig>`.
 
-.. code-block:: php
-   :caption: EXT:my_sitepackage/Configuration/TCA/Overrides/pages.php
-
-   use \TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
-
-   ExtensionManagementUtility::registerPageTSConfigFile(
-      'extension_name',
-      'Configuration/TsConfig/Page/myPageTSconfigFile.tsconfig',
-      'My special config'
-   );
+..  literalinclude:: _PageTSconfig/_pages.php
+    :language: php
+    :caption: EXT:my_sitepackage/Configuration/TCA/Overrides/pages.php
 
 It is not possible to use language strings :php:`LLL:...` for the third
 parameter as the extension name will be automatically appended.
@@ -128,14 +110,9 @@ parameter as the extension name will be automatically appended.
 If you need to localize these labels, modify the TCA directly instead of using
 the API function:
 
-.. code-block:: php
-   :caption: EXT:my_sitepackage/Configuration/TCA/Overrides/pages.php
-
-   $GLOBALS['TCA']['pages']['columns']['tsconfig_includes']['config']['items'][] =
-   [
-      'LLL:EXT:my_sitepackage/Resources/Private/Language/locallang_db.xlf:pages.pageTSconfig.my_ext_be_layouts'
-      'EXT:my_sitepackage/Configuration/TsConfig/Page/myPageTSconfigFile.tsconfig',
-   ];
+..  literalinclude:: _PageTSconfig/_pages_localized.php
+    :language: php
+    :caption: EXT:my_sitepackage/Configuration/TCA/Overrides/pages.php
 
 .. index:: pair: Page TSconfig; Enter data
 .. _pagetsconfig-enter-data:

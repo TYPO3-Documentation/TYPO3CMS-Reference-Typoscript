@@ -59,15 +59,9 @@ In extensions this is easily done by the extension API function,
 In the :file:`ext_localconf.php` file of your extension you can call it
 like this to set a default configuration.
 
-.. code-block:: php
-   :caption: my_sitepackage/ext_localconf.php
-
-	/**
-	 * Adding the default User TSconfig
-	 */
-	\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addUserTSConfig('
-      @import "EXT:my_sitepackage/Configuration/TsConfig/User/default.tsconfig"
-	');
+..  literalinclude:: _UserTSconfig/_ext_localconf.php
+    :language: php
+    :caption: EXT:my_sitepackage/ext_localconf.php
 
 There is a global :ref:`TYPO3_CONF_VARS <t3coreapi:typo3ConfVars>` value called
 :php:`$GLOBALS['TYPO3_CONF_VARS']['BE']['defaultUserTSconfig'] <t3coreapi:typo3ConfVars_be_defaultUserTSconfig>`.
@@ -108,23 +102,23 @@ selected groups are evaluated from top to bottom.
 
 **Example:**
 
-* Add in User TSconfig
+*   Add in user TSconfig
 
-  .. code-block:: typoscript
-     :caption: EXT:site_package/Configuration/page.tsconfig
+    ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/user.tsconfig
 
-     page.RTE.default.showButtons = bold
+        page.RTE.default.showButtons = bold
 
-* You get the value "bold".
+*   You get the value "bold".
 
-* Add later in User TSconfig
+*   Add later in user TSconfig
 
-  .. code-block:: typoscript
-     :caption: EXT:site_package/Configuration/user.tsconfig
+    ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/user.tsconfig
 
-     page.RTE.default.showButtons := addToList(italic)
+        page.RTE.default.showButtons := addToList(italic)
 
-* You get the value "bold,italic".
+*   You get the value "bold,italic".
 
 Finally you can override or
 :ref:`modify <t3coreapi:typoscript-syntax-syntax-value-modification>`
@@ -136,21 +130,21 @@ field of that specific user.
 Let's say the user is a member of a *usergroup* with this
 configuration
 
-.. code-block:: typoscript
-   :caption: EXT:site_package/Configuration/page.tsconfig
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/page.tsconfig
 
-   TCAdefaults.tt_content {
-      hidden = 1
-      header = Hello!
-   }
+    TCAdefaults.tt_content {
+        hidden = 1
+        header = Hello!
+    }
 
 Then we set the following values in the TSconfig field of the specific *user*.
 
-.. code-block:: typoscript
-   :caption: EXT:site_package/Configuration/user.tsconfig
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/user.tsconfig
 
-   TCAdefaults.tt_content.header = 234
-   options.clearCache.all = 1
+    TCAdefaults.tt_content.header = 234
+    options.clearCache.all = 1
 
 This would override the default value of the header ("234") and add the
 clear cache option. The default value of the hidden field is not
@@ -175,42 +169,42 @@ To illustrate this feature let's say the action
 :guilabel:`Web > Info > Localization Overview` has been disabled via Page
 TSconfig:
 
-.. code-block:: typoscript
-   :caption: EXT:site_package/Configuration/page.tsconfig
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/page.tsconfig
 
-   mod.web_info.menu.function {
-      TYPO3\CMS\Info\Controller\TranslationStatusController = 0
-   }
+    mod.web_info.menu.function {
+       TYPO3\CMS\Info\Controller\TranslationStatusController = 0
+    }
 
 If we activate this configuration in the TSconfig of a certain backend user, that
 user would still be able to select this menu item because the value of his User TSconfig
 overrides the same value set in the Page TSconfig, just prefixed with `page.`:
 
-.. code-block:: typoscript
-   :caption: EXT:site_package/Configuration/user.tsconfig
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/user.tsconfig
 
-   page.mod.web_info.menu.function {
-      TYPO3\CMS\Info\Controller\TranslationStatusController = 1
-   }
+    page.mod.web_info.menu.function {
+        TYPO3\CMS\Info\Controller\TranslationStatusController = 1
+    }
 
-.. important::
+..  important::
 
-   It is **not** possible to *reference* the value of a property from Page
-   TSconfig and to *modify* this value in User TSconfig! If you set a property
-   in User TSconfig, which already had been set in *Page* TSconfig, then the
-   value from Page TSconfig will be overridden.
+    It is **not** possible to *reference* the value of a property from page
+    TSconfig and to *modify* this value in user TSconfig! If you set a property
+    in user TSconfig, which already had been set in *Page* TSconfig, then the
+    value from page TSconfig will be overridden.
 
-   The result of the example below is *not* the value "bold,italic",
-   but the value "italic".
+    The result of the example below is *not* the value "bold,italic",
+    but the value "italic".
 
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/page.tsconfig
+    ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/page.tsconfig
 
-      # Enable the "bold" button in Page TSconfig (!)
-      RTE.default.showButtons = bold
+        # Enable the "bold" button in Page TSconfig (!)
+        RTE.default.showButtons = bold
 
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/user.tsconfig
+    ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/user.tsconfig
 
-      # Try to additionally add the "italic" button in User TSconfig (!)
-      page.RTE.default.showButtons := addToList(italic)
+        # Try to additionally add the "italic" button in User TSconfig (!)
+        page.RTE.default.showButtons := addToList(italic)
