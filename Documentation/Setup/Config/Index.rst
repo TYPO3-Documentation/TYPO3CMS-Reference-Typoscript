@@ -61,9 +61,6 @@ absRefPrefix
    the site root based on path prefixes and not based on host name variables
    from the server, making this value safe for multi-domain environments.
 
-   If the option :ref:`config.forceAbsoluteUrls <setup-config-forceAbsoluteUrls>`
-   is enabled, :typoscript:`absRefPrefix` is overridden.
-
    Using an URI in :typoscript:`absRefPrefix` will require additional conditions
    if you use different domains for your deployment stages in CI environments.
 
