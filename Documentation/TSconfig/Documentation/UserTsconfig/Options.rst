@@ -625,7 +625,7 @@ hideModules
 :aspect:`Description`
     Configure which module groups or modules should be hidden from the main menu.
 
-    ..  important::
+    ..  attention::
         It is not an access restriction but makes defined modules invisible.
         This means that in principle these modules can still be accessed if the
         rights allow this.
@@ -1091,5 +1091,3 @@ showHistory
 
    Note it is possible to set this for single tables using :typoscript:`options.showHistory.[tableName]`.
    Any value set for a single table will override the default value set for :typoscript:`showHistory`.
-
-

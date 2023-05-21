@@ -3,8 +3,9 @@
 .. _pagetsconfig:
 .. _pagetoplevelobjects:
 
+=======================
 Page TSconfig Reference
------------------------
+=======================
 
 The page TSconfig primarily concerns configuration of the modules in
 the TYPO3 backend, the most important section is :ref:`mod <pagemod>`.

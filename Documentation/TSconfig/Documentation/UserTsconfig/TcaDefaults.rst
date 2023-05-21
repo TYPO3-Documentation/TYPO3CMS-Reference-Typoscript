@@ -42,7 +42,7 @@ Example:
    # Show newly created pages by default
    TCAdefaults.pages.hidden = 0
 
-.. important::
+.. attention::
 
    This example will not work when creating the page from the context menu
    since this is triggered by the values listed in the `ctrl` section of

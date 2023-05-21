@@ -90,7 +90,7 @@ the default is used. This can become impractical for large template files. In
 such cases it might be an option to request a split of a large template file
 into smaller partial files so an extension can override a specific partial only.
 
-.. important::
+.. attention::
 
    When multiple override paths are defined and more than one of them contains
    overrides for a specific template, the override definition with the highest

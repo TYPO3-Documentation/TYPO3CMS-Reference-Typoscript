@@ -32,3 +32,4 @@ composer.lock
 nbproject
 Thumbs.db
 var/
+.cache/
