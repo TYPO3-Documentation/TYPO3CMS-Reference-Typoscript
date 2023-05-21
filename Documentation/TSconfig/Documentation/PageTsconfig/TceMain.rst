@@ -538,7 +538,7 @@ preview
         Make sure not to set :typoscript:`options.saveDocView.<table name> = 0`, otherwise the save+view button
         will not be displayed when editing records of your table.
 
-    .. important::
+    .. attention::
 
         The configuration has to be defined for the page containing the records and :typoscript:`previewPageId`
         (for example sysfolder holding the records is located outside of your root)

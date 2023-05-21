@@ -1,4 +1,4 @@
-
+..  include:: /Includes.rst.txt
 .. index:: User TSconfig
 .. _setting-user-tsconfig:
 
@@ -187,7 +187,7 @@ overrides the same value set in the Page TSconfig, just prefixed with `page.`:
         TYPO3\CMS\Info\Controller\TranslationStatusController = 1
     }
 
-..  important::
+.. attention::
 
     It is **not** possible to *reference* the value of a property from page
     TSconfig and to *modify* this value in user TSconfig! If you set a property
