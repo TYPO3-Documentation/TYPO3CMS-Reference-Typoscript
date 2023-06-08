@@ -937,80 +937,95 @@ request.getNormalizedParams()
    Array
 
 :aspect:`Description`
-   Provides access to NormalizedParams object which contains a bunch of methods:
-      ``getHttpHost()``
-          Example: ``www.example.org``
+   Provides access to the :php:`\TYPO3\CMS\Core\Http\NormalizedParams` object
+   which contains a bunch of methods:
 
-      ``isHttps()``
-         Returns boolean whether SSL was used.
+   ``getHttpHost()``
+       Sanitized HTTP_HOST value host[:port], for example :samp:`www.example.org`.
 
-      ``getRequestHost()``
-          Example: ``www.example.org``
+   ``isHttps()``
+      Returns boolean, whether HTTPS is used.
 
-      ``getRequestHostOnly()``
-          Example: ``www.example.org``
+   ``getRequestHost()``
+       Sanitized HTTP_HOST with protocol, for example
+       :samp:`https://www.example.org/`.
 
-      ``getRequestPort()``
-          Returns the port, mostly ``80`` or ``443``, but can be whatever is
-          configured.
+   ``getRequestHostOnly()``
+       Host / domain /IP only, for example :samp:`www.example.org`.
 
-      ``getScriptName()``
-          Example: :samp:`/typo3/index.php`
+   ``getRequestPort()``
+       Returns the port, mostly ``80`` or ``443``, but can be whatever is
+       configured.
 
-      ``getRequestUri()``
-          Example: :samp:`/typo3/index.php?route=%2Fajax%2Fsystem-information%2Frender`
+   ``getScriptName()``
+       Script path part of URI, for example :samp:`/typo3/index.php`.
 
-      ``getRequestUrl()``
-          Example: :samp:`https://example.org/typo3/index.php?route=%2Fajax%2Fsystem-information%2Frender`
+   ``getRequestUri()``
+       Request URI without domain and protocol, for example
+       :samp:`/typo3/index.php?route=%2Fajax%2Fsystem-information%2Frender`.
 
-      ``getRequestScript()``
-          Example: :samp:`https://example.org/typo3/index.php`
+   ``getRequestUrl()``
+       Full request URI, for example
+       :samp:`https://www.example.org/typo3/index.php?route=%2Fajax%2Fsystem-information%2Frender`.
 
-      ``getRequestDir()``
-          Example: :samp:`https://example.org/typo3/`
+   ``getRequestScript()``
+       Request URI without query part, for example
+       :samp:`https://www.example.org/typo3/index.php`.
 
-      ``isBehindReverseProxy()``
-          Returns boolean.
+   ``getRequestDir()``
+       Request URI without script file name and query parts, for example
+       :samp:`https://www.example.org/typo3/`.
 
-      ``getRemoteAddress()``
-          IP Adress of client, in case of docker this could be ``172.18.0.6``.
+   ``isBehindReverseProxy()``
+       True, if request comes from a configured reverse proxy.
 
-      ``getScriptFileName()``
-          Example: ``/var/www/html/public/typo3/index.php``
+   ``getRemoteAddress()``
+       IP Address of client, in case of docker this could be :samp:`172.18.0.6`.
 
-      ``getDocumentRoot()``
-          Example: ``/var/www/html/public``
+   ``getScriptFileName()``
+       Absolute entry script path on server, for example
+       :samp:`/var/www/html/public/typo3/index.php`.
 
-      ``getSiteUrl()``
-          Example: ``example.org``
+   ``getDocumentRoot()``
+       Absolute path to web document root, for example
+       :samp:`/var/www/html/public`.
 
-      ``getSitePath()``
-          Example: ``/``
+   ``getSiteUrl()``
+       Website frontend url, for example
+       :samp:`https://www.example.org/some/sub/dir/`.
 
-      ``getSiteScript()``
-          Example:
-          ``typo3/index.php?route=%2Fajax%2Fsystem-information%2Frender``
+   ``getSitePath()``
+       Path part to frontend, for example :samp:`/some/sub/dir/`.
 
-      ``getPathInfo()``
-          Ist bei mir leer gewesen
+   ``getSiteScript()``
+       Path part to entry script with parameters, without sub dir,
+       for example :samp:`typo3/index.php?route=%2Fajax%2Fsystem-information%2Frender`.
 
-      ``getHttpReferer()``
-          If enabled, delivers the prior visited url, e.g. :samp:`example.org/typo3/index.php`
+   ``getPathInfo()``
+       Script path part of URI, for example :samp:`typo3/index.php`.
 
-      ``getHttpUserAgent()``
-          Example: ``Mozilla/5.0 (X11; Linux x86_64) Chrome/73.0.3683.86 Safari/537.36``
+       Use ``getScriptName()`` as reliable solution instead.
 
-      ``getHttpAcceptEncoding()``
-          Example: ``gzip, deflate``
+   ``getHttpReferer()``
+       If enabled, delivers the prior visited url, for example
+       :samp:`https://www.example.org/some/sub/dir/`.
 
-      ``getHttpAcceptLanguage()``
-          Example: ``de-DE,de;q=0.9``
+   ``getHttpUserAgent()``
+       HTTP user agent, for example
+       :samp:`Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/113.0`.
 
-      ``getRemoteHost()``
-          Name of client pc.
+   ``getHttpAcceptEncoding()``
+       For example :samp:`gzip, deflate`.
 
-      ``getQueryString()``
-          Example: ``route=%2Fajax%2Fsystem-information%2Frender``
+   ``getHttpAcceptLanguage()``
+       For example: :samp:`de-DE,de;q=0.9`
+
+   ``getRemoteHost()``
+       Remote host, if configured in web server, for example
+       :samp:`www.example.org`
+
+   ``getQueryString()``
+       For example :samp:`route=%2Fajax%2Fsystem-information%2Frender`
 
 :aspect:`Example`
    .. code-block:: typoscript
