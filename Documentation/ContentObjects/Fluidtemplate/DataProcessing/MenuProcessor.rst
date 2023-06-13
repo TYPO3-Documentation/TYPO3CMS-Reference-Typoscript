@@ -69,7 +69,7 @@ Options
 
     Name for the variable in the Fluid template.
 
-..  attention::
+..  hint::
     Additionally, all :ref:`HMENU options <cobj-hmenu-options>` are available.
 
 
