@@ -1031,7 +1031,8 @@ ip()
    Boolean
 
 :aspect:`Description`
-   Value or Constraint, Wildcard or RegExp possible special value: devIP (match the devIPMask).
+   Value or constraint, wildcard or regular expression possible; special value:
+   "devIP" (matches the :ref:`devIPmask <t3coreapi:typo3ConfVars_sys_devIPmask>`).
 
 :aspect:`Example`
    .. code-block:: typoscript
