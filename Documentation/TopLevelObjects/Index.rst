@@ -27,7 +27,6 @@ example `config` or `plugin`.
    ===================================== =========================
    page | ...                            :ref:`PAGE <page-datatype>`
    config                                :ref:`CONFIG <config-datatype>`
-   :ref:`tlo-constants`
    :ref:`plugin`
    :ref:`tlo-module`
    :ref:`temp <tlo-temp>`
@@ -45,7 +44,6 @@ example `config` or `plugin`.
    :hidden:
 
    ../Setup/Config/Index
-   Constants
    Module
    ../Setup/Page/Index
    Plugin

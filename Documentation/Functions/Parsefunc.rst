@@ -110,29 +110,6 @@ externalBlocks
               }
         }
 
-constants
----------
-
-..  attention::
-    ..  deprecated:: 12.1
-        Using the :typoscript:`constants` top-level-object in combination with the
-        :typoscript:`constants = 1` in :ref:`parseFunc` to substitute strings
-        like :typoscript:`###MY_CONSTANT###` triggers a deprecation level log error
-        in TYPO3 v12 and will stop working in v13.
-
-        See section :ref:`Top level object constants, migration <tlo-constants-migration>`.
-
-.. t3-function-parsefunc:: constants
-
-    :Data type: :t3-data-type:`boolean`
-
-    You can define constants in the :ref:`top-level object "constants"
-    <constants>` in the *Setup* field of your TypoScript template.
-
-    If this property is set, you can use markers (the constant name
-    wrapped in "###") in your text. TYPO3 then substitutes the markers
-    with the value of the according constant.
-
 short
 -----
 
