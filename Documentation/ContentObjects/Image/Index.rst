@@ -216,9 +216,7 @@ layout.layoutKey.element
        (as complete attribute)
 
     -  :html:`###SELFCLOSINGTAGSLASH###` renders the closing slash of the tag,
-       depending on the setting of
-       :ref:`config.xhtmlDoctype <setup-config-xhtmldoctype>` and
-       :ref:`config.Doctype <setup-config-doctype>`
+       depending on the setting of :ref:`config.doctype <setup-config-doctype>`
 
     -  :html:`###SOURCECOLLECTION###` the additional sources of the image
        depending on the different usage in responsive webdesign. The
@@ -246,7 +244,8 @@ layout.layoutKey.source
 
     -   :html:`###HEIGHT###` the height of the image for the height tag (only the width value)
 
-    -   :html:`###SELFCLOSINGTAGSLASH###` renders the closing slash of the tag, depending on the setting of xhtmlDoctype
+    -   :html:`###SELFCLOSINGTAGSLASH###` renders the closing slash of the tag,
+        depending on the setting of :ref:`config.doctype <setup-config-doctype>`
 
     -   :html:`###SRCSETCANDIDATE###` is the value of the srcsetCandidate defined in each SourceCollection.DataKey
 
