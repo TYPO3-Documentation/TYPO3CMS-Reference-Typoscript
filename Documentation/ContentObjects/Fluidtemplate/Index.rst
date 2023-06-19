@@ -208,6 +208,10 @@ layoutRootPaths
     :Data type: array of file paths with :ref:`stdWrap <stdwrap>`
 
     .. note:: Mind the plural -s in "layoutRootPaths"!
+    
+    .. note::
+        If you want to extend layoutRootPaths conditionally, best practice
+        is to use :ref:`Conditions <conditions>` instead of the :ref:`"if" function <if>`.
 
     Used to define several paths for layouts, which will be tried in reversed
     order (the paths are searched from bottom to top). The first folder where
@@ -264,6 +268,10 @@ partialRootPaths
     :Data type: array of file paths with :ref:`stdWrap <stdwrap>`
 
     .. note:: Mind the plural -s in "partialRootPaths"!
+    
+    .. note::
+        If you want to extend partialRootPaths conditionally, best practice
+        is to use :ref:`Conditions <conditions>` instead of the :ref:`"if" function <if>`.
 
     Used to define several paths for partials, which will be tried in reversed
     order. The first folder where the desired partial is found, is used. The
@@ -449,6 +457,10 @@ templateRootPaths
     :Data type: array of file paths with :ref:`stdWrap <stdwrap>`
 
     .. note:: Mind the plural -s in "templateRootPaths"!
+    
+    .. note::
+        If you want to extend templateRootPaths conditionally, best practice
+        is to use :ref:`Conditions <conditions>` instead of the :ref:`"if" function <if>`.
 
     Used to define several paths for templates, which will be tried in reversed
     order (the paths are searched from bottom to top). The first folder where
