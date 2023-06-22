@@ -795,73 +795,6 @@ compatVersion()
       [compatVersion("11.5.1")]
 
 
-.. index:: Conditions; loginUser
-.. _condition-function-loginUser:
-
-loginUser()
-===========
-
-..  deprecated:: 12.4
-    This function has been marked as deprecated with TYPO3 v12 and should not be
-    used anymore. Use the variables :typoscript:`frontend.user` and
-    :typoscript:`backend.user` instead. See the
-    :ref:`changelog <ext_core:deprecation-100349-1680097287>` for more details.
-
-:aspect:`Function`
-   loginUser()
-
-:aspect:`Parameter`
-   String
-
-:aspect:`Type`
-   Boolean
-
-:aspect:`Description`
-   Value or constraint, wildcard or RegExp.
-
-:aspect:`Migration`
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-      # Before
-      [loginUser('*')]
-        page = PAGE
-        page.10 = TEXT
-        page.10.value = User is logged in
-      [END]
-      # After
-      [frontend.user.isLoggedIn]
-        page = PAGE
-        page.11 = TEXT
-        page.11.value = User is logged in
-      [END]
-
-      # Before
-      [loginUser(13)]
-        page = PAGE
-        page.20 = TEXT
-        page.20.value = Frontend user has the uid 13
-      [END]
-      # After
-      [frontend.user.userId == 13]
-        page = PAGE
-        page.21 = TEXT
-        page.21.value = Frontend user has the uid 13
-      [END]
-
-      # Before
-      [loginUser('1,13')]
-        page = PAGE
-        page.30 = TEXT
-        page.30.value = Frontend user uid is 1 or 13
-      [END]
-      # After
-      [frontend.user.userId in [1,13]]
-        page = PAGE
-        page.31 = TEXT
-        page.31.value = Frontend user uid is 1 or 13
-      [END]
-
 ..  index:: Conditions; getTSFE
 ..  _condition-function-getTSFE:
 
@@ -940,86 +873,15 @@ feature()
       [feature("TypoScript.strictSyntax") === false]
 
 
-.. index:: Conditions; usergroup
-.. _condition-function-usergroup:
-
-usergroup()
-===========
-
-..  deprecated:: 12.4
-    This function has been marked as deprecated with TYPO3 v12 and should not be
-    used anymore. Use the variables :typoscript:`frontend.user` and
-    :typoscript:`backend.user` instead. See the
-    :ref:`changelog <ext_core:deprecation-100349-1680097287>` for more details.
-
-:aspect:`Function`
-   usergroup()
-
-:aspect:`Parameter`
-   String
-
-:aspect:`Value`
-   Boolean
-
-:aspect:`Description`
-   Value or constraint, wildcard or RegExp. Allows to check whether current user
-   is member of the expected usergroup.
-
-:aspect:`Migration`
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-      # Before
-      [usergroup('*')]
-        page = PAGE
-        page.10 = TEXT
-        page.10.value = A frontend user is logged in and belongs to some user group.
-      [END]
-      # After
-      # Prefer [frontend.user.isLoggedIn] to not rely on magic array values.
-      [frontend.user.userGroupIds !== [0, -1]]
-        page = PAGE
-        page.11 = TEXT
-        page.11.value = A frontend user is logged in and belongs to some user group.
-      [END]
-
-      # Before
-      [usergroup(11)]
-        page = PAGE
-        page.20 = TEXT
-        page.20.value = Frontend user is member of group with uid 11
-      [END]
-      # After
-      [11 in frontend.user.userGroupIds]
-        page = PAGE
-        page.21 = TEXT
-        page.21.value = Frontend user is member of group with uid 11
-      [END]
-
-      # Before
-      [usergroup('1,11')]
-        page = PAGE
-        page.30 = TEXT
-        page.30.value = Frontend user is member of group 1 or 11
-      [END]
-      # After
-      [1 in frontend.user.userGroupIds || 11 in frontend.user.userGroupIds]
-        page = PAGE
-        page.31 = TEXT
-        page.31.value = Frontend user is member of group 1 or 11
-      [END]
-
 .. index:: Conditions; ip
 .. _condition-function-ip:
 
 ip()
 ====
 
-..  deprecated:: 12.3
-    Using this function in **page TSconfig** or **user TSconfig** conditions is
-    deprecated. Such conditions will stop working with TYPO3 v13 and will then
-    always evaluate to false. For migration hints see the
-    :ref:`changelog <ext_core:deprecation-100047-1677608959>`.
+..  versionchanged:: 13.0
+    This function is only available in TypoScript frontend context. For
+    migration hints see the :ref:`changelog <ext_core:deprecation-100047-1677608959>`.
 
 :aspect:`Function`
    ip()
@@ -1484,3 +1346,29 @@ siteLanguage()
       [siteLanguage("title") == "Italy"]
          page.10.value = This site has the title "Italy"
       [END]
+
+
+.. index:: Conditions; loginUser
+.. _condition-function-loginUser:
+
+loginUser()
+===========
+
+..  versionchanged:: 13.0
+    This function has been removed. Use the variables
+    :ref:`condition-frontend-user` and :ref:`condition-backend-user` instead.
+    For migration hints see the
+    :ref:`changelog <ext_core:deprecation-100349-1680097287>`.
+
+
+.. index:: Conditions; usergroup
+.. _condition-function-usergroup:
+
+usergroup()
+===========
+
+..  versionchanged:: 13.0
+    This function has been removed. Use the variables
+    :ref:`condition-frontend-user` and :ref:`condition-backend-user` instead.
+    For migration hints see the
+    :ref:`changelog <ext_core:deprecation-100349-1680097287>`.
