@@ -148,14 +148,6 @@ Options:
 
     The variable name to be used in the Fluid template.
 
-..  t3-data-processor-files:: dataProcessing
-
-    :Required: false
-    :type: array of :ref:`dataProcessing`
-    :default: ""
-
-    Array of data processors to be applied to all fetched records.
-
 
 Example 1: Render the images stored in field image
 ==================================================
