@@ -1348,8 +1348,8 @@ linkVars
 
          .. note::
 
-            Do **not** include the `type` parameter in the linkVars
-            list, as this can result in unexpected behavior.
+            Do **not** include the `type` and `L` parameter in the linkVars
+            list, as this will result in unexpected behavior.
 
    Examples
          .. code-block:: typoscript
