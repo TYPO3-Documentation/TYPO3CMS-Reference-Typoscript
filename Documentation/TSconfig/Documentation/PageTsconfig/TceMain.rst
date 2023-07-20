@@ -498,9 +498,9 @@ preview
        :caption: EXT:site_package/Configuration/page.tsconfig
 
        TCEMAIN.preview {
+           disableButtonForDokType = 199, 254, 255
            <table name> {
                previewPageId = 123
-               disableButtonForDokType = 199, 254, 255
                useDefaultLanguageRecord = 0
                fieldToParameterMap {
                    uid = tx_myext_pi1[showUid]
