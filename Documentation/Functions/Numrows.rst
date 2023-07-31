@@ -1,4 +1,4 @@
-content .. include:: /Includes.rst.txt
+.. include:: /Includes.rst.txt
 .. index::
    Functions; numRows
    Database; count
