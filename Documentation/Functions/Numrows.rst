@@ -1,4 +1,4 @@
-.. include:: /Includes.rst.txt
+content .. include:: /Includes.rst.txt
 .. index::
    Functions; numRows
    Database; count
@@ -45,3 +45,27 @@ select
 
     The sub-property :typoscript:`selectFields` is overridden internally with
     :php:`count(*)`.
+
+.. _numRows-examples:
+
+Examples
+========
+
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+    page {
+        10 {
+            variables {
+                numberOfAllContentElements = TEXT
+                numberOfAllContentElements.numRows {
+                    table = tt_content
+                }
+                numberOfContentElementsInColPosOne = TEXT
+                numberOfContentElementsInColPosOne.numRows {
+                    table = tt_content
+                    select.where = {#colPos}=1
+                }
+            }
+        }
+    }
