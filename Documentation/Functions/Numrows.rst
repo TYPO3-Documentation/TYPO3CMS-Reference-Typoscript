@@ -48,24 +48,21 @@ select
 
 .. _numRows-examples:
 
-Examples
-========
+Example
+=======
+
+Get the number of content elements within certain colPos of the current page.
 
 ..  code-block:: typoscript
     :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-    page {
-        10 {
-            variables {
-                numberOfAllContentElements = TEXT
-                numberOfAllContentElements.numRows {
-                    table = tt_content
-                }
-                numberOfContentElementsInColPosOne = TEXT
-                numberOfContentElementsInColPosOne.numRows {
-                    table = tt_content
-                    select.where = {#colPos}=1
-                }
+    10 = FLUIDTEMPLATE
+    10 {
+        variables {
+            numberOfContentElementsInColPosOne = TEXT
+            numberOfContentElementsInColPosOne.numRows {
+                table = tt_content
+                select.where = {#colPos}=1
             }
         }
     }
