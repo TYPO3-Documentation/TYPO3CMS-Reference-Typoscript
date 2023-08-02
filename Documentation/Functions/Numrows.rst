@@ -45,3 +45,24 @@ select
 
     The sub-property :typoscript:`selectFields` is overridden internally with
     :php:`count(*)`.
+
+.. _numRows-examples:
+
+Example
+=======
+
+Get the number of content elements within certain colPos of the current page.
+
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+    10 = FLUIDTEMPLATE
+    10 {
+        variables {
+            numberOfContentElementsInColPosOne = TEXT
+            numberOfContentElementsInColPosOne.numRows {
+                table = tt_content
+                select.where = {#colPos}=1
+            }
+        }
+    }
