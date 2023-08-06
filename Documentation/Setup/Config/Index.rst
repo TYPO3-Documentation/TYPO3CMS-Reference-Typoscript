@@ -2007,7 +2007,7 @@ spamProtectEmailAddresses
          spamProtectEmailAddresses
 
    Data type
-         "-10 to 10
+         `-10` to `10`
 
    Description
          If set, then all email addresses in typolinks will be encrypted so
