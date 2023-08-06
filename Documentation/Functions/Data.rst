@@ -890,16 +890,16 @@ TSFE
 
       lib.foo.data = TSFE : fe_user|user|username
 
-.. deprecated:: 12.0
-   The following properties within TypoScriptFrontendController (TSFE) have been deprecated:
+..  versionchanged:: 13.0
+    The following properties within TypoScriptFrontendController (TSFE) have
+    been removed:
 
-   *  :php:`spamProtectEmailAddresses`
-   *  :php:`intTarget`
-   *  :php:`extTarget`
-   *  :php:`fileTarget`
-   *  :php:`baseUrl`
+    *   :php:`spamProtectEmailAddresses`
+    *   :php:`intTarget`
+    *   :php:`extTarget`
+    *   :php:`fileTarget`
+    *   :php:`baseUrl`
 
-   Migrate the access to these properties to use the config property:
-
-   You can access the TypoScript properties directly via
-   :typoscript:`lib.something.data = TSFE:config|config|fileTarget`
+    Migrate these properties to use the config property. You can access the
+    TypoScript properties directly, for example, via
+    :typoscript:`lib.something.data = TSFE:config|config|fileTarget`
