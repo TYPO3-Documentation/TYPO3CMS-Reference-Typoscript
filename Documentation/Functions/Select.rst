@@ -403,5 +403,6 @@ Condensed form:
        }
     }
 
+For more complete examples see :ref:`cobj-content`.
 
-See also: :ref:`if`, :ref:`select`, :t3-data-type:`wrap`, :ref:`stdWrap`, :ref:`data-type-cobject`
+See also: :ref:`if`, :ref:`cobj-content`, :t3-data-type:`wrap`, :ref:`stdWrap`, :ref:`data-type-cobject`
