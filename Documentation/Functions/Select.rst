@@ -63,6 +63,8 @@ uidInList
 
         select.uidInList = this
 
+..  _select_pidInList:
+
 pidInList
 ---------
 
@@ -267,8 +269,28 @@ join, leftjoin, rightjoin
 
     :Data type: :t3-data-type:`string` / :ref:`stdWrap`
 
-    Enter the table name for JOIN, LEFT OUTER JOIN and RIGHT OUTER JOIN
+    Enter the JOIN clause without for JOIN, LEFT OUTER JOIN and RIGHT OUTER JOIN
     respectively.
+
+    ..  rubric:: Example
+
+    Fetch related `sys_category` records stored in the MM intermediate table:
+
+    ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+        10 = CONTENT
+        10 {
+           table = sys_category
+           select {
+              pidInList = root,-1
+              selectFields = sys_category.*
+              join = sys_category_record_mm mm ON mm.uid_local = sys_category.uid
+              # ....
+            }
+        }
+
+    See :ref:`select_pidInList` for more examples.
 
 markers
 -------
