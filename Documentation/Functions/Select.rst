@@ -269,7 +269,7 @@ join, leftjoin, rightjoin
 
     :Data type: :t3-data-type:`string` / :ref:`stdWrap`
 
-    Enter the JOIN clause without for JOIN, LEFT OUTER JOIN and RIGHT OUTER JOIN
+    Enter the JOIN clause without :sql:`JOIN`, :sql:`LEFT OUTER JOIN` and :sql:`RIGHT OUTER JOIN`
     respectively.
 
     ..  rubric:: Example
