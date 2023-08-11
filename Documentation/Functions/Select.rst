@@ -403,6 +403,11 @@ Condensed form:
        }
     }
 
-For more complete examples see :ref:`cobj-content`.
+See also:
 
-See also: :ref:`if`, :ref:`cobj-content`, :t3-data-type:`wrap`, :ref:`stdWrap`, :ref:`data-type-cobject`
+*   :ref:`cobj-content`: for more complete examples with select and rendering
+    the output with :typoscript:`renderObj`
+*   :t3-data-type:`wrap`: enclosing results within text, used in some of the
+    examples above
+*   :ref:`stdWrap`: for more functionality, can be used in some of the properties,
+    such as :typoscript:`pidInList`, :typoscript:`selectFields` etc.
