@@ -405,8 +405,8 @@ Condensed form:
 
 See also:
 
-*   :ref:`cobj-content`: for more complete examples with select and rendering
-    the output with :typoscript:`renderObj`
+*   :ref:`cobj-content`: for more complete examples with :typoscript:`select`
+    and rendering the output with :typoscript:`renderObj`
 *   :t3-data-type:`wrap`: enclosing results within text, used in some of the
     examples above
 *   :ref:`stdWrap`: for more functionality, can be used in some of the properties,
