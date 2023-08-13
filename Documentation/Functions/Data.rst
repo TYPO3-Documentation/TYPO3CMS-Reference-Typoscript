@@ -792,18 +792,25 @@ siteLanguage
         The base URL for this language.
 
     :typoscript:`direction`
+        ..  deprecated:: 12.3
+
         The direction for this language.
 
     :typoscript:`flagIdentifier`
-        The flag key (like `gb` or `fr`) used to be used in the TYPO3 backend.
+        The flag key (like `gb` or `fr`) used in the TYPO3 backend.
 
         ..  versionadded:: 12.4
             You can also use :typoscript:`flag` to match the corresponding site
             configuration setting.
 
     :typoscript:`hreflang`
+        ..  versionchanged:: 12.4
+            This option is not relevant anymore for regular websites without
+            rendering hreflang tag, but is now customizable, and has a proper
+            fallback.
+
         The language tag for this language defined by RFC 1766 / 3066 for
-        :html:`lang` and :html:`hreflang` attributes
+        :html:`hreflang` attributes
 
     :typoscript:`languageId`
         The language mapped to the ID of the site language.
@@ -818,6 +825,8 @@ siteLanguage
         The label to be used within TYPO3 to identify the language.
 
     :typoscript:`twoLetterIsoCode`
+        ..  deprecated:: 12.3
+
         The ISO-639-1 code for this language (two letters).
 
     :typoscript:`typo3Language`
@@ -838,7 +847,7 @@ siteLanguage
         page.10.wrap = This is the title of the current site language: |
 
         page.20 = TEXT
-        page.20.dataWrap = The current site language direction is {siteLanguage:direction}
+        page.20.dataWrap = The current site language's locale is {siteLanguage:locale}
 
         # Website title for the current language with fallback
         # to the website title of the site configuration.
