@@ -1271,11 +1271,15 @@ siteLanguage()
         Returns the flag identifier as a string, for example `gb`.
 
     :typoscript:`siteLanguage("typo3Language")`
+        ..  deprecated:: 12.3
+
         Returns the language identifier used in TYPO3
         :ref:`XLIFF <t3coreapi:xliff>` files as a string, for example `default`
         or the two-letter language code.
 
     :typoscript:`siteLanguage("twoLetterIsoCode")`
+        ..  deprecated:: 12.3
+
         Returns the two-letter code for the language according to ISO-639
         nomenclature as a string.
 
@@ -1283,6 +1287,8 @@ siteLanguage()
         Returns the language information for the hreflang tag as a string.
 
     :typoscript:`siteLanguage("direction")`
+        ..  deprecated:: 12.3
+
         Returns the text direction for content in this language (left-to-right
         or right-to-left) as a string.
 

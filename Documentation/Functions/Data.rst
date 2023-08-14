@@ -792,6 +792,8 @@ siteLanguage
         The base URL for this language.
 
     :typoscript:`direction`
+        ..  deprecated:: 12.3
+
         The direction for this language.
 
     :typoscript:`flagIdentifier`
@@ -818,9 +820,13 @@ siteLanguage
         The label to be used within TYPO3 to identify the language.
 
     :typoscript:`twoLetterIsoCode`
+        ..  deprecated:: 12.3
+
         The ISO-639-1 code for this language (two letters).
 
     :typoscript:`typo3Language`
+        ..  deprecated:: 12.3
+
         The prefix for TYPO3's language files (`default` for English), otherwise
         one of TYPO3's internal language keys. Previously configured via
         TypoScript :typoscript:`config.language = fr`.
