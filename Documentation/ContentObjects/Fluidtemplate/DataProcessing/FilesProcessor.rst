@@ -212,3 +212,36 @@ for file resources:
 The :php:`FilesProcessor` can slide up the rootline to collect images for Fluid
 templates. One usual feature is to take images attached to pages and use them on
 the page tree as header images in the frontend.
+
+..  _FilesProcessor-FlexForm:
+
+Example 3: files from a FlexForm
+================================
+
+If the files are stored in a FlexForm, the entry in the table
+:sql:`sys_file_reference` uses the name of the main table, for example
+:sql:`tt_content` and the FlexForm key as :sql:`fieldname`.
+
+Therefore you can do the following:
+
+..  literalinclude:: _FilesProcessorFlexForm.typoscript
+    :language: typoscript
+    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+This assumes that the image was stored in a FlexForm in the table
+:sql:`tt_content` like this:
+
+..  literalinclude:: _FlexFormWithImage.xml
+    :language: xml
+    :caption: EXT:site_package/Configuration/FlexForm/MyFlexForm.xml
+
+Three images in the same content element (uid 15) having the FlexForm above
+would look like this in the the database table :sql:`sys_file_reference`:
+
+ ===== ===== =========== ============= ============ ================== =====
+  uid   pid   uid_local   uid_foreign   tablenames   fieldnames         ...
+ ===== ===== =========== ============= ============ ================== =====
+  42    120   12          15            tt_content   settings.myImage   ...
+  43    120   25          15            tt_content   settings.myImage   ...
+  44    120   128         15            tt_content   settings.myImage   ...
+ ===== ===== =========== ============= ============ ================== =====
