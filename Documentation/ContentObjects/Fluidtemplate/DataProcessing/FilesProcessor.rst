@@ -219,7 +219,7 @@ Example 3: files from a FlexForm
 ================================
 
 If the files are stored in a FlexForm, the entry in the table
-:php:`sys_file_reference` uses the name of the main table, for example
+:sql:`sys_file_reference` uses the name of the main table, for example
 :sql:`tt_content` and the FlexForm key as :sql:`fieldname`.
 
 Therefore the you can do the following:
