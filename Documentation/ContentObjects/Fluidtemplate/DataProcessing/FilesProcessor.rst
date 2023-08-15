@@ -236,7 +236,7 @@ This assumes that the image was stored in a FlexForm in the table
     :caption: EXT:site_package/Configuration/FlexForm/MyFlexForm.xml
 
 Three images in the same content element (uid 15) having the FlexForm above
-would look like this in the the database table :php:`sys_file_reference`:
+would look like this in the the database table :sql:`sys_file_reference`:
 
  ===== ===== =========== ============= ============ ================== =====
   uid   pid   uid_local   uid_foreign   tablenames   fieldnames         ...
