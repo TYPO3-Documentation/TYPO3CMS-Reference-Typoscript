@@ -623,8 +623,8 @@ includeCSSLibs.[array]
             :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
             includeCSSLibs {
-                twitter = https://twitter.com/styles/blogger.css
-                twitter.external = 1
+                bootstrap = https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css
+                bootstrap.external = 1
 
                 additional = EXT:site_package/Resources/Public/Css/additional_styles.css
                 additional.data-foo = bar
