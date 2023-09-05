@@ -637,8 +637,8 @@ includeCSSLibs.[array]
          .. code-block:: typoscript
             :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-            includeCSSLibs.twitter = https://twitter.com/styles/blogger.css
-            includeCSSLibs.twitter.external = 1
+            includeCSSLibs.bootstrap = https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css
+            includeCSSLibs.bootstrap.external = 1
 
 
 
