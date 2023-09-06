@@ -791,11 +791,6 @@ siteLanguage
     :typoscript:`base`
         The base URL for this language.
 
-    :typoscript:`direction`
-        ..  deprecated:: 12.3
-
-        The direction for this language.
-
     :typoscript:`flagIdentifier`
         The flag key (like `gb` or `fr`) used in the TYPO3 backend.
 
@@ -823,11 +818,6 @@ siteLanguage
 
     :typoscript:`title`
         The label to be used within TYPO3 to identify the language.
-
-    :typoscript:`twoLetterIsoCode`
-        ..  deprecated:: 12.3
-
-        The ISO-639-1 code for this language (two letters).
 
     :typoscript:`typo3Language`
         The prefix for TYPO3's language files (`default` for English), otherwise
