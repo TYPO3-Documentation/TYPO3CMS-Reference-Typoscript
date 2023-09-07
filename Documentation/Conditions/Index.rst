@@ -1275,12 +1275,6 @@ siteLanguage()
         :ref:`XLIFF <t3coreapi:xliff>` files as a string, for example `default`
         or the two-letter language code.
 
-    :typoscript:`siteLanguage("twoLetterIsoCode")`
-        .. deprecated:: 12.3
-
-        Returns the two-letter code for the language according to ISO-639
-        nomenclature as a string.
-
     :typoscript:`siteLanguage("hreflang")`
         ..  versionchanged:: 12.4
             This option is not relevant anymore for regular websites without
@@ -1288,12 +1282,6 @@ siteLanguage()
             fallback.
 
         Returns the language information for the hreflang tag as a string.
-
-    :typoscript:`siteLanguage("direction")`
-        .. deprecated:: 12.3
-
-        Returns the text direction for content in this language (left-to-right
-        or right-to-left) as a string.
 
     :typoscript:`siteLanguage("fallbackType")`
         Returns the language fallback mode as a string, one of `fallback`,
