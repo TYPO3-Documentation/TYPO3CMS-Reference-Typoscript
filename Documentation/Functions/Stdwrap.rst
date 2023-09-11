@@ -14,26 +14,8 @@ When a data type is set to "*type* /stdWrap" it means that the value
 is parsed through the stdWrap function with the properties of the
 value as parameters.
 
-.. _stdwrap-examples:
-
-Example
-=======
-
-Example with the property "value" of the content object ":ref:`cobj-text`":
-
-.. code-block:: typoscript
-   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-   10 = TEXT
-   10.value = some text
-   10.stdWrap.case = upper
-
-Here the content of the object "10" is uppercased before it is
-returned.
-
-
-..  index:: Function stdWrap; Content-supplying properties
-.. _stdwrap-content-supplying:
+.. contents:: Table of contents
+   :local:
 
 Content-supplying properties of stdWrap
 =======================================
@@ -68,9 +50,6 @@ The above example could be rewritten to this:
 Now the line :typoscript:`10.value = some text` is obsolete, because the whole
 value is "imported" from the field called "header" from the
 :php:`$cObj->data-array`.
-
-.. contents:: Table of contents
-   :local:
 
 Properties
 ==========
@@ -1741,3 +1720,24 @@ debugData
 ..  attention::
 
     Only for debugging during development, otherwise output can break.
+
+.. _stdwrap-examples:
+
+Example
+=======
+
+Example with the property "value" of the content object ":ref:`cobj-text`":
+
+.. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+   10 = TEXT
+   10.value = some text
+   10.stdWrap.case = upper
+
+Here the content of the object "10" is uppercased before it is
+returned.
+
+
+..  index:: Function stdWrap; Content-supplying properties
+.. _stdwrap-content-supplying:
