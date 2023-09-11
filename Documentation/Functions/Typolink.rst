@@ -619,7 +619,7 @@ page
 ..  t3-typolink-handler:: page.fragment
 
     :Data Type: string
-    :Example: `t3://page?uid=13&type=3#c123`
+    :Example: `t3://page?uid=13&type=3#123`
 
     The anchor or section to jump to. Must be prefixed with `#`.
 
