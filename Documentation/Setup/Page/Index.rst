@@ -696,7 +696,8 @@ includeJS.[array]
 
          ..  versionadded:: 12.1
 
-         Additional data attributes can be configured using a key-value list.
+         **data**: Array with key/value for additional attributes to be added to
+         the script tag.
 
    Example
          .. code-block:: typoscript
@@ -712,9 +713,14 @@ includeJS.[array]
 
                 # Include another file for consent management
                 # A data attribute enriches the tag with additional information
-                # which can be used in the according JavaScript
+                # which can be used in the according JavaScript.
+                # This results in "<script data-consent-type="essential" ...></script>"
                 consent = EXT:site_package/Resources/Public/JavaScript/consent.js
-                consent.data-consent-type = essential
+                consent.data.data-consent-type = essential
+
+                # Another attribute can also be defined also with the "data" key.
+                # This results in "<script other-attribute="value" ...></script>"
+                consent.data.other-attribute = value
 
                 jquery = https://code.jquery.com/jquery-3.4.1.min.js
                 jquery.external = 1
