@@ -696,8 +696,8 @@ includeJS.[array]
 
          ..  versionadded:: 12.1
 
-         Additional attributes can be configured using a key-value list using
-         the :typoscript:`data` key.
+         **data**: Array with key/value for additional attributes to be added to
+         the script tag.
 
    Example
          .. code-block:: typoscript
