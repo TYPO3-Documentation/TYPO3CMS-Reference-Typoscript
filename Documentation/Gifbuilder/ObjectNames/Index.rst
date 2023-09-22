@@ -140,19 +140,6 @@ different each time!
          "jpg"/"jpeg" = jpg-image
 
 
-
-.. container:: table-row
-
-   Property
-         reduceColors
-
-   Data type
-         positive integer (1-255) /:ref:`stdWrap <stdwrap>`
-
-   Description
-         Reduce the number of colors.
-
-
 .. container:: table-row
 
    Property
@@ -197,8 +184,8 @@ different each time!
          This will allow for the closest color to be matched instead. You may
          need this if you image is not guaranteed "clean".
 
-         **Note:** You may experience that this does not work, if you use the
-         reduceColors-option or render text with niceText-option.
+         **Note:** You may experience that this does not work, if you render
+         text with the niceText option.
 
 
 .. container:: table-row
@@ -282,6 +269,19 @@ different each time!
 
    Description
          Maximal height of the image file.
+
+
+.. container:: table-row
+
+   Property
+         reduceColors
+
+   Data type
+         positive integer (1-255) /:ref:`stdWrap <stdwrap>`
+
+   Description
+         .. versionchanged:: 13.0
+            This property has been removed.
 
 
 .. ###### END~OF~TABLE ######
