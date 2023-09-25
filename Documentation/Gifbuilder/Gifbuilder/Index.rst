@@ -56,7 +56,6 @@ Here's a full example (taken from "styles.content (default)"):
      file {
        XY = [10.w]+10 ,{$styles.header.gfx1.itemH}
        backColor = {$styles.header.gfx1.bgCol}
-       reduceColors = {$styles.header.gfx1.reduceColors}
        10 = TEXT
        10 {
          text.current = 1
