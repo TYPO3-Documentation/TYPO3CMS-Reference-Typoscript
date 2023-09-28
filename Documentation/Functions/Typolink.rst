@@ -572,7 +572,7 @@ page
 ..  t3-typolink-handler:: page
 
     :Data Type: string of parameters
-    :Implementation: :t3src:`core/LinkHandling/PageLinkHandler.php`
+    :Implementation: :t3src:`core/Classes/LinkHandling/PageLinkHandler.php`
     :Example:  `t3://page?uid=42&type=3`
 
     The page identifier is a compound string based on several optional settings.
@@ -632,7 +632,7 @@ file
 ..  t3-typolink-handler:: file
 
     :Data Type: string of parameters
-    :Implementation: :t3src:`core/LinkHandling/FileLinkHandler.php`
+    :Implementation: :t3src:`core/Classes/LinkHandling/FileLinkHandler.php`
     :Example:  `t3://file?uid=13`
 
     Links to a file to download.
@@ -674,7 +674,7 @@ folder
 ..  t3-typolink-handler:: folder
 
     :Data Type: string of parameters
-    :Implementation: :t3src:`core/LinkHandling/FolderLinkHandler.php`
+    :Implementation: :t3src:`core/Classes/LinkHandling/FolderLinkHandler.php`
     :Example:  `t3://folder?storage=1&identifier=myfolder`
 
     Links to a folder.
@@ -702,7 +702,7 @@ email
 ..  t3-typolink-handler:: email
 
     :Data Type: string of parameters
-    :Implementation: :t3src:`core/LinkHandling/EmailLinkHandler.php`
+    :Implementation: :t3src:`core/Classes/LinkHandling/EmailLinkHandler.php`
     :Example:  `t3://email?email=mailto:user@example.org`
 
     Mail address to be used, prefixed with `mailto:`
@@ -715,7 +715,7 @@ url
 ..  t3-typolink-handler:: url
 
     :Data Type: string of parameters
-    :Implementation: :t3src:`core/LinkHandling/EmailLinkHandler.php`
+    :Implementation: :t3src:`core/Classes/LinkHandling/EmailLinkHandler.php`
     :Example:  `t3://url?url=example.org`
 
     URL to be used, if no scheme is used
@@ -739,7 +739,7 @@ record
 ..  t3-typolink-handler:: record
 
     :Data Type: string of parameters
-    :Implementation: :t3src:`core/LinkHandling/RecordLinkHandler.php`
+    :Implementation: :t3src:`core/Classes/LinkHandling/RecordLinkHandler.php`
     :Example: `t3://record?identifier=my_content&uid=123`
 
     Can be used to link to a record of a certain table. See also the
@@ -774,7 +774,7 @@ phone
 ..  t3-typolink-handler:: phone
 
     :Data Type: string of parameters
-    :Implementation: :t3src:`core/LinkHandling/TelephoneLinkHandler.php`
+    :Implementation: :t3src:`core/Classes/LinkHandling/TelephoneLinkHandler.php`
     :Example:  `t3://phone?phone=tel:+4912345678`
 
     This link handler sets links to phone numbers using the `tel:` protocol.
