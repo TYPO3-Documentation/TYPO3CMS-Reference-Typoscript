@@ -787,6 +787,15 @@ request
 :aspect:`Description`
    Allows to fetch information from current request.
 
+..  tip::
+    Checking for the :ref:`request object <t3coreapi:typo3-request>` before
+    using in a condition may be necessary, for example, when using
+    :ref:`Extbase <t3coreapi:extbase>` repositories in
+    :ref:`CLI <t3coreapi:symfony-console-commands>` context (as Extbase
+    depends on TypoScript and on the command line is no request object
+    available). This avoids, for example, the error
+    `Unable to call method "getQueryParams" of non-object "request"`.
+
 
 .. index:: Conditions; request.getQueryParams()
 .. _condition-function-request-getQueryParams():
@@ -825,7 +834,7 @@ request.getQueryParams()
    .. code-block:: typoscript
       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-      [request.getQueryParams()['skipSessionUpdate'] == 1]
+      [request && request.getQueryParams()['skipSessionUpdate'] == 1]
 
    Safely check the query parameter array to avoid error logs in case key is not
    defined (see :ref:`condition-function-traverse`). This will check if the GET parameter
@@ -834,7 +843,7 @@ request.getQueryParams()
    .. code-block:: typoscript
       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-      [traverse(request.getQueryParams(), 'tx_news_pi1/news') > 0]
+      [request && traverse(request.getQueryParams(), 'tx_news_pi1/news') > 0]
 
 
 .. index:: Conditions; request.getParsedBody()
@@ -860,7 +869,7 @@ request.getParsedBody()
    .. code-block:: typoscript
       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-      [request.getParsedBody()['foo'] == 1]
+      [request && request.getParsedBody()['foo'] == 1]
 
 
 .. index:: Conditions; request.getHeaders()
@@ -885,11 +894,11 @@ request.getHeaders()
    .. code-block:: typoscript
       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-      [request.getHeaders()['Accept'] == 'json']
+      [request && request.getHeaders()['Accept'] == 'json']
          page.10.value = Accepts json
       [END]
 
-      [request.getHeaders()['host'][0] == 'www.example.org']
+      [request && request.getHeaders()['host'][0] == 'www.example.org']
          page.20.value = The host is www.example.org
       [END]
 
@@ -918,7 +927,7 @@ request.getCookieParams()
    .. code-block:: typoscript
       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-      [request.getCookieParams()['foo'] == 1]
+      [request && request.getCookieParams()['foo'] == 1]
 
 
 .. index:: Conditions; request.getNormalizedParams()
@@ -1031,11 +1040,11 @@ request.getNormalizedParams()
    .. code-block:: typoscript
       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-      [request.getNormalizedParams().isHttps()]
+      [request && request.getNormalizedParams().isHttps()]
          page.10.value = HTTPS is being used
       [END]
 
-      [request.getNormalizedParams().getHttpHost() == "example.org"]
+      [request && request.getNormalizedParams().getHttpHost() == "example.org"]
          page.10.value = The host is "example.org"
       [END]
 
@@ -1063,10 +1072,10 @@ request.getPageArguments()
    .. code-block:: typoscript
       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-      [request.getPageArguments().get('foo_id') > 0]
+      [request && request.getPageArguments().get('foo_id') > 0]
 
    Allows migration from old condition syntax using `[globalVar = GP:singlepartner > 0]`
-   to `[request.getPageArguments().get('singlepartner') > 0]`.
+   to `[request && request.getPageArguments().get('singlepartner') > 0]`.
 
 
 .. index:: Conditions; date
@@ -1190,9 +1199,17 @@ traverse
    .. code-block:: typoscript
       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-      [traverse(request.getQueryParams(), 'tx_news_pi1/news') > 0]
+      [request && traverse(request.getQueryParams(), 'tx_news_pi1/news') > 0]
 
 
+   .. tip::
+      Checking for the :ref:`request object <t3coreapi:typo3-request>` to be
+      available before using :typoscript:`traverse()` may be necessary, for
+      example, when using :ref:`Extbase <t3coreapi:extbase>` repositories in
+      :ref:`CLI <t3coreapi:symfony-console-commands>` context (as Extbase
+      depends on TypoScript and on the command line is no request object
+      available). This avoids the error
+      `Unable to call method "getQueryParams" of non-object "request"`.
 
 .. index:: Conditions; ip
 .. _condition-function-ip:
