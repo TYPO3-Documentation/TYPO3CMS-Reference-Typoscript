@@ -13,8 +13,8 @@ About this document
 This document describes TSconfig and its options: A TypoScript a-like configuration
 syntax to configure details of the backend for backend users based on a user, group and page level.
 
-This document can be seen as detail below the main :ref:`Core API <t3coreapi:start>` document.
-It is too huge to be integrated into Core API directly.
+This document can be seen as detail below the main :ref:`TYPO3 Explained <t3coreapi:start>` documentation.
+It is too huge to be integrated into TYPO3 Explained directly.
 
 First parts of this document explain the concepts of TSconfig, the different places it can be
 found in the system, how it can be diagnosed, and goes a bit into the PHP API if developers
@@ -43,8 +43,8 @@ for users and groups ("User TSconfig"). Each variant is further detailed in this
 
 The general "dotted notation" of `TypoScript` is re-used for Page TSconfig and
 User TSconfig, it is possible to reference values, use conditions, and so on.
-For a general look at the syntax, please read the according section of the
-:ref:`TYPO3 Core API document <t3coreapi:typoscript-syntax-start>`.
+For a general look at the syntax, please read the according section of
+:ref:`TYPO3 Explained <t3coreapi:typoscript-syntax-start>`.
 
 Other than the basic syntax, TSconfig and frontend TypoScript have nothing in common.
 Properties outlined in the :ref:`TypoScript Reference <t3tsref:start>` can never be
