@@ -24,6 +24,8 @@ It is also possible to set
 :ref:`set page TSconfig directly in the page properties <pagetsconfig-enter-data>` but
 this is not recommended anymore.
 
+.. contents::
+   :local:
 
 .. index:: pair: Page TSconfig; Default values
 .. _pagesettingdefaultpagetsconfig:
@@ -46,8 +48,8 @@ file:
 .. code-block:: typoscript
    :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
-   @import 'EXT:myexample/Configuration/TsConfig/Page/Basic.tsconfig'
-   @import 'EXT:myexample/Configuration/TsConfig/Page/Mod/Wizards/NewContentElement.tsconfig'
+   @import 'EXT:my_sitepackage/Configuration/TsConfig/Page/Basic.tsconfig'
+   @import 'EXT:my_sitepackage/Configuration/TsConfig/Page/Mod/Wizards/NewContentElement.tsconfig'
 
 
 Many page TSconfig settings can be set globally. This is useful for
@@ -64,7 +66,7 @@ add global static page TSconfig before anything else is loaded.
 Global page TSconfig, compatible with TYPO3 v11 and v12
 -------------------------------------------------------
 
-In TYPO3 v11 installations the content of file:`Configuration/page.tsconfig`
+In TYPO3 v11 installations the content of :file:`Configuration/page.tsconfig`
 is not loaded automatically yet. You can achieve compatibility with both
 TYPO3 v11 and v12 by importing the content of this file with the API function
 :php:`ExtensionManagementUtility::addPageTSConfig`:
