@@ -1,7 +1,7 @@
-.. include:: /Includes.rst.txt
-.. index:: ! Page TSconfig
-.. _pagetsconfig:
-.. _pagetoplevelobjects:
+..  include:: /Includes.rst.txt
+..  index:: ! Page TSconfig
+..  _pagetsconfig:
+..  _pagetoplevelobjects:
 
 =======================
 Page TSconfig Reference
@@ -16,18 +16,19 @@ overridden further out).
 
 Note that the page TSconfig can be overridden on a user and group basis by
 user TSconfig again, for details, see section
-:ref:`Overriding Page TSconfig in User TSconfig <userrelationshiptovaluessetinpagetsconfig>`.
+:ref:`Overriding page TSconfig in user TSconfig <userrelationshiptovaluessetinpagetsconfig>`.
 
 
-.. toctree::
-   :maxdepth: 5
-   :titlesonly:
+..  toctree::
+    :maxdepth: 5
+    :titlesonly:
 
-   Mod
-   Options
-   Rte
-   TcaDefaults
-   TceForm
-   TceMain
-   Templates
-   Tx
+    ColorPalettes
+    Mod
+    Options
+    Rte
+    TcaDefaults
+    TceForm
+    TceMain
+    Templates
+    Tx

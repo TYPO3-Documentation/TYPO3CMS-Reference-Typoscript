@@ -261,6 +261,38 @@ PAGE_TSCONFIG_STR
 
 ..  index::
     Records; field configuration
+..  _pageTsConfigTceFormColorPalette:
+
+colorPalette
+------------
+
+..  versionadded:: 13.0
+
+:aspect:`Datatype`
+    string
+
+:aspect:`Description`
+    Assign a :ref:`color palette <pagecolorpalettes>` to a specific field of a
+    table, for all fields within a table or a global configuration affecting all
+    color pickers within :ref:`FormEngine <t3coreapi:FormEngine>`. If no palette
+    is defined, FormEngine falls back to all configured colors.
+
+:aspect:`Example`
+    ..  code-block:: typoscript
+        :caption: EXT:my_sitepackage/Configuration/page.tsconfig
+
+        # Assign a palette to a specific field
+        TCEFORM.tx_myext_table.myfield.colorPalette = messages
+
+        # Assign a palette to all color pickers used in a table
+        TCEFORM.tx_myext_table.colorPalette = key_colors
+
+        # Assign global palette
+        TCEFORM.colorPalette = main
+
+
+..  index::
+    Records; field configuration
 ..  _pageTsConfigTceFormConfig:
 
 config
