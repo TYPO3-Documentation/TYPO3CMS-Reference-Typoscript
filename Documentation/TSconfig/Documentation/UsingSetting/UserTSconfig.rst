@@ -56,27 +56,49 @@ both define the same property.
 Setting default user TSconfig
 =============================
 
+..  versionadded:: 13.0
+    Starting with TYPO3 v12.0 page TSconfig in a file named
+    :file:`Configuration/user.tsconfig` in an extension is automatically loaded
+    during build time.
+
 User TSconfig is designed to be individual for users or groups of
 users. However, good defaults can be defined and overridden by group or
 user-specific TSconfig.
 
-In extensions, this is done using the Core API function,
-:php:`\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addUserTSConfig()`.
-In the :file:`ext_localconf.php` file of your extension you can call it
-like this to set a default configuration.
+Default page TSconfig should be stored within an extension, usually a
+sitepackage extension. The content of the file
+:file:`Configuration/user.tsconfig` within an extension is automatically loaded
+during build time.
 
-..  literalinclude:: _UserTSconfig/_ext_localconf.php
+It is possible to load other user TSconfig files with the import syntax within
+this file:
+
+..  code-block:: typoscript
+    :caption: EXT:my_extension/Configuration/user.tsconfig
+
+    @import 'EXT:my_sitepackage/Configuration/TsConfig/User/default.tsconfig'
+
+
+User TSconfig, compatible with TYPO3 v12 and v13
+------------------------------------------------
+
+In TYPO3 v12 installations the content of :file:`Configuration/user.tsconfig` is
+not loaded automatically. You can achieve compatibility with both TYPO3 v12 and
+v13 by importing the content of this file with the API function
+:php:`ExtensionManagementUtility::addUserTSConfig`:
+
+..  literalinclude:: _UserTSconfig/_ext_localconf_v12.php
     :language: php
     :caption: EXT:my_sitepackage/ext_localconf.php
 
-There is a global :ref:`TYPO3_CONF_VARS <t3coreapi:typo3ConfVars>` value called
-:ref:`$GLOBALS['TYPO3_CONF_VARS']['BE']['defaultUserTSconfig'] <t3coreapi:typo3ConfVars_be_defaultUserTSconfig>`.
-The API function above adds content to that array. However, the array value
-itself should **not** be changed or set directly without using the API.
-
+..  deprecated:: 13.0
+    The method :php:`\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addUserTSConfig()`
+    has been marked as deprecated in TYPO3 v13 and will be removed with TYPO3
+    v14.
 
 ..  index:: pair: User TSconfig; Verify configuration
 ..  _userverifyingthefinalconfiguration:
+
 
 Verify the final configuration
 ==============================

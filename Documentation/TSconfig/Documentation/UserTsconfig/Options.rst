@@ -974,14 +974,12 @@ passwordReset
    cli command.
 
    To completely disable the password reset in the backend for all users, you can
-   set the user TSconfig globally in your :file:`ext_localconf.php`:
+   set the user TSconfig globally in your :file:`Configuration/user.tsconfig`:
 
-   .. code-block:: php
-      :caption: EXT:site_package/ext_localconf.php
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/user.tsconfig
 
-      \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addUserTSConfig(
-         'options.passwordReset = 0'
-      );
+      options.passwordReset = 0
 
    If required, this setting can be overridden on a per user basis
    in the corresponding :guilabel:`TSconfig` field of the backend
