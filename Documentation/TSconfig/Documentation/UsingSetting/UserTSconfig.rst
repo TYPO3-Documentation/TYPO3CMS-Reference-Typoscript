@@ -57,7 +57,7 @@ Setting default user TSconfig
 =============================
 
 ..  versionadded:: 13.0
-    Starting with TYPO3 v12.0 page TSconfig in a file named
+    Starting with TYPO3 v13.0 user TSconfig in a file named
     :file:`Configuration/user.tsconfig` in an extension is automatically loaded
     during build time.
 
@@ -65,7 +65,7 @@ User TSconfig is designed to be individual for users or groups of
 users. However, good defaults can be defined and overridden by group or
 user-specific TSconfig.
 
-Default page TSconfig should be stored within an extension, usually a
+Default user TSconfig should be stored within an extension, usually a
 sitepackage extension. The content of the file
 :file:`Configuration/user.tsconfig` within an extension is automatically loaded
 during build time.
@@ -78,6 +78,8 @@ this file:
 
     @import 'EXT:my_sitepackage/Configuration/TsConfig/User/default.tsconfig'
 
+The PSR-14 event :ref:`t3coreapi:BeforeLoadedUserTsConfigEvent` is available to
+add global static user TSconfig before anything else is loaded.
 
 User TSconfig, compatible with TYPO3 v12 and v13
 ------------------------------------------------
