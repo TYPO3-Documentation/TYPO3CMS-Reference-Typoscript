@@ -613,8 +613,7 @@ page
     :Data Type: string of parameters
     :Example: `t3://page?uid=1313&my=param&will=get&added=here`
 
-    String of parameters, prefixed with `&`, to be added to the URL. If the
-    parameters
+    String of parameters, prefixed with `&`, to be added to the URL.
 
 ..  t3-typolink-handler:: page.fragment
 
