@@ -59,7 +59,6 @@ setup.override.[someProperty]
     value will overrule it.
 
     .. attention::
-
         There is a tricky aspect to these `setup.override`: If first you have set a
         value by `setup.override` and then remove it again, you will experience
         that the value persists to exist. This is because it is saved in the
@@ -122,7 +121,11 @@ edit_docModuleUpload
     boolean
 
 :aspect:`Description`
-    File upload directly in Doc. module
+    Allow file upload directly from file reference fields within backend forms.
+
+    .. note::
+        The uploaded file will be stored in the default upload folder,
+        see :ref:`user TSconfig <useroptions-defaultUploadFolder>` and :ref:`page TSconfig <pagedefaultuploadfolder>`
 
 
 .. index:: Email me at login
@@ -134,7 +137,7 @@ emailMeAtLogin
     boolean
 
 :aspect:`Description`
-    Notify me by email, when somebody logs in from my account
+    Notify me by email, when somebody logs into my account
 
 
 .. index:: Backend; Language
@@ -146,8 +149,9 @@ lang
     language-key
 
 :aspect:`Description`
-    One of the language-keys. For current options see
-    :file:`typo3/sysext/core/Classes/Localization/Locales.php`, e.g. `dk`, `de`, `es` etc.
+    One of the language keys. For current options see
+    :file:`typo3/sysext/core/Classes/Localization/Locales.php`, for example
+    `dk`, `de`, `es` etc.
 
 
 .. index:: Records; Hide at copy
@@ -162,6 +166,18 @@ neverHideAtCopy
     If set, then the hideAtCopy feature for records in TCE will not be used.
 
 
+.. index:: File list; Show hidden files and folders
+
+showHiddenFilesAndFolders
+=========================
+
+:aspect:`Datatype`
+    boolean
+
+:aspect:`Description`
+    If set, hidden files and folders will be shown in the filelist.
+
+
 .. index:: Start module
 
 startModule
@@ -171,7 +187,8 @@ startModule
     string
 
 :aspect:`Description`
-    Name of the module that is called when the user logs into the Backend
+    Name of the module that is called when the user logs into the backend, for
+    example `web_layout`, `web_list`, `web_view`, `web_info`, `web_ts` etc.
 
 
 .. index:: Title length, max
@@ -183,4 +200,8 @@ titleLen
     positive integer
 
 :aspect:`Description`
-    Max. Title Length
+    Maximum length of rendered record titles in the backend interface.
+    It is used in several places: page tree, edit masks, workspace module, etc.
+
+    .. tip::
+        To find out where this setting is applied, set it to a low number.
