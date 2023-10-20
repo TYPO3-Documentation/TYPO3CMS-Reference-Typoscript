@@ -28,6 +28,30 @@ setup.default.[someProperty]
     existing users is by :guilabel:`Reset Backend User Preferences` in the
     :guilabel:`Admin tools > Maintenance` section of the install tool.
 
+    .. code-block:: typoscript
+       :caption: EXT:site_package/Configuration/user.tsconfig
+
+       [backend.user.isAdmin]
+          # Some settings an administrator might find helpful
+          setup.default {
+             recursiveDelete = 1
+             copyLevels = 99
+             moduleData {
+                # Defaulting some options of the Template/TypoScript backend module
+                web_ts {
+                   # Pre-select 'Object browser' instead of 'Constant editor'
+                   function = TYPO3\CMS\Tstemplate\Controller\TypoScriptTemplateObjectBrowserModuleFunctionController
+                   # Pre-select 'Setup' instead of 'Constants'
+                   ts_browser_type = setup
+                   # The other settings
+                   ts_browser_const = subst
+                   ts_browser_fixedLgd = 0
+                   ts_browser_showComments = 1
+                }
+             }
+          }
+       [END]
+
 setup.override.[someProperty]
     This forces values for the properties of the list below, a user can not override these
     setting in its :guilabel:`User settings` module. So, overriding values will be impossible for the
