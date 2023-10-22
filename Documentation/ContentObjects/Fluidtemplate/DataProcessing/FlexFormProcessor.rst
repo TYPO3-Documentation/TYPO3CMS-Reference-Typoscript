@@ -22,6 +22,23 @@ Options
 
     Field name of the column the FlexForm data is stored in.
 
+..  t3-data-processor-flex:: references
+
+    ..  versionadded:: 13.0
+
+    :Required: false
+    :type: array
+
+    Associative array of FlexForm fields (key) and the according database field
+    (value).
+
+    Each FlexForm field, which should be resolved, needs a reference definition
+    to the :ref:`foreign_match_fields <columns-inline-properties-foreign-match-fields>`.
+    This reference is used in the :ref:`FilesProcessor <FilesProcessor>` to
+    resolve the correct :ref:`FAL <t3coreapi:fal>` resource.
+
+    See :ref:`FlexFormProcessor-resolving-fal`.
+
 ..  t3-data-processor-flex:: as
 
     :Required: false
@@ -87,4 +104,33 @@ Example with a custom sub-processor
             10 = Vendor\MyExtension\DataProcessing\CustomFlexFormProcessor
         }
     }
+
+..  _FlexFormProcessor-resolving-fal:
+
+Example of resolving FAL references
+-----------------------------------
+
+..  versionadded:: 13.0
+
+Example of an advanced TypoScript configuration, which processes the field
+:xml:`my_flexform_field`, resolves its FAL references and assigns the array to
+the :typoscript:`myOutputVariable` variable:
+
+..  code-block:: typoscript
+    :caption: EXT:my_extension/Configuration/TypoScript/setup.typoscript
+
+    10 = flex-form
+    10 {
+      fieldName = my_flexform_field
+      references {
+        my_flex_form_group.my_flex_form_field = my_field_reference
+      }
+      as = myOutputVariable
+    }
+
+The according FlexForm configuration:
+
+..  literalinclude:: _FlexFormWithFal.xml
+    :language: xml
+    :caption: Excerpt of a FlexForm configuration
 
