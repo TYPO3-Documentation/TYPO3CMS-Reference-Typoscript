@@ -307,6 +307,7 @@ path
 
 
     Path relative to the root directory from which we operate.
+    Also resolves `EXT:` syntax.
 
     ..  rubric:: Example
 
