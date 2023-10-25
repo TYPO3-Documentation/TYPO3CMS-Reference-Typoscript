@@ -33,3 +33,7 @@ Example:
 
    # Show newly created pages by default
    TCAdefaults.pages.hidden = 0
+
+..  note::
+    `TCAdefaults` is not applied to :ref:`FlexForm <t3coreapi:flexforms>` values. These can only be addressed via
+    :xml:`<default>` elements within the FlexForm data structure.
