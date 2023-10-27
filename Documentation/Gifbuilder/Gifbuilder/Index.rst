@@ -7,7 +7,7 @@ GIFBUILDER
 ==========
 
 GIFBUILDER is an object type, which is used in many situations for creating
-image files (for example, GIF, PNG or JPG). Wherever the GIFBUILDER object
+image files (for example, GIF, PNG or JPG). Wherever the ->GIFBUILDER object
 type is mentioned, these are the properties that apply.
 
 Using TypoScript, you can define a "numerical array" of
