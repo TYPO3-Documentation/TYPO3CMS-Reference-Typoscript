@@ -46,6 +46,7 @@ different each time!
          the section "GIFBUILDER".
 
 
+.. _gifbuilder-format:
 
 .. container:: table-row
 
@@ -53,15 +54,18 @@ different each time!
          format
 
    Data type
-         "gif" / "jpg"
+         "gif" / "jpg" / "jpeg" / "png"
 
    Default
          gif
 
    Description
-         Output type.
+         File type of the output image.
 
-         "jpg"/"jpeg" = jpg-image
+         It is possible to define the quality of a JPG image globally via
+         :ref:`$TYPO3_CONF_VARS['GFX']['jpg_quality'] <t3coreapi:typo3ConfVars_gfx_jpg_quality>`
+         or via the :ref:`quality <gifbuilder-quality>` property on a per-image
+         basis.
 
 
 
@@ -125,6 +129,8 @@ different each time!
          reduceColors-option or render text with niceText-option.
 
 
+.. _gifbuilder-quality:
+
 .. container:: table-row
 
    Property
@@ -134,7 +140,7 @@ different each time!
          positive integer (10-100)
 
    Description
-         JPG-quality (if ".format" = jpg/jpeg)
+         JPG-quality (if :ref:`.format <gifbuilder-format>` = jpg/jpeg)
 
 
 .. container:: table-row
