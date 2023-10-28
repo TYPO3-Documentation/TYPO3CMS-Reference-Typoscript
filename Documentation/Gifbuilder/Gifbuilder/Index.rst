@@ -6,17 +6,17 @@
 GIFBUILDER
 ==========
 
-GIFBUILDER is an object type, which is used in many situations for creating
-image files (for example, GIF, PNG or JPG). Wherever the ->GIFBUILDER object
-type is mentioned, these are the properties that apply.
+:typoscript:`GIFBUILDER` is an object type, which is used in many situations for
+creating image files (for example, GIF, PNG or JPG). Wherever the
+->GIFBUILDER object type is mentioned, these are the properties that apply.
 
 Using TypoScript, you can define a "numerical array" of
 :ref:`GIFBUILDER objects <gifbuilder-object-names>` (like
 :ref:`TEXT <gifbuilder-text>`, :ref:`IMAGE <gifbuilder-image>`, etc.)
 and they will be rendered onto an image one by one.
 
-The name "GIFBUILDER" comes from the time when GIF was the only supported file
-format. PNG and JPG can be created as well today (configured with
+The name :typoscript:`GIFBUILDER` comes from the time when GIF was the only
+supported file format. PNG and JPG can be created as well today (configured with
 :ref:`$TYPO3_CONF_VARS['GFX'] <t3coreapi:typo3ConfVars_gfx>`).
 
 
@@ -28,10 +28,10 @@ Note on (+calc)
 Whenever the :ref:`+calc <calc>` function is added to a value in the data type
 of the properties underneath, you can use the dimensions of
 :ref:`TEXT <gifbuilder-text>` and :ref:`IMAGE <gifbuilder-image>` objects from
-the GIFBUILDER object array. This is done by inserting a tag like this:
-:typoscript:`[10.w]` or :typoscript:`[10.h]`, where `10` is the GIFBUILDER
-object number in the array and `w`/`h` signifies either width or height of the
-object.
+the :typoscript:`GIFBUILDER` object array. This is done by inserting a tag like
+this: :typoscript:`[10.w]` or :typoscript:`[10.h]`, where `10` is the
+:typoscript:`GIFBUILDER` object number in the array and `w`/`h` signifies either
+width or height of the object.
 
 The special property :typoscript:`lineHeight` (for example,
 :typoscript:`[10.lineHeight]`) uses the height a single line of text would take.
