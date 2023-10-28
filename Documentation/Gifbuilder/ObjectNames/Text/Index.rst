@@ -19,7 +19,7 @@ Properties
          text
 
    Data type
-         ->stdWrap
+         string / :ref:`stdWrap <stdwrap>`
 
    Description
          This is text text-string on the image file. The item is rendered only
