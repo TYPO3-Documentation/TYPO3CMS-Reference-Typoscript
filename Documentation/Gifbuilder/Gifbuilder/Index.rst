@@ -60,7 +60,7 @@ Here is a full example:
 
       10 = TEXT
       10 {
-        text = TYPO3 GIFBUILDER
+        text = TYPO3 GIFBUILDER Example
         fontSize = 20
         fontColor = #ffffff
         offset = 10,25
