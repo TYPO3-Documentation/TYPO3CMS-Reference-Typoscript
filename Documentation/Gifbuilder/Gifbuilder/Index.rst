@@ -44,36 +44,40 @@ values can be determined. Example:
 
     XY = [10.w]+[20.w], max([10.h], [20.h])
 
-Here's a full example (taken from "styles.content (default)" of older TYPO3
-versions):
+Here is a full example:
 
 ..  code-block:: typoscript
     :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-    :emphasize-lines: 6
+    :emphasize-lines: 5
 
-    styles.header.gfx1 = IMAGE
-    styles.header.gfx1 {
-      wrap = {$styles.header.gfx1.wrap}
+    lib.example = IMAGE
+    lib.example {
       file = GIFBUILDER
       file {
-        XY = [10.w]+10 ,{$styles.header.gfx1.itemH}
-        backColor = {$styles.header.gfx1.bgCol}
-        reduceColors = {$styles.header.gfx1.reduceColors}
-        10 = TEXT
-        10 {
-          text.current = 1
-          text.crop = {$styles.header.gfx1.maxChars}
-          fontSize = {$styles.header.gfx1.fontSize}
-          fontFile = {$styles.header.gfx1.file.fontFile}
-          fontColor = {$styles.header.gfx1.fontColor}
-          offset = {$styles.header.gfx1.fontOffset}
-        }
+      XY = [10.w]+20, [10.h]+20
+      backColor = #ff8700
+      format = png
+
+      10 = TEXT
+      10 {
+        text = TYPO3 GIFBUILDER Example
+        fontSize = 20
+        fontColor = #ffffff
+        offset = 10,25
       }
     }
 
-As you see, the image has a width defined as the width of the text
-printed onto it + 10 pixels. The height is fixed by the value of the
-constant :typoscript:`{$styles.header.gfx1.itemH}`.
+As you see, the image has a width/height defined as the width/height of the text
+printed onto it + 20 pixels.
+
+The generated image looks like:
+
+..  figure:: /Images/ManualScreenshots/FrontendOutput/Gifbuilder/typo3-gifbuilder-example.png
+    :class: with-shadow
+    :alt: TYPO3 GIFBUILDER Example
+
+    The rendered image from the example above
+
 
 .. index:: GIFBUILDER; Top level object
 .. _gifbuilder-top-level-object:
