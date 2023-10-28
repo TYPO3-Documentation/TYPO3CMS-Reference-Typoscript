@@ -1,6 +1,6 @@
-.. include:: /Includes.rst.txt
-.. index:: Function; getText
-.. _data-type-gettext:
+..  include:: /Includes.rst.txt
+..  index:: Function; getText
+..  _data-type-gettext:
 
 ==============
 Data / getText
@@ -52,16 +52,16 @@ Data / getText
       lib.foo.data = field : header // field : title // field : uid
 
 
-.. contents::
-   :local:
-
 Properties
 ==========
+
+.. contents::
+   :local:
 
 .. _data-type-gettext-cobj:
 
 cObj
-====
+----
 
 :aspect:`getText Key:`
    cObj
@@ -84,7 +84,7 @@ cObj
 .. _data-type-gettext-context:
 
 context
-=======
+-------
 
 :aspect:`getText Key:`
    context
@@ -113,7 +113,7 @@ context
 .. _data-type-gettext-current:
 
 current
-=======
+-------
 
 :aspect:`getText Key:`
    current
@@ -134,7 +134,7 @@ current
 .. _data-type-gettext-date:
 
 date
-====
+----
 
 :aspect:`getText Key:`
    date
@@ -156,7 +156,8 @@ date
 .. _data-type-gettext-db:
 
 DB
-==
+--
+
 :aspect:`getText Key:`
    DB
 
@@ -196,7 +197,7 @@ DB
 .. _data-type-gettext-debug:
 
 debug
-=====
+-----
 
 :aspect:`getText Key:`
    debug
@@ -217,7 +218,7 @@ debug
 .. _data-type-gettext-field:
 
 field
-=====
+-----
 
 :aspect:`getText Key:`
    field
@@ -258,7 +259,7 @@ field
 .. _data-type-gettext-file:
 
 file
-====
+----
 
 :aspect:`getText Key:`
    file
@@ -295,7 +296,7 @@ file
 .. _data-type-gettext-flexform:
 
 flexform
-========
+--------
 
 :aspect:`getText Key:`
    flexform
@@ -318,7 +319,7 @@ flexform
 .. _data-type-gettext-fullrootline:
 
 fullRootLine
-============
+------------
 
 :aspect:`getText Key:`
    fullRootLine
@@ -357,7 +358,7 @@ fullRootLine
 .. _data-type-gettext-getenv:
 
 getenv
-======
+------
 
 :aspect:`getText Key:`
    getenv
@@ -378,7 +379,8 @@ getenv
 .. _data-type-gettext-getindpenv:
 
 getIndpEnv
-==========
+----------
+
 :aspect:`getText Key:`
    getIndpEnv
 
@@ -436,7 +438,7 @@ getIndpEnv
 .. _data-type-gettext-global:
 
 global
-======
+------
 
 :aspect:`getText Key:`
    global
@@ -451,7 +453,8 @@ global
 .. _data-type-gettext-gp:
 
 GP
-==
+--
+
 :aspect:`getText Key:`
    GP
 
@@ -480,7 +483,7 @@ GP
 .. _data-type-gettext-level:
 
 level
-=====
+-----
 
 :aspect:`getText Key:`
    level
@@ -499,7 +502,7 @@ level
 .. _data-type-gettext-levelfield:
 
 levelfield
-==========
+----------
 
 :aspect:`getText Key:`
    levelfield
@@ -528,7 +531,8 @@ levelfield
 .. _data-type-gettext-leveltitle:
 
 leveltitle, leveluid, levelmedia
-================================
+--------------------------------
+
 :aspect:`getText Key:`
    leveltitle, leveluid or levelmedia
 
@@ -568,7 +572,7 @@ leveltitle, leveluid, levelmedia
 .. _data-type-gettext-lll:
 
 LLL
-===
+---
 
 :aspect:`getText Key:`
    LLL
@@ -588,7 +592,7 @@ LLL
 .. _data-type-gettext-page:
 
 page
-====
+----
 
 :aspect:`getText Key:`
    page
@@ -607,7 +611,8 @@ page
 .. _data-type-gettext-pagelayout:
 
 pagelayout
-==========
+----------
+
 :aspect:`getText Key:`
    pagelayout
 
@@ -625,7 +630,7 @@ pagelayout
 .. _data-type-gettext-parameters:
 
 parameters
-==========
+----------
 
 :aspect:`getText Key:`
    parameters
@@ -649,7 +654,7 @@ parameters
 .. _data-type-gettext-path:
 
 path
-====
+----
 
 :aspect:`getText Key:`
    path
@@ -681,7 +686,7 @@ path
 .. _data-type-gettext-register:
 
 register
-========
+--------
 
 :aspect:`getText Key:`
    register
@@ -703,7 +708,7 @@ register
 .. _data-type-gettext-session:
 
 session
-=======
+-------
 
 :aspect:`getText Key:`
    session
@@ -726,7 +731,7 @@ session
 ..  _data-type-site:
 
 site
-====
+----
 
 :aspect:`Data type:`
     site
@@ -775,7 +780,7 @@ site
 ..  _data-type-siteLanguage:
 
 siteLanguage
-============
+------------
 
 :aspect:`Data type:`
     siteLanguage
@@ -844,7 +849,7 @@ siteLanguage
 .. _data-type-gettext-tsfe:
 
 TSFE
-====
+----
 
 :aspect:`getText Key:`
    TSFE
