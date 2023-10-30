@@ -347,17 +347,6 @@ Properties
 .. container:: table-row
 
    Property
-         imgMap
-
-   Data type
-         ->IMGMAP
-
-         ->stdWrap properties for "altText" and "titleText" in this case
-
-
-.. container:: table-row
-
-   Property
          niceText
 
    Data type
