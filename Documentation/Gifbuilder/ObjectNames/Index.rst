@@ -1,16 +1,15 @@
-.. include:: /Includes.rst.txt
-.. index:: GIFBUILDER; Objects
-.. _gifbuilder-object-names:
+..  include:: /Includes.rst.txt
+..  index:: GIFBUILDER; Objects
+..  _gifbuilder-object-names:
 
-============================
-Object names in this section
-============================
+==================
+GIFBUILDER objects
+==================
 
-Whenever you see a reference to anything named an "object" in this
-section it's a reference to a "Gifbuilder Object" and not the
-"cObjects" from the previous section. Confusion could happen, because
-"TEXT" and "IMAGE" are objects in *both* areas; note that they are
-different each time!
+Whenever you see a reference to anything named an "object" in this section it
+is a reference to a GIFBUILDER object and not the :ref:`cObjects <cobject>`.
+Confusion could happen, because :typoscript:`TEXT` and :typoscript:`IMAGE` are
+objects in *both* areas; note that they are different each time!
 
 ..  toctree::
     :glob:
