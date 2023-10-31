@@ -6,66 +6,85 @@
 CROP
 ====
 
-**Note:** This object resets workArea to the new dimensions of the
-image!
+..  note::
+    This object resets :ref:`workArea <gifbuilder-properties-workArea>` to the
+    new dimensions of the image!
 
 Properties
 ==========
 
-.. ### BEGIN~OF~TABLE ###
+..  contents::
+    :local:
 
-.. container:: table-row
+..  _gifbuilder-crop-align:
 
-   Property
-         backColor
+align
+-----
 
-   Data type
-         :t3-data-type:`GraphicColor` /:ref:`stdWrap <stdwrap>`
+..  t3-gifbuilder-crop:: align
 
-   Default
-         The original backColor
+    :Data type: VHalign / :ref:`stdWrap <stdwrap>`
+    :Default: l, t
 
-   Description
-         *See "Data types reference".*
+    Pair of values, which defines the horizontal and vertical alignment of
+    the crop frame.
 
+    **Values:**
 
+    Horizontal alignment:
 
-.. container:: table-row
+    l
+        left
 
-   Property
-         align
+    c
+        center
 
-   Data type
-         VHalign /:ref:`stdWrap <stdwrap>`
+    r
+        right
 
-   Default
-         l, t
+    Vertical alignment:
 
-   Description
-         Horizontal and vertical alignment of the crop frame.
+    t
+        top
 
-         *See "Data types reference".*
+    c
+        center
 
+    b
+        bottom
 
+    **Example:**
 
-.. container:: table-row
+    Horizontally centered, vertically at the bottom:
 
-   Property
-         crop
+    ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-   Data type
-         x,y,w,h + calc /:ref:`stdWrap <stdwrap>`
-
-   Description
-         x,y is the offset of the crop-frame from the position specified by
-         "align".
-
-         w,h are the dimensions of the frame.
-
-         For the usage of "calc" see the according note at the beginning of the
-         section "GIFBUILDER".
+        align = c, b
 
 
-.. ###### END~OF~TABLE ######
+..  _gifbuilder-crop-backColor:
 
-[tsref:->GIFBUILDER.(GBObj).CROP]
+backColor
+---------
+
+..  t3-gifbuilder-crop:: backColor
+
+    :Data type: :t3-data-type:`GraphicColor` / :ref:`stdWrap <stdwrap>`
+    :Default: The original background color
+
+    Background color.
+
+..  _gifbuilder-crop-crop:
+
+crop
+----
+
+..  t3-gifbuilder-crop:: crop
+
+    :Data type: x,y,w,h :ref:`+calc <gifbuilder-calc>` /:ref:`stdWrap <stdwrap>`
+
+    x,y is the offset of the crop frame from the position specified by
+    :ref:`align <gifbuilder-crop-align>`.
+
+    w,h are the dimensions of the frame.
