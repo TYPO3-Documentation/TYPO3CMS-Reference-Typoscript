@@ -438,15 +438,6 @@ object's quality is too poor for your needs, here are some suggestions
 made on 06.02.21 on the T3 Dev list by JoH that should enable you to
 create much better quality images:
 
-*   To get best results you should always set
-    :ref:`[GFX][gdlib_png] = 1 <t3coreapi:typo3ConfVars_gfx_gdlib_png>` in the
-    :guilabel:`Admin Tools > Maintenance > Configure Installation-Wide Options`
-    backend module. Otherwise all internal operations will be done with GIF
-    which only supports 256 colors. As soon as this option is set, all
-    image operations are done internally with PNG images but still using
-    256 colors. This is due to the fact that PNG had to be used as a
-    replacement for the patented GIF format a few years ago.
-
 *   Never use JPG or GIF as source files for the GIFBUILDER - they always
     contain artefacts that will be multiplied by the rendering process -
     use uncompressed TIF or maybe even AI files instead.
