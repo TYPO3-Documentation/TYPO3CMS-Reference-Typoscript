@@ -243,6 +243,7 @@ Properties
          Offset all objects on the image.
 
 
+..  _gifbuilder-properties-workArea:
 
 .. container:: table-row
 
