@@ -15,6 +15,5 @@ objects in *both* areas; note that they are different each time!
     :glob:
     :maxdepth: 1
 
-    Properties/Index
     */Index
 
