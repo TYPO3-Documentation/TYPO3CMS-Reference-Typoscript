@@ -6,110 +6,109 @@
 EMBOSS
 ======
 
-Our emboss are actually two shadows offset in opposite directions and with
-different colors as to create an effect of light cast onto an embossed
+The :typoscript:`EMBOSS` object uses two shadow offsets in opposite directions
+and with different colors to create an effect of light cast onto an embossed
 text.
+
 
 Properties
 ==========
 
-.. ### BEGIN~OF~TABLE ###
-
-.. container:: table-row
-
-   Property
-         textObjNum
-
-   Data type
-         positive integer /:ref:`stdWrap <stdwrap>`
-
-   Description
-         Must point to the TEXT object if these shadow properties are not
-         properties to a TEXT object directly ("stand-alone shadow"). Then the
-         shadow needs to know which TEXT object it should be a shadow of!
-
-         If - on the other hand - the shadow is a property to a TEXT object,
-         this property is not needed.
+..  contents::
+    :local:
 
 
-.. container:: table-row
+..  _gifbuilder-emboss-blur:
 
-   Property
-         offset
+blur
+----
 
-   Data type
-         x,y /:ref:`stdWrap <stdwrap>`
+..  t3-gifbuilder-emboss:: blur
 
-   Description
-         Offset of the emboss.
+    :Data type: integer (1-99) / :ref:`stdWrap <stdwrap>`
 
-
-.. container:: table-row
-
-   Property
-         highColor
-
-   Data type
-         :t3-data-type:`GraphicColor` /:ref:`stdWrap <stdwrap>`
-
-   Description
-         Upper border-color
+    Blurring of the shadow. Above 40 only values of 40, 50, 60, 70, 80, 90
+    are relevant.
 
 
-.. container:: table-row
+..  _gifbuilder-emboss-highColor:
 
-   Property
-         lowColor
+highColor
+---------
 
-   Data type
-         :t3-data-type:`GraphicColor` /:ref:`stdWrap <stdwrap>`
+..  t3-gifbuilder-emboss:: highColor
 
-   Description
-         lower border-color
+    :Data type: :t3-data-type:`GraphicColor` / :ref:`stdWrap <stdwrap>`
 
-
-.. container:: table-row
-
-   Property
-         blur
-
-   Data type
-         positive integer (1-99) /:ref:`stdWrap <stdwrap>`
-
-   Description
-         Blurring of the shadow. Above 40 only values of 40,50,60,70,80,90
-         means something.
+    Upper border color.
 
 
-.. container:: table-row
+..  _gifbuilder-emboss-intensity:
 
-   Property
-         opacity
+intensity
+---------
 
-   Data type
-         positive integer (1-100) /:ref:`stdWrap <stdwrap>`
+..  t3-gifbuilder-emboss:: intensity
 
-   Description
-         The degree to which the shadow conceals the background. Mathematically
-         speaking: Opacity = Transparency^-1. E.g. 100% opacity = 0%
-         transparency.
+    :Data type: integer (0-100) / :ref:`stdWrap <stdwrap>`
 
-         Only active with a value for blur.
+    How "massive" the emboss is. This value can - if it has a high value
+    combined with a blurred shadow - create a kind of soft-edged outline.
 
 
-.. container:: table-row
+..  _gifbuilder-emboss-lowColor:
 
-   Property
-         intensity
+lowColor
+--------
 
-   Data type
-         positive integer (0-100) /:ref:`stdWrap <stdwrap>`
+..  t3-gifbuilder-emboss:: lowColor
 
-   Description
-         How "massive" the emboss is. This value can - if it has a high value
-         combined with a blurred shadow - create a kind of soft-edged outline.
+    :Data type: :t3-data-type:`GraphicColor` / :ref:`stdWrap <stdwrap>`
+
+    Lower border color.
 
 
-.. ###### END~OF~TABLE ######
+..  _gifbuilder-emboss-opacity:
 
-[tsref:->GIFBUILDER.(GBObj).EMBOSS]
+opacity
+-------
+
+..  t3-gifbuilder-emboss:: opacity
+
+    :Data type: integer (1-100) / :ref:`stdWrap <stdwrap>`
+
+    The degree to which the shadow conceals the background. Mathematically
+    speaking: Opacity = Transparency^-1. For example, 100% opacity = 0%
+    transparency.
+
+    Only active with a value for :ref:`blur <gifbuilder-emboss-blur>`.
+
+
+..  _gifbuilder-emboss-offset:
+
+offset
+------
+
+..  t3-gifbuilder-emboss:: offset
+
+    :Data type: x,y / :ref:`stdWrap <stdwrap>`
+
+    Offset of the emboss.
+
+
+..  _gifbuilder-emboss-textObjNum:
+
+textObjNum
+----------
+
+..  t3-gifbuilder-emboss:: textObjNum
+
+    :Data type: positive integer / :ref:`stdWrap <stdwrap>`
+
+    Must point to the :ref:`TEXT <gifbuilder-text>` object, if these
+    :typoscript:`EMBOSS` properties are not properties to a TEXT object directly
+    ("stand-alone emboss"). Then the emboss needs to know which TEXT object it
+    should be an emboss of!
+
+    If - on the other hand - the :typoscript:`EMBOSS` object is a property to a
+    :ref:`TEXT <gifbuilder-text>` object, this property is not needed.
