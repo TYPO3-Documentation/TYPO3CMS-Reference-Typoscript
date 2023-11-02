@@ -28,4 +28,5 @@ supported file format. PNG and JPG can be created as well today (configured with
 
     Examples
     Calc
+    Properties
     ObjectNames/Index
