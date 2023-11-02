@@ -6,298 +6,390 @@
 EFFECT
 ======
 
-Allows you to apply one or more of the following effects to the image.
+The :typoscript:`EFFECT` object allows to apply one or more of the
+:ref:`following effects <gifbuilder-effect-effects>` to the image.
 
-The EFFECT object only has one property: "value". stdWrap is available for
-"value".
+It has only one property: :typoscript:`value`.
+:ref:`stdWrap <stdwrap>` is available for :typoscript:`value`.
+
 
 Syntax
 ======
 
-.. code-block:: none
-   :caption: Syntax
+..  code-block:: none
+    :caption: Syntax
 
-   20.value = <property> = <value> | <property> = <value>
+    20 = EFFECT
+    20.value = <effect>=<value> | <effect>=<value>
 
-All effects are defined as properties or property-value pairs inside
-"value". Multiple properties or property-value pairs are separated by
-"\|".
+All effects are defined as the effect only or as an effect/value pair inside
+:typoscript:`value`. Multiple effects or effect/value pairs are separated by
+:typoscript:`|`.
+
 
 Example
 =======
 
-.. code-block:: typoscript
-   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-   lib.image = IMAGE
-   lib.image {
-     file = GIFBUILDER
-     file {
-       XY = 1024,768
-       format = jpg
+    lib.image = IMAGE
+    lib.image {
+      file = GIFBUILDER
+      file {
+        XY = 1024,768
+        format = jpg
 
-       10 = IMAGE
-       10.file = fileadmin/image.jpg
+        10 = IMAGE
+        10.file = fileadmin/image.jpg
 
-       20 = EFFECT
-       20.value = gamma=1.3 | flip | rotate=180
-     }
-   }
+        20 = EFFECT
+        20.value = gamma=1.3 | flip | rotate=180
+      }
+    }
 
-Properties
-==========
+..  _gifbuilder-effect-effects:
 
-.. ### BEGIN~OF~TABLE ###
+Effects
+=======
 
-.. container:: table-row
+..  contents::
+    :local:
 
-   Property
-         gamma
+..  _gifbuilder-effect-blur:
 
-   Data type
-         double (0.5 - 3.0)
+blur
+----
 
-   Default
-         1.0
+..  t3-gifbuilder-effect:: blur
 
-   Description
-         Sets the gamma value.
+    :Data type: integer (1-99)
+    :Default: 0
 
+    Blurs the edges inside the image.
 
+    **Example:**
 
-.. container:: table-row
+    ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-   Property
-         blur
+        20 = EFFECT
+        20.value = blur=10
 
-   Data type
-         positive integer (1-99)
 
-   Default
-         0
+..  _gifbuilder-effect-charcoal:
 
-   Description
-         Blurs the edges inside the image.
+charcoal
+--------
 
+..  t3-gifbuilder-effect:: charcoal
 
+    :Data type: integer (0-100)
+    :Default: 0
 
-.. container:: table-row
+    Makes the image look as if it has been drawn with charcoal and defines
+    the intensity of that effect.
 
-   Property
-         sharpen
+    **Example:**
 
-   Data type
-         positive integer (1-99)
+    ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-   Default
-         0
+        20 = EFFECT
+        20.value = charcoal=5
 
-   Description
-         Sharpens the edges inside the image.
 
+..  _gifbuilder-effect-colors:
 
+colors
+------
 
-.. container:: table-row
+..  t3-gifbuilder-effect:: colors
 
-   Property
-         solarize
+    :Data type: integer (2-255)
 
-   Data type
-         positive integer (0-99)
+    Defines the number of different colors to use in the image.
 
-   Description
-         Color reduction, 'burning' the brightest colors black. The
-         brighter the color, the darker the solarized color is. This
-         happens in photography when chemical film is over exposed.
+    **Example:**
 
-         The value sets the grayscale level above which the color is
-         negated.
+    ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
+        20 = EFFECT
+        20.value = colors=100
 
-.. container:: table-row
 
-   Property
-         swirl
+..  _gifbuilder-effect-edge:
 
-   Data type
-         positive integer (0-100)
+edge
+----
 
-   Default
-         0
+..  t3-gifbuilder-effect:: edge
 
-   Description
-         The image is swirled or spun from its center.
+    :Data type: integer (0-99)
+    :Default: 0
 
+    Detect edges within an image. This is a gray-scale operator, so it is
+    applied to each of the three color channels separately. The value defines
+    the radius for the edge detection.
 
+    **Example:**
 
-.. container:: table-row
+    ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-   Property
-         wave
+        20 = EFFECT
+        20.value = edge=8
 
-   Data type
-         positive integer,positive integer
 
-   Description
-         Provide values for the amplitude and the length of a wave,
-         separated by comma. All horizontal edges in the image will
-         then be transformed by a wave with the given amplitude and
-         length.
+..  _gifbuilder-effect-emboss:
 
-         Maximum value for amplitude and length is 100.
+emboss
+------
 
-         **Example:**
+..  t3-gifbuilder-effect:: emboss
 
-         .. code-block:: typoscript
-            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    Creates a relief effect: Creates highlights or shadows that replace
+    light and dark boundaries in the image.
 
-            20 = EFFECT
-            20.value = wave=1,20
+    **Example:**
 
+    ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-.. container:: table-row
+        20 = EFFECT
+        20.value = emboss
 
-   Property
-         charcoal
 
-   Data type
-         positive integer (0-100)
+..  _gifbuilder-effect-flip:
 
-   Description
-         Makes the image look as if it had been drawn with charcoal and defines
-         the intensity of that effect.
+flip
+----
 
+..  t3-gifbuilder-effect:: flip
 
-.. container:: table-row
+    Vertical flipping.
 
-   Property
-         gray
+    **Example:**
 
-   Data type
-         -
+    ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-   Description
-         The image is converted to gray tones.
+        20 = EFFECT
+        20.value = flip
 
-         **Example:**
 
-         This gives the image a slight wave and renders it in gray.
+..  _gifbuilder-effect-flop:
 
-         .. code-block:: typoscript
-            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+flop
+----
 
-            20 = EFFECT
-            20.value = wave=1,20 | gray
+..  t3-gifbuilder-effect:: flop
 
+    Horizontal flipping.
 
-.. container:: table-row
+    **Example:**
 
-   Property
-         edge
+    ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-   Data type
-         positive integer
+        20 = EFFECT
+        20.value = flop
 
-   Description
-         Detect edges within an image. This is a grey-scale operator, so it is
-         applied to each of the three color channels separately. The value defines
-         the radius for the edge detection.
 
-.. container:: table-row
+..  _gifbuilder-effect-gamma:
 
-   Property
-         emboss
+gamma
+-----
 
-   Data type
-         -
+..  t3-gifbuilder-effect:: gamma
 
-   Description
-         Creates a relief effect: Creates highlights or shadows that replace
-         light and dark boundaries in the image.
+    :Data type: double (0.5 - 3.0)
+    :Default: 1.0
 
+    Sets the `gamma <https://en.wikipedia.org/wiki/Gamma_correction>`__ value.
 
-.. container:: table-row
+    **Example:**
 
-   Property
-         flip
+    ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-   Data type
-         -
+        20 = EFFECT
+        20.value = gamma=1.3
 
-   Description
-         Vertical flipping.
 
+..  _gifbuilder-effect-gray:
 
-.. container:: table-row
+gray
+----
 
-   Property
-         flop
+..  t3-gifbuilder-effect:: gray
 
-   Data type
-         -
+    The image is converted to gray tones.
 
-   Description
-         Horizontal flipping.
+    **Example:**
 
+    This gives the image a slight :ref:`wave <gifbuilder-effect-wave>` and
+    renders it in gray.
 
-.. container:: table-row
+    ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-   Property
-         rotate
+        20 = EFFECT
+        20.value = wave=1,20 | gray
 
-   Data type
-         positive integer (0-360)
 
-   Default
-         0
+..  _gifbuilder-effect-invert:
 
-   Description
-         Number of degrees for a clockwise rotation.
+invert
+------
 
-         Image dimensions will grow if needed, so that nothing is cut off from
-         the original image.
+..  t3-gifbuilder-effect:: invert
 
+    Invert the colors.
 
+    **Example:**
 
-.. container:: table-row
+    ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-   Property
-         colors
+        20 = EFFECT
+        20.value = invert
 
-   Data type
-         positive integer (2-255)
 
-   Description
-         Defines the number of different colors to use in the image.
+..  _gifbuilder-effect-rotate:
 
+rotate
+------
 
-.. container:: table-row
+..  t3-gifbuilder-effect:: rotate
 
-   Property
-         shear
+    :Data type: integer (0-360)
+    :Default: 0
 
-   Data type
-         integer (-90 - 90)
+    Number of degrees for a clockwise rotation.
 
-   Description
-         Number of degrees for a horizontal shearing. Horizontal shearing
-         slides one edge of the image along the X axis, creating a
-         parallelogram. Provide an integer between -90 and 90 for the number
-         of degrees.
+    Image dimensions will grow if needed, so that nothing is cut off from
+    the original image.
 
+    **Example:**
 
-.. container:: table-row
+    ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-   Property
-         invert
+        20 = EFFECT
+        20.value = rotate=180
 
-   Data type
-         -
 
-   Description
-         Invert the colors.
+..  _gifbuilder-effect-sharpen:
 
+sharpen
+-------
 
-.. ###### END~OF~TABLE ######
+..  t3-gifbuilder-effect:: sharpen
 
-[tsref:->GIFBUILDER.(GBObj).EFFECT]
+    :Data type: integer (0-99)
+    :Default: 0
+
+    Sharpens the edges inside the image.
+
+    **Example:**
+
+    ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+        20 = EFFECT
+        20.value = sharpen=12
+
+
+..  _gifbuilder-effect-shear:
+
+shear
+-----
+
+..  t3-gifbuilder-effect:: shear
+
+    :Data type: integer (-90 - 90)
+    :Default: 0
+
+    Number of degrees for a horizontal shearing. Horizontal shearing
+    slides one edge of the image along the X axis, creating a
+    parallelogram. Provide an integer between -90 and 90 for the number
+    of degrees.
+
+    **Example:**
+
+    ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+        20 = EFFECT
+        20.value = shear=-30
+
+
+..  _gifbuilder-effect-solarize:
+
+solarize
+--------
+
+..  t3-gifbuilder-effect:: solarize
+
+    :Data type: integer (0-99)
+    :Default: 0
+
+    Color reduction, "burning" the brightest colors black. The brighter the
+    color, the darker the solarized color is. This happens in photography when
+    chemical film is over exposed.
+
+    The value sets the grayscale level above which the color is negated.
+
+    **Example:**
+
+    ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+        20 = EFFECT
+        20.value = solarize=15
+
+
+..  _gifbuilder-effect-swirl:
+
+swirl
+-----
+
+..  t3-gifbuilder-effect:: swirl
+
+    :Data type: integer (0-1000)
+    :Default: 0
+
+    The image is swirled or spun from its center.
+
+    **Example:**
+
+    ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+        20 = EFFECT
+        20.value = swirl=200
+
+
+..  _gifbuilder-effect-wave:
+
+wave
+----
+
+..  t3-gifbuilder-effect:: wave
+
+    :Data type: integer,integer (both 0-99)
+    :Default: 0,0
+
+    Provide values for the amplitude and the length of a wave, separated by
+    comma. All horizontal edges in the image will then be transformed by a wave
+    with the given amplitude and length.
+
+    **Example:**
+
+    ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+        20 = EFFECT
+        20.value = wave=1,20
