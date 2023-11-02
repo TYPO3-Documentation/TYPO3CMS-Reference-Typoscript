@@ -219,17 +219,14 @@ GraphicColor
 
     ..  rubric:: Examples
 
-    red *(HTML-color)*
-
-    #ffeecc *(HTML-color)*
-
-    255,0,255 *(RGB-integers)*
+    *   :typoscript:`red` (HTML color)
+    *   :typoscript:`#ffeecc` (HTML color as hexadecimal notation)
+    *   :typoscript:`255,0,255` (HTML color as decimal notation)
 
     *Extra:*
 
-    red *: \*0.8 ("red" is darkened by factor 0.8)*
-
-    #ffeecc *: +16 ("ffeecc" is going to #fffedc because 16 is added)*
+    *   :typoscript:`red : *0.8` ("red" is darkened by factor 0.8)
+    *   :typoscript:`#ffeecc : +16` ("ffeecc" is going to #fffedc because 16 is added)
 
 imageExtension
 ==============
