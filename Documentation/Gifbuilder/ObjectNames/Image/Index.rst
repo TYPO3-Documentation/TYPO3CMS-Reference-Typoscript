@@ -8,82 +8,109 @@ IMAGE
 
 Renders an image file.
 
+
 Properties
 ==========
 
-.. ### BEGIN~OF~TABLE ###
-
-.. container:: table-row
-
-   Property
-         file
-
-   Data type
-         imgResource
-
-   Description
-         The image file.
+..  contents::
+    :local:
 
 
-.. container:: table-row
+..  _gifbuilder-image-align:
 
-   Property
-         offset
+align
+-----
 
-   Data type
-         x,y +calc /:ref:`stdWrap <stdwrap>`
+..  t3-gifbuilder-image:: align
 
-   Default
-         0,0
+    :Data type: VHalign / :ref:`stdWrap <stdwrap>`
+    :Default: 1,1
 
-   Description
-         Offset of the image
+    Pair of values, which defines the horizontal and vertical alignment of
+    the image.
 
+    **Values:**
 
+    Horizontal alignment:
 
-.. container:: table-row
+    l
+        left
 
-   Property
-         tile
+    c
+        center
 
-   Data type
-         x,y /:ref:`stdWrap <stdwrap>`
+    r
+        right
 
-   Default
-         1,1
+    Vertical alignment:
 
-   Description
-         Repeat the image x,y times (which creates the look of tiles).
+    t
+        top
 
-         Maximum number of times in each direction is 20. If you need more,
-         use a larger image.
+    c
+        center
 
+    b
+        bottom
 
-.. container:: table-row
+    **Example:**
 
-   Property
-         align
+    Horizontally centered, vertically at the bottom:
 
-   Data type
-         VHalign /:ref:`stdWrap <stdwrap>`
+    ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-   Description
-         *See in the "Data types reference" at the beginning of this document
-         or in the table "BOX".*
-
-
-.. container:: table-row
-
-   Property
-         mask
-
-   Data type
-         imgResource
-
-   Description
-         Optional mask-image for the image file.
+        align = c, b
 
 
-.. ###### END~OF~TABLE ######
+..  _gifbuilder-image-file:
 
-[tsref:->GIFBUILDER.(GBObj).IMAGE]
+file
+----
+
+..  t3-gifbuilder-image:: file
+
+    :Data type: :t3-data-type:`imgResource`
+
+    The image file.
+
+
+..  _gifbuilder-image-mask:
+
+mask
+----
+
+..  t3-gifbuilder-image:: mask
+
+    :Data type: :t3-data-type:`imgResource`
+
+    Optional mask image for the image file.
+
+
+..  _gifbuilder-image-offset:
+
+offset
+------
+
+..  t3-gifbuilder-image:: offset
+
+    :Data type: x,y :ref:`+calc <gifbuilder-calc>` / :ref:`stdWrap <stdwrap>`
+    :Default: 0,0
+
+    Offset of the image.
+
+
+..  _gifbuilder-image-tile:
+
+tile
+----
+
+..  t3-gifbuilder-image:: tile
+
+    :Data type: x,y / :ref:`stdWrap <stdwrap>`
+    :Default: 1,1
+
+    Repeat the image x,y times (which creates the look of tiles).
+
+    Maximum number of times in each direction is 20. If you need more,
+    use a larger image.
