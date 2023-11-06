@@ -6,285 +6,298 @@
 Properties
 ==========
 
-.. ### BEGIN~OF~TABLE ###
+..  contents::
+    :local:
 
-.. container:: table-row
+..  _gifbuilder-properties-array:
 
-   Property
-         1,2,3,4...
+1,2,3,4...
+==========
 
-   Data type
-         Gifbuilder Object \+ .if (->if)
+..  option:: 1,2,3,4...
 
-   Description
-         .if (->if) is a property of all GIFBUILDER objects. If the property is
-         present and **not** set, the object is **not** rendered! This
-         corresponds to the functionality of ".if" of the stdWrap-function.
+    :Data type: :ref:`Gifbuilder Object <gifbuilder-object-names>` + .if (:ref:`->if <if>`)
 
+    :typoscript:`.if` is a property of all GIFBUILDER objects. If the property
+    is present and **not** set, the object is **not** rendered! This
+    corresponds to the functionality of :typoscript:`.if` of the
+    :ref:`stdWrap <stdwrap>` function.
 
-.. container:: table-row
 
-   Property
-         charRangeMap.[array]
+.. _gifbuilder-properties-backColor:
 
-   Data type
-         string
+backColor
+=========
 
-   Description
-         Basename of font file to match for this configuration. Notice that
-         only the *filename* of the font file is used - the path is stripped
-         off. This is done to make matching easier and avoid problems when font
-         files might move to other locations in extensions etc.
+..  option:: backColor
 
-         So if you use the font file "EXT:myext/fonts/vera.ttf" or
-         "typo3/sysext/install/Resources/Private/Font/vera.ttf" both of them will
-         match with this configuration.
+    :Data type: :t3-data-type:`GraphicColor` / :ref:`stdWrap <stdwrap>`
+    :Default: white
 
-         **The key:**
+    Background color of the image.
 
-         The value of the array key will be the key used when forcing the
-         configuration into "splitRendering" configuration of the individual
-         GIFBUILDER objects. In the example below the key is "123".
 
-         Notice: If the key is already found in the local GIFBUILDER
-         configuration the content of that key is respected and not overridden.
-         Thus you can make local configurations which override the global
-         setting.
+..  _gifbuilder-properties-charRangeMap:
 
+charRangeMap
+============
 
-.. container:: table-row
+..  _gifbuilder-properties-charRangeMap-array:
 
-   Property
-         charRangeMap.[array].charMapConfig
+[array]
+-------
 
-   Data type
-         TEXT / splitRendering.[array] configuration
+..  option:: charRangeMap.[array]
 
-   Description
-         splitRendering configuration to set. See GIFBUILDER TEXT object for
-         details.
+    :Data type: string
 
+    Basename of font file to match for this configuration. Notice that
+    only the *filename* of the font file is used - the path is stripped
+    off. This is done to make matching easier and avoid problems when font
+    files might move to other locations in extensions etc.
 
-.. container:: table-row
+    So if you use the font file
+    :file:`EXT:my_extension/Resources/Private/Fonts/vera.ttf` or
+    :file:`EXT:install/Resources/Private/Font/vera.ttf` both of them will
+    match with this configuration.
 
-   Property
-         charRangeMap.[array].fontSizeMultiplicator
+    **The key:**
 
-   Data type
-         double
+    The value of the array key will be the key used when forcing the
+    configuration into :ref:`splitRendering <gifbuilder-text-splitRendering>`
+    configuration of the individual
+    :ref:`GIFBUILDER objects <gifbuilder-object-names>`.
+    In the :ref:`example below <gifbuilder-properties-charRangeMap-pixelSpaceFontSizeRef>`
+    the key is :typoscript:`123`.
 
-   Description
-         If set, this will take the font size of the TEXT GIFBUILDER object and
-         multiply with this amount (xx.xx) and override the "fontSize" property
-         inside "charMapConfig".
+    ..  note::
+        If the key is already found in the local GIFBUILDER configuration the
+        content of that key is respected and not overridden. Thus you can make
+        local configurations which override the global setting.
 
 
-.. container:: table-row
+..  _gifbuilder-properties-charRangeMap-charMapConfig:
 
-   Property
-         charRangeMap.[array].pixelSpaceFontSizeRef
+[array].charMapConfig
+---------------------
 
-   Data type
-         double
+..  option:: charRangeMap.[array].charMapConfig
 
-   Description
-         If set, this will multiply the four [x/y]Space[Before/After]
-         properties of split rendering with the relationship between the
-         fontsize and this value.
+    :Data type: :ref:`TEXT <gifbuilder-text>` / :ref:`splitRendering.[array] <gifbuilder-text-splitRendering>` configuration
 
-         In other words: Since pixel space may vary depending on the font size
-         used, you can specify by this value at what fontsize the pixel
-         space settings are optimized and for other font sizes this will
-         automatically be adjusted according to this font size.
+    splitRendering configuration to set.
+    See :ref:`GIFBUILDER TEXT object <gifbuilder-text>` for details.
 
 
-.. container:: table-row
+..  _gifbuilder-properties-charRangeMap-fontSizeMultiplicator:
 
-   Property
-         XY
+[array].fontSizeMultiplicator
+-----------------------------
 
-   Data type
-         x,y +calc (1-2000) /:ref:`stdWrap <stdwrap>`
+..  option:: charRangeMap.[array].fontSizeMultiplicator
 
-   Default
-         120,50
+    :Data type: double
 
-   Description
-         Size of the image file.
+    If set, this will take the font size of the
+    :ref:`GIFBUILDER TEXT object <gifbuilder-text>` and multiply with this
+    amount (xx.xx) and override the :ref:`fontSize <gifbuilder-text-fontSize>`
+    property inside
+    :ref:`charMapConfig <gifbuilder-properties-charRangeMap-charMapConfig>`.
 
-         For the usage of "calc" see the according note at the beginning of
-         the section "GIFBUILDER".
 
+..  _gifbuilder-properties-charRangeMap-pixelSpaceFontSizeRef:
 
-.. _gifbuilder-format:
+[array].pixelSpaceFontSizeRef
+-----------------------------
 
-.. container:: table-row
+..  option:: charRangeMap.[array].pixelSpaceFontSizeRef
 
-   Property
-         format
+    :Data type: double
 
-   Data type
-         "gif" / "jpg" / "jpeg" / "png"
+    If set, this will multiply the four [x/y]Space[Before/After]
+    properties of split rendering with the relationship between the
+    font size and this value.
 
-   Default
-         gif
+    In other words: Since pixel space may vary depending on the font size
+    used, you can specify by this value at what font size the pixel
+    space settings are optimized and for other font sizes this will
+    automatically be adjusted according to this font size.
 
-   Description
-         File type of the output image.
+    **Example**:
 
-         It is possible to define the quality of a JPG image globally via
-         :ref:`$TYPO3_CONF_VARS['GFX']['jpg_quality'] <t3coreapi:typo3ConfVars_gfx_jpg_quality>`
-         or via the :ref:`quality <gifbuilder-quality>` property on a per-image
-         basis.
+    ..  code-block:: typoscript
 
+        _GIFBUILDER.charRangeMap {
+          123 = arial.ttf
+          123 {
+            charMapConfig {
+              fontFile = EXT:install/Resources/Private/Font/vera.ttf
+              value = 48-57
+              color = green
+              xSpaceBefore = 3
+              xSpaceAfter = 3
+            }
 
-.. container:: table-row
+            pixelSpaceFontSizeRef = 24
+          }
+        }
 
-   Property
-         transparentBackground
+    In this example :typoscript:`xSpaceBefore` and :typoscript:`xSpaceAfter`
+    will be "3" when the font size is 24. If this configuration is used on a
+    :ref:`GIFBUILDER TEXT object <gifbuilder-text>` where the font size is only
+    16, the spacing values will be corrected by "16/24", effectively reducing
+    the pixel space to "2" in that case.
 
-   Data type
-         boolean /:ref:`stdWrap <stdwrap>`
 
-   Description
-         Set this flag to render the background transparent. TYPO3 makes the
-         color found at position 0,0 of the image (upper left corner)
-         transparent.
+.. _gifbuilder-properties-format:
 
-         If you render text, you should leave the niceText option OFF as the
-         result will probably be more precise without the niceText antialiasing
-         hack.
+format
+======
 
+..  option:: format
 
-.. container:: table-row
+    :Data type: "gif" / "jpg" / "jpeg" / "png"
+    :Default: gif
 
-   Property
-         transparentColor
+    File type of the output image.
 
-   Data type
-         *HTMLColor* /:ref:`stdWrap <stdwrap>`
+    It is possible to define the quality of a JPG image globally via
+    :ref:`$TYPO3_CONF_VARS['GFX']['jpg_quality'] <t3coreapi:typo3ConfVars_gfx_jpg_quality>`
+    or via the :ref:`quality <gifbuilder-properties-quality>` property on a per-image
+    basis.
 
-   Description
-         Specify a color that should be transparent
 
-         **Example-values:**
+.. _gifbuilder-properties-maxHeight:
 
-         #ffffcc
+maxHeight
+=========
 
-         red
+..  option:: maxHeight
 
-         255,255,127
+    :Data type: positive integer / :ref:`stdWrap <stdwrap>`
 
-         **Option:**
+    Maximal height of the image file.
 
-         transparentColor.closest = 1
 
-         This will allow for the closest color to be matched instead. You may
-         need this if you image is not guaranteed "clean".
+.. _gifbuilder-properties-maxWidth:
 
-         **Note:** You may experience that this does not work, if you render
-         text with the niceText option.
+maxWidth
+========
 
+..  option:: maxWidth
 
-.. _gifbuilder-quality:
+    :Data type: positive integer / :ref:`stdWrap <stdwrap>`
 
-.. container:: table-row
+    Maximal width of the image file.
 
-   Property
-         quality
 
-   Data type
-         positive integer (10-100)
+.. _gifbuilder-properties-offset:
 
-   Description
-         JPG-quality (if :ref:`.format <gifbuilder-format>` = jpg/jpeg)
+offset
+======
 
+..  option:: offset
 
-.. container:: table-row
+    :Data type: x,y :ref:`+calc <gifbuilder-calc>` / :ref:`stdWrap <stdwrap>`
+    :Default: 0,0
 
-   Property
-         backColor
+    Offset all objects on the image.
 
-   Data type
-         :t3-data-type:`GraphicColor` /:ref:`stdWrap <stdwrap>`
 
-   Default
-         white
+.. _gifbuilder-properties-quality:
 
-   Description
-         Background color of the image.
+quality
+=======
 
+..  option:: quality
 
+    :Data type: positive integer (10-100)
 
-.. container:: table-row
+    JPG-quality (if :ref:`.format <gifbuilder-properties-format>` = jpg/jpeg)
 
-   Property
-         offset
 
-   Data type
-         x,y +calc /:ref:`stdWrap <stdwrap>`
+.. _gifbuilder-properties-workArea:
 
-   Default
-         0,0
+workArea
+========
 
-   Description
-         Offset all objects on the image.
+..  option:: workArea
 
+    :Data type: x,y,w,h :ref:`+calc <gifbuilder-calc>` / :ref:`stdWrap <stdwrap>`
 
-..  _gifbuilder-properties-workArea:
+    Define the work area on the image file. All the
+    :ref:`GIFBUILDER objects <gifbuilder-object-names>` will see this as the
+    dimensions of the image file regarding alignment, overlaying of images and
+    so on. Only :ref:`TEXT objects <gifbuilder-text>` exceeding the boundaries
+    of the work area will be printed outside this area.
 
-.. container:: table-row
 
-   Property
-         workArea
+.. _gifbuilder-properties-transparentBackground:
 
-   Data type
-         x,y,w,h + calc /:ref:`stdWrap <stdwrap>`
+transparentBackground
+=====================
 
-   Description
-         Define the workarea on the image file. All the Gifbuilder Objects will
-         see this as the dimensions of the image file regarding alignment,
-         overlaying of images an so on. Only TEXT objects exceeding the
-         boundaries of the workarea will be printed outside this area.
+..  option:: transparentBackground
 
+    :Data type: boolean / :ref:`stdWrap <stdwrap>`
 
-.. container:: table-row
+    Set this flag to render the background transparent. TYPO3 makes the
+    color found at position 0,0 of the image (upper left corner) transparent.
 
-   Property
-         maxWidth
+    If you render text, you should leave the
+    :ref:`niceText <gifbuilder-text-niceText>` option **off** as the result will
+    probably be more precise without the :typoscript:`niceText` antialiasing
+    hack.
 
-   Data type
-         pixels /:ref:`stdWrap <stdwrap>`
 
-   Description
-         Maximal width of the image file.
+.. _gifbuilder-properties-transparentColor:
 
+transparentColor
+================
 
-.. container:: table-row
+..  option:: transparentColor
 
-   Property
-         maxHeight
+    :Data type: :t3-data-type:`GraphicColor` / :ref:`stdWrap <stdwrap>`
 
-   Data type
-         pixels /:ref:`stdWrap <stdwrap>`
+    Specify a color that should be transparent.
 
-   Description
-         Maximal height of the image file.
 
+.. _gifbuilder-properties-transparentColor-closest:
 
-.. container:: table-row
+closest
+-------
 
-   Property
-         reduceColors
+..  option:: transparentColor.closest
 
-   Data type
-         positive integer (1-255) /:ref:`stdWrap <stdwrap>`
+    :Data Type: boolean
 
-   Description
-         .. versionchanged:: 13.0
-            This property has been removed.
+    This will allow for the closest color to be matched instead. You may
+    need this, if your image is not guaranteed "clean".
 
+    ..  note::
+        You may experience that this does not work, if you render text with the
+        :ref:`niceText <gifbuilder-text-niceText>` option.
 
-.. ###### END~OF~TABLE ######
 
-[tsref:->GIFBUILDER]
+..  _gifbuilder-properties-XY:
+
+XY
+==
+
+..  option:: XY
+
+    :Data type: x,y :ref:`+calc <gifbuilder-calc>` (1-2000) / :ref:`stdWrap <stdwrap>`
+    :Default: 120,50
+
+    Size of the image file.
+
+
+.. _gifbuilder-properties-reduceColors:
+
+reduceColors
+============
+
+..  option:: reduceColors
+
+    ..  versionchanged:: 13.0
+        This property has been removed.
