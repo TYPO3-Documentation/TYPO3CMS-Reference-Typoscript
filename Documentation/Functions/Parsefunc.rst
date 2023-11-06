@@ -258,7 +258,7 @@ nonTypoTagUserFunc
 .. _parsefunc-sword:
 
 sword
-=====
+-----
 
 .. deprecated:: 11.5
    This functionality has been marked as deprecated as this feature only works
