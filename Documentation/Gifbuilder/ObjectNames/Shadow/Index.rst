@@ -11,91 +11,89 @@ Creates a shadow under the associated text.
 Properties
 ==========
 
-.. ### BEGIN~OF~TABLE ###
-
-.. container:: table-row
-
-   Property
-         textObjNum
-
-   Data type
-         positive integer /:ref:`stdWrap <stdwrap>`
-
-   Description
-         Must point to the TEXT object if these shadow properties are not
-         properties to a TEXT object directly ("stand-alone shadow"). Then the
-         shadow needs to know which TEXT object it should be a shadow of!
-
-         If - on the other hand - the shadow is a property to a TEXT object,
-         this property is not needed.
+..  contents::
+    :local:
 
 
-.. container:: table-row
+..  _gifbuilder-shadow-blur:
 
-   Property
-         offset
+blur
+----
 
-   Data type
-         x,y /:ref:`stdWrap <stdwrap>`
+..  t3-gifbuilder-shadow:: blur
 
-   Description
-         The offset of the shadow.
+    :Data type: integer (1-99) / :ref:`stdWrap <stdwrap>`
 
-
-.. container:: table-row
-
-   Property
-         color
-
-   Data type
-         :t3-data-type:`GraphicColor` /:ref:`stdWrap <stdwrap>`
-
-   Description
-         The color of the shadow.
+    Blurring of the shadow. Above 40 only values of 40,50,60,70,80,90
+    are relevant.
 
 
-.. container:: table-row
+..  _gifbuilder-shadow-color:
 
-   Property
-         blur
+color
+-----
 
-   Data type
-         positive integer (1-99) /:ref:`stdWrap <stdwrap>`
+..  t3-gifbuilder-shadow:: color
 
-   Description
-         Blurring of the shadow. Above 40 only values of 40,50,60,70,80,90 mean
-         something.
+    :Data type: :t3-data-type:`GraphicColor` /:ref:`stdWrap <stdwrap>`
 
-
-.. container:: table-row
-
-   Property
-         opacity
-
-   Data type
-         positive integer (1-100) /:ref:`stdWrap <stdwrap>`
-
-   Description
-         The degree to which the shadow conceals the background. Mathematically
-         speaking: Opacity = Transparency^-1. E.g. 100% opacity = 0%
-         transparency.
-
-         Only active with a value for blur.
+    The color of the shadow.
 
 
-.. container:: table-row
+..  _gifbuilder-shadow-intensity:
 
-   Property
-         intensity
+intensity
+---------
 
-   Data type
-         positive integer (0-100) /:ref:`stdWrap <stdwrap>`
+..  t3-gifbuilder-shadow:: intensity
 
-   Description
-         How "massive" the shadow is. This value can - if it has a high value
-         combined with a blurred shadow - create a kind of soft-edged outline.
+    :Data type: integer (1-100) / :ref:`stdWrap <stdwrap>`
+
+    How "massive" the shadow is. This value can - if it has a high value
+    combined with a blurred shadow - create a kind of soft-edged outline.
 
 
-.. ###### END~OF~TABLE ######
+..  _gifbuilder-shadow-offset:
 
-[tsref:->GIFBUILDER.(GBObj).SHADOW]
+offset
+------
+
+..  t3-gifbuilder-shadow:: offset
+
+    :Data type: x,y / :ref:`stdWrap <stdwrap>`
+
+    The offset of the shadow.
+
+
+..  _gifbuilder-shadow-opacity:
+
+opacity
+-------
+
+..  t3-gifbuilder-shadow:: opacity
+
+    :Data type: integer (1-100) / :ref:`stdWrap <stdwrap>`
+
+    The degree to which the shadow conceals the background. Mathematically
+    speaking: Opacity = Transparency^-1. E.g. 100% opacity = 0%
+    transparency.
+
+    Only active with a value for :ref:`blur <gifbuilder-shadow-blur>`.
+
+
+..  _gifbuilder-shadow-textObjNum:
+
+textObjNum
+----------
+
+..  t3-gifbuilder-shadow:: textObjNum
+
+    :Data type: positive integer / :ref:`stdWrap <stdwrap>`
+
+    Must point to the :ref:`TEXT <gifbuilder-text>` object, if these shadow
+    properties are not properties to a TEXT object directly ("stand-alone
+    shadow"). Then the shadow needs to know which TEXT object it should be a
+    shadow of!
+
+    If - on the other hand - the shadow is a property to a
+    :ref:`TEXT <gifbuilder-text>` object, this property is not needed.
