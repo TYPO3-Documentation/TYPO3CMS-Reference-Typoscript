@@ -6,58 +6,59 @@
 OUTLINE
 =======
 
-Creates a colored contour line around the shapes of the associated text.
+:typoscript:`OUTLINE` creates a colored contour line around the shapes of the
+associated text.
 
-This outline normally renders quite ugly as it's done by printing 4 or
-8 texts underneath the text in question. Try to use a shadow with a
-high intensity instead. That works better!
+This outline normally renders quite ugly as it is done by printing 4 or
+8 texts underneath the text in question. Try to use a
+:ref:`shadow <gifbuilder-shadow>` with a high intensity instead. That works
+better!
+
 
 Properties
 ==========
 
-.. ### BEGIN~OF~TABLE ###
-
-.. container:: table-row
-
-   Property
-         textObjNum
-
-   Data type
-         positive integer /:ref:`stdWrap <stdwrap>`
-
-   Description
-         Must point to the TEXT object if these shadow properties are not
-         properties to a TEXT object directly ("stand-alone shadow"). Then the
-         shadow needs to know which TEXT object it should be a shadow of!
-
-         If - on the other hand - the shadow is a property to a TEXT object,
-         this property is not needed.
+..  contents::
+    :local:
 
 
-.. container:: table-row
+..  _gifbuilder-outline-color:
 
-   Property
-         thickness
+color
+-----
 
-   Data type
-         x,y /:ref:`stdWrap <stdwrap>`
+..  t3-gifbuilder-outline:: color
 
-   Description
-         Thickness in each direction, range 1-2
+    :t3-data-type:`GraphicColor` / :ref:`stdWrap <stdwrap>`
 
-
-.. container:: table-row
-
-   Property
-         color
-
-   Data type
-         :t3-data-type:`GraphicColor` /:ref:`stdWrap <stdwrap>`
-
-   Description
-         Outline color
+    Color of the outline.
 
 
-.. ###### END~OF~TABLE ######
+..  _gifbuilder-outline-textObjNum:
 
-[tsref:->GIFBUILDER.(GBObj).OUTLINE]
+textObjNum
+----------
+
+..  t3-gifbuilder-outline:: textObjNum
+
+    :Data type: positive integer / :ref:`stdWrap <stdwrap>`
+
+    Must point to the :ref:`TEXT <gifbuilder-text>` object, if these outline
+    properties are not properties to a TEXT object directly ("stand-alone
+    outline"). Then the outline needs to know which TEXT object it should be an
+    outline of!
+
+    If - on the other hand - the outline is a property to a
+    :ref:`TEXT <gifbuilder-text>` object, this property is not needed.
+
+
+..  _gifbuilder-outline-thickness:
+
+thickness
+---------
+
+..  t3-gifbuilder-outline:: thickness
+
+    :Data type: x,y / :ref:`stdWrap <stdwrap>`
+
+    Thickness in each direction, range 1-2.
