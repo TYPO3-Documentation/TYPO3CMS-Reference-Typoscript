@@ -8,50 +8,49 @@ SCALE
 
 This scales the GIFBUILDER object to the provided dimensions.
 
-**Note:** This object resets workArea to the new dimensions of the
-image!
+..  note::
+    This object resets :ref:`workArea <gifbuilder-properties-workArea>` to the
+    new dimensions of the image!
+
 
 Properties
 ==========
 
-.. ### BEGIN~OF~TABLE ###
-
-.. container:: table-row
-
-   Property
-         width
-
-   Data type
-         pixels + calc /:ref:`stdWrap <stdwrap>`
-
-   Description
-         Width of the scaled image.
+..  contents::
+    :local:
 
 
-.. container:: table-row
+..  _gifbuilder-scale-height:
 
-   Property
-         height
+height
+------
 
-   Data type
-         pixels + calc /:ref:`stdWrap <stdwrap>`
+..  t3-gifbuilder-scale:: height
 
-   Description
-         Height of the scaled image.
+    :Data type: pixels :ref:`+calc <gifbuilder-calc>` / :ref:`stdWrap <stdwrap>`
 
-
-.. container:: table-row
-
-   Property
-         params
-
-   Data type
-         GraphicsMagick/ImageMagick parameters
-
-   Description
-         Parameters to be used for the processing.
+    Height of the scaled image.
 
 
-.. ###### END~OF~TABLE ######
+..  _gifbuilder-scale-params:
 
-[tsref:->GIFBUILDER.(GBObj).SCALE]
+params
+------
+
+..  t3-gifbuilder-scale:: params
+
+    :Data type: GraphicsMagick/ImageMagick parameters
+
+    Parameters to be used for the processing.
+
+
+..  _gifbuilder-scale-width:
+
+width
+-----
+
+..  t3-gifbuilder-scale:: width
+
+    :Data type: pixels :ref:`+calc <gifbuilder-calc>` / :ref:`stdWrap <stdwrap>`
+
+    Width of the scaled image.
