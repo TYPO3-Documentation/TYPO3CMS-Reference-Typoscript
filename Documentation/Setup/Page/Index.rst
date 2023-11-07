@@ -154,7 +154,6 @@ Properties
    `bodyTagAdd`_                  :t3-data-type:`string`
    `bodyTagCObject`_              :ref:`cObject <data-type-cobject>`
    `config`_                      :ref:`->CONFIG <config>`
-   `css\_inlinestyle`_            :t3-data-type:`string`
    `cssInline.[array]`_           :ref:`cObject <data-type-cobject>`
    `footerData.[array]`_          :ref:`cObject <data-type-cobject>`
    `headerData.[array]`_          :ref:`cObject <data-type-cobject>`
@@ -320,28 +319,14 @@ config
 
 
 
-.. index:: PAGE; CSS_inlineStyle
 .. _setup-page-css-inlinestyle:
 
 CSS\_inlineStyle
 ================
 
-.. container:: table-row
-
-   Property
-         CSS\_inlineStyle
-
-   Data type
-         :t3-data-type:`string`
-
-   Description
-         This value is just passed on as CSS.
-
-         **Note:** To make TYPO3 actually output these styles as *inline* CSS
-         (in-document CSS encapsulated in :html:`<style>` tags),
-         :ref:`config.inlineStyle2TempFile <setup-config-inlinestyle2tempfile>`
-         must be set to 0.
-
+..  versionchanged:: 12.0
+    Using this setting has no effect anymore. Use
+    :ref:`page.cssInline <setup-page-cssinline>` instead.
 
 
 .. index:: PAGE; cssInline.[array]
