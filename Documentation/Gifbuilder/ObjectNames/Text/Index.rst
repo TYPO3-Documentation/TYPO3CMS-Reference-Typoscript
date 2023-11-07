@@ -110,6 +110,7 @@ Properties
          other way HTML code is removed by default!
 
 
+..  _gifbuilder-text-fontSize:
 
 .. container:: table-row
 
@@ -344,6 +345,8 @@ Properties
          Gifbuilder Object->OUTLINE
 
 
+..  _gifbuilder-text-niceText:
+
 .. container:: table-row
 
    Property
@@ -379,6 +382,8 @@ Properties
 
          .scaleFactor = scaling-factor, integer 2-5
 
+
+..  _gifbuilder-text-splitRendering:
 
 .. container:: table-row
 
