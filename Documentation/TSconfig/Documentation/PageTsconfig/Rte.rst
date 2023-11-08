@@ -22,7 +22,7 @@ The order in which configuration for the RTE is loaded is:
 
 The full property path building is a bit more complex than for other
 property segments. The goal is that global options can be set that can
-also be overriden in more specific situations:
+also be overridden in more specific situations:
 
 Configure all RTE for all tables, fields and types:
     `RTE.default`
