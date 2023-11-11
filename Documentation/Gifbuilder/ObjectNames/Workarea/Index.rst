@@ -39,7 +39,7 @@ set
 
     :Data type: x,y,w,h :ref:`+calc <gifbuilder-calc>` / :ref:`stdWrap <stdwrap>`
 
-    Sets the dimensions of the workarea.
+    Sets the dimensions of the work area.
 
     x,y is the offset.
 
