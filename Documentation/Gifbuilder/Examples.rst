@@ -446,5 +446,5 @@ create much better quality images:
     use the :ref:`SCALE <gifbuilder-scale>`
     function in GIFBUILDER as the last object in the list to scale them
     down to the desired size. (It will render fonts with anti-aliasing even
-    without the niceText property of the GIFBUILDER
+    without the :t3-gifbuilder-text:`niceText` property of the GIFBUILDER
     :ref:`TEXT <gifbuilder-text>` object enabled as a side effect).
