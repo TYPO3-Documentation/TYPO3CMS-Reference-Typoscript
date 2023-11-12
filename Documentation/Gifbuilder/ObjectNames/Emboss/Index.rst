@@ -81,7 +81,7 @@ opacity
     speaking: Opacity = Transparency^-1. For example, 100% opacity = 0%
     transparency.
 
-    Only active with a value for :ref:`blur <gifbuilder-emboss-blur>`.
+    Only active with a value for :t3-gifbuilder-emboss:`blur`.
 
 
 ..  _gifbuilder-emboss-offset:

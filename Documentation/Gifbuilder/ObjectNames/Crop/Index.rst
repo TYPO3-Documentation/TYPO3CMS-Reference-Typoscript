@@ -85,6 +85,6 @@ crop
     :Data type: x,y,w,h :ref:`+calc <gifbuilder-calc>` /:ref:`stdWrap <stdwrap>`
 
     x,y is the offset of the crop frame from the position specified by
-    :ref:`align <gifbuilder-crop-align>`.
+    :t3-gifbuilder-crop:`align`.
 
     w,h are the dimensions of the frame.
