@@ -6,47 +6,41 @@
 WORKAREA
 ========
 
-Sets another workarea.
+Sets another work area.
+
 
 Properties
 ==========
 
-.. ### BEGIN~OF~TABLE ###
+..  contents::
+    :local:
 
-.. container:: table-row
+..  _gifbuilder-workarea-clear:
 
-   Property
-         set
+clear
+-----
 
-   Data type
-         x,y,w,h + calc /:ref:`stdWrap <stdwrap>`
+..  t3-gifbuilder-workarea:: clear
 
-   Description
-         Sets the dimensions of the workarea.
+    :Data type: string
 
-         x,y is the offset.
+    Sets the current work area to the default work area.
 
-         w,h are the dimensions.
-
-         For the usage of "calc" see the according note at the beginning of the
-         section "GIFBUILDER".
+    The value is checked for using :php:`isset()`: If :php:`isset()` returns
+    :php:`true`, the work area is cleared, otherwise it is not.
 
 
-.. container:: table-row
+..  _gifbuilder-workarea-set:
 
-   Property
-         clear
+set
+---
 
-   Data type
-         string
+..  t3-gifbuilder-workarea:: set
 
-   Description
-         Sets the current workarea to the default workarea.
+    :Data type: x,y,w,h :ref:`+calc <gifbuilder-calc>` / :ref:`stdWrap <stdwrap>`
 
-         The value is checked for using isset(): If isset() returns TRUE, the
-         workarea is cleared, otherwise it is not.
+    Sets the dimensions of the work area.
 
+    x,y is the offset.
 
-.. ###### END~OF~TABLE ######
-
-[tsref:->GIFBUILDER.(GBObj).WORKAREA]
+    w,h are the dimensions.
