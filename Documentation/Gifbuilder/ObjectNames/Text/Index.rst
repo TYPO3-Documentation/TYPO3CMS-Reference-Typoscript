@@ -8,478 +8,499 @@ TEXT
 
 Renders a text.
 
+
 Properties
 ==========
 
-.. ### BEGIN~OF~TABLE ###
-
-.. container:: table-row
-
-   Property
-         text
-
-   Data type
-         string / :ref:`stdWrap <stdwrap>`
-
-   Description
-         This is text text-string on the image file. The item is rendered only
-         if this string is not empty.
-
-         The $cObj->data-array is loaded with the page-record, if for example
-         the GIFBUILDER object is used in TypoScript.
+..  contents::
+    :local:
 
 
-.. container:: table-row
+..  _gifbuilder-text-align:
 
-   Property
-         breakWidth
+align
+-----
 
-   Data type
-         integer /:ref:`stdWrap <stdwrap>`
+..  t3-gifbuilder-text:: align
 
-   Description
-         Defines the maximum width for an object, overlapping elements will
-         force an automatic line break.
+    :Data type: align / :ref:`stdWrap <stdwrap>`
+    :Default: left
 
+    The alignment of the :ref:`text <gifbuilder-text-text>`.
 
-.. container:: table-row
+    Possible values:
 
-   Property
-         breakSpace
-
-   Data type
-         float
-
-   Default
-         1.0
-
-   Description
-         Defines a value that is multiplied by the line height of the current
-         element.
+    *   :typoscript:`left`
+    *   :typoscript:`center`
+    *   :typoscript:`right`
 
 
+..  _gifbuilder-text-angle:
 
-.. container:: table-row
+angle
+-----
 
-   Property
-         textMaxLength
+..  t3-gifbuilder-text:: angle
 
-   Data type
-         integer
+    :Data type: :t3-data-type:`degree`
+    :Default: 0
+    :Range: -90 to 90
 
-   Default
-         100
+    The rotation degree of the :ref:`text <gifbuilder-text-text>`.
 
-   Description
-         The maximum length of the text. This is just a natural break that
-         prevents incidental rendering of very long texts!
-
-
-
-.. container:: table-row
-
-   Property
-         maxWidth
-
-   Data type
-         pixels /:ref:`stdWrap <stdwrap>`
-
-   Description
-         Sets the maximum width in pixels, the text must be. Reduces the
-         fontSize if the text does not fit within this width.
-
-         Does not support setting alternative fontSizes in splitRendering
-         options.
-
-         (By René Fritz <r.fritz@colorcube.de>)
+    ..  note::
+        The angle is not available, if :ref:`spacing <gifbuilder-text-spacing>`
+        / :ref:`wordSpacing <gifbuilder-text-wordSpacing>` is set.
 
 
-.. container:: table-row
+..  _gifbuilder-text-antiAlias:
 
-   Property
-         doNotStripHTML
+antiAlias
+---------
 
-   Data type
-         boolean
+..  t3-gifbuilder-text:: antiAlias
 
-   Default
-         0 (false)
+    :Data type: boolean
+    :Default: 1 (true)
 
-   Description
-         If set, HTML-tags in the string inserted are **not** removed. Any
-         other way HTML code is removed by default!
+    The FreeType antialiasing.
+
+    ..  note::
+        This option is not available, if
+        :ref:`niceText <gifbuilder-text-niceText>` is enabled.
+
+        Setting this option to :typoscript:`0` will not work, if
+        :ref:`fontColor <gifbuilder-text-fontColor>` is set to black (or
+        #000000).
+
+
+..  _gifbuilder-text-breakSpace:
+
+breakSpace
+----------
+
+..  t3-gifbuilder-text:: breakSpace
+
+    :Data type: float
+    :Default: 1.0
+
+    Defines a value that is multiplied by the line height of the current
+    element.
+
+
+..  _gifbuilder-text-breakWidth:
+
+breakWidth
+----------
+
+..  t3-gifbuilder-text:: breakWidth
+
+    :Data type: integer / :ref:`stdWrap <stdwrap>`
+
+    Defines the maximum width for an object, overlapping elements will
+    force an automatic line break.
+
+
+..  _gifbuilder-text-doNotStripHTML:
+
+doNotStripHTML
+--------------
+
+..  t3-gifbuilder-text:: doNotStripHTML
+
+    :Data type: boolean
+    :Default: 0 (false)
+
+    If set, HTML tags inserted in the :ref:`text <gifbuilder-text-text>` are
+    **not** removed. Any other HTML code will be removed by default!
+
+
+..  _gifbuilder-text-emboss:
+
+emboss
+------
+
+..  t3-gifbuilder-text:: emboss
+
+    :Data type: GIFBUILDER object :ref:`->EMBOSS <gifbuilder-emboss>`
+
+
+..  _gifbuilder-text-fontColor:
+
+fontColor
+---------
+
+..  t3-gifbuilder-text:: fontColor
+
+    :Data type: :t3-data-type:`GraphicColor` / :ref:`stdWrap <stdwrap>`
+    :Default: black
+
+    The font color.
+
+
+..  _gifbuilder-text-fontFile:
+
+fontFile
+--------
+
+..  t3-gifbuilder-text:: fontFile
+
+    :Data type: resource / :ref:`stdWrap <stdwrap>`
+    :Default: Nimbus (Arial clone)
+
+    The font face (TrueType :file:`*.ttf` and OpenType :file:`*.otf` fonts can be
+    used).
 
 
 ..  _gifbuilder-text-fontSize:
 
-.. container:: table-row
+fontSize
+--------
 
-   Property
-         fontSize
+..  t3-gifbuilder-text:: fontSize
 
-   Data type
-         positive integer /:ref:`stdWrap <stdwrap>`
+    :Data type: positive integer / :ref:`stdWrap <stdwrap>`
+    :Default: 12
 
-   Default
-         12
+    The font size.
 
-   Description
-         Font size
 
+..  _gifbuilder-text-hide:
 
+hide
+----
 
-.. container:: table-row
+..  t3-gifbuilder-text:: hide
 
-   Property
-         fontColor
+    :Data type: boolean / :ref:`stdWrap <stdwrap>`
+    :Default: 0 (false)
 
-   Data type
-         :t3-data-type:`GraphicColor` /:ref:`stdWrap <stdwrap>`
+    If this is true, the text is **not** printed.
 
-   Default
-         black
+    This feature may be used, if you need a :ref:`SHADOW <gifbuilder-shadow>`
+    object to base a shadow on the text, but do not want the text to be
+    displayed.
 
-   Description
-         Font color
 
+..  _gifbuilder-text-iterations:
 
+iterations
+----------
 
-.. container:: table-row
+..  t3-gifbuilder-text:: iterations
 
-   Property
-         fontFile
+    :Data type: positive integer / :ref:`stdWrap <stdwrap>`
+    :Default: 1
 
-   Data type
-         resource /:ref:`stdWrap <stdwrap>`
+    How many times the :ref:`text <gifbuilder-text-text>` should be "printed"
+    onto it self. This will add the effect of bold text.
 
-   Default
-         Nimbus (Arial-clone)
+    ..  note::
+        This option is not available, if
+        :ref:`niceText <gifbuilder-text-niceText>` is enabled.
 
-   Description
-         Font face (truetype \*.ttf and opentype \*.otf font you can upload!)
 
+..  _gifbuilder-text-maxWidth:
 
+maxWidth
+--------
 
-.. container:: table-row
+..  t3-gifbuilder-text:: maxWidth
 
-   Property
-         angle
+    :Data type: positive integer / :ref:`stdWrap <stdwrap>`
 
-   Data type
-         :t3-data-type:`degree`
+    Sets the maximum width in pixels, the :ref:`text <gifbuilder-text-text>`
+    must be. Reduces the :ref:`font size <gifbuilder-text-fontSize>`, if the
+    text does not fit within this width.
 
-   Default
-         0
-
-         Range: -90 til 90
-
-   Description
-         Rotation degrees of the text.
-
-         **Note:** Angle is not available if spacing/wordSpacing is set.
-
-
-
-.. container:: table-row
-
-   Property
-         align
-
-   Data type
-         align /:ref:`stdWrap <stdwrap>`
-
-   Default
-         left
-
-   Description
-         Alignment of the text
-
-
-
-.. container:: table-row
-
-   Property
-         offset
-
-   Data type
-         x,y +calc /:ref:`stdWrap <stdwrap>`
-
-   Default
-         0,0
-
-   Description
-         Offset of the text
-
-
-
-.. container:: table-row
-
-   Property
-         antiAlias
-
-   Data type
-         boolean
-
-   Default
-         1 (true)
-
-   Description
-         FreeType antialiasing. Notice, the default mode is "on"!
-
-         **Note:** This option is not available if .niceText is enabled.
-
-         **Note:** setting this option to 0 will not work if *fontColor* is set to black (or #000000).
-
-
-
-
-.. container:: table-row
-
-   Property
-         iterations
-
-   Data type
-         positive integer /:ref:`stdWrap <stdwrap>`
-
-   Default
-         1
-
-   Description
-         How many times the text should be "printed" onto it self. This will
-         add the effect of bold text.
-
-         **Note:** This option is not available if .niceText is enabled.
-
-
-
-.. container:: table-row
-
-   Property
-         spacing
-
-   Data type
-         positive integer /:ref:`stdWrap <stdwrap>`
-
-   Default
-         0
-
-   Description
-         Pixel-distance between letters. This may render ugly!
-
-
-
-.. container:: table-row
-
-   Property
-         wordSpacing
-
-   Data type
-         positive integer /:ref:`stdWrap <stdwrap>`
-
-   Default
-         = ".spacing"\*2
-
-   Description
-         Pixel-distance between words.
-
-
-
-.. container:: table-row
-
-   Property
-         hide
-
-   Data type
-         boolean /:ref:`stdWrap <stdwrap>`
-
-   Default
-         0
-
-   Description
-         If this is true, the text is **not** printed.
-
-         This feature may be used, if you need a SHADOW object to base a shadow
-         on the text, but do not want the text to be displayed.
-
-
-
-.. container:: table-row
-
-   Property
-         hideButCreateMap
-
-   Data type
-         boolean /:ref:`stdWrap <stdwrap>`
-
-   Description
-         If this option is set, the text will not be rendered. Shadows and
-         emboss will, though, so don't apply these! But this feature is also
-         meant only to enable a text to generate the imageMap coordinates
-         without rendering itself.
-
-
-.. container:: table-row
-
-   Property
-         emboss
-
-   Data type
-         Gifbuilder Object->EMBOSS
-
-
-.. container:: table-row
-
-   Property
-         shadow
-
-   Data type
-         Gifbuilder Object->SHADOW
-
-
-.. container:: table-row
-
-   Property
-         outline
-
-   Data type
-         Gifbuilder Object->OUTLINE
+    Does not support setting alternative font sizes in
+    :ref:`splitRendering <gifbuilder-text-splitRendering>` options.
 
 
 ..  _gifbuilder-text-niceText:
 
-.. container:: table-row
+niceText
+--------
 
-   Property
-         niceText
+..  t3-gifbuilder-text:: niceText
 
-   Data type
-         boolean /:ref:`stdWrap <stdwrap>`
+    :Data type: boolean / :ref:`stdWrap <stdwrap>`
 
-   Description
-         This is a very popular feature that helps to render small letters much
-         nicer than the freetype library can normally do. But it also loads the
-         system very much!
+    This is a very popular feature that helps to render small letters much nicer
+    than the FreeType library can normally do. But it also loads the system
+    very much!
 
-         The principle of this function is to create a black/white image file
-         in twice or more times the size of the actual image file and then
-         print the text onto this in a scaled dimension. Afterwards
-         GraphicsMagick/ImageMagick scales down the mask and masks the font
-         color down on the original image file through the temporary mask.
+    The principle of this function is to create a black/white image file in
+    twice or more times the size of the actual image file and then print the
+    text onto this in a scaled dimension. Afterwards GraphicsMagick/ImageMagick
+    scales down the mask and masks the
+    :ref:`font color <gifbuilder-text-fontColor>` down on the original image
+    file through the temporary mask.
 
-         The fact that the font is actually rendered in the double size and
-         scaled down adds a more homogeneous shape to the letters. Some fonts
-         are more critical than others though. If you do not need the quality,
-         then don't use the function.
+    The fact that the font is actually rendered in the double size and
+    scaled down adds a more homogeneous shape to the letters. Some fonts
+    are more critical than others though. If you do not need the quality,
+    then do not use the function.
 
-         **Some sub-properties:**
 
-         .before = GraphicsMagick/ImageMagick-params before scale
+..  _gifbuilder-text-niceText-after:
 
-         .after = GraphicsMagick/ImageMagick-params after scale
+after
+~~~~~
 
-         .sharpen = sharpen-value for the mask (after scaling), integer 0-99
-         (this enables you to make the text crisper if it's too blurred!)
+..  t3-gifbuilder-text:: niceText.after
 
-         .scaleFactor = scaling-factor, integer 2-5
+    GraphicsMagick/ImageMagick parameters after scale.
+
+
+..  _gifbuilder-text-niceText-before:
+
+before
+~~~~~~
+
+..  t3-gifbuilder-text:: niceText.before
+
+    GraphicsMagick/ImageMagick parameters before scale.
+
+
+..  _gifbuilder-text-niceText-scaleFactor:
+
+scaleFactor
+~~~~~~~~~~~
+
+..  t3-gifbuilder-text:: niceText.scaleFactor
+
+    :Data type: integer (2-5)
+
+    The scaling factor.
+
+
+..  _gifbuilder-text-niceText-sharpen:
+
+sharpen
+~~~~~~~
+
+..  t3-gifbuilder-text:: niceText.sharpen
+
+    :Data type: integer (0-99)
+
+    The sharpen value for the mask (after scaling). This enables you to make the
+    text crisper, if it is too blurred!
+
+
+..  _gifbuilder-text-offset:
+
+offset
+------
+
+..  t3-gifbuilder-text:: offset
+
+    :Data type: x,y :ref:`+calc <gifbuilder-calc>` / :ref:`stdWrap <stdwrap>`
+    :Default: 0,0
+
+    The offset of the :ref:`text <gifbuilder-text-text>`.
+
+
+..  _gifbuilder-text-outline:
+
+outline
+-------
+
+..  t3-gifbuilder-text:: outline
+
+    :Data type: GIFBUILDER object :ref:`->OUTLINE <gifbuilder-outline>`
+
+
+..  _gifbuilder-text-shadow:
+
+shadow
+------
+
+..  t3-gifbuilder-text:: shadow
+
+    :Data type: GIFBUILDER object :ref:`->SHADOW <gifbuilder-shadow>`
+
+
+..  _gifbuilder-text-spacing:
+
+spacing
+-------
+
+..  t3-gifbuilder-text:: spacing
+
+    :Data type: positive integer / :ref:`stdWrap <stdwrap>`
+    :Default: 0
+
+    The pixel distance between letters. This may render ugly!
 
 
 ..  _gifbuilder-text-splitRendering:
 
-.. container:: table-row
+splitRendering
+--------------
 
-   Property
-         splitRendering.compX
+..  t3-gifbuilder-text:: splitRendering
 
-         splitRendering.compY
+    :Data type: integer / *(array of keys)*
 
-         splitRendering.[array]
+    Split the rendering of a string into separate processes with individual
+    configurations. By this method a certain range of characters can be rendered
+    with another font face or size. This is very useful if you want to use
+    separate fonts for strings where you have latin characters combined with,
+    for example, Japanese and there is a separate font file for each.
 
-   Data type
-         integer / *(array of keys)*
-
-   Description
-         Split the rendering of a string into separate processes with
-         individual configurations. By this method a certain range of
-         characters can be rendered with another font face or size. This is
-         very useful if you want to use separate fonts for strings where you
-         have latin characters combined with e.g. Japanese and there is a
-         separate font file for each.
-
-         You can also render keywords in another font/size/color.
-
-         **Properties:**
-
-         * **splitRendering.compX:** Integer. Additional pixelspace between
-           parts, x direction.
-
-         * **splitRendering.compY:** Integer. Additional pixelspace between
-           parts, y direction.
-
-         * **splitRendering.[array] = keyword** with keyword being [charRange,
-           highlightWord]
-
-         * **splitRendering.[array] {**
-
-           * **fontFile:** Alternative font file for this rendering.
-
-           * **fontSize:** Alternative font size for this rendering.
-
-           * **color:** Alternative color for this rendering, works *only*
-             without "niceText".
-
-           * **xSpaceBefore:** x-Space before this part.
-
-           * **xSpaceAfter:** x-Space after this part.
-
-           * **ySpaceBefore:** y-Space before this part.
-
-           * **ySpaceAfter:** y-Space after this part.
+    You can also render keywords in another
+    :ref:`font <gifbuilder-text-fontFile>` /
+    :ref:`size <gifbuilder-text-fontSize>` /
+    :ref:`color <gifbuilder-text-fontColor>`.
 
 
+..  _gifbuilder-text-splitRendering-array:
 
-         **Keyword: charRange**
+[array]
+~~~~~~~
 
-         splitRendering.[array].value = Comma-separated list of character ranges
-         (e.g. "100-200") given as Unicode character numbers. The list accepts
-         optional starting and ending points, e.g. " - 200" or " 200 -" and
-         single values, e.g. "65, 66, 67".
+..  t3-gifbuilder-text:: splitRendering.[array]
 
-         **Keyword: highlightWord**
+    :Data type: integer
 
-         splitRendering.[array].value = Word to highlight, makes a case
-         sensitive search for this.
+    With keyword being [charRange, highlightWord].
 
-         **Limitations:**
+    *   **splitRendering.[array] = keyword** with keyword being
+        [:ref:`charRange <gifbuilder-text-splitRendering-charRange>`,
+        :ref:`highlightWord <gifbuilder-text-splitRendering-highlightWord>`]
 
-         - The pixel compensation values are not corrected for scale factor used
-           with niceText. Basically this means that when niceText is used, these
-           values will have only the half effect.
+    *   **splitRendering.[array] {**
 
-         - When word spacing is used the "highlightWord" mode does not work.
+        *   **fontFile:** Alternative font file for this rendering.
 
-         - The color override works only without "niceText".
+        *   **fontSize:** Alternative font size for this rendering.
 
-         **Example:**
+        *   **color:** Alternative color for this rendering, works *only*
+            without :ref:`niceText <gifbuilder-text-niceText>`.
 
-         .. code-block:: typoscript
-            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        *   **xSpaceBefore:** x space before this part.
 
-            10.splitRendering.compX = 2
-            10.splitRendering.compY = -2
-            10.splitRendering.10 = charRange
-            10.splitRendering.10 {
-              value = 200-380 , 65, 66
-              fontSize = 50
-              fontFile = typo3/sysext/core/Resources/Private/Font/nimbus.ttf
-              xSpaceBefore = 30
-            }
-            10.splitRendering.20 = highlightWord
-            10.splitRendering.20 {
-              value = TheWord
-              color = red
-            }
+        *   **xSpaceAfter:** x space after this part.
+
+        *   **ySpaceBefore:** y space before this part.
+
+        *   **ySpaceAfter:** y space after this part.
+
+        **}**
+
+    ..  _gifbuilder-text-splitRendering-charRange:
+
+    **Keyword: charRange**
+
+    :typoscript:`splitRendering.[array].value` = Comma-separated list of
+    character ranges (for example, :typoscript:`100-200`) given as Unicode
+    character numbers. The list accepts optional starting and ending points,
+    for example, :typoscript:`- 200` or :typoscript:`200 -` and single values,
+    for example, :typoscript:`65, 66, 67`.
+
+    ..  _gifbuilder-text-splitRendering-highlightWord:
+
+    **Keyword: highlightWord**
+
+    :typoscript:`splitRendering.[array].value` = Word to highlight, makes a case
+    sensitive search for this.
+
+    **Limitations:**
+
+    *   The pixel compensation values are not corrected for scale factor used
+        with :ref:`niceText <gifbuilder-text-niceText>`. Basically this means
+        that when :typoscript:`niceText` is used, these values will have only
+        the half effect.
+
+    *   When word spacing is used the :typoscript:`highlightWord` mode does not
+        work.
+
+    *   The color override works only without :typoscript:`niceText`.
+
+    **Example:**
+
+    ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+        10.splitRendering.compX = 2
+        10.splitRendering.compY = -2
+        10.splitRendering.10 = charRange
+        10.splitRendering.10 {
+          value = 200-380 , 65, 66
+          fontSize = 50
+          fontFile = EXT:core/Resources/Private/Font/nimbus.ttf
+          xSpaceBefore = 30
+        }
+        10.splitRendering.20 = highlightWord
+        10.splitRendering.20 {
+          value = TheWord
+          color = red
+        }
 
 
-.. ###### END~OF~TABLE ######
+..  _gifbuilder-text-splitRendering-compX:
 
-[tsref:->GIFBUILDER.(GBObj).TEXT]
+compX
+~~~~~
+
+..  t3-gifbuilder-text:: splitRendering.compX
+
+    :Data type: integer
+
+    Additional pixel space between parts, x direction.
+
+
+..  _gifbuilder-text-splitRendering-compY:
+
+compY
+~~~~~
+
+..  t3-gifbuilder-text:: splitRendering.compY
+
+    :Data type: integer
+
+    Additional pixel space between parts, y direction.
+
+
+..  _gifbuilder-text-text:
+
+text
+----
+
+..  t3-gifbuilder-text:: text
+
+    :Data type: string / :ref:`stdWrap <stdwrap>`
+
+    This is text on the image file. The item is rendered only, if this string is
+    not empty.
+
+    The :php:`$cObj->data` array is loaded with the page record, if, for
+    example, the :typoscript:`GIFBUILDER` object is used in TypoScript.
+
+
+..  _gifbuilder-text-textMaxLength:
+
+textMaxLength
+-------------
+
+..  t3-gifbuilder-text:: textMaxLength
+
+    :Data type: integer
+    :Default: 100
+
+    The maximum length of the :ref:`text <gifbuilder-text-text>`. This is just a
+    natural break that prevents incidental rendering of very long texts!
+
+
+..  _gifbuilder-text-wordSpacing:
+
+wordSpacing
+-----------
+
+..  t3-gifbuilder-text:: wordSpacing
+
+    :Data type: positive integer /:ref:`stdWrap <stdwrap>`
+    :Default: :ref:`spacing <gifbuilder-text-spacing>` * 2
+
+    The pixel distance between words.
