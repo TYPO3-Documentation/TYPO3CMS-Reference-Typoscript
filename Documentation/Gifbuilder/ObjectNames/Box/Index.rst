@@ -103,7 +103,7 @@ dimensions
 
 ..  t3-gifbuilder-box:: dimensions
 
-    :Data type: x,y,w,h +calc / :ref:`stdWrap <stdwrap>`
+    :Data type: x,y,w,h :ref:`+calc <gifbuilder-calc>` / :ref:`stdWrap <stdwrap>`
 
     Dimensions of a filled box.
 
