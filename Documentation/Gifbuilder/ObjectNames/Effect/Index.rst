@@ -229,7 +229,7 @@ gray
 
     **Example:**
 
-    This gives the image a slight :ref:`wave <gifbuilder-effect-wave>` and
+    This gives the image a slight :t3-gifbuilder-effect:`wave` and
     renders it in gray.
 
     ..  code-block:: typoscript

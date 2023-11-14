@@ -35,7 +35,7 @@ color
 
 ..  t3-gifbuilder-shadow:: color
 
-    :Data type: :t3-data-type:`GraphicColor` /:ref:`stdWrap <stdwrap>`
+    :Data type: :t3-data-type:`GraphicColor` / :ref:`stdWrap <stdwrap>`
 
     The color of the shadow.
 
@@ -78,7 +78,7 @@ opacity
     speaking: Opacity = Transparency^-1. E.g. 100% opacity = 0%
     transparency.
 
-    Only active with a value for :ref:`blur <gifbuilder-shadow-blur>`.
+    Only active with a value for :t3-gifbuilder-shadow:`blur`.
 
 
 ..  _gifbuilder-shadow-textObjNum:
