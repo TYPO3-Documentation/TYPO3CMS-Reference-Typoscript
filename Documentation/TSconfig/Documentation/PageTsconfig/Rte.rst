@@ -13,12 +13,15 @@ The `RTE` prefix key is used for configuration of the Rich Text Editor.
 Please refer to the :ref:`RTE chapter <t3coreapi:rte>` in Core API document
 for more general information on RTE configuration and data processing.
 
-The order in which configuration for the RTE is loaded is:
+The order in which the configuration for the RTE is loaded is (the first one which
+is set will be used, see :ref:`example <pageTsRteOverridePreset>` below):
 
-1. preset defined for a specific field via PageTS
-2. richtextConfiguration defined for a specific field via TCA
-3. general preset defined via PageTS
-4. default
+1. preset defined for a specific field via page TSconfig
+2. :ref:`richtextConfiguration <t3tca:columns-text-properties-richtextConfiguration>`
+   defined for a specific field via TCA
+3. general preset defined via page TSconfig (:typoscript:`RTE.default.preset`)
+4. default (the preset "default", e.g. as defined by EXT:rte_ckeditor or overridden
+   in :file:`ext_localconf.php`)
 
 The full property path building is a bit more complex than for other
 property segments. The goal is that global options can be set that can
@@ -33,7 +36,17 @@ Configure RTE for a specific field in a table
 Configure RTE for a specific field in a table for a specific :ref:`record type <t3tca:types>`
     `RTE.config.[tableName].[fieldName].types.[type]`
 
-Consider the following Page TSconfig examples:
+Configuring RTE via page TSconfig is general and not specific to a
+particular rich-text editor. However, TYPO3 comes with EXT:rte_ckeditor, so this one
+will usually be used. This page covers only the general configuration, for
+more information about configuring EXT:rte_ckeditor, see the
+:ref:`rte_ckeditor configuration <ext_rte_ckeditor:configuration>`.
+
+Examples
+========
+
+Example: Disable RTE
+--------------------
 
 .. code-block:: typoscript
    :caption: EXT:site_package/Configuration/page.tsconfig
@@ -58,6 +71,30 @@ Consider the following Page TSconfig examples:
    RTE.config.tt_content.bodytext.disabled = 0
    # But disable RTE for tt_content bodytext again if the record type is "text"
    RTE.config.tt_content.bodytext.types.text.disabled = 1
+
+.. _pageTsRteOverridePreset:
+
+Example: Override preset
+------------------------
+
+Refer to the description of the order above for details of which setting has priority over which.
+
+Summary:
+
+*   Setting the preset via page TSconfig *for a specific field* overrides all,
+    else
+*   TCA richtextConfiguration (for a specific field) overrides the page TSconfig
+    default preset (:typoscript:`RTE.default.preset`)
+
+.. code-block:: typoscript
+    :caption: EXT:site_package/Configuration/page.tsconfig
+
+    # set a default preset to use as fallback
+    RTE.default.preset = custom_preset_default
+
+    # Override preset for field "description" in table "tt_address"
+    RTE.config.tt_address.description.preset = custom_preset_fancy
+
 
 Properties
 ==========
