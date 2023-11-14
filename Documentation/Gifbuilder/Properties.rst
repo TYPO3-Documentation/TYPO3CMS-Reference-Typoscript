@@ -64,7 +64,7 @@ charRangeMap
     **The key:**
 
     The value of the array key will be the key used when forcing the
-    configuration into :ref:`splitRendering <gifbuilder-text-splitRendering>`
+    configuration into :t3-gifbuilder-text:`splitRendering`
     configuration of the individual
     :ref:`GIFBUILDER objects <gifbuilder-object-names>`.
     In the :ref:`example below <gifbuilder-properties-charRangeMap-pixelSpaceFontSizeRef>`
@@ -100,7 +100,7 @@ charRangeMap
 
     If set, this will take the font size of the
     :ref:`GIFBUILDER TEXT object <gifbuilder-text>` and multiply with this
-    amount (xx.xx) and override the :ref:`fontSize <gifbuilder-text-fontSize>`
+    amount (xx.xx) and override the :t3-gifbuilder-text:`fontSize`
     property inside
     :ref:`charMapConfig <gifbuilder-properties-charRangeMap-charMapConfig>`.
 
@@ -257,7 +257,7 @@ transparentBackground
     color found at position 0,0 of the image (upper left corner) transparent.
 
     If you render text, you should leave the
-    :ref:`niceText <gifbuilder-text-niceText>` option **off** as the result will
+    :t3-gifbuilder-text:`niceText` option **off** as the result will
     probably be more precise without the :typoscript:`niceText` antialiasing
     hack.
 
@@ -288,7 +288,7 @@ closest
 
     ..  note::
         You may experience that this does not work, if you render text with the
-        :ref:`niceText <gifbuilder-text-niceText>` option.
+        :t3-gifbuilder-text:`niceText` option.
 
 
 ..  _gifbuilder-properties-XY:

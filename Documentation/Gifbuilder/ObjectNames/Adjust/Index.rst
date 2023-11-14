@@ -99,8 +99,8 @@ autoLevels
 
 ..  t3-gifbuilder-adjust:: autoLevels
 
-    Sets the :ref:`inputLevels <gifbuilder-adjust-inputLevels>` and
-    :ref:`outputLevels <gifbuilder-adjust-outputLevels>` automatically.
+    Sets the :t3-gifbuilder-adjust:`inputLevels` and
+    :t3-gifbuilder-adjust:`outputLevels` automatically.
 
     **Example:**
 
