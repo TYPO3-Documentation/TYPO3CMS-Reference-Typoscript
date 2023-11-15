@@ -7,7 +7,7 @@ CROP
 ====
 
 ..  note::
-    This object resets :ref:`workArea <gifbuilder-properties-workArea>` to the
+    This object resets :t3-gifbuilder-property:`workArea` to the
     new dimensions of the image!
 
 Properties
