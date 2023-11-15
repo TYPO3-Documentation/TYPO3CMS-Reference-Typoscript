@@ -70,6 +70,8 @@ setContentToCurrent
 
     Sets the current value to the incoming content of the function.
 
+.. _stdwrap-addpagecachetags:
+
 addPageCacheTags
 ~~~~~~~~~~~~~~~~
 
