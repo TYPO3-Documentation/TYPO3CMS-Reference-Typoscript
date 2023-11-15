@@ -14,7 +14,7 @@ Properties
 1,2,3,4...
 ==========
 
-..  option:: 1,2,3,4...
+..  t3-gifbuilder-property:: 1,2,3,4...
 
     :Data type: :ref:`Gifbuilder Object <gifbuilder-object-names>` + .if (:ref:`->if <if>`)
 
@@ -29,7 +29,7 @@ Properties
 backColor
 =========
 
-..  option:: backColor
+..  t3-gifbuilder-property:: backColor
 
     :Data type: :t3-data-type:`GraphicColor` / :ref:`stdWrap <stdwrap>`
     :Default: white
@@ -47,7 +47,7 @@ charRangeMap
 [array]
 -------
 
-..  option:: charRangeMap.[array]
+..  t3-gifbuilder-property:: charRangeMap.[array]
 
     :Data type: string
 
@@ -67,8 +67,8 @@ charRangeMap
     configuration into :t3-gifbuilder-text:`splitRendering`
     configuration of the individual
     :ref:`GIFBUILDER objects <gifbuilder-object-names>`.
-    In the :ref:`example below <gifbuilder-properties-charRangeMap-pixelSpaceFontSizeRef>`
-    the key is :typoscript:`123`.
+    In the :t3-gifbuilder-property:`charRangeMap.[array].pixelSpaceFontSizeRef`
+    example below the key is :typoscript:`123`.
 
     ..  note::
         If the key is already found in the local GIFBUILDER configuration the
@@ -81,7 +81,7 @@ charRangeMap
 [array].charMapConfig
 ---------------------
 
-..  option:: charRangeMap.[array].charMapConfig
+..  t3-gifbuilder-property:: charRangeMap.[array].charMapConfig
 
     :Data type: :ref:`TEXT <gifbuilder-text>` / :ref:`splitRendering.[array] <gifbuilder-text-splitRendering>` configuration
 
@@ -94,15 +94,14 @@ charRangeMap
 [array].fontSizeMultiplicator
 -----------------------------
 
-..  option:: charRangeMap.[array].fontSizeMultiplicator
+..  t3-gifbuilder-property:: charRangeMap.[array].fontSizeMultiplicator
 
     :Data type: double
 
     If set, this will take the font size of the
     :ref:`GIFBUILDER TEXT object <gifbuilder-text>` and multiply with this
-    amount (xx.xx) and override the :t3-gifbuilder-text:`fontSize`
-    property inside
-    :ref:`charMapConfig <gifbuilder-properties-charRangeMap-charMapConfig>`.
+    amount (xx.xx) and override the :t3-gifbuilder-text:`fontSize` property
+    inside :t3-gifbuilder-property:`charRangeMap.[array].charMapConfig`.
 
 
 ..  _gifbuilder-properties-charRangeMap-pixelSpaceFontSizeRef:
@@ -110,7 +109,7 @@ charRangeMap
 [array].pixelSpaceFontSizeRef
 -----------------------------
 
-..  option:: charRangeMap.[array].pixelSpaceFontSizeRef
+..  t3-gifbuilder-property:: charRangeMap.[array].pixelSpaceFontSizeRef
 
     :Data type: double
 
@@ -154,7 +153,7 @@ charRangeMap
 format
 ======
 
-..  option:: format
+..  t3-gifbuilder-property:: format
 
     :Data type: "gif" / "jpg" / "jpeg" / "png"
     :Default: gif
@@ -163,8 +162,7 @@ format
 
     It is possible to define the quality of a JPG image globally via
     :ref:`$TYPO3_CONF_VARS['GFX']['jpg_quality'] <t3coreapi:typo3ConfVars_gfx_jpg_quality>`
-    or via the :ref:`quality <gifbuilder-properties-quality>` property on a per-image
-    basis.
+    or via the :t3-gifbuilder-property:`quality` property on a per-image basis.
 
 
 .. _gifbuilder-properties-maxHeight:
@@ -172,7 +170,7 @@ format
 maxHeight
 =========
 
-..  option:: maxHeight
+..  t3-gifbuilder-property:: maxHeight
 
     :Data type: positive integer / :ref:`stdWrap <stdwrap>`
 
@@ -184,7 +182,7 @@ maxHeight
 maxWidth
 ========
 
-..  option:: maxWidth
+..  t3-gifbuilder-property:: maxWidth
 
     :Data type: positive integer / :ref:`stdWrap <stdwrap>`
 
@@ -196,7 +194,7 @@ maxWidth
 offset
 ======
 
-..  option:: offset
+..  t3-gifbuilder-property:: offset
 
     :Data type: x,y :ref:`+calc <gifbuilder-calc>` / :ref:`stdWrap <stdwrap>`
     :Default: 0,0
@@ -209,11 +207,11 @@ offset
 quality
 =======
 
-..  option:: quality
+..  t3-gifbuilder-property:: quality
 
     :Data type: positive integer (10-100)
 
-    JPG-quality (if :ref:`.format <gifbuilder-properties-format>` = jpg/jpeg)
+    JPG quality (if :t3-gifbuilder-property:`format` = jpg/jpeg)
 
 
 .. _gifbuilder-properties-workArea:
@@ -221,7 +219,7 @@ quality
 workArea
 ========
 
-..  option:: workArea
+..  t3-gifbuilder-property:: workArea
 
     :Data type: x,y,w,h :ref:`+calc <gifbuilder-calc>` / :ref:`stdWrap <stdwrap>`
 
@@ -237,7 +235,7 @@ workArea
 transparentBackground
 =====================
 
-..  option:: transparentBackground
+..  t3-gifbuilder-property:: transparentBackground
 
     :Data type: boolean / :ref:`stdWrap <stdwrap>`
 
@@ -255,7 +253,7 @@ transparentBackground
 transparentColor
 ================
 
-..  option:: transparentColor
+..  t3-gifbuilder-property:: transparentColor
 
     :Data type: :t3-data-type:`GraphicColor` / :ref:`stdWrap <stdwrap>`
 
@@ -267,7 +265,7 @@ transparentColor
 closest
 -------
 
-..  option:: transparentColor.closest
+..  t3-gifbuilder-property:: transparentColor.closest
 
     :Data Type: boolean
 
@@ -284,7 +282,7 @@ closest
 XY
 ==
 
-..  option:: XY
+..  t3-gifbuilder-property:: XY
 
     :Data type: x,y :ref:`+calc <gifbuilder-calc>` (1-2000) / :ref:`stdWrap <stdwrap>`
     :Default: 120,50
@@ -297,7 +295,7 @@ XY
 reduceColors
 ============
 
-..  option:: reduceColors
+..  t3-gifbuilder-property:: reduceColors
 
     ..  versionchanged:: 13.0
         This property has been removed.
