@@ -214,22 +214,6 @@ quality
     JPG quality (if :t3-gifbuilder-property:`format` = jpg/jpeg)
 
 
-.. _gifbuilder-properties-workArea:
-
-workArea
-========
-
-..  t3-gifbuilder-property:: workArea
-
-    :Data type: x,y,w,h :ref:`+calc <gifbuilder-calc>` / :ref:`stdWrap <stdwrap>`
-
-    Define the work area on the image file. All the
-    :ref:`GIFBUILDER objects <gifbuilder-object-names>` will see this as the
-    dimensions of the image file regarding alignment, overlaying of images and
-    so on. Only :ref:`TEXT objects <gifbuilder-text>` exceeding the boundaries
-    of the work area will be printed outside this area.
-
-
 .. _gifbuilder-properties-transparentBackground:
 
 transparentBackground
@@ -275,6 +259,22 @@ closest
     ..  note::
         You may experience that this does not work, if you render text with the
         :t3-gifbuilder-text:`niceText` option.
+
+
+.. _gifbuilder-properties-workArea:
+
+workArea
+========
+
+..  t3-gifbuilder-property:: workArea
+
+    :Data type: x,y,w,h :ref:`+calc <gifbuilder-calc>` / :ref:`stdWrap <stdwrap>`
+
+    Define the work area on the image file. All the
+    :ref:`GIFBUILDER objects <gifbuilder-object-names>` will see this as the
+    dimensions of the image file regarding alignment, overlaying of images and
+    so on. Only :ref:`TEXT objects <gifbuilder-text>` exceeding the boundaries
+    of the work area will be printed outside this area.
 
 
 ..  _gifbuilder-properties-XY:
