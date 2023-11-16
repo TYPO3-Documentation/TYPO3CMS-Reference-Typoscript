@@ -153,15 +153,24 @@ charRangeMap
 format
 ======
 
+..  versionchanged:: 13.0
+    The default format is now "png". Before TYPO3 v13.0 this was "gif".
+
+..  versionadded:: 13.0
+    Support for WebP has been added.
+
 ..  t3-gifbuilder-property:: format
 
-    :Data type: "gif" / "jpg" / "jpeg" / "png"
-    :Default: gif
+    :Data type: "gif" / "jpg" / "jpeg" / "png" / "webp"
+    :Default: png
 
     File type of the output image.
 
-    It is possible to define the quality of a JPG image globally via
-    :ref:`$TYPO3_CONF_VARS['GFX']['jpg_quality'] <t3coreapi:typo3ConfVars_gfx_jpg_quality>`
+    The quality can be defined globally:
+
+    *   :ref:`$TYPO3_CONF_VARS['GFX']['jpg_quality'] <t3coreapi:typo3ConfVars_gfx_jpg_quality>` for a JPG image
+    *   :ref:`$TYPO3_CONF_VARS['GFX']['webp_quality'] <t3coreapi:typo3ConfVars_gfx_webp_quality>` for a WebP image
+
     or via the :t3-gifbuilder-property:`quality` property on a per-image basis.
 
 
@@ -207,11 +216,20 @@ offset
 quality
 =======
 
+..  versionadded:: 13.0
+    The quality can be set for WebP images.
+
 ..  t3-gifbuilder-property:: quality
 
-    :Data type: positive integer (10-100)
+    :Data type: Between 10 (lowest quality) and 100 (highest quality) / additionally, 101 (lossless) for WebP
 
-    JPG quality (if :t3-gifbuilder-property:`format` = jpg/jpeg)
+    Sets the quality of the image:
+
+    *   JPG, if :t3-gifbuilder-property:`format` = jpg/jpeg.
+    *   WebP, if :t3-gifbuilder-property:`format` = webp. Setting the
+        quality to "101" equivalents to `"lossless" compression`_.
+
+    ..  _"lossless" compression: https://developers.google.com/speed/webp/docs/compression#lossless_webp
 
 
 .. _gifbuilder-properties-transparentBackground:
