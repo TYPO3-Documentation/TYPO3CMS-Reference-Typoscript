@@ -81,7 +81,7 @@ tags
     :Data type: :t3-data-type:`string` / :ref:`stdwrap`
 
     Can hold a comma-separated list of tags. These tags will be attached
-    to the entry added to the `cache_hash` cache (but not to
+    to the entry added to the `cache_hash` cache (and to
     `cache_pages` cache) and can be used to purge the cached content.
 
 
