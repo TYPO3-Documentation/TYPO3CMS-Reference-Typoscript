@@ -355,7 +355,7 @@ backend.user.userGroupIds
 -------------------------
 
 :aspect:`Variable`
-    backend.user.userGroupList
+    backend.user.userGroupIds
 
 :aspect:`Type`
     array
