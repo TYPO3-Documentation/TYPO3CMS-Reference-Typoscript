@@ -41,7 +41,7 @@ Properties
 align
 -----
 
-..  t3-gifbuilder-box:: align
+..  confval:: align
 
     :Data type: VHalign / :ref:`stdWrap <stdwrap>`
     :Default: l, t
@@ -88,7 +88,7 @@ align
 color
 -----
 
-..  t3-gifbuilder-box:: color
+..  confval:: color
 
     :Data type: :t3-data-type:`GraphicColor` / :ref:`stdWrap <stdwrap>`
     :Default: black
@@ -101,7 +101,7 @@ color
 dimensions
 ----------
 
-..  t3-gifbuilder-box:: dimensions
+..  confval:: dimensions
 
     :Data type: x,y,w,h :ref:`+calc <gifbuilder-calc>` / :ref:`stdWrap <stdwrap>`
 
@@ -118,7 +118,7 @@ dimensions
 opacity
 -------
 
-..  t3-gifbuilder-box:: opacity
+..  confval:: opacity
 
     :Data type: positive integer (1-100) / :ref:`stdWrap <stdwrap>`
     :Default: 100

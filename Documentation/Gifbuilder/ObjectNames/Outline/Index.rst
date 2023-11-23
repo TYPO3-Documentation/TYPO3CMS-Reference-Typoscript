@@ -27,7 +27,7 @@ Properties
 color
 -----
 
-..  t3-gifbuilder-outline:: color
+..  confval:: color
 
     :Data type: :t3-data-type:`GraphicColor` / :ref:`stdWrap <stdwrap>`
 
@@ -39,7 +39,7 @@ color
 textObjNum
 ----------
 
-..  t3-gifbuilder-outline:: textObjNum
+..  confval:: textObjNum
 
     :Data type: positive integer / :ref:`stdWrap <stdwrap>`
 
@@ -57,7 +57,7 @@ textObjNum
 thickness
 ---------
 
-..  t3-gifbuilder-outline:: thickness
+..  confval:: thickness
 
     :Data type: x,y / :ref:`stdWrap <stdwrap>`
 

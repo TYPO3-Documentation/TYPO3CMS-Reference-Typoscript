@@ -20,7 +20,7 @@ Properties
 blur
 ----
 
-..  t3-gifbuilder-shadow:: blur
+..  confval:: blur
 
     :Data type: integer (1-99) / :ref:`stdWrap <stdwrap>`
 
@@ -33,7 +33,7 @@ blur
 color
 -----
 
-..  t3-gifbuilder-shadow:: color
+..  confval:: color
 
     :Data type: :t3-data-type:`GraphicColor` / :ref:`stdWrap <stdwrap>`
 
@@ -45,7 +45,7 @@ color
 intensity
 ---------
 
-..  t3-gifbuilder-shadow:: intensity
+..  confval:: intensity
 
     :Data type: integer (1-100) / :ref:`stdWrap <stdwrap>`
 
@@ -58,7 +58,7 @@ intensity
 offset
 ------
 
-..  t3-gifbuilder-shadow:: offset
+..  confval:: offset
 
     :Data type: x,y / :ref:`stdWrap <stdwrap>`
 
@@ -70,7 +70,7 @@ offset
 opacity
 -------
 
-..  t3-gifbuilder-shadow:: opacity
+..  confval:: opacity
 
     :Data type: integer (1-100) / :ref:`stdWrap <stdwrap>`
 
@@ -78,7 +78,7 @@ opacity
     speaking: Opacity = Transparency^-1. E.g. 100% opacity = 0%
     transparency.
 
-    Only active with a value for :t3-gifbuilder-shadow:`blur`.
+    Only active with a value for :ref:`gifbuilder-shadow-blur`.
 
 
 ..  _gifbuilder-shadow-textObjNum:
@@ -86,7 +86,7 @@ opacity
 textObjNum
 ----------
 
-..  t3-gifbuilder-shadow:: textObjNum
+..  confval:: textObjNum
 
     :Data type: positive integer / :ref:`stdWrap <stdwrap>`
 

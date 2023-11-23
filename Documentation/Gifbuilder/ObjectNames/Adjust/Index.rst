@@ -34,7 +34,7 @@ Properties
 inputLevels
 -----------
 
-..  t3-gifbuilder-adjust:: inputLevels
+..  confval:: inputLevels
 
     :Data type: low, high (int<0,255>, int<0, 255>)
 
@@ -65,7 +65,7 @@ inputLevels
 outputLevels
 ------------
 
-..  t3-gifbuilder-adjust:: outputLevels
+..  confval:: outputLevels
 
     :Data type: low, high (int<0,255>, int<0, 255>)
 
@@ -97,10 +97,10 @@ outputLevels
 autoLevels
 ----------
 
-..  t3-gifbuilder-adjust:: autoLevels
+..  confval:: autoLevels
 
-    Sets the :t3-gifbuilder-adjust:`inputLevels` and
-    :t3-gifbuilder-adjust:`outputLevels` automatically.
+    Sets the :ref:`inputLevels <gifbuilder-adjust-inputLevels>` and
+    :ref:`outputLevels <gifbuilder-adjust-outputLevels>` automaticallsy.
 
     **Example:**
 

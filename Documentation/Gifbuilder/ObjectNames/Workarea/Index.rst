@@ -20,7 +20,7 @@ Properties
 clear
 -----
 
-..  t3-gifbuilder-workarea:: clear
+..  confval:: clear
 
     :Data type: string
 
@@ -35,7 +35,7 @@ clear
 set
 ---
 
-..  t3-gifbuilder-workarea:: set
+..  confval:: set
 
     :Data type: x,y,w,h :ref:`+calc <gifbuilder-calc>` / :ref:`stdWrap <stdwrap>`
 
