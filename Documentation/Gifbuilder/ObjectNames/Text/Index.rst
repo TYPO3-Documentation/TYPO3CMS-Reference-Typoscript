@@ -21,12 +21,12 @@ Properties
 align
 -----
 
-..  t3-gifbuilder-text:: align
+..  confval:: align
 
     :Data type: align / :ref:`stdWrap <stdwrap>`
     :Default: left
 
-    The alignment of the :t3-gifbuilder-text:`text`.
+    The alignment of the :ref:`gifbuilder-text-text`.
 
     Possible values:
 
@@ -40,17 +40,17 @@ align
 angle
 -----
 
-..  t3-gifbuilder-text:: angle
+..  confval:: angle
 
     :Data type: :t3-data-type:`degree`
     :Default: 0
     :Range: -90 to 90
 
-    The rotation degree of the :t3-gifbuilder-text:`text`.
+    The rotation degree of the :ref:`gifbuilder-text-text`.
 
     ..  note::
-        The angle is not available, if :t3-gifbuilder-text:`spacing`
-        / :t3-gifbuilder-text:`wordSpacing` is set.
+        The angle is not available, if :ref:`gifbuilder-text-spacing`
+        / :ref:`gifbuilder-text-wordSpacing` is set.
 
 
 ..  _gifbuilder-text-antiAlias:
@@ -58,7 +58,7 @@ angle
 antiAlias
 ---------
 
-..  t3-gifbuilder-text:: antiAlias
+..  confval:: antiAlias
 
     :Data type: boolean
     :Default: 1 (true)
@@ -67,10 +67,10 @@ antiAlias
 
     ..  note::
         This option is not available, if
-        :t3-gifbuilder-text:`niceText` is enabled.
+        :ref:`gifbuilder-text-niceText` is enabled.
 
         Setting this option to :typoscript:`0` will not work, if
-        :t3-gifbuilder-text:`fontColor` is set to black (or #000000).
+        :ref:`gifbuilder-text-fontColor` is set to black (or #000000).
 
 
 ..  _gifbuilder-text-breakSpace:
@@ -78,7 +78,7 @@ antiAlias
 breakSpace
 ----------
 
-..  t3-gifbuilder-text:: breakSpace
+..  confval:: breakSpace
 
     :Data type: float
     :Default: 1.0
@@ -92,7 +92,7 @@ breakSpace
 breakWidth
 ----------
 
-..  t3-gifbuilder-text:: breakWidth
+..  confval:: breakWidth
 
     :Data type: integer / :ref:`stdWrap <stdwrap>`
 
@@ -105,12 +105,12 @@ breakWidth
 doNotStripHTML
 --------------
 
-..  t3-gifbuilder-text:: doNotStripHTML
+..  confval:: doNotStripHTML
 
     :Data type: boolean
     :Default: 0 (false)
 
-    If set, HTML tags inserted in the :t3-gifbuilder-text:`text` are
+    If set, HTML tags inserted in the :ref:`gifbuilder-text-text` are
     **not** removed. Any other HTML code will be removed by default!
 
 
@@ -119,7 +119,7 @@ doNotStripHTML
 emboss
 ------
 
-..  t3-gifbuilder-text:: emboss
+..  confval:: emboss
 
     :Data type: GIFBUILDER object :ref:`->EMBOSS <gifbuilder-emboss>`
 
@@ -129,7 +129,7 @@ emboss
 fontColor
 ---------
 
-..  t3-gifbuilder-text:: fontColor
+..  confval:: fontColor
 
     :Data type: :t3-data-type:`GraphicColor` / :ref:`stdWrap <stdwrap>`
     :Default: black
@@ -142,7 +142,7 @@ fontColor
 fontFile
 --------
 
-..  t3-gifbuilder-text:: fontFile
+..  confval:: fontFile
 
     :Data type: resource / :ref:`stdWrap <stdwrap>`
     :Default: Nimbus (Arial clone)
@@ -156,7 +156,7 @@ fontFile
 fontSize
 --------
 
-..  t3-gifbuilder-text:: fontSize
+..  confval:: fontSize
 
     :Data type: positive integer / :ref:`stdWrap <stdwrap>`
     :Default: 12
@@ -169,7 +169,7 @@ fontSize
 hide
 ----
 
-..  t3-gifbuilder-text:: hide
+..  confval:: hide
 
     :Data type: boolean / :ref:`stdWrap <stdwrap>`
     :Default: 0 (false)
@@ -186,17 +186,17 @@ hide
 iterations
 ----------
 
-..  t3-gifbuilder-text:: iterations
+..  confval:: iterations
 
     :Data type: positive integer / :ref:`stdWrap <stdwrap>`
     :Default: 1
 
-    How many times the :t3-gifbuilder-text:`text` should be "printed"
+    How many times the :ref:`gifbuilder-text-text` should be "printed"
     onto it self. This will add the effect of bold text.
 
     ..  note::
         This option is not available, if
-        :t3-gifbuilder-text:`niceText` is enabled.
+        :ref:`gifbuilder-text-niceText` is enabled.
 
 
 ..  _gifbuilder-text-maxWidth:
@@ -204,16 +204,16 @@ iterations
 maxWidth
 --------
 
-..  t3-gifbuilder-text:: maxWidth
+..  confval:: maxWidth
 
     :Data type: positive integer / :ref:`stdWrap <stdwrap>`
 
-    Sets the maximum width in pixels, the :t3-gifbuilder-text:`text`
-    must be. Reduces the :t3-gifbuilder-text:`fontSize`, if the
+    Sets the maximum width in pixels, the :ref:`gifbuilder-text-text`
+    must be. Reduces the :ref:`gifbuilder-text-fontSize`, if the
     text does not fit within this width.
 
     Does not support setting alternative font sizes in
-    :t3-gifbuilder-text:`splitRendering` options.
+    :ref:`gifbuilder-text-splitRendering` options.
 
 
 ..  _gifbuilder-text-niceText:
@@ -221,7 +221,7 @@ maxWidth
 niceText
 --------
 
-..  t3-gifbuilder-text:: niceText
+..  confval:: niceText
 
     :Data type: boolean / :ref:`stdWrap <stdwrap>`
 
@@ -232,7 +232,7 @@ niceText
     The principle of this function is to create a black/white image file in
     twice or more times the size of the actual image file and then print the
     text onto this in a scaled dimension. Afterwards GraphicsMagick/ImageMagick
-    scales down the mask and masks the :t3-gifbuilder-text:`fontColor` down on
+    scales down the mask and masks the :ref:`gifbuilder-text-fontColor` down on
     the original image file through the temporary mask.
 
     The fact that the font is actually rendered in the double size and
@@ -246,7 +246,7 @@ niceText
 after
 ~~~~~
 
-..  t3-gifbuilder-text:: niceText.after
+..  confval:: niceText.after
 
     GraphicsMagick/ImageMagick parameters after scale.
 
@@ -256,7 +256,7 @@ after
 before
 ~~~~~~
 
-..  t3-gifbuilder-text:: niceText.before
+..  confval:: niceText.before
 
     GraphicsMagick/ImageMagick parameters before scale.
 
@@ -266,7 +266,7 @@ before
 scaleFactor
 ~~~~~~~~~~~
 
-..  t3-gifbuilder-text:: niceText.scaleFactor
+..  confval:: niceText.scaleFactor
 
     :Data type: integer (2-5)
 
@@ -278,7 +278,7 @@ scaleFactor
 sharpen
 ~~~~~~~
 
-..  t3-gifbuilder-text:: niceText.sharpen
+..  confval:: niceText.sharpen
 
     :Data type: integer (0-99)
 
@@ -291,12 +291,12 @@ sharpen
 offset
 ------
 
-..  t3-gifbuilder-text:: offset
+..  confval:: offset
 
     :Data type: x,y :ref:`+calc <gifbuilder-calc>` / :ref:`stdWrap <stdwrap>`
     :Default: 0,0
 
-    The offset of the :t3-gifbuilder-text:`text`.
+    The offset of the :ref:`gifbuilder-text-text`.
 
 
 ..  _gifbuilder-text-outline:
@@ -304,7 +304,7 @@ offset
 outline
 -------
 
-..  t3-gifbuilder-text:: outline
+..  confval:: outline
 
     :Data type: GIFBUILDER object :ref:`->OUTLINE <gifbuilder-outline>`
 
@@ -314,7 +314,7 @@ outline
 shadow
 ------
 
-..  t3-gifbuilder-text:: shadow
+..  confval:: shadow
 
     :Data type: GIFBUILDER object :ref:`->SHADOW <gifbuilder-shadow>`
 
@@ -324,7 +324,7 @@ shadow
 spacing
 -------
 
-..  t3-gifbuilder-text:: spacing
+..  confval:: spacing
 
     :Data type: positive integer / :ref:`stdWrap <stdwrap>`
     :Default: 0
@@ -337,7 +337,7 @@ spacing
 splitRendering
 --------------
 
-..  t3-gifbuilder-text:: splitRendering
+..  confval:: splitRendering
 
     :Data type: integer / *(array of keys)*
 
@@ -358,7 +358,7 @@ splitRendering
 [array]
 ~~~~~~~
 
-..  t3-gifbuilder-text:: splitRendering.[array]
+..  confval:: splitRendering.[array]
 
     :Data type: integer
 
@@ -375,7 +375,7 @@ splitRendering
         *   **fontSize:** Alternative font size for this rendering.
 
         *   **color:** Alternative color for this rendering, works *only*
-            without :t3-gifbuilder-text:`niceText`.
+            without :ref:`gifbuilder-text-niceText`.
 
         *   **xSpaceBefore:** x space before this part.
 
@@ -407,7 +407,7 @@ splitRendering
     **Limitations:**
 
     *   The pixel compensation values are not corrected for scale factor used
-        with :t3-gifbuilder-text:`niceText`. Basically this means
+        with :ref:`gifbuilder-text-niceText`. Basically this means
         that when :typoscript:`niceText` is used, these values will have only
         the half effect.
 
@@ -442,7 +442,7 @@ splitRendering
 compX
 ~~~~~
 
-..  t3-gifbuilder-text:: splitRendering.compX
+..  confval:: splitRendering.compX
 
     :Data type: integer
 
@@ -454,7 +454,7 @@ compX
 compY
 ~~~~~
 
-..  t3-gifbuilder-text:: splitRendering.compY
+..  confval:: splitRendering.compY
 
     :Data type: integer
 
@@ -466,7 +466,7 @@ compY
 text
 ----
 
-..  t3-gifbuilder-text:: text
+..  confval:: text
 
     :Data type: string / :ref:`stdWrap <stdwrap>`
 
@@ -482,12 +482,12 @@ text
 textMaxLength
 -------------
 
-..  t3-gifbuilder-text:: textMaxLength
+..  confval:: textMaxLength
 
     :Data type: integer
     :Default: 100
 
-    The maximum length of the :t3-gifbuilder-text:`text`. This is just a
+    The maximum length of the :ref:`gifbuilder-text-text`. This is just a
     natural break that prevents incidental rendering of very long texts!
 
 
@@ -496,7 +496,7 @@ textMaxLength
 wordSpacing
 -----------
 
-..  t3-gifbuilder-text:: wordSpacing
+..  confval:: wordSpacing
 
     :Data type: positive integer / :ref:`stdWrap <stdwrap>`
     :Default: :ref:`spacing <gifbuilder-text-spacing>` * 2

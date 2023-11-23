@@ -38,7 +38,7 @@ Properties
 color
 -----
 
-..  t3-gifbuilder-ellipse:: color
+..  confval:: color
 
     :Data type: :t3-data-type:`GraphicColor` / :ref:`stdWrap <stdwrap>`
     :Default: black
@@ -51,7 +51,7 @@ color
 dimensions
 ----------
 
-..  t3-gifbuilder-ellipse:: dimensions
+..  confval:: dimensions
 
     :Data type: x,y,w,h :ref:`+calc <gifbuilder-calc>` / :ref:`stdWrap <stdwrap>`
 

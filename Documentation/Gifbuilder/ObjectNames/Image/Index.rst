@@ -21,7 +21,7 @@ Properties
 align
 -----
 
-..  t3-gifbuilder-image:: align
+..  confval:: align
 
     :Data type: VHalign / :ref:`stdWrap <stdwrap>`
     :Default: 1,1
@@ -68,7 +68,7 @@ align
 file
 ----
 
-..  t3-gifbuilder-image:: file
+..  confval:: file
 
     :Data type: :t3-data-type:`imgResource`
 
@@ -80,7 +80,7 @@ file
 mask
 ----
 
-..  t3-gifbuilder-image:: mask
+..  confval:: mask
 
     :Data type: :t3-data-type:`imgResource`
 
@@ -92,7 +92,7 @@ mask
 offset
 ------
 
-..  t3-gifbuilder-image:: offset
+..  confval:: offset
 
     :Data type: x,y :ref:`+calc <gifbuilder-calc>` / :ref:`stdWrap <stdwrap>`
     :Default: 0,0
@@ -105,7 +105,7 @@ offset
 tile
 ----
 
-..  t3-gifbuilder-image:: tile
+..  confval:: tile
 
     :Data type: x,y / :ref:`stdWrap <stdwrap>`
     :Default: 1,1
