@@ -23,7 +23,7 @@ Properties
 blur
 ----
 
-..  t3-gifbuilder-emboss:: blur
+..  confval:: blur
 
     :Data type: integer (1-99) / :ref:`stdWrap <stdwrap>`
 
@@ -36,7 +36,7 @@ blur
 highColor
 ---------
 
-..  t3-gifbuilder-emboss:: highColor
+..  confval:: highColor
 
     :Data type: :t3-data-type:`GraphicColor` / :ref:`stdWrap <stdwrap>`
 
@@ -48,7 +48,7 @@ highColor
 intensity
 ---------
 
-..  t3-gifbuilder-emboss:: intensity
+..  confval:: intensity
 
     :Data type: integer (0-100) / :ref:`stdWrap <stdwrap>`
 
@@ -61,7 +61,7 @@ intensity
 lowColor
 --------
 
-..  t3-gifbuilder-emboss:: lowColor
+..  confval:: lowColor
 
     :Data type: :t3-data-type:`GraphicColor` / :ref:`stdWrap <stdwrap>`
 
@@ -73,7 +73,7 @@ lowColor
 opacity
 -------
 
-..  t3-gifbuilder-emboss:: opacity
+..  confval:: opacity
 
     :Data type: integer (1-100) / :ref:`stdWrap <stdwrap>`
 
@@ -81,7 +81,7 @@ opacity
     speaking: Opacity = Transparency^-1. For example, 100% opacity = 0%
     transparency.
 
-    Only active with a value for :t3-gifbuilder-emboss:`blur`.
+    Only active with a value for :ref:`gifbuilder-emboss-blur`.
 
 
 ..  _gifbuilder-emboss-offset:
@@ -89,7 +89,7 @@ opacity
 offset
 ------
 
-..  t3-gifbuilder-emboss:: offset
+..  confval:: offset
 
     :Data type: x,y / :ref:`stdWrap <stdwrap>`
 
@@ -101,7 +101,7 @@ offset
 textObjNum
 ----------
 
-..  t3-gifbuilder-emboss:: textObjNum
+..  confval:: textObjNum
 
     :Data type: positive integer / :ref:`stdWrap <stdwrap>`
 

@@ -61,7 +61,7 @@ Effects
 blur
 ----
 
-..  t3-gifbuilder-effect:: blur
+..  confval:: blur
 
     :Data type: integer (1-99)
     :Default: 0
@@ -82,7 +82,7 @@ blur
 charcoal
 --------
 
-..  t3-gifbuilder-effect:: charcoal
+..  confval:: charcoal
 
     :Data type: integer (0-100)
     :Default: 0
@@ -104,7 +104,7 @@ charcoal
 colors
 ------
 
-..  t3-gifbuilder-effect:: colors
+..  confval:: colors
 
     :Data type: integer (2-255)
 
@@ -124,7 +124,7 @@ colors
 edge
 ----
 
-..  t3-gifbuilder-effect:: edge
+..  confval:: edge
 
     :Data type: integer (0-99)
     :Default: 0
@@ -147,7 +147,7 @@ edge
 emboss
 ------
 
-..  t3-gifbuilder-effect:: emboss
+..  confval:: emboss
 
     Creates a relief effect: Creates highlights or shadows that replace
     light and dark boundaries in the image.
@@ -166,7 +166,7 @@ emboss
 flip
 ----
 
-..  t3-gifbuilder-effect:: flip
+..  confval:: flip
 
     Vertical flipping.
 
@@ -184,7 +184,7 @@ flip
 flop
 ----
 
-..  t3-gifbuilder-effect:: flop
+..  confval:: flop
 
     Horizontal flipping.
 
@@ -202,7 +202,7 @@ flop
 gamma
 -----
 
-..  t3-gifbuilder-effect:: gamma
+..  confval:: gamma
 
     :Data type: double (0.5 - 3.0)
     :Default: 1.0
@@ -223,13 +223,13 @@ gamma
 gray
 ----
 
-..  t3-gifbuilder-effect:: gray
+..  confval:: gray
 
     The image is converted to gray tones.
 
     **Example:**
 
-    This gives the image a slight :t3-gifbuilder-effect:`wave` and
+    This gives the image a slight :ref:`gifbuilder-effect-wave` and
     renders it in gray.
 
     ..  code-block:: typoscript
@@ -244,7 +244,7 @@ gray
 invert
 ------
 
-..  t3-gifbuilder-effect:: invert
+..  confval:: invert
 
     Invert the colors.
 
@@ -262,7 +262,7 @@ invert
 rotate
 ------
 
-..  t3-gifbuilder-effect:: rotate
+..  confval:: rotate
 
     :Data type: integer (0-360)
     :Default: 0
@@ -286,7 +286,7 @@ rotate
 sharpen
 -------
 
-..  t3-gifbuilder-effect:: sharpen
+..  confval:: sharpen
 
     :Data type: integer (0-99)
     :Default: 0
@@ -307,7 +307,7 @@ sharpen
 shear
 -----
 
-..  t3-gifbuilder-effect:: shear
+..  confval:: shear
 
     :Data type: integer (-90 - 90)
     :Default: 0
@@ -331,7 +331,7 @@ shear
 solarize
 --------
 
-..  t3-gifbuilder-effect:: solarize
+..  confval:: solarize
 
     :Data type: integer (0-99)
     :Default: 0
@@ -356,7 +356,7 @@ solarize
 swirl
 -----
 
-..  t3-gifbuilder-effect:: swirl
+..  confval:: swirl
 
     :Data type: integer (0-1000)
     :Default: 0
@@ -377,7 +377,7 @@ swirl
 wave
 ----
 
-..  t3-gifbuilder-effect:: wave
+..  confval:: wave
 
     :Data type: integer,integer (both 0-99)
     :Default: 0,0
