@@ -100,7 +100,7 @@ autoLevels
 ..  confval:: autoLevels
 
     Sets the :ref:`inputLevels <gifbuilder-adjust-inputLevels>` and
-    :ref:`outputLevels <gifbuilder-adjust-outputLevels>` automaticallsy.
+    :ref:`outputLevels <gifbuilder-adjust-outputLevels>` automatically.
 
     **Example:**
 
