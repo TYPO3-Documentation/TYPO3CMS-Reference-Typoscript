@@ -7,7 +7,7 @@ CROP
 ====
 
 ..  note::
-    This object resets :t3-gifbuilder-property:`workArea` to the
+    This object resets :ref:`gifbuilder-properties-workArea` to the
     new dimensions of the image!
 
 Properties
@@ -21,7 +21,7 @@ Properties
 align
 -----
 
-..  t3-gifbuilder-crop:: align
+..  confval:: align
 
     :Data type: VHalign / :ref:`stdWrap <stdwrap>`
     :Default: l, t
@@ -68,7 +68,7 @@ align
 backColor
 ---------
 
-..  t3-gifbuilder-crop:: backColor
+..  confval:: backColor
 
     :Data type: :t3-data-type:`GraphicColor` / :ref:`stdWrap <stdwrap>`
     :Default: The original background color
@@ -80,11 +80,11 @@ backColor
 crop
 ----
 
-..  t3-gifbuilder-crop:: crop
+..  confval:: crop
 
     :Data type: x,y,w,h :ref:`+calc <gifbuilder-calc>` /:ref:`stdWrap <stdwrap>`
 
     x,y is the offset of the crop frame from the position specified by
-    :t3-gifbuilder-crop:`align`.
+    :ref:`align <gifbuilder-crop-align>`.
 
     w,h are the dimensions of the frame.
