@@ -9,7 +9,7 @@ SCALE
 This scales the GIFBUILDER object to the provided dimensions.
 
 ..  note::
-    This object resets :t3-gifbuilder-property:`workArea` to the new dimensions
+    This object resets :ref:`gifbuilder-properties-workArea` to the new dimensions
     of the image!
 
 
@@ -25,7 +25,7 @@ Properties
 height
 ------
 
-..  t3-gifbuilder-scale:: height
+..  confval:: height
 
     :Data type: pixels :ref:`+calc <gifbuilder-calc>` / :ref:`stdWrap <stdwrap>`
 
@@ -37,7 +37,7 @@ height
 params
 ------
 
-..  t3-gifbuilder-scale:: params
+..  confval:: params
 
     :Data type: GraphicsMagick/ImageMagick parameters
 
@@ -49,7 +49,7 @@ params
 width
 -----
 
-..  t3-gifbuilder-scale:: width
+..  confval:: width
 
     :Data type: pixels :ref:`+calc <gifbuilder-calc>` / :ref:`stdWrap <stdwrap>`
 
