@@ -34,7 +34,7 @@ The `[dataStructureKey]` represents the key of a FlexForm in
 :php:`$GLOBALS['TCA'][<tableName>]['columns'][<field>]['config']['ds']`. This key will be split into up to
 two parts. By default the first part will be used as identifier of the FlexForm in TSconfig. The second part
 will override the identifier if it is not empty, `list` or `*`. For example the identifier of the key
-`my_ext_pi1,list` will be `my_ext_pi1` and of the key `*,my_CType` it will be `my_CType`. See section
+`myext_pi1,list` will be `myext_pi1` and of the key `*,my_CType` it will be `my_CType`. See section
 :ref:`Pointing to a data structure <t3tca:columns-flex-ds-pointer>` of the TCA reference for details.
 
 Some properties apply to whole FlexForm sheets, their property path is
@@ -83,7 +83,7 @@ addItems
       `TCEFORM.tt_content.header_layout.types.textpic.addItems`
 
    Flex form field level, example:
-      `TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.myField.addItems`
+      `TCEFORM.tt_content.pi_flexform.myext_pi1.sDEF.myField.addItems`
 
       Where `sDEF` is the sheet name.
 
@@ -132,7 +132,7 @@ altLabels
       `TCEFORM.[tableName].[fieldName].types.[typeName].altLabels`
 
    Flex form field level, example:
-      `TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.myField.altLabels`
+      `TCEFORM.tt_content.pi_flexform.myext_pi1.sDEF.myField.altLabels`
 
       Where `sDEF` is the sheet name.
 
@@ -187,7 +187,7 @@ PAGE_TSCONFIG_ID
    .. code-block:: typoscript
       :caption: EXT:site_package/Configuration/page.tsconfig
 
-      TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.myField.PAGE_TSCONFIG_ID = 22
+      TCEFORM.tt_content.pi_flexform.myext_pi1.sDEF.myField.PAGE_TSCONFIG_ID = 22
 
    In this example, the value will substitute the marker in a plugin FlexForm.
 
@@ -216,7 +216,7 @@ PAGE_TSCONFIG_IDLIST
    .. code-block:: typoscript
       :caption: EXT:site_package/Configuration/page.tsconfig
 
-      TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.myField.PAGE_TSCONFIG_IDLIST = 20,21,22
+      TCEFORM.tt_content.pi_flexform.myext_pi1.sDEF.myField.PAGE_TSCONFIG_IDLIST = 20,21,22
 
    In this example, the value will substitute the marker in a plugin FlexForm.
 
@@ -245,7 +245,7 @@ PAGE_TSCONFIG_STR
    .. code-block:: typoscript
       :caption: EXT:site_package/Configuration/page.tsconfig
 
-      TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.myField.PAGE_TSCONFIG_STR = %hello%
+      TCEFORM.tt_content.pi_flexform.myext_pi1.sDEF.myField.PAGE_TSCONFIG_STR = %hello%
 
    In this example, the value will substitute the marker in a plugin FlexForm.
 
@@ -341,7 +341,7 @@ config
         :typoscript:`TCEFORM.tt_content.header.types.textpic.config.max`
 
     Flex form field level, example:
-        :typoscript:`TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.myInputField.config.max`
+        :typoscript:`TCEFORM.tt_content.pi_flexform.myext_pi1.sDEF.myInputField.config.max`
 
         Where :typoscript:`sDEF` is the sheet name.
 
@@ -379,7 +379,7 @@ config.treeConfig
       `TCEFORM.tt_content.header.types.config.treeConfig.startingPoints`
 
    Flex form field level, example:
-      `TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.myField.config.treeConfig.startingPoints`
+      `TCEFORM.tt_content.pi_flexform.myext_pi1.sDEF.myField.config.treeConfig.startingPoints`
 
       Where `sDEF` is the sheet name.
 
@@ -456,12 +456,12 @@ disabled
       `TCEFORM.tt_content.header.types.textpic.disabled`
 
    Flex form sheet level. If set, the entire tab is not rendered, example:
-      `TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.disabled`
+      `TCEFORM.tt_content.pi_flexform.myext_pi1.sDEF.disabled`
 
       Where `sDEF` is the sheet name.
 
    Flex form field level, example:
-      `TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.myField.disabled`
+      `TCEFORM.tt_content.pi_flexform.myext_pi1.sDEF.myField.disabled`
 
       Where `sDEF` is the sheet name.
 
@@ -506,7 +506,7 @@ disableNoMatchingValueElement
       `TCEFORM.tt_content.header_layout.types.textpic.disableNoMatchingValueElement`
 
    Flex form field level, example:
-      `TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.myField.disableNoMatchingValueElement`
+      `TCEFORM.tt_content.pi_flexform.myext_pi1.sDEF.myField.disableNoMatchingValueElement`
 
       Where `sDEF` is the sheet name.
 
@@ -569,7 +569,7 @@ fileFolderConfig
       `TCEFORM.[tableName].[fieldName].types.[typeName].fileFolderConfig.folder`
 
    Flex form field level, example:
-      `TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.myField.fileFolderConfig.folder`
+      `TCEFORM.tt_content.pi_flexform.myext_pi1.sDEF.myField.fileFolderConfig.folder`
 
       Where `sDEF` is the sheet name.
 
@@ -598,7 +598,7 @@ itemsProcFunc
       `TCEFORM.[tableName].[fieldName].types.[typeName].itemsProcFunc`
 
    Flex form field level, example:
-      `TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.myField.itemsProcFunc`
+      `TCEFORM.tt_content.pi_flexform.myext_pi1.sDEF.myField.itemsProcFunc`
 
       Where `sDEF` is the sheet name.
 
@@ -625,7 +625,7 @@ keepItems
       `TCEFORM.tt_content.header_layout.types.textpic.keepItems`
 
    Flex form field level, example:
-      `TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.myField.keepItems`
+      `TCEFORM.tt_content.pi_flexform.myext_pi1.sDEF.myField.keepItems`
 
       Where `sDEF` is the sheet name.
 
@@ -665,7 +665,7 @@ label
       `TCEFORM.[tableName].[fieldName].types.[typeName].label`
 
    Flex form field level, example:
-      `TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.myField.label`
+      `TCEFORM.tt_content.pi_flexform.myext_pi1.sDEF.myField.label`
 
       Where `sDEF` is the sheet name.
 
@@ -705,7 +705,7 @@ noMatchingValue_label
       `TCEFORM.tt_content.header_layout.types.textpic.noMatchingValue_label`
 
    Flex form field level, example:
-      `TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.myField.noMatchingValue_label`
+      `TCEFORM.tt_content.pi_flexform.myext_pi1.sDEF.myField.noMatchingValue_label`
 
       Where `sDEF` is the sheet name.
 
@@ -746,7 +746,7 @@ removeItems
       `TCEFORM.tt_content.header_layout.types.textpic.removeItems`
 
    Flex form field level, example:
-      `TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.myField.removeItems`
+      `TCEFORM.tt_content.pi_flexform.myext_pi1.sDEF.myField.removeItems`
 
       Where `sDEF` is the sheet name.
 
@@ -772,7 +772,7 @@ sheetDescription
    Specifies a description for the sheet shown in the FlexForm.
 
    This property is only available on flex form sheet level, example:
-      `TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.sheetDescription`
+      `TCEFORM.tt_content.pi_flexform.myext_pi1.sDEF.sheetDescription`
 
       Where `sDEF` is the sheet name.
 
@@ -790,7 +790,7 @@ sheetShortDescr
    Specifies a short description of the sheet used as link title in the tab-menu.
 
    This property is only available on flex form sheet level, example:
-      `TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.sheetShortDescription`
+      `TCEFORM.tt_content.pi_flexform.myext_pi1.sDEF.sheetShortDescription`
 
       Where `sDEF` is the sheet name.
 
@@ -807,7 +807,7 @@ sheetTitle
    Set the title of the sheet / tab in a FlexForm configuration.
 
    This property is only available on flex form sheet level, example:
-      `TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF.sheetTitle`
+      `TCEFORM.tt_content.pi_flexform.myext_pi1.sDEF.sheetTitle`
 
       Where `sDEF` is the sheet name.
 
@@ -815,9 +815,9 @@ sheetTitle
    .. code-block:: typoscript
       :caption: EXT:site_package/Configuration/page.tsconfig
 
-      TCEFORM.tt_content.pi_flexform.my_ext_pi1.sDEF {
+      TCEFORM.tt_content.pi_flexform.myext_pi1.sDEF {
          # Rename the first tab of the FlexForm plug-in configuration
-         sheetTitle = LLL:my_ext/Resource/Private/Language/locallang.xlf:tt_content.pi_flexform.my_ext_pi1.sDEF
+         sheetTitle = LLL:my_ext/Resource/Private/Language/locallang.xlf:tt_content.pi_flexform.myext_pi1.sDEF
       }
 
 
