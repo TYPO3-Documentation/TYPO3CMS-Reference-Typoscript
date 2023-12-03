@@ -17,6 +17,9 @@ disable options, blind options in selector boxes etc.
 See the core API document section :ref:`FormEngine <t3coreapi:FormEngine>` for more
 details on how records are rendered in the backend.
 
+Applying properties
+===================
+
 The properties listed below apply to various contexts which are explained per
 property. The full property path thus depends on the property and where it should
 apply. In general, a more specific property path overrides a less specific one:
@@ -27,9 +30,26 @@ per table and record type. This leads to the property paths
 and `TCEFORM.[tableName].[fieldName].types.[typeName]` to configure a field for a specific
 type, see the :ref:`TCA type section <t3tca:types>` for details on types.
 
-Other properties also apply to flex form fields, in this case the full property
+While all that property path munging looks messy at first, it should become more
+clear when reading through the single properties below and looking at the examples.
+
+.. youtube:: B3IQq7pIJ_o
+
+.. _tceformApplyPropertiesFlexForm:
+
+Applying properties to FlexForm fields
+--------------------------------------
+
+Other properties also apply to :ref:`FlexForm <t3coreapi:flexforms>` fields, in this case the full property
 path including the data structure key has to be set:
-`TCEFORM.[tableName].[fieldName].[dataStructureKey].[flexSheet].[flexFieldName].[propertyName]`.
+
+.. code-block:: typoscript
+
+    # TCEFORM.[tableName].[fieldName].[dataStructureKey].[flexSheet].[flexFieldName with escaped dots].[propertyName]
+    TCEFORM.tt_content.pi_flexform.sfregister_create.sDEF.settings\.fields\.selected.addItems.ZZZ = ZZZ
+
+The sheet name (sDEF) must be given only if the FlexForm has a sheet.
+
 The `[dataStructureKey]` represents the key of a FlexForm in
 :php:`$GLOBALS['TCA'][<tableName>]['columns'][<field>]['config']['ds']`. This key will be split into up to
 two parts. By default the first part will be used as identifier of the FlexForm in TSconfig. The second part
@@ -37,13 +57,11 @@ will override the identifier if it is not empty, `list` or `*`. For example the 
 `myext_pi1,list` will be `myext_pi1` and of the key `*,my_CType` it will be `my_CType`. See section
 :ref:`Pointing to a data structure <t3tca:columns-flex-ds-pointer>` of the TCA reference for details.
 
+The flexFieldName is the name of the property in the FlexForm. If it contains
+dots ('.'), these must be escaped with backslash.
+
 Some properties apply to whole FlexForm sheets, their property path is
 `TCEFORM.[tableName].[fieldName].[dataStructureKey].[flexSheet].[propertyName]`.
-
-While all that property path munging looks messy at first, it should become more
-clear if reading through the single properties below and looking at the examples.
-
-.. youtube:: B3IQq7pIJ_o
 
 Properties
 ==========
@@ -83,9 +101,10 @@ addItems
       `TCEFORM.tt_content.header_layout.types.textpic.addItems`
 
    Flex form field level, example:
-      `TCEFORM.tt_content.pi_flexform.myext_pi1.sDEF.myField.addItems`
+      `TCEFORM.tt_content.pi_flexform.myext_pi1.sDEF.settings\.myfield.addItems`
 
-      Where `sDEF` is the sheet name.
+      Where `sDEF` is the sheet name. For a description
+      see the section :ref:`tceformApplyPropertiesFlexForm` on this page.
 
    .. warning::
       Do not add page types this way (using `TCEFORM.pages.doktype.addItems`), instead the proper
@@ -132,9 +151,10 @@ altLabels
       `TCEFORM.[tableName].[fieldName].types.[typeName].altLabels`
 
    Flex form field level, example:
-      `TCEFORM.tt_content.pi_flexform.myext_pi1.sDEF.myField.altLabels`
+      `TCEFORM.tt_content.pi_flexform.myext_pi1.sDEF.settings\.myfield.altLabels`
 
-      Where `sDEF` is the sheet name.
+      Where `sDEF` is the sheet name. For a description
+      see the section :ref:`tceformApplyPropertiesFlexForm` on this page.
 
 :aspect:`Example`
    .. code-block:: typoscript
@@ -379,9 +399,10 @@ config.treeConfig
       `TCEFORM.tt_content.header.types.config.treeConfig.startingPoints`
 
    Flex form field level, example:
-      `TCEFORM.tt_content.pi_flexform.myext_pi1.sDEF.myField.config.treeConfig.startingPoints`
+      `TCEFORM.tt_content.pi_flexform.myext_pi1.sDEF.settings\.myfield.config.treeConfig.startingPoints`
 
-      Where `sDEF` is the sheet name.
+      Where `sDEF` is the sheet name. For a description
+      see the section :ref:`tceformApplyPropertiesFlexForm` on this page.
 
 
 .. index::
@@ -458,12 +479,14 @@ disabled
    Flex form sheet level. If set, the entire tab is not rendered, example:
       `TCEFORM.tt_content.pi_flexform.myext_pi1.sDEF.disabled`
 
-      Where `sDEF` is the sheet name.
+      Where `sDEF` is the sheet name. For a description
+      see the section :ref:`tceformApplyPropertiesFlexForm` on this page.
 
    Flex form field level, example:
-      `TCEFORM.tt_content.pi_flexform.myext_pi1.sDEF.myField.disabled`
+      `TCEFORM.tt_content.pi_flexform.myext_pi1.sDEF.settings\.myfield.disabled`
 
-      Where `sDEF` is the sheet name.
+      Where `sDEF` is the sheet name. For a description
+      see the section :ref:`tceformApplyPropertiesFlexForm` on this page.
 
 :aspect:`Example`
    .. code-block:: typoscript
@@ -506,9 +529,10 @@ disableNoMatchingValueElement
       `TCEFORM.tt_content.header_layout.types.textpic.disableNoMatchingValueElement`
 
    Flex form field level, example:
-      `TCEFORM.tt_content.pi_flexform.myext_pi1.sDEF.myField.disableNoMatchingValueElement`
+      `TCEFORM.tt_content.pi_flexform.myext_pi1.sDEF.settings\.myfield.disableNoMatchingValueElement`
 
-      Where `sDEF` is the sheet name.
+      Where `sDEF` is the sheet name. For a description
+      see the section :ref:`tceformApplyPropertiesFlexForm` on this page.
 
 :aspect:`Example`
    .. code-block:: typoscript
@@ -569,9 +593,10 @@ fileFolderConfig
       `TCEFORM.[tableName].[fieldName].types.[typeName].fileFolderConfig.folder`
 
    Flex form field level, example:
-      `TCEFORM.tt_content.pi_flexform.myext_pi1.sDEF.myField.fileFolderConfig.folder`
+      `TCEFORM.tt_content.pi_flexform.myext_pi1.sDEF.settings\.myfield.fileFolderConfig.folder`
 
-      Where `sDEF` is the sheet name.
+      Where `sDEF` is the sheet name. For a description
+      see the section :ref:`tceformApplyPropertiesFlexForm` on this page.
 
 
 .. index::
@@ -598,9 +623,10 @@ itemsProcFunc
       `TCEFORM.[tableName].[fieldName].types.[typeName].itemsProcFunc`
 
    Flex form field level, example:
-      `TCEFORM.tt_content.pi_flexform.myext_pi1.sDEF.myField.itemsProcFunc`
+      `TCEFORM.tt_content.pi_flexform.myext_pi1.sDEF.settings\.myfield.itemsProcFunc`
 
-      Where `sDEF` is the sheet name.
+      Where `sDEF` is the sheet name. For a description
+      see the section :ref:`tceformApplyPropertiesFlexForm` on this page.
 
 
 .. index::
@@ -625,9 +651,10 @@ keepItems
       `TCEFORM.tt_content.header_layout.types.textpic.keepItems`
 
    Flex form field level, example:
-      `TCEFORM.tt_content.pi_flexform.myext_pi1.sDEF.myField.keepItems`
+      `TCEFORM.tt_content.pi_flexform.myext_pi1.sDEF.settings\.myfield.keepItems`
 
-      Where `sDEF` is the sheet name.
+      Where `sDEF` is the sheet name. For a description
+      see the section :ref:`tceformApplyPropertiesFlexForm` on this page.
 
 :aspect:`Example`
     ..  code-block:: typoscript
@@ -665,9 +692,10 @@ label
       `TCEFORM.[tableName].[fieldName].types.[typeName].label`
 
    Flex form field level, example:
-      `TCEFORM.tt_content.pi_flexform.myext_pi1.sDEF.myField.label`
+      `TCEFORM.tt_content.pi_flexform.myext_pi1.sDEF.settings\.myfield.label`
 
-      Where `sDEF` is the sheet name.
+      Where `sDEF` is the sheet name. For a description
+      see the section :ref:`tceformApplyPropertiesFlexForm` on this page.
 
 :aspect:`Example`
    .. code-block:: typoscript
@@ -705,9 +733,10 @@ noMatchingValue_label
       `TCEFORM.tt_content.header_layout.types.textpic.noMatchingValue_label`
 
    Flex form field level, example:
-      `TCEFORM.tt_content.pi_flexform.myext_pi1.sDEF.myField.noMatchingValue_label`
+      `TCEFORM.tt_content.pi_flexform.myext_pi1.sDEF.settings\.myfield.noMatchingValue_label`
 
-      Where `sDEF` is the sheet name.
+      Where `sDEF` is the sheet name. For a description
+      see the section :ref:`tceformApplyPropertiesFlexForm` on this page.
 
 :aspect:`Example`
    .. code-block:: typoscript
@@ -746,9 +775,10 @@ removeItems
       `TCEFORM.tt_content.header_layout.types.textpic.removeItems`
 
    Flex form field level, example:
-      `TCEFORM.tt_content.pi_flexform.myext_pi1.sDEF.myField.removeItems`
+      `TCEFORM.tt_content.pi_flexform.myext_pi1.sDEF.settings\.myfield.removeItems`
 
-      Where `sDEF` is the sheet name.
+      Where `sDEF` is the sheet name. For a description
+      see the section :ref:`tceformApplyPropertiesFlexForm` on this page.
 
 :aspect:`Example`
    .. code-block:: typoscript
@@ -774,7 +804,8 @@ sheetDescription
    This property is only available on flex form sheet level, example:
       `TCEFORM.tt_content.pi_flexform.myext_pi1.sDEF.sheetDescription`
 
-      Where `sDEF` is the sheet name.
+      Where `sDEF` is the sheet name. For a description
+      see the section :ref:`tceformApplyPropertiesFlexForm` on this page.
 
 
 .. index::
@@ -792,7 +823,8 @@ sheetShortDescr
    This property is only available on flex form sheet level, example:
       `TCEFORM.tt_content.pi_flexform.myext_pi1.sDEF.sheetShortDescription`
 
-      Where `sDEF` is the sheet name.
+      Where `sDEF` is the sheet name. For a description
+      see the section :ref:`tceformApplyPropertiesFlexForm` on this page.
 
 .. index::
    FlexForm; Sheet title
@@ -809,7 +841,8 @@ sheetTitle
    This property is only available on flex form sheet level, example:
       `TCEFORM.tt_content.pi_flexform.myext_pi1.sDEF.sheetTitle`
 
-      Where `sDEF` is the sheet name.
+      Where `sDEF` is the sheet name. For a description
+      see the section :ref:`tceformApplyPropertiesFlexForm` on this page.
 
 :aspect:`Example`
    .. code-block:: typoscript
