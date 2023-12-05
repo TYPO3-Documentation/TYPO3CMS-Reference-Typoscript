@@ -1047,6 +1047,11 @@ meta
                 }
             }
 
+         ..  note::
+
+             Since the dot (`.`) has a meaning in TypoScript, it must be escaped with
+             a backslash if used in a meta key.
+
          They can be used like :typoscript:`property` used for OG tags in the example.
 
          You may also supply multiple values for one name, which results in
