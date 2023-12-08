@@ -182,16 +182,54 @@ writing: :php:`TypoScriptFrontendController->id`.
    Variable
          fe\_user
 
-   PHP-Type
-         object
+         .. versionchanged:: 13.0
+            The variable has been removed with TYPO3 v13.
 
-   Description
-         The current front-end user.
+   Migration
+         There are two possible migrations.
 
-         User record in :php:`$GLOBALS['TSFE']->fe_user->user`, if any login.
-         Better use the :ref:`request <t3coreapi:typo3-request>` attribute
-         :ref:`frontend.user <t3coreapi:typo3-request-attribute-frontend-user>` instead.
+         First, a limited information list of frontend user details can be
+         retrieved using the :ref:`Context <t3coreapi:context-api>` aspect
+         :php:`frontend.user` in frontend calls. See class
+         :php:`\TYPO3\CMS\Core\Context\UserAspect` for a full list. The current
+         context can be retrieved using
+         :ref:`dependency injection <t3coreapi:DependencyInjection>`.
+         Example:
 
+         .. code-block:: php
+
+            use TYPO3\CMS\Core\Context\Context;
+
+            final class MyExtensionController {
+                public function __construct(
+                    private readonly Context $context,
+                ) {}
+
+                public function myAction() {
+                    $frontendUserUsername = $this->context->getPropertyFromAspect(
+                        'frontend.user',
+                        'username',
+                        ''
+                    );
+                }
+            }
+
+         Additionally, the full :php:`\TYPO3\CMS\Frontend\Authentication\FrontendUserAuthentication`
+         object is available as :ref:`request <t3coreapi:typo3-request>` attribute
+         :ref:`frontend.user <t3coreapi:typo3-request-attribute-frontend-user>`
+         in the frontend. Note some details of that object are marked
+         :php:`@internal`, using the context aspect is thus the preferred way.
+         Example of an extension using the Extbase's :php:`ActionController`:
+
+         .. code-block:: php
+
+            final class MyExtensionController extends ActionController {
+                public function myAction() {
+                    // Note the 'user' property is marked @internal.
+                    $frontendUserUsername = $this->request
+                        ->getAttribute('frontend.user')->user['username'];
+                }
+            }
 
 .. container:: table-row
 
