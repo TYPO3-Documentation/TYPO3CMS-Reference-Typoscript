@@ -177,6 +177,8 @@ writing: :php:`TypoScriptFrontendController->id`.
          The page record
 
 
+.. _appendix-include-tsfe-feuser:
+
 .. container:: table-row
 
    Variable
