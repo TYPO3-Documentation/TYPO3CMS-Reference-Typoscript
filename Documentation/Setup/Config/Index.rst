@@ -539,19 +539,20 @@ contentObjectExceptionHandler
 
    Description
          Exceptions which occur during rendering of content objects (typically plugins)
-         will now be caught by default in production context and an error message
+         will be caught by default in production context and an error message
          is shown along with the rendered output.
 
          If this is done, the page will remain available while the section of the page
          that produces an error (i.e. throws an exception) will show a configurable error message.
          By default this error message contains a random code which references
-         the exception and is also logged by the logging framework for developer reference.
+         the exception and is also logged by the :ref:`logging framework <t3coreapi:logging>`
+         for developer reference.
 
          .. important::
 
             Instead of breaking the whole page when an exception occurs, an error message
             is shown for the part of the page that is broken.
-            Be aware that unlike before, it is now possible that a page with error message gets cached.
+            Be aware, it is possible that a page with an error message gets cached.
 
             To get rid of the error message not only the actual error needs to be fixed,
             but the cache must be cleared for this page.
