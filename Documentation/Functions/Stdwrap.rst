@@ -518,6 +518,7 @@ solved by explicitly disabling it with :typoscript:`htmlSanitize = 0`.
         }
     }
 
+..  _stdwrap-htmlparser:
 
 HTMLparser
 ~~~~~~~~~~
