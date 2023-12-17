@@ -31,7 +31,7 @@ decimals
 
 ..  t3-function-numberformat:: decimals
 
-    :Data type: :t3-data-type:`integer` / :ref:`stdwrap`
+    :Data type: :ref:`data-type-integer` / :ref:`stdwrap`
     :Default: 0
 
     Number of decimals the formatted number will have.
@@ -44,7 +44,7 @@ dec\_point
 
 ..  t3-function-numberformat:: dec_point
 
-    :Data type: :t3-data-type:`string` / :ref:`stdWrap <stdwrap>`
+    :Data type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
     :Default: .
 
     Character that divides the decimals from the rest of the number.
@@ -54,7 +54,7 @@ thousands\_sep
 
 ..  t3-function-numberformat:: thousands_sep
 
-    :Data type: :t3-data-type:`string` / :ref:`stdwrap`
+    :Data type: :ref:`data-type-string` / :ref:`stdwrap`
     :Default: ,
 
     Character that divides the thousands of the number.

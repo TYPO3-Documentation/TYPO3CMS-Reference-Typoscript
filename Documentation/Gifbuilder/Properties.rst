@@ -31,7 +31,7 @@ backColor
 
 ..  confval:: backColor
 
-    :Data type: :t3-data-type:`GraphicColor` / :ref:`stdWrap <stdwrap>`
+    :Data type: :ref:`data-type-GraphicColor` / :ref:`stdWrap <stdwrap>`
     :Default: white
 
     Background color of the image.
@@ -251,7 +251,7 @@ transparentColor
 
 ..  confval:: transparentColor
 
-    :Data type: :t3-data-type:`GraphicColor` / :ref:`stdWrap <stdwrap>`
+    :Data type: :ref:`data-type-GraphicColor` / :ref:`stdWrap <stdwrap>`
 
     Specify a color that should be transparent.
 

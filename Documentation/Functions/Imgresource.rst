@@ -25,7 +25,7 @@ ext
 
 ..  t3-function-imgresource:: ext
 
-    :Data type: :t3-data-type:`imageExtension` / :ref:`stdwrap`
+    :Data type: :ref:`data-type-imageExtension` / :ref:`stdwrap`
 
     :Default: web
 
@@ -41,7 +41,7 @@ width
 
 ..  t3-function-imgresource:: width
 
-    :Data type: :t3-data-type:`pixels` / :ref:`stdwrap`
+    :Data type: :ref:`data-type-pixels` / :ref:`stdwrap`
 
     If both the width and the height are set and one of the numbers is
     appended by an :typoscript:`m`, the proportions will be preserved and thus
@@ -101,7 +101,7 @@ height
 
 ..  t3-function-imgresource:: height
 
-    :Data type: :t3-data-type:`pixels` / :ref:`stdwrap`
+    :Data type: :ref:`data-type-pixels` / :ref:`stdwrap`
 
     See :t3-function-imgresource:`width`
 
@@ -110,7 +110,7 @@ params
 
 ..  t3-function-imgresource:: params
 
-    :Data type: :t3-data-type:`string` / :ref:`stdwrap`
+    :Data type: :ref:`data-type-string` / :ref:`stdwrap`
 
     GraphicsMagick/ImageMagick command-line:
 
@@ -121,7 +121,7 @@ sample
 
 ..  t3-function-imgresource:: sample
 
-    :Data type: :t3-data-type:`boolean`
+    :Data type: :ref:`data-type-boolean`
     :Default: 0
 
     If set, `-sample` is used to scale images instead of `-geometry`. Sample
@@ -132,7 +132,7 @@ noScale
 
 ..  t3-function-imgresource:: noScale
 
-    :Data type: :t3-data-type:`boolean` / :ref:`stdwrap`
+    :Data type: :ref:`data-type-boolean` / :ref:`stdwrap`
     :Default: 0
 
     If set, the image itself will never be scaled. Only width and height
@@ -165,7 +165,7 @@ crop
 
 ..  t3-function-imgresource:: crop
 
-    :Data type: :t3-data-type:`string` / :ref:`stdwrap`
+    :Data type: :ref:`data-type-string` / :ref:`stdwrap`
     :Default: not-set (when file/image is a file_reference the crop value of
 
     It is possible to define an area that should be taken (cropped) from the image.
@@ -195,7 +195,7 @@ cropVariant
 
 ..  t3-function-imgresource:: cropVariant
 
-    :Data type: :t3-data-type:`string`
+    :Data type: :ref:`data-type-string`
     :Default: default
 
     Since it's possible to define certain :ref:`crop variants <t3coreapi:cropvariants>`
@@ -222,7 +222,7 @@ frame
 
 ..  t3-function-imgresource:: frame
 
-    :Data type: :t3-data-type:`integer` / :ref:`stdwrap`
+    :Data type: :ref:`data-type-integer` / :ref:`stdwrap`
 
     Chooses the frame in a PDF or GIF file.
 
@@ -233,7 +233,7 @@ import
 
 ..  t3-function-imgresource:: import
 
-    :Data type: :t3-data-type:`path` / :ref:`stdwrap`
+    :Data type: :ref:`data-type-path` / :ref:`stdwrap`
 
     *value* should be set to the path of the file
 
@@ -258,7 +258,7 @@ treatIdAsReference
 
 ..  t3-function-imgresource:: treatIdAsReference
 
-    :Data type: :t3-data-type:`boolean` / :ref:`stdwrap`
+    :Data type: :ref:`data-type-boolean` / :ref:`stdwrap`
     :Default: 0
 
     If set, given UIDs are interpreted as UIDs to sys_file_reference
@@ -270,7 +270,7 @@ maxW
 
 ..  t3-function-imgresource:: maxW
 
-    :Data type: :t3-data-type:`pixels` / :ref:`stdwrap`
+    :Data type: :ref:`data-type-pixels` / :ref:`stdwrap`
 
     Maximum width
 
@@ -279,7 +279,7 @@ maxH
 
 ..  t3-function-imgresource:: maxH
 
-    :Data type: :t3-data-type:`pixels` / :ref:`stdwrap`
+    :Data type: :ref:`data-type-pixels` / :ref:`stdwrap`
 
     Maximum height
 
@@ -288,7 +288,7 @@ minW
 
 ..  t3-function-imgresource:: minW
 
-    :Data type: :t3-data-type:`pixels` / :ref:`stdwrap`
+    :Data type: :ref:`data-type-pixels` / :ref:`stdwrap`
 
     Minimum width (overrules maxW/maxH)
 
@@ -297,7 +297,7 @@ minH
 
 ..  t3-function-imgresource:: minH
 
-    :Data type: :t3-data-type:`pixels` / :ref:`stdwrap`
+    :Data type: :ref:`data-type-pixels` / :ref:`stdwrap`
 
     Minimum height (overrules maxW/maxH)
 
@@ -306,7 +306,7 @@ stripProfile
 
 ..  t3-function-imgresource::    stripProfile
 
-    :Data type:    :t3-data-type:`boolean`
+    :Data type:    :ref:`data-type-boolean`
     :Default:    0
 
     If set, the GraphicsMagick/ImageMagick-command will use a
@@ -338,7 +338,7 @@ m.mask
 
 ..  t3-function-imgresource:: m.mask
 
-    :Data type: :t3-data-type:`imgResource`
+    :Data type: :ref:`data-type-imgResource`
 
     The mask with which the image is masked onto :typoscript:`m.bgImg`. Both :typoscript:`m.mask`
     and :typoscript:`m.bgImg` **is scaled to fit** the size of the imgResource image!
@@ -350,7 +350,7 @@ m.bgImg
 
 ..  t3-function-imgresource:: m.bgImg
 
-    :Data type: :t3-data-type:`imgResource`
+    :Data type: :ref:`data-type-imgResource`
 
     **Note:** Both :typoscript:`m.mask` and :typoscript:`m.bgImg` must be valid images.
 
@@ -359,7 +359,7 @@ m.bottomImg
 
 ..  t3-function-imgresource:: m.bottomImg
 
-    :Data type: :t3-data-type:`imgResource`
+    :Data type: :ref:`data-type-imgResource`
 
     An image masked by :typoscript:`m.bottomImg_mask` onto :typoscript:`m.bgImg` before the
     imgResources is masked by :typoscript:`m.mask`.
@@ -377,7 +377,7 @@ m.bottomImg\_mask
 
 ..  t3-function-imgresource:: m.bottomImg_mask
 
-    :Data type: :t3-data-type:`imgResource`
+    :Data type: :ref:`data-type-imgResource`
 
     (optional)
 

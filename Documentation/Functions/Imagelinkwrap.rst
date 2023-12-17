@@ -22,7 +22,7 @@ enable
 
 ..  t3-function-imagelinkwrap:: imageLinkWrap.enable
 
-    :Data type: :t3-data-type:`boolean` / :ref:`stdwrap`
+    :Data type: :ref:`data-type-boolean` / :ref:`stdwrap`
 
     :Default: 0
 
@@ -43,7 +43,7 @@ width
 
 ..  t3-function-imagelinkwrap:: imageLinkWrap.width
 
-    :Data type: :t3-data-type:`positive integer` / :ref:`stdwrap`
+    :Data type: :ref:`data-type-positive-integer` / :ref:`stdwrap`
 
     :Default: 0
 
@@ -57,7 +57,7 @@ height
 
 ..  t3-function-imagelinkwrap:: imageLinkWrap.height
 
-    :Data type: :t3-data-type:`positive integer` / :ref:`stdwrap`
+    :Data type: :ref:`data-type-positive-integer` / :ref:`stdwrap`
 
     :Default: 0
 
@@ -97,7 +97,7 @@ sample
 
 ..  t3-function-imagelinkwrap:: imageLinkWrap.sample
 
-    :Data type: :t3-data-type:`positive integer` / :ref:`stdwrap`
+    :Data type: :ref:`data-type-positive-integer` / :ref:`stdwrap`
 
     :Default: 0
 
@@ -115,7 +115,7 @@ title
 
 ..  t3-function-imagelinkwrap:: imageLinkWrap.title
 
-    :Data type: :t3-data-type:`string` / :ref:`stdwrap`
+    :Data type: :ref:`data-type-string` / :ref:`stdwrap`
 
     Specifies the html-page-title of the preview window.
     Needs :typoscript:`JSwindow = 1`.
@@ -126,7 +126,7 @@ bodyTag
 
 ..  t3-function-imagelinkwrap:: imageLinkWrap.bodyTag
 
-    :Data type: :t3-data-type:`tag` / :ref:`stdwrap`
+    :Data type: :ref:`data-type-tag` / :ref:`stdwrap`
 
     This is the `<body>`-tag of the preview window.
     Needs :typoscript:`JSwindow = 1`.
@@ -149,7 +149,7 @@ wrap
 
 ..  t3-function-imagelinkwrap:: imageLinkWrap.wrap
 
-    :Data type: :t3-data-type:`wrap`
+    :Data type: :ref:`data-type-wrap`
 
     This wrap is placed around the `<img>`-tag in the preview window.
     Needs :typoscript:`JSwindow = 1`.
@@ -159,7 +159,7 @@ target
 
 ..  t3-function-imagelinkwrap:: imageLinkWrap.target
 
-    :Data type: :t3-data-type:`target` / :ref:`stdwrap`
+    :Data type: :ref:`data-type-target` / :ref:`stdwrap`
 
     :Default: :typoscript:`thePicture`
 
@@ -185,7 +185,7 @@ JSwindow
 
 ..  t3-function-imagelinkwrap:: imageLinkWrap.JSwindow
 
-    :Data type: :t3-data-type:`boolean` / :ref:`stdwrap`
+    :Data type: :ref:`data-type-boolean` / :ref:`stdwrap`
 
     :Default: 0
 
@@ -203,7 +203,7 @@ JSwindow.expand
     :Default: 0
 
     :typoscript:`x` and :typoscript:`x` are of data type
-    :t3-data-type:`integer`. The values are added to the width and height
+    :ref:`data-type-integer`. The values are added to the width and height
     of the preview image when calculating the width and height of the
     preview window.
 
@@ -212,14 +212,14 @@ JSwindow.newWindow
 
 ..  t3-function-imagelinkwrap:: JSwindow.newWindow
 
-    :Data type: :t3-data-type:`boolean` / :ref:`stdwrap`
+    :Data type: :ref:`data-type-boolean` / :ref:`stdwrap`
 
     :Default: 0
 
-    If the :ref:`Doctype <setup-config-doctype>` allows the :t3-data-type:`target`
+    If the :ref:`Doctype <setup-config-doctype>` allows the :ref:`data-type-target`
     attribute then the image will be opened in a window with the name given
     by `target`. If that windows is kept open and the next image with the
-    same :t3-data-type:`target` attribute is to be shown then it will appear
+    same :ref:`data-type-target` attribute is to be shown then it will appear
     in the same preview window.
     If :typoscript:`JSwindow.newWindow` is set to True,
     then a unique hash value is used as `target` value for each image.
@@ -231,7 +231,7 @@ JSwindow.altUrl
 
 ..  t3-function-imagelinkwrap:: imageLinkWrap.JSwindow.altUrl
 
-    :Data type: :t3-data-type:`string` / :ref:`stdwrap`
+    :Data type: :ref:`data-type-string` / :ref:`stdwrap`
 
     If this returns anything then it is used as URL of the preview window.
     Otherwise the default "showpic" script will be used.
@@ -242,7 +242,7 @@ JSwindow.altUrl\_noDefaultParams
 
 ..  t3-function-imagelinkwrap:: imageLinkWrap.JSwindow.altUrl_noDefaultParams
 
-    :Data type: :t3-data-type:`boolean` / :ref:`stdwrap`
+    :Data type: :ref:`data-type-boolean` / :ref:`stdwrap`
 
     :Default: 0
 
@@ -268,7 +268,7 @@ directImageLink
 
 ..  t3-function-imagelinkwrap:: imageLinkWrap.directImageLink
 
-    :Data type: :t3-data-type:`boolean` / :ref:`stdwrap`
+    :Data type: :ref:`data-type-boolean` / :ref:`stdwrap`
 
     :Default: 0
 

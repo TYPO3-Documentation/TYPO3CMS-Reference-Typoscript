@@ -24,7 +24,7 @@ length
 
 ..  t3-function-strpad:: length
 
-    :Data type: :t3-data-type:`integer` / :ref:`stdwrap`
+    :Data type: :ref:`data-type-integer` / :ref:`stdwrap`
 
     :Default: 0
 
@@ -37,7 +37,7 @@ padWith
 
 ..  t3-function-strpad:: padWith
 
-    :Data type: :t3-data-type:`string` / :ref:`stdwrap`
+    :Data type: :ref:`data-type-string` / :ref:`stdwrap`
     :Default: (space character)
 
 

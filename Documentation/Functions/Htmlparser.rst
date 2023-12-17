@@ -28,7 +28,7 @@ stripEmptyTags
 
 ..  t3-function-htmlparser:: stripEmptyTags
 
-    :Data type: :t3-data-type:`boolean`
+    :Data type: :ref:`data-type-boolean`
 
     Passes the content to PHPs :php:`strip_tags()`.
 
@@ -37,7 +37,7 @@ stripEmptyTags.keepTags
 
 ..  t3-function-htmlparser:: stripEmptyTags.keepTags
 
-    :Data type: :t3-data-type:`string`
+    :Data type: :ref:`data-type-string`
 
     Comma separated list of tags to keep when applying :php:`strip_tags()`.
 
@@ -46,7 +46,7 @@ tags.[tagname]
 
 ..  t3-function-htmlparser:: tags
 
-    :Data type: :t3-data-type:`boolean` / string of :ref:`htmlparser-tags`
+    :Data type: :ref:`data-type-boolean` / string of :ref:`htmlparser-tags`
 
     Either set this property to `0` or `1` to allow or deny the tag. If you
     enter :ref:`htmlparser-tags` properties, those will automatically overrule
@@ -110,7 +110,7 @@ keepNonMatchedTags
 
 ..  t3-function-htmlparser:: keepNonMatchedTags
 
-    :Data type: :t3-data-type:`boolean` / "protect"
+    :Data type: :ref:`data-type-boolean` / "protect"
 
     If set (:typoscript:`1`), then all tags are kept regardless of tags present as
     keys in :php:`$tags`-array.

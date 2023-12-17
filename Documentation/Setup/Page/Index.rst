@@ -150,29 +150,29 @@ Properties
    Property                       Data Type                             :ref:`stdwrap`         Default
    ============================== ===================================== ====================== ========================
    `1,2,3,4...`_                  :ref:`cObject <data-type-cobject>`
-   `bodyTag`_                     :t3-data-type:`tag`                                          <body>
-   `bodyTagAdd`_                  :t3-data-type:`string`
+   `bodyTag`_                     :ref:`data-type-tag`                                         <body>
+   `bodyTagAdd`_                  :ref:`data-type-string`
    `bodyTagCObject`_              :ref:`cObject <data-type-cobject>`
    `config`_                      :ref:`->CONFIG <config>`
    `cssInline.[array]`_           :ref:`cObject <data-type-cobject>`
    `footerData.[array]`_          :ref:`cObject <data-type-cobject>`
    `headerData.[array]`_          :ref:`cObject <data-type-cobject>`
-   `headTag`_                     :t3-data-type:`tag` / :ref:`stdwrap`                         <head>
-   `includeCSS.[array]`_          :t3-data-type:`resource`
-   `includeCSSLibs.[array]`_      :t3-data-type:`resource`
-   `includeJS.[array]`_           :t3-data-type:`resource`
-   `includeJSFooter.[array]`_     :t3-data-type:`resource`
-   `includeJSFooterlibs.[array]`_ :t3-data-type:`resource`
-   `includeJSLibs.[array]`_       :t3-data-type:`resource`
+   `headTag`_                     :ref:`data-type-tag` / :ref:`stdwrap`                        <head>
+   `includeCSS.[array]`_          :ref:`data-type-resource`
+   `includeCSSLibs.[array]`_      :ref:`data-type-resource`
+   `includeJS.[array]`_           :ref:`data-type-resource`
+   `includeJSFooter.[array]`_     :ref:`data-type-resource`
+   `includeJSFooterlibs.[array]`_ :ref:`data-type-resource`
+   `includeJSLibs.[array]`_       :ref:`data-type-resource`
    `inlineLanguageLabelFiles`_    (array of strings)
    `inlineSettings`_              (array of strings)
    `jsFooterInline.[array]`_      :ref:`cObject <data-type-cobject>`
    `jsInline.[array]`_            :ref:`cObject <data-type-cobject>`
    `meta`_                        (array of strings)
-   `shortcutIcon`_                :t3-data-type:`resource`
+   `shortcutIcon`_                :ref:`data-type-resource`
    `stdWrap`_                     :ref:`stdwrap`
-   `typeNum`_                     :t3-data-type:`integer`                                      0
-   `wrap`_                        :t3-data-type:`wrap`
+   `typeNum`_                     :ref:`data-type-integer`                                      0
+   `wrap`_                        :ref:`data-type-wrap`
    ============================== ===================================== ====================== ========================
 
 .. ### BEGIN~OF~TABLE ###
@@ -230,7 +230,7 @@ bodyTag
          bodyTag
 
    Data type
-         :t3-data-type:`tag`
+         :ref:`data-type-tag`
 
    Default
          <body>
@@ -259,7 +259,7 @@ bodyTagAdd
          bodyTagAdd
 
    Data type
-         :t3-data-type:`string`
+         :ref:`data-type-string`
 
    Description
          This content is added inside of the opening :html:`<body>` tag right
@@ -452,7 +452,7 @@ headTag
          headTag
 
    Data type
-         :t3-data-type:`tag` / :ref:`stdwrap`
+         :ref:`data-type-tag` / :ref:`stdwrap`
 
    Default
          <head>
@@ -474,14 +474,14 @@ includeCSS.[array]
          includeCSS.[array]
 
    Data type
-         :t3-data-type:`resource`
+         :ref:`data-type-resource`
 
    Description
          Inserts a stylesheet (just like the :typoscript:`stylesheet` property), but allows
          setting up more than a single stylesheet, because you can enter files
          in an array.
 
-         The file definition must be a valid :t3-data-type:`resource` data type,
+         The file definition must be a valid :ref:`data-type-resource` data type,
          otherwise nothing is inserted.
 
          Each file has *optional properties*:
@@ -558,12 +558,12 @@ includeCSSLibs.[array]
          includeCSSLibs.[array]
 
    Data type
-         :t3-data-type:`resource`
+         :ref:`data-type-resource`
 
    Description
          Adds CSS library files to head of page.
 
-         The file definition must be a valid :t3-data-type:`resource` data type,
+         The file definition must be a valid :ref:`data-type-resource` data type,
          otherwise nothing is inserted. This means that remote files cannot be referenced
          (i.e. using :samp:`https://...`), except by using the :typoscript:`.external` property.
 
@@ -627,13 +627,13 @@ includeJS.[array]
          includeJS.[array]
 
    Data type
-         :t3-data-type:`resource`
+         :ref:`data-type-resource`
 
    Description
          Inserts one or more (Java)Scripts in :html:`<script>` tags.
          With :ref:`setup-config-movejsfromheadertofooter` set to TRUE all files
          will be moved to the footer.
-         The file definition must be a valid :t3-data-type:`resource` data type,
+         The file definition must be a valid :ref:`data-type-resource` data type,
          otherwise nothing is inserted. This means that remote files cannot be referenced
          (i.e. using :samp:`https://...`), except by using the :typoscript:`.external` property.
 
@@ -726,7 +726,7 @@ includeJSFooter.[array]
          includeJSFooter.[array]
 
    Data type
-         :t3-data-type:`resource`
+         :ref:`data-type-resource`
 
    Description
          Add JS files to footer (after possible files set in :ref:`includeJSFooterlibs <setup-page-includejsfooterlibs-array>`)
@@ -749,7 +749,7 @@ includeJSFooterlibs.[array]
          includeJSFooterlibs.[array]
 
    Data type
-         :t3-data-type:`resource`
+         :ref:`data-type-resource`
 
    Description
          Add JS library files to footer.
@@ -774,7 +774,7 @@ includeJSLibs.[array]
          includeJSLibs.[array]
 
    Data type
-         :t3-data-type:`resource`
+         :ref:`data-type-resource`
 
    Description
          Adds JS library files to head of page.
@@ -1069,7 +1069,7 @@ shortcutIcon
       shortcutIcon
 
    Data type
-      :t3-data-type:`resource`
+      :ref:`data-type-resource`
 
    Description
       Favicon of the page. Create a reference to an icon here!
@@ -1119,7 +1119,7 @@ typeNum
          typeNum
 
    Data type
-         :t3-data-type:`integer`
+         :ref:`data-type-integer`
 
    Default
          0
@@ -1144,7 +1144,7 @@ wrap
          wrap
 
    Data type
-         :t3-data-type:`wrap`
+         :ref:`data-type-wrap`
 
    Description
          Wraps the content of the cObject array.

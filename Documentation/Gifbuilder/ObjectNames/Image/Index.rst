@@ -70,7 +70,7 @@ file
 
 ..  confval:: file
 
-    :Data type: :t3-data-type:`imgResource`
+    :Data type: :ref:`data-type-imgResource`
 
     The image file.
 
@@ -82,7 +82,7 @@ mask
 
 ..  confval:: mask
 
-    :Data type: :t3-data-type:`imgResource`
+    :Data type: :ref:`data-type-imgResource`
 
     Optional mask image for the image file.
 
