@@ -49,7 +49,7 @@ http.extTarget
 
 ..  t3-function-makelinks:: http.extTarget
 
-    :Data type: :t3-data-type:`target`
+    :Data type: :ref:`data-type-target`
     :Default: \_top
 
     The target of the link.
@@ -62,7 +62,7 @@ http.wrap
 
 ..  t3-function-makelinks:: http.wrap
 
-    :Data type: :t3-data-type:`wrap` / :ref:`stdwrap`
+    :Data type: :ref:`data-type-wrap` / :ref:`stdwrap`
 
     Wrap around the link.
 
@@ -73,7 +73,7 @@ http.ATagBeforeWrap
 
 ..  t3-function-makelinks:: http.ATagBeforeWrap
 
-    :Data type: :t3-data-type:`boolean`
+    :Data type: :ref:`data-type-boolean`
     :Default: 0
 
     If set, the link is first wrapped with :typoscript:`http.wrap` and then the
@@ -111,7 +111,7 @@ http.ATagParams
 
 ..  t3-function-makelinks:: http.ATagParams
 
-    :Data type: :t3-data-type:`tag-params` / :ref:`stdwrap`
+    :Data type: :ref:`data-type-tag-params` / :ref:`stdwrap`
 
     Additional parameters
 
@@ -142,7 +142,7 @@ mailto.wrap
 
 ..  t3-function-makelinks:: mailto.wrap
 
-    :Data type: :t3-data-type:`wrap` / :ref:`stdwrap`
+    :Data type: :ref:`data-type-wrap` / :ref:`stdwrap`
 
     Wrap around the link.
 
@@ -153,7 +153,7 @@ mailto.ATagBeforeWrap
 
 ..  t3-function-makelinks:: mailto.ATagBeforeWrap
 
-    :Data type: :t3-data-type:`boolean`
+    :Data type: :ref:`data-type-boolean`
     :Default: 0
 
     If set, the link is first wrapped with mailto :typoscript:`wrap` and then the
@@ -167,7 +167,7 @@ mailto.ATagParams
 
 ..  t3-function-makelinks:: mailto.ATagParams
 
-    :Data type: :t3-data-type:`tag-params` / :ref:`stdwrap`
+    :Data type: :ref:`data-type-tag-params` / :ref:`stdwrap`
 
     Additional parameters
 

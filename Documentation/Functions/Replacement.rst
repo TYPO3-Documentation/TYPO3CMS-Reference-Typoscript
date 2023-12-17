@@ -25,7 +25,7 @@ search
 
 ..  t3-function-replacement:: search
 
-    :Data type: :t3-data-type:`string` / :ref:`stdwrap`
+    :Data type: :ref:`data-type-string` / :ref:`stdwrap`
 
     Defines the string that shall be replaced.
 
@@ -34,7 +34,7 @@ replace
 
 ..  t3-function-replacement:: replace
 
-    :Data type: :t3-data-type:`string` / :ref:`stdwrap`
+    :Data type: :ref:`data-type-string` / :ref:`stdwrap`
 
     Defines the string to be used for the replacement.
 
@@ -43,7 +43,7 @@ useRegExp
 
 ..  t3-function-replacement:: useRegExp
 
-    :Data type: :t3-data-type:`boolean` / :ref:`stdwrap`
+    :Data type: :ref:`data-type-boolean` / :ref:`stdwrap`
     :Default: 0
 
     Defines that the search and replace strings are considered as PCRE
@@ -65,7 +65,7 @@ useOptionSplitReplace
 
 ..  t3-function-replacement:: useOptionSplitReplace
 
-    :Data type: :t3-data-type:`boolean` / :ref:`stdwrap`
+    :Data type: :ref:`data-type-boolean` / :ref:`stdwrap`
     :Default: 0
 
     This property allows to use :ref:`optionsplit` for the replace

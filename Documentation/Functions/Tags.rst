@@ -51,10 +51,10 @@ Properties
 
     **Special properties for each content object:**
 
-    **[cObject].stripNL:** :t3-data-type:`boolean` option, which tells :typoscript:`parseFunc` that
+    **[cObject].stripNL:** :ref:`data-type-boolean` option, which tells :typoscript:`parseFunc` that
     newlines before and after the content of the tag should be stripped.
 
-    **[cObject].breakoutTypoTagContent:** :t3-data-type:`boolean` option, which tells
+    **[cObject].breakoutTypoTagContent:** :ref:`data-type-boolean` option, which tells
     :ref:`parseFunc` that this block of content is breaking up the nonTypoTag
     content and that the content after this must be re-wrapped.
 

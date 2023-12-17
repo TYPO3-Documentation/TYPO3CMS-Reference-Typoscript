@@ -42,7 +42,7 @@ angle
 
 ..  confval:: angle
 
-    :Data type: :t3-data-type:`degree`
+    :Data type: :ref:`data-type-degree`
     :Default: 0
     :Range: -90 to 90
 
@@ -131,7 +131,7 @@ fontColor
 
 ..  confval:: fontColor
 
-    :Data type: :t3-data-type:`GraphicColor` / :ref:`stdWrap <stdwrap>`
+    :Data type: :ref:`data-type-GraphicColor` / :ref:`stdWrap <stdwrap>`
     :Default: black
 
     The font color.

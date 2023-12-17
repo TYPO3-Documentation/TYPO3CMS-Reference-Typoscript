@@ -136,7 +136,7 @@ recursive
 
 ..  t3-function-select:: recursive
 
-    :Data type: :t3-data-type:`integer` / :ref:`stdWrap`
+    :Data type: :ref:`data-type-integer` / :ref:`stdWrap`
     :Default: 0
 
     Number of recursive levels for the pidInList.
@@ -178,7 +178,7 @@ max
 
 ..  t3-function-select:: max
 
-    :Data type: :t3-data-type:`integer` + :ref:`objects-calc` +"total" / :ref:`stdWrap`
+    :Data type: :ref:`data-type-integer` + :ref:`objects-calc` +"total" / :ref:`stdWrap`
 
     Max records
 
@@ -189,7 +189,7 @@ begin
 
 ..  t3-function-select::    begin
 
-    :Data type:    :t3-data-type:`integer` + :ref:`objects-calc` +"total" / :ref:`stdWrap`
+    :Data type:    :ref:`data-type-integer` + :ref:`objects-calc` +"total" / :ref:`stdWrap`
 
     Begin with record number *value*.
 
@@ -225,7 +225,7 @@ languageField
 
 ..  t3-function-select:: languageField
 
-    :Data type: :t3-data-type:`string` / :ref:`stdWrap`
+    :Data type: :ref:`data-type-string` / :ref:`stdWrap`
 
     This defaults to whatever is defined in TCA "ctrl"-section in the
     "languageField". Change it to overwrite the behaviour in your query.
@@ -240,7 +240,7 @@ includeRecordsWithoutDefaultTranslation
 
 ..  t3-function-select:: includeRecordsWithoutDefaultTranslation
 
-    :Data type: :t3-data-type:`boolean` / :ref:`stdWrap`
+    :Data type: :ref:`data-type-boolean` / :ref:`stdWrap`
     :Default: 0
 
     If content language overlay is activated and the option :typoscript:`languageField` is not disabled,
@@ -252,7 +252,7 @@ selectFields
 
 ..  t3-function-select:: selectFields
 
-    :Data type: :t3-data-type:`string` / :ref:`stdWrap`
+    :Data type: :ref:`data-type-string` / :ref:`stdWrap`
     :Default: \*
 
     List of fields to select, or :php:`count(*)`.
@@ -267,7 +267,7 @@ join, leftjoin, rightjoin
 
 ..  t3-function-select:: join, leftjoin, rightjoin
 
-    :Data type: :t3-data-type:`string` / :ref:`stdWrap`
+    :Data type: :ref:`data-type-string` / :ref:`stdWrap`
 
     Enter the JOIN clause without :sql:`JOIN`, :sql:`LEFT OUTER JOIN` and :sql:`RIGHT OUTER JOIN`
     respectively.
@@ -310,7 +310,7 @@ markers
     <markername>.value (value)
        Sets the value directly.
 
-    <markername>.commaSeparatedList (:t3-data-type:`boolean`)
+    <markername>.commaSeparatedList (:ref:`data-type-boolean`)
        If set, the value is interpreted as a comma-separated list of values.
        Each value in the list is individually escaped and quoted.
 
@@ -429,7 +429,7 @@ See also:
 
 *   :ref:`cobj-content`: for more complete examples with :typoscript:`select`
     and rendering the output with :typoscript:`renderObj`
-*   :t3-data-type:`wrap`: enclosing results within text, used in some of the
+*   :ref:`data-type-wrap`: enclosing results within text, used in some of the
     examples above
 *   :ref:`stdWrap`: for more functionality, can be used in some of the properties,
     such as :typoscript:`pidInList`, :typoscript:`selectFields` etc.

@@ -38,7 +38,7 @@ highColor
 
 ..  confval:: highColor
 
-    :Data type: :t3-data-type:`GraphicColor` / :ref:`stdWrap <stdwrap>`
+    :Data type: :ref:`data-type-GraphicColor` / :ref:`stdWrap <stdwrap>`
 
     Upper border color.
 
@@ -63,7 +63,7 @@ lowColor
 
 ..  confval:: lowColor
 
-    :Data type: :t3-data-type:`GraphicColor` / :ref:`stdWrap <stdwrap>`
+    :Data type: :ref:`data-type-GraphicColor` / :ref:`stdWrap <stdwrap>`
 
     Lower border color.
 
