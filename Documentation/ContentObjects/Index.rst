@@ -10,15 +10,11 @@
 Content Objects (cObject)
 =========================
 
+"cObject" is an (abstract) object type used to define content objects. Following
+are some object types that can be used, when the reference calls for a cObject
+data type.
 
-:aspect:`Description:`
-    "cObject" is an (abstract) object type used to define content objects. Following are some
-    object types that can be used, when the reference calls for a cObject data type.
-
-    Please see the :ref:`cobjects-general-information` for an introduction.
-
-:aspect:`Examples:`
-    :ref:`TEXT <cobj-text>` | :ref:`IMAGE <cobj-image>` | :ref:`FLUIDTEMPLATE <cobj-fluidtemplate>`
+Please see :ref:`cobjects-general-information` for an introduction.
 
 ..  toctree::
     :maxdepth: 5
