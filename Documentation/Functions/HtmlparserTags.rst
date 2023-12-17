@@ -19,7 +19,7 @@ overrideAttribs
 
 ..  t3-function-htmlparser-tags:: overrideAttribs
 
-    :Data type: :t3-data-type:`string`
+    :Data type: :ref:`data-type-string`
 
     If set, this string is preset as the attributes of the tag.
 
@@ -48,7 +48,7 @@ fixAttrib.[attribute].set
 
 ..  t3-function-htmlparser-tags:: fixAttrib.[attribute].set
 
-    :Data type: :t3-data-type:`string`
+    :Data type: :ref:`data-type-string`
 
     Force the attribute value to this value.
 
@@ -57,7 +57,7 @@ fixAttrib.[attribute].unset
 
 ..  t3-function-htmlparser-tags:: fixAttrib.[attribute].unset
 
-    :Data type: :t3-data-type:`boolean`
+    :Data type: :ref:`data-type-boolean`
 
     If set, the attribute is unset.
 
@@ -66,7 +66,7 @@ fixAttrib.[attribute].default
 
 ..  t3-function-htmlparser-tags:: fixAttrib.[attribute].default
 
-    :Data type: :t3-data-type:`string`
+    :Data type: :ref:`data-type-string`
 
     If no attribute exists by this name, this value is set as default
     value (if this value is not blank)
@@ -76,7 +76,7 @@ fixAttrib.[attribute].always
 
 ..  t3-function-htmlparser-tags:: fixAttrib.[attribute].always
 
-    :Data type: :t3-data-type:`boolean`
+    :Data type: :ref:`data-type-boolean`
 
     If set, the attribute is always processed. Normally an attribute is
     processed only if it exists
@@ -86,7 +86,7 @@ fixAttrib.[attribute].trim
 
 ..  t3-function-htmlparser-tags:: fixAttrib.[attribute].trim
 
-    :Data type: :t3-data-type:`boolean`
+    :Data type: :ref:`data-type-boolean`
 
     If true, the value is passed through the
     respective PHP-function.
@@ -96,7 +96,7 @@ fixAttrib.[attribute].intval
 
 ..  t3-function-htmlparser-tags:: fixAttrib.[attribute].intval
 
-    :Data type: :t3-data-type:`boolean`
+    :Data type: :ref:`data-type-boolean`
 
     If true, the value is passed through the
     respective PHP-function.
@@ -106,7 +106,7 @@ fixAttrib.[attribute].upper
 
 ..  t3-function-htmlparser-tags:: fixAttrib.[attribute].upper
 
-    :Data type: :t3-data-type:`boolean`
+    :Data type: :ref:`data-type-boolean`
 
     If true, the value is passed through the
     respective PHP-function.
@@ -118,7 +118,7 @@ fixAttrib.[attribute].lower
 
 ..  t3-function-htmlparser-tags:: fixAttrib.[attribute].lower
 
-    :Data type: :t3-data-type:`boolean`
+    :Data type: :ref:`data-type-boolean`
 
     If true, the value is passed through the
     respective PHP-function.
@@ -149,7 +149,7 @@ fixAttrib.[attribute].removeIfFalse
 
 ..  t3-function-htmlparser-tags:: fixAttrib.[attribute].removeIfFalse
 
-    :Data type: :t3-data-type:`boolean` / :typoscript:`blank` string
+    :Data type: :ref:`data-type-boolean` / :typoscript:`blank` string
 
     If set, then the attribute is removed if it is false (= :typoscript:`0`).
     If this value is set to :typoscript:`blank` then the value must be a blank string
@@ -160,7 +160,7 @@ fixAttrib.[attribute].removeIfEquals
 
 ..  t3-function-htmlparser-tags:: fixAttrib.[attribute].removeIfEquals
 
-    :Data type: :t3-data-type:`string`
+    :Data type: :ref:`data-type-string`
 
     If the attribute value matches the value set here, then it is removed.
 
@@ -169,7 +169,7 @@ fixAttrib.[attribute].casesensitiveComp
 
 ..  t3-function-htmlparser-tags:: fixAttrib.[attribute].casesensitiveComp
 
-    :Data type: :t3-data-type:`boolean`
+    :Data type: :ref:`data-type-boolean`
 
     If set, the comparison in :t3-function-htmlparser-tags:`fixAttrib.[attribute].removeIfEquals`
     and :t3-function-htmlparser-tags:`fixAttrib.[attribute].list` will be case-sensitive.
@@ -180,7 +180,7 @@ fixAttrib.[attribute].prefixRelPathWith
 
 ..  t3-function-htmlparser-tags:: fixAttrib.[attribute].prefixRelPathWith
 
-    :Data type: :t3-data-type:`string`
+    :Data type: :ref:`data-type-string`
 
     If the value of the attribute seems to be a relative URL (no scheme
     like "http" and no "/" as first char) then the value of this property
@@ -197,7 +197,7 @@ fixAttrib.[attribute].userFunc
 
 ..  t3-function-htmlparser-tags:: fixAttrib.[attribute].userFunc
 
-    :Data type: :t3-data-type:`function name`
+    :Data type: :ref:`data-type-function-name`
 
     User function for processing of the attribute. The return value
     of this function will be used as the new tag value.
@@ -231,7 +231,7 @@ protect
 
 ..  t3-function-htmlparser-tags:: protect
 
-    :Data type: :t3-data-type:`boolean`
+    :Data type: :ref:`data-type-boolean`
 
     If set, the tag :html:`<>` is converted to :html:`&lt;` and :html:`&gt;`
 
@@ -240,7 +240,7 @@ remap
 
 ..  t3-function-htmlparser-tags:: remap
 
-    :Data type: :t3-data-type:`string`
+    :Data type: :ref:`data-type-string`
 
     If set, the tagname is remapped to this tagname
 
@@ -249,7 +249,7 @@ rmTagIfNoAttrib
 
 ..  t3-function-htmlparser-tags:: rmTagIfNoAttrib
 
-    :Data type: :t3-data-type:`boolean`
+    :Data type: :ref:`data-type-boolean`
 
     If set, then the tag is removed if no attributes happened to be there.
 

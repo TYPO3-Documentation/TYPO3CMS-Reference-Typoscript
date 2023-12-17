@@ -93,7 +93,7 @@ directReturn
 
 ..  t3-function-if:: directReturn
 
-    :Data type: :t3-data-type:`boolean`
+    :Data type: :ref:`data-type-boolean`
 
     If this property exists, no other conditions will be checked. Instead
     the true/false of this value is returned. Can be used to set
@@ -148,7 +148,7 @@ isFalse
 
 ..  t3-function-if:: isFalse
 
-    :Data type: :t3-data-type:`string` / :ref:`stdwrap`
+    :Data type: :ref:`data-type-string` / :ref:`stdwrap`
 
     If the content is "false", which is empty or zero.
 
@@ -224,7 +224,7 @@ isPositive
 
 ..  t3-function-if:: isPositive
 
-    :Data type: :t3-data-type:`integer` / :ref:`stdwrap` \+ :ref:`objects-calc`
+    :Data type: :ref:`data-type-integer` / :ref:`stdwrap` \+ :ref:`objects-calc`
 
     Returns true, if the content is positive.
 
@@ -233,7 +233,7 @@ isTrue
 
 ..  t3-function-if:: isTrue
 
-    :Data type: :t3-data-type:`string` / :ref:`stdwrap`
+    :Data type: :ref:`data-type-string` / :ref:`stdwrap`
 
     If the content is "true", which is not empty string and not zero.
 
@@ -242,7 +242,7 @@ negate
 
 ..  t3-function-if:: negate
 
-    :Data type: :t3-data-type:`boolean`
+    :Data type: :ref:`data-type-boolean`
     :Default: 0
 
     This property is checked after all other properties. If set, it

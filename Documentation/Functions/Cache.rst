@@ -34,7 +34,7 @@ key
 
 ..  t3-function-cache:: key
 
-    :Data type: :t3-data-type:`string` / :ref:`stdwrap`
+    :Data type: :ref:`data-type-string` / :ref:`stdwrap`
 
     The cache identifier that is used to store the rendered content into
     the cache and to read it from there.
@@ -78,7 +78,7 @@ tags
 
 ..  t3-function-cache:: tags
 
-    :Data type: :t3-data-type:`string` / :ref:`stdwrap`
+    :Data type: :ref:`data-type-string` / :ref:`stdwrap`
 
     Can hold a comma-separated list of tags. These tags will be attached
     to the entry added to the `cache_hash` cache (and to

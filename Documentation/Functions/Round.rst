@@ -27,7 +27,7 @@ roundType
 
 ..  t3-function-round:: roundType
 
-    :Data type: :t3-data-type:`string` / :ref:`stdwrap`
+    :Data type: :ref:`data-type-string` / :ref:`stdwrap`
     :Default: round
 
     Round method which should be used.
@@ -48,7 +48,7 @@ decimals
 
 ..  t3-function-round:: decimals
 
-    :Data type: :t3-data-type:`integer` / :ref:`stdwrap`
+    :Data type: :ref:`data-type-integer` / :ref:`stdwrap`
     :Default: 0
 
     Number of decimals the rounded value will have. Only used with the
@@ -60,7 +60,7 @@ round
 
 ..  t3-function-round:: round
 
-    :Data type: :t3-data-type:`boolean`
+    :Data type: :ref:`data-type-boolean`
     :Default: 0
 
     Set round = 1 to enable rounding.

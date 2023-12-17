@@ -70,7 +70,7 @@ remapTag.[*tagname*]
 
 ..  t3-function-encapslines:: remapTag
 
-    :Data type: array of :t3-data-type:`string`
+    :Data type: array of :ref:`data-type-string`
 
     Enter a new tag name here if you wish the tag name of any encapsulation
     to be unified to a single tag name.
@@ -130,7 +130,7 @@ removeWrapping
 
 ..  t3-function-encapslines:: removeWrapping
 
-    :Data type: :t3-data-type:`boolean`
+    :Data type: :ref:`data-type-boolean`
 
     If set, then all existing wrapping will be removed.
 
@@ -210,7 +210,7 @@ defaultAlign
 
 ..  t3-function-encapslines:: defaultAlign
 
-    :Data type: :t3-data-type:`string` / :ref:`stdWrap`
+    :Data type: :ref:`data-type-string` / :ref:`stdWrap`
 
     If set, this value is set as the default "align" value of the wrapping
     tags, both from :t3-function-encapslines:`encapsTagList` and

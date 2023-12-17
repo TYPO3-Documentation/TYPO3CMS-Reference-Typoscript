@@ -66,7 +66,7 @@ setContentToCurrent
 
 ..  t3-function-stdwrap:: setContentToCurrent
 
-    :Data type: :t3-data-type:`boolean` / :ref:`stdWrap`
+    :Data type: :ref:`data-type-boolean` / :ref:`stdWrap`
 
     Sets the current value to the incoming content of the function.
 
@@ -77,7 +77,7 @@ addPageCacheTags
 
 ..  t3-function-stdwrap:: addPageCacheTags
 
-    :Data type: :t3-data-type:`string` / :ref:`stdWrap`
+    :Data type: :ref:`data-type-string` / :ref:`stdWrap`
 
     Comma-separated list of cache tags, which should be added to the page
     cache.
@@ -105,7 +105,7 @@ setCurrent
 
 ..  t3-function-stdwrap:: setCurrent
 
-    :Data type: :t3-data-type:`string` / :ref:`stdWrap`
+    :Data type: :ref:`data-type-string` / :ref:`stdWrap`
 
     Sets the "current"-value. This is normally set from some outside
     routine, so be careful with this. But it might be handy to do this
@@ -181,7 +181,7 @@ current
 
 ..  t3-function-stdwrap:: current
 
-    :Data type: :t3-data-type:`boolean` / :ref:`stdWrap`
+    :Data type: :ref:`data-type-boolean` / :ref:`stdWrap`
 
     Sets the content to the "current"-value (see :ref:`->split <split>`)
 
@@ -208,7 +208,7 @@ preUserFunc
 
 ..  t3-function-stdwrap:: preUserFunc
 
-    :Data type: :t3-data-type:`function name`
+    :Data type: :ref:`data-type-function-name`
 
     Calls the provided PHP function. If you specify the name with a '->'
     in it, then it is interpreted as a call to a method in a class.
@@ -232,7 +232,7 @@ override
 
 ..  t3-function-stdwrap:: override
 
-    :Data type: :t3-data-type:`string` / :ref:`stdWrap`
+    :Data type: :ref:`data-type-string` / :ref:`stdWrap`
 
     If `override` returns something else than "" or zero (trimmed), the
     content is loaded with this!
@@ -251,7 +251,7 @@ ifNull
 
 ..  t3-function-stdwrap:: ifNull
 
-    :Data type: :t3-data-type:`string` / :ref:`stdWrap`
+    :Data type: :ref:`data-type-string` / :ref:`stdWrap`
 
     If the content is null (:php:`NULL` type in PHP), the content is overridden
     with the value defined here.
@@ -277,7 +277,7 @@ ifEmpty
 
 ..  t3-function-stdwrap:: ifEmpty
 
-    :Data type: :t3-data-type:`string` / :ref:`stdWrap`
+    :Data type: :ref:`data-type-string` / :ref:`stdWrap`
 
     If the trimmed content is empty at this point, the content is loaded
     with :typoscript:`ifEmpty`. Zeros are treated as empty values!
@@ -287,7 +287,7 @@ ifBlank
 
 ..  t3-function-stdwrap:: ifBlank
 
-    :Data type: :t3-data-type:`string` / :ref:`stdWrap`
+    :Data type: :ref:`data-type-string` / :ref:`stdWrap`
 
     Same as :typoscript:`ifEmpty` but the check is done against ''. Zeros are not
     treated as blank values!
@@ -297,7 +297,7 @@ listNum
 
 ..  t3-function-stdwrap:: listNum
 
-    :Data type: :t3-data-type:`string` / :ref:`stdWrap`
+    :Data type: :ref:`data-type-string` / :ref:`stdWrap`
 
     Explodes the current content :t3-function-stdwrap:`listNum.splitChar`
     (Default: `,`) and returns the object specified by `listNum`.
@@ -342,7 +342,7 @@ listNum
 
 ..  t3-function-stdwrap:: listNum.splitChar
 
-    :Data type: :t3-data-type:`string`
+    :Data type: :ref:`data-type-string`
     :Default: `,` (comma)
 
     .. rubric:: Examples
@@ -368,7 +368,7 @@ trim
 
 ..  t3-function-stdwrap:: trim
 
-    :Data type: :t3-data-type:`boolean` / :ref:`stdWrap`
+    :Data type: :ref:`data-type-boolean` / :ref:`stdWrap`
 
     If set, the PHP-function :php:`trim()` will be used to remove whitespaces
     around the value.
@@ -397,7 +397,7 @@ required
 
 ..  t3-function-stdwrap:: required
 
-    :Data type: :t3-data-type:`boolean` / :ref:`stdWrap`
+    :Data type: :ref:`data-type-boolean` / :ref:`stdWrap`
 
     This flag requires the content to be set to some value after any
     content-import and treatment that might have happened until now
@@ -434,7 +434,7 @@ csConv
 
 ..  t3-function-stdwrap:: csConv
 
-    :Data type: :t3-data-type:`string` / :ref:`stdWrap`
+    :Data type: :ref:`data-type-string` / :ref:`stdWrap`
 
     Convert the charset of the string from the charset given as value to
     the current rendering charset of the frontend (UTF-8).
@@ -525,7 +525,7 @@ HTMLparser
 
 ..  t3-function-stdwrap:: HTMLparser
 
-    :Data type: :t3-data-type:`boolean` / :ref:`htmlparser` / :ref:`stdWrap`
+    :Data type: :ref:`data-type-boolean` / :ref:`htmlparser` / :ref:`stdWrap`
 
     This object allows you to parse the HTML-content and perform all kinds of
     advanced filtering on the content.
@@ -561,7 +561,7 @@ prioriCalc
 
 ..  t3-function-stdwrap:: prioriCalc
 
-    :Data type: :t3-data-type:`boolean` / :ref:`stdWrap`
+    :Data type: :ref:`data-type-boolean` / :ref:`stdWrap`
 
     Calculation of the value using operators -+\*/%^ plus respects
     priority to + and - operators and parenthesis levels ().
@@ -595,7 +595,7 @@ char
 
 ..  t3-function-stdwrap:: char
 
-    :Data type: :t3-data-type:`integer` / :ref:`stdWrap`
+    :Data type: :ref:`data-type-integer` / :ref:`stdWrap`
 
     Content is set to :php:`chr(*value*)`. This returns a one-character
     string containing the character specified by ascii code. Reliable
@@ -612,7 +612,7 @@ intval
 
 ..  t3-function-stdwrap:: intval
 
-    :Data type: :t3-data-type:`boolean` / :ref:`stdWrap`
+    :Data type: :ref:`data-type-boolean` / :ref:`stdWrap`
 
     PHP function :php:`intval()` returns an integer:
 
@@ -625,7 +625,7 @@ hash
 
 ..  t3-function-stdwrap:: hash
 
-    :Data type: :t3-data-type:`string` / :ref:`stdWrap`
+    :Data type: :ref:`data-type-string` / :ref:`stdWrap`
 
     Returns a hashed value of the current content. Set to one of the
     algorithms which are available in PHP. For a list of supported
@@ -667,7 +667,7 @@ date
 
 ..  t3-function-stdwrap:: date
 
-    :Data type: :t3-data-type:`date-conf` / :ref:`stdWrap`
+    :Data type: :ref:`data-type-date-conf` / :ref:`stdWrap`
 
     The content should be data-type "UNIX-time". Returns the content
     formatted as a date. See the PHP manual (`datetime.format <https://www.php.net/manual/en/datetime.createfromformat.php>`_)
@@ -707,7 +707,7 @@ strtotime
 
 ..  t3-function-stdwrap:: strtotime
 
-    :Data type: :t3-data-type:`string`
+    :Data type: :ref:`data-type-string`
 
     Allows conversion of formatted dates to timestamp, e.g. to perform date calculations.
 
@@ -739,7 +739,7 @@ strftime
 
 ..  t3-function-stdwrap:: strftime
 
-    :Data type: :t3-data-type:`strftime-conf` / :ref:`stdWrap`
+    :Data type: :ref:`data-type-strftime-conf` / :ref:`stdWrap`
 
     Very similar to "date", but using a different format. See the PHP manual (`strftime <https://www.php.net/strftime>`_) for the
     format codes.
@@ -770,7 +770,7 @@ formattedDate
 
 ..  t3-function-stdwrap:: formattedDate
 
-    :Data type: :t3-data-type:`string`
+    :Data type: :ref:`data-type-string`
 
     The function renders date and time based on formats/patterns defined by
     the International Components for Unicode standard (ICU). ICU-based date and
@@ -845,7 +845,7 @@ age
 
 ..  t3-function-stdwrap:: age
 
-    :Data type: :t3-data-type:`boolean` or :t3-data-type:`string` / :ref:`stdWrap`
+    :Data type: :ref:`data-type-boolean` or :ref:`data-type-string` / :ref:`stdWrap`
 
     If enabled with a "1" (number, integer) the content is seen as a date
     (UNIX-time) and the difference from present time and the content-time
@@ -883,7 +883,7 @@ case
 
 ..  t3-function-stdwrap:: case
 
-    :Data type: :t3-data-type:`case` / :ref:`stdWrap`
+    :Data type: :ref:`data-type-case` / :ref:`stdWrap`
 
     Converts case
 
@@ -894,7 +894,7 @@ bytes
 
 ..  t3-function-stdwrap:: bytes
 
-    :Data type: :t3-data-type:`boolean` / :ref:`stdWrap`
+    :Data type: :ref:`data-type-boolean` / :ref:`stdWrap`
 
     :Default: iec, 1024
 
@@ -1071,7 +1071,7 @@ cropHTML
 
 ..  t3-function-stdwrap:: cropHTML
 
-    :Data type: :t3-data-type:`string` / :ref:`stdWrap`
+    :Data type: :ref:`data-type-string` / :ref:`stdWrap`
 
     Crops the content to a certain length. In contrast to :typoscript:`stdWrap.crop` it
     respects HTML tags. It does not crop inside tags and closes open tags.
@@ -1086,7 +1086,7 @@ stripHtml
 
 ..  t3-function-stdwrap:: stripHtml
 
-    :Data type: :t3-data-type:`boolean` / :ref:`stdWrap`
+    :Data type: :ref:`data-type-boolean` / :ref:`stdWrap`
 
     Strips all HTML tags.
 
@@ -1095,7 +1095,7 @@ crop
 
 ..  t3-function-stdwrap:: crop
 
-    :Data type: :t3-data-type:`string` / :ref:`stdWrap`
+    :Data type: :ref:`data-type-string` / :ref:`stdWrap`
 
     Crops the content to a certain length.
 
@@ -1138,7 +1138,7 @@ rawUrlEncode
 
 ..  t3-function-stdwrap:: rawUrlEncode
 
-    :Data type: :t3-data-type:`boolean` / :ref:`stdWrap`
+    :Data type: :ref:`data-type-boolean` / :ref:`stdWrap`
 
     Passes the content through the PHP function `rawurlencode() <https://www.php.net/rawurlencode>`_.
 
@@ -1147,7 +1147,7 @@ htmlSpecialChars
 
 ..  t3-function-stdwrap:: htmlSpecialChars
 
-    :Data type: :t3-data-type:`boolean` / :ref:`stdWrap`
+    :Data type: :ref:`data-type-boolean` / :ref:`stdWrap`
 
     Passes the content through the PHP function `htmlspecialchars() <https://www.php.net/htmlspecialchars>`_.
 
@@ -1159,7 +1159,7 @@ encodeForJavaScriptValue
 
 ..  t3-function-stdwrap:: encodeForJavaScriptValue
 
-    :Data type: :t3-data-type:`boolean` / :ref:`stdWrap`
+    :Data type: :ref:`data-type-boolean` / :ref:`stdWrap`
 
     Encodes content to be used safely inside strings in JavaScript.
     Characters, which can cause problems inside JavaScript strings, are
@@ -1186,7 +1186,7 @@ doubleBrTag
 
 ..  t3-function-stdwrap:: doubleBrTag
 
-    :Data type: :t3-data-type:`string` / :ref:`stdWrap`
+    :Data type: :ref:`data-type-string` / :ref:`stdWrap`
 
     All double-line-breaks are substituted with this value.
 
@@ -1195,7 +1195,7 @@ br
 
 ..  t3-function-stdwrap:: br
 
-    :Data type: :t3-data-type:`boolean` / :ref:`stdWrap`
+    :Data type: :ref:`data-type-boolean` / :ref:`stdWrap`
 
     Pass the value through the PHP function `nl2br() <https://www.php.net/nl2br>`_. This
     converts each line break to a :html:`<br />` or a :html:`<br>` tag depending on doctype.
@@ -1205,7 +1205,7 @@ brTag
 
 ..  t3-function-stdwrap:: brTag
 
-    :Data type: :t3-data-type:`string` / :ref:`stdWrap`
+    :Data type: :ref:`data-type-string` / :ref:`stdWrap`
 
     All ASCII codes of "10" (line feed, LF) are substituted with the
     *value*, which has been provided in this property.
@@ -1225,7 +1225,7 @@ keywords
 
 ..  t3-function-stdwrap:: keywords
 
-    :Data type: :t3-data-type:`boolean` / :ref:`stdWrap`
+    :Data type: :ref:`data-type-boolean` / :ref:`stdWrap`
 
     Splits the content by characters "," ";" and php:`chr(10)` (return), trims
     each value and returns a comma-separated list of the values.
@@ -1271,7 +1271,7 @@ wrapAlign
 
 ..  t3-function-stdwrap:: wrapAlign
 
-    :Data type: :t3-data-type:`align` / :ref:`stdWrap`
+    :Data type: :ref:`data-type-align` / :ref:`stdWrap`
 
     Wraps content with :typoscript:`<div style=text-align:[*value*];"> | </div>`
     *if* align is set.
@@ -1446,7 +1446,7 @@ insertData
 
 ..  t3-function-stdwrap:: insertData
 
-    :Data type: :t3-data-type:`boolean` / :ref:`stdWrap`
+    :Data type: :ref:`data-type-boolean` / :ref:`stdWrap`
 
     If set, then the content string is parsed like :typoscript:`dataWrap` above.
 
@@ -1477,7 +1477,7 @@ postUserFunc
 
 ..  t3-function-stdwrap:: postUserFunc
 
-    :Data type: :t3-data-type:`function name`
+    :Data type: :ref:`data-type-function-name`
 
     Calls the provided PHP function. If you specify the name with a '->'
     in it, then it is interpreted as a call to a method in a class.
@@ -1581,7 +1581,7 @@ postUserFuncInt
 
 ..  t3-function-stdwrap:: postUserFuncInt
 
-    :Data type: :t3-data-type:`function name`
+    :Data type: :ref:`data-type-function-name`
 
     Calls the provided PHP function. If you specify the name with a '->'
     in it, then it is interpreted as a call to a method in a class.
@@ -1602,7 +1602,7 @@ prefixComment
 
 ..  t3-function-stdwrap:: prefixComment
 
-    :Data type: :t3-data-type:`string` / :ref:`stdWrap`
+    :Data type: :ref:`data-type-string` / :ref:`stdWrap`
 
     Prefixes content with an HTML comment with the second part of input
     string (divided by "\|") where first part is an integer telling how
@@ -1624,7 +1624,7 @@ htmlSanitize
 
 ..  t3-function-stdwrap:: htmlSanitize
 
-    :Data type: :t3-data-type:`boolean` / array with key "build"
+    :Data type: :ref:`data-type-boolean` / array with key "build"
 
     The property controls the sanitization and removal of XSS from markup. It
     strips tags, attributes and values that are not explicitly allowed.
@@ -1685,7 +1685,7 @@ debug
 
 ..  t3-function-stdwrap:: debug
 
-    :Data type: :t3-data-type:`boolean` / :ref:`stdWrap`
+    :Data type: :ref:`data-type-boolean` / :ref:`stdWrap`
 
     Prints content with :php:`HTMLSpecialChars()` and :html:`<pre></pre>`:
     Useful for debugging which value :typoscript:`stdWrap` actually ends up with,
@@ -1700,7 +1700,7 @@ debugFunc
 
 ..  t3-function-stdwrap:: debugFunc
 
-    :Data type: :t3-data-type:`boolean` / :ref:`stdWrap`
+    :Data type: :ref:`data-type-boolean` / :ref:`stdWrap`
 
     Prints the content directly to browser with the :php:`debug()` function.
 
@@ -1715,7 +1715,7 @@ debugData
 
 ..  t3-function-stdwrap:: debugData
 
-    :Data type: :t3-data-type:`boolean` / :ref:`stdWrap`
+    :Data type: :ref:`data-type-boolean` / :ref:`stdWrap`
 
     Prints the current data-array, :php:`$cObj->data`, directly to browser. This
     is where :typoscript:`field` gets data from.
