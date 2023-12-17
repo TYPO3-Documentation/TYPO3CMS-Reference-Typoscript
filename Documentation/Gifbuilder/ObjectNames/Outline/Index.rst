@@ -29,7 +29,7 @@ color
 
 ..  confval:: color
 
-    :Data type: :t3-data-type:`GraphicColor` / :ref:`stdWrap <stdwrap>`
+    :Data type: :ref:`data-type-GraphicColor` / :ref:`stdWrap <stdwrap>`
 
     Color of the outline.
 

@@ -40,7 +40,7 @@ stripEmptyTags
    stripEmptyTags
 
 :aspect:`Data type`
-   :t3-data-type:`boolean`
+   :ref:`data-type-boolean`
 
 :aspect:`Description`
    Passes the content to PHPs :php:`strip_tags()`.
@@ -56,7 +56,7 @@ stripEmptyTags.keepTags
    stripEmptyTags.keepTags
 
 :aspect:`Data type`
-   :t3-data-type:`string`
+   :ref:`data-type-string`
 
 :aspect:`Description`
    Comma separated list of tags to keep when applying :php:`strip_tags()`.
@@ -72,7 +72,7 @@ tags.[tagname]
    tags.[tagname]
 
 :aspect:`Data type`
-   :t3-data-type:`boolean` / :ref:`htmlparser-tags`
+   :ref:`data-type-boolean` / :ref:`htmlparser-tags`
 
 :aspect:`Description`
    Either set this property to `0` or `1` to allow or deny the tag. If you
@@ -178,7 +178,7 @@ keepNonMatchedTags
    keepNonMatchedTags
 
 :aspect:`Data type`
-   :t3-data-type:`boolean` / "protect"
+   :ref:`data-type-boolean` / "protect"
 
 :aspect:`Description`
    If set (:typoscript:`1`), then all tags are kept regardless of tags present as

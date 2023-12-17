@@ -38,7 +38,7 @@ setContentToCurrent
    setContentToCurrent
 
 :aspect:`Data type`
-   :t3-data-type:`boolean` / :ref:`stdWrap`
+   :ref:`data-type-boolean` / :ref:`stdWrap`
 
 :aspect:`Description`
    Sets the current value to the incoming content of the function.
@@ -54,7 +54,7 @@ addPageCacheTags
    addPageCacheTags
 
 :aspect:`Data type`
-   :t3-data-type:`string` / :ref:`stdWrap`
+   :ref:`data-type-string` / :ref:`stdWrap`
 
 :aspect:`Description`
    Comma-separated list of cache tags, which should be added to the page
@@ -88,7 +88,7 @@ setCurrent
    setCurrent
 
 :aspect:`Data type`
-   :t3-data-type:`string` / :ref:`stdWrap`
+   :ref:`data-type-string` / :ref:`stdWrap`
 
 :aspect:`Description`
    Sets the "current"-value. This is normally set from some outside
@@ -186,7 +186,7 @@ current
    current
 
 :aspect:`Data type`
-   :t3-data-type:`boolean` / :ref:`stdWrap`
+   :ref:`data-type-boolean` / :ref:`stdWrap`
 
 :aspect:`Description`
    Sets the content to the "current"-value (see :ref:`->split <split>`)
@@ -233,7 +233,7 @@ preUserFunc
    preUserFunc
 
 :aspect:`Data type`
-   :t3-data-type:`function name`
+   :ref:`data-type-function-name`
 
 :aspect:`Description`
    Calls the provided PHP function. If you specify the name with a '->'
@@ -263,7 +263,7 @@ override
    override
 
 :aspect:`Data type`
-   :t3-data-type:`string` / :ref:`stdWrap`
+   :ref:`data-type-string` / :ref:`stdWrap`
 
 :aspect:`Description`
    if "override" returns something else than "" or zero (trimmed), the
@@ -296,7 +296,7 @@ ifNull
    ifNull
 
 :aspect:`Data type`
-   :t3-data-type:`string` / :ref:`stdWrap`
+   :ref:`data-type-string` / :ref:`stdWrap`
 
 :aspect:`Description`
    If the content is null (:php:`NULL` type in PHP), the content is overridden
@@ -329,7 +329,7 @@ ifEmpty
    ifEmpty
 
 :aspect:`Data type`
-   :t3-data-type:`string` / :ref:`stdWrap`
+   :ref:`data-type-string` / :ref:`stdWrap`
 
 :aspect:`Description`
    If the trimmed content is empty at this point, the content is loaded
@@ -346,7 +346,7 @@ ifBlank
    ifBlank
 
 :aspect:`Data type`
-   :t3-data-type:`string` / :ref:`stdWrap`
+   :ref:`data-type-string` / :ref:`stdWrap`
 
 :aspect:`Description`
    Same as :typoscript:`ifEmpty` but the check is done against ''. Zeros are not
@@ -363,7 +363,7 @@ listNum
    listNum
 
 :aspect:`Data type`
-   :t3-data-type:`integer` :ref:`+calc <objects-calc>` +"last" +"rand" / :ref:`stdWrap`
+   :ref:`data-type-integer` :ref:`+calc <objects-calc>` +"last" +"rand" / :ref:`stdWrap`
 
 :aspect:`Description`
    Explodes the content with "," (comma) and the content is set to the
@@ -423,7 +423,7 @@ trim
    trim
 
 :aspect:`Data type`
-   :t3-data-type:`boolean` / :ref:`stdWrap`
+   :ref:`data-type-boolean` / :ref:`stdWrap`
 
 :aspect:`Description`
    If set, the PHP-function :php:`trim()` will be used to remove whitespaces
@@ -473,7 +473,7 @@ required
    required
 
 :aspect:`Data type`
-   :t3-data-type:`boolean` / :ref:`stdWrap`
+   :ref:`data-type-boolean` / :ref:`stdWrap`
 
 :aspect:`Description`
    This flag requires the content to be set to some value after any
@@ -532,7 +532,7 @@ csConv
    csConv
 
 :aspect:`Data type`
-   :t3-data-type:`string` / :ref:`stdWrap`
+   :ref:`data-type-string` / :ref:`stdWrap`
 
 :aspect:`Description`
    Convert the charset of the string from the charset given as value to
@@ -633,7 +633,7 @@ HTMLparser
    HTMLparser
 
 :aspect:`Data type`
-   :t3-data-type:`boolean` / :ref:`htmlparser` / :ref:`stdWrap`
+   :ref:`data-type-boolean` / :ref:`htmlparser` / :ref:`stdWrap`
 
 :aspect:`Description`
    This object allows you to parse the HTML-content and perform all kinds of
@@ -686,7 +686,7 @@ prioriCalc
    prioriCalc
 
 :aspect:`Data type`
-   :t3-data-type:`boolean` / :ref:`stdWrap`
+   :ref:`data-type-boolean` / :ref:`stdWrap`
 
 :aspect:`Description`
    Calculation of the value using operators -+\*/%^ plus respects
@@ -726,7 +726,7 @@ char
    char
 
 :aspect:`Data type`
-   :t3-data-type:`integer` / :ref:`stdWrap`
+   :ref:`data-type-integer` / :ref:`stdWrap`
 
 :aspect:`Description`
    Content is set to :php:`chr(*value*)`. This returns a one-character
@@ -750,7 +750,7 @@ intval
    intval
 
 :aspect:`Data type`
-   :t3-data-type:`boolean` / :ref:`stdWrap`
+   :ref:`data-type-boolean` / :ref:`stdWrap`
 
 :aspect:`Description`
    PHP function :php:`intval()` returns an integer:
@@ -770,7 +770,7 @@ hash
    hash
 
 :aspect:`Data type`
-   :t3-data-type:`string` / :ref:`stdWrap`
+   :ref:`data-type-string` / :ref:`stdWrap`
 
 :aspect:`Description`
    Returns a hashed value of the current content. Set to one of the
@@ -833,7 +833,7 @@ date
    date
 
 :aspect:`Data type`
-   :t3-data-type:`date-conf` / :ref:`stdWrap`
+   :ref:`data-type-date-conf` / :ref:`stdWrap`
 
 :aspect:`Description`
    The content should be data-type "UNIX-time". Returns the content
@@ -874,7 +874,7 @@ strtotime
    strtotime
 
 :aspect:`Data type`
-   :t3-data-type:`string`
+   :ref:`data-type-string`
 
 :aspect:`Description`
    Allows conversion of formatted dates to timestamp, e.g. to perform date calculations.
@@ -913,7 +913,7 @@ strftime
    strftime
 
 :aspect:`Data type`
-   :t3-data-type:`strftime-conf` / :ref:`stdWrap`
+   :ref:`data-type-strftime-conf` / :ref:`stdWrap`
 
 :aspect:`Description`
    Very similar to "date", but using a different format. See the PHP manual (`strftime <https://www.php.net/strftime>`_) for the
@@ -945,7 +945,7 @@ age
    age
 
 :aspect:`Data type`
-   :t3-data-type:`boolean` or :t3-data-type:`string` / :ref:`stdWrap`
+   :ref:`data-type-boolean` or :ref:`data-type-string` / :ref:`stdWrap`
 
 :aspect:`Description`
    If enabled with a "1" (number, integer) the content is seen as a date
@@ -990,7 +990,7 @@ case
    case
 
 :aspect:`Data type`
-   :t3-data-type:`case` / :ref:`stdWrap`
+   :ref:`data-type-case` / :ref:`stdWrap`
 
 :aspect:`Description`
    Converts case
@@ -1008,7 +1008,7 @@ bytes
    bytes
 
 :aspect:`Data type`
-   :t3-data-type:`boolean` / :ref:`stdWrap`
+   :ref:`data-type-boolean` / :ref:`stdWrap`
 
 :aspect:`Default`
    iec, 1024
@@ -1199,7 +1199,7 @@ cropHTML
    cropHTML
 
 :aspect:`Data type`
-   :t3-data-type:`string` / :ref:`stdWrap`
+   :ref:`data-type-string` / :ref:`stdWrap`
 
 :aspect:`Description`
    Crops the content to a certain length. In contrast to :typoscript:`stdWrap.crop` it
@@ -1221,7 +1221,7 @@ stripHtml
    stripHtml
 
 :aspect:`Data type`
-   :t3-data-type:`boolean` / :ref:`stdWrap`
+   :ref:`data-type-boolean` / :ref:`stdWrap`
 
 :aspect:`Description`
    Strips all HTML tags.
@@ -1237,7 +1237,7 @@ crop
    crop
 
 :aspect:`Data type`
-   :t3-data-type:`string` / :ref:`stdWrap`
+   :ref:`data-type-string` / :ref:`stdWrap`
 
 :aspect:`Description`
    Crops the content to a certain length.
@@ -1286,7 +1286,7 @@ rawUrlEncode
    rawUrlEncode
 
 :aspect:`Data type`
-   :t3-data-type:`boolean` / :ref:`stdWrap`
+   :ref:`data-type-boolean` / :ref:`stdWrap`
 
 :aspect:`Description`
    Passes the content through the PHP function `rawurlencode() <https://www.php.net/rawurlencode>`_.
@@ -1302,7 +1302,7 @@ htmlSpecialChars
    htmlSpecialChars
 
 :aspect:`Data type`
-   :t3-data-type:`boolean` / :ref:`stdWrap`
+   :ref:`data-type-boolean` / :ref:`stdWrap`
 
 :aspect:`Description`
    Passes the content through the PHP function `htmlspecialchars() <https://www.php.net/htmlspecialchars>`_.
@@ -1321,7 +1321,7 @@ encodeForJavaScriptValue
    encodeForJavaScriptValue
 
 :aspect:`Data type`
-   :t3-data-type:`boolean` / :ref:`stdWrap`
+   :ref:`data-type-boolean` / :ref:`stdWrap`
 
 :aspect:`Description`
    Encodes content to be used safely inside strings in JavaScript.
@@ -1354,7 +1354,7 @@ doubleBrTag
    doubleBrTag
 
 :aspect:`Data type`
-   :t3-data-type:`string` / :ref:`stdWrap`
+   :ref:`data-type-string` / :ref:`stdWrap`
 
 :aspect:`Description`
    All double-line-breaks are substituted with this value.
@@ -1370,7 +1370,7 @@ br
    br
 
 :aspect:`Data type`
-   :t3-data-type:`boolean` / :ref:`stdWrap`
+   :ref:`data-type-boolean` / :ref:`stdWrap`
 
 :aspect:`Description`
    Pass the value through the PHP function `nl2br() <https://www.php.net/nl2br>`_. This
@@ -1387,7 +1387,7 @@ brTag
    brTag
 
 :aspect:`Data type`
-   :t3-data-type:`string` / :ref:`stdWrap`
+   :ref:`data-type-string` / :ref:`stdWrap`
 
 :aspect:`Description`
    All ASCII codes of "10" (line feed, LF) are substituted with the
@@ -1421,7 +1421,7 @@ keywords
    keywords
 
 :aspect:`Data type`
-   :t3-data-type:`boolean` / :ref:`stdWrap`
+   :ref:`data-type-boolean` / :ref:`stdWrap`
 
 :aspect:`Description`
    Splits the content by characters "," ";" and php:`chr(10)` (return), trims
@@ -1502,7 +1502,7 @@ wrapAlign
    wrapAlign
 
 :aspect:`Data type`
-   :t3-data-type:`align` / :ref:`stdWrap`
+   :ref:`data-type-align` / :ref:`stdWrap`
 
 :aspect:`Description`
    Wraps content with :typoscript:`<div style=text-align:[*value*];"> | </div>`
@@ -1752,7 +1752,7 @@ insertData
    insertData
 
 :aspect:`Data type`
-   :t3-data-type:`boolean` / :ref:`stdWrap`
+   :ref:`data-type-boolean` / :ref:`stdWrap`
 
 :aspect:`Description`
    If set, then the content string is parsed like :typoscript:`dataWrap` above.
@@ -1788,7 +1788,7 @@ postUserFunc
    postUserFunc
 
 :aspect:`Data type`
-   :t3-data-type:`function name`
+   :ref:`data-type-function-name`
 
 :aspect:`Description`
    Calls the provided PHP function. If you specify the name with a '->'
@@ -1898,7 +1898,7 @@ postUserFuncInt
    postUserFuncInt
 
 :aspect:`Data type`
-   :t3-data-type:`function name`
+   :ref:`data-type-function-name`
 
 :aspect:`Description`
    Calls the provided PHP function. If you specify the name with a '->'
@@ -1927,7 +1927,7 @@ prefixComment
    prefixComment
 
 :aspect:`Data type`
-   :t3-data-type:`string` / :ref:`stdWrap`
+   :ref:`data-type-string` / :ref:`stdWrap`
 
 :aspect:`Description`
    Prefixes content with an HTML comment with the second part of input
@@ -1981,7 +1981,7 @@ editPanel
    editPanel
 
 :aspect:`Data type`
-   :ref:`boolean <data-type-bool>` / :ref:`cobj-editpanel`
+   :ref:`data-type-boolean` / :ref:`cobj-editpanel`
 
 :aspect:`Description`
    See :ref:`Migration from the build-in EDITPANEL<cobj-editpanel_migration>`.
@@ -2002,7 +2002,7 @@ htmlSanitize
    htmlSanitize
 
 :aspect:`Data type`
-   :t3-data-type:`boolean` / array with key "build"
+   :ref:`data-type-boolean` / array with key "build"
 
 :aspect:`Description`
    The property controls the sanitization and removal of XSS from markup. It
@@ -2073,7 +2073,7 @@ debug
    debug
 
 :aspect:`Data type`
-   :t3-data-type:`boolean` / :ref:`stdWrap`
+   :ref:`data-type-boolean` / :ref:`stdWrap`
 
 :aspect:`Description`
    Prints content with :php:`HTMLSpecialChars()` and :html:`<pre></pre>`:
@@ -2095,7 +2095,7 @@ debugFunc
    debugFunc
 
 :aspect:`Data type`
-   :t3-data-type:`boolean` / :ref:`stdWrap`
+   :ref:`data-type-boolean` / :ref:`stdWrap`
 
 :aspect:`Description`
    Prints the content directly to browser with the :php:`debug()` function.
@@ -2117,7 +2117,7 @@ debugData
    debugData
 
 :aspect:`Data type`
-   :t3-data-type:`boolean` / :ref:`stdWrap`
+   :ref:`data-type-boolean` / :ref:`stdWrap`
 
 :aspect:`Description`
    Prints the current data-array, :php:`$cObj->data`, directly to browser. This

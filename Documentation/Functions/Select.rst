@@ -149,7 +149,7 @@ recursive
    recursive
 
 :aspect:`Data type`
-   :t3-data-type:`integer` / :ref:`stdWrap`
+   :ref:`data-type-integer` / :ref:`stdWrap`
 
 :aspect:`Description`
    Number of recursive levels for the pidInList.
@@ -209,7 +209,7 @@ max
    max
 
 :aspect:`Data type`
-   :t3-data-type:`integer` + :ref:`objects-calc` +"total" / :ref:`stdWrap`
+   :ref:`data-type-integer` + :ref:`objects-calc` +"total" / :ref:`stdWrap`
 
 :aspect:`Description`
    Max records
@@ -226,7 +226,7 @@ begin
       begin
 
 :aspect:`Data type`
-      :t3-data-type:`integer` + :ref:`objects-calc` +"total" / :ref:`stdWrap`
+      :ref:`data-type-integer` + :ref:`objects-calc` +"total" / :ref:`stdWrap`
 
 :aspect:`Description`
       Begin with record number *value*.
@@ -273,7 +273,7 @@ languageField
    languageField
 
 :aspect:`Data type`
-   :t3-data-type:`string` / :ref:`stdWrap`
+   :ref:`data-type-string` / :ref:`stdWrap`
 
 :aspect:`Description`
    This defaults to whatever is defined in TCA "ctrl"-section in the
@@ -294,7 +294,7 @@ includeRecordsWithoutDefaultTranslation
    includeRecordsWithoutDefaultTranslation
 
 :aspect:`Data type`
-   :t3-data-type:`boolean` / :ref:`stdWrap`
+   :ref:`data-type-boolean` / :ref:`stdWrap`
 
 :aspect:`Description`
    If content language overlay is activated and the option :typoscript:`languageField` is not disabled,
@@ -314,7 +314,7 @@ selectFields
    selectFields
 
 :aspect:`Data type`
-   :t3-data-type:`string` / :ref:`stdWrap`
+   :ref:`data-type-string` / :ref:`stdWrap`
 
 :aspect:`Description`
    List of fields to select, or :php:`count(*)`.
@@ -339,7 +339,7 @@ join, leftjoin, rightjoin
    join, leftjoin, rightjoin
 
 :aspect:`Data type`
-   :t3-data-type:`string` / :ref:`stdWrap`
+   :ref:`data-type-string` / :ref:`stdWrap`
 
    Enter the JOIN clause without :sql:`JOIN`, :sql:`LEFT OUTER JOIN` and :sql:`RIGHT OUTER JOIN`
    respectively.
@@ -388,7 +388,7 @@ markers
    <markername>.value (value)
       Sets the value directly.
 
-   <markername>.commaSeparatedList (:t3-data-type:`boolean`)
+   <markername>.commaSeparatedList (:ref:`data-type-boolean`)
       If set, the value is interpreted as a comma-separated list of values.
       Each value in the list is individually escaped and quoted.
 
@@ -506,7 +506,7 @@ See also:
 
 *   :ref:`cobj-content`: for more complete examples with :typoscript:`select`
     and rendering the output with :typoscript:`renderObj`
-*   :t3-data-type:`wrap`: enclosing results within text, used in some of the
+*   :ref:`data-type-wrap`: enclosing results within text, used in some of the
     examples above
 *   :ref:`stdWrap`: for more functionality, can be used in some of the properties,
     such as :typoscript:`pidInList`, :typoscript:`selectFields` etc.

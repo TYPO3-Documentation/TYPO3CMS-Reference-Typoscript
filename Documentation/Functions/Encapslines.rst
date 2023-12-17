@@ -79,7 +79,7 @@ remapTag.[*tagname*]
    remapTag.[*tagname*]
 
 :aspect:`Data type`
-   :t3-data-type:`string`
+   :ref:`data-type-string`
 
 :aspect:`Description`
    Enter a new tag name here if you wish the tag name of any encapsulation
@@ -154,7 +154,7 @@ removeWrapping
    removeWrapping
 
 :aspect:`Data type`
-   :t3-data-type:`boolean`
+   :ref:`data-type-boolean`
 
 :aspect:`Description`
    If set, then all existing wrapping will be removed.
@@ -261,7 +261,7 @@ defaultAlign
    defaultAlign
 
 :aspect:`Data type`
-   :t3-data-type:`string` / :ref:`stdWrap`
+   :ref:`data-type-string` / :ref:`stdWrap`
 
 :aspect:`Description`
    If set, this value is set as the default "align" value of the wrapping

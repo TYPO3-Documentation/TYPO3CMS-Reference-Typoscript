@@ -35,7 +35,7 @@ decimals
    decimals
 
 :aspect:`Data type`
-   :t3-data-type:`integer` / :ref:`stdwrap`
+   :ref:`data-type-integer` / :ref:`stdwrap`
 
 :aspect:`Description`
    Number of decimals the formatted number will have.
@@ -55,7 +55,7 @@ dec\_point
    dec\_point
 
 :aspect:`Data type`
-   :t3-data-type:`string` / :ref:`stdWrap <stdwrap>`
+   :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
 
 :aspect:`Description`
    Character that divides the decimals from the rest of the number.
@@ -72,7 +72,7 @@ thousands\_sep
    thousands\_sep
 
 :aspect:`Data type`
-   :t3-data-type:`string` / :ref:`stdwrap`
+   :ref:`data-type-string` / :ref:`stdwrap`
 
 :aspect:`Description`
    Character that divides the thousands of the number.

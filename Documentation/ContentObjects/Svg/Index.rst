@@ -45,7 +45,7 @@ src
 
 ..  t3-cobj-svg:: src
 
-    :Data type: :t3-data-type:`resource` /:ref:`stdWrap <stdwrap>`
+    :Data type: :ref:`data-type-resource` /:ref:`stdWrap <stdwrap>`
 
     SVG file resource, can also be referenced via :file:`EXT:` prefix to
     point to files of extensions.
