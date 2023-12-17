@@ -41,9 +41,8 @@ Usually, you will have the following structure:
 Make TypoScript available for static includes
 =============================================
 
-:file:`Configuration/TCA/Overrides/sys_template.php`:
-
 .. code-block:: php
+   :caption: EXT:my_extension/Configuration/TCA/Overrides/sys_template.php
 
    <?php
    defined('TYPO3') or die();
@@ -85,9 +84,8 @@ Only do this, if your TypoScript must really be always loaded in your site.
 If this is not the case, use the method described in the previous section
 :ref:`extdev-static-includes`.
 
-:file:`ext_localconf.php`:
-
 .. code-block:: php
+   :caption: EXT:my_extension/ext_localconf.php
 
    defined('TYPO3') or die();
 
@@ -108,4 +106,3 @@ More information
 
 * :ref:`t3sitepackage:typoscript-configuration` (in "Sitepackage Tutorial")`
 * :ref:`t3sitepackage:extension-configuration` (in "Sitepackage Tutorial")`
-* :doc:`ext_core:Changelog/9.0/Feature-82812-NewSyntaxForImportingTypoScriptFiles`
