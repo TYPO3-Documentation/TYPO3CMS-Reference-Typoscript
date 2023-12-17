@@ -26,7 +26,7 @@ token
 
 ..  t3-function-split:: token
 
-    :Data type: :t3-data-type:`string` / :ref:`stdwrap`
+    :Data type: :ref:`data-type-string` / :ref:`stdwrap`
 
     String or character (token) used to split the value.
 
@@ -35,7 +35,7 @@ max
 
 ..  t3-function-split:: max
 
-    :Data type: :t3-data-type:`integer` / :ref:`stdwrap`
+    :Data type: :ref:`data-type-integer` / :ref:`stdwrap`
 
     Maximum number of splits.
 
@@ -44,7 +44,7 @@ min
 
 ..  t3-function-split:: min
 
-    :Data type: :t3-data-type:`integer` / :ref:`stdwrap`
+    :Data type: :ref:`data-type-integer` / :ref:`stdwrap`
 
     Minimum number of splits.
 
@@ -53,7 +53,7 @@ returnKey
 
 ..  t3-function-split:: returnKey
 
-    :Data type: :t3-data-type:`integer` / :ref:`stdwrap`
+    :Data type: :ref:`data-type-integer` / :ref:`stdwrap`
 
     Instead of parsing the split result, return the element of the
     index with this number immediately and stop processing of the split
@@ -64,7 +64,7 @@ returnCount
 
 ..  t3-function-split:: returnCount
 
-    :Data type: :t3-data-type:`boolean` / :ref:`stdwrap`
+    :Data type: :ref:`data-type-boolean` / :ref:`stdwrap`
 
     Counts all elements resulting from the split, returns their number
     and stops processing of the split function.

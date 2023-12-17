@@ -86,7 +86,7 @@ no\_cache
 
 ..  t3-function-typolink:: no_cache
 
-    :Data type: :t3-data-type:`boolean` / :ref:`stdwrap`
+    :Data type: :ref:`data-type-boolean` / :ref:`stdwrap`
 
     Adds `&no_cache=1` to the link
 
@@ -95,7 +95,7 @@ additionalParams
 
 ..  t3-function-typolink:: additionalParams
 
-    :Data type: :t3-data-type:`string` / :ref:`stdwrap`
+    :Data type: :ref:`data-type-string` / :ref:`stdwrap`
 
     This is parameters that are added to the end of the URL. This must be
     code ready to insert after the last parameter.
@@ -126,7 +126,7 @@ addQueryString
 
 ..  t3-function-typolink:: addQueryString
 
-    :Data type: :t3-data-type:`boolean` / :t3-data-type:`string`
+    :Data type: :ref:`data-type-boolean` / :ref:`data-type-string`
 
     Add the current query string to the start of the link.
 
@@ -171,7 +171,7 @@ addQueryString.exclude
 
 ..  t3-function-typolink:: addQueryString.exclude
 
-    :Data type: :t3-data-type:`string`
+    :Data type: :ref:`data-type-string`
 
     List of query arguments to exclude from the link. Typical examples are
     :typoscript:`L` or :typoscript:`cHash`.
@@ -205,7 +205,7 @@ ATagBeforeWrap
 
 ..  t3-function-typolink:: ATagBeforeWrap
 
-    :Data type: :t3-data-type:`boolean`
+    :Data type: :ref:`data-type-boolean`
     :Default: 0
 
     If set, the link is first wrapped with :typoscript:`wrap` and then the
@@ -216,7 +216,7 @@ parameter
 
 ..  t3-function-typolink:: parameter
 
-    :Data type: :t3-data-type:`string` / :ref:`stdwrap`
+    :Data type: :ref:`data-type-string` / :ref:`stdwrap`
 
     This is the main data that is used for creating the link. It can be
     the id of a page, the URL of some external page, an email address or
@@ -354,7 +354,7 @@ forceAbsoluteUrl
 
 ..  t3-function-typolink:: forceAbsoluteUrl
 
-    :Data type: :t3-data-type:`boolean`
+    :Data type: :ref:`data-type-boolean`
 
     :Default: :php:`false`
 
@@ -394,7 +394,7 @@ title
 
 ..  t3-function-typolink:: title
 
-    :Data type: :t3-data-type:`string` / :ref:`stdwrap`
+    :Data type: :ref:`data-type-string` / :ref:`stdwrap`
 
     Sets the title parameter of the A-tag.
 
@@ -403,7 +403,7 @@ JSwindow\_params
 
 ..  t3-function-typolink:: JSwindow_params
 
-    :Data type: :t3-data-type:`string`
+    :Data type: :ref:`data-type-string`
 
     Preset values for opening the window. This example lists almost all
     possible attributes:
@@ -418,7 +418,7 @@ returnLast
 
 ..  t3-function-typolink:: returnLast
 
-    :Data type: :t3-data-type:`string`
+    :Data type: :ref:`data-type-string`
 
     If set to "url", then it will return the URL of the link
     (:php:`$this->lastTypoLinkUrl`).
@@ -449,7 +449,7 @@ section
 
 ..  t3-function-typolink:: section
 
-    :Data type: :t3-data-type:`string` / :ref:`stdwrap`
+    :Data type: :ref:`data-type-string` / :ref:`stdwrap`
 
     If this value is present, it's prepended with a "#" and placed after
     any internal URL to another page in TYPO3.
@@ -478,7 +478,7 @@ linkAccessRestrictedPages
 
 ..  t3-function-typolink:: linkAccessRestrictedPages
 
-    :Data type: :t3-data-type:`boolean`
+    :Data type: :ref:`data-type-boolean`
 
     If set, typolinks pointing to access restricted pages will still link
     to the page even though the page cannot be accessed.
@@ -488,7 +488,7 @@ userFunc
 
 ..  t3-function-typolink:: userFunc
 
-    :Data type: :t3-data-type:`function name`
+    :Data type: :ref:`data-type-function-name`
 
     This passes the link-data compiled by the typolink function to a user-
     defined function for final manipulation.

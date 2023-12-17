@@ -23,7 +23,7 @@ extensionName
 
 ..  t3-cobj-extbaseplugin:: extensionName
 
-    :Data type: :ref:`string`
+    :Data type: :ref:`data-type-string`
 
     The :ref:`extension name <t3coreapi:extension-naming-extensionName>`.
 
@@ -33,7 +33,7 @@ pluginName
 
 ..  t3-cobj-extbaseplugin:: pluginName
 
-    :Data type: :ref:`string`
+    :Data type: :ref:`data-type-string`
 
     The plugin name.
 

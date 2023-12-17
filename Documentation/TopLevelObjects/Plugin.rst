@@ -57,7 +57,7 @@ userFunc
          \_CSS\_DEFAULT\_STYLE
 
    Data type
-         :t3-data-type:`string` / :ref:`stdwrap`
+         :ref:`data-type-string` / :ref:`stdwrap`
 
    Description
          Use this to have some default CSS styles inserted in the header
@@ -107,7 +107,7 @@ ignoreFlexFormSettingsIfEmpty
         ignoreFlexFormSettingsIfEmpty
 
     Data type
-        :t3-data-type:`string`
+        :ref:`data-type-string`
 
     Description
         Define :ref:`FlexForm <t3coreapi:flexforms>` settings that will be
@@ -164,7 +164,7 @@ persistence.enableAutomaticCacheClearing
       persistence.enableAutomaticCacheClearing
 
    Data type
-      :t3-data-type:`boolean`
+      :ref:`data-type-boolean`
 
    Default
       true
@@ -196,7 +196,7 @@ persistence.storagePid
       persistence.storagePid
 
    Data type
-      :t3-data-type:`boolean`
+      :ref:`data-type-boolean`
 
    Default
       true
@@ -345,7 +345,7 @@ mvc.callDefaultActionIfActionCantBeResolved
       mvc.callDefaultActionIfActionCantBeResolved
 
    Data type
-      :t3-data-type:`boolean`
+      :ref:`data-type-boolean`
 
    Default
       false
@@ -376,7 +376,7 @@ mvc.throwPageNotFoundExceptionIfActionCantBeResolved
       mvc.callDefaultActionIfActionCantBeResolved
 
    Data type
-      :t3-data-type:`boolean`
+      :ref:`data-type-boolean`
 
    Default
       false
@@ -411,7 +411,7 @@ Format
       format
 
    Data type
-      :t3-data-type:`string`
+      :ref:`data-type-string`
 
    Default
       html
@@ -445,7 +445,7 @@ Format
         \_LOCAL\_LANG.[lang-key].[label-key]
 
     Data type
-        :t3-data-type:`string`
+        :ref:`data-type-string`
 
     Description
         Can be used to override the default language labels for Extbase plugins.
