@@ -15,21 +15,23 @@ This page explains how to access TypoScript settings in an extension.
 Extbase controllers
 ===================
 
-In Extbase controllers, :ref:`Flexform settings <t3coreapi:read-flexforms-extbase>` and TypoScript settings will be
+In :ref:`Extbase controllers <t3coreapi:extbase-action-controller>`,
+:ref:`Flexform settings <t3coreapi:read-flexforms-extbase>` and TypoScript settings will be
 merged together. If settings exists in both, the Flexform takes precedence and overrides the TypoScript setting.
 Note that both Flexform and TypoScript settings must use the convention of preceding the setting with
-`settings.` (e.g. `settings.threshold`).
+:typoscript:`settings.` (for example, :typoscript:`settings.threshold`).
 
 Extbase offers some advantages: Some things work automatically out-of-the-box. However, you must stick to the
 Extbase conventions ("conventions over configuration").
 
-In order to access TypoScript settings from an Extbase Controller.
+In order to access TypoScript settings from an Extbase controller.
 
 .. rst-class:: bignums-xxl
 
 #. Use the convention of defining your TypoScript settings in :typoscript:`settings`
 
    .. code-block:: typoscript
+      :caption: EXT:my_extension/Configuration/TypoScript/setup.typoscript
 
       plugin.tx_myextension {
          view {
@@ -57,8 +59,8 @@ In order to access TypoScript settings from an Extbase Controller.
 Fluid
 =====
 
-If Extbase controllers are used, :php:`$this->settings` is automatically passed to the Fluid template. Allowing you to
-access settings like this:
+If Extbase controllers are used, :php:`$this->settings` is automatically passed to the
+:ref:`Fluid <t3coreapi:fluid>` template. Allowing you to access settings like this:
 
 .. code-block:: xml
 
