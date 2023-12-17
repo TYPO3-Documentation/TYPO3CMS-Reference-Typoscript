@@ -118,7 +118,7 @@ no\_cache
    no\_cache
 
 :aspect:`Data type`
-   :t3-data-type:`boolean` / :ref:`stdwrap`
+   :ref:`data-type-boolean` / :ref:`stdwrap`
 
 :aspect:`Description`
    Adds ``&no_cache=1`` to the link
@@ -134,7 +134,7 @@ additionalParams
    additionalParams
 
 :aspect:`Data type`
-   :t3-data-type:`string` / :ref:`stdwrap`
+   :ref:`data-type-string` / :ref:`stdwrap`
 
 :aspect:`Description`
    This is parameters that are added to the end of the URL. This must be
@@ -170,7 +170,7 @@ addQueryString
    addQueryString
 
 :aspect:`Data type`
-   :t3-data-type:`boolean`
+   :ref:`data-type-boolean`
 
 :aspect:`Description`
    Add the current query string to the start of the link.
@@ -227,7 +227,7 @@ ATagBeforeWrap
    ATagBeforeWrap
 
 :aspect:`Data type`
-   :t3-data-type:`boolean`
+   :ref:`data-type-boolean`
 
 :aspect:`Description`
    If set, the link is first wrapped with :typoscript:`wrap` and then the
@@ -247,7 +247,7 @@ parameter
    parameter
 
 :aspect:`Data type`
-   :t3-data-type:`string` / :ref:`stdwrap`
+   :ref:`data-type-string` / :ref:`stdwrap`
 
 :aspect:`Description`
    This is the main data that is used for creating the link. It can be
@@ -387,7 +387,7 @@ forceAbsoluteUrl
    forceAbsoluteUrl
 
 :aspect:`Data type`
-   :t3-data-type:`boolean`
+   :ref:`data-type-boolean`
 
 :aspect:`Description`
    Forces links to internal pages to be absolute, thus having a proper
@@ -422,7 +422,7 @@ title
    title
 
 :aspect:`Data type`
-   :t3-data-type:`string` / :ref:`stdwrap`
+   :ref:`data-type-string` / :ref:`stdwrap`
 
 :aspect:`Description`
    Sets the title parameter of the A-tag.
@@ -438,7 +438,7 @@ JSwindow\_params
    JSwindow\_params
 
 :aspect:`Data type`
-   :t3-data-type:`string`
+   :ref:`data-type-string`
 
 :aspect:`Description`
    Preset values for opening the window. This example lists almost all
@@ -460,7 +460,7 @@ returnLast
    returnLast
 
 :aspect:`Data type`
-   :t3-data-type:`string`
+   :ref:`data-type-string`
 
 :aspect:`Description`
    If set to "url", then it will return the URL of the link
@@ -498,7 +498,7 @@ section
    section
 
 :aspect:`Data type`
-   :t3-data-type:`string` / :ref:`stdwrap`
+   :ref:`data-type-string` / :ref:`stdwrap`
 
 :aspect:`Description`
    If this value is present, it's prepended with a "#" and placed after
@@ -540,7 +540,7 @@ linkAccessRestrictedPages
    linkAccessRestrictedPages
 
 :aspect:`Data type`
-   :t3-data-type:`boolean`
+   :ref:`data-type-boolean`
 
 :aspect:`Description`
    If set, typolinks pointing to access restricted pages will still link
@@ -557,7 +557,7 @@ userFunc
    userFunc
 
 :aspect:`Data type`
-   :t3-data-type:`function name`
+   :ref:`data-type-function-name`
 
 :aspect:`Description`
    This passes the link-data compiled by the typolink function to a user-

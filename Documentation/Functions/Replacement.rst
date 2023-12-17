@@ -29,7 +29,7 @@ search
    search
 
 :aspect:`Data type`
-   :t3-data-type:`string` / :ref:`stdwrap`
+   :ref:`data-type-string` / :ref:`stdwrap`
 
 :aspect:`Description`
    Defines the string that shall be replaced.
@@ -43,7 +43,7 @@ replace
    replace
 
 :aspect:`Data type`
-   :t3-data-type:`string` / :ref:`stdwrap`
+   :ref:`data-type-string` / :ref:`stdwrap`
 
 :aspect:`Description`
    Defines the string to be used for the replacement.
@@ -57,7 +57,7 @@ useRegExp
    useRegExp
 
 :aspect:`Data type`
-   :t3-data-type:`boolean` / :ref:`stdwrap`
+   :ref:`data-type-boolean` / :ref:`stdwrap`
 
 :aspect:`Description`
    Defines that the search and replace strings are considered as PCRE
@@ -85,7 +85,7 @@ useOptionSplitReplace
    useOptionSplitReplace
 
 :aspect:`Data type`
-   :t3-data-type:`boolean` / :ref:`stdwrap`
+   :ref:`data-type-boolean` / :ref:`stdwrap`
 
 :aspect:`Description`
    This property allows to use :ref:`objects-optionsplit` for the replace

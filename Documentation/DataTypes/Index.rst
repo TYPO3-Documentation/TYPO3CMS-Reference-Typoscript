@@ -1,7 +1,7 @@
-.. include:: /Includes.rst.txt
-.. index:: Simple data types
-.. _data-types:
-.. _data-types-reference:
+..  include:: /Includes.rst.txt
+..  index:: Simple data types
+..  _data-types:
+..  _data-types-reference:
 
 =================
 Simple data types
@@ -19,23 +19,30 @@ RGB-values have to be provided.
 The following is a list of available data types, their usage, purpose and
 examples.
 
-.. contents::
-   :local:
+..  contents::
+    :local:
+
+..  index:: Simple data types; align
+..  _data-type-align:
 
 align
 =====
 
-..  t3-data-type:: align
+..  confval:: align
 
     :Default: :typoscript:`left`
     :Allowed values: :typoscript:`left`, :typoscript:`center`, :typoscript:`right`
 
     Decides about alignment.
 
+
+..  index:: Simple data types; boolean
+..  _data-type-boolean:
+
 boolean
 =======
 
-..  t3-data-type:: boolean
+..  confval:: boolean
 
     Possible values for boolean variables are `1` and `0`
     meaning TRUE and FALSE.
@@ -55,10 +62,14 @@ boolean
        dummy.enable = 1   # true,  preferred notation
        dummy.enable =     # false, because the value is empty
 
+
+..  index:: Simple data types; case
+..  _data-type-case:
+
 case
 ====
 
-..  t3-data-type:: case
+..  confval:: case
 
 
     Do a case conversion.
@@ -90,15 +101,19 @@ case
 
     Result:
 
-    ..  code-block:: html
+    ..  code-block:: text
         :caption: Example Output
 
         HELLO WORLD!
 
+
+..  index:: Simple data types; date-conf
+..  _data-type-date-conf:
+
 date-conf
 =========
 
-..  t3-data-type:: date-conf
+..  confval:: date-conf
 
     Used to format a date, see PHP function :php:`date()`. See the
     documentation of `allowed date time formats in
@@ -111,19 +126,27 @@ date-conf
 
         page.10.date-conf = d-m-y
 
+
+..  index:: Simple data types; degree
+..  _data-type-degree:
+
 degree
 ======
 
-..  t3-data-type:: degree
+..  confval:: degree
 
     `-90` to `90`, integers
 
     Example: `45`
 
+
+..  index:: Simple data types; dir
+..  _data-type-dir:
+
 dir
 ===
 
-..  t3-data-type:: dir
+..  confval:: dir
 
     ..  rubric:: Syntax
 
@@ -146,10 +169,14 @@ dir
 
         page.10.dir = fileadmin/files/ | pdf,gif,jpg | name | r | true
 
+
+..  index:: Simple data types; function name
+..  _data-type-function-name:
+
 function name
 =============
 
-..  t3-data-type:: function name
+..  confval:: function name
 
     Indicates a function or method in a class to call. See more information at
     the :ref:`USER cObject <cobj-user>`.
@@ -161,7 +188,7 @@ function name
     TypoScript configuration and :php:`$content`, some content to be processed and
     returned.
 
-    ..  Which entry in TYPO3_CONF_VARS enables the user-prefix to be changed? This
+    ..  todo: Which entry in TYPO3_CONF_VARS enables the user-prefix to be changed? This
         should be mentioned. Looks like this entry has gone and this info no
         longer valid.
 
@@ -171,27 +198,31 @@ function name
     instead. See the document "Inside TYPO3" for more information on extending
     classes in TYPO3!
 
-    .. Where is this feature mentioned? We should add a reference here.
+    ..  todo: Where is this feature mentioned? We should add a reference here.
 
     ..  rubric:: Examples
 
     Method in namespaced class. This is the preferred version:
 
-    ..  code-block:: php
+    ..  code-block:: text
 
         Your\NameSpace\YourClass->reverseString
 
     Single Function:
 
-    ..  code-block:: php
+    ..  code-block:: text
 
         user_reverseString
 
     Method in class without namespace:
 
-    ..  code-block:: php
+    ..  code-block:: text
 
         user_yourClass->reverseString
+
+
+..  index:: Simple data types; getText
+..  _data-type-getText:
 
 getText
 =======
@@ -199,10 +230,14 @@ getText
 The getText data type is some kind of tool box allowing to retrieve
 values from a variety of sources. Read more: :ref:`data-type-gettext`
 
+
+..  index:: Simple data types; GraphicColor
+..  _data-type-GraphicColor:
+
 GraphicColor
 ============
 
-..  t3-data-type:: GraphicColor
+..  confval:: GraphicColor
 
     ..  rubric:: Syntax:
 
@@ -228,10 +263,14 @@ GraphicColor
     *   :typoscript:`red : *0.8` ("red" is darkened by factor 0.8)
     *   :typoscript:`#ffeecc : +16` ("ffeecc" is going to #fffedc because 16 is added)
 
+
+..  index:: Simple data types; imageExtension
+..  _data-type-imageExtension:
+
 imageExtension
 ==============
 
-..  t3-data-type:: imageExtension
+..  confval:: imageExtension
 
     Image extensions can be anything among the allowed types defined in the
     global variable :php:`$GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext']`.
@@ -246,19 +285,23 @@ imageExtension
 
     web *(gif or jpg ..)*
 
+
+..  index:: Simple data types; imgResource
+..  _data-type-imgResource:
+
 imgResource
 ===========
 
-..  t3-data-type:: imgResource
+..  confval:: imgResource
 
-    #.  A :t3-data-type:`resource` plus imgResource properties.
+    #.  A :confval:`resource` plus imgResource properties.
 
         Filetypes can be anything among the allowed types defined in the
         configuration variable
         :php:`$GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext']`.  Standard is
         pdf, gif, jpg, jpeg, tif, bmp, ai, pcx, tga, png.
 
-    #.  A GIFBUILDER object. See the object reference for :ref:`gifbuilder` below.
+    #.  A GIFBUILDER object. See the object reference for :ref:`gifbuilder`.
 
     ..  rubric:: Examples
 
@@ -284,10 +327,14 @@ imgResource
             # GIFBUILDER properties here...
         }
 
+
+..  index:: Simple data types; integer
+..  _data-type-integer:
+
 integer
 =======
 
-..  t3-data-type:: integer
+..  confval:: integer
 
     ..  rubric:: Examples
 
@@ -295,12 +342,16 @@ integer
 
 
     This data type is sometimes used generally though another type would have
-    been more appropriate, like :t3-data-type:`pixels`.
+    been more appropriate, like :ref:`pixels <data-type-pixels>`.
+
+
+..  index:: Simple data types; path
+..  _data-type-path:
 
 path
 ====
 
-..  t3-data-type:: path
+..  confval:: path
 
 
     Path relative to the root directory from which we operate.
@@ -313,11 +364,14 @@ path
 
         page.10.settings.somePath = fileadmin/stuff/
 
+
+..  index:: Simple data types; pixels
+..  _data-type-pixels:
+
 pixels
 ======
 
-..  t3-data-type:: pixels
-
+..  confval:: pixels
 
     pixel-distance
 
@@ -328,22 +382,30 @@ pixels
 
         page.10.someWidth = 345
 
+
+..  index:: Simple data types; positive integer
+..  _data-type-positive-integer:
+
 positive integer
 ================
 
-..  t3-data-type:: positive integer
+..  confval:: positive integer
 
 
-    Positive :t3-data-type:`integer`.
+    Positive :confval:`integer`.
 
     ..  rubric:: Examples
 
     42, 8, 9
 
+
+..  index:: Simple data types; resource
+..  _data-type-resource:
+
 resource
 ========
 
-..  t3-data-type:: resource
+..  confval:: resource
 
     If the value contains a "/", it is expected to be a reference (absolute or
     relative) to a file in the file system. There is no support for wildcard
@@ -358,20 +420,24 @@ resource
 
        page.10.settings.someFile = fileadmin/picture.gif
 
-.. index:: Simple data types; strftime-conf
-.. _data-type-strftime-conf:
+..  index:: Simple data types; strftime-conf
+..  _data-type-strftime-conf:
 
 strftime-conf
 =============
 
-..  t3-data-type:: strftime-conf
+..  confval:: strftime-conf
 
     See function `strftime on php.net <https://www.php.net/manual/en/function.strftime>`__.
+
+
+..  index:: Simple data types; string
+..  _data-type-string:
 
 string
 ======
 
-..  t3-data-type:: string
+..  confval:: string
 
 
     Sometimes used generally though another type would have been more
@@ -381,10 +447,14 @@ string
 
     The quick brown fox jumps over the lazy dog.
 
+
+..  index:: Simple data types; tag
+..  _data-type-tag:
+
 tag
 ===
 
-..  t3-data-type:: tag
+..  confval:: tag
 
     An HTML tag.
 
@@ -395,14 +465,14 @@ tag
 
         page.10.settings.bodyTag = <body lang="de">
 
-.. index:: Simple data types; tag-params
-.. _data-type-tag-params:
+
+..  index:: Simple data types; tag-params
+..  _data-type-tag-params:
 
 tag-params
 ==========
 
-..  t3-data-type:: tag-params
-
+..  confval:: tag-params
 
     Parameters for a tag.
 
@@ -416,13 +486,13 @@ tag-params
         page.10.settings.someParams = border="0" framespacing="0"
 
 
-.. index:: Simple data types; target
-.. _data-type-target:
+..  index:: Simple data types; target
+..  _data-type-target:
 
 target
 ======
 
-..  t3-data-type:: target
+..  confval:: target
 
     ..  rubric:: Examples
 
@@ -434,13 +504,14 @@ target
     This is normally the same value as the name of the root-level object
     that defines the frame.
 
-.. index:: Simple data types; wrap
-.. _data-type-wrap:
+
+..  index:: Simple data types; wrap
+..  _data-type-wrap:
 
 wrap
 ====
 
-..  t3-data-type:: wrap
+..  confval:: wrap
 
     :Syntax: <...> \| </...>
 
