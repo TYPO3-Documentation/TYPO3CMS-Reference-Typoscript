@@ -43,17 +43,15 @@ function to avoid this.
 applicationContext
 ==================
 
-:aspect:`Variable`
-    applicationContext
+..  confval:: applicationContext
 
-:aspect:`Type`
-    String
+    :Data type: String
 
-:aspect:`Description`
     The current application context as a string.
     See :ref:`t3coreapi:bootstrapping-context`.
 
-:aspect:`Example`
+    Example:
+
     ..  code-block:: typoscript
         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
@@ -63,22 +61,21 @@ applicationContext
         # (for example, Production/Staging").
         [applicationContext matches "/^Production/"]
 
+
 ..  index:: Conditions; page
 ..  _condition-page:
 
 page
 ====
 
-:aspect:`Variable`
-    page
+..  confval:: page
 
-:aspect:`Type`
-    Array
+    :Data type: Array
 
-:aspect:`Description`
     All data of the current page record as array.
 
-:aspect:`Example`
+    Example:
+
     ..  code-block:: typoscript
         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
@@ -108,13 +105,10 @@ page
 tree
 ====
 
-:aspect:`Variable`
-    tree
+..  confval:: tree
 
-:aspect:`Type`
-    Object
+    :Data type: Object
 
-:aspect:`Description`
     Object with tree information.
 
 
@@ -122,21 +116,20 @@ tree
     Conditions; tree.level
     Conditions; Page level
 
+
 ..  _condition-tree-level:
 
 tree.level
 ----------
 
-:aspect:`Variable`
-    tree.level
+..  confval:: tree.level
 
-:aspect:`Type`
-    Integer
+    :Data type: Integer
 
-:aspect:`Description`
     The current tree level.
 
-:aspect:`Example`
+    Example:
+
     ..  code-block:: typoscript
         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
@@ -150,17 +143,15 @@ tree.level
 tree.pagelayout
 ---------------
 
-:aspect:`Variable`
-    tree.pagelayout
+..  confval:: tree.pagelayout
 
-:aspect:`Type`
-    Integer / String
+    :Data type: Integer / String
 
-:aspect:`Description`
     Check for the defined :ref:`backend layout <be-layout>` of a page, including
     the inheritance of the field `Backend Layout (subpages of this page)`.
 
-:aspect:`Example`
+    Example:
+
     ..  code-block:: typoscript
         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
@@ -178,16 +169,14 @@ tree.pagelayout
 tree.rootLine
 -------------
 
-:aspect:`Variable`
-    tree.rootLine
+..  confval:: tree.rootLine
 
-:aspect:`Type`
-    Array
+    :Data type: Array
 
-:aspect:`Description`
     Array of arrays with UID and PID.
 
-:aspect:`Example`
+    Example:
+
     ..  code-block:: typoscript
         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
@@ -202,16 +191,14 @@ tree.rootLine
 tree.rootLineIds
 ----------------
 
-:aspect:`Variable`
-    tree.rootLineIds
+..  confval:: tree.rootLineIds
 
-:aspect:`Type`
-    Array
+    :Data type: Array
 
-:aspect:`Description`
     An array with UIDs of the root line.
 
-:aspect:`Example`
+    Example:
+
     ..  code-block:: typoscript
         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
@@ -227,16 +214,14 @@ tree.rootLineIds
 tree.rootLineParentIds
 ----------------------
 
-:aspect:`Variable`
-    tree.rootLineParentIds
+..  confval:: tree.rootLineParentIds
 
-:aspect:`Type`
-    Array
+    :Data type: Array
 
-:aspect:`Description`
     An array with parent UIDs of the root line.
 
-:aspect:`Example`
+    Example:
+
     ..  code-block:: typoscript
         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
@@ -250,13 +235,10 @@ tree.rootLineParentIds
 backend
 =======
 
-:aspect:`Variable`
-    backend
+..  confval:: backend
 
-:aspect:`Type`
-    Object
+    :Data type: Object
 
-:aspect:`Description`
     Object with backend information.
 
 
@@ -266,13 +248,10 @@ backend
 backend.user
 ------------
 
-:aspect:`Variable`
-    backend.user
+..  confval:: backend.user
 
-:aspect:`Type`
-    Object
+    :Data type: Object
 
-:aspect:`Description`
     Object with current backend user information.
 
 
@@ -284,16 +263,14 @@ backend.user
 backend.user.isAdmin
 --------------------
 
-:aspect:`Variable`
-    backend.user.isAdmin
+..  confval:: backend.user.isAdmin
 
-:aspect:`Type`
-    Boolean
+    :Data type: Boolean
 
-:aspect:`Description`
     True, if the current backend user is administrator.
 
-:aspect:`Example`
+    Example:
+
     ..  code-block:: typoscript
         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
@@ -307,16 +284,14 @@ backend.user.isAdmin
 backend.user.isLoggedIn
 -----------------------
 
-:aspect:`Variable`
-    backend.user.isLoggedIn
+..  confval:: backend.user.isLoggedIn
 
-:aspect:`Type`
-    Boolean
+    :Data type: Boolean
 
-:aspect:`Description`
     True, if the current backend user is logged in.
 
-:aspect:`Example`
+    Example:
+
     ..  code-block:: typoscript
         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
@@ -330,16 +305,14 @@ backend.user.isLoggedIn
 backend.user.userId
 -------------------
 
-:aspect:`Variable`
-    backend.user.userId
+..  confval:: backend.user.userId
 
-:aspect:`Type`
-    Integer
+    :Data type: Integer
 
-:aspect:`Description`
     UID of the the current backend user.
 
-:aspect:`Example`
+    Example:
+
     ..  code-block:: typoscript
         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
@@ -354,19 +327,15 @@ backend.user.userId
 backend.user.userGroupIds
 -------------------------
 
-:aspect:`Variable`
-    backend.user.userGroupIds
+..  confval:: backend.user.userGroupIds
 
-:aspect:`Type`
-    array
+    :Data type: Array
+    :Context: Frontend, backend
 
-:aspect:`Description`
     Array of user group IDs assigned to the current backend user.
 
-:aspect:`Context`
-    Frontend, backend
+    Example:
 
-:aspect:`Example`
     ..  code-block:: typoscript
         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
@@ -379,16 +348,14 @@ backend.user.userGroupIds
 backend.user.userGroupList
 --------------------------
 
-:aspect:`Variable`
-    backend.user.userGroupList
+..  confval:: backend.user.userGroupList
 
-:aspect:`Type`
-    String
+    :Data type: String
 
-:aspect:`Description`
     Comma-separated list of group UIDs.
 
-:aspect:`Example`
+    Example:
+
     ..  code-block:: typoscript
         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
@@ -401,13 +368,10 @@ backend.user.userGroupList
 frontend
 ========
 
-:aspect:`Variable`
-    frontend
+..  confval:: frontend
 
-:aspect:`Type`
-    Object
+    :Data type: Object
 
-:aspect:`Description`
     Object with frontend information.
 
 
@@ -417,13 +381,10 @@ frontend
 frontend.user
 -------------
 
-:aspect:`Variable`
-    frontend.user
+..  confval:: frontend.user
 
-:aspect:`Type`
-    Object
+    :Data type: Object
 
-:aspect:`Description`
     Object with current frontend user information.
 
 
@@ -433,16 +394,14 @@ frontend.user
 frontend.user.isLoggedIn
 ------------------------
 
-:aspect:`Variable`
-    frontend.user.isLoggedIn
+..  confval:: frontend.user.isLoggedIn
 
-:aspect:`Type`
-    Boolean
+    :Data type: Boolean
 
-:aspect:`Description`
     True, if the current frontend user is logged in.
 
-:aspect:`Example`
+    Example:
+
     ..  code-block:: typoscript
         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
@@ -455,20 +414,19 @@ frontend.user.isLoggedIn
 frontend.user.userId
 --------------------
 
-:aspect:`Variable`
-    frontend.user.userId
+..  confval:: frontend.user.userId
 
-:aspect:`Type`
-    Integer
+    :Data type: Integer
 
-:aspect:`Description`
     The UID of the current frontend user.
 
-:aspect:`Example`
+    Example:
+
     .. code-block:: typoscript
         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
         [frontend.user.userId == 5]
+
 
 ..  index:: Conditions; frontend.user.userGroupIds
 ..  _condition-frontend-user-userGroupIds:
@@ -476,23 +434,20 @@ frontend.user.userId
 frontend.user.userGroupIds
 --------------------------
 
-:aspect:`Variable`
-    frontend.user.userGroupList
+..  confval:: frontend.user.userGroupIds
 
-:aspect:`Type`
-    array
+    :Data type: Array
+    :Context: Frontend
 
-:aspect:`Description`
     Array of user group IDs of the current frontend user.
 
-:aspect:`Context`
-    Frontend
+    Example:
 
-:aspect:`Example`
     ..  code-block:: typoscript
         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
         [4 in frontend.user.userGroupIds]
+
 
 ..  index:: Conditions; frontend.user.userGroupList
 ..  _condition-frontend-user-userGroupList:
@@ -500,16 +455,14 @@ frontend.user.userGroupIds
 frontend.user.userGroupList
 ---------------------------
 
-:aspect:`Variable`
-    frontend.user.userGroupList
+..  confval:: frontend.user.userGroupList
 
-:aspect:`Type`
-    String
+    :Data type: String
 
-:aspect:`Description`
     Comma-separated list of group UIDs.
 
-:aspect:`Example`
+    Example:
+
     .. code-block:: typoscript
         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
@@ -522,13 +475,10 @@ frontend.user.userGroupList
 workspace
 =========
 
-:aspect:`Variable`
-    workspace
+..  confval:: workspace
 
-:aspect:`Type`
-    Object
+    :Data type: Object
 
-:aspect:`Description`
     Object with :ref:`workspace <t3coreapi:workspaces>` information.
 
 
@@ -538,16 +488,14 @@ workspace
 workspace.workspaceId
 ---------------------
 
-:aspect:`Variable`
-    workspace.workspaceId
+..  confval:: workspace.workspaceId
 
-:aspect:`Type`
-    Integer
+    :Data type: Integer
 
-:aspect:`Description`
     UID of the current workspace.
 
-:aspect:`Example`
+    Example:
+
     ..  code-block:: typoscript
         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
@@ -561,16 +509,14 @@ workspace.workspaceId
 workspace.isLive
 ----------------
 
-:aspect:`Variable`
-    workspace.isLive
+..  confval:: workspace.isLive
 
-:aspect:`Type`
-    Boolean
+    :Data type: Boolean
 
-:aspect:`Description`
     True, if the current workspace is the live workspace.
 
-:aspect:`Example`
+    Example:
+
     ..  code-block:: typoscript
         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
@@ -583,16 +529,14 @@ workspace.isLive
 workspace.isOffline
 -------------------
 
-:aspect:`Variable`
-    workspace.isOffline
+..  confval:: workspace.isOffline
 
-:aspect:`Type`
-    Boolean
+    :Data type: Boolean
 
-:aspect:`Description`
     True, if the current workspace is offline.
 
-:aspect:`Example`
+    Example:
+
     ..  code-block:: typoscript
         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
@@ -605,13 +549,10 @@ workspace.isOffline
 typo3
 =====
 
-:aspect:`Variable`
-    typo3
+..  confval:: typo3
 
-:aspect:`Type`
-    Object
+    :Data type: Object
 
-:aspect:`Description`
     Object with TYPO3-related information.
 
 
@@ -621,16 +562,14 @@ typo3
 typo3.version
 -------------
 
-:aspect:`Variable`
-    typo3.version
+..  confval:: typo3.version
 
-:aspect:`Type`
-    String
+    :Data type: String
 
-:aspect:`Description`
     TYPO3_version (for example, 12.4.5)
 
-:aspect:`Example`
+    Example:
+
     ..  code-block:: typoscript
         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
@@ -643,16 +582,14 @@ typo3.version
 typo3.branch
 ------------
 
-:aspect:`Variable`
-    typo3.branch
+..  confval:: typo3.branch
 
-:aspect:`Type`
-    String
+    :Data type: String
 
-:aspect:`Description`
     TYPO3 branch (for example, 12.4)
 
-:aspect:`Example`
+    Example:
+
     ..  code-block:: typoscript
         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
@@ -665,16 +602,14 @@ typo3.branch
 typo3.devIpMask
 ---------------
 
-:aspect:`Variable`
-    typo3.devIpMask
+..  confval:: typo3.devIpMask
 
-:aspect:`Type`
-    String
+    :Data type: String
 
-:aspect:`Description`
     :ref:`$GLOBALS['TYPO3_CONF_VARS']['SYS']['devIPmask'] <t3coreapi:typo3ConfVars_sys_devIPmask>`
 
-:aspect:`Example`
+    Example:
+
     ..  code-block:: typoscript
         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
@@ -687,22 +622,18 @@ typo3.devIpMask
 date()
 ======
 
-:aspect:`Function`
-    date()
+..  confval:: date()
 
-:aspect:`Parameter`
-    String
+    :Parameter: String
+    :Data type: String | Integer
 
-:aspect:`Type`
-    String / Integer
-
-:aspect:`Description`
     Get the current date in the given format. See the PHP `date function`_
     as a reference for the possible usage.
 
-..  _date function: https://www.php.net/manual/en/function.date.php
+    ..  _date function: https://www.php.net/manual/en/function.date.php
 
-:aspect:`Example`
+    Example:
+
     ..  code-block:: typoscript
         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
@@ -718,26 +649,23 @@ date()
         # True, if the current hour is 7
         [date("G") == 7]
 
+
 ..  index:: Conditions; like
 ..  _condition-function-like:
 
 like()
 ======
 
-:aspect:`Function`
-    like()
+..  confval:: like()
 
-:aspect:`Parameter`
-    String, String
+    :Parameter: String, String
+    :Data type: Boolean
 
-:aspect:`Type`
-    Boolean
-
-:aspect:`Description`
     This function has two parameters: The first parameter is the string to
     search in, the second parameter is the search string.
 
-:aspect:`Example`
+    Example:
+
     .. code-block:: typoscript
         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
@@ -757,16 +685,11 @@ like()
 traverse()
 ==========
 
-:aspect:`Function`
-    traverse()
+..  confval:: traverse()
 
-:aspect:`Parameter`
-    Array, string
+    :Parameter: Array, String
+    :Data type: Mixed
 
-:aspect:`Type`
-    Custom
-
-:aspect:`Description`
     This function gets a value from an array with arbitrary depth and suppresses
     a PHP warning when sub-arrays do not exist. It has two parameters: The first
     parameter is the array to traverse, the second parameter is the path to
@@ -774,7 +697,8 @@ traverse()
 
     In case the path is not found in the array, an empty string is returned.
 
-:aspect:`Example`
+    Example:
+
     ..  code-block:: typoscript
         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
@@ -790,32 +714,29 @@ traverse()
         available). This avoids the error
         `Unable to call method "getQueryParams" of non-object "request"`.
 
+
 ..  index:: Conditions; compatVersion
 ..  _condition-function-compatVersion:
 
 compatVersion()
 ===============
 
-:aspect:`Function`
-    compatVersion()
+..  confval:: compatVersion()
 
-:aspect:`Parameter`
-    String
+    :Parameter: String
+    :Data type: Boolean
 
-:aspect:`Type`
-    Boolean
-
-:aspect:`Description`
     Compares against the current TYPO3 branch.
 
-:aspect:`Example`
+    Example:
+
     ..  code-block:: typoscript
         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
         # True, if the current TYPO3 version is 12.4.x
         [compatVersion("12.4")]
 
-        True, if the current TYPO3 version is 12.4.5
+        # True, if the current TYPO3 version is 12.4.5
         [compatVersion("12.4.5")]
 
 
@@ -892,13 +813,10 @@ loginUser()
 getTSFE()
 =========
 
-:aspect:`Function`
-    getTSFE()
+..  confval:: getTSFE()
 
-:aspect:`Parameter`
-    Object
+    :Data type: Object
 
-:aspect:`Description`
     Provides access to :ref:`TypoScriptFrontendController <t3coreapi:tsfe>`
     :php:`$GLOBALS['TSFE']`. This function can directly access methods of
     :php:`TypoScriptFrontendController`. This class is target of a mid-term
@@ -912,7 +830,8 @@ getTSFE()
     can be checked using either :typoscript:`[getTSFE() && getTSFE().id == 17]`
     or the null-safe operator :typoscript:`[getTSFE()?.id == 17]`.
 
-:aspect:`Example`
+    Example:
+
     ..  code-block:: typoscript
         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
@@ -926,16 +845,14 @@ getTSFE()
 getenv()
 ========
 
-:aspect:`Function`
-    getenv()
+..  confval:: getenv()
 
-:aspect:`Parameter`
-    String
+    :Data type: String
 
-:aspect:`Description`
     PHP function `getenv <https://www.php.net/manual/en/function.getenv.php>`_.
 
-:aspect:`Example`
+    Example:
+
     .. code-block:: typoscript
         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
@@ -948,17 +865,15 @@ getenv()
 feature()
 =========
 
-:aspect:`Function`
-    feature()
+..  confval:: feature()
 
-:aspect:`Parameter`
-    String
+    :Data type: String
 
-:aspect:`Description`
     Provides access to the current state of
     :ref:`feature toggles <typo3ConfVars_sys_features>`.
 
-:aspect:`Example`
+    Example:
+
     ..  code-block:: typoscript
         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
@@ -1048,20 +963,16 @@ ip()
     always evaluate to false. For migration hints see the
     :ref:`changelog <ext_core:deprecation-100047-1677608959>`.
 
-:aspect:`Function`
-    ip()
+..  confval:: ip()
 
-:aspect:`Parameter`
-    String
+    :Parameter: String
+    :Data type: Boolean
 
-:aspect:`Type`
-    Boolean
-
-:aspect:`Description`
     Value or constraint, wildcard or regular expression possible; special value:
     "devIP" (matches the :ref:`devIPmask <t3coreapi:typo3ConfVars_sys_devIPmask>`).
 
-:aspect:`Example`
+    Example:
+
     ..  code-block:: typoscript
         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
@@ -1086,13 +997,10 @@ request()
     always evaluate to false. For migration hints see the
     :ref:`changelog <ext_core:deprecation-100047-1677608959>`.
 
-:aspect:`Function`
-    request()
+..  confval:: request()
 
-:aspect:`Parameter`
-    Custom
+    :Data type: Mixed
 
-:aspect:`Description`
     Allows to fetch information from current request.
 
 ..  tip::
@@ -1111,19 +1019,13 @@ request()
 request.getQueryParams()
 ------------------------
 
-:aspect:`Function`
-    request.getQueryParams()
+..  confval:: request.getQueryParams()
 
-:aspect:`Parameter`
-    Custom
+    :Data type: Array
 
-:aspect:`Type`
-    Array
-
-:aspect:`Description`
     Allows to access GET parameters from current request.
 
-    Assuming the following query within url:
+    Assuming the following query within URL:
 
     ``route=%2Fajax%2Fsystem-information%2Frender&token=5c53e9b715362e7b0c3275848068133b89bbed77&skipSessionUpdate=1``
 
@@ -1136,7 +1038,8 @@ request.getQueryParams()
     Key: ``skipSessionUpdate``
         Value: ``1``
 
-:aspect:`Example`
+    Example:
+
     ..  code-block:: typoscript
         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
@@ -1152,20 +1055,15 @@ request.getQueryParams()
 request.getParsedBody()
 -----------------------
 
-:aspect:`Function`
-    request.getParsedBody()
+..  confval:: request.getParsedBody()
 
-:aspect:`Parameter`
-    Custom
+    :Data type: Array
 
-:aspect:`Type`
-    Array
-
-:aspect:`Description`
     Provide all values contained in the request body, for example, in case of
     submitted form via POST, the submitted values.
 
-:aspect:`Example`
+    Example:
+
     ..  code-block:: typoscript
         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
@@ -1178,19 +1076,14 @@ request.getParsedBody()
 request.getHeaders()
 --------------------
 
-:aspect:`Function`
-    request.getHeaders()
+..  confval:: request.getHeaders()
 
-:aspect:`Parameter`
-    Custom
+    :Data type: Array
 
-:aspect:`Type`
-    Array
-
-:aspect:`Description`
     Provide all values from request headers.
 
-:aspect:`Example`
+    Example:
+
     ..  code-block:: typoscript
         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
@@ -1209,19 +1102,14 @@ request.getHeaders()
 request.getCookieParams()
 -------------------------
 
-:aspect:`Function`
-    request.getCookieParams()
+..  confval:: request.getCookieParams()
 
-:aspect:`Parameter`
-    Custom
+    :Data type: Array
 
-:aspect:`Type`
-    Array
-
-:aspect:`Description`
     Provides available cookies.
 
-:aspect:`Example`
+    Example:
+
     ..  code-block:: typoscript
         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
@@ -1234,22 +1122,17 @@ request.getCookieParams()
 request.getNormalizedParams()
 -----------------------------
 
-:aspect:`Function`
-    request.getNormalizedParams()
+..  confval:: request.getNormalizedParams()
 
-:aspect:`Parameter`
-    Custom
+    :Data type: Array
 
-:aspect:`Type`
-    Array
-
-:aspect:`Description`
     Provides access to the :php:`\TYPO3\CMS\Core\Http\NormalizedParams` object.
     Have a look at the
     :ref:`normalized parameters of the request object <t3coreapi:typo3-request-attribute-normalizedParams>`
     for a list of the available methods.
 
-:aspect:`Example`
+    Example:
+
     ..  code-block:: typoscript
         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
@@ -1269,20 +1152,15 @@ request.getNormalizedParams()
 request.getPageArguments()
 --------------------------
 
-:aspect:`Function`
-    request.getPageArguments()
+..  confval:: request.getPageArguments()
 
-:aspect:`Parameter`
-    None
+    :Data type: Object
 
-:aspect:`Type`
-    Array
-
-:aspect:`Description`
     Get the current :php:`\TYPO3\CMS\Core\Routing\PageArguments` object with
     the resolved route parts from enhancers.
 
-:aspect:`Example`
+    Example:
+
     ..  code-block:: typoscript
         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
@@ -1298,21 +1176,17 @@ request.getPageArguments()
 session()
 =========
 
-:aspect:`Function`
-    session()
+..  confval:: session()
 
-:aspect:`Parameter`
-    String
+    :Parameter: String
+    :Data type: Mixed
 
-:aspect:`Value`
-    Mixed
-
-:aspect:`Description`
     Allows to access values of the current session. Available values depend on
     values written to the session, for example, by extensions. Use
     :typoscript:`|` to dig deeper into the structure for stored values.
 
-:aspect:`Example`
+    Example:
+
     ..  code-block:: typoscript
         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
@@ -1326,13 +1200,11 @@ session()
 site()
 ======
 
-:aspect:`Function`
-    site
+..  confval:: site()
 
-:aspect:`Parameter`
-    String
+    :Parameter: String
+    :Data type: Mixed
 
-:aspect:`Description`
     Get a value from the :ref:`site configuration <t3coreapi:sitehandling>`, or
     null, if no site was found or the property does not exists.
 
@@ -1352,7 +1224,7 @@ site()
         For deeper information, see
         :ref:`condition-functions-in-frontend-context-function-siteLanguage`.
 
-   :typoscript:`site("allLanguages")`
+    :typoscript:`site("allLanguages")`
         Returns an array of available and unavailable languages for the current
         site. For deeper information, see
         :ref:`condition-functions-in-frontend-context-function-siteLanguage`.
@@ -1365,7 +1237,8 @@ site()
     :typoscript:`site("configuration")`
         Returns an array with the available configuration for the current site.
 
-:aspect:`Example`
+    Example:
+
     ..  code-block:: typoscript
         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
@@ -1391,16 +1264,11 @@ site()
 siteLanguage()
 ==============
 
-:aspect:`Function`
-    siteLanguage()
+..  confval:: siteLanguage()
 
-:aspect:`Parameter`
-    String
+    :Parameter: String
+    :Data type: Mixed
 
-:aspect:`Value`
-    Mixed
-
-:aspect:`Description`
     Get a value from the
     :ref:`site language configuration <t3coreapi:sitehandling-addingLanguages>`,
     or null if no site was found or property not exists.
@@ -1457,7 +1325,8 @@ siteLanguage()
     :typoscript:`siteLanguage("fallbackLanguageIds")`
         Returns the list of fallback languages as a string, for example `1,0`.
 
-:aspect:`Example`
+    Example:
+
     ..  code-block:: typoscript
         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
