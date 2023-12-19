@@ -158,15 +158,8 @@ writing: :php:`TypoScriptFrontendController->id`.
    Variable
          type
 
-         .. versionchanged:: 12.4
-            The property has been marked as deprecated and will be removed with
-            v13.0.
-
-   PHP-Type
-         integer
-
-   Description
-         The type
+         .. versionchanged:: 13.0
+            The property has been removed with TYPO3 v13.0.
 
    Migration
          When using this property in PHP code via :php:`$GLOBALS['TSFE']->type`,
