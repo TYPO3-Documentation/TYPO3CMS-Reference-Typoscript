@@ -796,31 +796,41 @@ noThumbsInEB
     If set, then image thumbnails are not shown in the element browser.
 
 
-..  todo:: can we remove this?
 ..  _useroptions-overridePageModule:
 
 overridePageModule
 ------------------
 
-..  confval:: overridePageModule
+..  versionchanged:: 13.0
+    This setting has been removed.
 
-    :Data type: string
+Migration
+~~~~~~~~~
 
-    By this value you can substitute the default :guilabel:`Web > Page` module
-    key ("web\_layout") with another backend module key.
+In order to replace the :guilabel:`Web > Page` module within a third-party
+extension, such as TemplaVoila, it is possible to create a custom module entry
+in an extension's :file:`Configuration/Backend/Modules.php` with the following
+entry:
 
-    ..  note::
-        This property has been introduced for EXT:templavoila in the old days.
-        It is of little use nowadays and can be achieved using
-        :ref:`hideModules <useroptions-hideModules>`, too.
+..  code-block:: php
+    :caption: EXT:my_extension/Configuration/Backend/Modules.php
 
-    Example:
-
-    ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/user.tsconfig
-
-        # Enable TemplaVoila page module as default page module.
-        options.overridePageModule = web_txtemplavoilaM1
+    return [
+        'my_module' => [
+            'parent' => 'web',
+            'position' => ['before' => '*'],
+            'access' => 'user',
+            'aliases' => ['web_layout'],
+            'path' => '/module/my_module',
+            'iconIdentifier' => 'module-page',
+            'labels' => 'LLL:EXT:backend/Resources/Private/Language/locallang_mod.xlf',
+            'routes' => [
+                '_default' => [
+                    'target' => \MyVendor\MyExtension\Controller\MyController::class . '::mainAction',
+                ],
+            ],
+        ],
+    ];
 
 
 ..  index:: Page tree
