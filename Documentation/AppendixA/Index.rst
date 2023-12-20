@@ -146,6 +146,9 @@ writing: :php:`TypoScriptFrontendController->id`.
    Variable
          id
 
+         .. versionchanged:: 13.0
+            The property has been marked as read-only.
+
    PHP-Type
          integer
 
@@ -176,6 +179,9 @@ writing: :php:`TypoScriptFrontendController->id`.
 
    Variable
          page
+
+         .. versionchanged:: 13.0
+            The property has been marked as read-only.
 
    PHP-Type
          array
@@ -245,6 +251,9 @@ writing: :php:`TypoScriptFrontendController->id`.
    Variable
          rootLine
 
+         .. versionchanged:: 13.0
+            The property has been marked as read-only.
+
    PHP-Type
          array
 
@@ -258,6 +267,9 @@ writing: :php:`TypoScriptFrontendController->id`.
 
    Variable
          sys\_page
+
+         .. versionchanged:: 13.0
+            The property has been marked as read-only.
 
    PHP-Type
          object
