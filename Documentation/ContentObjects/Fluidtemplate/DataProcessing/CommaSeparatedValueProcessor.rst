@@ -16,53 +16,70 @@ and enclosure into account, before it is passed to the view.
 Options:
 ========
 
-..  t3-data-processor-csv:: if
+..  _CommaSeparatedValueProcessor-if:
+
+..  confval:: if
 
     :Required: false
-    :type: :ref:`if` condition
-    :default: ""
+    :Data type: :ref:`if` condition
+    :default: ''
 
-    If the condition is met the data processor is processed.
+    If the condition is met, the data processor is processed.
 
-..  t3-data-processor-csv:: fieldName
+
+..  _CommaSeparatedValueProcessor-fieldName:
+
+..  confval:: fieldName
 
     :Required: true
-    :type: string, :ref:`stdWrap`
+    :Data type: :ref:`data-type-string` / :ref:`stdWrap`
     :default: ''
 
     Name of the field in the processed ContentObjectRenderer.
 
-..  t3-data-processor-csv:: as
+
+..  _CommaSeparatedValueProcessor-as:
+
+..  confval:: as
 
     :Required: false
-    :type: string
+    :Data type: :ref:`data-type-string`
     :default: defaults to the fieldName
 
     The variable's name to be used in the Fluid template.
 
-..  t3-data-processor-csv:: maximumColumns
+
+..  _CommaSeparatedValueProcessor-maximumColumns:
+
+..  confval:: maximumColumns
 
     :Required: false
-    :type: int, :ref:`stdWrap`
-    :default: 0
+    :Data type: :ref:`data-type-integer` / :ref:`stdWrap`
+    :default: :typoscript:`0`
 
     Maximal number of columns to be transformed. Surplus columns will be
-    silently dropped. When set to `0` (default) all columns will be
+    silently dropped. When set to :typoscript:`0` (default) all columns will be
     transformed.
 
-..  t3-data-processor-csv:: fieldDelimiter
+
+..  _CommaSeparatedValueProcessor-fieldDelimiter:
+
+..  confval:: fieldDelimiter
 
     :Required:  false
-    :type: string(1), :ref:`stdWrap`
-    :default: ','
+    :Data type: :ref:`data-type-string` / :ref:`stdWrap`
+    :default: :typoscript:`,`
 
     The field delimiter, a character separating the values.
 
-..  t3-data-processor-csv:: fieldEnclosure
+
+..  _CommaSeparatedValueProcessor-fieldEnclosure:
+
+..  confval:: fieldEnclosure
 
     :Required:  false
-    :type: string(1), :ref:`stdWrap`
-    :default: '"'
+    :Data type: :ref:`data-type-string` / :ref:`stdWrap`
+    :default: :typoscript:`"`
 
     The field enclosure, a character surrounding the values.
 
