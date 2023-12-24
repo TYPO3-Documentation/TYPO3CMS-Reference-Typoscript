@@ -168,11 +168,7 @@ writing: :php:`TypoScriptFrontendController->id`.
          When using this property in PHP code via :php:`$GLOBALS['TSFE']->type`,
          it is recommended to move to the
          :ref:`PSR-7 request <t3coreapi:typo3-request>` via
-         :php:`$request->getAttribute('routing')->getPageType()`, which is the
-         property of the :php:`PageArguments` object, as a result of the
-         :php:`GET` parameter :php:`type`, or
-         :php:`$GLOBALS['TSFE']->getPageArguments()->getPageType()`, if the
-         request object is not available.
+         :php:`$request->getAttribute('routing')->getPageType()`.
 
 
 .. container:: table-row
