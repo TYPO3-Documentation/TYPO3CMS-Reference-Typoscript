@@ -16,38 +16,46 @@ array of records.
 Options:
 ========
 
-..  t3-data-processor-db:: if
+..  _DatabaseQueryProcessor-if:
+
+..  confval:: if
 
     :Required: false
-    :type: :ref:`if` condition
+    :Data type: :ref:`if` condition
     :default: ''
 
     Only if the condition is met the data processor is executed.
 
-..  t3-data-processor-db:: table
+
+..  _DatabaseQueryProcessor-table:
+
+..  confval:: table
 
     :Required: true
-    :type: string, :ref:`stdWrap`
+    :Data type: :ref:`data-type-string` / :ref:`stdWrap`
     :default: ''
 
     Name of the table from which the records should be fetched.
 
-..  t3-data-processor-db:: as
+..  _DatabaseQueryProcessor-as:
+
+..  confval:: as
 
     :Required: false
-    :type: string, :ref:`stdWrap`
+    :Data type: :ref:`data-type-string` / :ref:`stdWrap`
     :default: 'records'
 
     The variable's name to be used in the Fluid template.
 
-..  t3-data-processor-db:: dataProcessing
+..  _DatabaseQueryProcessor-dataProcessing:
+
+..  confval:: dataProcessing
 
     :Required: false
-    :type: array of :ref:`dataProcessing`
-    :default: ''
+    :Data type: array of :ref:`dataProcessing`
+    :default: []
 
     Array of data processors to be applied to all fetched records.
-
 
 ..  note::
     All other options will be interpreted as in the TypoScript function
@@ -94,4 +102,6 @@ and the data of the images in :php:`files`.
 
 ..  figure:: /Images/ManualScreenshots/FrontendOutput/DataProcessing/DatabaseProcessor.png
     :class: with-shadow
-    :alt: haiku record data dump and output
+    :alt: Haiku record data dump and output
+
+    Haiku record data dump and output
