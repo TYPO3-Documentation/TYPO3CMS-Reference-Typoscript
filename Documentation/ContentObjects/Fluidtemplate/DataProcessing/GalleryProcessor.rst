@@ -165,7 +165,7 @@ always has to be called first. Execution depends on the key in the
 
 The content of :t3-data-processor-gallery:`filesProcessedDataKey` in the
 :php:`GalleryProcessor` has to be equal to the content of
-:t3-data-processor-files:`as` in the :php:`FilesProcessor`:
+:ref:`as <FilesProcessor-as>` in the :ref:`FilesProcessor <FilesProcessor>`:
 
 ..  include:: /CodeSnippets/DataProcessing/TypoScript/GalleryProcessor.rst.txt
 
