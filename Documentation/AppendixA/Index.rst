@@ -147,7 +147,9 @@ writing: :php:`TypoScriptFrontendController->id`.
          id
 
          .. versionchanged:: 13.0
-            The property has been marked as read-only.
+            The property has been marked as read-only. Use
+            :php:`$request->getAttribute('frontend.page.information')->getId()`
+            instead. See :ref:`t3coreapi:typo3-request-attribute-frontend-page-information`.
 
    PHP-Type
          integer
@@ -177,7 +179,9 @@ writing: :php:`TypoScriptFrontendController->id`.
          page
 
          .. versionchanged:: 13.0
-            The property has been marked as read-only.
+            The property has been marked as read-only. Use
+            :php:`$request->getAttribute('frontend.page.information')->getPageRecord()`
+            instead. See :ref:`t3coreapi:typo3-request-attribute-frontend-page-information`.
 
    PHP-Type
          array
@@ -248,7 +252,9 @@ writing: :php:`TypoScriptFrontendController->id`.
          rootLine
 
          .. versionchanged:: 13.0
-            The property has been marked as read-only.
+            The property has been marked as read-only. Use
+            :php:`$request->getAttribute('frontend.page.information')->getRootLine()`
+            instead. See :ref:`t3coreapi:typo3-request-attribute-frontend-page-information`.
 
    PHP-Type
          array
@@ -265,7 +271,9 @@ writing: :php:`TypoScriptFrontendController->id`.
          sys\_page
 
          .. versionchanged:: 13.0
-            The property has been marked as read-only.
+            The property has been marked as read-only. Avoid usages altogether,
+            create own instances of the
+            :php:`\TYPO3\CMS\Core\Domain\Repository\PageRepository` when needed.
 
    PHP-Type
          object
