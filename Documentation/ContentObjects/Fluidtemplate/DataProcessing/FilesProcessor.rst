@@ -19,18 +19,23 @@ automatically.
 Options:
 ========
 
-..  t3-data-processor-files:: if
+..  _FilesProcessor-if:
+
+..  confval:: if
 
     :Required: false
-    :type: :ref:`if` condition
+    :Data type: :ref:`if` condition
     :default: ''
 
-    Only if the condition is met the data processor is executed.
+    Only, if the condition is met the data processor is executed.
 
-..  t3-data-processor-files:: references
+
+..  _FilesProcessor-references:
+
+..  confval:: references
 
     :Required: false
-    :type: string (comma separated integers), :ref:`stdWrap`
+    :Data type: :ref:`data-type-string` (comma-separated integers) / :ref:`stdWrap`
     :default: ''
     :Example: '1,303,42'
 
@@ -43,10 +48,12 @@ Options:
     :ref:`FilesProcessor-stdWrap-on-references`.
 
 
-..  t3-data-processor-files:: references.fieldName
+..  _FilesProcessor-references-fieldName:
+
+..  confval:: references.fieldName
 
     :Required: false
-    :type: string, :ref:`stdWrap`
+    :Data type: :ref:`data-type-string` / :ref:`stdWrap`
     :default: ''
     :Example: 'media'
 
@@ -56,10 +63,12 @@ Options:
     :sql:`tt_content` record.
 
 
-..  t3-data-processor-files:: references.table
+..  _FilesProcessor-references-table:
+
+..  confval:: references.table
 
     :Required: false
-    :type: string, :ref:`stdWrap`
+    :Data type: :ref:`data-type-string` / :ref:`stdWrap`
     :default: ''
     :Example: 'tt_content'
 
@@ -67,20 +76,26 @@ Options:
     :ref:`select` function, :typoscript:`references.fieldName` must be set to
     the desired field name of the table to be queried.
 
-..  t3-data-processor-files:: files
+
+..  _FilesProcessor-files:
+
+..  confval:: files
 
     :Required: false
-    :type: string (comma-separated integers), :ref:`stdWrap`
+    :Data type: :ref:`data-type-string` (comma-separated integers) / :ref:`stdWrap`
     :default: ''
     :Example: '1,303,42'
 
     If this option contains a comma-separated list of integers,
     these are treated as uids of files (:sql:`sys_file`).
 
-..  t3-data-processor-files:: collections
+
+..  _FilesProcessor-collections:
+
+..  confval:: collections
 
     :Required: false
-    :type: string (comma-separated integers), :ref:`stdWrap`
+    :Data type: :ref:`data-type-string` (comma-separated integers) / :ref:`stdWrap`
     :default: ''
     :Example: '1,303,42'
 
@@ -89,10 +104,12 @@ Options:
     collection are then being added to the output array.
 
 
-..  t3-data-processor-files:: folders
+..  _FilesProcessor-folders:
+
+..  confval:: folders
 
     :Required: false
-    :type: string (comma-separated folders), :ref:`stdWrap`
+    :Data type: :ref:`data-type-string` (comma-separated folders), :ref:`stdWrap`
     :default: ""
     :Example: "23:/other/folder/"
 
@@ -100,19 +117,22 @@ Options:
     possible:
 
     `t3://folder?storage=2&identifier=/my/folder/`
-        folder :file:`/my/folder/` from storage with uid `2`
+        Folder :file:`/my/folder/` from storage with uid `2`
 
     `23:/other/folder/`
-        folder :file:`/other/folder/` from storage with uid `23`
+        Folder :file:`/other/folder/` from storage with uid `23`
 
     `/folderInMyFileadmin/something/`:
-        folder :file:`/folderInMyFileadmin/something/` from the default storage
+        Folder :file:`/folderInMyFileadmin/something/` from the default storage
         `0` (:file:`fileadmin`)
 
-..  t3-data-processor-files:: folders.recursive
+
+..  _FilesProcessor-folders-recursive:
+
+..  confval:: folders.recursive
 
     :Required: false
-    :type: string, :ref:`stdWrap`
+    :Data type: :ref:`data-type-string` / :ref:`stdWrap`
     :default: ""
     :Example: "1"
 
@@ -120,10 +140,12 @@ Options:
     recursively.
 
 
-..  t3-data-processor-files:: sorting
+..  _FilesProcessor-sorting:
+
+..  confval:: sorting
 
     :Required: false
-    :type: string, :ref:`stdWrap`
+    :Data type: :ref:`data-type-string` / :ref:`stdWrap`
     :default: ""
     :Example: "filesize"
 
@@ -131,19 +153,24 @@ Options:
     For example, filesize or title.
 
 
-..  t3-data-processor-files:: sorting.direction
+..  _FilesProcessor-sorting-direction:
+
+..  confval:: sorting.direction
 
     :Required: false
-    :type: string, :ref:`stdWrap`
+    :Data type: :ref:`data-type-string` / :ref:`stdWrap`
     :default:  "ascending"
     :Example: "descending"
 
     The sorting direction (:typoscript:`ascending` or :typoscript:`descending`).
 
-..  t3-data-processor-files:: as
+
+..  _FilesProcessor-as:
+
+..  confval:: as
 
     :Required: false
-    :type: string, :ref:`stdWrap`
+    :Data type: :ref:`data-type-string` / :ref:`stdWrap`
     :default: "files"
 
     The variable name to be used in the Fluid template.
@@ -171,7 +198,7 @@ Using the :php:`FilesProcessor` the following scenario is possible:
 The Fluid template
 ------------------
 
-Then iterate over the files in the Fluid template:
+Then iterate over the files in the :ref:`Fluid <t3coreapi:fluid>` template:
 
 ..  include:: /CodeSnippets/DataProcessing/Template/DataProcFiles.rst.txt
 
@@ -195,7 +222,7 @@ The array :php:`images` contains the data of the files now:
 Example 2: use stdWrap property on references
 =============================================
 
-The following example implements a slide functionality on rootline
+The following example implements a slide functionality on root line
 for file resources:
 
 ..  code-block:: typoscript
@@ -209,7 +236,7 @@ for file resources:
         }
     }
 
-The :php:`FilesProcessor` can slide up the rootline to collect images for Fluid
+The :php:`FilesProcessor` can slide up the root line to collect images for Fluid
 templates. One usual feature is to take images attached to pages and use them on
 the page tree as header images in the frontend.
 
@@ -218,11 +245,11 @@ the page tree as header images in the frontend.
 Example 3: files from a FlexForm
 ================================
 
-If the files are stored in a FlexForm, the entry in the table
-:sql:`sys_file_reference` uses the name of the main table, for example
+If the files are stored in a :ref:`FlexForm <t3coreapi:FlexForms>`, the entry in
+the table :sql:`sys_file_reference` uses the name of the main table, for example
 :sql:`tt_content` and the FlexForm key as :sql:`fieldname`.
 
-Therefore you can do the following:
+Therefore, you can do the following:
 
 ..  literalinclude:: _FilesProcessorFlexForm.typoscript
     :language: typoscript
