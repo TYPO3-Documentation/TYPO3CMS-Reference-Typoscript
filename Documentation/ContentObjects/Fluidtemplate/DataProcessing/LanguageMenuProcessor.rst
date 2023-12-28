@@ -21,17 +21,22 @@ assigned to the :typoscript:`FLUIDTEMPLATE` as a variable.
 Options:
 ========
 
-..  t3-data-processor-lang:: if
+..  _LanguageMenuProcessor-if:
+
+..  confval:: if
 
     :Required: false
-    :type: :ref:`if` condition
+    :Data type: :ref:`if` condition
 
     Only if the condition is met the data processor is executed.
 
-..  t3-data-processor-lang:: languages
+
+..  _LanguageMenuProcessor-languages:
+
+..  confval:: languages
 
     :Required: true
-    :type: string, :ref:`stdWrap`
+    :Data type: :ref:`data-type-string` / :ref:`stdWrap`
     :default: "auto"
     :Example: "0,1,2"
 
@@ -40,20 +45,25 @@ Options:
     <t3coreapi:sitehandling>`.
 
 
-..  t3-data-processor-lang:: addQueryString.exclude
+..  _LanguageMenuProcessor-addQueryString-exclude:
+
+..  confval:: addQueryString.exclude
 
     :Required: true
-    :type: string, :ref:`stdWrap`
+    :Data type: :ref:`data-type-string` / :ref:`stdWrap`
     :default: ""
     :Example: "gclid,contrast"
 
     A list of comma-separated parameter names to be excluded from the language
     menu URLs.
 
-..  t3-data-processor-lang:: as
+
+..  _LanguageMenuProcessor-as:
+
+..  confval:: as
 
     :Required: false
-    :type: string
+    :Data type: :ref:`data-type-string`
     :default: defaults to the fieldName
 
     The variable name to be used in the Fluid template.
