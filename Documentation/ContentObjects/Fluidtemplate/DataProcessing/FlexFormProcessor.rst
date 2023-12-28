@@ -11,23 +11,29 @@ data within an XML structure inside a single database column. The data processor
 :php:`\TYPO3\CMS\Frontend\DataProcessing\FlexFormProcessor` converts the
 FlexForm data of a given field into a Fluid-readable array.
 
-Options
-========
 
-..  t3-data-processor-flex:: fieldname
+Options
+=======
+
+..  _FlexFormProcessor-fieldname:
+
+..  confval:: fieldname
 
     :Required: false
-    :type: string
+    :Data type: :ref:`data-type-string`
     :default: 'pi_flexform'
 
     Field name of the column the FlexForm data is stored in.
 
-..  t3-data-processor-flex:: references
+
+..  _FlexFormProcessor-references:
+
+..  confval:: references
 
     ..  versionadded:: 13.0
 
     :Required: false
-    :type: array
+    :Data type: array
 
     Associative array of FlexForm fields (key) and the according database field
     (value).
@@ -39,13 +45,17 @@ Options
 
     See :ref:`FlexFormProcessor-resolving-fal`.
 
-..  t3-data-processor-flex:: as
+
+..  _FlexFormProcessor-as:
+
+..  confval:: as
 
     :Required: false
-    :type: string
+    :Data type: :ref:`data-type-string`
     :default: 'flexFormData'
 
-    Name for the variable in the Fluid template..
+    Name for the variable in the Fluid template.
+
 
 Examples
 ========
