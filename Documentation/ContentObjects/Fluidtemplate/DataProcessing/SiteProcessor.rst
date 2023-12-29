@@ -12,10 +12,12 @@ The :php:`SiteProcessor` fetches data from the :ref:`site configuration
 Options
 =======
 
-..  t3-data-processor-site:: as
+..  _SiteProcessor-as:
+
+..  confval:: as
 
     :Required: false
-    :type: string
+    :Data type: :ref:`data-type-string`
     :default: "site"
 
     The variable name to be used in the Fluid template.
