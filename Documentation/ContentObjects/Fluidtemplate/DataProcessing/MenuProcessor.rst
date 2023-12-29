@@ -24,47 +24,60 @@ Additional data processing is supported and will be applied to each record.
 Options
 =======
 
-..  t3-data-processor-menu:: levels
+..  _MenuProcessor-levels:
+
+..  confval:: levels
 
     :Required: true
-    :type: int, :ref:`stdWrap`
+    :Data type: :ref:`data-type-integer` / :ref:`stdWrap`
     :default: 1
     :Example: 5
 
     Maximal number of levels to be included in the output array.
 
 
-..  t3-data-processor-menu:: expandAll
+..  _MenuProcessor-expandAll:
+
+..  confval:: expandAll
 
     :Required: true
-    :type: int, :ref:`stdWrap`
+    :Data type: :ref:`data-type-boolean` / :ref:`stdWrap`
     :default: 1
     :Example: 0
 
     Include all submenus (`1`) or only those of the active pages (`0`).
 
-..  t3-data-processor-menu:: includeSpacer
+
+..  _MenuProcessor-includeSpacer:
+
+..  confval:: includeSpacer
 
     :Required: true
-    :type: int, :ref:`stdWrap`
+    :Data type: :ref:`data-type-boolean` / :ref:`stdWrap`
     :default: 0
     :Example: 1
 
     Include pages with type "spacer".
 
-..  t3-data-processor-menu:: titleField
+
+..  _MenuProcessor-titleField:
+
+..  confval:: titleField
 
     :Required: true
-    :type: int, :ref:`stdWrap`
+    :Data type: :ref:`data-type-string` / :ref:`stdWrap`
     :default: "nav_title // title"
     :Example: "subtitle"
 
     Fields to be used as title.
 
-..  t3-data-processor-menu:: as
+
+..  _MenuProcessor-as:
+
+..  confval:: as
 
     :Required: false
-    :type: string
+    :Data type: :ref:`data-type-string`
     :default: "menu"
 
     Name for the variable in the Fluid template.
