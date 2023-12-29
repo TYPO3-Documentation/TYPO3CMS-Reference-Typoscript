@@ -13,66 +13,85 @@ Whitespaces are automatically trimmed.
 Options
 =======
 
-..  t3-data-processor-split:: if
+..  _splitProcessor-if:
+
+..  confval:: if
 
     :Required: false
-    :type: :ref:`if` condition
+    :Data type: :ref:`if` condition
     :default: ''
 
     Only if the condition is met the data processor is executed.
 
-..  t3-data-processor-split:: fieldName
+
+..  _splitProcessor-fieldName:
+
+..  confval:: fieldName
 
     :Required: true
-    :type: string, :ref:`stdWrap`
+    :Data type: :ref:`data-type-string` / :ref:`stdWrap`
     :default: ''
 
     Name of the field to be used.
 
-..  t3-data-processor-split:: as
+
+..  _splitProcessor-as:
+
+..  confval:: as
 
     :Required: false
-    :type: string
+    :Data type: :ref:`data-type-string`
     :default: defaults to the fieldName
 
     The variable name to be used in the Fluid template.
 
-..  t3-data-processor-split:: delimiter
+
+..  _splitProcessor-delimiter:
+
+..  confval:: delimiter
 
     :Required: false
-    :type: string(1), :ref:`stdWrap`
+    :Data type: :ref:`data-type-string` / :ref:`stdWrap`
     :default: Line Feed
     :Example: ","
 
     The field delimiter, a character separating the values.
 
-..  t3-data-processor-split:: filterIntegers
+
+..  _splitProcessor-filterIntegers:
+
+..  confval:: filterIntegers
 
     :Required: false
-    :type: bool, :ref:`stdWrap`
-    :default: false
-    :Example: true
+    :Data type: :ref:`data-type-boolean` / :ref:`stdWrap`
+    :default: 0
+    :Example: 1
 
-    If set to `true`, all values are being cast to int.
+    If set to `1`, all values are being cast to int.
 
 
-..  t3-data-processor-split:: filterUnique
+..  _splitProcessor-filterUnique:
 
-    :Required: false
-    :type: bool, :ref:`stdWrap`
-    :default: false
-    :Example: true
-
-    All duplicates will be removed.
-
-..  t3-data-processor-split:: removeEmptyEntries
+..  confval:: filterUnique
 
     :Required: false
-    :type: bool, :ref:`stdWrap`
-    :default: false
-    :Example: true
+    :Data type: :ref:`data-type-boolean` / :ref:`stdWrap`
+    :default: 0
+    :Example: 1
 
-    All empty values will be removed.
+    If set to `1`, all duplicates will be removed.
+
+
+..  _splitProcessor-removeEmptyEntries:
+
+..  confval:: removeEmptyEntries
+
+    :Required: false
+    :Data type: :ref:`data-type-boolean` / :ref:`stdWrap`
+    :default: 0
+    :Example: 1
+
+    If set to `1`, all empty values will be removed.
 
 
 Example: Splitting a URL
