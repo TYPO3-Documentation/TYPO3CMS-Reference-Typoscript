@@ -14,10 +14,12 @@ The :php:`SiteLanguageProcessor` fetches language-related data from the
 Options
 =======
 
-..  t3-data-processor-sitelang:: as
+..  _SiteLanguageProcessor-as:
+
+..  confval:: as
 
     :Required: false
-    :type: string
+    :Data type: :ref:`data-type-string`
     :default: "site"
 
     The variable name to be used in the Fluid template.
