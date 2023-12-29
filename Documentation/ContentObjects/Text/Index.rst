@@ -25,19 +25,24 @@ very rootlevel of the object.
 Properties
 ==========
 
+..  _cobj-text-value:
+
 value
 -----
 
-..  t3-cobj-text:: value
+..  confval:: value
 
-    :Data type: string /:ref:`stdWrap <stdwrap>`
+    :Data type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
 
     Text, which you want to output.
+
+
+..  _cobj-text-stdWrap:
 
 stdWrap
 -------
 
-..  t3-cobj-text:: stdWrap
+..  confval:: stdWrap
 
     :Data type: :ref:`stdWrap <stdwrap>`
 
@@ -46,14 +51,18 @@ stdWrap
     properties consistently to those of the other cObjects by
     accessing them through the property "stdWrap".
 
+
+..  _cobj-text-cache:
+
 cache
 -----
 
-..  t3-cobj-text:: cache
+..  confval:: cache
 
     :Data type: :ref:`cache <cache>`
 
     See :ref:`cache function description <cache>` for details.
+
 
 Examples
 ========
@@ -65,10 +74,10 @@ Examples
     10.value = This is a text in uppercase
     10.stdWrap.case = upper
 
-The above example uses the stdWrap property "case". It returns "THIS
-IS A TEXT IN UPPERCASE".
+The above example uses the stdWrap property :ref:`case <stdwrap-case>`. It
+returns "THIS IS A TEXT IN UPPERCASE".
 
-.. code-block:: typoscript
+..  code-block:: typoscript
     :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
     10 = TEXT
@@ -76,13 +85,13 @@ IS A TEXT IN UPPERCASE".
     10.stdWrap.wrap = <strong>|</strong>
 
 The above example gets the header of the current page (which is
-stored in the database field "title"). The header is then wrapped in
-<strong> tags, before it is returned.
+stored in the database field :sql:`title`). The header is then wrapped in
+:html:`<strong>` tags, before it is returned.
 
 
 Now let us have a look at an extract from a more complex example:
 
-.. code-block:: typoscript
+..  code-block:: typoscript
     :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
     10 = TEXT
@@ -91,8 +100,8 @@ Now let us have a look at an extract from a more complex example:
     10.stdWrap.dataWrap = <div>|</div>
 
 The above example returns the content, which was found in the field
-"bodytext" of the current record from $cObj->data-array. Here that
-shall be the current record from the database table tt_content. This
+:sql:`bodytext` of the current record from $cObj->data-array. Here that
+shall be the current record from the database table :sql:`tt_content`. This
 is useful inside :ref:`COA <cobj-coa>` objects.
 
 Here is the same example in its context:
@@ -121,14 +130,15 @@ Here is the same example in its context:
 Here we use the cObject :ref:`CONTENT <cobj-content>` to return all content elements
 (records from the database table "tt_content"), which are on the
 current page. (These content elements have the corresponding value in
-"irre_parentid".) They are rendered using a :ref:`COA <cobj-coa>` cObject, which only
-processes them, if there is content in the field "bodytext".
+:sql:`irre_parentid`.) They are rendered using a :ref:`COA <cobj-coa>` cObject, which only
+processes them, if there is content in the field :sql:`bodytext`.
 
 The resulting records are each rendered using a TEXT object:
 
-The TEXT object returns the content of the field "bodytext" of the
-according tt_content record. (Note that the property "field" in this
-context gets content from the table "**tt_content**" and not - as in
-the example above - from "**pages**". See the description for the
-data type "getText"/field!) The resulting content is then parsed with
-parseFunc and finally wrapped in <div> tags before it is returned.
+The TEXT object returns the content of the field :sql:`bodytext` of the
+according :sql:`tt_content` record. (Note that the property "field" in this
+context gets content from the table :sql:`tt_content` and not - as in
+the example above - from :sql:`pages`. See the description for the
+data type :ref:`getText/field <data-type-gettext-field>`!) The resulting content
+is then parsed with :ref:`parsefunc` and finally wrapped in :html:`<div>` tags
+before it is returned.
