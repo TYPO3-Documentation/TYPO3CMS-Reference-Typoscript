@@ -878,6 +878,9 @@ age
         lib.ageFormat.stdWrap.data = page:tstamp
         lib.ageFormat.stdWrap.age = " Minuten | Stunden | Tage | Jahre | Minute | Stunde | Tag | Jahr"
 
+
+..  _stdwrap-case:
+
 case
 ~~~~
 
