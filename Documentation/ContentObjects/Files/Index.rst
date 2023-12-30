@@ -8,7 +8,7 @@
 FILES
 =====
 
-A content object of type FILES uses the File Abstraction Layer
+A content object of type FILES uses the :ref:`File Abstraction Layer <t3coreapi:fal>`
 (FAL) and is used to display information about files.
 
 .. contents::
@@ -17,12 +17,14 @@ A content object of type FILES uses the File Abstraction Layer
 Properties
 ==========
 
+.. _cobj-files-files:
+
 files
 ------
 
-..  t3-cobj-files:: files
+..  confval:: files
 
-    :Data type: string /:ref:`stdWrap <stdwrap>`
+    :Data type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
 
     Comma-separated list of sys_file UIDs, which are loaded
     into the FILES object.
@@ -34,12 +36,15 @@ files
         page.10 = FILES
         page.10.files = 12,15,16
 
+
+.. _cobj-files-references:
+
 references
------------
+----------
 
-..  t3-cobj-files:: references
+..  confval:: references
 
-    :Data type: string /:ref:`stdWrap <stdwrap>` or array
+    :Data type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>` or array
 
     Provides a way to load files from a file field (of type
     IRRE with sys_file_reference as child table). You can either
@@ -79,22 +84,28 @@ references
 
     This will fetch all items related to the page.media field.
 
+
+.. _cobj-files-collections:
+
 collections
-------------
+-----------
 
-..  t3-cobj-files:: collections
+..  confval:: collections
 
-    :Data type: string /:ref:`stdWrap <stdwrap>`
+    :Data type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
 
     Comma-separated list of :sql:`sys_file_collection` UIDs, which
     are loaded into the :typoscript:`FILES` object.
 
+
+.. _cobj-files-folders:
+
 folders
---------
+-------
 
-..  t3-cobj-files:: folders
+..  confval:: folders
 
-    :Data type: string /:ref:`stdWrap <stdwrap>`
+    :Data type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
 
     Comma-separated list of combined folder identifiers which
     are loaded into the FILES object.
@@ -132,18 +143,24 @@ folders
            }
         }
 
+
+.. _cobj-files-sorting:
+
 sorting
---------
+-------
 
-..  t3-cobj-files:: sorting
+..  confval:: sorting
 
-    :Data type: string /:ref:`stdWrap <stdwrap>`
+    :Data type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
 
     Name of the field, which should be used to sort the files.
 
-..  t3-cobj-files:: sorting.direction
 
-    :Data type: string /:ref:`stdWrap <stdwrap>`
+.. _cobj-files-sorting-direction:
+
+..  confval:: sorting.direction
+
+    :Data type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
     :Default: asc
 
     The direction, in which the
@@ -151,32 +168,40 @@ sorting
     "desc" for descending.
 
 
+.. _cobj-files-begin:
+
 begin
-------
+-----
 
-..  t3-cobj-files:: begin
+..  confval:: begin
 
-    :Data type: integer /:ref:`stdWrap <stdwrap>`
+    :Data type: :ref:`data-type-integer` / :ref:`stdWrap <stdwrap>`
 
     The first item to return. If not set (default), items beginning
     with the first one are returned.
 
+
+.. _cobj-files-maxItems:
+
 maxItems
----------
+--------
 
-..  t3-cobj-files:: maxItems
+..  confval:: maxItems
 
-    :Data type: integer /:ref:`stdWrap <stdwrap>`
+    :Data type: :ref:`data-type-integer` / :ref:`stdWrap <stdwrap>`
 
     Maximum number of items to return. If not set (default), all items
-    are returned. If :t3-cobj-files:`begin` and t3-cobj-files`maxItems`
+    are returned. If :ref:`cobj-files-begin` and :ref:`cobj-files-maxItems`
     together exceed the number of available items, no items beyond the
     last available item will be returned.
 
-renderObj
-----------
 
-..  t3-cobj-files:: renderObj
+.. _cobj-files-renderObj:
+
+renderObj
+---------
+
+..  confval:: renderObj
 
     :Data type: :ref:`cObject <data-type-cobject>` :ref:`+optionSplit <optionsplit>`
 
@@ -198,44 +223,55 @@ renderObj
 
     This returns the size of the current file.
 
-stdWrap
---------
 
-..  t3-cobj-files:: stdWrap
+.. _cobj-files-stdWrap:
+
+stdWrap
+-------
+
+..  confval:: stdWrap
 
     :Data type: :ref:`->stdWrap <stdwrap>`
 
 
 .. index:: FILES; references
-.. _cobj-files-references:
+.. _cobj-files-references-sub:
 
 Special key: "references"
 =========================
 
+.. _cobj-files-references-table:
+
 references.table
 ----------------
 
-..  t3-cobj-files:: references.table
+..  confval:: references.table
 
-    :Data type: string /:ref:`stdWrap <stdwrap>`
+    :Data type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
 
     The table name of the table having the file field.
+
+
+.. _cobj-files-references-uid:
 
 references.uid
 --------------
 
-..  t3-cobj-files:: references.uid
+..  confval:: references.uid
 
-    :Data type: integer /:ref:`stdWrap <stdwrap>`
+    :Data type: :ref:`data-type-integer` / :ref:`stdWrap <stdwrap>`
 
     The UID of the record from which to fetch the referenced files.
+
+
+.. _cobj-files-references-fieldName:
 
 references.fieldName
 --------------------
 
-..  t3-cobj-files:: references.fieldName
+..  confval:: references.fieldName
 
-    :Data type: string /:ref:`stdWrap <stdwrap>`
+    :Data type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
 
     Field name of the file field in the table.
 
@@ -252,7 +288,7 @@ Usage with files
 
 In this example, we first load files using several of the methods
 explained above (using sys_file UIDs, collection UIDs, and folders).
-Then we use the :ref:`TEXT <cobj-text>` cObject as :t3-cobj-files:`renderObj`
+Then we use the :ref:`TEXT <cobj-text>` cObject as :ref:`cobj-files-renderObj`
 to output the file size of all files that were found:
 
 .. code-block:: typoscript
