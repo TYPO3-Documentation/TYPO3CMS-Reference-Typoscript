@@ -34,126 +34,150 @@ Properties
 select
 ------
 
-..  t3-cobj-content:: select
+..  confval:: select
 
     :Data type: :ref:`select`
 
     The SQL-statement, a :sql:`SELECT` query, is set here,
     including automatic visibility control.
 
+
 ..  _cobj-content-table:
 
 table
 -----
 
-..  t3-cobj-content:: table
+..  confval:: table
 
-    :Data type:  *table name* /:ref:`stdwrap`
+    :Data type:  *table name* / :ref:`stdwrap`
 
     The table, the content should come from. Any table can be used;
     a check for a table prefix is not done.
 
     In standard configuration this will be :sql:`tt_content`.
 
+
 .. _cobj-content-renderObj:
 
 renderObj
 ---------
 
-..  t3-cobj-content:: renderObj
+..  confval:: renderObj
 
     :Data type: :ref:`data-type-cObject`
     :Default: :typoscript:`< [table name]`
 
     The cObject used for rendering the records resulting from the query in
-    :t3-cobj-content:`select`.
+    :ref:`cobj-content-select`.
 
     If :typoscript:`renderObj` is not set explicitly, then
     :typoscript:`< [table name]` is used. So
-    in this case the configuration of the according :t3-cobj-content:`table`
+    in this case the configuration of the according :ref:`cobj-content-table`
     is being copied.
 
     See the notes on the example below.
+
 
 ..  _cobj-content-slide:
 
 slide
 -----
 
-..  t3-cobj-content:: slide
+..  confval:: slide
 
-    :Data type: integer /:ref:`stdWrap`
+    :Data type: :ref:`data-type-integer` / :ref:`stdWrap`
 
     If set and no content element is found by the select command, the
     rootLine will be traversed back until some content is found.
 
-    Possible values are :typoscript:`-1` (slide back up to the siteroot), :typoscript:`1` (only
-    the current level) and :typoscript:`2` (up from one level back).
+    Possible values are:
 
-    Use :typoscript:`-1` in combination with collect.
+    :typoscript:`-1`
+        Slide back up to the site root.
 
-..  t3-cobj-content:: slide.collect
+    :typoscript:`1`
+        Only the current level.
 
-    :Data type: integer /:ref:`stdWrap`
+    :typoscript:`2`
+        Up from one level back.
+
+    Use :typoscript:`-1` in combination with :ref:`collect <cobj-content-slide-collect>`.
+
+
+..  _cobj-content-slide-collect:
+
+..  confval:: slide.collect
+
+    :Data type: :ref:`data-type-integer` / :ref:`stdWrap`
 
     If set, all content elements found on the current and parent pages will be
     collected. Otherwise, the sliding would stop after the first hit. Set this
     value to the amount of levels to collect on, or use :typoscript:`-1`
     to collect up to the site root.
 
-..  t3-cobj-content:: slide.collectFuzzy
 
-    :Data type: boolean /:ref:`stdWrap`
+..  _cobj-content-slide-collectFuzzy:
 
-    Only useful in with :t3-cobj-content:`slide.collect`. If no content
+..  confval:: slide.collectFuzzy
+
+    :Data type: :ref:`data-type-boolean` / :ref:`stdWrap`
+
+    Only useful with :ref:`slide.collect <cobj-content-slide-collect>`. If no content
     elements have been found for the specified depth in collect mode, traverse
     further until at least one match has occurred.
 
-..  t3-cobj-content:: slide.collectReverse
 
-    :Data type: boolean /:ref:`stdWrap`
+..  _cobj-content-slide-collectReverse:
+
+..  confval:: slide.collectReverse
+
+    :Data type: :ref:`data-type-boolean` / :ref:`stdWrap`
 
     Reverse order of elements in collect mode. If set, elements of the current
     page will be at the bottom.
+
 
 ..  _cobj-content-wrap:
 
 wrap
 ----
 
-..  t3-cobj-content:: wrap
+..  confval:: wrap
 
-    :Data type: :ref:`wrap <data-type-wrap>` /:ref:`stdWrap`
+    :Data type: :ref:`wrap <data-type-wrap>` / :ref:`stdWrap`
 
     Wrap the whole content.
+
 
 ..  _cobj-content-stdWrap:
 
 stdWrap
 -------
 
-..  t3-cobj-content:: stdWrap
+..  confval:: stdWrap
 
-    :Data type: ::ref:`stdWrap`
+    :Data type: :ref:`stdWrap`
 
     Apply `stdWrap` functionality.
+
 
 ..  _cobj-content-cache:
 
 cache
 -----
 
-..  t3-cobj-content:: cache
+..  confval:: cache
 
     :Data type: :ref:`cache <cache>`
 
     See :ref:`cache function description <cache>` for details.
 
+
 Examples
 ========
 
 CONTENT explained in detail
-----------------------------
+---------------------------
 
 See PHP class :php:`\TYPO3\CMS\Frontend\ContentObject\ContentContentObject`
 for details on code level.
