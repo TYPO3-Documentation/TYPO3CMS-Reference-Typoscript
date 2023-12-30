@@ -8,30 +8,34 @@ EXTBASEPLUGIN
 
 ..  versionadded:: 12.3
 
-The content object :typoscript:`EXTBASEPLUGIN` allows to register Extbase
-plugins.
+The content object :typoscript:`EXTBASEPLUGIN` allows to register
+:ref:`Extbase <t3coreapi:extbase>` plugins.
 
 
-.. contents::
-   :local:
+..  contents::
+    :local:
 
 Properties
 ==========
 
+..  _cobj-extbaseplugin-extensionName:
+
 extensionName
 -------------
 
-..  t3-cobj-extbaseplugin:: extensionName
+..  confval:: extensionName
 
     :Data type: :ref:`data-type-string`
 
     The :ref:`extension name <t3coreapi:extension-naming-extensionName>`.
 
 
+..  _cobj-extbaseplugin-pluginName:
+
 pluginName
 ----------
 
-..  t3-cobj-extbaseplugin:: pluginName
+..  confval:: pluginName
 
     :Data type: :ref:`data-type-string`
 
