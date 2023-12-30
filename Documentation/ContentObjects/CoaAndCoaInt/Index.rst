@@ -37,48 +37,61 @@ Properties
 1,2,3,4...
 -----------
 
-..  t3-cobj-coa:: 1,2,3,4...
+..  confval:: 1,2,3,4...
 
     :Data type: :ref:`cObject <data-type-cobject>`
 
     Numbered properties to define the different cObjects, which should be
     rendered.
 
+
+..  _cobj-coa-cache:
+
 cache
 -----
 
-..  t3-cobj-coa:: cache
+..  confval:: cache
 
     :Data type: :ref:`cache <cache>`
 
     See :ref:`cache function description <cache>` for details.
 
+
+..  _cobj-coa-if:
+
 if
 --
 
-..  t3-cobj-coa:: if
+..  confval:: if
 
     :Data type: :ref:`->if <if>`
 
     If `if` returns false, the COA is **not** rendered.
 
+
+..  _cobj-coa-stdWrap:
+
 stdWrap
 -------
 
-..  t3-cobj-coa:: stdWrap
+..  confval:: stdWrap
 
     :Data type: :ref:`->stdWrap <stdwrap>`
 
     Executed on all rendered cObjects after property :t3-cobj-coa:`wrap`.
 
+
+..  _cobj-coa-wrap:
+
 wrap
------
+----
 
-..  t3-cobj-coa:: wrap
+..  confval:: wrap
 
-    :Data type: :ref:`wrap <data-type-wrap>` /:ref:`stdWrap <stdwrap>`
+    :Data type: :ref:`wrap <data-type-wrap>` / :ref:`stdWrap <stdwrap>`
 
      Wraps all rendered cObjects. Executed before property :t3-cobj-coa:`stdWrap`.
+
 
 .. _cobj-cobj-array-examples:
 .. _cobj-coa-examples:
@@ -107,7 +120,7 @@ Examples:
     }
 
 The previous example will print a simple :html:`<h1>` header, followed by the page
-content records and a :html:`footer` element.
+content records and a :html:`<footer>` element.
 
 ..  code-block:: typoscript
     :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
