@@ -17,7 +17,7 @@ templating engine.
    <https://docs.typo3.org/m/typo3/reference-typoscript/10.4/en-us/ContentObjects/Template/Index.html>`__
    which was removed with version 11.0.
 
-FLUIDTEMPLATE generates content using Fluid templates.
+FLUIDTEMPLATE generates content using :ref:`Fluid <t3coreapi:fluid>` templates.
 It can be used in :ref:`content elements <t3coreapi:adding-your-own-content-elements>`
 or to generate content within the top-level object page
 (see :ref:`the example on this page <cobj-fluidtemplate-examples>`).
@@ -70,14 +70,14 @@ Properties
 dataProcessing
 --------------
 
-..  t3-cobj-fluidtemplate:: dataProcessing
+..  confval:: dataProcessing
 
     :Data type: array of class references by full namespace
 
     Add one or multiple processors to manipulate the :php:`$data` variable of
-    the currently rendered content object, like tt_content or page. The sub-
-    property :typoscript:`options` can be used to pass parameters to the processor
-    class.
+    the currently rendered content object, like tt_content or page. The
+    sub-property :typoscript:`options` can be used to pass parameters to the
+    processor class.
 
     ..  note::
 
@@ -88,9 +88,9 @@ dataProcessing
 extbase.controllerActionName
 ----------------------------
 
-..  t3-cobj-fluidtemplate:: extbase.controllerActionName
+..  confval:: extbase.controllerActionName
 
-    :Data type: string /:ref:`stdWrap <stdwrap>`
+    :Data type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
 
     Sets the name of the action.
 
@@ -99,9 +99,9 @@ extbase.controllerActionName
 extbase.controllerExtensionName
 -------------------------------
 
-..  t3-cobj-fluidtemplate:: extbase.controllerExtensionName
+..  confval:: extbase.controllerExtensionName
 
-    :Data type: string /:ref:`stdWrap <stdwrap>`
+    :Data type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
 
     Sets the extension name of the controller.
 
@@ -118,9 +118,9 @@ extbase.controllerExtensionName
 extbase.controllerName
 ----------------------
 
-..  t3-cobj-fluidtemplate:: extbase.controllerName
+..  confval:: extbase.controllerName
 
-    :Data type: string /:ref:`stdWrap <stdwrap>`
+    :Data type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
 
     Sets the name of the controller.
 
@@ -129,9 +129,9 @@ extbase.controllerName
 extbase.pluginName
 ------------------
 
-..  t3-cobj-fluidtemplate:: extbase.pluginName
+..  confval:: extbase.pluginName
 
-    :Data type: string /:ref:`stdWrap <stdwrap>`
+    :Data type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
 
     Sets variables for initializing extbase.
 
@@ -140,9 +140,9 @@ extbase.pluginName
 file
 ----
 
-..  t3-cobj-fluidtemplate:: file
+..  confval:: file
 
-    :Data type: string /:ref:`stdWrap <stdwrap>`
+    :Data type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
 
     The fluid template file. It is an alternative to ".template" and is used
     only, if ".template" is not set.
@@ -165,9 +165,9 @@ file
 format
 ------
 
-..  t3-cobj-fluidtemplate:: format
+..  confval:: format
 
-    :Data type: keyword /:ref:`stdWrap <stdwrap>`
+    :Data type: keyword / :ref:`stdWrap <stdwrap>`
     :Default: html
 
     :typoscript:`format` sets the format of the current request. It can be something
@@ -179,12 +179,12 @@ format
 layoutRootPath
 --------------
 
-..  t3-cobj-fluidtemplate:: layoutRootPath
+..  confval:: layoutRootPath
 
-    :Data type: file path /:ref:`stdWrap <stdwrap>`
+    :Data type: :ref:`data-type-path` / :ref:`stdWrap <stdwrap>`
 
     Sets a specific layout path, usually
-    :file:`EXT:some_extension/Resources/Private/Layouts/` or a folder below that
+    :file:`EXT:my_extension/Resources/Private/Layouts/` or a folder below that
     path.
 
     ..  note::
@@ -198,12 +198,12 @@ layoutRootPath
 layoutRootPaths
 ---------------
 
-..  t3-cobj-fluidtemplate:: layoutRootPaths
+..  confval:: layoutRootPaths
 
-    :Data type: array of file paths with :ref:`stdWrap <stdwrap>`
+    :Data type: array of :ref:`data-type-path` with :ref:`stdWrap <stdwrap>`
 
     .. note:: Mind the plural -s in "layoutRootPaths"!
-    
+
     .. note::
         If you want to extend layoutRootPaths conditionally, best practice
         is to use :ref:`Conditions <conditions>` instead of the :ref:`"if" function <if>`.
@@ -239,12 +239,12 @@ layoutRootPaths
 partialRootPath
 ---------------
 
-..  t3-cobj-fluidtemplate:: partialRootPath
+..  confval:: partialRootPath
 
-    :Data type: file path /:ref:`stdWrap <stdwrap>`
+    :Data type: :ref:`data-type-path` / :ref:`stdWrap <stdwrap>`
 
     Sets a specific partial path, usually
-    :file:`EXT:some_extension/Resources/Private/Partials/` or a folder below that
+    :file:`EXT:my_extension/Resources/Private/Partials/` or a folder below that
     path.
 
     ..  note::
@@ -258,12 +258,12 @@ partialRootPath
 partialRootPaths
 ----------------
 
-..  t3-cobj-fluidtemplate:: partialRootPaths
+..  confval:: partialRootPaths
 
-    :Data type: array of file paths with :ref:`stdWrap <stdwrap>`
+    :Data type: array of :ref:`data-type-path` with :ref:`stdWrap <stdwrap>`
 
     .. note:: Mind the plural -s in "partialRootPaths"!
-    
+
     .. note::
         If you want to extend partialRootPaths conditionally, best practice
         is to use :ref:`Conditions <conditions>` instead of the :ref:`"if" function <if>`.
@@ -280,7 +280,7 @@ partialRootPaths
 settings
 --------
 
-..  t3-cobj-fluidtemplate:: settings
+..  confval:: settings
 
     :Data type: array of keys
 
@@ -317,7 +317,7 @@ settings
 stdWrap
 -------
 
-..  t3-cobj-fluidtemplate:: stdWrap
+..  confval:: stdWrap
 
     :Data type: :ref:`->stdWrap <stdwrap>`
 
@@ -328,9 +328,9 @@ stdWrap
 template
 --------
 
-..  t3-cobj-fluidtemplate:: template
+..  confval:: template
 
-    :Data type:  :ref:`cObject <data-type-cobject>`
+    :Data type: :ref:`cObject <data-type-cobject>`
 
     Use this property to define a content object, which should be used as
     template file. It is an alternative to ".file"; if ".template" is set, it
@@ -349,9 +349,9 @@ template
 templateName
 ------------
 
-..  t3-cobj-fluidtemplate:: templateName
+..  confval:: templateName
 
-    :Data type: string /:ref:`stdWrap <stdwrap>`
+    :Data type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
 
     This name is used together with the set format to find the template in the
     given templateRootPaths. Use this property to define a content object, which
@@ -428,12 +428,12 @@ templateName
 templateRootPath
 ----------------
 
-..  t3-cobj-fluidtemplate:: templateRootPath
+..  confval:: templateRootPath
 
     :Data type: file path /:ref:`stdWrap <stdwrap>`
 
     Sets a specific template path, usually
-    :file:`EXT:some_extension/Resources/Private/Templates/` or a folder below that
+    :file:`EXT:my_extension/Resources/Private/Templates/` or a folder below that
     path.
 
     ..  note::
@@ -447,12 +447,12 @@ templateRootPath
 templateRootPaths
 -----------------
 
-..  t3-cobj-fluidtemplate:: templateRootPaths
+..  confval:: templateRootPaths
 
     :Data type: array of file paths with :ref:`stdWrap <stdwrap>`
 
     .. note:: Mind the plural -s in "templateRootPaths"!
-    
+
     .. note::
         If you want to extend templateRootPaths conditionally, best practice
         is to use :ref:`Conditions <conditions>` instead of the :ref:`"if" function <if>`.
@@ -486,7 +486,7 @@ templateRootPaths
 variables
 ---------
 
-..  t3-cobj-fluidtemplate:: variables
+..  confval:: variables
 
     :Data type: *(array of cObjects)*
 
