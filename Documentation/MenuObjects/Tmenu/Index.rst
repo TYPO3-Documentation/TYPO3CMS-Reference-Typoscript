@@ -420,7 +420,7 @@ minItems
     this level, a dummy-page with the title "..." and
     uid=[currentpage\_id] is inserted.
 
-    Takes precedence over HMENU property :t3-cobj-hmenu:`minItems`.
+    Takes precedence over HMENU property :ref:`hmenu-minitems`.
 
 maxItems
 --------
@@ -432,7 +432,7 @@ maxItems
 
     The maximum items in the menu. More items will be ignored.
 
-    Takes precedence over HMENU property :t3-cobj-hmenu:`maxItems`.
+    Takes precedence over HMENU property :ref:`hmenu-maxitems`.
 
 begin
 -----
@@ -454,7 +454,7 @@ begin
 
         begin = 3
 
-    Takes precedence over :HMENU property :t3-cobj-hmenu:`begin`.
+    Takes precedence over :HMENU property :ref:`hmenu-begin`.
 
 debugItemConf
 -------------
@@ -463,15 +463,15 @@ debugItemConf
 
     :Data type: boolean
 
-    Outputs (by the debug()-function) the configuration arrays for each
-    menu item. Useful to debug optionSplit things and such...
+    Outputs (by the :php:`debug()` function) the configuration arrays for each
+    menu item. Useful to debug :ref:`optionsplit` things and such...
 
 overrideId
 ----------
 
 ..  t3-menu-tmenu:: overrideId
 
-    :Data type: integer (page-id)
+    :Data type: integer (page id)
 
     If set, then all links in the menu will point to this pageid. Instead
     the real uid of the page is sent by the parameter "&real\_uid=[uid]".
