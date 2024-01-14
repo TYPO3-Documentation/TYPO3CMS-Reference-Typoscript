@@ -27,20 +27,19 @@ into account.
 .. contents::
    :local:
 
-.. _cobj-hmenu-options:
+..  _cobj-hmenu-options:
 
 Properties
 ===========
 
-.. _hmenu-number:
+..  _hmenu-number:
 
 1, 2, 3, ...
 -------------
 
-..  t3-cobj-hmenu:: 1, 2, 3, ...
+..  confval:: 1, 2, 3, ...
 
     :Data type: :ref:`menu object <data-type-menuobj>`
-
     :Default: (no menu)
 
     For every menu level, that should be rendered, an according entry must
@@ -77,14 +76,15 @@ Properties
 
     TYPO3 offers :ref:`a variety of menu objects <menu-objects>`.
 
-.. _hmenu-cache-period:
+
+..  _hmenu-cache-period:
 
 cache_period
--------------
+------------
 
-..  t3-cobj-hmenu:: cache_period
+..  confval:: cache_period
 
-    :Data type: integer
+    :Data type: :ref:`data-type-integer`
 
     The number of seconds a menu may remain in cache. If this value is not
     set, the first available value of the following will be used:
@@ -95,26 +95,27 @@ cache_period
 
     3) 86400 (= 1 day)
 
-.. _hmenu-cache:
+
+..  _hmenu-cache:
 
 cache
-------
+-----
 
-..  t3-cobj-hmenu:: cache
+..  confval:: cache
 
     :Data type: :ref:`cache <cache>`
 
     See :ref:`cache function description <cache>` for details.
 
-.. _hmenu-entrylevel:
+
+..  _hmenu-entrylevel:
 
 entryLevel
------------
+----------
 
-..  t3-cobj-hmenu:: entryLevel
+..  confval:: entryLevel
 
-    :Data type: integer /:ref:`stdWrap <stdwrap>`
-
+    :Data type: :ref:`data-type-integer` / :ref:`stdWrap <stdwrap>`
     :Default: 0
 
     Defines at which level in the rootLine the menu should start.
@@ -171,12 +172,12 @@ entryLevel
           }
         }
 
-.. _hmenu-special:
+..  _hmenu-special:
 
 special
---------
+-------
 
-..  t3-cobj-hmenu:: special
+..  confval:: special
 
     :Data type: *"directory" / "list" / "updated" / "rootline" / "browse" / "keywords"
          / "categories" / "language" / "userfunction"*
@@ -185,27 +186,29 @@ special
 
     See the section about the :ref:`.special property <hmenu-special-property>`!
 
-.. _hmenu-special-value:
+
+..  _hmenu-special-value:
 
 special.value
-~~~~~~~~~~~~~~
+~~~~~~~~~~~~~
 
-..  t3-cobj-hmenu:: special.value
+..  confval:: special.value
 
-    :Data type: *list of page-uid's* /:ref:`stdWrap <stdwrap>`
+    :Data type: *list of page-uid's* / :ref:`stdWrap <stdwrap>`
 
     List of page uid's to use for the special menu. What they are used
     for depends on the menu type as defined by ".special"; see the
     section about the :ref:`.special property <hmenu-special-property>`!
 
-.. _hmenu-minitems:
+
+..  _hmenu-minitems:
 
 minItems
----------
+--------
 
-..  t3-cobj-hmenu:: minItems
+..  confval:: minItems
 
-    :Data type: integer /:ref:`stdWrap <stdwrap>`
+    :Data type: :ref:`data-type-integer` / :ref:`stdWrap <stdwrap>`
 
     The minimum number of items in the menu. If the number of pages does
     not reach this level, a dummy-page with the title "..." and
@@ -215,14 +218,15 @@ minItems
     menu level individually, set the properties in the menu objects (see
     "Common properties" table).
 
-.. _hmenu-maxitems:
+
+..  _hmenu-maxitems:
 
 maxItems
----------
+--------
 
-..  t3-cobj-hmenu:: maxItems
+..  confval:: maxItems
 
-    :Data type: integer /:ref:`stdWrap <stdwrap>`
+    :Data type: :ref:`data-type-integer` / :ref:`stdWrap <stdwrap>`
 
     The maximum number of items in the menu. Additional items will be
     ignored.
@@ -230,14 +234,15 @@ maxItems
     **Note:** Affects all sub menus as well. (See "minItems" for a
     notice.)
 
-.. _hmenu-begin:
+
+..  _hmenu-begin:
 
 begin
-------
+-----
 
-..  t3-cobj-hmenu:: begin
+..  confval:: begin
 
-    :Data type: integer /:ref:`stdWrap <stdwrap>` :ref:`+calc <objects-calc>`
+    :Data type: :ref:`data-type-integer` / :ref:`stdWrap <stdwrap>` :ref:`+calc <objects-calc>`
 
     The first item in the menu.
 
@@ -254,16 +259,17 @@ begin
     **Note:** Affects all sub menus as well. (See "minItems" for a
     notice.)
 
-.. _hmenu-excludeuidlist:
+
+..  _hmenu-excludeuidlist:
 
 excludeUidList
----------------
+--------------
 
-..  t3-cobj-hmenu:: excludeUidList
+..  confval:: excludeUidList
 
-    :Data type: list of integers /:ref:`stdWrap <stdwrap>`
+    :Data type: list of :ref:`data-type-integer` / :ref:`stdWrap <stdwrap>`
 
-    This is a list of page uid's to exclude when the select statement is
+    This is a list of page uids to exclude when the select statement is
     done. Comma-separated. You may add "current" to the list to exclude
     the current page.
 
@@ -277,15 +283,15 @@ excludeUidList
 
         excludeUidList = 34,2,current
 
-.. _hmenu-excludedoktypes:
+
+..  _hmenu-excludedoktypes:
 
 excludeDoktypes
 ---------------
 
-..  t3-cobj-hmenu:: excludeDoktypes
+..  confval:: excludeDoktypes
 
-    :Data type: list of integers
-
+    :Data type: list of :ref:`data-type-integer`
     :Default: 6,254
 
     Enter the list of page document types (doktype) to exclude from menus.
@@ -297,9 +303,9 @@ excludeDoktypes
 includeNotInMenu
 -----------------
 
-..  t3-cobj-hmenu:: includeNotInMenu
+..  confval:: includeNotInMenu
 
-    :Data type: boolean /:ref:`stdWrap <stdwrap>`
+    :Data type: :ref:`data-type-boolean` / :ref:`stdWrap <stdwrap>`
 
     If set, pages with the checkbox "Page enabled in menus" disabled will still be included
     in menus.
@@ -309,22 +315,23 @@ includeNotInMenu
 alwaysActivePIDlist
 --------------------
 
-..  t3-cobj-hmenu:: alwaysActivePIDlist
+..  confval:: alwaysActivePIDlist
 
-    :Data type: list of integers /:ref:`stdWrap <stdwrap>`
+    :Data type: list of :ref:`data-type-integer` /:ref:`stdWrap <stdwrap>`
 
     This is a list of page UID numbers that will always be regarded as
     active menu items and thereby automatically opened regardless of the
     rootline.
 
-.. _hmenu-protectlvar:
+
+..  _hmenu-protectlvar:
 
 protectLvar
-------------
+-----------
 
-..  t3-cobj-hmenu:: protectLvar
+..  confval:: protectLvar
 
-    :Data type: boolean / keyword
+    :Data type: :ref:`data-type-boolean` / keyword
 
     If set, then for each page in the menu it will be checked if an
     Alternative Page Language record for the language defined in
@@ -349,56 +356,61 @@ protectLvar
     For these options to make sense, they should only be used when
     "config.sys\_language\_mode" is not set to "content\_fallback".
 
-.. _hmenu-addquerystring:
+
+..  _hmenu-addquerystring:
 
 addQueryString
----------------
+--------------
 
-..  t3-cobj-hmenu:: addQueryString
+..  confval:: addQueryString
 
-    :Data type: string
+    :Data type: :ref:`data-type-string`
 
     *see typolink.addQueryString*
 
     **Note:** This works only for *special=language*.
 
-.. _hmenu-if:
+
+..  _hmenu-if:
 
 if
 --
 
-..  t3-cobj-hmenu:: if
+..  confval:: if
 
     :Data type: :ref:`->if <if>`
 
     If "if" returns false, the menu is not generated.
 
-.. _hmenu-wrap:
+
+..  _hmenu-wrap:
 
 wrap
 ----
 
-..  t3-cobj-hmenu:: wrap
+..  confval:: wrap
 
-    :Data type: :ref:`wrap <data-type-wrap>` /:ref:`stdWrap <stdwrap>`
+    :Data type: :ref:`wrap <data-type-wrap>` / :ref:`stdWrap <stdwrap>`
 
     Wrap for the HMENU.
 
-.. _hmenu-stdwrap:
+
+..  _hmenu-stdwrap:
 
 stdWrap
---------
+-------
 
-..  t3-cobj-hmenu:: stdWrap
+..  confval:: stdWrap
 
     :Data type: :ref:`->stdWrap <stdwrap>`
 
     (Executed after ".wrap".)
 
-.. _hmenu-examples:
 
-Example:
-========
+..  _hmenu-examples:
+
+Example
+=======
 
 ..  code-block:: typoscript
     :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
@@ -418,6 +430,7 @@ Example:
       ACT.linkWrap = <b>{$fontTag}</b>
     }
 
+
 ..  index:: HMENU; special
 ..  _hmenu-special-property:
 
@@ -433,7 +446,6 @@ links to pages like :ref:`next/previous <hmenu-special-browse>`,
 :ref:`all subpages of a page <hmenu-special-directory>` and so on.
 
 ..  note::
-
     :typoscript:`.entryLevel` generally is not supported together with the
     :typoscript:`.special` property! The only exception is :typoscript:`special = keywords`.
 
