@@ -636,8 +636,8 @@ debugItemConf
          boolean
 
    Description
-         Outputs (by the debug()-function) the configuration arrays for each
-         menu item. Useful to debug optionSplit things and such...
+         Outputs (by the :php:`debug()` function) the configuration arrays for each
+         menu item. Useful to debug :ref:`optionsplit` things and such...
 
 overrideId
 ----------
