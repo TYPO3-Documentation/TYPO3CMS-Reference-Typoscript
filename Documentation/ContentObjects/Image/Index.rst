@@ -41,51 +41,66 @@ Properties
 ==========
 
 
+..  _cobj-image-if:
+
 if
 --
 
-..  t3-cobj-image:: if
+..  confval:: if
 
     :Data type: :ref:`->if <if>`
 
     If "if" returns false, the image is not shown!
 
+
+..  _cobj-image-file:
+
 file
 ----
 
-..  t3-cobj-image:: file
+..  confval:: file
 
     :Data type: :ref:`->imgResource <imgresource>`
+
+
+..  _cobj-image-params:
 
 params
 ------
 
-..  t3-cobj-image:: params
+..  confval:: params
 
-    :Data type: string / :ref:`stdWrap <stdwrap>`
+    :Data type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
 
     HTML <IMG> parameters
 
+
+..  _cobj-image-altText:
+..  _cobj-image-titleText:
+
 altText / titleText
---------------------
+-------------------
 
-..  t3-cobj-image:: altText
+..  confval:: altText
 
-    :Data type: string / :ref:`stdWrap <stdwrap>`
+    :Data type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
 
     If no alt text is specified, an empty alt text will be used.
 
 
-..  t3-cobj-image:: titleText
+..  confval:: titleText
 
-    :Data type: string / :ref:`stdWrap <stdwrap>`
+    :Data type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
+
+
+..  _cobj-image-emptyTitleHandling:
 
 emptyTitleHandling
 ------------------
 
-..  t3-cobj-image:: emptyTitleHandling
+..  confval:: emptyTitleHandling
 
-    :Data type: string / :ref:`stdWrap <stdwrap>`
+    :Data type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
     :Default: useAlt
 
     Value can be "keepEmpty" to preserve an empty title attribute, or
@@ -97,7 +112,7 @@ emptyTitleHandling
 layoutKey
 ---------
 
-..  t3-cobj-image:: layoutKey
+..  confval:: layoutKey
 
     :Data type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
     :Default: default
@@ -154,7 +169,7 @@ layoutKey
 layout
 ------
 
-..  t3-cobj-image:: layout
+..  confval:: layout
 
     :Data type: array
 
@@ -167,7 +182,7 @@ layout
 layout.layoutKey
 ~~~~~~~~~~~~~~~~
 
-..  t3-cobj-image:: layout.layoutKey
+..  confval:: layout.layoutKey
 
     :Data type: array
 
@@ -187,13 +202,13 @@ layout.layoutKey
         }
 
 
-.. index:: IMAGE; layout.layoutKey.element
-.. _cobj-image-layout-layoutkey-element:
+..  index:: IMAGE; layout.layoutKey.element
+..  _cobj-image-layout-layoutkey-element:
 
 layout.layoutKey.element
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-..  t3-cobj-image:: layout.layoutKey.element
+..  confval:: layout.layoutKey.element
 
     :Data type: :ref:`data-type-string`
 
@@ -226,13 +241,13 @@ layout.layoutKey.element
        :ref:`layout.layoutKey.source <cobj-image-layout-layoutkey-source>`
 
 
-.. index:: IMAGE; layout.layoutKey.source
-.. _cobj-image-layout-layoutkey-source:
+..  index:: IMAGE; layout.layoutKey.source
+..  _cobj-image-layout-layoutkey-source:
 
 layout.layoutKey.source
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-..  t3-cobj-image:: layout.layoutKey.source
+..  confval:: layout.layoutKey.source
 
     :Data type: :ref:`stdWrap <stdWrap>`
 
@@ -260,13 +275,13 @@ layout.layoutKey.source
     overwritten by your typoscript.
 
 
-.. index:: IMAGE; sourceCollection
-.. _cobj-image-sourcecollection:
+..  index:: IMAGE; sourceCollection
+..  _cobj-image-sourcecollection:
 
 sourceCollection
 ----------------
 
-..  t3-cobj-image:: sourceCollection
+..  confval:: sourceCollection
 
     :Data type: array
 
@@ -309,13 +324,13 @@ sourceCollection
         }
 
 
-.. index:: IMAGE; sourceCollection.dataKey
-.. _cobj-image-datakey:
+..  index:: IMAGE; sourceCollection.dataKey
+..  _cobj-image-datakey:
 
 sourceCollection.dataKey
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-..  t3-cobj-image:: sourceCollection.dataKey
+..  confval:: sourceCollection.dataKey
 
     :Data type: :ref:`stdWrap <stdWrap>`
 
@@ -323,13 +338,13 @@ sourceCollection.dataKey
     layout, breakpoints and display density.
 
 
-.. index:: IMAGE; sourceCollection.dataKey.if
-.. _cobj-image-datakey-if:
+..  index:: IMAGE; sourceCollection.dataKey.if
+..  _cobj-image-datakey-if:
 
 sourceCollection.dataKey.if
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-..  t3-cobj-image:: sourceCollection.dataKey.if
+..  confval:: sourceCollection.dataKey.if
 
     :Data type: :ref:`if <if>`
 
@@ -337,15 +352,15 @@ sourceCollection.dataKey.if
     execution of code.
 
 
-.. index:: IMAGE; sourceCollection.dataKey.pixelDensity
-.. _cobj-image-datakey-pixeldensity:
+..  index:: IMAGE; sourceCollection.dataKey.pixelDensity
+..  _cobj-image-datakey-pixeldensity:
 
 sourceCollection.dataKey.pixelDensity
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-..  t3-cobj-image:: sourceCollection.dataKey.pixelDensity
+..  confval:: sourceCollection.dataKey.pixelDensity
 
-    :Data type: integer / :ref:`stdWrap <stdWrap>`
+    :Data type: :ref:`data-type-integer` / :ref:`stdWrap <stdWrap>`
     :Default: 1
 
     Defines the density of the rendered Image, e.g. a retina display would
@@ -355,13 +370,13 @@ sourceCollection.dataKey.pixelDensity
     treated inside the html code as 200 pixels.
 
 
-.. index:: IMAGE; sourceCollection.dataKey.width
-.. _cobj-image-datakey-width:
+..  index:: IMAGE; sourceCollection.dataKey.width
+..  _cobj-image-datakey-width:
 
 sourceCollection.dataKey.width
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-..  t3-cobj-image:: sourceCollection.dataKey.width
+..  confval:: sourceCollection.dataKey.width
 
     :Data type: :ref:`stdWrap <stdWrap>`
 
@@ -370,13 +385,13 @@ sourceCollection.dataKey.width
          :ref:`dataKey.pixelDensity <cobj-image-datakey-pixeldensity>`.
 
 
-.. index:: IMAGE; sourceCollection.dataKey.height
-.. _cobj-image-datakey-height:
+..  index:: IMAGE; sourceCollection.dataKey.height
+..  _cobj-image-datakey-height:
 
 sourceCollection.dataKey.height
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-..  t3-cobj-image:: sourceCollection.dataKey.height
+..  confval:: sourceCollection.dataKey.height
 
     :Data type: :ref:`stdWrap <stdWrap>`
 
@@ -385,13 +400,13 @@ sourceCollection.dataKey.height
     :ref:`dataKey.pixelDensity <cobj-image-datakey-pixeldensity>`.
 
 
-.. index:: IMAGE; sourceCollection.dataKey.maxW
-.. _cobj-image-datakey-maxW:
+..  index:: IMAGE; sourceCollection.dataKey.maxW
+..  _cobj-image-datakey-maxW:
 
 sourceCollection.dataKey.maxW
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-..  t3-cobj-image:: sourceCollection.dataKey.maxW
+..  confval:: sourceCollection.dataKey.maxW
 
     :Data type: :ref:`stdWrap <stdWrap>`
 
@@ -400,13 +415,13 @@ sourceCollection.dataKey.maxW
     :ref:`dataKey.pixelDensity <cobj-image-datakey-pixeldensity>`.
 
 
-.. index:: IMAGE; sourceCollection.dataKey.maxH
-.. _cobj-image-datakey-maxH:
+..  index:: IMAGE; sourceCollection.dataKey.maxH
+..  _cobj-image-datakey-maxH:
 
 sourceCollection.dataKey.maxH
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-..  t3-cobj-image:: sourceCollection.dataKey.maxH
+..  confval:: sourceCollection.dataKey.maxH
 
     :Data type: :ref:`stdWrap <stdWrap>`
 
@@ -415,13 +430,13 @@ sourceCollection.dataKey.maxH
     :ref:`dataKey.pixelDensity <cobj-image-datakey-pixeldensity>`.
 
 
-.. index:: IMAGE; sourceCollection.dataKey.minW
-.. _cobj-image-datakey-minW:
+..  index:: IMAGE; sourceCollection.dataKey.minW
+..  _cobj-image-datakey-minW:
 
 sourceCollection.dataKey.minW
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-..  t3-cobj-image:: sourceCollection.dataKey.minW
+..  confval:: sourceCollection.dataKey.minW
 
     :Data type: :ref:`stdWrap <stdWrap>`
 
@@ -430,13 +445,13 @@ sourceCollection.dataKey.minW
     :ref:`dataKey.pixelDensity <cobj-image-datakey-pixeldensity>`.
 
 
-.. index:: IMAGE; sourceCollection.dataKey.minH
-.. _cobj-image-datakey-minH:
+..  index:: IMAGE; sourceCollection.dataKey.minH
+..  _cobj-image-datakey-minH:
 
 sourceCollection.dataKey.minH
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-..  t3-cobj-image:: sourceCollection.dataKey.minH
+..  confval:: sourceCollection.dataKey.minH
 
     :Data type: :ref:`stdWrap <stdWrap>`
 
@@ -445,66 +460,78 @@ sourceCollection.dataKey.minH
     :ref:`dataKey.pixelDensity <cobj-image-datakey-pixeldensity>`.
 
 
-.. index:: IMAGE; sourceCollection.dataKey.quality
-.. _cobj-image-datakey-quality:
+..  index:: IMAGE; sourceCollection.dataKey.quality
+..  _cobj-image-datakey-quality:
 
 sourceCollection.dataKey.quality
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-..  t3-cobj-image:: sourceCollection.dataKey.quality
+..  confval:: sourceCollection.dataKey.quality
 
-    :Data type: integer
+    :Data type: :ref:`data-type-integer`
 
     Defines the quality of the rendered images on a scale from 1-100.
 
 
-.. index:: IMAGE; sourceCollection.dataKey.*
-.. _cobj-image-datakey-others:
+..  index:: IMAGE; sourceCollection.dataKey.*
+..  _cobj-image-datakey-others:
 
 sourceCollection.dataKey.*
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-..  t3-cobj-image:: sourceCollection.dataKey.*
+..  confval:: sourceCollection.dataKey.*
 
-    :Data type: string
+    :Data type: :ref:`data-type-string`
 
     You can define additional key value pairs which won't be used for
     setting the image size, but will be available as additional markers for
     the image template. See the example mediaquery.
 
+
+..  _cobj-image-linkWrap:
+
 linkWrap
 --------
 
-..  t3-cobj-image:: linkWrap
+..  confval:: linkWrap
 
     :Data type: :ref:`data-type-wrap` / :ref:`stdWrap <stdwrap>`
 
     (before ".wrap")
 
+
+..  _cobj-image-imageLinkWrap:
+
 imageLinkWrap
 -------------
 
-..  t3-cobj-image:: imageLinkWrap
+..  confval:: imageLinkWrap
 
-    :Data type: boolean/ :ref:`->imageLinkWrap <imagelinkwrap>`
+    :Data type: :ref:`data-type-boolean` / :ref:`->imageLinkWrap <imagelinkwrap>`
 
     **Note:** Only active if linkWrap is **not** set and file is
     **not** :ref:`GIFBUILDER <gifbuilder>` (as it works with the original
     image file).
 
+
+..  _cobj-image-wrap:
+
 wrap
 ----
 
-..  t3-cobj-image:: wrap
+..  confval:: wrap
 
     :Data type: :ref:`wrap <data-type-wrap>` / :ref:`stdWrap <stdwrap>`
 
     Wrap for the image tag.
 
+
+..  _cobj-image-stdWrap:
+
 stdWrap
 -------
 
-..  t3-cobj-image:: stdWrap
+..  confval:: stdWrap
 
     :Data type: :ref:`->stdWrap <stdwrap>`
 
@@ -514,10 +541,10 @@ stdWrap
 [tsref:(cObject).IMAGE]
 
 
-.. _cobj-image-examples:
+..  _cobj-image-examples:
 
-Examples:
-=========
+Examples
+========
 
 
 ..  index:: IMAGE; Standard rendering example
@@ -548,8 +575,8 @@ This returns:
          alt=""><br>
 
 
-.. index:: IMAGE; Responsive rendering example
-.. _cobj-image-examples-responsive:
+..  index:: IMAGE; Responsive rendering example
+..  _cobj-image-examples-responsive:
 
 Responsive/adaptive rendering
 -----------------------------
