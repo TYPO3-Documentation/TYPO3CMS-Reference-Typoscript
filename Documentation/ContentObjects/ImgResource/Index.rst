@@ -1,14 +1,14 @@
-.. include:: /Includes.rst.txt
-.. index:: Content objects; IMAGE_RESOURCE
-.. _cobj-img-resource:
+..  include:: /Includes.rst.txt
+..  index:: Content objects; IMAGE_RESOURCE
+..  _cobj-img-resource:
 
 =============
 IMG\_RESOURCE
 =============
 
 Objects of type IMG_RESOURCE returns a reference to an image, possibly
-wrapped with :t3-cobj-img-resource:`stdWrap`. Can
-for example be used for putting background images in tables or
+wrapped with :ref:`cobj-img-resource-stdWrap`. It can be used, for example,
+for putting background images in tables or
 table rows or to import an image in your own include scripts.
 
 The array :php:`$GLOBALS['TSFE']->lastImgResourceInfo` is set to the info
@@ -19,22 +19,27 @@ does for the cObject IMAGE).
 Depending on your use case you might prefer using the cObject
 :ref:`IMAGE <cobj-image>`, which creates a complete :html:`img` tag.
 
-.. contents::
-   :local:
+..  contents::
+    :local:
 
 Properties
 ==========
 
+..  _cobj-img-resource-file:
+
 file
 ----
 
-..  t3-cobj-img-resource:: file
+..  confval:: file
 
-    :Data type: imgResource
+    :Data type: :ref:`->imgResource <imgresource>`
+
+
+..  _cobj-img-resource-stdWrap:
 
 stdWrap
 -------
 
-..  t3-cobj-img-resource:: stdWrap
+..  confval:: stdWrap
 
     :Data type: :ref:`->stdWrap <stdwrap>`
