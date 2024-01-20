@@ -36,7 +36,6 @@ example `config` or `plugin`.
    :ref:`tt_* <tlo-tt>`
    :ref:`resources <tlo-resources>`      readonly
    :ref:`sitetitle <tlo-sitetitle>`      readonly
-   :ref:`types <tlo-types>`              readonly
    ===================================== =========================
 
 
