@@ -237,7 +237,7 @@ bodyTag
       .. code-block:: typoscript
          :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-         # This will lead to <body class="example">
+         # This will lead to <body class="example"> if constant "bodyClass" is set accordingly.
          page.bodyTag = <body class="{$bodyClass}">
 
 
