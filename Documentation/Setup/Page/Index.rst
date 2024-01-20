@@ -81,11 +81,6 @@ should also be set, for example:
 Multiple pages
 ==============
 
-The **type** is used to define how the page should be rendered. This
-is primarily used with different representations of the same content.
-Your default page will most likely have type 0 while a JSON stream with the same
-content could go with type 1.
-
 When rendering pages in the frontend, TYPO3 uses the GET parameter **"type"**
 to define how the page should be rendered. This
 is primarily used with different representations of the same content.
