@@ -856,7 +856,7 @@ enableContentLengthHeader
    Description
          If set, a header "content-length: [bytes of content]" is sent.
 
-         If a Backend user is logged in, this is disabled. The reason is
+         If a backend user is logged in, this is disabled. The reason is
          that the content length header cannot include the length of these
          objects and the content-length will cut off the length of the
          document in some browsers.
