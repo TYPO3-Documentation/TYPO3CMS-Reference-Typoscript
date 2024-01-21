@@ -270,8 +270,7 @@ persistence.enableAutomaticCacheClearing
 
    Description
       **Only for Extbase plugins**.
-      Enables the automatic cache clearing when changing data sets (see also
-      :ref:`t3coreapi:extbase_caching_of_actions_and_records`).
+      Enables the automatic cache clearing when changing data sets.
 
 
    Example

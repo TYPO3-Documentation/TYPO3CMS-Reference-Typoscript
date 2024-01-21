@@ -1568,7 +1568,7 @@ noTrimWrap
    Can be set to define an alternative special character. :typoscript:`stdWrap` is
    available. Default is "\|" - the vertical line. This sub-property is
    useful in cases when the default special character would be recognized
-   by :ref:`objects-optionsplit` (which takes precedence over :typoscript:`noTrimWrap`).
+   by :ref:`optionsplit` (which takes precedence over :typoscript:`noTrimWrap`).
 
 :aspect:`Example`
    .. code-block:: typoscript
@@ -1588,7 +1588,7 @@ noTrimWrap
          noTrimWrap.splitChar = ^
       }
 
-   :ref:`objects-optionsplit` will use the "\|\|" to have two subparts in
+   :ref:`optionsplit` will use the "\|\|" to have two subparts in
    the first part. In each subpart :typoscript:`noTrimWrap` will then use the "^" as
    special character.
 

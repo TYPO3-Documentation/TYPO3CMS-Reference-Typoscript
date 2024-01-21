@@ -410,6 +410,8 @@ Basically this shows that
    pages and thereby have no children.
 
 
+.. _tmenu-target:
+
 target
 ------
 
