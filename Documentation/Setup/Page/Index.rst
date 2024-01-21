@@ -200,7 +200,7 @@ Properties
       order of the numbers, not in the order they get defined in the TypoScript
       definition.
 
-      It is considered best practise to leave space between the numbers such
+      It is considered best practice to leave space between the numbers such
       that it will be possible to place objects before and after other objects
       in the future. Therefore you will often see that people use the number
       10 and no number 1 is found.
