@@ -90,6 +90,9 @@ no\_cache
 
     Adds `&no_cache=1` to the link
 
+
+..  _typolink-additionalParams:
+
 additionalParams
 ----------------
 
