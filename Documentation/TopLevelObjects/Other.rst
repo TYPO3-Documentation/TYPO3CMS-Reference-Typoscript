@@ -88,27 +88,4 @@ sitetitle
          SiteTitle (internal)
 
 
-
-.. index:: Top-level objects; types
-.. _top-level-objects-types:
-.. _tlo-types:
-
-=====
-types
-=====
-
-.. container:: table-row
-
-   Property
-         types
-
-   Data type
-         readonly
-
-   Description
-         Types (internal)
-
-         :typoscript:`type=99` reserved for plaintext display
-
-
 .. ###### END~OF~TABLE ######
