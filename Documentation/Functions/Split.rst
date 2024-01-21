@@ -115,7 +115,7 @@ cObjNum
    cObjNum
 
 :aspect:`Data type`
-   *cObjNum* + :ref:`objects-optionsplit` / :ref:`stdwrap`
+   *cObjNum* + :ref:`optionsplit` / :ref:`stdwrap`
 
 :aspect:`Description`
    This is a pointer the array of this object ("1,2,3,4"), that should
@@ -164,7 +164,7 @@ wrap
    wrap
 
 :aspect:`Data type`
-   wrap + :ref:`objects-optionsplit` / :ref:`stdwrap`
+   wrap + :ref:`optionsplit` / :ref:`stdwrap`
 
 :aspect:`Description`
    Defines a wrap for each item.
