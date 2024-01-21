@@ -59,7 +59,7 @@ absRefPrefix
    :Data type: :ref:`data-type-string`
    :Special value: "auto"
 
-   If set the string is prepended to all relative links that TYPO3 generates.
+   If set, the string is prepended to all relative links that TYPO3 generates.
 
    `config.absRefPrefix = auto` lets TYPO3 autodetect
    the site root based on path prefixes and not based on host name variables
@@ -654,7 +654,7 @@ debug
          :ref:`data-type-boolean`
 
    Description
-         If set then debug information in the TypoScript code is sent.
+         If set, then debug information in the TypoScript code is sent.
          This applies e.g. to menu objects and the parsetime output.
          The parsetime will be sent as HTTP response header `X-TYPO3-Parsetime`.
 
@@ -678,7 +678,7 @@ disableAllHeaderCode
          false
 
    Description
-         If this is not set or set to false the :ref:`page` object automatically
+         If this is not set or set to false, the :ref:`page` object automatically
          outputs a HTML skeleton, see :ref:`page_output`.
 
          To disable this default behaviour set :typoscript:`disableAllHeaderCode = 1`.
@@ -729,7 +729,7 @@ disableBodyTag
          0 (false)
 
    Description
-         If this option is set the TYPO3 core will not generate the
+         If this option is set, the TYPO3 core will not generate the
          opening :html:`<body ...>` part of the body tag. The closing :html:`</body>`
          is not affected and will still be issued.
 
@@ -756,10 +756,9 @@ disableCanonical
 
    Description
          When the system extension SEO is installed, canonical tags are generated
-         automatically to prevent duplicate content. The right canonical should be
-         rendered in almost all cases. If you have an edge case though, you might
-         want to disable the rendering of this tag. You can do this by setting this
-         property to true.
+         automatically to prevent duplicate content. A good canonical is added
+         in many cases by default. For edge cases, you might want to disable the
+         rendering of this tag. You can do this by setting this property to true.
 
 
 .. index:: config; disableHrefLang
@@ -911,7 +910,7 @@ enableContentLengthHeader
    Description
          If set, a header "content-length: [bytes of content]" is sent.
 
-         If the Backend user is logged in, this is disabled. The reason is
+         If a backend user is logged in, this is disabled. The reason is
          that the content length header cannot include the length of these
          objects and the content-length will cut off the length of the
          document in some browsers.
@@ -1367,7 +1366,7 @@ message\_preview
 
    Description
          Alternative message in HTML that appears when the preview function is
-         active!
+         active.
 
 
 
