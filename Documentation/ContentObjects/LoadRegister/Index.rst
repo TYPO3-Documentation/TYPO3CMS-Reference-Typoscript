@@ -30,13 +30,14 @@ Properties
 (array of field names)
 ----------------------
 
-..  t3-cobj-load-register:: array of field names
+..  confval:: array of field names
 
-    :Data type: string /:ref:`stdWrap <stdwrap>`
+    :Data type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
 
     **Example:**
 
-    This sets "contentWidth", "label" and "head".
+    This sets :typoscript:`contentWidth`, :typoscript:`label` and
+    :typoscript:`head`.
 
     ..  code-block:: typoscript
         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
