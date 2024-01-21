@@ -123,7 +123,7 @@ userFunc
          \_CSS\_PAGE\_STYLE
 
    Data type
-         :t3-data-type:`string`
+         :ref:`data-type-string`
 
    Description
          `_CSS_PAGE_STYLE` is included only on the affected pages. Depending
@@ -224,7 +224,7 @@ features.skipDefaultArguments
          features.skipDefaultArguments
 
    Data type
-         :t3-data-type:`boolean`
+         :ref:`data-type-boolean`
 
    Default
          false
@@ -256,7 +256,7 @@ features.ignoreAllEnableFieldsInBe
         features.ignoreAllEnableFieldsInBe
 
     Data type
-        :t3-data-type:`boolean`
+        :ref:`data-type-boolean`
 
     Default
         false

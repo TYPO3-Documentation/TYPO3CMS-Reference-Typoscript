@@ -124,7 +124,7 @@ constants
 
 .. t3-function-parsefunc:: constants
 
-    :Data type: :t3-data-type:`boolean`
+    :Data type: :ref:`data-type-boolean`
 
     You can define constants in the :ref:`top-level object "constants"
     <constants>` in the *Setup* field of your TypoScript template.
