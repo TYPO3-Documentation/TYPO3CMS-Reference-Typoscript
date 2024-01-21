@@ -1,11 +1,11 @@
-.. include:: /Includes.rst.txt
-.. index::
-   config
-   Top-level objects; config
-.. _config:
-.. _config-object-type:
-.. _config-datatype:
-.. _top-level-objects-config:
+..  include:: /Includes.rst.txt
+..  index::
+    config
+    Top-level objects; config
+..  _config:
+..  _config-object-type:
+..  _config-datatype:
+..  _top-level-objects-config:
 
 ===============
 CONFIG & config
@@ -27,161 +27,161 @@ files by writing :php:`$GLOBALS['TSFE']->config['config']`.
 This typoscript "top level object" `config` provides access to the internal
 array. This means, that configuration settings can be made easily. For example:
 
-.. code-block::
+..  code-block::
 
-   # TypoScript
-   config.debug = 1
+    # TypoScript
+    config.debug = 1
 
-   # will produce, in php
-   $GLOBALS['TSFE']->config['config']['debug'] // with value 1
+    # will produce, in php
+    $GLOBALS['TSFE']->config['config']['debug'] // with value 1
 
 
 Properties of 'config'
 ======================
 
-.. contents::
-   :backlinks: top
-   :class: compact-list
-   :local:
+..  contents::
+    :backlinks: top
+    :class: compact-list
+    :local:
 
 
 
-.. ### BEGIN~OF~TABLE ###
+..  ### BEGIN~OF~TABLE ###
 
 
-.. _setup-config-absrefprefix:
+..  _setup-config-absrefprefix:
 
 absRefPrefix
 ------------
 
-.. t3-tlo-config:: absRefPrefix
+..  t3-tlo-config:: absRefPrefix
 
-   :Data type: :ref:`data-type-string`
-   :Special value: "auto"
+    :Data type: :ref:`data-type-string`
+    :Special value: "auto"
 
-   If set, the string is prepended to all relative links that TYPO3 generates.
+    If set, the string is prepended to all relative links that TYPO3 generates.
 
-   `config.absRefPrefix = auto` lets TYPO3 autodetect
-   the site root based on path prefixes and not based on host name variables
-   from the server, making this value safe for multi-domain environments.
+    :typoscript:`config.absRefPrefix = auto` lets TYPO3 autodetect
+    the site root based on path prefixes and not based on host name variables
+    from the server, making this value safe for multi-domain environments.
 
-   If the option :ref:`config.forceAbsoluteUrls <setup-config-forceAbsoluteUrls>`
-   is enabled, :typoscript:`absRefPrefix` is overridden.
+    If the option :ref:`config.forceAbsoluteUrls <setup-config-forceAbsoluteUrls>`
+    is enabled, :typoscript:`absRefPrefix` is overridden.
 
-   Using an URI in :typoscript:`absRefPrefix` will require additional conditions
-   if you use different domains for your deployment stages in CI environments.
+    Using an URI in :typoscript:`absRefPrefix` will require additional conditions
+    if you use different domains for your deployment stages in CI environments.
 
-   If you're working on a server where you have different domain
-   names or different path segments leading to the same page (e.g. for internal
-   and external access), you may do yourself a favor and set `absRefPrefix` to
-   the URL and path of your site, e.g. :samp:`https://example.org/`. If you do not,
-   you risk to render pages to cache from the internal network and thereby
-   prefix image-references and links with a wrong path or a path not accessible
-   from outside.
+    If you are working on a server where you have different domain names or
+    different path segments leading to the same page (e.g. for internal and
+    external access), you may do yourself a favor and set :typoscript:`absRefPrefix` to
+    the URL and path of your site, e.g. :samp:`https://example.org/`. If you do not,
+    you risk to render pages to cache from the internal network and thereby
+    prefix image references and links with a wrong path or a path not accessible
+    from outside.
 
-   .. rubric:: Examples
+    ..  rubric:: Examples
 
-   1. Prefixing all links with a "/" results in absolute link paths:
+    #.  Prefixing all links with a "/" results in absolute link paths:
 
-      .. code-block:: typoscript
-         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        ..  code-block:: typoscript
+            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-         config.absRefPrefix = /
+            config.absRefPrefix = /
 
-   2. Prefixing all links with the path to a subdirectory:
+    #.  Prefixing all links with the path to a subdirectory:
 
-      .. code-block:: typoscript
-         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        ..  code-block:: typoscript
+            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-         config.absRefPrefix = /some-subsite/
+            config.absRefPrefix = /some-subsite/
 
-   3. Prefixing all links with a URI scheme:
+    #.  Prefixing all links with a URI scheme:
 
-      .. code-block:: typoscript
-         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        ..  code-block:: typoscript
+            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-         config.absRefPrefix = https://example.org/
+            config.absRefPrefix = https://example.org/
 
 
-.. _setup-config-additionalheaders:
+..  _setup-config-additionalheaders:
 
 additionalHeaders
 -----------------
 
-.. t3-tlo-config:: additionalHeaders
+..  t3-tlo-config:: additionalHeaders
 
-   :Data type: numerically indexed array of "HTTP header entries".
+    :Data type: numerically indexed array of "HTTP header entries".
 
-   By means of `config.additionalHeaders` as series of additional HTTP headers
-   can be configured. An entry has the following structure:
+    By means of :typoscript:`config.additionalHeaders` as series of additional HTTP headers
+    can be configured. An entry has the following structure:
 
-   `10.header = the header string`
-      This value is required.
+    :typoscript:`10.header = the header string`
+        This value is required.
 
-   `10.replace = 0 | 1`
-      Optional, boolean, default is `1`.
-      If true, the header will replace an existing one that has the same name.
+    :typoscript:`10.replace = 0 | 1`
+        Optional, boolean, default is `1`.
+        If true, the header will replace an existing one that has the same name.
 
-   `10.httpResponseCode = 201`
-      Optional, integer, a http status code that the page should return.
+    :typoscript:`10.httpResponseCode = 201`
+        Optional, integer, a http status code that the page should return.
 
-   By default TYPO3 sends a "Content-Type" header with the defined
-   encoding. It then sends cache headers, if configured via
-   :ref:`setup-config-sendcacheheaders`.
-   Then additional headers are send, plus finally a "Content-Length"
-   header, if enabled via :ref:`setup-config-enablecontentlengthheader`.
+    By default TYPO3 sends a "Content-Type" header with the defined
+    encoding. It then sends cache headers, if configured via
+    :ref:`setup-config-sendcacheheaders`.
+    Then additional headers are send, plus finally a "Content-Length"
+    header, if enabled via :ref:`setup-config-enablecontentlengthheader`.
 
-   .. rubric:: Examples
+    ..  rubric:: Examples
 
-   1. General usage
+    #.  General usage
 
-      .. code-block:: typoscript
-         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        ..  code-block:: typoscript
+            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-         config.additionalHeaders {
-             10 {
-                 # The header string
-                 header = foo
+            config.additionalHeaders {
+              10 {
+                # The header string
+                header = foo
 
-                 # Do not replace previous headers with the same name.
-                 replace = 0
+                # Do not replace previous headers with the same name.
+                replace = 0
 
-                 # Force a 401 HTTP response code
-                 httpResponseCode = 401
-             }
-             # Always set cache headers to private, overwriting the default TYPO3 Cache-control header
-             20.header = Cache-control: Private
-         }
-
-   2. General usage, same usage, alternate notation
-
-      .. code-block:: typoscript
-         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-         config.additionalHeaders.10.header = foo
-         config.additionalHeaders.10.replace = 0
-         config.additionalHeaders.10.httpResponseCode = 401
-         config.additionalHeaders.20.header = Cache-control: Private
-
-
-   3. Set content type for a page returning json
-
-      .. code-block:: typoscript
-         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-         json = PAGE
-         json {
-            typeNum = 1617455215
-            10 =< tt_content.list.20.tx_myextension_myjsonplugin
-            config {
-               disableAllHeaderCode = 1
-               additionalHeaders.10.header = Content-type:application/json
+                # Force a 401 HTTP response code
+                httpResponseCode = 401
+              }
+              # Always set cache headers to private, overwriting the default TYPO3 Cache-control header
+              20.header = Cache-control: Private
             }
-         }
+
+    #.  General usage, same usage, alternate notation
+
+        .. code-block:: typoscript
+            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+            config.additionalHeaders.10.header = foo
+            config.additionalHeaders.10.replace = 0
+            config.additionalHeaders.10.httpResponseCode = 401
+            config.additionalHeaders.20.header = Cache-control: Private
 
 
-.. index:: config; admPanel
-.. _setup-config-admpanel:
+    #.  Set content type for a page returning JSON
+
+        ..  code-block:: typoscript
+            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+            json = PAGE
+            json {
+              typeNum = 1617455215
+              10 =< tt_content.list.20.tx_myextension_myjsonplugin
+              config {
+                disableAllHeaderCode = 1
+                additionalHeaders.10.header = Content-type:application/json
+              }
+            }
+
+
+..  index:: config; admPanel
+..  _setup-config-admpanel:
 
 admPanel
 --------
@@ -190,8 +190,9 @@ admPanel
 be used to enable the admin panel. See :ref:`Configuration in
 the Admin Panel manual <ext_adminpanel:typoscript-config-admpanel>`.
 
-.. index:: config; ATagParams
-.. _setup-config-atagparams:
+
+..  index:: config; ATagParams
+..  _setup-config-atagparams:
 
 ATagParams
 ----------
@@ -209,13 +210,13 @@ ATagParams
 
 
 
-.. index:: config; baseURL
-.. _setup-config-baseurl:
+..  index:: config; baseURL
+..  _setup-config-baseurl:
 
 baseURL
 -------
 
-.. deprecated:: 12.1
+..  deprecated:: 12.1
 
 .. container:: table-row
 
@@ -262,8 +263,8 @@ baseURL
             page.headTag.append.value = <base href="https://static.example.com/">
 
 
-.. index:: config; cache
-.. _setup-config-cache:
+..  index:: config; cache
+..  _setup-config-cache:
 
 cache
 -----
@@ -337,8 +338,8 @@ cache
             config.cache.all = fe_users:current
 
 
-.. index:: config; cache_clearAtMidnight
-.. _setup-config-cache-clearatmidnight:
+..  index:: config; cache_clearAtMidnight
+..  _setup-config-cache-clearatmidnight:
 
 cache\_clearAtMidnight
 ----------------------
@@ -361,8 +362,8 @@ cache\_clearAtMidnight
 
 
 
-.. index:: config; cache_period
-.. _setup-config-cache-period:
+..  index:: config; cache_period
+..  _setup-config-cache-period:
 
 cache\_period
 -------------
@@ -387,8 +388,8 @@ cache\_period
 
 
 
-.. index:: config; compressCss
-.. _setup-config-compresscss:
+..  index:: config; compressCss
+..  _setup-config-compresscss:
 
 compressCss
 -----------
@@ -433,8 +434,8 @@ compressCss
             config.compressCss = 1
 
 
-.. index:: config; compressJs
-.. _setup-config-compressjs:
+..  index:: config; compressJs
+..  _setup-config-compressjs:
 
 compressJs
 ----------
@@ -482,8 +483,8 @@ compressJs
             config.compressJs = 1
 
 
-.. index:: config; concatenateCss
-.. _setup-config-concatenatecss:
+..  index:: config; concatenateCss
+..  _setup-config-concatenatecss:
 
 concatenateCss
 --------------
@@ -525,8 +526,8 @@ concatenateCss
 
 
 
-.. index:: config; concatenateJs
-.. _setup-config-concatenatejs:
+..  index:: config; concatenateJs
+..  _setup-config-concatenatejs:
 
 concatenateJs
 -------------
@@ -577,8 +578,8 @@ concatenateJs
 
 
 
-.. index:: config; contentObjectExceptionHandler
-.. _setup-config-contentObjectExceptionHandler:
+..  index:: config; contentObjectExceptionHandler
+..  _setup-config-contentObjectExceptionHandler:
 
 contentObjectExceptionHandler
 -----------------------------
@@ -639,8 +640,8 @@ contentObjectExceptionHandler
             tt_content.login.20.exceptionHandler.ignoreCodes.10 = 1414512813
 
 
-.. index:: config; debug
-.. _setup-config-debug:
+..  index:: config; debug
+..  _setup-config-debug:
 
 debug
 -----
@@ -660,8 +661,8 @@ debug
 
 
 
-.. index:: config; disableAllHeaderCode
-.. _setup-config-disableallheadercode:
+..  index:: config; disableAllHeaderCode
+..  _setup-config-disableallheadercode:
 
 disableAllHeaderCode
 --------------------
@@ -711,8 +712,8 @@ disableAllHeaderCode
 
 
 
-.. index:: config; disableBodyTag
-.. _setup-config-disablebodytag:
+..  index:: config; disableBodyTag
+..  _setup-config-disablebodytag:
 
 disableBodyTag
 --------------
@@ -740,8 +741,8 @@ disableBodyTag
 
 
 
-.. index:: config; disableCanonical
-.. _setup-config-disableCanonical:
+..  index:: config; disableCanonical
+..  _setup-config-disableCanonical:
 
 disableCanonical
 ----------------
@@ -761,8 +762,8 @@ disableCanonical
          rendering of this tag. You can do this by setting this property to true.
 
 
-.. index:: config; disableHrefLang
-.. _setup-config-disableHrefLang:
+..  index:: config; disableHrefLang
+..  _setup-config-disableHrefLang:
 
 disableHrefLang
 ---------------
@@ -780,8 +781,8 @@ disableHrefLang
          automatically in multi-language setups. By settings this option to true
          the rendering of those tags will be skipped.
 
-.. index:: config; disablePrefixComment
-.. _setup-config-disableprefixcomment:
+..  index:: config; disablePrefixComment
+..  _setup-config-disableprefixcomment:
 
 disablePrefixComment
 --------------------
@@ -801,8 +802,8 @@ disablePrefixComment
 
 
 
-.. index:: config; disablePreviewNotification
-.. _setup-config-disablepreviewnotification:
+..  index:: config; disablePreviewNotification
+..  _setup-config-disablepreviewnotification:
 
 disablePreviewNotification
 --------------------------
@@ -822,8 +823,8 @@ disablePreviewNotification
          Disables the "preview" notification box completely.
 
 
-.. index:: config; disableLanguageHeader
-.. _disableLanguageHeader:
+..  index:: config; disableLanguageHeader
+..  _disableLanguageHeader:
 
 disableLanguageHeader
 ---------------------
@@ -848,8 +849,8 @@ disableLanguageHeader
          If :typoscript:`config.disableLanguageHeader` is set, this header will not be sent.
 
 
-.. index:: config; doctype
-.. _setup-config-doctype:
+..  index:: config; doctype
+..  _setup-config-doctype:
 
 doctype
 -------
@@ -890,8 +891,8 @@ doctype
 
             <!DOCTYPE html>
 
-.. index:: config; enableContentLengthHeader
-.. _setup-config-enablecontentlengthheader:
+..  index:: config; enableContentLengthHeader
+..  _setup-config-enablecontentlengthheader:
 
 enableContentLengthHeader
 -------------------------
@@ -916,8 +917,8 @@ enableContentLengthHeader
          document in some browsers.
 
 
-.. index:: config; extTarget
-.. _setup-config-exttarget:
+..  index:: config; extTarget
+..  _setup-config-exttarget:
 
 extTarget
 ---------
@@ -938,8 +939,8 @@ extTarget
 
 
 
-.. index:: config; fileTarget
-.. _setup-config-filetarget:
+..  index:: config; fileTarget
+..  _setup-config-filetarget:
 
 fileTarget
 ----------
@@ -957,13 +958,13 @@ fileTarget
 
 
 
-.. index:: config; forceAbsoluteUrls
-.. _setup-config-forceAbsoluteUrls:
+..  index:: config; forceAbsoluteUrls
+..  _setup-config-forceAbsoluteUrls:
 
 forceAbsoluteUrls
 -----------------
 
-.. versionadded:: 12.1
+..  versionadded:: 12.1
 
 .. container:: table-row
 
@@ -991,8 +992,8 @@ forceAbsoluteUrls
     :t3-function-typolink:`forceAbsoluteUrl` options.
 
 
-.. index:: config; forceTypeValue
-.. _setup-config-forcetypevalue:
+..  index:: config; forceTypeValue
+..  _setup-config-forcetypevalue:
 
 forceTypeValue
 --------------
@@ -1015,8 +1016,8 @@ forceTypeValue
 
 
 
-.. index:: config; headerComment
-.. _setup-config-headercomment:
+..  index:: config; headerComment
+..  _setup-config-headercomment:
 
 headerComment
 -------------
@@ -1036,8 +1037,8 @@ headerComment
 
 
 
-.. index:: config; htmlTag.attributes
-.. _setup-config-htmltag-attributes:
+..  index:: config; htmlTag.attributes
+..  _setup-config-htmltag-attributes:
 
 htmlTag.attributes
 ------------------
@@ -1084,17 +1085,17 @@ htmlTag.attributes
             <html lang="fr" amp>
 
 
-.. warning::
+..  warning::
     If you are using :typoscript:`htmlTag.attributes` the property :ref:`setup-config-htmltag-setparams` will not have any effect.
 
-.. note::
+..  note::
     Please note that the `lang` attribute in these examples are auto-generated by
     :ref:`site handling<t3coreapi:sitehandling>`, depending on the value added there.
 
 
-.. index:: config; htmlTag_setParams
-.. _setup-config-htmltag-dir:
-.. _setup-config-htmltag-setparams:
+..  index:: config; htmlTag_setParams
+..  _setup-config-htmltag-dir:
+..  _setup-config-htmltag-setparams:
 
 htmlTag\_setParams
 ------------------
@@ -1130,8 +1131,8 @@ htmlTag\_setParams
     `htmlTag_setParams` for language related configuration in TypoScript.
 
 
-.. index:: config; htmlTag_stdWrap
-.. _setup-config-htmltag-stdwrap:
+..  index:: config; htmlTag_stdWrap
+..  _setup-config-htmltag-stdwrap:
 
 htmlTag\_stdWrap
 ----------------
@@ -1150,8 +1151,8 @@ htmlTag\_stdWrap
 
 
 
-.. index:: config; index_descrLgd
-.. _setup-config-index-descrlgd:
+..  index:: config; index_descrLgd
+..  _setup-config-index-descrlgd:
 
 index\_descrLgd
 ---------------
@@ -1173,8 +1174,8 @@ index\_descrLgd
 
 
 
-.. index:: config; index_enable
-.. _setup-config-index-enable:
+..  index:: config; index_enable
+..  _setup-config-index-enable:
 
 index\_enable
 -------------
@@ -1194,8 +1195,8 @@ index\_enable
 
 
 
-.. index:: config; index_externals
-.. _setup-config-index-externals:
+..  index:: config; index_externals
+..  _setup-config-index-externals:
 
 index\_externals
 ----------------
@@ -1215,8 +1216,8 @@ index\_externals
 
 
 
-.. index:: config; index_metatags
-.. _setup-config-index-metatags:
+..  index:: config; index_metatags
+..  _setup-config-index-metatags:
 
 index\_metatags
 ---------------
@@ -1238,8 +1239,8 @@ index\_metatags
 
 
 
-.. index:: config; inlineStyle2TempFile
-.. _setup-config-inlinestyle2tempfile:
+..  index:: config; inlineStyle2TempFile
+..  _setup-config-inlinestyle2tempfile:
 
 inlineStyle2TempFile
 --------------------
@@ -1270,8 +1271,8 @@ inlineStyle2TempFile
 
 
 
-.. index:: config; intTarget
-.. _setup-config-inttarget:
+..  index:: config; intTarget
+..  _setup-config-inttarget:
 
 intTarget
 ---------
@@ -1288,8 +1289,8 @@ intTarget
          Default internal target. Used by typolink if no target is set
 
 
-.. index:: config; linkVars
-.. _setup-config-linkvars:
+..  index:: config; linkVars
+..  _setup-config-linkvars:
 
 linkVars
 --------
@@ -1350,8 +1351,8 @@ linkVars
          `tracking[blue]` will not be kept.
 
 
-.. index:: config; message_preview
-.. _setup-config-message-preview:
+..  index:: config; message_preview
+..  _setup-config-message-preview:
 
 message\_preview
 ----------------
@@ -1370,8 +1371,8 @@ message\_preview
 
 
 
-.. index:: config; message_preview_workspace
-.. _setup-config-message-preview-workspace:
+..  index:: config; message_preview_workspace
+..  _setup-config-message-preview-workspace:
 
 message\_preview\_workspace
 ---------------------------
@@ -1397,14 +1398,14 @@ message\_preview\_workspace
             config.message_preview_workspace = <div class="previewbox">Displaying workspace number %2$s named "%1$s"!</div>
 
 
-.. _setup-config-metacharset:
+..  _setup-config-metacharset:
 
 metaCharset
 -----------
 
-.. versionchanged:: 12.0
-   The TYPO3 Frontend always rendered in UTF-8, therefore setting
-   :typoscript:`config.metaCharset` has no effect anymore.
+..  versionchanged:: 12.0
+    The TYPO3 frontend is always rendered in UTF-8, therefore setting
+    :typoscript:`config.metaCharset` has no effect anymore.
 
 **Migration:**
 
@@ -1413,8 +1414,8 @@ own content in a custom middleware, as this specific use-case is not supported
 by TYPO3 Core anymore.
 
 
-.. index:: config; moveJsFromHeaderToFooter
-.. _setup-config-movejsfromheadertofooter:
+..  index:: config; moveJsFromHeaderToFooter
+..  _setup-config-movejsfromheadertofooter:
 
 moveJsFromHeaderToFooter
 ------------------------
@@ -1434,8 +1435,8 @@ moveJsFromHeaderToFooter
 
 
 
-.. index:: config; MP_defaults
-.. _setup-config-mp-defaults:
+..  index:: config; MP_defaults
+..  _setup-config-mp-defaults:
 
 MP\_defaults
 ------------
@@ -1467,8 +1468,8 @@ MP\_defaults
 
 
 
-.. index:: config; MP_disableTypolinkClosestMPvalue
-.. _setup-config-mp-disabletypolinkclosestmpvalue:
+..  index:: config; MP_disableTypolinkClosestMPvalue
+..  _setup-config-mp-disabletypolinkclosestmpvalue:
 
 MP\_disableTypolinkClosestMPvalue
 ---------------------------------
@@ -1487,8 +1488,8 @@ MP\_disableTypolinkClosestMPvalue
 
 
 
-.. index:: config; MP_mapRootPoints
-.. _setup-config-mp-maprootpoints:
+..  index:: config; MP_mapRootPoints
+..  _setup-config-mp-maprootpoints:
 
 MP\_mapRootPoints
 -----------------
@@ -1521,8 +1522,8 @@ MP\_mapRootPoints
 
 
 
-.. index:: config; namespaces
-.. _setup-config-namespaces:
+..  index:: config; namespaces
+..  _setup-config-namespaces:
 
 namespaces
 ----------
@@ -1557,8 +1558,8 @@ namespaces
 
 
 
-.. index:: config; no_cache
-.. _setup-config-no-cache:
+..  index:: config; no_cache
+..  _setup-config-no-cache:
 
 no\_cache
 ---------
@@ -1586,8 +1587,8 @@ no\_cache
 
 
 
-.. index:: config; noPageTitle
-.. _setup-config-nopagetitle:
+..  index:: config; noPageTitle
+..  _setup-config-nopagetitle:
 
 noPageTitle
 -----------
@@ -1613,8 +1614,8 @@ noPageTitle
          manually already.
 
 
-.. index:: config; pageRendererTemplateFile
-.. _setup-config-pagerenderertemplatefile:
+..  index:: config; pageRendererTemplateFile
+..  _setup-config-pagerenderertemplatefile:
 
 pageRendererTemplateFile
 ------------------------
@@ -1641,8 +1642,8 @@ pageRendererTemplateFile
             pageRendererTemplateFile = fileadmin/test_pagerender.html
 
 
-.. index:: config; pageTitle
-.. _setup-config-pagetitle:
+..  index:: config; pageTitle
+..  _setup-config-pagetitle:
 
 pageTitle
 ---------
@@ -1661,8 +1662,8 @@ pageTitle
 
 
 
-.. index:: config; pageTitleFirst
-.. _setup-config-pagetitlefirst:
+..  index:: config; pageTitleFirst
+..  _setup-config-pagetitlefirst:
 
 pageTitleFirst
 --------------
@@ -1688,8 +1689,8 @@ pageTitleFirst
 
 
 
-.. index:: config; pageTitleProviders
-.. _setup-config-pagetitleproviders:
+..  index:: config; pageTitleProviders
+..  _setup-config-pagetitleproviders:
 
 pageTitleProviders
 ------------------
@@ -1737,8 +1738,8 @@ pageTitleProviders
 
 
 
-.. index:: config; pageTitleSeparator
-.. _setup-config-pagetitleseparator:
+..  index:: config; pageTitleSeparator
+..  _setup-config-pagetitleseparator:
 
 pageTitleSeparator
 ------------------
@@ -1823,8 +1824,8 @@ recordLinks
         }
 
 
-.. index:: config; removeDefaultCss
-.. _setup-config-removedefaultcss:
+..  index:: config; removeDefaultCss
+..  _setup-config-removedefaultcss:
 
 removeDefaultCss
 ----------------
@@ -1845,8 +1846,8 @@ removeDefaultCss
 
 
 
-.. index:: config; removeDefaultJS
-.. _setup-config-removedefaultjs:
+..  index:: config; removeDefaultJS
+..  _setup-config-removedefaultjs:
 
 removeDefaultJS
 ---------------
@@ -1879,8 +1880,8 @@ removeDefaultJS
             config.removeDefaultJS = 1
 
 
-.. index:: config; removePageCss
-.. _setup-config-removepagecss:
+..  index:: config; removePageCss
+..  _setup-config-removepagecss:
 
 removePageCss
 -------------
@@ -1906,8 +1907,8 @@ removePageCss
 
 
 
-.. index:: config; sendCacheHeaders
-.. _setup-config-sendcacheheaders:
+..  index:: config; sendCacheHeaders
+..  _setup-config-sendcacheheaders:
 
 sendCacheHeaders
 ----------------
@@ -1967,13 +1968,13 @@ sendCacheHeaders
          Thanks to Ole Tange, www.forbrug.dk for co-authoring this feature.
 
 
-.. index:: config; showWebsiteTitle
-.. _setup-config-showwebsitetitle:
+..  index:: config; showWebsiteTitle
+..  _setup-config-showwebsitetitle:
 
 showWebsiteTitle
 ----------------
 
-.. versionadded:: 12.0
+..  versionadded:: 12.0
 
 .. container:: table-row
 
@@ -1995,8 +1996,8 @@ showWebsiteTitle
          option has to be set to `0`.
 
 
-.. index:: config; spamProtectEmailAddresses
-.. _setup-config-spamprotectemailaddresses:
+..  index:: config; spamProtectEmailAddresses
+..  _setup-config-spamprotectemailaddresses:
 
 spamProtectEmailAddresses
 -------------------------
@@ -2027,8 +2028,8 @@ spamProtectEmailAddresses
          It is required to enable the default JavaScript and not disable it. (see :ref:`removeDefaultJS <setup-config-removedefaultjs>`)
 
 
-.. index:: config; spamProtectEmailAddresses_atSubst
-.. _setup-config-spamprotectemailaddresses-atsubst:
+..  index:: config; spamProtectEmailAddresses_atSubst
+..  _setup-config-spamprotectemailaddresses-atsubst:
 
 spamProtectEmailAddresses\_atSubst
 ----------------------------------
@@ -2048,8 +2049,8 @@ spamProtectEmailAddresses\_atSubst
          Substitute label for the at-sign (@).
 
 
-.. index:: config; spamProtectEmailAddresses_lastDotSubst
-.. _setup-config-spamprotectemailaddresses-lastdotsubst:
+..  index:: config; spamProtectEmailAddresses_lastDotSubst
+..  _setup-config-spamprotectemailaddresses-lastdotsubst:
 
 spamProtectEmailAddresses\_lastDotSubst
 ---------------------------------------
@@ -2072,8 +2073,8 @@ spamProtectEmailAddresses\_lastDotSubst
          (dot)
 
 
-.. index:: config; Extension configuration
-.. _setup-config-tx-extension-key-with-no-underscores:
+..  index:: config; Extension configuration
+..  _setup-config-tx-extension-key-with-no-underscores:
 
 tx\_[extension key with no underscores]\_[\*]
 ---------------------------------------------
@@ -2102,8 +2103,8 @@ tx\_[extension key with no underscores]\_[\*]
 
 
 
-.. index:: config; typolinkLinkAccessRestrictedPages
-.. _setup-config-typolinklinkaccessrestrictedpages:
+..  index:: config; typolinkLinkAccessRestrictedPages
+..  _setup-config-typolinklinkaccessrestrictedpages:
 
 typolinkLinkAccessRestrictedPages
 ---------------------------------
@@ -2150,8 +2151,8 @@ typolinkLinkAccessRestrictedPages
 
 
 
-.. index:: config; typolinkLinkAccessRestrictedPages_addParams
-.. _setup-config-typolinklinkaccessrestrictedpages-addparams:
+..  index:: config; typolinkLinkAccessRestrictedPages_addParams
+..  _setup-config-typolinklinkaccessrestrictedpages-addparams:
 
 typolinkLinkAccessRestrictedPages\_addParams
 --------------------------------------------
@@ -2169,8 +2170,8 @@ typolinkLinkAccessRestrictedPages\_addParams
 
 
 
-.. index:: config; xhtmlDoctype
-.. _setup-config-xhtmldoctype:
+..  index:: config; xhtmlDoctype
+..  _setup-config-xhtmldoctype:
 
 xhtmlDoctype
 ------------
@@ -2218,8 +2219,8 @@ xhtmlDoctype
 
 
 
-.. index:: config; xmlprologue
-.. _setup-config-xmlprologue:
+..  index:: config; xmlprologue
+..  _setup-config-xmlprologue:
 
 xmlprologue
 -----------
