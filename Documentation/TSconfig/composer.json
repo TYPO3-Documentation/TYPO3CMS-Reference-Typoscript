@@ -24,7 +24,9 @@
         "vendor-dir": ".Build/vendor"
     },
     "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.48",
         "t3docs/codesnippet": "dev-main",
+        "t3docs/examples": "^12.0",
         "typo3/cms-adminpanel": "^12.4",
         "typo3/cms-backend": "^12.4",
         "typo3/cms-belog": "^12.4",
@@ -57,9 +59,7 @@
         "typo3/cms-t3editor": "^12.4",
         "typo3/cms-tstemplate": "^12.4",
         "typo3/cms-viewpage": "^12.4",
-        "typo3/cms-workspaces": "^12.4",
-        "t3docs/examples": "^12.0",
-        "typo3/coding-standards": "^0.7.1"
+        "typo3/cms-workspaces": "^12.4"
     },
     "scripts": {
         "check": [

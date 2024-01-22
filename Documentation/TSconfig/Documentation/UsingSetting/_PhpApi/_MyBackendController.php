@@ -18,6 +18,6 @@ final class MyBackendController
 
     private function getBackendUser(): BackendUserAuthentication
     {
-        return  $GLOBALS['BE_USER'];
+        return $GLOBALS['BE_USER'];
     }
 }
