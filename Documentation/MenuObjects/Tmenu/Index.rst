@@ -1,28 +1,24 @@
-.. include:: /Includes.rst.txt
-.. index:: TMENU
-.. _tmenu:
+..  include:: /Includes.rst.txt
+..  index:: TMENU
+..  _tmenu:
 
 
 =====
 TMENU
 =====
 
-.. note::
+:typoscript:`TMENU` is a menu object type.
 
-   :typoscript:`TMENU` is a menu object type. In TYPO3 v10 the remaining other menu types
-   got removed so :typoscript:`TMENU` is the only menu type left.
+..  contents::
+    :local:
 
-
-.. contents::
-   :local:
-
-.. index:: TMENU; Item states
-.. _tmenu-common-properties:
+..  index:: TMENU; Item states
+..  _tmenu-common-properties:
 
 TMENU item states
 =================
 
-These properties are all the item states used by TMENU.
+These properties are all the item states used by :typoscript:`TMENU`.
 
 ..  note::
     Order of priority: :t3-menu-tmenu-state:`USERDEF2`, :t3-menu-tmenu-state:`USERDEF1`,
@@ -35,16 +31,16 @@ NO
 
 ..  t3-menu-tmenu-state:: NO
 
-    :Data type: boolean / (config)
+    :Data type: :ref:`data-type-boolean` / (config)
     :Default: 1 (true)
 
 
-    The default "Normal" state rendering of Item. This is required for all
+    The default "normal" state rendering of item. This is required for all
     menus.
 
-    If you specify properties for the "NO" property you do not have to set
-    it "1". Otherwise with no properties setting "NO=1" will render the
-    menu anyways (for TMENU this may make sense).
+    If you specify properties for the :typoscript:`NO` property, you do not have
+    to set it to "1". Otherwise with no properties setting :typoscript:`NO = 1`
+    will render the menu anyways (for :typoscript:`TMENU` this may make sense).
 
     The simplest menu TYPO3 can generate is then:
 
@@ -55,38 +51,38 @@ NO
         page.20.1 = TMENU
         page.20.1.NO = 1
 
-    That will be pure `<a>` tags wrapped around page titles.
+    That will be pure :html:`<a>` tags wrapped around page titles.
 
 IFSUB
 -----
 
 ..  t3-menu-tmenu-state:: IFSUB
 
-    :Data type: boolean / (config)
+    :Data type: :ref:`data-type-boolean` / (config)
 
     :Default: 0
 
-    Enable/Configuration for menu items which has subpages.
+    Enable/configuration for menu items which has subpages.
 
 ACT
 ---
 
 ..  t3-menu-tmenu-state:: ACT
 
-    :Data type: boolean / (config)
+    :Data type: :ref:`data-type-boolean` / (config)
     :Default: 0
 
-    Enable/Configuration for menu items which are found in the rootLine.
+    Enable/configuration for menu items which are found in the root line.
 
 ACTIFSUB
 --------
 
 ..  t3-menu-tmenu-state:: ACTIFSUB
 
-    :Data type: boolean / (config)
+    :Data type: :ref:`data-type-boolean` / (config)
     :Default: 0
 
-    Enable/Configuration for menu items which are found in the rootLine
+    Enable/configuration for menu items which are found in the root line
     and have subpages.
 
 CUR
@@ -94,21 +90,21 @@ CUR
 
 ..  t3-menu-tmenu-state:: CUR
 
-    :Data type: boolean / (config)
+    :Data type: :ref:`data-type-boolean` / (config)
     :Default: 0
 
 
-    Enable/Configuration for a menu item if the item is the current page.
+    Enable/configuration for a menu item, if the item is the current page.
 
 CURIFSUB
 --------
 
 ..  t3-menu-tmenu-state:: CURIFSUB
 
-    :Data type: boolean / (config)
+    :Data type: :ref:`data-type-boolean` / (config)
     :Default: 0
 
-    Enable/Configuration for a menu item if the item is the current page
+    Enable/configuration for a menu itemm if the item is the current page
     and has subpages.
 
 USR
@@ -116,10 +112,10 @@ USR
 
 ..  t3-menu-tmenu-state:: USR
 
-    :Data type: boolean / (config)
+    :Data type: :ref:`data-type-boolean` / (config)
     :Default: 0
 
-    Enable/Configuration for menu items which are access restricted pages
+    Enable/configuration for menu items which are access-restricted pages
     that a user has access to.
 
 SPC
@@ -127,20 +123,21 @@ SPC
 
 ..  t3-menu-tmenu-state:: SPC
 
-    :Data type: boolean / (config)
+    :Data type: :ref:`data-type-boolean` / (config)
     :Default: 0
 
-    Enable/Configuration for 'Spacer' pages.
+    Enable/configuration for "spacer" pages.
 
-    Spacers are pages of the doktype "Spacer". These are not viewable
-    pages but "placeholders" which can be used to divide menu items.
+    Spacers are pages of the
+    :ref:`doktype "Spacer" <t3coreapi:list-of-page-types>`. These are not
+    viewable pages but "placeholders" which can be used to divide menu items.
 
 USERDEF1
 --------
 
 ..  t3-menu-tmenu-state:: USERDEF1
 
-    :Data type: boolean / (config)
+    :Data type: :ref:`data-type-boolean` / (config)
 
     User defined, see :t3-menu-tmenu:`itemArrayProcFunc` for details on how
     to use this.
@@ -154,7 +151,7 @@ USERDEF2
 
 ..  t3-menu-tmenu-state:: USERDEF2
 
-    :Data type: boolean / (config)
+    :Data type: :ref:`data-type-boolean` / (config)
 
     Same like :t3-menu-tmenu-state:`USERDEF1` but has a higher priority.
 
@@ -171,12 +168,12 @@ expAll
 
 ..  t3-menu-tmenu:: expAll
 
-    :Data type: boolean /:ref:`stdWrap <stdwrap>`
+    :Data type: :ref:`data-type-boolean` / :ref:`stdWrap <stdwrap>`
 
     If this is true, the menu will always show the menu on the level
     underneath the menu item. This corresponds to a situation where a user
     has clicked a menu item and the menu folds out the next level. This
-    can enable that to happen on all items as default.
+    can be enabled to happen on all items as default.
 
 collapse (removed)
 ------------------
@@ -189,65 +186,69 @@ collapse (removed)
 sectionIndex
 ------------
 
-If this property is set, then the
-menu will not consist of links to pages on the "next level" but rather
-of links to the parent page to the menu, and in addition "#"-links to
-the cObjects rendered on the page. In other words, the menu items will
-be a section index with links to the content elements on the page (by
-default with colPos=0!).
+If this property is set, the menu will not consist of links to pages on the
+"next level", but rather of links to the parent page to the menu and, in
+addition, anchor links to the cObjects rendered on the page. In other words, the
+menu items will be a section index with links to the content elements on the
+page (by default with colPos=0!).
 
 ..  t3-menu-tmenu:: sectionIndex
 
-    :Data type: boolean
+    :Data type: :ref:`data-type-boolean`
 
-    If you set this, all content elements (from tt\_content table) of
-    "Column" = "Normal" *and* the "Index"-check box clicked are selected.
+    If you set this, all content elements (from :sql:`tt_content` table) of
+    "Column" = "Normal" *and* the "Index" checkbox enabled are selected.
     This corresponds to the "Menu/Sitemap" content element when "Section
     index" is selected as type.
+
+
+..  _tmenu-sectionIndex-type:
 
 sectionIndex.type
 ~~~~~~~~~~~~~~~~~
 
 ..  t3-menu-tmenu:: sectionIndex.type
 
-    :Data type: string ("all" / "header")
+    :Data type: :ref:`data-type-string` ("all" / "header")
 
     "all"
-        The "Index"-checkbox is not considered and all content elements - by
+        The "Index" checkbox is not considered and all content elements - by
         default with colPos=0 - are selected.
 
     "header"
-        Only content elements with a visible header-layout (and a
-        non-empty 'header'-field!) are selected. In other words, if the
-        header layout of an element is set to "Hidden" then the
+        Only content elements with a visible header layout (and a
+        non-empty "header" field!) are selected. In other words, if the
+        header layout of an element is set to "hidden" then the
         page will not appear in the menu.
+
 
 sectionIndex.includeHiddenHeaders
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ..  t3-menu-tmenu:: sectionIndex.includeHiddenHeaders
 
-    :Data type: boolean
+    :Data type: :ref:`data-type-boolean`
 
-     If you set this and sectionIndex.type is set to "header",
-     also elements with a header layout set to "Hidden" will appear
-     in the menu.
+    If you set this and :ref:`sectionIndex.type <tmenu-sectionIndex-type>` is
+    set to "header", also elements with a header layout set to "hidden" will
+    appear in the menu.
 
 sectionIndex.useColPos
 ~~~~~~~~~~~~~~~~~~~~~~
 
 ..  t3-menu-tmenu:: sectionIndex.useColPos
 
-    :Data type: integer /:ref:`stdWrap <stdwrap>`
+    :Data type: :ref:`data-type-integer` / :ref:`stdWrap <stdwrap>`
 
     :Default: 0
 
     This property allows you to set the colPos which should be used in the
-    where clause of the query. Possible values are integers, default is "0".
+    :sql:`WHERE` clause of the query. Possible values are integers, default is
+    "0".
 
     Any positive integer and 0 will lead to a where clause containing
-    "colPos=x" with x being the aforementioned integer. A negative value
-    drops the filter "colPos=x" completely.
+    :sql:`colPos=x` with x being the aforementioned integer. A negative value
+    drops the filter :sql:`colPos=x` completely.
 
     ..  code-block:: typoscript
         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
@@ -255,51 +256,53 @@ sectionIndex.useColPos
         tt_content.menu.20.3.1.sectionIndex.useColPos = -1
 
 The data record in sectionIndex menus
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-When the menu-records are selected it works like this: The parent page
-record is used as the "base" for the menu-record. That means that any
-"no\_cache" or "target"-properties of the parent page are used for the
+When the menu records are selected, it works like this: The parent page
+record is used as the "base" for the menu record. That means that any
+`no_cache` or `target` properties of the parent page are used for the
 whole menu.
 
-But of course some fields from the tt\_content records are
+But of course some fields from the :sql:`tt_content` records are
 transferred. This is how it is mapped:
 
-..  code-block:: none
+..  code-block:: php
     :caption: Example of data mapping
 
-    $temp[$row[uid]]=$basePageRow;
-    $temp[$row[uid]]['title']=$row['header'];
-    $temp[$row[uid]]['subtitle']=$row['subheader'];
-    $temp[$row[uid]]['starttime']=$row['starttime'];
-    $temp[$row[uid]]['endtime']=$row['endtime'];
-    $temp[$row[uid]]['fe_group']=$row['fe_group'];
-    $temp[$row[uid]]['media']=$row['media'];
-    $temp[$row[uid]]['header_layout']=$row['header_layout'];
-    $temp[$row[uid]]['bodytext']=$row['bodytext'];
-    $temp[$row[uid]]['image']=$row['image'];
-    $temp[$row[uid]]['sectionIndex_uid']=$row['uid'];
+    $temp[$row[uid]] = $basePageRow;
+    $temp[$row[uid]]['title'] = $row['header'];
+    $temp[$row[uid]]['subtitle'] = $row['subheader'];
+    $temp[$row[uid]]['starttime'] = $row['starttime'];
+    $temp[$row[uid]]['endtime'] = $row['endtime'];
+    $temp[$row[uid]]['fe_group'] = $row['fe_group'];
+    $temp[$row[uid]]['media'] = $row['media'];
+    $temp[$row[uid]]['header_layout'] = $row['header_layout'];
+    $temp[$row[uid]]['bodytext'] = $row['bodytext'];
+    $temp[$row[uid]]['image'] = $row['image'];
+    $temp[$row[uid]]['sectionIndex_uid'] = $row['uid'];
 
 Basically this shows that
 
--   the field "header" and "subheader" from tt\_content are mapped to
-    "title" and "subtitle" in the pages-record. Thus you shouldn't need to
-    change your standard menu objects to fit this thing.
+*   The fields :sql:`header` and :sql:`subheader` from the :sql:`tt_content`
+    table are mapped to `title` and `subtitle` in the page record. Thus you
+    shouldn't need to change your standard menu objects to fit this thing.
 
--   the fields "starttime", "endtime", "fe\_group", "media" from
-    tt\_content are mapped to the same fields in a pages-record.
+*   The fields :sql:`starttime`, :sql:`endtime`, :sql:`fe\_group` and
+    :sql:`media` from the :sql:`tt_content` table are mapped to the same fields
+    in a page record.
 
--   the fields "header\_layout", "bodytext" and "image" are mapped to
-    non-existing fields in the page-record
+*   The fields :sql:`header_layout`, :sql:`bodytext` and :sql:`image` are mapped
+    to non-existing fields in the page record
 
--   a new field, "sectionIndex\_uid" is introduced in the page record
-    which is detected by the `\TYPO3\CMS\Frontend\Typolink\PageLinkBuilder`. If this field
-    is present in a page record, the `PageLinkBuilder` will prepend a
-    hash-mark and the number of the field.
+*   A new field, `sectionIndex_uid` is introduced in the pages record, which is
+    detected by the :php:`\TYPO3\CMS\Frontend\Typolink\PageLinkBuilder`. If this
+    field is present in a page record, the :php:`PageLinkBuilder` will prepend a
+    hash mark, followed by `c` and the number of the field (for example,
+    `#c42`).
 
 ..  note::
-    You cannot create submenus to sectionIndex menus. These elements are not
-    pages and thereby have no children.
+    You cannot create submenus to :typoscript:`sectionIndex` menus. These
+    elements are not pages and thereby have no children.
 
 
 target
@@ -307,17 +310,17 @@ target
 
 ..  t3-menu-tmenu:: target
 
-    :Data type: target
+    :Data type: :ref:`data-type-target`
     :Default: self
 
-    Target of the menu links
+    Target of the menu links.
 
 forceTypeValue
 ---------------
 
 ..  t3-menu-tmenu:: forceTypeValue
 
-    :Data type: integer
+    :Data type: :ref:`data-type-integer`
 
     If set, the `&type` parameter of the link is forced to this value
     regardless of target.
@@ -329,8 +332,7 @@ stdWrap
 
     :Data type: :ref:`stdWrap <stdwrap>`
 
-
-    Wraps the whole block of sub items.
+    Wraps the whole block of subitems.
 
     ..  rubric:: Example
 
@@ -352,7 +354,7 @@ wrap
 
     :Data type: :ref:`wrap <data-type-wrap>`
 
-    Wraps the whole block of sub items, but only if there were items in the menu!
+    Wraps the whole block of subitems, but only if there were items in the menu!
 
 IProcFunc
 ---------
@@ -361,12 +363,12 @@ IProcFunc
 
     :Data type: function name
 
-    The internal array "I" is passed to this function and expected
+    The internal array :php:`I` is passed to this function and expected
     returned as well. Subsequent to this function call the menu item is
-    compiled by implode()'ing the array $I[parts] in the passed array.
+    compiled by implode()'ing the array :php:`$I[parts]` in the passed array.
     Thus you may modify this if you need to.
 
-Item States
+Item states
 -----------
 
 ..  todo: This does not seem to make sense?  Remove? Item states are already
@@ -374,16 +376,15 @@ Item States
 
 ..  t3-menu-tmenu:: [Item States, like NO, ACT, CUR etc]
 
-    :Data type: ->TMENUITEM
+    :Data type: :ref:`->TMENUITEM <tmenu-common-properties>`
 
+    This is the :typoscript:`TMENUITEM` options for each category of a menu item
+    that can be generated.
 
-     This is the TMENUITEM-options for each category of a menu item that can
-     be generated.
+    **Special:**
 
-     **Special:**
-
-     The ->OptionSplit function is run on the whole configuration before
-     the items are generated.
+    The :ref:`optionsplit` function processes the whole configuration before
+    the items are generated.
 
 
 alternativeSortingField
@@ -391,44 +392,46 @@ alternativeSortingField
 
 ..  t3-menu-tmenu:: alternativeSortingField
 
-    :Data type: string
+    :Data type: :ref:`data-type-string`
 
-    Normally the menu items are sorted by the fields "sorting" in the
-    pages- and tt\_content-table. Here you can enter a list of fields that
-    is used in the SQL- "ORDER BY" statement instead. You can also provide
-    the sorting order.
+    Normally the menu items are sorted by the fields :sql:`sorting` in the
+    :sql:`pages` and :sql:`tt_content` table. Here you can enter a list of
+    fields that is used in the :sql:`ORDER BY` statement instead. You can also
+    provide the sorting order.
 
-    **Examples (for "pages" table):**
+    **Example (for "pages" table):**
 
-    alternativeSortingField = title desc
+    ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-    (This will render the menu in reversed alphabetical order.)
+        alternativeSortingField = title desc
+
+    This will render the menu in reversed alphabetical order.
 
     **Limitations:**
 
-    This property works with normal menus, sectionsIndex menus and
-    special-menus of type "directory".
+    This property works with normal menus, :typoscript:`sectionsIndex` menus and
+    special menus of type :typoscript:`directory`.
 
 minItems
 --------
 
 ..  t3-menu-tmenu:: minItems
 
-    :Data type: integer / :ref:`stdWrap <stdwrap>`
+    :Data type: :ref:`data-type-integer` / :ref:`stdWrap <stdwrap>`
 
     The minimum items in the menu. If the number of pages does not reach
-    this level, a dummy-page with the title "..." and
-    uid=[currentpage\_id] is inserted.
+    this level, a dummy page with the title "..." and
+    `uid=[currentpage_id]` is inserted.
 
-    Takes precedence over HMENU property :ref:`hmenu-minitems`.
+    It takes precedence over HMENU property :ref:`hmenu-minitems`.
 
 maxItems
 --------
 
 ..  t3-menu-tmenu:: maxItems
 
-    :Data type: integer / :ref:`stdWrap <stdwrap>`
-
+    :Data type: :ref:`data-type-integer` / :ref:`stdWrap <stdwrap>`
 
     The maximum items in the menu. More items will be ignored.
 
@@ -439,8 +442,7 @@ begin
 
 ..  t3-menu-tmenu:: begin
 
-    :Data type: integer / :ref:`stdWrap <stdwrap>` :ref:`+calc <objects-calc>`
-
+    :Data type: :ref:`data-type-integer` / :ref:`stdWrap <stdwrap>` :ref:`+calc <objects-calc>`
 
     The first item in the menu.
 
@@ -454,14 +456,14 @@ begin
 
         begin = 3
 
-    Takes precedence over :HMENU property :ref:`hmenu-begin`.
+    Takes precedence over HMENU property :ref:`hmenu-begin`.
 
 debugItemConf
 -------------
 
 ..  t3-menu-tmenu:: debugItemConf
 
-    :Data type: boolean
+    :Data type: :ref:`data-type-boolean`
 
     Outputs (by the :php:`debug()` function) the configuration arrays for each
     menu item. Useful to debug :ref:`optionsplit` things and such...
@@ -471,29 +473,31 @@ overrideId
 
 ..  t3-menu-tmenu:: overrideId
 
-    :Data type: integer (page id)
+    :Data type: :ref:`data-type-integer` (page ID)
 
-    If set, then all links in the menu will point to this pageid. Instead
-    the real uid of the page is sent by the parameter "&real\_uid=[uid]".
+    If set, then all links in the menu will point to this page ID. Instead,
+    the real UID of the page is sent by the parameter `&real_uid=[uid]`.
 
     This feature is smart, if you have inserted a menu from somewhere
-    else, perhaps a shared menu, but wants the menu items to call the same
-    page, which then generates a proper output based on the real\_uid.
+    else, perhaps a shared menu, but want the menu items to call the same
+    page, which then generates a proper output based on the `real_uid`.
 
 addParams
 ---------
 
 ..  t3-menu-tmenu:: addParams
 
-    :Data type: string
+    :Data type: :ref:`data-type-string`
 
-    Additional parameter for the menu-links.
+    Additional parameter for the menu links.
 
     **Example:**
 
-    "&some\_var=some%20value"
+    ..  code-block:: text
 
-    Must be rawurlencoded.
+        &some_var=some%20value
+
+    It must be raw-urlencoded.
 
 
 .. index:: TMENU; showAccessRestrictedPages
@@ -504,8 +508,7 @@ showAccessRestrictedPages
 
 ..  t3-menu-tmenu:: showAccessRestrictedPages
 
-    :Data type: integer (page ID) / keyword "NONE"
-
+    :Data type: :ref:`data-type-integer` (page ID) / keyword "NONE"
 
     If set, pages in the menu will include pages with frontend user group
     access enabled. However the page is of course not accessible and
@@ -517,16 +520,16 @@ showAccessRestrictedPages
     perform page-not-found handling when clicked (which can be used to
     capture the event and act accordingly of course). This means that the
     link's URL will point to the page even if it is not accessible by the
-    current frontend user. Note that the default behavior of page-not-found
+    current frontend user. Note that the default behavior of page not found
     handling is to show the parent page instead.
 
     **Properties:**
 
     **.addParam**: Additional parameter for the URL, which can hold two
-    markers; ###RETURN\_URL### which will be substituted with the link the
-    page would have had if it had been accessible and ###PAGE\_ID###
+    markers; `###RETURN_URL###` which will be substituted with the link the
+    page would have had if it had been accessible and `###PAGE_ID###`
     holding the page ID of the page coming from (could be used to look up
-    which fe\_groups was required for access.
+    which :sql:`fe_groups` was required for access.
 
     ..  versionadded:: 12.3
 
@@ -551,9 +554,9 @@ additionalWhere
 
 ..  t3-menu-tmenu:: additionalWhere
 
-    :Data type: string / :ref:`stdWrap <stdwrap>`
+    :Data type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
 
-    Adds an additional part to the WHERE clause for this menu.
+    Adds an additional part to the :sql:`WHERE` clause for this menu.
     Make sure to start the part with "AND "!
 
     ..  rubric:: Example
@@ -572,19 +575,18 @@ itemArrayProcFunc
 
     :Data type: function name
 
-
-    The first variable passed to this function is the "menuArr" array with
+    The first variable passed to this function is the :php:`menuArr` array with
     the menu items as they are collected based on the type of menu.
 
-    You're free to manipulate or add to this array as you like. Just
+    You are free to manipulate or add to this array as you like. Just
     remember to return the array again!
 
     **Note:**
 
-    .parentObj property is **hardcoded** to be a reference to the calling
-    typo3/sysext/frontend/Classes/ContentObject/Menu/ object. Here you'll
-    find e.g. ->id to be the uid of the menu item generating a submenu and
-    such.
+    :typoscript:`.parentObj` property is **hardcoded** to be a reference to the
+    calling :file:`typo3/sysext/frontend/Classes/ContentObject/Menu/` object.
+    Here you will find, for example, `->id` to be the UID of the menu item
+    generating a submenu and such.
 
     **Presetting element state**
 
@@ -596,7 +598,7 @@ submenuObjSuffixes
 
 ..  t3-menu-tmenu:: submenuObjSuffixes
 
-    :Data type: string / optionSplit
+    :Data type: :ref:`data-type-integer` / :ref:`optionsplit`
 
     Defines a suffix for alternative sub-level menu objects. Useful to
     create special submenus depending on their parent menu element. See
