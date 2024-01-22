@@ -6,9 +6,9 @@
 TMENUITEM
 =========
 
-The current record is the page-record of the menu item. Now, if you would
+The current record is the page record of the menu item. If you would
 like to get data from the current menu item's page record, use
-stdWrap.data = field : [field name].
+:typoscript:`stdWrap.data = field : [field name]`.
 
 Properties
 ==========
@@ -18,35 +18,41 @@ Properties
 allWrap
 -------
 
-..  t3-menu-tmenu-item:: allWrap
+..  confval:: allWrap
 
     :Data type: :ref:`data-type-wrap` / :ref:`stdWrap <stdwrap>`
 
     Wraps the whole item.
 
+
+..  _tmenuitem-wrapItemAndSub:
+
 wrapItemAndSub
 --------------
 
-..  t3-menu-tmenu-item:: wrapItemAndSub
+..  confval:: wrapItemAndSub
 
     :Data type: :ref:`data-type-wrap` / :ref:`stdWrap <stdwrap>`
 
     Wraps the whole item and any submenu concatenated to it.
 
+
+..  _tmenuitem-subst-elementUid:
+
 subst_elementUid
 ----------------
 
-..  t3-menu-tmenu-item:: subst_elementUid
+..  confval:: subst_elementUid
 
-    :Data type: boolean
+    :Data type: :ref:`data-type-boolean`
 
     :Default: 0 (false)
 
-    If set, all appearances of the string '{elementUid}' in the total element
-    HTML code (after wrapped in :ref:`.allWrap <tmenuitem-allWrap>`) are
-    substituted with the uid number of the menu item.
+    If set, all appearances of the string '{elementUid}' in the HTML code of the
+    element (after wrapped in :ref:`.allWrap <tmenuitem-allWrap>`) are
+    substituted with the UID number of the menu item.
 
-    This is useful if you want to insert an identification code in the
+    This is useful, if you want to insert an identification code in the
     HTML in order to manipulate properties with JavaScript.
 
 
@@ -55,14 +61,17 @@ subst_elementUid
 before
 ------
 
-..  t3-menu-tmenu-item:: before
+..  confval:: before
 
     :Data type: HTML / :ref:`stdWrap <stdwrap>`
+
+
+..  _tmenuitem-beforeWrap:
 
 beforeWrap
 ----------
 
-..  t3-menu-tmenu-item:: beforeWrap
+..  confval:: beforeWrap
 
     :Data type: :ref:`data-type-wrap`
 
@@ -74,14 +83,17 @@ beforeWrap
 after
 -----
 
-..  t3-menu-tmenu-item:: after
+..  confval:: after
 
     :Data type: HTML / :ref:`stdWrap <stdwrap>`
+
+
+..  _tmenuitem-afterWrap:
 
 afterWrap
 ---------
 
-..  t3-menu-tmenu-item:: afterWrap
+..  confval:: afterWrap
 
     :Data type: :ref:`data-type-wrap`
 
@@ -93,35 +105,44 @@ afterWrap
 linkWrap
 --------
 
-..  t3-menu-tmenu-item:: linkWrap
+..  confval:: linkWrap
 
     :Data type: :ref:`data-type-wrap`
+
+
+..  _tmenuitem-stdWrap:
 
 stdWrap
 -------
 
-..  t3-menu-tmenu-item:: stdWrap
+..  confval:: stdWrap
 
     :Data type: :ref:`stdWrap`
 
     stdWrap to the link text.
 
+
+..  _tmenuitem-ATagBeforeWrap:
+
 ATagBeforeWrap
 --------------
 
-..  t3-menu-tmenu-item:: ATagBeforeWrap
+..  confval:: ATagBeforeWrap
 
-    :Data type: boolean
+    :Data type: :ref:`data-type-boolean`
 
     :Default: 0 (false)
 
     If set, the link is first wrapped with :ref:`*.linkWrap* <tmenuitem-linkWrap>`
     and then the :html:`<a>` tag.
 
+
+..  _tmenuitem-ATagParams:
+
 ATagParams
 ----------
 
-..  t3-menu-tmenu-item:: ATagParams
+..  confval:: ATagParams
 
     :Data type: *<A>-params* / :ref:`stdWrap <stdwrap>`
 
@@ -134,10 +155,13 @@ ATagParams
 
         ATagParams = class="board"
 
+
+..  _tmenuitem-ATagTitle:
+
 ATagTitle
 ---------
 
-..  t3-menu-tmenu-item:: ATagTitle
+..  confval:: ATagTitle
 
     :Data type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
 
@@ -154,10 +178,13 @@ ATagTitle
     This would use the abstract or description field for the
     :html:`<a title="">` attribute.
 
+
+..  _tmenuitem-additionalParams:
+
 additionalParams
 ----------------
 
-..  t3-menu-tmenu-item:: additionalParams
+..  confval:: additionalParams
 
     :Data type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
 
@@ -166,30 +193,39 @@ additionalParams
 
     For details, see :ref:`typolink->additionalParams <typolink-additionalParams>`.
 
+
+..  _tmenuitem-doNotLinkIt:
+
 doNotLinkIt
 -----------
 
-..  t3-menu-tmenu-item:: doNotLinkIt
+..  confval:: doNotLinkIt
 
     :Data type: :ref:`data-type-boolean` / :ref:`stdWrap <stdwrap>`
     :Default: 0
 
     If set, the link texts are not linked at all.
 
+
+..  _tmenuitem-doNotShowLink:
+
 doNotShowLink
 -------------
 
-..  t3-menu-tmenu-item:: doNotShowLink
+..  confval:: doNotShowLink
 
     :Data type: :ref:`data-type-boolean` / :ref:`stdWrap <stdwrap>`
     :Default: 0
 
     If set, the text will not be shown at all (smart with spacers).
 
+
+..  _tmenuitem-stdWrap2:
+
 stdWrap2
 --------
 
-..  t3-menu-tmenu-item:: stdWrap2
+..  confval:: stdWrap2
 
     :Data type: :ref:`data-type-wrap` / :ref:`stdWrap <stdwrap>`
     :Default: \|
@@ -197,20 +233,26 @@ stdWrap2
     stdWrap to the total link text and :html:`<a>` tag. (Notice that the plain
     default value passed to the stdWrap function is "\|".)
 
+
+..  _tmenuitem-altTarget:
+
 altTarget
 ---------
 
-..  t3-menu-tmenu-item:: altTarget
+..  confval:: altTarget
 
-    :Data type: target
+    :Data type: :ref:`data-type-target`
 
     Alternative target overriding the target property of the
     ref:`TMENU <tmenu>`, if set.
 
+
+..  _tmenuitem-allStdWrap:
+
 allStdWrap
 ----------
 
-..  t3-menu-tmenu-item:: allStdWrap
+..  confval:: allStdWrap
 
     :Data type: :ref:`stdWrap <stdwrap>`
 
