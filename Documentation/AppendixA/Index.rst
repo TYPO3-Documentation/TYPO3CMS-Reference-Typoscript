@@ -261,8 +261,13 @@ writing: :php:`TypoScriptFrontendController->id`.
 
    Description
          The root line (all the way to tree root, not only the current site!).
-         Current site root line is in
-         :php:`\TYPO3\CMS\Frontend\Controller\TypoScriptFrontendController->config['rootLine']`.
+
+         The current site root line is available via
+         :php:`$request->getAttribute('frontend.page.information')->getLocalRootLine()`.
+         See :ref:`t3coreapi:typo3-request-attribute-frontend-page-information`.
+
+         In TYPO3 versions before v13 the current site root line was only available
+         via :php:`\TYPO3\CMS\Frontend\Controller\TypoScriptFrontendController->config['rootLine']`.
 
 
 .. container:: table-row
