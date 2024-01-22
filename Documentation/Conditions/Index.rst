@@ -929,7 +929,7 @@ request.getParsedBody()
     ..  code-block:: typoscript
         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-        [request && request.getParsedBody()['foo'] == 1]
+        [request && traverse(request.getParsedBody(), 'foo') == 1]
 
 
 ..  index:: Conditions; request.getHeaders()
