@@ -18,6 +18,6 @@ final class _MyBackendLoggedInController
 
     private function getUserTsConfig(): array
     {
-        return  $GLOBALS['BE_USER']->getTSConfig();
+        return $GLOBALS['BE_USER']->getTSConfig();
     }
 }
