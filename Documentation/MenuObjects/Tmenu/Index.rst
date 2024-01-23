@@ -104,7 +104,7 @@ CURIFSUB
     :Data type: :ref:`data-type-boolean` / (config)
     :Default: 0
 
-    Enable/configuration for a menu itemm if the item is the current page
+    Enable/configuration for a menu item if the item is the current page
     and has subpages.
 
 USR
