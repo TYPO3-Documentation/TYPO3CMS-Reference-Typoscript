@@ -39,9 +39,9 @@ Properties
 source
 ------
 
-..  t3-cobj-records:: source
+..  confval:: source
 
-    :Data type: *records-list* /:ref:`stdWrap <stdwrap>`
+    :Data type: *records-list* / :ref:`stdWrap <stdwrap>`
 
     List of record id's, optionally with prepended table names.
 
@@ -58,9 +58,9 @@ source
 categories
 ----------
 
-..  t3-cobj-records:: categories
+..  confval:: categories
 
-    :Data type: *categories-list* /:ref:`stdWrap <stdwrap>`
+    :Data type: *categories-list* / :ref:`stdWrap <stdwrap>`
 
     Comma-separated list of system categories uid's.
     Records related to these categories will be retrieved
@@ -76,7 +76,7 @@ categories
         more precisely targeted.
 
 
-..  t3-cobj-records:: categories.relation
+..  confval:: categories.relation
 
     Name of the categories relation field to use for
     building the list of categorized records, as there can
@@ -89,9 +89,9 @@ categories
 tables
 ------
 
-..  t3-cobj-records:: tables
+..  confval:: tables
 
-    :Data type: *list of tables* /:ref:`stdWrap <stdwrap>`
+    :Data type: *list of tables* / :ref:`stdWrap <stdwrap>`
 
     List of accepted tables. For items listed in the
     :ref:`source <cobj-records-properties-source>` property
@@ -119,7 +119,7 @@ tables
 conf
 ----
 
-..  t3-cobj-records:: conf.[*table name*]
+..  confval:: conf.[*table name*]
 
     :Data type: :ref:`cObject <data-type-cobject>`
 
@@ -137,9 +137,9 @@ conf
 dontCheckPid
 ------------
 
-..  t3-cobj-records:: dontCheckPid
+..  confval:: dontCheckPid
 
-    :Data type: boolean /:ref:`stdWrap <stdwrap>`
+    :Data type: :ref:`data-type-boolean` / :ref:`stdWrap <stdwrap>`
     :Default: 0
 
     Normally a record cannot be selected, if its parent page (pid) is not
@@ -151,9 +151,9 @@ dontCheckPid
 wrap
 ----
 
-..  t3-cobj-records:: wrap
+..  confval:: wrap
 
-    :Data type: :ref:`wrap <data-type-wrap>` /:ref:`stdWrap <stdwrap>`
+    :Data type: :ref:`wrap <data-type-wrap>` / :ref:`stdWrap <stdwrap>`
 
     Wraps the output. Executed before :ref:`stdWrap <cobj-records-properties-stdwrap>`.
 
@@ -163,7 +163,7 @@ wrap
 stdWrap
 -------
 
-..  t3-cobj-records:: stdWrap
+..  confval:: stdWrap
 
     :Data type: :ref:`->stdWrap <stdwrap>`
 
@@ -175,7 +175,7 @@ stdWrap
 cache
 -----
 
-..  t3-cobj-records:: cache
+..  confval:: cache
 
     :Data type: :ref:`cache <cache>`
 
