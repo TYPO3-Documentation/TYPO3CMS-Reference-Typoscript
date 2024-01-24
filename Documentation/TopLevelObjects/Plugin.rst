@@ -313,6 +313,34 @@ persistence.storagePid
              storagePid = 42
            }
          }
+.. _setup-plugin-persistence-recursive:
+
+persistence.recursive
+~~~~~~~~~~~~~~~~~~~~~~
+
+.. container:: table-row
+
+   Property
+      persistence.recursive
+
+   Data type
+      :ref:`data-type-integer`
+
+   Description
+      **Only for Extbase plugins**. Number of sub-levels of the 
+      storagePid are read.
+
+
+   Example
+      .. code-block:: typoscript
+         :caption: EXT:blog_example/Configuration/TypoScript/setup.typoscript
+
+         plugin.tx_blogexample {
+           persistence {
+             # Includes 4 sub-levels of the storagePid
+             recursive = 4
+           }
+         }
 
 
 .. _setup-plugin-view:
