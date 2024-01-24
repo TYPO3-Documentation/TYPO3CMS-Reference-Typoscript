@@ -8,7 +8,7 @@ EXTBASEPLUGIN
 
 ..  versionadded:: 12.3
 
-The content object :typoscript:`EXTBASEPLUGIN` allows to register
+The content object :typoscript:`EXTBASEPLUGIN` allows to render
 :ref:`Extbase <t3coreapi:extbase>` plugins.
 
 
@@ -77,5 +77,5 @@ This way still works, but it is recommended to use the
 :typoscript:`EXTBASEPLUGIN` content object, as the direct reference to a PHP
 class (Bootstrap) might be optimized in future versions.
 
-For extension that need to remain compatible with TYPO3 v11 and v12 use, the
+For extension that need to remain compatible with TYPO3 v11 and v12, the
 Bootstrap way should be used.
