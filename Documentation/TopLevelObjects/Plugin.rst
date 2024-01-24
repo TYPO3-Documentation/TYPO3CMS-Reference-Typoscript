@@ -229,7 +229,7 @@ persistence.recursive
       :ref:`data-type-integer`
 
    Description
-      **Only for Extbase plugins**. Number of how many sub-levels of the 
+      **Only for Extbase plugins**. Number of sub-levels of the 
       storagePid are read.
 
 
