@@ -114,20 +114,20 @@ into smaller partial files so an extension can override a specific partial only.
 Combinations of overrides
 =========================
 
-Due to the nature of TsConfig and its two types PageTsConfig and UserTsConfig,
+Due to the nature of TSconfig and its two types page TSconfig and user TSconfig,
 various combinations are possible:
 
-* Define "global" overrides with PageTsConfig in
+* Define "global" overrides with page TSconfig in
   :file:`Configuration/page.tsconfig` of an extension. This works for all
   modules, regardless of whether the module renders a page tree or not.
 
-* Define page-level overrides via the :guilabel:`TSconfig` field of page
-  records. As always with PageTsConfig, sub pages and sub trees inherit these
+* Define page level overrides via the :guilabel:`TSconfig` field of page
+  records. As always with page TSconfig, subpages and subtrees inherit these
   settings from their parent pages.
 
-* Define overrides on user or (better) group level. As always, UserTsConfig can
-  override PageTsConfig by prefixing any setting available as PageTsConfig with
-  :typoscript:`page.` in UserTsConfig. A UserTsConfig template override starts
+* Define overrides on user or (better) group level. As always, user TSconfig can
+  override page TSconfig by prefixing any setting available as page TSconfig with
+  :typoscript:`page.` in user TSconfig. A user TSconfig template override starts
   with :typoscript:`page.templates.` instead of :typoscript:`templates.`.
 
 
