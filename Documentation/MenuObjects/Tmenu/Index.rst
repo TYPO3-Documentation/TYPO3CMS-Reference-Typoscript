@@ -1,23 +1,20 @@
-.. include:: /Includes.rst.txt
-.. index:: TMENU
-.. _tmenu:
+..  include:: /Includes.rst.txt
+..  index:: TMENU
+..  _tmenu:
 
 
 =====
 TMENU
 =====
 
-.. note::
-
-   :typoscript:`TMENU` is a menu object type. In TYPO3 v10 the remaining other menu types
-   got removed so :typoscript:`TMENU` is the only menu type left.
+:typoscript:`TMENU` is a menu object type.
 
 
-.. contents::
-   :local:
+..  contents::
+    :local:
 
-.. index:: TMENU; Item states
-.. _tmenu-common-properties:
+..  index:: TMENU; Item states
+..  _tmenu-common-properties:
 
 TMENU item states
 =================
@@ -25,17 +22,27 @@ TMENU item states
 These properties are all the item states used by TMENU.
 
 ..  note::
-    Order of priority: :t3-menu-tmenu-state:`USERDEF2`, :t3-menu-tmenu-state:`USERDEF1`,
-    :t3-menu-tmenu-state:`SPC`, :t3-menu-tmenu-state:`USR`, :t3-menu-tmenu-state:`CURIFSUB`,
-    :t3-menu-tmenu-state:`CUR`, :t3-menu-tmenu-state:`ACTIFSUB`, :t3-menu-tmenu-state:`ACT`,
-    :t3-menu-tmenu-state:`IFSUB`, :t3-menu-tmenu-state:`NO`.
+    Order of priority:
+
+    #.  :ref:`USERDEF2 <tmenu-common-property-userdef2>`
+    #.  :ref:`USERDEF1 <tmenu-common-property-userdef1>`
+    #.  :ref:`SPC <tmenu-common-property-spc>`
+    #.  :ref:`USR <tmenu-common-property-usr>`
+    #.  :ref:`CURIFSUB <tmenu-common-property-curifsub>`
+    #.  :ref:`CUR <tmenu-common-property-cur>`
+    #.  :ref:`ACTIFSUB <tmenu-common-property-actifsub>`
+    #.  :ref:`ACT <tmenu-common-property-act>`
+    #.  :ref:`IFSUB <tmenu-common-property-ifsub>`
+    #.  :ref:`NO <tmenu-common-property-no>`
+
+.. _tmenu-common-property-no:
 
 NO
 --
 
-..  t3-menu-tmenu-state:: NO
+..  confval:: NO
 
-    :Data type: boolean / (config)
+    :Data type: :ref:`data-type-boolean` / (config)
     :Default: 1 (true)
 
 
@@ -57,77 +64,98 @@ NO
 
     That will be pure `<a>` tags wrapped around page titles.
 
+
+.. _tmenu-common-property-ifsub:
+
 IFSUB
 -----
 
-..  t3-menu-tmenu-state:: IFSUB
+..  confval:: IFSUB
 
-    :Data type: boolean / (config)
+    :Data type: :ref:`data-type-boolean` / (config)
 
     :Default: 0
 
     Enable/Configuration for menu items which has subpages.
 
+
+.. _tmenu-common-property-act:
+
 ACT
 ---
 
-..  t3-menu-tmenu-state:: ACT
+..  confval:: ACT
 
-    :Data type: boolean / (config)
+    :Data type: :ref:`data-type-boolean` / (config)
     :Default: 0
 
     Enable/Configuration for menu items which are found in the rootLine.
 
+
+.. _tmenu-common-property-actifsub:
+
 ACTIFSUB
 --------
 
-..  t3-menu-tmenu-state:: ACTIFSUB
+..  confval:: ACTIFSUB
 
-    :Data type: boolean / (config)
+    :Data type: :ref:`data-type-boolean` / (config)
     :Default: 0
 
     Enable/Configuration for menu items which are found in the rootLine
     and have subpages.
 
+
+.. _tmenu-common-property-cur:
+
 CUR
 ---
 
-..  t3-menu-tmenu-state:: CUR
+..  confval:: CUR
 
-    :Data type: boolean / (config)
+    :Data type: :ref:`data-type-boolean` / (config)
     :Default: 0
 
 
     Enable/Configuration for a menu item if the item is the current page.
 
+
+.. _tmenu-common-property-curifsub:
+
 CURIFSUB
 --------
 
-..  t3-menu-tmenu-state:: CURIFSUB
+..  confval:: CURIFSUB
 
-    :Data type: boolean / (config)
+    :Data type: :ref:`data-type-boolean` / (config)
     :Default: 0
 
     Enable/Configuration for a menu item if the item is the current page
     and has subpages.
 
+
+.. _tmenu-common-property-usr:
+
 USR
 ---
 
-..  t3-menu-tmenu-state:: USR
+..  confval:: USR
 
-    :Data type: boolean / (config)
+    :Data type: :ref:`data-type-boolean` / (config)
     :Default: 0
 
     Enable/Configuration for menu items which are access restricted pages
     that a user has access to.
 
+
+.. _tmenu-common-property-spc:
+
 SPC
 ---
 
-..  t3-menu-tmenu-state:: SPC
+..  confval:: SPC
 
-    :Data type: boolean / (config)
+    :Data type: :ref:`data-type-boolean` / (config)
     :Default: 0
 
     Enable/Configuration for 'Spacer' pages.
@@ -135,12 +163,15 @@ SPC
     Spacers are pages of the doktype "Spacer". These are not viewable
     pages but "placeholders" which can be used to divide menu items.
 
+
+.. _tmenu-common-property-userdef1:
+
 USERDEF1
 --------
 
-..  t3-menu-tmenu-state:: USERDEF1
+..  confval:: USERDEF1
 
-    :Data type: boolean / (config)
+    :Data type: :ref:`data-type-boolean` / (config)
 
     User defined, see :t3-menu-tmenu:`itemArrayProcFunc` for details on how
     to use this.
@@ -149,14 +180,18 @@ USERDEF1
     a script/user function processing the menu item array. See the property
     :t3-menu-tmenu:`itemArrayProcFunc` of the menu objects.
 
+
+.. _tmenu-common-property-userdef2:
+
 USERDEF2
 --------
 
-..  t3-menu-tmenu-state:: USERDEF2
+..  confval:: USERDEF2
 
-    :Data type: boolean / (config)
+    :Data type: :ref:`data-type-boolean` / (config)
 
-    Same like :t3-menu-tmenu-state:`USERDEF1` but has a higher priority.
+    Same like :ref:`USERDEF1 <tmenu-common-property-userdef1>` but has a higher
+    priority.
 
 
 .. _menu-common-properties:
