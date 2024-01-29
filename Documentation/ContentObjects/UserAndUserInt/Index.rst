@@ -42,7 +42,7 @@ Properties
 userFunc
 --------
 
-..  t3-cobj-user:: userFunc
+..  confval:: userFunc
 
     :Data type: :ref:`data-type-function-name`
 
@@ -68,7 +68,7 @@ userFunc
 (properties you define)
 -----------------------
 
-..  t3-cobj-user:: (properties you define)
+..  confval:: (properties you define)
 
     :Data type: (the data type you want)
 
@@ -82,22 +82,22 @@ userFunc
 stdWrap
 -------
 
-..  t3-cobj-user:: stdWrap
+..  confval:: stdWrap
 
     :Data type: :ref:`stdWrap`.
 
 cache
 -----
 
-..  t3-cobj-user:: cache
+..  confval:: cache
 
     :Data type: :ref:`cache <cache>`
 
     See :ref:`cache function description <cache>` for details.
 
 
-.. _cobj-user-examples:
-.. _cobj-user-int-examples:
+..  _cobj-user-examples:
+..  _cobj-user-int-examples:
 
 Examples
 ========
