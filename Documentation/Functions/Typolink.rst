@@ -758,7 +758,7 @@ record
     The (individual) identifier of the link building configuration to be used.
 
     The same identifier is used as key in the TypoScript configuration of
-    the frontend rendering: :t3-tlo-config:`recordLinks` and the :ref:`TSconfig
+    the frontend rendering: :ref:`setup-config-recordLinks` and the :ref:`TSconfig
     backend link handler configuration <t3tsconfig:pagetcemaintables-linkhandler>`
 
 ..  t3-typolink-handler:: record.uid
