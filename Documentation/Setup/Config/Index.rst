@@ -50,7 +50,7 @@ Known properties of 'config'
 absRefPrefix
 ============
 
-..  t3-tlo-config:: absRefPrefix
+..  confval:: absRefPrefix
 
     :Data type: :ref:`data-type-string`
     :Special value: "auto"
@@ -101,7 +101,7 @@ absRefPrefix
 additionalHeaders
 =================
 
-..  t3-tlo-config:: additionalHeaders
+..  confval:: additionalHeaders
 
     :Data type: numerically indexed array of "HTTP header entries".
 
