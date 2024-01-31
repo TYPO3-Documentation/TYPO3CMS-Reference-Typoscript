@@ -54,7 +54,7 @@ Properties of 'config'
 absRefPrefix
 ------------
 
-..  t3-tlo-config:: absRefPrefix
+..  confval:: absRefPrefix
 
     :Data type: :ref:`data-type-string`
     :Special value: "auto"
@@ -108,7 +108,7 @@ absRefPrefix
 additionalHeaders
 -----------------
 
-..  t3-tlo-config:: additionalHeaders
+..  confval:: additionalHeaders
 
     :Data type: numerically indexed array of "HTTP header entries".
 
@@ -1800,10 +1800,13 @@ pageTitleSeparator
                 }
             }
 
+
+..  _setup-config-recordLinks:
+
 recordLinks
 -----------
 
-..  t3-tlo-config:: recordLinks
+..  confval:: recordLinks
 
     :Data Type: array of link configurations
 
