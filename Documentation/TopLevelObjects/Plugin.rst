@@ -416,7 +416,7 @@ The root paths work just like the one in the
 .. code-block:: typoscript
    :caption: EXT:blog_example/Configuration/TypoScript/setup.typoscript
 
-   plugin.blog_example {
+   plugin.tx_blogexample {
        view {
            layoutRootPaths {
                0 = EXT:blog_example/Resources/Private/Layouts/
