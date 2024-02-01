@@ -23,16 +23,18 @@ rendered content will be stored in the cache, if :typoscript:`cache.key` was set
 configuration options :typoscript:`cache.tags` and :typoscript:`cache.lifetime` allow to control
 the caching.
 
-.. contents::
-   :local:
+..  contents::
+    :local:
 
 Properties
 ==========
 
+..  _cache-key:
+
 key
 ---
 
-..  t3-function-cache:: key
+..  confval:: key
 
     :Data type: :ref:`data-type-string` / :ref:`stdwrap`
 
@@ -45,10 +47,13 @@ key
         cache key that is accurate enough to distinguish different versions of the
         rendered content while being generic enough to stay efficient.
 
+
+..  _cache-lifetime:
+
 lifetime
 --------
 
-..  t3-function-cache:: lifetime
+..  confval:: lifetime
 
     :Data type: mixed / :ref:`stdwrap`
     :Default: default
@@ -73,10 +78,13 @@ lifetime
         The default cache lifetime as configured in :typoscript:`config.cache_period` is
         used.
 
+
+..  _cache-tags:
+
 tags
 ----
 
-..  t3-function-cache:: tags
+..  confval:: tags
 
     :Data type: :ref:`data-type-string` / :ref:`stdwrap`
 
@@ -85,7 +93,7 @@ tags
     `cache_pages` cache) and can be used to purge the cached content.
 
 
-.. _cache-examples:
+..  _cache-examples:
 
 Examples
 ========
