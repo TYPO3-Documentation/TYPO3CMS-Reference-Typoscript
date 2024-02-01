@@ -94,7 +94,7 @@ Properties
 
          Here the links to pages on level 3 will have :html:`target="page"`, while
          all other levels will have :html:`target="_top"` as defined for the
-         :ref:`TMENU <tmenu>` property :t3-menu-tmenu:`target`.
+         :ref:`TMENU <tmenu>` property :ref:`menu-common-properties-target`.
 
          .. code-block:: typoscript
             :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
