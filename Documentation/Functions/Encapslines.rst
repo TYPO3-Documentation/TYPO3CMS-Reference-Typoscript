@@ -1,8 +1,8 @@
-.. include:: /Includes.rst.txt
-.. index::
-   Functions; encapsLines
-   encapsLines
-.. _encapslines:
+..  include:: /Includes.rst.txt
+..  index::
+    Functions; encapsLines
+    encapsLines
+..  _encapslines:
 
 ===========
 encapsLines
@@ -36,12 +36,14 @@ like this:
 Properties
 ==========
 
+..  _encapslines-encapsTagList:
+
 encapsTagList
 -------------
 
-..  t3-function-encapslines:: encapsTagList
+..  confval:: encapsTagList
 
-    :Data type: list of strings
+    :Data type: list of :ref:`data-type-string`
 
     List of tags which qualify as encapsulating tags. Must be lowercase.
 
@@ -65,10 +67,12 @@ encapsTagList
         <B>Some text</B>
 
 
+..  _encapslines-remapTag:
+
 remapTag.[*tagname*]
 --------------------
 
-..  t3-function-encapslines:: remapTag
+..  confval:: remapTag
 
     :Data type: array of :ref:`data-type-string`
 
@@ -91,12 +95,15 @@ remapTag.[*tagname*]
 
     ([*tagname*] is in uppercase.)
 
+
+..  _encapslines-addAttributes:
+
 addAttributes.[*tagname*]
 -------------------------
 
-..  t3-function-encapslines:: addAttributes
+..  confval:: addAttributes
 
-    :Data type: *(array of strings)*
+    :Data type: array of :ref:`data-type-string`
     :Default: Always override/set the value of the attributes.
 
     Attributes to set in the encapsulation tag.
@@ -125,10 +132,13 @@ addAttributes.[*tagname*]
             align = center
         }
 
+
+..  _encapslines-removeWrapping:
+
 removeWrapping
 --------------
 
-..  t3-function-encapslines:: removeWrapping
+..  confval:: removeWrapping
 
     :Data type: :ref:`data-type-boolean`
 
@@ -154,10 +164,13 @@ removeWrapping
         Some text
         <b>Some text</b>
 
+
+..  _encapslines-wrapNonWrappedLines:
+
 wrapNonWrappedLines
 -------------------
 
-..  t3-function-encapslines:: wrapNonWrappedLines
+..  confval:: wrapNonWrappedLines
 
     :Data type: :t3-function-stdwrap:`wrap`
 
@@ -184,42 +197,54 @@ wrapNonWrappedLines
         <P>First line of text</P>
         <p>Some text</p>
 
+
+..  _encapslines-innerStdWrap-all:
+
 innerStdWrap\_all
 -----------------
 
-..  t3-function-encapslines:: innerStdWrap_all
+..  confval:: innerStdWrap_all
 
     :Data type: :ref:`stdWrap`
 
     Wraps the content inside all lines, whether they are encapsulated or
     not.
 
+
+..  _encapslines-encapsLinesStdWrap:
+
 encapsLinesStdWrap.[*tagname*]
 ------------------------------
 
-..  t3-function-encapslines:: encapsLinesStdWrap
+..  confval:: encapsLinesStdWrap
 
-    :Data type: array of string / :ref:`stdWrap`
+    :Data type: array of :ref:`data-type-string` / :ref:`stdWrap`
 
     Wraps the content inside all encapsulated lines.
 
     ([*tagname*] is in uppercase.)
 
+
+..  _encapslines-defaultAlign:
+
 defaultAlign
 ------------
 
-..  t3-function-encapslines:: defaultAlign
+..  confval:: defaultAlign
 
     :Data type: :ref:`data-type-string` / :ref:`stdWrap`
 
     If set, this value is set as the default "align" value of the wrapping
-    tags, both from :t3-function-encapslines:`encapsTagList` and
-    :t3-function-encapslines:`nonWrappedTag`
+    tags, both from :ref:`encapslines-encapsTagList` and
+    :ref:`encapslines-nonWrappedTag`
+
+
+..  _encapslines-nonWrappedTag:
 
 nonWrappedTag
 -------------
 
-..  t3-function-encapslines:: nonWrappedTag
+..  confval:: nonWrappedTag
 
     :Data type: :typoscript:`tagname`
 
@@ -231,7 +256,7 @@ nonWrappedTag
     lines more easily.
 
 
-.. _encapslines-examples:
+..  _encapslines-examples:
 
 Examples
 ========
