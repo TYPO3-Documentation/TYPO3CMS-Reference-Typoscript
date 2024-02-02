@@ -173,12 +173,12 @@ USERDEF1
 
     :Data type: :ref:`data-type-boolean` / (config)
 
-    User defined, see :t3-menu-tmenu:`itemArrayProcFunc` for details on how
+    User-defined, see :ref:`menu-common-properties-itemArrayProcFunc` for details on how
     to use this.
 
     You can set the ITEM\_STATE values USERDEF1 and USERDEF2 (+...RO) from
     a script/user function processing the menu item array. See the property
-    :t3-menu-tmenu:`itemArrayProcFunc` of the menu objects.
+    :ref:`menu-common-properties-itemArrayProcFunc` of the menu objects.
 
 
 .. _tmenu-common-property-userdef2:
@@ -194,19 +194,21 @@ USERDEF2
     priority.
 
 
-.. _menu-common-properties:
+..  _menu-common-properties:
 
-.. index:: TMENU; properties
+..  index:: TMENU; properties
 
 Properties
 ==========
 
+..  _menu-common-properties-expAll:
+
 expAll
 ------
 
-..  t3-menu-tmenu:: expAll
+..  confval:: expAll
 
-    :Data type: boolean /:ref:`stdWrap <stdwrap>`
+    :Data type: :ref:`data-type-boolean` / :ref:`stdWrap <stdwrap>`
 
     If this is true, the menu will always show the menu on the level
     underneath the menu item. This corresponds to a situation where a user
@@ -221,6 +223,9 @@ collapse (removed)
     the PSR-14 event :ref:`t3coreapi:FilterMenuItemsEvent` to modify the menu
     items.
 
+
+..  _menu-common-properties-sectionIndex:
+
 sectionIndex
 ------------
 
@@ -231,9 +236,10 @@ the cObjects rendered on the page. In other words, the menu items will
 be a section index with links to the content elements on the page (by
 default with colPos=0!).
 
-..  t3-menu-tmenu:: sectionIndex
 
-    :Data type: boolean
+..  confval:: sectionIndex
+
+    :Data type: :ref:`data-type-boolean`
 
     If you set this, all content elements (from tt\_content table) of
     "Column" = "Normal" *and* the "Index"-check box clicked are selected.
@@ -243,9 +249,9 @@ default with colPos=0!).
 sectionIndex.type
 ~~~~~~~~~~~~~~~~~
 
-..  t3-menu-tmenu:: sectionIndex.type
+..  confval:: sectionIndex.type
 
-    :Data type: string ("all" / "header")
+    :Data type: :ref:`data-type-string` ("all" / "header")
 
     "all"
         The "Index"-checkbox is not considered and all content elements - by
@@ -260,9 +266,9 @@ sectionIndex.type
 sectionIndex.includeHiddenHeaders
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-..  t3-menu-tmenu:: sectionIndex.includeHiddenHeaders
+..  confval:: sectionIndex.includeHiddenHeaders
 
-    :Data type: boolean
+    :Data type: :ref:`data-type-boolean`
 
      If you set this and sectionIndex.type is set to "header",
      also elements with a header layout set to "Hidden" will appear
@@ -271,9 +277,9 @@ sectionIndex.includeHiddenHeaders
 sectionIndex.useColPos
 ~~~~~~~~~~~~~~~~~~~~~~
 
-..  t3-menu-tmenu:: sectionIndex.useColPos
+..  confval:: sectionIndex.useColPos
 
-    :Data type: integer /:ref:`stdWrap <stdwrap>`
+    :Data type: :ref:`data-type-integer` / :ref:`stdWrap <stdwrap>`
 
     :Default: 0
 
@@ -337,30 +343,38 @@ Basically this shows that
     pages and thereby have no children.
 
 
+..  _menu-common-properties-target:
+
 target
 ------
 
-..  t3-menu-tmenu:: target
+..  confval:: target
 
-    :Data type: target
+    :Data type: :ref:`data-type-target`
     :Default: self
 
     Target of the menu links
 
+
+..  _menu-common-properties-forceTypeValue:
+
 forceTypeValue
 ---------------
 
-..  t3-menu-tmenu:: forceTypeValue
+..  confval:: forceTypeValue
 
-    :Data type: integer
+    :Data type: :ref:`data-type-integer`
 
     If set, the `&type` parameter of the link is forced to this value
     regardless of target.
 
+
+..  _menu-common-properties-stdWrap:
+
 stdWrap
 -------
 
-..  t3-menu-tmenu:: stdWrap
+..  confval:: stdWrap
 
     :Data type: :ref:`stdWrap <stdwrap>`
 
@@ -380,19 +394,25 @@ stdWrap
            }
         }
 
+
+..  _menu-common-properties-wrap:
+
 wrap
 ----
 
-..  t3-menu-tmenu:: wrap
+..  confval:: wrap
 
     :Data type: :ref:`wrap <data-type-wrap>`
 
     Wraps the whole block of sub items, but only if there were items in the menu!
 
+
+..  _menu-common-properties-IProcFunc:
+
 IProcFunc
 ---------
 
-..  t3-menu-tmenu:: IProcFunc
+..  confval:: IProcFunc
 
     :Data type: function name
 
@@ -401,13 +421,16 @@ IProcFunc
     compiled by implode()'ing the array $I[parts] in the passed array.
     Thus you may modify this if you need to.
 
+
+..  _menu-common-properties-item-states:
+
 Item States
 -----------
 
 ..  todo: This does not seem to make sense?  Remove? Item states are already
     listed above
 
-..  t3-menu-tmenu:: [Item States, like NO, ACT, CUR etc]
+..  confval:: [Item States, like NO, ACT, CUR etc]
 
     :Data type: ->TMENUITEM
 
@@ -421,12 +444,14 @@ Item States
      the items are generated.
 
 
+..  _menu-common-properties-alternativeSortingField:
+
 alternativeSortingField
 -----------------------
 
-..  t3-menu-tmenu:: alternativeSortingField
+..  confval:: alternativeSortingField
 
-    :Data type: string
+    :Data type: :ref:`data-type-string`
 
     Normally the menu items are sorted by the fields "sorting" in the
     pages- and tt\_content-table. Here you can enter a list of fields that
@@ -444,12 +469,15 @@ alternativeSortingField
     This property works with normal menus, sectionsIndex menus and
     special-menus of type "directory".
 
+
+..  _menu-common-properties-minItems:
+
 minItems
 --------
 
-..  t3-menu-tmenu:: minItems
+..  confval:: minItems
 
-    :Data type: integer / :ref:`stdWrap <stdwrap>`
+    :Data type: :ref:`data-type-integer` / :ref:`stdWrap <stdwrap>`
 
     The minimum items in the menu. If the number of pages does not reach
     this level, a dummy-page with the title "..." and
@@ -457,24 +485,30 @@ minItems
 
     Takes precedence over HMENU property :ref:`hmenu-minitems`.
 
+
+..  _menu-common-properties-maxItems:
+
 maxItems
 --------
 
-..  t3-menu-tmenu:: maxItems
+..  confval:: maxItems
 
-    :Data type: integer / :ref:`stdWrap <stdwrap>`
+    :Data type: :ref:`data-type-integer` / :ref:`stdWrap <stdwrap>`
 
 
     The maximum items in the menu. More items will be ignored.
 
     Takes precedence over HMENU property :ref:`hmenu-maxitems`.
 
+
+..  _menu-common-properties-begin:
+
 begin
 -----
 
-..  t3-menu-tmenu:: begin
+..  confval:: begin
 
-    :Data type: integer / :ref:`stdWrap <stdwrap>` :ref:`+calc <objects-calc>`
+    :Data type: :ref:`data-type-integer` / :ref:`stdWrap <stdwrap>` :ref:`+calc <objects-calc>`
 
 
     The first item in the menu.
@@ -491,22 +525,28 @@ begin
 
     Takes precedence over :HMENU property :ref:`hmenu-begin`.
 
+
+..  _menu-common-properties-debugItemConf:
+
 debugItemConf
 -------------
 
-..  t3-menu-tmenu:: debugItemConf
+..  confval:: debugItemConf
 
-    :Data type: boolean
+    :Data type: :ref:`data-type-boolean`
 
     Outputs (by the :php:`debug()` function) the configuration arrays for each
     menu item. Useful to debug :ref:`optionsplit` things and such...
 
+
+..  _menu-common-properties-overrideId:
+
 overrideId
 ----------
 
-..  t3-menu-tmenu:: overrideId
+..  confval:: overrideId
 
-    :Data type: integer (page id)
+    :Data type: :ref:`data-type-integer` (page id)
 
     If set, then all links in the menu will point to this pageid. Instead
     the real uid of the page is sent by the parameter "&real\_uid=[uid]".
@@ -515,14 +555,17 @@ overrideId
     else, perhaps a shared menu, but wants the menu items to call the same
     page, which then generates a proper output based on the real\_uid.
 
+
+..  _menu-common-properties-addParams:
+
 addParams
 ---------
 
-..  t3-menu-tmenu:: addParams
+..  confval:: addParams
 
-    :Data type: string
+    :Data type: :ref:`data-type-string`
 
-    Additional parameter for the menu-links.
+    Additional parameter for the menu links.
 
     **Example:**
 
@@ -537,9 +580,9 @@ addParams
 showAccessRestrictedPages
 --------------------------
 
-..  t3-menu-tmenu:: showAccessRestrictedPages
+..  confval:: showAccessRestrictedPages
 
-    :Data type: integer (page ID) / keyword "NONE"
+    :Data type: :ref:`data-type-integer` (page ID) / keyword "NONE"
 
 
     If set, pages in the menu will include pages with frontend user group
@@ -581,12 +624,15 @@ showAccessRestrictedPages
     variable "pageId". Additionally, a CSS class "restricted" is added to the
     anchor tag.
 
+
+..  _menu-common-properties-additionalWhere:
+
 additionalWhere
 ---------------
 
-..  t3-menu-tmenu:: additionalWhere
+..  confval:: additionalWhere
 
-    :Data type: string / :ref:`stdWrap <stdwrap>`
+    :Data type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
 
     Adds an additional part to the WHERE clause for this menu.
     Make sure to start the part with "AND "!
@@ -600,10 +646,13 @@ additionalWhere
         lib.authormenu.1 = TMENU
         lib.authormenu.1.additionalWhere = AND author!=""
 
+
+..  _menu-common-properties-itemArrayProcFunc:
+
 itemArrayProcFunc
 -----------------
 
-..  t3-menu-tmenu:: itemArrayProcFunc
+..  confval:: itemArrayProcFunc
 
     :Data type: function name
 
@@ -626,12 +675,15 @@ itemArrayProcFunc
     You can override element states like SPC, IFSUB, ACT, CUR or USR by
     setting the key ITEM\_STATE in the page records.
 
+
+..  _menu-common-properties-submenuObjSuffixes:
+
 submenuObjSuffixes
 ------------------
 
-..  t3-menu-tmenu:: submenuObjSuffixes
+..  confval:: submenuObjSuffixes
 
-    :Data type: string / optionSplit
+    :Data type: :ref:`data-type-string` / :ref:`optionsplit`
 
     Defines a suffix for alternative sub-level menu objects. Useful to
     create special submenus depending on their parent menu element. See
