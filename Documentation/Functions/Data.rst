@@ -58,6 +58,29 @@ Properties
 .. contents::
    :local:
 
+.. _data-type-gettext-applicationcontext:
+
+applicationcontext
+------------------
+
+:aspect:`getText Key:`
+   applicationcontext
+
+:aspect:`Description:`
+   Returns the current :ref:`application context <t3coreapi:application-context>`
+   as string.
+
+:aspect:`Example:`
+   Evaluate if the current application context is "Production":
+
+   .. code-block:: typoscript
+      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+      if {
+         value.data = applicationcontext
+         equals = Production
+      }
+
 .. _data-type-gettext-cobj:
 
 cObj
