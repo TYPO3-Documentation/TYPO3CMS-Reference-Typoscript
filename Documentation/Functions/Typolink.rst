@@ -542,13 +542,13 @@ Resource handler key (`page`)
     The resource handler key is a list of available handlers that TYPO3 can work
     with. At the time of writing these handlers are:
 
-    -   :t3-typolink-handler:`page`
-    -   :t3-typolink-handler:`file`
-    -   :t3-typolink-handler:`folder`
-    -   :t3-typolink-handler:`url`
-    -   :t3-typolink-handler:`email`
-    -   :t3-typolink-handler:`record` (see :php:`\TYPO3\CMS\Core\LinkHandling\RecordLinkHandler`)
-    -   :t3-typolink-handler:`phone` (see :php:`\TYPO3\CMS\Core\LinkHandling\TelephoneLinkHandler`)
+    -   :ref:`typolink-handler-page`
+    -   :ref:`typolink-handler-file`
+    -   :ref:`typolink-handler-folder`
+    -   :ref:`typolink-handler-url`
+    -   :ref:`typolink-handler-email`
+    -   :ref:`typolink-handler-record` (see :php:`\TYPO3\CMS\Core\LinkHandling\RecordLinkHandler`)
+    -   :ref:`typolink-handler-phone` (see :php:`\TYPO3\CMS\Core\LinkHandling\TelephoneLinkHandler`)
 
     More keys can be added via :php:`$GLOBALS['TYPO3_CONF_VARS']['SYS']['linkHandler']` in
     an associative array where the key is the handler key and the value is a
@@ -560,7 +560,7 @@ Resource parameters (`?uid=13&campaignCode=ABC123`)
     configure the behavior of any handler.
 
 
-.. index::
+..  index::
     typolink; Link handler syntax
     Link handler
 
@@ -568,11 +568,12 @@ Handler syntax
 ==============
 
 ..  index:: Link handler; page
+..  _typolink-handler-page:
 
 page
 ----
 
-..  t3-typolink-handler:: page
+..  confval:: page
 
     :Data Type: string of parameters
     :Implementation: :t3src:`core/Classes/LinkHandling/PageLinkHandler.php`
@@ -580,9 +581,11 @@ page
 
     The page identifier is a compound string based on several optional settings.
 
-..  t3-typolink-handler:: page.uid
+..  _typolink-handler-page-uid:
 
-    :Data Type: int / string
+..  confval:: page.uid
+
+    :Data Type: :ref:`data-type-integer` / :ref:`data-type-string`
     :Example:  `t3://page?uid=13`
 
     The UID (field :sql:`uid`) of a page record, or "current" to reference
@@ -592,18 +595,18 @@ page
     *   `t3://page?uid=current`
 
 
-..  t3-typolink-handler:: page.alias
+..  confval:: page.alias
 
-    :Data Type: string
+    :Data Type: :ref:`data-type-string`
     :Example: `t3://page?alias=myfunkyalias`
 
     The alias (field :sql:`alias`) of a page record (as an alternative to
-    :t3-typolink-handler:`page.uid`).
+    :ref:`page.uid <typolink-handler-page-uid>`).
 
 
-..  t3-typolink-handler:: page.type
+..  confval:: page.type
 
-    :Data Type: int
+    :Data Type: :ref:`data-type-integer`
     :Default: 0
     :Example: `t3://page?uid=13&type=3`
 
@@ -611,27 +614,28 @@ page
     object). `t3://page?uid=13&type=3` will reference page 13 in type 3.
 
 
-..  t3-typolink-handler:: page.parameters
+..  confval:: page.parameters
 
     :Data Type: string of parameters
     :Example: `t3://page?uid=1313&my=param&will=get&added=here`
 
     String of parameters, prefixed with `&`, to be added to the URL.
 
-..  t3-typolink-handler:: page.fragment
+..  confval:: page.fragment
 
-    :Data Type: string
+    :Data Type: :ref:`data-type-string`
     :Example: `t3://page?uid=13&type=3#123`
 
     The anchor or section to jump to. Must be prefixed with `#`.
 
 
-.. index:: Link handler; file
+..  index:: Link handler; file
+..  _typolink-handler-file:
 
 file
 ----
 
-..  t3-typolink-handler:: file
+..  confval:: file
 
     :Data Type: string of parameters
     :Implementation: :t3src:`core/Classes/LinkHandling/FileLinkHandler.php`
@@ -640,18 +644,18 @@ file
     Links to a file to download.
 
 
-..  t3-typolink-handler:: file.uid
+..  confval:: file.uid
 
-    :Data Type: int
+    :Data Type: :ref:`data-type-integer`
     :Example:  `t3://file?uid=13`
 
     The UID of a file within the file abstraction layer (FAL) database table
     :sql:`sys_file`.
 
 
-..  t3-typolink-handler:: file.identifier
+..  confval:: file.identifier
 
-    :Data Type: int
+    :Data Type: :ref:`data-type-integer`
     :Example: `t3://file?identifier=fileadmin/path/myfile.jpg`
 
     The identifier of a file using combined `<storage>:<path>` reference or a direct
@@ -663,17 +667,18 @@ file
     *    `t3://file?identifier=fileadmin/path/myfile.jpg`
 
     ..  attention::
-        :t3-typolink-handler:`file` cannot resolve links to files in extensions.
+        :typoscript:`file` cannot resolve links to files in extensions.
         The files must lie in a storage and be accessible via the backend module
-        :guilabel:`Filelist`.
+        :guilabel:`File > Filelist`.
 
 
-.. index:: Link handler; folder
+..  index:: Link handler; folder
+..  _typolink-handler-folder:
 
 folder
 ------
 
-..  t3-typolink-handler:: folder
+..  confval:: folder
 
     :Data Type: string of parameters
     :Implementation: :t3src:`core/Classes/LinkHandling/FolderLinkHandler.php`
@@ -681,27 +686,28 @@ folder
 
     Links to a folder.
 
-..  t3-typolink-handler:: folder.identifier
+..  confval:: folder.identifier
 
-    :Data Type: string
+    :Data Type: :ref:`data-type-string`
     :Example:  `t3://folder?identifier=fileadmin`
 
     The identifier of a given folder.
 
-..  t3-typolink-handler:: folder.storage
+..  confval:: folder.storage
 
-    :Data Type: string
+    :Data Type: :ref:`data-type-string`
     :Example: `t3://folder?storage=1&identifier=myfolder`
     :Default: 0
 
     The file abstraction layer (FAL) storage UID to the given folder.
 
-.. index:: Link handler; email
+..  index:: Link handler; email
+..  _typolink-handler-email:
 
 email
 -----
 
-..  t3-typolink-handler:: email
+..  confval:: email
 
     :Data Type: string of parameters
     :Implementation: :t3src:`core/Classes/LinkHandling/EmailLinkHandler.php`
@@ -709,12 +715,13 @@ email
 
     Mail address to be used, prefixed with `mailto:`
 
-.. index:: Link handler; url
+..  index:: Link handler; url
+..  _typolink-handler-url:
 
 url
 ---
 
-..  t3-typolink-handler:: url
+..  confval:: url
 
     :Data Type: string of parameters
     :Implementation: :t3src:`core/Classes/LinkHandling/EmailLinkHandler.php`
@@ -733,12 +740,13 @@ url
     *   `t3://url?url=https://example.org`
     *   `t3://url?url=https://example.org%26parameter=value`
 
-.. index:: Link handler; record
+..  index:: Link handler; record
+..  _typolink-handler-record:
 
 record
 ------
 
-..  t3-typolink-handler:: record
+..  confval:: record
 
     :Data Type: string of parameters
     :Implementation: :t3src:`core/Classes/LinkHandling/RecordLinkHandler.php`
@@ -748,12 +756,15 @@ record
     :ref:`Record link tutorial in TYPO3 Explained
     <t3coreapi:TableRecordLinkBrowserTutorials>`.
 
-    Parameters :t3-typolink-handler:`record.identifier` and
-    :t3-typolink-handler:`record.uid` are mandatory for this link handler.
+    Parameters :ref:`record.identifier <typolink-handler-record-identifier>` and
+    :ref:`record.uid <typolink-handler-record-uid>` are mandatory for this link
+    handler.
 
-..  t3-typolink-handler:: record.identifier
+..  _typolink-handler-record-identifier:
 
-    :Data Type: string
+..  confval:: record.identifier
+
+    :Data Type: :ref:`data-type-string`
 
     The (individual) identifier of the link building configuration to be used.
 
@@ -761,19 +772,22 @@ record
     the frontend rendering: :ref:`setup-config-recordLinks` and the :ref:`TSconfig
     backend link handler configuration <t3tsconfig:pagetcemaintables-linkhandler>`
 
-..  t3-typolink-handler:: record.uid
+..  _typolink-handler-record-uid:
 
-    :Data Type: int
+..  confval:: record.uid
+
+    :Data Type: :ref:`data-type-integer`
 
     The UID of the referenced record to be linked.
 
 
-.. index:: Link handler; url
+..  index:: Link handler; url
+..  _typolink-handler-phone:
 
 phone
 -----
 
-..  t3-typolink-handler:: phone
+..  confval:: phone
 
     :Data Type: string of parameters
     :Implementation: :t3src:`core/Classes/LinkHandling/TelephoneLinkHandler.php`
@@ -811,7 +825,7 @@ Just display the URL:
 
 Output:
 
-..  code-block:: html
+..  code-block:: text
     :caption: Example output
 
     /somepage
