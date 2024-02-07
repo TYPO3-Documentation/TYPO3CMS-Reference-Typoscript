@@ -108,10 +108,8 @@ fixAttrib.[attribute].upper
 
     :Data type: :ref:`data-type-boolean`
 
-    If true, the value is passed through the
-    respective PHP-function.
-
-    .. TODO: There is not such PHP function, probably strtoupper?
+    If true, the value is passed through the PHP function
+    `strtoupper() <https://www.php.net/manual/en/function.strtoupper.php>`__.
 
 fixAttrib.[attribute].lower
 ---------------------------
@@ -120,10 +118,8 @@ fixAttrib.[attribute].lower
 
     :Data type: :ref:`data-type-boolean`
 
-    If true, the value is passed through the
-    respective PHP-function.
-
-    .. TODO: There is not such PHP function, probably strtolower?
+    If true, the value is passed through the PHP function
+    `strtolower() <https://www.php.net/manual/en/function.strtolower.php>`__.
 
 fixAttrib.[attribute].range
 ---------------------------
