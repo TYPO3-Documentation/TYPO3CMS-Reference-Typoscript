@@ -63,6 +63,8 @@ Properties
 applicationcontext
 ------------------
 
+..  versionadded:: 13.0
+
 :aspect:`getText Key:`
    applicationcontext
 
