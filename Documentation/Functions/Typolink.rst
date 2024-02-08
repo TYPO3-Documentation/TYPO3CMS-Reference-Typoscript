@@ -19,8 +19,8 @@ must set the property by :typoscript:`returnLast = url` or
     If typolink is used from :typoscript:`parseFunc` the :php:`$cObj->parameters` array is
     loaded with the lowercase link parameters!
 
-.. contents::
-   :local:
+..  contents::
+    :local:
 
 ..  index:: tags; Properties
 ..  _typolink-properties:
@@ -28,32 +28,40 @@ must set the property by :typoscript:`returnLast = url` or
 Properties
 ==========
 
+..  _typolink-extTarget:
+
 extTarget
 ---------
 
-..  t3-function-typolink:: extTarget
+..  confval:: extTarget
 
-    :Data type: target / :ref:`stdwrap`
+    :Data type: :ref:`data-type-target` / :ref:`stdwrap`
 
     :Default: `_top`
 
     Target used for external links
 
+
+..  _typolink-fileTarget:
+
 fileTarget
 ----------
 
-..  t3-function-typolink:: fileTarget
+..  confval:: fileTarget
 
-    :Data type: target / :ref:`stdwrap`
+    :Data type: :ref:`data-type-target` / :ref:`stdwrap`
 
     Target used for file links
+
+
+..  _typolink-language:
 
 language
 --------
 
-..  t3-function-typolink:: language
+..  confval:: language
 
-    :Data type: integer
+    :Data type: :ref:`data-type-integer`
 
     Language uid for link target
 
@@ -72,19 +80,25 @@ language
         page.20.typolink.parameter = 23
         page.20.typolink.language = 3
 
+
+..  _typolink-target:
+
 target
 ------
 
-..  t3-function-typolink:: target
+..  confval:: target
 
-    :Data type: target / :ref:`stdwrap`
+    :Data type: :ref:`data-type-target` / :ref:`stdwrap`
 
     Target used for internal links
+
+
+..  _typolink-no-cache:
 
 no\_cache
 ---------
 
-..  t3-function-typolink:: no_cache
+..  confval:: no_cache
 
     :Data type: :ref:`data-type-boolean` / :ref:`stdwrap`
 
@@ -96,7 +110,7 @@ no\_cache
 additionalParams
 ----------------
 
-..  t3-function-typolink:: additionalParams
+..  confval:: additionalParams
 
     :Data type: :ref:`data-type-string` / :ref:`stdwrap`
 
@@ -124,10 +138,13 @@ additionalParams
 
     ..  note:: additionalParams are only considered for internal links.
 
+
+..  _typolink-addQueryString:
+
 addQueryString
 --------------
 
-..  t3-function-typolink:: addQueryString
+..  confval:: addQueryString
 
     :Data type: :ref:`data-type-boolean` / :ref:`data-type-string`
 
@@ -169,10 +186,12 @@ addQueryString
         typolink.addQueryString = untrusted
 
 
+..  _typolink-addQueryString-exclude:
+
 addQueryString.exclude
 ~~~~~~~~~~~~~~~~~~~~~~
 
-..  t3-function-typolink:: addQueryString.exclude
+..  confval:: addQueryString.exclude
 
     :Data type: :ref:`data-type-string`
 
@@ -194,19 +213,24 @@ addQueryString.exclude
         typolink.addQueryString.exclude = gclid
 
 
+..  _typolink-wrap:
+
 wrap
 ----
 
-..  t3-function-typolink:: wrap
+..  confval:: wrap
 
-    :Data type: wrap / :ref:`stdwrap`
+    :Data type: :ref:`data-type-wrap` / :ref:`stdwrap`
 
     Wraps the links.
+
+
+..  _typolink-ATagBeforeWrap:
 
 ATagBeforeWrap
 --------------
 
-..  t3-function-typolink:: ATagBeforeWrap
+..  confval:: ATagBeforeWrap
 
     :Data type: :ref:`data-type-boolean`
     :Default: 0
@@ -214,10 +238,13 @@ ATagBeforeWrap
     If set, the link is first wrapped with :typoscript:`wrap` and then the
     <A>-tag.
 
+
+..  _typolink-parameter:
+
 parameter
 ---------
 
-..  t3-function-typolink:: parameter
+..  confval:: parameter
 
     :Data type: :ref:`data-type-string` / :ref:`stdwrap`
 
@@ -352,10 +379,13 @@ parameter
 
                 typolink.parameter.data = parameters : allParams
 
+
+..  _typolink-forceAbsoluteUrl:
+
 forceAbsoluteUrl
 ----------------
 
-..  t3-function-typolink:: forceAbsoluteUrl
+..  confval:: forceAbsoluteUrl
 
     :Data type: :ref:`data-type-boolean`
 
@@ -364,18 +394,21 @@ forceAbsoluteUrl
     Forces links to internal pages to be absolute, thus having a proper
     URL scheme and domain prepended.
 
-    Additional sub-property: :t3-function-typolink:`forceAbsoluteUrl.scheme`
+    Additional sub-property: :ref:`typolink-forceAbsoluteUrl-scheme`
 
 ..  note::
     If the option :ref:`config.forceAbsoluteUrls <setup-config-forceAbsoluteUrls>`
-    is enabled, :t3-function-typolink:`forceAbsoluteUrl` is overridden.
+    is enabled, :ref:`typolink-forceAbsoluteUrl-scheme` is overridden.
+
+
+..  _typolink-forceAbsoluteUrl-scheme:
 
 forceAbsoluteUrl.scheme
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-..  t3-function-typolink:: forceAbsoluteUrl.scheme
+..  confval:: forceAbsoluteUrl.scheme
 
-    :Data type: string
+    :Data type: :ref:`data-type-string`
 
     :Values: :php:`http` / :php:`https`
     :Default: :php:`http`
@@ -392,19 +425,25 @@ forceAbsoluteUrl.scheme
            forceAbsoluteUrl.scheme = https
         }
 
+
+..  _typolink-title:
+
 title
 -----
 
-..  t3-function-typolink:: title
+..  confval:: title
 
     :Data type: :ref:`data-type-string` / :ref:`stdwrap`
 
     Sets the title parameter of the A-tag.
 
+
+..  _typolink-JSwindow-params:
+
 JSwindow\_params
 ----------------
 
-..  t3-function-typolink:: JSwindow_params
+..  confval:: JSwindow_params
 
     :Data type: :ref:`data-type-string`
 
@@ -416,10 +455,13 @@ JSwindow\_params
 
         page.10.typolink.JSwindow_params = status=1,menubar=1,scrollbars=1,resizable=1,location=1,directories=1,toolbar=1
 
+
+..  _typolink-returnLast:
+
 returnLast
 ----------
 
-..  t3-function-typolink:: returnLast
+..  confval:: returnLast
 
     :Data type: :ref:`data-type-string`
 
@@ -447,10 +489,13 @@ returnLast
             "additionalAttributes": []
         }
 
+
+..  _typolink-section:
+
 section
 -------
 
-..  t3-function-typolink:: section
+..  confval:: section
 
     :Data type: :ref:`data-type-string` / :ref:`stdwrap`
 
@@ -460,10 +505,13 @@ section
     This is used create a link, which jumps from one page directly the
     section on another page.
 
+
+..  _typolink-ATagParams:
+
 ATagParams
 ----------
 
-..  t3-function-typolink:: ATagParams
+..  confval:: ATagParams
 
     :Data type: <A>-params / :ref:`stdwrap`
 
@@ -476,20 +524,26 @@ ATagParams
 
         page.10.typolink.ATagParams = class="board"
 
+
+..  _typolink-linkAccessRestrictedPages:
+
 linkAccessRestrictedPages
 -------------------------
 
-..  t3-function-typolink:: linkAccessRestrictedPages
+..  confval:: linkAccessRestrictedPages
 
     :Data type: :ref:`data-type-boolean`
 
     If set, typolinks pointing to access restricted pages will still link
     to the page even though the page cannot be accessed.
 
+
+..  _typolink-userFunc:
+
 userFunc
 --------
 
-..  t3-function-typolink:: userFunc
+..  confval:: userFunc
 
     :Data type: :ref:`data-type-function-name`
 
@@ -515,8 +569,8 @@ userFunc
 
     The userfunction must return an <A>-tag.
 
-.. index:: typolink; Resource references
-.. _typolink-resource_references:
+..  index:: typolink; Resource references
+..  _typolink-resource_references:
 
 Resource references
 ===================
