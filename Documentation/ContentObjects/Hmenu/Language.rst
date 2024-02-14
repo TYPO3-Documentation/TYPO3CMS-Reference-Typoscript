@@ -71,7 +71,7 @@ Creates a language menu with pure Typoscript:
 .. include:: /CodeSnippets/Menu/TypoScript/LanguageMenuLib.rst.txt
 
 .. seealso::
-   For a langauge menu styled by Fluid see
+   For a language menu styled by Fluid see
    :ref:`LanguageMenuProcessor <LanguageMenuProcessor>`.
 
 Note on item states
