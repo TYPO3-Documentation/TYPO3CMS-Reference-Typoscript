@@ -364,9 +364,7 @@ addQueryString
 
 ..  confval:: addQueryString
 
-    :Data type: :ref:`data-type-string`
-
-    *see typolink.addQueryString*
+    :Data type: :ref:`->addQueryString <typolink-addQueryString>`
 
     **Note:** This works only for *special=language*.
 
