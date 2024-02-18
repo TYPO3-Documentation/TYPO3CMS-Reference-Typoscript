@@ -1,32 +1,37 @@
-.. include:: /Includes.rst.txt
-.. index::
-   Functions; HTMLparser_tags
-   HTMLparser_tags
-.. _htmlparser-tags:
+..  include:: /Includes.rst.txt
+..  index::
+    Functions; HTMLparser_tags
+    HTMLparser_tags
+..  _htmlparser-tags:
 
 ================
 HTMLparser\_tags
 ================
 
-.. contents::
-   :local:
+..  contents::
+    :local:
 
 Properties
 ==========
 
+..  _htmlparser-tags-overrideAttribs:
+
 overrideAttribs
 ---------------
 
-..  t3-function-htmlparser-tags:: overrideAttribs
+..  confval:: overrideAttribs
 
     :Data type: :ref:`data-type-string`
 
     If set, this string is preset as the attributes of the tag.
 
+
+..  _htmlparser-tags-allowedAttribs:
+
 allowedAttribs
 --------------
 
-..  t3-function-htmlparser-tags:: allowedAttribs
+..  confval:: allowedAttribs
 
     :Data type: mixed
 
@@ -43,107 +48,140 @@ allowedAttribs
     (blank/not set)
         All attributes are allowed.
 
+
+..  _htmlparser-tags-fixAttrib-set:
+
 fixAttrib.[attribute].set
 -------------------------
 
-..  t3-function-htmlparser-tags:: fixAttrib.[attribute].set
+..  confval:: fixAttrib.[attribute].set
 
     :Data type: :ref:`data-type-string`
 
     Force the attribute value to this value.
 
+
+..  _htmlparser-tags-fixAttrib-unset:
+
 fixAttrib.[attribute].unset
 ---------------------------
 
-..  t3-function-htmlparser-tags:: fixAttrib.[attribute].unset
+..  confval:: fixAttrib.[attribute].unset
 
     :Data type: :ref:`data-type-boolean`
 
     If set, the attribute is unset.
 
+
+..  _htmlparser-tags-fixAttrib-default:
+
 fixAttrib.[attribute].default
 -----------------------------
 
-..  t3-function-htmlparser-tags:: fixAttrib.[attribute].default
+..  confval:: fixAttrib.[attribute].default
 
     :Data type: :ref:`data-type-string`
 
     If no attribute exists by this name, this value is set as default
     value (if this value is not blank)
 
+
+..  _htmlparser-tags-fixAttrib-always:
+
 fixAttrib.[attribute].always
 ----------------------------
 
-..  t3-function-htmlparser-tags:: fixAttrib.[attribute].always
+..  confval:: fixAttrib.[attribute].always
 
     :Data type: :ref:`data-type-boolean`
 
     If set, the attribute is always processed. Normally an attribute is
     processed only if it exists
 
+
+..  _htmlparser-tags-fixAttrib-trim:
+
 fixAttrib.[attribute].trim
 --------------------------
 
-..  t3-function-htmlparser-tags:: fixAttrib.[attribute].trim
+..  confval:: fixAttrib.[attribute].trim
 
     :Data type: :ref:`data-type-boolean`
 
     If true, the value is passed through the
     respective PHP-function.
+
+
+..  _htmlparser-tags-fixAttrib-intval:
 
 fixAttrib.[attribute].intval
 ----------------------------
 
-..  t3-function-htmlparser-tags:: fixAttrib.[attribute].intval
+..  confval:: fixAttrib.[attribute].intval
 
     :Data type: :ref:`data-type-boolean`
 
     If true, the value is passed through the
     respective PHP-function.
 
+
+..  _htmlparser-tags-fixAttrib-upper:
+
 fixAttrib.[attribute].upper
 ---------------------------
 
-..  t3-function-htmlparser-tags:: fixAttrib.[attribute].upper
+..  confval:: fixAttrib.[attribute].upper
 
     :Data type: :ref:`data-type-boolean`
 
     If true, the value is passed through the PHP function
     `strtoupper() <https://www.php.net/manual/en/function.strtoupper.php>`__.
 
+
+..  _htmlparser-tags-fixAttrib-lower:
+
 fixAttrib.[attribute].lower
 ---------------------------
 
-..  t3-function-htmlparser-tags:: fixAttrib.[attribute].lower
+..  confval:: fixAttrib.[attribute].lower
 
     :Data type: :ref:`data-type-boolean`
 
     If true, the value is passed through the PHP function
     `strtolower() <https://www.php.net/manual/en/function.strtolower.php>`__.
 
+
+..  _htmlparser-tags-fixAttrib-range:
+
 fixAttrib.[attribute].range
 ---------------------------
 
-..  t3-function-htmlparser-tags:: fixAttrib.[attribute].range
+..  confval:: fixAttrib.[attribute].range
 
     :Data type: [low],[high]
 
     Setting integer range.
 
+
+..  _htmlparser-tags-fixAttrib-list:
+
 fixAttrib.[attribute].list
 --------------------------
 
-..  t3-function-htmlparser-tags:: fixAttrib.[attribute].list
+..  confval:: fixAttrib.[attribute].list
 
     :Data type: list of values, trimmed
 
     Attribute value must be in this list. If not, the value is set to the
     first element.
 
+
+..  _htmlparser-tags-fixAttrib-removeIfFalse:
+
 fixAttrib.[attribute].removeIfFalse
 -----------------------------------
 
-..  t3-function-htmlparser-tags:: fixAttrib.[attribute].removeIfFalse
+..  confval:: fixAttrib.[attribute].removeIfFalse
 
     :Data type: :ref:`data-type-boolean` / :typoscript:`blank` string
 
@@ -151,30 +189,39 @@ fixAttrib.[attribute].removeIfFalse
     If this value is set to :typoscript:`blank` then the value must be a blank string
     (that means a "zero" value will not be removed).
 
+
+..  _htmlparser-tags-fixAttrib-removeIfEquals:
+
 fixAttrib.[attribute].removeIfEquals
 ------------------------------------
 
-..  t3-function-htmlparser-tags:: fixAttrib.[attribute].removeIfEquals
+..  confval:: fixAttrib.[attribute].removeIfEquals
 
     :Data type: :ref:`data-type-string`
 
     If the attribute value matches the value set here, then it is removed.
 
+
+..  _htmlparser-tags-fixAttrib-casesensitiveComp:
+
 fixAttrib.[attribute].casesensitiveComp
 ---------------------------------------
 
-..  t3-function-htmlparser-tags:: fixAttrib.[attribute].casesensitiveComp
+..  confval:: fixAttrib.[attribute].casesensitiveComp
 
     :Data type: :ref:`data-type-boolean`
 
-    If set, the comparison in :t3-function-htmlparser-tags:`fixAttrib.[attribute].removeIfEquals`
-    and :t3-function-htmlparser-tags:`fixAttrib.[attribute].list` will be case-sensitive.
+    If set, the comparison in :ref:`htmlparser-tags-fixAttrib-removeIfEquals`
+    and :ref:`htmlparser-tags-fixAttrib-list` will be case-sensitive.
     At this point, it's insensitive.
+
+
+..  _htmlparser-tags-fixAttrib-prefixRelPathWith:
 
 fixAttrib.[attribute].prefixRelPathWith
 ---------------------------------------
 
-..  t3-function-htmlparser-tags:: fixAttrib.[attribute].prefixRelPathWith
+..  confval:: fixAttrib.[attribute].prefixRelPathWith
 
     :Data type: :ref:`data-type-string`
 
@@ -182,23 +229,28 @@ fixAttrib.[attribute].prefixRelPathWith
     like "http" and no "/" as first char) then the value of this property
     will be prefixed the attribute.
 
-:aspect:`Example`
+    Example:
+
     ..  code-block:: typoscript
         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
         lib.parser.fixAttrib.src.prefixRelPathWith = https://example.org/typo3/32/dummy/
 
+
+..  _htmlparser-tags-fixAttrib-userFunc:
+
 fixAttrib.[attribute].userFunc
 ------------------------------
 
-..  t3-function-htmlparser-tags:: fixAttrib.[attribute].userFunc
+..  confval:: fixAttrib.[attribute].userFunc
 
     :Data type: :ref:`data-type-function-name`
 
     User function for processing of the attribute. The return value
     of this function will be used as the new tag value.
 
-:aspect:`Example`
+    Example:
+
     ..  code-block:: typoscript
         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
@@ -222,37 +274,49 @@ fixAttrib.[attribute].userFunc
     In that case the first parameter passed to the user function will
     be an array containing these values:
 
+
+..  _htmlparser-tags-protect:
+
 protect
 -------
 
-..  t3-function-htmlparser-tags:: protect
+..  confval:: protect
 
     :Data type: :ref:`data-type-boolean`
 
     If set, the tag :html:`<>` is converted to :html:`&lt;` and :html:`&gt;`
 
+
+..  _htmlparser-tags-remap:
+
 remap
 -----
 
-..  t3-function-htmlparser-tags:: remap
+..  confval:: remap
 
     :Data type: :ref:`data-type-string`
 
     If set, the tagname is remapped to this tagname
 
+
+..  _htmlparser-tags-rmTagIfNoAttrib:
+
 rmTagIfNoAttrib
 ---------------
 
-..  t3-function-htmlparser-tags:: rmTagIfNoAttrib
+..  confval:: rmTagIfNoAttrib
 
     :Data type: :ref:`data-type-boolean`
 
     If set, then the tag is removed if no attributes happened to be there.
 
+
+..  _htmlparser-tags-nesting:
+
 nesting
 -------
 
-..  t3-function-htmlparser-tags:: nesting
+..  confval:: nesting
 
     :Data type: mixed
 
