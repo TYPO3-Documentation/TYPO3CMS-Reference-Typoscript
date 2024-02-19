@@ -936,8 +936,8 @@ pageTree.doktypesToShowInNewPageDragArea
     :Default: 1,6,4,7,3,254,255,199
 
     If set, the node top panel feature can be configured by a comma-separated
-    list. Each number stands for a doctype id that should be added to the node
-    top panel.
+    list. Each number stands for a :ref:`doktype ID <t3coreapi:list-of-page-types>`
+    that should be added to the node top panel.
 
     ..  figure:: /Images/ManualScreenshots/List/PanelNormal.png
         :alt: Top panel in normal mode
@@ -962,7 +962,10 @@ pageTree.excludeDoktypes
 
     :Data type: list of integers
 
-    Excludes nodes (pages) with one of the defined doktypes from the pagetree. Can be used for example for hiding custom doktypes.
+    Excludes nodes (pages) with one of the defined
+    :ref:`doktypes <t3coreapi:list-of-page-types>` from the page tree.
+    Can be used, for example, for hiding
+    :ref:`custom doktypes <t3coreapi:page-types-example>`.
 
     Example:
 
