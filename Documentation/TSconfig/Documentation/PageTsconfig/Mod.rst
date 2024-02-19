@@ -1083,7 +1083,8 @@ noViewWithDokTypes
    string
 
 :aspect:`Description`
-   Hide view icon for the defined doktypes (comma-separated)
+   Hide view icon for the defined :ref:`doktypes <t3coreapi:list-of-page-types>`
+   (comma-separated).
 
 :aspect:`Default`
    254,255

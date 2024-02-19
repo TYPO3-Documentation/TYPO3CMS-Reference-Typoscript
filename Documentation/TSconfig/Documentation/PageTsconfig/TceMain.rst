@@ -515,7 +515,8 @@ preview
     current page will be used. If the current page is not a normal page, the root page will be chosen.
 
     The :typoscript:`disableButtonForDokType` setting allows you to disable the preview button for a given list
-    of doktypes. If none are configured, this defaults to: 199, 254, 255 (Spacer, Folder and Recycler).
+    of :ref:`doktypes <t3coreapi:list-of-page-types>`. If none are configured, this defaults to: 199, 254, 255 (Spacer,
+    Folder and Recycler).
 
     The :typoscript:`useDefaultLanguageRecord` defaults to `1` and ensures that translated records will use the
     uid of the default record for the preview link. You may disable this, if your extension can deal
