@@ -747,15 +747,15 @@ site()
 
    site("languages")
       Returns array of available languages for current site.
-      For deeper information, see :ref:`condition-functions-in-frontend-context-function-siteLanguage`.
+      For deeper information, see :ref:`t3tsref:condition-functions-in-frontend-context-function-siteLanguage`.
 
    site("allLanguages")
       Returns array of available and unavailable languages for current site.
-      For deeper information, see :ref:`condition-functions-in-frontend-context-function-siteLanguage`.
+      For deeper information, see :ref:`t3tsref:condition-functions-in-frontend-context-function-siteLanguage`.
 
    site("defaultLanguage")
       Returns the default language for current site.
-      For deeper information, see :ref:`condition-functions-in-frontend-context-function-siteLanguage`.
+      For deeper information, see :ref:`t3tsref:condition-functions-in-frontend-context-function-siteLanguage`.
 
    site("configuration")
       Returns an array with all available configuration for current site.

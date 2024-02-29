@@ -227,7 +227,7 @@ linkHandler
     title in the linkbrowser. It then saves the link in the format
     `t3://record?identifier=my_content&uid=123`. To render the link in the
     frontend you need to define the same key in the TypoScript setup
-    :ref:`config.recordLinks <t3tsref:recordLinks>`.
+    :ref:`config.recordLinks <t3tsref:setup-config-recordLinks>`.
 
     ..  tip::
         For a complete example see also the :ref:`Record link tutorial
