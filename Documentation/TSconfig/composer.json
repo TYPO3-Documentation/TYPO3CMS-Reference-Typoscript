@@ -60,31 +60,5 @@
         "typo3/cms-tstemplate": "dev-main",
         "typo3/cms-viewpage": "dev-main",
         "typo3/cms-workspaces": "dev-main"
-    },
-    "scripts": {
-        "check": [
-            "@check:php",
-            "@check:rst"
-        ],
-        "check:php": [
-            "@check:php:lint",
-            "@check:php:cs"
-        ],
-        "check:php:cs": "Build/Scripts/runTests.sh -n -s cgl",
-        "check:php:lint": "Build/Scripts/runTests.sh -s lint",
-        "check:rst": "Build/Scripts/runTests.sh -s checkRst",
-        "fix": [
-            "@fix:php"
-        ],
-        "fix:php": [
-            "@fix:php:cs"
-        ],
-        "fix:php:cs": "Build/Scripts/runTests.sh -s cgl",
-        "generate:codesnippets": [
-            ".Build/vendor/bin/typo3 codesnippet:create Documentation/CodeSnippets/"
-        ],
-        "generate": [
-            "@generate:codesnippets"
-        ]
     }
 }

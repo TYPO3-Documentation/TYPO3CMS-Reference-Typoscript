@@ -42,11 +42,9 @@ No arguments: Run all checks with PHP 8.2
 Options:
     -s <...>
         Specifies which test suite to run
-            - checkRst: test .rst files for integrity
             - cgl: cgl test and fix all php files
             - composerUpdate: "composer update", handy if host has no PHP
             - lint: PHP linting
-            - rector: Apply Rector rules
 
     -p <8.2|8.3>
         Specifies the PHP minor version to be used
@@ -165,12 +163,6 @@ DOCKER_PHP_IMAGE=`echo "php${PHP_VERSION}" | sed -e 's/\.//'`
 
 # Suite execution
 case ${TEST_SUITE} in
-    checkRst)
-        setUpDockerComposeDotEnv
-        docker-compose run check_rst
-        SUITE_EXIT_CODE=$?
-        docker-compose down
-        ;;
     cgl)
         # Active dry-run for cgl needs not "-n" but specific options
         if [[ ! -z ${CGLCHECK_DRY_RUN} ]]; then
