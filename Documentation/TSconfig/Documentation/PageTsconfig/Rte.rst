@@ -431,7 +431,7 @@ allowTags
     Tags to allow. Notice, this list is  *added* to the default list,
     which you see here:
 
-    b,i,u,a,img,br,div,center,pre,font,hr,sub,sup,p,strong,em,li,ul,ol,blockquote,strike,span
+    b,i,u,a,img,br,div,center,pre,figure,figcaption,font,hr,sub,sup,p,strong,em,li,ul,ol,blockquote,strike,span,abbr,acronym,dfn
 
 .. index::
    RTE; Tags outside paragraphs
