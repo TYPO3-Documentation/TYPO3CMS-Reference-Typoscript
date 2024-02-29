@@ -14,37 +14,48 @@ HTMLparser
 Properties
 ==========
 
+..  _htmlparser-allowTags:
+
 allowTags
 ---------
 
-..  t3-function-htmlparser:: allowTags
+..  confval:: allowTags
 
     :Data type: list of tags
 
-    Default allowed tags
+    Default allowed tags.
+
+
+..  _htmlparser-stripEmptyTags:
 
 stripEmptyTags
 --------------
 
-..  t3-function-htmlparser:: stripEmptyTags
+..  confval:: stripEmptyTags
 
     :Data type: :ref:`data-type-boolean`
 
     Passes the content to PHPs :php:`strip_tags()`.
 
+
+..  _htmlparser-stripEmptyTags-keepTags:
+
 stripEmptyTags.keepTags
 -----------------------
 
-..  t3-function-htmlparser:: stripEmptyTags.keepTags
+..  confval:: stripEmptyTags.keepTags
 
     :Data type: :ref:`data-type-string`
 
     Comma separated list of tags to keep when applying :php:`strip_tags()`.
 
+
+..  _htmlparser-tags:
+
 tags.[tagname]
 --------------
 
-..  t3-function-htmlparser:: tags
+..  confval:: tags
 
     :Data type: :ref:`data-type-boolean` / string of :ref:`htmlparser-tags`
 
@@ -54,40 +65,52 @@ tags.[tagname]
 
     [tagname] in lowercase.
 
+
+..  _htmlparser-localNesting:
+
 localNesting
 ------------
 
-..  t3-function-htmlparser:: localNesting
+..  confval:: localNesting
 
     :Data type: list of tags, must be among preserved tags
 
     List of tags (among the already set tags), which will be forced to
-    have the nesting-flag set to true
+    have the nesting-flag set to true.
+
+
+..  _htmlparser-globalNesting:
 
 globalNesting
 -------------
 
-..  t3-function-htmlparser:: globalNesting
+..  confval:: globalNesting
 
     :Data type: (ibid)
 
     List of tags (among the already set tags), which will be forced to
-    have the nesting-flag set to "global"
+    have the nesting-flag set to "global".
+
+
+..  _htmlparser-rmTagIfNoAttrib:
 
 rmTagIfNoAttrib
 ---------------
 
-..  t3-function-htmlparser:: rmTagIfNoAttrib
+..  confval:: rmTagIfNoAttrib
 
     :Data type: (ibid)
 
     List of tags (among the already set tags), which will be forced to
-    have the :t3-function-htmlparser:`rmTagIfNoAttrib` set to true
+    have the :ref:`htmlparser-rmTagIfNoAttrib` set to true.
+
+
+..  _htmlparser-noAttrib:
 
 noAttrib
 --------
 
-..  t3-function-htmlparser:: noAttrib
+..  confval:: noAttrib
 
     :Data type: (ibid)
 
@@ -95,20 +118,26 @@ noAttrib
     have the allowedAttribs value set to zero (which means, all attributes
     will be removed.
 
+
+..  _htmlparser-removeTags:
+
 removeTags
 ----------
 
-..  t3-function-htmlparser:: removeTags
+..  confval:: removeTags
 
     :Data type: (ibid)
 
     List of tags (among the already set tags), which will be configured so
     they are surely removed.
 
+
+..  _htmlparser-keepNonMatchedTags:
+
 keepNonMatchedTags
 ------------------
 
-..  t3-function-htmlparser:: keepNonMatchedTags
+..  confval:: keepNonMatchedTags
 
     :Data type: :ref:`data-type-boolean` / "protect"
 
@@ -116,15 +145,18 @@ keepNonMatchedTags
     keys in :php:`$tags`-array.
 
     If :typoscript:`protect`, then the preserved tags have their :html:`<>`
-    converted to :html:`&lt;` and :html:`&gt;`
+    converted to :html:`&lt;` and :html:`&gt;`.
 
     Default is to REMOVE all tags, which are not specifically assigned to
     be allowed! So you might probably want to set this value!
 
+
+..  _htmlparser-htmlSpecialChars:
+
 htmlSpecialChars
 ----------------
 
-..  t3-function-htmlparser:: htmlSpecialChars
+..  confval:: htmlSpecialChars
 
     :Data type: -1 / 0 / 1 / 2
 
