@@ -10,6 +10,7 @@
                edit-on-github-branch="main"
                edit-on-github="TYPO3-Documentation/TYPO3CMS-Reference-TSconfig"
                typo3-core-preferred="main"
+               interlink-shortcode="t3tsconfig"
     />
     <project
             title="TSconfig Reference"
