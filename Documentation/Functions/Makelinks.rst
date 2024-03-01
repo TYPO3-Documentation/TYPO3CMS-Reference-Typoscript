@@ -7,14 +7,14 @@ makelinks
 =========
 
 :typoscript:`makelinks` substitutes all appearances of web addresses or mail links
-with a real link-tag. Web addresses and mail links must be contained in
+with a real link tag. Web addresses and mail links must be contained in
 the text in the following form:
 
-.. code-block:: none
+..  code-block:: none
 
-   https://example.org
+    https://example.org
 
-   mailto:name@example.org
+    mailto:name@example.org
 
 
 ..  contents::
@@ -26,7 +26,7 @@ the text in the following form:
 Properties
 ==========
 
-.. _makelinks-http:
+..  _makelinks-http:
 
 http
 ----
@@ -42,12 +42,12 @@ Can handle links of the form:
     http://example.org
 
 
-.. _makelinks-http-extTarget:
+..  _makelinks-http-extTarget:
 
 http.extTarget
 ~~~~~~~~~~~~~~
 
-..  t3-function-makelinks:: http.extTarget
+..  confval:: http.extTarget
 
     :Data type: :ref:`data-type-target`
     :Default: \_top
@@ -55,37 +55,37 @@ http.extTarget
     The target of the link.
 
 
-.. _makelinks-http-wrap:
+..  _makelinks-http-wrap:
 
 http.wrap
 ~~~~~~~~~
 
-..  t3-function-makelinks:: http.wrap
+..  confval:: http.wrap
 
     :Data type: :ref:`data-type-wrap` / :ref:`stdwrap`
 
     Wrap around the link.
 
-.. _makelinks-http-ATagBeforeWrap:
+..  _makelinks-http-ATagBeforeWrap:
 
 http.ATagBeforeWrap
 ~~~~~~~~~~~~~~~~~~~
 
-..  t3-function-makelinks:: http.ATagBeforeWrap
+..  confval:: http.ATagBeforeWrap
 
     :Data type: :ref:`data-type-boolean`
     :Default: 0
 
     If set, the link is first wrapped with :typoscript:`http.wrap` and then the
-    :html:`<a>`-tag.
+    :html:`<a>` tag.
 
 
-.. _makelinks-http-keep:
+..  _makelinks-http-keep:
 
 http.keep
 ~~~~~~~~~
 
-..  t3-function-makelinks:: http.keep
+..  confval:: http.keep
 
     :Data type: list: "scheme","path","query"
 
@@ -96,20 +96,20 @@ http.keep
     With the URL :samp:`https://example.org/test/doc.php?id=3` in our text we will
     get the following results:
 
-    .. code-block:: typoscript
-       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-       http.keep = "":                   # example.org
-       http.keep = "scheme":             # https://example.org
-       http.keep = "scheme,path":        # https://example.org/test/doc.php
-       http.keep = "scheme,path,query":  # https://example.org/test/doc.php?id=3
+        http.keep = "":                   # example.org
+        http.keep = "scheme":             # https://example.org
+        http.keep = "scheme,path":        # https://example.org/test/doc.php
+        http.keep = "scheme,path,query":  # https://example.org/test/doc.php?id=3
 
-.. _makelinks-http-ATagParams:
+..  _makelinks-http-ATagParams:
 
 http.ATagParams
 ~~~~~~~~~~~~~~~
 
-..  t3-function-makelinks:: http.ATagParams
+..  confval:: http.ATagParams
 
     :Data type: :ref:`data-type-tag-params` / :ref:`stdwrap`
 
@@ -122,7 +122,7 @@ http.ATagParams
 
         http.ATagParams = class="board"
 
-.. _makelinks-mailto:
+..  _makelinks-mailto:
 
 mailto
 ------
@@ -135,37 +135,37 @@ the text in the following form:
 
     mailto:name@example.org
 
-.. _makelinks-mailto.wrap:
+..  _makelinks-mailto.wrap:
 
 mailto.wrap
 ~~~~~~~~~~~
 
-..  t3-function-makelinks:: mailto.wrap
+..  confval:: mailto.wrap
 
     :Data type: :ref:`data-type-wrap` / :ref:`stdwrap`
 
     Wrap around the link.
 
-.. _makelinks-mailto.ATagBeforeWrap:
+..  _makelinks-mailto.ATagBeforeWrap:
 
 mailto.ATagBeforeWrap
 ~~~~~~~~~~~~~~~~~~~~~
 
-..  t3-function-makelinks:: mailto.ATagBeforeWrap
+..  confval:: mailto.ATagBeforeWrap
 
     :Data type: :ref:`data-type-boolean`
     :Default: 0
 
     If set, the link is first wrapped with mailto :typoscript:`wrap` and then the
-    :html:`<a>`-tag.
+    :html:`<a>` tag.
 
 
-.. _makelinks-mailto.ATagParams:
+..  _makelinks-mailto.ATagParams:
 
 mailto.ATagParams
 ~~~~~~~~~~~~~~~~~
 
-..  t3-function-makelinks:: mailto.ATagParams
+..  confval:: mailto.ATagParams
 
     :Data type: :ref:`data-type-tag-params` / :ref:`stdwrap`
 
