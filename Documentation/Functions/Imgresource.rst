@@ -20,10 +20,12 @@ imgResource.
 Properties
 ==========
 
+..  _imgresource-ext:
+
 ext
 ---
 
-..  t3-function-imgresource:: ext
+..  confval:: ext
 
     :Data type: :ref:`data-type-imageExtension` / :ref:`stdwrap`
 
@@ -36,10 +38,13 @@ ext
     :php:`$GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext']` in the install
     tool.
 
+
+..  _imgresource-width:
+
 width
 -----
 
-..  t3-function-imgresource:: width
+..  confval:: width
 
     :Data type: :ref:`data-type-pixels` / :ref:`stdwrap`
 
@@ -96,30 +101,38 @@ width
            height = 100c-25
        }
 
+..  _imgresource-height:
+
 height
 ------
 
-..  t3-function-imgresource:: height
+..  confval:: height
 
     :Data type: :ref:`data-type-pixels` / :ref:`stdwrap`
 
-    See :t3-function-imgresource:`width`
+    See :ref:`imgresource-width`.
+
+
+..  _imgresource-params:
 
 params
 ------
 
-..  t3-function-imgresource:: params
+..  confval:: params
 
     :Data type: :ref:`data-type-string` / :ref:`stdwrap`
 
-    GraphicsMagick/ImageMagick command-line:
+    GraphicsMagick/ImageMagick command line:
 
     fx. `-rotate 90`, `-negate` or `-quality 90`
+
+
+..  _imgresource-sample:
 
 sample
 ------
 
-..  t3-function-imgresource:: sample
+..  confval:: sample
 
     :Data type: :ref:`data-type-boolean`
     :Default: 0
@@ -127,10 +140,13 @@ sample
     If set, `-sample` is used to scale images instead of `-geometry`. Sample
     does not use anti-aliasing and is therefore much faster.
 
+
+..  _imgresource-noScale:
+
 noScale
 -------
 
-..  t3-function-imgresource:: noScale
+..  confval:: noScale
 
     :Data type: :ref:`data-type-boolean` / :ref:`stdwrap`
     :Default: 0
@@ -160,10 +176,13 @@ noScale
 
        <img src="fileadmin/test.jpg" width="240" height="180" />
 
+
+..  _imgresource-crop:
+
 crop
 ----
 
-..  t3-function-imgresource:: crop
+..  confval:: crop
 
     :Data type: :ref:`data-type-string` / :ref:`stdwrap`
     :Default: not-set (when file/image is a file_reference the crop value of
@@ -190,10 +209,13 @@ crop
 
         tt_content.image.20.1.file.crop = 50,50,100,100
 
+
+..  _imgresource-cropVariant:
+
 cropVariant
 -----------
 
-..  t3-function-imgresource:: cropVariant
+..  confval:: cropVariant
 
     :Data type: :ref:`data-type-string`
     :Default: default
@@ -220,7 +242,7 @@ cropVariant
 frame
 -----
 
-..  t3-function-imgresource:: frame
+..  confval:: frame
 
     :Data type: :ref:`data-type-integer` / :ref:`stdwrap`
 
@@ -228,10 +250,13 @@ frame
 
     "" = first frame (zero)
 
+
+..  _imgresource-import:
+
 import
 ------
 
-..  t3-function-imgresource:: import
+..  confval:: import
 
     :Data type: :ref:`data-type-path` / :ref:`stdwrap`
 
@@ -253,10 +278,13 @@ import
             import.listNum = 0
         }
 
+
+..  _imgresource-treatIdAsReference:
+
 treatIdAsReference
 ------------------
 
-..  t3-function-imgresource:: treatIdAsReference
+..  confval:: treatIdAsReference
 
     :Data type: :ref:`data-type-boolean` / :ref:`stdwrap`
     :Default: 0
@@ -265,46 +293,61 @@ treatIdAsReference
     instead of to sys_file. This allows using file references, for
     example with :typoscript:`import.data = levelmedia: ...`.
 
+
+..  _imgresource-maxW:
+
 maxW
 ----
 
-..  t3-function-imgresource:: maxW
+..  confval:: maxW
 
     :Data type: :ref:`data-type-pixels` / :ref:`stdwrap`
 
     Maximum width
 
+
+..  _imgresource-maxH:
+
 maxH
 ----
 
-..  t3-function-imgresource:: maxH
+..  confval:: maxH
 
     :Data type: :ref:`data-type-pixels` / :ref:`stdwrap`
 
     Maximum height
 
+
+..  _imgresource-minW:
+
 minW
 ----
 
-..  t3-function-imgresource:: minW
+..  confval:: minW
 
     :Data type: :ref:`data-type-pixels` / :ref:`stdwrap`
 
     Minimum width (overrules maxW/maxH)
 
+
+..  _imgresource-minH:
+
 minH
 ----
 
-..  t3-function-imgresource:: minH
+..  confval:: minH
 
     :Data type: :ref:`data-type-pixels` / :ref:`stdwrap`
 
     Minimum height (overrules maxW/maxH)
 
+
+..  _imgresource-stripProfile:
+
 stripProfile
 ------------
 
-..  t3-function-imgresource::    stripProfile
+..  confval::    stripProfile
 
     :Data type:    :ref:`data-type-boolean`
     :Default:    0
@@ -326,17 +369,23 @@ stripProfile
         10.file = fileadmin/images/image1.jpg
         10.file.stripProfile = 1
 
+
+..  _imgresource-masking:
+
 Masking (m)
 -----------
 
-..  t3-function-imgresource:: Masking:
+..  confval:: Masking:
 
     (Black hides, white shows)
+
+
+..  _imgresource-masking-mask:
 
 m.mask
 ~~~~~~
 
-..  t3-function-imgresource:: m.mask
+..  confval:: m.mask
 
     :Data type: :ref:`data-type-imgResource`
 
@@ -345,19 +394,25 @@ m.mask
 
     **Note:** Both :typoscript:`m.mask` and :typoscript:`m.bgImg` must be valid images.
 
+
+..  _imgresource-masking-bgImg:
+
 m.bgImg
 ~~~~~~~
 
-..  t3-function-imgresource:: m.bgImg
+..  confval:: m.bgImg
 
     :Data type: :ref:`data-type-imgResource`
 
     **Note:** Both :typoscript:`m.mask` and :typoscript:`m.bgImg` must be valid images.
 
+
+..  _imgresource-masking-bottomImg:
+
 m.bottomImg
 ~~~~~~~~~~~
 
-..  t3-function-imgresource:: m.bottomImg
+..  confval:: m.bottomImg
 
     :Data type: :ref:`data-type-imgResource`
 
@@ -372,10 +427,13 @@ m.bottomImg
     **Note:** Both "m.bottomImg" and :typoscript:`m.bottomImg_mask` must be valid
     images.
 
+
+..  _imgresource-masking-bottomImg-mask:
+
 m.bottomImg\_mask
 ~~~~~~~~~~~~~~~~~
 
-..  t3-function-imgresource:: m.bottomImg_mask
+..  confval:: m.bottomImg_mask
 
     :Data type: :ref:`data-type-imgResource`
 
@@ -385,16 +443,16 @@ m.bottomImg\_mask
     images.
 
 
-.. _imgresource-examples:
+..  _imgresource-examples:
 
 Examples
 ========
 
-This scales the image :file:`fileadmin/toplogo.gif` to the width of 200
+This scales the image :file:`fileadmin/toplogo.png` to the width of 200
 pixels:
 
 ..  code-block:: typoscript
     :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-    file = fileadmin/toplogo.gif
+    file = fileadmin/toplogo.png
     file.width = 200
