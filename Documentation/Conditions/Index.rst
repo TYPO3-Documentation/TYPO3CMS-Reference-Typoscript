@@ -147,7 +147,7 @@ tree.pagelayout
 
     :Data type: Integer / String
 
-    Check for the defined :ref:`backend layout <be-layout>` of a page, including
+    Check for the defined :ref:`backend layout <t3coreapi:be-layout>` of a page, including
     the inheritance of the field `Backend Layout (subpages of this page)`.
 
     Example:
