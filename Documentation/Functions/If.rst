@@ -14,7 +14,7 @@ This function returns true, if **all** of the present conditions are met
 (they are connected with an "AND", a logical conjunction). If a
 single condition is false, the value returned is false.
 
-The returned value may still be negated by the :t3-function-if:`negate`-property.
+The returned value may still be negated by the :ref:`if-negate` property.
 
 There is no else property available. The "else" branch of an "if" statement is a
 missing feature. You can implement a workaround by a logic based on the
@@ -28,10 +28,12 @@ Also check the explanations and the examples further below!
 Properties
 ==========
 
+..  _if-bitAnd:
+
 bitAnd
 ------
 
-..  t3-function-if:: bitAnd
+..  confval:: bitAnd
 
     :Data type: value / :ref:`stdwrap`
 
@@ -56,12 +58,15 @@ bitAnd
            }
        }
 
+
+..  _if-contains:
+
 contains
 --------
 
 ..  versionadded:: 12.1
 
-..  t3-function-if::  contains
+..  confval::  contains
 
     :Data type:  value / :ref:`stdwrap`
 
@@ -88,10 +93,13 @@ contains
             outerWrap = <h1>|</h1>
         }
 
+
+..  _if-directReturn:
+
 directReturn
 ------------
 
-..  t3-function-if:: directReturn
+..  confval:: directReturn
 
     :Data type: :ref:`data-type-boolean`
 
@@ -99,12 +107,15 @@ directReturn
     the true/false of this value is returned. Can be used to set
     true/false with a TypoScript constant.
 
+
+..  _if-endsWith:
+
 endsWith
 --------
 
 ..  versionadded:: 12.1
 
-..  t3-function-if::  endsWith
+..  confval::  endsWith
 
     :Data type:  value / :ref:`stdwrap`
 
@@ -126,10 +137,12 @@ endsWith
             wrap = <footer>|</footer>
         }
 
+..  _if-equals:
+
 equals
 ------
 
-..  t3-function-if:: equals
+..  confval:: equals
 
     :Data type: value / :ref:`stdwrap`
 
@@ -143,28 +156,37 @@ equals
         if.equals = POST
         if.value.data = GETENV:REQUEST_METHOD
 
+
+..  _if-isFalse:
+
 isFalse
 -------
 
-..  t3-function-if:: isFalse
+..  confval:: isFalse
 
     :Data type: :ref:`data-type-string` / :ref:`stdwrap`
 
     If the content is "false", which is empty or zero.
 
+
+..  _if-isGreaterThan:
+
 isGreaterThan
 -------------
 
-..  t3-function-if:: isGreaterThan
+..  confval:: isGreaterThan
 
     :Data type: value / :ref:`stdwrap`
 
     Returns true, if the content is greater than :typoscript:`value`.
 
+
+..  _if-isInList:
+
 isInList
 --------
 
-..  t3-function-if:: isInList
+..  confval:: isInList
 
     :Data type: value / :ref:`stdwrap`
 
@@ -183,19 +205,25 @@ isInList
 
     This returns true, if the uid is part of the list in :typoscript:`value`.
 
+
+..  _if-isLessThan:
+
 isLessThan
 ----------
 
-..  t3-function-if:: isLessThan
+..  confval:: isLessThan
 
     :Data type: value / :ref:`stdwrap`
 
     Returns true, if the content is less than :typoscript:`value`.
 
+
+..  _if-isNull:
+
 isNull
 ------
 
-..  t3-function-if:: isNull
+..  confval:: isNull
 
     :Data type: :ref:`stdWrap`
 
@@ -219,28 +247,37 @@ isNull
     This example returns "No description available.", if the content of
     the field "description" is :php:`NULL`.
 
+
+..  _if-isPositive:
+
 isPositive
 ----------
 
-..  t3-function-if:: isPositive
+..  confval:: isPositive
 
     :Data type: :ref:`data-type-integer` / :ref:`stdwrap` \+ :ref:`objects-calc`
 
     Returns true, if the content is positive.
 
+
+..  _if-isTrue:
+
 isTrue
 ------
 
-..  t3-function-if:: isTrue
+..  confval:: isTrue
 
     :Data type: :ref:`data-type-string` / :ref:`stdwrap`
 
     If the content is "true", which is not empty string and not zero.
 
+
+..  _if-negate:
+
 negate
 ------
 
-..  t3-function-if:: negate
+..  confval:: negate
 
     :Data type: :ref:`data-type-boolean`
     :Default: 0
@@ -253,12 +290,15 @@ negate
     one of the other conditions, which were used, returned false, the
     overall return ends up being true.
 
+
+..  _if-startsWith:
+
 startsWith
 ----------
 
 ..  versionadded:: 12.1
 
-..  t3-function-if::  startsWith
+..  confval::  startsWith
 
     :Data type:  value / :ref:`stdwrap`
 
@@ -278,18 +318,21 @@ startsWith
             if.startsWith = Bazinga
         }
 
+
+..  _if-value:
+
 value
 -----
 
-..  t3-function-if:: value
+..  confval:: value
 
     :Data type: value / :ref:`stdwrap`
 
     The value to check. This is the comparison value mentioned above.
 
 
-.. index:: if; Explanation
-.. _if-explanation:
+..  index:: if; Explanation
+..  _if-explanation:
 
 Explanation
 ===========
@@ -310,33 +353,33 @@ function returns true if the field "header" in :php:`$cObj->data` is set!
 If you want to compare values, you must load a base-value in the
 :typoscript:`value`-property. Example:
 
-.. code-block:: typoscript
-   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-   page.10.value = 10
-   page.10.isGreaterThan = 11
+    page.10.value = 10
+    page.10.isGreaterThan = 11
 
 This would return true because the value of :typoscript:`isGreaterThan` is
 greater than 10, which is the base-value.
 
 More complex is this:
 
-.. code-block:: typoscript
-   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-   page.10 {
-       value = 10
-       isGreaterThan = 11
-       isTrue.field = header
-       negate = 1
-   }
+    page.10 {
+      value = 10
+      isGreaterThan = 11
+      isTrue.field = header
+      negate = 1
+    }
 
 There are two conditions - :typoscript:`isGreaterThan` and :typoscript:`isTrue`.
 If they are both true, the total is true (both are connected with an AND).
 BUT(!) then the result of the function in total would be false because the
 :typoscript:`negate`-flag inverts the result!
 
-.. _if-examples:
+..  _if-examples:
 
 Examples
 ========
@@ -344,14 +387,14 @@ Examples
 This is a GIFBUILDER object that will write "NEW" on a menu-item if
 the field "newUntil" has a date less than the current date!
 
-.. code-block:: typoscript
-   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-   30 = TEXT
-   30.text = NEW!
-   30.offset = 10,10
-   30.if {
-       value.data = date: U
-       isLessThan.field = newUntil
-       negate = 1
-   }
+    30 = TEXT
+    30.text = NEW!
+    30.offset = 10,10
+    30.if {
+      value.data = date: U
+      isLessThan.field = newUntil
+      negate = 1
+    }
