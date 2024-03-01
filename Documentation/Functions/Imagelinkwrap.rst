@@ -1,26 +1,28 @@
-.. include:: /Includes.rst.txt
-.. index::
-   Functions; imageLinkWrap
-   imageLinkWrap
-.. _imagelinkwrap:
+..  include:: /Includes.rst.txt
+..  index::
+    Functions; imageLinkWrap
+    imageLinkWrap
+..  _imagelinkwrap:
 
 =============
 imageLinkWrap
 =============
 
 
-.. contents::
-   :local:
+..  contents::
+    :local:
 
-.. index:: imageLinkWrap; Properties
+..  index:: imageLinkWrap; Properties
 
 Properties
 ==========
 
+..  _imagelinkwrap-enable:
+
 enable
 ------
 
-..  t3-function-imagelinkwrap:: imageLinkWrap.enable
+..  confval:: imageLinkWrap.enable
 
     :Data type: :ref:`data-type-boolean` / :ref:`stdwrap`
 
@@ -29,19 +31,25 @@ enable
     Whether or not to link the image. Must be set to True to make
     :typoscript:`imageLinkWrap` do anything at all.
 
+
+..  _imagelinkwrap-file:
+
 file
 ----
 
-..  t3-function-imagelinkwrap:: imageLinkWrap.file
+..  confval:: imageLinkWrap.file
 
     :Data type: :ref:`stdwrap`
 
     Apply :ref:`stdwrap` functionality to the file path.
 
+
+..  _imagelinkwrap-width:
+
 width
 -----
 
-..  t3-function-imagelinkwrap:: imageLinkWrap.width
+..  confval:: imageLinkWrap.width
 
     :Data type: :ref:`data-type-positive-integer` / :ref:`stdwrap`
 
@@ -51,11 +59,14 @@ width
     :typoscript:`width` or :typoscript:`height` or both then the width and
     height parameters will be interpreted as maximum and proportions of the
     image will be preserved.
+
+
+..  _imagelinkwrap-height:
 
 height
 ------
 
-..  t3-function-imagelinkwrap:: imageLinkWrap.height
+..  confval:: imageLinkWrap.height
 
     :Data type: :ref:`data-type-positive-integer` / :ref:`stdwrap`
 
@@ -66,10 +77,13 @@ height
     height parameters will be interpreted as maximum and proportions of the
     image will be preserved.
 
+
+..  _imagelinkwrap-effects:
+
 effects
 -------
 
-..  t3-function-imagelinkwrap:: imageLinkWrap.effects
+..  confval:: imageLinkWrap.effects
 
     :Data type: like :ref:`gifbuilder-effect` of :ref:`GIFBUILDER`
 
@@ -92,10 +106,13 @@ Example for effects
         height = 600m
     }
 
+
+..  _imagelinkwrap-sample:
+
 sample
 ------
 
-..  t3-function-imagelinkwrap:: imageLinkWrap.sample
+..  confval:: imageLinkWrap.sample
 
     :Data type: :ref:`data-type-positive-integer` / :ref:`stdwrap`
 
@@ -110,10 +127,12 @@ sample
     GraphicsMagick or ImageMagick.
 
 
+..  _imagelinkwrap-title:
+
 title
 -----
 
-..  t3-function-imagelinkwrap:: imageLinkWrap.title
+..  confval:: imageLinkWrap.title
 
     :Data type: :ref:`data-type-string` / :ref:`stdwrap`
 
@@ -121,10 +140,12 @@ title
     Needs :typoscript:`JSwindow = 1`.
 
 
+..  _imagelinkwrap-bodyTag:
+
 bodyTag
 -------
 
-..  t3-function-imagelinkwrap:: imageLinkWrap.bodyTag
+..  confval:: imageLinkWrap.bodyTag
 
     :Data type: :ref:`data-type-tag` / :ref:`stdwrap`
 
@@ -144,20 +165,25 @@ Example setting a bodytag for the preview window
     )
 
 
+..  _imagelinkwrap-wrap:
+
 wrap
 ----
 
-..  t3-function-imagelinkwrap:: imageLinkWrap.wrap
+..  confval:: imageLinkWrap.wrap
 
     :Data type: :ref:`data-type-wrap`
 
     This wrap is placed around the `<img>`-tag in the preview window.
     Needs :typoscript:`JSwindow = 1`.
 
+
+..  _imagelinkwrap-target:
+
 target
 ------
 
-..  t3-function-imagelinkwrap:: imageLinkWrap.target
+..  confval:: imageLinkWrap.target
 
     :Data type: :ref:`data-type-target` / :ref:`stdwrap`
 
@@ -180,10 +206,13 @@ Example: Use an alternative target for the JavaScript Window
     imageLinkWrap.JSwindow = 1
     imageLinkWrap.JSwindow.newWindow = 1
 
+
+..  _imagelinkwrap-JSwindow:
+
 JSwindow
 --------
 
-..  t3-function-imagelinkwrap:: imageLinkWrap.JSwindow
+..  confval:: imageLinkWrap.JSwindow
 
     :Data type: :ref:`data-type-boolean` / :ref:`stdwrap`
 
@@ -193,10 +222,13 @@ JSwindow
     the image in a new window. The window is automatically resized to match
     the dimensions of the image.
 
+
+..  _imagelinkwrap-JSwindow-expand:
+
 JSwindow.expand
 ---------------
 
-..  t3-function-imagelinkwrap:: imageLinkWrap.JSwindow.expand
+..  confval:: imageLinkWrap.JSwindow.expand
 
     :Data type: :typoscript:`x`, :typoscript:`y` / :ref:`stdwrap`
 
@@ -207,10 +239,13 @@ JSwindow.expand
     of the preview image when calculating the width and height of the
     preview window.
 
+
+..  _imagelinkwrap-JSwindow-newWindow:
+
 JSwindow.newWindow
 ------------------
 
-..  t3-function-imagelinkwrap:: JSwindow.newWindow
+..  confval:: JSwindow.newWindow
 
     :Data type: :ref:`data-type-boolean` / :ref:`stdwrap`
 
@@ -226,10 +261,12 @@ JSwindow.newWindow
     This guarantees that each image is opened in a new window.
 
 
+..  _imagelinkwrap-JSwindow-altUrl:
+
 JSwindow.altUrl
 ---------------
 
-..  t3-function-imagelinkwrap:: imageLinkWrap.JSwindow.altUrl
+..  confval:: imageLinkWrap.JSwindow.altUrl
 
     :Data type: :ref:`data-type-string` / :ref:`stdwrap`
 
@@ -237,10 +274,12 @@ JSwindow.altUrl
     Otherwise the default "showpic" script will be used.
 
 
+..  _imagelinkwrap-JSwindow-altUrl-noDefaultParams:
+
 JSwindow.altUrl\_noDefaultParams
 --------------------------------
 
-..  t3-function-imagelinkwrap:: imageLinkWrap.JSwindow.altUrl_noDefaultParams
+..  confval:: imageLinkWrap.JSwindow.altUrl_noDefaultParams
 
     :Data type: :ref:`data-type-boolean` / :ref:`stdwrap`
 
@@ -252,10 +291,12 @@ JSwindow.altUrl\_noDefaultParams
     in a special way.
 
 
+..  _imagelinkwrap-typolink:
+
 typolink
 --------
 
-..  t3-function-imagelinkwrap:: imageLinkWrap.typolink
+..  confval:: imageLinkWrap.typolink
 
     :Data type: :ref:`typolink` / :ref:`stdwrap`
 
@@ -263,10 +304,12 @@ typolink
     everything else.
 
 
+..  _imagelinkwrap-directImageLink:
+
 directImageLink
 ---------------
 
-..  t3-function-imagelinkwrap:: imageLinkWrap.directImageLink
+..  confval:: imageLinkWrap.directImageLink
 
     :Data type: :ref:`data-type-boolean` / :ref:`stdwrap`
 
@@ -277,10 +320,12 @@ directImageLink
     "showpic" script will be used.
 
 
+..  _imagelinkwrap-linkParams:
+
 linkParams
 ----------
 
-..  t3-function-imagelinkwrap:: imageLinkWrap.linkParams
+..  confval:: imageLinkWrap.linkParams
 
     :Data type: :ref:`typolink` / :ref:`stdwrap`
 
@@ -308,10 +353,12 @@ resized images in the frontend. More complete examples are
     )
 
 
+..  _imagelinkwrap-stdWrap:
+
 stdWrap
 -------
 
-..  t3-function-imagelinkwrap:: imageLinkWrap.stdWrap
+..  confval:: imageLinkWrap.stdWrap
 
     :Data type: :ref:`stdwrap`
 
@@ -350,12 +397,12 @@ Implementation
 -   file :file:`ContentObjectRenderer.php` in
 -   folder :file:`typo3/sysext/frontend/Classes/ContentObject`.
 
-.. _imagelinkwrap-examples:
+..  _imagelinkwrap-examples:
 
 Examples for imageLinkWrap
 ==========================
 
-.. _imageLinkWrap-basic-example-showpic:
+..  _imageLinkWrap-basic-example-showpic:
 
 Basic example: Create a link to the showpic script
 --------------------------------------------------
@@ -376,7 +423,7 @@ Basic example: Create a link to the showpic script
        }
     }
 
-.. _imageLinkWrap-basic-example-directImageLink:
+..  _imageLinkWrap-basic-example-directImageLink:
 
 Basic example: Link directly to the original image
 --------------------------------------------------
@@ -397,7 +444,7 @@ Basic example: Link directly to the original image
     }
 
 
-.. _imageLinkWrap-example-popup-window:
+..  _imageLinkWrap-example-popup-window:
 
 Example: Larger display in a popup window
 -----------------------------------------
@@ -436,7 +483,7 @@ Example: Larger display in a popup window
     }
 
 
-.. _imageLinkWrap-example-printlink:
+..  _imageLinkWrap-example-printlink:
 
 Example: Printlink
 ------------------
@@ -462,7 +509,7 @@ Example: Printlink
 
 
 
-.. _imageLinkWrap-example-fancybox:
+..  _imageLinkWrap-example-fancybox:
 
 Example: Images in lightbox "fancybox"
 --------------------------------------
@@ -491,7 +538,7 @@ and use `fancybox <http://fancybox.net>`_:
        }
     }
 
-.. _imageLinkWrap-example-topup:
+..  _imageLinkWrap-example-topup:
 
 Example: Images in lightbox "TopUp"
 -----------------------------------
