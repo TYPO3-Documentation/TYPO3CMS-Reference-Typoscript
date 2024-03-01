@@ -870,7 +870,7 @@ feature()
     :Data type: String
 
     Provides access to the current state of
-    :ref:`feature toggles <typo3ConfVars_sys_features>`.
+    :ref:`feature toggles <t3coreapi:typo3ConfVars_sys_features>`.
 
     Example:
 
