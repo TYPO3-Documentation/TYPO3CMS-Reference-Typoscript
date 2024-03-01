@@ -26,10 +26,12 @@ for that function. Consult the PHP manual, if unsure.
 Properties
 ==========
 
+..  _numberformat-decimals:
+
 decimals
 --------
 
-..  t3-function-numberformat:: decimals
+..  confval:: decimals
 
     :Data type: :ref:`data-type-integer` / :ref:`stdwrap`
     :Default: 0
@@ -39,20 +41,26 @@ decimals
 
     Your input will in that case be rounded up or down to the next integer.
 
+
+..  _numberformat-dec-point:
+
 dec\_point
 ----------
 
-..  t3-function-numberformat:: dec_point
+..  confval:: dec_point
 
     :Data type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
     :Default: .
 
     Character that divides the decimals from the rest of the number.
 
+
+..  _numberformat-thousands-sep:
+
 thousands\_sep
 --------------
 
-..  t3-function-numberformat:: thousands_sep
+..  confval:: thousands_sep
 
     :Data type: :ref:`data-type-string` / :ref:`stdwrap`
     :Default: ,
@@ -60,7 +68,7 @@ thousands\_sep
     Character that divides the thousands of the number.
     Set an empty value to have no thousands separator.
 
-.. _numberformat-examples:
+..  _numberformat-examples:
 
 Examples
 ========
