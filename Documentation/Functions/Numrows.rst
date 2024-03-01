@@ -1,57 +1,58 @@
-.. include:: /Includes.rst.txt
-.. index::
-   Functions; numRows
-   Database; count
-.. _numrows:
+..  include:: /Includes.rst.txt
+..  index::
+    Functions; numRows
+    Database; count
+..  _numrows:
 
 =======
 numRows
 =======
 
-This object allows you to specify a SELECT query, which will be
+This object allows you to specify a :sql:`SELECT` query, which will be
 executed in the database. The object then returns the number of
 rows, which were returned by the query.
 
-.. contents::
-   :local:
+..  contents::
+    :local:
 
-.. index:: _numRows; Properties
-.. _numRows-properties:
+..  index:: _numRows; Properties
+..  _numRows-properties:
 
 Properties
 ==========
 
-.. _numrows-table:
+..  _numrows-table:
 
 table
 -----
 
-..  t3-function-numrows:: table
+..  confval:: table
 
     :Data type: Table name
 
     Name of the database table to query.
 
-.. _numrows-select:
+..  _numrows-select:
 
 select
 ------
 
-..  t3-function-numrows:: select
+..  confval:: select
 
     :Data type: :ref:`select`
 
     Select query for the operation.
 
     The sub-property :typoscript:`selectFields` is overridden internally with
-    :php:`count(*)`.
+    :sql:`count(*)`.
 
-.. _numRows-examples:
+..  _numRows-examples:
 
 Example
 =======
 
-Get the number of content elements within certain colPos of the current page.
+Get the number of content elements within certain :sql:`colPos` of the current
+page.
 
 ..  code-block:: typoscript
     :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
