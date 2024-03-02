@@ -39,7 +39,7 @@ Options
     (value).
 
     Each FlexForm field, which should be resolved, needs a reference definition
-    to the :ref:`foreign_match_fields <columns-inline-properties-foreign-match-fields>`.
+    to the :ref:`foreign_match_fields <t3tca:columns-inline-properties-foreign-match-fields>`.
     This reference is used in the :ref:`FilesProcessor <FilesProcessor>` to
     resolve the correct :ref:`FAL <t3coreapi:fal>` resource.
 
