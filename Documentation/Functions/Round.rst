@@ -22,10 +22,12 @@ selected round method.
 Properties
 ==========
 
+..  _round-roundType:
+
 roundType
 ---------
 
-..  t3-function-round:: roundType
+..  confval:: roundType
 
     :Data type: :ref:`data-type-string` / :ref:`stdwrap`
     :Default: round
@@ -43,10 +45,13 @@ roundType
     round
         Round the value to the specified number of decimals.
 
+
+..  _round-decimals:
+
 decimals
 --------
 
-..  t3-function-round:: decimals
+..  confval:: decimals
 
     :Data type: :ref:`data-type-integer` / :ref:`stdwrap`
     :Default: 0
@@ -55,17 +60,20 @@ decimals
     roundType "round". Defaults to 0, so that your input will in that case
     be rounded up or down to the next integer.
 
+
+..  _round-round:
+
 round
 -----
 
-..  t3-function-round:: round
+..  confval:: round
 
     :Data type: :ref:`data-type-boolean`
     :Default: 0
 
     Set round = 1 to enable rounding.
 
-.. _round-examples:
+..  _round-examples:
 
 Examples
 ========
