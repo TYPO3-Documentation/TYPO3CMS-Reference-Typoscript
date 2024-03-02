@@ -20,10 +20,12 @@ tags, the :ref:`makeLinks`-things and so on...
 Properties
 ==========
 
+..  _parsefunc-externalBlocks:
+
 externalBlocks
 --------------
 
-.. t3-function-parsefunc:: externalBlocks
+..  confval:: externalBlocks
 
     :Data type: list of tagnames / +properties
 
@@ -122,7 +124,7 @@ constants
 
         See section :ref:`Top level object constants, migration <tlo-constants-migration>`.
 
-.. t3-function-parsefunc:: constants
+..  confval:: constants
 
     :Data type: :ref:`data-type-boolean`
 
@@ -133,10 +135,13 @@ constants
     wrapped in "###") in your text. TYPO3 then substitutes the markers
     with the value of the according constant.
 
+
+..  _parsefunc-short:
+
 short
 -----
 
-.. t3-function-parsefunc:: short
+..  confval:: short
 
     :Data type: *(array of strings)*
 
@@ -160,19 +165,25 @@ short
         }
         # Output: Learn more about TYPO3 CMS, look here: <a href="https://typo3.org">typo3.org</a>
 
+
+..  _parsefunc-plainTextStdWrap:
+
 plainTextStdWrap
 ----------------
 
-..  t3-function-parsefunc:: plainTextStdWrap
+..  confval:: plainTextStdWrap
 
     :Data type: :ref:`stdwrap`
 
     This is :ref:`stdwrap` properties for all non-tag content.
 
+
+..  _parsefunc-userFunc:
+
 userFunc
 --------
 
-..  t3-function-parsefunc:: userFunc
+..  confval:: userFunc
 
     :Data type: :ref:`data-type-function-name`
 
@@ -181,77 +192,95 @@ userFunc
 
     Remember the function name must possibly be prepended :php:`user_`.
 
+
+..  _parsefunc-nonTypoTagStdWrap:
+
 nonTypoTagStdWrap
 -----------------
 
-..  t3-function-parsefunc:: nonTypoTagStdWrap
+..  confval:: nonTypoTagStdWrap
 
     :Data type: :ref:`stdWrap`
 
-    Like :t3-function-parsefunc:`plainTextStdWrap`. Difference:
+    Like :ref:`parsefunc-plainTextStdWrap`. Difference:
 
-    :t3-function-parsefunc:`plainTextStdWrap` works on ALL non-tag pieces in the text.
-    :t3-function-parsefunc:`nonTypoTagStdWrap` is post processing of all text
+    :typoscript:`parsefunc-plainTextStdWrap` works on ALL non-tag pieces in the
+    text. :ref:`parsefunc-nonTypoTagStdWrap` is post processing of all text
     (including tags) between special TypoTags
     (unless :typoscript:`breakoutTypoTagContent` is not set for the TypoTag).
+
+
+..  _parsefunc-nonTypoTagUserFunc:
 
 nonTypoTagUserFunc
 ------------------
 
-..  t3-function-parsefunc:: nonTypoTagUserFunc
+..  confval:: nonTypoTagUserFunc
 
     :Data type: :ref:`data-type-function-name`
 
-    Like :t3-function-parsefunc:`userFunc`.
-    Differences is (like :t3-function-parsefunc:`nonTypoTagStdWrap`)
+    Like :ref:`parsefunc-userFunc`.
+    Differences is (like :ref:`parsefunc-nonTypoTagStdWrap`)
     that this is post processing of all content pieces around TypoTags while
-    :t3-function-parsefunc:`userFunc` processes all non-tag content.
+    :typoscript:`userFunc` processes all non-tag content.
     (Notice: :typoscript:`breakoutTypoTagContent` must be set for the TypoTag
     if it's excluded from :typoscript:`nonTypoTagContent`).
+
+
+..  _parsefunc-makelinks:
 
 makelinks
 ---------
 
-..  t3-function-parsefunc:: makelinks
+..  confval:: makelinks
 
     :Data type: :ref:`data-type-boolean`
 
     Convert web addresses prefixed with `http://` and mail addresses
     prefixed with `mailto:` to links.
 
+
+..  _parsefunc-tags:
+
 tags
 ----
 
-..  t3-function-parsefunc:: tags
+..  confval:: tags
 
     :Data type: :ref:`tags`
 
     Here you can define **custom tags** that will parse the content to
     something.
 
+
+..  _parsefunc-allowTags:
+
 allowTags
 ---------
 
-..  t3-function-parsefunc:: allowTags
+..  confval:: allowTags
 
     :Data type: list of strings
 
     List of tags, which are allowed to exist in code!
 
-    Highest priority: If a tag is found in :t3-function-parsefunc:`allowTags`,
-    :t3-function-parsefunc:`denyTags` is ignored!
+    Highest priority: If a tag is found in :typoscript:`allowTags`,
+    :ref:`parsefunc-denyTags` is ignored!
+
+
+..  _parsefunc-denyTags:
 
 denyTags
 --------
 
-..  t3-function-parsefunc:: denyTags
+..  confval:: denyTags
 
     :Data type: list of strings
 
     List of tags, which may **not** exist in code! (use :typoscript:`*` for all.)
 
-    Lowest priority: If a tag is **not** found in :t3-function-parsefunc:`allowTags`,
-    :t3-function-parsefunc:`denyTags` is checked.
+    Lowest priority: If a tag is **not** found in :ref:`parsefunc-allowTags`,
+    :typoscript:`denyTags` is checked.
     If denyTags is not :typoscript:`*` and the tag is not found in the list, the tag may exist!
 
     ..  rubric:: Example
@@ -267,23 +296,26 @@ denyTags
             denyTags = *
         }
 
+
+..  _parsefunc-if:
+
 if
 --
 
-.. t3-function-parsefunc:: if
+.. confval:: if
 
     :Data type: :ref:`if`
 
     if "if" returns false, the input value is not parsed, but returned
     directly.
 
-.. _parsefunc-examples:
+..  _parsefunc-examples:
 
 Example
 =======
 
 This example takes the content of the field "bodytext" and parses it
-through the :t3-function-parsefunc:`makelinks`-functions and substitutes all
+through the :ref:`parsefunc-makelinks`-functions and substitutes all
 :html:`<LINK>` and :html:`<TYPOLIST>`-tags with something else.
 
 ..  code-block:: typoscript
