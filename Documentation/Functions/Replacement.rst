@@ -1,47 +1,58 @@
-.. include:: /Includes.rst.txt
-.. index:: Functions; replacement
-.. _replacement:
+..  include:: /Includes.rst.txt
+..  index:: Functions; replacement
+..  _replacement:
 
 ===========
 replacement
 ===========
 
 This object performs an ordered search and replace operation on the
-current content with the possibility of using PCRE regular expressions.
+current content with the possibility of using `PCRE regular expressions`_.
 An array with numeric indices defines the order of actions and thus
 allows multiple replacements at once.
 
-.. contents::
-   :local:
+..  _PCRE regular expressions: https://www.php.net/manual/en/reference.pcre.pattern.syntax.php
 
-.. index:: replacement; Properties
-.. _replacement-properties:
+..  contents::
+    :local:
+
+..  index:: replacement; Properties
+..  _replacement-properties:
 
 Properties
 ==========
 
+
+..  _replacement-search:
+
 search
 ------
 
-..  t3-function-replacement:: search
+..  confval:: search
 
     :Data type: :ref:`data-type-string` / :ref:`stdwrap`
 
     Defines the string that shall be replaced.
 
+
+..  _replacement-replace:
+
 replace
 -------
 
-..  t3-function-replacement:: replace
+..  confval:: replace
 
     :Data type: :ref:`data-type-string` / :ref:`stdwrap`
 
     Defines the string to be used for the replacement.
 
+
+..  _replacement-useRegExp:
+
 useRegExp
 ---------
 
-..  t3-function-replacement:: useRegExp
+..  confval:: useRegExp
 
     :Data type: :ref:`data-type-boolean` / :ref:`stdwrap`
     :Default: 0
@@ -60,10 +71,13 @@ useRegExp
             useRegExp = 1
         }
 
+
+..  _replacement-useOptionSplitReplace:
+
 useOptionSplitReplace
 ---------------------
 
-..  t3-function-replacement:: useOptionSplitReplace
+..  confval:: useOptionSplitReplace
 
     :Data type: :ref:`data-type-boolean` / :ref:`stdwrap`
     :Default: 0
