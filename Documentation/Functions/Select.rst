@@ -25,16 +25,18 @@ in the :php:`$GLOBALS['TCA']`.
 ..  contents::
     :local:
 
-.. index:: select; Properties
-.. _select-properties:
+..  index:: select; Properties
+..  _select-properties:
 
 Properties
 ==========
 
+..  _select-uidInList:
+
 uidInList
 ---------
 
-..  t3-function-select:: uidInList
+..  confval:: uidInList
 
     :Data type: *list of record\_ids* / :ref:`stdWrap`
 
@@ -46,7 +48,7 @@ uidInList
     *current record*.
 
     ..  attention::
-        :t3-function-select:`pidInList` defaults to :typoscript:`this`.
+        :ref:`select_pidInList` defaults to :typoscript:`this`.
         Therefore by default only records
         from the current page are available for :typoscript:`uidInList`. If records
         should be fetched globally, :typoscript:`pidInList = 0` should also be set.
@@ -68,7 +70,7 @@ uidInList
 pidInList
 ---------
 
-..  t3-function-select:: pidInList
+..  confval:: pidInList
 
     :Data type: *list of page\_ids* / :ref:`stdWrap`
     :Default: :typoscript:`this`
@@ -131,20 +133,26 @@ pidInList
            }
         }
 
+
+..  _select-recursive:
+
 recursive
 ---------
 
-..  t3-function-select:: recursive
+..  confval:: recursive
 
     :Data type: :ref:`data-type-integer` / :ref:`stdWrap`
     :Default: 0
 
     Number of recursive levels for the pidInList.
 
+
+..  _select-orderBy:
+
 orderBy
 -------
 
-..  t3-function-select:: orderBy
+..  confval:: orderBy
 
     :Data type: *SQL-orderBy* / :ref:`stdWrap`
 
@@ -157,10 +165,13 @@ orderBy
 
         orderBy = sorting, title
 
+
+..  _select-groupBy:
+
 groupBy
 -------
 
-..  t3-function-select:: groupBy
+..  confval:: groupBy
 
     :Data type: *SQL-groupBy* / :ref:`stdWrap`
 
@@ -173,10 +184,13 @@ groupBy
 
         groupBy = CType
 
+
+..  _select-max:
+
 max
 ---
 
-..  t3-function-select:: max
+..  confval:: max
 
     :Data type: :ref:`data-type-integer` + :ref:`objects-calc` +"total" / :ref:`stdWrap`
 
@@ -184,24 +198,30 @@ max
 
     **Special keyword:** "total" is substituted with :php:`count(*)`.
 
+
+..  _select-begin:
+
 begin
 -----
 
-..  t3-function-select::    begin
+..  confval:: begin
 
-    :Data type:    :ref:`data-type-integer` + :ref:`objects-calc` +"total" / :ref:`stdWrap`
+    :Data type: :ref:`data-type-integer` + :ref:`objects-calc` +"total" / :ref:`stdWrap`
 
     Begin with record number *value*.
 
     **Special keyword:** :typoscript:`total`
         Is substituted with :php:`count(*)`.
 
+
+..  _select-where:
+
 where
 -----
 
-..  t3-function-select::    where
+..  confval:: where
 
-    :Data type:    *SQL-where* / :ref:`stdWrap`
+    :Data type: *SQL-where* / :ref:`stdWrap`
 
     WHERE clause without the word "WHERE".
 
@@ -220,10 +240,13 @@ where
 
         where = ({#title} LIKE {#%SOMETHING%} AND NOT {#doktype})
 
+
+..  _select-languageField:
+
 languageField
 -------------
 
-..  t3-function-select:: languageField
+..  confval:: languageField
 
     :Data type: :ref:`data-type-string` / :ref:`stdWrap`
 
@@ -235,10 +258,13 @@ languageField
 
     This behaviour can be disabled by setting :typoscript:`languageField = 0`.
 
+
+..  _select-includeRecordsWithoutDefaultTranslation:
+
 includeRecordsWithoutDefaultTranslation
 ---------------------------------------
 
-..  t3-function-select:: includeRecordsWithoutDefaultTranslation
+..  confval:: includeRecordsWithoutDefaultTranslation
 
     :Data type: :ref:`data-type-boolean` / :ref:`stdWrap`
     :Default: 0
@@ -247,10 +273,13 @@ includeRecordsWithoutDefaultTranslation
     :typoscript:`includeRecordsWithoutDefaultTranslation` allows to additionally fetch records,
     which do **not** have a parent in the default language.
 
+
+..  _select-selectFields:
+
 selectFields
 ------------
 
-..  t3-function-select:: selectFields
+..  confval:: selectFields
 
     :Data type: :ref:`data-type-string` / :ref:`stdWrap`
     :Default: \*
@@ -262,10 +291,13 @@ selectFields
     transOrigPointerField). Otherwise the TYPO3 internal localization
     will not succeed.
 
+
+..  _select-join:
+
 join, leftjoin, rightjoin
 -------------------------
 
-..  t3-function-select:: join, leftjoin, rightjoin
+..  confval:: join, leftjoin, rightjoin
 
     :Data type: :ref:`data-type-string` / :ref:`stdWrap`
 
@@ -292,10 +324,13 @@ join, leftjoin, rightjoin
 
     See :ref:`select_pidInList` for more examples.
 
+
+..  _select-markers:
+
 markers
 -------
 
-..  t3-function-select:: markers
+..  confval:: markers
 
     :Data type: *(array of markers)*
 
@@ -366,7 +401,7 @@ markers
     whatever.wrap ('something').
 
 
-.. _selectQuotingOfFields:
+..  _selectQuotingOfFields:
 
 Quoting of fields
 =================
@@ -381,12 +416,12 @@ framework quote these fields (see :doc:`ext_core:Changelog/8.7/Important-80506-D
 
 This applies to:
 
-* :typoscript:`select.where`
+*   :typoscript:`select.where`
 
 but not to:
 
-* :typoscript:`select.groupBy`
-* :typoscript:`select.orderBy`
+*   :typoscript:`select.groupBy`
+*   :typoscript:`select.orderBy`
 
 as these parameters already follow a stricter syntax that allow automatic parsing and
 quoting.
