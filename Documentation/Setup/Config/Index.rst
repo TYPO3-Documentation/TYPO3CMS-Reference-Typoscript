@@ -193,7 +193,7 @@ admPanel
 
          **Note:** In addition, the panel must be enabled for the user as well,
          using the TSconfig for the user. See the :ref:`TSconfig
-         reference <t3tsconfig:useradmpanel>` for more information.
+         reference <ext_adminpanel:typoscript-config-admpanel>` for more information.
 
 
 
