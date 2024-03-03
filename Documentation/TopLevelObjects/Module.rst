@@ -16,7 +16,7 @@ for all backend modules of that extension.
 Even though we are in the backend context here we use TypoScript setup. The
 settings should be done globally and not changed on a per-page basis.
 Therefore they are usually done in the file
-:ref:`EXT:my_extension/ext_typoscript_setup.typoscript <ext_typoscript_setup_typoscript>`.
+:ref:`EXT:my_extension/ext_typoscript_setup.typoscript <t3coreapi:ext_typoscript_setup_typoscript>`.
 
 
 Options for simple backend modules
