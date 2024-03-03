@@ -15,43 +15,54 @@ the register key :typoscript:`SPLIT_COUNT`.
 ..  contents::
     :local:
 
-..  index:: select; Properties
-..  _select-properties:
+..  index:: split; Properties
+..  _split-properties:
 
 Properties
 ==========
 
+..  _split-token:
+
 token
 -----
 
-..  t3-function-split:: token
+..  confval:: token
 
     :Data type: :ref:`data-type-string` / :ref:`stdwrap`
 
     String or character (token) used to split the value.
 
+
+..  _split-max:
+
 max
 ---
 
-..  t3-function-split:: max
+..  confval:: max
 
     :Data type: :ref:`data-type-integer` / :ref:`stdwrap`
 
     Maximum number of splits.
 
+
+..  _split-min:
+
 min
 ---
 
-..  t3-function-split:: min
+..  confval:: min
 
     :Data type: :ref:`data-type-integer` / :ref:`stdwrap`
 
     Minimum number of splits.
 
+
+..  _split-returnKey:
+
 returnKey
 ---------
 
-..  t3-function-split:: returnKey
+..  confval:: returnKey
 
     :Data type: :ref:`data-type-integer` / :ref:`stdwrap`
 
@@ -59,10 +70,13 @@ returnKey
     index with this number immediately and stop processing of the split
     function.
 
+
+..  _split-returnCount:
+
 returnCount
 -----------
 
-..  t3-function-split:: returnCount
+..  confval:: returnCount
 
     :Data type: :ref:`data-type-boolean` / :ref:`stdwrap`
 
@@ -82,20 +96,26 @@ returnCount
            split.returnCount = 1
        }
 
+
+..  _split-cObjNum:
+
 cObjNum
 -------
 
-..  t3-function-split:: cObjNum
+..  confval:: cObjNum
 
     :Data type: *cObjNum* + :ref:`optionsplit` / :ref:`stdwrap`
 
     This is a pointer the array of this object ("1,2,3,4"), that should
     treat the items, resulting from the split.
 
+
+..  _split-cObject:
+
 1,2,3,4
 -------
 
-..  t3-function-split:: 1,2,3,4,...
+..  confval:: 1,2,3,4,...
 
     :Data type: :ref:`cObject <data-type-cobject>` / :ref:`stdwrap`
 
@@ -128,14 +148,14 @@ cObjNum
 wrap
 ----
 
-..  t3-function-split:: wrap
+..  confval:: wrap
 
     :Data type: wrap + :ref:`optionsplit` / :ref:`stdwrap`
 
     Defines a wrap for each item.
 
 
-.. _split-examples:
+..  _split-examples:
 
 Example
 =======
