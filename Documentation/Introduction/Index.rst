@@ -13,7 +13,7 @@ defined with TypoScript - often it is used in
 combination with the Fluid templating engine.
 
 This document is a **reference**, used to lookup TypoScript templating
-:ref:`basic data types <data-types>`, :ref:`object types <cobjects>`,
+:ref:`basic data types <data-types>`, :ref:`object types <cobject>`,
 :ref:`functions <functions>` and :ref:`conditions <conditions>`. This
 reference is not intended to give you a full introduction into the topic
 TypoScript.
