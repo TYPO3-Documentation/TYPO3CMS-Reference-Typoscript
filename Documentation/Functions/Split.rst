@@ -15,8 +15,8 @@ the register key :typoscript:`SPLIT_COUNT`.
 .. contents::
    :local:
 
-.. index:: select; Properties
-.. _select-properties:
+.. index:: split; Properties
+.. _split-properties:
 
 Properties
 ==========
