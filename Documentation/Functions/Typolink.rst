@@ -303,7 +303,7 @@ parameter
     are described in more detail below.
 
     Link targets that are external or contain `_blank` will be added
-    :html:`rel="noopener noreferrer"` automatically.
+    :html:`rel="noreferrer"` automatically.
 
     ..  rubric:: Resource reference
 
