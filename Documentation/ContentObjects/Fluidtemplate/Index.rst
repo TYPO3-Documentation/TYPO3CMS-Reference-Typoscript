@@ -105,13 +105,15 @@ extbase.controllerExtensionName
 
     Sets the extension name of the controller.
 
-    ..  tip::
-        Setting this allows you to skip the `extensionName` argument for the
-        :ref:`f:translate <t3viewhelper:typo3-fluid-translate>` and
-        the :ref:`f:uri.resource <t3viewhelper:typo3-fluid-uri-resource>` ViewHelpers.
+    ..  warning::
 
-        This requires you to put translations and public images in the
-        :ref:`usual paths in your extension <t3coreapi:extension-reserved-folders>`.
+        Up to TYPO3 11, this property could be used as an alternative to the `extensionName`
+        argument in the ViewHelpers :ref:`f:translate <t3viewhelper:typo3-fluid-translate>`
+        and :ref:`f:uri.resource <t3viewhelper:typo3-fluid-uri-resource>`, provided that
+        translations and public images were stored in the usual paths in your extension.
+
+        As of TYPO3 v12 this is no longer supported and it is recommended to use absolute keys
+        or the `extensionName` argument plus key arguments in the ViewHelper.
 
 .. _cobj-fluidtemplate-properties-extbase-controllername:
 
