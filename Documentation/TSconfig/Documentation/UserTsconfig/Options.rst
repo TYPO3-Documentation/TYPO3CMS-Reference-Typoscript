@@ -897,6 +897,15 @@ pageTree.altElementBrowserMountPoints.append
 pageTree.backgroundColor
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
+..  deprecated:: 13.1
+    This setting has been deprecated and will be removed in TYPO3 v14 due to its
+    lack of accessibility. It is being replaced with a
+    :ref:`new label system <useroptions-pageTree-label>` for tree nodes.
+
+    In TYPO3 v13 the setting will be migrated to the new label system. Since the
+    use case is unknown, the generated label will be "Color: <value>". This
+    information will be displayed on all affected nodes.
+
 ..  confval:: pageTree.backgroundColor
 
     :Data type: string
@@ -974,6 +983,45 @@ pageTree.excludeDoktypes
 
         options.pageTree.excludeDoktypes = 254,1
 
+
+..  index:: Page tree; Node labels
+..  _useroptions-pageTree-label:
+
+pageTree.label
+~~~~~~~~~~~~~~
+
+..  versionadded:: 13.1
+    This setting is the successor of :ref:`useroptions-pageTree-backgroundColor`.
+
+..  confval:: pageTree.label.<page-id>
+
+    :Data type: list of page IDs
+
+    Labels offer customizable color markings for tree nodes and require an
+    associated label for accessibility.
+
+    Example:
+
+    ..  code-block:: typoscript
+        :caption: EXT:my_extension/Configuration/user.tsconfig
+
+        options.pageTree.label.296 {
+          label = Campaign A
+          color = #ff8700
+        }
+
+    Display:
+
+    ..  figure:: /Images/ManualScreenshots/List/optionsPageTreeLabel.png
+        :alt: Page with configured color and label
+        :class: with-shadow
+
+        Page with configured color and label
+
+    ..  note::
+        Only one label per page can be set through this method. Use the
+        PSR-14 event :ref:`t3coreapi:AfterPageTreeItemsPreparedEvent` to assign
+        multiple labels to a page.
 
 ..  todo:: does this still work with site configuration?
 ..  index:: Page tree; Show domain names
