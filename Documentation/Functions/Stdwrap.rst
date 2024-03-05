@@ -4,7 +4,7 @@
     !Function stdWrap
     stdWrap
 
-.. _stdwrap:
+..  _stdwrap:
 
 =======
 stdWrap
@@ -14,8 +14,8 @@ When a data type is set to "*type* /stdWrap" it means that the value
 is parsed through the stdWrap function with the properties of the
 value as parameters.
 
-.. contents:: Table of contents
-   :local:
+..  contents:: Table of contents
+    :local:
 
 Content-supplying properties of stdWrap
 =======================================
@@ -23,14 +23,14 @@ Content-supplying properties of stdWrap
 stdWrap contains properties which determine what is applied. The properties
 are listed below.
 
-  ..  note::
+..  note::
     The properties are parsed in the listed order. The
     properties :typoscript:`data`, :typoscript:`field`, :typoscript:`current`, :typoscript:`cObject`
     (in that order!) are special as they are used to import content
     from variables or arrays.
 
 If you want to study this further please refer to
-:file:`typo3/sysext/frontend/Classes/ContentObject/ContentObjectRenderer.php`,
+:t3src:`frontend/Classes/ContentObject/ContentObjectRenderer.php`,
 where you will find the function :php:`stdWrap()` and the array :php:`$stdWrapOrder`,
 which represents the exact order of execution.
 
@@ -55,27 +55,28 @@ Properties
 ==========
 
 ..  index:: Function stdWrap; Getting data
-.. _stdwrap-get-data:
+..  _stdwrap-get-data:
 
 Properties for getting data
 ----------------------------
 
+..  _stdwrap-setContentToCurrent:
 
 setContentToCurrent
 ~~~~~~~~~~~~~~~~~~~
 
-..  t3-function-stdwrap:: setContentToCurrent
+..  confval:: setContentToCurrent
 
     :Data type: :ref:`data-type-boolean` / :ref:`stdWrap`
 
     Sets the current value to the incoming content of the function.
 
-.. _stdwrap-addpagecachetags:
+..  _stdwrap-addpagecachetags:
 
 addPageCacheTags
 ~~~~~~~~~~~~~~~~
 
-..  t3-function-stdwrap:: addPageCacheTags
+..  confval:: addPageCacheTags
 
     :Data type: :ref:`data-type-string` / :ref:`stdWrap`
 
@@ -97,13 +98,15 @@ addPageCacheTags
 
     ..  note::
         If you instead want to store rendered content into the
-        caching framework, see the stdWrap feature :t3-function-stdwrap:`cache`.
+        caching framework, see the stdWrap feature :ref:`stdwrap-cache`.
 
+
+..  _stdwrap-setCurrent:
 
 setCurrent
 ~~~~~~~~~~
 
-..  t3-function-stdwrap:: setCurrent
+..  confval:: setCurrent
 
     :Data type: :ref:`data-type-string` / :ref:`stdWrap`
 
@@ -111,10 +114,12 @@ setCurrent
     routine, so be careful with this. But it might be handy to do this
 
 
+..  _stdwrap-lang:
+
 lang
 ~~~~
 
-..  t3-function-stdwrap:: lang
+..  confval:: lang
 
     :Data type: Array of language keys / :ref:`stdWrap`
 
@@ -133,18 +138,22 @@ lang
     Output will be "Ich bin..." instead of "I am..."
 
 
+..  _stdwrap-data:
+
 data
 ~~~~
 
-..  t3-function-stdwrap:: data
+..  confval:: data
 
     :Data type: :ref:`data-type-gettext` / :ref:`stdWrap`
 
 
+..  _stdwrap-field:
+
 field
 ~~~~~
 
-..  t3-function-stdwrap:: field
+..  confval:: field
 
     :Data type: Field name / :ref:`stdWrap`
 
@@ -176,37 +185,49 @@ field
     unless it is a blank string. If a blank string, the value of
     the title field is returned.
 
+
+..  _stdwrap-current:
+
 current
 ~~~~~~~
 
-..  t3-function-stdwrap:: current
+..  confval:: current
 
     :Data type: :ref:`data-type-boolean` / :ref:`stdWrap`
 
-    Sets the content to the "current"-value (see :ref:`->split <split>`)
+    Sets the content to the "current" value (see :ref:`->split <split>`)
+
+
+..  _stdwrap-cObject:
 
 cObject
 ~~~~~~~
 
-..  t3-function-stdwrap:: cObject
+..  confval:: cObject
 
     :Data type: :ref:`data-type-cobject`
 
     Loads content from a content object.
 
+
+..  _stdwrap-numRows:
+
 numRows
 ~~~~~~~
 
-..  t3-function-stdwrap:: numRows
+..  confval:: numRows
 
     :Data type: :ref:`->numRows <numrows>` / :ref:`stdWrap`
 
     Returns the number of rows resulting from the supplied :sql:`SELECT` query.
 
+
+..  _stdwrap-preUserFunc:
+
 preUserFunc
 ~~~~~~~~~~~
 
-..  t3-function-stdwrap:: preUserFunc
+..  confval:: preUserFunc
 
     :Data type: :ref:`data-type-function-name`
 
@@ -218,38 +239,44 @@ preUserFunc
     value to be processed. As second parameter any sub-properties of
     preUserFunc are provided to the function.
 
-    See :t3-function-stdwrap:`postUserFunc`.
+    See :ref:`stdwrap-postUserFunc`.
 
 
 ..  index:: Function stdWrap; Override and conditions
-.. _stdwrap-override-conditions:
+..  _stdwrap-override-conditions:
 
 Properties for overriding and conditions
 ----------------------------------------
 
+..  _stdwrap-override:
+
 override
 ~~~~~~~~
 
-..  t3-function-stdwrap:: override
+..  confval:: override
 
     :Data type: :ref:`data-type-string` / :ref:`stdWrap`
 
     If `override` returns something else than "" or zero (trimmed), the
     content is loaded with this!
 
+
+..  _stdwrap-preIfEmptyListNum:
+
 preIfEmptyListNum
 ~~~~~~~~~~~~~~~~~
 
-..  t3-function-stdwrap:: preIfEmptyListNum
+..  confval:: preIfEmptyListNum
 
-    :Data type: (as ":t3-function-stdwrap:`listNum`" below)
+    :Data type: (as ":ref:`stdwrap-listNum`" below)
 
-    (as ":t3-function-stdwrap:`listNum`" below)
+
+..  _stdwrap-ifNull:
 
 ifNull
 ~~~~~~
 
-..  t3-function-stdwrap:: ifNull
+..  confval:: ifNull
 
     :Data type: :ref:`data-type-string` / :ref:`stdWrap`
 
@@ -272,34 +299,43 @@ ifNull
     This example shows the content of the field description or, if that
     field contains the value :php:`NULL`, the text "No description defined.".
 
+
+..  _stdwrap-ifEmpty:
+
 ifEmpty
 ~~~~~~~
 
-..  t3-function-stdwrap:: ifEmpty
+..  confval:: ifEmpty
 
     :Data type: :ref:`data-type-string` / :ref:`stdWrap`
 
     If the trimmed content is empty at this point, the content is loaded
     with :typoscript:`ifEmpty`. Zeros are treated as empty values!
 
+
+..  _stdwrap-ifBlank:
+
 ifBlank
 ~~~~~~~
 
-..  t3-function-stdwrap:: ifBlank
+..  confval:: ifBlank
 
     :Data type: :ref:`data-type-string` / :ref:`stdWrap`
 
     Same as :typoscript:`ifEmpty` but the check is done against ''. Zeros are not
     treated as blank values!
 
+
+..  _stdwrap-listNum:
+
 listNum
 ~~~~~~~
 
-..  t3-function-stdwrap:: listNum
+..  confval:: listNum
 
     :Data type: :ref:`data-type-string` / :ref:`stdWrap`
 
-    Explodes the current content :t3-function-stdwrap:`listNum.splitChar`
+    Explodes the current content :ref:`stdwrap-listNum-splitChar`
     (Default: `,`) and returns the object specified by `listNum`.
 
     Possible values:
@@ -340,7 +376,13 @@ listNum
         page.10.value = item 1, item 2, item 3, item 4
         page.10.listNum = last – 1
 
-..  t3-function-stdwrap:: listNum.splitChar
+
+..  _stdwrap-listNum-splitChar:
+
+listNum.splitChar
+"""""""""""""""""
+
+..  confval:: listNum.splitChar
 
     :Data type: :ref:`data-type-string`
     :Default: `,` (comma)
@@ -363,39 +405,51 @@ listNum
            }
         }
 
+
+..  _stdwrap-trim:
+
 trim
 ~~~~
 
-..  t3-function-stdwrap:: trim
+..  confval:: trim
 
     :Data type: :ref:`data-type-boolean` / :ref:`stdWrap`
 
     If set, the PHP-function :php:`trim()` will be used to remove whitespaces
     around the value.
 
+
+..  _stdwrap-strPad:
+
 strPad
 ~~~~~~
 
-..  t3-function-stdwrap:: strPad
+..  confval:: strPad
 
     :Data type: :ref:`strPad`
 
     Pads the current content to a certain length. You can define the padding
     characters and the side(s), on which the padding should be added.
 
+
+..  _stdwrap-stdWrap:
+
 stdWrap
 ~~~~~~~
 
-..  t3-function-stdwrap:: stdWrap
+..  confval:: stdWrap
 
     :Data type: :ref:`stdWrap`
 
     Recursive call to the :typoscript:`stdWrap` function.
 
+
+..  _stdwrap-required:
+
 required
 ~~~~~~~~
 
-..  t3-function-stdwrap:: required
+..  confval:: required
 
     :Data type: :ref:`data-type-boolean` / :ref:`stdWrap`
 
@@ -406,43 +460,53 @@ required
 
     If the content is empty, "" is returned immediately.
 
+
+..  _stdwrap-if:
+
 if
 --
 
-..  t3-function-stdwrap:: if
+..  confval:: if
 
     :Data type: :ref:`if`
 
     If the if-object returns false, stdWrap returns "" immediately.
 
 
+..  _stdwrap-fieldRequired:
+
 fieldRequired
 ~~~~~~~~~~~~~
 
-..  t3-function-stdwrap:: fieldRequired
+..  confval:: fieldRequired
 
     :Data type: Field name / :ref:`stdWrap`
 
     The value in this field **must** be set.
 
 
-Properies for parsing data
---------------------------
+Properties for parsing data
+---------------------------
+
+..  _stdwrap-csConv:
 
 csConv
 ~~~~~~
 
-..  t3-function-stdwrap:: csConv
+..  confval:: csConv
 
     :Data type: :ref:`data-type-string` / :ref:`stdWrap`
 
     Convert the charset of the string from the charset given as value to
     the current rendering charset of the frontend (UTF-8).
 
+
+..  _stdwrap-parseFunc:
+
 parseFunc
 ~~~~~~~~~
 
-..  t3-function-stdwrap:: parseFunc
+..  confval:: parseFunc
 
     :Data type: object path reference / :ref:`parsefunc` / :ref:`stdWrap`
 
@@ -467,13 +531,11 @@ parseFunc
         }
 
 Sanitization
-''''''''''''
+""""""""""""
 
-.. versionadded:: 9.5.29/10.4.19
-
-:t3-function-stdwrap:`htmlSanitize` is enabled by default when
-:t3-function-stdwrap:`parseFunc` is invoked. This also includes the Fluid Viewhelper
-:html:`<f:format.html>`, since it invokes :t3-function-stdwrap:`parseFunc`
+:ref:`stdwrap-htmlSanitize` is enabled by default when
+:ref:`stdwrap-parseFunc` is invoked. This also includes the Fluid Viewhelper
+:html:`<f:format.html>`, since it invokes :ref:`stdwrap-parseFunc`
 directly using :typoscript:`lib.parseFunc_RTE`.
 
 The following example shows how to disable the sanitization behavior that is
@@ -523,7 +585,7 @@ solved by explicitly disabling it with :typoscript:`htmlSanitize = 0`.
 HTMLparser
 ~~~~~~~~~~
 
-..  t3-function-stdwrap:: HTMLparser
+..  confval:: HTMLparser
 
     :Data type: :ref:`data-type-boolean` / :ref:`htmlparser` / :ref:`stdWrap`
 
@@ -535,18 +597,22 @@ HTMLparser
     (See :ref:`t3coreapi:rte` for more information about RTE transformations)
 
 
+..  _stdwrap-split:
+
 split
 ~~~~~
 
-..  t3-function-stdwrap:: split
+..  confval:: split
 
     :Data type: :ref:`split` / :ref:`stdWrap`
 
 
+..  _stdwrap-replacement:
+
 replacement
 ~~~~~~~~~~~
 
-..  t3-function-stdwrap:: replacement
+..  confval:: replacement
 
     :Data type: :ref:`replacement` / :ref:`stdWrap`
 
@@ -556,10 +622,12 @@ replacement
     replacements at once.
 
 
+..  _stdwrap-prioriCalc:
+
 prioriCalc
 ~~~~~~~~~~
 
-..  t3-function-stdwrap:: prioriCalc
+..  confval:: prioriCalc
 
     :Data type: :ref:`data-type-boolean` / :ref:`stdWrap`
 
@@ -590,10 +658,13 @@ prioriCalc
         -5 * (-4+6) ^ 2 - 100%7 = 98
         -5 * ((-4+6) ^ 2) - 100%7 = -22
 
+
+..  _stdwrap-char:
+
 char
 ~~~~
 
-..  t3-function-stdwrap:: char
+..  confval:: char
 
     :Data type: :ref:`data-type-integer` / :ref:`stdWrap`
 
@@ -607,10 +678,13 @@ char
 
         $content = chr((int)$conf['char']);
 
+
+..  _stdwrap-intval:
+
 intval
 ~~~~~~
 
-..  t3-function-stdwrap:: intval
+..  confval:: intval
 
     :Data type: :ref:`data-type-boolean` / :ref:`stdWrap`
 
@@ -620,10 +694,13 @@ intval
 
         $content = intval($content);
 
+
+..  _stdwrap-hash:
+
 hash
 ~~~~
 
-..  t3-function-stdwrap:: hash
+..  confval:: hash
 
     :Data type: :ref:`data-type-string` / :ref:`stdWrap`
 
@@ -642,30 +719,39 @@ hash
            stdWrap.wrap = <img src="https://www.gravatar.com/avatar/|" />
         }
 
+
+..  _stdwrap-round:
+
 round
 ~~~~~
 
-..  t3-function-stdwrap:: round
+..  confval:: round
 
     :Data type: :ref:`round` / :ref:`stdWrap`
 
     Round the value with the selected method to the given number of
     decimals.
 
+
+..  _stdwrap-numberFormat:
+
 numberFormat
 ~~~~~~~~~~~~
 
-..  t3-function-stdwrap:: numberFormat
+..  confval:: numberFormat
 
     :Data type: :ref:`numberformat`
 
     Format a float value to any number format you need (e.g. useful for
     prices).
 
+
+..  _stdwrap-date:
+
 date
 ~~~~
 
-..  t3-function-stdwrap:: date
+..  confval:: date
 
     :Data type: :ref:`data-type-date-conf` / :ref:`stdWrap`
 
@@ -699,13 +785,15 @@ date
 
     ..  note::
         You should consider using the more flexible function
-        :t3-function-stdwrap:`formattedDate`.
+        :ref:`stdwrap-formattedDate`.
 
+
+..  _stdwrap-strtotime:
 
 strtotime
 ~~~~~~~~~
 
-..  t3-function-stdwrap:: strtotime
+..  confval:: strtotime
 
     :Data type: :ref:`data-type-string`
 
@@ -734,10 +822,13 @@ strtotime
            strftime = %Y-%m-%d
         }
 
+
+..  _stdwrap-strftime:
+
 strftime
 ~~~~~~~~
 
-..  t3-function-stdwrap:: strftime
+..  confval:: strftime
 
     :Data type: :ref:`data-type-strftime-conf` / :ref:`stdWrap`
 
@@ -761,21 +852,24 @@ strftime
 
     ..  note::
         You should consider using the more flexible function
-        :t3-function-stdwrap:`formattedDate`.
+        :ref:`stdwrap-formattedDate`.
+
+
+..  _stdwrap-formattedDate:
 
 formattedDate
 ~~~~~~~~~~~~~
 
 ..  versionadded:: 12.3
 
-..  t3-function-stdwrap:: formattedDate
+..  confval:: formattedDate
 
     :Data type: :ref:`data-type-string`
 
     The function renders date and time based on formats/patterns defined by
     the International Components for Unicode standard (ICU). ICU-based date and
     time formatting is much more flexible in rendering as
-    :t3-function-stdwrap:`date` or :t3-function-stdwrap:`strftime`, as it ships
+    :ref:`stdwrap-date` or :ref:`stdwrap-strftime`, as it ships
     with default patterns for date and time based on the given locale (given
     examples for locale `en-US` and timezone `America/Los_Angeles`):
 
@@ -840,10 +934,13 @@ formattedDate
         The timezone will be taken from the setting `date.timezone` in your
         :file:`php.ini`.
 
+
+..  _stdwrap-age:
+
 age
 ~~~
 
-..  t3-function-stdwrap:: age
+..  confval:: age
 
     :Data type: :ref:`data-type-boolean` or :ref:`data-type-string` / :ref:`stdWrap`
 
@@ -884,7 +981,7 @@ age
 case
 ~~~~
 
-..  t3-function-stdwrap:: case
+..  confval:: case
 
     :Data type: :ref:`data-type-case` / :ref:`stdWrap`
 
@@ -892,10 +989,13 @@ case
 
     Uses "UTF-8" for the operation.
 
+
+..  _stdwrap-bytes:
+
 bytes
 ~~~~~
 
-..  t3-function-stdwrap:: bytes
+..  confval:: bytes
 
     :Data type: :ref:`data-type-boolean` / :ref:`stdWrap`
 
@@ -1057,22 +1157,28 @@ bytes
            bytes.base = 1024
         }
 
+
+..  _stdwrap-substring:
+
 substring
 ~~~~~~~~~
 
-..  t3-function-stdwrap:: substring
+..  confval:: substring
 
     :Data type: [p1], [p2] / :ref:`stdWrap`
 
     Returns the substring with [p1] and [p2] sent as the 2nd and 3rd
-    parameter to the PHP `mb_substr <https://www.php.net/mb_substr>`_ function.
+    parameter to the PHP `mb_substr <https://www.php.net/mb_substr>`__ function.
 
     Uses "UTF-8" for the operation.
+
+
+..  _stdwrap-cropHTML:
 
 cropHTML
 ~~~~~~~~
 
-..  t3-function-stdwrap:: cropHTML
+..  confval:: cropHTML
 
     :Data type: :ref:`data-type-string` / :ref:`stdWrap`
 
@@ -1084,19 +1190,25 @@ cropHTML
     Note that :typoscript:`stdWrap.crop` should not be used if :typoscript:`stdWrap.cropHTML` is
     already used.
 
+
+..  _stdwrap-stripHtml:
+
 stripHtml
 ~~~~~~~~~
 
-..  t3-function-stdwrap:: stripHtml
+..  confval:: stripHtml
 
     :Data type: :ref:`data-type-boolean` / :ref:`stdWrap`
 
     Strips all HTML tags.
 
+
+..  _stdwrap-crop:
+
 crop
 ~~~~
 
-..  t3-function-stdwrap:: crop
+..  confval:: crop
 
     :Data type: :ref:`data-type-string` / :ref:`stdWrap`
 
@@ -1136,19 +1248,25 @@ crop
 
     Uses "UTF-8" for the operation.
 
+
+..  _stdwrap-rawUrlEncode:
+
 rawUrlEncode
 ~~~~~~~~~~~~
 
-..  t3-function-stdwrap:: rawUrlEncode
+..  confval:: rawUrlEncode
 
     :Data type: :ref:`data-type-boolean` / :ref:`stdWrap`
 
     Passes the content through the PHP function `rawurlencode() <https://www.php.net/rawurlencode>`_.
 
+
+..  _stdwrap-htmlSpecialChars:
+
 htmlSpecialChars
 ~~~~~~~~~~~~~~~~
 
-..  t3-function-stdwrap:: htmlSpecialChars
+..  confval:: htmlSpecialChars
 
     :Data type: :ref:`data-type-boolean` / :ref:`stdWrap`
 
@@ -1157,10 +1275,13 @@ htmlSpecialChars
     Additional property :typoscript:`preserveEntities` will preserve entities so only
     non-entity characters are affected.
 
+
+..  _stdwrap-encodeForJavaScriptValue:
+
 encodeForJavaScriptValue
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-..  t3-function-stdwrap:: encodeForJavaScriptValue
+..  confval:: encodeForJavaScriptValue
 
     :Data type: :ref:`data-type-boolean` / :ref:`stdWrap`
 
@@ -1170,7 +1291,7 @@ encodeForJavaScriptValue
     already quoted with single quotes.
 
     Passes the content through the core function
-    :php:`\TYPO3\CMS\Core\Utility\GeneralUtility::quoteJSvalue`.
+    :php:`\TYPO3\CMS\Core\Utility\GeneralUtility::quoteJSvalue()`.
 
     ..  rubric:: Examples
 
@@ -1184,124 +1305,162 @@ encodeForJavaScriptValue
               wrap = setSearchWord(|);
         }
 
+
+..  _stdwrap-doubleBrTag:
+
 doubleBrTag
 ~~~~~~~~~~~
 
-..  t3-function-stdwrap:: doubleBrTag
+..  confval:: doubleBrTag
 
     :Data type: :ref:`data-type-string` / :ref:`stdWrap`
 
-    All double-line-breaks are substituted with this value.
+    All double line breaks are substituted with this value.
+
+
+..  _stdwrap-br:
 
 br
 ~~
 
-..  t3-function-stdwrap:: br
+..  confval:: br
 
     :Data type: :ref:`data-type-boolean` / :ref:`stdWrap`
 
-    Pass the value through the PHP function `nl2br() <https://www.php.net/nl2br>`_. This
+    Pass the value through the PHP function `nl2br() <https://www.php.net/nl2br>`__. This
     converts each line break to a :html:`<br />` or a :html:`<br>` tag depending on doctype.
+
+
+..  _stdwrap-brTag:
 
 brTag
 ~~~~~
 
-..  t3-function-stdwrap:: brTag
+..  confval:: brTag
 
     :Data type: :ref:`data-type-string` / :ref:`stdWrap`
 
     All ASCII codes of "10" (line feed, LF) are substituted with the
     *value*, which has been provided in this property.
 
+
+..  _stdwrap-encapsLines:
+
 encapsLines
 ~~~~~~~~~~~
 
-..  t3-function-stdwrap:: encapsLines
+..  confval:: encapsLines
 
     :Data type: :ref:`encapslines` / :ref:`stdWrap`
 
     Lets you split the content by :php:`chr(10)` and process each line
     independently. Used to format content made with the RTE.
 
+
+..  _stdwrap-keywords:
+
 keywords
 ~~~~~~~~
 
-..  t3-function-stdwrap:: keywords
+..  confval:: keywords
 
     :Data type: :ref:`data-type-boolean` / :ref:`stdWrap`
 
     Splits the content by characters "," ";" and php:`chr(10)` (return), trims
     each value and returns a comma-separated list of the values.
 
+
+..  _stdwrap-innerWrap:
+
 innerWrap
 ~~~~~~~~~
 
-..  t3-function-stdwrap:: innerWrap
+..  confval:: innerWrap
 
     :Data type: :ref:`wrap <data-type-wrap>` / :ref:`stdWrap`
 
     Wraps the content.
 
+
+..  _stdwrap-innerWrap2:
+
 innerWrap2
 ~~~~~~~~~~
 
-..  t3-function-stdwrap:: innerWrap2
+..  confval:: innerWrap2
 
     :Data type: :ref:`wrap <data-type-wrap>` / :ref:`stdWrap`
 
     Same as :typoscript:`innerWrap` (but watch the order in which they are executed).
 
+
+..  _stdwrap-preCObject:
+
 preCObject
 ~~~~~~~~~~
 
-..  t3-function-stdwrap:: preCObject
+..  confval:: preCObject
 
     :Data type: :ref:`data-type-cobject`
 
-    :t3-function-stdwrap:`cObject` prepended the content.
+    :ref:`stdwrap-cObject` prepended the content.
+
+
+..  _stdwrap-postCObject:
 
 postCObject
 ~~~~~~~~~~~
 
-..  t3-function-stdwrap:: postCObject
+..  confval:: postCObject
 
     :Data type: :ref:`data-type-cobject`
 
-    :t3-function-stdwrap:`cObject` appended the content.
+    :ref:`stdwrap-cObject` appended the content.
+
+
+..  _stdwrap-wrapAlign:
 
 wrapAlign
 ~~~~~~~~~
 
-..  t3-function-stdwrap:: wrapAlign
+..  confval:: wrapAlign
 
     :Data type: :ref:`data-type-align` / :ref:`stdWrap`
 
     Wraps content with :typoscript:`<div style=text-align:[*value*];"> | </div>`
     *if* align is set.
 
+
+..  _stdwrap-typolink:
+
 typolink
 ~~~~~~~~
 
-..  t3-function-stdwrap:: typolink
+..  confval:: typolink
 
     :Data type: :ref:`typolink` / :ref:`stdWrap`
 
-    Wraps the content with a link-tag.
+    Wraps the content with a link tag.
+
+
+..  _stdwrap-wrap:
 
 wrap
 ~~~~
 
-..  t3-function-stdwrap:: wrap
+..  confval:: wrap
 
     :Data type: :ref:`wrap <data-type-wrap>` /+.splitChar / :ref:`stdWrap`
 
     :typoscript:`splitChar` defines an alternative splitting character (default is "\|"
     - the vertical line)
 
+..  _stdwrap-noTrimWrap:
+
 noTrimWrap
 ~~~~~~~~~~
 
-..  t3-function-stdwrap:: noTrimWrap
+..  confval:: noTrimWrap
 
     :Data type: "special" wrap /+.splitChar / :ref:`stdWrap`
 
@@ -1342,19 +1501,25 @@ noTrimWrap
     the first part. In each subpart :typoscript:`noTrimWrap` will then use the "^" as
     special character.
 
+
+..  _stdwrap-wrap2:
+
 wrap2
 ~~~~~
 
-..  t3-function-stdwrap:: wrap2
+..  confval:: wrap2
 
     :Data type: :ref:`wrap <data-type-wrap>` /+.splitChar / :ref:`stdWrap`
 
-    same as :t3-function-stdwrap:`wrap` (but watch the order in which they are executed)
+    same as :ref:`stdwrap-wrap` (but watch the order in which they are executed)
+
+
+..  _stdwrap-dataWrap:
 
 dataWrap
 ~~~~~~~~
 
-..  t3-function-stdwrap:: dataWrap
+..  confval:: dataWrap
 
     :Data type: mixed / :ref:`stdWrap`
 
@@ -1372,37 +1537,49 @@ dataWrap
     This will produce a :html:`<div>` tag around the content with an id attribute
     that contains the number of the current page.
 
+
+..  _stdwrap-prepend:
+
 prepend
 ~~~~~~~
 
-..  t3-function-stdwrap:: prepend
+..  confval:: prepend
 
     :Data type: :ref:`data-type-cobject`
 
-    :t3-function-stdwrap:`cObject` prepended to content (before)
+    :ref:`stdwrap-cObject` prepended to content (before)
+
+
+..  _stdwrap-append:
 
 append
 ~~~~~~
 
-..  t3-function-stdwrap:: append
+..  confval:: append
 
     :Data type: :ref:`data-type-cobject`
 
-    :t3-function-stdwrap:`cObject` appended to content (after)
+    :ref:`stdwrap-cObject` appended to content (after)
+
+
+..  _stdwrap-wrap3:
 
 wrap3
 ~~~~~
 
-..  t3-function-stdwrap:: wrap3
+..  confval:: wrap3
 
     :Data type: :ref:`wrap <data-type-wrap>` /+.splitChar / :ref:`stdWrap`
 
     same as :typoscript:`wrap` (but watch the order in which they are executed)
 
+
+..  _stdwrap-orderedStdWrap:
+
 orderedStdWrap
 ~~~~~~~~~~~~~~
 
-..  t3-function-stdwrap:: orderedStdWrap
+..  confval:: orderedStdWrap
 
     :Data type: Array of numeric keys with / :ref:`stdWrap` each
 
@@ -1435,19 +1612,25 @@ orderedStdWrap
 
     This results in "This is a working solution."
 
+
+..  _stdwrap-outerWrap:
+
 outerWrap
 ~~~~~~~~~
 
-..  t3-function-stdwrap:: outerWrap
+..  confval:: outerWrap
 
     :Data type: :ref:`wrap <data-type-wrap>` / :ref:`stdWrap`
 
     Wraps the complete content
 
+
+..  _stdwrap-insertData:
+
 insertData
 ~~~~~~~~~~
 
-..  t3-function-stdwrap:: insertData
+..  confval:: insertData
 
     :Data type: :ref:`data-type-boolean` / :ref:`stdWrap`
 
@@ -1472,13 +1655,15 @@ insertData
 ..  warning::
     Never use this on content that can be edited in the backend. This allows editors to disclose
     normally hidden information. Never use this to insert data into wraps.
-    Use :t3-function-stdwrap:`dataWrap` instead.
+    Use :ref:`stdwrap-dataWrap` instead.
 
+
+..  _stdwrap-postUserFunc:
 
 postUserFunc
 ~~~~~~~~~~~~
 
-..  t3-function-stdwrap:: postUserFunc
+..  confval:: postUserFunc
 
     :Data type: :ref:`data-type-function-name`
 
@@ -1579,10 +1764,13 @@ postUserFunc
     calling :typoscript:`cObject`, is utilised to use functions from
     :php:`ContentObjectRenderer` class!
 
+
+..  _stdwrap-postUserFuncInt:
+
 postUserFuncInt
 ~~~~~~~~~~~~~~~
 
-..  t3-function-stdwrap:: postUserFuncInt
+..  confval:: postUserFuncInt
 
     :Data type: :ref:`data-type-function-name`
 
@@ -1600,10 +1788,13 @@ postUserFuncInt
 
     Supplied by Jens Ellerbrock
 
+
+..  _stdwrap-prefixComment:
+
 prefixComment
 ~~~~~~~~~~~~~
 
-..  t3-function-stdwrap:: prefixComment
+..  confval:: prefixComment
 
     :Data type: :ref:`data-type-string` / :ref:`stdWrap`
 
@@ -1611,7 +1802,7 @@ prefixComment
     string (divided by "\|") where first part is an integer telling how
     many trailing tabs to put before the comment on a new line.
 
-    The content is parsed through :t3-function-stdwrap:`insertData`.
+    The content is parsed through :ref:`stdwrap-insertData`.
 
     ..  rubric:: Examples
 
@@ -1622,10 +1813,13 @@ prefixComment
 
     Will indent the comment with 1 tab (and the next line with 2+1 tabs)
 
+
+..  _stdwrap-htmlSanitize:
+
 htmlSanitize
 ~~~~~~~~~~~~
 
-..  t3-function-stdwrap:: htmlSanitize
+..  confval:: htmlSanitize
 
     :Data type: :ref:`data-type-boolean` / array with key "build"
 
@@ -1674,19 +1868,25 @@ htmlSanitize
             // htmlSanitize.build = TYPO3\CMS\Core\Html\DefaultSanitizerBuilder
         }
 
+
+..  _stdwrap-cache:
+
 cache
 ~~~~~
 
-..  t3-function-stdwrap:: cache
+..  confval:: cache
 
     :Data type: :ref:`cache`
 
     Caches rendered content in the caching framework.
 
+
+..  _stdwrap-debug:
+
 debug
 ~~~~~
 
-..  t3-function-stdwrap:: debug
+..  confval:: debug
 
     :Data type: :ref:`data-type-boolean` / :ref:`stdWrap`
 
@@ -1698,10 +1898,13 @@ debug
 
    Only for debugging during development, otherwise output can break.
 
+
+..  _stdwrap-debugFunc:
+
 debugFunc
 ~~~~~~~~~
 
-..  t3-function-stdwrap:: debugFunc
+..  confval:: debugFunc
 
     :Data type: :ref:`data-type-boolean` / :ref:`stdWrap`
 
@@ -1713,10 +1916,13 @@ debugFunc
 
     Only for debugging during development, otherwise output can break.
 
+
+..  _stdwrap-debugData:
+
 debugData
 ~~~~~~~~~
 
-..  t3-function-stdwrap:: debugData
+..  confval:: debugData
 
     :Data type: :ref:`data-type-boolean` / :ref:`stdWrap`
 
@@ -1734,16 +1940,12 @@ Example
 
 Example with the property "value" of the content object ":ref:`cobj-text`":
 
-.. code-block:: typoscript
-   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-   10 = TEXT
-   10.value = some text
-   10.stdWrap.case = upper
+    10 = TEXT
+    10.value = some text
+    10.stdWrap.case = upper
 
-Here the content of the object "10" is uppercased before it is
+Here the content of the object "10" is upper-cased before it is
 returned.
-
-
-..  index:: Function stdWrap; Content-supplying properties
-.. _stdwrap-content-supplying:

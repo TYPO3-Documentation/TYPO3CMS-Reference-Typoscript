@@ -672,7 +672,7 @@ path
       lib.foo.data = path : EXT:rsaauth/resources/rsaauth.js
 
    It can also be helpful in combination with the stdWrap function
-   :t3-function-stdwrap:`insertData`:
+   :ref:`stdwrap-insertData`:
 
    .. code-block:: typoscript
       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
