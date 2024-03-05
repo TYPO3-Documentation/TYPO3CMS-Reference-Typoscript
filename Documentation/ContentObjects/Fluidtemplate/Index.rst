@@ -106,7 +106,7 @@ extbase.controllerExtensionName
     Sets the extension name of the controller.
 
     ..  warning::
-        Up to TYPO3 11, this property could be used as an alternative to the `extensionName`
+        Up to TYPO3 v11, this property could be used as an alternative to the `extensionName`
         argument in the ViewHelpers :ref:`f:translate <t3viewhelper:typo3-fluid-translate>`
         and :ref:`f:uri.resource <t3viewhelper:typo3-fluid-uri-resource>`, provided that
         translations and public images were stored in the usual paths in your extension.
