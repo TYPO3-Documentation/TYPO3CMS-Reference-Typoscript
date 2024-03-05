@@ -188,7 +188,7 @@ userFunc
     :Data type: :ref:`data-type-function-name`
 
     This passes the non-tag content to a function of your own choice.
-    Similar to e.g. :t3-function-stdwrap:`postUserFunc` in :ref:`stdWrap`.
+    Similar to, for example, :ref:`stdwrap-postUserFunc` in :ref:`stdWrap`.
 
     Remember the function name must possibly be prepended :php:`user_`.
 

@@ -14,7 +14,7 @@ By default pages are unsorted.
 Each in the resulting array of pages gets an additional entry with key
 :code:`_categories` containing the list of categories the page belongs to,
 as a comma-separated list of uid's. It can be accessed with
-:t3-function-stdwrap:`field` or :t3-function-stdwrap:`data`
+:ref:`stdwrap-field` or :ref:`stdwrap-data`.
 like any other field.
 
 .. contents::

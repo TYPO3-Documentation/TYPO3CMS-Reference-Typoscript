@@ -172,7 +172,7 @@ wrapNonWrappedLines
 
 ..  confval:: wrapNonWrappedLines
 
-    :Data type: :t3-function-stdwrap:`wrap`
+    :Data type: :ref:`stdwrap-wrap`
 
     Wrapping for non-encapsulated lines
 

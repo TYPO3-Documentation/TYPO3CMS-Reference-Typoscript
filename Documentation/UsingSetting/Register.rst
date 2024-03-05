@@ -20,8 +20,8 @@ languages. Each register can store a complex TypoScript block. Use
 :ref:`LOAD_REGISTER <cobj-load-register>` to put a variable to the stack, use
 :ref:`RESTORE_REGISTER <cobj-restore-register>` to pull a variable from the stack
 and curly braces around a variable name to read the current value of the
-variable. You need a :t3-function-stdwrap:`data` or a
-:t3-function-stdwrap:`dataWrap` cObject. The registers cannot be read
+variable. You need a :ref:`stdwrap-data` or a
+:ref:`stdwrap-dataWrap` cObject. The registers cannot be read
 on other places than inside of these cObjects.
 
 Example

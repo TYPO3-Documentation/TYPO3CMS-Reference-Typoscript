@@ -796,7 +796,7 @@ disablePrefixComment
          :ref:`data-type-boolean`
 
    Description
-         If set, the stdWrap property :t3-function-stdwrap:`prefixComment` will be disabled, thus
+         If set, the stdWrap property :ref:`stdwrap-prefixComment` will be disabled, thus
          preventing any revealing and space-consuming comments in the HTML
          source code.
 
