@@ -69,8 +69,8 @@ Debugging
 TypoScript itself offers a number of debug functions:
 
 - :ref:`stdWrap <stdwrap>` comes with the properties
-  :t3-function-stdwrap:`debug`, :t3-function-stdwrap:`debugFunc` and
-  :t3-function-stdwrap:`debugData`
+  :ref:`stdwrap-debug`, :ref:`stdwrap-debugFunc` and
+  :ref:`stdwrap-debugData`
   which help checking which values are currently available and which
   configuration is being handled.
 
