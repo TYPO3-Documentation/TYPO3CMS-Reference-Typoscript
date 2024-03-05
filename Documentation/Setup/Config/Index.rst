@@ -935,7 +935,7 @@ forceAbsoluteUrls
 ..  note::
     Setting this option will override any setting in :ref:`config.absRefPrefix
     <setup-config-absrefprefix>` and any typolink
-    :t3-function-typolink:`forceAbsoluteUrl` options.
+    :ref:`typolink-forceAbsoluteUrl` options.
 
 
 ..  index:: config; forceTypeValue
