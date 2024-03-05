@@ -111,8 +111,17 @@ extbase.controllerExtensionName
         and :ref:`f:uri.resource <t3viewhelper:typo3-fluid-uri-resource>`, provided that
         translations and public images were stored in the usual paths in your extension.
 
-        Since TYPO3 v12 this is no longer supported and it is recommended to use absolute keys,
-        or the `extensionName` argument plus key arguments in the ViewHelper.
+        Since TYPO3 v12 this is no longer supported and it is recommended to either use absolute keys:
+
+        .. code-block:: html
+
+           <f:translate key="LLL:EXT:my_extension/Resources/Private/Language/locallang.xlf:myKey" />
+
+        or the `extensionName` argument plus `key` argument in the ViewHelper:
+
+        .. code-block:: html
+
+           <f:translate key="myKey" extensionName="MyExtension" />
 
 .. _cobj-fluidtemplate-properties-extbase-controllername:
 
