@@ -242,7 +242,7 @@ Example 3
 ---------
 
 Another example can be found in the documentation of the stdWrap
-property :t3-function-stdwrap:`postUserFunc` There you can also see how to work with
+property :ref:`stdwrap-postUserFunc` There you can also see how to work with
 :php:`$cObj`, the reference to the parent (calling) cObject.
 
 Example 4
