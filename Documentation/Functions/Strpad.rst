@@ -1,6 +1,6 @@
-.. include:: /Includes.rst.txt
-.. index:: Functions; strPad
-.. _strpad:
+..  include:: /Includes.rst.txt
+..  index:: Functions; strPad
+..  _strpad:
 
 ======
 strPad
@@ -8,21 +8,24 @@ strPad
 
 This property returns the input value padded to a certain length. The
 padding is added on the left side, the right side or on both sides.
-strPad uses the PHP function :php:`str_pad()` for the operation.
+:typoscript:`strPad` uses the PHP function `str_pad() <https://www.php.net/str-pad>`__
+for the operation.
 
-.. contents::
-   :local:
+..  contents::
+    :local:
 
-.. index:: strPad; Properties
-.. _strPad-properties:
+..  index:: strPad; Properties
+..  _strPad-properties:
 
 Properties
 ==========
 
+..  _strpad-length:
+
 length
 ------
 
-..  t3-function-strpad:: length
+..  confval:: length
 
     :Data type: :ref:`data-type-integer` / :ref:`stdwrap`
 
@@ -32,10 +35,12 @@ length
     than, or equal to the length of the input value, no padding
     takes place.
 
+..  _strpad-padWith:
+
 padWith
 -------
 
-..  t3-function-strpad:: padWith
+..  confval:: padWith
 
     :Data type: :ref:`data-type-string` / :ref:`stdwrap`
     :Default: (space character)
@@ -47,10 +52,13 @@ padWith
     that leading and trailing spaces of :typoscript:`padWith` are stripped! If
     you want to pad with spaces, omit this option.
 
+
+..  _strpad-type:
+
 type
 ----
 
-..  t3-function-strpad:: type
+..  confval:: type
 
     :Data type: *(list of keywords)* / :ref:`stdwrap`
     :Default: right
@@ -60,7 +68,7 @@ type
     added. Possible keywords are "left", "right" or "both".
 
 
-.. _strpad-examples:
+..  _strpad-examples:
 
 Examples
 ========
