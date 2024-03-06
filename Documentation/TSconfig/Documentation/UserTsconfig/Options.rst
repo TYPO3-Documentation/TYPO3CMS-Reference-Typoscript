@@ -1050,7 +1050,7 @@ pageTree.showNavTitle
     :Data type: boolean
 
     If set, the navigation title is displayed in the page navigation tree
-    instead of the normal page title. The page title is showed in a
+    instead of the normal page title. The page title is shown in a
     tooltip if the mouse hovers the navigation title.
 
 
