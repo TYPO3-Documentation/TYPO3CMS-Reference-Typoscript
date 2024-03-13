@@ -159,7 +159,7 @@ short
 
         page.10 = TEXT
         page.10.value = Learn more about ###T3###, look here: ###T3web###
-        page.10.userFunc.short {
+        page.10.parseFunc.short {
               T3 = TYPO3 CMS
               T3web = <a href="https://typo3.org">typo3.org</a>
         }
