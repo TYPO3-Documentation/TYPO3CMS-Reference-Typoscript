@@ -806,8 +806,7 @@ getTSFE()
     "TSFE" is available before accessing its properties. A missing "TSFE", for
     example, in backend context, does no longer automatically evaluate the whole
     condition to :php:`false`. Instead, the function returns  :php:`null`, which
-    can be checked using either :typoscript:`[getTSFE() && getTSFE().id == 17]`
-    or the null-safe operator :typoscript:`[getTSFE()?.id == 17]`.
+    can be checked using :typoscript:`[getTSFE() && getTSFE().id == 17]`
 
     Example:
 
@@ -815,7 +814,7 @@ getTSFE()
         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
         # True, if the current page UID is 17. Use the page variable instead
-        [getTSFE()?.id == 17]
+        [getTSFE() && getTSFE().id == 17]
 
 
 ..  index:: Conditions; getenv
