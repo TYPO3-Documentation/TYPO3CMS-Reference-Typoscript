@@ -17,6 +17,8 @@ value as parameters.
 ..  contents:: Table of contents
     :local:
 
+..  _stdwrap-properties-content-supply:
+
 Content-supplying properties of stdWrap
 =======================================
 
@@ -51,6 +53,8 @@ Now the line :typoscript:`10.value = some text` is obsolete, because the whole
 value is "imported" from the field called "header" from the
 :php:`$cObj->data-array`.
 
+..  _stdwrap-properties:
+
 Properties
 ==========
 
@@ -66,6 +70,7 @@ setContentToCurrent
 ~~~~~~~~~~~~~~~~~~~
 
 ..  confval:: setContentToCurrent
+    :name: stdwrap-setContentToCurrent
 
     :Data type: :ref:`data-type-boolean` / :ref:`stdWrap`
 
@@ -77,6 +82,7 @@ addPageCacheTags
 ~~~~~~~~~~~~~~~~
 
 ..  confval:: addPageCacheTags
+    :name: stdwrap-addpagecachetags
 
     :Data type: :ref:`data-type-string` / :ref:`stdWrap`
 
@@ -107,6 +113,7 @@ setCurrent
 ~~~~~~~~~~
 
 ..  confval:: setCurrent
+    :name: stdwrap-setCurrent
 
     :Data type: :ref:`data-type-string` / :ref:`stdWrap`
 
@@ -120,6 +127,7 @@ lang
 ~~~~
 
 ..  confval:: lang
+    :name: stdwrap-lang
 
     :Data type: Array of language keys / :ref:`stdWrap`
 
@@ -144,6 +152,7 @@ data
 ~~~~
 
 ..  confval:: data
+    :name: stdwrap-data
 
     :Data type: :ref:`data-type-gettext` / :ref:`stdWrap`
 
@@ -154,6 +163,7 @@ field
 ~~~~~
 
 ..  confval:: field
+    :name: stdwrap-field
 
     :Data type: Field name / :ref:`stdWrap`
 
@@ -192,6 +202,7 @@ current
 ~~~~~~~
 
 ..  confval:: current
+    :name: stdwrap-current
 
     :Data type: :ref:`data-type-boolean` / :ref:`stdWrap`
 
@@ -204,6 +215,7 @@ cObject
 ~~~~~~~
 
 ..  confval:: cObject
+    :name: stdwrap-cObject
 
     :Data type: :ref:`data-type-cobject`
 
@@ -216,6 +228,7 @@ numRows
 ~~~~~~~
 
 ..  confval:: numRows
+    :name: stdwrap-numRows
 
     :Data type: :ref:`->numRows <numrows>` / :ref:`stdWrap`
 
@@ -228,6 +241,7 @@ preUserFunc
 ~~~~~~~~~~~
 
 ..  confval:: preUserFunc
+    :name: stdwrap-preUserFunc
 
     :Data type: :ref:`data-type-function-name`
 
@@ -254,6 +268,7 @@ override
 ~~~~~~~~
 
 ..  confval:: override
+    :name: stdwrap-override
 
     :Data type: :ref:`data-type-string` / :ref:`stdWrap`
 
@@ -267,6 +282,7 @@ preIfEmptyListNum
 ~~~~~~~~~~~~~~~~~
 
 ..  confval:: preIfEmptyListNum
+    :name: stdwrap-preIfEmptyListNum
 
     :Data type: (as ":ref:`stdwrap-listNum`" below)
 
@@ -277,6 +293,7 @@ ifNull
 ~~~~~~
 
 ..  confval:: ifNull
+    :name: stdwrap-ifNull
 
     :Data type: :ref:`data-type-string` / :ref:`stdWrap`
 
@@ -306,6 +323,7 @@ ifEmpty
 ~~~~~~~
 
 ..  confval:: ifEmpty
+    :name: stdwrap-ifEmpty
 
     :Data type: :ref:`data-type-string` / :ref:`stdWrap`
 
@@ -319,6 +337,7 @@ ifBlank
 ~~~~~~~
 
 ..  confval:: ifBlank
+    :name: stdwrap-ifBlank
 
     :Data type: :ref:`data-type-string` / :ref:`stdWrap`
 
@@ -332,6 +351,7 @@ listNum
 ~~~~~~~
 
 ..  confval:: listNum
+    :name: stdwrap-listNum
 
     :Data type: :ref:`data-type-string` / :ref:`stdWrap`
 
@@ -383,6 +403,7 @@ listNum.splitChar
 """""""""""""""""
 
 ..  confval:: listNum.splitChar
+    :name: stdwrap-listNum-splitChar
 
     :Data type: :ref:`data-type-string`
     :Default: `,` (comma)
@@ -412,6 +433,7 @@ trim
 ~~~~
 
 ..  confval:: trim
+    :name: stdwrap-trim
 
     :Data type: :ref:`data-type-boolean` / :ref:`stdWrap`
 
@@ -425,6 +447,7 @@ strPad
 ~~~~~~
 
 ..  confval:: strPad
+    :name: stdwrap-strPad
 
     :Data type: :ref:`strPad`
 
@@ -438,6 +461,7 @@ stdWrap
 ~~~~~~~
 
 ..  confval:: stdWrap
+    :name: stdwrap-stdWrap
 
     :Data type: :ref:`stdWrap`
 
@@ -450,6 +474,7 @@ required
 ~~~~~~~~
 
 ..  confval:: required
+    :name: stdwrap-required
 
     :Data type: :ref:`data-type-boolean` / :ref:`stdWrap`
 
@@ -467,6 +492,7 @@ if
 --
 
 ..  confval:: if
+    :name: stdwrap-if
 
     :Data type: :ref:`if`
 
@@ -479,11 +505,13 @@ fieldRequired
 ~~~~~~~~~~~~~
 
 ..  confval:: fieldRequired
+    :name: stdwrap-fieldRequired
 
     :Data type: Field name / :ref:`stdWrap`
 
     The value in this field **must** be set.
 
+..  _stdwrap-properties-parsing:
 
 Properties for parsing data
 ---------------------------
@@ -494,6 +522,7 @@ csConv
 ~~~~~~
 
 ..  confval:: csConv
+    :name: stdwrap-csConv
 
     :Data type: :ref:`data-type-string` / :ref:`stdWrap`
 
@@ -507,6 +536,7 @@ parseFunc
 ~~~~~~~~~
 
 ..  confval:: parseFunc
+    :name: stdwrap-parseFunc
 
     :Data type: object path reference / :ref:`parsefunc` / :ref:`stdWrap`
 
@@ -529,6 +559,8 @@ parseFunc
             parseFunc.tags.myTag = TEXT
             parseFunc.tags.myTag.value = This will be inserted when &lt;myTag&gt; is found!
         }
+
+..  _stdwrap-parseFunc-sanitization:
 
 Sanitization
 """"""""""""
@@ -586,6 +618,7 @@ HTMLparser
 ~~~~~~~~~~
 
 ..  confval:: HTMLparser
+    :name: stdwrap-htmlparser
 
     :Data type: :ref:`data-type-boolean` / :ref:`htmlparser` / :ref:`stdWrap`
 
@@ -603,6 +636,7 @@ split
 ~~~~~
 
 ..  confval:: split
+    :name: stdwrap-split
 
     :Data type: :ref:`split` / :ref:`stdWrap`
 
@@ -613,6 +647,7 @@ replacement
 ~~~~~~~~~~~
 
 ..  confval:: replacement
+    :name: stdwrap-replacement
 
     :Data type: :ref:`replacement` / :ref:`stdWrap`
 
@@ -628,6 +663,7 @@ prioriCalc
 ~~~~~~~~~~
 
 ..  confval:: prioriCalc
+    :name: stdwrap-prioriCalc
 
     :Data type: :ref:`data-type-boolean` / :ref:`stdWrap`
 
@@ -665,6 +701,7 @@ char
 ~~~~
 
 ..  confval:: char
+    :name: stdwrap-char
 
     :Data type: :ref:`data-type-integer` / :ref:`stdWrap`
 
@@ -685,6 +722,7 @@ intval
 ~~~~~~
 
 ..  confval:: intval
+    :name: stdwrap-intval
 
     :Data type: :ref:`data-type-boolean` / :ref:`stdWrap`
 
@@ -701,6 +739,7 @@ hash
 ~~~~
 
 ..  confval:: hash
+    :name: stdwrap-hash
 
     :Data type: :ref:`data-type-string` / :ref:`stdWrap`
 
@@ -726,6 +765,7 @@ round
 ~~~~~
 
 ..  confval:: round
+    :name: stdwrap-round
 
     :Data type: :ref:`round` / :ref:`stdWrap`
 
@@ -739,6 +779,7 @@ numberFormat
 ~~~~~~~~~~~~
 
 ..  confval:: numberFormat
+    :name: stdwrap-numberFormat
 
     :Data type: :ref:`numberformat`
 
@@ -752,6 +793,7 @@ date
 ~~~~
 
 ..  confval:: date
+    :name: stdwrap-date
 
     :Data type: :ref:`data-type-date-conf` / :ref:`stdWrap`
 
@@ -794,6 +836,7 @@ strtotime
 ~~~~~~~~~
 
 ..  confval:: strtotime
+    :name: stdwrap-strtotime
 
     :Data type: :ref:`data-type-string`
 
@@ -829,6 +872,7 @@ strftime
 ~~~~~~~~
 
 ..  confval:: strftime
+    :name: stdwrap-strftime
 
     :Data type: :ref:`data-type-strftime-conf` / :ref:`stdWrap`
 
@@ -863,6 +907,7 @@ formattedDate
 ..  versionadded:: 12.3
 
 ..  confval:: formattedDate
+    :name: stdwrap-formattedDate
 
     :Data type: :ref:`data-type-string`
 
@@ -941,6 +986,7 @@ age
 ~~~
 
 ..  confval:: age
+    :name: stdwrap-age
 
     :Data type: :ref:`data-type-boolean` or :ref:`data-type-string` / :ref:`stdWrap`
 
@@ -982,6 +1028,7 @@ case
 ~~~~
 
 ..  confval:: case
+    :name: stdwrap-case
 
     :Data type: :ref:`data-type-case` / :ref:`stdWrap`
 
@@ -996,6 +1043,7 @@ bytes
 ~~~~~
 
 ..  confval:: bytes
+    :name: stdwrap-bytes
 
     :Data type: :ref:`data-type-boolean` / :ref:`stdWrap`
 
@@ -1164,6 +1212,7 @@ substring
 ~~~~~~~~~
 
 ..  confval:: substring
+    :name: stdwrap-substring
 
     :Data type: [p1], [p2] / :ref:`stdWrap`
 
@@ -1179,6 +1228,7 @@ cropHTML
 ~~~~~~~~
 
 ..  confval:: cropHTML
+    :name: stdwrap-cropHTML
 
     :Data type: :ref:`data-type-string` / :ref:`stdWrap`
 
@@ -1197,6 +1247,7 @@ stripHtml
 ~~~~~~~~~
 
 ..  confval:: stripHtml
+    :name: stdwrap-stripHtml
 
     :Data type: :ref:`data-type-boolean` / :ref:`stdWrap`
 
@@ -1209,6 +1260,7 @@ crop
 ~~~~
 
 ..  confval:: crop
+    :name: stdwrap-crop
 
     :Data type: :ref:`data-type-string` / :ref:`stdWrap`
 
@@ -1255,6 +1307,7 @@ rawUrlEncode
 ~~~~~~~~~~~~
 
 ..  confval:: rawUrlEncode
+    :name: stdwrap-rawUrlEncode
 
     :Data type: :ref:`data-type-boolean` / :ref:`stdWrap`
 
@@ -1267,6 +1320,7 @@ htmlSpecialChars
 ~~~~~~~~~~~~~~~~
 
 ..  confval:: htmlSpecialChars
+    :name: stdwrap-htmlSpecialChars
 
     :Data type: :ref:`data-type-boolean` / :ref:`stdWrap`
 
@@ -1282,6 +1336,7 @@ encodeForJavaScriptValue
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 ..  confval:: encodeForJavaScriptValue
+    :name: stdwrap-encodeForJavaScriptValue
 
     :Data type: :ref:`data-type-boolean` / :ref:`stdWrap`
 
@@ -1312,6 +1367,7 @@ doubleBrTag
 ~~~~~~~~~~~
 
 ..  confval:: doubleBrTag
+    :name: stdwrap-doubleBrTag
 
     :Data type: :ref:`data-type-string` / :ref:`stdWrap`
 
@@ -1324,6 +1380,7 @@ br
 ~~
 
 ..  confval:: br
+    :name: stdwrap-br
 
     :Data type: :ref:`data-type-boolean` / :ref:`stdWrap`
 
@@ -1337,6 +1394,7 @@ brTag
 ~~~~~
 
 ..  confval:: brTag
+    :name: stdwrap-brTag
 
     :Data type: :ref:`data-type-string` / :ref:`stdWrap`
 
@@ -1350,6 +1408,7 @@ encapsLines
 ~~~~~~~~~~~
 
 ..  confval:: encapsLines
+    :name: stdwrap-encapsLines
 
     :Data type: :ref:`encapslines` / :ref:`stdWrap`
 
@@ -1363,6 +1422,7 @@ keywords
 ~~~~~~~~
 
 ..  confval:: keywords
+    :name: stdwrap-keywords
 
     :Data type: :ref:`data-type-boolean` / :ref:`stdWrap`
 
@@ -1376,6 +1436,7 @@ innerWrap
 ~~~~~~~~~
 
 ..  confval:: innerWrap
+    :name: stdwrap-innerWrap
 
     :Data type: :ref:`wrap <data-type-wrap>` / :ref:`stdWrap`
 
@@ -1388,6 +1449,7 @@ innerWrap2
 ~~~~~~~~~~
 
 ..  confval:: innerWrap2
+    :name: stdwrap-innerWrap2
 
     :Data type: :ref:`wrap <data-type-wrap>` / :ref:`stdWrap`
 
@@ -1400,6 +1462,7 @@ preCObject
 ~~~~~~~~~~
 
 ..  confval:: preCObject
+    :name: stdwrap-preCObject
 
     :Data type: :ref:`data-type-cobject`
 
@@ -1412,6 +1475,7 @@ postCObject
 ~~~~~~~~~~~
 
 ..  confval:: postCObject
+    :name: stdwrap-postCObject
 
     :Data type: :ref:`data-type-cobject`
 
@@ -1424,6 +1488,7 @@ wrapAlign
 ~~~~~~~~~
 
 ..  confval:: wrapAlign
+    :name: stdwrap-wrapAlign
 
     :Data type: :ref:`data-type-align` / :ref:`stdWrap`
 
@@ -1437,6 +1502,7 @@ typolink
 ~~~~~~~~
 
 ..  confval:: typolink
+    :name: stdwrap-typolink
 
     :Data type: :ref:`typolink` / :ref:`stdWrap`
 
@@ -1449,6 +1515,7 @@ wrap
 ~~~~
 
 ..  confval:: wrap
+    :name: stdwrap-wrap
 
     :Data type: :ref:`wrap <data-type-wrap>` /+.splitChar / :ref:`stdWrap`
 
@@ -1461,6 +1528,7 @@ noTrimWrap
 ~~~~~~~~~~
 
 ..  confval:: noTrimWrap
+    :name: stdwrap-noTrimWrap
 
     :Data type: "special" wrap /+.splitChar / :ref:`stdWrap`
 
@@ -1508,6 +1576,7 @@ wrap2
 ~~~~~
 
 ..  confval:: wrap2
+    :name: stdwrap-wrap2
 
     :Data type: :ref:`wrap <data-type-wrap>` /+.splitChar / :ref:`stdWrap`
 
@@ -1520,6 +1589,7 @@ dataWrap
 ~~~~~~~~
 
 ..  confval:: dataWrap
+    :name: stdwrap-dataWrap
 
     :Data type: mixed / :ref:`stdWrap`
 
@@ -1544,6 +1614,7 @@ prepend
 ~~~~~~~
 
 ..  confval:: prepend
+    :name: stdwrap-prepend
 
     :Data type: :ref:`data-type-cobject`
 
@@ -1556,6 +1627,7 @@ append
 ~~~~~~
 
 ..  confval:: append
+    :name: stdwrap-append
 
     :Data type: :ref:`data-type-cobject`
 
@@ -1568,6 +1640,7 @@ wrap3
 ~~~~~
 
 ..  confval:: wrap3
+    :name: stdwrap-wrap3
 
     :Data type: :ref:`wrap <data-type-wrap>` /+.splitChar / :ref:`stdWrap`
 
@@ -1580,6 +1653,7 @@ orderedStdWrap
 ~~~~~~~~~~~~~~
 
 ..  confval:: orderedStdWrap
+    :name: stdwrap-orderedStdWrap
 
     :Data type: Array of numeric keys with / :ref:`stdWrap` each
 
@@ -1619,6 +1693,7 @@ outerWrap
 ~~~~~~~~~
 
 ..  confval:: outerWrap
+    :name: stdwrap-outerWrap
 
     :Data type: :ref:`wrap <data-type-wrap>` / :ref:`stdWrap`
 
@@ -1631,6 +1706,7 @@ insertData
 ~~~~~~~~~~
 
 ..  confval:: insertData
+    :name: stdwrap-insertData
 
     :Data type: :ref:`data-type-boolean` / :ref:`stdWrap`
 
@@ -1664,6 +1740,7 @@ postUserFunc
 ~~~~~~~~~~~~
 
 ..  confval:: postUserFunc
+    :name: stdwrap-postUserFunc
 
     :Data type: :ref:`data-type-function-name`
 
@@ -1771,6 +1848,7 @@ postUserFuncInt
 ~~~~~~~~~~~~~~~
 
 ..  confval:: postUserFuncInt
+    :name: stdwrap-postUserFuncInt
 
     :Data type: :ref:`data-type-function-name`
 
@@ -1795,6 +1873,7 @@ prefixComment
 ~~~~~~~~~~~~~
 
 ..  confval:: prefixComment
+    :name: stdwrap-prefixComment
 
     :Data type: :ref:`data-type-string` / :ref:`stdWrap`
 
@@ -1820,6 +1899,7 @@ htmlSanitize
 ~~~~~~~~~~~~
 
 ..  confval:: htmlSanitize
+    :name: stdwrap-htmlSanitize
 
     :Data type: :ref:`data-type-boolean` / array with key "build"
 
@@ -1875,6 +1955,7 @@ cache
 ~~~~~
 
 ..  confval:: cache
+    :name: stdwrap-cache
 
     :Data type: :ref:`cache`
 
@@ -1887,6 +1968,7 @@ debug
 ~~~~~
 
 ..  confval:: debug
+    :name: stdwrap-debug
 
     :Data type: :ref:`data-type-boolean` / :ref:`stdWrap`
 
@@ -1905,6 +1987,7 @@ debugFunc
 ~~~~~~~~~
 
 ..  confval:: debugFunc
+    :name: stdwrap-debugFunc
 
     :Data type: :ref:`data-type-boolean` / :ref:`stdWrap`
 
@@ -1923,6 +2006,7 @@ debugData
 ~~~~~~~~~
 
 ..  confval:: debugData
+    :name: stdwrap-debugData
 
     :Data type: :ref:`data-type-boolean` / :ref:`stdWrap`
 

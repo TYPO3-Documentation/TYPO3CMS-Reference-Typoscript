@@ -20,10 +20,13 @@ The best known is the "link" tag, which is used to create links.
 Properties
 ==========
 
+..  _tags-array:
+
 *(array of strings)*
 --------------------
 
 ..  confval:: array of strings
+    :name: tags-array
 
     :Data type: :ref:`data-type-cobject`
 

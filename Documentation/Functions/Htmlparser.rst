@@ -11,6 +11,8 @@ HTMLparser
 ..  contents::
     :local:
 
+..  _htmlparser-properties:
+
 Properties
 ==========
 
@@ -20,6 +22,7 @@ allowTags
 ---------
 
 ..  confval:: allowTags
+    :name: htmlparser-allowTags
 
     :Data type: list of tags
 
@@ -32,6 +35,7 @@ stripEmptyTags
 --------------
 
 ..  confval:: stripEmptyTags
+    :name: htmlparser-stripEmptyTags
 
     :Data type: :ref:`data-type-boolean`
 
@@ -44,6 +48,7 @@ stripEmptyTags.keepTags
 -----------------------
 
 ..  confval:: stripEmptyTags.keepTags
+    :name: htmlparser-stripEmptyTags-keepTags
 
     :Data type: :ref:`data-type-string`
 
@@ -56,6 +61,7 @@ tags.[tagname]
 --------------
 
 ..  confval:: tags
+    :name: htmlparser-tags
 
     :Data type: :ref:`data-type-boolean` / string of :ref:`htmlparser-tags`
 
@@ -72,6 +78,7 @@ localNesting
 ------------
 
 ..  confval:: localNesting
+    :name: htmlparser-localNesting
 
     :Data type: list of tags, must be among preserved tags
 
@@ -85,6 +92,7 @@ globalNesting
 -------------
 
 ..  confval:: globalNesting
+    :name: htmlparser-globalNesting
 
     :Data type: (ibid)
 
@@ -98,6 +106,7 @@ rmTagIfNoAttrib
 ---------------
 
 ..  confval:: rmTagIfNoAttrib
+    :name: htmlparser-rmTagIfNoAttrib
 
     :Data type: (ibid)
 
@@ -111,6 +120,7 @@ noAttrib
 --------
 
 ..  confval:: noAttrib
+    :name: htmlparser-noAttrib
 
     :Data type: (ibid)
 
@@ -125,6 +135,7 @@ removeTags
 ----------
 
 ..  confval:: removeTags
+    :name: htmlparser-removeTags
 
     :Data type: (ibid)
 
@@ -138,6 +149,7 @@ keepNonMatchedTags
 ------------------
 
 ..  confval:: keepNonMatchedTags
+    :name: htmlparser-keepNonMatchedTags
 
     :Data type: :ref:`data-type-boolean` / "protect"
 
@@ -157,6 +169,7 @@ htmlSpecialChars
 ----------------
 
 ..  confval:: htmlSpecialChars
+    :name: htmlparser-htmlSpecialChars
 
     :Data type: -1 / 0 / 1 / 2
 

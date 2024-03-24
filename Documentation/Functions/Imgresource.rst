@@ -26,6 +26,7 @@ ext
 ---
 
 ..  confval:: ext
+    :name: imgresource-ext
 
     :Data type: :ref:`data-type-imageExtension` / :ref:`stdwrap`
 
@@ -45,6 +46,7 @@ width
 -----
 
 ..  confval:: width
+    :name: imgresource-width
 
     :Data type: :ref:`data-type-pixels` / :ref:`stdwrap`
 
@@ -107,6 +109,7 @@ height
 ------
 
 ..  confval:: height
+    :name: imgresource-height
 
     :Data type: :ref:`data-type-pixels` / :ref:`stdwrap`
 
@@ -119,6 +122,7 @@ params
 ------
 
 ..  confval:: params
+    :name: imgresource-params
 
     :Data type: :ref:`data-type-string` / :ref:`stdwrap`
 
@@ -133,6 +137,7 @@ sample
 ------
 
 ..  confval:: sample
+    :name: imgresource-sample
 
     :Data type: :ref:`data-type-boolean`
     :Default: 0
@@ -147,6 +152,7 @@ noScale
 -------
 
 ..  confval:: noScale
+    :name: imgresource-noScale
 
     :Data type: :ref:`data-type-boolean` / :ref:`stdwrap`
     :Default: 0
@@ -183,6 +189,7 @@ crop
 ----
 
 ..  confval:: crop
+    :name: imgresource-crop
 
     :Data type: :ref:`data-type-string` / :ref:`stdwrap`
     :Default: not-set (when file/image is a file_reference the crop value of
@@ -216,6 +223,7 @@ cropVariant
 -----------
 
 ..  confval:: cropVariant
+    :name: imgresource-cropVariant
 
     :Data type: :ref:`data-type-string`
     :Default: default
@@ -243,6 +251,7 @@ frame
 -----
 
 ..  confval:: frame
+    :name: imgresource-frame
 
     :Data type: :ref:`data-type-integer` / :ref:`stdwrap`
 
@@ -257,6 +266,7 @@ import
 ------
 
 ..  confval:: import
+    :name: imgresource-import
 
     :Data type: :ref:`data-type-path` / :ref:`stdwrap`
 
@@ -285,6 +295,7 @@ treatIdAsReference
 ------------------
 
 ..  confval:: treatIdAsReference
+    :name: imgresource-treatIdAsReference
 
     :Data type: :ref:`data-type-boolean` / :ref:`stdwrap`
     :Default: 0
@@ -300,6 +311,7 @@ maxW
 ----
 
 ..  confval:: maxW
+    :name: imgresource-maxW
 
     :Data type: :ref:`data-type-pixels` / :ref:`stdwrap`
 
@@ -312,6 +324,7 @@ maxH
 ----
 
 ..  confval:: maxH
+    :name: imgresource-maxH
 
     :Data type: :ref:`data-type-pixels` / :ref:`stdwrap`
 
@@ -324,6 +337,7 @@ minW
 ----
 
 ..  confval:: minW
+    :name: imgresource-minW
 
     :Data type: :ref:`data-type-pixels` / :ref:`stdwrap`
 
@@ -336,6 +350,7 @@ minH
 ----
 
 ..  confval:: minH
+    :name: imgresource-minH
 
     :Data type: :ref:`data-type-pixels` / :ref:`stdwrap`
 
@@ -347,10 +362,11 @@ minH
 stripProfile
 ------------
 
-..  confval::    stripProfile
+..  confval:: stripProfile
+    :name: imgresource-stripProfile
 
-    :Data type:    :ref:`data-type-boolean`
-    :Default:    0
+    :Data type: :ref:`data-type-boolean`
+    :Default: 0
 
     If set, the GraphicsMagick/ImageMagick-command will use a
     stripProfile-command which shrinks the generated thumbnails. See the
@@ -376,6 +392,7 @@ Masking (m)
 -----------
 
 ..  confval:: Masking:
+    :name: imgresource-masking
 
     (Black hides, white shows)
 
@@ -386,6 +403,7 @@ m.mask
 ~~~~~~
 
 ..  confval:: m.mask
+    :name: imgresource-masking-mask
 
     :Data type: :ref:`data-type-imgResource`
 
@@ -401,6 +419,7 @@ m.bgImg
 ~~~~~~~
 
 ..  confval:: m.bgImg
+    :name: imgresource-masking-bgImg
 
     :Data type: :ref:`data-type-imgResource`
 
@@ -413,6 +432,7 @@ m.bottomImg
 ~~~~~~~~~~~
 
 ..  confval:: m.bottomImg
+    :name: imgresource-masking-bottomImg
 
     :Data type: :ref:`data-type-imgResource`
 
@@ -434,6 +454,7 @@ m.bottomImg\_mask
 ~~~~~~~~~~~~~~~~~
 
 ..  confval:: m.bottomImg_mask
+    :name: imgresource-masking-bottomImg-mask
 
     :Data type: :ref:`data-type-imgResource`
 

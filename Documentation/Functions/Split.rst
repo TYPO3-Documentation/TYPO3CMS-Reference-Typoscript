@@ -27,6 +27,7 @@ token
 -----
 
 ..  confval:: token
+    :name: split-token
 
     :Data type: :ref:`data-type-string` / :ref:`stdwrap`
 
@@ -39,6 +40,7 @@ max
 ---
 
 ..  confval:: max
+    :name: split-max
 
     :Data type: :ref:`data-type-integer` / :ref:`stdwrap`
 
@@ -51,6 +53,7 @@ min
 ---
 
 ..  confval:: min
+    :name: split-min
 
     :Data type: :ref:`data-type-integer` / :ref:`stdwrap`
 
@@ -63,6 +66,7 @@ returnKey
 ---------
 
 ..  confval:: returnKey
+    :name: split-returnKey
 
     :Data type: :ref:`data-type-integer` / :ref:`stdwrap`
 
@@ -77,6 +81,7 @@ returnCount
 -----------
 
 ..  confval:: returnCount
+    :name: split-returnCount
 
     :Data type: :ref:`data-type-boolean` / :ref:`stdwrap`
 
@@ -103,6 +108,7 @@ cObjNum
 -------
 
 ..  confval:: cObjNum
+    :name: split-cObjNum
 
     :Data type: *cObjNum* + :ref:`optionsplit` / :ref:`stdwrap`
 
@@ -116,6 +122,7 @@ cObjNum
 -------
 
 ..  confval:: 1,2,3,4,...
+    :name: split-cObject
 
     :Data type: :ref:`cObject <data-type-cobject>` / :ref:`stdwrap`
 
@@ -149,6 +156,7 @@ wrap
 ----
 
 ..  confval:: wrap
+    :name: split-wrap
 
     :Data type: wrap + :ref:`optionsplit` / :ref:`stdwrap`
 
