@@ -55,6 +55,7 @@ absRefPrefix
 ------------
 
 ..  confval:: absRefPrefix
+    :name: setup-config-absrefprefix
 
     :Data type: :ref:`data-type-string`
     :Special value: "auto"
@@ -109,6 +110,7 @@ additionalHeaders
 -----------------
 
 ..  confval:: additionalHeaders
+    :name: setup-config-additionalheaders
 
     :Data type: numerically indexed array of "HTTP header entries".
 
@@ -1753,6 +1755,7 @@ recordLinks
 -----------
 
 ..  confval:: recordLinks
+    :name: setup-config-recordLinks
 
     :Data Type: array of link configurations
 
