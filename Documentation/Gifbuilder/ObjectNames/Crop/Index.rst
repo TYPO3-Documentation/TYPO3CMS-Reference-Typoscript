@@ -10,6 +10,8 @@ CROP
     This object resets :ref:`gifbuilder-properties-workArea` to the
     new dimensions of the image!
 
+..  _gifbuilder-properties:
+
 Properties
 ==========
 
@@ -22,6 +24,7 @@ align
 -----
 
 ..  confval:: align
+    :name: gifbuilder-crop-align
 
     :Data type: VHalign / :ref:`stdWrap <stdwrap>`
     :Default: l, t
@@ -69,6 +72,7 @@ backColor
 ---------
 
 ..  confval:: backColor
+    :name: gifbuilder-crop-backColor
 
     :Data type: :ref:`data-type-GraphicColor` / :ref:`stdWrap <stdwrap>`
     :Default: The original background color
@@ -81,6 +85,7 @@ crop
 ----
 
 ..  confval:: crop
+    :name: gifbuilder-crop-crop
 
     :Data type: x,y,w,h :ref:`+calc <gifbuilder-calc>` /:ref:`stdWrap <stdwrap>`
 
