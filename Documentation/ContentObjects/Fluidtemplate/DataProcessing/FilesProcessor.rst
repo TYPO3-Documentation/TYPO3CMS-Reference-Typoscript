@@ -26,7 +26,7 @@ if
 --
 
 ..  confval:: if
-    :name: FilesProcessor-
+    :name: FilesProcessor-if
 
     :Required: false
     :Data type: :ref:`if` condition
