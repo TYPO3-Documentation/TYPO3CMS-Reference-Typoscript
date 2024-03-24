@@ -29,6 +29,7 @@ Example
       }
     }
 
+..  _gifbuilder-box-properties:
 
 Properties
 ==========
@@ -42,6 +43,7 @@ align
 -----
 
 ..  confval:: align
+    :name: gifbuilder-box-align
 
     :Data type: VHalign / :ref:`stdWrap <stdwrap>`
     :Default: l, t
@@ -89,6 +91,7 @@ color
 -----
 
 ..  confval:: color
+    :name: gifbuilder-box-color
 
     :Data type: :ref:`data-type-GraphicColor` / :ref:`stdWrap <stdwrap>`
     :Default: black
@@ -102,6 +105,7 @@ dimensions
 ----------
 
 ..  confval:: dimensions
+    :name: gifbuilder-box-dimensions
 
     :Data type: x,y,w,h :ref:`+calc <gifbuilder-calc>` / :ref:`stdWrap <stdwrap>`
 
@@ -119,6 +123,7 @@ opacity
 -------
 
 ..  confval:: opacity
+    :name: gifbuilder-box-opacity
 
     :Data type: positive integer (1-100) / :ref:`stdWrap <stdwrap>`
     :Default: 100

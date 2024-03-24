@@ -8,6 +8,8 @@ SHADOW
 
 Creates a shadow under the associated text.
 
+..  _gifbuilder-shadow-properties:
+
 Properties
 ==========
 
@@ -21,6 +23,7 @@ blur
 ----
 
 ..  confval:: blur
+    :name: gifbuilder-shadow-blur
 
     :Data type: integer (1-99) / :ref:`stdWrap <stdwrap>`
 
@@ -34,6 +37,7 @@ color
 -----
 
 ..  confval:: color
+    :name: gifbuilder-shadow-color
 
     :Data type: :ref:`data-type-GraphicColor` / :ref:`stdWrap <stdwrap>`
 
@@ -46,6 +50,7 @@ intensity
 ---------
 
 ..  confval:: intensity
+    :name: gifbuilder-shadow-intensity
 
     :Data type: integer (1-100) / :ref:`stdWrap <stdwrap>`
 
@@ -59,6 +64,7 @@ offset
 ------
 
 ..  confval:: offset
+    :name: gifbuilder-shadow-offset
 
     :Data type: x,y / :ref:`stdWrap <stdwrap>`
 
@@ -71,6 +77,7 @@ opacity
 -------
 
 ..  confval:: opacity
+    :name: gifbuilder-shadow-opacity
 
     :Data type: integer (1-100) / :ref:`stdWrap <stdwrap>`
 
@@ -87,6 +94,7 @@ textObjNum
 ----------
 
 ..  confval:: textObjNum
+    :name: gifbuilder-shadow-textObjNum
 
     :Data type: positive integer / :ref:`stdWrap <stdwrap>`
 

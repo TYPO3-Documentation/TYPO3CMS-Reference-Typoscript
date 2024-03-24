@@ -8,6 +8,7 @@ IMAGE
 
 Renders an image file.
 
+..  _gifbuilder-image-properties:
 
 Properties
 ==========
@@ -22,6 +23,7 @@ align
 -----
 
 ..  confval:: align
+    :name: gifbuilder-image-align
 
     :Data type: VHalign / :ref:`stdWrap <stdwrap>`
     :Default: 1,1
@@ -69,6 +71,7 @@ file
 ----
 
 ..  confval:: file
+    :name: gifbuilder-image-file
 
     :Data type: :ref:`data-type-imgResource`
 
@@ -81,6 +84,7 @@ mask
 ----
 
 ..  confval:: mask
+    :name: gifbuilder-image-mask
 
     :Data type: :ref:`data-type-imgResource`
 
@@ -93,6 +97,7 @@ offset
 ------
 
 ..  confval:: offset
+    :name: gifbuilder-image-offset
 
     :Data type: x,y :ref:`+calc <gifbuilder-calc>` / :ref:`stdWrap <stdwrap>`
     :Default: 0,0
@@ -106,6 +111,7 @@ tile
 ----
 
 ..  confval:: tile
+    :name: gifbuilder-image-tile
 
     :Data type: x,y / :ref:`stdWrap <stdwrap>`
     :Default: 1,1

@@ -12,6 +12,7 @@ This scales the GIFBUILDER object to the provided dimensions.
     This object resets :ref:`gifbuilder-properties-workArea` to the new dimensions
     of the image!
 
+..  _gifbuilder-scale-properties:
 
 Properties
 ==========
@@ -26,6 +27,7 @@ height
 ------
 
 ..  confval:: height
+    :name: gifbuilder-scale-height
 
     :Data type: pixels :ref:`+calc <gifbuilder-calc>` / :ref:`stdWrap <stdwrap>`
 
@@ -38,6 +40,7 @@ params
 ------
 
 ..  confval:: params
+    :name: gifbuilder-scale-params
 
     :Data type: GraphicsMagick/ImageMagick parameters
 
@@ -50,6 +53,7 @@ width
 -----
 
 ..  confval:: width
+    :name: gifbuilder-scale-width
 
     :Data type: pixels :ref:`+calc <gifbuilder-calc>` / :ref:`stdWrap <stdwrap>`
 

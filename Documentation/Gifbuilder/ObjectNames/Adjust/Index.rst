@@ -22,6 +22,8 @@ Example
     20.value = inputLevels = 13, 230
 
 
+..  _gifbuilder-adjust-properties:
+
 Properties
 ==========
 
@@ -35,6 +37,7 @@ inputLevels
 -----------
 
 ..  confval:: inputLevels
+    :name: gifbuilder-adjust-inputLevels
 
     :Data type: low, high (int<0,255>, int<0, 255>)
 
@@ -66,6 +69,7 @@ outputLevels
 ------------
 
 ..  confval:: outputLevels
+    :name: gifbuilder-adjust-outputLevels
 
     :Data type: low, high (int<0,255>, int<0, 255>)
 
@@ -98,6 +102,7 @@ autoLevels
 ----------
 
 ..  confval:: autoLevels
+    :name: gifbuilder-adjust-autoLevels
 
     Sets the :ref:`inputLevels <gifbuilder-adjust-inputLevels>` and
     :ref:`outputLevels <gifbuilder-adjust-outputLevels>` automatically.
