@@ -38,6 +38,7 @@ Properties
 -------------
 
 ..  confval:: 1, 2, 3, ...
+    :name: hmenu-number
 
     :Data type: :ref:`menu object <data-type-menuobj>`
     :Default: (no menu)
@@ -83,6 +84,7 @@ cache_period
 ------------
 
 ..  confval:: cache_period
+    :name: hmenu-cache-period
 
     :Data type: :ref:`data-type-integer`
 
@@ -102,6 +104,7 @@ cache
 -----
 
 ..  confval:: cache
+    :name: hmenu-cache
 
     :Data type: :ref:`cache <cache>`
 
@@ -114,6 +117,7 @@ entryLevel
 ----------
 
 ..  confval:: entryLevel
+    :name: hmenu-entryLevel
 
     :Data type: :ref:`data-type-integer` / :ref:`stdWrap <stdwrap>`
     :Default: 0
@@ -178,6 +182,7 @@ special
 -------
 
 ..  confval:: special
+    :name: hmenu-special
 
     :Data type: *"directory" / "list" / "updated" / "rootline" / "browse" / "keywords"
          / "categories" / "language" / "userfunction"*
@@ -193,6 +198,7 @@ special.value
 ~~~~~~~~~~~~~
 
 ..  confval:: special.value
+    :name: hmenu-special-value
 
     :Data type: *list of page-uid's* / :ref:`stdWrap <stdwrap>`
 
@@ -207,6 +213,7 @@ minItems
 --------
 
 ..  confval:: minItems
+    :name: hmenu-minItems
 
     :Data type: :ref:`data-type-integer` / :ref:`stdWrap <stdwrap>`
 
@@ -225,6 +232,7 @@ maxItems
 --------
 
 ..  confval:: maxItems
+    :name: hmenu-maxItems
 
     :Data type: :ref:`data-type-integer` / :ref:`stdWrap <stdwrap>`
 
@@ -241,6 +249,7 @@ begin
 -----
 
 ..  confval:: begin
+    :name: hmenu-begin
 
     :Data type: :ref:`data-type-integer` / :ref:`stdWrap <stdwrap>` :ref:`+calc <objects-calc>`
 
@@ -266,6 +275,7 @@ excludeUidList
 --------------
 
 ..  confval:: excludeUidList
+    :name: hmenu-excludeUidList
 
     :Data type: list of :ref:`data-type-integer` / :ref:`stdWrap <stdwrap>`
 
@@ -290,6 +300,7 @@ excludeDoktypes
 ---------------
 
 ..  confval:: excludeDoktypes
+    :name: hmenu-excludeDoktypes
 
     :Data type: list of :ref:`data-type-integer`
     :Default: 6,254
@@ -304,6 +315,7 @@ includeNotInMenu
 -----------------
 
 ..  confval:: includeNotInMenu
+    :name: hmenu-includeNotInMenu
 
     :Data type: :ref:`data-type-boolean` / :ref:`stdWrap <stdwrap>`
 
@@ -316,6 +328,7 @@ alwaysActivePIDlist
 --------------------
 
 ..  confval:: alwaysActivePIDlist
+    :name: hmenu-alwaysActivePIDlist
 
     :Data type: list of :ref:`data-type-integer` /:ref:`stdWrap <stdwrap>`
 
@@ -330,6 +343,7 @@ protectLvar
 -----------
 
 ..  confval:: protectLvar
+    :name: hmenu-protectlvar
 
     :Data type: :ref:`data-type-boolean` / keyword
 
@@ -363,6 +377,7 @@ addQueryString
 --------------
 
 ..  confval:: addQueryString
+    :name: hmenu-addquerystring
 
     :Data type: :ref:`->addQueryString <typolink-addQueryString>`
 
@@ -375,6 +390,7 @@ if
 --
 
 ..  confval:: if
+    :name: hmenu-if
 
     :Data type: :ref:`->if <if>`
 
@@ -387,6 +403,7 @@ wrap
 ----
 
 ..  confval:: wrap
+    :name: hmenu-wrap
 
     :Data type: :ref:`wrap <data-type-wrap>` / :ref:`stdWrap <stdwrap>`
 
@@ -399,6 +416,7 @@ stdWrap
 -------
 
 ..  confval:: stdWrap
+    :name: hmenu-stdWrap
 
     :Data type: :ref:`->stdWrap <stdwrap>`
 
