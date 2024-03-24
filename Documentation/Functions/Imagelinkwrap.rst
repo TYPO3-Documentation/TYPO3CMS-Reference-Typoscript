@@ -13,6 +13,7 @@ imageLinkWrap
     :local:
 
 ..  index:: imageLinkWrap; Properties
+..  _imagelinkwrap-properties:
 
 Properties
 ==========
@@ -23,6 +24,7 @@ enable
 ------
 
 ..  confval:: imageLinkWrap.enable
+    :name: imagelinkwrap-enable
 
     :Data type: :ref:`data-type-boolean` / :ref:`stdwrap`
 
@@ -38,6 +40,7 @@ file
 ----
 
 ..  confval:: imageLinkWrap.file
+    :name: imagelinkwrap-file
 
     :Data type: :ref:`stdwrap`
 
@@ -50,6 +53,7 @@ width
 -----
 
 ..  confval:: imageLinkWrap.width
+    :name: imagelinkwrap-width
 
     :Data type: :ref:`data-type-positive-integer` / :ref:`stdwrap`
 
@@ -67,6 +71,7 @@ height
 ------
 
 ..  confval:: imageLinkWrap.height
+    :name: imagelinkwrap-height
 
     :Data type: :ref:`data-type-positive-integer` / :ref:`stdwrap`
 
@@ -84,6 +89,7 @@ effects
 -------
 
 ..  confval:: imageLinkWrap.effects
+    :name: imagelinkwrap-effects
 
     :Data type: like :ref:`gifbuilder-effect` of :ref:`GIFBUILDER`
 
@@ -113,6 +119,7 @@ sample
 ------
 
 ..  confval:: imageLinkWrap.sample
+    :name: imagelinkwrap-sample
 
     :Data type: :ref:`data-type-positive-integer` / :ref:`stdwrap`
 
@@ -133,6 +140,7 @@ title
 -----
 
 ..  confval:: imageLinkWrap.title
+    :name: imagelinkwrap-title
 
     :Data type: :ref:`data-type-string` / :ref:`stdwrap`
 
@@ -146,6 +154,7 @@ bodyTag
 -------
 
 ..  confval:: imageLinkWrap.bodyTag
+    :name: imagelinkwrap-bodyTag
 
     :Data type: :ref:`data-type-tag` / :ref:`stdwrap`
 
@@ -171,6 +180,7 @@ wrap
 ----
 
 ..  confval:: imageLinkWrap.wrap
+    :name: imagelinkwrap-wrap
 
     :Data type: :ref:`data-type-wrap`
 
@@ -184,6 +194,7 @@ target
 ------
 
 ..  confval:: imageLinkWrap.target
+    :name: imagelinkwrap-target
 
     :Data type: :ref:`data-type-target` / :ref:`stdwrap`
 
@@ -213,6 +224,7 @@ JSwindow
 --------
 
 ..  confval:: imageLinkWrap.JSwindow
+    :name: imagelinkwrap-JSwindow
 
     :Data type: :ref:`data-type-boolean` / :ref:`stdwrap`
 
@@ -229,6 +241,7 @@ JSwindow.expand
 ---------------
 
 ..  confval:: imageLinkWrap.JSwindow.expand
+    :name: imagelinkwrap-JSwindow-expand
 
     :Data type: :typoscript:`x`, :typoscript:`y` / :ref:`stdwrap`
 
@@ -246,6 +259,7 @@ JSwindow.newWindow
 ------------------
 
 ..  confval:: JSwindow.newWindow
+    :name: imagelinkwrap-JSwindow-newWindow
 
     :Data type: :ref:`data-type-boolean` / :ref:`stdwrap`
 
@@ -267,6 +281,7 @@ JSwindow.altUrl
 ---------------
 
 ..  confval:: imageLinkWrap.JSwindow.altUrl
+    :name: imagelinkwrap-JSwindow-altUrl
 
     :Data type: :ref:`data-type-string` / :ref:`stdwrap`
 
@@ -280,6 +295,7 @@ JSwindow.altUrl\_noDefaultParams
 --------------------------------
 
 ..  confval:: imageLinkWrap.JSwindow.altUrl_noDefaultParams
+    :name: imagelinkwrap-JSwindow-altUrl-noDefaultParams
 
     :Data type: :ref:`data-type-boolean` / :ref:`stdwrap`
 
@@ -297,6 +313,7 @@ typolink
 --------
 
 ..  confval:: imageLinkWrap.typolink
+    :name: imagelinkwrap-typolink
 
     :Data type: :ref:`typolink` / :ref:`stdwrap`
 
@@ -310,6 +327,7 @@ directImageLink
 ---------------
 
 ..  confval:: imageLinkWrap.directImageLink
+    :name: imagelinkwrap-directImageLink
 
     :Data type: :ref:`data-type-boolean` / :ref:`stdwrap`
 
@@ -326,6 +344,7 @@ linkParams
 ----------
 
 ..  confval:: imageLinkWrap.linkParams
+    :name: imagelinkwrap-linkParams
 
     :Data type: :ref:`typolink` / :ref:`stdwrap`
 
@@ -359,6 +378,7 @@ stdWrap
 -------
 
 ..  confval:: imageLinkWrap.stdWrap
+    :name: imagelinkwrap-stdWrap
 
     :Data type: :ref:`stdwrap`
 

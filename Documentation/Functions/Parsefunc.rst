@@ -26,6 +26,7 @@ externalBlocks
 --------------
 
 ..  confval:: externalBlocks
+    :name: parsefunc-externalBlocks
 
     :Data type: list of tagnames / +properties
 
@@ -119,6 +120,7 @@ short
 -----
 
 ..  confval:: short
+    :name: arsefunc-short
 
     :Data type: *(array of strings)*
 
@@ -149,6 +151,7 @@ plainTextStdWrap
 ----------------
 
 ..  confval:: plainTextStdWrap
+    :name: parsefunc-plainTextStdWrap
 
     :Data type: :ref:`stdwrap`
 
@@ -161,6 +164,7 @@ userFunc
 --------
 
 ..  confval:: userFunc
+    :name: parsefunc-userFunc
 
     :Data type: :ref:`data-type-function-name`
 
@@ -176,6 +180,7 @@ nonTypoTagStdWrap
 -----------------
 
 ..  confval:: nonTypoTagStdWrap
+    :name: parsefunc-nonTypoTagStdWrap
 
     :Data type: :ref:`stdWrap`
 
@@ -193,6 +198,7 @@ nonTypoTagUserFunc
 ------------------
 
 ..  confval:: nonTypoTagUserFunc
+    :name: parsefunc-nonTypoTagUserFunc
 
     :Data type: :ref:`data-type-function-name`
 
@@ -210,6 +216,7 @@ makelinks
 ---------
 
 ..  confval:: makelinks
+    :name: parsefunc-makelinks
 
     :Data type: :ref:`data-type-boolean`
 
@@ -223,6 +230,7 @@ tags
 ----
 
 ..  confval:: tags
+    :name: parsefunc-tags
 
     :Data type: :ref:`tags`
 
@@ -236,6 +244,7 @@ allowTags
 ---------
 
 ..  confval:: allowTags
+    :name: parsefunc-allowTags
 
     :Data type: list of strings
 
@@ -251,6 +260,7 @@ denyTags
 --------
 
 ..  confval:: denyTags
+    :name: parsefunc-denyTags
 
     :Data type: list of strings
 
@@ -280,6 +290,7 @@ if
 --
 
 .. confval:: if
+    :name: parsefunc-if
 
     :Data type: :ref:`if`
 

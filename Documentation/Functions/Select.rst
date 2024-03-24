@@ -37,6 +37,7 @@ uidInList
 ---------
 
 ..  confval:: uidInList
+    :name: select-uidInList
 
     :Data type: *list of record\_ids* / :ref:`stdWrap`
 
@@ -71,6 +72,7 @@ pidInList
 ---------
 
 ..  confval:: pidInList
+    :name: select_pidInList
 
     :Data type: *list of page\_ids* / :ref:`stdWrap`
     :Default: :typoscript:`this`
@@ -140,6 +142,7 @@ recursive
 ---------
 
 ..  confval:: recursive
+    :name: select-recursive
 
     :Data type: :ref:`data-type-integer` / :ref:`stdWrap`
     :Default: 0
@@ -153,6 +156,7 @@ orderBy
 -------
 
 ..  confval:: orderBy
+    :name: select-orderBy
 
     :Data type: *SQL-orderBy* / :ref:`stdWrap`
 
@@ -172,6 +176,7 @@ groupBy
 -------
 
 ..  confval:: groupBy
+    :name: select-groupBy
 
     :Data type: *SQL-groupBy* / :ref:`stdWrap`
 
@@ -191,6 +196,7 @@ max
 ---
 
 ..  confval:: max
+    :name: select-max
 
     :Data type: :ref:`data-type-integer` + :ref:`objects-calc` +"total" / :ref:`stdWrap`
 
@@ -205,6 +211,7 @@ begin
 -----
 
 ..  confval:: begin
+    :name: select-begin
 
     :Data type: :ref:`data-type-integer` + :ref:`objects-calc` +"total" / :ref:`stdWrap`
 
@@ -220,6 +227,7 @@ where
 -----
 
 ..  confval:: where
+    :name: select-where
 
     :Data type: *SQL-where* / :ref:`stdWrap`
 
@@ -247,6 +255,7 @@ languageField
 -------------
 
 ..  confval:: languageField
+    :name: select-languageField
 
     :Data type: :ref:`data-type-string` / :ref:`stdWrap`
 
@@ -265,6 +274,7 @@ includeRecordsWithoutDefaultTranslation
 ---------------------------------------
 
 ..  confval:: includeRecordsWithoutDefaultTranslation
+    :name: select-includeRecordsWithoutDefaultTranslation
 
     :Data type: :ref:`data-type-boolean` / :ref:`stdWrap`
     :Default: 0
@@ -280,6 +290,7 @@ selectFields
 ------------
 
 ..  confval:: selectFields
+    :name: select-selectFields
 
     :Data type: :ref:`data-type-string` / :ref:`stdWrap`
     :Default: \*
@@ -298,6 +309,7 @@ join, leftjoin, rightjoin
 -------------------------
 
 ..  confval:: join, leftjoin, rightjoin
+    :name: select-join
 
     :Data type: :ref:`data-type-string` / :ref:`stdWrap`
 
@@ -331,6 +343,7 @@ markers
 -------
 
 ..  confval:: markers
+    :name: select-markers
 
     :Data type: *(array of markers)*
 

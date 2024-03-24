@@ -26,6 +26,7 @@ length
 ------
 
 ..  confval:: length
+    :name: strpad-length
 
     :Data type: :ref:`data-type-integer` / :ref:`stdwrap`
 
@@ -41,6 +42,7 @@ padWith
 -------
 
 ..  confval:: padWith
+    :name: strpad-padWith
 
     :Data type: :ref:`data-type-string` / :ref:`stdwrap`
     :Default: (space character)
@@ -59,6 +61,7 @@ type
 ----
 
 ..  confval:: type
+    :name: strpad-type
 
     :Data type: *(list of keywords)* / :ref:`stdwrap`
     :Default: right
@@ -72,7 +75,6 @@ type
 
 Examples
 ========
-
 
 ..  code-block:: typoscript
     :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript

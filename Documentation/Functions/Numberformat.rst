@@ -32,6 +32,7 @@ decimals
 --------
 
 ..  confval:: decimals
+    :name: numberformat-decimals
 
     :Data type: :ref:`data-type-integer` / :ref:`stdwrap`
     :Default: 0
@@ -48,6 +49,7 @@ dec\_point
 ----------
 
 ..  confval:: dec_point
+    :name: numberformat-dec-point
 
     :Data type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
     :Default: .
@@ -61,6 +63,7 @@ thousands\_sep
 --------------
 
 ..  confval:: thousands_sep
+    :name: numberformat-thousands-sep
 
     :Data type: :ref:`data-type-string` / :ref:`stdwrap`
     :Default: ,
