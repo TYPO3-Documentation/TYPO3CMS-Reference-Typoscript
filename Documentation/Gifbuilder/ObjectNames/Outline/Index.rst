@@ -14,6 +14,7 @@ This outline normally renders quite ugly as it is done by printing 4 or
 :ref:`shadow <gifbuilder-shadow>` with a high intensity instead. That works
 better!
 
+..  _gifbuilder-outline-properties:
 
 Properties
 ==========
@@ -28,6 +29,7 @@ color
 -----
 
 ..  confval:: color
+    :name: gifbuilder-outline-color
 
     :Data type: :ref:`data-type-GraphicColor` / :ref:`stdWrap <stdwrap>`
 
@@ -40,6 +42,7 @@ textObjNum
 ----------
 
 ..  confval:: textObjNum
+    :name: gifbuilder-outline-textObjNum
 
     :Data type: positive integer / :ref:`stdWrap <stdwrap>`
 
@@ -58,6 +61,7 @@ thickness
 ---------
 
 ..  confval:: thickness
+    :name: gifbuilder-outline-thickness
 
     :Data type: x,y / :ref:`stdWrap <stdwrap>`
 

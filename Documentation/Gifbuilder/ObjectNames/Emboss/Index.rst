@@ -10,6 +10,7 @@ The :typoscript:`EMBOSS` object uses two shadow offsets in opposite directions
 and with different colors to create an effect of light cast onto an embossed
 text.
 
+..  _gifbuilder-emboss-properties:
 
 Properties
 ==========
@@ -24,6 +25,7 @@ blur
 ----
 
 ..  confval:: blur
+    :name: gifbuilder-emboss-blur
 
     :Data type: integer (1-99) / :ref:`stdWrap <stdwrap>`
 
@@ -37,6 +39,7 @@ highColor
 ---------
 
 ..  confval:: highColor
+    :name: gifbuilder-emboss-highColor
 
     :Data type: :ref:`data-type-GraphicColor` / :ref:`stdWrap <stdwrap>`
 
@@ -49,6 +52,7 @@ intensity
 ---------
 
 ..  confval:: intensity
+    :name: gifbuilder-emboss-intensity
 
     :Data type: integer (0-100) / :ref:`stdWrap <stdwrap>`
 
@@ -62,6 +66,7 @@ lowColor
 --------
 
 ..  confval:: lowColor
+    :name: gifbuilder-emboss-lowColor
 
     :Data type: :ref:`data-type-GraphicColor` / :ref:`stdWrap <stdwrap>`
 
@@ -74,6 +79,7 @@ opacity
 -------
 
 ..  confval:: opacity
+    :name: gifbuilder-emboss-opacity
 
     :Data type: integer (1-100) / :ref:`stdWrap <stdwrap>`
 
@@ -90,6 +96,7 @@ offset
 ------
 
 ..  confval:: offset
+    :name: gifbuilder-emboss-offset
 
     :Data type: x,y / :ref:`stdWrap <stdwrap>`
 
@@ -102,6 +109,7 @@ textObjNum
 ----------
 
 ..  confval:: textObjNum
+    :name: _gifbuilder-emboss-textObjNum
 
     :Data type: positive integer / :ref:`stdWrap <stdwrap>`
 
