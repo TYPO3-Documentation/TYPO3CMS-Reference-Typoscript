@@ -29,6 +29,7 @@ align
 =====
 
 ..  confval:: align
+    :name: data-type-align
 
     :Default: :typoscript:`left`
     :Allowed values: :typoscript:`left`, :typoscript:`center`, :typoscript:`right`
@@ -43,6 +44,7 @@ boolean
 =======
 
 ..  confval:: boolean
+    :name: data-type-boolean
 
     Possible values for boolean variables are `1` and `0`
     meaning TRUE and FALSE.
@@ -70,7 +72,7 @@ case
 ====
 
 ..  confval:: case
-
+    :name: data-type-case
 
     Do a case conversion.
 
@@ -114,6 +116,7 @@ date-conf
 =========
 
 ..  confval:: date-conf
+    :name: data-type-date-conf
 
     Used to format a date, see PHP function :php:`date()`. See the
     documentation of `allowed date time formats in
@@ -134,6 +137,7 @@ degree
 ======
 
 ..  confval:: degree
+    :name: data-type-degree
 
     `-90` to `90`, integers
 
@@ -147,6 +151,7 @@ dir
 ===
 
 ..  confval:: dir
+    :name: data-type-dir
 
     ..  rubric:: Syntax
 
@@ -177,6 +182,7 @@ function name
 =============
 
 ..  confval:: function name
+    :name: data-type-function-name
 
     Indicates a function or method in a class to call. See more information at
     the :ref:`USER cObject <cobj-user>`.
@@ -238,6 +244,7 @@ GraphicColor
 ============
 
 ..  confval:: GraphicColor
+    :name: data-type-GraphicColor
 
     ..  rubric:: Syntax:
 
@@ -271,6 +278,7 @@ imageExtension
 ==============
 
 ..  confval:: imageExtension
+    :name: data-type-imageExtension
 
     Image extensions can be anything among the allowed types defined in the
     global variable :php:`$GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext']`.
@@ -293,6 +301,7 @@ imgResource
 ===========
 
 ..  confval:: imgResource
+    :name: data-type-imgResource
 
     #.  A :confval:`resource` plus imgResource properties.
 
@@ -335,6 +344,7 @@ integer
 =======
 
 ..  confval:: integer
+    :name: data-type-integer
 
     ..  rubric:: Examples
 
@@ -352,6 +362,7 @@ path
 ====
 
 ..  confval:: path
+    :name: data-type-path
 
 
     Path relative to the root directory from which we operate.
@@ -372,6 +383,7 @@ pixels
 ======
 
 ..  confval:: pixels
+    :name: data-type-pixels
 
     pixel-distance
 
@@ -390,6 +402,7 @@ positive integer
 ================
 
 ..  confval:: positive integer
+    :name: data-type-positive-integer
 
 
     Positive :confval:`integer`.
@@ -406,6 +419,7 @@ resource
 ========
 
 ..  confval:: resource
+    :name: data-type-resource
 
     If the value contains a "/", it is expected to be a reference (absolute or
     relative) to a file in the file system. There is no support for wildcard
@@ -427,6 +441,7 @@ strftime-conf
 =============
 
 ..  confval:: strftime-conf
+    :name: data-type-strftime-conf
 
     See function `strftime on php.net <https://www.php.net/manual/en/function.strftime>`__.
 
@@ -438,7 +453,7 @@ string
 ======
 
 ..  confval:: string
-
+    :name: data-type-string
 
     Sometimes used generally though another type would have been more
     appropriate, like "align".
@@ -455,6 +470,7 @@ tag
 ===
 
 ..  confval:: tag
+    :name: data-type-tag
 
     An HTML tag.
 
@@ -473,6 +489,7 @@ tag-params
 ==========
 
 ..  confval:: tag-params
+    :name: data-type-tag-params
 
     Parameters for a tag.
 
@@ -493,6 +510,7 @@ target
 ======
 
 ..  confval:: target
+    :name: data-type-target
 
     ..  rubric:: Examples
 
@@ -512,6 +530,7 @@ wrap
 ====
 
 ..  confval:: wrap
+    :name: data-type-wrap
 
     :Syntax: <...> \| </...>
 
