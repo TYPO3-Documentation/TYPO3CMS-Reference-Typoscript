@@ -31,13 +31,18 @@ you to render *every* cObject non-cached.
 ..  contents::
     :local:
 
+..  _cobj-coa-properties:
+
 Properties
 ==========
+
+..  _cobj-coa-index:
 
 1,2,3,4...
 -----------
 
 ..  confval:: 1,2,3,4...
+    :name: coa-index
 
     :Data type: :ref:`cObject <data-type-cobject>`
 
@@ -51,6 +56,7 @@ cache
 -----
 
 ..  confval:: cache
+    :name: coa-cache
 
     :Data type: :ref:`cache <cache>`
 
@@ -63,6 +69,7 @@ if
 --
 
 ..  confval:: if
+    :name: coa-if
 
     :Data type: :ref:`->if <if>`
 
@@ -75,6 +82,7 @@ stdWrap
 -------
 
 ..  confval:: stdWrap
+    :name: coa-stdWrap
 
     :Data type: :ref:`->stdWrap <stdwrap>`
 
@@ -87,6 +95,7 @@ wrap
 ----
 
 ..  confval:: wrap
+    :name: coa-wrap
 
     :Data type: :ref:`wrap <data-type-wrap>` / :ref:`stdWrap <stdwrap>`
 

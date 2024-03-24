@@ -26,6 +26,8 @@ is raised to the maximum timestamp value of the respective records.
 .. contents::
    :local:
 
+..  _cobj-content-properties:
+
 Properties
 ==========
 
@@ -35,6 +37,7 @@ select
 ------
 
 ..  confval:: select
+    :name: content-select
 
     :Data type: :ref:`select`
 
@@ -48,6 +51,7 @@ table
 -----
 
 ..  confval:: table
+    :name: content-table
 
     :Data type:  *table name* / :ref:`stdwrap`
 
@@ -63,6 +67,7 @@ renderObj
 ---------
 
 ..  confval:: renderObj
+    :name: content-renderObj
 
     :Data type: :ref:`data-type-cObject`
     :Default: :typoscript:`< [table name]`
@@ -84,6 +89,7 @@ slide
 -----
 
 ..  confval:: slide
+    :name: content-slide
 
     :Data type: :ref:`data-type-integer` / :ref:`stdWrap`
 
@@ -103,10 +109,13 @@ slide
 
     Use :typoscript:`-1` in combination with :ref:`collect <cobj-content-slide-collect>`.
 
-
 ..  _cobj-content-slide-collect:
 
+slide.collect
+~~~~~~~~~~~~~
+
 ..  confval:: slide.collect
+    :name: content-slide-collect
 
     :Data type: :ref:`data-type-integer` / :ref:`stdWrap`
 
@@ -118,7 +127,11 @@ slide
 
 ..  _cobj-content-slide-collectFuzzy:
 
+slide.collectFuzzy
+~~~~~~~~~~~~~~~~~~
+
 ..  confval:: slide.collectFuzzy
+    :name: content-slide-collectFuzzy
 
     :Data type: :ref:`data-type-boolean` / :ref:`stdWrap`
 
@@ -129,7 +142,11 @@ slide
 
 ..  _cobj-content-slide-collectReverse:
 
+slide.collectReverse
+~~~~~~~~~~~~~~~~~~~~
+
 ..  confval:: slide.collectReverse
+    :name: content-slide-collectReverse
 
     :Data type: :ref:`data-type-boolean` / :ref:`stdWrap`
 
@@ -143,6 +160,7 @@ wrap
 ----
 
 ..  confval:: wrap
+    :name: content-wrap
 
     :Data type: :ref:`wrap <data-type-wrap>` / :ref:`stdWrap`
 
@@ -155,6 +173,7 @@ stdWrap
 -------
 
 ..  confval:: stdWrap
+    :name: content-stdWrap
 
     :Data type: :ref:`stdWrap`
 
@@ -167,14 +186,19 @@ cache
 -----
 
 ..  confval:: cache
+    :name: content-cache
 
     :Data type: :ref:`cache <cache>`
 
     See :ref:`cache function description <cache>` for details.
 
 
+..  _cobj-content-examples:
+
 Examples
 ========
+
+..  _cobj-content-example-detail:
 
 CONTENT explained in detail
 ---------------------------
@@ -270,7 +294,7 @@ See also: :ref:`if`, :ref:`select`, :ref:`data-type-wrap`, :ref:`stdWrap`,
 :ref:`data-type-cobject`
 
 
-..  _cobj-content-examples:
+..  _cobj-content-example-display-all:
 
 Display all tt_content records from this page
 ----------------------------------------------
@@ -293,6 +317,8 @@ will automatically set :typoscript:`1.renderObj < tt_content`, so that `renderOb
 will reference the TypoScript configuration of `tt_content`. The
 according TypoScript configuration will be copied to `renderObj`.
 
+
+..  _cobj-content-special-rendering:
 
 Apply special rendering
 ========================

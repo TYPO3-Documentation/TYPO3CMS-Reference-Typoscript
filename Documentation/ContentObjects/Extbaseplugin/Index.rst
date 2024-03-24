@@ -15,6 +15,8 @@ The content object :typoscript:`EXTBASEPLUGIN` allows to render
 ..  contents::
     :local:
 
+..  _cobj-extbaseplugin-properties:
+
 Properties
 ==========
 
@@ -24,6 +26,7 @@ extensionName
 -------------
 
 ..  confval:: extensionName
+    :name: extbaseplugin-extensionName
 
     :Data type: :ref:`data-type-string`
 
@@ -36,6 +39,7 @@ pluginName
 ----------
 
 ..  confval:: pluginName
+    :name: extbaseplugin-pluginName
 
     :Data type: :ref:`data-type-string`
 
@@ -54,6 +58,7 @@ Example
     page.10.extensionName = MyExtension
     page.10.pluginName = MyPlugin
 
+..  _cobj-extbaseplugin-history:
 
 History
 =======
