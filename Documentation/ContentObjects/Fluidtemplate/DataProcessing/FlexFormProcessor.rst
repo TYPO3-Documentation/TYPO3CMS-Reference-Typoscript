@@ -22,7 +22,7 @@ fieldname
 ---------
 
 ..  confval:: fieldname
-    :name: FlexFormProcessor-
+    :name: FlexFormProcessor-fieldname
 
     :Required: false
     :Data type: :ref:`data-type-string`
