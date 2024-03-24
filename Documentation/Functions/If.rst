@@ -25,6 +25,8 @@ Also check the explanations and the examples further below!
 .. contents::
    :local:
 
+.. _if-properties:
+
 Properties
 ==========
 
@@ -34,6 +36,7 @@ bitAnd
 ------
 
 ..  confval:: bitAnd
+    :name: if-bitAnd
 
     :Data type: value / :ref:`stdwrap`
 
@@ -67,6 +70,7 @@ contains
 ..  versionadded:: 12.1
 
 ..  confval::  contains
+    :name: if-contains
 
     :Data type:  value / :ref:`stdwrap`
 
@@ -100,6 +104,7 @@ directReturn
 ------------
 
 ..  confval:: directReturn
+    :name: if-directReturn
 
     :Data type: :ref:`data-type-boolean`
 
@@ -116,6 +121,7 @@ endsWith
 ..  versionadded:: 12.1
 
 ..  confval::  endsWith
+    :name: if-endsWith
 
     :Data type:  value / :ref:`stdwrap`
 
@@ -143,6 +149,7 @@ equals
 ------
 
 ..  confval:: equals
+    :name: if-equals
 
     :Data type: value / :ref:`stdwrap`
 
@@ -163,6 +170,7 @@ isFalse
 -------
 
 ..  confval:: isFalse
+    :name: if-isFalse
 
     :Data type: :ref:`data-type-string` / :ref:`stdwrap`
 
@@ -175,6 +183,7 @@ isGreaterThan
 -------------
 
 ..  confval:: isGreaterThan
+    :name: if-isGreaterThan
 
     :Data type: value / :ref:`stdwrap`
 
@@ -187,6 +196,7 @@ isInList
 --------
 
 ..  confval:: isInList
+    :name: if-isInList
 
     :Data type: value / :ref:`stdwrap`
 
@@ -212,6 +222,7 @@ isLessThan
 ----------
 
 ..  confval:: isLessThan
+    :name: if-isLessThan
 
     :Data type: value / :ref:`stdwrap`
 
@@ -224,6 +235,7 @@ isNull
 ------
 
 ..  confval:: isNull
+    :name: if-isNull
 
     :Data type: :ref:`stdWrap`
 
@@ -254,6 +266,7 @@ isPositive
 ----------
 
 ..  confval:: isPositive
+    :name: if-isPositive
 
     :Data type: :ref:`data-type-integer` / :ref:`stdwrap` \+ :ref:`objects-calc`
 
@@ -266,6 +279,7 @@ isTrue
 ------
 
 ..  confval:: isTrue
+    :name: if-isTrue
 
     :Data type: :ref:`data-type-string` / :ref:`stdwrap`
 
@@ -278,6 +292,7 @@ negate
 ------
 
 ..  confval:: negate
+    :name: if-negate
 
     :Data type: :ref:`data-type-boolean`
     :Default: 0
@@ -299,6 +314,7 @@ startsWith
 ..  versionadded:: 12.1
 
 ..  confval::  startsWith
+    :name: if-startsWith
 
     :Data type:  value / :ref:`stdwrap`
 
@@ -325,6 +341,7 @@ value
 -----
 
 ..  confval:: value
+    :name: if-value
 
     :Data type: value / :ref:`stdwrap`
 

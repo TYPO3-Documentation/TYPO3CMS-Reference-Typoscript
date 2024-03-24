@@ -27,6 +27,7 @@ table
 -----
 
 ..  confval:: table
+    :name: _numrows-table
 
     :Data type: Table name
 
@@ -38,6 +39,7 @@ select
 ------
 
 ..  confval:: select
+    :name: numrows-select
 
     :Data type: :ref:`select`
 

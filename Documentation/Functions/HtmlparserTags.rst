@@ -11,6 +11,8 @@ HTMLparser\_tags
 ..  contents::
     :local:
 
+..  _htmlparser-tags-properties:
+
 Properties
 ==========
 
@@ -20,6 +22,7 @@ overrideAttribs
 ---------------
 
 ..  confval:: overrideAttribs
+    :name: htmlparser-tags-overrideAttribs
 
     :Data type: :ref:`data-type-string`
 
@@ -32,6 +35,7 @@ allowedAttribs
 --------------
 
 ..  confval:: allowedAttribs
+    :name: htmlparser-tags-allowedAttribs
 
     :Data type: mixed
 
@@ -55,6 +59,7 @@ fixAttrib.[attribute].set
 -------------------------
 
 ..  confval:: fixAttrib.[attribute].set
+    :name: htmlparser-tags-fixAttrib-set
 
     :Data type: :ref:`data-type-string`
 
@@ -67,6 +72,7 @@ fixAttrib.[attribute].unset
 ---------------------------
 
 ..  confval:: fixAttrib.[attribute].unset
+    :name: htmlparser-tags-fixAttrib-unset
 
     :Data type: :ref:`data-type-boolean`
 
@@ -79,6 +85,7 @@ fixAttrib.[attribute].default
 -----------------------------
 
 ..  confval:: fixAttrib.[attribute].default
+    :name: htmlparser-tags-fixAttrib-default
 
     :Data type: :ref:`data-type-string`
 
@@ -92,6 +99,7 @@ fixAttrib.[attribute].always
 ----------------------------
 
 ..  confval:: fixAttrib.[attribute].always
+    :name: htmlparser-tags-fixAttrib-always
 
     :Data type: :ref:`data-type-boolean`
 
@@ -105,6 +113,7 @@ fixAttrib.[attribute].trim
 --------------------------
 
 ..  confval:: fixAttrib.[attribute].trim
+    :name: htmlparser-tags-fixAttrib-trim
 
     :Data type: :ref:`data-type-boolean`
 
@@ -118,6 +127,7 @@ fixAttrib.[attribute].intval
 ----------------------------
 
 ..  confval:: fixAttrib.[attribute].intval
+    :name: htmlparser-tags-fixAttrib-intval
 
     :Data type: :ref:`data-type-boolean`
 
@@ -131,6 +141,7 @@ fixAttrib.[attribute].upper
 ---------------------------
 
 ..  confval:: fixAttrib.[attribute].upper
+    :name: htmlparser-tags-fixAttrib-upper
 
     :Data type: :ref:`data-type-boolean`
 
@@ -144,6 +155,7 @@ fixAttrib.[attribute].lower
 ---------------------------
 
 ..  confval:: fixAttrib.[attribute].lower
+    :name: htmlparser-tags-fixAttrib-lower
 
     :Data type: :ref:`data-type-boolean`
 
@@ -157,6 +169,7 @@ fixAttrib.[attribute].range
 ---------------------------
 
 ..  confval:: fixAttrib.[attribute].range
+    :name: htmlparser-tags-fixAttrib-range
 
     :Data type: [low],[high]
 
@@ -169,6 +182,7 @@ fixAttrib.[attribute].list
 --------------------------
 
 ..  confval:: fixAttrib.[attribute].list
+    :name: htmlparser-tags-fixAttrib-list
 
     :Data type: list of values, trimmed
 
@@ -182,6 +196,7 @@ fixAttrib.[attribute].removeIfFalse
 -----------------------------------
 
 ..  confval:: fixAttrib.[attribute].removeIfFalse
+    :name: htmlparser-tags-fixAttrib-removeIfFalse
 
     :Data type: :ref:`data-type-boolean` / :typoscript:`blank` string
 
@@ -196,6 +211,7 @@ fixAttrib.[attribute].removeIfEquals
 ------------------------------------
 
 ..  confval:: fixAttrib.[attribute].removeIfEquals
+    :name: htmlparser-tags-fixAttrib-removeIfEquals
 
     :Data type: :ref:`data-type-string`
 
@@ -208,6 +224,7 @@ fixAttrib.[attribute].casesensitiveComp
 ---------------------------------------
 
 ..  confval:: fixAttrib.[attribute].casesensitiveComp
+    :name: htmlparser-tags-fixAttrib-casesensitiveComp
 
     :Data type: :ref:`data-type-boolean`
 
@@ -222,6 +239,7 @@ fixAttrib.[attribute].prefixRelPathWith
 ---------------------------------------
 
 ..  confval:: fixAttrib.[attribute].prefixRelPathWith
+    :name: htmlparser-tags-fixAttrib-prefixRelPathWith
 
     :Data type: :ref:`data-type-string`
 
@@ -243,6 +261,7 @@ fixAttrib.[attribute].userFunc
 ------------------------------
 
 ..  confval:: fixAttrib.[attribute].userFunc
+    :name: htmlparser-tags-fixAttrib-userFunc
 
     :Data type: :ref:`data-type-function-name`
 
@@ -281,6 +300,7 @@ protect
 -------
 
 ..  confval:: protect
+    :name: htmlparser-tags-protect
 
     :Data type: :ref:`data-type-boolean`
 
@@ -293,6 +313,7 @@ remap
 -----
 
 ..  confval:: remap
+    :name: htmlparser-tags-remap
 
     :Data type: :ref:`data-type-string`
 
@@ -305,6 +326,7 @@ rmTagIfNoAttrib
 ---------------
 
 ..  confval:: rmTagIfNoAttrib
+    :name: htmlparser-tags-rmTagIfNoAttrib
 
     :Data type: :ref:`data-type-boolean`
 
@@ -317,6 +339,7 @@ nesting
 -------
 
 ..  confval:: nesting
+    :name: htmlparser-tags-nesting
 
     :Data type: mixed
 

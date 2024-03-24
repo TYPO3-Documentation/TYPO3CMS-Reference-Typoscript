@@ -33,6 +33,8 @@ like this:
 ..  contents::
     :local:
 
+..  _encapslines-properties:
+
 Properties
 ==========
 
@@ -42,6 +44,7 @@ encapsTagList
 -------------
 
 ..  confval:: encapsTagList
+    :name: encapslines-encapsTagList
 
     :Data type: list of :ref:`data-type-string`
 
@@ -73,6 +76,7 @@ remapTag.[*tagname*]
 --------------------
 
 ..  confval:: remapTag
+    :name: encapslines-remapTag
 
     :Data type: array of :ref:`data-type-string`
 
@@ -102,6 +106,7 @@ addAttributes.[*tagname*]
 -------------------------
 
 ..  confval:: addAttributes
+    :name: encapslines-addAttributes
 
     :Data type: array of :ref:`data-type-string`
     :Default: Always override/set the value of the attributes.
@@ -139,6 +144,7 @@ removeWrapping
 --------------
 
 ..  confval:: removeWrapping
+    :name: encapslines-removeWrapping
 
     :Data type: :ref:`data-type-boolean`
 
@@ -171,6 +177,7 @@ wrapNonWrappedLines
 -------------------
 
 ..  confval:: wrapNonWrappedLines
+    :name: encapslines-wrapNonWrappedLines
 
     :Data type: :ref:`stdwrap-wrap`
 
@@ -204,6 +211,7 @@ innerStdWrap\_all
 -----------------
 
 ..  confval:: innerStdWrap_all
+    :name: encapslines-innerStdWrap-all
 
     :Data type: :ref:`stdWrap`
 
@@ -217,6 +225,7 @@ encapsLinesStdWrap.[*tagname*]
 ------------------------------
 
 ..  confval:: encapsLinesStdWrap
+    :name: encapslines-encapsLinesStdWrap
 
     :Data type: array of :ref:`data-type-string` / :ref:`stdWrap`
 
@@ -231,6 +240,7 @@ defaultAlign
 ------------
 
 ..  confval:: defaultAlign
+    :name: encapslines-defaultAlign
 
     :Data type: :ref:`data-type-string` / :ref:`stdWrap`
 
@@ -245,6 +255,7 @@ nonWrappedTag
 -------------
 
 ..  confval:: nonWrappedTag
+    :name: encapslines-nonWrappedTag
 
     :Data type: :typoscript:`tagname`
 

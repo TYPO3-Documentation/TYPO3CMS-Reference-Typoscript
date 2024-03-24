@@ -26,6 +26,8 @@ the caching.
 ..  contents::
     :local:
 
+..  _cache-properties:
+
 Properties
 ==========
 
@@ -35,6 +37,7 @@ key
 ---
 
 ..  confval:: key
+    :name: cache-key
 
     :Data type: :ref:`data-type-string` / :ref:`stdwrap`
 
@@ -54,6 +57,7 @@ lifetime
 --------
 
 ..  confval:: lifetime
+    :name: cache-lifetime
 
     :Data type: mixed / :ref:`stdwrap`
     :Default: default
@@ -85,6 +89,7 @@ tags
 ----
 
 ..  confval:: tags
+    :name: cache-tags
 
     :Data type: :ref:`data-type-string` / :ref:`stdwrap`
 
