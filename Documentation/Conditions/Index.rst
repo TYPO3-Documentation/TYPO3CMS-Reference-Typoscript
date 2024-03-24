@@ -669,6 +669,7 @@ date()
 ======
 
 ..  confval:: date()
+    :name: condition-date
 
     :Parameter: String
     :Data type: String | Integer
@@ -703,6 +704,7 @@ like()
 ======
 
 ..  confval:: like()
+    :name: condition-like
 
     :Parameter: String, String
     :Data type: Boolean
@@ -732,6 +734,7 @@ traverse()
 ==========
 
 ..  confval:: traverse()
+    :name: condition-traverse
 
     :Parameter: Array, String
     :Data type: Mixed
@@ -768,6 +771,7 @@ compatVersion()
 ===============
 
 ..  confval:: compatVersion()
+    :name: condition-compatVersion
 
     :Parameter: String
     :Data type: Boolean
@@ -793,6 +797,7 @@ getTSFE()
 =========
 
 ..  confval:: getTSFE()
+    :name: condition-getTSFE
 
     :Data type: Object
 
@@ -824,6 +829,7 @@ getenv()
 ========
 
 ..  confval:: getenv()
+    :name: condition-getenv
 
     :Data type: String
 
@@ -844,6 +850,7 @@ feature()
 =========
 
 ..  confval:: feature()
+    :name: condition-feature
 
     :Data type: String
 
@@ -867,6 +874,7 @@ ip()
 ====
 
 ..  confval:: ip()
+    :name: condition-ip
 
     :Parameter: String
     :Data type: Boolean
@@ -895,6 +903,7 @@ request
 =======
 
 ..  confval:: request()
+    :name: condition-request
 
     :Data type: Mixed
 
@@ -917,6 +926,7 @@ request.getQueryParams()
 ------------------------
 
 ..  confval:: request.getQueryParams()
+    :name: condition-request-getQueryParams
 
     :Data type: Array
 
@@ -959,6 +969,7 @@ request.getParsedBody()
 -----------------------
 
 ..  confval:: request.getParsedBody()
+    :name: condition-request-getParsedBody
 
     :Data type: Array
 
@@ -980,6 +991,7 @@ request.getHeaders()
 --------------------
 
 ..  confval:: request.getHeaders()
+    :name: condition-request-getHeaders
 
     :Data type: Array
 
@@ -1005,6 +1017,7 @@ request.getCookieParams()
 -------------------------
 
 ..  confval:: request.getCookieParams()
+    :name: condition-request-getCookieParams
 
     :Data type: Array
 
@@ -1025,6 +1038,7 @@ request.getNormalizedParams()
 -----------------------------
 
 ..  confval:: request.getNormalizedParams()
+    :name: condition-request-getNormalizedParams
 
     :Data type: Array
 
@@ -1054,6 +1068,7 @@ request.getPageArguments()
 --------------------------
 
 ..  confval:: request.getPageArguments()
+    :name: condition-request-getPageArguments
 
     :Data type: Object
 
@@ -1169,6 +1184,7 @@ session()
 =========
 
 ..  confval:: session()
+    :name: condition-session
 
     :Parameter: String
     :Data type: Mixed
@@ -1192,6 +1208,7 @@ site()
 ======
 
 ..  confval:: site()
+    :name: condition-site
 
     :Parameter: String
     :Data type: Mixed
@@ -1273,6 +1290,7 @@ siteLanguage()
 ==============
 
 ..  confval:: siteLanguage()
+    :name: condition-siteLanguage
 
     :Parameter: String
     :Data type: Mixed
