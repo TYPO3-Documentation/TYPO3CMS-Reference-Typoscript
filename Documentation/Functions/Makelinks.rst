@@ -48,6 +48,7 @@ http.extTarget
 ~~~~~~~~~~~~~~
 
 ..  confval:: http.extTarget
+    :name: makelinks-http-extTarget
 
     :Data type: :ref:`data-type-target`
     :Default: \_top
@@ -61,6 +62,7 @@ http.wrap
 ~~~~~~~~~
 
 ..  confval:: http.wrap
+    :name: makelinks-http-wrap
 
     :Data type: :ref:`data-type-wrap` / :ref:`stdwrap`
 
@@ -72,6 +74,7 @@ http.ATagBeforeWrap
 ~~~~~~~~~~~~~~~~~~~
 
 ..  confval:: http.ATagBeforeWrap
+    :name: makelinks-http-ATagBeforeWrap
 
     :Data type: :ref:`data-type-boolean`
     :Default: 0
@@ -86,6 +89,7 @@ http.keep
 ~~~~~~~~~
 
 ..  confval:: http.keep
+    :name: makelinks-http-keep
 
     :Data type: list: "scheme","path","query"
 
@@ -110,6 +114,7 @@ http.ATagParams
 ~~~~~~~~~~~~~~~
 
 ..  confval:: http.ATagParams
+    :name: makelinks-http-ATagParams
 
     :Data type: :ref:`data-type-tag-params` / :ref:`stdwrap`
 
@@ -141,6 +146,7 @@ mailto.wrap
 ~~~~~~~~~~~
 
 ..  confval:: mailto.wrap
+    :name: makelinks-mailto.wrap
 
     :Data type: :ref:`data-type-wrap` / :ref:`stdwrap`
 
@@ -152,6 +158,7 @@ mailto.ATagBeforeWrap
 ~~~~~~~~~~~~~~~~~~~~~
 
 ..  confval:: mailto.ATagBeforeWrap
+    :name: makelinks-mailto.ATagBeforeWrap
 
     :Data type: :ref:`data-type-boolean`
     :Default: 0
@@ -166,6 +173,7 @@ mailto.ATagParams
 ~~~~~~~~~~~~~~~~~
 
 ..  confval:: mailto.ATagParams
+    :name: makelinks-mailto.ATagParams
 
     :Data type: :ref:`data-type-tag-params` / :ref:`stdwrap`
 

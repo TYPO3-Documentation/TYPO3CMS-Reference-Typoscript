@@ -28,6 +28,7 @@ roundType
 ---------
 
 ..  confval:: roundType
+    :name: round-roundType
 
     :Data type: :ref:`data-type-string` / :ref:`stdwrap`
     :Default: round
@@ -52,6 +53,7 @@ decimals
 --------
 
 ..  confval:: decimals
+    :name: round-decimals
 
     :Data type: :ref:`data-type-integer` / :ref:`stdwrap`
     :Default: 0
@@ -67,6 +69,7 @@ round
 -----
 
 ..  confval:: round
+    :name: round-round
 
     :Data type: :ref:`data-type-boolean`
     :Default: 0

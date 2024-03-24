@@ -29,6 +29,7 @@ search
 ------
 
 ..  confval:: search
+    :name: replacement-search
 
     :Data type: :ref:`data-type-string` / :ref:`stdwrap`
 
@@ -41,6 +42,7 @@ replace
 -------
 
 ..  confval:: replace
+    :name: replacement-replace
 
     :Data type: :ref:`data-type-string` / :ref:`stdwrap`
 
@@ -53,6 +55,7 @@ useRegExp
 ---------
 
 ..  confval:: useRegExp
+    :name: replacement-useRegExp
 
     :Data type: :ref:`data-type-boolean` / :ref:`stdwrap`
     :Default: 0
@@ -78,6 +81,7 @@ useOptionSplitReplace
 ---------------------
 
 ..  confval:: useOptionSplitReplace
+    :name: replacement-useOptionSplitReplace
 
     :Data type: :ref:`data-type-boolean` / :ref:`stdwrap`
     :Default: 0
