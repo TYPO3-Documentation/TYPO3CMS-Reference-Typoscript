@@ -19,6 +19,7 @@ allWrap
 -------
 
 ..  confval:: allWrap
+    :name: tmenuitem-allWrap
 
     :Data type: :ref:`data-type-wrap` / :ref:`stdWrap <stdwrap>`
 
@@ -31,6 +32,7 @@ wrapItemAndSub
 --------------
 
 ..  confval:: wrapItemAndSub
+    :name: tmenuitem-wrapItemAndSub
 
     :Data type: :ref:`data-type-wrap` / :ref:`stdWrap <stdwrap>`
 
@@ -43,6 +45,7 @@ subst_elementUid
 ----------------
 
 ..  confval:: subst_elementUid
+    :name: tmenuitem-subst-elementUid
 
     :Data type: :ref:`data-type-boolean`
 
@@ -62,6 +65,7 @@ before
 ------
 
 ..  confval:: before
+    :name: tmenuitem-before
 
     :Data type: HTML / :ref:`stdWrap <stdwrap>`
 
@@ -72,6 +76,7 @@ beforeWrap
 ----------
 
 ..  confval:: beforeWrap
+    :name: tmenuitem-beforeWrap
 
     :Data type: :ref:`data-type-wrap`
 
@@ -84,6 +89,7 @@ after
 -----
 
 ..  confval:: after
+    :name: tmenuitem-after
 
     :Data type: HTML / :ref:`stdWrap <stdwrap>`
 
@@ -94,6 +100,7 @@ afterWrap
 ---------
 
 ..  confval:: afterWrap
+    :name: tmenuitem-afterWrap
 
     :Data type: :ref:`data-type-wrap`
 
@@ -106,6 +113,7 @@ linkWrap
 --------
 
 ..  confval:: linkWrap
+    :name: tmenuitem-linkWrap
 
     :Data type: :ref:`data-type-wrap`
 
@@ -116,6 +124,7 @@ stdWrap
 -------
 
 ..  confval:: stdWrap
+    :name: tmenuitem-stdWrap
 
     :Data type: :ref:`stdWrap`
 
@@ -128,6 +137,7 @@ ATagBeforeWrap
 --------------
 
 ..  confval:: ATagBeforeWrap
+    :name: tmenuitem-ATagBeforeWrap
 
     :Data type: :ref:`data-type-boolean`
 
@@ -143,6 +153,7 @@ ATagParams
 ----------
 
 ..  confval:: ATagParams
+    :name: tmenuitem-ATagParams
 
     :Data type: *<A>-params* / :ref:`stdWrap <stdwrap>`
 
@@ -162,6 +173,7 @@ ATagTitle
 ---------
 
 ..  confval:: ATagTitle
+    :name: tmenuitem-ATagTitle
 
     :Data type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
 
@@ -185,6 +197,7 @@ additionalParams
 ----------------
 
 ..  confval:: additionalParams
+    :name: tmenuitem-additionalParams
 
     :Data type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
 
@@ -200,6 +213,7 @@ doNotLinkIt
 -----------
 
 ..  confval:: doNotLinkIt
+    :name: tmenuitem-doNotLinkIt
 
     :Data type: :ref:`data-type-boolean` / :ref:`stdWrap <stdwrap>`
     :Default: 0
@@ -213,6 +227,7 @@ doNotShowLink
 -------------
 
 ..  confval:: doNotShowLink
+    :name: tmenuitem-doNotShowLink
 
     :Data type: :ref:`data-type-boolean` / :ref:`stdWrap <stdwrap>`
     :Default: 0
@@ -226,6 +241,7 @@ stdWrap2
 --------
 
 ..  confval:: stdWrap2
+    :name: tmenuitem-stdWrap2
 
     :Data type: :ref:`data-type-wrap` / :ref:`stdWrap <stdwrap>`
     :Default: \|
@@ -240,6 +256,7 @@ altTarget
 ---------
 
 ..  confval:: altTarget
+    :name: tmenuitem-altTarget
 
     :Data type: :ref:`data-type-target`
 
@@ -253,6 +270,7 @@ allStdWrap
 ----------
 
 ..  confval:: allStdWrap
+    :name: tmenuitem-allStdWrap
 
     :Data type: :ref:`stdWrap <stdwrap>`
 
