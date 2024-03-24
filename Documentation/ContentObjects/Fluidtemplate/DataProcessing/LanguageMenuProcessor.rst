@@ -18,12 +18,18 @@ assigned to the :typoscript:`FLUIDTEMPLATE` as a variable.
     information.
 
 
+..  _LanguageMenuProcessor-options:
+
 Options:
 ========
 
 ..  _LanguageMenuProcessor-if:
 
+if
+--
+
 ..  confval:: if
+    :name: LanguageMenuProcessor-if
 
     :Required: false
     :Data type: :ref:`if` condition
@@ -33,7 +39,11 @@ Options:
 
 ..  _LanguageMenuProcessor-languages:
 
+languages
+---------
+
 ..  confval:: languages
+    :name: LanguageMenuProcessor-languages
 
     :Required: true
     :Data type: :ref:`data-type-string` / :ref:`stdWrap`
@@ -47,7 +57,11 @@ Options:
 
 ..  _LanguageMenuProcessor-addQueryString-exclude:
 
+addQueryString.exclude
+----------------------
+
 ..  confval:: addQueryString.exclude
+    :name: LanguageMenuProcessor-addQueryString-exclude
 
     :Required: true
     :Data type: :ref:`data-type-string` / :ref:`stdWrap`
@@ -60,7 +74,11 @@ Options:
 
 ..  _LanguageMenuProcessor-as:
 
+as
+--
+
 ..  confval:: as
+    :name: LanguageMenuProcessor-
 
     :Required: false
     :Data type: :ref:`data-type-string`
@@ -68,6 +86,7 @@ Options:
 
     The variable name to be used in the Fluid template.
 
+..  _LanguageMenuProcessor-example:
 
 Example: Menu of all language from site configuration
 =====================================================
