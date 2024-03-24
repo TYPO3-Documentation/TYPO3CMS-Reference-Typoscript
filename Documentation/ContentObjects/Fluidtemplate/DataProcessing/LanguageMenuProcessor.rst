@@ -78,7 +78,7 @@ as
 --
 
 ..  confval:: as
-    :name: LanguageMenuProcessor-
+    :name: LanguageMenuProcessor-as
 
     :Required: false
     :Data type: :ref:`data-type-string`
