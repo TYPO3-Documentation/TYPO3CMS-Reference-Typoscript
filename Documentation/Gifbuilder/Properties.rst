@@ -15,6 +15,7 @@ Properties
 ==========
 
 ..  confval:: 1,2,3,4...
+    :name: gifbuilder-properties-array
 
     :Data type: :ref:`Gifbuilder Object <gifbuilder-object-names>` + .if (:ref:`->if <if>`)
 
@@ -30,6 +31,7 @@ backColor
 =========
 
 ..  confval:: backColor
+    :name: gifbuilder-properties-backColor
 
     :Data type: :ref:`data-type-GraphicColor` / :ref:`stdWrap <stdwrap>`
     :Default: white
@@ -48,6 +50,7 @@ charRangeMap
 -------
 
 ..  confval:: charRangeMap.[array]
+    :name: gifbuilder-properties-charRangeMap-array
 
     :Data type: string
 
@@ -82,6 +85,7 @@ charRangeMap
 ---------------------
 
 ..  confval:: charRangeMap.[array].charMapConfig
+    :name: gifbuilder-properties-charRangeMap-charMapConfig
 
     :Data type: :ref:`TEXT <gifbuilder-text>` / :ref:`splitRendering.[array] <gifbuilder-text-splitRendering>` configuration
 
@@ -95,6 +99,7 @@ charRangeMap
 -----------------------------
 
 ..  confval:: charRangeMap.[array].fontSizeMultiplicator
+    :name: gifbuilder-properties-charRangeMap-fontSizeMultiplicator
 
     :Data type: double
 
@@ -110,6 +115,7 @@ charRangeMap
 -----------------------------
 
 ..  confval:: charRangeMap.[array].pixelSpaceFontSizeRef
+    :name: gifbuilder-properties-charRangeMap-pixelSpaceFontSizeRef
 
     :Data type: double
 
@@ -160,6 +166,7 @@ format
     Support for WebP has been added.
 
 ..  confval:: format
+    :name: gifbuilder-properties-format
 
     :Data type: "gif" / "jpg" / "jpeg" / "png" / "webp"
     :Default: png
@@ -180,6 +187,7 @@ maxHeight
 =========
 
 ..  confval:: maxHeight
+    :name: gifbuilder-properties-maxHeight
 
     :Data type: positive integer / :ref:`stdWrap <stdwrap>`
 
@@ -192,6 +200,7 @@ maxWidth
 ========
 
 ..  confval:: maxWidth
+    :name: gifbuilder-properties-maxWidth
 
     :Data type: positive integer / :ref:`stdWrap <stdwrap>`
 
@@ -204,6 +213,7 @@ offset
 ======
 
 ..  confval:: offset
+    :name: gifbuilder-properties-offset
 
     :Data type: x,y :ref:`+calc <gifbuilder-calc>` / :ref:`stdWrap <stdwrap>`
     :Default: 0,0
@@ -220,6 +230,7 @@ quality
     The quality can be set for WebP images.
 
 ..  confval:: quality
+    :name: gifbuilder-properties-quality
 
     :Data type: Between 10 (lowest quality) and 100 (highest quality) / additionally, 101 (lossless) for WebP
 
@@ -238,6 +249,7 @@ transparentBackground
 =====================
 
 ..  confval:: transparentBackground
+    :name: gifbuilder-properties-transparentBackground
 
     :Data type: boolean / :ref:`stdWrap <stdwrap>`
 
@@ -256,6 +268,7 @@ transparentColor
 ================
 
 ..  confval:: transparentColor
+    :name: gifbuilder-properties-transparentColor
 
     :Data type: :ref:`data-type-GraphicColor` / :ref:`stdWrap <stdwrap>`
 
@@ -268,6 +281,7 @@ closest
 -------
 
 ..  confval:: transparentColor.closest
+    :name: gifbuilder-properties-transparentColor-closest
 
     :Data Type: boolean
 
@@ -285,6 +299,7 @@ workArea
 ========
 
 ..  confval:: workArea
+    :name: gifbuilder-properties-workArea
 
     :Data type: x,y,w,h :ref:`+calc <gifbuilder-calc>` / :ref:`stdWrap <stdwrap>`
 
@@ -301,6 +316,7 @@ XY
 ==
 
 ..  confval:: XY
+    :name: gifbuilder-properties-XY
 
     :Data type: x,y :ref:`+calc <gifbuilder-calc>` (1-2000) / :ref:`stdWrap <stdwrap>`
     :Default: 120,50
@@ -314,6 +330,7 @@ reduceColors
 ============
 
 ..  confval:: reduceColors
+    :name: gifbuilder-properties-reduceColors
 
     ..  versionchanged:: 13.0
         This property has been removed.

@@ -12,6 +12,7 @@ The :typoscript:`EFFECT` object allows to apply one or more of the
 It has only one property: :typoscript:`value`.
 :ref:`stdWrap <stdwrap>` is available for :typoscript:`value`.
 
+..  _gifbuilder-effect-syntax:
 
 Syntax
 ======
@@ -26,6 +27,7 @@ All effects are defined as the effect only or as an effect/value pair inside
 :typoscript:`value`. Multiple effects or effect/value pairs are separated by
 :typoscript:`|`.
 
+..  _gifbuilder-effect-example:
 
 Example
 =======
@@ -62,6 +64,7 @@ blur
 ----
 
 ..  confval:: blur
+    :name: gifbuilder-effect-blur
 
     :Data type: integer (1-99)
     :Default: 0
@@ -83,6 +86,7 @@ charcoal
 --------
 
 ..  confval:: charcoal
+    :name: gifbuilder-effect-charcoal
 
     :Data type: integer (0-100)
     :Default: 0
@@ -105,6 +109,7 @@ colors
 ------
 
 ..  confval:: colors
+    :name: gifbuilder-effect-colors
 
     :Data type: integer (2-255)
 
@@ -125,6 +130,7 @@ edge
 ----
 
 ..  confval:: edge
+    :name: gifbuilder-effect-edge
 
     :Data type: integer (0-99)
     :Default: 0
@@ -148,6 +154,7 @@ emboss
 ------
 
 ..  confval:: emboss
+    :name: gifbuilder-effect-emboss
 
     Creates a relief effect: Creates highlights or shadows that replace
     light and dark boundaries in the image.
@@ -167,6 +174,7 @@ flip
 ----
 
 ..  confval:: flip
+    :name: gifbuilder-effect-flip
 
     Vertical flipping.
 
@@ -185,6 +193,7 @@ flop
 ----
 
 ..  confval:: flop
+    :name: gifbuilder-effect-flop
 
     Horizontal flipping.
 
@@ -203,6 +212,7 @@ gamma
 -----
 
 ..  confval:: gamma
+    :name: gifbuilder-effect-gamma
 
     :Data type: double (0.5 - 3.0)
     :Default: 1.0
@@ -224,6 +234,7 @@ gray
 ----
 
 ..  confval:: gray
+    :name: gifbuilder-effect-gray
 
     The image is converted to gray tones.
 
@@ -245,6 +256,7 @@ invert
 ------
 
 ..  confval:: invert
+    :name: gifbuilder-effect-invert
 
     Invert the colors.
 
@@ -263,6 +275,7 @@ rotate
 ------
 
 ..  confval:: rotate
+    :name: gifbuilder-effect-rotate
 
     :Data type: integer (0-360)
     :Default: 0
@@ -287,6 +300,7 @@ sharpen
 -------
 
 ..  confval:: sharpen
+    :name: gifbuilder-effect-sharpen
 
     :Data type: integer (0-99)
     :Default: 0
@@ -308,6 +322,7 @@ shear
 -----
 
 ..  confval:: shear
+    :name: gifbuilder-effect-shear
 
     :Data type: integer (-90 - 90)
     :Default: 0
@@ -332,6 +347,7 @@ solarize
 --------
 
 ..  confval:: solarize
+    :name: gifbuilder-effect-solarize
 
     :Data type: integer (0-99)
     :Default: 0
@@ -357,6 +373,7 @@ swirl
 -----
 
 ..  confval:: swirl
+    :name: gifbuilder-effect-swirl
 
     :Data type: integer (0-1000)
     :Default: 0
@@ -378,6 +395,7 @@ wave
 ----
 
 ..  confval:: wave
+    :name: gifbuilder-effect-wave
 
     :Data type: integer,integer (both 0-99)
     :Default: 0,0

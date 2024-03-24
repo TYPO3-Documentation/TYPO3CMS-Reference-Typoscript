@@ -8,6 +8,7 @@ TEXT
 
 Renders a text.
 
+..  _gifbuilder-text-properties:
 
 Properties
 ==========
@@ -22,6 +23,7 @@ align
 -----
 
 ..  confval:: align
+    :name: gifbuilder-text-align
 
     :Data type: align / :ref:`stdWrap <stdwrap>`
     :Default: left
@@ -41,6 +43,7 @@ angle
 -----
 
 ..  confval:: angle
+    :name: gifbuilder-text-angle
 
     :Data type: :ref:`data-type-degree`
     :Default: 0
@@ -59,6 +62,7 @@ antiAlias
 ---------
 
 ..  confval:: antiAlias
+    :name: gifbuilder-text-antiAlias
 
     :Data type: boolean
     :Default: 1 (true)
@@ -79,6 +83,7 @@ breakSpace
 ----------
 
 ..  confval:: breakSpace
+    :name: gifbuilder-text-breakSpace
 
     :Data type: float
     :Default: 1.0
@@ -93,6 +98,7 @@ breakWidth
 ----------
 
 ..  confval:: breakWidth
+    :name: gifbuilder-text-breakWidth
 
     :Data type: integer / :ref:`stdWrap <stdwrap>`
 
@@ -106,6 +112,7 @@ doNotStripHTML
 --------------
 
 ..  confval:: doNotStripHTML
+    :name: gifbuilder-text-doNotStripHTML
 
     :Data type: boolean
     :Default: 0 (false)
@@ -120,6 +127,7 @@ emboss
 ------
 
 ..  confval:: emboss
+    :name: gifbuilder-text-emboss
 
     :Data type: GIFBUILDER object :ref:`->EMBOSS <gifbuilder-emboss>`
 
@@ -130,6 +138,7 @@ fontColor
 ---------
 
 ..  confval:: fontColor
+    :name: gifbuilder-text-fontColor
 
     :Data type: :ref:`data-type-GraphicColor` / :ref:`stdWrap <stdwrap>`
     :Default: black
@@ -143,6 +152,7 @@ fontFile
 --------
 
 ..  confval:: fontFile
+    :name: gifbuilder-text-fontFile
 
     :Data type: resource / :ref:`stdWrap <stdwrap>`
     :Default: Nimbus (Arial clone)
@@ -157,6 +167,7 @@ fontSize
 --------
 
 ..  confval:: fontSize
+    :name: gifbuilder-text-fontSize
 
     :Data type: positive integer / :ref:`stdWrap <stdwrap>`
     :Default: 12
@@ -170,6 +181,7 @@ hide
 ----
 
 ..  confval:: hide
+    :name: gifbuilder-text-hide
 
     :Data type: boolean / :ref:`stdWrap <stdwrap>`
     :Default: 0 (false)
@@ -187,6 +199,7 @@ iterations
 ----------
 
 ..  confval:: iterations
+    :name: gifbuilder-text-iterations
 
     :Data type: positive integer / :ref:`stdWrap <stdwrap>`
     :Default: 1
@@ -205,6 +218,7 @@ maxWidth
 --------
 
 ..  confval:: maxWidth
+    :name: gifbuilder-text-maxWidth
 
     :Data type: positive integer / :ref:`stdWrap <stdwrap>`
 
@@ -222,6 +236,7 @@ niceText
 --------
 
 ..  confval:: niceText
+    :name: gifbuilder-text-niceText
 
     :Data type: boolean / :ref:`stdWrap <stdwrap>`
 
@@ -247,6 +262,7 @@ after
 ~~~~~
 
 ..  confval:: niceText.after
+    :name: gifbuilder-text-niceText-after
 
     GraphicsMagick/ImageMagick parameters after scale.
 
@@ -257,6 +273,7 @@ before
 ~~~~~~
 
 ..  confval:: niceText.before
+    :name: gifbuilder-text-niceText-before
 
     GraphicsMagick/ImageMagick parameters before scale.
 
@@ -267,6 +284,7 @@ scaleFactor
 ~~~~~~~~~~~
 
 ..  confval:: niceText.scaleFactor
+    :name: gifbuilder-text-niceText-scaleFactor
 
     :Data type: integer (2-5)
 
@@ -279,6 +297,7 @@ sharpen
 ~~~~~~~
 
 ..  confval:: niceText.sharpen
+    :name: gifbuilder-text-niceText-sharpen
 
     :Data type: integer (0-99)
 
@@ -292,6 +311,7 @@ offset
 ------
 
 ..  confval:: offset
+    :name: gifbuilder-text-offset
 
     :Data type: x,y :ref:`+calc <gifbuilder-calc>` / :ref:`stdWrap <stdwrap>`
     :Default: 0,0
@@ -305,6 +325,7 @@ outline
 -------
 
 ..  confval:: outline
+    :name: gifbuilder-text-outline
 
     :Data type: GIFBUILDER object :ref:`->OUTLINE <gifbuilder-outline>`
 
@@ -315,6 +336,7 @@ shadow
 ------
 
 ..  confval:: shadow
+    :name: gifbuilder-text-shadow
 
     :Data type: GIFBUILDER object :ref:`->SHADOW <gifbuilder-shadow>`
 
@@ -325,6 +347,7 @@ spacing
 -------
 
 ..  confval:: spacing
+    :name: gifbuilder-text-spacing
 
     :Data type: positive integer / :ref:`stdWrap <stdwrap>`
     :Default: 0
@@ -338,6 +361,7 @@ splitRendering
 --------------
 
 ..  confval:: splitRendering
+    :name: gifbuilder-text-splitRendering
 
     :Data type: integer / *(array of keys)*
 
@@ -359,6 +383,7 @@ splitRendering
 ~~~~~~~
 
 ..  confval:: splitRendering.[array]
+    :name: gifbuilder-text-splitRendering-array
 
     :Data type: integer
 
@@ -443,6 +468,7 @@ compX
 ~~~~~
 
 ..  confval:: splitRendering.compX
+    :name: gifbuilder-text-splitRendering-compX
 
     :Data type: integer
 
@@ -455,6 +481,7 @@ compY
 ~~~~~
 
 ..  confval:: splitRendering.compY
+    :name: gifbuilder-text-splitRendering-compY
 
     :Data type: integer
 
@@ -467,6 +494,7 @@ text
 ----
 
 ..  confval:: text
+    :name: gifbuilder-text-text
 
     :Data type: string / :ref:`stdWrap <stdwrap>`
 
@@ -483,6 +511,7 @@ textMaxLength
 -------------
 
 ..  confval:: textMaxLength
+    :name: gifbuilder-text-textMaxLength
 
     :Data type: integer
     :Default: 100
@@ -497,6 +526,7 @@ wordSpacing
 -----------
 
 ..  confval:: wordSpacing
+    :name: gifbuilder-text-wordSpacing
 
     :Data type: positive integer / :ref:`stdWrap <stdwrap>`
     :Default: :ref:`spacing <gifbuilder-text-spacing>` * 2

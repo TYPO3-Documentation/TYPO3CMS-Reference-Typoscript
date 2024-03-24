@@ -8,6 +8,7 @@ ELLIPSE
 
 Prints a filled ellipse.
 
+..  _gifbuilder-ellipse-example:
 
 Example
 =======
@@ -25,6 +26,7 @@ Example
       10.color = red
     }
 
+..  _gifbuilder-properties:
 
 Properties
 ==========
@@ -39,6 +41,7 @@ color
 -----
 
 ..  confval:: color
+    :name: gifbuilder-ellipse-color
 
     :Data type: :ref:`data-type-GraphicColor` / :ref:`stdWrap <stdwrap>`
     :Default: black
@@ -52,6 +55,7 @@ dimensions
 ----------
 
 ..  confval:: dimensions
+    :name: gifbuilder-ellipse-dimensions
 
     :Data type: x,y,w,h :ref:`+calc <gifbuilder-calc>` / :ref:`stdWrap <stdwrap>`
 
