@@ -41,6 +41,7 @@ NO
 --
 
 ..  confval:: NO
+    :name: tmenu-common-property-no
 
     :Data type: :ref:`data-type-boolean` / (config)
     :Default: 1 (true)
@@ -71,6 +72,7 @@ IFSUB
 -----
 
 ..  confval:: IFSUB
+    :name: tmenu-common-property-ifsub
 
     :Data type: :ref:`data-type-boolean` / (config)
 
@@ -85,6 +87,7 @@ ACT
 ---
 
 ..  confval:: ACT
+    :name: tmenu-common-property-act
 
     :Data type: :ref:`data-type-boolean` / (config)
     :Default: 0
@@ -98,6 +101,7 @@ ACTIFSUB
 --------
 
 ..  confval:: ACTIFSUB
+    :name: tmenu-common-property-actifsub
 
     :Data type: :ref:`data-type-boolean` / (config)
     :Default: 0
@@ -112,6 +116,7 @@ CUR
 ---
 
 ..  confval:: CUR
+    :name: tmenu-common-property-cur
 
     :Data type: :ref:`data-type-boolean` / (config)
     :Default: 0
@@ -126,6 +131,7 @@ CURIFSUB
 --------
 
 ..  confval:: CURIFSUB
+    :name: tmenu-common-property-curifsub
 
     :Data type: :ref:`data-type-boolean` / (config)
     :Default: 0
@@ -140,6 +146,7 @@ USR
 ---
 
 ..  confval:: USR
+    :name: tmenu-common-property-usr
 
     :Data type: :ref:`data-type-boolean` / (config)
     :Default: 0
@@ -154,6 +161,7 @@ SPC
 ---
 
 ..  confval:: SPC
+    :name: tmenu-common-property-spc
 
     :Data type: :ref:`data-type-boolean` / (config)
     :Default: 0
@@ -170,6 +178,7 @@ USERDEF1
 --------
 
 ..  confval:: USERDEF1
+    :name: tmenu-common-property-userdef1
 
     :Data type: :ref:`data-type-boolean` / (config)
 
@@ -187,6 +196,7 @@ USERDEF2
 --------
 
 ..  confval:: USERDEF2
+    :name: tmenu-common-property-userdef2
 
     :Data type: :ref:`data-type-boolean` / (config)
 
@@ -207,6 +217,7 @@ expAll
 ------
 
 ..  confval:: expAll
+    :name: menu-common-properties-expAll
 
     :Data type: :ref:`data-type-boolean` / :ref:`stdWrap <stdwrap>`
 
@@ -238,6 +249,7 @@ default with colPos=0!).
 
 
 ..  confval:: sectionIndex
+    :name: menu-common-properties-sectionIndex
 
     :Data type: :ref:`data-type-boolean`
 
@@ -246,10 +258,13 @@ default with colPos=0!).
     This corresponds to the "Menu/Sitemap" content element when "Section
     index" is selected as type.
 
+..  _menu-common-properties-sectionIndex-type:
+
 sectionIndex.type
 ~~~~~~~~~~~~~~~~~
 
 ..  confval:: sectionIndex.type
+    :name: menu-common-properties-sectionIndex-type
 
     :Data type: :ref:`data-type-string` ("all" / "header")
 
@@ -263,10 +278,14 @@ sectionIndex.type
         header layout of an element is set to "Hidden" then the
         page will not appear in the menu.
 
+
+..  _menu-common-properties-sectionIndex-includeHiddenHeaders:
+
 sectionIndex.includeHiddenHeaders
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ..  confval:: sectionIndex.includeHiddenHeaders
+    :name: menu-common-properties-sectionIndex-includeHiddenHeaders
 
     :Data type: :ref:`data-type-boolean`
 
@@ -274,13 +293,16 @@ sectionIndex.includeHiddenHeaders
      also elements with a header layout set to "Hidden" will appear
      in the menu.
 
+
+..  _menu-common-properties-sectionIndex-useColPos:
+
 sectionIndex.useColPos
 ~~~~~~~~~~~~~~~~~~~~~~
 
 ..  confval:: sectionIndex.useColPos
+    :name: menu-common-properties-sectionIndex-useColPos
 
     :Data type: :ref:`data-type-integer` / :ref:`stdWrap <stdwrap>`
-
     :Default: 0
 
     This property allows you to set the colPos which should be used in the
@@ -294,6 +316,8 @@ sectionIndex.useColPos
         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
         tt_content.menu.20.3.1.sectionIndex.useColPos = -1
+
+..  _menu-common-properties-sectionIndex-data-record:
 
 The data record in sectionIndex menus
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -349,6 +373,7 @@ target
 ------
 
 ..  confval:: target
+    :name: menu-common-properties-target
 
     :Data type: :ref:`data-type-target`
     :Default: self
@@ -362,6 +387,7 @@ forceTypeValue
 ---------------
 
 ..  confval:: forceTypeValue
+    :name: menu-common-properties-forceTypeValue
 
     :Data type: :ref:`data-type-integer`
 
@@ -375,6 +401,7 @@ stdWrap
 -------
 
 ..  confval:: stdWrap
+    :name: menu-common-properties-stdWrap
 
     :Data type: :ref:`stdWrap <stdwrap>`
 
@@ -401,6 +428,7 @@ wrap
 ----
 
 ..  confval:: wrap
+    :name: menu-common-properties-wrap
 
     :Data type: :ref:`wrap <data-type-wrap>`
 
@@ -413,6 +441,7 @@ IProcFunc
 ---------
 
 ..  confval:: IProcFunc
+    :name: menu-common-properties-IProcFunc
 
     :Data type: function name
 
@@ -431,6 +460,7 @@ Item States
     listed above
 
 ..  confval:: [Item States, like NO, ACT, CUR etc]
+    :name: menu-common-properties-item-states
 
     :Data type: ->TMENUITEM
 
@@ -450,6 +480,7 @@ alternativeSortingField
 -----------------------
 
 ..  confval:: alternativeSortingField
+    :name: menu-common-properties-alternativeSortingField
 
     :Data type: :ref:`data-type-string`
 
@@ -476,6 +507,7 @@ minItems
 --------
 
 ..  confval:: minItems
+    :name: menu-common-properties-minItems
 
     :Data type: :ref:`data-type-integer` / :ref:`stdWrap <stdwrap>`
 
@@ -492,6 +524,7 @@ maxItems
 --------
 
 ..  confval:: maxItems
+    :name: menu-common-properties-maxItems
 
     :Data type: :ref:`data-type-integer` / :ref:`stdWrap <stdwrap>`
 
@@ -507,6 +540,7 @@ begin
 -----
 
 ..  confval:: begin
+    :name: menu-common-properties-begin
 
     :Data type: :ref:`data-type-integer` / :ref:`stdWrap <stdwrap>` :ref:`+calc <objects-calc>`
 
@@ -532,6 +566,7 @@ debugItemConf
 -------------
 
 ..  confval:: debugItemConf
+    :name: menu-common-properties-debugItemConf
 
     :Data type: :ref:`data-type-boolean`
 
@@ -545,6 +580,7 @@ overrideId
 ----------
 
 ..  confval:: overrideId
+    :name: menu-common-properties-overrideId
 
     :Data type: :ref:`data-type-integer` (page id)
 
@@ -562,6 +598,7 @@ addParams
 ---------
 
 ..  confval:: addParams
+    :name: menu-common-properties-addParams
 
     :Data type: :ref:`data-type-string`
 
@@ -581,6 +618,7 @@ showAccessRestrictedPages
 --------------------------
 
 ..  confval:: showAccessRestrictedPages
+    :name: menu-common-properties-showaccessrestrictedpages
 
     :Data type: :ref:`data-type-integer` (page ID) / keyword "NONE"
 
@@ -631,6 +669,7 @@ additionalWhere
 ---------------
 
 ..  confval:: additionalWhere
+    :name: menu-common-properties-additionalWhere
 
     :Data type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
 
@@ -653,6 +692,7 @@ itemArrayProcFunc
 -----------------
 
 ..  confval:: itemArrayProcFunc
+    :name: menu-common-properties-itemArrayProcFunc
 
     :Data type: function name
 
@@ -682,6 +722,7 @@ submenuObjSuffixes
 ------------------
 
 ..  confval:: submenuObjSuffixes
+    :name: menu-common-properties-submenuObjSuffixes
 
     :Data type: :ref:`data-type-string` / :ref:`optionsplit`
 
