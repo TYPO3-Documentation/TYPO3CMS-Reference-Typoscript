@@ -10,13 +10,18 @@ calculates the maximum asset size. It uses the files already present in
 the `processedData` array for its calculations. The :ref:`FilesProcessor` can
 be used to fetch the files.
 
+..  _GalleryProcessor-options:
 
 Options:
 ========
 
 ..  _GalleryProcessor-if:
 
+if
+--
+
 ..  confval:: if
+    :name: GalleryProcessor-if
 
     :Required: false
     :Data type: :ref:`if` condition
@@ -27,7 +32,11 @@ Options:
 
 ..  _GalleryProcessor-filesProcessedDataKey:
 
+filesProcessedDataKey
+---------------------
+
 ..  confval:: filesProcessedDataKey
+    :name: GalleryProcessor-filesProcessedDataKey
 
     :Required: true
     :Data type: :ref:`data-type-string` / :ref:`stdWrap`
@@ -39,7 +48,11 @@ Options:
 
 ..  _GalleryProcessor-numberOfColumns:
 
+numberOfColumns
+---------------
+
 ..  confval:: numberOfColumns
+    :name: GalleryProcessor-numberOfColumns
 
     :Required: false
     :Data type: :ref:`data-type-integer` / :ref:`stdWrap`
@@ -52,7 +65,11 @@ Options:
 
 ..  _GalleryProcessor-mediaOrientation:
 
+mediaOrientation
+----------------
+
 ..  confval:: mediaOrientation
+    :name: GalleryProcessor-mediaOrientation
 
     :Required: false
     :Data type: :ref:`data-type-integer` / :ref:`stdWrap`
@@ -69,7 +86,11 @@ Options:
 
 ..  _GalleryProcessor-maxGalleryWidth:
 
+maxGalleryWidth
+---------------
+
 ..  confval:: maxGalleryWidth
+    :name: GalleryProcessor-maxGalleryWidth
 
     :Required: false
     :Data type: :ref:`data-type-integer` / :ref:`stdWrap`
@@ -80,7 +101,11 @@ Options:
 
 ..  _GalleryProcessor-maxGalleryWidthInText:
 
+maxGalleryWidthInText
+---------------------
+
 ..  confval:: maxGalleryWidthInText
+    :name: GalleryProcessor-maxGalleryWidthInText
 
     :Required: false
     :Data type: :ref:`data-type-integer` / :ref:`stdWrap`
@@ -91,7 +116,11 @@ Options:
 ..  _GalleryProcessor-equalMediaHeight:
 ..  _GalleryProcessor-equalMediaWidth:
 
+equalMediaHeight, equalMediaWidth
+---------------------------------
+
 ..  confval:: equalMediaHeight, equalMediaWidth
+    :name: GalleryProcessor-equalMediaHeight
 
     :Required: false
     :Data type: :ref:`data-type-integer` / :ref:`stdWrap`
@@ -108,7 +137,11 @@ Options:
 
 ..  _GalleryProcessor-columnSpacing:
 
+columnSpacing
+-------------
+
 ..  confval:: columnSpacing
+    :name: GalleryProcessor-columnSpacing
 
     :Required: false
     :Data type: :ref:`data-type-integer` / :ref:`stdWrap`
@@ -120,7 +153,11 @@ Options:
 
 ..  _GalleryProcessor-borderEnabled:
 
+borderEnabled
+-------------
+
 ..  confval:: borderEnabled
+    :name: GalleryProcessor-borderEnabled
 
     :Required: false
     :Data type: :ref:`data-type-integer` / :ref:`stdWrap`
@@ -131,10 +168,13 @@ Options:
     fields `imageborder` (:guilabel:`Number of Columns`) if used with content
     elements.
 
-
 ..  _GalleryProcessor-borderWidth:
 
+borderWidth
+-----------
+
 ..  confval:: borderWidth
+    :name: GalleryProcessor-borderWidth
 
     :Required: false
     :Data type: :ref:`data-type-integer` / :ref:`stdWrap`
@@ -146,7 +186,11 @@ Options:
 
 ..  _GalleryProcessor-borderPadding:
 
+borderPadding
+-------------
+
 ..  confval:: borderPadding
+    :name: GalleryProcessor-borderPadding
 
     :Required: false
     :Data type: :ref:`data-type-integer` / :ref:`stdWrap`
@@ -158,7 +202,11 @@ Options:
 
 ..  _GalleryProcessor-cropVariant:
 
+cropVariant
+-----------
+
 ..  confval:: cropVariant
+    :name: GalleryProcessor-cropVariant
 
     :Required: false
     :Data type: :ref:`data-type-string` / :ref:`stdWrap`
@@ -170,7 +218,11 @@ Options:
 
 ..  _GalleryProcessor-as:
 
+as
+--
+
 ..  confval:: as
+    :name: GalleryProcessor-as
 
     :Required: false
     :Data type: :ref:`data-type-string` / :ref:`stdWrap`
@@ -181,7 +233,11 @@ Options:
 
 ..  _GalleryProcessor-dataProcessing:
 
+dataProcessing
+--------------
+
 ..  confval:: dataProcessing
+    :name: GalleryProcessor-dataProcessing
 
     :Required: false
     :Data type: array of :ref:`dataProcessing`
@@ -189,6 +245,7 @@ Options:
 
     Array of data processors to be applied to all fetched records.
 
+..  _GalleryProcessor-example-rows-columns:
 
 Example: display images in rows and columns
 ===========================================

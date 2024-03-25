@@ -15,13 +15,18 @@ This data processor can be used for processing file information:
 A :typoscript:`FLUIDTEMPLATE` can then iterate over processed data
 automatically.
 
+..  _FilesProcessor-options:
 
 Options:
 ========
 
 ..  _FilesProcessor-if:
 
+if
+--
+
 ..  confval:: if
+    :name: FilesProcessor-if
 
     :Required: false
     :Data type: :ref:`if` condition
@@ -32,7 +37,11 @@ Options:
 
 ..  _FilesProcessor-references:
 
+references
+----------
+
 ..  confval:: references
+    :name: FilesProcessor-references
 
     :Required: false
     :Data type: :ref:`data-type-string` (comma-separated integers) / :ref:`stdWrap`
@@ -50,7 +59,11 @@ Options:
 
 ..  _FilesProcessor-references-fieldName:
 
+references.fieldName
+~~~~~~~~~~~~~~~~~~~~
+
 ..  confval:: references.fieldName
+    :name: FilesProcessor-references-fieldName
 
     :Required: false
     :Data type: :ref:`data-type-string` / :ref:`stdWrap`
@@ -65,7 +78,11 @@ Options:
 
 ..  _FilesProcessor-references-table:
 
+references.table
+~~~~~~~~~~~~~~~~
+
 ..  confval:: references.table
+    :name: FilesProcessor-references.table
 
     :Required: false
     :Data type: :ref:`data-type-string` / :ref:`stdWrap`
@@ -79,7 +96,11 @@ Options:
 
 ..  _FilesProcessor-files:
 
+files
+-----
+
 ..  confval:: files
+    :name: FilesProcessor-files
 
     :Required: false
     :Data type: :ref:`data-type-string` (comma-separated integers) / :ref:`stdWrap`
@@ -92,7 +113,11 @@ Options:
 
 ..  _FilesProcessor-collections:
 
+collections
+-----------
+
 ..  confval:: collections
+    :name: FilesProcessor-collections
 
     :Required: false
     :Data type: :ref:`data-type-string` (comma-separated integers) / :ref:`stdWrap`
@@ -106,7 +131,11 @@ Options:
 
 ..  _FilesProcessor-folders:
 
+folders
+-------
+
 ..  confval:: folders
+    :name: FilesProcessor-folders
 
     :Required: false
     :Data type: :ref:`data-type-string` (comma-separated folders), :ref:`stdWrap`
@@ -129,7 +158,11 @@ Options:
 
 ..  _FilesProcessor-folders-recursive:
 
+folders.recursive
+~~~~~~~~~~~~~~~~~
+
 ..  confval:: folders.recursive
+    :name: FilesProcessor-folders-recursive
 
     :Required: false
     :Data type: :ref:`data-type-string` / :ref:`stdWrap`
@@ -142,7 +175,11 @@ Options:
 
 ..  _FilesProcessor-sorting:
 
+sorting
+-------
+
 ..  confval:: sorting
+    :name: FilesProcessor-sorting
 
     :Required: false
     :Data type: :ref:`data-type-string` / :ref:`stdWrap`
@@ -155,7 +192,11 @@ Options:
 
 ..  _FilesProcessor-sorting-direction:
 
+sorting.direction
+~~~~~~~~~~~~~~~~~
+
 ..  confval:: sorting.direction
+    :name: FilesProcessor-sorting-direction
 
     :Required: false
     :Data type: :ref:`data-type-string` / :ref:`stdWrap`
@@ -167,7 +208,11 @@ Options:
 
 ..  _FilesProcessor-as:
 
+as
+--
+
 ..  confval:: as
+    :name: FilesProcessor-as
 
     :Required: false
     :Data type: :ref:`data-type-string` / :ref:`stdWrap`
@@ -175,6 +220,8 @@ Options:
 
     The variable name to be used in the Fluid template.
 
+
+..  _FilesProcessor-example-render-image:
 
 Example 1: Render the images stored in field image
 ==================================================
