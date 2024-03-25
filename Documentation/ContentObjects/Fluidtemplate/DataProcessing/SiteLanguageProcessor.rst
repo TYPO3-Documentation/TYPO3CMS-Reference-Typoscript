@@ -10,13 +10,18 @@ SiteLanguageProcessor
 The :php:`SiteLanguageProcessor` fetches language-related data from the
 :ref:`site configuration<t3coreapi:sitehandling>`.
 
+..  _SiteLanguageProcessor-options:
 
 Options
 =======
 
 ..  _SiteLanguageProcessor-as:
 
+as
+--
+
 ..  confval:: as
+    :name: SiteLanguageProcessor-as
 
     :Required: false
     :Data type: :ref:`data-type-string`
@@ -24,6 +29,7 @@ Options
 
     The variable name to be used in the Fluid template.
 
+..  _SiteLanguageProcessor-example:
 
 Example: Output some data from the site language configuration
 ==============================================================

@@ -11,13 +11,18 @@ data within an XML structure inside a single database column. The data processor
 :php:`\TYPO3\CMS\Frontend\DataProcessing\FlexFormProcessor` converts the
 FlexForm data of a given field into a Fluid-readable array.
 
+..  _FlexFormProcessor-options:
 
 Options
 =======
 
 ..  _FlexFormProcessor-fieldname:
 
+fieldname
+---------
+
 ..  confval:: fieldname
+    :name: FlexFormProcessor-fieldname
 
     :Required: false
     :Data type: :ref:`data-type-string`
@@ -28,7 +33,11 @@ Options
 
 ..  _FlexFormProcessor-as:
 
+as
+--
+
 ..  confval:: as
+    :name: FlexFormProcessor-as
 
     :Required: false
     :Data type: :ref:`data-type-string`
@@ -36,9 +45,12 @@ Options
 
     Name for the variable in the Fluid template.
 
+..  _FlexFormProcessor-examples:
 
 Examples
 ========
+
+..  _FlexFormProcessor-example-minimal:
 
 Example of a minimal TypoScript configuration
 ---------------------------------------------
@@ -59,6 +71,8 @@ Example of a minimal TypoScript configuration
 The converted array can be accessed within the Fluid template with the
 :html:`{flexFormData}` variable.
 
+..  _FlexFormProcessor-example-advanced:
+
 Example of an advanced TypoScript configuration
 -----------------------------------------------
 
@@ -76,6 +90,8 @@ Example of an advanced TypoScript configuration
 
 The converted array can be accessed within the Fluid template with the
 :html:`{myOutputVariable}` variable.
+
+..  _FlexFormProcessor-example-sub-processor:
 
 Example with a custom sub-processor
 -----------------------------------
