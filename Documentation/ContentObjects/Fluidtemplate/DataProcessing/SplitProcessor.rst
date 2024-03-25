@@ -9,13 +9,18 @@ The :php:`SplitProcessor` allows to split values separated with a delimiter
 from a single database field. The result is an array that can be iterated over.
 Whitespaces are automatically trimmed.
 
+..  _splitProcessor-options:
 
 Options
 =======
 
 ..  _splitProcessor-if:
 
+if
+--
+
 ..  confval:: if
+    :name: splitProcessor-if
 
     :Required: false
     :Data type: :ref:`if` condition
@@ -26,7 +31,11 @@ Options
 
 ..  _splitProcessor-fieldName:
 
+fieldName
+---------
+
 ..  confval:: fieldName
+    :name: splitProcessor-fieldName
 
     :Required: true
     :Data type: :ref:`data-type-string` / :ref:`stdWrap`
@@ -37,7 +46,11 @@ Options
 
 ..  _splitProcessor-as:
 
+as
+--
+
 ..  confval:: as
+    :name: splitProcessor-as
 
     :Required: false
     :Data type: :ref:`data-type-string`
@@ -48,7 +61,11 @@ Options
 
 ..  _splitProcessor-delimiter:
 
+delimiter
+---------
+
 ..  confval:: delimiter
+    :name: splitProcessor-delimiter
 
     :Required: false
     :Data type: :ref:`data-type-string` / :ref:`stdWrap`
@@ -60,7 +77,11 @@ Options
 
 ..  _splitProcessor-filterIntegers:
 
+filterIntegers
+--------------
+
 ..  confval:: filterIntegers
+    :name: splitProcessor-filterIntegers
 
     :Required: false
     :Data type: :ref:`data-type-boolean` / :ref:`stdWrap`
@@ -72,7 +93,11 @@ Options
 
 ..  _splitProcessor-filterUnique:
 
+filterUnique
+------------
+
 ..  confval:: filterUnique
+    :name: splitProcessor-filterUnique
 
     :Required: false
     :Data type: :ref:`data-type-boolean` / :ref:`stdWrap`
@@ -84,7 +109,11 @@ Options
 
 ..  _splitProcessor-removeEmptyEntries:
 
+removeEmptyEntries
+------------------
+
 ..  confval:: removeEmptyEntries
+    :name: splitProcessor-removeEmptyEntries
 
     :Required: false
     :Data type: :ref:`data-type-boolean` / :ref:`stdWrap`
@@ -93,6 +122,7 @@ Options
 
     If set to `1`, all empty values will be removed.
 
+..  _splitProcessor-example-split-url:
 
 Example: Splitting a URL
 ========================
