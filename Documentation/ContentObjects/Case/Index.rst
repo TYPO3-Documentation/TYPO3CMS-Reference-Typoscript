@@ -29,6 +29,8 @@ from the "default" property will be used.
 ..  contents::
     :local:
 
+..  _cobj-case-properties:
+
 Properties
 ==========
 
@@ -38,6 +40,7 @@ Properties
 -------------------
 
 ..  confval:: array of cObjects
+    :name: case-array
 
     :Data type: :ref:`cObject <data-type-cobject>`
 
@@ -52,6 +55,7 @@ cache
 -----
 
 ..  confval:: cache
+    :name: case-cache
 
     :Data type: :ref:`cache <cache>`
 
@@ -64,6 +68,7 @@ default
 -------
 
 ..  confval:: default
+    :name: case-default
 
     :Data type: :ref:`cObject <data-type-cobject>`
 
@@ -79,6 +84,7 @@ if
 --
 
 ..  confval:: if
+    :name: case-if
 
     :Data type: :ref:`->if <if>`
 
@@ -91,6 +97,7 @@ key
 ---
 
 ..  confval:: key
+    :name: case-key
 
     :Data type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
     :Default: default
@@ -114,6 +121,7 @@ setCurrent
 ----------
 
 ..  confval:: setCurrent
+    :name: case-setCurrent
 
     :Data type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
 
@@ -126,6 +134,7 @@ stdWrap
 -------
 
 ..  confval:: stdWrap
+    :name: case-stdWrap
 
     :Data type: :ref:`stdWrap <stdwrap>`
 

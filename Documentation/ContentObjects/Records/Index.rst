@@ -40,6 +40,7 @@ source
 ------
 
 ..  confval:: source
+    :name: records-source
 
     :Data type: *records-list* / :ref:`stdWrap <stdwrap>`
 
@@ -59,6 +60,7 @@ categories
 ----------
 
 ..  confval:: categories
+    :name: records-categories
 
     :Data type: *categories-list* / :ref:`stdWrap <stdwrap>`
 
@@ -75,8 +77,13 @@ categories
         the :code:`source` property will take precedence, as it is considered
         more precisely targeted.
 
+..  _cobj-records-categories-relation:
+
+categories.relation
+~~~~~~~~~~~~~~~~~~~
 
 ..  confval:: categories.relation
+    :name: records-categories-relation
 
     Name of the categories relation field to use for
     building the list of categorized records, as there can
@@ -90,6 +97,7 @@ tables
 ------
 
 ..  confval:: tables
+    :name: records-tables
 
     :Data type: *list of tables* / :ref:`stdWrap <stdwrap>`
 
@@ -120,6 +128,7 @@ conf
 ----
 
 ..  confval:: conf.[*table name*]
+    :name: records-conf
 
     :Data type: :ref:`cObject <data-type-cobject>`
 
@@ -138,6 +147,7 @@ dontCheckPid
 ------------
 
 ..  confval:: dontCheckPid
+    :name: records-dontCheckPid
 
     :Data type: :ref:`data-type-boolean` / :ref:`stdWrap <stdwrap>`
     :Default: 0
@@ -152,6 +162,7 @@ wrap
 ----
 
 ..  confval:: wrap
+    :name: records-wrap
 
     :Data type: :ref:`wrap <data-type-wrap>` / :ref:`stdWrap <stdwrap>`
 
@@ -164,6 +175,7 @@ stdWrap
 -------
 
 ..  confval:: stdWrap
+    :name: records-stdWrap
 
     :Data type: :ref:`->stdWrap <stdwrap>`
 
@@ -176,6 +188,7 @@ cache
 -----
 
 ..  confval:: cache
+    :name: records-cache
 
     :Data type: :ref:`cache <cache>`
 

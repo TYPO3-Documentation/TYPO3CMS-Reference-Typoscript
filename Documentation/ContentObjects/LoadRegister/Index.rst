@@ -24,13 +24,18 @@ they used to be. In the Core they are not being used anymore.
 ..  contents::
     :local:
 
+..  _cobj-load-register-properties:
+
 Properties
 ==========
+
+..  _cobj-load-register-array:
 
 (array of field names)
 ----------------------
 
 ..  confval:: array of field names
+    :name: load-register-array
 
     :Data type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
 
