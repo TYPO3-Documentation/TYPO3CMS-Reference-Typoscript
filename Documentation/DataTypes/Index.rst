@@ -303,7 +303,7 @@ imgResource
 ..  confval:: imgResource
     :name: data-type-imgResource
 
-    #.  A :confval:`resource` plus imgResource properties.
+    #.  A :confval:`data-type-resource` plus imgResource properties.
 
         Filetypes can be anything among the allowed types defined in the
         configuration variable
@@ -405,7 +405,7 @@ positive integer
     :name: data-type-positive-integer
 
 
-    Positive :confval:`integer`.
+    Positive :confval:`data-type-integer`.
 
     ..  rubric:: Examples
 
