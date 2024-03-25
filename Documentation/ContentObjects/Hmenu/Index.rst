@@ -38,7 +38,7 @@ Properties
 -------------
 
 ..  confval:: 1, 2, 3, ...
-    :name: hmenu-number
+    :name: hmenu-array
 
     :Data type: :ref:`menu object <data-type-menuobj>`
     :Default: (no menu)
