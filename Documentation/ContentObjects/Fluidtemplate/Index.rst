@@ -22,6 +22,9 @@ It can be used in :ref:`content elements <t3coreapi:adding-your-own-content-elem
 or to generate content within the top-level object page
 (see :ref:`the example on this page <cobj-fluidtemplate-examples>`).
 
+
+.. _cobj-fluidtemplate-data:
+
 Data available in Fluid templates
 =================================
 
@@ -71,6 +74,7 @@ dataProcessing
 --------------
 
 ..  confval:: dataProcessing
+    :name: fluidtemplate-dataProcessing
 
     :Data type: array of class references by full namespace
 
@@ -89,6 +93,7 @@ extbase.controllerActionName
 ----------------------------
 
 ..  confval:: extbase.controllerActionName
+    :name: fluidtemplate-extbase-controlleractionname
 
     :Data type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
 
@@ -100,6 +105,7 @@ extbase.controllerExtensionName
 -------------------------------
 
 ..  confval:: extbase.controllerExtensionName
+    :name: fluidtemplate-extbase-controllerextensionname
 
     :Data type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
 
@@ -129,6 +135,7 @@ extbase.controllerName
 ----------------------
 
 ..  confval:: extbase.controllerName
+    :name: fluidtemplate-extbase-controllername
 
     :Data type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
 
@@ -140,6 +147,7 @@ extbase.pluginName
 ------------------
 
 ..  confval:: extbase.pluginName
+    :name: fluidtemplate-extbase-pluginname
 
     :Data type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
 
@@ -151,6 +159,7 @@ file
 ----
 
 ..  confval:: file
+    :name: fluidtemplate-file
 
     :Data type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
 
@@ -176,6 +185,7 @@ format
 ------
 
 ..  confval:: format
+    :name: fluidtemplate-format
 
     :Data type: keyword / :ref:`stdWrap <stdwrap>`
     :Default: html
@@ -190,6 +200,7 @@ layoutRootPath
 --------------
 
 ..  confval:: layoutRootPath
+    :name: fluidtemplate-layoutrootpath
 
     :Data type: :ref:`data-type-path` / :ref:`stdWrap <stdwrap>`
 
@@ -209,6 +220,7 @@ layoutRootPaths
 ---------------
 
 ..  confval:: layoutRootPaths
+    :name: fluidtemplate-layoutrootpaths
 
     :Data type: array of :ref:`data-type-path` with :ref:`stdWrap <stdwrap>`
 
@@ -250,6 +262,7 @@ partialRootPath
 ---------------
 
 ..  confval:: partialRootPath
+    :name: fluidtemplate-partialrootpath
 
     :Data type: :ref:`data-type-path` / :ref:`stdWrap <stdwrap>`
 
@@ -269,6 +282,7 @@ partialRootPaths
 ----------------
 
 ..  confval:: partialRootPaths
+    :name: fluidtemplate-partialrootpaths
 
     :Data type: array of :ref:`data-type-path` with :ref:`stdWrap <stdwrap>`
 
@@ -291,6 +305,7 @@ settings
 --------
 
 ..  confval:: settings
+    :name: fluidtemplate-settings
 
     :Data type: array of keys
 
@@ -328,6 +343,7 @@ stdWrap
 -------
 
 ..  confval:: stdWrap
+    :name: fluidtemplate-stdwrap
 
     :Data type: :ref:`->stdWrap <stdwrap>`
 
@@ -339,6 +355,7 @@ template
 --------
 
 ..  confval:: template
+    :name: fluidtemplate-template
 
     :Data type: :ref:`cObject <data-type-cobject>`
 
@@ -360,6 +377,7 @@ templateName
 ------------
 
 ..  confval:: templateName
+    :name: fluidtemplate-templatename
 
     :Data type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
 
@@ -439,6 +457,7 @@ templateRootPath
 ----------------
 
 ..  confval:: templateRootPath
+    :name: fluidtemplate-templaterootpath
 
     :Data type: file path /:ref:`stdWrap <stdwrap>`
 
@@ -458,6 +477,7 @@ templateRootPaths
 -----------------
 
 ..  confval:: templateRootPaths
+    :name: fluidtemplate-templaterootpaths
 
     :Data type: array of file paths with :ref:`stdWrap <stdwrap>`
 
@@ -497,6 +517,7 @@ variables
 ---------
 
 ..  confval:: variables
+    :name: fluidtemplate-variables
 
     :Data type: *(array of cObjects)*
 

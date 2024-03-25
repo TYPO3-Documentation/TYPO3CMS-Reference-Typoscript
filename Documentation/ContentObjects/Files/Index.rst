@@ -14,6 +14,8 @@ A content object of type FILES uses the :ref:`File Abstraction Layer <t3coreapi:
 .. contents::
    :local:
 
+.. _cobj-files-properties:
+
 Properties
 ==========
 
@@ -23,6 +25,7 @@ files
 ------
 
 ..  confval:: files
+    :name: files-files
 
     :Data type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
 
@@ -43,6 +46,7 @@ references
 ----------
 
 ..  confval:: references
+    :name: files-references
 
     :Data type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>` or array
 
@@ -91,6 +95,7 @@ collections
 -----------
 
 ..  confval:: collections
+    :name: files-collections
 
     :Data type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
 
@@ -104,6 +109,7 @@ folders
 -------
 
 ..  confval:: folders
+    :name: files-folders
 
     :Data type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
 
@@ -150,6 +156,7 @@ sorting
 -------
 
 ..  confval:: sorting
+    :name: files-sorting
 
     :Data type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
 
@@ -158,7 +165,11 @@ sorting
 
 .. _cobj-files-sorting-direction:
 
+sorting.direction
+~~~~~~~~~~~~~~~~~
+
 ..  confval:: sorting.direction
+    :name: files-sorting-direction
 
     :Data type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
     :Default: asc
@@ -174,6 +185,7 @@ begin
 -----
 
 ..  confval:: begin
+    :name: files-begin
 
     :Data type: :ref:`data-type-integer` / :ref:`stdWrap <stdwrap>`
 
@@ -187,6 +199,7 @@ maxItems
 --------
 
 ..  confval:: maxItems
+    :name: files-maxItems
 
     :Data type: :ref:`data-type-integer` / :ref:`stdWrap <stdwrap>`
 
@@ -202,6 +215,7 @@ renderObj
 ---------
 
 ..  confval:: renderObj
+    :name: files-renderObj
 
     :Data type: :ref:`cObject <data-type-cobject>` :ref:`+optionSplit <optionsplit>`
 
@@ -230,6 +244,7 @@ stdWrap
 -------
 
 ..  confval:: stdWrap
+    :name: files-stdWrap
 
     :Data type: :ref:`->stdWrap <stdwrap>`
 
@@ -246,6 +261,7 @@ references.table
 ----------------
 
 ..  confval:: references.table
+    :name: files-references-table
 
     :Data type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
 
@@ -258,6 +274,7 @@ references.uid
 --------------
 
 ..  confval:: references.uid
+    :name: files-references-uid
 
     :Data type: :ref:`data-type-integer` / :ref:`stdWrap <stdwrap>`
 
@@ -270,6 +287,7 @@ references.fieldName
 --------------------
 
 ..  confval:: references.fieldName
+    :name: files-references-fieldName
 
     :Data type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
 
