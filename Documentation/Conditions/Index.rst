@@ -27,6 +27,7 @@ applicationContext
 ==================
 
 ..  confval:: applicationContext
+    :name: condition-applicationContext
 
     :Data type: String
 
@@ -60,6 +61,7 @@ page
     guard the property by using the function :ref:`traverse() <condition-function-traverse>`
 
 ..  confval:: page
+    :name: condition-page
 
     :Data type: Array
 
@@ -123,6 +125,7 @@ tree
 ====
 
 ..  confval:: tree
+    :name: condition-tree
 
     :Data type: Object
 
@@ -138,6 +141,7 @@ tree.level
 ----------
 
 ..  confval:: tree.level
+    :name: condition-tree-level
 
     :Data type: Integer
 
@@ -161,6 +165,7 @@ tree.pagelayout
 ..  versionadded:: 11.0
 
 ..  confval:: tree.pagelayout
+    :name: condition-tree-pagelayout
 
     :Data type: Integer / String
 
@@ -193,6 +198,7 @@ tree.rootLine
 -------------
 
 ..  confval:: tree.rootLine
+    :name: condition-tree-rootLine
 
     :Data type: Array
 
@@ -215,6 +221,7 @@ tree.rootLineIds
 ----------------
 
 ..  confval:: tree.rootLineIds
+    :name: condition-tree-rootLineIds
 
     :Data type: Array
 
@@ -242,6 +249,7 @@ tree.rootLineParentIds
     :doc:`ext_core:Changelog/10.3/Feature-88962-Re-implementOldPIDupinRootlineTypoScriptCondition`
 
 ..  confval:: tree.rootLineParentIds
+    :name: condition-tree-rootLineParentIds
 
     :Data type: Array
 
@@ -262,6 +270,7 @@ backend
 =======
 
 ..  confval:: backend
+    :name: condition-backend
 
     :Data type: Object
 
@@ -275,6 +284,7 @@ backend.user
 ------------
 
 ..  confval:: backend.user
+    :name: condition-backend-user
 
     :Data type: Object
 
@@ -290,6 +300,7 @@ backend.user.isAdmin
 --------------------
 
 ..  confval:: backend.user.isAdmin
+    :name: condition-backend-user-isAdmin
 
     :Data type: Boolean
 
@@ -310,6 +321,7 @@ backend.user.isLoggedIn
 -----------------------
 
 ..  confval:: backend.user.isLoggedIn
+    :name: condition-backend-user-isLoggedIn
 
     :Data type: Boolean
 
@@ -330,6 +342,7 @@ backend.user.userId
 -------------------
 
 ..  confval:: backend.user.userId
+    :name: condition-backend-user-userId
 
     :Data type: Integer
 
@@ -350,6 +363,7 @@ backend.user.userGroupIds
 -------------------------
 
 ..  confval:: backend.user.userGroupIds
+    :name: condition-backend-user-userGroupIds
 
     :Data type: Array
     :Context: Frontend, backend
@@ -377,6 +391,7 @@ backend.user.userGroupList
     backend user.
 
 ..  confval:: backend.user.userGroupList
+    :name: condition-backend-user-userGroupList
 
     :Data type: String
 
@@ -397,6 +412,7 @@ frontend
 ========
 
 ..  confval:: frontend
+    :name: condition-frontend
 
     :Data type: Object
 
@@ -410,6 +426,7 @@ frontend.user
 -------------
 
 ..  confval:: frontend.user
+    :name: condition-frontend-user
 
     :Data type: Object
 
@@ -423,6 +440,7 @@ frontend.user.isLoggedIn
 ------------------------
 
 ..  confval:: frontend.user.isLoggedIn
+    :name: condition-frontend-user-isLoggedIn
 
     :Data type: Boolean
 
@@ -443,6 +461,7 @@ frontend.user.userId
 --------------------
 
 ..  confval:: frontend.user.userId
+    :name: condition-frontend-user-userId
 
     :Data type: Integer
 
@@ -463,6 +482,7 @@ frontend.user.userGroupIds
 --------------------------
 
 ..  confval:: frontend.user.userGroupIds
+    :name: condition-frontend-user-userGroupIds
 
     :Data type: Array
     :Context: Frontend
@@ -490,6 +510,7 @@ frontend.user.userGroupList
     frontend user.
 
 ..  confval:: frontend.user.userGroupList
+    :name: condition-frontend-user-userGroupList
 
     :Data type: String
 
@@ -513,6 +534,7 @@ workspace
     :doc:`ext_core:Changelog/10.3/Feature-90203-MakeWorkspaceAvailableInTypoScriptConditions`
 
 ..  confval:: workspace
+    :name: condition-workspace
 
     :Data type: Object
 
@@ -529,6 +551,7 @@ workspace.workspaceId
     :doc:`ext_core:Changelog/10.3/Feature-90203-MakeWorkspaceAvailableInTypoScriptConditions`
 
 ..  confval:: workspace.workspaceId
+    :name: condition-workspace-workspaceId
 
     :Data type: Integer
 
@@ -553,6 +576,7 @@ workspace.isLive
 
 
 ..  confval:: workspace.isLive
+    :name: condition-workspace-isLive
 
     :Data type: Boolean
 
@@ -576,6 +600,7 @@ workspace.isOffline
     :doc:`ext_core:Changelog/10.3/Feature-90203-MakeWorkspaceAvailableInTypoScriptConditions`
 
 ..  confval:: workspace.isOffline
+    :name: condition-workspace-isOffline
 
     :Data type: Boolean
 
@@ -596,6 +621,7 @@ typo3
 =====
 
 ..  confval:: typo3
+    :name: condition-typo3
 
     :Data type: Object
 
@@ -609,6 +635,7 @@ typo3.version
 -------------
 
 ..  confval:: typo3.version
+    :name: condition-typo3-version
 
     :Data type: String
 
@@ -629,6 +656,7 @@ typo3.branch
 ------------
 
 ..  confval:: typo3.branch
+    :name: condition-typo3-branch
 
     :Data type: String
 
@@ -649,6 +677,7 @@ typo3.devIpMask
 ---------------
 
 ..  confval:: typo3.devIpMask
+    :name: condition-typo3-devIpMask
 
     :Data type: String
 
@@ -669,6 +698,7 @@ date()
 ======
 
 ..  confval:: date()
+    :name: condition-date
 
     :Parameter: String
     :Data type: String | Integer
@@ -703,6 +733,7 @@ like()
 ======
 
 ..  confval:: like()
+    :name: condition-like
 
     :Parameter: String, String
     :Data type: Boolean
@@ -732,6 +763,7 @@ traverse()
 ==========
 
 ..  confval:: traverse()
+    :name: condition-traverse
 
     :Parameter: Array, String
     :Data type: Mixed
@@ -768,6 +800,7 @@ compatVersion()
 ===============
 
 ..  confval:: compatVersion()
+    :name: condition-compatVersion
 
     :Parameter: String
     :Data type: Boolean
@@ -793,6 +826,7 @@ getTSFE()
 =========
 
 ..  confval:: getTSFE()
+    :name: condition-getTSFE
 
     :Data type: Object
 
@@ -824,6 +858,7 @@ getenv()
 ========
 
 ..  confval:: getenv()
+    :name: condition-getenv
 
     :Data type: String
 
@@ -844,6 +879,7 @@ feature()
 =========
 
 ..  confval:: feature()
+    :name: condition-feature
 
     :Data type: String
 
@@ -867,6 +903,7 @@ ip()
 ====
 
 ..  confval:: ip()
+    :name: condition-ip
 
     :Parameter: String
     :Data type: Boolean
@@ -895,6 +932,7 @@ request
 =======
 
 ..  confval:: request()
+    :name: condition-request
 
     :Data type: Mixed
 
@@ -917,6 +955,7 @@ request.getQueryParams()
 ------------------------
 
 ..  confval:: request.getQueryParams()
+    :name: condition-request-getQueryParams
 
     :Data type: Array
 
@@ -959,6 +998,7 @@ request.getParsedBody()
 -----------------------
 
 ..  confval:: request.getParsedBody()
+    :name: condition-request-getParsedBody
 
     :Data type: Array
 
@@ -980,6 +1020,7 @@ request.getHeaders()
 --------------------
 
 ..  confval:: request.getHeaders()
+    :name: condition-request-getHeaders
 
     :Data type: Array
 
@@ -1005,6 +1046,7 @@ request.getCookieParams()
 -------------------------
 
 ..  confval:: request.getCookieParams()
+    :name: condition-request-getCookieParams
 
     :Data type: Array
 
@@ -1025,6 +1067,7 @@ request.getNormalizedParams()
 -----------------------------
 
 ..  confval:: request.getNormalizedParams()
+    :name: condition-request-getNormalizedParams
 
     :Data type: Array
 
@@ -1054,6 +1097,7 @@ request.getPageArguments()
 --------------------------
 
 ..  confval:: request.getPageArguments()
+    :name: condition-request-getPageArguments
 
     :Data type: Object
 
@@ -1169,6 +1213,7 @@ session()
 =========
 
 ..  confval:: session()
+    :name: condition-session
 
     :Parameter: String
     :Data type: Mixed
@@ -1192,6 +1237,7 @@ site()
 ======
 
 ..  confval:: site()
+    :name: condition-site
 
     :Parameter: String
     :Data type: Mixed
@@ -1273,6 +1319,7 @@ siteLanguage()
 ==============
 
 ..  confval:: siteLanguage()
+    :name: condition-siteLanguage
 
     :Parameter: String
     :Data type: Mixed
