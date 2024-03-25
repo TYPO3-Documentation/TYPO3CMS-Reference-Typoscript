@@ -12,13 +12,18 @@ standard TypoScript :ref:`select` semantics. The result is then passed to the
 This way a :ref:`cobj-fluidtemplate` cObject can iterate over the
 array of records.
 
+..  _DatabaseQueryProcessor-options:
 
 Options:
 ========
 
 ..  _DatabaseQueryProcessor-if:
 
+if
+--
+
 ..  confval:: if
+    :name: DatabaseQueryProcessor-if
 
     :Required: false
     :Data type: :ref:`if` condition
@@ -29,7 +34,11 @@ Options:
 
 ..  _DatabaseQueryProcessor-table:
 
+table
+-----
+
 ..  confval:: table
+    :name: DatabaseQueryProcessor-table
 
     :Required: true
     :Data type: :ref:`data-type-string` / :ref:`stdWrap`
@@ -39,7 +48,11 @@ Options:
 
 ..  _DatabaseQueryProcessor-as:
 
+as
+--
+
 ..  confval:: as
+    :name: DatabaseQueryProcessor-as
 
     :Required: false
     :Data type: :ref:`data-type-string` / :ref:`stdWrap`
@@ -49,7 +62,11 @@ Options:
 
 ..  _DatabaseQueryProcessor-dataProcessing:
 
+dataProcessing
+--------------
+
 ..  confval:: dataProcessing
+    :name: DatabaseQueryProcessor-dataProcessing
 
     :Required: false
     :Data type: array of :ref:`dataProcessing`
@@ -69,6 +86,7 @@ Options:
     See `here <https://forge.typo3.org/issues/85284#note-5>`__ for more
     information.
 
+..  _DatabaseQueryProcessor-examples:
 
 Example: Display haiku records
 ==============================
