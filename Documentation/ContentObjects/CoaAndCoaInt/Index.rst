@@ -42,7 +42,7 @@ Properties
 -----------
 
 ..  confval:: 1,2,3,4...
-    :name: coa-index
+    :name: coa-array
 
     :Data type: :ref:`cObject <data-type-cobject>`
 
