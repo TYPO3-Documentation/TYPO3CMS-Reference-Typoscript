@@ -39,10 +39,13 @@ outside the main page-rendering.
 Properties
 ==========
 
+..  _cobj-user-userFunc:
+
 userFunc
 --------
 
 ..  confval:: userFunc
+    :name: user-userFunc
 
     :Data type: :ref:`data-type-function-name`
 
@@ -63,12 +66,13 @@ userFunc
     the superglobal variables like :php:`$_GET` / :php:`$_POST` / :php:`$_SERVER`, or TYPO3’s API methods :php:`GeneralUtility::_GP()`
     and :php:`GeneralUtility::getIndpEnv()`.
 
-
+..  _cobj-user-defined-properties:
 
 (properties you define)
 -----------------------
 
 ..  confval:: (properties you define)
+    :name: user-defined-properties
 
     :Data type: (the data type you want)
 
@@ -79,17 +83,23 @@ userFunc
     passed to your function (in the second parameter). This allows you to
     process them further in any way you wish.
 
+..  _cobj-user-stdWrap:
+
 stdWrap
 -------
 
 ..  confval:: stdWrap
+    :name: user-stdWrap
 
     :Data type: :ref:`stdWrap`.
+
+..  _cobj-user-cache:
 
 cache
 -----
 
 ..  confval:: cache
+    :name: user-cache
 
     :Data type: :ref:`cache <cache>`
 
