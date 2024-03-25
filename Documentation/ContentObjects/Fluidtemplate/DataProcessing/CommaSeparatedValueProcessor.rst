@@ -12,13 +12,18 @@ two-dimensional array used for :abbr:`CSV (Comma-separated values)` files or
 The table data is transformed to a multi-dimensional array, taking the delimiter
 and enclosure into account, before it is passed to the view.
 
+..  _CommaSeparatedValueProcessor-options:
 
 Options:
 ========
 
 ..  _CommaSeparatedValueProcessor-if:
 
+if
+--
+
 ..  confval:: if
+    :name: CommaSeparatedValueProcessor-if
 
     :Required: false
     :Data type: :ref:`if` condition
@@ -26,10 +31,13 @@ Options:
 
     If the condition is met, the data processor is processed.
 
-
 ..  _CommaSeparatedValueProcessor-fieldName:
 
+fieldName
+---------
+
 ..  confval:: fieldName
+    :name: CommaSeparatedValueProcessor-fieldName
 
     :Required: true
     :Data type: :ref:`data-type-string` / :ref:`stdWrap`
@@ -40,7 +48,11 @@ Options:
 
 ..  _CommaSeparatedValueProcessor-as:
 
+as
+--
+
 ..  confval:: as
+    :name: CommaSeparatedValueProcessor-as
 
     :Required: false
     :Data type: :ref:`data-type-string`
@@ -48,10 +60,13 @@ Options:
 
     The variable's name to be used in the Fluid template.
 
-
 ..  _CommaSeparatedValueProcessor-maximumColumns:
 
+maximumColumns
+--------------
+
 ..  confval:: maximumColumns
+    :name: CommaSeparatedValueProcessor-maximumColumns
 
     :Required: false
     :Data type: :ref:`data-type-integer` / :ref:`stdWrap`
@@ -64,7 +79,11 @@ Options:
 
 ..  _CommaSeparatedValueProcessor-fieldDelimiter:
 
+fieldDelimiter
+--------------
+
 ..  confval:: fieldDelimiter
+    :name: CommaSeparatedValueProcessor-fieldDelimiter
 
     :Required:  false
     :Data type: :ref:`data-type-string` / :ref:`stdWrap`
@@ -75,7 +94,11 @@ Options:
 
 ..  _CommaSeparatedValueProcessor-fieldEnclosure:
 
+fieldEnclosure
+--------------
+
 ..  confval:: fieldEnclosure
+    :name: CommaSeparatedValueProcessor-fieldEnclosure
 
     :Required:  false
     :Data type: :ref:`data-type-string` / :ref:`stdWrap`
@@ -83,6 +106,7 @@ Options:
 
     The field enclosure, a character surrounding the values.
 
+..  _CommaSeparatedValueProcessor-examples:
 
 Example: Transforming comma separated content into a html table
 ===============================================================
@@ -95,7 +119,6 @@ the values can be specified.
 
 This example is also described in-depth in :ref:`TYPO3 Explained:
 Extended content element example <t3coreapi:AddingCE-Extended-Example>`.
-
 
 Example data in the field :php:`bodytext`
 -----------------------------------------

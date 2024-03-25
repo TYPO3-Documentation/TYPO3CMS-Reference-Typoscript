@@ -21,12 +21,18 @@ Additional data processing is supported and will be applied to each record.
     <https://github.com/b13/menus/blob/master/README.md>`__ for more
     information.
 
+..  _MenuProcessor-options:
+
 Options
 =======
 
 ..  _MenuProcessor-levels:
 
+levels
+------
+
 ..  confval:: levels
+    :name: MenuProcessor-levels
 
     :Required: true
     :Data type: :ref:`data-type-integer` / :ref:`stdWrap`
@@ -38,7 +44,11 @@ Options
 
 ..  _MenuProcessor-expandAll:
 
+expandAll
+---------
+
 ..  confval:: expandAll
+    :name: MenuProcessor-expandAll
 
     :Required: true
     :Data type: :ref:`data-type-boolean` / :ref:`stdWrap`
@@ -50,7 +60,11 @@ Options
 
 ..  _MenuProcessor-includeSpacer:
 
+includeSpacer
+-------------
+
 ..  confval:: includeSpacer
+    :name: MenuProcessor-includeSpacer
 
     :Required: true
     :Data type: :ref:`data-type-boolean` / :ref:`stdWrap`
@@ -62,7 +76,11 @@ Options
 
 ..  _MenuProcessor-titleField:
 
+titleField
+----------
+
 ..  confval:: titleField
+    :name: MenuProcessor-titleField
 
     :Required: true
     :Data type: :ref:`data-type-string` / :ref:`stdWrap`
@@ -74,7 +92,11 @@ Options
 
 ..  _MenuProcessor-as:
 
+as
+--
+
 ..  confval:: as
+    :name: MenuProcessor-as
 
     :Required: false
     :Data type: :ref:`data-type-string`
@@ -85,6 +107,7 @@ Options
 ..  hint::
     Additionally, all :ref:`HMENU options <cobj-hmenu-options>` are available.
 
+..  _MenuProcessor-example-two-levels:
 
 Example: Two level menu of the web page
 =======================================

@@ -9,12 +9,18 @@ The :php:`SiteProcessor` fetches data from the :ref:`site configuration
 <t3coreapi:sitehandling>`.
 
 
+..  _SiteProcessor-options:
+
 Options
 =======
 
 ..  _SiteProcessor-as:
 
+as
+--
+
 ..  confval:: as
+    :name: SiteProcessor-as
 
     :Required: false
     :Data type: :ref:`data-type-string`
@@ -22,6 +28,7 @@ Options
 
     The variable name to be used in the Fluid template.
 
+..  _SiteProcessor-examples:
 
 Example: Output some data from the site configuration
 =====================================================
