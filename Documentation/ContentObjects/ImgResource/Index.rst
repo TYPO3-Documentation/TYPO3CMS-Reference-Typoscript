@@ -22,6 +22,8 @@ Depending on your use case you might prefer using the cObject
 ..  contents::
     :local:
 
+..  _cobj-img-resource-properties:
+
 Properties
 ==========
 
@@ -31,6 +33,7 @@ file
 ----
 
 ..  confval:: file
+    :name: img-resource-file
 
     :Data type: :ref:`->imgResource <imgresource>`
 
@@ -41,5 +44,6 @@ stdWrap
 -------
 
 ..  confval:: stdWrap
+    :name: img-resource-stdWrap
 
     :Data type: :ref:`->stdWrap <stdwrap>`

@@ -31,6 +31,7 @@ value
 -----
 
 ..  confval:: value
+    :name: text-value
 
     :Data type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
 
@@ -43,6 +44,7 @@ stdWrap
 -------
 
 ..  confval:: stdWrap
+    :name: text-stdWrap
 
     :Data type: :ref:`stdWrap <stdwrap>`
 
@@ -58,11 +60,13 @@ cache
 -----
 
 ..  confval:: cache
+    :name: text-cache
 
     :Data type: :ref:`cache <cache>`
 
     See :ref:`cache function description <cache>` for details.
 
+..  _cobj-text-examples:
 
 Examples
 ========

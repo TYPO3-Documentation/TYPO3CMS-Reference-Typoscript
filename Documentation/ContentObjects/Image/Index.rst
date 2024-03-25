@@ -37,6 +37,8 @@ If you only need the file path to the image; regardless of whether it's been res
 .. contents::
    :local:
 
+..  _cobj-image-properties:
+
 Properties
 ==========
 
@@ -47,6 +49,7 @@ if
 --
 
 ..  confval:: if
+    :name: image-if
 
     :Data type: :ref:`->if <if>`
 
@@ -59,6 +62,7 @@ file
 ----
 
 ..  confval:: file
+    :name: image-file
 
     :Data type: :ref:`->imgResource <imgresource>`
 
@@ -69,6 +73,7 @@ params
 ------
 
 ..  confval:: params
+    :name: image-params
 
     :Data type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
 
@@ -94,6 +99,7 @@ altText / titleText
 -------------------
 
 ..  confval:: altText
+    :name: image-altText
 
     :Data type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
 
@@ -101,6 +107,7 @@ altText / titleText
 
 
 ..  confval:: titleText
+    :name: image-titleText
 
     :Data type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
 
@@ -111,6 +118,7 @@ emptyTitleHandling
 ------------------
 
 ..  confval:: emptyTitleHandling
+    :name: image-emptyTitleHandling
 
     :Data type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
     :Default: useAlt
@@ -125,6 +133,7 @@ layoutKey
 ---------
 
 ..  confval:: layoutKey
+    :name: image-layoutKey
 
     :Data type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
     :Default: default
@@ -182,6 +191,7 @@ layout
 ------
 
 ..  confval:: layout
+    :name: image-layout
 
     :Data type: array
 
@@ -195,6 +205,7 @@ layout.layoutKey
 ~~~~~~~~~~~~~~~~
 
 ..  confval:: layout.layoutKey
+    :name: image-layout-layoutkey
 
     :Data type: array
 
@@ -221,6 +232,7 @@ layout.layoutKey.element
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 ..  confval:: layout.layoutKey.element
+    :name: image-layout-layoutkey-element
 
     :Data type: :ref:`data-type-string`
 
@@ -260,6 +272,7 @@ layout.layoutKey.source
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 ..  confval:: layout.layoutKey.source
+    :name: image-layout-layoutkey-source
 
     :Data type: :ref:`stdWrap <stdWrap>`
 
@@ -294,6 +307,7 @@ sourceCollection
 ----------------
 
 ..  confval:: sourceCollection
+    :name: image-sourceCollection
 
     :Data type: array
 
@@ -343,6 +357,7 @@ sourceCollection.dataKey
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 ..  confval:: sourceCollection.dataKey
+    :name: image-dataKey
 
     :Data type: :ref:`stdWrap <stdWrap>`
 
@@ -357,6 +372,7 @@ sourceCollection.dataKey.if
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ..  confval:: sourceCollection.dataKey.if
+    :name: image-datakey-if
 
     :Data type: :ref:`if <if>`
 
@@ -371,6 +387,7 @@ sourceCollection.dataKey.pixelDensity
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ..  confval:: sourceCollection.dataKey.pixelDensity
+    :name: image-pixeldensity
 
     :Data type: :ref:`data-type-integer` / :ref:`stdWrap <stdWrap>`
     :Default: 1
@@ -389,6 +406,7 @@ sourceCollection.dataKey.width
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ..  confval:: sourceCollection.dataKey.width
+    :name: image-datakey-width
 
     :Data type: :ref:`stdWrap <stdWrap>`
 
@@ -404,6 +422,7 @@ sourceCollection.dataKey.height
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ..  confval:: sourceCollection.dataKey.height
+    :name: image-datakey-height
 
     :Data type: :ref:`stdWrap <stdWrap>`
 
@@ -419,6 +438,7 @@ sourceCollection.dataKey.maxW
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ..  confval:: sourceCollection.dataKey.maxW
+    :name: image-datakey-maxW
 
     :Data type: :ref:`stdWrap <stdWrap>`
 
@@ -434,6 +454,7 @@ sourceCollection.dataKey.maxH
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ..  confval:: sourceCollection.dataKey.maxH
+    :name: image-datakey-maxH
 
     :Data type: :ref:`stdWrap <stdWrap>`
 
@@ -449,6 +470,7 @@ sourceCollection.dataKey.minW
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ..  confval:: sourceCollection.dataKey.minW
+    :name: image-datakey-minW
 
     :Data type: :ref:`stdWrap <stdWrap>`
 
@@ -464,6 +486,7 @@ sourceCollection.dataKey.minH
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ..  confval:: sourceCollection.dataKey.minH
+    :name: image-datakey-minH
 
     :Data type: :ref:`stdWrap <stdWrap>`
 
@@ -479,6 +502,7 @@ sourceCollection.dataKey.quality
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ..  confval:: sourceCollection.dataKey.quality
+    :name: image-datakey-quality
 
     :Data type: :ref:`data-type-integer`
 
@@ -492,6 +516,7 @@ sourceCollection.dataKey.*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ..  confval:: sourceCollection.dataKey.*
+    :name: image-datakey-others
 
     :Data type: :ref:`data-type-string`
 
@@ -506,6 +531,7 @@ linkWrap
 --------
 
 ..  confval:: linkWrap
+    :name: image-linkWrap
 
     :Data type: :ref:`data-type-wrap` / :ref:`stdWrap <stdwrap>`
 
@@ -518,6 +544,7 @@ imageLinkWrap
 -------------
 
 ..  confval:: imageLinkWrap
+    :name: image-imageLinkWrap
 
     :Data type: :ref:`data-type-boolean` / :ref:`->imageLinkWrap <imagelinkwrap>`
 
@@ -532,6 +559,7 @@ wrap
 ----
 
 ..  confval:: wrap
+    :name: image-wrap
 
     :Data type: :ref:`wrap <data-type-wrap>` / :ref:`stdWrap <stdwrap>`
 
@@ -544,13 +572,9 @@ stdWrap
 -------
 
 ..  confval:: stdWrap
+    :name: image-stdWrap
 
     :Data type: :ref:`->stdWrap <stdwrap>`
-
-.. ###### END~OF~TABLE ######
-
-
-[tsref:(cObject).IMAGE]
 
 
 ..  _cobj-image-examples:

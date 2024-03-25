@@ -24,6 +24,7 @@ width
 -----
 
 ..  confval:: width
+    :name: svg-width
 
     :Data type: :ref:`data-type-integer` / :ref:`stdWrap <stdwrap>`
     :Default: 600
@@ -37,6 +38,7 @@ height
 ------
 
 ..  confval:: height
+    :name: svg-height
 
     :Data type: :ref:`data-type-integer` / :ref:`stdWrap <stdwrap>`
     :Default: 400
@@ -50,6 +52,7 @@ src
 ---
 
 ..  confval:: src
+    :name: svg-src
 
     :Data type: :ref:`data-type-resource` / :ref:`stdWrap <stdwrap>`
 
@@ -70,6 +73,7 @@ renderMode
 ----------
 
 ..  confval:: renderMode
+    :name: svg-renderMode
 
     :Data type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
 
@@ -82,6 +86,7 @@ stdWrap
 -------
 
 ..  confval:: stdWrap
+    :name: svg-stdWrap
 
     :Data type: :ref:`->stdWrap <stdwrap>`
 
