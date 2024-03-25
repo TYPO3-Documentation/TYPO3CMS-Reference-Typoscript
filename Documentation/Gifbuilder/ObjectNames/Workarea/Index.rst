@@ -8,6 +8,7 @@ WORKAREA
 
 Sets another work area.
 
+..  _gifbuilder-workarea-properties:
 
 Properties
 ==========
@@ -21,6 +22,7 @@ clear
 -----
 
 ..  confval:: clear
+    :name: gifbuilder-workarea-clear
 
     :Data type: string
 
@@ -36,6 +38,7 @@ set
 ---
 
 ..  confval:: set
+    :name: gifbuilder-workarea-set
 
     :Data type: x,y,w,h :ref:`+calc <gifbuilder-calc>` / :ref:`stdWrap <stdwrap>`
 
