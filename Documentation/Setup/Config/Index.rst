@@ -463,11 +463,11 @@ Example
 
     page = PAGE
     page.includeJSFooter {
-    test = fileadmin/user_upload/test.js
-    test.async = 1
+        test = fileadmin/user_upload/test.js
+        test.async = 1
 
-    test2 = fileadmin/user_upload/test2.js
-    test2.async = 1
+        test2 = fileadmin/user_upload/test2.js
+        test2.async = 1
     }
 
 
