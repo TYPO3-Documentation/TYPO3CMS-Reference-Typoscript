@@ -1344,7 +1344,7 @@ Example
 ..  code-block:: typoscript
     :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-    pageRendererTemplateFile = EXT:my_extension/Ressources/Public/Templates/TestPagerender.html
+    pageRendererTemplateFile = EXT:my_extension/Ressources/Private/Templates/TestPagerender.html
 
 
 ..  index:: config; pageTitle
