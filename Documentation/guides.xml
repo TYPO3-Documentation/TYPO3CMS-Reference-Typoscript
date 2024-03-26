@@ -7,14 +7,14 @@
                project-contact="https://typo3.slack.com/archives/C028JEPJL"
                project-repository="https://github.com/TYPO3-Documentation/TYPO3CMS-Reference-Typoscript"
                project-issues="https://github.com/TYPO3-Documentation/TYPO3CMS-Reference-Typoscript/issues"
-               edit-on-github-branch="main"
+               edit-on-github-branch="12.4"
                edit-on-github="TYPO3-Documentation/TYPO3CMS-Reference-Typoscript"
                typo3-core-preferred="12.4"
                interlink-shortcode="t3tsref"
     />
     <project title="TypoScript Reference"
-             release="main (development)"
-             version="main (development)"
+             release="12.4"
+             version="12.4"
              copyright="since 2012 by the TYPO3 contributors"
     />
 </guides>
