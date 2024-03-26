@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3DataStructure>
+    <sheets>
+        <main>
+            <ROOT type="array">
+                <TCEforms><sheetTitle>Something</sheetTitle></TCEforms>
+                <type>array</type>
+                <el type="array">
+                    <settings.myImage>
+                        <TCEforms>
+                            <label>My Images</label>
+                            <config>
+                                <type>file</type>
+                                <maxitems>6</maxitems>
+                                <allowed>common-image-types</allowed>
+                            </config>
+                        </TCEforms>
+                    </settings.myImage>
+                </el>
+            </ROOT>
+        </main>
+    </sheets>
+</T3DataStructure>
