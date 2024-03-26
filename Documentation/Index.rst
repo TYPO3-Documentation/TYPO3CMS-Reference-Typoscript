@@ -60,4 +60,3 @@ chapter of TYPO3 Explained.
    Glossary
    About
    Sitemap
-   genindex
