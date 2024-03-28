@@ -57,10 +57,14 @@ applicationContext
         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
         [applicationContext == "Development"]
+            # ...
+        [END]
 
         # Any context that is "Production" or starts with "Production"
         # (for example, Production/Staging").
         [applicationContext matches "/^Production/"]
+            # ...
+        [END]
 
 
 ..  index:: Conditions; page
@@ -83,22 +87,36 @@ page
 
         # Check single page UID
         [traverse(page, "uid") == 2]
+            # ...
+        [END]
 
         # Check list of page UIDs
         [traverse(page, "uid") in [17,24]]
+            # ...
+        [END]
 
         # Check list of page UIDs NOT in
         [traverse(page, "uid") not in [17,24]]
+            # ...
+        [END]
 
         # Check range of pages (example: page UID from 10 to 20)
         [traverse(page, "uid") in 10..20]
+            # ...
+        [END]
 
         # Check the page backend layout
         [traverse(page, "backend_layout") == 5]
+            # ...
+        [END]
         [traverse(page, "backend_layout") == "example_layout"]
+            # ...
+        [END]
 
         # Check the page title
         [traverse(page, "title") == "foo"]
+            # ...
+        [END]
 
 
 ..  index:: Conditions; tree
@@ -139,6 +157,8 @@ tree.level
 
         # Check, if the page is on level 0:
         [tree.level == 0]
+            # ...
+        [END]
 
 
 ..  index:: Conditions; tree.pagelayout
@@ -162,9 +182,13 @@ tree.pagelayout
 
         # Using backend layout records
         [tree.pagelayout == 2]
+            # ...
+        [END]
 
         # Using the TSconfig provider of backend layouts
         [tree.pagelayout == "pagets__Home"]
+            # ...
+        [END]
 
 
 ..  index::
@@ -187,6 +211,8 @@ tree.rootLine
         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
         [tree.rootLine[0]["uid"] == 1]
+            # ...
+        [END]
 
 
 ..  index::
@@ -211,6 +237,8 @@ tree.rootLineIds
 
         # Check, if page with uid 2 is inside the root line
         [2 in tree.rootLineIds]
+            # ...
+        [END]
 
 
 ..  index::
@@ -235,6 +263,8 @@ tree.rootLineParentIds
 
         # Check, if the page with UID 2 is the parent of a page inside the root line
         [2 in tree.rootLineParentIds]
+            # ...
+        [END]
 
 
 ..  index:: Conditions; backend
@@ -287,6 +317,8 @@ backend.user.isAdmin
 
         # Evaluates to true, if the current backend user is administrator
         [backend.user.isAdmin]
+            # ...
+        [END]
 
 
 ..  index:: Conditions; backend.user.isLoggedIn
@@ -309,6 +341,8 @@ backend.user.isLoggedIn
 
         # Evaluates to true, if a backend user is logged in
         [backend.user.isLoggedIn]
+            # ...
+        [END]
 
 
 ..  index:: Conditions; backend.user.userId
@@ -332,6 +366,8 @@ backend.user.userId
         # Evaluates to true, if the user UID of the current logged-in backend
         # user is equal to 5
         [backend.user.userId == 5]
+            # ...
+        [END]
 
 
 ..  index:: Conditions; backend.user.userGroupIds
@@ -354,6 +390,8 @@ backend.user.userGroupIds
         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
         [2 in backend.user.userGroupIds]
+            # ...
+        [END]
 
 
 ..  index:: Conditions; backend.user.userGroupList
@@ -375,6 +413,8 @@ backend.user.userGroupList
         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
         [like(","~backend.user.userGroupList~",", "*,1,*")]
+            # ...
+        [END]
 
 
 ..  index:: Conditions; frontend
@@ -424,6 +464,8 @@ frontend.user.isLoggedIn
         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
         [frontend.user.isLoggedIn]
+            # ...
+        [END]
 
 
 ..  index:: Conditions; frontend.user.userId
@@ -445,6 +487,8 @@ frontend.user.userId
         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
         [frontend.user.userId == 5]
+            # ...
+        [END]
 
 
 ..  index:: Conditions; frontend.user.userGroupIds
@@ -467,6 +511,8 @@ frontend.user.userGroupIds
         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
         [4 in frontend.user.userGroupIds]
+            # ...
+        [END]
 
 
 ..  index:: Conditions; frontend.user.userGroupList
@@ -488,6 +534,8 @@ frontend.user.userGroupList
         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
         [like(","~frontend.user.userGroupList~",", "*,1,*")]
+            # ...
+        [END]
 
 
 ..  index:: Conditions; workspace
@@ -524,6 +572,8 @@ workspace.workspaceId
 
         # Check, if in live workspace
         [workspace.workspaceId == 0]
+            # ...
+        [END]
 
 
 ..  index:: Conditions; workspace.isLive
@@ -545,6 +595,8 @@ workspace.isLive
         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
         [workspace.isLive]
+            # ...
+        [END]
 
 
 ..  index:: Conditions; workspace.isOffline
@@ -566,6 +618,8 @@ workspace.isOffline
         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
         [workspace.isOffline]
+            # ...
+        [END]
 
 
 ..  index:: Conditions; typo3
@@ -601,6 +655,8 @@ typo3.version
         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
         [typo3.version == "12.4.5"]
+            # ...
+        [END]
 
 
 ..  index:: Conditions; typo3.branch
@@ -622,6 +678,8 @@ typo3.branch
         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
         [typo3.branch == "12.4"]
+            # ...
+        [END]
 
 
 ..  index:: Conditions; typo3.devIpMask
@@ -643,6 +701,8 @@ typo3.devIpMask
         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
         [typo3.devIpMask == "172.18.0.6"]
+            # ...
+        [END]
 
 
 ..  index:: Conditions; date
@@ -669,15 +729,23 @@ date()
 
         # True, if the day of the current month is 7
         [date("j") == 7]
+            # ...
+        [END]
 
         # True, if the day of the current week is 7
         [date("w") == 7]
+            # ...
+        [END]
 
         # True, if the day of the current year is 7
         [date("z") == 7]
+            # ...
+        [END]
 
         # True, if the current hour is 7
         [date("G") == 7]
+            # ...
+        [END]
 
 
 ..  index:: Conditions; like
@@ -702,12 +770,18 @@ like()
 
         # Search a string with * within another string
         [like("fooBarBaz", "*Bar*")]
+            # ...
+        [END]
 
         # Search string with single characters in between, using ?
         [like("fooBarBaz", "f?oBa?Baz")]
+            # ...
+        [END]
 
         # Search string using regular expression
         [like("fooBarBaz", "/f[o]{2,2}[aBrz]+/")]
+            # ...
+        [END]
 
 
 ..  index:: Conditions; traverse
@@ -768,9 +842,13 @@ compatVersion()
 
         # True, if the current TYPO3 version is 12.4.x
         [compatVersion("12.4")]
+            # ...
+        [END]
 
         # True, if the current TYPO3 version is 12.4.5
         [compatVersion("12.4.5")]
+            # ...
+        [END]
 
 
 ..  index:: Conditions; getTSFE
@@ -825,6 +903,8 @@ getenv()
         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
         [getenv("VIRTUAL_HOST") == "www.example.org"]
+            # ...
+        [END]
 
 
 ..  index:: Conditions; feature
@@ -849,6 +929,8 @@ feature()
         # True, if the feature toggle for enforcing the Content Security Policy
         # in the frontend is enabled
         [feature("security.frontend.enforceContentSecurityPolicy") === true]
+            # ...
+        [END]
 
 
 ..  index:: Conditions; ip
@@ -948,6 +1030,8 @@ request.getQueryParams()
         # is not defined. This will check if the GET parameter
         # tx_news_pi1[news] in the URL is greater than 0:
         [request && traverse(request.getQueryParams(), 'tx_news_pi1/news') > 0]
+            # ...
+        [END]
 
 
 ..  index:: Conditions; request.getParsedBody()
@@ -970,6 +1054,8 @@ request.getParsedBody()
         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
         [request && traverse(request.getParsedBody(), 'foo') == 1]
+            # ...
+        [END]
 
 
 ..  index:: Conditions; request.getHeaders()
@@ -1018,6 +1104,8 @@ request.getCookieParams()
         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
         [request && request.getCookieParams()['foo'] == 1]
+            # ...
+        [END]
 
 
 ..  index:: Conditions; request.getNormalizedParams()
@@ -1071,10 +1159,13 @@ request.getPageArguments()
         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
         [request && request.getPageArguments().get('foo_id') > 0]
+            # ...
+        [END]
 
         # True, if current page type is 98
         [request && request.getPageArguments()?.getPageType() == 98]
-
+            # ...
+        [END]
 
 ..  index:: Conditions; session
 ..  _condition-functions-in-frontend-context-function-session:
@@ -1099,6 +1190,8 @@ session()
 
         # Match, if the session has the value 1234567 in the structure :php:`$foo['bar']`:
         [session("foo|bar") == 1234567]
+            # ...
+        [END]
 
 
 ..  index:: Conditions; site
@@ -1152,18 +1245,28 @@ site()
 
         # Site identifier
         [site("identifier") == "my_site"]
+            # ...
+        [END]
 
         # Match site base host
         [site("base").getHost() == "www.example.org"]
+            # ...
+        [END]
 
         # Match base path
         [site("base").getPath() == "/"]
+            # ...
+        [END]
 
         # Match root page UID
         [site("rootPageId") == 1]
+            # ...
+        [END]
 
         # Match a configuration property
         [traverse(site("configuration"), "myCustomProperty") == true]
+            # ...
+        [END]
 
 
 ..  index:: Conditions; siteLanguage
