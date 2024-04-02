@@ -809,7 +809,7 @@ register
 Example: Get the content of a register
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Get content from :php:`$GLOBALS['TSFE']->register['color']`:
+Get content from the :ref:`register <using-setting-register>`:
 
 ..  code-block:: typoscript
     :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
