@@ -1,10 +1,10 @@
-.. include:: /Includes.rst.txt
-.. index::
+..  include:: /Includes.rst.txt
+..  index::
    PAGE
    Top-level objects; page
-.. _page:
-.. _page-datatype:
-.. _object-type-page:
+..  _page:
+..  _page-datatype:
+..  _object-type-page:
 
 ====
 PAGE
@@ -18,8 +18,8 @@ the content-page on a website.
 TYPO3 does not initialize :typoscript:`page` by default. You must initialize this
 explicitly, for example:
 
-.. code-block:: typoscript
-   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
     page = PAGE
 
@@ -31,7 +31,7 @@ page is found.
 Most of this code is executed in the PHP script
 :php:`\TYPO3\CMS\Frontend\Http\RequestHandler`.
 
-.. _page_output:
+..  _page_output:
 
 Output of the PAGE object
 =========================
@@ -39,44 +39,46 @@ Output of the PAGE object
 An empty :typoscript:`PAGE` object without further configuration renders a HTML page
 like the following:
 
-.. code-block:: html
+..  code-block:: html
 
-   <!DOCTYPE html>
-   <html lang="en">
-   <head>
-   <meta charset="utf-8">
-   <!--
-       This website is powered by TYPO3 - inspiring people to share!
-       TYPO3 is a free open source Content Management Framework initially created by Kasper Skaarhoj and licensed under GNU/GPL.
-       TYPO3 is copyright 1998-2019 of Kasper Skaarhoj. Extensions are copyright of their respective owners.
-       Information and contribution at https://typo3.org/
-   -->
-   <title>Page title</title>
-   <meta name="generator" content="TYPO3 CMS">
-   </head>
-   <body>
-   </body>
-   </html>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <!--
+        This website is powered by TYPO3 - inspiring people to share!
+        TYPO3 is a free open source Content Management Framework initially created by Kasper Skaarhoj and licensed under GNU/GPL.
+        TYPO3 is copyright 1998-2019 of Kasper Skaarhoj. Extensions are copyright of their respective owners.
+        Information and contribution at https://typo3.org/
+    -->
+    <title>Page title</title>
+    <meta name="generator" content="TYPO3 CMS">
+    </head>
+    <body>
+    </body>
+    </html>
 
 This default behaviour can be changed by setting the property
 :ref:`setup-config-disableallheadercode`:
 
-.. code-block:: typoscript
-   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-   page.config.disableAllHeaderCode = 1
+    page.config.disableAllHeaderCode = 1
 
 If the output represents another format different from HTML the HTTP header
 should also be set, for example:
 
-.. code-block:: typoscript
-   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-   page.config.additionalHeaders.10.header = Content-type:application/json
+    page.config.additionalHeaders.10.header = Content-type:application/json
 
-.. index::
-   PAGE; typeNum
-   PAGE; Multiple pages
+..  index::
+    PAGE; typeNum
+    PAGE; Multiple pages
+
+..  _page_multiple:
 
 Multiple pages
 ==============
@@ -92,8 +94,8 @@ the page will be used.
 
 Example:
 
-.. code-block:: typoscript
-   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
     page = PAGE
     page.typeNum = 0
@@ -114,6 +116,8 @@ an id parameter (for the page id), example (for json and page id 22):
 :samp:`/index.php?id=22&type=1`
 
 
+..  _page_guidelines:
+
 Guidelines
 ----------
 
@@ -126,6 +130,7 @@ Good, general PAGE object names to use are:
 These are just recommendations. However, especially the name page for the content bearing page
 is very common and most documentation will imply that your main page object is called page.
 
+..  _page_examples:
 
 Examples
 ========
@@ -134,187 +139,138 @@ Please see the dedicated example page about examples of how to use the
 PAGE object: :ref:`page_examples`
 
 
-.. index:: PAGE; Properties
+..  index:: PAGE; Properties
+..  _page_properties:
 
 Properties
 ==========
 
-.. container:: ts-properties
+..  contents::
+    :local:
 
-   ============================== ===================================== ====================== ========================
-   Property                       Data Type                             :ref:`stdwrap`         Default
-   ============================== ===================================== ====================== ========================
-   `1,2,3,4...`_                  :ref:`cObject <data-type-cobject>`
-   `bodyTag`_                     :ref:`data-type-tag`                                         <body>
-   `bodyTagAdd`_                  :ref:`data-type-string`
-   `bodyTagCObject`_              :ref:`cObject <data-type-cobject>`
-   `config`_                      :ref:`->CONFIG <config>`
-   `cssInline.[array]`_           :ref:`cObject <data-type-cobject>`
-   `footerData.[array]`_          :ref:`cObject <data-type-cobject>`
-   `headerData.[array]`_          :ref:`cObject <data-type-cobject>`
-   `headTag`_                     :ref:`data-type-tag` / :ref:`stdwrap`                        <head>
-   `includeCSS.[array]`_          :ref:`data-type-resource`
-   `includeCSSLibs.[array]`_      :ref:`data-type-resource`
-   `includeJS.[array]`_           :ref:`data-type-resource`
-   `includeJSFooter.[array]`_     :ref:`data-type-resource`
-   `includeJSFooterlibs.[array]`_ :ref:`data-type-resource`
-   `includeJSLibs.[array]`_       :ref:`data-type-resource`
-   `inlineLanguageLabelFiles`_    (array of strings)
-   `inlineSettings`_              (array of strings)
-   `jsFooterInline.[array]`_      :ref:`cObject <data-type-cobject>`
-   `jsInline.[array]`_            :ref:`cObject <data-type-cobject>`
-   `meta`_                        (array of strings)
-   `shortcutIcon`_                :ref:`data-type-resource`
-   `stdWrap`_                     :ref:`stdwrap`
-   `typeNum`_                     :ref:`data-type-integer`                                      0
-   `wrap`_                        :ref:`data-type-wrap`
-   ============================== ===================================== ====================== ========================
-
-.. ### BEGIN~OF~TABLE ###
-
-
-.. index:: PAGE; Content objects
-.. _setup-page-1-2-3-4:
+..  index:: PAGE; Content objects
+..  _setup-page-1-2-3-4:
 
 1,2,3,4...
-==========
+----------
 
-.. container:: table-row
+..  confval:: 1,2,3,4...
+    :name: page-index
+    :type: :ref:`cObject <data-type-cobject>`
 
-   Property
-      1,2,3,4...
+    These properties can be used to define any number of objects,
+    just like you can do with a :ref:`COA content object <cobj-coa>`.
 
-   Data type
-      :ref:`cObject <data-type-cobject>`
+    The content of these objects will be rendered on the page in the
+    order of the numbers, not in the order they get defined in the TypoScript
+    definition.
 
-   Description
-      These properties can be used to define any number of objects,
-      just like you can do with a :ref:`COA content object <cobj-coa>`.
+    It is considered best practice to leave space between the numbers such
+    that it will be possible to place objects before and after other objects
+    in the future. Therefore you will often see that people use the number
+    10 and no number 1 is found.
 
-      The content of these objects will be rendered on the page in the
-      order of the numbers, not in the order they get defined in the TypoScript
-      definition.
+..  _setup-page-1-2-3-4-example:
 
-      It is considered best practice to leave space between the numbers such
-      that it will be possible to place objects before and after other objects
-      in the future. Therefore you will often see that people use the number
-      10 and no number 1 is found.
+Example: Render "Hello World"
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-   Example
-      .. code-block:: typoscript
-         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-         page = PAGE
-         page.20 = TEXT
-         page.20.value = World
-         page.10 = TEXT
-         page.10.value = Hello
+    page = PAGE
+    page.20 = TEXT
+    page.20.value = World
+    page.10 = TEXT
+    page.10.value = Hello
 
-      This renders to :html:`HelloWorld`.
+This renders to :html:`HelloWorld`.
 
 
-.. index:: PAGE; bodyTag
-.. _setup-page-bodytag:
+..  index:: PAGE; bodyTag
+..  _setup-page-bodytag:
 
 bodyTag
-=======
+-------
 
-.. container:: table-row
+..  confval:: bodyTag
+    :name: page-bodyTag
+    :type: :ref:`data-type-tag`
+    :default: `<body>`
 
-   Property
-         bodyTag
+    Body tag on the page
 
-   Data type
-         :ref:`data-type-tag`
+..  _setup-page-bodytag-example:
 
-   Default
-         <body>
+Example: Set a class on the body tag
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-   Description
-         Body tag on the page
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-   Example
-      .. code-block:: typoscript
-         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-         # This will lead to <body class="example"> if constant "bodyClass" is set accordingly.
-         page.bodyTag = <body class="{$bodyClass}">
+    # This will lead to <body class="example"> if constant "bodyClass" is set accordingly.
+    page.bodyTag = <body class="{$bodyClass}">
 
 
 
-.. index:: PAGE;
-.. _setup-page-bodytagadd:
+..  index:: PAGE;
+..  _setup-page-bodytagadd:
 
 bodyTagAdd
-==========
+----------
 
-.. container:: table-row
+..  confval:: bodyTagAdd
+    :name: page-bodyTagAdd
+    :type: :ref:`data-type-string`
 
-   Property
-         bodyTagAdd
+    This content is added inside of the opening :html:`<body>` tag right
+    before the :html:`>` character. This is mostly useful for adding
+    attributes to the :html:`<body>` tag.
 
-   Data type
-         :ref:`data-type-string`
+..  _setup-page-bodytagadd-example:
 
-   Description
-         This content is added inside of the opening :html:`<body>` tag right
-         before the :html:`>` character. This is mostly useful for adding
-         attributes to the :html:`<body>` tag.
+Example: Add a parameter to the body tag
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-   Example
-      .. code-block:: typoscript
-         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-         # This will lead to <body class="example">
-         page.bodyTagAdd = class="example"
+    # This will lead to <body class="example">
+    page.bodyTagAdd = class="example"
 
-
-
-.. index:: PAGE; bodyTagCObject
-.. _setup-page-bodytagcobject:
+..  index:: PAGE; bodyTagCObject
+..  _setup-page-bodytagcobject:
 
 bodyTagCObject
 ==============
 
-.. container:: table-row
+..  confval:: bodyTagCObject
+    :name: page-bodyTagCObject
+    :type: cObject
 
-   Property
-         bodyTagCObject
+    This is the default body tag. It is overridden by :ref:`setup-page-bodyTag`,
+    if that is set.
 
-   Data type
-         cObject
+    ..  note::  Additionally to the body tag properties noted here,
+        there also is the property :ref:`setup-config-disableBodyTag`,
+        which, if set, disables body tag generation independently
+        from what might be set here.
 
-   Description
-         This is the default body tag. It is overridden by :ref:`setup-page-bodyTag`,
-         if that is set.
-
-         **Note:** Additionally to the body tag properties noted here,
-         there also is the property :ref:`setup-config-disableBodyTag`,
-         which, if set, disables body tag generation independently
-         from what might be set here.
-
-
-.. index:: PAGE; config
-.. _setup-page-config:
+..  index:: PAGE; config
+..  _setup-page-config:
 
 config
 ======
 
-.. container:: table-row
+..  confval:: config
+    :name: page-config
+    :type: :ref:`->CONFIG <config>`
 
-   Property
-         config
-
-   Data type
-         :ref:`->CONFIG <config>`
-
-   Description
-         Configuration for the page. Any entries made here override the same
-         entries in the top-level object :ref:`config`.
+     Configuration for the page. Any entries made here override the same
+     entries in the top-level object :ref:`config`.
 
 
-
-.. _setup-page-css-inlinestyle:
+..  _setup-page-css-inlinestyle:
 
 CSS\_inlineStyle
 ================
@@ -324,831 +280,786 @@ CSS\_inlineStyle
     :ref:`page.cssInline <setup-page-cssinline>` instead.
 
 
-.. index:: PAGE; cssInline.[array]
-.. _setup-page-cssinline:
+..  index:: PAGE; cssInline.[array]
+..  _setup-page-cssinline:
 
 cssInline.[array]
 =================
 
-.. container:: table-row
+..  confval:: cssInline.[array]
+    :name: page-cssInline
+    :type: :ref:`cObject <data-type-cobject>`
 
-   Property
-         cssInline.[array]
-
-   Data type
-         :ref:`cObject <data-type-cobject>`
-
-   Description
-         Allows to add inline CSS to the page :html:`<head>` section.
-         The :typoscript:`cssInline` property contains any number of numeric keys, each representing one cObject.
-         Internally handled as PHP integer, maximum number is therefore restricted to :php:`PHP_INT_MAX`.
-
-   Example
-         .. code-block:: typoscript
-            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-            cssInline {
-                10 = TEXT
-                10.value = h1 {margin:15px;}
-
-                20 = TEXT
-                20.value = h1 span {color: blue;}
-            }
+    Allows to add inline CSS to the page :html:`<head>` section.
+    The :typoscript:`cssInline` property contains any number of numeric keys, each representing one cObject.
+    Internally handled as PHP integer, maximum number is therefore restricted to :php:`PHP_INT_MAX`.
 
 
+..  _setup-page-cssinline-example:
 
-.. index:: PAGE; footerData.[array]
-.. _setup-page-footerdata:
+Example: Add inline styles for the h1 tag
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+    cssInline {
+        10 = TEXT
+        10.value = h1 {margin:15px;}
+
+        20 = TEXT
+        20.value = h1 span {color: blue;}
+    }
+
+
+
+..  index:: PAGE; footerData.[array]
+..  _setup-page-footerdata:
 
 footerData.[array]
-==================
+------------------
 
-.. container:: table-row
+..  confval:: footerData.[array]
+    :name: page-footerData
+    :type: :ref:`cObject <data-type-cobject>`
 
-   Property
-         footerData.[array]
+    Same as :ref:`setup-page-headerData`,
+    except that this block gets included at the bottom of the page
+    (just before the closing :html:`</body>` tag).
 
-   Data type
-         :ref:`cObject <data-type-cobject>`
+    The :typoscript:`footerData` property contains any number of numeric keys, each representing one cObject.
+    Internally handled as PHP integer, maximum number is therefore restricted to :php:`PHP_INT_MAX`.
 
-   Description
-         Same as :ref:`setup-page-headerData`,
-         except that this block gets included at the bottom of the page
-         (just before the closing :html:`</body>` tag).
+..  _setup-page-footerdata-example:
 
-         The :typoscript:`footerData` property contains any number of numeric keys, each representing one cObject.
-         Internally handled as PHP integer, maximum number is therefore restricted to :php:`PHP_INT_MAX`.
+Example: Add a script and a comment to the page footer
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-   Example
-         .. code-block:: typoscript
-            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-            footerData {
-               3 = TEXT
-               3.value = <script src="...."></script>
+    footerData {
+        3 = TEXT
+        3.value = <script src="...."></script>
 
-               50 = TEXT
-               50.value = <!-- Hello from the comment! -->
-            }
+        50 = TEXT
+        50.value = <!-- Hello from the comment! -->
+    }
 
 
-.. index:: PAGE; headerData.[array]
-.. _setup-page-headerdata:
+..  index:: PAGE; headerData.[array]
+..  _setup-page-headerdata:
 
 headerData.[array]
-==================
+------------------
 
-.. container:: table-row
+..  confval:: headerData.[array]
+    :name: page-headerData
+    :type: :ref:`cObject <data-type-cobject>`
 
-   Property
-         headerData.[array]
+    Inserts custom content in the head section of the website.
 
-   Data type
-         :ref:`cObject <data-type-cobject>`
+    While you can also use this to include stylesheet references or JavaScript,
+    you should better use :ref:`page.includeCSS <setup-page-includecss-array>`
+    and :ref:`page.includeJS <setup-page-includejs-array>` for such files.
+    Features like file concatenation and file compression will not work on files,
+    which are included using :typoscript:`headerData`.
 
-   Description
-         Inserts custom content in the head section of the website.
+    For meta tags, use the dedicated configuration :ref:`page.meta <meta>`.
 
-         While you can also use this to include stylesheet references or JavaScript,
-         you should better use :ref:`page.includeCSS <setup-page-includecss-array>`
-         and :ref:`page.includeJS <setup-page-includejs-array>` for such files.
-         Features like file concatenation and file compression will not work on files,
-         which are included using :typoscript:`headerData`.
+    By default, gets inserted after all the style definitions.
 
-         For meta tags, use the dedicated configuration :ref:`page.meta <meta>`.
+    The :typoscript:`headerData` property contains any number of numeric keys, each representing one cObject.
+    Internally handled as PHP integer, maximum number is therefore restricted to :php:`PHP_INT_MAX`.
 
-         By default, gets inserted after all the style definitions.
+..  _setup-page-headerdata-example:
 
-         The :typoscript:`headerData` property contains any number of numeric keys, each representing one cObject.
-         Internally handled as PHP integer, maximum number is therefore restricted to :php:`PHP_INT_MAX`.
+Example: Add a script tag and a comment to the head tag
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-   Example
-         .. code-block:: typoscript
-            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-            page.headerData {
-               3 = TEXT
-               3.value = <script src="...."></script>
+    page.headerData {
+        3 = TEXT
+        3.value = <script src="...."></script>
 
-               50 = TEXT
-               50.value = <!-- Hello from the comment! -->
-            }
+        50 = TEXT
+        50.value = <!-- Hello from the comment! -->
+    }
 
-
-.. index:: PAGE; headTag
-.. _setup-page-headtag:
+..  index:: PAGE; headTag
+..  _setup-page-headtag:
 
 headTag
-=======
+-------
 
-.. container:: table-row
+..  confval:: headTag
+    :name: page-headTag
+    :type: :ref:`data-type-tag` / :ref:`stdwrap`
+    :Default: `<head>`
 
-   Property
-         headTag
+    Head-tag if alternatives are wanted
 
-   Data type
-         :ref:`data-type-tag` / :ref:`stdwrap`
-
-   Default
-         <head>
-
-   Description
-         Head-tag if alternatives are wanted
-
-
-
-.. index:: PAGE; includeCSS.[array]
-.. _setup-page-includecss-array:
+..  index:: PAGE; includeCSS.[array]
+..  _setup-page-includecss-array:
 
 includeCSS.[array]
-==================
+------------------
 
-.. container:: table-row
+..  confval:: includeCSS.[array]
+    :name: page-includeCSS
+    :type: :ref:`data-type-resource`
 
-   Property
-         includeCSS.[array]
+    Inserts a stylesheet (just like the :typoscript:`stylesheet` property), but allows
+    setting up more than a single stylesheet, because you can enter files
+    in an array.
 
-   Data type
-         :ref:`data-type-resource`
+    The file definition must be a valid :ref:`data-type-resource` data type,
+    otherwise nothing is inserted.
 
-   Description
-         Inserts a stylesheet (just like the :typoscript:`stylesheet` property), but allows
-         setting up more than a single stylesheet, because you can enter files
-         in an array.
+    Each file has *optional properties*:
 
-         The file definition must be a valid :ref:`data-type-resource` data type,
-         otherwise nothing is inserted.
+    `allWrap`
+        Wraps the complete tag, useful for conditional
+        comments.
+    `allWrap.splitChar`
+        Defines an alternative splitting character
+        (default is "\|" - the vertical line).
+    `alternate`
+        If set (boolean) then the rel-attribute will be
+        "alternate stylesheet".
+    `disableCompression`
+        If :typoscript:`config.compressCss` is enabled, this
+        disables the compression of this file.
+    `excludeFromConcatenation`
+        If :typoscript:`config.concatenateCss` is
+        enabled, this prevents the file from being concatenated.
+    `external`
+        If set, there is no file existence check. Useful for
+        inclusion of external files.
+    `forceOnTop`
+        Boolean flag. If set, this file will be added on top
+        of all other files.
+    `if`
+        Allows to define conditions, which must evaluate to `true` for
+        the file to be included. If they do not evaluate to `true`, the file
+        will not be included. Extensive usage might cause huge numbers of
+        temporary files to be created. See :ref:`function if <if>` for details.
+    `inline`
+        If set, the content of the CSS file is inlined using
+        :html:`<style>` tags. Note that external files are not inlined.
+    `media`
+        Setting the media attribute of the :html:`<style>` tag.
+    `title`
+        Setting the title of the :html:`<style>` tag.
 
-         Each file has *optional properties*:
+    ..  versionadded:: 12.1
 
-         **allWrap**: Wraps the complete tag, useful for conditional
-         comments.
+    Additional data attributes can be configured using a key-value list.
 
-         **allWrap.splitChar**: Defines an alternative splitting character
-         (default is "\|" - the vertical line).
+..  _setup-page-includecss-example:
 
-         **alternate**: If set (boolean) then the rel-attribute will be
-         "alternate stylesheet".
+Example: Include additional css files
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-         **disableCompression**: If :typoscript:`config.compressCss` is enabled, this
-         disables the compression of this file.
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-         **excludeFromConcatenation**: If :typoscript:`config.concatenateCss` is
-         enabled, this prevents the file from being concatenated.
+    includeCSS {
+        styles = EXT:site_package/Resources/Public/Css/styles.css
 
-         **external**: If set, there is no file existence check. Useful for
-         inclusion of external files.
+        print = EXT:site_package/Resources/Public/Css/print.css
+        print.title = High contrast
+        print.media = print
 
-         **forceOnTop**: Boolean flag. If set, this file will be added on top
-         of all other files.
+        additional = EXT:site_package/Resources/Public/Css/additional_styles.css
+        additional.data-foo = bar
 
-         **if**: Allows to define conditions, which must evaluate to TRUE for
-         the file to be included. If they do not evaluate to TRUE, the file
-         will not be included. Extensive usage might cause huge numbers of
-         temporary files to be created. See ->if for details.
+        ie6 = EXT:site_package/Resources/Public/Css/ie6.css
+        ie6.allWrap = <!--[if lte IE 7]>|<![endif]-->
 
-         **inline**: If set, the content of the CSS file is inlined using
-         :html:`<style>` tags. Note that external files are not inlined.
+        example = https://example.org/some_external_styles.css
+        example.external = 1
+    }
 
-         **media**: Setting the media attribute of the :html:`<style>` tag.
-
-         **title**: Setting the title of the :html:`<style>` tag.
-
-         ..  versionadded:: 12.1
-
-         Additional data attributes can be configured using a key-value list.
-
-   Example
-         .. code-block:: typoscript
-            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-            includeCSS {
-                styles = EXT:site_package/Resources/Public/Css/styles.css
-
-                print = EXT:site_package/Resources/Public/Css/print.css
-                print.title = High contrast
-                print.media = print
-
-                additional = EXT:site_package/Resources/Public/Css/additional_styles.css
-                additional.data-foo = bar
-
-                ie6 = EXT:site_package/Resources/Public/Css/ie6.css
-                ie6.allWrap = <!--[if lte IE 7]>|<![endif]-->
-
-                example = https://example.org/some_external_styles.css
-                example.external = 1
-            }
-
-
-
-.. index:: PAGE; includeCSSLibs.[array]
-.. _setup-page-includecsslibs-array:
+..  index:: PAGE; includeCSSLibs.[array]
+..  _setup-page-includecsslibs-array:
 
 includeCSSLibs.[array]
-======================
+----------------------
 
-.. container:: table-row
+..  confval:: includeCSSLibs.[array]
+    :name: page-includeCSSLibs
+    :type: :ref:`data-type-resource`
 
-   Property
-         includeCSSLibs.[array]
+    Adds CSS library files to head of page.
 
-   Data type
-         :ref:`data-type-resource`
+    The file definition must be a valid :ref:`data-type-resource` data type,
+    otherwise nothing is inserted. This means that remote files cannot be referenced
+    (i.e. using :samp:`https://...`), except by using the :typoscript:`.external` property.
 
-   Description
-         Adds CSS library files to head of page.
+    Each file has *optional properties*:
 
-         The file definition must be a valid :ref:`data-type-resource` data type,
-         otherwise nothing is inserted. This means that remote files cannot be referenced
-         (i.e. using :samp:`https://...`), except by using the :typoscript:`.external` property.
+    `allWrap`
+        Wraps the complete tag, useful for conditional
+        comments.
+    `allWrap.splitChar`
+        Defines an alternative
+        splitting character (default is "\|" - the vertical line).
+    `alternate`
+        If set (boolean) then the rel-attribute will be
+        "alternate stylesheet".
+    `disableCompression`
+        If :typoscript:`config.compressCss` is
+        enabled, this disables the compression of this file.
+    `excludeFromConcatenation`
+        If :typoscript:`config.concatenateCss`
+        is enabled, this prevents the file from being concatenated.
+    `external`
+        If set, there is no file existence check. Useful for
+        inclusion of external files.
+    `forceOnTop`
+        Boolean flag. If set, this file will be added on top
+        of all other files.
+    `if`
+        Allows to define conditions, which must
+        evaluate to TRUE for the file to be included. If they do not evaluate
+        to TRUE, the file will not be included. Extensive usage might cause
+        huge numbers of temporary files to be created. See ->if for details.
+    `media`
+        Setting the media attribute of the :html:`<style>` tag.
+    `title`
+        Setting the title of the :html:`<style>` tag.
 
-         Each file has *optional properties*:
+    ..  versionadded:: 12.1
 
-         **allWrap**: Wraps the complete tag, useful for conditional
-         comments.
+    Additional data attributes can be configured using a key-value list.
 
-         **allWrap.splitChar**: Defines an alternative
-         splitting character (default is "\|" - the vertical line).
+..  _setup-page-includecsslibs-exqample:
 
-         **alternate**: If set (boolean) then the rel-attribute will be
-         "alternate stylesheet".
+Example: Include CSS libraries
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-         **disableCompression**: If :typoscript:`config.compressCss` is
-         enabled, this disables the compression of this file.
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-         **excludeFromConcatenation**: If :typoscript:`config.concatenateCss`
-         is enabled, this prevents the file from being concatenated.
+    includeCSSLibs {
+        bootstrap = https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css
+        bootstrap.external = 1
 
-         **external**: If set, there is no file existence check. Useful for
-         inclusion of external files.
+        additional = EXT:site_package/Resources/Public/Css/additional_styles.css
+        additional.data-foo = bar
+    }
 
-         **forceOnTop**: Boolean flag. If set, this file will be added on top
-         of all other files.
-
-         **if**: Allows to define conditions, which must
-         evaluate to TRUE for the file to be included. If they do not evaluate
-         to TRUE, the file will not be included. Extensive usage might cause
-         huge numbers of temporary files to be created. See ->if for details.
-
-         **media**: Setting the media attribute of the :html:`<style>` tag.
-
-         **title**: Setting the title of the :html:`<style>` tag.
-
-         ..  versionadded:: 12.1
-
-         Additional data attributes can be configured using a key-value list.
-
-   Example
-         .. code-block:: typoscript
-            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-            includeCSSLibs {
-                bootstrap = https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css
-                bootstrap.external = 1
-
-                additional = EXT:site_package/Resources/Public/Css/additional_styles.css
-                additional.data-foo = bar
-            }
-
-.. index:: PAGE; includeJS.[array]
-.. _setup-page-includejs-array:
+..  index:: PAGE; includeJS.[array]
+..  _setup-page-includejs-array:
 
 includeJS.[array]
-=================
+-----------------
 
-.. container:: table-row
+..  confval:: includeJS.[array]
+    :name: page-includeJS
+    :type: :ref:`data-type-resource`
 
-   Property
-         includeJS.[array]
+    Inserts one or more (Java)Scripts in :html:`<script>` tags.
+    With :ref:`setup-config-movejsfromheadertofooter` set to TRUE all files
+    will be moved to the footer.
+    The file definition must be a valid :ref:`data-type-resource` data type,
+    otherwise nothing is inserted. This means that remote files cannot be referenced
+    (i.e. using :samp:`https://...`), except by using the :typoscript:`.external` property.
 
-   Data type
-         :ref:`data-type-resource`
+    Each file has *optional properties*:
 
-   Description
-         Inserts one or more (Java)Scripts in :html:`<script>` tags.
-         With :ref:`setup-config-movejsfromheadertofooter` set to TRUE all files
-         will be moved to the footer.
-         The file definition must be a valid :ref:`data-type-resource` data type,
-         otherwise nothing is inserted. This means that remote files cannot be referenced
-         (i.e. using :samp:`https://...`), except by using the :typoscript:`.external` property.
+    `allWrap`
+        Wraps the complete tag, useful for conditional
+        comments.
 
-         Each file has *optional properties*:
+    `allWrap.splitChar`
+        Defines an alternative splitting character
+        (default is "\|" - the vertical line).
 
-         **allWrap**: Wraps the complete tag, useful for conditional
-         comments.
+    `async`
+        Allows the file to be loaded asynchronously.
 
-         **allWrap.splitChar**: Defines an alternative splitting character
-         (default is "\|" - the vertical line).
+    `crossorigin`
+        Allows to set the cross-origin attribute in script tags.
+        It is automatically set to `anonymous` for external JavaScript files if an
+        :typoscript:`.integrity` is set.
 
-         **async**: Allows the file to be loaded asynchronously.
+    `defer` Allows to set the HTML5 attribute :html:`defer`.
 
-         **crossorigin**: Allows to set the cross-origin attribute in script tags.
-         It is automatically set to `anonymous` for external JavaScript files if an
-         :typoscript:`.integrity` is set.
+    `disableCompression`
+        If :typoscript:`config.compressJs` is enabled,
+        this disables the compression of this file.
 
-         **defer** Allows to set the HTML5 attribute :html:`defer`.
+    `excludeFromConcatenation`
+        If :typoscript:`config.concatenateJs` is enabled,
+        this prevents the file from being concatenated.
 
-         **disableCompression**: If :typoscript:`config.compressJs` is enabled,
-         this disables the compression of this file.
+    `external`
+        If set, there is no file existence check. Useful for
+        inclusion of external files.
 
-         **excludeFromConcatenation**: If :typoscript:`config.concatenateJs` is enabled,
-         this prevents the file from being concatenated.
+    `forceOnTop`
+        Boolean flag. If set, this file will be added on top
+        of all other files.
 
-         **external**: If set, there is no file existence check. Useful for
-         inclusion of external files.
+    `if`
+        Allows to define conditions, which must evaluate to TRUE for
+        the file to be included. If they do not evaluate to TRUE, the file will
+        not be included. Extensive usage might cause huge numbers of temporary
+        files to be created. See ->if for details.
 
-         **forceOnTop**: Boolean flag. If set, this file will be added on top
-         of all other files.
+    `type`
+        Setting the MIME type of the script. Default: The attribute is
+        omitted for frontend rendering when :typoscript:`config.doctype` is not set or
+        set to :typoscript:`html5`. Otherwise :html:`text/javascript` is used as type.
 
-         **if**: Allows to define conditions, which must evaluate to TRUE for
-         the file to be included. If they do not evaluate to TRUE, the file will
-         not be included. Extensive usage might cause huge numbers of temporary
-         files to be created. See ->if for details.
+    `integrity`
+        Adds the integrity attribute to the script element to let
+        browsers ensure subresource integrity. Useful in hosting scenarios with
+        resources externalized to CDN's. See `SRI <https://www.w3.org/TR/SRI/>`_ for
+        more details. Integrity hashes may be generated using `<https://srihash.org/>`_.
 
-         **type**: Setting the MIME type of the script. Default: The attribute is
-         omitted for frontend rendering when :typoscript:`config.doctype` is not set or
-         set to :typoscript:`html5`. Otherwise :html:`text/javascript` is used as type.
+    ..  versionadded:: 12.1
 
-         **integrity**: Adds the integrity attribute to the script element to let
-         browsers ensure subresource integrity. Useful in hosting scenarios with
-         resources externalized to CDN's. See `SRI <https://www.w3.org/TR/SRI/>`_ for
-         more details. Integrity hashes may be generated using `<https://srihash.org/>`_.
-
-         ..  versionadded:: 12.1
-
-         **data**: Array with key/value for additional attributes to be added to
-         the script tag.
-
-   Example
-         .. code-block:: typoscript
-            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-            includeJS {
-                helloworld = EXT:site_package/Resources/Public/JavaScript/helloworld.js
-                helloworld.type = application/x-javascript
-
-                # Include the file only if myConstant is set in the TS constants field.
-                conditional = EXT:site_package/Resources/Public/JavaScript/conditional.js
-                conditional.if.isTrue = {$myConstant}
-
-                # Include another file for consent management
-                # A data attribute enriches the tag with additional information
-                # which can be used in the according JavaScript.
-                # This results in "<script data-consent-type="essential" ...></script>"
-                consent = EXT:site_package/Resources/Public/JavaScript/consent.js
-                consent.data.data-consent-type = essential
-
-                # Another attribute can also be defined also with the "data" key.
-                # This results in "<script other-attribute="value" ...></script>"
-                consent.data.other-attribute = value
-
-                jquery = https://code.jquery.com/jquery-3.4.1.min.js
-                jquery.external = 1
-                jquery.integrity = sha384-vk5WoKIaW/vJyUAd9n/wmopsmNhiy+L2Z+SBxGYnUkunIxVxAv/UtMOhba/xskxh
-            }
+    `data`
+        Array with key/value for additional attributes to be added to
+        the script tag.
 
 
+..  _setup-page-includejs-example:
 
-.. index:: PAGE; includeJSFooter.[array]
-.. _setup-page-includejsfooter-array:
+Example: Include JavaScript in the header
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+    includeJS {
+        helloworld = EXT:site_package/Resources/Public/JavaScript/helloworld.js
+        helloworld.type = application/x-javascript
+
+        # Include the file only if myConstant is set in the TS constants field.
+        conditional = EXT:site_package/Resources/Public/JavaScript/conditional.js
+        conditional.if.isTrue = {$myConstant}
+
+        # Include another file for consent management
+        # A data attribute enriches the tag with additional information
+        # which can be used in the according JavaScript.
+        # This results in "<script data-consent-type="essential" ...></script>"
+        consent = EXT:site_package/Resources/Public/JavaScript/consent.js
+        consent.data.data-consent-type = essential
+
+        # Another attribute can also be defined also with the "data" key.
+        # This results in "<script other-attribute="value" ...></script>"
+        consent.data.other-attribute = value
+
+        jquery = https://code.jquery.com/jquery-3.4.1.min.js
+        jquery.external = 1
+        jquery.integrity = sha384-vk5WoKIaW/vJyUAd9n/wmopsmNhiy+L2Z+SBxGYnUkunIxVxAv/UtMOhba/xskxh
+    }
+
+..  index:: PAGE; includeJSFooter.[array]
+..  _setup-page-includejsfooter-array:
 
 includeJSFooter.[array]
-=======================
+-----------------------
 
-.. container:: table-row
+..  confval:: includeJSFooter.[array]
+    :name: page-includeJSFooter
+    :type: :ref:`data-type-resource`
 
-   Property
-         includeJSFooter.[array]
+    Add JavaScript files to footer (after files set in :ref:`includeJSFooterlibs <setup-page-includejsfooterlibs-array>`)
 
-   Data type
-         :ref:`data-type-resource`
-
-   Description
-         Add JS files to footer (after possible files set in :ref:`includeJSFooterlibs <setup-page-includejsfooterlibs-array>`)
-
-         Same as :ref:`includeJS <setup-page-includejs-array>` above, except that this block gets
-         included at the bottom of the page (just before the closing :html:`</body>`
-         tag).
+    Same as :ref:`includeJS <setup-page-includejs-array>` above, except that this block gets
+    included at the bottom of the page (just before the closing :html:`</body>`
+    tag).
 
 
-
-.. index:: PAGE; includeJSFooterlibs.[array]
-.. _setup-page-includejsfooterlibs-array:
+..  index:: PAGE; includeJSFooterlibs.[array]
+..  _setup-page-includejsfooterlibs-array:
 
 includeJSFooterlibs.[array]
-===========================
+---------------------------
 
-.. container:: table-row
+..  confval:: includeJSFooterlibs.[array]
+    :name: page-includeJSFooterlibs
+    :type: :ref:`data-type-resource`
 
-   Property
-         includeJSFooterlibs.[array]
+    Add JavaScript library files to footer.
 
-   Data type
-         :ref:`data-type-resource`
+    Same as :ref:`includeJSLibs <setup-page-includejslibs-array>`, except that this block gets
+    included at the bottom of the page (just before the closing :html:`</body>`
+    tag).
 
-   Description
-         Add JS library files to footer.
-
-         Same as :ref:`includeJSLibs <setup-page-includejslibs-array>`, except that this block gets
-         included at the bottom of the page (just before the closing :html:`</body>`
-         tag).
-
-         The optional properties from :ref:`includeJS <setup-page-includejs-array>`
-         can be applied.
+    The optional properties from :ref:`includeJS <setup-page-includejs-array>`
+    can be applied.
 
 
-.. index:: PAGE; includeJSLibs.[array]
-.. _setup-page-includejslibs-array:
+..  index:: PAGE; includeJSLibs.[array]
+..  _setup-page-includejslibs-array:
 
 includeJSLibs.[array]
-=====================
+---------------------
 
-.. container:: table-row
+..  confval:: includeJSLibs.[array]
+    :name: page-includeJSLibs
+    :type: :ref:`data-type-resource`
 
-   Property
-         includeJSLibs.[array]
+    Adds JavaScript library files to head of page.
 
-   Data type
-         :ref:`data-type-resource`
+    Same as :ref:`includeJSFooterlibs <setup-page-includejsfooterlibs-array>`, except that this block gets
+    included inside :html:`<head>`.
+    tag).
 
-   Description
-         Adds JS library files to head of page.
-
-         Same as :ref:`includeJSFooterlibs <setup-page-includejsfooterlibs-array>`, except that this block gets
-         included inside :html:`<head>`.
-         tag).
-
-         The optional properties from :ref:`includeJS <setup-page-includejs-array>`
-         can be applied.
+    The optional properties from :ref:`includeJS <setup-page-includejs-array>`
+    can be applied.
 
 
-.. index:: PAGE; inlineLanguageLabelFiles
-.. _setup-page-inlinelanguagelabelfiles:
+..  index:: PAGE; inlineLanguageLabelFiles
+..  _setup-page-inlinelanguagelabelfiles:
 
 inlineLanguageLabelFiles
-========================
+------------------------
 
-.. container:: table-row
+..  confval:: inlineLanguageLabelFiles
+    :name: page-inlineLanguageLabelFiles
+    :type: (array of strings)
 
-   Property
-         inlineLanguageLabelFiles
+    Adds language labels to the page. All labels will be then be available in
+    the JavaScript object :js:`TYPO3.lang`.
 
-   Data type
-         (array of strings)
+    ..  rubric:: Available sub-properties:
 
-   Description
-         Adds language labels to the page. All labels will be then be available in
-         the JavaScript object :js:`TYPO3.lang`.
+    `selectionPrefix`
+        Only label keys that start with this prefix will
+        be included. Default: ''.
 
-         **Available sub-properties:**
+    `stripFromSelectionName`
+        A string that will be removed from any
+        included label key. Default: ''.
 
-         **selectionPrefix:** Only label keys that start with this prefix will
-         be included. Default: ''.
-
-         **stripFromSelectionName:** A string that will be removed from any
-         included label key. Default: ''.
-
-         **errorMode:** Error mode if the file could not be found:
-         0 - syslog entry, 1 - do nothing, 2 - throw an exception.
-         Default: 0
-
-   Example
-         .. code-block:: typoscript
-            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-            inlineLanguageLabelFiles {
-                someLabels = EXT:myExt/Resources/Private/Language/locallang.xlf
-                someLabels.selectionPrefix = idPrefix
-                someLabels.stripFromSelectionName = strip_me
-                someLabels.errorMode = 2
-            }
+    `errorMode`
+        Error mode if the file could not be found:
+        0 - syslog entry, 1 - do nothing, 2 - throw an exception.
+        Default: 0
 
 
-.. index:: PAGE; inlineSettings
-.. _setup-page-inlinesettings:
+..  _setup-page-inlinelanguagelabelfiles-example:
+
+Example: Make a language file available in JavaScript
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+    inlineLanguageLabelFiles {
+        someLabels = EXT:my_extension/Resources/Private/Language/locallang.xlf
+        someLabels.selectionPrefix = idPrefix
+        someLabels.stripFromSelectionName = strip_me
+        someLabels.errorMode = 2
+    }
+
+
+..  index:: PAGE; inlineSettings
+..  _setup-page-inlinesettings:
 
 inlineSettings
-==============
+--------------
 
-.. container:: table-row
+..  confval:: inlineSettings
+    :name: page-inlineSettings
+    :type: (array of strings)
 
-   Property
-         inlineSettings
+    Adds settings to the page as inline javascript, which is accessible within
+    the JavaScript object :js:`TYPO3.settings`.
 
-   Data type
-         (array of strings)
+..  _setup-page-inlinesettings-example:
 
-   Description
-         Adds settings to the page as inline javascript, which is accessible within the variable :js:`TYPO3.settings`.
+Example: Make some values available in JavaScript
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-   Example
-         .. code-block:: typoscript
-            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-            page.inlineSettings {
-                setting1 = Hello
-                setting2 = GoOnTop
-            }
+    page.inlineSettings {
+        setting1 = Hello
+        setting2 = GoOnTop
+    }
 
-         Will produce following source
+Will produce following source
 
-         .. code-block:: js
+..  code-block:: js
 
-            TYPO3.settings = {"TS":{"setting1":"Hello","setting2":"GoOnTop"}};
+    TYPO3.settings = {"TS":{"setting1":"Hello","setting2":"GoOnTop"}};
 
-
-
-.. index:: PAGE; jsFooterInline.[array]
-.. _setup-page-jsfooterinline:
+..  index:: PAGE; jsFooterInline.[array]
+..  _setup-page-jsfooterinline:
 
 jsFooterInline.[array]
-======================
+----------------------
 
-.. container:: table-row
+..  confval:: jsFooterInline.[array]
+    :name: page-jsFooterInline
+    :type: :ref:`cObject <data-type-cobject>`
 
-   Property
-         jsFooterInline
+    Same as :typoscript:`jsInline`, except that the JavaScript gets inserted at the
+    bottom of the page (just before the closing :html:`</body>` tag).
 
-   Data type
-         :ref:`cObject <data-type-cobject>`
+    The :typoscript:`jsFooterInline` property contains any number of numeric keys, each representing one cObject.
+    Internally handled as PHP integer, maximum number is therefore restricted to :php:`PHP_INT_MAX`.
 
-   Description
-         Same as :typoscript:`jsInline`, except that the JavaScript gets inserted at the
-         bottom of the page (just before the closing :html:`</body>` tag).
+..  _setup-page-jsfooterinline-example:
 
-         The :typoscript:`jsFooterInline` property contains any number of numeric keys, each representing one cObject.
-         Internally handled as PHP integer, maximum number is therefore restricted to :php:`PHP_INT_MAX`.
+Example: Add some inline JavaScript to the page footer
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-   Example
-         .. code-block:: typoscript
-            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-            page.jsFooterInline {
-                10 = TEXT
-                10.stdWrap.dataWrap = var pageId = {TSFE:id};
-            }
+    page.jsFooterInline {
+        10 = TEXT
+        10.stdWrap.dataWrap = var pageId = {TSFE:id};
+    }
 
 
-.. index:: PAGE; jsInline.[array]
-.. _setup-page-jsinline:
+..  index:: PAGE; jsInline.[array]
+..  _setup-page-jsinline:
 
 jsInline.[array]
-================
+----------------
 
-.. container:: table-row
+..  confval:: jsInline.[array]
+    :name: page-jsInline
+    :type: :ref:`cObject <data-type-cobject>`
 
-   Property
-         jsInline
+    Use array of cObjects for creating inline JavaScript.
 
-   Data type
-         :ref:`cObject <data-type-cobject>`
+    ..  note::
 
-   Description
-         Use array of cObjects for creating inline JavaScript.
+        With :typoscript:`config.removeDefaultJS = external`, the inline JavaScript is moved
+        to an external file.
 
-         **Note:**
-
-         With :typoscript:`config.removeDefaultJS = external`, the inline JavaScript is moved
-         to an external file.
-
-         The :typoscript:`jsInline` property contains any number of numeric keys, each representing one cObject.
-         Internally handled as PHP integer, maximum number is therefore restricted to :php:`PHP_INT_MAX`.
-
-   Example
-         .. code-block:: typoscript
-            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-            page.jsInline {
-                10 = TEXT
-                10.stdWrap.dataWrap = var pageId = {TSFE:id};
-            }
+    The :typoscript:`jsInline` property contains any number of numeric keys, each representing one cObject.
+    Internally handled as PHP integer, maximum number is therefore restricted to :php:`PHP_INT_MAX`.
 
 
+..  _setup-page-jsinline-example:
 
-.. index:: PAGE; meta
-.. _setup-page-meta:
-.. _meta:
+Example: Make a cObject available in JavaScript
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+    page.jsInline {
+        10 = TEXT
+        10.stdWrap.dataWrap = var pageId = {TSFE:id};
+    }
+
+..  index:: PAGE; meta
+..  _setup-page-meta:
+..  _meta:
 
 meta
-====
+----
 
-.. container:: table-row
+..  confval:: meta
+    :name: page-meta
+    :type: array of key names (string / :ref:`stdWrap <stdwrap>`)
 
-   Property
-         meta
+    Use the scheme :typoscript:`meta.key = value` to define any HTML meta tag.
 
-   Data type
-         array of key names (string / :ref:`stdWrap <stdwrap>`)
+    :typoscript:`value` is the content of the meta tag. If the value is empty (after
+    trimming), the meta tag is not generated.
 
-   Description
-         Use the scheme :typoscript:`meta.key = value` to define any HTML meta tag.
+    The :typoscript:`key` can be the name of any meta tag, for example :html:`description` or
+    :html:`keywords`. If the key is :typoscript:`refresh` (case insensitive), then the
+    :html:`http-equiv` attribute is used in the meta tag instead of the :html:`name`
+    attribute.
 
-         :typoscript:`value` is the content of the meta tag. If the value is empty (after
-         trimming), the meta tag is not generated.
+    For each key the following sub-properties are available:
 
-         The :typoscript:`key` can be the name of any meta tag, for example :html:`description` or
-         :html:`keywords`. If the key is :typoscript:`refresh` (case insensitive), then the
-         :html:`http-equiv` attribute is used in the meta tag instead of the :html:`name`
-         attribute.
+    `httpEquivalent`
+        If set to 1, the :html:`http-equiv` attribute is used in the meta
+        tag instead of the :html:`name` attribute. Default: 0.
+    `replace`
+        If set to 1, the tag will replace the one set earlier by a plugin. If set
+        to 0 (default), the meta tag generated by the plugin will be used. If
+        there is none yet, the one from TypoScript is set.
 
-         For each key the following sub-properties are available:
 
-         :aspect:`httpEquivalent`
-         If set to 1, the :html:`http-equiv` attribute is used in the meta
-         tag instead of the :html:`name` attribute. Default: 0.
+..  _setup-page-meta-example:
 
-         :aspect:`replace`
-         If set to 1, the tag will replace the one set earlier by a plugin. If set
-         to 0 (default), the meta tag generated by the plugin will be used. If
-         there is none yet, the one from TypoScript is set.
+Example: Define meta tags for description and keywords
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-   Examples:
-         Simple definition:
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-         .. code-block:: typoscript
-            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    meta.description = This is the description of the content in this document.
+    meta.keywords = These are the keywords.
 
-             meta.description = This is the description of the content in this document.
-             meta.keywords = These are the keywords.
+Example: Fetch data for the keyword meta tag from the page record
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-         Fetch data from the keywords field of the current or any parent page:
+If the page record is not set search up the root line of pages.
 
-         .. code-block:: typoscript
-            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-             meta.keywords.data = levelfield:-1, keywords, slide
+    meta.keywords.data = levelfield:-1, keywords, slide
 
-         Make a meta.refresh entry:
+Example: Make a meta.refresh entry
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-         .. code-block:: typoscript
-            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-             meta.refresh = [seconds]; [URL, leave blank for same page]
+    meta.refresh = [seconds]; [URL, leave blank for same page]
 
-         Usage of :typoscript:`httpEquivalent`:
+Example: Set a meta tag with HTTP equivalent
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-         .. code-block:: typoscript
-            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-             meta.X-UA-Compatible = IE=edge
-             meta.X-UA-Compatible.httpEquivalent = 1
+    meta.X-UA-Compatible = IE=edge
+    meta.X-UA-Compatible.httpEquivalent = 1
 
-         Result:
+Result:
 
-         .. code-block:: html
-            :caption: Example output
+..  code-block:: html
+    :caption: Example output
 
-              <meta http-equiv="X-UA-Compatible" content="IE=edge">.
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">.
 
-         Meta tags with a different attribute name are supported like the
-         Open Graph meta tags:
+Example set Open graph meta tags
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-         .. code-block:: typoscript
-            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+Meta tags with a different attribute name are supported like the
+Open Graph meta tags:
 
-            page {
-                meta {
-                   X-UA-Compatible = IE=edge
-                   X-UA-Compatible.attribute = http-equiv
-                   keywords = TYPO3
-                   og:site_name = TYPO3
-                   og:site_name.attribute = property
-                   description = Inspiring people to share Normal
-                   dc\.description = Inspiring people to share [DC tags]
-                   og:description = Inspiring people to share [OpenGraph]
-                   og:description.attribute = property
-                   og:locale = en_GB
-                   og:locale.attribute = property
-                   og:locale:alternate {
-                      attribute = property
-                      value {
-                         1 = fr_FR
-                         2 = de_DE
-                      }
-                   }
-                   refresh = 5; url=https://example.org/
-                   refresh.attribute = http-equiv
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+    page {
+        meta {
+            X-UA-Compatible = IE=edge
+            X-UA-Compatible.attribute = http-equiv
+            keywords = TYPO3
+            og:site_name = TYPO3
+            og:site_name.attribute = property
+            description = Inspiring people to share Normal
+            dc\.description = Inspiring people to share [DC tags]
+            og:description = Inspiring people to share [OpenGraph]
+            og:description.attribute = property
+            og:locale = en_GB
+            og:locale.attribute = property
+            og:locale:alternate {
+                attribute = property
+                value {
+                    1 = fr_FR
+                    2 = de_DE
                 }
             }
+            refresh = 5; url=https://example.org/
+            refresh.attribute = http-equiv
+        }
+    }
 
-         ..  note::
+..  note::
 
-             Since the dot (`.`) has a meaning in TypoScript, it must be escaped with
-             a backslash if used in a :typoscript:`meta` key.
+    Since the dot (`.`) has a meaning in TypoScript, it must be escaped with
+    a backslash if used in a :typoscript:`meta` key.
 
-         They can be used like :typoscript:`property` used for OG tags in the example.
+They can be used like :typoscript:`property` used for OG tags in the example.
 
-         You may also supply multiple values for one name, which results in
-         multiple meta tags with the same name to be rendered.
+You may also supply multiple values for one name, which results in
+multiple meta tags with the same name to be rendered.
 
-         Result for :typoscript:`og:description`:
+Result for :typoscript:`og:description`:
 
-         .. code-block:: html
+..  code-block:: html
 
-              <meta property="og:description"
-                  content="Inspiring people to share [OpenGraph]" />
+    <meta property="og:description"
+    content="Inspiring people to share [OpenGraph]" />
 
-         See https://ogp.me/ for more information about the Open Graph
-         protocol and its properties.
+See https://ogp.me/ for more information about the Open Graph
+protocol and its properties.
 
 
-.. index:: PAGE; shortcutIcon
-.. _setup-page-shortcuticon:
+..  index:: PAGE; shortcutIcon
+..  _setup-page-shortcuticon:
 
 shortcutIcon
-============
+------------
 
-.. container:: table-row
+..  confval:: shortcutIcon
+    :name: page-shortcutIcon
+    :type: :ref:`data-type-resource`
 
-   Property
-      shortcutIcon
+    Favicon of the page. Create a reference to an icon here!
 
-   Data type
-      :ref:`data-type-resource`
+    Browsers that support favicons display them in the address bar of
+    the browser, next to the name of the site in lists of bookmarks
+    and next to the title of the page in the tab.
 
-   Description
-      Favicon of the page. Create a reference to an icon here!
+    If the file is missing no tag will be rendered.
 
-      Browsers that support favicons display them in the address bar of
-      the browser, next to the name of the site in lists of bookmarks
-      and next to the title of the page in the tab.
+..  _setup-page-shortcuticon-example:
 
-      Example:
+Example: Add a favicon to the page
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-      .. code-block:: typoscript
-         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-         page.shortcutIcon = EXT:site_package/Resources/Public/Images/favicon.ico
-
-      **Note:** The reference to this file will only be included in the
-      output of your website, if the file actually exists! Should the
-      file be missing, the tag will not be rendered.
+    page.shortcutIcon = EXT:site_package/Resources/Public/Images/favicon.ico
 
 
-.. _setup-page-stdwrap:
+..  _setup-page-stdwrap:
 
 stdWrap
-=======
+-------
 
-.. container:: table-row
+..  confval:: stdWrap
+    :name: page-stdWrap
+    :type: :ref:`stdwrap`
 
-   Property
-         stdWrap
-
-   Data type
-         :ref:`stdwrap`
-
-   Description
-         Wraps the content of the cObject array with stdWrap options.
+Wraps the content of the cObject array with :ref:`stdwrap` options.
 
 
-.. index:: PAGE; typeNum
-.. _setup-page-typenum:
+..  index:: PAGE; typeNum
+..  _setup-page-typenum:
 
 typeNum
-=======
+-------
 
-.. container:: table-row
+..  confval:: typeNum
+    :name: page-typeNum
+    :type: :ref:`data-type-integer`
+    :Default: 0
 
-   Property
-         typeNum
+    This determines the typeId of the page. The `&type=` parameter in the URL
+    determines, which page object will be rendered. The value defaults to 0 for
+    the first found :typoscript:`PAGE` object, but it **must** be set and be unique as
+    soon as you use *more* than one such object.
 
-   Data type
-         :ref:`data-type-integer`
-
-   Default
-         0
-
-   Description
-         This determines the typeId of the page. The `&type=` parameter in the URL
-         determines, which page object will be rendered. The value defaults to 0 for
-         the first found PAGE object, but it **must** be set and be unique as
-         soon as you use *more* than one such object (watch this if you use frames
-         on your page)!
-
-
-
-.. _setup-page-wrap:
+..  _setup-page-wrap:
 
 wrap
-====
+----
 
-.. container:: table-row
+..  confval:: wrap
+    :name: page-wrap
+    :type: :ref:`data-type-wrap`
 
-   Property
-         wrap
+    Wraps the content of the cObject array.
 
-   Data type
-         :ref:`data-type-wrap`
+..  toctree::
+    :hidden:
 
-   Description
-         Wraps the content of the cObject array.
-
-
-.. ###### END~OF~TABLE ######
-
-
-.. toctree::
-   :hidden:
-
-   Examples
+    Examples
