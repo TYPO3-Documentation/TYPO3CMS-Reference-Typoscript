@@ -134,7 +134,7 @@ context
 
 ..  _data-type-gettext-context-example:
 
-Example: Retrieve current workspace id
+Example: Retrieve current workspace ID
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Retrieve current workspace id:
