@@ -122,7 +122,7 @@ context
 ..  confval:: context
     :name: data-context
 
-    access values from context API (:ref:`see <t3coreapi:context-api>`).
+    Access values from context API (:ref:`see <t3coreapi:context-api>`).
     If a property is an array, it is converted into a comma-separated list.
 
     Syntax:
