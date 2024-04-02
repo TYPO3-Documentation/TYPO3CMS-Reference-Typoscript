@@ -230,8 +230,8 @@ parameter `myContentId`:
 ..  note::
     It is safe to directly use a client-/user-provided input for the id of a DB
     record here. The function :php:`ContentObjectRenderer->getData()` internally
-    calls the function :php:`PageRepository->getRawRecord`, which converts the
-    parameter to int via :php:`QueryBuilder->createNamedParameter`
+    calls the function :php:`PageRepository->getRawRecord()`, which converts the
+    parameter to int via :php:`QueryBuilder->createNamedParameter()`
 
 ..  _data-type-gettext-debug:
 
@@ -317,7 +317,7 @@ file
     :name: data-file
     :Syntax: file : [uid] : [property]
 
-    Retrieves a property from a file object (FAL) by identifying it through its
+    Retrieves a property from a file object (:ref:`FAL <t3coreapi:fal>`) by identifying it through its
     :sql:`sys_file` UID. Note that during execution of the :ref:`cobj-files` cObject,
     it is also possible to reference the current file with :confval:`data-current` as UID like
     :typoscript:`file : current : size`.
@@ -330,7 +330,7 @@ file
     available all the time, it depends on the setup of *references* of the
     :ref:`cobj-files` cObject): title, description, link, alternative.
 
-    Additionally, any data in the "sys_file_metadata" table can be accessed too.
+    Additionally, any data in the :sql:`sys_file_metadata` table can be accessed too.
 
     See the :ref:`FILES <cobj-files-examples>` cObject for usage examples.
 
@@ -355,7 +355,7 @@ flexform
     :name: data-flexform
     :Syntax: flexform : [field containing flexform data].[property of this flexform]
 
-    Access values from FlexForms, for example inside of :sql:`tt_content` record. In contrast
+    Access values from :ref:`FlexForms <t3coreapi:flexforms>`, for example inside of :sql:`tt_content` record. In contrast
     to most parts, deeper levels are accessed through dots, not pipes.
 
 ..  _data-type-gettext-flexform-example:
@@ -426,7 +426,7 @@ getenv
 Example: Get the HTTP referer
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Get the environment var `HTTP_REFERER`:
+Get the environment variable `HTTP_REFERER`:
 
 ..  code-block:: typoscript
     :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
@@ -439,7 +439,7 @@ getIndpEnv
 ----------
 
 ..  confval:: getIndpEnv
-    :name: data-getgetIndpEnvenv
+    :name: data-getIndpEnv
     :Syntax: getIndpEnv : <name>
 
     Returns the value of a *System Environment Variable* denoted by
@@ -573,7 +573,7 @@ levelfield
 Example: Get a field from a page up in the root-line
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Get the value of the user defined field :sql:`tx_myextension_myfield` in the root line.
+Get the value of the user-defined field :sql:`tx_myextension_myfield` in the root line.
 
 ..  code-block:: typoscript
     :caption: EXT:my_extension/Configuration/TypoScript/setup.typoscript
@@ -581,8 +581,8 @@ Get the value of the user defined field :sql:`tx_myextension_myfield` in the roo
     lib.foo.data = levelfield : -1, tx_myextension_myfield, slide
 
 Requires additional configuration in
-:php:`$GLOBALS['TYPO3_CONF_VARS']['FE']['addRootLineFields']` to include
-field. In order that you can use this function, your field-name
+:ref:`$GLOBALS['TYPO3_CONF_VARS']['FE']['addRootLineFields'] <t3coreapi:typo3ConfVars_fe_addRootLineFields>` to include
+field. In order that you can use this function, your field name
 :sql:`tx_myextension_myfield` needs be included in the comma
 separated list of ['addRootLineFields']:
 
@@ -657,10 +657,10 @@ leveluid
 
 ..  _data-type-gettext-leveluid-example:
 
-Example: Get the id of the root-page of the page-tree
+Example: Get the ID of the root page of the page tree
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Get the id of the root-page of the website (level zero):
+Get the ID of the root page of the website (level zero):
 
 ..  code-block:: typoscript
     :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
@@ -677,7 +677,7 @@ LLL
     :name: data-lll
     :Syntax: LLL: [fileref]:[labelkey]
 
-    Reference to a locallang (xlf, xml or php) label.  Reference consists of
+    Reference to a locallang label (:ref:`XLIFF <t3coreapi:xliff>`). Reference consists of
     [fileref]:[labelkey]
 
 Example: Get a localized label
