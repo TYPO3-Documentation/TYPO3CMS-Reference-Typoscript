@@ -650,7 +650,7 @@ leveluid
     :name: data-leveluid
     :Syntax: leveluid : [pointer, integer]
 
-    Get the UID of a page in the root-line.
+    Get the UID of a page in the root line.
 
     *   Use an absolute level with 0 or a positive integer.
     *   With a negative integer got x levels up
