@@ -6,49 +6,46 @@
 Data / getText
 ==============
 
-..  confval:: data
-    :name: data
+The `getText` data type is some kind of tool box allowing to retrieve
+values from a variety of sources, for example from `GET`/`POST` variables, from
+registers, values from the page tree, items in the page menus, records
+from any database table, etc.
 
-    The getText data type is some kind of tool box allowing to retrieve
-    values from a variety of sources, e.g. from GET/POST variables, from
-    registers, values from the page tree, items in the page menus, records
-    from any database table, etc.
+The general syntax is as follows:
 
-    The general syntax is as follows:
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-    ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    lib.foo.data = <key> : <code>
 
-        lib.foo.data = <key> : <code>
+where :typoscript:`<key>` indicates the source and :typoscript:`<code>` is some form of path or
+pointer to the value, which depends on the key used. The various keys and
+their possible codes are described below.
 
-    where :typoscript:`<key>` indicates the source and :typoscript:`<code>` is some form of path or
-    pointer to the value, which depends on the key used. The various keys and
-    their possible codes are described below.
+The :typoscript:`code` can contain pipe characters :typoscript:`|` to separate keys
+in a multidimensional array. This e.g. works with :typoscript:`TSFE`:
 
-    The :typoscript:`code` can contain pipe characters :typoscript:`|` to separate keys
-    in a multidimensional array. This e.g. works with :typoscript:`TSFE`:
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-    ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    lib.foo.data = TSFE : fe_user|user|username
 
-        lib.foo.data = TSFE : fe_user|user|username
+Some codes work with a different separator, which is documented right at the
+code.
+Spaces around the colon (:typoscript:`:`) are irrelevant. The :typoscript:`key` is
+case-insensitive.
 
-    Some codes work with a different separator, which is documented right at the
-    code.
-    Spaces around the colon (:typoscript:`:`) are irrelevant. The :typoscript:`key` is
-    case-insensitive.
+By separating the value of getText with :typoscript:`//` (double slash) a number of
+codes can be supplied and getText will return the first one, which is not
+empty ("" or zero).
 
-    By separating the value of getText with :typoscript:`//` (double slash) a number of
-    codes can be supplied and getText will return the first one, which is not
-    empty ("" or zero).
+To get the content of the field "header". If "header is empty, "title" is
+retrieved. If "title" is empty as well, it finally gets the field "uid":
 
-    To get the content of the field "header". If "header is empty, "title" is
-    retrieved. If "title" is empty as well, it finally gets the field "uid":
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-    ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-        lib.foo.data = field : header // field : title // field : uid
+    lib.foo.data = field : header // field : title // field : uid
 
 
 Properties
@@ -107,8 +104,6 @@ cObj
 Example: Get the number of the current cObject record
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Get the number of the current cObject record:
-
 ..  code-block:: typoscript
     :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
@@ -137,8 +132,6 @@ context
 Example: Retrieve current workspace ID
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Retrieve current workspace id:
-
 ..  code-block:: typoscript
     :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
@@ -161,8 +154,6 @@ current
 Example: Get the current value
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Get the current value:
-
 ..  code-block:: typoscript
     :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
@@ -183,8 +174,6 @@ date
 
 Example:  Get the current time formatted dd-mm-yy
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Get the current time formatted dd-mm-yy:
 
 ..  code-block:: typoscript
     :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
@@ -251,7 +240,6 @@ debug
 Example: Debug the current root-line
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-
 Outputs the current root-line visually in HTML:
 
 ..  code-block:: typoscript
@@ -285,11 +273,8 @@ field
 
 ..  _data-type-gettext-field-example:
 
-Examples
-~~~~~~~~
-
 Example: Get header data
-^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 Get content from :php:`$cObj->data['header']`:
 
@@ -299,7 +284,7 @@ Get content from :php:`$cObj->data['header']`:
     lib.foo.data = field : header
 
 Example: Get data of a field
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Get content from :php:`$cObj->data['fieldname']['level1']['level2']`:
 
@@ -622,8 +607,8 @@ leveltitle
     *   With a negative integer got x levels up
     *   The slide parameter slides until there is a non-empty value found.
 
-Example: Get the title of a page up in the rootline
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Example: Get the title of a page up in the root line
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Get the title of the page on the first level of the root line:
 
@@ -683,7 +668,7 @@ LLL
 Example: Get a localized label
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Get localized label for logout button:
+Get the localized label for the logout button:
 
 ..  code-block:: typoscript
     :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
@@ -706,8 +691,6 @@ page
 Example: Get the current page title
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Get the current page title:
-
 ..  code-block:: typoscript
     :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
@@ -727,8 +710,6 @@ pagelayout
 
 Example: Get the current backend layout
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Get the current backend layout:
 
 ..  code-block:: typoscript
     :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
@@ -774,7 +755,7 @@ path
 Example: Resolve the path to a file
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Get path to file rsaauth.js (inside extension rsaauth) relative to siteroot:
+Get path to file `rsaauth.js` (inside extension rsaauth) relative to siteroot:
 
 ..  code-block:: typoscript
     :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
@@ -1029,8 +1010,6 @@ TSFE
 
 Example: Get the username field of the current frontend user
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Get the "username" field of the current FE user:
 
 ..  code-block:: typoscript
     :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
