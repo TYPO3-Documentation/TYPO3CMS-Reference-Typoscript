@@ -229,7 +229,7 @@ parameter `myContentId`:
 
 ..  note::
     It is safe to directly use a client-/user-provided input for the id of a DB
-    record here. The function :php:`ContentObjectRenderer->getData` internally
+    record here. The function :php:`ContentObjectRenderer->getData()` internally
     calls the function :php:`PageRepository->getRawRecord`, which converts the
     parameter to int via :php:`QueryBuilder->createNamedParameter`
 
