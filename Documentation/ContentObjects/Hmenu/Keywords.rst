@@ -1,6 +1,6 @@
-.. include:: /Includes.rst.txt
-.. index:: HMENU; special = keywords
-.. _hmenu-special-keywords:
+..  include:: /Includes.rst.txt
+..  index:: HMENU; special = keywords
+..  _hmenu-special-keywords:
 
 =================================
 Keywords - menu of related pages
@@ -11,150 +11,128 @@ on the current page.
 
 Mount pages are supported.
 
-.. contents::
-   :local:
+..  contents::
+    :local:
+
+..  _hmenu-special-keywords-properties:
 
 Properties
 ==========
 
-.. _hmenu-special-keywords-value:
+..  _hmenu-special-keywords-value:
 
 special.value
 -------------
 
-.. ### BEGIN~OF~TABLE ###
+..  confval:: special.value
+    :name: hmenu-keywords-special-value
+    :type: integer /:ref:`stdWrap <stdwrap>`
 
-.. container:: table-row
+    UID of the page for which related pages by keyword should be found.
 
-   Property
-         special.value
+..  _hmenu-special-keywords-value-example:
 
-   Data type
-         integer /:ref:`stdWrap <stdwrap>`
+Example: Find related pages of the current page
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-   Description
-         Page for which keywords to find similar pages
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-         **Example:**
+    lib.relatedPagesMenu = HMENU
+    lib.relatedPagesMenu {
+        special = keywords
+        special {
+            value.data = TSFE:id
+            entryLevel = 1
+            mode = manual
+        }
+        // render the menu
+    }
 
-         .. code-block:: typoscript
-            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-            lib.relatedPagesMenu = HMENU
-            lib.relatedPagesMenu {
-              special = keywords
-              special {
-                value.data = TSFE:id
-                entryLevel = 1
-                mode = manual
-              }
-              // render the menu
-            }
-
-.. _hmenu-special-keywords-mode:
+..  _hmenu-special-keywords-mode:
 
 special.mode
 -------------
 
-.. container:: table-row
+..  confval:: special.mode
+    :name: hmenu-keywords-special-mode
+    :type: string
+    :Default: `SYS_LASTCHANGED`
 
-   Property
-         special.mode
+    Which field in the :sql:`pages` table should be used for sorting?
 
-   Data type
-         string
+    Possible values are:
 
-   Default
-         SYS\_LASTCHANGED
+    `SYS_LASTCHANGED`
+        Is updated to the youngest time stamp of the
+        records on the page when a page is generated.
 
-   Description
-         Which field in the pages table to use for sorting.
+    `manual` or `lastUpdated`
+        Uses the field :sql:`lastUpdated`, which
+        can be set manually in the page record.
 
-         Possible values are:
+    `tstamp`
+        Uses the :sql:`tstamp` field of the page record, which is set
+        automatically when the record is changed.
 
-         SYS\_LASTCHANGED:
-            Is updated to the youngest tstamp of the
-            records on the page when a page is generated.
+    `crdate`
+        Uses the :sql:`crdate` field of the page record. This field is set
+        once on creation of the record and left unchanged afterwards.
 
-         manual or lastUpdated:
-            Uses the field "lastUpdated", which
-            can be set manually in the page-record.
-
-         tstamp:
-            Uses the "tstamp"-field of the pagerecord, which is set
-            automatically when the record is changed.
-
-         crdate:
-            Uses the "crdate"-field of the pagerecord.
-
-         starttime:
-            Uses the starttime field.
+    `starttime`
+        Uses the :sql:`starttime` field.
 
 
-.. _hmenu-special-keywords-entrylevel:
+..  _hmenu-special-keywords-entrylevel:
 
 special.entryLevel
 -------------------
 
-.. container:: table-row
+..  confval:: special.entryLevel
+    :name: hmenu-keywords-special-entryLevel
+    :type: integer
 
-   Property
-         special.entryLevel
+    Where in the root line the search begins.
 
-   Data type
-         integer
+    See property :ref:`entryLevel in the HMENU <hmenu-entrylevel>`.
 
-   Description
-         Where in the rootline the search begins.
-
-         See property :ref:`entryLevel in the HMENU <hmenu-entrylevel>`.
-
-.. _hmenu-special-keywords-depth:
+..  _hmenu-special-keywords-depth:
 
 special.depth
 --------------
 
-.. container:: table-row
+..  confval:: special.depth
+    :name: hmenu-keywords-special-depth
+    :type: integer
+    :Default: 20
 
-   Property
-         special.depth
-
-   Data type
-         integer
-
-   Default
-         20
-
-   Description
-         (same as in section "special = updated")
+    Same as in section :ref:`"special = updated" <hmenu-special-updated-depth>`.
 
 
-.. _hmenu-special-keywords-limit:
+..  _hmenu-special-keywords-limit:
 
 special.limit
 --------------
 
-.. container:: table-row
+..  confval:: special.limit
+    :name: hmenu-keywords-special-limit
+    :type: integer
+    :Default: 10
 
-   Property
-         special.limit
-
-   Data type
-         integer
-
-   Default
-         10
-
-   Description
-         (same as in section "special = updated")
+    Maximal number of items in the menu. Default is 10, maximum is 100.
 
 
-.. _hmenu-special-keywords-excludenosearchpages:
+..  _hmenu-special-keywords-excludenosearchpages:
 
 special.excludeNoSearchPages
 -----------------------------
 
-.. container:: table-row
+..  confval:: special.excludeNoSearchPages
+    :name: hmenu-keywords-special-excludeNoSearchPages
+    :type: boolean
+    :Default: false
+
+..  container:: table-row
 
    Property
          special.excludeNoSearchPages
@@ -163,105 +141,73 @@ special.excludeNoSearchPages
          boolean
 
    Description
-         (same as in section "special = updated")
+         If set, pages marked `No search` are not included.
 
-.. _hmenu-special-keywords-begin:
+..  _hmenu-special-keywords-begin:
 
 special.begin
 --------------
 
-.. container:: table-row
+..  confval:: special.begin
+    :name: hmenu-keywords-special-begin
+    :type: boolean
 
-   Property
-         special.begin
+    ..  TODO: What does this do?
 
-   Data type
-         boolean
-
-   Description
-         (same as in section "special = updated")
-
-.. _hmenu-special-keywords-setkeywords:
+..  _hmenu-special-keywords-setkeywords:
 
 special.setKeywords
 --------------------
 
-.. container:: table-row
+..  confval:: special.setKeywords
+    :name: hmenu-keywords-special-setKeywords
+    :type: string /:ref:`stdWrap <stdwrap>`
 
-   Property
-         special.setKeywords
+    Lets you define the keywords manually by defining them as a comma-
+    separated list. If this property is defined, it overrides the default,
+    which is the keywords of the current page.
 
-   Data type
-         string /:ref:`stdWrap <stdwrap>`
-
-   Description
-         Lets you define the keywords manually by defining them as a comma-
-         separated list. If this property is defined, it overrides the default,
-         which is the keywords of the current page.
-
-.. _hmenu-special-keywords-keywordsfield:
+..  _hmenu-special-keywords-keywordsfield:
 
 special.keywordsField
 ----------------------
 
-.. container:: table-row
+..  confval:: special.keywordsField
+    :name: hmenu-keywords-special-setKeywords
+    :type: string
+    :Default: `keywords`
 
-   Property
-         special.keywordsField
+    Defines the field in the :sql:`pages` table in which to search for the
+    keywords. Default is the field name :sql:`keyword`. No check is done to see
+    if the field you enter here exists, so make sure to enter an existing field.
 
-   Data type
-         string
-
-   Default
-         keywords
-
-   Description
-         Defines the field in the pages table in which to search for the
-         keywords. Default is the field name "keyword". No check is done to see
-         if the field you enter here exists, so make sure to enter an existing field!
-
-
-.. _hmenu-special-keywords-sourcefield:
+..  _hmenu-special-keywords-sourcefield:
 
 special.keywordsField.sourceField
 ----------------------------------
 
-.. container:: table-row
+..  confval:: special.keywordsField.sourceField
+    :name: hmenu-keywords-special-setKeywords-sourceField
+    :type: string
+    :Default: `keywords`
 
-   Property
-         special.keywordsField.sourceField
+    Defines the field from the current page from which to take the
+    keywords being matched. The default is :sql:`keyword`. (Notice that
+    :confval:`hmenu-keywords-special-setKeywords` is only setting the
+    page record field to *search in*!)
 
-   Data type
-         string
+..  _hmenu-special-keywords-examples:
 
-   Default
-         keywords
-
-   Description
-         Defines the field from the current page from which to take the
-         keywords being matched. The default is "keyword". (Notice that
-         ".keywordsField" is only setting the page-record field to *search
-         in*!)
-
-
-
-.. ###### END~OF~TABLE ######
-
-[tsref:(cObject).HMENU.special = keywords]
-
-Example
-=======
-
-Menu of related pages
-----------------------
+Example: Menu of related pages
+==============================
 
 The content element :guilabel:`Menu > Related pages` provided by the system
 Extension EXT:fluid_styled_content is configured with a :php:`MenuProcessor`
 which is based on the options of the :ref:`HMENU <cobj-hmenu>` and provides
 all its properties:
 
-.. include:: /CodeSnippets/Menu/TypoScript/MenuRelatedPages.rst.txt
+..  include:: /CodeSnippets/Menu/TypoScript/MenuRelatedPages.rst.txt
 
 The following Fluid template can be used to style the menu:
 
-.. include:: /CodeSnippets/Menu/Template/MenuRelatedPages.rst.txt
+..  include:: /CodeSnippets/Menu/Template/MenuRelatedPages.rst.txt
