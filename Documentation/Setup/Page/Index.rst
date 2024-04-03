@@ -149,13 +149,13 @@ Properties
     :local:
 
 ..  index:: PAGE; Content objects
-..  _setup-page-1-2-3-4:
+..  _setup-page-array:
 
 1,2,3,4...
 ----------
 
 ..  confval:: 1,2,3,4...
-    :name: page-index
+    :name: page-array
     :type: :ref:`cObject <data-type-cobject>`
 
     These properties can be used to define any number of objects,
@@ -170,7 +170,7 @@ Properties
     in the future. Therefore you will often see that people use the number
     10 and no number 1 is found.
 
-..  _setup-page-1-2-3-4-example:
+..  _setup-page-array-example:
 
 Example: Render "Hello World"
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
