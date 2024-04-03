@@ -1,11 +1,11 @@
-.. include:: /Includes.rst.txt
+..  include:: /Includes.rst.txt
 
-.. index:: HMENU; special = categories
-.. _hmenu-special-categories:
+..  index:: HMENU; special = categories
+..  _hmenu-special-categories:
 
-==================
+================
 Categories HMENU
-==================
+================
 
 Makes a menu of pages belonging to one or more categories. If a page
 belongs to several of the selected categories, it will appear only once.
@@ -17,20 +17,22 @@ as a comma-separated list of uid's. It can be accessed with
 :ref:`stdWrap.field <stdwrap-field>` or :ref:`getText <data-type-gettext-field>`
 like any other field.
 
-.. contents::
-   :local:
+..  contents::
+    :local:
+
+..  _hmenu-special-categories-properties:
 
 Properties
 ==========
 
-.. _hmenu-special-categories-value:
+..  _hmenu-special-categories-value:
 
 special.value
 --------------
 
-.. ### BEGIN~OF~TABLE ###
+..  ### BEGIN~OF~TABLE ###
 
-.. container:: table-row
+..  container:: table-row
 
    Property
          special.value
@@ -43,7 +45,7 @@ special.value
 
          **Example:**
 
-         .. code-block:: typoscript
+         ..  code-block:: typoscript
 
             20 = HMENU
             20 {
@@ -55,12 +57,12 @@ special.value
             	}
             }
 
-.. _hmenu-special-categories-relation:
+..  _hmenu-special-categories-relation:
 
 special.relation
 -----------------
 
-.. container:: table-row
+..  container:: table-row
 
    Property
          special.relation
@@ -76,13 +78,13 @@ special.relation
          building the list of categorized pages, as there can
          be several such fields on a given table.
 
-.. _hmenu-special-categories-sorting:
+..  _hmenu-special-categories-sorting:
 
 special.sorting
 ----------------
 
 
-.. container:: table-row
+..  container:: table-row
 
    Property
          special.sorting
@@ -97,12 +99,12 @@ special.sorting
 
          If an unknown field is defined, the pages will not be sorted.
 
-.. _hmenu-special-categories-order:
+..  _hmenu-special-categories-order:
 
 special.order
 --------------
 
-.. container:: table-row
+..  container:: table-row
 
    Property
          special.order
@@ -120,7 +122,7 @@ special.order
 
 
 
-.. ###### END~OF~TABLE ######
+..  ###### END~OF~TABLE ######
 
 [tsref:(cObject).HMENU.special = categories]
 
@@ -136,8 +138,8 @@ extension EXT:fluid_styled_content is configured with a :php:`MenuProcessor`
 which is based on the options of the :ref:`HMENU <cobj-hmenu>` and provides
 all its properties:
 
-.. include:: /CodeSnippets/Menu/TypoScript/MenuCategorizedPages.rst.txt
+..  include:: /CodeSnippets/Menu/TypoScript/MenuCategorizedPages.rst.txt
 
 The following Fluid template can be used to style the menu:
 
-.. include:: /CodeSnippets/Menu/Template/MenuCategorizedPages.rst.txt
+..  include:: /CodeSnippets/Menu/Template/MenuCategorizedPages.rst.txt
