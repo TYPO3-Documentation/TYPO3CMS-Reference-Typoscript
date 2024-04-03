@@ -41,7 +41,7 @@ namespace. By convention settings should go in the subsection
 Options for Extbase backend modules
 ===================================
 
-Most configuration options that can be done for Extbase frontend plugins
+Most configuration options that can be done for :ref:`Extbase <t3coreapi:extbase>` frontend plugins
 can also be done for Extbase backend modules:
 
 ..  contents::
@@ -167,7 +167,8 @@ Register your :doc:`typo3/cms-form:Index` configuration for the backend via Typo
     module.tx_form {
         settings {
             yamlConfigurations {
-                100 = EXT:my_extension/Configuration/Form/CustomFormSetup.yaml
+                # Use the current timestamp as key to avoid accidental overwriting
+                1712163960 = EXT:my_extension/Configuration/Form/CustomFormSetup.yaml
             }
         }
     }
