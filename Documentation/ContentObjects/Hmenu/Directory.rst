@@ -1,6 +1,6 @@
-.. include:: /Includes.rst.txt
-.. index:: HMENU; special = directory
-.. _hmenu-special-directory:
+..  include:: /Includes.rst.txt
+..  index:: HMENU; special = directory
+..  _hmenu-special-directory:
 
 ==================================
 Directory menu - menu of subpages
@@ -16,61 +16,49 @@ page as meta menu or footer menu.
 
 Mount pages are supported.
 
-.. contents::
-   :local:
+..  contents::
+    :local:
+
+..  _hmenu-special-directory-properties:
 
 Properties
 ==========
 
-.. ### BEGIN~OF~TABLE ###
-
-.. _hmenu-special-directory-value:
+..  _hmenu-special-directory-value:
 
 special.value
 -------------
 
-.. container:: table-row
+..  confval:: special.value
+    :name: hmenu-directory-special-value
+    :type: Comma separated list of page IDs /:ref:`stdWrap <stdwrap>`
+    :Default: current page ID
 
-   Property
-      special.value
+    This will generate a menu of all pages with pid = 35 and pid = 56.
 
-   Data type
-      list of page ids /:ref:`stdWrap <stdwrap>`
+    ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-   Default
-      current page id
-
-   Description
-      This will generate a menu of all pages with pid = 35 and pid = 56.
-
-      .. code-block:: typoscript
-         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-         lib.metaMenu = HMENU
-         lib.metaMenu {
+        lib.metaMenu = HMENU
+        lib.metaMenu {
             special = directory
             special.value = 35, 56
             // render the menu
-         }
-
-.. ###### END~OF~TABLE ######
-
-[tsref:(cObject).HMENU.special = directory]
+        }
 
 
-Example
-=======
+..  _hmenu-special-directory-example:
 
-Menu of all subpages
---------------------
+Example: Menu of all subpages
+=============================
 
 The content element :guilabel:`Menu > Subpages` provided by the system
 extension EXT:fluid_styled_content is configured with a :php:`MenuProcessor`
 which is based on the options of the :ref:`HMENU <cobj-hmenu>` and provides
 all its properties:
 
-.. include:: /CodeSnippets/Menu/TypoScript/MenuSubpages.rst.txt
+..  include:: /CodeSnippets/Menu/TypoScript/MenuSubpages.rst.txt
 
 The following Fluid template can be used to style the menu:
 
-.. include:: /CodeSnippets/Menu/Template/MenuSubpages.rst.txt
+..  include:: /CodeSnippets/Menu/Template/MenuSubpages.rst.txt
