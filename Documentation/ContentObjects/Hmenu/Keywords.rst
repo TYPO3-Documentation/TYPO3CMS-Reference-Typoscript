@@ -173,7 +173,7 @@ special.keywordsField
 ----------------------
 
 ..  confval:: special.keywordsField
-    :name: hmenu-keywords-special-setKeywords
+    :name: hmenu-keywords-special-keywordsField
     :type: string
     :Default: `keywords`
 
