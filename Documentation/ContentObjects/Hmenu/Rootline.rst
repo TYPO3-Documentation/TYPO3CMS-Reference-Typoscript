@@ -84,7 +84,7 @@ special.targets.[level number]
 ------------------------------
 
 ..  confval:: special.targets.[level number]
-    :name: hmenu-rootline-special-reverseOrder
+    :name: hmenu-rootline-special-targets
     :type: boolean
     :Default: `false`
 
