@@ -65,8 +65,8 @@ Example: Create a language menu with pure TypoScript
 Note on item states
 ====================
 
-When `TSFE->sys_language_uid` matches the UID of an
-element the state is set to `ACT`, otherwise `NO`. However, if a page
+When the language of the menu element matches the current language of the page
+displayed, the state is set to `ACT`, otherwise `NO`. However, if a page
 is not available due to the pages "Localization settings" (which can
 disable translations) or if no Alternative Page Language record was
 found (can be disabled with `.normalWhenNoLanguage`, see below) the
