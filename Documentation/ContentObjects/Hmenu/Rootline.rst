@@ -44,7 +44,7 @@ special.range
     :type: string /:ref:`stdWrap <stdwrap>`
     :Syntax: `[begin-level] | [end-level]`
 
-    `[begin-level]` | `[end-level]` are interpreted like the
+    `[begin-level] | [end-level]` are interpreted like the
     :ref:`.entryLevel <hmenu-entrylevel>` for an `HMENU`).
 
 ..  _hmenu-special-rootline-range-example:
