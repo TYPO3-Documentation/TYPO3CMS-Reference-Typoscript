@@ -12,6 +12,7 @@ optionSplit
    :backlinks: top
    :class: compact
 
+.. _intro:
 
 Introduction
 ============
@@ -57,7 +58,7 @@ In other words:
 
 In the following we'll try to shed light on this.
 
-
+.. _php-code:
 PHP-Code
 ========
 
@@ -68,12 +69,13 @@ Lookout for usages of the function
 
 .. highlight:: none
 
-
+.. _terminology:
 Terminology
 ===========
 
 It's useful to agree about some terms first: delimiter string, mainpart, subpart.
 
+.. _main-parts:
 Mainparts
 ----------
 
@@ -105,7 +107,7 @@ the cases:
 2. We have mainparts A and R if `|*|` occurs exactly once.
 3. We have mainparts A, R and Z if `|*|` occurs - at least - twice.
 
-
+.. _sub-parts:
 Subparts
 --------
 
@@ -126,13 +128,13 @@ Example:
 **Rule:** There can be any number of subparts.
 
 
-
+.. _examples:
 Full example to see how it works
 ================================
 
 Let's look at a full example that visualizes what we have said so far.
 
-
+.. _example-three-by-three-items:
 Three by three items
 --------------------
 
@@ -209,10 +211,10 @@ From the full example we can deduce the **builtin ruleset**:
 
 8. If mainpart R is empty the last subpart of A is repeated.
 
-
+.. _more-examples:
 More Examples
 =============
-
+.. _example-three-by-two-items:
 Three by two items
 ------------------
 
@@ -246,7 +248,7 @@ Rules 1 to 7 define this behavior:
       19     a b r s r s r s r s r s r s r s r y z
       20     a b r s r s r s r s r s r s r s r s y z
 
-
+.. _example-three-by-one-item:
 Three by one items
 ------------------
 
@@ -281,7 +283,7 @@ And again:
       20     a r r r r r r r r r r r r r r r r r r z
 
 
-
+.. _example-three-by-three-items:
 Two by three items
 ------------------
 
@@ -318,7 +320,7 @@ According to rules 1 to 7 we get:
       19     a b c r s t r s t r s t r s t r s t r
       20     a b c r s t r s t r s t r s t r s t r s
 
-
+.. _example-two-by-two-items:
 Two by two items
 ----------------
 
@@ -352,7 +354,7 @@ According to rules 1 to 7 we get:
       19     a b r s r s r s r s r s r s r s r s r
       20     a b r s r s r s r s r s r s r s r s r s
 
-
+.. _example-two-by-one-item:
 Two by one items
 ----------------
 
@@ -387,7 +389,7 @@ According to rules 1 to 7 we get:
       20     a r r r r r r r r r r r r r r r r r r r
 
 
-
+.. _example-one-by-one-item:
 One by one items
 ----------------
 
@@ -423,7 +425,7 @@ A with one subpart a:
       20     a a a a a a a a a a a a a a a a a a a a
 
 
-
+.. _example-one-by-two-items:
 One by two items
 ----------------
 
@@ -457,7 +459,7 @@ One mainpart A with two subparts a and b:
       19     a b b b b b b b b b b b b b b b b b b
       20     a b b b b b b b b b b b b b b b b b b b
 
-
+.. _example-one-by-three-items:
 One by three items
 ------------------
 
@@ -491,6 +493,7 @@ More:
       19     a b c c c c c c c c c c c c c c c c c
       20     a b c c c c c c c c c c c c c c c c c c
 
+.. _example-one-by-four-items:
 One by four items
 -----------------
 
@@ -525,11 +528,11 @@ More:
       20     a b c d d d d d d d d d d d d d d d d d
 
 
-
+.. _tricky-examples:
 More examples: Tricky stuff
 ===========================
 
-
+.. _tricky-examples-three-items-a-no-item-r-three-items-z:
 Three items A, no item R, three items Z
 ---------------------------------------
 
@@ -571,7 +574,7 @@ As result we get:
 
 8. If mainpart R is empty the last subpart of A is repeated.
 
-
+.. _tricky-examples-one-item-a-no-item-r-one-item-z:
 One item A, no item R, one items Z
 -----------------------------------
 
@@ -606,7 +609,7 @@ With rules 1 to 8 we get:
       20     a a a a a a a a a a a a a a a a a a a z
 
 
-
+.. _tricky-examples-one-item-a-one-item-r-one-item-z:
 One item A, one (unexpected!?) item R, one item Z
 -------------------------------------------------
 
@@ -645,7 +648,7 @@ What happens if there IS a space? Normal behavior of a three by one case! :
       19     a                  z
       20     a                   z
 
-
+.. _more:
 More
 ----
 
@@ -911,7 +914,7 @@ More
       20     a r    r    r    r    r  z
 
 
-
+.. _test-code-1:
 Test Code 1 (TypoScript)
 ========================
 
@@ -1220,7 +1223,7 @@ Test Code 1 (TypoScript)
      }
    }
 
-
+.. _test-code-1-result:
 Test Code 1 Result
 ==================
 
@@ -1245,7 +1248,7 @@ Test Code 1 Result
    a || b |*| c |*| d || e  [e_]  [d_e_]  [a_d_e_]  [a_b_d_e_]  [a_b_c_d_e_]  [a_b_c_c_d_e_]  [a_b_c_c_c_d_e_]  [a_b_c_c_c_c_d_e_]  [a_b_c_c_c_c_c_d_e_]
 
 
-
+.. _test-code-2:
 Test Code 2 (TypoScript)
 ========================
 
@@ -1451,7 +1454,7 @@ This is the code that was used to produce many of the above examples.
        }
    }
 
-
+.. _test-code-2-result:
 Test Code 2 Result
 ==================
 
