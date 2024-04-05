@@ -1,8 +1,8 @@
-.. include:: /Includes.rst.txt
-.. index::
+..  include:: /Includes.rst.txt
+..  index::
    Top-level objects; plugin
    plugin
-.. _plugin:
+..  _plugin:
 
 ======
 plugin
@@ -20,68 +20,57 @@ which means that they have at least 1 or 2 reserved properties.
 Furthermore this table outlines some other default properties.
 Generally system properties are prefixed with an underscore:
 
-.. contents::
-   :local:
+..  contents::
+    :local:
+
+..  _plugin-properties:
 
 Properties for all frontend plugin types
 ========================================
 
-.. ### BEGIN~OF~TABLE ###
 
-.. _setup-plugin-userfunc:
+..  _setup-plugin-userfunc:
 
 userFunc
 --------
 
-.. container:: table-row
+..  confval:: userFunc
+    :name: plugin-userFunc
+    :type: (array of keys)
 
-   Property
-         userFunc
+    Property setting up the :ref:`cobj-user` object of the plugin.
 
-   Data type
-         (array of keys)
-
-   Description
-         Property setting up the :ref:`cobj-user` object of the plugin.
-
-
-
-.. _setup-plugin-css-default-style:
+..  _setup-plugin-css-default-style:
 
 \_CSS\_DEFAULT\_STYLE
 ---------------------
 
-.. container:: table-row
+..  confval:: _CSS_DEFAULT_STYLE
+    :name: plugin-css-default-style
+    :type: :ref:`data-type-string` / :ref:`stdwrap`
 
-   Property
-         \_CSS\_DEFAULT\_STYLE
+    Use this to have some default CSS styles inserted in the header
+    section of the document. :typoscript:`_CSS_DEFAULT_STYLE` outputs a set of
+    default styles, just because an extension is installed. Most likely
+    this will provide an acceptable default display from the plugin, but
+    should ideally be cleared and moved to an external stylesheet.
 
-   Data type
-         :ref:`data-type-string` / :ref:`stdwrap`
+    This value is read by the frontend :php:`RequestHandler` script when
+    collecting the CSS of the document to be rendered.
 
-   Description
-         Use this to have some default CSS styles inserted in the header
-         section of the document. :typoscript:`_CSS_DEFAULT_STYLE` outputs a set of
-         default styles, just because an extension is installed. Most likely
-         this will provide an acceptable default display from the plugin, but
-         should ideally be cleared and moved to an external stylesheet.
+    This is for example used by *frontend* and *indexed_search*. Their
+    default styles can be removed with:
 
-         This value is read by the frontend :php:`RequestHandler` script when
-         collecting the CSS of the document to be rendered.
+    ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-         This is e.g. used by *frontend* and *indexed_search*. Their
-         default styles can be removed with:
+        plugin.tx_frontend._CSS_DEFAULT_STYLE >
+        plugin.tx_indexedsearch._CSS_DEFAULT_STYLE >
 
-         .. code-block:: typoscript
-            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-            plugin.tx_frontend._CSS_DEFAULT_STYLE >
-            plugin.tx_indexedsearch._CSS_DEFAULT_STYLE >
-
-         However, you will then have to define according styles yourself.
+    However, you will then have to define according styles yourself.
 
 
-.. _setup-plugin-extbase:
+..  _setup-plugin-extbase:
 
 Properties for all frontend plugins based on Extbase
 ====================================================
@@ -94,158 +83,147 @@ plugins.
 General
 -------
 
-.. _setup-plugin-configuration-ignoreFlexFormSettingsIfEmpty:
+..  _setup-plugin-configuration-ignoreFlexFormSettingsIfEmpty:
 
 ignoreFlexFormSettingsIfEmpty
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ..  versionadded:: 12.3
 
-..  container:: table-row
+..  confval:: ignoreFlexFormSettingsIfEmpty
+    :name: plugin-ignoreFlexFormSettingsIfEmpty
+    :type: :ref:`data-type-string`
 
-    Property
-        ignoreFlexFormSettingsIfEmpty
+    Define :ref:`FlexForm <t3coreapi:flexforms>` settings that will be
+    ignored in the extension settings merge process, if their value is
+    considered empty (either an empty string or a string containing `0`).
 
-    Data type
-        :ref:`data-type-string`
+    Additionally, there is the PSR-14 event
+    :ref:`BeforeFlexFormConfigurationOverrideEvent <t3coreapi:BeforeFlexFormConfigurationOverrideEvent>`
+    available to further manipulate the merged configuration after standard
+    override logic is applied.
 
-    Description
-        Define :ref:`FlexForm <t3coreapi:flexforms>` settings that will be
-        ignored in the extension settings merge process, if their value is
-        considered empty (either an empty string or a string containing `0`).
+..  _setup-plugin-configuration-ignoreFlexFormSettingsIfEmpty-example:
 
-        Additionally, there is the PSR-14 event
-        :ref:`BeforeFlexFormConfigurationOverrideEvent <t3coreapi:BeforeFlexFormConfigurationOverrideEvent>`
-        available to further manipulate the merged configuration after standard
-        override logic is applied.
+Examples: Ignore certain FlexForm settings if empty
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-    Examples
-        Definition for *all* plugins of an extension:
+Definition for *all* plugins of an extension:
 
-        ..  code-block:: typoscript
-            :caption: EXT:my_extension/Configuration/TypoScript/setup.typoscript
+..  code-block:: typoscript
+    :caption: EXT:my_extension/Configuration/TypoScript/setup.typoscript
 
-            plugin.tx_myextension.ignoreFlexFormSettingsIfEmpty = field1,field2
+    plugin.tx_myextension.ignoreFlexFormSettingsIfEmpty = field1,field2
 
-        Definition for *one* plugin of an extension:
+Definition for *one* plugin of an extension:
 
-        ..  code-block:: typoscript
-            :caption: EXT:my_extension/Configuration/TypoScript/setup.typoscript
+..  code-block:: typoscript
+    :caption: EXT:my_extension/Configuration/TypoScript/setup.typoscript
 
-            plugin.tx_myextension_myplugin.ignoreFlexFormSettingsIfEmpty = field1,field2
+    plugin.tx_myextension_myplugin.ignoreFlexFormSettingsIfEmpty = field1,field2
 
-        If an extension already defined :typoscript:`ignoreFlexFormSettingsIfEmpty`,
-        integrators are advised to use :typoscript:`addToList` or
-        :typoscript:`removeFromList` to modify existing settings:
+If an extension already defined :typoscript:`ignoreFlexFormSettingsIfEmpty`,
+integrators are advised to use :typoscript:`addToList` or
+:typoscript:`removeFromList` to modify existing settings:
 
-        ..  code-block:: typoscript
-            :caption: EXT:my_extension/Configuration/TypoScript/setup.typoscript
+..  code-block:: typoscript
+    :caption: EXT:my_extension/Configuration/TypoScript/setup.typoscript
 
-            plugin.tx_myextension_myplugin.ignoreFlexFormSettingsIfEmpty := removeFromList(field1)
-            plugin.tx_myextension_myplugin.ignoreFlexFormSettingsIfEmpty := addToList(field3)
+    plugin.tx_myextension_myplugin.ignoreFlexFormSettingsIfEmpty := removeFromList(field1)
+    plugin.tx_myextension_myplugin.ignoreFlexFormSettingsIfEmpty := addToList(field3)
 
 
-.. _extbase_typoscript_configuration-persistence:
+..  _extbase_typoscript_configuration-persistence:
 
 Persistence
 -----------
 
 Settings, relevant to the persistence layer of Extbase.
 
-.. _setup-plugin-persistence-enableAutomaticCacheClearing:
-.. _extbase_persistence-enableAutomaticCacheClearing:
+..  _setup-plugin-persistence-enableAutomaticCacheClearing:
+..  _extbase_persistence-enableAutomaticCacheClearing:
 
 persistence.enableAutomaticCacheClearing
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. container:: table-row
+..  confval:: persistence.enableAutomaticCacheClearing
+    :name: plugin-persistence-enableAutomaticCacheClearing
+    :type: :ref:`data-type-boolean`
+    :Default: `true`
 
-   Property
-      persistence.enableAutomaticCacheClearing
+    **Only for Extbase plugins**.
+    Enables the automatic cache clearing when changing data sets (see also
+    :ref:`t3coreapi:extbase_caching`).
 
-   Data type
-      :ref:`data-type-boolean`
+..  _extbase_persistence-enableAutomaticCacheClearing-example:
 
-   Default
-      true
+Example: Disable automatic cache clearing for Extbase plugin
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-   Description
-      **Only for Extbase plugins**.
-      Enables the automatic cache clearing when changing data sets (see also
-      :ref:`t3coreapi:extbase_caching`).
+..  code-block:: typoscript
+    :caption: EXT:blog_example/Configuration/TypoScript/setup.typoscript
 
+    plugin.tx_blogexample_admin {
+        persistence {
+            enableAutomaticCacheClearing = 0
+        }
+    }
 
-   Example
-      .. code-block:: typoscript
-         :caption: EXT:blog_example/Configuration/TypoScript/setup.typoscript
-
-         plugin.tx_blogexample_admin {
-           persistence {
-             enableAutomaticCacheClearing = 0
-           }
-         }
-
-.. _setup-plugin-persistence-storagePid:
+..  _setup-plugin-persistence-storagePid:
 
 persistence.storagePid
 ~~~~~~~~~~~~~~~~~~~~~~
 
-.. container:: table-row
+..  confval:: persistence.storagePid
+    :name: plugin-persistence-storagePid
+    :type: :ref:`data-type-string` (comma separated list of integers)
 
-   Property
-      persistence.storagePid
+    **Only for Extbase plugins**. List of page IDs, from which all records
+    are read.
 
-   Data type
-      :ref:`data-type-boolean`
+..  _setup-plugin-persistence-storagePid-example:
 
-   Default
-      true
+Example: Set storage PID for Extbase plugin
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-   Description
-      **Only for Extbase plugins**. List of Page-IDs, from which all records
-      are read.
+..  code-block:: typoscript
+    :caption: EXT:blog_example/Configuration/TypoScript/setup.typoscript
 
+    plugin.tx_blogexample {
+        persistence {
+            storagePid = 42
+        }
+    }
 
-   Example
-      .. code-block:: typoscript
-         :caption: EXT:blog_example/Configuration/TypoScript/setup.typoscript
-
-         plugin.tx_blogexample {
-           persistence {
-             storagePid = 42
-           }
-         }
-.. _setup-plugin-persistence-recursive:
+..  _setup-plugin-persistence-recursive:
 
 persistence.recursive
-~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~
 
-.. container:: table-row
+..  confval:: persistence.recursive
+    :name: plugin-persistence-recursive
+    :type: :ref:`data-type-integer`
 
-   Property
-      persistence.recursive
+    **Only for Extbase plugins**. Number of sub-levels of the
+    storagePid are read.
 
-   Data type
-      :ref:`data-type-integer`
+..  _setup-plugin-persistence-recursive-example:
 
-   Description
-      **Only for Extbase plugins**. Number of sub-levels of the 
-      storagePid are read.
+Example: Fetch records recursively from storage folder
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+..  code-block:: typoscript
+    :caption: EXT:blog_example/Configuration/TypoScript/setup.typoscript
 
-   Example
-      .. code-block:: typoscript
-         :caption: EXT:blog_example/Configuration/TypoScript/setup.typoscript
-
-         plugin.tx_blogexample {
-           persistence {
-             # Includes 4 sub-levels of the storagePid
-             recursive = 4
-           }
-         }
+    plugin.tx_blogexample {
+        persistence {
+            # Includes 4 sub-levels of the storagePid
+            recursive = 4
+        }
+    }
 
 
-.. _setup-plugin-view:
+..  _setup-plugin-view:
 
 View
 ----
@@ -258,239 +236,202 @@ root paths that will be used by Extbase to find the desired template files.
 The root paths work just like the one in the
 :ref:`FLUIDTEMPLATE <cobj-fluidtemplate-properties-templaterootpaths>`.
 
-**Example**
+..  _setup-plugin-view-example:
 
-.. code-block:: typoscript
-   :caption: EXT:blog_example/Configuration/TypoScript/setup.typoscript
+Example: Set template paths for Extbase plugin
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-   plugin.tx_blogexample {
-       view {
-           layoutRootPaths {
-               0 = EXT:blog_example/Resources/Private/Layouts/
-               10 = EXT:my_extension/Resources/Private/Layouts/
-           }
-           partialRootPaths {
-               0 = EXT:blog_example/Resources/Private/Partials/
-               10 = EXT:my_extension/Resources/Private/Partials/
-           }
-           templateRootPaths {
-               0 = EXT:blog_example/Resources/Private/Templates/
-               10 = EXT:my_extension/Resources/Private/Templates/
-           }
-       }
-   }
+..  code-block:: typoscript
+    :caption: EXT:blog_example/Configuration/TypoScript/setup.typoscript
+
+    plugin.tx_blogexample {
+        view {
+            layoutRootPaths {
+                0 = EXT:blog_example/Resources/Private/Layouts/
+                10 = EXT:my_extension/Resources/Private/Layouts/
+            }
+            partialRootPaths {
+                0 = EXT:blog_example/Resources/Private/Partials/
+                10 = EXT:my_extension/Resources/Private/Partials/
+            }
+            templateRootPaths {
+                0 = EXT:blog_example/Resources/Private/Templates/
+                10 = EXT:my_extension/Resources/Private/Templates/
+            }
+        }
+    }
 
 
-.. _setup-plugin-view-layoutRootPaths:
+..  _setup-plugin-view-layoutRootPaths:
 
 view.layoutRootPaths
 ~~~~~~~~~~~~~~~~~~~~
 
-.. container:: table-row
+..  confval:: view.layoutRootPaths.[array]
+    :name: plugin-view-layoutRootPaths
+    :type: :ref:`data-type-string`
 
-   Property
-      view.layoutRootPaths
+    **Only for Extbase plugins**. This can be used to specify the root paths
+    for all Fluid layouts. If nothing is specified, the path
+    :file:`EXT:my_extension/Resources/Private/Layouts` is used.
 
-   Data type
-      (array of indexes)
-
-   Description
-      **Only for Extbase plugins**. This can be used to specify the root paths
-      for all Fluid layouts. If nothing is specified, the path
-      :file:`EXT:my_extension/Resources/Private/Layouts` is used.
-
-.. _setup-plugin-view-partialRootPaths:
+..  _setup-plugin-view-partialRootPaths:
 
 view.partialRootPaths
 ~~~~~~~~~~~~~~~~~~~~~
 
-.. container:: table-row
+..  confval:: view.partialRootPaths.[array]
+    :name: plugin-view-partialRootPaths
+    :type: :ref:`data-type-string`
 
-   Property
-      view.partialRootPaths
+    **Only for Extbase plugins**. This can be used to specify the root
+    paths for all Fluid partials. If nothing is specified, the path
+    :file:`EXT:my_extension/Resources/Private/Partials` is used.
 
-   Data type
-      (array of indexes)
-
-   Description
-      **Only for Extbase plugins**. This can be used to specify the root
-      paths for all Fluid partials. If nothing is specified, the path
-      :file:`EXT:my_extension/Resources/Private/Partials` is used.
-
-.. _setup-plugin-view-templateRootPaths:
+..  _setup-plugin-view-templateRootPaths:
 
 view.templateRootPaths
 ~~~~~~~~~~~~~~~~~~~~~~
 
-.. container:: table-row
+..  confval:: view.templateRootPaths.[array]
+    :name: plugin-view-templateRootPaths
+    :type: :ref:`data-type-string`
 
-   Property
-      view.templateRootPaths
-
-   Data type
-      (array of indexes)
-
-   Description
-      This can be used to specify the root paths for all Fluid templates in this
-      extension. If nothing is specified, the path
-      :file:`EXT:my_extension/Resources/Private/Templates` is used.
+    **Only for Extbase plugins**. This can be used to specify the root
+    paths for all Fluid templates in this
+    plugin. If nothing is specified, the path
+    :file:`EXT:my_extension/Resources/Private/Templates` is used.
 
 
-.. _setup-plugin-view-pluginNamespace:
+..  _setup-plugin-view-pluginNamespace:
 
 view.pluginNamespace
 ~~~~~~~~~~~~~~~~~~~~
 
-.. container:: table-row
+..  confval:: view.pluginNamespace.[array]
+    :name: plugin-view-pluginNamespace
+    :type: :ref:`data-type-string`
 
-   Property
-      view.pluginNamespace
-
-   Data type
-      (array of indexes)
-
-   Description
-      This can be used to specify an alternative namespace for the plugin.
-      Use this to shorten the Extbase default plugin namespace or to access
-      arguments from other extensions by setting this option to their namespace.
+    This can be used to specify an alternative namespace for the plugin.
+    Use this to shorten the Extbase default plugin namespace or to access
+    arguments from other extensions by setting this option to their namespace.
 
 
-.. _extbase_typoscript_configuration-mvc:
+..  _extbase_typoscript_configuration-mvc:
 
 MVC
 ---
 
 These are useful MVC settings about error handling:
 
-.. _setup-plugin-mvc-callDefaultActionIfActionCantBeResolved:
+..  _setup-plugin-mvc-callDefaultActionIfActionCantBeResolved:
 
 mvc.callDefaultActionIfActionCantBeResolved
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. container:: table-row
+..  confval:: mvc.callDefaultActionIfActionCantBeResolved
+    :name: plugin-mvc-callDefaultActionIfActionCantBeResolved
+    :type: :ref:`data-type-boolean`
+    :Default: `false`
 
-   Property
-      mvc.callDefaultActionIfActionCantBeResolved
+    **Only for Extbase plugins**. If set, causes the controller to show
+    its default action if the called action is not allowed by the controller.
 
-   Data type
-      :ref:`data-type-boolean`
+..  _setup-plugin-mvc-callDefaultActionIfActionCantBeResolved-example:
 
-   Default
-      false
+Example: Call default action if action cannot be resolved
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-   Description
-      **Only for Extbase plugins**. Will cause the controller to show
-      its default action if the called action is not allowed by the controller.
+..  code-block:: typoscript
+    :caption: EXT:blog_example/Configuration/TypoScript/setup.typoscript
 
-   Example
-      .. code-block:: typoscript
-         :caption: EXT:blog_example/Configuration/TypoScript/setup.typoscript
-
-         plugin.tx_blogexample {
-           mvc {
-             callDefaultActionIfActionCantBeResolved = 1
-           }
-         }
+    plugin.tx_blogexample {
+        mvc {
+            callDefaultActionIfActionCantBeResolved = 1
+        }
+    }
 
 
-.. _setup-plugin-mvc-throwPageNotFoundExceptionIfActionCantBeResolved:
+..  _setup-plugin-mvc-throwPageNotFoundExceptionIfActionCantBeResolved:
 
 mvc.throwPageNotFoundExceptionIfActionCantBeResolved
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. container:: table-row
+..  confval:: mvc.throwPageNotFoundExceptionIfActionCantBeResolved
+    :name: plugin-mvc-throwPageNotFoundExceptionIfActionCantBeResolved
+    :type: :ref:`data-type-boolean`
+    :Default: `false`
 
-   Property
-      mvc.callDefaultActionIfActionCantBeResolved
+    Same as :ref:`setup-plugin-mvc-callDefaultActionIfActionCantBeResolved`
+    but this will raise a "page not found" error.
 
-   Data type
-      :ref:`data-type-boolean`
+..  _setup-plugin-mvc-throwPageNotFoundExceptionIfActionCantBeResolved-example:
 
-   Default
-      false
+Example: Show 404 (page not found) page if action cannot be resolved
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-   Description
-      Same as :ref:`setup-plugin-mvc-callDefaultActionIfActionCantBeResolved`
-      but this will raise a "page not found" error.
+..  code-block:: typoscript
+    :caption: EXT:blog_example/Configuration/TypoScript/setup.typoscript
 
-   Example
-      .. code-block:: typoscript
-         :caption: EXT:blog_example/Configuration/TypoScript/setup.typoscript
-
-         plugin.tx_blogexample {
-           mvc {
-             throwPageNotFoundExceptionIfActionCantBeResolved = 1
-           }
-         }
+    plugin.tx_blogexample {
+        mvc {
+            throwPageNotFoundExceptionIfActionCantBeResolved = 1
+        }
+    }
 
 
-.. _extbase_format:
+..  _extbase_format:
 
 Format
 ------
 
-.. warning::
-   Using this parameter is considered bad practice. In most cases it is better
-   use different actions for different output formats.
+..  warning::
+    Using this parameter is considered bad practice. In most cases it is better
+    use different actions for different output formats.
 
-.. container:: table-row
+..  confval:: format
+    :name: plugin-format
+    :type: :ref:`data-type-string`
+    :Default: `html`
 
-   Property
-      format
+    Define the default file ending of the template files. The template files
+    have to take care of creating the desired format output.
 
-   Data type
-      :ref:`data-type-string`
+..  _extbase_format-example:
 
-   Default
-      html
+Example: Define alternative output formats for RSS feeds
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-   Description
-      Define the default file ending of the template files. The template files
-      have to take care of creating the desired format output.
+..  code-block:: typoscript
+    :caption: EXT:blog_example/Configuration/TypoScript/setup.typoscript
 
-   Example
-      .. code-block:: typoscript
-         :caption: EXT:blog_example/Configuration/TypoScript/setup.typoscript
+    plugin.tx_blogexample_rssfeedxml {
+        // Use template List.xml
+        format = xml
+    }
+    plugin.tx_blogexample_rssfeedatom {
+        // Use template List.atom
+        format = atom
+    }
 
-         plugin.tx_blogexample_rssfeedxml {
-           // Use template List.xml
-           format = xml
-         }
-         plugin.tx_blogexample_rssfeedatom {
-           // Use template List.atom
-           format = atom
-         }
-
-
-.. _setup-plugin-local-lang-lang-key-label-key:
+..  _setup-plugin-local-lang-lang-key-label-key:
 
 \_LOCAL\_LANG.[lang-key].[label-key]
 ------------------------------------
 
-..  container:: table-row
+..  confval:: _LOCAL_LANG.[lang-key].[label-key]
+    :name: plugin-local-lang
+    :type: :ref:`data-type-string`
 
-    Property
-        \_LOCAL\_LANG.[lang-key].[label-key]
-
-    Data type
-        :ref:`data-type-string`
-
-    Description
-        Can be used to override the default language labels for Extbase plugins.
-        The 'lang-key' setup part is 'default' for the default language of the
-        website or the 2-letter (ISO 639-1) code for the language. 'label-key'
-        is the 'trans-unit id' xml value in the XLF language file which
-        resides in the path :file:`Resources/Private/Language` of the
-        extension or in the :file:`typo3conf/l10n/[lang-key]`
-        (:file:`var/labels/[lang-key]` in composer mode) subfolder of the
-        TYPO3 root folder. And on the right side of the equation sign '=' you
-        put the new value string for the language key which you want to override.
-
-    Example
-        ..  code-block:: typoscript
-            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-            plugin.tx_myext_pi1._LOCAL_LANG.de.list_mode_1 = Der erste Modus
+    Can be used to override the default language labels for Extbase plugins.
+    The `lang-key` setup part is `default` for the default language of the
+    website or the 2-letter (ISO 639-1) code for the language. `label-key`
+    is the 'trans-unit id' XML value in the XLF language file which
+    resides in the path :file:`Resources/Private/Language` of the
+    extension or in the :file:`typo3conf/l10n/[lang-key]`
+    (:file:`var/labels/[lang-key]` in composer mode) subfolder of the
+    TYPO3 root folder. And on the right side of the equation sign '=' you
+    put the new value string for the language key which you want to override.
 
     All variables, which are used inside an Extbase extension with
     the ViewHelper `<f:translate>` can that way be overwritten with
@@ -498,7 +439,17 @@ Format
     the plugin folder in the file system can be used to get an overview of
     the entries the extension uses.
 
-.. _extbase_typoscript_configuration-settings:
+..  _setup-plugin-local-lang-example:
+
+Example: Override a language key in an Extbase plugin
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+    plugin.tx_myext_pi1._LOCAL_LANG.de.list_mode_1 = Der erste Modus
+
+..  _extbase_typoscript_configuration-settings:
 
 Settings
 --------
@@ -509,5 +460,3 @@ These settings are available in the controllers as the array variable
 
 The settings for a specific plugin can be overridden by FlexForm values of the
 same name.
-
-.. ###### END~OF~TABLE ######
