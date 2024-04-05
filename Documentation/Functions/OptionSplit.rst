@@ -184,6 +184,7 @@ And this is what happens:
    19     a b c r s t r s t r s t r s t r x y z
    20     a b c r s t r s t r s t r s t r s x y z
 
+.. _optionsplit-ruleset:
 
 The optionSplit ruleset
 =======================
