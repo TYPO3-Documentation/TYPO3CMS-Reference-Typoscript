@@ -58,7 +58,7 @@ lib
 
     This top-level object name is reserved.
 
-    The top level object :typoscript:`lib` is used to store, copy and reference
+    The top-level object :typoscript:`lib` is used to store, copy and reference
     TypoScript code.
 
     Other then :confval:`tlo-temp` is not unset before the template is cached,
