@@ -51,7 +51,7 @@ Example: Use the top level object `temp` to copy code
 ..  _tlo-lib:
 
 lib
-====
+===
 
 ..  confval:: lib
     :name: tlo-lib
