@@ -20,7 +20,7 @@ temp
     This top-level object name is reserved.
 
     The top level object :typoscript:`temp` is used to store and copy
-    TypoScript code during parse-time.
+    TypoScript code during parse time.
 
     :typoscript:`temp` is unset before the template is cached, objects in it
     can therefore not be referenced. Use :confval:`tlo-lib` for that purpose.
