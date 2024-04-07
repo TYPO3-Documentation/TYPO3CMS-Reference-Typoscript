@@ -61,7 +61,7 @@ lib
     The top-level object :typoscript:`lib` is used to store, copy and reference
     TypoScript code.
 
-    Other then :confval:`tlo-temp` is not unset before the template is cached,
+    Other than :confval:`tlo-temp` is not unset before the template is cached,
     objects in it can therefore be referenced by using the operator
     :typoscript:`<=`. Just like with a :confval:`tlo-temp` object copying is
     also possible.
