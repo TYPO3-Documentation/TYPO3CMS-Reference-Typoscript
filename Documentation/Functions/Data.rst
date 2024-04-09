@@ -53,6 +53,7 @@ Properties
 
 ..  contents::
     :local:
+    :depth: 2
 
 ..  _data-type-gettext-applicationcontext:
 
