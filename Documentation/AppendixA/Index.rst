@@ -65,7 +65,7 @@ Call the function :php:`$GLOBALS['TSFE']->set_no_cache()`, if you want to
 disable caching of the page. Call this during development only! And
 call it, if the content you create may not be cached.
 
-.. note::
+..  note::
     If you make a syntax error in your script that keeps PHP
     from executing it, then the :php:`$GLOBALS['TSFE']->set_no_cache()`
     function is not executed and the page *is* cached! So in these
