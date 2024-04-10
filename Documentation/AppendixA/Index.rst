@@ -180,11 +180,6 @@ it is recommended to move to the
 TypoScriptFrontendController->page
 ----------------------------------
 
-..  versionchanged:: 13.0
-    The property has been marked as read-only. Use
-    :php:`$request->getAttribute('frontend.page.information')->getPageRecord()`
-    instead. See :ref:`t3coreapi:typo3-request-attribute-frontend-page-information`.
-
 ..  confval:: page
     :name: tsfe-page
     :type: array
