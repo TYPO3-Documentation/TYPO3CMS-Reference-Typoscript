@@ -1,11 +1,11 @@
-.. include:: /Includes.rst.txt
-.. _appendix-a:
+..  include:: /Includes.rst.txt
+..  _appendix-a:
 
 ================================
 Appendix A – PHP include scripts
 ================================
 
-.. _appendix-include-scripts:
+..  _appendix-include-scripts:
 
 Including your script
 =====================
@@ -13,37 +13,37 @@ Including your script
 This section should give you some pointers on what you can process in
 your script and which functions and variables you can access.
 
-Your script is included inside the class "ContentObjectRenderer" in the
-:file:`typo3/sysext/frontend/Classes/ContentObject/ContentObjectRenderer.php`
+Your script is included inside the class
+:php:`\TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer` in the
+:t3src:`frontend/Classes/ContentObject/ContentObjectRenderer.php`
 script. Thereby your file is a part of this object
-(ContentObjectRenderer). This is why you must return all
-content in the variable "$content" and any TypoScript configuration is
-available from the array "$conf" (it may not be set at all though, so
-check it with is\_array()!)
+(:php:`ContentObjectRenderer`). This is why you must return all
+content in the variable :php:`$content` and any TypoScript configuration is
+available from the array :php:`$conf` (it may not be set at all though, so
+check it with :php:`is_array()`)
 
 
-.. _appendix-include-content:
+..  _appendix-include-content:
 
 $content
 --------
 
 Contains the content, which was passed to the object, if any. All
-content, which you want to return, must be in this variable!
+content, which you want to return, **must** be in this variable.
 
-Remember, don't output anything (but debug code) directly in your
-script!
+Do not output anything directly in your script.
 
 
-.. _appendix-include-conf:
+..  _appendix-include-conf:
 
 $conf
 -----
 
-The array $conf contains the configuration for the USER cObject.
-Try debug($conf) to see the content printed out for debugging!
+The array :php:`$conf` contains the configuration for the USER cObject.
+Try :php:`debug($conf)` to see the content printed out for debugging!
 
 
-.. _appendix-include-white-spaces:
+..  _appendix-include-white-spaces:
 
 White spaces
 ------------
@@ -56,7 +56,7 @@ in your include or library scripts! You should not use the closing PHP tag
 :php:`?>`.
 
 
-.. _appendix-include-tsfe:
+..  _appendix-include-tsfe:
 
 $GLOBALS['TSFE']->set\_no\_cache()
 ----------------------------------
@@ -65,45 +65,48 @@ Call the function :php:`$GLOBALS['TSFE']->set_no_cache()`, if you want to
 disable caching of the page. Call this during development only! And
 call it, if the content you create may not be cached.
 
-**Note:** If you make a syntax error in your script that keeps PHP
-from executing it, then the :php:`$GLOBALS['TSFE']->set_no_cache()`
-function is not executed and the page *is* cached! So in these
-situations, correct the error, clear the page-cache and try again.
-This is true only for :typoscript:`USER` and not for :typoscript:`USER_INT`, which is
-rendered *after* the cached page!
+..  note::
+    If you make a syntax error in your script that keeps PHP
+    from executing it, then the :php:`$GLOBALS['TSFE']->set_no_cache()`
+    function is not executed and the page *is* cached! So in these
+    situations, correct the error, clear the page-cache and try again.
+    This is true only for :typoscript:`USER` and not for :typoscript:`USER_INT`, which is
+    rendered *after* the cached page!
 
 
 Example:
 ~~~~~~~~
 
-.. code-block:: php
+..  code-block:: php
 
-   $GLOBALS['TSFE']->set_no_cache();
+    $GLOBALS['TSFE']->set_no_cache();
 
 
-.. _appendix-include-cobjgetsingle:
+..  _appendix-include-cobjgetsingle:
 
-$this->cObjGetSingle(value, properties[, TSkey = '__'])
--------------------------------------------------------
+`ContentObjectRenderer::cObjGetSingle(value, properties[, TSkey = '__'])`
+-------------------------------------------------------------------------
 
-Gets a content object from the $conf array. $TSkey is an optional string label used for the internal debugging tracking.
-
+A method of :php:`TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer`.
+Gets a content object from the `$conf` array.
 
 Example:
 ~~~~~~~~
 
-.. code-block:: php
+..  code-block:: php
 
-   $content = $this->cObjGetSingle($conf['image'], $conf['image.'], 'My Image 2');
+    $content = $cObjectRenderer->cObjGetSingle($conf['image'], $conf['image.'], 'My Image 2');
 
-This would return any IMAGE cObject at the property "image" of the
-$conf array for the include script!
+This would return any IMAGE cObject at the property `image` of the
+`$conf` array for the include script!
 
 
-.. _appendix-include-stdwrap:
+..  _appendix-include-stdwrap:
 
-$this->stdWrap(value, properties)
----------------------------------
+`ContentObjectRenderer::stdWrap(value, properties)`
+---------------------------------------------------
+
+A method of :php:`TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer`.
 
 Hands the content in "value" to the stdWrap function, which will
 process it according to the configuration of the array "properties".
@@ -112,15 +115,15 @@ process it according to the configuration of the array "properties".
 Example:
 ~~~~~~~~
 
-.. code-block:: php
+..  code-block:: php
 
-   $content = $this->stdWrap($content, $conf['stdWrap.']);
+    $content = $cObjectRenderer->stdWrap($content, $conf['stdWrap.']);
 
-This will stdWrap the content with the properties of ".stdWrap" of the
-$conf array!
+This will stdWrap the content with the properties of `.stdWrap` of the
+`$conf` array!
 
 
-.. _appendix-include-internal-variables:
+..  _appendix-include-internal-variables:
 
 Internal variables in the main frontend object, TSFE
 ====================================================
@@ -135,142 +138,130 @@ You can retrieve the :php:`TypoScriptFrontendController` via the
 :ref:`request <t3coreapi:typo3-request>` attribute
 :ref:`frontend.controller <t3coreapi:typo3-request-attribute-frontend-controller>`.
 
-
 For instance, if you want to access the variable :php:`id`, you can do so by
 writing: :php:`TypoScriptFrontendController->id`.
 
-.. ### BEGIN~OF~TABLE ###
+..  _appendix-include-tsfe-id:
 
-.. container:: table-row
+TypoScriptFrontendController->id
+--------------------------------
 
-   Variable
-         id
+..  confval:: id
+    :name: tsfe-id
+    :type: integer
 
-   PHP-Type
-         integer
+    The current page id
 
-   Description
-         The page id
+..  _appendix-include-tsfe-type:
 
+TypoScriptFrontendController->type
+----------------------------------
 
-.. container:: table-row
+..  confval:: type
+    :name: tsfe-type
+    :type: integer
 
-   Variable
-         type
+    The type
 
-   PHP-Type
-         integer
+..  _appendix-include-tsfe-page:
 
-   Description
-         The type
+TypoScriptFrontendController->page
+----------------------------------
 
+..  versionchanged:: 13.0
+    The property has been marked as read-only. Use
+    :php:`$request->getAttribute('frontend.page.information')->getPageRecord()`
+    instead. See :ref:`t3coreapi:typo3-request-attribute-frontend-page-information`.
 
-.. container:: table-row
+..  confval:: page
+    :name: tsfe-page
+    :type: array
 
-   Variable
-         page
-
-   PHP-Type
-         array
-
-   Description
-         The page record
-
-
-.. container:: table-row
-
-   Variable
-         fe\_user
-
-   PHP-Type
-         object
-
-   Description
-         The current front-end user.
-
-         User record in :php:`$GLOBALS['TSFE']->fe_user->user`, if any login.
-         Better use the :ref:`request <t3coreapi:typo3-request>` attribute
-         :ref:`frontend.user <t3coreapi:typo3-request-attribute-frontend-user>` instead.
+    The page record
 
 
-.. container:: table-row
+..  _appendix-include-tsfe-feuser:
 
-   Variable
-         rootLine
+TypoScriptFrontendController->feuser
+------------------------------------
 
-   PHP-Type
-         array
+..  confval:: fe_user
+    :name: tsfe-fe-user
+    :type: array
 
-   Description
-         The root line (all the way to tree root, not only the current site!).
-         Current site root line is in
-         :php:`\TYPO3\CMS\Frontend\Controller\TypoScriptFrontendController->config['rootLine']`.
+    The frontend user record
 
-
-.. container:: table-row
-
-   Variable
-         sys\_page
-
-   PHP-Type
-         object
-
-   Description
-         The object with page functions (object) See
-         :file:`EXT:core/Classes/Domain/Repository/PageRepository.php`.
+    User record in :php:`$GLOBALS['TSFE']->fe_user->user`, if any login.
+    Better use the :ref:`request <t3coreapi:typo3-request>` attribute
+    :ref:`frontend.user <t3coreapi:typo3-request-attribute-frontend-user>` instead.
 
 
-.. ###### END~OF~TABLE ######
+..  _appendix-include-tsfe-rootLine:
 
+TypoScriptFrontendController->rootLine
+--------------------------------------
 
-.. _appendix-include-global-variables:
+..  confval:: rootLine
+    :name: tsfe-rootLine
+    :type: array
+
+    The root line (all the way to tree root, not only the current site!).
+    Current site root line is in
+    :php:`\TYPO3\CMS\Frontend\Controller\TypoScriptFrontendController->config['rootLine']`.
+
+..  _appendix-include-tsfe-table-row:
+
+TypoScriptFrontendController->table-row
+---------------------------------------
+
+..  confval:: rootLine
+    :name: tsfe-table-row
+    :type: object
+
+    The object with page functions (object) See
+    :file:`EXT:core/Classes/Domain/Repository/PageRepository.php`.
+
+..  _appendix-include-global-variables:
 
 Global variables
 ================
 
-.. ### BEGIN~OF~TABLE ###
+..  _appendix-include-global-be-user:
 
-.. container:: table-row
+`$GLOBAL['BE_USER']`
+--------------------
 
-   Variable
-         BE\_USER
+..  confval:: $GLOBAL['BE_USER']
+    :name: global-be-user
+    :type: object
 
-   PHP-Type
-         object
-
-   Description
-         The backend user object (if any).
-
-   Default
-         not set
+    The backend user object. See :ref:`Backend user object <t3coreapi:be-user>`
+    for more information.
 
 
-.. container:: table-row
+..  _appendix-include-global-typo3-conf-vars:
 
-   Variable
-         TYPO3\_CONF\_VARS
+`$GLOBAL['TYPO3_CONF_VARS']`
+----------------------------
 
-   PHP-Type
-         array
+..  confval:: $GLOBAL['TYPO3_CONF_VARS']
+    :name: global-typo3-conf-vars
+    :type: object
 
-   Description
-         TYPO3 Configuration.
-
-
-.. container:: table-row
-
-   Variable
-         TSFE
-
-   PHP-Type
-         object
-
-   Description
-         Main frontend object. Whenever possible, use the
-         :ref:`request <t3coreapi:typo3-request>` attribute
-         :ref:`frontend.controller <t3coreapi:typo3-request-attribute-frontend-controller>`
-         instead.
+    TYPO3 configuration variables. See :ref:`TYPO3_CONF_VARS <t3coreapi:typo3ConfVars>`
+    for more information.
 
 
-.. ###### END~OF~TABLE ######
+..  _appendix-include-global-tsfe:
 
+`$GLOBAL['TYPO3_CONF_VARS']`
+----------------------------
+
+..  confval:: $GLOBAL['TSFE']
+    :name: global-tsfe
+    :type: object
+
+    Main frontend object. Whenever possible, use the
+    :ref:`request <t3coreapi:typo3-request>` attribute
+    :ref:`frontend.controller <t3coreapi:typo3-request-attribute-frontend-controller>`
+    instead. See also :ref:`TSFE <t3coreapi:tsfe>`.
