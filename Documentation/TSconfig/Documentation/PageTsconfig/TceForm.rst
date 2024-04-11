@@ -326,7 +326,7 @@ config
     :php:`$GLOBALS['TCA'][<tableName>]['columns'][<fieldName>]['config'][<key>]`, see
     :ref:`TCA reference <t3tca:columns-properties-config>` for details.
 
-    Not all configuration options can be overriden, the properties are restricted and depend on the
+    Not all configuration options can be overridden, the properties are restricted and depend on the
     :ref:`field type <t3tca:columns-types>`. The array
     :code:`typo3/sysext/backend/Classes/Form/Utility/FormEngineUtility.php->$allowOverrideMatrix`
     within :ref:`FormEngine code <t3coreapi:FormEngine>` defines details:
@@ -352,7 +352,24 @@ config
         'file' => ['appearance', 'behaviour', 'maxitems', 'minitems', 'readOnly'],
         'imageManipulation' => ['ratios', 'cropVariants'],
 
-    This property is available for various levels:
+    The reason that not all properties can be changed is that
+    internally, the :ref:`DataHandler <t3coreapi:datahandler-basics>` performs database
+    operations which require finalized :ref:`TCA <t3tca:start>` definitions
+    that are accessed without this TSconfig getting interpreted. This mismatch
+    would then lead to inconsistencies.
+
+    An `input` or `text` TCA field can *not* enable the
+    :ref:`RTE <typo3/cms-rte-ckeditor:introduction>` via the
+    :typoscript:`config.enableRichtext` option due to similar reasons in respect
+    to the DataHandler.
+
+    Also, if for example the :typoscript:`max` definition of a field is made
+    larger than the TCA definition of that field, you may need to to change
+    the file :file:`ext_tables.sql` (see :ref:`t3coreapi:ext_tables-sql`)
+    to adjust column definitions, especially when using the
+    :ref:`Auto-generated structure <t3coreapi:auto-generated-db-structure>`.
+
+    The property :typoscript:`config` is available for these levels:
 
     table level, example:
         :typoscript:`TCEFORM.tt_content.header.config.max`
@@ -361,10 +378,16 @@ config
         :typoscript:`TCEFORM.tt_content.header.types.textpic.config.max`
 
     Flex form field level, example:
+        No current TYPO3 version allows to override the configuration of
+        Flex form fields, even though this was previously documented here.
+        This may change in future versions.
+
+    .. todo: Removed, because this is broken in every known TYPO3 version.
+    .. todo: Maybe re-enable this, if it gets fixed in a future release
         :typoscript:`TCEFORM.tt_content.pi_flexform.myext_pi1.sDEF.myInputField.config.max`
 
-        Where :typoscript:`sDEF` is the sheet name.
-
+        Where :typoscript:`sDEF` is the sheet name and :typoscript:`myext_pi1` the name
+        of the plugin.
 
 .. index::
    Records; tree configuration
@@ -399,9 +422,16 @@ config.treeConfig
       `TCEFORM.tt_content.header.types.config.treeConfig.startingPoints`
 
    Flex form field level, example:
+      No current TYPO3 version allows to override the configuration of
+      Flex form fields, even though this was previously documented here.
+      This may change in future versions.
+
+   .. todo: Removed, because this is broken in every known TYPO3 version.
+   .. todo: Maybe re-enable this, if it gets fixed in a future release
       `TCEFORM.tt_content.pi_flexform.myext_pi1.sDEF.settings\.myfield.config.treeConfig.startingPoints`
 
-      Where `sDEF` is the sheet name. For a description
+      Where `sDEF` is the sheet name and :typoscript:`myext_pi1` the name
+      of the plugin. For a description
       see the section :ref:`tceformApplyPropertiesFlexForm` on this page.
 
 
