@@ -587,7 +587,8 @@ includeJS.[array]
         It is automatically set to `anonymous` for external JavaScript files if an
         :typoscript:`.integrity` is set.
 
-    `defer` Allows to set the HTML5 attribute :html:`defer`.
+    `defer`
+        Allows to set the HTML5 attribute :html:`defer`.
 
     `disableCompression`
         If :typoscript:`config.compressJs` is enabled,
