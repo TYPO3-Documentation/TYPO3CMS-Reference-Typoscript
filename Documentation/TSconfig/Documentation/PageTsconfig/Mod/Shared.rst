@@ -1,182 +1,180 @@
-.. include:: /Includes.rst.txt
+..  include:: /Includes.rst.txt
 
-.. index::
-   mod; SHARED
-   Modules; All
-.. _pagesharedotionsformodules:
+..  index::
+    mod; SHARED
+    Modules; All
+..  _pagesharedotionsformodules:
 
 ======
 SHARED
 ======
 
-.. youtube:: xJtsLlEtY5U
+..  youtube:: xJtsLlEtY5U
 
-.. contents::
-   :local:
+..  contents::
+    :local:
 
-.. index::
-   colPos_list
-   Columns; Disable
+..  index::
+    colPos_list
+    Columns; Disable
 
 colPos_list
 ===========
 
-:aspect:`Datatype`
-   list of integers
+..  confval:: colPos_list
+    :name: mod-share-colPos-list
+    :type: list of integers
+    :Default: 1,0,2,3
 
-:aspect:`Description`
-   This option lets you specify which columns of tt_content elements should be editable in the
-   'Columns' view of the Web > Page module.
+    This option lets you specify which columns of tt_content elements should be editable in the
+    'Columns' view of the Web > Page module.
 
-   Used on top of backend layouts, this setting controls which columns are editable. Columns configured
-   in the Backend Layout which are not listed here, will be displayed with placeholder area.
+    Used on top of backend layouts, this setting controls which columns are editable. Columns configured
+    in the Backend Layout which are not listed here, will be displayed with placeholder area.
 
-   Each column has a number which ultimately comes from the configuration of the table tt_content,
-   field 'colPos'. These are the values of the four default columns used in the default backend layout:
+    Each column has a number which ultimately comes from the configuration of the table tt_content,
+    field 'colPos'. These are the values of the four default columns used in the default backend layout:
 
-   Left: `1`, Normal: `0`, Right: `2`, Border: `3`
+    Left: `1`, Normal: `0`, Right: `2`, Border: `3`
 
-:aspect:`Default`
-   1,0,2,3
+..  _example_for_backend_layout:
 
+Example: Create a basic backend layout
+--------------------------------------
 
-:aspect:`Example`
-   .. _example_for_backend_layout:
+The example creates a basic backend layout and sets the "Left" column to be not editable:
 
-   The example creates a basic backend layout and sets the "Left" column to be not editable:
+*   Create a record of type "Backend Layout", for instance in the root page of your website
 
-   *  Create a record of type "Backend Layout", for instance in the root page of your website
+*   Add a title, e.g. "My Layout"
 
-   *  Add a title, e.g. "My Layout"
+*   Use the wizard to create a two column backend layout, the result may look like this:
 
-   *  Use the wizard to create a two column backend layout, the result may look like this:
+    ..  figure:: /Images/ManualScreenshots/List/SimpleBackendLayout.png
+        :alt: A simple backend layout
 
-      .. figure:: /Images/ManualScreenshots/List/SimpleBackendLayout.png
-         :alt: A simple backend layout
+        A simple backend layout
 
-         A simple backend layout
+*   Create a page and select this new backend layout in the "Appearance" tab.
+    The page module then looks like this, displaying the two defined columns:
 
-   *  Create a page and select this new backend layout in the "Appearance" tab.
-      The page module then looks like this, displaying the two defined columns:
+    ..  figure:: /Images/ManualScreenshots/Page/SimpleBackendLayoutInPageModule.png
+        :alt: Backend layout used in page module
 
-      .. figure:: /Images/ManualScreenshots/Page/SimpleBackendLayoutInPageModule.png
-         :alt: Backend layout used in page module
+        Backend layout used in page module
 
-         Backend layout used in page module
+*   Now set the "Left" column to be not editable using page TSconfig in the
+    :guilabel:`Resources` tab of the page, by restricting `colPos_list` to
+    `0` (the "Content" columns as defined above):
 
-   *  Now set the "Left" column to be not editable using page TSconfig in the
-      :guilabel:`Resources` tab of the page, by restricting `colPos_list` to
-      `0` (the "Content" columns as defined above):
+    ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/page.tsconfig
 
-      .. code-block:: typoscript
-         :caption: EXT:site_package/Configuration/page.tsconfig
+        mod.SHARED.colPos_list = 0
 
-         mod.SHARED.colPos_list = 0
+*   The result in the page module then looks like this:
 
-   *  The result in the page module then looks like this:
+    ..  figure:: /Images/ManualScreenshots/Page/SimpleBackendLayoutLeftNotEditable.png
+        :alt: One column not editable in a backend layout
 
-      .. figure:: /Images/ManualScreenshots/Page/SimpleBackendLayoutLeftNotEditable.png
-         :alt: One column not editable in a backend layout
+        One column not editable in a backend layout
 
-         One column not editable in a backend layout
-
-
-.. index::
-   defaultLanguageFlag
-   Localization; Default language flag
-.. _pageTsConfigSharedDefaultLanguageLabel:
+..  index::
+    defaultLanguageFlag
+    Localization; Default language flag
+..  _pageTsConfigSharedDefaultLanguageLabel:
 
 defaultLanguageFlag
 ===================
 
-:aspect:`Datatype`
-   string
+..  warning::
 
-:aspect:`Description`
-   Country flag shown for the "Default" language in the backend, used in Web > List and Web > Page module.
-   Values as listed in the "Select flag icon" of a language record in the backend are allowed, including
-   the value "multiple".
+    Note that this option has largely been superseded by site configuration since **TYPO3 v10** and will only
+    work in the Backend for a "NullSite". For instance, a global sysfolder in the page tree without an
+    attached site configuration. Once a page tree has a site configuration, the default language icon is
+    set from the site configuration's language settings and this option will have no effect at all.
 
-   .. figure:: /Images/ManualScreenshots/List/SelectFlagIcon.png
-      :alt: The flag selector of a language record in the backend
+..  confval:: defaultLanguageFlag
+    :name: mod-share-defaultLanguageFlag
+    :type: string
 
-      The flag selector of a language record in the backend
+    Country flag shown for the "Default" language in the backend, used in Web > List and Web > Page module.
+    Values as listed in the "Select flag icon" of a language record in the backend are allowed, including
+    the value "multiple".
 
-:aspect:`Example`
-   This will show the German flag, and the text "deutsch" on hover.
+    ..  figure:: /Images/ManualScreenshots/List/SelectFlagIcon.png
+        :alt: The flag selector of a language record in the backend
 
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/page.tsconfig
+        The flag selector of a language record in the backend
 
-      mod.SHARED {
-         defaultLanguageFlag = de
-         defaultLanguageLabel = deutsch
-      }
+Example: Show a German flag on a NullSite
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. warning::
+This will show the German flag, and the text "deutsch" on hover.
 
-   Note that this option has largely been superseded by site configuration since **TYPO3 v10** and will only
-   work in the Backend for a "NullSite". For instance, a global sysfolder in the page tree without an
-   attached site configuration. Once a page tree has a site configuration, the default language icon is
-   set from the site configuration's language settings and this option will have no effect at all.
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/page.tsconfig
 
+    mod.SHARED {
+        defaultLanguageFlag = de
+        defaultLanguageLabel = deutsch
+    }
 
-.. index::
-   defaultLanguageLabel
-   Localization; Default language label
+..  index::
+    defaultLanguageLabel
+    Localization; Default language label
 
 defaultLanguageLabel
 ====================
 
-:aspect:`Datatype`
-   string
+..  warning::
 
-:aspect:`Description`
-   Alternate label for "Default" when language labels are shown in the interface.
+    Note that this option has largely been superseded by site configuration since **TYPO3 v10** and will only
+    work in the backend for a "NullSite". For instance a global sysfolder in the page tree without an
+    attached site configuration. Once a page tree has a site configuration, the default language label is
+    set from the site configuration's language settings and this option will have no effect at all.
 
-   Used in Web > List and Web > Page module.
+..  confval:: defaultLanguageLabel
+    :name: mod-share-defaultLanguageLabel
+    :type: string
 
-.. warning::
+    Alternate label for "Default" when language labels are shown in the interface.
 
-   Note that this option has largely been superseded by site configuration since **TYPO3 v10** and will only
-   work in the backend for a "NullSite". For instance a global sysfolder in the page tree without an
-   attached site configuration. Once a page tree has a site configuration, the default language label is
-   set from the site configuration's language settings and this option will have no effect at all.
+    Used in Web > List and Web > Page module.
 
-
-.. index::
-   disableLanguages
-   Localization; disable languages
+..  index::
+    disableLanguages
+    Localization; disable languages
 
 disableLanguages
 ================
 
-:aspect:`Datatype`
-   string
+..  warning::
 
-:aspect:`Description`
-   Comma-separated list of language UIDs which will be disabled in the given page tree.
+    Note that this option has largely been superseded by site configuration since **TYPO3 v10** and will only
+    work in the Backend for a "NullSite". For instance, a global sysfolder in the page tree without an
+    attached site configuration. Once a page tree has a site configuration, the language settings
+    from the site configuration are applied and this option will have no effect at all.
 
-.. warning::
+..  confval:: disableLanguages
+    :name: mod-share-disableLanguages
+    :type: string
 
-   Note that this option has largely been superseded by site configuration since **TYPO3 v10** and will only
-   work in the Backend for a "NullSite". For instance, a global sysfolder in the page tree without an
-   attached site configuration. Once a page tree has a site configuration, the language settings
-   from the site configuration are applied and this option will have no effect at all.
+    Comma-separated list of language UIDs which will be disabled in the given page tree.
 
-
-.. index::
-   disableSysNoteButton
-   Buttons; disable sys_note
+..  index::
+    disableSysNoteButton
+    Buttons; disable sys_note
 
 disableSysNoteButton
 ====================
 
-:aspect:`Datatype`
-   boolean
+..  confval:: disableSysNoteButton
+    :name: mod-share-disableSysNoteButton
+    :type: boolean
 
-:aspect:`Description`
-   Disables the `sys_note` creation button in the modules' top button bar in the :guilabel:`Page`, :guilabel:`List` and :guilabel:`Info`
-   modules.
+    Disables the `sys_note` creation button in the modules' top button bar
+    in the :guilabel:`Page`, :guilabel:`List` and :guilabel:`Info`
+    modules.
 
 
