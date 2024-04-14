@@ -1,8 +1,8 @@
-.. include:: /Includes.rst.txt
-.. index::
-   TCAdefaults
-   Records; Default values
-.. _pageTsTcaDefaults:
+..  include:: /Includes.rst.txt
+..  index::
+    TCAdefaults
+    Records; Default values
+..  _pageTsTcaDefaults:
 
 ===========
 TCAdefaults
@@ -16,24 +16,25 @@ The full path of a setting include the table and the field name: `TCAdefaults.[t
 This key is also available on :ref:`User TSconfig level <userTsTcaDefaults>`, the order of default
 values when creating new records in the backend is this:
 
-#. Value from $GLOBALS['TCA']
-
-#. Value from :ref:`User TSconfig <userTsTcaDefaults>`
-
-#. Value from page TSconfig (these settings)
-
-#. Value from "defVals" GET variables
-
-#. Value from previous record based on 'useColumnsForDefaultValues'
-
-Example:
-
-.. code-block:: typoscript
-   :caption: EXT:site_package/Configuration/page.tsconfig
-
-   # Show newly created pages by default
-   TCAdefaults.pages.hidden = 0
+#.  Value from `$GLOBALS['TCA']`
+#.  Value from :ref:`user TSconfig <userTsTcaDefaults>`
+#.  Value from page TSconfig (these settings)
+#.  Value from "defVals" GET variables
+#.  Value from previous record based on
+    :ref:`useColumnsForDefaultValues <t3tca:ctrl-reference-usecolumnsfordefaultvalues>`
 
 ..  note::
-    `TCAdefaults` is not applied to :ref:`FlexForm <t3coreapi:flexforms>` values. These can only be addressed via
-    :xml:`<default>` elements within the FlexForm data structure.
+    `TCAdefaults` is not applied to :ref:`FlexForm <t3coreapi:flexforms>` values.
+    These can only be addressed via :xml:`<default>` elements within the
+    FlexForm data structure.
+
+..  _pageTsTcaDefaults-example:
+
+Example: Do not hide newly created pages by default
+===================================================
+
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/page.tsconfig
+
+    TCAdefaults.pages.hidden = 0
+
