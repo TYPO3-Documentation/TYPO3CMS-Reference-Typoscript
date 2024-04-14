@@ -103,8 +103,6 @@ Example: Remove some options from the functions menu
     :caption: EXT:site_package/Configuration/page.tsconfig
 
     mod.web_info.menu.function {
-        # Disable item "Page Tsconfig"
-        TYPO3\CMS\Info\Controller\InfoPageTyposcriptConfigController = 0
         # Disable item "Log"
         TYPO3\CMS\Belog\Module\BackendLogModuleBootstrap = 0
         # Disable item "Pagetree Overview"
