@@ -1,9 +1,9 @@
-.. include:: /Includes.rst.txt
+..  include:: /Includes.rst.txt
 
-.. index::
-   mod; web_layout
-   Modules; Page
-.. _pagewebpage:
+..  index::
+    mod; web_layout
+    Modules; Page
+..  _pagewebpage:
 
 ==========
 web_layout
@@ -11,317 +11,308 @@ web_layout
 
 Configuration options of the "Web > Page" module.
 
-.. contents::
-   :local:
+..  contents::
+    :local:
 
-.. index::
-   Localization; Inconsistent language mode
-   Localization; Independently translated content
-   allowInconsistentLanguageHandling
+..  index::
+    Localization; Inconsistent language mode
+    Localization; Independently translated content
+    allowInconsistentLanguageHandling
+
+..  _mod-web-layout-allowInconsistentLanguageHandling:
 
 allowInconsistentLanguageHandling
 =================================
 
-:aspect:`Datatype`
-   boolean
+..  confval:: allowInconsistentLanguageHandling
+    :name: mod-web-layout-allowInconsistentLanguageHandling
+    :type: boolean
 
-:aspect:`Description`
-   By default, TYPO3 will not allow you to mix translated content and independent content in the page module.
-   Content elements violating this behavior will be marked in the page module and there is no UI control (yet)
-   allowing you to create independent content elements in a given language.
+    By default, TYPO3 will not allow you to mix translated content and independent content in the page module.
+    Content elements violating this behavior will be marked in the page module and there is no UI control (yet)
+    allowing you to create independent content elements in a given language.
 
-   If you want to go back to the old, inconsistent behavior, you can toggle it back on using this switch.
+    If you want to go back to the old, inconsistent behavior, you can toggle it back on using this switch.
 
-:aspect:`Example`
-   Allows to set TYPO3s page module back to inconsistent language mode
+..  _mod-web-layout-allowInconsistentLanguageHandling-example:
 
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/page.tsconfig
+Example: Allow inconsistent language modes
+------------------------------------------
 
-      mod.web_layout.allowInconsistentLanguageHandling = 1
+Allows to set TYPO3s page module back to inconsistent language mode
+
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/page.tsconfig
+
+    mod.web_layout.allowInconsistentLanguageHandling = 1
 
 
-.. index:: BackendLayouts
+..  index:: BackendLayouts
+
+..  _mod-web-layout-backendLayouts:
 
 BackendLayouts
 ==============
 
-:aspect:`Datatype`
-   array
+..  confval:: BackendLayouts
+    :name: mod-web-layout-BackendLayouts
+    :type: array
 
-:aspect:`Description`
-   Allows to define backend layouts via Page TSconfig directly, without using database records.
+    Allows to define backend layouts via Page TSconfig directly, without using database records.
 
-:aspect:`Example`
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/page.tsconfig
+..  _mod-web-layout-backendLayouts-example:
 
-      mod.web_layout.BackendLayouts {
-         exampleKey {
-            title = Example
-            icon = EXT:example_extension/Resources/Public/Images/BackendLayouts/default.gif
-            config {
-               backend_layout {
-                  colCount = 1
-                  rowCount = 2
-                  rows {
-                     1 {
-                        columns {
-                           1 {
-                              name = LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:colPos.I.3
-                              colPos = 3
-                              colspan = 1
-                           }
-                        }
-                     }
-                     2 {
-                        columns {
-                           1 {
-                              name = Main
-                                       colPos = 0
-                                       colspan = 1
-                                   }
-                               }
-                           }
-                       }
-                   }
-               }
-           }
-       }
+Example: Define a backend layout
+--------------------------------
 
+..  literalinclude:: _backendLayouts-example.tsconfig
+    :language: typoscript
+    :caption: EXT:site_package/Configuration/page.tsconfig
 
-.. index::
-   defaultLanguageLabel
-   Localization; Default language label
+..  index::
+    defaultLanguageLabel
+    Localization; Default language label
+
+..  _mod-web-layout-defaultLanguageLabel:
 
 defaultLanguageLabel
 ====================
 
-:aspect:`Datatype`
-   string
+..  warning::
 
-:aspect:`Description`
-   Alternate label for "Default" when language labels are shown in the interface.
+    Note that this option has largely been superseded by site configuration since **TYPO3 v10** and will only
+    work in the Backend for a "NullSite". For instance, a global sysfolder in the page tree without an
+    attached site configuration. Once a page tree has a site configuration, the default language label is
+    set from the site configuration's language settings and this option will have no effect at all.
 
-   Overrides the same property from :ref:`mod.SHARED <pageTsConfigSharedDefaultLanguageLabel>` if set.
+..  confval:: defaultLanguageLabel
+    :name: mod-web-layout-defaultLanguageLabel
+    :type: string
 
-.. warning::
+    Alternate label for "Default" when language labels are shown in the interface.
 
-   Note that this option has largely been superseded by site configuration since **TYPO3 v10** and will only
-   work in the Backend for a "NullSite". For instance, a global sysfolder in the page tree without an
-   attached site configuration. Once a page tree has a site configuration, the default language label is
-   set from the site configuration's language settings and this option will have no effect at all.
+    Overrides the same property from :ref:`mod.SHARED <pageTsConfigSharedDefaultLanguageLabel>` if set.
 
+..  index::
+    defLangBinding
+    Localization; Show default content element
 
-.. index::
-   defLangBinding
-   Localization; Show default content element
+..  _mod-web-layout-defLangBinding:
 
 defLangBinding
 ==============
 
-:aspect:`Datatype`
-   boolean
+..  confval:: defLangBinding
+    :name: mod-web-layout-defLangBinding
+    :type: boolean
+    :Default: 0
 
-:aspect:`Description`
-   If set, translations of content elements are bound to the default record in the display. This means that
-   within each column with content elements any translation found for exactly the shown default content
-   element will be shown in the language column next to.
+    If set, translations of content elements are bound to the default record in the display. This means that
+    within each column with content elements any translation found for exactly the shown default content
+    element will be shown in the language column next to.
 
-   This display mode should be used depending on how the frontend is configured to display localization.
-   The frontend must display localized pages by selecting the default content elements and for each
-   one overlay with a possible translation if found.
+    This display mode should be used depending on how the frontend is configured to display localization.
+    The frontend must display localized pages by selecting the default content elements and for each
+    one overlay with a possible translation if found.
 
-:aspect:`Default`
-   0
+..  index::
+    hideRestrictedCols
+    Page columns; Hide restricted
 
-.. index::
-   hideRestrictedCols
-   Page columns; Hide restricted
+..  _mod-web-layout-hideRestrictedCols:
 
 hideRestrictedCols
 ==================
 
-:aspect:`Datatype`
-   boolean
+..  confval:: hideRestrictedCols
+    :name: mod-web-layout-hideRestrictedCols
+    :type: boolean
+    :Default: false
 
-:aspect:`Description`
-   If activated, only columns will be shown in the backend that the editor is
-   allowed to access. All columns with access restriction are hidden in that case.
+    If activated, only columns will be shown in the backend that the editor is
+    allowed to access. All columns with access restriction are hidden in that case.
 
-   By default columns with restricted access are rendered with a message
-   telling *that* the user doesn't have access. This may be useless and
-   distracting or look repelling. Instead, all columns an editor doesn't have
-   access to can be hidden:
+    By default columns with restricted access are rendered with a message
+    telling *that* the user doesn't have access. This may be useless and
+    distracting or look repelling. Instead, all columns an editor doesn't have
+    access to can be hidden:
 
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/page.tsconfig
+    ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/page.tsconfig
 
-      mod.web_layout.hideRestrictedCols = 1
+        mod.web_layout.hideRestrictedCols = 1
 
-   .. attention::
+    ..  attention::
 
-      This setting will break your layout if you are using backend layouts.
-
-:aspect:`Default`
-   false
+        This setting will break your layout if you are using backend layouts.
 
 
-.. index::
-   localization.enableCopy
-   Localization; Free mode
-   Localization; Copy content elements
+..  index::
+    localization.enableCopy
+    Localization; Free mode
+    Localization; Copy content elements
+
+..  _mod-web-layout-localization-enableCopy:
 
 localization.enableCopy
 =======================
 
-:aspect:`Datatype`
-   boolean
+..  confval:: localization.enableCopy
+    :name: mod-web-layout-localization-enableCopy
+    :type: boolean
+    :Default: 1
+
+    Enables the creation of copies of content elements into languages in the translation wizard ("free mode").
+
+..  _mod-web-layout-localization-enableCopy-example:
+
+Example: Disable free mode button for localization
+--------------------------------------------------
+
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/page.tsconfig
+
+    mod.web_layout {
+        localization.enableCopy = 0
+    }
 
 
-:aspect:`Description`
-   Enables the creation of copies of content elements into languages in the translation wizard ("free mode").
+..  index::
+    localization.enableTranslate
+    Localization; Connected mode
+    Localization; Translate content elements
 
-:aspect:`Default`
-   1
-
-:aspect:`Example`
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/page.tsconfig
-
-      mod.web_layout {
-         localization.enableCopy = 0
-      }
-
-
-.. index::
-   localization.enableTranslate
-   Localization; Connected mode
-   Localization; Translate content elements
+..  _mod-web-layout-localization-enableTranslate:
 
 localization.enableTranslate
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+============================
 
-:aspect:`Datatype`
-   boolean
+..  confval:: localization.enableTranslate
+    :name: mod-web-layout-localization-enableTranslate
+    :type: boolean
+    :Default: 1
 
-:aspect:`Description`
-   Enables simple translations of content elements in the translation wizard ("connected mode").
+    Enables simple translations of content elements in the translation wizard ("connected mode").
 
-:aspect:`Default`
-   1
+..  _mod-web-layout-localization-enableTranslate-example:
 
-:aspect:`Example`
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/page.tsconfig
+Example: Disable "connected mode" button for translation
+--------------------------------------------------------
 
-      mod.web_layout {
-         localization.enableTranslate = 0
-      }
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/page.tsconfig
 
+    mod.web_layout {
+        localization.enableTranslate = 0
+    }
 
-.. index::
-   web_layout.menu.functions
-   Module menu; Pages
-.. _pageblindingfunctionmenuoptions-weblayout:
+..  index::
+    web_layout.menu.functions
+    Module menu; Pages
+..  _pageblindingfunctionmenuoptions-weblayout:
 
 menu.functions
-~~~~~~~~~~~~~~
+==============
 
-:aspect:`Datatype`
-   array
+..  confval:: menu.functions
+    :name: mod-web-layout-menu-functions
+    :type: array
 
-:aspect:`Description`
-   Disable elements of the "Function selector" in the document header of the module.
+    Disable elements of the "Function selector" in the document header of the module.
 
-   .. figure:: /Images/ManualScreenshots/Page/FunctionMenuPageModule.png
-      :alt: The function menu of the Page module
+    ..  figure:: /Images/ManualScreenshots/Page/FunctionMenuPageModule.png
+        :alt: The function menu of the Page module
 
-   The function keys are numerical:
+    The function keys are numerical:
 
-   Columns
-      1
-   Languages
-      2
+    Columns
+        1
+    Languages
+        2
 
-   .. warning::
+    ..  warning::
 
-      Blinding Function Menu items is not hardcore access control! All it
-      does is hide the possibility of accessing that module functionality
-      from the interface. It might be possible for users to hack their way
-      around it and access the functionality anyways. You should use the
-      option of blinding elements mostly to remove otherwise distracting options.
+        Blinding Function Menu items is not hardcore access control! All it
+        does is hide the possibility of accessing that module functionality
+        from the interface. It might be possible for users to hack their way
+        around it and access the functionality anyways. You should use the
+        option of blinding elements mostly to remove otherwise distracting options.
+
+..  _pageblindingfunctionmenuoptions-weblayout-example:
+
+Example: Disable "Languages" from the function menu
+---------------------------------------------------
+
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/page.tsconfig
+
+    # Disables "Languages" from function menu
+    mod.web_layout.menu.functions {
+        2 = 0
+    }
 
 
-:aspect:`Example`
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/page.tsconfig
-
-      # Disables "Languages" from function menu
-      mod.web_layout.menu.functions {
-         2 = 0
-      }
-
-
-.. index::
-   noCreateRecordsLink
-   Buttons; Create new record
+..  index::
+    noCreateRecordsLink
+    Buttons; Create new record
 
 noCreateRecordsLink
-~~~~~~~~~~~~~~~~~~~
+===================
 
-:aspect:`Datatype`
-   boolean
+..  confval:: noCreateRecordsLink
+    :name: mod-web-layout-noCreateRecordsLink
+    :type: boolean
+    :Default: 0
 
-:aspect:`Description`
-   If set, the link in the bottom of the page, "Create new record", is hidden.
+    If set, the link in the bottom of the page, "Create new record", is hidden.
 
-:aspect:`Default`
-   0
+..  index::
+    preview
+    Content elements; Preview definition
+..  _pageweblayoutpreview:
+
+tt_content.preview
+==================
+
+..  confval:: tt_content.preview
+    :name: mod-web-layout-tt-content-preview
+    :type: boolean
+
+    It is possible to render previews of your own content elements in the page module.
+    By referencing a Fluid template you can create a visual representation of your content element,
+    making it easier for an editor to understand what is going on on the page.
+
+    The syntax is as follows:
+
+    ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/page.tsconfig
+
+        mod.web_layout.tt_content.preview.[CTYPE].[list_type value] = EXT:site_mysite/Resources/Private/Templates/Preview/ExamplePlugin.html
+
+    This way you can even switch between previews for your plugins by supplying `list` as CType.
+
+    ..  note::
+
+        This only works, if there is no hook registered for this content type, you may want to check this
+        section in the :guilabel:`System > Configuration` module:
+
+        ..  code-block:: php
+            :caption: Search for registrations of this hook
+
+            $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['cms/layout/class.tx_cms_layout.php']
+                ['tt_content_drawItem']['content_element_xy'];
 
 
-.. index::
-   preview
-   Content elements; Preview definition
-.. _pageweblayoutpreview:
+..  _pageweblayoutpreview-example:
 
-preview
-~~~~~~~
+Example: Define previews for custom content elements
+----------------------------------------------------
 
-:aspect:`Datatype`
-   string
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/page.tsconfig
 
-:aspect:`Description`
-   It is possible to render previews of your own content elements in the page module.
-   By referencing a Fluid template you can create a visual representation of your content element,
-   making it easier for an editor to understand what is going on on the page.
-
-   The syntax is as follows:
-
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/page.tsconfig
-
-      mod.web_layout.tt_content.preview.[CTYPE].[list_type value] = EXT:site_mysite/Resources/Private/Templates/Preview/ExamplePlugin.html
-
-   This way you can even switch between previews for your plugins by supplying `list` as CType.
-
-   .. note::
-
-      This only works, if there is no hook registered for this content type, you may want to check this
-      section in the :guilabel:`System > Configuration` module:
-
-      .. code-block:: php
-         :caption: Search for registrations of this hook
-
-         $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['cms/layout/class.tx_cms_layout.php']
-            ['tt_content_drawItem']['content_element_xy'];
-
-:aspect:`Example`
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/page.tsconfig
-
-      mod.web_layout.tt_content {
-         preview.custom_ce = EXT:site_mysite/Resources/Private/Templates/Preview/CustomCe.html
-         preview.table = EXT:site_mysite/Resources/Private/Templates/Preview/Table.html
-         preview.list.tx_news = EXT:site_mysite/Resources/Private/Templates/Preview/TxNews.html
-      }
+    mod.web_layout.tt_content {
+        preview.custom_ce = EXT:site_mysite/Resources/Private/Templates/Preview/CustomCe.html
+        preview.table = EXT:site_mysite/Resources/Private/Templates/Preview/Table.html
+        preview.list.tx_news = EXT:site_mysite/Resources/Private/Templates/Preview/TxNews.html
+    }
