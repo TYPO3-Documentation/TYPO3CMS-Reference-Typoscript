@@ -1,31 +1,31 @@
-.. include:: /Includes.rst.txt
+..  include:: /Includes.rst.txt
 
-.. index::
-   Page TSconfig; templates
-   templates
-.. _pagetemplates:
-
+..  index::
+    Page TSconfig; templates
+    templates
+..  _pagetemplates:
 
 =========
 templates
 =========
 
-.. versionadded:: 12.0
+..  versionadded:: 12.0
 
 All Fluid templates rendered by backend controllers can be overridden with own
 templates on a per-file basis. The feature is available for basically all core
 backend modules, as well as the backend main frame templates. Exceptions are
 email templates and templates of the install tool.
 
-.. caution::
+..  caution::
 
-   While this feature is powerful and allows overriding nearly any backend
-   template, **it should be used with care**: Fluid templates of the Core
-   extensions are not considered API. The Core development needs the freedom to
-   add, change and delete Fluid templates any time, even for bugfix releases.
-   Template overrides are similar to an XCLASS in PHP - the Core can not
-   guarantee integrity on this level across versions.
+    While this feature is powerful and allows overriding nearly any backend
+    template, **it should be used with care**: Fluid templates of the Core
+    extensions are not considered API. The Core development needs the freedom to
+    add, change and delete Fluid templates any time, even for bugfix releases.
+    Template overrides are similar to an XCLASS in PHP - the Core can not
+    guarantee integrity on this level across versions.
 
+..  _pagetemplates-syntax:
 
 Basic syntax
 ============
@@ -42,14 +42,14 @@ override the :file:`Backend/Report.html` file with a custom template, this
 definition can be added to the :file:`Configuration/page.tsconfig` file of an
 extension:
 
-.. code-block:: typoscript
-   :caption: EXT:site_package/Configuration/page.tsconfig
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/page.tsconfig
 
-   # Left pattern (before equal sign): templates."composer-name"."something-unique"
-   # Right pattern (after equal sign): "overriding-extension-composer-name":"entry-path"
-   templates.typo3/cms-linkvalidator {
-      1643293191 = my-vendor/my-extension:Resources/Private/TemplateOverrides
-   }
+    # Left pattern (before equal sign): templates."composer-name"."something-unique"
+    # Right pattern (after equal sign): "overriding-extension-composer-name":"entry-path"
+    templates.typo3/cms-linkvalidator {
+        1643293191 = my-vendor/my-extension:Resources/Private/TemplateOverrides
+    }
 
 If the target extension, identified by its composer name
 `my-vendor/my-extension`, provides the
@@ -66,22 +66,22 @@ looks for the
 :file:`Resources/Private/TemplateOverrides/Partials/SomeName/SomePartial.html`
 file. Similar is the case for layouts.
 
-.. note::
+..  note::
 
-   The path part of the override definition can be set the way an integrator
-   prefers, :file:`Resources/Private/TemplateOverrides` is just an idea here and
-   hopefully not a bad one, further details rely on additional needs. For
-   instance, it is probably a good idea to include the composer or extension
-   name of the source extension into the path (linkvalidator in our example) -
-   or when using overrides based on page or group IDs, to include them in the
-   path.
+    The path part of the override definition can be set the way an integrator
+    prefers, :file:`Resources/Private/TemplateOverrides` is just an idea here and
+    hopefully not a bad one, further details rely on additional needs. For
+    instance, it is probably a good idea to include the composer or extension
+    name of the source extension into the path (linkvalidator in our example) -
+    or when using overrides based on page or group IDs, to include them in the
+    path.
 
-   The sub-path of the source extension is automatically added by the
-   system when it is searching for override files. If a layout file is located
-   at :file:`Resources/Private/Layouts/ExtraLarge/Main.html` and an override
-   definition uses the :file:`Resources/Private/TemplateOverrides` path, the
-   system will look up
-   :file:`Resources/Private/TemplateOverrides/Layouts/ExtraLarge/Main.html`.
+    The sub-path of the source extension is automatically added by the
+    system when it is searching for override files. If a layout file is located
+    at :file:`Resources/Private/Layouts/ExtraLarge/Main.html` and an override
+    definition uses the :file:`Resources/Private/TemplateOverrides` path, the
+    system will look up
+    :file:`Resources/Private/TemplateOverrides/Layouts/ExtraLarge/Main.html`.
 
 Template overriding is based on the existence of files: Two files are never
 merged. An override definition either takes effect because it actually provides
@@ -90,26 +90,27 @@ the default is used. This can become impractical for large template files. In
 such cases it might be an option to request a split of a large template file
 into smaller partial files so an extension can override a specific partial only.
 
-.. attention::
+..  attention::
 
-   When multiple override paths are defined and more than one of them contains
-   overrides for a specific template, the override definition with the highest
-   numerical value wins:
+    When multiple override paths are defined and more than one of them contains
+    overrides for a specific template, the override definition with the highest
+    numerical value wins:
 
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/page.tsconfig
+    ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/page.tsconfig
 
-      templates.typo3/cms-linkvalidator {
-         23 = other-vendor/other-extension:Resources/Private/TemplateOverrides/Linkvalidator
-      }
+        templates.typo3/cms-linkvalidator {
+            23 = other-vendor/other-extension:Resources/Private/TemplateOverrides/Linkvalidator
+        }
 
-   .. code-block:: typoscript
-      :caption: EXT:another_extension/Configuration/page.tsconfig
+    ..  code-block:: typoscript
+        :caption: EXT:another_extension/Configuration/page.tsconfig
 
-      templates.typo3/cms-linkvalidator {
-         2300 = my-vendor/my-extension:Resources/Private/MyOverrideIsBigger
-      }
+        templates.typo3/cms-linkvalidator {
+            2300 = my-vendor/my-extension:Resources/Private/MyOverrideIsBigger
+        }
 
+..  _pagetemplates-combinations:
 
 Combinations of overrides
 =========================
@@ -117,19 +118,20 @@ Combinations of overrides
 Due to the nature of TSconfig and its two types page TSconfig and user TSconfig,
 various combinations are possible:
 
-* Define "global" overrides with page TSconfig in
-  :file:`Configuration/page.tsconfig` of an extension. This works for all
-  modules, regardless of whether the module renders a page tree or not.
+*   Define "global" overrides with page TSconfig in
+    :file:`Configuration/page.tsconfig` of an extension. This works for all
+    modules, regardless of whether the module renders a page tree or not.
 
-* Define page level overrides via the :guilabel:`TSconfig` field of page
-  records. As always with page TSconfig, subpages and subtrees inherit these
-  settings from their parent pages.
+*   Define page level overrides via the :guilabel:`TSconfig` field of page
+    records. As always with page TSconfig, subpages and subtrees inherit these
+    settings from their parent pages.
 
-* Define overrides on user or (better) group level. As always, user TSconfig can
-  override page TSconfig by prefixing any setting available as page TSconfig with
-  :typoscript:`page.` in user TSconfig. A user TSconfig template override starts
-  with :typoscript:`page.templates.` instead of :typoscript:`templates.`.
+*   Define overrides on user or (better) group level. As always, user TSconfig can
+    override page TSconfig by prefixing any setting available as page TSconfig with
+    :typoscript:`page.` in user TSconfig. A user TSconfig template override starts
+    with :typoscript:`page.templates.` instead of :typoscript:`templates.`.
 
+..  _pagetemplates-third-party-modules:
 
 Usage in own modules
 ====================

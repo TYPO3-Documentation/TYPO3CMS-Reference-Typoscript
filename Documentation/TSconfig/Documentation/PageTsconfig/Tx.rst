@@ -1,7 +1,9 @@
-.. include:: /Includes.rst.txt
-.. index::
-   page TSconfig; Extensions
-   page TSconfig; tx_*
+..  include:: /Includes.rst.txt
+..  index::
+    page TSconfig; Extensions
+    page TSconfig; tx_*
+
+..  _page-tsconfig-extension-namespace:
 
 ====
 tx_*
