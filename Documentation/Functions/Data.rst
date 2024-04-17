@@ -767,6 +767,61 @@ Get content from the :ref:`register <using-setting-register>`:
 
     lib.foo.data = register : color
 
+
+..  _data-type-gettext-request:
+
+request
+-------
+
+..  versionadded:: 12.4
+
+..  confval:: request
+    :name: data-request
+    :Syntax: request : [attribute] | [property] ( | [subproperty] | ... )
+
+    Retrieve the property of a
+    :ref:`PSR-7 request attribute <t3coreapi:request-attributes>`.
+
+    Note that only scalar properties can be retrieved: int, float, string or
+    bool as value. If the property is an object or an array, a subproperty can
+    be given which then calls the getter method of the object or retrieves the
+    key of the array.
+
+..  _data-type-gettext-request-example-page-type:
+
+Example: Get the page type
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+    lib.foo.data = request : routing | pageType
+
+..  _data-type-gettext-request-example-queryArguments:
+
+Example: Get a query argument
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+    # Retrieve the value of the query parameter ?myParam=<value>
+    lib.foo.data = request : routing | queryArguments | myParam
+
+    # Retrieve the value of the query parameter ?tx_myext[key]=<value>
+    lib.foo.data = request : routing | queryArguments | tx_myext | key
+
+..  _data-type-gettext-request-example-nonce:
+
+Example: Get the nonce
+~~~~~~~~~~~~~~~~~~~~~~
+
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+    lib.foo.data = request : nonce | value
+
+
 ..  _data-type-gettext-session:
 
 session
