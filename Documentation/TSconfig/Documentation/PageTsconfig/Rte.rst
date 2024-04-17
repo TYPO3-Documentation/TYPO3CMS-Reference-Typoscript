@@ -1,9 +1,9 @@
-.. include:: /Includes.rst.txt
-.. index::
-   RTE
-   Rich text editor
-   see: Rich text editor; RTE
-.. _pageTsRte:
+..  include:: /Includes.rst.txt
+..  index::
+    RTE
+    Rich text editor
+    see: Rich text editor; RTE
+..  _pageTsRte:
 
 ===
 RTE
@@ -16,12 +16,12 @@ for more general information on RTE configuration and data processing.
 The order in which the configuration for the RTE is loaded is (the first one which
 is set will be used, see :ref:`example <pageTsRteOverridePreset>` below):
 
-1. preset defined for a specific field via page TSconfig
-2. :ref:`richtextConfiguration <t3tca:columns-text-properties-richtextConfiguration>`
-   defined for a specific field via TCA
-3. general preset defined via page TSconfig (:typoscript:`RTE.default.preset`)
-4. default (the preset "default", e.g. as defined by EXT:rte_ckeditor or overridden
-   in :file:`ext_localconf.php`)
+1.  preset defined for a specific field via page TSconfig
+2.  :ref:`richtextConfiguration <t3tca:columns-text-properties-richtextConfiguration>`
+    defined for a specific field via TCA
+3.  general preset defined via page TSconfig (:typoscript:`RTE.default.preset`)
+4.  default (the preset "default", e.g. as defined by EXT:rte_ckeditor or overridden
+    in :file:`ext_localconf.php`)
 
 The full property path building is a bit more complex than for other
 property segments. The goal is that global options can be set that can
@@ -42,37 +42,44 @@ will usually be used. This page covers only the general configuration, for
 more information about configuring EXT:rte_ckeditor, see the
 :ref:`rte_ckeditor configuration <ext_rte_ckeditor:configuration>`.
 
+..  contents::
+    :local:
+
+..  _pageTsRte-examples:
+
 Examples
 ========
+
+..  _pageTsRte-example-disable:
 
 Example: Disable RTE
 --------------------
 
-.. code-block:: typoscript
-   :caption: EXT:site_package/Configuration/page.tsconfig
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/page.tsconfig
 
-   # Disable all RTEs
-   RTE.default.disabled = 1
+    # Disable all RTEs
+    RTE.default.disabled = 1
 
-.. code-block:: typoscript
-   :caption: EXT:site_package/Configuration/page.tsconfig
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/page.tsconfig
 
-   # Disable all RTEs
-   RTE.default.disabled = 1
-   # Enable RTE for the tt_content bodytext field only
-   RTE.config.tt_content.bodytext.disabled = 0
+    # Disable all RTEs
+    RTE.default.disabled = 1
+    # Enable RTE for the tt_content bodytext field only
+    RTE.config.tt_content.bodytext.disabled = 0
 
-.. code-block:: typoscript
-   :caption: EXT:site_package/Configuration/page.tsconfig
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/page.tsconfig
 
-   # Disable all RTEs
-   RTE.default.disabled = 1
-   # Enable RTE for the tt_content bodytext field only
-   RTE.config.tt_content.bodytext.disabled = 0
-   # But disable RTE for tt_content bodytext again if the record type is "text"
-   RTE.config.tt_content.bodytext.types.text.disabled = 1
+    # Disable all RTEs
+    RTE.default.disabled = 1
+    # Enable RTE for the tt_content bodytext field only
+    RTE.config.tt_content.bodytext.disabled = 0
+    # But disable RTE for tt_content bodytext again if the record type is "text"
+    RTE.config.tt_content.bodytext.types.text.disabled = 1
 
-.. _pageTsRteOverridePreset:
+..  _pageTsRteOverridePreset:
 
 Example: Override preset
 ------------------------
@@ -86,7 +93,7 @@ Summary:
 *   TCA richtextConfiguration (for a specific field) overrides the page TSconfig
     default preset (:typoscript:`RTE.default.preset`)
 
-.. code-block:: typoscript
+..  code-block:: typoscript
     :caption: EXT:site_package/Configuration/page.tsconfig
 
     # set a default preset to use as fallback
@@ -95,262 +102,179 @@ Summary:
     # Override preset for field "description" in table "tt_address"
     RTE.config.tt_address.description.preset = custom_preset_fancy
 
+..  _pageTsRte-properties:
 
 Properties
 ==========
 
-.. contents::
-   :depth: 2
-   :local:
+..  contents::
+    :depth: 2
+    :local:
 
-.. index:: RTE; disable
+..  index:: RTE; disable
 
 disabled
 --------
 
-:aspect:`Datatype`
-    boolean
+..  confval:: disabled
+    :name: rte-disabled
+    :type: boolean
 
-:aspect:`Description`
     If set, the editor is disabled. This option is evaluated in :php:`\TYPO3\CMS\Backend\Form\FormEngine`
     where it determines whether the RTE is rendered or not. Note that a backend user can also ultimately
     disable RTE's in his user settings.
 
-.. index::
-   RTE; Configuration
-   RTE; config
+..  index::
+    RTE; Configuration
+    RTE; config
 
 
 buttons
 -------
 
-
-
-.. _buttons-link-options-removeitems:
+..  _buttons-link-options-removeitems:
 
 buttons.link.options.removeItems
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. container:: table-row
+..  confval:: buttons.link.options.removeItems
+    :name: rte-buttons-link-options-removeItems
+    :type: list of strings
 
-   Property
-         buttons.link.options.removeItems
+    List of tab items to remove from the dialog of the link button.
+    Possible tab items are: page, file, url, email, folder, telephone.
 
-   Data type
-         list of strings
+    Note: More tabs may be provided by extensions.
 
-   Description
-         List of tab items to remove from the dialog of the link button.
-         Possible tab items are: page, file, url, email, folder, telephone.
-
-         Note: More tabs may be provided by extensions.
-
-
-
-.. _buttons-link-targetselector-disabled:
+..  _buttons-link-targetselector-disabled:
 
 buttons.link.targetSelector.disabled
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. container:: table-row
+..  confval:: buttons.link.targetSelector.disabled
+    :name: rte-buttons-link-targetselector-disabled
+    :type: boolean
+    :Default: 0
 
-   Property
-         buttons.link.targetSelector.disabled
+    If set, the selection of link target is removed from the link
+    insertion/update dialog.
 
-   Data type
-         boolean
-
-   Description
-         If set, the selection of link target is removed from the link
-         insertion/update dialog.
-
-         Default : 0
-
-
-
-.. _buttons-link-pageidselector-enabled:
+..  _buttons-link-pageidselector-enabled:
 
 buttons.link.pageIdSelector.enabled
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. container:: table-row
+..  confval:: buttons.link.pageIdSelector.enabled
+    :name: rte-buttons-link-pageidselector-enabled
+    :type: boolean
+    :Default: 0
 
-   Property
-         buttons.link.pageIdSelector.enabled
+    If set, the specification of a page id, without using the page tree,
+    is enabled in the link insertion/update dialog.
 
-   Data type
-         boolean
+    Note: This feature is intended for authors who have to deal with a
+    very large page tree. Note that the feature is disabled by default.
 
-   Description
-         If set, the specification of a page id, without using the page tree,
-         is enabled in the link insertion/update dialog.
-
-         Note: This feature is intended for authors who have to deal with a
-         very large page tree. Note that the feature is disabled by default.
-
-         Default: 0
-
-
-
-.. _buttons-link-queryparametersselector-enabled:
+..  _buttons-link-queryparametersselector-enabled:
 
 buttons.link.queryParametersSelector.enabled
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. container:: table-row
+..  confval:: buttons.link.queryParametersSelector.enabled
+    :name: rte-buttons-link-queryparametersselector-enabled
+    :type: boolean
+    :Default: 0
 
-   Property
-         buttons.link.queryParametersSelector.enabled
+    If set, an additional field is enabbled in the link insertion/update
+    dialogue allowing authors to specify query parameters to be added on
+    the link
 
-   Data type
-         boolean
-
-   Description
-         If set, an additional field is enabbled in the link insertion/update
-         dialogue allowing authors to specify query parameters to be added on
-         the link
-
-         Default: 0
-
-
-
-.. _buttons-link-relattribute-enabled:
+..  _buttons-link-relattribute-enabled:
 
 buttons.link.relAttribute.enabled
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. container:: table-row
+..  confval:: buttons.link.relAttribute.enabled
+    :name: rte-buttons-link-relattribute-enabled
+    :type: boolean
+    :Default: 0
 
-   Property
-         buttons.link.relAttribute.enabled
+    If set, an additional field is enabled in the link insertion/update
+    dialogue allowing authors to specify a rel attribute to be added to
+    the link.
 
-   Data type
-         boolean
-
-   Description
-         If set, an additional field is enabled in the link insertion/update
-         dialogue allowing authors to specify a rel attribute to be added to
-         the link.
-
-         Default: 0
-
-
-
-.. _buttons-link-properties-class-allowedclasses:
+..  _buttons-link-properties-class-allowedclasses:
 
 buttons.link.properties.class.allowedClasses
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. container:: table-row
+..  confval:: buttons.link.properties.class.allowedClasses
+    :name: rte-buttons-link-properties-class-allowedclasses
+    :type: list of id-strings
 
-   Property
-         buttons.link.properties.class.allowedClasses
+    Classes available in the Insert/Modify link dialogue.
 
-   Data type
-         list of id-strings
-
-   Description
-         Classes available in the Insert/Modify link dialogue.
-
-
-
-
-
-.. _buttons-link-properties-class-required:
+..  _buttons-link-properties-class-required:
 
 buttons.link.properties.class.required
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. container:: table-row
+..  confval:: buttons.link.properties.class.required
+    :name: rte-buttons-link-properties-class-required
+    :type: boolean
 
-   Property
-         buttons.link.properties.class.required
+    If set, a class must be selected for any link. Therefore, the empty
+    option is removed from the class selector.
 
-   Data type
-         boolean
-
-   Description
-         If set, a class must be selected for any link. Therefore, the empty
-         option is removed from the class selector.
-
-
-
-.. _buttons-link-type-properties-class-required:
+..  _buttons-link-type-properties-class-required:
 
 buttons.link.[ *type* ].properties.class.required
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. container:: table-row
+..  confval:: buttons.link.[type].properties.class.required
+    :name: rte-buttons-link-type-properties-class-required
+    :type: boolean
 
-   Property
-         buttons.link.[ *type* ].properties.class.required
+    If set, a class must be selected for any link of the given type.
+    Therefore, the empty option is removed from the class selector.
+    Possible types are: page, file, url, email, folder, telephone.
 
-   Data type
-         boolean
-
-   Description
-         If set, a class must be selected for any link of the given type.
-         Therefore, the empty option is removed from the class selector.
-         Possible types are: page, file, url, email, folder, telephone.
-
-
-
-
-
-.. _buttons-link-properties-target-default:
+..  _buttons-link-properties-target-default:
 
 buttons.link.properties.target.default
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. container:: table-row
+..  confval:: buttons.link.properties.target.default
+    :name: rte-buttons-link-properties-target-default
+    :type: string
 
-   Property
-         buttons.link.properties.target.default
-
-   Data type
-         string
-
-   Description
-         This sets the default target for new links in the RTE.
+    This sets the default target for new links in the RTE.
 
 
-.. _buttons-link-type-properties-target-default:
+..  _buttons-link-type-properties-target-default:
 
 buttons.link.[ *type* ].properties.target.default
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. container:: table-row
+..  confval:: buttons.link.[type].properties.target.default
+    :name: rte-buttons-link-type-properties-target-default
+    :type: string
 
-   Property
-         buttons.link.[ *type* ].properties.target.default
+    Specifies a default target for links of the given type.
+    Possible types are: page, file, url, mail, spec. More types may be
+    provided by extensions.
 
-   Data type
-         string
+..  index::
+    RTE; Content language direction
+    RTE config; contentsLanguageDirection
+..  _rte-config-contentsLanguageDirection:
 
-   Description
-         Specifies a default target for links of the given type.
-         Possible types are: page, file, url, mail, spec. More types may be
-         provided by extensions.
+config.contentsLanguageDirection
+--------------------------------
 
-
-
-
-
-config
-------
-
-.. index::
-   RTE; Content language direction
-   RTE config; contentsLanguageDirection
-
-contentsLanguageDirection
-~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-:aspect:`Datatype`
-    :typoscript:`rtl` or :typoscript:`ltr`
-
-:aspect:`Description`
+..  confval:: config.contentsLanguageDirection
+    :name: rte-config-contentsLanguageDirection
+    :type: string
 
     The configuration `contentsLangDirection` of the ckeditor is used to define the
     direction of the content. It is filled by the direction defined in the site
@@ -369,9 +293,10 @@ contentsLanguageDirection
             RTE.config.contentsLanguageDirection = ltr
         [END]
 
-.. index::
-   RTE; Server processing
-   RTE; proc
+..  index::
+    RTE; Server processing
+    RTE; proc
+..  _rte-proc:
 
 proc
 ----
@@ -391,16 +316,17 @@ Notice how many properties relate to specific transformations only! Also notice 
 This means that options limited to `ts_transform` will also work for `ts_css` of course.
 
 
-.. index::
-   RTE; Classes allowed
+..  index::
+    RTE; Classes allowed
+..  _rte-proc-allowedClasses:
 
 allowedClasses
 ~~~~~~~~~~~~~~
 
-:aspect:`Datatype`
-    string with comma separated values
+..  confval:: proc.allowedClasses
+    :name: rte-proc-allowedClasses
+    :type: string with comma separated values
 
-:aspect:`Description`
     Applies for `ts_transform` and `css_transform` only.
 
     Direction: From RTE to database, saving a record.
@@ -414,18 +340,18 @@ allowedClasses
 
     If a class name is not found in this list, the default is to remove the class.
 
-
-.. index::
-   RTE; HTML tags allowed
-   RTE; Tags allowed
+..  index::
+    RTE; HTML tags allowed
+    RTE; Tags allowed
+..  _rte-proc-allowTags:
 
 allowTags
 ~~~~~~~~~
 
-:aspect:`Datatype`
-    string with comma separated values
+..  confval:: proc.allowTags
+    :name: rte-proc-allowTags
+    :type: string with comma separated values
 
-:aspect:`Description`
     Applies for `ts_transform` and `css_transform` only.
 
     Tags to allow. Notice, this list is  *added* to the default list,
@@ -433,132 +359,137 @@ allowTags
 
     b,i,u,a,img,br,div,center,pre,figure,figcaption,font,hr,sub,sup,p,strong,em,li,ul,ol,blockquote,strike,span,abbr,acronym,dfn
 
-.. index::
-   RTE; Tags outside paragraphs
+..  index::
+    RTE; Tags outside paragraphs
+..  _rte-proc-allowTagsOutside:
 
 allowTagsOutside
 ~~~~~~~~~~~~~~~~
 
-:aspect:`Datatype`
-    string with comma separated values
+..  confval:: proc.allowTagsOutside
+    :name: rte-proc-allowTagsOutside
+    :type: string with comma separated values
+    :Default: `address, article, aside, blockquote, footer, header, hr, nav, section, div`
 
-:aspect:`Description`
     Applies for `ts_transform` and `css_transform` only.
 
     Enter tags which are allowed outside of `<P>` and `<DIV>` sections when converted back to database.
 
-:aspect:`Default`
-    address, article, aside, blockquote, footer, header, hr, nav, section, div
 
-:aspect:`Example`
-    .. code-block:: typoscript
-       :caption: EXT:site_package/Configuration/page.tsconfig
+Example: Allow only hr tags outside of p and div
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-       # Allow only hr tags outside of p and div
-       RTE.default.proc.allowTagsOutside = hr
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/page.tsconfig
 
-.. index::
-   RTE; block elements
+    # Allow only hr tags outside of p and div
+    RTE.default.proc.allowTagsOutside = hr
+
+..  index::
+    RTE; block elements
+..  _rte-proc-blockElementList:
 
 blockElementList
 ~~~~~~~~~~~~~~~~
 
-:aspect:`Datatype`
-    string with comma separated values
+..  confval:: proc.blockElementList
+    :name: rte-proc-blockElementList
+    :type: string with comma separated values
 
-:aspect:`Description`
     Comma-separated list of uppercase tags (e.g. :code:`P,HR`) that overrides the list of HTML
     elements that will be treated as block elements by the RTE transformations.
 
-.. index::
-   RTE; tags denyed
+..  index::
+    RTE; tags denyed
+..  _rte-proc-denyTags:
 
 denyTags
 ~~~~~~~~
 
-:aspect:`Datatype`
-    string with comma separated values
+..  confval:: proc.denyTags
+    :name: rte-proc-denyTags
+    :type: string with comma separated values
 
-:aspect:`Description`
     Applies for `ts_transform` and `css_transform` only.
 
     Tags from above list to disallow.
 
-
-.. index::
-   RTE; HTMLparser DB entry
+..  index::
+    RTE; HTMLparser DB entry
+..  _rte-proc-entryHTMLparser_db:
 
 entryHTMLparser_db
 ~~~~~~~~~~~~~~~~~~
 
-:aspect:`Datatype`
-    boolean / :ref:`HTMLparser <t3tsref:htmlparser>`
+..  confval:: proc.entryHTMLparser_db
+    :name: rte-proc-entryHTMLparser_db
+    :type: boolean / :ref:`HTMLparser <t3tsref:htmlparser>`
 
-:aspect:`Description`
     Applies to all kinds of processing.
 
     Allows to enable / disable the :ref:`HTMLparser <t3tsref:htmlparser>` *before* the
     content is processed with the predefined processors (e.g. ts_images or ts_transform).
 
-.. index::
-   RTE; HTMLparser RTE entry
+..  index::
+    RTE; HTMLparser RTE entry
+..  _rte-proc-entryHTMLparser_rte:
 
 entryHTMLparser_rte
 ~~~~~~~~~~~~~~~~~~~
 
-:aspect:`Datatype`
-    boolean / :ref:`HTMLparser <t3tsref:htmlparser>`
+..  confval:: proc.entryHTMLparser_rte
+    :name: rte-proc-entryHTMLparser_rte
+    :type: boolean / :ref:`HTMLparser <t3tsref:htmlparser>`
 
-:aspect:`Description`
     Applies to all kinds of processing.
 
     Allows to enable / disable the :ref:`HTMLparser <t3tsref:htmlparser>` *before* the
     content is processed with the predefined processors (e.g. ts_images or ts_transform).
 
-
-.. index::
-   RTE; HTMLparser DB exit
+..  index::
+    RTE; HTMLparser DB exit
+..  _rte-proc-exitHTMLparser_db:
 
 exitHTMLparser_db
 ~~~~~~~~~~~~~~~~~
 
-:aspect:`Datatype`
-    boolean / :ref:`HTMLparser <t3tsref:htmlparser>`
+..  confval:: proc.exitHTMLparser_db
+    :name: rte-proc-exitHTMLparser_db
+    :type: boolean / :ref:`HTMLparser <t3tsref:htmlparser>`
 
-:aspect:`Description`
     Applies to all kinds of processing.
 
     Allows to enable / disable the :ref:`HTMLparser <t3tsref:htmlparser>` *after* the
     content is processed with the predefined processors (e.g. ts_images or ts_transform).
 
-
-.. index::
-   RTE; HTMLparser RTE exit
+..  index::
+    RTE; HTMLparser RTE exit
+..  _rte-proc-exitHTMLparser_rte:
 
 exitHTMLparser_rte
 ~~~~~~~~~~~~~~~~~~
 
-:aspect:`Datatype`
-    boolean / :ref:`HTMLparser <t3tsref:htmlparser>`
+..  confval:: proc.exitHTMLparser_rte
+    :name: rte-proc-exitHTMLparser_rte
+    :type: boolean / :ref:`HTMLparser <t3tsref:htmlparser>`
 
-:aspect:`Description`
     Applies to all kinds of processing.
 
     Allows to enable / disable the :ref:`HTMLparser <t3tsref:htmlparser>` *after* the
     content is processed with the predefined processors (e.g. ts_images or ts_transform).
 
 
-.. index::
-   RTE; HTMLparser DB
-.. _pageTsRteProcHtmlParserDb:
+..  index::
+    RTE; HTMLparser DB
+..  _pageTsRteProcHtmlParserDb:
 
 HTMLparser_db
 ~~~~~~~~~~~~~
 
-:aspect:`Datatype`
-    :ref:`HTMLparser <t3tsref:htmlparser>`
+..  confval:: proc.HTMLparser_db
+    :name: rte-proc-HTMLparser_db
+    :type: :ref:`HTMLparser <t3tsref:htmlparser>`
 
-:aspect:`Description`
     Applies for `ts_transform` and `css_transform` only.
 
     These are additional options to the HTML parser calls which strips of tags when the content is prepared
@@ -567,18 +498,20 @@ HTMLparser_db
 
     For the detailed list of properties, see the :ref:`section of the TypoScript reference <t3tsref:htmlparser>`.
 
-    .. note::
+    ..  note::
 
-       This configuration is similar in frontend TypoScript and Page TSconfig.
-       This is why single properties can be looked up in the TypoScript reference.
+        This configuration is similar in frontend TypoScript and Page TSconfig.
+        This is why single properties can be looked up in the TypoScript reference.
 
-       Also note the :ref:`HTMLparser <t3tsref:htmlparser>` options :code:`keepNonMatchedTags`
-       and :code:`htmlSpecialChars` are *not* observed. They are preset internally.
+        Also note the :ref:`HTMLparser <t3tsref:htmlparser>` options :code:`keepNonMatchedTags`
+        and :code:`htmlSpecialChars` are *not* observed. They are preset internally.
+
+..  _pageTsRteProcHtmlParserDb-Sanitization:
 
 Sanitization
-''''''''''''
+^^^^^^^^^^^^
 
-.. versionadded:: 9.5.29/10.4.19
+..  versionadded:: 9.5.29/10.4.19
 
 An HTML sanitizer is available to sanitize and remove XSS from markup. It
 strips tags, attributes and values that are not explicitly allowed.
@@ -589,41 +522,42 @@ files <t3coreapi:configuration-files>`
 :file:`config/system/settings.php` or
 :file:`config/system/additional.php`:
 
-.. code-block:: php
+..  code-block:: php
 
-   $GLOBALS['TYPO3_CONF_VARS']['SYS']['features']['security.backend.htmlSanitizeRte'] = true;
+    $GLOBALS['TYPO3_CONF_VARS']['SYS']['features']['security.backend.htmlSanitizeRte'] = true;
 
 It can then be disabled per use case with a custom processing instruction:
 
-.. code-block:: yaml
-   :caption: EXT:site_package/Configuration/Processing.yaml
+..  code-block:: yaml
+    :caption: EXT:site_package/Configuration/Processing.yaml
 
-   processing:
-     allowTags:
-       # ...
-     HTMLparser_db:
-       # ...
-       # disable individually per use case
-       htmlSanitize: false
+    processing:
+      allowTags:
+        # ...
+      HTMLparser_db:
+        # ...
+        # disable individually per use case
+        htmlSanitize: false
 
-       # This is the default configuration,
-       # the feature flag has to be enabled
-       htmlSanitize:
-         # use default builder as configured in
-         # $GLOBALS['TYPO3_CONF_VARS']['SYS']['htmlSanitizer']
-         build: default
+        # This is the default configuration,
+        # the feature flag has to be enabled
+        htmlSanitize:
+          # use default builder as configured in
+          # $GLOBALS['TYPO3_CONF_VARS']['SYS']['htmlSanitizer']
+          build: default
 
 
-.. index::
-   RTE; HTMLparser RTE
+..  index::
+    RTE; HTMLparser RTE
+..  _rte-proc-HTMLparser_rte:
 
 HTMLparser_rte
 ~~~~~~~~~~~~~~
 
-:aspect:`Datatype`
-    :ref:`HTMLparser <t3tsref:htmlparser>`
+..  confval:: proc.HTMLparser_rte
+    :name: rte-proc-HTMLparser_rte
+    :type: :ref:`HTMLparser <t3tsref:htmlparser>`
 
-:aspect:`Description`
     Applies for `ts_transform` and `css_transform` only.
 
     These are additional options to the HTML parser calls which strips of tags when the content is prepared
@@ -632,7 +566,7 @@ HTMLparser_rte
 
     For the detailed list of properties, see the :ref:`section of the TypoScript reference <t3tsref:htmlparser>`.
 
-    .. note::
+    ..  note::
 
        This configuration is similar in frontend TypoScript and Page TSconfig.
        This is why single properties can be looked up in the TypoScript reference.
@@ -640,14 +574,15 @@ HTMLparser_rte
        Also note the :ref:`HTMLparser <t3tsref:htmlparser>` options :code:`keepNonMatchedTags`
        and :code:`htmlSpecialChars` are *not* observed. They are preset internally.
 
-.. index::
-   RTE; Transformations overruled
+..  index::
+    RTE; Transformations overruled
+..  _rte-proc-:
 
 overruleMode
 ~~~~~~~~~~~~
 
-:aspect:`Datatype`
-    Comma list of RTE transformations
+..  confval:: proc.overruleMode
+    :name: rte-proc-overruleMode
+    :type: Comma list of RTE transformations
 
-:aspect:`Description`
     This can overrule the RTE transformation set from TCA. Notice, this is a  *comma list* of transformation keys.
