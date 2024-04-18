@@ -1,7 +1,7 @@
-.. include:: /Includes.rst.txt
-.. index:: TCEMAIN
-.. _pagetcemain:
-.. _pagetcemain-properties:
+..  include:: /Includes.rst.txt
+..  index:: TCEMAIN
+..  _pagetcemain:
+..  _pagetcemain-properties:
 
 =======
 TCEMAIN
@@ -10,26 +10,25 @@ TCEMAIN
 Configuration for the TYPO3 Core Engine (DataHandler). For general information, see
 the :ref:`according section of TYPO3 Explained <t3coreapi:tce>`.
 
-.. youtube:: HnAdDHkes5A
+..  youtube:: HnAdDHkes5A
 
 Properties
 ==========
 
-.. contents::
-   :depth: 2
-   :local:
+..  contents::
+    :depth: 2
+    :local:
 
-
-.. index:: Clear cache; On saving record
-.. _pagetcemain-clearcachecmd:
+..  index:: Clear cache; On saving record
+..  _pagetcemain-clearcachecmd:
 
 clearCacheCmd
 -------------
 
-:aspect:`Datatype`
-    List of integers, `all`, `pages` or tags
+..  confval:: clearCacheCmd
+    :name: tcemain-clearCacheCmd
+    :type: List of integers, `all`, `pages` or tags
 
-:aspect:`Description`
     This allows you to have the frontend cache for additional pages cleared when saving
     to some page or branch of the page tree.
 
@@ -39,158 +38,164 @@ clearCacheCmd
 
     Attaching tags to page cache is described in the :ref:`TypoScript Reference <t3tsref:stdwrap-addpagecachetags>`.
 
-:aspect:`Examples`
-    .. code-block:: typoscript
-       :caption: EXT:site_package/Configuration/page.tsconfig
+..  _pagetcemain-clearcachecmd-example:
 
-       TCEMAIN {
-           # Clear the cache for page uid 12 and 23 when saving a record in this page
-           clearCacheCmd = 12, 23
-           # Clear all frontent page caches of pages
-           clearCacheCmd = pages
-           # Clear ALL caches
-           clearCacheCmd = all
-           # Clear cache for all pages tagged with tag "pagetag1"
-           clearCacheCmd = cacheTag:pagetag1
-       }
+Example: Clear the cache for certain pages when a record is changed
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-    .. note::
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/page.tsconfig
 
-        In order for the :typoscript:`pages` and :typoscript:`all` commands to work for non-admin users,
-        make sure to set :typoscript:`options.clearCache.pages = 1` or :typoscript:`options.clearCache.all = 1` accordingly
-        in the user TSconfig.
+    TCEMAIN {
+        # Clear the cache for page uid 12 and 23 when saving a record in this page
+        clearCacheCmd = 12, 23
+        # Clear all frontent page caches of pages
+        clearCacheCmd = pages
+        # Clear ALL caches
+        clearCacheCmd = all
+        # Clear cache for all pages tagged with tag "pagetag1"
+        clearCacheCmd = cacheTag:pagetag1
+    }
 
+..  note::
 
-.. index:: Clear cache; Disable
-.. _pagetcemain-clearcache-disable:
+    In order for the :typoscript:`pages` and :typoscript:`all` commands to work for non-admin users,
+    make sure to set :typoscript:`options.clearCache.pages = 1` or :typoscript:`options.clearCache.all = 1` accordingly
+    in the user TSconfig.
+
+..  index:: Clear cache; Disable
+..  _pagetcemain-clearcache-disable:
 
 clearCache_disable
 ------------------
 
-:aspect:`Datatype`
-    boolean
+..  confval:: clearCache_disable
+    :name: tcemain-clearCache_disable
+    :type: boolean
 
-:aspect:`Description`
     If set, then the automatic clearing of page cache when records are edited etc. is disabled.
     This also disables the significance of the two options
     :ref:`clearCache_pageSiblingChildren <pagetcemain-clearcache-pagesiblingchildren>`
     and :ref:`clearCache_pageGrandParent <pagetcemain-clearcache-pagegrandparent>`
 
-
-.. index:: Clear cache; On saving child page
-.. _pagetcemain-clearcache-pagegrandparent:
+..  index:: Clear cache; On saving child page
+..  _pagetcemain-clearcache-pagegrandparent:
 
 clearCache_pageGrandParent
 --------------------------
 
-:aspect:`Datatype`
-    boolean
+..  confval:: clearCache_pageGrandParent
+    :name: tcemain-clearCache_pageGrandParent
+    :type: boolean
 
-:aspect:`Description`
     If set, then the grand parent of a page being edited will have the page cache cleared.
 
-
-.. index:: Clear cache; On saving sibling page
-.. _pagetcemain-clearcache-pagesiblingchildren:
+..  index:: Clear cache; On saving sibling page
+..  _pagetcemain-clearcache-pagesiblingchildren:
 
 clearCache_pageSiblingChildren
 ------------------------------
 
-:aspect:`Datatype`
-    boolean
+..  confval:: clearCache_pageSiblingChildren
+    :name: tcemain-clearCache_pageSiblingChildren
+    :type: boolean
 
-:aspect:`Description`
     If set, then children of all siblings of a page being edited will have the page cache cleared.
 
     Default is that when a page record is edited, the cache for itself, the parent, and siblings (same level) is cleared.
 
-
-.. index:: Copy record; Disable hide
-.. _pagetcemaintables-disablehideatcopy:
+..  index:: Copy record; Disable hide
+..  _pagetcemaintables-disablehideatcopy:
 
 disableHideAtCopy
 -----------------
 
-:aspect:`Datatype`
-    boolean
+..  confval:: disableHideAtCopy
+    :name: tcemain-disableHideAtCopy
+    :type: boolean
 
-:aspect:`Description`
     Disables the :ref:`hideAtCopy TCA feature <t3tca:ctrl-reference-hideatcopy>` if
     configured for the table.
 
-:aspect:`Example`
-    .. code-block:: typoscript
-       :caption: EXT:site_package/Configuration/page.tsconfig
+..  _pagetcemaintables-disablehideatcopy-example:
 
-       TCEMAIN.table.pages {
-          # Pages will *not* have "(copy)" appended:
-          disablePrependAtCopy = 1
-          # Pages will *not* be hidden upon copy:
-          disableHideAtCopy = 1
-       }
+Example: Do not hide pages when they are copy-pasted
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-    These settings adjust that a page which is copied will neither have "(copy X)" appended nor be hidden.
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/page.tsconfig
 
-    The last page in this tree, labeled "Test", is used as original to be copied. The first sub page was
-    copied using the settings from the above example: It is labeled "Test" and is visible exactly like
-    the original page. The page "Test (copy 2)" in the middle was in contrast copied in default mode:
-    The page is hidden and the "(copy X)" suffix is added, if another page with the same named existed already.
+    TCEMAIN.table.pages {
+       # Pages will *not* have "(copy)" appended:
+       disablePrependAtCopy = 1
+       # Pages will *not* be hidden upon copy:
+       disableHideAtCopy = 1
+    }
 
-    .. figure:: /Images/ManualScreenshots/List/PageCopyWithSuffix.png
-        :alt: Hidden page with added suffix after copying its original page
+These settings adjust that a page which is copied will neither have "(copy X)" appended nor be hidden.
 
-        Hidden page with added suffix after copying its original page
+The last page in this tree, labeled "Test", is used as original to be copied. The first sub page was
+copied using the settings from the above example: It is labeled "Test" and is visible exactly like
+the original page. The page "Test (copy 2)" in the middle was in contrast copied in default mode:
+The page is hidden and the "(copy X)" suffix is added, if another page with the same named existed already.
 
+..  figure:: /Images/ManualScreenshots/List/PageCopyWithSuffix.png
+    :alt: Hidden page with added suffix after copying its original page
 
-.. index:: Copy record; Disable prepend string (copy)
-.. _pagetcemaintables-disableprependatcopy:
+    Hidden page with added suffix after copying its original page
+
+..  index:: Copy record; Disable prepend string (copy)
+..  _pagetcemaintables-disableprependatcopy:
 
 disablePrependAtCopy
 --------------------
 
-:aspect:`Datatype`
-    boolean
+..  confval:: disablePrependAtCopy
+    :name: tcemain-disablePrependAtCopy
+    :type: boolean
 
-:aspect:`Description`
     Disable the :ref:`prependAtCopy TCA feature <t3tca:ctrl-reference-prependatcopy>` if
     configured for the table.
 
     The word "prepend" is misleading. The "(copy)" label is actually *appended* to the record title.
 
-:aspect:`Example`
-    .. code-block:: typoscript
-       :caption: EXT:site_package/Configuration/page.tsconfig
+..  _pagetcemaintables-disableprependatcopy-example:
 
-       TCEMAIN.table.pages {
-          # Pages will *not* have "(copy)" appended:
-          disablePrependAtCopy = 1
-          # Pages will *not* be hidden upon copy:
-          disableHideAtCopy = 1
-       }
+Example: Do not append the "(copy)" label to newly copied pages
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-    These settings adjust that a page which is copied will neither have "(copy X)" appended nor be hidden.
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/page.tsconfig
 
-    The last page in this tree, labeled "Test", is used as original to be copied. The first sub page was
-    copied using the settings from the above example: It is labeled "Test" and is visible exactly like
-    the original page. The page "Test (copy 2)" in the middle was in contrast copied in default mode:
-    The page is hidden and the "(copy X)" suffix is added, if another page with the same named existed already.
+    TCEMAIN.table.pages {
+       # Pages will *not* have "(copy)" appended:
+       disablePrependAtCopy = 1
+       # Pages will *not* be hidden upon copy:
+       disableHideAtCopy = 1
+    }
 
-    .. figure:: /Images/ManualScreenshots/List/PageCopyWithSuffix.png
-        :alt: Hidden page with added suffix after copying its original page
+These settings adjust that a page which is copied will neither have "(copy X)" appended nor be hidden.
 
-        Hidden page with added suffix after copying its original page
+The last page in this tree, labeled "Test", is used as original to be copied. The first sub page was
+copied using the settings from the above example: It is labeled "Test" and is visible exactly like
+the original page. The page "Test (copy 2)" in the middle was in contrast copied in default mode:
+The page is hidden and the "(copy X)" suffix is added, if another page with the same named existed already.
 
+..  figure:: /Images/ManualScreenshots/List/PageCopyWithSuffix.png
+    :alt: Hidden page with added suffix after copying its original page
 
-.. index:: Link handler
-.. _pagetcemaintables-linkhandler:
+    Hidden page with added suffix after copying its original page
+
+..  index:: Link handler
+..  _pagetcemaintables-linkhandler:
 
 linkHandler
 -----------
 
-:aspect:`Datatype`
-    array of link handler configurations
+..  confval:: linkHandler
+    :name: tcemain-linkHandler
+    :type: array of link handler configurations
 
-:aspect:`Description`
     Contains an array of link handler configurations.
 
     ..  attention::
@@ -222,38 +227,41 @@ linkHandler
         For TYPO3 v12 the moved classes are available as an alias under the old
         namespace to allow extensions to be compatible with TYPO3 v11 and v12.
 
-:aspect:`Example`
-    The following page TSconfig display an additional tab with the `label` as
-    title in the linkbrowser. It then saves the link in the format
-    `t3://record?identifier=my_content&uid=123`. To render the link in the
-    frontend you need to define the same key in the TypoScript setup
-    :ref:`config.recordLinks <t3tsref:setup-config-recordLinks>`.
+..  _pagetcemaintables-linkhandler-example:
 
-    ..  tip::
-        For a complete example see also the :ref:`Record link tutorial
-        in TYPO3 Explained <t3coreapi:TableRecordLinkBrowserTutorials>`.
+Example: Display an additional tab in the linkbrowser
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-    ..  code-block:: typoscript
-        :caption: Page TSconfig definition for identifier `my_content`
+The following page TSconfig display an additional tab with the `label` as
+title in the linkbrowser. It then saves the link in the format
+`t3://record?identifier=my_content&uid=123`. To render the link in the
+frontend you need to define the same key in the TypoScript setup
+:ref:`config.recordLinks <t3tsref:setup-config-recordLinks>`.
 
-        TCEMAIN.linkHandler.my_content {
-            handler = TYPO3\CMS\Backend\LinkHandler\RecordLinkHandler
-            label = LLL:EXT:my_extension/Resources/Private/Language/locallang.xlf:link.customTab
-            configuration {
-                table = tx_myextension_content
-            }
-            scanBefore = page
+..  seealso::
+    For a complete example see also the :ref:`Record link tutorial
+    in TYPO3 Explained <t3coreapi:TableRecordLinkBrowserTutorials>`.
+
+..  code-block:: typoscript
+    :caption: Page TSconfig definition for identifier `my_content`
+
+    TCEMAIN.linkHandler.my_content {
+        handler = TYPO3\CMS\Backend\LinkHandler\RecordLinkHandler
+        label = LLL:EXT:my_extension/Resources/Private/Language/locallang.xlf:link.customTab
+        configuration {
+            table = tx_myextension_content
         }
+        scanBefore = page
+    }
 
-
-.. index:: Page permissions
-.. _pagetcemain-permissions-user-group:
+..  index:: Page permissions
+..  _pagetcemain-permissions-user-group:
 
 permissions
 -----------
 
-.. index:: Page permissions; copyFromParent
-.. _pagetcemain-permissions-copyFromParent:
+..  index:: Page permissions; copyFromParent
+..  _pagetcemain-permissions-copyFromParent:
 
 Value copyFromParent
 ~~~~~~~~~~~~~~~~~~~~
@@ -265,14 +273,14 @@ set, the page access permissions are copied from the parent page.
 Example: Inherit the group id of the parent page
 """"""""""""""""""""""""""""""""""""""""""""""""
 
-.. code-block:: php
-   :caption: config/system/settings.php | typo3conf/system/settings.php
+..  code-block:: php
+    :caption: config/system/settings.php | typo3conf/system/settings.php
 
-   $GLOBALS['TYPO3_CONF_VARS']['BE']['defaultPageTSconfig'] .= '
-       TCEMAIN.permissions.groupid = copyFromParent
-       TCEMAIN.permissions.group = 31
-       TCEMAIN.permissions.everybody = 0
-   ';
+    $GLOBALS['TYPO3_CONF_VARS']['BE']['defaultPageTSconfig'] .= '
+        TCEMAIN.permissions.groupid = copyFromParent
+        TCEMAIN.permissions.group = 31
+        TCEMAIN.permissions.everybody = 0
+    ';
 
 By default all new pages created by users will inherit the group of the parent
 page. Members of this group get all permissions. Users not in the group get no
@@ -286,32 +294,35 @@ group. The administrator does not have to set custom TSconfig to achieve this.
 
 This behaviour is similar to the "group sticky bit" in Unix for directories.
 
+..  index:: Page permissions; everybody
 
-.. index:: Page permissions; everybody
+..  _pagetcemain-permissions-everybody:
 
 everybody
 ~~~~~~~~~
 
-:aspect:`Datatype`
-    list of strings or integer 0-31
+..  confval:: permissions.everybody
+    :name: tcemain-permissions-everybody
+    :type: list of strings or integer 0-31
+    :Default: 0
 
-:aspect:`Description`
-   Default permissions for everybody who is not the owner user or member of
-   the owning group, key list: `show`, `edit`, `delete`, `new`, `editcontent`.
+    Default permissions for everybody who is not the owner user or member of
+    the owning group, key list: `show`, `edit`, `delete`, `new`, `editcontent`.
 
-   Alternatively, it is allowed to set an integer between 0 and 31, indicating
-   which bits corresponding to the key list should be set: `show = 1`,
-   `edit = 2`, `delete = 4`, `new = 8`, `editcontent = 16`.
+    Alternatively, it is allowed to set an integer between 0 and 31, indicating
+    which bits corresponding to the key list should be set: `show = 1`,
+    `edit = 2`, `delete = 4`, `new = 8`, `editcontent = 16`.
 
-   It also possible to set the value
-   :ref:`copyFromParent <pagetcemain-permissions-copyFromParent>` to inherit
-   the value from the parent page.
+    It also possible to set the value
+    :ref:`copyFromParent <pagetcemain-permissions-copyFromParent>` to inherit
+    the value from the parent page.
 
-:aspect:`Default`
-    0
+..  _pagetcemain-permissions-everybody-example:
 
-:aspect:`Example`
-    .. code-block:: typoscript
+Example: Set permissions defaults so that everybody can see the page
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+    ..  code-block:: typoscript
        :caption: EXT:site_package/Configuration/page.tsconfig
 
        TCEMAIN.permissions {
@@ -323,21 +334,23 @@ everybody
     above. Compared to the two other pages created with default
     permissions you can see the effect: "Everybody" has read access:
 
-    .. figure:: /Images/ManualScreenshots/Access/AccessDefaultActions.png
+    ..  figure:: /Images/ManualScreenshots/Access/AccessDefaultActions.png
         :alt: Page with altered permissions for backend users, groups and everybody
 
         Page with altered permissions for backend users, groups and everybody
 
+..  index:: Page permissions; Group
 
-.. index:: Page permissions; Group
+..  _pagetcemain-permissions-group:
 
 group
 ~~~~~
 
-:aspect:`Datatype`
-   list of strings or integer 0-31
+..  confval:: permissions.group
+    :name: tcemain-permissions-group
+    :type: list of strings or integer 0-31
+    :Default: show,edit,new,editcontent
 
-:aspect:`Description`
     Default permissions for group members, key list: `show`, `edit`, `new`,
     `editcontent`.
 
@@ -349,108 +362,117 @@ group
    :ref:`copyFromParent <pagetcemain-permissions-copyFromParent>` to inherit
    the value from the parent page.
 
-:aspect:`Default`
-    show,edit,new,editcontent
 
-:aspect:`Example`
-    .. code-block:: typoscript
-       :caption: EXT:site_package/Configuration/page.tsconfig
+..  _pagetcemain-permissions-group-example:
 
-       TCEMAIN.permissions {
-           # Group can do anything, normally "delete" is disabled
-           group = 31
-       }
+Example: Set permission defaults so that the group can do anything but delete a page
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-    The page "Community" was created with the settings from the example
-    above. Compared to the two other pages created with default
-    permissions you can see the effect: The Backend Group can now also
-    delete the page by default:
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/page.tsconfig
 
-    .. figure:: /Images/ManualScreenshots/Access/AccessDefaultActions.png
-        :alt: Page with altered permissions for backend users, groups and everybody
+    TCEMAIN.permissions {
+        # Group can do anything, normally "delete" is disabled
+        group = 31
+    }
 
-        Page with altered permissions for backend users, groups and everybody
+The page "Community" was created with the settings from the example
+above. Compared to the two other pages created with default
+permissions you can see the effect: The Backend Group can now also
+delete the page by default:
 
-.. index:: Page permissions; Group id
+..  figure:: /Images/ManualScreenshots/Access/AccessDefaultActions.png
+    :alt: Page with altered permissions for backend users, groups and everybody
+
+    Page with altered permissions for backend users, groups and everybody
+
+..  index:: Page permissions; Group id
+..  _pagetcemain-permissions-groupid:
 
 groupid
 ~~~~~~~
 
-:aspect:`Datatype`
-    positive integer or string
+..  confval:: permissions.groupid
+    :name: tcemain-permissions-groupid
+    :type: positive integer or string
 
-:aspect:`Description`
-   By default the owner group of a newly created page is set to the main group
-   of the backend user creating the page.
+    By default the owner group of a newly created page is set to the main group
+    of the backend user creating the page.
 
-   By setting the value of this property to
-   :ref:`copyFromParent <pagetcemain-permissions-copyFromParent>` the owner
-   group is copied from the newly created pages parent page.
+    By setting the value of this property to
+    :ref:`copyFromParent <pagetcemain-permissions-copyFromParent>` the owner
+    group is copied from the newly created pages parent page.
 
-   The owner group of a newly created page can be hardcoded by setting this
-   property to a positive integer greater then zero.
+    The owner group of a newly created page can be hardcoded by setting this
+    property to a positive integer greater then zero.
 
-:aspect:`Example`
-    .. code-block:: typoscript
-       :caption: EXT:site_package/Configuration/page.tsconfig
+..  _pagetcemain-permissions-groupid-example:
 
-       TCEMAIN {
-           # Owner be_groups UID for new pages
-           permissions.groupid = 3
-       }
+Example: Set default user group for permissions on new pages
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-    In this instance, backend group with UID 3 is "test_group". With the configuration
-    above a new page would be created with this group setting instead of the default,
-    even if a user who is not member of that group creates the page:
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/page.tsconfig
 
-    .. figure:: /Images/ManualScreenshots/Access/AccessDefaultPermissions.png
-        :alt: Page with altered permissions for backend users and groups
+    TCEMAIN {
+        # Owner be_groups UID for new pages
+        permissions.groupid = 3
+    }
 
-        Page with altered permissions for backend groups
+In this instance, backend group with UID 3 is "test_group". With the configuration
+above a new page would be created with this group setting instead of the default,
+even if a user who is not member of that group creates the page:
 
+..  figure:: /Images/ManualScreenshots/Access/AccessDefaultPermissions.png
+    :alt: Page with altered permissions for backend users and groups
 
-.. index:: Page permissions; User
-.. _pagetcemain-permissions-actions:
+    Page with altered permissions for backend groups
+
+..  index:: Page permissions; User
+..  _pagetcemain-permissions-actions:
 
 user
 ~~~~
 
-:aspect:`Datatype`
-   list of strings or integer 0-31
+..  confval:: permissions.user
+    :name: tcemain-permissions-user
+    :type: list of strings or integer 0-31
+    :Default: show,edit,delete,new,editcontent
 
-:aspect:`Description`
-   Default permissions for owner user, key list: `show`, `edit`, `delete`,
-   `new`, `editcontent`.
+    Default permissions for owner user, key list: `show`, `edit`, `delete`,
+    `new`, `editcontent`.
 
-   Alternatively, it is allowed to set an integer between 0 and 31, indicating
-   which bits corresponding to the key list should be set: `show = 1`,
-   `edit = 2`, `delete = 4`, `new = 8`, `editcontent = 16`.
+    Alternatively, it is allowed to set an integer between 0 and 31, indicating
+    which bits corresponding to the key list should be set: `show = 1`,
+    `edit = 2`, `delete = 4`, `new = 8`, `editcontent = 16`.
 
-   It also possible to set the value
-   :ref:`copyFromParent <pagetcemain-permissions-copyFromParent>` to inherit
-   the value from the parent page.
+    It also possible to set the value
+    :ref:`copyFromParent <pagetcemain-permissions-copyFromParent>` to inherit
+    the value from the parent page.
 
-:aspect:`Default`
-    show,edit,delete,new,editcontent
+..  _pagetcemain-permissions-actions-example:
 
-:aspect:`Example`
-    .. code-block:: typoscript
-       :caption: EXT:site_package/Configuration/page.tsconfig
+Example: Set permission defaults so that the pages owner can do anything
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-       TCEMAIN.permissions {
-           # User can do anything, this is identical to the default value
-           user = 31
-       }
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/page.tsconfig
 
-.. index:: Page permissions; User id
+    TCEMAIN.permissions {
+        # User can do anything, this is identical to the default value
+        user = 31
+    }
+
+..  index:: Page permissions; User id
+..  _pagetcemain-permissions-userid:
 
 userid
 ~~~~~~
 
-:aspect:`Datatype`
-    positive integer or string
+..  confval:: permissions.userid
+    :name: tcemain-permissions-userid
+    :type: positive integer or string
 
-:aspect:`Description`
    By default the owner of a newly created page is the user that created or
    copied the page.
 
@@ -461,40 +483,44 @@ userid
    When this property is set to a positive integer the owner of new pages is
    hardcoded to the user of that uid.
 
-:aspect:`Example`
-    .. code-block:: typoscript
-       :caption: EXT:site_package/Configuration/page.tsconfig
+..  _pagetcemain-permissions-userid-example:
 
-       TCEMAIN {
-           # Owner be_users UID for new pages
-           permissions.userid = 2
-       }
+Example: Set default user for permissions on new pages
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-    In this instance, backend user with UID 2 is "test". With the configuration
-    above a new page would be created with this owner setting instead of the default,
-    even if another user creates the page:
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/page.tsconfig
 
-    .. figure:: /Images/ManualScreenshots/Access/AccessDefaultPermissions.png
-        :alt: Page with altered permissions for backend users
+    TCEMAIN {
+        # Owner be_users UID for new pages
+        permissions.userid = 2
+    }
 
-        Page with altered permissions for backend users
+In this instance, backend user with UID 2 is "test". With the configuration
+above a new page would be created with this owner setting instead of the default,
+even if another user creates the page:
 
-.. index:: Page preview
-.. _pagetcemain-preview:
+..  figure:: /Images/ManualScreenshots/Access/AccessDefaultPermissions.png
+    :alt: Page with altered permissions for backend users
+
+    Page with altered permissions for backend users
+
+..  index:: Page preview
+..  _pagetcemain-preview:
 
 preview
 -------
 
-:aspect:`Datatype`
-    array
+..  confval:: preview
+    :name: tcemain-preview
+    :type: array
 
-:aspect:`Description`
     Configure preview link generated for the save+view button and other frontend view related buttons
     in the backend. This allows to have different preview URLs depending on the record type. A common
     use case is to have previews for blog or news records, and this feature allows you to define a different
     preview page for content elements as well, which might be handy if those are stored in a sysfolder.
 
-    .. code-block:: typoscript
+    ..  code-block:: typoscript
        :caption: EXT:site_package/Configuration/page.tsconfig
 
        TCEMAIN.preview {
@@ -534,19 +560,19 @@ preview
     the current record. You may override each parameter by using the :typoscript:`additionalGetParameters` configuration
     option.
 
-    .. note::
+    ..  note::
 
         Make sure not to set :typoscript:`options.saveDocView.<table name> = 0`, otherwise the save+view button
         will not be displayed when editing records of your table.
 
-    .. attention::
+    ..  attention::
 
         The configuration has to be defined for the page containing the records and :typoscript:`previewPageId`
         (for example sysfolder holding the records is located outside of your root)
 
-.. index:: Copy record; Table based configuration
-.. _pagetcemaintables:
-.. _pagetcemain-table-table-name:
+..  index:: Copy record; Table based configuration
+..  _pagetcemaintables:
+..  _pagetcemain-table-table-name:
 
 table
 -----
@@ -554,20 +580,17 @@ table
 Processing options for tables. The table name is added, for instance `TCEMAIN.table.pages.disablePrependAtCopy = 1`
 or `TCEMAIN.table.tt_content.disablePrependAtCopy = 1`.
 
-
-.. index:: Localization; Translate to message
-.. _pagetcemain-translatetomessage:
+..  index:: Localization; Translate to message
+..  _pagetcemain-translatetomessage:
 
 translateToMessage
 ------------------
 
-:aspect:`Datatype`
-    string
+..  confval:: translateToMessage
+    :name: tcemain-translateToMessage
+    :type: string
+    :Default: `Translate to %s:`
 
-:aspect:`Default`
-    Translate to %s:
-
-:aspect:`Description`
     Defines the string that will be prepended to some field values if you copy an element to another
     language version. This applies to all fields where the TCA columns property
     :ref:`l10n_mode <t3tca:columns-properties-l10n-mode>` is set to :php:`prefixLangTitle`.
@@ -578,22 +601,27 @@ translateToMessage
     an empty string. You can disable the message to a certain field by setting the `l10n_mode`
     to an empty string.
 
+..  _pagetcemain-translatetomessage-example:
 
-:aspect:`Example`
-    Set a German prefix:
+Example: Set a German prefix for newly translated records
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-    .. code-block:: typoscript
-       :caption: PageTSconfig
+..  code-block:: typoscript
+    :caption: PageTSconfig
 
-       TCEMAIN {
-           translateToMessage = Bitte in "%s" übersetzen:
-       }
+    TCEMAIN {
+        translateToMessage = Bitte in "%s" übersetzen:
+    }
 
-    Disable the [Translate to ...] prefix:
 
-    .. code-block:: typoscript
-       :caption: PageTSconfig
+..  _pagetcemain-translatetomessage-example-disable:
 
-        TCEMAIN {
-            translateToMessage =
-        }
+Example: Disable the "[Translate to ...]" prefix
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+..  code-block:: typoscript
+    :caption: PageTSconfig
+
+    TCEMAIN {
+        translateToMessage =
+    }
