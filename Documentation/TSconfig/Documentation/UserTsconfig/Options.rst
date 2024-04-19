@@ -16,6 +16,7 @@ upper right toolbar cache menu for non-admin users:
 
     options.clearCache.pages = 1
 
+..  _useroptions-properties:
 
 Properties
 ==========
@@ -33,8 +34,8 @@ additionalPreviewLanguages
 --------------------------
 
 ..  confval:: additionalPreviewLanguages
-
-    :Data type: list of sys_language IDs
+    :name: useroptions-additionalPreviewLanguages
+    :type: list of sys_language IDs
 
     The user will see these additional languages when localizing stuff in
     TCEforms. The list are IDs of site languages, as defined in the
@@ -49,8 +50,8 @@ alertPopups
 -----------
 
 ..  confval:: alertPopups
-
-    :Data type: bitmask
+    :name: useroptions-alertPopups
+    :type: bitmask
     :Default: 255 (show all warnings)
 
     Configure which Javascript popup alerts have to be displayed and which not:
@@ -69,8 +70,8 @@ bookmarkGroups
 --------------
 
 ..  confval:: bookmarkGroups
-
-    :Data type: Array of integers / strings
+    :name: useroptions-bookmarkGroups
+    :type: Array of integers / strings
 
     Set groups of bookmarks that can be accessed by the user. This affects the
     bookmarks toolbar item in the top right of the backend.
@@ -115,6 +116,7 @@ bookmarkGroups
           2 = LLL:EXT:sitepackage/Resources/Private/Language/locallang_be.xlf:bookmarkGroups.2
         }
 
+..  _useroptions-clearCache:
 
 clearCache
 ----------
@@ -126,8 +128,8 @@ clearCache.all
 ~~~~~~~~~~~~~~
 
 ..  confval:: clearCache.all
-
-    :Data type: boolean
+    :name: useroptions-clearCache-all
+    :type: boolean
     :Default: 0
 
 
@@ -144,8 +146,8 @@ clearCache.pages
 ~~~~~~~~~~~~~~~~
 
 ..  confval:: clearCache.pages
-
-    :Data type: boolean
+    :name: useroptions-clearCache-pages
+    :type: boolean
     :Default: 0
 
     If set to 1, this will allow a non-admin user to clear frontend and
@@ -159,8 +161,8 @@ clipboardNumberPads
 -------------------
 
 ..  confval:: clipboardNumberPads
-
-    :Data type: integer (0-20)
+    :name: useroptions-clipboardNumberPads
+    :type: integer (0-20)
     :Default: 3
 
     This allows you to enter how many pads you want on the clipboard.
@@ -173,8 +175,8 @@ contextMenu disableItems
 ------------------------
 
 ..  confval:: contextMenu.table.[tableName][.context].disableItems
-
-    :Data type: list of items
+    :name: useroptions-contextMenu-key-disableItems
+    :type: list of items
 
     List of :ref:`context menu <t3coreapi:context-menu>` ("clickmenu") items to
     disable.
@@ -266,6 +268,7 @@ createFoldersInEB
     used in EXT:filelist, which is based on the element browser as well, this
     option became useless and is not evaluated anymore.
 
+..  _useroptions-dashboard:
 
 dashboard
 ---------
@@ -277,8 +280,8 @@ dashboard.dashboardPresetsForNewUsers
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ..  confval:: dashboard.dashboardPresetsForNewUsers
-
-    :Data type: list of dashboard identifiers
+    :name: useroptions-dashboard-dashboardPresetsForNewUsers
+    :type: list of dashboard identifiers
     :Default: default
 
     List of dashboard identifiers to be used on initial dashboard module access.
@@ -298,8 +301,8 @@ defaultUploadFolder
 -------------------
 
 ..  confval:: defaultUploadFolder
-
-    :Data type: string
+    :name: useroptions-defaultUploadFolder
+    :type: string
 
     When a user uploads files they are stored in the default upload folder
     of the first file storage that user may access. The folder is used for
@@ -329,8 +332,8 @@ disableDelete
 -------------
 
 ..  confval:: disableDelete
-
-    :Data type: boolean
+    :name: useroptions-disableDelete
+    :type: boolean
 
     Disables the :guilabel:`Delete` button in TCEFORMs.
 
@@ -353,8 +356,8 @@ dontMountAdminMounts
 --------------------
 
 ..  confval:: dontMountAdminMounts
-
-    :Data type: boolean
+    :name: useroptions-dontMountAdminMounts
+    :type: boolean
 
     This options prevents the root to be mounted for an admin user.
 
@@ -369,14 +372,16 @@ enableBookmarks
 ---------------
 
 ..  confval:: enableBookmarks
-
-    :Data type: boolean
+    :name: useroptions-enableBookmarks
+    :type: boolean
     :Default: 1
 
     Enables the usage of bookmarks in the backend.
 
 
 ..  index:: File list
+
+..  _useroptions-file_list:
 
 file_list
 ---------
@@ -388,8 +393,8 @@ file_list.enableClipBoard
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ..  confval:: file_list.enableClipBoard
-
-    :Data type: list of keywords
+    :name: useroptions-enableClipBoard
+    :type: list of keywords
     :Default: selectable
 
     Determines whether the checkbox :guilabel:`Show clipboard` in the file list
@@ -415,8 +420,8 @@ file_list.displayColumnSelector
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ..  confval:: file_list.displayColumnSelector
-
-    :Data type: boolean
+    :name: useroptions-file_list-displayColumnSelector
+    :type: boolean
     :Default: true
 
     The column selector is enabled by default and can be disabled with this
@@ -445,10 +450,10 @@ file_list.displayColumnSelector
 file_list.enableDisplayBigControlPanel
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. versionchanged:: 11.3
-   The checkbox :guilabel:`Extended view` was removed with TYPO3 v11.3.
-   Therefore the option :typoscript:`file_list.enableDisplayBigControlPanel`
-   has no effect anymore.
+..  versionchanged:: 11.3
+    The checkbox :guilabel:`Extended view` was removed with TYPO3 v11.3.
+    Therefore the option :typoscript:`file_list.enableDisplayBigControlPanel`
+    has no effect anymore.
 
 
 ..  index:: File list; Thumbnails enable
@@ -458,8 +463,8 @@ file_list.enableDisplayThumbnails
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ..  confval:: file_list.enableDisplayThumbnails
-
-    :Data type: list of keywords
+    :name: useroptions-file_list-enableDisplayThumbnails
+    :type: list of keywords
     :Default: selectable
 
     Determines whether the checkbox :guilabel:`Display thumbnails` in the
@@ -485,8 +490,8 @@ file_list.filesPerPage
 ~~~~~~~~~~~~~~~~~~~~~~
 
 ..  confval:: file_list.filesPerPage
-
-    :Data type: integer
+    :name: useroptions-file_list-filesPerPage
+    :type: integer
     :Default: 40
 
     The maximum number of files shown per page in the :guilabel:`File > List`
@@ -502,8 +507,8 @@ file_list.primaryActions
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 ..  confval:: file_list.primaryActions
-
-    :Data type: string
+    :name: useroptions-useroptions-file_list-primaryActions
+    :type: string
     :Default: :typoscript:`view,metadata,translations,delete`
 
     Option to add more primary actions to the list view.
@@ -526,8 +531,8 @@ file_list.thumbnail.height
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ..  confval:: file_list.thumbnail.height
-
-    :Data type: integer
+    :name: useroptions-file_list-thumbnail-height
+    :type: integer
     :Default: 64
 
     All preview images in the file list will be rendered with the configured
@@ -541,8 +546,8 @@ file_list.thumbnail.width
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ..  confval:: file_list.thumbnail.width
-
-    :Data type: integer
+    :name: useroptions-file_list-thumbnail-width
+    :type: integer
     :Default: 64
 
     All preview images in the file list will be rendered with the configured
@@ -556,8 +561,8 @@ file_list.uploader.defaultAction
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ..  confval:: file_list.uploader.defaultAction
-
-    :Data type: string
+    :name: useroptions-file_list-uploader-defaultaction
+    :type: string
     :Default: :typoscript:`Cancel`
 
     Default action for the modal that appears when during file upload a name
@@ -585,8 +590,8 @@ folderTree.altElementBrowserMountPoints
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ..  confval:: folderTree.altElementBrowserMountPoints
-
-    :Data type: list of "storageUid:folderName" items
+    :name: useroptions-folderTree-altElementBrowserMountPoints
+    :type: list of "storageUid:folderName" items
 
     Sets alternative filemounts for use in any folder tree, including in the
     :guilabel:`File > List` module, in the element browser and in file
@@ -637,8 +642,8 @@ folderTree.uploadFieldsInLinkBrowser
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ..  confval:: folderTree.uploadFieldsInLinkBrowser
-
-    :Data type: integer
+    :name: useroptions-folderTree-uploadFieldsInLinkBrowser
+    :type: integer
     :Default: 3
 
     This value defines the number of upload fields in the element browser.
@@ -660,8 +665,8 @@ hideModules
     version.
 
 ..  confval:: hideModules
-
-    :Data type: list of module groups or modules
+    :name: useroptions-hideModules
+    :type: list of module groups or modules
 
     Configure which module groups or modules should be hidden from the main menu.
 
@@ -689,6 +694,7 @@ hideModules
         # Hide only module BeLogLog from "system" group
         options.hideModules = system_BelogLog
 
+..  _useroptions-hideRecords:
 
 hideRecords
 -----------
@@ -700,8 +706,8 @@ hideRecords.pages
 ~~~~~~~~~~~~~~~~~
 
 ..  confval:: hideRecords.pages
-
-    :Data type: list of page IDs
+    :name: useroptions-hideRecords-pages
+    :type: list of page IDs
 
     This setting hides records in the backend user interface. It is not an
     access restriction but makes defined records invisible. That means in
@@ -723,6 +729,7 @@ hideRecords.pages
 
         options.hideRecords.pages = 12,45
 
+..  _useroptions-impexp:
 
 impexp
 ------
@@ -738,8 +745,8 @@ impexp.enableExportForNonAdminUser
     <https://typo3.org/security/advisory/typo3-core-sa-2022-001>`__.
 
 ..  confval:: impexp.enableExportForNonAdminUser
-
-    :Data type: boolean
+    :name: useroptions-impexp-enableExportForNonAdminUser
+    :type: boolean
     :Default: 0
 
     The import/export module of `EXT:impexp` is disabled by default for
@@ -758,8 +765,8 @@ This option was introduced to avoid `information disclosure
 <https://typo3.org/article/typo3-core-sa-2016-015>`__.
 
 ..  confval:: impexp.enableImportForNonAdminUser
-
-    :Data type: boolean
+    :name: useroptions-impexp-enableImportForNonAdminUser
+    :type: boolean
     :Default: 0
 
     The import/export module of `EXT:impexp` is disabled by default for
@@ -775,8 +782,8 @@ mayNotCreateEditBookmarks
 -------------------------
 
 ..  confval:: mayNotCreateEditBookmarks
-
-    :Data type: boolean
+    :name: useroptions-mayNotCreateEditBookmarks
+    :type: boolean
 
     If set, the user can not create or edit bookmarks.
 
@@ -790,8 +797,8 @@ noThumbsInEB
 ------------
 
 ..  confval:: noThumbsInEB
-
-    :Data type: boolean
+    :name: useroptions-noThumbsInEB
+    :type: boolean
 
     If set, then image thumbnails are not shown in the element browser.
 
@@ -825,6 +832,8 @@ overridePageModule
 
 ..  index:: Page tree
 
+..  _useroptions-pageTree:
+
 pageTree
 --------
 
@@ -835,8 +844,8 @@ pageTree.altElementBrowserMountPoints
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ..  confval:: pageTree.altElementBrowserMountPoints
-
-    :Data type: list of integers
+    :name: useroptions-pageTree-altElementBrowserMountPoints
+    :type: list of integers
 
     Sets alternative webmounts for use in the element browser. You
     separate page IDs by a comma. Non-existing page IDs are ignored. If
@@ -864,8 +873,8 @@ pageTree.altElementBrowserMountPoints.append
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ..  confval:: pageTree.altElementBrowserMountPoints.append
-
-    :Data type: boolean
+    :name: useroptions-pageTree-altElementBrowserMountPoints-append
+    :type: boolean
 
     This option allows administrators to add additional mount points
     in the RTE and the wizard element browser instead of replacing
@@ -888,8 +897,8 @@ pageTree.backgroundColor
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 ..  confval:: pageTree.backgroundColor
-
-    :Data type: string
+    :name: useroptions-pageTree-backgroundColor
+    :type: string
 
     Set background colors for tree branches.
 
@@ -921,8 +930,8 @@ pageTree.doktypesToShowInNewPageDragArea
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ..  confval:: pageTree.doktypesToShowInNewPageDragArea
-
-    :Data type: string
+    :name: useroptions-pageTree-doktypesToShowInNewPageDragArea
+    :type: string
     :Default: 1,6,4,7,3,254,255,199
 
     If set, the node top panel feature can be configured by a comma-separated
@@ -949,8 +958,8 @@ pageTree.excludeDoktypes
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 ..  confval:: pageTree.excludeDoktypes
-
-    :Data type: list of integers
+    :name: useroptions-pageTree-excludeDoktypes
+    :type: list of integers
 
     Excludes nodes (pages) with one of the defined
     :ref:`doktypes <t3coreapi:list-of-page-types>` from the page tree.
@@ -964,8 +973,6 @@ pageTree.excludeDoktypes
 
         options.pageTree.excludeDoktypes = 254,1
 
-
-..  todo:: does this still work with site configuration?
 ..  index:: Page tree; Show domain names
 ..  _useroptions-pageTree-showDomainNameWithTitle:
 
@@ -973,8 +980,8 @@ pageTree.showDomainNameWithTitle
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ..  confval:: pageTree.showDomainNameWithTitle
-
-    :Data type: boolean
+    :name: useroptions-pageTree-showDomainNameWithTitle
+    :type: boolean
 
     If set, the domain name will be appended to the page title for
     pages that have :guilabel:`Is root of web site?` checked in the page properties.
@@ -988,8 +995,8 @@ pageTree.showNavTitle
 ~~~~~~~~~~~~~~~~~~~~~
 
 ..  confval:: pageTree.showNavTitle
-
-    :Data type: boolean
+    :name: useroptions-pageTree-showNavTitle
+    :type: boolean
 
     If set, the navigation title is displayed in the page navigation tree
     instead of the normal page title. The page title is shown in a
@@ -1003,8 +1010,8 @@ pageTree.showPageIdWithTitle
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ..  confval:: pageTree.showPageIdWithTitle
-
-    :Data type: boolean
+    :name: useroptions-pageTree-showPageIdWithTitle
+    :type: boolean
 
     If set, the titles in the page tree will have their ID numbers printed
     before the title.
@@ -1017,8 +1024,8 @@ pageTree.showPathAboveMounts
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ..  confval:: pageTree.showPathAboveMounts
-
-    :Data type: boolean
+    :name: useroptions-pageTree-showPathAboveMounts
+    :type: boolean
 
     If set, the user db mount path above the mount itself is shown.
     This is useful if you work a lot with user db mounts.
@@ -1037,8 +1044,8 @@ passwordReset
 -------------
 
 ..  confval:: passwordReset
-
-    :Data type: boolean
+    :name: useroptions-passwordReset
+    :type: boolean
     :Default: 1
 
     If set to `0` the initiating of the password reset in the backend
@@ -1074,8 +1081,8 @@ saveClipboard
 -------------
 
 ..  confval:: saveClipboard
-
-    :Data type: boolean
+    :name: useroptions-saveClipboard
+    :type: boolean
 
     If set, the clipboard content will be preserved for the next login.
     Normally the clipboard content lasts only during the session.
@@ -1088,8 +1095,8 @@ saveDocNew
 ----------
 
 ..  confval:: saveDocNew
-
-    :Data type: boolean / "top"
+    :name: useroptions-saveDocNew
+    :type: boolean / "top"
     :Default: 1
 
     If set, a button :guilabel:`Save and create new` will appear in TCEFORMs.
@@ -1119,8 +1126,8 @@ saveDocView
 -----------
 
 ..  confval:: saveDocView
-
-    :Data type: boolean
+    :name: useroptions-saveDocView
+    :type: boolean
     :Default: 1
 
     If set, a button :guilabel:`Save and view` will appear in TCEFORMs.
@@ -1138,8 +1145,8 @@ showDuplicate
 -------------
 
 ..  confval:: showDuplicate
-
-    :Data type: boolean
+    :name: useroptions-showDuplicate
+    :type: boolean
     :Default: 0
 
     If set, a button :guilabel:`Duplicate` will appear in TCEFORMs.
@@ -1157,8 +1164,8 @@ showHistory
 -----------
 
 ..  confval:: showHistory
-
-    :Data type: boolean
+    :name: useroptions-showHistory
+    :type: boolean
 
     Shows link to the history for the record in TCEFORMs.
 
