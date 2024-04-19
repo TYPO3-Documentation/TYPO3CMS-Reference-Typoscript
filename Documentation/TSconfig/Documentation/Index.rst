@@ -1,4 +1,4 @@
-.. include:: /Includes.rst.txt
+..  include:: /Includes.rst.txt
 
 ..  _start:
 
@@ -7,20 +7,20 @@ TSconfig Reference
 ==================
 
 :Version:
-   |release|
+    |release|
 
 :Language:
-   en
+    en
 
 :Author:
-   TYPO3 contributors
+    TYPO3 contributors
 
 :License:
-   This document is published under the
-   `Open Publication License <https://www.opencontent.org/openpub/>`__.
+    This document is published under the
+    `Open Publication License <https://www.opencontent.org/openpub/>`__.
 
 :Rendered:
-   |today|
+    |today|
 
 ----
 
@@ -38,18 +38,18 @@ Explained.
 
 **Table of Contents:**
 
-.. toctree::
-   :maxdepth: 2
-   :titlesonly:
+..  toctree::
+    :maxdepth: 2
+    :titlesonly:
 
-   Introduction/Index
-   UsingSetting/Index
-   PageTsconfig/Index
-   UserTsconfig/Index
+    Introduction/Index
+    UsingSetting/Index
+    PageTsconfig/Index
+    UserTsconfig/Index
 
-.. Meta Menu
+..  Meta Menu
 
-.. toctree::
-   :hidden:
+..  toctree::
+    :hidden:
 
-   Sitemap
+    Sitemap
