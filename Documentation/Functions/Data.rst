@@ -23,12 +23,12 @@ pointer to the value, which depends on the key used. The various keys and
 their possible codes are described below.
 
 The :typoscript:`code` can contain pipe characters :typoscript:`|` to separate keys
-in a multidimensional array. This e.g. works with :typoscript:`TSFE`:
+in a multidimensional array. This, for example, works with :typoscript:`TSFE`:
 
 ..  code-block:: typoscript
     :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-    lib.foo.data = TSFE : fe_user|user|username
+    lib.foo.data = TSFE : fe_user | user | username
 
 Some codes work with a different separator, which is documented right at the
 code.
@@ -291,7 +291,7 @@ Get content from :php:`$cObj->data['fieldname']['level1']['level2']`:
 ..  code-block:: typoscript
     :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-    lib.foo.data = field : fieldname|level1|level2
+    lib.foo.data = field : fieldname | level1 | level2
 
 ..  _data-type-gettext-file:
 
@@ -519,7 +519,7 @@ Get input value from query string `&stuff[bar]=...`
 ..  code-block:: typoscript
     :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-    lib.foo.data = GP : stuff|bar
+    lib.foo.data = GP : stuff | bar
 
 ..  _data-type-gettext-level:
 
@@ -873,7 +873,7 @@ Get the number of items of a stored shopping cart array/object:
 ..  code-block:: typoscript
     :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-    lib.foo.data = session : shop_cart|itemCount
+    lib.foo.data = session : shop_cart | itemCount
 
 
 ..  _data-type-site:
@@ -1058,7 +1058,7 @@ TSFE
 
     Migrate these properties to use the config property. You can access the
     TypoScript properties directly, for example, via
-    :typoscript:`lib.something.data = TSFE:config|config|fileTarget`
+    :typoscript:`lib.something.data = TSFE : config | config | fileTarget`
 
 
 ..  _data-type-gettext-tsfe-example:
@@ -1069,4 +1069,4 @@ Example: Get the username field of the current frontend user
 ..  code-block:: typoscript
     :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-    lib.foo.data = TSFE : fe_user|user|username
+    lib.foo.data = TSFE : fe_user | user | username
