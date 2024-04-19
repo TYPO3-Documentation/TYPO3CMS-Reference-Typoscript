@@ -1,5 +1,6 @@
-.. include:: /Includes.rst.txt
-.. index:: user TSconfig; Overrider page TSconfig
+..  include:: /Includes.rst.txt
+..  index:: user TSconfig; Overrider page TSconfig
+..  _user-page:
 
 ====
 page
@@ -11,7 +12,7 @@ in the :ref:`Using and setting <user-override-modify-values>` section.
 
 Example:
 
-.. code-block:: typoscript
-   :caption: EXT:site_package/Configuration/user.tsconfig
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/user.tsconfig
 
-   page.TCEMAIN.table.pages.disablePrependAtCopy = 1
+    page.TCEMAIN.table.pages.disablePrependAtCopy = 1

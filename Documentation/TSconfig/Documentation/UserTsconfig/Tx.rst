@@ -1,8 +1,10 @@
-.. include:: /Includes.rst.txt
+..  include:: /Includes.rst.txt
 
-.. index::
-   user TSconfig; Extensions
-   user TSconfig; tx_*
+..  index::
+    user TSconfig; Extensions
+    user TSconfig; tx_*
+
+..  _user_tx:
 
 ====
 tx_*

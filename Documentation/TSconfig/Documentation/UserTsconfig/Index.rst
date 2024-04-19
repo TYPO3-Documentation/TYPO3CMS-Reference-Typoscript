@@ -1,7 +1,7 @@
-.. include:: /Includes.rst.txt
-.. index:: User TSconfig
-.. _usertsconfig:
-.. _usertoplevelobjects:
+..  include:: /Includes.rst.txt
+..  index:: User TSconfig
+..  _usertsconfig:
+..  _usertoplevelobjects:
 
 =======================
 User TSconfig reference
