@@ -1,12 +1,12 @@
-.. include:: /Includes.rst.txt
-.. index::
-   Conditions
-   Conditions; Difference to TypoScript templates
-   Conditions; Access backend user
-.. _conditions:
-.. _condition-references:
-.. _conditions-example:
-.. _condition-differences:
+..  include:: /Includes.rst.txt
+..  index::
+    Conditions
+    Conditions; Difference to TypoScript templates
+    Conditions; Access backend user
+..  _conditions:
+..  _condition-references:
+..  _conditions-example:
+..  _condition-differences:
 
 ==========
 Conditions
@@ -24,757 +24,870 @@ The Symfony expression language tends to throw warnings when sub arrays are
 checked in a condition that do not exist. Use the :ref:`traverse <condition-function-traverse>`
 function to avoid this.
 
-.. contents::
-   :local:
-   :depth: 2
+..  contents::
+    :local:
+
+..  _condition-variables:
+
+Condition variables available in TSconfig
+=========================================
 
 
-.. index:: Conditions; applicationContext
-.. _condition-applicationContext:
+..  index:: Conditions; applicationContext
+..  _condition-applicationContext:
 
 applicationContext
-==================
+------------------
 
-:aspect:`Variable`
-   applicationContext
+..  confval:: applicationContext
+    :name: condition-applicationContext
+    :type: string
 
-:aspect:`Type`
-   String
+    Current application context as string. See :ref:`t3coreapi:bootstrapping-context`.
 
-:aspect:`Description`
-   Current application context as string. See :ref:`t3coreapi:bootstrapping-context`.
+..  _condition-applicationContext-example:
 
-:aspect:`Example`
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+Example: Condition applies in application context "Development"
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-      [applicationContext == "Development"]
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/page.tsconfig
 
-      # Any context that is "Production" or starts with "Production" (eg Production/Staging").
-      [applicationContext matches "/^Production/"]
+    [applicationContext == "Development"]
+        // Your settings go here
+    [END]
+
+Example: Condition applies in any application context that does not start with "Production"
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+This condition applies in any context that is "Production" or starts with
+"Production" (for example Production/Staging"):
+
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/page.tsconfig
+
+    [applicationContext matches "/^Production/"]
+        // Your settings go here
+    [END]
 
 
-.. index:: Conditions; page
-.. _condition-page:
+..  index:: Conditions; page
+..  _condition-page:
 
 page
-====
+----
 
-:aspect:`Variable`
-   page
+..  confval:: page
+    :name: condition-page
+    :type: array
 
-:aspect:`Type`
-   Array
+    All data of the current page record as array. Only available in page TSconfig, not
+    in user TSconfig.
 
-:aspect:`Description`
-   All data of the current page record as array. Only available in page TSconfig, not
-   in user TSconfig.
+..  _condition-page-example:
 
-:aspect:`Example`
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+Example: Condition applies only on certain pages
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-      # Check single page uid
-      [traverse(page, "uid") == 2]
-      # Check list of page uids
-      [traverse(page, "uid") in [17,24]]
-      # Check list of page uids NOT in
-      [traverse(page, "uid") not in [17,24]]
-      # Check range of pages (example: page uid from 10 to 20)
-      [traverse(page, "uid") in 10..20]
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/page.tsconfig
 
-      # Check the page backend layout
-      [traverse(page, "backend_layout") == 5]
-      [traverse(page, "backend_layout") == "example_layout"]
+    # Check single page uid
+    [traverse(page, "uid") == 2]
+        // Your settings go here
+    [END]
+    # Check list of page uids
+    [traverse(page, "uid") in [17,24]]
+        // Your settings go here
+    [END]
+    # Check list of page uids NOT in
+    [traverse(page, "uid") not in [17,24]]
+        // Your settings go here
+    [END]
+    # Check range of pages (example: page uid from 10 to 20)
+    [traverse(page, "uid") in 10..20]
+        // Your settings go here
+    [END]
 
-      # Check the page title
-      [traverse(page, "title") == "foo"]
+    # Check the page backend layout
+    [traverse(page, "backend_layout") == 5]
+        // Your settings go here
+    [END]
+    [traverse(page, "backend_layout") == "example_layout"]
+        // Your settings go here
+    [END]
+
+    # Check the page title
+    [traverse(page, "title") == "foo"]
+        // Your settings go here
+    [END]
 
 
-.. index:: Conditions; tree
-.. _condition-tree:
+..  index:: Conditions; tree
+..  _condition-tree:
 
 tree
-====
+----
 
-:aspect:`Variable`
-   tree
+..  confval:: tree
+    :name: condition-tree
+    :type: Object
 
-:aspect:`Type`
-   Object
+    Object with tree information. Only available in page TSconfig, not
+    in user TSconfig.
 
-:aspect:`Description`
-   Object with tree information. Only available in page TSconfig, not
-   in user TSconfig.
+..  index::
+    Conditions; tree.level
+    Conditions; Page level
 
-
-.. index::
-   Conditions; tree.level
-   Conditions; Page level
-
-.. _condition-tree-level:
+..  _condition-tree-level:
 
 tree.level
 ----------
 
-:aspect:`Variable`
-   tree.level
+..  confval:: tree.level
+    :name: condition-tree-level
+    :type: integer
 
-:aspect:`Type`
-   Integer
+    Current tree level. Only available in page TSconfig, not
+    in user TSconfig.
 
-:aspect:`Description`
-   Current tree level. Only available in page TSconfig, not
-   in user TSconfig.
+..  _condition-tree-level-example:
 
-:aspect:`Example`
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+Example: Condition applies on a page with level 0
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-      # Check if page is on level 0:
-      [tree.level == 0]
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/page.tsconfig
 
+    # Check if page is on level 0:
+    [tree.level == 0]
+        // Your settings go here
+    [END]
 
-.. index:: Conditions; tree.pagelayout
-.. _condition-tree-pagelayout:
+..  index:: Conditions; tree.pagelayout
+..  _condition-tree-pagelayout:
 
 tree.pagelayout
 ---------------
 
-:aspect:`Variable`
-   tree.pagelayout
+..  confval:: tree.pagelayout
+    :name: condition-tree-pagelayout
+    :type: integer / string
 
-:aspect:`Type`
-   Integer / String
+    Check for the defined backend layout of a page including the inheritance of
+    the field :guilabel:`Backend Layout (subpages of this page)`. Only available in page TSconfig,
+    not in user TSconfig.
 
-:aspect:`Description`
-   Check for the defined backend layout of a page including the inheritance of
-   the field :guilabel:`Backend Layout (subpages of this page)`. Only available in page TSconfig,
-   not in user TSconfig.
+..  _condition-tree-pagelayout-example:
 
-:aspect:`Example`
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+Example: Condition applies on pages with a certain backend layout
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-      # Use backend_layout records uids
-      [tree.pagelayout == 2]
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/page.tsconfig
 
-      # Use TSconfig provider of backend layouts
-      [tree.pagelayout == "pagets__Home"]
+    # Use backend_layout records uids
+    [tree.pagelayout == 2]
+        // Your settings go here
+    [END]
+
+    # Use TSconfig provider of backend layouts
+    [tree.pagelayout == "pagets__Home"]
+        // Your settings go here
+    [END]
 
 
-.. index::
-   Conditions; tree.rootLine
-.. _condition-tree-rootLine:
+..  index::
+    Conditions; tree.rootLine
+..  _condition-tree-rootLine:
 
 tree.rootLine
 -------------
 
-:aspect:`Variable`
-   tree.rootLine
+..  confval:: tree.rootLine
+    :name: condition-tree-rootLine
+    :type: array
 
-:aspect:`Type`
-   Array
+    An array of arrays with uid and pid. Only available in page TSconfig, not
+    in user TSconfig.
 
-:aspect:`Description`
-   Array of arrays with uid and pid. Only available in page TSconfig, not
-   in user TSconfig.
+..  _condition-tree-rootLine-example:
 
-:aspect:`Example`
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+Example: Condition applies on all subpages of page
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-      [tree.rootLine[0]["uid"] == 1]
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/page.tsconfig
+
+    [tree.rootLine[0]["uid"] == 1]
+        // Your settings go here
+    [END]
 
 
-.. index::
-   Conditions; tree.rootLineIds
-   Conditions; Pid in rootline
-.. _condition-tree-rootLineIds:
+..  index::
+    Conditions; tree.rootLineIds
+    Conditions; Pid in rootline
+..  _condition-tree-rootLineIds:
 
 tree.rootLineIds
 ----------------
 
-:aspect:`Variable`
-   tree.rootLineIds
+..  confval:: tree.rootLineIds
+    :name: condition-tree-rootLineIds
+    :type: array
 
-:aspect:`Type`
-   Array
+    An array with UIDs of the root line. Only available in page TSconfig, not
+    in user TSconfig.
 
-:aspect:`Description`
-   An array with UIDs of the rootline. Only available in page TSconfig, not
-   in user TSconfig.
+..  _condition-tree-rootLineIds-example:
 
-:aspect:`Example`
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+Example: Condition applies if a page is in the root line
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-      # Check if page with uid 2 is inside the root line
-      [2 in tree.rootLineIds]
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/page.tsconfig
+
+    # Check if page with uid 2 is inside the root line
+    [2 in tree.rootLineIds]
+        // Your settings go here
+    [END]
 
 
-.. index::
-   Conditions; tree.rootLineParentIds
-   Conditions; Pid up in rootline
-.. _condition-tree-rootLineParentIds:
+..  index::
+    Conditions; tree.rootLineParentIds
+    Conditions; Pid up in rootline
+..  _condition-tree-rootLineParentIds:
 
 tree.rootLineParentIds
 ----------------------
 
-:aspect:`Variable`
-   tree.rootLineParentIds
+..  confval:: tree.rootLineParentIds
+    :name: condition-tree-rootLineParentIds
+    :type: array
 
-:aspect:`Type`
-   Array
+    An array with parent UIDs of the root line. Only available in page TSconfig, not
+    in user TSconfig.
 
-:aspect:`Description`
-   An array with parent UIDs of the root line. Only available in page TSconfig, not
-   in user TSconfig.
+..  _condition-tree-rootLineParentIds-example:
 
-:aspect:`Example`
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+Example: Condition applies if a page's parent is in the root line
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-      # Check if page with uid 2 is the parent of a page inside the root line
-      [2 in tree.rootLineParentIds]
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/page.tsconfig
+
+    # Check if page with uid 2 is the parent of a page inside the root line
+    [2 in tree.rootLineParentIds]
+        // Your settings go here
+    [END]
 
 
-.. index:: Conditions; backend
-.. _condition-backend:
+..  index:: Conditions; backend
+..  _condition-backend:
 
 backend
-=======
+-------
 
-:aspect:`Variable`
-   backend
+..  confval:: backend
+    :name: condition-backend
+    :type: Object
 
-:aspect:`Type`
-   Object
-
-:aspect:`Description`
-   Object with backend information.
+    Object with backend information.
 
 
-.. index:: Conditions; backend.user
-.. _condition-backend-user:
+..  index:: Conditions; backend.user
+..  _condition-backend-user:
 
 backend.user
 ------------
 
-:aspect:`Variable`
-   backend.user
+..  confval:: backend.user
+    :name: condition-backend-user
+    :type: Object
 
-:aspect:`Type`
-   Object
+    Object with current backend user information.
 
-:aspect:`Description`
-   Object with current backend user information.
-
-
-.. index::
-   Conditions; backend.user.isAdmin
-   Conditions; Admin logged in
-.. _condition-backend-user-isAdmin:
+..  index::
+    Conditions; backend.user.isAdmin
+    Conditions; Admin logged in
+..  _condition-backend-user-isAdmin:
 
 backend.user.isAdmin
 --------------------
 
-:aspect:`Variable`
-   backend.user.isAdmin
+..  confval:: backend.user.isAdmin
+    :name: condition-backend-user-isAdmin
+    :type: boolean
 
-:aspect:`Type`
-   Boolean
+    True if current user is admin.
 
-:aspect:`Description`
-   True if current user is admin.
+..  _condition-backend-user-isAdmin-example:
 
-:aspect:`Example`
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+Example: Condition applies if the current backend user is an admin
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-      # Evaluates to true if current backend user is administrator
-      [backend.user.isAdmin]
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/page.tsconfig
+
+    # Evaluates to true if current backend user is administrator
+    [backend.user.isAdmin]
+        // Your settings go here
+    [END]
 
 
-.. index:: Conditions; backend.user.isLoggedIn
-.. _condition-backend-user-isLoggedIn:
+..  index:: Conditions; backend.user.isLoggedIn
+..  _condition-backend-user-isLoggedIn:
 
 backend.user.isLoggedIn
 -----------------------
 
-:aspect:`Variable`
-   backend.user.isLoggedIn
+..  confval:: backend.user.isLoggedIn
+    :name: condition-backend-user-isLoggedIn
+    :type: boolean
 
-:aspect:`Type`
-   Boolean
+    True if current user is logged in.
 
-:aspect:`Description`
-   True if current user is logged in.
+..  todo: When does this make sense? TSconfig is only applied in backend context...
 
-:aspect:`Example`
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+..  _condition-backend-user-isLoggedIn-example:
 
-      # Evaluates to true if an backend user is logged in
-      [backend.user.isLoggedIn]
+Example: Condition applies if any backend user is logged in
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/page.tsconfig
+
+    [backend.user.isLoggedIn]
+        // Your settings go here
+    [END]
 
 
-.. index:: Conditions; backend.user.userId
-.. _condition-backend-user-userId:
+..  index:: Conditions; backend.user.userId
+..  _condition-backend-user-userId:
 
 backend.user.userId
 -------------------
 
-:aspect:`Variable`
-   backend.user.userId
+..  confval:: backend.user.userId
+    :name: condition-backend-user-userId
+    :type: integer
 
-:aspect:`Type`
-   Integer
+    UID of current user.
 
-:aspect:`Description`
-   UID of current user.
+..  _condition-backend-user-userId-example:
 
-:aspect:`Example`
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+Example: Condition applies if a certain backend user is logged in
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-      # Evaluates to true if user uid of current logged in backend user is equal to 5
-      [backend.user.userId == 5]
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/page.tsconfig
+
+    # Evaluates to true if user uid of current logged in backend user is equal to 5
+    [backend.user.userId == 5]
+        // Your settings go here
+    [END]
 
 
-.. index:: Conditions; backend.user.userGroupIds
-.. _condition-backend-user-userGroupIds:
+..  index:: Conditions; backend.user.userGroupIds
+..  _condition-backend-user-userGroupIds:
 
 backend.user.userGroupIds
 -------------------------
 
-:aspect:`Variable`
-   backend.user.userGroupList
+..  confval:: backend.user.userGroupList
+    :name: condition-backend-user-userGroupIds
+    :type: array
 
-:aspect:`Type`
-   array
+    array of user group IDs of the current backend user.
 
-:aspect:`Description`
-   Array of user group IDs of the current backend user.
+..  _condition-backend-user-userGroupIds-example:
 
-:aspect:`Context`
-   Frontend, Backend
+Example: Condition applies if a backend user of a certain group is logged in
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-:aspect:`Example`
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/page.tsconfig
 
-      [2 in backend.user.userGroupIds]
+    [2 in backend.user.userGroupIds]
+        // Your settings go here
+    [END]
 
-
-.. index:: Conditions; backend.user.userGroupList
-.. _condition-backend-user-userGroupList:
+..  index:: Conditions; backend.user.userGroupList
+..  _condition-backend-user-userGroupList:
 
 backend.user.userGroupList
 --------------------------
 
-:aspect:`Variable`
-   backend.user.userGroupList
+..  confval:: backend.user.userGroupList
+    :name: condition-backend-user-userGroupList
+    :type: string
 
-:aspect:`Type`
-   String
+    Comma list of group UIDs
 
-:aspect:`Description`
-   Comma list of group UIDs
+..  _condition-backend-user-userGroupList-example:
 
-:aspect:`Example`
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+Example: Condition applies if the groups of a user meet a certain pattern
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-      [like(","~backend.user.userGroupList~",", "*,1,*")]
+..  todo: Does this example make sense? What does it really do?
 
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/page.tsconfig
 
-.. index:: Conditions; workspace
-.. _condition-workspace:
+    [like(","~backend.user.userGroupList~",", "*,1,*")]
+        // Your settings go here
+    [END]
+
+..  index:: Conditions; workspace
+..  _condition-workspace:
 
 workspace
-=========
+---------
 
-:aspect:`Variable`
-   workspace
+..  confval:: workspace
+    :name: condition-workspace
+    :type: Object
 
-:aspect:`Type`
-   Object
-
-:aspect:`Description`
-   object with workspace information
+    object with workspace information
 
 
-.. index:: Conditions; workspace.workspaceId
-.. _condition-workspace-workspaceId:
+..  index:: Conditions; workspace.workspaceId
+..  _condition-workspace-workspaceId:
 
 workspace.workspaceId
 ---------------------
 
-:aspect:`Variable`
-   .workspaceId
+..  confval:: .workspaceId
+    :name: condition-workspace-workspaceId
+    :type: integer
 
-:aspect:`Type`
-   Integer
+    UID of current workspace.
 
-:aspect:`Description`
-   UID of current workspace.
+..  _condition-workspace-workspaceId-example:
 
-:aspect:`Example`
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+Example: Condition applies only in a certain workspace
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-      [workspace.workspaceId == 0]
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/page.tsconfig
+
+    [workspace.workspaceId == 0]
+        // Your settings go here
+    [END]
 
 
-.. index:: Conditions; workspace.isLive
-.. _condition-workspace-isLive:
+..  index:: Conditions; workspace.isLive
+..  _condition-workspace-isLive:
 
 workspace.isLive
 ----------------
 
-:aspect:`Variable`
-   workspace.isLive
+..  confval:: workspace.isLive
+    :name: condition-workspace-isLive
+    :type: boolean
 
-:aspect:`Type`
-   Boolean
+    True if current workspace is live.
 
-:aspect:`Description`
-   True if current workspace is live.
+..  _condition-workspace-isLive-example:
 
-:aspect:`Example`
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+Example: Condition applies only in live workspace
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-      [workspace.isLive]
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/page.tsconfig
+
+    [workspace.isLive]
+        // Your settings go here
+    [END]
 
 
-.. index:: Conditions; workspace.isOffline
-.. _condition-workspace-isOffline:
+..  index:: Conditions; workspace.isOffline
+..  _condition-workspace-isOffline:
 
 workspace.isOffline
 -------------------
 
-:aspect:`Variable`
-   workspace.isOffline
+..  confval:: workspace.isOffline
+    :name: condition-workspace-isOffline
+    :type: boolean
 
-:aspect:`Type`
-   Boolean
+    True if current workspace is offline
 
-:aspect:`Description`
-   True if current workspace is offline
+..  _condition-workspace-isOffline-example:
 
-:aspect:`Example`
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+Example: Condition applies only in offline workspace
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-      [workspace.isOffline]
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/page.tsconfig
+
+    [workspace.isOffline]
+        // Your settings go here
+    [END]
 
 
-.. index:: Conditions; typo3
-.. _condition-typo3:
+..  index:: Conditions; typo3
+..  _condition-typo3:
 
 typo3
-=====
+-----
 
-:aspect:`Variable`
-   typo3
+..  confval:: typo3
+    :name: condition-typo3
+    :type: Object
 
-:aspect:`Type`
-   Object
+    Object with TYPO3 related information
 
-:aspect:`Description`
-   Object with TYPO3 related information
-
-
-.. index:: Conditions; typo3.version
-.. _condition-typo3-version:
+..  index:: Conditions; typo3.version
+..  _condition-typo3-version:
 
 typo3.version
 -------------
 
-:aspect:`Variable`
-   typo3.version
+..  confval:: typo3.version
+    :name: condition-typo3-version
+    :type: string
 
-:aspect:`Type`
-   String
+    TYPO3 version (e.g. 12.4.0-dev)
 
-:aspect:`Description`
-   TYPO3 version (e.g. 12.4.0-dev)
+..  _condition-typo3-version-example:
 
-:aspect:`Example`
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+Example: Condition only applies in an exact TYPO3 version like 12.4.0
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-      [typo3.version == "12.4.0"]
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/page.tsconfig
+
+    [typo3.version == "12.4.0"]
+        // Your settings go here
+    [END]
 
 
-.. index:: Conditions; typo3.branch
-.. _condition-typo3-branch:
+..  index:: Conditions; typo3.branch
+..  _condition-typo3-branch:
 
 typo3.branch
 ------------
 
-:aspect:`Variable`
-   typo3.branch
+..  confval:: typo3.branch
+    :name: condition-typo3-branch
+    :type: string
 
-:aspect:`Type`
-   String
-
-:aspect:`Description`
-   TYPO3 branch (e.g. 12.4)
-
-:aspect:`Example`
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-      [typo3.branch == "12.4"]
+    TYPO3 branch (e.g. 12.4)
 
 
-.. index:: Conditions; typo3.devIpMask
-.. _condition-typo3-devIpMask:
+..  _condition-typo3-branch-example:
+
+Example: Condition applies in all TYPO3 versions of a branch like 12.4
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/page.tsconfig
+
+    [typo3.branch == "12.4"]
+        // Your settings go here
+    [END]
+
+
+..  index:: Conditions; typo3.devIpMask
+..  _condition-typo3-devIpMask:
 
 typo3.devIpMask
 ---------------
 
-:aspect:`Variable`
-   typo3.devIpMask
+..  confval:: typo3.devIpMask
+    :name: condition-typo3-devIpMask
+    :type: string
 
-:aspect:`Type`
-   String
+    :php:`$GLOBALS['TYPO3_CONF_VARS']['SYS']['devIPmask']`
 
-:aspect:`Description`
-   :php:`$GLOBALS['TYPO3_CONF_VARS']['SYS']['devIPmask']`
+..  _condition-typo3-devIpMask-example:
 
-:aspect:`Example`
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+Example: Condition only applies if the devIpMask is set to a certain value
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-      [typo3.devIpMask == "203.0.113.6"]
+..  todo: Does this example make sense? Shouldn't we compare it to the
+    IP of the currently logged in backend user or some such?
+
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/page.tsconfig
+
+    [typo3.devIpMask == "203.0.113.6"]
+        // Your settings go here
+    [END]
 
 
-.. index:: Conditions; date
-.. _condition-function-date:
+..  _condition-functions:
+
+Condition functions available in TSconfig
+=========================================
+
+..  index:: Conditions; date
+..  _condition-function-date:
 
 date()
-======
+------
 
-:aspect:`Function`
-   date()
+..  confval:: date([parameter])
+    :name: condition-function-date
+    :type: integer
+    :Parameter: [parameter]: string / integer
 
-:aspect:`Parameter`
-   String
+    Get current date in given format. See PHP `date <https://www.php.net/manual/en/function.date.php>`_
+    function as reference for possible usage.
 
-:aspect:`Type`
-   String / Integer
+..  _condition-function-date-example:
 
-:aspect:`Description`
-   Get current date in given format. See PHP `date <https://www.php.net/manual/en/function.date.php>`_
-   function as reference for possible usage.
+Example: Condition applies at certain dates or times
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-:aspect:`Example`
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/page.tsconfig
 
-      # True if day of current month is 7
-      [date("j") == 7]
+    # True if day of current month is 7
+    [date("j") == 7]
+        // Your settings go here
+    [END]
 
-      # True if day of current week is 7
-      [date("w") == 7]
+    # True if day of current week is 7
+    [date("w") == 7]
+        // Your settings go here
+    [END]
 
-      # True if day of current year is 7
-      [date("z") == 7]
+    # True if day of current year is 7
+    [date("z") == 7]
+        // Your settings go here
+    [END]
 
-      # True if current hour is 7
-      [date("G") == 7]
+    # True if current hour is 7
+    [date("G") == 7]
+        // Your settings go here
+    [END]
 
 
-.. index:: Conditions; like
-.. _condition-function-like:
+..  index:: Conditions; like
+..  _condition-function-like:
 
 like()
-======
+------
 
-:aspect:`Function`
-   like()
+..  confval:: like([search-string], [pattern])
+    :name: condition-function-like
+    :type: boolean
+    :parameter: [search-string] : string; [pattern]: string
 
-:aspect:`Parameter`
-   String, String
+    This function has two parameters: The first parameter is the string to search in,
+    the second parameter is the search string.
 
-:aspect:`Type`
-   Boolean
+..  _condition-function-like-example:
 
-:aspect:`Description`
-   This function has two parameters: The first parameter is the string to search in,
-   the second parameter is the search string.
+Example: Use the "like()" function in conditions
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-:aspect:`Example`
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/page.tsconfig
 
-      # Search a string with * within another string
-      [like("fooBarBaz", "*Bar*")]
+    # Search a string with * within another string
+    [like("fooBarBaz", "*Bar*")]
+        // Your settings go here
+    [END]
 
-      # Search string with single characters in between, using ?
-      [like("fooBarBaz", "f?oBa?Baz")]
+    # Search string with single characters in between, using ?
+    [like("fooBarBaz", "f?oBa?Baz")]
+        // Your settings go here
+    [END]
 
-      # Search string using regular expression
-      [like("fooBarBaz", "/f[o]{2,2}[aBrz]+/")]
+    # Search string using regular expression
+    [like("fooBarBaz", "/f[o]{2,2}[aBrz]+/")]
+        // Your settings go here
+    [END]
 
 
-.. index:: Conditions; traverse
-.. _condition-function-traverse:
+..  index:: Conditions; traverse
+..  _condition-function-traverse:
 
 traverse()
-==========
+----------
 
-:aspect:`Function`
-   traverse()
+..  confval:: traverse([array], [key])
+    :name: condition-function-traverse
+    :type: any
+    :Parameter: [array]: array; [key]: string or integer
 
-:aspect:`Parameter`
-   Array, String
+    This function gets a value from an array with arbitrary depth and suppresses
+    PHP warning when sub arrays do not exist. It has two parameters: The first parameter
+    is the array to traverse, the second parameter is the path to traverse.
 
-:aspect:`Type`
-   Custom
+    In case the path is not found in the array, an empty string is returned.
 
-:aspect:`Description`
-   This function gets a value from an array with arbitrary depth and suppresses
-   PHP warning when sub arrays do not exist. It has two parameters: The first parameter
-   is the array to traverse, the second parameter is the path to traverse.
+..  _condition-function-traverse-example:
 
-   In case the path is not found in the array, an empty string is returned.
+Example: Condition applies if request parameter matches a certain value
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-:aspect:`Example`
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+..  todo: This example does not really make sense in the backend context?
 
-      # Traverse query parameters of current request along tx_news_pi1[news]
-      [traverse(request.getQueryParams(), 'tx_news_pi1/news') > 0]
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/page.tsconfig
+
+    # Traverse query parameters of current request along tx_news_pi1[news]
+    [traverse(request.getQueryParams(), 'tx_news_pi1/news') > 0]
+        // Your settings go here
+    [END]
 
 
-.. index:: Conditions; compatVersion
-.. _condition-function-compatVersion:
+..  index:: Conditions; compatVersion
+..  _condition-function-compatVersion:
 
 compatVersion()
-===============
+---------------
 
-:aspect:`Function`
-   compatVersion()
+..  confval:: compatVersion([version-pattern])
+    :name: condition-function-compatVersion
+    :type: boolean
+    :Parameter: [version-pattern]: string
 
-:aspect:`Parameter`
-   String
+    Compares against the current TYPO3 branch.
 
-:aspect:`Type`
-   Boolean
+..  _condition-function-compatVersion-example:
 
-:aspect:`Description`
-   Compares against the current TYPO3 branch.
+Example: Condition applies if the current TYPO3 version matches a pattern
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-:aspect:`Example`
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/page.tsconfig
 
-      # True if current version is 12.4.x
-      [compatVersion("12.4")]
-      [compatVersion("12.4.0")]
-      [compatVersion("12.4.1")]
+    # True if current version is 12.4.x
+    [compatVersion("12.4")]
+        // Your settings go here
+    [END]
+    [compatVersion("12.4.0")]
+        // Your settings go here
+    [END]
+    [compatVersion("12.4.1")]
+        // Your settings go here
+    [END]
 
+..  _condition-function-getenv:
 
 getenv()
-========
+--------
 
-:aspect:`Function`
-   getenv()
+..  confval:: getenv([enviroment_variable])
+    :name: condition-function-getenv
+    :type: string
+    :Parameter: [enviroment_variable]: string
 
-:aspect:`Parameter`
-   String
+    PHP function `getenv <https://www.php.net/manual/en/function.getenv.php>`_.
 
-:aspect:`Description`
-   PHP function `getenv <https://www.php.net/manual/en/function.getenv.php>`_.
+..  _condition-function-getenv-example:
 
-:aspect:`Example`
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+Example: Condition applies if the virtual host is set to a certain value
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-      [getenv("VIRTUAL_HOST") == "www.example.org"]
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/page.tsconfig
 
+    [getenv("VIRTUAL_HOST") == "www.example.org"]
+        // Your settings go here
+    [END]
 
-.. index:: Conditions; feature
-.. _condition-function-feature:
+..  index:: Conditions; feature
+..  _condition-function-feature:
 
 feature()
-=========
+---------
 
-:aspect:`Function`
-   feature()
+..  confval:: feature([feature_key])
+    :name: condition-function-feature
+    :type: any
+    :Parameter: [feature_key]: string
 
-:aspect:`Parameter`
-   String
+    Provides access to feature toggles current state.
 
-:aspect:`Description`
-   Provides access to feature toggles current state.
+..  _condition-function-feature-example:
 
-:aspect:`Example`
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+Example: condition applies if a feature toggle is enabled
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-      # True if feature toggle for strict TypoScript syntax is enabled:
-      [feature("TypoScript.strictSyntax") === false]
+..  todo: Add another feature as TypoScript.strictSyntax is not available anymore in current versions.
 
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/page.tsconfig
+
+    # True if feature toggle for strict TypoScript syntax is enabled:
+    [feature("TypoScript.strictSyntax") === false]
+        // Your settings go here
+    [END]
+
+..  _condition-function-site:
 
 site()
-======
+------
 
-:aspect:`Function`
-   site
+..  confval:: site([keyword])
+    :name: condition-function-site
+    :type: string
+    :Parameter: [keyword]: string
 
-:aspect:`Parameter`
-  String
+    Get value from site configuration, or null if no site was found or property
+    does not exists. Only available in page TSconfig, not available in user TSconfig.
+    Available Information:
 
-:aspect:`Description`
-   Get value from site configuration, or null if no site was found or property
-   does not exists. Only available in page TSconfig, not available in user TSconfig.
-   Available Information:
+    site("identifier")
+        Returns the identifier of current site as string.
 
-   site("identifier")
-      Returns the identifier of current site as string.
+    site("base")
+        Returns the base of current site as string.
 
-   site("base")
-      Returns the base of current site as string.
+    site("rootPageId")
+        Returns the root page uid of current site as integer.
 
-   site("rootPageId")
-      Returns the root page uid of current site as integer.
+    site("languages")
+        Returns array of available languages for current site.
+        For deeper information, see :ref:`t3tsref:condition-functions-in-frontend-context-function-siteLanguage`.
 
-   site("languages")
-      Returns array of available languages for current site.
-      For deeper information, see :ref:`t3tsref:condition-functions-in-frontend-context-function-siteLanguage`.
+    site("allLanguages")
+        Returns array of available and unavailable languages for current site.
+        For deeper information, see :ref:`t3tsref:condition-functions-in-frontend-context-function-siteLanguage`.
 
-   site("allLanguages")
-      Returns array of available and unavailable languages for current site.
-      For deeper information, see :ref:`t3tsref:condition-functions-in-frontend-context-function-siteLanguage`.
+    site("defaultLanguage")
+        Returns the default language for current site.
+        For deeper information, see :ref:`t3tsref:condition-functions-in-frontend-context-function-siteLanguage`.
 
-   site("defaultLanguage")
-      Returns the default language for current site.
-      For deeper information, see :ref:`t3tsref:condition-functions-in-frontend-context-function-siteLanguage`.
+    site("configuration")
+        Returns an array with all available configuration for current site.
 
-   site("configuration")
-      Returns an array with all available configuration for current site.
+..  _condition-function-site-example:
 
-:aspect:`Example`
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+Example: Condition applies if a certain value is set in the site configuration
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-      # Site identifier
-      [site("identifier") == "my_website"]
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/page.tsconfig
 
-      # Match site base host
-      [site("base").getHost() == "www.example.org"]
+    # Site identifier
+    [site("identifier") == "my_website"]
+        // Your settings go here
+    [END]
 
-      # Match base path
-      [site("base").getPath() == "/"]
+    # Match site base host
+    [site("base").getHost() == "www.example.org"]
+        // Your settings go here
+    [END]
 
-      # Match root page uid
-      [site("rootPageId") == 1]
+    # Match base path
+    [site("base").getPath() == "/"]
+        // Your settings go here
+    [END]
 
-      # Match a configuration property
-      [traverse(site("configuration"), "myCustomProperty") == true]
+    # Match root page uid
+    [site("rootPageId") == 1]
+        // Your settings go here
+    [END]
+
+    # Match a configuration property
+    [traverse(site("configuration"), "myCustomProperty") == true]
+        // Your settings go here
+    [END]
