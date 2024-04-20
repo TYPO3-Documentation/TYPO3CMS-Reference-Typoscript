@@ -577,7 +577,7 @@ In this `blog post <https://www.interaktionsdesigner.de/2009/typo3-klickvergross
        typolink {
           # directly link to the recent image
           parameter.cObject = IMG_RESOURCE
-          parameter.cObject.file.import.data = TSFE:lastImageInfo|origFile
+          parameter.cObject.file.import.data = TSFE : lastImageInfo | origFile
           parameter.cObject.file.maxW = {$styles.content.imgtext.maxW}
           parameter.override.listNum.stdWrap.data = register : IMAGE_NUM_CURRENT
           title.field = imagecaption // title
@@ -586,7 +586,7 @@ In this `blog post <https://www.interaktionsdesigner.de/2009/typo3-klickvergross
           title.split.token.char = 10
           title.split.returnKey.data = register : IMAGE_NUM_CURRENT
           parameter.cObject = IMG_RESOURCE
-          parameter.cObject.file.import.data = TSFE:lastImageInfo|origFile
+          parameter.cObject.file.import.data = TSFE : lastImageInfo | origFile
           ATagParams = target="_blank"
        }
     }
