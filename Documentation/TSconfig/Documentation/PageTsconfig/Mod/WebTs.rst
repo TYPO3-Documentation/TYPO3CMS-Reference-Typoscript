@@ -1,48 +1,52 @@
-.. include:: /Includes.rst.txt
+:orphan:
+..  include:: /Includes.rst.txt
 
 ======
 web_ts
 ======
 
-Configuration options of the "Web > Template" module.
+..  versionchanged:: 12.0
+    The :guilabel:`Web > Template` module has been replaced by the
+    :guilabel:`Web > TypoScript` module. The only option in this namespace
+    has been removed.
 
-.. contents::
-   :local:
+..  contents::
+    :local:
 
-.. index::
-   web_info.menu.function
-   Module menu; Template
-.. _pageblindingfunctionmenuoptions-webts:
+..  index::
+    web_info.menu.function
+    Module menu; Template
+..  _pageblindingfunctionmenuoptions-webts:
 
 menu.function
 =============
 
-:aspect:`Datatype`
-   array
+..  versionchanged:: 12.0
+    The TSconfig option :tsconfig:`mod.web_ts.menu.function` has been removed
+    with TYPO3 v12.0. Use **user** TSconfig option
+    :ref:`options.hideModules <useroptions-hideModules>` instead.
 
-:aspect:`Description`
-   Disable elements of the "Function selector" in the document header of the module. The keys for single
-   items can be found by browsing *System > Configuration > $GLOBALS['TBE_MODULES_EXT']*.
+..  _pageblindingfunctionmenuoptions-webts-migration:
 
-   .. figure:: /Images/ManualScreenshots/Template/FunctionMenuTemplateModule.png
-      :alt: The function menu of the Template module
+Migration from menu.function to options.hideModules
+---------------------------------------------------
 
-      The function menu of the Template module
+Migrate former usage of :tsconfig:`mod.web_ts.menu.function` in **page** TSconfig
+to option :ref:`options.hideModules <useroptions-hideModules>`.
 
-   .. warning::
+..  code-block:: typoscript
+    :caption: **Page** TSconfig, for example EXT:my_extension/Configuration/page.tsconfig
 
-      Blinding Function Menu items is not hardcore access control! All it
-      does is hide the possibility of accessing that module functionality
-      from the interface. It might be possible for users to hack their way
-      around it and access the functionality anyways. You should use the
-      option of blinding elements mostly to remove otherwise distracting options.
+    # before
+    mod.web_ts.menu.function {
+        TYPO3\CMS\Tstemplate\Controller\TemplateAnalyzerModuleFunctionController = 0
+    }
 
-:aspect:`Example`
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/page.tsconfig
+..  code-block:: typoscript
+    :caption: **User** TSconfig, for example EXT:my_extension/Configuration/user.tsconfig
 
-      # Disable the item "Template Analyzer"
-      mod.web_ts.menu.function {
-         TYPO3\CMS\Tstemplate\Controller\TemplateAnalyzerModuleFunctionController = 0
-      }
+    # after
+    options.hideModules := addToList(web_typoscript_analyzer)
 
+See also :ref:`setting-user-tsconfig`. You can find the names of all
+TypoScript modules in :t3src:`tstemplate/Configuration/Backend/Modules.php`.
