@@ -21,4 +21,9 @@ Properties
     :maxdepth: 1
     :glob:
 
-    Mod/*
+    Mod/Shared
+    Mod/WebInfo
+    Mod/WebLayout
+    Mod/WebList
+    Mod/WebView
+    Mod/Wizards

@@ -176,27 +176,26 @@ When a page TSconfig property is set in **user** TSconfig that way, regardless
 of whether it is in the TSconfig field of a
 group or a user, it **overrides** the value of the according **page** TSconfig property.
 
-To illustrate this feature let's say the action
-:guilabel:`Web > Info > Localization Overview` has been disabled via Page
-TSconfig:
+To illustrate this feature let's say new pages and copied pages are not hidden
+by default:
 
 ..  code-block:: typoscript
     :caption: EXT:site_package/Configuration/page.tsconfig
 
-    mod.web_info.menu.function {
-       TYPO3\CMS\Info\Controller\TranslationStatusController = 0
-    }
+    TCAdefaults.pages.hidden = 0
+    TCEMAIN.table.pages.disableHideAtCopy = 1
 
-If we activate this configuration in the TSconfig of a certain backend user, that
-user would still be able to select this menu item because the value of his user TSconfig
-overrides the same value set in the page TSconfig, just prefixed with
-:typoscript:`page.`:
+If we activate the following configuration in the user TSconfig of a certain backend
+user group, new and copied pages will be hidden for that group. The user TSconfig to
+be used is the same, but prefixed with :tsconfig:`page.`
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/user.tsconfig
+    :caption: EXT:site_package/Configuration/TSconfig/editors.tsconfig
 
-    page.mod.web_info.menu.function {
-        TYPO3\CMS\Info\Controller\TranslationStatusController = 1
+    // Override the settings from the page TSconfig for the editors usergroup
+    page {
+        TCAdefaults.pages.hidden = 1
+        TCEMAIN.table.pages.disableHideAtCopy = 0
     }
 
 ..  attention::

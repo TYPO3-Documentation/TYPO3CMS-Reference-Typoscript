@@ -74,41 +74,30 @@ Example: Override the field definitions in the info module
 menu.function
 =============
 
-..  confval:: menu.function
-    :name: mod-web-info-menu-function
-    :type: array
+..  versionchanged:: 12.0
+    The page TSconfig option :tsconfig:`mod.web_info.menu.function` has been removed
+    with TYPO3 v12.0. Use **user** TSconfig option
+    :ref:`options.hideModules <useroptions-hideModules>` instead.
 
-    Disable elements of the "Function selector" in the document header of the module. The keys for single
-    items can be found by browsing *System > Configuration > $GLOBALS['TBE_MODULES_EXT']*.
+..  _pageblindingfunctionmenuoptions-webinfo-migration:
 
-    ..  figure:: /Images/ManualScreenshots/Info/FunctionMenuInfoModule.png
-        :alt: The function menu of the Info module
+Migration from menu.function to options.hideModules
+---------------------------------------------------
 
-        The function menu of the Info module
-
-    ..  warning::
-
-        Blinding the function menu items is not hardcore access control! All it
-        does is hide the possibility of accessing that module functionality
-        from the interface. It might be possible for users to hack their way
-        around it and access the functionality anyways. You should use the
-        option of blinding elements mostly to remove otherwise distracting options.
-
-..  _pageblindingfunctionmenuoptions-webinfo-example:
-
-Example: Remove some options from the functions menu
-----------------------------------------------------
+Migrate former usage of :tsconfig:`mod.web_info.menu.function` in **page** TSconfig
+to option :ref:`options.hideModules <useroptions-hideModules>`.
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/page.tsconfig
+    :caption: **Page** TSconfig, for example EXT:my_extension/Configuration/page.tsconfig
 
-    mod.web_info.menu.function {
-        # Disable item "Log"
-        TYPO3\CMS\Belog\Module\BackendLogModuleBootstrap = 0
-        # Disable item "Pagetree Overview"
-        TYPO3\CMS\Info\Controller\PageInformationController = 0
-        # Disable item "Localization Overview"
-        TYPO3\CMS\Info\Controller\TranslationStatusController = 0
-        # Disable item "Linkvalidator"
-        TYPO3\CMS\Linkvalidator\Report\LinkValidatorReport = 0
-    }
+    # before
+    mod.web_info.menu.function.TYPO3\CMS\Info\Controller\TranslationStatusController = 0
+
+..  code-block:: typoscript
+    :caption: **User** TSconfig, for example EXT:my_extension/Configuration/user.tsconfig
+
+    # after
+    options.hideModules := addToList(web_info_translations)
+
+See also :ref:`setting-user-tsconfig`. You can find the names of all
+TypoScript modules in :t3src:`info/Configuration/Backend/Modules.php`.
