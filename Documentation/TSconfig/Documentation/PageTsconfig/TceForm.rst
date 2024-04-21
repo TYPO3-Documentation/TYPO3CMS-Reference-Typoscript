@@ -1216,7 +1216,7 @@ suggest.renderFunc
 suggest.searchCondition
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-..  confval::
+..  confval:: suggest.searchCondition
     :name: tceform-suggest-searchCondition
     :type: string
 
