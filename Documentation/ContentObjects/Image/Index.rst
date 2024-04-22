@@ -42,6 +42,16 @@ If you only need the file path to the image; regardless of whether it's been res
 Properties
 ==========
 
+..  _cobj-image-cache:
+
+cache
+-----
+
+..  confval:: cache
+    :name: image-cache
+    :type: :ref:`cache <cache>`
+
+    See :ref:`cache function description <cache>` for details.
 
 ..  _cobj-image-if:
 

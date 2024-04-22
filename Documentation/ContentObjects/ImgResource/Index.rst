@@ -27,6 +27,17 @@ Depending on your use case you might prefer using the cObject
 Properties
 ==========
 
+..  _cobj-img-resource-cache:
+
+cache
+-----
+
+..  confval:: cache
+    :name: img-resource-cache
+    :type: :ref:`cache <cache>`
+
+    See :ref:`cache function description <cache>` for details.
+
 ..  _cobj-img-resource-file:
 
 file
