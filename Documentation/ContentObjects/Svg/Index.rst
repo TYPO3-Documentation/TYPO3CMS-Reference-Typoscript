@@ -25,8 +25,7 @@ width
 
 ..  confval:: width
     :name: svg-width
-
-    :Data type: :ref:`data-type-integer` / :ref:`stdWrap <stdwrap>`
+    :type: :ref:`data-type-integer` / :ref:`stdWrap <stdwrap>`
     :Default: 600
 
     Width of the SVG.
@@ -39,8 +38,7 @@ height
 
 ..  confval:: height
     :name: svg-height
-
-    :Data type: :ref:`data-type-integer` / :ref:`stdWrap <stdwrap>`
+    :type: :ref:`data-type-integer` / :ref:`stdWrap <stdwrap>`
     :Default: 400
 
     Height of the SVG.
@@ -53,8 +51,7 @@ src
 
 ..  confval:: src
     :name: svg-src
-
-    :Data type: :ref:`data-type-resource` / :ref:`stdWrap <stdwrap>`
+    :type: :ref:`data-type-resource` / :ref:`stdWrap <stdwrap>`
 
     SVG file resource, can also be referenced via :file:`EXT:` prefix to
     point to files of extensions.
@@ -74,8 +71,7 @@ renderMode
 
 ..  confval:: renderMode
     :name: svg-renderMode
-
-    :Data type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
+    :type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
 
     Setting `renderMode` to inline will render an inline version of the SVG.
 
@@ -87,8 +83,7 @@ stdWrap
 
 ..  confval:: stdWrap
     :name: svg-stdWrap
-
-    :Data type: :ref:`->stdWrap <stdwrap>`
+    :type: :ref:`->stdWrap <stdwrap>`
 
 
 .. _cobj-svg-examples:

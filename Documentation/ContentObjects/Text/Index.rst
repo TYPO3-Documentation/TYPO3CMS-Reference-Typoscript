@@ -32,8 +32,7 @@ value
 
 ..  confval:: value
     :name: text-value
-
-    :Data type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
+    :type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
 
     Text, which you want to output.
 
@@ -45,8 +44,7 @@ stdWrap
 
 ..  confval:: stdWrap
     :name: text-stdWrap
-
-    :Data type: :ref:`stdWrap <stdwrap>`
+    :type: :ref:`stdWrap <stdwrap>`
 
     stdWrap properties are available on the very root level of the
     object. This is non-standard! You should use these stdWrap
@@ -61,8 +59,7 @@ cache
 
 ..  confval:: cache
     :name: text-cache
-
-    :Data type: :ref:`cache <cache>`
+    :type: :ref:`cache <cache>`
 
     See :ref:`cache function description <cache>` for details.
 

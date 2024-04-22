@@ -26,8 +26,7 @@ blur
 
 ..  confval:: blur
     :name: gifbuilder-emboss-blur
-
-    :Data type: integer (1-99) / :ref:`stdWrap <stdwrap>`
+    :type: integer (1-99) / :ref:`stdWrap <stdwrap>`
 
     Blurring of the shadow. Above 40 only values of 40, 50, 60, 70, 80, 90
     are relevant.
@@ -40,8 +39,7 @@ highColor
 
 ..  confval:: highColor
     :name: gifbuilder-emboss-highColor
-
-    :Data type: :ref:`data-type-GraphicColor` / :ref:`stdWrap <stdwrap>`
+    :type: :ref:`data-type-GraphicColor` / :ref:`stdWrap <stdwrap>`
 
     Upper border color.
 
@@ -53,8 +51,7 @@ intensity
 
 ..  confval:: intensity
     :name: gifbuilder-emboss-intensity
-
-    :Data type: integer (0-100) / :ref:`stdWrap <stdwrap>`
+    :type: integer (0-100) / :ref:`stdWrap <stdwrap>`
 
     How "massive" the emboss is. This value can - if it has a high value
     combined with a blurred shadow - create a kind of soft-edged outline.
@@ -67,8 +64,7 @@ lowColor
 
 ..  confval:: lowColor
     :name: gifbuilder-emboss-lowColor
-
-    :Data type: :ref:`data-type-GraphicColor` / :ref:`stdWrap <stdwrap>`
+    :type: :ref:`data-type-GraphicColor` / :ref:`stdWrap <stdwrap>`
 
     Lower border color.
 
@@ -80,8 +76,7 @@ opacity
 
 ..  confval:: opacity
     :name: gifbuilder-emboss-opacity
-
-    :Data type: integer (1-100) / :ref:`stdWrap <stdwrap>`
+    :type: integer (1-100) / :ref:`stdWrap <stdwrap>`
 
     The degree to which the shadow conceals the background. Mathematically
     speaking: Opacity = Transparency^-1. For example, 100% opacity = 0%
@@ -97,8 +92,7 @@ offset
 
 ..  confval:: offset
     :name: gifbuilder-emboss-offset
-
-    :Data type: x,y / :ref:`stdWrap <stdwrap>`
+    :type: x,y / :ref:`stdWrap <stdwrap>`
 
     Offset of the emboss.
 
@@ -110,8 +104,7 @@ textObjNum
 
 ..  confval:: textObjNum
     :name: _gifbuilder-emboss-textObjNum
-
-    :Data type: positive integer / :ref:`stdWrap <stdwrap>`
+    :type: positive integer / :ref:`stdWrap <stdwrap>`
 
     Must point to the :ref:`TEXT <gifbuilder-text>` object, if these
     :typoscript:`EMBOSS` properties are not properties to a TEXT object directly

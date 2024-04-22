@@ -65,8 +65,7 @@ blur
 
 ..  confval:: blur
     :name: gifbuilder-effect-blur
-
-    :Data type: integer (1-99)
+    :type: integer (1-99)
     :Default: 0
 
     Blurs the edges inside the image.
@@ -87,8 +86,7 @@ charcoal
 
 ..  confval:: charcoal
     :name: gifbuilder-effect-charcoal
-
-    :Data type: integer (0-100)
+    :type: integer (0-100)
     :Default: 0
 
     Makes the image look as if it has been drawn with charcoal and defines
@@ -110,8 +108,7 @@ colors
 
 ..  confval:: colors
     :name: gifbuilder-effect-colors
-
-    :Data type: integer (2-255)
+    :type: integer (2-255)
 
     Defines the number of different colors to use in the image.
 
@@ -131,8 +128,7 @@ edge
 
 ..  confval:: edge
     :name: gifbuilder-effect-edge
-
-    :Data type: integer (0-99)
+    :type: integer (0-99)
     :Default: 0
 
     Detect edges within an image. This is a gray-scale operator, so it is
@@ -213,8 +209,7 @@ gamma
 
 ..  confval:: gamma
     :name: gifbuilder-effect-gamma
-
-    :Data type: double (0.5 - 3.0)
+    :type: double (0.5 - 3.0)
     :Default: 1.0
 
     Sets the `gamma <https://en.wikipedia.org/wiki/Gamma_correction>`__ value.
@@ -276,8 +271,7 @@ rotate
 
 ..  confval:: rotate
     :name: gifbuilder-effect-rotate
-
-    :Data type: integer (0-360)
+    :type: integer (0-360)
     :Default: 0
 
     Number of degrees for a clockwise rotation.
@@ -301,8 +295,7 @@ sharpen
 
 ..  confval:: sharpen
     :name: gifbuilder-effect-sharpen
-
-    :Data type: integer (0-99)
+    :type: integer (0-99)
     :Default: 0
 
     Sharpens the edges inside the image.
@@ -323,8 +316,7 @@ shear
 
 ..  confval:: shear
     :name: gifbuilder-effect-shear
-
-    :Data type: integer (-90 - 90)
+    :type: integer (-90 - 90)
     :Default: 0
 
     Number of degrees for a horizontal shearing. Horizontal shearing
@@ -348,8 +340,7 @@ solarize
 
 ..  confval:: solarize
     :name: gifbuilder-effect-solarize
-
-    :Data type: integer (0-99)
+    :type: integer (0-99)
     :Default: 0
 
     Color reduction, "burning" the brightest colors black. The brighter the
@@ -374,8 +365,7 @@ swirl
 
 ..  confval:: swirl
     :name: gifbuilder-effect-swirl
-
-    :Data type: integer (0-1000)
+    :type: integer (0-1000)
     :Default: 0
 
     The image is swirled or spun from its center.
@@ -396,8 +386,7 @@ wave
 
 ..  confval:: wave
     :name: gifbuilder-effect-wave
-
-    :Data type: integer,integer (both 0-99)
+    :type: integer,integer (both 0-99)
     :Default: 0,0
 
     Provide values for the amplitude and the length of a wave, separated by

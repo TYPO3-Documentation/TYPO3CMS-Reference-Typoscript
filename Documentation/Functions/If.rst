@@ -37,8 +37,7 @@ bitAnd
 
 ..  confval:: bitAnd
     :name: if-bitAnd
-
-    :Data type: value / :ref:`stdwrap`
+    :type: value / :ref:`stdwrap`
 
     Returns true, if the value is part of the bit set.
 
@@ -71,8 +70,7 @@ contains
 
 ..  confval::  contains
     :name: if-contains
-
-    :Data type:  value / :ref:`stdwrap`
+    :type:  value / :ref:`stdwrap`
 
     Returns true, if the content contains :typoscript:`value`.
 
@@ -105,8 +103,7 @@ directReturn
 
 ..  confval:: directReturn
     :name: if-directReturn
-
-    :Data type: :ref:`data-type-boolean`
+    :type: :ref:`data-type-boolean`
 
     If this property exists, no other conditions will be checked. Instead
     the true/false of this value is returned. Can be used to set
@@ -122,8 +119,7 @@ endsWith
 
 ..  confval::  endsWith
     :name: if-endsWith
-
-    :Data type:  value / :ref:`stdwrap`
+    :type:  value / :ref:`stdwrap`
 
     Returns true, if the content ends with :typoscript:`value`.
 
@@ -150,8 +146,7 @@ equals
 
 ..  confval:: equals
     :name: if-equals
-
-    :Data type: value / :ref:`stdwrap`
+    :type: value / :ref:`stdwrap`
 
     Returns true, if the content is equal to :typoscript:`value`.
 
@@ -171,8 +166,7 @@ isFalse
 
 ..  confval:: isFalse
     :name: if-isFalse
-
-    :Data type: :ref:`data-type-string` / :ref:`stdwrap`
+    :type: :ref:`data-type-string` / :ref:`stdwrap`
 
     If the content is "false", which is empty or zero.
 
@@ -184,8 +178,7 @@ isGreaterThan
 
 ..  confval:: isGreaterThan
     :name: if-isGreaterThan
-
-    :Data type: value / :ref:`stdwrap`
+    :type: value / :ref:`stdwrap`
 
     Returns true, if the content is greater than :typoscript:`value`.
 
@@ -197,8 +190,7 @@ isInList
 
 ..  confval:: isInList
     :name: if-isInList
-
-    :Data type: value / :ref:`stdwrap`
+    :type: value / :ref:`stdwrap`
 
     Returns true, if the content is in the comma-separated list
     :typoscript:`.value`.
@@ -223,8 +215,7 @@ isLessThan
 
 ..  confval:: isLessThan
     :name: if-isLessThan
-
-    :Data type: value / :ref:`stdwrap`
+    :type: value / :ref:`stdwrap`
 
     Returns true, if the content is less than :typoscript:`value`.
 
@@ -236,8 +227,7 @@ isNull
 
 ..  confval:: isNull
     :name: if-isNull
-
-    :Data type: :ref:`stdWrap`
+    :type: :ref:`stdWrap`
 
     If the resulting content of the :typoscript:`stdWrap` is null (:php:`NULL` type in PHP).
 
@@ -267,8 +257,7 @@ isPositive
 
 ..  confval:: isPositive
     :name: if-isPositive
-
-    :Data type: :ref:`data-type-integer` / :ref:`stdwrap` \+ :ref:`objects-calc`
+    :type: :ref:`data-type-integer` / :ref:`stdwrap` \+ :ref:`objects-calc`
 
     Returns true, if the content is positive.
 
@@ -280,8 +269,7 @@ isTrue
 
 ..  confval:: isTrue
     :name: if-isTrue
-
-    :Data type: :ref:`data-type-string` / :ref:`stdwrap`
+    :type: :ref:`data-type-string` / :ref:`stdwrap`
 
     If the content is "true", which is not empty string and not zero.
 
@@ -293,8 +281,7 @@ negate
 
 ..  confval:: negate
     :name: if-negate
-
-    :Data type: :ref:`data-type-boolean`
+    :type: :ref:`data-type-boolean`
     :Default: 0
 
     This property is checked after all other properties. If set, it
@@ -315,8 +302,7 @@ startsWith
 
 ..  confval::  startsWith
     :name: if-startsWith
-
-    :Data type:  value / :ref:`stdwrap`
+    :type:  value / :ref:`stdwrap`
 
     Returns true, if the content starts with :typoscript:`value`.
 
@@ -342,8 +328,7 @@ value
 
 ..  confval:: value
     :name: if-value
-
-    :Data type: value / :ref:`stdwrap`
+    :type: value / :ref:`stdwrap`
 
     The value to check. This is the comparison value mentioned above.
 

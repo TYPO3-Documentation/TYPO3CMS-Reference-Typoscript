@@ -52,8 +52,7 @@ absRefPrefix
 
 ..  confval:: absRefPrefix
     :name: config-absrefprefix
-
-    :Data type: :ref:`data-type-string`
+    :type: :ref:`data-type-string`
     :Special value: "auto"
 
     If set, the string is prepended to all relative links that TYPO3 generates.
@@ -107,8 +106,7 @@ additionalHeaders
 
 ..  confval:: additionalHeaders
     :name: config-additionalheaders
-
-    :Data type: numerically indexed array of "HTTP header entries".
+    :type: numerically indexed array of "HTTP header entries".
 
     By means of :typoscript:`config.additionalHeaders` as series of additional HTTP headers
     can be configured. An entry has the following structure:
@@ -198,7 +196,7 @@ ATagParams
 
 ..  confval:: ATagParams
     :name: config-ATagParams
-    :Data type: *<A>-params*
+    :type: *<A>-params*
 
     Additional parameters to all links in TYPO3 (excluding menu-links).
 
@@ -211,7 +209,7 @@ cache
 
 ..  confval:: cache
     :name: config-cache
-    :Data type: array
+    :type: array
 
     Determine the maximum cache lifetime of a page.
 
@@ -283,7 +281,7 @@ cache\_clearAtMidnight
 
 ..  confval:: cache_clearAtMidnight
     :name: config-cache-clearAtMidnight
-    :Data type: :ref:`data-type-boolean`
+    :type: :ref:`data-type-boolean`
     :Default: `false`
 
     With this setting the cache always expires at midnight of the day, the
@@ -298,7 +296,7 @@ cache\_period
 
 ..  confval:: cache_period
     :name: config-cache-period
-    :Data type: :ref:`data-type-integer`
+    :type: :ref:`data-type-integer`
     :Default: `86400` *(= 24 hours)*
 
 The number of second a page may remain in cache.
@@ -314,7 +312,7 @@ compressCss
 
 ..  confval:: compressCss
     :name: config-compressCss
-    :Data type: :ref:`data-type-boolean`
+    :type: :ref:`data-type-boolean`
     :Default: `0`
 
     If set, CSS files referenced in :typoscript:`page.includeCSS` and the like will be
@@ -355,7 +353,7 @@ compressJs
 
 ..  confval:: compressJs
     :name: config-compressJs
-    :Data type: :ref:`data-type-boolean`
+    :type: :ref:`data-type-boolean`
     :Default: `0`
 
     Enabling this option together with
@@ -399,7 +397,7 @@ concatenateCss
 
 ..  confval:: concatenateCss
     :name: config-concatenateCss
-    :Data type: :ref:`data-type-boolean`
+    :type: :ref:`data-type-boolean`
     :Default: `0`
 
     Setting :typoscript:`config.concatenateCss` merges Stylesheet files referenced in
@@ -434,7 +432,7 @@ concatenateJs
 
 ..  confval:: concatenateJs
     :name: config-concatenateJs
-    :Data type: :ref:`data-type-boolean`
+    :type: :ref:`data-type-boolean`
     :Default: `0`
 
     Setting :typoscript:`config.concatenateJs` merges JavaScript files referenced in
@@ -481,7 +479,7 @@ contentObjectExceptionHandler
 
 ..  confval:: contentObjectExceptionHandler
     :name: config-contentObjectExceptionHandler
-    :Data type: :ref:`data-type-boolean`
+    :type: :ref:`data-type-boolean`
     :Default: `0`
 
     Exceptions which occur during rendering of content objects (typically plugins)
@@ -541,7 +539,7 @@ debug
 
 ..  confval:: debug
     :name: config-debug
-    :Data type: :ref:`data-type-boolean`
+    :type: :ref:`data-type-boolean`
 
     If set, then debug information in the TypoScript code is sent.
     This applies e.g. to menu objects and the parsetime output.
@@ -557,7 +555,7 @@ disableAllHeaderCode
 
 ..  confval:: disableAllHeaderCode
     :name: config-disableAllHeaderCode
-    :Data type: :ref:`data-type-boolean`
+    :type: :ref:`data-type-boolean`
     :Default: `false`
 
     If this is not set or set to false, the :ref:`page` object automatically
@@ -603,7 +601,7 @@ disableBodyTag
 
 ..  confval:: disableBodyTag
     :name: config-disableBodyTag
-    :Data type: :ref:`data-type-boolean`
+    :type: :ref:`data-type-boolean`
     :Default: `false`
 
     If this option is set, the TYPO3 core will not generate the
@@ -625,7 +623,7 @@ disableCanonical
 
 ..  confval:: disableCanonical
     :name: config-disableCanonical
-    :Data type: :ref:`data-type-boolean`
+    :type: :ref:`data-type-boolean`
 
     When the system extension SEO is installed, canonical tags are generated
     automatically to prevent duplicate content. A good canonical is added
@@ -641,7 +639,7 @@ disableHrefLang
 
 ..  confval:: disableHrefLang
     :name: config-disableHrefLang
-    :Data type: :ref:`data-type-boolean`
+    :type: :ref:`data-type-boolean`
 
     When the system extension SEO is installed, hreflang tags are generated
     automatically in multi-language setups. By settings this option to true
@@ -655,7 +653,7 @@ disablePrefixComment
 
 ..  confval:: disablePrefixComment
     :name: config-disablePrefixComment
-    :Data type: :ref:`data-type-boolean`
+    :type: :ref:`data-type-boolean`
 
     If set, the stdWrap property :ref:`stdwrap-prefixComment` will be disabled, thus
     preventing any revealing and space-consuming comments in the HTML
@@ -671,7 +669,7 @@ disablePreviewNotification
 
 ..  confval:: disablePreviewNotification
     :name: config-disablePreviewNotification
-    :Data type: :ref:`data-type-boolean`
+    :type: :ref:`data-type-boolean`
     :Default: `0`
 
     Disables the "preview" notification box completely.
@@ -685,7 +683,7 @@ disableLanguageHeader
 
 ..  confval:: disableLanguageHeader
     :name: config-disableLanguageHeader
-    :Data type: :ref:`data-type-boolean`
+    :type: :ref:`data-type-boolean`
     :Default: `0`
 
     TYPO3 by default sends a `Content-language: XX` HTTP header,
@@ -704,7 +702,7 @@ doctype
 
 ..  confval:: doctype
     :name: config-doctype
-    :Data type: :ref:`data-type-string`
+    :type: :ref:`data-type-string`
 
     If set, then a document type declaration (and an XML prologue) will be
     generated. The value can either be a complete doctype or one of the
@@ -742,7 +740,7 @@ enableContentLengthHeader
 
 ..  confval:: enableContentLengthHeader
     :name: config-enableContentLengthHeader
-    :Data type: :ref:`data-type-boolean`
+    :type: :ref:`data-type-boolean`
     :Default: `1`
 
     If set, a header "content-length: [bytes of content]" is sent.
@@ -760,7 +758,7 @@ extTarget
 
 ..  confval:: extTarget
     :name: config-extTarget
-    :Data type: target
+    :type: target
     :Default: `_top`
 
     Default external target. Used by :ref:`typolink` if no extTarget is set.
@@ -775,7 +773,7 @@ fileTarget
 
 ..  confval:: fileTarget
     :name: config-fileTarget
-    :Data type: target
+    :type: target
 
     Default file link target. Used by :ref:`typolink` if no fileTarget is set.
 
@@ -791,7 +789,7 @@ forceAbsoluteUrls
 
 ..  confval:: forceAbsoluteUrls
     :name: config-forceAbsoluteUrls
-    :Data type: :ref:`data-type-boolean`
+    :type: :ref:`data-type-boolean`
     :Default: `0`
 
     If this option is set, all links, reference to images or assets
@@ -816,7 +814,7 @@ forceTypeValue
 
 ..  confval:: forceTypeValue
     :name: config-forceTypeValue
-    :Data type: :ref:`data-type-boolean`
+    :type: :ref:`data-type-boolean`
 
     Force the `&type` value of all TYPO3 generated links to a specific value
     (except if overruled by local :typoscript:`forceTypeValue` values).
@@ -835,7 +833,7 @@ headerComment
 
 ..  confval:: headerComment
     :name: config-headerComment
-    :Data type: :ref:`data-type-string`
+    :type: :ref:`data-type-string`
 
     The content is added before the "TYPO3 Content Management Framework"
     comment in the <head> section of the page. Use this to insert a note
@@ -849,7 +847,7 @@ htmlTag.attributes
 
 ..  confval:: htmlTag.attributes
     :name: config-htmlTag-attributes
-    :Data type: array
+    :type: array
 
     Sets the attributes for the :html:`<html>` tag on the page. Allows to override
     and add custom attributes via TypoScript without having to re-add the
@@ -904,7 +902,7 @@ htmlTag\_setParams
 
 ..  confval:: htmlTag_setParams
     :name: config-htmlTag-setParams
-    :Data type: :ref:`data-type-string`
+    :type: :ref:`data-type-string`
 
     Sets the attributes for the :html:`<html>` tag on the page. If you set
     :ref:`setup-config-doctype` to a keyword enabling XHTML then some attributes are
@@ -940,7 +938,7 @@ htmlTag\_stdWrap
 
 ..  confval:: htmlTag_stdWrap
     :name: config-htmlTag-stdWrap
-    :Data type: :ref:`stdwrap`
+    :type: :ref:`stdwrap`
 
     Modify the whole :html:`<html>` tag with stdWrap functionality. This can be
     used to extend or override this tag.
@@ -953,7 +951,7 @@ index\_descrLgd
 
 ..  confval:: index_descrLgd
     :name: config-index-descrLgd
-    :Data type: :ref:`data-type-integer`
+    :type: :ref:`data-type-integer`
     :Default: `200`
 
     This indicates how many chars to preserve as description for an
@@ -967,7 +965,7 @@ index\_enable
 
 ..  confval:: index_enable
     :name: config-index-enable
-    :Data type: :ref:`data-type-boolean`
+    :type: :ref:`data-type-boolean`
 
     Enables cached pages to be indexed.
 
@@ -983,7 +981,7 @@ index\_externals
 
 ..  confval:: index_externals
     :name: config-index-externals
-    :Data type: :ref:`data-type-boolean`
+    :type: :ref:`data-type-boolean`
 
     If set, external media linked to on the pages is indexed as well.
 
@@ -999,7 +997,7 @@ index\_metatags
 
 ..  confval:: index_metatags
     :name: config-index-metatags
-    :Data type: :ref:`data-type-boolean`
+    :type: :ref:`data-type-boolean`
     :Default: `true`
 
     This allows to turn on or off the indexing of metatags. It is turned
@@ -1015,7 +1013,7 @@ inlineStyle2TempFile
 
 ..  confval:: inlineStyle2TempFile
     :name: config-inlineStyle2TempFile
-    :Data type: :ref:`data-type-boolean`
+    :type: :ref:`data-type-boolean`
     :Default: `1`
 
     If set, the inline styles TYPO3 controls in the core are written to a
@@ -1040,7 +1038,7 @@ intTarget
 
 ..  confval:: intTarget
     :name: config-intTarget
-    :Data type: target
+    :type: target
 
     Default internal target. Used by :ref:`typolink` if no target is set.
 
@@ -1053,7 +1051,7 @@ linkVars
 
 ..  confval:: linkVars
     :name: config-linkVars
-    :Data type: list
+    :type: list
 
     :php:`HTTP_GET_VARS`, which should be passed on with links in TYPO3. This
     is compiled into a string stored in :php:`$GLOBALS['TSFE']->linkVars`
@@ -1111,7 +1109,7 @@ message\_preview
 
 ..  confval:: message_preview
     :name: config-message_preview
-    :Data type: :ref:`data-type-string`
+    :type: :ref:`data-type-string`
 
     Alternative message in HTML that appears when the preview function is
     active.
@@ -1126,7 +1124,7 @@ message\_preview\_workspace
 
 ..  confval:: message_preview_workspace
     :name: config-message-preview-workspace
-    :Data type: :ref:`data-type-string`
+    :type: :ref:`data-type-string`
 
     Alternative message in HTML that appears when the preview function is
     active in a draft workspace. You can use sprintf() placeholders for
@@ -1165,7 +1163,7 @@ moveJsFromHeaderToFooter
 
 ..  confval:: moveJsFromHeaderToFooter
     :name: config-moveJsFromHeaderToFooter
-    :Data type: :ref:`data-type-boolean`
+    :type: :ref:`data-type-boolean`
 
     If set, all JavaScript (includes and inline) will be moved to the
     bottom of the HTML document, which is after the content and before the
@@ -1180,7 +1178,7 @@ MP\_defaults
 
 ..  confval:: MP_defaults
     :name: config-MP-defaults
-    :Data type: :ref:`data-type-string`
+    :type: :ref:`data-type-string`
 
     Allows you to set a list of page id numbers which will always have a
     certain "&MP=..." parameter added.
@@ -1211,7 +1209,7 @@ MP\_disableTypolinkClosestMPvalue
 
 ..  confval:: MP_disableTypolinkClosestMPvalue
     :name: config-MP-disableTypolinkClosestMPvalue
-    :Data type: :ref:`data-type-boolean`
+    :type: :ref:`data-type-boolean`
 
     If set, the :ref:`typolink` function will not try to find the closest MP
     value for the id.
@@ -1224,7 +1222,7 @@ MP\_mapRootPoints
 
 ..  confval:: MP_mapRootPoints
     :name: config-MP-mapRootPoints
-    :Data type: list of PIDs / :ref:`data-type-string`
+    :type: list of PIDs / :ref:`data-type-string`
 
     Defines a list of ID numbers from which the MP-vars are automatically
     calculated for the branch.
@@ -1253,7 +1251,7 @@ namespaces
 
 ..  confval:: namespaces
     :name: config-namespaces
-    :Data type: *(array of strings)*
+    :type: *(array of strings)*
 
     This property enables you to add xml namespaces (xmlns) to the :html:`<html>`
     tag. This is especially useful if you want to add RDFa or microformats
@@ -1284,7 +1282,7 @@ no\_cache
 
 ..  confval:: no_cache
     :name: config-no-cache
-    :Data type: :ref:`data-type-boolean`
+    :type: :ref:`data-type-boolean`
     :Default: `0`
 
     If this is set to `1`, it disables the `pages` cache, meaning that the
@@ -1311,7 +1309,7 @@ noPageTitle
 
 ..  confval:: noPageTitle
     :name: config-noPageTitle
-    :Data type: :ref:`data-type-integer`
+    :type: :ref:`data-type-integer`
     :Default: `0`
 
      If you only want to have the site name (from the template record) in
@@ -1331,7 +1329,7 @@ pageRendererTemplateFile
 
 ..  confval:: pageRendererTemplateFile
     :name: config-pageRendererTemplateFile
-    :Data type: :ref:`data-type-string`
+    :type: :ref:`data-type-string`
     :Default: file:`EXT:core/Resources/Private/Templates/PageRenderer.html`
 
 
@@ -1355,7 +1353,7 @@ pageTitle
 
 ..  confval:: pageTitle
     :name: config-pageTitle
-    :Data type: :ref:`stdwrap`
+    :type: :ref:`stdwrap`
 
     stdWrap for the page title. This option will be executed *after* all
     other processing options like :ref:`setup-config-pageTitleFirst`.
@@ -1368,7 +1366,7 @@ pageTitleFirst
 
 ..  confval:: pageTitleFirst
     :name: config-pageTitleFirst
-    :Data type: :ref:`data-type-boolean`
+    :type: :ref:`data-type-boolean`
     :Default: `0`
 
     TYPO3 by default prints a title tag in the format "website: page
@@ -1388,7 +1386,7 @@ pageTitleProviders
 
 ..  confval:: pageTitleProviders
     :name: config-pageTitleProviders
-    :Data type: array
+    :type: array
 
     In order to keep setting the titles in control, an API to set the page title is available. The API uses
     :typoscript:`PageTitleProviders` to define the page title based on page record and the content on the page.
@@ -1436,7 +1434,7 @@ pageTitleSeparator
 
 ..  confval:: pageTitleSeparator
     :name: config-pageTitleSeparator
-    :Data type: array
+    :type: array
     :Default: `:` *(colon with following space)*
 
     The signs which should be printed in the title tag between the website
@@ -1493,7 +1491,7 @@ recordLinks
 
 ..  confval:: recordLinks
     :name: config-recordLinks
-    :Data Type: array of link configurations
+    :type: array of link configurations
 
     ..  code-block:: typoscript
         :caption: Frontend TypoScript definition for identifier `my_content`
@@ -1520,7 +1518,7 @@ removeDefaultCss
 
 ..  confval:: removeDefaultCss
     :name: config-removeDefaultCss
-    :Data Type: :ref:`data-type-boolean`
+    :type: :ref:`data-type-boolean`
 
     Remove CSS generated by :ref:`\_CSS\_DEFAULT\_STYLE
     <setup-plugin-css-default-style>` configuration of extensions.
@@ -1535,7 +1533,7 @@ removeDefaultJS
 
 ..  confval:: removeDefaultJS
     :name: config-removeDefaultJS
-    :Data Type: :ref:`data-type-boolean` / :ref:`data-type-string`
+    :type: :ref:`data-type-boolean` / :ref:`data-type-string`
 
     If set, the default JavaScript in the header will be removed.
 
@@ -1563,7 +1561,7 @@ sendCacheHeaders
 
 ..  confval:: sendCacheHeaders
     :name: config-sendCacheHeaders
-    :Data Type: :ref:`data-type-boolean`
+    :type: :ref:`data-type-boolean`
 
      If set, TYPO3 will output cache-control headers to the client based
      mainly on whether the page was cached internally. This feature allows
@@ -1621,7 +1619,7 @@ showWebsiteTitle
 
 ..  confval:: showWebsiteTitle
     :name: config-showWebsiteTitle
-    :Data Type: :ref:`data-type-boolean`
+    :type: :ref:`data-type-boolean`
     :Default: 1
 
     The option can be used to specify whether the website title defined in
@@ -1640,7 +1638,7 @@ spamProtectEmailAddresses
 
 ..  confval:: spamProtectEmailAddresses
     :name: config-spamProtectEmailAddresses
-    :Data Type: `-10` to `10`
+    :type: `-10` to `10`
 
     If set, then all email addresses in typolinks will be encrypted so
     that it is harder for spam bots to detect them.
@@ -1668,7 +1666,7 @@ spamProtectEmailAddresses\_atSubst
 
 ..  confval:: spamProtectEmailAddresses_atSubst
     :name: config-spamProtectEmailAddresses-atSubst
-    :Data Type: :ref:`data-type-string`
+    :type: :ref:`data-type-string`
     :Default: `(at)`
 
     Substitute label for the at-sign (`@`).
@@ -1682,7 +1680,7 @@ spamProtectEmailAddresses\_lastDotSubst
 
 ..  confval:: spamProtectEmailAddresses_lastDotSubst
     :name: config-spamProtectEmailAddresses-lastDotSubst
-    :Data Type: :ref:`data-type-string`
+    :type: :ref:`data-type-string`
     :Default: `.` *(just a simple dot)*
 
     Substitute label for the last dot in the email address.
@@ -1704,7 +1702,7 @@ tx\_[extension key with no underscores]\_[\*]
 
 ..  confval:: tx_[extension key with no underscores]_[*]
     :name: config-tx-extension-key-with-no-underscores
-    :Data Type: array
+    :type: array
 
     Configuration space for extensions. This can be used – for example –
     by plugins that need some TypoScript configuration, but that don't
@@ -1731,7 +1729,7 @@ typolinkLinkAccessRestrictedPages
 
 ..  confval:: typolinkLinkAccessRestrictedPages
     :name: config-typolinkLinkAccessRestrictedPages
-    :Data Type: :ref:`data-type-integer` (page id) / keyword "NONE"
+    :type: :ref:`data-type-integer` (page id) / keyword "NONE"
 
     If set, typolinks pointing to access restricted pages will still link
     to the page even though the page cannot be accessed. If the value of
@@ -1757,7 +1755,7 @@ typolinkLinkAccessRestrictedPages.ATagParams
 
 ..  confval:: typolinkLinkAccessRestrictedPages.ATagParams
     :name: config-typolinkLinkAccessRestrictedPages-ATagParams
-    :Data Type: :ref:`data-type-string`
+    :type: :ref:`data-type-string`
 
     `typolinkLinkAccessRestrictedPages.ATagParams` Add custom attributes to the anchor tag.
 
@@ -1784,7 +1782,7 @@ typolinkLinkAccessRestrictedPages\_addParams
 
 ..  confval:: typolinkLinkAccessRestrictedPages_addParams
     :name: config-typolinkLinkAccessRestrictedPages-addParams
-    :Data Type: :ref:`data-type-string`
+    :type: :ref:`data-type-string`
 
     See :ref:`setup-config-typolinklinkaccessrestrictedpages` above.
 
@@ -1798,7 +1796,7 @@ xmlprologue
 
 ..  confval:: typolinkLinkAccessRestrictedPages_xmlprologue
     :name: config-typolinkLinkAccessRestrictedPages-xmlprologue
-    :Data Type: :ref:`data-type-string`
+    :type: :ref:`data-type-string`
 
     If empty (not set) then the default XML 1.0 prologue is set, when the
     doctype is set to a known keyword (e.g. :typoscript:`xhtml_11`):

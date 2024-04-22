@@ -27,8 +27,7 @@ Properties
 
 ..  confval:: array of strings
     :name: tags-array
-
-    :Data type: :ref:`data-type-cobject`
+    :type: :ref:`data-type-cobject`
 
     Every entry in the array of strings corresponds to a tag, that will
     be parsed. The elements **must** be in lowercase.

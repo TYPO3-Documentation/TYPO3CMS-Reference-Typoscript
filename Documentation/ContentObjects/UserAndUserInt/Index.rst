@@ -46,8 +46,7 @@ userFunc
 
 ..  confval:: userFunc
     :name: user-userFunc
-
-    :Data type: :ref:`data-type-function-name`
+    :type: :ref:`data-type-function-name`
 
     The name of the function, which should be called. If you specify the
     name with a '->' in it, then it is interpreted as a call to a method in
@@ -73,8 +72,7 @@ userFunc
 
 ..  confval:: (properties you define)
     :name: user-defined-properties
-
-    :Data type: (the data type you want)
+    :type: (the data type you want)
 
     Apart from the properties "userFunc" and "stdWrap", which are defined for
     all USER/USER\_INT objects by default, you can add additional properties
@@ -90,8 +88,7 @@ stdWrap
 
 ..  confval:: stdWrap
     :name: user-stdWrap
-
-    :Data type: :ref:`stdWrap`.
+    :type: :ref:`stdWrap`.
 
 ..  _cobj-user-cache:
 
@@ -100,8 +97,7 @@ cache
 
 ..  confval:: cache
     :name: user-cache
-
-    :Data type: :ref:`cache <cache>`
+    :type: :ref:`cache <cache>`
 
     See :ref:`cache function description <cache>` for details.
 

@@ -41,8 +41,7 @@ source
 
 ..  confval:: source
     :name: records-source
-
-    :Data type: *records-list* / :ref:`stdWrap <stdwrap>`
+    :type: *records-list* / :ref:`stdWrap <stdwrap>`
 
     List of record id's, optionally with prepended table names.
 
@@ -61,8 +60,7 @@ categories
 
 ..  confval:: categories
     :name: records-categories
-
-    :Data type: *categories-list* / :ref:`stdWrap <stdwrap>`
+    :type: *categories-list* / :ref:`stdWrap <stdwrap>`
 
     Comma-separated list of system categories uid's.
     Records related to these categories will be retrieved
@@ -98,8 +96,7 @@ tables
 
 ..  confval:: tables
     :name: records-tables
-
-    :Data type: *list of tables* / :ref:`stdWrap <stdwrap>`
+    :type: *list of tables* / :ref:`stdWrap <stdwrap>`
 
     List of accepted tables. For items listed in the
     :ref:`source <cobj-records-properties-source>` property
@@ -129,8 +126,7 @@ conf
 
 ..  confval:: conf.[*table name*]
     :name: records-conf
-
-    :Data type: :ref:`cObject <data-type-cobject>`
+    :type: :ref:`cObject <data-type-cobject>`
 
     Configuration array, which defines the rendering for records from
     table *table name*.
@@ -148,8 +144,7 @@ dontCheckPid
 
 ..  confval:: dontCheckPid
     :name: records-dontCheckPid
-
-    :Data type: :ref:`data-type-boolean` / :ref:`stdWrap <stdwrap>`
+    :type: :ref:`data-type-boolean` / :ref:`stdWrap <stdwrap>`
     :Default: 0
 
     Normally a record cannot be selected, if its parent page (pid) is not
@@ -163,8 +158,7 @@ wrap
 
 ..  confval:: wrap
     :name: records-wrap
-
-    :Data type: :ref:`wrap <data-type-wrap>` / :ref:`stdWrap <stdwrap>`
+    :type: :ref:`wrap <data-type-wrap>` / :ref:`stdWrap <stdwrap>`
 
     Wraps the output. Executed before :ref:`stdWrap <cobj-records-properties-stdwrap>`.
 
@@ -176,8 +170,7 @@ stdWrap
 
 ..  confval:: stdWrap
     :name: records-stdWrap
-
-    :Data type: :ref:`->stdWrap <stdwrap>`
+    :type: :ref:`->stdWrap <stdwrap>`
 
     Executed after :ref:`wrap <cobj-records-properties-wrap>`.
 
@@ -189,8 +182,7 @@ cache
 
 ..  confval:: cache
     :name: records-cache
-
-    :Data type: :ref:`cache <cache>`
+    :type: :ref:`cache <cache>`
 
     See :ref:`cache function description <cache>` for details.
 

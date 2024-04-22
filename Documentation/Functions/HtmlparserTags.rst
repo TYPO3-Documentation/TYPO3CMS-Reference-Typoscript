@@ -23,8 +23,7 @@ overrideAttribs
 
 ..  confval:: overrideAttribs
     :name: htmlparser-tags-overrideAttribs
-
-    :Data type: :ref:`data-type-string`
+    :type: :ref:`data-type-string`
 
     If set, this string is preset as the attributes of the tag.
 
@@ -36,8 +35,7 @@ allowedAttribs
 
 ..  confval:: allowedAttribs
     :name: htmlparser-tags-allowedAttribs
-
-    :Data type: mixed
+    :type: mixed
 
     Defines the allowed attributes.
 
@@ -60,8 +58,7 @@ fixAttrib.[attribute].set
 
 ..  confval:: fixAttrib.[attribute].set
     :name: htmlparser-tags-fixAttrib-set
-
-    :Data type: :ref:`data-type-string`
+    :type: :ref:`data-type-string`
 
     Force the attribute value to this value.
 
@@ -73,8 +70,7 @@ fixAttrib.[attribute].unset
 
 ..  confval:: fixAttrib.[attribute].unset
     :name: htmlparser-tags-fixAttrib-unset
-
-    :Data type: :ref:`data-type-boolean`
+    :type: :ref:`data-type-boolean`
 
     If set, the attribute is unset.
 
@@ -86,8 +82,7 @@ fixAttrib.[attribute].default
 
 ..  confval:: fixAttrib.[attribute].default
     :name: htmlparser-tags-fixAttrib-default
-
-    :Data type: :ref:`data-type-string`
+    :type: :ref:`data-type-string`
 
     If no attribute exists by this name, this value is set as default
     value (if this value is not blank)
@@ -100,8 +95,7 @@ fixAttrib.[attribute].always
 
 ..  confval:: fixAttrib.[attribute].always
     :name: htmlparser-tags-fixAttrib-always
-
-    :Data type: :ref:`data-type-boolean`
+    :type: :ref:`data-type-boolean`
 
     If set, the attribute is always processed. Normally an attribute is
     processed only if it exists
@@ -114,8 +108,7 @@ fixAttrib.[attribute].trim
 
 ..  confval:: fixAttrib.[attribute].trim
     :name: htmlparser-tags-fixAttrib-trim
-
-    :Data type: :ref:`data-type-boolean`
+    :type: :ref:`data-type-boolean`
 
     If true, the value is passed through the
     respective PHP-function.
@@ -128,8 +121,7 @@ fixAttrib.[attribute].intval
 
 ..  confval:: fixAttrib.[attribute].intval
     :name: htmlparser-tags-fixAttrib-intval
-
-    :Data type: :ref:`data-type-boolean`
+    :type: :ref:`data-type-boolean`
 
     If true, the value is passed through the
     respective PHP-function.
@@ -142,8 +134,7 @@ fixAttrib.[attribute].upper
 
 ..  confval:: fixAttrib.[attribute].upper
     :name: htmlparser-tags-fixAttrib-upper
-
-    :Data type: :ref:`data-type-boolean`
+    :type: :ref:`data-type-boolean`
 
     If true, the value is passed through the PHP function
     `strtoupper() <https://www.php.net/manual/en/function.strtoupper.php>`__.
@@ -156,8 +147,7 @@ fixAttrib.[attribute].lower
 
 ..  confval:: fixAttrib.[attribute].lower
     :name: htmlparser-tags-fixAttrib-lower
-
-    :Data type: :ref:`data-type-boolean`
+    :type: :ref:`data-type-boolean`
 
     If true, the value is passed through the PHP function
     `strtolower() <https://www.php.net/manual/en/function.strtolower.php>`__.
@@ -170,8 +160,7 @@ fixAttrib.[attribute].range
 
 ..  confval:: fixAttrib.[attribute].range
     :name: htmlparser-tags-fixAttrib-range
-
-    :Data type: [low],[high]
+    :type: [low],[high]
 
     Setting integer range.
 
@@ -183,8 +172,7 @@ fixAttrib.[attribute].list
 
 ..  confval:: fixAttrib.[attribute].list
     :name: htmlparser-tags-fixAttrib-list
-
-    :Data type: list of values, trimmed
+    :type: list of values, trimmed
 
     Attribute value must be in this list. If not, the value is set to the
     first element.
@@ -197,8 +185,7 @@ fixAttrib.[attribute].removeIfFalse
 
 ..  confval:: fixAttrib.[attribute].removeIfFalse
     :name: htmlparser-tags-fixAttrib-removeIfFalse
-
-    :Data type: :ref:`data-type-boolean` / :typoscript:`blank` string
+    :type: :ref:`data-type-boolean` / :typoscript:`blank` string
 
     If set, then the attribute is removed if it is false (= :typoscript:`0`).
     If this value is set to :typoscript:`blank` then the value must be a blank string
@@ -212,8 +199,7 @@ fixAttrib.[attribute].removeIfEquals
 
 ..  confval:: fixAttrib.[attribute].removeIfEquals
     :name: htmlparser-tags-fixAttrib-removeIfEquals
-
-    :Data type: :ref:`data-type-string`
+    :type: :ref:`data-type-string`
 
     If the attribute value matches the value set here, then it is removed.
 
@@ -225,8 +211,7 @@ fixAttrib.[attribute].casesensitiveComp
 
 ..  confval:: fixAttrib.[attribute].casesensitiveComp
     :name: htmlparser-tags-fixAttrib-casesensitiveComp
-
-    :Data type: :ref:`data-type-boolean`
+    :type: :ref:`data-type-boolean`
 
     If set, the comparison in :ref:`htmlparser-tags-fixAttrib-removeIfEquals`
     and :ref:`htmlparser-tags-fixAttrib-list` will be case-sensitive.
@@ -240,8 +225,7 @@ fixAttrib.[attribute].prefixRelPathWith
 
 ..  confval:: fixAttrib.[attribute].prefixRelPathWith
     :name: htmlparser-tags-fixAttrib-prefixRelPathWith
-
-    :Data type: :ref:`data-type-string`
+    :type: :ref:`data-type-string`
 
     If the value of the attribute seems to be a relative URL (no scheme
     like "http" and no "/" as first char) then the value of this property
@@ -262,8 +246,7 @@ fixAttrib.[attribute].userFunc
 
 ..  confval:: fixAttrib.[attribute].userFunc
     :name: htmlparser-tags-fixAttrib-userFunc
-
-    :Data type: :ref:`data-type-function-name`
+    :type: :ref:`data-type-function-name`
 
     User function for processing of the attribute. The return value
     of this function will be used as the new tag value.
@@ -301,8 +284,7 @@ protect
 
 ..  confval:: protect
     :name: htmlparser-tags-protect
-
-    :Data type: :ref:`data-type-boolean`
+    :type: :ref:`data-type-boolean`
 
     If set, the tag :html:`<>` is converted to :html:`&lt;` and :html:`&gt;`
 
@@ -314,8 +296,7 @@ remap
 
 ..  confval:: remap
     :name: htmlparser-tags-remap
-
-    :Data type: :ref:`data-type-string`
+    :type: :ref:`data-type-string`
 
     If set, the tagname is remapped to this tagname
 
@@ -327,8 +308,7 @@ rmTagIfNoAttrib
 
 ..  confval:: rmTagIfNoAttrib
     :name: htmlparser-tags-rmTagIfNoAttrib
-
-    :Data type: :ref:`data-type-boolean`
+    :type: :ref:`data-type-boolean`
 
     If set, then the tag is removed if no attributes happened to be there.
 
@@ -340,8 +320,7 @@ nesting
 
 ..  confval:: nesting
     :name: htmlparser-tags-nesting
-
-    :Data type: mixed
+    :type: mixed
 
     If set true, then this tag must have starting and ending tags in the
     correct order. Any tags not in this order will be discarded. Thus
