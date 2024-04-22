@@ -27,9 +27,7 @@ length
 
 ..  confval:: length
     :name: strpad-length
-
-    :Data type: :ref:`data-type-integer` / :ref:`stdwrap`
-
+    :type: :ref:`data-type-integer` / :ref:`stdwrap`
     :Default: 0
 
     The length of the output string. If the value is negative, less
@@ -43,8 +41,7 @@ padWith
 
 ..  confval:: padWith
     :name: strpad-padWith
-
-    :Data type: :ref:`data-type-string` / :ref:`stdwrap`
+    :type: :ref:`data-type-string` / :ref:`stdwrap`
     :Default: (space character)
 
 
@@ -62,8 +59,7 @@ type
 
 ..  confval:: type
     :name: strpad-type
-
-    :Data type: *(list of keywords)* / :ref:`stdwrap`
+    :type: *(list of keywords)* / :ref:`stdwrap`
     :Default: right
 
 

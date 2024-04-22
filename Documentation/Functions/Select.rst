@@ -38,8 +38,7 @@ uidInList
 
 ..  confval:: uidInList
     :name: select-uidInList
-
-    :Data type: *list of record\_ids* / :ref:`stdWrap`
+    :type: *list of record\_ids* / :ref:`stdWrap`
 
     Comma-separated list of record uids from the according database table.
     For example when the select function works on the table `tt_content`, then
@@ -73,8 +72,7 @@ pidInList
 
 ..  confval:: pidInList
     :name: select_pidInList
-
-    :Data type: *list of page\_ids* / :ref:`stdWrap`
+    :type: *list of page\_ids* / :ref:`stdWrap`
     :Default: :typoscript:`this`
 
     Comma-separated list of pids of the record. This will be page uids (pids). For
@@ -143,8 +141,7 @@ recursive
 
 ..  confval:: recursive
     :name: select-recursive
-
-    :Data type: :ref:`data-type-integer` / :ref:`stdWrap`
+    :type: :ref:`data-type-integer` / :ref:`stdWrap`
     :Default: 0
 
     Number of recursive levels for the pidInList.
@@ -157,8 +154,7 @@ orderBy
 
 ..  confval:: orderBy
     :name: select-orderBy
-
-    :Data type: *SQL-orderBy* / :ref:`stdWrap`
+    :type: *SQL-orderBy* / :ref:`stdWrap`
 
     ORDER BY clause without the words "ORDER BY".
 
@@ -177,8 +173,7 @@ groupBy
 
 ..  confval:: groupBy
     :name: select-groupBy
-
-    :Data type: *SQL-groupBy* / :ref:`stdWrap`
+    :type: *SQL-groupBy* / :ref:`stdWrap`
 
     GROUP BY clause without the words "GROUP BY".
 
@@ -197,8 +192,7 @@ max
 
 ..  confval:: max
     :name: select-max
-
-    :Data type: :ref:`data-type-integer` + :ref:`objects-calc` +"total" / :ref:`stdWrap`
+    :type: :ref:`data-type-integer` + :ref:`objects-calc` +"total" / :ref:`stdWrap`
 
     Max records
 
@@ -212,8 +206,7 @@ begin
 
 ..  confval:: begin
     :name: select-begin
-
-    :Data type: :ref:`data-type-integer` + :ref:`objects-calc` +"total" / :ref:`stdWrap`
+    :type: :ref:`data-type-integer` + :ref:`objects-calc` +"total" / :ref:`stdWrap`
 
     Begin with record number *value*.
 
@@ -228,8 +221,7 @@ where
 
 ..  confval:: where
     :name: select-where
-
-    :Data type: *SQL-where* / :ref:`stdWrap`
+    :type: *SQL-where* / :ref:`stdWrap`
 
     WHERE clause without the word "WHERE".
 
@@ -256,8 +248,7 @@ languageField
 
 ..  confval:: languageField
     :name: select-languageField
-
-    :Data type: :ref:`data-type-string` / :ref:`stdWrap`
+    :type: :ref:`data-type-string` / :ref:`stdWrap`
 
     This defaults to whatever is defined in TCA "ctrl"-section in the
     "languageField". Change it to overwrite the behaviour in your query.
@@ -275,8 +266,7 @@ includeRecordsWithoutDefaultTranslation
 
 ..  confval:: includeRecordsWithoutDefaultTranslation
     :name: select-includeRecordsWithoutDefaultTranslation
-
-    :Data type: :ref:`data-type-boolean` / :ref:`stdWrap`
+    :type: :ref:`data-type-boolean` / :ref:`stdWrap`
     :Default: 0
 
     If content language overlay is activated and the option :typoscript:`languageField` is not disabled,
@@ -291,8 +281,7 @@ selectFields
 
 ..  confval:: selectFields
     :name: select-selectFields
-
-    :Data type: :ref:`data-type-string` / :ref:`stdWrap`
+    :type: :ref:`data-type-string` / :ref:`stdWrap`
     :Default: \*
 
     List of fields to select, or :php:`count(*)`.
@@ -310,8 +299,7 @@ join, leftjoin, rightjoin
 
 ..  confval:: join, leftjoin, rightjoin
     :name: select-join
-
-    :Data type: :ref:`data-type-string` / :ref:`stdWrap`
+    :type: :ref:`data-type-string` / :ref:`stdWrap`
 
     Enter the JOIN clause without :sql:`JOIN`, :sql:`LEFT OUTER JOIN` and :sql:`RIGHT OUTER JOIN`
     respectively.
@@ -344,8 +332,7 @@ markers
 
 ..  confval:: markers
     :name: select-markers
-
-    :Data type: *(array of markers)*
+    :type: *(array of markers)*
 
     The markers defined in this section can be used, wrapped in the usual
     ###markername### way, in any other property of select. Each value is

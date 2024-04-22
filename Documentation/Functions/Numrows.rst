@@ -28,8 +28,7 @@ table
 
 ..  confval:: table
     :name: _numrows-table
-
-    :Data type: Table name
+    :type: Table name
 
     Name of the database table to query.
 
@@ -40,8 +39,7 @@ select
 
 ..  confval:: select
     :name: numrows-select
-
-    :Data type: :ref:`select`
+    :type: :ref:`select`
 
     Select query for the operation.
 

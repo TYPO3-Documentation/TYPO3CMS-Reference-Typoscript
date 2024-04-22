@@ -38,8 +38,7 @@ inputLevels
 
 ..  confval:: inputLevels
     :name: gifbuilder-adjust-inputLevels
-
-    :Data type: low, high (int<0,255>, int<0, 255>)
+    :type: low, high (int<0,255>, int<0, 255>)
 
     With this option you can remap the tone of the image to make shadows
     darker, highlights lighter and increase contrast.
@@ -70,8 +69,7 @@ outputLevels
 
 ..  confval:: outputLevels
     :name: gifbuilder-adjust-outputLevels
-
-    :Data type: low, high (int<0,255>, int<0, 255>)
+    :type: low, high (int<0,255>, int<0, 255>)
 
     With this option you can remap the tone of the image to make shadows
     lighter, highlights darker and decrease contrast.

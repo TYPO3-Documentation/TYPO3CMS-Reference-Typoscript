@@ -25,9 +25,7 @@ enable
 
 ..  confval:: imageLinkWrap.enable
     :name: imagelinkwrap-enable
-
-    :Data type: :ref:`data-type-boolean` / :ref:`stdwrap`
-
+    :type: :ref:`data-type-boolean` / :ref:`stdwrap`
     :Default: 0
 
     Whether or not to link the image. Must be set to True to make
@@ -41,8 +39,7 @@ file
 
 ..  confval:: imageLinkWrap.file
     :name: imagelinkwrap-file
-
-    :Data type: :ref:`stdwrap`
+    :type: :ref:`stdwrap`
 
     Apply :ref:`stdwrap` functionality to the file path.
 
@@ -54,9 +51,7 @@ width
 
 ..  confval:: imageLinkWrap.width
     :name: imagelinkwrap-width
-
-    :Data type: :ref:`data-type-positive-integer` / :ref:`stdwrap`
-
+    :type: :ref:`data-type-positive-integer` / :ref:`stdwrap`
     :Default: 0
 
     Width of the image to be shown in pixels. If you add "m" to
@@ -72,9 +67,7 @@ height
 
 ..  confval:: imageLinkWrap.height
     :name: imagelinkwrap-height
-
-    :Data type: :ref:`data-type-positive-integer` / :ref:`stdwrap`
-
+    :type: :ref:`data-type-positive-integer` / :ref:`stdwrap`
     :Default: 0
 
     Width of the image to be shown in pixels. If you add "m" to
@@ -90,9 +83,7 @@ effects
 
 ..  confval:: imageLinkWrap.effects
     :name: imagelinkwrap-effects
-
-    :Data type: like :ref:`gifbuilder-effect` of :ref:`GIFBUILDER`
-
+    :type: like :ref:`gifbuilder-effect` of :ref:`GIFBUILDER`
     :Default: 0
 
     Apply image effects to the preview image.
@@ -120,9 +111,7 @@ sample
 
 ..  confval:: imageLinkWrap.sample
     :name: imagelinkwrap-sample
-
-    :Data type: :ref:`data-type-positive-integer` / :ref:`stdwrap`
-
+    :type: :ref:`data-type-positive-integer` / :ref:`stdwrap`
     :Default: 0
 
     :typoscript:`sample` is a switch which determines how the image
@@ -141,8 +130,7 @@ title
 
 ..  confval:: imageLinkWrap.title
     :name: imagelinkwrap-title
-
-    :Data type: :ref:`data-type-string` / :ref:`stdwrap`
+    :type: :ref:`data-type-string` / :ref:`stdwrap`
 
     Specifies the html-page-title of the preview window.
     Needs :typoscript:`JSwindow = 1`.
@@ -155,8 +143,7 @@ bodyTag
 
 ..  confval:: imageLinkWrap.bodyTag
     :name: imagelinkwrap-bodyTag
-
-    :Data type: :ref:`data-type-tag` / :ref:`stdwrap`
+    :type: :ref:`data-type-tag` / :ref:`stdwrap`
 
     This is the `<body>`-tag of the preview window.
     Needs :typoscript:`JSwindow = 1`.
@@ -181,8 +168,7 @@ wrap
 
 ..  confval:: imageLinkWrap.wrap
     :name: imagelinkwrap-wrap
-
-    :Data type: :ref:`data-type-wrap`
+    :type: :ref:`data-type-wrap`
 
     This wrap is placed around the `<img>`-tag in the preview window.
     Needs :typoscript:`JSwindow = 1`.
@@ -195,9 +181,7 @@ target
 
 ..  confval:: imageLinkWrap.target
     :name: imagelinkwrap-target
-
-    :Data type: :ref:`data-type-target` / :ref:`stdwrap`
-
+    :type: :ref:`data-type-target` / :ref:`stdwrap`
     :Default: :typoscript:`thePicture`
 
     This specifies the `target` attribute of the link. The attribute
@@ -225,9 +209,7 @@ JSwindow
 
 ..  confval:: imageLinkWrap.JSwindow
     :name: imagelinkwrap-JSwindow
-
-    :Data type: :ref:`data-type-boolean` / :ref:`stdwrap`
-
+    :type: :ref:`data-type-boolean` / :ref:`stdwrap`
     :Default: 0
 
     If true (:typoscript:`JSwindow = 1`) Javascript will be used to open
@@ -242,9 +224,7 @@ JSwindow.expand
 
 ..  confval:: imageLinkWrap.JSwindow.expand
     :name: imagelinkwrap-JSwindow-expand
-
-    :Data type: :typoscript:`x`, :typoscript:`y` / :ref:`stdwrap`
-
+    :type: :typoscript:`x`, :typoscript:`y` / :ref:`stdwrap`
     :Default: 0
 
     :typoscript:`x` and :typoscript:`x` are of data type
@@ -260,9 +240,7 @@ JSwindow.newWindow
 
 ..  confval:: JSwindow.newWindow
     :name: imagelinkwrap-JSwindow-newWindow
-
-    :Data type: :ref:`data-type-boolean` / :ref:`stdwrap`
-
+    :type: :ref:`data-type-boolean` / :ref:`stdwrap`
     :Default: 0
 
     If the :ref:`Doctype <setup-config-doctype>` allows the :ref:`data-type-target`
@@ -282,8 +260,7 @@ JSwindow.altUrl
 
 ..  confval:: imageLinkWrap.JSwindow.altUrl
     :name: imagelinkwrap-JSwindow-altUrl
-
-    :Data type: :ref:`data-type-string` / :ref:`stdwrap`
+    :type: :ref:`data-type-string` / :ref:`stdwrap`
 
     If this returns anything then it is used as URL of the preview window.
     Otherwise the default "showpic" script will be used.
@@ -296,9 +273,7 @@ JSwindow.altUrl\_noDefaultParams
 
 ..  confval:: imageLinkWrap.JSwindow.altUrl_noDefaultParams
     :name: imagelinkwrap-JSwindow-altUrl-noDefaultParams
-
-    :Data type: :ref:`data-type-boolean` / :ref:`stdwrap`
-
+    :type: :ref:`data-type-boolean` / :ref:`stdwrap`
     :Default: 0
 
     If true (:typoscript:`JSwindow.altUrl_noDefaultParams = 1`) then the
@@ -314,8 +289,7 @@ typolink
 
 ..  confval:: imageLinkWrap.typolink
     :name: imagelinkwrap-typolink
-
-    :Data type: :ref:`typolink` / :ref:`stdwrap`
+    :type: :ref:`typolink` / :ref:`stdwrap`
 
     If this returns anything it will be used as link and override
     everything else.
@@ -328,9 +302,7 @@ directImageLink
 
 ..  confval:: imageLinkWrap.directImageLink
     :name: imagelinkwrap-directImageLink
-
-    :Data type: :ref:`data-type-boolean` / :ref:`stdwrap`
-
+    :type: :ref:`data-type-boolean` / :ref:`stdwrap`
     :Default: 0
 
     If true (:typoscript:`directImageLink = 1`) then a link will be
@@ -345,8 +317,7 @@ linkParams
 
 ..  confval:: imageLinkWrap.linkParams
     :name: imagelinkwrap-linkParams
-
-    :Data type: :ref:`typolink` / :ref:`stdwrap`
+    :type: :ref:`typolink` / :ref:`stdwrap`
 
     When the direct link for the preview image is calculated all
     attributes of :typoscript:`linkParams` are used as settings for the
@@ -379,8 +350,7 @@ stdWrap
 
 ..  confval:: imageLinkWrap.stdWrap
     :name: imagelinkwrap-stdWrap
-
-    :Data type: :ref:`stdwrap`
+    :type: :ref:`stdwrap`
 
     This adds :ref:`stdwrap` functionality to the almost final
     result.

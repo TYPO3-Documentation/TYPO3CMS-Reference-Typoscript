@@ -24,8 +24,7 @@ blur
 
 ..  confval:: blur
     :name: gifbuilder-shadow-blur
-
-    :Data type: integer (1-99) / :ref:`stdWrap <stdwrap>`
+    :type: integer (1-99) / :ref:`stdWrap <stdwrap>`
 
     Blurring of the shadow. Above 40 only values of 40,50,60,70,80,90
     are relevant.
@@ -38,8 +37,7 @@ color
 
 ..  confval:: color
     :name: gifbuilder-shadow-color
-
-    :Data type: :ref:`data-type-GraphicColor` / :ref:`stdWrap <stdwrap>`
+    :type: :ref:`data-type-GraphicColor` / :ref:`stdWrap <stdwrap>`
 
     The color of the shadow.
 
@@ -51,8 +49,7 @@ intensity
 
 ..  confval:: intensity
     :name: gifbuilder-shadow-intensity
-
-    :Data type: integer (1-100) / :ref:`stdWrap <stdwrap>`
+    :type: integer (1-100) / :ref:`stdWrap <stdwrap>`
 
     How "massive" the shadow is. This value can - if it has a high value
     combined with a blurred shadow - create a kind of soft-edged outline.
@@ -65,8 +62,7 @@ offset
 
 ..  confval:: offset
     :name: gifbuilder-shadow-offset
-
-    :Data type: x,y / :ref:`stdWrap <stdwrap>`
+    :type: x,y / :ref:`stdWrap <stdwrap>`
 
     The offset of the shadow.
 
@@ -78,8 +74,7 @@ opacity
 
 ..  confval:: opacity
     :name: gifbuilder-shadow-opacity
-
-    :Data type: integer (1-100) / :ref:`stdWrap <stdwrap>`
+    :type: integer (1-100) / :ref:`stdWrap <stdwrap>`
 
     The degree to which the shadow conceals the background. Mathematically
     speaking: Opacity = Transparency^-1. E.g. 100% opacity = 0%
@@ -95,8 +90,7 @@ textObjNum
 
 ..  confval:: textObjNum
     :name: gifbuilder-shadow-textObjNum
-
-    :Data type: positive integer / :ref:`stdWrap <stdwrap>`
+    :type: positive integer / :ref:`stdWrap <stdwrap>`
 
     Must point to the :ref:`TEXT <gifbuilder-text>` object, if these shadow
     properties are not properties to a TEXT object directly ("stand-alone

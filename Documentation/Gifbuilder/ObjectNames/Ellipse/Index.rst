@@ -42,8 +42,7 @@ color
 
 ..  confval:: color
     :name: gifbuilder-ellipse-color
-
-    :Data type: :ref:`data-type-GraphicColor` / :ref:`stdWrap <stdwrap>`
+    :type: :ref:`data-type-GraphicColor` / :ref:`stdWrap <stdwrap>`
     :Default: black
 
     Fill color of the ellipse.
@@ -56,8 +55,7 @@ dimensions
 
 ..  confval:: dimensions
     :name: gifbuilder-ellipse-dimensions
-
-    :Data type: x,y,w,h :ref:`+calc <gifbuilder-calc>` / :ref:`stdWrap <stdwrap>`
+    :type: x,y,w,h :ref:`+calc <gifbuilder-calc>` / :ref:`stdWrap <stdwrap>`
 
     Dimensions of a filled ellipse.
 

@@ -43,8 +43,7 @@ Properties
 
 ..  confval:: 1,2,3,4...
     :name: coa-array
-
-    :Data type: :ref:`cObject <data-type-cobject>`
+    :type: :ref:`cObject <data-type-cobject>`
 
     Numbered properties to define the different cObjects, which should be
     rendered.
@@ -57,8 +56,7 @@ cache
 
 ..  confval:: cache
     :name: coa-cache
-
-    :Data type: :ref:`cache <cache>`
+    :type: :ref:`cache <cache>`
 
     See :ref:`cache function description <cache>` for details.
 
@@ -70,8 +68,7 @@ if
 
 ..  confval:: if
     :name: coa-if
-
-    :Data type: :ref:`->if <if>`
+    :type: :ref:`->if <if>`
 
     If `if` returns false, the COA is **not** rendered.
 
@@ -83,8 +80,7 @@ stdWrap
 
 ..  confval:: stdWrap
     :name: coa-stdWrap
-
-    :Data type: :ref:`->stdWrap <stdwrap>`
+    :type: :ref:`->stdWrap <stdwrap>`
 
     Executed on all rendered cObjects after property :ref:`cobj-coa-wrap`.
 
@@ -96,8 +92,7 @@ wrap
 
 ..  confval:: wrap
     :name: coa-wrap
-
-    :Data type: :ref:`wrap <data-type-wrap>` / :ref:`stdWrap <stdwrap>`
+    :type: :ref:`wrap <data-type-wrap>` / :ref:`stdWrap <stdwrap>`
 
      Wraps all rendered cObjects. Executed before property :ref:`cobj-coa-stdWrap`.
 

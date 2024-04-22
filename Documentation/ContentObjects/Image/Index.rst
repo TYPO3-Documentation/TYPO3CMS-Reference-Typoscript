@@ -60,8 +60,7 @@ if
 
 ..  confval:: if
     :name: image-if
-
-    :Data type: :ref:`->if <if>`
+    :type: :ref:`->if <if>`
 
     If "if" returns false, the image is not shown!
 
@@ -73,8 +72,7 @@ file
 
 ..  confval:: file
     :name: image-file
-
-    :Data type: :ref:`->imgResource <imgresource>`
+    :type: :ref:`->imgResource <imgresource>`
 
 
 ..  _cobj-image-params:
@@ -84,8 +82,7 @@ params
 
 ..  confval:: params
     :name: image-params
-
-    :Data type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
+    :type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
 
     HTML <IMG> parameters
 
@@ -98,16 +95,14 @@ altText / titleText
 
 ..  confval:: altText
     :name: image-altText
-
-    :Data type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
+    :type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
 
     If no alt text is specified, an empty alt text will be used.
 
 
 ..  confval:: titleText
     :name: image-titleText
-
-    :Data type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
+    :type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
 
 
 ..  _cobj-image-emptyTitleHandling:
@@ -117,8 +112,7 @@ emptyTitleHandling
 
 ..  confval:: emptyTitleHandling
     :name: image-emptyTitleHandling
-
-    :Data type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
+    :type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
     :Default: useAlt
 
     Value can be "keepEmpty" to preserve an empty title attribute, or
@@ -132,8 +126,7 @@ layoutKey
 
 ..  confval:: layoutKey
     :name: image-layoutKey
-
-    :Data type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
+    :type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
     :Default: default
 
     Defines the render layout for the IMAGE. The render layout is the HTML Code for the IMAGE itself.
@@ -190,8 +183,7 @@ layout
 
 ..  confval:: layout
     :name: image-layout
-
-    :Data type: array
+    :type: array
 
     HTML code definition for the different :ref:`cobj-image-layoutkey`.
 
@@ -204,8 +196,7 @@ layout.layoutKey
 
 ..  confval:: layout.layoutKey
     :name: image-layout-layoutkey
-
-    :Data type: array
+    :type: array
 
     Definition for the HTML rendering for the named
     :ref:`cobj-image-layoutkey`. Depending on your needs you can use the
@@ -231,8 +222,7 @@ layout.layoutKey.element
 
 ..  confval:: layout.layoutKey.element
     :name: image-layout-layoutkey-element
-
-    :Data type: :ref:`data-type-string`
+    :type: :ref:`data-type-string`
 
     The outer element definition for the HTML rendering of the image.
     Possible markers are mainly all parameters which can be defined in the
@@ -271,8 +261,7 @@ layout.layoutKey.source
 
 ..  confval:: layout.layoutKey.source
     :name: image-layout-layoutkey-source
-
-    :Data type: :ref:`stdWrap <stdWrap>`
+    :type: :ref:`stdWrap <stdWrap>`
 
     Defines the HTML code for the :html:`###SOURCECOLLECTION###`
     of the :ref:`cobj-image-layout-layoutkey-element`.
@@ -306,8 +295,7 @@ sourceCollection
 
 ..  confval:: sourceCollection
     :name: image-sourceCollection
-
-    :Data type: array
+    :type: array
 
     For responsive images you need different image resolutions for each
     output device and output mode (portrait vs. landscape).
@@ -356,8 +344,7 @@ sourceCollection.dataKey
 
 ..  confval:: sourceCollection.dataKey
     :name: image-dataKey
-
-    :Data type: :ref:`stdWrap <stdWrap>`
+    :type: :ref:`stdWrap <stdWrap>`
 
     Definition of your image size definition depending on your responsive
     layout, breakpoints and display density.
@@ -371,8 +358,7 @@ sourceCollection.dataKey.if
 
 ..  confval:: sourceCollection.dataKey.if
     :name: image-datakey-if
-
-    :Data type: :ref:`if <if>`
+    :type: :ref:`if <if>`
 
     Renders only if the condition is met, this is evaluated before any
     execution of code.
@@ -386,8 +372,7 @@ sourceCollection.dataKey.pixelDensity
 
 ..  confval:: sourceCollection.dataKey.pixelDensity
     :name: image-pixeldensity
-
-    :Data type: :ref:`data-type-integer` / :ref:`stdWrap <stdWrap>`
+    :type: :ref:`data-type-integer` / :ref:`stdWrap <stdWrap>`
     :Default: 1
 
     Defines the density of the rendered Image, e.g. a retina display would
@@ -405,8 +390,7 @@ sourceCollection.dataKey.width
 
 ..  confval:: sourceCollection.dataKey.width
     :name: image-datakey-width
-
-    :Data type: :ref:`stdWrap <stdWrap>`
+    :type: :ref:`stdWrap <stdWrap>`
 
          Defines the width for the html code of the image defined in this
          source collection. For the image file itself the width will be multiplied by
@@ -421,8 +405,7 @@ sourceCollection.dataKey.height
 
 ..  confval:: sourceCollection.dataKey.height
     :name: image-datakey-height
-
-    :Data type: :ref:`stdWrap <stdWrap>`
+    :type: :ref:`stdWrap <stdWrap>`
 
     Defines the height for the html code of the image defined in this
     source collection. For the image file itself the height will be multiplied by
@@ -437,8 +420,7 @@ sourceCollection.dataKey.maxW
 
 ..  confval:: sourceCollection.dataKey.maxW
     :name: image-datakey-maxW
-
-    :Data type: :ref:`stdWrap <stdWrap>`
+    :type: :ref:`stdWrap <stdWrap>`
 
     Defines the maxW for the html code of the image defined in this
     source collection. For the image file itself the maxW will be multiplied by
@@ -453,8 +435,7 @@ sourceCollection.dataKey.maxH
 
 ..  confval:: sourceCollection.dataKey.maxH
     :name: image-datakey-maxH
-
-    :Data type: :ref:`stdWrap <stdWrap>`
+    :type: :ref:`stdWrap <stdWrap>`
 
     Defines the maxH for the html code of the image defined in this
     source collection. For the image file itself the maxH will be multiplied by
@@ -469,8 +450,7 @@ sourceCollection.dataKey.minW
 
 ..  confval:: sourceCollection.dataKey.minW
     :name: image-datakey-minW
-
-    :Data type: :ref:`stdWrap <stdWrap>`
+    :type: :ref:`stdWrap <stdWrap>`
 
     Defines the minW for the html code of the image defined in this
     source collection. For the image file itself the minW will be multiplied by
@@ -485,8 +465,7 @@ sourceCollection.dataKey.minH
 
 ..  confval:: sourceCollection.dataKey.minH
     :name: image-datakey-minH
-
-    :Data type: :ref:`stdWrap <stdWrap>`
+    :type: :ref:`stdWrap <stdWrap>`
 
     Defines the minH for the html code of the image defined in this
     source collection. For the image file itself the minH will be multiplied by
@@ -501,8 +480,7 @@ sourceCollection.dataKey.quality
 
 ..  confval:: sourceCollection.dataKey.quality
     :name: image-datakey-quality
-
-    :Data type: :ref:`data-type-integer`
+    :type: :ref:`data-type-integer`
 
     Defines the quality of the rendered images on a scale from 1-100.
 
@@ -515,8 +493,7 @@ sourceCollection.dataKey.*
 
 ..  confval:: sourceCollection.dataKey.*
     :name: image-datakey-others
-
-    :Data type: :ref:`data-type-string`
+    :type: :ref:`data-type-string`
 
     You can define additional key value pairs which won't be used for
     setting the image size, but will be available as additional markers for
@@ -530,8 +507,7 @@ linkWrap
 
 ..  confval:: linkWrap
     :name: image-linkWrap
-
-    :Data type: :ref:`data-type-wrap` / :ref:`stdWrap <stdwrap>`
+    :type: :ref:`data-type-wrap` / :ref:`stdWrap <stdwrap>`
 
     (before ".wrap")
 
@@ -543,8 +519,7 @@ imageLinkWrap
 
 ..  confval:: imageLinkWrap
     :name: image-imageLinkWrap
-
-    :Data type: :ref:`data-type-boolean` / :ref:`->imageLinkWrap <imagelinkwrap>`
+    :type: :ref:`data-type-boolean` / :ref:`->imageLinkWrap <imagelinkwrap>`
 
     **Note:** Only active if linkWrap is **not** set and file is
     **not** :ref:`GIFBUILDER <gifbuilder>` (as it works with the original
@@ -558,8 +533,7 @@ wrap
 
 ..  confval:: wrap
     :name: image-wrap
-
-    :Data type: :ref:`wrap <data-type-wrap>` / :ref:`stdWrap <stdwrap>`
+    :type: :ref:`wrap <data-type-wrap>` / :ref:`stdWrap <stdwrap>`
 
     Wrap for the image tag.
 
@@ -571,8 +545,7 @@ stdWrap
 
 ..  confval:: stdWrap
     :name: image-stdWrap
-
-    :Data type: :ref:`->stdWrap <stdwrap>`
+    :type: :ref:`->stdWrap <stdwrap>`
 
 
 ..  _cobj-image-examples:

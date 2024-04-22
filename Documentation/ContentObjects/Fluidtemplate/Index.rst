@@ -86,8 +86,7 @@ dataProcessing
 
 ..  confval:: dataProcessing
     :name: fluidtemplate-dataProcessing
-
-    :Data type: array of class references by full namespace
+    :type: array of class references by full namespace
 
     Add one or multiple processors to manipulate the :php:`$data` variable of
     the currently rendered content object, like tt_content or page. The
@@ -105,8 +104,7 @@ extbase.controllerActionName
 
 ..  confval:: extbase.controllerActionName
     :name: fluidtemplate-extbase-controlleractionname
-
-    :Data type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
+    :type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
 
     Sets the name of the action.
 
@@ -117,8 +115,7 @@ extbase.controllerExtensionName
 
 ..  confval:: extbase.controllerExtensionName
     :name: fluidtemplate-extbase-controllerextensionname
-
-    :Data type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
+    :type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
 
     Sets the extension name of the controller.
 
@@ -147,8 +144,7 @@ extbase.controllerName
 
 ..  confval:: extbase.controllerName
     :name: fluidtemplate-extbase-controllername
-
-    :Data type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
+    :type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
 
     Sets the name of the controller.
 
@@ -159,8 +155,7 @@ extbase.pluginName
 
 ..  confval:: extbase.pluginName
     :name: fluidtemplate-extbase-pluginname
-
-    :Data type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
+    :type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
 
     Sets variables for initializing extbase.
 
@@ -171,8 +166,7 @@ file
 
 ..  confval:: file
     :name: fluidtemplate-file
-
-    :Data type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
+    :type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
 
     The fluid template file. It is an alternative to ".template" and is used
     only, if ".template" is not set.
@@ -197,8 +191,7 @@ format
 
 ..  confval:: format
     :name: fluidtemplate-format
-
-    :Data type: keyword / :ref:`stdWrap <stdwrap>`
+    :type: keyword / :ref:`stdWrap <stdwrap>`
     :Default: html
 
     :typoscript:`format` sets the format of the current request. It can be something
@@ -212,8 +205,7 @@ layoutRootPath
 
 ..  confval:: layoutRootPath
     :name: fluidtemplate-layoutrootpath
-
-    :Data type: :ref:`data-type-path` / :ref:`stdWrap <stdwrap>`
+    :type: :ref:`data-type-path` / :ref:`stdWrap <stdwrap>`
 
     Sets a specific layout path, usually
     :file:`EXT:my_extension/Resources/Private/Layouts/` or a folder below that
@@ -232,8 +224,7 @@ layoutRootPaths
 
 ..  confval:: layoutRootPaths
     :name: fluidtemplate-layoutrootpaths
-
-    :Data type: array of :ref:`data-type-path` with :ref:`stdWrap <stdwrap>`
+    :type: array of :ref:`data-type-path` with :ref:`stdWrap <stdwrap>`
 
     .. note:: Mind the plural -s in "layoutRootPaths"!
 
@@ -274,8 +265,7 @@ partialRootPath
 
 ..  confval:: partialRootPath
     :name: fluidtemplate-partialrootpath
-
-    :Data type: :ref:`data-type-path` / :ref:`stdWrap <stdwrap>`
+    :type: :ref:`data-type-path` / :ref:`stdWrap <stdwrap>`
 
     Sets a specific partial path, usually
     :file:`EXT:my_extension/Resources/Private/Partials/` or a folder below that
@@ -294,8 +284,7 @@ partialRootPaths
 
 ..  confval:: partialRootPaths
     :name: fluidtemplate-partialrootpaths
-
-    :Data type: array of :ref:`data-type-path` with :ref:`stdWrap <stdwrap>`
+    :type: array of :ref:`data-type-path` with :ref:`stdWrap <stdwrap>`
 
     .. note:: Mind the plural -s in "partialRootPaths"!
 
@@ -317,8 +306,7 @@ settings
 
 ..  confval:: settings
     :name: fluidtemplate-settings
-
-    :Data type: array of keys
+    :type: array of keys
 
     Sets the given settings array in the fluid template. In the view, the value
     can then be used.
@@ -355,8 +343,7 @@ stdWrap
 
 ..  confval:: stdWrap
     :name: fluidtemplate-stdwrap
-
-    :Data type: :ref:`->stdWrap <stdwrap>`
+    :type: :ref:`->stdWrap <stdwrap>`
 
     Offers the usual stdWrap functionality.
 
@@ -367,8 +354,7 @@ template
 
 ..  confval:: template
     :name: fluidtemplate-template
-
-    :Data type: :ref:`cObject <data-type-cobject>`
+    :type: :ref:`cObject <data-type-cobject>`
 
     Use this property to define a content object, which should be used as
     template file. It is an alternative to ".file"; if ".template" is set, it
@@ -389,8 +375,7 @@ templateName
 
 ..  confval:: templateName
     :name: fluidtemplate-templatename
-
-    :Data type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
+    :type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
 
     This name is used together with the set format to find the template in the
     given templateRootPaths. Use this property to define a content object, which
@@ -468,8 +453,7 @@ templateRootPath
 
 ..  confval:: templateRootPath
     :name: fluidtemplate-templaterootpath
-
-    :Data type: file path /:ref:`stdWrap <stdwrap>`
+    :type: file path /:ref:`stdWrap <stdwrap>`
 
     Sets a specific template path, usually
     :file:`EXT:my_extension/Resources/Private/Templates/` or a folder below that
@@ -488,8 +472,7 @@ templateRootPaths
 
 ..  confval:: templateRootPaths
     :name: fluidtemplate-templaterootpaths
-
-    :Data type: array of file paths with :ref:`stdWrap <stdwrap>`
+    :type: array of file paths with :ref:`stdWrap <stdwrap>`
 
     .. note:: Mind the plural -s in "templateRootPaths"!
 
@@ -528,8 +511,7 @@ variables
 
 ..  confval:: variables
     :name: fluidtemplate-variables
-
-    :Data type: *(array of cObjects)*
+    :type: *(array of cObjects)*
 
     Sets variables that should be available in the fluid template. The keys are
     the variable names in Fluid.

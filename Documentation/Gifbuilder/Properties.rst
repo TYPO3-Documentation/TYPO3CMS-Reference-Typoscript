@@ -16,8 +16,7 @@ Properties
 
 ..  confval:: 1,2,3,4...
     :name: gifbuilder-properties-array
-
-    :Data type: :ref:`Gifbuilder Object <gifbuilder-object-names>` + .if (:ref:`->if <if>`)
+    :type: :ref:`Gifbuilder Object <gifbuilder-object-names>` + .if (:ref:`->if <if>`)
 
     :typoscript:`.if` is a property of all GIFBUILDER objects. If the property
     is present and **not** set, the object is **not** rendered! This
@@ -32,8 +31,7 @@ backColor
 
 ..  confval:: backColor
     :name: gifbuilder-properties-backColor
-
-    :Data type: :ref:`data-type-GraphicColor` / :ref:`stdWrap <stdwrap>`
+    :type: :ref:`data-type-GraphicColor` / :ref:`stdWrap <stdwrap>`
     :Default: white
 
     Background color of the image.
@@ -51,8 +49,7 @@ charRangeMap
 
 ..  confval:: charRangeMap.[array]
     :name: gifbuilder-properties-charRangeMap-array
-
-    :Data type: string
+    :type: string
 
     Basename of font file to match for this configuration. Notice that
     only the *filename* of the font file is used - the path is stripped
@@ -86,8 +83,7 @@ charRangeMap
 
 ..  confval:: charRangeMap.[array].charMapConfig
     :name: gifbuilder-properties-charRangeMap-charMapConfig
-
-    :Data type: :ref:`TEXT <gifbuilder-text>` / :ref:`splitRendering.[array] <gifbuilder-text-splitRendering>` configuration
+    :type: :ref:`TEXT <gifbuilder-text>` / :ref:`splitRendering.[array] <gifbuilder-text-splitRendering>` configuration
 
     splitRendering configuration to set.
     See :ref:`GIFBUILDER TEXT object <gifbuilder-text>` for details.
@@ -100,8 +96,7 @@ charRangeMap
 
 ..  confval:: charRangeMap.[array].fontSizeMultiplicator
     :name: gifbuilder-properties-charRangeMap-fontSizeMultiplicator
-
-    :Data type: double
+    :type: double
 
     If set, this will take the font size of the
     :ref:`GIFBUILDER TEXT object <gifbuilder-text>` and multiply with this
@@ -116,8 +111,7 @@ charRangeMap
 
 ..  confval:: charRangeMap.[array].pixelSpaceFontSizeRef
     :name: gifbuilder-properties-charRangeMap-pixelSpaceFontSizeRef
-
-    :Data type: double
+    :type: double
 
     If set, this will multiply the four [x/y]Space[Before/After]
     properties of split rendering with the relationship between the
@@ -161,8 +155,7 @@ format
 
 ..  confval:: format
     :name: gifbuilder-properties-format
-
-    :Data type: "gif" / "jpg" / "jpeg" / "png"
+    :type: "gif" / "jpg" / "jpeg" / "png" / "webp"
     :Default: gif
 
     File type of the output image.
@@ -179,8 +172,7 @@ maxHeight
 
 ..  confval:: maxHeight
     :name: gifbuilder-properties-maxHeight
-
-    :Data type: positive integer / :ref:`stdWrap <stdwrap>`
+    :type: positive integer / :ref:`stdWrap <stdwrap>`
 
     Maximal height of the image file.
 
@@ -192,8 +184,7 @@ maxWidth
 
 ..  confval:: maxWidth
     :name: gifbuilder-properties-maxWidth
-
-    :Data type: positive integer / :ref:`stdWrap <stdwrap>`
+    :type: positive integer / :ref:`stdWrap <stdwrap>`
 
     Maximal width of the image file.
 
@@ -205,8 +196,7 @@ offset
 
 ..  confval:: offset
     :name: gifbuilder-properties-offset
-
-    :Data type: x,y :ref:`+calc <gifbuilder-calc>` / :ref:`stdWrap <stdwrap>`
+    :type: x,y :ref:`+calc <gifbuilder-calc>` / :ref:`stdWrap <stdwrap>`
     :Default: 0,0
 
     Offset all objects on the image.
@@ -219,13 +209,10 @@ quality
 
 ..  confval:: quality
     :name: gifbuilder-properties-quality
-
-    :Data type: positive integer (10-100)
+    :type: Between 10 (lowest quality) and 100 (highest quality) / additionally, 101 (lossless) for WebP
 
     JPG quality (if :ref:`gifbuilder-properties-format` = jpg/jpeg)
 
-
-.. _gifbuilder-properties-reduceColors:
 
 reduceColors
 ============
@@ -244,8 +231,7 @@ transparentBackground
 
 ..  confval:: transparentBackground
     :name: gifbuilder-properties-transparentBackground
-
-    :Data type: boolean / :ref:`stdWrap <stdwrap>`
+    :type: boolean / :ref:`stdWrap <stdwrap>`
 
     Set this flag to render the background transparent. TYPO3 makes the
     color found at position 0,0 of the image (upper left corner) transparent.
@@ -263,8 +249,7 @@ transparentColor
 
 ..  confval:: transparentColor
     :name: gifbuilder-properties-transparentColor
-
-    :Data type: :ref:`data-type-GraphicColor` / :ref:`stdWrap <stdwrap>`
+    :type: :ref:`data-type-GraphicColor` / :ref:`stdWrap <stdwrap>`
 
     Specify a color that should be transparent.
 
@@ -276,8 +261,7 @@ closest
 
 ..  confval:: transparentColor.closest
     :name: gifbuilder-properties-transparentColor-closest
-
-    :Data Type: boolean
+    :type: boolean
 
     This will allow for the closest color to be matched instead. You may
     need this, if your image is not guaranteed "clean".
@@ -294,8 +278,7 @@ workArea
 
 ..  confval:: workArea
     :name: gifbuilder-properties-workArea
-
-    :Data type: x,y,w,h :ref:`+calc <gifbuilder-calc>` / :ref:`stdWrap <stdwrap>`
+    :type: x,y,w,h :ref:`+calc <gifbuilder-calc>` / :ref:`stdWrap <stdwrap>`
 
     Define the work area on the image file. All the
     :ref:`GIFBUILDER objects <gifbuilder-object-names>` will see this as the
@@ -311,8 +294,7 @@ XY
 
 ..  confval:: XY
     :name: gifbuilder-properties-XY
-
-    :Data type: x,y :ref:`+calc <gifbuilder-calc>` (1-2000) / :ref:`stdWrap <stdwrap>`
+    :type: x,y :ref:`+calc <gifbuilder-calc>` (1-2000) / :ref:`stdWrap <stdwrap>`
     :Default: 120,50
 
     Size of the image file.

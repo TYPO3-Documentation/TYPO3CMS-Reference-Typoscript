@@ -44,8 +44,7 @@ align
 
 ..  confval:: align
     :name: gifbuilder-box-align
-
-    :Data type: VHalign / :ref:`stdWrap <stdwrap>`
+    :type: VHalign / :ref:`stdWrap <stdwrap>`
     :Default: l, t
 
     Pair of values, which defines the horizontal and vertical alignment of
@@ -92,8 +91,7 @@ color
 
 ..  confval:: color
     :name: gifbuilder-box-color
-
-    :Data type: :ref:`data-type-GraphicColor` / :ref:`stdWrap <stdwrap>`
+    :type: :ref:`data-type-GraphicColor` / :ref:`stdWrap <stdwrap>`
     :Default: black
 
     Fill color of the box.
@@ -106,8 +104,7 @@ dimensions
 
 ..  confval:: dimensions
     :name: gifbuilder-box-dimensions
-
-    :Data type: x,y,w,h :ref:`+calc <gifbuilder-calc>` / :ref:`stdWrap <stdwrap>`
+    :type: x,y,w,h :ref:`+calc <gifbuilder-calc>` / :ref:`stdWrap <stdwrap>`
 
     Dimensions of a filled box.
 
@@ -124,8 +121,7 @@ opacity
 
 ..  confval:: opacity
     :name: gifbuilder-box-opacity
-
-    :Data type: positive integer (1-100) / :ref:`stdWrap <stdwrap>`
+    :type: positive integer (1-100) / :ref:`stdWrap <stdwrap>`
     :Default: 100
 
     The degree to which the box conceals the background.

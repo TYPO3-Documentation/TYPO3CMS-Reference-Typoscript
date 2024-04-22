@@ -27,9 +27,7 @@ ext
 
 ..  confval:: ext
     :name: imgresource-ext
-
-    :Data type: :ref:`data-type-imageExtension` / :ref:`stdwrap`
-
+    :type: :ref:`data-type-imageExtension` / :ref:`stdwrap`
     :Default: web
 
     Target file extension for the processed image. The value :typoscript:`web` checks if
@@ -47,8 +45,7 @@ width
 
 ..  confval:: width
     :name: imgresource-width
-
-    :Data type: :ref:`data-type-pixels` / :ref:`stdwrap`
+    :type: :ref:`data-type-pixels` / :ref:`stdwrap`
 
     If both the width and the height are set and one of the numbers is
     appended by an :typoscript:`m`, the proportions will be preserved and thus
@@ -110,8 +107,7 @@ height
 
 ..  confval:: height
     :name: imgresource-height
-
-    :Data type: :ref:`data-type-pixels` / :ref:`stdwrap`
+    :type: :ref:`data-type-pixels` / :ref:`stdwrap`
 
     See :ref:`imgresource-width`.
 
@@ -123,8 +119,7 @@ params
 
 ..  confval:: params
     :name: imgresource-params
-
-    :Data type: :ref:`data-type-string` / :ref:`stdwrap`
+    :type: :ref:`data-type-string` / :ref:`stdwrap`
 
     GraphicsMagick/ImageMagick command line:
 
@@ -138,8 +133,7 @@ sample
 
 ..  confval:: sample
     :name: imgresource-sample
-
-    :Data type: :ref:`data-type-boolean`
+    :type: :ref:`data-type-boolean`
     :Default: 0
 
     If set, `-sample` is used to scale images instead of `-geometry`. Sample
@@ -153,8 +147,7 @@ noScale
 
 ..  confval:: noScale
     :name: imgresource-noScale
-
-    :Data type: :ref:`data-type-boolean` / :ref:`stdwrap`
+    :type: :ref:`data-type-boolean` / :ref:`stdwrap`
     :Default: 0
 
     If set, the image itself will never be scaled. Only width and height
@@ -190,8 +183,7 @@ crop
 
 ..  confval:: crop
     :name: imgresource-crop
-
-    :Data type: :ref:`data-type-string` / :ref:`stdwrap`
+    :type: :ref:`data-type-string` / :ref:`stdwrap`
     :Default: not-set (when file/image is a file_reference the crop value of
 
     It is possible to define an area that should be taken (cropped) from the image.
@@ -224,8 +216,7 @@ cropVariant
 
 ..  confval:: cropVariant
     :name: imgresource-cropVariant
-
-    :Data type: :ref:`data-type-string`
+    :type: :ref:`data-type-string`
     :Default: default
 
     Since it's possible to define certain :ref:`crop variants <t3coreapi:cropvariants>`
@@ -252,8 +243,7 @@ frame
 
 ..  confval:: frame
     :name: imgresource-frame
-
-    :Data type: :ref:`data-type-integer` / :ref:`stdwrap`
+    :type: :ref:`data-type-integer` / :ref:`stdwrap`
 
     Chooses the frame in a PDF or GIF file.
 
@@ -267,8 +257,7 @@ import
 
 ..  confval:: import
     :name: imgresource-import
-
-    :Data type: :ref:`data-type-path` / :ref:`stdwrap`
+    :type: :ref:`data-type-path` / :ref:`stdwrap`
 
     *value* should be set to the path of the file
 
@@ -296,8 +285,7 @@ treatIdAsReference
 
 ..  confval:: treatIdAsReference
     :name: imgresource-treatIdAsReference
-
-    :Data type: :ref:`data-type-boolean` / :ref:`stdwrap`
+    :type: :ref:`data-type-boolean` / :ref:`stdwrap`
     :Default: 0
 
     If set, given UIDs are interpreted as UIDs to sys_file_reference
@@ -312,8 +300,7 @@ maxW
 
 ..  confval:: maxW
     :name: imgresource-maxW
-
-    :Data type: :ref:`data-type-pixels` / :ref:`stdwrap`
+    :type: :ref:`data-type-pixels` / :ref:`stdwrap`
 
     Maximum width
 
@@ -325,8 +312,7 @@ maxH
 
 ..  confval:: maxH
     :name: imgresource-maxH
-
-    :Data type: :ref:`data-type-pixels` / :ref:`stdwrap`
+    :type: :ref:`data-type-pixels` / :ref:`stdwrap`
 
     Maximum height
 
@@ -338,8 +324,7 @@ minW
 
 ..  confval:: minW
     :name: imgresource-minW
-
-    :Data type: :ref:`data-type-pixels` / :ref:`stdwrap`
+    :type: :ref:`data-type-pixels` / :ref:`stdwrap`
 
     Minimum width (overrules maxW/maxH)
 
@@ -351,8 +336,7 @@ minH
 
 ..  confval:: minH
     :name: imgresource-minH
-
-    :Data type: :ref:`data-type-pixels` / :ref:`stdwrap`
+    :type: :ref:`data-type-pixels` / :ref:`stdwrap`
 
     Minimum height (overrules maxW/maxH)
 
@@ -364,8 +348,7 @@ stripProfile
 
 ..  confval:: stripProfile
     :name: imgresource-stripProfile
-
-    :Data type: :ref:`data-type-boolean`
+    :type: :ref:`data-type-boolean`
     :Default: 0
 
     If set, the GraphicsMagick/ImageMagick-command will use a
@@ -404,8 +387,7 @@ m.mask
 
 ..  confval:: m.mask
     :name: imgresource-masking-mask
-
-    :Data type: :ref:`data-type-imgResource`
+    :type: :ref:`data-type-imgResource`
 
     The mask with which the image is masked onto :typoscript:`m.bgImg`. Both :typoscript:`m.mask`
     and :typoscript:`m.bgImg` **is scaled to fit** the size of the imgResource image!
@@ -420,8 +402,7 @@ m.bgImg
 
 ..  confval:: m.bgImg
     :name: imgresource-masking-bgImg
-
-    :Data type: :ref:`data-type-imgResource`
+    :type: :ref:`data-type-imgResource`
 
     **Note:** Both :typoscript:`m.mask` and :typoscript:`m.bgImg` must be valid images.
 
@@ -433,8 +414,7 @@ m.bottomImg
 
 ..  confval:: m.bottomImg
     :name: imgresource-masking-bottomImg
-
-    :Data type: :ref:`data-type-imgResource`
+    :type: :ref:`data-type-imgResource`
 
     An image masked by :typoscript:`m.bottomImg_mask` onto :typoscript:`m.bgImg` before the
     imgResources is masked by :typoscript:`m.mask`.
@@ -455,8 +435,7 @@ m.bottomImg\_mask
 
 ..  confval:: m.bottomImg_mask
     :name: imgresource-masking-bottomImg-mask
-
-    :Data type: :ref:`data-type-imgResource`
+    :type: :ref:`data-type-imgResource`
 
     (optional)
 

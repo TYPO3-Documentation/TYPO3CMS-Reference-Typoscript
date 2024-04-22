@@ -49,8 +49,7 @@ http.extTarget
 
 ..  confval:: http.extTarget
     :name: makelinks-http-extTarget
-
-    :Data type: :ref:`data-type-target`
+    :type: :ref:`data-type-target`
     :Default: \_top
 
     The target of the link.
@@ -63,8 +62,7 @@ http.wrap
 
 ..  confval:: http.wrap
     :name: makelinks-http-wrap
-
-    :Data type: :ref:`data-type-wrap` / :ref:`stdwrap`
+    :type: :ref:`data-type-wrap` / :ref:`stdwrap`
 
     Wrap around the link.
 
@@ -75,8 +73,7 @@ http.ATagBeforeWrap
 
 ..  confval:: http.ATagBeforeWrap
     :name: makelinks-http-ATagBeforeWrap
-
-    :Data type: :ref:`data-type-boolean`
+    :type: :ref:`data-type-boolean`
     :Default: 0
 
     If set, the link is first wrapped with :typoscript:`http.wrap` and then the
@@ -90,8 +87,7 @@ http.keep
 
 ..  confval:: http.keep
     :name: makelinks-http-keep
-
-    :Data type: list: "scheme","path","query"
+    :type: list: "scheme","path","query"
 
     As default the link-text will be the full domain-name of the link.
 
@@ -115,8 +111,7 @@ http.ATagParams
 
 ..  confval:: http.ATagParams
     :name: makelinks-http-ATagParams
-
-    :Data type: :ref:`data-type-tag-params` / :ref:`stdwrap`
+    :type: :ref:`data-type-tag-params` / :ref:`stdwrap`
 
     Additional parameters
 
@@ -147,8 +142,7 @@ mailto.wrap
 
 ..  confval:: mailto.wrap
     :name: makelinks-mailto.wrap
-
-    :Data type: :ref:`data-type-wrap` / :ref:`stdwrap`
+    :type: :ref:`data-type-wrap` / :ref:`stdwrap`
 
     Wrap around the link.
 
@@ -159,8 +153,7 @@ mailto.ATagBeforeWrap
 
 ..  confval:: mailto.ATagBeforeWrap
     :name: makelinks-mailto.ATagBeforeWrap
-
-    :Data type: :ref:`data-type-boolean`
+    :type: :ref:`data-type-boolean`
     :Default: 0
 
     If set, the link is first wrapped with mailto :typoscript:`wrap` and then the
@@ -174,8 +167,7 @@ mailto.ATagParams
 
 ..  confval:: mailto.ATagParams
     :name: makelinks-mailto.ATagParams
-
-    :Data type: :ref:`data-type-tag-params` / :ref:`stdwrap`
+    :type: :ref:`data-type-tag-params` / :ref:`stdwrap`
 
     Additional parameters
 

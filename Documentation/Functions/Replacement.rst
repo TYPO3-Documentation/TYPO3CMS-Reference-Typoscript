@@ -30,8 +30,7 @@ search
 
 ..  confval:: search
     :name: replacement-search
-
-    :Data type: :ref:`data-type-string` / :ref:`stdwrap`
+    :type: :ref:`data-type-string` / :ref:`stdwrap`
 
     Defines the string that shall be replaced.
 
@@ -43,8 +42,7 @@ replace
 
 ..  confval:: replace
     :name: replacement-replace
-
-    :Data type: :ref:`data-type-string` / :ref:`stdwrap`
+    :type: :ref:`data-type-string` / :ref:`stdwrap`
 
     Defines the string to be used for the replacement.
 
@@ -56,8 +54,7 @@ useRegExp
 
 ..  confval:: useRegExp
     :name: replacement-useRegExp
-
-    :Data type: :ref:`data-type-boolean` / :ref:`stdwrap`
+    :type: :ref:`data-type-boolean` / :ref:`stdwrap`
     :Default: 0
 
     Defines that the search and replace strings are considered as PCRE
@@ -82,8 +79,7 @@ useOptionSplitReplace
 
 ..  confval:: useOptionSplitReplace
     :name: replacement-useOptionSplitReplace
-
-    :Data type: :ref:`data-type-boolean` / :ref:`stdwrap`
+    :type: :ref:`data-type-boolean` / :ref:`stdwrap`
     :Default: 0
 
     This property allows to use :ref:`optionsplit` for the replace

@@ -20,8 +20,7 @@ allWrap
 
 ..  confval:: allWrap
     :name: tmenuitem-allWrap
-
-    :Data type: :ref:`data-type-wrap` / :ref:`stdWrap <stdwrap>`
+    :type: :ref:`data-type-wrap` / :ref:`stdWrap <stdwrap>`
 
     Wraps the whole item.
 
@@ -33,8 +32,7 @@ wrapItemAndSub
 
 ..  confval:: wrapItemAndSub
     :name: tmenuitem-wrapItemAndSub
-
-    :Data type: :ref:`data-type-wrap` / :ref:`stdWrap <stdwrap>`
+    :type: :ref:`data-type-wrap` / :ref:`stdWrap <stdwrap>`
 
     Wraps the whole item and any submenu concatenated to it.
 
@@ -46,9 +44,7 @@ subst_elementUid
 
 ..  confval:: subst_elementUid
     :name: tmenuitem-subst-elementUid
-
-    :Data type: :ref:`data-type-boolean`
-
+    :type: :ref:`data-type-boolean`
     :Default: 0 (false)
 
     If set, all appearances of the string '{elementUid}' in the HTML code of the
@@ -66,8 +62,7 @@ before
 
 ..  confval:: before
     :name: tmenuitem-before
-
-    :Data type: HTML / :ref:`stdWrap <stdwrap>`
+    :type: HTML / :ref:`stdWrap <stdwrap>`
 
 
 ..  _tmenuitem-beforeWrap:
@@ -77,8 +72,7 @@ beforeWrap
 
 ..  confval:: beforeWrap
     :name: tmenuitem-beforeWrap
-
-    :Data type: :ref:`data-type-wrap`
+    :type: :ref:`data-type-wrap`
 
     Wrap around the :ref:`.before <tmenuitem-before>` code.
 
@@ -90,8 +84,7 @@ after
 
 ..  confval:: after
     :name: tmenuitem-after
-
-    :Data type: HTML / :ref:`stdWrap <stdwrap>`
+    :type: HTML / :ref:`stdWrap <stdwrap>`
 
 
 ..  _tmenuitem-afterWrap:
@@ -101,8 +94,7 @@ afterWrap
 
 ..  confval:: afterWrap
     :name: tmenuitem-afterWrap
-
-    :Data type: :ref:`data-type-wrap`
+    :type: :ref:`data-type-wrap`
 
     Wrap around the :ref:`.after <tmenuitem-after>` code.
 
@@ -114,8 +106,7 @@ linkWrap
 
 ..  confval:: linkWrap
     :name: tmenuitem-linkWrap
-
-    :Data type: :ref:`data-type-wrap`
+    :type: :ref:`data-type-wrap`
 
 
 ..  _tmenuitem-stdWrap:
@@ -125,8 +116,7 @@ stdWrap
 
 ..  confval:: stdWrap
     :name: tmenuitem-stdWrap
-
-    :Data type: :ref:`stdWrap`
+    :type: :ref:`stdWrap`
 
     stdWrap to the link text.
 
@@ -138,9 +128,7 @@ ATagBeforeWrap
 
 ..  confval:: ATagBeforeWrap
     :name: tmenuitem-ATagBeforeWrap
-
-    :Data type: :ref:`data-type-boolean`
-
+    :type: :ref:`data-type-boolean`
     :Default: 0 (false)
 
     If set, the link is first wrapped with :ref:`*.linkWrap* <tmenuitem-linkWrap>`
@@ -154,8 +142,7 @@ ATagParams
 
 ..  confval:: ATagParams
     :name: tmenuitem-ATagParams
-
-    :Data type: *<A>-params* / :ref:`stdWrap <stdwrap>`
+    :type: *<A>-params* / :ref:`stdWrap <stdwrap>`
 
     Additional parameters
 
@@ -174,8 +161,7 @@ ATagTitle
 
 ..  confval:: ATagTitle
     :name: tmenuitem-ATagTitle
-
-    :Data type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
+    :type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
 
     Allows you to specify the "title" attribute of the :html:`<a>` tag around
     the menu item.
@@ -198,8 +184,7 @@ additionalParams
 
 ..  confval:: additionalParams
     :name: tmenuitem-additionalParams
-
-    :Data type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
+    :type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
 
     Define parameters that are added to the end of the URL. This must be
     code ready to insert after the last parameter.
@@ -214,8 +199,7 @@ doNotLinkIt
 
 ..  confval:: doNotLinkIt
     :name: tmenuitem-doNotLinkIt
-
-    :Data type: :ref:`data-type-boolean` / :ref:`stdWrap <stdwrap>`
+    :type: :ref:`data-type-boolean` / :ref:`stdWrap <stdwrap>`
     :Default: 0
 
     If set, the link texts are not linked at all.
@@ -228,8 +212,7 @@ doNotShowLink
 
 ..  confval:: doNotShowLink
     :name: tmenuitem-doNotShowLink
-
-    :Data type: :ref:`data-type-boolean` / :ref:`stdWrap <stdwrap>`
+    :type: :ref:`data-type-boolean` / :ref:`stdWrap <stdwrap>`
     :Default: 0
 
     If set, the text will not be shown at all (smart with spacers).
@@ -242,8 +225,7 @@ stdWrap2
 
 ..  confval:: stdWrap2
     :name: tmenuitem-stdWrap2
-
-    :Data type: :ref:`data-type-wrap` / :ref:`stdWrap <stdwrap>`
+    :type: :ref:`data-type-wrap` / :ref:`stdWrap <stdwrap>`
     :Default: \|
 
     stdWrap to the total link text and :html:`<a>` tag. (Notice that the plain
@@ -257,8 +239,7 @@ altTarget
 
 ..  confval:: altTarget
     :name: tmenuitem-altTarget
-
-    :Data type: :ref:`data-type-target`
+    :type: :ref:`data-type-target`
 
     Alternative target overriding the target property of the
     ref:`TMENU <tmenu>`, if set.
@@ -271,7 +252,6 @@ allStdWrap
 
 ..  confval:: allStdWrap
     :name: tmenuitem-allStdWrap
-
-    :Data type: :ref:`stdWrap <stdwrap>`
+    :type: :ref:`stdWrap <stdwrap>`
 
     stdWrap of the whole item.

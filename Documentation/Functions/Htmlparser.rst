@@ -23,8 +23,7 @@ allowTags
 
 ..  confval:: allowTags
     :name: htmlparser-allowTags
-
-    :Data type: list of tags
+    :type: list of tags
 
     Default allowed tags.
 
@@ -36,8 +35,7 @@ stripEmptyTags
 
 ..  confval:: stripEmptyTags
     :name: htmlparser-stripEmptyTags
-
-    :Data type: :ref:`data-type-boolean`
+    :type: :ref:`data-type-boolean`
 
     Passes the content to PHPs :php:`strip_tags()`.
 
@@ -49,8 +47,7 @@ stripEmptyTags.keepTags
 
 ..  confval:: stripEmptyTags.keepTags
     :name: htmlparser-stripEmptyTags-keepTags
-
-    :Data type: :ref:`data-type-string`
+    :type: :ref:`data-type-string`
 
     Comma separated list of tags to keep when applying :php:`strip_tags()`.
 
@@ -62,8 +59,7 @@ tags.[tagname]
 
 ..  confval:: tags
     :name: htmlparser-tags
-
-    :Data type: :ref:`data-type-boolean` / string of :ref:`htmlparser-tags`
+    :type: :ref:`data-type-boolean` / string of :ref:`htmlparser-tags`
 
     Either set this property to `0` or `1` to allow or deny the tag. If you
     enter :ref:`htmlparser-tags` properties, those will automatically overrule
@@ -79,8 +75,7 @@ localNesting
 
 ..  confval:: localNesting
     :name: htmlparser-localNesting
-
-    :Data type: list of tags, must be among preserved tags
+    :type: list of tags, must be among preserved tags
 
     List of tags (among the already set tags), which will be forced to
     have the nesting-flag set to true.
@@ -93,8 +88,7 @@ globalNesting
 
 ..  confval:: globalNesting
     :name: htmlparser-globalNesting
-
-    :Data type: (ibid)
+    :type: (ibid)
 
     List of tags (among the already set tags), which will be forced to
     have the nesting-flag set to "global".
@@ -107,8 +101,7 @@ rmTagIfNoAttrib
 
 ..  confval:: rmTagIfNoAttrib
     :name: htmlparser-rmTagIfNoAttrib
-
-    :Data type: (ibid)
+    :type: (ibid)
 
     List of tags (among the already set tags), which will be forced to
     have the :ref:`htmlparser-rmTagIfNoAttrib` set to true.
@@ -121,8 +114,7 @@ noAttrib
 
 ..  confval:: noAttrib
     :name: htmlparser-noAttrib
-
-    :Data type: (ibid)
+    :type: (ibid)
 
     List of tags (among the already set tags), which will be forced to
     have the allowedAttribs value set to zero (which means, all attributes
@@ -136,8 +128,7 @@ removeTags
 
 ..  confval:: removeTags
     :name: htmlparser-removeTags
-
-    :Data type: (ibid)
+    :type: (ibid)
 
     List of tags (among the already set tags), which will be configured so
     they are surely removed.
@@ -150,8 +141,7 @@ keepNonMatchedTags
 
 ..  confval:: keepNonMatchedTags
     :name: htmlparser-keepNonMatchedTags
-
-    :Data type: :ref:`data-type-boolean` / "protect"
+    :type: :ref:`data-type-boolean` / "protect"
 
     If set (:typoscript:`1`), then all tags are kept regardless of tags present as
     keys in :php:`$tags`-array.
@@ -170,8 +160,7 @@ htmlSpecialChars
 
 ..  confval:: htmlSpecialChars
     :name: htmlparser-htmlSpecialChars
-
-    :Data type: -1 / 0 / 1 / 2
+    :type: -1 / 0 / 1 / 2
 
     This regards all content which is **not** tags:
 

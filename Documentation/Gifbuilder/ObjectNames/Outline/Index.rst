@@ -30,8 +30,7 @@ color
 
 ..  confval:: color
     :name: gifbuilder-outline-color
-
-    :Data type: :ref:`data-type-GraphicColor` / :ref:`stdWrap <stdwrap>`
+    :type: :ref:`data-type-GraphicColor` / :ref:`stdWrap <stdwrap>`
 
     Color of the outline.
 
@@ -43,8 +42,7 @@ textObjNum
 
 ..  confval:: textObjNum
     :name: gifbuilder-outline-textObjNum
-
-    :Data type: positive integer / :ref:`stdWrap <stdwrap>`
+    :type: positive integer / :ref:`stdWrap <stdwrap>`
 
     Must point to the :ref:`TEXT <gifbuilder-text>` object, if these outline
     properties are not properties to a TEXT object directly ("stand-alone
@@ -62,7 +60,6 @@ thickness
 
 ..  confval:: thickness
     :name: gifbuilder-outline-thickness
-
-    :Data type: x,y / :ref:`stdWrap <stdwrap>`
+    :type: x,y / :ref:`stdWrap <stdwrap>`
 
     Thickness in each direction, range 1-2.

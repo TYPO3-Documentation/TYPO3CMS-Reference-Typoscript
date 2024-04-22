@@ -24,8 +24,7 @@ align
 
 ..  confval:: align
     :name: gifbuilder-image-align
-
-    :Data type: VHalign / :ref:`stdWrap <stdwrap>`
+    :type: VHalign / :ref:`stdWrap <stdwrap>`
     :Default: 1,1
 
     Pair of values, which defines the horizontal and vertical alignment of
@@ -72,8 +71,7 @@ file
 
 ..  confval:: file
     :name: gifbuilder-image-file
-
-    :Data type: :ref:`data-type-imgResource`
+    :type: :ref:`data-type-imgResource`
 
     The image file.
 
@@ -85,8 +83,7 @@ mask
 
 ..  confval:: mask
     :name: gifbuilder-image-mask
-
-    :Data type: :ref:`data-type-imgResource`
+    :type: :ref:`data-type-imgResource`
 
     Optional mask image for the image file.
 
@@ -98,8 +95,7 @@ offset
 
 ..  confval:: offset
     :name: gifbuilder-image-offset
-
-    :Data type: x,y :ref:`+calc <gifbuilder-calc>` / :ref:`stdWrap <stdwrap>`
+    :type: x,y :ref:`+calc <gifbuilder-calc>` / :ref:`stdWrap <stdwrap>`
     :Default: 0,0
 
     Offset of the image.
@@ -112,8 +108,7 @@ tile
 
 ..  confval:: tile
     :name: gifbuilder-image-tile
-
-    :Data type: x,y / :ref:`stdWrap <stdwrap>`
+    :type: x,y / :ref:`stdWrap <stdwrap>`
     :Default: 1,1
 
     Repeat the image x,y times (which creates the look of tiles).

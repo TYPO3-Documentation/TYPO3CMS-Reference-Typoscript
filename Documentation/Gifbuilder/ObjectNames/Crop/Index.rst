@@ -25,8 +25,7 @@ align
 
 ..  confval:: align
     :name: gifbuilder-crop-align
-
-    :Data type: VHalign / :ref:`stdWrap <stdwrap>`
+    :type: VHalign / :ref:`stdWrap <stdwrap>`
     :Default: l, t
 
     Pair of values, which defines the horizontal and vertical alignment of
@@ -73,8 +72,7 @@ backColor
 
 ..  confval:: backColor
     :name: gifbuilder-crop-backColor
-
-    :Data type: :ref:`data-type-GraphicColor` / :ref:`stdWrap <stdwrap>`
+    :type: :ref:`data-type-GraphicColor` / :ref:`stdWrap <stdwrap>`
     :Default: The original background color
 
     Background color.
@@ -86,8 +84,7 @@ crop
 
 ..  confval:: crop
     :name: gifbuilder-crop-crop
-
-    :Data type: x,y,w,h :ref:`+calc <gifbuilder-calc>` /:ref:`stdWrap <stdwrap>`
+    :type: x,y,w,h :ref:`+calc <gifbuilder-calc>` /:ref:`stdWrap <stdwrap>`
 
     x,y is the offset of the crop frame from the position specified by
     :ref:`align <gifbuilder-crop-align>`.

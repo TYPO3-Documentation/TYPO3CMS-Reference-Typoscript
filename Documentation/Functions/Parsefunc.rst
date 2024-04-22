@@ -27,8 +27,7 @@ externalBlocks
 
 ..  confval:: externalBlocks
     :name: parsefunc-externalBlocks
-
-    :Data type: list of tagnames / +properties
+    :type: list of tagnames / +properties
 
     This allows you to pre-split the content passed to parseFunc so that
     only content outside the blocks with the given tags is parsed.
@@ -144,8 +143,7 @@ short
 
 ..  confval:: short
     :name: arsefunc-short
-
-    :Data type: *(array of strings)*
+    :type: *(array of strings)*
 
     If this property is set, you can use markers (the short name
     wrapped in "###") in your text. TYPO3 then substitutes the markers
@@ -175,8 +173,7 @@ plainTextStdWrap
 
 ..  confval:: plainTextStdWrap
     :name: parsefunc-plainTextStdWrap
-
-    :Data type: :ref:`stdwrap`
+    :type: :ref:`stdwrap`
 
     This is :ref:`stdwrap` properties for all non-tag content.
 
@@ -188,8 +185,7 @@ userFunc
 
 ..  confval:: userFunc
     :name: parsefunc-userFunc
-
-    :Data type: :ref:`data-type-function-name`
+    :type: :ref:`data-type-function-name`
 
     This passes the non-tag content to a function of your own choice.
     Similar to, for example, :ref:`stdwrap-postUserFunc` in :ref:`stdWrap`.
@@ -204,8 +200,7 @@ nonTypoTagStdWrap
 
 ..  confval:: nonTypoTagStdWrap
     :name: parsefunc-nonTypoTagStdWrap
-
-    :Data type: :ref:`stdWrap`
+    :type: :ref:`stdWrap`
 
     Like :ref:`parsefunc-plainTextStdWrap`. Difference:
 
@@ -222,8 +217,7 @@ nonTypoTagUserFunc
 
 ..  confval:: nonTypoTagUserFunc
     :name: parsefunc-nonTypoTagUserFunc
-
-    :Data type: :ref:`data-type-function-name`
+    :type: :ref:`data-type-function-name`
 
     Like :ref:`parsefunc-userFunc`.
     Differences is (like :ref:`parsefunc-nonTypoTagStdWrap`)
@@ -240,8 +234,7 @@ makelinks
 
 ..  confval:: makelinks
     :name: parsefunc-makelinks
-
-    :Data type: :ref:`data-type-boolean`
+    :type: :ref:`data-type-boolean`
 
     Convert web addresses prefixed with `http://` and mail addresses
     prefixed with `mailto:` to links.
@@ -254,8 +247,7 @@ tags
 
 ..  confval:: tags
     :name: parsefunc-tags
-
-    :Data type: :ref:`tags`
+    :type: :ref:`tags`
 
     Here you can define **custom tags** that will parse the content to
     something.
@@ -268,8 +260,7 @@ allowTags
 
 ..  confval:: allowTags
     :name: parsefunc-allowTags
-
-    :Data type: list of strings
+    :type: list of strings
 
     List of tags, which are allowed to exist in code!
 
@@ -284,8 +275,7 @@ denyTags
 
 ..  confval:: denyTags
     :name: parsefunc-denyTags
-
-    :Data type: list of strings
+    :type: list of strings
 
     List of tags, which may **not** exist in code! (use :typoscript:`*` for all.)
 
@@ -314,8 +304,7 @@ if
 
 .. confval:: if
     :name: parsefunc-if
-
-    :Data type: :ref:`if`
+    :type: :ref:`if`
 
     if "if" returns false, the input value is not parsed, but returned
     directly.

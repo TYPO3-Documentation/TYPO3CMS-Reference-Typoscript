@@ -30,7 +30,6 @@ align
 
 ..  confval:: align
     :name: data-type-align
-
     :Default: :typoscript:`left`
     :Allowed values: :typoscript:`left`, :typoscript:`center`, :typoscript:`right`
 

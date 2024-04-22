@@ -33,8 +33,7 @@ decimals
 
 ..  confval:: decimals
     :name: numberformat-decimals
-
-    :Data type: :ref:`data-type-integer` / :ref:`stdwrap`
+    :type: :ref:`data-type-integer` / :ref:`stdwrap`
     :Default: 0
 
     Number of decimals the formatted number will have.
@@ -50,8 +49,7 @@ dec\_point
 
 ..  confval:: dec_point
     :name: numberformat-dec-point
-
-    :Data type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
+    :type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
     :Default: .
 
     Character that divides the decimals from the rest of the number.
@@ -64,8 +62,7 @@ thousands\_sep
 
 ..  confval:: thousands_sep
     :name: numberformat-thousands-sep
-
-    :Data type: :ref:`data-type-string` / :ref:`stdwrap`
+    :type: :ref:`data-type-string` / :ref:`stdwrap`
     :Default: ,
 
     Character that divides the thousands of the number.

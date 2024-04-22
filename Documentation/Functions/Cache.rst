@@ -38,8 +38,7 @@ key
 
 ..  confval:: key
     :name: cache-key
-
-    :Data type: :ref:`data-type-string` / :ref:`stdwrap`
+    :type: :ref:`data-type-string` / :ref:`stdwrap`
 
     The cache identifier that is used to store the rendered content into
     the cache and to read it from there.
@@ -58,8 +57,7 @@ lifetime
 
 ..  confval:: lifetime
     :name: cache-lifetime
-
-    :Data type: mixed / :ref:`stdwrap`
+    :type: mixed / :ref:`stdwrap`
     :Default: default
 
     Lifetime of the content in cache.
@@ -90,8 +88,7 @@ tags
 
 ..  confval:: tags
     :name: cache-tags
-
-    :Data type: :ref:`data-type-string` / :ref:`stdwrap`
+    :type: :ref:`data-type-string` / :ref:`stdwrap`
 
     Can hold a comma-separated list of tags. These tags will be attached
     to the entry added to the `cache_hash` cache (and to
