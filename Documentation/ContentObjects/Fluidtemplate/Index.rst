@@ -63,6 +63,17 @@ receive a complete listing of the available data using the magic `{_all}` variab
 Properties
 ==========
 
+..  _cobj-_fluidtemplate-cache:
+
+cache
+-----
+
+..  confval:: cache
+    :name: _fluidtemplate-cache
+    :type: :ref:`cache <cache>`
+
+    See :ref:`cache function description <cache>` for details.
+
 .. _fluidtemplate-dataProcessing:
 
 dataProcessing

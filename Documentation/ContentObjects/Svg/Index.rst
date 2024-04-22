@@ -18,6 +18,17 @@ or reference a file.
 Properties
 ==========
 
+..  _cobj-svg-cache:
+
+cache
+-----
+
+..  confval:: cache
+    :name: svg-cache
+    :type: :ref:`cache <cache>`
+
+    See :ref:`cache function description <cache>` for details.
+
 ..  _cobj-svg-width:
 
 width
