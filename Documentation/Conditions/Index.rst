@@ -45,8 +45,7 @@ applicationContext
 
 ..  confval:: applicationContext
     :name: condition-applicationContext
-
-    :Data type: String
+    :type: String
 
     The current application context as a string.
     See :ref:`t3coreapi:bootstrapping-context`.
@@ -75,8 +74,7 @@ page
 
 ..  confval:: page
     :name: condition-page
-
-    :Data type: Array
+    :type: Array
 
     All data of the current page record as array.
 
@@ -127,8 +125,7 @@ tree
 
 ..  confval:: tree
     :name: condition-tree
-
-    :Data type: Object
+    :type: Object
 
     Object with tree information.
 
@@ -145,8 +142,7 @@ tree.level
 
 ..  confval:: tree.level
     :name: condition-tree-level
-
-    :Data type: Integer
+    :type: Integer
 
     The current tree level.
 
@@ -169,8 +165,7 @@ tree.pagelayout
 
 ..  confval:: tree.pagelayout
     :name: condition-tree-pagelayout
-
-    :Data type: Integer / String
+    :type: Integer / String
 
     Check for the defined :ref:`backend layout <t3coreapi:be-layout>` of a page, including
     the inheritance of the field `Backend Layout (subpages of this page)`.
@@ -200,8 +195,7 @@ tree.rootLine
 
 ..  confval:: tree.rootLine
     :name: condition-tree-rootLine
-
-    :Data type: Array
+    :type: Array
 
     Array of arrays with UID and PID.
 
@@ -225,8 +219,7 @@ tree.rootLineIds
 
 ..  confval:: tree.rootLineIds
     :name: condition-tree-rootLineIds
-
-    :Data type: Array
+    :type: Array
 
     An array with UIDs of the root line.
 
@@ -251,8 +244,7 @@ tree.rootLineParentIds
 
 ..  confval:: tree.rootLineParentIds
     :name: condition-tree-rootLineParentIds
-
-    :Data type: Array
+    :type: Array
 
     An array with parent UIDs of the root line.
 
@@ -275,8 +267,7 @@ backend
 
 ..  confval:: backend
     :name: condition-backend
-
-    :Data type: Object
+    :type: Object
 
     Object with backend information.
 
@@ -289,8 +280,7 @@ backend.user
 
 ..  confval:: backend.user
     :name: condition-backend-user
-
-    :Data type: Object
+    :type: Object
 
     Object with current backend user information.
 
@@ -305,8 +295,7 @@ backend.user.isAdmin
 
 ..  confval:: backend.user.isAdmin
     :name: condition-backend-user-isAdmin
-
-    :Data type: Boolean
+    :type: Boolean
 
     True, if the current backend user is administrator.
 
@@ -329,8 +318,7 @@ backend.user.isLoggedIn
 
 ..  confval:: backend.user.isLoggedIn
     :name: condition-backend-user-isLoggedIn
-
-    :Data type: Boolean
+    :type: Boolean
 
     True, if the current backend user is logged in.
 
@@ -353,8 +341,7 @@ backend.user.userId
 
 ..  confval:: backend.user.userId
     :name: condition-backend-user-userId
-
-    :Data type: Integer
+    :type: Integer
 
     UID of the the current backend user.
 
@@ -378,8 +365,7 @@ backend.user.userGroupIds
 
 ..  confval:: backend.user.userGroupIds
     :name: condition-backend-user-userGroupIds
-
-    :Data type: Array
+    :type: Array
     :Context: Frontend, backend
 
     Array of user group IDs assigned to the current backend user.
@@ -402,8 +388,7 @@ backend.user.userGroupList
 
 ..  confval:: backend.user.userGroupList
     :name: condition-backend-user-userGroupList
-
-    :Data type: String
+    :type: String
 
     Comma-separated list of group UIDs.
 
@@ -425,8 +410,7 @@ frontend
 
 ..  confval:: frontend
     :name: condition-frontend
-
-    :Data type: Object
+    :type: Object
 
     Object with frontend information.
 
@@ -439,8 +423,7 @@ frontend.user
 
 ..  confval:: frontend.user
     :name: condition-frontend-user
-
-    :Data type: Object
+    :type: Object
 
     Object with current frontend user information.
 
@@ -453,8 +436,7 @@ frontend.user.isLoggedIn
 
 ..  confval:: frontend.user.isLoggedIn
     :name: condition-frontend-user-isLoggedIn
-
-    :Data type: Boolean
+    :type: Boolean
 
     True, if the current frontend user is logged in.
 
@@ -476,8 +458,7 @@ frontend.user.userId
 
 ..  confval:: frontend.user.userId
     :name: condition-frontend-user-userId
-
-    :Data type: Integer
+    :type: Integer
 
     The UID of the current frontend user.
 
@@ -499,8 +480,7 @@ frontend.user.userGroupIds
 
 ..  confval:: frontend.user.userGroupIds
     :name: condition-frontend-user-userGroupIds
-
-    :Data type: Array
+    :type: Array
     :Context: Frontend
 
     Array of user group IDs of the current frontend user.
@@ -523,8 +503,7 @@ frontend.user.userGroupList
 
 ..  confval:: frontend.user.userGroupList
     :name: condition-frontend-user-userGroupList
-
-    :Data type: String
+    :type: String
 
     Comma-separated list of group UIDs.
 
@@ -546,8 +525,7 @@ workspace
 
 ..  confval:: workspace
     :name: condition-workspace
-
-    :Data type: Object
+    :type: Object
 
     Object with :ref:`workspace <t3coreapi:workspaces>` information.
 
@@ -560,8 +538,7 @@ workspace.workspaceId
 
 ..  confval:: workspace.workspaceId
     :name: condition-workspace-workspaceId
-
-    :Data type: Integer
+    :type: Integer
 
     UID of the current workspace.
 
@@ -584,8 +561,7 @@ workspace.isLive
 
 ..  confval:: workspace.isLive
     :name: condition-workspace-isLive
-
-    :Data type: Boolean
+    :type: Boolean
 
     True, if the current workspace is the live workspace.
 
@@ -607,8 +583,7 @@ workspace.isOffline
 
 ..  confval:: workspace.isOffline
     :name: condition-workspace-isOffline
-
-    :Data type: Boolean
+    :type: Boolean
 
     True, if the current workspace is offline.
 
@@ -630,8 +605,7 @@ typo3
 
 ..  confval:: typo3
     :name: condition-typo3
-
-    :Data type: Object
+    :type: Object
 
     Object with TYPO3-related information.
 
@@ -644,8 +618,7 @@ typo3.version
 
 ..  confval:: typo3.version
     :name: condition-typo3-version
-
-    :Data type: String
+    :type: String
 
     TYPO3_version (for example, 12.4.5)
 
@@ -667,8 +640,7 @@ typo3.branch
 
 ..  confval:: typo3.branch
     :name: condition-typo3-branch
-
-    :Data type: String
+    :type: String
 
     TYPO3 branch (for example, 12.4)
 
@@ -690,8 +662,7 @@ typo3.devIpMask
 
 ..  confval:: typo3.devIpMask
     :name: condition-typo3-devIpMask
-
-    :Data type: String
+    :type: String
 
     :ref:`$GLOBALS['TYPO3_CONF_VARS']['SYS']['devIPmask'] <t3coreapi:typo3ConfVars_sys_devIPmask>`
 
@@ -715,7 +686,7 @@ date()
     :name: condition-date
 
     :Parameter: String
-    :Data type: String | Integer
+    :type: String | Integer
 
     Get the current date in the given format. See the PHP `date function`_
     as a reference for the possible usage.
@@ -758,7 +729,7 @@ like()
     :name: condition-like
 
     :Parameter: String, String
-    :Data type: Boolean
+    :type: Boolean
 
     This function has two parameters: The first parameter is the string to
     search in, the second parameter is the search string.
@@ -794,7 +765,7 @@ traverse()
     :name: condition-traverse
 
     :Parameter: Array, String
-    :Data type: Mixed
+    :type: Mixed
 
     This function gets a value from an array with arbitrary depth and suppresses
     a PHP warning when sub-arrays do not exist. It has two parameters: The first
@@ -831,7 +802,7 @@ compatVersion()
     :name: condition-compatVersion
 
     :Parameter: String
-    :Data type: Boolean
+    :type: Boolean
 
     Compares against the current TYPO3 branch.
 
@@ -859,8 +830,7 @@ getTSFE()
 
 ..  confval:: getTSFE()
     :name: condition-getTSFE
-
-    :Data type: Object
+    :type: Object
 
     Provides access to :ref:`TypoScriptFrontendController <t3coreapi:tsfe>`
     :php:`$GLOBALS['TSFE']`. This function can directly access methods of
@@ -892,8 +862,7 @@ getenv()
 
 ..  confval:: getenv()
     :name: condition-getenv
-
-    :Data type: String
+    :type: String
 
     PHP function `getenv <https://www.php.net/manual/en/function.getenv.php>`_.
 
@@ -915,8 +884,7 @@ feature()
 
 ..  confval:: feature()
     :name: condition-feature
-
-    :Data type: String
+    :type: String
 
     Provides access to the current state of
     :ref:`feature toggles <t3coreapi:typo3ConfVars_sys_features>`.
@@ -947,7 +915,7 @@ ip()
     :name: condition-ip
 
     :Parameter: String
-    :Data type: Boolean
+    :type: Boolean
 
     Value or constraint, wildcard or regular expression possible; special value:
     "devIP" (matches the :ref:`devIPmask <t3coreapi:typo3ConfVars_sys_devIPmask>`).
@@ -980,8 +948,7 @@ request()
 
 ..  confval:: request()
     :name: condition-request
-
-    :Data type: Mixed
+    :type: Mixed
 
     Allows to fetch information from current request.
 
@@ -1003,8 +970,7 @@ request.getQueryParams()
 
 ..  confval:: request.getQueryParams()
     :name: condition-request-getQueryParams
-
-    :Data type: Array
+    :type: Array
 
     Allows to access GET parameters from current request.
 
@@ -1042,8 +1008,7 @@ request.getParsedBody()
 
 ..  confval:: request.getParsedBody()
     :name: condition-request-getParsedBody
-
-    :Data type: Array
+    :type: Array
 
     Provide all values contained in the request body, for example, in case of
     submitted form via POST, the submitted values.
@@ -1066,8 +1031,7 @@ request.getHeaders()
 
 ..  confval:: request.getHeaders()
     :name: condition-request-getHeaders
-
-    :Data type: Array
+    :type: Array
 
     Provide all values from request headers.
 
@@ -1093,8 +1057,7 @@ request.getCookieParams()
 
 ..  confval:: request.getCookieParams()
     :name: condition-request-getCookieParams
-
-    :Data type: Array
+    :type: Array
 
     Provides available cookies.
 
@@ -1116,8 +1079,7 @@ request.getNormalizedParams()
 
 ..  confval:: request.getNormalizedParams()
     :name: condition-request-getNormalizedParams
-
-    :Data type: Array
+    :type: Array
 
     Provides access to the :php:`\TYPO3\CMS\Core\Http\NormalizedParams` object.
     Have a look at the
@@ -1147,8 +1109,7 @@ request.getPageArguments()
 
 ..  confval:: request.getPageArguments()
     :name: condition-request-getPageArguments
-
-    :Data type: Object
+    :type: Object
 
     Get the current :php:`\TYPO3\CMS\Core\Routing\PageArguments` object with
     the resolved route parts from enhancers.
@@ -1177,7 +1138,7 @@ session()
     :name: condition-session
 
     :Parameter: String
-    :Data type: Mixed
+    :type: Mixed
 
     Allows to access values of the current session. Available values depend on
     values written to the session, for example, by extensions. Use
@@ -1204,7 +1165,7 @@ site()
     :name: condition-site
 
     :Parameter: String
-    :Data type: Mixed
+    :type: Mixed
 
     Get a value from the :ref:`site configuration <t3coreapi:sitehandling>`, or
     null, if no site was found or the property does not exists.
@@ -1279,7 +1240,7 @@ siteLanguage()
     :name: condition-siteLanguage
 
     :Parameter: String
-    :Data type: Mixed
+    :type: Mixed
 
     Get a value from the
     :ref:`site language configuration <t3coreapi:sitehandling-addingLanguages>`,

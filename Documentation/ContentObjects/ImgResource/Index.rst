@@ -28,8 +28,7 @@ file
 
 ..  confval:: file
     :name: img-resource-file
-
-    :Data type: :ref:`->imgResource <imgresource>`
+    :type: :ref:`->imgResource <imgresource>`
 
 
 ..  _cobj-img-resource-stdWrap:
@@ -39,5 +38,4 @@ stdWrap
 
 ..  confval:: stdWrap
     :name: img-resource-stdWrap
-
-    :Data type: :ref:`->stdWrap <stdwrap>`
+    :type: :ref:`->stdWrap <stdwrap>`

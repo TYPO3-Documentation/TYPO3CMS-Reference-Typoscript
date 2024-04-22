@@ -38,8 +38,7 @@ select
 
 ..  confval:: select
     :name: content-select
-
-    :Data type: :ref:`select`
+    :type: :ref:`select`
 
     The SQL-statement, a :sql:`SELECT` query, is set here,
     including automatic visibility control.
@@ -52,8 +51,7 @@ table
 
 ..  confval:: table
     :name: content-table
-
-    :Data type:  *table name* / :ref:`stdwrap`
+    :type:  *table name* / :ref:`stdwrap`
 
     The table, the content should come from. Any table can be used;
     a check for a table prefix is not done.
@@ -68,8 +66,7 @@ renderObj
 
 ..  confval:: renderObj
     :name: content-renderObj
-
-    :Data type: :ref:`data-type-cObject`
+    :type: :ref:`data-type-cObject`
     :Default: :typoscript:`< [table name]`
 
     The cObject used for rendering the records resulting from the query in
@@ -90,8 +87,7 @@ slide
 
 ..  confval:: slide
     :name: content-slide
-
-    :Data type: :ref:`data-type-integer` / :ref:`stdWrap`
+    :type: :ref:`data-type-integer` / :ref:`stdWrap`
 
     If set and no content element is found by the select command, the
     rootLine will be traversed back until some content is found.
@@ -116,8 +112,7 @@ slide.collect
 
 ..  confval:: slide.collect
     :name: content-slide-collect
-
-    :Data type: :ref:`data-type-integer` / :ref:`stdWrap`
+    :type: :ref:`data-type-integer` / :ref:`stdWrap`
 
     If set, all content elements found on the current and parent pages will be
     collected. Otherwise, the sliding would stop after the first hit. Set this
@@ -132,8 +127,7 @@ slide.collectFuzzy
 
 ..  confval:: slide.collectFuzzy
     :name: content-slide-collectFuzzy
-
-    :Data type: :ref:`data-type-boolean` / :ref:`stdWrap`
+    :type: :ref:`data-type-boolean` / :ref:`stdWrap`
 
     Only useful with :ref:`slide.collect <cobj-content-slide-collect>`. If no content
     elements have been found for the specified depth in collect mode, traverse
@@ -147,8 +141,7 @@ slide.collectReverse
 
 ..  confval:: slide.collectReverse
     :name: content-slide-collectReverse
-
-    :Data type: :ref:`data-type-boolean` / :ref:`stdWrap`
+    :type: :ref:`data-type-boolean` / :ref:`stdWrap`
 
     Reverse order of elements in collect mode. If set, elements of the current
     page will be at the bottom.
@@ -161,8 +154,7 @@ wrap
 
 ..  confval:: wrap
     :name: content-wrap
-
-    :Data type: :ref:`wrap <data-type-wrap>` / :ref:`stdWrap`
+    :type: :ref:`wrap <data-type-wrap>` / :ref:`stdWrap`
 
     Wrap the whole content.
 
@@ -174,8 +166,7 @@ stdWrap
 
 ..  confval:: stdWrap
     :name: content-stdWrap
-
-    :Data type: :ref:`stdWrap`
+    :type: :ref:`stdWrap`
 
     Apply `stdWrap` functionality.
 
@@ -187,8 +178,7 @@ cache
 
 ..  confval:: cache
     :name: content-cache
-
-    :Data type: :ref:`cache <cache>`
+    :type: :ref:`cache <cache>`
 
     See :ref:`cache function description <cache>` for details.
 

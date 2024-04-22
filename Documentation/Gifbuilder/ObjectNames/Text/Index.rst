@@ -24,8 +24,7 @@ align
 
 ..  confval:: align
     :name: gifbuilder-text-align
-
-    :Data type: align / :ref:`stdWrap <stdwrap>`
+    :type: align / :ref:`stdWrap <stdwrap>`
     :Default: left
 
     The alignment of the :ref:`gifbuilder-text-text`.
@@ -44,8 +43,7 @@ angle
 
 ..  confval:: angle
     :name: gifbuilder-text-angle
-
-    :Data type: :ref:`data-type-degree`
+    :type: :ref:`data-type-degree`
     :Default: 0
     :Range: -90 to 90
 
@@ -63,8 +61,7 @@ antiAlias
 
 ..  confval:: antiAlias
     :name: gifbuilder-text-antiAlias
-
-    :Data type: boolean
+    :type: boolean
     :Default: 1 (true)
 
     The FreeType antialiasing.
@@ -84,8 +81,7 @@ breakSpace
 
 ..  confval:: breakSpace
     :name: gifbuilder-text-breakSpace
-
-    :Data type: float
+    :type: float
     :Default: 1.0
 
     Defines a value that is multiplied by the line height of the current
@@ -99,8 +95,7 @@ breakWidth
 
 ..  confval:: breakWidth
     :name: gifbuilder-text-breakWidth
-
-    :Data type: integer / :ref:`stdWrap <stdwrap>`
+    :type: integer / :ref:`stdWrap <stdwrap>`
 
     Defines the maximum width for an object, overlapping elements will
     force an automatic line break.
@@ -113,8 +108,7 @@ doNotStripHTML
 
 ..  confval:: doNotStripHTML
     :name: gifbuilder-text-doNotStripHTML
-
-    :Data type: boolean
+    :type: boolean
     :Default: 0 (false)
 
     If set, HTML tags inserted in the :ref:`gifbuilder-text-text` are
@@ -128,8 +122,7 @@ emboss
 
 ..  confval:: emboss
     :name: gifbuilder-text-emboss
-
-    :Data type: GIFBUILDER object :ref:`->EMBOSS <gifbuilder-emboss>`
+    :type: GIFBUILDER object :ref:`->EMBOSS <gifbuilder-emboss>`
 
 
 ..  _gifbuilder-text-fontColor:
@@ -139,8 +132,7 @@ fontColor
 
 ..  confval:: fontColor
     :name: gifbuilder-text-fontColor
-
-    :Data type: :ref:`data-type-GraphicColor` / :ref:`stdWrap <stdwrap>`
+    :type: :ref:`data-type-GraphicColor` / :ref:`stdWrap <stdwrap>`
     :Default: black
 
     The font color.
@@ -153,8 +145,7 @@ fontFile
 
 ..  confval:: fontFile
     :name: gifbuilder-text-fontFile
-
-    :Data type: resource / :ref:`stdWrap <stdwrap>`
+    :type: resource / :ref:`stdWrap <stdwrap>`
     :Default: Nimbus (Arial clone)
 
     The font face (TrueType :file:`*.ttf` and OpenType :file:`*.otf` fonts can be
@@ -168,8 +159,7 @@ fontSize
 
 ..  confval:: fontSize
     :name: gifbuilder-text-fontSize
-
-    :Data type: positive integer / :ref:`stdWrap <stdwrap>`
+    :type: positive integer / :ref:`stdWrap <stdwrap>`
     :Default: 12
 
     The font size.
@@ -182,8 +172,7 @@ hide
 
 ..  confval:: hide
     :name: gifbuilder-text-hide
-
-    :Data type: boolean / :ref:`stdWrap <stdwrap>`
+    :type: boolean / :ref:`stdWrap <stdwrap>`
     :Default: 0 (false)
 
     If this is true, the text is **not** printed.
@@ -200,8 +189,7 @@ iterations
 
 ..  confval:: iterations
     :name: gifbuilder-text-iterations
-
-    :Data type: positive integer / :ref:`stdWrap <stdwrap>`
+    :type: positive integer / :ref:`stdWrap <stdwrap>`
     :Default: 1
 
     How many times the :ref:`gifbuilder-text-text` should be "printed"
@@ -219,8 +207,7 @@ maxWidth
 
 ..  confval:: maxWidth
     :name: gifbuilder-text-maxWidth
-
-    :Data type: positive integer / :ref:`stdWrap <stdwrap>`
+    :type: positive integer / :ref:`stdWrap <stdwrap>`
 
     Sets the maximum width in pixels, the :ref:`gifbuilder-text-text`
     must be. Reduces the :ref:`gifbuilder-text-fontSize`, if the
@@ -237,8 +224,7 @@ niceText
 
 ..  confval:: niceText
     :name: gifbuilder-text-niceText
-
-    :Data type: boolean / :ref:`stdWrap <stdwrap>`
+    :type: boolean / :ref:`stdWrap <stdwrap>`
 
     This is a very popular feature that helps to render small letters much nicer
     than the FreeType library can normally do. But it also loads the system
@@ -285,8 +271,7 @@ scaleFactor
 
 ..  confval:: niceText.scaleFactor
     :name: gifbuilder-text-niceText-scaleFactor
-
-    :Data type: integer (2-5)
+    :type: integer (2-5)
 
     The scaling factor.
 
@@ -298,8 +283,7 @@ sharpen
 
 ..  confval:: niceText.sharpen
     :name: gifbuilder-text-niceText-sharpen
-
-    :Data type: integer (0-99)
+    :type: integer (0-99)
 
     The sharpen value for the mask (after scaling). This enables you to make the
     text crisper, if it is too blurred!
@@ -312,8 +296,7 @@ offset
 
 ..  confval:: offset
     :name: gifbuilder-text-offset
-
-    :Data type: x,y :ref:`+calc <gifbuilder-calc>` / :ref:`stdWrap <stdwrap>`
+    :type: x,y :ref:`+calc <gifbuilder-calc>` / :ref:`stdWrap <stdwrap>`
     :Default: 0,0
 
     The offset of the :ref:`gifbuilder-text-text`.
@@ -326,8 +309,7 @@ outline
 
 ..  confval:: outline
     :name: gifbuilder-text-outline
-
-    :Data type: GIFBUILDER object :ref:`->OUTLINE <gifbuilder-outline>`
+    :type: GIFBUILDER object :ref:`->OUTLINE <gifbuilder-outline>`
 
 
 ..  _gifbuilder-text-shadow:
@@ -337,8 +319,7 @@ shadow
 
 ..  confval:: shadow
     :name: gifbuilder-text-shadow
-
-    :Data type: GIFBUILDER object :ref:`->SHADOW <gifbuilder-shadow>`
+    :type: GIFBUILDER object :ref:`->SHADOW <gifbuilder-shadow>`
 
 
 ..  _gifbuilder-text-spacing:
@@ -348,8 +329,7 @@ spacing
 
 ..  confval:: spacing
     :name: gifbuilder-text-spacing
-
-    :Data type: positive integer / :ref:`stdWrap <stdwrap>`
+    :type: positive integer / :ref:`stdWrap <stdwrap>`
     :Default: 0
 
     The pixel distance between letters. This may render ugly!
@@ -362,8 +342,7 @@ splitRendering
 
 ..  confval:: splitRendering
     :name: gifbuilder-text-splitRendering
-
-    :Data type: integer / *(array of keys)*
+    :type: integer / *(array of keys)*
 
     Split the rendering of a string into separate processes with individual
     configurations. By this method a certain range of characters can be rendered
@@ -384,8 +363,7 @@ splitRendering
 
 ..  confval:: splitRendering.[array]
     :name: gifbuilder-text-splitRendering-array
-
-    :Data type: integer
+    :type: integer
 
     With keyword being [charRange, highlightWord].
 
@@ -469,8 +447,7 @@ compX
 
 ..  confval:: splitRendering.compX
     :name: gifbuilder-text-splitRendering-compX
-
-    :Data type: integer
+    :type: integer
 
     Additional pixel space between parts, x direction.
 
@@ -482,8 +459,7 @@ compY
 
 ..  confval:: splitRendering.compY
     :name: gifbuilder-text-splitRendering-compY
-
-    :Data type: integer
+    :type: integer
 
     Additional pixel space between parts, y direction.
 
@@ -495,8 +471,7 @@ text
 
 ..  confval:: text
     :name: gifbuilder-text-text
-
-    :Data type: string / :ref:`stdWrap <stdwrap>`
+    :type: string / :ref:`stdWrap <stdwrap>`
 
     This is text on the image file. The item is rendered only, if this string is
     not empty.
@@ -512,8 +487,7 @@ textMaxLength
 
 ..  confval:: textMaxLength
     :name: gifbuilder-text-textMaxLength
-
-    :Data type: integer
+    :type: integer
     :Default: 100
 
     The maximum length of the :ref:`gifbuilder-text-text`. This is just a
@@ -527,8 +501,7 @@ wordSpacing
 
 ..  confval:: wordSpacing
     :name: gifbuilder-text-wordSpacing
-
-    :Data type: positive integer / :ref:`stdWrap <stdwrap>`
+    :type: positive integer / :ref:`stdWrap <stdwrap>`
     :Default: :ref:`spacing <gifbuilder-text-spacing>` * 2
 
     The pixel distance between words.

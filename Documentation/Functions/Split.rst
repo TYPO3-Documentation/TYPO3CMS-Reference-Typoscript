@@ -28,8 +28,7 @@ token
 
 ..  confval:: token
     :name: split-token
-
-    :Data type: :ref:`data-type-string` / :ref:`stdwrap`
+    :type: :ref:`data-type-string` / :ref:`stdwrap`
 
     String or character (token) used to split the value.
 
@@ -41,8 +40,7 @@ max
 
 ..  confval:: max
     :name: split-max
-
-    :Data type: :ref:`data-type-integer` / :ref:`stdwrap`
+    :type: :ref:`data-type-integer` / :ref:`stdwrap`
 
     Maximum number of splits.
 
@@ -54,8 +52,7 @@ min
 
 ..  confval:: min
     :name: split-min
-
-    :Data type: :ref:`data-type-integer` / :ref:`stdwrap`
+    :type: :ref:`data-type-integer` / :ref:`stdwrap`
 
     Minimum number of splits.
 
@@ -67,8 +64,7 @@ returnKey
 
 ..  confval:: returnKey
     :name: split-returnKey
-
-    :Data type: :ref:`data-type-integer` / :ref:`stdwrap`
+    :type: :ref:`data-type-integer` / :ref:`stdwrap`
 
     Instead of parsing the split result, return the element of the
     index with this number immediately and stop processing of the split
@@ -82,8 +78,7 @@ returnCount
 
 ..  confval:: returnCount
     :name: split-returnCount
-
-    :Data type: :ref:`data-type-boolean` / :ref:`stdwrap`
+    :type: :ref:`data-type-boolean` / :ref:`stdwrap`
 
     Counts all elements resulting from the split, returns their number
     and stops processing of the split function.
@@ -109,8 +104,7 @@ cObjNum
 
 ..  confval:: cObjNum
     :name: split-cObjNum
-
-    :Data type: *cObjNum* + :ref:`optionsplit` / :ref:`stdwrap`
+    :type: *cObjNum* + :ref:`optionsplit` / :ref:`stdwrap`
 
     This is a pointer the array of this object ("1,2,3,4"), that should
     treat the items, resulting from the split.
@@ -123,8 +117,7 @@ cObjNum
 
 ..  confval:: 1,2,3,4,...
     :name: split-cObject
-
-    :Data type: :ref:`cObject <data-type-cobject>` / :ref:`stdwrap`
+    :type: :ref:`cObject <data-type-cobject>` / :ref:`stdwrap`
 
     The object that should treat the value.
 
@@ -157,8 +150,7 @@ wrap
 
 ..  confval:: wrap
     :name: split-wrap
-
-    :Data type: wrap + :ref:`optionsplit` / :ref:`stdwrap`
+    :type: wrap + :ref:`optionsplit` / :ref:`stdwrap`
 
     Defines a wrap for each item.
 

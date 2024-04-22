@@ -35,9 +35,7 @@ extTarget
 
 ..  confval:: extTarget
     :name: typolink-extTarget
-
-    :Data type: :ref:`data-type-target` / :ref:`stdwrap`
-
+    :type: :ref:`data-type-target` / :ref:`stdwrap`
     :Default: `_top`
 
     Target used for external links
@@ -50,8 +48,7 @@ fileTarget
 
 ..  confval:: fileTarget
     :name: typolink-fileTarget
-
-    :Data type: :ref:`data-type-target` / :ref:`stdwrap`
+    :type: :ref:`data-type-target` / :ref:`stdwrap`
 
     Target used for file links
 
@@ -63,8 +60,7 @@ language
 
 ..  confval:: language
     :name: typolink-language
-
-    :Data type: :ref:`data-type-integer`
+    :type: :ref:`data-type-integer`
 
     Language uid for link target
 
@@ -91,8 +87,7 @@ target
 
 ..  confval:: target
     :name: typolink-target
-
-    :Data type: :ref:`data-type-target` / :ref:`stdwrap`
+    :type: :ref:`data-type-target` / :ref:`stdwrap`
 
     Target used for internal links
 
@@ -104,8 +99,7 @@ no\_cache
 
 ..  confval:: no_cache
     :name: typolink-no-cache
-
-    :Data type: :ref:`data-type-boolean` / :ref:`stdwrap`
+    :type: :ref:`data-type-boolean` / :ref:`stdwrap`
 
     Adds `&no_cache=1` to the link
 
@@ -117,8 +111,7 @@ additionalParams
 
 ..  confval:: additionalParams
     :name: _typolink-additionalParams
-
-    :Data type: :ref:`data-type-string` / :ref:`stdwrap`
+    :type: :ref:`data-type-string` / :ref:`stdwrap`
 
     This is parameters that are added to the end of the URL. This must be
     code ready to insert after the last parameter.
@@ -152,8 +145,7 @@ addQueryString
 
 ..  confval:: addQueryString
     :name: typolink-addQueryString
-
-    :Data type: :ref:`data-type-boolean` / :ref:`data-type-string`
+    :type: :ref:`data-type-boolean` / :ref:`data-type-string`
 
     Add the current query string to the start of the link.
 
@@ -200,8 +192,7 @@ addQueryString.exclude
 
 ..  confval:: addQueryString.exclude
     :name: typolink-addQueryString-exclude
-
-    :Data type: :ref:`data-type-string`
+    :type: :ref:`data-type-string`
 
     List of query arguments to exclude from the link. Typical examples are
     :typoscript:`L` or :typoscript:`cHash`.
@@ -228,8 +219,7 @@ wrap
 
 ..  confval:: wrap
     :name: typolink-wrap
-
-    :Data type: :ref:`data-type-wrap` / :ref:`stdwrap`
+    :type: :ref:`data-type-wrap` / :ref:`stdwrap`
 
     Wraps the links.
 
@@ -241,8 +231,7 @@ ATagBeforeWrap
 
 ..  confval:: ATagBeforeWrap
     :name: typolink-ATagBeforeWrap
-
-    :Data type: :ref:`data-type-boolean`
+    :type: :ref:`data-type-boolean`
     :Default: 0
 
     If set, the link is first wrapped with :typoscript:`wrap` and then the
@@ -256,8 +245,7 @@ parameter
 
 ..  confval:: parameter
     :name: typolink-parameter
-
-    :Data type: :ref:`data-type-string` / :ref:`stdwrap`
+    :type: :ref:`data-type-string` / :ref:`stdwrap`
 
     This is the main data that is used for creating the link. It can be
     the id of a page, the URL of some external page, an email address or
@@ -398,9 +386,7 @@ forceAbsoluteUrl
 
 ..  confval:: forceAbsoluteUrl
     :name: typolink-forceAbsoluteUrl
-
-    :Data type: :ref:`data-type-boolean`
-
+    :type: :ref:`data-type-boolean`
     :Default: :php:`false`
 
     Forces links to internal pages to be absolute, thus having a proper
@@ -420,8 +406,7 @@ forceAbsoluteUrl.scheme
 
 ..  confval:: forceAbsoluteUrl.scheme
     :name: typolink-forceAbsoluteUrl-scheme
-
-    :Data type: :ref:`data-type-string`
+    :type: :ref:`data-type-string`
 
     :Values: :php:`http` / :php:`https`
     :Default: :php:`http`
@@ -446,8 +431,7 @@ title
 
 ..  confval:: title
     :name: typolink-title
-
-    :Data type: :ref:`data-type-string` / :ref:`stdwrap`
+    :type: :ref:`data-type-string` / :ref:`stdwrap`
 
     Sets the title parameter of the A-tag.
 
@@ -459,8 +443,7 @@ JSwindow\_params
 
 ..  confval:: JSwindow_params
     :name: typolink-JSwindow-params
-
-    :Data type: :ref:`data-type-string`
+    :type: :ref:`data-type-string`
 
     Preset values for opening the window. This example lists almost all
     possible attributes:
@@ -478,8 +461,7 @@ returnLast
 
 ..  confval:: returnLast
     :name: typolink-returnLast
-
-    :Data type: :ref:`data-type-string`
+    :type: :ref:`data-type-string`
 
     If set to "url", then it will return the URL of the link
     (:php:`$this->lastTypoLinkUrl`).
@@ -511,8 +493,7 @@ section
 
 ..  confval:: section
     :name: typolink-section
-
-    :Data type: :ref:`data-type-string` / :ref:`stdwrap`
+    :type: :ref:`data-type-string` / :ref:`stdwrap`
 
     If this value is present, it's prepended with a "#" and placed after
     any internal URL to another page in TYPO3.
@@ -528,8 +509,7 @@ ATagParams
 
 ..  confval:: ATagParams
     :name: typolink-ATagParams
-
-    :Data type: <A>-params / :ref:`stdwrap`
+    :type: <A>-params / :ref:`stdwrap`
 
     Additional parameters
 
@@ -548,8 +528,7 @@ linkAccessRestrictedPages
 
 ..  confval:: linkAccessRestrictedPages
     :name: typolink-linkAccessRestrictedPages
-
-    :Data type: :ref:`data-type-boolean`
+    :type: :ref:`data-type-boolean`
 
     If set, typolinks pointing to access restricted pages will still link
     to the page even though the page cannot be accessed.
@@ -562,8 +541,7 @@ userFunc
 
 ..  confval:: userFunc
     :name: typolink-userFunc
-
-    :Data type: :ref:`data-type-function-name`
+    :type: :ref:`data-type-function-name`
 
     This passes the link-data compiled by the typolink function to a user-
     defined function for final manipulation.
@@ -649,8 +627,7 @@ page
 
 ..  confval:: page
     :name: typolink-handler-page
-
-    :Data Type: string of parameters
+    :type: string of parameters
     :Implementation: :t3src:`core/Classes/LinkHandling/PageLinkHandler.php`
     :Example:  `t3://page?uid=42&type=3`
 
@@ -663,8 +640,7 @@ page.uid
 
 ..  confval:: page.uid
     :name: typolink-handler-page-uid
-
-    :Data Type: :ref:`data-type-integer` / :ref:`data-type-string`
+    :type: :ref:`data-type-integer` / :ref:`data-type-string`
     :Example:  `t3://page?uid=13`
 
     The UID (field :sql:`uid`) of a page record, or "current" to reference
@@ -680,8 +656,7 @@ page.alias
 
 ..  confval:: page.alias
     :name: typolink-handler-page-alias
-
-    :Data Type: :ref:`data-type-string`
+    :type: :ref:`data-type-string`
     :Example: `t3://page?alias=myfunkyalias`
 
     The alias (field :sql:`alias`) of a page record (as an alternative to
@@ -694,8 +669,7 @@ page.type
 
 ..  confval:: page.type
     :name: typolink-handler-page-type
-
-    :Data Type: :ref:`data-type-integer`
+    :type: :ref:`data-type-integer`
     :Default: 0
     :Example: `t3://page?uid=13&type=3`
 
@@ -709,8 +683,7 @@ page.parameters
 
 ..  confval:: page.parameters
     :name: typolink-handler-page-parameters
-
-    :Data Type: string of parameters
+    :type: string of parameters
     :Example: `t3://page?uid=1313&my=param&will=get&added=here`
 
     String of parameters, prefixed with `&`, to be added to the URL.
@@ -722,8 +695,7 @@ page.fragment
 
 ..  confval:: page.fragment
     :name: typolink-handler-page-fragment
-
-    :Data Type: :ref:`data-type-string`
+    :type: :ref:`data-type-string`
     :Example: `t3://page?uid=13&type=3#123`
 
     The anchor or section to jump to. Must be prefixed with `#`.
@@ -737,8 +709,7 @@ file
 
 ..  confval:: file
     :name: typolink-handler-file
-
-    :Data Type: string of parameters
+    :type: string of parameters
     :Implementation: :t3src:`core/Classes/LinkHandling/FileLinkHandler.php`
     :Example:  `t3://file?uid=13`
 
@@ -751,8 +722,7 @@ file.uid
 
 ..  confval:: file.uid
     :name: typolink-handler-file-uid
-
-    :Data Type: :ref:`data-type-integer`
+    :type: :ref:`data-type-integer`
     :Example:  `t3://file?uid=13`
 
     The UID of a file within the file abstraction layer (FAL) database table
@@ -765,8 +735,7 @@ file.identifier
 
 ..  confval:: file.identifier
     :name: typolink-handler-file-identifier
-
-    :Data Type: :ref:`data-type-integer`
+    :type: :ref:`data-type-integer`
     :Example: `t3://file?identifier=fileadmin/path/myfile.jpg`
 
     The identifier of a file using combined `<storage>:<path>` reference or a direct
@@ -791,8 +760,7 @@ folder
 
 ..  confval:: folder
     :name: typolink-handler-folder
-
-    :Data Type: string of parameters
+    :type: string of parameters
     :Implementation: :t3src:`core/Classes/LinkHandling/FolderLinkHandler.php`
     :Example:  `t3://folder?storage=1&identifier=myfolder`
 
@@ -805,8 +773,7 @@ folder.identifier
 
 ..  confval:: folder.identifier
     :name: typolink-handler-folder-identifier
-
-    :Data Type: :ref:`data-type-string`
+    :type: :ref:`data-type-string`
     :Example:  `t3://folder?identifier=fileadmin`
 
     The identifier of a given folder.
@@ -818,8 +785,7 @@ folder.storage
 
 ..  confval:: folder.storage
     :name: typolink-handler-folder-storage
-
-    :Data Type: :ref:`data-type-string`
+    :type: :ref:`data-type-string`
     :Example: `t3://folder?storage=1&identifier=myfolder`
     :Default: 0
 
@@ -833,8 +799,7 @@ email
 
 ..  confval:: email
     :name: typolink-handler-email
-
-    :Data Type: string of parameters
+    :type: string of parameters
     :Implementation: :t3src:`core/Classes/LinkHandling/EmailLinkHandler.php`
     :Example:  `t3://email?email=mailto:user@example.org`
 
@@ -848,8 +813,7 @@ url
 
 ..  confval:: url
     :name: typolink-handler-url
-
-    :Data Type: string of parameters
+    :type: string of parameters
     :Implementation: :t3src:`core/Classes/LinkHandling/EmailLinkHandler.php`
     :Example:  `t3://url?url=example.org`
 
@@ -874,8 +838,7 @@ record
 
 ..  confval:: record
     :name: typolink-handler-record
-
-    :Data Type: string of parameters
+    :type: string of parameters
     :Implementation: :t3src:`core/Classes/LinkHandling/RecordLinkHandler.php`
     :Example: `t3://record?identifier=my_content&uid=123`
 
@@ -894,8 +857,7 @@ record.identifier
 
 ..  confval:: record.identifier
     :name: typolink-handler-record-identifier
-
-    :Data Type: :ref:`data-type-string`
+    :type: :ref:`data-type-string`
 
     The (individual) identifier of the link building configuration to be used.
 
@@ -910,8 +872,7 @@ record.uid
 
 ..  confval:: record.uid
     :name: typolink-handler-record-uid
-
-    :Data Type: :ref:`data-type-integer`
+    :type: :ref:`data-type-integer`
 
     The UID of the referenced record to be linked.
 
@@ -924,8 +885,7 @@ phone
 
 ..  confval:: phone
     :name: typolink-handler-phone
-
-    :Data Type: string of parameters
+    :type: string of parameters
     :Implementation: :t3src:`core/Classes/LinkHandling/TelephoneLinkHandler.php`
     :Example:  `t3://phone?phone=tel:+4912345678`
 

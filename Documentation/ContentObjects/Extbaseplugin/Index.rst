@@ -27,8 +27,7 @@ extensionName
 
 ..  confval:: extensionName
     :name: extbaseplugin-extensionName
-
-    :Data type: :ref:`data-type-string`
+    :type: :ref:`data-type-string`
 
     The :ref:`extension name <t3coreapi:extension-naming-extensionName>`.
 
@@ -40,8 +39,7 @@ pluginName
 
 ..  confval:: pluginName
     :name: extbaseplugin-pluginName
-
-    :Data type: :ref:`data-type-string`
+    :type: :ref:`data-type-string`
 
     The plugin name.
 

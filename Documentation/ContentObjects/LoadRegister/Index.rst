@@ -36,8 +36,7 @@ Properties
 
 ..  confval:: array of field names
     :name: load-register-array
-
-    :Data type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
+    :type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
 
     **Example:**
 

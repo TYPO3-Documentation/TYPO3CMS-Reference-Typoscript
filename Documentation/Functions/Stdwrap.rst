@@ -71,8 +71,7 @@ setContentToCurrent
 
 ..  confval:: setContentToCurrent
     :name: stdwrap-setContentToCurrent
-
-    :Data type: :ref:`data-type-boolean` / :ref:`stdWrap`
+    :type: :ref:`data-type-boolean` / :ref:`stdWrap`
 
     Sets the current value to the incoming content of the function.
 
@@ -83,8 +82,7 @@ addPageCacheTags
 
 ..  confval:: addPageCacheTags
     :name: stdwrap-addpagecachetags
-
-    :Data type: :ref:`data-type-string` / :ref:`stdWrap`
+    :type: :ref:`data-type-string` / :ref:`stdWrap`
 
     Comma-separated list of cache tags, which should be added to the page
     cache.
@@ -114,8 +112,7 @@ setCurrent
 
 ..  confval:: setCurrent
     :name: stdwrap-setCurrent
-
-    :Data type: :ref:`data-type-string` / :ref:`stdWrap`
+    :type: :ref:`data-type-string` / :ref:`stdWrap`
 
     Sets the "current"-value. This is normally set from some outside
     routine, so be careful with this. But it might be handy to do this
@@ -128,8 +125,7 @@ lang
 
 ..  confval:: lang
     :name: stdwrap-lang
-
-    :Data type: Array of language keys / :ref:`stdWrap`
+    :type: Array of language keys / :ref:`stdWrap`
 
     This is used to define optional language specific values based on the
     :ref:`current site language <t3coreapi:sitehandling-addingLanguages>`.
@@ -153,8 +149,7 @@ data
 
 ..  confval:: data
     :name: stdwrap-data
-
-    :Data type: :ref:`data-type-gettext` / :ref:`stdWrap`
+    :type: :ref:`data-type-gettext` / :ref:`stdWrap`
 
 
 ..  _stdwrap-field:
@@ -164,8 +159,7 @@ field
 
 ..  confval:: field
     :name: stdwrap-field
-
-    :Data type: Field name / :ref:`stdWrap`
+    :type: Field name / :ref:`stdWrap`
 
     Sets the content to the value of the according field
     (which comes from :php:`$cObj->data[*field*]`).
@@ -203,8 +197,7 @@ current
 
 ..  confval:: current
     :name: stdwrap-current
-
-    :Data type: :ref:`data-type-boolean` / :ref:`stdWrap`
+    :type: :ref:`data-type-boolean` / :ref:`stdWrap`
 
     Sets the content to the "current" value (see :ref:`->split <split>`)
 
@@ -216,8 +209,7 @@ cObject
 
 ..  confval:: cObject
     :name: stdwrap-cObject
-
-    :Data type: :ref:`data-type-cobject`
+    :type: :ref:`data-type-cobject`
 
     Loads content from a content object.
 
@@ -229,8 +221,7 @@ numRows
 
 ..  confval:: numRows
     :name: stdwrap-numRows
-
-    :Data type: :ref:`->numRows <numrows>` / :ref:`stdWrap`
+    :type: :ref:`->numRows <numrows>` / :ref:`stdWrap`
 
     Returns the number of rows resulting from the supplied :sql:`SELECT` query.
 
@@ -242,8 +233,7 @@ preUserFunc
 
 ..  confval:: preUserFunc
     :name: stdwrap-preUserFunc
-
-    :Data type: :ref:`data-type-function-name`
+    :type: :ref:`data-type-function-name`
 
     Calls the provided PHP function. If you specify the name with a '->'
     in it, then it is interpreted as a call to a method in a class.
@@ -269,8 +259,7 @@ override
 
 ..  confval:: override
     :name: stdwrap-override
-
-    :Data type: :ref:`data-type-string` / :ref:`stdWrap`
+    :type: :ref:`data-type-string` / :ref:`stdWrap`
 
     If `override` returns something else than "" or zero (trimmed), the
     content is loaded with this!
@@ -283,8 +272,7 @@ preIfEmptyListNum
 
 ..  confval:: preIfEmptyListNum
     :name: stdwrap-preIfEmptyListNum
-
-    :Data type: (as ":ref:`stdwrap-listNum`" below)
+    :type: (as ":ref:`stdwrap-listNum`" below)
 
 
 ..  _stdwrap-ifNull:
@@ -294,8 +282,7 @@ ifNull
 
 ..  confval:: ifNull
     :name: stdwrap-ifNull
-
-    :Data type: :ref:`data-type-string` / :ref:`stdWrap`
+    :type: :ref:`data-type-string` / :ref:`stdWrap`
 
     If the content is null (:php:`NULL` type in PHP), the content is overridden
     with the value defined here.
@@ -324,8 +311,7 @@ ifEmpty
 
 ..  confval:: ifEmpty
     :name: stdwrap-ifEmpty
-
-    :Data type: :ref:`data-type-string` / :ref:`stdWrap`
+    :type: :ref:`data-type-string` / :ref:`stdWrap`
 
     If the trimmed content is empty at this point, the content is loaded
     with :typoscript:`ifEmpty`. Zeros are treated as empty values!
@@ -338,8 +324,7 @@ ifBlank
 
 ..  confval:: ifBlank
     :name: stdwrap-ifBlank
-
-    :Data type: :ref:`data-type-string` / :ref:`stdWrap`
+    :type: :ref:`data-type-string` / :ref:`stdWrap`
 
     Same as :typoscript:`ifEmpty` but the check is done against ''. Zeros are not
     treated as blank values!
@@ -352,8 +337,7 @@ listNum
 
 ..  confval:: listNum
     :name: stdwrap-listNum
-
-    :Data type: :ref:`data-type-string` / :ref:`stdWrap`
+    :type: :ref:`data-type-string` / :ref:`stdWrap`
 
     Explodes the current content :ref:`stdwrap-listNum-splitChar`
     (Default: `,`) and returns the object specified by `listNum`.
@@ -404,8 +388,7 @@ listNum.splitChar
 
 ..  confval:: listNum.splitChar
     :name: stdwrap-listNum-splitChar
-
-    :Data type: :ref:`data-type-string`
+    :type: :ref:`data-type-string`
     :Default: `,` (comma)
 
     .. rubric:: Examples
@@ -434,8 +417,7 @@ trim
 
 ..  confval:: trim
     :name: stdwrap-trim
-
-    :Data type: :ref:`data-type-boolean` / :ref:`stdWrap`
+    :type: :ref:`data-type-boolean` / :ref:`stdWrap`
 
     If set, the PHP-function :php:`trim()` will be used to remove whitespaces
     around the value.
@@ -448,8 +430,7 @@ strPad
 
 ..  confval:: strPad
     :name: stdwrap-strPad
-
-    :Data type: :ref:`strPad`
+    :type: :ref:`strPad`
 
     Pads the current content to a certain length. You can define the padding
     characters and the side(s), on which the padding should be added.
@@ -462,8 +443,7 @@ stdWrap
 
 ..  confval:: stdWrap
     :name: stdwrap-stdWrap
-
-    :Data type: :ref:`stdWrap`
+    :type: :ref:`stdWrap`
 
     Recursive call to the :typoscript:`stdWrap` function.
 
@@ -475,8 +455,7 @@ required
 
 ..  confval:: required
     :name: stdwrap-required
-
-    :Data type: :ref:`data-type-boolean` / :ref:`stdWrap`
+    :type: :ref:`data-type-boolean` / :ref:`stdWrap`
 
     This flag requires the content to be set to some value after any
     content-import and treatment that might have happened until now
@@ -493,8 +472,7 @@ if
 
 ..  confval:: if
     :name: stdwrap-if
-
-    :Data type: :ref:`if`
+    :type: :ref:`if`
 
     If the if-object returns false, stdWrap returns "" immediately.
 
@@ -506,8 +484,7 @@ fieldRequired
 
 ..  confval:: fieldRequired
     :name: stdwrap-fieldRequired
-
-    :Data type: Field name / :ref:`stdWrap`
+    :type: Field name / :ref:`stdWrap`
 
     The value in this field **must** be set.
 
@@ -523,8 +500,7 @@ csConv
 
 ..  confval:: csConv
     :name: stdwrap-csConv
-
-    :Data type: :ref:`data-type-string` / :ref:`stdWrap`
+    :type: :ref:`data-type-string` / :ref:`stdWrap`
 
     Convert the charset of the string from the charset given as value to
     the current rendering charset of the frontend (UTF-8).
@@ -537,8 +513,7 @@ parseFunc
 
 ..  confval:: parseFunc
     :name: stdwrap-parseFunc
-
-    :Data type: object path reference / :ref:`parsefunc` / :ref:`stdWrap`
+    :type: object path reference / :ref:`parsefunc` / :ref:`stdWrap`
 
     Processing instructions for the content.
 
@@ -619,8 +594,7 @@ HTMLparser
 
 ..  confval:: HTMLparser
     :name: stdwrap-htmlparser
-
-    :Data type: :ref:`data-type-boolean` / :ref:`htmlparser` / :ref:`stdWrap`
+    :type: :ref:`data-type-boolean` / :ref:`htmlparser` / :ref:`stdWrap`
 
     This object allows you to parse the HTML-content and perform all kinds of
     advanced filtering on the content.
@@ -637,8 +611,7 @@ split
 
 ..  confval:: split
     :name: stdwrap-split
-
-    :Data type: :ref:`split` / :ref:`stdWrap`
+    :type: :ref:`split` / :ref:`stdWrap`
 
 
 ..  _stdwrap-replacement:
@@ -648,8 +621,7 @@ replacement
 
 ..  confval:: replacement
     :name: stdwrap-replacement
-
-    :Data type: :ref:`replacement` / :ref:`stdWrap`
+    :type: :ref:`replacement` / :ref:`stdWrap`
 
     Performs an ordered search/replace on the current content with the
     possibility of using PCRE regular expressions. An array with numeric
@@ -664,8 +636,7 @@ prioriCalc
 
 ..  confval:: prioriCalc
     :name: stdwrap-prioriCalc
-
-    :Data type: :ref:`data-type-boolean` / :ref:`stdWrap`
+    :type: :ref:`data-type-boolean` / :ref:`stdWrap`
 
     Calculation of the value using operators -+\*/%^ plus respects
     priority to + and - operators and parenthesis levels ().
@@ -702,8 +673,7 @@ char
 
 ..  confval:: char
     :name: stdwrap-char
-
-    :Data type: :ref:`data-type-integer` / :ref:`stdWrap`
+    :type: :ref:`data-type-integer` / :ref:`stdWrap`
 
     Content is set to :php:`chr(*value*)`. This returns a one-character
     string containing the character specified by ascii code. Reliable
@@ -723,8 +693,7 @@ intval
 
 ..  confval:: intval
     :name: stdwrap-intval
-
-    :Data type: :ref:`data-type-boolean` / :ref:`stdWrap`
+    :type: :ref:`data-type-boolean` / :ref:`stdWrap`
 
     PHP function :php:`intval()` returns an integer:
 
@@ -740,8 +709,7 @@ hash
 
 ..  confval:: hash
     :name: stdwrap-hash
-
-    :Data type: :ref:`data-type-string` / :ref:`stdWrap`
+    :type: :ref:`data-type-string` / :ref:`stdWrap`
 
     Returns a hashed value of the current content. Set to one of the
     algorithms which are available in PHP. For a list of supported
@@ -766,8 +734,7 @@ round
 
 ..  confval:: round
     :name: stdwrap-round
-
-    :Data type: :ref:`round` / :ref:`stdWrap`
+    :type: :ref:`round` / :ref:`stdWrap`
 
     Round the value with the selected method to the given number of
     decimals.
@@ -780,8 +747,7 @@ numberFormat
 
 ..  confval:: numberFormat
     :name: stdwrap-numberFormat
-
-    :Data type: :ref:`numberformat`
+    :type: :ref:`numberformat`
 
     Format a float value to any number format you need (e.g. useful for
     prices).
@@ -794,8 +760,7 @@ date
 
 ..  confval:: date
     :name: stdwrap-date
-
-    :Data type: :ref:`data-type-date-conf` / :ref:`stdWrap`
+    :type: :ref:`data-type-date-conf` / :ref:`stdWrap`
 
     The content should be data-type "UNIX-time". Returns the content
     formatted as a date. See the PHP manual (`datetime.format <https://www.php.net/manual/en/datetime.createfromformat.php>`_)
@@ -837,8 +802,7 @@ strtotime
 
 ..  confval:: strtotime
     :name: stdwrap-strtotime
-
-    :Data type: :ref:`data-type-string`
+    :type: :ref:`data-type-string`
 
     Allows conversion of formatted dates to timestamp, e.g. to perform date calculations.
 
@@ -873,8 +837,7 @@ strftime
 
 ..  confval:: strftime
     :name: stdwrap-strftime
-
-    :Data type: :ref:`data-type-strftime-conf` / :ref:`stdWrap`
+    :type: :ref:`data-type-strftime-conf` / :ref:`stdWrap`
 
     Very similar to "date", but using a different format. See the PHP manual (`strftime <https://www.php.net/strftime>`_) for the
     format codes.
@@ -908,8 +871,7 @@ formattedDate
 
 ..  confval:: formattedDate
     :name: stdwrap-formattedDate
-
-    :Data type: :ref:`data-type-string`
+    :type: :ref:`data-type-string`
 
     The function renders date and time based on formats/patterns defined by
     the International Components for Unicode standard (ICU). ICU-based date and
@@ -987,8 +949,7 @@ age
 
 ..  confval:: age
     :name: stdwrap-age
-
-    :Data type: :ref:`data-type-boolean` or :ref:`data-type-string` / :ref:`stdWrap`
+    :type: :ref:`data-type-boolean` or :ref:`data-type-string` / :ref:`stdWrap`
 
     If enabled with a "1" (number, integer) the content is seen as a date
     (UNIX-time) and the difference from present time and the content-time
@@ -1029,8 +990,7 @@ case
 
 ..  confval:: case
     :name: stdwrap-case
-
-    :Data type: :ref:`data-type-case` / :ref:`stdWrap`
+    :type: :ref:`data-type-case` / :ref:`stdWrap`
 
     Converts case
 
@@ -1044,9 +1004,7 @@ bytes
 
 ..  confval:: bytes
     :name: stdwrap-bytes
-
-    :Data type: :ref:`data-type-boolean` / :ref:`stdWrap`
-
+    :type: :ref:`data-type-boolean` / :ref:`stdWrap`
     :Default: iec, 1024
 
     This is for number values. When the 'bytes' property is added and set
@@ -1213,8 +1171,7 @@ substring
 
 ..  confval:: substring
     :name: stdwrap-substring
-
-    :Data type: [p1], [p2] / :ref:`stdWrap`
+    :type: [p1], [p2] / :ref:`stdWrap`
 
     Returns the substring with [p1] and [p2] sent as the 2nd and 3rd
     parameter to the PHP `mb_substr <https://www.php.net/mb_substr>`__ function.
@@ -1229,8 +1186,7 @@ cropHTML
 
 ..  confval:: cropHTML
     :name: stdwrap-cropHTML
-
-    :Data type: :ref:`data-type-string` / :ref:`stdWrap`
+    :type: :ref:`data-type-string` / :ref:`stdWrap`
 
     Crops the content to a certain length. In contrast to :typoscript:`stdWrap.crop` it
     respects HTML tags. It does not crop inside tags and closes open tags.
@@ -1248,8 +1204,7 @@ stripHtml
 
 ..  confval:: stripHtml
     :name: stdwrap-stripHtml
-
-    :Data type: :ref:`data-type-boolean` / :ref:`stdWrap`
+    :type: :ref:`data-type-boolean` / :ref:`stdWrap`
 
     Strips all HTML tags.
 
@@ -1261,8 +1216,7 @@ crop
 
 ..  confval:: crop
     :name: stdwrap-crop
-
-    :Data type: :ref:`data-type-string` / :ref:`stdWrap`
+    :type: :ref:`data-type-string` / :ref:`stdWrap`
 
     Crops the content to a certain length.
 
@@ -1308,8 +1262,7 @@ rawUrlEncode
 
 ..  confval:: rawUrlEncode
     :name: stdwrap-rawUrlEncode
-
-    :Data type: :ref:`data-type-boolean` / :ref:`stdWrap`
+    :type: :ref:`data-type-boolean` / :ref:`stdWrap`
 
     Passes the content through the PHP function `rawurlencode() <https://www.php.net/rawurlencode>`_.
 
@@ -1321,8 +1274,7 @@ htmlSpecialChars
 
 ..  confval:: htmlSpecialChars
     :name: stdwrap-htmlSpecialChars
-
-    :Data type: :ref:`data-type-boolean` / :ref:`stdWrap`
+    :type: :ref:`data-type-boolean` / :ref:`stdWrap`
 
     Passes the content through the PHP function `htmlspecialchars() <https://www.php.net/htmlspecialchars>`_.
 
@@ -1337,8 +1289,7 @@ encodeForJavaScriptValue
 
 ..  confval:: encodeForJavaScriptValue
     :name: stdwrap-encodeForJavaScriptValue
-
-    :Data type: :ref:`data-type-boolean` / :ref:`stdWrap`
+    :type: :ref:`data-type-boolean` / :ref:`stdWrap`
 
     Encodes content to be used safely inside strings in JavaScript.
     Characters, which can cause problems inside JavaScript strings, are
@@ -1368,8 +1319,7 @@ doubleBrTag
 
 ..  confval:: doubleBrTag
     :name: stdwrap-doubleBrTag
-
-    :Data type: :ref:`data-type-string` / :ref:`stdWrap`
+    :type: :ref:`data-type-string` / :ref:`stdWrap`
 
     All double line breaks are substituted with this value.
 
@@ -1381,8 +1331,7 @@ br
 
 ..  confval:: br
     :name: stdwrap-br
-
-    :Data type: :ref:`data-type-boolean` / :ref:`stdWrap`
+    :type: :ref:`data-type-boolean` / :ref:`stdWrap`
 
     Pass the value through the PHP function `nl2br() <https://www.php.net/nl2br>`__. This
     converts each line break to a :html:`<br />` or a :html:`<br>` tag depending on doctype.
@@ -1395,8 +1344,7 @@ brTag
 
 ..  confval:: brTag
     :name: stdwrap-brTag
-
-    :Data type: :ref:`data-type-string` / :ref:`stdWrap`
+    :type: :ref:`data-type-string` / :ref:`stdWrap`
 
     All ASCII codes of "10" (line feed, LF) are substituted with the
     *value*, which has been provided in this property.
@@ -1409,8 +1357,7 @@ encapsLines
 
 ..  confval:: encapsLines
     :name: stdwrap-encapsLines
-
-    :Data type: :ref:`encapslines` / :ref:`stdWrap`
+    :type: :ref:`encapslines` / :ref:`stdWrap`
 
     Lets you split the content by :php:`chr(10)` and process each line
     independently. Used to format content made with the RTE.
@@ -1423,8 +1370,7 @@ keywords
 
 ..  confval:: keywords
     :name: stdwrap-keywords
-
-    :Data type: :ref:`data-type-boolean` / :ref:`stdWrap`
+    :type: :ref:`data-type-boolean` / :ref:`stdWrap`
 
     Splits the content by characters "," ";" and php:`chr(10)` (return), trims
     each value and returns a comma-separated list of the values.
@@ -1437,8 +1383,7 @@ innerWrap
 
 ..  confval:: innerWrap
     :name: stdwrap-innerWrap
-
-    :Data type: :ref:`wrap <data-type-wrap>` / :ref:`stdWrap`
+    :type: :ref:`wrap <data-type-wrap>` / :ref:`stdWrap`
 
     Wraps the content.
 
@@ -1450,8 +1395,7 @@ innerWrap2
 
 ..  confval:: innerWrap2
     :name: stdwrap-innerWrap2
-
-    :Data type: :ref:`wrap <data-type-wrap>` / :ref:`stdWrap`
+    :type: :ref:`wrap <data-type-wrap>` / :ref:`stdWrap`
 
     Same as :typoscript:`innerWrap` (but watch the order in which they are executed).
 
@@ -1463,8 +1407,7 @@ preCObject
 
 ..  confval:: preCObject
     :name: stdwrap-preCObject
-
-    :Data type: :ref:`data-type-cobject`
+    :type: :ref:`data-type-cobject`
 
     :ref:`stdwrap-cObject` prepended the content.
 
@@ -1476,8 +1419,7 @@ postCObject
 
 ..  confval:: postCObject
     :name: stdwrap-postCObject
-
-    :Data type: :ref:`data-type-cobject`
+    :type: :ref:`data-type-cobject`
 
     :ref:`stdwrap-cObject` appended the content.
 
@@ -1489,8 +1431,7 @@ wrapAlign
 
 ..  confval:: wrapAlign
     :name: stdwrap-wrapAlign
-
-    :Data type: :ref:`data-type-align` / :ref:`stdWrap`
+    :type: :ref:`data-type-align` / :ref:`stdWrap`
 
     Wraps content with :typoscript:`<div style=text-align:[*value*];"> | </div>`
     *if* align is set.
@@ -1503,8 +1444,7 @@ typolink
 
 ..  confval:: typolink
     :name: stdwrap-typolink
-
-    :Data type: :ref:`typolink` / :ref:`stdWrap`
+    :type: :ref:`typolink` / :ref:`stdWrap`
 
     Wraps the content with a link tag.
 
@@ -1516,8 +1456,7 @@ wrap
 
 ..  confval:: wrap
     :name: stdwrap-wrap
-
-    :Data type: :ref:`wrap <data-type-wrap>` /+.splitChar / :ref:`stdWrap`
+    :type: :ref:`wrap <data-type-wrap>` /+.splitChar / :ref:`stdWrap`
 
     :typoscript:`splitChar` defines an alternative splitting character (default is "\|"
     - the vertical line)
@@ -1529,8 +1468,7 @@ noTrimWrap
 
 ..  confval:: noTrimWrap
     :name: stdwrap-noTrimWrap
-
-    :Data type: "special" wrap /+.splitChar / :ref:`stdWrap`
+    :type: "special" wrap /+.splitChar / :ref:`stdWrap`
 
     This wraps the content *without* trimming the values. That means that
     surrounding whitespaces stay included! Note that this kind of wrap
@@ -1577,8 +1515,7 @@ wrap2
 
 ..  confval:: wrap2
     :name: stdwrap-wrap2
-
-    :Data type: :ref:`wrap <data-type-wrap>` /+.splitChar / :ref:`stdWrap`
+    :type: :ref:`wrap <data-type-wrap>` /+.splitChar / :ref:`stdWrap`
 
     same as :ref:`stdwrap-wrap` (but watch the order in which they are executed)
 
@@ -1590,8 +1527,7 @@ dataWrap
 
 ..  confval:: dataWrap
     :name: stdwrap-dataWrap
-
-    :Data type: mixed / :ref:`stdWrap`
+    :type: mixed / :ref:`stdWrap`
 
     The content is parsed for pairs of curly braces. The content of the
     curly braces is of the type :ref:`data-type-gettext` and is substituted with the result
@@ -1615,8 +1551,7 @@ prepend
 
 ..  confval:: prepend
     :name: stdwrap-prepend
-
-    :Data type: :ref:`data-type-cobject`
+    :type: :ref:`data-type-cobject`
 
     :ref:`stdwrap-cObject` prepended to content (before)
 
@@ -1628,8 +1563,7 @@ append
 
 ..  confval:: append
     :name: stdwrap-append
-
-    :Data type: :ref:`data-type-cobject`
+    :type: :ref:`data-type-cobject`
 
     :ref:`stdwrap-cObject` appended to content (after)
 
@@ -1641,8 +1575,7 @@ wrap3
 
 ..  confval:: wrap3
     :name: stdwrap-wrap3
-
-    :Data type: :ref:`wrap <data-type-wrap>` /+.splitChar / :ref:`stdWrap`
+    :type: :ref:`wrap <data-type-wrap>` /+.splitChar / :ref:`stdWrap`
 
     same as :typoscript:`wrap` (but watch the order in which they are executed)
 
@@ -1654,8 +1587,7 @@ orderedStdWrap
 
 ..  confval:: orderedStdWrap
     :name: stdwrap-orderedStdWrap
-
-    :Data type: Array of numeric keys with / :ref:`stdWrap` each
+    :type: Array of numeric keys with / :ref:`stdWrap` each
 
     Execute multiple :typoscript:`stdWrap` statements in a freely selectable order. The order
     is determined by the numeric order of the keys. This allows to use multiple
@@ -1694,8 +1626,7 @@ outerWrap
 
 ..  confval:: outerWrap
     :name: stdwrap-outerWrap
-
-    :Data type: :ref:`wrap <data-type-wrap>` / :ref:`stdWrap`
+    :type: :ref:`wrap <data-type-wrap>` / :ref:`stdWrap`
 
     Wraps the complete content
 
@@ -1707,8 +1638,7 @@ insertData
 
 ..  confval:: insertData
     :name: stdwrap-insertData
-
-    :Data type: :ref:`data-type-boolean` / :ref:`stdWrap`
+    :type: :ref:`data-type-boolean` / :ref:`stdWrap`
 
     If set, then the content string is parsed like :typoscript:`dataWrap` above.
 
@@ -1741,8 +1671,7 @@ postUserFunc
 
 ..  confval:: postUserFunc
     :name: stdwrap-postUserFunc
-
-    :Data type: :ref:`data-type-function-name`
+    :type: :ref:`data-type-function-name`
 
     Calls the provided PHP function. If you specify the name with a '->'
     in it, then it is interpreted as a call to a method in a class.
@@ -1849,8 +1778,7 @@ postUserFuncInt
 
 ..  confval:: postUserFuncInt
     :name: stdwrap-postUserFuncInt
-
-    :Data type: :ref:`data-type-function-name`
+    :type: :ref:`data-type-function-name`
 
     Calls the provided PHP function. If you specify the name with a '->'
     in it, then it is interpreted as a call to a method in a class.
@@ -1874,8 +1802,7 @@ prefixComment
 
 ..  confval:: prefixComment
     :name: stdwrap-prefixComment
-
-    :Data type: :ref:`data-type-string` / :ref:`stdWrap`
+    :type: :ref:`data-type-string` / :ref:`stdWrap`
 
     Prefixes content with an HTML comment with the second part of input
     string (divided by "\|") where first part is an integer telling how
@@ -1900,8 +1827,7 @@ htmlSanitize
 
 ..  confval:: htmlSanitize
     :name: stdwrap-htmlSanitize
-
-    :Data type: :ref:`data-type-boolean` / array with key "build"
+    :type: :ref:`data-type-boolean` / array with key "build"
 
     The property controls the sanitization and removal of XSS from markup. It
     strips tags, attributes and values that are not explicitly allowed.
@@ -1956,8 +1882,7 @@ cache
 
 ..  confval:: cache
     :name: stdwrap-cache
-
-    :Data type: :ref:`cache`
+    :type: :ref:`cache`
 
     Caches rendered content in the caching framework.
 
@@ -1969,8 +1894,7 @@ debug
 
 ..  confval:: debug
     :name: stdwrap-debug
-
-    :Data type: :ref:`data-type-boolean` / :ref:`stdWrap`
+    :type: :ref:`data-type-boolean` / :ref:`stdWrap`
 
     Prints content with :php:`HTMLSpecialChars()` and :html:`<pre></pre>`:
     Useful for debugging which value :typoscript:`stdWrap` actually ends up with,
@@ -1988,8 +1912,7 @@ debugFunc
 
 ..  confval:: debugFunc
     :name: stdwrap-debugFunc
-
-    :Data type: :ref:`data-type-boolean` / :ref:`stdWrap`
+    :type: :ref:`data-type-boolean` / :ref:`stdWrap`
 
     Prints the content directly to browser with the :php:`debug()` function.
 
@@ -2007,8 +1930,7 @@ debugData
 
 ..  confval:: debugData
     :name: stdwrap-debugData
-
-    :Data type: :ref:`data-type-boolean` / :ref:`stdWrap`
+    :type: :ref:`data-type-boolean` / :ref:`stdWrap`
 
     Prints the current data-array, :php:`$cObj->data`, directly to browser. This
     is where :typoscript:`field` gets data from.
