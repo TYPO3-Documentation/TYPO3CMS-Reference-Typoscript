@@ -73,6 +73,18 @@ Properties
    :depth: 1
 
 .. index:: FLUIDTEMPLATE; dataProcessing
+
+..  _cobj-_fluidtemplate-cache:
+
+cache
+-----
+
+..  confval:: cache
+    :name: _fluidtemplate-cache
+    :type: :ref:`cache <cache>`
+
+    See :ref:`cache function description <cache>` for details.
+
 .. _fluidtemplate-dataProcessing:
 
 dataProcessing
