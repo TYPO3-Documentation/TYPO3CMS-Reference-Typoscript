@@ -19,6 +19,18 @@ A content object of type FILES uses the :ref:`File Abstraction Layer <t3coreapi:
 Properties
 ==========
 
+..  _cobj-files-cache:
+
+cache
+-----
+
+..  confval:: cache
+    :name: files-cache
+    :type: :ref:`cache <cache>`
+
+    See :ref:`cache function description <cache>` for details.
+
+
 .. _cobj-files-files:
 
 files

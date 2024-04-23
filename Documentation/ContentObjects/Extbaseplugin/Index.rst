@@ -20,6 +20,18 @@ The content object :typoscript:`EXTBASEPLUGIN` allows to render
 Properties
 ==========
 
+..  _cobj-extbaseplugin-cache:
+
+cache
+-----
+
+..  confval:: cache
+    :name: extbaseplugin-cache
+    :type: :ref:`cache <cache>`
+
+    See :ref:`cache function description <cache>` for details.
+
+
 ..  _cobj-extbaseplugin-extensionName:
 
 extensionName
