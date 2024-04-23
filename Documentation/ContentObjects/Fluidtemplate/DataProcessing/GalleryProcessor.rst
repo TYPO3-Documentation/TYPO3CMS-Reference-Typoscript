@@ -22,10 +22,9 @@ if
 
 ..  confval:: if
     :name: GalleryProcessor-if
-
     :Required: false
-    :Data type: :ref:`if` condition
-    :default: ''
+    :type: :ref:`if` condition
+    :Default: ''
 
     Only if the condition is met the data processor is executed.
 
@@ -37,10 +36,9 @@ filesProcessedDataKey
 
 ..  confval:: filesProcessedDataKey
     :name: GalleryProcessor-filesProcessedDataKey
-
     :Required: true
-    :Data type: :ref:`data-type-string` / :ref:`stdWrap`
-    :default: 'files'
+    :type: :ref:`data-type-string` / :ref:`stdWrap`
+    :Default: 'files'
     :Example: 'myImages'
 
     Key of the array previously processed by the :php:`FilesProcessor`.
@@ -53,10 +51,9 @@ numberOfColumns
 
 ..  confval:: numberOfColumns
     :name: GalleryProcessor-numberOfColumns
-
     :Required: false
-    :Data type: :ref:`data-type-integer` / :ref:`stdWrap`
-    :default: field:imagecols
+    :type: :ref:`data-type-integer` / :ref:`stdWrap`
+    :Default: field:imagecols
     :Example: 4
 
     Expects the desired number of columns. Defaults to the value of the field
@@ -70,10 +67,9 @@ mediaOrientation
 
 ..  confval:: mediaOrientation
     :name: GalleryProcessor-mediaOrientation
-
     :Required: false
-    :Data type: :ref:`data-type-integer` / :ref:`stdWrap`
-    :default: field:imageorient
+    :type: :ref:`data-type-integer` / :ref:`stdWrap`
+    :Default: field:imageorient
     :Example: 2
 
     Expects the image orientation as used in the field `imageorient` in content
@@ -91,10 +87,9 @@ maxGalleryWidth
 
 ..  confval:: maxGalleryWidth
     :name: GalleryProcessor-maxGalleryWidth
-
     :Required: false
-    :Data type: :ref:`data-type-integer` / :ref:`stdWrap`
-    :default: 600
+    :type: :ref:`data-type-integer` / :ref:`stdWrap`
+    :Default: 600
 
     Maximal gallery width in pixels.
 
@@ -106,10 +101,9 @@ maxGalleryWidthInText
 
 ..  confval:: maxGalleryWidthInText
     :name: GalleryProcessor-maxGalleryWidthInText
-
     :Required: false
-    :Data type: :ref:`data-type-integer` / :ref:`stdWrap`
-    :default: 300
+    :type: :ref:`data-type-integer` / :ref:`stdWrap`
+    :Default: 300
 
     Maximal gallery width in pixels if displayed in a text.
 
@@ -121,10 +115,9 @@ equalMediaHeight, equalMediaWidth
 
 ..  confval:: equalMediaHeight, equalMediaWidth
     :name: GalleryProcessor-equalMediaHeight
-
     :Required: false
-    :Data type: :ref:`data-type-integer` / :ref:`stdWrap`
-    :default: field:imageheight, field:imagewidth
+    :type: :ref:`data-type-integer` / :ref:`stdWrap`
+    :Default: field:imageheight, field:imagewidth
     :Example: 300
 
     If set all images get scaled to a uniform height / width. Defaults
@@ -142,10 +135,9 @@ columnSpacing
 
 ..  confval:: columnSpacing
     :name: GalleryProcessor-columnSpacing
-
     :Required: false
-    :Data type: :ref:`data-type-integer` / :ref:`stdWrap`
-    :default: 0
+    :type: :ref:`data-type-integer` / :ref:`stdWrap`
+    :Default: 0
     :Example: 4
 
     Space between columns in pixels
@@ -158,10 +150,9 @@ borderEnabled
 
 ..  confval:: borderEnabled
     :name: GalleryProcessor-borderEnabled
-
     :Required: false
-    :Data type: :ref:`data-type-integer` / :ref:`stdWrap`
-    :default: field:imageborder
+    :type: :ref:`data-type-integer` / :ref:`stdWrap`
+    :Default: field:imageborder
     :Example: 1
 
     Should there be a border around the images? Defaults to the value of the
@@ -175,10 +166,9 @@ borderWidth
 
 ..  confval:: borderWidth
     :name: GalleryProcessor-borderWidth
-
     :Required: false
-    :Data type: :ref:`data-type-integer` / :ref:`stdWrap`
-    :default: 0
+    :type: :ref:`data-type-integer` / :ref:`stdWrap`
+    :Default: 0
     :Example: 2
 
     Width of the border in pixels.
@@ -191,10 +181,9 @@ borderPadding
 
 ..  confval:: borderPadding
     :name: GalleryProcessor-borderPadding
-
     :Required: false
-    :Data type: :ref:`data-type-integer` / :ref:`stdWrap`
-    :default: 0
+    :type: :ref:`data-type-integer` / :ref:`stdWrap`
+    :Default: 0
     :Example: 20
 
     Padding around the border in pixels.
@@ -207,10 +196,9 @@ cropVariant
 
 ..  confval:: cropVariant
     :name: GalleryProcessor-cropVariant
-
     :Required: false
-    :Data type: :ref:`data-type-string` / :ref:`stdWrap`
-    :default: "default"
+    :type: :ref:`data-type-string` / :ref:`stdWrap`
+    :Default: "default"
     :Example: "mobile"
 
     See :ref:`crop variants in the TCA reference <t3tca:columns-imageManipulation-properties-cropVariants>`
@@ -223,10 +211,9 @@ as
 
 ..  confval:: as
     :name: GalleryProcessor-as
-
     :Required: false
-    :Data type: :ref:`data-type-string` / :ref:`stdWrap`
-    :default: "files"
+    :type: :ref:`data-type-string` / :ref:`stdWrap`
+    :Default: "files"
 
     The variable name to be used in the Fluid template.
 
@@ -238,10 +225,9 @@ dataProcessing
 
 ..  confval:: dataProcessing
     :name: GalleryProcessor-dataProcessing
-
     :Required: false
-    :Data type: array of :ref:`dataProcessing`
-    :default: []
+    :type: array of :ref:`dataProcessing`
+    :Default: []
 
     Array of data processors to be applied to all fetched records.
 

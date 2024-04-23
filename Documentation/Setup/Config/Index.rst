@@ -52,8 +52,7 @@ absRefPrefix
 
 ..  confval:: absRefPrefix
     :name: setup-config-absrefprefix
-
-    :Data type: :ref:`data-type-string`
+    :type: :ref:`data-type-string`
     :Special value: "auto"
 
     If set, the string is prepended to all relative links that TYPO3 generates.
@@ -104,8 +103,7 @@ additionalHeaders
 
 ..  confval:: additionalHeaders
     :name: setup-config-additionalheaders
-
-    :Data type: numerically indexed array of "HTTP header entries".
+    :type: numerically indexed array of "HTTP header entries".
 
     By means of :typoscript:`config.additionalHeaders` as series of additional HTTP headers
     can be configured. An entry has the following structure:

@@ -63,7 +63,6 @@ IFSUB
 ..  confval:: IFSUB
     :name: tmenu-common-property-ifsub
     :type: boolean / (config)
-
     :Default: 0
 
     Enable/Configuration for menu items which has subpages.
@@ -241,7 +240,6 @@ sectionIndex.useColPos
 ..  confval:: sectionIndex.useColPos
     :name: menu-common-properties-sectionIndex-useColPos
     :type: integer /:ref:`stdWrap <stdwrap>`
-
     :Default: 0
 
     This property allows you to set the colPos which should be used in the

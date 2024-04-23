@@ -41,8 +41,7 @@ Properties
 
 ..  confval:: array of cObjects
     :name: case-array
-
-    :Data type: :ref:`cObject <data-type-cobject>`
+    :type: :ref:`cObject <data-type-cobject>`
 
     Array of cObjects. Use this to define cObjects for the different
     values of :ref:`cobj-case-key`. If :ref:`cobj-case-key` has a certain value,
@@ -56,8 +55,7 @@ cache
 
 ..  confval:: cache
     :name: case-cache
-
-    :Data type: :ref:`cache <cache>`
+    :type: :ref:`cache <cache>`
 
     See :ref:`cache function description <cache>` for details.
 
@@ -69,8 +67,7 @@ default
 
 ..  confval:: default
     :name: case-default
-
-    :Data type: :ref:`cObject <data-type-cobject>`
+    :type: :ref:`cObject <data-type-cobject>`
 
      Use this to define the rendering for *those* values of :ref:`cobj-case-key` that
      do *not* match any of the values of the :ref:`cobj-case-array-of-cObjects`. If no
@@ -85,8 +82,7 @@ if
 
 ..  confval:: if
     :name: case-if
-
-    :Data type: :ref:`->if <if>`
+    :type: :ref:`->if <if>`
 
     If :ref:`if <if>` returns false, nothing is returned.
 
@@ -98,8 +94,7 @@ key
 
 ..  confval:: key
     :name: case-key
-
-    :Data type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
+    :type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
     :Default: default
 
     The key, which determines, which cObject will be rendered. Its
@@ -122,8 +117,7 @@ setCurrent
 
 ..  confval:: setCurrent
     :name: case-setCurrent
-
-    :Data type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
+    :type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
 
     Sets the "current" value.
 
@@ -135,8 +129,7 @@ stdWrap
 
 ..  confval:: stdWrap
     :name: case-stdWrap
-
-    :Data type: :ref:`stdWrap <stdwrap>`
+    :type: :ref:`stdWrap <stdwrap>`
 
     :ref:`stdWrap` around any object that was rendered no matter what the
     :ref:`cobj-case-key` value is.

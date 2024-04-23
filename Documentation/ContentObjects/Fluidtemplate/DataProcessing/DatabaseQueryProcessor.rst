@@ -24,10 +24,9 @@ if
 
 ..  confval:: if
     :name: DatabaseQueryProcessor-if
-
     :Required: false
-    :Data type: :ref:`if` condition
-    :default: ''
+    :type: :ref:`if` condition
+    :Default: ''
 
     Only if the condition is met the data processor is executed.
 
@@ -39,10 +38,9 @@ table
 
 ..  confval:: table
     :name: DatabaseQueryProcessor-table
-
     :Required: true
-    :Data type: :ref:`data-type-string` / :ref:`stdWrap`
-    :default: ''
+    :type: :ref:`data-type-string` / :ref:`stdWrap`
+    :Default: ''
 
     Name of the table from which the records should be fetched.
 
@@ -53,10 +51,9 @@ as
 
 ..  confval:: as
     :name: DatabaseQueryProcessor-as
-
     :Required: false
-    :Data type: :ref:`data-type-string` / :ref:`stdWrap`
-    :default: 'records'
+    :type: :ref:`data-type-string` / :ref:`stdWrap`
+    :Default: 'records'
 
     The variable's name to be used in the Fluid template.
 
@@ -67,10 +64,9 @@ dataProcessing
 
 ..  confval:: dataProcessing
     :name: DatabaseQueryProcessor-dataProcessing
-
     :Required: false
-    :Data type: array of :ref:`dataProcessing`
-    :default: []
+    :type: array of :ref:`dataProcessing`
+    :Default: []
 
     Array of data processors to be applied to all fetched records.
 

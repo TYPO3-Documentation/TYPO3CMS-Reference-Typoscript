@@ -23,8 +23,7 @@ clear
 
 ..  confval:: clear
     :name: gifbuilder-workarea-clear
-
-    :Data type: string
+    :type: string
 
     Sets the current work area to the default work area.
 
@@ -39,8 +38,7 @@ set
 
 ..  confval:: set
     :name: gifbuilder-workarea-set
-
-    :Data type: x,y,w,h :ref:`+calc <gifbuilder-calc>` / :ref:`stdWrap <stdwrap>`
+    :type: x,y,w,h :ref:`+calc <gifbuilder-calc>` / :ref:`stdWrap <stdwrap>`
 
     Sets the dimensions of the work area.
 

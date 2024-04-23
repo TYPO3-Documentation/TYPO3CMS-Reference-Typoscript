@@ -23,10 +23,9 @@ fieldname
 
 ..  confval:: fieldname
     :name: FlexFormProcessor-fieldname
-
     :Required: false
-    :Data type: :ref:`data-type-string`
-    :default: 'pi_flexform'
+    :type: :ref:`data-type-string`
+    :Default: 'pi_flexform'
 
     Field name of the column the FlexForm data is stored in.
 
@@ -38,10 +37,9 @@ as
 
 ..  confval:: as
     :name: FlexFormProcessor-as
-
     :Required: false
-    :Data type: :ref:`data-type-string`
-    :default: 'flexFormData'
+    :type: :ref:`data-type-string`
+    :Default: 'flexFormData'
 
     Name for the variable in the Fluid template.
 

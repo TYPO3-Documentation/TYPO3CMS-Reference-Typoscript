@@ -33,10 +33,9 @@ levels
 
 ..  confval:: levels
     :name: MenuProcessor-levels
-
     :Required: true
-    :Data type: :ref:`data-type-integer` / :ref:`stdWrap`
-    :default: 1
+    :type: :ref:`data-type-integer` / :ref:`stdWrap`
+    :Default: 1
     :Example: 5
 
     Maximal number of levels to be included in the output array.
@@ -49,10 +48,9 @@ expandAll
 
 ..  confval:: expandAll
     :name: MenuProcessor-expandAll
-
     :Required: true
-    :Data type: :ref:`data-type-boolean` / :ref:`stdWrap`
-    :default: 1
+    :type: :ref:`data-type-boolean` / :ref:`stdWrap`
+    :Default: 1
     :Example: 0
 
     Include all submenus (`1`) or only those of the active pages (`0`).
@@ -65,10 +63,9 @@ includeSpacer
 
 ..  confval:: includeSpacer
     :name: MenuProcessor-includeSpacer
-
     :Required: true
-    :Data type: :ref:`data-type-boolean` / :ref:`stdWrap`
-    :default: 0
+    :type: :ref:`data-type-boolean` / :ref:`stdWrap`
+    :Default: 0
     :Example: 1
 
     Include pages with type "spacer".
@@ -81,10 +78,9 @@ titleField
 
 ..  confval:: titleField
     :name: MenuProcessor-titleField
-
     :Required: true
-    :Data type: :ref:`data-type-string` / :ref:`stdWrap`
-    :default: "nav_title // title"
+    :type: :ref:`data-type-string` / :ref:`stdWrap`
+    :Default: "nav_title // title"
     :Example: "subtitle"
 
     Fields to be used as title.
@@ -97,10 +93,9 @@ as
 
 ..  confval:: as
     :name: MenuProcessor-as
-
     :Required: false
-    :Data type: :ref:`data-type-string`
-    :default: "menu"
+    :type: :ref:`data-type-string`
+    :Default: "menu"
 
     Name for the variable in the Fluid template.
 

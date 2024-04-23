@@ -39,8 +39,7 @@ Properties
 
 ..  confval:: 1, 2, 3, ...
     :name: hmenu-array
-
-    :Data type: :ref:`menu object <data-type-menuobj>`
+    :type: :ref:`menu object <data-type-menuobj>`
     :Default: (no menu)
 
     For every menu level, that should be rendered, an according entry must
@@ -85,8 +84,7 @@ cache_period
 
 ..  confval:: cache_period
     :name: hmenu-cache-period
-
-    :Data type: :ref:`data-type-integer`
+    :type: :ref:`data-type-integer`
 
     The number of seconds a menu may remain in cache. If this value is not
     set, the first available value of the following will be used:
@@ -105,8 +103,7 @@ cache
 
 ..  confval:: cache
     :name: hmenu-cache
-
-    :Data type: :ref:`cache <cache>`
+    :type: :ref:`cache <cache>`
 
     See :ref:`cache function description <cache>` for details.
 
@@ -118,8 +115,7 @@ entryLevel
 
 ..  confval:: entryLevel
     :name: hmenu-entryLevel
-
-    :Data type: :ref:`data-type-integer` / :ref:`stdWrap <stdwrap>`
+    :type: :ref:`data-type-integer` / :ref:`stdWrap <stdwrap>`
     :Default: 0
 
     Defines at which level in the rootLine the menu should start.
@@ -183,8 +179,7 @@ special
 
 ..  confval:: special
     :name: hmenu-special
-
-    :Data type: *"directory" / "list" / "updated" / "rootline" / "browse" / "keywords"
+    :type: *"directory" / "list" / "updated" / "rootline" / "browse" / "keywords"
          / "categories" / "language" / "userfunction"*
 
     Lets you define special types of menus.
@@ -199,8 +194,7 @@ special.value
 
 ..  confval:: special.value
     :name: hmenu-special-value
-
-    :Data type: *list of page-uid's* / :ref:`stdWrap <stdwrap>`
+    :type: *list of page-uid's* / :ref:`stdWrap <stdwrap>`
 
     List of page uid's to use for the special menu. What they are used
     for depends on the menu type as defined by ".special"; see the
@@ -214,8 +208,7 @@ minItems
 
 ..  confval:: minItems
     :name: hmenu-minItems
-
-    :Data type: :ref:`data-type-integer` / :ref:`stdWrap <stdwrap>`
+    :type: :ref:`data-type-integer` / :ref:`stdWrap <stdwrap>`
 
     The minimum number of items in the menu. If the number of pages does
     not reach this level, a dummy-page with the title "..." and
@@ -233,8 +226,7 @@ maxItems
 
 ..  confval:: maxItems
     :name: hmenu-maxItems
-
-    :Data type: :ref:`data-type-integer` / :ref:`stdWrap <stdwrap>`
+    :type: :ref:`data-type-integer` / :ref:`stdWrap <stdwrap>`
 
     The maximum number of items in the menu. Additional items will be
     ignored.
@@ -250,8 +242,7 @@ begin
 
 ..  confval:: begin
     :name: hmenu-begin
-
-    :Data type: :ref:`data-type-integer` / :ref:`stdWrap <stdwrap>` :ref:`+calc <objects-calc>`
+    :type: :ref:`data-type-integer` / :ref:`stdWrap <stdwrap>` :ref:`+calc <objects-calc>`
 
     The first item in the menu.
 
@@ -276,8 +267,7 @@ excludeUidList
 
 ..  confval:: excludeUidList
     :name: hmenu-excludeUidList
-
-    :Data type: list of :ref:`data-type-integer` / :ref:`stdWrap <stdwrap>`
+    :type: list of :ref:`data-type-integer` / :ref:`stdWrap <stdwrap>`
 
     This is a list of page uids to exclude when the select statement is
     done. Comma-separated. You may add "current" to the list to exclude
@@ -301,8 +291,7 @@ excludeDoktypes
 
 ..  confval:: excludeDoktypes
     :name: hmenu-excludeDoktypes
-
-    :Data type: list of :ref:`data-type-integer`
+    :type: list of :ref:`data-type-integer`
     :Default: 6,254
 
     Enter the list of page document types (doktype) to exclude from menus.
@@ -316,8 +305,7 @@ includeNotInMenu
 
 ..  confval:: includeNotInMenu
     :name: hmenu-includeNotInMenu
-
-    :Data type: :ref:`data-type-boolean` / :ref:`stdWrap <stdwrap>`
+    :type: :ref:`data-type-boolean` / :ref:`stdWrap <stdwrap>`
 
     If set, pages with the checkbox "Page enabled in menus" disabled will still be included
     in menus.
@@ -329,8 +317,7 @@ alwaysActivePIDlist
 
 ..  confval:: alwaysActivePIDlist
     :name: hmenu-alwaysActivePIDlist
-
-    :Data type: list of :ref:`data-type-integer` /:ref:`stdWrap <stdwrap>`
+    :type: list of :ref:`data-type-integer` /:ref:`stdWrap <stdwrap>`
 
     This is a list of page UID numbers that will always be regarded as
     active menu items and thereby automatically opened regardless of the
@@ -344,8 +331,7 @@ protectLvar
 
 ..  confval:: protectLvar
     :name: hmenu-protectlvar
-
-    :Data type: :ref:`data-type-boolean` / keyword
+    :type: :ref:`data-type-boolean` / keyword
 
     If set, then for each page in the menu it will be checked if an
     Alternative Page Language record for the language defined in
@@ -378,8 +364,7 @@ addQueryString
 
 ..  confval:: addQueryString
     :name: hmenu-addquerystring
-
-    :Data type: :ref:`->addQueryString <typolink-addQueryString>`
+    :type: :ref:`->addQueryString <typolink-addQueryString>`
 
     **Note:** This works only for *special=language*.
 
@@ -391,8 +376,7 @@ if
 
 ..  confval:: if
     :name: hmenu-if
-
-    :Data type: :ref:`->if <if>`
+    :type: :ref:`->if <if>`
 
     If "if" returns false, the menu is not generated.
 
@@ -404,8 +388,7 @@ wrap
 
 ..  confval:: wrap
     :name: hmenu-wrap
-
-    :Data type: :ref:`wrap <data-type-wrap>` / :ref:`stdWrap <stdwrap>`
+    :type: :ref:`wrap <data-type-wrap>` / :ref:`stdWrap <stdwrap>`
 
     Wrap for the HMENU.
 
@@ -417,8 +400,7 @@ stdWrap
 
 ..  confval:: stdWrap
     :name: hmenu-stdWrap
-
-    :Data type: :ref:`->stdWrap <stdwrap>`
+    :type: :ref:`->stdWrap <stdwrap>`
 
     (Executed after ".wrap".)
 

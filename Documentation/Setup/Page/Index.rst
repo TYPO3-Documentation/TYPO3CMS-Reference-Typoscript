@@ -196,7 +196,7 @@ bodyTag
 ..  confval:: bodyTag
     :name: page-bodyTag
     :type: :ref:`data-type-tag`
-    :default: `<body>`
+    :Default: `<body>`
 
     Body tag on the page
 

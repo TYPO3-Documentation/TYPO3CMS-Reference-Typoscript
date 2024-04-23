@@ -37,7 +37,6 @@ subst_elementUid
 ..  confval:: subst_elementUid
     :name: tmenuitem-subst-elementUid
     :type: boolean
-
     :Default: 0 (false)
 
      If set, all appearances of the string '{elementUid}' in the total
@@ -101,7 +100,6 @@ ATagBeforeWrap
 ..  confval:: ATagBeforeWrap
     :name: tmenuitem-ATagBeforeWrap
     :type: boolean
-
     :Default: 0 (false)
 
     If set, the link is first wrapped with "*.linkWrap*" and then the

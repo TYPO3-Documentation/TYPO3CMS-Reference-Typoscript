@@ -24,10 +24,9 @@ if
 
 ..  confval:: if
     :name: CommaSeparatedValueProcessor-if
-
     :Required: false
-    :Data type: :ref:`if` condition
-    :default: ''
+    :type: :ref:`if` condition
+    :Default: ''
 
     If the condition is met, the data processor is processed.
 
@@ -38,10 +37,9 @@ fieldName
 
 ..  confval:: fieldName
     :name: CommaSeparatedValueProcessor-fieldName
-
     :Required: true
-    :Data type: :ref:`data-type-string` / :ref:`stdWrap`
-    :default: ''
+    :type: :ref:`data-type-string` / :ref:`stdWrap`
+    :Default: ''
 
     Name of the field in the processed ContentObjectRenderer.
 
@@ -53,10 +51,9 @@ as
 
 ..  confval:: as
     :name: CommaSeparatedValueProcessor-as
-
     :Required: false
-    :Data type: :ref:`data-type-string`
-    :default: defaults to the fieldName
+    :type: :ref:`data-type-string`
+    :Default: defaults to the fieldName
 
     The variable's name to be used in the Fluid template.
 
@@ -67,10 +64,9 @@ maximumColumns
 
 ..  confval:: maximumColumns
     :name: CommaSeparatedValueProcessor-maximumColumns
-
     :Required: false
-    :Data type: :ref:`data-type-integer` / :ref:`stdWrap`
-    :default: :typoscript:`0`
+    :type: :ref:`data-type-integer` / :ref:`stdWrap`
+    :Default: :typoscript:`0`
 
     Maximal number of columns to be transformed. Surplus columns will be
     silently dropped. When set to :typoscript:`0` (default) all columns will be
@@ -84,10 +80,9 @@ fieldDelimiter
 
 ..  confval:: fieldDelimiter
     :name: CommaSeparatedValueProcessor-fieldDelimiter
-
     :Required:  false
-    :Data type: :ref:`data-type-string` / :ref:`stdWrap`
-    :default: :typoscript:`,`
+    :type: :ref:`data-type-string` / :ref:`stdWrap`
+    :Default: :typoscript:`,`
 
     The field delimiter, a character separating the values.
 
@@ -99,10 +94,9 @@ fieldEnclosure
 
 ..  confval:: fieldEnclosure
     :name: CommaSeparatedValueProcessor-fieldEnclosure
-
     :Required:  false
-    :Data type: :ref:`data-type-string` / :ref:`stdWrap`
-    :default: :typoscript:`"`
+    :type: :ref:`data-type-string` / :ref:`stdWrap`
+    :Default: :typoscript:`"`
 
     The field enclosure, a character surrounding the values.
 

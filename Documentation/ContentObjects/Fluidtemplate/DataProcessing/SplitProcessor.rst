@@ -21,10 +21,9 @@ if
 
 ..  confval:: if
     :name: splitProcessor-if
-
     :Required: false
-    :Data type: :ref:`if` condition
-    :default: ''
+    :type: :ref:`if` condition
+    :Default: ''
 
     Only if the condition is met the data processor is executed.
 
@@ -36,10 +35,9 @@ fieldName
 
 ..  confval:: fieldName
     :name: splitProcessor-fieldName
-
     :Required: true
-    :Data type: :ref:`data-type-string` / :ref:`stdWrap`
-    :default: ''
+    :type: :ref:`data-type-string` / :ref:`stdWrap`
+    :Default: ''
 
     Name of the field to be used.
 
@@ -51,10 +49,9 @@ as
 
 ..  confval:: as
     :name: splitProcessor-as
-
     :Required: false
-    :Data type: :ref:`data-type-string`
-    :default: defaults to the fieldName
+    :type: :ref:`data-type-string`
+    :Default: defaults to the fieldName
 
     The variable name to be used in the Fluid template.
 
@@ -66,10 +63,9 @@ delimiter
 
 ..  confval:: delimiter
     :name: splitProcessor-delimiter
-
     :Required: false
-    :Data type: :ref:`data-type-string` / :ref:`stdWrap`
-    :default: Line Feed
+    :type: :ref:`data-type-string` / :ref:`stdWrap`
+    :Default: Line Feed
     :Example: ","
 
     The field delimiter, a character separating the values.
@@ -82,10 +78,9 @@ filterIntegers
 
 ..  confval:: filterIntegers
     :name: splitProcessor-filterIntegers
-
     :Required: false
-    :Data type: :ref:`data-type-boolean` / :ref:`stdWrap`
-    :default: 0
+    :type: :ref:`data-type-boolean` / :ref:`stdWrap`
+    :Default: 0
     :Example: 1
 
     If set to `1`, all values are being cast to int.
@@ -98,10 +93,9 @@ filterUnique
 
 ..  confval:: filterUnique
     :name: splitProcessor-filterUnique
-
     :Required: false
-    :Data type: :ref:`data-type-boolean` / :ref:`stdWrap`
-    :default: 0
+    :type: :ref:`data-type-boolean` / :ref:`stdWrap`
+    :Default: 0
     :Example: 1
 
     If set to `1`, all duplicates will be removed.
@@ -114,10 +108,9 @@ removeEmptyEntries
 
 ..  confval:: removeEmptyEntries
     :name: splitProcessor-removeEmptyEntries
-
     :Required: false
-    :Data type: :ref:`data-type-boolean` / :ref:`stdWrap`
-    :default: 0
+    :type: :ref:`data-type-boolean` / :ref:`stdWrap`
+    :Default: 0
     :Example: 1
 
     If set to `1`, all empty values will be removed.
