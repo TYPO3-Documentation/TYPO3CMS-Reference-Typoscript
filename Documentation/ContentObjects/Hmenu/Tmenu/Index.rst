@@ -1,7 +1,8 @@
 ..  include:: /Includes.rst.txt
 ..  index:: TMENU
+..  _menu-objects:
+..  _data-type-menuobj:
 ..  _tmenu:
-
 
 =====
 TMENU
@@ -9,6 +10,10 @@ TMENU
 
 :typoscript:`TMENU` is a menu object type.
 
+..  toctree::
+    :glob:
+
+    *
 
 ..  contents::
     :local:
