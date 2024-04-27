@@ -8,7 +8,7 @@ dataProcessing
 ==============
 
 :ref:`dataProcessing <fluidtemplate-dataProcessing>` is a property of
-:ref:`cobj-fluidtemplate`.
+:ref:`cobj-fluidtemplate` and :ref:`cobj-pageview`.
 
 The property adds one or multiple processors to manipulate the :php:`$data`
 variable of the currently rendered content object, like tt_content or page.
