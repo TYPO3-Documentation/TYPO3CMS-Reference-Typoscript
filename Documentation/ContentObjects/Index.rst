@@ -17,24 +17,9 @@ data type.
 Please see :ref:`cobjects-general-information` for an introduction.
 
 ..  toctree::
-    :maxdepth: 5
     :titlesonly:
     :glob:
 
     GeneralInformation/Index
-    Case/Index
-    CoaAndCoaInt/Index
-    Content/Index
-    Editpanel/Index
-    Files/Index
-    Fluidtemplate/Index
-    Hmenu/Index
-    Image/Index
-    ImgResource/Index
-    LoadRegister/Index
-    Records/Index
-    RestoreRegister/Index
-    Svg/Index
-    Text/Index
-    UserAndUserInt/Index
+    */Index
 
