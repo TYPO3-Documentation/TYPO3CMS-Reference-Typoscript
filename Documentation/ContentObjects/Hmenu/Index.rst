@@ -456,4 +456,5 @@ See the following menus types based on the :typoscript:`special` property:
     :titlesonly:
     :glob:
 
+    Tmenu/Index
     *

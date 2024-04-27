@@ -1,7 +1,8 @@
 .. include:: /Includes.rst.txt
 .. index:: TMENU
+..  _menu-objects:
+..  _data-type-menuobj:
 .. _tmenu:
-
 
 =====
 TMENU
@@ -12,6 +13,11 @@ TMENU
    :typoscript:`TMENU` is a menu object type. In TYPO3 v10 the remaining other menu types
    got removed so :typoscript:`TMENU` is the only menu type left.
 
+..  toctree::
+    :glob:
+    :hidden:
+
+    *
 
 .. contents::
    :local:
