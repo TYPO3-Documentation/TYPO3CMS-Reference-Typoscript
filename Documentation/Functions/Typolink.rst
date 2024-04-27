@@ -22,8 +22,8 @@ must set the property by :typoscript:`returnLast = url` or
 .. contents::
    :local:
 
-.. index:: tags; Properties
-.. _tags-properties:
+.. index:: typolink; Properties
+.. _typolink-properties:
 
 Properties
 ==========

@@ -16,7 +16,7 @@ value as parameters.
 
 
 .. index:: select; Properties
-.. _select-properties:
+.. _stdwrap-properties:
 
 Properties
 ==========

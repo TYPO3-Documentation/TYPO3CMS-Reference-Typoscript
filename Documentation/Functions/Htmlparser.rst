@@ -61,9 +61,8 @@ stripEmptyTags.keepTags
 :aspect:`Description`
    Comma separated list of tags to keep when applying :php:`strip_tags()`.
 
-
 .. index:: HTMLparser; tags
-.. _htmlparser-tags.[tagname]:
+..  _htmlparser-function-tags:
 
 tags.[tagname]
 --------------
