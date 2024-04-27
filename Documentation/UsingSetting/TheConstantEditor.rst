@@ -147,7 +147,7 @@ This will make the constant go into the "BASIC" category and be listed
 under the "COLOR" section.
 
 One of the predefined subcategories can be used or any custom subcategory. If a
-non-existing subcategory us used, the constant will go into the subcategory
+non-existing subcategory is used, the constant will go into the subcategory
 "Other".
 
 .. _typoscript-syntax-constant-editor-keys-cat-predefined-subcategories:
