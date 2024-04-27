@@ -296,7 +296,7 @@ config.contentsLanguageDirection
 ..  index::
     RTE; Server processing
     RTE; proc
-..  _rte-proc:
+..  _rte-config-proc:
 
 proc
 ----
