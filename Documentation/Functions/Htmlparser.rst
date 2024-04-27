@@ -52,7 +52,7 @@ stripEmptyTags.keepTags
     Comma separated list of tags to keep when applying :php:`strip_tags()`.
 
 
-..  _htmlparser-tags:
+..  _htmlparser-function-tags:
 
 tags.[tagname]
 --------------

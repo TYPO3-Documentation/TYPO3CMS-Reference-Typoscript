@@ -130,7 +130,7 @@ Good, general PAGE object names to use are:
 These are just recommendations. However, especially the name page for the content bearing page
 is very common and most documentation will imply that your main page object is called page.
 
-..  _page_examples:
+..  _page_examples-link:
 
 Examples
 ========

@@ -135,6 +135,7 @@ Full example to see how it works
 Let's look at a full example that visualizes what we have said so far.
 
 .. _optionsplit-example-three-by-three-items:
+
 Three by three items
 --------------------
 
@@ -283,7 +284,8 @@ And again:
       20     a r r r r r r r r r r r r r r r r r r z
 
 
-.. _optionsplit-example-three-by-three-items:
+.. _optionsplit-example-two-by-three-items:
+
 Two by three items
 ------------------
 

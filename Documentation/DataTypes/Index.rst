@@ -227,7 +227,7 @@ function name
 
 
 ..  index:: Simple data types; getText
-..  _data-type-getText:
+..  _data-type-function-getText:
 
 getText
 =======

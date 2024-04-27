@@ -10,7 +10,7 @@ CROP
     This object resets :ref:`gifbuilder-properties-workArea` to the
     new dimensions of the image!
 
-..  _gifbuilder-properties:
+..  _gifbuilder-crop-properties:
 
 Properties
 ==========

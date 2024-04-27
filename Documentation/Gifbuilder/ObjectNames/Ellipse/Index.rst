@@ -26,7 +26,7 @@ Example
       10.color = red
     }
 
-..  _gifbuilder-properties:
+..  _gifbuilder-ellipse-properties:
 
 Properties
 ==========
