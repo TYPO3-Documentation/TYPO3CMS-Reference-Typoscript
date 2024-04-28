@@ -36,8 +36,8 @@ Migration from `FLUIDTEMPLATE` to `PAGEVIEW`
     :language: typoscript
     :caption: After migration, EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
 
-In Fluid, the pageUid is available as :html:`{page.uid}` and pageTitle
-as :html:`{page.title}`, the subtitle with :html:`{page.subtitle}`.
+In Fluid, the pageUid is available as :fluid:`{page.uid}` and pageTitle
+as :fluid:`{page.title}`, the subtitle with :fluid:`{page.subtitle}`.
 
 In this example some Fluid templates have to be moved:
 
