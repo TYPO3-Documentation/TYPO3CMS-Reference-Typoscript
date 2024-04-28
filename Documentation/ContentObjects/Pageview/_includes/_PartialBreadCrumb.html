@@ -1,0 +1,11 @@
+<f:if condition="{breadcrumb}">
+    <ol class="breadcrumb">
+        <f:for each="{breadcrumb}" as="item">
+            <li class="breadcrumb-item{f:if(condition: item.current, then: ' active')}" >
+                <a class="breadcrumb-link" href="{item.link}" title="{item.title}">
+                    <span class="breadcrumb-text">{item.title}</span>
+                </a>
+            </li>
+        </f:for>
+    </ol>
+</f:if>

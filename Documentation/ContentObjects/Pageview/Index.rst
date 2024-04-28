@@ -15,6 +15,13 @@ PAGEVIEW
 The content object :typoscript:`EXTBASEPLUGIN` allows to render
 :ref:`Extbase <t3coreapi:extbase>` plugins.
 
+The new :typoscript:`PAGEVIEW` content object has very specific conventions and
+defaults, that requires (and allows) less configuration, with the benefit that
+following these conventions means less boilerplate code to maintain.
+
+If you follow these conventions, a few directories and files most follow the
+structure outlined below.
+
 ..  contents:: Table of contents
     :local:
     :depth: 1
@@ -24,26 +31,9 @@ The content object :typoscript:`EXTBASEPLUGIN` allows to render
 Example: Display a page with Fluid templates
 ============================================
 
-..  code-block:: typoscript
+..  literalinclude:: _includes/_pageWithFluid.typoscript
+    :language: typoscript
     :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
-
-    page = PAGE
-    page {
-        10 = PAGEVIEW
-        10 {
-            paths {
-                100 = EXT:my_sitepackage/Resources/Private/Templates/
-            }
-            variables {
-                parentPageTitle = TEXT
-                parentPageTitle.data = levelfield:-1:title
-            }
-            dataProcessing {
-                10 = menu
-                10.as = mainMenu
-            }
-        }
-    }
 
 .. _cobj-pageview-data:
 
@@ -77,15 +67,9 @@ language
 Example: Display the site title in the current language
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-..  code-block:: html
+..  literalinclude:: _includes/_DisplaySiteTitle.html
+    :language: html
     :caption: EXT:my_sitepackage/Resources/Private/Templates/Pages/Default.html
-
-    <f:layout name="Default" />
-    <f:section name="Main">
-        <main role="main">
-            <p>The site title in the current template is: {language.websiteTitle}</p>
-        </main>
-    </f:section>
 
 .. _cobj-pageview-data-page:
 
@@ -104,17 +88,9 @@ page
 Example: Display the title and abstract of the current page
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-..  code-block:: html
+..  literalinclude:: _includes/_DisplayPageInfo.html
+    :language: html
     :caption: EXT:my_sitepackage/Resources/Private/Templates/Pages/Default.html
-
-    <f:layout name="Default" />
-    <f:section name="Main">
-        <main role="main">
-            <p>The title of the page with id {page.id} is: {page.pageRecord.title}. It has the
-                following abstract:</p>
-            <p>{page.pageRecord.abstract}</p>
-        </main>
-    </f:section>
 
 .. _cobj-pageview-data-settings:
 
@@ -146,16 +122,9 @@ site
 Example: Link to the root page of the current site
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-..  code-block:: html
+..  literalinclude:: _includes/_LinkToRootPage.html
+    :language: html
     :caption: EXT:my_sitepackage/Resources/Private/Templates/Pages/Default.html
-
-    <f:layout name="Default" />
-    <f:section name="Main">
-        <main role="main">
-            <p>Go to the root page: <f:link.page pageUid="{page.rootPageId}">Home</f:link.page></p>
-            <p>...</p>
-        </main>
-    </f:section>
 
 ..  _cobj-pageview-properties:
 
@@ -192,98 +161,30 @@ dataProcessing
 Example: Display a main menu and a breadcrumb on the page
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-..  code-block:: typoscript
+..  literalinclude:: _includes/_pageWithBreadcrumb.typoscript
+    :language: typoscript
     :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
 
-    page = PAGE
-    page {
-        10 = PAGEVIEW
-        10 {
-            paths {
-                100 = EXT:my_sitepackage/Resources/Private/Templates/
-            }
-            dataProcessing {
-                10 = menu
-                10 {
-                    as = mainMenu
-                    titleField = nav_title // title
-                    expandAll = 1
-                }
-                20 = menu
-                20 {
-                    as = breadcrumb
-                    special = rootline
-                    special.range = 0|-1
-                    includeNotInMenu = 0
-                }
-            }
-        }
-    }
 
 The page template could look like this:
 
-..  code-block:: html
+..  literalinclude:: _includes/_PageWithBreadcrumb.html
+    :language: html
     :caption: EXT:my_sitepackage/Resources/Private/Templates/Pages/Default.html
 
-    <f:layout name="Default" />
-    <f:section name="Main">
-        <f:render partial="Navigation/MainNavigation.html" arguments="{mainMenu}"/>
-        <main role="main">
-            <f:render partial="Navigation/Breadcrumb.html" arguments="{breadcrumb}"/>
-            <p>...</p>
-        </main>
-    </f:section>
 
 With the following partials:
 
-..  code-block:: html
+..  literalinclude:: _includes/_PartialBreadCrumb.html
+    :language: html
     :caption: EXT:my_sitepackage/Resources/Private/Templates/Partials/Navigation/Breadcrumb.html
-
-    <f:if condition="{breadcrumb}">
-        <ol class="breadcrumb">
-            <f:for each="{breadcrumb}" as="item">
-                <li class="breadcrumb-item{f:if(condition: item.current, then: ' active')}" >
-                    <a class="breadcrumb-link" href="{item.link}" title="{item.title}">
-                        <span class="breadcrumb-text">{item.title}</span>
-                    </a>
-                </li>
-            </f:for>
-        </ol>
-    </f:if>
 
 And
 
-..  code-block:: html
+..  literalinclude:: _includes/_PartialMainNavigation.html
+    :language: html
     :caption: EXT:my_sitepackage/Resources/Private/Templates/Partials/Navigation/MainNavigation.html
 
-    <ul class="nav nav-pills">
-        <f:for each="{mainMenu}" as="menuItem">
-         <li class="nav-item {f:if(condition: menuItem.hasSubpages, then: 'dropdown')}">
-            <f:if condition="{menuItem.hasSubpages}">
-               <f:then>
-                  <!-- Item has children -->
-                  <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
-                     {menuItem.title}
-                  </a>
-                  <div class="dropdown-menu">
-                     <f:for each="{menuItem.children}" as="menuItemLevel2">
-                          <f:link.page pageUid="{menuItemLevel2.data.uid}"
-                                       class="dropdown-item {f:if(condition: menuItemLevel2.active, then: 'active')}">
-                             {menuItemLevel2.title}
-                          </f:link.page>
-                     </f:for>
-                  </div>
-               </f:then>
-               <f:else>
-                  <!-- Item has no children -->
-                  <f:link.page pageUid="{menuItem.data.uid}" class="nav-link {f:if(condition: menuItem.active, then:'active')}">
-                     {menuItem.title}
-                  </f:link.page>
-               </f:else>
-            </f:if>
-         </li>
-      </f:for>
-   </ul>
 
 ..  _cobj-pageview-paths:
 
@@ -366,7 +267,8 @@ are expected in folder
 Example: Define fallbacks for a template paths
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-You can use the paths
+You can use the directories defined in :confval:`pageview-paths` to
+define fallback directories for the templates:
 
 .. code-block:: typoscript
 
@@ -385,7 +287,6 @@ The template for a page with a certain backend layout is first searched in
 :path:`EXT:my_general_sitepackage/Resources/Private/Templates/Pages/` and last
 in :path:`EXT:my_special_sitepackage/Resources/Private/Templates/Pages/`.
 
-
 ..  _cobj-pageview-variables:
 
 variables
@@ -400,36 +301,13 @@ variables
 Example: Make additional variables available in the Fluid template
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-..  code-block:: typoscript
+..  literalinclude:: _includes/_pageWithVariables.typoscript
+    :langugage: typoscript
     :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
-
-    page = PAGE
-    page {
-        10 = PAGEVIEW
-        10 {
-            paths {
-                100 = EXT:my_sitepackage/Resources/Private/Templates/
-            }
-            variables {
-                parentPageTitle = TEXT
-                parentPageTitle.data = levelfield:-1:title
-                another_variable <= lib.anotherVariable
-            }
-        }
-    }
 
 The following variables are now available in the Fluid template:
 
-..  code-block:: html
+..  literalinclude:: _includes/_PageWithVariables.html
+    :langugage: html
     :caption: EXT:my_sitepackage/Resources/Private/Templates/Pages/Default.html
 
-
-    <f:layout name="Default" />
-    <f:section name="Main">
-        <f:render partial="Navigation/MainNavigation.html" arguments="{_all}"/>
-
-        <main role="main">
-            <p>The current parent page has the title {parentPageTitle}</p>
-            <p>Another variable is {another_variable}</p>
-        </main>
-    </f:section>

@@ -28,88 +28,13 @@ or to generate content within the top-level object page
 Migration from `FLUIDTEMPLATE` to `PAGEVIEW`
 ============================================
 
-..  code-block:: typoscript
+..  literalinclude:: _includes/_BeforeMigrationToPageview.typoscript
+    :language: typoscript
     :caption: Before migration, EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
 
-    # Todo: migrate to PAGEVIEW
-    page = PAGE
-    page {
-        10 = FLUIDTEMPLATE
-        10 {
-            templateName = TEXT
-            templateName {
-                stdWrap {
-                    cObject = TEXT
-                    cObject {
-                        data = levelfield:-2, backend_layout_next_level, slide
-                        override {
-                            field = backend_layout
-                        }
-                        split {
-                            token = pagets__
-                            1 {
-                                current = 1
-                                wrap = |
-                            }
-                        }
-                    }
-                    ifEmpty = Standard
-                }
-            }
-
-            templateRootPaths {
-                100 = EXT:my_sitepackage/Resources/Private/Templates/Pages/
-            }
-
-            partialRootPaths {
-                100 = EXT:my_sitepackage/Resources/Private/Partials/Pages/
-            }
-
-            layoutRootPaths {
-                100 = EXT:my_sitepackage/Resources/Private/Layouts/Pages/
-            }
-
-            variables {
-                pageUid = TEXT
-                pageUid.data = page:uid
-
-                pageTitle = TEXT
-                pageTitle.data = page:title
-
-                pageSubtitle = TEXT
-                pageSubtitle.data = page:subtitle
-
-                parentPageTitle = TEXT
-                parentPageTitle.data = levelfield:-1:title
-            }
-
-            dataProcessing {
-                10 = menu
-                10.as = mainMenu
-            }
-        }
-    }
-
-.. code-block:: typoscript
+..  literalinclude:: _includes/_AfterMigrationToPageview.typoscript
+    :language: typoscript
     :caption: After migration, EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
-
-    page = PAGE
-    page {
-        10 = PAGEVIEW
-        10 {
-            paths {
-                100 = EXT:my_sitepackage/Resources/Private/Templates/
-            }
-            variables {
-                parentPageTitle = TEXT
-                parentPageTitle.data = levelfield:-1:title
-            }
-            dataProcessing {
-                10 = menu
-                10.as = mainMenu
-            }
-        }
-    }
 
 In Fluid, the pageUid is available as :html:`{page.uid}` and pageTitle
 as :html:`{page.title}`, the subtitle with :html:`{page.subtitle}`.

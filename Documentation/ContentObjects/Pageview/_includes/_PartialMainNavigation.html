@@ -1,0 +1,28 @@
+<ul class="nav nav-pills">
+    <f:for each="{mainMenu}" as="menuItem">
+        <li class="nav-item {f:if(condition: menuItem.hasSubpages, then: 'dropdown')}">
+            <f:if condition="{menuItem.hasSubpages}">
+                <f:then>
+                    <!-- Item has children -->
+                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
+                        {menuItem.title}
+                    </a>
+                    <div class="dropdown-menu">
+                        <f:for each="{menuItem.children}" as="menuItemLevel2">
+                            <f:link.page pageUid="{menuItemLevel2.data.uid}"
+                                         class="dropdown-item {f:if(condition: menuItemLevel2.active, then: 'active')}">
+                                {menuItemLevel2.title}
+                            </f:link.page>
+                        </f:for>
+                    </div>
+                </f:then>
+                <f:else>
+                    <!-- Item has no children -->
+                    <f:link.page pageUid="{menuItem.data.uid}" class="nav-link {f:if(condition: menuItem.active, then:'active')}">
+                        {menuItem.title}
+                    </f:link.page>
+                </f:else>
+            </f:if>
+        </li>
+    </f:for>
+</ul>
