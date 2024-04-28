@@ -42,7 +42,7 @@ as :fluid:`{page.title}`, the subtitle with :fluid:`{page.subtitle}`.
 In this example some Fluid templates have to be moved:
 
 :path:`EXT:my_sitepackage/Resources/Private/Templates/Pages/`
-    The page Templates can stay in this folder.
+    The page-templates can stay in this folder.
 :path:`EXT:my_sitepackage/Resources/Private/Partials/Pages/`
     Move files to :path:`EXT:my_sitepackage/Resources/Private/Templates/Partials/`
 :path:`EXT:my_sitepackage/Resources/Private/Layouts/Pages/`
