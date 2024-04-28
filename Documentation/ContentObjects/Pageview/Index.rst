@@ -301,13 +301,13 @@ paths
     The templates are expected in a subfolder :path:`Pages` or
     :path:`pages`.
 
-    Fluid partials are searched for in a subfolder called :path:`Partials` or
+    Fluid partials are looked up in a sub-directory called :path:`Partials` or
     :path:`partials`, layouts in :path:`Layouts` or :path:`layouts`.
 
     The name of the used page layout (:ref:`Backend layout <t3coreapi:be-layout>`)
     is resolved automatically.
 
-    The paths are considered from the largest to the smallest priority.
+    The paths are evaluated from highest to lowest priority.
 
 
 ..  _cobj-pageview-paths-example:
@@ -315,7 +315,7 @@ paths
 Example: Define a path that contains all templates
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-This is a basic definition of a `PAGEVIEW` object with only one path to the
+This is a basic definition of a :fluid:`PAGEVIEW` object with only one path to the
 templates:
 
 ..  code-block:: typoscript

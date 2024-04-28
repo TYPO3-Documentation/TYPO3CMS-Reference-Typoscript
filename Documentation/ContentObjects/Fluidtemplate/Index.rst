@@ -19,8 +19,8 @@ or to generate content within the top-level object page
 
 ..  versionadded:: 13.1
 
-    Starting with TYPO3 v 13.1 you can use the content object
-    :ref:`PAGEVIEW <cobj-pageview>` for templates on page level. It reduces
+    Starting with TYPO3 v13.1 you can use the content object
+    :ref:`PAGEVIEW <cobj-pageview>` for templates on page-level. It reduces
     the amount of TypoScript needed to render a page in the TYPO3 frontend.
 
 .. _cobj-fluidtemplate-migration:
@@ -114,7 +114,7 @@ Migration from `FLUIDTEMPLATE` to `PAGEVIEW`
 In Fluid, the pageUid is available as :html:`{page.uid}` and pageTitle
 as :html:`{page.title}`, the subtitle with :html:`{page.subtitle}`.
 
-In this example some Fluid templates have to be moved. Move:
+In this example some Fluid templates have to be moved:
 
 :path:`EXT:my_sitepackage/Resources/Private/Templates/Pages/`
     The page Templates can stay in this folder.
@@ -123,7 +123,7 @@ In this example some Fluid templates have to be moved. Move:
 :path:`EXT:my_sitepackage/Resources/Private/Layouts/Pages/`
     Move files to :path:`EXT:my_sitepackage/Resources/Private/Templates/Layouts/`
 
-If the private folder looked like this before:
+If the :path:`Private` folder looked like this before:
 
 *   :path:`EXT:my_sitepackage/Resources/Private/`
 
@@ -655,7 +655,7 @@ Example
 
 ..  versionadded:: 13.1
     It is recommended to use :ref:`PAGEVIEW <cobj-pageview>` for page templates
-    starting with TYPO3 13.1. See
+    starting with TYPO3 v13.1. See
     :ref:`How to migrate to PAGEVIEW <cobj-fluidtemplate-migration>`
 
 The Fluid template in
