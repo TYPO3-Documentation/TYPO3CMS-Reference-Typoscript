@@ -50,31 +50,37 @@ In this example some Fluid templates have to be moved:
 
 If the :path:`Private` folder looked like this before:
 
-*   :path:`EXT:my_sitepackage/Resources/Private/`
+..  directory-tree::
+    :level: 2
 
-    *   Languages
-    *   Layouts
+    *   :path:`EXT:my_sitepackage/Resources/Private/`
 
-        *   Pages
+        *   :path:`Languages`
+        *   :path:`Layouts`
 
-    *   Partials
+            *   :path:`Pages`
 
-        *   Pages
+        *   :path:`Partials`
 
-    *   Templates
+            *   :path:`Pages`
 
-        *   Pages
+        *   :path:`Templates`
+
+            *   :path:`Pages`
 
 It should look like this afterwards:
 
-*   :path:`EXT:my_sitepackage/Resources/Private/`
+..  directory-tree::
+    :level: 2
 
-    *   Languages
-    *   Templates
+    *   :path:`EXT:my_sitepackage/Resources/Private/`
 
-        *   Layouts
-        *   Pages
-        *   Partials
+        *   :path:`Languages`
+        *   :path:`Templates`
+
+            *   :path:`Layouts`
+            *   :path:`Pages`
+            *   :path:`Partials`
 
 
 .. _cobj-fluidtemplate-data:
