@@ -1,0 +1,7 @@
+page {
+    uids {
+        dataPrivacy = 42
+        contact = 85
+        imprint = 86
+    }
+}

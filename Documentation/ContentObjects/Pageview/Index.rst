@@ -101,11 +101,24 @@ settings
     :name: pageview-data-settings
     :type: array
 
-    Contains all TypoScript settings (= Constants)
+    The variable :fluid:`{settings}` contains all TypoScript
+    :ref:`constants <typoscript-syntax-constants>` that are set on the current
+    page.
 
-..  todo: How does this work?
+.. _cobj-pageview-data-settings-example:
 
-.. _cobj-pageview-data-site:
+Example: Use TypoScript constant in a Fluid template
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Let us assume, the current page loads the following TypoScript constants:
+
+..  literalinclude:: _includes/_constants.typoscript
+    :language: html
+    :caption: EXT:my_sitepackage/Configuration/TypoScript/constants.typoscript
+
+..  literalinclude:: _includes/_PageWithConstant.html
+    :language: html
+    :caption: EXT:my_sitepackage/Resources/Private/Templates/Pages/Default.html
 
 site
 ----
