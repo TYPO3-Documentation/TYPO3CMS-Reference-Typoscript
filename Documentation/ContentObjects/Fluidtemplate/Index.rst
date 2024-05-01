@@ -23,65 +23,11 @@ or to generate content within the top-level object page
     :ref:`PAGEVIEW <cobj-pageview>` for templates on page-level. It reduces
     the amount of TypoScript needed to render a page in the TYPO3 frontend.
 
-.. _cobj-fluidtemplate-migration:
+    See section :ref:`cobj-fluidtemplate-migration`.
 
-Migration from `FLUIDTEMPLATE` to `PAGEVIEW`
-============================================
-
-..  literalinclude:: _includes/_BeforeMigrationToPageview.typoscript
-    :language: typoscript
-    :caption: Before migration, EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
-
-..  literalinclude:: _includes/_AfterMigrationToPageview.typoscript
-    :language: typoscript
-    :caption: After migration, EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
-
-In Fluid, the pageUid is available as :fluid:`{page.uid}` and pageTitle
-as :fluid:`{page.title}`, the subtitle with :fluid:`{page.subtitle}`.
-
-In this example some Fluid templates have to be moved:
-
-:path:`EXT:my_sitepackage/Resources/Private/Templates/Pages/`
-    The page-templates can stay in this folder.
-:path:`EXT:my_sitepackage/Resources/Private/Partials/Pages/`
-    Move files to :path:`EXT:my_sitepackage/Resources/Private/Templates/Partials/`
-:path:`EXT:my_sitepackage/Resources/Private/Layouts/Pages/`
-    Move files to :path:`EXT:my_sitepackage/Resources/Private/Templates/Layouts/`
-
-If the :path:`Private` folder looked like this before:
-
-..  directory-tree::
-    :level: 2
-
-    *   :path:`EXT:my_sitepackage/Resources/Private/`
-
-        *   :path:`Languages`
-        *   :path:`Layouts`
-
-            *   :path:`Pages`
-
-        *   :path:`Partials`
-
-            *   :path:`Pages`
-
-        *   :path:`Templates`
-
-            *   :path:`Pages`
-
-It should look like this afterwards:
-
-..  directory-tree::
-    :level: 2
-
-    *   :path:`EXT:my_sitepackage/Resources/Private/`
-
-        *   :path:`Languages`
-        *   :path:`Templates`
-
-            *   :path:`Layouts`
-            *   :path:`Pages`
-            *   :path:`Partials`
-
+..  contents:: Table of content
+    :local:
+    :depth: 1
 
 .. _cobj-fluidtemplate-data:
 
@@ -635,3 +581,64 @@ headlines. The copyright year will be taken from the TypoScript constant
     *   :ref:`dataProcessing` examples
     *   :ref:`t3coreapi:adding-your-own-content-elements`
     *   :ref:`t3sitepackage:start`
+
+
+.. _cobj-fluidtemplate-migration:
+
+Migration from `FLUIDTEMPLATE` to `PAGEVIEW`
+============================================
+
+..  literalinclude:: _includes/_BeforeMigrationToPageview.typoscript
+    :language: typoscript
+    :caption: Before migration, EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
+
+..  literalinclude:: _includes/_AfterMigrationToPageview.typoscript
+    :language: typoscript
+    :caption: After migration, EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
+
+In Fluid, the pageUid is available as :fluid:`{page.uid}` and pageTitle
+as :fluid:`{page.title}`, the subtitle with :fluid:`{page.subtitle}`.
+
+In this example some Fluid templates have to be moved:
+
+:path:`EXT:my_sitepackage/Resources/Private/Templates/Pages/`
+    The page-templates can stay in this folder.
+:path:`EXT:my_sitepackage/Resources/Private/Partials/Pages/`
+    Move files to :path:`EXT:my_sitepackage/Resources/Private/Templates/Partials/`
+:path:`EXT:my_sitepackage/Resources/Private/Layouts/Pages/`
+    Move files to :path:`EXT:my_sitepackage/Resources/Private/Templates/Layouts/`
+
+If the :path:`Private` folder looked like this before:
+
+..  directory-tree::
+    :level: 2
+
+    *   :path:`EXT:my_sitepackage/Resources/Private/`
+
+        *   :path:`Languages`
+        *   :path:`Layouts`
+
+            *   :path:`Pages`
+
+        *   :path:`Partials`
+
+            *   :path:`Pages`
+
+        *   :path:`Templates`
+
+            *   :path:`Pages`
+
+It should look like this afterwards:
+
+..  directory-tree::
+    :level: 2
+
+    *   :path:`EXT:my_sitepackage/Resources/Private/`
+
+        *   :path:`Languages`
+        *   :path:`Templates`
+
+            *   :path:`Layouts`
+            *   :path:`Pages`
+            *   :path:`Partials`
+
