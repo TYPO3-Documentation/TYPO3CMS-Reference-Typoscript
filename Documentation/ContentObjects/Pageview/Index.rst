@@ -228,25 +228,28 @@ templates:
 
 The content of the folder could look like this:
 
-*   EXT:my_sitepackage/Resources/Private/Templates/
+..  directory-tree::
+    :level: 2
 
-    *   Layouts
+    *   EXT:my_sitepackage/Resources/Private/Templates/
 
-        *   Default.html
-        *   WithoutHeader.html
+        *   Layouts
 
-    *   Pages
+            *   Default.html
+            *   WithoutHeader.html
 
-        *   Default.html
-        *   StartPage.html
-        *   TwoColumns.html
-        *   With_sidebar.html
+        *   Pages
 
-    *   Partials
+            *   Default.html
+            *   StartPage.html
+            *   TwoColumns.html
+            *   With_sidebar.html
 
-        *   Footer.html
-        *   Sidebar.html
-        *   Menu.html
+        *   Partials
+
+            *   Footer.html
+            *   Sidebar.html
+            *   Menu.html
 
 If a page has a backend layout named "with_sidebar", the template file is
 then resolved
