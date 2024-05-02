@@ -264,12 +264,18 @@ The content of the folder could look like this:
             *   Sidebar.html
             *   Menu.html
 
-If a page has a backend layout named "with_sidebar", the template file is
-then resolved
-to :file:`EXT:my_sitepackage/Resources/Private/Templates/Pages/With_sidebar.html`.
+..  note::
+    If the name of the backend layout starts with a lowercase letter,
+    the first letter of the template name is transformed into upper case.
 
-If the backend layout is named "TwoColumns" it is resovled to
-:file:`EXT:my_sitepackage/Resources/Private/Templates/Pages/TwoColumns.html`.
+    However the template name is not necessarily transferred into CamelCase.
+
+So for backend layout named "with_sidebar", the template file is
+    then resolved to
+    :file:`EXT:my_sitepackage/Resources/Private/Templates/Pages/With_sidebar.html`.
+
+    If the backend layout is named "TwoColumns" it is resovled to
+    :file:`EXT:my_sitepackage/Resources/Private/Templates/Pages/TwoColumns.html`.
 
 For all these templates
 :ref:`partials <t3viewhelper:render_partial>`
