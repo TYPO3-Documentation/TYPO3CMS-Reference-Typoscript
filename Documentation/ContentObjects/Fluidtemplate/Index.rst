@@ -17,6 +17,17 @@ It can be used in :ref:`content elements <t3coreapi:adding-your-own-content-elem
 or to generate content within the top-level object page
 (see :ref:`the example on this page <cobj-fluidtemplate-examples>`).
 
+..  versionadded:: 13.1
+
+    Starting with TYPO3 v13.1 you can use the content object
+    :ref:`PAGEVIEW <cobj-pageview>` for templates on page-level. It reduces
+    the amount of TypoScript needed to render a page in the TYPO3 frontend.
+
+    See section :ref:`cobj-fluidtemplate-migration`.
+
+..  contents:: Table of content
+    :local:
+    :depth: 1
 
 .. _cobj-fluidtemplate-data:
 
@@ -519,11 +530,17 @@ variables
 Example
 =======
 
+..  versionadded:: 13.1
+    It is recommended to use :ref:`PAGEVIEW <cobj-pageview>` for page templates
+    starting with TYPO3 v13.1. See
+    :ref:`How to migrate to PAGEVIEW <cobj-fluidtemplate-migration>`
+
 The Fluid template in
-:file:`EXT:site_default/Resources/Private/Templates/MyTemplate.html` could look
+:file:`EXT:my_sitepackage/Resources/Private/Templates/MyTemplate.html` could look
 like this:
 
 ..  code-block:: html
+    :caption: EXT:my_sitepackage/Resources/Private/Templates/MyTemplate.html
 
     <h1>{data.title}<f:if condition="{data.subtitle}">, {data.subtitle}</f:if></h1>
     <h3>{mylabel}</h3>
@@ -533,16 +550,17 @@ like this:
 You could use it with a TypoScript code like this:
 
 ..  code-block:: typoscript
+    :caption: Before migration, EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
 
     page = PAGE
     page.10 = FLUIDTEMPLATE
     page.10 {
        templateName = MyTemplate
        templateRootPaths {
-          10 = EXT:site_default/Resources/Private/Templates
+          10 = EXT:my_sitepackage/Resources/Private/Templates
        }
        partialRootPaths {
-          10 = EXT:site_default/Resources/Private/Partials
+          10 = EXT:my_sitepackage/Resources/Private/Partials
        }
        variables {
           mylabel = TEXT
@@ -563,3 +581,64 @@ headlines. The copyright year will be taken from the TypoScript constant
     *   :ref:`dataProcessing` examples
     *   :ref:`t3coreapi:adding-your-own-content-elements`
     *   :ref:`t3sitepackage:start`
+
+
+.. _cobj-fluidtemplate-migration:
+
+Migration from `FLUIDTEMPLATE` to `PAGEVIEW`
+============================================
+
+..  literalinclude:: _includes/_BeforeMigrationToPageview.typoscript
+    :language: typoscript
+    :caption: Before migration, EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
+
+..  literalinclude:: _includes/_AfterMigrationToPageview.typoscript
+    :language: typoscript
+    :caption: After migration, EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
+
+In Fluid, the pageUid is available as :fluid:`{page.uid}` and pageTitle
+as :fluid:`{page.title}`, the subtitle with :fluid:`{page.subtitle}`.
+
+In this example some Fluid templates have to be moved:
+
+:path:`EXT:my_sitepackage/Resources/Private/Templates/Pages/`
+    The page-templates can stay in this folder.
+:path:`EXT:my_sitepackage/Resources/Private/Partials/Pages/`
+    Move files to :path:`EXT:my_sitepackage/Resources/Private/Templates/Partials/`
+:path:`EXT:my_sitepackage/Resources/Private/Layouts/Pages/`
+    Move files to :path:`EXT:my_sitepackage/Resources/Private/Templates/Layouts/`
+
+If the :path:`Private` folder looked like this before:
+
+..  directory-tree::
+    :level: 2
+
+    *   :path:`EXT:my_sitepackage/Resources/Private/`
+
+        *   :path:`Languages`
+        *   :path:`Layouts`
+
+            *   :path:`Pages`
+
+        *   :path:`Partials`
+
+            *   :path:`Pages`
+
+        *   :path:`Templates`
+
+            *   :path:`Pages`
+
+It should look like this afterwards:
+
+..  directory-tree::
+    :level: 2
+
+    *   :path:`EXT:my_sitepackage/Resources/Private/`
+
+        *   :path:`Languages`
+        *   :path:`Templates`
+
+            *   :path:`Layouts`
+            *   :path:`Pages`
+            *   :path:`Partials`
+
