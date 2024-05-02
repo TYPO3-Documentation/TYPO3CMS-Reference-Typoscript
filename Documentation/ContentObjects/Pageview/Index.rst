@@ -307,7 +307,7 @@ define fallback directories for the templates:
 The template for a page with a certain backend layout is first searched in
 :path:`EXT:my_special_sitepackage/Resources/Private/Templates/Pages/` then in
 :path:`EXT:my_general_sitepackage/Resources/Private/Templates/Pages/` and last
-in :path:`EXT:my_special_sitepackage/Resources/Private/Templates/Pages/`.
+in :path:`EXT:my_basic_sitepackage/Resources/Private/Templates/Pages/`.
 
 ..  _cobj-pageview-variables:
 
