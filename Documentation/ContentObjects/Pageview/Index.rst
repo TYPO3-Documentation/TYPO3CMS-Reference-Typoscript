@@ -16,10 +16,10 @@ The content object :typoscript:`EXTBASEPLUGIN` allows to render
 :ref:`Extbase <t3coreapi:extbase>` plugins.
 
 The new :typoscript:`PAGEVIEW` content object has very specific conventions and
-defaults, that requires (and allows) less configuration, with the benefit that
+defaults, that requires (and allows) less configuration. The benefit is that
 following these conventions means less boilerplate code to maintain.
 
-If you follow these conventions, a few directories and files most follow the
+If you follow these conventions, a few directories and files must follow the
 structure outlined below.
 
 ..  contents:: Table of contents
