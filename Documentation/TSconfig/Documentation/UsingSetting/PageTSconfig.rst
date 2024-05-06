@@ -17,7 +17,8 @@ The options described below are available for setting page TSconfig in
 non-sitepackage extensions.
 
 Page TSconfig can be defined globally as
-:ref:`Default page TSconfig <pagesettingdefaultpagetsconfig>` or for a
+:ref:`Default page TSconfig <pagesettingdefaultpagetsconfig>`, on site level via
+:ref:`Page TSconfig via site or set <include-static-page-tsconfig-per-site>` or for a
 :ref:`page tree <include-static-page-tsconfig>`, a page and all its subpages.
 
 It is also possible to set
@@ -75,7 +76,6 @@ TYPO3 v11 and v12 by importing the content of this file with the API function
     :language: php
     :caption: EXT:my_sitepackage/ext_localconf.php
 
-
 .. _include-static-page-tsconfig-per-site:
 
 Page TSconfig on site level
@@ -84,17 +84,20 @@ Page TSconfig on site level
 ..  versionadded:: 13.1
     Page TSconfig can be included on a per site level.
 
-Site Page TSconfig is loaded from :file:`page.tsconfig` if placed next to
-site configuration file :file:`config.yaml` and is scoped to pages within that
-site.
+Page TSconfig can be defined on a site level by placing a file called
+:file:`page.tsconfig` in the storage directory of the site
+(:ref:`config/sites/<identifier>/ <t3coreapi:site-storage>`).
+
+Extensions and site packages can provide page TSconfig in
+:ref:`site sets <t3coreapi:site-sets>` by placing a a file called :file:`page.tsconfig`
+into the folder of that set.
 
 This way sites and sets can ship page TSconfig without the need for database
 entries or by polluting global scope. Dependencies can be expressed via site sets,
 allowing for automatic ordering and deduplication.
 
-See also :ref:`Feature: #103437 - Introduce site sets <changelog:feature-103437-1712062105>`
-
-..  todo: Link site sets once they are documented
+See also
+:ref:`site sets as page TSconfig provider <t3coreapi:site-sets-page-tsconfig>`.
 
 .. _include-static-page-tsconfig-per-site-example:
 
@@ -156,8 +159,8 @@ Static page TSconfig that has been
 :ref:`registered <register-static-page-tsconfig>` by your sitepackage or a
 third party extension can be included in the page properties.
 
-#. Go to the page properties of the page where you want to include the page TSconfig.
-#. Go to the tab :guilabel:`Resources`, then to
+#.  Go to the page properties of the page where you want to include the page TSconfig.
+#.  Go to the tab :guilabel:`Resources`, then to
     :guilabel:`page TSconfig > Include static page TSconfig (from extensions)` and
     select the desired configurations from the :guilabel:`Available Items`.
 
