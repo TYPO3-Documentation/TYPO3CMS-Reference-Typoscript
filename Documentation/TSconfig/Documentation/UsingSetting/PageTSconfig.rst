@@ -75,6 +75,72 @@ TYPO3 v11 and v12 by importing the content of this file with the API function
     :language: php
     :caption: EXT:my_sitepackage/ext_localconf.php
 
+
+.. _include-static-page-tsconfig-per-site:
+
+Page TSconfig on site level
+===========================
+
+..  versionadded:: 13.1
+    Page TSconfig can be included on a per site level.
+
+Site Page TSconfig is loaded from :file:`page.tsconfig` if placed next to
+site configuration file :file:`config.yaml` and is scoped to pages within that
+site.
+
+This way sites and sets can ship page TSconfig without the need for database
+entries or by polluting global scope. Dependencies can be expressed via site sets,
+allowing for automatic ordering and deduplication.
+
+See also :ref:`Feature: #103437 - Introduce site sets <changelog:feature-103437-1712062105>`
+
+..  todo: Link site sets once they are documented
+
+.. _include-static-page-tsconfig-per-site-example:
+
+Example: load page TSconfig from the site set and the site
+----------------------------------------------------------
+
+Let us assume, you have a site set defined in your extension:
+
+..  code-block:: yaml
+    :caption: EXT:my_extension/Configuration/Sets/MySet/config.yaml
+
+    name: my-vendor/my-set
+    label: My Set
+
+And use it in a site in your project:
+
+..  code-block:: yaml
+    :caption: config/sites/my-site/config.yaml
+
+    base: 'http://example.com/'
+    rootPageId: 1
+    dependencies:
+      - my-vendor/my-set
+
+You can now put a file called :file:`page.tsconfig` in the same folder like your
+site configuration and it will be automatically loaded for all pages in that
+site.
+
+..  code-block:: tsconfig
+    :caption: config/sites/my-site/config.tsconfig
+
+    # This tsconfig will be loaded for pages in site "my-site"
+    # [...]
+
+Or you can put the file :file:`page.tsconfig` in the same directory like the
+site set you defined in your extension. It will then be loaded by all pages
+of all sites that depend on this set:
+
+
+..  code-block:: tsconfig
+    :caption: EXT:my_extension/Configuration/Sets/MySet/config.tsconfig
+
+    # This tsconfig will be loaded for pages in all sites that depend on set 'my-vendor/my-set'
+    # [...]
+
+
 .. index:: pair: Page TSconfig; Static TSconfig files
 .. _pagesettingstaticpagetsconfigfiles:
 
