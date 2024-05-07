@@ -6,14 +6,14 @@
 return [
     [
         'action' => 'createCodeSnippet',
-        'sourceFile' => 'typo3conf/ext/examples/Configuration/TsConfig/Page/Mod/csvExport.tsconfig',
+        'sourceFile' => 'EXT:examples/Configuration/TsConfig/Page/Mod/csvExport.tsconfig',
         'targetFileName' => 'PageTSconfig/Mod/CsvExport.rst.txt',
         'caption' => 'EXT:examples/Configuration/TsConfig/Page/Mod/csvExport.tsconfig',
         'language' => 'typoscript',
     ],
     [
         'action' => 'createCodeSnippet',
-        'sourceFile' => 'typo3conf/ext/examples/Configuration/TsConfig/Page/Mod/noExportRecordsLinks.tsconfig',
+        'sourceFile' => 'EXT:examples/Configuration/TsConfig/Page/Mod/noExportRecordsLinks.tsconfig',
         'targetFileName' => 'PageTSconfig/Mod/noExportRecordsLinks.rst.txt',
         'caption' => 'EXT:examples/Configuration/TsConfig/Page/Mod/noExportRecordsLinks.tsconfig',
         'language' => 'typoscript',

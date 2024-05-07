@@ -11,7 +11,7 @@ docs: ## Generate projects docs (from "Documentation" directory)
 
 .PHONY: codesnippets
 codesnippets: ## Regenerate automatic code snippets
-	.Build/vendor/bin/typo3 codesnippet:create Documentation/CodeSnippets/
+	.Build/bin/typo3 codesnippet:create Documentation/CodeSnippets/
 
 .PHONY: test
 test: test-lint test-cgl test-docs ## Runs all test suites
