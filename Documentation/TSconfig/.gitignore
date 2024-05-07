@@ -33,3 +33,4 @@ nbproject
 Thumbs.db
 var/
 .cache/
+/composer.json.testing

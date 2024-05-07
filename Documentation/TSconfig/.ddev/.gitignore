@@ -34,8 +34,8 @@
 /providers/upsun.yaml
 /sequelpro.spf
 /settings/settings.ddev.py
-/traefik/config/ddev-test.yaml
-/traefik/certs/ddev-test.crt
-/traefik/certs/ddev-test.key
+/traefik/config/reference-tsconfig.yaml
+/traefik/certs/reference-tsconfig.crt
+/traefik/certs/reference-tsconfig.key
 /xhprof/xhprof_prepend.php
 /**/README.*
