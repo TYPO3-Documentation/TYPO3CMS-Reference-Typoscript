@@ -1,0 +1,7 @@
+name: myvendor/my-sitepackage
+label: My sitepackage set
+
+# Load TypoScript, TSconfig and settings from dependencies
+dependencies:
+  - typo3/fluid-styled-content
+  - typo3/felogin
