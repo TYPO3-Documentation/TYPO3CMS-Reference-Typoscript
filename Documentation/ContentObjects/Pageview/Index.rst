@@ -278,7 +278,7 @@ So for backend layout named "with_sidebar", the template file is
     :file:`EXT:my_sitepackage/Resources/Private/Templates/Pages/TwoColumns.html`.
 
 For all these templates
-:ref:`partials <t3viewhelper:render_partial>`
+:confval:`partials <t3viewhelper:typo3fluid-fluid-render-partial>`
 are expected in folder
 :path:`EXT:my_sitepackage/Resources/Private/Templates/Pages/Partials` and
 :ref:`layouts <t3viewhelper:typo3fluid-fluid-layout>` in
