@@ -89,7 +89,7 @@ Page TSconfig can be defined on a site level by placing a file called
 (:ref:`config/sites/<identifier>/ <t3coreapi:site-storage>`).
 
 Extensions and site packages can provide page TSconfig in
-:ref:`site sets <t3coreapi:site-sets>` by placing a a file called :file:`page.tsconfig`
+:ref:`site sets <t3coreapi:site-sets>` by placing a file called :file:`page.tsconfig`
 into the folder of that set.
 
 This way sites and sets can ship page TSconfig without the need for database
