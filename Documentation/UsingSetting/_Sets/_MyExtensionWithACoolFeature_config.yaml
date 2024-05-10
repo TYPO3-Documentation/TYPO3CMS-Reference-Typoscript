@@ -1,0 +1,6 @@
+name: myvendor/my-extension-with-a-cool-feature
+label: Set for a cool feature
+
+# This feature depends on the TypoScript and settings of the main set
+dependencies:
+  - myvendor/my-extension

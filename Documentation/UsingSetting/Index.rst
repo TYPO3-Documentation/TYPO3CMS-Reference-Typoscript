@@ -20,6 +20,7 @@ The TypoScript template configuration can be viewed and edited in the
    :maxdepth: 5
    :titlesonly:
 
+   SiteTypoScriptProvider
    Entering
    AddTypoScriptWithExtensions
    AccessTypoScriptWithExtensions
