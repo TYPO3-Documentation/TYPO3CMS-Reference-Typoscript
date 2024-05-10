@@ -7,7 +7,7 @@ Add TypoScript in your extension
 ================================
 
 ..  versionchanged:: 13.1
-    TypoScript on a per site basis can now be included via
+    TypoScript on a per-site basis can now be included via
     :ref:`sites and sets <typoscript-site-sets>`.
 
 .. note::
