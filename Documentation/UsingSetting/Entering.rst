@@ -7,7 +7,7 @@ Add TypoScript in the backend
 =============================
 
 ..  versionchanged:: 13.1
-    TypoScript on a per site basis can now be entered via
+    TypoScript on a per-site basis can now be entered via
     :ref:`sites and sets <typoscript-site-sets>` It is still possible but not
     recommended to keep TypoScript in the backend in TYPO3 13.
 

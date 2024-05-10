@@ -159,10 +159,10 @@ The extended file structure of the extension could, for example look like this:
 .. _extdev-add-typoscript-sets-v12-static_includes:
 .. _extdev-static-includes:
 
-Only for TYPO3 v12.4: Make TypoScript available for static includes
+Only when supporting TYPO3 v12.4: Make TypoScript available for static includes
 -------------------------------------------------------------------
 
-Make TypoScript available for static includes (Only for TYPO3 v12.4):
+Make TypoScript available for static includes (only needed if your extensions aims to support TYPO3 v12.4):
 
 ..  literalinclude:: _Sets/_TcaOverridesSystemplateV12.php
     :language: php
