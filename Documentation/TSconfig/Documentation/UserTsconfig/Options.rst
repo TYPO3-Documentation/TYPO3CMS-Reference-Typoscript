@@ -568,13 +568,13 @@ file_list.uploader.defaultAction
     Default action for the modal that appears when during file upload a name
     collision occurs. Possible values:
 
-    :typoscript:`Cancel`
+    :typoscript:`cancel`
         Abort the action.
 
-    :typoscript:`Rename`
+    :typoscript:`rename`
         Append the file name with a numerical index.
 
-    :typoscript:`Replace`
+    :typoscript:`replace`
         Override the file with the uploaded one.
 
 
