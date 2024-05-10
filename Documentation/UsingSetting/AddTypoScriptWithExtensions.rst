@@ -69,9 +69,9 @@ The file structure of the extension could, for example look like this:
     *   composer.json
     *   ...
 
-With the extension's TypoScript residing in :file:`EXT:my_extension/Configuration/TypoScript`
+With the extension's TypoScript residing in :file:`EXT:my_extension/Configuration/Sets/MyExtension`
 and the TypoScript for some optional feature in
-:file:`EXT:my_extension/Configuration/TypoScript/SomeCoolFeature`. Let us assume, that the
+:file:`EXT:my_extension/Configuration/Sets/MyExtensionWithACoolFeature`. Let us assume, that the
 optional feature depends on the main TypoScript.
 
 The sets can now be defined for TYPO3 v13 as follows:
