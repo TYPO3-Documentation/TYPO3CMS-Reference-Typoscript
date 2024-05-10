@@ -69,7 +69,7 @@ The file structure of the extension could, for example look like this:
     *   composer.json
     *   ...
 
-With the extensions TypoScript residing in :file:`EXT:my_extension/Configuration/TypoScript`
+With the extension's TypoScript residing in :file:`EXT:my_extension/Configuration/TypoScript`
 and the TypoScript for some optional feature in
 :file:`EXT:my_extension/Configuration/TypoScript/SomeCoolFeature`. Let us assume, that the
 optional feature depends on the main TypoScript.
