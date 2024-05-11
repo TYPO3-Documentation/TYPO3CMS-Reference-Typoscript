@@ -24,10 +24,11 @@ page records for the menu.
 Properties
 ==========
 
-..  _hmenu-special-userfunction-userfunc:
+..  confval-menu::
+    :display: table
+    :type:
 
-special.userFunc
-----------------
+..  _hmenu-special-userfunction-userfunc:
 
 ..  confval:: special.userFunc
     :name: hmenu-userfunction-special-userfunc
@@ -38,7 +39,7 @@ special.userFunc
 ..  _hmenu-special-userfunction-examples:
 
 Example: Set a userFunc
-~~~~~~~~~~~~~~~~~~~~~~~
+=======================
 
 ..  code-block:: typoscript
     :caption: This is still possible for backward compability reasons but not recommended:

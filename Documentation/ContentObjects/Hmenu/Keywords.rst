@@ -19,40 +19,21 @@ Mount pages are supported.
 Properties
 ==========
 
-..  _hmenu-special-keywords-value:
+..  confval-menu::
+    :display: table
+    :type:
+    :Default:
 
-special.value
--------------
+..  _hmenu-special-keywords-value:
 
 ..  confval:: special.value
     :name: hmenu-keywords-special-value
     :type: integer /:ref:`stdWrap <stdwrap>`
+    :Example: :ref:`hmenu-special-keywords-value-example`
 
     UID of the page for which related pages by keyword should be found.
 
-..  _hmenu-special-keywords-value-example:
-
-Example: Find related pages of the current page
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-    lib.relatedPagesMenu = HMENU
-    lib.relatedPagesMenu {
-        special = keywords
-        special {
-            value.data = TSFE:id
-            entryLevel = 1
-            mode = manual
-        }
-        // render the menu
-    }
-
 ..  _hmenu-special-keywords-mode:
-
-special.mode
--------------
 
 ..  confval:: special.mode
     :name: hmenu-keywords-special-mode
@@ -85,9 +66,6 @@ special.mode
 
 ..  _hmenu-special-keywords-entrylevel:
 
-special.entryLevel
--------------------
-
 ..  confval:: special.entryLevel
     :name: hmenu-keywords-special-entryLevel
     :type: integer
@@ -97,9 +75,6 @@ special.entryLevel
     See property :ref:`entryLevel in the HMENU <hmenu-entrylevel>`.
 
 ..  _hmenu-special-keywords-depth:
-
-special.depth
---------------
 
 ..  confval:: special.depth
     :name: hmenu-keywords-special-depth
@@ -111,9 +86,6 @@ special.depth
 
 ..  _hmenu-special-keywords-limit:
 
-special.limit
---------------
-
 ..  confval:: special.limit
     :name: hmenu-keywords-special-limit
     :type: integer
@@ -124,29 +96,14 @@ special.limit
 
 ..  _hmenu-special-keywords-excludenosearchpages:
 
-special.excludeNoSearchPages
------------------------------
-
 ..  confval:: special.excludeNoSearchPages
     :name: hmenu-keywords-special-excludeNoSearchPages
     :type: boolean
     :Default: false
 
-..  container:: table-row
-
-   Property
-         special.excludeNoSearchPages
-
-   Data type
-         boolean
-
-   Description
-         If set, pages marked `No search` are not included.
+    If set, pages marked `No search` are not included.
 
 ..  _hmenu-special-keywords-begin:
-
-special.begin
---------------
 
 ..  confval:: special.begin
     :name: hmenu-keywords-special-begin
@@ -155,9 +112,6 @@ special.begin
     ..  TODO: What does this do?
 
 ..  _hmenu-special-keywords-setkeywords:
-
-special.setKeywords
---------------------
 
 ..  confval:: special.setKeywords
     :name: hmenu-keywords-special-setKeywords
@@ -169,9 +123,6 @@ special.setKeywords
 
 ..  _hmenu-special-keywords-keywordsfield:
 
-special.keywordsField
-----------------------
-
 ..  confval:: special.keywordsField
     :name: hmenu-keywords-special-keywordsField
     :type: string
@@ -182,9 +133,6 @@ special.keywordsField
     if the field you enter here exists, so make sure to enter an existing field.
 
 ..  _hmenu-special-keywords-sourcefield:
-
-special.keywordsField.sourceField
-----------------------------------
 
 ..  confval:: special.keywordsField.sourceField
     :name: hmenu-keywords-special-setKeywords-sourceField
@@ -198,8 +146,13 @@ special.keywordsField.sourceField
 
 ..  _hmenu-special-keywords-examples:
 
+Examples
+========
+
+..  _hmenu-special-keywords-example-related:
+
 Example: Menu of related pages
-==============================
+------------------------------
 
 The content element :guilabel:`Menu > Related pages` provided by the system
 Extension EXT:fluid_styled_content is configured with a :php:`MenuProcessor`
@@ -211,3 +164,22 @@ all its properties:
 The following Fluid template can be used to style the menu:
 
 ..  include:: /CodeSnippets/Menu/Template/MenuRelatedPages.rst.txt
+
+..  _hmenu-special-keywords-value-example:
+
+Example: Find related pages of the current page
+-----------------------------------------------
+
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+    lib.relatedPagesMenu = HMENU
+    lib.relatedPagesMenu {
+        special = keywords
+        special {
+            value.data = TSFE:id
+            entryLevel = 1
+            mode = manual
+        }
+        // render the menu
+    }
