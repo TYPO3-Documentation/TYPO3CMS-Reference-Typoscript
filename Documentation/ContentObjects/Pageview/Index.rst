@@ -24,7 +24,7 @@ structure outlined below.
 
 ..  contents:: Table of contents
     :local:
-    :depth: 1
+    :depth: 2
 
 ..  _cobj-pageview-properties-example:
 
@@ -40,27 +40,53 @@ Example: Display a page with Fluid templates
 Default variables in Fluid templates
 ====================================
 
-..  contents::
-    :local:
-
 The following variables are available by default in the Fluid template.
 
 Additional variables can be defined with property
-:ref:`variables <cobj-pageview-variables>`.
+:confval:`variables <pageview-variables>`.
+
+..  confval-menu::
+    :display: table
+    :type:
+
+    ..  confval:: language
+        :name: pageview-data-language
+        :type: :php:`\TYPO3\CMS\Core\Site\Entity\SiteLanguage`
+        :Example: :ref:`cobj-pageview-data-language-example`
+
+        The current :php:`SiteLanguage` object, see also
+        :ref:`the SiteLanguage object <t3coreapi:sitehandling-sitelanguage-object>`.
+
+    ..  confval:: page
+        :name: pageview-data-page
+        :type: :php:`TYPO3\CMS\Frontend\Page\PageInformation`
+        :Example: :ref:`cobj-pageview-data-page-example`
+
+        The current `PageInformation` as object. See also
+        :ref:`Frontend page information <t3coreapi:typo3-request-attribute-frontend-page-information>`.
 
 
-.. _cobj-pageview-data-language:
+    ..  confval:: settings
+        :name: pageview-data-settings
+        :type: array
+        :Example: :ref:`cobj-pageview-data-settings-example`
 
-language
---------
+        The variable :fluid:`{settings}` contains all TypoScript
+        :ref:`constants <typoscript-syntax-constants>` that are set on the current
+        page.
 
-..  confval:: language
-    :name: pageview-data-language
-    :type: :php:`\TYPO3\CMS\Core\Site\Entity\SiteLanguage`
+    ..  confval:: site
+        :name: pageview-data-site
+        :type: :php:`\TYPO3\CMS\Core\Site\Entity\Site`
+        :Example: :ref:`cobj-pageview-data-site-example`
 
-    The current :php:`SiteLanguage` object, see also
-    :ref:`the SiteLanguage object <t3coreapi:sitehandling-sitelanguage-object>`.
+        The current :php:`Site` object. See also
+        :ref:`the Site object <t3coreapi:sitehandling-site-object>`.
 
+.. _cobj-pageview-data-example:
+
+Examples for using default variables
+------------------------------------
 
 .. _cobj-pageview-data-language-example:
 
@@ -71,18 +97,6 @@ Example: Display the site title in the current language
     :language: html
     :caption: EXT:my_sitepackage/Resources/Private/Templates/Pages/Default.html
 
-.. _cobj-pageview-data-page:
-
-page
-----
-
-..  confval:: page
-    :name: pageview-data-page
-    :type: :php:`TYPO3\CMS\Frontend\Page\PageInformation`
-
-    The current `PageInformation` as object. See also
-    :ref:`Frontend page information <t3coreapi:typo3-request-attribute-frontend-page-information>`.
-
 .. _cobj-pageview-data-page-example:
 
 Example: Display the title and abstract of the current page
@@ -91,19 +105,6 @@ Example: Display the title and abstract of the current page
 ..  literalinclude:: _includes/_DisplayPageInfo.html
     :language: html
     :caption: EXT:my_sitepackage/Resources/Private/Templates/Pages/Default.html
-
-.. _cobj-pageview-data-settings:
-
-settings
---------
-
-..  confval:: settings
-    :name: pageview-data-settings
-    :type: array
-
-    The variable :fluid:`{settings}` contains all TypoScript
-    :ref:`constants <typoscript-syntax-constants>` that are set on the current
-    page.
 
 .. _cobj-pageview-data-settings-example:
 
@@ -120,16 +121,6 @@ Let us assume, the current page loads the following TypoScript constants:
     :language: html
     :caption: EXT:my_sitepackage/Resources/Private/Templates/Pages/Default.html
 
-site
-----
-
-..  confval:: site
-    :name: pageview-data-site
-    :type: :php:`\TYPO3\CMS\Core\Site\Entity\Site`
-
-    The current :php:`Site` object. See also
-    :ref:`the Site object <t3coreapi:sitehandling-site-object>`.
-
 .. _cobj-pageview-data-site-example:
 
 Example: Link to the root page of the current site
@@ -144,32 +135,59 @@ Example: Link to the root page of the current site
 Properties
 ==========
 
-..  contents::
-    :local:
+..  confval-menu::
+    :display: table
+    :type:
 
-..  _cobj-pageview-cache:
+    ..  confval:: cache
+        :name: pageview-cache
+        :type: :ref:`cache <cache>`
 
-cache
------
+        See :ref:`cache function description <cache>` for details.
 
-..  confval:: cache
-    :name: pageview-cache
-    :type: :ref:`cache <cache>`
+    ..  confval:: dataProcessing.[key]
+        :name: pageview-dataProcessing
+        :type: :ref:`data-type-path` with :ref:`stdWrap <stdwrap>`
+        :Example: :ref:`cobj-pageview-dataProcessing-example`
 
-    See :ref:`cache function description <cache>` for details.
+        Add one or multiple :ref:`data processors <dataProcessing>`. The
+        sub-property :typoscript:`options` can be used to pass parameters to the
+        processor class.
 
-..  _cobj-pageview-dataProcessing:
+    ..  confval:: paths.[priority]
+        :name: pageview-paths
+        :type: :ref:`data-type-path` with :ref:`stdWrap <stdwrap>`
+        :Example: :ref:`cobj-pageview-paths-example`
+        :Example 2: :ref:`cobj-pageview-paths-example-extended`
 
-dataProcessing
---------------
+        Sets an array of paths for the Fluid templates, usually
+        :file:`EXT:my_extension/Resources/Private/Templates/` or a folder below that
+        path like :file:`EXT:my_extension/Resources/Private/Templates/MyPages`.
 
-..  confval:: dataProcessing.[key]
-    :name: pageview-dataProcessing
-    :type: :ref:`data-type-path` with :ref:`stdWrap <stdwrap>`
+        The templates are expected in a subfolder :path:`Pages` or
+        :path:`pages`.
 
-    Add one or multiple :ref:`data processors <dataProcessing>`. The
-    sub-property :typoscript:`options` can be used to pass parameters to the
-    processor class.
+        Fluid partials are looked up in a sub-directory called :path:`Partials` or
+        :path:`partials`, layouts in :path:`Layouts` or :path:`layouts`.
+
+        The name of the used page layout (:ref:`Backend layout <t3coreapi:be-layout>`)
+        is resolved automatically.
+
+        The paths are evaluated from highest to lowest priority.
+
+    ..  confval:: variables.[variable_name]
+        :name: pageview-variables
+        :type: :ref:`Content Object <cobject>`
+        :Example: :ref:`cobj-pageview-variables-example`
+
+        Sets variables that should be available in Fluid.
+
+..  _cobj-pageview-examples:
+
+Examples
+--------
+
+..  _cobj-pageview-dataProcessing-example:
 
 Example: Display a main menu and a breadcrumb on the page
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -197,32 +215,6 @@ And
 ..  literalinclude:: _includes/_PartialMainNavigation.html
     :language: html
     :caption: EXT:my_sitepackage/Resources/Private/Templates/Partials/Navigation/MainNavigation.html
-
-
-..  _cobj-pageview-paths:
-
-paths
------
-
-..  confval:: paths.[priority]
-    :name: pageview-paths
-    :type: :ref:`data-type-path` with :ref:`stdWrap <stdwrap>`
-
-    Sets an array of paths for the Fluid templates, usually
-    :file:`EXT:my_extension/Resources/Private/Templates/` or a folder below that
-    path like :file:`EXT:my_extension/Resources/Private/Templates/MyPages`.
-
-    The templates are expected in a subfolder :path:`Pages` or
-    :path:`pages`.
-
-    Fluid partials are looked up in a sub-directory called :path:`Partials` or
-    :path:`partials`, layouts in :path:`Layouts` or :path:`layouts`.
-
-    The name of the used page layout (:ref:`Backend layout <t3coreapi:be-layout>`)
-    is resolved automatically.
-
-    The paths are evaluated from highest to lowest priority.
-
 
 ..  _cobj-pageview-paths-example:
 
@@ -271,11 +263,11 @@ The content of the folder could look like this:
     However the template name is not necessarily transferred into CamelCase.
 
 So for backend layout named "with_sidebar", the template file is
-    then resolved to
-    :file:`EXT:my_sitepackage/Resources/Private/Templates/Pages/With_sidebar.html`.
+then resolved to
+:file:`EXT:my_sitepackage/Resources/Private/Templates/Pages/With_sidebar.html`.
 
-    If the backend layout is named "TwoColumns" it is resovled to
-    :file:`EXT:my_sitepackage/Resources/Private/Templates/Pages/TwoColumns.html`.
+If the backend layout is named "TwoColumns" it is resovled to
+:file:`EXT:my_sitepackage/Resources/Private/Templates/Pages/TwoColumns.html`.
 
 For all these templates
 :confval:`partials <t3viewhelper:typo3fluid-fluid-render-partial>`
@@ -309,16 +301,7 @@ The template for a page with a certain backend layout is first searched in
 :path:`EXT:my_general_sitepackage/Resources/Private/Templates/Pages/` and last
 in :path:`EXT:my_basic_sitepackage/Resources/Private/Templates/Pages/`.
 
-..  _cobj-pageview-variables:
-
-variables
----------
-
-..  confval:: variables.[variable_name]
-    :name: pageview-variables
-    :type: :ref:`Content Object <cobject>`
-
-    Sets variables that should be available in Fluid.
+..  _cobj-pageview-variables-example:
 
 Example: Make additional variables available in the Fluid template
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
