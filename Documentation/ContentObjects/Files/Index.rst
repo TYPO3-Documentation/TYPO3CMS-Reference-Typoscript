@@ -19,10 +19,11 @@ A content object of type FILES uses the :ref:`File Abstraction Layer <t3coreapi:
 Properties
 ==========
 
-..  _cobj-files-cache:
+..  confval-menu::
+    :display: table
+    :type:
 
-cache
------
+..  _cobj-files-cache:
 
 ..  confval:: cache
     :name: files-cache
@@ -32,9 +33,6 @@ cache
 
 
 .. _cobj-files-files:
-
-files
-------
 
 ..  confval:: files
     :name: files-files
@@ -52,9 +50,6 @@ files
 
 
 .. _cobj-files-references:
-
-references
-----------
 
 ..  confval:: references
     :name: files-references
@@ -101,9 +96,6 @@ references
 
 .. _cobj-files-collections:
 
-collections
------------
-
 ..  confval:: collections
     :name: files-collections
     :type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
@@ -113,9 +105,6 @@ collections
 
 
 .. _cobj-files-folders:
-
-folders
--------
 
 ..  confval:: folders
     :name: files-folders
@@ -160,9 +149,6 @@ folders
 
 .. _cobj-files-sorting:
 
-sorting
--------
-
 ..  confval:: sorting
     :name: files-sorting
     :type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
@@ -171,9 +157,6 @@ sorting
 
 
 .. _cobj-files-sorting-direction:
-
-sorting.direction
-~~~~~~~~~~~~~~~~~
 
 ..  confval:: sorting.direction
     :name: files-sorting-direction
@@ -184,11 +167,7 @@ sorting.direction
     files should be sorted. Possible values are "asc" for ascending and
     "desc" for descending.
 
-
 .. _cobj-files-begin:
-
-begin
------
 
 ..  confval:: begin
     :name: files-begin
@@ -199,9 +178,6 @@ begin
 
 
 .. _cobj-files-maxItems:
-
-maxItems
---------
 
 ..  confval:: maxItems
     :name: files-maxItems
@@ -214,9 +190,6 @@ maxItems
 
 
 .. _cobj-files-renderObj:
-
-renderObj
----------
 
 ..  confval:: renderObj
     :name: files-renderObj
@@ -243,9 +216,6 @@ renderObj
 
 .. _cobj-files-stdWrap:
 
-stdWrap
--------
-
 ..  confval:: stdWrap
     :name: files-stdWrap
     :type: :ref:`->stdWrap <stdwrap>`
@@ -259,9 +229,6 @@ Special key: "references"
 
 .. _cobj-files-references-table:
 
-references.table
-----------------
-
 ..  confval:: references.table
     :name: files-references-table
     :type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
@@ -271,9 +238,6 @@ references.table
 
 .. _cobj-files-references-uid:
 
-references.uid
---------------
-
 ..  confval:: references.uid
     :name: files-references-uid
     :type: :ref:`data-type-integer` / :ref:`stdWrap <stdwrap>`
@@ -282,9 +246,6 @@ references.uid
 
 
 .. _cobj-files-references-fieldName:
-
-references.fieldName
---------------------
 
 ..  confval:: references.fieldName
     :name: files-references-fieldName

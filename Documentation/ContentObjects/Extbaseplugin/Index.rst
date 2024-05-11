@@ -11,7 +11,6 @@ EXTBASEPLUGIN
 The content object :typoscript:`EXTBASEPLUGIN` allows to render
 :ref:`Extbase <t3coreapi:extbase>` plugins.
 
-
 ..  contents::
     :local:
 
@@ -20,10 +19,11 @@ The content object :typoscript:`EXTBASEPLUGIN` allows to render
 Properties
 ==========
 
-..  _cobj-extbaseplugin-cache:
+..  confval-menu::
+    :display: table
+    :type:
 
-cache
------
+..  _cobj-extbaseplugin-cache:
 
 ..  confval:: cache
     :name: extbaseplugin-cache
@@ -34,9 +34,6 @@ cache
 
 ..  _cobj-extbaseplugin-extensionName:
 
-extensionName
--------------
-
 ..  confval:: extensionName
     :name: extbaseplugin-extensionName
     :type: :ref:`data-type-string`
@@ -45,9 +42,6 @@ extensionName
 
 
 ..  _cobj-extbaseplugin-pluginName:
-
-pluginName
-----------
 
 ..  confval:: pluginName
     :name: extbaseplugin-pluginName

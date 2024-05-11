@@ -22,19 +22,18 @@ is raised to the maximum timestamp value of the respective records.
    The cObject :ref:`RECORDS <cobj-records>` in contrast is for displaying
    lists of records from a variety of tables without fine graining.
 
-
-.. contents::
-   :local:
+..  contents:: Table of content
 
 ..  _cobj-content-properties:
 
 Properties
 ==========
 
-..  _cobj-content-select:
+..  confval-menu::
+    :display: table
+    :type:
 
-select
-------
+..  _cobj-content-select:
 
 ..  confval:: select
     :name: content-select
@@ -45,9 +44,6 @@ select
 
 
 ..  _cobj-content-table:
-
-table
------
 
 ..  confval:: table
     :name: content-table
@@ -60,9 +56,6 @@ table
 
 
 .. _cobj-content-renderObj:
-
-renderObj
----------
 
 ..  confval:: renderObj
     :name: content-renderObj
@@ -81,9 +74,6 @@ renderObj
 
 
 ..  _cobj-content-slide:
-
-slide
------
 
 ..  confval:: slide
     :name: content-slide
@@ -107,9 +97,6 @@ slide
 
 ..  _cobj-content-slide-collect:
 
-slide.collect
-~~~~~~~~~~~~~
-
 ..  confval:: slide.collect
     :name: content-slide-collect
     :type: :ref:`data-type-integer` / :ref:`stdWrap`
@@ -122,9 +109,6 @@ slide.collect
 
 ..  _cobj-content-slide-collectFuzzy:
 
-slide.collectFuzzy
-~~~~~~~~~~~~~~~~~~
-
 ..  confval:: slide.collectFuzzy
     :name: content-slide-collectFuzzy
     :type: :ref:`data-type-boolean` / :ref:`stdWrap`
@@ -136,9 +120,6 @@ slide.collectFuzzy
 
 ..  _cobj-content-slide-collectReverse:
 
-slide.collectReverse
-~~~~~~~~~~~~~~~~~~~~
-
 ..  confval:: slide.collectReverse
     :name: content-slide-collectReverse
     :type: :ref:`data-type-boolean` / :ref:`stdWrap`
@@ -146,11 +127,7 @@ slide.collectReverse
     Reverse order of elements in collect mode. If set, elements of the current
     page will be at the bottom.
 
-
 ..  _cobj-content-wrap:
-
-wrap
-----
 
 ..  confval:: wrap
     :name: content-wrap
@@ -158,11 +135,7 @@ wrap
 
     Wrap the whole content.
 
-
 ..  _cobj-content-stdWrap:
-
-stdWrap
--------
 
 ..  confval:: stdWrap
     :name: content-stdWrap
@@ -172,9 +145,6 @@ stdWrap
 
 
 ..  _cobj-content-cache:
-
-cache
------
 
 ..  confval:: cache
     :name: content-cache

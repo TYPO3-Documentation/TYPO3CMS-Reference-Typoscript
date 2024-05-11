@@ -29,10 +29,11 @@ they used to be. In the Core they are not being used anymore.
 Properties
 ==========
 
-..  _cobj-load-register-array:
+..  confval-menu::
+    :display: table
+    :type:
 
-(array of field names)
-----------------------
+..  _cobj-load-register-array:
 
 ..  confval:: array of field names
     :name: load-register-array

@@ -21,10 +21,11 @@ Depending on your use case you might prefer using the cObject
 Properties
 ==========
 
-..  _cobj-img-resource-cache:
+..  confval-menu::
+    :display: table
+    :type:
 
-cache
------
+..  _cobj-img-resource-cache:
 
 ..  confval:: cache
     :name: img-resource-cache
@@ -34,18 +35,12 @@ cache
 
 ..  _cobj-img-resource-file:
 
-file
-----
-
 ..  confval:: file
     :name: img-resource-file
     :type: :ref:`->imgResource <imgresource>`
 
 
 ..  _cobj-img-resource-stdWrap:
-
-stdWrap
--------
 
 ..  confval:: stdWrap
     :name: img-resource-stdWrap
