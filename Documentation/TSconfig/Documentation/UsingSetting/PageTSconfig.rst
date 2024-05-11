@@ -127,7 +127,7 @@ site configuration and it will be automatically loaded for all pages in that
 site.
 
 ..  code-block:: tsconfig
-    :caption: config/sites/my-site/config.tsconfig
+    :caption: config/sites/my-site/page.tsconfig
 
     # This tsconfig will be loaded for pages in site "my-site"
     # [...]
@@ -138,7 +138,7 @@ of all sites that depend on this set:
 
 
 ..  code-block:: tsconfig
-    :caption: EXT:my_extension/Configuration/Sets/MySet/config.tsconfig
+    :caption: EXT:my_extension/Configuration/Sets/MySet/page.tsconfig
 
     # This tsconfig will be loaded for pages in all sites that depend on set 'my-vendor/my-set'
     # [...]
