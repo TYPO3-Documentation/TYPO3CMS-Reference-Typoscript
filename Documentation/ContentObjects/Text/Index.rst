@@ -25,10 +25,11 @@ very rootlevel of the object.
 Properties
 ==========
 
-..  _cobj-text-value:
+..  confval-menu::
+    :display: table
+    :type:
 
-value
------
+..  _cobj-text-value:
 
 ..  confval:: value
     :name: text-value
@@ -38,9 +39,6 @@ value
 
 
 ..  _cobj-text-stdWrap:
-
-stdWrap
--------
 
 ..  confval:: stdWrap
     :name: text-stdWrap
@@ -53,9 +51,6 @@ stdWrap
 
 
 ..  _cobj-text-cache:
-
-cache
------
 
 ..  confval:: cache
     :name: text-cache

@@ -26,18 +26,16 @@ be used as it has a special meaning: If the value of the "key"
 property is *not* found in the array of cObjects, then the cObject
 from the "default" property will be used.
 
-..  contents::
-    :local:
-
 ..  _cobj-case-properties:
 
 Properties
 ==========
 
-..  _cobj-case-array-of-cObjects:
+..  confval-menu::
+    :display: table
+    :type:
 
-(array of cObjects)
--------------------
+..  _cobj-case-array-of-cObjects:
 
 ..  confval:: array of cObjects
     :name: case-array
@@ -50,9 +48,6 @@ Properties
 
 ..  _cobj-case-cache:
 
-cache
------
-
 ..  confval:: cache
     :name: case-cache
     :type: :ref:`cache <cache>`
@@ -62,23 +57,17 @@ cache
 
 ..  _cobj-case-default:
 
-default
--------
-
 ..  confval:: default
     :name: case-default
     :type: :ref:`cObject <data-type-cobject>`
 
-     Use this to define the rendering for *those* values of :ref:`cobj-case-key` that
-     do *not* match any of the values of the :ref:`cobj-case-array-of-cObjects`. If no
-     default cObject is defined, an empty string will be returned for
-     the default case.
+    Use this to define the rendering for *those* values of :ref:`cobj-case-key` that
+    do *not* match any of the values of the :ref:`cobj-case-array-of-cObjects`. If no
+    default cObject is defined, an empty string will be returned for
+    the default case.
 
 
 ..  _cobj-case-if:
-
-if
---
 
 ..  confval:: if
     :name: case-if
@@ -88,9 +77,6 @@ if
 
 
 ..  _cobj-case-key:
-
-key
----
 
 ..  confval:: key
     :name: case-key
@@ -112,9 +98,6 @@ key
 
 ..  _cobj-case-setCurrent:
 
-setCurrent
-----------
-
 ..  confval:: setCurrent
     :name: case-setCurrent
     :type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
@@ -123,9 +106,6 @@ setCurrent
 
 
 ..  _cobj-case-stdWrap:
-
-stdWrap
--------
 
 ..  confval:: stdWrap
     :name: case-stdWrap
