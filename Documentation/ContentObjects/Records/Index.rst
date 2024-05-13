@@ -33,11 +33,12 @@ the records selected which has a higher value than the current.
 Properties
 ==========
 
+..  confval-menu::
+    :display: table
+    :type:
+
 ..  index:: RECORDS; source
 ..  _cobj-records-properties-source:
-
-source
-------
 
 ..  confval:: source
     :name: records-source
@@ -54,9 +55,6 @@ source
 
 .. index:: RECORDS; categories
 .. _cobj-records-properties-categories:
-
-categories
-----------
 
 ..  confval:: categories
     :name: records-categories
@@ -77,9 +75,6 @@ categories
 
 ..  _cobj-records-categories-relation:
 
-categories.relation
-~~~~~~~~~~~~~~~~~~~
-
 ..  confval:: categories.relation
     :name: records-categories-relation
 
@@ -90,9 +85,6 @@ categories.relation
 
 .. index:: RECORDS; tables
 .. _cobj-records-properties-tables:
-
-tables
-------
 
 ..  confval:: tables
     :name: records-tables
@@ -121,9 +113,6 @@ tables
 .. index:: RECORDS; conf
 .. _cobj-records-properties-conf:
 
-conf
-----
-
 ..  confval:: conf.[*table name*]
     :name: records-conf
     :type: :ref:`cObject <data-type-cobject>`
@@ -139,9 +128,6 @@ conf
 .. index:: RECORDS; dontCheckPid
 .. _cobj-records-properties-dontcheckpid:
 
-dontCheckPid
-------------
-
 ..  confval:: dontCheckPid
     :name: records-dontCheckPid
     :type: :ref:`data-type-boolean` / :ref:`stdWrap <stdwrap>`
@@ -153,9 +139,6 @@ dontCheckPid
 
 .. _cobj-records-properties-wrap:
 
-wrap
-----
-
 ..  confval:: wrap
     :name: records-wrap
     :type: :ref:`wrap <data-type-wrap>` / :ref:`stdWrap <stdwrap>`
@@ -165,9 +148,6 @@ wrap
 
 .. _cobj-records-properties-stdwrap:
 
-stdWrap
--------
-
 ..  confval:: stdWrap
     :name: records-stdWrap
     :type: :ref:`->stdWrap <stdwrap>`
@@ -176,9 +156,6 @@ stdWrap
 
 
 .. _cobj-records-properties-cache:
-
-cache
------
 
 ..  confval:: cache
     :name: records-cache

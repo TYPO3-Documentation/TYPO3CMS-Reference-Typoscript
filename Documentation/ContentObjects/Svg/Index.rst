@@ -18,10 +18,11 @@ or reference a file.
 Properties
 ==========
 
-..  _cobj-svg-cache:
+..  confval-menu::
+    :display: table
+    :type:
 
-cache
------
+..  _cobj-svg-cache:
 
 ..  confval:: cache
     :name: svg-cache
@@ -30,9 +31,6 @@ cache
     See :ref:`cache function description <cache>` for details.
 
 ..  _cobj-svg-width:
-
-width
------
 
 ..  confval:: width
     :name: svg-width
@@ -44,9 +42,6 @@ width
 
 ..  _cobj-svg-height:
 
-height
-------
-
 ..  confval:: height
     :name: svg-height
     :type: :ref:`data-type-integer` / :ref:`stdWrap <stdwrap>`
@@ -56,9 +51,6 @@ height
 
 
 ..  _cobj-svg-src:
-
-src
----
 
 ..  confval:: src
     :name: svg-src
@@ -77,9 +69,6 @@ src
 
 ..  _cobj-svg-renderMode:
 
-renderMode
-----------
-
 ..  confval:: renderMode
     :name: svg-renderMode
     :type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
@@ -88,9 +77,6 @@ renderMode
 
 
 ..  _cobj-svg-stdWrap:
-
-stdWrap
--------
 
 ..  confval:: stdWrap
     :name: svg-stdWrap
