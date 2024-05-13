@@ -53,10 +53,6 @@ to output all available data using the magic `{_all}` variable:
 
    <f:debug>{_all}</f:debug>
 
-.. contents:: On this page:
-   :local:
-   :depth: 1
-
 .. toctree::
    :hidden:
 
@@ -68,10 +64,11 @@ to output all available data using the magic `{_all}` variable:
 Properties
 ==========
 
-..  _cobj-_fluidtemplate-cache:
+..  confval-menu::
+    :display: table
+    :type:
 
-cache
------
+..  _cobj-_fluidtemplate-cache:
 
 ..  confval:: cache
     :name: _fluidtemplate-cache
@@ -80,9 +77,6 @@ cache
     See :ref:`cache function description <cache>` for details.
 
 .. _fluidtemplate-dataProcessing:
-
-dataProcessing
---------------
 
 ..  confval:: dataProcessing
     :name: fluidtemplate-dataProcessing
@@ -99,9 +93,6 @@ dataProcessing
 
 .. _cobj-fluidtemplate-properties-extbase-controlleractionname:
 
-extbase.controllerActionName
-----------------------------
-
 ..  confval:: extbase.controllerActionName
     :name: fluidtemplate-extbase-controlleractionname
     :type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
@@ -109,9 +100,6 @@ extbase.controllerActionName
     Sets the name of the action.
 
 .. _cobj-fluidtemplate-properties-extbase-controllerextensionname:
-
-extbase.controllerExtensionName
--------------------------------
 
 ..  confval:: extbase.controllerExtensionName
     :name: fluidtemplate-extbase-controllerextensionname
@@ -139,9 +127,6 @@ extbase.controllerExtensionName
 
 .. _cobj-fluidtemplate-properties-extbase-controllername:
 
-extbase.controllerName
-----------------------
-
 ..  confval:: extbase.controllerName
     :name: fluidtemplate-extbase-controllername
     :type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
@@ -150,9 +135,6 @@ extbase.controllerName
 
 .. _cobj-fluidtemplate-properties-extbase-pluginname:
 
-extbase.pluginName
-------------------
-
 ..  confval:: extbase.pluginName
     :name: fluidtemplate-extbase-pluginname
     :type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
@@ -160,9 +142,6 @@ extbase.pluginName
     Sets variables for initializing extbase.
 
 .. _cobj-fluidtemplate-properties-file:
-
-file
-----
 
 ..  confval:: file
     :name: fluidtemplate-file
@@ -186,9 +165,6 @@ file
 
 .. _cobj-fluidtemplate-properties-format:
 
-format
-------
-
 ..  confval:: format
     :name: fluidtemplate-format
     :type: keyword / :ref:`stdWrap <stdwrap>`
@@ -198,9 +174,6 @@ format
     like "html", "xml", "png", "json" or even "rss.xml" or something similar.
 
 .. _cobj-fluidtemplate-properties-layoutrootpath:
-
-layoutRootPath
---------------
 
 ..  confval:: layoutRootPath
     :name: fluidtemplate-layoutrootpath
@@ -217,9 +190,6 @@ layoutRootPath
         sitepackage.
 
 .. _cobj-fluidtemplate-properties-layoutrootpaths:
-
-layoutRootPaths
----------------
 
 ..  confval:: layoutRootPaths
     :name: fluidtemplate-layoutrootpaths
@@ -259,9 +229,6 @@ layoutRootPaths
 
 .. _cobj-fluidtemplate-properties-partialrootpath:
 
-partialRootPath
----------------
-
 ..  confval:: partialRootPath
     :name: fluidtemplate-partialrootpath
     :type: :ref:`data-type-path` / :ref:`stdWrap <stdwrap>`
@@ -277,9 +244,6 @@ partialRootPath
         by the sitepackage.
 
 .. _cobj-fluidtemplate-properties-partialrootpaths:
-
-partialRootPaths
-----------------
 
 ..  confval:: partialRootPaths
     :name: fluidtemplate-partialrootpaths
@@ -299,9 +263,6 @@ partialRootPaths
     for more details.
 
 .. _cobj-fluidtemplate-properties-settings:
-
-settings
---------
 
 ..  confval:: settings
     :name: fluidtemplate-settings
@@ -337,9 +298,6 @@ settings
 
 .. _cobj-fluidtemplate-properties-stdwrap:
 
-stdWrap
--------
-
 ..  confval:: stdWrap
     :name: fluidtemplate-stdwrap
     :type: :ref:`->stdWrap <stdwrap>`
@@ -347,9 +305,6 @@ stdWrap
     Provides the usual stdWrap functionality.
 
 .. _cobj-fluidtemplate-properties-template:
-
-template
---------
 
 ..  confval:: template
     :name: fluidtemplate-template
@@ -368,9 +323,6 @@ template
         :ref:`.file <cobj-fluidtemplate-properties-file>`.
 
 .. _cobj-fluidtemplate-properties-templatename:
-
-templateName
-------------
 
 ..  confval:: templateName
     :name: fluidtemplate-templatename
@@ -447,9 +399,6 @@ templateName
 
 .. _cobj-fluidtemplate-properties-templaterootpath:
 
-templateRootPath
-----------------
-
 ..  confval:: templateRootPath
     :name: fluidtemplate-templaterootpath
     :type: file path /:ref:`stdWrap <stdwrap>`
@@ -465,9 +414,6 @@ templateRootPath
         by the sitepackage.
 
 .. _cobj-fluidtemplate-properties-templaterootpaths:
-
-templateRootPaths
------------------
 
 ..  confval:: templateRootPaths
     :name: fluidtemplate-templaterootpaths
@@ -504,9 +450,6 @@ templateRootPaths
         }
 
 .. _cobj-fluidtemplate-properties-variables:
-
-variables
----------
 
 ..  confval:: variables
     :name: fluidtemplate-variables

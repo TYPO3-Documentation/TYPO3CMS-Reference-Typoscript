@@ -39,10 +39,11 @@ outside the main page-rendering.
 Properties
 ==========
 
-..  _cobj-user-userFunc:
+..  confval-menu::
+    :display: table
+    :type:
 
-userFunc
---------
+..  _cobj-user-userFunc:
 
 ..  confval:: userFunc
     :name: user-userFunc
@@ -67,9 +68,6 @@ userFunc
 
 ..  _cobj-user-defined-properties:
 
-(properties you define)
------------------------
-
 ..  confval:: (properties you define)
     :name: user-defined-properties
     :type: (the data type you want)
@@ -83,17 +81,11 @@ userFunc
 
 ..  _cobj-user-stdWrap:
 
-stdWrap
--------
-
 ..  confval:: stdWrap
     :name: user-stdWrap
     :type: :ref:`stdWrap`.
 
 ..  _cobj-user-cache:
-
-cache
------
 
 ..  confval:: cache
     :name: user-cache
