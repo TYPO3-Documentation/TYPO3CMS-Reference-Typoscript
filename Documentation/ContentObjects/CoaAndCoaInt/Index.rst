@@ -28,18 +28,16 @@ rendered non-cached! That way you cannot only render non-cached
 :ref:`USER_INT <cobj-user-int>` objects, but COA\_INT allows
 you to render *every* cObject non-cached.
 
-..  contents::
-    :local:
-
 ..  _cobj-coa-properties:
 
 Properties
 ==========
 
-..  _cobj-coa-index:
+..  confval-menu::
+    :display: table
+    :type:
 
-1,2,3,4...
------------
+..  _cobj-coa-index:
 
 ..  confval:: 1,2,3,4...
     :name: coa-array
@@ -51,9 +49,6 @@ Properties
 
 ..  _cobj-coa-cache:
 
-cache
------
-
 ..  confval:: cache
     :name: coa-cache
     :type: :ref:`cache <cache>`
@@ -62,9 +57,6 @@ cache
 
 
 ..  _cobj-coa-if:
-
-if
---
 
 ..  confval:: if
     :name: coa-if
@@ -75,9 +67,6 @@ if
 
 ..  _cobj-coa-stdWrap:
 
-stdWrap
--------
-
 ..  confval:: stdWrap
     :name: coa-stdWrap
     :type: :ref:`->stdWrap <stdwrap>`
@@ -86,9 +75,6 @@ stdWrap
 
 
 ..  _cobj-coa-wrap:
-
-wrap
-----
 
 ..  confval:: wrap
     :name: coa-wrap

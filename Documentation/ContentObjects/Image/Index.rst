@@ -42,10 +42,11 @@ If you only need the file path to the image; regardless of whether it's been res
 Properties
 ==========
 
-..  _cobj-image-cache:
+..  confval-menu::
+    :display: table
+    :type:
 
-cache
------
+..  _cobj-image-cache:
 
 ..  confval:: cache
     :name: image-cache
@@ -54,9 +55,6 @@ cache
     See :ref:`cache function description <cache>` for details.
 
 ..  _cobj-image-if:
-
-if
---
 
 ..  confval:: if
     :name: image-if
@@ -67,18 +65,12 @@ if
 
 ..  _cobj-image-file:
 
-file
-----
-
 ..  confval:: file
     :name: image-file
     :type: :ref:`->imgResource <imgresource>`
 
 
 ..  _cobj-image-params:
-
-params
-------
 
 ..  confval:: params
     :name: image-params
@@ -99,10 +91,6 @@ border
 
 
 ..  _cobj-image-altText:
-..  _cobj-image-titleText:
-
-altText / titleText
--------------------
 
 ..  confval:: altText
     :name: image-altText
@@ -110,6 +98,7 @@ altText / titleText
 
     If no alt text is specified, an empty alt text will be used.
 
+..  _cobj-image-titleText:
 
 ..  confval:: titleText
     :name: image-titleText
@@ -117,9 +106,6 @@ altText / titleText
 
 
 ..  _cobj-image-emptyTitleHandling:
-
-emptyTitleHandling
-------------------
 
 ..  confval:: emptyTitleHandling
     :name: image-emptyTitleHandling
@@ -131,9 +117,6 @@ emptyTitleHandling
 
 .. index:: IMAGE; layoutKey
 .. _cobj-image-layoutkey:
-
-layoutKey
----------
 
 ..  confval:: layoutKey
     :name: image-layoutKey
@@ -189,9 +172,6 @@ layoutKey
 .. index:: IMAGE; layout
 .. _cobj-image-layout:
 
-layout
-------
-
 ..  confval:: layout
     :name: image-layout
     :type: array
@@ -201,9 +181,6 @@ layout
 
 .. index:: IMAGE; layout.layoutKey
 .. _cobj-image-layout-layoutkey:
-
-layout.layoutKey
-~~~~~~~~~~~~~~~~
 
 ..  confval:: layout.layoutKey
     :name: image-layout-layoutkey
@@ -224,12 +201,8 @@ layout.layoutKey
           source = <source srcset="###SRC###" media="###MEDIAQUERY###" ###SELFCLOSINGTAGSLASH###>
         }
 
-
 ..  index:: IMAGE; layout.layoutKey.element
 ..  _cobj-image-layout-layoutkey-element:
-
-layout.layoutKey.element
-~~~~~~~~~~~~~~~~~~~~~~~~
 
 ..  confval:: layout.layoutKey.element
     :name: image-layout-layoutkey-element
@@ -267,9 +240,6 @@ layout.layoutKey.element
 ..  index:: IMAGE; layout.layoutKey.source
 ..  _cobj-image-layout-layoutkey-source:
 
-layout.layoutKey.source
-~~~~~~~~~~~~~~~~~~~~~~~
-
 ..  confval:: layout.layoutKey.source
     :name: image-layout-layoutkey-source
     :type: :ref:`stdWrap <stdWrap>`
@@ -300,9 +270,6 @@ layout.layoutKey.source
 
 ..  index:: IMAGE; sourceCollection
 ..  _cobj-image-sourcecollection:
-
-sourceCollection
-----------------
 
 ..  confval:: sourceCollection
     :name: image-sourceCollection
@@ -350,9 +317,6 @@ sourceCollection
 ..  index:: IMAGE; sourceCollection.dataKey
 ..  _cobj-image-datakey:
 
-sourceCollection.dataKey
-~~~~~~~~~~~~~~~~~~~~~~~~
-
 ..  confval:: sourceCollection.dataKey
     :name: image-dataKey
     :type: :ref:`stdWrap <stdWrap>`
@@ -364,9 +328,6 @@ sourceCollection.dataKey
 ..  index:: IMAGE; sourceCollection.dataKey.if
 ..  _cobj-image-datakey-if:
 
-sourceCollection.dataKey.if
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 ..  confval:: sourceCollection.dataKey.if
     :name: image-datakey-if
     :type: :ref:`if <if>`
@@ -377,9 +338,6 @@ sourceCollection.dataKey.if
 
 ..  index:: IMAGE; sourceCollection.dataKey.pixelDensity
 ..  _cobj-image-datakey-pixeldensity:
-
-sourceCollection.dataKey.pixelDensity
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ..  confval:: sourceCollection.dataKey.pixelDensity
     :name: image-pixeldensity
@@ -396,9 +354,6 @@ sourceCollection.dataKey.pixelDensity
 ..  index:: IMAGE; sourceCollection.dataKey.width
 ..  _cobj-image-datakey-width:
 
-sourceCollection.dataKey.width
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 ..  confval:: sourceCollection.dataKey.width
     :name: image-datakey-width
     :type: :ref:`stdWrap <stdWrap>`
@@ -410,9 +365,6 @@ sourceCollection.dataKey.width
 
 ..  index:: IMAGE; sourceCollection.dataKey.height
 ..  _cobj-image-datakey-height:
-
-sourceCollection.dataKey.height
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ..  confval:: sourceCollection.dataKey.height
     :name: image-datakey-height
@@ -426,9 +378,6 @@ sourceCollection.dataKey.height
 ..  index:: IMAGE; sourceCollection.dataKey.maxW
 ..  _cobj-image-datakey-maxW:
 
-sourceCollection.dataKey.maxW
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 ..  confval:: sourceCollection.dataKey.maxW
     :name: image-datakey-maxW
     :type: :ref:`stdWrap <stdWrap>`
@@ -440,9 +389,6 @@ sourceCollection.dataKey.maxW
 
 ..  index:: IMAGE; sourceCollection.dataKey.maxH
 ..  _cobj-image-datakey-maxH:
-
-sourceCollection.dataKey.maxH
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ..  confval:: sourceCollection.dataKey.maxH
     :name: image-datakey-maxH
@@ -456,9 +402,6 @@ sourceCollection.dataKey.maxH
 ..  index:: IMAGE; sourceCollection.dataKey.minW
 ..  _cobj-image-datakey-minW:
 
-sourceCollection.dataKey.minW
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 ..  confval:: sourceCollection.dataKey.minW
     :name: image-datakey-minW
     :type: :ref:`stdWrap <stdWrap>`
@@ -470,9 +413,6 @@ sourceCollection.dataKey.minW
 
 ..  index:: IMAGE; sourceCollection.dataKey.minH
 ..  _cobj-image-datakey-minH:
-
-sourceCollection.dataKey.minH
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ..  confval:: sourceCollection.dataKey.minH
     :name: image-datakey-minH
@@ -486,9 +426,6 @@ sourceCollection.dataKey.minH
 ..  index:: IMAGE; sourceCollection.dataKey.quality
 ..  _cobj-image-datakey-quality:
 
-sourceCollection.dataKey.quality
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 ..  confval:: sourceCollection.dataKey.quality
     :name: image-datakey-quality
     :type: :ref:`data-type-integer`
@@ -498,9 +435,6 @@ sourceCollection.dataKey.quality
 
 ..  index:: IMAGE; sourceCollection.dataKey.*
 ..  _cobj-image-datakey-others:
-
-sourceCollection.dataKey.*
-~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ..  confval:: sourceCollection.dataKey.*
     :name: image-datakey-others
@@ -513,9 +447,6 @@ sourceCollection.dataKey.*
 
 ..  _cobj-image-linkWrap:
 
-linkWrap
---------
-
 ..  confval:: linkWrap
     :name: image-linkWrap
     :type: :ref:`data-type-wrap` / :ref:`stdWrap <stdwrap>`
@@ -525,9 +456,6 @@ linkWrap
 
 ..  _cobj-image-imageLinkWrap:
 
-imageLinkWrap
--------------
-
 ..  confval:: imageLinkWrap
     :name: image-imageLinkWrap
     :type: :ref:`data-type-boolean` / :ref:`->imageLinkWrap <imagelinkwrap>`
@@ -536,11 +464,7 @@ imageLinkWrap
     **not** :ref:`GIFBUILDER <gifbuilder>` (as it works with the original
     image file).
 
-
 ..  _cobj-image-wrap:
-
-wrap
-----
 
 ..  confval:: wrap
     :name: image-wrap
@@ -548,11 +472,7 @@ wrap
 
     Wrap for the image tag.
 
-
 ..  _cobj-image-stdWrap:
-
-stdWrap
--------
 
 ..  confval:: stdWrap
     :name: image-stdWrap
