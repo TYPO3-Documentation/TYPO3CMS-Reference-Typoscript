@@ -24,10 +24,12 @@ Mount pages are supported.
 Properties
 ==========
 
-..  _hmenu-special-directory-value:
+..  confval-menu::
+    :display: table
+    :type:
+    :Default:
 
-special.value
--------------
+..  _hmenu-special-directory-value:
 
 ..  confval:: special.value
     :name: hmenu-directory-special-value

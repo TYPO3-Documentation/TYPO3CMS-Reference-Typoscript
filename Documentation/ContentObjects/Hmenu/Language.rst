@@ -24,10 +24,11 @@ overlaid if available.
 Properties
 ==========
 
-..  _hmenu-special-language-value:
+..  confval-menu::
+    :display: table
+    :type:
 
-special.value
--------------
+..  _hmenu-special-language-value:
 
 ..  confval:: special.value
     :name: hmenu-language-special-value
@@ -38,10 +39,6 @@ special.value
     the current site.
 
 ..  _hmenu-special-language-normalwhennolanguage:
-
-special.normalWhenNoLanguage
-----------------------------
-
 
 ..  confval:: special.normalWhenNoLanguage
     :name: hmenu-language-special-normalWhenNoLanguage

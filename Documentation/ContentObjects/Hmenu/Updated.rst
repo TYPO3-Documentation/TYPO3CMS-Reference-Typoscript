@@ -21,10 +21,12 @@ Mount pages are supported.
 Properties
 ==========
 
-..  _hmenu-special-updated-value:
+..  confval-menu::
+    :display: table
+    :type:
+    :Default:
 
-special.value
---------------
+..  _hmenu-special-updated-value:
 
 ..  confval:: special.value
     :name: hmenu-updated-special-value
@@ -42,9 +44,6 @@ special.value
         20.special.value = 35, 56
 
 ..  _hmenu-special-updated-mode:
-
-special.mode
--------------
 
 ..  confval:: special.mode
     :name: hmenu-updated-special-mode
@@ -79,9 +78,6 @@ special.mode
 
 ..  _hmenu-special-updated-depth:
 
-special.depth
--------------
-
 ..  confval:: special.depth
     :name: hmenu-updated-special-depth
     :type: integer
@@ -97,9 +93,6 @@ special.depth
     **Note:** "depth" is relative to :confval:`hmenu-updated-special-beginAtLevel`.
 
 ..  _hmenu-special-updated-beginatlevel:
-
-special.beginAtLevel
---------------------
 
 ..  confval:: special.beginAtLevel
     :name: hmenu-updated-special-beginAtLevel
@@ -120,9 +113,6 @@ special.beginAtLevel
 
 ..  _hmenu-special-updated-maxage:
 
-special.maxAge
----------------
-
 ..  confval:: special.maxAge
     :name: hmenu-updated-special-maxAge
     :type: integer :ref:`+calc <objects-calc>`
@@ -136,9 +126,6 @@ special.maxAge
 
 ..  _hmenu-special-updated-limit:
 
-special.limit
---------------
-
 ..  confval:: special.limit
     :name: hmenu-updated-special-limit
     :type: integer
@@ -148,9 +135,6 @@ special.limit
 
 
 ..  _hmenu-special-updated-excludenosearchpages:
-
-special.excludeNoSearchPages
------------------------------
 
 ..  confval:: special.excludeNoSearchPages
     :name: hmenu-updated-special-excludeNoSearchPages

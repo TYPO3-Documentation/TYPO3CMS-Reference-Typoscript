@@ -30,12 +30,13 @@ into account.
 ..  _cobj-hmenu-options:
 
 Properties
-===========
+==========
+
+..  confval-menu::
+    :display: table
+    :type:
 
 ..  _hmenu-number:
-
-1, 2, 3, ...
--------------
 
 ..  confval:: 1, 2, 3, ...
     :name: hmenu-array
@@ -79,9 +80,6 @@ Properties
 
 ..  _hmenu-cache-period:
 
-cache_period
-------------
-
 ..  confval:: cache_period
     :name: hmenu-cache-period
     :type: :ref:`data-type-integer`
@@ -98,9 +96,6 @@ cache_period
 
 ..  _hmenu-cache:
 
-cache
------
-
 ..  confval:: cache
     :name: hmenu-cache
     :type: :ref:`cache <cache>`
@@ -109,9 +104,6 @@ cache
 
 
 ..  _hmenu-entrylevel:
-
-entryLevel
-----------
 
 ..  confval:: entryLevel
     :name: hmenu-entryLevel
@@ -174,9 +166,6 @@ entryLevel
 
 ..  _hmenu-special:
 
-special
--------
-
 ..  confval:: special
     :name: hmenu-special
     :type: *"directory" / "list" / "updated" / "rootline" / "browse" / "keywords"
@@ -189,9 +178,6 @@ special
 
 ..  _hmenu-special-value:
 
-special.value
-~~~~~~~~~~~~~
-
 ..  confval:: special.value
     :name: hmenu-special-value
     :type: *list of page-uid's* / :ref:`stdWrap <stdwrap>`
@@ -202,9 +188,6 @@ special.value
 
 
 ..  _hmenu-minitems:
-
-minItems
---------
 
 ..  confval:: minItems
     :name: hmenu-minItems
@@ -221,9 +204,6 @@ minItems
 
 ..  _hmenu-maxitems:
 
-maxItems
---------
-
 ..  confval:: maxItems
     :name: hmenu-maxItems
     :type: :ref:`data-type-integer` / :ref:`stdWrap <stdwrap>`
@@ -236,9 +216,6 @@ maxItems
 
 
 ..  _hmenu-begin:
-
-begin
------
 
 ..  confval:: begin
     :name: hmenu-begin
@@ -262,9 +239,6 @@ begin
 
 ..  _hmenu-excludeuidlist:
 
-excludeUidList
---------------
-
 ..  confval:: excludeUidList
     :name: hmenu-excludeUidList
     :type: list of :ref:`data-type-integer` / :ref:`stdWrap <stdwrap>`
@@ -286,9 +260,6 @@ excludeUidList
 
 ..  _hmenu-excludedoktypes:
 
-excludeDoktypes
----------------
-
 ..  confval:: excludeDoktypes
     :name: hmenu-excludeDoktypes
     :type: list of :ref:`data-type-integer`
@@ -300,9 +271,6 @@ excludeDoktypes
 
 .. _hmenu-includenotinmenu:
 
-includeNotInMenu
------------------
-
 ..  confval:: includeNotInMenu
     :name: hmenu-includeNotInMenu
     :type: :ref:`data-type-boolean` / :ref:`stdWrap <stdwrap>`
@@ -311,9 +279,6 @@ includeNotInMenu
     in menus.
 
 .. _hmenu-alwaysactivepidlist:
-
-alwaysActivePIDlist
---------------------
 
 ..  confval:: alwaysActivePIDlist
     :name: hmenu-alwaysActivePIDlist
@@ -325,9 +290,6 @@ alwaysActivePIDlist
 
 
 ..  _hmenu-protectlvar:
-
-protectLvar
------------
 
 ..  confval:: protectLvar
     :name: hmenu-protectlvar
@@ -359,9 +321,6 @@ protectLvar
 
 ..  _hmenu-addquerystring:
 
-addQueryString
---------------
-
 ..  confval:: addQueryString
     :name: hmenu-addquerystring
     :type: :ref:`->addQueryString <typolink-addQueryString>`
@@ -370,9 +329,6 @@ addQueryString
 
 
 ..  _hmenu-if:
-
-if
---
 
 ..  confval:: if
     :name: hmenu-if
@@ -383,9 +339,6 @@ if
 
 ..  _hmenu-wrap:
 
-wrap
-----
-
 ..  confval:: wrap
     :name: hmenu-wrap
     :type: :ref:`wrap <data-type-wrap>` / :ref:`stdWrap <stdwrap>`
@@ -394,9 +347,6 @@ wrap
 
 
 ..  _hmenu-stdwrap:
-
-stdWrap
--------
 
 ..  confval:: stdWrap
     :name: hmenu-stdWrap
