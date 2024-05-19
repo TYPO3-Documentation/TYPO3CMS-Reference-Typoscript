@@ -20,10 +20,11 @@ Mount pages are supported.
 Properties
 ==========
 
-..  _hmenu-special-list-value:
+..  confval-menu::
+    :display: table
+    :type:
 
-special.value
--------------
+..  _hmenu-special-list-value:
 
 ..  confval:: special.value
     :name: hmenu-list-special-value
@@ -47,7 +48,7 @@ special.value
     that only your homepage will be listed.
 
 Example: Menu of all subpages
------------------------------
+=============================
 
 The content element :guilabel:`Menu > Pages` provided by the system
 extension fluid_styled_content is configured with a :php:`MenuProcessor`

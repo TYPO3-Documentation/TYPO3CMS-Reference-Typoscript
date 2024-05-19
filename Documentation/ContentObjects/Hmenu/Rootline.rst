@@ -25,7 +25,6 @@ and makes navigation to a certain page level easier.
 ..  note::
     :ref:`Mount points <t3coreapi:MountPoints>` are supported.
 
-
 ..  contents::
     :local:
 
@@ -34,40 +33,23 @@ and makes navigation to a certain page level easier.
 Properties
 ==========
 
-..  _hmenu-special-rootline-range:
+..  confval-menu::
+    :display: table
+    :type:
+    :Default:
 
-special.range
--------------
+..  _hmenu-special-rootline-range:
 
 ..  confval:: special.range
     :name: hmenu-rootline-special-range
     :type: string /:ref:`stdWrap <stdwrap>`
     :Syntax: `[begin-level] | [end-level]`
+    :Example: :ref:`hmenu-special-rootline-range-example`
 
     `[begin-level] | [end-level]` are interpreted like the
     :ref:`.entryLevel <hmenu-entrylevel>` for an `HMENU`).
 
-..  _hmenu-special-rootline-range-example:
-
-Example: Skip the current page
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-The following
-example will start at level 1 and does not show the page the user is
-currently on:
-
-..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-    temp.breadcrumbs = HMENU
-    temp.breadcrumbs.special = rootline
-    temp.breadcrumbs.special.range = 1|-2
-
-
 ..  _hmenu-special-rootline-reverseorder:
-
-special.reverseOrder
---------------------
 
 ..  confval:: special.reverseOrder
     :name: hmenu-rootline-special-reverseOrder
@@ -80,42 +62,21 @@ special.reverseOrder
 
 ..  _hmenu-special-rootline-targets:
 
-special.targets.[level number]
-------------------------------
-
 ..  confval:: special.targets.[level number]
     :name: hmenu-rootline-special-targets
     :type: boolean
     :Default: `false`
+    :Example: :ref:`hmenu-special-rootline-targets-example`
 
     For framesets. You can set a default target and a target for each
     level by using the level number as sub-property.
-
-..  _hmenu-special-rootline-targets-example:
-
-Example: Set targets for levels
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Here the links to pages on level 3 will have :html:`target="page"`, while
-all other levels will have :html:`target="_top"` as defined for the
-:ref:`TMENU <tmenu>` property :ref:`menu-common-properties-target`.
-
-..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-    page.2 = HMENU
-    page.2.special = rootline
-    page.2.special.range = 1|-2
-    page.2.special.targets.3 = page
-    page.2.1 = TMENU
-    page.2.1.target = _top
-    page.2.1.wrap = <ol> | <ol>
-    page.2.1.NO.linkWrap = <li> | </li>
 
 ..  _hmenu-special-rootline-examples:
 
 Examples
 =========
+
+..  _hmenu-special-rootline-breadcrumb:
 
 Breadcrumb styled with Fluid
 -----------------------------
@@ -129,9 +90,48 @@ The following Fluid partial can be used to style the breadcrumb menu:
 
 ..  include:: /CodeSnippets/Menu/Template/BreadcrumbDataProcessor.rst.txt
 
+..  _hmenu-special-rootline-breadcrumb-pure:
+
 Breadcrumb with pure TypoScript
 --------------------------------
 
 The following breadcrumb menu is styled with pure Typoscript:
 
 ..  include:: /CodeSnippets/Menu/TypoScript/BreadcrumbLib.rst.txt
+
+..  _hmenu-special-rootline-range-example:
+
+Example: Skip the current page
+------------------------------
+
+The following
+example will start at level 1 and does not show the page the user is
+currently on:
+
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+    temp.breadcrumbs = HMENU
+    temp.breadcrumbs.special = rootline
+    temp.breadcrumbs.special.range = 1|-2
+
+..  _hmenu-special-rootline-targets-example:
+
+Example: Set targets for levels
+-------------------------------
+
+Here the links to pages on level 3 will have :html:`target="page"`, while
+all other levels will have :html:`target="_top"` as defined for the
+:ref:`TMENU <tmenu>` property :confval:`menu-common-properties-target`.
+
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+    page.2 = HMENU
+    page.2.special = rootline
+    page.2.special.range = 1|-2
+    page.2.special.targets.3 = page
+    page.2.1 = TMENU
+    page.2.1.target = _top
+    page.2.1.wrap = <ol> | <ol>
+    page.2.1.NO.linkWrap = <li> | </li>

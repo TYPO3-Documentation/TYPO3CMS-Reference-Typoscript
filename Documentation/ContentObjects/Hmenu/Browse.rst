@@ -22,10 +22,12 @@ list from the property ".items".
 Properties
 ==========
 
-..  _hmenu-special-browse-value:
+..  confval-menu::
+    :display: table
+    :type:
+    :Default:
 
-special.value
---------------
+..  _hmenu-special-browse-value:
 
 ..  confval:: special.value
     :name: hmenu-browse-special-value
@@ -37,9 +39,6 @@ special.value
 
 
 ..  _hmenu-special-browse-items:
-
-special.items
--------------
 
 ..  confval:: special.items
     :name: hmenu-browse-special-items

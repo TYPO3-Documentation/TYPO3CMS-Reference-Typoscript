@@ -2134,8 +2134,8 @@ typolinkLinkAccessRestrictedPages
          course be picked up properly by the page-not-found handler and present
          a nice login form).
 
-         See :ref:`menu-common-properties-showaccessrestrictedpages`
-         for menu objects as well (similar feature for menus)
+    See :confval:`menu-common-properties-showaccessrestrictedpages`
+    for menu objects as well (similar feature for menus)
 
          **Property:**
 

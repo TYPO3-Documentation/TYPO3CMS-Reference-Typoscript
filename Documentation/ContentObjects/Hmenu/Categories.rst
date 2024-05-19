@@ -25,38 +25,21 @@ like any other field.
 Properties
 ==========
 
-..  _hmenu-special-categories-value:
+..  confval-menu::
+    :display: table
+    :type:
+    :Default:
 
-special.value
--------------
+..  _hmenu-special-categories-value:
 
 ..  confval:: special.value
     :name: hmenu-categories-special-value
     :type: list of categories / :ref:`stdWrap <stdwrap>`
+    :Example: :ref:`hmenu-special-categories-value-example`
 
     Comma-separated list of categories UID's.
 
-..  _hmenu-special-categories-value-example:
-
-Example: List pages in categories with UID 1 and 2
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-..  code-block:: typoscript
-
-    20 = HMENU
-    20 {
-        special = categories
-        special.value = 1,2
-        1 = TMENU
-        1.NO {
-            // ...
-        }
-    }
-
 ..  _hmenu-special-categories-relation:
-
-special.relation
------------------
 
 ..  confval:: special.relation
     :name: hmenu-categories-special-relation
@@ -68,9 +51,6 @@ special.relation
     be several such fields on a given table.
 
 ..  _hmenu-special-categories-sorting:
-
-special.sorting
-----------------
 
 ..  confval:: special.sorting
     :name: hmenu-categories-special-sorting
@@ -84,9 +64,6 @@ special.sorting
 
 ..  _hmenu-special-categories-order:
 
-special.order
---------------
-
 ..  confval:: special.order
     :name: hmenu-categories-special-order
     :type: `asc` or `desc` / :ref:`stdWrap <stdwrap>`
@@ -96,11 +73,15 @@ special.order
     descending. Should be `asc` or `desc`, case-insensitive.
     Will default to `asc` in case of invalid value.
 
+..  _hmenu-special-categories-examples:
+
+Examples
+========
 
 ..  _hmenu-special-categories-example:
 
 Example: Menu of pages in a certain category
-============================================
+--------------------------------------------
 
 The content element :guilabel:`Menu > Categorized pages` provided by the system
 extension EXT:fluid_styled_content is configured with a :php:`MenuProcessor`
@@ -112,3 +93,20 @@ all its properties:
 The following Fluid template can be used to style the menu:
 
 ..  include:: /CodeSnippets/Menu/Template/MenuCategorizedPages.rst.txt
+
+..  _hmenu-special-categories-value-example:
+
+Example: List pages in categories with UID 1 and 2
+--------------------------------------------------
+
+..  code-block:: typoscript
+
+    20 = HMENU
+    20 {
+        special = categories
+        special.value = 1,2
+        1 = TMENU
+        1.NO {
+            // ...
+        }
+    }
