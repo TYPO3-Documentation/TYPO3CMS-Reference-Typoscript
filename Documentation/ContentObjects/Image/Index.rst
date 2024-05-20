@@ -216,9 +216,7 @@ Properties
        (as complete attribute)
 
     -  :html:`###SELFCLOSINGTAGSLASH###` renders the closing slash of the tag,
-       depending on the setting of
-       :ref:`config.xhtmlDoctype <setup-config-xhtmldoctype>` and
-       :ref:`config.doctype <setup-config-doctype>`
+       depending on the setting of :ref:`config.doctype <setup-config-doctype>`.
 
     -  :html:`###SOURCECOLLECTION###` the additional sources of the image
        depending on the different usage in responsive webdesign. The
