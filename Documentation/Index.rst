@@ -46,7 +46,6 @@ chapter of TYPO3 Explained.
    DataTypes/Index
    TopLevelObjects/Index
    ContentObjects/Index
-   Gifbuilder/Index
    Functions/Index
    Conditions/Index
    AppendixA/Index
