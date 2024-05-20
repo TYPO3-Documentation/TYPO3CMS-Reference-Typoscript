@@ -34,6 +34,11 @@ different objects.
 If you only need the file path to the image; regardless of whether it's been resized, the cObject
 :ref:`IMG_RESOURCE <cobj-img-resource>` will return the file path.
 
+..  toctree::
+    :hidden:
+
+    ../../Gifbuilder/Index
+
 .. contents::
    :local:
 
