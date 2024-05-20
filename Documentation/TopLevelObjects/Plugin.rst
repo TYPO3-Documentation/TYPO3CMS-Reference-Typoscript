@@ -32,6 +32,7 @@ Properties for all frontend plugin types
 ========================================
 
 ..  confval-menu::
+    :name: plugin-properties-all
     :display: table
     :type:
 
@@ -91,6 +92,7 @@ Properties for all frontend plugins based on Extbase
 plugins.
 
 ..  confval-menu::
+    :name: plugin-properties-extbase
     :display: table
     :type:
 

@@ -40,6 +40,8 @@ These properties are all the item states used by :typoscript:`TMENU`.
 The following Item states are listed from the least to the highest priority:
 
 ..  confval-menu::
+    :name: tmenu-item-states
+    :caption: TMENU item states
     :display: table
     :type:
     :Default:
@@ -154,6 +156,8 @@ Properties
 ==========
 
 ..  confval-menu::
+    :name: tmenu-properties
+    :caption: TMENU Properties
     :display: table
     :type:
     :Default:
