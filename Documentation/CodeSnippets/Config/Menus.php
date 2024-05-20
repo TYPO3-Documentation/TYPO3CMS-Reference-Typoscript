@@ -89,8 +89,8 @@ return [
     ],
     [
         'action' => 'createCodeSnippet',
-        'caption' => 'EXT:site_package/Resources/Private/Partials/Page/Navigation/Breadcrumb.html',
-        'sourceFile'=> 'EXT:site_package/Resources/Private/Partials/Page/Navigation/Breadcrumb.html',
+        'caption' => 'EXT:site_package/Resources/Private/Templates/Partials/Navigation/Breadcrumb.html',
+        'sourceFile'=> 'EXT:site_package/Resources/Private/Templates/Partials/Navigation/Breadcrumb.html',
         'targetFileName' => 'CodeSnippets/Menu/Template/BreadcrumbDataProcessor.rst.txt'
     ],
     // special = language
