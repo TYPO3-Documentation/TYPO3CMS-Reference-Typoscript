@@ -46,6 +46,8 @@ Additional variables can be defined with property
 :confval:`variables <pageview-variables>`.
 
 ..  confval-menu::
+    :name: pageview-default-variable
+    :caption: Default variables
     :display: table
     :type:
 
@@ -136,6 +138,8 @@ Properties
 ==========
 
 ..  confval-menu::
+    :name: pageview-properties
+    :caption: PAGEVIEW properties
     :display: table
     :type:
 
