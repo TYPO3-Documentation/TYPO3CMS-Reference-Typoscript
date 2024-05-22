@@ -473,6 +473,19 @@ Properties
         The optional properties from :ref:`includeJS <setup-page-includejs-array>`
         can be applied.
 
+        Currently one difference between :typoscript:`includeJS` and :typoscript:`includeJSFooterlibs` exists:  
+        There is no :typoscript:`data`-array as optional parameter but all keys not explicitly mentioned as parameters are used as additional attributes.
+
+        ..  code-block:: typoscript
+            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+            # This will lead to <script src="/_assets/.../Frontend/JavaScript/somefile.js?123456" data-foo="data-bar" foo="bar"></script>
+            page.includeJSFooterlibs {
+                somefile = EXT:site_package/Resources/Public/JavaScript/somefile.js
+                somefile.data-foo = data-bar
+                somefile.foo = bar
+            }
+
     ..  confval:: includeJSLibs.[array]
         :name: page-includeJSLibs
         :type: :ref:`data-type-resource`
@@ -485,6 +498,19 @@ Properties
 
         The optional properties from :ref:`includeJS <setup-page-includejs-array>`
         can be applied.
+
+        Currently one difference between :typoscript:`includeJS` and :typoscript:`includeJSLibs` exists:  
+        There is no :typoscript:`data`-array as optional parameter but all keys not explicitly mentioned as parameters are used as additional attributes.
+
+        ..  code-block:: typoscript
+            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+            # This will lead to <script src="/_assets/.../Frontend/JavaScript/somefile.js?123456" data-foo="data-bar" foo="bar"></script>
+            page.includeJSLibs {
+                somefile = EXT:site_package/Resources/Public/JavaScript/somefile.js
+                somefile.data-foo = data-bar
+                somefile.foo = bar
+            }
 
     ..  confval:: inlineLanguageLabelFiles
         :name: page-inlineLanguageLabelFiles
