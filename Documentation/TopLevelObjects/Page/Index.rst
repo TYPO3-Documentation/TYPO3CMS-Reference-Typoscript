@@ -794,7 +794,7 @@ Example: Include JavaScript in the header
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Demonstrates:
-    * :confval:`page.includeCSSLibs <page-includeJS>`
+    * :confval:`page.includeJS <page-includeJS>`
 
 ..  code-block:: typoscript
     :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
