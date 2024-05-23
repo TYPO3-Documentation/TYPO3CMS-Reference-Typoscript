@@ -21,17 +21,17 @@ for example for comma-separated values, related files or related records.
 ..  toctree::
     :titlesonly:
 
-    DataProcessing/CommaSeparatedValueProcessor
-    DataProcessing/DatabaseQueryProcessor
-    DataProcessing/FilesProcessor
-    DataProcessing/FlexFormProcessor
-    DataProcessing/GalleryProcessor
-    DataProcessing/LanguageMenuProcessor
-    DataProcessing/MenuProcessor
-    DataProcessing/SiteProcessor
-    DataProcessing/SiteLanguageProcessor
-    DataProcessing/SplitProcessor
-    DataProcessing/CustomDataProcessors
+    CommaSeparatedValueProcessor
+    DatabaseQueryProcessor
+    FilesProcessor
+    FlexFormProcessor
+    GalleryProcessor
+    LanguageMenuProcessor
+    MenuProcessor
+    SiteProcessor
+    SiteLanguageProcessor
+    SplitProcessor
+    CustomDataProcessors
 
 ..  _dataProcessing-about-examples:
 
