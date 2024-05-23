@@ -62,7 +62,7 @@ to output all available data using the magic `{_all}` variable:
 .. toctree::
    :hidden:
 
-   DataProcessing
+   DataProcessing/Index
 
 .. index:: FLUIDTEMPLATE; Properties
 .. _cobj-fluidtemplate-properties:
