@@ -341,7 +341,7 @@ Demonstrates:
 
 ..  _setup-plugin-persistence-recursive-example:
 ..  _setup-plugin-persistence-storagePid-example:
-..  _setup-plugin-persistence-classes-classname-newRecordStoragePid:
+..  _setup-plugin-persistence-classes-classname-newRecordStoragePid-example:
 
 Example: Set recursive storage PID for Extbase plugin
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
