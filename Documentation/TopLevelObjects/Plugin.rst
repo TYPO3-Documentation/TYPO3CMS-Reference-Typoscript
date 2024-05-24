@@ -78,6 +78,7 @@ Properties for all frontend plugin types
 ..  _setup-plugin-view-templateRootPaths:
 ..  _setup-plugin-view-pluginNamespace:
 ..  _setup-plugin-persistence-storagePid:
+..  _setup-plugin-persistence-classes-classname-newRecordStoragePid:
 ..  _setup-plugin-persistence-enableAutomaticCacheClearing:
 ..  _extbase_persistence-enableAutomaticCacheClearing:
 ..  _extbase_typoscript_configuration-persistence:
@@ -135,6 +136,14 @@ plugins.
 
         **Only for Extbase plugins**. List of page IDs, from which all records
         are read.
+
+    ..  confval:: persistence.classes.[classname].newRecordStoragePid
+        :name: plugin-persistence-classes-classname-newRecordStoragePid
+        :type: :ref:`data-type-integer`
+        :Example: :ref:`Set storage PID for new records of Extbase plugin <setup-plugin-persistence-classes-classname-newRecordStoragePid-example>`
+
+        **Only for Extbase plugins**. Page ID, where new records for objects
+        of the class `[classname]` are stored.
 
     ..  confval:: persistence.recursive
         :name: plugin-persistence-recursive
@@ -332,12 +341,14 @@ Demonstrates:
 
 ..  _setup-plugin-persistence-recursive-example:
 ..  _setup-plugin-persistence-storagePid-example:
+..  _setup-plugin-persistence-classes-classname-newRecordStoragePid:
 
 Example: Set recursive storage PID for Extbase plugin
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Demonstrates:
     *   :confval:`plugin.[extension].persistence.storagePid <plugin-persistence-storagepid>`
+    *   :confval:`plugin.[extension].persistence.classes.[classname].newRecordStoragePid <plugin-persistence-classes-classname-newRecordStoragePid>`
     *   :confval:`plugin.[extension].persistence.recursive <plugin-persistence-recursive>`
 
 ..  code-block:: typoscript
@@ -348,6 +359,10 @@ Demonstrates:
             storagePid = 42
             # Includes 4 sub-levels of the storagePid
             recursive = 4
+
+            Vendor\Extension\Domain\Model\MyModel {
+                newRecordStoragePid = 43
+            }
         }
     }
 
