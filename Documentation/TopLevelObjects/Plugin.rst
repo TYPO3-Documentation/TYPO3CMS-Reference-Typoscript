@@ -360,8 +360,11 @@ Demonstrates:
             # Includes 4 sub-levels of the storagePid
             recursive = 4
 
-            T3docs\BlogExample\Domain\Model\Comment {
+            T3docs\BlogExample\Domain\Model\Post {
                 newRecordStoragePid = 43
+            }
+            T3docs\BlogExample\Domain\Model\Comment {
+                newRecordStoragePid = 44
             }
         }
     }
