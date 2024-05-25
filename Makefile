@@ -15,3 +15,21 @@ test-docs: ## Test the documentation rendering
 
 	docker run --rm --pull always -v "$(shell pwd)":/project -t ghcr.io/typo3-documentation/render-guides:latest --config=Documentation --no-progress --fail-on-log --output-format=html
 
+.PHONY: test-lint
+test-lint: ## Lint included code snippets
+	Build/Scripts/runTests.sh -s lint
+
+.PHONY: test-cgl
+test-cgl: ## Apply cgl to included code snippets
+	Build/Scripts/runTests.sh -s cgl -n
+
+.PHONY: test-yaml
+test-yaml: ## lint the yaml
+	Build/Scripts/runTests.sh -s yamlLint
+
+.PHONY: test
+test: test-docs test-lint test-cgl test-yaml## Test the documentation rendering
+
+.PHONY: fix
+fix: ## Fix cgl
+	Build/Scripts/runTests.sh -s cgl
