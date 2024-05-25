@@ -7,5 +7,5 @@ defined('TYPO3') or die();
 ExtensionManagementUtility::addTypoScript(
     'my_extension',
     'setup',
-    "@import 'EXT:my_extension/Configuration/TypoScript/setup.typoscript'"
+    "@import 'EXT:my_extension/Configuration/TypoScript/setup.typoscript'",
 );
