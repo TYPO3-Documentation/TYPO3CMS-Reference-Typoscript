@@ -15,6 +15,13 @@ test-docs: ## Test the documentation rendering
 
 	docker run --rm --pull always -v "$(shell pwd)":/project -t ghcr.io/typo3-documentation/render-guides:latest --config=Documentation --no-progress --fail-on-log --output-format=html
 
+.PHONY: generate
+generate: codesnippets command-json ## Regenerate automatic code documentation
+
+.PHONY: codesnippets
+codesnippets: ## Regenerate code snippets
+	ddev exec .Build/bin/typo3 codesnippet:create Documentation/
+
 .PHONY: test-lint
 test-lint: ## Lint included code snippets
 	Build/Scripts/runTests.sh -s lint
