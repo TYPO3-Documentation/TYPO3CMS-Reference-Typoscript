@@ -144,6 +144,17 @@ The page is hidden and the "(copy X)" suffix is added, if another page with the 
 
     Hidden page with added suffix after copying its original page
 
+Example: Apply disableHideAtCopy as default to all tables
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/page.tsconfig
+
+    TCEMAIN.default {
+      disableHideAtCopy = 1
+    }
+
+
 ..  index:: Copy record; Disable prepend string (copy)
 ..  _pagetcemaintables-disableprependatcopy:
 
@@ -185,6 +196,17 @@ The page is hidden and the "(copy X)" suffix is added, if another page with the 
     :alt: Hidden page with added suffix after copying its original page
 
     Hidden page with added suffix after copying its original page
+
+Example: Apply disablePrependAtCopy as default to all tables
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/page.tsconfig
+
+    TCEMAIN.default {
+      disablePrependAtCopy = 1
+    }
+
 
 ..  index:: Link handler
 ..  _pagetcemaintables-linkhandler:
@@ -579,6 +601,9 @@ table
 
 Processing options for tables. The table name is added, for instance `TCEMAIN.table.pages.disablePrependAtCopy = 1`
 or `TCEMAIN.table.tt_content.disablePrependAtCopy = 1`.
+
+It is also possible to set a default value for all tables, for example
+`TCEMAIN.default.disablePrependAtCopy = 1`.
 
 ..  index:: Localization; Translate to message
 ..  _pagetcemain-translatetomessage:
