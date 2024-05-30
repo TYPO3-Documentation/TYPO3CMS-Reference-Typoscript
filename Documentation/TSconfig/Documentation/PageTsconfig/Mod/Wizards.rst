@@ -1,6 +1,7 @@
 ..  include:: /Includes.rst.txt
-
 ..  index:: Wizards
+
+..  _page-mod-wizard:
 
 =======
 wizards
@@ -18,106 +19,135 @@ The `wizards` section allows to customize the *New record wizard* and the
 newContentElement.wizardItems
 =============================
 
-..  confval:: newContentElement.wizardItems
-    :name: mod-wizards-newContentElement-wizardItems
-    :type: array
+..  confval-menu::
+    :display: tree
 
-    In the new content element wizard, content element types are grouped
-    together by type. Each such group can be configured independently. The
-    four default groups are: "common", "special", "forms" and "plugins".
+    ..  confval:: newContentElement.wizardItems
+        :name: mod-wizards-newContentElement-wizardItems
+        :type: array
+        :Path: mod.wizards.newContentElement.wizardItems
 
-    The configuration options below apply to any group.
+        In the new content element wizard, content element types are grouped
+        together by type. Each such group can be configured independently. The
+        four default groups are: `common`, `special`, `forms` and `plugins`.
 
-    mod.wizards.newContentElement.wizardItems.[group].before
-        (string) Sorts [group] in front of the group given.
+        The configuration options below apply to any group.
 
-    mod.wizards.newContentElement.wizardItems.[group].after
-        (string) Sorts [group] after the group given.
+        ..  confval:: [group].before
+            :name: mod-wizards-newContentElement-wizardItems-group-before
+            :type: string
+            :Path: mod.wizards.newContentElement.wizardItems.[group].before
 
-    mod.wizards.newContentElement.wizardItems.[group].header
-        (localized string) Name of the group.
+            Sorts [group] in front of the group given.
 
-    mod.wizards.newContentElement.wizardItems.[group].show
-        (string) Comma-separated list of items to show in the group. Use `*` to show all, example:
+        ..  confval:: [group].after
+            :name: mod-wizards-newContentElement-wizardItems-group-after
+            :type: string
+            :Path: mod.wizards.newContentElement.wizardItems.[group].after
 
-        ..  code-block:: typoscript
-            :caption: EXT:site_package/Configuration/page.tsconfig
+            Sorts [group] after the group given.
 
-            # Hide bulletList
-            mod.wizards.newContentElement.wizardItems.common.show := removeFromList(bullets)
-            # Only show text and textpic in common
-            mod.wizards.newContentElement.wizardItems.common.show = text,textpic
+        ..  confval:: [group].header
+            :name: mod-wizards-newContentElement-wizardItems-group-header
+            :type: string | localized string
+            :Path: mod.wizards.newContentElement.wizardItems.[group].header
 
-    mod.wizards.newContentElement.wizardItems.[group].elements
-        (array) List of items in the group.
+            Name of the group.
 
-    mod.wizards.newContentElement.wizardItems.[group].elements.[name]
-        (array) Configuration for a single item.
+        ..  confval:: [group].show
+            :name: mod-wizards-newContentElement-wizardItems-group-show
+            :type: string, comma-separated list of items
+            :Path: mod.wizards.newContentElement.wizardItems.[group].show
 
-    mod.wizards.newContentElement.wizardItems.[group].elements.[name].iconIdentifier
-        (string) The icon identifier of the icon you want to display.
+            Name of the group.
 
-    mod.wizards.newContentElement.wizardItems.[group].elements.[name].iconOverlay
-        (string) The icon identifier of the overlay icon you want to use.
+            Comma-separated list of items to show in the group. Use `*` to show
+            all, example:
 
-    mod.wizards.newContentElement.wizardItems.[group].elements.[name].title
-        (localized string) Name of the item.
+            ..  code-block:: typoscript
+                :caption: EXT:site_package/Configuration/page.tsconfig
 
-    mod.wizards.newContentElement.wizardItems.[group].elements.[name].description
-        (localized string) Description text for the item.
+                # Hide bulletList
+                mod.wizards.newContentElement.wizardItems.common.show := removeFromList(bullets)
+                # Only show text and textpic in common
+                mod.wizards.newContentElement.wizardItems.common.show = text,textpic
 
-    mod.wizards.newContentElement.wizardItems.[group].elements.[name].tt_content_defValues
-        (array) Default values for tt_content fields.
 
-    mod.wizards.newContentElement.wizardItems.[group].elements.[name].saveAndClose
-        (boolean) If `true`, directs the user back to the :guilabel:`Page` module directly instead of showing the FormEngine. Default `false`.
+        ..  confval:: [group].elements
+            :name: mod-wizards-newContentElement-wizardItems-group-elements
+            :type: array
+            :Path: mod.wizards.newContentElement.wizardItems.[group].elements
+
+            List of items in the group.
+
+            ..  confval:: [name]
+                :name: mod-wizards-newContentElement-wizardItems-group-elements-name
+                :type: array
+                :Path: mod.wizards.newContentElement.wizardItems.[group].elements.[name]
+
+                Configuration for a single item.
+
+                ..  confval:: iconIdentifier
+                    :name: mod-wizards-newContentElement-wizardItems-group-elements-name-iconIdentifier
+                    :type: string
+                    :Path: mod.wizards.newContentElement.wizardItems.[group].elements.[name].iconIdentifier
+
+                    The icon identifier of the icon you want to display.
+
+                ..  confval:: iconOverlay
+                    :name: mod-wizards-newContentElement-wizardItems-group-elements-name-iconOverlay
+                    :type: string
+                    :Path: mod.wizards.newContentElement.wizardItems.[group].elements.[name].iconOverlay
+
+                    The icon identifier of the overlay icon you want to use.
+
+                ..  confval:: title
+                    :name: mod-wizards-newContentElement-wizardItems-group-elements-name-title
+                    :type: string | localized string
+                    :Path: mod.wizards.newContentElement.wizardItems.[group].elements.[name].title
+
+                    Name of the item.
+
+                ..  confval:: description
+                    :name: mod-wizards-newContentElement-wizardItems-group-elements-name-description
+                    :type: string | localized string
+                    :Path: mod.wizards.newContentElement.wizardItems.[group].elements.[name].description
+
+                    Description text for the item.
+
+                ..  confval:: tt_content_defValues
+                    :name: mod-wizards-newContentElement-wizardItems-group-elements-name-tt_content_defValues
+                    :type: array
+                    :Path: mod.wizards.newContentElement.wizardItems.[group].elements.[name].tt_content_defValues
+
+                    Default values for tt_content fields.
+
+                ..  confval:: saveAndClose
+                    :name: mod-wizards-newContentElement-wizardItems-group-elements-name-saveAndClose
+                    :type: bool
+                    :Path: mod.wizards.newContentElement.wizardItems.[group].elements.[name].saveAndClose
+                    :Default: `false`
+
+                    If `true`, directs the user back to the :guilabel:`Page` module
+                    directly instead of showing the FormEngine.
 
 ..  _pageexample1:
 
 Example: Add a new element to the "common" group
 ------------------------------------------------
 
-..  code-block:: typoscript
+..  literalinclude:: _newContentElementWizard.tsconfig
+    :language: typoscript
     :caption: EXT:site_package/Configuration/page.tsconfig
-
-    # Add a new element (header) to the "common" group
-    mod.wizards.newContentElement.wizardItems.common.elements.header {
-        iconIdentifier = content-header
-        title = Header
-        description = Adds a header element only
-        tt_content_defValues {
-            CType = header
-        }
-    }
-    mod.wizards.newContentElement.wizardItems.common.show := addToList(header)
 
 ..  _pageexample2:
 
 Example: Create a new group and add an element to it
 ----------------------------------------------------
 
-..  code-block:: typoscript
+..  literalinclude:: _newContentElementWizardGroup.tsconfig
+    :language: typoscript
     :caption: EXT:site_package/Configuration/page.tsconfig
-
-    # Create a new group and add a (pre-filled) element to it
-    mod.wizards.newContentElement.wizardItems.myGroup {
-        header = LLL:EXT:cms/layout/locallang.xlf:advancedFunctions
-        elements.customText {
-            iconIdentifier = content-text
-            title = Introductory text for national startpage
-            description = Use this element for all national startpages
-            tt_content_defValues {
-                CType = text
-                bodytext (
-                    <h2>Section Header</h2>
-                    <p class="bodytext">Lorem ipsum dolor sit amet, consectetur, sadipisci velit ...</p>
-                )
-                header = Section Header
-                header_layout = 100
-            }
-        }
-    }
-    mod.wizards.newContentElement.wizardItems.myGroup.show = customText
 
 With the second example, the bottom of the new content element wizard shows:
 
@@ -125,7 +155,6 @@ With the second example, the bottom of the new content element wizard shows:
     :alt: Added entry in the new content element wizard
 
     Added entry in the new content element wizard
-
 
 ..  index::
     Wizards; record
