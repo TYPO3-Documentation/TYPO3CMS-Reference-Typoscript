@@ -1,0 +1,19 @@
+# Create a new group and add a (pre-filled) element to it
+mod.wizards.newContentElement.wizardItems.myGroup {
+    header = LLL:EXT:cms/layout/locallang.xlf:advancedFunctions
+    elements.customText {
+        iconIdentifier = content-text
+        title = Introductory text for national startpage
+        description = Use this element for all national startpages
+        tt_content_defValues {
+            CType = text
+            bodytext (
+                    <h2>Section Header</h2>
+                    <p class="bodytext">Lorem ipsum dolor sit amet, consectetur, sadipisci velit ...</p>
+            )
+            header = Section Header
+            header_layout = 100
+        }
+    }
+}
+mod.wizards.newContentElement.wizardItems.myGroup.show = customText
