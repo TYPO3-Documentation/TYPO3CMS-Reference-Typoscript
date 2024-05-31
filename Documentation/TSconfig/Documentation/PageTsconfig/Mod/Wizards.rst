@@ -19,6 +19,13 @@ The `wizards` section allows to customize the *New record wizard* and the
 newContentElement.wizardItems
 =============================
 
+..  versionchanged:: 13.0
+    New content elements added via TCA to the
+    :ref:`items <t3tca:columns-select-properties-items>` of field :sql:`CType`
+    of table :sql:`tt_content` are automatically added to the New Content Element
+    Wizard. The following page TSconfig can be used to override values set via
+    TCA.
+
 ..  confval-menu::
     :display: tree
 
@@ -27,11 +34,28 @@ newContentElement.wizardItems
         :type: array
         :Path: mod.wizards.newContentElement.wizardItems
 
-        In the new content element wizard, content element types are grouped
+        In the New Content Element Wizard, content element types are grouped
         together by type. Each such group can be configured independently. The
-        four default groups are: `common`, `special`, `forms` and `plugins`.
+        four default groups are: `default`, `special`, `forms` and `plugins`.
 
-        The configuration options below apply to any group.
+        ..  versionchanged:: 13.0
+            The group `common` was renamed to `default`. A permanent migration is in
+            place.
+
+        ..  confval:: removeItems
+            :name: mod-wizards-newContentElement-wizardItems-removeItems
+            :type: comma separated list of groups
+            :Path: mod.wizards.newContentElement.wizardItems.removeItems
+
+            ..  versionchanged:: 13.0
+
+            With this setting one or several groups with all their content
+            elements can be hidden in the New Content Element Wizard.
+
+            .. code-block:: typoscript
+
+                # This will remove the "menu" group
+                mod.wizards.newContentElement.wizardItems.removeItems := addToList(menu)
 
         ..  confval:: [group].before
             :name: mod-wizards-newContentElement-wizardItems-group-before
@@ -59,19 +83,20 @@ newContentElement.wizardItems
             :type: string, comma-separated list of items
             :Path: mod.wizards.newContentElement.wizardItems.[group].show
 
-            Name of the group.
+            ..  versionchanged:: 13.0
+                The configuration of the New Content Element Wizard has been
+                changed to automatically registering the groups and elements
+                from the TCA configuration.
 
-            Comma-separated list of items to show in the group. Use `*` to show
-            all, example:
+                The previously used option to show / hide elements
+                :typoscript:`mod.wizards.newContentElement.wizardItems.<group>.show` is
+                not evaluated anymore.
 
-            ..  code-block:: typoscript
-                :caption: EXT:site_package/Configuration/page.tsconfig
-
-                # Hide bulletList
-                mod.wizards.newContentElement.wizardItems.common.show := removeFromList(bullets)
-                # Only show text and textpic in common
-                mod.wizards.newContentElement.wizardItems.common.show = text,textpic
-
+                All configured groups and elements are automatically shown. Removing these
+                groups and elements from the New Content Element Wizard can be done via
+                the option :confval:`removeItems <mod-wizards-newContentElement-wizardItems-removeItems>` and
+                :confval:`[group].removeItems <mod-wizards-newContentElement-wizardItems-group-removeItems>`
+                options.
 
         ..  confval:: [group].elements
             :name: mod-wizards-newContentElement-wizardItems-group-elements
@@ -130,6 +155,23 @@ newContentElement.wizardItems
 
                     If `true`, directs the user back to the :guilabel:`Page` module
                     directly instead of showing the FormEngine.
+
+        ..  confval:: [group].removeItems
+            :name: mod-wizards-newContentElement-wizardItems-group-removeItems
+            :type: Comma separated list
+            :Path: mod.wizards.newContentElement.wizardItems.[group].removeItems
+
+            ..  versionchanged:: 13.0
+
+            Comma separated list of content elements that should be hidden in
+            [group].
+
+            ..  code-block:: typoscript
+                :caption: EXT:site_package/Configuration/page.tsconfig
+
+                mod.wizards.newContentElement.wizardItems {
+                    special.removeItems := addToList(html)
+                }
 
 ..  _pageexample1:
 
