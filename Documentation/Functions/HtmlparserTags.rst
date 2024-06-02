@@ -228,7 +228,7 @@ fixAttrib.[attribute].casesensitiveComp
 .. _htmlparser-tags-fixattrib-attribute-prefixlocalanchors:
 
 fixAttrib.[attribute].prefixLocalAnchors
-========================================
+----------------------------------------
 
 :aspect:`Property`
    fixAttrib.[attribute].prefixLocalAnchors
