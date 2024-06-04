@@ -213,6 +213,24 @@ function name
 
         Your\NameSpace\YourClass->reverseString
 
+    ..  code-block:: php
+
+        namespace Your\NameSpace;
+
+        class YourClass{
+            /**
+            * Comment
+            *
+            * @param string $content Empty string (no content to process)
+            * @param array $conf TypoScript configuration
+            * @return string
+            * @throws \TYPO3\CMS\Core\Exception\SiteNotFoundException
+            */
+            public function reverseString(string $content, array $conf): string
+            {
+            ...
+            }
+
     Single Function:
 
     ..  code-block:: text
