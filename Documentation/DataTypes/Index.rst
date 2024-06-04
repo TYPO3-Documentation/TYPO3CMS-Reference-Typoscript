@@ -244,9 +244,6 @@ function name
         user_yourClass->reverseString
 
 
-        
-
-
 ..  index:: Simple data types; getText
 ..  _data-type-function-getText:
 
