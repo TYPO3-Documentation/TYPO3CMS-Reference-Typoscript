@@ -1,0 +1,5 @@
+page = PAGE
+page.10 = USER_INT
+page.10 {
+    userFunc = MyVendor\SitePackage\UserFunctions\ExampleTime->printTime
+}
