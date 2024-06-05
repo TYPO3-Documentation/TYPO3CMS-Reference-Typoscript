@@ -150,23 +150,8 @@ context can be retrieved using
 :ref:`dependency injection <t3coreapi:DependencyInjection>`.
 Example:
 
-..  code-block:: php
-
-    use TYPO3\CMS\Core\Context\Context;
-
-    final class MyExtensionController {
-        public function __construct(
-            private readonly Context $context,
-        ) {}
-
-        public function myAction() {
-            $frontendUserUsername = $this->context->getPropertyFromAspect(
-                'frontend.user',
-                'username',
-                ''
-            );
-        }
-    }
+..  literalinclude:: _MyExtensionControllerDI.php
+    :caption: EXT:my_extension/Classes/Controller/MyExtensionController.php
 
 Additionally, the full :php:`\TYPO3\CMS\Frontend\Authentication\FrontendUserAuthentication`
 object is available as :ref:`request <t3coreapi:typo3-request>` attribute
@@ -175,15 +160,8 @@ in the frontend. Note some details of that object are marked
 :php:`@internal`, using the context aspect is thus the preferred way.
 Example of an extension using the Extbase's :php:`ActionController`:
 
-..  code-block:: php
-
-    final class MyExtensionController extends ActionController {
-        public function myAction() {
-            // Note the 'user' property is marked @internal.
-            $frontendUserUsername = $this->request
-            ->getAttribute('frontend.user')->user['username'];
-        }
-    }
+..  literalinclude:: _MyExtensionControllerExtbase.php
+    :caption: EXT:my_extension/Classes/Controller/MyExtensionController.php
 
 
 ..  _appendix-include-tsfe-rootLine:
