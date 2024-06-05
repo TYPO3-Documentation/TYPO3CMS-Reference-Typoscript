@@ -113,39 +113,16 @@ Example 1
 This example shows how to include your own PHP script and how to use it
 from TypoScript. Use this TypoScript configuration:
 
-..  code-block:: typoscript
+..  literalinclude:: _ExampleTime.typoscript
+    :language: typoscript
     :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-    page = PAGE
-    page.10 = USER_INT
-    page.10 {
-      userFunc = Vendor\SitePackage\UserFunctions\ExampleTime->printTime
-    }
 
 The file :file:`EXT:site_package/Classes/UserFunctions/ExampleTime.php` might
 amongst other things contain:
 
-..  code-block:: php
+..  literalinclude:: _ExampleTime.php
+    :language: php
     :caption:  EXT:site_package/Classes/UserFunctions/ExampleTime.php
-
-    namespace Vendor\SitePackage\UserFunctions;
-
-    use Psr\Http\Message\ServerRequestInterface;
-
-    final class ExampleTime {
-      /**
-       * Output the current time in red letters
-       *
-       * @param	string Empty string (no content to process)
-       * @param	array TypoScript configuration
-       * @param ServerRequestInterface $request
-       * @return string HTML output, showing the current server time.
-       */
-      public function printTime(string $content, array $conf, ServerRequestInterface $request): string
-      {
-        return '<p style="color: red;">Dynamic time: ' . date('H:i:s') . '</p><br />';
-      }
-    }
 
 Here :typoscript:`page.10` will give back what the PHP function :php:`printTime()`
 returned. Since we did not use a :typoscript:`USER` object, but a
@@ -160,74 +137,16 @@ Now let us have a look at another example:
 We want to display all content element headers of a page in reversed
 order. For this we use the following TypoScript:
 
-..  code-block:: typoscript
+..  literalinclude:: _ExampleListRecords.typoscript
+    :language: typoscript
     :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-    page = PAGE
-    page.typeNum = 0
-
-    page.30 = USER
-    page.30 {
-       userFunc = Vendor\SitePackage\UserFunctions\ExampleListRecords->listContentRecordsOnPage
-       # reverseOrder is a boolean variable (see PHP code below)
-       reverseOrder = 1
-    }
 
 The file :file:`EXT:site_package/Classes/UserFunctions/ExampleListRecords.php`
 may contain amongst other things:
 
-..  code-block:: php
+..  literalinclude:: _ExampleListRecords.php
+    :language: php
     :caption: EXT:site_package/Classes/UserFunctions/ExampleListRecords.php
-
-    namespace Vendor\SitePackage\UserFunctions;
-
-    use TYPO3\CMS\Core\Database\ConnectionPool;
-    use TYPO3\CMS\Core\Utility\GeneralUtility;
-    use TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer;
-
-    /**
-     * Example of a method in a PHP class to be called from TypoScript
-     *
-     */
-    final class ExampleListRecords {
-
-       /**
-        * Reference to the parent (calling) cObject set from TypoScript
-        *
-        * @var ContentObjectRenderer
-        */
-       private $cObj;
-
-       public function setContentObjectRenderer(ContentObjectRenderer $cObj): void
-       {
-          $this->cObj = $cObj;
-       }
-
-       /**
-         * List the headers of the content elements on the page
-         *
-         *
-         * @param  string Empty string (no content to process)
-         * @param  array  TypoScript configuration
-         * @return string HTML output, showing content elements (in reverse order, if configured)
-         */
-       public function listContentRecordsOnPage(string $content, array $conf): string
-       {
-          $connection = GeneralUtility::makeInstance(ConnectionPool::class)->getConnectionForTable('tt_content');
-          $result = $connection->select(
-              ['header'],
-              'tt_content',
-              ['pid' => (int)$GLOBALS['TSFE']->id],
-              [],
-              ['sorting' => $conf['reverseOrder'] ? 'DESC' : 'ASC']
-          );
-          $output = [];
-          foreach ($result as $row) {
-              $output[] = $row['header'];
-          }
-          return implode($output, '<br />');
-       }
-    }
 
 Since we need an instance of the :php:`ContentObjectRenderer` class, we are using
 the :php:`setContentObjectRenderer()` method to get it and store it in the
@@ -252,31 +171,12 @@ Example 4
 PHP has a function :php:`gethostname()` to "get the standard host name for
 the local machine". You can make it available like this:
 
-..  code-block:: typoscript
+..  literalinclude:: _Hostname.typoscript
+    :language: typoscript
     :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-    page.20 = USER_INT
-    page.20 {
-       userFunc = Vendor\SitePackage\UserFunctions\Hostname->getHostname
-    }
 
 Contents of :file:`EXT:site_package/Classes/UserFunctions/Hostname.php`:
 
-..  code-block:: php
+..  literalinclude:: _Hostname.php
+    :language: php
     :caption: EXT:site_package/Classes/UserFunctions/Hostname.php
-
-    namespace Vendor\SitePackage\UserFunctions;
-
-    final class Hostname {
-       /**
-        * Return standard host name for the local machine
-        *
-        * @param  string Empty string (no content to process)
-        * @param  array  TypoScript configuration
-        * @return string HTML result
-        */
-       public function getHostname(string $content, array $conf): string
-          {
-             return gethostname() ?: '';
-          }
-       }

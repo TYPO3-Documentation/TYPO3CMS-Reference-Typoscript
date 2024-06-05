@@ -1,0 +1,9 @@
+page = PAGE
+page.typeNum = 0
+
+page.30 = USER
+page.30 {
+    userFunc = MyVendor\SitePackage\UserFunctions\ExampleListRecords->listContentRecordsOnPage
+    # reverseOrder is a boolean variable (see PHP code below)
+    reverseOrder = 1
+}
