@@ -1,0 +1,4 @@
+page.20 = USER_INT
+page.20 {
+    userFunc = MyVendor\SitePackage\UserFunctions\Hostname->getHostname
+}
