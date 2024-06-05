@@ -209,27 +209,14 @@ function name
 
     Method in namespaced class. This is the preferred version:
 
-    ..  code-block:: text
+    ..  code-block:: typoscript
 
-        Your\NameSpace\YourClass->reverseString
+        lib.someThing = USER_INT
+        lib.someThing.userFunc = MyVendor\MyExtension\SomeNamespace\SomeClass->someFunction
 
-    ..  code-block:: php
-
-        namespace Your\NameSpace;
-
-        class YourClass{
-            /**
-            * Comment
-            *
-            * @param string $content Empty string (no content to process)
-            * @param array $conf TypoScript configuration
-            * @return string
-            * @throws \TYPO3\CMS\Core\Exception\SiteNotFoundException
-            */
-            public function reverseString(string $content, array $conf): string
-            {
-            ...
-            }
+    ..  literalinclude:: _FunctionName.php
+        :language: php
+        :caption: EXT:my_extension/Classes/SomeNamespace/SomeClass.php
 
     Single Function:
 
