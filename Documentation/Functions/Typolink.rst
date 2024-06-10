@@ -545,27 +545,66 @@ userFunc
     :name: typolink-userFunc
     :type: :ref:`data-type-function-name`
 
-    This passes the link-data compiled by the typolink function to a user-
-    defined function for final manipulation.
+    As `userFunc` is the last property of `typolink`, all previous properties
+    have already been processed into an object of type `LinkResultInterface`,
+    which is passed as the first parameter to the defined `userFunc` for
+    further manipulation.
 
-    The :php:`$content` variable passed to the user-function (first parameter) is
-    an array with the keys "TYPE", "TAG", "url", "targetParams" and
-    "aTagParams".
+    All `typolink` properties are passed as an array as the second parameter.
 
-    TYPE is an indication of link-kind: mailto, url, file, page
+    The current request object incl. current instance of `ContentObjectRenderer`
+    will be passed as third parameter.
 
-    TAG is the full <A>-tag as generated and ready from the typolink
-    function.
+    As the `userFunc` property must also return an object of type
+    `LinkResultInterface`, it makes sense to use this LinkResult object
+    passed and customise it to suit your needs.
 
-    The actual tag value is constructed like this:
+    ..  code-block:: typoscript
+
+        # Register your UserFunc with TypoScript
+        lib.parseFunc_RTE.userFunc = MyVendor\MySitePackage\UserFunc\ModifyTypoLinkUserFunc->modifyTypoLinkResult
+
+    The following PHP example checks whether the object passed contains a link
+    of type `page` (this is the value behind: `LinkService::TYPE_PAGE`). If yes,
+    the link is opened in a new browser tab, the link title is set to the page
+    title and the link text will be wrapped in :html:`<strong>` tags.
 
     ..  code-block:: php
 
-        $contents = '<a href="' . $finalTagParts['url'] . '"'
-                   . $finalTagParts['targetParams']
-                   . $finalTagParts['aTagParams'] . '>';
+        <?php
 
-    The userfunction must return an <A>-tag.
+        declare(strict_types=1);
+
+        namespace MyVendor\MySitePackage\UserFunc;
+
+        use Psr\Http\Message\ServerRequestInterface;
+        use TYPO3\CMS\Core\LinkHandling\LinkService;
+        use TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer;
+        use TYPO3\CMS\Frontend\Typolink\LinkResultInterface;
+
+        class ModifyTypoLinkUserFunc
+        {
+            public function modifyTypoLinkResult(
+                LinkResultInterface $linkResult,
+                array $conf,
+                ServerRequestInterface $request
+            ): LinkResultInterface {
+                if ($linkResult->getType() === LinkService::TYPE_PAGE) {
+                    $cObj = $this->getContentObjectRenderer($request);
+                    return $linkResult
+                        ->withTarget('_blank')
+                        ->withAttribute('title', $cObj->data['title'])
+                        ->withLinkText($cObj->stdWrap_dataWrap('<strong>{FIELD:title}</strong'));
+                }
+
+                return $linkResult;
+            }
+
+            protected function getContentObjectRenderer(ServerRequestInterface $request): ContentObjectRenderer
+            {
+                return $request->getAttribute('currentContentObject');
+            }
+        }
 
 ..  index:: typolink; Resource references
 ..  _typolink-resource_references:
