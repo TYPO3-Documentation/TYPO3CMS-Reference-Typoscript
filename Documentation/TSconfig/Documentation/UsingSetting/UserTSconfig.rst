@@ -45,7 +45,7 @@ TSconfig defined at user level overrides TSconfig defined at group level.
 
 If a user is a member of several groups, the TSconfig from each
 group is loaded. The order in which the groups are added to the user in field
-:guilabel:`General > Grooup` is used.
+:guilabel:`General > Group` is used.
 
 The TSconfig from latter groups overrides the TSconfig from earlier groups if
 both define the same property.
