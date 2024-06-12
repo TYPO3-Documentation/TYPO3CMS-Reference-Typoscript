@@ -524,7 +524,7 @@ disabled
     will not be displayed in the content elements form. The
     content element can still be moved to another column which internally also
     sets the field :sql:`colPos`. Fields with the TSconfig property
-    :tsconfig:`TCEFORM.<table>.<field>.disable` therefore show the same
+    :tsconfig:`TCEFORM.<table>.<field>.disabled` therefore show the same
     behaviour as fields of the TCA type :ref:`passthrough <t3tca:columns-passthrough>`.
 
     table level, example:
