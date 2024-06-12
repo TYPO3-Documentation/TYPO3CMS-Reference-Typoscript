@@ -9,7 +9,7 @@ Register
 It is possible to store variable values into a memory stack which is called
 "register".  The cObjects :ref:`LOAD_REGISTER <cobj-load-register>` and
 :ref:`RESTORE_REGISTER <cobj-restore-register>` provide this storage functionality.
-Some TYPO3 cObjects use internal registers. Esp.  the menus are built be
+Some TYPO3 cObjects use internal registers. Esp.  the menus are built by
 registers (e.g. count_HMENU, count_HMENU_MENUOBJ, count_menuItems).
 
 Defining registers
