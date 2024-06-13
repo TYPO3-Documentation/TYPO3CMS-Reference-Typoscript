@@ -168,19 +168,24 @@ short
    Like constants above, but local.
 
 :aspect:`Example`
-   This substitutes all occurrences of "T3" with "TYPO3 CMS" and "T3web"
-   with a link to typo3.org.
+    If this property is set, you can replace a char or word
+    in your text with the value of the according constant.
 
-   .. code-block:: typoscript
-      :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    ..  rubric:: Example
 
-      page.10 = TEXT
-      page.10.value = Learn more about ###T3###, look here: ###T3web###
-      page.10.parseFunc.short {
-        T3 = TYPO3 CMS
-        T3web = <a href="https://typo3.org">typo3.org</a>
-      }
-      # Output: Learn more about TYPO3 CMS, look here: <a href="https://typo3.org">typo3.org</a>
+    This replaces all occurrences of "T3" with "TYPO3 CMS"
+    and "T3web" with a link to typo3.org.
+
+    ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+        page.10 = TEXT
+        page.10.value = Learn more about T3, look here: T3web
+        page.10.parseFunc.short {
+              T3 = TYPO3 CMS
+              T3web = <a href="https://typo3.org">typo3.org</a>
+        }
+        # Output: Learn more about TYPO3 CMS, look here: <a href="https://typo3.org">typo3.org</a>
 
 
 .. index:: parseFunc; plainTextStdWrap
