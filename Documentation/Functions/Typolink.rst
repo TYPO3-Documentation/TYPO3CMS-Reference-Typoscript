@@ -545,66 +545,79 @@ userFunc
     :name: typolink-userFunc
     :type: :ref:`data-type-function-name`
 
-    As `userFunc` is the last property of `typolink`, all previous properties
-    have already been processed into an object of type `LinkResultInterface`,
-    which is passed as the first parameter to the defined `userFunc` for
-    further manipulation.
+    All of the :typoscript:`typolink` TypoScript configuration will be parsed and evaluated
+    by the TYPO3 Core's :php:`LinkFactory->create()` method, and then passed on
+    to the defined :typoscript:`userFunc` for further manipulation. The :typoscript:`userFunc` needs to
+    return an object implementing the :php:`LinkResultInterface`. The currently calculated
+    typolink is passed as an argument to the :php:`userFunc` as an object of the same type. This allows
+    to return either an enriched link, or a completely new one.
 
-    All `typolink` properties are passed as an array as the second parameter.
+    The detailed execution steps are:
 
-    The current request object incl. current instance of `ContentObjectRenderer`
-    will be passed as third parameter.
+    First, the :typoscript:`typolink` will be created as configured by the specified TypoScript.
+    This will result in an object of Type :php:`LinkResultInterface`. This object receives
+    all of the TypoScript :typoscript:`typolink` configuration as properties, and makes them
+    available via corresponding getters and setters.
+    Then your custom :typoscript:`userFunc` is executed and receives the following arguments
+    (delivered via :php:`$contentObjectRenderer->callUserFunction()`):
 
-    As the `userFunc` property must also return an object of type
-    `LinkResultInterface`, it makes sense to use this LinkResult object
-    passed and customise it to suit your needs.
+    `$content`
+        This contains the object implementing :php:`LinkResultInterface`. Inside your :php:`userFunc()` you
+        can call :php:`$content->getUrl()` to get the URL of a link, or :php:`$content->getLinkText()`
+        to get the title of your link. :php:`$content->getLinkConfiguration()` returns an array
+        with all typolink configuration options, and :php:`$content->getAttributes()`
+        (like :typoscript:`typolink.additionalArguments`) returns current anchor link attributes.
+        :php:`$content->getType()` returns the kind of link that is returned like
+        :php:`LinkService::TYPE_PAGE` (specific pages in your TYPO3 setup) or :php:`LinkService::TYPE_URL`
+        for links to external pages.
 
-    ..  code-block:: typoscript
+        See the PHP definition of `LinkResultInterface` for the full list of getters.
 
-        # Register your UserFunc with TypoScript
-        lib.parseFunc_RTE.userFunc = MyVendor\MySitePackage\UserFunc\ModifyTypoLinkUserFunc->modifyTypoLinkResult
+        Since `LinkResultInterface` is an immutable object, you must use the methods :php:`withLinkText()`
+        and/or :php:`withAttributes()` to return a new object variant, which at the end of your
+        :php:`userFunc` must be returned (see below for an example). In case you do not make any
+        changes to the object, the function must return the original object.
 
-    The following PHP example checks whether the object passed contains a link
-    of type `page` (this is the value behind: `LinkService::TYPE_PAGE`). If yes,
-    the link is opened in a new browser tab, the link title is set to the page
-    title and the link text will be wrapped in :html:`<strong>` tags.
+    `$conf`
+        Contains an array of the TypoScript configuration of your :typoScript:`userFunc` parameters.
 
-    ..  code-block:: php
+    `$request`
+        Contains the PSR-7 request object that allows you to operate on your current frontend
+        environment and retrieve things like Site Settings, current Language, current URL,
+        related `ContentObjectRenderer` (`$cObj`) and other aspects,
+        see :ref:`TYPO3 request object <t3coreapi:typo3-request>`.
 
-        <?php
+    Give this TypoScript example:
 
-        declare(strict_types=1);
+    ..  literalinclude:: _StdWrap/_UserFunc.typoscript
+        :language: typoscript
+        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-        namespace MyVendor\MySitePackage\UserFunc;
+    This would first create a TypoLink :php:`LinkResultInterface` that would resolve to something like
+    `<a href="/en/pages/4711?someKey=someValue" rel="noreferrer">My Link Title</a>`.
 
-        use Psr\Http\Message\ServerRequestInterface;
-        use TYPO3\CMS\Core\LinkHandling\LinkService;
-        use TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer;
-        use TYPO3\CMS\Frontend\Typolink\LinkResultInterface;
+    But because `userFunc = MyVendor\SitePackage\UserFunctions\TypoLinkUserFunc->createUserFuncLink`
+    is defined you can now manipulate the generated link to your liking:
 
-        class ModifyTypoLinkUserFunc
-        {
-            public function modifyTypoLinkResult(
-                LinkResultInterface $linkResult,
-                array $conf,
-                ServerRequestInterface $request
-            ): LinkResultInterface {
-                if ($linkResult->getType() === LinkService::TYPE_PAGE) {
-                    $cObj = $this->getContentObjectRenderer($request);
-                    return $linkResult
-                        ->withTarget('_blank')
-                        ->withAttribute('title', $cObj->data['title'])
-                        ->withLinkText($cObj->stdWrap_dataWrap('<strong>{FIELD:title}</strong'));
-                }
+    ..  literalinclude:: _StdWrap/_UserFunc.php
+        :language: php
+        :caption: EXT:site_package/Classes/UserFunctions/TypoLinkUserFunc.php
 
-                return $linkResult;
-            }
+    This class would take the :php:`LinkResultInterface` object, retrieve some data from it,
+    alter it, pass it to a new immutable object and return that. Then this is what finally
+    gets emitted after full processing:
 
-            protected function getContentObjectRenderer(ServerRequestInterface $request): ContentObjectRenderer
-            {
-                return $request->getAttribute('currentContentObject');
-            }
-        }
+    ..  code-block:: html
+        <a href="/en/pages/4711/event/18"
+           target="_blank"
+           title="Custom: My Link Title"
+           rel="noreferrer">Event Title #18</a>
+
+
+    You can also apply a custom `userFunc` to vital things like the
+    :ref:`lib.parseFunc_RTE.userFunc <t3tsref:parsefunc-userFunc>`
+    routine. This would allowyou to modify any kind of link generated from the
+    parsing of the Rich-Text-Editor (RTE).
 
 ..  index:: typolink; Resource references
 ..  _typolink-resource_references:
