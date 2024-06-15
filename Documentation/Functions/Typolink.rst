@@ -616,7 +616,7 @@ userFunc
 
     You can also apply a custom `userFunc` to vital things like the
     :ref:`lib.parseFunc_RTE.userFunc <t3tsref:parsefunc-userFunc>`
-    routine. This would allowyou to modify any kind of link generated from the
+    routine. This would allow you to modify any kind of link generated from the
     parsing of the Rich-Text-Editor (RTE).
 
 ..  index:: typolink; Resource references
