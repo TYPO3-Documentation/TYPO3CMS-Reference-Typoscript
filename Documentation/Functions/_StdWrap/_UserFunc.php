@@ -6,7 +6,6 @@ namespace MyVendor\MySitePackage\UserFunctions;
 
 use Psr\Http\Message\ServerRequestInterface;
 use TYPO3\CMS\Core\LinkHandling\LinkService;
-use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer;
 use TYPO3\CMS\Frontend\Typolink\LinkResult;
 use TYPO3\CMS\Frontend\Typolink\LinkResultInterface;
@@ -16,7 +15,7 @@ class TypoLinkUserFunc
     public function createUserFuncLink(
         LinkResultInterface $content,
         array $conf,
-        ServerRequestInterface $request
+        ServerRequestInterface $request,
     ): LinkResultInterface {
 
         // First check what kind of link this is.
@@ -49,12 +48,16 @@ class TypoLinkUserFunc
                 ->withAttribute('href', $url)
                 ->withAttribute('title', 'Custom: ' . $cObj->data['title'])
                 ->withLinkText($linkText);
-        } else if ($conf['freshExternalLink'] ?? false) {
+        }
+
+        if ($conf['freshExternalLink'] ?? false) {
             // Depending on conditions, you could also return a completely new object
             // for an external link:
             return (new LinkResult(LinkService::TYPE_URL, 'https://example.com'))
                     ->withLinkText('I am an external link');
-        } else if ($conf['freshInternalLink'] ?? false) {
+        }
+
+        if ($conf['freshInternalLink'] ?? false) {
             // ... or an internal link (UID in $conf['freshInternalPageUid']):
             // NOTE: You might want to use the PageLinkBuilder to achieve this;
             //       (this is not yet documented)
