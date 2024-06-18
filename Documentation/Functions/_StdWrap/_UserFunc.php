@@ -46,20 +46,22 @@ class TypoLinkUserFunc
 
             return $content
                 ->withTarget('_blank')
-                #->withUrl($url)
+                ->withAttribute('href', $url)
                 ->withAttribute('title', 'Custom: ' . $cObj->data['title'])
                 ->withLinkText($linkText);
         } else if ($conf['freshExternalLink'] ?? false) {
             // Depending on conditions, you could also return a completely new object
             // for an external link:
             return (new LinkResult(LinkService::TYPE_URL, 'https://example.com'))
-                    ->withLinkText('I am a link');
+                    ->withLinkText('I am an external link');
         } else if ($conf['freshInternalLink'] ?? false) {
             // ... or an internal link (UID in $conf['freshInternalPageUid']):
+            // NOTE: You might want to use the PageLinkBuilder to achieve this;
+            //       (this is not yet documented)
             $cObj = $this->getContentObjectRenderer($request);
             $frontendUrl = $cObj->typoLink_URL(['parameter' => $conf['freshInternalPageUid'] ?? 1]);
             return (new LinkResult(LinkService::TYPE_PAGE, $frontendUrl))
-                ->withLinkText('I am a link');
+                ->withLinkText('I am an internal link');
         }
 
         // If the condition does not match, return the unmodified
