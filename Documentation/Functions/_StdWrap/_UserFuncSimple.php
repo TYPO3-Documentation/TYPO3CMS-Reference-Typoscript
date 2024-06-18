@@ -6,9 +6,6 @@ namespace MyVendor\MySitePackage\UserFunctions;
 
 use Psr\Http\Message\ServerRequestInterface;
 use TYPO3\CMS\Core\LinkHandling\LinkService;
-use TYPO3\CMS\Core\Utility\GeneralUtility;
-use TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer;
-use TYPO3\CMS\Frontend\Typolink\LinkResult;
 use TYPO3\CMS\Frontend\Typolink\LinkResultInterface;
 
 class TypoLinkUserFunc
@@ -16,7 +13,7 @@ class TypoLinkUserFunc
     public function createUserFuncLink(
         LinkResultInterface $content,
         array $conf,
-        ServerRequestInterface $request
+        ServerRequestInterface $request,
     ): LinkResultInterface {
 
         // First check what kind of link this is.
