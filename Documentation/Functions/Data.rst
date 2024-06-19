@@ -84,6 +84,39 @@ Evaluate if the current application context is "Production":
         equals = Production
     }
 
+..  _data-type-gettext-asset:
+
+asset
+-----
+
+..  confval:: asset
+    :name: data-asset
+
+    ..  versionadded:: 13.2
+        Local resources can be cache-busted. It is not necessary anymore
+        to rename the asset when it is exchanged, forcing browsers to relod the file.
+
+    The getText `asset` function includes assets like images, CSS or
+    JavaScript in a cache-busted way.
+
+    Depending on :confval:`$GLOBALS['TYPO3_CONF_VARS']['FE']['versionNumberInFilename'] <t3coreapi:typo3-conf-vars-fe-versionnumberinfilename>`
+    the cache buster is applied as query string or embedded in the filename.
+
+    The result is the same like using argument :fluid:`useCacheBusting="true"`
+    in :ref:`t3viewhelper:typo3-fluid-uri-resource`.
+
+Example: Display extension icon with cache buster
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+..  code-block:: typoscript
+    :caption: EXT:my_extension/Configuration/TypoScript/setup.typoscript
+
+    page.20 = TEXT
+    page.20 {
+        value = { asset : EXT:core/Resources/Public/Icons/Extension.svg }
+        insertData = 1
+    }
+
 ..  _data-type-gettext-cobj:
 
 cObj
