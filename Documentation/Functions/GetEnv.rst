@@ -24,6 +24,9 @@ As it is a syntax feature you can use it in both constants and setup plus it
 gets cached, as opposed to the :ref:`getText.getenv <data-type-gettext-getenv>`
 feature.
 
+Please note, that the condition :ref:`getenv() <condition-function-getenv>` 
+is named in lowercase.
+
 
 .. _getEnv-examples:
 
