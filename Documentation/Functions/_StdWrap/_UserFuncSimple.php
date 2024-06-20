@@ -15,7 +15,6 @@ class TypoLinkUserFunc
         array $conf,
         ServerRequestInterface $request,
     ): LinkResultInterface {
-
         // First check what kind of link this is.
         // This example only operates on TYPE_PAGE for internal
         // links; the userFunc can of course also react to
