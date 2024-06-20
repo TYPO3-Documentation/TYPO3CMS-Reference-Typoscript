@@ -1,0 +1,16 @@
+registration {
+    value = My Link Title
+    typolink {
+        parameter = 4711
+        additionalParams = &someKey=someValue
+        language = 3
+        ATagParams = rel="noreferrer"
+        title = My Link Title
+        userFunc = MyVendor\MySitePackage\UserFunctions\TypoLinkUserFunc->createUserFuncLink
+        userFunc {
+            eventUid = TEXT
+            eventUid.data = field:eventUid
+            someFuncParam = someFuncValue
+        }
+    }
+}

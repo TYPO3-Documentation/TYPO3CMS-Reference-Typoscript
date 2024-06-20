@@ -545,27 +545,51 @@ userFunc
     :name: typolink-userFunc
     :type: :ref:`data-type-function-name`
 
-    This passes the link-data compiled by the typolink function to a user-
-    defined function for final manipulation.
+    All of the :typoscript:`typolink` TypoScript configuration will be parsed and evaluated
+    by the TYPO3 Core's :php:`LinkFactory->create()` method, and then passed on
+    to the defined :typoscript:`userFunc` for further manipulation. The :typoscript:`userFunc` needs to
+    return an object implementing the :php:`LinkResultInterface`. The currently calculated
+    typolink is passed as an argument to the :php:`userFunc` as an object of the same type. This allows
+    to return either an enriched link, or a completely new one.
 
-    The :php:`$content` variable passed to the user-function (first parameter) is
-    an array with the keys "TYPE", "TAG", "url", "targetParams" and
-    "aTagParams".
+    The detailed execution steps are:
 
-    TYPE is an indication of link-kind: mailto, url, file, page
+    First, the :typoscript:`typolink` will be created as configured by the specified TypoScript.
+    This will result in an object of Type :php:`LinkResultInterface`. This immutable object receives
+    all of the TypoScript :typoscript:`typolink` configuration as properties, and makes them
+    available via corresponding getters. Then your custom :typoscript:`userFunc` is executed
+    and receives the following arguments (delivered via :php:`$contentObjectRenderer->callUserFunction()`):
 
-    TAG is the full <A>-tag as generated and ready from the typolink
-    function.
+    `$content`
+        This contains the object implementing :php:`LinkResultInterface`. Inside your :php:`userFunc()` you
+        can call for example:
 
-    The actual tag value is constructed like this:
+        *  :php:`$content->getUrl()` to get the URL of a link,
+        *  :php:`$content->getLinkText()` to get the text of your link
+           (everything with the :html:`<a>...</a>` tag),
+        *  :php:`$content->getLinkConfiguration()` for the array with all typolink configuration options,
+        *  :php:`$content->getAttributes()` returns current anchor link attributes (like :typoscript:`typolink.additionalArguments`),
+        *  :php:`$content->getType()` returns the kind of link that is operated on, like
+           :php:`LinkService::TYPE_PAGE` (specific pages in your TYPO3 setup) or :php:`LinkService::TYPE_URL`
+           for links to external pages.
 
-    ..  code-block:: php
+        See the PHP definition of :php:`LinkResultInterface` for the full list of getters.
 
-        $contents = '<a href="' . $finalTagParts['url'] . '"'
-                   . $finalTagParts['targetParams']
-                   . $finalTagParts['aTagParams'] . '>';
+        Since :php:`LinkResultInterface` is an immutable object, you must use the methods :php:`withLinkText()`
+        and/or :php:`withAttributes()` to create a new object variant, which at the end of your
+        :php:`userFunc` must be returned (see below for examples). In case you do not make any
+        changes to the object, the function must return the original object.
 
-    The userfunction must return an <A>-tag.
+    `$conf`
+        Contains an array of the TypoScript configuration of your :typoscript:`userFunc` parameters.
+
+    `$request`
+        Contains the PSR-7 request object that allows you to operate on your current frontend
+        environment and retrieve things like Site Settings, current Language, current URL,
+        related :php:`ContentObjectRenderer` (:php:`$cObj`) and other aspects,
+        see :ref:`TYPO3 request object <t3coreapi:typo3-request>`.
+
+    See :ref:`typolink-userfunc-examples` for more details.
 
 ..  index:: typolink; Resource references
 ..  _typolink-resource_references:
