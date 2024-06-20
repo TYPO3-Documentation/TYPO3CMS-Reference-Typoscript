@@ -553,18 +553,18 @@ userFunc
     The detailed execution steps are:
 
     First, the :typoscript:`typolink` will be created as configured by the specified TypoScript.
-    This will result in an object of Type :php:`LinkResultInterface`. This object receives
+    This will result in an object of Type :php:`LinkResultInterface`. This immutable object receives
     all of the TypoScript :typoscript:`typolink` configuration as properties, and makes them
-    available via corresponding getters and setters.
-    Then your custom :typoscript:`userFunc` is executed and receives the following arguments
-    (delivered via :php:`$contentObjectRenderer->callUserFunction()`):
+    available via corresponding getters. Then your custom :typoscript:`userFunc` is executed
+    and receives the following arguments (delivered via :php:`$contentObjectRenderer->callUserFunction()`):
 
     `$content`
         This contains the object implementing :php:`LinkResultInterface`. Inside your :php:`userFunc()` you
         can call for example:
 
         *  :php:`$content->getUrl()` to get the URL of a link,
-        *  :php:`$content->getLinkText()` to get the title of your link,
+        *  :php:`$content->getLinkText()` to get the text of your link
+           (everything with the :html:`<a>...</a>` tag),
         *  :php:`$content->getLinkConfiguration()` for the array with all typolink configuration options,
         *  :php:`$content->getAttributes()` returns current anchor link attributes (like :typoscript:`typolink.additionalArguments`),
         *  :php:`$content->getType()` returns the kind of link that is operated on, like

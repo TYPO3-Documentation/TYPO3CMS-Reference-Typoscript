@@ -17,7 +17,7 @@ Given this TypoScript example:
     :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
 This would first create a TypoLink :php:`LinkResultInterface` that would resolve to something like
-:html:`<a href="/en/pages/4711?someKey=someValue" rel="noreferrer">My Link Title</a>`.
+:html:`<a href="/en/pages/4711?someKey=someValue" rel="noreferrer">My Link Text</a>`.
 
 But because :typoscript:`userFunc = MyVendor\SitePackage\UserFunctions\TypoLinkUserFunc->createUserFuncLink`
 is defined you can now manipulate the generated link to your liking.
@@ -53,7 +53,7 @@ gets emitted after full processing:
 ..  code-block:: html
     <a href="/en/pages/4711/event/18"
        target="_blank"
-       title="Custom: My Link Title"
+       title="Custom: My Link Text"
        rel="noreferrer">Event Title #18</a>
 
 
