@@ -31,8 +31,9 @@ class TypoLinkUserFunc
                 $url = $content->getAttribute('href')
                        . '/event/' . (int)$conf['eventUid.']['data'];
                 // Here you could do database lookups for example
-                // to add for example extbase routing URIs and retrieve
-                // fields.
+                // to add extbase routing URIs and retrieve
+                // fields. This is just an example, proper link building
+                // needs to be performed here, also considering cHash.
                 $linkText = 'Event Title #18';
             } else {
                 // Use currently defined URL
@@ -67,8 +68,7 @@ class TypoLinkUserFunc
                 ->withLinkText('I am an internal link');
         }
 
-        // If the condition does not match, return the unmodified
-        // link.
+        // If the condition does not match, return the unmodified link.
         return $content;
     }
 
