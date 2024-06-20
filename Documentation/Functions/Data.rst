@@ -113,8 +113,7 @@ Example: Display extension icon with cache buster
 
     page.20 = TEXT
     page.20 {
-        value = { asset : EXT:core/Resources/Public/Icons/Extension.svg }
-        insertData = 1
+        value.stdWrap.data = asset: EXT:core/Resources/Public/Icons/Extension.svg
     }
 
 ..  _data-type-gettext-cobj:
