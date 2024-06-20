@@ -1324,3 +1324,26 @@ usergroup()
     :ref:`condition-frontend-user` and :ref:`condition-backend-user` instead.
     For migration hints see the
     :ref:`changelog <ext_core:deprecation-100349-1680097287>`.
+
+
+..  _condition-examples:
+
+Examples
+========
+
+..  _condition-examples-constant:
+
+Check if a constant is set to a certain value
+---------------------------------------------
+
+TypoScript constants can be used in conditions with the 
+:ref:`Syntax <t3coreapi:typoscript-syntax-conditions-syntax>` for conditions:
+
+..  code-block:: typoscript
+    :caption: EXT:my_extension/Configuration/TypoScript/setup.typoscript
+
+    [{$tx_my_extension.settings.feature1Enabled} == 1]
+        page.10.value = The feature 1 of my_extension is enabled.
+    [ELSE]
+        page.10.value = The feature 1 of my_extension is not enabled.
+    [END]
