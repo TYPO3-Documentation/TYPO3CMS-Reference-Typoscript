@@ -200,6 +200,62 @@ Example: Hide the column selector
 
     mod.web_list.displayColumnSelector = 0
 
+..  _pageTsConfigWebList-downloadPresets:
+
+downloadPresets
+===============
+
+..  confval:: downloadPresets.[table]
+    :name: mod-web-list-downloadPresets
+    :type: array of presets
+
+    ..  versionadded:: 13.2
+        A new function has been introduced that makes it possible to select the data columns
+        to be exported from a list of configurable presets.
+
+    This property adds presets of preselected fields to the download area in
+    the :guilabel:`Web > List` backend module.
+
+    Those presets can be configured via page TSconfig, and can also be
+    overridden via user TSconfig (for example, to expand certain presets
+    only to specific users).
+
+    Each entry of :typoscript:`mod.web_list.downloadPresets`
+    defines the table name on the first level, followed by
+    any number of presets.
+
+    Each preset contains a :typoscript:`label` (the displayed name of the preset,
+    which can be a locallang key), a comma-separated list of each column that
+    should be included in the export as :typoscript:`columns` and optionally
+    an :typoscript:`identifier`. In case :typoscript:`identifier` is not provided,
+    the identifier is generated as hash of the :typoscript:`label` and
+    :typoscript:`columns`.
+
+    Since any table can be configured for a preset, any extension
+    can deliver a defined set of presets through the
+    :file:`EXT:my_extension/Configuration/page.tsconfig` file and
+    their table name(s).
+
+    ..  todo:: Link event after it is merged
+
+    Additionally, the list of presets can be manipulated via the PSR-14 event
+    :php:`BeforeRecordDownloadPresetsAreDisplayedEvent`.
+
+..  _pageTsConfigWebList-downloadPresets-example:
+
+Example: Create download presets for table page
+-----------------------------------------------
+
+..  literalinclude:: _WebList/_downloadPresets.tsconfig
+    :caption: EXT:my_extension/Configuration/page.tsconfig
+
+This can be manipulated with user TSconfig by adding the :typoscript:`page.`
+prefix. User TSconfig is loaded after page TSconfig, so you can overwrite
+the existing default settings using the same TypoScript path.
+
+..  literalinclude:: _WebList/_downloadPresets.tsconfig
+    :caption: EXT:my_extension/Configuration/user.tsconfig
+
 ..  index::
     enableClipBoard
     Buttons; Show clipboard

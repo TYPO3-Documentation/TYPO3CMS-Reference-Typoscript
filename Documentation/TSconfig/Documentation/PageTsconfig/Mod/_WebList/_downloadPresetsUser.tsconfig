@@ -1,0 +1,13 @@
+page.mod.web_list.downloadPresets {
+    pages {
+        minimum {
+            label = Quick overview (customized)
+            columns = uid, title, crdate, slug
+        }
+
+        fullExport {
+            label = Short with URL
+            columns = uid, title, slug
+        }
+    }
+}
