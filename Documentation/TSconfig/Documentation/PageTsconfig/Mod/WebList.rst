@@ -663,3 +663,42 @@ searchLevel.items
             3 = EXT:core/Resources/Private/Language/locallang_core.xlf:labels.searchLevel.3
             4 = EXT:core/Resources/Private/Language/locallang_core.xlf:labels.searchLevel.4
         }
+
+..  index::
+    searchLevel.items
+    Items; Search level
+
+..  _pageTsConfigWebList-searchLevel-default:
+
+searchLevel.default
+===================
+
+..  confval:: searchLevel.default
+    :name: mod-web-list-searchLevel-default
+    :type: integer
+
+    ..  versionadded:: 13.2
+
+    This option allows to define one of the available level options
+    as the default level to use.
+
+    When searching for records in the :guilabel:`Web > List` module as well as
+    the database browser, it is possible to select the search levels (page tree
+    levels to respect in the search).
+
+    An editor is therefore able to select between the current page, a couple of
+    defined levels (e.g. 1, 2, 3) as well as the special "infinite levels".
+
+    Those options can already be extended using the TSconfig option
+    :confval:`mod-web-list-searchLevel-items`.
+
+..  _pageTsConfigWebList-searchLevel-default-example:
+
+Example: Set the default search level to "infinite levels"
+----------------------------------------------------------
+
+..  code-block:: typoscript
+    :caption: EXT:my_sitepackage/Configuration/page.tsconfig
+
+    mod.web_list.searchLevel.default = -1
+
