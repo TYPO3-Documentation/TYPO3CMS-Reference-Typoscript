@@ -1393,7 +1393,7 @@ and was therefor interpreted as integer.
         page.10.value = The feature 1 of my_extension is enabled.
     [END]
 
-..  _condition-examples-constant-strict-types:
+..  _condition-examples-constant-compare-strings:
 
 Compare constant against strings
 --------------------------------
