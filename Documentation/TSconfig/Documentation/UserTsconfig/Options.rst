@@ -293,6 +293,30 @@ dashboard.dashboardPresetsForNewUsers
 
         options.dashboard.dashboardPresetsForNewUsers := addToList(customDashboard)
 
+..  _useroptions-defaultResourcesViewMode:
+
+defaultResourcesViewMode
+------------------------
+
+..  confval:: defaultResourcesViewMode
+    :name: useroptions-defaultResourcesViewMode
+    :type: `list` or `tiles`
+    :Default: `tiles`
+
+    The option :typoscript:`options.defaultResourcesViewMode` has
+    been introduced, which allows to define the initial display mode. Valid
+    values are therefore `list` and `tiles`, e.g.:
+
+    The listing of resources in the TYPO3 Backend, e.g. in the
+    :guilabel:`File > Filelist` module or the `FileBrowser` can be changed
+    between `list` and `tiles`. TYPO3 serves by default `tiles`, if the user
+    has not already made a choice.
+
+    ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/user.tsconfig
+
+        options.defaultResourcesViewMode = list
+
 
 ..  index:: Upload folder; Default
 ..  _useroptions-defaultUploadFolder:
