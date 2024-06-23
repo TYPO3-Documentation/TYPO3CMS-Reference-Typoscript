@@ -22,6 +22,7 @@ mod.web_layout.BackendLayouts {
                                 name = Main
                                 colPos = 0
                                 colspan = 1
+                                identifier = main
                             }
                         }
                     }
