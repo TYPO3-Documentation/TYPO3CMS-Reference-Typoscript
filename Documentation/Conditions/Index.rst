@@ -1436,12 +1436,24 @@ Use constants with reserved keywords
 
 As explained, above constants were replaced with their values before they are
 processed by expression language. That allows experimental structures: If
-`{$foo}` is set to `page` and page title is `Home` following condition is true:
+`{$foo}` is set to the reserved :ref:`page <t3tsref:condition-page>` array
+and page title is `Home` following condition is true:
 
 ..  code-block:: typoscript
     :caption: EXT:my_extension/Configuration/TypoScript/setup.typoscript
 
     [traverse({$foo}, "title") == "Home"]
+        page.10.value (
+            Value will be shown if constant is "page" and page title is "Home"
+        )
+    [END]
+
+After the replacement of the constant the example will result into:
+
+..  code-block:: typoscript
+    :caption: EXT:my_extension/Configuration/TypoScript/setup.typoscript
+
+    [traverse(page, "title") == "Home"]
         page.10.value (
             Value will be shown if constant is "page" and page title is "Home"
         )
