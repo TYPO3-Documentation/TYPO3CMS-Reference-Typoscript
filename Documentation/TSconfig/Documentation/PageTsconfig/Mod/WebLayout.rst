@@ -55,17 +55,22 @@ BackendLayouts
 ==============
 
 ..  confval:: BackendLayouts
-    :name: mod-web-layout-BackendLayouts
     :type: array
+    :no-index:
 
-    Allows to define backend layouts via Page TSconfig directly, without using database records.
+    Backend Layouts were initially introduced in order to customize the view of
+    the :guilabel:`Page` module in TYPO3 Backend for a page, but has then since grown also in
+    Frontend rendering to select for example Fluid template files via TypoScript for a page,
+    commonly used via :confval:`data:pagelayout <t3tsref:data-pagelayout>`.
+
+    See also the dedicated chapter :ref:`backend-layouts`.
 
 ..  _mod-web-layout-backendLayouts-example:
 
 Example: Define a backend layout
 --------------------------------
 
-..  literalinclude:: _backendLayouts-example.tsconfig
+..  literalinclude:: WebLayout/_backendLayouts-example.tsconfig
     :language: typoscript
     :caption: EXT:site_package/Configuration/page.tsconfig
 
@@ -316,3 +321,8 @@ Example: Define previews for custom content elements
         preview.table = EXT:site_mysite/Resources/Private/Templates/Preview/Table.html
         preview.list.tx_news = EXT:site_mysite/Resources/Private/Templates/Preview/TxNews.html
     }
+
+..  toctree::
+    :glob:
+
+    WebLayout/*
