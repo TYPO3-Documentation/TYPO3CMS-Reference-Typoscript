@@ -1336,7 +1336,7 @@ Examples
 Check if a constant is set to a certain value
 ---------------------------------------------
 
-TypoScript constants can be used in conditions with the 
+TypoScript constants can be used in conditions with the
 :ref:`Syntax <t3coreapi:typoscript-syntax-conditions-syntax>` for conditions:
 
 ..  code-block:: typoscript
@@ -1346,4 +1346,115 @@ TypoScript constants can be used in conditions with the
         page.10.value = The feature 1 of my_extension is enabled.
     [ELSE]
         page.10.value = The feature 1 of my_extension is not enabled.
+    [END]
+
+..  _condition-examples-constant-strict-types:
+
+Compare constant with strict types
+----------------------------------
+
+All constants are by default string. But as constants were replaced
+before expression check, numeric values will interpreted as integer if they
+were not wrapped into quotes. This may lead to miss-understanding while using
+strict type comparison `===` in expressions. See following examples:
+
+Without using strict type comparison following two examples are true if
+constant is set to 1:
+
+..  code-block:: typoscript
+    :caption: EXT:my_extension/Configuration/TypoScript/setup.typoscript
+
+    [{$tx_my_extension.settings.feature1Enabled} == 1]
+        page.10.value = The feature 1 of my_extension is enabled.
+    [END]
+
+..  code-block:: typoscript
+    :caption: EXT:my_extension/Configuration/TypoScript/setup.typoscript
+
+    [{$tx_my_extension.settings.feature1Enabled} == "1"]
+        page.10.value = The feature 1 of my_extension is enabled.
+    [END]
+
+In case of using strict type comparison only the next upper example is true.
+That's because the stored number of the constant was not wrapped with quotes
+and was therefor interpreted as integer.
+
+..  code-block:: typoscript
+    :caption: EXT:my_extension/Configuration/TypoScript/setup.typoscript
+
+    [{$tx_my_extension.settings.feature1Enabled} === 1]
+        page.10.value = The feature 1 of my_extension is enabled.
+    [END]
+
+..  code-block:: typoscript
+    :caption: EXT:my_extension/Configuration/TypoScript/setup.typoscript
+
+    [{$tx_my_extension.settings.feature1Enabled} === "1"]
+        page.10.value = The feature 1 of my_extension is enabled.
+    [END]
+
+..  _condition-examples-constant-compare-strings:
+
+Compare constant against strings
+--------------------------------
+
+All constants are by default string. As they are replaced with their
+contained value before expression check, you have to wrap them into quotes
+to prevent interpreting the values as integer or float.
+
+Following condition is always false:
+
+..  code-block:: typoscript
+    :caption: EXT:my_extension/Configuration/TypoScript/setup.typoscript
+
+    [{$tx_my_extension.settings.feature1Enabled} == "active"]
+        page.10.value = The feature 1 of my_extension is enabled.
+    [END]
+
+If you are working with strings in conditions please do it that way:
+
+..  code-block:: typoscript
+    :caption: EXT:my_extension/Configuration/TypoScript/setup.typoscript
+
+    ["{$tx_my_extension.settings.feature1Enabled}" == "active"]
+        page.10.value = The feature 1 of my_extension is enabled.
+    [END]
+
+Sure, strict type string comparisons are also working:
+
+..  code-block:: typoscript
+    :caption: EXT:my_extension/Configuration/TypoScript/setup.typoscript
+
+    ["{$tx_my_extension.settings.feature1Enabled}" === "active"]
+        page.10.value = The feature 1 of my_extension is enabled.
+    [END]
+
+..  _condition-examples-constant-reserved-keywords:
+
+Use constants with reserved keywords
+------------------------------------
+
+As explained, above constants were replaced with their values before they are
+processed by expression language. That allows experimental structures: If
+`{$foo}` is set to the reserved :ref:`page <t3tsref:condition-page>` array
+and page title is `Home` following condition is true:
+
+..  code-block:: typoscript
+    :caption: EXT:my_extension/Configuration/TypoScript/setup.typoscript
+
+    [traverse({$foo}, "title") == "Home"]
+        page.10.value (
+            Value will be shown if constant is "page" and page title is "Home"
+        )
+    [END]
+
+After the replacement of the constant the example will result into:
+
+..  code-block:: typoscript
+    :caption: EXT:my_extension/Configuration/TypoScript/setup.typoscript
+
+    [traverse(page, "title") == "Home"]
+        page.10.value (
+            Value will be shown if constant is "page" and page title is "Home"
+        )
     [END]
