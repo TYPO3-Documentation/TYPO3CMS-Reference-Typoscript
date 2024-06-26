@@ -46,6 +46,7 @@ chapter of TYPO3 Explained.
    DataTypes/Index
    TopLevelObjects/Index
    ContentObjects/Index
+   DataProcessing/Index
    Functions/Index
    Conditions/Index
    AppendixA/Index
