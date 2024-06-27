@@ -84,6 +84,32 @@ package (GitHub) <https://github.com/benjaminkott/bootstrap_package/tree/master/
 
                 When content elements are added to this area, the value of `colPos`
 
+            ..  confval:: identifier
+                :name: mod-web-layout-BackendLayouts-backendLayout-title-config-backend_layout-rows-row-columns-col-identifier
+                :type: string
+
+                An identifier that can be used by the page content
+                DataProcessor to identify the content elements within this
+                area.
+
+                It is a speaking representation for the :confval:`colPos <mod-web-layout-BackendLayouts-backendLayout-title-config-backend_layout-rows-row-columns-col-colPos>`,
+                such as "main", "sidebar" or "footerArea".
+
+            ..  confval:: slideMode
+                :name: mod-web-layout-BackendLayouts-backendLayout-title-config-backend_layout-rows-row-columns-col-slideMode
+                :type: string, "" (empty string), "slide", "collect", "collectReverse"
+
+                An identifier that can be used by the page content
+                DataProcessor to identify the content elements within this
+                area.
+
+                `slide`
+                    If no content is found, check the parent pages for more content
+                `collect`
+                    Use all content from this page, and the parent pages as one collection
+                `collectReverse`
+                    Same as "collect" but in the opposite order
+
             ..  confval:: colspan
                 :name: mod-web-layout-BackendLayouts-backendLayout-title-config-backend_layout-rows-row-columns-col-colspan
                 :type: integer, 1 - :confval:`mod-web-layout-BackendLayouts-backendLayout-title-config-backend_layout.colCount`
@@ -97,3 +123,25 @@ package (GitHub) <https://github.com/benjaminkott/bootstrap_package/tree/master/
 
                 Can be used if the content element area should span multiple
                 rows.
+
+Example: Use a backend layout in the page content data processor
+================================================================
+
+Define the backend layout via page TSconfig, for example in the site:
+
+..  literalinclude:: _BackendLayout.tsconfig
+    :caption: config/sites/my-site/page.tsconfig
+
+Configure the output via TypoScript, using the content object
+:ref:`PAGEVIEW <t3tsref:cobj-pageview>` and the DataProcessor
+`page-content`.
+
+..  todo: Link Dataprocessor
+
+..  literalinclude:: _BackendLayout.typoscript
+    :caption: config/sites/my-site/setup.typoscript
+
+Use the identifiers of the columns in the Fluid template:
+
+..  literalinclude:: _Default.html
+    :caption: EXT:my_sitepackage/Resources/Private/Templates/Pages/Default.html

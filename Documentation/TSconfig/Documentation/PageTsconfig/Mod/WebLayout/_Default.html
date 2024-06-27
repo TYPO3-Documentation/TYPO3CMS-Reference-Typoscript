@@ -1,0 +1,12 @@
+<f:render partial="Jumbotron" arguments="{jumbotronContent: myContent.jumbotron}"/>
+<main>
+    <f:for each="{myContent.left.records}" as="contentElement">
+        <f:cObject typoscriptObjectPath="tt_content.{contentElement.data.CType}"
+            data="{contentElement.data}"
+            table="tt_content"
+        />
+    </f:for>
+</main>
+<aside>
+    <f:render partial="Aside" arguments="{content: myContent.right}"/>
+</aside>
