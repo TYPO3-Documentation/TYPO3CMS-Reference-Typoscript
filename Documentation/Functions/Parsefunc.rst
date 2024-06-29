@@ -251,7 +251,7 @@ allowTags
     unless :typoscript:`htmlSanitize` is disabled explicitly.
 
     If a tag is found in :typoscript:`allowTags`,
-    :ref:`parsefunc-denyTags` is ignored!#
+    :ref:`parsefunc-denyTags` is ignored!
 
     ..  rubric:: Example
 
