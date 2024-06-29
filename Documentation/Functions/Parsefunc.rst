@@ -237,12 +237,37 @@ allowTags
 
 ..  confval:: allowTags
     :name: parsefunc-allowTags
-    :type: list of strings
+    :type: list of strings or "*"
 
-    List of tags, which are allowed to exist in code!
+    ..  versionchanged:: 13.2
+        Defining the TypoScript properties :typoscript:`allowTags` or
+        :typoscript:`denyTags` for the HTML processing via
+        :typoscript:`stdWrap.parseFunc` is now optional.
 
-    Highest priority: If a tag is found in :typoscript:`allowTags`,
-    :ref:`parsefunc-denyTags` is ignored!
+        Besides that, it is now possible to use :typoscript:`allowTags = *`.
+
+    List of tags, which are allowed to exist in code, use "*" for all.
+    Security aspects are considered automatically by the HTML sanitizer,
+    unless :typoscript:`htmlSanitize` is disabled explicitly.
+
+    If a tag is found in :typoscript:`allowTags`,
+    :ref:`parsefunc-denyTags` is ignored!#
+
+    ..  rubric:: Example
+
+    The example allows any tag, except :html:`<u>` which will be encoded:
+
+    ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+        10 = TEXT
+        10.value = <p><em>Example</em> <u>underlined</u> text</p>
+        10.parseFunc = 1
+        10.parseFunc {
+          allowTags = *
+          denyTags = u
+        }
+
 
 
 ..  _parsefunc-denyTags:
@@ -261,7 +286,6 @@ denyTags
     If denyTags is not :typoscript:`*` and the tag is not found in the list, the tag may exist!
 
     ..  rubric:: Example
-
 
     This allows :html:`<b>`, :html:`<i>`, :html:`<a>` and :html:`<img>` -tags to exist:
 
