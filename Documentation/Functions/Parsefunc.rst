@@ -250,7 +250,7 @@ allowTags
     Security aspects are considered automatically by the HTML sanitizer,
     unless :typoscript:`htmlSanitize` is disabled explicitly.
 
-    If a tag is found in :typoscript:`allowTags`,
+    If a tag is found in :typoscript:`allowTags`, the corresponding tag in
     :ref:`parsefunc-denyTags` is ignored!
 
     ..  rubric:: Example
