@@ -1,0 +1,9 @@
+page = PAGE
+page {
+    10 = PAGEVIEW
+    10 {
+        paths.10 = EXT:my_sitepackage/Resources/Private/Templates/
+        dataProcessing.10 = page-content
+        dataProcessing.10.as = myContent
+    }
+}
