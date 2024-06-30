@@ -188,7 +188,7 @@ crop
 
     ..  versionchanged:: 13.2
         SVG images are now processed natively in SVG during cropping.
-        to keep the old behaviour of transferring them into PNG, you can set
+        To keep the old behaviour of transferring them into PNG, you can set
         :confval:`imgresource-ext` to png explicitly.
 
     It is possible to define an area that should be taken (cropped) from the image.
