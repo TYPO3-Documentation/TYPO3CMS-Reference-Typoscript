@@ -1,0 +1,19 @@
+page = PAGE
+page.10 = FLUIDTEMPLATE
+page.10 {
+    templateName = MyTemplate
+    templateRootPaths {
+        10 = EXT:my_sitepackage/Resources/Private/Templates
+    }
+    partialRootPaths {
+        10 = EXT:my_sitepackage/Resources/Private/Partials
+    }
+    variables {
+        mylabel = TEXT
+        mylabel.value = Label coming from TypoScript!
+    }
+    settings {
+        # Get the copyright year from a TypoScript constant.
+        copyrightYear = {$year}
+    }
+}

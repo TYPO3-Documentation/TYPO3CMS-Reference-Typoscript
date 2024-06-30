@@ -1,18 +1,18 @@
-.. include:: /Includes.rst.txt
-.. index::
+..  include:: /Includes.rst.txt
+..  index::
    Content objects; FLUIDTEMPLATE
    FLUIDTEMPLATE
-.. _cobj-fluidtemplate:
-.. _cobj-template:
+..  _cobj-fluidtemplate:
+..  _cobj-template:
 
 =============
 FLUIDTEMPLATE
 =============
 
-An object of type FLUIDTEMPLATE combines TypoScript with the Fluid
+An object of type :typoscript:`FLUIDTEMPLATE` combines TypoScript with the Fluid
 templating engine.
 
-A FLUIDTEMPLATE object generates content using :ref:`Fluid <t3coreapi:fluid>` templates.
+A :typoscript:`FLUIDTEMPLATE` object generates content using :ref:`Fluid <t3coreapi:fluid>` templates.
 It can be used in :ref:`content elements <t3coreapi:adding-your-own-content-elements>`
 or to generate content in the top-level page object
 (see :ref:`the example on this page <cobj-fluidtemplate-examples>`).
@@ -29,38 +29,38 @@ or to generate content in the top-level page object
     :local:
     :depth: 1
 
-.. _cobj-fluidtemplate-data:
+..  _cobj-fluidtemplate-data:
 
 Data available in Fluid templates
 =================================
 
 The following data is available in the Fluid template:
 
-*  The content of the current :php:`data` array.
+*   The content of the current :php:`data` array.
 
-   *  At page level it contains the current page record.
-   *  If the :typoscript:`FLUIDTEMPLATE` is used in the
-      context of the Fluid ViewHelper :html:`<f:cObject>` it contains data
-      in the Fluid Property :confval:`data <t3viewhelper:typo3-fluid-cobject-data>`.
-   *  If called in the context of Extbase it contains the data assigned to the view
-      in the :ref:`Controller <t3coreapi:extbase-action-controller>`.
+    *   At page level it contains the current page record.
+    *   If the :typoscript:`FLUIDTEMPLATE` is used in the
+        context of the Fluid ViewHelper :html:`<f:cObject>` it contains data
+        in the Fluid Property :confval:`data <t3viewhelper:typo3-fluid-cobject-data>`.
+    *   If called in the context of Extbase it contains the data assigned to the view
+        in the :ref:`Controller <t3coreapi:extbase-action-controller>`.
 
-*  The :php:`settings` array set by the parameter
-   :ref:`settings <cobj-fluidtemplate-properties-settings>`
-*  Variables in the
-   :ref:`variables <cobj-fluidtemplate-properties-variables>` setting
-*  Data retrieved by
-   :ref:`data processors <cobj-fluidtemplate-properties-dataprocessing>`
+*   The :php:`settings` array set by the parameter
+    :ref:`settings <cobj-fluidtemplate-properties-settings>`
+*   Variables in the
+    :ref:`variables <cobj-fluidtemplate-properties-variables>` setting
+*   Data retrieved by
+    :ref:`data processors <cobj-fluidtemplate-properties-dataprocessing>`
 
 You can use the :ref:`debug <t3viewhelper:typo3fluid-fluid-debug>` ViewHelper
 to output all available data using the magic `{_all}` variable:
 
-.. code-block:: html
+..  code-block:: html
 
    <f:debug>{_all}</f:debug>
 
-.. index:: FLUIDTEMPLATE; Properties
-.. _cobj-fluidtemplate-properties:
+..  index:: FLUIDTEMPLATE; Properties
+..  _cobj-fluidtemplate-properties:
 
 Properties
 ==========
@@ -77,7 +77,7 @@ Properties
 
     See :ref:`cache function description <cache>` for details.
 
-.. _fluidtemplate-dataProcessing:
+..  _fluidtemplate-dataProcessing:
 
 ..  confval:: dataProcessing
     :name: fluidtemplate-dataProcessing
@@ -92,7 +92,7 @@ Properties
 
         This content was moved to the subpage :ref:`dataProcessing`.
 
-.. _cobj-fluidtemplate-properties-extbase-controlleractionname:
+..  _cobj-fluidtemplate-properties-extbase-controlleractionname:
 
 ..  confval:: extbase.controllerActionName
     :name: fluidtemplate-extbase-controlleractionname
@@ -100,7 +100,7 @@ Properties
 
     Sets the name of the action.
 
-.. _cobj-fluidtemplate-properties-extbase-controllerextensionname:
+..  _cobj-fluidtemplate-properties-extbase-controllerextensionname:
 
 ..  confval:: extbase.controllerExtensionName
     :name: fluidtemplate-extbase-controllerextensionname
@@ -116,17 +116,17 @@ Properties
 
         Since TYPO3 v12 this is no longer supported and it is recommended to either use absolute keys:
 
-        .. code-block:: html
+        ..  code-block:: html
 
-           <f:translate key="LLL:EXT:my_extension/Resources/Private/Language/locallang.xlf:myKey" />
+            <f:translate key="LLL:EXT:my_extension/Resources/Private/Language/locallang.xlf:myKey" />
 
         or the `extensionName` argument plus `key` argument in the ViewHelper:
 
-        .. code-block:: html
+        ..  code-block:: html
 
-           <f:translate key="myKey" extensionName="MyExtension" />
+            <f:translate key="myKey" extensionName="MyExtension" />
 
-.. _cobj-fluidtemplate-properties-extbase-controllername:
+..  _cobj-fluidtemplate-properties-extbase-controllername:
 
 ..  confval:: extbase.controllerName
     :name: fluidtemplate-extbase-controllername
@@ -134,7 +134,7 @@ Properties
 
     Sets the name of the controller.
 
-.. _cobj-fluidtemplate-properties-extbase-pluginname:
+..  _cobj-fluidtemplate-properties-extbase-pluginname:
 
 ..  confval:: extbase.pluginName
     :name: fluidtemplate-extbase-pluginname
@@ -142,7 +142,7 @@ Properties
 
     Sets variables for initializing extbase.
 
-.. _cobj-fluidtemplate-properties-file:
+..  _cobj-fluidtemplate-properties-file:
 
 ..  confval:: file
     :name: fluidtemplate-file
@@ -151,20 +151,12 @@ Properties
     The fluid template file. It is an alternative to ".template" and is used
     only if ".template" is not set.
 
-    **Example:**
+    ..  rubric:: Example
 
-    ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    ..  code-block:: _includes/_fluidtemplate-file.typoscript
+        :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
 
-        page = PAGE
-        page {
-           10 = FLUIDTEMPLATE
-           10 {
-              file = EXT:site_package/Resources/Private/Templates/Page/MyTemplate.html
-           }
-        }
-
-.. _cobj-fluidtemplate-properties-format:
+..  _cobj-fluidtemplate-properties-format:
 
 ..  confval:: format
     :name: fluidtemplate-format
@@ -174,7 +166,7 @@ Properties
     :typoscript:`format` sets the format of the current request. It can be something
     like "html", "xml", "png", "json" or even "rss.xml" or something similar.
 
-.. _cobj-fluidtemplate-properties-layoutrootpath:
+..  _cobj-fluidtemplate-properties-layoutrootpath:
 
 ..  confval:: layoutRootPath
     :name: fluidtemplate-layoutrootpath
@@ -190,15 +182,15 @@ Properties
         plural "s") as it can easily be extended by custom templates in the
         sitepackage.
 
-.. _cobj-fluidtemplate-properties-layoutrootpaths:
+..  _cobj-fluidtemplate-properties-layoutrootpaths:
 
 ..  confval:: layoutRootPaths
     :name: fluidtemplate-layoutrootpaths
     :type: array of :ref:`data-type-path` with :ref:`stdWrap <stdwrap>`
 
-    .. note:: Note the plural -s in "layoutRootPaths"!
+    ..  note:: Note the plural -s in "layoutRootPaths"!
 
-    .. note::
+    ..  note::
         If you want to extend layoutRootPaths conditionally, best practice
         is to use :ref:`Conditions <conditions>` instead of the :ref:`"if" function <if>`.
 
@@ -207,28 +199,17 @@ Properties
     the desired layout is found is used. If the array keys are numeric, they
     are first sorted and then tried in reversed order.
 
-    **Example:**
+    ..  rubric:: Example
 
-    ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-        page {
-           10 = FLUIDTEMPLATE
-           10 {
-              file = EXT:site_default/Resources/Private/Templates/Main.html
-              layoutRootPaths {
-                 10 = EXT:site_default/Resources/Private/Layouts
-                 20 = EXT:site_modification/Resources/Private/Layouts
-              }
-           }
-        }
+    ..  code-block:: _includes/_layoutRootPaths.typoscript
+        :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
 
     If property
     :ref:`layoutRootPath <cobj-fluidtemplate-properties-layoutrootpath>`
     (singular) is also used, it will be placed as the first option
     in the list of fall back paths.
 
-.. _cobj-fluidtemplate-properties-partialrootpath:
+..  _cobj-fluidtemplate-properties-partialrootpath:
 
 ..  confval:: partialRootPath
     :name: fluidtemplate-partialrootpath
@@ -244,15 +225,15 @@ Properties
         plural "s") as it can be easily extended by custom templates provided
         by the sitepackage.
 
-.. _cobj-fluidtemplate-properties-partialrootpaths:
+..  _cobj-fluidtemplate-properties-partialrootpaths:
 
 ..  confval:: partialRootPaths
     :name: fluidtemplate-partialrootpaths
     :type: array of :ref:`data-type-path` with :ref:`stdWrap <stdwrap>`
 
-    .. note:: Note the plural -s in "partialRootPaths"!
+    ..  note:: Note the plural -s in "partialRootPaths"!
 
-    .. note::
+    ..  note::
         If you want to extend partialRootPaths conditionally, best practice
         is to use :ref:`Conditions <conditions>` instead of the :ref:`"if" function <if>`.
 
@@ -263,7 +244,7 @@ Properties
     See :ref:`layoutRootPaths <cobj-fluidtemplate-properties-layoutrootpaths>`
     for more details.
 
-.. _cobj-fluidtemplate-properties-settings:
+..  _cobj-fluidtemplate-properties-settings:
 
 ..  confval:: settings
     :name: fluidtemplate-settings
@@ -272,21 +253,10 @@ Properties
     Sets the settings array in the fluid template. The value
     can then be used in the view.
 
-    **Example:**
+    ..  rubric:: Example
 
-    ..  code-block:: typoscript
+    ..  literalinclude:: _includes/_settings.typoscript
         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-        page = PAGE
-        page {
-           10 = FLUIDTEMPLATE
-           10 {
-              file = EXT:site_default/Resources/Private/Templates/MyTemplate.html
-              settings {
-                 copyrightYear = 2013
-              }
-           }
-        }
 
     To access copyrightYear in the template file use:
 
@@ -297,7 +267,7 @@ Properties
     Apart from setting a key-value pair as in the example, you can
     also reference objects or access constants.
 
-.. _cobj-fluidtemplate-properties-stdwrap:
+..  _cobj-fluidtemplate-properties-stdwrap:
 
 ..  confval:: stdWrap
     :name: fluidtemplate-stdwrap
@@ -305,7 +275,7 @@ Properties
 
     Provides the usual stdWrap functionality.
 
-.. _cobj-fluidtemplate-properties-template:
+..  _cobj-fluidtemplate-properties-template:
 
 ..  confval:: template
     :name: fluidtemplate-template
@@ -323,7 +293,7 @@ Properties
         with :ref:`.templateRootPaths <cobj-fluidtemplate-properties-templaterootpaths>` or use
         :ref:`.file <cobj-fluidtemplate-properties-file>`.
 
-.. _cobj-fluidtemplate-properties-templatename:
+..  _cobj-fluidtemplate-properties-templatename:
 
 ..  confval:: templateName
     :name: fluidtemplate-templatename
@@ -334,71 +304,17 @@ Properties
     as a template file. It is an alternative to :typoscript:`.file`. If
     `.templateName` is set, it takes precedence.
 
-    **Example 1:**
+    ..  rubric:: Example 1
 
-    ..  code-block:: typoscript
+    ..  literalinclude:: _includes/_templateName.typoscript
         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-        lib.stdContent = FLUIDTEMPLATE
-        lib.stdContent {
-           templateName = Default
-           layoutRootPaths {
-              10 = EXT:frontend/Resources/Private/Layouts
-              20 = EXT:sitemodification/Resources/Private/Layouts
-           }
-           partialRootPaths {
-              10 = EXT:frontend/Resources/Private/Partials
-              20 = EXT:sitemodification/Resources/Private/Partials
-           }
-           templateRootPaths {
-              10 = EXT:frontend/Resources/Private/Templates
-              20 = EXT:sitemodification/Resources/Private/Templates
-           }
-           variables {
-              foo = TEXT
-              foo.value = bar
-           }
-        }
+    ..  rubric:: Example 2
 
-    **Example 2:**
-
-    ..  code-block:: typoscript
+    ..  code-block:: _includes/_templateNameAutomatic.typoscript
         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-        lib.stdContent = FLUIDTEMPLATE
-        lib.stdContent {
-           templateName = TEXT
-           templateName.stdWrap {
-              cObject = TEXT
-              cObject {
-                 data = levelfield:-2,backend_layout_next_level,slide
-                 override.field = backend_layout
-                 split {
-                    token = frontend__
-                    1.current = 1
-                    1.wrap = |
-                 }
-              }
-              ifEmpty = Default
-           }
-           layoutRootPaths {
-              10 = EXT:frontend/Resources/Private/Layouts
-              20 = EXT:sitemodification/Resources/Private/Layouts
-           }
-           partialRootPaths {
-              10 = EXT:frontend/Resources/Private/Partials
-              20 = EXT:sitemodification/Resources/Private/Partials
-           }
-           templateRootPaths {
-              10 = EXT:frontend/Resources/Private/Templates
-              20 = EXT:sitemodification/Resources/Private/Templates
-           }
-           variables {
-              foo = bar
-           }
-        }
-
-.. _cobj-fluidtemplate-properties-templaterootpath:
+..  _cobj-fluidtemplate-properties-templaterootpath:
 
 ..  confval:: templateRootPath
     :name: fluidtemplate-templaterootpath
@@ -414,15 +330,15 @@ Properties
         plural "s") as it can be easily extended by custom templates provided
         by the sitepackage.
 
-.. _cobj-fluidtemplate-properties-templaterootpaths:
+..  _cobj-fluidtemplate-properties-templaterootpaths:
 
 ..  confval:: templateRootPaths
     :name: fluidtemplate-templaterootpaths
     :type: array of file paths with :ref:`stdWrap <stdwrap>`
 
-    .. note:: Note the plural -s in "templateRootPaths"!
+    ..  note:: Note the plural -s in "templateRootPaths"!
 
-    .. note::
+    ..  note::
         If you want to extend templateRootPaths conditionally, best practice
         is to use :ref:`Conditions <conditions>` instead of the :ref:`"if" function <if>`.
 
@@ -434,23 +350,12 @@ Properties
     Useful in combination with the
     :ref:`templateName <cobj-fluidtemplate-properties-templatename>` property.
 
-    **Example:**
+    ..  rubric:: Example
 
-    ..  code-block:: typoscript
+    ..  literalinclude:: _includes/_templateRootPaths.typoscript
         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-        page {
-           10 = FLUIDTEMPLATE
-           10 {
-              templateName = Default
-              templateRootPaths {
-                 10 = EXT:sitedesign/Resources/Private/Templates
-                 20 = EXT:sitemodification/Resources/Private/Templates
-              }
-           }
-        }
-
-.. _cobj-fluidtemplate-properties-variables:
+..  _cobj-fluidtemplate-properties-variables:
 
 ..  confval:: variables
     :name: fluidtemplate-variables
@@ -462,7 +367,7 @@ Properties
     Reserved variables are "data" and "current", which are set automatically
     to the current data set.
 
-.. _cobj-fluidtemplate-examples:
+..  _cobj-fluidtemplate-examples:
 
 Example
 =======
@@ -476,38 +381,13 @@ The Fluid template in
 :file:`EXT:my_sitepackage/Resources/Private/Templates/MyTemplate.html` could look
 like this:
 
-..  code-block:: html
+..  literalinclude:: _includes/_MyTemplate.html
     :caption: EXT:my_sitepackage/Resources/Private/Templates/MyTemplate.html
-
-    <h1>{data.title}<f:if condition="{data.subtitle}">, {data.subtitle}</f:if></h1>
-    <h3>{mylabel}</h3>
-    <f:format.html>{data.bodytext}</f:format.html>
-    <p>&copy; {settings.copyrightYear}</p>
 
 You could use it with TypoScript code like this:
 
-..  code-block:: typoscript
+..  literalinclude:: _includes/_example.typoscript
     :caption: Before migration, EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
-
-    page = PAGE
-    page.10 = FLUIDTEMPLATE
-    page.10 {
-       templateName = MyTemplate
-       templateRootPaths {
-          10 = EXT:my_sitepackage/Resources/Private/Templates
-       }
-       partialRootPaths {
-          10 = EXT:my_sitepackage/Resources/Private/Partials
-       }
-       variables {
-          mylabel = TEXT
-          mylabel.value = Label coming from TypoScript!
-       }
-       settings {
-          # Get the copyright year from a TypoScript constant.
-          copyrightYear = {$year}
-       }
-    }
 
 As a result, the page title and the label from TypoScript will be inserted as
 titles. The copyright year will be taken from the TypoScript constant
@@ -520,7 +400,7 @@ titles. The copyright year will be taken from the TypoScript constant
     *   :ref:`t3sitepackage:start`
 
 
-.. _cobj-fluidtemplate-migration:
+..  _cobj-fluidtemplate-migration:
 
 Migration from `FLUIDTEMPLATE` to `PAGEVIEW`
 ============================================

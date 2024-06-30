@@ -1,0 +1,7 @@
+page = PAGE
+page {
+    10 = FLUIDTEMPLATE
+    10 {
+        file = EXT:my_sitepackage/Resources/Private/Templates/Page/MyTemplate.html
+    }
+}
