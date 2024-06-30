@@ -1,0 +1,11 @@
+page = PAGE
+page {
+    10 = FLUIDTEMPLATE
+    10 {
+        file = EXT:my_sitepackage/Resources/Private/Templates/Main.html
+        layoutRootPaths {
+            10 = EXT:my_base_sitepackage/Resources/Private/Layouts
+            20 = EXT:my_sitepackage/Resources/Private/Layouts
+        }
+    }
+}
