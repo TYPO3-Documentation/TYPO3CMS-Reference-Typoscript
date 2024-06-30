@@ -606,7 +606,7 @@ Get the value of the user-defined field :sql:`tx_myextension_myfield` in the roo
     To stay compatible with both TYPO3 v12 and v13, add the following to your
     extensions :file:`ext_localconf.php`:
 
-    ..  code-block:: _Data/_addRootlineFields_ext_localconf.php
+    ..  literalinclude:: _Data/_addRootlineFields_ext_localconf.php
         :caption: EXT:my_extension/ext_localconf.php
 
 ..  _data-type-gettext-levelmedia:
