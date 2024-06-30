@@ -153,7 +153,7 @@ Properties
 
     ..  rubric:: Example
 
-    ..  code-block:: _includes/_fluidtemplate-file.typoscript
+    ..  literalinclude:: _includes/_fluidtemplate-file.typoscript
         :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
 
 ..  _cobj-fluidtemplate-properties-format:
@@ -201,7 +201,7 @@ Properties
 
     ..  rubric:: Example
 
-    ..  code-block:: _includes/_layoutRootPaths.typoscript
+    ..  literalinclude:: _includes/_layoutRootPaths.typoscript
         :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
 
     If property
@@ -311,7 +311,7 @@ Properties
 
     ..  rubric:: Example 2
 
-    ..  code-block:: _includes/_templateNameAutomatic.typoscript
+    ..  literalinclude:: _includes/_templateNameAutomatic.typoscript
         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
 ..  _cobj-fluidtemplate-properties-templaterootpath:
