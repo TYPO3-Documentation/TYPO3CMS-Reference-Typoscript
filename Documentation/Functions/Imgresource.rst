@@ -187,7 +187,7 @@ crop
     :Default: not-set (when file/image is a file_reference the crop value of
 
     ..  versionchanged:: 13.2
-        SVG images are now processed natively in SVG during cropping
+        SVG images are now processed natively in SVG during cropping.
         to keep the old behaviour of transferring them into PNG, you can set
         :confval:`imgresource-ext` to png explicitly.
 
