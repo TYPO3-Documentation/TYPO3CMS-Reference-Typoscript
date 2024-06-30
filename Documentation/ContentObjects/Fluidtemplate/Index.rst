@@ -375,7 +375,7 @@ Properties
     to the current data set.
 
 
-..  _RecordTransformationProcessor-fluidtemplate-example:
+..  _cobj-fluidtemplate-example-RecordTransformationProcessor:
 
 Example: Usage with RecordTransformationProcessor
 =================================================
@@ -392,7 +392,7 @@ This can be used for content elements of
 custom ones. In this example the Fluid Styled Content
 element "Text" has its data transformed for easier and enhanced usage.
 
-..  literalinclude:: _RecordTransformationProcessor/_WithDatabaseFluidTemplate.typoscript
+..  literalinclude:: /DataProcessing/_RecordTransformationProcessor/_WithDatabaseFluidTemplate.typoscript
     :caption: EXT:my_extension/Configuration/TypoScript/setup.typoscript
 
 For usage of the variables within Fluid see

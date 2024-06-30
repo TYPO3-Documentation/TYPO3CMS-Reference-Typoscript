@@ -100,7 +100,7 @@ Options:
     Only if the condition is met the data processor is executed.
 
 ..  confval:: table
-    :name: RecordTransformationProcessor-variableName
+    :name: RecordTransformationProcessor-table
     :type: :ref:`data-type-string`
     :Default: auto-resolved
 
