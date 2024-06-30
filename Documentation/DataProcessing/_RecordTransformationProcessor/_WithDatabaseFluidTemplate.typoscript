@@ -1,0 +1,10 @@
+# tt_content.text = FLUIDTEMPLATE
+tt_content.text {
+    templateName = Text
+    dataProcessing {
+        10 = record-transformation
+        10 {
+            as = data
+        }
+    }
+}

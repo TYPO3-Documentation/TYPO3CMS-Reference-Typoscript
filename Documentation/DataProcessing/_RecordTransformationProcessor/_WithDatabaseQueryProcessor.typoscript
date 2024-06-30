@@ -1,0 +1,16 @@
+page = PAGE
+page {
+    10 = PAGEVIEW
+    10 {
+        paths.10 = EXT:my_extension/Resources/Private/Templates/
+        dataProcessing {
+            10 = database-query
+            10 {
+                as = categories
+                table = sys_category
+                select.where = parent=0
+                dataProcessing.10 = record-transformation
+            }
+        }
+    }
+}
