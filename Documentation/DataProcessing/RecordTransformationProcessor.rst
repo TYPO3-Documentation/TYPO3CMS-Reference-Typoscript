@@ -37,7 +37,7 @@ on the record, such `tt_content.textmedia` for Content Elements.
 Example: Usage with the DatabaseQueryProcessor
 ==============================================
 
-Example usage for the data processor in conjunction with the
+Example usage for the Data Processor in conjunction with the
 :ref:`DatabaseQueryProcessor`.
 
 ..  literalinclude:: _RecordTransformationProcessor/_WithDatabaseQueryProcessor.typoscript
