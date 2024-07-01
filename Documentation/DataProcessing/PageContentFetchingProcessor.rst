@@ -5,7 +5,7 @@
 PageContentFetchingProcessor
 ============================
 
-This data processor loads all :sql:`tt_content` records from the current
+This Data Processor loads all :sql:`tt_content` records from the current
 :ref:`backend layout <t3coreapi:be-layout>` into
 the template with a given identifier for each :sql:`colPos`, also respecting slideMode or
 collect options based on the page layouts content columns.
