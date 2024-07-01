@@ -34,6 +34,11 @@ or to generate content in the top-level page object
 Data available in Fluid templates
 =================================
 
+..  versionadded:: 13.2
+    The FLUIDTEMPLATE can now be used in combination with the
+    :ref:`RecordTransformationProcessor` for additional computed information.
+    See also :ref:`RecordTransformationProcessor-fluidtemplate-example`
+
 The following data is available in the Fluid template:
 
 *   The content of the current :php:`data` array.
@@ -44,6 +49,8 @@ The following data is available in the Fluid template:
         in the Fluid Property :confval:`data <t3viewhelper:typo3-fluid-cobject-data>`.
     *   If called in the context of Extbase it contains the data assigned to the view
         in the :ref:`Controller <t3coreapi:extbase-action-controller>`.
+    *   Use the :ref:`RecordTransformationProcessor` to get additional computed
+        information from the :php:`data` array.
 
 *   The :php:`settings` array set by the parameter
     :ref:`settings <cobj-fluidtemplate-properties-settings>`
@@ -366,6 +373,30 @@ Properties
 
     Reserved variables are "data" and "current", which are set automatically
     to the current data set.
+
+
+..  _cobj-fluidtemplate-example-RecordTransformationProcessor:
+
+Example: Usage with RecordTransformationProcessor
+=================================================
+
+..  versionadded:: 13.2
+    The FLUIDTEMPLATE can now be used in combination with the
+    :ref:`RecordTransformationProcessor` for additional computed information.
+
+The :ref:`RecordTransformationProcessor` transforms the current data array of
+the `FLUIDTEMPLATE` to a record object.
+
+This can be used for content elements of
+:ref:`Fluid Styled Content <typo3/cms-fluid-styled-content:start>` or
+custom ones. In this example the Fluid Styled Content
+element "Text" has its data transformed for easier and enhanced usage.
+
+..  literalinclude:: /DataProcessing/_RecordTransformationProcessor/_WithDatabaseFluidTemplate.typoscript
+    :caption: EXT:my_extension/Configuration/TypoScript/setup.typoscript
+
+For usage of the variables within Fluid see
+:ref:`RecordTransformationProcessor-fluidtemplate-example`.
 
 ..  _cobj-fluidtemplate-examples:
 
