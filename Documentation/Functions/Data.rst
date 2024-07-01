@@ -597,16 +597,17 @@ Get the value of the user-defined field :sql:`tx_myextension_myfield` in the roo
 
     lib.foo.data = levelfield : -1, tx_myextension_myfield, slide
 
-Requires additional configuration in
-:ref:`$GLOBALS['TYPO3_CONF_VARS']['FE']['addRootLineFields'] <t3coreapi:typo3ConfVars_fe_addRootLineFields>` to include
-field. In order that you can use this function, your field name
-:sql:`tx_myextension_myfield` needs be included in the comma
-separated list of ['addRootLineFields']:
+..  versionchanged:: 13.2
 
-..  code-block:: php
-    :caption: EXT:my_extension/ext_localconf.php
+    Until TYPO3 v13 it was required to do additional configuration in
+    :ref:`$GLOBALS['TYPO3_CONF_VARS']['FE']['addRootLineFields'] <t3coreapi:typo3ConfVars_fe_addRootLineFields>` to
+    use custom fields.
 
-    $GLOBALS['TYPO3_CONF_VARS']['FE']['addRootLineFields'] .= ',tx_myextension_myfield';
+    To stay compatible with both TYPO3 v12 and v13, add the following to your
+    extensions :file:`ext_localconf.php`:
+
+    ..  literalinclude:: _Data/_addRootlineFields_ext_localconf.php
+        :caption: EXT:my_extension/ext_localconf.php
 
 ..  _data-type-gettext-levelmedia:
 
