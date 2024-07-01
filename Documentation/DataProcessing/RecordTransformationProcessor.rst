@@ -114,7 +114,7 @@ Options:
     :type: :ref:`data-type-string`
     :Default: 'data'
 
-    The variable that contains the record(s) from a previous data processor,
+    The variable that contains the record(s) from a previous Data Processor,
     or from a :ref:`FLUIDTEMPLATE <cobj-fluidtemplate>` view.
 
     If you are dealing with a custom data source you can adjust it here.
