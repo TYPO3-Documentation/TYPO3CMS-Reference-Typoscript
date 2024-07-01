@@ -97,7 +97,7 @@ Options:
     :type: :ref:`if` condition
     :Default: ''
 
-    Only if the condition is met the data processor is executed.
+    Only if the condition is met the Data Processor is executed.
 
 ..  confval:: table
     :name: RecordTransformationProcessor-table
