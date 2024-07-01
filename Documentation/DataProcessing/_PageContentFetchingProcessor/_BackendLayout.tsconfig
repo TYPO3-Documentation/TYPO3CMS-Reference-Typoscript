@@ -1,0 +1,41 @@
+mod.web_layout.BackendLayouts {
+    default {
+        title = Default
+        config {
+            backend_layout {
+                colCount = 2
+                rowCount = 2
+                rows {
+                    1 {
+                        columns {
+                            1 {
+                                name = Jumbotron
+                                colPos = 1
+                                identifier = jumbotron
+                                slideMode = slide
+                                colspan = 2
+                            }
+                        }
+                    }
+
+                    1 {
+                        columns {
+                            1 {
+                                name = Left
+                                colPos = 0
+                                identifier = left
+                            }
+
+                            2 {
+                                name = Right
+                                colPos = 2
+                                identifier = right
+                                slideMode = collectReverse
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

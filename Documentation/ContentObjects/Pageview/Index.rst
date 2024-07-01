@@ -67,7 +67,6 @@ Additional variables can be defined with property
         The current `PageInformation` as object. See also
         :ref:`Frontend page information <t3coreapi:typo3-request-attribute-frontend-page-information>`.
 
-
     ..  confval:: settings
         :name: pageview-data-settings
         :type: array
@@ -158,6 +157,10 @@ Properties
         sub-property :typoscript:`options` can be used to pass parameters to the
         processor class.
 
+        It is recommended to use the  :ref:`PageContentFetchingProcessor <PageContentFetchingProcessor>`
+        to fetch the content elements from the page, respecting the
+        :ref:`backend layout <t3coreapi:be-layout>`.
+
     ..  confval:: paths.[priority]
         :name: pageview-paths
         :type: :ref:`data-type-path` with :ref:`stdWrap <stdwrap>`
@@ -199,7 +202,6 @@ Example: Display a main menu and a breadcrumb on the page
 ..  literalinclude:: _includes/_pageWithBreadcrumb.typoscript
     :language: typoscript
     :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
-
 
 The page template could look like this:
 
