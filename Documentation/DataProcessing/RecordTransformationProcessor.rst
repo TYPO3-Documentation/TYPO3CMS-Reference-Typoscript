@@ -89,8 +89,8 @@ Options:
     :type: :ref:`data-type-string` / :ref:`stdWrap`
     :Default: 'record' or 'records'
 
-    The target variable where the resolved record objects are contained
-    if empty, 'record' or 'records' (if multiple records are given) is used.
+    The target variable containing the resolved record objects.
+    If empty, 'record' or 'records' (if multiple records are given) is used.
 
 ..  confval:: if
     :name: RecordTransformationProcessor-if
