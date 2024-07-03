@@ -14,7 +14,7 @@ conjunction with the DatabaseQuery Data Processor. The DatabaseQuery Data
 Processor typically fetches records from the database, and the
 :typoscript:`record-transformation` will take the result, and transforms
 the objects into :php:`Record` objects, which contain only relevant data from
-the TCA table, which has been configured in the TCA columns fields for this
+the TCA table, which has been configured in the TCA `columns` fields for this
 record.
 
 This is especially useful for TCA tables, which contain "types" (such as pages
