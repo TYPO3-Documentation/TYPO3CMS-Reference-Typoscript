@@ -29,6 +29,7 @@ for example for comma-separated values, related files or related records.
     LanguageMenuProcessor
     MenuProcessor
     PageContentFetchingProcessor
+    RecordTransformationProcessor
     SiteProcessor
     SiteLanguageProcessor
     SplitProcessor
