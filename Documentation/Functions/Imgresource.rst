@@ -31,7 +31,7 @@ ext
     :Default: web
 
     Target file extension for the processed image. The value :typoscript:`web` checks if
-    the file extension is one of gif, jpg, jpeg, or png and if not it will find
+    the file extension is one of gif, jpg, jpeg, png, or svg and if not it will find
     the best target extension.  The target extension must be in the list of file
     extensions perceived as images.  This is defined in
     :php:`$GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext']` in the install
@@ -186,6 +186,11 @@ crop
     :type: :ref:`data-type-string` / :ref:`stdwrap`
     :Default: not-set (when file/image is a file_reference the crop value of
 
+    ..  versionchanged:: 13.2
+        SVG images are now processed natively in SVG during cropping.
+        To keep the old behaviour of transferring them into PNG, you can set
+        :confval:`imgresource-ext` to `png` explicitly.
+
     It is possible to define an area that should be taken (cropped) from the image.
     When not defined in typoscript the value will be taken from the file_reference when
     possible. With this setting you can override this behavior.
@@ -207,6 +212,16 @@ crop
         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
         tt_content.image.20.1.file.crop = 50,50,100,100
+
+    Natively crop a SVG image:
+
+    ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+        page.10 = IMAGE
+        page.10.file = 2:/myfile.svg
+        page.10.file.crop = 20,20,500,500
+
 
 
 ..  _imgresource-cropVariant:
