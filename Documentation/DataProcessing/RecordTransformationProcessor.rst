@@ -18,7 +18,7 @@ the TCA table, which has been configured in the TCA `columns` fields for this
 record.
 
 This is especially useful for TCA tables, which contain "types" (such as pages
-or tt_content database tables), where only relevant fields are added to the
+or `tt_content` database tables), where only relevant fields are added to the
 record object. In addition, special fields from "enableColumns" or deleted
 fields, next to language and version information are extracted so they can be
 addressed in a unified way.
