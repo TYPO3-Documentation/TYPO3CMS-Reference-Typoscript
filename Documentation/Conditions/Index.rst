@@ -1372,9 +1372,10 @@ site()
     ..  code-block:: typoscript
         :caption: EXT:site_package/Configuration/TypoScript/constants.typoscript
 
-        my.constant = my global value
+        my.constant = myValue
         [traverse(site('configuration'), 'settings/some/setting') == 'someValue']
-          my.constant = another value, if condition matches
+          # This works but is rather ugly to rely on
+          other.constant = otherValue
         [global]
 
 ..  index:: Conditions; siteLanguage
@@ -1486,7 +1487,7 @@ TypoScript constants can be used in conditions with the
     but not in Frontend TypoScript *constants* conditions. At the time of
     evaluation the constants are not yet available in constants conditions.
 
-    It is, however, possible to use :confval:`site settings <condition-site>`
+    It is, however, possible to use :confval:`site setttings <condition-site>`
     in constant conditions.
 
 ..  _condition-examples-constant-strict-types:
