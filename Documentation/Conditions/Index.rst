@@ -1363,7 +1363,7 @@ TypoScript constants can be used in conditions with the
     but not in Frontend TypoScript *constants* conditions. At the time of
     evaluation the constants are not yet available in constants conditions.
 
-    It is, however, possible to use :confval:`site setttings <condition-site>`
+    It is, however, possible to use :confval:`site settings <condition-site>`
     in constant conditions.
 
 ..  _condition-examples-constant-strict-types:
