@@ -45,8 +45,8 @@ The following data is available in the Fluid template:
 
     *   At page level it contains the current page record.
     *   If the :typoscript:`FLUIDTEMPLATE` is used in the
-        context of the Fluid ViewHelper :html:`<f:cObject>` it contains data
-        in the Fluid Property :confval:`data <t3viewhelper:typo3-fluid-cobject-data>`.
+        context of the Fluid ViewHelper :ref:`t3viewhelper:typo3-fluid-cobject`
+        it contains data in the Fluid Property `data`.
     *   If called in the context of Extbase it contains the data assigned to the view
         in the :ref:`Controller <t3coreapi:extbase-action-controller>`.
     *   Use the :ref:`RecordTransformationProcessor` to get additional computed
@@ -59,7 +59,7 @@ The following data is available in the Fluid template:
 *   Data retrieved by
     :ref:`data processors <cobj-fluidtemplate-properties-dataprocessing>`
 
-You can use the :ref:`debug <t3viewhelper:typo3fluid-fluid-debug>` ViewHelper
+You can use the :ref:`debug <t3viewhelper:typo3-fluid-debug>` ViewHelper
 to output all available data using the magic `{_all}` variable:
 
 ..  code-block:: html

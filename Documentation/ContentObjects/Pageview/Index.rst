@@ -276,7 +276,7 @@ If the backend layout is named "TwoColumns" it is resovled to
 :file:`EXT:my_sitepackage/Resources/Private/Templates/Pages/TwoColumns.html`.
 
 For all these templates
-:confval:`partials <t3viewhelper:typo3fluid-fluid-render-partial>`
+:doc:`partial  <t3viewhelper:Global/Render#viewhelper-argument-typo3-cms-fluid-viewhelpers-renderviewhelper-partial>`
 are expected in folder
 :path:`EXT:my_sitepackage/Resources/Private/Templates/Pages/Partials` and
 :ref:`layouts <t3viewhelper:typo3fluid-fluid-layout>` in
