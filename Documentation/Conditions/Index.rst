@@ -1234,10 +1234,9 @@ site()
     ..  code-block:: typoscript
         :caption: EXT:site_package/Configuration/TypoScript/constants.typoscript
  
-        my.constant = myValue
+        my.constant = my global value
         [traverse(site('configuration'), 'settings/some/setting') == 'someValue']
-          # This works but is rather ugly to rely on
-          other.constant = otherValue
+          my.constant = another value, if condition matches
         [global]
 
 ..  index:: Conditions; siteLanguage
