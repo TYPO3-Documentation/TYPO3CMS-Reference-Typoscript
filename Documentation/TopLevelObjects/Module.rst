@@ -182,7 +182,7 @@ features.skipDefaultArguments
 
       module.tx_somebackend_module {
           features {
-              features.skipDefaultArguments = 1
+              skipDefaultArguments = 1
           }
       }
 
