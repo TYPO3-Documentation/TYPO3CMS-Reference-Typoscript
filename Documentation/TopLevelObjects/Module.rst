@@ -10,7 +10,7 @@ module
 The backend module of an extension can be configured via TypoScript.
 The configuration is done in
 :typoscript:`module.tx_<lowercaseextensionname>_<lowercasepluginname>`.
-:typoscript:`_<lowercasepluginname>` can be ommited then the setting is used
+:typoscript:`_<lowercasepluginname>` can be omitted then the setting is used
 for all backend modules of that extension.
 
 Even though we are in the backend context here we use TypoScript setup. The
