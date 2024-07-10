@@ -62,8 +62,9 @@ lib
     TypoScript code.
 
     This top-level object is available after the template is cached,
-    objects in it can therefore be referenced by using the operator
-    :typoscript:`<=`. Just like with a :confval:`tlo-temp` object copying is
+    objects in it can therefore be referenced by using the 
+    :ref:`reference operator <t3coreapi:typoscript-syntax-syntax-object-referencing>` :typoscript:`=<`.
+    Just like with a :confval:`tlo-temp` object copying is
     also possible.
 
 ..  code-block:: typoscript
@@ -76,10 +77,10 @@ lib
     // <p>Hello World!</p><p>Hello World!</p>
     page = PAGE
     page {
-        10 <= lib.some_content
+        10 =< lib.some_content
         10.wrap = <h1>|</h1>
 
-        20 <= lib.some_content
+        20 =< lib.some_content
         20.wrap = <p>|</p>
     }
 
