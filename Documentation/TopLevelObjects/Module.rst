@@ -18,10 +18,30 @@ settings should be done globally and not changed on a per-page basis.
 Therefore they are usually done in the file
 :ref:`EXT:my_extension/ext_typoscript_setup.typoscript <t3coreapi:ext_typoscript_setup_typoscript>`.
 
+..  versionchanged:: 12.0
+    All Core extensions, and in general all extensions
+    that switch to the :ref:`simplified backend templating <changelog:feature-96812>`
+    no longer use the frontend TypoScript based override approach. This has been
+    superseded by a general override strategy based on TSconfig:
+    :ref:`templates <t3tsconfig:pagetemplates>`.
+
 ..  _module-options:
 
 Options for simple backend modules
-===================================
+==================================
+
+..  warning::
+    It is strongly recommended not to use TypoScript in custom **backend modules**, for example
+    :typoscript:`module.tx_myextension`. Use custom
+    :ref:`Page TSconfig in namespace tx_* <t3tsconfig:page-tsconfig-extension-namespace>`
+    instead.
+
+The configuring backend modules via frontend TypoScript
+is flawed by design: It on one hand forces backend modules to parse the full frontend
+TypoScript, which is a general performance penalty in the backend - the backend then
+scales with the amount of frontend TypoScript. Also, the implementation is based on
+the Extbase ConfigurationManager, which leads to the situation that casual non-Extbase
+backend modules have an indirect dependency to lots of Extbase code.
 
 In simple backend modules extension authors can decide how to use this
 namespace. By convention settings should go in the subsection
@@ -57,6 +77,13 @@ view.templateRootPaths
     :name: module-view-templateRootPaths
     :type: file path with :ref:`stdWrap <stdwrap>`
 
+    ..  versionchanged:: 12.0
+        All Core extensions, and in general all extensions
+        that switch to the :ref:`simplified backend templating <changelog:feature-96812>`
+        no longer use the frontend TypoScript based override approach. This has been
+        superseded by a general override strategy based on TSconfig:
+        :ref:`templates <t3tsconfig:pagetemplates>`.
+
     Used to define several paths for templates, which are executed in reverse
     order (the paths are searched from bottom to top). The first folder where
     the desired layout is found is immediately used. If the array keys are numeric, they
@@ -87,6 +114,13 @@ view.partialRootPaths
 ..  confval:: view.partialRootPaths.[array]
     :name: module-view-partialRootPaths
     :type: file path with :ref:`stdWrap <stdwrap>`
+
+    ..  versionchanged:: 12.0
+        All Core extensions, and in general all extensions
+        that switch to the :ref:`simplified backend templating <changelog:feature-96812>`
+        no longer use the frontend TypoScript based override approach. This has been
+        superseded by a general override strategy based on TSconfig:
+        :ref:`templates <t3tsconfig:pagetemplates>`.
 
     Used to define several paths for partials, which will be executed in reverse
     order. The first folder where the desired partial is found, is used. The
