@@ -265,7 +265,7 @@ plugins.
         :name: plugin-settings
         :type: array of custom settings
 
-        Here reside are all the settings, both extension-wide and plugin-specific.
+        Here reside all the settings, both extension-wide and plugin-specific.
         These settings are available in the controllers as the array variable
         :php:`$this->settings` and in any Fluid template with `{settings}`.
 
