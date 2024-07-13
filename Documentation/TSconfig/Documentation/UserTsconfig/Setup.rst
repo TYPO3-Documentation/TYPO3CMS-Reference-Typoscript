@@ -18,8 +18,7 @@ The :guilabel:`User > User settings` module may only represent a subset of the o
 
     Default values and overriding values in the :guilabel:`User > User settings` module
 
-Properties from the list below are available the different prefixes `setup.default` and `setup.override`,
-and there is another prefix to hide single fields:
+The following properties are available:
 
 ..  _user-setup-properties:
 
@@ -39,12 +38,13 @@ setup.default.[someProperty]
     :name: user-setup-default
     :type: any
 
-    This sets *default* values of the property. A user may override these
-    using its :guilabel:`User Settings` module. This affects only *new* users who did
-    not login yet. It is not usually not possible to set new defaults for users
-    who already logged in at least once. The only way to apply new defaults to
-    existing users is by :guilabel:`Reset Backend User Preferences` in the
-    :guilabel:`Admin tools > Maintenance` section of the install tool.
+    With this property you can set *default* values. In case a backend user may override these settings
+    using its :guilabel:`User Settings` module the default settings will be overridden 
+    for this specific backend user. To change the defaults for users with this 
+    property only affects *new* users who did not login yet. It is usually not 
+    possible to set new defaults for users who already logged in, at least once. 
+    The only way to apply new defaults to existing users is by :guilabel:`Reset Backend User Preferences` 
+    in the :guilabel:`Admin tools > Maintenance` section of the install tool.
 
     ..  literalinclude:: _Setup/_user-setup-default.tsconfig
         :language: typoscript
