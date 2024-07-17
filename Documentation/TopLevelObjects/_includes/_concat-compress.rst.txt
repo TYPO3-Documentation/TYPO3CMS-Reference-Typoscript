@@ -1,0 +1,13 @@
+..  hint::
+
+    Enabling concatenation and/or compression requires several filesystem operations
+    and can considerably impact frontend request time performance, especially for
+    uncached pages. For optimal performance, you should prefer
+    to pre-bundle as many CSS/JS assets as possible via a frontend
+    buildchain. Also, you can try to utilize HTTP/2 multiplexing on your
+    webserver, which performs  much better than HTTP/1 for requesting multiple 
+    small files. It also leverages distinct cacheability of these CSS/JS assets.
+
+    Most servers can be configured to dynamically compress specific
+    file types on-the-fly, which is preferrable to using application-level
+    compression.
