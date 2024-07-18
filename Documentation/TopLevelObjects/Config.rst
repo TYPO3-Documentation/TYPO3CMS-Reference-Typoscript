@@ -401,6 +401,8 @@ compressCss
          related compressionLevel options in :file:`.htaccess`, as otherwise the
          compressed files will not be readable by the user agent.
 
+         ..  include:: _includes/_concat-compress.rst.txt
+
          TYPO3 comes with a built-in compression handler, but you can
          also register your own one using
          :php:`$GLOBALS['TYPO3_CONF_VARS']['FE']['cssCompressHandler']`.
@@ -442,13 +444,12 @@ compressJs
          the like using GZIP compression. Does not work on files, which are
          referenced in :typoscript:`page.headerData`.
 
-         This can significantly reduce file sizes of linked JavaScript files
-         and thus decrease loading times.
-
          Please note that this requires :file:`.htaccess` to be adjusted, as otherwise
          the files will not be readable by the user agent. Please see the
          description of :php:`$GLOBALS['TYPO3_CONF_VARS']['FE']['compressionLevel']` in the
          Install Tool.
+
+         ..  include:: _includes/_concat-compress.rst.txt
 
          TYPO3 comes with a built-in compression handler, but you can
          also register your own one using
@@ -490,6 +491,8 @@ concatenateCss
          only, if their media attribute has the same value, e.g. if it is "all"
          for several files. Does not work on files, which are referenced in
          :typoscript:`page.headerData`.
+
+         ..  include:: _includes/_concat-compress.rst.txt
 
          TYPO3 comes with a built-in concatenation handler, but you
          can also register your own one using
@@ -533,6 +536,8 @@ concatenateJs
          on files, which are referenced in :typoscript:`page.headerData`.
 
          If all files to be concatenated are marked with the async flag, the async attribute is assigned to the script tag.
+
+         ..  include:: _includes/_concat-compress.rst.txt
 
          TYPO3 comes with a built-in concatenation handler, but you
          can also register your own one using
