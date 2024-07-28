@@ -298,14 +298,18 @@ tt_content.preview
 
     ..  note::
 
-        This only works, if there is no hook registered for this content type, you may want to check this
-        section in the :guilabel:`System > Configuration` module:
+        This only works if the registered preview renderer for the content type
+        uses Fluid rendering and the rendering is not overridden by using
+        an event listener for the event :php:`\TYPO3\CMS\Backend\View\Event\PageContentPreviewRenderingEvent`.
 
-        ..  code-block:: php
-            :caption: Search for registrations of this hook
+        Have a look at :php:`\TYPO3\CMS\Backend\Preview\StandardContentPreviewRenderer`
+        and the various methods for customizing the preview rendering:
 
-            $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['cms/layout/class.tx_cms_layout.php']
-                ['tt_content_drawItem']['content_element_xy'];
+        #.  :ref:`Register a preview renderer <t3coreapi:ConfigureCE-Preview>`
+        #.  Register an event listener for :ref:`PageContentPreviewRenderingEvent <t3coreapi:PageContentPreviewRenderingEvent>`
+
+        For checking for event listeners, see the list
+        :guilabel:`System > Configuration > Event Listeners (PSR-14)` (available with installed EXT:lowlevel).
 
 
 ..  _pageweblayoutpreview-example:
