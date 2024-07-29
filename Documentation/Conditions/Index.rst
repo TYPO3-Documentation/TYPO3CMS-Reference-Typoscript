@@ -713,7 +713,7 @@ like()
 
     Example:
 
-    .. code-block:: typoscript
+    ..  code-block:: typoscript
         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
         # Search a string with * within another string
@@ -834,7 +834,7 @@ getenv()
 
     Example:
 
-    .. code-block:: typoscript
+    ..  code-block:: typoscript
         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
         [getenv("VIRTUAL_HOST") == "www.example.org"]
