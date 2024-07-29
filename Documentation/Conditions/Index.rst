@@ -464,7 +464,7 @@ frontend.user.userId
 
     Example:
 
-    .. code-block:: typoscript
+    ..  code-block:: typoscript
         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
         [frontend.user.userId == 5]
@@ -509,7 +509,7 @@ frontend.user.userGroupList
 
     Example:
 
-    .. code-block:: typoscript
+    ..  code-block:: typoscript
         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
         [like(","~frontend.user.userGroupList~",", "*,1,*")]
@@ -736,7 +736,7 @@ like()
 
     Example:
 
-    .. code-block:: typoscript
+    ..  code-block:: typoscript
         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
         # Search a string with * within another string
@@ -868,7 +868,7 @@ getenv()
 
     Example:
 
-    .. code-block:: typoscript
+    ..  code-block:: typoscript
         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
         [getenv("VIRTUAL_HOST") == "www.example.org"]
