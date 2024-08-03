@@ -1561,8 +1561,9 @@ Spam protect email addresses automatically
 ------------------------------------------
 
 Demonstrates:
+
     * :confval:`config.spamProtectEmailAddresses <config-spamProtectEmailAddresses>`
-    * :confval:`config.spamProtectEmailAddresses_lastDotSubst <config-spamProtectEmailAddresses_lastDotSubst>`
+    * :confval:`config.spamProtectEmailAddresses_atSubst <config-spamProtectEmailAddresses_atSubst>`
     * :confval:`config.spamProtectEmailAddresses_lastDotSubst <config-spamProtectEmailAddresses_lastDotSubst>`
 
 ..  code-block:: typoscript
@@ -1570,7 +1571,7 @@ Demonstrates:
 
     config {
         spamProtectEmailAddresses = -2
-        spamProtectEmailAddresses_lastDotSubst = (at)
+        spamProtectEmailAddresses_atSubst = (at)
         spamProtectEmailAddresses_lastDotSubst = (dot)
     }
 
