@@ -20,6 +20,10 @@ There is no else property available. The "else" branch of an "if" statement is a
 missing feature. You can implement a workaround by a logic based on the
 :ref:`stdwrap-override-conditions`.
 
+Simple "if empty use different value" conditions for record data can be built
+with the :ref:`TypoScript // (double slash) <data-type-gettext-double-slash>`
+fallback operator.
+
 Also check the explanations and the examples further below!
 
 .. contents::
