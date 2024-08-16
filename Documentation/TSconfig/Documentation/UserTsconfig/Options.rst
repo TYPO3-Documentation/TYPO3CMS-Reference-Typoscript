@@ -511,18 +511,46 @@ file_list.primaryActions
     :type: string
     :Default: :typoscript:`view,metadata,translations,delete`
 
-    Option to add more primary actions to the list view.
-    The list of actions to be displayed can be given in the TSConfig of
-    the backend user. The actions that can be added are
+    Option to add more primary actions to the list view,
+    which are otherwise only accessible through the "..." menu in the file list
+    module.
 
-    *   :typoscript:`view`
-    *   :typoscript:`metadata`
-    *   :typoscript:`delete`
+    The list of actions to be displayed can be given in the TSConfig of
+    the backend user. The actions that can be set are
+
     *   :typoscript:`copy`
     *   :typoscript:`cut`
+    *   :typoscript:`delete`
+    *   :typoscript:`download`
+    *   :typoscript:`edit`
+    *   :typoscript:`info`
+    *   :typoscript:`metadata`
+    *   :typoscript:`paste`
+    *   :typoscript:`rename`
+    *   :typoscript:`replace`
+    *   :typoscript:`translations` (always active)
+    *   :typoscript:`updateOnlineMedia`
+    *   :typoscript:`upload`
+    *   :typoscript:`view`
 
-    :typoscript:`translations` is always active.
+    Example:
 
+    ..  code-block:: tsconfig
+        :caption: EXT:site_package/Configuration/user.tsconfig
+
+        # This will add "copy", "cut" and "replace" buttons in addition to the three default
+        # buttons. "translations" can be omitted, as it will be added by default,
+        # if a TYPO3 site is set up multilingual.
+        options.file_list.primaryActions = view,metadata,delete,copy,cut,replace
+
+    ..  figure:: /Images/ManualScreenshots/List/FileListPrimaryActions.png
+        :alt: Show primary action with additional copy, cut and replace buttons
+        :class: with-shadow
+
+        See option `primaryActions` with three default buttons and the three
+        additional buttons "copy", "cut" and "replace". As there is no TYPO3
+        site set up multilingual the button "translations" is not rendered in
+        that TYPO3 environment.
 
 ..  index:: File list; Thumbnails height
 ..  _useroptions-file_list-thumbnail-height:
