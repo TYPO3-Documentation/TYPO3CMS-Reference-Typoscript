@@ -1,17 +1,18 @@
-.. include:: /Includes.rst.txt
-.. index:: TypoScript in extensions
-.. _extdev-add-typoscript:
+..  include:: /Includes.rst.txt
+..  index:: TypoScript in extensions
+..  _extdev-add-typoscript:
 
 ================================
 Add TypoScript in your extension
 ================================
 
-.. note::
+..  note::
 
-   This part is written for extension developers.
+    This part is written for extension developers.
 
 
-.. index:: TypoScript in extensions; File locations
+..  index:: TypoScript in extensions; File locations
+..  _extdev-add-typoscript-extension:
 
 Create TypoScript files in your extension
 =========================================
@@ -35,8 +36,8 @@ Usually, you will have the following structure:
 * :file:`setup.typoscript` contains the TypoScript setup
 
 
-.. index:: TypoScript in extensions; Static includes
-.. _extdev-static-includes:
+..  index:: TypoScript in extensions; Static includes
+..  _extdev-static-includes:
 
 Make TypoScript available for static includes
 =============================================
@@ -69,13 +70,13 @@ better configurability.
 This will load your constants and your setup once the template is
 included statically.
 
-.. tip::
+..  tip::
 
-   You may also want to make several different templates available.
+    You may also want to make several different templates available.
 
 
-.. index:: TypoScript in extensions; Load always
-.. _extdev-always-load:
+..  index:: TypoScript in extensions; Load always
+..  _extdev-always-load:
 
 Make TypoScript available (always load)
 =======================================

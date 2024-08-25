@@ -1,14 +1,14 @@
-.. include:: /Includes.rst.txt
-.. index:: TypoScript in extensions
-.. _extdev-access-typoscript:
+..  include:: /Includes.rst.txt
+..  index:: TypoScript in extensions
+..  _extdev-access-typoscript:
 
 =================================
 Access TypoScript in an extension
 =================================
 
-.. note::
+..  note::
 
-   This part is written for extension developers.
+    This part is written for extension developers.
 
 This page explains how to access TypoScript settings in an extension.
 
@@ -26,35 +26,35 @@ Extbase conventions ("conventions over configuration").
 
 In order to access TypoScript settings from an Extbase controller.
 
-.. rst-class:: bignums-xxl
+..  rst-class:: bignums-xxl
 
-#. Use the convention of defining your TypoScript settings in :typoscript:`settings`
+#.  Use the convention of defining your TypoScript settings in :typoscript:`settings`
 
-   .. code-block:: typoscript
-      :caption: EXT:my_extension/Configuration/TypoScript/setup.typoscript
+    ..  code-block:: typoscript
+        :caption: EXT:my_extension/Configuration/TypoScript/setup.typoscript
 
-      plugin.tx_myextension {
-         view {
-            # view settings
-         }
+        plugin.tx_myextension {
+           view {
+              # view settings
+           }
 
-         settings {
-            key1 = value1
-            key2 = value2
-         }
-      }
+           settings {
+              key1 = value1
+              key2 = value2
+           }
+        }
 
-#. Access them via :php:`$this->settings`
+#.  Access them via :php:`$this->settings`
 
-   For example, in your controller:
+    For example, in your controller:
 
-   .. code-block:: php
+    ..  code-block:: php
 
-      $myvalue1 = $this->settings['key1'] ?? 'default';
+        $myvalue1 = $this->settings['key1'] ?? 'default';
 
-.. seealso::
+..  seealso::
 
-   * :ref:`Extbase TypoScript configuration <t3coreapi:extbase_typoscript_configuration>`
+    *   :ref:`Extbase TypoScript configuration <t3coreapi:extbase_typoscript_configuration>`
 
 Fluid
 =====
@@ -62,6 +62,6 @@ Fluid
 If Extbase controllers are used, :php:`$this->settings` is automatically passed to the
 :ref:`Fluid <t3coreapi:fluid>` template. Allowing you to access settings like this:
 
-.. code-block:: xml
+..  code-block:: xml
 
-   {settings.key1}
+    {settings.key1}

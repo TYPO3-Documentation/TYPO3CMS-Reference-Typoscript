@@ -1,6 +1,6 @@
-.. include:: /Includes.rst.txt
-.. index:: TypoScript; Using and setting
-.. _using-and-setting:
+..  include:: /Includes.rst.txt
+..  index:: TypoScript; Using and setting
+..  _using-and-setting:
 
 Using and setting TypoScript
 ============================
@@ -14,16 +14,14 @@ define values in their own :guilabel:`Constants` and :guilabel:`Setup` fields.
 The TypoScript template configuration can be viewed and edited in the
 :guilabel:`WEB > Template` module.
 
+..  toctree::
+    :maxdepth: 5
+    :titlesonly:
 
-
-.. toctree::
-   :maxdepth: 5
-   :titlesonly:
-
-   Entering
-   AddTypoScriptWithExtensions
-   AccessTypoScriptWithExtensions
-   Constants
-   TheConstantEditor
-   Register
-   Debugging
+    Entering
+    AddTypoScriptWithExtensions
+    AccessTypoScriptWithExtensions
+    Constants
+    TheConstantEditor
+    Register
+    Debugging
