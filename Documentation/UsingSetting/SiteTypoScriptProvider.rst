@@ -1,5 +1,5 @@
-.. include:: /Includes.rst.txt
-.. _typoscript-site-sets:
+..  include:: /Includes.rst.txt
+..  _typoscript-site-sets:
 
 ======================================
 TypoScript provider for sites and sets
@@ -24,7 +24,7 @@ included via sets are automatically ordered and deduplicated.
 
 ..  contents::
 
-.. _typoscript-site-sets-site:
+..  _typoscript-site-sets-site:
 
 Site as a TypoScript provider
 =============================
@@ -36,7 +36,7 @@ constants, if available. See also :ref:`Site handling <t3coreapi:sitehandling>`.
 Site dependencies (sets) will be loaded first, that means setup and constants
 can be overridden on a per-site basis.
 
-.. _typoscript-site-sets-site-example:
+..  _typoscript-site-sets-site-example:
 
 Example: A site that depends on a sitepackage
 ---------------------------------------------
@@ -66,7 +66,7 @@ Same goes for TypoScript constants:
 
     page.trackingCode = 123456
 
-.. _typoscript-site-sets-set:
+..  _typoscript-site-sets-set:
 
 Set as a TypoScript provider
 ============================
@@ -96,7 +96,7 @@ be loaded multiple times, if a shared dependency is required by multiple sets.
     `@import` statements can still be used for local includes, but
     should be avoided for cross-set/extensions dependencies.
 
-.. _typoscript-site-sets-set-example:
+..  _typoscript-site-sets-set-example:
 
 Example: The set of a sitepackage
 ---------------------------------
