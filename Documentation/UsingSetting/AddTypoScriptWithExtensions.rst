@@ -1,6 +1,6 @@
-.. include:: /Includes.rst.txt
-.. index:: TypoScript in extensions
-.. _extdev-add-typoscript:
+..  include:: /Includes.rst.txt
+..  index:: TypoScript in extensions
+..  _extdev-add-typoscript:
 
 ================================
 Add TypoScript in your extension
@@ -10,14 +10,13 @@ Add TypoScript in your extension
     TypoScript on a per-site basis can now be included via
     :ref:`sites and sets <typoscript-site-sets>`.
 
-.. note::
+..  note::
 
-   This part is written for extension developers.
+    This part is written for extension developers.
 
 
-.. index:: TypoScript in extensions; File locations
-
-.. _extdev-add-typoscript-extension:
+..  index:: TypoScript in extensions; File locations
+..  _extdev-add-typoscript-extension:
 
 Create TypoScript files in your extension
 =========================================
@@ -32,8 +31,7 @@ and :ref:`how to provide TypoScript for both TYPO3 v13 and v12 <extdev-add-typos
 *   :file:`constants.typoscript` contains the constants
 *   :file:`setup.typoscript` contains the TypoScript setup
 
-
-.. _extdev-add-typoscript-sets:
+..  _extdev-add-typoscript-sets:
 
 TypoScript provided as site set (only TYPO3 v13.1 and above)
 ============================================================
@@ -76,7 +74,7 @@ optional feature depends on the main TypoScript.
 
 The sets can now be defined for TYPO3 v13 as follows:
 
-.. _extdev-add-typoscript-sets-main:
+..  _extdev-add-typoscript-sets-main:
 
 The main set of the extension
 -----------------------------
@@ -86,7 +84,7 @@ The main set of the extension
     :caption: EXT:my_extension/Configuration/Sets/MyExtension/config.yaml
 
 
-.. _extdev-add-typoscript-sets-feature:
+..  _extdev-add-typoscript-sets-feature:
 
 The sub set for an optional feature
 -----------------------------------
@@ -95,8 +93,7 @@ The sub set for an optional feature
     :language: yaml
     :caption: EXT:my_extension/Configuration/Sets/MyExtensionWithACoolFeature/config.yaml
 
-
-.. _extdev-add-typoscript-sets-typoscript:
+..  _extdev-add-typoscript-sets-typoscript:
 
 TypoScript files provided by the sets
 -------------------------------------
@@ -104,8 +101,7 @@ TypoScript files provided by the sets
 The TypoScript placed in the same folder like the set, contains your
 configurations.
 
-
-.. _extdev-add-typoscript-sets-v12:
+..  _extdev-add-typoscript-sets-v12:
 
 TypoScript provided by extensions supporting TYPO3 v12.4 and v13
 ================================================================
@@ -156,8 +152,8 @@ The extended file structure of the extension could, for example look like this:
     *   ...
 
 
-.. _extdev-add-typoscript-sets-v12-static_includes:
-.. _extdev-static-includes:
+..  _extdev-add-typoscript-sets-v12-static_includes:
+..  _extdev-static-includes:
 
 Only when supporting TYPO3 v12.4: Make TypoScript available for static includes
 -------------------------------------------------------------------
@@ -176,8 +172,8 @@ better configurability.
 This will load your constants and your setup once the template is
 included statically.
 
-.. index:: TypoScript in extensions; Load always
-.. _extdev-always-load:
+..  index:: TypoScript in extensions; Load always
+..  _extdev-always-load:
 
 Make TypoScript available (always load)
 =======================================
