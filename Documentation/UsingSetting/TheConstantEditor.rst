@@ -6,24 +6,32 @@
 The constant editor
 ===================
 
+..  versionchanged:: 12.0
+    The TypoScript management tools are now found in backend module
+    :guilabel:`Site Management > TypoScript`
+
 It's possible to add comments in TypoScript. Comments are always ignored by the
-parser when the template is processed. But the backend module **WEB > Template**
+parser when the TypoScript is processed. But the backend module
+:guilabel:`Site Management > TypoScript`
 has the ability to use comments in the constant editor to make simple
 configuration of a template even easier than constants already make it
 themselves.
 
-..  include:: /Images/AutomaticScreenshots/TemplatesModul/TemplatesConstantEditor.rst.txt
+..  figure:: /Images/ManualScreenshots/TypoScriptModule/ConstantEditor.png
+    :alt: Screenshot of the TYPO3 Backend showing the constant editor
 
-When the "Constant Editor" parses the template, *all* comments before every
-constant-definition are registered.  A certain syntax is available to define
+When the :guilabel:`Constant Editor` parses the TypoScript constants,
+*all* comments before every constant-definition are registered.
+
+A certain syntax is available to define
 what category the constant should be in, which type it has and to provide a
 description for the constant.
 
 ..  code-block:: typoscript
 
     styles.content {
-       # cat=content/cHeader/h0; type=int[1-5]; label=Default Header type: Enter the number of the header layout to be used by default
-       defaultHeaderType = 2
+      # cat=content/cHeader/h0; type=int[1-5]; label=Default Header type: Enter the number of the header layout to be used by default
+      defaultHeaderType = 2
 
        # cat=content/cShortcut/t0; type=string; label=List of accepted tables
        shortcut.tables = tt_content
@@ -31,9 +39,9 @@ description for the constant.
        # cat=content/cTextmedia/i1; type=color; label= Media element border, color: Bordercolor of media elements in content elements when "Border"-option for an element is set
        textmedia.borderColor = #000000
 
-       color1 =
-       color2 = blue
-       properties =
+      color1 =
+      color2 = blue
+      properties =
     }
 
 In the above example, three constants have syntactically correct comments
@@ -52,7 +60,7 @@ A constant may be given a default value when it is defined, as is the case for
 the :typoscript:`color2` constant in the above example.
 
 More generally, the default value of a constant is determined by the value the
-constant has before the last template is parsed.
+constant has before the last TypoScript is parsed.
 
 ..  _typoscript-syntax-constant-editor-keys:
 ..  _typoscript-syntax-constant-editor-comments:
@@ -92,10 +100,17 @@ cat
 Predefined categories
 ---------------------
 
+..  versionchanged:: 12.0
+    While the predefined categories still exist for backward compatibility
+    reasons they are not used anymore by the TYPO3 Core except for "content".
+    It is suggested to use one or several
+    :ref:`typoscript-syntax-constant-editor-keys-cat-custom-categories` for
+    each extension supplying categories.
+
 =========  ======================================================================
 Category   Description
 =========  ======================================================================
-basic      Constants of superior importance for the template. This is typically
+basic      Constants of superior importance for the TypoScript. This is typically
            dimensions, image files and enabling of various features. The most
            basic constants, which would almost always needed to be configured.
 menu       Menu setup. This includes font files, sizes, background images.
@@ -116,7 +131,14 @@ has to be added. Example:
 ..  code-block:: typoscript
     :caption: EXT:site_package/Configuration/TypoScript/constants.typoscript
 
-    # customcategory=mysite=LLL:EXT:myext/locallang.xlf:mysite
+    # customcategory=mySitePackage=My Site Package
+
+    #cat=mySitePackage/basic/100; type=boolean; label=Something
+    tx_my_site_package.basic.enableSomething = 0
+
+..  versionchanged:: 12.0
+    There has to be a newline after the definition of a custom category or it will
+    not be considered. See also https://forge.typo3.org/issues/100936.
 
 This line defines the new category "mysite" which will be available for any
 constant defined **after** this line. The :typoscript:`LLL:` reference points to the
@@ -129,6 +151,9 @@ Usage example:
     #cat=mysite//a; type=boolean; label=Global no_cache
     config.no_cache = 0
 
+If a custom category is not defined, its identifier will be used in lowercase
+letters.
+
 ..  _typoscript-syntax-constant-editor-keys-cat-subcategories:
 
 Subcategories
@@ -140,13 +165,13 @@ after the category separated by a slash :typoscript:`/`. Example:
 ..  code-block:: typoscript
     :caption: EXT:site_package/Configuration/TypoScript/constants.typoscript
 
-    "basic/color/a"
+    "mySitePackage/color/a"
 
 This will make the constant go into the "BASIC" category and be listed
 under the "COLOR" section.
 
 One of the predefined subcategories can be used or any custom subcategory. If a
-non-existing subcategory us used, the constant will go into the subcategory
+non-existing subcategory os used, the constant will go into the subcategory
 "Other".
 
 ..  _typoscript-syntax-constant-editor-keys-cat-predefined-subcategories:
@@ -161,7 +186,7 @@ Editor):
 Subcategory  Description
 ===========  ========================================================================
 enable       Used for options that enable or disable primary functions of a
-             template.
+             TypoScript configuration.
 dims         Dimensions of all kinds; pixels, widths, heights of images, frames,
              cells and so on.
 file         Files like background images, fonts and so on. Other options related
@@ -181,8 +206,8 @@ chtml
 
 These are all categories reserved for options that relate to content
 rendering for each type of :typoscript:`tt_content` element. See the
-`static template <https://github.com/typo3/typo3/blob/main/typo3/sysext/fluid_styled_content/Configuration/TypoScript/constants.typoscript>`__
-of extension "fluid\_styled\_content" for examples.
+:t3src:`TypoScript constants <typo3/sysext/fluid_styled_content/Configuration/TypoScript/constants.typoscript>`
+of extension :composer:`typo3/cms-fluid-styled-content` for examples.
 
 ..  _typoscript-syntax-constant-editor-keys-cat-custom-subcategories:
 
@@ -195,21 +220,19 @@ using the :typoscript:`customsubcategory` parameter. Example:
 ..  code-block:: typoscript
     :caption: EXT:site_package/Configuration/TypoScript/constants.typoscript
 
-    # customsubcategory=cache=LLL:EXT:myext/locallang.xlf:cache
+    # customsubcategory=something=Some Subcategory
 
-Usage example:
+    #cat=mySitePackage/something/a; type=boolean; label=Turn something on
+    tx_my_site_package.basic.enableSomething = 0
 
-..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/constants.typoscript
-
-    #cat=mysite/cache/a; type=boolean; label=Global no_cache
-    config.no_cache = 0
+..  versionchanged:: 12.0
+    There has to be a newline after the definition of a custom subcategory or it will
+    not be considered. See also https://forge.typo3.org/issues/100936.
 
 Will look in the Constant Editor like this:
 
-..  figure:: /Images/ManualScreenshots/Templates/CustomSubcategory.png
+..  figure:: /Images/ManualScreenshots/TypoScriptModule/ConstantEditorSubCategory.png
     :alt: The Constant Editor showing a custom category.
-
 
 ..  _typoscript-syntax-constant-editor-keys-cat-constants-ordering:
 
@@ -224,15 +247,14 @@ Example:
 ..  code-block:: typoscript
     :caption: EXT:site_package/Configuration/TypoScript/constants.typoscript
 
-    #cat=mysite/cache/b; type=boolean; label=Special cache
+    #cat=mysite/something/b; type=boolean; label=Special cache
     config.no_cache = 0
-    #cat=mysite/cache/a; type=boolean; label=Global no_cache
+    #cat=mysite/something/a; type=boolean; label=Global no_cache
     config.no_cache = 0
 
 The "Special cache" constant will be displayed after the "Global no_cache"
 constant, because it is ranked with letter "b" and the other constant
 has letter "a". Constants without any ordering information will come last.
-
 
 ..  _typoscript-syntax-constant-editor-keys-type:
 
@@ -281,21 +303,27 @@ The label is a trimmed text string. It gets split on the first :typoscript:`:` (
 to separate header and body of the comment. The header is displayed on its own
 line in bold.
 
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/TypoScript/constants.typoscript
+
+    #cat=mySitePackage/basic/100; type=boolean; label=Turn something on: This turns on a cool feature!
+    tx_my_site_package.basic.enableSomething = 0
+
 The string can be localized by using the traditional "LLL" syntax. Example:
 
 ..  code-block:: typoscript
     :caption: EXT:site_package/Configuration/TypoScript/constants.typoscript
 
-    #cat=Site conf/cache/a; type=boolean; label=LLL:EXT:examples/locallang.xlf:config.no_cache
-    config.no_cache = 0
+    #cat=mySitePackage/basic/100; type=boolean; label=LLL:EXT:my_site_package/Resources/Private/Language/locallang.xlf:config.something
+    tx_my_site_package.basic.enableSomething = 0
 
 Only a single string is referenced, not one for the header and one for the
 description. This means that the localized string must contain the colon
 separator (:code:`:`). Example:
 
 ..  code-block:: xml
-    :caption: EXT:examples/locallang.xlf
+    :caption: LLL:EXT:my_site_package/Resources/Private/Language/locallang.xlf
 
-    <trans-unit id="config.no_cache" xml:space="preserve">
-         <source>Global no_cache: Check the box to turn off all caches.</source>
+    <trans-unit id="config.something" xml:space="config.something">
+        <source>Turn something on: This turns on a cool feature!</source>
     </trans-unit>
