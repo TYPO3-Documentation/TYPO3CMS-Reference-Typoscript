@@ -14,14 +14,26 @@ to find errors within TypoScript.
 ..  index::
     TypoScript; Constants debugging
     Constants; debugging
+..  _typoscript-debugging-constants:
 
 Analyzing defined constants
 ===========================
 
-The *TypoScript Object Browser* provides an tree view to all defined constants
-on the currently active page.
+..  versionchanged:: 12.0
+    The TypoScript management tools are now found in backend module
+    :guilabel:`Site Management > TypoScript`. It was formerly found in
+    "Page > Template".
 
-..  include:: /Images/AutomaticScreenshots/TemplatesModul/TemplatesConstants.rst.txt
+    The submodule :guilabel:`Active TypoScript` was renamed from
+    "TypoScript Object Browser".
+
+The backend submodule :guilabel:`Site Management > TypoScript > Active TypoScript`
+provides a tree view to all defined TypoScript Constants on the currently active page.
+
+..  figure:: /Images/ManualScreenshots/TypoScriptModule/ConstantsDisplayActiveTypoScript.png
+    :alt: A Screenshot showing the "Constants" section of the "Active TypoScript" submodule.
+
+    Analyzing defined TypoScript Constants in the :guilabel:`Active TypoScript` submodule.
 
 ..  index:: TypoScript; Syntax errors
 ..  _typoscript-syntax-finding-errors:
@@ -29,31 +41,27 @@ on the currently active page.
 Finding errors
 ==============
 
+..  versionchanged:: 12.0
+    The TypoScript management tools are now found in backend module
+    :guilabel:`Site Management > TypoScript`. It was formerly found in
+    "Page > Template".
+
+    The submodule :guilabel:`Active TypoScript` was renamed from
+    "TypoScript Object Browser". It does not display syntax warnings anymore,
+    those are displayed in the submodule :guilabel:`Included TypoScript` only.
+
+    The submodule :guilabel:`Included TypoScript` was renamed from
+    "TypoScript Analyzer".
+
 There are no tools that will tell whether the given TypoScript code is 100%
-correct. The :guilabel:`TypoScript object browser` will warn about syntax errors though:
+correct. The :guilabel:`Included TypoScript` will warn about syntax errors though:
 
-..  figure:: /Images/ManualScreenshots/Templates/SyntaxError.png
-    :alt: The TypoScript Object Browser showing a syntax error
-    :class: with-shadow
+..  figure:: /Images/ManualScreenshots/TypoScriptModule/IncludedTypoScriptWarnings.png
+    :alt: The submodule 'Included TypoScript' showing a syntax warning
 
-Errors will also appear in the :guilabel:`template analyzer`, when viewing the content of a
-given template. It is also possible to see the full TypoScript code by clicking
-on the :guilabel:`View the complete TS listing` button at the bottom of the template
-analyzer:
-
-..  include:: /Images/AutomaticScreenshots/TemplatesModul/TemplatesViewFullListingButton.rst.txt
-
-The result is a long listing with all compiled line numbers, which makes it
-possible to find the error reported by the :guilabel:`TypoScript object browser`.
-
-..  figure:: /Images/ManualScreenshots/Templates/FullListing.png
-    :alt: The TypoScript Object Browser showing a syntax error
-    :class: with-shadow
-
-In the frontend, the :guilabel:`admin panel` is another possibility to debug TypoScript; use
-its section called :guilabel:`TypoScript`. It shows selected rendered (configuration)
-values, SQL queries, error messages and more.
-
+In the frontend, the :composer:`typo3/cms-adminpanel` is another possibility
+to debug TypoScript: use its section called :guilabel:`TypoScript`. It shows
+selected rendered (configuration) values, SQL queries, error messages and more.
 
 ..  index::
     TypoScript; Debugging stdWrap
