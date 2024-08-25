@@ -8,7 +8,8 @@ The constant editor
 
 ..  versionchanged:: 12.0
     The TypoScript management tools are now found in backend module
-    :guilabel:`Site Management > TypoScript`
+    :guilabel:`Site Management > TypoScript`. It was formerly found in
+    "Page > Template".
 
 It's possible to add comments in TypoScript. Comments are always ignored by the
 parser when the TypoScript is processed. But the backend module
