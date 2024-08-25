@@ -35,6 +35,8 @@ code.
 Spaces around the colon (:typoscript:`:`) are irrelevant. The :typoscript:`key` is
 case-insensitive.
 
+..  _data-type-gettext-double-slash:
+
 By separating the value of getText with :typoscript:`//` (double slash) a number of
 codes can be supplied and getText will return the first one, which is not
 empty ("" or zero).
