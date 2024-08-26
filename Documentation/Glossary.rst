@@ -15,23 +15,23 @@ properties and values.
 
 To reuse the OOP analogy and compare with PHP:
 
-+------------------------+------------------------+
-|TypoScript Templates    | PHP classes            |
-+========================+========================+
-| **property**           | property               |
-+------------------------+------------------------+
-| **object**             | object                 |
-| (is defined by /       | (is defined by /       |
-| is an instantiation of | is an instantiation of |
-| an object type)        | a class)               |
-+------------------------+------------------------+
-| **object type**        | class                  |
-| = complex data type    |                        |
-+------------------------+------------------------+
-| **simple datatype**    | PHP primitive data type|
-+------------------------+------------------------+
-| text = TEXT            | $text = new Text()     |
-+------------------------+------------------------+
++-------------------------+------------------------+
+|TypoScript Configuration | PHP classes            |
++=========================+========================+
+| **property**            | property               |
++-------------------------+------------------------+
+| **object**              | object                 |
+| (is defined by /        | (is defined by /       |
+| is an instantiation of  | is an instantiation of |
+| an object type)         | a class)               |
++-------------------------+------------------------+
+| **object type**         | class                  |
+| = complex data type     |                        |
++-------------------------+------------------------+
+| **simple datatype**     | PHP primitive data type|
++-------------------------+------------------------+
+| text = TEXT             | $text = new Text()     |
++-------------------------+------------------------+
 
 Example 1 (assign value to property in object1:
 
@@ -73,7 +73,7 @@ Property:
    "variables".
 
 "Object":
-   In the context of TypoScript templates, objects are complex variables and
+   In the context of TypoScript configuration, objects are complex variables and
    have a complex data type. They contain one or more variables.
 
 Value:
@@ -111,8 +111,8 @@ cObject data type
 
 Top level objects
    As described in :ref:`t3coreapi:typoscript-syntax-introduction`
-   TypoScript templates are converted into a multidimensional PHP array.
-   You can view this in the TypoScript object browser. Top level
+   TypoScript configuration is converted into a multidimensional PHP array.
+   You can view this in the :ref:`submodule-active-typoscript`. Top level
    objects are located on the top level. Top level objects are for
    example `config`, `page` and `plugin`.
 
