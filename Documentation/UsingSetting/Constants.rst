@@ -23,7 +23,7 @@ follow the :ref:`syntax of ordinary TypoScript
 manage *in a single place* values, which are later used in *several places*.
 
 ..  seealso::
-    Most constants can be edited in the :guilabel:`Template` module using the
+    Most constants can be assigned in the :guilabel:`Template` module using the
     :guilabel:`Constant Editor`.
 
     If you keep your constants in a site package extension you can also make
