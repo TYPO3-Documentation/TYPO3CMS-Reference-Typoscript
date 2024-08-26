@@ -139,7 +139,7 @@ defined in the constants field or a file called :file:`constants.typoscript`:
     The fields :guilabel:`Constants` and :guilabel:`Setup` in the TypoScript backend record
 
 You can use the sub module :guilabel:`Site Management > TypoScript > Active TypoScript`
-to display how constants are replaced. The constant key is displayed in red, the
+to display which valued are assigned to constants. The constant key is displayed in red, the
 replacement in green:
 
 ..  figure:: /Images/ManualScreenshots/TypoScriptModule/ConstantsInActiveTypoScript.png
