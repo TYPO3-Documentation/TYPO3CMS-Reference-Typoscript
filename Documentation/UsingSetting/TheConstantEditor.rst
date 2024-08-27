@@ -26,7 +26,8 @@ When the :guilabel:`Constant Editor` parses the TypoScript constants,
 
 A certain syntax is available to define
 what category the constant should be in, which type it has and to provide a
-description for the constant.
+description for the constant. Comments are bound to the constant in the next line. There must be no
+empty line between the comment defining a constant and the constant definition.
 
 ..  code-block:: typoscript
 
