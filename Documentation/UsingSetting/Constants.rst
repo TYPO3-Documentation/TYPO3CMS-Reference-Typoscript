@@ -66,11 +66,11 @@ expected location.
 
     bgCol = red
     file {
-       toplogo = fileadmin/logo.gif
+      toplogo = fileadmin/logo.gif
     }
     topimg {
-       width = 200
-       file.pic2 = fileadmin/logo2.gif
+      width = 200
+      file.pic2 = fileadmin/logo2.gif
     }
 
 The objects in the highlighted lines contain the reserved word "file" and the
