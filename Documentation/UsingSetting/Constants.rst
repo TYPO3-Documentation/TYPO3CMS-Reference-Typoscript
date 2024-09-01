@@ -116,10 +116,10 @@ Example
 
     page = PAGE
     page {
-        typeNum = 0
-        bodyTag = <body class="{$tx_my_sitepackage.bgCol}">
-        10 = IMAGE
-        10.file = {$tx_my_sitepackage.file.toplogo}
+      typeNum = 0
+      bodyTag = <body class="{$tx_my_sitepackage.bgCol}">
+      10 = IMAGE
+      10.file = {$tx_my_sitepackage.file.toplogo}
     }
 
 For the above example to work, the constants from the last example have to be
@@ -129,8 +129,8 @@ defined in the constants field or a file called :file:`constants.typoscript`:
     :caption: EXT:my_sitepackage/Configuration/TypoScript/constants.typoscript
 
     tx_my_sitepackage {
-        bgCol = bg-primary
-        file.toplogo = EXT:my_sitepackage/Resources/Public/Images/Logo.png
+      bgCol = bg-primary
+      file.toplogo = EXT:my_sitepackage/Resources/Public/Images/Logo.png
     }
 
 ..  figure:: /Images/ManualScreenshots/TypoScriptModule/ConstantAndSetupRecord.png
