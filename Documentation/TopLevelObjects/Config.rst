@@ -130,7 +130,7 @@ Properties of 'config'
 
         :typoscript:`10.replace = 0 | 1`
             Optional, boolean, default is `1`.
-            If true, the header will replace an existing one that has the same name.
+            If `1`, the header will replace an existing one that has the same name.
 
         :typoscript:`10.httpResponseCode = 201`
             Optional, integer, a http status code that the page should return.
@@ -232,7 +232,7 @@ Properties of 'config'
     ..  confval:: cache_clearAtMidnight
         :name: config-cache-clearAtMidnight
         :type: :ref:`data-type-boolean`
-        :Default: `false`
+        :Default: `0`
 
         With this setting the cache always expires at midnight of the day, the
         page is scheduled to expire.
@@ -390,10 +390,10 @@ Properties of 'config'
     ..  confval:: disableAllHeaderCode
         :name: config-disableAllHeaderCode
         :type: :ref:`data-type-boolean`
-        :Default: `false`
+        :Default: `0`
         :Example: :ref:`setup-config-disableallheadercode`
 
-        If this is not set or set to false, the :ref:`page` object automatically
+        If this is not set or set to `0`, the :ref:`page` object automatically
         outputs a HTML skeleton, see :ref:`page_output`.
 
         To disable this default behaviour set :typoscript:`disableAllHeaderCode = 1`.
@@ -410,7 +410,7 @@ Properties of 'config'
     ..  confval:: disableBodyTag
         :name: config-disableBodyTag
         :type: :ref:`data-type-boolean`
-        :Default: `false`
+        :Default: `0`
 
         If this option is set, the TYPO3 core will not generate the
         opening :html:`<body ...>` part of the body tag. The closing :html:`</body>`
@@ -428,14 +428,14 @@ Properties of 'config'
         When the system extension SEO is installed, canonical tags are generated
         automatically to prevent duplicate content. A good canonical is added
         in many cases by default. For edge cases, you might want to disable the
-        rendering of this tag. You can do this by setting this property to true.
+        rendering of this tag. You can do this by setting this property to `1`.
 
     ..  confval:: disableHrefLang
         :name: config-disableHrefLang
         :type: :ref:`data-type-boolean`
 
         When the system extension SEO is installed, hreflang tags are generated
-        automatically in multi-language setups. By settings this option to true
+        automatically in multi-language setups. By settings this option to `1`
         the rendering of those tags will be skipped.
 
     ..  confval:: disablePrefixComment
@@ -624,7 +624,7 @@ Properties of 'config'
     ..  confval:: index_metatags
         :name: config-index-metatags
         :type: :ref:`data-type-boolean`
-        :Default: `true`
+        :Default: `1`
 
         This allows to turn on or off the indexing of metatags. It is turned
         on by default.
