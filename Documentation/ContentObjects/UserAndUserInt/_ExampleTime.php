@@ -13,7 +13,7 @@ final class ExampleTime
      *
      * @param string Empty string (no content to process)
      * @param array TypoScript configuration
-     * @param ServerRequestInterface $request
+     * @param ServerRequestInterface $request The current PSR-7 request object
      * @return string HTML output, showing the current server time.
      */
     public function printTime(string $content, array $conf, ServerRequestInterface $request): string
