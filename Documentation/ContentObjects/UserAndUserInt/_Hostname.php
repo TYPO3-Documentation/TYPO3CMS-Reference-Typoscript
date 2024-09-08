@@ -11,8 +11,8 @@ final class Hostname
     /**
      * Return standard host name for the local machine
      *
-     * @param  string Empty string (no content to process)
-     * @param  array  TypoScript configuration
+     * @param string Empty string (no content to process)
+     * @param array TypoScript configuration
      * @param ServerRequestInterface $request The current PSR-7 request object
      * @return string HTML result
      */
