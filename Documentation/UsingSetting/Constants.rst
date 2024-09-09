@@ -7,10 +7,13 @@
 Constants
 =========
 
-..  include:: /Images/AutomaticScreenshots/TemplatesModul/TemplatesConstants.rst.txt
+..  figure:: /Images/ManualScreenshots/TypoScriptModule/ConstantEditor.png
+    :alt: Screenshot of the constant editor in the TYPO3 backend
 
-Constants are values defined in the  :guilabel:`Constants` field of a template.  They
-follow the :ref:`syntax of ordinary TypoScript
+    The constant editor in :guilabel:`Sites > TypoScript > Constant Editor`
+
+Constants are values defined in the  :guilabel:`Constants` field of a TypoScript
+record.  They follow the :ref:`syntax of ordinary TypoScript
 <t3coreapi:typoscript-syntax-syntax>` and are case sensitive! They are used to
 manage *in a single place* values, which are later used in *several places*.
 
@@ -81,8 +84,8 @@ one would perform any ordinary string replacement. Constants are used in the
 Only constants, which are actually defined in the :guilabel:`Constants` field, are
 substituted.
 
-Constants in included templates are also substituted, as the whole
-template is one large chunk of text.
+Constants in included TypoScript files are also substituted, as the whole
+TypoScript definition is one large chunk of text.
 
 A systematic naming scheme should be used for constants. As "paths" can be
 defined, it's also possible to structure constants and prefix them with a common
@@ -104,7 +107,8 @@ Example
 For the above example to work, the constants from the last example have to be
 defined in the constants field.
 
-..  include:: /Images/AutomaticScreenshots/TemplatesModul/TemplatesSetup.rst.txt
+..  figure:: /Images/ManualScreenshots/TypoScriptModule/EditTypoScriptRecord.png
+    :alt: Screenshot of the "Edit TypoScript Record" section
 
 Constants in the setup code are substituted, marked in green. In the Object
 Browser, it's possible to show constants substituted and unsubstituted.
@@ -124,9 +128,11 @@ The "Display constants" function is not available if "Crop lines" is selected.
 The constant editor
 ===================
 
-Most constants can be edited in the :guilabel:`Template` module using the :guilabel:`constant editor`.
+Most constants can be edited in the :guilabel:`Sites > TypoScript` module using the :guilabel:`Constant Editor`.
 If you keep your constants in a sitepackage extension you can also make them :ref:`available for the
 constant editor <typoscript-syntax-constant-editor>`.
 
-..  include:: /Images/AutomaticScreenshots/TemplatesModul/TemplatesConstantEditor.rst.txt
+..  figure:: /Images/ManualScreenshots/TypoScriptModule/ConstantEditor.png
+    :alt: Screenshot of the constant editor in the TYPO3 backend
 
+    The constant editor in :guilabel:`Sites > TypoScript > Constant Editor`

@@ -11,8 +11,7 @@ TypoScript backend module
 TypoScript can be stored in a database record or in a file. Storing it in a file
 is recommended as you can keep it under version control, deploy it etc.
 
-To store your TypoScript in a file, you can use your site set as
-:ref:`TypoScript provider <t3coreapi:site-sets-typoscript>` or store the
+To store your TypoScript in a file, you can store the
 TypoScript in a :ref:`custom site package <t3sitepackage:start>`. Use
 the :ref:`submodule-active-typoscript` to analyze how the TypoScript is
 interpreted after parsing and combining.
@@ -29,9 +28,8 @@ stored in the database in table :sql:`sys_template`).
 Submodule "TypoScript records overview"
 =======================================
 
-This submodule shows all pages that contain TypoScript either by having
-a TypoScript record or by having a
-:ref:`Site Set TypoScript provider <t3coreapi:site-sets-typoscript>`.
+This submodule shows all pages that contain TypoScript by having
+a TypoScript record.
 
 ..  figure:: /Images/ManualScreenshots/TypoScriptModule/TypoScriptRecordsOverview.png
     :alt: Screenshot of Submodule "TypoScript records overview" in the TYPO3 backend
@@ -105,12 +103,6 @@ used to include TypoScript contained inside files:
 
 Include TypoScript from extensions
 ----------------------------------
-
-..  versionchanged:: 13.1
-    TypoScript on a per-site basis can now be entered via
-    :ref:`sites and sets <typoscript-site-sets>`. If the extension to be used
-    already supports site sets, those should be used instead of TypoScript
-    includes in the record.
 
 ..  versionchanged:: 12.0
     The TypoScript management tools are now found in backend module
