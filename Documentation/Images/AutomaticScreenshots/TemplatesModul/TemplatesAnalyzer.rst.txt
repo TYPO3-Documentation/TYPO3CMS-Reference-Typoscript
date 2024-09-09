@@ -1,7 +1,0 @@
-.. Automatic screenshot: Remove this line if you want to manually change this file
-
-.. figure:: /Images/AutomaticScreenshots/TemplatesModul/TemplatesAnalyzer.png
-   :alt: All templates applying to a page, as used by the Introduction Package
-   :class: with-shadow
-
-   Viewing the content of a given template in the Template Analyzer

@@ -1,124 +1,205 @@
+:navigation-title: Backend Module
 ..  include:: /Includes.rst.txt
-..  index:: TypoScript; Add in the backend
+..  index:: TypoScript; TypoScript backend module
+..  _typoscript_module:
 ..  _typoscript-syntax-typoscript-templates-structure:
 
-=============================
-Add TypoScript in the backend
-=============================
+=========================
+TypoScript backend module
+=========================
 
-At its most basic, TypoScript is entered manually in both the
+TypoScript can be stored in a database record or in a file. Storing it in a file
+is recommended as you can keep it under version control, deploy it etc.
+
+To store your TypoScript in a file, you can use your site set as
+:ref:`TypoScript provider <t3coreapi:site-sets-typoscript>` or store the
+TypoScript in a :ref:`custom site package <t3sitepackage:start>`. Use
+the :ref:`submodule-active-typoscript` to analyze how the TypoScript is
+interpreted after parsing and combining.
+
+When kept in the database, TypoScript is entered manually in both the
 :guilabel:`Constants` and :guilabel:`Setup` fields of template records (which are
-stored in the database in table "sys_template").
+stored in the database in table :sql:`sys_template`).
 
-This can be done in the :guilabel:`Web > Template` module in
-the TYPO3 backend.
+..  contents:: The following submodules are available:
+    :depth: 1
+
+..  _typoscript_module_overview:
+
+Submodule "TypoScript records overview"
+=======================================
+
+This submodule shows all pages that contain TypoScript either by having
+a TypoScript record or by having a
+:ref:`Site Set TypoScript provider <t3coreapi:site-sets-typoscript>`.
+
+..  figure:: /Images/ManualScreenshots/TypoScriptModule/TypoScriptRecordsOverview.png
+    :alt: Screenshot of Submodule "TypoScript records overview" in the TYPO3 backend
+
+If TypoScript was added by a record, it is linked.
+
+..  _typoscript_module_edit:
+
+Submodule "Edit TypoScript Record"
+==================================
+
+..  versionchanged:: 12.0
+    The TypoScript management tools are now found in backend module
+    :guilabel:`Site Management > TypoScript`. It was formerly found in
+    "Page > Template".
+
+    The submodule :guilabel:`Edit TypoScript Record` was previously named
+    "Info / Modify".
+
+This can be done in the :guilabel:`Site Management > TypoScript` module in
+the submodule :guilabel:`Edit TypoScript Record`.
 
 ..  hint::
-
-    It is best practice to use a Sitepackage extension to bundle
+    It is best practice to use a site package extension to bundle
     various configuration in an extension. See :ref:`t3sitepackage:start`.
 
-..  include:: /Images/AutomaticScreenshots/TemplatesRecords/TemplatesRecordListView.rst.txt
+..  figure:: /Images/ManualScreenshots/TypoScriptModule/EditTypoScriptRecord.png
+    :alt: The submodule "Edit TypoScript Record" in the TYPO3 Backend.
 
-..  include:: /Images/AutomaticScreenshots/TemplatesRecords/TemplatesInput.rst.txt
+When you click on :guilabel:`Edit the whole TypoScript record` you can edit
+the complete record:
 
-If the "t3editor" system extension is not installed or has been
-disabled via configuration options, the :guilabel:`Constants` and :guilabel:`Setup` fields
-will be normal multi-line text fields.
+..  figure:: /Images/ManualScreenshots/TypoScriptModule/WholeTypoScriptRecord.png
+    :alt: The submodule whole TypoScript record in edit mode
 
-..  figure:: /Images/ManualScreenshots/Templates/InputNoT3Editor.png
-    :alt: The Constants and Setup fields without the t3editor enabled
+As the TypoScript record is just a normal record it can also be seen in and
+edited from the list module:
+
+..  figure:: /Images/ManualScreenshots/TypoScriptModule/TypoScriptRecordListView.png
+    :alt: The TypoScript record in the list module
 
 ..  index:: TypoScript; Include as file
 ..  _typoscript-syntax-typoscript-templates-structure-includes:
 
 Include TypoScript files
-========================
+------------------------
+
+..  versionchanged:: 12.0
+    Only the import of files ending on '.typoscript' or '.tsconfig' are
+    supported. Importing legacy files with the legacy endings '.txt' or '.ts'
+    **does not work**, even if their names are explicitly used in the import.
 
 In both the "Constants" and "Setup" fields, the
 :ref:`@import <t3coreapi:typoscript-syntax-includes>` syntax can be
 used to include TypoScript contained inside files:
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:my_site_package/Configuration/TypoScript/setup.typoscript
 
     # Import a single file
-    @import 'EXT:myproject/Configuration/TypoScript/randomfile.typoscript'
+    @import 'EXT:my_site_package/Configuration/TypoScript/randomfile.typoscript'
 
     # Import multiple files of a single directory in file name order
-    @import 'EXT:myproject/Configuration/TypoScript/*.typoscript'
+    @import 'EXT:my_site_package/Configuration/TypoScript/*.typoscript'
 
     # The filename extension can be omitted and defaults to .typoscript
-    @import 'EXT:myproject/Configuration/TypoScript/'
-
-    # Import TypoScript files with legacy ".txt" extension
-    @import 'EXT:myproject/Configuration/TypoScript/Setup/*.txt'
-
+    @import 'EXT:my_site_package/Configuration/TypoScript/'
 
 ..  index:: TypoScript; Include from extensions
 ..  _static-includes:
 
 Include TypoScript from extensions
-==================================
+----------------------------------
 
-It is also possible to "Include static" templates from extensions.
+..  versionchanged:: 13.1
+    TypoScript on a per-site basis can now be entered via
+    :ref:`sites and sets <typoscript-site-sets>`. If the extension to be used
+    already supports site sets, those should be used instead of TypoScript
+    includes in the record.
 
+..  versionchanged:: 12.0
+    The TypoScript management tools are now found in backend module
+    :guilabel:`Site Management > TypoScript`. It was formerly found in
+    "Page > Template".
+
+    The submodule :guilabel:`Edit TypoScript Record` was previously named
+    "Info / Modify".
+
+It is also possible to "Include TypoScript sets" from extensions in the
+TypoScript record.
 
 ..  rst-class:: bignums-xxl
 
-#.  In the :guilabel:`Web > Template` module, select :guilabel:`Info / Modify`
+#.  In the :guilabel:``Site Management > TypoScript` module, select
+    :guilabel:`Edit TypoScript Record`.
 
-#.  Click :guilabel:`Edit the whole template record`
+#.  Click :guilabel:`Edit the whole TypoScript record`
 
-    ..  include:: /Images/AutomaticScreenshots/TemplatesModul/TemplatesStaticIncludes1.rst.txt
-
-..  rst-class:: bignums-xxl
-
-#.  Chose the tab :guilabel:`Includes`
+#.  Chose the tab :guilabel:`Advanced Options`
 
 #.  Click the templates to include in :guilabel:`Available Items`.
 
-    ..  include:: /Images/AutomaticScreenshots/TemplatesRecords/TemplatesStaticIncludes2.rst.txt
+    ..  figure:: /Images/ManualScreenshots/TypoScriptModule/IncludeTypoScriptSet.png
+        :alt: "Include TypoScript sets" by choosing from the "Available items"
 
 ..  tip::
-
     The section :ref:`extdev-add-typoscript` explains how extension
     developers can make TypoScript available for inclusion in their
     extensions.
 
 
 ..  index:: TypoScript; Include other TypoScript templates
+..  _basedOn:
 
-Include other TypoScript templates
-==================================
+Include other TypoScript records
+--------------------------------
 
 Apart from this, it is also possible to include other TypoScript template
-records (in the field called "Include Basis Template").
+records (in the field called :guilabel:`Include TypoScript records`).
 
-..  include:: /Images/AutomaticScreenshots/TemplatesRecords/TemplatesIncludes.rst.txt
+..  figure:: /Images/ManualScreenshots/TypoScriptModule/IncludeTypoScriptRecord.png
+    :alt: Include TypoScript records
 
-..  index:: TypoScript; Analyzer
+..  index:: TypoScript; Included TypoScript
 ..  _typoscript-syntax-typoscript-templates-structure-analyzer:
 
-Template analyzer
-=================
+Submodule "Included TypoScript"
+===============================
+
+..  versionchanged:: 12.0
+    The TypoScript management tools are now found in backend module
+    :guilabel:`Site Management > TypoScript`. It was formerly found in
+    "Page > Template".
+
+    The submodule :guilabel:`Included TypoScript` was renamed from
+    "TypoScript Analyzer".
 
 With all those inclusions, it may happen that you lose the overview of the
-template structure. The :guilabel:`Template Analyzer` (1) provides an overview
-of this
-structure. It shows all the templates that apply to the currently selected page,
-taking into account inclusions and inheritance along the page tree.
+template structure. The submodule :guilabel:`Included TypoScript` provides
+an overview of this structure. It shows all the TypoScript files that apply to
+the currently selected page, taking into account inclusions and inheritance
+along the page tree.
 
-..  include:: /Images/AutomaticScreenshots/TemplatesModul/TemplatesAnalyzer.rst.txt
+..  figure:: /Images/ManualScreenshots/TypoScriptModule/IncludedTypoScript.png
+    :alt: A visual representation of how TypoScript is included.
 
-Templates are taken into consideration from top to bottom, which means
-that properties defined in one template may be overridden in templates
-considered at a later point by the TypoScript parser.
+TypoScript definitions are taken into consideration from top to bottom, which means
+that properties defined in one TypoScript location may be overridden in another
+location, considered at a later point by the TypoScript parser.
 
-In the Template Analyzer, you can click on any listed template (2) to view
-the content of its "Setup" and "Constants" fields.
+You can click on the :guilabel:`{+}` button to see details about the TypoScript
+definition and its includes.
 
-..  include:: /Images/AutomaticScreenshots/TemplatesModul/TemplatesAnalyzerDetails.rst.txt
+..  index:: TypoScript; Active TypoScript
+..  _submodule-active-typoscript:
 
-The line numbers are compiled from the first template to be included,
-which is why the numbers are so high.
+Submodule "Active TypoScript"
+=============================
+
+You can use the submodule :guilabel:`Active TypoScript` to debug the
+configuration array build after all TypoScript configurations are parsed and
+combined. TypoScript Constants and Setup are listed separately here and
+Constant usage is shown. However there is no information what location the
+setting came from. Use the
+:ref:`typoscript-syntax-typoscript-templates-structure-analyzer` to analyze where
+TypoScript was set and this module to look at the result.
+
+..  figure:: /Images/ManualScreenshots/TypoScriptModule/ActiveTypoScript.png
+    :alt: Screenshot of the Active TypoScript submodule in the TYPO3 Backend
+
+    Debug the parsed and combined TypoScript
