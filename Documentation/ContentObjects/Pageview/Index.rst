@@ -171,11 +171,10 @@ Properties
         :file:`EXT:my_extension/Resources/Private/Templates/` or a folder below that
         path like :file:`EXT:my_extension/Resources/Private/Templates/MyPages`.
 
-        The templates are expected in a subfolder :path:`Pages` or
-        :path:`pages`.
+        The templates are expected in a subfolder :path:`Pages`.
 
-        Fluid partials are looked up in a sub-directory called :path:`Partials` or
-        :path:`partials`, layouts in :path:`Layouts` or :path:`layouts`.
+        Fluid partials are looked up in a sub-directory called :path:`Partials`,
+        layouts in :path:`Layouts`.
 
         The name of the used page layout (:ref:`Backend layout <t3coreapi:be-layout>`)
         is resolved automatically.
