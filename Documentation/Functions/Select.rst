@@ -146,6 +146,8 @@ recursive
 
     Number of recursive levels for the pidInList.
 
+    ..  note::
+        :typoscript:`recursive` is ignored for *special keyword* :typoscript:`pidInList=root`.
 
 ..  _select-orderBy:
 
