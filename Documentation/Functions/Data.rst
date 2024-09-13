@@ -1000,7 +1000,9 @@ siteLanguage
             fallback.
 
         The language tag for this language defined by RFC 1766 / 3066 for
-        :html:`hreflang` attributes
+        :html:`hreflang` attributes. If needed, you can use this attribute
+        for the :html:`<html lang="...">` attribute, see
+        :confval:`htmlTag_stdWrap <config-htmltag-stdwrap>`.
 
     :typoscript:`languageId`
         The language mapped to the ID of the site language.

@@ -554,6 +554,19 @@ Properties of 'config'
         Modify the whole :html:`<html>` tag with stdWrap functionality. This can be
         used to extend or override this tag.
 
+        For example it can be used to distinctly set a :html:`lang` attribute,
+        that may diverge from the automatically created attribute using the site
+        language settings. Normally, :html:`lang` is set to something like `en`
+        or `en`, only indicating the primary language. You may want to use the
+        :html:`hreflang` site language attribute instead (containing for example
+        `en-US`, `en-GB` or `de-AT`), which you can achieve via:
+
+        ..  code-block:: typoscript
+            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+            config.htmlTag_stdWrap.override = <html lang="{siteLanguage:hreflang}">
+            config.htmlTag_stdWrap.override.insertData = 1
+
     ..  confval:: index_descrLgd
         :name: config-index-descrLgd
         :type: :ref:`data-type-integer`

@@ -1233,7 +1233,7 @@ site()
 
     ..  code-block:: typoscript
         :caption: EXT:site_package/Configuration/TypoScript/constants.typoscript
- 
+
         my.constant = my global value
         [traverse(site('configuration'), 'settings/some/setting') == 'someValue']
           my.constant = another value, if condition matches
@@ -1287,6 +1287,8 @@ siteLanguage()
             fallback.
 
         Returns the language information for the hreflang tag as a string.
+        If needed, you can use this attribute for the :html:`<html lang="...">`
+        attribute, see :confval:`htmlTag_stdWrap <config-htmltag-stdwrap>`.
 
     :typoscript:`siteLanguage("fallbackType")`
         Returns the language fallback mode as a string, one of `fallback`,
