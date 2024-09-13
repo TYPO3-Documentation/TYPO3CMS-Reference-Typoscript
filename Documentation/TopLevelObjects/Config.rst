@@ -557,7 +557,7 @@ Properties of 'config'
         For example it can be used to distinctly set a :html:`lang` attribute,
         that may diverge from the automatically created attribute using the site
         language settings. Normally, :html:`lang` is set to something like `en`
-        or `en`, only indicating the primary language. You may want to use the
+        or `de`, only indicating the primary language. You may want to use the
         :html:`hreflang` site language attribute instead (containing for example
         `en-US`, `en-GB` or `de-AT`), which you can achieve via:
 
