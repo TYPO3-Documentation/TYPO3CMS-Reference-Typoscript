@@ -11,6 +11,7 @@
                edit-on-github="TYPO3-Documentation/TYPO3CMS-Reference-TSconfig"
                typo3-core-preferred="12.4"
                interlink-shortcode="t3tsconfig"
+               confval-default="TSconfig"
     />
     <project
             title="TSconfig Reference"
