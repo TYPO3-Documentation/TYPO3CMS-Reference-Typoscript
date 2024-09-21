@@ -473,7 +473,7 @@ Properties
         The optional properties from :ref:`includeJS <setup-page-includejs-array>`
         can be applied.
 
-        Currently one difference between :typoscript:`includeJS` and :typoscript:`includeJSFooterlibs` exists:  
+        Currently one difference between :typoscript:`includeJS` and :typoscript:`includeJSFooterlibs` exists:
         There is no :typoscript:`data`-array as optional parameter but all keys not explicitly mentioned as parameters are used as additional attributes - behaviour is the same as in :ref:`includeCSS <setup-page-includecss-array>`.
 
         ..  code-block:: typoscript
@@ -499,7 +499,7 @@ Properties
         The optional properties from :ref:`includeJS <setup-page-includejs-array>`
         can be applied.
 
-        Currently one difference between :typoscript:`includeJS` and :typoscript:`includeJSLibs` exists:  
+        Currently one difference between :typoscript:`includeJS` and :typoscript:`includeJSLibs` exists:
         There is no :typoscript:`data`-array as optional parameter but all keys not explicitly mentioned as parameters are used as additional attributes - behaviour is the same as in :ref:`includeCSS <setup-page-includecss-array>`.
 
         ..  code-block:: typoscript
@@ -1023,8 +1023,12 @@ Open Graph meta tags:
                 2 = de_DE
             }
         }
-        refresh = 5; url=https://example.org/
-        refresh.attribute = http-equiv
+        article:modified_time {
+            attribute = property
+            if.isTrue.field = lastUpdated
+            data = field : lastUpdated
+            formattedDate = Y-MM-dd'T'HH:mm:ssZ
+        }
     }
 
 ..  note::
