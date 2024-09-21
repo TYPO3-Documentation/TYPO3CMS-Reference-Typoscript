@@ -1026,7 +1026,7 @@ Open Graph meta tags:
         article:modified_time {
             attribute = property
             if.isTrue.field = lastUpdated
-            data = field : lastUpdated
+            field = lastUpdated
             formattedDate = Y-MM-dd'T'HH:mm:ssZ
         }
     }
