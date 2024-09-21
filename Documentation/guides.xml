@@ -11,6 +11,7 @@
                edit-on-github="TYPO3-Documentation/TYPO3CMS-Reference-Typoscript"
                typo3-core-preferred="11.5"
                interlink-shortcode="t3tsref"
+               confval-default="TypoScript"
     />
     <project title="TypoScript Reference"
              release="11.5"
