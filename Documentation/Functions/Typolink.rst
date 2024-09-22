@@ -36,7 +36,7 @@ extTarget
 ..  confval:: extTarget
     :name: typolink-extTarget
     :type: :ref:`data-type-target` / :ref:`stdwrap`
-    :Default: `_top`
+    :Default: "" (no target set)
 
     Target used for external links
 
