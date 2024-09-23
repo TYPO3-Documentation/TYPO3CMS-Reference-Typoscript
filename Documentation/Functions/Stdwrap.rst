@@ -935,7 +935,7 @@ formattedDate
             formattedDate.locale = fr-FR
         }
 
-        will result in "dimanche 12 mars 2023 à 11:16:44 heure d’été du Pacifique".
+    will result in "dimanche 12 mars 2023 à 11:16:44 heure d’été du Pacifique".
 
     ..  note::
         The timezone will be taken from the setting `date.timezone` in your
