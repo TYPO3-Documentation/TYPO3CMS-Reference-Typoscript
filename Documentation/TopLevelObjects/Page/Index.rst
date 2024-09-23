@@ -992,7 +992,8 @@ Demonstrates:
 ..  code-block:: typoscript
     :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-    meta.refresh = [seconds]; [URL, leave blank for same page]
+    page.meta.refresh = 5; url=https://example.org/
+    page.meta.refresh.attribute = http-equiv
 
 ..  _setup-page-meta-example-og:
 
@@ -1028,8 +1029,6 @@ Open Graph meta tags:
                 2 = de_DE
             }
         }
-        refresh = 5; url=https://example.org/
-        refresh.attribute = http-equiv
     }
 
 ..  note::
