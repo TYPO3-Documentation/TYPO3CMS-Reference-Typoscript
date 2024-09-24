@@ -910,7 +910,7 @@ formattedDate
     .locale
         A locale other than the locale of the site language.
 
-    ..  rubric:: Examples
+    ..  rubric:: Example: Full German output from a date/time value
 
     ..  code-block:: typoscript
         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
@@ -925,6 +925,8 @@ formattedDate
 
     will result in "Freitag, 17. März 2023 um 03:00:00 Nordamerikanische Westküsten-Sommerzeit".
 
+    ..  rubric:: Example: Full French output from a relative date value
+
     ..  code-block:: typoscript
         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
@@ -936,6 +938,19 @@ formattedDate
         }
 
     will result in "dimanche 12 mars 2023 à 11:16:44 heure d’été du Pacifique".
+
+    ..  rubric:: Example: Custom format from a timestamp
+
+    ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+        lib.my_formatted_date = TEXT
+        lib.my_formatted_date {
+            value = 1679022000
+            formattedDate = Y-MM-dd'T'HH:mm:ssZ
+        }
+
+    will return the date in the ISO 8601 format: "2023-03-17T03:00:00+00:00"
 
     ..  note::
         The timezone will be taken from the setting `date.timezone` in your
