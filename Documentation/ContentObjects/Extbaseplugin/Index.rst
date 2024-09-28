@@ -67,29 +67,30 @@ Example: Display an Extbase plugin via TypoScript
 Example: Display an Extbase plugin in a Fluid template
 ======================================================
 
-It is possible to display an Extbase plugin in within Fluid using the
+It is possible to display an Extbase plugin in Fluid using the
 :ref:`CObject ViewHelper <f:cObject> <t3viewhelper:typo3-fluid-cobject>`:
 
 ..  literalinclude:: _CodeSnippets/_SomeTemplate.html
-    :caption: EXT:myExtension/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:my_extension/Configuration/TypoScript/setup.typoscript
 
-Save the :typoscript:`EXTBASEPLUGIN` into a :typoscript:`lib` object:
+Create a lib object which utilizes the :typoscript:`EXTBASEPLUGIN` into
+a :typoscript:`lib` object:
 
 ..  literalinclude:: _CodeSnippets/_libMyPlugin.typoscript
-    :caption: EXT:myExtension/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:my_extension/Configuration/TypoScript/setup.typoscript
 
 For `extensionName` and `pluginName` use the names as configured in
 :php:`\TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin()`:
 
 ..  literalinclude:: _CodeSnippets/_configurePlugin.php
-    :caption: EXT:myExtension/ext_localconf.php
+    :caption: EXT:my_extension/ext_localconf.php
     :emphasize-lines: 9,10
 
 If you passed data to the ViewHelper, you can access the data in the controller's
 action by getting the currentContentObject from the request:
 
 ..  literalinclude:: _CodeSnippets/_MyController.php
-    :caption: EXT:myExtension/Classes/Controller/MyController.php
+    :caption: EXT:my_extension/Classes/Controller/MyController.php
     :emphasize-lines: 16,17
 
 ..  note::
