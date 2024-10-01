@@ -20,7 +20,7 @@ multiple rows and or columns. They cannot be nested. For nested layouts in the
 backend use an extension like :composer:`b13/container`.
 
 The page TSconfig for the backend layout above can be found in the site package
-tutorial: :ref:`Create the backend page layouts <t3sitepackage:backend-page-layouts>`.
+tutorial: :ref:`Create the backend page layouts <t3sitepackage/main:backend-page-layouts>`.
 
 For extended examples have a look at the predefined `backend layouts of the bootstrap
 package (GitHub) <https://github.com/benjaminkott/bootstrap_package/tree/master/Configuration/TsConfig/Page/Mod/WebLayout/BackendLayouts>`__.
