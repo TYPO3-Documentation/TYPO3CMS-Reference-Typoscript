@@ -14,12 +14,10 @@ class MyController extends ActionController
     {
         /** @var ContentObjectRenderer $contentObject */
         $contentObject = $this->request->getAttribute('currentContentObject');
-        $dataFromTypoScript = $contentObject->getCurrentVal();
-        if (is_array($dataFromTypoScript)) {
-            $someValue = (int)($dataFromTypoScript['someValue'] ?? 0);
-            $someSetting = $dataFromTypoScript['someSetting'] ?? '';
-            // Do something
-        }
+        $dataFromTypoScript = $contentObject->data;
+        $someValue = (int)($dataFromTypoScript['someValue'] ?? 0);
+        $someSetting = $dataFromTypoScript['someSetting'] ?? '';
+        // Do something
         return $this->htmlResponse();
     }
 }
