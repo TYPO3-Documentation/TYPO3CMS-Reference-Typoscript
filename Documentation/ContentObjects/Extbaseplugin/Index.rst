@@ -71,7 +71,7 @@ It is possible to display an Extbase plugin in Fluid using the
 :ref:`CObject ViewHelper <f:cObject> <t3viewhelper:typo3-fluid-cobject>`:
 
 ..  literalinclude:: _CodeSnippets/_SomeTemplate.html
-    :caption: EXT:my_extension/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:my_extension/Resources/Private/Templates/Pages/SomeTemplate.html
 
 Create a lib object which utilizes the :typoscript:`EXTBASEPLUGIN` into
 a :typoscript:`lib` object:
