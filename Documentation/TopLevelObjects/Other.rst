@@ -5,6 +5,8 @@
 Reserved top-level objects
 ==========================
 
+..  contents:: List of the reserved top-level objects
+    :depth: 1
 
 ..  index:: Top-level objects; temp
 
