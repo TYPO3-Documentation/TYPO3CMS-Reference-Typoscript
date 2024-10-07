@@ -1,0 +1,6 @@
+lib.myPlugin = EXTBASEPLUGIN
+lib.myPlugin {
+    extensionName = MyExtension
+    pluginName = MyPlugIn1
+    settings.detailPid = 42
+}
