@@ -1029,6 +1029,12 @@ Open Graph meta tags:
                 2 = de_DE
             }
         }
+        article:modified_time {
+            attribute = property
+            if.isTrue.field = lastUpdated
+            field = lastUpdated
+            formattedDate = Y-MM-dd'T'HH:mm:ssZ
+        }
     }
 
 ..  note::
