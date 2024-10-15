@@ -1282,6 +1282,8 @@ siteLanguage()
 
     :typoscript:`siteLanguage("hreflang")`
         Returns the language information for the hreflang tag as a string.
+        If needed, you can use this attribute for the :html:`<html lang="...">`
+        attribute, see :confval:`htmlTag_stdWrap <config-htmltag-stdwrap>`.
 
     :typoscript:`siteLanguage("fallbackType")`
         Returns the language fallback mode as a string, one of `fallback`,
