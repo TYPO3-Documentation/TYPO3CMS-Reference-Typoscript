@@ -838,8 +838,6 @@ Get content from the :ref:`register <using-setting-register>`:
 request
 -------
 
-..  versionadded:: 12.4
-
 ..  confval:: request
     :name: data-request
     :Syntax: request : [attribute] | [property] ( | [subproperty] | ... )
@@ -989,9 +987,8 @@ siteLanguage
     :typoscript:`flagIdentifier`
         The flag key (like `gb` or `fr`) used in the TYPO3 backend.
 
-        ..  versionadded:: 12.4
-            You can also use :typoscript:`flag` to match the corresponding site
-            configuration setting.
+        You can also use :typoscript:`flag` to match the corresponding site
+        configuration setting.
 
     :typoscript:`hreflang`
         ..  versionchanged:: 12.4
