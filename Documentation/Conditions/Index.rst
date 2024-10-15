@@ -620,14 +620,14 @@ typo3.version
     :name: condition-typo3-version
     :type: String
 
-    TYPO3_version (for example, 12.4.5)
+    TYPO3_version (for example, 13.4.0)
 
     Example:
 
     ..  code-block:: typoscript
         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-        [typo3.version == "12.4.5"]
+        [typo3.version == "13.4.0"]
             # ...
         [END]
 
@@ -642,14 +642,14 @@ typo3.branch
     :name: condition-typo3-branch
     :type: String
 
-    TYPO3 branch (for example, 12.4)
+    TYPO3 branch (for example, 13.4)
 
     Example:
 
     ..  code-block:: typoscript
         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-        [typo3.branch == "12.4"]
+        [typo3.branch == "13.4"]
             # ...
         [END]
 
@@ -811,13 +811,13 @@ compatVersion()
     ..  code-block:: typoscript
         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-        # True, if the current TYPO3 version is 12.4.x
-        [compatVersion("12.4")]
+        # True, if the current TYPO3 version is 13.4.x
+        [compatVersion("13.4")]
             # ...
         [END]
 
-        # True, if the current TYPO3 version is 12.4.5
-        [compatVersion("12.4.5")]
+        # True, if the current TYPO3 version is 13.4.0
+        [compatVersion("13.4.0")]
             # ...
         [END]
 
@@ -1233,7 +1233,7 @@ site()
 
     ..  code-block:: typoscript
         :caption: EXT:site_package/Configuration/TypoScript/constants.typoscript
- 
+
         my.constant = my global value
         [traverse(site('configuration'), 'settings/some/setting') == 'someValue']
           my.constant = another value, if condition matches
@@ -1281,11 +1281,6 @@ siteLanguage()
         or the two-letter language code.
 
     :typoscript:`siteLanguage("hreflang")`
-        ..  versionchanged:: 12.4
-            This option is not relevant anymore for regular websites without
-            rendering hreflang tag, but is now customizable, and has a proper
-            fallback.
-
         Returns the language information for the hreflang tag as a string.
 
     :typoscript:`siteLanguage("fallbackType")`
