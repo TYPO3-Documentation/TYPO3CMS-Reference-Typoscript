@@ -18,60 +18,58 @@ data within an XML structure inside a single database column. The data processor
 alias `flex-form`, converts the
 FlexForm data of a given field into a Fluid-readable array.
 
+..  contents:: Table of contents
+
 ..  _FlexFormProcessor-options:
 
 Options
 =======
 
-..  _FlexFormProcessor-fieldname:
+..  confval-menu::
+    :display: table
+    :type:
+    :Default:
 
-fieldname
----------
+    ..  _FlexFormProcessor-fieldname:
 
-..  confval:: fieldname
-    :name: FlexFormProcessor-fieldname
-    :Required: false
-    :type: :ref:`data-type-string`
-    :Default: 'pi_flexform'
+    ..  confval:: fieldname
+        :name: FlexFormProcessor-fieldname
+        :Required: false
+        :type: :ref:`data-type-string`
+        :Default: 'pi_flexform'
 
-    Field name of the column the FlexForm data is stored in.
-
-
-..  _FlexFormProcessor-references:
-
-references
-----------
-
-..  confval:: references
-    :name: FlexFormProcessor-references
-
-    ..  versionadded:: 13.0
-    :Required: false
-    :type: array
-
-    Associative array of FlexForm fields (key) and the according database field
-    (value).
-
-    Each FlexForm field, which should be resolved, needs a reference definition
-    to the :ref:`foreign_match_fields <t3tca:columns-inline-properties-foreign-match-fields>`.
-    This reference is used in the :ref:`FilesProcessor <FilesProcessor>` to
-    resolve the correct :ref:`FAL <t3coreapi:fal>` resource.
-
-    See :ref:`FlexFormProcessor-resolving-fal`.
+        Field name of the column the FlexForm data is stored in.
 
 
-..  _FlexFormProcessor-as:
+    ..  _FlexFormProcessor-references:
 
-as
---
+    ..  confval:: references
+        :name: FlexFormProcessor-references
 
-..  confval:: as
-    :name: FlexFormProcessor-as
-    :Required: false
-    :type: :ref:`data-type-string`
-    :Default: 'flexFormData'
+        ..  versionadded:: 13.0
+        :Required: false
+        :type: array
 
-    Name for the variable in the Fluid template.
+        Associative array of FlexForm fields (key) and the according database field
+        (value).
+
+        Each FlexForm field, which should be resolved, needs a reference definition
+        to the :ref:`foreign_match_fields <t3tca:columns-inline-properties-foreign-match-fields>`.
+        This reference is used in the :ref:`FilesProcessor <FilesProcessor>` to
+        resolve the correct :ref:`FAL <t3coreapi:fal>` resource.
+
+        See :ref:`FlexFormProcessor-resolving-fal`.
+
+
+    ..  _FlexFormProcessor-as:
+
+    ..  confval:: as
+        :name: FlexFormProcessor-as
+        :Required: false
+        :type: :ref:`data-type-string`
+        :Default: 'flexFormData'
+
+        Name for the variable in the Fluid template.
 
 ..  _FlexFormProcessor-examples:
 

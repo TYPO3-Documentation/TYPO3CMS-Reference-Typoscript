@@ -16,111 +16,91 @@ alias `split`, allows to split values separated with a delimiter
 from a single database field. The result is an array that can be iterated over.
 Whitespaces are automatically trimmed.
 
+..  contents:: Table of contents
+
 ..  _splitProcessor-options:
 
 Options
 =======
 
-..  _splitProcessor-if:
+..  confval-menu::
+    :display: table
+    :type:
+    :Default:
 
-if
---
+    ..  _splitProcessor-if:
 
-..  confval:: if
-    :name: splitProcessor-if
-    :Required: false
-    :type: :ref:`if` condition
-    :Default: ''
+    ..  confval:: if
+        :name: splitProcessor-if
+        :Required: false
+        :type: :ref:`if` condition
+        :Default: ''
 
-    Only if the condition is met the data processor is executed.
+        Only if the condition is met the data processor is executed.
 
+    ..  _splitProcessor-fieldName:
 
-..  _splitProcessor-fieldName:
+    ..  confval:: fieldName
+        :name: splitProcessor-fieldName
+        :Required: true
+        :type: :ref:`data-type-string` / :ref:`stdWrap`
+        :Default: ''
 
-fieldName
----------
+        Name of the field to be used.
 
-..  confval:: fieldName
-    :name: splitProcessor-fieldName
-    :Required: true
-    :type: :ref:`data-type-string` / :ref:`stdWrap`
-    :Default: ''
+    ..  _splitProcessor-as:
 
-    Name of the field to be used.
+    ..  confval:: as
+        :name: splitProcessor-as
+        :Required: false
+        :type: :ref:`data-type-string`
+        :Default: defaults to the fieldName
 
+        The variable name to be used in the Fluid template.
 
-..  _splitProcessor-as:
+    ..  _splitProcessor-delimiter:
 
-as
---
+    ..  confval:: delimiter
+        :name: splitProcessor-delimiter
+        :Required: false
+        :type: :ref:`data-type-string` / :ref:`stdWrap`
+        :Default: Line Feed
+        :Example: ","
 
-..  confval:: as
-    :name: splitProcessor-as
-    :Required: false
-    :type: :ref:`data-type-string`
-    :Default: defaults to the fieldName
+        The field delimiter, a character separating the values.
 
-    The variable name to be used in the Fluid template.
+    ..  _splitProcessor-filterIntegers:
 
+    ..  confval:: filterIntegers
+        :name: splitProcessor-filterIntegers
+        :Required: false
+        :type: :ref:`data-type-boolean` / :ref:`stdWrap`
+        :Default: 0
+        :Example: 1
 
-..  _splitProcessor-delimiter:
+        If set to `1`, all values are being cast to int.
 
-delimiter
----------
+    ..  _splitProcessor-filterUnique:
 
-..  confval:: delimiter
-    :name: splitProcessor-delimiter
-    :Required: false
-    :type: :ref:`data-type-string` / :ref:`stdWrap`
-    :Default: Line Feed
-    :Example: ","
+    ..  confval:: filterUnique
+        :name: splitProcessor-filterUnique
+        :Required: false
+        :type: :ref:`data-type-boolean` / :ref:`stdWrap`
+        :Default: 0
+        :Example: 1
 
-    The field delimiter, a character separating the values.
+        If set to `1`, all duplicates will be removed.
 
+    ..  _splitProcessor-removeEmptyEntries:
 
-..  _splitProcessor-filterIntegers:
+    ..  confval:: removeEmptyEntries
+        :name: splitProcessor-removeEmptyEntries
+        :Required: false
+        :type: :ref:`data-type-boolean` / :ref:`stdWrap`
+        :Default: 0
+        :Example: 1
 
-filterIntegers
---------------
-
-..  confval:: filterIntegers
-    :name: splitProcessor-filterIntegers
-    :Required: false
-    :type: :ref:`data-type-boolean` / :ref:`stdWrap`
-    :Default: 0
-    :Example: 1
-
-    If set to `1`, all values are being cast to int.
-
-
-..  _splitProcessor-filterUnique:
-
-filterUnique
-------------
-
-..  confval:: filterUnique
-    :name: splitProcessor-filterUnique
-    :Required: false
-    :type: :ref:`data-type-boolean` / :ref:`stdWrap`
-    :Default: 0
-    :Example: 1
-
-    If set to `1`, all duplicates will be removed.
-
-
-..  _splitProcessor-removeEmptyEntries:
-
-removeEmptyEntries
-------------------
-
-..  confval:: removeEmptyEntries
-    :name: splitProcessor-removeEmptyEntries
-    :Required: false
-    :type: :ref:`data-type-boolean` / :ref:`stdWrap`
-    :Default: 0
-    :Example: 1
-
-    If set to `1`, all empty values will be removed.
+        If set to `1`, all empty values will be removed.
 
 ..  _splitProcessor-example-split-url:
 
@@ -130,23 +110,20 @@ Example: Splitting a URL
 Please see also :ref:`dataProcessing-about-examples`.
 
 
-TypoScript
-----------
+..  rubric:: TypoScript
 
 With the help of the :php:`SplitProcessor` the following scenario is
 possible:
 
 ..  include:: /CodeSnippets/DataProcessing/TypoScript/SplitProcessor.rst.txt
-The Fluid template
-------------------
+
+..  rubric:: The Fluid template
 
 In the Fluid template then iterate over the split data:
 
 ..  include:: /CodeSnippets/DataProcessing/Template/DataProcSplit.rst.txt
 
-
-Output
-------
+..  rubric:: Output
 
 The array now contains the split strings:
 

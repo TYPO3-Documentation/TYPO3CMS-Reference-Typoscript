@@ -75,42 +75,49 @@ Overview of all possibilities:
 ..  literalinclude:: _RecordTransformationProcessor/_FluidUsage.html
     :caption: Demonstration of available variables in Fluid
 
+..  contents:: Table of contents
+
 ..  _RecordTransformationProcessor-options:
 
 Options:
 ========
 
-..  confval:: as
-    :name: RecordTransformationProcessor-as
-    :type: :ref:`data-type-string` / :ref:`stdWrap`
-    :Default: 'record' or 'records'
+..  confval-menu::
+    :display: table
+    :type:
+    :Default:
 
-    The target variable containing the resolved record objects.
-    If empty, 'record' or 'records' (if multiple records are given) is used.
+    ..  confval:: as
+        :name: RecordTransformationProcessor-as
+        :type: :ref:`data-type-string` / :ref:`stdWrap`
+        :Default: 'record' or 'records'
 
-..  confval:: if
-    :name: RecordTransformationProcessor-if
-    :type: :ref:`if` condition
-    :Default: ''
+        The target variable containing the resolved record objects.
+        If empty, 'record' or 'records' (if multiple records are given) is used.
 
-    Only if the condition is met the Data Processor is executed.
+    ..  confval:: if
+        :name: RecordTransformationProcessor-if
+        :type: :ref:`if` condition
+        :Default: ''
 
-..  confval:: table
-    :name: RecordTransformationProcessor-table
-    :type: :ref:`data-type-string`
-    :Default: auto-resolved
+        Only if the condition is met the Data Processor is executed.
 
-    The name of the database table of the records. Leave empty to auto-resolve
-    the table from context.
+    ..  confval:: table
+        :name: RecordTransformationProcessor-table
+        :type: :ref:`data-type-string`
+        :Default: auto-resolved
 
-    If you are dealing with a custom data source you can adjust it here.
+        The name of the database table of the records. Leave empty to auto-resolve
+        the table from context.
 
-..  confval:: variableName
-    :name: RecordTransformationProcessor-variableName
-    :type: :ref:`data-type-string`
-    :Default: 'data'
+        If you are dealing with a custom data source you can adjust it here.
 
-    The variable that contains the record(s) from a previous Data Processor,
-    or from a :ref:`FLUIDTEMPLATE <cobj-fluidtemplate>` view.
+    ..  confval:: variableName
+        :name: RecordTransformationProcessor-variableName
+        :type: :ref:`data-type-string`
+        :Default: 'data'
 
-    If you are dealing with a custom data source you can adjust it here.
+        The variable that contains the record(s) from a previous Data Processor,
+        or from a :ref:`FLUIDTEMPLATE <cobj-fluidtemplate>` view.
+
+        If you are dealing with a custom data source you can adjust it here.

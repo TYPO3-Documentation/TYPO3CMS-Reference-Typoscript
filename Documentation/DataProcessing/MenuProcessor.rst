@@ -18,6 +18,8 @@ variable.
 
 Additional data processing is supported and will be applied to each record.
 
+..  contents:: Table of contents
+
 ..  hint::
     The third party extension `b13/menus
     <https://extensions.typo3.org/extension/menus>`__ also provides menu
@@ -33,81 +35,68 @@ Additional data processing is supported and will be applied to each record.
 Options
 =======
 
-..  _MenuProcessor-levels:
+..  confval-menu::
+    :display: table
+    :type:
+    :Default:
 
-levels
-------
+    ..  _MenuProcessor-levels:
 
-..  confval:: levels
-    :name: MenuProcessor-levels
-    :Required: true
-    :type: :ref:`data-type-integer` / :ref:`stdWrap`
-    :Default: 1
-    :Example: 5
+    ..  confval:: levels
+        :name: MenuProcessor-levels
+        :Required: true
+        :type: :ref:`data-type-integer` / :ref:`stdWrap`
+        :Default: 1
+        :Example: 5
 
-    Maximal number of levels to be included in the output array.
+        Maximal number of levels to be included in the output array.
 
+    ..  _MenuProcessor-expandAll:
 
-..  _MenuProcessor-expandAll:
+    ..  confval:: expandAll
+        :name: MenuProcessor-expandAll
+        :Required: true
+        :type: :ref:`data-type-boolean` / :ref:`stdWrap`
+        :Default: 1
+        :Example: 0
 
-expandAll
----------
+        Include all submenus (`1`) or only those of the active pages (`0`).
 
-..  confval:: expandAll
-    :name: MenuProcessor-expandAll
-    :Required: true
-    :type: :ref:`data-type-boolean` / :ref:`stdWrap`
-    :Default: 1
-    :Example: 0
+    ..  _MenuProcessor-includeSpacer:
 
-    Include all submenus (`1`) or only those of the active pages (`0`).
+    ..  confval:: includeSpacer
+        :name: MenuProcessor-includeSpacer
+        :Required: true
+        :type: :ref:`data-type-boolean` / :ref:`stdWrap`
+        :Default: 0
+        :Example: 1
 
+        Include pages with type "spacer".
 
-..  _MenuProcessor-includeSpacer:
+    ..  _MenuProcessor-titleField:
 
-includeSpacer
--------------
+    ..  confval:: titleField
+        :name: MenuProcessor-titleField
+        :Required: true
+        :type: :ref:`data-type-string` / :ref:`stdWrap`
+        :Default: "nav_title // title"
+        :Example: "subtitle"
 
-..  confval:: includeSpacer
-    :name: MenuProcessor-includeSpacer
-    :Required: true
-    :type: :ref:`data-type-boolean` / :ref:`stdWrap`
-    :Default: 0
-    :Example: 1
-
-    Include pages with type "spacer".
-
-
-..  _MenuProcessor-titleField:
-
-titleField
-----------
-
-..  confval:: titleField
-    :name: MenuProcessor-titleField
-    :Required: true
-    :type: :ref:`data-type-string` / :ref:`stdWrap`
-    :Default: "nav_title // title"
-    :Example: "subtitle"
-
-    Fields to be used as title.
+        Fields to be used as title.
 
 
-..  _MenuProcessor-as:
+    ..  _MenuProcessor-as:
 
-as
---
+    ..  confval:: as
+        :name: MenuProcessor-as
+        :Required: false
+        :type: :ref:`data-type-string`
+        :Default: "menu"
 
-..  confval:: as
-    :name: MenuProcessor-as
-    :Required: false
-    :type: :ref:`data-type-string`
-    :Default: "menu"
+        Name for the variable in the Fluid template.
 
-    Name for the variable in the Fluid template.
-
-..  hint::
-    Additionally, all :ref:`HMENU options <cobj-hmenu-options>` are available.
+    ..  hint::
+        Additionally, all :ref:`HMENU options <cobj-hmenu-options>` are available.
 
 ..  _MenuProcessor-example-two-levels:
 
@@ -116,25 +105,19 @@ Example: Two level menu of the web page
 
 Please see also :ref:`dataProcessing-about-examples`.
 
-
-TypoScript
-----------
+..  rubric:: TypoScript
 
 Using the :php:`MenuProcessor` the following scenario is possible:
 
 ..  include:: /CodeSnippets/DataProcessing/TypoScript/MenuProcessor.rst.txt
 
-
-The Fluid template
-------------------
+..  rubric:: The Fluid template
 
 This generated menu can be used in Fluid like this:
 
 ..  include:: /CodeSnippets/DataProcessing/Template/DataProcMenu.rst.txt
 
-
-Output
-------
+..  rubric:: Output
 
 The array now contains the menu items on level one. Each item in return has the
 menu items of level 2 in an array called :php:`children`.
