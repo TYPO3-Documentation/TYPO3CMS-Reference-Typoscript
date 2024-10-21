@@ -17,226 +17,183 @@ calculates the maximum asset size. It uses the files already present in
 the `processedData` array for its calculations. The :ref:`FilesProcessor` can
 be used to fetch the files.
 
+..  contents:: Table of contents
+
 ..  _GalleryProcessor-options:
 
 Options:
 ========
 
-..  _GalleryProcessor-if:
+..  confval-menu::
+    :display: table
+    :type:
+    :Default:
 
-if
---
+    ..  _GalleryProcessor-if:
 
-..  confval:: if
-    :name: GalleryProcessor-if
-    :Required: false
-    :type: :ref:`if` condition
-    :Default: ''
+    ..  confval:: if
+        :name: GalleryProcessor-if
+        :Required: false
+        :type: :ref:`if` condition
+        :Default: ''
 
-    Only if the condition is met the data processor is executed.
+        Only if the condition is met the data processor is executed.
 
 
-..  _GalleryProcessor-filesProcessedDataKey:
+    ..  _GalleryProcessor-filesProcessedDataKey:
 
-filesProcessedDataKey
----------------------
+    ..  confval:: filesProcessedDataKey
+        :name: GalleryProcessor-filesProcessedDataKey
+        :Required: true
+        :type: :ref:`data-type-string` / :ref:`stdWrap`
+        :Default: 'files'
+        :Example: 'myImages'
 
-..  confval:: filesProcessedDataKey
-    :name: GalleryProcessor-filesProcessedDataKey
-    :Required: true
-    :type: :ref:`data-type-string` / :ref:`stdWrap`
-    :Default: 'files'
-    :Example: 'myImages'
+        Key of the array previously processed by the :php:`FilesProcessor`.
 
-    Key of the array previously processed by the :php:`FilesProcessor`.
 
+    ..  _GalleryProcessor-numberOfColumns:
 
-..  _GalleryProcessor-numberOfColumns:
+    ..  confval:: numberOfColumns
+        :name: GalleryProcessor-numberOfColumns
+        :Required: false
+        :type: :ref:`data-type-integer` / :ref:`stdWrap`
+        :Default: field:imagecols
+        :Example: 4
 
-numberOfColumns
----------------
+        Expects the desired number of columns. Defaults to the value of the field
+        `imagecols` (:guilabel:`Number of Columns`) if used with content elements.
 
-..  confval:: numberOfColumns
-    :name: GalleryProcessor-numberOfColumns
-    :Required: false
-    :type: :ref:`data-type-integer` / :ref:`stdWrap`
-    :Default: field:imagecols
-    :Example: 4
+    ..  _GalleryProcessor-mediaOrientation:
 
-    Expects the desired number of columns. Defaults to the value of the field
-    `imagecols` (:guilabel:`Number of Columns`) if used with content elements.
+    ..  confval:: mediaOrientation
+        :name: GalleryProcessor-mediaOrientation
+        :Required: false
+        :type: :ref:`data-type-integer` / :ref:`stdWrap`
+        :Default: field:imageorient
+        :Example: 2
 
+        Expects the image orientation as used in the field `imageorient` in content
+        elements such as text with images. Defaults to the value of the field
+        `imageorient` (:guilabel:`Position and Alignment`) if used with content
+        elements.
 
-..  _GalleryProcessor-mediaOrientation:
+        ..  include:: /Images/AutomaticScreenshots/Fluidtemplate/ImageOrientation.rst.txt
 
-mediaOrientation
-----------------
+    ..  _GalleryProcessor-maxGalleryWidth:
 
-..  confval:: mediaOrientation
-    :name: GalleryProcessor-mediaOrientation
-    :Required: false
-    :type: :ref:`data-type-integer` / :ref:`stdWrap`
-    :Default: field:imageorient
-    :Example: 2
+    ..  confval:: maxGalleryWidth
+        :name: GalleryProcessor-maxGalleryWidth
+        :Required: false
+        :type: :ref:`data-type-integer` / :ref:`stdWrap`
+        :Default: 600
 
-    Expects the image orientation as used in the field `imageorient` in content
-    elements such as text with images. Defaults to the value of the field
-    `imageorient` (:guilabel:`Position and Alignment`) if used with content
-    elements.
+        Maximal gallery width in pixels.
 
-    ..  include:: /Images/AutomaticScreenshots/Fluidtemplate/ImageOrientation.rst.txt
+    ..  _GalleryProcessor-maxGalleryWidthInText:
 
+    ..  confval:: maxGalleryWidthInText
+        :name: GalleryProcessor-maxGalleryWidthInText
+        :Required: false
+        :type: :ref:`data-type-integer` / :ref:`stdWrap`
+        :Default: 300
 
-..  _GalleryProcessor-maxGalleryWidth:
+        Maximal gallery width in pixels if displayed in a text.
 
-maxGalleryWidth
----------------
+    ..  _GalleryProcessor-equalMediaHeight:
+    ..  _GalleryProcessor-equalMediaWidth:
 
-..  confval:: maxGalleryWidth
-    :name: GalleryProcessor-maxGalleryWidth
-    :Required: false
-    :type: :ref:`data-type-integer` / :ref:`stdWrap`
-    :Default: 600
+    ..  confval:: equalMediaHeight, equalMediaWidth
+        :name: GalleryProcessor-equalMediaHeight
+        :Required: false
+        :type: :ref:`data-type-integer` / :ref:`stdWrap`
+        :Default: field:imageheight, field:imagewidth
+        :Example: 300
 
-    Maximal gallery width in pixels.
+        If set all images get scaled to a uniform height / width. Defaults
+        to the value of the fields `imageheight` (:guilabel:`Height of each element
+        (px)`), `imagewidth` (:guilabel:`Width of each element (px)`) if used with
+        content elements.
 
+        ..  include:: /Images/AutomaticScreenshots/Fluidtemplate/MediaHeight.rst.txt
 
-..  _GalleryProcessor-maxGalleryWidthInText:
+    ..  _GalleryProcessor-columnSpacing:
 
-maxGalleryWidthInText
----------------------
+    ..  confval:: columnSpacing
+        :name: GalleryProcessor-columnSpacing
+        :Required: false
+        :type: :ref:`data-type-integer` / :ref:`stdWrap`
+        :Default: 0
+        :Example: 4
 
-..  confval:: maxGalleryWidthInText
-    :name: GalleryProcessor-maxGalleryWidthInText
-    :Required: false
-    :type: :ref:`data-type-integer` / :ref:`stdWrap`
-    :Default: 300
+        Space between columns in pixels
 
-    Maximal gallery width in pixels if displayed in a text.
+    ..  _GalleryProcessor-borderEnabled:
 
-..  _GalleryProcessor-equalMediaHeight:
-..  _GalleryProcessor-equalMediaWidth:
+    ..  confval:: borderEnabled
+        :name: GalleryProcessor-borderEnabled
+        :Required: false
+        :type: :ref:`data-type-integer` / :ref:`stdWrap`
+        :Default: field:imageborder
+        :Example: 1
 
-equalMediaHeight, equalMediaWidth
----------------------------------
+        Should there be a border around the images? Defaults to the value of the
+        fields `imageborder` (:guilabel:`Number of Columns`) if used with content
+        elements.
 
-..  confval:: equalMediaHeight, equalMediaWidth
-    :name: GalleryProcessor-equalMediaHeight
-    :Required: false
-    :type: :ref:`data-type-integer` / :ref:`stdWrap`
-    :Default: field:imageheight, field:imagewidth
-    :Example: 300
+    ..  _GalleryProcessor-borderWidth:
 
-    If set all images get scaled to a uniform height / width. Defaults
-    to the value of the fields `imageheight` (:guilabel:`Height of each element
-    (px)`), `imagewidth` (:guilabel:`Width of each element (px)`) if used with
-    content elements.
+    ..  confval:: borderWidth
+        :name: GalleryProcessor-borderWidth
+        :Required: false
+        :type: :ref:`data-type-integer` / :ref:`stdWrap`
+        :Default: 0
+        :Example: 2
 
-    ..  include:: /Images/AutomaticScreenshots/Fluidtemplate/MediaHeight.rst.txt
+        Width of the border in pixels.
 
+    ..  _GalleryProcessor-borderPadding:
 
-..  _GalleryProcessor-columnSpacing:
+    ..  confval:: borderPadding
+        :name: GalleryProcessor-borderPadding
+        :Required: false
+        :type: :ref:`data-type-integer` / :ref:`stdWrap`
+        :Default: 0
+        :Example: 20
 
-columnSpacing
--------------
+        Padding around the border in pixels.
 
-..  confval:: columnSpacing
-    :name: GalleryProcessor-columnSpacing
-    :Required: false
-    :type: :ref:`data-type-integer` / :ref:`stdWrap`
-    :Default: 0
-    :Example: 4
 
-    Space between columns in pixels
+    ..  _GalleryProcessor-cropVariant:
 
+    ..  confval:: cropVariant
+        :name: GalleryProcessor-cropVariant
+        :Required: false
+        :type: :ref:`data-type-string` / :ref:`stdWrap`
+        :Default: "default"
+        :Example: "mobile"
 
-..  _GalleryProcessor-borderEnabled:
+        See :ref:`crop variants in the TCA reference <t3tca:columns-imageManipulation-properties-cropVariants>`
 
-borderEnabled
--------------
+    ..  _GalleryProcessor-as:
 
-..  confval:: borderEnabled
-    :name: GalleryProcessor-borderEnabled
-    :Required: false
-    :type: :ref:`data-type-integer` / :ref:`stdWrap`
-    :Default: field:imageborder
-    :Example: 1
+    ..  confval:: as
+        :name: GalleryProcessor-as
+        :Required: false
+        :type: :ref:`data-type-string` / :ref:`stdWrap`
+        :Default: "files"
 
-    Should there be a border around the images? Defaults to the value of the
-    fields `imageborder` (:guilabel:`Number of Columns`) if used with content
-    elements.
+        The variable name to be used in the Fluid template.
 
-..  _GalleryProcessor-borderWidth:
+    ..  _GalleryProcessor-dataProcessing:
 
-borderWidth
------------
+    ..  confval:: dataProcessing
+        :name: GalleryProcessor-dataProcessing
+        :Required: false
+        :type: array of :ref:`dataProcessing`
+        :Default: []
 
-..  confval:: borderWidth
-    :name: GalleryProcessor-borderWidth
-    :Required: false
-    :type: :ref:`data-type-integer` / :ref:`stdWrap`
-    :Default: 0
-    :Example: 2
-
-    Width of the border in pixels.
-
-
-..  _GalleryProcessor-borderPadding:
-
-borderPadding
--------------
-
-..  confval:: borderPadding
-    :name: GalleryProcessor-borderPadding
-    :Required: false
-    :type: :ref:`data-type-integer` / :ref:`stdWrap`
-    :Default: 0
-    :Example: 20
-
-    Padding around the border in pixels.
-
-
-..  _GalleryProcessor-cropVariant:
-
-cropVariant
------------
-
-..  confval:: cropVariant
-    :name: GalleryProcessor-cropVariant
-    :Required: false
-    :type: :ref:`data-type-string` / :ref:`stdWrap`
-    :Default: "default"
-    :Example: "mobile"
-
-    See :ref:`crop variants in the TCA reference <t3tca:columns-imageManipulation-properties-cropVariants>`
-
-
-..  _GalleryProcessor-as:
-
-as
---
-
-..  confval:: as
-    :name: GalleryProcessor-as
-    :Required: false
-    :type: :ref:`data-type-string` / :ref:`stdWrap`
-    :Default: "files"
-
-    The variable name to be used in the Fluid template.
-
-
-..  _GalleryProcessor-dataProcessing:
-
-dataProcessing
---------------
-
-..  confval:: dataProcessing
-    :name: GalleryProcessor-dataProcessing
-    :Required: false
-    :type: array of :ref:`dataProcessing`
-    :Default: []
-
-    Array of data processors to be applied to all fetched records.
+        Array of data processors to be applied to all fetched records.
 
 ..  _GalleryProcessor-example-rows-columns:
 
@@ -245,9 +202,7 @@ Example: display images in rows and columns
 
 Please see also :ref:`dataProcessing-about-examples`.
 
-
-TypoScript
-----------
+..  rubric:: TypoScript
 
 As the :php:`GalleryProcessor` expects the data of the files to be
 present in the the `processedData` array, the :php:`FilesProcessor`
@@ -261,14 +216,11 @@ in the :php:`GalleryProcessor` has to be equal to the content of
 
 ..  include:: /CodeSnippets/DataProcessing/TypoScript/GalleryProcessor.rst.txt
 
-
-The Fluid template
-------------------
+..  rubric:: The Fluid template
 
 ..  include:: /CodeSnippets/DataProcessing/Template/DataProcGallery.rst.txt
 
-Output
-------
+..  rubric:: Output
 
 The array now contains the images ordered in rows and columns. For each image
 there is a desired width and height supplied.

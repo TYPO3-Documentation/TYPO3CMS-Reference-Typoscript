@@ -14,28 +14,33 @@ alias `page-content`, loads all :sql:`tt_content` records from the current
 the template with a given identifier for each :sql:`colPos`, also respecting slideMode or
 collect options based on the page layouts content columns.
 
+..  contents:: Table of contents
+
 ..  _PageContentFetchingProcessor-options:
 
 Options
 =======
 
 ..  confval-menu::
+    :display: table
+    :type:
+    :Default:
 
-..  confval:: as
-    :name: PageContentFetchingProcessor-as
-    :Required: false
-    :type: :ref:`data-type-string`
-    :Default: "content"
+    ..  confval:: as
+        :name: PageContentFetchingProcessor-as
+        :Required: false
+        :type: :ref:`data-type-string`
+        :Default: "content"
 
-    Name for the variable in the Fluid template.
+        Name for the variable in the Fluid template.
 
-..  confval:: if
-    :name: PageContentFetchingProcessor-if
-    :Required: false
-    :type: :ref:`if` condition
-    :Default: ''
+    ..  confval:: if
+        :name: PageContentFetchingProcessor-if
+        :Required: false
+        :type: :ref:`if` condition
+        :Default: ''
 
-    Only if the condition is met the data processor is executed.
+        Only if the condition is met the data processor is executed.
 
 ..  _PageContentFetchingProcessor-example:
 
