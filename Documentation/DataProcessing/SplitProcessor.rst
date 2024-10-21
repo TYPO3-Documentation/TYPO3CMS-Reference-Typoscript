@@ -1,11 +1,18 @@
+:navigation-title: split
 ..  include:: /Includes.rst.txt
 ..  _splitProcessor:
 
-==============
-SplitProcessor
-==============
+======================
+`split` data processor
+======================
 
-The :php:`SplitProcessor` allows to split values separated with a delimiter
+..  versionadded:: 12.1
+    One can use the alias :typoscript:`split` instead
+    of the fully-qualified class name
+    :php:`\TYPO3\CMS\Frontend\DataProcessing\SplitProcessor`.
+
+The :php:`\TYPO3\CMS\Frontend\DataProcessing\SplitProcessor`,
+alias `split`, allows to split values separated with a delimiter
 from a single database field. The result is an array that can be iterated over.
 Whitespaces are automatically trimmed.
 
@@ -130,12 +137,6 @@ With the help of the :php:`SplitProcessor` the following scenario is
 possible:
 
 ..  include:: /CodeSnippets/DataProcessing/TypoScript/SplitProcessor.rst.txt
-
-..  versionadded:: 12.1
-    One can use the alias :typoscript:`split` instead
-    of the fully-qualified class name
-    :php:`\TYPO3\CMS\Frontend\DataProcessing\SplitProcessor`.
-
 The Fluid template
 ------------------
 

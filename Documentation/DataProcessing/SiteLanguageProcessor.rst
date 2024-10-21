@@ -1,13 +1,18 @@
+:navigation-title: site-language
 ..  include:: /Includes.rst.txt
 ..  _SiteLanguageProcessor:
 
-=====================
-SiteLanguageProcessor
-=====================
+==============================
+`site-language` data processor
+==============================
 
-..  versionadded:: 12.0
+..  versionadded:: 12.1
+    One can use the alias :typoscript:`site-language` instead
+    of the fully-qualified class name
+    :php:`\TYPO3\CMS\Frontend\DataProcessing\SiteLanguageProcessor`.
 
-The :php:`SiteLanguageProcessor` fetches language-related data from the
+The :php:`\TYPO3\CMS\Frontend\DataProcessing\SiteLanguageProcessor`,
+alias `site-language`, fetches language-related data from the
 :ref:`site configuration<t3coreapi:sitehandling>`.
 
 ..  _SiteLanguageProcessor-options:
@@ -42,11 +47,6 @@ TypoScript
 Using the :php:`SiteLanguageProcessor` the following scenario is possible:
 
 ..  include:: /CodeSnippets/DataProcessing/TypoScript/SiteLanguageProcessor.rst.txt
-
-..  versionadded:: 12.1
-    One can use the alias :typoscript:`site-language` instead
-    of the fully-qualified class name
-    :php:`\TYPO3\CMS\Frontend\DataProcessing\SiteLanguageProcessor`.
 
 
 The Fluid template
