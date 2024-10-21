@@ -1,11 +1,18 @@
+:navigation-title: gallery
 ..  include:: /Includes.rst.txt
 ..  _GalleryProcessor:
 
-================
-GalleryProcessor
-================
+========================
+`gallery` data processor
+========================
 
-The :php:`GalleryProcessor` provides the logic for working with galleries and
+..  versionadded:: 12.1
+    One can use the alias :typoscript:`gallery` instead
+    of the fully-qualified class name
+    :php:`\TYPO3\CMS\Frontend\DataProcessing\GalleryProcessor`.
+
+The :php:`\TYPO3\CMS\Frontend\DataProcessing\GalleryProcessor`,
+alias `gallery`, provides the logic for working with galleries and
 calculates the maximum asset size. It uses the files already present in
 the `processedData` array for its calculations. The :ref:`FilesProcessor` can
 be used to fetch the files.
@@ -254,10 +261,6 @@ in the :php:`GalleryProcessor` has to be equal to the content of
 
 ..  include:: /CodeSnippets/DataProcessing/TypoScript/GalleryProcessor.rst.txt
 
-..  versionadded:: 12.1
-    One can use the alias :typoscript:`gallery` instead
-    of the fully-qualified class name
-    :php:`\TYPO3\CMS\Frontend\DataProcessing\GalleryProcessor`.
 
 The Fluid template
 ------------------

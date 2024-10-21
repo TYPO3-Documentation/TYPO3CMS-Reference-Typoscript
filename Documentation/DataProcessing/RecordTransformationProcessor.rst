@@ -1,15 +1,17 @@
+:navigation-title: record-transformation
 ..  include:: /Includes.rst.txt
 ..  _RecordTransformationProcessor:
 
-=============================
-RecordTransformationProcessor
-=============================
+======================================
+`record-transformation` data processor
+======================================
 
 ..  versionadded:: 13.2
     A new TypoScript data processor for :ref:`FLUIDTEMPLATE <cobj-fluidtemplate>` and
     :typoscript:`PAGEVIEW` has been added.
 
-The :typoscript:`record-transformation` Data Processor can typically be used in
+The :php:`\TYPO3\CMS\Frontend\DataProcessing\RecordTransformationProcessor`,
+alias `record-transformation`, can typically be used in
 conjunction with the DatabaseQuery Data Processor. The DatabaseQuery Data
 Processor typically fetches records from the database, and the
 :typoscript:`record-transformation` will take the result, and transforms
@@ -25,12 +27,6 @@ addressed in a unified way.
 
 The `type` property contains the database table name and the actual type based
 on the record, such `tt_content.textmedia` for Content Elements.
-
-..  note::
-
-    The Record object is available but details are still to be finalized in
-    the API until TYPO3 v13 LTS. Right now only the usage in Fluid is public
-    API.
 
 ..  _RecordTransformationProcessor-databasequeryprocessor-example:
 
