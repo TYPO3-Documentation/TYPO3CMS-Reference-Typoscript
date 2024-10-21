@@ -1,11 +1,15 @@
+:navigation-title: page-content
 ..  include:: /Includes.rst.txt
 ..  _PageContentFetchingProcessor:
 
-============================
-PageContentFetchingProcessor
-============================
+=============================
+`page-content` data processor
+=============================
 
-This Data Processor loads all :sql:`tt_content` records from the current
+..  versionadded:: 13.2
+
+This data processor :php:`\TYPO3\CMS\Frontend\DataProcessing\PageContentFetchingProcessor`,
+alias `page-content`, loads all :sql:`tt_content` records from the current
 :ref:`backend layout <t3coreapi:be-layout>` into
 the template with a given identifier for each :sql:`colPos`, also respecting slideMode or
 collect options based on the page layouts content columns.

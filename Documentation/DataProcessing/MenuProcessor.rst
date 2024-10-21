@@ -1,11 +1,18 @@
+:navigation-title: menu
 ..  include:: /Includes.rst.txt
 ..  _MenuProcessor:
 
-=============
-MenuProcessor
-=============
+=====================
+`menu` data processor
+=====================
 
-The :php:`MenuProcessor` utilizes :ref:`HMENU <cobj-hmenu>` to generate a list
+..  versionadded:: 12.1
+    One can use the alias :typoscript:`menu` instead
+    of the fully-qualified class name
+    :php:`\TYPO3\CMS\Frontend\DataProcessing\MenuProcessor`.
+
+The :php:`\TYPO3\CMS\Frontend\DataProcessing\MenuProcessor`,
+alias `menu`, utilizes :ref:`HMENU <cobj-hmenu>` to generate a list
 of menu items which can be assigned to :typoscript:`FLUIDTEMPLATE` as a
 variable.
 
@@ -116,11 +123,6 @@ TypoScript
 Using the :php:`MenuProcessor` the following scenario is possible:
 
 ..  include:: /CodeSnippets/DataProcessing/TypoScript/MenuProcessor.rst.txt
-
-..  versionadded:: 12.1
-    One can use the alias :typoscript:`menu` instead
-    of the fully-qualified class name
-    :php:`\TYPO3\CMS\Frontend\DataProcessing\MenuProcessor`.
 
 
 The Fluid template

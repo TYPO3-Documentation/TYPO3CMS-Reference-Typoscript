@@ -1,14 +1,21 @@
+:navigation-title: flex-form
 ..  include:: /Includes.rst.txt
 ..  _FlexFormProcessor:
 ..  index:: FlexForm, DataProcessing
 
-=================
-FlexFormProcessor
-=================
+==========================
+`flex-form` data processor
+==========================
+
+..  versionadded:: 12.1
+    One can use the alias :typoscript:`flex-form` instead
+    of the fully-qualified class name
+    :php:`\TYPO3\CMS\Frontend\DataProcessing\FlexFormProcessor`.
 
 TYPO3 offers :ref:`FlexForms <t3coreapi:flexforms>` which can be used to store
 data within an XML structure inside a single database column. The data processor
-:php:`\TYPO3\CMS\Frontend\DataProcessing\FlexFormProcessor` converts the
+:php:`\TYPO3\CMS\Frontend\DataProcessing\FlexFormProcessor`,
+alias `flex-form`, converts the
 FlexForm data of a given field into a Fluid-readable array.
 
 ..  _FlexFormProcessor-options:
@@ -83,11 +90,6 @@ Example of a minimal TypoScript configuration
     # dataProcessing.10 = TYPO3\CMS\Frontend\DataProcessing\FlexFormProcessor
     # Since TYPO3 v12.1 one can also use the available alias
     10 = flex-form
-
-..  versionadded:: 12.1
-    One can use the alias :typoscript:`flex-form` instead
-    of the fully-qualified class name
-    :php:`\TYPO3\CMS\Frontend\DataProcessing\FlexFormProcessor`.
 
 The converted array can be accessed within the Fluid template with the
 :html:`{flexFormData}` variable.
