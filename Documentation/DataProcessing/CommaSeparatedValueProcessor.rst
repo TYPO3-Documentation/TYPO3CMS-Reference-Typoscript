@@ -1,11 +1,18 @@
+:navigation-title: comma-separated-value
 ..  include:: /Includes.rst.txt
 ..  _CommaSeparatedValueProcessor:
 
-============================
-CommaSeparatedValueProcessor
-============================
+======================================
+`comma-separated-value` data processor
+======================================
 
-The :php:`CommaSeparatedValueProcessor` allows to split values into a
+..  versionadded:: 12.1
+    One can use the alias :typoscript:`comma-separated-value` instead
+    of the fully-qualified class name
+    :php:`\TYPO3\CMS\Frontend\DataProcessing\CommaSeparatedValueProcessor`.
+
+The :php:`\TYPO3\CMS\Frontend\DataProcessing\CommaSeparatedValueProcessor`,
+alias `comma-separated-value`, allows to split values into a
 two-dimensional array used for :abbr:`CSV (Comma-separated values)` files or
 :sql:`tt_content` records of CType `table`.
 
@@ -134,10 +141,6 @@ We define the :typoscript:`dataProcessing` property to use the
 
 ..  include:: /CodeSnippets/DataProcessing/TypoScript/CommaSeparatedValueProcessor.rst.txt
 
-..  versionadded:: 12.1
-    One can use the alias :typoscript:`comma-separated-value` instead
-    of the fully-qualified class name
-    :php:`\TYPO3\CMS\Frontend\DataProcessing\CommaSeparatedValueProcessor`.
 
 The Fluid template
 ------------------

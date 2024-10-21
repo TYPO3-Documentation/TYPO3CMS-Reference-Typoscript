@@ -17,11 +17,6 @@ data processor:
 The available configuration depends on the implementation of the
 specific custom data processor, of course.
 
-..  versionadded:: 12.1
-    One can configure a custom alias in :file:`Configuration/Services.yaml`
-    and use it in TypoScript instead of the fully-qualified class name.
-
-
 Example output
 ==============
 
