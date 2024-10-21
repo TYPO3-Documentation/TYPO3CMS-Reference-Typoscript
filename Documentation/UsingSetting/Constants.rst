@@ -7,17 +7,12 @@
 Constants
 =========
 
-..  versionchanged:: 12.0
-    The TypoScript management tools are now found in backend module
-    :guilabel:`Site Management > TypoScript`. It was formerly found in
-    "Page > Template".
-
 ..  figure:: /Images/ManualScreenshots/TypoScriptModule/ConstantEditor.png
     :alt: Screenshot of the TYPO3 Backend showing the constant editor
 
     The :ref:`Constant Editor <constant-editor>` in the TYPO3 backend
 
-Constants are values defined in the  :guilabel:`Constants` field of a template.  They
+Constants are values defined in the :guilabel:`Constants` field of a template.  They
 follow the :ref:`syntax of ordinary TypoScript
 <t3coreapi:typoscript-syntax-syntax>` and are case sensitive! They are used to
 manage *in a single place* values, which are later used in *several places*.
@@ -144,14 +139,6 @@ replacement in green:
 
 ..  figure:: /Images/ManualScreenshots/TypoScriptModule/ConstantsInActiveTypoScript.png
     :alt: Screenshot of the Active TypoScript with constants substituted
-
-..  versionchanged:: 12.0
-    The TypoScript management tools are now found in backend module
-    :guilabel:`Site Management > TypoScript`. It was formerly found in
-    "Page > Template".
-
-    The submodule :guilabel:`Active TypoScript` was renamed from
-    "TypoScript Object Browser".
 
 ..  note::
 

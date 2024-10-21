@@ -102,8 +102,6 @@ plugins.
         :type: :ref:`data-type-string`
         :Example: :ref:`Ignore certain FlexForm settings if empty <setup-plugin-configuration-ignoreFlexFormSettingsIfEmpty-example>`
 
-        ..  versionadded:: 12.3
-
         Define :ref:`FlexForm <t3coreapi:flexforms>` settings that will be
         ignored in the extension settings merge process, if their value is
         considered empty (either an empty string or a string containing `0`).
