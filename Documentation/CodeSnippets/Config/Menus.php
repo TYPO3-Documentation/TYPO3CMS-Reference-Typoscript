@@ -68,37 +68,11 @@ return [
         'sourceFile' => 'EXT:fluid_styled_content/Resources/Private/Templates/MenuCategorizedPages.html',
         'targetFileName' => 'CodeSnippets/Menu/Template/MenuCategorizedPages.rst.txt',
     ],
-    // special = browse
-    [
-        'action' => 'createCodeSnippet',
-        'caption' => 'EXT:site_package/Configuration/TypoScript/Seo/Setup/RelPrevNextMenu.typoscript',
-        'sourceFile' => 'EXT:site_package/Configuration/TypoScript/Seo/Setup/RelPrevNextMenu.typoscript',
-        'targetFileName' => 'CodeSnippets/Menu/TypoScript/RelPrevNextMenu.rst.txt',
-    ],
     // special = rootline
-    [
-        'action' => 'createCodeSnippet',
-        'caption' => 'EXT:site_package/Configuration/TypoScript/Menus/Setup/BreadcrumbLib.typoscript',
-        'sourceFile' => 'EXT:site_package/Configuration/TypoScript/Menus/Setup/BreadcrumbLib.typoscript',
-        'targetFileName' => 'CodeSnippets/Menu/TypoScript/BreadcrumbLib.rst.txt',
-    ],
-    [
-        'action' => 'createCodeSnippet',
-        'caption' => 'EXT:site_package/Configuration/TypoScript/Menus/Setup/BreadcrumbDataProcessor.typoscript',
-        'sourceFile' => 'EXT:site_package/Configuration/TypoScript/Menus/Setup/BreadcrumbDataProcessor.typoscript',
-        'targetFileName' => 'CodeSnippets/Menu/TypoScript/BreadcrumbDataProcessor.rst.txt',
-    ],
     [
         'action' => 'createCodeSnippet',
         'caption' => 'EXT:site_package/Resources/Private/Templates/Partials/Navigation/Breadcrumb.html',
         'sourceFile' => 'EXT:site_package/Resources/Private/Templates/Partials/Navigation/Breadcrumb.html',
         'targetFileName' => 'CodeSnippets/Menu/Template/BreadcrumbDataProcessor.rst.txt',
-    ],
-    // special = language
-    [
-        'action' => 'createCodeSnippet',
-        'caption' => 'EXT:site_package/Configuration/TypoScript/Menus/Setup/LanguageMenuLib.typoscript',
-        'sourceFile' => 'EXT:site_package/Configuration/TypoScript/Menus/Setup/LanguageMenuLib.typoscript',
-        'targetFileName' => 'CodeSnippets/Menu/TypoScript/LanguageMenuLib.rst.txt',
     ],
 ];
