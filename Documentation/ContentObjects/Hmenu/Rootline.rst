@@ -84,7 +84,8 @@ Breadcrumb styled with Fluid
 The following breadcrumb menu is created with the
 :ref:`MenuProcessor <MenuProcessor>`, based on the HMENU. It is styled via Fluid:
 
-..  include:: /CodeSnippets/Menu/TypoScript/BreadcrumbDataProcessor.rst.txt
+..  literalinclude:: _code-snippets/_BreadcrumbDataProcessor.typoscript
+    :caption: EXT:site_package/Configuration/TypoScript/Menus/Setup/BreadcrumbDataProcessor.typoscript
 
 The following Fluid partial can be used to style the breadcrumb menu:
 
@@ -97,7 +98,8 @@ Breadcrumb with pure TypoScript
 
 The following breadcrumb menu is styled with pure Typoscript:
 
-..  include:: /CodeSnippets/Menu/TypoScript/BreadcrumbLib.rst.txt
+..  literalinclude:: _code-snippets/_BreadcrumbLib.typoscript
+    :caption: EXT:site_package/Configuration/TypoScript/Menus/Setup/BreadcrumbLib.typoscript
 
 ..  _hmenu-special-rootline-range-example:
 
