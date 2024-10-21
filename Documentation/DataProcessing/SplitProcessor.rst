@@ -6,11 +6,6 @@
 `split` data processor
 ======================
 
-..  versionadded:: 12.1
-    One can use the alias :typoscript:`split` instead
-    of the fully-qualified class name
-    :php:`\TYPO3\CMS\Frontend\DataProcessing\SplitProcessor`.
-
 The :php:`\TYPO3\CMS\Frontend\DataProcessing\SplitProcessor`,
 alias `split`, allows to split values separated with a delimiter
 from a single database field. The result is an array that can be iterated over.

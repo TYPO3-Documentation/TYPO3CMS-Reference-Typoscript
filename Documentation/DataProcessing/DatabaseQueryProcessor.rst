@@ -6,11 +6,6 @@
 `database-query` data processor
 ===============================
 
-..  versionadded:: 12.1
-    One can use the alias :typoscript:`database-query` instead
-    of the fully-qualified class name
-    :php:`\TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor`.
-
 The :php:`\TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor`,
 alias `database-query`, fetches records from the database, using
 standard TypoScript :ref:`select` semantics. The result is then passed to the

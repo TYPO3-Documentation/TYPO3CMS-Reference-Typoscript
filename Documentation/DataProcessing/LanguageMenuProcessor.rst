@@ -6,11 +6,6 @@
 language-menu data processor
 ============================
 
-..  versionadded:: 12.1
-    One can use the alias :typoscript:`language-menu` instead
-    of the fully-qualified class name
-    :php:`\TYPO3\CMS\Frontend\DataProcessing\LanguageMenuProcessor`.
-
 The processor :php:`\TYPO3\CMS\Frontend\DataProcessing\LanguageMenuProcessor`,
 alias `language-menu`, generates a list of language menu items which can be
 assigned to the :typoscript:`FLUIDTEMPLATE` as a variable.

@@ -6,11 +6,6 @@
 The constant editor
 ===================
 
-..  versionchanged:: 12.0
-    The TypoScript management tools are now found in backend module
-    :guilabel:`Site Management > TypoScript`. It was formerly found in
-    "Page > Template".
-
 It's possible to add comments in TypoScript. Comments are always ignored by the
 parser when the TypoScript is processed. But the backend module
 :guilabel:`Site Management > TypoScript`
@@ -102,7 +97,7 @@ cat
 Predefined categories
 ---------------------
 
-..  versionchanged:: 12.0
+..  note::
     While the predefined categories still exist for backward compatibility
     reasons they are not used anymore by the TYPO3 Core except for "content".
     It is suggested to use one or several
@@ -138,7 +133,7 @@ has to be added. Example:
     #cat=mySitePackage/basic/100; type=boolean; label=Something
     tx_my_site_package.basic.enableSomething = 0
 
-..  versionchanged:: 12.0
+..  note::
     There has to be a newline after the definition of a custom category or it will
     not be considered. See also https://forge.typo3.org/issues/100936.
 
@@ -227,7 +222,7 @@ using the :typoscript:`customsubcategory` parameter. Example:
     #cat=mySitePackage/something/a; type=boolean; label=Turn something on
     tx_my_site_package.basic.enableSomething = 0
 
-..  versionchanged:: 12.0
+..  note::
     There has to be a newline after the definition of a custom subcategory or it will
     not be considered. See also https://forge.typo3.org/issues/100936.
 

@@ -6,11 +6,6 @@
 `gallery` data processor
 ========================
 
-..  versionadded:: 12.1
-    One can use the alias :typoscript:`gallery` instead
-    of the fully-qualified class name
-    :php:`\TYPO3\CMS\Frontend\DataProcessing\GalleryProcessor`.
-
 The :php:`\TYPO3\CMS\Frontend\DataProcessing\GalleryProcessor`,
 alias `gallery`, provides the logic for working with galleries and
 calculates the maximum asset size. It uses the files already present in

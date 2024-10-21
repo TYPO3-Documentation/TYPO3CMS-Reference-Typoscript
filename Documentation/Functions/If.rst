@@ -70,8 +70,6 @@ bitAnd
 contains
 --------
 
-..  versionadded:: 12.1
-
 ..  confval::  contains
     :name: if-contains
     :type:  value / :ref:`stdwrap`
@@ -118,8 +116,6 @@ directReturn
 
 endsWith
 --------
-
-..  versionadded:: 12.1
 
 ..  confval::  endsWith
     :name: if-endsWith
@@ -301,8 +297,6 @@ negate
 
 startsWith
 ----------
-
-..  versionadded:: 12.1
 
 ..  confval::  startsWith
     :name: if-startsWith

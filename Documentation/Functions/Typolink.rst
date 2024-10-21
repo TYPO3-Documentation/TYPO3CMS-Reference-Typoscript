@@ -165,12 +165,7 @@ addQueryString
         query arguments are never added by default. This is the recommended
         behaviour.
 
-        ..  versionchanged:: 12.0
-            Before TYPO3 v12 this setting added all query parameters. To ensure
-            the previous behaviour use :typoscript:`untrusted`.
-
     :typoscript:`untrusted`
-        ..  versionadded:: 12.0
 
         Any given query parameters of the current request are added.
 

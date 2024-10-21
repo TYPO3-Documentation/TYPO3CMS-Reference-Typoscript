@@ -48,14 +48,6 @@ If TypoScript was added by a record, it is linked.
 Submodule "Edit TypoScript Record"
 ==================================
 
-..  versionchanged:: 12.0
-    The TypoScript management tools are now found in backend module
-    :guilabel:`Site Management > TypoScript`. It was formerly found in
-    "Page > Template".
-
-    The submodule :guilabel:`Edit TypoScript Record` was previously named
-    "Info / Modify".
-
 This can be done in the :guilabel:`Site Management > TypoScript` module in
 the submodule :guilabel:`Edit TypoScript Record`.
 
@@ -84,7 +76,7 @@ edited from the list module:
 Include TypoScript files
 ------------------------
 
-..  versionchanged:: 12.0
+..  note::
     Only the import of files ending on '.typoscript' or '.tsconfig' are
     supported. Importing legacy files with the legacy endings '.txt' or '.ts'
     **does not work**, even if their names are explicitly used in the import.
@@ -116,14 +108,6 @@ Include TypoScript from extensions
     :ref:`sites and sets <typoscript-site-sets>`. If the extension to be used
     already supports site sets, those should be used instead of TypoScript
     includes in the record.
-
-..  versionchanged:: 12.0
-    The TypoScript management tools are now found in backend module
-    :guilabel:`Site Management > TypoScript`. It was formerly found in
-    "Page > Template".
-
-    The submodule :guilabel:`Edit TypoScript Record` was previously named
-    "Info / Modify".
 
 It is also possible to "Include TypoScript sets" from extensions in the
 TypoScript record.
@@ -165,14 +149,6 @@ records (in the field called :guilabel:`Include TypoScript records`).
 
 Submodule "Included TypoScript"
 ===============================
-
-..  versionchanged:: 12.0
-    The TypoScript management tools are now found in backend module
-    :guilabel:`Site Management > TypoScript`. It was formerly found in
-    "Page > Template".
-
-    The submodule :guilabel:`Included TypoScript` was renamed from
-    "TypoScript Analyzer".
 
 With all those inclusions, it may happen that you lose the overview of the
 template structure. The submodule :guilabel:`Included TypoScript` provides

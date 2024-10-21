@@ -19,14 +19,6 @@ to find errors within TypoScript.
 Analyzing defined constants
 ===========================
 
-..  versionchanged:: 12.0
-    The TypoScript management tools are now found in backend module
-    :guilabel:`Site Management > TypoScript`. It was formerly found in
-    "Page > Template".
-
-    The submodule :guilabel:`Active TypoScript` was renamed from
-    "TypoScript Object Browser".
-
 The backend submodule :guilabel:`Site Management > TypoScript > Active TypoScript`
 provides a tree view to all defined TypoScript Constants on the currently active page.
 
@@ -40,18 +32,6 @@ provides a tree view to all defined TypoScript Constants on the currently active
 
 Finding errors
 ==============
-
-..  versionchanged:: 12.0
-    The TypoScript management tools are now found in backend module
-    :guilabel:`Site Management > TypoScript`. It was formerly found in
-    "Page > Template".
-
-    The submodule :guilabel:`Active TypoScript` was renamed from
-    "TypoScript Object Browser". It does not display syntax warnings anymore,
-    those are displayed in the submodule :guilabel:`Included TypoScript` only.
-
-    The submodule :guilabel:`Included TypoScript` was renamed from
-    "TypoScript Analyzer".
 
 There are no tools that will tell whether the given TypoScript code is 100%
 correct. The :guilabel:`Included TypoScript` will warn about syntax errors though:

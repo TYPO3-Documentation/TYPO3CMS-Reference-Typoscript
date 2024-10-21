@@ -484,8 +484,6 @@ Properties of 'config'
         :type: :ref:`data-type-boolean`
         :Default: `0`
 
-        ..  versionadded:: 12.1
-
         If this option is set, all links, reference to images or assets
         previously built with a relative or absolute path (for example,
         :file:`/fileadmin/my-pdf.pdf`) will be rendered as absolute URLs
@@ -922,8 +920,6 @@ Properties of 'config'
         :type: :ref:`data-type-boolean`
         :Default: 1
 
-        ..  versionadded:: 12.0
-
         The option can be used to specify whether the website title defined in
         the :ref:`site configuration <t3coreapi:sitehandling>` should be added
         to the page title (used for the :html:`<title>` tag, for example).
@@ -1001,8 +997,6 @@ Properties of 'config'
         :name: config-typolinkLinkAccessRestrictedPages-ATagParams
         :type: :ref:`data-type-string`
         :Example: :ref:`setup-config-typolinklinkaccessrestrictedpages`
-
-        ..  versionadded:: 12.3
 
         `typolinkLinkAccessRestrictedPages.ATagParams` Add custom attributes to
         the anchor tag.

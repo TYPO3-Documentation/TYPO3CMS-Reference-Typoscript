@@ -1,12 +1,11 @@
 ..  include:: /Includes.rst.txt
 ..  index:: Content objects; EXTBASEPLUGIN
+..  _cobj-extbaseplugin-history:
 ..  _cobj-extbaseplugin:
 
 =============
 EXTBASEPLUGIN
 =============
-
-..  versionadded:: 12.3
 
 The content object :typoscript:`EXTBASEPLUGIN` allows to render
 :ref:`Extbase <t3coreapi:extbase>` plugins.
@@ -98,30 +97,3 @@ action by getting the currentContentObject from the request:
     :php-short:`\TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer` as
     potential user input. Do not use it unescaped and do not trust to receive
     certain types.
-
-..  _cobj-extbaseplugin-history:
-
-History
-=======
-
-The :typoscript:`EXTBASEPLUGIN` allows Extbase authors to not reference the
-Extbase Bootstrap class anymore, like for previous TYPO3 versions below version
-12.
-
-Previously, TypoScript code for Extbase plugins looked like this:
-
-..  code-block:: typoscript
-
-    page.10 = USER
-    page.10 {
-        userFunc = TYPO3\\CMS\\Extbase\\Core\\Bootstrap->run
-        extensionName = MyExtension
-        pluginName = MyPlugin
-    }
-
-This way still works, but it is recommended to use the
-:typoscript:`EXTBASEPLUGIN` content object, as the direct reference to a PHP
-class (Bootstrap) might be optimized in future versions.
-
-For extension that need to remain compatible with TYPO3 v11 and v12, the
-Bootstrap way should be used.

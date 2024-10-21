@@ -940,17 +940,14 @@ ip()
 request()
 =========
 
-..  deprecated:: 12.3
-    Using this function in **page TSconfig** or **user TSconfig** conditions is
-    deprecated. Such conditions will stop working with TYPO3 v13 and will then
-    always evaluate to false. For migration hints see the
-    :ref:`changelog <ext_core:deprecation-100047-1677608959>`.
-
 ..  confval:: request()
     :name: condition-request
     :type: Mixed
 
     Allows to fetch information from current request.
+
+    ..  note:: This function cannot be used in **page TSconfig** or
+        **user TSconfig** conditions. They always evaluate to false.
 
 ..  tip::
     Checking for the :ref:`request object <t3coreapi:typo3-request>` before

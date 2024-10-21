@@ -326,8 +326,6 @@ Properties
         `title`
             Setting the title of the :html:`<style>` tag.
 
-        ..  versionadded:: 12.1
-
         Additional data attributes can be configured using a key-value list.
 
     ..  confval:: includeCSSLibs.[array]
@@ -373,8 +371,6 @@ Properties
             Setting the media attribute of the :html:`<style>` tag.
         `title`
             Setting the title of the :html:`<style>` tag.
-
-        ..  versionadded:: 12.1
 
         Additional data attributes can be configured using a key-value list.
 
@@ -443,8 +439,6 @@ Properties
             browsers ensure subresource integrity. Useful in hosting scenarios with
             resources externalized to CDN's. See `SRI <https://www.w3.org/TR/SRI/>`_ for
             more details. Integrity hashes may be generated using `<https://srihash.org/>`_.
-
-        ..  versionadded:: 12.1
 
         `data`
             Array with key/value for additional attributes to be added to

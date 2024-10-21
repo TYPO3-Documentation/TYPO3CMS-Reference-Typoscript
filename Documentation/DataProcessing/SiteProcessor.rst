@@ -6,11 +6,6 @@
 `site` data processor
 =====================
 
-..  versionadded:: 12.1
-    One can use the alias :typoscript:`site` instead
-    of the fully-qualified class name
-    :php:`\TYPO3\CMS\Frontend\DataProcessing\SiteProcessor`.
-
 The :php:`\TYPO3\CMS\Frontend\DataProcessing\SiteProcessor`,
 alias `site`, fetches data from the :ref:`site configuration
 <t3coreapi:sitehandling>`.

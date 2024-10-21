@@ -6,11 +6,6 @@
 `menu` data processor
 =====================
 
-..  versionadded:: 12.1
-    One can use the alias :typoscript:`menu` instead
-    of the fully-qualified class name
-    :php:`\TYPO3\CMS\Frontend\DataProcessing\MenuProcessor`.
-
 The :php:`\TYPO3\CMS\Frontend\DataProcessing\MenuProcessor`,
 alias `menu`, utilizes :ref:`HMENU <cobj-hmenu>` to generate a list
 of menu items which can be assigned to :typoscript:`FLUIDTEMPLATE` as a

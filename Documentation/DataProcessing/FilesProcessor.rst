@@ -6,11 +6,6 @@
 `files` data processor
 ======================
 
-..  versionadded:: 12.1
-    One can use the alias :typoscript:`files` instead
-    of the fully-qualified class name
-    :php:`\TYPO3\CMS\Frontend\DataProcessing\FilesProcessor`.
-
 This data processor :php:`\TYPO3\CMS\Frontend\DataProcessing\FilesProcessor`,
 alias `files`, can be used for processing file information:
 
