@@ -171,14 +171,6 @@ Properties
         has clicked a menu item and the menu folds out the next level. This
         can enable that to happen on all items as default.
 
-    ..  confval:: collapse (removed)
-        :name: menu-common-properties-collapse
-
-        ..  versionchanged:: 12.0
-            The property was removed with TYPO3 v12.0. Use a custom user function or
-            the PSR-14 event :ref:`t3coreapi:FilterMenuItemsEvent` to modify the menu
-            items.
-
     ..  confval:: sectionIndex
         :name: menu-common-properties-sectionIndex
         :type: :ref:`data-type-boolean`
@@ -465,8 +457,6 @@ Properties
         page would have had if it had been accessible and ###PAGE\_ID###
         holding the page ID of the page coming from (could be used to look up
         which fe\_groups was required for access.
-
-        ..  versionadded:: 12.3
 
         **.ATagParams**: Add custom attributes to the anchor tag.
 

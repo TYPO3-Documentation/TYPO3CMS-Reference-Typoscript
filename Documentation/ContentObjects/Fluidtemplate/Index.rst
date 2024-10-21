@@ -115,24 +115,6 @@ Properties
 
     Sets the extension name of the controller.
 
-    ..  warning::
-        Up to TYPO3 v11, this property could be used as an alternative to the `extensionName`
-        argument in the :ref:`f:translate <t3viewhelper:typo3-fluid-translate>`
-        and :ref:`f:uri.resource <t3viewhelper:typo3-fluid-uri-resource>` ViewHelpers,
-        provided that translations and public images were stored in the usual paths in your extension.
-
-        Since TYPO3 v12 this is no longer supported and it is recommended to either use absolute keys:
-
-        ..  code-block:: html
-
-            <f:translate key="LLL:EXT:my_extension/Resources/Private/Language/locallang.xlf:myKey" />
-
-        or the `extensionName` argument plus `key` argument in the ViewHelper:
-
-        ..  code-block:: html
-
-            <f:translate key="myKey" extensionName="MyExtension" />
-
 ..  _cobj-fluidtemplate-properties-extbase-controllername:
 
 ..  confval:: extbase.controllerName

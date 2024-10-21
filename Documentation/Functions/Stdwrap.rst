@@ -867,8 +867,6 @@ strftime
 formattedDate
 ~~~~~~~~~~~~~
 
-..  versionadded:: 12.3
-
 ..  confval:: formattedDate
     :name: stdwrap-formattedDate
     :type: :ref:`data-type-string`

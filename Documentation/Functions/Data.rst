@@ -994,13 +994,11 @@ siteLanguage
             configuration setting.
 
     :typoscript:`hreflang`
-        ..  versionchanged:: 12.4
-            This option is not relevant anymore for regular websites without
-            rendering hreflang tag, but is now customizable, and has a proper
-            fallback.
-
         The language tag for this language defined by RFC 1766 / 3066 for
-        :html:`hreflang` attributes
+        :html:`hreflang` attributes.
+
+        This option is not relevant for regular websites without
+        rendering hreflang tag.
 
     :typoscript:`languageId`
         The language mapped to the ID of the site language.
@@ -1047,8 +1045,6 @@ Example: Get values from the current site language
 
 siteSettings
 ------------
-
-..  versionadded:: 12.1
 
 ..  confval:: siteSettings
     :name: data-siteSettings
