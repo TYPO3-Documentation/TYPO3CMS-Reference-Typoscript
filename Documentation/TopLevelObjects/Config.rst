@@ -928,6 +928,38 @@ Properties of 'config'
          both browser- and reverse-proxy caches and even make TYPO3 regenerate
          the page. Teach them that trick!
 
+    ..  confval:: sendCacheHeadersForSharedCaches
+        :name: config-sendCacheHeadersForSharedCaches
+        :type: `auto`, `force`, or empty
+
+        ..  versionadded:: 13.3
+
+        When working with proxies, it is much helpful to take load
+        off of TYPO3 / the webserver by keeping a cached version for a period of
+        time and answering requests from the client, while still telling the
+        client to not cache the response inside the browser cache.
+
+        This is achieved by setting
+        :typoscript:`config.sendCacheHeadersForSharedCaches = auto`.
+
+        With this option enabled, TYPO3 evaluates if the current TYPO3 Frontend
+        request is executed behind a reverse proxy, and if so, TYPO3 sends the following
+        HTTP Response Headers at a cached response:
+
+        ..  code-block:: plaintext
+
+            Expires: Thu, 26 Aug 2024 08:52:00 GMT
+            ETag: "d41d8cd98f00b204ecs00998ecf8427e"
+            Cache-Control: max-age=0, s-maxage=86400
+            Pragma: public
+
+        With :typoscript:`config.sendCacheHeadersForSharedCaches = force` the reverse
+        proxy evaluation can be omitted, which can be used for local webserver internal
+        caches.
+
+        See https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control
+        for details and if your reverse proxy supports this directive.
+
     ..  confval:: showWebsiteTitle
         :name: config-showWebsiteTitle
         :type: :ref:`data-type-boolean`

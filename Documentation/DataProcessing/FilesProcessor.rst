@@ -1,11 +1,18 @@
+:navigation-title: files
 ..  include:: /Includes.rst.txt
 ..  _FilesProcessor:
 
-==============
-FilesProcessor
-==============
+======================
+`files` data processor
+======================
 
-This data processor can be used for processing file information:
+..  versionadded:: 12.1
+    One can use the alias :typoscript:`files` instead
+    of the fully-qualified class name
+    :php:`\TYPO3\CMS\Frontend\DataProcessing\FilesProcessor`.
+
+This data processor :php:`\TYPO3\CMS\Frontend\DataProcessing\FilesProcessor`,
+alias `files`, can be used for processing file information:
 
 *   relations to file records (:sql:`sys_file_reference`)
 *   fetch files records by their uids in table (:sql:`sys_file`)
@@ -224,12 +231,6 @@ TypoScript
 Using the :php:`FilesProcessor` the following scenario is possible:
 
 ..  include:: /CodeSnippets/DataProcessing/TypoScript/FilesProcessor.rst.txt
-
-..  versionadded:: 12.1
-    One can use the alias :typoscript:`files` instead
-    of the fully-qualified class name
-    :php:`\TYPO3\CMS\Frontend\DataProcessing\FilesProcessor`.
-
 
 The Fluid template
 ------------------

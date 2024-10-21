@@ -3,9 +3,9 @@
 ..  _cobj-fluidtemplate-properties-dataprocessing:
 ..  _dataProcessing:
 
-==============
-dataProcessing
-==============
+===============
+Data processors
+===============
 
 :ref:`dataProcessing <fluidtemplate-dataProcessing>` is a property of
 :ref:`cobj-fluidtemplate`.

@@ -1,11 +1,18 @@
+:navigation-title: language-menu
 ..  include:: /Includes.rst.txt
 ..  _LanguageMenuProcessor:
 
-=====================
-LanguageMenuProcessor
-=====================
+============================
+language-menu data processor
+============================
 
-This menu processor generates a list of language menu items which can be
+..  versionadded:: 12.1
+    One can use the alias :typoscript:`language-menu` instead
+    of the fully-qualified class name
+    :php:`\TYPO3\CMS\Frontend\DataProcessing\LanguageMenuProcessor`.
+
+The processor :php:`\TYPO3\CMS\Frontend\DataProcessing\LanguageMenuProcessor`,
+alias `language-menu`, generates a list of language menu items which can be
 assigned to the :typoscript:`FLUIDTEMPLATE` as a variable.
 
 ..  hint::
@@ -96,11 +103,6 @@ TypoScript
 Using the :php:`LanguageMenuProcessor` the following scenario is possible:
 
 ..  include:: /CodeSnippets/DataProcessing/TypoScript/LanguageMenuProcessor.rst.txt
-
-..  versionadded:: 12.1
-    One can use the alias :typoscript:`language-menu` instead
-    of the fully-qualified class name
-    :php:`\TYPO3\CMS\Frontend\DataProcessing\LanguageMenuProcessor`.
 
 
 The Fluid template
