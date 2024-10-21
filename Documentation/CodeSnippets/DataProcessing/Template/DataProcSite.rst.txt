@@ -13,4 +13,3 @@
        <p>Base url: <f:link.page pageUid="{site.rootPageId}">{site.configuration.base}</f:link.page></p>
 
     </html>
-    
