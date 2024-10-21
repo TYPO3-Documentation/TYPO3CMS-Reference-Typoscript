@@ -15,24 +15,27 @@ The :php:`\TYPO3\CMS\Frontend\DataProcessing\SiteProcessor`,
 alias `site`, fetches data from the :ref:`site configuration
 <t3coreapi:sitehandling>`.
 
+..  contents:: Table of contents
 
 ..  _SiteProcessor-options:
 
 Options
 =======
 
-..  _SiteProcessor-as:
+..  confval-menu::
+    :display: table
+    :type:
+    :Default:
 
-as
---
+    ..  _SiteProcessor-as:
 
-..  confval:: as
-    :name: SiteProcessor-as
-    :Required: false
-    :type: :ref:`data-type-string`
-    :Default: "site"
+    ..  confval:: as
+        :name: SiteProcessor-as
+        :Required: false
+        :type: :ref:`data-type-string`
+        :Default: "site"
 
-    The variable name to be used in the Fluid template.
+        The variable name to be used in the Fluid template.
 
 ..  _SiteProcessor-examples:
 
@@ -41,25 +44,19 @@ Example: Output some data from the site configuration
 
 Please see also :ref:`dataProcessing-about-examples`.
 
-
-TypoScript
-----------
+..  rubric:: TypoScript
 
 Using the :php:`SiteProcessor` the following scenario is possible:
 
 ..  include:: /CodeSnippets/DataProcessing/TypoScript/SiteProcessor.rst.txt
 
-
-The Fluid template
-------------------
+..  rubric:: The Fluid templat
 
 In the Fluid template the properties of the site configuration can be accessed:
 
 ..  include:: /CodeSnippets/DataProcessing/Template/DataProcSite.rst.txt
 
-
-Output
-------
+..  rubric:: Output
 
 The array now contains the information from the site configuration:
 

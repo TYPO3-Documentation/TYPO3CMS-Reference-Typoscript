@@ -19,75 +19,70 @@ standard TypoScript :ref:`select` semantics. The result is then passed to the
 This way a :ref:`cobj-fluidtemplate` cObject can iterate over the
 array of records.
 
+..  contents:: Table of contents
+
 ..  _DatabaseQueryProcessor-options:
 
 Options:
 ========
 
-..  _DatabaseQueryProcessor-if:
+..  confval-menu::
+    :display: table
+    :type:
+    :Default:
 
-if
---
+    ..  _DatabaseQueryProcessor-if:
 
-..  confval:: if
-    :name: DatabaseQueryProcessor-if
-    :Required: false
-    :type: :ref:`if` condition
-    :Default: ''
+    ..  confval:: if
+        :name: DatabaseQueryProcessor-if
+        :Required: false
+        :type: :ref:`if` condition
+        :Default: ''
 
-    Only if the condition is met the data processor is executed.
+        Only if the condition is met the data processor is executed.
 
 
-..  _DatabaseQueryProcessor-table:
+    ..  _DatabaseQueryProcessor-table:
 
-table
------
+    ..  confval:: table
+        :name: DatabaseQueryProcessor-table
+        :Required: true
+        :type: :ref:`data-type-string` / :ref:`stdWrap`
+        :Default: ''
 
-..  confval:: table
-    :name: DatabaseQueryProcessor-table
-    :Required: true
-    :type: :ref:`data-type-string` / :ref:`stdWrap`
-    :Default: ''
+        Name of the table from which the records should be fetched.
 
-    Name of the table from which the records should be fetched.
+    ..  _DatabaseQueryProcessor-as:
 
-..  _DatabaseQueryProcessor-as:
+    ..  confval:: as
+        :name: DatabaseQueryProcessor-as
+        :Required: false
+        :type: :ref:`data-type-string` / :ref:`stdWrap`
+        :Default: 'records'
 
-as
---
+        The variable's name to be used in the Fluid template.
 
-..  confval:: as
-    :name: DatabaseQueryProcessor-as
-    :Required: false
-    :type: :ref:`data-type-string` / :ref:`stdWrap`
-    :Default: 'records'
+    ..  _DatabaseQueryProcessor-dataProcessing:
 
-    The variable's name to be used in the Fluid template.
+    ..  confval:: dataProcessing
+        :name: DatabaseQueryProcessor-dataProcessing
+        :Required: false
+        :type: array of :ref:`dataProcessing`
+        :Default: []
 
-..  _DatabaseQueryProcessor-dataProcessing:
+        Array of data processors to be applied to all fetched records.
 
-dataProcessing
---------------
+    ..  note::
+        All other options will be interpreted as in the TypoScript function
+        :typoscript:`select`, including :typoscript:`pidInList`,
+        :typoscript:`orderBy`, :typoscript:`where`, etc. See the reference of
+        :ref:`select`.
 
-..  confval:: dataProcessing
-    :name: DatabaseQueryProcessor-dataProcessing
-    :Required: false
-    :type: array of :ref:`dataProcessing`
-    :Default: []
-
-    Array of data processors to be applied to all fetched records.
-
-..  note::
-    All other options will be interpreted as in the TypoScript function
-    :typoscript:`select`, including :typoscript:`pidInList`,
-    :typoscript:`orderBy`, :typoscript:`where`, etc. See the reference of
-    :ref:`select`.
-
-..  warning::
-    When using the DatabaseQueryProcessor, you may encounter issues with
-    language and/or versioning overlays, that currently can not be resolved.
-    See `here <https://forge.typo3.org/issues/85284#note-5>`__ for more
-    information.
+    ..  warning::
+        When using the DatabaseQueryProcessor, you may encounter issues with
+        language and/or versioning overlays, that currently can not be resolved.
+        See `here <https://forge.typo3.org/issues/85284#note-5>`__ for more
+        information.
 
 ..  _DatabaseQueryProcessor-examples:
 
@@ -96,18 +91,14 @@ Example: Display haiku records
 
 Please see also :ref:`dataProcessing-about-examples`.
 
-TypoScript
-----------
+..  rubric:: TypoScript
 
 We define the :typoscript:`dataProcessing` property to use the
 :php:`DatabaseQueryProcessor`:
 
 ..  include:: /CodeSnippets/DataProcessing/TypoScript/DatabaseQueryProcessor.rst.txt
 
-
-
-The Fluid template
-------------------
+..  rubric:: The Fluid template
 
 In the Fluid template then iterate over the records. As we used the recursive
 data processor :ref:`FilesProcessor` on the image records, we can also output
@@ -115,9 +106,7 @@ the images.
 
 ..  include:: /CodeSnippets/DataProcessing/Template/DataProcDb.rst.txt
 
-
-Output
-------
+..  rubric:: Output
 
 Each entry of the records array contains the data of the table in :php:`data`
 and the data of the images in :php:`files`.

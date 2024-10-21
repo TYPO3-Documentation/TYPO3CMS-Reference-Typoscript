@@ -18,37 +18,38 @@ data within an XML structure inside a single database column. The data processor
 alias `flex-form`, converts the
 FlexForm data of a given field into a Fluid-readable array.
 
+..  contents:: Table of contents
+
 ..  _FlexFormProcessor-options:
 
 Options
 =======
 
-..  _FlexFormProcessor-fieldname:
+..  confval-menu::
+    :display: table
+    :type:
+    :Default:
 
-fieldname
----------
+    ..  _FlexFormProcessor-fieldname:
 
-..  confval:: fieldname
-    :name: FlexFormProcessor-fieldname
-    :Required: false
-    :type: :ref:`data-type-string`
-    :Default: 'pi_flexform'
+    ..  confval:: fieldname
+        :name: FlexFormProcessor-fieldname
+        :Required: false
+        :type: :ref:`data-type-string`
+        :Default: 'pi_flexform'
 
-    Field name of the column the FlexForm data is stored in.
+        Field name of the column the FlexForm data is stored in.
 
 
-..  _FlexFormProcessor-as:
+    ..  _FlexFormProcessor-as:
 
-as
---
+    ..  confval:: as
+        :name: FlexFormProcessor-as
+        :Required: false
+        :type: :ref:`data-type-string`
+        :Default: 'flexFormData'
 
-..  confval:: as
-    :name: FlexFormProcessor-as
-    :Required: false
-    :type: :ref:`data-type-string`
-    :Default: 'flexFormData'
-
-    Name for the variable in the Fluid template.
+        Name for the variable in the Fluid template.
 
 ..  _FlexFormProcessor-examples:
 

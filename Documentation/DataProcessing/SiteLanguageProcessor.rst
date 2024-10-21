@@ -20,18 +20,20 @@ alias `site-language`, fetches language-related data from the
 Options
 =======
 
-..  _SiteLanguageProcessor-as:
+..  confval-menu::
+    :display: table
+    :type:
+    :Default:
 
-as
---
+    ..  _SiteLanguageProcessor-as:
 
-..  confval:: as
-    :name: SiteLanguageProcessor-as
-    :Required: false
-    :type: :ref:`data-type-string`
-    :Default: "site"
+    ..  confval:: as
+        :name: SiteLanguageProcessor-as
+        :Required: false
+        :type: :ref:`data-type-string`
+        :Default: "site"
 
-    The variable name to be used in the Fluid template.
+        The variable name to be used in the Fluid template.
 
 ..  _SiteLanguageProcessor-example:
 
@@ -40,26 +42,20 @@ Example: Output some data from the site language configuration
 
 Please see also :ref:`dataProcessing-about-examples`.
 
-
-TypoScript
-----------
+..  rubric:: TypoScript
 
 Using the :php:`SiteLanguageProcessor` the following scenario is possible:
 
 ..  include:: /CodeSnippets/DataProcessing/TypoScript/SiteLanguageProcessor.rst.txt
 
-
-The Fluid template
-------------------
+..  rubric:: The Fluid template
 
 In the Fluid template the properties of the site language configuration can
 be accessed:
 
 ..  include:: /CodeSnippets/DataProcessing/Template/DataProcSiteLanguage.rst.txt
 
-
-Output
-------
+..  rubric:: Output
 
 The array now contains the information from the site language configuration:
 
