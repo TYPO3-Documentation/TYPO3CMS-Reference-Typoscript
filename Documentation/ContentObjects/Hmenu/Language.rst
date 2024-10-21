@@ -53,11 +53,12 @@ Properties
 Example: Create a language menu with pure TypoScript
 ====================================================
 
-..  include:: /CodeSnippets/Menu/TypoScript/LanguageMenuLib.rst.txt
+..  literalinclude:: _code-snippets/_LanguageMenuLib.typoscript
+    :caption: EXT:site_package/Configuration/TypoScript/Menus/Setup/LanguageMenuLib.typoscript
 
 ..  seealso::
-   For a language menu styled by Fluid see
-   :ref:`LanguageMenuProcessor <LanguageMenuProcessor>`.
+    For a language menu styled by Fluid see
+    :ref:`LanguageMenuProcessor <LanguageMenuProcessor>`.
 
 Note on item states
 ====================

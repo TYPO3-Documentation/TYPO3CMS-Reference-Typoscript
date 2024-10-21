@@ -215,4 +215,5 @@ The following snippet uses a :ref:`HMENU <cobj-hmenu>` with
 The menu excludes pages with the flag :guilabel:`Include in Search` removed
 and jumps to the next section when the last of subpages is reached.
 
-..  include:: /CodeSnippets/Menu/TypoScript/RelPrevNextMenu.rst.txt
+..  literalinclude:: _code-snippets/_RelPrevNextMenu.typoscript
+    :caption: EXT:site_package/Configuration/TypoScript/Seo/Setup/RelPrevNextMenu.typoscript
