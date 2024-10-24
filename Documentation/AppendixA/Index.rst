@@ -57,6 +57,11 @@ This will stdWrap the content with the properties of `.stdWrap` of the
 TypoScriptFrontendController, TSFE
 ==================================
 
+..  deprecated:: 13.4
+    The class :php:`\TYPO3\CMS\Frontend\Controller\TypoScriptFrontendController`
+    and its global instance :php:`$GLOBALS['TSFE']` have been marked as
+    deprecated. The class will be removed with TYPO3 v14.
+
 You can retrieve the :php:`\TYPO3\CMS\Frontend\Controller\TypoScriptFrontendController`
 via the :ref:`request <t3coreapi:typo3-request>` attribute
 :ref:`frontend.controller <t3coreapi:typo3-request-attribute-frontend-controller>`.
