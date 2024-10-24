@@ -292,14 +292,6 @@ Properties
     a template file. It is an alternative to ".file"; if ".template" is set, it
     takes precedence.
 
-    ..  warning::
-
-        The :typoscript:`FILE` object type has been removed in TYPO3 v10. As the :typoscript:`.template`
-        property used :typoscript:`FILE`, you should generally check your code to see if
-        this is used and switch to using :ref:`.templateName <cobj-fluidtemplate-properties-templatename>`
-        with :ref:`.templateRootPaths <cobj-fluidtemplate-properties-templaterootpaths>` or use
-        :ref:`.file <cobj-fluidtemplate-properties-file>`.
-
 ..  _cobj-fluidtemplate-properties-templatename:
 
 ..  confval:: templateName
