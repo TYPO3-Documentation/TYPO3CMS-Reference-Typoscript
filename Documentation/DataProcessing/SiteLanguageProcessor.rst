@@ -6,11 +6,6 @@
 `site-language` data processor
 ==============================
 
-..  versionadded:: 12.1
-    One can use the alias :typoscript:`site-language` instead
-    of the fully-qualified class name
-    :php:`\TYPO3\CMS\Frontend\DataProcessing\SiteLanguageProcessor`.
-
 The :php:`\TYPO3\CMS\Frontend\DataProcessing\SiteLanguageProcessor`,
 alias `site-language`, fetches language-related data from the
 :ref:`site configuration<t3coreapi:sitehandling>`.

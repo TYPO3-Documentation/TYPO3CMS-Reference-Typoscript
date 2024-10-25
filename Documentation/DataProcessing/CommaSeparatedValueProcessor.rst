@@ -6,11 +6,6 @@
 `comma-separated-value` data processor
 ======================================
 
-..  versionadded:: 12.1
-    One can use the alias :typoscript:`comma-separated-value` instead
-    of the fully-qualified class name
-    :php:`\TYPO3\CMS\Frontend\DataProcessing\CommaSeparatedValueProcessor`.
-
 The :php:`\TYPO3\CMS\Frontend\DataProcessing\CommaSeparatedValueProcessor`,
 alias `comma-separated-value`, allows to split values into a
 two-dimensional array used for :abbr:`CSV (Comma-separated values)` files or
