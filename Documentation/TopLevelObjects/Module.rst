@@ -18,9 +18,9 @@ settings should be done globally and not changed on a per-page basis.
 Therefore they are usually done in the file
 :ref:`EXT:my_extension/ext_typoscript_setup.typoscript <t3coreapi:ext_typoscript_setup_typoscript>`.
 
-..  versionchanged:: 12.0
+..  note::
     All Core extensions, and in general all extensions
-    that switch to the :ref:`simplified backend templating <changelog:feature-96812>`
+    that switched to the :ref:`simplified backend templating <changelog:feature-96812>`
     no longer use the frontend TypoScript based override approach. This has been
     superseded by a general override strategy based on TSconfig:
     :ref:`templates <t3tsconfig:pagetemplates>`.
@@ -77,7 +77,7 @@ view.templateRootPaths
     :name: module-view-templateRootPaths
     :type: file path with :ref:`stdWrap <stdwrap>`
 
-    ..  versionchanged:: 12.0
+    ..  note::
         All Core extensions, and in general all extensions
         that switch to the :ref:`simplified backend templating <changelog:feature-96812>`
         no longer use the frontend TypoScript based override approach. This has been
@@ -115,7 +115,7 @@ view.partialRootPaths
     :name: module-view-partialRootPaths
     :type: file path with :ref:`stdWrap <stdwrap>`
 
-    ..  versionchanged:: 12.0
+    ..  note::
         All Core extensions, and in general all extensions
         that switch to the :ref:`simplified backend templating <changelog:feature-96812>`
         no longer use the frontend TypoScript based override approach. This has been
