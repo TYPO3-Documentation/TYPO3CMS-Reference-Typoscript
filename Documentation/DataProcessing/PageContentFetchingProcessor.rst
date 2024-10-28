@@ -14,6 +14,11 @@ alias `page-content`, loads all :sql:`tt_content` records from the current
 the template with a given identifier for each :sql:`colPos`, also respecting slideMode or
 collect options based on the page layouts content columns.
 
+An array of :ref:`Record objects <t3coreapi:record_objects>` will be passed to
+the Fluid template. You can use the
+:ref:`CObject ViewHelper <f:cObject> <t3viewhelper:typo3-fluid-cobject>` to
+display the content elements.
+
 ..  contents:: Table of contents
 
 ..  _PageContentFetchingProcessor-options:
@@ -55,7 +60,20 @@ Use the identifiers of the columns in the Fluid template:
 ..  literalinclude:: _PageContentFetchingProcessor/_Default.html
     :caption: EXT:my_sitepackage/Resources/Private/Templates/Pages/Default.html
 
-..  todo: Use new viewhelper once https://review.typo3.org/c/Packages/TYPO3.CMS/+/83718/2 is merged
+You can use the :ref:`CObject ViewHelper <f:cObject> <t3viewhelper:typo3-fluid-cobject>`
+to render the content element using :composer:`typo3/cms-fluid-styled-content`
+or render it your self.
+
+`{contentElement.mainType}`
+    Is always "tt_content" for content elements.
+`{contentElement.fullType}`
+    Is composed of "tt_content.[CType]". For a content element of type text it
+    contains "tt_content.text".
+`{contentElement.rawRecord}`
+    Contains an array with the raw row from the database. As the
+    :typoscript:`tt_content` TypoScript object expects the raw data as input
+    you should use `{contentElement.rawRecord}` in combination with the
+    CObject ViewHelper.
 
 The :ref:`backend layout <t3coreapi:be-layout>` is defined like this:
 

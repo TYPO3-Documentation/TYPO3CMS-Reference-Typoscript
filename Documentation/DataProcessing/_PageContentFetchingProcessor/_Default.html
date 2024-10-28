@@ -1,10 +1,22 @@
-<f:render partial="Jumbotron" arguments="{jumbotronContent: myContent.jumbotron}"/>
 <main>
+    <f:for each="{myContent.jumbotrong.records}" as="contentElement">
+        <f:if condition="{contentElement.fullType} = 'tt_content.my_extension_jumbotron'">
+            <h2>{contentElement.header}</h2>
+            <f:format.html>{contentElement.bodytext}</f:format.html>
+        </f:if>
+    </f:for>
     <f:for each="{myContent.left.records}" as="contentElement">
-        <h3>{contentElement.header}</h3>
-        <p>{contentElement.bodytext -> f:format.html()}</p>
+        <f:cObject
+            typoscriptObjectPath="{contentElement.mainType}"
+            table="{contentElement.mainType}"
+            data="{contentElement.rawRecord}"
+        />
     </f:for>
 </main>
 <aside>
-    <f:render partial="Aside" arguments="{content: myContent.right}"/>
+    <f:for each="{myContent.right.records}" as="contentElement">
+        <f:if condition="{contentElement.fullType} = 'tt_content.header'">
+            <h2>{contentElement.header}</h2>
+        </f:if>
+    </f:for>
 </aside>
