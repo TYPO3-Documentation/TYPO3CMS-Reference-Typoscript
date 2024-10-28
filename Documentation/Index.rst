@@ -49,6 +49,7 @@ chapter of TYPO3 Explained.
    DataProcessing/Index
    Functions/Index
    Conditions/Index
+   Guide/Index
    AppendixA/Index
 
 .. Meta Menu
