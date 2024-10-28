@@ -1,0 +1,30 @@
+.. include:: /Includes.rst.txt
+
+
+.. _guide-prerequisites:
+
+Prerequisites
+^^^^^^^^^^^^^
+
+It is assumed that you have a running TYPO3 installation.
+See :ref:`TYPO3 Getting Started Tutorial, installing TYPO3 with DDEV <t3start:installation-ddev-tutorial>`.
+
+and that you have been through the
+:ref:`TYPO3 - Getting Started Tutorial <t3start:start>` in order
+to have a general idea of how the TYPO3 CMS backend operates.
+
+A few more elements that you need to know before starting:
+
+*   all content elements are stored in a database table called `tt_content`
+
+*   each content element has a database field called `CType` in which
+    the type of the content element is stored
+
+*   the `tt_content` table also has a field called `pid` which refers
+    to the page the content element is on
+
+*   in general, each TYPO3 CMS table has a field called `uid` which
+    contains the primary key (unique id for each record)
+
+*   you will probably find useful to have a database access to check
+    how information is stored as we proceed along this tutorial
