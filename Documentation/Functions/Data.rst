@@ -293,8 +293,7 @@ field
 
     This gives read access to the current value of an internal global variable determined by the given key.
 
-    -   As default the :php:`$cObj->data` array is :php:`$GLOBALS['TSFE']->page`
-        (record of the current page)
+    -   As default the :php:`$cObj->data` array is a record of the current page.
 
     -   In :ref:`TMENU <tmenu>` :php:`$cObj->data` is set in a loop to the page-record for
         each menu item during its rendering process.
