@@ -17,7 +17,7 @@ TypoScript as used in frontend TypoScript configuration, and not in
       please refer to the
       :ref:`TypoScript Syntax <t3coreapi:typoscript-syntax-start>`
       chapter in "TYPO3 Explained"
-    * For an introduction to TypoScript configuration, see :ref:`t3ts45:start`
+    * For an introduction to TypoScript configuration, see :ref:`guide`
 
 .. _credits:
 
