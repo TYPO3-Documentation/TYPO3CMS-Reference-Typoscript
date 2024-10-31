@@ -35,16 +35,16 @@ you will get more detailed information:
 .. figure:: /Images/ManualScreenshots/NoTypoScriptTemplateFound.png
    :alt: Error message "No TypoScript template found!"
 
-"No TypoScript template found": This warning appears if no template,
-with the root level flag enabled, is found in the page tree.
+`No TypoScript template found`: This warning appears if no template,
+with the `root level` flag enabled, is found in the page tree.
 
 .. figure:: /Images/ManualScreenshots/ThePageIsNotConfigured.png
    :alt: Error message "The page is not configured!"
 
 
-"The page is not configured! [type=0][]. This means that there is no TypoScript
-object of type PAGE with typeNum=0 configured.": This warning appears if the
-rootlevel flag of a template in the page tree is enabled (i.e. this template
+`The page is not configured! [type=0][]. This means that there is no TypoScript
+object of type PAGE with typeNum=0 configured.`: This warning appears if the
+root level flag of a template in the page tree is enabled (i.e. this template
 is used), but no :ref:`PAGE <page>` Object can be found.
 
 The following TypoScript setup code is enough to remove this warning::
