@@ -7,7 +7,7 @@
 First steps
 ===========
 
-The basic rendering is defined in the "Setup" field of the main template.
+The basic rendering is defined in the "Setup" field of the main TypoScript record.
 
 TypoScript essentially consists of objects, which have certain
 properties. Some of these properties can accept other objects, others
@@ -23,7 +23,7 @@ The :ref:`PAGE <page>` object on the one hand offers numerous named properties
 numbered objects (a so-called content array). The names of these
 objects only consist of numbers and the objects are sorted
 accordingly when they are rendered, from the smallest number to the
-largest. The order of the lines in the TypoScript template is
+largest. The order of the lines in the TypoScript record is
 irrelevant:
 
 ..  literalinclude:: _mypage2.typoscript

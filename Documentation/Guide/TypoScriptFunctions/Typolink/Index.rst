@@ -13,7 +13,7 @@ as they will be processed by TYPO3 CMS. This is a prerequisite,
 for example, for the anti-spam protection of email addresses.
 
 Please resist the urge to a straight `<a href="...">...</a>` construct
-in your templates.
+in your TypoScript and Fluid templates.
 
 Basically `typolink` links the specified text according to
 the defined parameters. One example:
