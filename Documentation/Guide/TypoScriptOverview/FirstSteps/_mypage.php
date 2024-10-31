@@ -1,4 +1,5 @@
 <?php
+
 $TypoScript['mypage'] = 'PAGE';
 $TypoScript['mypage.']['typeNum'] = 0;
 $TypoScript['mypage.']['10'] = 'TEXT';
