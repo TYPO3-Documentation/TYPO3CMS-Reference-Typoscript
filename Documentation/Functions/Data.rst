@@ -948,7 +948,15 @@ siteLanguage
         The language mapped to the ID of the site language.
 
     :typoscript:`locale`
-        The locale, like `de_CH` or `en_GB`.
+        ..  versionchanged:: 12.3
+            Several subkeys are available:
+
+            *  :typoscript:`languageCode`: this contains the two-letter language code (previously :typoscript:`siteLanguage:twoLetterIsoCode`)
+            *  :typoscript:`countryCode`: contains the uppercase country code part of the locale
+            *  :typoscript:`full`: contains the entire locale (also the default if no subkey is specified)
+
+        The locale, like `de_CH` or `en_GB` (also available from the subkey :typoscript:`locale.full`).
+        
 
     :typoscript:`navigationTitle`
         The label to be used within language menus.
@@ -958,6 +966,7 @@ siteLanguage
 
     :typoscript:`twoLetterIsoCode`
         ..  deprecated:: 12.3
+            Use :typoscript:`locale.languageCode` instead
 
         The ISO-639-1 code for this language (two letters).
 
