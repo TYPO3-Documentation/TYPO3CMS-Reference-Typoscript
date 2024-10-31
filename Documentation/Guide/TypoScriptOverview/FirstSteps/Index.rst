@@ -162,16 +162,13 @@ To make things clearer, TypoScript code can be structured using curly braces
 
    mypage = PAGE
    mypage {
-
       typeNum = 0
 
       10 = TEXT
       10 {
-
          value = Hello world
          stdWrap {
             typolink {
-
                parameter = http://www.typo3.org/
                additionalParams = &parameter=value
 
@@ -185,10 +182,9 @@ To make things clearer, TypoScript code can be structured using curly braces
 
             postCObject = TEXT
             postCObject {
-
                value = This text also appears in the link text
                stdWrap.wrap (
-                |, because the postCObject is executed before the typolink function.
+                  |, because the postCObject is executed before the typolink function.
                )
             }
          }

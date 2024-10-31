@@ -1,7 +1,7 @@
 .. include:: /Includes.rst.txt
 
 
-.. _guide-function-imgresource:
+.. _guide-imgresource:
 
 imgResource
 ^^^^^^^^^^^
