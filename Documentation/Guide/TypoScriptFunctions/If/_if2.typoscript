@@ -1,0 +1,13 @@
+10 = TEXT
+10 {
+
+  # WARNING: This value resembles the value of the TEXT object, not that of the "if"!
+  value = 3 is bigger than 2.
+
+  # Compare parameter of the "if" function.
+  stdWrap.if.value = 2
+
+  # Please note: The sorting order is "backwards",
+  # returning the sentence "3 is bigger than 2".
+  stdWrap.if.isGreaterThan = 3
+}
