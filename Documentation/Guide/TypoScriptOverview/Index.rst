@@ -1,10 +1,10 @@
 .. include:: /Includes.rst.txt
 
-
 .. _guide-overview:
 
+=============================
 TypoScript - A quick overview
------------------------------
+=============================
 
 This introduction is designed to give you a
 comprehensive understanding of how TypoScript works.

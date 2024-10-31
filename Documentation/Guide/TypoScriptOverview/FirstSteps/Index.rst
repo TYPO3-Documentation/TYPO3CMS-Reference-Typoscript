@@ -3,8 +3,9 @@
 
 .. _guide-first-steps:
 
+===========
 First steps
-^^^^^^^^^^^
+===========
 
 The basic rendering is defined in the "Setup" field of the main template.
 

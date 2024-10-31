@@ -1,11 +1,10 @@
 .. include:: /Includes.rst.txt
 
+.. _guide-menu:
 
-.. _menu:
-.. _create-a-menu:
-
+=============
 Create a menu
--------------
+=============
 
 Until now, we learned how the page *content* is rendered; however, the
 page *navigation* is missing.

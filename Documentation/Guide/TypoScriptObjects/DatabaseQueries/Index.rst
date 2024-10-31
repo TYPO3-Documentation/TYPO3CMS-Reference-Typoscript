@@ -1,6 +1,5 @@
 .. include:: /Includes.rst.txt
 
-
 .. _guide-cobjects-database-queries:
 
 ==================================

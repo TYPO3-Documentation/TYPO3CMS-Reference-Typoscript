@@ -1,10 +1,9 @@
 .. include:: /Includes.rst.txt
-
-
 .. _guide-typoscript-array:
 
+===========================
 TypoScript is just an array
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+===========================
 
 Internally, TypoScript is parsed and stored as a PHP array.
 For example::

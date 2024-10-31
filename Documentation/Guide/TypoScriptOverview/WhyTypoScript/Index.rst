@@ -3,8 +3,9 @@
 
 .. _guide-why-typoscript:
 
+===============
 Why TypoScript?
-^^^^^^^^^^^^^^^
+===============
 
 Strictly speaking, TypoScript is a configuration language. We cannot
 program with it, but can configure a TYPO3 CMS website in a
