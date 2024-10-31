@@ -12,5 +12,5 @@ arbitrarily, until the anticipated result is finally achieved by accident.
 
 The :ref:`TypoScript reference <stdWrap>` is very clear about
 which properties exist and what their data type is, so please refer
-to that essential resource while developing your templates.
+to that essential resource while writing your TypoScript configuration.
 
