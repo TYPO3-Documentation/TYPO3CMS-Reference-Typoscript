@@ -1,10 +1,10 @@
 .. include:: /Includes.rst.txt
 
-
 .. _guide-function-if:
 
+==
 if
-^^
+==
 
 The :ref:`if <if>` function is perhaps the most difficult
 of all TypoScript functions. It does not work like the "if" construct

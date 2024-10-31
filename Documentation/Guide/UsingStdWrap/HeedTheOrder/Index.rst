@@ -1,8 +1,5 @@
 .. include:: /Includes.rst.txt
-
-
 .. _guide-stdwrap-order:
-
 
 ==============
 Heed the order
