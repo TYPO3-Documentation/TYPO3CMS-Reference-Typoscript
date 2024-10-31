@@ -1,5 +1,5 @@
-.. include:: /Includes.rst.txt
-.. _guide-prerequisites:
+..  include:: /Includes.rst.txt
+..  _guide-prerequisites:
 
 =============
 Prerequisites

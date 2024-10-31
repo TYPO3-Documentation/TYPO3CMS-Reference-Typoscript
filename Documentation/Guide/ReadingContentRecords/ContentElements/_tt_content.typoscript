@@ -1,0 +1,15 @@
+tt_content = CASE
+tt_content {
+  key {
+    # The field CType will be used to differentiate.
+    field = CType
+  }
+  # Render a error message in case no specific rendering definition is found
+  default = TEXT
+  default {
+    field = CType
+    htmlSpecialChars = 1
+    wrap = <p style="background-color: yellow; padding: 0.5em 1em;"><strong>ERROR:</strong> Content Element with uid "{field:uid}" and type "|" has no rendering definition!</p>
+    wrap.insertData = 1
+  }
+}

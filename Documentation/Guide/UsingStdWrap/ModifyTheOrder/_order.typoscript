@@ -1,0 +1,8 @@
+10 = TEXT
+10 {
+  value = typo3
+  orderedStdWrap {
+    10.noTrimWrap = |<strong>Tool: |</strong>|
+    20.case = upper
+  }
+}

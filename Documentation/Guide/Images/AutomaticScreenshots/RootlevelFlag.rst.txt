@@ -1,6 +1,6 @@
-.. Automatic screenshot: Remove this line if you want to manually change this file
+..  Automatic screenshot: Remove this line if you want to manually change this file
 
-.. figure:: /Images/AutomaticScreenshots/RootlevelFlag.png
+..  figure:: /Images/AutomaticScreenshots/RootlevelFlag.png
    :alt: The Rootlevel flag in the tab Options a template record
    :class: with-shadow
 

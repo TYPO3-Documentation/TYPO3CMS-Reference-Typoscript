@@ -1,0 +1,6 @@
+temp.myImage = IMAGE
+temp.myImage {
+  file = toplogo.gif
+  file.width = 200
+  file.height = 300
+}

@@ -1,0 +1,19 @@
+temp.link3 = TEXT
+temp.link3 {
+
+  # The link text.
+  value = Open a popup window.
+
+  stdWrap.typolink {
+    # The first parameter is the page ID of the target page,
+    # second parameter is the size of the popup window.
+    parameter = 10 500x400
+
+    # The title attribute of the link.
+    title = Click here to open a popup window.
+
+    # The parameters of the popup window.
+    JSwindow_params = menubar=0, scrollbars=0, toolbar=0, resizable=1
+
+  }
+}
