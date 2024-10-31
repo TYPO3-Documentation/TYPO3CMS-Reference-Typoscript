@@ -1,0 +1,10 @@
+temp.link2 = TEXT
+temp.link2 {
+
+  # Again the defined text.
+  value = Example link
+
+  # The parameter with the summary of the parameters of the first
+  # example (explanation follows below).
+  typolink.parameter = www.example.com _blank linkclass
+}

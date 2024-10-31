@@ -1,0 +1,11 @@
+10 = TEXT
+10 {
+  # Value of the TEXT object.
+  value = The record can be shown, because the starting date has passed.
+
+  # Condition of the if clause (number of seconds since January 1st, 1970).
+  stdWrap.if.value.data = date:U
+
+  # Condition backwards again: Start time isLessThan date:U.
+  stdWrap.if.isLessThan.field = starttime
+}

@@ -1,7 +1,6 @@
-.. include:: /Includes.rst.txt
+..  include:: /Includes.rst.txt
 
-
-.. _guide-functions:
+..  _guide-functions:
 
 ====================
 TypoScript functions
@@ -20,14 +19,13 @@ The most used function is the "standard wrap", usually known as "stdWrap". Due
 to its importance, it is entitled to
 :ref:`its very own chapter <guide-using-stdwrap>`.
 
-**The functions:**
+..  toctree::
+    :caption: The functions
 
-.. toctree::
-
-   ImgResource/Index
-   Select/Index
-   Split/Index
-   If/Index
-   Typolink/Index
-   ParseFunc/Index
+    ImgResource/Index
+    Select/Index
+    Split/Index
+    If/Index
+    Typolink/Index
+    ParseFunc/Index
 

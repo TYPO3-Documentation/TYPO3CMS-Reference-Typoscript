@@ -1,7 +1,5 @@
-.. include:: /Includes.rst.txt
-
-
-.. _guide-using-stdwrap:
+..  include:: /Includes.rst.txt
+..  _guide-using-stdwrap:
 
 =======================
 Using stdWrap correctly
@@ -18,9 +16,9 @@ familiar with it and be ready to explore it in greater depth using the
 
 **Details of stdWrap:**
 
-.. toctree::
+..  toctree::
 
-   HeedTheOrder/Index
-   ModifyTheOrder/Index
-   TheDataType/Index
-   CObject/Index
+    HeedTheOrder/Index
+    ModifyTheOrder/Index
+    TheDataType/Index
+    CObject/Index

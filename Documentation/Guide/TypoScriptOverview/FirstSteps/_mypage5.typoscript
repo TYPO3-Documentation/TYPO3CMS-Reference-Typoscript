@@ -1,0 +1,30 @@
+mypage = PAGE
+mypage {
+  typeNum = 0
+
+  10 = TEXT
+  10 {
+    value = Hello world
+    stdWrap {
+      typolink {
+        parameter = http://www.typo3.org/
+        additionalParams = &parameter=value
+
+        # The function name "ATagParams" does not use the standardized
+        # "camelCase".
+        ATagParams = class="externalwebsite"
+
+        extTarget = _blank
+        title = The website of TYPO3
+      }
+
+      postCObject = TEXT
+      postCObject {
+        value = This text also appears in the link text
+        stdWrap.wrap (
+                  |, because the postCObject is executed before the typolink function.
+        )
+      }
+    }
+  }
+}

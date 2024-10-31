@@ -1,0 +1,21 @@
+# The object test is an object of type TEXT.
+# "=" means "set value".
+test = TEXT
+test.value = Holla
+
+# "<" means "copy object".
+# mypage.10 returns "Holla"
+mypage.10 < test
+
+# Change the original object.
+# The change has no effect on mypage.10; it still returns "Holla".
+test.value = Hello world
+
+# "=<" means "create an object reference (link the object)".
+test.value = Holla
+mypage.10 =< test
+
+# Change the object which is referenced.
+# Changes DO have an effect on mypage.10.
+# mypage.10 will return "Hello world".
+test.value = Hello world
