@@ -2,47 +2,48 @@
 
 ..  _guide-template:
 
-=================
-The term template
-=================
+===================
+The term "template"
+===================
 
-The term template has a double meaning in TYPO3 CMS. On the one hand,
-there is the *HTML template file*, which serves as the skeletal
-structure in which the content, provided by the CMS,
-will be rendered. On the other hand, there is the *TypoScript template*,
-which is created in the template module in the TYPO3 CMS
-Backend and can exist on any page.
+Sometimes the term "template" is used as a synonym for the TypoScript record
+or the combined TypoScript configuration from all sources. This has historic
+reasons. Until TYPO3 v11 TypoScript could be edited in a backend module
+called "Template". In the beginning of TYPO3 sites were build almost
+exclusively with TypoScript while it slowly evolved to be mainly a configuration
+language.
 
-The :doc:`Sitepackage Tutorial <t3sitepackage:Index>` shows how the two are related
-together. This manual is purely about TypoScript templates.
+As a Fluid template is also called "template" the terms took on a double meaning
+in TYPO3. With TYPO3 v12 we speak about TypoScript records, TypoScript files
+and the complete TypoScript configuration. However you will still find the
+outdated term "TypoScript template" or just "template" in places.
 
 ..  _guide-troubleshooting:
 
 Troubleshooting
 ===============
 
-Common mistakes made with TypoScript templates can cause a message like this:
+Common mistakes made in the TypoScript configuration can cause a message like this:
 
 ..  figure:: /Images/ManualScreenshots/NoTypoScriptTemplateFoundDebuggingOff.png
-   :alt: Error message "No TypoScript template found! Without debug mode"
+    :alt: Error message "No TypoScript record found!"
 
 If you turn on the :ref:`debug mode <t3coreapi:troubleshooting-debug-mode>`
 you will get more detailed information:
 
 ..  figure:: /Images/ManualScreenshots/NoTypoScriptTemplateFound.png
-   :alt: Error message "No TypoScript template found!"
+   :alt: Error message "No TypoScript record found!"
 
-`No TypoScript template found`: This warning appears if no template,
+`No TypoScript record found!`: This warning appears if no TypoScript record,
 with the `root level` flag enabled, is found in the page tree.
 
 ..  figure:: /Images/ManualScreenshots/ThePageIsNotConfigured.png
    :alt: Error message "The page is not configured!"
 
-
-`The page is not configured! [type=0][]. This means that there is no TypoScript
+`The page is not configured! [type=0][]`. This means that there is no TypoScript
 object of type PAGE with typeNum=0 configured.`: This warning appears if the
-root level flag of a template in the page tree is enabled (i.e. this template
-is used), but no :ref:`PAGE <page>` Object can be found.
+TypoScript Configuration of the current page contains no :ref:`page`
+definition.
 
 The following TypoScript setup code is enough to remove this warning:
 

@@ -29,11 +29,11 @@ The basic extension for rendering content in TYPO3 since TYPO3 v8 is
 `fluid_styled_content`. The example shows how
 `fluid_styled_content` is set up: It defines a basic content element based
 on the content object `FLUIDTEMPLATE` which is able to render html
-templates using the `fluid` templating engine. For every content element,
+templates using the Fluid templating engine. For every content element,
 the basic template, layout and partial parts are defined. As you can see by
 looking at the lines starting with `10 =` there is the possibility to
 add your own templates by setting the corresponding `constant` (in the
-`Constants` section of a TypoScript template):
+`Constants` section of a TypoScript record):
 
 ..  literalinclude:: _lib.contentElement.typoscript
     :caption: Taken from typo3/sysext/fluid_styled_content/Configuration/TypoScript/Helper/ContentElement.typoscript
@@ -62,6 +62,6 @@ take a look at how the text element is rendered:
 
 The database field `bodytext` from the `tt_content` table (which is
 the main text input field for content elements of type `text`) is
-available as `{data.bodytext}` in the fluid template. For more
+available as `{data.bodytext}` in the Fluid template. For more
 information about `fluid_styled_content` see its :doc:`manual
 <typo3/cms-fluid-styled-content:Index>`.
