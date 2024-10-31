@@ -1,0 +1,6 @@
+10 = TEXT
+10 {
+  value = typo3
+  noTrimWrap = |<strong>Tool: |</strong>|
+  case = upper
+}

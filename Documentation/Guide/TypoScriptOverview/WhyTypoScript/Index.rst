@@ -1,7 +1,7 @@
-.. include:: /Includes.rst.txt
+..  include:: /Includes.rst.txt
 
 
-.. _guide-why-typoscript:
+..  _guide-why-typoscript:
 
 ===============
 Why TypoScript?
