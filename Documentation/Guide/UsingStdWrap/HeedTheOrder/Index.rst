@@ -1,5 +1,5 @@
-.. include:: /Includes.rst.txt
-.. _guide-stdwrap-order:
+..  include:: /Includes.rst.txt
+..  _guide-stdwrap-order:
 
 ==============
 Heed the order
@@ -10,20 +10,15 @@ properties are parsed/executed exactly in the order in which they appear in the
 :ref:`TypoScript Reference <stdwrap>`, no matter in which order you
 have set them in your TypoScript template.
 
-Let's consider this example::
+Let's consider this example:
 
-   10 = TEXT
-   10 {
-      value = typo3
-      noTrimWrap = |<strong>Tool: |</strong>|
-      case = upper
-   }
+..  literalinclude:: _order.typoscript
 
 It results in the following:
 
-.. code-block:: html
+..  code-block:: html
 
-   <strong>Tool: TYPO3</strong>
+    <strong>Tool: TYPO3</strong>
 
 The `case` property is executed before the `noTrimWrap` property.
 Hence only "typo3" was changed to uppercase and not the "Tool:" with which it

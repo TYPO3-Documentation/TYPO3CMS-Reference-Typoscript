@@ -1,0 +1,11 @@
+# The object mypage is defined as PAGE object.
+mypage = PAGE
+
+# PAGE objects have the property typeNum.
+mypage.typeNum = 0
+
+# mypage has an object "10" of type TEXT. It is a TEXT object.
+mypage.10 = TEXT
+
+# TEXT objects in turn have a property called "value".
+mypage.10.value = Hello World

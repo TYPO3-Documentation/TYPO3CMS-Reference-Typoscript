@@ -1,0 +1,19 @@
+temp.link = TEXT
+temp.link {
+
+  # This is the defined text.
+  value = Example link
+
+  # Here comes the typolink function.
+  typolink {
+
+    # This is the destination of the link...
+    parameter = http://www.example.com/
+
+    # with a target ("_blank" opens a new window)...
+    extTarget = _blank
+
+    # and add a class to the link so we can style it.
+    ATagParams = class="linkclass"
+  }
+}
