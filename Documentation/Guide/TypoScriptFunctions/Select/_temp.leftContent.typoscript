@@ -1,0 +1,22 @@
+temp.leftContent = CONTENT
+temp.leftContent {
+
+  table = tt_content
+  select {
+
+    # The page with ID = 123 is the source.
+    pidInList = 123
+
+    # Sorting is the same as in the backend.
+    orderBy = sorting
+
+    # Only select the content of the left column.
+    where = {#colPos}=1
+
+    # Define the field with the language ID in tt_content.
+    languageField = sys_language_uid
+  }
+}
+
+# Replace the mark ###LEFT### with the output of temp.leftContent.
+marks.LEFT < temp.leftContent

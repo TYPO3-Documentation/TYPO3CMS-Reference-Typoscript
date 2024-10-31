@@ -1,10 +1,11 @@
-.. include:: /Includes.rst.txt
+..  include:: /Includes.rst.txt
 
 
-.. _guide-why-typoscript:
+..  _guide-why-typoscript:
 
+===============
 Why TypoScript?
-^^^^^^^^^^^^^^^
+===============
 
 Strictly speaking, TypoScript is a configuration language. We cannot
 program with it, but can configure a TYPO3 CMS website in a
@@ -20,11 +21,10 @@ for display and then renders it in the frontend.
 To render a website, we only need to define what content to display and
 how it will be rendered.
 
-- The "what" is controlled by the backend - where pages and content
+* The "what" is controlled by the backend - where pages and content
   are generated.
+* The "how" is controlled by TypoScript.
 
-- The "how" is controlled by TypoScript.
-
-With TypoScript, we define how the individual content elements are
-rendered in the frontend. For example, we use TypoScript to add a
+With TypoScript, we can define how the individual content elements are
+rendered in the frontend. For example, we can use TypoScript to add a
 :html:`<div>` tag to an element, or the :html:`<h1>` tag to a headline.

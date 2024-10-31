@@ -1,0 +1,10 @@
+10 = TEXT
+10 {
+
+  # Content of the TEXT object.
+  value = The L parameter is passed as GET variable.
+
+  # Results in "true" and leads to rendering of the upper value, if the
+  # GET/POST parameter is passed with a value, which is not 0.
+  stdWrap.if.isTrue.data = GP:L
+}

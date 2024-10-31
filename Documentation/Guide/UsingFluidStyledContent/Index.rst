@@ -1,7 +1,5 @@
-.. include:: /Includes.rst.txt
-
-
-.. _using-fluid-styled-content:
+..  include:: /Includes.rst.txt
+..  _using-fluid-styled-content:
 
 ============================
 Using fluid\_styled\_content
@@ -20,7 +18,7 @@ You should see a list of all used TypoScript templates and how they possibly
 include one another. All templates are evaluated by TYPO3 CMS from top to
 bottom.
 
-.. include:: /Images/AutomaticScreenshots/TemplateAnalyzerStructure.rst.txt
+..  include:: /Images/AutomaticScreenshots/TemplateAnalyzerStructure.rst.txt
 
 With a click on "EXT:fluid\_styled\_content/static/", you can view the content
 of that template (below the hierarchical view), first the constants, then the

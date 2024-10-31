@@ -1,10 +1,9 @@
-.. include:: /Includes.rst.txt
+..  include:: /Includes.rst.txt
+..  _guide-backend-configuration:
 
-
-.. _guide-backend-configuration:
-
+=====================
 Backend configuration
-^^^^^^^^^^^^^^^^^^^^^
+=====================
 
 TypoScript influences many aspects of a TYPO3 site:
 

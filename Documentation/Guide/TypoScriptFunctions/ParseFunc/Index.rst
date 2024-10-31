@@ -1,7 +1,7 @@
-.. include:: /Includes.rst.txt
+..  include:: /Includes.rst.txt
 
 
-.. _guide-function-parsefunc:
+..  _guide-function-parsefunc:
 
 =========
 parseFunc
@@ -14,11 +14,9 @@ default parsing rules are implemented in the core, like parsing link tags via
 :ref:`typolink` function.
 
 You can also use :typoscript:`parseFunc` for your own processing. In the following
-example, every occurrence of "COMP" is replaced by "My company name"::
+example, every occurrence of "COMP" is replaced by "My company name":
 
-   page.stdWrap.parseFunc.short {
-      COMP = My company name
-   }
+..  literalinclude:: _parseFunc.typoscript
 
 The various possibilities of changing the default behavior can be found by
 using the TypoScript object browser. All possibilities of how parseFunc can

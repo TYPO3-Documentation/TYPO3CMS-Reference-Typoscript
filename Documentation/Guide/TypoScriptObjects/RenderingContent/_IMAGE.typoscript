@@ -1,0 +1,6 @@
+lib.logo = IMAGE
+lib.logo {
+  file = fileadmin/logo.gif
+  file.width = 200
+  stdWrap.typolink.parameter = 1
+}
