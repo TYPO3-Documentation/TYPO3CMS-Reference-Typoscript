@@ -16,9 +16,11 @@ have set them in your TypoScript template.
 Let's consider this example::
 
    10 = TEXT
-   10.value = typo3
-   10.noTrimWrap = |<strong>Tool: |</strong>|
-   10.case = upper
+   10 {
+      value = typo3
+      noTrimWrap = |<strong>Tool: |</strong>|
+      case = upper
+   }
 
 It results in the following:
 
