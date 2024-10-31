@@ -1,7 +1,0 @@
-..  Automatic screenshot: Remove this line if you want to manually change this file
-
-..  figure:: /Images/AutomaticScreenshots/RootlevelFlag.png
-   :alt: The Rootlevel flag in the tab Options a template record
-   :class: with-shadow
-
-   The :guilabel:`Rootlevel` flag in the tab :guilabel:`Options` a template record
