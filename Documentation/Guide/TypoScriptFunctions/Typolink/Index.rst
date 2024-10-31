@@ -11,8 +11,7 @@ typolink
 that allows us to generate all kinds of links.
 If possible one should always use this function to generate links
 as they will be processed by TYPO3 CMS. This is a prerequisite,
-for example, for the "realurl" extension to generate speaking URLs
-or for the anti-spam protection of email addresses.
+for example, for the anti-spam protection of email addresses.
 
 Please resist the urge to a straight `<a href="...">...</a>` construct
 in your templates.
@@ -44,7 +43,7 @@ The example above will generate this HTML code:
 
 .. code-block:: html
 
-   <a class="linkclass" target="\_blank" href="http://www.example.com/">Example link</a>
+   <a href="http://www.example.com/" target="_blank" class="linkclass" rel="noreferrer">Example link</a>
 
 `typolink`, in a way, almost works like a wrap: the content which is
 defined for example by the `value` property, will be wrapped by the HTML anchor tag.
