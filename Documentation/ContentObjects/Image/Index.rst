@@ -11,22 +11,6 @@ IMAGE
 Objects of type IMAGE return an image tag with the image file defined in the property
 "file" and is processed using the properties that are set on the object.
 
-The array :php:`$GLOBALS['TSFE']->lastImageInfo` is set with the info-array
-of the returning image (if any) and contains width, height and other properties:
-
-=============================  =============================================
-Name of the getText property   Content
-=============================  =============================================
-0                              width
-1                              height
-2                              file extension
-3                              resource
-origFile                       relative URL pointing to the original file
-_mtime                         modification time of the original file
-originalFile                   The FAL object referencing the original file
-processedFile                  The FAL object referencing the processed file
-=============================  =============================================
-
 **Note:** Gifbuilder also has an :ref:`IMAGE object <gifbuilder-image>` -
 it is not the same as the cObject described here; both are completely
 different objects.
