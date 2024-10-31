@@ -44,7 +44,7 @@ called `tt_content` therefore the default `renderObj` is also called
 
 The basic extension for rendering content in TYPO3 since TYPO3 v8 is
 `fluid_styled_content`. The example shows how
-`fluid_styled_content` is setup: It defines a basic content element based
+`fluid_styled_content` is set up: It defines a basic content element based
 on the content object `FLUIDTEMPLATE` which is able to render html
 templates using the `fluid` templating engine. For every content element,
 the basic template, layout and partial parts are defined. As you can see by
@@ -101,6 +101,7 @@ take a look at how the text element is rendered:
 .. code-block:: html
 
    # Taken from typo3/sysext/fluid_styled_content/Resources/Private/Templates/Text.html
+   <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
    <f:layout name="Default" />
    <f:section name="Main">
       <f:format.html>{data.bodytext}</f:format.html>
