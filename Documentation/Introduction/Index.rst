@@ -48,7 +48,7 @@ Please read the following for an introduction:
 * :ref:`TypoScript Syntax <t3coreapi:typoscript-syntax-start>`
   chapter in "TYPO3 Explained" for an introduction to the TypoScript
   syntax
-* :ref:`t3ts45:start` for an introduction to TypoScript Templating
+* :ref:`guide` for an introduction to TypoScript Templating
 * The chapter :ref:`using-and-setting` describes how to use, set
   and extend TypoScript.
 
