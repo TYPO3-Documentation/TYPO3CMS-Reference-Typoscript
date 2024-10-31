@@ -3,8 +3,9 @@
 
 .. _guide-imgresource:
 
+===========
 imgResource
-^^^^^^^^^^^
+===========
 
 The :ref:`imgResource <imgresource>` function relates to modifications of
 pictures. Its main usage is the property `file` of the

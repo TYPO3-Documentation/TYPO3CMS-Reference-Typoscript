@@ -1,8 +1,6 @@
 .. include:: /Includes.rst.txt
 
-
 .. _guide-template:
-.. _the-term-template:
 
 =================
 The term template
@@ -17,7 +15,6 @@ Backend and can exist on any page.
 
 The :doc:`Sitepackage Tutorial <t3sitepackage:Index>` shows how the two are related
 together. This manual is purely about TypoScript templates.
-
 
 .. _guide-troubleshooting:
 
