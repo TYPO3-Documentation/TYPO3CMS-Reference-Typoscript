@@ -1,0 +1,15 @@
+lib.banner = FILES
+lib.banner {
+  references {
+    table = pages
+    fieldName = media
+    uid.data = page:uid
+  }
+  renderObj = IMAGE
+  renderObj {
+    file.import.data = file:current:uid
+    file.treatIdAsReference = 1
+    file.width = 500
+    wrap = <div class="banner">|</div>
+  }
+}

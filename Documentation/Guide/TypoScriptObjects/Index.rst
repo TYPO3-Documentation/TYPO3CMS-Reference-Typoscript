@@ -1,6 +1,6 @@
-.. include:: /Includes.rst.txt
+..  include:: /Includes.rst.txt
 
-.. _guide-cobjects:
+..  _guide-cobjects:
 
 ==================
 TypoScript objects
@@ -18,7 +18,7 @@ most common objects to give you an idea of what is available.
 
 **Some most common objects:**
 
-.. toctree::
+..  toctree::
 
    DatabaseQueries/Index
    RenderingContent/Index

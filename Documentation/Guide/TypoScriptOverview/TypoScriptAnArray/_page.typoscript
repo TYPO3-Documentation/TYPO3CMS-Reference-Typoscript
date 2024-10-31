@@ -1,0 +1,4 @@
+page = PAGE
+page.10 = TEXT
+page.10.value = Hello World
+page.10.stdWrap.wrap = <h2>|</h2>
