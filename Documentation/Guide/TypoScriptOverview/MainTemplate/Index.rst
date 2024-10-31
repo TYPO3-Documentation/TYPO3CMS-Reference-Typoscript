@@ -1,10 +1,9 @@
 .. include:: /Includes.rst.txt
-
-
 .. _guide-main-template:
 
+=================
 The main template
-^^^^^^^^^^^^^^^^^
+=================
 
 The TypoScript code used to define how pages are rendered is
 located in the "main" template. In this template a so-called

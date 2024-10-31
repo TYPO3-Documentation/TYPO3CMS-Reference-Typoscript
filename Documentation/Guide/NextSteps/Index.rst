@@ -1,10 +1,9 @@
 .. include:: /Includes.rst.txt
+.. _guide-next-steps:
 
-
-.. _next-steps:
-
+==========
 Next steps
-----------
+==========
 
 Armed with this basic knowledge of TypoScript, you may want
 to continue your exploration of TYPO3 CMS by following the
