@@ -1,0 +1,3 @@
+lib.slogan = TEXT
+lib.slogan.value = Inspiring people to share
+lib.slogan.wrap = <div class="highlight">|</div>

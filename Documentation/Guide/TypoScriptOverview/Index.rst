@@ -1,6 +1,6 @@
-.. include:: /Includes.rst.txt
+..  include:: /Includes.rst.txt
 
-.. _guide-overview:
+..  _guide-overview:
 
 =============================
 TypoScript - A quick overview
@@ -26,7 +26,7 @@ Going through this tutorial is helpful for understanding
 other tutorials, like the :doc:`Sitepackage <t3sitepackage:Index>`.
 
 
-.. toctree::
+..  toctree::
    :maxdepth: 5
    :titlesonly:
    :glob:
