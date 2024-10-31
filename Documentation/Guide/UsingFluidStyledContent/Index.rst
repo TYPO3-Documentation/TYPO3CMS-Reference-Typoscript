@@ -1,6 +1,4 @@
 .. include:: /Includes.rst.txt
-
-
 .. _using-fluid-styled-content:
 
 ============================
