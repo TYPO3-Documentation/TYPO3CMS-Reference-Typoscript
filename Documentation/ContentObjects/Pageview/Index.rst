@@ -74,7 +74,8 @@ Additional variables can be defined with property
 
         The variable :fluid:`{settings}` contains all TypoScript
         :ref:`constants <typoscript-syntax-constants>` that are set on the current
-        page.
+        page. Settings from the site can be accessed via the :confval:`pageview-data-site` with 
+        :fluid:`{site.settings}`
 
     ..  confval:: site
         :name: pageview-data-site
