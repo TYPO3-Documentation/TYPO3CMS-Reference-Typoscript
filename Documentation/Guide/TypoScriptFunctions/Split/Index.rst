@@ -1,10 +1,10 @@
 .. include:: /Includes.rst.txt
 
-
 .. _guide-function-split:
 
+=====
 split
-^^^^^
+=====
 
 The :ref:`split <split>` function can be used to split given data at a predefined
 character and process the single pieces afterwards. At every

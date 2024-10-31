@@ -1,10 +1,9 @@
 .. include:: /Includes.rst.txt
-
-
 .. _guide-prerequisites:
 
+=============
 Prerequisites
-^^^^^^^^^^^^^
+=============
 
 It is assumed that you have a running TYPO3 installation.
 See :ref:`TYPO3 Getting Started Tutorial, installing TYPO3 with DDEV <t3start:installation-ddev-tutorial>`.

@@ -1,7 +1,6 @@
 .. include:: /Includes.rst.txt
 
-
-.. _reading-content-records:
+.. _guide-content-records:
 
 =======================
 Reading content records

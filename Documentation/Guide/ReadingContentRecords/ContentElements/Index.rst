@@ -1,9 +1,6 @@
 .. include:: /Includes.rst.txt
 
-
-.. _content-objects:
-.. _content-elements:
-.. _the-various-content-objects:
+.. _guide-content-elements:
 
 ============================
 The various content elements
