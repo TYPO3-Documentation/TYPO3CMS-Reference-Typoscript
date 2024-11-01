@@ -7,7 +7,7 @@
 Top-level objects
 =================
 
-As described in the :ref:`TypoScript syntax introduction <t3coreapi:typoscript-syntax-introduction>`
+As described in the :ref:`TypoScript syntax introduction <typoscript-syntax>`
 TypoScript templates are converted into a multidimensional PHP array.
 You can view this in the TypoScript object browser. Top level
 objects are located on the top level. Top level objects are for

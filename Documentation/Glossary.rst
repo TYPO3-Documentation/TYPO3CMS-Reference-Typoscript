@@ -7,10 +7,10 @@
 Glossary
 ========
 
-We use the terms as explained in :ref:`TypoScript Syntax <t3coreapi:typoscript-syntax-introduction>`,
+We use the terms as explained in :ref:`TypoScript Syntax <typoscript-syntax>`,
 with some modifications:
 
-The section :ref:`t3coreapi:typoscript-syntax-object-paths` differentiates between Object paths, Objects,
+We differentiates between Object paths, Objects,
 properties and values.
 
 To reuse the OOP analogy and compare with PHP:
@@ -110,7 +110,7 @@ cObject data type
    used for content elements.
 
 Top level objects
-   As described in :ref:`t3coreapi:typoscript-syntax-introduction`
+   As described in :ref:`typoscript-syntax`
    TypoScript configuration is converted into a multidimensional PHP array.
    You can view this in the :ref:`submodule-active-typoscript`. Top level
    objects are located on the top level. Top level objects are for
