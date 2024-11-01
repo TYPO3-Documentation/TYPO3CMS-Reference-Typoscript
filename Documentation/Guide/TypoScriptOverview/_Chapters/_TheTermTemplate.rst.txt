@@ -1,4 +1,3 @@
-..  include:: /Includes.rst.txt
 
 ..  _guide-template:
 
@@ -47,6 +46,6 @@ definition.
 
 The following TypoScript setup code is enough to remove this warning:
 
-..  literalinclude:: _page.typoscript
+..  literalinclude:: /Guide/TypoScriptOverview/_snippets/_page1.typoscript
 
 Do not worry about this code for now, it will be explained later.
