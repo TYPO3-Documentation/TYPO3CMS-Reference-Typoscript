@@ -1,5 +1,3 @@
-..  include:: /Includes.rst.txt
-
 ..  _guide-content-elements:
 
 ============================
@@ -22,7 +20,7 @@ definition named after that table. In case of content in TYPO3 the table is
 called `tt_content` therefore the default `renderObj` is also called
 `tt_content`:
 
-..  literalinclude:: _tt_content.typoscript
+..  literalinclude:: /Guide/ReadingContentRecords/_snippets/_tt_content.typoscript
     :caption: Content element rendering taken from typo3/sysext/frontend/ext_localconf.php
 
 The basic extension for rendering content in TYPO3 since TYPO3 v8 is
@@ -35,13 +33,13 @@ looking at the lines starting with `10 =` there is the possibility to
 add your own templates by setting the corresponding `constant` (in the
 `Constants` section of a TypoScript record):
 
-..  literalinclude:: _lib.contentElement.typoscript
+..  literalinclude:: /Guide/ReadingContentRecords/_snippets/_lib.contentElement.typoscript
     :caption: Taken from typo3/sysext/fluid_styled_content/Configuration/TypoScript/Helper/ContentElement.typoscript
 
 Each content element inherits that configuration. As an example take a look at
 the content element definition of the content element of type `header`:
 
-..  literalinclude:: _tt_content.header.typoscript
+..  literalinclude:: /Guide/ReadingContentRecords/_snippets/_tt_content.header.typoscript
     :caption: Taken from typo3/sysext/fluid_styled_content/Configuration/TypoScript/ContentElement/Header.typoscript
 
 First, all configuration options defined in `lib.contentElement` are
@@ -57,7 +55,7 @@ the paths (see above). In your own templates you have the data of the currently
 rendered content element available in the {data} fluid variable. For example
 take a look at how the text element is rendered:
 
-..  literalinclude:: _Layout.html
+..  literalinclude:: /Guide/ReadingContentRecords/_snippets/_Layout.html
     :caption: Taken from typo3/sysext/fluid_styled_content/Resources/Private/Templates/Text.html
 
 The database field `bodytext` from the `tt_content` table (which is
