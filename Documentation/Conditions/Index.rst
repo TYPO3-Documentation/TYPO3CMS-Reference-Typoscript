@@ -24,7 +24,7 @@ on current data.
 
 ..  seealso::
     Have a look at the
-    :ref:`TypoScript syntax condition chapter <t3coreapi:typoscript-syntax-conditions>`
+    :ref:`TypoScript syntax condition chapter <typoscript-syntax-conditions>`
     for the basic syntax of conditions.
 
 The :ref:`Symfony expression language <t3coreapi:symfony-expression-language>`
@@ -1338,7 +1338,7 @@ Check if a constant is set to a certain value
 ---------------------------------------------
 
 TypoScript constants can be used in conditions with the
-:ref:`Syntax <t3coreapi:typoscript-syntax-conditions-syntax>` for conditions:
+:ref:`Syntax <typoscript-syntax-conditions-syntax>` for conditions:
 
 ..  code-block:: typoscript
     :caption: EXT:my_extension/Configuration/TypoScript/setup.typoscript

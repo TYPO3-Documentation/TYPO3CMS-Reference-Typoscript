@@ -30,8 +30,8 @@ TypoScript as used in frontend TypoScript configuration.
 You can find a quick guide to TypoScript configuration at
 :ref:`guide`, insights into TYPO3 backend configuration with
 TypoScript in the :ref:`TSconfig <t3tsconfig:start>` documentation and
-explanations of TypoScript syntax in the ":ref:`TypoScript Syntax <t3coreapi:typoscript-syntax-start>`"
-chapter of TYPO3 Explained.
+explanations of TypoScript syntax in the ":ref:`TypoScript Syntax <typoscript-syntax>`"
+chapter.
 
 ----
 

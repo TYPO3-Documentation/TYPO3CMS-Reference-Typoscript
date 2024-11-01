@@ -13,10 +13,10 @@ TypoScript as used in frontend TypoScript configuration, and not in
 
 .. seealso::
 
-    * For explanations about the syntax of TypoScript itself,
+    * For explanations about the syntax of TypoScript,
       please refer to the
-      :ref:`TypoScript Syntax <t3coreapi:typoscript-syntax-start>`
-      chapter in "TYPO3 Explained"
+      :ref:`TypoScript Syntax <typoscript-syntax>`
+      chapter.
     * For an introduction to TypoScript configuration, see :ref:`guide`
 
 .. _credits:

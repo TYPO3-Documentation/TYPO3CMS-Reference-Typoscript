@@ -12,7 +12,7 @@ guide you through the creation of a whole website template
 using TypoScript.
 
 To learn more about the structure and syntax of TypoScript,
-you can refer to the :ref:`TypoScript Syntax and In-depth Study<t3coreapi:typoscript-syntax-start>`
+you can refer to the :ref:`TypoScript Syntax and In-depth Study <typoscript-syntax>`
 reference.
 
 Finally - as was mentioned again and again throughout this tutorial -
