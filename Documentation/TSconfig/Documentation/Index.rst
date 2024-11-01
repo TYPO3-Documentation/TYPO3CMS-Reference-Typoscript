@@ -32,7 +32,7 @@ In addition, you can find
 and a complete reference of all object types and properties of
 TypoScript in the :ref:`TypoScript Reference <t3tsref:start>` and explanations of
 TypoScript syntax in the chapter
-":ref:`TypoScript Syntax <t3coreapi:typoscript-syntax-start>`" of TYPO3
+":ref:`TypoScript Syntax <t3tsref:typoscript-syntax>`" of TYPO3
 Explained.
 
 ----

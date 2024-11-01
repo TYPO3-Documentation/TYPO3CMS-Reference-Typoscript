@@ -105,7 +105,7 @@ Properties, which are set in the TSconfig field of a group, are valid
 for all users of that group.
 
 Values set in one group can be overridden and
-:ref:`modified <t3coreapi:typoscript-syntax-syntax-value-modification>` in the
+:ref:`modified <t3tsref:typoscript-syntax-syntax-value-modification>` in the
 same or another group. If a user is a member of multiple groups, the TSconfig
 settings are evaluated in the order in which the groups are included in the
 user account: When editing the backend user, the selected groups are evaluated
@@ -132,7 +132,7 @@ from top to bottom.
 *   You get the value "bold,italic".
 
 Finally, you can override or
-:ref:`modify <t3coreapi:typoscript-syntax-syntax-value-modification>` the
+:ref:`modify <t3tsref:typoscript-syntax-syntax-value-modification>` the
 settings from groups that your user is a member of in the user TSconfig
 field of that specific user.
 
