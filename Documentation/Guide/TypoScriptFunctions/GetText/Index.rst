@@ -1,3 +1,4 @@
+:navigation-title: getText / data
 ..  include:: /Includes.rst.txt
 ..  _using-gettext:
 

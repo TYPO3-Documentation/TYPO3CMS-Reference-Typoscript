@@ -42,14 +42,14 @@ chapter of TYPO3 Explained.
    :titlesonly:
 
    Introduction/Index
+   Guide/Index
    UsingSetting/Index
-   DataTypes/Index
-   TopLevelObjects/Index
    ContentObjects/Index
    DataProcessing/Index
+   TopLevelObjects/Index
    Functions/Index
+   DataTypes/Index
    Conditions/Index
-   Guide/Index
    AppendixA/Index
 
 .. Meta Menu

@@ -1,3 +1,4 @@
+:navigation-title: stdWrap
 ..  include:: /Includes.rst.txt
 ..  _guide-using-stdwrap:
 
@@ -14,11 +15,17 @@ chapter is intended to give you a feel for `stdWrap` so that you may get
 familiar with it and be ready to explore it in greater depth using the
 :ref:`TypoScript Reference <stdwrap>`.
 
-**Details of stdWrap:**
+..  contents:: Details of stdWrap
 
-..  toctree::
+..  include:: _Chapters/_HeedTheOrder.rst.txt
+    :show-buttons:
 
-    HeedTheOrder/Index
-    ModifyTheOrder/Index
-    TheDataType/Index
-    CObject/Index
+..  include:: _Chapters/_ModifyTheOrder.rst.txt
+    :show-buttons:
+
+..  include:: _Chapters/_TheDataType.rst.txt
+    :show-buttons:
+
+..  include:: _Chapters/_CObject.rst.txt
+    :show-buttons:
+
