@@ -12,9 +12,9 @@ Constants
 
     The constant editor in :guilabel:`Sites > TypoScript > Constant Editor`
 
-Constants are values defined in the  :guilabel:`Constants` field of a TypoScript
-record.  They follow the :ref:`syntax of ordinary TypoScript
-<t3coreapi:typoscript-syntax-syntax>` and are case sensitive! They are used to
+Constants are values defined in the :guilabel:`Constants` field of a template.  They
+follow the :ref:`syntax of ordinary TypoScript
+<typoscript-syntax>` and are case sensitive! They are used to
 manage *in a single place* values, which are later used in *several places*.
 
 ..  index:: Constants; Definition

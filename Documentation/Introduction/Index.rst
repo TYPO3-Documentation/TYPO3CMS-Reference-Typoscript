@@ -45,10 +45,10 @@ to this principle)
 
 Please read the following for an introduction:
 
-* :ref:`TypoScript Syntax <t3coreapi:typoscript-syntax-start>`
-  chapter in "TYPO3 Explained" for an introduction to the TypoScript
+* :ref:`TypoScript Syntax <typoscript-syntax>`
+  chapter for an introduction to the TypoScript
   syntax
-* :ref:`guide` for an introduction to TypoScript Templating
+* :ref:`guide` for an introduction to TypoScript configuration
 * The chapter :ref:`using-and-setting` describes how to use, set
   and extend TypoScript.
 
