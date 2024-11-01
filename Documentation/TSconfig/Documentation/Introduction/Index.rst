@@ -44,7 +44,7 @@ for users and groups ("User TSconfig"). Each variant is further detailed in this
 The general "dotted notation" of `TypoScript` is re-used for Page TSconfig and
 User TSconfig, it is possible to reference values, use conditions, and so on.
 For a general look at the syntax, please read the according section of
-:ref:`TYPO3 Explained <t3coreapi:typoscript-syntax-start>`.
+:ref:`TYPO3 Explained <t3tsref:typoscript-syntax>`.
 
 Other than the basic syntax, TSconfig and frontend TypoScript have nothing in common.
 Properties outlined in the :ref:`TypoScript Reference <t3tsref:start>` can never be
