@@ -64,8 +64,8 @@ lib
     TypoScript code.
 
     This top-level object is available after the template is cached,
-    objects in it can therefore be referenced by using the 
-    :ref:`reference operator <t3coreapi:typoscript-syntax-syntax-object-referencing>` :typoscript:`=<`.
+    objects in it can therefore be referenced by using the
+    :ref:`reference operator <typoscript-syntax-syntax-object-referencing>` :typoscript:`=<`.
     Just like with a :confval:`tlo-temp` object copying is
     also possible.
 

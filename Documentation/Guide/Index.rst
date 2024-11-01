@@ -12,8 +12,7 @@ Furthermore, you can find a full reference of all object types and properties of
 TypoScript in the :doc:`TypoScript Reference <Index>`, insights into TYPO3
 backend configuration with TypoScript in the :doc:`TSconfig <t3tsconfig:Index>`
 documentation and explanations of TypoScript syntax in the
-":ref:`TypoScript Syntax <t3coreapi:typoscript-syntax-start>`" chapter of TYPO3
-Explained.
+":ref:`TypoScript Syntax <typoscript-syntax>`" chapter.
 
 ----
 

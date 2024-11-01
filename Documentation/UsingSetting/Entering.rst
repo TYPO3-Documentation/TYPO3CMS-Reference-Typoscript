@@ -82,7 +82,7 @@ Include TypoScript files
     **does not work**, even if their names are explicitly used in the import.
 
 In both the "Constants" and "Setup" fields, the
-:ref:`@import <t3coreapi:typoscript-syntax-includes>` syntax can be
+:ref:`@import <typoscript-syntax-includes>` syntax can be
 used to include TypoScript contained inside files:
 
 ..  code-block:: typoscript
