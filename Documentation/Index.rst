@@ -45,7 +45,7 @@ chapter of TYPO3 Explained.
     Introduction/Index
     Guide/Index
     UsingSetting/Index
-
+    Syntax/Index
 
 ..  toctree::
     :caption: Reference
