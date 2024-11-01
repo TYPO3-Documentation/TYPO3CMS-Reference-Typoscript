@@ -8,7 +8,7 @@ Heed the order
 The single most important thing to know about `stdWrap` is that all
 properties are parsed/executed exactly in the order in which they appear in the
 :ref:`TypoScript Reference <stdwrap>`, no matter in which order you
-have set them in your TypoScript template.
+have set them in your TypoScript record.
 
 Let's consider this example:
 
