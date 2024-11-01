@@ -230,7 +230,7 @@ Static and direct page TSconfig are loaded for the page they are set on and
 all their subpages.
 
 The TypoScript syntax to
-:ref:`modify <t3coreapi:typoscript-syntax-syntax-value-modification>` values
+:ref:`modify <t3tsref:typoscript-syntax-syntax-value-modification>` values
 can also be used for the page TSconfig.
 
 Example
