@@ -1,4 +1,3 @@
-..  include:: /Includes.rst.txt
 ..  _guide-stdwrap-recursively:
 
 ================
@@ -9,7 +8,7 @@ There is a way around this ordering restriction. `stdWrap` has a property
 called `orderedStdWrap` in which several `stdWrap` properties can
 be called in numerical order. Thus:
 
-..  literalinclude:: _order.typoscript
+..  literalinclude:: /Guide/TypoScriptFunctions/StdWrap/_snippets/_orderedStdWrap.typoscript
 
 results in:
 

@@ -1,5 +1,5 @@
+:navigation-title: Content records
 ..  include:: /Includes.rst.txt
-
 ..  _guide-content-records:
 
 =======================
@@ -29,7 +29,7 @@ After creating the :ref:`PAGE <page>` object, we use the :ref:`CONTENT
 content element we use the :ref:`TEXT <cobj-text>` object to perform
 the actual rendering:
 
-..  literalinclude:: _PAGE.typoscript
+..  literalinclude:: /Guide/ReadingContentRecords/_snippets/_PAGE.typoscript
 
 The :ref:`CONTENT <cobj-content>` object executes an SQL query on the
 database. The query is controlled by the `select` property, which - in
@@ -55,7 +55,5 @@ predetermined. Therefore, we have to create TypoScript definitions for every
 single database field (e.g. for images, image size, image position, link to
 top, index, etc.).
 
-..  toctree::
-    :hidden:
-
-    ContentElements/Index
+..  include:: _Chapters/_ContentElements.rst.txt
+    :show-buttons:

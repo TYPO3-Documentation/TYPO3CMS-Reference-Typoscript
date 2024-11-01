@@ -1,3 +1,4 @@
+:navigation-title: fluid_styled_content
 ..  include:: /Includes.rst.txt
 ..  _using-fluid-styled-content:
 
