@@ -1,9 +1,9 @@
 ..  include:: /Includes.rst.txt
 ..  _appendix-a:
 
-================================
-Appendix A – PHP include scripts
-================================
+==================
+PHP and TypoScript
+==================
 
 ..  _appendix-include-scripts:
 
