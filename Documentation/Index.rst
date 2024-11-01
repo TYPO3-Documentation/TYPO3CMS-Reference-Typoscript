@@ -37,26 +37,33 @@ chapter of TYPO3 Explained.
 
 **Table of Contents:**
 
-.. toctree::
-   :maxdepth: 2
-   :titlesonly:
+..  toctree::
+    :caption: About TypoScript
+    :maxdepth: 1
+    :titlesonly:
 
-   Introduction/Index
-   Guide/Index
-   UsingSetting/Index
-   ContentObjects/Index
-   DataProcessing/Index
-   TopLevelObjects/Index
-   Functions/Index
-   DataTypes/Index
-   Conditions/Index
-   AppendixA/Index
+    Introduction/Index
+    Guide/Index
+    UsingSetting/Index
 
-.. Meta Menu
 
-.. toctree::
-   :hidden:
+..  toctree::
+    :caption: Reference
+    :maxdepth: 1
+    :titlesonly:
 
-   Glossary
-   About
-   Sitemap
+    ContentObjects/Index
+    DataProcessing/Index
+    TopLevelObjects/Index
+    Functions/Index
+    DataTypes/Index
+    Conditions/Index
+
+..  toctree::
+    :caption: Appendix
+    :hidden:
+
+    AppendixA/Index
+    Glossary
+    About
+    Sitemap
