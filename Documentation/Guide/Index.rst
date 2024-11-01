@@ -1,9 +1,10 @@
+:navigation-title: Getting started
 ..  include:: /Includes.rst.txt
 ..  _guide:
 
-================
-TypoScript guide
-================
+=====================================================
+Getting started: A quick introduction into TypoScript
+=====================================================
 
 Learn the fundamentals of TypoScript in just 45 minutes.
 
@@ -27,6 +28,4 @@ Explained.
     UsingFluidStyledContent/Index
     TypoScriptObjects/Index
     TypoScriptFunctions/Index
-    UsingStdWrap/Index
-    UsingGetText/Index
     NextSteps/Index
