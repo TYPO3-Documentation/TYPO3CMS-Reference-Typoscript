@@ -295,14 +295,14 @@ set, the page access permissions are copied from the parent page.
 Example: Inherit the group id of the parent page
 """"""""""""""""""""""""""""""""""""""""""""""""
 
-..  code-block:: php
-    :caption: config/system/settings.php | typo3conf/system/settings.php
+..  code-block:: typoscript
+    :caption: EXT:my_extension/Configuration/page.tsconfig
 
-    $GLOBALS['TYPO3_CONF_VARS']['BE']['defaultPageTSconfig'] .= '
-        TCEMAIN.permissions.groupid = copyFromParent
-        TCEMAIN.permissions.group = 31
-        TCEMAIN.permissions.everybody = 0
-    ';
+    TCEMAIN.permissions {
+        groupid = copyFromParent
+        group = 31
+        everybody = 0
+    }
 
 By default all new pages created by users will inherit the group of the parent
 page. Members of this group get all permissions. Users not in the group get no

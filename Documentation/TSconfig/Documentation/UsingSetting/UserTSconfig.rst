@@ -81,23 +81,6 @@ this file:
 The PSR-14 event :ref:`t3coreapi:BeforeLoadedUserTsConfigEvent` is available to
 add global static user TSconfig before anything else is loaded.
 
-User TSconfig, compatible with TYPO3 v12 and v13
-------------------------------------------------
-
-In TYPO3 v12 installations the content of :file:`Configuration/user.tsconfig` is
-not loaded automatically. You can achieve compatibility with both TYPO3 v12 and
-v13 by importing the content of this file with the API function
-:php:`ExtensionManagementUtility::addUserTSConfig`:
-
-..  literalinclude:: _UserTSconfig/_ext_localconf_v12.php
-    :language: php
-    :caption: EXT:my_sitepackage/ext_localconf.php
-
-..  deprecated:: 13.0
-    The method :php:`\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addUserTSConfig()`
-    has been marked as deprecated in TYPO3 v13 and will be removed with TYPO3
-    v14.
-
 ..  index:: pair: User TSconfig; Verify configuration
 ..  _userverifyingthefinalconfiguration:
 

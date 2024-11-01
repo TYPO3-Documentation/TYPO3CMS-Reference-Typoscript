@@ -62,20 +62,6 @@ can also set the page TSconfig globally.
 The PSR-14 event :ref:`t3coreapi:BeforeLoadedPageTsConfigEvent` is available to
 add global static page TSconfig before anything else is loaded.
 
-.. _page-tsconfig-v11-v12:
-
-Global page TSconfig, compatible with TYPO3 v11 and v12
--------------------------------------------------------
-
-In TYPO3 v11 installations the content of :file:`Configuration/page.tsconfig`
-is not loaded automatically yet. You can achieve compatibility with both
-TYPO3 v11 and v12 by importing the content of this file with the API function
-:php:`ExtensionManagementUtility::addPageTSConfig`:
-
-..  literalinclude:: _PageTSconfig/_ext_localconf_page_tsconfig_v11.php
-    :language: php
-    :caption: EXT:my_sitepackage/ext_localconf.php
-
 .. _include-static-page-tsconfig-per-site:
 
 Page TSconfig on site level
