@@ -1,3 +1,4 @@
+:navigation-title: Quick overview
 ..  include:: /Includes.rst.txt
 
 ..  _guide-overview:
@@ -23,19 +24,27 @@ allows you to proceed more efficiently and waste less time
 in painful trial and error.
 
 Going through this tutorial is helpful for understanding
-other tutorials, like the :doc:`Sitepackage <t3sitepackage:Index>`.
+other tutorials, like the :ref:`Site package tutorial <t3sitepackage:start>`.
 
+..  contents::
 
-..  toctree::
-   :maxdepth: 5
-   :titlesonly:
-   :glob:
+..  include:: _Chapters/_BackendConfiguration.rst.txt
+    :show-buttons:
 
-   BackendConfiguration/Index
-   Prerequisites/Index
-   WhyTypoScript/Index
-   MainTemplate/Index
-   TheTermTemplate/Index
-   TypoScriptAnArray/Index
-   FirstSteps/Index
+..  include:: _Chapters/_Prerequisites.rst.txt
+    :show-buttons:
 
+..  include:: _Chapters/_WhyTypoScript.rst.txt
+    :show-buttons:
+
+..  include:: _Chapters/_MainTemplate.rst.txt
+    :show-buttons:
+
+..  include:: _Chapters/_TheTermTemplate.rst.txt
+    :show-buttons:
+
+..  include:: _Chapters/_TypoScriptAnArray.rst.txt
+    :show-buttons:
+
+..  include:: _Chapters/_FirstSteps.rst.txt
+    :show-buttons:
