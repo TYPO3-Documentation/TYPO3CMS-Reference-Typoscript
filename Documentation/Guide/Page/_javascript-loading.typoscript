@@ -1,0 +1,14 @@
+page = PAGE
+page {
+  10 = TEXT
+  10.value = <div class="myTodo">TODO: Add Fluid template </div>
+  jsFooterInline {
+    10 = TEXT
+    10.value (
+      alert("Hello World! ");
+    )
+  }
+  includeCSS {
+    includeJSFooter = EXT:site_package/Resources/Public/JavaScript/main.js
+  }
+}

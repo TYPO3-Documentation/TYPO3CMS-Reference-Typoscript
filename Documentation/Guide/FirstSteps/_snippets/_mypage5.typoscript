@@ -1,5 +1,5 @@
-mypage = PAGE
-mypage {
+page = PAGE
+page {
   typeNum = 0
 
   10 = TEXT
