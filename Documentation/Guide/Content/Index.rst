@@ -29,7 +29,7 @@ After creating the :ref:`PAGE <page>` object, we use the :ref:`CONTENT
 content element we use the :ref:`TEXT <cobj-text>` object to perform
 the actual rendering:
 
-..  literalinclude:: /Guide/ReadingContentRecords/_snippets/_PAGE.typoscript
+..  literalinclude:: /Guide/Content/_snippets/_PAGE.typoscript
 
 The :ref:`CONTENT <cobj-content>` object executes an SQL query on the
 database. The query is controlled by the `select` property, which - in
@@ -54,6 +54,9 @@ The challenge is to render all content elements like the web designer
 predetermined. Therefore, we have to create TypoScript definitions for every
 single database field (e.g. for images, image size, image position, link to
 top, index, etc.).
+
+..  include:: _Chapters/_HtmlTemplate.rst.txt
+    :show-buttons:
 
 ..  include:: _Chapters/_ContentElements.rst.txt
     :show-buttons:

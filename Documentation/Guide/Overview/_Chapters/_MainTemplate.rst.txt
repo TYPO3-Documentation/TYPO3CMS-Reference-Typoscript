@@ -23,4 +23,4 @@ are defined by using the dot "." notation.
 
 The following is a typical example of TypoScript syntax:
 
-..  literalinclude:: /Guide/TypoScriptOverview/_snippets/_page1.typoscript
+..  literalinclude:: /Guide/Overview/_snippets/_page1.typoscript
