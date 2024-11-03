@@ -81,7 +81,7 @@ Loading JavaScript in TypoScript
 ================================
 
 You can write inline JavaScript using property
-:confval:`jsFooterInline.[array] <t3tsref:page-jsfooterinline>`, or place your CSS file
+:confval:`jsFooterInline.[array] <t3tsref:page-jsfooterinline>`, or place your JavaScript file
 in the public resources of your :ref:`Minimal site package <t3sitepackage:minimal-design>`:
 
 ..  literalinclude:: _javascript-loading.typoscript
