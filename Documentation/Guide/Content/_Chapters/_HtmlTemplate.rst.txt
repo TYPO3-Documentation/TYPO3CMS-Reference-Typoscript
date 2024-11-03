@@ -7,7 +7,7 @@
 Insert content in a HTML template
 =================================
 
-Although we now know how to render content, and how to build a menu, we do not
+Although we now know how to render content, we do not
 have a real website yet.
 
 Again everything could be done using TypoScript. That would be pretty complex
@@ -19,7 +19,7 @@ harder to apply.
 TYPO3 CMS provides the :ref:`FLUIDTEMPLATE <cobj-fluidtemplate>`
 object, with which we can use Fluid template and render our website with it:
 
-..  literalinclude:: _FLUIDTEMPLATE.typoscript
+..  literalinclude:: /Guide/Content/_snippets/_FLUIDTEMPLATE.typoscript
 
 In your template file you can now replace the parts that should be filled by
 TYPO3 with references to the TypoScript configuration objects you defined
@@ -27,4 +27,4 @@ earlier.
 
 For example to render a template with the menu we defined add:
 
-..  literalinclude:: _Fluid.html
+..  literalinclude:: /Guide/Content/_snippets/_Fluid.html
