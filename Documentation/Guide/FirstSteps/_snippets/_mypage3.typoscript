@@ -4,18 +4,18 @@ test = TEXT
 test.value = Holla
 
 # "<" means "copy object".
-# mypage.10 returns "Holla"
-mypage.10 < test
+# page.10 returns "Holla"
+page.10 < test
 
 # Change the original object.
-# The change has no effect on mypage.10; it still returns "Holla".
+# The change has no effect on page.10; it still returns "Holla".
 test.value = Hello world
 
 # "=<" means "create an object reference (link the object)".
 test.value = Holla
-mypage.10 =< test
+page.10 =< test
 
 # Change the object which is referenced.
-# Changes DO have an effect on mypage.10.
-# mypage.10 will return "Hello world".
+# Changes DO have an effect on page.10.
+# page.10 will return "Hello world".
 test.value = Hello world
