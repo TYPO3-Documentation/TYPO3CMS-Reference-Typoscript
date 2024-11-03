@@ -7,11 +7,11 @@ TypoScript is just an array
 Internally, TypoScript is parsed and stored as a PHP array.
 For example:
 
-..  literalinclude:: /Guide/TypoScriptOverview/_snippets/_page.typoscript
+..  literalinclude:: /Guide/Overview/_snippets/_page.typoscript
 
 will be converted to the following PHP array:
 
-..  literalinclude:: /Guide/TypoScriptOverview/_snippets/_page.php
+..  literalinclude:: /Guide/Overview/_snippets/_page.php
 
 Upon evaluation, a ":ref:`PAGE <page>`" object will be created
 first, and the parameter :php:`$data['page.']` will be assigned to it.
