@@ -45,6 +45,3 @@ other tutorials, like the :ref:`Site package tutorial <t3sitepackage:start>`.
 
 ..  include:: _Chapters/_TypoScriptAnArray.rst.txt
     :show-buttons:
-
-..  include:: _Chapters/_FirstSteps.rst.txt
-    :show-buttons:
