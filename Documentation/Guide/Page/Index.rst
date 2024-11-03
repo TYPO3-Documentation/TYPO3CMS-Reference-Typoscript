@@ -18,7 +18,7 @@ additionally define meta data for the HTML head or even the HTTP response.
 
 By default the top level variable `page` is used to define the main
 :typoscript:`PAGE` object. The following would display the empty skeleton of
-an HTMl page:
+an HTML page:
 
 ..  code-block:: typoscript
 
