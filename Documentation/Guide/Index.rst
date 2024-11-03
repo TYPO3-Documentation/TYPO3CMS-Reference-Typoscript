@@ -20,10 +20,10 @@ documentation and explanations of TypoScript syntax in the
     :maxdepth: 1
     :titlesonly:
 
-    TypoScriptOverview/Index
-    ReadingContentRecords/Index
-    CreateAMenu/Index
-    HtmlTemplate/Index
+    Overview/Index
+    FirstSteps/Index
+    Content/Index
+    Menu/Index
     UsingFluidStyledContent/Index
     TypoScriptObjects/Index
     TypoScriptFunctions/Index
