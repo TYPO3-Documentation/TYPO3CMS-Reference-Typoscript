@@ -1016,6 +1016,11 @@ siteLanguage
             *   :typoscript:`full`: contains the entire locale (also the default
                 if no subkey is specified)
 
+        The :typoscript:`locale` property represents the language, country, and
+        character encoding settings for TYPO3. It is a composite value, such as
+        "en_US.UTF-8", which can be dissected into different components via
+        subkeys for more precise language and location specifications.
+
     :typoscript:`navigationTitle`
         The label to be used within language menus.
 
