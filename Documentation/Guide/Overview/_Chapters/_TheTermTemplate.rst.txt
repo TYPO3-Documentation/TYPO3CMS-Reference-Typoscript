@@ -41,7 +41,7 @@ with the `root level` flag enabled, is found in the page tree.
 
 `The page is not configured! [type=0][]`. This means that there is no TypoScript
 object of type PAGE with typeNum=0 configured.`: This warning appears if the
-TypoScript Configuration of the current page contains no :ref:`page`
+TypoScript Configuration of the current page contains no :ref:`PAGE <guide-page>`
 definition.
 
 The following TypoScript setup code is enough to remove this warning:

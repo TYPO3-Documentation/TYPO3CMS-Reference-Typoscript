@@ -1,0 +1,6 @@
+page = PAGE
+page {
+  shortcutIcon = EXT:site_package/Ressources/Public/Icons/favicon.ico
+  10 = TEXT
+  10.value = TODO: Add Fluid template
+}

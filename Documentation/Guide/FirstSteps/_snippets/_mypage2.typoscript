@@ -1,18 +1,18 @@
 # Create a PAGE object.
-mypage = PAGE
-mypage.typeNum = 0
+page = PAGE
+page.typeNum = 0
 
-mypage.30 = TEXT
-mypage.30.value = This gets rendered last.
+page.30 = TEXT
+page.30.value = This gets rendered last.
 
 # Rendering will first output object number 10, then 20 and 30.
 # An object with number 25 would logically be output between 20 and 30.
-mypage.20 = TEXT
-mypage.20.value = This is rendered in the middle.
+page.20 = TEXT
+page.20.value = This is rendered in the middle.
 
 # This is the first output object
-mypage.10 = TEXT
-mypage.10.value = This is rendered first.
+page.10 = TEXT
+page.10.value = This is rendered first.
 
 # Here we create a second PAGE object, which we can use for the
 # print view.

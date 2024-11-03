@@ -1,15 +1,15 @@
-mypage = PAGE
-mypage.typeNum = 0
-mypage.10 = TEXT
-mypage.10.value = Hello world
-mypage.10.stdWrap.typolink.parameter = http://www.typo3.org/
-mypage.10.stdWrap.typolink.additionalParams = &parameter=value
+page = PAGE
+page.typeNum = 0
+page.10 = TEXT
+page.10.value = Hello world
+page.10.stdWrap.typolink.parameter = http://www.typo3.org/
+page.10.stdWrap.typolink.additionalParams = &parameter=value
 
 # The function name "ATagParams" does not use the standardized
 # "camelCase".
-mypage.10.stdWrap.typolink.ATagParams = class="externalwebsite"
-mypage.10.stdWrap.typolink.extTarget = _blank
-mypage.10.stdWrap.typolink.title = The website of TYPO3
-mypage.10.stdWrap.postCObject = TEXT
-mypage.10.stdWrap.postCObject.value = This text also appears in the link text
-mypage.10.stdWrap.postCObject.stdWrap.wrap = |, because the postCObject is executed before the typolink function.
+page.10.stdWrap.typolink.ATagParams = class="externalwebsite"
+page.10.stdWrap.typolink.extTarget = _blank
+page.10.stdWrap.typolink.title = The website of TYPO3
+page.10.stdWrap.postCObject = TEXT
+page.10.stdWrap.postCObject.value = This text also appears in the link text
+page.10.stdWrap.postCObject.stdWrap.wrap = |, because the postCObject is executed before the typolink function.

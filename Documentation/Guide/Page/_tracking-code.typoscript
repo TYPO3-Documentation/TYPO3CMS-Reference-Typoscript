@@ -1,0 +1,12 @@
+page = PAGE
+page {
+  10 = TEXT
+  10.value = TODO: Add Fluid template
+  footerData {
+    10 = TEXT
+    10.value (
+      <!-- Enter some tracking code supplied by your provider -->
+      <p>My tracking code</p>
+    )
+  }
+}
