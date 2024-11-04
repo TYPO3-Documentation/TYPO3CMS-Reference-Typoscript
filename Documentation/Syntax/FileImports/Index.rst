@@ -122,7 +122,7 @@ The following features can make file inclusion unnecessary:
 *   :ref:`Automatic global inclusion of user TSconfig of extensions <t3tsconfig:usersettingdefaultusertsconfig>`
 *   :ref:`Automatic global inclusion of page TSconfig of extensions <t3tsconfig:pagesettingdefaultpagetsconfig>`
 *   :ref:`Automatic page TSconfig on site level <t3tsconfig:include-static-page-tsconfig-per-site>`
-*   :ref:`TypoScript provider for sites and sets <site-sets-typoscript>`
+*   :ref:`TypoScript provider for sites and sets <t3coreapi:site-sets-typoscript>`
     automatically loads TypoScript per site when the site set is included in the
     site configuration.
 
@@ -176,7 +176,7 @@ As one restriction :typoscript:`@import` cannot include files from arbitrary dir
 like :file:`fileadmin/`, but only from extensions by using the :typoscript:`EXT:`
 prefix. Instances that use :typoscript:`<INCLUDE_TYPOSCRIPT:` with :typoscript:`source="FILE:./someDirectory/..."`
 should move these TypoScript files into a project or site extension. Such instances are also encouraged to
-look into the TYPO3 v13 :ref:`Site sets <site-sets>` feature and eventually transition towards it along the way.
+look into the TYPO3 v13 :ref:`Site sets <t3coreapi:site-sets>` feature and eventually transition towards it along the way.
 
 :typoscript:`@import` allows to import files with the file ending `.typoscript`
 and `.tsconfig`. If you used any of the outdated file endings like `.ts` or
