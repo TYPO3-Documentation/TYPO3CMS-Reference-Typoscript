@@ -67,7 +67,7 @@ referenced and can be assigned values accordingly:
 
 ..  code-block:: typoscript
 
-    mypage.10.stdWrap.wrap = <h1>|</h1>
+    page.10.stdWrap.wrap = <h1>|</h1>
 
 The :doc:`TypoScript Reference (TSref) <Index>` is the ultimate
 resource to find out which objects, functions and properties exist.

@@ -1,0 +1,16 @@
+page = PAGE
+page {
+  10 = TEXT
+  10.value = <div class="myTodo">TODO: Add Fluid template </div>
+  cssInline {
+    10 = TEXT
+    10.value (
+      .myTodo {
+        border: 2px solid #ee7600;
+      }
+    )
+  }
+  includeCSS {
+    styles = EXT:site_package/Resources/Public/Css/styles.css
+  }
+}

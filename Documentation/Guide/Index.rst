@@ -22,6 +22,7 @@ documentation and explanations of TypoScript syntax in the
 
     Overview/Index
     FirstSteps/Index
+    Page/Index
     Content/Index
     Menu/Index
     UsingFluidStyledContent/Index

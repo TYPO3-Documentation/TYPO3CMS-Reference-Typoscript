@@ -1,11 +1,11 @@
-# The object mypage is defined as PAGE object.
-mypage = PAGE
+# The object page is defined as PAGE object.
+page = PAGE
 
 # PAGE objects have the property typeNum.
-mypage.typeNum = 0
+page.typeNum = 0
 
-# mypage has an object "10" of type TEXT. It is a TEXT object.
-mypage.10 = TEXT
+# page has an object "10" of type TEXT. It is a TEXT object.
+page.10 = TEXT
 
 # TEXT objects in turn have a property called "value".
-mypage.10.value = Hello World
+page.10.value = Hello World
