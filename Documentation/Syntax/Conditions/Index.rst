@@ -83,8 +83,6 @@ These general rules apply:
 
 * Single criteria can be negated using :typoscript:`!`
 
-  .. versionchanged:: 12.0
-
   :typoscript:`[END]` and :typoscript:`[GLOBAL]` behave exactly the same. Both
   are kept for historical reasons (for now).
 
@@ -100,8 +98,6 @@ These general rules apply:
 
 * Conditions can *not* be nested within code blocks.
 
-  .. versionchanged:: 12.0
-
   Conditions *can* be nested into each other, if they are located in
   different snippets (files or records), see example below. They can *not* be nested
   within the same code snippet.
@@ -110,22 +106,16 @@ These general rules apply:
   or :typoscript:`[GLOBAL]` *stops* a previous condition and starts a new one.
   This is the main reason conditions can *not* be nested within one text snippet.
 
-* .. versionchanged:: 12.0
-
-  :typoscript:`@import` *can* be nested
+* :typoscript:`@import` *can* be nested
   inside conditions. This allows conditional includes and is a new feature of the
   TYPO3 v12 parser.
 
-* .. versionchanged:: 12.0
-
-  Conditions automatically stop at the end of a text snippet (file or record), even
+* Conditions automatically stop at the end of a text snippet (file or record), even
   without :typoscript:`[END]` or :typoscript:`[GLOBAL]`. Another snippet on the same
   level is in "global" scope automatically. The backend TypoScript and
   TSconfig modules may mumble about a not properly closed condition, though.
 
-* .. versionadded:: 12.1
-
-  Using the null-safe operator is possible when accessing properties on objects
+* Using the null-safe operator is possible when accessing properties on objects
   which might not be available in some context, for example `TSFE` in the
   backend:
 

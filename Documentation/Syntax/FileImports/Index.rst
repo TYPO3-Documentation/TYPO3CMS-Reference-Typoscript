@@ -51,9 +51,7 @@ The following rules apply:
 
 * Recursion is allowed: Imported files can have :typoscript:`@import` statements.
 
-* .. versionchanged:: 12.0
-
-  It is allowed to put :typoscript:`@import` within a condition. This example imports
+* It is allowed to put :typoscript:`@import` within a condition. This example imports
   the additional file only if a frontend user is logged in:
 
   .. code-block:: typoscript

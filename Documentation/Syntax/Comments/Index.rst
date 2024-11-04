@@ -15,9 +15,7 @@ Comments
 
 TypoScript supports single line comments as well as multiline comment blocks.
 
-.. note::
-    ..  versionchanged:: 12.0
-
+..  note::
     Comment handling has been relaxed significantly with the rewritten TypoScript
     parser in TYPO3 v12. The parser is much less picky detecting comments, they
     can be placed almost everywhere since v12, :typoscript:`*/` no longer needs

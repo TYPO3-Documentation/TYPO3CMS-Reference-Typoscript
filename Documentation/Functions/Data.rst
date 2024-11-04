@@ -1000,21 +1000,20 @@ siteLanguage
         The language mapped to the ID of the site language.
 
     :typoscript:`locale`
-        ..  versionchanged:: 12.3
-            The :typoscript:`locale` property in typoscript can be subdivided
-            into more specific details using subkeys separated by a colon `:`.
-            The subkeys `languageCode`, `countryCode`, and `full` allow access
-            to the individual components of the :typoscript:`locale` value. For
-            instance, a :typoscript:`locale` value of "en_US.UTF-8" can be
-            broken down into "en", "US", and for the `full` subkey, "en-US".
+        The :typoscript:`locale` property in typoscript can be subdivided
+        into more specific details using subkeys separated by a colon `:`.
+        The subkeys `languageCode`, `countryCode`, and `full` allow access
+        to the individual components of the :typoscript:`locale` value. For
+        instance, a :typoscript:`locale` value of "en_US.UTF-8" can be
+        broken down into "en", "US", and for the `full` subkey, "en-US".
 
-            *   :typoscript:`languageCode`: this contains the two-letter
-                language code (previously
-                :typoscript:`siteLanguage:twoLetterIsoCode`)
-            *   :typoscript:`countryCode`: contains the uppercase country code
-                part of the locale
-            *   :typoscript:`full`: contains the entire locale (also the default
-                if no subkey is specified)
+        *   :typoscript:`languageCode`: this contains the two-letter
+            language code (previously
+            :typoscript:`siteLanguage:twoLetterIsoCode`)
+        *   :typoscript:`countryCode`: contains the uppercase country code
+            part of the locale
+        *   :typoscript:`full`: contains the entire locale (also the default
+            if no subkey is specified)
 
         The :typoscript:`locale` property represents the language, country, and
         character encoding settings for TYPO3. It is a composite value, such as

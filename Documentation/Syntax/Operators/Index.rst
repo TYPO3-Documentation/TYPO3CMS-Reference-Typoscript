@@ -307,8 +307,6 @@ parenthesis. These predefined functions are available:
         # foo is "fooValue"
 
 `myCustomFunction()`
-    ..  versionchanged:: 12.0
-
     The PSR-14 event :php:`\TYPO3\CMS\Core\TypoScript\AST\Event\EvaluateModifierFunctionEvent`
     is available to define custom TypoScript functions. The event replaces the hook
     :php:`$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['t3lib/class.t3lib_tsparser.php']['preParseFunc']`.
