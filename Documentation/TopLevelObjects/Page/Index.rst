@@ -12,8 +12,8 @@ PAGE
 
 This defines what is rendered in the frontend.
 
-PAGE is an object type. A good habit is to use :typoscript:`page` as the top-level object name for
-the content-page on a website.
+PAGE is an object type. A good habit is to use :typoscript:`page` as
+the top-level object name for the main `PAGE` object of a website.
 
 TYPO3 does not initialize :typoscript:`page` by default. You must initialize this
 explicitly, for example:
@@ -31,8 +31,19 @@ page is found.
 Most of this code is executed in the PHP script
 :php:`\TYPO3\CMS\Frontend\Http\RequestHandler`.
 
-..  contents:: Table of contens
+..  contents:: Table of contents
     :depth: 1
+
+..  _page-getting-started:
+
+Getting started with the PAGE object
+====================================
+
+See :ref:`PAGE in TypoScript (Getting started), <guide-page>` for an
+introduction into this object.
+
+If no `PAGE` object is found, the error "No page configured for type=0." is
+displayed. See chapter :ref:`Troubleshooting <t3tsref:guide-troubleshooting>`.
 
 ..  _page_output:
 
