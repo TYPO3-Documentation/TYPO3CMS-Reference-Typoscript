@@ -7,7 +7,7 @@ page {
     # ...
     dataProcessing {
       10 = menu
-      as = myMainMenu
+      10.as = myMainMenu
     }
   }
 }
