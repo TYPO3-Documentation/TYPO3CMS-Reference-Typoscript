@@ -69,11 +69,6 @@ or render it your self.
 `{contentElement.fullType}`
     Is composed of "tt_content.[CType]". For a content element of type text it
     contains "tt_content.text".
-`{contentElement.rawRecord}`
-    Contains an array with the raw row from the database. As the
-    :typoscript:`tt_content` TypoScript object expects the raw data as input
-    you should use `{contentElement.rawRecord}` in combination with the
-    CObject ViewHelper.
 
 The :ref:`backend layout <t3coreapi:be-layout>` is defined like this:
 
