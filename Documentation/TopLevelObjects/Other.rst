@@ -25,10 +25,8 @@ lib
     TypoScript code.
 
     This top-level object is available after the template is cached,
-    objects in it can therefore be referenced by using the
+    objects in it can therefore be referenced and copied by using the
     :ref:`reference operator <typoscript-syntax-syntax-object-referencing>` :typoscript:`=<`.
-    Just like with a :confval:`tlo-temp` object copying is
-    also possible.
 
 ..  code-block:: typoscript
     :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
