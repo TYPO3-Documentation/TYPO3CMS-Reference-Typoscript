@@ -29,7 +29,6 @@ config                                :ref:`CONFIG <config-datatype>`
 :ref:`tlo-constants`
 :ref:`plugin`
 :ref:`tlo-module`
-:ref:`temp <tlo-temp>`
 :ref:`styles <tlo-styles>`
 :ref:`lib <tlo-lib>`
 :ref:`tt_* <tlo-tt>`
