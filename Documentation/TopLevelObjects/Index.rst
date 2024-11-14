@@ -27,7 +27,6 @@ page | ...                            :ref:`PAGE <page-datatype>`
 config                                :ref:`CONFIG <config-datatype>`
 :ref:`plugin`
 :ref:`tlo-module`
-:ref:`temp <tlo-temp>`
 :ref:`styles <tlo-styles>`
 :ref:`lib <tlo-lib>`
 :ref:`tt_* <tlo-tt>`
