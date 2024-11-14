@@ -8,45 +8,6 @@ Reserved top-level objects
 ..  contents:: List of the reserved top-level objects
     :depth: 1
 
-..  index:: Top-level objects; temp
-
-..  _top-level-objects-temp:
-..  _tlo-temp:
-
-temp
-====
-
-..  confval:: temp
-    :name: tlo-temp
-
-    This top-level object name is reserved.
-
-    The top-level object :typoscript:`temp` is used to store and copy
-    TypoScript code during parse time.
-
-    :typoscript:`temp` is unset before the template is cached, objects in it
-    can therefore not be referenced. Use :confval:`tlo-lib` for that purpose.
-
-Example: Use the top-level object `temp` to copy code
------------------------------------------------------
-
-..  code-block:: typoscript
-    :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
-
-    temp.some_content = TEXT
-    temp.some_content.value = Hello World!
-
-    // Output
-    // <h1>Hello World!</h1><p>Hello World!</p>
-    page = PAGE
-    page {
-        10 < temp.some_content
-        10.wrap = <h1>|</h1>
-
-        20 < temp.some_content
-        20.wrap = <p>|</p>
-    }
-
 ..  index:: Top-level objects; lib
 
 ..  _top-level-objects-lib:
