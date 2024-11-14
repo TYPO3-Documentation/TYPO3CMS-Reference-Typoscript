@@ -97,8 +97,7 @@ styles
 ..  confval:: styles
     :name: tlo-styles
 
-    This top-level object name is reserved. It works just like :confval:`tlo-temp`.
-    It is preserved for historic reasons, use :confval:`tlo-temp` instead.
+    This top-level object name is reserved.
 
 ..  index:: Top-level objects; tt_content
 ..  _tlo-tt:
