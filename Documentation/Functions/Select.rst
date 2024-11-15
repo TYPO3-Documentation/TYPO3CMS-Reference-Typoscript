@@ -38,7 +38,7 @@ uidInList
 
 ..  confval:: uidInList
     :name: select-uidInList
-    :type: *list of record\_ids* / :ref:`stdWrap`
+    :type: *list of record uids* / :ref:`stdWrap`
 
     Comma-separated list of record uids from the according database table.
     For example when the select function works on the table `tt_content`, then
@@ -72,7 +72,7 @@ pidInList
 
 ..  confval:: pidInList
     :name: select_pidInList
-    :type: *list of page\_ids* / :ref:`stdWrap`
+    :type: *list of page uids* / :ref:`stdWrap`
     :Default: :typoscript:`this`
 
     Comma-separated list of pids of the record. This will be page uids (pids). For
