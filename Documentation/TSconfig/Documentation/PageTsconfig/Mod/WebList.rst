@@ -291,12 +291,18 @@ itemsLimitPerTable
    positive integer
 
 :aspect:`Description`
-   Set the default maximum number of items to show per table.
-   The number must be between `5` and `10000`. If below or above this range,
-   the nearest valid number will be used.
+    Set the default maximum number of items to show per table.
+    The number must be between `0` and `10000`. If below or above this range,
+    the nearest valid number will be used.
+
+    If a value is defined in the `$TCA[<table>]['interface']['maxDBListItems']`
+    of the table, it will override this TSconfig option.
+    For example, the `maxDBListItems` for the `pages` table is `30` by default.
 
 :aspect:`Default`
    20
+
+..  _pageTsConfigWebList-itemsLimitPerTable-example:
 
 :aspect:`Example`
    .. code-block:: typoscript
@@ -317,12 +323,18 @@ itemsLimitSingleTable
    positive integer
 
 :aspect:`Description`
-   Set the default maximum number of items to show in single table view.
-   The number must be between `5` and `10000`. If below or above this range,
-   the nearest valid number will be used.
+    Set the default maximum number of items to show in single table view.
+    The number must be between `0` and `10000`. If below or above this range,
+    the nearest valid number will be used.
+
+    If a value is defined in the `$TCA[<table>]['interface']['maxSingleDBListItems']`
+    of the table, it will override this TSconfig option.
+    For example, the `maxSingleDBListItems` for the `pages` table is `50` by default.
 
 :aspect:`Default`
    100
+
+..  _pageTsConfigWebList-itemsLimitSingleTable-example:
 
 :aspect:`Example`
    .. code-block:: typoscript
