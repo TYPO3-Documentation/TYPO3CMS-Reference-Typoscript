@@ -767,44 +767,6 @@ Properties
                 options.pageTree.altElementBrowserMountPoints = 34,123
                 options.pageTree.altElementBrowserMountPoints.append = 1
 
-        ..  _useroptions-pageTree-backgroundColor:
-
-        ..  confval:: backgroundColor
-            :name: useroptions-pageTree-backgroundColor
-            :type: string
-            :Path: options.pageTree.backgroundColor
-
-            ..  deprecated:: 13.1
-                This setting has been deprecated and will be removed in TYPO3 v14 due to its
-                lack of accessibility. It is being replaced with a
-                :ref:`new label system <useroptions-pageTree-label>` for tree nodes.
-
-            In TYPO3 v13 the setting will be migrated to the new label system. Since the
-            use case is unknown, the generated label will be "Color: <value>". This
-            information will be displayed on all affected nodes.
-
-            Set background colors for tree branches.
-
-            The color can be any valid CSS color value. The best results can be achieved
-            by using RGBa values.
-
-            Example:
-
-            ..  code-block:: typoscript
-                :caption: EXT:site_package/Configuration/user.tsconfig
-
-                # The syntax is:
-                # options.pageTree.backgroundColor.<pageId> = <color>
-                options.pageTree.backgroundColor.147 = orange
-                options.pageTree.backgroundColor.148 = #AFAFAF
-                options.pageTree.backgroundColor.151 = rgba(0, 255, 0, 0.1)
-
-            ..  figure:: /Images/ManualScreenshots/List/optionsPageTreeBackgroundColor.png
-                :alt: Tree branches with configured background colors
-                :class: with-shadow
-
-                Tree branches with configured background colors
-
         ..  _useroptions-pageTree-doktypesToShowInNewPageDragArea:
 
         ..  confval:: doktypesToShowInNewPageDragArea
@@ -856,7 +818,8 @@ Properties
             :Path: options.pageTree.label.<page-id>
 
             ..  versionadded:: 13.1
-                This setting is the successor of :ref:`useroptions-pageTree-backgroundColor`.
+                This setting is the successor of the removed
+                :ref:`t3tsconfig/13:useroptions-pageTree-backgroundColor`.
 
             Labels offer customizable color markings for tree nodes and require an
             associated label for accessibility.
