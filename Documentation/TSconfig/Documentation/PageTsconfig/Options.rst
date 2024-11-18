@@ -61,8 +61,6 @@ Example: Exclude two backend layouts from drop down selector
 defaultUploadFolder
 -------------------
 
-..  versionadded:: 12.3
-
 ..  confval:: defaultUploadFolder
     :name: options-defaultUploadFolder
     :type: string

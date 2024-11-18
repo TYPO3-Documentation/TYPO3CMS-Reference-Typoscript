@@ -9,8 +9,6 @@
 templates
 =========
 
-..  versionadded:: 12.0
-
 All Fluid templates rendered by backend controllers can be overridden with own
 templates on a per-file basis. The feature is available for basically all core
 backend modules, as well as the backend main frame templates. Exceptions are

@@ -34,11 +34,6 @@ this is not recommended anymore.
 Setting the page TSconfig globally
 ==================================
 
-.. versionadded:: 12.0
-   Starting with TYPO3 v12.0 page TSconfig in a file named
-   :file:`Configuration/page.tsconfig` in an extension is automatically
-   loaded during build time.
-
 Global page TSconfig should be stored within an extension, usually a sitepackage
 extension. The content of the file :file:`Configuration/page.tsconfig` within
 an extension is automatically loaded during build time.
