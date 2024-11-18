@@ -4,6 +4,7 @@
     mod; SHARED
     Modules; All
 ..  _pagesharedotionsformodules:
+..  _mod-shared:
 
 ======
 SHARED
@@ -23,61 +24,34 @@ colPos_list
 
 ..  confval:: colPos_list
     :name: mod-share-colPos-list
-    :type: list of integers
-    :Default: 1,0,2,3
+    :type: comma separated list of integers
+    :default: ''
+    :Path: mod.SHARED.colPos_list
 
-    This option lets you specify which columns of tt_content elements should be editable in the
-    'Columns' view of the Web > Page module.
+    This setting controls which areas or columns of the backend layouts are
+    editable. Columns configured in the :ref:`Backend Layout <backend-layouts>`,
+    which are not listed here, will be displayed with placeholder area.
 
-    Used on top of backend layouts, this setting controls which columns are editable. Columns configured
-    in the Backend Layout which are not listed here, will be displayed with placeholder area.
-
-    Each column has a number which ultimately comes from the configuration of the table tt_content,
-    field 'colPos'. These are the values of the four default columns used in the default backend layout:
-
-    Left: `1`, Normal: `0`, Right: `2`, Border: `3`
+    The default backend layout only has one column, which has the id 0.
 
 ..  _example_for_backend_layout:
 
-Example: Create a basic backend layout
---------------------------------------
+Example: Make a column in a backend layout not editable
+-------------------------------------------------------
 
-The example creates a basic backend layout and sets the "Left" column to be not editable:
+Assuming the current page uses the following backend layout:
 
-*   Create a record of type "Backend Layout", for instance in the root page of your website
+..  literalinclude:: /PageTsconfig/Mod/WebLayout/_BackendLayout.tsconfig
+    :caption: config/sites/my-site/page.tsconfig
 
-*   Add a title, e.g. "My Layout"
+And we want to make the area "Jumbotron" (colPos = 1) not editable.
 
-*   Use the wizard to create a two column backend layout, the result may look like this:
+As long as :confval:`mod-share-colPos-list` is empty all areas are allowed.
+We therefore have to list all colPos, which should still be allowed. In this
+that would be the columns left (colPos = 0) and right (colPos = 2).
 
-    ..  figure:: /Images/ManualScreenshots/List/SimpleBackendLayout.png
-        :alt: A simple backend layout
-
-        A simple backend layout
-
-*   Create a page and select this new backend layout in the "Appearance" tab.
-    The page module then looks like this, displaying the two defined columns:
-
-    ..  figure:: /Images/ManualScreenshots/Page/SimpleBackendLayoutInPageModule.png
-        :alt: Backend layout used in page module
-
-        Backend layout used in page module
-
-*   Now set the "Left" column to be not editable using page TSconfig in the
-    :guilabel:`Resources` tab of the page, by restricting `colPos_list` to
-    `0` (the "Content" columns as defined above):
-
-    ..  code-block:: typoscript
-        :caption: Page TSconfig in the "Resources" tab of the page
-
-        mod.SHARED.colPos_list = 0
-
-*   The result in the page module then looks like this:
-
-    ..  figure:: /Images/ManualScreenshots/Page/SimpleBackendLayoutLeftNotEditable.png
-        :alt: One column not editable in a backend layout
-
-        One column not editable in a backend layout
+..  literalinclude:: /PageTsconfig/Mod/_snippets/_mod.SHARED.colPos_list.tsconfig
+    :caption: config/sites/my-site/page.tsconfig
 
 ..  index::
     defaultLanguageFlag
