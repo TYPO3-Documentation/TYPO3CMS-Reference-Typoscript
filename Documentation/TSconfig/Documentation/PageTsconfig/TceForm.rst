@@ -92,10 +92,9 @@ addItems
 
     The subkey :typoscript:`icon` will allow to add your own icons to new values.
 
-    ..  versionadded:: 12.1
-         The subkey :typoscript:`group` can be used to insert a new element into an
-         existing select item group by settings the value to the group identifier.
-         The grouping is usually displayed in select fields with groups available.
+    The subkey :typoscript:`group` can be used to insert a new element into an
+    existing select item group by settings the value to the group identifier.
+    The grouping is usually displayed in select fields with groups available.
 
     This property is available for various levels:
 

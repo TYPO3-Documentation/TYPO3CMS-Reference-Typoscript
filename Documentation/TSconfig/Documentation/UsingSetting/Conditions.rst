@@ -561,17 +561,17 @@ typo3.version
     :name: condition-typo3-version
     :type: string
 
-    TYPO3 version (e.g. 12.4.0-dev)
+    TYPO3 version (e.g. 13.4.0-dev)
 
 ..  _condition-typo3-version-example:
 
-Example: Condition only applies in an exact TYPO3 version like 12.4.0
+Example: Condition only applies in an exact TYPO3 version like 13.4.0
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ..  code-block:: typoscript
     :caption: EXT:site_package/Configuration/page.tsconfig
 
-    [typo3.version == "12.4.0"]
+    [typo3.version == "13.4.0"]
         // Your settings go here
     [END]
 
@@ -586,18 +586,18 @@ typo3.branch
     :name: condition-typo3-branch
     :type: string
 
-    TYPO3 branch (e.g. 12.4)
+    TYPO3 branch (e.g. 13.4)
 
 
 ..  _condition-typo3-branch-example:
 
-Example: Condition applies in all TYPO3 versions of a branch like 12.4
+Example: Condition applies in all TYPO3 versions of a branch like 13.4
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ..  code-block:: typoscript
     :caption: EXT:site_package/Configuration/page.tsconfig
 
-    [typo3.branch == "12.4"]
+    [typo3.branch == "13.4"]
         // Your settings go here
     [END]
 
@@ -770,14 +770,14 @@ Example: Condition applies if the current TYPO3 version matches a pattern
 ..  code-block:: typoscript
     :caption: EXT:site_package/Configuration/page.tsconfig
 
-    # True if current version is 12.4.x
-    [compatVersion("12.4")]
+    # True if current version is 13.4.x
+    [compatVersion("13.4")]
         // Your settings go here
     [END]
-    [compatVersion("12.4.0")]
+    [compatVersion("13.4.0")]
         // Your settings go here
     [END]
-    [compatVersion("12.4.1")]
+    [compatVersion("13.4.1")]
         // Your settings go here
     [END]
 
