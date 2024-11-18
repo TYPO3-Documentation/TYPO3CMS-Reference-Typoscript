@@ -150,20 +150,32 @@ tree.level
     :type: integer
 
     Current tree level. Only available in page TSconfig, not
-    in user TSconfig.
+    in user TSconfig. Starts at `1` (root level).
 
 ..  _condition-tree-level-example:
 
-Example: Condition applies on a page with level 0
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Example: Condition applies on a page on root level
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ..  code-block:: typoscript
     :caption: EXT:site_package/Configuration/page.tsconfig
 
-    # Check if page is on level 0:
-    [tree.level == 0]
+    # Check if page is on level 1 (root):
+    [tree.level == 1]
         // Your settings go here
     [END]
+
+..  hint::
+
+    In older versions before TYPO3 v10, this setting was available as
+    `treeLevel` variable.
+    That variable started the root level at value `0`, and now it starts at `1`.
+    Keep this in mind when migrating old conditions.
+
+    Unlike the frontend TypoScript condition `tree.level`, the backend tree level
+    is not affected by `pages.is_siteroot`. This means, for nested sites it cannot
+    be used to match "site roots" or in general any n-th levels of page tree depths.
+    It's the *absolute depth* of the entire page tree, starting with `1`.
 
 ..  index:: Conditions; tree.pagelayout
 ..  _condition-tree-pagelayout:
