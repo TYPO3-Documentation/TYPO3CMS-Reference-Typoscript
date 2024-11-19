@@ -22,7 +22,7 @@ Properties
 ==========
 
 ..  confval-menu::
-    :name: confval-group-1
+    :name: useroptions
     :display: table
     :type:
     :Default:
