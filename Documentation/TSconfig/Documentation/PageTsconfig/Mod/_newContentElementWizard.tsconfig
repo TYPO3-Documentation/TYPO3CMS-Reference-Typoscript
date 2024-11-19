@@ -1,0 +1,10 @@
+# Add a new element (header) to the "common" group
+mod.wizards.newContentElement.wizardItems.common.elements.header {
+    iconIdentifier = content-header
+    title = Header
+    description = Adds a header element only
+    tt_content_defValues {
+        CType = header
+    }
+}
+mod.wizards.newContentElement.wizardItems.common.show := addToList(header)
