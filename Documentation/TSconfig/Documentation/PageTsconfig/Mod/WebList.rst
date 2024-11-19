@@ -236,10 +236,8 @@ downloadPresets
     :file:`EXT:my_extension/Configuration/page.tsconfig` file and
     their table name(s).
 
-    ..  todo:: Link event after it is merged
-
     Additionally, the list of presets can be manipulated via the PSR-14 event
-    :php:`BeforeRecordDownloadPresetsAreDisplayedEvent`.
+    :ref:`\TYPO3\CMS\Backend\RecordList\Event\BeforeRecordDownloadPresetsAreDisplayedEvent <t3coreapi:BeforeRecordDownloadPresetsAreDisplayedEvent>`.
 
 ..  _pageTsConfigWebList-downloadPresets-example:
 
