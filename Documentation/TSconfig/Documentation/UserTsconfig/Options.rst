@@ -1006,3 +1006,23 @@ Properties
         :typoscript:`options.showHistory.[tableName]`.
         Any value set for a single table will override the default value set for
         :typoscript:`showHistory`.
+
+    ..  confval:: hideSets
+        :name: useroptions-hideSets
+        :type: comma separated list
+
+        Hides existing :ref:`Site sets <t3coreapi:site-sets>` from the list of available
+        sets for backend users, in case only a curated list of sets
+        shall be selectable:
+
+        ..  code-block:: typoscript
+            :caption: EXT:my_extension/Configuration/user.tsconfig
+
+            options.sites.hideSets := addToList(typo3/fluid-styled-content)
+
+        The :guilabel:`Site Management > Sites` GUI will not show hidden sets,
+        but makes one exception if a hidden set has already been applied to a site
+
+        In this case a set
+        marked as hidden will be shown in the list of currently activated sets (that means
+        it can be introspected and removed via backend UI).
