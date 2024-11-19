@@ -6,4 +6,5 @@
 return array_merge(
     include ('CodeSnippets/Config/DataProcessing.php'),
     include ('CodeSnippets/Config/Menus.php'),
+    include ('CodeSnippets/Config/TSconfig.php'),
 );

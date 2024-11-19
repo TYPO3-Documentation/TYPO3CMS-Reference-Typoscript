@@ -2,6 +2,7 @@
 
 declare(strict_types=1);
 
+namespace UsingSettingTSconfig\_PhpApi;
 final class _MyBackendLoggedInController
 {
     public function isUserToggleEnabled(): bool
