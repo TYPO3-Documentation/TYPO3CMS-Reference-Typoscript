@@ -13,9 +13,9 @@
                interlink-shortcode="t3tsref"
                confval-default="TypoScript"
     />
-    <project title="TypoScript Reference"
-             release="main (development)"
-             version="main (development)"
+    <project title="TypoScript Explained"
+             release="main"
+             version="main"
              copyright="since 2012 by the TYPO3 contributors"
     />
 </guides>

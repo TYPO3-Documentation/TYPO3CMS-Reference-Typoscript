@@ -7,14 +7,14 @@ return [
     [
         'action' => 'createCodeSnippet',
         'sourceFile' => 'EXT:examples/Configuration/TsConfig/Page/Mod/csvExport.tsconfig',
-        'targetFileName' => 'PageTSconfig/Mod/CsvExport.rst.txt',
+        'targetFileName' => 'CodeSnippets/PageTSconfig/Mod/CsvExport.rst.txt',
         'caption' => 'EXT:examples/Configuration/TsConfig/Page/Mod/csvExport.tsconfig',
         'language' => 'typoscript',
     ],
     [
         'action' => 'createCodeSnippet',
         'sourceFile' => 'EXT:examples/Configuration/TsConfig/Page/Mod/noExportRecordsLinks.tsconfig',
-        'targetFileName' => 'PageTSconfig/Mod/noExportRecordsLinks.rst.txt',
+        'targetFileName' => 'CodeSnippets/PageTSconfig/Mod/noExportRecordsLinks.rst.txt',
         'caption' => 'EXT:examples/Configuration/TsConfig/Page/Mod/noExportRecordsLinks.tsconfig',
         'language' => 'typoscript',
     ],

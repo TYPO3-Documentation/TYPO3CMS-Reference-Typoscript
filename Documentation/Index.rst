@@ -3,7 +3,7 @@
 ..  _start:
 
 ====================
-TypoScript Reference
+TypoScript Explained
 ====================
 
 :Version:
@@ -45,10 +45,11 @@ chapter.
     Introduction/Index
     Guide/Index
     UsingSetting/Index
+    UsingSettingTSconfig/Index
     Syntax/Index
 
 ..  toctree::
-    :caption: Reference
+    :caption: Frontend TypoScript
     :maxdepth: 1
     :titlesonly:
 
@@ -58,6 +59,14 @@ chapter.
     Functions/Index
     DataTypes/Index
     Conditions/Index
+
+..  toctree::
+    :caption: Backend TypoScript
+    :maxdepth: 1
+    :titlesonly:
+
+    PageTsconfig/Index
+    UserTsconfig/Index
 
 ..  toctree::
     :caption: Appendix

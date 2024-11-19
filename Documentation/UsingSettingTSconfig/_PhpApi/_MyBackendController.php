@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+namespace UsingSettingTSconfig\_PhpApi;
+
 use TYPO3\CMS\Backend\Utility\BackendUtility;
 use TYPO3\CMS\Core\Authentication\BackendUserAuthentication;
 
