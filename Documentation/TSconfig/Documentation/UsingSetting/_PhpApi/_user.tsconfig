@@ -1,0 +1,3 @@
+options.someToggle = 1
+options.somePartWithSubToggles = foo
+options.somePartWithSubToggles.aValue = bar

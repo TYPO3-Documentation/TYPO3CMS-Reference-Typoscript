@@ -1,0 +1,35 @@
+#########################
+# Git
+# global ignore file
+########################
+# ignoring temporary files (left by e.g. vim)
+# ignoring by common IDE's used directories/files
+# dont ignore .rej and .orig as we want to see/clean files after conflict resolution
+#
+# for local exclude patterns please edit .git/info/exclude
+#
+*.bak
+*.idea
+.Build/*
+*.project
+*.swp
+*NOT_VERSIONED*
+*~
+.buildpath
+.cache
+.DS_Store
+.env
+.project
+.session
+.settings
+.TemporaryItems
+.Trashes
+.webprj
+/_make
+/Documentation-GENERATED-temp/
+ehthumbs.db
+composer.lock
+nbproject
+Thumbs.db
+var/
+.cache/

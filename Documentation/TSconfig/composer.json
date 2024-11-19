@@ -1,0 +1,90 @@
+{
+    "name": "typo3/reference-tsconfig",
+    "type": "typo3-cms-documentation",
+    "description": "Page TSconfig and User TSconfig reference.",
+    "license": "OPL-1.0",
+    "require": {
+      "typo3/cms-core": "^12.4"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "extra": {
+        "typo3/cms": {
+            "web-dir": ".Build/public",
+            "extension-key": "t3docs-reference-tsconfig"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "typo3/cms-composer-installers": true,
+            "typo3/class-alias-loader": true
+        },
+        "bin-dir": ".Build/bin",
+        "sort-packages": true,
+        "vendor-dir": ".Build/vendor"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.48",
+        "t3docs/codesnippet": "dev-main",
+        "t3docs/examples": "^12.0",
+        "typo3/cms-adminpanel": "^12.4",
+        "typo3/cms-backend": "^12.4",
+        "typo3/cms-belog": "^12.4",
+        "typo3/cms-beuser": "^12.4",
+        "typo3/cms-dashboard": "^12.4",
+        "typo3/cms-extbase": "^12.4",
+        "typo3/cms-extensionmanager": "^12.4",
+        "typo3/cms-felogin": "^12.4",
+        "typo3/cms-filelist": "^12.4",
+        "typo3/cms-filemetadata": "^12.4",
+        "typo3/cms-fluid": "^12.4",
+        "typo3/cms-fluid-styled-content": "^12.4",
+        "typo3/cms-form": "^12.4",
+        "typo3/cms-frontend": "^12.4",
+        "typo3/cms-impexp": "^12.4",
+        "typo3/cms-indexed-search": "^12.4",
+        "typo3/cms-info": "^12.4",
+        "typo3/cms-install": "^12.4",
+        "typo3/cms-linkvalidator": "^12.4",
+        "typo3/cms-lowlevel": "^12.4",
+        "typo3/cms-opendocs": "^12.4",
+        "typo3/cms-recycler": "^12.4",
+        "typo3/cms-redirects": "^12.4",
+        "typo3/cms-reports": "^12.4",
+        "typo3/cms-rte-ckeditor": "^12.4",
+        "typo3/cms-scheduler": "^12.4",
+        "typo3/cms-seo": "^12.4",
+        "typo3/cms-setup": "^12.4",
+        "typo3/cms-sys-note": "^12.4",
+        "typo3/cms-t3editor": "^12.4",
+        "typo3/cms-tstemplate": "^12.4",
+        "typo3/cms-viewpage": "^12.4",
+        "typo3/cms-workspaces": "^12.4"
+    },
+    "scripts": {
+        "check": [
+            "@check:php",
+            "@check:rst"
+        ],
+        "check:php": [
+            "@check:php:lint",
+            "@check:php:cs"
+        ],
+        "check:php:cs": "Build/Scripts/runTests.sh -n -s cgl",
+        "check:php:lint": "Build/Scripts/runTests.sh -s lint",
+        "check:rst": "Build/Scripts/runTests.sh -s checkRst",
+        "fix": [
+            "@fix:php"
+        ],
+        "fix:php": [
+            "@fix:php:cs"
+        ],
+        "fix:php:cs": "Build/Scripts/runTests.sh -s cgl",
+        "generate:codesnippets": [
+            ".Build/vendor/bin/typo3 codesnippet:create Documentation/CodeSnippets/"
+        ],
+        "generate": [
+            "@generate:codesnippets"
+        ]
+    }
+}
