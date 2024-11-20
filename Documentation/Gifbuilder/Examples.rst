@@ -9,6 +9,25 @@ Examples
 ..  contents::
     :local:
 
+..  _gifbuilder-examples-avif:
+
+Using the AVIF format
+=====================
+
+..  versionadded:: 13.3
+
+AVIF is an image format, that is supported by most modern browsers, and usually
+has a better compression (= smaller file size) than jpg files.
+
+..  important::
+
+    Before using this feature, please check whether the used operating system
+    actually supports de/encoding AVIF files. Especially Debian 11 (Bullseye)
+    and older or systems forked from that may lack AVIF support.
+
+..  literalinclude:: _snippets/_avif.typoscript
+    :caption: EXT:config/sites/my_site/setup.typoscript
+
 
 Masking semi-transparent images (Logos) onto other images
 =========================================================

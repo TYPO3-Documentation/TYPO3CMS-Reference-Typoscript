@@ -1,0 +1,15 @@
+page.10 = IMAGE
+page.10 {
+  file = GIFBUILDER
+  file {
+    backColor = yellow
+    XY = 1024,199
+    format = avif
+    quality = 44
+    speed = 1
+
+    10 = IMAGE
+    10.offset = 10,10
+    10.file = 1:/my-image.jpg
+  }
+}

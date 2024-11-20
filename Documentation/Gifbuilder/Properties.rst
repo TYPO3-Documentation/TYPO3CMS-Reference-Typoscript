@@ -153,15 +153,9 @@ charRangeMap
 format
 ======
 
-..  versionchanged:: 13.0
-    The default format is now "png". Before TYPO3 v13.0 this was "gif".
-
-..  versionadded:: 13.0
-    Support for WebP has been added.
-
 ..  confval:: format
     :name: gifbuilder-properties-format
-    :type: "gif" / "jpg" / "jpeg" / "png" / "webp"
+    :type: "gif" / "jpg" / "jpeg" / "png" / "webp" / "avif"
     :Default: png
 
     File type of the output image.
@@ -170,8 +164,15 @@ format
 
     *   :ref:`$TYPO3_CONF_VARS['GFX']['jpg_quality'] <t3coreapi:typo3ConfVars_gfx_jpg_quality>` for a JPG image
     *   :ref:`$TYPO3_CONF_VARS['GFX']['webp_quality'] <t3coreapi:typo3ConfVars_gfx_webp_quality>` for a WebP image
+    *   :ref:`$TYPO3_CONF_VARS['GFX']['avif_quality'] <t3coreapi:typo3ConfVars_gfx_webp_quality>` for a AVIF image
 
     or via the :ref:`gifbuilder-properties-quality` property on a per-image basis.
+
+    ..  versionchanged:: 13.0
+        The default format is now "png". Before TYPO3 v13.0 this was "gif".
+
+    ..  versionadded:: 13.0
+        Support for WebP and AVIF have been added.
 
 
 .. _gifbuilder-properties-maxHeight:
@@ -230,6 +231,18 @@ quality
         quality to "101" equivalents to `"lossless" compression`_.
 
     ..  _"lossless" compression: https://developers.google.com/speed/webp/docs/compression#lossless_webp
+
+.. _gifbuilder-properties-speed:
+
+speed
+=====
+
+..  confval:: speed
+    :name: gifbuilder-properties-speed
+    :type: integer
+
+    Set the "speed" for files in format AVIF (See
+    https://www.php.net/manual/en/function.imageavif.php for more details).
 
 
 .. _gifbuilder-properties-transparentBackground:
