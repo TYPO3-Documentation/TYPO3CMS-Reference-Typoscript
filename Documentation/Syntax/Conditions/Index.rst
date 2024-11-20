@@ -38,7 +38,7 @@ condition that checks for a logged in frontend user.
 
 For a reference of allowed condition criteria, please refer to the according
 chapter in the :ref:`frontend TypoScript Reference <conditions>` and
-the :ref:`backend TSconfig Reference <t3tsconfig:conditions>`. These references
+the :ref:`backend TSconfig Reference <tsconfig-conditions>`. These references
 come with examples for single condition criteria as well.
 
 The TSconfig and TypoScript backend modules show lists of existing conditions

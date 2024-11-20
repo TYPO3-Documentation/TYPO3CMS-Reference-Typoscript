@@ -25,11 +25,10 @@ TypoScript Explained
 ----
 
 This document is a complete reference of all object types and properties of
-TypoScript as used in frontend TypoScript configuration.
+TypoScript as used in frontend TypoScript and backend TypoScript, also called TSconfig.
 
 You can find a quick guide to TypoScript configuration at
-:ref:`guide`, insights into TYPO3 backend configuration with
-TypoScript in the :ref:`TSconfig <t3tsconfig:start>` documentation and
+:ref:`guide` and
 explanations of TypoScript syntax in the ":ref:`TypoScript Syntax <typoscript-syntax>`"
 chapter.
 
