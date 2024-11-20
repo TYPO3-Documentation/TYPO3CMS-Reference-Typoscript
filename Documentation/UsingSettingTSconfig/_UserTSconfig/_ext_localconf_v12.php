@@ -12,6 +12,6 @@ $versionInformation = GeneralUtility::makeInstance(Typo3Version::class);
 // Only include user.tsconfig if TYPO3 version is below 13 so that it is not imported twice.
 if ($versionInformation->getMajorVersion() < 13) {
     ExtensionManagementUtility::addUserTSConfig(
-        '@import "EXT:my_sitepackage/Configuration/user.tsconfig"'
+        '@import "EXT:my_sitepackage/Configuration/user.tsconfig"',
     );
 }
