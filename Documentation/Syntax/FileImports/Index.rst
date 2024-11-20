@@ -119,9 +119,9 @@ Alternatives to using file imports
 
 The following features can make file inclusion unnecessary:
 
-*   :ref:`Automatic global inclusion of user TSconfig of extensions <t3tsconfig:usersettingdefaultusertsconfig>`
-*   :ref:`Automatic global inclusion of page TSconfig of extensions <t3tsconfig:pagesettingdefaultpagetsconfig>`
-*   :ref:`Automatic page TSconfig on site level <t3tsconfig:include-static-page-tsconfig-per-site>`
+*   :ref:`Automatic global inclusion of user TSconfig of extensions <usersettingdefaultusertsconfig>`
+*   :ref:`Automatic global inclusion of page TSconfig of extensions <pagesettingdefaultpagetsconfig>`
+*   :ref:`Automatic page TSconfig on site level <include-static-page-tsconfig-per-site>`
 *   :ref:`TypoScript provider for sites and sets <t3coreapi:site-sets-typoscript>`
     automatically loads TypoScript per site when the site set is included in the
     site configuration.
