@@ -882,7 +882,7 @@ record.identifier
 
     The same identifier is used as key in the TypoScript configuration of
     the frontend rendering: :ref:`setup-config-recordLinks` and the :ref:`TSconfig
-    backend link handler configuration <t3tsconfig:pagetcemaintables-linkhandler>`
+    backend link handler configuration <pagetcemaintables-linkhandler>`
 
 ..  _typolink-handler-record-uid:
 

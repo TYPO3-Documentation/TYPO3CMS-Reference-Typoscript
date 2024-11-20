@@ -98,7 +98,7 @@ addPageCacheTags
 
     Pages, which have been cached with a tag, can be deleted from cache
     again with the TSconfig option
-    :ref:`TCEMAIN.clearCacheCmd <t3tsconfig:pagetcemain-clearcachecmd>`.
+    :ref:`TCEMAIN.clearCacheCmd <pagetcemain-clearcachecmd>`.
 
     ..  note::
         If you instead want to store rendered content into the

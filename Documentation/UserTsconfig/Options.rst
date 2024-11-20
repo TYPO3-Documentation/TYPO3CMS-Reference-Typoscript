@@ -819,7 +819,7 @@ Properties
 
             ..  versionadded:: 13.1
                 This setting is the successor of the removed
-                :ref:`t3tsconfig/13:useroptions-pageTree-backgroundColor`.
+                :ref:`t3tsref/13:useroptions-pageTree-backgroundColor`.
 
             Labels offer customizable color markings for tree nodes and require an
             associated label for accessibility.

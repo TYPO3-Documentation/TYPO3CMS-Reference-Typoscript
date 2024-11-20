@@ -8,8 +8,7 @@ About This Manual
 =================
 
 This document is a complete reference to all objects types and properties of
-TypoScript as used in frontend TypoScript configuration, and not in
-:ref:`TSconfig backend configuration <t3tsconfig:start>`.
+TypoScript as used in frontend TypoScript and backend TypoScript, also called TSconfig.
 
 .. seealso::
 

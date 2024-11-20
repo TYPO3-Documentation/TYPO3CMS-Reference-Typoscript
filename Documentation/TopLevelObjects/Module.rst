@@ -23,7 +23,7 @@ Therefore they are usually done in the file
     that switched to the :ref:`simplified backend templating <changelog:feature-96812>`
     no longer use the frontend TypoScript based override approach. This has been
     superseded by a general override strategy based on TSconfig:
-    :ref:`templates <t3tsconfig:pagetemplates>`.
+    :ref:`templates <pagetemplates>`.
 
 ..  _module-options:
 
@@ -33,7 +33,7 @@ Options for simple backend modules
 ..  warning::
     It is strongly recommended not to use TypoScript in custom **backend modules**, for example
     :typoscript:`module.tx_myextension`. Use custom
-    :ref:`Page TSconfig in namespace tx_* <t3tsconfig:page-tsconfig-extension-namespace>`
+    :ref:`Page TSconfig in namespace tx_* <page-tsconfig-extension-namespace>`
     instead.
 
 The configuring backend modules via frontend TypoScript
@@ -82,7 +82,7 @@ view.templateRootPaths
         that switch to the :ref:`simplified backend templating <changelog:feature-96812>`
         no longer use the frontend TypoScript based override approach. This has been
         superseded by a general override strategy based on TSconfig:
-        :ref:`templates <t3tsconfig:pagetemplates>`.
+        :ref:`templates <pagetemplates>`.
 
     Used to define several paths for templates, which are executed in reverse
     order (the paths are searched from bottom to top). The first folder where
@@ -120,7 +120,7 @@ view.partialRootPaths
         that switch to the :ref:`simplified backend templating <changelog:feature-96812>`
         no longer use the frontend TypoScript based override approach. This has been
         superseded by a general override strategy based on TSconfig:
-        :ref:`templates <t3tsconfig:pagetemplates>`.
+        :ref:`templates <pagetemplates>`.
 
     Used to define several paths for partials, which will be executed in reverse
     order. The first folder where the desired partial is found, is used. The
