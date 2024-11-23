@@ -23,6 +23,5 @@ The TypoScript template configuration can be viewed and edited in the
     AddTypoScriptWithExtensions
     AccessTypoScriptWithExtensions
     Constants
-    TheConstantEditor
     Register
     Debugging
