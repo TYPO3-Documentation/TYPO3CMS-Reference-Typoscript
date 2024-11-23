@@ -1,10 +1,12 @@
+:navigation-title: TypoScript in Extensions
+
 ..  include:: /Includes.rst.txt
 ..  index:: TypoScript in extensions
 ..  _extdev-add-typoscript:
 
-================================
-Add TypoScript in your extension
-================================
+================================================
+Provide frontend TypoScript in a TYPO3 extension
+================================================
 
 ..  versionchanged:: 13.1
     TypoScript on a per-site basis can now be included via
@@ -18,8 +20,8 @@ Add TypoScript in your extension
 ..  index:: TypoScript in extensions; File locations
 ..  _extdev-add-typoscript-extension:
 
-Create TypoScript files in your extension
-=========================================
+Provide TypoScript in your extension or site package
+====================================================
 
 TypoScript files **must** have the ending :file:`.typoscript`.
 
@@ -28,10 +30,11 @@ extension. Read more about how to
 :ref:`provide the TypoScript as set for TYPO3 v13 and above <extdev-add-typoscript-sets>`
 and :ref:`how to provide TypoScript for both TYPO3 v13 and v12 <extdev-add-typoscript-sets-v12>`.
 
-*   :file:`constants.typoscript` contains the constants
-*   :file:`setup.typoscript` contains the TypoScript setup
+*   :file:`constants.typoscript` contains the frontend TypoScript constants
+*   :file:`setup.typoscript` contains the frontend TypoScript
 
 ..  _extdev-add-typoscript-sets:
+..  _extdev-add-typoscript-sets-typoscript:
 
 TypoScript provided as site set (only TYPO3 v13.1 and above)
 ============================================================
@@ -40,10 +43,6 @@ The file structure of the extension could, for example look like this:
 
 ..  directory-tree::
     :show-file-icons: true
-
-    *   Classes
-
-        *   ...
 
     *   Configuration
 
@@ -93,84 +92,187 @@ The sub set for an optional feature
     :language: yaml
     :caption: EXT:my_extension/Configuration/Sets/MyExtensionWithACoolFeature/config.yaml
 
-..  _extdev-add-typoscript-sets-typoscript:
 
-TypoScript files provided by the sets
--------------------------------------
+..  _extdev-add-typoscript-sets-override:
 
-The TypoScript placed in the same folder like the set, contains your
-configurations.
+Overriding the TypoScript
+-------------------------
 
-..  _extdev-add-typoscript-sets-v12:
+The TypoScript provided in the site set will be loaded exactly once and respect
+the dependencies defined in the site set configuration. Therefore if you
+have to override the frontend TypoScript of another site set your site set
+should depend on the other site set:
 
-TypoScript provided by extensions supporting TYPO3 v12.4 and v13
-================================================================
+..  code-block:: yaml
+    :caption: packages/my_site_package/Configuration/Sets/MySitePackage/config.yaml
 
-When an extension provides TypoScript and should be compatible with both
-TYPO3 v12.4 and v13, you can provide site sets but still support including
-the TypoScript in the :sql:`sys_template` record via `static_file_include`'s.
+    name: my-vendor/my-site-package
+    label: My Set
+    dependencies:
+      - my-vendor/my-other-set
+      - some-vendor/some-extension
 
-The files in the sets are the same as in the
-:ref:`example for TYPO3 v13 only <extdev-add-typoscript-sets>`.
+Your extension can then safely override frontend TypoScript of the `some_extension`,
+for example:
 
-The extended file structure of the extension could, for example look like this:
+..  code-block:: typoscript
+    :caption: packages/my_site_package/Configuration/Sets/MySitePackage/setup.typoscript
 
-..  directory-tree::
-    :show-file-icons: true
-
-    *   Classes
-
-        *   ...
-
-    *   Configuration
-
-        *   Sets
-
-            *   MyExtension
-
-                *   :ref:`config.yaml <extdev-add-typoscript-sets-main>`
-                *   :ref:`constants.typoscript <extdev-add-typoscript-sets-typoscript>`
-                *   :ref:`setup.typoscript <extdev-add-typoscript-sets-typoscript>`
-
-            *   MyExtensionWithACoolFeature
-
-                *   :ref:`config.yaml <extdev-add-typoscript-sets-feature>`
-                *   :ref:`setup.typoscript <extdev-add-typoscript-sets-typoscript>`
-
-        *   TCA
-
-            *   Overrides
-
-                sys_template.php
-
-
-    *   Resources
-
-        *   ...
-
-    *   composer.json
-    *   ...
-
+    plugin.some_extension_pi1.settings.someSetting = Special setting
 
 ..  _extdev-add-typoscript-sets-v12-static_includes:
 ..  _extdev-static-includes:
+..  _extdev-add-typoscript-sets-v12:
 
-Only when supporting TYPO3 v12.4: Make TypoScript available for static includes
--------------------------------------------------------------------
+Supporting both site sets and TypoScript records
+================================================
 
-Make TypoScript available for static includes (only needed if your extensions aims to support TYPO3 v12.4):
+..  versionchanged:: 13.1
+    With TYPO3 13.1
+    `site sets as TypoScript provider <https://docs.typo3.org/permalink/t3coreapi:site-sets-typoscript>`_
+    where introduced. Existing extensions **should** support site sets as well as
+    TypoScript records for backward compatibility reasons.
 
-..  literalinclude:: _Sets/_TcaOverridesSystemplateV12.php
-    :language: php
-    :caption: EXT:my_extension/Configuration/TCA/Overrides/sys_template.php
+..  warning::
+    For historic reasons you might still see filenames like :file:`setup.ts` and
+    :file:`setup.txt`. These files **cannot** be included with the
+    :ref:`@import <t3tsref:typoscript-syntax-import>` syntax. All frontend
+    TypoScript files **must** end on `.typoscript`.
 
-If you include the TypoScript this way, it will not be automatically loaded.
-You MUST load it by adding the static include in the :guilabel:`Web > Template`
-module in the backend, see :ref:`static-includes`. This has the advantage of
-better configurability.
+.. _extension-configuration-typoscript-set-record-one:
 
-This will load your constants and your setup once the template is
-included statically.
+One TypoScript include set
+--------------------------
+
+If your extension supported one static file include you should provide the same
+files in your main site set as well:
+
+.. code-block:: php
+   :caption: EXT:my_extension/Configuration/TCA/Overrides/sys_template.php (before and after)
+
+   \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
+       'my_extension',
+       'Configuration/TypoScript/',
+       'Examples TypoScript'
+   );
+
+In your main site set provide the same files that where provided as includes
+by :php:`\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile`
+until now:
+
+..  directory-tree::
+    :level: 3
+    :show-file-icons: true
+
+    *   packages/my_extension/Configuration/
+
+        *   Sets
+
+            *   MySet
+
+                *   config.yaml
+                *   constants.typoscript
+                *   setup.typoscript
+
+
+        *   TypoScript
+
+            *   constants.typoscript
+            *   setup.typoscript
+
+..  code-block:: typoscript
+    :caption: packages/my_extension/Configuration/Sets/MySet/constants.typoscript
+
+    @import 'EXT:my_extension/Configuration/TypoScript/setup.typoscript'
+
+..  code-block:: typoscript
+    :caption: packages/my_extension/Configuration/Sets/MySet/setup.typoscript
+
+    @import 'EXT:my_extension/Configuration/TypoScript/setup.typoscript'
+
+.. _extension-configuration-typoscript-set-record-multiple:
+
+Multiple TypoScript include sets
+--------------------------------
+
+If there should be more then one set of TypoScript templates that may be
+included, they were usually stored in sub folders of
+:path:`Configuration/TypoScript` until now.
+
+When introducing site sets usually one site set per TypoScript record include
+set is needed:
+
+..  directory-tree::
+    :level: 3
+    :show-file-icons: true
+
+    *   packages/my_extension/Configuration
+
+            *   TypoScript
+
+                *   SpecialFeature1
+
+                    *   constants.typoscript
+                    *   setup.typoscript
+
+                *   SpecialFeature2
+
+                    *   setup.typoscript
+
+                *   constants.typoscript
+                *   setup.typoscript
+
+            *   Sets
+
+                *   MyMainSet
+
+                    *   config.yaml
+                    *   constants.typoscript
+                    *   setup.typoscript
+
+                *   MySpecialFeature1Set
+
+                    *   config.yaml
+                    *   constants.typoscript
+                    *   setup.typoscript
+
+                *   MySpecialFeature2Set
+
+                    *   config.yaml
+                    *   setup.typoscript
+
+For backward compability reasons :php:`ExtensionManagementUtility::addStaticFile`
+still needs to be called for each folder that should be available in the TypoScript
+template record:
+
+.. code-block:: php
+   :caption: EXT:my_extension/Configuration/TCA/Overrides/sys_template.php
+
+   \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
+       'my_extension',
+       'Configuration/TypoScript/',
+       'My Extension - Main TypoScript'
+   );
+
+   \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
+       'my_extension',
+       'Configuration/TypoScript/Example1/',
+       'My Extension - Additional example 1'
+   );
+
+   \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
+       'my_extension',
+       'Configuration/TypoScript/SpecialFeature2/',
+       'My Extension - Some special feature'
+   );
+
+Each site set then provides the TypoScript files the according location by
+importing it, for example:
+
+..  code-block:: typoscript
+    :caption: packages/my_extension/Configuration/Sets/MySet/setup.typoscript
+
+    @import 'EXT:my_extension/Configuration/TypoScript/MySpecialFeature2Set/setup.typoscript'
 
 ..  index:: TypoScript in extensions; Load always
 ..  _extdev-always-load:
@@ -178,18 +280,21 @@ included statically.
 Make TypoScript available (always load)
 =======================================
 
-Only do this, if your TypoScript must really be always loaded in your site.
-If this is not the case, use the method described in the previous section
-:ref:`extdev-add-typoscript-sets`.
+
+Use :php:`ExtensionManagementUtility::addTypoScript` if the frontend
+TypoScript **must** be available in backend modules without page context,
+for example to :ref:`register the YAML of the EXT:form system extension
+for the backend <typo3/cms-form:concepts-configuration-yamlregistration-backend>`.
 
 ..  literalinclude:: _Sets/_ext_localconf.php
-    :language: php
     :caption: EXT:my_extension/ext_localconf.php
 
-It is also possible to put your TypoScript in a file called
-:ref:`ext_typoscript_setup.typoscript <t3coreapi:ext_typoscript_setup_typoscript>`
-or :ref:`ext_typoscript_constants.typoscript <t3coreapi:ext_typoscript_constants_typoscript>`
-(for constants).
+..  warning::
+    While the content from the files
+    `ext_typoscript_setup.typoscript <https://docs.typo3.org/permalink/t3coreapi:ext_typoscript_setup_typoscript>`_
+    and `ext_typoscript_constants.typoscript <https://docs.typo3.org/permalink/t3coreapi:ext_typoscript_constants_typoscript>`_
+    is loaded by default in sites based on **TypoScript records** it is not
+    loaded in sites depending on **site sets as TypoScript providers**.
 
 
 More information
