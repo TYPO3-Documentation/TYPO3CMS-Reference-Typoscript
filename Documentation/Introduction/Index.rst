@@ -1,5 +1,6 @@
 .. include:: /Includes.rst.txt
 
+.. _about:
 .. _introduction:
 
 ============
