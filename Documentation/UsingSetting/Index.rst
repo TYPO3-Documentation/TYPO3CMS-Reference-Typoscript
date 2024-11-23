@@ -1,7 +1,9 @@
+:navigation-title: Usage
 ..  include:: /Includes.rst.txt
 ..  index:: TypoScript; Using and setting
 ..  _using-and-setting:
 
+============================
 Using and setting TypoScript
 ============================
 
@@ -19,8 +21,8 @@ The TypoScript template configuration can be viewed and edited in the
     :titlesonly:
 
     SiteTypoScriptProvider
-    Entering
     AddTypoScriptWithExtensions
+    Entering
     AccessTypoScriptWithExtensions
     Constants
     TheConstantEditor

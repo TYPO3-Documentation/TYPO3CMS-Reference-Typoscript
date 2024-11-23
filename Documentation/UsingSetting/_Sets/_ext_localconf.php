@@ -7,5 +7,13 @@ defined('TYPO3') or die();
 ExtensionManagementUtility::addTypoScript(
     'my_extension',
     'setup',
-    "@import 'EXT:my_extension/Configuration/TypoScript/setup.typoscript'",
+    '
+        module.tx_form {
+            settings {
+                yamlConfigurations {
+                    100 = EXT:my_site_package/Configuration/Form/CustomFormSetup.yaml
+                }
+            }
+        }
+    ',
 );
