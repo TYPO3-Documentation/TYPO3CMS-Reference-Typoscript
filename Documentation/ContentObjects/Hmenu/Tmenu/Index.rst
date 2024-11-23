@@ -37,6 +37,12 @@ TMENU item states
 
 These properties are all the item states used by :typoscript:`TMENU`.
 
+..  warning::
+
+    Be aware to properly escape menu item content in order to prevent
+    Cross-site scripting vulnerabilities. It is therefore highly recommended 
+    to use :php:`stdWrap.htmlSpecialChars = 1` in all TMENU item states.
+
 The following Item states are listed from the least to the highest priority:
 
 ..  confval-menu::
