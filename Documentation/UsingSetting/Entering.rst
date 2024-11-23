@@ -43,17 +43,47 @@ a TypoScript record or by having a
 
 If TypoScript was added by a record, it is linked.
 
+..  _typoscript-syntax-constant-editor:
+..  _constant-editor:
+
+Submodule "Constant Editor"
+===========================
+
+..  note::
+    The constant editor is only available in sites that are based on a
+    TypoScript record.
+
+..  versionchanged:: 13.3
+    With the introduction of the site
+    `Site settings editor <https://docs.typo3.org/permalink/t3coreapi:site-settings-editor>`_
+    settings can be edited in a comfortable and type safe way on site level.
+
+    The constant editor is kept for backward compatibility.
+
+The backend module :guilabel:`Site Management > TypoScript > Constant Editor`
+used a special format of
+`Comments <https://docs.typo3.org/permalink/t3tsref:typoscript-syntax-syntax-comment-blocks>`_
+to display a form for editing the constants.
+
+..  figure:: /Images/ManualScreenshots/TypoScriptModule/ConstantEditor.png
+    :alt: Screenshot of the TYPO3 Backend showing the constant editor
+
+It is not recommended to newly introduce constants in the constant editor.
+The documentation of the constant editors comment format can still be found
+at `Comment Syntax <https://docs.typo3.org/permalink/t3tsref:typoscript-syntax-constant-editor-comments@12.4>`_
+
+
 ..  _typoscript_module_edit:
 
 Submodule "Edit TypoScript Record"
 ==================================
 
+..  note::
+    The constant editor is only available in sites that are based on a
+    TypoScript record.
+
 This can be done in the :guilabel:`Site Management > TypoScript` module in
 the submodule :guilabel:`Edit TypoScript Record`.
-
-..  hint::
-    It is best practice to use a site package extension to bundle
-    various configuration in an extension. See :ref:`t3sitepackage:start`.
 
 ..  figure:: /Images/ManualScreenshots/TypoScriptModule/EditTypoScriptRecord.png
     :alt: The submodule "Edit TypoScript Record" in the TYPO3 Backend.
