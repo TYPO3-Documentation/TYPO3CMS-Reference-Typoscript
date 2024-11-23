@@ -1,3 +1,5 @@
+:navigation-title: TypoScript in Sites
+
 ..  include:: /Includes.rst.txt
 ..  _typoscript-site-sets:
 
