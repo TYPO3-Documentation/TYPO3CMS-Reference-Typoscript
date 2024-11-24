@@ -1,71 +1,64 @@
+:navigation-title: Introduction
 .. include:: /Includes.rst.txt
+..  _typoscript-syntax-typoscript-templates:
+..  _typoscript-syntax-typoscript-templates-usage:
+..  _introduction:
 
-.. _about:
-.. _introduction:
+============================
+Introduction into TypoScript
+============================
 
-============
-Introduction
-============
+TypoScript is a configuration language used to configure both the frontend
+output and the backend of a a TYPO3 web site.
 
-This document serves as a manual for TypoScript and TSconfig, two
-essential configuration tools in TYPO3.
-
-.. _typoscript-syntax-typoscript-templates:
-
-TypoScript
-==========
-
-TypoScript is a configuration language used to define the frontend rendering
-in TYPO3. It is not a programming language but a means of configuring the
+TypoScript is not a programming language but a means of configuring the
 website.
 
-Key sections to explore:
+..  contents::
 
-*   :ref:`TypoScript Syntax <typoscript-syntax>` for an introduction to the syntax.
-*   :ref:`TypoScript Reference <data-types>` for details on data types, object types, functions, and conditions.
-*   :ref:`guide` for configuring frontend behavior using TypoScript.
-*   :ref:`using-and-setting` for extending and setting TypoScript properties.
+..  _introduction-frontend-typoscript:
 
-.. _typoscript-syntax-typoscript-templates-usage:
-
-Templating in TYPO3
+Frontend TypoScript
 ===================
 
-Frontend rendering in TYPO3 can use several methods, each requiring some TypoScript configuration:
+Frontend TypoScript is mainly used to configure which data should be send to the
+Fluid templates.
 
-**Best Practice:**
+It can also be used to define settings send to Extbase plugins, metadata for
+a whole page etc.
 
-- **Fluid Templates**: Use the `Fluid <https://typo3.org/fluid>`__ engine with TypoScript's :ref:`cobj-fluidtemplate` to integrate external HTML templates with Fluid variables.
-  * See :ref:`t3sitepackage:start` for creating site packages and custom themes.
-  * See :ref:`t3coreapi:adding-your-own-content-elements` to create custom content elements with TypoScript and Fluid.
+In the beginning of TYPO3, TypoScript was used as templating language. In modern
+project it is not common to do that anymore.
 
-**Other Methods:**
-
-- External templating engines via extensions.
-- Custom PHP code for advanced use cases.
-- TypoScript content objects for fully configurable rendering.
-
-**Outdated Method:**
-
-- **HTML Templates** using markers and subparts (:ref:`cobj-template`) are no longer recommended.
+For an introduction see
+`Getting started: A quick introduction into TypoScript <https://docs.typo3.org/permalink/t3tsref:guide>`_.
 
 ..  _about-tsconfig:
 
-TSconfig
-========
+Backend TypoScript / TSconfig
+=============================
 
-TSconfig customizes the TYPO3 backend for pages, users, and groups without requiring PHP code. It is a TypoScript-like syntax, used for backend configuration, distinct from TypoScript, which configures the frontend.
+Backend TypoScript, also called TSconfig, can be used to configure the output
+of certain forms etc in the TYPO3 backend.
 
-**Key Concepts:**
+..  _about-page-tsconfig:
 
-- **Page TSconfig**: Configures backend behavior on a per-page basis.
-- **User TSconfig**: Configures options for specific users or groups.
+Page TSconfig
+-------------
 
-TSconfig is primarily for integrators to control what backend users see and interact with, including:
+Page TSconfig can be made available globally, on a per site or per page level.
 
-- Configuring backend options and views.
-- Customizing the Admin Panel in the frontend, which is tightly linked to backend user roles.
+For the possibilities see the
+`Page TSconfig Reference <https://docs.typo3.org/permalink/t3tsref:pagetoplevelobjects>`_.
 
-For details on syntax, refer to :ref:`TYPO3 Explained <t3tsref:typoscript-syntax>`. Remember, properties from the :ref:`TypoScript Reference <t3tsref:start>` cannot be used in TSconfig and vice versa.
+..  _about-user-tsconfig:
 
-This document provides the foundational concepts and serves as a reference for both TypoScript and TSconfig, empowering developers and integrators to customize TYPO3 effectively.
+User TSconfig
+-------------
+
+User TSconfig can be made available globally for certain user groups or certain
+users. It cannot be set for just one site or page. It can however override
+:ref:`about-page-tsconfig`.
+
+For the possibilities see the
+`User TSconfig reference <https://docs.typo3.org/permalink/t3tsref:usertoplevelobjects>`_.
