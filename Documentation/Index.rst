@@ -73,5 +73,4 @@ chapter.
 
     AppendixA/Index
     Glossary
-    About
     Sitemap
