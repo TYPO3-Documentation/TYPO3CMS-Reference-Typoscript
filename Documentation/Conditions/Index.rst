@@ -185,6 +185,10 @@ tree.pagelayout
             # ...
         [END]
 
+        # Using backend layout records multiple
+        [tree.pagelayout in ['2','3','4','5']]
+            # ...
+        [END]
 
 ..  index::
     Conditions; tree.rootLine
