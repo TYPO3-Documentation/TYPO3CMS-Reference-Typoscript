@@ -176,12 +176,12 @@ tree.pagelayout
         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
         # Using backend layout records
-        [tree.pagelayout == 2]
+        [tree.pagelayout === "2"]
             # ...
         [END]
 
         # Using the TSconfig provider of backend layouts
-        [tree.pagelayout == "pagets__Home"]
+        [tree.pagelayout === "pagets__Home"]
             # ...
         [END]
 
@@ -189,6 +189,12 @@ tree.pagelayout
         [tree.pagelayout in ['2','3','4','5']]
             # ...
         [END]
+
+    ..  attention::
+        The value of `pagelayout` is a string, even when using BE layout records.
+        This is especially important in conditions using `in` as shown here since
+        this operator performs a strict comparison by default. For clarity and
+        consistency strict comparisons should also be used in other cases.
 
 ..  index::
     Conditions; tree.rootLine
