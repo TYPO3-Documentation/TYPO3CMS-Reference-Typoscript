@@ -1,9 +1,8 @@
 page = PAGE
 page {
-  10 = FLUIDTEMPLATE
+  10 = PAGEVIEW
   10 {
-    templateName = Default
-    templateRootPaths.10 = EXT:site_package/Resources/Private/Templates/Pages/
+    paths.10 = EXT:my_site_package/Resources/Private/Templates/Pages/
     # ...
     dataProcessing {
       10 = menu
