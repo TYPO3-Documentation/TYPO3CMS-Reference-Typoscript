@@ -40,12 +40,12 @@ boolean
 
     ..  rubric:: Examples
 
-    .. code-block:: typoscript
-       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-       dummy.enable = 0   # false, preferred notation
-       dummy.enable = 1   # true,  preferred notation
-       dummy.enable =     # false, because the value is empty
+        dummy.enable = 0   # false, preferred notation
+        dummy.enable = 1   # true,  preferred notation
+        dummy.enable =     # false, because the value is empty
 
 ..  index:: Simple data types; date-conf
 ..  _data-type-date-conf:
