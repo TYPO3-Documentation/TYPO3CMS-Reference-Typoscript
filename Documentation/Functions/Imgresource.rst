@@ -16,7 +16,7 @@ An imgResource one of the following:
     Filetypes can be anything among the allowed types defined in the
     configuration variable
     :php:`$GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext']`.  Standard is
-    pdf, gif, jpg, jpeg, tif, bmp, ai, pcx, tga, png.
+    gif,jpg,jpeg,tif,tiff,bmp,pcx,tga,png,pdf,ai,svg,webp.
 
 #.  A GIFBUILDER object. See the object reference for :ref:`gifbuilder`.
 
@@ -72,7 +72,7 @@ ext
     :php:`$GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext']` in the install
     tool.
 
-    Standard is pdf, gif, jpg, jpeg, tif, bmp, ai, pcx, tga, png.
+    Standard is gif,jpg,jpeg,tif,tiff,bmp,pcx,tga,png,pdf,ai,svg,webp.
 
 
 ..  _imgresource-width:

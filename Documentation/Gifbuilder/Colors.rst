@@ -17,8 +17,6 @@ Colors in TypoScript GIFBUILDER
     Where modifier can be an integer which is added or subtracted to the three
     RGB-channels or a floating point with an :typoscript:`*` before, which will then
     multiply the values with that factor.
-
-
     The color can be given as HTML-color or as a comma-separated list of
     RGB-values (integers). An extra parameter can be given, that will modify the
     color mathematically:
