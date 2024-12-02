@@ -35,7 +35,7 @@ extTarget
 
 ..  confval:: extTarget
     :name: typolink-extTarget
-    :type: :ref:`data-type-target` / :ref:`stdwrap`
+    :type: string / :ref:`stdwrap`
     :Default: "" (no target set)
 
     Target used for external links
@@ -48,7 +48,7 @@ fileTarget
 
 ..  confval:: fileTarget
     :name: typolink-fileTarget
-    :type: :ref:`data-type-target` / :ref:`stdwrap`
+    :type: string / :ref:`stdwrap`
 
     Target used for file links
 
@@ -87,7 +87,7 @@ target
 
 ..  confval:: target
     :name: typolink-target
-    :type: :ref:`data-type-target` / :ref:`stdwrap`
+    :type: string / :ref:`stdwrap`
 
     Target used for internal links
 

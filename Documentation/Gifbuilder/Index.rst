@@ -27,6 +27,7 @@ supported file format. PNG and JPG can be created as well today (configured with
     :glob:
 
     Examples
+    Colors
     Calc
     Properties
     ObjectNames/Index

@@ -204,7 +204,7 @@ Properties
 
     ..  confval:: bodyTag
         :name: page-bodyTag
-        :type: :ref:`data-type-tag`
+        :type: string
         :Default: `<body>`
         :Example: :ref:`Set a class on the body tag <setup-page-bodytag-example>`
 
@@ -284,7 +284,7 @@ Properties
 
     ..  confval:: headTag
         :name: page-headTag
-        :type: :ref:`data-type-tag` / :ref:`stdwrap`
+        :type: string / :ref:`stdwrap`
         :Default: `<head>`
 
         Head-tag if alternatives are wanted

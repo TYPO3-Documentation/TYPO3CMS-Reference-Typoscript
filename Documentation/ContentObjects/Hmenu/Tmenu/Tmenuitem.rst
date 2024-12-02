@@ -193,7 +193,7 @@ Properties
 
 ..  confval:: altTarget
     :name: tmenuitem-altTarget
-    :type: :ref:`data-type-target`
+    :type: string
 
     Alternative target overriding the target property of the
     ref:`TMENU <tmenu>`, if set.
