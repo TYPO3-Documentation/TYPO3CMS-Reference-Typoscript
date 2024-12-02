@@ -31,4 +31,4 @@ Wrap
     ..  code-block:: typoscript
         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-        page.10.stdWrap.wrap = <p class="bg-red"> | </p>
+        page.10.wrap = <p class="bg-red"> | </p>
