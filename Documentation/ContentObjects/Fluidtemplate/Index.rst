@@ -424,11 +424,11 @@ as :fluid:`{page.title}`, the subtitle with :fluid:`{page.subtitle}`.
 In this example some Fluid templates have to be moved:
 
 :path:`EXT:my_sitepackage/Resources/Private/Templates/Pages/`
-    The page templates can stay in this folder.
+    Move files to :path:`EXT:my_sitepackage/Resources/Private/PageView/Pages/`
 :path:`EXT:my_sitepackage/Resources/Private/Partials/Pages/`
-    Move files to :path:`EXT:my_sitepackage/Resources/Private/Templates/Partials/`
+    Move files to :path:`EXT:my_sitepackage/Resources/Private/PageView/Partials/`
 :path:`EXT:my_sitepackage/Resources/Private/Layouts/Pages/`
-    Move files to :path:`EXT:my_sitepackage/Resources/Private/Templates/Layouts/`
+    Move files to :path:`EXT:my_sitepackage/Resources/Private/PageView/Layouts/`
 
 If the :path:`Private` folder previously looked like this:
 
@@ -458,7 +458,7 @@ It should look like this afterwards:
     *   :path:`EXT:my_sitepackage/Resources/Private/`
 
         *   :path:`Languages`
-        *   :path:`Templates`
+        *   :path:`PageView`
 
             *   :path:`Layouts`
             *   :path:`Pages`

@@ -7,20 +7,25 @@ PAGEVIEW
 ========
 
 ..  versionadded:: 13.1
+    The content object PAGEVIEW can be used in stead of
+    `FLUIDTEMPLATE <https://docs.typo3.org/permalink/t3tsref:cobj-template>`_
+    to configure the HTML body of a page using Fluid templates.
 
-    This API is considered experimental until TYPO3 v13 LTS. It will be further
-    adapted to be used for further rendering of
-    custom Content Elements and Content Blocks.
+This content object has very specific conventions and
+defaults, that requires (and allows) less configuration as compared to using
+`FLUIDTEMPLATE <https://docs.typo3.org/permalink/t3tsref:cobj-template>`_.
 
-The content object :typoscript:`EXTBASEPLUGIN` allows to render
-:ref:`Extbase <t3coreapi:extbase>` plugins.
-
-The new :typoscript:`PAGEVIEW` content object has very specific conventions and
-defaults, that requires (and allows) less configuration. The benefit is that
-following these conventions means less boilerplate code to maintain.
+The benefit is that following these conventions means less boilerplate code
+to maintain.
 
 If you follow these conventions, a few directories and files must follow the
 structure outlined below.
+
+..  tip::
+    Chapters `The TYPO3 Fluid version <https://docs.typo3.org/permalink/t3sitepackage:minimal-extension-fluid>`_
+    and `Display the content elements on your page <https://docs.typo3.org/permalink/t3sitepackage:content-mapping>`_
+    of the Site Package Tutorial give practical examples on how to use
+    the `PAGEVIEW` object.
 
 ..  contents:: Table of contents
     :local:
@@ -74,7 +79,7 @@ Additional variables can be defined with property
 
         The variable :fluid:`{settings}` contains all TypoScript
         :ref:`constants <typoscript-syntax-constants>` that are set on the current
-        page. Settings from the site can be accessed via the :confval:`pageview-data-site` with 
+        page. Settings from the site can be accessed via the :confval:`pageview-data-site` with
         :fluid:`{site.settings}`
 
     ..  confval:: site
@@ -97,7 +102,7 @@ Example: Display the site title in the current language
 
 ..  literalinclude:: _includes/_DisplaySiteTitle.html
     :language: html
-    :caption: EXT:my_sitepackage/Resources/Private/Templates/Pages/Default.html
+    :caption: EXT:my_sitepackage/Resources/Private/PageView/Pages/Default.html
 
 .. _cobj-pageview-data-page-example:
 
@@ -106,7 +111,7 @@ Example: Display the title and abstract of the current page
 
 ..  literalinclude:: _includes/_DisplayPageInfo.html
     :language: html
-    :caption: EXT:my_sitepackage/Resources/Private/Templates/Pages/Default.html
+    :caption: EXT:my_sitepackage/Resources/Private/PageView/Pages/Default.html
 
 .. _cobj-pageview-data-settings-example:
 
@@ -121,7 +126,7 @@ Let us assume, the current page loads the following TypoScript constants:
 
 ..  literalinclude:: _includes/_PageWithConstant.html
     :language: html
-    :caption: EXT:my_sitepackage/Resources/Private/Templates/Pages/Default.html
+    :caption: EXT:my_sitepackage/Resources/Private/PageView/Pages/Default.html
 
 .. _cobj-pageview-data-site-example:
 
@@ -130,7 +135,7 @@ Example: Link to the root page of the current site
 
 ..  literalinclude:: _includes/_LinkToRootPage.html
     :language: html
-    :caption: EXT:my_sitepackage/Resources/Private/Templates/Pages/Default.html
+    :caption: EXT:my_sitepackage/Resources/Private/PageView/Pages/Default.html
 
 ..  _cobj-pageview-properties:
 
@@ -169,8 +174,8 @@ Properties
         :Example 2: :ref:`cobj-pageview-paths-example-extended`
 
         Sets an array of paths for the Fluid templates, usually
-        :file:`EXT:my_extension/Resources/Private/Templates/` or a folder below that
-        path like :file:`EXT:my_extension/Resources/Private/Templates/MyPages`.
+        :file:`EXT:my_extension/Resources/Private/PageView/` or a
+        path like :file:`EXT:my_extension/Resources/Private/PageView/MyPage`.
 
         The templates are expected in a subfolder :path:`Pages`.
 
@@ -207,20 +212,20 @@ The page template could look like this:
 
 ..  literalinclude:: _includes/_PageWithBreadcrumb.html
     :language: html
-    :caption: EXT:my_sitepackage/Resources/Private/Templates/Pages/Default.html
+    :caption: EXT:my_sitepackage/Resources/Private/PageView/Pages/Default.html
 
 
 With the following partials:
 
 ..  literalinclude:: _includes/_PartialBreadCrumb.html
     :language: html
-    :caption: EXT:my_sitepackage/Resources/Private/Templates/Partials/Navigation/Breadcrumb.html
+    :caption: EXT:my_sitepackage/Resources/Private/PageView/Partials/Navigation/Breadcrumb.html
 
 And
 
 ..  literalinclude:: _includes/_PartialMainNavigation.html
     :language: html
-    :caption: EXT:my_sitepackage/Resources/Private/Templates/Partials/Navigation/MainNavigation.html
+    :caption: EXT:my_sitepackage/Resources/Private/PageView/Partials/Navigation/MainNavigation.html
 
 ..  _cobj-pageview-paths-example:
 
@@ -235,14 +240,14 @@ templates:
 
     page = PAGE
     page.10 = PAGEVIEW
-    page.10.paths.100 = EXT:my_sitepackage/Resources/Private/Templates/
+    page.10.paths.100 = EXT:my_sitepackage/Resources/Private/PageView/
 
 The content of the folder could look like this:
 
 ..  directory-tree::
     :level: 2
 
-    *   EXT:my_sitepackage/Resources/Private/Templates/
+    *   EXT:my_sitepackage/Resources/Private/PageView/
 
         *   Layouts
 
@@ -270,17 +275,17 @@ The content of the folder could look like this:
 
 So for backend layout named "with_sidebar", the template file is
 then resolved to
-:file:`EXT:my_sitepackage/Resources/Private/Templates/Pages/With_sidebar.html`.
+:file:`EXT:my_sitepackage/Resources/Private/PageView/Pages/With_sidebar.html`.
 
 If the backend layout is named "TwoColumns" it is resovled to
-:file:`EXT:my_sitepackage/Resources/Private/Templates/Pages/TwoColumns.html`.
+:file:`EXT:my_sitepackage/Resources/Private/PageView/Pages/TwoColumns.html`.
 
 For all these templates
 :doc:`partial  <t3viewhelper:Global/Render#viewhelper-argument-typo3-cms-fluid-viewhelpers-renderviewhelper-partial>`
 are expected in folder
-:path:`EXT:my_sitepackage/Resources/Private/Templates/Pages/Partials` and
+:path:`EXT:my_sitepackage/Resources/Private/PageView/Pages/Partials` and
 :ref:`layouts <t3viewhelper:typo3fluid-fluid-layout>` in
-:path:`EXT:my_sitepackage/Resources/Private/Templates/Pages/Layouts`.
+:path:`EXT:my_sitepackage/Resources/Private/PageView/Pages/Layouts`.
 
 ..  _cobj-pageview-paths-example-extended:
 
@@ -296,16 +301,16 @@ define fallback directories for the templates:
     page {
         10 = PAGEVIEW
         10.paths {
-            100 = EXT:my_basic_sitepackage/Resources/Private/Templates/
-            200 = EXT:my_general_sitepackage/Resources/Private/Templates/
-            300 = EXT:my_special_sitepackage/Resources/Private/Templates/
+            100 = EXT:my_basic_sitepackage/Resources/Private/PageView/
+            200 = EXT:my_general_sitepackage/Resources/Private/PageView/
+            300 = EXT:my_special_sitepackage/Resources/Private/PageView/
         }
     }
 
 The template for a page with a certain backend layout is first searched in
-:path:`EXT:my_special_sitepackage/Resources/Private/Templates/Pages/` then in
-:path:`EXT:my_general_sitepackage/Resources/Private/Templates/Pages/` and last
-in :path:`EXT:my_basic_sitepackage/Resources/Private/Templates/Pages/`.
+:path:`EXT:my_special_sitepackage/Resources/Private/PageView/Pages/` then in
+:path:`EXT:my_general_sitepackage/Resources/Private/PageView/Pages/` and last
+in :path:`EXT:my_basic_sitepackage/Resources/Private/PageView/Pages/`.
 
 ..  _cobj-pageview-variables-example:
 
@@ -320,5 +325,4 @@ The following variables are now available in the Fluid template:
 
 ..  literalinclude:: _includes/_PageWithVariables.html
     :langugage: html
-    :caption: EXT:my_sitepackage/Resources/Private/Templates/Pages/Default.html
-
+    :caption: EXT:my_sitepackage/Resources/Private/PageView/Pages/Default.html
