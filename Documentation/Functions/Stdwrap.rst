@@ -830,6 +830,7 @@ strtotime
         }
 
 
+..  _data-type-strftime-conf:
 ..  _stdwrap-strftime:
 
 strftime
@@ -996,6 +997,7 @@ age
         lib.ageFormat.stdWrap.age = " Minuten | Stunden | Tage | Jahre | Minute | Stunde | Tag | Jahr"
 
 
+..  _data-type-case:
 ..  _stdwrap-case:
 
 case
@@ -1003,11 +1005,43 @@ case
 
 ..  confval:: case
     :name: stdwrap-case
-    :type: :ref:`data-type-case` / :ref:`stdWrap`
+    :type: string / :ref:`stdWrap`
 
     Converts case
 
     Uses "UTF-8" for the operation.
+
+    ..  rubric:: Possible values:
+
+    ============================= ==========================================================
+    Value                         Effect
+    ============================= ==========================================================
+    :typoscript:`upper`           Convert all letters of the string to upper case
+    :typoscript:`lower`           Convert all letters of the string to lower case
+    :typoscript:`capitalize`      Uppercase the first character of each word in the string
+    :typoscript:`ucfirst`         Convert the first letter of the string to upper case
+    :typoscript:`lcfirst`         Convert the first letter of the string to lower case
+    :typoscript:`uppercamelcase`  Convert underscored `upper_camel_case` to `UpperCamelCase`
+    :typoscript:`lowercamelcase`  Convert underscored `lower_camel_case` to `lowerCamelCase`
+    ============================= ==========================================================
+
+    ..  rubric:: Example
+
+    Code:
+
+    ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+        10 = TEXT
+        10.value = Hello world!
+        10.case = upper
+
+    Result:
+
+    ..  code-block:: text
+        :caption: Example Output
+
+        HELLO WORLD!
 
 
 ..  _stdwrap-bytes:
@@ -1437,6 +1471,7 @@ postCObject
     :ref:`stdwrap-cObject` appended the content.
 
 
+..  _data-type-align:
 ..  _stdwrap-wrapAlign:
 
 wrapAlign
@@ -1444,7 +1479,8 @@ wrapAlign
 
 ..  confval:: wrapAlign
     :name: stdwrap-wrapAlign
-    :type: :ref:`data-type-align` / :ref:`stdWrap`
+    :type: string / :ref:`stdWrap`
+    :Allowed values: :typoscript:`left`, :typoscript:`center`, :typoscript:`right`
 
     Wraps content with :typoscript:`<div style=text-align:[*value*];"> | </div>`
     *if* align is set.

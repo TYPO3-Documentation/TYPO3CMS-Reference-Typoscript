@@ -49,7 +49,7 @@ http.extTarget
 
 ..  confval:: http.extTarget
     :name: makelinks-http-extTarget
-    :type: :ref:`data-type-target`
+    :type: string
     :Default: \_top
 
     The target of the link.
@@ -111,7 +111,7 @@ http.ATagParams
 
 ..  confval:: http.ATagParams
     :name: makelinks-http-ATagParams
-    :type: :ref:`data-type-tag-params` / :ref:`stdwrap`
+    :type: string / :ref:`stdwrap`
 
     Additional parameters
 
@@ -167,7 +167,7 @@ mailto.ATagParams
 
 ..  confval:: mailto.ATagParams
     :name: makelinks-mailto.ATagParams
-    :type: :ref:`data-type-tag-params` / :ref:`stdwrap`
+    :type: string / :ref:`stdwrap`
 
     Additional parameters
 

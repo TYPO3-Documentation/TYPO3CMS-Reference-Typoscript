@@ -1,5 +1,6 @@
 ..  include:: /Includes.rst.txt
 ..  index:: Function; getText
+..  _data-type-function-getText:
 ..  _data-type-gettext:
 
 ==============

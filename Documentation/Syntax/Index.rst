@@ -20,3 +20,4 @@ store configuration in this structure.
     Comments/Index
     Conditions/Index
     FileImports/Index
+    StringFormats/Index

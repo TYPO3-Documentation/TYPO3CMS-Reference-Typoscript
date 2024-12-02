@@ -56,7 +56,6 @@ chapter.
     DataProcessing/Index
     TopLevelObjects/Index
     Functions/Index
-    DataTypes/Index
     Conditions/Index
 
 ..  toctree::
