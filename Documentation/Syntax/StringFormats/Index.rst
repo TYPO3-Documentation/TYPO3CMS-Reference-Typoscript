@@ -147,10 +147,10 @@ resource
 
     Reference to a file in the file system:
 
-    .. code-block:: typoscript
-       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-       page.10.settings.someFile = fileadmin/picture.gif
+        page.10.settings.someFile = fileadmin/picture.gif
 
 ..  index:: Simple data types; string
 ..  _data-type-string:
