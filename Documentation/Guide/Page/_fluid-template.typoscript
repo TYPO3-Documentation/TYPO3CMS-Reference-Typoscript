@@ -1,12 +1,12 @@
 page = 10
 page {
-  10 = FLUIDTEMPLATE
+  10 = PAGEVIEW
   10 {
-    templateName = TEXT
-    templateName.value = Default
-
-    templateRootPaths {
-      0 = EXT:site_package/Resources/Private/Templates/Pages/
+    paths {
+      100 = EXT:my_site_package/Resources/Private/PageView/
+    }
+    dataProcessing {
+      10 = page-content
     }
   }
 }
