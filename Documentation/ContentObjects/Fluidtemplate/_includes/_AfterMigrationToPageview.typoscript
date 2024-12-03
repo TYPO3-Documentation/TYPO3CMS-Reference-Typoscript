@@ -3,7 +3,7 @@ page {
     10 = PAGEVIEW
     10 {
         paths {
-            100 = EXT:my_sitepackage/Resources/Private/Templates/
+            100 = EXT:my_sitepackage/Resources/Private/PageView/
         }
         variables {
             parentPageTitle = TEXT
