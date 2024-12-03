@@ -20,7 +20,7 @@ Wrap
     If you want to use more sophisticated data functions, then you
     should use `stdWrap.dataWrap` instead of `wrap`.
 
-    A `wrap` is processed and rendered as the last of the other components of
+    A `wrap` is applied as one of the last of properties
     a cObject.
 
     ..  rubric:: Examples
