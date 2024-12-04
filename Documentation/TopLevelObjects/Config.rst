@@ -632,7 +632,7 @@ Properties of 'config'
 
         ..  note::
 
-            Do **not** include the `type` and `L` parameter in the linkVars
+            Do **not** include the `L` parameter in the linkVars
             list, as this will result in unexpected behavior.
 
     ..  confval:: message_preview
