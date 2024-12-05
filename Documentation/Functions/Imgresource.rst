@@ -2,14 +2,48 @@
 ..  index::
     Functions; imgResource
     imgResource
+..  _data-type-imgResource:
 ..  _imgresource:
 
 ===========
 imgResource
 ===========
 
-imgResource contains the properties that are used with the data type
-imgResource.
+An imgResource one of the following:
+
+#.  A :confval:`data-type-resource` plus imgResource properties.
+
+    Filetypes can be anything among the allowed types defined in the
+    configuration variable
+    :php:`$GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext']`.  Standard is
+    gif,jpg,jpeg,tif,tiff,bmp,pcx,tga,png,pdf,ai,svg,webp.
+
+#.  A GIFBUILDER object. See the object reference for :ref:`gifbuilder`.
+
+..  rubric:: Examples
+
+Here "file" is an imgResource:
+
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+    10 = IMAGE
+    10 {
+        file = fileadmin/toplogo.gif
+        file.width = 200
+    }
+
+GIFBUILDER:
+
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+    10 = IMAGE
+    10.file = GIFBUILDER
+    10.file {
+        # GIFBUILDER properties here...
+    }
+
 
 ..  contents::
     :local:
@@ -20,6 +54,7 @@ imgResource.
 Properties
 ==========
 
+..  _data-type-imageExtension:
 ..  _imgresource-ext:
 
 ext
@@ -27,7 +62,7 @@ ext
 
 ..  confval:: ext
     :name: imgresource-ext
-    :type: :ref:`data-type-imageExtension` / :ref:`stdwrap`
+    :type: string / :ref:`stdwrap`
     :Default: web
 
     Target file extension for the processed image. The value :typoscript:`web` checks if
@@ -37,6 +72,8 @@ ext
     :php:`$GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext']` in the install
     tool.
 
+    Standard is gif,jpg,jpeg,tif,tiff,bmp,pcx,tga,png,pdf,ai,svg,webp.
+
 
 ..  _imgresource-width:
 
@@ -45,7 +82,7 @@ width
 
 ..  confval:: width
     :name: imgresource-width
-    :type: :ref:`data-type-pixels` / :ref:`stdwrap`
+    :type: integer / :ref:`stdwrap`
 
     If both the width and the height are set and one of the numbers is
     appended by an :typoscript:`m`, the proportions will be preserved and thus
@@ -107,7 +144,7 @@ height
 
 ..  confval:: height
     :name: imgresource-height
-    :type: :ref:`data-type-pixels` / :ref:`stdwrap`
+    :type: integer / :ref:`stdwrap`
 
     See :ref:`imgresource-width`.
 
@@ -315,7 +352,7 @@ maxW
 
 ..  confval:: maxW
     :name: imgresource-maxW
-    :type: :ref:`data-type-pixels` / :ref:`stdwrap`
+    :type: integer / :ref:`stdwrap`
 
     Maximum width
 
@@ -327,7 +364,7 @@ maxH
 
 ..  confval:: maxH
     :name: imgresource-maxH
-    :type: :ref:`data-type-pixels` / :ref:`stdwrap`
+    :type: integer / :ref:`stdwrap`
 
     Maximum height
 
@@ -339,7 +376,7 @@ minW
 
 ..  confval:: minW
     :name: imgresource-minW
-    :type: :ref:`data-type-pixels` / :ref:`stdwrap`
+    :type: integer / :ref:`stdwrap`
 
     Minimum width (overrules maxW/maxH)
 
@@ -351,7 +388,7 @@ minH
 
 ..  confval:: minH
     :name: imgresource-minH
-    :type: :ref:`data-type-pixels` / :ref:`stdwrap`
+    :type: integer / :ref:`stdwrap`
 
     Minimum height (overrules maxW/maxH)
 
