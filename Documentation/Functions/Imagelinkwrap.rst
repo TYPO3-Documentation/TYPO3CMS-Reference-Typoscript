@@ -143,7 +143,7 @@ bodyTag
 
 ..  confval:: imageLinkWrap.bodyTag
     :name: imagelinkwrap-bodyTag
-    :type: :ref:`data-type-tag` / :ref:`stdwrap`
+    :type: string / :ref:`stdwrap`
 
     This is the `<body>`-tag of the preview window.
     Needs :typoscript:`JSwindow = 1`.
@@ -181,7 +181,7 @@ target
 
 ..  confval:: imageLinkWrap.target
     :name: imagelinkwrap-target
-    :type: :ref:`data-type-target` / :ref:`stdwrap`
+    :type: string / :ref:`stdwrap`
     :Default: :typoscript:`thePicture`
 
     This specifies the `target` attribute of the link. The attribute
@@ -243,10 +243,10 @@ JSwindow.newWindow
     :type: :ref:`data-type-boolean` / :ref:`stdwrap`
     :Default: 0
 
-    If the :ref:`Doctype <setup-config-doctype>` allows the :ref:`data-type-target`
+    If the :ref:`Doctype <setup-config-doctype>` allows the string
     attribute then the image will be opened in a window with the name given
     by `target`. If that windows is kept open and the next image with the
-    same :ref:`data-type-target` attribute is to be shown then it will appear
+    same string attribute is to be shown then it will appear
     in the same preview window.
     If :typoscript:`JSwindow.newWindow` is set to True,
     then a unique hash value is used as `target` value for each image.

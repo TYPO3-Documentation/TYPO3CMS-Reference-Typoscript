@@ -35,7 +35,7 @@ align
     *   :typoscript:`center`
     *   :typoscript:`right`
 
-
+..  _data-type-degree:
 ..  _gifbuilder-text-angle:
 
 angle
@@ -43,7 +43,7 @@ angle
 
 ..  confval:: angle
     :name: gifbuilder-text-angle
-    :type: :ref:`data-type-degree`
+    :type: integer
     :Default: 0
     :Range: -90 to 90
 
