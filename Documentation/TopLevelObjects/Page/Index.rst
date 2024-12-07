@@ -227,7 +227,7 @@ Properties
         if that is set.
 
         ..  note::  Additionally to the body tag properties noted here,
-            there also is the property :ref:`setup-config-disableBodyTag`,
+            there also is the property :confval:`config.disableBodyTag <config-disableBodyTag>`,
             which, if set, disables body tag generation independently
             from what might be set here.
 
@@ -270,12 +270,12 @@ Properties
         Inserts custom content in the head section of the website.
 
         While you can also use this to include stylesheet references or JavaScript,
-        you should better use :ref:`page.includeCSS <setup-page-includecss-array>`
-        and :ref:`page.includeJS <setup-page-includejs-array>` for such files.
+        you should better use :confval:`page.includeCSS <page-includeCSS>`
+        and :confval:`page.includeJS <page-includeJS>` for such files.
         Features like file concatenation and file compression will not work on files,
         which are included using :typoscript:`headerData`.
 
-        For meta tags, use the dedicated configuration :ref:`page.meta <meta>`.
+        For meta tags, use the dedicated configuration :confval:`page.meta <page-meta>`.
 
         By default, gets inserted after all the style definitions.
 
@@ -459,9 +459,9 @@ Properties
         :name: page-includeJSFooter
         :type: :ref:`data-type-resource`
 
-        Add JavaScript files to footer (after files set in :ref:`includeJSFooterlibs <setup-page-includejsfooterlibs-array>`)
+        Add JavaScript files to footer (after files set in :confval:`includeJSFooterlibs <page-includeJSFooterlibs>`)
 
-        Same as :ref:`includeJS <setup-page-includejs-array>` above, except that this block gets
+        Same as :confval:`includeJS <page-includeJS>` above, except that this block gets
         included at the bottom of the page (just before the closing :html:`</body>`
         tag).
 
@@ -471,15 +471,15 @@ Properties
 
         Add JavaScript library files to footer.
 
-        Same as :ref:`includeJSLibs <setup-page-includejslibs-array>`, except that this block gets
+        Same as :confval:`includeJSLibs <page-includeJSLibs>`, except that this block gets
         included at the bottom of the page (just before the closing :html:`</body>`
         tag).
 
-        The optional properties from :ref:`includeJS <setup-page-includejs-array>`
+        The optional properties from :confval:`includeJS <page-includeJS>`
         can be applied.
 
         Currently one difference between :typoscript:`includeJS` and :typoscript:`includeJSFooterlibs` exists:
-        There is no :typoscript:`data`-array as optional parameter but all keys not explicitly mentioned as parameters are used as additional attributes - behaviour is the same as in :ref:`includeCSS <setup-page-includecss-array>`.
+        There is no :typoscript:`data`-array as optional parameter but all keys not explicitly mentioned as parameters are used as additional attributes - behaviour is the same as in :confval:`includeCSS <page-includeCSS>`.
 
         ..  code-block:: typoscript
             :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
@@ -497,15 +497,15 @@ Properties
 
         Adds JavaScript library files to head of page.
 
-        Same as :ref:`includeJSFooterlibs <setup-page-includejsfooterlibs-array>`, except that this block gets
+        Same as :confval:`includeJSFooterlibs <page-includeJSFooterlibs>`, except that this block gets
         included inside :html:`<head>`.
         tag).
 
-        The optional properties from :ref:`includeJS <setup-page-includejs-array>`
+        The optional properties from :confval:`includeJS <page-includeJS>`
         can be applied.
 
         Currently one difference between :typoscript:`includeJS` and :typoscript:`includeJSLibs` exists:
-        There is no :typoscript:`data`-array as optional parameter but all keys not explicitly mentioned as parameters are used as additional attributes - behaviour is the same as in :ref:`includeCSS <setup-page-includecss-array>`.
+        There is no :typoscript:`data`-array as optional parameter but all keys not explicitly mentioned as parameters are used as additional attributes - behaviour is the same as in :confval:`includeCSS <page-includeCSS>`.
 
         ..  code-block:: typoscript
             :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
