@@ -86,7 +86,7 @@ Modify the result via AfterContentHasBeenFetchedEvent
     data processor.
 
 The event `AfterContentHasBeenFetchedEvent <https://docs.typo3.org/permalink/t3coreapi:aftercontenthasbeenfetchedevent>`_
-can be used to modify the content elements fetched by the by the `page-content`
+can be used to modify the content elements fetched by the `page-content`
 data processor.
 
 See the following example:
