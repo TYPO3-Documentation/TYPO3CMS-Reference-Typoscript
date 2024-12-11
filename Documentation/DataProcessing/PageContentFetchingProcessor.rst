@@ -74,3 +74,20 @@ The :ref:`backend layout <t3coreapi:be-layout>` is defined like this:
 
 ..  literalinclude:: _PageContentFetchingProcessor/_BackendLayout.tsconfig
     :caption: config/sites/my-site/page.tsconfig
+
+..  _PageContentFetchingProcessor-AfterContentHasBeenFetchedEvent:
+
+Modify the result via AfterContentHasBeenFetchedEvent
+=====================================================
+
+..  versionadded:: 13.4.2 | 14.0
+    The event `AfterContentHasBeenFetchedEvent <https://docs.typo3.org/permalink/t3coreapi:aftercontenthasbeenfetchedevent>`_
+    has been introduced to adjust the page content fetched by the `page-content`
+    data processor.
+
+The event `AfterContentHasBeenFetchedEvent <https://docs.typo3.org/permalink/t3coreapi:aftercontenthasbeenfetchedevent>`_
+can be used to modify the content elements fetched by the by the `page-content`
+data processor.
+
+See the following example:
+`Filter content elements provided by the page-content data processor <https://docs.typo3.org/permalink/t3coreapi:aftercontenthasbeenfetchedevent-example>`_.
