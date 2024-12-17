@@ -152,7 +152,21 @@ deniedNewTables
       }
 
 
-.. index:: disableSingleTableView
+..  index:: disableSearchBox
+..  _pageTsConfigWebList-disableSearchBox:
+
+disableSearchBox
+======================
+
+..  confval:: disableSearchBox
+    :name: mod-web-list-disableSearchBox
+    :type: boolean
+
+    If set, the checkbox "Show search" in the list module is hidden.
+
+
+..  index:: disableSingleTableView
+..  _pageTsConfigWebList-disableSingleTableView:
 
 disableSingleTableView
 ======================
