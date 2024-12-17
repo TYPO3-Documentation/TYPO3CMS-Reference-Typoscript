@@ -171,9 +171,9 @@ disableSearchBox
 
     If set, the checkbox "Show search" in the list module is hidden.
 
-..  index:: disableSearchBox
-..  _pageTsConfigWebList-disableSearchBox:
 
+..  index:: disableSingleTableView
+..  _pageTsConfigWebList-disableSingleTableView:
 
 disableSingleTableView
 ======================
