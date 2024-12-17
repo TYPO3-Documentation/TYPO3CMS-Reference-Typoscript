@@ -159,8 +159,21 @@ Hide "Create new record" links in tables sys_category and tt_content
     }
 
 
-..  index:: disableSingleTableView
-..  _pageTsConfigWebList-disableSingleTableView:
+..  index:: disableSearchBox
+..  _pageTsConfigWebList-disableSearchBox:
+
+disableSearchBox
+======================
+
+..  confval:: disableSearchBox
+    :name: mod-web-list-disableSearchBox
+    :type: boolean
+
+    If set, the checkbox "Show search" in the list module is hidden.
+
+..  index:: disableSearchBox
+..  _pageTsConfigWebList-disableSearchBox:
+
 
 disableSingleTableView
 ======================
