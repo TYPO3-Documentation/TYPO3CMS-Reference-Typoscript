@@ -62,4 +62,3 @@ You can also apply a custom :typoscript:`userFunc` to vital objects like the
 routine. This would allow you to modify any kind of link generated from the
 parsing of the Rich-Text-Editor (RTE), usually by adding CSS classes to it,
 adjusting :html:`rel` attributes or attaching :html:`data-XXX` attributes.
-

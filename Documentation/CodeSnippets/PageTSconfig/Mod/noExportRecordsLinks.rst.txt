@@ -7,4 +7,3 @@
    mod.web_list {
       noExportRecordsLinks = 1
    }
-   

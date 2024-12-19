@@ -37,4 +37,3 @@ Example: Do not hide newly created pages by default
     :caption: EXT:site_package/Configuration/page.tsconfig
 
     TCAdefaults.pages.hidden = 0
-
