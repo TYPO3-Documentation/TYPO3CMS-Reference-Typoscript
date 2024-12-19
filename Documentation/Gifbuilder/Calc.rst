@@ -57,4 +57,3 @@ The generated image looks like:
     :alt: TYPO3 GIFBUILDER Example
 
     The rendered image from the example above
-
