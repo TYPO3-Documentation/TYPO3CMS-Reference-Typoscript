@@ -28,4 +28,3 @@ familiar with it and be ready to explore it in greater depth using the
 
 ..  include:: _Chapters/_CObject.rst.txt
     :show-buttons:
-

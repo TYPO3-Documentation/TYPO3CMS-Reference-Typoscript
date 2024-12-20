@@ -21,4 +21,3 @@ Example output
 ==============
 
 .. include:: /Images/AutomaticScreenshots/DataProcessing/CustomDataProcessors.rst.txt
-

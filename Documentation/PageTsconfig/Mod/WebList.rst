@@ -720,4 +720,3 @@ Example: Set the default search level to "infinite levels"
     :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
     mod.web_list.searchLevel.default = -1
-
