@@ -31,4 +31,3 @@ Objects rendering content
 -   :ref:`FLUIDTEMPLATE <cobj-fluidtemplate>` renders a template with the
     template engine Fluid with variables and data that you define - as previously
     discussed in the ":ref:`insert-content-in-a-template`" chapter.
-

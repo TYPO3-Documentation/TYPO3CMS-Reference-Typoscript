@@ -16,4 +16,3 @@ objects in *both* areas; note that they are different each time!
     :maxdepth: 1
 
     */Index
-

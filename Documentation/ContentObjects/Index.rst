@@ -22,4 +22,3 @@ Please see :ref:`cobjects-general-information` for an introduction.
 
     GeneralInformation/Index
     */Index
-
