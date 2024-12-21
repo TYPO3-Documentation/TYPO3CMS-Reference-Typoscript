@@ -128,5 +128,3 @@ opacity
 
     Mathematically speaking: Opacity = Transparency^-1, i.e. 100% opacity = 0%
     transparency.
-
-

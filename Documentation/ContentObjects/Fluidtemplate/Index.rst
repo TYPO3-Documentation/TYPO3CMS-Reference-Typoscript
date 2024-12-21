@@ -463,4 +463,3 @@ It should look like this afterwards:
             *   :path:`Layouts`
             *   :path:`Pages`
             *   :path:`Partials`
-

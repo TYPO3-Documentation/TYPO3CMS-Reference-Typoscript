@@ -99,4 +99,3 @@ Output the SVG with the defined dimensions:
       height = 600
       src = EXT:my_ext/Resources/Public/Images/example.svg
     }
-

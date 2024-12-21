@@ -28,4 +28,3 @@ The most used function is the "standard wrap", usually known as "stdWrap".
     If/Index
     Typolink/Index
     ParseFunc/Index
-
