@@ -173,11 +173,16 @@ Options
     ..  confval:: special
         :name: MenuProcessor-special
         :type: *"directory" / "list" / "updated" / "rootline" / "browse" / "keywords"
-             / "categories" / "language" / "userfunction"*
+             / "categories"
 
         Lets you define special types of menus.
 
-        See the section about the :ref:`.special property <hmenu-special-property>`!
+        For backward compatibility reason the special type `language` can be
+        used with an HMENU. We recommend to use the
+        `language-menu data processor <https://docs.typo3.org/permalink/t3tsref:languagemenuprocessor>`_
+        to create language menus.
+
+        See the section about the :ref:`.special property <MenuProcessor-special>`.
 
         ..  confval:: value
             :name: MenuProcessor-special-value
@@ -185,7 +190,7 @@ Options
 
             List of page uid's to use for the special menu. What they are used
             for depends on the menu type as defined by ".special"; see the
-            section about the :ref:`.special property <hmenu-special-property>`!
+            section about the :ref:`.special property <MenuProcessor-special>`.
 
     ..  _MenuProcessor-titleField:
 
