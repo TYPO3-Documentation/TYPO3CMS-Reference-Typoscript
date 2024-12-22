@@ -1,3 +1,4 @@
+:navigation-title: Updated
 ..  include:: /Includes.rst.txt
 ..  index:: HMENU; special = updated
 ..  _hmenu-special-updated:

@@ -1,6 +1,8 @@
+:navigation-title: Userfunction
 ..  include:: /Includes.rst.txt
 ..  index:: HMENU; special = userfunction
 ..  _hmenu-special-userfunction:
+..  _hmenu-special-userfunction-examples:
 
 =================
 Userfunction menu
@@ -24,10 +26,6 @@ page records for the menu.
 Properties
 ==========
 
-..  confval-menu::
-    :display: table
-    :type:
-
 ..  _hmenu-special-userfunction-userfunc:
 
 ..  confval:: special.userFunc
@@ -35,17 +33,3 @@ Properties
     :type: string
 
     Name of the user function
-
-..  _hmenu-special-userfunction-examples:
-
-Example: Set a userFunc
-=======================
-
-..  code-block:: typoscript
-    :caption: This is still possible for backward compability reasons but not recommended:
-
-    lib.custommenu = HMENU
-    lib.custommenu {
-        special = userfunction
-        special.userFunc = MyVendor\MyExtension\Userfuncs\CustomMenu->makeMenuArray
-    }

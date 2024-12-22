@@ -1,3 +1,4 @@
+:navigation-title: Rootline / Breadcrumb
 ..  include:: /Includes.rst.txt
 ..  index:: HMENU; special = rootline
 ..  _hmenu-special-rootline:

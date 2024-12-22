@@ -6,9 +6,20 @@
 TMENUITEM
 =========
 
+..  warning::
+    This TypoScript object is still available to provide backward compatibility
+    for old sites. When creating a new menu or refactoring an existing one
+    always use the `menu data processor <https://docs.typo3.org/permalink/t3tsref:menuprocessor>`_
+    and a Fluid template.
+
+For examples on how to use the TMENUITEM please refer to old version of this
+document, for example :ref:`TMENUITEM <t3tsref/11.5:tmenuitem>`-.
+
 The current record is the page record of the menu item. If you would
 like to get data from the current menu item's page record, use
 :typoscript:`stdWrap.data = field : [field name]`.
+
+..  _tmenuitem-properties:
 
 Properties
 ==========
@@ -118,13 +129,6 @@ Properties
 
     Additional parameters
 
-    **Example:** :
-
-    ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-        ATagParams = class="board"
-
 
 ..  _tmenuitem-ATagTitle:
 
@@ -134,16 +138,6 @@ Properties
 
     Allows you to specify the "title" attribute of the :html:`<a>` tag around
     the menu item.
-
-    **Example:** :
-
-    ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-        ATagTitle.field = abstract // description
-
-    This would use the abstract or description field for the
-    :html:`<a title="">` attribute.
 
 
 ..  _tmenuitem-additionalParams:

@@ -1,3 +1,4 @@
+:navigation-title: Directory
 ..  include:: /Includes.rst.txt
 ..  index:: HMENU; special = directory
 ..  _hmenu-special-directory:
