@@ -115,5 +115,3 @@ Top level objects
    You can view this in the :ref:`submodule-active-typoscript`. Top level
    objects are located on the top level. Top level objects are for
    example `config`, `page` and `plugin`.
-
-
