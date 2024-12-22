@@ -8,7 +8,14 @@
 TMENU
 =====
 
-:typoscript:`TMENU` is a menu object type.
+..  warning::
+    This TypoScript object is still available to provide backward compatibility
+    for old sites. When creating a new menu or refactoring an existing one
+    always use the `menu data processor <https://docs.typo3.org/permalink/t3tsref:menuprocessor>`_
+    and a Fluid template.
+
+For examples on how to use the TMENU please refer to old version of this
+document, for example :ref:`TMENU <t3tsref/11.5:tmenu>`-.
 
 ..  toctree::
     :glob:
@@ -20,16 +27,16 @@ TMENU
 
 ..  index:: TMENU; Item states
 
-.. _tmenu-common-property-no:
-.. _tmenu-common-property-ifsub:
-.. _tmenu-common-property-act:
-.. _tmenu-common-property-actifsub:
-.. _tmenu-common-property-cur:
-.. _tmenu-common-property-curifsub:
-.. _tmenu-common-property-usr:
-.. _tmenu-common-property-spc:
-.. _tmenu-common-property-userdef1:
-.. _tmenu-common-property-userdef2:
+..  _tmenu-common-property-no:
+..  _tmenu-common-property-ifsub:
+..  _tmenu-common-property-act:
+..  _tmenu-common-property-actifsub:
+..  _tmenu-common-property-cur:
+..  _tmenu-common-property-curifsub:
+..  _tmenu-common-property-usr:
+..  _tmenu-common-property-spc:
+..  _tmenu-common-property-userdef1:
+..  _tmenu-common-property-userdef2:
 ..  _tmenu-common-properties:
 
 TMENU item states
@@ -61,31 +68,12 @@ The following Item states are listed from the least to the highest priority:
         The default "Normal" state rendering of Item. This is required for all
         menus.
 
-        If you specify properties for the "NO" property you do not have to set
-        it "1". Otherwise with no properties setting "NO=1" will render the
-        menu anyways (for TMENU this may make sense).
-
-        The simplest menu TYPO3 can generate is then:
-
-        ..  code-block:: typoscript
-            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-            page.20 = HMENU
-            page.20.1 = TMENU
-            page.20.1.NO = 1
-
-        That will be pure `<a>` tags wrapped around page titles.
-
-
-
     ..  confval:: IFSUB
         :name: tmenu-common-property-ifsub
         :type: :ref:`data-type-boolean` / :ref:`tmenuitem`
         :Default: 0
 
         Enable/Configuration for menu items which has subpages.
-
-
 
     ..  confval:: ACT
         :name: tmenu-common-property-act
@@ -106,7 +94,6 @@ The following Item states are listed from the least to the highest priority:
         :name: tmenu-common-property-cur
         :type: :ref:`data-type-boolean` / :ref:`tmenuitem`
         :Default: 0
-
 
         Enable/Configuration for a menu item if the item is the current page.
 
@@ -236,63 +223,12 @@ Properties
 
                 tt_content.menu.20.3.1.sectionIndex.useColPos = -1
 
-
-        .. rubric:: The data record in sectionIndex menus
-
-        When the menu-records are selected it works like this: The parent page
-        record is used as the "base" for the menu-record. That means that any
-        "no\_cache" or "target"-properties of the parent page are used for the
-        whole menu.
-
-        But of course some fields from the tt\_content records are
-        transferred. This is how it is mapped:
-
-        ..  code-block:: none
-            :caption: Example of data mapping
-
-            $temp[$row[uid]]=$basePageRow;
-            $temp[$row[uid]]['title']=$row['header'];
-            $temp[$row[uid]]['subtitle']=$row['subheader'];
-            $temp[$row[uid]]['starttime']=$row['starttime'];
-            $temp[$row[uid]]['endtime']=$row['endtime'];
-            $temp[$row[uid]]['fe_group']=$row['fe_group'];
-            $temp[$row[uid]]['media']=$row['media'];
-            $temp[$row[uid]]['header_layout']=$row['header_layout'];
-            $temp[$row[uid]]['bodytext']=$row['bodytext'];
-            $temp[$row[uid]]['image']=$row['image'];
-            $temp[$row[uid]]['sectionIndex_uid']=$row['uid'];
-
-        Basically this shows that
-
-        -   the field "header" and "subheader" from tt\_content are mapped to
-            "title" and "subtitle" in the pages-record. Thus you shouldn't need to
-            change your standard menu objects to fit this thing.
-
-        -   the fields "starttime", "endtime", "fe\_group", "media" from
-            tt\_content are mapped to the same fields in a pages-record.
-
-        -   the fields "header\_layout", "bodytext" and "image" are mapped to
-            non-existing fields in the page-record
-
-        -   a new field, "sectionIndex\_uid" is introduced in the page record
-            which is detected by the `\TYPO3\CMS\Frontend\Typolink\PageLinkBuilder`. If this field
-            is present in a page record, the `PageLinkBuilder` will prepend a
-            hash-mark and the number of the field.
-
-        ..  note::
-            You cannot create submenus to sectionIndex menus. These elements are not
-            pages and thereby have no children.
-
-
-
     ..  confval:: target
         :name: menu-common-properties-target
         :type: string
         :Default: self
 
         Target of the menu links
-
-
 
     ..  confval:: forceTypeValue
         :name: menu-common-properties-forceTypeValue
@@ -309,28 +245,11 @@ Properties
 
         Wraps the whole block of sub items.
 
-        ..  rubric:: Example
-
-        ..  code-block:: typoscript
-            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-            2 = TMENU
-            2 {
-               stdWrap.dataWrap = <ul class="{register : parentProperty}"> | </ul>
-               NO {
-                  // ...
-               }
-            }
-
-
-
     ..  confval:: wrap
         :name: menu-common-properties-wrap
         :type: :ref:`wrap <data-type-wrap>`
 
         Wraps the whole block of sub items, but only if there were items in the menu!
-
-
 
     ..  confval:: IProcFunc
         :name: menu-common-properties-IProcFunc
@@ -341,7 +260,6 @@ Properties
         compiled by implode()'ing the array $I[parts] in the passed array.
         Thus you may modify this if you need to.
 
-
     ..  confval:: alternativeSortingField
         :name: menu-common-properties-alternativeSortingField
         :type: :ref:`data-type-string`
@@ -351,18 +269,10 @@ Properties
         is used in the SQL- "ORDER BY" statement instead. You can also provide
         the sorting order.
 
-        **Examples (for "pages" table):**
-
-        alternativeSortingField = title desc
-
-        (This will render the menu in reversed alphabetical order.)
-
         **Limitations:**
 
         This property works with normal menus, sectionsIndex menus and
         special-menus of type "directory".
-
-
 
     ..  confval:: minItems
         :name: menu-common-properties-minItems
@@ -378,33 +288,15 @@ Properties
         :name: menu-common-properties-maxItems
         :type: :ref:`data-type-integer` / :ref:`stdWrap <stdwrap>`
 
-
         The maximum items in the menu. More items will be ignored.
 
         Takes precedence over HMENU property :ref:`hmenu-maxitems`.
-
-
 
     ..  confval:: begin
         :name: menu-common-properties-begin
         :type: :ref:`data-type-integer` / :ref:`stdWrap <stdwrap>` :ref:`+calc <objects-calc>`
 
-
         The first item in the menu.
-
-        **Example:**
-
-        This results in a menu, where the first two items are skipped starting
-        with item number 3:
-
-        ..  code-block:: typoscript
-            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-            begin = 3
-
-        Takes precedence over :HMENU property :ref:`hmenu-begin`.
-
-
 
     ..  confval:: debugItemConf
         :name: menu-common-properties-debugItemConf
@@ -412,8 +304,6 @@ Properties
 
         Outputs (by the :php:`debug()` function) the configuration arrays for each
         menu item. Useful to debug :ref:`optionsplit` things and such...
-
-
 
     ..  confval:: overrideId
         :name: menu-common-properties-overrideId
@@ -432,16 +322,11 @@ Properties
 
         Additional parameter for the menu links.
 
-        **Example:**
-
-        "&some\_var=some%20value"
-
         Must be rawurlencoded.
 
     ..  confval:: showAccessRestrictedPages
         :name: menu-common-properties-showaccessrestrictedpages
         :type: :ref:`data-type-integer` (page ID) / keyword "NONE"
-
 
         If set, pages in the menu will include pages with frontend user group
         access enabled. However the page is of course not accessible and
@@ -466,20 +351,6 @@ Properties
 
         **.ATagParams**: Add custom attributes to the anchor tag.
 
-        ..  rubric:: Example
-
-        ..  code-block:: typoscript
-            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-            showAccessRestrictedPages = 22
-            showAccessRestrictedPages.addParams = &return_url=###RETURN_URL###&pageId=###PAGE_ID###
-            showAccessRestrictedPages.ATagParams = class="restricted"
-
-        The example will link access restricted menu items to page ID 22 with
-        the return URL in the GET variable `return_url` and the page ID in the GET
-        variable "pageId". Additionally, a CSS class "restricted" is added to the
-        anchor tag.
-
     ..  confval:: additionalWhere
         :name: menu-common-properties-additionalWhere
         :type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
@@ -487,19 +358,9 @@ Properties
         Adds an additional part to the WHERE clause for this menu.
         Make sure to start the part with "AND "!
 
-        ..  rubric:: Example
-
-        ..  code-block:: typoscript
-            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-            lib.authormenu = HMENU
-            lib.authormenu.1 = TMENU
-            lib.authormenu.1.additionalWhere = AND author!=""
-
     ..  confval:: itemArrayProcFunc
         :name: menu-common-properties-itemArrayProcFunc
         :type: function name
-
 
         The first variable passed to this function is the "menuArr" array with
         the menu items as they are collected based on the type of menu.
@@ -523,45 +384,4 @@ Properties
         :name: menu-common-properties-submenuObjSuffixes
         :type: :ref:`data-type-string` / :ref:`optionsplit`
 
-        Defines a suffix for alternative sub-level menu objects. Useful to
-        create special submenus depending on their parent menu element. See
-        example below.
-
-        ..  rubric:: Example
-
-        This example will generate a menu where the menu objects for the
-        second level will differ depending on the number of the first level
-        item for which the submenu is rendered. The second level objects used
-        are "2" (the default), "2a" and "2b" (the alternatives). Which of them
-        is used is defined by "1.submenuObjSuffixes" which has the
-        configuration "a \|\*\| \|\*\| b". This configuration means that the
-        first menu element will use configuration "2a" and the last will use
-        "2b" while anything in between will use "2" (no suffix applied) :
-
-        ..  code-block:: typoscript
-            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-            page.200 = HMENU
-            page.200 {
-                1 = TMENU
-                1.wrap = <div style="width:200px; border: 1px solid;">|</div>
-                1.expAll = 1
-                1.submenuObjSuffixes = a |*|  |*| b
-                1.NO.allWrap = <b>|</b><br/>
-
-                2 = TMENU
-                2.NO.allWrap = <div style="background:red;">|</div>
-
-                2a = TMENU
-                2a.NO.allWrap = <div style="background:yellow;">|</div>
-
-                2b = TMENU
-                2b.NO.allWrap = <div style="background:green;">|</div>
-            }
-
-        The result can be seen in the image below:
-
-        ..  figure:: /Images/ManualScreenshots/FrontendOutput/Hmenu/MenuObjectsCommonPropertiesSubmenuObjSuffixes.png
-            :alt: Output of the above example.
-
-        Applies to TMENU on >= 2 :sup:`nd` level in a menu.
+        Defines a suffix for alternative sub-level menu objects.

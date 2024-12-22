@@ -1,0 +1,14 @@
+page.10 {
+  dataProcessing {
+    10 = menu
+    10 {
+      special = list
+      special.value.field = pages
+      levels = 7
+      entryLevel = 4
+      as = menu
+      expandAll = 1
+      titleField = nav_title // title
+    }
+  }
+}

@@ -1,3 +1,4 @@
+:navigation-title: Language
 ..  include:: /Includes.rst.txt
 ..  index:: HMENU; special = categories
 ..  _hmenu-special-language:
@@ -46,6 +47,14 @@ Properties
 
     If set, the button for a language will be rendered as a non-
     disabled button even if no translation is found for the language.
+
+..  _hmenu-addquerystring:
+
+..  confval:: addQueryString
+    :name: hmenu-addquerystring
+    :type: :ref:`->addQueryString <typolink-addQueryString>`
+
+    **Note:** This works only for *special=language*.
 
 
 ..  _hmenu-special-language-examples:
