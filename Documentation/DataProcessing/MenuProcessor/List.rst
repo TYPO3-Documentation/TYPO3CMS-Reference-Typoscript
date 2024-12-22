@@ -1,3 +1,4 @@
+:navigation-title: List
 ..  include:: /Includes.rst.txt
 ..  index:: HMENU; special = list
 ..  _hmenu-special-list:

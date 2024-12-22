@@ -27,7 +27,7 @@ for example for comma-separated values, related files or related records.
     FlexFormProcessor
     GalleryProcessor
     LanguageMenuProcessor
-    MenuProcessor
+    MenuProcessor/Index
     PageContentFetchingProcessor
     RecordTransformationProcessor
     SiteProcessor

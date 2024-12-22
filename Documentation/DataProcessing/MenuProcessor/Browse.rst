@@ -1,5 +1,5 @@
+:navigation-title: Browse
 ..  include:: /Includes.rst.txt
-..  index:: HMENU; special = browse
 ..  _hmenu-special-browse:
 
 ================================

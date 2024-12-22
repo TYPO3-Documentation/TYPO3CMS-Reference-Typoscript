@@ -1,3 +1,4 @@
+:navigation-title: Keywords
 ..  include:: /Includes.rst.txt
 ..  index:: HMENU; special = keywords
 ..  _hmenu-special-keywords:
