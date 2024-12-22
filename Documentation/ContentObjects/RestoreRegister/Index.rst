@@ -87,4 +87,3 @@ again.
      70 = RESTORE_REGISTER
      80 = TEXT
      80.stdWrap.data = register:myTextRegister
-

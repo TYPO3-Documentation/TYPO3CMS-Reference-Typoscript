@@ -146,4 +146,3 @@ The according FlexForm configuration:
 ..  literalinclude:: _FlexFormWithFal.xml
     :language: xml
     :caption: Excerpt of a FlexForm configuration
-

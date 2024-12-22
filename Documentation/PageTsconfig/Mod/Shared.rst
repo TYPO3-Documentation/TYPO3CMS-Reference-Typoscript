@@ -150,5 +150,3 @@ disableSysNoteButton
     Disables the `sys_note` creation button in the modules' top button bar
     in the :guilabel:`Page`, :guilabel:`List` and :guilabel:`Info`
     modules.
-
-

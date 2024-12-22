@@ -37,4 +37,3 @@ Example
    myConstant = defaultValue
    # Enable overriding by environment variable
    myConstant := getEnv(TS_MYCONSTANT)
-
