@@ -1,11 +1,12 @@
+:navigation-title: Categories
 ..  include:: /Includes.rst.txt
 
 ..  index:: HMENU; special = categories
 ..  _hmenu-special-categories:
 
-================
-Categories HMENU
-================
+==========
+Categories
+==========
 
 Makes a menu of pages belonging to one or more categories. If a page
 belongs to several of the selected categories, it will appear only once.
