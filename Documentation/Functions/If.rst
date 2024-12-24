@@ -52,8 +52,8 @@ bitAnd
     .. code-block:: typoscript
        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-       hideDefaultLanguageOfPage = TEXT
-       hideDefaultLanguageOfPage {
+       lib.hideDefaultLanguageOfPage = TEXT
+       lib.hideDefaultLanguageOfPage {
            value = 0
            value {
                override = 1
@@ -362,8 +362,8 @@ If you want to compare values, you must load a base-value in the
 ..  code-block:: typoscript
     :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-    page.10.value = 10
-    page.10.isGreaterThan = 11
+    page.10.if.value = 10
+    page.10.if.isGreaterThan = 11
 
 This would return true because the value of :typoscript:`isGreaterThan` is
 greater than 10, which is the base-value.
@@ -373,7 +373,7 @@ More complex is this:
 ..  code-block:: typoscript
     :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-    page.10 {
+    page.10.if {
       value = 10
       isGreaterThan = 11
       isTrue.field = header
