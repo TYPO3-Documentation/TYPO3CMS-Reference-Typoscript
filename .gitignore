@@ -32,5 +32,6 @@ composer.lock
 nbproject
 Thumbs.db
 /.ddev/
-!/.ddev/config.yaml
+!/.ddev/config.yaml 
 /var/
+
