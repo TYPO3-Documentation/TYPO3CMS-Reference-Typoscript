@@ -194,12 +194,51 @@ Properties for getting data
 
 
     ..  _stdwrap-numRows:
+    ..  _numrows:
 
     ..  confval:: numRows
         :name: stdwrap-numRows
         :type: :ref:`->numRows <numrows>` / :ref:`stdWrap`
 
         Returns the number of rows resulting from the supplied :sql:`SELECT` query.
+
+        ..  _numRows-examples:
+
+        ..  rubric:: Example
+
+        Get the number of content elements within certain :sql:`colPos` of the current
+        page.
+
+        ..  code-block:: typoscript
+            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+
+            10 = FLUIDTEMPLATE
+            10 {
+                variables {
+                    numberOfContentElementsInColPosOne = TEXT
+                    numberOfContentElementsInColPosOne.stdWrap.numRows {
+                        table = tt_content
+                        select.where = {#colPos}=1
+                    }
+                }
+            }
+
+        ..  _numRows-properties:
+        ..  _numrows-table:
+
+        ..  confval:: numRows.table
+            :name: _numrows-table
+            :type: Table name
+
+            Name of the database table to query.
+
+        ..  _numrows-select:
+
+        ..  confval:: numRows.select
+            :name: numrows-select
+            :type: :ref:`select`
+
+            Select query for the operation.
 
 
     ..  _stdwrap-preUserFunc:
