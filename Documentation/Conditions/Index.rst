@@ -1268,7 +1268,7 @@ siteLanguage()
         Returns the language ID as an integer.
 
     :typoscript:`siteLanguage("locale")`
-        Returns the current locale as a string, for example `en_GB` or `de_DE`.
+        Returns the current locale as a string, for example `en-GB` or `de-DE`.
 
     :typoscript:`siteLanguage("base")`
         Returns the configured base URL as a string.
@@ -1307,8 +1307,8 @@ siteLanguage()
     ..  code-block:: typoscript
         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-        [siteLanguage("locale") == "de_CH"]
-            page.10.value = This site has the locale "de_CH"
+        [siteLanguage("locale") == "de-CH"]
+            page.10.value = This site has the locale "de_CH" or "de_CH.utf8"
         [END]
 
         [siteLanguage("title") == "Italy"]
