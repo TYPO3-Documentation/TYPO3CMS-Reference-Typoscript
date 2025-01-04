@@ -337,22 +337,22 @@ everybody
 Example: Set permissions defaults so that everybody can see the page
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-    ..  code-block:: typoscript
-       :caption: EXT:site_package/Configuration/page.tsconfig
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/page.tsconfig
 
-       TCEMAIN.permissions {
-           # Everybody can at least see the page, normally everybody can do nothing
-           everybody = show
-       }
+    TCEMAIN.permissions {
+      # Everybody can at least see the page, normally everybody can do nothing
+      everybody = show
+    }
 
-    The page "Community" was created with the settings from the example
-    above. Compared to the two other pages created with default
-    permissions you can see the effect: "Everybody" has read access:
+The page "Community" was created with the settings from the example
+above. Compared to the two other pages created with default
+permissions you can see the effect: "Everybody" has read access:
 
-    ..  figure:: /Images/ManualScreenshots/Access/AccessDefaultActions.png
-        :alt: Page with altered permissions for backend users, groups and everybody
+..  figure:: /Images/ManualScreenshots/Access/AccessDefaultActions.png
+    :alt: Page with altered permissions for backend users, groups and everybody
 
-        Page with altered permissions for backend users, groups and everybody
+    Page with altered permissions for backend users, groups and everybody
 
 ..  index:: Page permissions; Group
 
