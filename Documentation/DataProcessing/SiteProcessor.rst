@@ -45,7 +45,7 @@ Using the :php:`SiteProcessor` the following scenario is possible:
 
 ..  include:: /CodeSnippets/DataProcessing/TypoScript/SiteProcessor.rst.txt
 
-..  rubric:: The Fluid templat
+..  rubric:: The Fluid template
 
 In the Fluid template the properties of the site configuration can be accessed:
 
