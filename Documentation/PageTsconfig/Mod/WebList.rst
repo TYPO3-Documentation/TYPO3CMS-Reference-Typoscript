@@ -378,7 +378,7 @@ itemsLimitPerTable
     :name: mod-web-list-itemsLimitPerTable
     :type:  positive integer
     :Default: 20
-`
+
     Set the default maximum number of items to show per table.
     The number must be between `0` and `10000`. If below or above this range,
     the nearest valid number will be used.
