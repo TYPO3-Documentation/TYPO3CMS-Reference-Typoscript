@@ -1,6 +1,5 @@
 lib.stdContent = FLUIDTEMPLATE
 lib.stdContent {
-    templateName = TEXT
     templateName.stdWrap {
         cObject = TEXT
         cObject {
