@@ -1,6 +1,6 @@
 lib.stdContent = FLUIDTEMPLATE
 lib.stdContent {
-    templateName.stdWrap {
+    templateName {
         cObject = TEXT
         cObject {
             data = levelfield:-2,backend_layout_next_level,slide
