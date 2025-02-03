@@ -10,8 +10,6 @@ TCEMAIN
 Configuration for the TYPO3 Core Engine (DataHandler). For general information, see
 the :ref:`according section of TYPO3 Explained <t3coreapi:tce>`.
 
-..  youtube:: HnAdDHkes5A
-
 Properties
 ==========
 
