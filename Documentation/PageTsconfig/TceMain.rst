@@ -378,7 +378,7 @@ group
 
 ..  _pagetcemain-permissions-group-example:
 
-Example: Set permission defaults so that the group can do anything but delete a page
+Example: Set permission defaults so that the group can do anything with the new page
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 ..  code-block:: typoscript
