@@ -1,0 +1,34 @@
+page = PAGE
+page {
+    10 = PAGEVIEW
+    10 {
+        dataProcessing {
+            50 = menu
+            50 {
+                special = browse
+                as = prevNavigation
+                special {
+                    items = prev
+                    items.prevnextToSection = 1
+                }
+            }
+            60 = menu
+            60 {
+                special = browse
+                as = nextNavigation
+                special {
+                    items = next
+                    items.prevnextToSection = 1
+                }
+            }
+            70 = menu
+            70 {
+                special = browse
+                as = upNavigation
+                special {
+                    items = up
+                }
+            }
+        }
+    }
+}
