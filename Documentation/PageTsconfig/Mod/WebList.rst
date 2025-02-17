@@ -203,6 +203,42 @@ displayColumnSelector
     the :guilabel:`List` module. It can be used to compare different fields of
     the listed records.
 
+..  _pageTsConfigWebList-displayRecordDownload:
+
+displayRecordDownload
+=====================
+
+..  confval:: displayRecordDownload
+    :name: mod-web-list-displayRecordDownload
+    :type: boolean
+    :Default: `1`
+
+    The "Download" functionality is available in the :guilabel:`Web > List`
+    module via the "Download" button in each
+    tables header row. It is available in both, the list and also the single table
+    view and can be managed using this option.
+
+    Next to the general option is it also possible to set this option on
+    a per-table basis using the
+    :typoscript:`mod.web_list.table.<tablename>.displayRecordDownload` option.
+    In case this option is set, it takes precedence over the general option.
+
+    ..  code-block:: typoscript
+        :caption: packages/my_sitepackage/Configuration/Sets/MySet/page.tsconfig
+
+        # Page TSconfig
+        mod.web_list {
+            # Disable "Export" button in List module header
+            noExportRecordsLinks = 1
+
+            # Generally disable "Download" button
+            displayRecordDownload = 0
+
+            # Enable "Download" button for table "tt_content"
+            table.tt_content.displayRecordDownload = 1
+        }
+
+
 ..  _pageTsConfigWebList-displayColumnSelector-example:
 
 Example: Hide the column selector
@@ -517,7 +553,6 @@ Example: Hide the "Create new record" link.
 ..  index::
     noExportRecordsLinks
     Buttons; Export
-    Buttons; Download
 ..  _pageTsConfigWebList-noExportRecordsLinks:
 
 noExportRecordsLinks
@@ -528,15 +563,16 @@ noExportRecordsLinks
     :type:  boolean
     :Default: 0
 
-    If set, the :guilabel:`Download` and :guilabel:`Export` buttons are hidden
-    in the list module. This applies to
-    the :guilabel:`Export` button located at the top left for t3d exports, the
-    :guilabel:`Download` button directly on the table
-    listing for csv download and the :guilabel:`Download` button in the tables
-    single view.
+    ..  versionchanged:: 13.1.0, 12.4.11
+        Until the mentioned versions this options also hid the the
+        :guilabel:`Download` button used for CSV export. Use
+
+    If set, the :guilabel:`Download` button is hidden
+    in the :guilabel:`Web > List` module. This applies to
+    the :guilabel:`Export` button located at the top left for t3d exports.
 
     This option is for example important to disable batch
-    download of sensitive data via CSV or t3d exports.
+    download of sensitive data via t3d exports.
 
     ..  include:: /Images/AutomaticScreenshots/WebList/WithExportButtons.rst.txt
 
