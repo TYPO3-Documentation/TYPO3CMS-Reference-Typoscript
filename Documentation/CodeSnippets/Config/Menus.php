@@ -71,8 +71,8 @@ return [
     // special = rootline
     [
         'action' => 'createCodeSnippet',
-        'caption' => 'EXT:site_package/Resources/Private/Templates/Partials/Navigation/Breadcrumb.html',
-        'sourceFile' => 'EXT:site_package/Resources/Private/Templates/Partials/Navigation/Breadcrumb.html',
+        'caption' => 'EXT:site_package/Resources/Private/PageView/Partials/Navigation/Breadcrumb.html',
+        'sourceFile' => 'EXT:site_package/Resources/Private/PageView/Partials/Navigation/Breadcrumb.html',
         'targetFileName' => 'CodeSnippets/Menu/Template/BreadcrumbDataProcessor.rst.txt',
     ],
 ];
