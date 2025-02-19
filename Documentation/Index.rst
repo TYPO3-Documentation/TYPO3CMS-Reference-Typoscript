@@ -52,8 +52,10 @@ chapter.
     :maxdepth: 1
     :titlesonly:
 
+    TopLevelObjects/Page/Index
     ContentObjects/Index
     DataProcessing/Index
+    TopLevelObjects/Config
     TopLevelObjects/Index
     Functions/Index
     Conditions/Index
