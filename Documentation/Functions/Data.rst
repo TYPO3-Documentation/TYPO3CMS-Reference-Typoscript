@@ -308,7 +308,7 @@ flexform
 
 ..  confval:: flexform
     :name: data-flexform
-    :Syntax: flexform : [field containing flexform data].[property of this flexform]
+    :Syntax: flexform : [field containing flexform data] : [property of this flexform]
 
     Access values from :ref:`FlexForms <t3coreapi:flexforms>`, for example inside of :sql:`tt_content` record. In contrast
     to most parts, deeper levels are accessed through dots, not pipes.
