@@ -1,10 +1,11 @@
-.. include:: /Includes.rst.txt
-.. index:: Syntax
-.. _syntax:
+:navigation-title: TSconfig differences
 
-======
-Syntax
-======
+..  include:: /Includes.rst.txt
+..  _tsconfig-syntax:
+
+==================================================================
+Differences in the syntax between TSconfig and frontend TypoScript
+==================================================================
 
 While the objects, properties and conditions are different,
 the *syntax* of TSconfig is basically the same as it is for
@@ -17,5 +18,3 @@ TypoScript in frontend TypoScript templates.
 Please note the following differences:
 
 *   There are differences in the :ref:`conditions <conditions>` that can be used.
-*   The general TypoScript syntax is described in
-    :ref:`TypoScript syntax <t3tsref:typoscript-syntax>`.

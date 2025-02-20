@@ -1,7 +1,9 @@
 :navigation-title: Syntax
-.. include:: /Includes.rst.txt
-.. index:: TypoScript; Syntax
-.. _typoscript-syntax:
+
+..  include:: /Includes.rst.txt
+..  index:: TypoScript; Syntax
+..  _typoscript-syntax:
+..  _syntax:
 
 =================
 TypoScript syntax
@@ -20,3 +22,4 @@ store configuration in this structure.
     Comments/Index
     Conditions/Index
     FileImports/Index
+    TSconfig/Index
