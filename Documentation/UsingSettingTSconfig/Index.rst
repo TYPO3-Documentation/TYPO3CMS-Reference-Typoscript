@@ -16,57 +16,32 @@ TSconfig can be used in page, it is then referred to as
 in which case it is known as "User TSconfig".
 
 
-.. container:: row m-0 p-0
+..  card-grid::
+    :columns: 1
+    :columns-md: 2
+    :gap: 4
+    :class: pb-4
+    :card-height: 100
 
-   .. container:: col-md-6 pl-0 pr-3 py-3 m-0
+    ..  card:: :ref:`Setting Page TSconfig <setting-page-tsconfig>`
 
-      .. container:: card px-0 h-100
+        Lists different options of how to include Page TSconfig options.
 
-         .. rst-class:: card-header h3
 
-            .. rubric:: :ref:`Setting Page TSconfig <setting-page-tsconfig>`
+    ..  card:: :ref:`Setting User TSconfig <setting-user-tsconfig>`
 
-         .. container:: card-body
+        Lists different options of how to include User TSconfig options.
 
-            Lists different options of how to include Page TSconfig options.
 
-   .. container:: col-md-6 pl-0 pr-3 py-3 m-0
+    ..  card:: :ref:`Conditions <conditions>`
 
-      .. container:: card px-0 h-100
+        Explains how Conditions can be used in TSconfig of both user and
+        page.
 
-         .. rst-class:: card-header h3
+    ..  card:: :ref:`PHP API <phpapi>`
 
-            .. rubric:: :ref:`Setting User TSconfig <setting-user-tsconfig>`
-
-         .. container:: card-body
-
-            Lists different options of how to include User TSconfig options.
-
-   .. container:: col-md-6 pl-0 pr-3 py-3 m-0
-
-      .. container:: card px-0 h-100
-
-         .. rst-class:: card-header h3
-
-            .. rubric:: :ref:`Conditions <conditions>`
-
-         .. container:: card-body
-
-            Explains how Conditions can be used in TSconfig of both user and
-            page.
-
-   .. container:: col-md-6 pl-0 pr-3 py-3 m-0
-
-      .. container:: card px-0 h-100
-
-         .. rst-class:: card-header h3
-
-            .. rubric:: :ref:`PHP API <phpapi>`
-
-         .. container:: card-body
-
-            Explains how TSconfig can be retrieved from and used
-            within the PHP code of backend modules.
+        Explains how TSconfig can be retrieved from and used
+        within the PHP code of backend modules.
 
 .. toctree::
    :titlesonly:
