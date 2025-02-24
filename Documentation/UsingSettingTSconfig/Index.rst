@@ -48,19 +48,6 @@ in which case it is known as "User TSconfig".
 
          .. rst-class:: card-header h3
 
-            .. rubric:: :ref:`Syntax <syntax>`
-
-         .. container:: card-body
-
-            A short introduction in the syntax of TSconfig and how it differs
-            from TypoScript setup.
-
-   .. container:: col-md-6 pl-0 pr-3 py-3 m-0
-
-      .. container:: card px-0 h-100
-
-         .. rst-class:: card-header h3
-
             .. rubric:: :ref:`Conditions <conditions>`
 
          .. container:: card-body
@@ -87,6 +74,5 @@ in which case it is known as "User TSconfig".
 
    PageTSconfig
    UserTSconfig
-   Syntax
    Conditions
    PhpApi
