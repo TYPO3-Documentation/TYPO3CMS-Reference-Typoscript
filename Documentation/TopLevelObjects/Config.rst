@@ -13,7 +13,7 @@
 `config`: TypoScript configuration
 ==================================
 
-The `config` top-level object does not have to be initialized,  configuration
+The `config` top-level object does not have to be initialized, configuration
 settings can be made like this:
 
 ..  code-block::
