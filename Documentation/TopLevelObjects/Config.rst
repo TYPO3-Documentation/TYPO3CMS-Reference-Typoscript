@@ -1,3 +1,5 @@
+:navigation-title: Config
+
 ..  include:: /Includes.rst.txt
 ..  index::
     config
@@ -7,38 +9,23 @@
 ..  _config-datatype:
 ..  _top-level-objects-config:
 
-===============
-CONFIG & config
-===============
+==================================
+`config`: TypoScript configuration
+==================================
+
+The `config` top-level object does not have to be initialized, configuration
+settings can be made like this:
+
+..  code-block::
+    :caption: config/sites/my_site/setup.typoscript
+
+    # TypoScript
+    config {
+        headerComment = Made with ❤ by your TYPO3 Documentation Team
+    }
 
 ..  contents:: Table of content
     :depth: 1
-
-..  _top-level-objects-config-about:
-
-The 'config' top-level-object
-=============================
-
-Internally TYPO3 always creates an array `config` with various configuration
-values which are evaluated during the rendering process and treated in some
-special, predefined and predictive way. This is what we mean when we say the
-property `config`, actually the array `'config'` is of type CONFIG. It is a
-"top-level-object" because it is not subordinate to any other configuration
-setting.
-
-In PHP you can refer to the array within :file:`typo3/sysext/frontend/Classes/`
-files by writing :php:`$GLOBALS['TSFE']->config['config']`.
-
-This typoscript "top level object" `config` provides access to the internal
-array. This means, that configuration settings can be made easily. For example:
-
-..  code-block::
-
-    # TypoScript
-    config.debug = 1
-
-    # will produce, in php
-    $GLOBALS['TSFE']->config['config']['debug'] // with value 1
 
 ..  _setup-config-xmlprologue:
 ..  _setup-config-typolinklinkaccessrestrictedpages-ATagParams:

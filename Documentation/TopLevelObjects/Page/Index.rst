@@ -1,14 +1,17 @@
+:navigation-title: Page
+
 ..  include:: /Includes.rst.txt
 ..  index::
-   PAGE
-   Top-level objects; page
+    PAGE
+    Top-level objects; page
 ..  _page:
 ..  _page-datatype:
 ..  _object-type-page:
 
-====
-PAGE
-====
+
+================================
+`PAGE` object type in TypoScript
+================================
 
 This defines what is rendered in the frontend.
 
