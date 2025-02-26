@@ -12,7 +12,7 @@ level object called `page`. It is of type
 `PAGE <https://docs.typo3.org/permalink/t3tsref:object-type-page>`_.
 
 The main TypoScript configuration is always done in a top level object called
-`configuration`. It is of type
+`config`. It is of type
 `CONFIG <https://docs.typo3.org/permalink/t3tsref:top-level-objects-config>`_.
 
 ..  contents:: Table of Contents
