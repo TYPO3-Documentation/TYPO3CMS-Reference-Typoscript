@@ -34,12 +34,10 @@ config                                :ref:`CONFIG <config-datatype>`
 :ref:`sitetitle <tlo-sitetitle>`      readonly
 ===================================== =========================
 
-
 ..  toctree::
     :hidden:
 
-    Config
+    PageAndConfig
     Module
-    Page/Index
     Plugin
     Other
