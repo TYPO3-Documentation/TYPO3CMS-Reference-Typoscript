@@ -568,8 +568,7 @@ noExportRecordsLinks
         :guilabel:`Download` button used for CSV export. Use
 
     If set, the :guilabel:`Download` button is hidden
-    in the :guilabel:`Web > List` module. This applies to
-    the :guilabel:`Export` button located at the top left for t3d exports.
+    in the :guilabel:`Web > List` module. 
 
     This option is for example important to disable batch
     download of sensitive data via t3d exports.
