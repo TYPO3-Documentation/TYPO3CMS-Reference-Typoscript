@@ -564,7 +564,7 @@ noExportRecordsLinks
     :Default: 0
 
     ..  versionchanged:: 13.1.0, 12.4.11
-        Until the mentioned versions this options also hid the the
+        Until the mentioned versions this options also hid the
         :guilabel:`Download` button used for CSV export. Use
 
     If set, the :guilabel:`Download` button is hidden
