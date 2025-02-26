@@ -226,7 +226,7 @@ Properties
         This is the default body tag. It is overridden by :ref:`setup-page-bodyTag`,
         if that is set.
 
-        ..  note::  
+        ..  note::
             Additionally to the body tag properties noted here,
             there also is the property :confval:`config.disableBodyTag <config-disableBodyTag>`,
             which, if set, disables body tag generation independently
