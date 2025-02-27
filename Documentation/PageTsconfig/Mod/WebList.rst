@@ -214,14 +214,14 @@ displayRecordDownload
     :Default: `1`
 
     The "Download" functionality is available in the :guilabel:`Web > List`
-    module via the "Download" button in each
-    tables header row. It is available in both, the list and also the single table
+    module via the "Download" button in the relevant
+    table header row. It is available in both the list and the single table
     view and can be managed using this option.
 
-    Next to the general option is it also possible to set this option on
-    a per-table basis using the
+    As well as the general option, it is also possible to set this option on
+    a table basis using the
     :typoscript:`mod.web_list.table.<tablename>.displayRecordDownload` option.
-    In case this option is set, it takes precedence over the general option.
+    If this option is set, it takes precedence over the general option.
 
     ..  code-block:: typoscript
         :caption: packages/my_sitepackage/Configuration/Sets/MySet/page.tsconfig
@@ -564,11 +564,11 @@ noExportRecordsLinks
     :Default: 0
 
     ..  versionchanged:: 13.1.0, 12.4.11
-        Until the mentioned versions this options also hid the
-        :guilabel:`Download` button used for CSV export. Use
+        Up until these versions this option also hid the
+        :guilabel:`Download` button used for CSV export.
 
     If set, the :guilabel:`Download` button is hidden
-    in the :guilabel:`Web > List` module. 
+    in the :guilabel:`Web > List` module.
 
     This option is for example important to disable batch
     download of sensitive data via t3d exports.
