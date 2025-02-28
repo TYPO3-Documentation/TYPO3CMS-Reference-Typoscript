@@ -46,7 +46,7 @@ Properties
     ..  confval:: special.items
         :name: hmenu-browse-special-items
         :type: list of item names separated by `|`
-        :Required:
+        :Default: `index|up|next|prev`
 
         A list, separated by pipes `|`, containing the following item types:
 
