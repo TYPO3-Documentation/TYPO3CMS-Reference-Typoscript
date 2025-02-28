@@ -503,10 +503,17 @@ Properties of 'config'
         comment in the <head> section of the page. Use this to insert a note
         like that "Programmed by My-Agency".
 
-    ..  confval:: htmlTag.attributes
+    ..  confval:: htmlTag.attributes.[attribute]
         :name: config-htmlTag-attributes
-        :type: array
+        :type: string /
         :Example: setup-config-htmltag-attributes
+
+        ..  versionchanged:: 14.0
+            It is now possible use `stdWrap <https://docs.typo3.org/permalink/t3tsref:stdwrap>`_
+            options like :ref:`userFunc <t3tsref:confval-parsefunc-userfunc>`,
+            :ref:`override <t3tsref:confval-stdwrap-override>` or
+            `Data / getText <https://docs.typo3.org/permalink/t3tsref:data-type-gettext>`_
+            via TypoScript.
 
         Sets the attributes for the :html:`<html>` tag on the page. Allows to override
         and add custom attributes via TypoScript without having to re-add the
@@ -514,6 +521,15 @@ Properties of 'config'
 
         This property supersedes the previous :typoscript:`config.htmlTag_setParams` option by providing
         a more flexible API to add attributes.
+
+        ..  code-block:: typoscript
+
+            config.htmlTag.attributes.my-attribute = 123
+
+        ..  code-block:: typoscript
+
+            config.htmlTag.attributes.my-attribute = 123
+            config.htmlTag.attributes.my-attribute.userFunc = MyVendor\\MyExtension\\HtmlTagEnhancer->overrideMyAttribute
 
     ..  confval:: htmlTag_setParams
         :name: config-htmlTag-setParams
