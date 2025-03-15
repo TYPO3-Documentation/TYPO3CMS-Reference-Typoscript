@@ -40,21 +40,35 @@ Example: Display a page with Fluid templates
     :language: typoscript
     :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
 
+..  _cobj-pageview-template-naming:
+
+Template naming and locations
+=============================
+
 To ensure proper rendering, the following requirements and
 fallback mechanisms apply:
 
-**Target Path Structure**:
+..  _cobj-pageview-template-naming-path:
+
+Target path structure
+---------------------
 
 *   The target directory **must contain a folder named :directory:`Pages/`**.
 *   This folder must contain Fluid templates in :file`*.html` format.
 
-**Template Naming Convention**:
+..  _cobj-pageview-template-naming-cobnventions:
 
-*   The Fluid template file should match the name of the selected backend layout
+Template naming convention
+--------------------------
+
+*   The Fluid template file **must** match the name of the selected backend layout
     of your current page.
 *   The first letter of the Fluid template file must be **uppercase**.
 
-**Fallback Behavior**:
+..  _cobj-pageview-template-naming-fallback:
+
+Fallback behavior when not backend layout is defined
+----------------------------------------------------
 
 *   If the page record does not specify a backend layout, TYPO3 tries to detect
     next-level backend layouts by traversing up the page rootline.
