@@ -45,8 +45,8 @@ fallback mechanisms apply:
 
 **Target Path Structure**:
 
-*   The target directory **must contain a folder named `Pages/`**.
-*   This folder must contain Fluid templates in *.html format.
+*   The target directory **must contain a folder named :directory:`Pages/`**.
+*   This folder must contain Fluid templates in :file`*.html` format.
 
 **Template Naming Convention**:
 
@@ -56,11 +56,11 @@ fallback mechanisms apply:
 
 **Fallback Behavior**:
 
-*   If page record does not specify a backend layout, TYPO3 tries to detect
-    next-level backend layouts by travelling up the page rootline.
+*   If the page record does not specify a backend layout, TYPO3 tries to detect
+    next-level backend layouts by traversing up the page rootline.
 *   If still no backend layout could be found, TYPO3 falls back to `Default.html`.
-*   If you explizit set backend layout to `none` a Fluid template
-    with name `None.html` will be used.
+*   If you explicitly set the backend layout to `none`, a Fluid template
+    with name :file:`None.html` will be used.
 
 .. _cobj-pageview-data:
 
