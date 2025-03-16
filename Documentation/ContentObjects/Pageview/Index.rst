@@ -67,7 +67,7 @@ Template naming convention
 
 ..  _cobj-pageview-template-naming-fallback:
 
-Fallback behavior when not backend layout is defined
+Fallback behavior when no backend layout is defined
 ----------------------------------------------------
 
 *   If the page record does not specify a backend layout, TYPO3 tries to detect
