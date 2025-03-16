@@ -56,7 +56,7 @@ Target path structure
 *   The target directory **must contain a folder named :directory:`Pages/`**.
 *   This folder must contain Fluid templates in :file`*.html` format.
 
-..  _cobj-pageview-template-naming-cobnventions:
+..  _cobj-pageview-template-naming-conventions:
 
 Template naming convention
 --------------------------
