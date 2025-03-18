@@ -1,4 +1,4 @@
-page = 10
+page = PAGE
 page {
   10 = PAGEVIEW
   10 {
