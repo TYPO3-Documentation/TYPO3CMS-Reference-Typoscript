@@ -792,6 +792,9 @@ traverse()
         # Traverse query parameters of current request along tx_news_pi1[news]
         [request && traverse(request.getQueryParams(), 'tx_news_pi1/news') > 0]
 
+        # Traverse page properties for current page
+        [traverse(page ?? [], "pid") == 65]
+
     ..  tip::
         Checking for the :ref:`request object <t3coreapi:typo3-request>` to be
         available before using :typoscript:`traverse()` may be necessary, for
@@ -801,6 +804,9 @@ traverse()
         available). This avoids the error
         `Unable to call method "getQueryParams" of non-object "request"`.
 
+        Same is true for the `page` variable, which might not be available
+        in all contexts, for example backend modules without a page.
+        One can use the `?? []` workaround.
 
 ..  index:: Conditions; compatVersion
 ..  _condition-function-compatVersion:
