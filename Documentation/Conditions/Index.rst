@@ -805,7 +805,7 @@ traverse()
         `Unable to call method "getQueryParams" of non-object "request"`.
 
         Same is true for the `page` variable, which might not be available
-        in all contexts, e.g. backend modules without a page.
+        in all contexts, for example backend modules without a page.
         One can use the `?? []` workaround.
 
 ..  index:: Conditions; compatVersion
