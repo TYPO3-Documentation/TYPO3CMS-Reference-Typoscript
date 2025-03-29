@@ -529,7 +529,7 @@ Properties of 'config'
         ..  code-block:: typoscript
 
             config.htmlTag.attributes.my-attribute = 123
-            config.htmlTag.attributes.my-attribute.userFunc = MyVendor\\MyExtension\\HtmlTagEnhancer->overrideMyAttribute
+            config.htmlTag.attributes.my-attribute.userFunc = MyVendor\MyExtension\HtmlTagEnhancer->overrideMyAttribute
 
     ..  confval:: htmlTag_setParams
         :name: config-htmlTag-setParams
