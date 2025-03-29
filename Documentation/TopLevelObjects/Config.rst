@@ -510,7 +510,7 @@ Properties of 'config'
 
         ..  versionchanged:: 14.0
             It is now possible to use `stdWrap <https://docs.typo3.org/permalink/t3tsref:stdwrap>`_
-            options like :ref:`userFunc <t3tsref:confval-parsefunc-userfunc>`,
+            options as a subkey for an attribute, like :ref:`userFunc <t3tsref:confval-parsefunc-userfunc>`,
             :ref:`override <t3tsref:confval-stdwrap-override>` or
             `Data / getText <https://docs.typo3.org/permalink/t3tsref:data-type-gettext>`_
             via TypoScript.
