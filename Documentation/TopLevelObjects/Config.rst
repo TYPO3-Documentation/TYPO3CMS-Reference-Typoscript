@@ -505,7 +505,7 @@ Properties of 'config'
 
     ..  confval:: htmlTag.attributes.[attribute]
         :name: config-htmlTag-attributes
-        :type: string /
+        :type: string / `stdWrap <https://docs.typo3.org/permalink/t3tsref:stdwrap>`_
         :Example: setup-config-htmltag-attributes
 
         ..  versionchanged:: 14.0
