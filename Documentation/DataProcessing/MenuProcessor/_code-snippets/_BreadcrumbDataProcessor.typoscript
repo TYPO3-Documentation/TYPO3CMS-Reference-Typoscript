@@ -2,7 +2,7 @@ page {
   10 = FLUIDTEMPLATE
   10 {
     dataProcessing {
-      1657927210 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+      1657927210 = menu
       1657927210 {
         special = rootline
         special.range = 0|-1
