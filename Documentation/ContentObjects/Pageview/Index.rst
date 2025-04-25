@@ -233,12 +233,12 @@ Properties
 ..  _cobj-pageview-examples:
 
 Examples
---------
+========
 
 ..  _cobj-pageview-dataProcessing-example:
 
 Example: Display a main menu and a breadcrumb on the page
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+---------------------------------------------------------
 
 ..  literalinclude:: _includes/_pageWithBreadcrumb.typoscript
     :language: typoscript
@@ -266,7 +266,7 @@ And
 ..  _cobj-pageview-paths-example:
 
 Example: Define a path that contains all templates
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+--------------------------------------------------
 
 This is a basic definition of a :fluid:`PAGEVIEW` object with only one path to the
 templates:
@@ -326,7 +326,7 @@ are expected in folder
 ..  _cobj-pageview-paths-example-extended:
 
 Example: Define fallbacks for a template paths
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+----------------------------------------------
 
 You can use the directories defined in :confval:`pageview-paths` to
 define fallback directories for the templates:
@@ -351,7 +351,7 @@ in :path:`EXT:my_basic_sitepackage/Resources/Private/PageView/Pages/`.
 ..  _cobj-pageview-variables-example:
 
 Example: Make additional variables available in the Fluid template
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+------------------------------------------------------------------
 
 ..  literalinclude:: _includes/_pageWithVariables.typoscript
     :langugage: typoscript
