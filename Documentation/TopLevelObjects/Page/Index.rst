@@ -171,7 +171,6 @@ is very common and most documentation will imply that your main page object is c
 ..  _setup-page-typenum:
 ..  _setup-page-wrap:
 ..  _setup-page-bodytagadd:
-..  _setup-page-bodytag:
 ..  _setup-page-array:
 ..  _page_properties:
 
@@ -205,6 +204,7 @@ Properties
         in the future. Therefore you will often see that people use the number
         10 and no number 1 is found.
 
+..  _setup-page-bodytag:
     ..  confval:: bodyTag
         :name: page-bodyTag
         :type: string
