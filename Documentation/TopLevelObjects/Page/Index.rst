@@ -205,7 +205,6 @@ Properties
         in the future. Therefore you will often see that people use the number
         10 and no number 1 is found.
 
-..  _confval-page-bodytag:
     ..  confval:: bodyTag
         :name: page-bodyTag
         :type: string
