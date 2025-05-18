@@ -148,6 +148,8 @@ These are just recommendations. However, especially the name page for the conten
 is very common and most documentation will imply that your main page object is called page.
 
 ..  index:: PAGE; Properties
+..  _setup-page-bodytag:
+..  _setup-page-bodytagadd:
 ..  _setup-page-bodytagcobject:
 ..  _setup-page-config:
 ..  _setup-page-cssinline:
@@ -170,8 +172,6 @@ is very common and most documentation will imply that your main page object is c
 ..  _setup-page-stdwrap:
 ..  _setup-page-typenum:
 ..  _setup-page-wrap:
-..  _setup-page-bodytagadd:
-..  _setup-page-bodytag:
 ..  _setup-page-array:
 ..  _page_properties:
 
@@ -226,7 +226,7 @@ Properties
         :name: page-bodyTagCObject
         :type: cObject
 
-        This is the default body tag. It is overridden by :ref:`setup-page-bodyTag`,
+        This is the default body tag. It is overridden by :ref:`confval-page-bodytag`,
         if that is set.
 
         ..  note::
