@@ -165,7 +165,7 @@ Properties of 'config'
             config.cache.<page-id> = <table name>:<storage-pid>
 
         Multiple record sources can be added as comma-separated list, see the
-        examples.
+        :ref:`examples <setup-config-cache>`.
 
         You can use the keyword "all" instead of a <page-id> to consider
         records for the cache lifetime of all pages.
