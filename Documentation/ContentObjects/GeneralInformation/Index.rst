@@ -93,17 +93,17 @@ But this is not the case with :typoscript:`tt_content.bullets.10`. Here
 cObject at *runtime*.
 
 The reason why lib.stdheader was copied in the first case is the fact
-that it's needed to unset ".stdWrap.space" inside the cObject
+that it is needed to unset ".stdWrap.space" inside the cObject
 (:typoscript:`10.stdWrap.space >`). This could **not** be done in the second case
-where only a pointer is created.
+where only a reference pointer is created.
 
 
 .. _reusing-cobjects-temp-objects:
 
-Note:
------
+Reusing Temporary TypoScript Objects:
+-------------------------------------
 
-If :typoscript:`lib.stdheader` was :typoscript:`temp.stdheader` instead, the pointer would
+If :typoscript:`lib.stdheader` was :typoscript:`temp.stdheader` instead, the reference pointer would
 not work! This is due to the fact that the runtime-reference would
 find nothing in `temp.` as this is unset before the template is stored
 in cache!
@@ -113,9 +113,8 @@ definition elsewhere).
 
 Overriding values anyway:
 
-Although you cannot override values TypoScript-style (using the
-operators and all) the properties of the object which has the
-reference will be merged with the configuration of the reference.
+Although you cannot override values of :typoscript:`styles.` the properties of the object which gets the
+copy of the reference will be merged with the configuration of the reference.
 
 
 .. _reusing-cobjects-examples:
@@ -139,8 +138,8 @@ The result is this configuration:
 
 .. include:: /Images/ManualScreenshots/FrontendOutput/StdWrap/ContentObjectsExampleMerge1.rst.txt
 
-Notice that :typoscript:`.value` was *not* cleared, because it's simply two arrays
-which are joined:
+Notice that :typoscript:`.value` was *not* cleared, because simply these two arrays
+are merged:
 
 .. include:: /Images/ManualScreenshots/FrontendOutput/StdWrap/ContentObjectsExampleMerge2.rst.txt
 
