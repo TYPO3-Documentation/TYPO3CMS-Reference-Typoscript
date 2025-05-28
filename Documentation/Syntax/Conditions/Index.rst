@@ -115,6 +115,11 @@ in TSconfig from "site settings". A simple example if this constant
         page.10.value = Page uid is 42
     [end]
 
+..  note::
+
+    Using the `Null coalescing operator ?? <https://docs.typo3.org/permalink/t3tsref:typoscript-syntax-syntax-null-coalescing>`_
+    with constants used within conditions is not possible.
+
 ..  _typoscript-syntax-end-condition-nesting:
 
 Nesting conditions via TypoScript imports
@@ -164,7 +169,6 @@ backend:
 
     # Now
     [getTSFE()?.id == 123]
-
 
 ..  _typoscript-syntax-syntax-value:
 
