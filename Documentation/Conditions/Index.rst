@@ -1,3 +1,5 @@
+:navigation-title: Conditions
+
 ..  include:: /Includes.rst.txt
 ..  index::
     Conditions
@@ -12,10 +14,9 @@
 ..  _condition-functions-in-all-contexts:
 ..  _condition-functions-in-frontend-context:
 
-
-==========
-Conditions
-==========
+=======================================
+Frontend TypoScript conditions criteria
+=======================================
 
 Frontend TypoScript conditions offer a way to conditionally change TypoScript
 based on current context. Do not confuse conditions with the
