@@ -1,0 +1,10 @@
+page = PAGE
+page.10 = TEXT
+page.10.value = HELLO WORLD!
+
+[frontend.user.isLoggedIn]
+  page.20 = TEXT
+  page.20 {
+    value = A frontend user is logged in.
+  }
+[GLOBAL]

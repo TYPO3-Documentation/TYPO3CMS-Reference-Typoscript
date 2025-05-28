@@ -1,3 +1,5 @@
+:navigation-title: Conditions
+
 ..  include:: /Includes.rst.txt
 ..  index::
     Conditions
@@ -8,9 +10,9 @@
 ..  _conditions-example:
 ..  _condition-differences:
 
-==========
-Conditions
-==========
+===========================================
+Conditions in Backend TypoScript / TSconfig
+===========================================
 
 TSconfig TypoScript conditions offer a way to conditionally change TypoScript based
 on current context. See the :ref:`TypoScript syntax condition chapter <t3tsref:typoscript-syntax-conditions>`
