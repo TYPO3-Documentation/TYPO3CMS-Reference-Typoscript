@@ -92,10 +92,10 @@ But this is not the case with :typoscript:`tt_content.bullets.10`. Here
 :typoscript:`lib.stdheader` is referenced and :typoscript:`lib.stdheader` will be used as the
 cObject at *runtime*.
 
-The reason why lib.stdheader was copied in the first case is the fact
-that it is needed to unset ".stdWrap.space" inside the cObject
-(:typoscript:`10.stdWrap.space >`). This could **not** be done in the second case
-where only a reference pointer is created.
+The reason why lib.stdheader is copied (and not referenced) in the first case is the fact
+that ".stdWrap.space" can be unset inside the cObject
+(:typoscript:`10.stdWrap.space >`). This **cannot** be done in the second case
+because it is only a reference pointer.
 
 
 .. _reusing-cobjects-temp-objects:
@@ -103,17 +103,17 @@ where only a reference pointer is created.
 Reusing Temporary TypoScript Objects:
 -------------------------------------
 
-If :typoscript:`lib.stdheader` was :typoscript:`temp.stdheader` instead, the reference pointer would
+If :typoscript:`temp.stdheader` had been used instead of :typoscript:`lib.stdheader`, the reference pointer would
 not work! This is due to the fact that the runtime-reference would
 find nothing in `temp.` as this is unset before the template is stored
-in cache!
+in the cache!
 
 This goes for :typoscript:`temp.` and :typoscript:`styles.` (see the top-level object
 definition elsewhere).
 
 Overriding values anyway:
 
-Although you cannot override values of :typoscript:`styles.` the properties of the object which gets the
+Although you cannot override values in :typoscript:`styles.`, the properties of the object which gets a
 copy of the reference will be merged with the configuration of the reference.
 
 
@@ -138,8 +138,8 @@ The result is this configuration:
 
 .. include:: /Images/ManualScreenshots/FrontendOutput/StdWrap/ContentObjectsExampleMerge1.rst.txt
 
-Notice that :typoscript:`.value` was *not* cleared, because simply these two arrays
-are merged:
+Notice that :typoscript:`.value` was *not* cleared, because these two arrays
+are simply merged:
 
 .. include:: /Images/ManualScreenshots/FrontendOutput/StdWrap/ContentObjectsExampleMerge2.rst.txt
 
