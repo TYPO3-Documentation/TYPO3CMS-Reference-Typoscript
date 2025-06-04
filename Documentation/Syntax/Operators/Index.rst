@@ -316,6 +316,9 @@ parenthesis. These predefined functions are available:
     The section :ref:`EvaluateModifierFunctionEvent <t3coreapi:EvaluateModifierFunctionEvent>`
     provides an example and the API.
 
+
+..  _typoscript-syntax-syntax-null-coalescing:
+
 Null coalescing operator `??` for  TypoScript constants
 =======================================================
 
@@ -333,3 +336,17 @@ Example that evaluates to `$config.oldThing` if set, otherwise the newer setting
     :caption: EXT:my_extension/Configuration/TypoScript/setup.typoscript
 
     plugin.tx_myext.settings.example = {$config.oldThing ?? $myext.thing}
+
+The null coalescing operator cannot be used in conditions. Use
+`or <https://docs.typo3.org/permalink/t3tsref:typoscript-syntax-end-condition-or>`_
+instead:
+
+..  code-block:: typoscript
+    :caption: EXT:my_extension/Configuration/TypoScript/setup.typoscript
+
+    # Wrong
+    # [{$config.oldThing ?? $myext.thing} == 5]
+
+    # Right
+    [{$config.oldThing}  == 5 or {$myext.thing} == 5]
+
