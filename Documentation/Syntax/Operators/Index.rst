@@ -349,4 +349,3 @@ instead:
 
     # Right
     [{$config.oldThing}  == 5 or {$myext.thing} == 5]
-
