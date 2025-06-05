@@ -1,14 +1,18 @@
+:navigation-title: Operators
+
 ..  include:: /Includes.rst.txt
 ..  index:: TypoScript; Operator
 ..  _typoscript-syntax-syntax-operator:
 
-=========
-Operators
-=========
+==================================
+Operators in the TypoScript syntax
+==================================
 
 TypoScript syntax comes with a couple of operators to assign
 values, copy from other identifier paths, and to manipulate values.
 Let's have a closer look at them.
+
+..  contents:: Operators in TypoScript
 
 ..  index::
     TypoScript; Operator "="
@@ -319,8 +323,8 @@ parenthesis. These predefined functions are available:
 
 ..  _typoscript-syntax-syntax-null-coalescing:
 
-Null coalescing operator `??` for  TypoScript constants
-=======================================================
+Null coalescing operator `??` for TypoScript constants
+======================================================
 
 ..  versionadded:: 13.1
 
