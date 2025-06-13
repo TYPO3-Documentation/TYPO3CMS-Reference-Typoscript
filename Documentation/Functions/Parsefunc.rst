@@ -190,9 +190,6 @@ userFunc
     Similar to, for example, :ref:`stdwrap-postUserFunc` in :ref:`stdWrap`,
     or :ref:`typolink.userFunc <typolink-userFunc>`.
 
-    Remember the function name must possibly be prepended :php:`user_`.
-
-
 ..  _parsefunc-nonTypoTagStdWrap:
 
 nonTypoTagStdWrap
