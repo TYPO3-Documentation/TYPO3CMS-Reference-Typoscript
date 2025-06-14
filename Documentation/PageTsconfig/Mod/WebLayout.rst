@@ -112,6 +112,11 @@ defLangBinding
     :type: boolean
     :Default: 0
 
+    ..  versionchanged:: 14.0
+        Is not evaluated anymore. Editors will now always see the content
+        elements next to each other within the page module, when in language
+        comparison mode.
+
     If set, translations of content elements are bound to the default record in the display. This means that
     within each column with content elements any translation found for exactly the shown default content
     element will be shown in the language column next to.
