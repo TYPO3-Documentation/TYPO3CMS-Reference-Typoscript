@@ -128,11 +128,28 @@ removeTags
 
 ..  confval:: removeTags
     :name: htmlparser-removeTags
-    :type: (ibid)
+    :type: string-list / array
 
     List of tags (among the already set tags), which will be configured so
     they are surely removed.
 
+    ..  code-block:: yaml
+        :caption: EXT:rte_ckeditor/Configuration/RTE/Processing.yaml
+
+        processing:
+          HTMLparser_db:
+            removeTags: [link, meta, o:p, sdfield, style, title]
+            # "string" definition is also possible:
+            # removeTags: link, meta, o:p, sdfield, style, title
+
+    ..  code-block:: typoscript
+        :caption: EXT:my_extension/Configuration/TypoScript/page.tsconfig
+
+        RTE.default.proc {
+          HTMLparser_db {
+            removeTags: link, meta, o:p, sdfield, style, title
+          }
+        }
 
 ..  _htmlparser-keepNonMatchedTags:
 
