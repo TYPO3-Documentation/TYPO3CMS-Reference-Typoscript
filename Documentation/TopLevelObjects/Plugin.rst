@@ -231,11 +231,17 @@ plugins.
         :Default: `false`
 
         **Only for Extbase plugins**. By default, when calling an extbase controller action
-        that is not registered for an Extbase plugin, a fatal exception is thrown
+        that is not registered for an Extbase plugin, a fatal exception
+        :php:`TargetNotFoundException` is thrown
         (usually an internal error message is shown).
 
         When this configuration option is set to `1` (true), instead the default
         "Page not Found" page will be shown instead (with a 404 HTTP header by default).
+
+        The configuration option can be either set on the global `config.tx_extbase`
+        scope, or also plugin-specific via
+        `plugin.tx_yourextension.mvc.showPageNotFoundIfTargetNotFoundException` /
+        `plugin.tx_yourextension_pluginName.mvc.showPageNotFoundIfTargetNotFoundException`.
 
     ..  confval:: mvc.showPageNotFoundIfRequiredArgumentIsMissingException
         :name: plugin-mvc-showPageNotFoundIfRequiredArgumentIsMissingException
@@ -243,11 +249,16 @@ plugins.
         :Default: `false`
 
         **Only for Extbase plugins**. By default, when calling an extbase controller action
-        with unsupported arguments a fatal exception is thrown (usually an internal error
-        message is shown).
+        with missing/invalid required arguments a fatal exception :php:`RequiredArgumentMissingException`
+        is thrown (usually an internal error message is shown).
 
         When this configuration option is set to `1` (true), instead the default
         "Page not Found" page will be shown instead (with a 404 HTTP header by default).
+
+        The configuration option can be either set on the global `config.tx_extbase`
+        scope, or also plugin-specific via
+        `plugin.tx_yourextension.mvc.showPageNotFoundIfRequiredArgumentIsMissingException` /
+        `plugin.tx_yourextension_pluginName.mvc.showPageNotFoundIfRequiredArgumentIsMissingException`.
 
         Note that extension authors can also implement the Controller method
         :php:`ActionController->handleArgumentMappingExceptions()` to individually operate
