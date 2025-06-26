@@ -225,6 +225,34 @@ plugins.
         Same as :ref:`setup-plugin-mvc-callDefaultActionIfActionCantBeResolved`
         but this will raise a "page not found" error.
 
+    ..  confval:: mvc.showPageNotFoundIfTargetNotFoundException
+        :name: plugin-mvc-showPageNotFoundIfTargetNotFoundException
+        :type: :ref:`data-type-boolean`
+        :Default: `false`
+
+        **Only for Extbase plugins**. By default, when calling an extbase controller action
+        that is not registered for an Extbase plugin, a fatal exception is thrown
+        (usually an internal error message is shown).
+
+        When this configuration option is set to `1` (true), instead the default
+        "Page not Found" page will be shown instead (with a 404 HTTP header by default).
+
+    ..  confval:: mvc.showPageNotFoundIfRequiredArgumentIsMissingException
+        :name: plugin-mvc-showPageNotFoundIfRequiredArgumentIsMissingException
+        :type: :ref:`data-type-boolean`
+        :Default: `false`
+
+        **Only for Extbase plugins**. By default, when calling an extbase controller action
+        with unsupported arguments a fatal exception is thrown (usually an internal error
+        message is shown).
+
+        When this configuration option is set to `1` (true), instead the default
+        "Page not Found" page will be shown instead (with a 404 HTTP header by default).
+
+        Note that extension authors can also implement the Controller method
+        :php:`ActionController->handleArgumentMappingExceptions()` to individually operate
+        on invalid arguments.
+
     ..  confval:: format
         :name: plugin-format
         :type: :ref:`data-type-string`
