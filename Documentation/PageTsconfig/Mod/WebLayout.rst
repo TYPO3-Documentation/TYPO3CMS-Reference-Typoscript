@@ -110,7 +110,7 @@ defLangBinding
 ..  confval:: defLangBinding
     :name: mod-web-layout-defLangBinding
     :type: boolean
-    :Default: 0
+    :Default: 1
 
     ..  versionchanged:: 14.0
         Is not evaluated anymore. Editors will now always see the content
