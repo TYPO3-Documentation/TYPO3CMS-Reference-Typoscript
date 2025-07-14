@@ -27,8 +27,13 @@ Properties
     :name: user-auth-be-redirectToURL
     :type: string
 
-    Specifies a URL to redirect to after login is performed in the backend login form. This
-    has been used in the past to redirect a backend user to the frontend to use frontend editing.
+    ..  deprecated:: 14.0
+        The TSconfig option :tsconfig:`auth.BE.redirectToURL` has been
+        deprecated with TYPO3 v14.
+
+        If a redirect after a successful backend login is required, it is
+        recommended to create a custom PSR-15 middleware, which handles the
+        redirection.
 
 ..  _user-auth-mfa-required:
 
