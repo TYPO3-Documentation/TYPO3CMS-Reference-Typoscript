@@ -1410,7 +1410,13 @@ siteLanguage()
         Returns the language ID as an integer.
 
     :typoscript:`siteLanguage("locale")`
-        Returns the current locale as a string, for example `en_GB` or `de_DE`.
+        Returns the current locale as :php:`\TYPO3\CMS\Core\Localization\Locale`.
+        You can call all public methods of the object, for example
+        :typoscript:`siteLanguage("locale").getName()` returns `en-GB` or `de-DE`.
+
+        **Note**: In TYPO3 v12 there was an unintentional breaking change,
+        whereby an object and not a string is returned.
+        A future TYPO3 release may address implementing a shortcut for this.
 
     :typoscript:`siteLanguage("base")`
         Returns the configured base URL as a string.
@@ -1461,8 +1467,8 @@ siteLanguage()
     ..  code-block:: typoscript
         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-        [siteLanguage("locale") == "de_CH"]
-            page.10.value = This site has the locale "de_CH"
+        [siteLanguage("locale").getName() == "de-CH"]
+            page.10.value = This site has the locale "de_CH" or "de_CH.utf8"
         [END]
 
         [siteLanguage("title") == "Italy"]
