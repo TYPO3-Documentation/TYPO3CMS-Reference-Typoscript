@@ -588,20 +588,25 @@ Example: Hide the "Download" and "Export" links
 
 ..  include:: /CodeSnippets/PageTSconfig/Mod/noExportRecordsLinks.rst.txt
 
-..  index::
-    noViewWithDokTypes
-    Buttons; View page
 ..  _pageTsConfigWebList-noViewWithDokTypes:
 
-noViewWithDokTypes
-==================
+noViewWithDokTypes (removed)
+============================
 
-..  confval:: noViewWithDokTypes
-    :name: mod-web-list-noViewWithDokTypes
-    :type:  string (comma-separated list of integers)
-    :Default: `254,255`
+..  versionchanged:: 14.0
+    The TSconfig option :typoscript:`mod.web_list.noViewWithDokTypes` has been
+    removed since it just duplicated the existing configuration
+    `TCEMAIN.preview.disableButtonForDokType <https://docs.typo3.org/permalink/t3tsref:confval-tcemain-preview>`.
 
-    Hide view icon for the defined :ref:`doktypes <t3coreapi:list-of-page-types>`.
+Remove any usage of :typoscript:`mod.web_list.noViewWithDokTypes` from Page
+TSconfig.
+
+Instead, configure the equivalent behavior using:
+
+.. code-block:: typoscript
+   :caption: EXT:site_package/Configuration/TSconfig/Page/TCEMAIN.tsconfig
+
+   TCEMAIN.preview.disableButtonForDokType = 199, 254
 
 ..  index::
     table.[tableName].hideTable
