@@ -6,7 +6,7 @@
 First steps
 ===========
 
-The system extension "setup - TYPO3 CMS Setup" must be installed.
+The system extension "tstemplate - TYPO3 CMS TypoScript" must be installed.
 
 The basic rendering is defined in the "Setup" field of the main TypoScript record.
 
