@@ -937,7 +937,7 @@ Example: Make a cObject available in JavaScript
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Demonstrates:
-    * :confval:`page.jsFooterInline <page-jsFooterInline>`
+    * :confval:`page.jsInline <page-jsInline>`
 
 ..  code-block:: typoscript
     :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
