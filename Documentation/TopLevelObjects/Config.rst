@@ -187,7 +187,7 @@ Properties of 'config'
         :type: :ref:`data-type-integer`
         :Default: `86400` *(= 24 hours)*
 
-        The number of second a page may remain in cache.
+        The number of seconds a page may remain in cache.
 
         This value is overridden by the value set in the page-record
         `field="cache_timeout"` if this value is greater than zero.
