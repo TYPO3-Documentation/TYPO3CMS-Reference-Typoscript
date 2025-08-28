@@ -114,7 +114,7 @@ Previously, TypoScript code for Extbase plugins looked like this:
 
     page.10 = USER
     page.10 {
-        userFunc = TYPO3\\CMS\\Extbase\\Core\\Bootstrap->run
+        userFunc = TYPO3\CMS\Extbase\Core\Bootstrap->run
         extensionName = MyExtension
         pluginName = MyPlugin
     }
