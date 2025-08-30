@@ -35,8 +35,12 @@ jobs:
       - name: Composer validate
         run: Build/Scripts/runTests.sh -p ${{ env.php }} -s composerValidate
 
-      - name: Composer normalize
-        run: Build/Scripts/runTests.sh -p ${{ env.php }} -s composerNormalize -n
+      # Disabled composer-normalize for now because ergebnis/composer-normalize
+      # still hard-depends on localheinz/diff, which conflicts with sebastian/diff
+      # and causes fatal errors in our CI. Re-enable once the upstream dependency
+      # situation is resolved in a newer release.
+      # - name: Composer normalize
+      #   run: Build/Scripts/runTests.sh -p ${{ env.php }} -s composerNormalize -n
 
       - name: CGL
         run: Build/Scripts/runTests.sh -n -p ${{ env.php }} -s cgl -n
