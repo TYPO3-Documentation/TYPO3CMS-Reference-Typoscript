@@ -8,25 +8,39 @@
 TCAdefaults
 ===========
 
+..  versionadded:: 14.0
+    The :typoscript:`TCAdefaults` configuration has been extended to support
+    type-specific syntax similar to `TCEFORM <https://docs.typo3.org/permalink/t3tsref:tceform>`_,
+    enabling different default values based on the record type.
+
 This allows to set or override the `default` values of `TCA` fields that is available
-for various TCA types, for instance for :ref:`type=input <t3tca:columns-input-properties-default>`.
+for various TCA column types, for instance for :ref:`type=input <t3tca:columns-input-properties-default>`.
 
-The full path of a setting include the table and the field name: `TCAdefaults.[table name].[field]`
+Default values can be set on type level: `TCAdefaults.[table name].[field].types.[type]`
+or field level:  `TCAdefaults.[table name].[field]`.
 
-This key is also available on :ref:`User TSconfig level <userTsTcaDefaults>`, the order of default
+This key is also available on :ref:`User TSconfig level <userTsTcaDefaults>` the order of default
 values when creating new records in the backend is this:
 
+#.  Database field default value
 #.  Value from `$GLOBALS['TCA']`
-#.  Value from :ref:`user TSconfig <userTsTcaDefaults>`
-#.  Value from page TSconfig (these settings)
+#.  Field-level ref:`user TSconfig <userTsTcaDefaults>`
+#.  Type-level ref:`user TSconfig <userTsTcaDefaults>`
+#.  Field-level :typoscript:`TCAdefaults` configuration
+#.  Type-level :typoscript:`TCAdefaults` configuration
 #.  Value from "defVals" GET variables
 #.  Value from previous record based on
     :ref:`useColumnsForDefaultValues <t3tca:ctrl-reference-usecolumnsfordefaultvalues>`
+
+`TCAdefaults` set via page TSconfig are ignored if the current user has no
+write access to the affected field. In this case use
+:ref:`User TSconfig level <userTsTcaDefaults>`.
 
 ..  note::
     `TCAdefaults` is not applied to :ref:`FlexForm <t3coreapi:flexforms>` values.
     These can only be addressed via :xml:`<default>` elements within the
     FlexForm data structure.
+
 
 ..  _pageTsTcaDefaults-example:
 
@@ -37,3 +51,27 @@ Example: Do not hide newly created pages by default
     :caption: EXT:site_package/Configuration/page.tsconfig
 
     TCAdefaults.pages.hidden = 0
+
+..  _pageTsTcaDefaults-example-type:
+
+Example: Set type specific default values
+=========================================
+
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/page.tsconfig
+
+    TCAdefaults.tt_content {
+        header_layout = 1
+        header_layout.types {
+            textmedia = 3
+            image = 2
+        }
+
+        frame_class = default
+        frame_class.types {
+            textmedia = ruler-before
+            image = none
+        }
+
+        space_before_class = none
+    }
