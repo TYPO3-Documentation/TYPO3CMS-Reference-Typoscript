@@ -30,10 +30,10 @@ Options
     :type:
     :Default:
 
-    ..  _FlexFormProcessor-fieldname:
+    ..  _FlexFormProcessor-fieldName:
 
-    ..  confval:: fieldname
-        :name: FlexFormProcessor-fieldname
+    ..  confval:: fieldName
+        :name: FlexFormProcessor-fieldName
         :Required: false
         :type: :ref:`data-type-string`
         :Default: 'pi_flexform'
