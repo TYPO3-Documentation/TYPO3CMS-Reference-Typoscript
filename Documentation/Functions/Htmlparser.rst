@@ -147,7 +147,7 @@ removeTags
 
         RTE.default.proc {
           HTMLparser_db {
-            removeTags: link, meta, o:p, sdfield, style, title
+            removeTags = link, meta, o:p, sdfield, style, title
           }
         }
 
