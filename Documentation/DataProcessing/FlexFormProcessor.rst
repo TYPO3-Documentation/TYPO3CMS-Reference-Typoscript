@@ -27,7 +27,7 @@ Options
 
     ..  _FlexFormProcessor-fieldname:
 
-    ..  confval:: fieldname
+    ..  confval:: fieldName
         :name: FlexFormProcessor-fieldname
         :Required: false
         :type: :ref:`data-type-string`
