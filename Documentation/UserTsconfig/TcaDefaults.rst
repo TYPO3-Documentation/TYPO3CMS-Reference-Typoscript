@@ -7,27 +7,39 @@
 TCAdefaults
 ===========
 
-This allows to set or override the `default` values of `TCA` fields that is available
-for various TCA types, for instance for :ref:`type=input <t3tca:columns-input-properties-default>`.
+..  versionadded:: 14.0
+    The :typoscript:`TCAdefaults` configuration has been extended to support
+    type-specific syntax enabling different default values based on the record type.
 
-The full path of a setting include the table and the field name: `TCAdefaults.[table name].[field]`
+This allows `default` values of `TCA` fields that are available for various TCA
+column types to be set or overridden, for instance for
+:ref:`type=input <t3tca:columns-input-properties-default>`.
 
-This key is also available on :ref:`Page TSconfig level <pageTsTcaDefaults>`, the order of default
-values when creating new records in the backend is this:
+Default values can be set at the type level: `TCAdefaults.[table name].[field].types.[type]`
+or field level: `TCAdefaults.[table name].[field]`
 
-#.  Value from :php:`$GLOBALS['TCA']`
-#.  Value from User TSconfig (these settings)
-#.  Value from :ref:`Page TSconfig <pageTsTcaDefaults>`
+This key is also available at the :ref:`Page TSconfig level <pageTsTcaDefaults>`.
+The order that default values are set when creating new records in the backend
+is this:
+
+#.  Database field default value
+#.  Value from `$GLOBALS['TCA']`
+#.  Field-level ref:`user TSconfig <userTsTcaDefaults>`
+#.  Type-level ref:`user TSconfig <userTsTcaDefaults>`
+#.  Field-level :typoscript:`TCAdefaults` configuration
+#.  Type-level :typoscript:`TCAdefaults` configuration
 #.  Value from "defVals" GET variables
-#.  Value from previous record based on 'useColumnsForDefaultValues'
+#.  Value from previous record based on
+    :ref:`useColumnsForDefaultValues <t3tca:ctrl-reference-usecolumnsfordefaultvalues>`
 
-However the order for default values used by :php:`\TYPO3\CMS\Core\DataHandling\DataHandler` if a certain
-field is not granted access to for user will be:
+However, the order for default values used by the
+:php:`\TYPO3\CMS\Core\DataHandling\DataHandler` if a particular field is inaccessible
+to a user will be:
 
 #.  Value from :php:`$GLOBALS['TCA']`
 #.  Value from User TSconfig (these settings)
 
-So these values will be authoritative if the user has no access to the field anyway.
+So these will be the values that are set if the user has no access to the field anyway.
 
 Example:
 
@@ -62,3 +74,25 @@ of an extension:
    :caption: EXT:site_package/Configuration/TCA/Overrides/pages.php
 
    $GLOBALS['TCA']['pages']['ctrl']['useColumnsForDefaultValues'] = 'doktype,fe_group';
+
+..  _userTsTcaDefaults-example-types:
+
+Example: Set type specific default values in user TSconfig
+==========================================================
+
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/user.tsconfig
+
+    TCAdefaults.tt_content {
+        header_layout = 1
+        # Use specific default values for certain types
+        header_layout.types {
+            textmedia = 3
+            image = 2
+        }
+    }
+
+In this example: if a user with no write access to the field `tt_content.header_layout`
+creates a new content element of type `textmedia` the header layout will be set
+to 3. If the user does have write access to the field, 3 will be used by default
+and they may change it.
