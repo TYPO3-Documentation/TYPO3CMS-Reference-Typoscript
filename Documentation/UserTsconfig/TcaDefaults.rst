@@ -11,14 +11,16 @@ TCAdefaults
     The :typoscript:`TCAdefaults` configuration has been extended to support
     type-specific syntax enabling different default values based on the record type.
 
-This allows to set or override the `default` values of `TCA` fields that is available
-for various TCA column types, for instance for :ref:`type=input <t3tca:columns-input-properties-default>`.
+This allows `default` values of `TCA` fields that are available for various TCA
+column types to be set or overridden, for instance for
+:ref:`type=input <t3tca:columns-input-properties-default>`.
 
-Default values can be set on type level: `TCAdefaults.[table name].[field].types.[type]`
-or field level: `TCAdefaults.[table name].[field]`.
+Default values can be set at the type level: `TCAdefaults.[table name].[field].types.[type]`
+or field level: `TCAdefaults.[table name].[field]`
 
-This key is also available on :ref:`Page TSconfig level <pageTsTcaDefaults>`, the order of default
-values when creating new records in the backend is this:
+This key is also available at the :ref:`Page TSconfig level <pageTsTcaDefaults>`.
+The order that default values are set when creating new records in the backend
+is this:
 
 
 #.  Database field default value
@@ -31,13 +33,14 @@ values when creating new records in the backend is this:
 #.  Value from previous record based on
     :ref:`useColumnsForDefaultValues <t3tca:ctrl-reference-usecolumnsfordefaultvalues>`
 
-However the order for default values used by :php:`\TYPO3\CMS\Core\DataHandling\DataHandler` if a certain
-field is not granted access to for user will be:
+However, the order for default values used by the
+:php:`\TYPO3\CMS\Core\DataHandling\DataHandler` if a particular field is inaccessible
+to a user will be:
 
 #.  Value from :php:`$GLOBALS['TCA']`
 #.  Value from User TSconfig (these settings)
 
-So these values will be authoritative if the user has no access to the field anyway.
+So these will be the values that are set if the user has no access to the field anyway.
 
 Example:
 
@@ -90,7 +93,7 @@ Example: Set type specific default values in user TSconfig
         }
     }
 
-In this example: If a user with no write access to the field `tt_content.header_layout`
+In this example: if a user with no write access to the field `tt_content.header_layout`
 creates a new content element of type `textmedia` the header layout will be set
-to 3. If the user does have write access to the field, 3 will be used as default
+to 3. If the user does have write access to the field, 3 will be used by default
 and they may change it.
