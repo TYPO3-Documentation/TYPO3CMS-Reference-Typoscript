@@ -32,10 +32,6 @@ values when creating new records in the backend is this:
 #.  Value from previous record based on
     :ref:`useColumnsForDefaultValues <t3tca:ctrl-reference-usecolumnsfordefaultvalues>`
 
-`TCAdefaults` set via page TSconfig are ignored if the current user has no
-write access to the affected field. In this case use
-:ref:`User TSconfig level <userTsTcaDefaults>`.
-
 ..  note::
     `TCAdefaults` is not applied to :ref:`FlexForm <t3coreapi:flexforms>` values.
     These can only be addressed via :xml:`<default>` elements within the
