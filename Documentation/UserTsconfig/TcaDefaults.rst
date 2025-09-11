@@ -22,7 +22,6 @@ This key is also available at the :ref:`Page TSconfig level <pageTsTcaDefaults>`
 The order that default values are set when creating new records in the backend
 is this:
 
-
 #.  Database field default value
 #.  Value from `$GLOBALS['TCA']`
 #.  Field-level ref:`user TSconfig <userTsTcaDefaults>`
