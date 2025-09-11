@@ -29,6 +29,8 @@
         "friendsofphp/php-cs-fixer": "^3.46",
         "symfony/yaml": "^7.0",
         "t3docs/codesnippet": "dev-main",
+        "t3docs/examples": "^13.2",
+        "t3docs/site-package": "dev-main",
         "typo3/cms-adminpanel": "^13.4",
         "typo3/cms-backend": "^13.4",
         "typo3/cms-belog": "^13.4",
@@ -61,9 +63,7 @@
         "typo3/cms-t3editor": "^13.4",
         "typo3/cms-tstemplate": "^13.4",
         "typo3/cms-viewpage": "^13.4",
-        "typo3/cms-workspaces": "^13.4",
-        "t3docs/examples": "dev-main",
-        "t3docs/site-package": "dev-main"
+        "typo3/cms-workspaces": "^13.4"
     },
     "scripts": {
         "generate:codesnippets": [
