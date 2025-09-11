@@ -18,7 +18,7 @@ for various TCA column types to be set or overridden, for instance for
 :ref:`type=input <t3tca:columns-input-properties-default>`.
 
 Default values can be set at the type level: `TCAdefaults.[table name].[field].types.[type]`
-or field level:  `TCAdefaults.[table name].[field]`
+or field level: `TCAdefaults.[table name].[field]`
 
 This key is also available at the :ref:`User TSconfig level <userTsTcaDefaults>`.
 The order of setting default values when creating new records in the backend is
