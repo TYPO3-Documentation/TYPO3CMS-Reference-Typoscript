@@ -1280,7 +1280,7 @@ siteLanguage()
         :typoscript:`siteLanguage("locale").getName()` returns `en-GB` or `de-DE`.
 
         ..  versionchanged:: 14.0
-            You can user expression `locale() <https://docs.typo3.org/permalink/t3tsref:condition-functions-in-frontend-context-function-locale>`_
+            You can use expression `locale() <https://docs.typo3.org/permalink/t3tsref:condition-functions-in-frontend-context-function-locale>`_
             as a shortcut to get the :php-short:`\TYPO3\CMS\Core\Localization\Locale`.
 
     :typoscript:`siteLanguage("base")`
@@ -1316,7 +1316,7 @@ siteLanguage()
         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
         [siteLanguage("fallbackType") == "strict"]
-            page.10.value = This site has a strict langauge fallback
+            page.10.value = This site has a strict language fallback
         [END]
 
         [siteLanguage("title") == "Italy"]
@@ -1333,7 +1333,7 @@ locale()
 
     ..  versionadded:: 14.0
 
-    This expression allows integrators and developers to directly access
+    This expression allows integrators and developers to access
     the current site locale, which is provided as a locale object of type
     :php-short:`\TYPO3\CMS\Core\Localization\Locale`.
 
