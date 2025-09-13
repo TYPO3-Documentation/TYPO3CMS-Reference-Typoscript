@@ -1279,9 +1279,9 @@ siteLanguage()
         You can call all public methods of the object, for example
         :typoscript:`siteLanguage("locale").getName()` returns `en-GB` or `de-DE`.
 
-        **Note**: In TYPO3 v12 there was an unintentional breaking change,
-        whereby an object and not a string is returned.
-        A future TYPO3 release may address implementing a shortcut for this.
+        ..  versionchanged:: 14.0
+            You can use expression `locale() <https://docs.typo3.org/permalink/t3tsref:condition-functions-in-frontend-context-function-locale>`_
+            as a shortcut to get the :php-short:`\TYPO3\CMS\Core\Localization\Locale`.
 
     :typoscript:`siteLanguage("base")`
         Returns the configured base URL as a string.
@@ -1315,14 +1315,45 @@ siteLanguage()
     ..  code-block:: typoscript
         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-        [siteLanguage("locale").getName() == "de-CH"]
-            page.10.value = This site has the locale "de_CH" or "de_CH.utf8"
+        [siteLanguage("fallbackType") == "strict"]
+            page.10.value = This site has a strict language fallback
         [END]
 
         [siteLanguage("title") == "Italy"]
             page.10.value = This site has the title "Italy"
         [END]
 
+..  _condition-functions-in-frontend-context-function-locale:
+
+locale()
+========
+
+..  confval:: locale()
+    :name: condition-locale
+
+    ..  versionadded:: 14.0
+
+    This expression allows integrators and developers to access
+    the current site locale, which is provided as a locale object of type
+    :php-short:`\TYPO3\CMS\Core\Localization\Locale`.
+
+    All public methods of this object are available for use,  for example
+    :typoscript:`locale().getName()` returns `en-GB` or `de-DE`.
+
+    ..  seealso::
+        *   `TYPO3 explained: Locale API <https://docs.typo3.org/permalink/t3coreapi:locale-api>`_
+
+    ..  code-block:: typoscript
+
+        [locale().getName() == "en-US"]
+            page.20.value = Language is American English.
+        [END]
+        [locale().getCountryCode() == "US"]
+            page.30.value = Country code is "US".
+        [END]
+        [locale().isRightToLeftLanguageDirection()]
+            page.40.value = This locale is written from right to left
+        [END]
 
 ..  index:: Conditions; loginUser
 ..  _condition-function-loginUser:

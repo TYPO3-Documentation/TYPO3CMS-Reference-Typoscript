@@ -289,7 +289,7 @@ config.contentsLanguageDirection
         RTE.config.contentsLanguageDirection = rtl
 
         # except for the following language:
-        [siteLanguage("locale").getName() == "en-US"]
+        [locale().getName() == "en-US"]
             RTE.config.contentsLanguageDirection = ltr
         [END]
 
