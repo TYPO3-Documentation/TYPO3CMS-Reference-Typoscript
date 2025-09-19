@@ -839,37 +839,23 @@ compatVersion()
         [END]
 
 
-..  index:: Conditions; getTSFE
 ..  _condition-function-getTSFE:
+..  _condition-function-getTSFE-migration:
 
-getTSFE()
-=========
+getTSFE(): Migration
+====================
 
-..  confval:: getTSFE()
-    :name: condition-getTSFE
-    :type: Object
+..  versionchanged:: 14.0
+    `Breaking: #107473 - TypoScript condition function getTSFE() removed <https://docs.typo3.org/permalink/changelog:breaking-107473-1758113238>`_
+    The TypoScript condition function `getTSFE()` has been removed. Using a
+    condition like `getTSFE()` will never evaluate to true and needs adaption.
 
-    Provides access to :ref:`TypoScriptFrontendController <t3coreapi:tsfe>`
-    :php:`$GLOBALS['TSFE']`. This function can directly access methods of
-    :php:`TypoScriptFrontendController`. This class is target of a mid-term
-    refactoring. It should be used with care since it will eventually vanish in
-    the future.
+..  code-block:: diff
+    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript (dif)
 
-    Using the :typoscript:`getTSFE()` function, developers have to ensure that
-    "TSFE" is available before accessing its properties. A missing "TSFE", for
-    example, in backend context, does no longer automatically evaluate the whole
-    condition to :php:`false`. Instead, the function returns  :php:`null`, which
-    can be checked using either :typoscript:`[getTSFE() && getTSFE().id == 17]`
-    or the null-safe operator :typoscript:`[getTSFE()?.id == 17]`.
+    - [getTSFE() && getTSFE().id == 42]
 
-    Example:
-
-    ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-        # True, if the current page UID is 17. Use the page variable instead
-        [getTSFE()?.id == 17]
-
+    + [request?.getPageArguments()?.getPageId() == 42]
 
 ..  index:: Conditions; getenv
 ..  _condition-function-getenv:
