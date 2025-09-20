@@ -851,7 +851,7 @@ getTSFE(): Migration
     condition like `getTSFE()` will never evaluate to true and needs adaption.
 
 ..  code-block:: diff
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript (dif)
+    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript (diff)
 
     - [getTSFE() && getTSFE().id == 42]
 
