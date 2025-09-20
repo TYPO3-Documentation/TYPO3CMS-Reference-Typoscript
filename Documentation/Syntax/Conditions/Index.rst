@@ -159,16 +159,15 @@ Using the null-safe operator in conditions
 ..  versionadded:: 12.1
 
 Using the null-safe operator is possible when accessing properties on objects
-which might not be available in some context, for example `TSFE` in the
-backend:
+which might not be available in some context, for example
+`request() <https://docs.typo3.org/permalink/t3tsref:condition-function-request>`_
+in the backend:
 
-..  code-block:: typoscript
+..  code-block:: diff
 
-    # Previously
-    # [getTSFE() && getTSFE().id == 123]
+    - [request && request.getPageArguments() && request.getPageArguments().getPageId() == 42]
 
-    # Now
-    [getTSFE()?.id == 123]
+    + [request?.getPageArguments()?.getPageId() == 42]
 
 ..  _typoscript-syntax-syntax-value:
 
