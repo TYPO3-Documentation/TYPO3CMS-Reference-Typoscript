@@ -33,6 +33,15 @@ Properties
     :display: table
     :type:
 
+..  _cobj-content-if:
+
+..  confval:: if
+    :name: content-if
+    :type: :ref:`->if <if>`
+
+    If "if" returns false, the content is not generated.
+
+
 ..  _cobj-content-select:
 
 ..  confval:: select
