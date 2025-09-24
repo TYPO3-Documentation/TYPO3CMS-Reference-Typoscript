@@ -583,7 +583,7 @@ levelfield
     :name: data-levelfield
     :Syntax: levelfield : [pointer, integer], [field name], ["slide"]
 
-    Like :ref:`data-type-gettext-leveltitle` but the field do be fetched from the
+    Like :ref:`data-type-gettext-leveltitle` but the field to be fetched from the
     record is configurable.
 
 ..  _data-type-gettext-levelfield-example:
