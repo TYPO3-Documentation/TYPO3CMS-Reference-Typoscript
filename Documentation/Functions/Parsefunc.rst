@@ -8,6 +8,14 @@
 parseFunc
 =========
 
+..  versionchanged:: 14.0
+
+    `lib.parseFunc.allowTags` and `lib.parseFunc_RTE.allowTags` do not contain
+    default values anymore. HTML sanitization is continued to be  handled by
+    the htmlSanitizer.
+
+    See also: `Breaking: #107438 - Default parseFunc configuration for Fluid Styled Content <https://docs.typo3.org/permalink/changelog:breaking-107438-1736592000>`_
+
 This object is used to parse some content for stuff like special typo
 tags, the :ref:`makeLinks`-things and so on...
 
@@ -235,13 +243,19 @@ allowTags
 ..  confval:: allowTags
     :name: parsefunc-allowTags
     :type: list of strings or "*"
+    :default: Empty
 
-    ..  versionchanged:: 13.2
-        Defining the TypoScript properties :typoscript:`allowTags` or
-        :typoscript:`denyTags` for the HTML processing via
-        :typoscript:`stdWrap.parseFunc` is now optional.
+    ..  versionchanged:: 14.0
 
-        Besides that, it is now possible to use :typoscript:`allowTags = *`.
+        `lib.parseFunc.allowTags` and `lib.parseFunc_RTE.allowTags` do not contain
+        default values anymore. HTML sanitization is continued to be  handled by
+        the htmlSanitizer.
+
+        See also: `Breaking: #107438 - Default parseFunc configuration for Fluid
+        Styled Content <https://docs.typo3.org/permalink/changelog:breaking-107438-1736592000>`_
+
+    HTML sanitization is handled by the htmlSanitizer in general. `allowTags`
+    and `denyTags` can be used to further limit the allowed HTML tags.
 
     List of tags, which are allowed to exist in code, use "*" for all.
     Security aspects are considered automatically by the HTML sanitizer,
@@ -265,6 +279,15 @@ allowTags
           denyTags = u
         }
 
+    ..  rubric:: Migration
+
+    If you need to allow specific HTML tags, fully configure the allowTags option
+    without relying on prior default configuration:
+
+    ..  code-block:: diff
+
+        - lib.parseFunc_RTE.allowTags := addToList(wbr)
+        + lib.parseFunc_RTE.allowTags = b,span,i,em,wbr..
 
 
 ..  _parsefunc-denyTags:
