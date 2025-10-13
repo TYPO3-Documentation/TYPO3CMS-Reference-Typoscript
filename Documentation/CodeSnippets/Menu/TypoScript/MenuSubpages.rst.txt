@@ -16,7 +16,6 @@
             10 = menu
             10 {
                 special = directory
-                special.value.field = pages
                 dataProcessing {
                     10 = files
                     10 {
