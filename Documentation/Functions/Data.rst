@@ -7,7 +7,7 @@
 Data / getText
 ==============
 
-The `getText` data type is kind of tool box for retrieving
+The `getText` data type is a kind of tool box for retrieving
 values from different sources, for example, `GET`/`POST` variables,
 registers, values from the page tree, items in the page menus and records
 from database tables.
