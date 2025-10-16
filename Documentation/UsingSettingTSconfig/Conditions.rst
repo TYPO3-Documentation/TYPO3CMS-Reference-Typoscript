@@ -14,16 +14,15 @@
 Conditions in Backend TypoScript / TSconfig
 ===========================================
 
-TSconfig TypoScript conditions offer a way to conditionally change TypoScript based
-on current context. See the :ref:`TypoScript syntax condition chapter <t3tsref:typoscript-syntax-conditions>`
-for the basic syntax of conditions.
+TSconfig TypoScript conditions are a way to change TypoScript in response
+to the current context. See the :ref:`TypoScript syntax condition chapter <t3tsref:typoscript-syntax-conditions>`
+for basic syntax.
 
-It is possible to use TypoScript conditions in both user TSconfig and page TSconfig,
-just as it is done in frontend TypoScript. The list of available variables and
-functions is different, though.
+TypoScript conditions are available in both user TSconfig and page TSconfig but
+the variables and functions differ.
 
-The Symfony expression language tends to throw warnings when sub arrays are
-checked in a condition that do not exist. Use the :ref:`traverse <tsconfig-condition-function-traverse>`
+The Symfony expression language can throw warnings when sub arrays are
+checked in a condition that does not exist. Use the :ref:`traverse <tsconfig-condition-function-traverse>`
 function to avoid this.
 
 ..  contents::
@@ -45,7 +44,7 @@ applicationContext
     :name: tsconfig-condition-applicationContext
     :type: string
 
-    Current application context as string. See :ref:`t3coreapi:bootstrapping-context`.
+    The current application context as a string. See :ref:`t3coreapi:bootstrapping-context`.
 
 ..  _tsconfig-condition-applicationContext-example:
 
@@ -83,7 +82,7 @@ page
     :name: tsconfig-condition-page
     :type: array
 
-    All data of the current page record as array. Only available in page TSconfig, not
+    All data in the current page record as an array. Only available in page TSconfig, not
     in user TSconfig.
 
 ..  _tsconfig-condition-page-example:
@@ -151,7 +150,7 @@ tree.level
     :name: tsconfig-condition-tree-level
     :type: integer
 
-    Current tree level. Only available in page TSconfig, not
+    The current tree level. Only available in page TSconfig, not
     in user TSconfig. Starts at `1` (root level).
 
 ..  _tsconfig-condition-tree-level-example:
@@ -169,14 +168,14 @@ Example: Condition applies on a page on root level
 
 ..  hint::
 
-    In older versions before TYPO3 v10, this setting was available as
+    In versions older than TYPO3 v10 this setting was available as the
     `treeLevel` variable.
-    That variable started the root level at value `0`, and now it starts at `1`.
+    That variable started the root level at `0`, whereas now it starts at `1`.
     Keep this in mind when migrating old conditions.
 
     Unlike the frontend TypoScript condition `tree.level`, the backend tree level
-    is not affected by `pages.is_siteroot`. This means, for nested sites it cannot
-    be used to match "site roots" or in general any n-th levels of page tree depths.
+    is not affected by `pages.is_siteroot`. This means that it cannot be used to
+    match "site roots" or any n-th levels page tree depths in nested sites.
     It's the *absolute depth* of the entire page tree, starting with `1`.
 
 ..  index:: Conditions; tree.pagelayout
@@ -189,7 +188,7 @@ tree.pagelayout
     :name: tsconfig-condition-tree-pagelayout
     :type: integer / string
 
-    Check for the defined backend layout of a page including the inheritance of
+    Check for the page backend layout including the inheritance in
     the field :guilabel:`Backend Layout (subpages of this page)`. Only available in page TSconfig,
     not in user TSconfig.
 
@@ -223,7 +222,7 @@ tree.rootLine
     :name: tsconfig-condition-tree-rootLine
     :type: array
 
-    An array of arrays with uid and pid. Only available in page TSconfig, not
+    An array of arrays with UIDs and PIDs. Only available in page TSconfig, not
     in user TSconfig.
 
 ..  _tsconfig-condition-tree-rootLine-example:
@@ -251,7 +250,7 @@ tree.rootLineIds
     :name: tsconfig-condition-tree-rootLineIds
     :type: array
 
-    An array with UIDs of the root line. Only available in page TSconfig, not
+    An array of UIDs of the root line. Only available in page TSconfig, not
     in user TSconfig.
 
 ..  _tsconfig-condition-tree-rootLineIds-example:
@@ -280,7 +279,7 @@ tree.rootLineParentIds
     :name: tsconfig-condition-tree-rootLineParentIds
     :type: array
 
-    An array with parent UIDs of the root line. Only available in page TSconfig, not
+    An array of parent UIDs of the root line. Only available in page TSconfig, not
     in user TSconfig.
 
 ..  _tsconfig-condition-tree-rootLineParentIds-example:
@@ -413,7 +412,7 @@ backend.user.userGroupIds
     :name: tsconfig-condition-backend-user-userGroupIds
     :type: array
 
-    array of user group IDs of the current backend user.
+    Array of user group IDs of the current backend user.
 
 ..  _tsconfig-condition-backend-user-userGroupIds-example:
 
@@ -437,7 +436,7 @@ backend.user.userGroupList
     :name: tsconfig-condition-backend-user-userGroupList
     :type: string
 
-    Comma list of group UIDs
+    Comma-separated list of group UIDs.
 
 ..  _tsconfig-condition-backend-user-userGroupList-example:
 
@@ -463,7 +462,7 @@ workspace
     :name: tsconfig-condition-workspace
     :type: Object
 
-    object with workspace information
+    Object with workspace information
 
 
 ..  index:: Conditions; workspace.workspaceId
@@ -649,7 +648,7 @@ date()
     :Parameter: [parameter]: string / integer
 
     Get current date in given format. See PHP `date <https://www.php.net/manual/en/function.date.php>`_
-    function as reference for possible usage.
+    function as a reference for possible usage.
 
 ..  _tsconfig-condition-function-date-example:
 
@@ -691,7 +690,7 @@ like()
     :type: boolean
     :parameter: [search-string] : string; [pattern]: string
 
-    This function has two parameters: The first parameter is the string to search in,
+    This function has two parameters. The first parameter is the string to search in,
     the second parameter is the search string.
 
 ..  _tsconfig-condition-function-like-example:
@@ -730,10 +729,10 @@ traverse()
     :Parameter: [array]: array; [key]: string or integer
 
     This function gets a value from an array with arbitrary depth and suppresses
-    PHP warning when sub arrays do not exist. It has two parameters: The first parameter
+    PHP warnings when subarrays do not exist. It has two parameters: the first parameter
     is the array to traverse, the second parameter is the path to traverse.
 
-    In case the path is not found in the array, an empty string is returned.
+    If the path is not found in the array, an empty string is returned.
 
 ..  _tsconfig-condition-function-traverse-example:
 
@@ -846,32 +845,32 @@ site()
     :Parameter: [keyword]: string
 
     Get value from site configuration, or null if no site was found or property
-    does not exists. Only available in page TSconfig, not available in user TSconfig.
+    does not exist. Only available in page TSconfig, not available in user TSconfig.
     Available Information:
 
     site("identifier")
-        Returns the identifier of current site as string.
+        Returns the identifier of current site as a string.
 
     site("base")
-        Returns the base of current site as string.
+        Returns the base of current site as a string.
 
     site("rootPageId")
-        Returns the root page uid of current site as integer.
+        Returns the root page uid of current site as an integer.
 
     site("languages")
-        Returns array of available languages for current site.
-        For deeper information, see :ref:`condition-functions-in-frontend-context-function-siteLanguage`.
+        Returns an array of available languages for current site.
+        For more information, see :ref:`condition-functions-in-frontend-context-function-siteLanguage`.
 
     site("allLanguages")
-        Returns array of available and unavailable languages for current site.
-        For deeper information, see :ref:`condition-functions-in-frontend-context-function-siteLanguage`.
+        Returns an array of available and unavailable languages for the current site.
+        For more information, see :ref:`condition-functions-in-frontend-context-function-siteLanguage`.
 
     site("defaultLanguage")
         Returns the default language for current site.
-        For deeper information, see :ref:`condition-functions-in-frontend-context-function-siteLanguage`.
+        For more information, see :ref:`condition-functions-in-frontend-context-function-siteLanguage`.
 
     site("configuration")
-        Returns an array with all available configuration for current site.
+        Returns an array with all available configuration for the current site.
 
 ..  _tsconfig-condition-function-site-example:
 
