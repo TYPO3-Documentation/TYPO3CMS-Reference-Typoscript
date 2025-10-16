@@ -699,7 +699,7 @@ Properties for parsing data
         :name: stdwrap-strtotime
         :type: :ref:`data-type-string`
 
-        Allows conversion of formatted dates to timestamps, e.g. to perform date calculations.
+        Allows conversion of formatted dates to timestamps, for example to perform date calculations.
 
         Possible values are :typoscript:`1` or any time string valid as the first
         argument of the PHP :php:`strtotime()` function.
