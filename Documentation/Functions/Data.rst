@@ -7,10 +7,10 @@
 Data / getText
 ==============
 
-The `getText` data type is some kind of tool box allowing to retrieve
-values from a variety of sources, for example from `GET`/`POST` variables, from
-registers, values from the page tree, items in the page menus, records
-from any database table, etc.
+The `getText` data type is a kind of tool box for retrieving
+values from different sources, for example, `GET`/`POST` variables,
+registers, values from the page tree, items in the page menus and records
+from database tables.
 
 The general syntax is as follows:
 
@@ -19,31 +19,28 @@ The general syntax is as follows:
 
     lib.foo.data = <key> : <code>
 
-where :typoscript:`<key>` indicates the source and :typoscript:`<code>` is some form of path or
-pointer to the value, which depends on the key used. The various keys and
-their possible codes are described below.
+where :typoscript:`<key>` indicates the source and :typoscript:`<code>` contains paths or
+pointers to values. Possible keys and codes are described below.
 
-The :typoscript:`code` can contain pipe characters :typoscript:`|` to separate keys
-in a multidimensional array. This, for example, works with :typoscript:`TSFE`:
+The :typoscript:`code` can contain pipe characters :typoscript:`|` which will
+result in a multidimensional array. This, for example, works with :typoscript:`TSFE`:
 
 ..  code-block:: typoscript
     :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
     lib.foo.data = TSFE : fe_user | user | username
 
-Some codes work with a different separator, which is documented right at the
+Some codes use a different separator, but this is documented in the
 code.
 Spaces around the colon (:typoscript:`:`) are irrelevant. The :typoscript:`key` is
 case-insensitive.
 
 ..  _data-type-gettext-double-slash:
 
-By separating the value of getText with :typoscript:`//` (double slash) a number of
-codes can be supplied and getText will return the first one, which is not
-empty ("" or zero).
-
-To get the content of the field "header". If "header is empty, "title" is
-retrieved. If "title" is empty as well, it finally gets the field "uid":
+Using multiple codes separated by a :typoscript:`//` (double slash) will return
+the first one that is not empty ("" or zero). The TypoScript below gets the
+content of the "header" field. If "header" is empty, "title" is
+retrieved. If "title" is also empty, the "uid" field is retrieved:
 
 ..  code-block:: typoscript
     :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
@@ -69,7 +66,7 @@ applicationcontext
     :name: data-applicationcontext
 
     Returns the current :ref:`application context <t3coreapi:application-context>`
-    as string.
+    as a string.
 
 
 ..  _data-type-gettext-applicationcontext-example:
@@ -96,16 +93,16 @@ asset
     :name: data-asset
 
     ..  versionadded:: 13.2
-        Local resources can be cache-busted. It is not necessary anymore
-        to rename the asset when it is exchanged, forcing browsers to relod the file.
+        Local resources can be cache-busted. It is no longer necessary
+        to rename the asset when it is exchanged, forcing browsers to reload the file.
 
     The getText `asset` function includes assets like images, CSS or
-    JavaScript in a cache-busted way.
+    JavaScript that are cache-busted.
 
     Depending on :confval:`$GLOBALS['TYPO3_CONF_VARS']['FE']['versionNumberInFilename'] <t3coreapi:typo3-conf-vars-fe-versionnumberinfilename>`
-    the cache buster is applied as query string or embedded in the filename.
+    the cache buster is applied as a query string or embedded in the filename.
 
-    The result is the same like using argument :fluid:`useCacheBusting="true"`
+    The result is the same as using the argument :fluid:`useCacheBusting="true"`
     in :ref:`t3viewhelper:typo3-fluid-uri-resource`.
 
 Example: Display extension icon with cache buster
@@ -182,7 +179,7 @@ current
 ..  confval:: current
     :name: data-current
 
-    current (gets the "current" value)
+    Current (gets the "current" value)
 
     ..  TODO: What is the "current" value? We should explain that.
 
@@ -224,11 +221,11 @@ DB
     :name: data-db
     :Syntax: DB : [table name] : [uid] : [field]
 
-    Value from database. Any record from a table in TCA can be selected here.
-    Records marked as deleted will not return any value.
+    Value from the database. Any record from any table that is in the TCA can be
+    selected here. Records marked as deleted will not return a value.
 
-    In contrast to other keys, colons are used here to get deeper into the
-    structure, instead of pipes.
+    In contrast to the other keys, colons are used here instead of pipes to drill down into the
+    structure.
 
 ..  _data-type-gettext-db-example:
 
@@ -243,8 +240,8 @@ Get the value of the header field of record with uid 234 from table
 
     lib.foo.data = DB : tt_content:234:header
 
-Get the value of the header field of a record, whose uid is stored in a GET
-parameter `myContentId`:
+Get the value of the header field of a record, where the uid is in the
+`myContentId` GET parameter :
 
 ..  code-block:: typoscript
     :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
@@ -252,10 +249,10 @@ parameter `myContentId`:
     lib.foo.data.dataWrap = DB : tt_content:{GP : myContentId}:header
 
 ..  note::
-    It is safe to directly use a client-/user-provided input for the id of a DB
+    It is safe to use client-/user-provided input for the id of a DB
     record here. The function :php:`ContentObjectRenderer->getData()` internally
     calls the function :php:`PageRepository->getRawRecord()`, which converts the
-    parameter to int via :php:`QueryBuilder->createNamedParameter()`
+    parameter to an int via :php:`QueryBuilder->createNamedParameter()`
 
 ..  _data-type-gettext-debug:
 
@@ -266,8 +263,8 @@ debug
 ..  confval:: debug
     :name: data-debug
 
-    Returns HTML-formatted content of the PHP variable defined by the keyword.
-    Available keywords are :typoscript:`rootLine`, :typoscript:`fullRootLine`, :typoscript:`data`,
+    Returns HTML-formatted content of a PHP variable.
+    Available variables are :typoscript:`rootLine`, :typoscript:`fullRootLine`, :typoscript:`data`,
     :typoscript:`register` and :typoscript:`page`.
 
 ..  _data-type-gettext-debug-example:
@@ -289,18 +286,18 @@ field
 
 ..  confval:: field
     :name: data-field
-    :Syntax: field : [field name from the current :php:`$cObj->data` array in the cObject, multi-dimensional.]
+    :Syntax: field : [a field name in the current :php:`$cObj->data` array in the cObject, multidimensional]
 
 
-    This gives read access to the current value of an internal global variable determined by the given key.
+    This gives read access to the value of an internal global variable depending on the key.
 
-    -   As default the :php:`$cObj->data` array is a record of the current page.
+    -   By default, the :php:`$cObj->data` array is the record of the current page.
 
-    -   In :ref:`TMENU <tmenu>` :php:`$cObj->data` is set in a loop to the page-record for
-        each menu item during its rendering process.
+    -   In :ref:`TMENU <tmenu>` :php:`$cObj->data` is set to the page-record of
+        each menu item in loop iterations during the rendering process.
 
     -   In :ref:`cobj-content` / :ref:`cobj-records` :php:`$cObj->data` is set to
-        the actual record
+        the current record
 
     -   In :ref:`GIFBUILDER <gifbuilder>` :php:`$cObj->data` is set to the data
         :ref:`GIFBUILDER <gifbuilder>` is supplied with.
@@ -317,7 +314,7 @@ Get content from :php:`$cObj->data['header']`:
 
     lib.foo.data = field : header
 
-Example: Get data of a field
+Example: Get data in a field
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Get content from :php:`$cObj->data['fieldname']['level1']['level2']`:
@@ -338,27 +335,27 @@ file
 
     Retrieves a property from a file object (:ref:`FAL <t3coreapi:fal>`) by identifying it through its
     :sql:`sys_file` UID. Note that during execution of the :ref:`cobj-files` cObject,
-    it is also possible to reference the current file with :confval:`data-current` as UID like
-    :typoscript:`file : current : size`.
+    it is possible to reference the current file using :confval:`data-current` as the UID,
+    for example, :typoscript:`file : current : size`.
 
     The following properties are available: name, uid, originalUid, size, sha1,
-    extension, mimetype, contents, publicUrl, modification_date, creation_date
+    extension, mimetype, contents, publicUrl, modification_date and creation_date.
 
-    Furthermore when manipulating references (such as images in content elements
-    or media in pages), additional properties are available (not all are
+    Furthermore, when manipulating references (such as images in content elements
+    and media on pages), these additional properties are available (not all are
     available all the time, it depends on the setup of *references* of the
-    :ref:`cobj-files` cObject): title, description, link, alternative.
+    :ref:`cobj-files` cObject): title, description, link and alternative.
 
-    Additionally, any data in the :sql:`sys_file_metadata` table can be accessed too.
+    Any data in the :sql:`sys_file_metadata` table can also be accessed.
 
-    See the :ref:`FILES <cobj-files-examples>` cObject for usage examples.
+    See the :ref:`FILES <cobj-files-examples>` cObject for examples of usage.
 
 ..  _data-type-gettext-file-example:
 
 Example: Get the size of a file
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Get the file size of the file with the sys\_file UID 17:
+Get the size of the file with sys\_file UID 17:
 
 ..  code-block:: typoscript
     :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
@@ -374,7 +371,7 @@ flexform
     :name: data-flexform
     :Syntax: flexform : [field containing flexform data] : [property of this flexform]
 
-    Access values from :ref:`FlexForms <t3coreapi:flexforms>`, for example inside of :sql:`tt_content` record.
+    Access values in :ref:`FlexForms <t3coreapi:flexforms>`, for example, inside a :sql:`tt_content` record.
 
 ..  _data-type-gettext-flexform-example:
 
@@ -397,12 +394,12 @@ fullRootLine
     :name: data-fullRootLine
     :Syntax: fullRootLine : [pointer, integer], [field name], ["slide"]
 
-This property can be used to retrieve values from "above" the current page's
-root. Take the below page tree and assume that we are on the page "Here you
-are!". Using the :ref:`data-type-gettext-levelfield` property, it is possible
-to go up only to the page "Site root", because it is the root of a new
-(sub-)site.  With :typoscript:`fullRootLine` it is possible to go all the way up to page
-tree root. The numbers between square brackets indicate to which page each
+Used to retrieve values from "above" the current page's
+root. Assume that you are on the page "You are here!" in the page tree below.
+Using the :ref:`data-type-gettext-levelfield` property, you
+can only go up to the page "Site root", because it is the root of a new
+(sub-)site.  :typoscript:`fullRootLine` allows you to go all the way up to the page
+tree root. The numbers in square brackets indicate  which page each
 value of *pointer* would point to:
 
 ..  code-block:: text
@@ -410,17 +407,17 @@ value of *pointer* would point to:
     - Page tree root [-2]
       |- 1. page before [-1]
         |- Site root (root template here!) [0]
-          |- Here you are! [1]
+          |- You are here! [1]
 
-A "slide" parameter can be added just as for the
-:ref:`data-type-gettext-levelfield` property.
+A "slide" parameter can be added (like in :ref:`data-type-gettext-levelfield`
+property).
 
 ..  _data-type-gettext-fullrootline-example:
 
 Example: Get the title of the previous page
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Get the title of the page right before the start of the current website:
+Get the title of the page before the start of the current website:
 
 ..  code-block:: typoscript
     :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
@@ -437,14 +434,14 @@ getenv
 
     Value from PHP environment variables.
 
-    For a cached variation of this feature, please refer to :ref:`getEnv <getenv>`.
+    For a cached version of this feature, see :ref:`getEnv <getenv>`.
 
 ..  _data-type-gettext-getenv-example:
 
 Example: Get the HTTP referer
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Get the environment variable `HTTP_REFERER`:
+Get the environment variable `HTTP_REFERER`.
 
 ..  code-block:: typoscript
     :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
@@ -461,10 +458,9 @@ getIndpEnv
     :Syntax: getIndpEnv : <name>
 
     Returns the value of a *System Environment Variable* denoted by
-    *name* regardless of server OS, CGI/MODULE version etc. The result is
-    identical to the :php:`$_SERVER` variable in most cases. This method should
-    be used instead of *getEnv* to get reliable values for all situations. The
-    internal processing is handled by
+    *name* regardless of server OS, CGI/MODULE version, etc. The result is
+    usually identical to the :php:`$_SERVER` variable. This method is more reliable
+    then *getEnv*. Internal processing is handled by
     :php:`TYPO3\CMS\Core\Utility\GeneralUtility::getIndpEnv()`
 
     Available names:
@@ -520,7 +516,7 @@ global
     :name: data-global
     :Syntax: global : [variable]
 
-    Deprecated, use :ref:`data-type-gettext-gp`, :ref:`data-type-gettext-tsfe` or
+    Deprecated. Use :ref:`data-type-gettext-gp`, :ref:`data-type-gettext-tsfe` or
     :ref:`data-type-gettext-getenv`.
 
 ..  _data-type-gettext-gp:
@@ -532,7 +528,7 @@ GP
     :name: data-gp
     :Syntax: GP : [Value from GET or POST method]
 
-    Get a variable from :php:`$_GET` or :php:`$_POST` where a variable, which
+    Get a variable from :php:`$_GET` or :php:`$_POST` when a variable, which
     exists in both arrays, is returned from :php:`$_POST`.
 
 ..  _data-type-gettext-gp-example:
@@ -583,15 +579,15 @@ levelfield
     :name: data-levelfield
     :Syntax: levelfield : [pointer, integer], [field name], ["slide"]
 
-    Like :ref:`data-type-gettext-leveltitle` but the field to be fetched from the
-    record is configurable.
+    Like :ref:`data-type-gettext-leveltitle` but you can choose which field should
+    be fetched from the record.
 
 ..  _data-type-gettext-levelfield-example:
 
-Example: Get a field from a page up in the root-line
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Example: Get a field from a page up the root-line
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Get the value of the user-defined field :sql:`tx_myextension_myfield` in the root line.
+Get the value of user-defined field :sql:`tx_myextension_myfield` in the root line.
 
 ..  code-block:: typoscript
     :caption: EXT:my_extension/Configuration/TypoScript/setup.typoscript
@@ -605,7 +601,7 @@ Get the value of the user-defined field :sql:`tx_myextension_myfield` in the roo
     use custom fields.
 
     To stay compatible with both TYPO3 v12 and v13, add the following to your
-    extensions :file:`ext_localconf.php`:
+    extension's :file:`ext_localconf.php`:
 
     ..  literalinclude:: _Data/_addRootlineFields_ext_localconf.php
         :caption: EXT:my_extension/ext_localconf.php
@@ -622,9 +618,9 @@ levelmedia
 
     Get the media field of a page in the root-line.
 
-    *   Use an absolute level with 0 or a positive integer.
-    *   With a negative integer got x levels up
-    *   The slide parameter slides until there is a non-empty value found.
+    *   Use an absolute level: 0 or a positive integer.
+    *   Negative integers determine x levels up.
+    *   The slide parameter slides until there is a non-empty value.
 
 ..  _data-type-gettext-leveltitle:
 
@@ -637,12 +633,12 @@ leveltitle
 
     Get the title of a page in the root-line.
 
-    *   Use an absolute level with 0 or a positive integer.
-    *   With a negative integer got x levels up
-    *   The slide parameter slides until there is a non-empty value found.
+    *   Use an absolute level: 0 or a positive integer.
+    *   Negative integers determine x levels up
+    *   The slide parameter slides until there is a non-empty value.
 
-Example: Get the title of a page up in the root line
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Example: Get the title of a page up the root line
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Get the title of the page on the first level of the root line:
 
@@ -651,8 +647,8 @@ Get the title of the page on the first level of the root line:
 
     lib.foo.data = leveltitle : 1
 
-Get the title of the page on the level right below the current page AND if
-that is not present, walk to the bottom of the root line until there's a
+Get the title of the page on the level immediately below the current. If
+it is empty, walk to the bottom of the root line until there is a
 title:
 
 ..  code-block:: typoscript
@@ -671,8 +667,8 @@ leveluid
 
     Get the UID of a page in the root line.
 
-    *   Use an absolute level with 0 or a positive integer.
-    *   With a negative integer got x levels up
+    *   Use an absolute level: 0 or a positive integer.
+    *   Negative integers determine x levels up.
 
 ..  _data-type-gettext-leveluid-example:
 
@@ -738,7 +734,7 @@ pagelayout
 ..  confval:: pagelayout
     :name: data-pagelayout
 
-    Get the current backend layout
+    Get the current backend layout.
 
 ..  _data-type-gettext-pagelayout-example:
 
@@ -759,7 +755,7 @@ parameters
     :name: data-parameters
     :Syntax: parameters: [field name from the current :php:`$cObj->parameters` array in the cObject.]
 
-    Get the content of a key in :php:`parameters` array of the current cObject.
+    Get the content of a key in the :php:`parameters` array of the current cObject.
 
 ..  _data-type-gettext-parameters-examples:
 
@@ -781,7 +777,7 @@ path
 ..  confval:: path
     :name: data-path
 
-    Path to a file, possibly placed in an extension, returns empty if the file
+    Path to a file, for example, that is in an extension. Returns an empty value if the file
     does not exist.
 
 ..  _data-type-gettext-path-example:
@@ -824,7 +820,7 @@ register
 Example: Get the content of a register
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Get content from the :ref:`register <using-setting-register>`:
+Get content from a :ref:`register <using-setting-register>`:
 
 ..  code-block:: typoscript
     :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
@@ -844,9 +840,9 @@ request
     Retrieve the property of a
     :ref:`PSR-7 request attribute <t3coreapi:request-attributes>`.
 
-    Note that only scalar properties can be retrieved: int, float, string or
-    bool as value. If the property is an object or an array, a subproperty can
-    be given which then calls the getter method of the object or retrieves the
+    Only scalar properties can be retrieved: int, float, string or
+    bool values. If the property is an object or an array, a subproperty can
+    be used to call the getter method of the object or retrieve the
     key of the array.
 
 ..  _data-type-gettext-request-example-page-type:
@@ -893,7 +889,7 @@ session
     :name: data-session
     :Syntax: session : [key]
 
-    The `key` refers to the session key used to store the value.
+    The `key` is the session key used to store a value.
 
 ..  _data-type-gettext-session-example:
 
@@ -917,7 +913,7 @@ site
     :name: data-site
     :Syntax: site : [key]
 
-    Accessing the current
+    Accesses the current
     :ref:`site configuration <t3coreapi:sitehandling-basics>`.
 
     .. rubric:: Possible keys:
@@ -929,7 +925,7 @@ site
         The base URL for this site.
 
     :typoscript:`baseVariants`
-        The base variants for this site.
+        The base variants of this site.
 
     :typoscript:`rootPageId`
         The root page ID of this site.
@@ -952,8 +948,8 @@ Example: Get values from the current site
     page.10.data = site:base
     page.10.wrap = This is your base URL: |
 
-Where :typoscript:`site` is the keyword for accessing an aspect, and the
-following parts are the configuration key(s) to access.
+:typoscript:`site` is the keyword, and the parts after the colon are the
+configuration key(s) to access.
 
 ..  code-block:: typoscript
     :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
@@ -971,7 +967,7 @@ siteLanguage
     :name: data-siteLanguage
     :Syntax: siteLanguage : [key]
 
-    Accessing the current
+    Accesses the current
     :ref:`site language configuration <t3coreapi:sitehandling-addingLanguages>`.
 
 
@@ -984,13 +980,13 @@ siteLanguage
         The base URL for this language.
 
     :typoscript:`flagIdentifier`
-        The flag key (like `gb` or `fr`) used in the TYPO3 backend.
+        The flag key (for example, `gb` or `fr`) used in the TYPO3 backend.
 
-        You can also use :typoscript:`flag` to match the corresponding site
+        :typoscript:`flag` can be used to match the site
         configuration setting.
 
     :typoscript:`hreflang`
-        The language tag for this language defined by RFC 1766 / 3066 for
+        The language tag for this language defined by RFC 1766 / 3066
         :html:`hreflang` attributes.
 
         This option is not relevant for regular websites without
@@ -1002,7 +998,7 @@ siteLanguage
     :typoscript:`locale`
         ..  versionchanged:: 12.3
             The :typoscript:`locale` property in typoscript can be subdivided
-            into more specific details using subkeys separated by a colon `:`.
+            using subkeys separated by a colon `:`.
             The subkeys `languageCode`, `countryCode`, and `full` allow access
             to the individual components of the :typoscript:`locale` value. For
             instance, a :typoscript:`locale` value of "en_US.UTF-8" can be
@@ -1013,7 +1009,7 @@ siteLanguage
                 :typoscript:`siteLanguage:twoLetterIsoCode`)
             *   :typoscript:`countryCode`: contains the uppercase country code
                 part of the locale
-            *   :typoscript:`full`: contains the entire locale (also the default
+            *   :typoscript:`full`: contains the entire locale (this is also the default
                 if no subkey is specified)
 
         The :typoscript:`locale` property represents the language, country, and
@@ -1022,10 +1018,10 @@ siteLanguage
         subkeys for more precise language and location specifications.
 
     :typoscript:`navigationTitle`
-        The label to be used within language menus.
+        The label used in language menus.
 
     :typoscript:`title`
-        The label to be used within TYPO3 to identify the language.
+        The label used in TYPO3 to identify the language.
 
     :typoscript:`typo3Language`
         The prefix for TYPO3's language files (`default` for English), otherwise
@@ -1033,8 +1029,8 @@ siteLanguage
         TypoScript :typoscript:`config.language = fr`.
 
     :typoscript:`websiteTitle`
-        The website title for this language. No automatic fallback to the
-        :typoscript:`site:websiteTitle`!
+        The website title for this language. Note: there is no automatic fallback to the
+        :typoscript:`site:websiteTitle`.
 
 ..  _data-type-siteLanguage-example:
 
@@ -1064,7 +1060,7 @@ siteSettings
 ..  confval:: siteSettings
     :name: data-siteSettings
 
-    Access the :ref:`site settings <t3coreapi:sitehandling-settings>` for the
+    Access the :ref:`site settings <t3coreapi:sitehandling-settings>` of the
     current site.
 
 ..  _data-type-siteSettings-example:
@@ -1093,7 +1089,7 @@ TSFE
 
 
 ..  versionchanged:: 13.0
-    The following properties within TypoScriptFrontendController (TSFE) have
+    The following TypoScriptFrontendController (TSFE) properties have
     been removed:
 
     *   :php:`spamProtectEmailAddresses`
@@ -1102,7 +1098,7 @@ TSFE
     *   :php:`fileTarget`
     *   :php:`baseUrl`
 
-    Migrate these properties to use the config property. You can access the
+    Migrate these properties to the config property. You can access the
     TypoScript properties directly, for example, via
     :typoscript:`lib.something.data = TSFE : config | config | fileTarget`
 
