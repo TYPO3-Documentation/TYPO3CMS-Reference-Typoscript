@@ -10,9 +10,9 @@
 stdWrap
 =======
 
-A "stdWrap" TypoScript property is a function that can be applied to object values
-(usually TEXT objects). The value is parsed by the stdWrap function using the properties of the
-value as parameters.
+A "stdWrap" TypoScript property ("standard wrap") is a function that "wraps"
+text values. A TEXT object value is parsed by the stdWrap function using the value's properties
+as parameters.
 
 ..  contents:: Table of contents
     :local:
@@ -165,7 +165,7 @@ Properties for getting data
 
             page.10.field = nav_title // title
 
-        The content from the nav\_title field will be returned
+        The content from the `nav_title` field will be returned
         unless it is a blank string. If it is a blank string, the value of
         the title field is returned.
 
@@ -283,7 +283,7 @@ Properties for overriding and conditions
         :name: stdwrap-ifBlank
         :type: :ref:`data-type-string` / :ref:`stdWrap`
 
-        Same as :typoscript:`ifEmpty` but the check is done against '' (blank
+        Same as :typoscript:`ifEmpty` but the check is done against '' (empty
         string). Zeros are not treated as blank values.
 
 
@@ -561,7 +561,7 @@ Properties for parsing data
 
         Returns a double value.
 
-        If :typoscript:`prioriCalc` is set to "intval", an integer is returned.
+        If :typoscript:`prioriCalc` is set to `intval`, an integer is returned.
 
         There is no error checking, and division by zero or other invalid
         values may generate strange results. You should use proper syntax
@@ -660,7 +660,7 @@ Properties for parsing data
         :name: stdwrap-date
         :type: :ref:`data-type-date-conf` / :ref:`stdWrap`
 
-        The content should be the "UNIX-time" data-type .Returns content
+        The content should be the an integer representing the UNIX time (second since 1.1.1970). Returns content
         formatted as a date. See the PHP manual (`datetime.format <https://www.php.net/manual/en/datetime.createfromformat.php>`_)
         for format codes.
 
