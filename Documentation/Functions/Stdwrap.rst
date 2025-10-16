@@ -733,7 +733,7 @@ Properties for parsing data
         :name: stdwrap-strftime
         :type: :ref:`data-type-strftime-conf` / :ref:`stdWrap`
 
-        Similar to "date", but uses a different format. See the PHP manual
+        Similar to property `date`, but uses a different format. See the PHP manual
         (`strftime <https://www.php.net/strftime>`_) for format codes.
 
         This formatting is useful if the locale is set in the
