@@ -41,7 +41,7 @@ current branch, i.e. the website root for that branch:
 ..  code-block:: typoscript
 
     10 = TEXT
-    10.data = LLL:EXT:myext/Resources/Private/Language/locallang.xlf:siteTitle
+    10.data = LLL:EXT:my_extension/Resources/Private/Language/locallang.xlf:siteTitle
 
 Creates a text object that contains the value of the "siteTitle" string in the
 given localization, appropriately translated for the current language.
