@@ -10,9 +10,9 @@
 stdWrap
 =======
 
-When a data type is set to "*type* /stdWrap" it means that the value
-is parsed through the stdWrap function with the properties of the
-value as parameters.
+A "stdWrap" TypoScript property ("standard wrap") is a function that "wraps"
+text values. A TEXT object value is parsed by the stdWrap function using the value's properties
+as parameters.
 
 ..  contents:: Table of contents
     :local:
@@ -22,24 +22,24 @@ value as parameters.
 Content-supplying properties of stdWrap
 =======================================
 
-stdWrap contains properties which determine what is applied. The properties
-are listed below.
+The properties that can be supplied as parameters are listed below.
 
 ..  note::
-    The properties are parsed in the listed order. The
-    properties :typoscript:`data`, :typoscript:`field`, :typoscript:`current`, :typoscript:`cObject`
-    (in that order!) are special as they are used to import content
-    from variables or arrays.
+    Content-supplying properties are those that import content
+    from other variables or arrays. These properties are parsed in the order :typoscript:`data`,
+    :typoscript:`field`, :typoscript:`current`, :typoscript:`cObject`.
 
-If you want to study this further please refer to
-:t3src:`frontend/Classes/ContentObject/ContentObjectRenderer.php`,
-where you will find the function :php:`stdWrap()` and the array :php:`$stdWrapOrder`,
-which represents the exact order of execution.
+For further information see
+:t3src:`frontend/Classes/ContentObject/ContentObjectRenderer.php`
+on the :php:`stdWrap()` function and on the array :php:`$stdWrapOrder`,
+which represents the order of execution.
 
-Note that the :typoscript:`stdWrap` property "orderedStdWrap" allows you to execute
-multiple :typoscript:`stdWrap` functions in a freely selectable order.
+Use the :typoscript:`stdWrap` property "orderedStdWrap" if you want to execute
+multiple :typoscript:`stdWrap` functions in an order you choose.
 
-The above example could be rewritten to this:
+In the example below, the line :typoscript:`10.value = some text` is discarded
+because the value is imported from the header field in
+:php:`$cObj->data-array`.
 
 .. code-block:: typoscript
    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
@@ -48,10 +48,6 @@ The above example could be rewritten to this:
    10.value = some text
    10.stdWrap.case = upper
    10.stdWrap.field = header
-
-Now the line :typoscript:`10.value = some text` is obsolete, because the whole
-value is "imported" from the field called "header" from the
-:php:`$cObj->data-array`.
 
 ..  _stdwrap-properties:
 
@@ -83,7 +79,7 @@ Properties for getting data
         :name: stdwrap-addpagecachetags
         :type: :ref:`data-type-string` / :ref:`stdWrap`
 
-        Comma-separated list of cache tags, which should be added to the page
+        Comma-separated list of cache tags to tag pages in the page
         cache.
 
         ..  rubric:: Examples
@@ -93,15 +89,15 @@ Properties for getting data
             addPageCacheTags = pagetag1,pagetag2,pagetag3
 
         This will add the tags "pagetag1", "pagetag2" and "pagetag3" to the
-        according cached pages in cache_pages.
+        cached pages in cache_pages.
 
-        Pages, which have been cached with a tag, can be deleted from cache
-        again with the TSconfig option
+        Cached pages with a tag can be deleted from the cache using the TSconfig option
         :ref:`TCEMAIN.clearCacheCmd <pagetcemain-clearcachecmd>`.
 
         ..  note::
-            If you instead want to store rendered content into the
-            caching framework, see the stdWrap feature :ref:`stdwrap-cache`.
+            To store rendered content in the
+            caching framework use the :ref:`stdwrap-cache`:typoscript:`cache`
+            property.
 
 
     ..  _stdwrap-setCurrent:
@@ -110,8 +106,8 @@ Properties for getting data
         :name: stdwrap-setCurrent
         :type: :ref:`data-type-string` / :ref:`stdWrap`
 
-        Sets the "current"-value. This is normally set from some outside
-        routine, so be careful with this. But it might be handy to do this
+        Sets the "current"-value. This is normally set from an external
+        routine, so be careful with this. But it might come in useful.
 
 
     ..  _stdwrap-lang:
@@ -146,12 +142,12 @@ Properties for getting data
         :name: stdwrap-field
         :type: Field name / :ref:`stdWrap`
 
-        Sets the content to the value of the according field
-        (which comes from :php:`$cObj->data[*field*]`).
+        Sets the content to the value of the corresponding field
+        (from :php:`$cObj->data[*field*]`).
 
         ..  note::
             :php:`$cObj->data` changes depending on the context.
-            See the description for the data type ":ref:`data-type-gettext`"/field!
+            See the description of the data type ":ref:`data-type-gettext`" field
 
         ..  rubric:: Examples
 
@@ -162,16 +158,15 @@ Properties for getting data
 
         This sets the content to the value of the field "title".
 
-        You can also check multiple field names, if you divide them
-        by "//".
+        You can provide multiple field name options separated by "//".
 
         ..  code-block:: typoscript
             :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
             page.10.field = nav_title // title
 
-        Here the content from the field nav\_title will be returned
-        unless it is a blank string. If a blank string, the value of
+        The content from the `nav_title` field will be returned
+        unless it is a blank string. If it is a blank string, the value of
         the title field is returned.
 
 
@@ -199,7 +194,7 @@ Properties for getting data
         :name: stdwrap-numRows
         :type: :ref:`->numRows <numrows>` / :ref:`stdWrap`
 
-        Returns the number of rows resulting from the supplied :sql:`SELECT` query.
+        Returns the number of rows resulting from a supplied :sql:`SELECT` query.
 
 
     ..  _stdwrap-preUserFunc:
@@ -208,15 +203,15 @@ Properties for getting data
         :name: stdwrap-preUserFunc
         :type: :ref:`data-type-function-name`
 
-        Calls the provided PHP function. If you specify the name with a '->'
-        in it, then it is interpreted as a call to a method in a class.
+        Calls a provided PHP function. If you specify the name with a '->'
+        in it, then it is interpreted as a call to a class method.
 
-        Two parameters are sent to the PHP function: As first parameter a
-        content variable, which contains the current content. This is the
-        value to be processed. As second parameter any sub-properties of
-        preUserFunc are provided to the function.
+        Two parameters are sent to the PHP function: a
+        content variable, which contains the current content (the
+        value to be processed), and any sub-properties of
+        preUserFunc.
 
-        See :ref:`stdwrap-postUserFunc`.
+        See :ref:`stdWrap-postUserFunc`:typoscript:`postUserFunc`.
 
 
 ..  index:: Function stdWrap; Override and conditions
@@ -236,8 +231,8 @@ Properties for overriding and conditions
         :name: stdwrap-override
         :type: :ref:`data-type-string` / :ref:`stdWrap`
 
-        If `override` returns something else than "" or zero (trimmed), the
-        content is loaded with this!
+        If `override` returns something other than "" or zero (trimmed), the
+        content is loaded with this.
 
 
     ..  _stdwrap-preIfEmptyListNum:
@@ -253,8 +248,7 @@ Properties for overriding and conditions
         :name: stdwrap-ifNull
         :type: :ref:`data-type-string` / :ref:`stdWrap`
 
-        If the content is null (:php:`NULL` type in PHP), the content is overridden
-        with the value defined here.
+        Sets the content if the content is null (:php:`NULL` type in PHP).
 
         ..  rubric:: Examples
         ..  code-block:: typoscript
@@ -269,8 +263,8 @@ Properties for overriding and conditions
                }
             }
 
-        This example shows the content of the field description or, if that
-        field contains the value :php:`NULL`, the text "No description defined.".
+        This example displays the content of the description field or, if that
+        value is :php:`NULL`, the text "No description defined.".
 
 
     ..  _stdwrap-ifEmpty:
@@ -279,8 +273,8 @@ Properties for overriding and conditions
         :name: stdwrap-ifEmpty
         :type: :ref:`data-type-string` / :ref:`stdWrap`
 
-        If the trimmed content is empty at this point, the content is loaded
-        with :typoscript:`ifEmpty`. Zeros are treated as empty values!
+        If the trimmed content is empty, the content is loaded
+        with :typoscript:`ifEmpty`. Zeros are treated as empty values.
 
 
     ..  _stdwrap-ifBlank:
@@ -289,8 +283,8 @@ Properties for overriding and conditions
         :name: stdwrap-ifBlank
         :type: :ref:`data-type-string` / :ref:`stdWrap`
 
-        Same as :typoscript:`ifEmpty` but the check is done against ''. Zeros are not
-        treated as blank values!
+        Same as :typoscript:`ifEmpty` but the check is done against '' (empty
+        string). Zeros are not treated as blank values.
 
 
     ..  _stdwrap-listNum:
@@ -313,12 +307,13 @@ Properties for overriding and conditions
             a random element in the exploded content.
 
         :ref:`calc`
-            After the special keywords are replaced with their according numeric
-            values the
+            After the special keywords are replaced with their numeric
+            values.
 
         0 - last
-            If the content of `listNum` can be interpreted as integer the according
-            index of the exploded content is returned. Counting starts with 0.
+            If the content of `listNum` can be interpreted as an integer the
+            corresponding index of the exploded content is returned. Counting
+            starts at 0.
 
         .. rubric:: Examples
 
@@ -350,7 +345,7 @@ Properties for overriding and conditions
 
             .. rubric:: Examples
 
-            Splits the content of the field `subtitle` by the pipe character and returns
+            Splits the content of the `subtitle` field by the pipe character and returns
             a random element
 
             ..  code-block:: typoscript
@@ -373,8 +368,7 @@ Properties for overriding and conditions
         :name: stdwrap-trim
         :type: :ref:`data-type-boolean` / :ref:`stdWrap`
 
-        If set, the PHP-function :php:`trim()` will be used to remove whitespaces
-        around the value.
+        If set, the PHP-function :php:`trim()` removes whitespace around the value.
 
 
     ..  _stdwrap-strPad:
@@ -384,7 +378,7 @@ Properties for overriding and conditions
         :type: :ref:`strPad`
 
         Pads the current content to a certain length. You can define the padding
-        characters and the side(s), on which the padding should be added.
+        characters and which side(s) the padding should be added.
 
 
     ..  _stdwrap-stdWrap:
@@ -402,12 +396,12 @@ Properties for overriding and conditions
         :name: stdwrap-required
         :type: :ref:`data-type-boolean` / :ref:`stdWrap`
 
-        This flag requires the content to be set to some value after any
-        content-import and treatment that might have happened until now
+        This flag requires the content to be set to a certain value after a
+        content import and any processing that has occurred
         (data, field, current, listNum, trim). Zero is **not** regarded as
-        empty! Use "if" instead!
+        empty. Use "if" instead.
 
-        If the content is empty, "" is returned immediately.
+        If the content is empty, "" is returned.
 
 
     ..  _stdwrap-if:
@@ -416,7 +410,7 @@ Properties for overriding and conditions
         :name: stdwrap-if
         :type: :ref:`if`
 
-        If the if-object returns false, stdWrap returns "" immediately.
+        If the if-object returns false, stdWrap returns "".
 
 
     ..  _stdwrap-fieldRequired:
@@ -443,7 +437,7 @@ Properties for parsing data
         :name: stdwrap-csConv
         :type: :ref:`data-type-string` / :ref:`stdWrap`
 
-        Convert the charset of the string from the charset given as value to
+        Converts the charset of the string from the charset given as a value to
         the current rendering charset of the frontend (UTF-8).
 
 
@@ -453,13 +447,13 @@ Properties for parsing data
         :name: stdwrap-parseFunc
         :type: object path reference / :ref:`parsefunc` / :ref:`stdWrap`
 
-        Processing instructions for the content.
+        Processing instructions to be applied to content.
 
         ..  Note::
-            If you enter a string as value, this will be taken as a
-            reference to an object path globally in the TypoScript object tree.
-            This will be the basis configuration for parseFunc merged with any
-            properties you add here. It works exactly like references does for
+            If you enter a string value, this will be interpreted as a
+            reference to a global object path in the TypoScript object tree.
+            This will be the basic configuration for parseFunc merged with any
+            properties you add here. It works like references does for
             content elements.
 
         ..  rubric:: Examples
@@ -475,13 +469,13 @@ Properties for parsing data
 
     ..  _stdwrap-parseFunc-sanitization:
 
-    :ref:`stdwrap-htmlSanitize` is enabled by default when
-    :ref:`stdwrap-parseFunc` is invoked. This also includes the Fluid Viewhelper
-    :html:`<f:format.html>`, since it invokes :ref:`stdwrap-parseFunc`
+    :ref:`stdwrap-htmlSanitize`:typoscript:`htmlSanitize` is enabled by default when
+    :ref:`stdwrap-parseFunc`:typoscript:`parseFunc` is invoked. This includes the Fluid Viewhelper
+    :html:`<f:format.html>`, since it invokes :ref:`stdwrap-parseFunc`:typoscript:`parseFunc`
     directly using :typoscript:`lib.parseFunc_RTE`.
 
-    The following example shows how to disable the sanitization behavior that is
-    enabled by default. This is not recommended, but it can be disabled when required.
+    The following example shows how to disable the sanitization behavior (enabled
+    by default). This is not recommended.
 
     ..  code-block:: typoscript
         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
@@ -498,10 +492,9 @@ Properties for parsing data
             parseFunc.htmlSanitize = 0
         }
 
-    Since any invocation of :typoscript:`stdWrap.parseFunc` triggers HTML
-    sanitization automatically; unless explicitly disabled
-    the following example causes a lot of generated markup to be sanitized and can be
-    solved by explicitly disabling it with :typoscript:`htmlSanitize = 0`.
+    Since an invocation of :typoscript:`stdWrap.parseFunc` triggers HTML
+    sanitization, the following example causes a lot of generated markup to be
+    sanitized and can be solved by explicitly disabling it with :typoscript:`htmlSanitize = 0`.
 
     ..  code-block:: typoscript
         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
@@ -528,8 +521,8 @@ Properties for parsing data
         :name: stdwrap-htmlparser
         :type: :ref:`data-type-boolean` / :ref:`htmlparser` / :ref:`stdWrap`
 
-        This object allows you to parse the HTML-content and perform all kinds of
-        advanced filtering on the content.
+        This object allows you to parse HTML content and perform advanced
+        filtering on the content.
 
         Value must be set and properties are those of :ref:`htmlparser`.
 
@@ -549,8 +542,8 @@ Properties for parsing data
         :name: stdwrap-replacement
         :type: :ref:`replacement` / :ref:`stdWrap`
 
-        Performs an ordered search/replace on the current content with the
-        possibility of using PCRE regular expressions. An array with numeric
+        Performs an ordered search/replace on the current content and
+        PCRE regular expressions can be used. An array with numeric
         indices defines the order of actions and thus allows multiple
         replacements at once.
 
@@ -561,18 +554,18 @@ Properties for parsing data
         :name: stdwrap-prioriCalc
         :type: :ref:`data-type-boolean` / :ref:`stdWrap`
 
-        Calculation of the value using operators -+\*/%^ plus respects
-        priority to + and - operators and parenthesis levels ().
+        Calculation of the value using operators -+\*/%^ while respecting
+        the priority of + and - operators and parenthesis levels ().
 
-        . (period) is decimal delimiter.
+        . (period) is a decimal delimiter.
 
-        Returns a doublevalue.
+        Returns a double value.
 
-        If :typoscript:`prioriCalc` is set to "intval" an integer is returned.
+        If :typoscript:`prioriCalc` is set to `intval`, an integer is returned.
 
-        There is no error checking and division by zero or other invalid
-        values may generate strange results. Also you should use a proper syntax
-        because future modifications to the function used may allow for more
+        There is no error checking, and division by zero or other invalid
+        values may generate strange results. You should use proper syntax
+        because future modifications to the function may add more
         operators and features.
 
         ..  rubric:: Examples
@@ -647,7 +640,7 @@ Properties for parsing data
         :name: stdwrap-round
         :type: :ref:`round` / :ref:`stdWrap`
 
-        Round the value with the selected method to the given number of
+        Round the value using the selected method to the given number of
         decimals.
 
 
@@ -657,7 +650,7 @@ Properties for parsing data
         :name: stdwrap-numberFormat
         :type: :ref:`numberformat`
 
-        Format a float value to any number format you need (e.g. useful for
+        Format a float value to the number format you need (e.g. useful for
         prices).
 
 
@@ -667,9 +660,9 @@ Properties for parsing data
         :name: stdwrap-date
         :type: :ref:`data-type-date-conf` / :ref:`stdWrap`
 
-        The content should be data-type "UNIX-time". Returns the content
+        The content should be the an integer representing the UNIX time (second since 1.1.1970). Returns content
         formatted as a date. See the PHP manual (`datetime.format <https://www.php.net/manual/en/datetime.createfromformat.php>`_)
-        for the format codes.
+        for format codes.
 
 
         ..  code-block:: php
@@ -697,7 +690,7 @@ Properties for parsing data
 
         ..  note::
             You should consider using the more flexible function
-            :ref:`stdwrap-formattedDate`.
+            :ref:`stdwrap-formattedDate`:typoscript:`formattedDate`.
 
 
     ..  _stdwrap-strtotime:
@@ -706,9 +699,10 @@ Properties for parsing data
         :name: stdwrap-strtotime
         :type: :ref:`data-type-string`
 
-        Allows conversion of formatted dates to timestamp, e.g. to perform date calculations.
+        Allows conversion of formatted dates to timestamps, for example to perform date calculations.
 
-        Possible values are :typoscript:`1` or any time string valid as first argument of the PHP :php:`strtotime()` function.
+        Possible values are :typoscript:`1` or any time string valid as the first
+        argument of the PHP :php:`strtotime()` function.
 
         ..  rubric:: Examples
 
@@ -739,27 +733,27 @@ Properties for parsing data
         :name: stdwrap-strftime
         :type: :ref:`data-type-strftime-conf` / :ref:`stdWrap`
 
-        Very similar to "date", but using a different format. See the PHP manual (`strftime <https://www.php.net/strftime>`_) for the
-        format codes.
+        Similar to property `date`, but uses a different format. See the PHP manual
+        (`strftime <https://www.php.net/strftime>`_) for format codes.
 
-        This formatting is useful if the locale is set in advance in the
-        :ref:`CONFIG <config>` object. See there.
+        This formatting is useful if the locale is set in the
+        :ref:`CONFIG <config>` object.
 
         Properties:
 
         .charset
             Can be set to the charset of the output string if you need to
-            convert it to UTF-8. Default is to take the intelligently guessed
-            charset from :php:`TYPO3\CMS\Core\Charset\CharsetConverter`.
+            convert it to UTF-8. The default is to take the
+            charset predicted by :php:`TYPO3\CMS\Core\Charset\CharsetConverter`.
 
         .GMT
-            If set, the PHP function `gmstrftime()
+            If set, PHP function `gmstrftime()
             <https://www.php.net/gmstrftime>`_ will be used instead of
             `strftime() <https://www.php.net/strftime>`_.
 
         ..  note::
             You should consider using the more flexible function
-            :ref:`stdwrap-formattedDate`.
+            :ref:`stdwrap-formattedDate`:typoscript:`formattedDate`.
 
 
     ..  _stdwrap-formattedDate:
@@ -768,19 +762,19 @@ Properties for parsing data
         :name: stdwrap-formattedDate
         :type: :ref:`data-type-string`
 
-        The function renders date and time based on formats/patterns defined by
+        This function renders date and time based on formats/patterns defined by
         the International Components for Unicode standard (ICU). ICU-based date and
-        time formatting is much more flexible in rendering as
-        :ref:`stdwrap-date` or :ref:`stdwrap-strftime`, as it ships
-        with default patterns for date and time based on the given locale (given
-        examples for locale `en-US` and timezone `America/Los_Angeles`):
+        time formatting is much more flexible for rendering than
+        :ref:`stdwrap-date`:typoscript:`date` or :ref:`stdwrap-strftime`:typoscript:`strftime`, as it ships
+        with default patterns for date and time based on the given locale
+        (the examples below are for locale `en-US` and timezone `America/Los_Angeles`):
 
         *   `FULL`, for example: `Friday, March 17, 2023 at 3:00:00 AM Pacific Daylight Time`
         *   `LONG`, for example: `March 17, 2023 at 3:00:00 AM PDT`
         *   `MEDIUM`, for example: `Mar 17, 2023, 3:00:00 AM`
         *   `SHORT`, for example: `3/17/23, 3:00 AM`
 
-        TYPO3 also adds prepared custom patterns:
+        TYPO3 also adds custom patterns:
 
         *   `FULLDATE`, for example: `Friday, March 17, 2023`
         *   `FULLTIME`, for example: `3:00:00 AM Pacific Daylight Time`
@@ -792,7 +786,7 @@ Properties for parsing data
         *   `SHORTTIME`, for example: `3:00 AM`
 
         ..  note::
-            You can specify an own pattern to suit your requirements, for example:
+            You can specify your own pattern to suit your requirements, for example:
             `qqqq, yyyy` will result in `1st quarter, 2023`. Have a look into the
             `available options <https://unicode-org.github.io/icu/userguide/format_parse/datetime/#datetime-format-syntax>`__.
 
@@ -859,16 +853,16 @@ Properties for parsing data
         :type: :ref:`data-type-boolean` or :ref:`data-type-string` / :ref:`stdWrap`
 
         If enabled with a "1" (number, integer) the content is seen as a date
-        (UNIX-time) and the difference from present time and the content-time
+        (UNIX-time) and the difference between current time and the content-time
         is returned as one of these eight variations:
 
         "xx min" or "xx hrs" or "xx days" or "xx yrs" or "xx min" or "xx hour"
         or "xx day" or "year"
 
-        The limits between which layout is used are 60 minutes, 24 hours and
+        The upper limits of the variations are 60 minutes, 24 hours and
         365 days.
 
-        If you set this property with a non-integer, it is used to format the
+        If you set this property as non-integer, it is used to format the
         eight units. The first four values are the plural values and the last
         four are singular. This is the default string:
 
@@ -877,9 +871,9 @@ Properties for parsing data
 
            min| hrs| days| yrs| min| hour| day| year
 
-        Set another string if you want to change the units. You may include
-        the "-signs. They are removed anyway, but they make sure that a space
-        which you might want between the number and the unit stays.
+        Set another string if you want to change the units. You can include
+        "-" signs. They will be removed, but they make sure that there is a
+        space between the number and the unit.
 
         ..  rubric:: Examples
         ..  code-block:: typoscript
@@ -906,11 +900,11 @@ Properties for parsing data
         ============================= ==========================================================
         Value                         Effect
         ============================= ==========================================================
-        :typoscript:`upper`           Convert all letters of the string to upper case
-        :typoscript:`lower`           Convert all letters of the string to lower case
-        :typoscript:`capitalize`      Uppercase the first character of each word in the string
-        :typoscript:`ucfirst`         Convert the first letter of the string to upper case
-        :typoscript:`lcfirst`         Convert the first letter of the string to lower case
+        :typoscript:`upper`           Convert all letters of the string to uppercase
+        :typoscript:`lower`           Convert all letters of the string to lowercase
+        :typoscript:`capitalize`      Convert the first character of each word in the string to uppercase
+        :typoscript:`ucfirst`         Convert the first letter of the string to uppercase
+        :typoscript:`lcfirst`         Convert the first letter of the string to lowercase
         :typoscript:`uppercamelcase`  Convert underscored `upper_camel_case` to `UpperCamelCase`
         :typoscript:`lowercamelcase`  Convert underscored `lower_camel_case` to `lowerCamelCase`
         ============================= ==========================================================
@@ -943,10 +937,10 @@ Properties for parsing data
 
         This is for number values. When the 'bytes' property is added and set
         to 'true' then a number will be formatted in 'bytes' style with two
-        decimals like '1.53 KiB' or '1.00 MiB'.
-        Learn about common notations at
+        decimals, for example, '1.53 KiB' and '1.00 MiB'.
+        Learn about common notations in
         `Wikipedia "Kibibyte" <https://en.wikipedia.org/wiki/Kibibyte>`__.
-        IEC naming with base 1024 is the default. Use sub-properties for
+        IEC naming with base 1024 is the default. Use subproperties for
         customisation.
 
         .labels = iec
@@ -955,25 +949,25 @@ Properties for parsing data
             You need to append a final string like 'B' or '-Bytes' yourself.
 
         .labels = si
-            In this case SI labels and base 1000 are used.
-            Built in IEC labels are :typoscript:`" | k| M| G| T| P| E| Z| Y"`.
+            SI labels and base 1000 are used. Built in IEC labels are
+            :typoscript:`" | k| M| G| T| P| E| Z| Y"`.
             You need to append a final string like 'B' yourself.
 
         .labels = "..."
-            Custom values can be defined as well like with
+            Custom values can be defined such as
             :typoscript:`.labels = " Byte| Kilobyte| Megabyte| Gigabyte"`. Use a
             vertical bar to separate the labels. Enclose the whole string in
             double quotes.
 
         .base = 1000
-            Only with custom labels you can choose to set a base of1000. All
-            other values, including the default, mean base 1024.
+            You can set custom labels to base 1000. All
+            other values, including the default, are base 1024.
 
         ..  attention::
 
             If the value isn't a number the internal PHP function may issue a
-            warning which - depending on you error handling settings - can
-            interrupt execution. Example:
+            warning which can interrupt execution depending on you error
+            handling settings. Example:
 
         ..  code-block:: typoscript
             :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
@@ -1107,7 +1101,7 @@ Properties for parsing data
         Returns the substring with [p1] and [p2] sent as the 2nd and 3rd
         parameter to the PHP `mb_substr <https://www.php.net/mb_substr>`__ function.
 
-        Uses "UTF-8" for the operation.
+        Uses "UTF-8".
 
 
     ..  _stdwrap-cropHTML:
@@ -1116,13 +1110,13 @@ Properties for parsing data
         :name: stdwrap-cropHTML
         :type: :ref:`data-type-string` / :ref:`stdWrap`
 
-        Crops the content to a certain length. In contrast to :typoscript:`stdWrap.crop` it
+        Crops the content to a certain length. In contrast to :typoscript:`stdWrap.crop`, it
         respects HTML tags. It does not crop inside tags and closes open tags.
         Entities (like ">") are counted as one char. See :typoscript:`stdWrap.crop` below
         for a syntax description and examples.
 
         Note that :typoscript:`stdWrap.crop` should not be used if :typoscript:`stdWrap.cropHTML` is
-        already used.
+        already being used.
 
 
     ..  _stdwrap-stripHtml:
@@ -1142,24 +1136,24 @@ Properties for parsing data
 
         Crops the content to a certain length.
 
-        You can define up to three parameters, of which the third one is
+        You can define up to three parameters, where the third one is
         optional. The syntax is:
-        [numbers of characters to keep] \| [ellipsis] \| [keep whole words]
+        [number of characters to keep] \| [ellipsis] \| [keep whole words]
 
-        numbers of characters to keep (integer): Define the number of characters
-        you want to keep. For positive numbers, the first characters from the
-        beginning of the string will be kept, for negative numbers the last
+        numbers of characters to keep (integer): Defines the number of characters
+        to keep. For positive numbers, the first characters from the
+        beginning of the string will be kept, for negative numbers, the last
         characters from the end will be kept.
 
-        ellipsis (string): The signs to be added instead of the part, which was
-        cropped of. If the number of characters was positive, the string will
-        be *prepended* with the ellipsis, if it was negative, the string will
+        ellipsis (string): The symbols to be added replacing the part that was
+        cropped. If the number of characters to keep is positive, the string will
+        be *prepended* with the ellipsis, if it is negative, the string will
         be *appended* with the ellipsis.
 
-        keep whole words (boolean): If set to 0 (default), the string is always
-        cropped directly after the defined number of characters. If set to 1,
-        only complete words are kept. Then a word, which would normally be cut
-        in the middle, is removed completely.
+        keep whole words (boolean): If set to 0 (default), the string is
+        cropped after the defined number of characters. If set to 1,
+        complete words are kept. A word which would normally be cut
+        in the middle will be removed.
 
         ..  rubric:: Examples
 
@@ -1171,10 +1165,10 @@ Properties for parsing data
 
         :typoscript:`20 | ... | 1` => max 20 characters. If more, the value will be
         truncated to the first 20 characters and prepended with "...". If
-        the division is in the middle of a word, the remains of that word is
+        the division is in the middle of a word, the rest of that word will be
         removed.
 
-        Uses "UTF-8" for the operation.
+        Uses "UTF-8".
 
 
     ..  _stdwrap-rawUrlEncode:
@@ -1183,7 +1177,8 @@ Properties for parsing data
         :name: stdwrap-rawUrlEncode
         :type: :ref:`data-type-boolean` / :ref:`stdWrap`
 
-        Passes the content through the PHP function `rawurlencode() <https://www.php.net/rawurlencode>`_.
+        Passes the content through the `rawurlencode() <https://www.php.net/rawurlencode>`_
+        PHP function .
 
 
     ..  _stdwrap-htmlSpecialChars:
@@ -1192,9 +1187,9 @@ Properties for parsing data
         :name: stdwrap-htmlSpecialChars
         :type: :ref:`data-type-boolean` / :ref:`stdWrap`
 
-        Passes the content through the PHP function `htmlspecialchars() <https://www.php.net/htmlspecialchars>`_.
+        Passes the content through the `htmlspecialchars() <https://www.php.net/htmlspecialchars>`_ PHP function.
 
-        Additional property :typoscript:`preserveEntities` will preserve entities so only
+        Additional property :typoscript:`preserveEntities` will preserve entities so that only
         non-entity characters are affected.
 
 
@@ -1204,10 +1199,10 @@ Properties for parsing data
         :name: stdwrap-encodeForJavaScriptValue
         :type: :ref:`data-type-boolean` / :ref:`stdWrap`
 
-        Encodes content to be used safely inside strings in JavaScript.
-        Characters, which can cause problems inside JavaScript strings, are
+        Encodes content so that it can be safely used inside strings in JavaScript.
+        Characters which can cause problems inside JavaScript strings are
         replaced with their encoded equivalents. The resulting string is
-        already quoted with single quotes.
+        quoted with single quotes.
 
         Passes the content through the core function
         :php:`\TYPO3\CMS\Core\Utility\GeneralUtility::quoteJSvalue()`.
@@ -1231,7 +1226,7 @@ Properties for parsing data
         :name: stdwrap-doubleBrTag
         :type: :ref:`data-type-string` / :ref:`stdWrap`
 
-        All double line breaks are substituted with this value.
+        Double line breaks are substituted with this value.
 
 
     ..  _stdwrap-br:
@@ -1240,7 +1235,7 @@ Properties for parsing data
         :name: stdwrap-br
         :type: :ref:`data-type-boolean` / :ref:`stdWrap`
 
-        Pass the value through the PHP function `nl2br() <https://www.php.net/nl2br>`__. This
+        Pass the value through the `nl2br() <https://www.php.net/nl2br>`__ PHP function. This
         converts each line break to a :html:`<br />` or a :html:`<br>` tag depending on doctype.
 
 
@@ -1251,7 +1246,7 @@ Properties for parsing data
         :type: :ref:`data-type-string` / :ref:`stdWrap`
 
         All ASCII codes of "10" (line feed, LF) are substituted with the
-        *value*, which has been provided in this property.
+        *value* of this property.
 
 
     ..  _stdwrap-encapsLines:
@@ -1260,8 +1255,8 @@ Properties for parsing data
         :name: stdwrap-encapsLines
         :type: :ref:`encapslines` / :ref:`stdWrap`
 
-        Lets you split the content by :php:`chr(10)` and process each line
-        independently. Used to format content made with the RTE.
+        Lets you split the content with :php:`chr(10)` and process each line
+        independently. Used to format RTE content .
 
 
     ..  _stdwrap-keywords:
@@ -1270,7 +1265,7 @@ Properties for parsing data
         :name: stdwrap-keywords
         :type: :ref:`data-type-boolean` / :ref:`stdWrap`
 
-        Splits the content by characters "," ";" and php:`chr(10)` (return), trims
+        Splits the content by characters "," ";" and :php:`chr(10)` (return), trims
         each value and returns a comma-separated list of the values.
 
 
@@ -1290,7 +1285,7 @@ Properties for wrapping data
         :name: stdwrap-innerWrap
         :type: :ref:`wrap <data-type-wrap>` / :ref:`stdWrap`
 
-        Wraps the content.
+        Wraps content.
 
 
     ..  _stdwrap-innerWrap2:
@@ -1308,7 +1303,7 @@ Properties for wrapping data
         :name: stdwrap-preCObject
         :type: :ref:`data-type-cobject`
 
-        :ref:`stdwrap-cObject` prepended the content.
+        :ref:`stdwrap-cObject`:typoscript:`cObject` prepended the content.
 
 
     ..  _stdwrap-postCObject:
@@ -1317,7 +1312,7 @@ Properties for wrapping data
         :name: stdwrap-postCObject
         :type: :ref:`data-type-cobject`
 
-        :ref:`stdwrap-cObject` appended the content.
+        :ref:`stdwrap-cObject`:typoscript:`cObject` appended the content.
 
 
     ..  _data-type-align:
@@ -1338,7 +1333,7 @@ Properties for wrapping data
         :name: stdwrap-typolink
         :type: :ref:`typolink` / :ref:`stdWrap`
 
-        Wraps the content with a link tag.
+        Wraps content with a link tag.
 
 
     ..  _stdwrap-wrap:
@@ -1347,7 +1342,7 @@ Properties for wrapping data
         :name: stdwrap-wrap
         :type: :ref:`wrap <data-type-wrap>` /+.splitChar / :ref:`stdWrap`
 
-        :typoscript:`splitChar` defines an alternative splitting character (default is "\|"
+        :typoscript:`splitChar` defines an alternative splitting character (the default is "\|"
         - the vertical line)
 
     ..  _stdwrap-noTrimWrap:
@@ -1357,9 +1352,9 @@ Properties for wrapping data
         :type: "special" wrap /+.splitChar / :ref:`stdWrap`
 
         This wraps the content *without* trimming the values. That means that
-        surrounding whitespaces stay included! Note that this kind of wrap
-        does not only need a special character in the middle, but that it also
-        needs the same special character to begin and end the wrap (default
+        surrounding whitespace is not removed. Note that this kind of wrap
+        needs a special character in the middle as well as the same special
+        character at the beginning and end of the wrap (the default
         for all three is "\|").
 
         **Additional property:**
@@ -1367,8 +1362,8 @@ Properties for wrapping data
         :typoscript:`splitChar`
 
         Can be set to define an alternative special character. :typoscript:`stdWrap` is
-        available. Default is "\|" - the vertical line. This sub-property is
-        useful in cases when the default special character would be recognized
+        available. The default is "\|" - the vertical line. This subproperty is
+        useful when the default special character would be recognized
         by :ref:`optionsplit` (which takes precedence over :typoscript:`noTrimWrap`).
 
         ..  rubric:: Examples
@@ -1377,8 +1372,8 @@ Properties for wrapping data
 
            page.10.noTrimWrap = | val1 | val2 |
 
-        In this example the content with the values val1 and val2 will be
-        wrapped; including the whitespaces.
+        In this example the values val1 and val2 will be wrapped, including the
+        whitespace.
 
         ..  rubric:: Examples
         .. code-block:: typoscript
@@ -1389,8 +1384,8 @@ Properties for wrapping data
               noTrimWrap.splitChar = ^
            }
 
-        :ref:`optionsplit` will use the "\|\|" to have two subparts in
-        the first part. In each subpart :typoscript:`noTrimWrap` will then use the "^" as
+        :ref:`optionsplit` will use the "\|\|" to determine two subparts. In
+        each subpart :typoscript:`noTrimWrap` will then use the "^" as
         special character.
 
 
@@ -1400,7 +1395,7 @@ Properties for wrapping data
         :name: stdwrap-wrap2
         :type: :ref:`wrap <data-type-wrap>` /+.splitChar / :ref:`stdWrap`
 
-        same as :ref:`stdwrap-wrap` (but watch the order in which they are executed)
+        same as :ref:`stdwrap-wrap`:typoscript:`wrap` (but watch the order in which they are executed)
 
 
     ..  _stdwrap-dataWrap:
@@ -1421,7 +1416,7 @@ Properties for wrapping data
             page.10.dataWrap = <div id="{tsfe : id}"> | </div>
 
         This will produce a :html:`<div>` tag around the content with an id attribute
-        that contains the number of the current page.
+        that contains the id of the current page.
 
 
     ..  _stdwrap-prepend:
@@ -1457,9 +1452,9 @@ Properties for wrapping data
         :name: stdwrap-orderedStdWrap
         :type: Array of numeric keys with / :ref:`stdWrap` each
 
-        Execute multiple :typoscript:`stdWrap` statements in a freely selectable order. The order
-        is determined by the numeric order of the keys. This allows to use multiple
-        stdWrap statements without having to remember the rather complex sorting
+        Execute multiple :typoscript:`stdWrap` statements in an order that
+        you choose. The order is determined by the numeric order of the keys.You
+        can use multiple stdWrap statements without having to remember the rather complex sorting
         order in which the :typoscript:`stdWrap` functions are executed.
 
         ..  rubric:: Examples
@@ -1481,7 +1476,7 @@ Properties for wrapping data
 
         In this example orderedStdWrap is executed on the value "a".
         :typoscript:`10.innerWrap` is executed first, followed by :typoscript:`10.wrap`.
-        Then the next key is processed which is 20. Afterwards :typoscript:`30.wrap`
+        Then the 20 key is processed. Finally :typoscript:`30.wrap`
         is executed on what already was created.
 
         This results in "This is a working solution."
@@ -1521,9 +1516,10 @@ Properties for wrapping data
            20.insertData = 1
 
     ..  warning::
-        Never use this on content that can be edited in the backend. This allows editors to disclose
-        normally hidden information. Never use this to insert data into wraps.
-        Use :ref:`stdwrap-dataWrap` instead.
+        Never use this on content that can be edited in the backend. This would
+        allows editors to disclose information that is normally hidden. Never
+        use this to insert data into wraps. Use :ref:`stdwrap-dataWrap`
+        :typoscript:`dataWrap` instead.
 
 
     ..  _stdwrap-postUserFunc:
@@ -1532,15 +1528,15 @@ Properties for wrapping data
         :name: stdwrap-postUserFunc
         :type: :ref:`data-type-function-name`
 
-        Calls the provided PHP function. If you specify the name with a '->'
-        in it, then it is interpreted as a call to a method in a class.
+        Calls the provided PHP function. If the function name contains '->',
+        it will be interpreted as a call to a class method.
 
-        Two parameters are sent to the PHP function: As first parameter a
-        content variable, which contains the current content. This is the
-        value to be processed. As second parameter any sub-properties of
-        :typoscript:`postUserFunc` are provided to the function.
+        Two parameters are sent to the PHP function: a
+        content variable containing the current content (this is the value that
+        will be processed) and subproperties of
+        :typoscript:`postUserFunc`.
 
-        The description of the :typoscript:`cObject` :ref:`USER <cobj-user>` contains some
+        See description of the :ref:`USER <cobj-user>` :typoscript:`cObject` for
         more in-depth information.
 
         ..  rubric:: Examples
@@ -1556,18 +1552,18 @@ Properties for wrapping data
         ..  literalinclude:: _StdWrap/_UserFunction.php
             :caption: EXT:site_package/Classes/UserFunctions/YourClass.php
 
-        For :typoscript:`page.10` the content, which is present when
-        :typoscript:`postUserFunc` is executed, will be given to the PHP function
-        :php:`reverseString()`. The result will be `!DLROW OLLEH`.
+        For :typoscript:`page.10`: the content which exists when
+        :typoscript:`postUserFunc` is executed, will be processed by the function
+        :php:`reverseString()` in the class :php:`YourClass`. The result will be
+        `!DLROW OLLEH`.
 
-        The content of :typoscript:`page.20` will be processed by the function
-        :php:`reverseString()` from the class :php:`YourClass`. This also returns
-        the text `!DLROW OLLEH`, but wrapped into a link to the page with the ID 11.
-        The result will be :html:`<a href="/path/to/page/id/11">!DLROW OLLEH</a>`.
+        For :typoscript:`page.20` the result will be the same, but wrapped into
+        a link to the page with ID 11. The result will be
+        :html:`<a href="/path/to/page/id/11">!DLROW OLLEH</a>`.
 
-        Note how in the second example :php:`$this->cObj`, the reference to the
-        calling :typoscript:`cObject`, is utilised to use functions from
-        :php:`ContentObjectRenderer` class!
+        Note how in the PHP code :php:`$this->cObj`, the reference to the
+        calling :typoscript:`cObject`, uses functions from
+        :php:`ContentObjectRenderer` class.
 
 
     ..  _stdwrap-postUserFuncInt:
@@ -1576,17 +1572,17 @@ Properties for wrapping data
         :name: stdwrap-postUserFuncInt
         :type: :ref:`data-type-function-name`
 
-        Calls the provided PHP function. If you specify the name with a '->'
-        in it, then it is interpreted as a call to a method in a class.
+        Calls the provided PHP function. If you specify a function name with '->'
+        it will be interpreted as a call to a class method.
 
-        Two parameters are sent to the PHP function: As first parameter a
-        content variable, which contains the current content. This is the
-        value to be processed. As second parameter any sub-properties of
-        postUserFuncInt are provided to the function.
+        Two parameters are sent to the PHP function: a
+        content variable containing the current content (this is the value that
+        will be processed) and subproperties of
+        :typoscript:`postUserFuncInt`.
 
-        The result will be rendered non-cached, outside the main
-        page-rendering. Please see the description of the :typoscript:`cObject`
-        :ref:`USER_INT <cobj-user-int>`.
+        The result will be rendered non-cached outside the main
+        page-rendering. See the :typoscript:`cObject`
+        :ref:`USER_INT <cobj-user-int>` description.
 
         Supplied by Jens Ellerbrock
 
@@ -1597,11 +1593,11 @@ Properties for wrapping data
         :name: stdwrap-prefixComment
         :type: :ref:`data-type-string` / :ref:`stdWrap`
 
-        Prefixes content with an HTML comment with the second part of input
-        string (divided by "\|") where first part is an integer telling how
-        many trailing tabs to put before the comment on a new line.
+        Prefixes content with an HTML comment. The second part of the input
+        string (divided by "\|") is the comment and the first part is an integer
+        denoting how many trailing tabs to put in front of the comment on a new line.
 
-        The content is parsed through :ref:`stdwrap-insertData`.
+        The content is parsed through :ref:`stdwrap-insertData` :typoscript:`insertData`.
 
         ..  rubric:: Examples
 
@@ -1610,7 +1606,7 @@ Properties for wrapping data
 
             prefixComment = 2 | CONTENT ELEMENT, uid:{field:uid}/{field:CType}
 
-        Will indent the comment with 1 tab (and the next line with 2+1 tabs)
+        Will indent the comment by 1 tab (and the next line by 2+1 tabs)
 
 
 ..  _stdwrap-properties-cache:
@@ -1629,18 +1625,18 @@ Properties for sanitizing and caching data
         :name: stdwrap-htmlSanitize
         :type: :ref:`data-type-boolean` / array with key "build"
 
-        The property controls the sanitization and removal of XSS from markup. It
+        This property is responsible for sanitization and removal of XSS from markup. It
         strips tags, attributes and values that are not explicitly allowed.
 
-        * :typoscript:`htmlSanitize = [boolean]`: whether to invoke sanitization
-          (enabled per default when invoked via :typoscript:`stdWrap.parseFunc`).
-        * :typoscript:`htmlSanitize.build = [string]`: defines which specific builder
-          (must be an instance of :php:`\TYPO3\HtmlSanitizer\Builder\BuilderInterface`)
-          to be used for building a :php:`\TYPO3\HtmlSanitizer\Sanitizer` instance
-          using a particular :php:`\TYPO3\HtmlSanitizer\Behavior`. This can either be
+        * :typoscript:`htmlSanitize = [boolean]` - whether to invoke sanitization
+          (enabled by default when invoked by :typoscript:`stdWrap.parseFunc`).
+        * :typoscript:`htmlSanitize.build = [string]` - defines which builder
+          to use (must be an instance of :php:`\TYPO3\HtmlSanitizer\Builder\BuilderInterface`)
+          for building a :php:`\TYPO3\HtmlSanitizer\Sanitizer` instance
+          using a particular :php:`\TYPO3\HtmlSanitizer\Behavior`. It can either be
           a fully qualified class name or the name of a preset as defined in
-          :php:`$GLOBALS['TYPO3_CONF_VARS']['SYS']['htmlSanitizer']` - per default,
-          :php:`\TYPO3\CMS\Core\Html\DefaultSanitizerBuilder` is used.
+          :php:`$GLOBALS['TYPO3_CONF_VARS']['SYS']['htmlSanitizer']` - the default is
+          :php:`\TYPO3\CMS\Core\Html\DefaultSanitizerBuilder`.
 
         ..  rubric:: Examples
 
@@ -1659,7 +1655,7 @@ Properties for sanitizing and caching data
 
             <div><img src="invalid.file"></div>
 
-        The following code is equivalent to above, but with a builder specified:
+        The following code is equivalent to the above, but specifies a builder:
 
         ..  code-block:: typoscript
             :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
@@ -1699,13 +1695,12 @@ Properties for debugging data
         :name: stdwrap-debug
         :type: :ref:`data-type-boolean` / :ref:`stdWrap`
 
-        Prints content with :php:`HTMLSpecialChars()` and :html:`<pre></pre>`:
-        Useful for debugging which value :typoscript:`stdWrap` actually ends up with,
-        if you are constructing a website with TypoScript.
+        Prints content with :php:`HTMLSpecialChars()` and :html:`<pre></pre>`.
+        Useful for debugging the resulting value of :typoscript:`stdWrap`.
 
     .. attention::
 
-       Only for debugging during development, otherwise output can break.
+       Only use this for debugging during development, otherwise output can break.
 
 
     ..  _stdwrap-debugFunc:
@@ -1714,13 +1709,13 @@ Properties for debugging data
         :name: stdwrap-debugFunc
         :type: :ref:`data-type-boolean` / :ref:`stdWrap`
 
-        Prints the content directly to browser with the :php:`debug()` function.
+        Prints the content directly to the browser using the :php:`debug()` function.
 
-        Set to value "2" the content will be printed in a table which looks nicer.
+        If set to value "2" the content will be printed in a table (which looks nicer).
 
     ..  attention::
 
-        Only for debugging during development, otherwise output can break.
+        Only use this for debugging during development, otherwise output can break.
 
 
     ..  _stdwrap-debugData:
@@ -1729,19 +1724,19 @@ Properties for debugging data
         :name: stdwrap-debugData
         :type: :ref:`data-type-boolean` / :ref:`stdWrap`
 
-        Prints the current data-array, :php:`$cObj->data`, directly to browser. This
+        Prints the current data-array, :php:`$cObj->data`, directly to the browser. This
         is where :typoscript:`field` gets data from.
 
     ..  attention::
 
-        Only for debugging during development, otherwise output can break.
+        Only use this for debugging during development, otherwise output can break.
 
 .. _stdwrap-examples:
 
 Example
 =======
 
-Example with the property "value" of the content object ":ref:`cobj-text`":
+Content object ":ref:`cobj-text`" containing property "value":
 
 ..  code-block:: typoscript
     :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
@@ -1750,5 +1745,5 @@ Example with the property "value" of the content object ":ref:`cobj-text`":
     10.value = some text
     10.stdWrap.case = upper
 
-Here the content of the object "10" is upper-cased before it is
+Here the content in object "10" is converted into uppercase before it is
 returned.
