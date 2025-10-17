@@ -448,7 +448,7 @@ compressCss
 
             $GLOBALS['TYPO3_CONF_VARS']['FE']['cssCompressHandler'] =
                \TYPO3\CMS\Core\Extension\ExtensionManager::extPath($_EXTKEY) .
-               'Classes/CssCompressHandler.php:Vendor\MyExt\CssCompressHandler->compressCss';
+               'Classes/CssCompressHandler.php:Vendor\MyExtension\CssCompressHandler->compressCss';
 
    Example
          .. code-block:: typoscript
@@ -497,7 +497,7 @@ compressJs
 
             $GLOBALS['TYPO3_CONF_VARS']['FE']['jsCompressHandler'] =
                \TYPO3\CMS\Core\Extension\ExtensionManager::extPath($_EXTKEY) .
-               'Classes/JsCompressHandler.php:Vendor\MyExt\JsCompressHandler->compressJs';
+               'Classes/JsCompressHandler.php:Vendor\MyExtension\JsCompressHandler->compressJs';
 
    Example
          .. code-block:: typoscript
@@ -538,7 +538,7 @@ concatenateCss
 
             $GLOBALS['TYPO3_CONF_VARS']['FE']['cssCompressHandler'] =
                \TYPO3\CMS\Core\Extension\ExtensionManager::extPath($_EXTKEY) .
-               'Classes/CssCompressHandler.php:Vendor\MyExt\CssCompressHandler->compressCss';
+               'Classes/CssCompressHandler.php:Vendor\MyExtension\CssCompressHandler->compressCss';
 
    Example
          .. code-block:: typoscript
@@ -581,7 +581,7 @@ concatenateJs
 
             $GLOBALS['TYPO3_CONF_VARS']['FE']['jsConcatenateHandler'] =
                \TYPO3\CMS\Core\Extension\ExtensionManager::extPath($_EXTKEY) .
-               'Classes/JsConcatenateHandler.php:Vendor\MyExt\JsConcatenateHandler->concatenateJs';
+               'Classes/JsConcatenateHandler.php:Vendor\MyExtension\JsConcatenateHandler->concatenateJs';
 
    Example
          .. code-block:: typoscript

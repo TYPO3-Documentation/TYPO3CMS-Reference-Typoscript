@@ -117,7 +117,7 @@ has to be added. Example:
 .. code-block:: typoscript
    :caption: EXT:site_package/Configuration/TypoScript/constants.typoscript
 
-   # customcategory=mysite=LLL:EXT:myext/locallang.xlf:mysite
+   # customcategory=mysite=LLL:EXT:my_extension/locallang.xlf:mysite
 
 This line defines the new category "mysite" which will be available for any
 constant defined **after** this line. The :typoscript:`LLL:` reference points to the
@@ -196,7 +196,7 @@ using the :typoscript:`customsubcategory` parameter. Example:
 .. code-block:: typoscript
    :caption: EXT:site_package/Configuration/TypoScript/constants.typoscript
 
-   # customsubcategory=cache=LLL:EXT:myext/locallang.xlf:cache
+   # customsubcategory=cache=LLL:EXT:my_extension/locallang.xlf:cache
 
 Usage example:
 

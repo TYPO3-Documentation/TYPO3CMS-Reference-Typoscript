@@ -42,7 +42,7 @@ different each time!
          off. This is done to make matching easier and avoid problems when font
          files might move to other locations in extensions etc.
 
-         So if you use the font file "EXT:myext/fonts/vera.ttf" or
+         So if you use the font file "EXT:my_extension/fonts/vera.ttf" or
          "typo3/sysext/install/Resources/Private/Font/vera.ttf" both of them will
          match with this configuration.
 

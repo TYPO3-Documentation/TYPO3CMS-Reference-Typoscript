@@ -831,7 +831,7 @@ inlineLanguageLabelFiles
             :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
             inlineLanguageLabelFiles {
-                someLabels = EXT:myExt/Resources/Private/Language/locallang.xlf
+                someLabels = EXT:my_extension/Resources/Private/Language/locallang.xlf
                 someLabels.selectionPrefix = idPrefix
                 someLabels.stripFromSelectionName = strip_me
                 someLabels.errorMode = 2

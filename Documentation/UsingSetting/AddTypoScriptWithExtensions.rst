@@ -50,7 +50,7 @@ Make TypoScript available for static includes
 
    call_user_func(function()
    {
-      $extensionKey = 'myextension';
+      $extensionKey = 'my_extension';
 
       /**
        * Default TypoScript
@@ -93,12 +93,12 @@ If this is not the case, use the method described in the previous section
 
    call_user_func(function()
    {
-      $extensionKey = 'myextension';
+      $extensionKey = 'my_extension';
 
       \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTypoScript(
          $extensionKey,
          'setup',
-         "@import 'EXT:myextension/Configuration/TypoScript/setup.typoscript'"
+         "@import 'EXT:my_extension/Configuration/TypoScript/setup.typoscript'"
       );
    });
 
