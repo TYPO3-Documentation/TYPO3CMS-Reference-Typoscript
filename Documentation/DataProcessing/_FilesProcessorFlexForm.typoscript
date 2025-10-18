@@ -2,7 +2,7 @@ page.10.dataProcessing {
     10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
     10 {
         references.table = tt_content
-        references.field = settings.myImage
+        references.fieldName = settings.myImage
         as = myImageFromFlexForm
     }
 }
