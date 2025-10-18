@@ -9,7 +9,11 @@
 web_layout
 ==========
 
-Configuration options of the "Web > Page" module.
+..  versionchanged:: 14.0
+    The main module `Web` has been renamed to `Content`.
+    See `Feature: #107628 - Improved backend module naming and structure <https://docs.typo3.org/permalink/changelog:feature-107628-1729026000>`_
+
+Configuration options of the :guilabel:`Content > Page` module.
 
 ..  contents::
     :local:
