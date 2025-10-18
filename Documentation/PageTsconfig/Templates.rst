@@ -31,7 +31,7 @@ Basic syntax
 The various combinations are best explained by example:
 
 The linkvalidator extension (its composer name is `typo3/cms-linkvalidator`)
-comes with a backend module in the :guilabel:`Web` main section. The page tree
+comes with a backend module in the :guilabel:`Content` main section. The page tree
 is displayed for this module and linkvalidator has two main views and templates:
 
 :file:`Resources/Private/Templates/Backend/Report.html` for the

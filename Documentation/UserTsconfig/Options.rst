@@ -617,7 +617,7 @@ Properties
             effect in the following places:
 
             *   Page tree navigation frame
-            *   :guilabel:`Web > List` module
+            *   :guilabel:`Content > List` module
             *   New record wizard
 
             Example:
@@ -696,7 +696,7 @@ Properties
             ..  versionchanged:: 13.0
                 This setting has been removed.
 
-            In order to replace the :guilabel:`Web > Page` module within a third-party
+            In order to replace the :guilabel:`Content > Page` module within a third-party
             extension, such as TemplaVoila, it is possible to create a custom module entry
             in an extension's :file:`Configuration/Backend/Modules.php` with the following
             entry:
