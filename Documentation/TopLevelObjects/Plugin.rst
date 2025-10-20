@@ -11,7 +11,7 @@ plugin
 This is used for extensions in TYPO3 set up as frontend plugins.
 Typically you can set configuration properties of the plugin here. Say
 you have an extension with the key "myext" and it has a frontend
-plugin named "tx\_myextension\_pi1" then you would find the TypoScript
+plugin named `tx_myextension_pi1` then you would find the TypoScript
 configuration at the position :typoscript:`plugin.pi1` in the object
 tree!
 
