@@ -233,7 +233,7 @@ In this example, the value will substitute the marker in a plugin FlexForm.
     TCEFORM.tx_myextension_table.myfield.PAGE_TSCONFIG_ID = 22
 
 This example might be used for a record in an extension. It refers to a
-table called `table` and the field `myfield`. Here the marker will
+table called `tx_myext_table` and the field `myfield`. Here the marker will
 be substituted by the value `22`.
 
 ..  _tceform-page_tsconfig_idlist:
@@ -262,10 +262,10 @@ In this example, the value will substitute the marker in a plugin FlexForm.
 ..  code-block:: typoscript
     :caption: EXT:site_package/Configuration/page.tsconfig
 
-    TCEFORM.table.myfield.PAGE_TSCONFIG_IDLIST = 20,21,22
+    TCEFORM.tx_myext_table.myfield.PAGE_TSCONFIG_IDLIST = 20,21,22
 
 This example might be used for a record in an extension. It refers to a
-table called `table` and the field `myfield`. Here the marker will
+table called `tx_myext_table` and the field `myfield`. Here the marker will
 be substituted by the list of integers.
 
 
@@ -295,10 +295,10 @@ In this example, the value will substitute the marker in a plugin FlexForm.
 ..  code-block:: typoscript
     :caption: EXT:site_package/Configuration/page.tsconfig
 
-    TCEFORM.table.myfield.PAGE_TSCONFIG_STR = %hello%
+    TCEFORM.tx_myext_table.myfield.PAGE_TSCONFIG_STR = %hello%
 
 This example might be used for a record in an extension. It refers to a
-table called `table` and the field `myfield`. Here the marker will
+table called `tx_myext_table` and the field `myfield`. Here the marker will
 be substituted by the given value.
 
 
@@ -329,10 +329,10 @@ Example: Assign a palette to a field
     :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
     # Assign a palette to a specific field
-    TCEFORM.table.myfield.colorPalette = messages
+    TCEFORM.tx_myext_table.myfield.colorPalette = messages
 
     # Assign a palette to all color pickers used in a table
-    TCEFORM.table.colorPalette = key_colors
+    TCEFORM.tx_myext_table.colorPalette = key_colors
 
     # Assign global palette
     TCEFORM.colorPalette = main
