@@ -11,8 +11,8 @@ plugin
 This is used for extensions in TYPO3 set up as frontend plugins.
 Typically you can set configuration properties of the plugin here. Say
 you have an extension with the key "myext" and it has a frontend
-plugin named `tx_myextension_pi1` then you would find the TypoScript
-configuration at the position :typoscript:`plugin.pi1` in the object
+plugin named "tx\_myext\_pi1" then you would find the TypoScript
+configuration at the position :typoscript:`plugin.tx_myext_pi1` in the object
 tree!
 
 Most plugins are :ref:`cobj-user` objects
@@ -522,4 +522,4 @@ Demonstrates:
 ..  code-block:: typoscript
     :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-    plugin.pi1._LOCAL_LANG.de.list_mode_1 = Der erste Modus
+    plugin.tx_myext_pi1._LOCAL_LANG.de.list_mode_1 = Der erste Modus
