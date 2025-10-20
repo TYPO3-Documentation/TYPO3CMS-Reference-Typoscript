@@ -230,7 +230,7 @@ In this example, the value will substitute the marker in a plugin FlexForm.
 ..  code-block:: typoscript
     :caption: EXT:site_package/Configuration/page.tsconfig
 
-    TCEFORM.table.myfield.PAGE_TSCONFIG_ID = 22
+    TCEFORM.tx_myextension_table.myfield.PAGE_TSCONFIG_ID = 22
 
 This example might be used for a record in an extension. It refers to a
 table called `table` and the field `myfield`. Here the marker will
