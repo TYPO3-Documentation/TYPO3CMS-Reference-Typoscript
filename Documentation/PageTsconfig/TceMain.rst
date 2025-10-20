@@ -542,7 +542,7 @@ preview
                previewPageId = 123
                useDefaultLanguageRecord = 0
                fieldToParameterMap {
-                   uid = pi1[showUid]
+                   uid = tx_myextension_pi1[showUid]
                }
                additionalGetParameters {
                    pi1.special = HELLO # results in pi1[special]
