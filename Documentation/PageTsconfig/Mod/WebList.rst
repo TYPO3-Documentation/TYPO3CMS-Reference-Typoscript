@@ -9,7 +9,11 @@
 web_list
 ========
 
-Configuration options of the "Web > List" module.
+..  versionchanged:: 14.0
+    The main module `Web` has been renamed to `Content`.
+    See `Feature: #107628 - Improved backend module naming and structure <https://docs.typo3.org/permalink/changelog:feature-107628-1729026000>`_
+
+Configuration options of the :guilabel:`Content > List` module.
 
 ..  contents::
     :local:
@@ -213,7 +217,7 @@ displayRecordDownload
     :type: boolean
     :Default: `1`
 
-    The "Download" functionality is available in the :guilabel:`Web > List`
+    The "Download" functionality is available in the :guilabel:`Content > List`
     module via the "Download" button in the relevant
     table header row. It is available in both the list and the single table
     view and can be managed using this option.
@@ -263,7 +267,7 @@ downloadPresets
         to be exported from a list of configurable presets.
 
     This property adds presets of preselected fields to the download area in
-    the :guilabel:`Web > List` backend module.
+    the :guilabel:`Content > List` backend module.
 
     Those presets can be configured via page TSconfig, and can also be
     overridden via user TSconfig (for example, to expand certain presets
@@ -568,9 +572,9 @@ noExportRecordsLinks
         :guilabel:`Download` button used for CSV export.
 
     If set, the :guilabel:`Download` button is hidden
-    in the :guilabel:`Web > List` module.
+    in the :guilabel:`Content > List` module.
 
-    This option is for example important to disable batch
+    This option is important, for example, to disable batch
     download of sensitive data via t3d exports.
 
     ..  include:: /Images/AutomaticScreenshots/WebList/WithExportButtons.rst.txt
@@ -741,7 +745,7 @@ searchLevel.default
     This option allows to define one of the available level options
     as the default level to use.
 
-    When searching for records in the :guilabel:`Web > List` module as well as
+    When searching for records in the :guilabel:`Content > List` module as well as
     the database browser, it is possible to select the search levels (page tree
     levels to respect in the search).
 

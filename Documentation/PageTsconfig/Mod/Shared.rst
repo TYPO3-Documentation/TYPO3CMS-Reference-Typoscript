@@ -72,7 +72,8 @@ defaultLanguageFlag
     :name: mod-share-defaultLanguageFlag
     :type: string
 
-    Country flag shown for the "Default" language in the backend, used in Web > List and Web > Page module.
+    Country flag shown for the "Default" language in the backend, used in
+    :guilabel:`Content > List` and :guilabel:`Content > Page` module.
     Values as listed in the "Select flag icon" of a language record in the backend are allowed, including
     the value "multiple".
 
@@ -114,7 +115,7 @@ defaultLanguageLabel
 
     Alternate label for "Default" when language labels are shown in the interface.
 
-    Used in Web > List and Web > Page module.
+    Used in :guilabel:`Content > List` and :guilabel:`Content > Page` module.
 
 ..  index::
     disableLanguages
