@@ -574,7 +574,7 @@ noExportRecordsLinks
     If set, the :guilabel:`Download` button is hidden
     in the :guilabel:`Content > List` module.
 
-    This option is for example important to disable batch
+    This option is important, for example, to disable batch
     download of sensitive data via t3d exports.
 
     ..  include:: /Images/AutomaticScreenshots/WebList/WithExportButtons.rst.txt
