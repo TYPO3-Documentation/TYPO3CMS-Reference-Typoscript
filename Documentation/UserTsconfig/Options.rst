@@ -262,7 +262,7 @@ Properties
         values are therefore `list` and `tiles`, e.g.:
 
         The listing of resources in the TYPO3 Backend, e.g. in the
-        :guilabel:`File > Filelist` module or the `FileBrowser` can be changed
+        :guilabel:`Media > Filelist` module or the `FileBrowser` can be changed
         between `list` and `tiles`. TYPO3 serves by default `tiles`, if the user
         has not already made a choice.
 

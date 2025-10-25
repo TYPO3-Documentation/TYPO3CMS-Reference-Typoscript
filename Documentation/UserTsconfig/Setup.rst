@@ -159,7 +159,8 @@ Properties
         :name: user-setup-showHiddenFilesAndFolders
         :type: boolean
 
-        If set, hidden files and folders will be shown in the filelist.
+        If set, hidden files and folders will be shown in the
+        :guilabel:`Media > Filelist`.
 
     ..  _user-setup-startModule:
 
