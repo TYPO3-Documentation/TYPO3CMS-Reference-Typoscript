@@ -173,8 +173,8 @@ These can be :ref:`selected in the page properties <include-static-page-tsconfig
     :language: php
     :caption: EXT:my_sitepackage/Configuration/TCA/Overrides/pages.php
 
-It is not possible to use language strings :php:`LLL:...` for the third
-parameter as the extension name will be automatically appended.
+It is not possible to use label reference <https://docs.typo3.org/permalink/t3coreapi:label-reference>`_
+for the third parameter as the extension name will be automatically appended.
 
 If you need to localize these labels, modify the TCA directly instead of using
 the API function:

@@ -83,7 +83,7 @@ addItems
 
 ..  confval:: addItems
     :name: tceform-addItems
-    :type: localized string
+    :type: plain text label or `label reference <https://docs.typo3.org/permalink/t3coreapi:label-reference>`_
 
     Change the list of items in :ref:`TCA type=select <t3tca:columns-select>` fields. Using this property,
     items can be added to the list. Note that the added elements might be removed if the selector represents
@@ -142,7 +142,7 @@ altLabels
 
 ..  confval:: altLabels
     :name: tceform-altLabels
-    :type: localized string
+    :type: plain text label or `label reference <https://docs.typo3.org/permalink/t3coreapi:label-reference>`_
 
     This property applies to :ref:`TCA type=select <t3tca:columns-select>`,
     :ref:`TCA type=check <t3tca:columns-check>` and :ref:`TCA type=radio <t3tca:columns-radio>`.
@@ -741,9 +741,10 @@ label
 
 ..  confval:: label
     :name: tceform-label
-    :type: localized string
+    :type: plain text label or `label reference <https://docs.typo3.org/permalink/t3coreapi:label-reference>`_
 
-    This allows you to enter alternative labels for any field. The value can be a `LLL:` reference
+    This allows you to enter alternative labels for any field. The value can be
+    a plain text label or `label reference <https://docs.typo3.org/permalink/t3coreapi:label-reference>`_
     to a localization file, the system will then look up the selected backend user language and tries
     to fetch the localized string if available. However, it is also possible to override these by
     appending the language key and hard setting a value, for example `label.de = Neuer Feldname`.
@@ -786,7 +787,7 @@ noMatchingValue_label
 
 ..  confval:: noMatchingValue_label
     :name: tceform-noMatchingValue_label
-    :type: localized string
+    :type: plain text label or `label reference <https://docs.typo3.org/permalink/t3coreapi:label-reference>`_
 
     This property applies only to items in :ref:`TCA type=select <t3tca:columns-select>` fields, it allows defining
     a different label of the :ref:`noMatchingValue <pageFormEngineDisableNoMatchingElement>` element.
@@ -877,7 +878,7 @@ sheetDescription
 
 ..  confval:: sheetDescription
     :name: tceform-sheetDescription
-    :type: localized string
+    :type: plain text label or `label reference <https://docs.typo3.org/permalink/t3coreapi:label-reference>`_
 
     Specifies a description for the sheet shown in the FlexForm.
 
@@ -897,7 +898,7 @@ sheetShortDescr
 
 ..  confval:: sheetShortDescr
     :name: tceform-sheetShortDescr
-    :type: localized string
+    :type: plain text label or `label reference <https://docs.typo3.org/permalink/t3coreapi:label-reference>`_
 
     Specifies a short description of the sheet used as link title in the tab-menu.
 
@@ -916,7 +917,7 @@ sheetTitle
 
 ..  confval:: sheetTitle
     :name: tceform-sheetTitle
-    :type: localized string
+    :type: plain text label or `label reference <https://docs.typo3.org/permalink/t3coreapi:label-reference>`_
 
     Set the title of the sheet / tab in a FlexForm configuration.
 
