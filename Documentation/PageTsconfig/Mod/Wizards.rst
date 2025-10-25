@@ -73,7 +73,7 @@ newContentElement.wizardItems
 
         ..  confval:: [group].header
             :name: mod-wizards-newContentElement-wizardItems-group-header
-            :type: string | localized string
+            :type: plain text label or `label reference <https://docs.typo3.org/permalink/t3coreapi:label-reference>`_
             :Path: mod.wizards.newContentElement.wizardItems.[group].header
 
             Name of the group.
@@ -128,14 +128,14 @@ newContentElement.wizardItems
 
                 ..  confval:: title
                     :name: mod-wizards-newContentElement-wizardItems-group-elements-name-title
-                    :type: string | localized string
+                    :type: plain text label or `label reference <https://docs.typo3.org/permalink/t3coreapi:label-reference>`_
                     :Path: mod.wizards.newContentElement.wizardItems.[group].elements.[name].title
 
                     Name of the item.
 
                 ..  confval:: description
                     :name: mod-wizards-newContentElement-wizardItems-group-elements-name-description
-                    :type: string | localized string
+                    :type: plain text label or `label reference <https://docs.typo3.org/permalink/t3coreapi:label-reference>`_
                     :Path: mod.wizards.newContentElement.wizardItems.[group].elements.[name].description
 
                     Description text for the item.
