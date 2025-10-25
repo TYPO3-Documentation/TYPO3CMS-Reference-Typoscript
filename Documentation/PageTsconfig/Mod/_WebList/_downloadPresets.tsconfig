@@ -7,7 +7,7 @@ mod.web_list.downloadPresets {
 
         fullExport {
             identifier = uid-title
-            label = LLL:EXT:my_extension/Resources/Private/Language/locallang.xlf:preset2.label
+            label = LLL:my_extension.messages:preset2.label
             columns = uid, title
         }
     }

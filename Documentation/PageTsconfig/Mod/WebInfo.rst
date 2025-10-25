@@ -55,17 +55,17 @@ Example: Override the field definitions in the info module
     mod.web_info.fieldDefinitions {
         0 {
             # Basic settings
-            label = LLL:EXT:info/Resources/Private/Language/locallang_webinfo.xlf:pages_0
+            label = LLL:info.webinfo:pages_0
             fields = title,uid,slug,alias,starttime,endtime,fe_group,target,url,shortcut,shortcut_mode
         }
         1 {
             # Record overview
-            label = LLL:EXT:info/Resources/Private/Language/locallang_webinfo.xlf:pages_1
+            label = LLL:info.webinfo:pages_1
             fields = title,uid,###ALL_TABLES###
         }
         2 {
             # Cache and age
-            label = LLL:EXT:info/Resources/Private/Language/locallang_webinfo.xlf:pages_2
+            label = LLL:info.webinfo:pages_2
             fields = title,uid,table_tt_content,table_fe_users
         }
     }

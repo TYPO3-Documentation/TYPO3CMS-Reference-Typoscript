@@ -260,7 +260,7 @@ frontend you need to define the same key in the TypoScript setup
 
     TCEMAIN.linkHandler.my_content {
         handler = TYPO3\CMS\Backend\LinkHandler\RecordLinkHandler
-        label = LLL:EXT:my_extension/Resources/Private/Language/locallang.xlf:link.customTab
+        label = LLL:my_extension.messages:link.customTab
         configuration {
             table = tx_myextension_content
         }
