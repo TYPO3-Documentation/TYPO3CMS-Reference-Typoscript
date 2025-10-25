@@ -768,7 +768,7 @@ file.identifier
     ..  attention::
         :typoscript:`file` cannot resolve links to files in extensions.
         The files must lie in a storage and be accessible via the backend module
-        :guilabel:`File > Filelist`.
+        :guilabel:`Media > Filelist`.
 
 
 ..  index:: Link handler; folder
