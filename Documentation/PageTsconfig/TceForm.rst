@@ -126,8 +126,8 @@ Example: Add header layout option
         # Add another header_layout option:
         addItems.1525215969 = Another header layout
         # Add another one with localized label, icon and group
-        addItems.1525216023 = LLL:EXT:my_ext/Resources/Private/Language/locallang.xlf:header_layout
-        addItems.1525216023.icon = EXT:my_ext/icon.png
+        addItems.1525216023 = LLL:my_extension.messages:header_layout
+        addItems.1525216023.icon = EXT:my_extension/Resources/Public/Icons/icon.png
         addItems.1525216023.group = special
     }
 
@@ -177,7 +177,7 @@ Example: Override labels for document types
         altLabels.1 = STANDARD Page Type
         altLabels.254 = Folder (for various elements)
         # Sets the default label for Recycler via "locallang":
-        altLabels.255 = LLL:EXT:my_ext/Resources/Private/Language/locallang_tca.xlf:recycler
+        altLabels.255 = LLL:my_extension.tca:recycler
     }
 
 ..  figure:: /Images/ManualScreenshots/List/PagesDoktypeDifferentLabels.png
@@ -503,7 +503,7 @@ description
     ..  code-block:: typoscript
         :caption: EXT:site_package/Configuration/page.tsconfig
 
-        TCEFORM.tt_content.header.description = LLL:EXT:my_ext/Resources/Private/Language/locallang.xlf:override_description
+        TCEFORM.tt_content.header.description = LLL:my_extension.messages:override_description
 
 ..  index::
     Records; field disabled
@@ -772,7 +772,7 @@ Example: Override the label of a field
     :caption: EXT:site_package/Configuration/page.tsconfig
 
     TCEFORM.pages.title {
-        label = LLL:EXT:my_ext/Resources/Private/Language/locallang.xlf:table.column
+        label = LLL:my_extension.messages:table.column
         label.default = New Label
         label.de = Neuer Feldname
     }
@@ -937,7 +937,7 @@ Example: Rename the first tab of the FlexForm plugin
 
     TCEFORM.tt_content.pi_flexform.myext_pi1.sDEF {
         # Rename the first tab of the FlexForm plug-in configuration
-        sheetTitle = LLL:my_ext/Resource/Private/Language/locallang.xlf:tt_content.pi_flexform.myext_pi1.sDEF
+        sheetTitle = LLL:my_extension.messages:tt_content.pi_flexform.myext_pi1.sDEF
     }
 
 ..  index::

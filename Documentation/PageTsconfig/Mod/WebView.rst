@@ -55,7 +55,7 @@ loaded from an xlf file and the category 'desktop'.
     :caption: EXT:site_package/Configuration/page.tsconfig
 
     mod.web_view.previewFrameWidths {
-        1024.label = LLL:EXT:viewpage/Resources/Private/Language/locallang.xlf:computer
+        1024.label = LLL:viewpage.messages:computer
         1024.type = desktop
         1024.width = 1024
         1024.height = 768

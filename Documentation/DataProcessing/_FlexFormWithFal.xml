@@ -1,5 +1,5 @@
 <my_flex_form_group.my_flex_form_field>
-    <label>LLL:EXT:sitepackage/Resources/Private/Language/locallang_be.xlf:my_flex_form_field</label>
+    <label>LLL:my_sitepackage.backend:my_flex_form_field</label>
     <config>
         <type>file</type>
         <maxitems>9</maxitems>
@@ -14,12 +14,12 @@
         <foreign_types type="array">
             <numIndex index="0">
                 <showitem>
-                    --palette--;LLL:EXT:lang/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette,--palette--;;filePalette
+                    --palette--;LLL:core.tca:sys_file_reference.imageoverlayPalette;imageoverlayPalette,--palette--;;filePalette
                 </showitem>
             </numIndex>
             <numIndex index="1">
                 <showitem>
-                    --palette--;LLL:EXT:lang/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette,--palette--;;filePalette
+                    --palette--;LLL:core.tca:sys_file_reference.imageoverlayPalette;imageoverlayPalette,--palette--;;filePalette
                 </showitem>
             </numIndex>
         </foreign_types>
@@ -37,7 +37,7 @@
                 <localize>1</localize>
             </enabledControls>
             <createNewRelationLinkTitle>
-                LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:images.addFileReference
+                LLL:frontend.ttc:images.addFileReference
             </createNewRelationLinkTitle>
         </appearance>
         <behaviour>
@@ -48,7 +48,7 @@
             <types type="array">
                 <numIndex index="2">
                     <showitem>
-                        --palette--;LLL:EXT:lang/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette,--palette--;;filePalette
+                        --palette--;LLL:core.tca:sys_file_reference.imageoverlayPalette;imageoverlayPalette,--palette--;;filePalette
                     </showitem>
                 </numIndex>
             </types>

@@ -719,12 +719,12 @@ searchLevel.items
         :caption: EXT:site_package/Configuration/page.tsconfig
 
         mod.web_list.searchLevel.items {
-            -1 = EXT:core/Resources/Private/Language/locallang_core.xlf:labels.searchLevel.infinite
-            0 = EXT:core/Resources/Private/Language/locallang_core.xlf:labels.searchLevel.0
-            1 = EXT:core/Resources/Private/Language/locallang_core.xlf:labels.searchLevel.1
-            2 = EXT:core/Resources/Private/Language/locallang_core.xlf:labels.searchLevel.2
-            3 = EXT:core/Resources/Private/Language/locallang_core.xlf:labels.searchLevel.3
-            4 = EXT:core/Resources/Private/Language/locallang_core.xlf:labels.searchLevel.4
+            -1 = LLL:core.core:labels.searchLevel.infinite
+            0 = LLL:core.core:labels.searchLevel.0
+            1 = LLL:core.core:labels.searchLevel.1
+            2 = LLL:core.core:labels.searchLevel.2
+            3 = LLL:core.core:labels.searchLevel.3
+            4 = LLL:core.core:labels.searchLevel.4
         }
 
 ..  index::
