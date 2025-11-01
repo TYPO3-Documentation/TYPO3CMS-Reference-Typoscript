@@ -218,6 +218,53 @@ linkHandler
 
     Contains an array of link handler configurations.
 
+    ..  versionadded:: 14.0
+        Preconfiguring default link target and class attributes via keys
+        `target` and `cssClass` has been introduced.
+
+    The `linkHandler` array can be used to predefine a link targets and class
+    attributes for all or some link types.
+
+    :typoscript:`target.default`
+        Default link target, can be overridden in the link wizard.
+
+    :typoscript:`cssClass.default`
+        Default css class for a link of this type, can be overridden in the
+    link wizard.
+
+    Global configuration (applies to all link types):
+
+    ..  code-block:: typoscript
+        :caption: EXT:my_extension/Configuration/page.tsconfig
+
+        TCEMAIN.linkHandler.properties.target.default = _self
+        TCEMAIN.linkHandler.properties.cssClass.default = my-link-class
+
+    You can also define specific default values for different link types:
+
+    ..  code-block:: typoscript
+        :caption: EXT:my_extension/Configuration/page.tsconfig
+
+        TCEMAIN.linkHandler.url.target.default = _blank
+        TCEMAIN.linkHandler.page.target.default = _self
+        TCEMAIN.linkHandler.file.cssClass.default = file-link
+
+    ..  hint::
+
+        The default `target` attributes of links added via the RTE are configured
+        in `buttons.link.properties.target.default  <https://docs.typo3.org/permalink/t3tsref:confval-rte-buttons-link-properties-target-default>`_.
+
+    The following link handlers are defined by default:
+
+    -   page (for page links)
+    -   file (for file links)
+    -   folder (for folder links)
+    -   url (for external URL links)
+    -   telephone (for telephone number css class)
+    -   email (for email css class)
+
+    You add additional link handlers for custom purposes:
+
     ..  attention::
         The keys in this array
         uniquely identify the type of link and are used in the TYPO3 link format,
