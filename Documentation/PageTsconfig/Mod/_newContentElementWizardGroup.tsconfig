@@ -1,6 +1,6 @@
 # Create a new group and add a (pre-filled) element to it
 mod.wizards.newContentElement.wizardItems.myGroup {
-    header = LLL:EXT:cms/layout/locallang.xlf:advancedFunctions
+    header = LLL:my_extension.backend:advancedFunctions
     elements.customText {
         iconIdentifier = content-text
         title = Introductory text for national startpage

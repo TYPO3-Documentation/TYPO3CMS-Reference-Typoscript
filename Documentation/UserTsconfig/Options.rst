@@ -103,7 +103,7 @@ Properties
             :caption: EXT:site_package/Configuration/user.tsconfig
 
             bookmarkGroups {
-              2 = LLL:EXT:sitepackage/Resources/Private/Language/locallang_be.xlf:bookmarkGroups.2
+              2 = LLL:my_sitepackage.backend:bookmarkGroups.2
             }
 
     ..  _useroptions-clearCache:
