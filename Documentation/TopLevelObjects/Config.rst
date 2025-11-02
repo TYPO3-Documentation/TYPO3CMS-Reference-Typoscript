@@ -196,18 +196,25 @@ Properties of 'config'
         :Default: `0`
         :Example: :ref:`setup-config-compresscss`
 
-        If set, CSS files referenced in :typoscript:`page.includeCSS`, etc,  will be
-        minified and compressed. It has no effect on files which are referenced
-        in :typoscript:`page.headerData`.
+        If enabled, CSS files referenced in :typoscript:`page.includeCSS` and similar
+        properties are pre-compressed to reduce file size.
+        This setting has no effect on files included via :typoscript:`page.headerData`.
 
-        Minification will remove excess space. A higher level of compression
-        (using gzip) requires
-        :php:`$GLOBALS['TYPO3_CONF_VARS']['FE']['compressionLevel']` to be enabled in the
-        Install Tool. For it to work you also need to activate gzip-
-        related compressionLevel options in :file:`.htaccess`, otherwise the
-        compressed files will not be readable by the user agent.
+        Compression is applied if
+        :php:`$GLOBALS['TYPO3_CONF_VARS']['FE']['compressionLevel']`
+        is set to a non-zero value in the Install Tool.
 
-        ..  include:: _includes/_concat-compress.rst.txt
+        To serve compressed files correctly, ensure gzip-related
+        :file:`.htaccess` settings are enabled; otherwise, browsers may not be able
+        to read the compressed output.
+
+        ..  versionchanged:: 14.0
+
+            CSS **minification** has been removed. Only **compression** is supported.
+
+            See also:
+            `Breaking: #107944 – Removal of JavaScript and CSS minification
+            <https://docs.typo3.org/permalink/changelog:breaking-107944-1761867359>`_
 
         TYPO3 comes with a built-in compression handler, but you can
         also register your own using
@@ -218,6 +225,8 @@ Properties of 'config'
             $GLOBALS['TYPO3_CONF_VARS']['FE']['cssCompressHandler'] =
                \TYPO3\CMS\Core\Extension\ExtensionManager::extPath('my_extension') .
                'Classes/CssCompressHandler.php:MyVendor\MyExtensionen\CssCompressHandler->compressCss';
+
+        ..  include:: _includes/_concat-compress.rst.txt
 
     ..  confval:: compressJs
         :name: config-compressJs
