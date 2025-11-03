@@ -222,15 +222,15 @@ linkHandler
         Preconfiguring default link target and class attributes via keys
         `target` and `cssClass` has been introduced.
 
-    The `linkHandler` array can be used to predefine a link targets and class
-    attributes for all or some link types.
+    The `linkHandler` array can be used to predefine link targets and class
+    attributes for link types.
 
     :typoscript:`target.default`
         Default link target, can be overridden in the link wizard.
 
     :typoscript:`cssClass.default`
         Default css class for a link of this type, can be overridden in the
-    link wizard.
+        link wizard.
 
     Global configuration (applies to all link types):
 
@@ -240,7 +240,7 @@ linkHandler
         TCEMAIN.linkHandler.properties.target.default = _self
         TCEMAIN.linkHandler.properties.cssClass.default = my-link-class
 
-    You can also define specific default values for different link types:
+    You can define default values for specific link types:
 
     ..  code-block:: typoscript
         :caption: EXT:my_extension/Configuration/page.tsconfig
@@ -260,16 +260,17 @@ linkHandler
     -   file (for file links)
     -   folder (for folder links)
     -   url (for external URL links)
-    -   telephone (for telephone number css class)
-    -   email (for email css class)
+    -   telephone (for telephone number css classes)
+    -   email (for email css classes)
 
     You add additional link handlers for custom purposes:
 
     ..  attention::
-        The keys in this array
-        uniquely identify the type of link and are used in the TYPO3 link format,
-        for example `t3://record?identifier=my_content&uid=123`. Therefore the key
-        must never be changed or all existing links in the content will stop working.
+        The keys in this array uniquely identify the type of link and are used
+        in the TYPO3 link format,
+        for example `t3://record?identifier=my_content&uid=123`. The keys
+        must never be changed because links containing the key in the content will stop
+        working.
 
     :typoscript:`handler`
         Fully qualified name of the class containing the backend link handler.
