@@ -196,16 +196,16 @@ Properties of 'config'
         :Default: `0`
         :Example: :ref:`setup-config-compresscss`
 
-        If enabled, CSS files referenced in :typoscript:`page.includeCSS` and similar
-        properties are pre-compressed to reduce file size.
+        If enabled, CSS files referenced in :typoscript:`page.includeCSS` (and similar
+        properties) are pre-compressed to reduce file size.
         This setting has no effect on files included via :typoscript:`page.headerData`.
 
         Compression is applied if
         :php:`$GLOBALS['TYPO3_CONF_VARS']['FE']['compressionLevel']`
-        is set to a non-zero value in the Install Tool.
+        is set to a non-zero value (in the Install Tool).
 
         To serve compressed files correctly, ensure gzip-related
-        :file:`.htaccess` settings are enabled; otherwise, browsers may not be able
+        :file:`.htaccess` settings are enabled, otherwise browsers may not be able
         to read the compressed output.
 
         ..  versionchanged:: 14.0
