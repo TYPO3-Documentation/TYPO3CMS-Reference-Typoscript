@@ -777,8 +777,23 @@ path
 ..  confval:: path
     :name: data-path
 
+    ..  versionchanged:: 14.0
+        :typoscript:`path` returns an absolute URL (prepended with
+        `config.absRefPrefix  <https://docs.typo3.org/permalink/t3tsref:confval-config-absrefprefix>`_).
+
     Path to a file, for example, that is in an extension. Returns an empty value if the file
     does not exist.
+
+    ..  code-block:: typoscript
+        :caption: EXT:my_extension/Configuration/TypoScript/setup.typoscript
+        :emphasize-lines: 3
+
+        page.20 = TEXT
+        page.20 {
+            data = path : EXT:core/Resources/Public/Icons/Extension.svg
+        }
+        # Returns /typo3/sysext/core/Resources/Public/Icons/Extension.svg
+
 
 ..  _data-type-gettext-path-example:
 
