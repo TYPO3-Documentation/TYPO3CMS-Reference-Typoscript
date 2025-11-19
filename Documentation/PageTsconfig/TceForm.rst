@@ -197,6 +197,15 @@ Example: Override labels for document types
 
 Note the *double dot* after `altLabels`.
 
+.. Attention::
+
+    Due to a known bug from **TYPO3 v12+**, overriding the label of the empty select item via Page TSconfig (altLabels..) currently has no effect.
+    Track the issue here: `#100775 <https://forge.typo3.org/issues/100775>`__.
+
+    Workaround:
+
+    * Adjust the label via a `TCA Overrides <https://docs.typo3.org/permalink/t3coreapi:extension-configuration-tca-overrides>`_ (for example by modifying the items array or using `columnsOverrides/itemsProcFunc <https://docs.typo3.org/permalink/t3tca:tca-property-itemsprocfunc>`__).
+
 ..  _tceform-page_tsconfig_id:
 
 PAGE_TSCONFIG_ID
