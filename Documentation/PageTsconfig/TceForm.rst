@@ -1236,14 +1236,14 @@ suggest.searchCondition
 Example: Only search on pages with doktype=1
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-    ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/page.tsconfig
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/page.tsconfig
 
-        TCEFORM.pages.storage_pid.suggest.default {
-            # Configure the suggest wizard for the field "storage_pid" in table "pages"
-            # to search only for pages with doktype=1
-            searchCondition = doktype=1
-        }
+    TCEFORM.pages.storage_pid.suggest.default {
+        # Configure the suggest wizard for the field "storage_pid" in table "pages"
+        # to search only for pages with doktype=1
+        searchCondition = doktype=1
+    }
 
 ..  index::
     Suggest wizard; Search whole phrase
