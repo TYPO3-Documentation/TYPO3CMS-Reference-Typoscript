@@ -3,4 +3,4 @@
 .. figure:: /Images/AutomaticScreenshots/WebList/NoExportButtons.png
    :class: with-shadow
 
-   The list module without export buttons after activating the single-table mode
+   The :guilabel:`Content > Records` module without export buttons after activating the single-table mode

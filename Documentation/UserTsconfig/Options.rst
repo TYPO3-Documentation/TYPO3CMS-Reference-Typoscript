@@ -219,7 +219,7 @@ Properties
         ..  code-block:: typoscript
             :caption: EXT:site_package/Configuration/user.tsconfig
 
-            # Remove "New" and "Create New wizard" for pages context menu (list module)
+            # Remove "New" and "Create New wizard" for pages context menu (Content Records module)
             options.contextMenu.table.pages.disableItems = new,newWizard
 
             # Remove "New" and "Create New wizard" in page tree context menu
@@ -262,7 +262,7 @@ Properties
         values are therefore `list` and `tiles`, e.g.:
 
         The listing of resources in the TYPO3 Backend, e.g. in the
-        :guilabel:`Media > Filelist` module or the `FileBrowser` can be changed
+        :guilabel:`Media` module or the `FileBrowser` can be changed
         between `list` and `tiles`. TYPO3 serves by default `tiles`, if the user
         has not already made a choice.
 
@@ -399,7 +399,7 @@ Properties
             :Default: selectable
 
             Determines whether the checkbox :guilabel:`Display thumbnails` in the
-            file list module is shown or hidden. If it is hidden, you can predefine it
+            :guilabel:`Media` module is shown or hidden. If it is hidden, you can predefine it
             to be always activated or always deactivated.
 
             The following values are possible:
@@ -617,7 +617,7 @@ Properties
             effect in the following places:
 
             *   Page tree navigation frame
-            *   :guilabel:`Content > List` module
+            *   :guilabel:`Content > Records` module
             *   New record wizard
 
             Example:
@@ -696,7 +696,7 @@ Properties
             ..  versionchanged:: 13.0
                 This setting has been removed.
 
-            In order to replace the :guilabel:`Content > Page` module within a third-party
+            In order to replace the :guilabel:`Content > Layout` module within a third-party
             extension, such as TemplaVoila, it is possible to create a custom module entry
             in an extension's :file:`Configuration/Backend/Modules.php` with the following
             entry:
@@ -1020,7 +1020,7 @@ Properties
 
             options.sites.hideSets := addToList(typo3/fluid-styled-content)
 
-        The :guilabel:`Site Management > Sites` GUI will not show hidden sets,
+        The :guilabel:`Sites > Setup` GUI will not show hidden sets,
         but makes one exception if a hidden set has already been applied to a site
 
         In this case a set

@@ -14,7 +14,7 @@ content element.
 Although it may seem daunting, it is very instructive to review all this code,
 as there is much to learn by example. To view the raw code, place yourself on
 the root page of your website and move to the
-:guilabel:`Site Management > TypoScript` module. Then
+:guilabel:`Sites > TypoScript` module. Then
 choose the submodule :guilabel:`Included TypoScript` from the drop-down.
 
 You should see a list of all used TypoScript records and files and how they possibly
@@ -22,7 +22,7 @@ include one another. All TypoScript is evaluated by TYPO3 CMS from top to
 bottom.
 
 ..  figure:: /Images/ManualScreenshots/IncludedTypoScript.png
-    :alt: Screenshot of the module Site Management > TypoScript > Included TypoScript
+    :alt: Screenshot of the module Sites > TypoScript > Included TypoScript
 
     Click on the :guilabel:`{ }`,  "show code", button to see the code
 

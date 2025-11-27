@@ -13,7 +13,7 @@ web_list
     The main module `Web` has been renamed to `Content`.
     See `Feature: #107628 - Improved backend module naming and structure <https://docs.typo3.org/permalink/changelog:feature-107628-1729026000>`_
 
-Configuration options of the :guilabel:`Content > List` module.
+Configuration options of the :guilabel:`Content > Records` module.
 
 ..  contents::
     :local:
@@ -98,7 +98,7 @@ csvDelimiter
 
     Defines the default delimiter for CSV downloads (Microsoft Excel expects
     `;` to be set). The value set will be displayed as default delimiter in the
-    download dialog in the list module.
+    download dialog in the :guilabel:`Content > Records` module.
 
 Example: Use semicolon as delimiter CSV downloads
 -------------------------------------------------
@@ -122,7 +122,8 @@ csvQuote
     :Default: `"`
 
     Defines the default quoting character for CSV downloads. The value set will
-    be displayed as default quoting in the download dialog in the list module.
+    be displayed as default quoting in the download dialog in the
+    :guilabel:`Content > Records` module.
 
 ..  _pageTsConfigWebList-csvQuote-example:
 
@@ -173,7 +174,7 @@ disableSearchBox
     :name: mod-web-list-disableSearchBox
     :type: boolean
 
-    If set, the checkbox "Show search" in the list module is hidden.
+    If set, the checkbox "Show search" in the :guilabel:`Content > Records` module is hidden.
 
 
 ..  index:: disableSingleTableView
@@ -217,7 +218,7 @@ displayRecordDownload
     :type: boolean
     :Default: `1`
 
-    The "Download" functionality is available in the :guilabel:`Content > List`
+    The "Download" functionality is available in the :guilabel:`Content > Records`
     module via the "Download" button in the relevant
     table header row. It is available in both the list and the single table
     view and can be managed using this option.
@@ -232,7 +233,7 @@ displayRecordDownload
 
         # Page TSconfig
         mod.web_list {
-            # Disable "Export" button in List module header
+            # Disable "Export" button in Content Records module header
             noExportRecordsLinks = 1
 
             # Generally disable "Download" button
@@ -267,7 +268,7 @@ downloadPresets
         to be exported from a list of configurable presets.
 
     This property adds presets of preselected fields to the download area in
-    the :guilabel:`Content > List` backend module.
+    the :guilabel:`Content > Records` backend module.
 
     Those presets can be configured via page TSconfig, and can also be
     overridden via user TSconfig (for example, to expand certain presets
@@ -322,7 +323,8 @@ enableClipBoard
     :type: list of keywords
     :Default: `selectable`
 
-    Determines whether the checkbox "Show clipboard" in the list module is
+    Determines whether the checkbox "Show clipboard" in the
+    :guilabel:`Content > Records` module is
     shown or hidden. If it is hidden, you can predefine it to be always
     activated or always deactivated.
 
@@ -339,7 +341,7 @@ enableClipBoard
 
 ..  index::
     enableDisplayBigControlPanel
-    List module; Extended view
+    Content Records module; Extended view
 ..  _pageTsConfigWebList-enableDisplayBigControlPanel:
 
 enableDisplayBigControlPanel
@@ -352,7 +354,7 @@ enableDisplayBigControlPanel
 
 ..  index::
     hideTables
-    List module; Hide tables
+    Content Records module; Hide tables
 ..  _pageTsConfigWebList-hideTables:
 
 hideTables
@@ -369,8 +371,8 @@ hideTables
 
 ..  index::
     hideTranslations
-    List module; Hide translations
-    Localization; Hide translations in List module
+    Content Records module; Hide translations
+    Localization; Hide translations in Content Records module
 ..  _pageTsConfigWebList-hideTranslations:
 
 hideTranslations
@@ -381,7 +383,7 @@ hideTranslations
     :type: list of table names, or *
 
     For tables in this list all their translated records in additional website languages will be hidden
-    in the List module.
+    in the :guilabel:`Content > Records` module.
 
     Use `*` to hide all records of additional website languages in all tables or set
     single table names as comma-separated list.
@@ -408,7 +410,7 @@ Example: Hide translated records in tables tt_content and tt_news
 
 ..  index::
     itemsLimitPerTable
-    List module; Items per table
+    Content Records module; Items per table
 ..  _pageTsConfigWebList-itemsLimitPerTable:
 
 itemsLimitPerTable
@@ -441,7 +443,7 @@ Example: Limit items per table in overview to 10
 
 ..  index::
     itemsLimitSingleTable
-    List module; Items per table in single table view
+    Content Records module; Items per table in single table view
 ..  _pageTsConfigWebList-itemsLimitSingleTable:
 
 itemsLimitSingleTable
@@ -474,7 +476,7 @@ Example: Limit items in single table view to 10
 
 ..  index::
     listOnlyInSingleTableView
-    List module; Records in single table view only
+    Content Records module; Records in single table view only
 ..  _pageTsConfigWebList-listOnlyInSingleTableView:
 
 listOnlyInSingleTableView
@@ -506,9 +508,9 @@ Example: Only list records of tables in single-table mode
     The result will be that records from tables are only listed in the single-table mode:
 
 ..  figure:: /Images/ManualScreenshots/List/PageTsModWebListListOnlyInSingleTableView.png
-    :alt: The list module after activating the single-table mode
+    :alt: The Content Records module after activating the single-table mode
 
-    The list module after activating the single-table mode
+    The :guilabel:`Content > Records` module after activating the single-table mode
 
 ..  index::
     newPageWizard.override
@@ -572,7 +574,7 @@ noExportRecordsLinks
         :guilabel:`Download` button used for CSV export.
 
     If set, the :guilabel:`Download` button is hidden
-    in the :guilabel:`Content > List` module.
+    in the :guilabel:`Content > Records` module.
 
     This option is important, for example, to disable batch
     download of sensitive data via t3d exports.
@@ -582,8 +584,9 @@ noExportRecordsLinks
     ..  include:: /Images/AutomaticScreenshots/WebList/NoExportButtons.rst.txt
 
     ..  note::
-        This option only hides the buttons in the list module. Bulk export of
-        data is still possible via the context menu of the page tree.
+        This option only hides the buttons in the :guilabel:`Content > Records`
+        module. Bulk export of data is still possible via the context menu of
+        the page tree.
 
 ..  _pageTsConfigWebList-noExportRecordsLinks-example:
 
@@ -614,7 +617,7 @@ Instead, configure the equivalent behavior using:
 
 ..  index::
     table.[tableName].hideTable
-    List module; Hide tables
+    Content Records module; Hide tables
 ..  _pageTsConfigWebList-table-tableName-hideTable:
 
 table.[tableName].hideTable
@@ -641,7 +644,7 @@ Example: Hide table tt_content
 
 ..  index::
     table.[tableName].displayColumnSelector
-    List module; columns selector
+    Content Records module; columns selector
 ..  _pageTsConfigWebList-table-tableName-displayColumnSelector:
 
 table.[tableName].displayColumnSelector
@@ -679,7 +682,7 @@ Example: Hide the column selector for all tables but sys_category
 
 ..  index::
     tableDisplayOrder
-    List module; Order tables
+    Content Records module; Order tables
 ..  _pageTsConfigWebList-tableDisplayOrder:
 
 tableDisplayOrder
@@ -745,7 +748,7 @@ searchLevel.default
     This option allows to define one of the available level options
     as the default level to use.
 
-    When searching for records in the :guilabel:`Content > List` module as well as
+    When searching for records in the :guilabel:`Content > Records` module as well as
     the database browser, it is possible to select the search levels (page tree
     levels to respect in the search).
 

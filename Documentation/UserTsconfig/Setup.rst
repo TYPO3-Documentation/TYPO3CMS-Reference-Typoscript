@@ -42,8 +42,9 @@ Properties
         for this specific backend user. To change the defaults for users with this
         property only affects *new* users who did not login yet. It is usually not
         possible to set new defaults for users who already logged in, at least once.
-        The only way to apply new defaults to existing users is by :guilabel:`Reset Backend User Preferences`
-        in the :guilabel:`Admin tools > Maintenance` section of the install tool.
+        The only way to apply new defaults to existing users is by
+        :guilabel:`Reset Backend User Preferences`
+        in the :guilabel:`System > Maintenance` section of the install tool.
 
         ..  literalinclude:: _Setup/_user-setup-default.tsconfig
             :language: typoscript
@@ -160,7 +161,7 @@ Properties
         :type: boolean
 
         If set, hidden files and folders will be shown in the
-        :guilabel:`Media > Filelist`.
+        :guilabel:`Media`.
 
     ..  _user-setup-startModule:
 

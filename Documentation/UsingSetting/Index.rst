@@ -14,7 +14,7 @@ Each template can include other (static) templates, which can again
 define values in their own :guilabel:`Constants` and :guilabel:`Setup` fields.
 
 The TypoScript template configuration can be viewed and edited in the
-:guilabel:`Site Management > TypoScript` module.
+:guilabel:`Sites > TypoScript` module.
 
 ..  toctree::
     :maxdepth: 5

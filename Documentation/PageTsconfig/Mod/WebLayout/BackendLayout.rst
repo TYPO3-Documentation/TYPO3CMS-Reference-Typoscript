@@ -15,7 +15,7 @@ function retrieves the backend layout).
 
 ..  figure:: /Images/ManualScreenshots/BackendLayouts/PageModule.png
 
-    A page module with a backend layout that has 3 content areas.
+    The :guilabel:`Content > Layout` module with a backend layout that has 3 content areas.
 
 Backend layouts contain content areas that are organized in rows and columns. Content
 areas can span multiple rows and columns, but they cannot be nested. For nested layouts in the

@@ -12,7 +12,7 @@ mod
 
 Configuration for backend modules. This is the part of page TSconfig
 with the most options. Most of the options affect the main TYPO3
-editing modules :guilabel:`Content > Page` and :guilabel:`Content > List`.
+editing modules :guilabel:`Content > Layout` and :guilabel:`Content > Records`.
 
 Properties
 ==========

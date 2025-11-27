@@ -8,7 +8,7 @@
 web_info
 ========
 
-Configuration options of the :guilabel:`Content > Info` module.
+Configuration options of the :guilabel:`Content > Status` module.
 
 ..  versionchanged:: 14.0
     The main module `Web` has been renamed to `Content`.
@@ -29,7 +29,8 @@ fieldDefinitions
     :name: mod-web-info-fieldDefinitions
     :type: array
 
-    The available fields in the "Pagetree overview" module under the Info module, by default ship with the entries
+    The available fields in the "Pagetree overview" module in the
+    :guilabel:`Content > Status` module, by default ship with the entries
     "Basic settings", "Record overview", and "Cache and age".
 
     ..  figure:: /Images/ManualScreenshots/Info/PageTsModWebInfoFieldDefinitions.png
@@ -46,8 +47,8 @@ fieldDefinitions
 
 ..  _fieldDefinitions-webinfo-example:
 
-Example: Override the field definitions in the info module
-----------------------------------------------------------
+Example: Override the field definitions in the status module
+------------------------------------------------------------
 
 ..  code-block:: typoscript
     :caption: EXT:site_package/Configuration/page.tsconfig

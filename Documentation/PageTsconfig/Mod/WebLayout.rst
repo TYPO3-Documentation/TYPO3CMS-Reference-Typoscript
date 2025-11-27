@@ -13,7 +13,7 @@ web_layout
     The main module `Web` has been renamed to `Content`.
     See `Feature: #107628 - Improved backend module naming and structure <https://docs.typo3.org/permalink/changelog:feature-107628-1729026000>`_
 
-Configuration options of the :guilabel:`Content > Page` module.
+Configuration options of the :guilabel:`Content > Layout` module.
 
 ..  contents::
     :local:
@@ -32,8 +32,10 @@ allowInconsistentLanguageHandling
     :name: mod-web-layout-allowInconsistentLanguageHandling
     :type: boolean
 
-    By default, TYPO3 will not allow you to mix translated content and independent content in the page module.
-    Content elements violating this behavior will be marked in the page module and there is no UI control (yet)
+    By default, TYPO3 will not allow you to mix translated content and
+    independent content in the :guilabel:`Content > Layout` module.
+    Content elements violating this behavior will be marked in the
+    :guilabel:`Content > Layout` module and there is no UI control (yet)
     allowing you to create independent content elements in a given language.
 
     If you want to go back to the old, inconsistent behavior, you can toggle it back on using this switch.
@@ -43,7 +45,8 @@ allowInconsistentLanguageHandling
 Example: Allow inconsistent language modes
 ------------------------------------------
 
-Allows to set TYPO3s page module back to inconsistent language mode
+Allows to set TYPO3s :guilabel:`Content > Layout` module back to inconsistent
+language mode:
 
 ..  code-block:: typoscript
     :caption: EXT:site_package/Configuration/page.tsconfig
@@ -118,8 +121,8 @@ defLangBinding
 
     ..  versionchanged:: 14.0
         Is not evaluated anymore. Editors will now always see the content
-        elements next to each other within the page module, when in language
-        comparison mode.
+        elements next to each other within the :guilabel:`Content > Layout`
+        module, when in language comparison mode.
 
     If set, translations of content elements are bound to the default record in the display. This means that
     within each column with content elements any translation found for exactly the shown default content
@@ -235,7 +238,7 @@ menu.functions
     Disable elements of the "Function selector" in the document header of the module.
 
     ..  figure:: /Images/ManualScreenshots/Page/FunctionMenuPageModule.png
-        :alt: The function menu of the Page module
+        :alt: The function menu of the Content Layout module
 
     The function keys are numerical:
 
@@ -292,7 +295,9 @@ tt_content.preview
     :name: mod-web-layout-tt-content-preview
     :type: boolean
 
-    It is possible to render previews of your own content elements in the page module.
+    It is possible to render previews of your own content elements in the
+    :guilabel:`Content > Layout` module.
+
     By referencing a Fluid template you can create a visual representation of your content element,
     making it easier for an editor to understand what is going on on the page.
 

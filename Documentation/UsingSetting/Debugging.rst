@@ -19,7 +19,7 @@ to find errors within TypoScript.
 Analyzing defined constants
 ===========================
 
-The backend submodule :guilabel:`Site Management > TypoScript > Active TypoScript`
+The backend submodule :guilabel:`Sites > TypoScript > Active TypoScript`
 provides a tree view to all defined TypoScript Constants on the currently active page.
 
 ..  figure:: /Images/ManualScreenshots/TypoScriptModule/ConstantsDisplayActiveTypoScript.png
