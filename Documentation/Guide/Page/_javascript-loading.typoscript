@@ -8,7 +8,7 @@ page {
       alert("Hello World! ");
     )
   }
-  includeCSS {
-    includeJSFooter = EXT:site_package/Resources/Public/JavaScript/main.js
+  includeJSFooter {
+    main = EXT:site_package/Resources/Public/JavaScript/main.js
   }
 }
