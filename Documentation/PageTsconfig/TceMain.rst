@@ -348,7 +348,7 @@ page. Members of this group get all permissions. Users not in the group get no
 permissions.
 
 When an administrator creates a new page she can use the module
-:guilabel:`System > Access` to set a different owner group for this new page.
+:guilabel:`Administration > Permissions` to set a different owner group for this new page.
 
 All subpages created to this new page will now automatically have the new pages
 group. The administrator does not have to set custom TSconfig to achieve this.

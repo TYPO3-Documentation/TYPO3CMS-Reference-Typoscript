@@ -73,7 +73,7 @@ defaultLanguageFlag
     :type: string
 
     Country flag shown for the "Default" language in the backend, used in
-    :guilabel:`Content > List` and :guilabel:`Content > Page` module.
+    :guilabel:`Content > Records` and :guilabel:`Content > Layout` module.
     Values as listed in the "Select flag icon" of a language record in the backend are allowed, including
     the value "multiple".
 
@@ -115,7 +115,7 @@ defaultLanguageLabel
 
     Alternate label for "Default" when language labels are shown in the interface.
 
-    Used in :guilabel:`Content > List` and :guilabel:`Content > Page` module.
+    Used in :guilabel:`Content > Records` and :guilabel:`Content > Layout` module.
 
 ..  index::
     disableLanguages

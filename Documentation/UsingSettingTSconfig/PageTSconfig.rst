@@ -202,7 +202,7 @@ Verify the final configuration
 ==============================
 
 The full page TSconfig for any given page can be viewed using the module
-:guilabel:`Page TSconfig` with in the :guilabel:`Site Management` section.
+:guilabel:`Page TSconfig` with in the :guilabel:`Sites` section.
 
 
 .. index:: pair: Page TSconfig; Override values

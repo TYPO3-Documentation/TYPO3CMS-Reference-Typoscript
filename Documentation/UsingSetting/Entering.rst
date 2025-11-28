@@ -61,7 +61,7 @@ Submodule "Constant Editor"
 
     The constant editor is kept for backward compatibility.
 
-The backend module :guilabel:`Site Management > TypoScript > Constant Editor`
+The backend module :guilabel:`Sites > TypoScript > Constant Editor`
 used a special format of
 `Comments <https://docs.typo3.org/permalink/t3tsref:typoscript-syntax-syntax-comment-blocks>`_
 to display a form for editing the constants.
@@ -83,7 +83,7 @@ Submodule "Edit TypoScript Record"
     The constant editor is only available in sites that are based on a
     TypoScript record.
 
-This can be done in the :guilabel:`Site Management > TypoScript` module in
+This can be done in the :guilabel:`Sites > TypoScript` module in
 the submodule :guilabel:`Edit TypoScript Record`.
 
 ..  figure:: /Images/ManualScreenshots/TypoScriptModule/EditTypoScriptRecord.png
@@ -96,10 +96,10 @@ the complete record:
     :alt: The submodule whole TypoScript record in edit mode
 
 As the TypoScript record is just a normal record it can also be seen in and
-edited from the list module:
+edited from the :guilabel:`Content > Records` module:
 
 ..  figure:: /Images/ManualScreenshots/TypoScriptModule/TypoScriptRecordListView.png
-    :alt: The TypoScript record in the list module
+    :alt: The TypoScript record in the Content Media module
 
 ..  index:: TypoScript; Include as file
 ..  _typoscript-syntax-typoscript-templates-structure-includes:
@@ -145,7 +145,7 @@ TypoScript record.
 
 ..  rst-class:: bignums-xxl
 
-#.  In the :guilabel:``Site Management > TypoScript` module, select
+#.  In the :guilabel:`Sites > TypoScript` module, select
     :guilabel:`Edit TypoScript Record`.
 
 #.  Click :guilabel:`Edit the whole TypoScript record`

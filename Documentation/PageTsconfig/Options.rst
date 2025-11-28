@@ -38,9 +38,9 @@ Example: Exclude two backend layouts from drop down selector
 ------------------------------------------------------------
 
 ..  figure:: /Images/ManualScreenshots/List/BackendLayoutID.png
-    :alt: Two backend layout records shown in list module
+    :alt: Two backend layout records shown in Content Records module
 
-    Before: Two backend layout records shown in list module
+    Before: Two backend layout records shown in :guilabel:`Content > Records` module
 
 ..  code-block:: typoscript
    :caption: EXT:site_package/Configuration/page.tsconfig
