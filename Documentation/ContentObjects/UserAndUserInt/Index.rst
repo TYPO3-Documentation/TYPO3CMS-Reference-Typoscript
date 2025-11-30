@@ -12,6 +12,14 @@
 USER and USER\_INT
 ==================
 
+..  important::
+
+    ..  versionchanged:: 14.0
+
+        PHP functions called via TypoScript **must** now use the PHP
+        attribute :php:`#[AsAllowedCallable]`
+        (:php:`TYPO3\CMS\Core\Attribute\AsAllowedCallable`).
+
 This calls either a PHP function or a method in a class. This is very
 useful if you want to incorporate your own data processing or content.
 
@@ -59,6 +67,10 @@ Properties
     .preUserFunc). The second parameter is an array (:php:`$configuration`) with the properties
     of this cObject, if any. As third parameter, the current :php:`ServerRequestInterface $request`
     is passed.
+
+    PHP functions called via TypoScript **must** use the PHP
+    attribute :php:`#[AsAllowedCallable]`
+    (:php:`TYPO3\CMS\Core\Attribute\AsAllowedCallable`).
 
 ..  note::
 
@@ -129,6 +141,10 @@ returned. Since we did not use a :typoscript:`USER` object, but a
 :typoscript:`USER_INT` object, this function is executed on every page hit.
 Thus, in this example, the current time is displayed in red letters each time.
 
+The method :php:`printTime()` uses the PHP attribute
+:php:`#[AsAllowedCallable]` so that TypoScript is allowed to call is as a
+user function.
+
 Example 2
 ---------
 
@@ -156,7 +172,11 @@ the :php:`setContentObjectRenderer()` method to get it and store it in the
 the class YourClass returned. This example returns some debug output
 at the beginning and then the headers of the content elements on the
 page in reversed order. Note how we defined the property
-"reverseOrder" for this USER object and how we used it in the PHP code.
+"reverseOrder" for this :typoscript:`USER` object and how we used it in the PHP code.
+
+The method :php:`listContentRecordsOnPage()` uses the PHP attribute
+:php:`#[AsAllowedCallable]` so that TypoScript is allowed to call is as a
+user function.
 
 Example 3
 ---------
@@ -180,3 +200,7 @@ Contents of :file:`EXT:site_package/Classes/UserFunctions/Hostname.php`:
 ..  literalinclude:: _Hostname.php
     :language: php
     :caption: EXT:site_package/Classes/UserFunctions/Hostname.php
+
+The method :php:`getHostname()` uses the PHP attribute
+:php:`#[AsAllowedCallable]` so that TypoScript is allowed to call is as a
+user function.

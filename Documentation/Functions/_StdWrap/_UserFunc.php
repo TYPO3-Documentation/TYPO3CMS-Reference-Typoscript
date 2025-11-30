@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace MyVendor\MySitePackage\UserFunctions;
 
 use Psr\Http\Message\ServerRequestInterface;
+use TYPO3\CMS\Core\Attribute\AsAllowedCallable;
 use TYPO3\CMS\Core\LinkHandling\LinkService;
 use TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer;
 use TYPO3\CMS\Frontend\Typolink\LinkResult;
@@ -12,6 +13,7 @@ use TYPO3\CMS\Frontend\Typolink\LinkResultInterface;
 
 class TypoLinkUserFunc
 {
+    #[AsAllowedCallable]
     public function createUserFuncLink(
         LinkResultInterface $content,
         array $conf,

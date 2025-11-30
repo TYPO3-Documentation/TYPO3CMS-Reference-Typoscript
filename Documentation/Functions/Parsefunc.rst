@@ -171,6 +171,14 @@ userFunc
     :name: parsefunc-userFunc
     :type: :ref:`data-type-function-name`
 
+    ..  important::
+
+        ..  versionchanged:: 14.0
+
+            PHP functions called via TypoScript **must** now use the PHP
+            attribute :php:`#[AsAllowedCallable]`
+            (:php:`TYPO3\CMS\Core\Attribute\AsAllowedCallable`).
+
     This passes the non-tag content to a function of your own choice.
     Similar to, for example, :ref:`stdwrap-postUserFunc` in :ref:`stdWrap`,
     or :ref:`typolink.userFunc <typolink-userFunc>`.
@@ -200,6 +208,14 @@ nonTypoTagUserFunc
 ..  confval:: nonTypoTagUserFunc
     :name: parsefunc-nonTypoTagUserFunc
     :type: :ref:`data-type-function-name`
+
+    ..  important::
+
+        ..  versionchanged:: 14.0
+
+            PHP functions called via TypoScript **must** now use the PHP
+            attribute :php:`#[AsAllowedCallable]`
+            (:php:`TYPO3\CMS\Core\Attribute\AsAllowedCallable`).
 
     Like :ref:`parsefunc-userFunc`.
     Differences is (like :ref:`parsefunc-nonTypoTagStdWrap`)

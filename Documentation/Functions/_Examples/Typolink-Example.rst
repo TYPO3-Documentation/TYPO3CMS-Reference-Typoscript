@@ -10,6 +10,14 @@
 Examples for `typolink.userFunc`
 ================================
 
+..  important::
+
+    ..  versionchanged:: 14.0
+
+        PHP functions called via TypoScript **must** now use the PHP
+        attribute :php:`#[AsAllowedCallable]`
+        (:php:`TYPO3\CMS\Core\Attribute\AsAllowedCallable`).
+
 Given this TypoScript example:
 
 ..  literalinclude:: ../_StdWrap/_UserFunc.typoscript
@@ -29,6 +37,9 @@ to change existing ones:
     :language: php
     :caption: EXT:site_package/Classes/UserFunctions/TypoLinkUserFunc.php
 
+The method :php:`createUserFuncLink()` uses PHP attribute
+:php:`#[AsAllowedCallable]` to declare it as callable from TypoScript.
+
 This class would take the :php:`LinkResultInterface` object, enrich it with
 attributes, pass it to a new immutable object and return that. Then this is what finally
 gets emitted after full processing:
@@ -45,6 +56,9 @@ linked URL:
 ..  literalinclude:: ../_StdWrap/_UserFunc.php
     :language: php
     :caption: EXT:site_package/Classes/UserFunctions/TypoLinkUserFunc.php
+
+The method :php:`createUserFuncLink()` uses PHP attribute
+:php:`#[AsAllowedCallable]` to declare it as callable from TypoScript.
 
 This class would take the :php:`LinkResultInterface` object, retrieve some data from it,
 alter it, pass it to a new immutable object and return that. Then this is what finally

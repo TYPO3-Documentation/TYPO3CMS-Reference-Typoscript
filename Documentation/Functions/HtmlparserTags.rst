@@ -248,6 +248,14 @@ fixAttrib.[attribute].userFunc
     :name: htmlparser-tags-fixAttrib-userFunc
     :type: :ref:`data-type-function-name`
 
+    ..  important::
+
+        ..  versionchanged:: 14.0
+
+            PHP functions called via TypoScript **must** now use the PHP
+            attribute :php:`#[AsAllowedCallable]`
+            (:php:`TYPO3\CMS\Core\Attribute\AsAllowedCallable`).
+
     User function for processing of the attribute. The return value
     of this function will be used as the new tag value.
 

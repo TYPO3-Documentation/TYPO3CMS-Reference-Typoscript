@@ -203,6 +203,14 @@ Properties for getting data
         :name: stdwrap-preUserFunc
         :type: :ref:`data-type-function-name`
 
+        ..  important::
+
+            ..  versionchanged:: 14.0
+
+                PHP functions called via TypoScript **must** now use the PHP
+                attribute :php:`#[AsAllowedCallable]`
+                (:php:`TYPO3\CMS\Core\Attribute\AsAllowedCallable`).
+
         Calls a provided PHP function. If you specify the name with a '->'
         in it, then it is interpreted as a call to a class method.
 
@@ -210,6 +218,10 @@ Properties for getting data
         content variable, which contains the current content (the
         value to be processed), and any sub-properties of
         preUserFunc.
+
+        PHP functions called via TypoScript **must** use the PHP
+        attribute :php:`#[AsAllowedCallable]`
+        (:php:`TYPO3\CMS\Core\Attribute\AsAllowedCallable`).
 
         See :ref:`stdWrap-postUserFunc`:typoscript:`postUserFunc`.
 
@@ -1528,6 +1540,12 @@ Properties for wrapping data
         :name: stdwrap-postUserFunc
         :type: :ref:`data-type-function-name`
 
+        ..  versionchanged:: 14.0
+
+            PHP functions called via TypoScript **must** now use the PHP
+            attribute :php:`#[AsAllowedCallable]`
+            (:php:`TYPO3\CMS\Core\Attribute\AsAllowedCallable`).
+
         Calls the provided PHP function. If the function name contains '->',
         it will be interpreted as a call to a class method.
 
@@ -1538,6 +1556,10 @@ Properties for wrapping data
 
         See description of the :ref:`USER <cobj-user>` :typoscript:`cObject` for
         more in-depth information.
+
+        PHP functions called via TypoScript **must** use the PHP
+        attribute :php:`#[AsAllowedCallable]`
+        (:php:`TYPO3\CMS\Core\Attribute\AsAllowedCallable`).
 
         ..  rubric:: Examples
 
@@ -1572,6 +1594,12 @@ Properties for wrapping data
         :name: stdwrap-postUserFuncInt
         :type: :ref:`data-type-function-name`
 
+        ..  versionchanged:: 14.0
+
+            PHP functions called via TypoScript **must** now use the PHP
+            attribute :php:`#[AsAllowedCallable]`
+            (:php:`TYPO3\CMS\Core\Attribute\AsAllowedCallable`).
+
         Calls the provided PHP function. If you specify a function name with '->'
         it will be interpreted as a call to a class method.
 
@@ -1584,7 +1612,9 @@ Properties for wrapping data
         page-rendering. See the :typoscript:`cObject`
         :ref:`USER_INT <cobj-user-int>` description.
 
-        Supplied by Jens Ellerbrock
+        PHP functions called via TypoScript **must** use the PHP
+        attribute :php:`#[AsAllowedCallable]`
+        (:php:`TYPO3\CMS\Core\Attribute\AsAllowedCallable`).
 
 
     ..  _stdwrap-prefixComment:

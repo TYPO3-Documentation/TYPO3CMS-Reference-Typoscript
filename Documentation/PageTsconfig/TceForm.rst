@@ -1216,6 +1216,14 @@ suggest.renderFunc
     :name: tceform-suggest-renderFunc
     :type: string
 
+    ..  important::
+
+        ..  versionchanged:: 14.0
+
+            PHP functions called via TypoScript **must** now use the PHP
+            attribute :php:`#[AsAllowedCallable]`
+            (:php:`TYPO3\CMS\Core\Attribute\AsAllowedCallable`).
+
     User function to manipulate the displayed records in the result.
 
 ..  index::
