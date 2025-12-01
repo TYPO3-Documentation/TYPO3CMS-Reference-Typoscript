@@ -538,6 +538,14 @@ userFunc
     :name: typolink-userFunc
     :type: :ref:`data-type-function-name`
 
+    ..  important::
+
+        ..  versionchanged:: 14.0
+
+            PHP functions called via TypoScript **must** now use the PHP
+            attribute :php:`#[AsAllowedCallable]`
+            (:php:`TYPO3\CMS\Core\Attribute\AsAllowedCallable`).
+
     All of the :typoscript:`typolink` TypoScript configuration will be parsed and evaluated
     by the TYPO3 Core's :php:`LinkFactory->create()` method, and then passed on
     to the defined :typoscript:`userFunc` for further manipulation. The :typoscript:`userFunc` needs to

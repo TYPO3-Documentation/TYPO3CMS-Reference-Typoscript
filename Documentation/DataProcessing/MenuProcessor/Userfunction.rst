@@ -4,9 +4,17 @@
 ..  _hmenu-special-userfunction:
 ..  _hmenu-special-userfunction-examples:
 
-============================================
-Userfunction menu (For backward compability)
-============================================
+===============================================
+User function menu (For backward compatibility)
+===============================================
+
+..  important::
+
+    ..  versionchanged:: 14.0
+
+        PHP functions called via TypoScript **must** now use the PHP
+        attribute :php:`#[AsAllowedCallable]`
+        (:php:`TYPO3\CMS\Core\Attribute\AsAllowedCallable`).
 
 ..  attention::
     It is still possible to create a menu with :typoscript:`special = userfunction`

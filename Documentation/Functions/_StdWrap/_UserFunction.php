@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace MyVendor\SitePackage\UserFunctions;
 
 use Psr\Http\Message\ServerRequestInterface;
+use TYPO3\CMS\Core\Attribute\AsAllowedCallable;
 use TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer;
 
 final class YourClass
@@ -28,6 +29,7 @@ final class YourClass
      * @param string $content holds the value to be processed.
      * @param array $conf TypoScript properties passed to this method.
      */
+    #[AsAllowedCallable]
     public function reverseString(
         string $content,
         array $conf,

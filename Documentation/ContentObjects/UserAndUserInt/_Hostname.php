@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Vendor\SitePackage\UserFunctions;
 
 use Psr\Http\Message\ServerRequestInterface;
+use TYPO3\CMS\Core\Attribute\AsAllowedCallable;
 
 final class Hostname
 {
@@ -16,6 +17,7 @@ final class Hostname
      * @param  ServerRequestInterface The current PSR-7 request object
      * @return string HTML result
      */
+    #[AsAllowedCallable]
     public function getHostname(string $content, array $conf, ServerRequestInterface $request): string
     {
         return gethostname() ?: '';

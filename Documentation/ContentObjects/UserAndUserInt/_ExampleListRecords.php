@@ -6,6 +6,7 @@ namespace MyVendor\SitePackage\UserFunctions;
 
 use Psr\Http\Message\ServerRequestInterface;
 use Symfony\Component\DependencyInjection\Attribute\Autoconfigure;
+use TYPO3\CMS\Core\Attribute\AsAllowedCallable;
 use TYPO3\CMS\Core\Database\ConnectionPool;
 use TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer;
 
@@ -40,6 +41,7 @@ final class ExampleListRecords
      * @param  array  TypoScript configuration
      * @return string HTML output, showing content elements (in reverse order, if configured)
      */
+    #[AsAllowedCallable]
     public function listContentRecordsOnPage(string $content, array $conf, ServerRequestInterface $request): string
     {
         $connection = $this->connectionPool->getConnectionForTable('tt_content');
