@@ -250,7 +250,7 @@ nonWrappedTag
     :name: encapslines-nonWrappedTag
     :type: :typoscript:`tagname`
 
-    For all non-wrapped lines, you can here set a tag in which they
+    For all non-wrapped lines, you can set a tag here in which they
     should be wrapped. Example would be "p". This is an alternative to
     :typoscript:`wrapNonWrappedLines` and has the advantage that its attributes are
     set by :typoscript:`addAttributes` as well as :typoscript:`defaultAlign`.
