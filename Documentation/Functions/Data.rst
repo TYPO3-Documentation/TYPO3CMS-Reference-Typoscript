@@ -247,6 +247,8 @@ Get the value of the header field of a record, where the uid is in the
     :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
     lib.foo.data.dataWrap = DB : tt_content:{GP : myContentId}:header
+    lib.foo.data.wrap3 = {|}
+    lib.foo.data.insertData = 1
 
 ..  note::
     It is safe to use client-/user-provided input for the id of a DB
