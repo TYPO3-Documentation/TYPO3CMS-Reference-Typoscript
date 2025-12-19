@@ -117,7 +117,7 @@ TypoScript record.
 
 ..  rst-class:: bignums-xxl
 
-#.  In the :guilabel:``Site Management > TypoScript` module, select
+#.  In the :guilabel:`Site Management > TypoScript` module, select
     :guilabel:`Edit TypoScript Record`.
 
 #.  Click :guilabel:`Edit the whole TypoScript record`
