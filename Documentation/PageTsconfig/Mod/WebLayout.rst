@@ -292,9 +292,9 @@ tt_content.preview
     ..  code-block:: typoscript
         :caption: EXT:site_package/Configuration/page.tsconfig
 
-        mod.web_layout.tt_content.preview.[CTYPE].[list_type value] = EXT:site_mysite/Resources/Private/Templates/Preview/ExamplePlugin.html
+        mod.web_layout.tt_content.preview.myextension_plugin = EXT:site_mysite/Resources/Private/Templates/Preview/ExamplePlugin.html
 
-    This way you can even switch between previews for your plugins by supplying `list` as CType.
+    This way you can even switch between previews for your plugins by supplying the CType.
 
     ..  note::
 
@@ -323,7 +323,7 @@ Example: Define previews for custom content elements
     mod.web_layout.tt_content {
         preview.custom_ce = EXT:site_mysite/Resources/Private/Templates/Preview/CustomCe.html
         preview.table = EXT:site_mysite/Resources/Private/Templates/Preview/Table.html
-        preview.list.tx_news = EXT:site_mysite/Resources/Private/Templates/Preview/TxNews.html
+        preview.tx_news_pi1 = EXT:site_mysite/Resources/Private/Templates/Preview/TxNews.html
     }
 
 ..  toctree::
