@@ -975,6 +975,15 @@ Properties for parsing data
             You can set custom labels to base 1000. All
             other values, including the default, are base 1024.
 
+        ..  versionadded:: 14.1
+            The TypoScript function :typoscript:`stdWrap.bytes` now accepts an
+            additional configuration parameter :typoscript:`decimals`.
+
+        .decimals
+            allows to explicitly define the number of decimals in the resulting
+            number representation. By default, the  number of decimals is
+            derived from the formatted size.
+
         ..  attention::
 
             If the value isn't a number the internal PHP function may issue a
