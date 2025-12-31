@@ -298,6 +298,16 @@ Properties
         :type: :ref:`data-type-resource`
         :Example: :ref:`Include additional css files <setup-page-includecss-example>`
 
+        ..  versionchanged:: 14.0
+
+            TYPO3 no longer supports frontend asset concatenation or pre-compression
+            in the core. The per-file properties
+            :typoscript:`disableCompression` and
+            :typoscript:`excludeFromConcatenation` are therefore not available in
+            TYPO3 v14 and above. See
+            :ref:`frontend-asset-concat-compress-not-supported`.
+
+
         Inserts a stylesheet (just like the :typoscript:`stylesheet` property), but allows
         setting up more than a single stylesheet, because you can enter files
         in an array.
@@ -316,12 +326,6 @@ Properties
         `alternate`
             If set (boolean) then the rel-attribute will be
             "alternate stylesheet".
-        `disableCompression`
-            If :typoscript:`config.compressCss` is enabled, this
-            disables the compression of this file.
-        `excludeFromConcatenation`
-            If :typoscript:`config.concatenateCss` is
-            enabled, this prevents the file from being concatenated.
         `external`
             If set, there is no file existence check. Useful for
             inclusion of external files.
@@ -348,6 +352,15 @@ Properties
         :type: :ref:`data-type-resource`
         :Example: :ref:`Include CSS libraries <setup-page-includecsslibs-exqample>`
 
+        ..  versionchanged:: 14.0
+
+            TYPO3 no longer supports frontend asset concatenation or pre-compression
+            in the core. The per-file properties
+            :typoscript:`disableCompression` and
+            :typoscript:`excludeFromConcatenation` are therefore not available in
+            TYPO3 v14 and above. See
+            :ref:`frontend-asset-concat-compress-not-supported`.
+
         Adds CSS library files to head of page.
 
         The file definition must be a valid :ref:`data-type-resource` data type,
@@ -365,12 +378,6 @@ Properties
         `alternate`
             If set (boolean) then the rel-attribute will be
             "alternate stylesheet".
-        `disableCompression`
-            If :typoscript:`config.compressCss` is
-            enabled, this disables the compression of this file.
-        `excludeFromConcatenation`
-            If :typoscript:`config.concatenateCss`
-            is enabled, this prevents the file from being concatenated.
         `external`
             If set, there is no file existence check. Useful for
             inclusion of external files.
@@ -393,6 +400,15 @@ Properties
         :name: page-includeJS
         :type: :ref:`data-type-resource`
         :Example: :ref:`Include JavaScript in the header <setup-page-includejs-example>`
+
+        ..  versionchanged:: 14.0
+
+            TYPO3 no longer supports frontend asset concatenation or pre-compression
+            in the core. The per-file properties
+            :typoscript:`disableCompression` and
+            :typoscript:`excludeFromConcatenation` are therefore not available in
+            TYPO3 v14 and above. See
+            :ref:`frontend-asset-concat-compress-not-supported`.
 
         Inserts one or more (Java)Scripts in :html:`<script>` tags.
         With :ref:`setup-config-movejsfromheadertofooter` set to TRUE all files
@@ -421,14 +437,6 @@ Properties
 
         `defer`
             Allows to set the HTML5 attribute :html:`defer`.
-
-        `disableCompression`
-            If :typoscript:`config.compressJs` is enabled,
-            this disables the compression of this file.
-
-        `excludeFromConcatenation`
-            If :typoscript:`config.concatenateJs` is enabled,
-            this prevents the file from being concatenated.
 
         `external`
             If set, there is no file existence check. Useful for

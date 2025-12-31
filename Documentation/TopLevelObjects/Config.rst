@@ -190,122 +190,6 @@ Properties of 'config'
         This value is overridden by the value in the page record
         `field="cache_timeout"` if that value is greater than zero.
 
-    ..  confval:: compressCss
-        :name: config-compressCss
-        :type: :ref:`data-type-boolean`
-        :Default: `0`
-        :Example: :ref:`setup-config-compresscss`
-
-        If enabled, CSS files referenced in :typoscript:`page.includeCSS` (and similar
-        properties) are pre-compressed to reduce file size.
-        This setting has no effect on files included via :typoscript:`page.headerData`.
-
-        Compression is applied if
-        :php:`$GLOBALS['TYPO3_CONF_VARS']['FE']['compressionLevel']`
-        is set to a non-zero value (in the Install Tool).
-
-        To serve compressed files correctly, ensure gzip-related
-        :file:`.htaccess` settings are enabled, otherwise browsers may not be able
-        to read the compressed output.
-
-        ..  versionchanged:: 14.0
-
-            CSS **minification** has been removed. Only **compression** is supported.
-
-            See also:
-            `Breaking: #107944 – Removal of JavaScript and CSS minification
-            <https://docs.typo3.org/permalink/changelog:breaking-107944-1761867359>`_
-
-        TYPO3 comes with a built-in compression handler, but you can
-        also register your own using
-        :php:`$GLOBALS['TYPO3_CONF_VARS']['FE']['cssCompressHandler']`.
-
-        ..  code-block:: php
-
-            $GLOBALS['TYPO3_CONF_VARS']['FE']['cssCompressHandler'] =
-               \TYPO3\CMS\Core\Extension\ExtensionManager::extPath('my_extension') .
-               'Classes/CssCompressHandler.php:MyVendor\MyExtensionen\CssCompressHandler->compressCss';
-
-        ..  include:: _includes/_concat-compress.rst.txt
-
-    ..  confval:: compressJs
-        :name: config-compressJs
-        :type: :ref:`data-type-boolean`
-        :Default: `0`
-        :Example: :ref:`setup-config-compressjs`
-
-        Enabling this option together with
-        :php:`$GLOBALS['TYPO3_CONF_VARS']['FE']['compressionLevel']` in the Install Tool
-        wil compress frontend JavaScript files referenced in :typoscript:`page.includeJS`, etc,
-        using GZIP compression. It has no effect on files which are
-        referenced in :typoscript:`page.headerData`.
-
-        Please note that this requires :file:`.htaccess` to be modified, otherwise
-        the files will not be readable by the user agent. Please see the
-        description of :php:`$GLOBALS['TYPO3_CONF_VARS']['FE']['compressionLevel']` in the
-        Install Tool.
-
-        ..  include:: _includes/_concat-compress.rst.txt
-
-        TYPO3 comes with a built-in compression handler, but you can
-        also register your own using
-        :php:`$GLOBALS['TYPO3_CONF_VARS']['FE']['jsCompressHandler']`.
-
-        ..  code-block:: php
-
-            $GLOBALS['TYPO3_CONF_VARS']['FE']['jsCompressHandler'] =
-                \TYPO3\CMS\Core\Extension\ExtensionManager::extPath('my_extension') .
-                'Classes/JsCompressHandler.php:MyVendor\MyExtension\JsCompressHandler->compressJs';
-
-    ..  confval:: concatenateCss
-        :name: config-concatenateCss
-        :type: :ref:`data-type-boolean`
-        :Default: `0`
-        :Example: :ref:`setup-config-concatenatecss`
-
-        Setting :typoscript:`config.concatenateCss` merges frontend stylesheet
-        files referenced in page.includeCSS, etc. Files are merged
-        only if their media attribute has the same value, e.g. if it is "all"
-        for several files. It has no effect on files which are referenced in
-        :typoscript:`page.headerData`.
-
-        ..  include:: _includes/_concat-compress.rst.txt
-
-        TYPO3 comes with a built-in concatenation handler, but you
-        can also register your own using
-        :php:`$GLOBALS['TYPO3_CONF_VARS']['FE']['cssConcatenateHandler']`.
-
-        ..  code-block:: php
-
-            $GLOBALS['TYPO3_CONF_VARS']['FE']['cssCompressHandler'] =
-                \TYPO3\CMS\Core\Extension\ExtensionManager::extPath('my_extension') .
-                'Classes/CssCompressHandler.php:MyVendor\MyExtension\CssCompressHandler->compressCss';
-
-    ..  confval:: concatenateJs
-        :name: config-concatenateJs
-        :type: :ref:`data-type-boolean`
-        :Default: `0`
-        :Example: :ref:`setup-config-concatenateJs`
-
-        Setting :typoscript:`config.concatenateJs` merges frontend JavaScript
-        files referenced in :typoscript:`page.includeJS`, etc. It has no effect
-        on files which are referenced in :typoscript:`page.headerData`.
-
-        If all the files are marked with an async flag, an async attribute is
-        assigned to the script tag.
-
-        ..  include:: _includes/_concat-compress.rst.txt
-
-        TYPO3 comes with a built-in concatenation handler, but you
-        can also register your own using
-        :php:`$GLOBALS['TYPO3_CONF_VARS']['FE']['jsConcatenateHandler']`.
-
-        ..  code-block:: php
-
-            $GLOBALS['TYPO3_CONF_VARS']['FE']['jsConcatenateHandler'] =
-                   \TYPO3\CMS\Core\Extension\ExtensionManager::extPath('my_extension') .
-                   'Classes/JsConcatenateHandler.php:MyVendor\MyExtension\JsConcatenateHandler->concatenateJs';
-
     ..  confval:: contentObjectExceptionHandler
         :name: config-contentObjectExceptionHandler
         :type: :ref:`data-type-boolean`
@@ -1170,68 +1054,6 @@ changed:
 
     config.cache.all = fe_users:current
 
-..  _setup-config-compresscss:
-
-Config compress CSS example
----------------------------
-
-Demonstrates:
-    *   :confval:`config.compressCss <config-compressCss>`
-
-..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-    config.compressCss = 1
-
-
-..  _setup-config-compressjs:
-
-Config compress JavaScript
---------------------------
-
-Demonstrates:
-    *   :confval:`config.compressJs <config-compressJs>`
-
-..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-    config.compressJs = 1
-
-..  _setup-config-concatenatecss:
-
-Concatenate CSS Example
------------------------
-
-Demonstrates:
-    *   :confval:`config.concatenateCss <config-concatenateCss>`
-
-..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-    config.concatenateCss = 1
-
-..  _setup-config-concatenateJs:
-
-concatenateJs
--------------
-
-Demonstrates:
-    *   :confval:`config.concatenateJs <config-concatenateJs>`
-
-.. code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-    config.concatenateJs = 1
-
-    page = PAGE
-    page.includeJSFooter {
-        test = fileadmin/user_upload/test.js
-        test.async = 1
-
-        test2 = fileadmin/user_upload/test2.js
-        test2.async = 1
-    }
-
 ..  _setup-config-contentObjectExceptionHandler:
 
 contentObjectExceptionHandler example
@@ -1601,3 +1423,29 @@ Demonstrates:
 Will create a link to the page with id 29 and add GET parameters with
 the return URL and original page id. Additionally, CSS
 class "restricted" is added to the anchor tag.
+
+..  _frontend-asset-concat-compress-not-supported:
+..  _setup-config-compresscss:
+..  _setup-config-compressjs:
+..  _setup-config-concatenatecss:
+..  _setup-config-concatenateJs:
+
+Frontend asset concatenation and compression not supported
+==========================================================
+
+..  versionchanged:: 14.0
+    TYPO3 no longer provides built-in frontend asset concatenation or
+    pre-compression.
+
+The following TypoScript options were removed and have no effect in TYPO3 v14:
+
+-   config.concatenateCss
+-   config.concatenateJs
+-   config.compressCss
+-   config.compressJs
+
+Projects upgrading from earlier TYPO3 versions must replace these
+runtime features with build-time asset processing (for example using
+Vite, Webpack, or similar tooling).
+
+See: `Breaking: #108055 - Removed frontend asset concatenation and compression <https://docs.typo3.org/permalink/changelog:breaking-108055-1762346705>`_.
