@@ -1084,25 +1084,20 @@ TSFE
 
 ..  confval:: TSFE
     :name: data-tsfe
-    :Syntax: TSFE: [value from the :php:`$GLOBALS['TSFE']` array, multi-dimensional]
+    :Syntax: TSFE: [value, multi-dimensional]
 
-    Returns a value from
+    Returns a value, which provided the now removed
     :php:`TYPO3\CMS\Frontend\Controller\TypoScriptFrontendController`.
 
+    The following properties are still available:
 
-..  versionchanged:: 13.0
-    The following TypoScriptFrontendController (TSFE) properties have
-    been removed:
-
-    *   :php:`spamProtectEmailAddresses`
-    *   :php:`intTarget`
-    *   :php:`extTarget`
-    *   :php:`fileTarget`
-    *   :php:`baseUrl`
-
-    Migrate these properties to the config property. You can access the
-    TypoScript properties directly, for example, via
-    :typoscript:`lib.something.data = TSFE : config | config | fileTarget`
+    *   :typoscript:`config | rootLine`
+    *   :typoscript:`contentPid`
+    *   :typoscript:`fe_user`
+    *   :typoscript:`id`
+    *   :typoscript:`linkVars`
+    *   :typoscript:`page`
+    *   :typoscript:`rootLine`
 
 
 ..  _data-type-gettext-tsfe-example:
@@ -1114,3 +1109,6 @@ Example: Get the username field of the current frontend user
     :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
     lib.foo.data = TSFE : fe_user | user | username
+
+    # Alternative
+    lib.foo.data = request : frontend.user | user | username
