@@ -58,7 +58,7 @@ Example: Condition applies in application context "Development"
         // Your settings go here
     [END]
 
-Example: Condition applies in any application context that does not start with "Production"
+Example: Condition applies in any application context that starts with "Production"
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This condition applies in any context that is "Production" or starts with
