@@ -980,8 +980,8 @@ Properties for parsing data
             additional configuration parameter :typoscript:`decimals`.
 
         .decimals
-            allows to explicitly define the number of decimals in the resulting
-            number representation. By default, the  number of decimals is
+            allows the number of decimals in the resulting number representation
+            to be explicitly defined. By default, the  number of decimals is
             derived from the formatted size.
 
         ..  attention::
