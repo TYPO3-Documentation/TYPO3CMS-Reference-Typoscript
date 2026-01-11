@@ -1086,7 +1086,7 @@ TSFE
     :name: data-tsfe
     :Syntax: TSFE: [value, multi-dimensional]
 
-    Returns a value, which provided the now removed
+    Returns a value, previously provided the now removed
     :php:`TYPO3\CMS\Frontend\Controller\TypoScriptFrontendController`.
 
     The following properties are still available:
