@@ -207,6 +207,11 @@ Note the *double dot* after `altLabels`.
 
     * Adjust the label via a `TCA Overrides <https://docs.typo3.org/permalink/t3coreapi:extension-configuration-tca-overrides>`_ (for example by modifying the items array or using `columnsOverrides/itemsProcFunc <https://docs.typo3.org/permalink/t3tca:tca-property-itemsprocfunc>`__).
 
+    **Note for newer TYPO3 versions:**
+
+    The issue has been fixed in **TYPO3 13.4.21+** as well as in **TYPO3 14.1+**.
+    Overriding the label via Page TSconfig (`altLabels`) works again as expected, and the TCA-based workaround is no longer required.
+
 ..  _tceform-page_tsconfig_id:
 
 PAGE_TSCONFIG_ID
