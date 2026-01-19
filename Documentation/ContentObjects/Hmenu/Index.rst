@@ -91,6 +91,7 @@ Properties
         Defines at which level in the rootLine the menu should start.
 
     ..  _hmenu-special:
+    ..  _hmenu-special-property:
 
     ..  confval:: special
         :name: hmenu-special
@@ -213,7 +214,6 @@ Properties
         (Executed after ".wrap".)
 
     ..  _hmenu-examples:
-    ..  _hmenu-special-property:
 
     For examples on how to use the HMENU please refer to old version of this
     document, for example :ref:`HMENU <t3tsref/11.5:cobj-hmenu>`
