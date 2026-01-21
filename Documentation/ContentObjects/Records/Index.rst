@@ -20,7 +20,7 @@ the records selected which has a higher value than the current.
 ..  note::
     Records with parent ids (pid's) for non-accessible pages
     (that is hidden, timed or access-protected pages) are normally not
-    selected. Pages may be of any type, except recycler. Disable the check
+    selected. Pages may be of any type. Disable the check
     with the :ref:`dontCheckPid option <cobj-records-properties-dontcheckpid>`.
 
 ..  contents::
