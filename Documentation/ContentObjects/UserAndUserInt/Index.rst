@@ -204,3 +204,30 @@ Contents of :file:`EXT:site_package/Classes/UserFunctions/Hostname.php`:
 The method :php:`getHostname()` uses the PHP attribute
 :php:`#[AsAllowedCallable]` so that TypoScript is allowed to call is as a
 user function.
+
+
+Example 5
+---------
+
+..  code-block:: typoscript
+    :caption: my_extension inclusion by TypoScript
+
+    lib.myExtensionPlugin = USER
+    lib.myExtensionPlugin {
+      userFunc = MyVendor\MyExtension\MyClassPath\MyClass->run
+      vendorName = MyVendor
+      extensionName = MyExtension
+      pluginName = MyPlugin
+      view =< plugin.tx_myextension.view
+      view.partialRootPaths.10 = fileadmin/Resources/Private/Partials/
+      view.templateRootPaths.10 = fileadmin/Resources/Private/Templates/
+      settings =< plugin.tx_myextension.settings
+    }
+
+This generates a Typoscript :typoscript:`lib:myExtensionPlugin` which can be included into a Fluid Template of the page layout.
+
+..  code-block:: fluid
+    :caption: my_extension inclusion by TypoScript
+
+    <f:cObject typoscriptObjectPath="lib.myExtensionPlugin" />
+
