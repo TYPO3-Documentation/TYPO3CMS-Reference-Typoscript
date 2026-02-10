@@ -175,9 +175,9 @@ newContentElement.wizardItems
 
                     ..  versionadded:: 14.2
 
-                    Same as described on `before` section.
+                    Same as described in `before` section.
 
-                    If no before or after configuration is specified for elements, 
+                    If no before or after configuration is specified for elements,
                     they will retain their default order (typically the order defined in TCA).
 
         ..  confval:: [group].removeItems
