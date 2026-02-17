@@ -213,6 +213,7 @@ makelinks
     Convert web addresses prefixed with `http://` and mail addresses
     prefixed with `mailto:` to links.
 
+    See :ref:`makelinks` for additional properties.
 
 ..  _parsefunc-tags:
 
