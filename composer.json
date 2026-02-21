@@ -30,7 +30,7 @@
         "symfony/yaml": "^7.0",
         "t3docs/codesnippet": "dev-main",
         "t3docs/examples": "^13.2",
-        "t3docs/site-package": "dev-main",
+        "t3docs/site-package": "v13.4.x-dev",
         "typo3/cms-adminpanel": "^13.4",
         "typo3/cms-backend": "^13.4",
         "typo3/cms-belog": "^13.4",
