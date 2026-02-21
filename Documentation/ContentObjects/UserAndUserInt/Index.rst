@@ -205,12 +205,18 @@ The method :php:`getHostname()` uses the PHP attribute
 :php:`#[AsAllowedCallable]` so that TypoScript is allowed to call is as a
 user function.
 
+..  _cobj-user-custom-plugin:
 
-Example 5
----------
+Example 5: Integrating a custom (non-Extbase) plugin via USER
+--------------------------------------------------------------
+
+This example exposes custom rendering logic via :typoscript:`USER`
+and makes it available in a Fluid template. This is useful for
+**non-Extbase plugins** or logic that should not be registered as
+a traditional Extbase plugin.
 
 ..  code-block:: typoscript
-    :caption: my_extension inclusion by TypoScript
+    :caption: Including a custom extension via TypoScript
 
     lib.myExtensionPlugin = USER
     lib.myExtensionPlugin {
@@ -224,10 +230,30 @@ Example 5
       settings =< plugin.tx_myextension.settings
     }
 
-This generates a Typoscript :typoscript:`lib:myExtensionPlugin` which can be included into a Fluid Template of the page layout.
+This creates the TypoScript object :typoscript:`lib.myExtensionPlugin`.
+Render it in Fluid with:
 
 ..  code-block:: html
-    :caption: my_extension inclusion by TypoScript
+    :caption: Rendering the USER object in a Fluid template
 
     <f:cObject typoscriptObjectPath="lib.myExtensionPlugin" />
 
+The PHP method :php:`run()` **must** be marked with
+:php:`#[AsAllowedCallable]`
+(:php:`TYPO3\CMS\Core\Attribute\AsAllowedCallable`) to be callable
+via TypoScript:
+
+..  code-block:: php
+
+    use TYPO3\CMS\Core\Attribute\AsAllowedCallable;
+    use Psr\Http\Message\ServerRequestInterface;
+
+    class MyClass
+    {
+        #[AsAllowedCallable]
+        public function run(string $content, array $configuration, ServerRequestInterface $request): string
+        {
+            // Custom rendering logic
+            return 'Something';
+        }
+    }
