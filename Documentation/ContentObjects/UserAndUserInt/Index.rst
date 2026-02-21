@@ -226,7 +226,7 @@ Example 5
 
 This generates a Typoscript :typoscript:`lib:myExtensionPlugin` which can be included into a Fluid Template of the page layout.
 
-..  code-block:: fluid
+..  code-block:: html
     :caption: my_extension inclusion by TypoScript
 
     <f:cObject typoscriptObjectPath="lib.myExtensionPlugin" />
