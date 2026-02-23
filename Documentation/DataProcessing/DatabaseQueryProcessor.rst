@@ -146,5 +146,4 @@ However, performing this join will cause the fields from the MM table to be sele
 
 To prevent this issue, we use the :typoscript:`selectFields` property to explicitly define which fields should be retrieved.
 
-..  literalinclude:: /CodeSnippets/DataProcessing/TypoScript/DatabaseQueryProcessorForMMTablesAndWorkspaces
-.rst.typoscript
+..  literalinclude:: /CodeSnippets/DataProcessing/TypoScript/DatabaseQueryProcessorForMMTablesAndWorkspaces.rst.typoscript
