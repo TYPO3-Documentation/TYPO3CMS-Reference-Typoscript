@@ -133,9 +133,10 @@ and the data of the images in :php:`files`.
 
     Haiku record data dump and output
 
+..  _DatabaseQueryProcessor-examples:
 
 Example: Display sorted records from an MM table working with workspaces
-==============================
+========================================================================
 
 Please see also :ref:`dataProcessing-about-examples`.
 
@@ -145,5 +146,5 @@ However, performing this join will cause the fields from the MM table to be sele
 
 To prevent this issue, we use the :typoscript:`selectFields` property to explicitly define which fields should be retrieved.
 
-..  include:: /CodeSnippets/DataProcessing/TypoScript/DatabaseQueryProcessorForMMTablesAndWorkspaces
-.rst.txt
+..  literalinclude:: /CodeSnippets/DataProcessing/TypoScript/DatabaseQueryProcessorForMMTablesAndWorkspaces
+.rst.typoscript
