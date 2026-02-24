@@ -529,9 +529,9 @@ preview
     :type: array
 
     Configure preview link generated for the view button and other frontend view related buttons
-    in the backend. This allows to have different preview URLs depending on the record type. A common
-    use case is to have previews for blog or news records, and this feature allows you to define a different
-    preview page for content elements as well, which might be handy if those are stored in a folder.
+    in the backend. This allows different preview URLs depending on the record type. A common
+    use case is to have previews for blog and news records, and this feature allows you to define a different
+    preview page for content elements as well, which might be handy if they are stored in a folder.
 
     ..  code-block:: typoscript
        :caption: EXT:site_package/Configuration/page.tsconfig
