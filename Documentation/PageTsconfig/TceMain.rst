@@ -528,16 +528,16 @@ preview
     :name: tcemain-preview
     :type: array
 
-    Configure preview link generated for the save+view button and other frontend view related buttons
+    Configure preview link generated for the view button and other frontend view related buttons
     in the backend. This allows to have different preview URLs depending on the record type. A common
     use case is to have previews for blog or news records, and this feature allows you to define a different
-    preview page for content elements as well, which might be handy if those are stored in a sysfolder.
+    preview page for content elements as well, which might be handy if those are stored in a folder.
 
     ..  code-block:: typoscript
        :caption: EXT:site_package/Configuration/page.tsconfig
 
        TCEMAIN.preview {
-           disableButtonForDokType = 199, 254, 255
+           disableButtonForDokType = 199, 254
            <table name> {
                previewPageId = 123
                useDefaultLanguageRecord = 0
@@ -554,16 +554,16 @@ preview
     current page will be used. If the current page is not a normal page, the root page will be chosen.
 
     The :typoscript:`disableButtonForDokType` setting allows you to disable the preview button for a given list
-    of :ref:`doktypes <t3coreapi:list-of-page-types>`. If none are configured, this defaults to: 199, 254, 255 (Spacer,
-    Folder and Recycler).
+    of :ref:`doktypes <t3coreapi:list-of-page-types>`. If none are configured, this defaults to: 199, 254 (spacer
+    and folder).
 
     The :typoscript:`useDefaultLanguageRecord` defaults to `1` and ensures that translated records will use the
     uid of the default record for the preview link. You may disable this, if your extension can deal
     with the uid of translated records.
 
     The :typoscript:`fieldToParameterMap` is a mapping which allows you to select fields of the record to be
-    included as GET-parameters in the preview link. The key specifies the field name and the value specifies
-    the GET-parameter name.
+    included as GET parameters in the preview link. The key specifies the field name and the value specifies
+    the GET parameter name.
 
     Finally :typoscript:`additionalGetParameters` allow you to add arbitrary GET-parameters and even override others.
     If the plugin on your target page shows a list of records by default you will also need something like
@@ -575,7 +575,7 @@ preview
 
     ..  note::
 
-        Make sure not to set :typoscript:`options.saveDocView.<table name> = 0`, otherwise the save+view button
+        Make sure not to set :typoscript:`options.saveDocView.<table name> = 0`, otherwise the view button
         will not be displayed when editing records of your table.
 
     ..  attention::
