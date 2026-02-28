@@ -651,15 +651,11 @@ Properties
 
         ..  _useroptions-impexp-enableImportForNonAdminUser:
 
-    ..  _useroptions-liveSearch:
-
     ..  confval:: liveSearch
-
-        ..  _useroptions-liveSearch-actions:
+        :name: useroptions-liveSearch
 
         ..  confval:: actions
-
-            ..  _useroptions-liveSearch-actions-default:
+            :name: useroptions-liveSearch-actions
 
             ..  confval:: default
                 :name: useroptions-liveSearch-actions-default
