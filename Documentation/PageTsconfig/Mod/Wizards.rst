@@ -160,7 +160,7 @@ newContentElement.wizardItems
                     :name: mod-wizards-newContentElement-wizardItems-group-elements-name-before
                     :type: string (comma separated list)
                     :Path: mod.wizards.newContentElement.wizardItems.[group].elements.[name].before
-                    :Default: ``
+                    :Default: [empty string]
 
                     ..  versionadded:: 14.2
 
@@ -171,7 +171,7 @@ newContentElement.wizardItems
                     :name: mod-wizards-newContentElement-wizardItems-group-elements-name-after
                     :type: string (comma separated list)
                     :Path: mod.wizards.newContentElement.wizardItems.[group].elements.[name].after
-                    :Default: ``
+                    :Default: [empty string]
 
                     ..  versionadded:: 14.2
 
