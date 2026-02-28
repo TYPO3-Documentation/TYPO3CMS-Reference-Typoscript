@@ -865,6 +865,7 @@ Properties
             :name: useroptions-pageTree-searchInTranslatedPages
             :type: boolean
             :Path: options.pageTree.searchInTranslatedPages
+            :Default: `true`
 
             ..  versionadded:: 14.1
 
