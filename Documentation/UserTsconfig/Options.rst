@@ -916,6 +916,21 @@ Properties
             pages that have :guilabel:`Is root of web site?` checked in the page properties.
             Useful if there are several domains in one page tree.
 
+        ..  _useroptions-pageTree-searchInTranslatedPages:
+
+        ..  confval:: searchInTranslatedPages
+            :name: useroptions-pageTree-searchInTranslatedPages
+            :type: boolean
+            :Path: options.pageTree.searchInTranslatedPages
+            :Default: `true`
+
+            ..  versionadded:: 14.1
+
+            Set by default. The page tree filter supports searching for pages
+            through their translated content, making it easy to find pages in
+            multilingual installations. User permissions (language restrictions) and
+            workspace context are respected.
+
 
         ..  _useroptions-pageTree-showNavTitle:
 
