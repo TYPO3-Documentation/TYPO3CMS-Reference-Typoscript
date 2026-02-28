@@ -192,7 +192,7 @@ plugins.
         plugin. If nothing is specified, the path
         :file:`EXT:my_extension/Resources/Private/Templates` is used.
 
-    ..  confval:: view.pluginNamespace.[array]
+    ..  confval:: view.pluginNamespace
         :name: plugin-view-pluginNamespace
         :type: :ref:`data-type-string`
         :Example: :ref:`Set template paths for Extbase plugin <setup-plugin-view-example>`
