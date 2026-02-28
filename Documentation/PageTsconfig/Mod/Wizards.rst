@@ -156,6 +156,30 @@ newContentElement.wizardItems
                     If `true`, directs the user back to the :guilabel:`Page` module
                     directly instead of showing the FormEngine.
 
+                ..  confval:: before
+                    :name: mod-wizards-newContentElement-wizardItems-group-elements-name-before
+                    :type: string (comma separated list)
+                    :Path: mod.wizards.newContentElement.wizardItems.[group].elements.[name].before
+                    :Default: [empty string]
+
+                    ..  versionadded:: 14.2
+
+                    Influences the order of content elements within wizard tabs
+                    in the new content element wizard by setting `before` and `after` values in Page TSconfig.
+
+                ..  confval:: after
+                    :name: mod-wizards-newContentElement-wizardItems-group-elements-name-after
+                    :type: string (comma separated list)
+                    :Path: mod.wizards.newContentElement.wizardItems.[group].elements.[name].after
+                    :Default: [empty string]
+
+                    ..  versionadded:: 14.2
+
+                    Same as described in `before` section.
+
+                    If no before or after configuration is specified for elements,
+                    they will retain their default order (typically the order defined in TCA).
+
         ..  confval:: [group].removeItems
             :name: mod-wizards-newContentElement-wizardItems-group-removeItems
             :type: Comma separated list
