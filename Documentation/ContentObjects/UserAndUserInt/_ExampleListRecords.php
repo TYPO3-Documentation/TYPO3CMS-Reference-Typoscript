@@ -53,7 +53,7 @@ final class ExampleListRecords
             ['sorting' => $conf['reverseOrder'] ? 'DESC' : 'ASC'],
         );
         $output = [];
-        foreach ($result as $row) {
+        while ($row = $result->fetchAssociative()) {
             $output[] = $row['header'];
         }
         return implode('<br>', $output);
