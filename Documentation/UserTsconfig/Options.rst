@@ -688,7 +688,7 @@ Properties
 
                     options.liveSearch.actions.default = edit
 
-                Set default behavior for table tt_content only by inserting the
+                Set default behavior for table `tt_content` only by inserting the
                 table name in the setting:
 
                 ..  code-block:: typoscript
