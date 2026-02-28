@@ -651,6 +651,63 @@ Properties
 
         ..  _useroptions-impexp-enableImportForNonAdminUser:
 
+    ..  confval:: liveSearch
+        :name: useroptions-liveSearch
+
+        ..  confval:: actions
+            :name: useroptions-liveSearch-actions
+
+            ..  confval:: default
+                :name: useroptions-liveSearch-actions-default
+                :type: string
+                :Path: options.liveSearch.actions.default
+
+                ..  versionadded:: 14.2
+
+                This option allow integrators to set default behaviour for
+                search results. Behavior can be set globally or for a particular table.
+
+                Available actions:
+
+                *   edit – Opens the editing form for the record (default for all tables except `pages`)
+                *   layout – Opens the page in :guilabel:`Content > Layout` (default for table `pages`)
+                *   list – Opens the storage page of the record in :guilabel:`Content > Records`
+                *   preview – Opens the record in the frontend
+
+                .. important::
+
+                    Action `layout` can only be used for table :sql:`pages` and :sql:`tt_content`
+
+
+                Examples:
+
+                Set default behavior for all tables (in this case to "edit" mode):
+
+                ..  code-block:: typoscript
+                    :caption: EXT:site_package/Configuration/user.tsconfig
+
+                    options.liveSearch.actions.default = edit
+
+                Set default behavior for table `tt_content` only by inserting the
+                table name in the setting:
+
+                ..  code-block:: typoscript
+                    :caption: EXT:site_package/Configuration/user.tsconfig
+
+                    options.liveSearch.actions.tt_content.default = layout
+
+                Set default behavior for a custom table:
+
+                ..  code-block:: typoscript
+                    :caption: EXT:site_package/Configuration/user.tsconfig
+
+                    options.liveSearch.actions.my_table.default = preview
+
+                .. note::
+
+                    To use `preview` for a custom record, a valid preview configuration
+                    (`TCEMAIN.preview`) must exist for the table.
+
         ..  confval:: enableImportForNonAdminUser
             :name: useroptions-impexp-enableImportForNonAdminUser
             :type: boolean
