@@ -846,9 +846,6 @@ Properties
                 Only one label per page can be set through this method. Use the
                 PSR-14 event :ref:`t3coreapi:AfterPageTreeItemsPreparedEvent` to assign
                 multiple labels to a page.
-
-
-
         ..  todo:: does this still work with site configuration?
         ..  _useroptions-pageTree-showDomainNameWithTitle:
 
