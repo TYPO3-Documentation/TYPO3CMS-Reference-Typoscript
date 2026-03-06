@@ -52,7 +52,7 @@ jobs:
 
       - name: Open Pull Request
         if: env.FIX_NEEDED == 'true'
-        uses: repo-sync/pull-request@v2
+        uses: repo-sync/pull-request@7e79a9f5dc3ad0ce53138f01df2fad14a04831c5
         with:
           source_branch: ${{ env.branch_name }}
           destination_branch: ${{ github.ref_name }}
