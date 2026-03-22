@@ -14,6 +14,6 @@ jobs:
       pull-requests: write   # needed to open the PR
     steps:
       - name: Backport
-        uses: m-kuhn/backport@30b6e83906cc97bad3a02867181d6236becf68f9
+        uses: m-kuhn/backport@beacefbdb02ada95eb88dd9935599945ec776b73
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
