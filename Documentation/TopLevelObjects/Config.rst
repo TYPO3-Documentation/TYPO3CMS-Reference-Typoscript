@@ -497,6 +497,20 @@ Properties of 'config'
 
         Default internal target. Used by :ref:`typolink` if no target is set.
 
+    ..  confval:: linkSecurityRelValue
+        :name: config-linkSecurityRelValue
+        :type: `noreferrer` (default) or `noopener`
+
+        ..  versionadded:: 14.2
+
+        Define global `rel` attribute for external links. This can be changed
+        from the default behavior `noreferrer` to less strict option `noopener`.
+        Other values are not allowed and will fall back to the default behavior.
+
+        The specified string is added to the `rel="..."` attribute of external
+        links. If the link already contains a valid attribute from another
+        source (e.g., added manually), it remains unchanged.
+
     ..  confval:: linkVars
         :name: config-linkVars
         :type: list
