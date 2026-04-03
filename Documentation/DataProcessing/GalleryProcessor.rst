@@ -111,8 +111,8 @@ Options:
         :Example: 300
 
         If set all images get scaled to a uniform height / width. Defaults
-        to the value of the fields `imageheight` (:guilabel:`Height of each element
-        (px)`), `imagewidth` (:guilabel:`Width of each element (px)`) if used with
+        to the value of the fields `imageheight` (:guilabel:`Height of each element  (px)`),
+        `imagewidth` (:guilabel:`Width of each element (px)`) if used with
         content elements.
 
         ..  figure:: /Images/ManualScreenshots/Fluidtemplate/MediaHeight.png
