@@ -73,7 +73,12 @@ Options:
         `imageorient` (:guilabel:`Position and Alignment`) if used with content
         elements.
 
-        ..  include:: /Images/AutomaticScreenshots/Fluidtemplate/ImageOrientation.rst.txt
+        ..  figure:: /Images/ManualScreenshots/Fluidtemplate/ImageOrientation.png
+            :alt: Media orientation Palette
+            :zoom: lightbox
+            :alt: Screenshot of the image settings as found in the TYPO3 backend when editing an image
+
+            Media orientation in the content elements such as text with images
 
     ..  _GalleryProcessor-maxGalleryWidth:
 
@@ -110,7 +115,13 @@ Options:
         `imagewidth` (:guilabel:`Width of each element (px)`) if used with
         content elements.
 
-        ..  include:: /Images/AutomaticScreenshots/Fluidtemplate/MediaHeight.rst.txt
+        ..  figure:: /Images/ManualScreenshots/Fluidtemplate/MediaHeight.png
+            :alt: Media height and width in the content element Text and Images
+            :zoom: lightbox
+            :alt: Screenshots of Media Adjustments in the TYPO3 backend
+
+            Media height and width in the content element Text and Images
+
 
     ..  _GalleryProcessor-columnSpacing:
 
@@ -209,7 +220,9 @@ The content of :ref:`filesProcessedDataKey <GalleryProcessor-filesProcessedDataK
 in the :php:`GalleryProcessor` has to be equal to the content of
 :ref:`as <FilesProcessor-as>` in the :ref:`FilesProcessor <FilesProcessor>`:
 
-..  include:: /CodeSnippets/DataProcessing/TypoScript/GalleryProcessor.rst.txt
+..  figure:: /Images/ManualScreenshots/DataProcessing/GalleryProcessor.png
+    :zoom: lightbox
+    :alt: Output of a GalleryProcessor, including debug output
 
 ..  rubric:: The Fluid template
 

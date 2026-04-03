@@ -112,7 +112,9 @@ Please see also :ref:`dataProcessing-about-examples`.
 We define the :typoscript:`dataProcessing` property to use the
 :php:`DatabaseQueryProcessor`:
 
-..  include:: /CodeSnippets/DataProcessing/TypoScript/DatabaseQueryProcessor.rst.txt
+..  figure:: /Images/ManualScreenshots/DataProcessing/DatabaseQueryProcessor.png
+    :zoom: lightbox
+    :alt: Output of a DatabaseQueryProcessor, including debug output
 
 ..  rubric:: The Fluid template
 

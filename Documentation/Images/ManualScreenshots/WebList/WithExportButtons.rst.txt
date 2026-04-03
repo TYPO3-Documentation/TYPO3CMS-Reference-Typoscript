@@ -1,0 +1,7 @@
+..  Automatic screenshot: Remove this line if you want to manually change this file
+
+..  figure:: /Images/ManualScreenshots/WebList/WithExportButtons.png
+    :zoom: lightbox
+    :alt:
+
+   The :guilabel:`Content > Records` module with export buttons after activating the single-table mode

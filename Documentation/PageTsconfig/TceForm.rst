@@ -482,7 +482,9 @@ config.treeConfig
 description
 -----------
 
-..  include:: /Images/AutomaticScreenshots/Input1.rst.txt
+..  figure:: /Images/ManualScreenshots/Input1.png
+    :zoom: lightbox
+    :alt: A common input field in the TYPO3 backend
 
 ..  confval:: description
     :name: tceform-description

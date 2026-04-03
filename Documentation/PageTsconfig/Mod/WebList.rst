@@ -101,7 +101,7 @@ Example: Use semicolon as delimiter CSV downloads
 
 ..  include:: /CodeSnippets/PageTSconfig/Mod/CsvExport.rst.txt
 
-..  include:: /Images/AutomaticScreenshots/WebList/ExportDialog.rst.txt
+..  include:: /Images/ManualScreenshots/WebList/ExportDialog.rst.txt
 
 
 ..  index::
@@ -127,7 +127,7 @@ Example: Use single quotes as quoting character for CSV downloads
 
 ..  include:: /CodeSnippets/PageTSconfig/Mod/CsvExport.rst.txt
 
-..  include:: /Images/AutomaticScreenshots/WebList/ExportDialog.rst.txt
+..  include:: /Images/ManualScreenshots/WebList/ExportDialog.rst.txt
 
 ..  index::
     deniedNewTables
@@ -573,9 +573,9 @@ noExportRecordsLinks
     This option is for example important to disable batch
     download of sensitive data via t3d exports.
 
-    ..  include:: /Images/AutomaticScreenshots/WebList/WithExportButtons.rst.txt
+    ..  include:: /Images/ManualScreenshots/WebList/WithExportButtons.rst.txt
 
-    ..  include:: /Images/AutomaticScreenshots/WebList/NoExportButtons.rst.txt
+    ..  include:: /Images/ManualScreenshots/WebList/NoExportButtons.rst.txt
 
     ..  note::
         This option only hides the buttons in the list module. Bulk export of

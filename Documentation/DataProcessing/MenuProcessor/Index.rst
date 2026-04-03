@@ -240,4 +240,6 @@ This generated menu can be used in Fluid like this:
 The array now contains the menu items on level one. Each item in return has the
 menu items of level 2 in an array called :php:`children`.
 
-..  include:: /Images/AutomaticScreenshots/DataProcessing/MenuProcessor.rst.txt
+..  figure:: /Images/ManualScreenshots/DataProcessing/MenuProcessor.png
+    :zoom: lightbox
+    :alt: Output of a MenuProcessor, including debug output

@@ -102,4 +102,6 @@ configuration. As the current page is not translated into German, the
 German language has the :php:`item.available` set to `false`. It therefore
 does not get linked in the template.
 
-..  include:: /Images/AutomaticScreenshots/DataProcessing/LanguageMenuProcessor.rst.txt
+..  figure:: /Images/ManualScreenshots/DataProcessing/LanguageMenuProcessor.png
+    :zoom: lightbox
+    :alt: Output of a LanguageMenuProcessor, including debug output
