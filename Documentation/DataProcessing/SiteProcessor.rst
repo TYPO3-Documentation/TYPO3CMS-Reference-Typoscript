@@ -55,4 +55,6 @@ In the Fluid template the properties of the site configuration can be accessed:
 
 The array now contains the information from the site configuration:
 
-..  include:: /Images/AutomaticScreenshots/DataProcessing/SiteProcessor.rst.txt
+..  figure:: /Images/ManualScreenshots/DataProcessing/SiteProcessor.png
+    :zoom: lightbox
+    :alt: Output of a SiteProcessor, including debug output

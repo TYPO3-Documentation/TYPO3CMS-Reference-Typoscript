@@ -17,7 +17,8 @@ data processor:
 The available configuration depends on the implementation of the
 specific custom data processor, of course.
 
-Example output
-==============
+..  rubric:: Example output
 
-.. include:: /Images/AutomaticScreenshots/DataProcessing/CustomDataProcessors.rst.txt
+..  figure:: /Images/ManualScreenshots/DataProcessing/CustomDataProcessors.png
+    :zoom: lightbox
+    :alt: Output of a CustomDataProcessors, including debug output

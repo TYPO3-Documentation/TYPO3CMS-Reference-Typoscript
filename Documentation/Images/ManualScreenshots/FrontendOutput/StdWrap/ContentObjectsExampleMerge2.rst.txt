@@ -1,4 +1,0 @@
-.. Manual Screenshot
-
-.. figure:: /Images/ManualScreenshots/FrontendOutput/StdWrap/ContentObjectsExampleMerge2.png
-   :class: with-shadow
