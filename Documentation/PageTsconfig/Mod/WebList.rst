@@ -643,7 +643,7 @@ table.[tableName].displayColumnSelector
     :type:  boolean
 
     If set to false, the column selector in the title row of the specified
-    table gets hidden. If the column selctors have been disabled globally
+    table gets hidden. If the column selectors have been disabled globally
     this option can be used to enable it for a specific table.
 
 ..  _pageTsConfigWebList-table-tableName-displayColumnSelector-example-disable:
