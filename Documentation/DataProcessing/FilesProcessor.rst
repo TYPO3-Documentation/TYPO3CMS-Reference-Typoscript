@@ -186,7 +186,9 @@ Please see also :ref:`dataProcessing-about-examples`.
 
 Using the :php:`FilesProcessor` the following scenario is possible:
 
-..  include:: /CodeSnippets/DataProcessing/TypoScript/FilesProcessor.rst.txt
+..  figure:: /Images/ManualScreenshots/DataProcessing/FilesProcessor.png
+    :zoom: lightbox
+    :alt: Output of a FilesProcessor, including debug output
 
 ..  rubric:: The Fluid template
 

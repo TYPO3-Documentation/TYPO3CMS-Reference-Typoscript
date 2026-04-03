@@ -136,11 +136,13 @@ Example:
 
 The result is this configuration:
 
-.. include:: /Images/ManualScreenshots/FrontendOutput/StdWrap/ContentObjectsExampleMerge1.rst.txt
+.. figure:: /Images/ManualScreenshots/FrontendOutput/StdWrap/ContentObjectsExampleMerge1.png
+   :zoom: lightbox
 
 Notice that :typoscript:`.value` was *not* cleared, because these two arrays
 are simply merged:
 
-.. include:: /Images/ManualScreenshots/FrontendOutput/StdWrap/ContentObjectsExampleMerge2.rst.txt
+.. figure:: /Images/ManualScreenshots/FrontendOutput/StdWrap/ContentObjectsExampleMerge2.png
+   :zoom: lightbox
 
 So hence the line :typoscript:`page.20.value >` in the above example is useless.

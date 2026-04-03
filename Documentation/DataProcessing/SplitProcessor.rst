@@ -122,4 +122,6 @@ In the Fluid template then iterate over the split data:
 
 The array now contains the split strings:
 
-..  include:: /Images/AutomaticScreenshots/DataProcessing/SplitProcessor.rst.txt
+..  figure:: /Images/ManualScreenshots/DataProcessing/SplitProcessor.png
+    :zoom: lightbox
+    :alt: Output of a SplitProcessor, including debug output
