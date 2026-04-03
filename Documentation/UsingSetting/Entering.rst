@@ -92,14 +92,11 @@ the submodule :guilabel:`Edit TypoScript Record`.
 When you click on :guilabel:`Edit the whole TypoScript record` you can edit
 the complete record:
 
-..  figure:: /Images/ManualScreenshots/TypoScriptModule/WholeTypoScriptRecord.png
+..  figure:: /Images/ManualScreenshots/TypoScriptModule/ConstantAndSetupRecord.png
     :alt: The submodule whole TypoScript record in edit mode
 
 As the TypoScript record is just a normal record it can also be seen in and
-edited from the :guilabel:`Content > Records` module:
-
-..  figure:: /Images/ManualScreenshots/TypoScriptModule/TypoScriptRecordListView.png
-    :alt: The TypoScript record in the Content Media module
+edited from the :guilabel:`Content > Records` module.
 
 ..  index:: TypoScript; Include as file
 ..  _typoscript-syntax-typoscript-templates-structure-includes:
@@ -172,7 +169,7 @@ Include other TypoScript records
 Apart from this, it is also possible to include other TypoScript template
 records (in the field called :guilabel:`Include TypoScript records`).
 
-..  figure:: /Images/ManualScreenshots/TypoScriptModule/IncludeTypoScriptRecord.png
+..  figure:: /Images/ManualScreenshots/TypoScriptModule/IncludeTypoScriptSet.png
     :alt: Include TypoScript records
 
 ..  index:: TypoScript; Included TypoScript

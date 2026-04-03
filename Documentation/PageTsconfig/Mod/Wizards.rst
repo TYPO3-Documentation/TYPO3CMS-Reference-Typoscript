@@ -254,12 +254,6 @@ elements), other groups follow unchanged:
 
     mod.wizards.newRecord.order = tt_news
 
-..  figure:: /Images/ManualScreenshots/List/NewRecordWizardNewOrder.png
-    :alt: The position of News changed after modifying the New record screen
-
-    The position of News changed after modifying the New record screen
-
-
 ..  index::
     Wizards; record
     New Record wizard; After page button
