@@ -509,7 +509,7 @@ Properties of 'config'
 
         The specified string is added to the `rel="..."` attribute of external
         links. If the link already contains a valid attribute from another
-        source (e.g., added manually), it remains unchanged.
+        source (for example added manually), it remains unchanged.
 
     ..  confval:: linkVars
         :name: config-linkVars
