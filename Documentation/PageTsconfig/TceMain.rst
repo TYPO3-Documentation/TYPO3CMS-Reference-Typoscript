@@ -534,21 +534,21 @@ preview
     preview page for content elements as well, which might be handy if they are stored in a folder.
 
     ..  code-block:: typoscript
-       :caption: EXT:site_package/Configuration/page.tsconfig
+        :caption: EXT:site_package/Configuration/page.tsconfig
 
-       TCEMAIN.preview {
-           disableButtonForDokType = 199, 254
-           <table name> {
-               previewPageId = 123
-               useDefaultLanguageRecord = 0
-               fieldToParameterMap {
-                   uid = tx_myextension_pi1[showUid]
-               }
-               additionalGetParameters {
-                   tx_myextension_pi1.special = HELLO # results in tx_myextension_pi1[special]
-               }
-           }
-       }
+        TCEMAIN.preview {
+            disableButtonForDokType = 199, 254
+            <table name> {
+                previewPageId = 123
+                fieldToParameterMap {
+                    uid = tx_myextension_pi1[showUid]
+                }
+                additionalGetParameters {
+                    tx_myextension_pi1.controller = MyController # results in tx_myextension_pi1[controller]
+                    tx_myextension_pi1.action = show # results in tx_myextension_pi1[action]
+                }
+            }
+        }
 
     The :typoscript:`previewPageId` is the uid of the page to use for preview. If this setting is omitted the
     current page will be used. If the current page is not a normal page, the root page will be chosen.
