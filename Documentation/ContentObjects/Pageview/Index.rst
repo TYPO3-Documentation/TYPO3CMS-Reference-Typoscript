@@ -319,9 +319,9 @@ If the backend layout is named "TwoColumns" it is resovled to
 For all these templates
 :doc:`partial  <t3viewhelper:Global/Render#viewhelper-argument-typo3-cms-fluid-viewhelpers-renderviewhelper-partial>`
 are expected in folder
-:path:`EXT:my_sitepackage/Resources/Private/PageView/Pages/Partials` and
+:path:`EXT:my_sitepackage/Resources/Private/PageView/Partials` and
 :ref:`layouts <t3viewhelper:typo3fluid-fluid-layout>` in
-:path:`EXT:my_sitepackage/Resources/Private/PageView/Pages/Layouts`.
+:path:`EXT:my_sitepackage/Resources/Private/PageView/Layouts`.
 
 ..  _cobj-pageview-paths-example-extended:
 
