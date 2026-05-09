@@ -12,8 +12,8 @@ return [
     ],
     [
         'action' => 'createCodeSnippet',
-        'caption' => 'EXT:fluid_styled_content/Resources/Private/Templates/MenuRecentlyUpdated.html',
-        'sourceFile' => 'EXT:fluid_styled_content/Resources/Private/Templates/MenuRecentlyUpdated.html',
+        'caption' => 'EXT:fluid_styled_content/Resources/Private/Templates/MenuRecentlyUpdated.fluid.html',
+        'sourceFile' => 'EXT:fluid_styled_content/Resources/Private/Templates/MenuRecentlyUpdated.fluid.html',
         'targetFileName' => 'CodeSnippets/Menu/Template/MenuRecentlyUpdated.rst.txt',
     ],
     // special = keywords
@@ -25,8 +25,8 @@ return [
     ],
     [
         'action' => 'createCodeSnippet',
-        'caption' => 'EXT:fluid_styled_content/Resources/Private/Templates/MenuRelatedPages.html',
-        'sourceFile' => 'EXT:fluid_styled_content/Resources/Private/Templates/MenuRelatedPages.html',
+        'caption' => 'EXT:fluid_styled_content/Resources/Private/Templates/MenuRelatedPages.fluid.html',
+        'sourceFile' => 'EXT:fluid_styled_content/Resources/Private/Templates/MenuRelatedPages.fluid.html',
         'targetFileName' => 'CodeSnippets/Menu/Template/MenuRelatedPages.rst.txt',
     ],
     // special = directory
@@ -38,8 +38,8 @@ return [
     ],
     [
         'action' => 'createCodeSnippet',
-        'caption' => 'EXT:fluid_styled_content/Resources/Private/Templates/MenuSubpages.html',
-        'sourceFile' => 'EXT:fluid_styled_content/Resources/Private/Templates/MenuSubpages.html',
+        'caption' => 'EXT:fluid_styled_content/Resources/Private/Templates/MenuSubpages.fluid.html',
+        'sourceFile' => 'EXT:fluid_styled_content/Resources/Private/Templates/MenuSubpages.fluid.html',
         'targetFileName' => 'CodeSnippets/Menu/Template/MenuSubpages.rst.txt',
     ],
     // special = list
@@ -51,8 +51,8 @@ return [
     ],
     [
         'action' => 'createCodeSnippet',
-        'caption' => 'EXT:fluid_styled_content/Resources/Private/Templates/MenuPages.html',
-        'sourceFile' => 'EXT:fluid_styled_content/Resources/Private/Templates/MenuPages.html',
+        'caption' => 'EXT:fluid_styled_content/Resources/Private/Templates/MenuPages.fluid.html',
+        'sourceFile' => 'EXT:fluid_styled_content/Resources/Private/Templates/MenuPages.fluid.html',
         'targetFileName' => 'CodeSnippets/Menu/Template/MenuPages.rst.txt',
     ],
     // special = categories
@@ -64,15 +64,15 @@ return [
     ],
     [
         'action' => 'createCodeSnippet',
-        'caption' => 'EXT:fluid_styled_content/Resources/Private/Templates/MenuCategorizedPages.html',
-        'sourceFile' => 'EXT:fluid_styled_content/Resources/Private/Templates/MenuCategorizedPages.html',
+        'caption' => 'EXT:fluid_styled_content/Resources/Private/Templates/MenuCategorizedPages.fluid.html',
+        'sourceFile' => 'EXT:fluid_styled_content/Resources/Private/Templates/MenuCategorizedPages.fluid.html',
         'targetFileName' => 'CodeSnippets/Menu/Template/MenuCategorizedPages.rst.txt',
     ],
     // special = rootline
     [
         'action' => 'createCodeSnippet',
-        'caption' => 'EXT:site_package/Resources/Private/PageView/Partials/Navigation/Breadcrumb.html',
-        'sourceFile' => 'EXT:site_package/Resources/Private/PageView/Partials/Navigation/Breadcrumb.html',
+        'caption' => 'EXT:site_package/Resources/Private/Templates/Partials/Navigation/Breadcrumb.fluid.html',
+        'sourceFile' => 'EXT:site_package/Resources/Private/Templates/Partials/Navigation/Breadcrumb.fluid.html',
         'targetFileName' => 'CodeSnippets/Menu/Template/BreadcrumbDataProcessor.rst.txt',
     ],
 ];
