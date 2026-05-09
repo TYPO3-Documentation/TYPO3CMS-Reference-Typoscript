@@ -6,10 +6,6 @@
 `record-transformation` data processor
 ======================================
 
-..  versionadded:: 13.2
-    A new TypoScript data processor for :ref:`FLUIDTEMPLATE <cobj-fluidtemplate>` and
-    :typoscript:`PAGEVIEW` has been added.
-
 The :php:`\TYPO3\CMS\Frontend\DataProcessing\RecordTransformationProcessor`,
 alias `record-transformation`, can typically be used in
 conjunction with the DatabaseQuery Data Processor. The DatabaseQuery Data

@@ -14,11 +14,10 @@ standard TypoScript :ref:`select` semantics. The result is then passed to the
 This way a :ref:`cobj-fluidtemplate` cObject can iterate over the
 array of records.
 
-..  contents:: Table of contents
+The :typoscript:`database-query` processor can be used in combination with the
+:ref:`RecordTransformationProcessor` to use additional computed information.
 
-..  versionadded:: 13.2
-    The :typoscript:`database-query` processor can be used in combination with the
-    :ref:`RecordTransformationProcessor` to use additional computed information.
+..  contents:: Table of contents
 
 ..  _DatabaseQueryProcessor-options:
 
@@ -87,8 +86,6 @@ Options:
 
 Example: Usage in combination with the RecordTransformationProcessor
 ====================================================================
-
-..  versionadded:: 13.2
 
 Example usage for the data processor in conjunction with the
 :ref:`RecordTransformationProcessor`.

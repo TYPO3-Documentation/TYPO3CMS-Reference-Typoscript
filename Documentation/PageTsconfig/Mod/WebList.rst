@@ -263,10 +263,6 @@ downloadPresets
     :name: mod-web-list-downloadPresets
     :type: array of presets
 
-    ..  versionadded:: 13.2
-        A new function has been introduced that makes it possible to select the data columns
-        to be exported from a list of configurable presets.
-
     This property adds presets of preselected fields to the download area in
     the :guilabel:`Content > Records` backend module.
 
@@ -569,10 +565,6 @@ noExportRecordsLinks
     :type:  boolean
     :Default: 0
 
-    ..  versionchanged:: 13.1.0, 12.4.11
-        Up until these versions this option also hid the
-        :guilabel:`Download` button used for CSV export.
-
     If set, the :guilabel:`Download` button is hidden
     in the :guilabel:`Content > Records` module.
 
@@ -742,8 +734,6 @@ searchLevel.default
 ..  confval:: searchLevel.default
     :name: mod-web-list-searchLevel-default
     :type: integer
-
-    ..  versionadded:: 13.2
 
     This option allows to define one of the available level options
     as the default level to use.

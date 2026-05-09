@@ -14,8 +14,6 @@ Examples
 Using the AVIF format
 =====================
 
-..  versionadded:: 13.3
-
 AVIF is an image format, that is supported by most modern browsers, and usually
 has a better compression (= smaller file size) than jpg files.
 

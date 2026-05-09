@@ -9,10 +9,10 @@
 TypoScript backend module
 =========================
 
-..  versionchanged:: 13.1
+..  warning::
     TypoScript on a per-site basis can now be entered via
     :ref:`sites and sets <typoscript-site-sets>`. It is still possible but not
-    recommended to keep TypoScript in the backend in TYPO3 13.
+    recommended to keep TypoScript in the backend in TYPO3.
 
 TypoScript can be stored in a database record or in a file. Storing it in a file
 is recommended as you can keep it under version control, deploy it etc.
@@ -130,12 +130,6 @@ used to include TypoScript contained inside files:
 
 Include TypoScript from extensions
 ----------------------------------
-
-..  versionchanged:: 13.1
-    TypoScript on a per-site basis can now be entered via
-    :ref:`sites and sets <typoscript-site-sets>`. If the extension to be used
-    already supports site sets, those should be used instead of TypoScript
-    includes in the record.
 
 It is also possible to "Include TypoScript sets" from extensions in the
 TypoScript record.

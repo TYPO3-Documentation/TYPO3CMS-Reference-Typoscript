@@ -326,8 +326,6 @@ parenthesis. These predefined functions are available:
 Null coalescing operator `??` for TypoScript constants
 ======================================================
 
-..  versionadded:: 13.1
-
 TypoScript constants expressions support a null coalescing
 operator (`??`) as a way for providing a migration path from a legacy constant
 name to a newer name, while providing full backwards compatibility for the

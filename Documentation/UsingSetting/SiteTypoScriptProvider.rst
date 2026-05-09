@@ -7,10 +7,6 @@
 TypoScript provider for sites and sets
 ======================================
 
-..  versionadded:: 13.1
-    TYPO3 sites have been enhanced to be able to operate as a TypoScript template
-    provider.
-
 By design, a site TypoScript provider always defines a new scope
 (root-flag) and does not inherit from parent sites (for example, sites up in the
 root line). This behavior is not configurable by design, as TypoScript code sharing

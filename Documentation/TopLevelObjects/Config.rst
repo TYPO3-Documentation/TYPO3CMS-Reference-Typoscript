@@ -794,8 +794,6 @@ Properties of 'config'
         :name: config-sendCacheHeadersForSharedCaches
         :type: `auto`, `force`, or empty
 
-        ..  versionadded:: 13.3
-
         When working with proxies, keeping a cached version for a period of
         time and answering requests from the client will take load
         off TYPO3 / the webserver, while at the same time notifying the

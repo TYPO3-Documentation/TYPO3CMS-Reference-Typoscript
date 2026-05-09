@@ -6,8 +6,6 @@
 `page-content` data processor
 =============================
 
-..  versionadded:: 13.2
-
 This data processor :php:`\TYPO3\CMS\Frontend\DataProcessing\PageContentFetchingProcessor`,
 alias `page-content`, loads all :sql:`tt_content` records from the current
 :ref:`backend layout <t3coreapi:be-layout>` into

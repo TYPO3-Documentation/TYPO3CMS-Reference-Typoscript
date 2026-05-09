@@ -17,13 +17,11 @@ It can be used in :ref:`content elements <t3coreapi:adding-your-own-content-elem
 or to generate content in the top-level page object
 (see :ref:`the example on this page <cobj-fluidtemplate-examples>`).
 
-..  versionadded:: 13.1
+..  hint::
 
-    Starting with TYPO3 v13.1 you can use the
+    You can use the
     :ref:`PAGEVIEW <cobj-pageview>` content object for templates on page-level.
     It reduces the amount of TypoScript needed to render a page in the TYPO3 frontend.
-
-    See section :ref:`cobj-fluidtemplate-migration`.
 
 ..  contents:: Table of content
     :local:
@@ -33,11 +31,6 @@ or to generate content in the top-level page object
 
 Data available in Fluid templates
 =================================
-
-..  versionadded:: 13.2
-    The FLUIDTEMPLATE can now be used in combination with the
-    :ref:`RecordTransformationProcessor` for additional computed information.
-    See also :ref:`RecordTransformationProcessor-fluidtemplate-example`
 
 The following data is available in the Fluid template:
 
@@ -354,10 +347,6 @@ Properties
 Example: Usage with RecordTransformationProcessor
 =================================================
 
-..  versionadded:: 13.2
-    The FLUIDTEMPLATE can now be used in combination with the
-    :ref:`RecordTransformationProcessor` for additional computed information.
-
 The :ref:`RecordTransformationProcessor` transforms the current data array of
 the `FLUIDTEMPLATE` to a record object.
 
@@ -377,9 +366,8 @@ For usage of the variables within Fluid see
 Example
 =======
 
-..  versionadded:: 13.1
-    It is recommended to use :ref:`PAGEVIEW <cobj-pageview>` for page templates
-    starting with TYPO3 v13.1. See
+..  hint::
+    It is recommended to use :ref:`PAGEVIEW <cobj-pageview>` for page templates. See
     :ref:`How to migrate to PAGEVIEW <cobj-fluidtemplate-migration>`
 
 The Fluid template in

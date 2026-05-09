@@ -168,13 +168,6 @@ format
 
     or via the :ref:`gifbuilder-properties-quality` property on a per-image basis.
 
-    ..  versionchanged:: 13.0
-        The default format is now "png". Before TYPO3 v13.0 this was "gif".
-
-    ..  versionadded:: 13.0
-        Support for WebP and AVIF have been added.
-
-
 .. _gifbuilder-properties-maxHeight:
 
 maxHeight
@@ -216,9 +209,6 @@ offset
 
 quality
 =======
-
-..  versionadded:: 13.0
-    The quality can be set for WebP images.
 
 ..  confval:: quality
     :name: gifbuilder-properties-quality
@@ -319,15 +309,3 @@ XY
     :Default: 120,50
 
     Size of the image file.
-
-
-.. _gifbuilder-properties-reduceColors:
-
-reduceColors
-============
-
-..  confval:: reduceColors
-    :name: gifbuilder-properties-reduceColors
-
-    ..  versionchanged:: 13.0
-        This property has been removed.

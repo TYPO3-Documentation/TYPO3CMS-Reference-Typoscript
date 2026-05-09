@@ -56,11 +56,6 @@ both define the same property.
 Setting default user TSconfig
 =============================
 
-..  versionadded:: 13.0
-    Starting with TYPO3 v13.0 user TSconfig in a file named
-    :file:`Configuration/user.tsconfig` in an extension is automatically loaded
-    during build time.
-
 User TSconfig is designed to be individual for users or groups of
 users. However, good defaults can be defined and overridden by group or
 user-specific TSconfig.

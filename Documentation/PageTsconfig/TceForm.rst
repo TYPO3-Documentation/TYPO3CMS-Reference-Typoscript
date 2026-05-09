@@ -309,8 +309,6 @@ be substituted by the given value.
 colorPalette
 ------------
 
-..  versionadded:: 13.0
-
 ..  confval:: colorPalette
     :name: tceform-colorPalette
     :type: string

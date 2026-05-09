@@ -19,12 +19,11 @@ The `wizards` section allows to customize the *New record wizard* and the
 newContentElement.wizardItems
 =============================
 
-..  versionchanged:: 13.0
-    New content elements added via TCA to the
-    :ref:`items <t3tca:columns-select-properties-items>` of field :sql:`CType`
-    of table :sql:`tt_content` are automatically added to the New Content Element
-    Wizard. The following page TSconfig can be used to override values set via
-    TCA.
+New content elements added via TCA to the
+:ref:`items <t3tca:columns-select-properties-items>` of field :sql:`CType`
+of table :sql:`tt_content` are automatically added to the New Content Element
+Wizard. The following page TSconfig can be used to override values set via
+TCA.
 
 ..  confval-menu::
     :display: tree
@@ -38,16 +37,10 @@ newContentElement.wizardItems
         together by type. Each such group can be configured independently. The
         four default groups are: `default`, `special`, `forms` and `plugins`.
 
-        ..  versionchanged:: 13.0
-            The group `common` was renamed to `default`. A permanent migration is in
-            place.
-
         ..  confval:: removeItems
             :name: mod-wizards-newContentElement-wizardItems-removeItems
             :type: comma separated list of groups
             :Path: mod.wizards.newContentElement.wizardItems.removeItems
-
-            ..  versionchanged:: 13.0
 
             With this setting one or several groups with all their content
             elements can be hidden in the New Content Element Wizard.
@@ -77,26 +70,6 @@ newContentElement.wizardItems
             :Path: mod.wizards.newContentElement.wizardItems.[group].header
 
             Name of the group.
-
-        ..  confval:: [group].show
-            :name: mod-wizards-newContentElement-wizardItems-group-show
-            :type: string, comma-separated list of items
-            :Path: mod.wizards.newContentElement.wizardItems.[group].show
-
-            ..  versionchanged:: 13.0
-                The configuration of the New Content Element Wizard has been
-                changed to automatically registering the groups and elements
-                from the TCA configuration.
-
-                The previously used option to show / hide elements
-                :typoscript:`mod.wizards.newContentElement.wizardItems.<group>.show` is
-                not evaluated anymore.
-
-                All configured groups and elements are automatically shown. Removing these
-                groups and elements from the New Content Element Wizard can be done via
-                the option :confval:`removeItems <mod-wizards-newContentElement-wizardItems-removeItems>` and
-                :confval:`[group].removeItems <mod-wizards-newContentElement-wizardItems-group-removeItems>`
-                options.
 
         ..  confval:: [group].elements
             :name: mod-wizards-newContentElement-wizardItems-group-elements
@@ -184,8 +157,6 @@ newContentElement.wizardItems
             :name: mod-wizards-newContentElement-wizardItems-group-removeItems
             :type: Comma separated list
             :Path: mod.wizards.newContentElement.wizardItems.[group].removeItems
-
-            ..  versionchanged:: 13.0
 
             Comma separated list of content elements that should be hidden in
             [group].

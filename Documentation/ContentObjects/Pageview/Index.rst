@@ -6,11 +6,6 @@
 PAGEVIEW
 ========
 
-..  versionadded:: 13.1
-    The content object PAGEVIEW can be used instead of
-    `FLUIDTEMPLATE <https://docs.typo3.org/permalink/t3tsref:cobj-template>`_
-    to configure the HTML body of a page using Fluid templates.
-
 This content object has very specific conventions and
 defaults, that requires (and allows) less configuration as compared to using
 `FLUIDTEMPLATE <https://docs.typo3.org/permalink/t3tsref:cobj-template>`_.

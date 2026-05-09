@@ -62,9 +62,6 @@ add global static page TSconfig before anything else is loaded.
 Page TSconfig on site level
 ===========================
 
-..  versionadded:: 13.1
-    Page TSconfig can be included on a per site level.
-
 Page TSconfig can be defined on a site level by placing a file called
 :file:`page.tsconfig` in the storage directory of the site
 (:ref:`config/sites/<identifier>/ <t3coreapi:site-storage>`).

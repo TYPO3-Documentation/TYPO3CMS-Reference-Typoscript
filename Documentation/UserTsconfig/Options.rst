@@ -747,37 +747,6 @@ Properties
     ..  confval:: pageTree
         :name: useroptions-pageTree
 
-        ..  confval:: overridePageModule
-            :name: useroptions-pageTree-overridePageModule
-
-            ..  versionchanged:: 13.0
-                This setting has been removed.
-
-            In order to replace the :guilabel:`Content > Layout` module within a third-party
-            extension, such as TemplaVoila, it is possible to create a custom module entry
-            in an extension's :file:`Configuration/Backend/Modules.php` with the following
-            entry:
-
-            ..  code-block:: php
-                :caption: EXT:my_extension/Configuration/Backend/Modules.php
-
-                return [
-                    'my_module' => [
-                        'parent' => 'web',
-                        'position' => ['before' => '*'],
-                        'access' => 'user',
-                        'aliases' => ['web_layout'],
-                        'path' => '/module/my_module',
-                        'iconIdentifier' => 'module-page',
-                        'labels' => 'LLL:EXT:backend/Resources/Private/Language/locallang_mod.xlf',
-                        'routes' => [
-                            '_default' => [
-                                'target' => \MyVendor\MyExtension\Controller\MyController::class . '::mainAction',
-                            ],
-                        ],
-                    ],
-                ];
-
         ..  _useroptions-pageTree-altElementBrowserMountPoints:
 
         ..  confval:: altElementBrowserMountPoints
@@ -873,10 +842,6 @@ Properties
             :name: useroptions-pageTree-label
             :type: list of page IDs
             :Path: options.pageTree.label.<page-id>
-
-            ..  versionadded:: 13.1
-                This setting is the successor of the removed
-                :ref:`t3tsref/13:useroptions-pageTree-backgroundColor`.
 
             Labels offer customizable color markings for tree nodes and require an
             associated label for accessibility.

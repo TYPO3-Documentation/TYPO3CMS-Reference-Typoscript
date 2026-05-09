@@ -1,0 +1,60 @@
+:orphan:
+
+..  _not-found:
+
+===================
+Content was removed
+===================
+
+..  _not-found-v14:
+
+TYPO3 v14
+=========
+
+
+..  _appendix-include-internal-variables:
+..  _TypoScript-Frontend-Controller:
+..  _appendix-include-tsfe-id:
+..  _appendix-include-tsfe-type:
+..  _appendix-include-tsfe-type-migration:
+..  _appendix-include-tsfe-page:
+..  _appendix-include-tsfe-feuser:
+..  _appendix-include-tsfe-feuser-migration:
+..  _appendix-include-tsfe-rootLine:
+..  _appendix-include-tsfe-table-row:
+
+TypoScriptFrontendController, TSFE
+----------------------------------
+
+..  versionchanged:: 14.0
+
+    Deprecated with `Deprecation: #105230 - TypoScriptFrontendController and $GLOBALS['TSFE'] <https://docs.typo3.org/permalink/changelog:deprecation-105230-1728374467>`_,
+    removed with `Breaking: #107831 - Removed TypoScriptFrontendController <https://docs.typo3.org/permalink/changelog:breaking-107831-1761307521>`_.
+
+See also: `TypoScriptFrontendController, TSFE <https://docs.typo3.org/permalink/t3tsref:typoscript-frontend-controller@v13>`_
+
+
+..  _not-found-v13:
+
+TYPO3 v13
+=========
+
+
+..  _condition-function-loginUser:
+..  _condition-function-usergroup:
+
+Conditions loginUser(), usergroup() have been removed
+-----------------------------------------------------
+
+..  versionchanged:: 13.0
+    Deprecated with `Deprecation: #100349 - TypoScript loginUser() and usergroup() conditions <https://docs.typo3.org/permalink/changelog:deprecation-100349-1680097287>`_,
+    removed with v13. Use the variables
+    :ref:`condition-frontend-user` and :ref:`condition-backend-user` instead.
+
+
+.. _gifbuilder-properties-reduceColors:
+
+GIFBUILDER property reduceColors has been removed
+-------------------------------------------------
+
+..  versionchanged:: 13.0

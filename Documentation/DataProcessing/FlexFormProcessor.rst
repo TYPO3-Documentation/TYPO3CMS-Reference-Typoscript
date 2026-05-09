@@ -40,8 +40,6 @@ Options
 
     ..  confval:: references
         :name: FlexFormProcessor-references
-
-        ..  versionadded:: 13.0
         :Required: false
         :type: array
 
@@ -122,8 +120,6 @@ Example with a custom sub-processor
 
 Example of resolving FAL references
 -----------------------------------
-
-..  versionadded:: 13.0
 
 Example of an advanced TypoScript configuration, which processes the field
 :xml:`my_flexform_field`, resolves its FAL references and assigns the array to

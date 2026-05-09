@@ -8,10 +8,6 @@
 Provide frontend TypoScript in a TYPO3 extension
 ================================================
 
-..  versionchanged:: 13.1
-    TypoScript on a per-site basis can now be included via
-    :ref:`sites and sets <typoscript-site-sets>`.
-
 ..  note::
 
     This part is written for extension developers.
@@ -36,8 +32,8 @@ and :ref:`how to provide TypoScript for both TYPO3 v13 and v12 <extdev-add-typos
 ..  _extdev-add-typoscript-sets:
 ..  _extdev-add-typoscript-sets-typoscript:
 
-TypoScript provided as site set (only TYPO3 v13.1 and above)
-============================================================
+TypoScript provided as site set
+===============================
 
 The file structure of the extension could, for example look like this:
 
@@ -126,12 +122,6 @@ for example:
 
 Supporting both site sets and TypoScript records
 ================================================
-
-..  versionchanged:: 13.1
-    With TYPO3 13.1
-    `site sets as TypoScript provider <https://docs.typo3.org/permalink/t3coreapi:site-sets-typoscript>`_
-    where introduced. Existing extensions **should** support site sets as well as
-    TypoScript records for backward compatibility reasons.
 
 ..  warning::
     For historic reasons you might still see filenames like :file:`setup.ts` and

@@ -59,9 +59,6 @@ Properties
 applicationcontext
 ------------------
 
-..  versionadded:: 13.0
-
-
 ..  confval:: applicationcontext
     :name: data-applicationcontext
 
@@ -91,10 +88,6 @@ asset
 
 ..  confval:: asset
     :name: data-asset
-
-    ..  versionadded:: 13.2
-        Local resources can be cache-busted. It is no longer necessary
-        to rename the asset when it is exchanged, forcing browsers to reload the file.
 
     The getText `asset` function includes assets like images, CSS or
     JavaScript that are cache-busted.
@@ -595,18 +588,6 @@ Get the value of user-defined field :sql:`tx_myextension_myfield` in the root li
     :caption: EXT:my_extension/Configuration/TypoScript/setup.typoscript
 
     lib.foo.data = levelfield : -1, tx_myextension_myfield, slide
-
-..  versionchanged:: 13.2
-
-    Until TYPO3 v13 it was required to do additional configuration in
-    :ref:`$GLOBALS['TYPO3_CONF_VARS']['FE']['addRootLineFields'] <t3coreapi:typo3ConfVars_fe_addRootLineFields>` to
-    use custom fields.
-
-    To stay compatible with both TYPO3 v12 and v13, add the following to your
-    extension's :file:`ext_localconf.php`:
-
-    ..  literalinclude:: _Data/_addRootlineFields_ext_localconf.php
-        :caption: EXT:my_extension/ext_localconf.php
 
 ..  _data-type-gettext-levelmedia:
 
@@ -1118,7 +1099,6 @@ TSFE
     Migrate these properties to the config property. You can access the
     TypoScript properties directly, for example, via
     :typoscript:`lib.something.data = TSFE : config | config | fileTarget`
-
 
 ..  _data-type-gettext-tsfe-example:
 

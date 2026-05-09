@@ -223,14 +223,11 @@ crop
     :type: :ref:`data-type-string` / :ref:`stdwrap`
     :Default: not-set (when file/image is a file_reference the crop value of
 
-    ..  versionchanged:: 13.2
-        SVG images are now processed natively in SVG during cropping.
-        To keep the old behaviour of transferring them into PNG, you can set
-        :confval:`imgresource-ext` to `png` explicitly.
-
     It is possible to define an area that should be taken (cropped) from the image.
     When not defined in typoscript the value will be taken from the file_reference when
     possible. With this setting you can override this behavior.
+
+    SVG images are processed natively in SVG during cropping.
 
     the file reference is used)
 

@@ -631,14 +631,14 @@ typo3.version
     :name: condition-typo3-version
     :type: String
 
-    TYPO3_version (for example, 13.4.0)
+    TYPO3_version (for example, 14.3.1)
 
     Example:
 
     ..  code-block:: typoscript
         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-        [typo3.version == "13.4.0"]
+        [typo3.version == "14.3.1"]
             # ...
         [END]
 
@@ -653,14 +653,14 @@ typo3.branch
     :name: condition-typo3-branch
     :type: String
 
-    TYPO3 branch (for example, 13.4)
+    TYPO3 branch (for example, 14.3)
 
     Example:
 
     ..  code-block:: typoscript
         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-        [typo3.branch == "13.4"]
+        [typo3.branch == "14.3"]
             # ...
         [END]
 
@@ -828,13 +828,13 @@ compatVersion()
     ..  code-block:: typoscript
         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-        # True, if the current TYPO3 version is 13.4.x
-        [compatVersion("13.4")]
+        # True, if the current TYPO3 version is 14.3.x
+        [compatVersion("14.3")]
             # ...
         [END]
 
-        # True, if the current TYPO3 version is 13.4.0
-        [compatVersion("13.4.0")]
+        # True, if the current TYPO3 version is 14.3.1
+        [compatVersion("14.3.1")]
             # ...
         [END]
 
@@ -910,10 +910,6 @@ feature()
 ip()
 ====
 
-..  versionchanged:: 13.0
-    This function is only available in TypoScript frontend context. For
-    migration hints see the :ref:`changelog <ext_core:deprecation-100047-1677608959>`.
-
 ..  confval:: ip()
     :name: condition-ip
 
@@ -922,6 +918,8 @@ ip()
 
     Value or constraint, wildcard or regular expression possible; special value:
     "devIP" (matches the :ref:`devIPmask <t3coreapi:typo3ConfVars_sys_devIPmask>`).
+
+    This function is only available in TypoScript frontend context.
 
     Example:
 
@@ -1340,32 +1338,6 @@ locale()
         [locale().isRightToLeftLanguageDirection()]
             page.40.value = This locale is written from right to left
         [END]
-
-..  index:: Conditions; loginUser
-..  _condition-function-loginUser:
-
-loginUser()
-===========
-
-..  versionchanged:: 13.0
-    This function has been removed. Use the variables
-    :ref:`condition-frontend-user` and :ref:`condition-backend-user` instead.
-    For migration hints see the
-    :ref:`changelog <ext_core:deprecation-100349-1680097287>`.
-
-
-..  index:: Conditions; usergroup
-..  _condition-function-usergroup:
-
-usergroup()
-===========
-
-..  versionchanged:: 13.0
-    This function has been removed. Use the variables
-    :ref:`condition-frontend-user` and :ref:`condition-backend-user` instead.
-    For migration hints see the
-    :ref:`changelog <ext_core:deprecation-100349-1680097287>`.
-
 
 ..  _condition-examples:
 
