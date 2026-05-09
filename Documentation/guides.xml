@@ -3,7 +3,7 @@
         xsi:schemaLocation="https://www.phpdoc.org/guides ../vendor/phpdocumentor/guides-cli/resources/schema/guides.xsd"
         links-are-relative="true">
     <extension class="\T3Docs\Typo3DocsTheme\DependencyInjection\Typo3DocsThemeExtension"
-               project-home="https://docs.typo3.org/m/typo3/reference-typoscript/main/en-us/"
+               project-home="https://docs.typo3.org/m/typo3/reference-typoscript/14.3/en-us/"
                project-contact="https://typo3.slack.com/archives/C028JEPJL"
                project-repository="https://github.com/TYPO3-Documentation/TYPO3CMS-Reference-Typoscript"
                project-issues="https://github.com/TYPO3-Documentation/TYPO3CMS-Reference-Typoscript/issues"
@@ -14,8 +14,8 @@
                confval-default="TypoScript"
     />
     <project title="TypoScript Explained"
-             release="main"
-             version="main"
+             release="14.3"
+             version="14.3"
              copyright="since 2012 by the TYPO3 contributors"
     />
 </guides>
