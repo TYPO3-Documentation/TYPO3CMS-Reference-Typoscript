@@ -19,7 +19,7 @@ Further objects
 
 *   :ref:`LOAD\_REGISTER <cobj-load-register>` /
     :ref:`RESTORE\_REGISTER <cobj-restore-register>` objects allow us to
-    fill the global array `$GLOBALS['TSFE']->register[]` with content.
+    fill the register stack with content.
     These objects return nothing. Single values and complete TypoScript
     objects can be used. In doing so, the register works as a stack: With
     every call, a further element is stacked. With

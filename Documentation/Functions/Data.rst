@@ -809,7 +809,7 @@ register
 
 ..  confval:: register
     :name: data-register
-    :Syntax: register: [field name from the :php:`$GLOBALS['TSFE']->register`]
+    :Syntax: register: [field name from the register stack]
 
     See :ref:`LOAD_REGISTER <cobj-load-register>`.
 
