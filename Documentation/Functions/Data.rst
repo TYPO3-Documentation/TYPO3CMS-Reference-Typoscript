@@ -511,8 +511,7 @@ global
     :name: data-global
     :Syntax: global : [variable]
 
-    Deprecated. Use :ref:`data-type-gettext-gp`, :ref:`data-type-gettext-tsfe` or
-    :ref:`data-type-gettext-getenv`.
+    Deprecated. Use :ref:`data-type-gettext-gp` or :ref:`data-type-gettext-getenv`.
 
 ..  _data-type-gettext-gp:
 
@@ -1071,41 +1070,3 @@ Example: Access the redirects HTTP status code
 
     page.10 = TEXT
     page.10.data = siteSettings:redirects.httpStatusCode
-
-
-..  _data-type-gettext-tsfe:
-
-TSFE
-----
-
-..  confval:: TSFE
-    :name: data-tsfe
-    :Syntax: TSFE: [value from the :php:`$GLOBALS['TSFE']` array, multi-dimensional]
-
-    Returns a value from
-    :php:`TYPO3\CMS\Frontend\Controller\TypoScriptFrontendController`.
-
-
-..  versionchanged:: 13.0
-    The following TypoScriptFrontendController (TSFE) properties have
-    been removed:
-
-    *   :php:`spamProtectEmailAddresses`
-    *   :php:`intTarget`
-    *   :php:`extTarget`
-    *   :php:`fileTarget`
-    *   :php:`baseUrl`
-
-    Migrate these properties to the config property. You can access the
-    TypoScript properties directly, for example, via
-    :typoscript:`lib.something.data = TSFE : config | config | fileTarget`
-
-..  _data-type-gettext-tsfe-example:
-
-Example: Get the username field of the current frontend user
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-    lib.foo.data = TSFE : fe_user | user | username
