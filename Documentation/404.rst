@@ -22,6 +22,8 @@ TYPO3 v14
 ..  _appendix-include-tsfe-feuser-migration:
 ..  _appendix-include-tsfe-rootLine:
 ..  _appendix-include-tsfe-table-row:
+..  _data-type-gettext-tsfe:
+..  _data-type-gettext-tsfe-example:
 
 TypoScriptFrontendController, TSFE
 ----------------------------------
