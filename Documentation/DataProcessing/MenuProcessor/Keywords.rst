@@ -178,7 +178,7 @@ Example: Find related pages of the current page
     lib.relatedPagesMenu {
         special = keywords
         special {
-            value.data = TSFE:id
+            value.data = page:uid
             entryLevel = 1
             mode = manual
         }
