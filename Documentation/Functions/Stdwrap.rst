@@ -1434,7 +1434,7 @@ Properties for wrapping data
         ..  code-block:: typoscript
             :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-            page.10.dataWrap = <div id="{tsfe : id}"> | </div>
+            page.10.dataWrap = <div id="{page : uid}"> | </div>
 
         This will produce a :html:`<div>` tag around the content with an id attribute
         that contains the id of the current page.

@@ -28,7 +28,7 @@ result in a multidimensional array. This, for example, works with :typoscript:`T
 ..  code-block:: typoscript
     :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-    lib.foo.data = TSFE : fe_user | user | username
+    lib.foo.data = request : frontend.user | username
 
 Some codes use a different separator, but this is documented in the
 code.
