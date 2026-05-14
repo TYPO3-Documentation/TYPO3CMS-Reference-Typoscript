@@ -488,7 +488,7 @@ Example: Printlink
           enable = 1
           typolink {
              target = _blank
-             parameter.data = page:alias // TSFE:id
+             parameter.data = page:alias // page:uid
              additionalParams = &type=98
           }
        }

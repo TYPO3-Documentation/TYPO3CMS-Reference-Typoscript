@@ -928,7 +928,7 @@ Demonstrates:
 
     page.jsFooterInline {
         10 = TEXT
-        10.stdWrap.dataWrap = var pageId = {TSFE:id};
+        10.stdWrap.dataWrap = var pageId = {page:uid};
     }
 
 ..  _setup-page-jsinline-example:
@@ -947,7 +947,7 @@ Demonstrates:
 
     page.jsInline {
         10 = TEXT
-        10.stdWrap.dataWrap = var pageId = {TSFE:id};
+        10.stdWrap.dataWrap = var pageId = {page:uid};
     }
 
 ..  _setup-page-meta-example:
