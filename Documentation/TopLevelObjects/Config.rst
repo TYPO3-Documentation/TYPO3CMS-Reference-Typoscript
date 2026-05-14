@@ -516,14 +516,15 @@ Properties of 'config'
         :type: list
         :Example: :ref:`setup-config-linkvars`
 
-        :php:`HTTP_GET_VARS`, which is passed on in links in TYPO3. It
-        is compiled into a string stored in :php:`$GLOBALS['TSFE']->linkVars`
+        :php:`HTTP_GET_VARS`, which should be passed on with links in TYPO3.
+        This is compiled into a string.
 
         The values are rawurlencoded in PHP.
 
         You can specify a range of valid values by appending a () after each
-        value. If the range doesn't match, the variable won't be appended to
-        links. This prevents the cache system getting flooded with forged values.
+        value. If the range does not match, the variable won't be appended to
+        links. This is very important to prevent that the cache system gets
+        flooded with forged values.
 
         The range can contain one of the following values:
 
@@ -534,7 +535,7 @@ Properties of 'config'
         `[a]\|[b]\|[c]`
             A list of allowed strings (whitespace will be removed)
         `/[regex]/`
-            Match a regular expression (PCRE style)
+            Match against a regular expression (PCRE style)
 
         You can use the pipe character (|) to access nested properties.
 
