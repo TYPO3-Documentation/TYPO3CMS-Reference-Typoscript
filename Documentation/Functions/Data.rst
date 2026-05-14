@@ -110,6 +110,7 @@ Example: Display extension icon with cache buster
     }
 
 ..  _data-type-gettext-cobj:
+..  _data-type-gettext-cobj-example:
 
 cObj
 ----
@@ -117,14 +118,9 @@ cObj
 ..  confval:: cObj
     :name: data-cObj
 
-    For :ref:`cobj-content` and :ref:`cobj-records` cObjects that are returned by
-    a select query, this returns the row number (1,2,3,...) of the current
-    cObject record.
+    ..  deprecated:: 14.3
 
-    :typoscript:`parentRecordNumber` is the only key available.
-
-
-..  _data-type-gettext-cobj-example:
+        See `Deprecation: #109575 - Various ContentObjectRenderer properties/methods <https://docs.typo3.org/permalink/changelog:deprecation-109575>`_
 
 Example: Get the number of the current cObject record
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
