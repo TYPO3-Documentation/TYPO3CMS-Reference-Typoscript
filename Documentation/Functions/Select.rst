@@ -99,18 +99,6 @@ pidInList
         :typoscript:`uidInList` *must* be set or the table *must* have the prefix
         "static\_\*".
 
-    ..  note::
-        Check the doktype of your backend page. If you are trying to fetch records from
-        a sys_folder for example, the :php:`$cObj->checkPid_badDoktypeList` method will insert the
-        following SQL into your query:
-
-        ..  code-block:: sql
-
-            [...]WHERE (`your_requested_table_name`.`uid` = 0) AND [...]
-
-        Which might result in an empty query result, depending on your records.
-
-
     ..  rubric:: Example
 
     Fetch related `sys_category` records stored in the MM intermediate table:
