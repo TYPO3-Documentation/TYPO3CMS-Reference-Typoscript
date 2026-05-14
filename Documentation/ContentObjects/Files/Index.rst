@@ -301,7 +301,7 @@ the file itself or from the reference to it (title):
     page.20 {
         references {
             table = pages
-            uid.data = tsfe:id
+            uid.data = page:uid
             fieldName = media
         }
 
