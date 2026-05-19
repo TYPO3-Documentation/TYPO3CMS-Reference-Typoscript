@@ -329,9 +329,8 @@ Example: Use alternative parameters for the a-tag
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This way it is possible to use a lightbox and to display
-resized images in the frontend. More complete examples are
-:ref:`imageLinkWrap-example-fancybox` and
-:ref:`imageLinkWrap-example-topup`.
+resized images in the frontend. A more complete example is
+:ref:`imageLinkWrap-example-fancybox`.
 
 ..  code-block:: typoscript
 
@@ -525,38 +524,5 @@ and use `fancybox <http://fancybox.net>`_:
        directImageLink = 1
        linkParams.ATagParams {
           dataWrap = class= "lightbox" data-fancybox-group="lightbox{field:uid}"
-       }
-    }
-
-..  _imageLinkWrap-example-topup:
-
-Example: Images in lightbox "TopUp"
------------------------------------
-
-In this `blog post <https://www.interaktionsdesigner.de/2009/typo3-klickvergrossern-durch-eine-jquery-lightbox-ersetzen>`__
-(German) Paul Lunow shows a way to integrate the
-`jQuery <https://jquery.com/>`__
-`TopUp lightbox <https://jquery-plugins.net/topup-jquery-lightbox-pop-up-plugin>`__:
-
-..  code-block:: typoscript
-
-    tt_content.image.20.1.imageLinkWrap >
-    tt_content.image.20.1.imageLinkWrap = 1
-    tt_content.image.20.1.imageLinkWrap {
-       enable = 1
-       typolink {
-          # directly link to the recent image
-          parameter.cObject = IMG_RESOURCE
-          parameter.cObject.file.import.data = TSFE : lastImageInfo | origFile
-          parameter.cObject.file.maxW = {$styles.content.imgtext.maxW}
-          parameter.override.listNum.stdWrap.data = register : IMAGE_NUM_CURRENT
-          title.field = imagecaption // title
-          title.split.token.char = 10
-          title.if.isTrue.field = imagecaption // header
-          title.split.token.char = 10
-          title.split.returnKey.data = register : IMAGE_NUM_CURRENT
-          parameter.cObject = IMG_RESOURCE
-          parameter.cObject.file.import.data = TSFE : lastImageInfo | origFile
-          ATagParams = target="_blank"
        }
     }
