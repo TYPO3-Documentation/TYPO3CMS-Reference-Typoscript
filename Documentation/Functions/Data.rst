@@ -451,8 +451,7 @@ getIndpEnv
     Returns the value of a *System Environment Variable* denoted by
     *name* regardless of server OS, CGI/MODULE version, etc. The result is
     usually identical to the :php:`$_SERVER` variable. This method is more reliable
-    then *getEnv*. Internal processing is handled by
-    :php:`TYPO3\CMS\Core\Utility\GeneralUtility::getIndpEnv()`
+    then :ref:`getEnv <data-type-gettext-getenv>`.
 
     Available names:
 

@@ -74,9 +74,10 @@ Properties
 
 ..  note::
 
-    The :php:`$request` object should be used to access request related variables instead of directly accessing
-    the superglobal variables like :php:`$_GET` / :php:`$_POST` / :php:`$_SERVER`, or TYPO3’s API methods :php:`GeneralUtility::_GP()`
-    and :php:`GeneralUtility::getIndpEnv()`.
+    The :php:`$request` object should be used to access request related
+    variables instead of directly accessing the superglobal variables like
+    :php:`$_GET` / :php:`$_POST` / :php:`$_SERVER`, or TYPO3’s API method
+    :php:`GeneralUtility::_GP()`.
 
 ..  _cobj-user-defined-properties:
 
