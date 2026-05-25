@@ -326,6 +326,12 @@ linkParams
     Needs :typoscript:`JSwindow = 0`.
 
 Example: Use alternative parameters for the a-tag
+Needs :typoscript:`JSwindow = 0`.
+
+..  _imageLinkWrap-example-topup:
+..  _imageLinkWrap-example:
+
+Example: Use alternative parameters for the a-tag
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This way it is possible to use a lightbox and to display
