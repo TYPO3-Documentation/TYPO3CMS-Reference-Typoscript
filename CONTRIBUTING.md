@@ -10,7 +10,7 @@
 
 * In order to make changes on a [rendered page](https://docs.typo3.org/typo3cms/TyposcriptReference/), just click on "Edit me on GitHub".
 * For a step-by-step walkthrough for making a change, see [Contribute to docs.typo3.org](https://docs.typo3.org/typo3cms/HowToDocument/WritingDocsOfficial/Index.html)
-* For a step-by-step walkthrough of alternative workflow, see [Local Editing and Rendering with Docker](https://docs.typo3.org/typo3cms/HowToDocument/WritingDocsOfficial/LocalEditing.html)
+* For a step-by-step walkthrough of alternative workflow, see [Rendering the Documentation folder locally with Docker](https://docs.typo3.org/permalink/h2document:render-documentation-with-docker)
 
 ## Get help
 
