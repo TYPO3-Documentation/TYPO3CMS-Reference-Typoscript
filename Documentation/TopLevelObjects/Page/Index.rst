@@ -301,7 +301,7 @@ Properties
         ..  versionchanged:: 14.0
 
             TYPO3 no longer supports frontend asset concatenation or pre-compression
-            in the core. The per-file properties :typoscript:`external`,
+            in the core. The file properties :typoscript:`external`,
             :typoscript:`disableCompression` and
             :typoscript:`excludeFromConcatenation` are therefore not available in
             TYPO3 v14 and above. See
@@ -352,7 +352,7 @@ Properties
         ..  versionchanged:: 14.0
 
             TYPO3 no longer supports frontend asset concatenation or pre-compression
-            in the core. The per-file properties :typoscript:`external`,
+            in the core. The file properties :typoscript:`external`,
             :typoscript:`disableCompression` and
             :typoscript:`excludeFromConcatenation` are therefore not available in
             TYPO3 v14 and above. See

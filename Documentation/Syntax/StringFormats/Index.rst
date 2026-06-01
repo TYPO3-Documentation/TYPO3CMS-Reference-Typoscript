@@ -143,13 +143,13 @@ resource
 
         The resource handling has been streamlined, see
         :ref:`System resource API for system file access and public
-        URI generation <changelog:feature-107537-1759136314>` and now
+        URI generation <changelog:feature-107537-1759136314>`. It now
         supports different resource formats.
 
     These types are supported:
 
-    * **package resource** – a file within an extension
-    * **FAL resource** – a file from a :abbr:`FAL (File Abstraction Layer)` storage
+    * **package resource** – a file inside an extension
+    * **FAL resource** – a file from :abbr:`FAL (File Abstraction Layer)` storage
     * **app resource** – a file in the TYPO3 project folder
     * **URI resource** – a URL
 
