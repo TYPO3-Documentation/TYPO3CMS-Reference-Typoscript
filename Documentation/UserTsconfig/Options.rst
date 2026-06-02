@@ -805,17 +805,10 @@ Properties
             list. Each number stands for a :ref:`doktype ID <t3coreapi:list-of-page-types>`
             that should be added to the node top panel.
 
-            ..  figure:: /Images/ManualScreenshots/List/PanelNormal.png
-                :alt: Top panel in normal mode
-                :class: with-shadow
-
-                Top panel in normal mode
-
-            ..  figure:: /Images/ManualScreenshots/List/PanelModified.png
-                :alt: Top panel modified
-                :class: with-shadow
-
-                Top panel modified
+            ..  deprecated:: 14.2
+                See `Deprecation: #109196 - Deprecate doktypesToShowInNewPageDragArea user TSconfig <https://docs.typo3.org/permalink/changelog:deprecation-109196-1742122800>`_.
+                Remove this option from your configuration; the page tree now automatically
+                determines available doktypes based on the user's group permissions.
 
         ..  _useroptions-pageTree-excludeDoktypes:
 
