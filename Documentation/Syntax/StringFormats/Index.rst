@@ -139,18 +139,44 @@ resource
 ..  confval:: resource
     :name: data-type-resource
 
-    If the value contains a "/", it is expected to be a reference (absolute or
-    relative) to a file in the file system. There is no support for wildcard
-    characters in the name of the reference.
+    ..  versionchanged:: 14.0
 
-    ..  rubric:: Example
+        The resource handling has been streamlined, see
+        :ref:`System resource API for system file access and public
+        URI generation <changelog:feature-107537-1759136314>`. It now
+        supports different resource formats.
+
+    These types are supported:
+
+    * **package resource** – a file inside an extension
+    * **FAL resource** – a file from :abbr:`FAL (File Abstraction Layer)` storage
+    * **app resource** – a file in the TYPO3 project folder
+    * **URI resource** – a URL
+
+    ..  rubric:: Examples
 
     Reference to a file in the file system:
 
     ..  code-block:: typoscript
         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-        page.10.settings.someFile = fileadmin/picture.gif
+        # PKG should be preferred to EXT
+        page.10.settings.someFile = PKG:my-vendor/package-name:Resources/Public/Icons/MyIcon.svg
+
+        # EXT still works
+        page.10.settings.someFile = EXT:ext_name/Resources/Public/Icons/MyIcon.svg
+
+        # App resources (files in the webroot) can be accessed with PKG:typo3/app:
+        page.10.settings.someFile = PKG:typo3/app:public/typo3temp/assets/style.css
+
+        # A FAL resource
+        page.10.settings.someFile = FAL:1:/identifier/of/file.svg
+
+        # External URL
+        page.10.settings.someFile = https://www.example.com/my/image.svg
+
+        # URIs relative to the current host can be prefixed with URI:
+        page.10.settings.someFile = URI:/path/to/my/image.svg
 
 ..  index:: Simple data types; string
 ..  _data-type-string:
