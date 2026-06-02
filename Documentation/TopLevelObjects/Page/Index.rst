@@ -301,7 +301,7 @@ Properties
         ..  versionchanged:: 14.0
 
             TYPO3 no longer supports frontend asset concatenation or pre-compression
-            in the core. The per-file properties
+            in the core. The file properties :typoscript:`external`,
             :typoscript:`disableCompression` and
             :typoscript:`excludeFromConcatenation` are therefore not available in
             TYPO3 v14 and above. See
@@ -326,9 +326,6 @@ Properties
         `alternate`
             If set (boolean) then the rel-attribute will be
             "alternate stylesheet".
-        `external`
-            If set, there is no file existence check. Useful for
-            inclusion of external files.
         `forceOnTop`
             Boolean flag. If set, this file will be added on top
             of all other files.
@@ -355,7 +352,7 @@ Properties
         ..  versionchanged:: 14.0
 
             TYPO3 no longer supports frontend asset concatenation or pre-compression
-            in the core. The per-file properties
+            in the core. The file properties :typoscript:`external`,
             :typoscript:`disableCompression` and
             :typoscript:`excludeFromConcatenation` are therefore not available in
             TYPO3 v14 and above. See
@@ -364,8 +361,7 @@ Properties
         Adds CSS library files to head of page.
 
         The file definition must be a valid :ref:`data-type-resource` data type,
-        otherwise nothing is inserted. This means that remote files cannot be referenced
-        (i.e. using :samp:`https://...`), except by using the :typoscript:`.external` property.
+        otherwise nothing is inserted.
 
         Each file has *optional properties*:
 
@@ -378,9 +374,6 @@ Properties
         `alternate`
             If set (boolean) then the rel-attribute will be
             "alternate stylesheet".
-        `external`
-            If set, there is no file existence check. Useful for
-            inclusion of external files.
         `forceOnTop`
             Boolean flag. If set, this file will be added on top
             of all other files.
@@ -404,7 +397,7 @@ Properties
         ..  versionchanged:: 14.0
 
             TYPO3 no longer supports frontend asset concatenation or pre-compression
-            in the core. The per-file properties
+            in the core. The per-file properties :typoscript:`external`,
             :typoscript:`disableCompression` and
             :typoscript:`excludeFromConcatenation` are therefore not available in
             TYPO3 v14 and above. See
@@ -414,8 +407,7 @@ Properties
         With :ref:`setup-config-movejsfromheadertofooter` set to TRUE all files
         will be moved to the footer.
         The file definition must be a valid :ref:`data-type-resource` data type,
-        otherwise nothing is inserted. This means that remote files cannot be referenced
-        (i.e. using :samp:`https://...`), except by using the :typoscript:`.external` property.
+        otherwise nothing is inserted.
 
         Each file has *optional properties*:
 
@@ -437,10 +429,6 @@ Properties
 
         `defer`
             Allows to set the HTML5 attribute :html:`defer`.
-
-        `external`
-            If set, there is no file existence check. Useful for
-            inclusion of external files.
 
         `forceOnTop`
             Boolean flag. If set, this file will be added on top
@@ -810,7 +798,6 @@ Demonstrates:
         ie6.allWrap = <!--[if lte IE 7]>|<![endif]-->
 
         example = https://example.org/some_external_styles.css
-        example.external = 1
     }
 
 
@@ -830,7 +817,6 @@ Demonstrates:
 
     page.includeCSSLibs {
         bootstrap = https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css
-        bootstrap.external = 1
 
         additional = EXT:site_package/Resources/Public/Css/additional_styles.css
         additional.data-foo = bar
@@ -870,7 +856,6 @@ Demonstrates:
         consent.data.other-attribute = value
 
         jquery = https://code.jquery.com/jquery-3.4.1.min.js
-        jquery.external = 1
         jquery.integrity = sha384-vk5WoKIaW/vJyUAd9n/wmopsmNhiy+L2Z+SBxGYnUkunIxVxAv/UtMOhba/xskxh
     }
 
