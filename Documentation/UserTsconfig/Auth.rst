@@ -21,20 +21,6 @@ Properties
     :display: table
     :type:
 
-..  _user-auth-be-redirectToURL:
-
-..  confval:: auth.BE.redirectToURL
-    :name: user-auth-be-redirectToURL
-    :type: string
-
-    ..  deprecated:: 14.0
-        The TSconfig option :tsconfig:`auth.BE.redirectToURL` has been
-        deprecated in TYPO3 v14.
-
-        If a redirect after a successful backend login is required, it is
-        recommended to create custom PSR-15 middleware to handle the
-        redirection.
-
 ..  _user-auth-mfa-required:
 
 ..  confval:: auth.mfa.required
