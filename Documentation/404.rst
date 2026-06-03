@@ -6,6 +6,32 @@
 Content was removed
 ===================
 
+..  contents::
+
+..  _not-found-v15:
+
+TYPO3 v15
+=========
+
+User TSconfig v15 changes
+-------------------------
+
+..  _user-auth-be-redirectToURL:
+..  _confval-user-auth-be-redirectToURL:
+
+`auth.BE.redirectToURL` removed
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+..  deprecated:: 14.0
+    See `Deprecation: #106969 - Deprecate User TSConfig auth.BE.redirectToURL <https://docs.typo3.org/permalink/changelog:deprecation-106969-1750853865>`_.
+
+The TSconfig option :tsconfig:`auth.BE.redirectToURL` has been
+removed.
+
+If a redirect after a successful backend login is required, it is
+recommended to create custom PSR-15 middleware to handle the
+redirection.
+
 ..  _not-found-v14:
 
 TYPO3 v14
