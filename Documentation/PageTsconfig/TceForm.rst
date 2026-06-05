@@ -42,8 +42,13 @@ clear when reading through the single properties below and looking at the exampl
 Applying properties to FlexForm fields
 --------------------------------------
 
-Other properties also apply to :ref:`FlexForm <t3coreapi:flexforms>` fields, in this case the full property
-path including the data structure key has to be set:
+..  deprecated:: 14.0
+    Using a comma separated value for `[dataStructureKey]` is deprecated and
+    will stop working in TYPO3 v15.
+
+Other properties also apply to :ref:`FlexForm <t3coreapi:flexforms>` fields,
+in this case the full property path including the data structure key has to
+be set:
 
 ..  code-block:: typoscript
 
@@ -52,15 +57,13 @@ path including the data structure key has to be set:
 
 The sheet name (sDEF) must be given only if the FlexForm has a sheet.
 
-The `[dataStructureKey]` represents the key of a FlexForm in
-:php:`$GLOBALS['TCA'][<tableName>]['columns'][<field>]['config']['ds']`. This key will be split into up to
-two parts. By default the first part will be used as identifier of the FlexForm in TSconfig. The second part
-will override the identifier if it is not empty, `list` or `*`. For example the identifier of the key
-`myext_pi1,list` will be `myext_pi1` and of the key `*,my_CType` it will be `my_CType`. See section
-:ref:`Pointing to a data structure <t3tca:columns-flex-ds-pointer>` of the TCA reference for details.
+The `[dataStructureKey]` the CType for content elements and the type for all
+other tables that have a type field defined.  See
+`TCA reference: Using FlexForms <https://docs.typo3.org/permalink/t3tca:columns-flex-ds-pointer>`_
+for details.
 
 The flexFieldName is the name of the property in the FlexForm. If it contains
-dots ('.'), these must be escaped with backslash.
+dots `.`, these must be escaped with backslash.
 
 Some properties apply to whole FlexForm sheets, their property path is
 `TCEFORM.[tableName].[fieldName].[dataStructureKey].[flexSheet].[propertyName]`.
