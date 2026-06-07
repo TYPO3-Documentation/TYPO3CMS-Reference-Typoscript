@@ -14,6 +14,7 @@ mod.web_layout.BackendLayouts {
                                 identifier = jumbotron
                                 slideMode = slide
                                 colspan = 2
+                                allowedContentTypes = tx_myextension_stage, header
                             }
                         }
                     }
@@ -31,6 +32,7 @@ mod.web_layout.BackendLayouts {
                                 colPos = 2
                                 identifier = right
                                 slideMode = collectReverse
+                                disallowedContentTypes = tx_myextension_stage, textmedia
                             }
                         }
                     }
