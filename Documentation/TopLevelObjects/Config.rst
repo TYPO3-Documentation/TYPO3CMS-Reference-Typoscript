@@ -73,35 +73,15 @@ can be set like this:
 Properties of 'config'
 ======================
 
+..  versionchanged:: 14.0
+    `config.absRefPrefix` was removed, see
+    `Breaking: #108114 - Global frontend content link prefixing removed <https://docs.typo3.org/permalink/changelog:breaking-108114-1763085569>`_
+
 ..  confval-menu::
     :name: config-properties
     :caption: Properties of the CONFIG object
     :display: table
     :type:
-
-    ..  confval:: absRefPrefix
-        :name: config-absrefprefix
-        :type: :ref:`data-type-string`
-        :Special value: "auto"
-
-        If set, this string is prepended to all relative links that TYPO3 generates.
-
-        :typoscript:`config.absRefPrefix = auto` means TYPO3 auto-detects
-        the site root from path prefixes rather than host name variables
-        on the server, making this value safe for multi-domain environments.
-
-        If :ref:`config.forceAbsoluteUrls <setup-config-forceAbsoluteUrls>`
-        is enabled :typoscript:`absRefPrefix` is overridden.
-
-        Using an URI in :typoscript:`absRefPrefix` will require additional conditions
-        if you use different domains for your deployment stages in CI environments.
-
-        If you are working on a server where you have different domain names or
-        different path segments leading to the same page (e.g. for internal and
-        external access), set :typoscript:`absRefPrefix` to
-        the URL and path of your site, e.g. :samp:`https://example.org/`. If you do not,
-        you risk rendering pages to cache from the internal network and thereby
-        prefixing image references and links with incorrect or inaccessible paths.
 
     ..  confval:: additionalHeaders
         :name: config-additionalheaders
