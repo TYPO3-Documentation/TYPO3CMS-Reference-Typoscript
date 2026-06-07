@@ -62,6 +62,9 @@ TypoScriptFrontendController, TSFE
 See also: `TypoScriptFrontendController, TSFE <https://docs.typo3.org/permalink/t3tsref:typoscript-frontend-controller@v13>`_
 
 ..  _confval-config-absrefprefix:
+..  _setup-config-absrefprefix-examples:
+..  _setup-config-absrefprefix:
+..  _setup-config-additionalheaders:
 
 `config.absRefPrefix` removed from frontend TypoScript
 ======================================================

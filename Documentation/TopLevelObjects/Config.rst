@@ -914,98 +914,15 @@ Properties of 'config'
         `none:`
             The default XML prologue is *not* set.
 
-        Any other string is used as the XML prologue itself.
+        Any other string is used
 
-..  _setup-config-absrefprefix-examples:
+..  _setup-config-examples:
 
-Examples
-========
+Examples for configuration in TypoScript using `config.`
+========================================================
 
 ..  contents::
     :local:
-
-..  _setup-config-absrefprefix:
-
-Example: prefix absolute paths
-------------------------------
-
-Demonstrates:
-    *   :confval:`config absRefPrefix <config-absrefprefix>`
-
-#.  Prefixing all links with a "/" results in absolute link paths:
-
-    ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-        config.absRefPrefix = /
-
-#.  Prefixing all links with a path to a subdirectory:
-
-    ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-        config.absRefPrefix = /some-subsite/
-
-#.  Prefixing all links with a URI scheme:
-
-    ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-        config.absRefPrefix = https://example.org/
-
-..  _setup-config-additionalheaders:
-
-set additional headers data
----------------------------
-
-Demonstrates:
-    *   :confval:`config.additionalHeaders <config-additionalHeaders>`
-
-#.  General usage
-
-    ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-        config.additionalHeaders {
-          10 {
-            # The header string
-            header = foo
-
-            # Do not replace previous headers with the same name.
-            replace = 0
-
-            # Force a 401 HTTP response code
-            httpResponseCode = 401
-          }
-          # Always set cache headers to private, overwriting the default TYPO3 Cache-control header
-          20.header = Cache-control: Private
-        }
-
-#.  General usage, same usage, alternate notation
-
-    .. code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-        config.additionalHeaders.10.header = foo
-        config.additionalHeaders.10.replace = 0
-        config.additionalHeaders.10.httpResponseCode = 401
-        config.additionalHeaders.20.header = Cache-control: Private
-
-
-#.  Set content type for a page returning JSON
-
-    ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-        json = PAGE
-        json {
-          typeNum = 1617455215
-          10 =< tt_content.list.20.tx_myextension_myjsonplugin
-          config {
-            disableAllHeaderCode = 1
-            additionalHeaders.10.header = Content-type:application/json
-          }
-        }
 
 ..  _setup-config-cache:
 
