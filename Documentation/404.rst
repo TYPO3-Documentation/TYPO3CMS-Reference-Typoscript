@@ -35,6 +35,20 @@ TypoScriptFrontendController, TSFE
 
 See also: `TypoScriptFrontendController, TSFE <https://docs.typo3.org/permalink/t3tsref:typoscript-frontend-controller@v13>`_
 
+..  _confval-config-absrefprefix:
+..  _setup-config-absrefprefix-examples:
+..  _setup-config-absrefprefix:
+..  _setup-config-additionalheaders:
+
+`config.absRefPrefix` removed from frontend TypoScript
+======================================================
+
+..  versionchanged:: 14.0
+    See `Breaking: #108114 - Global frontend content link prefixing removed <https://docs.typo3.org/permalink/changelog:breaking-108114-1763085569>`_
+
+Instances should check the rendered frontend for broken links after upgrading
+to TYPO3 v14 and substitute hard coded link generation with proper API calls,
+for instance based on the various URL, URI and asset related Fluid ViewHelpers.
 
 ..  _not-found-v13:
 
