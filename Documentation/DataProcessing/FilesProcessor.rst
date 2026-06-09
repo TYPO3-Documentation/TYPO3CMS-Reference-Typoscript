@@ -135,7 +135,7 @@ Options:
     ..  confval:: folders.recursive
         :name: FilesProcessor-folders-recursive
         :Required: false
-        :type: boolean
+        :type: bool  / :ref:`stdWrap`
         :Default: 0
         :Example: 1
 
