@@ -74,7 +74,7 @@ Properties of 'config'
 ======================
 
 ..  versionchanged:: 14.0
-    `config.absRefPrefix` was removed, see
+    `config.absRefPrefix` was removed. See
     `Breaking: #108114 - Global frontend content link prefixing removed <https://docs.typo3.org/permalink/changelog:breaking-108114-1763085569>`_
 
 ..  confval-menu::
@@ -918,8 +918,8 @@ Properties of 'config'
 
 ..  _setup-config-examples:
 
-Examples for configuration in TypoScript using `config.`
-========================================================
+Examples of configuration in TypoScript using `config.`
+=======================================================
 
 ..  contents::
     :local:
