@@ -755,8 +755,7 @@ path
     :name: data-path
 
     ..  versionchanged:: 14.0
-        :typoscript:`path` returns an absolute URL (prepended with
-        `config.absRefPrefix  <https://docs.typo3.org/permalink/t3tsref:confval-config-absrefprefix>`_).
+        :typoscript:`path` returns an absolute URL.
 
     Path to a file, for example, that is in an extension. Returns an empty value if the file
     does not exist.
