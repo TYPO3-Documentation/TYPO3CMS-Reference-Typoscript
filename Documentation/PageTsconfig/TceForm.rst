@@ -10,9 +10,9 @@
 TCEFORM
 =======
 
-Allows detailed configuration of how editing forms are rendered for a page
-tree branch and for individual tables if you like. You can enable and
-disable options, blind options in selector boxes etc.
+Allows configuration of how edit forms are rendered in page
+tree branches in the backend. Can also configure individual tables (for example,
+from extensions). You can enable and disable options, blind options in selector boxes, etc.
 
 See the core API document section :ref:`FormEngine <t3coreapi:FormEngine>` for more
 details on how records are rendered in the backend.
@@ -22,18 +22,19 @@ details on how records are rendered in the backend.
 Applying properties
 ===================
 
-The properties listed below apply to various contexts which are explained per
-property. The full property path thus depends on the property and where it should
-apply. In general, a more specific property path overrides a less specific one:
+The properties listed below apply in various contexts which are explained in each
+property. A full property path depends on the property and where it is
+applied. In general, a more specific property path overrides a less specific one:
 
-Some properties apply to single fields, those can be usually set per table or
-per table and record type. This leads to the property paths
-`TCEFORM.[tableName].[fieldName].[propertyName]` to configure the field for all types
-and `TCEFORM.[tableName].[fieldName].types.[typeName].[propertyName]` to configure a field for a specific
-type, see the :ref:`TCA type section <t3tca:types>` for details on types.
+Some properties apply to single fields and are usually set by table or
+by table and record type. Property paths such as
+`TCEFORM.[tableName].[fieldName].[propertyName]` configure fields for all types
+and `TCEFORM.[tableName].[fieldName].types.[typeName].[propertyName]` configure fields
+for specific types, see the
+:ref:`TCA type section <t3tca:types>` for details on types.
 
-While all that property path munging looks messy at first, it should become more
-clear when reading through the single properties below and looking at the examples.
+Setting property paths should become
+clearer after you have read through the properties below and looked at the examples.
 
 ..  youtube:: B3IQq7pIJ_o
 
@@ -43,7 +44,7 @@ Applying properties to FlexForm fields
 --------------------------------------
 
 ..  deprecated:: 14.0
-    Using a comma separated value for `[dataStructureKey]` is deprecated and
+    Using a comma-separated value for `[dataStructureKey]` is deprecated and
     will stop working in TYPO3 v15.
 
 Other properties also apply to :ref:`FlexForm <t3coreapi:flexforms>` fields,
@@ -57,7 +58,7 @@ be set:
 
 The sheet name (sDEF) must be given only if the FlexForm has a sheet.
 
-The `[dataStructureKey]` the CType for content elements and the type for all
+The `[dataStructureKey]` is set to the CType for content elements and the type for all
 other tables that have a type field defined.  See
 `TCA reference: Using FlexForms <https://docs.typo3.org/permalink/t3tca:columns-flex-ds-pointer>`_
 for details.
