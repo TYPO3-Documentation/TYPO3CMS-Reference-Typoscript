@@ -64,7 +64,7 @@ We are dealing with an object here. You however can access your record
 properties as you are used to with :html:`{record.title}` or
 :html:`{record.uid}`. In addition, you gain special, context-aware properties
 like the language :html:`{record.languageId}` or workspace
-:html:`{data.versionInfo.workspaceId}`.
+:html:`{record.versionInfo.workspaceId}`.
 
 Overview of all possibilities:
 
