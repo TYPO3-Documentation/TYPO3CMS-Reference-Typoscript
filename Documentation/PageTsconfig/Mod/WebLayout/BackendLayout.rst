@@ -126,6 +126,30 @@ package (GitHub) <https://github.com/benjaminkott/bootstrap_package/tree/master/
                 Can be used if the content element area spans multiple
                 rows.
 
+            ..  confval:: allowedContentTypes
+                :name: mod-web-layout-BackendLayouts-backendLayout-title-config-backend_layout-rows-row-columns-col-allowedContentTypes
+                :type: comma separated strings
+
+                ..  versionadded:: 14.1
+                    See `Feature: #108623 - Allow content element restrictions per colPos <https://docs.typo3.org/permalink/changelog:feature-108623-1768315053>`_
+
+                Allow only configured types of content elements (referencing
+                :sql:`tt_content.CType` with names like "text", "textmedia",
+                "felogin_pi1" and so on).
+
+            ..  confval:: disallowedContentTypes
+                :name: mod-web-layout-BackendLayouts-backendLayout-title-config-backend_layout-rows-row-columns-col-disallowedContentTypes
+                :type: comma separated strings
+
+                ..  versionadded:: 14.1
+                    See `Feature: #108623 - Allow content element restrictions per colPos <https://docs.typo3.org/permalink/changelog:feature-108623-1768315053>`_
+
+                Disallow configured types of content elements (referencing
+                :sql:`tt_content.CType` with names like "text", "textmedia",
+                "felogin_pi1" and so on).
+
+..  _backend-layouts-data-processor:
+
 Example: Use a backend layout in the page content data processor
 ================================================================
 
@@ -135,9 +159,7 @@ Define the backend layout via page TSconfig, like in the site below:
     :caption: config/sites/my-site/page.tsconfig
 
 Configure the output with TypoScript, using the :ref:`PAGEVIEW <t3tsref:cobj-pageview>`
-content object and the `page-content` DataProcessor.
-
-..  todo: Link Dataprocessor
+content object and the `page-content data processor <https://docs.typo3.org/permalink/t3tsref:pagecontentfetchingprocessor>`_.
 
 ..  literalinclude:: _BackendLayout.typoscript
     :caption: config/sites/my-site/setup.typoscript

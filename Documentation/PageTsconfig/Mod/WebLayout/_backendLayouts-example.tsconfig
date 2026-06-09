@@ -10,9 +10,10 @@ mod.web_layout.BackendLayouts {
                     1 {
                         columns {
                             1 {
-                                name = LLL:frontend.ttc:colPos.I.3
+                                name = frontend.ttc:colPos.I.3
                                 colPos = 3
                                 colspan = 1
+                                allowedContentTypes = header, tx_myextension_stage
                             }
                         }
                     }
@@ -23,6 +24,7 @@ mod.web_layout.BackendLayouts {
                                 colPos = 0
                                 colspan = 1
                                 identifier = main
+                                disallowedContentTypes  = tx_myextension_stage, textmedia
                             }
                         }
                     }
