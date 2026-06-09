@@ -874,6 +874,25 @@ Properties
             pages that have :guilabel:`Is root of web site?` checked in the page properties.
             Useful if there are several domains in one page tree.
 
+        ..  _useroptions-pageTree-searchByFrontendUri:
+
+        ..  confval:: searchByFrontendUri
+            :name: useroptions-pageTree-searchByFrontendUri
+            :type: boolean
+            :Path: options.pageTree.searchByFrontendUri
+            :Default: `true`
+
+            ..  versionadded:: 14.2
+
+            Set by default. The page tree filter supports searching for pages
+            by frontend URI. Editors can now easily locate a backend page
+            by its frontend URI. Permissions to edit/see
+            the page are evaluated. Invalid or non-matching URIs are ignored.
+
+            It is also possible for backend users to toggle this setting using
+            the page tree toolbar menu. The preference is stored in the backend
+            user configuration, allowing each user to customize their search behavior.
+
         ..  _useroptions-pageTree-searchInTranslatedPages:
 
         ..  confval:: searchInTranslatedPages
