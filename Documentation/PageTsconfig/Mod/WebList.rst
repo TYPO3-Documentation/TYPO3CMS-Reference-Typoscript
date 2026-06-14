@@ -42,15 +42,16 @@ allowedNewTables
 
 ..  _pageTsConfigWebListAllowedNewTable-example:
 
-Example: Only allow records of type pages or sys_category in the new record wizard
-----------------------------------------------------------------------------------
+Example: Allow records of type pages or sys_category in the new record wizard
+-----------------------------------------------------------------------------
 
 ..  code-block:: typoscript
     :caption: EXT:site_package/Configuration/page.tsconfig
 
     mod.web_list {
         # Only pages and sys_category table elements will be linked to in the new record wizard
-        allowedNewTables = pages, sys_category
+        allowedNewTables := addToList(sys_category)
+        allowedNewTables := addToList(pages)
     }
 
 ..  figure:: /Images/ManualScreenshots/List/PageTsModWebListAllowedNewTables.png
@@ -160,7 +161,8 @@ Hide "Create new record" links in tables sys_category and tt_content
     :caption: EXT:site_package/Configuration/page.tsconfig
 
     mod.web_list {
-        deniedNewTables = sys_category, tt_content
+        deniedNewTables := addToList(sys_category)
+        deniedNewTables := addToList(tt_content)
     }
 
 
