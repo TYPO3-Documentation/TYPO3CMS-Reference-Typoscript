@@ -31,7 +31,7 @@ The properties that can be supplied as parameters are listed below.
 
 For further information see
 :t3src:`frontend/Classes/ContentObject/ContentObjectRenderer.php`
-on the :php:`stdWrap()` function and on the array :php:`$stdWrapOrder`,
+on the :php:`stdWrap()` function and on the array :php:`STD_WRAP_ORDER`,
 which represents the order of execution.
 
 Use the :typoscript:`stdWrap` property "orderedStdWrap" if you want to execute
