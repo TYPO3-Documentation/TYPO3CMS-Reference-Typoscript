@@ -135,9 +135,9 @@ Options:
     ..  confval:: folders.recursive
         :name: FilesProcessor-folders-recursive
         :Required: false
-        :type: :ref:`data-type-string` / :ref:`stdWrap`
-        :Default: ""
-        :Example: "1"
+        :type: bool  / :ref:`stdWrap`
+        :Default: 0
+        :Example: 1
 
         If set to a non-empty value file, records will be added from folders
         recursively.
