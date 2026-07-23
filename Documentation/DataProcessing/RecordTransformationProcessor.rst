@@ -1,4 +1,5 @@
 :navigation-title: record-transformation
+
 ..  include:: /Includes.rst.txt
 ..  _RecordTransformationProcessor:
 
@@ -27,6 +28,8 @@ addressed in a unified way.
 
 The `type` property contains the database table name and the actual type based
 on the record, such `tt_content.textmedia` for Content Elements.
+
+..  contents:: Table of contents
 
 ..  _RecordTransformationProcessor-databasequeryprocessor-example:
 
@@ -79,8 +82,8 @@ Overview of all possibilities:
 
 ..  _RecordTransformationProcessor-options:
 
-Options:
-========
+Options of the `record-transformation` data processor
+=====================================================
 
 ..  confval-menu::
     :display: table
