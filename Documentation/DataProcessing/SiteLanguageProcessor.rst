@@ -1,4 +1,5 @@
 :navigation-title: site-language
+
 ..  include:: /Includes.rst.txt
 ..  _SiteLanguageProcessor:
 
@@ -9,6 +10,8 @@
 The :php:`\TYPO3\CMS\Frontend\DataProcessing\SiteLanguageProcessor`,
 alias `site-language`, fetches language-related data from the
 :ref:`site configuration<t3coreapi:sitehandling>`.
+
+..  contents:: Table of contents
 
 ..  _SiteLanguageProcessor-options:
 
