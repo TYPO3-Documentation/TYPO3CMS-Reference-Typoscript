@@ -25,7 +25,6 @@
         "vendor-dir": ".Build/vendor"
     },
     "require-dev": {
-        "ergebnis/composer-normalize": "~2.41.0",
         "friendsofphp/php-cs-fixer": "^3.46",
         "symfony/yaml": "^7.0",
         "t3docs/codesnippet": "dev-main",
