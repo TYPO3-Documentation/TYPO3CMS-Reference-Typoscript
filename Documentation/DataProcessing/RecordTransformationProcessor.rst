@@ -71,7 +71,7 @@ like the language :html:`{record.languageId}` or workspace
 
 Overview of all possibilities:
 
-..  literalinclude:: _RecordTransformationProcessor/_FluidUsage.html
+..  literalinclude:: _RecordTransformationProcessor/_FluidUsage.fluid.html
     :caption: Demonstration of available variables in Fluid
 
 ..  contents:: Table of contents

@@ -234,8 +234,8 @@ Using the :php:`MenuProcessor` the following scenario is possible:
 
 This generated menu can be used in Fluid like this:
 
-.. literalinclude:: /CodeSnippets/DataProcessing/Template/DataProcMenu.html
-   :caption: EXT:examples/Resources/Private/Templates/ContentElements/DataProcMenu.html
+.. literalinclude:: /CodeSnippets/DataProcessing/Template/DataProcMenu.fluid.html
+   :caption: EXT:examples/Resources/Private/Templates/ContentElements/DataProcMenu.fluid.html
 
 ..  rubric:: Output
 

@@ -90,7 +90,7 @@ The following breadcrumb menu is created with the
 
 The following Fluid partial can be used to style the breadcrumb menu:
 
-.. literalinclude:: /CodeSnippets/Menu/Template/BreadcrumbDataProcessor.html
+.. literalinclude:: /CodeSnippets/Menu/Template/BreadcrumbDataProcessor.fluid.html
    :caption: EXT:site_package/Resources/Private/Templates/Partials/Navigation/Breadcrumb.fluid.html
 
 ..  _hmenu-special-rootline-breadcrumb-pure:

@@ -117,8 +117,8 @@ possible:
 
 In the Fluid template then iterate over the split data:
 
-.. literalinclude:: /CodeSnippets/DataProcessing/Template/DataProcSplit.html
-   :caption: EXT:examples/Resources/Private/Templates/ContentElements/DataProcSplit.html
+.. literalinclude:: /CodeSnippets/DataProcessing/Template/DataProcSplit.fluid.html
+   :caption: EXT:examples/Resources/Private/Templates/ContentElements/DataProcSplit.fluid.html
 
 ..  rubric:: Output
 
