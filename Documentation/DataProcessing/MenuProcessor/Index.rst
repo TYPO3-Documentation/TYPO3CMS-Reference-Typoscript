@@ -227,13 +227,15 @@ Please see also :ref:`dataProcessing-about-examples`.
 
 Using the :php:`MenuProcessor` the following scenario is possible:
 
-..  include:: /CodeSnippets/DataProcessing/TypoScript/MenuProcessor.rst.txt
+.. literalinclude:: /CodeSnippets/DataProcessing/TypoScript/MenuProcessor.typoscript
+   :caption: EXT:examples/Configuration/TypoScript/DataProcessors/Processors/MenuProcessor.typoscript
 
 ..  rubric:: The Fluid template
 
 This generated menu can be used in Fluid like this:
 
-..  include:: /CodeSnippets/DataProcessing/Template/DataProcMenu.rst.txt
+.. literalinclude:: /CodeSnippets/DataProcessing/Template/DataProcMenu.html
+   :caption: EXT:examples/Resources/Private/Templates/ContentElements/DataProcMenu.html
 
 ..  rubric:: Output
 

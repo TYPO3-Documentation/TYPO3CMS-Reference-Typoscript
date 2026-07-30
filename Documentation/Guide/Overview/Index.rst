@@ -43,5 +43,5 @@ other tutorials, like the :ref:`Site package tutorial <t3sitepackage:start>`.
 ..  include:: _Chapters/_TheTermTemplate.rst.txt
     :show-buttons:
 
-..  include:: _Chapters/_TypoScriptAnArray.rst.txt
+.. literalinclude:: /Guide/Overview/_Chapters/_TypoScriptAnArray.typoscript
     :show-buttons:

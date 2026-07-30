@@ -26,8 +26,6 @@
     },
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^3.46",
-        "symfony/yaml": "^7.0",
-        "t3docs/codesnippet": "dev-main",
         "typo3/cms-adminpanel": "dev-main as 14.3",
         "typo3/cms-backend": "dev-main as 14.3",
         "typo3/cms-belog": "dev-main as 14.3",
@@ -60,16 +58,6 @@
         "typo3/cms-t3editor": "dev-main as 14.3",
         "typo3/cms-tstemplate": "dev-main as 14.3",
         "typo3/cms-viewpage": "dev-main as 14.3",
-        "typo3/cms-workspaces": "dev-main as 14.3",
-        "t3docs/examples": "dev-main",
-        "t3docs/site-package": "dev-main"
-    },
-    "scripts": {
-        "generate:codesnippets": [
-            ".Build/vendor/bin/typo3 codesnippet:create Documentation/"
-        ],
-        "generate": [
-            "@generate:codesnippets"
-        ]
+        "typo3/cms-workspaces": "dev-main as 14.3"
     }
 }

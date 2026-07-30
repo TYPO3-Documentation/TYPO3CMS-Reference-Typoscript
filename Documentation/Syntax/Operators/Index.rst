@@ -37,7 +37,8 @@ exist, it falls back to the string literal including the :typoscript:`{$` and
 
 A couple of examples:
 
-..  include:: /CodeSnippets/TypoScriptSyntax/OperatorAssignment.rst.txt
+.. literalinclude:: /CodeSnippets/TypoScriptSyntax/OperatorAssignment.typoscript
+   :caption: Extension examples, file Configuration/TypoScript/Syntax/Assignment/setup.typoscript
 
 ..  caution::
     The TypoScript parser looks for valid operators first, then parses things
@@ -89,7 +90,8 @@ backend modules.
 
 A couple of examples:
 
-..  include:: /CodeSnippets/TypoScriptSyntax/OperatorMultiLine.rst.txt
+.. literalinclude:: /CodeSnippets/TypoScriptSyntax/OperatorMultiLine.typoscript
+   :caption: Extension examples, file Configuration/TypoScript/Syntax/OperatorMultiLine/setup.typoscript
 
 
 ..  index::
@@ -104,7 +106,8 @@ Unset with ">"
 This can be used to unset a previously defined identifier path value, and
 all of its sub identifiers:
 
-..  include:: /CodeSnippets/TypoScriptSyntax/OperatorUnset.rst.txt
+.. literalinclude:: /CodeSnippets/TypoScriptSyntax/OperatorUnset.typoscript
+   :caption: Extension examples, file Configuration/TypoScript/Syntax/ObjectUnset/setup.typoscript
 
 
 ..  index::
@@ -128,24 +131,28 @@ used at further places when needed again.
 The result of the below TypoScript is two independent sets which are duplicates.
 They are not references to each other but actual copies:
 
-..  include:: /CodeSnippets/TypoScriptSyntax/OperatorCopy1.rst.txt
+.. literalinclude:: /CodeSnippets/TypoScriptSyntax/OperatorCopy1.typoscript
+   :caption: Extension examples, file Configuration/TypoScript/Syntax/OperatorCopy1/setup.typoscript
 
 The copy operator is allowed within code blocks as well:
 
-..  include:: /CodeSnippets/TypoScriptSyntax/OperatorCopy2.rst.txt
+.. literalinclude:: /CodeSnippets/TypoScriptSyntax/OperatorCopy2.typoscript
+   :caption: Extension examples, file Configuration/TypoScript/Syntax/OperatorCopy2/setup.typoscript
 
 In the above example, the copied identifier path is referred to with its full path
 :typoscript:`myIdentifier.10`. When copying on the same level, it is allowed
 to use a relative path, indicated by a prepended dot. The following produces
 the same result as above:
 
-..  include:: /CodeSnippets/TypoScriptSyntax/OperatorCopy3.rst.txt
+.. literalinclude:: /CodeSnippets/TypoScriptSyntax/OperatorCopy3.typoscript
+   :caption: Extension examples, file Configuration/TypoScript/Syntax/OperatorCopy3/setup.typoscript
 
 Using the copy operator creates a copy of the source path at exactly this point
 in the parsing process. Changing the source afterwards does not change the
 target, and changing the target afterwards does not change the source:
 
-..  include:: /CodeSnippets/TypoScriptSyntax/OperatorCopy4.rst.txt
+.. literalinclude:: /CodeSnippets/TypoScriptSyntax/OperatorCopy4.typoscript
+   :caption: Extension examples, file Configuration/TypoScript/Syntax/OperatorCopy4/setup.typoscript
 
 
 ..  index::
@@ -175,7 +182,8 @@ identifier path without making an actual copy. This allows changes to the
 source identifier afterwards, which changes the targets as well. References can
 be convenient for this special case, but should be used with caution.
 
-..  include:: /CodeSnippets/TypoScriptSyntax/OperatorReference.rst.txt
+.. literalinclude:: /CodeSnippets/TypoScriptSyntax/OperatorReference.typoscript
+   :caption: Extension examples, file Configuration/TypoScript/Syntax/OperatorReference/setup.typoscript
 
 ..  index::
     TypoScript; Operator ":="
