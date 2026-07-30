@@ -34,4 +34,5 @@ true for multiline assignments.
 
 Some examples:
 
-.. include:: /CodeSnippets/TypoScriptSyntax/Comments.rst.txt
+.. literalinclude:: /CodeSnippets/TypoScriptSyntax/Comments.typoscript
+   :caption: Extension examples, file Configuration/TypoScript/Syntax/Comments/setup.typoscript

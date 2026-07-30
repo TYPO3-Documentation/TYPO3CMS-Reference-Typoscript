@@ -1,0 +1,17 @@
+    page.10.myFunction = Magic!
+
+the following entry will be added to the PHP array:
+
+..  code-block:: php
+
+    $data['page.']['10.']['myFunction'] = 'Magic!';
+
+However, the ":ref:`TEXT <cobj-text>`" object does not know
+any property called "myFunction". Consequently, the entry will have no effect.
+
+..  important::
+
+    No semantic error checking is done. If you define objects or
+    properties which do not exist, you will not see any error message.
+    Instead, those specific lines of TypoScript simply do nothing. This
+    should be considered, especially while troubleshooting.

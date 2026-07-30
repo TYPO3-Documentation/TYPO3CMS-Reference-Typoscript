@@ -1,0 +1,9 @@
+    <strong>TOOL: TYPO3</strong>
+
+because we explicitly specified that `noTrimWrap` should happen before
+`case`.
+
+It should be noted that `stdWrap` itself has a `stdWrap` property,
+meaning that it can be called recursively. In most case `orderedStdWrap`
+will do the job and is much easier to understand making code easier to
+maintain.
