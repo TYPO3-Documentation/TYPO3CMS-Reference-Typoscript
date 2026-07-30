@@ -94,8 +94,8 @@ Using the :php:`LanguageMenuProcessor` the following scenario is possible:
 
 This generated menu can be used in Fluid like this:
 
-.. literalinclude:: /CodeSnippets/DataProcessing/Template/DataProcLangMenu.html
-   :caption: EXT:examples/Resources/Private/Templates/ContentElements/DataProcLangMenu.html
+.. literalinclude:: /CodeSnippets/DataProcessing/Template/DataProcLangMenu.fluid.html
+   :caption: EXT:examples/Resources/Private/Templates/ContentElements/DataProcLangMenu.fluid.html
 
 ..  rubric:: Output
 

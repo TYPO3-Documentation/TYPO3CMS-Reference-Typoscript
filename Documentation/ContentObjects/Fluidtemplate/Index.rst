@@ -374,8 +374,8 @@ The Fluid template in
 :file:`EXT:my_sitepackage/Resources/Private/Templates/MyTemplate.html` could look
 like this:
 
-..  literalinclude:: _includes/_MyTemplate.html
-    :caption: EXT:my_sitepackage/Resources/Private/Templates/MyTemplate.html
+..  literalinclude:: _includes/_MyTemplate.fluid.html
+    :caption: EXT:my_sitepackage/Resources/Private/Templates/MyTemplate.fluid.html
 
 You could use it with TypoScript code like this:
 

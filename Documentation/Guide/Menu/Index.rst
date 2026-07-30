@@ -21,8 +21,8 @@ And render the menu in your Fluid template. You need at least a
 to keep your templates in its private resources folder, for example
 :path:`/packages/site_package/Resources/Private/Templates`:
 
-..  literalinclude:: _MenuTemplate.html
-    :caption: /packages/site_package/Resources/Private/Templates/Pages/Default.html
+..  literalinclude:: _MenuTemplate.fluid.html
+    :caption: /packages/site_package/Resources/Private/Templates/Pages/Default.fluid.html
 
 Find more examples on how to configure and render menus with TypoScript and
 Fluid in chapter

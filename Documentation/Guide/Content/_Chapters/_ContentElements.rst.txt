@@ -55,8 +55,8 @@ the paths (see above). In your own templates you have the data of the currently
 rendered content element available in the {data} fluid variable. For example
 take a look at how the text element is rendered:
 
-..  literalinclude:: /Guide/Content/_snippets/_Layout.html
-    :caption: Taken from typo3/sysext/fluid_styled_content/Resources/Private/Templates/Text.html
+..  literalinclude:: /Guide/Content/_snippets/_Layout.fluid.html
+    :caption: Taken from typo3/sysext/fluid_styled_content/Resources/Private/Templates/Text.fluid.html
 
 The database field `bodytext` from the `tt_content` table (which is
 the main text input field for content elements of type `text`) is

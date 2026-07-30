@@ -159,5 +159,5 @@ all its properties:
 
 The following Fluid template can be used to style the menu:
 
-.. literalinclude:: /CodeSnippets/Menu/Template/MenuRecentlyUpdated.html
+.. literalinclude:: /CodeSnippets/Menu/Template/MenuRecentlyUpdated.fluid.html
    :caption: EXT:fluid_styled_content/Resources/Private/Templates/MenuRecentlyUpdated.fluid.html

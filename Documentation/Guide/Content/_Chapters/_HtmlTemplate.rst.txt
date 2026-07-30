@@ -27,4 +27,4 @@ earlier.
 
 For example to render a template with the menu we defined add:
 
-..  literalinclude:: /Guide/Content/_snippets/_Fluid.html
+..  literalinclude:: /Guide/Content/_snippets/_Fluid.fluid.html

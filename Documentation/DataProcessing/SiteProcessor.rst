@@ -50,8 +50,8 @@ Using the :php:`SiteProcessor` the following scenario is possible:
 
 In the Fluid template the properties of the site configuration can be accessed:
 
-.. literalinclude:: /CodeSnippets/DataProcessing/Template/DataProcSite.html
-   :caption: EXT:examples/Resources/Private/Templates/ContentElements/DataProcSite.html
+.. literalinclude:: /CodeSnippets/DataProcessing/Template/DataProcSite.fluid.html
+   :caption: EXT:examples/Resources/Private/Templates/ContentElements/DataProcSite.fluid.html
 
 ..  rubric:: Output
 

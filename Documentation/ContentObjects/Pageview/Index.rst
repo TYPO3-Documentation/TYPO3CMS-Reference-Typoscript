@@ -131,18 +131,18 @@ Examples for using default variables
 Example: Display the site title in the current language
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-..  literalinclude:: _includes/_DisplaySiteTitle.html
+..  literalinclude:: _includes/_DisplaySiteTitle.fluid.html
     :language: html
-    :caption: EXT:my_sitepackage/Resources/Private/PageView/Pages/Default.html
+    :caption: EXT:my_sitepackage/Resources/Private/PageView/Pages/Default.fluid.html
 
 .. _cobj-pageview-data-page-example:
 
 Example: Display the title and abstract of the current page
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-..  literalinclude:: _includes/_DisplayPageInfo.html
+..  literalinclude:: _includes/_DisplayPageInfo.fluid.html
     :language: html
-    :caption: EXT:my_sitepackage/Resources/Private/PageView/Pages/Default.html
+    :caption: EXT:my_sitepackage/Resources/Private/PageView/Pages/Default.fluid.html
 
 .. _cobj-pageview-data-settings-example:
 
@@ -155,18 +155,18 @@ Let us assume, the current page loads the following TypoScript constants:
     :language: html
     :caption: EXT:my_sitepackage/Configuration/TypoScript/constants.typoscript
 
-..  literalinclude:: _includes/_PageWithConstant.html
+..  literalinclude:: _includes/_PageWithConstant.fluid.html
     :language: html
-    :caption: EXT:my_sitepackage/Resources/Private/PageView/Pages/Default.html
+    :caption: EXT:my_sitepackage/Resources/Private/PageView/Pages/Default.fluid.html
 
 .. _cobj-pageview-data-site-example:
 
 Example: Link to the root page of the current site
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-..  literalinclude:: _includes/_LinkToRootPage.html
+..  literalinclude:: _includes/_LinkToRootPage.fluid.html
     :language: html
-    :caption: EXT:my_sitepackage/Resources/Private/PageView/Pages/Default.html
+    :caption: EXT:my_sitepackage/Resources/Private/PageView/Pages/Default.fluid.html
 
 ..  _cobj-pageview-properties:
 
@@ -241,22 +241,22 @@ Example: Display a main menu and a breadcrumb on the page
 
 The page template could look like this:
 
-..  literalinclude:: _includes/_PageWithBreadcrumb.html
+..  literalinclude:: _includes/_PageWithBreadcrumb.fluid.html
     :language: html
-    :caption: EXT:my_sitepackage/Resources/Private/PageView/Pages/Default.html
+    :caption: EXT:my_sitepackage/Resources/Private/PageView/Pages/Default.fluid.html
 
 
 With the following partials:
 
-..  literalinclude:: _includes/_PartialBreadCrumb.html
+..  literalinclude:: _includes/_PartialBreadCrumb.fluid.html
     :language: html
-    :caption: EXT:my_sitepackage/Resources/Private/PageView/Partials/Navigation/Breadcrumb.html
+    :caption: EXT:my_sitepackage/Resources/Private/PageView/Partials/Navigation/Breadcrumb.fluid.html
 
 And
 
-..  literalinclude:: _includes/_PartialMainNavigation.html
+..  literalinclude:: _includes/_PartialMainNavigation.fluid.html
     :language: html
-    :caption: EXT:my_sitepackage/Resources/Private/PageView/Partials/Navigation/MainNavigation.html
+    :caption: EXT:my_sitepackage/Resources/Private/PageView/Partials/Navigation/MainNavigation.fluid.html
 
 ..  _cobj-pageview-paths-example:
 
@@ -354,6 +354,6 @@ Example: Make additional variables available in the Fluid template
 
 The following variables are now available in the Fluid template:
 
-..  literalinclude:: _includes/_PageWithVariables.html
+..  literalinclude:: _includes/_PageWithVariables.fluid.html
     :langugage: html
-    :caption: EXT:my_sitepackage/Resources/Private/PageView/Pages/Default.html
+    :caption: EXT:my_sitepackage/Resources/Private/PageView/Pages/Default.fluid.html
