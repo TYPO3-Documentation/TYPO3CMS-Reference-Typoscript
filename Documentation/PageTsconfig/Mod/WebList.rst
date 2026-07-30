@@ -104,7 +104,8 @@ csvDelimiter
 Example: Use semicolon as delimiter CSV downloads
 -------------------------------------------------
 
-..  include:: /CodeSnippets/PageTSconfig/Mod/CsvExport.rst.txt
+.. literalinclude:: /CodeSnippets/PageTSconfig/Mod/CsvExport.typoscript
+   :caption: EXT:examples/Configuration/TsConfig/Page/Mod/csvExport.tsconfig
 
 ..  include:: /Images/ManualScreenshots/WebList/ExportDialog.rst.txt
 
@@ -131,7 +132,8 @@ csvQuote
 Example: Use single quotes as quoting character for CSV downloads
 -----------------------------------------------------------------
 
-..  include:: /CodeSnippets/PageTSconfig/Mod/CsvExport.rst.txt
+.. literalinclude:: /CodeSnippets/PageTSconfig/Mod/CsvExport.typoscript
+   :caption: EXT:examples/Configuration/TsConfig/Page/Mod/csvExport.tsconfig
 
 ..  include:: /Images/ManualScreenshots/WebList/ExportDialog.rst.txt
 
@@ -587,7 +589,8 @@ noExportRecordsLinks
 Example: Hide the "Download" and "Export" links
 -----------------------------------------------
 
-..  include:: /CodeSnippets/PageTSconfig/Mod/noExportRecordsLinks.rst.txt
+.. literalinclude:: /CodeSnippets/PageTSconfig/Mod/noExportRecordsLinks.typoscript
+   :caption: EXT:examples/Configuration/TsConfig/Page/Mod/noExportRecordsLinks.tsconfig
 
 ..  _pageTsConfigWebList-noViewWithDokTypes:
 

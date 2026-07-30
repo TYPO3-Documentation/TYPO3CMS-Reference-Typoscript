@@ -14,16 +14,19 @@ Without repeating upper parts of a path in each line. This allows nesting.
 
 Example without braces:
 
-.. include:: /CodeSnippets/TypoScriptSyntax/CodeBlock1.rst.txt
+.. literalinclude:: /CodeSnippets/TypoScriptSyntax/CodeBlock1.typoscript
+   :caption: Extension examples, file Configuration/TypoScript/Syntax/CodeBlock/setup.typoscript
 
 This can be written as:
 
-.. include:: /CodeSnippets/TypoScriptSyntax/CodeBlock2.rst.txt
+.. literalinclude:: /CodeSnippets/TypoScriptSyntax/CodeBlock2.typoscript
+   :caption: Extension examples, file Configuration/TypoScript/Syntax/CodeBlock2/setup.typoscript
 
 Curly braces can be nested to further improve readability. This is also
 the same as above:
 
-.. include:: /CodeSnippets/TypoScriptSyntax/CodeBlock3.rst.txt
+.. literalinclude:: /CodeSnippets/TypoScriptSyntax/CodeBlock3.typoscript
+   :caption: Extension examples, file Configuration/TypoScript/Syntax/CodeBlock3/setup.typoscript
 
 Some rules apply during parsing:
 
@@ -36,13 +39,15 @@ Some rules apply during parsing:
   the value, so the TypoScript and TSconfig backend modules will mumble with a
   "missing closing brace" warning:
 
-  .. include:: /CodeSnippets/TypoScriptSyntax/CodeBlockInvalidClosingBrace.rst.txt
+  .. literalinclude:: /CodeSnippets/TypoScriptSyntax/CodeBlockInvalidClosingBrace.typoscript
+     :caption: Extension examples, file Configuration/TypoScript/Syntax/CodeBlockInvalidClosingBrace/setup.typoscript
 
 - Conditions can not be placed within blocks, they are always "global" level
   and stop any brace nesting. The following construct is invalid, the TypoScript and
   TSconfig backend modules will mumble with a "missing closing brace" warning:
 
-  .. include:: /CodeSnippets/TypoScriptSyntax/CodeBlockInvalidCondition.rst.txt
+  .. literalinclude:: /CodeSnippets/TypoScriptSyntax/CodeBlockInvalidCondition.typoscript
+     :caption: Extension examples, file Configuration/TypoScript/Syntax/CodeBlockInvalidCondition/setup.typoscript
 
 - Nesting is per-file / per-text-snippet: It does not "swap" into included files. This
   was the case with the old TypoScript parser. It has been a nasty side-effect, leading
@@ -52,4 +57,5 @@ Some rules apply during parsing:
   A construct like this is invalid, the TypoScript and TSconfig backend modules will mumble
   with a "missing closing brace" warning:
 
-  .. include:: /CodeSnippets/TypoScriptSyntax/CodeBlockInvalidImport.rst.txt
+  .. literalinclude:: /CodeSnippets/TypoScriptSyntax/CodeBlockInvalidImport.typoscript
+     :caption: Extension examples, file Configuration/TypoScript/Syntax/CodeBlockInvalidCondition/setup.typoscript

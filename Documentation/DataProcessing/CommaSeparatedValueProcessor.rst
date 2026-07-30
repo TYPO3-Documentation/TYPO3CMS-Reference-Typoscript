@@ -119,14 +119,16 @@ Field :sql:`bodytext` in table :sql:`tt_content`:
 We define the :typoscript:`dataProcessing` property to use the
 :php:`CommaSeparatedValueProcessor`:
 
-..  include:: /CodeSnippets/DataProcessing/TypoScript/CommaSeparatedValueProcessor.rst.txt
+.. literalinclude:: /CodeSnippets/DataProcessing/TypoScript/CommaSeparatedValueProcessor.typoscript
+   :caption: EXT:examples/Configuration/TypoScript/DataProcessors/Processors/CommaSeparatedValueProcessor.typoscript
 
 ..  rubric:: The Fluid template
 
 In the Fluid template, you can iterate over the processed data. "myContentTable" can
 be used as a variable :html:`{myContentTable}` inside Fluid for iteration.
 
-..  include:: /CodeSnippets/DataProcessing/Template/DataProcCsv.rst.txt
+.. literalinclude:: /CodeSnippets/DataProcessing/Template/DataProcCsv.html
+   :caption: EXT:examples/Resources/Private/Templates/ContentElements/DataProcCsv.html
 
 ..  rubric:: Output
 
