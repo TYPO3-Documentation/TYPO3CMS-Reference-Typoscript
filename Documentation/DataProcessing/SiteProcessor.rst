@@ -43,13 +43,15 @@ Please see also :ref:`dataProcessing-about-examples`.
 
 Using the :php:`SiteProcessor` the following scenario is possible:
 
-..  include:: /CodeSnippets/DataProcessing/TypoScript/SiteProcessor.rst.txt
+.. literalinclude:: /CodeSnippets/DataProcessing/TypoScript/SiteProcessor.typoscript
+   :caption: EXT:examples/Configuration/TypoScript/DataProcessors/Processors/SiteProcessor.typoscript
 
 ..  rubric:: The Fluid template
 
 In the Fluid template the properties of the site configuration can be accessed:
 
-..  include:: /CodeSnippets/DataProcessing/Template/DataProcSite.rst.txt
+.. literalinclude:: /CodeSnippets/DataProcessing/Template/DataProcSite.html
+   :caption: EXT:examples/Resources/Private/Templates/ContentElements/DataProcSite.html
 
 ..  rubric:: Output
 

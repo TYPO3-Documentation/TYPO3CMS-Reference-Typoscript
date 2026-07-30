@@ -110,13 +110,15 @@ Please see also :ref:`dataProcessing-about-examples`.
 With the help of the :php:`SplitProcessor` the following scenario is
 possible:
 
-..  include:: /CodeSnippets/DataProcessing/TypoScript/SplitProcessor.rst.txt
+.. literalinclude:: /CodeSnippets/DataProcessing/TypoScript/SplitProcessor.typoscript
+   :caption: EXT:examples/Configuration/TypoScript/DataProcessors/Processors/SplitProcessor.typoscript
 
 ..  rubric:: The Fluid template
 
 In the Fluid template then iterate over the split data:
 
-..  include:: /CodeSnippets/DataProcessing/Template/DataProcSplit.rst.txt
+.. literalinclude:: /CodeSnippets/DataProcessing/Template/DataProcSplit.html
+   :caption: EXT:examples/Resources/Private/Templates/ContentElements/DataProcSplit.html
 
 ..  rubric:: Output
 
