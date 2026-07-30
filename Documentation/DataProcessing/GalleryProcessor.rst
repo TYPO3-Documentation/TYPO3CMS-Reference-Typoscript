@@ -226,8 +226,8 @@ in the :php:`GalleryProcessor` has to be equal to the content of
 
 ..  rubric:: The Fluid template
 
-.. literalinclude:: /CodeSnippets/DataProcessing/Template/DataProcGallery.html
-   :caption: EXT:examples/Resources/Private/Templates/ContentElements/DataProcGallery.html
+.. literalinclude:: /CodeSnippets/DataProcessing/Template/DataProcGallery.fluid.html
+   :caption: EXT:examples/Resources/Private/Templates/ContentElements/DataProcGallery.fluid.html
 
 ..  rubric:: Output
 

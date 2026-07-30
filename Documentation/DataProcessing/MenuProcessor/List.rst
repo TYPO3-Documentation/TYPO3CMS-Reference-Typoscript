@@ -61,5 +61,5 @@ all its properties:
 
 The following Fluid template can be used to style the menu:
 
-.. literalinclude:: /CodeSnippets/Menu/Template/MenuPages.html
+.. literalinclude:: /CodeSnippets/Menu/Template/MenuPages.fluid.html
    :caption: EXT:fluid_styled_content/Resources/Private/Templates/MenuPages.fluid.html

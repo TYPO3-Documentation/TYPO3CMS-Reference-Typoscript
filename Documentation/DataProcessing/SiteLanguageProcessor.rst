@@ -52,8 +52,8 @@ Using the :php:`SiteLanguageProcessor` the following scenario is possible:
 In the Fluid template the properties of the site language configuration can
 be accessed:
 
-.. literalinclude:: /CodeSnippets/DataProcessing/Template/DataProcSiteLanguage.html
-   :caption: EXT:examples/Resources/Private/Templates/ContentElements/DataProcSiteLanguage.html
+.. literalinclude:: /CodeSnippets/DataProcessing/Template/DataProcSiteLanguage.fluid.html
+   :caption: EXT:examples/Resources/Private/Templates/ContentElements/DataProcSiteLanguage.fluid.html
 
 ..  rubric:: Output
 

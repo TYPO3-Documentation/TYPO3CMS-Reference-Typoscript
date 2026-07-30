@@ -119,8 +119,8 @@ In the Fluid template then iterate over the records. As we used the recursive
 data processor :ref:`FilesProcessor` on the image records, we can also output
 the images.
 
-.. literalinclude:: /CodeSnippets/DataProcessing/Template/DataProcDb.html
-   :caption: EXT:examples/Resources/Private/Templates/ContentElements/DataProcDb.html
+.. literalinclude:: /CodeSnippets/DataProcessing/Template/DataProcDb.fluid.html
+   :caption: EXT:examples/Resources/Private/Templates/ContentElements/DataProcDb.fluid.html
 
 ..  rubric:: Output
 

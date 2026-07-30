@@ -166,5 +166,5 @@ content object and the `page-content data processor <https://docs.typo3.org/perm
 
 Use the column identifiers in a Fluid template:
 
-..  literalinclude:: _Default.html
-    :caption: EXT:my_sitepackage/Resources/Private/Templates/Pages/Default.html
+..  literalinclude:: _Default.fluid.html
+    :caption: EXT:my_sitepackage/Resources/Private/Templates/Pages/Default.fluid.html

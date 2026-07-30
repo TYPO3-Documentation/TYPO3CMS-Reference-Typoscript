@@ -56,8 +56,8 @@ You need at least a
 to keep your templates in its private resources folder, for example
 :path:`/packages/site_package/Resources/Private/Templates`:
 
-..  literalinclude:: _Default.html
-    :caption: /packages/site_package/Resources/Private/Templates/Pages/Default.html
+..  literalinclude:: _Default.fluid.html
+    :caption: /packages/site_package/Resources/Private/Templates/Pages/Default.fluid.html
 
 ..  note::
     Learn more about building site packages (website themes) with TypoScript and

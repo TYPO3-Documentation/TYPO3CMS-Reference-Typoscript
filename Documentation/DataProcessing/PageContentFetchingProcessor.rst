@@ -55,8 +55,8 @@ Example: Use the page-content data processor to display the content
 
 Use the identifiers of the columns in the Fluid template:
 
-..  literalinclude:: _PageContentFetchingProcessor/_Default.html
-    :caption: EXT:my_sitepackage/Resources/Private/Templates/Pages/Default.html
+..  literalinclude:: _PageContentFetchingProcessor/_Default.fluid.html
+    :caption: EXT:my_sitepackage/Resources/Private/Templates/Pages/Default.fluid.html
 
 You can use the :ref:`CObject ViewHelper <f:cObject> <t3viewhelper:typo3-fluid-cobject>`
 to render the content element using :composer:`typo3/cms-fluid-styled-content`
