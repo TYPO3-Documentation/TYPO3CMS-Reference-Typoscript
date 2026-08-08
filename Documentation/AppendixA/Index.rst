@@ -18,6 +18,8 @@ ContentObjectRenderer
 A method of :php:`TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer`.
 Gets a content object from the `$conf` array.
 
+..  _appendix-include-cobjgetsingle-example:
+
 Example:
 ~~~~~~~~
 
@@ -39,6 +41,8 @@ A method of :php:`TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer`.
 Hands the content in "value" to the stdWrap function, which will
 process it according to the configuration of the array "properties".
 
+
+..  _appendix-include-stdwrap-example:
 
 Example:
 ~~~~~~~~

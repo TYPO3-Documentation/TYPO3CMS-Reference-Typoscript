@@ -145,6 +145,8 @@ The following Item states are listed from the least to the highest priority:
 
 ..  index:: TMENU; properties
 
+..  _menu-objects-properties:
+
 Properties
 ==========
 

@@ -21,6 +21,8 @@ selected by a simple click. Multiple color palettes can be configured.
 
     Example of a color palette
 
+..  _pagecolorpalettes-basic-syntax:
+
 Basic syntax
 ============
 

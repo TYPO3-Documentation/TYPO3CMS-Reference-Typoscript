@@ -13,6 +13,8 @@ Content was removed
 TYPO3 v15
 =========
 
+..  _not-found-v15-user-tsconfig-v15:
+
 User TSconfig v15 changes
 -------------------------
 

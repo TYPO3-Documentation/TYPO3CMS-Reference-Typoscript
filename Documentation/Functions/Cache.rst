@@ -136,6 +136,8 @@ timestamp). :
 Here a dynamic key is used. It takes the page id and the language uid
 into account making the object page and language specific.
 
+..  _cache-cache-first-class:
+
 cache as first-class function
 =============================
 

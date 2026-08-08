@@ -1,18 +1,12 @@
+:navigation-title: Calc
+
 .. include:: /Includes.rst.txt
 .. index:: Functions; Calc
-
-.. The label objects-calc should no longer be used.
-.. Use the label calc instead.
-.. It only remains here, in case it is still being used.
 
 .. _objects-calc:
 .. _calc:
 
-====
-Calc
-====
-
-
+==========================
 Calculating values (+calc)
 ==========================
 
@@ -22,8 +16,10 @@ operators have no "weight".* The calculation is done from left to
 right instead of order of operations (multiplication and division before addition and subtraction).
 
 
+..  _objects-calc-calculating-values-calc-value-calculated:
+
 How value is calculated
------------------------
+=======================
 
 .. code-block:: none
 
@@ -31,8 +27,10 @@ How value is calculated
    (which is the same as this in ordinary arithmetic: (45+34)*2=158)
 
 
+..  _objects-calc-calculating-values-calc-calc-usage-example:
+
 calc usage example
-------------------
+==================
 
 The :typoscript:`HMENU` :typoscript:`maxAge` property is of a type
 :typoscript:`integer +calc`, it's value in this example equals to 259200.

@@ -27,6 +27,8 @@ has a better compression (= smaller file size) than jpg files.
     :caption: EXT:config/sites/my_site/setup.typoscript
 
 
+..  _gifbuilder-examples-masking-semi-transparent:
+
 Masking semi-transparent images (Logos) onto other images
 =========================================================
 
@@ -113,12 +115,16 @@ command :bash:`-colorspace GRAY`. You can negate it by adding the command
 :bash:`-negate`. But this tasks can also be done with every better image
 manipulation tool (for example, GIMP).
 
+..  _gifbuilder-examples-create-mask-alpha:
+
 How to create a mask from an alpha-layer PNG
 ============================================
 
 If your designer supplies you with a Photoshop file with transparency
 mask (or a PNG) you will have to extract the alpha channel information
 out of the image.
+
+..  _gifbuilder-examples-create-mask-alpha-gimp:
 
 GIMP
 ----
@@ -150,6 +156,8 @@ Here are the required steps for GIMP:
 #.  You can invert the mask after you have flattened it using
     :guilabel:`Filters > Colors > Value Invert`.
 
+..  _gifbuilder-examples-create-mask-alpha-imagemagick:
+
 ImageMagick
 -----------
 
@@ -168,6 +176,8 @@ To get the image without the alpha channel use the command:
 
     convert alphaLayerPng.png  +matte image.png
 
+
+..  _gifbuilder-examples-creating-semi-transparent:
 
 Creating (semi-transparent) boxes with transparent text
 =======================================================
@@ -291,11 +301,15 @@ yourself:
       }
     }
 
+..  _gifbuilder-examples-creating-shadows-images:
+
 Creating shadows for images
 ===========================
 
 It is also possible to add shadows to images, though mostly CSS
 shadows should be sufficient nowadays.
+
+..  _gifbuilder-examples-creating-shadows-images-variant-1:
 
 Variant 1
 ---------
@@ -303,6 +317,8 @@ Variant 1
 Here a background image gets used. The background image (:file:`shadow.png`)
 gets scaled to the width and height of the image and the image gets put
 on top of it with an offset of 10,10 pixels:
+
+..  _gifbuilder-examples-creating-shadows-images-variant-1-setup:
 
 Setup
 ~~~~~
@@ -350,6 +366,8 @@ Setup
       }
     }
 
+..  _gifbuilder-examples-creating-shadows-images-variant-1-result:
+
 Result
 ~~~~~~
 
@@ -361,6 +379,8 @@ image:
 
     Variant 1
 
+..  _gifbuilder-examples-creating-shadows-images-variant-2:
+
 Variant 2
 ---------
 
@@ -369,12 +389,16 @@ and gets blurred. This simulates a shadow. Then the image gets placed
 on top of it.
 
 
+..  _gifbuilder-examples-creating-shadows-images-variant-2-constants:
+
 Constants
 ~~~~~~~~~
 
 ..  code-block:: typoscript
 
     lib.shadowIntensity = #999999
+
+..  _gifbuilder-examples-creating-shadows-images-variant-2-setup:
 
 Setup
 ~~~~~
@@ -423,6 +447,8 @@ Setup
       40.offset = 5,5
     }
 
+..  _gifbuilder-examples-creating-shadows-images-variant-2-result:
+
 Result
 ~~~~~~
 
@@ -432,6 +458,8 @@ Here the result of the blur method. It looks quite good.
     :alt: Variant 2
 
     Variant 2
+
+..  _gifbuilder-examples-creating-shadows-images-notes:
 
 Notes
 -----
@@ -446,6 +474,8 @@ wider blurred/shadow area.
 You can change the color set via :typoscript:`lib.shadowIntensity` constant to
 lower values (more black) to get more intense shadows or to a lighter value
 for lighter shadows.
+
+..  _gifbuilder-examples-quality:
 
 Quality
 =======

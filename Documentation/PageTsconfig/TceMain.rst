@@ -10,6 +10,8 @@ TCEMAIN
 Configuration for the TYPO3 Core Engine (DataHandler). For general information, see
 the :ref:`according section of TYPO3 Explained <t3coreapi:tce>`.
 
+..  _pagetcemain-properties-2:
+
 Properties
 ==========
 
@@ -142,6 +144,8 @@ The page is hidden and the "(copy X)" suffix is added, if another page with the 
 
     Hidden page with added suffix after copying its original page
 
+..  _pagetcemaintables-disablehideatcopy-example-apply-disablehideatcopy:
+
 Example: Apply disableHideAtCopy as default to all tables
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -194,6 +198,8 @@ The page is hidden and the "(copy X)" suffix is added, if another page with the 
     :alt: Hidden page with added suffix after copying its original page
 
     Hidden page with added suffix after copying its original page
+
+..  _pagetcemaintables-disableprependatcopy-example-apply-disableprependatcopy:
 
 Example: Apply disablePrependAtCopy as default to all tables
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -330,6 +336,8 @@ Value copyFromParent
 The value :typoscript:`copyFromParent` can be set for each of the
 page TSconfig :typoscript:`TCEMAIN.permissions.*` sub keys. If this value is
 set, the page access permissions are copied from the parent page.
+
+..  _pagetcemain-permissions-copy-from-parent-example-inherit:
 
 Example: Inherit the group id of the parent page
 """"""""""""""""""""""""""""""""""""""""""""""""

@@ -8,6 +8,8 @@ BOX
 
 Prints a filled box.
 
+..  _gifbuilder-box-example:
+
 Example
 =======
 

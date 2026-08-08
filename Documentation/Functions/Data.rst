@@ -48,6 +48,8 @@ retrieved. If "title" is also empty, the "uid" field is retrieved:
     lib.foo.data = field : header // field : title // field : uid
 
 
+..  _data-type-function-get-text-properties:
+
 Properties
 ==========
 
@@ -98,6 +100,8 @@ asset
     The result is the same as using the argument :fluid:`useCacheBusting="true"`
     in :ref:`t3viewhelper:typo3-fluid-uri-resource`.
 
+..  _data-type-gettext-asset-example-display-extension:
+
 Example: Display extension icon with cache buster
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -121,6 +125,8 @@ cObj
     ..  deprecated:: 14.3
 
         See `Deprecation: #109575 - Various ContentObjectRenderer properties/methods <https://docs.typo3.org/permalink/changelog:deprecation-109575>`_
+
+..  _data-type-gettext-cobj-example-get-number:
 
 Example: Get the number of the current cObject record
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -171,6 +177,8 @@ current
     Current (gets the "current" value)
 
     ..  TODO: What is the "current" value? We should explain that.
+
+..  _data-type-gettext-current-example-get-current:
 
 Example: Get the current value
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -304,6 +312,8 @@ Get content from :php:`$cObj->data['header']`:
     :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
     lib.foo.data = field : header
+
+..  _data-type-gettext-field-example-get-data:
 
 Example: Get data in a field
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -614,6 +624,8 @@ leveltitle
     *   Negative integers determine x levels up
     *   The slide parameter slides until there is a non-empty value.
 
+..  _data-type-gettext-leveltitle-example-get-title:
+
 Example: Get the title of a page up the root line
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -671,6 +683,8 @@ LLL
 
     Reference to a locallang label (:ref:`XLIFF <t3coreapi:xliff>`). Reference consists of
     [fileref]:[labelkey]
+
+..  _data-type-gettext-lll-example-get-localized:
 
 Example: Get a localized label
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

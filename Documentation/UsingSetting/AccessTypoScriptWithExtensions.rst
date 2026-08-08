@@ -12,6 +12,8 @@ Access TypoScript in an extension
 
 This page explains how to access TypoScript settings in an extension.
 
+..  _extdev-access-typoscript-extbase-controllers:
+
 Extbase controllers
 ===================
 
@@ -55,6 +57,8 @@ In order to access TypoScript settings from an Extbase controller.
 ..  seealso::
 
     *   :ref:`Extbase TypoScript configuration <t3coreapi:extbase_typoscript_configuration>`
+
+..  _extdev-access-typoscript-fluid:
 
 Fluid
 =====
