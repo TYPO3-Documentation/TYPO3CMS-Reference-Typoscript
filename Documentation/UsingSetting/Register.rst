@@ -12,6 +12,8 @@ It is possible to store variable values into a memory stack which is called
 Some TYPO3 cObjects use internal registers. Esp.  the menus are built by
 registers (e.g. count_HMENU, count_HMENU_MENUOBJ, count_menuItems).
 
+..  _using-setting-register-defining-registers:
+
 Defining registers
 ==================
 
@@ -23,6 +25,8 @@ and curly braces around a variable name to read the current value of the
 variable. You need a :ref:`stdwrap-data` or a
 :ref:`stdwrap-dataWrap` cObject. The registers cannot be read
 on other places than inside of these cObjects.
+
+..  _using-setting-register-example:
 
 Example
 =======

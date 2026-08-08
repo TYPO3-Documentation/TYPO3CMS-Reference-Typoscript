@@ -286,9 +286,7 @@ for the backend <typo3/cms-form:concepts-configuration-yamlregistration-backend>
     is loaded by default in sites based on **TypoScript records** it is not
     loaded in sites depending on **site sets as TypoScript providers**.
 
-
-More information
-================
+.. rubric:: More information
 
 * :ref:`t3sitepackage:typoscript-configuration` (in "Sitepackage Tutorial")`
 * :ref:`t3sitepackage:extension-configuration` (in "Sitepackage Tutorial")`

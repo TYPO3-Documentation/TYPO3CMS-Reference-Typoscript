@@ -225,6 +225,8 @@ The TypoScript syntax to
 :ref:`modify <t3tsref:typoscript-syntax-syntax-value-modification>` values
 can also be used for the page TSconfig.
 
+..  _setting-page-tsconfig-example:
+
 Example
 =======
 

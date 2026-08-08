@@ -416,6 +416,8 @@ but not to:
 as these parameters already follow a stricter syntax that allow automatic parsing and
 quoting.
 
+..  _select-example:
+
 Example
 =======
 

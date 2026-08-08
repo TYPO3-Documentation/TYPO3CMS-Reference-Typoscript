@@ -120,6 +120,8 @@ Examples
     a dependency of your project. Then, your classes will load without issues when you refer
     to them by their class name.
 
+..  _cobj-user-examples-example-1:
+
 Example 1
 ---------
 
@@ -145,6 +147,8 @@ Thus, in this example, the current time is displayed in red letters each time.
 The method :php:`printTime()` uses the PHP attribute
 :php:`#[AsAllowedCallable]` so that TypoScript is allowed to call is as a
 user function.
+
+..  _cobj-user-examples-example-2:
 
 Example 2
 ---------
@@ -179,12 +183,16 @@ The method :php:`listContentRecordsOnPage()` uses the PHP attribute
 :php:`#[AsAllowedCallable]` so that TypoScript is allowed to call is as a
 user function.
 
+..  _cobj-user-examples-example-3:
+
 Example 3
 ---------
 
 Another example can be found in the documentation of the stdWrap
 property :ref:`stdwrap-postUserFunc` There you can also see how to work with
 :php:`$cObj`, the reference to the parent (calling) cObject.
+
+..  _cobj-user-examples-example-4:
 
 Example 4
 ---------

@@ -87,6 +87,8 @@ useOptionSplitReplace
     occurrence of the string (first/middle/last part, ...). This works for
     both normal and regular expression replacements. For examples see below.
 
+..  _replacement-examples:
+
 Examples
 ========
 

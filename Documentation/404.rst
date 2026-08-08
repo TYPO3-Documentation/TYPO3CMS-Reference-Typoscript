@@ -6,6 +6,8 @@
 Content was removed
 ===================
 
+..  contents::
+
 ..  _not-found-v14:
 
 TYPO3 v14

@@ -918,6 +918,8 @@ phone
 
     This link handler sets links to phone numbers using the `tel:` protocol.
 
+..  _typolink-examples:
+
 Examples
 ========
 

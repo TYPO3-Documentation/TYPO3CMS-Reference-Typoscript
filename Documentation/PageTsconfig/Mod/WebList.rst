@@ -101,6 +101,8 @@ csvDelimiter
     `;` to be set). The value set will be displayed as default delimiter in the
     download dialog in the :guilabel:`Content > Records` module.
 
+..  _page-ts-config-web-list-csv-delimiter-example-semicolon-delimiter:
+
 Example: Use semicolon as delimiter CSV downloads
 -------------------------------------------------
 
@@ -155,6 +157,8 @@ deniedNewTables
     This is the opposite of :ref:`allowedNewTables property <pageTsConfigWebListAllowedNewTables>`.
 
     If `allowedNewTables` and `deniedNewTables` contain a common subset, `deniedNewTables` takes precedence.
+
+..  _page-ts-config-web-list-denied-new-tables-hide-create:
 
 Hide "Create new record" links in tables sys_category and tt_content
 --------------------------------------------------------------------

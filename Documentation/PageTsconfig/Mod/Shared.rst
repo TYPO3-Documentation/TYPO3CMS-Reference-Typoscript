@@ -19,6 +19,8 @@ SHARED
     colPos_list
     Columns; Disable
 
+..  _pagesharedotionsformodules-colpos-list:
+
 colPos_list
 ===========
 
@@ -82,6 +84,8 @@ defaultLanguageFlag
 
         The flag selector of a language record in the backend
 
+..  _page-ts-config-shared-default-language-label-example-show:
+
 Example: Show a German flag on a NullSite
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -98,6 +102,8 @@ This will show the German flag, and the text "deutsch" on hover.
 ..  index::
     defaultLanguageLabel
     Localization; Default language label
+
+..  _pagesharedotionsformodules-defaultlanguagelabel:
 
 defaultLanguageLabel
 ====================
@@ -121,6 +127,8 @@ defaultLanguageLabel
     disableLanguages
     Localization; disable languages
 
+..  _pagesharedotionsformodules-disablelanguages:
+
 disableLanguages
 ================
 
@@ -140,6 +148,8 @@ disableLanguages
 ..  index::
     disableSysNoteButton
     Buttons; disable sys_note
+
+..  _pagesharedotionsformodules-disablesysnotebutton:
 
 disableSysNoteButton
 ====================

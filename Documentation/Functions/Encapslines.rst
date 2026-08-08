@@ -263,6 +263,8 @@ nonWrappedTag
 Examples
 ========
 
+..  _encapslines-examples-tag-used-encapsulate:
+
 :html:`<p>` tag is used to encapsulate each line
 ------------------------------------------------
 
@@ -307,6 +309,8 @@ ONLY stored the line which was in fact right-aligned - every other line from the
 RTE was stored without any wrapping tags, so that the content in the database
 remains as human readable as possible.
 
+
+..  _encapslines-examples-advanced-example:
 
 Advanced example
 ----------------

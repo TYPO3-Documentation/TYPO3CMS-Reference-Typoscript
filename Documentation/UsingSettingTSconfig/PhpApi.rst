@@ -10,6 +10,8 @@
 PHP API
 =======
 
+..  _phpapi-retrieving-tsconfig-settings:
+
 Retrieving TSconfig settings
 ============================
 
@@ -50,6 +52,8 @@ these optional array structures.
 ..  literalinclude:: _PhpApi/_MyBackendLoggedInController.php
     :language: php
     :caption: Example how to read user TSconfig
+
+..  _phpapi-changing-adding-page:
 
 Changing or adding page TSconfig
 ================================

@@ -127,6 +127,8 @@ view.partialRootPaths
     keys of the array define the order.
 
 
+..  _tlo-module-properties-partial-root-paths-example-set:
+
 Example: Set the partial root paths
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -156,6 +158,8 @@ Here resides all of the settings. These settings are
 available in the controller of the backend module as the array variable
 :php:`$this->settings`.
 
+..  _tlo-module-properties-settings-example-limit-pagination:
+
 Example: Limit pagination in the backend
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -167,6 +171,8 @@ Show 25 news records in the backend module of the news extension:
    module.tx_news {
       settings.list.paginate.itemsPerPage = 25
    }
+
+..  _tlo-module-properties-settings-example-register-yaml:
 
 Example: Register YAML file
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~

@@ -113,6 +113,8 @@ Properties
 
 ..  index:: RTE; disable
 
+..  _page-ts-rte-properties-disabled:
+
 disabled
 --------
 
@@ -128,6 +130,8 @@ disabled
     RTE; Configuration
     RTE; config
 
+
+..  _page-ts-rte-properties-buttons:
 
 buttons
 -------
@@ -375,6 +379,8 @@ allowTagsOutside
 
     Enter tags which are allowed outside of `<P>` and `<DIV>` sections when converted back to database.
 
+
+..  _rte-proc-allow-tags-outside-example-allow-hr:
 
 Example: Allow only hr tags outside of p and div
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

@@ -48,6 +48,8 @@ Properties
     If :typoscript:`special.value` is not set, the default uid is 0, so
     that only your homepage will be listed.
 
+..  _hmenu-special-list-example-menu-subpages:
+
 Example: Menu of all subpages
 =============================
 
