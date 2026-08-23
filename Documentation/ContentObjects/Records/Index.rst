@@ -37,6 +37,10 @@ Properties
     :display: table
     :type:
 
+source
+------
+
+
 ..  index:: RECORDS; source
 ..  _cobj-records-properties-source:
 
@@ -54,6 +58,10 @@ Properties
 
 
 .. index:: RECORDS; categories
+
+categories
+----------
+
 .. _cobj-records-properties-categories:
 
 ..  confval:: categories
@@ -73,6 +81,10 @@ Properties
         the :code:`source` property will take precedence, as it is considered
         more precisely targeted.
 
+categories.relation
+-------------------
+
+
 ..  _cobj-records-categories-relation:
 
 ..  confval:: categories.relation
@@ -84,6 +96,10 @@ Properties
 
 
 .. index:: RECORDS; tables
+
+tables
+------
+
 .. _cobj-records-properties-tables:
 
 ..  confval:: tables
@@ -111,6 +127,10 @@ Properties
 
 
 .. index:: RECORDS; conf
+
+conf.[*table name*]
+-------------------
+
 .. _cobj-records-properties-conf:
 
 ..  confval:: conf.[*table name*]
@@ -126,6 +146,10 @@ Properties
 
 
 .. index:: RECORDS; dontCheckPid
+
+dontCheckPid
+------------
+
 .. _cobj-records-properties-dontcheckpid:
 
 ..  confval:: dontCheckPid
@@ -136,6 +160,10 @@ Properties
     Normally a record cannot be selected, if its parent page (pid) is not
     accessible for the website user. This option disables that check.
 
+wrap
+----
+
+
 
 .. _cobj-records-properties-wrap:
 
@@ -145,6 +173,10 @@ Properties
 
     Wraps the output. Executed before :ref:`stdWrap <cobj-records-properties-stdwrap>`.
 
+stdWrap
+-------
+
+
 
 .. _cobj-records-properties-stdwrap:
 
@@ -153,6 +185,10 @@ Properties
     :type: :ref:`->stdWrap <stdwrap>`
 
     Executed after :ref:`wrap <cobj-records-properties-wrap>`.
+
+cache
+-----
+
 
 
 .. _cobj-records-properties-cache:

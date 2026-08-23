@@ -23,6 +23,10 @@ Options
     :type:
     :Default:
 
+if
+--
+
+
     ..  _splitProcessor-if:
 
     ..  confval:: if
@@ -32,6 +36,10 @@ Options
         :Default: ''
 
         Only if the condition is met the data processor is executed.
+
+fieldName
+---------
+
 
     ..  _splitProcessor-fieldName:
 
@@ -43,6 +51,10 @@ Options
 
         Name of the field to be used.
 
+as
+--
+
+
     ..  _splitProcessor-as:
 
     ..  confval:: as
@@ -52,6 +64,10 @@ Options
         :Default: defaults to the fieldName
 
         The variable name to be used in the Fluid template.
+
+delimiter
+---------
+
 
     ..  _splitProcessor-delimiter:
 
@@ -64,6 +80,10 @@ Options
 
         The field delimiter, a character separating the values.
 
+filterIntegers
+--------------
+
+
     ..  _splitProcessor-filterIntegers:
 
     ..  confval:: filterIntegers
@@ -75,6 +95,10 @@ Options
 
         If set to `1`, all values are being cast to int.
 
+filterUnique
+------------
+
+
     ..  _splitProcessor-filterUnique:
 
     ..  confval:: filterUnique
@@ -85,6 +109,10 @@ Options
         :Example: 1
 
         If set to `1`, all duplicates will be removed.
+
+removeEmptyEntries
+------------------
+
 
     ..  _splitProcessor-removeEmptyEntries:
 

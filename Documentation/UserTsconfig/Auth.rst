@@ -21,6 +21,10 @@ Properties
     :display: table
     :type:
 
+auth.mfa.required
+-----------------
+
+
 ..  _user-auth-mfa-required:
 
 ..  confval:: auth.mfa.required
@@ -35,6 +39,10 @@ Properties
 
         auth.mfa.required = 1
 
+auth.mfa.disableProviders
+-------------------------
+
+
 ..  _user-auth-mfa-disableProviders:
 
 ..  confval:: auth.mfa.disableProviders
@@ -46,6 +54,10 @@ Properties
     It overrules the configuration from the Backend usergroup "Access List". This
     means, if a provider is allowed in "Access List" but disallowed with TSconfig,
     it will be disallowed for the user or user group.
+
+auth.mfa.recommendedProvider
+----------------------------
+
 
 ..  _user-auth-mfa-recommendedProvider:
 

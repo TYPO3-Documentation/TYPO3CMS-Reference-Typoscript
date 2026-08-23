@@ -27,6 +27,10 @@ Properties
     :type:
     :Default:
 
+additionalPreviewLanguages
+--------------------------
+
+
     ..  _useroptions-additionalPreviewLanguages:
 
     ..  confval:: additionalPreviewLanguages
@@ -39,6 +43,10 @@ Properties
         TCEforms. The list are IDs of site languages, as defined in the
         :yaml:`languageId` property of the
         :ref:`site configuration <t3coreapi:sitehandling-addingLanguages>`.
+
+alertPopups
+-----------
+
 
 
     ..  _useroptions-alertPopups:
@@ -55,6 +63,10 @@ Properties
         *   4 – delete
         *   8 – FE editing
         *   128 – other (not used yet)
+
+bookmarkGroups
+--------------
+
 
 
     ..  _useroptions-bookmarkGroups:
@@ -106,10 +118,18 @@ Properties
               2 = LLL:my_sitepackage.backend:bookmarkGroups.2
             }
 
+clearCache
+----------
+
+
     ..  _useroptions-clearCache:
 
     ..  confval:: clearCache
         :name: useroptions-clearCache
+
+all
+---
+
 
         ..  _useroptions-clearCache-all:
 
@@ -124,6 +144,10 @@ Properties
             if it is explicitly set to 0 for an admin user, it will remove the clear all
             option on toolbar for that user.
 
+pages
+-----
+
+
         ..  _useroptions-clearCache-pages:
 
         ..  confval:: pages
@@ -135,6 +159,10 @@ Properties
             If set to 1, this will allow a non-admin user to clear frontend and
             page-related caches.
 
+clipboardNumberPads
+-------------------
+
+
     ..  _useroptions-clipboardNumberPads:
 
     ..  confval:: clipboardNumberPads
@@ -143,6 +171,10 @@ Properties
         :Default: 3
 
         This allows you to enter how many pads you want on the clipboard.
+
+contextMenu.table.[tableName][.context].disableItems
+----------------------------------------------------
+
 
     ..  _useroptions-contextMenu-key-disableItems:
 
@@ -228,10 +260,18 @@ Properties
             # Remove the "More options" item in the page tree context menu and all its subelements
             options.contextMenu.table.pages.tree.disableItems = newWizard, pagesSort, pagesNewMultiple, openListModule, mountAsTreeRoot, exportT3d, importT3d, hideInMenus, showInMenus, permissions
 
+dashboard
+---------
+
+
     ..  _useroptions-dashboard:
 
     ..  confval:: dashboard
         :name: useroptions-dashboard
+
+dashboardPresetsForNewUsers
+---------------------------
+
 
         ..  _useroptions-dashboard-dashboardPresetsForNewUsers:
 
@@ -249,6 +289,10 @@ Properties
                 :caption: EXT:site_package/Configuration/user.tsconfig
 
                 options.dashboard.dashboardPresetsForNewUsers := addToList(customDashboard)
+
+defaultResourcesViewMode
+------------------------
+
 
     ..  _useroptions-defaultResourcesViewMode:
 
@@ -270,6 +314,10 @@ Properties
             :caption: EXT:site_package/Configuration/user.tsconfig
 
             options.defaultResourcesViewMode = list
+
+defaultUploadFolder
+-------------------
+
 
     ..  _useroptions-defaultUploadFolder:
 
@@ -297,6 +345,10 @@ Properties
 
             options.defaultUploadFolder = 2:user_folders/my_folder/
 
+disableDelete
+-------------
+
+
     ..  _useroptions-disableDelete:
 
     ..  confval:: disableDelete
@@ -316,6 +368,10 @@ Properties
 
             options.disableDelete.tt_content = 1
 
+dontMountAdminMounts
+--------------------
+
+
     ..  _useroptions-dontMountAdminMounts:
 
     ..  confval:: dontMountAdminMounts
@@ -327,6 +383,10 @@ Properties
         ..  note::
             Only for admin users. For other users it has no effect.
 
+enableBookmarks
+---------------
+
+
     ..  _useroptions-enableBookmarks:
 
     ..  confval:: enableBookmarks
@@ -336,10 +396,18 @@ Properties
 
         Enables the usage of bookmarks in the backend.
 
+file_list
+---------
+
+
     ..  _useroptions-file_list:
 
     ..  confval:: file_list
         :name: useroptions-file_list
+
+enableClipBoard
+---------------
+
 
         ..  _useroptions-file_list-enableClipBoard:
 
@@ -363,6 +431,10 @@ Properties
 
             :typoscript:`selectable`
                 The checkbox is shown so that the option can be selected by the user.
+
+displayColumnSelector
+---------------------
+
 
         ..  _useroptions-file_list-displayColumnSelector:
 
@@ -391,6 +463,10 @@ Properties
                 # Disable the column selector
                 file_list.displayColumnSelector = 0
 
+file_list.enableDisplayThumbnails
+---------------------------------
+
+
         ..  _useroptions-file_list-enableDisplayThumbnails:
 
         ..  confval:: file_list.enableDisplayThumbnails
@@ -413,6 +489,10 @@ Properties
             :typoscript:`selectable`
                 The checkbox is shown so that the option can be selected by the user.
 
+filesPerPage
+------------
+
+
         ..  _useroptions-file_list-filesPerPage:
 
         ..  confval:: filesPerPage
@@ -423,6 +503,10 @@ Properties
 
             The maximum number of files shown per page in the :guilabel:`File > List`
             module.
+
+primaryActions
+--------------
+
 
         ..  _useroptions-file_list-primaryActions:
 
@@ -474,6 +558,10 @@ Properties
                 site set up multilingual the button "translations" is not rendered in
                 that TYPO3 environment.
 
+thumbnail.height
+----------------
+
+
         ..  _useroptions-file_list-thumbnail-height:
 
         ..  confval:: thumbnail.height
@@ -485,6 +573,10 @@ Properties
             All preview images in the file list will be rendered with the configured
             thumbnail height.
 
+thumbnail.width
+---------------
+
+
         ..  _useroptions-file_list-thumbnail-width:
 
         ..  confval:: thumbnail.width
@@ -495,6 +587,10 @@ Properties
 
             All preview images in the file list will be rendered with the configured
             thumbnail width.
+
+uploader.defaultAction
+----------------------
+
 
         ..  _useroptions-file_list-uploader-defaultaction:
 
@@ -516,8 +612,16 @@ Properties
             :typoscript:`replace`
                 Override the file with the uploaded one.
 
+folderTree
+----------
+
+
     ..  confval:: folderTree
         :name: useroptions-folderTree
+
+altElementBrowserMountPoints
+----------------------------
+
 
         ..  _useroptions-folderTree-altElementBrowserMountPoints:
 
@@ -553,6 +657,10 @@ Properties
 
                 options.folderTree.altElementBrowserMountPoints = _temp_/, 2:/templates, 1:/files/images
 
+uploadFieldsInLinkBrowser
+-------------------------
+
+
         ..  _useroptions-folderTree-uploadFieldsInLinkBrowser:
 
         ..  confval:: uploadFieldsInLinkBrowser
@@ -563,6 +671,10 @@ Properties
 
             This value defines the number of upload fields in the element browser.
             Default value is 3, if set to 0, no upload form will be shown.
+
+hideModules
+-----------
+
 
     ..  _useroptions-hideModules:
 
@@ -596,9 +708,17 @@ Properties
             # Hide only module BeLogLog from "system" group
             options.hideModules = system_BelogLog
 
+hideRecords
+-----------
+
+
     ..  _useroptions-hideRecords:
 
     ..  confval:: hideRecords
+
+pages
+-----
+
 
         ..  _useroptions-hideRecords-pages:
 
@@ -627,10 +747,18 @@ Properties
 
                 options.hideRecords.pages = 12,45
 
+impexp
+------
+
+
     ..  _useroptions-impexp:
 
     ..  confval:: impexp
         :name: useroptions-impexp
+
+enableExportForNonAdminUser
+---------------------------
+
 
         ..  _useroptions-impexp-enableExportForNonAdminUser:
 
@@ -649,13 +777,25 @@ Properties
             module and export data. This should only be enabled for trustworthy
             backend users, as it might impose a security risk.
 
+liveSearch
+----------
+
+
         ..  _useroptions-impexp-enableImportForNonAdminUser:
 
     ..  confval:: liveSearch
         :name: useroptions-liveSearch
 
+actions
+-------
+
+
         ..  confval:: actions
             :name: useroptions-liveSearch-actions
+
+default
+-------
+
 
             ..  confval:: default
                 :name: useroptions-liveSearch-actions-default
@@ -708,6 +848,10 @@ Properties
                     To use `preview` for a custom record, a valid preview configuration
                     (`TCEMAIN.preview`) must exist for the table.
 
+enableImportForNonAdminUser
+---------------------------
+
+
         ..  confval:: enableImportForNonAdminUser
             :name: useroptions-impexp-enableImportForNonAdminUser
             :type: boolean
@@ -722,6 +866,10 @@ Properties
             module and import data. This should only be enabled for trustworthy
             backend users, as it might impose a security risk.
 
+mayNotCreateEditBookmarks
+-------------------------
+
+
     ..  _useroptions-mayNotCreateEditBookmarks:
 
     ..  confval:: mayNotCreateEditBookmarks
@@ -729,6 +877,10 @@ Properties
         :type: boolean
 
         If set, the user can not create or edit bookmarks.
+
+noThumbsInEB
+------------
+
 
 
     ..  _useroptions-noThumbsInEB:
@@ -739,6 +891,10 @@ Properties
 
         If set, then image thumbnails are not shown in the element browser.
 
+pageTree
+--------
+
+
     ..  _useroptions-overridePageModule:
 
 
@@ -746,6 +902,10 @@ Properties
 
     ..  confval:: pageTree
         :name: useroptions-pageTree
+
+altElementBrowserMountPoints
+----------------------------
+
 
         ..  _useroptions-pageTree-altElementBrowserMountPoints:
 
@@ -772,6 +932,10 @@ Properties
 
                 options.pageTree.altElementBrowserMountPoints = 34,123
 
+altElementBrowserMountPoints.append
+-----------------------------------
+
+
 
         ..  _useroptions-pageTree-altElementBrowserMountPoints-append:
 
@@ -793,6 +957,10 @@ Properties
                 options.pageTree.altElementBrowserMountPoints = 34,123
                 options.pageTree.altElementBrowserMountPoints.append = 1
 
+doktypesToShowInNewPageDragArea
+-------------------------------
+
+
         ..  _useroptions-pageTree-doktypesToShowInNewPageDragArea:
 
         ..  confval:: doktypesToShowInNewPageDragArea
@@ -809,6 +977,10 @@ Properties
                 See `Deprecation: #109196 - Deprecate doktypesToShowInNewPageDragArea user TSconfig <https://docs.typo3.org/permalink/changelog:deprecation-109196-1742122800>`_.
                 Remove this option from your configuration; the page tree now automatically
                 determines available doktypes based on the user's group permissions.
+
+excludeDoktypes
+---------------
+
 
         ..  _useroptions-pageTree-excludeDoktypes:
 
@@ -828,6 +1000,10 @@ Properties
                 :caption: EXT:site_package/Configuration/user.tsconfig
 
                 options.pageTree.excludeDoktypes = 254,1
+
+label.<page-id>
+---------------
+
 
         ..  _useroptions-pageTree-label:
 
@@ -863,6 +1039,10 @@ Properties
                 multiple labels to a page.
 
         ..  todo:: does this still work with site configuration?
+
+showDomainNameWithTitle
+-----------------------
+
         ..  _useroptions-pageTree-showDomainNameWithTitle:
 
         ..  confval:: showDomainNameWithTitle
@@ -873,6 +1053,10 @@ Properties
             If set, the domain name will be appended to the page title for
             pages that have :guilabel:`Is root of web site?` checked in the page properties.
             Useful if there are several domains in one page tree.
+
+searchByFrontendUri
+-------------------
+
 
         ..  _useroptions-pageTree-searchByFrontendUri:
 
@@ -893,6 +1077,10 @@ Properties
             the page tree toolbar menu. The preference is stored in the backend
             user configuration, allowing each user to customize their search behavior.
 
+searchInTranslatedPages
+-----------------------
+
+
         ..  _useroptions-pageTree-searchInTranslatedPages:
 
         ..  confval:: searchInTranslatedPages
@@ -908,6 +1096,10 @@ Properties
             multilingual installations. User permissions (language restrictions) and
             workspace context are respected.
 
+showNavTitle
+------------
+
+
 
         ..  _useroptions-pageTree-showNavTitle:
 
@@ -920,6 +1112,10 @@ Properties
             instead of the normal page title. The page title is shown in a
             tooltip if the mouse hovers the navigation title.
 
+showPageIdWithTitle
+-------------------
+
+
 
         ..  _useroptions-pageTree-showPageIdWithTitle:
 
@@ -930,6 +1126,10 @@ Properties
 
             If set, the titles in the page tree will have their ID numbers printed
             before the title.
+
+showPathAboveMounts
+-------------------
+
 
 
         ..  _useroptions-pageTree-showPathAboveMounts:
@@ -947,6 +1147,10 @@ Properties
                 :class: with-shadow
 
                 Active user db mount
+
+passwordReset
+-------------
+
 
     ..  _useroptions-passwordReset:
 
@@ -978,6 +1182,10 @@ Properties
 
             $GLOBALS['TYPO3_CONF_VARS']['BE']['passwordReset'] = false
 
+saveClipboard
+-------------
+
+
     ..  _useroptions-saveClipboard:
 
     ..  confval:: saveClipboard
@@ -986,6 +1194,10 @@ Properties
 
         If set, the clipboard content will be preserved for the next login.
         Normally the clipboard content lasts only during the session.
+
+saveDocNew
+----------
+
 
 
     ..  _useroptions-saveDocNew:
@@ -1014,6 +1226,10 @@ Properties
             options.saveDocNew = 0
             options.saveDocNew.tt_content = top
 
+saveDocView
+-----------
+
+
     ..  _useroptions-saveDocView:
 
     ..  confval:: saveDocView
@@ -1027,6 +1243,10 @@ Properties
         :typoscript:`options.saveDocView.[tableName]`.
         Any value set for a single table will override the default value set for
         :typoscript:`saveDocView`.
+
+showDuplicate
+-------------
+
 
     ..  _useroptions-showDuplicate:
 
@@ -1042,6 +1262,10 @@ Properties
         Any value set for a single table will override the default value set for
         :typoscript:`showDuplicate`.
 
+showHistory
+-----------
+
+
 
     ..  _useroptions-showHistory:
 
@@ -1055,6 +1279,10 @@ Properties
         :typoscript:`options.showHistory.[tableName]`.
         Any value set for a single table will override the default value set for
         :typoscript:`showHistory`.
+
+hideSets
+--------
+
 
     ..  confval:: hideSets
         :name: useroptions-hideSets

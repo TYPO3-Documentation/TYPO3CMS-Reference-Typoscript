@@ -29,10 +29,18 @@ package (GitHub) <https://github.com/benjaminkott/bootstrap_package/tree/master/
 
 ..  confval-menu::
 
+BackendLayouts.[backendLayout]
+------------------------------
+
+
 ..  confval:: BackendLayouts.[backendLayout]
     :name: mod-web-layout-BackendLayouts
     :type: array:guilabel:`Page` module
     :Path: mod.web_layout.BackendLayouts
+
+title
+-----
+
 
     ..  confval:: title
         :name: mod-web-layout-BackendLayouts-backendLayout-title
@@ -43,6 +51,10 @@ package (GitHub) <https://github.com/benjaminkott/bootstrap_package/tree/master/
 
         ..  figure:: /Images/ManualScreenshots/BackendLayouts/PageProperties.png
             :caption: Choose the backend layout in the page properties
+
+icon
+----
+
 
     ..  confval:: icon
         :name: mod-web-layout-BackendLayouts-backendLayout-icon
@@ -57,7 +69,15 @@ package (GitHub) <https://github.com/benjaminkott/bootstrap_package/tree/master/
                 icon = EXT:bootstrap_package/Resources/Public/Icons/BackendLayouts/subnavigation_right_2_columns.svg
             }
 
+config.backend_layout
+---------------------
+
+
     ..  confval:: config.backend_layout
+
+colCount
+--------
+
 
         ..  confval:: colCount
             :name: mod-web-layout-BackendLayouts-backendLayout-title-config-backend_layout.colCount
@@ -65,13 +85,25 @@ package (GitHub) <https://github.com/benjaminkott/bootstrap_package/tree/master/
 
             The total number of columns in the backend layout.
 
+rowCount
+--------
+
+
         ..  confval:: rowCount
             :name: mod-web-layout-BackendLayouts-backendLayout-title-config-backend_layout.rowCount
             :type: integer
 
             The total number of rows in the backend layout.
 
+rows.[row].columns.[col]
+------------------------
+
+
         ..  confval:: rows.[row].columns.[col]
+
+name
+----
+
 
             ..  confval:: name
                 :name: mod-web-layout-BackendLayouts-backendLayout-title-config-backend_layout-rows-row-columns-col-name
@@ -80,11 +112,19 @@ package (GitHub) <https://github.com/benjaminkott/bootstrap_package/tree/master/
                 The name of the input area where content elements can be added. Will be
                 displayed in the :guilabel:`Page` module.
 
+colPos
+------
+
+
             ..  confval:: colPos
                 :name: mod-web-layout-BackendLayouts-backendLayout-title-config-backend_layout-rows-row-columns-col-colPos
                 :type: integer, 0 - maxInt
 
                 If content elements have been  added to this area, the value of `colPos`
+
+identifier
+----------
+
 
             ..  confval:: identifier
                 :name: mod-web-layout-BackendLayouts-backendLayout-title-config-backend_layout-rows-row-columns-col-identifier
@@ -96,6 +136,10 @@ package (GitHub) <https://github.com/benjaminkott/bootstrap_package/tree/master/
 
                 It is a more meaningful representation than just :confval:`colPos <mod-web-layout-BackendLayouts-backendLayout-title-config-backend_layout-rows-row-columns-col-colPos>`,
                 such as "main", "sidebar" and "footerArea".
+
+slideMode
+---------
+
 
             ..  confval:: slideMode
                 :name: mod-web-layout-BackendLayouts-backendLayout-title-config-backend_layout-rows-row-columns-col-slideMode
@@ -112,6 +156,10 @@ package (GitHub) <https://github.com/benjaminkott/bootstrap_package/tree/master/
                 `collectReverse`
                     The same as "collect", but in the opposite order
 
+colspan
+-------
+
+
             ..  confval:: colspan
                 :name: mod-web-layout-BackendLayouts-backendLayout-title-config-backend_layout-rows-row-columns-col-colspan
                 :type: integer, 1 - :confval:`mod-web-layout-BackendLayouts-backendLayout-title-config-backend_layout.colCount`
@@ -119,12 +167,20 @@ package (GitHub) <https://github.com/benjaminkott/bootstrap_package/tree/master/
                 Can be used if the content element area should span multiple
                 columns as in the "Jumbotron" example above.
 
+rowspan
+-------
+
+
             ..  confval:: rowspan
                 :name: mod-web-layout-BackendLayouts-backendLayout-title-config-backend_layout-rows-row-columns-col-rowspan
                 :type: integer, 1 - :confval:`mod-web-layout-BackendLayouts-backendLayout-title-config-backend_layout.rowCount`
 
                 Can be used if the content element area spans multiple
                 rows.
+
+allowedContentTypes
+-------------------
+
 
             ..  confval:: allowedContentTypes
                 :name: mod-web-layout-BackendLayouts-backendLayout-title-config-backend_layout-rows-row-columns-col-allowedContentTypes
@@ -136,6 +192,10 @@ package (GitHub) <https://github.com/benjaminkott/bootstrap_package/tree/master/
                 Allow only configured types of content elements (referencing
                 :sql:`tt_content.CType` with names like "text", "textmedia",
                 "felogin_pi1" and so on).
+
+disallowedContentTypes
+----------------------
+
 
             ..  confval:: disallowedContentTypes
                 :name: mod-web-layout-BackendLayouts-backendLayout-title-config-backend_layout-rows-row-columns-col-disallowedContentTypes

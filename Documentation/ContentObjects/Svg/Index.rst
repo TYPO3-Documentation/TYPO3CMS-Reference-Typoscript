@@ -22,6 +22,10 @@ Properties
     :display: table
     :type:
 
+cache
+-----
+
+
 ..  _cobj-svg-cache:
 
 ..  confval:: cache
@@ -29,6 +33,10 @@ Properties
     :type: :ref:`cache <cache>`
 
     See :ref:`cache function description <cache>` for details.
+
+width
+-----
+
 
 ..  _cobj-svg-width:
 
@@ -39,6 +47,10 @@ Properties
 
     Width of the SVG.
 
+height
+------
+
+
 
 ..  _cobj-svg-height:
 
@@ -48,6 +60,10 @@ Properties
     :Default: 400
 
     Height of the SVG.
+
+src
+---
+
 
 
 ..  _cobj-svg-src:
@@ -66,6 +82,10 @@ Properties
 
         src = fileadmin/svg/tiger.svg
 
+renderMode
+----------
+
+
 
 ..  _cobj-svg-renderMode:
 
@@ -74,6 +94,10 @@ Properties
     :type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
 
     Setting `renderMode` to inline will render an inline version of the SVG.
+
+stdWrap
+-------
+
 
 
 ..  _cobj-svg-stdWrap:

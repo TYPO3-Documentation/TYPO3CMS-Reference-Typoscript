@@ -83,6 +83,10 @@ Properties of 'config'
     :display: table
     :type:
 
+additionalHeaders
+-----------------
+
+
     ..  confval:: additionalHeaders
         :name: config-additionalheaders
         :type: numerically indexed array of "HTTP header entries".
@@ -107,6 +111,10 @@ Properties of 'config'
         Finally, a "Content-Length" header is sent, if enabled via
         :ref:`setup-config-enablecontentlengthheader`.
 
+admPanel
+--------
+
+
     ..  confval:: admPanel
         :name: config-admPanel
         :type: boolean
@@ -114,11 +122,19 @@ Properties of 'config'
         :typoscript:`config.admPanel = 1` enables the admin panel. See
         :ref:`Configuration in the Admin Panel manual <ext_adminpanel:typoscript-config-admpanel>`.
 
+ATagParams
+----------
+
+
     ..  confval:: ATagParams
         :name: config-ATagParams
         :type: *<A>-params*
 
         Additional parameters for all links in TYPO3 (excluding menu-links).
+
+cache
+-----
+
 
     ..  confval:: cache
         :name: config-cache
@@ -151,6 +167,10 @@ Properties of 'config'
         Use the keyword "current" instead of a <storage-pid> to take only records
         on the current page into account for the cache lifetime calculation.
 
+cache_clearAtMidnight
+---------------------
+
+
     ..  confval:: cache_clearAtMidnight
         :name: config-cache-clearAtMidnight
         :type: :ref:`data-type-boolean`
@@ -158,6 +178,10 @@ Properties of 'config'
 
         This setting ensures that the cache expires at midnight on the day that the
         page is scheduled to expire.
+
+cache_period
+------------
+
 
 
     ..  confval:: cache_period
@@ -169,6 +193,10 @@ Properties of 'config'
 
         This value is overridden by the value in the page record
         `field="cache_timeout"` if that value is greater than zero.
+
+contentObjectExceptionHandler
+-----------------------------
+
 
     ..  confval:: contentObjectExceptionHandler
         :name: config-contentObjectExceptionHandler
@@ -195,6 +223,10 @@ Properties of 'config'
         To get rid of the error message, the error needs to be fixed
         and the cache must be cleared for the page.
 
+debug
+-----
+
+
     ..  confval:: debug
         :name: config-debug
         :type: :ref:`data-type-boolean`
@@ -202,6 +234,10 @@ Properties of 'config'
         If set, debug information for the TypoScript code is sent.
         This applies to menu objects and parse-time output.
         The parse-time will be sent in HTTP response header `X-TYPO3-Parsetime`.
+
+disableAllHeaderCode
+--------------------
+
 
     ..  confval:: disableAllHeaderCode
         :name: config-disableAllHeaderCode
@@ -223,6 +259,10 @@ Properties of 'config'
         This property can also be used to generate complete HTML pages,
         including the :html:`<html>` and :html:`<body>` tags.
 
+disableBodyTag
+--------------
+
+
     ..  confval:: disableBodyTag
         :name: config-disableBodyTag
         :type: :ref:`data-type-boolean`
@@ -238,6 +278,10 @@ Properties of 'config'
         :typoscript:`config.disableBodyTag = 1` then the other settings are ignored
         and won't have any effect.
 
+disableCanonical
+----------------
+
+
     ..  confval:: disableCanonical
         :name: config-disableCanonical
         :type: :ref:`data-type-boolean`
@@ -247,6 +291,10 @@ Properties of 'config'
         in many cases by default. For edge cases, you might want to disable the
         rendering of this tag by setting it to `1`.
 
+disableHrefLang
+---------------
+
+
     ..  confval:: disableHrefLang
         :name: config-disableHrefLang
         :type: :ref:`data-type-boolean`
@@ -254,6 +302,10 @@ Properties of 'config'
         If the SEO system extension is installed, hreflang tags are generated
         in multi-language setups. By settings this option to `1`
         the rendering of the tags will be skipped.
+
+disablePrefixComment
+--------------------
+
 
     ..  confval:: disablePrefixComment
         :name: config-disablePrefixComment
@@ -263,12 +315,20 @@ Properties of 'config'
         preventing any potentially revealing and space-consuming comments in the HTML
         source code.
 
+disablePreviewNotification
+--------------------------
+
+
     ..  confval:: disablePreviewNotification
         :name: config-disablePreviewNotification
         :type: :ref:`data-type-boolean`
         :Default: `0`
 
         Disables the "preview" notification box.
+
+disableLanguageHeader
+---------------------
+
 
     ..  confval:: disableLanguageHeader
         :name: config-disableLanguageHeader
@@ -281,6 +341,10 @@ Properties of 'config'
         :ref:`Site Configuration <t3coreapi:sitehandling>`.
 
         If :typoscript:`config.disableLanguageHeader` is set, this header will not be sent.
+
+doctype
+-------
+
 
     ..  confval:: doctype
         :name: config-doctype
@@ -314,6 +378,10 @@ Properties of 'config'
 
             <!DOCTYPE html>
 
+enableContentLengthHeader
+-------------------------
+
+
     ..  confval:: enableContentLengthHeader
         :name: config-enableContentLengthHeader
         :type: :ref:`data-type-boolean`
@@ -326,6 +394,10 @@ Properties of 'config'
         objects and the content-length will truncate the length of the
         document in some browsers.
 
+extTarget
+---------
+
+
     ..  confval:: extTarget
         :name: config-extTarget
         :type: target
@@ -333,11 +405,19 @@ Properties of 'config'
 
         Default external target. Used by :ref:`typolink` if no extTarget is set.
 
+fileTarget
+----------
+
+
     ..  confval:: fileTarget
         :name: config-fileTarget
         :type: target
 
         Default file link target. Used by :ref:`typolink` if no fileTarget is set.
+
+forceAbsoluteUrls
+-----------------
+
 
     ..  confval:: forceAbsoluteUrls
         :name: config-forceAbsoluteUrls
@@ -357,6 +437,10 @@ Properties of 'config'
             <setup-config-absrefprefix>` and any typolink
             :ref:`typolink-forceAbsoluteUrl` options.
 
+forceTypeValue
+--------------
+
+
     ..  confval:: forceTypeValue
         :name: config-forceTypeValue
         :type: :ref:`data-type-boolean`
@@ -368,6 +452,10 @@ Properties of 'config'
         `&type=95`, but still want to keep your targets neutral. Then you can
         set your targets to blank and this value to your required type value.
 
+headerComment
+-------------
+
+
     ..  confval:: headerComment
         :name: config-headerComment
         :type: :ref:`data-type-string`
@@ -375,6 +463,10 @@ Properties of 'config'
         This content is added above the "TYPO3 Content Management Framework"
         comment in the <head> page section. Use this to insert text
         like "Programmed by My-Agency".
+
+htmlTag.attributes.[attribute]
+------------------------------
+
 
     ..  confval:: htmlTag.attributes.[attribute]
         :name: config-htmlTag-attributes
@@ -403,6 +495,10 @@ Properties of 'config'
             config.htmlTag.attributes.my-attribute = 123
             config.htmlTag.attributes.my-attribute.userFunc = MyVendor\MyExtension\HtmlTagEnhancer->overrideMyAttribute
 
+htmlTag_setParams
+-----------------
+
+
     ..  confval:: htmlTag_setParams
         :name: config-htmlTag-setParams
         :type: :ref:`data-type-string`
@@ -419,6 +515,10 @@ Properties of 'config'
         If you have set `htmlTag.attributes` this property (`htmlTag_setParams`)
         will not have any effect.
 
+htmlTag_stdWrap
+---------------
+
+
 
     ..  confval:: htmlTag_stdWrap
         :name: config-htmlTag-stdWrap
@@ -426,6 +526,10 @@ Properties of 'config'
 
         Modify the :html:`<html>` tag with stdWrap functionality. Use
         this property to extend or override this tag.
+
+index_descrLgd
+--------------
+
 
     ..  confval:: index_descrLgd
         :name: config-index-descrLgd
@@ -435,6 +539,10 @@ Properties of 'config'
         This indicates how many chars to preserve in the description of an
         indexed page. This can be used in search result output.
 
+index_enable
+------------
+
+
     ..  confval:: index_enable
         :name: config-index-enable
         :type: :ref:`data-type-boolean`
@@ -442,6 +550,10 @@ Properties of 'config'
         Enables cached pages to be indexed.
 
         Automatically enabled when :t3-ext:`indexed_search` is enabled.
+
+index_externals
+---------------
+
 
     ..  confval:: index_externals
         :name: config-index-externals
@@ -451,6 +563,10 @@ Properties of 'config'
 
         Automatically enabled when :t3-ext:`indexed_search` is enabled.
 
+index_metatags
+--------------
+
+
     ..  confval:: index_metatags
         :name: config-index-metatags
         :type: :ref:`data-type-boolean`
@@ -458,6 +574,10 @@ Properties of 'config'
 
         This allows the indexing of metatags to be switched on or off. It is
         switched on by default.
+
+inlineStyle2TempFile
+--------------------
+
 
     ..  confval:: inlineStyle2TempFile
         :name: config-inlineStyle2TempFile
@@ -471,11 +591,19 @@ Properties of 'config'
 
         The file hash is based on the content of the styles.
 
+intTarget
+---------
+
+
     ..  confval:: intTarget
         :name: config-intTarget
         :type: target
 
         Default internal target. Used by :ref:`typolink` if no target is set.
+
+linkSecurityRelValue
+--------------------
+
 
     ..  confval:: linkSecurityRelValue
         :name: config-linkSecurityRelValue
@@ -490,6 +618,10 @@ Properties of 'config'
         The specified string is added to the `rel="..."` attribute of external
         links. If the link already contains a valid attribute from another
         source (for example added manually), it remains unchanged.
+
+linkVars
+--------
+
 
     ..  confval:: linkVars
         :name: config-linkVars
@@ -524,12 +656,20 @@ Properties of 'config'
             Do **not** include the `type` and `L` parameters in the linkVars
             list as this will result in unexpected behavior.
 
+message_preview
+---------------
+
+
     ..  confval:: message_preview
         :name: config-message_preview
         :type: :ref:`data-type-string`
 
         Alternative message in HTML that appears when the preview function is
         active.
+
+message_preview_workspace
+-------------------------
+
 
     ..  confval:: message_preview_workspace
         :name: config-message-preview-workspace
@@ -540,6 +680,10 @@ Properties of 'config'
         active in a draft workspace. You can use sprintf() placeholders for
         Workspace title (first) and number (second).
 
+moveJsFromHeaderToFooter
+------------------------
+
+
 
     ..  confval:: moveJsFromHeaderToFooter
         :name: config-moveJsFromHeaderToFooter
@@ -548,6 +692,10 @@ Properties of 'config'
         If set, all JavaScript (includes and inline) will be moved to the
         bottom of the HTML document, which is after the content and before the
         closing body tag.
+
+MP_defaults
+-----------
+
 
 
 
@@ -566,6 +714,10 @@ Properties of 'config'
         can ensure consistency and reduce the risk of broken links or incorrect
         content being displayed due to missing parameters.
 
+MP_disableTypolinkClosestMPvalue
+--------------------------------
+
+
 
     ..  confval:: MP_disableTypolinkClosestMPvalue
         :name: config-MP-disableTypolinkClosestMPvalue
@@ -573,6 +725,10 @@ Properties of 'config'
 
         If set, the :ref:`typolink` function will not try to find the closest MP
         value for the id.
+
+MP_mapRootPoints
+----------------
+
 
     ..  confval:: MP_mapRootPoints
         :name: config-MP-mapRootPoints
@@ -595,6 +751,10 @@ Properties of 'config'
 
         Configured IDs have to be the uids of actual mount point pages, not the targets.
 
+namespaces.[identifier]
+-----------------------
+
+
     ..  confval:: namespaces.[identifier]
         :name: config-namespaces
         :type: string
@@ -603,6 +763,10 @@ Properties of 'config'
         This property enables you to add XML namespaces (`xmlns`) to the :html:`<html>`
         tag. This is especially useful if you want to add RDFa or microformats
         to your HTML.
+
+no_cache
+--------
+
 
     ..  confval:: no_cache
         :name: config-no-cache
@@ -624,6 +788,10 @@ Properties of 'config'
         For more information about cache types see the
         :ref:`cache types chapter <t3coreapi:caching-architecture-core>`.
 
+noPageTitle
+-----------
+
+
     ..  confval:: noPageTitle
         :name: config-noPageTitle
         :type: :ref:`data-type-integer`
@@ -638,6 +806,10 @@ Properties of 'config'
         output, so you should only disable this tag if you have already
         generated it manually.
 
+pageRendererTemplateFile
+------------------------
+
+
     ..  confval:: pageRendererTemplateFile
         :name: config-pageRendererTemplateFile
         :type: :ref:`data-type-string`
@@ -646,12 +818,20 @@ Properties of 'config'
         Sets the template for page renderer class
         :php:`TYPO3\CMS\Core\Page\PageRenderer`.
 
+pageTitle
+---------
+
+
     ..  confval:: pageTitle
         :name: config-pageTitle
         :type: :ref:`stdwrap`
 
         stdWrap for the page title. This option will be executed *after* all
         other processing options like :ref:`setup-config-pageTitleFirst`.
+
+pageTitleFirst
+--------------
+
 
     ..  confval:: pageTitleFirst
         :name: config-pageTitleFirst
@@ -665,6 +845,10 @@ Properties of 'config'
         If :typoscript:`pageTitleFirst` is set (and if the page title is printed), then the
         page title will be printed before the template title, i.e. "page title: website".
 
+pageTitleProviders
+------------------
+
+
     ..  confval:: pageTitleProviders
         :name: config-pageTitleProviders
         :type: array
@@ -675,6 +859,10 @@ Properties of 'config'
         Based on the priority of providers, :php:`PageTitleProviderManager` will
         check the providers to see if they have titles. It will start with the
         highest priority :typoscript:`PageTitleProviders`.
+
+pageTitleSeparator
+------------------
+
 
     ..  confval:: pageTitleSeparator
         :name: config-pageTitleSeparator
@@ -687,6 +875,10 @@ Properties of 'config'
         sub-properties are defined, then a space will be added to the end of the
         separator. stdWrap can be used to adjust whitespace at the beginning and
         end of the separator.
+
+recordLinks
+-----------
+
 
     ..  confval:: recordLinks
         :name: config-recordLinks
@@ -708,6 +900,10 @@ Properties of 'config'
                 }
             }
 
+removeDefaultCss
+----------------
+
+
     ..  confval:: removeDefaultCss
         :name: config-removeDefaultCss
         :type: :ref:`data-type-boolean`
@@ -717,6 +913,10 @@ Properties of 'config'
         <setup-plugin-css-default-style>` extension property.
         (:typoscript:`_CSS_DEFAULT_STYLE` outputs a set of default styles for
         extensions with frontend plugins)
+
+removeDefaultJS
+---------------
+
 
     ..  confval:: removeDefaultJS
         :name: config-removeDefaultJS
@@ -730,6 +930,10 @@ Properties of 'config'
         **Special case:** If the value is set to the string `external`, then the default
         JavaScript is written to a temporary file and included in that file.
         See :ref:`setup-config-inlineStyle2TempFile`.
+
+sendCacheHeaders
+----------------
+
 
     ..  confval:: sendCacheHeaders
         :name: config-sendCacheHeaders
@@ -771,6 +975,10 @@ Properties of 'config'
          both browser- and reverse-proxy caches and make TYPO3 regenerate
          the page. A good tip worth knowing about!
 
+sendCacheHeadersForSharedCaches
+-------------------------------
+
+
     ..  confval:: sendCacheHeadersForSharedCaches
         :name: config-sendCacheHeadersForSharedCaches
         :type: `auto`, `force`, or empty
@@ -801,6 +1009,10 @@ Properties of 'config'
         See https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control
         for details and whether your reverse proxy supports this directive.
 
+showWebsiteTitle
+----------------
+
+
     ..  confval:: showWebsiteTitle
         :name: config-showWebsiteTitle
         :type: :ref:`data-type-boolean`
@@ -812,6 +1024,10 @@ Properties of 'config'
 
         By default, the website title is added. To omit the website title, set the
         option to `0`.
+
+spamProtectEmailAddresses
+-------------------------
+
 
     ..  confval:: spamProtectEmailAddresses
         :name: config-spamProtectEmailAddresses
@@ -833,6 +1049,10 @@ Properties of 'config'
         Default JavaScript needs to be enabled.
         (see :ref:`removeDefaultJS <setup-config-removedefaultjs>`)
 
+spamProtectEmailAddresses_atSubst
+---------------------------------
+
+
     ..  confval:: spamProtectEmailAddresses_atSubst
         :name: config-spamProtectEmailAddresses-atSubst
         :type: :ref:`data-type-string`
@@ -841,6 +1061,10 @@ Properties of 'config'
 
         Substitute label for the at-sign (`@`).
 
+spamProtectEmailAddresses_lastDotSubst
+--------------------------------------
+
+
     ..  confval:: spamProtectEmailAddresses_lastDotSubst
         :name: config-spamProtectEmailAddresses-lastDotSubst
         :type: :ref:`data-type-string`
@@ -848,6 +1072,10 @@ Properties of 'config'
         :Example: :ref:`setup-config-spamprotectemailaddresses-lastdotsubst`
 
         Substitute label for the last dot in the email address.
+
+tx_[extension key with no underscores]_[*]
+------------------------------------------
+
 
     ..  confval:: tx_[extension key with no underscores]_[*]
         :name: config-tx-extension-key-with-no-underscores
@@ -858,6 +1086,10 @@ Properties of 'config'
         have TypoScript configuration, but that don't display anything in the frontend
         (i.e. don't receive their configuration as an argument from the frontend
         rendering process).
+
+typolinkLinkAccessRestrictedPages
+---------------------------------
+
 
     ..  confval:: typolinkLinkAccessRestrictedPages
         :name: config-typolinkLinkAccessRestrictedPages
@@ -877,6 +1109,10 @@ Properties of 'config'
         See :confval:`menu-common-properties-showaccessrestrictedpages`
         for menu objects as well (similar feature for menus)
 
+typolinkLinkAccessRestrictedPages.ATagParams
+--------------------------------------------
+
+
     ..  confval:: typolinkLinkAccessRestrictedPages.ATagParams
         :name: config-typolinkLinkAccessRestrictedPages-ATagParams
         :type: :ref:`data-type-string`
@@ -885,12 +1121,20 @@ Properties of 'config'
         `typolinkLinkAccessRestrictedPages.ATagParams` Add custom attributes to
         the anchor tag.
 
+typolinkLinkAccessRestrictedPages_addParams
+-------------------------------------------
+
+
     ..  confval:: typolinkLinkAccessRestrictedPages_addParams
         :name: config-typolinkLinkAccessRestrictedPages-addParams
         :type: :ref:`data-type-string`
         :Example: :ref:`setup-config-typolinklinkaccessrestrictedpages`
 
         See :ref:`setup-config-typolinklinkaccessrestrictedpages` above.
+
+typolinkLinkAccessRestrictedPages_xmlprologue
+---------------------------------------------
+
 
     ..  confval:: typolinkLinkAccessRestrictedPages_xmlprologue
         :name: config-typolinkLinkAccessRestrictedPages-xmlprologue

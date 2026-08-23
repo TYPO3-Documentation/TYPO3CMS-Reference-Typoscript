@@ -29,6 +29,10 @@ Options:
     :type:
     :Default:
 
+if
+--
+
+
     ..  _FilesProcessor-if:
 
     ..  confval:: if
@@ -38,6 +42,10 @@ Options:
         :Default: ''
 
         Only, if the condition is met the data processor is executed.
+
+references
+----------
+
 
     ..  _FilesProcessor-references:
 
@@ -56,6 +64,10 @@ Options:
         :ref:`stdWrap` properties can also be used, see
         :ref:`FilesProcessor-stdWrap-on-references`.
 
+references.fieldName
+--------------------
+
+
     ..  _FilesProcessor-references-fieldName:
 
     ..  confval:: references.fieldName
@@ -70,6 +82,10 @@ Options:
         the referenced table and field, for example the :sql:`media` field of a
         :sql:`tt_content` record.
 
+references.table
+----------------
+
+
     ..  _FilesProcessor-references-table:
 
     ..  confval:: references.table
@@ -83,6 +99,10 @@ Options:
         :ref:`select` function, :typoscript:`references.fieldName` must be set to
         the desired field name of the table to be queried.
 
+files
+-----
+
+
     ..  _FilesProcessor-files:
 
     ..  confval:: files
@@ -94,6 +114,10 @@ Options:
 
         If this option contains a comma-separated list of integers,
         these are treated as uids of files (:sql:`sys_file`).
+
+collections
+-----------
+
 
     ..  _FilesProcessor-collections:
 
@@ -107,6 +131,10 @@ Options:
         If this option contains a comma-separated list of integers,
         these are treated as uids of collections. The file records in each
         collection are then being added to the output array.
+
+folders
+-------
+
 
     ..  _FilesProcessor-folders:
 
@@ -130,6 +158,10 @@ Options:
             Folder :file:`/folderInMyFileadmin/something/` from the default storage
             `0` (:file:`fileadmin`)
 
+folders.recursive
+-----------------
+
+
     ..  _FilesProcessor-folders-recursive:
 
     ..  confval:: folders.recursive
@@ -141,6 +173,10 @@ Options:
 
         If set to a non-empty value file, records will be added from folders
         recursively.
+
+sorting
+-------
+
 
     ..  _FilesProcessor-sorting:
 
@@ -154,6 +190,10 @@ Options:
         The property of the file records by which they should be sorted.
         For example, filesize or title.
 
+sorting.direction
+-----------------
+
+
     ..  _FilesProcessor-sorting-direction:
 
     ..  confval:: sorting.direction
@@ -164,6 +204,10 @@ Options:
         :Example: "descending"
 
         The sorting direction (:typoscript:`ascending` or :typoscript:`descending`).
+
+as
+--
+
 
     ..  _FilesProcessor-as:
 

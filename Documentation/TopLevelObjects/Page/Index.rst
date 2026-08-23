@@ -184,6 +184,10 @@ Properties
     :display: table
     :type:
 
+1,2,3,4...
+----------
+
+
     ..  confval:: 1,2,3,4...
         :name: page-array
         :type: :ref:`cObject <data-type-cobject>`
@@ -205,6 +209,10 @@ Properties
         in the future. Therefore you will often see that people use the number
         10 and no number 1 is found.
 
+bodyTag
+-------
+
+
     ..  confval:: bodyTag
         :name: page-bodyTag
         :type: string
@@ -212,6 +220,10 @@ Properties
         :Example: :ref:`Set a class on the body tag <setup-page-bodytag-example>`
 
         Body tag on the page
+
+bodyTagAdd
+----------
+
 
     ..  confval:: bodyTagAdd
         :name: page-bodyTagAdd
@@ -221,6 +233,10 @@ Properties
         This content is added inside of the opening :html:`<body>` tag right
         before the :html:`>` character. This is mostly useful for adding
         attributes to the :html:`<body>` tag.
+
+bodyTagCObject
+--------------
+
 
     ..  confval:: bodyTagCObject
         :name: page-bodyTagCObject
@@ -235,6 +251,10 @@ Properties
             which, if set, disables body tag generation independently
             from what might be set here.
 
+config
+------
+
+
     ..  confval:: config
         :name: page-config
         :type: :ref:`->CONFIG <config>`
@@ -246,6 +266,10 @@ Properties
          Configuration for the page. Any entries made here override the same
          entries in the top-level object :ref:`config`.
 
+cssInline.[array]
+-----------------
+
+
     ..  confval:: cssInline.[array]
         :name: page-cssInline
         :type: :ref:`cObject <data-type-cobject>`
@@ -254,6 +278,10 @@ Properties
         Allows to add inline CSS to the page :html:`<head>` section.
         The :typoscript:`cssInline` property contains any number of numeric keys, each representing one cObject.
         Internally handled as PHP integer, maximum number is therefore restricted to :php:`PHP_INT_MAX`.
+
+footerData.[array]
+------------------
+
 
     ..  confval:: footerData.[array]
         :name: page-footerData
@@ -266,6 +294,10 @@ Properties
 
         The :typoscript:`footerData` property contains any number of numeric keys, each representing one cObject.
         Internally handled as PHP integer, maximum number is therefore restricted to :php:`PHP_INT_MAX`.
+
+headerData.[array]
+------------------
+
 
     ..  confval:: headerData.[array]
         :name: page-headerData
@@ -286,12 +318,20 @@ Properties
         The :typoscript:`headerData` property contains any number of numeric keys, each representing one cObject.
         Internally handled as PHP integer, maximum number is therefore restricted to :php:`PHP_INT_MAX`.
 
+headTag
+-------
+
+
     ..  confval:: headTag
         :name: page-headTag
         :type: string / :ref:`stdwrap`
         :Default: `<head>`
 
         Head-tag if alternatives are wanted
+
+includeCSS.[array]
+------------------
+
 
     ..  confval:: includeCSS.[array]
         :name: page-includeCSS
@@ -344,6 +384,10 @@ Properties
 
         Additional data attributes can be configured using a key-value list.
 
+includeCSSLibs.[array]
+----------------------
+
+
     ..  confval:: includeCSSLibs.[array]
         :name: page-includeCSSLibs
         :type: :ref:`data-type-resource`
@@ -388,6 +432,10 @@ Properties
             Setting the title of the :html:`<style>` tag.
 
         Additional data attributes can be configured using a key-value list.
+
+includeJS.[array]
+-----------------
+
 
     ..  confval:: includeJS.[array]
         :name: page-includeJS
@@ -455,6 +503,10 @@ Properties
             Array with key/value for additional attributes to be added to
             the script tag.
 
+includeJSFooter.[array]
+-----------------------
+
+
     ..  confval:: includeJSFooter.[array]
         :name: page-includeJSFooter
         :type: :ref:`data-type-resource`
@@ -464,6 +516,10 @@ Properties
         Same as :confval:`includeJS <page-includeJS>` above, except that this block gets
         included at the bottom of the page (just before the closing :html:`</body>`
         tag).
+
+includeJSFooterlibs.[array]
+---------------------------
+
 
     ..  confval:: includeJSFooterlibs.[array]
         :name: page-includeJSFooterlibs
@@ -491,6 +547,10 @@ Properties
                 somefile.foo = bar
             }
 
+includeJSLibs.[array]
+---------------------
+
+
     ..  confval:: includeJSLibs.[array]
         :name: page-includeJSLibs
         :type: :ref:`data-type-resource`
@@ -517,6 +577,10 @@ Properties
                 somefile.foo = bar
             }
 
+inlineLanguageLabelFiles
+------------------------
+
+
     ..  confval:: inlineLanguageLabelFiles
         :name: page-inlineLanguageLabelFiles
         :type: (array of strings)
@@ -540,6 +604,10 @@ Properties
             0 - syslog entry, 1 - do nothing, 2 - throw an exception.
             Default: 0
 
+inlineSettings
+--------------
+
+
     ..  confval:: inlineSettings
         :name: page-inlineSettings
         :type: (array of strings)
@@ -547,6 +615,10 @@ Properties
 
         Adds settings to the page as inline javascript, which is accessible within
         the JavaScript object :js:`TYPO3.settings`.
+
+jsFooterInline.[array]
+----------------------
+
 
     ..  confval:: jsFooterInline.[array]
         :name: page-jsFooterInline
@@ -558,6 +630,10 @@ Properties
 
         The :typoscript:`jsFooterInline` property contains any number of numeric keys, each representing one cObject.
         Internally handled as PHP integer, maximum number is therefore restricted to :php:`PHP_INT_MAX`.
+
+jsInline.[array]
+----------------
+
 
     ..  confval:: jsInline.[array]
         :name: page-jsInline
@@ -573,6 +649,10 @@ Properties
 
         The :typoscript:`jsInline` property contains any number of numeric keys, each representing one cObject.
         Internally handled as PHP integer, maximum number is therefore restricted to :php:`PHP_INT_MAX`.
+
+meta
+----
+
 
     ..  confval:: meta
         :name: page-meta
@@ -609,6 +689,10 @@ Properties
             to 0 (default), the meta tag generated by the plugin will be used. If
             there is none yet, the one from TypoScript is set.
 
+shortcutIcon
+------------
+
+
     ..  confval:: shortcutIcon
         :name: page-shortcutIcon
         :type: :ref:`data-type-resource`
@@ -622,11 +706,19 @@ Properties
 
         If the file is missing no tag will be rendered.
 
+stdWrap
+-------
+
+
     ..  confval:: stdWrap
         :name: page-stdWrap
         :type: :ref:`stdwrap`
 
         Wraps the content of the cObject array with :ref:`stdwrap` options.
+
+typeNum
+-------
+
 
     ..  confval:: typeNum
         :name: page-typeNum
@@ -641,6 +733,10 @@ Properties
         determines, which page object will be rendered. The value defaults to 0 for
         the first found :typoscript:`PAGE` object, but it **must** be set and be unique as
         soon as you use *more* than one such object.
+
+wrap
+----
+
 
     ..  confval:: wrap
         :name: page-wrap

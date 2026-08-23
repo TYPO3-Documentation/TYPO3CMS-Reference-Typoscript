@@ -24,6 +24,10 @@ Options:
     :type:
     :Default:
 
+if
+--
+
+
     ..  _GalleryProcessor-if:
 
     ..  confval:: if
@@ -33,6 +37,10 @@ Options:
         :Default: ''
 
         Only if the condition is met the data processor is executed.
+
+filesProcessedDataKey
+---------------------
+
 
 
     ..  _GalleryProcessor-filesProcessedDataKey:
@@ -46,6 +54,10 @@ Options:
 
         Key of the array previously processed by the :php:`FilesProcessor`.
 
+numberOfColumns
+---------------
+
+
 
     ..  _GalleryProcessor-numberOfColumns:
 
@@ -58,6 +70,10 @@ Options:
 
         Expects the desired number of columns. Defaults to the value of the field
         `imagecols` (:guilabel:`Number of Columns`) if used with content elements.
+
+mediaOrientation
+----------------
+
 
     ..  _GalleryProcessor-mediaOrientation:
 
@@ -80,6 +96,10 @@ Options:
 
             Media orientation in the content elements such as text with images
 
+maxGalleryWidth
+---------------
+
+
     ..  _GalleryProcessor-maxGalleryWidth:
 
     ..  confval:: maxGalleryWidth
@@ -90,6 +110,10 @@ Options:
 
         Maximal gallery width in pixels.
 
+maxGalleryWidthInText
+---------------------
+
+
     ..  _GalleryProcessor-maxGalleryWidthInText:
 
     ..  confval:: maxGalleryWidthInText
@@ -99,6 +123,10 @@ Options:
         :Default: 300
 
         Maximal gallery width in pixels if displayed in a text.
+
+equalMediaHeight, equalMediaWidth
+---------------------------------
+
 
     ..  _GalleryProcessor-equalMediaHeight:
     ..  _GalleryProcessor-equalMediaWidth:
@@ -122,6 +150,10 @@ Options:
 
             Media height and width in the content element Text and Images
 
+columnSpacing
+-------------
+
+
 
     ..  _GalleryProcessor-columnSpacing:
 
@@ -133,6 +165,10 @@ Options:
         :Example: 4
 
         Space between columns in pixels
+
+borderEnabled
+-------------
+
 
     ..  _GalleryProcessor-borderEnabled:
 
@@ -147,6 +183,10 @@ Options:
         fields `imageborder` (:guilabel:`Number of Columns`) if used with content
         elements.
 
+borderWidth
+-----------
+
+
     ..  _GalleryProcessor-borderWidth:
 
     ..  confval:: borderWidth
@@ -158,6 +198,10 @@ Options:
 
         Width of the border in pixels.
 
+borderPadding
+-------------
+
+
     ..  _GalleryProcessor-borderPadding:
 
     ..  confval:: borderPadding
@@ -168,6 +212,10 @@ Options:
         :Example: 20
 
         Padding around the border in pixels.
+
+cropVariant
+-----------
+
 
 
     ..  _GalleryProcessor-cropVariant:
@@ -181,6 +229,10 @@ Options:
 
         See :ref:`crop variants in the TCA reference <t3tca:columns-imageManipulation-properties-cropVariants>`
 
+as
+--
+
+
     ..  _GalleryProcessor-as:
 
     ..  confval:: as
@@ -190,6 +242,10 @@ Options:
         :Default: "files"
 
         The variable name to be used in the Fluid template.
+
+dataProcessing
+--------------
+
 
     ..  _GalleryProcessor-dataProcessing:
 

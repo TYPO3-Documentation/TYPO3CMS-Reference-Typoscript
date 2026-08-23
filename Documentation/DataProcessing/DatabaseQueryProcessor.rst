@@ -29,6 +29,10 @@ Options:
     :type:
     :Default:
 
+if
+--
+
+
     ..  _DatabaseQueryProcessor-if:
 
     ..  confval:: if
@@ -38,6 +42,10 @@ Options:
         :Default: ''
 
         Only if the condition is met the data processor is executed.
+
+table
+-----
+
 
 
     ..  _DatabaseQueryProcessor-table:
@@ -50,6 +58,10 @@ Options:
 
         Name of the table from which the records should be fetched.
 
+as
+--
+
+
     ..  _DatabaseQueryProcessor-as:
 
     ..  confval:: as
@@ -59,6 +71,10 @@ Options:
         :Default: 'records'
 
         The variable's name to be used in the Fluid template.
+
+dataProcessing
+--------------
+
 
     ..  _DatabaseQueryProcessor-dataProcessing:
 

@@ -22,6 +22,10 @@ Properties
     :display: table
     :type:
 
+cache
+-----
+
+
 ..  _cobj-extbaseplugin-cache:
 
 ..  confval:: cache
@@ -29,6 +33,10 @@ Properties
     :type: :ref:`cache <cache>`
 
     See :ref:`cache function description <cache>` for details.
+
+extensionName
+-------------
+
 
 
 ..  _cobj-extbaseplugin-extensionName:
@@ -38,6 +46,10 @@ Properties
     :type: :ref:`data-type-string`
 
     The :ref:`extension name <t3coreapi:extension-naming-extensionName>`.
+
+pluginName
+----------
+
 
 
 ..  _cobj-extbaseplugin-pluginName:

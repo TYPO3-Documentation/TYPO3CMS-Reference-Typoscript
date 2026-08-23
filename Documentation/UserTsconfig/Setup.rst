@@ -31,6 +31,10 @@ Properties
     :type:
     :Default:
 
+setup.default.[someProperty]
+----------------------------
+
+
     ..  _user-setup-default:
 
     ..  confval:: setup.default.[someProperty]
@@ -49,6 +53,10 @@ Properties
         ..  literalinclude:: _Setup/_user-setup-default.tsconfig
             :language: typoscript
             :caption: EXT:site_package/Configuration/user.tsconfig
+
+setup.override.[someProperty]
+-----------------------------
+
 
     ..  _user-setup-override:
 
@@ -69,6 +77,10 @@ Properties
             *not* remove it again but rather set it blank if you want to disable
             the effect again!
 
+setup.fields.[fieldName].disabled
+---------------------------------
+
+
     ..  _user-setup-fields-fieldName-disabled:
 
     ..  confval:: setup.fields.[fieldName].disabled
@@ -88,6 +100,10 @@ Properties
             # And force the value of this field to be set to 1
             setup.override.emailMeAtLogin = 1
 
+backendTitleFormat
+------------------
+
+
     ..  index::  User settings; Format of window title in backend
 
     ..  _user-setup-backendTitleFormat:
@@ -103,6 +119,10 @@ Properties
         `sitenameFirst`
             [sitename] · [title]
 
+copyLevels
+----------
+
+
 
     ..  index:: User settings; Copy levels
 
@@ -113,6 +133,10 @@ Properties
         :type: positive integer
 
         Recursive Copy: Enter the number of page sub-levels to include, when a page is copied
+
+edit_docModuleUpload
+--------------------
+
 
 
     ..  index:: File upload; In doc module
@@ -129,6 +153,10 @@ Properties
             The uploaded file will be stored in the default upload folder,
             see :ref:`user TSconfig <useroptions-defaultUploadFolder>` and :ref:`page TSconfig <pagedefaultuploadfolder>`
 
+emailMeAtLogin
+--------------
+
+
     ..  _user-setup-emailMeAtLogin:
 
     ..  confval:: emailMeAtLogin
@@ -136,6 +164,10 @@ Properties
         :type:  boolean
 
         Notify me by email, when somebody logs into my account
+
+lang
+----
+
 
     ..  _user-setup-lang:
 
@@ -146,6 +178,10 @@ Properties
         One of the language keys. For current options see
         :ref:`t3coreapi:i18n_languages`, for example `dk`, `de`, `es` etc.
 
+neverHideAtCopy
+---------------
+
+
     ..  _user-setup-neverHideAtCopy:
 
     ..  confval:: neverHideAtCopy
@@ -153,6 +189,10 @@ Properties
         :type: boolean
 
         If set, then the hideAtCopy feature for records in TCE will not be used.
+
+showHiddenFilesAndFolders
+-------------------------
+
 
     ..  _user-setup-showHiddenFilesAndFolders:
 
@@ -163,6 +203,10 @@ Properties
         If set, hidden files and folders will be shown in the
         :guilabel:`Media`.
 
+startModule
+-----------
+
+
     ..  _user-setup-startModule:
 
     ..  confval:: startModule
@@ -171,6 +215,10 @@ Properties
 
         Name of the module that is called when the user logs into the backend, for
         example `web_layout`, `web_list`, `web_view`, `web_info`, `web_ts` etc.
+
+titleLen
+--------
+
 
     ..  _user-setup-titleLen:
 

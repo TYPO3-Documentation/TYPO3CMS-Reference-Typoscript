@@ -25,6 +25,10 @@ Properties
     :type:
     :Default:
 
+special.value
+-------------
+
+
 ..  _hmenu-special-keywords-value:
 
 ..  confval:: special.value
@@ -33,6 +37,10 @@ Properties
     :Example: :ref:`hmenu-special-keywords-value-example`
 
     UID of the page for which related pages by keyword should be found.
+
+special.mode
+------------
+
 
 ..  _hmenu-special-keywords-mode:
 
@@ -64,6 +72,10 @@ Properties
     `starttime`
         Uses the :sql:`starttime` field.
 
+special.entryLevel
+------------------
+
+
 
 ..  _hmenu-special-keywords-entrylevel:
 
@@ -75,6 +87,10 @@ Properties
 
     See property :ref:`entryLevel in the HMENU <hmenu-entrylevel>`.
 
+special.depth
+-------------
+
+
 ..  _hmenu-special-keywords-depth:
 
 ..  confval:: special.depth
@@ -83,6 +99,10 @@ Properties
     :Default: 20
 
     Same as in section :ref:`"special = updated" <hmenu-special-updated-depth>`.
+
+special.limit
+-------------
+
 
 
 ..  _hmenu-special-keywords-limit:
@@ -94,6 +114,10 @@ Properties
 
     Maximal number of items in the menu. Default is 10, maximum is 100.
 
+special.excludeNoSearchPages
+----------------------------
+
+
 
 ..  _hmenu-special-keywords-excludenosearchpages:
 
@@ -104,6 +128,10 @@ Properties
 
     If set, pages marked `No search` are not included.
 
+special.begin
+-------------
+
+
 ..  _hmenu-special-keywords-begin:
 
 ..  confval:: special.begin
@@ -111,6 +139,10 @@ Properties
     :type: boolean
 
     ..  TODO: What does this do?
+
+special.setKeywords
+-------------------
+
 
 ..  _hmenu-special-keywords-setkeywords:
 
@@ -122,6 +154,10 @@ Properties
     separated list. If this property is defined, it overrides the default,
     which is the keywords of the current page.
 
+special.keywordsField
+---------------------
+
+
 ..  _hmenu-special-keywords-keywordsfield:
 
 ..  confval:: special.keywordsField
@@ -132,6 +168,10 @@ Properties
     Defines the field in the :sql:`pages` table in which to search for the
     keywords. Default is the field name :sql:`keyword`. No check is done to see
     if the field you enter here exists, so make sure to enter an existing field.
+
+special.keywordsField.sourceField
+---------------------------------
+
 
 ..  _hmenu-special-keywords-sourcefield:
 

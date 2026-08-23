@@ -31,6 +31,10 @@ Options:
     :type:
     :Default:
 
+if
+--
+
+
     ..  _LanguageMenuProcessor-if:
 
     ..  confval:: if
@@ -39,6 +43,10 @@ Options:
         :type: :ref:`if` condition
 
         Only if the condition is met the data processor is executed.
+
+languages
+---------
+
 
     ..  _LanguageMenuProcessor-languages:
 
@@ -53,6 +61,10 @@ Options:
         creation or `auto` to load from the :ref:`site configuration
         <t3coreapi:sitehandling>`.
 
+addQueryString.exclude
+----------------------
+
+
 
     ..  _LanguageMenuProcessor-addQueryString-exclude:
 
@@ -65,6 +77,10 @@ Options:
 
         A list of comma-separated parameter names to be excluded from the language
         menu URLs.
+
+as
+--
+
 
     ..  _LanguageMenuProcessor-as:
 

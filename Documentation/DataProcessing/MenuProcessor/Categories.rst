@@ -31,6 +31,10 @@ Properties
     :type:
     :Default:
 
+special.value
+-------------
+
+
 ..  _hmenu-special-categories-value:
 
 ..  confval:: special.value
@@ -39,6 +43,10 @@ Properties
     :Example: :ref:`hmenu-special-categories-value-example`
 
     Comma-separated list of categories UID's.
+
+special.relation
+----------------
+
 
 ..  _hmenu-special-categories-relation:
 
@@ -51,6 +59,10 @@ Properties
     building the list of categorized pages, as there can
     be several such fields on a given table.
 
+special.sorting
+---------------
+
+
 ..  _hmenu-special-categories-sorting:
 
 ..  confval:: special.sorting
@@ -62,6 +74,10 @@ Properties
     on the "title" field, for example, will work.
 
     If an unknown field is defined, the pages will not be sorted.
+
+special.order
+-------------
+
 
 ..  _hmenu-special-categories-order:
 

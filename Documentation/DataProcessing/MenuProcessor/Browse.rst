@@ -35,6 +35,10 @@ Properties
     :type:
     :Default:
 
+special.value
+-------------
+
+
     ..  confval:: special.value
         :name: hmenu-browse-special-value
         :type: integer /:ref:`stdWrap <stdwrap>`
@@ -42,6 +46,10 @@ Properties
 
         The default value can be overridden with a different page ID as starting
         point for the menu in some rare use cases.
+
+special.items
+-------------
+
 
     ..  confval:: special.items
         :name: hmenu-browse-special-items
@@ -88,6 +96,10 @@ Properties
             page(up 2 levels). May not be available, if that page is out of the
             root line.
 
+special.items.prevnextToSection
+-------------------------------
+
+
     ..  confval:: special.items.prevnextToSection
         :name: hmenu-browse-special-items-prevnextToSection
         :type: boolean
@@ -97,6 +109,10 @@ Properties
         when it reaches the end of pages in the current section. That way
         `prev` and `next` will also link to the first page of the next section
         / to the last page of the previous section.
+
+special.excludeNoSearchPages
+----------------------------
+
 
     ..  confval:: special.excludeNoSearchPages
         :name: hmenu-browse-special-excludeNoSearchPages

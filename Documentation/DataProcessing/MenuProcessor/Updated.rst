@@ -27,6 +27,10 @@ Properties
     :type:
     :Default:
 
+special.value
+-------------
+
+
 ..  _hmenu-special-updated-value:
 
 ..  confval:: special.value
@@ -43,6 +47,10 @@ Properties
         20 = HMENU
         20.special = updated
         20.special.value = 35, 56
+
+special.mode
+------------
+
 
 ..  _hmenu-special-updated-mode:
 
@@ -77,6 +85,10 @@ Properties
 
     Fields with empty values are generally not selected.
 
+special.depth
+-------------
+
+
 ..  _hmenu-special-updated-depth:
 
 ..  confval:: special.depth
@@ -92,6 +104,10 @@ Properties
     first level.
 
     **Note:** "depth" is relative to :confval:`hmenu-updated-special-beginAtLevel`.
+
+special.beginAtLevel
+--------------------
+
 
 ..  _hmenu-special-updated-beginatlevel:
 
@@ -111,6 +127,10 @@ Properties
 
     **Note:** "depth" is relative to this property.
 
+special.maxAge
+--------------
+
+
 
 ..  _hmenu-special-updated-maxage:
 
@@ -125,6 +145,10 @@ Properties
 
     By default all pages are shown. You may use +-\*/ for calculations.
 
+special.limit
+-------------
+
+
 ..  _hmenu-special-updated-limit:
 
 ..  confval:: special.limit
@@ -133,6 +157,10 @@ Properties
     :Default: 10
 
     Maximal number of items in the menu. Default is 10, max is 100.
+
+special.excludeNoSearchPages
+----------------------------
+
 
 
 ..  _hmenu-special-updated-excludenosearchpages:

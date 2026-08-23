@@ -33,6 +33,10 @@ Properties
     :display: table
     :type:
 
+if
+--
+
+
 ..  _cobj-content-if:
 
 ..  confval:: if
@@ -40,6 +44,10 @@ Properties
     :type: :ref:`->if <if>`
 
     If "if" returns false, the content is not generated.
+
+select
+------
+
 
 
 ..  _cobj-content-select:
@@ -50,6 +58,10 @@ Properties
 
     The SQL-statement, a :sql:`SELECT` query, is set here,
     including automatic visibility control.
+
+table
+-----
+
 
 
 ..  _cobj-content-table:
@@ -62,6 +74,10 @@ Properties
     a check for a table prefix is not done.
 
     In standard configuration this will be :sql:`tt_content`.
+
+renderObj
+---------
+
 
 
 .. _cobj-content-renderObj:
@@ -80,6 +96,10 @@ Properties
     is being copied.
 
     See the notes on the example below.
+
+slide
+-----
+
 
 
 ..  _cobj-content-slide:
@@ -104,6 +124,10 @@ Properties
 
     Use :typoscript:`-1` in combination with :ref:`collect <cobj-content-slide-collect>`.
 
+slide.collect
+-------------
+
+
 ..  _cobj-content-slide-collect:
 
 ..  confval:: slide.collect
@@ -114,6 +138,10 @@ Properties
     collected. Otherwise, the sliding would stop after the first hit. Set this
     value to the amount of levels to collect on, or use :typoscript:`-1`
     to collect up to the site root.
+
+slide.collectFuzzy
+------------------
+
 
 
 ..  _cobj-content-slide-collectFuzzy:
@@ -126,6 +154,10 @@ Properties
     elements have been found for the specified depth in collect mode, traverse
     further until at least one match has occurred.
 
+slide.collectReverse
+--------------------
+
+
 
 ..  _cobj-content-slide-collectReverse:
 
@@ -136,6 +168,10 @@ Properties
     Reverse order of elements in collect mode. If set, elements of the current
     page will be at the bottom.
 
+wrap
+----
+
+
 ..  _cobj-content-wrap:
 
 ..  confval:: wrap
@@ -144,6 +180,10 @@ Properties
 
     Wrap the whole content.
 
+stdWrap
+-------
+
+
 ..  _cobj-content-stdWrap:
 
 ..  confval:: stdWrap
@@ -151,6 +191,10 @@ Properties
     :type: :ref:`stdWrap`
 
     Apply `stdWrap` functionality.
+
+cache
+-----
+
 
 
 ..  _cobj-content-cache:

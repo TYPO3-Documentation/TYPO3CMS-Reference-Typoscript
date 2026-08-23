@@ -39,6 +39,10 @@ Properties
     :type:
     :Default:
 
+special.range
+-------------
+
+
 ..  _hmenu-special-rootline-range:
 
 ..  confval:: special.range
@@ -50,6 +54,10 @@ Properties
     `[begin-level] | [end-level]` are interpreted like the
     :ref:`.entryLevel <hmenu-entrylevel>` for an `HMENU`).
 
+special.reverseOrder
+--------------------
+
+
 ..  _hmenu-special-rootline-reverseorder:
 
 ..  confval:: special.reverseOrder
@@ -59,6 +67,10 @@ Properties
 
     If set to true, the order of the root line menu elements will be
     reversed.
+
+special.targets.[level number]
+------------------------------
+
 
 
 ..  _hmenu-special-rootline-targets:

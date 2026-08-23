@@ -39,6 +39,10 @@ Properties
     :display: table
     :type:
 
+1, 2, 3, ...
+------------
+
+
     ..  _hmenu-number:
 
     ..  confval:: 1, 2, 3, ...
@@ -58,6 +62,10 @@ Properties
 
         TYPO3 offers :ref:`the menu object TMENU <menu-objects>`.
 
+cache_period
+------------
+
+
     ..  _hmenu-cache-period:
 
     ..  confval:: cache_period
@@ -73,6 +81,10 @@ Properties
 
         3) 86400 (= 1 day)
 
+cache
+-----
+
+
     ..  _hmenu-cache:
 
     ..  confval:: cache
@@ -80,6 +92,10 @@ Properties
         :type: :ref:`cache <cache>`
 
         See :ref:`cache function description <cache>` for details.
+
+entryLevel
+----------
+
 
     ..  _hmenu-entrylevel:
 
@@ -89,6 +105,10 @@ Properties
         :Default: 0
 
         Defines at which level in the rootLine the menu should start.
+
+special
+-------
+
 
     ..  _hmenu-special:
     ..  _hmenu-special-property:
@@ -102,6 +122,10 @@ Properties
 
         See the section about the :ref:`.special property <hmenu-special-property>`!
 
+special.value
+-------------
+
+
     ..  _hmenu-special-value:
 
     ..  confval:: special.value
@@ -111,6 +135,10 @@ Properties
         List of page uid's to use for the special menu. What they are used
         for depends on the menu type as defined by ".special"; see the
         section about the :ref:`.special property <hmenu-special-property>`!
+
+minItems
+--------
+
 
     ..  _hmenu-minitems:
 
@@ -126,6 +154,10 @@ Properties
         menu level individually, set the properties in the menu objects (see
         "Common properties" table).
 
+maxItems
+--------
+
+
     ..  _hmenu-maxitems:
 
     ..  confval:: maxItems
@@ -138,6 +170,10 @@ Properties
         **Note:** Affects all sub menus as well. (See "minItems" for a
         notice.)
 
+begin
+-----
+
+
     ..  _hmenu-begin:
 
     ..  confval:: begin
@@ -149,6 +185,10 @@ Properties
         **Note:** Affects all sub menus as well. (See "minItems" for a
         notice.)
 
+excludeUidList
+--------------
+
+
     ..  _hmenu-excludeuidlist:
 
     ..  confval:: excludeUidList
@@ -156,6 +196,10 @@ Properties
         :type: list of :ref:`data-type-integer` / :ref:`stdWrap <stdwrap>`
 
         See :confval:`MenuProcessor-excludeUidList`.
+
+excludeDoktypes
+---------------
+
 
     ..  _hmenu-excludedoktypes:
 
@@ -166,6 +210,10 @@ Properties
 
         See :confval:`MenuProcessor-excludeDoktypes`.
 
+includeNotInMenu
+----------------
+
+
     .. _hmenu-includenotinmenu:
 
     ..  confval:: includeNotInMenu
@@ -173,6 +221,10 @@ Properties
         :type: :ref:`data-type-boolean` / :ref:`stdWrap <stdwrap>`
 
         See :confval:`MenuProcessor-includeNotInMenu`
+
+alwaysActivePIDlist
+-------------------
+
 
     .. _hmenu-alwaysactivepidlist:
 
@@ -182,6 +234,10 @@ Properties
 
         See :confval:`MenuProcessor-alwaysActivePIDlist`
 
+protectLvar
+-----------
+
+
     ..  _hmenu-protectlvar:
 
     ..  confval:: protectLvar
@@ -190,6 +246,10 @@ Properties
 
         See :confval:`MenuProcessor-protectlvar`.
 
+if
+--
+
+
     ..  _hmenu-if:
 
     ..  confval:: if
@@ -197,6 +257,10 @@ Properties
         :type: :ref:`->if <if>`
 
         If "if" returns false, the menu is not generated.
+
+wrap
+----
+
     ..  _hmenu-wrap:
 
     ..  confval:: wrap
@@ -204,6 +268,10 @@ Properties
         :type: :ref:`wrap <data-type-wrap>` / :ref:`stdWrap <stdwrap>`
 
         Wrap for the HMENU.
+
+stdWrap
+-------
+
 
     ..  _hmenu-stdwrap:
 

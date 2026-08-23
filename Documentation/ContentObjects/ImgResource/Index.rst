@@ -25,6 +25,10 @@ Properties
     :display: table
     :type:
 
+cache
+-----
+
+
 ..  _cobj-img-resource-cache:
 
 ..  confval:: cache
@@ -33,11 +37,19 @@ Properties
 
     See :ref:`cache function description <cache>` for details.
 
+file
+----
+
+
 ..  _cobj-img-resource-file:
 
 ..  confval:: file
     :name: img-resource-file
     :type: :ref:`->imgResource <imgresource>`
+
+stdWrap
+-------
+
 
 
 ..  _cobj-img-resource-stdWrap:

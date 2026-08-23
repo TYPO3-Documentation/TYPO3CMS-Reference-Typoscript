@@ -29,6 +29,10 @@ Properties
     :display: table
     :type:
 
+value
+-----
+
+
 ..  _cobj-text-value:
 
 ..  confval:: value
@@ -36,6 +40,10 @@ Properties
     :type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
 
     Text, which you want to output.
+
+stdWrap
+-------
+
 
 
 ..  _cobj-text-stdWrap:
@@ -48,6 +56,10 @@ Properties
     object. This is non-standard! You should use these stdWrap
     properties consistently to those of the other cObjects by
     accessing them through the property "stdWrap".
+
+cache
+-----
+
 
 
 ..  _cobj-text-cache:

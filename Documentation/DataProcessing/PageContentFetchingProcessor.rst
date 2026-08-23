@@ -29,6 +29,10 @@ Options
     :type:
     :Default:
 
+as
+--
+
+
     ..  confval:: as
         :name: PageContentFetchingProcessor-as
         :Required: false
@@ -36,6 +40,10 @@ Options
         :Default: "content"
 
         Name for the variable in the Fluid template.
+
+if
+--
+
 
     ..  confval:: if
         :name: PageContentFetchingProcessor-if

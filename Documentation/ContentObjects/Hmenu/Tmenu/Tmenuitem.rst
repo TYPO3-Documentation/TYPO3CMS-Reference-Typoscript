@@ -29,6 +29,10 @@ Properties
     :type:
     :Default:
 
+allWrap
+-------
+
+
 ..  _tmenuitem-allWrap:
 
 ..  confval:: allWrap
@@ -36,6 +40,10 @@ Properties
     :type: :ref:`data-type-wrap` / :ref:`stdWrap <stdwrap>`
 
     Wraps the whole item.
+
+wrapItemAndSub
+--------------
+
 
 
 ..  _tmenuitem-wrapItemAndSub:
@@ -45,6 +53,10 @@ Properties
     :type: :ref:`data-type-wrap` / :ref:`stdWrap <stdwrap>`
 
     Wraps the whole item and any submenu concatenated to it.
+
+subst_elementUid
+----------------
+
 
 
 ..  _tmenuitem-subst-elementUid:
@@ -61,12 +73,20 @@ Properties
     This is useful, if you want to insert an identification code in the
     HTML in order to manipulate properties with JavaScript.
 
+before
+------
+
+
 
 ..  _tmenuitem-before:
 
 ..  confval:: before
     :name: tmenuitem-before
     :type: HTML / :ref:`stdWrap <stdwrap>`
+
+beforeWrap
+----------
+
 
 
 ..  _tmenuitem-beforeWrap:
@@ -77,12 +97,20 @@ Properties
 
     Wrap around the :ref:`.before <tmenuitem-before>` code.
 
+after
+-----
+
+
 
 ..  _tmenuitem-after:
 
 ..  confval:: after
     :name: tmenuitem-after
     :type: HTML / :ref:`stdWrap <stdwrap>`
+
+afterWrap
+---------
+
 
 
 ..  _tmenuitem-afterWrap:
@@ -93,12 +121,20 @@ Properties
 
     Wrap around the :ref:`.after <tmenuitem-after>` code.
 
+linkWrap
+--------
+
+
 
 ..  _tmenuitem-linkWrap:
 
 ..  confval:: linkWrap
     :name: tmenuitem-linkWrap
     :type: :ref:`data-type-wrap`
+
+stdWrap
+-------
+
 
 
 ..  _tmenuitem-stdWrap:
@@ -108,6 +144,10 @@ Properties
     :type: :ref:`stdWrap`
 
     stdWrap to the link text.
+
+ATagBeforeWrap
+--------------
+
 
 
 ..  _tmenuitem-ATagBeforeWrap:
@@ -120,6 +160,10 @@ Properties
     If set, the link is first wrapped with :ref:`*.linkWrap* <tmenuitem-linkWrap>`
     and then the :html:`<a>` tag.
 
+ATagParams
+----------
+
+
 
 ..  _tmenuitem-ATagParams:
 
@@ -128,6 +172,10 @@ Properties
     :type: *<A>-params* / :ref:`stdWrap <stdwrap>`
 
     Additional parameters
+
+ATagTitle
+---------
+
 
 
 ..  _tmenuitem-ATagTitle:
@@ -138,6 +186,10 @@ Properties
 
     Allows you to specify the "title" attribute of the :html:`<a>` tag around
     the menu item.
+
+additionalParams
+----------------
+
 
 
 ..  _tmenuitem-additionalParams:
@@ -151,6 +203,10 @@ Properties
 
     For details, see :ref:`typolink->additionalParams <typolink-additionalParams>`.
 
+doNotLinkIt
+-----------
+
+
 
 ..  _tmenuitem-doNotLinkIt:
 
@@ -161,6 +217,10 @@ Properties
 
     If set, the link texts are not linked at all.
 
+doNotShowLink
+-------------
+
+
 
 ..  _tmenuitem-doNotShowLink:
 
@@ -170,6 +230,10 @@ Properties
     :Default: 0
 
     If set, the text will not be shown at all (smart with spacers).
+
+stdWrap2
+--------
+
 
 
 ..  _tmenuitem-stdWrap2:
@@ -182,6 +246,10 @@ Properties
     stdWrap to the total link text and :html:`<a>` tag. (Notice that the plain
     default value passed to the stdWrap function is "\|".)
 
+altTarget
+---------
+
+
 
 ..  _tmenuitem-altTarget:
 
@@ -191,6 +259,10 @@ Properties
 
     Alternative target overriding the target property of the
     ref:`TMENU <tmenu>`, if set.
+
+allStdWrap
+----------
+
 
 
 ..  _tmenuitem-allStdWrap:

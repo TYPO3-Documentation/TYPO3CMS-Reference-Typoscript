@@ -35,6 +35,10 @@ Options
     :type:
     :Default:
 
+as
+--
+
+
     ..  _MenuProcessor-as:
 
     ..  confval:: as
@@ -45,6 +49,10 @@ Options
 
         Name for the variable in the Fluid template.
 
+alwaysActivePIDlist
+-------------------
+
+
     ..  confval:: alwaysActivePIDlist
         :name: MenuProcessor-alwaysActivePIDlist
         :type: list of :ref:`data-type-integer` /:ref:`stdWrap <stdwrap>`
@@ -52,6 +60,10 @@ Options
         This is a list of page UID numbers that will always be regarded as
         active menu items and thereby automatically opened regardless of the
         rootline.
+
+entryLevel
+----------
+
 
     ..  confval:: entryLevel
         :name: MenuProcessor-entryLevel
@@ -79,6 +91,10 @@ Options
         it will start to be visible from the 4th level (and will contain only
         the subpages from that level).
 
+excludeDoktypes
+---------------
+
+
     ..  confval:: excludeDoktypes
         :name: MenuProcessor-excludeDoktypes
         :type: list of :ref:`data-type-integer`
@@ -87,6 +103,10 @@ Options
         Enter the list of page document types (doktype) to exclude from menus.
         By default pages that are "backend user access only" (6) or "folder"
         (254) are excluded.
+
+excludeUidList
+--------------
+
 
     ..  confval:: excludeUidList
         :name: MenuProcessor-excludeUidList
@@ -106,6 +126,10 @@ Options
 
             page.10.dataProcessing.20.excludeUidList = 34,2,current
 
+expandAll
+---------
+
+
     ..  _MenuProcessor-expandAll:
 
     ..  confval:: expandAll
@@ -116,6 +140,10 @@ Options
         :Example: 0
 
         Include all submenus (`1`) or only those of the active pages (`0`).
+
+levels
+------
+
 
     ..  _MenuProcessor-levels:
 
@@ -128,12 +156,20 @@ Options
 
         Maximal number of levels to be included in the output array.
 
+includeNotInMenu
+----------------
+
+
     ..  confval:: includeNotInMenu
         :name: MenuProcessor-includeNotInMenu
         :type: :ref:`data-type-boolean` / :ref:`stdWrap <stdwrap>`
 
         If set, pages with the checkbox "Page enabled in menus" disabled will still be included
         in menus.
+
+includeSpacer
+-------------
+
 
     ..  _MenuProcessor-includeSpacer:
 
@@ -145,6 +181,10 @@ Options
         :Example: 1
 
         Include pages with type "spacer".
+
+protectLvar
+-----------
+
 
     ..  confval:: protectLvar
         :name: MenuProcessor-protectlvar
@@ -170,6 +210,10 @@ Options
         if "Hide page if no translation for current language exists" is set -
         it always reverts to default language if no translation is found.
 
+special
+-------
+
+
     ..  confval:: special
         :name: MenuProcessor-special
         :type: *"directory" / "list" / "updated" / "rootline" / "browse" / "keywords"
@@ -184,6 +228,10 @@ Options
 
         See the section about the :ref:`.special property <MenuProcessor-special>`.
 
+value
+-----
+
+
         ..  confval:: value
             :name: MenuProcessor-special-value
             :type: *list of page-uid's* / :ref:`stdWrap <stdwrap>`
@@ -191,6 +239,10 @@ Options
             List of page uid's to use for the special menu. What they are used
             for depends on the menu type as defined by ".special"; see the
             section about the :ref:`.special property <MenuProcessor-special>`.
+
+titleField
+----------
+
 
     ..  _MenuProcessor-titleField:
 

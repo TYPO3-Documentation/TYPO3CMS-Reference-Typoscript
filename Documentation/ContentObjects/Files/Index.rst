@@ -23,6 +23,10 @@ Properties
     :display: table
     :type:
 
+cache
+-----
+
+
 ..  _cobj-files-cache:
 
 ..  confval:: cache
@@ -30,6 +34,10 @@ Properties
     :type: :ref:`cache <cache>`
 
     See :ref:`cache function description <cache>` for details.
+
+files
+-----
+
 
 
 .. _cobj-files-files:
@@ -47,6 +55,10 @@ Properties
 
         page.10 = FILES
         page.10.files = 12,15,16
+
+references
+----------
+
 
 
 .. _cobj-files-references:
@@ -93,6 +105,10 @@ Properties
 
     This will fetch all items related to the page.media field.
 
+collections
+-----------
+
+
 
 .. _cobj-files-collections:
 
@@ -102,6 +118,10 @@ Properties
 
     Comma-separated list of :sql:`sys_file_collection` UIDs, which
     are loaded into the :typoscript:`FILES` object.
+
+folders
+-------
+
 
 
 .. _cobj-files-folders:
@@ -146,6 +166,10 @@ Properties
            }
         }
 
+sorting
+-------
+
+
 
 .. _cobj-files-sorting:
 
@@ -154,6 +178,10 @@ Properties
     :type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
 
     Name of the field, which should be used to sort the files.
+
+sorting.direction
+-----------------
+
 
 
 .. _cobj-files-sorting-direction:
@@ -167,6 +195,10 @@ Properties
     files should be sorted. Possible values are "asc" for ascending and
     "desc" for descending.
 
+begin
+-----
+
+
 .. _cobj-files-begin:
 
 ..  confval:: begin
@@ -175,6 +207,10 @@ Properties
 
     The first item to return. If not set (default), items beginning
     with the first one are returned.
+
+maxItems
+--------
+
 
 
 .. _cobj-files-maxItems:
@@ -187,6 +223,10 @@ Properties
     are returned. If :ref:`cobj-files-begin` and :ref:`cobj-files-maxItems`
     together exceed the number of available items, no items beyond the
     last available item will be returned.
+
+renderObj
+---------
+
 
 
 .. _cobj-files-renderObj:
@@ -213,6 +253,10 @@ Properties
 
     This returns the size of the current file.
 
+stdWrap
+-------
+
+
 
 .. _cobj-files-stdWrap:
 
@@ -235,6 +279,10 @@ Special key: "references"
 
     The table name of the table having the file field.
 
+references.uid
+--------------
+
+
 
 .. _cobj-files-references-uid:
 
@@ -243,6 +291,10 @@ Special key: "references"
     :type: :ref:`data-type-integer` / :ref:`stdWrap <stdwrap>`
 
     The UID of the record from which to fetch the referenced files.
+
+references.fieldName
+--------------------
+
 
 
 .. _cobj-files-references-fieldName:
