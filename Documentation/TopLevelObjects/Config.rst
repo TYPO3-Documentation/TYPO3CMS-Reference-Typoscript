@@ -1175,7 +1175,7 @@ Demonstrates:
 ..  code-block:: typoscript
     :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-    config.pageRendererTemplateFile = EXT:my_extension/Resources/Private/Templates/TestPagerender.html
+    config.pageRendererTemplateFile = EXT:my_extension/Resources/Private/Templates/TestPagerender.fluid.html
 
 
 ..  _setup-config-pagetitleproviders:
