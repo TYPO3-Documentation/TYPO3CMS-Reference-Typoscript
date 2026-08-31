@@ -65,6 +65,15 @@ to output all available data using the magic `{_all}` variable:
 Properties
 ==========
 
+..  versionchanged:: 14.0
+    Fluid 5 introduces a dedicated file extension for Fluid template, partial
+    and layout files, for example :file:`.fluid.html` instead of plain
+    :file:`.html`. A fallback mechanism keeps existing files without this
+    extension working, so renaming is entirely optional. See
+    `Feature: #108166 - Fluid File Extension and Template Resolving
+    <https://docs.typo3.org/permalink/changelog:feature-108166-1763400992>`_
+    for the resolving order and the reasoning behind the change.
+
 ..  confval-menu::
     :display: table
     :type:
@@ -371,7 +380,7 @@ Example
     :ref:`How to migrate to PAGEVIEW <cobj-fluidtemplate-migration>`
 
 The Fluid template in
-:file:`EXT:my_sitepackage/Resources/Private/Templates/MyTemplate.html` could look
+:file:`EXT:my_sitepackage/Resources/Private/Templates/MyTemplate.fluid.html` could look
 like this:
 
 ..  literalinclude:: _includes/_MyTemplate.fluid.html

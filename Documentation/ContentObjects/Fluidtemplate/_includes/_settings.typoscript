@@ -2,7 +2,7 @@ page = PAGE
 page {
     10 = FLUIDTEMPLATE
     10 {
-        file = EXT:site_default/Resources/Private/Templates/MyTemplate.html
+        file = EXT:site_default/Resources/Private/Templates/MyTemplate.fluid.html
         settings {
             copyrightYear = 2013
         }

@@ -34,9 +34,9 @@ The linkvalidator extension (its composer name is `typo3/cms-linkvalidator`)
 comes with a backend module in the :guilabel:`Content` main section. The page tree
 is displayed for this module and linkvalidator has two main views and templates:
 
-:file:`Resources/Private/Templates/Backend/Report.html` for the
+:file:`Resources/Private/Templates/Backend/Report.fluid.html` for the
 :guilabel:`Report` view and another for the :guilabel:`Check link` view. To
-override the :file:`Backend/Report.html` file with a custom template, this
+override the :file:`Backend/Report.fluid.html` file with a custom template, this
 definition can be added to the :file:`Configuration/page.tsconfig` file of an
 extension:
 
@@ -51,17 +51,17 @@ extension:
 
 If the target extension, identified by its composer name
 `my-vendor/my-extension`, provides the
-:file:`Resources/Private/TemplateOverrides/Templates/Backend/Report.html` file,
+:file:`Resources/Private/TemplateOverrides/Templates/Backend/Report.fluid.html` file,
 this file is used instead of the default template file from the
 linkvalidator extension.
 
 All core extensions follow the general structure for templates, layouts and
 partials file. If an extension needs to override a partial that
-is located in :file:`Resources/Private/Partials/SomeName/SomePartial.html`, and
+is located in :file:`Resources/Private/Partials/SomeName/SomePartial.fluid.html`, and
 an override has been specified like above to
 :file:`my-vendor/my-extension:Resources/Private/TemplateOverrides`, the system
 looks for the
-:file:`Resources/Private/TemplateOverrides/Partials/SomeName/SomePartial.html`
+:file:`Resources/Private/TemplateOverrides/Partials/SomeName/SomePartial.fluid.html`
 file. Similar is the case for layouts.
 
 ..  note::
@@ -76,10 +76,10 @@ file. Similar is the case for layouts.
 
     The sub-path of the source extension is automatically added by the
     system when it is searching for override files. If a layout file is located
-    at :file:`Resources/Private/Layouts/ExtraLarge/Main.html` and an override
+    at :file:`Resources/Private/Layouts/ExtraLarge/Main.fluid.html` and an override
     definition uses the :file:`Resources/Private/TemplateOverrides` path, the
     system will look up
-    :file:`Resources/Private/TemplateOverrides/Layouts/ExtraLarge/Main.html`.
+    :file:`Resources/Private/TemplateOverrides/Layouts/ExtraLarge/Main.fluid.html`.
 
 Template overriding is based on the existence of files: Two files are never
 merged. An override definition either takes effect because it actually provides
