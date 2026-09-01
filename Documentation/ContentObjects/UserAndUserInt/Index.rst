@@ -302,6 +302,7 @@ This example PHP code executes the dynamic transition from USER to USER_INT.
     namespace MyVendor\MyExtension\UserFunc;
     
     use Psr\Http\Message\ServerRequestInterface;
+    use TYPO3\CMS\Core\Attribute\AsAllowedCallable;
     use TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer;
     
     class PluginRenderer
@@ -315,6 +316,7 @@ This example PHP code executes the dynamic transition from USER to USER_INT.
          * @param ServerRequestInterface $request The modern PSR-7 server request object
          * @return string The rendered HTML output
          */
+        #[AsAllowedCallable]
         public function renderPlugin(string $content, array $conf, ServerRequestInterface $request): string
         {
             // TYPO3 v13/v14 Style: Extract the ContentObjectRenderer from the request attributes
