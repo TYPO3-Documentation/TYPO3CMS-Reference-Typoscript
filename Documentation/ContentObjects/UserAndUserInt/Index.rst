@@ -272,104 +272,23 @@ via TypoScript:
 Example 6: Converting a custom (non-Extbase) USER plugin dynamically into a USER_INT
 ------------------------------------------------------------------------------------
 
-An extension plugin can be defined as :typoscript:`USER` or :typoscript:`USER_INT` content
-object (cObject). A big extension will have multiple display modes. Some of the display modes show views
-which should be stored in a cache (:typoscript:`USER`) and others show personal data and must never be
-cached. For this reason it is necessary that the plugin transitions from a :typoscript:`USER` to a
-:typoscript:`USER_INT` cObject dynamically. Calling :php:`convertToUserIntObject()` marks the current object
-as :typoscript:`USER_INT`; TYPO3 Core then substitutes it with a freshly, non-cached rendered version of the
-same plugin in a later rendering pass, so the rest of the page can still be cached.
+An extension plugin can be defined as :typoscript:`USER` or :typoscript:`USER_INT` content object
+(cObject). Sometimes whether a plugin's output is cacheable only becomes clear while it is
+rendering - for example, once it decides to show personal or otherwise uncacheable content -
+so a plugin registered as :typoscript:`USER` needs to transition to :typoscript:`USER_INT`
+dynamically. Calling :php:`convertToUserIntObject()` marks the current object as
+:typoscript:`USER_INT`; TYPO3 Core then substitutes it with a freshly, non-cached rendered
+version of the same plugin in a later rendering pass, so the rest of the page can still be
+cached.
 
-..  code-block:: typoscript
+..  literalinclude:: _ConvertUserToUserInt.typoscript
+    :language: typoscript
     :caption: Configuration/TypoScript/setup.typoscript
-
-    # Define the custom content element / plugin as a standard cached USER object
-    tt_content.my_custom_plugin = USER
-    tt_content.my_custom_plugin {
-        # Route the request to our PSR-11 compliant container service class and method
-        userFunc = MyVendor\MyExtension\UserFunc\PluginRenderer->renderPlugin
-        
-        # Optional settings passed into the $conf array inside PHP
-        settings {
-            activeModes = list_view, live_search
-        }
-    }
 
 This example PHP code executes the dynamic transition from :typoscript:`USER` to :typoscript:`USER_INT`.
 
-..  code-block:: php
+..  literalinclude:: _ConvertUserToUserInt.php
+    :language: php
     :caption: Classes/UserFunc/PluginRenderer.php
-
-    namespace MyVendor\MyExtension\UserFunc;
-
-    use Psr\Http\Message\ServerRequestInterface;
-    use TYPO3\CMS\Core\Attribute\AsAllowedCallable;
-    use TYPO3\CMS\Core\Utility\GeneralUtility;
-    use TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer;
-
-    class PluginRenderer
-    {
-        /**
-         * Main entry point called by TypoScript.
-         * TYPO3 v13/v14 automatically passes the ServerRequestInterface as the third argument.
-         *
-         * @param string $content Empty string from TypoScript pipeline
-         * @param array $conf TypoScript configuration array passed to this object
-         * @param ServerRequestInterface $request The modern PSR-7 server request object
-         * @return string The rendered HTML output
-         */
-        #[AsAllowedCallable]
-        public function renderPlugin(string $content, array $conf, ServerRequestInterface $request): string
-        {
-            // TYPO3 v13/v14 Style: Extract the ContentObjectRenderer from the request attributes
-            /** @var ContentObjectRenderer $cObj */
-            $cObj = $request->getAttribute('currentContentObject');
-
-            // Read the active modes from the "settings.activeModes" TypoScript property
-            $activeModes = GeneralUtility::trimExplode(',', $conf['settings.']['activeModes'] ?? '', true);
-
-            // Call the check and transform cache logic using the extracted cObj
-            if ($cObj instanceof ContentObjectRenderer) {
-                $this->checkAndTransformCache($cObj, $activeModes);
-            }
-
-            // Render your custom HTML without Extbase overhead
-            if (in_array('live_search', $activeModes, true)) {
-                return '<div>Live Search Result (Rendered live via USER_INT conversion)</div>';
-            }
-
-            return '<div>Standard List View (Cached via USER)</div>';
-        }
-
-        /**
-         * Internal cache-handling method matching your requested logic
-         */
-        private function checkAndTransformCache(ContentObjectRenderer $cObj, array $selectedModes): bool
-        {
-            // Define modes that strictly require real-time processing (disables caching)
-            $noCacheCodes = ['cart_view', 'checkout', 'user_profile_edit', 'live_search'];
-
-            // Nothing to do if this call is already the non-cached USER_INT re-render
-            if ($cObj->getUserObjectType() !== ContentObjectRenderer::OBJECTTYPE_USER) {
-                return false;
-            }
-
-            $wasConverted = false;
-
-            // Loop through all active modes of the current plugin instance
-            foreach ($selectedModes as $currentCode) {
-                if (in_array($currentCode, $noCacheCodes, true)) {
-
-                    // TYPO3 CORE API: Dynamically upgrades the USER object to a non-cached USER_INT object
-                    $cObj->convertToUserIntObject();
-
-                    $wasConverted = true;
-                    break; // Stop loop immediately since caching is already disabled for this request
-                }
-            }
-
-            return $wasConverted;
-        }
-    }
 
 
