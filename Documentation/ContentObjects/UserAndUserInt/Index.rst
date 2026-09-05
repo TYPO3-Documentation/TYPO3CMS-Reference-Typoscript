@@ -266,3 +266,29 @@ via TypoScript:
             return 'Something';
         }
     }
+
+..  _cobj-user-convert-userint-plugin:
+
+Example 6: Converting a custom (non-Extbase) `USER` plugin dynamically into a `USER_INT`
+----------------------------------------------------------------------------------------
+
+An extension plugin can be defined as :typoscript:`USER` or :typoscript:`USER_INT` content object
+(cObject). Whether a plugin's output is cacheable sometimes only becomes clear while it is
+rendering - for example, once it decides to show personal or otherwise uncacheable content. In
+that case, a plugin registered as :typoscript:`USER` needs to transition to :typoscript:`USER_INT`
+dynamically. Calling :php:`convertToUserIntObject()` marks the current object as
+:typoscript:`USER_INT`; TYPO3 Core then substitutes it with a freshly rendered, non-cached
+version of the same plugin in a later rendering pass, so the rest of the page can still be
+cached.
+
+..  literalinclude:: _ConvertUserToUserInt.typoscript
+    :language: typoscript
+    :caption: Configuration/TypoScript/setup.typoscript
+
+This PHP class performs the dynamic transition from :typoscript:`USER` to :typoscript:`USER_INT`.
+
+..  literalinclude:: _ConvertUserToUserInt.php
+    :language: php
+    :caption: Classes/UserFunc/PluginRenderer.php
+
+
