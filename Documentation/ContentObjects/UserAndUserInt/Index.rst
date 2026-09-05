@@ -272,12 +272,13 @@ via TypoScript:
 Example 6: Converting a custom (non-Extbase) USER plugin dynamically into a USER_INT
 ------------------------------------------------------------------------------------
 
-An extension plugin can be defined as USER or USER_INT content object (cObject). A big extension will have multiple
-display modes. Some of the display modes show views which should be stored in a cache (USER) and others show
-personal data and must never be cached. For this reason it is necessary that the plugin transitions from a
-USER to a USER_INT cObject dynamically. Calling :php:`convertToUserIntObject()` marks the current object as
-USER_INT; TYPO3 Core then substitutes it with a freshly, non-cached rendered version of the same plugin in a
-later rendering pass, so the rest of the page can still be cached.
+An extension plugin can be defined as :typoscript:`USER` or :typoscript:`USER_INT` content
+object (cObject). A big extension will have multiple display modes. Some of the display modes show views
+which should be stored in a cache (:typoscript:`USER`) and others show personal data and must never be
+cached. For this reason it is necessary that the plugin transitions from a :typoscript:`USER` to a
+:typoscript:`USER_INT` cObject dynamically. Calling :php:`convertToUserIntObject()` marks the current object
+as :typoscript:`USER_INT`; TYPO3 Core then substitutes it with a freshly, non-cached rendered version of the
+same plugin in a later rendering pass, so the rest of the page can still be cached.
 
 ..  code-block:: typoscript
     :caption: Configuration/TypoScript/setup.typoscript
@@ -294,7 +295,7 @@ later rendering pass, so the rest of the page can still be cached.
         }
     }
 
-This example PHP code executes the dynamic transition from USER to USER_INT.
+This example PHP code executes the dynamic transition from :typoscript:`USER` to :typoscript:`USER_INT`.
 
 ..  code-block:: php
     :caption: Classes/UserFunc/PluginRenderer.php
