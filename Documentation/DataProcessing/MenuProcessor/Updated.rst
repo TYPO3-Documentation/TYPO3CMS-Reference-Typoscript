@@ -27,11 +27,10 @@ Properties
     :type:
     :Default:
 
+..  _hmenu-special-updated-value:
+
 special.value
 -------------
-
-
-..  _hmenu-special-updated-value:
 
 ..  confval:: special.value
     :name: hmenu-updated-special-value
@@ -48,11 +47,10 @@ special.value
         20.special = updated
         20.special.value = 35, 56
 
+..  _hmenu-special-updated-mode:
+
 special.mode
 ------------
-
-
-..  _hmenu-special-updated-mode:
 
 ..  confval:: special.mode
     :name: hmenu-updated-special-mode
@@ -85,11 +83,10 @@ special.mode
 
     Fields with empty values are generally not selected.
 
+..  _hmenu-special-updated-depth:
+
 special.depth
 -------------
-
-
-..  _hmenu-special-updated-depth:
 
 ..  confval:: special.depth
     :name: hmenu-updated-special-depth
@@ -105,11 +102,10 @@ special.depth
 
     **Note:** "depth" is relative to :confval:`hmenu-updated-special-beginAtLevel`.
 
+..  _hmenu-special-updated-beginatlevel:
+
 special.beginAtLevel
 --------------------
-
-
-..  _hmenu-special-updated-beginatlevel:
 
 ..  confval:: special.beginAtLevel
     :name: hmenu-updated-special-beginAtLevel
@@ -127,12 +123,10 @@ special.beginAtLevel
 
     **Note:** "depth" is relative to this property.
 
+..  _hmenu-special-updated-maxage:
+
 special.maxAge
 --------------
-
-
-
-..  _hmenu-special-updated-maxage:
 
 ..  confval:: special.maxAge
     :name: hmenu-updated-special-maxAge
@@ -145,11 +139,10 @@ special.maxAge
 
     By default all pages are shown. You may use +-\*/ for calculations.
 
+..  _hmenu-special-updated-limit:
+
 special.limit
 -------------
-
-
-..  _hmenu-special-updated-limit:
 
 ..  confval:: special.limit
     :name: hmenu-updated-special-limit
@@ -158,12 +151,10 @@ special.limit
 
     Maximal number of items in the menu. Default is 10, max is 100.
 
+..  _hmenu-special-updated-excludenosearchpages:
+
 special.excludeNoSearchPages
 ----------------------------
-
-
-
-..  _hmenu-special-updated-excludenosearchpages:
 
 ..  confval:: special.excludeNoSearchPages
     :name: hmenu-updated-special-excludeNoSearchPages

@@ -29,11 +29,9 @@ Options:
     :type:
     :Default:
 
-if
---
-
-
     ..  _FilesProcessor-if:
+
+    ..  rubric:: if
 
     ..  confval:: if
         :name: FilesProcessor-if
@@ -43,11 +41,9 @@ if
 
         Only, if the condition is met the data processor is executed.
 
-references
-----------
-
-
     ..  _FilesProcessor-references:
+
+    ..  rubric:: references
 
     ..  confval:: references
         :name: FilesProcessor-references
@@ -64,11 +60,9 @@ references
         :ref:`stdWrap` properties can also be used, see
         :ref:`FilesProcessor-stdWrap-on-references`.
 
-references.fieldName
---------------------
-
-
     ..  _FilesProcessor-references-fieldName:
+
+    ..  rubric:: references.fieldName
 
     ..  confval:: references.fieldName
         :name: FilesProcessor-references-fieldName
@@ -82,11 +76,9 @@ references.fieldName
         the referenced table and field, for example the :sql:`media` field of a
         :sql:`tt_content` record.
 
-references.table
-----------------
-
-
     ..  _FilesProcessor-references-table:
+
+    ..  rubric:: references.table
 
     ..  confval:: references.table
         :name: FilesProcessor-references.table
@@ -99,11 +91,9 @@ references.table
         :ref:`select` function, :typoscript:`references.fieldName` must be set to
         the desired field name of the table to be queried.
 
-files
------
-
-
     ..  _FilesProcessor-files:
+
+    ..  rubric:: files
 
     ..  confval:: files
         :name: FilesProcessor-files
@@ -115,11 +105,9 @@ files
         If this option contains a comma-separated list of integers,
         these are treated as uids of files (:sql:`sys_file`).
 
-collections
------------
-
-
     ..  _FilesProcessor-collections:
+
+    ..  rubric:: collections
 
     ..  confval:: collections
         :name: FilesProcessor-collections
@@ -132,11 +120,9 @@ collections
         these are treated as uids of collections. The file records in each
         collection are then being added to the output array.
 
-folders
--------
-
-
     ..  _FilesProcessor-folders:
+
+    ..  rubric:: folders
 
     ..  confval:: folders
         :name: FilesProcessor-folders
@@ -158,11 +144,9 @@ folders
             Folder :file:`/folderInMyFileadmin/something/` from the default storage
             `0` (:file:`fileadmin`)
 
-folders.recursive
------------------
-
-
     ..  _FilesProcessor-folders-recursive:
+
+    ..  rubric:: folders.recursive
 
     ..  confval:: folders.recursive
         :name: FilesProcessor-folders-recursive
@@ -174,11 +158,9 @@ folders.recursive
         If set to a non-empty value file, records will be added from folders
         recursively.
 
-sorting
--------
-
-
     ..  _FilesProcessor-sorting:
+
+    ..  rubric:: sorting
 
     ..  confval:: sorting
         :name: FilesProcessor-sorting
@@ -190,11 +172,9 @@ sorting
         The property of the file records by which they should be sorted.
         For example, filesize or title.
 
-sorting.direction
------------------
-
-
     ..  _FilesProcessor-sorting-direction:
+
+    ..  rubric:: sorting.direction
 
     ..  confval:: sorting.direction
         :name: FilesProcessor-sorting-direction
@@ -205,11 +185,9 @@ sorting.direction
 
         The sorting direction (:typoscript:`ascending` or :typoscript:`descending`).
 
-as
---
-
-
     ..  _FilesProcessor-as:
+
+    ..  rubric:: as
 
     ..  confval:: as
         :name: FilesProcessor-as

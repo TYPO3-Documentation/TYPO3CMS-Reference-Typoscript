@@ -35,9 +35,7 @@ Properties
     :type:
     :Default:
 
-special.value
--------------
-
+    ..  rubric:: special.value
 
     ..  confval:: special.value
         :name: hmenu-browse-special-value
@@ -47,9 +45,7 @@ special.value
         The default value can be overridden with a different page ID as starting
         point for the menu in some rare use cases.
 
-special.items
--------------
-
+    ..  rubric:: special.items
 
     ..  confval:: special.items
         :name: hmenu-browse-special-items
@@ -96,9 +92,7 @@ special.items
             page(up 2 levels). May not be available, if that page is out of the
             root line.
 
-special.items.prevnextToSection
--------------------------------
-
+    ..  rubric:: special.items.prevnextToSection
 
     ..  confval:: special.items.prevnextToSection
         :name: hmenu-browse-special-items-prevnextToSection
@@ -110,9 +104,7 @@ special.items.prevnextToSection
         `prev` and `next` will also link to the first page of the next section
         / to the last page of the previous section.
 
-special.excludeNoSearchPages
-----------------------------
-
+    ..  rubric:: special.excludeNoSearchPages
 
     ..  confval:: special.excludeNoSearchPages
         :name: hmenu-browse-special-excludeNoSearchPages

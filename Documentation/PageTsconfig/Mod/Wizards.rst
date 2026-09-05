@@ -28,9 +28,7 @@ TCA.
 ..  confval-menu::
     :display: tree
 
-newContentElement.wizardItems
------------------------------
-
+    ..  rubric:: newContentElement.wizardItems
 
     ..  confval:: newContentElement.wizardItems
         :name: mod-wizards-newContentElement-wizardItems
@@ -41,9 +39,7 @@ newContentElement.wizardItems
         together by type. Each such group can be configured independently. The
         four default groups are: `default`, `special`, `forms` and `plugins`.
 
-removeItems
------------
-
+        ..  rubric:: removeItems
 
         ..  confval:: removeItems
             :name: mod-wizards-newContentElement-wizardItems-removeItems
@@ -58,9 +54,7 @@ removeItems
                 # This will remove the "menu" group
                 mod.wizards.newContentElement.wizardItems.removeItems := addToList(menu)
 
-[group].before
---------------
-
+        ..  rubric:: [group].before
 
         ..  confval:: [group].before
             :name: mod-wizards-newContentElement-wizardItems-group-before
@@ -69,9 +63,7 @@ removeItems
 
             Sorts [group] in front of the group given.
 
-[group].after
--------------
-
+        ..  rubric:: [group].after
 
         ..  confval:: [group].after
             :name: mod-wizards-newContentElement-wizardItems-group-after
@@ -80,9 +72,7 @@ removeItems
 
             Sorts [group] after the group given.
 
-[group].header
---------------
-
+        ..  rubric:: [group].header
 
         ..  confval:: [group].header
             :name: mod-wizards-newContentElement-wizardItems-group-header
@@ -91,9 +81,7 @@ removeItems
 
             Name of the group.
 
-[group].elements
-----------------
-
+        ..  rubric:: [group].elements
 
         ..  confval:: [group].elements
             :name: mod-wizards-newContentElement-wizardItems-group-elements
@@ -102,9 +90,7 @@ removeItems
 
             List of items in the group.
 
-[name]
-------
-
+            ..  rubric:: [name]
 
             ..  confval:: [name]
                 :name: mod-wizards-newContentElement-wizardItems-group-elements-name
@@ -113,9 +99,7 @@ removeItems
 
                 Configuration for a single item.
 
-iconIdentifier
---------------
-
+                ..  rubric:: iconIdentifier
 
                 ..  confval:: iconIdentifier
                     :name: mod-wizards-newContentElement-wizardItems-group-elements-name-iconIdentifier
@@ -124,9 +108,7 @@ iconIdentifier
 
                     The icon identifier of the icon you want to display.
 
-iconOverlay
------------
-
+                ..  rubric:: iconOverlay
 
                 ..  confval:: iconOverlay
                     :name: mod-wizards-newContentElement-wizardItems-group-elements-name-iconOverlay
@@ -135,9 +117,7 @@ iconOverlay
 
                     The icon identifier of the overlay icon you want to use.
 
-title
------
-
+                ..  rubric:: title
 
                 ..  confval:: title
                     :name: mod-wizards-newContentElement-wizardItems-group-elements-name-title
@@ -146,9 +126,7 @@ title
 
                     Name of the item.
 
-description
------------
-
+                ..  rubric:: description
 
                 ..  confval:: description
                     :name: mod-wizards-newContentElement-wizardItems-group-elements-name-description
@@ -157,9 +135,7 @@ description
 
                     Description text for the item.
 
-tt_content_defValues
---------------------
-
+                ..  rubric:: tt_content_defValues
 
                 ..  confval:: tt_content_defValues
                     :name: mod-wizards-newContentElement-wizardItems-group-elements-name-tt_content_defValues
@@ -168,9 +144,7 @@ tt_content_defValues
 
                     Default values for tt_content fields.
 
-saveAndClose
-------------
-
+                ..  rubric:: saveAndClose
 
                 ..  confval:: saveAndClose
                     :name: mod-wizards-newContentElement-wizardItems-group-elements-name-saveAndClose
@@ -181,9 +155,7 @@ saveAndClose
                     If `true`, directs the user back to the :guilabel:`Page` module
                     directly instead of showing the FormEngine.
 
-before
-------
-
+                ..  rubric:: before
 
                 ..  confval:: before
                     :name: mod-wizards-newContentElement-wizardItems-group-elements-name-before
@@ -196,9 +168,7 @@ before
                     Influences the order of content elements within wizard tabs
                     in the new content element wizard by setting `before` and `after` values in Page TSconfig.
 
-after
------
-
+                ..  rubric:: after
 
                 ..  confval:: after
                     :name: mod-wizards-newContentElement-wizardItems-group-elements-name-after
@@ -213,9 +183,7 @@ after
                     If no before or after configuration is specified for elements,
                     they will retain their default order (typically the order defined in TCA).
 
-[group].removeItems
--------------------
-
+        ..  rubric:: [group].removeItems
 
         ..  confval:: [group].removeItems
             :name: mod-wizards-newContentElement-wizardItems-group-removeItems

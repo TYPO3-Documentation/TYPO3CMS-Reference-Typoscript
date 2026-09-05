@@ -29,11 +29,10 @@ Properties
     :type:
     :Default:
 
+..  _tmenuitem-allWrap:
+
 allWrap
 -------
-
-
-..  _tmenuitem-allWrap:
 
 ..  confval:: allWrap
     :name: tmenuitem-allWrap
@@ -41,12 +40,10 @@ allWrap
 
     Wraps the whole item.
 
+..  _tmenuitem-wrapItemAndSub:
+
 wrapItemAndSub
 --------------
-
-
-
-..  _tmenuitem-wrapItemAndSub:
 
 ..  confval:: wrapItemAndSub
     :name: tmenuitem-wrapItemAndSub
@@ -54,12 +51,10 @@ wrapItemAndSub
 
     Wraps the whole item and any submenu concatenated to it.
 
+..  _tmenuitem-subst-elementUid:
+
 subst_elementUid
 ----------------
-
-
-
-..  _tmenuitem-subst-elementUid:
 
 ..  confval:: subst_elementUid
     :name: tmenuitem-subst-elementUid
@@ -73,23 +68,19 @@ subst_elementUid
     This is useful, if you want to insert an identification code in the
     HTML in order to manipulate properties with JavaScript.
 
+..  _tmenuitem-before:
+
 before
 ------
-
-
-
-..  _tmenuitem-before:
 
 ..  confval:: before
     :name: tmenuitem-before
     :type: HTML / :ref:`stdWrap <stdwrap>`
 
+..  _tmenuitem-beforeWrap:
+
 beforeWrap
 ----------
-
-
-
-..  _tmenuitem-beforeWrap:
 
 ..  confval:: beforeWrap
     :name: tmenuitem-beforeWrap
@@ -97,23 +88,19 @@ beforeWrap
 
     Wrap around the :ref:`.before <tmenuitem-before>` code.
 
+..  _tmenuitem-after:
+
 after
 -----
-
-
-
-..  _tmenuitem-after:
 
 ..  confval:: after
     :name: tmenuitem-after
     :type: HTML / :ref:`stdWrap <stdwrap>`
 
+..  _tmenuitem-afterWrap:
+
 afterWrap
 ---------
-
-
-
-..  _tmenuitem-afterWrap:
 
 ..  confval:: afterWrap
     :name: tmenuitem-afterWrap
@@ -121,23 +108,19 @@ afterWrap
 
     Wrap around the :ref:`.after <tmenuitem-after>` code.
 
+..  _tmenuitem-linkWrap:
+
 linkWrap
 --------
-
-
-
-..  _tmenuitem-linkWrap:
 
 ..  confval:: linkWrap
     :name: tmenuitem-linkWrap
     :type: :ref:`data-type-wrap`
 
+..  _tmenuitem-stdWrap:
+
 stdWrap
 -------
-
-
-
-..  _tmenuitem-stdWrap:
 
 ..  confval:: stdWrap
     :name: tmenuitem-stdWrap
@@ -145,12 +128,10 @@ stdWrap
 
     stdWrap to the link text.
 
+..  _tmenuitem-ATagBeforeWrap:
+
 ATagBeforeWrap
 --------------
-
-
-
-..  _tmenuitem-ATagBeforeWrap:
 
 ..  confval:: ATagBeforeWrap
     :name: tmenuitem-ATagBeforeWrap
@@ -160,12 +141,10 @@ ATagBeforeWrap
     If set, the link is first wrapped with :ref:`*.linkWrap* <tmenuitem-linkWrap>`
     and then the :html:`<a>` tag.
 
+..  _tmenuitem-ATagParams:
+
 ATagParams
 ----------
-
-
-
-..  _tmenuitem-ATagParams:
 
 ..  confval:: ATagParams
     :name: tmenuitem-ATagParams
@@ -173,12 +152,10 @@ ATagParams
 
     Additional parameters
 
+..  _tmenuitem-ATagTitle:
+
 ATagTitle
 ---------
-
-
-
-..  _tmenuitem-ATagTitle:
 
 ..  confval:: ATagTitle
     :name: tmenuitem-ATagTitle
@@ -187,12 +164,10 @@ ATagTitle
     Allows you to specify the "title" attribute of the :html:`<a>` tag around
     the menu item.
 
+..  _tmenuitem-additionalParams:
+
 additionalParams
 ----------------
-
-
-
-..  _tmenuitem-additionalParams:
 
 ..  confval:: additionalParams
     :name: tmenuitem-additionalParams
@@ -203,12 +178,10 @@ additionalParams
 
     For details, see :ref:`typolink->additionalParams <typolink-additionalParams>`.
 
+..  _tmenuitem-doNotLinkIt:
+
 doNotLinkIt
 -----------
-
-
-
-..  _tmenuitem-doNotLinkIt:
 
 ..  confval:: doNotLinkIt
     :name: tmenuitem-doNotLinkIt
@@ -217,12 +190,10 @@ doNotLinkIt
 
     If set, the link texts are not linked at all.
 
+..  _tmenuitem-doNotShowLink:
+
 doNotShowLink
 -------------
-
-
-
-..  _tmenuitem-doNotShowLink:
 
 ..  confval:: doNotShowLink
     :name: tmenuitem-doNotShowLink
@@ -231,12 +202,10 @@ doNotShowLink
 
     If set, the text will not be shown at all (smart with spacers).
 
+..  _tmenuitem-stdWrap2:
+
 stdWrap2
 --------
-
-
-
-..  _tmenuitem-stdWrap2:
 
 ..  confval:: stdWrap2
     :name: tmenuitem-stdWrap2
@@ -246,12 +215,10 @@ stdWrap2
     stdWrap to the total link text and :html:`<a>` tag. (Notice that the plain
     default value passed to the stdWrap function is "\|".)
 
+..  _tmenuitem-altTarget:
+
 altTarget
 ---------
-
-
-
-..  _tmenuitem-altTarget:
 
 ..  confval:: altTarget
     :name: tmenuitem-altTarget
@@ -260,12 +227,10 @@ altTarget
     Alternative target overriding the target property of the
     ref:`TMENU <tmenu>`, if set.
 
+..  _tmenuitem-allStdWrap:
+
 allStdWrap
 ----------
-
-
-
-..  _tmenuitem-allStdWrap:
 
 ..  confval:: allStdWrap
     :name: tmenuitem-allStdWrap

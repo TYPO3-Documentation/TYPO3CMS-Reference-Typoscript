@@ -24,11 +24,9 @@ Options:
     :type:
     :Default:
 
-if
---
-
-
     ..  _GalleryProcessor-if:
+
+    ..  rubric:: if
 
     ..  confval:: if
         :name: GalleryProcessor-if
@@ -38,12 +36,9 @@ if
 
         Only if the condition is met the data processor is executed.
 
-filesProcessedDataKey
----------------------
-
-
-
     ..  _GalleryProcessor-filesProcessedDataKey:
+
+    ..  rubric:: filesProcessedDataKey
 
     ..  confval:: filesProcessedDataKey
         :name: GalleryProcessor-filesProcessedDataKey
@@ -54,12 +49,9 @@ filesProcessedDataKey
 
         Key of the array previously processed by the :php:`FilesProcessor`.
 
-numberOfColumns
----------------
-
-
-
     ..  _GalleryProcessor-numberOfColumns:
+
+    ..  rubric:: numberOfColumns
 
     ..  confval:: numberOfColumns
         :name: GalleryProcessor-numberOfColumns
@@ -71,11 +63,9 @@ numberOfColumns
         Expects the desired number of columns. Defaults to the value of the field
         `imagecols` (:guilabel:`Number of Columns`) if used with content elements.
 
-mediaOrientation
-----------------
-
-
     ..  _GalleryProcessor-mediaOrientation:
+
+    ..  rubric:: mediaOrientation
 
     ..  confval:: mediaOrientation
         :name: GalleryProcessor-mediaOrientation
@@ -96,11 +86,9 @@ mediaOrientation
 
             Media orientation in the content elements such as text with images
 
-maxGalleryWidth
----------------
-
-
     ..  _GalleryProcessor-maxGalleryWidth:
+
+    ..  rubric:: maxGalleryWidth
 
     ..  confval:: maxGalleryWidth
         :name: GalleryProcessor-maxGalleryWidth
@@ -110,11 +98,9 @@ maxGalleryWidth
 
         Maximal gallery width in pixels.
 
-maxGalleryWidthInText
----------------------
-
-
     ..  _GalleryProcessor-maxGalleryWidthInText:
+
+    ..  rubric:: maxGalleryWidthInText
 
     ..  confval:: maxGalleryWidthInText
         :name: GalleryProcessor-maxGalleryWidthInText
@@ -124,12 +110,10 @@ maxGalleryWidthInText
 
         Maximal gallery width in pixels if displayed in a text.
 
-equalMediaHeight, equalMediaWidth
----------------------------------
-
-
     ..  _GalleryProcessor-equalMediaHeight:
     ..  _GalleryProcessor-equalMediaWidth:
+
+    ..  rubric:: equalMediaHeight, equalMediaWidth
 
     ..  confval:: equalMediaHeight, equalMediaWidth
         :name: GalleryProcessor-equalMediaHeight
@@ -150,12 +134,9 @@ equalMediaHeight, equalMediaWidth
 
             Media height and width in the content element Text and Images
 
-columnSpacing
--------------
-
-
-
     ..  _GalleryProcessor-columnSpacing:
+
+    ..  rubric:: columnSpacing
 
     ..  confval:: columnSpacing
         :name: GalleryProcessor-columnSpacing
@@ -166,11 +147,9 @@ columnSpacing
 
         Space between columns in pixels
 
-borderEnabled
--------------
-
-
     ..  _GalleryProcessor-borderEnabled:
+
+    ..  rubric:: borderEnabled
 
     ..  confval:: borderEnabled
         :name: GalleryProcessor-borderEnabled
@@ -183,11 +162,9 @@ borderEnabled
         fields `imageborder` (:guilabel:`Number of Columns`) if used with content
         elements.
 
-borderWidth
------------
-
-
     ..  _GalleryProcessor-borderWidth:
+
+    ..  rubric:: borderWidth
 
     ..  confval:: borderWidth
         :name: GalleryProcessor-borderWidth
@@ -198,11 +175,9 @@ borderWidth
 
         Width of the border in pixels.
 
-borderPadding
--------------
-
-
     ..  _GalleryProcessor-borderPadding:
+
+    ..  rubric:: borderPadding
 
     ..  confval:: borderPadding
         :name: GalleryProcessor-borderPadding
@@ -213,12 +188,9 @@ borderPadding
 
         Padding around the border in pixels.
 
-cropVariant
------------
-
-
-
     ..  _GalleryProcessor-cropVariant:
+
+    ..  rubric:: cropVariant
 
     ..  confval:: cropVariant
         :name: GalleryProcessor-cropVariant
@@ -229,11 +201,9 @@ cropVariant
 
         See :ref:`crop variants in the TCA reference <t3tca:columns-imageManipulation-properties-cropVariants>`
 
-as
---
-
-
     ..  _GalleryProcessor-as:
+
+    ..  rubric:: as
 
     ..  confval:: as
         :name: GalleryProcessor-as
@@ -243,11 +213,9 @@ as
 
         The variable name to be used in the Fluid template.
 
-dataProcessing
---------------
-
-
     ..  _GalleryProcessor-dataProcessing:
+
+    ..  rubric:: dataProcessing
 
     ..  confval:: dataProcessing
         :name: GalleryProcessor-dataProcessing

@@ -32,15 +32,12 @@ package (GitHub) <https://github.com/benjaminkott/bootstrap_package/tree/master/
 BackendLayouts.[backendLayout]
 ------------------------------
 
-
 ..  confval:: BackendLayouts.[backendLayout]
     :name: mod-web-layout-BackendLayouts
     :type: array:guilabel:`Page` module
     :Path: mod.web_layout.BackendLayouts
 
-title
------
-
+    ..  rubric:: title
 
     ..  confval:: title
         :name: mod-web-layout-BackendLayouts-backendLayout-title
@@ -52,9 +49,7 @@ title
         ..  figure:: /Images/ManualScreenshots/BackendLayouts/PageProperties.png
             :caption: Choose the backend layout in the page properties
 
-icon
-----
-
+    ..  rubric:: icon
 
     ..  confval:: icon
         :name: mod-web-layout-BackendLayouts-backendLayout-icon
@@ -69,15 +64,11 @@ icon
                 icon = EXT:bootstrap_package/Resources/Public/Icons/BackendLayouts/subnavigation_right_2_columns.svg
             }
 
-config.backend_layout
----------------------
-
+    ..  rubric:: config.backend_layout
 
     ..  confval:: config.backend_layout
 
-colCount
---------
-
+        ..  rubric:: colCount
 
         ..  confval:: colCount
             :name: mod-web-layout-BackendLayouts-backendLayout-title-config-backend_layout.colCount
@@ -85,9 +76,7 @@ colCount
 
             The total number of columns in the backend layout.
 
-rowCount
---------
-
+        ..  rubric:: rowCount
 
         ..  confval:: rowCount
             :name: mod-web-layout-BackendLayouts-backendLayout-title-config-backend_layout.rowCount
@@ -95,15 +84,11 @@ rowCount
 
             The total number of rows in the backend layout.
 
-rows.[row].columns.[col]
-------------------------
-
+        ..  rubric:: rows.[row].columns.[col]
 
         ..  confval:: rows.[row].columns.[col]
 
-name
-----
-
+            ..  rubric:: name
 
             ..  confval:: name
                 :name: mod-web-layout-BackendLayouts-backendLayout-title-config-backend_layout-rows-row-columns-col-name
@@ -112,9 +97,7 @@ name
                 The name of the input area where content elements can be added. Will be
                 displayed in the :guilabel:`Page` module.
 
-colPos
-------
-
+            ..  rubric:: colPos
 
             ..  confval:: colPos
                 :name: mod-web-layout-BackendLayouts-backendLayout-title-config-backend_layout-rows-row-columns-col-colPos
@@ -122,9 +105,7 @@ colPos
 
                 If content elements have been  added to this area, the value of `colPos`
 
-identifier
-----------
-
+            ..  rubric:: identifier
 
             ..  confval:: identifier
                 :name: mod-web-layout-BackendLayouts-backendLayout-title-config-backend_layout-rows-row-columns-col-identifier
@@ -137,9 +118,7 @@ identifier
                 It is a more meaningful representation than just :confval:`colPos <mod-web-layout-BackendLayouts-backendLayout-title-config-backend_layout-rows-row-columns-col-colPos>`,
                 such as "main", "sidebar" and "footerArea".
 
-slideMode
----------
-
+            ..  rubric:: slideMode
 
             ..  confval:: slideMode
                 :name: mod-web-layout-BackendLayouts-backendLayout-title-config-backend_layout-rows-row-columns-col-slideMode
@@ -156,9 +135,7 @@ slideMode
                 `collectReverse`
                     The same as "collect", but in the opposite order
 
-colspan
--------
-
+            ..  rubric:: colspan
 
             ..  confval:: colspan
                 :name: mod-web-layout-BackendLayouts-backendLayout-title-config-backend_layout-rows-row-columns-col-colspan
@@ -167,9 +144,7 @@ colspan
                 Can be used if the content element area should span multiple
                 columns as in the "Jumbotron" example above.
 
-rowspan
--------
-
+            ..  rubric:: rowspan
 
             ..  confval:: rowspan
                 :name: mod-web-layout-BackendLayouts-backendLayout-title-config-backend_layout-rows-row-columns-col-rowspan
@@ -178,9 +153,7 @@ rowspan
                 Can be used if the content element area spans multiple
                 rows.
 
-allowedContentTypes
--------------------
-
+            ..  rubric:: allowedContentTypes
 
             ..  confval:: allowedContentTypes
                 :name: mod-web-layout-BackendLayouts-backendLayout-title-config-backend_layout-rows-row-columns-col-allowedContentTypes
@@ -193,9 +166,7 @@ allowedContentTypes
                 :sql:`tt_content.CType` with names like "text", "textmedia",
                 "felogin_pi1" and so on).
 
-disallowedContentTypes
-----------------------
-
+            ..  rubric:: disallowedContentTypes
 
             ..  confval:: disallowedContentTypes
                 :name: mod-web-layout-BackendLayouts-backendLayout-title-config-backend_layout-rows-row-columns-col-disallowedContentTypes

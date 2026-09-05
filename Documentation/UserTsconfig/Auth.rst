@@ -21,11 +21,10 @@ Properties
     :display: table
     :type:
 
+..  _user-auth-mfa-required:
+
 auth.mfa.required
 -----------------
-
-
-..  _user-auth-mfa-required:
 
 ..  confval:: auth.mfa.required
     :name: user-auth-mfa-required
@@ -39,11 +38,10 @@ auth.mfa.required
 
         auth.mfa.required = 1
 
+..  _user-auth-mfa-disableProviders:
+
 auth.mfa.disableProviders
 -------------------------
-
-
-..  _user-auth-mfa-disableProviders:
 
 ..  confval:: auth.mfa.disableProviders
     :name: auth.mfa.disableProviders
@@ -55,11 +53,10 @@ auth.mfa.disableProviders
     means, if a provider is allowed in "Access List" but disallowed with TSconfig,
     it will be disallowed for the user or user group.
 
+..  _user-auth-mfa-recommendedProvider:
+
 auth.mfa.recommendedProvider
 ----------------------------
-
-
-..  _user-auth-mfa-recommendedProvider:
 
 ..  confval:: auth.mfa.recommendedProvider
     :name: auth.mfa.recommendedProvider

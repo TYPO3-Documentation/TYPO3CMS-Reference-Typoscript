@@ -37,11 +37,10 @@ Properties
     :display: table
     :type:
 
+..  _cobj-coa-index:
+
 1,2,3,4...
 ----------
-
-
-..  _cobj-coa-index:
 
 ..  confval:: 1,2,3,4...
     :name: coa-array
@@ -50,12 +49,10 @@ Properties
     Numbered properties to define the different cObjects, which should be
     rendered.
 
+..  _cobj-coa-cache:
+
 cache
 -----
-
-
-
-..  _cobj-coa-cache:
 
 ..  confval:: cache
     :name: coa-cache
@@ -63,12 +60,10 @@ cache
 
     See :ref:`cache function description <cache>` for details.
 
+..  _cobj-coa-if:
+
 if
 --
-
-
-
-..  _cobj-coa-if:
 
 ..  confval:: if
     :name: coa-if
@@ -76,12 +71,10 @@ if
 
     If `if` returns false, the COA is **not** rendered.
 
+..  _cobj-coa-stdWrap:
+
 stdWrap
 -------
-
-
-
-..  _cobj-coa-stdWrap:
 
 ..  confval:: stdWrap
     :name: coa-stdWrap
@@ -89,12 +82,10 @@ stdWrap
 
     Executed on all rendered cObjects after property :ref:`cobj-coa-wrap`.
 
+..  _cobj-coa-wrap:
+
 wrap
 ----
-
-
-
-..  _cobj-coa-wrap:
 
 ..  confval:: wrap
     :name: coa-wrap

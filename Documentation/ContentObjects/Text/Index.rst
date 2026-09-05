@@ -29,11 +29,10 @@ Properties
     :display: table
     :type:
 
+..  _cobj-text-value:
+
 value
 -----
-
-
-..  _cobj-text-value:
 
 ..  confval:: value
     :name: text-value
@@ -41,12 +40,10 @@ value
 
     Text, which you want to output.
 
+..  _cobj-text-stdWrap:
+
 stdWrap
 -------
-
-
-
-..  _cobj-text-stdWrap:
 
 ..  confval:: stdWrap
     :name: text-stdWrap
@@ -57,12 +54,10 @@ stdWrap
     properties consistently to those of the other cObjects by
     accessing them through the property "stdWrap".
 
+..  _cobj-text-cache:
+
 cache
 -----
-
-
-
-..  _cobj-text-cache:
 
 ..  confval:: cache
     :name: text-cache

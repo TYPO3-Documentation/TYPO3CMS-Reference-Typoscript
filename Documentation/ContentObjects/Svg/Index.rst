@@ -22,11 +22,10 @@ Properties
     :display: table
     :type:
 
+..  _cobj-svg-cache:
+
 cache
 -----
-
-
-..  _cobj-svg-cache:
 
 ..  confval:: cache
     :name: svg-cache
@@ -34,11 +33,10 @@ cache
 
     See :ref:`cache function description <cache>` for details.
 
+..  _cobj-svg-width:
+
 width
 -----
-
-
-..  _cobj-svg-width:
 
 ..  confval:: width
     :name: svg-width
@@ -47,12 +45,10 @@ width
 
     Width of the SVG.
 
+..  _cobj-svg-height:
+
 height
 ------
-
-
-
-..  _cobj-svg-height:
 
 ..  confval:: height
     :name: svg-height
@@ -61,12 +57,10 @@ height
 
     Height of the SVG.
 
+..  _cobj-svg-src:
+
 src
 ---
-
-
-
-..  _cobj-svg-src:
 
 ..  confval:: src
     :name: svg-src
@@ -82,12 +76,10 @@ src
 
         src = fileadmin/svg/tiger.svg
 
+..  _cobj-svg-renderMode:
+
 renderMode
 ----------
-
-
-
-..  _cobj-svg-renderMode:
 
 ..  confval:: renderMode
     :name: svg-renderMode
@@ -95,12 +87,10 @@ renderMode
 
     Setting `renderMode` to inline will render an inline version of the SVG.
 
+..  _cobj-svg-stdWrap:
+
 stdWrap
 -------
-
-
-
-..  _cobj-svg-stdWrap:
 
 ..  confval:: stdWrap
     :name: svg-stdWrap

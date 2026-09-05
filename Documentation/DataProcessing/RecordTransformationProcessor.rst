@@ -86,9 +86,7 @@ Options of the `record-transformation` data processor
     :type:
     :Default:
 
-as
---
-
+    ..  rubric:: as
 
     ..  confval:: as
         :name: RecordTransformationProcessor-as
@@ -98,9 +96,7 @@ as
         The target variable containing the resolved record objects.
         If empty, 'record' or 'records' (if multiple records are given) is used.
 
-if
---
-
+    ..  rubric:: if
 
     ..  confval:: if
         :name: RecordTransformationProcessor-if
@@ -109,9 +105,7 @@ if
 
         Only if the condition is met the Data Processor is executed.
 
-table
------
-
+    ..  rubric:: table
 
     ..  confval:: table
         :name: RecordTransformationProcessor-table
@@ -123,9 +117,7 @@ table
 
         If you are dealing with a custom data source you can adjust it here.
 
-variableName
-------------
-
+    ..  rubric:: variableName
 
     ..  confval:: variableName
         :name: RecordTransformationProcessor-variableName

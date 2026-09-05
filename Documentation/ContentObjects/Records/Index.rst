@@ -59,10 +59,10 @@ source
 
 .. index:: RECORDS; categories
 
+.. _cobj-records-properties-categories:
+
 categories
 ----------
-
-.. _cobj-records-properties-categories:
 
 ..  confval:: categories
     :name: records-categories
@@ -81,11 +81,10 @@ categories
         the :code:`source` property will take precedence, as it is considered
         more precisely targeted.
 
+..  _cobj-records-categories-relation:
+
 categories.relation
 -------------------
-
-
-..  _cobj-records-categories-relation:
 
 ..  confval:: categories.relation
     :name: records-categories-relation
@@ -97,10 +96,10 @@ categories.relation
 
 .. index:: RECORDS; tables
 
+.. _cobj-records-properties-tables:
+
 tables
 ------
-
-.. _cobj-records-properties-tables:
 
 ..  confval:: tables
     :name: records-tables
@@ -128,10 +127,10 @@ tables
 
 .. index:: RECORDS; conf
 
+.. _cobj-records-properties-conf:
+
 conf.[*table name*]
 -------------------
-
-.. _cobj-records-properties-conf:
 
 ..  confval:: conf.[*table name*]
     :name: records-conf
@@ -147,10 +146,10 @@ conf.[*table name*]
 
 .. index:: RECORDS; dontCheckPid
 
+.. _cobj-records-properties-dontcheckpid:
+
 dontCheckPid
 ------------
-
-.. _cobj-records-properties-dontcheckpid:
 
 ..  confval:: dontCheckPid
     :name: records-dontCheckPid
@@ -160,12 +159,10 @@ dontCheckPid
     Normally a record cannot be selected, if its parent page (pid) is not
     accessible for the website user. This option disables that check.
 
+.. _cobj-records-properties-wrap:
+
 wrap
 ----
-
-
-
-.. _cobj-records-properties-wrap:
 
 ..  confval:: wrap
     :name: records-wrap
@@ -173,12 +170,10 @@ wrap
 
     Wraps the output. Executed before :ref:`stdWrap <cobj-records-properties-stdwrap>`.
 
+.. _cobj-records-properties-stdwrap:
+
 stdWrap
 -------
-
-
-
-.. _cobj-records-properties-stdwrap:
 
 ..  confval:: stdWrap
     :name: records-stdWrap
@@ -186,12 +181,10 @@ stdWrap
 
     Executed after :ref:`wrap <cobj-records-properties-wrap>`.
 
+.. _cobj-records-properties-cache:
+
 cache
 -----
-
-
-
-.. _cobj-records-properties-cache:
 
 ..  confval:: cache
     :name: records-cache

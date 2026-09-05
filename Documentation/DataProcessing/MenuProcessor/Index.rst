@@ -35,11 +35,9 @@ Options
     :type:
     :Default:
 
-as
---
-
-
     ..  _MenuProcessor-as:
+
+    ..  rubric:: as
 
     ..  confval:: as
         :name: MenuProcessor-as
@@ -49,9 +47,7 @@ as
 
         Name for the variable in the Fluid template.
 
-alwaysActivePIDlist
--------------------
-
+    ..  rubric:: alwaysActivePIDlist
 
     ..  confval:: alwaysActivePIDlist
         :name: MenuProcessor-alwaysActivePIDlist
@@ -61,9 +57,7 @@ alwaysActivePIDlist
         active menu items and thereby automatically opened regardless of the
         rootline.
 
-entryLevel
-----------
-
+    ..  rubric:: entryLevel
 
     ..  confval:: entryLevel
         :name: MenuProcessor-entryLevel
@@ -91,9 +85,7 @@ entryLevel
         it will start to be visible from the 4th level (and will contain only
         the subpages from that level).
 
-excludeDoktypes
----------------
-
+    ..  rubric:: excludeDoktypes
 
     ..  confval:: excludeDoktypes
         :name: MenuProcessor-excludeDoktypes
@@ -104,9 +96,7 @@ excludeDoktypes
         By default pages that are "backend user access only" (6) or "folder"
         (254) are excluded.
 
-excludeUidList
---------------
-
+    ..  rubric:: excludeUidList
 
     ..  confval:: excludeUidList
         :name: MenuProcessor-excludeUidList
@@ -126,11 +116,9 @@ excludeUidList
 
             page.10.dataProcessing.20.excludeUidList = 34,2,current
 
-expandAll
----------
-
-
     ..  _MenuProcessor-expandAll:
+
+    ..  rubric:: expandAll
 
     ..  confval:: expandAll
         :name: MenuProcessor-expandAll
@@ -141,11 +129,9 @@ expandAll
 
         Include all submenus (`1`) or only those of the active pages (`0`).
 
-levels
-------
-
-
     ..  _MenuProcessor-levels:
+
+    ..  rubric:: levels
 
     ..  confval:: levels
         :name: MenuProcessor-levels
@@ -156,9 +142,7 @@ levels
 
         Maximal number of levels to be included in the output array.
 
-includeNotInMenu
-----------------
-
+    ..  rubric:: includeNotInMenu
 
     ..  confval:: includeNotInMenu
         :name: MenuProcessor-includeNotInMenu
@@ -167,11 +151,9 @@ includeNotInMenu
         If set, pages with the checkbox "Page enabled in menus" disabled will still be included
         in menus.
 
-includeSpacer
--------------
-
-
     ..  _MenuProcessor-includeSpacer:
+
+    ..  rubric:: includeSpacer
 
     ..  confval:: includeSpacer
         :name: MenuProcessor-includeSpacer
@@ -182,9 +164,7 @@ includeSpacer
 
         Include pages with type "spacer".
 
-protectLvar
------------
-
+    ..  rubric:: protectLvar
 
     ..  confval:: protectLvar
         :name: MenuProcessor-protectlvar
@@ -210,9 +190,7 @@ protectLvar
         if "Hide page if no translation for current language exists" is set -
         it always reverts to default language if no translation is found.
 
-special
--------
-
+    ..  rubric:: special
 
     ..  confval:: special
         :name: MenuProcessor-special
@@ -228,9 +206,7 @@ special
 
         See the section about the :ref:`.special property <MenuProcessor-special>`.
 
-value
------
-
+        ..  rubric:: value
 
         ..  confval:: value
             :name: MenuProcessor-special-value
@@ -240,11 +216,9 @@ value
             for depends on the menu type as defined by ".special"; see the
             section about the :ref:`.special property <MenuProcessor-special>`.
 
-titleField
-----------
-
-
     ..  _MenuProcessor-titleField:
+
+    ..  rubric:: titleField
 
     ..  confval:: titleField
         :name: MenuProcessor-titleField

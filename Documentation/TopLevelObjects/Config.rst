@@ -83,9 +83,7 @@ Properties of 'config'
     :display: table
     :type:
 
-additionalHeaders
------------------
-
+    ..  rubric:: additionalHeaders
 
     ..  confval:: additionalHeaders
         :name: config-additionalheaders
@@ -111,9 +109,7 @@ additionalHeaders
         Finally, a "Content-Length" header is sent, if enabled via
         :ref:`setup-config-enablecontentlengthheader`.
 
-admPanel
---------
-
+    ..  rubric:: admPanel
 
     ..  confval:: admPanel
         :name: config-admPanel
@@ -122,9 +118,7 @@ admPanel
         :typoscript:`config.admPanel = 1` enables the admin panel. See
         :ref:`Configuration in the Admin Panel manual <ext_adminpanel:typoscript-config-admpanel>`.
 
-ATagParams
-----------
-
+    ..  rubric:: ATagParams
 
     ..  confval:: ATagParams
         :name: config-ATagParams
@@ -132,9 +126,7 @@ ATagParams
 
         Additional parameters for all links in TYPO3 (excluding menu-links).
 
-cache
------
-
+    ..  rubric:: cache
 
     ..  confval:: cache
         :name: config-cache
@@ -167,9 +159,7 @@ cache
         Use the keyword "current" instead of a <storage-pid> to take only records
         on the current page into account for the cache lifetime calculation.
 
-cache_clearAtMidnight
----------------------
-
+    ..  rubric:: cache_clearAtMidnight
 
     ..  confval:: cache_clearAtMidnight
         :name: config-cache-clearAtMidnight
@@ -179,10 +169,7 @@ cache_clearAtMidnight
         This setting ensures that the cache expires at midnight on the day that the
         page is scheduled to expire.
 
-cache_period
-------------
-
-
+    ..  rubric:: cache_period
 
     ..  confval:: cache_period
         :name: config-cache-period
@@ -194,9 +181,7 @@ cache_period
         This value is overridden by the value in the page record
         `field="cache_timeout"` if that value is greater than zero.
 
-contentObjectExceptionHandler
------------------------------
-
+    ..  rubric:: contentObjectExceptionHandler
 
     ..  confval:: contentObjectExceptionHandler
         :name: config-contentObjectExceptionHandler
@@ -223,9 +208,7 @@ contentObjectExceptionHandler
         To get rid of the error message, the error needs to be fixed
         and the cache must be cleared for the page.
 
-debug
------
-
+    ..  rubric:: debug
 
     ..  confval:: debug
         :name: config-debug
@@ -235,9 +218,7 @@ debug
         This applies to menu objects and parse-time output.
         The parse-time will be sent in HTTP response header `X-TYPO3-Parsetime`.
 
-disableAllHeaderCode
---------------------
-
+    ..  rubric:: disableAllHeaderCode
 
     ..  confval:: disableAllHeaderCode
         :name: config-disableAllHeaderCode
@@ -259,9 +240,7 @@ disableAllHeaderCode
         This property can also be used to generate complete HTML pages,
         including the :html:`<html>` and :html:`<body>` tags.
 
-disableBodyTag
---------------
-
+    ..  rubric:: disableBodyTag
 
     ..  confval:: disableBodyTag
         :name: config-disableBodyTag
@@ -278,9 +257,7 @@ disableBodyTag
         :typoscript:`config.disableBodyTag = 1` then the other settings are ignored
         and won't have any effect.
 
-disableCanonical
-----------------
-
+    ..  rubric:: disableCanonical
 
     ..  confval:: disableCanonical
         :name: config-disableCanonical
@@ -291,9 +268,7 @@ disableCanonical
         in many cases by default. For edge cases, you might want to disable the
         rendering of this tag by setting it to `1`.
 
-disableHrefLang
----------------
-
+    ..  rubric:: disableHrefLang
 
     ..  confval:: disableHrefLang
         :name: config-disableHrefLang
@@ -303,9 +278,7 @@ disableHrefLang
         in multi-language setups. By settings this option to `1`
         the rendering of the tags will be skipped.
 
-disablePrefixComment
---------------------
-
+    ..  rubric:: disablePrefixComment
 
     ..  confval:: disablePrefixComment
         :name: config-disablePrefixComment
@@ -315,9 +288,7 @@ disablePrefixComment
         preventing any potentially revealing and space-consuming comments in the HTML
         source code.
 
-disablePreviewNotification
---------------------------
-
+    ..  rubric:: disablePreviewNotification
 
     ..  confval:: disablePreviewNotification
         :name: config-disablePreviewNotification
@@ -326,9 +297,7 @@ disablePreviewNotification
 
         Disables the "preview" notification box.
 
-disableLanguageHeader
----------------------
-
+    ..  rubric:: disableLanguageHeader
 
     ..  confval:: disableLanguageHeader
         :name: config-disableLanguageHeader
@@ -342,9 +311,7 @@ disableLanguageHeader
 
         If :typoscript:`config.disableLanguageHeader` is set, this header will not be sent.
 
-doctype
--------
-
+    ..  rubric:: doctype
 
     ..  confval:: doctype
         :name: config-doctype
@@ -378,9 +345,7 @@ doctype
 
             <!DOCTYPE html>
 
-enableContentLengthHeader
--------------------------
-
+    ..  rubric:: enableContentLengthHeader
 
     ..  confval:: enableContentLengthHeader
         :name: config-enableContentLengthHeader
@@ -394,9 +359,7 @@ enableContentLengthHeader
         objects and the content-length will truncate the length of the
         document in some browsers.
 
-extTarget
----------
-
+    ..  rubric:: extTarget
 
     ..  confval:: extTarget
         :name: config-extTarget
@@ -405,9 +368,7 @@ extTarget
 
         Default external target. Used by :ref:`typolink` if no extTarget is set.
 
-fileTarget
-----------
-
+    ..  rubric:: fileTarget
 
     ..  confval:: fileTarget
         :name: config-fileTarget
@@ -415,9 +376,7 @@ fileTarget
 
         Default file link target. Used by :ref:`typolink` if no fileTarget is set.
 
-forceAbsoluteUrls
------------------
-
+    ..  rubric:: forceAbsoluteUrls
 
     ..  confval:: forceAbsoluteUrls
         :name: config-forceAbsoluteUrls
@@ -437,9 +396,7 @@ forceAbsoluteUrls
             <setup-config-absrefprefix>` and any typolink
             :ref:`typolink-forceAbsoluteUrl` options.
 
-forceTypeValue
---------------
-
+    ..  rubric:: forceTypeValue
 
     ..  confval:: forceTypeValue
         :name: config-forceTypeValue
@@ -452,9 +409,7 @@ forceTypeValue
         `&type=95`, but still want to keep your targets neutral. Then you can
         set your targets to blank and this value to your required type value.
 
-headerComment
--------------
-
+    ..  rubric:: headerComment
 
     ..  confval:: headerComment
         :name: config-headerComment
@@ -464,9 +419,7 @@ headerComment
         comment in the <head> page section. Use this to insert text
         like "Programmed by My-Agency".
 
-htmlTag.attributes.[attribute]
-------------------------------
-
+    ..  rubric:: htmlTag.attributes.[attribute]
 
     ..  confval:: htmlTag.attributes.[attribute]
         :name: config-htmlTag-attributes
@@ -495,9 +448,7 @@ htmlTag.attributes.[attribute]
             config.htmlTag.attributes.my-attribute = 123
             config.htmlTag.attributes.my-attribute.userFunc = MyVendor\MyExtension\HtmlTagEnhancer->overrideMyAttribute
 
-htmlTag_setParams
------------------
-
+    ..  rubric:: htmlTag_setParams
 
     ..  confval:: htmlTag_setParams
         :name: config-htmlTag-setParams
@@ -515,10 +466,7 @@ htmlTag_setParams
         If you have set `htmlTag.attributes` this property (`htmlTag_setParams`)
         will not have any effect.
 
-htmlTag_stdWrap
----------------
-
-
+    ..  rubric:: htmlTag_stdWrap
 
     ..  confval:: htmlTag_stdWrap
         :name: config-htmlTag-stdWrap
@@ -527,9 +475,7 @@ htmlTag_stdWrap
         Modify the :html:`<html>` tag with stdWrap functionality. Use
         this property to extend or override this tag.
 
-index_descrLgd
---------------
-
+    ..  rubric:: index_descrLgd
 
     ..  confval:: index_descrLgd
         :name: config-index-descrLgd
@@ -539,9 +485,7 @@ index_descrLgd
         This indicates how many chars to preserve in the description of an
         indexed page. This can be used in search result output.
 
-index_enable
-------------
-
+    ..  rubric:: index_enable
 
     ..  confval:: index_enable
         :name: config-index-enable
@@ -551,9 +495,7 @@ index_enable
 
         Automatically enabled when :t3-ext:`indexed_search` is enabled.
 
-index_externals
----------------
-
+    ..  rubric:: index_externals
 
     ..  confval:: index_externals
         :name: config-index-externals
@@ -563,9 +505,7 @@ index_externals
 
         Automatically enabled when :t3-ext:`indexed_search` is enabled.
 
-index_metatags
---------------
-
+    ..  rubric:: index_metatags
 
     ..  confval:: index_metatags
         :name: config-index-metatags
@@ -575,9 +515,7 @@ index_metatags
         This allows the indexing of metatags to be switched on or off. It is
         switched on by default.
 
-inlineStyle2TempFile
---------------------
-
+    ..  rubric:: inlineStyle2TempFile
 
     ..  confval:: inlineStyle2TempFile
         :name: config-inlineStyle2TempFile
@@ -591,9 +529,7 @@ inlineStyle2TempFile
 
         The file hash is based on the content of the styles.
 
-intTarget
----------
-
+    ..  rubric:: intTarget
 
     ..  confval:: intTarget
         :name: config-intTarget
@@ -601,9 +537,7 @@ intTarget
 
         Default internal target. Used by :ref:`typolink` if no target is set.
 
-linkSecurityRelValue
---------------------
-
+    ..  rubric:: linkSecurityRelValue
 
     ..  confval:: linkSecurityRelValue
         :name: config-linkSecurityRelValue
@@ -619,9 +553,7 @@ linkSecurityRelValue
         links. If the link already contains a valid attribute from another
         source (for example added manually), it remains unchanged.
 
-linkVars
---------
-
+    ..  rubric:: linkVars
 
     ..  confval:: linkVars
         :name: config-linkVars
@@ -656,9 +588,7 @@ linkVars
             Do **not** include the `type` and `L` parameters in the linkVars
             list as this will result in unexpected behavior.
 
-message_preview
----------------
-
+    ..  rubric:: message_preview
 
     ..  confval:: message_preview
         :name: config-message_preview
@@ -667,9 +597,7 @@ message_preview
         Alternative message in HTML that appears when the preview function is
         active.
 
-message_preview_workspace
--------------------------
-
+    ..  rubric:: message_preview_workspace
 
     ..  confval:: message_preview_workspace
         :name: config-message-preview-workspace
@@ -680,10 +608,7 @@ message_preview_workspace
         active in a draft workspace. You can use sprintf() placeholders for
         Workspace title (first) and number (second).
 
-moveJsFromHeaderToFooter
-------------------------
-
-
+    ..  rubric:: moveJsFromHeaderToFooter
 
     ..  confval:: moveJsFromHeaderToFooter
         :name: config-moveJsFromHeaderToFooter
@@ -693,11 +618,7 @@ moveJsFromHeaderToFooter
         bottom of the HTML document, which is after the content and before the
         closing body tag.
 
-MP_defaults
------------
-
-
-
+    ..  rubric:: MP_defaults
 
     ..  confval:: MP_defaults
         :name: config-MP-defaults
@@ -714,10 +635,7 @@ MP_defaults
         can ensure consistency and reduce the risk of broken links or incorrect
         content being displayed due to missing parameters.
 
-MP_disableTypolinkClosestMPvalue
---------------------------------
-
-
+    ..  rubric:: MP_disableTypolinkClosestMPvalue
 
     ..  confval:: MP_disableTypolinkClosestMPvalue
         :name: config-MP-disableTypolinkClosestMPvalue
@@ -726,9 +644,7 @@ MP_disableTypolinkClosestMPvalue
         If set, the :ref:`typolink` function will not try to find the closest MP
         value for the id.
 
-MP_mapRootPoints
-----------------
-
+    ..  rubric:: MP_mapRootPoints
 
     ..  confval:: MP_mapRootPoints
         :name: config-MP-mapRootPoints
@@ -751,9 +667,7 @@ MP_mapRootPoints
 
         Configured IDs have to be the uids of actual mount point pages, not the targets.
 
-namespaces.[identifier]
------------------------
-
+    ..  rubric:: namespaces.[identifier]
 
     ..  confval:: namespaces.[identifier]
         :name: config-namespaces
@@ -764,9 +678,7 @@ namespaces.[identifier]
         tag. This is especially useful if you want to add RDFa or microformats
         to your HTML.
 
-no_cache
---------
-
+    ..  rubric:: no_cache
 
     ..  confval:: no_cache
         :name: config-no-cache
@@ -788,9 +700,7 @@ no_cache
         For more information about cache types see the
         :ref:`cache types chapter <t3coreapi:caching-architecture-core>`.
 
-noPageTitle
------------
-
+    ..  rubric:: noPageTitle
 
     ..  confval:: noPageTitle
         :name: config-noPageTitle
@@ -806,9 +716,7 @@ noPageTitle
         output, so you should only disable this tag if you have already
         generated it manually.
 
-pageRendererTemplateFile
-------------------------
-
+    ..  rubric:: pageRendererTemplateFile
 
     ..  confval:: pageRendererTemplateFile
         :name: config-pageRendererTemplateFile
@@ -818,9 +726,7 @@ pageRendererTemplateFile
         Sets the template for page renderer class
         :php:`TYPO3\CMS\Core\Page\PageRenderer`.
 
-pageTitle
----------
-
+    ..  rubric:: pageTitle
 
     ..  confval:: pageTitle
         :name: config-pageTitle
@@ -829,9 +735,7 @@ pageTitle
         stdWrap for the page title. This option will be executed *after* all
         other processing options like :ref:`setup-config-pageTitleFirst`.
 
-pageTitleFirst
---------------
-
+    ..  rubric:: pageTitleFirst
 
     ..  confval:: pageTitleFirst
         :name: config-pageTitleFirst
@@ -845,9 +749,7 @@ pageTitleFirst
         If :typoscript:`pageTitleFirst` is set (and if the page title is printed), then the
         page title will be printed before the template title, i.e. "page title: website".
 
-pageTitleProviders
-------------------
-
+    ..  rubric:: pageTitleProviders
 
     ..  confval:: pageTitleProviders
         :name: config-pageTitleProviders
@@ -860,9 +762,7 @@ pageTitleProviders
         check the providers to see if they have titles. It will start with the
         highest priority :typoscript:`PageTitleProviders`.
 
-pageTitleSeparator
-------------------
-
+    ..  rubric:: pageTitleSeparator
 
     ..  confval:: pageTitleSeparator
         :name: config-pageTitleSeparator
@@ -876,9 +776,7 @@ pageTitleSeparator
         separator. stdWrap can be used to adjust whitespace at the beginning and
         end of the separator.
 
-recordLinks
------------
-
+    ..  rubric:: recordLinks
 
     ..  confval:: recordLinks
         :name: config-recordLinks
@@ -900,9 +798,7 @@ recordLinks
                 }
             }
 
-removeDefaultCss
-----------------
-
+    ..  rubric:: removeDefaultCss
 
     ..  confval:: removeDefaultCss
         :name: config-removeDefaultCss
@@ -914,9 +810,7 @@ removeDefaultCss
         (:typoscript:`_CSS_DEFAULT_STYLE` outputs a set of default styles for
         extensions with frontend plugins)
 
-removeDefaultJS
----------------
-
+    ..  rubric:: removeDefaultJS
 
     ..  confval:: removeDefaultJS
         :name: config-removeDefaultJS
@@ -931,9 +825,7 @@ removeDefaultJS
         JavaScript is written to a temporary file and included in that file.
         See :ref:`setup-config-inlineStyle2TempFile`.
 
-sendCacheHeaders
-----------------
-
+    ..  rubric:: sendCacheHeaders
 
     ..  confval:: sendCacheHeaders
         :name: config-sendCacheHeaders
@@ -975,9 +867,7 @@ sendCacheHeaders
          both browser- and reverse-proxy caches and make TYPO3 regenerate
          the page. A good tip worth knowing about!
 
-sendCacheHeadersForSharedCaches
--------------------------------
-
+    ..  rubric:: sendCacheHeadersForSharedCaches
 
     ..  confval:: sendCacheHeadersForSharedCaches
         :name: config-sendCacheHeadersForSharedCaches
@@ -1009,9 +899,7 @@ sendCacheHeadersForSharedCaches
         See https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control
         for details and whether your reverse proxy supports this directive.
 
-showWebsiteTitle
-----------------
-
+    ..  rubric:: showWebsiteTitle
 
     ..  confval:: showWebsiteTitle
         :name: config-showWebsiteTitle
@@ -1025,9 +913,7 @@ showWebsiteTitle
         By default, the website title is added. To omit the website title, set the
         option to `0`.
 
-spamProtectEmailAddresses
--------------------------
-
+    ..  rubric:: spamProtectEmailAddresses
 
     ..  confval:: spamProtectEmailAddresses
         :name: config-spamProtectEmailAddresses
@@ -1049,9 +935,7 @@ spamProtectEmailAddresses
         Default JavaScript needs to be enabled.
         (see :ref:`removeDefaultJS <setup-config-removedefaultjs>`)
 
-spamProtectEmailAddresses_atSubst
----------------------------------
-
+    ..  rubric:: spamProtectEmailAddresses_atSubst
 
     ..  confval:: spamProtectEmailAddresses_atSubst
         :name: config-spamProtectEmailAddresses-atSubst
@@ -1061,9 +945,7 @@ spamProtectEmailAddresses_atSubst
 
         Substitute label for the at-sign (`@`).
 
-spamProtectEmailAddresses_lastDotSubst
---------------------------------------
-
+    ..  rubric:: spamProtectEmailAddresses_lastDotSubst
 
     ..  confval:: spamProtectEmailAddresses_lastDotSubst
         :name: config-spamProtectEmailAddresses-lastDotSubst
@@ -1073,9 +955,7 @@ spamProtectEmailAddresses_lastDotSubst
 
         Substitute label for the last dot in the email address.
 
-tx_[extension key with no underscores]_[*]
-------------------------------------------
-
+    ..  rubric:: tx_[extension key with no underscores]_[*]
 
     ..  confval:: tx_[extension key with no underscores]_[*]
         :name: config-tx-extension-key-with-no-underscores
@@ -1087,9 +967,7 @@ tx_[extension key with no underscores]_[*]
         (i.e. don't receive their configuration as an argument from the frontend
         rendering process).
 
-typolinkLinkAccessRestrictedPages
----------------------------------
-
+    ..  rubric:: typolinkLinkAccessRestrictedPages
 
     ..  confval:: typolinkLinkAccessRestrictedPages
         :name: config-typolinkLinkAccessRestrictedPages
@@ -1109,9 +987,7 @@ typolinkLinkAccessRestrictedPages
         See :confval:`menu-common-properties-showaccessrestrictedpages`
         for menu objects as well (similar feature for menus)
 
-typolinkLinkAccessRestrictedPages.ATagParams
---------------------------------------------
-
+    ..  rubric:: typolinkLinkAccessRestrictedPages.ATagParams
 
     ..  confval:: typolinkLinkAccessRestrictedPages.ATagParams
         :name: config-typolinkLinkAccessRestrictedPages-ATagParams
@@ -1121,9 +997,7 @@ typolinkLinkAccessRestrictedPages.ATagParams
         `typolinkLinkAccessRestrictedPages.ATagParams` Add custom attributes to
         the anchor tag.
 
-typolinkLinkAccessRestrictedPages_addParams
--------------------------------------------
-
+    ..  rubric:: typolinkLinkAccessRestrictedPages_addParams
 
     ..  confval:: typolinkLinkAccessRestrictedPages_addParams
         :name: config-typolinkLinkAccessRestrictedPages-addParams
@@ -1132,9 +1006,7 @@ typolinkLinkAccessRestrictedPages_addParams
 
         See :ref:`setup-config-typolinklinkaccessrestrictedpages` above.
 
-typolinkLinkAccessRestrictedPages_xmlprologue
----------------------------------------------
-
+    ..  rubric:: typolinkLinkAccessRestrictedPages_xmlprologue
 
     ..  confval:: typolinkLinkAccessRestrictedPages_xmlprologue
         :name: config-typolinkLinkAccessRestrictedPages-xmlprologue

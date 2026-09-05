@@ -78,11 +78,10 @@ Properties
     :display: table
     :type:
 
+..  _cobj-_fluidtemplate-cache:
+
 cache
 -----
-
-
-..  _cobj-_fluidtemplate-cache:
 
 ..  confval:: cache
     :name: _fluidtemplate-cache
@@ -90,11 +89,10 @@ cache
 
     See :ref:`cache function description <cache>` for details.
 
+..  _fluidtemplate-dataProcessing:
+
 dataProcessing
 --------------
-
-
-..  _fluidtemplate-dataProcessing:
 
 ..  confval:: dataProcessing
     :name: fluidtemplate-dataProcessing
@@ -109,11 +107,10 @@ dataProcessing
 
         This content was moved to the subpage :ref:`dataProcessing`.
 
+..  _cobj-fluidtemplate-properties-extbase-controlleractionname:
+
 extbase.controllerActionName
 ----------------------------
-
-
-..  _cobj-fluidtemplate-properties-extbase-controlleractionname:
 
 ..  confval:: extbase.controllerActionName
     :name: fluidtemplate-extbase-controlleractionname
@@ -121,11 +118,10 @@ extbase.controllerActionName
 
     Sets the name of the action.
 
+..  _cobj-fluidtemplate-properties-extbase-controllerextensionname:
+
 extbase.controllerExtensionName
 -------------------------------
-
-
-..  _cobj-fluidtemplate-properties-extbase-controllerextensionname:
 
 ..  confval:: extbase.controllerExtensionName
     :name: fluidtemplate-extbase-controllerextensionname
@@ -133,11 +129,10 @@ extbase.controllerExtensionName
 
     Sets the extension name of the controller.
 
+..  _cobj-fluidtemplate-properties-extbase-controllername:
+
 extbase.controllerName
 ----------------------
-
-
-..  _cobj-fluidtemplate-properties-extbase-controllername:
 
 ..  confval:: extbase.controllerName
     :name: fluidtemplate-extbase-controllername
@@ -145,11 +140,10 @@ extbase.controllerName
 
     Sets the name of the controller.
 
+..  _cobj-fluidtemplate-properties-extbase-pluginname:
+
 extbase.pluginName
 ------------------
-
-
-..  _cobj-fluidtemplate-properties-extbase-pluginname:
 
 ..  confval:: extbase.pluginName
     :name: fluidtemplate-extbase-pluginname
@@ -157,11 +151,10 @@ extbase.pluginName
 
     Sets variables for initializing extbase.
 
+..  _cobj-fluidtemplate-properties-file:
+
 file
 ----
-
-
-..  _cobj-fluidtemplate-properties-file:
 
 ..  confval:: file
     :name: fluidtemplate-file
@@ -175,11 +168,10 @@ file
     ..  literalinclude:: _includes/_fluidtemplate-file.typoscript
         :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
 
+..  _cobj-fluidtemplate-properties-format:
+
 format
 ------
-
-
-..  _cobj-fluidtemplate-properties-format:
 
 ..  confval:: format
     :name: fluidtemplate-format
@@ -189,11 +181,10 @@ format
     :typoscript:`format` sets the format of the current request. It can be something
     like "html", "xml", "png", "json" or even "rss.xml" or something similar.
 
+..  _cobj-fluidtemplate-properties-layoutrootpath:
+
 layoutRootPath
 --------------
-
-
-..  _cobj-fluidtemplate-properties-layoutrootpath:
 
 ..  confval:: layoutRootPath
     :name: fluidtemplate-layoutrootpath
@@ -209,11 +200,10 @@ layoutRootPath
         plural "s") as it can easily be extended by custom templates in the
         sitepackage.
 
+..  _cobj-fluidtemplate-properties-layoutrootpaths:
+
 layoutRootPaths
 ---------------
-
-
-..  _cobj-fluidtemplate-properties-layoutrootpaths:
 
 ..  confval:: layoutRootPaths
     :name: fluidtemplate-layoutrootpaths
@@ -240,11 +230,10 @@ layoutRootPaths
     (singular) is also used, it will be placed as the first option
     in the list of fall back paths.
 
+..  _cobj-fluidtemplate-properties-partialrootpath:
+
 partialRootPath
 ---------------
-
-
-..  _cobj-fluidtemplate-properties-partialrootpath:
 
 ..  confval:: partialRootPath
     :name: fluidtemplate-partialrootpath
@@ -260,11 +249,10 @@ partialRootPath
         plural "s") as it can be easily extended by custom templates provided
         by the sitepackage.
 
+..  _cobj-fluidtemplate-properties-partialrootpaths:
+
 partialRootPaths
 ----------------
-
-
-..  _cobj-fluidtemplate-properties-partialrootpaths:
 
 ..  confval:: partialRootPaths
     :name: fluidtemplate-partialrootpaths
@@ -283,11 +271,10 @@ partialRootPaths
     See :ref:`layoutRootPaths <cobj-fluidtemplate-properties-layoutrootpaths>`
     for more details.
 
+..  _cobj-fluidtemplate-properties-settings:
+
 settings
 --------
-
-
-..  _cobj-fluidtemplate-properties-settings:
 
 ..  confval:: settings
     :name: fluidtemplate-settings
@@ -310,11 +297,10 @@ settings
     Apart from setting a key-value pair as in the example, you can
     also reference objects or access constants.
 
+..  _cobj-fluidtemplate-properties-stdwrap:
+
 stdWrap
 -------
-
-
-..  _cobj-fluidtemplate-properties-stdwrap:
 
 ..  confval:: stdWrap
     :name: fluidtemplate-stdwrap
@@ -322,11 +308,10 @@ stdWrap
 
     Provides the usual stdWrap functionality.
 
+..  _cobj-fluidtemplate-properties-template:
+
 template
 --------
-
-
-..  _cobj-fluidtemplate-properties-template:
 
 ..  confval:: template
     :name: fluidtemplate-template
@@ -336,11 +321,10 @@ template
     a template file. It is an alternative to ".file"; if ".template" is set, it
     takes precedence.
 
+..  _cobj-fluidtemplate-properties-templatename:
+
 templateName
 ------------
-
-
-..  _cobj-fluidtemplate-properties-templatename:
 
 ..  confval:: templateName
     :name: fluidtemplate-templatename
@@ -361,11 +345,10 @@ templateName
     ..  literalinclude:: _includes/_templateNameAutomatic.typoscript
         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
+..  _cobj-fluidtemplate-properties-templaterootpath:
+
 templateRootPath
 ----------------
-
-
-..  _cobj-fluidtemplate-properties-templaterootpath:
 
 ..  confval:: templateRootPath
     :name: fluidtemplate-templaterootpath
@@ -381,11 +364,10 @@ templateRootPath
         plural "s") as it can be easily extended by custom templates provided
         by the sitepackage.
 
+..  _cobj-fluidtemplate-properties-templaterootpaths:
+
 templateRootPaths
 -----------------
-
-
-..  _cobj-fluidtemplate-properties-templaterootpaths:
 
 ..  confval:: templateRootPaths
     :name: fluidtemplate-templaterootpaths
@@ -410,11 +392,10 @@ templateRootPaths
     ..  literalinclude:: _includes/_templateRootPaths.typoscript
         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
+..  _cobj-fluidtemplate-properties-variables:
+
 variables
 ---------
-
-
-..  _cobj-fluidtemplate-properties-variables:
 
 ..  confval:: variables
     :name: fluidtemplate-variables

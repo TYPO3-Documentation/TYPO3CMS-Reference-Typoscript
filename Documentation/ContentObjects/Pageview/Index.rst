@@ -87,9 +87,7 @@ Additional variables can be defined with property
     :display: table
     :type:
 
-language
---------
-
+    ..  rubric:: language
 
     ..  confval:: language
         :name: pageview-data-language
@@ -99,9 +97,7 @@ language
         The current :php:`SiteLanguage` object, see also
         :ref:`the SiteLanguage object <t3coreapi:sitehandling-sitelanguage-object>`.
 
-page
-----
-
+    ..  rubric:: page
 
     ..  confval:: page
         :name: pageview-data-page
@@ -111,9 +107,7 @@ page
         The current `PageInformation` as object. See also
         :ref:`Frontend page information <t3coreapi:typo3-request-attribute-frontend-page-information>`.
 
-settings
---------
-
+    ..  rubric:: settings
 
     ..  confval:: settings
         :name: pageview-data-settings
@@ -125,9 +119,7 @@ settings
         page. Settings from the site can be accessed via the :confval:`pageview-data-site` with
         :fluid:`{site.settings}`
 
-site
-----
-
+    ..  rubric:: site
 
     ..  confval:: site
         :name: pageview-data-site
@@ -195,9 +187,7 @@ Properties
     :display: table
     :type:
 
-cache
------
-
+    ..  rubric:: cache
 
     ..  confval:: cache
         :name: pageview-cache
@@ -205,9 +195,7 @@ cache
 
         See :ref:`cache function description <cache>` for details.
 
-dataProcessing.[key]
---------------------
-
+    ..  rubric:: dataProcessing.[key]
 
     ..  confval:: dataProcessing.[key]
         :name: pageview-dataProcessing
@@ -222,9 +210,7 @@ dataProcessing.[key]
         to fetch the content elements from the page, respecting the
         :ref:`backend layout <t3coreapi:be-layout>`.
 
-paths.[priority]
-----------------
-
+    ..  rubric:: paths.[priority]
 
     ..  confval:: paths.[priority]
         :name: pageview-paths
@@ -246,9 +232,7 @@ paths.[priority]
 
         The paths are evaluated from highest to lowest priority.
 
-variables.[variable_name]
--------------------------
-
+    ..  rubric:: variables.[variable_name]
 
     ..  confval:: variables.[variable_name]
         :name: pageview-variables

@@ -184,9 +184,7 @@ Properties
     :display: table
     :type:
 
-1,2,3,4...
-----------
-
+    ..  rubric:: 1,2,3,4...
 
     ..  confval:: 1,2,3,4...
         :name: page-array
@@ -209,9 +207,7 @@ Properties
         in the future. Therefore you will often see that people use the number
         10 and no number 1 is found.
 
-bodyTag
--------
-
+    ..  rubric:: bodyTag
 
     ..  confval:: bodyTag
         :name: page-bodyTag
@@ -221,9 +217,7 @@ bodyTag
 
         Body tag on the page
 
-bodyTagAdd
-----------
-
+    ..  rubric:: bodyTagAdd
 
     ..  confval:: bodyTagAdd
         :name: page-bodyTagAdd
@@ -234,9 +228,7 @@ bodyTagAdd
         before the :html:`>` character. This is mostly useful for adding
         attributes to the :html:`<body>` tag.
 
-bodyTagCObject
---------------
-
+    ..  rubric:: bodyTagCObject
 
     ..  confval:: bodyTagCObject
         :name: page-bodyTagCObject
@@ -251,9 +243,7 @@ bodyTagCObject
             which, if set, disables body tag generation independently
             from what might be set here.
 
-config
-------
-
+    ..  rubric:: config
 
     ..  confval:: config
         :name: page-config
@@ -266,9 +256,7 @@ config
          Configuration for the page. Any entries made here override the same
          entries in the top-level object :ref:`config`.
 
-cssInline.[array]
------------------
-
+    ..  rubric:: cssInline.[array]
 
     ..  confval:: cssInline.[array]
         :name: page-cssInline
@@ -279,9 +267,7 @@ cssInline.[array]
         The :typoscript:`cssInline` property contains any number of numeric keys, each representing one cObject.
         Internally handled as PHP integer, maximum number is therefore restricted to :php:`PHP_INT_MAX`.
 
-footerData.[array]
-------------------
-
+    ..  rubric:: footerData.[array]
 
     ..  confval:: footerData.[array]
         :name: page-footerData
@@ -295,9 +281,7 @@ footerData.[array]
         The :typoscript:`footerData` property contains any number of numeric keys, each representing one cObject.
         Internally handled as PHP integer, maximum number is therefore restricted to :php:`PHP_INT_MAX`.
 
-headerData.[array]
-------------------
-
+    ..  rubric:: headerData.[array]
 
     ..  confval:: headerData.[array]
         :name: page-headerData
@@ -318,9 +302,7 @@ headerData.[array]
         The :typoscript:`headerData` property contains any number of numeric keys, each representing one cObject.
         Internally handled as PHP integer, maximum number is therefore restricted to :php:`PHP_INT_MAX`.
 
-headTag
--------
-
+    ..  rubric:: headTag
 
     ..  confval:: headTag
         :name: page-headTag
@@ -329,9 +311,7 @@ headTag
 
         Head-tag if alternatives are wanted
 
-includeCSS.[array]
-------------------
-
+    ..  rubric:: includeCSS.[array]
 
     ..  confval:: includeCSS.[array]
         :name: page-includeCSS
@@ -384,9 +364,7 @@ includeCSS.[array]
 
         Additional data attributes can be configured using a key-value list.
 
-includeCSSLibs.[array]
-----------------------
-
+    ..  rubric:: includeCSSLibs.[array]
 
     ..  confval:: includeCSSLibs.[array]
         :name: page-includeCSSLibs
@@ -433,9 +411,7 @@ includeCSSLibs.[array]
 
         Additional data attributes can be configured using a key-value list.
 
-includeJS.[array]
------------------
-
+    ..  rubric:: includeJS.[array]
 
     ..  confval:: includeJS.[array]
         :name: page-includeJS
@@ -503,9 +479,7 @@ includeJS.[array]
             Array with key/value for additional attributes to be added to
             the script tag.
 
-includeJSFooter.[array]
------------------------
-
+    ..  rubric:: includeJSFooter.[array]
 
     ..  confval:: includeJSFooter.[array]
         :name: page-includeJSFooter
@@ -517,9 +491,7 @@ includeJSFooter.[array]
         included at the bottom of the page (just before the closing :html:`</body>`
         tag).
 
-includeJSFooterlibs.[array]
----------------------------
-
+    ..  rubric:: includeJSFooterlibs.[array]
 
     ..  confval:: includeJSFooterlibs.[array]
         :name: page-includeJSFooterlibs
@@ -547,9 +519,7 @@ includeJSFooterlibs.[array]
                 somefile.foo = bar
             }
 
-includeJSLibs.[array]
----------------------
-
+    ..  rubric:: includeJSLibs.[array]
 
     ..  confval:: includeJSLibs.[array]
         :name: page-includeJSLibs
@@ -577,9 +547,7 @@ includeJSLibs.[array]
                 somefile.foo = bar
             }
 
-inlineLanguageLabelFiles
-------------------------
-
+    ..  rubric:: inlineLanguageLabelFiles
 
     ..  confval:: inlineLanguageLabelFiles
         :name: page-inlineLanguageLabelFiles
@@ -604,9 +572,7 @@ inlineLanguageLabelFiles
             0 - syslog entry, 1 - do nothing, 2 - throw an exception.
             Default: 0
 
-inlineSettings
---------------
-
+    ..  rubric:: inlineSettings
 
     ..  confval:: inlineSettings
         :name: page-inlineSettings
@@ -616,9 +582,7 @@ inlineSettings
         Adds settings to the page as inline javascript, which is accessible within
         the JavaScript object :js:`TYPO3.settings`.
 
-jsFooterInline.[array]
-----------------------
-
+    ..  rubric:: jsFooterInline.[array]
 
     ..  confval:: jsFooterInline.[array]
         :name: page-jsFooterInline
@@ -631,9 +595,7 @@ jsFooterInline.[array]
         The :typoscript:`jsFooterInline` property contains any number of numeric keys, each representing one cObject.
         Internally handled as PHP integer, maximum number is therefore restricted to :php:`PHP_INT_MAX`.
 
-jsInline.[array]
-----------------
-
+    ..  rubric:: jsInline.[array]
 
     ..  confval:: jsInline.[array]
         :name: page-jsInline
@@ -650,9 +612,7 @@ jsInline.[array]
         The :typoscript:`jsInline` property contains any number of numeric keys, each representing one cObject.
         Internally handled as PHP integer, maximum number is therefore restricted to :php:`PHP_INT_MAX`.
 
-meta
-----
-
+    ..  rubric:: meta
 
     ..  confval:: meta
         :name: page-meta
@@ -689,9 +649,7 @@ meta
             to 0 (default), the meta tag generated by the plugin will be used. If
             there is none yet, the one from TypoScript is set.
 
-shortcutIcon
-------------
-
+    ..  rubric:: shortcutIcon
 
     ..  confval:: shortcutIcon
         :name: page-shortcutIcon
@@ -706,9 +664,7 @@ shortcutIcon
 
         If the file is missing no tag will be rendered.
 
-stdWrap
--------
-
+    ..  rubric:: stdWrap
 
     ..  confval:: stdWrap
         :name: page-stdWrap
@@ -716,9 +672,7 @@ stdWrap
 
         Wraps the content of the cObject array with :ref:`stdwrap` options.
 
-typeNum
--------
-
+    ..  rubric:: typeNum
 
     ..  confval:: typeNum
         :name: page-typeNum
@@ -734,9 +688,7 @@ typeNum
         the first found :typoscript:`PAGE` object, but it **must** be set and be unique as
         soon as you use *more* than one such object.
 
-wrap
-----
-
+    ..  rubric:: wrap
 
     ..  confval:: wrap
         :name: page-wrap

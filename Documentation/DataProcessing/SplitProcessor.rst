@@ -23,11 +23,9 @@ Options
     :type:
     :Default:
 
-if
---
-
-
     ..  _splitProcessor-if:
+
+    ..  rubric:: if
 
     ..  confval:: if
         :name: splitProcessor-if
@@ -37,11 +35,9 @@ if
 
         Only if the condition is met the data processor is executed.
 
-fieldName
----------
-
-
     ..  _splitProcessor-fieldName:
+
+    ..  rubric:: fieldName
 
     ..  confval:: fieldName
         :name: splitProcessor-fieldName
@@ -51,11 +47,9 @@ fieldName
 
         Name of the field to be used.
 
-as
---
-
-
     ..  _splitProcessor-as:
+
+    ..  rubric:: as
 
     ..  confval:: as
         :name: splitProcessor-as
@@ -65,11 +59,9 @@ as
 
         The variable name to be used in the Fluid template.
 
-delimiter
----------
-
-
     ..  _splitProcessor-delimiter:
+
+    ..  rubric:: delimiter
 
     ..  confval:: delimiter
         :name: splitProcessor-delimiter
@@ -80,11 +72,9 @@ delimiter
 
         The field delimiter, a character separating the values.
 
-filterIntegers
---------------
-
-
     ..  _splitProcessor-filterIntegers:
+
+    ..  rubric:: filterIntegers
 
     ..  confval:: filterIntegers
         :name: splitProcessor-filterIntegers
@@ -95,11 +85,9 @@ filterIntegers
 
         If set to `1`, all values are being cast to int.
 
-filterUnique
-------------
-
-
     ..  _splitProcessor-filterUnique:
+
+    ..  rubric:: filterUnique
 
     ..  confval:: filterUnique
         :name: splitProcessor-filterUnique
@@ -110,11 +98,9 @@ filterUnique
 
         If set to `1`, all duplicates will be removed.
 
-removeEmptyEntries
-------------------
-
-
     ..  _splitProcessor-removeEmptyEntries:
+
+    ..  rubric:: removeEmptyEntries
 
     ..  confval:: removeEmptyEntries
         :name: splitProcessor-removeEmptyEntries

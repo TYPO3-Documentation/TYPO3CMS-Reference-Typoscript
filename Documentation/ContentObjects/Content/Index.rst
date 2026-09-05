@@ -33,11 +33,10 @@ Properties
     :display: table
     :type:
 
+..  _cobj-content-if:
+
 if
 --
-
-
-..  _cobj-content-if:
 
 ..  confval:: if
     :name: content-if
@@ -45,12 +44,10 @@ if
 
     If "if" returns false, the content is not generated.
 
+..  _cobj-content-select:
+
 select
 ------
-
-
-
-..  _cobj-content-select:
 
 ..  confval:: select
     :name: content-select
@@ -59,12 +56,10 @@ select
     The SQL-statement, a :sql:`SELECT` query, is set here,
     including automatic visibility control.
 
+..  _cobj-content-table:
+
 table
 -----
-
-
-
-..  _cobj-content-table:
 
 ..  confval:: table
     :name: content-table
@@ -75,12 +70,10 @@ table
 
     In standard configuration this will be :sql:`tt_content`.
 
+.. _cobj-content-renderObj:
+
 renderObj
 ---------
-
-
-
-.. _cobj-content-renderObj:
 
 ..  confval:: renderObj
     :name: content-renderObj
@@ -97,12 +90,10 @@ renderObj
 
     See the notes on the example below.
 
+..  _cobj-content-slide:
+
 slide
 -----
-
-
-
-..  _cobj-content-slide:
 
 ..  confval:: slide
     :name: content-slide
@@ -124,11 +115,10 @@ slide
 
     Use :typoscript:`-1` in combination with :ref:`collect <cobj-content-slide-collect>`.
 
+..  _cobj-content-slide-collect:
+
 slide.collect
 -------------
-
-
-..  _cobj-content-slide-collect:
 
 ..  confval:: slide.collect
     :name: content-slide-collect
@@ -139,12 +129,10 @@ slide.collect
     value to the amount of levels to collect on, or use :typoscript:`-1`
     to collect up to the site root.
 
+..  _cobj-content-slide-collectFuzzy:
+
 slide.collectFuzzy
 ------------------
-
-
-
-..  _cobj-content-slide-collectFuzzy:
 
 ..  confval:: slide.collectFuzzy
     :name: content-slide-collectFuzzy
@@ -154,12 +142,10 @@ slide.collectFuzzy
     elements have been found for the specified depth in collect mode, traverse
     further until at least one match has occurred.
 
+..  _cobj-content-slide-collectReverse:
+
 slide.collectReverse
 --------------------
-
-
-
-..  _cobj-content-slide-collectReverse:
 
 ..  confval:: slide.collectReverse
     :name: content-slide-collectReverse
@@ -168,11 +154,10 @@ slide.collectReverse
     Reverse order of elements in collect mode. If set, elements of the current
     page will be at the bottom.
 
+..  _cobj-content-wrap:
+
 wrap
 ----
-
-
-..  _cobj-content-wrap:
 
 ..  confval:: wrap
     :name: content-wrap
@@ -180,11 +165,10 @@ wrap
 
     Wrap the whole content.
 
+..  _cobj-content-stdWrap:
+
 stdWrap
 -------
-
-
-..  _cobj-content-stdWrap:
 
 ..  confval:: stdWrap
     :name: content-stdWrap
@@ -192,12 +176,10 @@ stdWrap
 
     Apply `stdWrap` functionality.
 
+..  _cobj-content-cache:
+
 cache
 -----
-
-
-
-..  _cobj-content-cache:
 
 ..  confval:: cache
     :name: content-cache

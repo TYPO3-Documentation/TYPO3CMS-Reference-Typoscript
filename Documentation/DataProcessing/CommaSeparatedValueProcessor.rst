@@ -26,11 +26,9 @@ Options:
     :type:
     :Default:
 
-if
---
-
-
     ..  _CommaSeparatedValueProcessor-if:
+
+    ..  rubric:: if
 
     ..  confval:: if
         :name: CommaSeparatedValueProcessor-if
@@ -40,11 +38,9 @@ if
 
         If the condition is met, the data processor is processed.
 
-fieldName
----------
-
-
     ..  _CommaSeparatedValueProcessor-fieldName:
+
+    ..  rubric:: fieldName
 
     ..  confval:: fieldName
         :name: CommaSeparatedValueProcessor-fieldName
@@ -54,12 +50,9 @@ fieldName
 
         Name of the field in the processed ContentObjectRenderer.
 
-as
---
-
-
-
     ..  _CommaSeparatedValueProcessor-as:
+
+    ..  rubric:: as
 
     ..  confval:: as
         :name: CommaSeparatedValueProcessor-as
@@ -69,11 +62,9 @@ as
 
         The variable's name to be used in the Fluid template.
 
-maximumColumns
---------------
-
-
     ..  _CommaSeparatedValueProcessor-maximumColumns:
+
+    ..  rubric:: maximumColumns
 
     ..  confval:: maximumColumns
         :name: CommaSeparatedValueProcessor-maximumColumns
@@ -85,11 +76,9 @@ maximumColumns
         silently dropped. When set to :typoscript:`0` (default) all columns will be
         transformed.
 
-fieldDelimiter
---------------
-
-
     ..  _CommaSeparatedValueProcessor-fieldDelimiter:
+
+    ..  rubric:: fieldDelimiter
 
     ..  confval:: fieldDelimiter
         :name: CommaSeparatedValueProcessor-fieldDelimiter
@@ -99,12 +88,9 @@ fieldDelimiter
 
         The field delimiter, a character separating the values.
 
-fieldEnclosure
---------------
-
-
-
     ..  _CommaSeparatedValueProcessor-fieldEnclosure:
+
+    ..  rubric:: fieldEnclosure
 
     ..  confval:: fieldEnclosure
         :name: CommaSeparatedValueProcessor-fieldEnclosure

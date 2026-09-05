@@ -27,11 +27,9 @@ Properties
     :type:
     :Default:
 
-additionalPreviewLanguages
---------------------------
-
-
     ..  _useroptions-additionalPreviewLanguages:
+
+    ..  rubric:: additionalPreviewLanguages
 
     ..  confval:: additionalPreviewLanguages
         :name: useroptions-additionalPreviewLanguages
@@ -44,12 +42,9 @@ additionalPreviewLanguages
         :yaml:`languageId` property of the
         :ref:`site configuration <t3coreapi:sitehandling-addingLanguages>`.
 
-alertPopups
------------
-
-
-
     ..  _useroptions-alertPopups:
+
+    ..  rubric:: alertPopups
 
     ..  confval:: alertPopups
         :name: useroptions-alertPopups
@@ -64,12 +59,9 @@ alertPopups
         *   8 – FE editing
         *   128 – other (not used yet)
 
-bookmarkGroups
---------------
-
-
-
     ..  _useroptions-bookmarkGroups:
+
+    ..  rubric:: bookmarkGroups
 
     ..  confval:: bookmarkGroups
         :name: useroptions-bookmarkGroups
@@ -118,20 +110,16 @@ bookmarkGroups
               2 = LLL:my_sitepackage.backend:bookmarkGroups.2
             }
 
-clearCache
-----------
-
-
     ..  _useroptions-clearCache:
+
+    ..  rubric:: clearCache
 
     ..  confval:: clearCache
         :name: useroptions-clearCache
 
-all
----
-
-
         ..  _useroptions-clearCache-all:
+
+        ..  rubric:: all
 
         ..  confval:: all
             :name: useroptions-clearCache-all
@@ -144,11 +132,9 @@ all
             if it is explicitly set to 0 for an admin user, it will remove the clear all
             option on toolbar for that user.
 
-pages
------
-
-
         ..  _useroptions-clearCache-pages:
+
+        ..  rubric:: pages
 
         ..  confval:: pages
             :name: useroptions-clearCache-pages
@@ -159,11 +145,9 @@ pages
             If set to 1, this will allow a non-admin user to clear frontend and
             page-related caches.
 
-clipboardNumberPads
--------------------
-
-
     ..  _useroptions-clipboardNumberPads:
+
+    ..  rubric:: clipboardNumberPads
 
     ..  confval:: clipboardNumberPads
         :name: useroptions-clipboardNumberPads
@@ -172,11 +156,9 @@ clipboardNumberPads
 
         This allows you to enter how many pads you want on the clipboard.
 
-contextMenu.table.[tableName][.context].disableItems
-----------------------------------------------------
-
-
     ..  _useroptions-contextMenu-key-disableItems:
+
+    ..  rubric:: contextMenu.table.[tableName][.context].disableItems
 
     ..  confval:: contextMenu.table.[tableName][.context].disableItems
         :name: useroptions-contextMenu-key-disableItems
@@ -260,20 +242,16 @@ contextMenu.table.[tableName][.context].disableItems
             # Remove the "More options" item in the page tree context menu and all its subelements
             options.contextMenu.table.pages.tree.disableItems = newWizard, pagesSort, pagesNewMultiple, openListModule, mountAsTreeRoot, exportT3d, importT3d, hideInMenus, showInMenus, permissions
 
-dashboard
----------
-
-
     ..  _useroptions-dashboard:
+
+    ..  rubric:: dashboard
 
     ..  confval:: dashboard
         :name: useroptions-dashboard
 
-dashboardPresetsForNewUsers
----------------------------
-
-
         ..  _useroptions-dashboard-dashboardPresetsForNewUsers:
+
+        ..  rubric:: dashboardPresetsForNewUsers
 
         ..  confval:: dashboardPresetsForNewUsers
             :name: useroptions-dashboard-dashboardPresetsForNewUsers
@@ -290,11 +268,9 @@ dashboardPresetsForNewUsers
 
                 options.dashboard.dashboardPresetsForNewUsers := addToList(customDashboard)
 
-defaultResourcesViewMode
-------------------------
-
-
     ..  _useroptions-defaultResourcesViewMode:
+
+    ..  rubric:: defaultResourcesViewMode
 
     ..  confval:: defaultResourcesViewMode
         :name: useroptions-defaultResourcesViewMode
@@ -315,11 +291,9 @@ defaultResourcesViewMode
 
             options.defaultResourcesViewMode = list
 
-defaultUploadFolder
--------------------
-
-
     ..  _useroptions-defaultUploadFolder:
+
+    ..  rubric:: defaultUploadFolder
 
     ..  confval:: defaultUploadFolder
         :name: useroptions-defaultUploadFolder
@@ -345,11 +319,9 @@ defaultUploadFolder
 
             options.defaultUploadFolder = 2:user_folders/my_folder/
 
-disableDelete
--------------
-
-
     ..  _useroptions-disableDelete:
+
+    ..  rubric:: disableDelete
 
     ..  confval:: disableDelete
         :name: useroptions-disableDelete
@@ -368,11 +340,9 @@ disableDelete
 
             options.disableDelete.tt_content = 1
 
-dontMountAdminMounts
---------------------
-
-
     ..  _useroptions-dontMountAdminMounts:
+
+    ..  rubric:: dontMountAdminMounts
 
     ..  confval:: dontMountAdminMounts
         :name: useroptions-dontMountAdminMounts
@@ -383,11 +353,9 @@ dontMountAdminMounts
         ..  note::
             Only for admin users. For other users it has no effect.
 
-enableBookmarks
----------------
-
-
     ..  _useroptions-enableBookmarks:
+
+    ..  rubric:: enableBookmarks
 
     ..  confval:: enableBookmarks
         :name: useroptions-enableBookmarks
@@ -396,20 +364,16 @@ enableBookmarks
 
         Enables the usage of bookmarks in the backend.
 
-file_list
----------
-
-
     ..  _useroptions-file_list:
+
+    ..  rubric:: file_list
 
     ..  confval:: file_list
         :name: useroptions-file_list
 
-enableClipBoard
----------------
-
-
         ..  _useroptions-file_list-enableClipBoard:
+
+        ..  rubric:: enableClipBoard
 
         ..  confval:: enableClipBoard
             :name: useroptions-enableClipBoard
@@ -432,11 +396,9 @@ enableClipBoard
             :typoscript:`selectable`
                 The checkbox is shown so that the option can be selected by the user.
 
-displayColumnSelector
----------------------
-
-
         ..  _useroptions-file_list-displayColumnSelector:
+
+        ..  rubric:: displayColumnSelector
 
         ..  confval:: displayColumnSelector
             :name: useroptions-file_list-displayColumnSelector
@@ -463,11 +425,9 @@ displayColumnSelector
                 # Disable the column selector
                 file_list.displayColumnSelector = 0
 
-file_list.enableDisplayThumbnails
----------------------------------
-
-
         ..  _useroptions-file_list-enableDisplayThumbnails:
+
+        ..  rubric:: file_list.enableDisplayThumbnails
 
         ..  confval:: file_list.enableDisplayThumbnails
             :name: useroptions-file_list-enableDisplayThumbnails
@@ -489,11 +449,9 @@ file_list.enableDisplayThumbnails
             :typoscript:`selectable`
                 The checkbox is shown so that the option can be selected by the user.
 
-filesPerPage
-------------
-
-
         ..  _useroptions-file_list-filesPerPage:
+
+        ..  rubric:: filesPerPage
 
         ..  confval:: filesPerPage
             :name: useroptions-file_list-filesPerPage
@@ -504,12 +462,9 @@ filesPerPage
             The maximum number of files shown per page in the :guilabel:`File > List`
             module.
 
-primaryActions
---------------
-
-
         ..  _useroptions-file_list-primaryActions:
 
+        ..  rubric:: primaryActions
 
         ..  confval:: primaryActions
             :name: useroptions-useroptions-file_list-primaryActions
@@ -558,11 +513,9 @@ primaryActions
                 site set up multilingual the button "translations" is not rendered in
                 that TYPO3 environment.
 
-thumbnail.height
-----------------
-
-
         ..  _useroptions-file_list-thumbnail-height:
+
+        ..  rubric:: thumbnail.height
 
         ..  confval:: thumbnail.height
             :name: useroptions-file_list-thumbnail-height
@@ -573,11 +526,9 @@ thumbnail.height
             All preview images in the file list will be rendered with the configured
             thumbnail height.
 
-thumbnail.width
----------------
-
-
         ..  _useroptions-file_list-thumbnail-width:
+
+        ..  rubric:: thumbnail.width
 
         ..  confval:: thumbnail.width
             :name: useroptions-file_list-thumbnail-width
@@ -588,11 +539,9 @@ thumbnail.width
             All preview images in the file list will be rendered with the configured
             thumbnail width.
 
-uploader.defaultAction
-----------------------
-
-
         ..  _useroptions-file_list-uploader-defaultaction:
+
+        ..  rubric:: uploader.defaultAction
 
         ..  confval:: uploader.defaultAction
             :name: useroptions-file_list-uploader-defaultaction
@@ -612,18 +561,14 @@ uploader.defaultAction
             :typoscript:`replace`
                 Override the file with the uploaded one.
 
-folderTree
-----------
-
+    ..  rubric:: folderTree
 
     ..  confval:: folderTree
         :name: useroptions-folderTree
 
-altElementBrowserMountPoints
-----------------------------
-
-
         ..  _useroptions-folderTree-altElementBrowserMountPoints:
+
+        ..  rubric:: altElementBrowserMountPoints
 
         ..  confval:: altElementBrowserMountPoints
             :name: useroptions-folderTree-altElementBrowserMountPoints
@@ -657,11 +602,9 @@ altElementBrowserMountPoints
 
                 options.folderTree.altElementBrowserMountPoints = _temp_/, 2:/templates, 1:/files/images
 
-uploadFieldsInLinkBrowser
--------------------------
-
-
         ..  _useroptions-folderTree-uploadFieldsInLinkBrowser:
+
+        ..  rubric:: uploadFieldsInLinkBrowser
 
         ..  confval:: uploadFieldsInLinkBrowser
             :name: useroptions-folderTree-uploadFieldsInLinkBrowser
@@ -672,11 +615,9 @@ uploadFieldsInLinkBrowser
             This value defines the number of upload fields in the element browser.
             Default value is 3, if set to 0, no upload form will be shown.
 
-hideModules
------------
-
-
     ..  _useroptions-hideModules:
+
+    ..  rubric:: hideModules
 
     ..  confval:: hideModules
         :name: useroptions-hideModules
@@ -708,19 +649,15 @@ hideModules
             # Hide only module BeLogLog from "system" group
             options.hideModules = system_BelogLog
 
-hideRecords
------------
-
-
     ..  _useroptions-hideRecords:
+
+    ..  rubric:: hideRecords
 
     ..  confval:: hideRecords
 
-pages
------
-
-
         ..  _useroptions-hideRecords-pages:
+
+        ..  rubric:: pages
 
         ..  confval:: pages
             :name: useroptions-hideRecords-pages
@@ -747,20 +684,16 @@ pages
 
                 options.hideRecords.pages = 12,45
 
-impexp
-------
-
-
     ..  _useroptions-impexp:
+
+    ..  rubric:: impexp
 
     ..  confval:: impexp
         :name: useroptions-impexp
 
-enableExportForNonAdminUser
----------------------------
-
-
         ..  _useroptions-impexp-enableExportForNonAdminUser:
+
+        ..  rubric:: enableExportForNonAdminUser
 
         ..  confval:: enableExportForNonAdminUser
             :name: useroptions-impexp-enableExportForNonAdminUser
@@ -777,25 +710,19 @@ enableExportForNonAdminUser
             module and export data. This should only be enabled for trustworthy
             backend users, as it might impose a security risk.
 
-liveSearch
-----------
-
-
         ..  _useroptions-impexp-enableImportForNonAdminUser:
+
+    ..  rubric:: liveSearch
 
     ..  confval:: liveSearch
         :name: useroptions-liveSearch
 
-actions
--------
-
+        ..  rubric:: actions
 
         ..  confval:: actions
             :name: useroptions-liveSearch-actions
 
-default
--------
-
+            ..  rubric:: default
 
             ..  confval:: default
                 :name: useroptions-liveSearch-actions-default
@@ -848,9 +775,7 @@ default
                     To use `preview` for a custom record, a valid preview configuration
                     (`TCEMAIN.preview`) must exist for the table.
 
-enableImportForNonAdminUser
----------------------------
-
+        ..  rubric:: enableImportForNonAdminUser
 
         ..  confval:: enableImportForNonAdminUser
             :name: useroptions-impexp-enableImportForNonAdminUser
@@ -866,11 +791,9 @@ enableImportForNonAdminUser
             module and import data. This should only be enabled for trustworthy
             backend users, as it might impose a security risk.
 
-mayNotCreateEditBookmarks
--------------------------
-
-
     ..  _useroptions-mayNotCreateEditBookmarks:
+
+    ..  rubric:: mayNotCreateEditBookmarks
 
     ..  confval:: mayNotCreateEditBookmarks
         :name: useroptions-mayNotCreateEditBookmarks
@@ -878,12 +801,9 @@ mayNotCreateEditBookmarks
 
         If set, the user can not create or edit bookmarks.
 
-noThumbsInEB
-------------
-
-
-
     ..  _useroptions-noThumbsInEB:
+
+    ..  rubric:: noThumbsInEB
 
     ..  confval:: noThumbsInEB
         :name: useroptions-noThumbsInEB
@@ -891,23 +811,18 @@ noThumbsInEB
 
         If set, then image thumbnails are not shown in the element browser.
 
-pageTree
---------
-
-
     ..  _useroptions-overridePageModule:
 
-
     ..  _useroptions-pageTree:
+
+    ..  rubric:: pageTree
 
     ..  confval:: pageTree
         :name: useroptions-pageTree
 
-altElementBrowserMountPoints
-----------------------------
-
-
         ..  _useroptions-pageTree-altElementBrowserMountPoints:
+
+        ..  rubric:: altElementBrowserMountPoints
 
         ..  confval:: altElementBrowserMountPoints
             :name: useroptions-pageTree-altElementBrowserMountPoints
@@ -932,12 +847,9 @@ altElementBrowserMountPoints
 
                 options.pageTree.altElementBrowserMountPoints = 34,123
 
-altElementBrowserMountPoints.append
------------------------------------
-
-
-
         ..  _useroptions-pageTree-altElementBrowserMountPoints-append:
+
+        ..  rubric:: altElementBrowserMountPoints.append
 
         ..  confval:: altElementBrowserMountPoints.append
             :name: useroptions-pageTree-altElementBrowserMountPoints-append
@@ -957,11 +869,9 @@ altElementBrowserMountPoints.append
                 options.pageTree.altElementBrowserMountPoints = 34,123
                 options.pageTree.altElementBrowserMountPoints.append = 1
 
-doktypesToShowInNewPageDragArea
--------------------------------
-
-
         ..  _useroptions-pageTree-doktypesToShowInNewPageDragArea:
+
+        ..  rubric:: doktypesToShowInNewPageDragArea
 
         ..  confval:: doktypesToShowInNewPageDragArea
             :name: useroptions-pageTree-doktypesToShowInNewPageDragArea
@@ -978,11 +888,9 @@ doktypesToShowInNewPageDragArea
                 Remove this option from your configuration; the page tree now automatically
                 determines available doktypes based on the user's group permissions.
 
-excludeDoktypes
----------------
-
-
         ..  _useroptions-pageTree-excludeDoktypes:
+
+        ..  rubric:: excludeDoktypes
 
         ..  confval:: excludeDoktypes
             :name: useroptions-pageTree-excludeDoktypes
@@ -1001,11 +909,9 @@ excludeDoktypes
 
                 options.pageTree.excludeDoktypes = 254,1
 
-label.<page-id>
----------------
-
-
         ..  _useroptions-pageTree-label:
+
+        ..  rubric:: label.<page-id>
 
         ..  confval:: label.<page-id>
             :name: useroptions-pageTree-label
@@ -1040,10 +946,9 @@ label.<page-id>
 
         ..  todo:: does this still work with site configuration?
 
-showDomainNameWithTitle
------------------------
-
         ..  _useroptions-pageTree-showDomainNameWithTitle:
+
+        ..  rubric:: showDomainNameWithTitle
 
         ..  confval:: showDomainNameWithTitle
             :name: useroptions-pageTree-showDomainNameWithTitle
@@ -1054,11 +959,9 @@ showDomainNameWithTitle
             pages that have :guilabel:`Is root of web site?` checked in the page properties.
             Useful if there are several domains in one page tree.
 
-searchByFrontendUri
--------------------
-
-
         ..  _useroptions-pageTree-searchByFrontendUri:
+
+        ..  rubric:: searchByFrontendUri
 
         ..  confval:: searchByFrontendUri
             :name: useroptions-pageTree-searchByFrontendUri
@@ -1077,11 +980,9 @@ searchByFrontendUri
             the page tree toolbar menu. The preference is stored in the backend
             user configuration, allowing each user to customize their search behavior.
 
-searchInTranslatedPages
------------------------
-
-
         ..  _useroptions-pageTree-searchInTranslatedPages:
+
+        ..  rubric:: searchInTranslatedPages
 
         ..  confval:: searchInTranslatedPages
             :name: useroptions-pageTree-searchInTranslatedPages
@@ -1096,12 +997,9 @@ searchInTranslatedPages
             multilingual installations. User permissions (language restrictions) and
             workspace context are respected.
 
-showNavTitle
-------------
-
-
-
         ..  _useroptions-pageTree-showNavTitle:
+
+        ..  rubric:: showNavTitle
 
         ..  confval:: showNavTitle
             :name: useroptions-pageTree-showNavTitle
@@ -1112,12 +1010,9 @@ showNavTitle
             instead of the normal page title. The page title is shown in a
             tooltip if the mouse hovers the navigation title.
 
-showPageIdWithTitle
--------------------
-
-
-
         ..  _useroptions-pageTree-showPageIdWithTitle:
+
+        ..  rubric:: showPageIdWithTitle
 
         ..  confval:: showPageIdWithTitle
             :name: useroptions-pageTree-showPageIdWithTitle
@@ -1127,12 +1022,9 @@ showPageIdWithTitle
             If set, the titles in the page tree will have their ID numbers printed
             before the title.
 
-showPathAboveMounts
--------------------
-
-
-
         ..  _useroptions-pageTree-showPathAboveMounts:
+
+        ..  rubric:: showPathAboveMounts
 
         ..  confval:: showPathAboveMounts
             :name: useroptions-pageTree-showPathAboveMounts
@@ -1148,11 +1040,9 @@ showPathAboveMounts
 
                 Active user db mount
 
-passwordReset
--------------
-
-
     ..  _useroptions-passwordReset:
+
+    ..  rubric:: passwordReset
 
     ..  confval:: passwordReset
         :name: useroptions-passwordReset
@@ -1182,11 +1072,9 @@ passwordReset
 
             $GLOBALS['TYPO3_CONF_VARS']['BE']['passwordReset'] = false
 
-saveClipboard
--------------
-
-
     ..  _useroptions-saveClipboard:
+
+    ..  rubric:: saveClipboard
 
     ..  confval:: saveClipboard
         :name: useroptions-saveClipboard
@@ -1195,12 +1083,9 @@ saveClipboard
         If set, the clipboard content will be preserved for the next login.
         Normally the clipboard content lasts only during the session.
 
-saveDocNew
-----------
-
-
-
     ..  _useroptions-saveDocNew:
+
+    ..  rubric:: saveDocNew
 
     ..  confval:: saveDocNew
         :name: useroptions-saveDocNew
@@ -1226,11 +1111,9 @@ saveDocNew
             options.saveDocNew = 0
             options.saveDocNew.tt_content = top
 
-saveDocView
------------
-
-
     ..  _useroptions-saveDocView:
+
+    ..  rubric:: saveDocView
 
     ..  confval:: saveDocView
         :name: useroptions-saveDocView
@@ -1244,11 +1127,9 @@ saveDocView
         Any value set for a single table will override the default value set for
         :typoscript:`saveDocView`.
 
-showDuplicate
--------------
-
-
     ..  _useroptions-showDuplicate:
+
+    ..  rubric:: showDuplicate
 
     ..  confval:: showDuplicate
         :name: useroptions-showDuplicate
@@ -1262,12 +1143,9 @@ showDuplicate
         Any value set for a single table will override the default value set for
         :typoscript:`showDuplicate`.
 
-showHistory
------------
-
-
-
     ..  _useroptions-showHistory:
+
+    ..  rubric:: showHistory
 
     ..  confval:: showHistory
         :name: useroptions-showHistory
@@ -1280,9 +1158,7 @@ showHistory
         Any value set for a single table will override the default value set for
         :typoscript:`showHistory`.
 
-hideSets
---------
-
+    ..  rubric:: hideSets
 
     ..  confval:: hideSets
         :name: useroptions-hideSets

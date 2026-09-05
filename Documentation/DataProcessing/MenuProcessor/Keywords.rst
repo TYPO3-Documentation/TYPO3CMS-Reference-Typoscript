@@ -25,11 +25,10 @@ Properties
     :type:
     :Default:
 
+..  _hmenu-special-keywords-value:
+
 special.value
 -------------
-
-
-..  _hmenu-special-keywords-value:
 
 ..  confval:: special.value
     :name: hmenu-keywords-special-value
@@ -38,11 +37,10 @@ special.value
 
     UID of the page for which related pages by keyword should be found.
 
+..  _hmenu-special-keywords-mode:
+
 special.mode
 ------------
-
-
-..  _hmenu-special-keywords-mode:
 
 ..  confval:: special.mode
     :name: hmenu-keywords-special-mode
@@ -72,12 +70,10 @@ special.mode
     `starttime`
         Uses the :sql:`starttime` field.
 
+..  _hmenu-special-keywords-entrylevel:
+
 special.entryLevel
 ------------------
-
-
-
-..  _hmenu-special-keywords-entrylevel:
 
 ..  confval:: special.entryLevel
     :name: hmenu-keywords-special-entryLevel
@@ -87,11 +83,10 @@ special.entryLevel
 
     See property :ref:`entryLevel in the HMENU <hmenu-entrylevel>`.
 
+..  _hmenu-special-keywords-depth:
+
 special.depth
 -------------
-
-
-..  _hmenu-special-keywords-depth:
 
 ..  confval:: special.depth
     :name: hmenu-keywords-special-depth
@@ -100,12 +95,10 @@ special.depth
 
     Same as in section :ref:`"special = updated" <hmenu-special-updated-depth>`.
 
+..  _hmenu-special-keywords-limit:
+
 special.limit
 -------------
-
-
-
-..  _hmenu-special-keywords-limit:
 
 ..  confval:: special.limit
     :name: hmenu-keywords-special-limit
@@ -114,12 +107,10 @@ special.limit
 
     Maximal number of items in the menu. Default is 10, maximum is 100.
 
+..  _hmenu-special-keywords-excludenosearchpages:
+
 special.excludeNoSearchPages
 ----------------------------
-
-
-
-..  _hmenu-special-keywords-excludenosearchpages:
 
 ..  confval:: special.excludeNoSearchPages
     :name: hmenu-keywords-special-excludeNoSearchPages
@@ -128,11 +119,10 @@ special.excludeNoSearchPages
 
     If set, pages marked `No search` are not included.
 
+..  _hmenu-special-keywords-begin:
+
 special.begin
 -------------
-
-
-..  _hmenu-special-keywords-begin:
 
 ..  confval:: special.begin
     :name: hmenu-keywords-special-begin
@@ -140,11 +130,10 @@ special.begin
 
     ..  TODO: What does this do?
 
+..  _hmenu-special-keywords-setkeywords:
+
 special.setKeywords
 -------------------
-
-
-..  _hmenu-special-keywords-setkeywords:
 
 ..  confval:: special.setKeywords
     :name: hmenu-keywords-special-setKeywords
@@ -154,11 +143,10 @@ special.setKeywords
     separated list. If this property is defined, it overrides the default,
     which is the keywords of the current page.
 
+..  _hmenu-special-keywords-keywordsfield:
+
 special.keywordsField
 ---------------------
-
-
-..  _hmenu-special-keywords-keywordsfield:
 
 ..  confval:: special.keywordsField
     :name: hmenu-keywords-special-keywordsField
@@ -169,11 +157,10 @@ special.keywordsField
     keywords. Default is the field name :sql:`keyword`. No check is done to see
     if the field you enter here exists, so make sure to enter an existing field.
 
+..  _hmenu-special-keywords-sourcefield:
+
 special.keywordsField.sourceField
 ---------------------------------
-
-
-..  _hmenu-special-keywords-sourcefield:
 
 ..  confval:: special.keywordsField.sourceField
     :name: hmenu-keywords-special-setKeywords-sourceField

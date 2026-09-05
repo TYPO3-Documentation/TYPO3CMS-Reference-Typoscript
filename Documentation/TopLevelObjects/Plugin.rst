@@ -36,9 +36,7 @@ Properties for all frontend plugin types
     :display: table
     :type:
 
-userFunc
---------
-
+    ..  rubric:: userFunc
 
     ..  confval:: userFunc
         :name: plugin-userFunc
@@ -46,9 +44,7 @@ userFunc
 
         Property setting up the :ref:`cobj-user` object of the plugin.
 
-_CSS_DEFAULT_STYLE
-------------------
-
+    ..  rubric:: _CSS_DEFAULT_STYLE
 
     ..  confval:: _CSS_DEFAULT_STYLE
         :name: plugin-css-default-style
@@ -105,9 +101,7 @@ plugins.
     :display: table
     :type:
 
-ignoreFlexFormSettingsIfEmpty
------------------------------
-
+    ..  rubric:: ignoreFlexFormSettingsIfEmpty
 
     ..  confval:: ignoreFlexFormSettingsIfEmpty
         :name: plugin-ignoreFlexFormSettingsIfEmpty
@@ -123,9 +117,7 @@ ignoreFlexFormSettingsIfEmpty
         available to further manipulate the merged configuration after standard
         override logic is applied.
 
-persistence
------------
-
+    ..  rubric:: persistence
 
     ..  confval:: persistence
         :name: plugin-persistence
@@ -134,9 +126,7 @@ persistence
 
         Settings, relevant to the persistence layer of Extbase.
 
-persistence.enableAutomaticCacheClearing
-----------------------------------------
-
+    ..  rubric:: persistence.enableAutomaticCacheClearing
 
     ..  confval:: persistence.enableAutomaticCacheClearing
         :name: plugin-persistence-enableAutomaticCacheClearing
@@ -147,9 +137,7 @@ persistence.enableAutomaticCacheClearing
         Enables the automatic cache clearing when changing data sets (see also
         :ref:`t3coreapi:extbase_caching`).
 
-persistence.storagePid
-----------------------
-
+    ..  rubric:: persistence.storagePid
 
     ..  confval:: persistence.storagePid
         :name: plugin-persistence-storagePid
@@ -159,9 +147,7 @@ persistence.storagePid
         **Only for Extbase plugins**. List of page IDs, from which all records
         are read.
 
-persistence.classes.[classname].newRecordStoragePid
----------------------------------------------------
-
+    ..  rubric:: persistence.classes.[classname].newRecordStoragePid
 
     ..  confval:: persistence.classes.[classname].newRecordStoragePid
         :name: plugin-persistence-classes-classname-newRecordStoragePid
@@ -171,9 +157,7 @@ persistence.classes.[classname].newRecordStoragePid
         **Only for Extbase plugins**. Page ID, where new records for objects
         of the class `[classname]` are stored.
 
-persistence.recursive
----------------------
-
+    ..  rubric:: persistence.recursive
 
     ..  confval:: persistence.recursive
         :name: plugin-persistence-recursive
@@ -183,9 +167,7 @@ persistence.recursive
         **Only for Extbase plugins**. Number of sub-levels of the
         storagePid are read.
 
-view.[settings]
----------------
-
+    ..  rubric:: view.[settings]
 
     ..  confval:: view.[settings]
         :name: plugin-view
@@ -200,9 +182,7 @@ view.[settings]
         The root paths work just like the one in the
         :ref:`FLUIDTEMPLATE <cobj-fluidtemplate-properties-templaterootpaths>`.
 
-view.layoutRootPaths.[array]
-----------------------------
-
+    ..  rubric:: view.layoutRootPaths.[array]
 
     ..  confval:: view.layoutRootPaths.[array]
         :name: plugin-view-layoutRootPaths
@@ -213,9 +193,7 @@ view.layoutRootPaths.[array]
         for all Fluid layouts. If nothing is specified, the path
         :file:`EXT:my_extension/Resources/Private/Layouts` is used.
 
-view.partialRootPaths.[array]
------------------------------
-
+    ..  rubric:: view.partialRootPaths.[array]
 
     ..  confval:: view.partialRootPaths.[array]
         :name: plugin-view-partialRootPaths
@@ -226,9 +204,7 @@ view.partialRootPaths.[array]
         paths for all Fluid partials. If nothing is specified, the path
         :file:`EXT:my_extension/Resources/Private/Partials` is used.
 
-view.templateRootPaths.[array]
-------------------------------
-
+    ..  rubric:: view.templateRootPaths.[array]
 
     ..  confval:: view.templateRootPaths.[array]
         :name: plugin-view-templateRootPaths
@@ -240,9 +216,7 @@ view.templateRootPaths.[array]
         plugin. If nothing is specified, the path
         :file:`EXT:my_extension/Resources/Private/Templates` is used.
 
-view.pluginNamespace
---------------------
-
+    ..  rubric:: view.pluginNamespace
 
     ..  confval:: view.pluginNamespace
         :name: plugin-view-pluginNamespace
@@ -253,9 +227,7 @@ view.pluginNamespace
         Use this to shorten the Extbase default plugin namespace or to access
         arguments from other extensions by setting this option to their namespace.
 
-mvc.[setting]
--------------
-
+    ..  rubric:: mvc.[setting]
 
     ..  confval:: mvc.[setting]
         :name: plugin-mvc
@@ -263,9 +235,7 @@ mvc.[setting]
 
         **Only for Extbase plugins**. These are useful MVC settings about error handling:
 
-mvc.callDefaultActionIfActionCantBeResolved
--------------------------------------------
-
+    ..  rubric:: mvc.callDefaultActionIfActionCantBeResolved
 
     ..  confval:: mvc.callDefaultActionIfActionCantBeResolved
         :name: plugin-mvc-callDefaultActionIfActionCantBeResolved
@@ -276,9 +246,7 @@ mvc.callDefaultActionIfActionCantBeResolved
         **Only for Extbase plugins**. If set, causes the controller to show
         its default action if the called action is not allowed by the controller.
 
-mvc.throwPageNotFoundExceptionIfActionCantBeResolved
-----------------------------------------------------
-
+    ..  rubric:: mvc.throwPageNotFoundExceptionIfActionCantBeResolved
 
     ..  confval:: mvc.throwPageNotFoundExceptionIfActionCantBeResolved
         :name: plugin-mvc-throwPageNotFoundExceptionIfActionCantBeResolved
@@ -289,9 +257,7 @@ mvc.throwPageNotFoundExceptionIfActionCantBeResolved
         Same as :ref:`setup-plugin-mvc-callDefaultActionIfActionCantBeResolved`
         but this will raise a "page not found" error.
 
-mvc.showPageNotFoundIfTargetNotFoundException
----------------------------------------------
-
+    ..  rubric:: mvc.showPageNotFoundIfTargetNotFoundException
 
     ..  confval:: mvc.showPageNotFoundIfTargetNotFoundException
         :name: plugin-mvc-showPageNotFoundIfTargetNotFoundException
@@ -311,9 +277,7 @@ mvc.showPageNotFoundIfTargetNotFoundException
         `plugin.tx_yourextension.mvc.showPageNotFoundIfTargetNotFoundException` /
         `plugin.tx_yourextension_pluginName.mvc.showPageNotFoundIfTargetNotFoundException`.
 
-mvc.showPageNotFoundIfRequiredArgumentIsMissingException
---------------------------------------------------------
-
+    ..  rubric:: mvc.showPageNotFoundIfRequiredArgumentIsMissingException
 
     ..  confval:: mvc.showPageNotFoundIfRequiredArgumentIsMissingException
         :name: plugin-mvc-showPageNotFoundIfRequiredArgumentIsMissingException
@@ -336,9 +300,7 @@ mvc.showPageNotFoundIfRequiredArgumentIsMissingException
         :php:`ActionController->handleArgumentMappingExceptions()` to individually operate
         on invalid arguments.
 
-format
-------
-
+    ..  rubric:: format
 
     ..  confval:: format
         :name: plugin-format
@@ -353,9 +315,7 @@ format
         Define the default file ending of the template files. The template files
         have to take care of creating the desired format output.
 
-_LOCAL_LANG.[lang-key].[label-key]
-----------------------------------
-
+    ..  rubric:: _LOCAL_LANG.[lang-key].[label-key]
 
     ..  confval:: _LOCAL_LANG.[lang-key].[label-key]
         :name: plugin-local-lang
@@ -378,9 +338,7 @@ _LOCAL_LANG.[lang-key].[label-key]
         the plugin folder in the file system can be used to get an overview of
         the entries the extension uses.
 
-settings.[setting]
-------------------
-
+    ..  rubric:: settings.[setting]
 
     ..  confval:: settings.[setting]
         :name: plugin-settings

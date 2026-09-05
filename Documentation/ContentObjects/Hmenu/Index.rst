@@ -39,11 +39,9 @@ Properties
     :display: table
     :type:
 
-1, 2, 3, ...
-------------
-
-
     ..  _hmenu-number:
+
+    ..  rubric:: 1, 2, 3, ...
 
     ..  confval:: 1, 2, 3, ...
         :name: hmenu-array
@@ -62,11 +60,9 @@ Properties
 
         TYPO3 offers :ref:`the menu object TMENU <menu-objects>`.
 
-cache_period
-------------
-
-
     ..  _hmenu-cache-period:
+
+    ..  rubric:: cache_period
 
     ..  confval:: cache_period
         :name: hmenu-cache-period
@@ -81,11 +77,9 @@ cache_period
 
         3) 86400 (= 1 day)
 
-cache
------
-
-
     ..  _hmenu-cache:
+
+    ..  rubric:: cache
 
     ..  confval:: cache
         :name: hmenu-cache
@@ -93,11 +87,9 @@ cache
 
         See :ref:`cache function description <cache>` for details.
 
-entryLevel
-----------
-
-
     ..  _hmenu-entrylevel:
+
+    ..  rubric:: entryLevel
 
     ..  confval:: entryLevel
         :name: hmenu-entryLevel
@@ -106,12 +98,10 @@ entryLevel
 
         Defines at which level in the rootLine the menu should start.
 
-special
--------
-
-
     ..  _hmenu-special:
     ..  _hmenu-special-property:
+
+    ..  rubric:: special
 
     ..  confval:: special
         :name: hmenu-special
@@ -122,11 +112,9 @@ special
 
         See the section about the :ref:`.special property <hmenu-special-property>`!
 
-special.value
--------------
-
-
     ..  _hmenu-special-value:
+
+    ..  rubric:: special.value
 
     ..  confval:: special.value
         :name: hmenu-special-value
@@ -136,11 +124,9 @@ special.value
         for depends on the menu type as defined by ".special"; see the
         section about the :ref:`.special property <hmenu-special-property>`!
 
-minItems
---------
-
-
     ..  _hmenu-minitems:
+
+    ..  rubric:: minItems
 
     ..  confval:: minItems
         :name: hmenu-minItems
@@ -154,11 +140,9 @@ minItems
         menu level individually, set the properties in the menu objects (see
         "Common properties" table).
 
-maxItems
---------
-
-
     ..  _hmenu-maxitems:
+
+    ..  rubric:: maxItems
 
     ..  confval:: maxItems
         :name: hmenu-maxItems
@@ -170,11 +154,9 @@ maxItems
         **Note:** Affects all sub menus as well. (See "minItems" for a
         notice.)
 
-begin
------
-
-
     ..  _hmenu-begin:
+
+    ..  rubric:: begin
 
     ..  confval:: begin
         :name: hmenu-begin
@@ -185,11 +167,9 @@ begin
         **Note:** Affects all sub menus as well. (See "minItems" for a
         notice.)
 
-excludeUidList
---------------
-
-
     ..  _hmenu-excludeuidlist:
+
+    ..  rubric:: excludeUidList
 
     ..  confval:: excludeUidList
         :name: hmenu-excludeUidList
@@ -197,11 +177,9 @@ excludeUidList
 
         See :confval:`MenuProcessor-excludeUidList`.
 
-excludeDoktypes
----------------
-
-
     ..  _hmenu-excludedoktypes:
+
+    ..  rubric:: excludeDoktypes
 
     ..  confval:: excludeDoktypes
         :name: hmenu-excludeDoktypes
@@ -210,11 +188,9 @@ excludeDoktypes
 
         See :confval:`MenuProcessor-excludeDoktypes`.
 
-includeNotInMenu
-----------------
-
-
     .. _hmenu-includenotinmenu:
+
+    ..  rubric:: includeNotInMenu
 
     ..  confval:: includeNotInMenu
         :name: hmenu-includeNotInMenu
@@ -222,11 +198,9 @@ includeNotInMenu
 
         See :confval:`MenuProcessor-includeNotInMenu`
 
-alwaysActivePIDlist
--------------------
-
-
     .. _hmenu-alwaysactivepidlist:
+
+    ..  rubric:: alwaysActivePIDlist
 
     ..  confval:: alwaysActivePIDlist
         :name: hmenu-alwaysActivePIDlist
@@ -234,11 +208,9 @@ alwaysActivePIDlist
 
         See :confval:`MenuProcessor-alwaysActivePIDlist`
 
-protectLvar
------------
-
-
     ..  _hmenu-protectlvar:
+
+    ..  rubric:: protectLvar
 
     ..  confval:: protectLvar
         :name: hmenu-protectlvar
@@ -246,11 +218,9 @@ protectLvar
 
         See :confval:`MenuProcessor-protectlvar`.
 
-if
---
-
-
     ..  _hmenu-if:
+
+    ..  rubric:: if
 
     ..  confval:: if
         :name: hmenu-if
@@ -258,10 +228,9 @@ if
 
         If "if" returns false, the menu is not generated.
 
-wrap
-----
-
     ..  _hmenu-wrap:
+
+    ..  rubric:: wrap
 
     ..  confval:: wrap
         :name: hmenu-wrap
@@ -269,11 +238,9 @@ wrap
 
         Wrap for the HMENU.
 
-stdWrap
--------
-
-
     ..  _hmenu-stdwrap:
+
+    ..  rubric:: stdWrap
 
     ..  confval:: stdWrap
         :name: hmenu-stdWrap

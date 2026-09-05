@@ -59,9 +59,7 @@ The following Item states are listed from the least to the highest priority:
     :type:
     :Default:
 
-NO
---
-
+    ..  rubric:: NO
 
     ..  confval:: NO
         :name: tmenu-common-property-no
@@ -72,9 +70,7 @@ NO
         The default "Normal" state rendering of Item. This is required for all
         menus.
 
-IFSUB
------
-
+    ..  rubric:: IFSUB
 
     ..  confval:: IFSUB
         :name: tmenu-common-property-ifsub
@@ -83,9 +79,7 @@ IFSUB
 
         Enable/Configuration for menu items which has subpages.
 
-ACT
----
-
+    ..  rubric:: ACT
 
     ..  confval:: ACT
         :name: tmenu-common-property-act
@@ -94,9 +88,7 @@ ACT
 
         Enable/Configuration for menu items which are found in the rootLine.
 
-ACTIFSUB
---------
-
+    ..  rubric:: ACTIFSUB
 
     ..  confval:: ACTIFSUB
         :name: tmenu-common-property-actifsub
@@ -106,9 +98,7 @@ ACTIFSUB
         Enable/Configuration for menu items which are found in the rootLine
         and have subpages.
 
-CUR
----
-
+    ..  rubric:: CUR
 
     ..  confval:: CUR
         :name: tmenu-common-property-cur
@@ -117,9 +107,7 @@ CUR
 
         Enable/Configuration for a menu item if the item is the current page.
 
-CURIFSUB
---------
-
+    ..  rubric:: CURIFSUB
 
     ..  confval:: CURIFSUB
         :name: tmenu-common-property-curifsub
@@ -129,9 +117,7 @@ CURIFSUB
         Enable/Configuration for a menu item if the item is the current page
         and has subpages.
 
-USR
----
-
+    ..  rubric:: USR
 
     ..  confval:: USR
         :name: tmenu-common-property-usr
@@ -141,9 +127,7 @@ USR
         Enable/Configuration for menu items which are access restricted pages
         that a user has access to.
 
-SPC
----
-
+    ..  rubric:: SPC
 
     ..  confval:: SPC
         :name: tmenu-common-property-spc
@@ -155,9 +139,7 @@ SPC
         Spacers are pages of the doktype "Spacer". These are not viewable
         pages but "placeholders" which can be used to divide menu items.
 
-USERDEF1
---------
-
+    ..  rubric:: USERDEF1
 
     ..  confval:: USERDEF1
         :name: tmenu-common-property-userdef1
@@ -170,9 +152,7 @@ USERDEF1
         a script/user function processing the menu item array. See the property
         :confval:`menu-common-properties-itemArrayProcFunc` of the menu objects.
 
-USERDEF2
---------
-
+    ..  rubric:: USERDEF2
 
     ..  confval:: USERDEF2
         :name: tmenu-common-property-userdef2
@@ -197,9 +177,7 @@ Properties
     :type:
     :Default:
 
-expAll
-------
-
+    ..  rubric:: expAll
 
     ..  confval:: expAll
         :name: menu-common-properties-expAll
@@ -210,9 +188,7 @@ expAll
         has clicked a menu item and the menu folds out the next level. This
         can enable that to happen on all items as default.
 
-sectionIndex
-------------
-
+    ..  rubric:: sectionIndex
 
     ..  confval:: sectionIndex
         :name: menu-common-properties-sectionIndex
@@ -230,9 +206,7 @@ sectionIndex
         This corresponds to the "Menu/Sitemap" content element when "Section
         index" is selected as type.
 
-sectionIndex.type
------------------
-
+        ..  rubric:: sectionIndex.type
 
         ..  confval:: sectionIndex.type
             :name: menu-common-properties-sectionIndex-type
@@ -248,11 +222,7 @@ sectionIndex.type
                 header layout of an element is set to "Hidden" then the
                 page will not appear in the menu.
 
-sectionIndex.includeHiddenHeaders
----------------------------------
-
-
-
+        ..  rubric:: sectionIndex.includeHiddenHeaders
 
         ..  confval:: sectionIndex.includeHiddenHeaders
             :name: menu-common-properties-sectionIndex-includeHiddenHeaders
@@ -262,11 +232,7 @@ sectionIndex.includeHiddenHeaders
              also elements with a header layout set to "Hidden" will appear
              in the menu.
 
-sectionIndex.useColPos
-----------------------
-
-
-
+        ..  rubric:: sectionIndex.useColPos
 
         ..  confval:: sectionIndex.useColPos
             :name: menu-common-properties-sectionIndex-useColPos
@@ -285,9 +251,7 @@ sectionIndex.useColPos
 
                 tt_content.menu.20.3.1.sectionIndex.useColPos = -1
 
-target
-------
-
+    ..  rubric:: target
 
     ..  confval:: target
         :name: menu-common-properties-target
@@ -296,9 +260,7 @@ target
 
         Target of the menu links
 
-forceTypeValue
---------------
-
+    ..  rubric:: forceTypeValue
 
     ..  confval:: forceTypeValue
         :name: menu-common-properties-forceTypeValue
@@ -307,10 +269,7 @@ forceTypeValue
         If set, the `&type` parameter of the link is forced to this value
         regardless of target.
 
-stdWrap
--------
-
-
+    ..  rubric:: stdWrap
 
     ..  confval:: stdWrap
         :name: menu-common-properties-stdWrap
@@ -319,9 +278,7 @@ stdWrap
 
         Wraps the whole block of sub items.
 
-wrap
-----
-
+    ..  rubric:: wrap
 
     ..  confval:: wrap
         :name: menu-common-properties-wrap
@@ -329,9 +286,7 @@ wrap
 
         Wraps the whole block of sub items, but only if there were items in the menu!
 
-IProcFunc
----------
-
+    ..  rubric:: IProcFunc
 
     ..  confval:: IProcFunc
         :name: menu-common-properties-IProcFunc
@@ -342,9 +297,7 @@ IProcFunc
         compiled by implode()'ing the array $I[parts] in the passed array.
         Thus you may modify this if you need to.
 
-alternativeSortingField
------------------------
-
+    ..  rubric:: alternativeSortingField
 
     ..  confval:: alternativeSortingField
         :name: menu-common-properties-alternativeSortingField
@@ -360,9 +313,7 @@ alternativeSortingField
         This property works with normal menus, sectionsIndex menus and
         special-menus of type "directory".
 
-minItems
---------
-
+    ..  rubric:: minItems
 
     ..  confval:: minItems
         :name: menu-common-properties-minItems
@@ -374,9 +325,7 @@ minItems
 
         Takes precedence over HMENU property :ref:`hmenu-minitems`.
 
-maxItems
---------
-
+    ..  rubric:: maxItems
 
     ..  confval:: maxItems
         :name: menu-common-properties-maxItems
@@ -386,9 +335,7 @@ maxItems
 
         Takes precedence over HMENU property :ref:`hmenu-maxitems`.
 
-begin
------
-
+    ..  rubric:: begin
 
     ..  confval:: begin
         :name: menu-common-properties-begin
@@ -396,9 +343,7 @@ begin
 
         The first item in the menu.
 
-debugItemConf
--------------
-
+    ..  rubric:: debugItemConf
 
     ..  confval:: debugItemConf
         :name: menu-common-properties-debugItemConf
@@ -407,9 +352,7 @@ debugItemConf
         Outputs (by the :php:`debug()` function) the configuration arrays for each
         menu item. Useful to debug :ref:`optionsplit` things and such...
 
-overrideId
-----------
-
+    ..  rubric:: overrideId
 
     ..  confval:: overrideId
         :name: menu-common-properties-overrideId
@@ -422,9 +365,7 @@ overrideId
         else, perhaps a shared menu, but wants the menu items to call the same
         page, which then generates a proper output based on the real\_uid.
 
-addParams
----------
-
+    ..  rubric:: addParams
 
     ..  confval:: addParams
         :name: menu-common-properties-addParams
@@ -434,9 +375,7 @@ addParams
 
         Must be rawurlencoded.
 
-showAccessRestrictedPages
--------------------------
-
+    ..  rubric:: showAccessRestrictedPages
 
     ..  confval:: showAccessRestrictedPages
         :name: menu-common-properties-showaccessrestrictedpages
@@ -465,9 +404,7 @@ showAccessRestrictedPages
 
         **.ATagParams**: Add custom attributes to the anchor tag.
 
-additionalWhere
----------------
-
+    ..  rubric:: additionalWhere
 
     ..  confval:: additionalWhere
         :name: menu-common-properties-additionalWhere
@@ -476,9 +413,7 @@ additionalWhere
         Adds an additional part to the WHERE clause for this menu.
         Make sure to start the part with "AND "!
 
-itemArrayProcFunc
------------------
-
+    ..  rubric:: itemArrayProcFunc
 
     ..  confval:: itemArrayProcFunc
         :name: menu-common-properties-itemArrayProcFunc
@@ -502,9 +437,7 @@ itemArrayProcFunc
         You can override element states like SPC, IFSUB, ACT, CUR or USR by
         setting the key ITEM\_STATE in the page records.
 
-submenuObjSuffixes
-------------------
-
+    ..  rubric:: submenuObjSuffixes
 
     ..  confval:: submenuObjSuffixes
         :name: menu-common-properties-submenuObjSuffixes

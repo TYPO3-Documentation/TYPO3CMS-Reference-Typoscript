@@ -51,11 +51,10 @@ Properties
     :display: table
     :type:
 
+..  _cobj-user-userFunc:
+
 userFunc
 --------
-
-
-..  _cobj-user-userFunc:
 
 ..  confval:: userFunc
     :name: user-userFunc
@@ -83,11 +82,10 @@ userFunc
     :php:`$_GET` / :php:`$_POST` / :php:`$_SERVER`, or TYPO3’s API method
     :php:`GeneralUtility::_GP()`.
 
+..  _cobj-user-defined-properties:
+
 (properties you define)
 -----------------------
-
-
-..  _cobj-user-defined-properties:
 
 ..  confval:: (properties you define)
     :name: user-defined-properties
@@ -100,21 +98,19 @@ userFunc
     passed to your function (in the second parameter). This allows you to
     process them further in any way you wish.
 
+..  _cobj-user-stdWrap:
+
 stdWrap
 -------
-
-
-..  _cobj-user-stdWrap:
 
 ..  confval:: stdWrap
     :name: user-stdWrap
     :type: :ref:`stdWrap`.
 
+..  _cobj-user-cache:
+
 cache
 -----
-
-
-..  _cobj-user-cache:
 
 ..  confval:: cache
     :name: user-cache

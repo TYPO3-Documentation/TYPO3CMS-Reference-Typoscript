@@ -29,9 +29,7 @@ Options
     :type:
     :Default:
 
-as
---
-
+    ..  rubric:: as
 
     ..  confval:: as
         :name: PageContentFetchingProcessor-as
@@ -41,9 +39,7 @@ as
 
         Name for the variable in the Fluid template.
 
-if
---
-
+    ..  rubric:: if
 
     ..  confval:: if
         :name: PageContentFetchingProcessor-if

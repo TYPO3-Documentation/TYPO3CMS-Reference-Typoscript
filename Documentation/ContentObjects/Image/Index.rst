@@ -35,11 +35,10 @@ Properties
     :display: table
     :type:
 
+..  _cobj-image-cache:
+
 cache
 -----
-
-
-..  _cobj-image-cache:
 
 ..  confval:: cache
     :name: image-cache
@@ -47,11 +46,10 @@ cache
 
     See :ref:`cache function description <cache>` for details.
 
+..  _cobj-image-if:
+
 if
 --
-
-
-..  _cobj-image-if:
 
 ..  confval:: if
     :name: image-if
@@ -59,23 +57,19 @@ if
 
     If "if" returns false, the image is not shown!
 
+..  _cobj-image-file:
+
 file
 ----
-
-
-
-..  _cobj-image-file:
 
 ..  confval:: file
     :name: image-file
     :type: :ref:`->imgResource <imgresource>`
 
+..  _cobj-image-params:
+
 params
 ------
-
-
-
-..  _cobj-image-params:
 
 ..  confval:: params
     :name: image-params
@@ -83,12 +77,10 @@ params
 
     HTML <IMG> parameters
 
+..  _cobj-image-altText:
+
 altText
 -------
-
-
-
-..  _cobj-image-altText:
 
 ..  confval:: altText
     :name: image-altText
@@ -96,22 +88,19 @@ altText
 
     If no alt text is specified, an empty alt text will be used.
 
+..  _cobj-image-titleText:
+
 titleText
 ---------
-
-
-..  _cobj-image-titleText:
 
 ..  confval:: titleText
     :name: image-titleText
     :type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
 
+..  _cobj-image-emptyTitleHandling:
+
 emptyTitleHandling
 ------------------
-
-
-
-..  _cobj-image-emptyTitleHandling:
 
 ..  confval:: emptyTitleHandling
     :name: image-emptyTitleHandling
@@ -123,10 +112,10 @@ emptyTitleHandling
 
 .. index:: IMAGE; layoutKey
 
+.. _cobj-image-layoutkey:
+
 layoutKey
 ---------
-
-.. _cobj-image-layoutkey:
 
 ..  confval:: layoutKey
     :name: image-layoutKey
@@ -181,10 +170,10 @@ layoutKey
 
 .. index:: IMAGE; layout
 
+.. _cobj-image-layout:
+
 layout
 ------
-
-.. _cobj-image-layout:
 
 ..  confval:: layout
     :name: image-layout
@@ -195,10 +184,10 @@ layout
 
 .. index:: IMAGE; layout.layoutKey
 
+.. _cobj-image-layout-layoutkey:
+
 layout.layoutKey
 ----------------
-
-.. _cobj-image-layout-layoutkey:
 
 ..  confval:: layout.layoutKey
     :name: image-layout-layoutkey
@@ -517,12 +506,10 @@ sourceCollection.dataKey.*
     setting the image size, but will be available as additional markers for
     the image template. See the example mediaquery.
 
+..  _cobj-image-linkWrap:
+
 linkWrap
 --------
-
-
-
-..  _cobj-image-linkWrap:
 
 ..  confval:: linkWrap
     :name: image-linkWrap
@@ -530,12 +517,10 @@ linkWrap
 
     (before ".wrap")
 
+..  _cobj-image-imageLinkWrap:
+
 imageLinkWrap
 -------------
-
-
-
-..  _cobj-image-imageLinkWrap:
 
 ..  confval:: imageLinkWrap
     :name: image-imageLinkWrap
@@ -545,11 +530,10 @@ imageLinkWrap
     **not** :ref:`GIFBUILDER <gifbuilder>` (as it works with the original
     image file).
 
+..  _cobj-image-wrap:
+
 wrap
 ----
-
-
-..  _cobj-image-wrap:
 
 ..  confval:: wrap
     :name: image-wrap
@@ -557,11 +541,10 @@ wrap
 
     Wrap for the image tag.
 
+..  _cobj-image-stdWrap:
+
 stdWrap
 -------
-
-
-..  _cobj-image-stdWrap:
 
 ..  confval:: stdWrap
     :name: image-stdWrap
