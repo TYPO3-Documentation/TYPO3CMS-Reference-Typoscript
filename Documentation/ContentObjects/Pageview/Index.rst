@@ -306,10 +306,10 @@ The content of the folder could look like this:
 
 So for backend layout named "with_sidebar", the template file is
 then resolved to
-:file:`EXT:my_sitepackage/Resources/Private/PageView/Pages/With_sidebar.html`.
+:file:`EXT:my_sitepackage/Resources/Private/PageView/Pages/With_sidebar.fluid.html`.
 
 If the backend layout is named "TwoColumns" it is resovled to
-:file:`EXT:my_sitepackage/Resources/Private/PageView/Pages/TwoColumns.html`.
+:file:`EXT:my_sitepackage/Resources/Private/PageView/Pages/TwoColumns.fluid.html`.
 
 For all these templates
 :doc:`partial  <t3viewhelper:Global/Render#viewhelper-argument-typo3-cms-fluid-viewhelpers-renderviewhelper-partial>`
