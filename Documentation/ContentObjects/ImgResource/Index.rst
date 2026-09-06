@@ -27,6 +27,9 @@ Properties
 
 ..  _cobj-img-resource-cache:
 
+cache
+-----
+
 ..  confval:: cache
     :name: img-resource-cache
     :type: :ref:`cache <cache>`
@@ -35,12 +38,17 @@ Properties
 
 ..  _cobj-img-resource-file:
 
+file
+----
+
 ..  confval:: file
     :name: img-resource-file
     :type: :ref:`->imgResource <imgresource>`
 
-
 ..  _cobj-img-resource-stdWrap:
+
+stdWrap
+-------
 
 ..  confval:: stdWrap
     :name: img-resource-stdWrap

@@ -25,14 +25,19 @@ Properties
 
 ..  _cobj-files-cache:
 
+cache
+-----
+
 ..  confval:: cache
     :name: files-cache
     :type: :ref:`cache <cache>`
 
     See :ref:`cache function description <cache>` for details.
 
-
 .. _cobj-files-files:
+
+files
+-----
 
 ..  confval:: files
     :name: files-files
@@ -48,8 +53,10 @@ Properties
         page.10 = FILES
         page.10.files = 12,15,16
 
-
 .. _cobj-files-references:
+
+references
+----------
 
 ..  confval:: references
     :name: files-references
@@ -93,8 +100,10 @@ Properties
 
     This will fetch all items related to the page.media field.
 
-
 .. _cobj-files-collections:
+
+collections
+-----------
 
 ..  confval:: collections
     :name: files-collections
@@ -103,8 +112,10 @@ Properties
     Comma-separated list of :sql:`sys_file_collection` UIDs, which
     are loaded into the :typoscript:`FILES` object.
 
-
 .. _cobj-files-folders:
+
+folders
+-------
 
 ..  confval:: folders
     :name: files-folders
@@ -146,8 +157,10 @@ Properties
            }
         }
 
-
 .. _cobj-files-sorting:
+
+sorting
+-------
 
 ..  confval:: sorting
     :name: files-sorting
@@ -155,8 +168,10 @@ Properties
 
     Name of the field, which should be used to sort the files.
 
-
 .. _cobj-files-sorting-direction:
+
+sorting.direction
+-----------------
 
 ..  confval:: sorting.direction
     :name: files-sorting-direction
@@ -169,6 +184,9 @@ Properties
 
 .. _cobj-files-begin:
 
+begin
+-----
+
 ..  confval:: begin
     :name: files-begin
     :type: :ref:`data-type-integer` / :ref:`stdWrap <stdwrap>`
@@ -176,8 +194,10 @@ Properties
     The first item to return. If not set (default), items beginning
     with the first one are returned.
 
-
 .. _cobj-files-maxItems:
+
+maxItems
+--------
 
 ..  confval:: maxItems
     :name: files-maxItems
@@ -188,8 +208,10 @@ Properties
     together exceed the number of available items, no items beyond the
     last available item will be returned.
 
-
 .. _cobj-files-renderObj:
+
+renderObj
+---------
 
 ..  confval:: renderObj
     :name: files-renderObj
@@ -213,8 +235,10 @@ Properties
 
     This returns the size of the current file.
 
-
 .. _cobj-files-stdWrap:
+
+stdWrap
+-------
 
 ..  confval:: stdWrap
     :name: files-stdWrap
@@ -224,10 +248,10 @@ Properties
 .. index:: FILES; references
 .. _cobj-files-references-sub:
 
+.. _cobj-files-references-table:
+
 Special key: "references"
 =========================
-
-.. _cobj-files-references-table:
 
 ..  confval:: references.table
     :name: files-references-table
@@ -235,8 +259,10 @@ Special key: "references"
 
     The table name of the table having the file field.
 
-
 .. _cobj-files-references-uid:
+
+references.uid
+--------------
 
 ..  confval:: references.uid
     :name: files-references-uid
@@ -244,8 +270,10 @@ Special key: "references"
 
     The UID of the record from which to fetch the referenced files.
 
-
 .. _cobj-files-references-fieldName:
+
+references.fieldName
+--------------------
 
 ..  confval:: references.fieldName
     :name: files-references-fieldName
@@ -257,7 +285,6 @@ Special key: "references"
 
 Examples
 =========
-
 
 .. _cobj-files-examples-files:
 

@@ -32,6 +32,8 @@ Options:
 
     ..  _DatabaseQueryProcessor-if:
 
+    ..  rubric:: if
+
     ..  confval:: if
         :name: DatabaseQueryProcessor-if
         :Required: false
@@ -40,8 +42,9 @@ Options:
 
         Only if the condition is met the data processor is executed.
 
-
     ..  _DatabaseQueryProcessor-table:
+
+    ..  rubric:: table
 
     ..  confval:: table
         :name: DatabaseQueryProcessor-table
@@ -53,6 +56,8 @@ Options:
 
     ..  _DatabaseQueryProcessor-as:
 
+    ..  rubric:: as
+
     ..  confval:: as
         :name: DatabaseQueryProcessor-as
         :Required: false
@@ -62,6 +67,8 @@ Options:
         The variable's name to be used in the Fluid template.
 
     ..  _DatabaseQueryProcessor-dataProcessing:
+
+    ..  rubric:: dataProcessing
 
     ..  confval:: dataProcessing
         :name: DatabaseQueryProcessor-dataProcessing

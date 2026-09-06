@@ -37,6 +37,10 @@ Properties
     :display: table
     :type:
 
+source
+------
+
+
 ..  index:: RECORDS; source
 ..  _cobj-records-properties-source:
 
@@ -54,7 +58,11 @@ Properties
 
 
 .. index:: RECORDS; categories
+
 .. _cobj-records-properties-categories:
+
+categories
+----------
 
 ..  confval:: categories
     :name: records-categories
@@ -75,6 +83,9 @@ Properties
 
 ..  _cobj-records-categories-relation:
 
+categories.relation
+-------------------
+
 ..  confval:: categories.relation
     :name: records-categories-relation
 
@@ -84,7 +95,11 @@ Properties
 
 
 .. index:: RECORDS; tables
+
 .. _cobj-records-properties-tables:
+
+tables
+------
 
 ..  confval:: tables
     :name: records-tables
@@ -111,7 +126,11 @@ Properties
 
 
 .. index:: RECORDS; conf
+
 .. _cobj-records-properties-conf:
+
+conf.[*table name*]
+-------------------
 
 ..  confval:: conf.[*table name*]
     :name: records-conf
@@ -126,7 +145,11 @@ Properties
 
 
 .. index:: RECORDS; dontCheckPid
+
 .. _cobj-records-properties-dontcheckpid:
+
+dontCheckPid
+------------
 
 ..  confval:: dontCheckPid
     :name: records-dontCheckPid
@@ -136,8 +159,10 @@ Properties
     Normally a record cannot be selected, if its parent page (pid) is not
     accessible for the website user. This option disables that check.
 
-
 .. _cobj-records-properties-wrap:
+
+wrap
+----
 
 ..  confval:: wrap
     :name: records-wrap
@@ -145,8 +170,10 @@ Properties
 
     Wraps the output. Executed before :ref:`stdWrap <cobj-records-properties-stdwrap>`.
 
-
 .. _cobj-records-properties-stdwrap:
+
+stdWrap
+-------
 
 ..  confval:: stdWrap
     :name: records-stdWrap
@@ -154,8 +181,10 @@ Properties
 
     Executed after :ref:`wrap <cobj-records-properties-wrap>`.
 
-
 .. _cobj-records-properties-cache:
+
+cache
+-----
 
 ..  confval:: cache
     :name: records-cache

@@ -37,6 +37,9 @@ Properties
 
 ..  _cobj-image-cache:
 
+cache
+-----
+
 ..  confval:: cache
     :name: image-cache
     :type: :ref:`cache <cache>`
@@ -45,21 +48,28 @@ Properties
 
 ..  _cobj-image-if:
 
+if
+--
+
 ..  confval:: if
     :name: image-if
     :type: :ref:`->if <if>`
 
     If "if" returns false, the image is not shown!
 
-
 ..  _cobj-image-file:
+
+file
+----
 
 ..  confval:: file
     :name: image-file
     :type: :ref:`->imgResource <imgresource>`
 
-
 ..  _cobj-image-params:
+
+params
+------
 
 ..  confval:: params
     :name: image-params
@@ -67,8 +77,10 @@ Properties
 
     HTML <IMG> parameters
 
-
 ..  _cobj-image-altText:
+
+altText
+-------
 
 ..  confval:: altText
     :name: image-altText
@@ -78,12 +90,17 @@ Properties
 
 ..  _cobj-image-titleText:
 
+titleText
+---------
+
 ..  confval:: titleText
     :name: image-titleText
     :type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
 
-
 ..  _cobj-image-emptyTitleHandling:
+
+emptyTitleHandling
+------------------
 
 ..  confval:: emptyTitleHandling
     :name: image-emptyTitleHandling
@@ -94,7 +111,11 @@ Properties
     "useAlt" to use the alt attribute instead.
 
 .. index:: IMAGE; layoutKey
+
 .. _cobj-image-layoutkey:
+
+layoutKey
+---------
 
 ..  confval:: layoutKey
     :name: image-layoutKey
@@ -148,7 +169,11 @@ Properties
                  data-###DATAKEY###="###SRC###" ###PARAMS### ###ALTPARAMS######SELFCLOSINGTAGSLASH###>
 
 .. index:: IMAGE; layout
+
 .. _cobj-image-layout:
+
+layout
+------
 
 ..  confval:: layout
     :name: image-layout
@@ -158,7 +183,11 @@ Properties
 
 
 .. index:: IMAGE; layout.layoutKey
+
 .. _cobj-image-layout-layoutkey:
+
+layout.layoutKey
+----------------
 
 ..  confval:: layout.layoutKey
     :name: image-layout-layoutkey
@@ -178,6 +207,10 @@ Properties
           element = <picture>###SOURCECOLLECTION###<img src="###SRC###" ###PARAMS### ###ALTPARAMS### ###SELFCLOSINGTAGSLASH###></picture>
           source = <source srcset="###SRC###" media="###MEDIAQUERY###" ###SELFCLOSINGTAGSLASH###>
         }
+
+layout.layoutKey.element
+------------------------
+
 
 ..  index:: IMAGE; layout.layoutKey.element
 ..  _cobj-image-layout-layoutkey-element:
@@ -212,6 +245,10 @@ Properties
        definition of the sources is declared inside
        :ref:`layout.layoutKey.source <cobj-image-layout-layoutkey-source>`
 
+layout.layoutKey.source
+-----------------------
+
+
 
 ..  index:: IMAGE; layout.layoutKey.source
 ..  _cobj-image-layout-layoutkey-source:
@@ -243,6 +280,10 @@ Properties
     ###SRCSETCANDIDATE###, ###MEDIAQUERY###, ###DATAKEY### are already defined
     as additional datakeys in the out of the box typoscript. Thus can be
     overwritten by your typoscript.
+
+sourceCollection
+----------------
+
 
 
 ..  index:: IMAGE; sourceCollection
@@ -290,6 +331,10 @@ Properties
           }
         }
 
+sourceCollection.dataKey
+------------------------
+
+
 
 ..  index:: IMAGE; sourceCollection.dataKey
 ..  _cobj-image-datakey:
@@ -301,6 +346,10 @@ Properties
     Definition of your image size definition depending on your responsive
     layout, breakpoints and display density.
 
+sourceCollection.dataKey.if
+---------------------------
+
+
 
 ..  index:: IMAGE; sourceCollection.dataKey.if
 ..  _cobj-image-datakey-if:
@@ -311,6 +360,10 @@ Properties
 
     Renders only if the condition is met, this is evaluated before any
     execution of code.
+
+sourceCollection.dataKey.pixelDensity
+-------------------------------------
+
 
 
 ..  index:: IMAGE; sourceCollection.dataKey.pixelDensity
@@ -327,6 +380,10 @@ Properties
     200 the generated image file will have a width of 400 but will be
     treated inside the html code as 200 pixels.
 
+sourceCollection.dataKey.width
+------------------------------
+
+
 
 ..  index:: IMAGE; sourceCollection.dataKey.width
 ..  _cobj-image-datakey-width:
@@ -338,6 +395,10 @@ Properties
          Defines the width for the html code of the image defined in this
          source collection. For the image file itself the width will be multiplied by
          :ref:`dataKey.pixelDensity <cobj-image-datakey-pixeldensity>`.
+
+sourceCollection.dataKey.height
+-------------------------------
+
 
 
 ..  index:: IMAGE; sourceCollection.dataKey.height
@@ -351,6 +412,10 @@ Properties
     source collection. For the image file itself the height will be multiplied by
     :ref:`dataKey.pixelDensity <cobj-image-datakey-pixeldensity>`.
 
+sourceCollection.dataKey.maxW
+-----------------------------
+
+
 
 ..  index:: IMAGE; sourceCollection.dataKey.maxW
 ..  _cobj-image-datakey-maxW:
@@ -362,6 +427,10 @@ Properties
     Defines the maxW for the html code of the image defined in this
     source collection. For the image file itself the maxW will be multiplied by
     :ref:`dataKey.pixelDensity <cobj-image-datakey-pixeldensity>`.
+
+sourceCollection.dataKey.maxH
+-----------------------------
+
 
 
 ..  index:: IMAGE; sourceCollection.dataKey.maxH
@@ -375,6 +444,10 @@ Properties
     source collection. For the image file itself the maxH will be multiplied by
     :ref:`dataKey.pixelDensity <cobj-image-datakey-pixeldensity>`.
 
+sourceCollection.dataKey.minW
+-----------------------------
+
+
 
 ..  index:: IMAGE; sourceCollection.dataKey.minW
 ..  _cobj-image-datakey-minW:
@@ -386,6 +459,10 @@ Properties
     Defines the minW for the html code of the image defined in this
     source collection. For the image file itself the minW will be multiplied by
     :ref:`dataKey.pixelDensity <cobj-image-datakey-pixeldensity>`.
+
+sourceCollection.dataKey.minH
+-----------------------------
+
 
 
 ..  index:: IMAGE; sourceCollection.dataKey.minH
@@ -399,6 +476,10 @@ Properties
     source collection. For the image file itself the minH will be multiplied by
     :ref:`dataKey.pixelDensity <cobj-image-datakey-pixeldensity>`.
 
+sourceCollection.dataKey.quality
+--------------------------------
+
+
 
 ..  index:: IMAGE; sourceCollection.dataKey.quality
 ..  _cobj-image-datakey-quality:
@@ -408,6 +489,10 @@ Properties
     :type: :ref:`data-type-integer`
 
     Defines the quality of the rendered images on a scale from 1-100.
+
+sourceCollection.dataKey.*
+--------------------------
+
 
 
 ..  index:: IMAGE; sourceCollection.dataKey.*
@@ -421,8 +506,10 @@ Properties
     setting the image size, but will be available as additional markers for
     the image template. See the example mediaquery.
 
-
 ..  _cobj-image-linkWrap:
+
+linkWrap
+--------
 
 ..  confval:: linkWrap
     :name: image-linkWrap
@@ -430,8 +517,10 @@ Properties
 
     (before ".wrap")
 
-
 ..  _cobj-image-imageLinkWrap:
+
+imageLinkWrap
+-------------
 
 ..  confval:: imageLinkWrap
     :name: image-imageLinkWrap
@@ -443,6 +532,9 @@ Properties
 
 ..  _cobj-image-wrap:
 
+wrap
+----
+
 ..  confval:: wrap
     :name: image-wrap
     :type: :ref:`wrap <data-type-wrap>` / :ref:`stdWrap <stdwrap>`
@@ -450,6 +542,9 @@ Properties
     Wrap for the image tag.
 
 ..  _cobj-image-stdWrap:
+
+stdWrap
+-------
 
 ..  confval:: stdWrap
     :name: image-stdWrap

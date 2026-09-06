@@ -67,6 +67,8 @@ Properties for getting data
 
     ..  _stdwrap-setContentToCurrent:
 
+    ..  rubric:: setContentToCurrent
+
     ..  confval:: setContentToCurrent
         :name: stdwrap-setContentToCurrent
         :type: :ref:`data-type-boolean` / :ref:`stdWrap`
@@ -74,6 +76,8 @@ Properties for getting data
         Sets the current value to the incoming content of the function.
 
     ..  _stdwrap-addpagecachetags:
+
+    ..  rubric:: addPageCacheTags
 
     ..  confval:: addPageCacheTags
         :name: stdwrap-addpagecachetags
@@ -99,8 +103,9 @@ Properties for getting data
             caching framework use the :ref:`stdwrap-cache`:typoscript:`cache`
             property.
 
-
     ..  _stdwrap-setCurrent:
+
+    ..  rubric:: setCurrent
 
     ..  confval:: setCurrent
         :name: stdwrap-setCurrent
@@ -109,8 +114,9 @@ Properties for getting data
         Sets the "current"-value. This is normally set from an external
         routine, so be careful with this. But it might come in useful.
 
-
     ..  _stdwrap-lang:
+
+    ..  rubric:: lang
 
     ..  confval:: lang
         :name: stdwrap-lang
@@ -132,11 +138,15 @@ Properties for getting data
 
     ..  _stdwrap-data:
 
+    ..  rubric:: data
+
     ..  confval:: data
         :name: stdwrap-data
         :type: :ref:`data-type-gettext` / :ref:`stdWrap`
 
     ..  _stdwrap-field:
+
+    ..  rubric:: field
 
     ..  confval:: field
         :name: stdwrap-field
@@ -169,8 +179,9 @@ Properties for getting data
         unless it is a blank string. If it is a blank string, the value of
         the title field is returned.
 
-
     ..  _stdwrap-current:
+
+    ..  rubric:: current
 
     ..  confval:: current
         :name: stdwrap-current
@@ -178,8 +189,9 @@ Properties for getting data
 
         Sets the content to the "current" value (see :ref:`->split <split>`)
 
-
     ..  _stdwrap-cObject:
+
+    ..  rubric:: cObject
 
     ..  confval:: cObject
         :name: stdwrap-cObject
@@ -187,8 +199,9 @@ Properties for getting data
 
         Loads content from a content object.
 
-
     ..  _stdwrap-numRows:
+
+    ..  rubric:: numRows
 
     ..  confval:: numRows
         :name: stdwrap-numRows
@@ -196,8 +209,9 @@ Properties for getting data
 
         Returns the number of rows resulting from a supplied :sql:`SELECT` query.
 
-
     ..  _stdwrap-preUserFunc:
+
+    ..  rubric:: preUserFunc
 
     ..  confval:: preUserFunc
         :name: stdwrap-preUserFunc
@@ -227,6 +241,8 @@ Properties for overriding and conditions
 
     ..  _stdwrap-override:
 
+    ..  rubric:: override
+
     ..  confval:: override
         :name: stdwrap-override
         :type: :ref:`data-type-string` / :ref:`stdWrap`
@@ -234,15 +250,17 @@ Properties for overriding and conditions
         If `override` returns something other than "" or zero (trimmed), the
         content is loaded with this.
 
-
     ..  _stdwrap-preIfEmptyListNum:
+
+    ..  rubric:: preIfEmptyListNum
 
     ..  confval:: preIfEmptyListNum
         :name: stdwrap-preIfEmptyListNum
         :type: (as ":ref:`stdwrap-listNum`" below)
 
-
     ..  _stdwrap-ifNull:
+
+    ..  rubric:: ifNull
 
     ..  confval:: ifNull
         :name: stdwrap-ifNull
@@ -266,8 +284,9 @@ Properties for overriding and conditions
         This example displays the content of the description field or, if that
         value is :php:`NULL`, the text "No description defined.".
 
-
     ..  _stdwrap-ifEmpty:
+
+    ..  rubric:: ifEmpty
 
     ..  confval:: ifEmpty
         :name: stdwrap-ifEmpty
@@ -276,8 +295,9 @@ Properties for overriding and conditions
         If the trimmed content is empty, the content is loaded
         with :typoscript:`ifEmpty`. Zeros are treated as empty values.
 
-
     ..  _stdwrap-ifBlank:
+
+    ..  rubric:: ifBlank
 
     ..  confval:: ifBlank
         :name: stdwrap-ifBlank
@@ -286,8 +306,9 @@ Properties for overriding and conditions
         Same as :typoscript:`ifEmpty` but the check is done against '' (empty
         string). Zeros are not treated as blank values.
 
-
     ..  _stdwrap-listNum:
+
+    ..  rubric:: listNum
 
     ..  confval:: listNum
         :name: stdwrap-listNum
@@ -335,8 +356,9 @@ Properties for overriding and conditions
             page.10.value = item 1, item 2, item 3, item 4
             page.10.listNum = last – 1
 
-
         ..  _stdwrap-listNum-splitChar:
+
+        ..  rubric:: listNum.splitChar
 
         ..  confval:: listNum.splitChar
             :name: stdwrap-listNum-splitChar
@@ -361,8 +383,9 @@ Properties for overriding and conditions
                    }
                 }
 
-
     ..  _stdwrap-trim:
+
+    ..  rubric:: trim
 
     ..  confval:: trim
         :name: stdwrap-trim
@@ -370,8 +393,9 @@ Properties for overriding and conditions
 
         If set, the PHP-function :php:`trim()` removes whitespace around the value.
 
-
     ..  _stdwrap-strPad:
+
+    ..  rubric:: strPad
 
     ..  confval:: strPad
         :name: stdwrap-strPad
@@ -380,8 +404,9 @@ Properties for overriding and conditions
         Pads the current content to a certain length. You can define the padding
         characters and which side(s) the padding should be added.
 
-
     ..  _stdwrap-stdWrap:
+
+    ..  rubric:: stdWrap
 
     ..  confval:: stdWrap
         :name: stdwrap-stdWrap
@@ -389,8 +414,9 @@ Properties for overriding and conditions
 
         Recursive call to the :typoscript:`stdWrap` function.
 
-
     ..  _stdwrap-required:
+
+    ..  rubric:: required
 
     ..  confval:: required
         :name: stdwrap-required
@@ -403,8 +429,9 @@ Properties for overriding and conditions
 
         If the content is empty, "" is returned.
 
-
     ..  _stdwrap-if:
+
+    ..  rubric:: if
 
     ..  confval:: if
         :name: stdwrap-if
@@ -412,8 +439,9 @@ Properties for overriding and conditions
 
         If the if-object returns false, stdWrap returns "".
 
-
     ..  _stdwrap-fieldRequired:
+
+    ..  rubric:: fieldRequired
 
     ..  confval:: fieldRequired
         :name: stdwrap-fieldRequired
@@ -433,6 +461,8 @@ Properties for parsing data
 
     ..  _stdwrap-csConv:
 
+    ..  rubric:: csConv
+
     ..  confval:: csConv
         :name: stdwrap-csConv
         :type: :ref:`data-type-string` / :ref:`stdWrap`
@@ -440,8 +470,9 @@ Properties for parsing data
         Converts the charset of the string from the charset given as a value to
         the current rendering charset of the frontend (UTF-8).
 
-
     ..  _stdwrap-parseFunc:
+
+    ..  rubric:: parseFunc
 
     ..  confval:: parseFunc
         :name: stdwrap-parseFunc
@@ -517,6 +548,8 @@ Properties for parsing data
 
     ..  _stdwrap-htmlparser:
 
+    ..  rubric:: HTMLparser
+
     ..  confval:: HTMLparser
         :name: stdwrap-htmlparser
         :type: :ref:`data-type-boolean` / :ref:`htmlparser` / :ref:`stdWrap`
@@ -528,15 +561,17 @@ Properties for parsing data
 
         (See :ref:`t3coreapi:rte` for more information about RTE transformations)
 
-
     ..  _stdwrap-split:
+
+    ..  rubric:: split
 
     ..  confval:: split
         :name: stdwrap-split
         :type: :ref:`split` / :ref:`stdWrap`
 
-
     ..  _stdwrap-replacement:
+
+    ..  rubric:: replacement
 
     ..  confval:: replacement
         :name: stdwrap-replacement
@@ -547,8 +582,9 @@ Properties for parsing data
         indices defines the order of actions and thus allows multiple
         replacements at once.
 
-
     ..  _stdwrap-prioriCalc:
+
+    ..  rubric:: prioriCalc
 
     ..  confval:: prioriCalc
         :name: stdwrap-prioriCalc
@@ -581,8 +617,9 @@ Properties for parsing data
             -5 * (-4+6) ^ 2 - 100%7 = 98
             -5 * ((-4+6) ^ 2) - 100%7 = -22
 
-
     ..  _stdwrap-char:
+
+    ..  rubric:: char
 
     ..  confval:: char
         :name: stdwrap-char
@@ -598,8 +635,9 @@ Properties for parsing data
 
             $content = chr((int)$conf['char']);
 
-
     ..  _stdwrap-intval:
+
+    ..  rubric:: intval
 
     ..  confval:: intval
         :name: stdwrap-intval
@@ -611,8 +649,9 @@ Properties for parsing data
 
             $content = intval($content);
 
-
     ..  _stdwrap-hash:
+
+    ..  rubric:: hash
 
     ..  confval:: hash
         :name: stdwrap-hash
@@ -633,8 +672,9 @@ Properties for parsing data
                stdWrap.wrap = <img src="https://www.gravatar.com/avatar/|" />
             }
 
-
     ..  _stdwrap-round:
+
+    ..  rubric:: round
 
     ..  confval:: round
         :name: stdwrap-round
@@ -643,8 +683,9 @@ Properties for parsing data
         Round the value using the selected method to the given number of
         decimals.
 
-
     ..  _stdwrap-numberFormat:
+
+    ..  rubric:: numberFormat
 
     ..  confval:: numberFormat
         :name: stdwrap-numberFormat
@@ -653,8 +694,9 @@ Properties for parsing data
         Format a float value to the number format you need (e.g. useful for
         prices).
 
-
     ..  _stdwrap-date:
+
+    ..  rubric:: date
 
     ..  confval:: date
         :name: stdwrap-date
@@ -692,8 +734,9 @@ Properties for parsing data
             You should consider using the more flexible function
             :ref:`stdwrap-formattedDate`:typoscript:`formattedDate`.
 
-
     ..  _stdwrap-strtotime:
+
+    ..  rubric:: strtotime
 
     ..  confval:: strtotime
         :name: stdwrap-strtotime
@@ -725,9 +768,10 @@ Properties for parsing data
                strftime = %Y-%m-%d
             }
 
-
     ..  _data-type-strftime-conf:
     ..  _stdwrap-strftime:
+
+    ..  rubric:: strftime
 
     ..  confval:: strftime
         :name: stdwrap-strftime
@@ -755,8 +799,9 @@ Properties for parsing data
             You should consider using the more flexible function
             :ref:`stdwrap-formattedDate`:typoscript:`formattedDate`.
 
-
     ..  _stdwrap-formattedDate:
+
+    ..  rubric:: formattedDate
 
     ..  confval:: formattedDate
         :name: stdwrap-formattedDate
@@ -845,8 +890,9 @@ Properties for parsing data
             The timezone will be taken from the setting `date.timezone` in your
             :file:`php.ini`.
 
-
     ..  _stdwrap-age:
+
+    ..  rubric:: age
 
     ..  confval:: age
         :name: stdwrap-age
@@ -883,9 +929,10 @@ Properties for parsing data
             lib.ageFormat.stdWrap.data = page:tstamp
             lib.ageFormat.stdWrap.age = " Minuten | Stunden | Tage | Jahre | Minute | Stunde | Tag | Jahr"
 
-
     ..  _data-type-case:
     ..  _stdwrap-case:
+
+    ..  rubric:: case
 
     ..  confval:: case
         :name: stdwrap-case
@@ -927,8 +974,9 @@ Properties for parsing data
 
             HELLO WORLD!
 
-
     ..  _stdwrap-bytes:
+
+    ..  rubric:: bytes
 
     ..  confval:: bytes
         :name: stdwrap-bytes
@@ -1091,8 +1139,9 @@ Properties for parsing data
                bytes.base = 1024
             }
 
-
     ..  _stdwrap-substring:
+
+    ..  rubric:: substring
 
     ..  confval:: substring
         :name: stdwrap-substring
@@ -1103,8 +1152,9 @@ Properties for parsing data
 
         Uses "UTF-8".
 
-
     ..  _stdwrap-cropHTML:
+
+    ..  rubric:: cropHTML
 
     ..  confval:: cropHTML
         :name: stdwrap-cropHTML
@@ -1118,8 +1168,9 @@ Properties for parsing data
         Note that :typoscript:`stdWrap.crop` should not be used if :typoscript:`stdWrap.cropHTML` is
         already being used.
 
-
     ..  _stdwrap-stripHtml:
+
+    ..  rubric:: stripHtml
 
     ..  confval:: stripHtml
         :name: stdwrap-stripHtml
@@ -1127,8 +1178,9 @@ Properties for parsing data
 
         Strips all HTML tags.
 
-
     ..  _stdwrap-crop:
+
+    ..  rubric:: crop
 
     ..  confval:: crop
         :name: stdwrap-crop
@@ -1170,8 +1222,9 @@ Properties for parsing data
 
         Uses "UTF-8".
 
-
     ..  _stdwrap-rawUrlEncode:
+
+    ..  rubric:: rawUrlEncode
 
     ..  confval:: rawUrlEncode
         :name: stdwrap-rawUrlEncode
@@ -1180,8 +1233,9 @@ Properties for parsing data
         Passes the content through the `rawurlencode() <https://www.php.net/rawurlencode>`_
         PHP function .
 
-
     ..  _stdwrap-htmlSpecialChars:
+
+    ..  rubric:: htmlSpecialChars
 
     ..  confval:: htmlSpecialChars
         :name: stdwrap-htmlSpecialChars
@@ -1192,8 +1246,9 @@ Properties for parsing data
         Additional property :typoscript:`preserveEntities` will preserve entities so that only
         non-entity characters are affected.
 
-
     ..  _stdwrap-encodeForJavaScriptValue:
+
+    ..  rubric:: encodeForJavaScriptValue
 
     ..  confval:: encodeForJavaScriptValue
         :name: stdwrap-encodeForJavaScriptValue
@@ -1219,8 +1274,9 @@ Properties for parsing data
                   wrap = setSearchWord(|);
             }
 
-
     ..  _stdwrap-doubleBrTag:
+
+    ..  rubric:: doubleBrTag
 
     ..  confval:: doubleBrTag
         :name: stdwrap-doubleBrTag
@@ -1228,8 +1284,9 @@ Properties for parsing data
 
         Double line breaks are substituted with this value.
 
-
     ..  _stdwrap-br:
+
+    ..  rubric:: br
 
     ..  confval:: br
         :name: stdwrap-br
@@ -1238,8 +1295,9 @@ Properties for parsing data
         Pass the value through the `nl2br() <https://www.php.net/nl2br>`__ PHP function. This
         converts each line break to a :html:`<br />` or a :html:`<br>` tag depending on doctype.
 
-
     ..  _stdwrap-brTag:
+
+    ..  rubric:: brTag
 
     ..  confval:: brTag
         :name: stdwrap-brTag
@@ -1248,8 +1306,9 @@ Properties for parsing data
         All ASCII codes of "10" (line feed, LF) are substituted with the
         *value* of this property.
 
-
     ..  _stdwrap-encapsLines:
+
+    ..  rubric:: encapsLines
 
     ..  confval:: encapsLines
         :name: stdwrap-encapsLines
@@ -1258,8 +1317,9 @@ Properties for parsing data
         Lets you split the content with :php:`chr(10)` and process each line
         independently. Used to format RTE content .
 
-
     ..  _stdwrap-keywords:
+
+    ..  rubric:: keywords
 
     ..  confval:: keywords
         :name: stdwrap-keywords
@@ -1281,14 +1341,17 @@ Properties for wrapping data
 
     ..  _stdwrap-innerWrap:
 
+    ..  rubric:: innerWrap
+
     ..  confval:: innerWrap
         :name: stdwrap-innerWrap
         :type: :ref:`wrap <data-type-wrap>` / :ref:`stdWrap`
 
         Wraps content.
 
-
     ..  _stdwrap-innerWrap2:
+
+    ..  rubric:: innerWrap2
 
     ..  confval:: innerWrap2
         :name: stdwrap-innerWrap2
@@ -1296,8 +1359,9 @@ Properties for wrapping data
 
         Same as :typoscript:`innerWrap` (but watch the order in which they are executed).
 
-
     ..  _stdwrap-preCObject:
+
+    ..  rubric:: preCObject
 
     ..  confval:: preCObject
         :name: stdwrap-preCObject
@@ -1305,8 +1369,9 @@ Properties for wrapping data
 
         :ref:`stdwrap-cObject`:typoscript:`cObject` prepended the content.
 
-
     ..  _stdwrap-postCObject:
+
+    ..  rubric:: postCObject
 
     ..  confval:: postCObject
         :name: stdwrap-postCObject
@@ -1314,9 +1379,10 @@ Properties for wrapping data
 
         :ref:`stdwrap-cObject`:typoscript:`cObject` appended the content.
 
-
     ..  _data-type-align:
     ..  _stdwrap-wrapAlign:
+
+    ..  rubric:: wrapAlign
 
     ..  confval:: wrapAlign
         :name: stdwrap-wrapAlign
@@ -1326,8 +1392,9 @@ Properties for wrapping data
         Wraps content with :typoscript:`<div style=text-align:[*value*];"> | </div>`
         *if* align is set.
 
-
     ..  _stdwrap-typolink:
+
+    ..  rubric:: typolink
 
     ..  confval:: typolink
         :name: stdwrap-typolink
@@ -1335,8 +1402,9 @@ Properties for wrapping data
 
         Wraps content with a link tag.
 
-
     ..  _stdwrap-wrap:
+
+    ..  rubric:: wrap
 
     ..  confval:: wrap
         :name: stdwrap-wrap
@@ -1346,6 +1414,8 @@ Properties for wrapping data
         - the vertical line)
 
     ..  _stdwrap-noTrimWrap:
+
+    ..  rubric:: noTrimWrap
 
     ..  confval:: noTrimWrap
         :name: stdwrap-noTrimWrap
@@ -1388,8 +1458,9 @@ Properties for wrapping data
         each subpart :typoscript:`noTrimWrap` will then use the "^" as
         special character.
 
-
     ..  _stdwrap-wrap2:
+
+    ..  rubric:: wrap2
 
     ..  confval:: wrap2
         :name: stdwrap-wrap2
@@ -1397,8 +1468,9 @@ Properties for wrapping data
 
         same as :ref:`stdwrap-wrap`:typoscript:`wrap` (but watch the order in which they are executed)
 
-
     ..  _stdwrap-dataWrap:
+
+    ..  rubric:: dataWrap
 
     ..  confval:: dataWrap
         :name: stdwrap-dataWrap
@@ -1418,8 +1490,9 @@ Properties for wrapping data
         This will produce a :html:`<div>` tag around the content with an id attribute
         that contains the id of the current page.
 
-
     ..  _stdwrap-prepend:
+
+    ..  rubric:: prepend
 
     ..  confval:: prepend
         :name: stdwrap-prepend
@@ -1427,8 +1500,9 @@ Properties for wrapping data
 
         :ref:`stdwrap-cObject` prepended to content (before)
 
-
     ..  _stdwrap-append:
+
+    ..  rubric:: append
 
     ..  confval:: append
         :name: stdwrap-append
@@ -1436,8 +1510,9 @@ Properties for wrapping data
 
         :ref:`stdwrap-cObject` appended to content (after)
 
-
     ..  _stdwrap-wrap3:
+
+    ..  rubric:: wrap3
 
     ..  confval:: wrap3
         :name: stdwrap-wrap3
@@ -1445,8 +1520,9 @@ Properties for wrapping data
 
         same as :typoscript:`wrap` (but watch the order in which they are executed)
 
-
     ..  _stdwrap-orderedStdWrap:
+
+    ..  rubric:: orderedStdWrap
 
     ..  confval:: orderedStdWrap
         :name: stdwrap-orderedStdWrap
@@ -1481,8 +1557,9 @@ Properties for wrapping data
 
         This results in "This is a working solution."
 
-
     ..  _stdwrap-outerWrap:
+
+    ..  rubric:: outerWrap
 
     ..  confval:: outerWrap
         :name: stdwrap-outerWrap
@@ -1490,8 +1567,9 @@ Properties for wrapping data
 
         Wraps the complete content
 
-
     ..  _stdwrap-insertData:
+
+    ..  rubric:: insertData
 
     ..  confval:: insertData
         :name: stdwrap-insertData
@@ -1521,8 +1599,9 @@ Properties for wrapping data
         use this to insert data into wraps. Use :ref:`stdwrap-dataWrap`
         :typoscript:`dataWrap` instead.
 
-
     ..  _stdwrap-postUserFunc:
+
+    ..  rubric:: postUserFunc
 
     ..  confval:: postUserFunc
         :name: stdwrap-postUserFunc
@@ -1565,8 +1644,9 @@ Properties for wrapping data
         calling :typoscript:`cObject`, uses functions from
         :php:`ContentObjectRenderer` class.
 
-
     ..  _stdwrap-postUserFuncInt:
+
+    ..  rubric:: postUserFuncInt
 
     ..  confval:: postUserFuncInt
         :name: stdwrap-postUserFuncInt
@@ -1586,8 +1666,9 @@ Properties for wrapping data
 
         Supplied by Jens Ellerbrock
 
-
     ..  _stdwrap-prefixComment:
+
+    ..  rubric:: prefixComment
 
     ..  confval:: prefixComment
         :name: stdwrap-prefixComment
@@ -1620,6 +1701,8 @@ Properties for sanitizing and caching data
     :type:
 
     ..  _stdwrap-htmlSanitize:
+
+    ..  rubric:: htmlSanitize
 
     ..  confval:: htmlSanitize
         :name: stdwrap-htmlSanitize
@@ -1670,8 +1753,9 @@ Properties for sanitizing and caching data
                 // htmlSanitize.build = TYPO3\CMS\Core\Html\DefaultSanitizerBuilder
             }
 
-
     ..  _stdwrap-cache:
+
+    ..  rubric:: cache
 
     ..  confval:: cache
         :name: stdwrap-cache
@@ -1691,6 +1775,8 @@ Properties for debugging data
 
     ..  _stdwrap-debug:
 
+    ..  rubric:: debug
+
     ..  confval:: debug
         :name: stdwrap-debug
         :type: :ref:`data-type-boolean` / :ref:`stdWrap`
@@ -1702,8 +1788,9 @@ Properties for debugging data
 
        Only use this for debugging during development, otherwise output can break.
 
-
     ..  _stdwrap-debugFunc:
+
+    ..  rubric:: debugFunc
 
     ..  confval:: debugFunc
         :name: stdwrap-debugFunc
@@ -1717,8 +1804,9 @@ Properties for debugging data
 
         Only use this for debugging during development, otherwise output can break.
 
-
     ..  _stdwrap-debugData:
+
+    ..  rubric:: debugData
 
     ..  confval:: debugData
         :name: stdwrap-debugData

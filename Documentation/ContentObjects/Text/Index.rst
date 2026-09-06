@@ -31,14 +31,19 @@ Properties
 
 ..  _cobj-text-value:
 
+value
+-----
+
 ..  confval:: value
     :name: text-value
     :type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
 
     Text, which you want to output.
 
-
 ..  _cobj-text-stdWrap:
+
+stdWrap
+-------
 
 ..  confval:: stdWrap
     :name: text-stdWrap
@@ -49,8 +54,10 @@ Properties
     properties consistently to those of the other cObjects by
     accessing them through the property "stdWrap".
 
-
 ..  _cobj-text-cache:
+
+cache
+-----
 
 ..  confval:: cache
     :name: text-cache

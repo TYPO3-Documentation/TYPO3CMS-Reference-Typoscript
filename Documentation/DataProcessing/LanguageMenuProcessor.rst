@@ -33,6 +33,8 @@ Options:
 
     ..  _LanguageMenuProcessor-if:
 
+    ..  rubric:: if
+
     ..  confval:: if
         :name: LanguageMenuProcessor-if
         :Required: false
@@ -41,6 +43,8 @@ Options:
         Only if the condition is met the data processor is executed.
 
     ..  _LanguageMenuProcessor-languages:
+
+    ..  rubric:: languages
 
     ..  confval:: languages
         :name: LanguageMenuProcessor-languages
@@ -53,8 +57,9 @@ Options:
         creation or `auto` to load from the :ref:`site configuration
         <t3coreapi:sitehandling>`.
 
-
     ..  _LanguageMenuProcessor-addQueryString-exclude:
+
+    ..  rubric:: addQueryString.exclude
 
     ..  confval:: addQueryString.exclude
         :name: LanguageMenuProcessor-addQueryString-exclude
@@ -67,6 +72,8 @@ Options:
         menu URLs.
 
     ..  _LanguageMenuProcessor-as:
+
+    ..  rubric:: as
 
     ..  confval:: as
         :name: LanguageMenuProcessor-as

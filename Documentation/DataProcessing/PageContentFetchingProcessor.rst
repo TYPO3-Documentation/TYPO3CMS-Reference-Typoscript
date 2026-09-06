@@ -31,6 +31,8 @@ Options
     :type:
     :Default:
 
+    ..  rubric:: as
+
     ..  confval:: as
         :name: PageContentFetchingProcessor-as
         :Required: false
@@ -38,6 +40,8 @@ Options
         :Default: "content"
 
         Name for the variable in the Fluid template.
+
+    ..  rubric:: if
 
     ..  confval:: if
         :name: PageContentFetchingProcessor-if

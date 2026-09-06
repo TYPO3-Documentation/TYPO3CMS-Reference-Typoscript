@@ -45,6 +45,9 @@ Properties
 
 ..  _cobj-user-userFunc:
 
+userFunc
+--------
+
 ..  confval:: userFunc
     :name: user-userFunc
     :type: :ref:`data-type-function-name`
@@ -68,6 +71,9 @@ Properties
 
 ..  _cobj-user-defined-properties:
 
+(properties you define)
+-----------------------
+
 ..  confval:: (properties you define)
     :name: user-defined-properties
     :type: (the data type you want)
@@ -81,11 +87,17 @@ Properties
 
 ..  _cobj-user-stdWrap:
 
+stdWrap
+-------
+
 ..  confval:: stdWrap
     :name: user-stdWrap
     :type: :ref:`stdWrap`.
 
 ..  _cobj-user-cache:
+
+cache
+-----
 
 ..  confval:: cache
     :name: user-cache

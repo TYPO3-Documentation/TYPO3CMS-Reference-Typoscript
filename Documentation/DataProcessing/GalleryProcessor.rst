@@ -26,6 +26,8 @@ Options:
 
     ..  _GalleryProcessor-if:
 
+    ..  rubric:: if
+
     ..  confval:: if
         :name: GalleryProcessor-if
         :Required: false
@@ -34,8 +36,9 @@ Options:
 
         Only if the condition is met the data processor is executed.
 
-
     ..  _GalleryProcessor-filesProcessedDataKey:
+
+    ..  rubric:: filesProcessedDataKey
 
     ..  confval:: filesProcessedDataKey
         :name: GalleryProcessor-filesProcessedDataKey
@@ -46,8 +49,9 @@ Options:
 
         Key of the array previously processed by the :php:`FilesProcessor`.
 
-
     ..  _GalleryProcessor-numberOfColumns:
+
+    ..  rubric:: numberOfColumns
 
     ..  confval:: numberOfColumns
         :name: GalleryProcessor-numberOfColumns
@@ -60,6 +64,8 @@ Options:
         `imagecols` (:guilabel:`Number of Columns`) if used with content elements.
 
     ..  _GalleryProcessor-mediaOrientation:
+
+    ..  rubric:: mediaOrientation
 
     ..  confval:: mediaOrientation
         :name: GalleryProcessor-mediaOrientation
@@ -82,6 +88,8 @@ Options:
 
     ..  _GalleryProcessor-maxGalleryWidth:
 
+    ..  rubric:: maxGalleryWidth
+
     ..  confval:: maxGalleryWidth
         :name: GalleryProcessor-maxGalleryWidth
         :Required: false
@@ -91,6 +99,8 @@ Options:
         Maximal gallery width in pixels.
 
     ..  _GalleryProcessor-maxGalleryWidthInText:
+
+    ..  rubric:: maxGalleryWidthInText
 
     ..  confval:: maxGalleryWidthInText
         :name: GalleryProcessor-maxGalleryWidthInText
@@ -102,6 +112,8 @@ Options:
 
     ..  _GalleryProcessor-equalMediaHeight:
     ..  _GalleryProcessor-equalMediaWidth:
+
+    ..  rubric:: equalMediaHeight, equalMediaWidth
 
     ..  confval:: equalMediaHeight, equalMediaWidth
         :name: GalleryProcessor-equalMediaHeight
@@ -122,8 +134,9 @@ Options:
 
             Media height and width in the content element Text and Images
 
-
     ..  _GalleryProcessor-columnSpacing:
+
+    ..  rubric:: columnSpacing
 
     ..  confval:: columnSpacing
         :name: GalleryProcessor-columnSpacing
@@ -135,6 +148,8 @@ Options:
         Space between columns in pixels
 
     ..  _GalleryProcessor-borderEnabled:
+
+    ..  rubric:: borderEnabled
 
     ..  confval:: borderEnabled
         :name: GalleryProcessor-borderEnabled
@@ -149,6 +164,8 @@ Options:
 
     ..  _GalleryProcessor-borderWidth:
 
+    ..  rubric:: borderWidth
+
     ..  confval:: borderWidth
         :name: GalleryProcessor-borderWidth
         :Required: false
@@ -160,6 +177,8 @@ Options:
 
     ..  _GalleryProcessor-borderPadding:
 
+    ..  rubric:: borderPadding
+
     ..  confval:: borderPadding
         :name: GalleryProcessor-borderPadding
         :Required: false
@@ -169,8 +188,9 @@ Options:
 
         Padding around the border in pixels.
 
-
     ..  _GalleryProcessor-cropVariant:
+
+    ..  rubric:: cropVariant
 
     ..  confval:: cropVariant
         :name: GalleryProcessor-cropVariant
@@ -183,6 +203,8 @@ Options:
 
     ..  _GalleryProcessor-as:
 
+    ..  rubric:: as
+
     ..  confval:: as
         :name: GalleryProcessor-as
         :Required: false
@@ -192,6 +214,8 @@ Options:
         The variable name to be used in the Fluid template.
 
     ..  _GalleryProcessor-dataProcessing:
+
+    ..  rubric:: dataProcessing
 
     ..  confval:: dataProcessing
         :name: GalleryProcessor-dataProcessing
