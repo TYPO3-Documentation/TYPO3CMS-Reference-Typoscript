@@ -290,5 +290,3 @@ This PHP class performs the dynamic transition from :typoscript:`USER` to :typos
 ..  literalinclude:: _ConvertUserToUserInt.php
     :language: php
     :caption: Classes/UserFunc/PluginRenderer.php
-
-
