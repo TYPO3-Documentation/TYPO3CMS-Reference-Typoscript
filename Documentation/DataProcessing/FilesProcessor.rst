@@ -31,6 +31,8 @@ Options:
 
     ..  _FilesProcessor-if:
 
+    ..  rubric:: if
+
     ..  confval:: if
         :name: FilesProcessor-if
         :Required: false
@@ -40,6 +42,8 @@ Options:
         Only, if the condition is met the data processor is executed.
 
     ..  _FilesProcessor-references:
+
+    ..  rubric:: references
 
     ..  confval:: references
         :name: FilesProcessor-references
@@ -58,6 +62,8 @@ Options:
 
     ..  _FilesProcessor-references-fieldName:
 
+    ..  rubric:: references.fieldName
+
     ..  confval:: references.fieldName
         :name: FilesProcessor-references-fieldName
         :Required: false
@@ -72,6 +78,8 @@ Options:
 
     ..  _FilesProcessor-references-table:
 
+    ..  rubric:: references.table
+
     ..  confval:: references.table
         :name: FilesProcessor-references.table
         :Required: false
@@ -85,6 +93,8 @@ Options:
 
     ..  _FilesProcessor-files:
 
+    ..  rubric:: files
+
     ..  confval:: files
         :name: FilesProcessor-files
         :Required: false
@@ -96,6 +106,8 @@ Options:
         these are treated as uids of files (:sql:`sys_file`).
 
     ..  _FilesProcessor-collections:
+
+    ..  rubric:: collections
 
     ..  confval:: collections
         :name: FilesProcessor-collections
@@ -109,6 +121,8 @@ Options:
         collection are then being added to the output array.
 
     ..  _FilesProcessor-folders:
+
+    ..  rubric:: folders
 
     ..  confval:: folders
         :name: FilesProcessor-folders
@@ -132,6 +146,8 @@ Options:
 
     ..  _FilesProcessor-folders-recursive:
 
+    ..  rubric:: folders.recursive
+
     ..  confval:: folders.recursive
         :name: FilesProcessor-folders-recursive
         :Required: false
@@ -143,6 +159,8 @@ Options:
         recursively.
 
     ..  _FilesProcessor-sorting:
+
+    ..  rubric:: sorting
 
     ..  confval:: sorting
         :name: FilesProcessor-sorting
@@ -156,6 +174,8 @@ Options:
 
     ..  _FilesProcessor-sorting-direction:
 
+    ..  rubric:: sorting.direction
+
     ..  confval:: sorting.direction
         :name: FilesProcessor-sorting-direction
         :Required: false
@@ -166,6 +186,8 @@ Options:
         The sorting direction (:typoscript:`ascending` or :typoscript:`descending`).
 
     ..  _FilesProcessor-as:
+
+    ..  rubric:: as
 
     ..  confval:: as
         :name: FilesProcessor-as

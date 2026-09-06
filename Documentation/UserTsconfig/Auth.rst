@@ -23,6 +23,9 @@ Properties
 
 ..  _user-auth-mfa-required:
 
+auth.mfa.required
+-----------------
+
 ..  confval:: auth.mfa.required
     :name: user-auth-mfa-required
     :type: boolean
@@ -37,6 +40,9 @@ Properties
 
 ..  _user-auth-mfa-disableProviders:
 
+auth.mfa.disableProviders
+-------------------------
+
 ..  confval:: auth.mfa.disableProviders
     :name: auth.mfa.disableProviders
     :type: string, comma separated list of strings
@@ -48,6 +54,9 @@ Properties
     it will be disallowed for the user or user group.
 
 ..  _user-auth-mfa-recommendedProvider:
+
+auth.mfa.recommendedProvider
+----------------------------
 
 ..  confval:: auth.mfa.recommendedProvider
     :name: auth.mfa.recommendedProvider

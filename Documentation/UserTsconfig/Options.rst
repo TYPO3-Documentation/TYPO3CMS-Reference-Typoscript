@@ -29,6 +29,8 @@ Properties
 
     ..  _useroptions-additionalPreviewLanguages:
 
+    ..  rubric:: additionalPreviewLanguages
+
     ..  confval:: additionalPreviewLanguages
         :name: useroptions-additionalPreviewLanguages
         :type: list of sys_language IDs
@@ -40,8 +42,9 @@ Properties
         :yaml:`languageId` property of the
         :ref:`site configuration <t3coreapi:sitehandling-addingLanguages>`.
 
-
     ..  _useroptions-alertPopups:
+
+    ..  rubric:: alertPopups
 
     ..  confval:: alertPopups
         :name: useroptions-alertPopups
@@ -56,8 +59,9 @@ Properties
         *   8 – FE editing
         *   128 – other (not used yet)
 
-
     ..  _useroptions-bookmarkGroups:
+
+    ..  rubric:: bookmarkGroups
 
     ..  confval:: bookmarkGroups
         :name: useroptions-bookmarkGroups
@@ -108,10 +112,14 @@ Properties
 
     ..  _useroptions-clearCache:
 
+    ..  rubric:: clearCache
+
     ..  confval:: clearCache
         :name: useroptions-clearCache
 
         ..  _useroptions-clearCache-all:
+
+        ..  rubric:: all
 
         ..  confval:: all
             :name: useroptions-clearCache-all
@@ -126,6 +134,8 @@ Properties
 
         ..  _useroptions-clearCache-pages:
 
+        ..  rubric:: pages
+
         ..  confval:: pages
             :name: useroptions-clearCache-pages
             :type: boolean
@@ -137,6 +147,8 @@ Properties
 
     ..  _useroptions-clipboardNumberPads:
 
+    ..  rubric:: clipboardNumberPads
+
     ..  confval:: clipboardNumberPads
         :name: useroptions-clipboardNumberPads
         :type: integer (0-20)
@@ -145,6 +157,8 @@ Properties
         This allows you to enter how many pads you want on the clipboard.
 
     ..  _useroptions-contextMenu-key-disableItems:
+
+    ..  rubric:: contextMenu.table.[tableName][.context].disableItems
 
     ..  confval:: contextMenu.table.[tableName][.context].disableItems
         :name: useroptions-contextMenu-key-disableItems
@@ -230,10 +244,14 @@ Properties
 
     ..  _useroptions-dashboard:
 
+    ..  rubric:: dashboard
+
     ..  confval:: dashboard
         :name: useroptions-dashboard
 
         ..  _useroptions-dashboard-dashboardPresetsForNewUsers:
+
+        ..  rubric:: dashboardPresetsForNewUsers
 
         ..  confval:: dashboardPresetsForNewUsers
             :name: useroptions-dashboard-dashboardPresetsForNewUsers
@@ -251,6 +269,8 @@ Properties
                 options.dashboard.dashboardPresetsForNewUsers := addToList(customDashboard)
 
     ..  _useroptions-defaultResourcesViewMode:
+
+    ..  rubric:: defaultResourcesViewMode
 
     ..  confval:: defaultResourcesViewMode
         :name: useroptions-defaultResourcesViewMode
@@ -272,6 +292,8 @@ Properties
             options.defaultResourcesViewMode = list
 
     ..  _useroptions-defaultUploadFolder:
+
+    ..  rubric:: defaultUploadFolder
 
     ..  confval:: defaultUploadFolder
         :name: useroptions-defaultUploadFolder
@@ -299,6 +321,8 @@ Properties
 
     ..  _useroptions-disableDelete:
 
+    ..  rubric:: disableDelete
+
     ..  confval:: disableDelete
         :name: useroptions-disableDelete
         :type: boolean
@@ -318,6 +342,8 @@ Properties
 
     ..  _useroptions-dontMountAdminMounts:
 
+    ..  rubric:: dontMountAdminMounts
+
     ..  confval:: dontMountAdminMounts
         :name: useroptions-dontMountAdminMounts
         :type: boolean
@@ -329,6 +355,8 @@ Properties
 
     ..  _useroptions-enableBookmarks:
 
+    ..  rubric:: enableBookmarks
+
     ..  confval:: enableBookmarks
         :name: useroptions-enableBookmarks
         :type: boolean
@@ -338,10 +366,14 @@ Properties
 
     ..  _useroptions-file_list:
 
+    ..  rubric:: file_list
+
     ..  confval:: file_list
         :name: useroptions-file_list
 
         ..  _useroptions-file_list-enableClipBoard:
+
+        ..  rubric:: enableClipBoard
 
         ..  confval:: enableClipBoard
             :name: useroptions-enableClipBoard
@@ -365,6 +397,8 @@ Properties
                 The checkbox is shown so that the option can be selected by the user.
 
         ..  _useroptions-file_list-displayColumnSelector:
+
+        ..  rubric:: displayColumnSelector
 
         ..  confval:: displayColumnSelector
             :name: useroptions-file_list-displayColumnSelector
@@ -393,6 +427,8 @@ Properties
 
         ..  _useroptions-file_list-enableDisplayThumbnails:
 
+        ..  rubric:: file_list.enableDisplayThumbnails
+
         ..  confval:: file_list.enableDisplayThumbnails
             :name: useroptions-file_list-enableDisplayThumbnails
             :type: list of keywords
@@ -415,6 +451,8 @@ Properties
 
         ..  _useroptions-file_list-filesPerPage:
 
+        ..  rubric:: filesPerPage
+
         ..  confval:: filesPerPage
             :name: useroptions-file_list-filesPerPage
             :type: integer
@@ -426,6 +464,7 @@ Properties
 
         ..  _useroptions-file_list-primaryActions:
 
+        ..  rubric:: primaryActions
 
         ..  confval:: primaryActions
             :name: useroptions-useroptions-file_list-primaryActions
@@ -476,6 +515,8 @@ Properties
 
         ..  _useroptions-file_list-thumbnail-height:
 
+        ..  rubric:: thumbnail.height
+
         ..  confval:: thumbnail.height
             :name: useroptions-file_list-thumbnail-height
             :type: integer
@@ -487,6 +528,8 @@ Properties
 
         ..  _useroptions-file_list-thumbnail-width:
 
+        ..  rubric:: thumbnail.width
+
         ..  confval:: thumbnail.width
             :name: useroptions-file_list-thumbnail-width
             :type: integer
@@ -497,6 +540,8 @@ Properties
             thumbnail width.
 
         ..  _useroptions-file_list-uploader-defaultaction:
+
+        ..  rubric:: uploader.defaultAction
 
         ..  confval:: uploader.defaultAction
             :name: useroptions-file_list-uploader-defaultaction
@@ -516,10 +561,14 @@ Properties
             :typoscript:`replace`
                 Override the file with the uploaded one.
 
+    ..  rubric:: folderTree
+
     ..  confval:: folderTree
         :name: useroptions-folderTree
 
         ..  _useroptions-folderTree-altElementBrowserMountPoints:
+
+        ..  rubric:: altElementBrowserMountPoints
 
         ..  confval:: altElementBrowserMountPoints
             :name: useroptions-folderTree-altElementBrowserMountPoints
@@ -555,6 +604,8 @@ Properties
 
         ..  _useroptions-folderTree-uploadFieldsInLinkBrowser:
 
+        ..  rubric:: uploadFieldsInLinkBrowser
+
         ..  confval:: uploadFieldsInLinkBrowser
             :name: useroptions-folderTree-uploadFieldsInLinkBrowser
             :type: integer
@@ -565,6 +616,8 @@ Properties
             Default value is 3, if set to 0, no upload form will be shown.
 
     ..  _useroptions-hideModules:
+
+    ..  rubric:: hideModules
 
     ..  confval:: hideModules
         :name: useroptions-hideModules
@@ -598,9 +651,13 @@ Properties
 
     ..  _useroptions-hideRecords:
 
+    ..  rubric:: hideRecords
+
     ..  confval:: hideRecords
 
         ..  _useroptions-hideRecords-pages:
+
+        ..  rubric:: pages
 
         ..  confval:: pages
             :name: useroptions-hideRecords-pages
@@ -629,10 +686,14 @@ Properties
 
     ..  _useroptions-impexp:
 
+    ..  rubric:: impexp
+
     ..  confval:: impexp
         :name: useroptions-impexp
 
         ..  _useroptions-impexp-enableExportForNonAdminUser:
+
+        ..  rubric:: enableExportForNonAdminUser
 
         ..  confval:: enableExportForNonAdminUser
             :name: useroptions-impexp-enableExportForNonAdminUser
@@ -651,11 +712,17 @@ Properties
 
         ..  _useroptions-impexp-enableImportForNonAdminUser:
 
+    ..  rubric:: liveSearch
+
     ..  confval:: liveSearch
         :name: useroptions-liveSearch
 
+        ..  rubric:: actions
+
         ..  confval:: actions
             :name: useroptions-liveSearch-actions
+
+            ..  rubric:: default
 
             ..  confval:: default
                 :name: useroptions-liveSearch-actions-default
@@ -708,6 +775,8 @@ Properties
                     To use `preview` for a custom record, a valid preview configuration
                     (`TCEMAIN.preview`) must exist for the table.
 
+        ..  rubric:: enableImportForNonAdminUser
+
         ..  confval:: enableImportForNonAdminUser
             :name: useroptions-impexp-enableImportForNonAdminUser
             :type: boolean
@@ -724,14 +793,17 @@ Properties
 
     ..  _useroptions-mayNotCreateEditBookmarks:
 
+    ..  rubric:: mayNotCreateEditBookmarks
+
     ..  confval:: mayNotCreateEditBookmarks
         :name: useroptions-mayNotCreateEditBookmarks
         :type: boolean
 
         If set, the user can not create or edit bookmarks.
 
-
     ..  _useroptions-noThumbsInEB:
+
+    ..  rubric:: noThumbsInEB
 
     ..  confval:: noThumbsInEB
         :name: useroptions-noThumbsInEB
@@ -741,13 +813,16 @@ Properties
 
     ..  _useroptions-overridePageModule:
 
-
     ..  _useroptions-pageTree:
+
+    ..  rubric:: pageTree
 
     ..  confval:: pageTree
         :name: useroptions-pageTree
 
         ..  _useroptions-pageTree-altElementBrowserMountPoints:
+
+        ..  rubric:: altElementBrowserMountPoints
 
         ..  confval:: altElementBrowserMountPoints
             :name: useroptions-pageTree-altElementBrowserMountPoints
@@ -772,8 +847,9 @@ Properties
 
                 options.pageTree.altElementBrowserMountPoints = 34,123
 
-
         ..  _useroptions-pageTree-altElementBrowserMountPoints-append:
+
+        ..  rubric:: altElementBrowserMountPoints.append
 
         ..  confval:: altElementBrowserMountPoints.append
             :name: useroptions-pageTree-altElementBrowserMountPoints-append
@@ -795,6 +871,8 @@ Properties
 
         ..  _useroptions-pageTree-doktypesToShowInNewPageDragArea:
 
+        ..  rubric:: doktypesToShowInNewPageDragArea
+
         ..  confval:: doktypesToShowInNewPageDragArea
             :name: useroptions-pageTree-doktypesToShowInNewPageDragArea
             :type: string
@@ -811,6 +889,8 @@ Properties
                 determines available doktypes based on the user's group permissions.
 
         ..  _useroptions-pageTree-excludeDoktypes:
+
+        ..  rubric:: excludeDoktypes
 
         ..  confval:: excludeDoktypes
             :name: useroptions-pageTree-excludeDoktypes
@@ -830,6 +910,8 @@ Properties
                 options.pageTree.excludeDoktypes = 254,1
 
         ..  _useroptions-pageTree-label:
+
+        ..  rubric:: label.<page-id>
 
         ..  confval:: label.<page-id>
             :name: useroptions-pageTree-label
@@ -863,7 +945,10 @@ Properties
                 multiple labels to a page.
 
         ..  todo:: does this still work with site configuration?
+
         ..  _useroptions-pageTree-showDomainNameWithTitle:
+
+        ..  rubric:: showDomainNameWithTitle
 
         ..  confval:: showDomainNameWithTitle
             :name: useroptions-pageTree-showDomainNameWithTitle
@@ -875,6 +960,8 @@ Properties
             Useful if there are several domains in one page tree.
 
         ..  _useroptions-pageTree-searchByFrontendUri:
+
+        ..  rubric:: searchByFrontendUri
 
         ..  confval:: searchByFrontendUri
             :name: useroptions-pageTree-searchByFrontendUri
@@ -895,6 +982,8 @@ Properties
 
         ..  _useroptions-pageTree-searchInTranslatedPages:
 
+        ..  rubric:: searchInTranslatedPages
+
         ..  confval:: searchInTranslatedPages
             :name: useroptions-pageTree-searchInTranslatedPages
             :type: boolean
@@ -908,8 +997,9 @@ Properties
             multilingual installations. User permissions (language restrictions) and
             workspace context are respected.
 
-
         ..  _useroptions-pageTree-showNavTitle:
+
+        ..  rubric:: showNavTitle
 
         ..  confval:: showNavTitle
             :name: useroptions-pageTree-showNavTitle
@@ -920,8 +1010,9 @@ Properties
             instead of the normal page title. The page title is shown in a
             tooltip if the mouse hovers the navigation title.
 
-
         ..  _useroptions-pageTree-showPageIdWithTitle:
+
+        ..  rubric:: showPageIdWithTitle
 
         ..  confval:: showPageIdWithTitle
             :name: useroptions-pageTree-showPageIdWithTitle
@@ -931,8 +1022,9 @@ Properties
             If set, the titles in the page tree will have their ID numbers printed
             before the title.
 
-
         ..  _useroptions-pageTree-showPathAboveMounts:
+
+        ..  rubric:: showPathAboveMounts
 
         ..  confval:: showPathAboveMounts
             :name: useroptions-pageTree-showPathAboveMounts
@@ -949,6 +1041,8 @@ Properties
                 Active user db mount
 
     ..  _useroptions-passwordReset:
+
+    ..  rubric:: passwordReset
 
     ..  confval:: passwordReset
         :name: useroptions-passwordReset
@@ -980,6 +1074,8 @@ Properties
 
     ..  _useroptions-saveClipboard:
 
+    ..  rubric:: saveClipboard
+
     ..  confval:: saveClipboard
         :name: useroptions-saveClipboard
         :type: boolean
@@ -987,8 +1083,9 @@ Properties
         If set, the clipboard content will be preserved for the next login.
         Normally the clipboard content lasts only during the session.
 
-
     ..  _useroptions-saveDocNew:
+
+    ..  rubric:: saveDocNew
 
     ..  confval:: saveDocNew
         :name: useroptions-saveDocNew
@@ -1016,6 +1113,8 @@ Properties
 
     ..  _useroptions-saveDocView:
 
+    ..  rubric:: saveDocView
+
     ..  confval:: saveDocView
         :name: useroptions-saveDocView
         :type: boolean
@@ -1030,6 +1129,8 @@ Properties
 
     ..  _useroptions-showDuplicate:
 
+    ..  rubric:: showDuplicate
+
     ..  confval:: showDuplicate
         :name: useroptions-showDuplicate
         :type: boolean
@@ -1042,8 +1143,9 @@ Properties
         Any value set for a single table will override the default value set for
         :typoscript:`showDuplicate`.
 
-
     ..  _useroptions-showHistory:
+
+    ..  rubric:: showHistory
 
     ..  confval:: showHistory
         :name: useroptions-showHistory
@@ -1055,6 +1157,8 @@ Properties
         :typoscript:`options.showHistory.[tableName]`.
         Any value set for a single table will override the default value set for
         :typoscript:`showHistory`.
+
+    ..  rubric:: hideSets
 
     ..  confval:: hideSets
         :name: useroptions-hideSets

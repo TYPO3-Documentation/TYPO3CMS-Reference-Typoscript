@@ -86,6 +86,8 @@ Options of the `record-transformation` data processor
     :type:
     :Default:
 
+    ..  rubric:: as
+
     ..  confval:: as
         :name: RecordTransformationProcessor-as
         :type: :ref:`data-type-string` / :ref:`stdWrap`
@@ -94,12 +96,16 @@ Options of the `record-transformation` data processor
         The target variable containing the resolved record objects.
         If empty, 'record' or 'records' (if multiple records are given) is used.
 
+    ..  rubric:: if
+
     ..  confval:: if
         :name: RecordTransformationProcessor-if
         :type: :ref:`if` condition
         :Default: ''
 
         Only if the condition is met the Data Processor is executed.
+
+    ..  rubric:: table
 
     ..  confval:: table
         :name: RecordTransformationProcessor-table
@@ -110,6 +116,8 @@ Options of the `record-transformation` data processor
         the table from context.
 
         If you are dealing with a custom data source you can adjust it here.
+
+    ..  rubric:: variableName
 
     ..  confval:: variableName
         :name: RecordTransformationProcessor-variableName
