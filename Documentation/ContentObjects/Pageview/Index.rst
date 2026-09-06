@@ -87,6 +87,8 @@ Additional variables can be defined with property
     :display: table
     :type:
 
+    ..  rubric:: language
+
     ..  confval:: language
         :name: pageview-data-language
         :type: :php:`\TYPO3\CMS\Core\Site\Entity\SiteLanguage`
@@ -95,6 +97,8 @@ Additional variables can be defined with property
         The current :php:`SiteLanguage` object, see also
         :ref:`the SiteLanguage object <t3coreapi:sitehandling-sitelanguage-object>`.
 
+    ..  rubric:: page
+
     ..  confval:: page
         :name: pageview-data-page
         :type: :php:`TYPO3\CMS\Frontend\Page\PageInformation`
@@ -102,6 +106,8 @@ Additional variables can be defined with property
 
         The current `PageInformation` as object. See also
         :ref:`Frontend page information <t3coreapi:typo3-request-attribute-frontend-page-information>`.
+
+    ..  rubric:: settings
 
     ..  confval:: settings
         :name: pageview-data-settings
@@ -112,6 +118,8 @@ Additional variables can be defined with property
         :ref:`constants <typoscript-syntax-constants>` that are set on the current
         page. Settings from the site can be accessed via the :confval:`pageview-data-site` with
         :fluid:`{site.settings}`
+
+    ..  rubric:: site
 
     ..  confval:: site
         :name: pageview-data-site
@@ -179,11 +187,15 @@ Properties
     :display: table
     :type:
 
+    ..  rubric:: cache
+
     ..  confval:: cache
         :name: pageview-cache
         :type: :ref:`cache <cache>`
 
         See :ref:`cache function description <cache>` for details.
+
+    ..  rubric:: dataProcessing.[key]
 
     ..  confval:: dataProcessing.[key]
         :name: pageview-dataProcessing
@@ -197,6 +209,8 @@ Properties
         It is recommended to use the  :ref:`PageContentFetchingProcessor <PageContentFetchingProcessor>`
         to fetch the content elements from the page, respecting the
         :ref:`backend layout <t3coreapi:be-layout>`.
+
+    ..  rubric:: paths.[priority]
 
     ..  confval:: paths.[priority]
         :name: pageview-paths
@@ -217,6 +231,8 @@ Properties
         is resolved automatically.
 
         The paths are evaluated from highest to lowest priority.
+
+    ..  rubric:: variables.[variable_name]
 
     ..  confval:: variables.[variable_name]
         :name: pageview-variables

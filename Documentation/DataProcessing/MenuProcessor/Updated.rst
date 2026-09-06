@@ -29,6 +29,9 @@ Properties
 
 ..  _hmenu-special-updated-value:
 
+special.value
+-------------
+
 ..  confval:: special.value
     :name: hmenu-updated-special-value
     :type: list of page IDs /:ref:`stdWrap <stdwrap>`
@@ -45,6 +48,9 @@ Properties
         20.special.value = 35, 56
 
 ..  _hmenu-special-updated-mode:
+
+special.mode
+------------
 
 ..  confval:: special.mode
     :name: hmenu-updated-special-mode
@@ -79,6 +85,9 @@ Properties
 
 ..  _hmenu-special-updated-depth:
 
+special.depth
+-------------
+
 ..  confval:: special.depth
     :name: hmenu-updated-special-depth
     :type: integer
@@ -94,6 +103,9 @@ Properties
     **Note:** "depth" is relative to :confval:`hmenu-updated-special-beginAtLevel`.
 
 ..  _hmenu-special-updated-beginatlevel:
+
+special.beginAtLevel
+--------------------
 
 ..  confval:: special.beginAtLevel
     :name: hmenu-updated-special-beginAtLevel
@@ -111,8 +123,10 @@ Properties
 
     **Note:** "depth" is relative to this property.
 
-
 ..  _hmenu-special-updated-maxage:
+
+special.maxAge
+--------------
 
 ..  confval:: special.maxAge
     :name: hmenu-updated-special-maxAge
@@ -127,6 +141,9 @@ Properties
 
 ..  _hmenu-special-updated-limit:
 
+special.limit
+-------------
+
 ..  confval:: special.limit
     :name: hmenu-updated-special-limit
     :type: integer
@@ -134,8 +151,10 @@ Properties
 
     Maximal number of items in the menu. Default is 10, max is 100.
 
-
 ..  _hmenu-special-updated-excludenosearchpages:
+
+special.excludeNoSearchPages
+----------------------------
 
 ..  confval:: special.excludeNoSearchPages
     :name: hmenu-updated-special-excludeNoSearchPages

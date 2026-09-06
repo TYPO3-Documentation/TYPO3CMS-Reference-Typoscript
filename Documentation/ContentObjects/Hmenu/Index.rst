@@ -41,6 +41,8 @@ Properties
 
     ..  _hmenu-number:
 
+    ..  rubric:: 1, 2, 3, ...
+
     ..  confval:: 1, 2, 3, ...
         :name: hmenu-array
         :type: :ref:`menu object <data-type-menuobj>`
@@ -60,6 +62,8 @@ Properties
 
     ..  _hmenu-cache-period:
 
+    ..  rubric:: cache_period
+
     ..  confval:: cache_period
         :name: hmenu-cache-period
         :type: :ref:`data-type-integer`
@@ -75,6 +79,8 @@ Properties
 
     ..  _hmenu-cache:
 
+    ..  rubric:: cache
+
     ..  confval:: cache
         :name: hmenu-cache
         :type: :ref:`cache <cache>`
@@ -82,6 +88,8 @@ Properties
         See :ref:`cache function description <cache>` for details.
 
     ..  _hmenu-entrylevel:
+
+    ..  rubric:: entryLevel
 
     ..  confval:: entryLevel
         :name: hmenu-entryLevel
@@ -92,6 +100,8 @@ Properties
 
     ..  _hmenu-special:
     ..  _hmenu-special-property:
+
+    ..  rubric:: special
 
     ..  confval:: special
         :name: hmenu-special
@@ -104,6 +114,8 @@ Properties
 
     ..  _hmenu-special-value:
 
+    ..  rubric:: special.value
+
     ..  confval:: special.value
         :name: hmenu-special-value
         :type: *list of page-uid's* / :ref:`stdWrap <stdwrap>`
@@ -113,6 +125,8 @@ Properties
         section about the :ref:`.special property <hmenu-special-property>`!
 
     ..  _hmenu-minitems:
+
+    ..  rubric:: minItems
 
     ..  confval:: minItems
         :name: hmenu-minItems
@@ -128,6 +142,8 @@ Properties
 
     ..  _hmenu-maxitems:
 
+    ..  rubric:: maxItems
+
     ..  confval:: maxItems
         :name: hmenu-maxItems
         :type: :ref:`data-type-integer` / :ref:`stdWrap <stdwrap>`
@@ -140,6 +156,8 @@ Properties
 
     ..  _hmenu-begin:
 
+    ..  rubric:: begin
+
     ..  confval:: begin
         :name: hmenu-begin
         :type: :ref:`data-type-integer` / :ref:`stdWrap <stdwrap>` :ref:`+calc <objects-calc>`
@@ -151,6 +169,8 @@ Properties
 
     ..  _hmenu-excludeuidlist:
 
+    ..  rubric:: excludeUidList
+
     ..  confval:: excludeUidList
         :name: hmenu-excludeUidList
         :type: list of :ref:`data-type-integer` / :ref:`stdWrap <stdwrap>`
@@ -158,6 +178,8 @@ Properties
         See :confval:`MenuProcessor-excludeUidList`.
 
     ..  _hmenu-excludedoktypes:
+
+    ..  rubric:: excludeDoktypes
 
     ..  confval:: excludeDoktypes
         :name: hmenu-excludeDoktypes
@@ -168,6 +190,8 @@ Properties
 
     .. _hmenu-includenotinmenu:
 
+    ..  rubric:: includeNotInMenu
+
     ..  confval:: includeNotInMenu
         :name: hmenu-includeNotInMenu
         :type: :ref:`data-type-boolean` / :ref:`stdWrap <stdwrap>`
@@ -175,6 +199,8 @@ Properties
         See :confval:`MenuProcessor-includeNotInMenu`
 
     .. _hmenu-alwaysactivepidlist:
+
+    ..  rubric:: alwaysActivePIDlist
 
     ..  confval:: alwaysActivePIDlist
         :name: hmenu-alwaysActivePIDlist
@@ -184,6 +210,8 @@ Properties
 
     ..  _hmenu-protectlvar:
 
+    ..  rubric:: protectLvar
+
     ..  confval:: protectLvar
         :name: hmenu-protectlvar
         :type: :ref:`data-type-boolean` / keyword
@@ -192,12 +220,17 @@ Properties
 
     ..  _hmenu-if:
 
+    ..  rubric:: if
+
     ..  confval:: if
         :name: hmenu-if
         :type: :ref:`->if <if>`
 
         If "if" returns false, the menu is not generated.
+
     ..  _hmenu-wrap:
+
+    ..  rubric:: wrap
 
     ..  confval:: wrap
         :name: hmenu-wrap
@@ -206,6 +239,8 @@ Properties
         Wrap for the HMENU.
 
     ..  _hmenu-stdwrap:
+
+    ..  rubric:: stdWrap
 
     ..  confval:: stdWrap
         :name: hmenu-stdWrap

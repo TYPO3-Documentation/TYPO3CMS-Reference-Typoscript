@@ -37,6 +37,9 @@ Properties
 
 ..  _cobj-case-array-of-cObjects:
 
+array of cObjects
+-----------------
+
 ..  confval:: array of cObjects
     :name: case-array
     :type: :ref:`cObject <data-type-cobject>`
@@ -48,14 +51,19 @@ Properties
 
 ..  _cobj-case-cache:
 
+cache
+-----
+
 ..  confval:: cache
     :name: case-cache
     :type: :ref:`cache <cache>`
 
     See :ref:`cache function description <cache>` for details.
 
-
 ..  _cobj-case-default:
+
+default
+-------
 
 ..  confval:: default
     :name: case-default
@@ -66,8 +74,10 @@ Properties
     default cObject is defined, an empty string will be returned for
     the default case.
 
-
 ..  _cobj-case-if:
+
+if
+--
 
 ..  confval:: if
     :name: case-if
@@ -75,8 +85,10 @@ Properties
 
     If :ref:`if <if>` returns false, nothing is returned.
 
-
 ..  _cobj-case-key:
+
+key
+---
 
 ..  confval:: key
     :name: case-key
@@ -95,8 +107,10 @@ Properties
     dynamic value from some specific source, typically a field of the
     current record. See the :ref:`example below <cobj-case-examples>`.
 
-
 ..  _cobj-case-setCurrent:
+
+setCurrent
+----------
 
 ..  confval:: setCurrent
     :name: case-setCurrent
@@ -104,8 +118,10 @@ Properties
 
     Sets the "current" value.
 
-
 ..  _cobj-case-stdWrap:
+
+stdWrap
+-------
 
 ..  confval:: stdWrap
     :name: case-stdWrap

@@ -28,6 +28,8 @@ Options:
 
     ..  _CommaSeparatedValueProcessor-if:
 
+    ..  rubric:: if
+
     ..  confval:: if
         :name: CommaSeparatedValueProcessor-if
         :Required: false
@@ -38,6 +40,8 @@ Options:
 
     ..  _CommaSeparatedValueProcessor-fieldName:
 
+    ..  rubric:: fieldName
+
     ..  confval:: fieldName
         :name: CommaSeparatedValueProcessor-fieldName
         :Required: true
@@ -46,8 +50,9 @@ Options:
 
         Name of the field in the processed ContentObjectRenderer.
 
-
     ..  _CommaSeparatedValueProcessor-as:
+
+    ..  rubric:: as
 
     ..  confval:: as
         :name: CommaSeparatedValueProcessor-as
@@ -58,6 +63,8 @@ Options:
         The variable's name to be used in the Fluid template.
 
     ..  _CommaSeparatedValueProcessor-maximumColumns:
+
+    ..  rubric:: maximumColumns
 
     ..  confval:: maximumColumns
         :name: CommaSeparatedValueProcessor-maximumColumns
@@ -71,6 +78,8 @@ Options:
 
     ..  _CommaSeparatedValueProcessor-fieldDelimiter:
 
+    ..  rubric:: fieldDelimiter
+
     ..  confval:: fieldDelimiter
         :name: CommaSeparatedValueProcessor-fieldDelimiter
         :Required:  false
@@ -79,8 +88,9 @@ Options:
 
         The field delimiter, a character separating the values.
 
-
     ..  _CommaSeparatedValueProcessor-fieldEnclosure:
+
+    ..  rubric:: fieldEnclosure
 
     ..  confval:: fieldEnclosure
         :name: CommaSeparatedValueProcessor-fieldEnclosure

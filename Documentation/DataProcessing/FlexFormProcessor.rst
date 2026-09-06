@@ -27,6 +27,8 @@ Options
 
     ..  _FlexFormProcessor-fieldname:
 
+    ..  rubric:: fieldName
+
     ..  confval:: fieldName
         :name: FlexFormProcessor-fieldname
         :Required: false
@@ -35,8 +37,9 @@ Options
 
         Field name of the column the FlexForm data is stored in.
 
-
     ..  _FlexFormProcessor-references:
+
+    ..  rubric:: references
 
     ..  confval:: references
         :name: FlexFormProcessor-references
@@ -53,8 +56,9 @@ Options
 
         See :ref:`FlexFormProcessor-resolving-fal`.
 
-
     ..  _FlexFormProcessor-as:
+
+    ..  rubric:: as
 
     ..  confval:: as
         :name: FlexFormProcessor-as
