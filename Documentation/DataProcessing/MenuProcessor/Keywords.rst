@@ -27,6 +27,9 @@ Properties
 
 ..  _hmenu-special-keywords-value:
 
+special.value
+-------------
+
 ..  confval:: special.value
     :name: hmenu-keywords-special-value
     :type: integer /:ref:`stdWrap <stdwrap>`
@@ -35,6 +38,9 @@ Properties
     UID of the page for which related pages by keyword should be found.
 
 ..  _hmenu-special-keywords-mode:
+
+special.mode
+------------
 
 ..  confval:: special.mode
     :name: hmenu-keywords-special-mode
@@ -64,8 +70,10 @@ Properties
     `starttime`
         Uses the :sql:`starttime` field.
 
-
 ..  _hmenu-special-keywords-entrylevel:
+
+special.entryLevel
+------------------
 
 ..  confval:: special.entryLevel
     :name: hmenu-keywords-special-entryLevel
@@ -77,6 +85,9 @@ Properties
 
 ..  _hmenu-special-keywords-depth:
 
+special.depth
+-------------
+
 ..  confval:: special.depth
     :name: hmenu-keywords-special-depth
     :type: integer
@@ -84,8 +95,10 @@ Properties
 
     Same as in section :ref:`"special = updated" <hmenu-special-updated-depth>`.
 
-
 ..  _hmenu-special-keywords-limit:
+
+special.limit
+-------------
 
 ..  confval:: special.limit
     :name: hmenu-keywords-special-limit
@@ -94,8 +107,10 @@ Properties
 
     Maximal number of items in the menu. Default is 10, maximum is 100.
 
-
 ..  _hmenu-special-keywords-excludenosearchpages:
+
+special.excludeNoSearchPages
+----------------------------
 
 ..  confval:: special.excludeNoSearchPages
     :name: hmenu-keywords-special-excludeNoSearchPages
@@ -106,6 +121,9 @@ Properties
 
 ..  _hmenu-special-keywords-begin:
 
+special.begin
+-------------
+
 ..  confval:: special.begin
     :name: hmenu-keywords-special-begin
     :type: boolean
@@ -113,6 +131,9 @@ Properties
     ..  TODO: What does this do?
 
 ..  _hmenu-special-keywords-setkeywords:
+
+special.setKeywords
+-------------------
 
 ..  confval:: special.setKeywords
     :name: hmenu-keywords-special-setKeywords
@@ -124,6 +145,9 @@ Properties
 
 ..  _hmenu-special-keywords-keywordsfield:
 
+special.keywordsField
+---------------------
+
 ..  confval:: special.keywordsField
     :name: hmenu-keywords-special-keywordsField
     :type: string
@@ -134,6 +158,9 @@ Properties
     if the field you enter here exists, so make sure to enter an existing field.
 
 ..  _hmenu-special-keywords-sourcefield:
+
+special.keywordsField.sourceField
+---------------------------------
 
 ..  confval:: special.keywordsField.sourceField
     :name: hmenu-keywords-special-setKeywords-sourceField

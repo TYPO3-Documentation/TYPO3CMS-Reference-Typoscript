@@ -33,6 +33,9 @@ Properties
 
 ..  _hmenu-special-categories-value:
 
+special.value
+-------------
+
 ..  confval:: special.value
     :name: hmenu-categories-special-value
     :type: list of categories / :ref:`stdWrap <stdwrap>`
@@ -41,6 +44,9 @@ Properties
     Comma-separated list of categories UID's.
 
 ..  _hmenu-special-categories-relation:
+
+special.relation
+----------------
 
 ..  confval:: special.relation
     :name: hmenu-categories-special-relation
@@ -53,6 +59,9 @@ Properties
 
 ..  _hmenu-special-categories-sorting:
 
+special.sorting
+---------------
+
 ..  confval:: special.sorting
     :name: hmenu-categories-special-sorting
     :type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
@@ -64,6 +73,9 @@ Properties
     If an unknown field is defined, the pages will not be sorted.
 
 ..  _hmenu-special-categories-order:
+
+special.order
+-------------
 
 ..  confval:: special.order
     :name: hmenu-categories-special-order

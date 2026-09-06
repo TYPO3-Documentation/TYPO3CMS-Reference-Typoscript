@@ -37,6 +37,8 @@ Options
 
     ..  _MenuProcessor-as:
 
+    ..  rubric:: as
+
     ..  confval:: as
         :name: MenuProcessor-as
         :Required: false
@@ -45,6 +47,8 @@ Options
 
         Name for the variable in the Fluid template.
 
+    ..  rubric:: alwaysActivePIDlist
+
     ..  confval:: alwaysActivePIDlist
         :name: MenuProcessor-alwaysActivePIDlist
         :type: list of :ref:`data-type-integer` /:ref:`stdWrap <stdwrap>`
@@ -52,6 +56,8 @@ Options
         This is a list of page UID numbers that will always be regarded as
         active menu items and thereby automatically opened regardless of the
         rootline.
+
+    ..  rubric:: entryLevel
 
     ..  confval:: entryLevel
         :name: MenuProcessor-entryLevel
@@ -79,6 +85,8 @@ Options
         it will start to be visible from the 4th level (and will contain only
         the subpages from that level).
 
+    ..  rubric:: excludeDoktypes
+
     ..  confval:: excludeDoktypes
         :name: MenuProcessor-excludeDoktypes
         :type: list of :ref:`data-type-integer`
@@ -87,6 +95,8 @@ Options
         Enter the list of page document types (doktype) to exclude from menus.
         By default pages that are "backend user access only" (6) or "folder"
         (254) are excluded.
+
+    ..  rubric:: excludeUidList
 
     ..  confval:: excludeUidList
         :name: MenuProcessor-excludeUidList
@@ -108,6 +118,8 @@ Options
 
     ..  _MenuProcessor-expandAll:
 
+    ..  rubric:: expandAll
+
     ..  confval:: expandAll
         :name: MenuProcessor-expandAll
         :Required: true
@@ -119,6 +131,8 @@ Options
 
     ..  _MenuProcessor-levels:
 
+    ..  rubric:: levels
+
     ..  confval:: levels
         :name: MenuProcessor-levels
         :Required: true
@@ -127,6 +141,8 @@ Options
         :Example: 5
 
         Maximal number of levels to be included in the output array.
+
+    ..  rubric:: includeNotInMenu
 
     ..  confval:: includeNotInMenu
         :name: MenuProcessor-includeNotInMenu
@@ -137,6 +153,8 @@ Options
 
     ..  _MenuProcessor-includeSpacer:
 
+    ..  rubric:: includeSpacer
+
     ..  confval:: includeSpacer
         :name: MenuProcessor-includeSpacer
         :Required: true
@@ -145,6 +163,8 @@ Options
         :Example: 1
 
         Include pages with type "spacer".
+
+    ..  rubric:: protectLvar
 
     ..  confval:: protectLvar
         :name: MenuProcessor-protectlvar
@@ -170,6 +190,8 @@ Options
         if "Hide page if no translation for current language exists" is set -
         it always reverts to default language if no translation is found.
 
+    ..  rubric:: special
+
     ..  confval:: special
         :name: MenuProcessor-special
         :type: *"directory" / "list" / "updated" / "rootline" / "browse" / "keywords"
@@ -184,6 +206,8 @@ Options
 
         See the section about the :ref:`.special property <MenuProcessor-special>`.
 
+        ..  rubric:: value
+
         ..  confval:: value
             :name: MenuProcessor-special-value
             :type: *list of page-uid's* / :ref:`stdWrap <stdwrap>`
@@ -193,6 +217,8 @@ Options
             section about the :ref:`.special property <MenuProcessor-special>`.
 
     ..  _MenuProcessor-titleField:
+
+    ..  rubric:: titleField
 
     ..  confval:: titleField
         :name: MenuProcessor-titleField

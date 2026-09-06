@@ -24,14 +24,19 @@ Properties
 
 ..  _cobj-extbaseplugin-cache:
 
+cache
+-----
+
 ..  confval:: cache
     :name: extbaseplugin-cache
     :type: :ref:`cache <cache>`
 
     See :ref:`cache function description <cache>` for details.
 
-
 ..  _cobj-extbaseplugin-extensionName:
+
+extensionName
+-------------
 
 ..  confval:: extensionName
     :name: extbaseplugin-extensionName
@@ -39,8 +44,10 @@ Properties
 
     The :ref:`extension name <t3coreapi:extension-naming-extensionName>`.
 
-
 ..  _cobj-extbaseplugin-pluginName:
+
+pluginName
+----------
 
 ..  confval:: pluginName
     :name: extbaseplugin-pluginName
