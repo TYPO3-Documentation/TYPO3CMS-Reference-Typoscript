@@ -1,0 +1,11 @@
+# Define the custom content element / plugin as a standard cached USER object
+tt_content.my_custom_plugin = USER
+tt_content.my_custom_plugin {
+    # Route the request to our PSR-11 compliant container service class and method
+    userFunc = MyVendor\MyExtension\UserFunc\PluginRenderer->renderPlugin
+
+    # Personalized output (for example a live search) must never be cached
+    settings {
+        showLiveSearch = 1
+    }
+}
