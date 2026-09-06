@@ -33,6 +33,8 @@ Properties
 
     ..  _user-setup-default:
 
+    ..  rubric:: setup.default.[someProperty]
+
     ..  confval:: setup.default.[someProperty]
         :name: user-setup-default
         :type: any
@@ -50,6 +52,8 @@ Properties
             :caption: EXT:site_package/Configuration/user.tsconfig
 
     ..  _user-setup-override:
+
+    ..  rubric:: setup.override.[someProperty]
 
     ..  confval:: setup.override.[someProperty]
         :name: user-setup-override
@@ -70,6 +74,8 @@ Properties
 
     ..  _user-setup-fields-fieldName-disabled:
 
+    ..  rubric:: setup.fields.[fieldName].disabled
+
     ..  confval:: setup.fields.[fieldName].disabled
         :name: user-setup-fields-fieldName-disabled
         :type: boolean
@@ -87,6 +93,10 @@ Properties
             # And force the value of this field to be set to 1
             setup.override.emailMeAtLogin = 1
 
+backendTitleFormat
+------------------
+
+
     ..  index::  User settings; Format of window title in backend
 
     ..  _user-setup-backendTitleFormat:
@@ -102,6 +112,10 @@ Properties
         `sitenameFirst`
             [sitename] · [title]
 
+copyLevels
+----------
+
+
 
     ..  index:: User settings; Copy levels
 
@@ -112,6 +126,10 @@ Properties
         :type: positive integer
 
         Recursive Copy: Enter the number of page sub-levels to include, when a page is copied
+
+edit_docModuleUpload
+--------------------
+
 
 
     ..  index:: File upload; In doc module
@@ -130,6 +148,8 @@ Properties
 
     ..  _user-setup-emailMeAtLogin:
 
+    ..  rubric:: emailMeAtLogin
+
     ..  confval:: emailMeAtLogin
         :name: user-setup-emailMeAtLogin
         :type:  boolean
@@ -137,6 +157,8 @@ Properties
         Notify me by email, when somebody logs into my account
 
     ..  _user-setup-lang:
+
+    ..  rubric:: lang
 
     ..  confval:: lang
         :name: user-setup-lang
@@ -147,6 +169,8 @@ Properties
 
     ..  _user-setup-neverHideAtCopy:
 
+    ..  rubric:: neverHideAtCopy
+
     ..  confval:: neverHideAtCopy
         :name: user-setup-neverHideAtCopy
         :type: boolean
@@ -154,6 +178,8 @@ Properties
         If set, then the hideAtCopy feature for records in TCE will not be used.
 
     ..  _user-setup-showHiddenFilesAndFolders:
+
+    ..  rubric:: showHiddenFilesAndFolders
 
     ..  confval:: showHiddenFilesAndFolders
         :name: user-setup-showHiddenFilesAndFolders
@@ -163,6 +189,8 @@ Properties
 
     ..  _user-setup-startModule:
 
+    ..  rubric:: startModule
+
     ..  confval:: startModule
         :name: user-setup-startModule
         :type: string
@@ -171,6 +199,8 @@ Properties
         example `web_layout`, `web_list`, `web_view`, `web_info`, `web_ts` etc.
 
     ..  _user-setup-titleLen:
+
+    ..  rubric:: titleLen
 
     ..  confval:: titleLen
         :name: user-setup-titleLen

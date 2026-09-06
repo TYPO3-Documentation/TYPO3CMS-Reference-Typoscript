@@ -29,6 +29,8 @@ newContentElement.wizardItems
 ..  confval-menu::
     :display: tree
 
+    ..  rubric:: newContentElement.wizardItems
+
     ..  confval:: newContentElement.wizardItems
         :name: mod-wizards-newContentElement-wizardItems
         :type: array
@@ -41,6 +43,8 @@ newContentElement.wizardItems
         ..  versionchanged:: 13.0
             The group `common` was renamed to `default`. A permanent migration is in
             place.
+
+        ..  rubric:: removeItems
 
         ..  confval:: removeItems
             :name: mod-wizards-newContentElement-wizardItems-removeItems
@@ -57,12 +61,16 @@ newContentElement.wizardItems
                 # This will remove the "menu" group
                 mod.wizards.newContentElement.wizardItems.removeItems := addToList(menu)
 
+        ..  rubric:: [group].before
+
         ..  confval:: [group].before
             :name: mod-wizards-newContentElement-wizardItems-group-before
             :type: string
             :Path: mod.wizards.newContentElement.wizardItems.[group].before
 
             Sorts [group] in front of the group given.
+
+        ..  rubric:: [group].after
 
         ..  confval:: [group].after
             :name: mod-wizards-newContentElement-wizardItems-group-after
@@ -71,12 +79,16 @@ newContentElement.wizardItems
 
             Sorts [group] after the group given.
 
+        ..  rubric:: [group].header
+
         ..  confval:: [group].header
             :name: mod-wizards-newContentElement-wizardItems-group-header
             :type: plain text label or `label reference <https://docs.typo3.org/permalink/t3coreapi:label-reference>`_
             :Path: mod.wizards.newContentElement.wizardItems.[group].header
 
             Name of the group.
+
+        ..  rubric:: [group].show
 
         ..  confval:: [group].show
             :name: mod-wizards-newContentElement-wizardItems-group-show
@@ -98,12 +110,16 @@ newContentElement.wizardItems
                 :confval:`[group].removeItems <mod-wizards-newContentElement-wizardItems-group-removeItems>`
                 options.
 
+        ..  rubric:: [group].elements
+
         ..  confval:: [group].elements
             :name: mod-wizards-newContentElement-wizardItems-group-elements
             :type: array
             :Path: mod.wizards.newContentElement.wizardItems.[group].elements
 
             List of items in the group.
+
+            ..  rubric:: [name]
 
             ..  confval:: [name]
                 :name: mod-wizards-newContentElement-wizardItems-group-elements-name
@@ -112,12 +128,16 @@ newContentElement.wizardItems
 
                 Configuration for a single item.
 
+                ..  rubric:: iconIdentifier
+
                 ..  confval:: iconIdentifier
                     :name: mod-wizards-newContentElement-wizardItems-group-elements-name-iconIdentifier
                     :type: string
                     :Path: mod.wizards.newContentElement.wizardItems.[group].elements.[name].iconIdentifier
 
                     The icon identifier of the icon you want to display.
+
+                ..  rubric:: iconOverlay
 
                 ..  confval:: iconOverlay
                     :name: mod-wizards-newContentElement-wizardItems-group-elements-name-iconOverlay
@@ -126,12 +146,16 @@ newContentElement.wizardItems
 
                     The icon identifier of the overlay icon you want to use.
 
+                ..  rubric:: title
+
                 ..  confval:: title
                     :name: mod-wizards-newContentElement-wizardItems-group-elements-name-title
                     :type: plain text label or `label reference <https://docs.typo3.org/permalink/t3coreapi:label-reference>`_
                     :Path: mod.wizards.newContentElement.wizardItems.[group].elements.[name].title
 
                     Name of the item.
+
+                ..  rubric:: description
 
                 ..  confval:: description
                     :name: mod-wizards-newContentElement-wizardItems-group-elements-name-description
@@ -140,12 +164,16 @@ newContentElement.wizardItems
 
                     Description text for the item.
 
+                ..  rubric:: tt_content_defValues
+
                 ..  confval:: tt_content_defValues
                     :name: mod-wizards-newContentElement-wizardItems-group-elements-name-tt_content_defValues
                     :type: array
                     :Path: mod.wizards.newContentElement.wizardItems.[group].elements.[name].tt_content_defValues
 
                     Default values for tt_content fields.
+
+                ..  rubric:: saveAndClose
 
                 ..  confval:: saveAndClose
                     :name: mod-wizards-newContentElement-wizardItems-group-elements-name-saveAndClose
@@ -155,6 +183,8 @@ newContentElement.wizardItems
 
                     If `true`, directs the user back to the :guilabel:`Page` module
                     directly instead of showing the FormEngine.
+
+        ..  rubric:: [group].removeItems
 
         ..  confval:: [group].removeItems
             :name: mod-wizards-newContentElement-wizardItems-group-removeItems

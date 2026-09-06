@@ -41,6 +41,9 @@ Properties
 
 ..  _hmenu-special-rootline-range:
 
+special.range
+-------------
+
 ..  confval:: special.range
     :name: hmenu-rootline-special-range
     :type: string /:ref:`stdWrap <stdwrap>`
@@ -52,6 +55,9 @@ Properties
 
 ..  _hmenu-special-rootline-reverseorder:
 
+special.reverseOrder
+--------------------
+
 ..  confval:: special.reverseOrder
     :name: hmenu-rootline-special-reverseOrder
     :type: boolean
@@ -60,8 +66,10 @@ Properties
     If set to true, the order of the root line menu elements will be
     reversed.
 
-
 ..  _hmenu-special-rootline-targets:
+
+special.targets.[level number]
+------------------------------
 
 ..  confval:: special.targets.[level number]
     :name: hmenu-rootline-special-targets

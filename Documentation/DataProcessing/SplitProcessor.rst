@@ -25,6 +25,8 @@ Options
 
     ..  _splitProcessor-if:
 
+    ..  rubric:: if
+
     ..  confval:: if
         :name: splitProcessor-if
         :Required: false
@@ -34,6 +36,8 @@ Options
         Only if the condition is met the data processor is executed.
 
     ..  _splitProcessor-fieldName:
+
+    ..  rubric:: fieldName
 
     ..  confval:: fieldName
         :name: splitProcessor-fieldName
@@ -45,6 +49,8 @@ Options
 
     ..  _splitProcessor-as:
 
+    ..  rubric:: as
+
     ..  confval:: as
         :name: splitProcessor-as
         :Required: false
@@ -54,6 +60,8 @@ Options
         The variable name to be used in the Fluid template.
 
     ..  _splitProcessor-delimiter:
+
+    ..  rubric:: delimiter
 
     ..  confval:: delimiter
         :name: splitProcessor-delimiter
@@ -66,6 +74,8 @@ Options
 
     ..  _splitProcessor-filterIntegers:
 
+    ..  rubric:: filterIntegers
+
     ..  confval:: filterIntegers
         :name: splitProcessor-filterIntegers
         :Required: false
@@ -77,6 +87,8 @@ Options
 
     ..  _splitProcessor-filterUnique:
 
+    ..  rubric:: filterUnique
+
     ..  confval:: filterUnique
         :name: splitProcessor-filterUnique
         :Required: false
@@ -87,6 +99,8 @@ Options
         If set to `1`, all duplicates will be removed.
 
     ..  _splitProcessor-removeEmptyEntries:
+
+    ..  rubric:: removeEmptyEntries
 
     ..  confval:: removeEmptyEntries
         :name: splitProcessor-removeEmptyEntries
