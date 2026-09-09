@@ -602,6 +602,49 @@ Properties
 
                 options.folderTree.altElementBrowserMountPoints = _temp_/, 2:/templates, 1:/files/images
 
+        ..  _useroptions-folderTree-label:
+
+        ..  rubric:: label.<combined-identifier>
+
+        ..  confval:: label.<combined-identifier>
+            :name: useroptions-folderTree-label
+            :Path: options.folderTree.label.<combined-identifier>
+
+            ..  versionadded:: 14.0
+
+            Labels offer customizable color markings for file storage tree
+            nodes and require an associated label for accessibility.
+
+            The node is addressed by the combined identifier of the storage
+            or folder, which consists of the storage UID, a colon and the
+            folder path. The identifier must end with a slash and must not
+            be URL-encoded, so use :typoscript:`1:/campaigns/` instead of
+            :typoscript:`1%3A%2Fcampaigns%2F`.
+
+            The property :typoscript:`label` is required and is passed
+            through the localization API, so an :typoscript:`LLL:` reference
+            can be used as well. The optional property :typoscript:`color`
+            takes a CSS color value and defaults to :typoscript:`#ff8722`.
+
+            Example:
+
+            ..  code-block:: typoscript
+                :caption: EXT:my_extension/Configuration/user.tsconfig
+
+                options.folderTree.label.1:/campaigns/ {
+                    label = Campaign A
+                    color = #ff8700
+                }
+
+            ..  note::
+                Only one label per folder can be set through this method.
+                Use the PSR-14 event
+                :ref:`t3coreapi:AfterFileStorageTreeItemsPreparedEvent`
+                to assign multiple labels to a folder.
+
+            ..  seealso::
+                :ref:`ext_core:feature-107683-1234567890`
+
         ..  _useroptions-folderTree-uploadFieldsInLinkBrowser:
 
         ..  rubric:: uploadFieldsInLinkBrowser
