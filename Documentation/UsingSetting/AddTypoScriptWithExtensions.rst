@@ -183,7 +183,7 @@ until now:
 ..  code-block:: typoscript
     :caption: packages/my_extension/Configuration/Sets/MySet/constants.typoscript
 
-    @import 'EXT:my_extension/Configuration/TypoScript/setup.typoscript'
+    @import 'EXT:my_extension/Configuration/TypoScript/constants.typoscript'
 
 ..  code-block:: typoscript
     :caption: packages/my_extension/Configuration/Sets/MySet/setup.typoscript
