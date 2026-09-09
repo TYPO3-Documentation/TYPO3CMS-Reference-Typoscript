@@ -169,12 +169,27 @@ Properties of 'config'
         This setting ensures that the cache expires at midnight on the day that the
         page is scheduled to expire.
 
+        ..  versionchanged:: 14.3.1
+            Since the default of :confval:`config-cache-period` was raised to
+            365 days, a page is by default scheduled to expire one year from
+            now, so the cache expires at midnight of that day. Set
+            :confval:`config-cache-period` to `86400` or less for the cache to
+            expire at the upcoming midnight. See `TYPO3 Core issue #109054
+            <https://forge.typo3.org/issues/109054>`_.
+
     ..  rubric:: cache_period
 
     ..  confval:: cache_period
         :name: config-cache-period
         :type: :ref:`data-type-integer`
-        :Default: `86400` *(= 24 hours)*
+        :Default: `31536000` *(= 365 days)*
+
+        ..  versionchanged:: 14.3.1
+            The default was raised from `86400` (24 hours) to `31536000`
+            (365 days), so that a calculated cache lifetime of more than 24
+            hours is no longer capped. TYPO3 v14.3.0 and TYPO3 v13.4 and
+            below use `86400`. See `TYPO3 Core issue #109054
+            <https://forge.typo3.org/issues/109054>`_.
 
         The number of seconds a page can remain in the cache.
 
