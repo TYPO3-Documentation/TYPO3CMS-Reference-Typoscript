@@ -111,6 +111,17 @@ Properties
     :depth: 2
     :local:
 
+..  versionchanged:: 12.0
+    The page TSconfig option :typoscript:`RTE.config.contentsLanguageDirection`
+    has no effect anymore. TYPO3 v12 ships CKEditor 5, see `Breaking: #96874 -
+    CKEditor-related plugins and configuration
+    <https://docs.typo3.org/permalink/changelog:breaking-96874-1664488429>`_.
+    CKEditor 5 has no `contentsLangDirection` option, and the last Core code
+    setting it was removed with issue
+    `#99916 <https://forge.typo3.org/issues/99916>`_. The text direction now
+    follows the content language of the edited record and is determined
+    automatically.
+
 ..  index:: RTE; disable
 
 disabled
@@ -263,35 +274,6 @@ buttons.link.[ *type* ].properties.target.default
     Specifies a default target for links of the given type.
     Possible types are: page, file, url, mail, spec. More types may be
     provided by extensions.
-
-..  index::
-    RTE; Content language direction
-    RTE config; contentsLanguageDirection
-..  _rte-config-contentsLanguageDirection:
-
-config.contentsLanguageDirection
---------------------------------
-
-..  confval:: config.contentsLanguageDirection
-    :name: rte-config-contentsLanguageDirection
-    :type: string
-
-    The configuration `contentsLangDirection` of the ckeditor is used to define the
-    direction of the content. It is filled by the direction defined in the site
-    language of the current element.
-
-    As fallback the following page TsConfig configuration can be used:
-
-    ..  code-block:: typoscript
-        :caption: EXT:my_sitepackage/Configuration/page.tsconfig
-
-        # always use right to left
-        RTE.config.contentsLanguageDirection = rtl
-
-        # except for the following language:
-        [siteLanguage("locale").getName() == "en-US"]
-            RTE.config.contentsLanguageDirection = ltr
-        [END]
 
 ..  index::
     RTE; Server processing
