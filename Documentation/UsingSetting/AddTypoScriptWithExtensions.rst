@@ -256,23 +256,23 @@ template record:
 
    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
        'my_extension',
-       'Configuration/TypoScript/Example1/',
-       'My Extension - Additional example 1'
+       'Configuration/TypoScript/SpecialFeature1/',
+       'My Extension - Some special feature 1'
    );
 
    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
        'my_extension',
        'Configuration/TypoScript/SpecialFeature2/',
-       'My Extension - Some special feature'
+       'My Extension - Some special feature 2'
    );
 
 Each site set then provides the TypoScript files the according location by
 importing it, for example:
 
 ..  code-block:: typoscript
-    :caption: packages/my_extension/Configuration/Sets/MySet/setup.typoscript
+    :caption: packages/my_extension/Configuration/Sets/MySpecialFeature2Set/setup.typoscript
 
-    @import 'EXT:my_extension/Configuration/TypoScript/MySpecialFeature2Set/setup.typoscript'
+    @import 'EXT:my_extension/Configuration/TypoScript/SpecialFeature2/setup.typoscript'
 
 ..  index:: TypoScript in extensions; Load always
 ..  _extdev-always-load:
