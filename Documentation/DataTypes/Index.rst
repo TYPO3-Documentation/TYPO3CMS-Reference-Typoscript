@@ -48,11 +48,10 @@ boolean
     Possible values for boolean variables are `1` and `0`
     meaning TRUE and FALSE.
 
-    Everything else is `evaluated to one of these values by PHP`__:
+    Everything else is `evaluated to one of these values by PHP
+    <https://www.php.net/manual/en/language.types.boolean.php>`__:
     Non-empty strings (except `0` [zero]) are treated as TRUE,
     empty strings are evaluated to FALSE.
-
-    __ https://www.php.net/manual/en/language.types.boolean.php
 
     ..  rubric:: Examples
 
