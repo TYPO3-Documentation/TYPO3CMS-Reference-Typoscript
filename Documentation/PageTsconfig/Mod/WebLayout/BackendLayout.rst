@@ -24,9 +24,6 @@ backend, use an extension like :composer:`b13/container`.
 The page TSconfig for the backend layout above can be found in the site package
 tutorial: :ref:`Create backend page layouts <t3sitepackage:backend-page-layouts>`.
 
-For further examples, see `backend layouts in the bootstrap
-package (GitHub) <https://github.com/benjaminkott/bootstrap_package/tree/master/Configuration/TsConfig/Page/Mod/WebLayout/BackendLayouts>`__.
-
 ..  confval-menu::
 
 BackendLayouts.[backendLayout]
