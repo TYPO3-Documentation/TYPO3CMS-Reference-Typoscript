@@ -21,8 +21,7 @@ records will still be loaded, but they are optional,
 and applied after the TypoScript provided by the site.
 
 TypoScript dependencies can be included
-via :ref:`set dependencies <t3coreapi:site-sets-usage>`. The TypoScript definitions
-included via sets are automatically ordered and deduplicated.
+via :ref:`set dependencies <t3coreapi:site-sets-usage>`.
 
 ..  contents::
 
@@ -76,9 +75,8 @@ Set as a TypoScript provider
 Set-defined TypoScript can be shipped within a set. The files
 :file:`setup.typoscript` and :file:`constants.typoscript` (placed next to the
 :file:`config.yaml` file of the set) will be loaded, if available.
-They are inserted into the TypoScript chain
-of the :ref:`site TypoScript <typoscript-site-sets-site>` that will be defined
-by a site that is using sets.
+They are inserted into the :ref:`site TypoScript <typoscript-site-sets-site>`
+chain of every site that uses the set.
 
 Set constants will always be overruled by
 :ref:`site settings <t3coreapi:sitehandling-settings>`. Since site settings
@@ -87,12 +85,12 @@ setting. This can be used to provide backward compatibility with TYPO3 v12
 in extensions, where constants shall be used in v12, while v13 will always
 prefer defined site settings.
 
-TypoScript dependencies dependencies to TypoScript in other extensions or
-other sets are to be included via site sets.
+Dependencies on TypoScript in other extensions or other sets are declared
+as :yaml:`dependencies` in the :file:`config.yaml` file of the set.
 
-Dependencies are included recursively.
-Sets are automatically ordered and deduplicated. That means TypoScript will not
-be loaded multiple times, if a shared dependency is required by multiple sets.
+Dependencies are included recursively and are automatically ordered and
+deduplicated. That means TypoScript will not be loaded multiple times, if a
+shared dependency is required by multiple sets.
 
 ..  note::
     `@import` statements can still be used for local includes, but
