@@ -604,7 +604,7 @@ noViewWithDokTypes (removed)
 ..  versionchanged:: 14.0
     The TSconfig option :typoscript:`mod.web_list.noViewWithDokTypes` has been
     removed since it just duplicated the existing configuration
-    `TCEMAIN.preview.disableButtonForDokType <https://docs.typo3.org/permalink/t3tsref:confval-tcemain-preview>`.
+    `TCEMAIN.preview.disableButtonForDokType <https://docs.typo3.org/permalink/t3tsref:confval-tcemain-preview>`_.
 
 Remove any usage of :typoscript:`mod.web_list.noViewWithDokTypes` from Page
 TSconfig.
