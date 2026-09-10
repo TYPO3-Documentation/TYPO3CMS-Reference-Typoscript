@@ -395,35 +395,48 @@ fullRootLine
     :name: data-fullRootLine
     :Syntax: fullRootLine : [pointer, integer], [field name], ["slide"]
 
-Used to retrieve values from "above" the current page's
-root. Assume that you are on the page "You are here!" in the page tree below.
-Using the :ref:`data-type-gettext-levelfield` property, you
-can only go up to the page "Site root", because it is the root of a new
-(sub-)site.  :typoscript:`fullRootLine` allows you to go all the way up to the page
-tree root. The numbers in square brackets indicate  which page each
-value of *pointer* would point to:
+Gets the value of a field of a page in the root line. The *pointer* is an
+absolute level, counted from the root page of the site downwards:
+:typoscript:`0` addresses the root page itself, :typoscript:`1` the page below
+it and so on. The numbers in square brackets indicate which page each value of
+*pointer* would point to:
 
 ..  code-block:: text
 
-    - Page tree root [-2]
-      |- 1. page before [-1]
-        |- Site root (root template here!) [0]
-          |- You are here! [1]
+    - Site root (root template here!) [0]
+      |- Products [1]
+        |- You are here! [2]
 
 A "slide" parameter can be added (like in :ref:`data-type-gettext-levelfield`
 property).
 
+..  note::
+    In contrast to :ref:`data-type-gettext-levelfield`, a negative *pointer*
+    does not count levels up from the current page. It addresses pages above
+    the root page of the site, and TYPO3 does not deliver content from outside
+    the current site, so the result is empty. Use
+    :ref:`data-type-gettext-levelfield` to count levels up from the current
+    page.
+
 ..  _data-type-gettext-fullrootline-example:
 
-Example: Get the title of the previous page
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Example: Get a field from a page in the root line
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Get the title of the page before the start of the current website:
+Get the value of the field :sql:`tx_myextension_myfield` from the root page of
+the site:
+
+..  code-block:: typoscript
+    :caption: EXT:my_extension/Configuration/TypoScript/setup.typoscript
+
+    lib.foo.data = fullRootLine : 0, tx_myextension_myfield
+
+Get the title of the page on the first level below the root page of the site:
 
 ..  code-block:: typoscript
     :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-    lib.foo.data = fullRootLine : -1, title
+    lib.foo.data = fullRootLine : 1, title
 
 ..  _data-type-gettext-getenv:
 
