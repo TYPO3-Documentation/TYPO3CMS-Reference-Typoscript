@@ -69,3 +69,56 @@ If Extbase controllers are used, :php:`$this->settings` is automatically passed 
 ..  code-block:: xml
 
     {settings.key1}
+
+Without Extbase, a template rendered by the
+:ref:`FLUIDTEMPLATE <cobj-fluidtemplate>` content object receives its
+settings from the
+:ref:`settings <cobj-fluidtemplate-properties-settings>` property of that
+content object.
+
+..  _extdev-access-typoscript-psr7-request:
+
+Reading frontend TypoScript from the PSR-7 request
+==================================================
+
+Any class that can reach the
+:ref:`PSR-7 request <t3coreapi:getting-typo3-request-object>` — a content
+object, a middleware, an event listener — reads the parsed frontend
+TypoScript from the
+:ref:`frontend.typoscript
+<t3coreapi:typo3-request-attribute-frontend-typoscript>` request
+attribute:
+
+..  code-block:: php
+    :caption: EXT:my_extension/Classes/SomeClass.php
+
+    $fullTypoScript = $request->getAttribute('frontend.typoscript')
+        ->getSetupArray();
+
+..  note::
+
+    :php:`\TYPO3\CMS\Core\TypoScript\FrontendTypoScript::getSetupArray()`
+    throws a :php-short:`\RuntimeException` when the frontend was fully
+    served from the page cache, because the setup is not parsed in that
+    case. Content objects are not affected: whenever they are calculated,
+    the setup is available.
+
+..  seealso::
+
+    *   :ref:`Frontend TypoScript in the PHP API
+        <t3coreapi:typoscript-access_frontend_typoscript>`
+
+..  _extdev-access-page-tsconfig:
+
+Reading page TSconfig
+=====================
+
+Page TSconfig is backend TypoScript and therefore not part of the frontend
+request. It is read for a single page with
+`BackendUtility::getPagesTSconfig()`, which returns the parsed TypoScript
+as an array.
+
+..  seealso::
+
+    *   :ref:`Page TSconfig in the PHP API
+        <t3coreapi:typoscript-access_page_tsconfig>`
