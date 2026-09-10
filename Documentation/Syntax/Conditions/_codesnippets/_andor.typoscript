@@ -1,7 +1,14 @@
+# "or" is an alias for "||": one of the criteria is enough
 [frontend.user.isLoggedIn || ip('127.0.0.1')]
   page.20 = TEXT
   page.20 {
     value = A frontend user is logged in, or the browser IP is 127.0.0.1
     stdWrap.case = upper
   }
+[GLOBAL]
+
+# "and" is an alias for "&&": both criteria must apply
+[frontend.user.isLoggedIn && siteLanguage("languageId") == 1]
+  page.30 = TEXT
+  page.30.value = A logged in frontend user browses the second site language
 [GLOBAL]
