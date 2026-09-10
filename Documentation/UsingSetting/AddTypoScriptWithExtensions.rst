@@ -281,8 +281,8 @@ for the backend <typo3/cms-form:concepts-configuration-yamlregistration-backend>
 
 ..  warning::
     While the content from the files
-    `ext_typoscript_setup.typoscript <https://docs.typo3.org/permalink/t3coreapi:ext_typoscript_setup_typoscript>`_
-    and `ext_typoscript_constants.typoscript <https://docs.typo3.org/permalink/t3coreapi:ext_typoscript_constants_typoscript>`_
+    `ext_typoscript_setup.typoscript <https://docs.typo3.org/permalink/t3coreapi:ext-typoscript-setup-typoscript>`_
+    and `ext_typoscript_constants.typoscript <https://docs.typo3.org/permalink/t3coreapi:ext-typoscript-constants-typoscript>`_
     is loaded by default in sites based on **TypoScript records** it is not
     loaded in sites depending on **site sets as TypoScript providers**.
 
