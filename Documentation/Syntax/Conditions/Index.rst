@@ -98,7 +98,26 @@ as well as :typoscript:`and` or :typoscript:`&&`
 ..  literalinclude:: _codesnippets/_andor.typoscript
     :caption: packages/my_site_package/Configuration/TypoScript/setup.typoscript
 
-Single criteria can be negated using :typoscript:`!`
+Single criteria can be negated using :typoscript:`not` or :typoscript:`!`
+
+..  literalinclude:: _codesnippets/_not.typoscript
+    :caption: packages/my_site_package/Configuration/TypoScript/setup.typoscript
+
+As in most programming languages, :typoscript:`not` binds more strongly than
+:typoscript:`and`, which in turn binds more strongly than :typoscript:`or`. Use
+parentheses whenever the intended grouping is not the default one:
+
+..  literalinclude:: _codesnippets/_precedence.typoscript
+    :caption: packages/my_site_package/Configuration/TypoScript/setup.typoscript
+
+..  warning::
+    All criteria of a condition belong into *one* pair of square brackets.
+    Chaining several bracketed conditions with :typoscript:`&&` or
+    :typoscript:`||` was the syntax used before the Symfony expression
+    language was introduced in TYPO3 v9. It has been removed since and now
+    fails *silently*: everything after the first closing bracket is treated
+    as a comment, so all criteria but the first one are ignored without any
+    error message.
 
 ..  _typoscript-syntax-end-condition-constants:
 
