@@ -39,6 +39,48 @@ https://github.com/TYPO3-Documentation/TYPO3CMS-Guide-HowToDocument):
    commit, which is avoidable noise.
 7. **Never commit or push without being asked.**
 
+## Code block captions
+
+Give every code block a `:caption:` saying where the code goes. That is the
+question a reader of this manual has — setup, constants or page TSconfig? — and
+the caption is the only place it gets answered.
+
+The caption goes directly under the directive, with **no blank line** between
+the two. A blank line ends the option block, so the caption is parsed as content
+and rendered as the first line of the code:
+
+```rst
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+
+    page = PAGE
+```
+
+If the block already has options such as `:linenos:` or `:emphasize-lines:`, the
+caption goes first and the others stay directly below it, still without a blank
+line between them.
+
+Use these paths. Each of them is loaded by TYPO3 on its own, so a reader who
+copies the example into that file gets a working result:
+
+| What the block shows | Caption |
+| --- | --- |
+| Frontend TypoScript setup | `EXT:site_package/Configuration/Sets/Main/setup.typoscript` |
+| TypoScript constants | `EXT:site_package/Configuration/Sets/Main/constants.typoscript` |
+| Page TSconfig | `EXT:site_package/Configuration/Sets/Main/page.tsconfig`, or the extension's own `EXT:site_package/Configuration/page.tsconfig` |
+| User TSconfig | `EXT:site_package/Configuration/user.tsconfig` |
+| Site configuration | `config/sites/my_site/config.yaml` |
+| Rendered output rather than a file | `Example output` (`Example input` for the value going in) |
+| A shell command | the prompt for the directory it is run from, for example `typo3_root$` |
+
+Do **not** write `EXT:site_package/Configuration/TypoScript/setup.typoscript`.
+Nothing includes that file unless the reader wires it up by hand, so it answers
+the reader's question wrongly. A site set is included as soon as a site lists
+it, an extension's `Configuration/page.tsconfig` has been picked up
+automatically since TYPO3 v12 and `Configuration/user.tsconfig` since v13.
+Many captions in this manual still use the old path; correct it when you touch
+such a block.
+
 ## Commit message format
 
 Follow https://docs.typo3.org/m/typo3/docs-how-to-document/main/en-us/Howto/EditLocal.html:
