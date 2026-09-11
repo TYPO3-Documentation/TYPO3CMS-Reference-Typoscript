@@ -69,6 +69,7 @@ language
     ..  rubric:: Example
 
     ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
         page.10 = TEXT
         page.10.value = Link to the page with the ID 23 in the current language
@@ -172,6 +173,7 @@ addQueryString
     ..  rubric:: Example
 
     ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
         # Pass resolved query parameters to the link
         typolink.addQueryString = 1
@@ -470,6 +472,7 @@ returnLast
     internal ``LinkResult`` object.
 
     ..  code-block:: json
+        :caption: Example output
 
         {
             "href": "/my-page",

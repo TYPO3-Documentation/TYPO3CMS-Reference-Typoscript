@@ -51,6 +51,7 @@ To generate such an overlayed image with the GIFBUILDER you have to use
 code like the following:
 
 ..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     lib.test = IMAGE
     lib.test {
@@ -194,6 +195,7 @@ The base image is the same as above. Below is the result - just see
 yourself:
 
 ..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     lib.header = IMAGE
     lib.header {
@@ -324,6 +326,7 @@ Setup
 ~~~~~
 
 ..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     tt_content.image.20.1.file >
     tt_content.image.20.1.file = GIFBUILDER
@@ -404,6 +407,7 @@ Setup
 ~~~~~
 
 ..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     tt_content.image.20.1.file >
     tt_content.image.20.1.file = GIFBUILDER
