@@ -234,7 +234,7 @@ fixAttrib.[attribute].prefixRelPathWith
     Example:
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
         lib.parser.fixAttrib.src.prefixRelPathWith = https://example.org/typo3/32/dummy/
 
@@ -262,7 +262,7 @@ fixAttrib.[attribute].userFunc
     Example:
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
         lib.parser.fixAttrib.href.userFunc = \Vendor\ExtName\ClassName->function
 
@@ -277,7 +277,7 @@ fixAttrib.[attribute].userFunc
     user function:
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
         lib.parser.fixAttrib.href.userFunc.myCustomParm = myCustomValue
 

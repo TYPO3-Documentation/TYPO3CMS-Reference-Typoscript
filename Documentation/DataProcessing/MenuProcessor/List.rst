@@ -36,7 +36,7 @@ Properties
     listed:
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
         lib.listOfSelectedPages = HMENU
         lib.listOfSelectedPages {

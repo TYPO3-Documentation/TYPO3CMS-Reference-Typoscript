@@ -63,7 +63,7 @@ Properties
     ..  rubric:: Examples
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
         tags.bold = TEXT
         tags.bold {
@@ -95,7 +95,7 @@ the content of the tag.
 should be the image-reference in :file:`fileadmin/images/`.
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     tags {
         link = TEXT

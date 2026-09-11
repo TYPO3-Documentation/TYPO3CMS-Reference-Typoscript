@@ -22,7 +22,7 @@ TYPO3 does not initialize :typoscript:`page` by default. You must initialize thi
 explicitly, for example:
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     page = PAGE
 
@@ -80,7 +80,7 @@ This default behaviour can be changed by setting the property
 :ref:`setup-config-disableallheadercode`:
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     page.config.disableAllHeaderCode = 1
 
@@ -88,7 +88,7 @@ If the output represents another format different from HTML the HTTP header
 should also be set, for example:
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     page.config.additionalHeaders.10.header = Content-type:application/json
 
@@ -113,7 +113,7 @@ the page will be used.
 Example:
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     page = PAGE
     page.typeNum = 0
@@ -511,7 +511,7 @@ Properties
         There is no :typoscript:`data`-array as optional parameter but all keys not explicitly mentioned as parameters are used as additional attributes - behaviour is the same as in :confval:`includeCSS <page-includeCSS>`.
 
         ..  code-block:: typoscript
-            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+            :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
             # This will lead to <script src="/_assets/.../Frontend/JavaScript/somefile.js?123456" data-foo="data-bar" foo="bar"></script>
             page.includeJSFooterlibs {
@@ -539,7 +539,7 @@ Properties
         There is no :typoscript:`data`-array as optional parameter but all keys not explicitly mentioned as parameters are used as additional attributes - behaviour is the same as in :confval:`includeCSS <page-includeCSS>`.
 
         ..  code-block:: typoscript
-            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+            :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
             # This will lead to <script src="/_assets/.../Frontend/JavaScript/somefile.js?123456" data-foo="data-bar" foo="bar"></script>
             page.includeJSLibs {
@@ -715,7 +715,7 @@ Demonstrates:
 
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     page = PAGE
     page.20 = TEXT
@@ -734,7 +734,7 @@ Demonstrates:
     * :confval:`page.bodyTag <page-bodytag>`
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     # This will lead to <body class="example"> if constant "bodyClass" is set accordingly.
     page.bodyTag = <body class="{$bodyClass}">
@@ -748,7 +748,7 @@ Demonstrates:
     * :confval:`page.bodyTagAdd <page-bodyTagAdd>`
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     # This will lead to <body class="example">
     page.bodyTagAdd = class="example"
@@ -762,7 +762,7 @@ Demonstrates:
     * :confval:`page.cssInline <page-cssInline>`
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     page = PAGE
     # [...]
@@ -784,7 +784,7 @@ Demonstrates:
     * :confval:`page.footerData <page-footerData>`
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     page = PAGE
     # [...]
@@ -806,7 +806,7 @@ Demonstrates:
     * :confval:`page.headerData <page-headerData>`
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     page = PAGE
     # [...]
@@ -828,7 +828,7 @@ Demonstrates:
     * :confval:`page.includeCSS <page-includeCSS>`
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     page = PAGE
     # [...]
@@ -859,7 +859,7 @@ Demonstrates:
     * :confval:`page.includeCSSLibs <page-includeCSSLibs>`
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     page = PAGE
     # [...]
@@ -880,7 +880,7 @@ Demonstrates:
     * :confval:`page.includeJS <page-includeJS>`
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     page = PAGE
     # [...]
@@ -917,7 +917,7 @@ Demonstrates:
     * :confval:`page.inlineLanguageLabelFiles <page-inlineLanguageLabelFiles>`
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     page = PAGE
     # [...]
@@ -938,7 +938,7 @@ Demonstrates:
     * :confval:`page.inlineSettings <page-inlineSettings>`
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     page = PAGE
     # [...]
@@ -963,7 +963,7 @@ Demonstrates:
     * :confval:`page.jsFooterInline <page-jsFooterInline>`
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     page = PAGE
     # [...]
@@ -982,7 +982,7 @@ Demonstrates:
     * :confval:`page.jsFooterInline <page-jsFooterInline>`
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     page = PAGE
     # [...]
@@ -1001,7 +1001,7 @@ Demonstrates:
     * :confval:`page.meta <page-meta>`
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     page = PAGE
     # [...]
@@ -1023,7 +1023,7 @@ Demonstrates:
 If the page record is not set search up the root line of pages.
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     page = PAGE
     # [...]
@@ -1041,7 +1041,7 @@ Demonstrates:
     * :confval:`page.meta <page-meta>`
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     page.meta.refresh = 5; url=https://example.org/
     page.meta.refresh.attribute = http-equiv
@@ -1058,7 +1058,7 @@ Meta tags with a different attribute name are supported like the
 Open Graph meta tags:
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     page = PAGE
     # [...]
@@ -1117,7 +1117,7 @@ Demonstrates:
     * :confval:`page.shortcutIcon <page-shortcutIcon>`
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     page.shortcutIcon = EXT:site_package/Resources/Public/Images/favicon.ico
 

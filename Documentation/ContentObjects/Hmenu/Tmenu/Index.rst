@@ -247,7 +247,7 @@ Properties
             drops the filter "colPos=x" completely.
 
             ..  code-block:: typoscript
-                :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+                :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
                 tt_content.menu.20.3.1.sectionIndex.useColPos = -1
 

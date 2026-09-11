@@ -201,7 +201,7 @@ Example: Find related pages of the current page
 -----------------------------------------------
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     lib.relatedPagesMenu = HMENU
     lib.relatedPagesMenu {

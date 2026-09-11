@@ -146,7 +146,7 @@ Properties of 'config'
         lifetime calculation of page <page-id>, add the following TypoScript:
 
         ..  code-block:: typoscript
-            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+            :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
             config.cache.<page-id> = <table name>:<storage-pid>
 
@@ -1052,7 +1052,7 @@ This includes the :sql:`fe_users` records on page 2 in the cache lifetime
 calculation for page 10:
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     config.cache.10 = fe_users:2
 
@@ -1060,7 +1060,7 @@ This includes records from multiple sources; :sql:`fe_users`
 records on page 2 and :sql:`tt_new` records on page 11:
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     config.cache.10 = fe_users:2,tt_news:11
 
@@ -1068,7 +1068,7 @@ Take :sql:`fe_users` records on storage page 2 into account for the cache lifeti
 pages:
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     config.cache.all = fe_users:2
 
@@ -1076,7 +1076,7 @@ Each page's cache lifetime is affected if fe_users stored on the same page are
 changed:
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     config.cache.all = fe_users:current
 
@@ -1089,7 +1089,7 @@ Demonstrates:
     *   :confval:`config.contentObjectExceptionHandler <config-contentObjectExceptionHandler>`
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     # Use 1 for the default exception handler (enabled by default in production context)
     config.contentObjectExceptionHandler = 1
@@ -1123,7 +1123,7 @@ Provide JSON and disable HTML headers
 A page type providing JSON:
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     json = PAGE
     json {
@@ -1144,7 +1144,7 @@ Demonstrates:
     * :confval:`config.htmlTag.attributes <config-htmlTag-attributes>`
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     config.htmlTag.attributes.class = no-js
 
@@ -1156,7 +1156,7 @@ Results in :
     <html lang="fr" class="no-js">
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     config.htmlTag.attributes.amp =
 
@@ -1187,7 +1187,7 @@ Demonstrates:
     * :confval:`config.htmlTag_setParams <config-htmlTag-setParams>`
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     config.htmlTag_setParams = xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US"
 
@@ -1200,7 +1200,7 @@ Demonstrates:
     * :confval:`config.inlineStyle2TempFile <config-inlineStyle2TempFile>`
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     config.inlineStyle2TempFile = 0
 
@@ -1213,14 +1213,14 @@ Demonstrates:
     * :confval:`config.linkVars <config-linkVars>`
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     config.linkVars = print
 
 This will add `&print=[print-value]` to all links in TYPO3.
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     config.linkVars = tracking|green(0-5)
 
@@ -1236,7 +1236,7 @@ Demonstrates:
     * :confval:`config.message_preview_workspace <config-message_preview_workspace>`
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     config.message_preview_workspace = <div class="previewbox">Displaying workspace named "%s" (number %s)!</div>
     config.message_preview_workspace = <div class="previewbox">Displaying workspace number %2$s named "%1$s"!</div>
@@ -1251,7 +1251,7 @@ Demonstrates:
     * :confval:`config.MP_defaults <config-MP_defaults>`
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     config.MP_defaults = 36,37,48 : 2-207
 
@@ -1267,7 +1267,7 @@ Demonstrates:
     * :confval:`config.namespaces <config-namespaces>`
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     config.namespaces.dc = http://purl.org/dc/elements/1.1/
     config.namespaces.foaf = http://xmlns.com/foaf/0.1/
@@ -1275,7 +1275,7 @@ Demonstrates:
 This configuration will result in an :html:`<html>` tag like:
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     <html xmlns:dc="http://purl.org/dc/elements/1.1/"
        xmlns:foaf="http://xmlns.com/foaf/0.1/">
@@ -1289,7 +1289,7 @@ Demonstrates:
     * :confval:`config.pageRendererTemplateFile <config-pageRendererTemplateFile>`
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     config.pageRendererTemplateFile = EXT:my_extension/Resources/Private/Templates/TestPagerender.fluid.html
 
@@ -1305,7 +1305,7 @@ Demonstrates:
 By default, TYPO3 ships with two providers:
 
 .. code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     config.pageTitleProviders {
         record {
@@ -1341,14 +1341,14 @@ Demonstrates:
 This produces a title tag with the format "website . page title":
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     config.pageTitleSeparator = .
 
 This produces a title tag with the format "website - page title":
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     config.pageTitleSeparator = -
     config.pageTitleSeparator.noTrimWrap = | | |
@@ -1356,7 +1356,7 @@ This produces a title tag with the format "website - page title":
 This produces a title tag with the format "website*page title":
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     config.pageTitleSeparator = *
     config.pageTitleSeparator.noTrimWrap = |||
@@ -1365,7 +1365,7 @@ If you want to remove the web page title from the title, choose a separator that
 Then split the title from that character and return the second part only:
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     config.pageTitleSeparator = *
     config.pageTitle.stdWrap {
@@ -1385,7 +1385,7 @@ Demonstrates:
     * :confval:`config.removeDefaultCss <config-removeDefaultCss>`
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     config  {
         removeDefaultJS = external
@@ -1404,7 +1404,7 @@ Demonstrates:
     * :confval:`config.spamProtectEmailAddresses_lastDotSubst <config-spamProtectEmailAddresses_lastDotSubst>`
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     config {
         spamProtectEmailAddresses = -2
@@ -1421,7 +1421,7 @@ Demonstrates:
     * :confval:`config.tx_myextension <config-tx-extension-key-with-no-underscores>`
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     config.tx_realurl_enable = 1
     config.tx_myextension.width  = 10
@@ -1438,7 +1438,7 @@ Demonstrates:
     * :confval:`config.typolinkLinkAccessRestrictedPages_addParams <config-typolinkLinkAccessRestrictedPages_addParams>`
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     config {
         typolinkLinkAccessRestrictedPages = 29
