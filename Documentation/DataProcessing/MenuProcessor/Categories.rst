@@ -115,6 +115,7 @@ Example: List pages in categories with UID 1 and 2
 --------------------------------------------------
 
 ..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     20 = HMENU
     20 {

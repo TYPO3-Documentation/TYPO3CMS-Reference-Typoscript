@@ -169,6 +169,7 @@ bullet-gif (ln 8). Finally the whole thing is wrapped in the proper
 table-tags (ln 10). :
 
 ..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
     :linenos:
 
     20 = TEXT

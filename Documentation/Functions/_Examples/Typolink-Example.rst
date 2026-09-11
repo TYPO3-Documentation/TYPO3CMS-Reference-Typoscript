@@ -34,6 +34,8 @@ attributes, pass it to a new immutable object and return that. Then this is what
 gets emitted after full processing:
 
 ..  code-block:: html
+    :caption: Example output
+
     <a href="/en/pages/4711"
        target="_blank"
        title="Custom Title"
@@ -51,6 +53,8 @@ alter it, pass it to a new immutable object and return that. Then this is what f
 gets emitted after full processing:
 
 ..  code-block:: html
+    :caption: Example output
+
     <a href="/en/pages/4711/event/18"
        target="_blank"
        title="Custom: My Link Text"

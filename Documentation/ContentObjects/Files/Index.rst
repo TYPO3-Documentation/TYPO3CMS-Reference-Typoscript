@@ -80,6 +80,7 @@ references
     sys_file_reference with the UIDs 27 and 28.
 
     ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
         references {
           table = tt_content
@@ -91,6 +92,7 @@ references
     tt_content record "256".
 
     ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
         references {
           table = pages
@@ -145,6 +147,7 @@ folders
     Example for option :typoscript:`recursive`:
 
     ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
         filecollection = FILES
         filecollection {
@@ -226,6 +229,7 @@ renderObj
     **Example:**
 
     ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
         page.10.renderObj = TEXT
         page.10.renderObj {
@@ -297,6 +301,7 @@ Then we use the :ref:`TEXT <cobj-text>` cObject as :ref:`cobj-files-renderObj`
 to output the file size of all files that were found:
 
 .. code-block:: typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     page.10 = FILES
 
@@ -323,6 +328,7 @@ as an :ref:`IMAGE <cobj-image>` cObject with some meta data coming from
 the file itself or from the reference to it (title):
 
 .. code-block:: typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     page.20 = FILES
     page.20 {
@@ -354,6 +360,7 @@ One usual feature is to use images attached to pages and use
 them up and down the page tree, a process called "sliding".
 
 .. code-block:: typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     lib.banner = FILES
     lib.banner {
