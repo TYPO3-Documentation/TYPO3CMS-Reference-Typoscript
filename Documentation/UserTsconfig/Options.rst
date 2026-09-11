@@ -719,7 +719,7 @@ Properties
             :Path: options.impexp.enableImportForNonAdminUser
 
             ..  note::
-                This option was introduced to avoid `information disclosure <https://typo3.org/article/typo3-core-sa-2016-015>`__.
+                This option was introduced to avoid `information disclosure <https://typo3.org/security/advisory/typo3-core-sa-2016-015>`__.
 
             The import/export module of `EXT:impexp` is disabled by default for
             non-admin users. Enable this option, if non-admin users need to use the
