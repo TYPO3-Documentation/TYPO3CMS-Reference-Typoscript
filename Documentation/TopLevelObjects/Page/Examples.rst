@@ -16,6 +16,7 @@ Demonstrates:
     * :confval:`page.10 <page-array>`
 
 .. code-block:: typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
    # Default PAGE object:
    page = PAGE
@@ -32,6 +33,7 @@ Demonstrates:
     * :confval:`page.10 <page-array>`
 
 .. code-block:: typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
    page = PAGE
    page.10 = FLUIDTEMPLATE
@@ -69,6 +71,7 @@ This can be achieved for example by using a non-cacheable array, the
 :ref:`COA_INT <cobj-coa-int>`.
 
 .. code-block:: typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
    myAjax = PAGE
    myAjax {
@@ -96,6 +99,7 @@ To create a page type in the format json an additional
 header with `Content-type:application/json` has to be set:
 
 .. code-block:: typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
    json = PAGE
    json {

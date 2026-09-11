@@ -1328,6 +1328,7 @@ locale()
         *   `TYPO3 explained: Locale API <https://docs.typo3.org/permalink/t3coreapi:locale-api>`_
 
     ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
         [locale().getName() == "en-US"]
             page.20.value = Language is American English.

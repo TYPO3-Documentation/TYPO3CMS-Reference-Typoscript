@@ -577,6 +577,7 @@ Standard rendering
 This returns:
 
 ..  code-block:: html
+    :caption: Example output
 
     <img src="/fileadmin/toplogo.png"
          width="300"
@@ -654,6 +655,7 @@ Responsive/adaptive rendering
 This returns as an example all per default possible HTML output:
 
 ..  code-block:: html
+    :caption: Example output
 
     <img src="/fileadmin/_processed_/imagefilenamename_595cc36c48.png"
          width="600" height="423" alt="">
