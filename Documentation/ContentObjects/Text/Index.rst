@@ -71,7 +71,7 @@ Examples
 ========
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     10 = TEXT
     10.value = This is a text in uppercase
@@ -81,7 +81,7 @@ The above example uses the stdWrap property :ref:`case <stdwrap-case>`. It
 returns "THIS IS A TEXT IN UPPERCASE".
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     10 = TEXT
     10.value.field = title
@@ -95,7 +95,7 @@ stored in the database field :sql:`title`). The header is then wrapped in
 Now let us have a look at an extract from a more complex example:
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     10 = TEXT
     10.value.field = bodytext
@@ -110,7 +110,7 @@ is useful inside :ref:`COA <cobj-coa>` objects.
 Here is the same example in its context:
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     10 = CONTENT
     10 {

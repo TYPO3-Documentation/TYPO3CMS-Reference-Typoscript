@@ -54,7 +54,7 @@ applicationContext
     Example:
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
         [applicationContext == "Development"]
             # ...
@@ -82,7 +82,7 @@ page
     Example:
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
         # Check single page UID
         [traverse(page, "uid") == 2]
@@ -150,7 +150,7 @@ tree.level
     Example:
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
         # Check, if the page is on level 0:
         [tree.level == 0]
@@ -174,7 +174,7 @@ tree.pagelayout
     Example:
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
         # Using backend layout records
         [tree.pagelayout === "2"]
@@ -213,7 +213,7 @@ tree.rootLine
     Example:
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
         [tree.rootLine[0]["uid"] == 1]
             # ...
@@ -237,7 +237,7 @@ tree.rootLineIds
     Example:
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
         # Check, if page with uid 2 is inside the root line
         [2 in tree.rootLineIds]
@@ -262,7 +262,7 @@ tree.rootLineParentIds
     Example:
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
         # Check, if the page with UID 2 is the parent of a page inside the root line
         [2 in tree.rootLineParentIds]
@@ -313,7 +313,7 @@ backend.user.isAdmin
     Example:
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
         # Evaluates to true, if the current backend user is administrator
         [backend.user.isAdmin]
@@ -336,7 +336,7 @@ backend.user.isLoggedIn
     Example:
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
         # Evaluates to true, if a backend user is logged in
         [backend.user.isLoggedIn]
@@ -359,7 +359,7 @@ backend.user.userId
     Example:
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
         # Evaluates to true, if the user UID of the current logged-in backend
         # user is equal to 5
@@ -384,7 +384,7 @@ backend.user.userGroupIds
     Example:
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
         [2 in backend.user.userGroupIds]
             # ...
@@ -406,7 +406,7 @@ backend.user.userGroupList
     Example:
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
         [like(","~backend.user.userGroupList~",", "*,1,*")]
             # ...
@@ -454,7 +454,7 @@ frontend.user.isLoggedIn
     Example:
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
         [frontend.user.isLoggedIn]
             # ...
@@ -476,7 +476,7 @@ frontend.user.userId
     Example:
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
         [frontend.user.userId == 5]
             # ...
@@ -499,7 +499,7 @@ frontend.user.userGroupIds
     Example:
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
         [4 in frontend.user.userGroupIds]
             # ...
@@ -521,7 +521,7 @@ frontend.user.userGroupList
     Example:
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
         [like(","~frontend.user.userGroupList~",", "*,1,*")]
             # ...
@@ -556,7 +556,7 @@ workspace.workspaceId
     Example:
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
         # Check, if in live workspace
         [workspace.workspaceId == 0]
@@ -579,7 +579,7 @@ workspace.isLive
     Example:
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
         [workspace.isLive]
             # ...
@@ -601,7 +601,7 @@ workspace.isOffline
     Example:
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
         [workspace.isOffline]
             # ...
@@ -636,7 +636,7 @@ typo3.version
     Example:
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
         [typo3.version == "14.3.1"]
             # ...
@@ -658,7 +658,7 @@ typo3.branch
     Example:
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
         [typo3.branch == "14.3"]
             # ...
@@ -680,7 +680,7 @@ typo3.devIpMask
     Example:
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
         [typo3.devIpMask == "172.18.0.6"]
             # ...
@@ -707,7 +707,7 @@ date()
     Example:
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
         # True, if the day of the current month is 7
         [date("j") == 7]
@@ -748,7 +748,7 @@ like()
     Example:
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
         # Search a string with * within another string
         [like("fooBarBaz", "*Bar*")]
@@ -788,7 +788,7 @@ traverse()
     Example:
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
         # Traverse query parameters of current request along tx_news_pi1[news]
         [request && traverse(request.getQueryParams(), 'tx_news_pi1/news') > 0]
@@ -826,7 +826,7 @@ compatVersion()
     Example:
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
         # True, if the current TYPO3 version is 14.3.x
         [compatVersion("14.3")]
@@ -851,7 +851,7 @@ getTSFE(): Migration
     condition like `getTSFE()` will never evaluate to true and needs adaption.
 
 ..  code-block:: diff
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript (diff)
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript (diff)
 
     - [getTSFE() && getTSFE().id == 42]
 
@@ -872,7 +872,7 @@ getenv()
     Example:
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
         [getenv("VIRTUAL_HOST") == "www.example.org"]
             # ...
@@ -895,7 +895,7 @@ feature()
     Example:
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
         # True, if the feature toggle for enforcing the Content Security Policy
         # in the frontend is enabled
@@ -924,7 +924,7 @@ ip()
     Example:
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
         [ip("172.18.*")]
             page.10.value = Your IP matches "172.18.*"
@@ -988,7 +988,7 @@ request.getQueryParams()
     Example:
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
         # Safely check the query parameter array to avoid error logs in case key
         # is not defined. This will check if the GET parameter
@@ -1014,7 +1014,7 @@ request.getParsedBody()
     Example:
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
         [request && traverse(request.getParsedBody(), 'foo') == 1]
             # ...
@@ -1036,7 +1036,7 @@ request.getHeaders()
     Example:
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
         [request && request.getHeaders()['Accept'] == 'json']
             page.10.value = Accepts json
@@ -1062,7 +1062,7 @@ request.getCookieParams()
     Example:
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
         [request && request.getCookieParams()['foo'] == 1]
             # ...
@@ -1087,7 +1087,7 @@ request.getNormalizedParams()
     Example:
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
         [request && request.getNormalizedParams().isHttps()]
             page.10.value = HTTPS is being used
@@ -1115,7 +1115,7 @@ request.getPageArguments()
     Example:
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
         [request && request.getPageArguments().get('foo_id') > 0]
             # ...
@@ -1145,7 +1145,7 @@ session()
     Example:
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
         # Match, if the session has the value 1234567 in the structure :php:`$foo['bar']`:
         [session("foo|bar") == 1234567]
@@ -1200,7 +1200,7 @@ site()
     Example:
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
         # Site identifier
         [site("identifier") == "my_site"]
@@ -1230,7 +1230,7 @@ site()
     Site settings can also be used in the conditions in TypoScript constants:
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/constants.typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/constants.typoscript
 
         my.constant = my global value
         [traverse(site('configuration'), 'settings/some/setting') == 'someValue']
@@ -1297,7 +1297,7 @@ siteLanguage()
     Example:
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
         [siteLanguage("fallbackType") == "strict"]
             page.10.value = This site has a strict language fallback
@@ -1354,7 +1354,7 @@ TypoScript constants can be used in conditions with the
 :ref:`Syntax <typoscript-syntax-conditions-syntax>` for conditions:
 
 ..  code-block:: typoscript
-    :caption: EXT:my_extension/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:my_extension/Configuration/Sets/Main/setup.typoscript
 
     [{$tx_my_extension.settings.feature1Enabled} == 1]
         page.10.value = The feature 1 of my_extension is enabled.
@@ -1384,14 +1384,14 @@ Without using strict type comparison following two examples are true if
 constant is set to 1:
 
 ..  code-block:: typoscript
-    :caption: EXT:my_extension/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:my_extension/Configuration/Sets/Main/setup.typoscript
 
     [{$tx_my_extension.settings.feature1Enabled} == 1]
         page.10.value = The feature 1 of my_extension is enabled.
     [END]
 
 ..  code-block:: typoscript
-    :caption: EXT:my_extension/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:my_extension/Configuration/Sets/Main/setup.typoscript
 
     [{$tx_my_extension.settings.feature1Enabled} == "1"]
         page.10.value = The feature 1 of my_extension is enabled.
@@ -1402,14 +1402,14 @@ That's because the stored number of the constant was not wrapped with quotes
 and was therefor interpreted as integer.
 
 ..  code-block:: typoscript
-    :caption: EXT:my_extension/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:my_extension/Configuration/Sets/Main/setup.typoscript
 
     [{$tx_my_extension.settings.feature1Enabled} === 1]
         page.10.value = The feature 1 of my_extension is enabled.
     [END]
 
 ..  code-block:: typoscript
-    :caption: EXT:my_extension/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:my_extension/Configuration/Sets/Main/setup.typoscript
 
     [{$tx_my_extension.settings.feature1Enabled} === "1"]
         page.10.value = The feature 1 of my_extension is enabled.
@@ -1427,7 +1427,7 @@ to prevent interpreting the values as integer or float.
 Following condition is always false:
 
 ..  code-block:: typoscript
-    :caption: EXT:my_extension/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:my_extension/Configuration/Sets/Main/setup.typoscript
 
     [{$tx_my_extension.settings.feature1Enabled} == "active"]
         page.10.value = The feature 1 of my_extension is enabled.
@@ -1436,7 +1436,7 @@ Following condition is always false:
 If you are working with strings in conditions please do it that way:
 
 ..  code-block:: typoscript
-    :caption: EXT:my_extension/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:my_extension/Configuration/Sets/Main/setup.typoscript
 
     ["{$tx_my_extension.settings.feature1Enabled}" == "active"]
         page.10.value = The feature 1 of my_extension is enabled.
@@ -1445,7 +1445,7 @@ If you are working with strings in conditions please do it that way:
 Sure, strict type string comparisons are also working:
 
 ..  code-block:: typoscript
-    :caption: EXT:my_extension/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:my_extension/Configuration/Sets/Main/setup.typoscript
 
     ["{$tx_my_extension.settings.feature1Enabled}" === "active"]
         page.10.value = The feature 1 of my_extension is enabled.
@@ -1462,7 +1462,7 @@ processed by expression language. That allows experimental structures: If
 and page title is `Home` following condition is true:
 
 ..  code-block:: typoscript
-    :caption: EXT:my_extension/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:my_extension/Configuration/Sets/Main/setup.typoscript
 
     [traverse({$foo}, "title") == "Home"]
         page.10.value (
@@ -1473,7 +1473,7 @@ and page title is `Home` following condition is true:
 After the replacement of the constant the example will result into:
 
 ..  code-block:: typoscript
-    :caption: EXT:my_extension/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:my_extension/Configuration/Sets/Main/setup.typoscript
 
     [traverse(page, "title") == "Home"]
         page.10.value (

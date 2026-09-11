@@ -120,7 +120,7 @@ additionalParams
     ..  rubric:: Example
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
         page.10.typolink.additionalParams = '&print=1'
         page.20.typolink.additionalParams = '&sword_list[]=word1&sword_list[]=word2'
@@ -132,7 +132,7 @@ additionalParams
     SWORD\_PARAMS and can be insert directly like this:
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
            page.20.typolink.additionalParams.data = register:SWORD_PARAMS
 
@@ -256,7 +256,7 @@ parameter
         the correct target language will be resolved from the parameter):
 
         ..  code-block:: typoscript
-            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+            :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
             page.10.typolink.parameter = t3://page?uid=51
 
@@ -265,7 +265,7 @@ parameter
         title attribute reading "Very important information":
 
         ..  code-block:: typoscript
-            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+            :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
             page.10.typolink.parameter = t3://page?uid=current _blank specialLink "Very important information"
 
@@ -281,14 +281,14 @@ parameter
         define a class (third value) without having to define a target:
 
         ..  code-block:: typoscript
-            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+            :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
             page.10.typolink.parameter = https://example.com/ - specialLink
 
     #.  A mailto link with a title attribute (but no target and no class):
 
         ..  code-block:: typoscript
-            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+            :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
             page.10.typolink.parameter = mailto:info@example.org - - "Send a mail to main TYPO3 contact"
 
@@ -338,7 +338,7 @@ parameter
         Open page 51 in a popup window measuring 400 by 300 pixels:
 
         ..  code-block:: typoscript
-            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+            :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
             typolink.parameter = 51 400x300
 
@@ -346,7 +346,7 @@ parameter
         not make the window resizable and show the location bar:
 
         ..  code-block:: typoscript
-            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+            :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
             typolink.parameter = 51 400x300:resizable=0,location=1
 
@@ -371,7 +371,7 @@ parameter
             be defined explicitly, but imported like this:
 
             ..  code-block:: typoscript
-                :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+                :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
                 typolink.parameter.data = parameters : allParams
 
@@ -412,7 +412,7 @@ forceAbsoluteUrl.scheme
     default value. Example:
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
         typolink {
            parameter = 13
@@ -446,7 +446,7 @@ JSwindow\_params
     possible attributes:
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
         page.10.typolink.JSwindow_params = status=1,menubar=1,scrollbars=1,resizable=1,location=1,directories=1,toolbar=1
 
@@ -514,7 +514,7 @@ ATagParams
     ..  rubric:: Example
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
         page.10.typolink.ATagParams = class="board"
 
@@ -929,7 +929,7 @@ Examples
 Create a link to page with uid 2:
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     page.20 = TEXT
     page.20.value = anchor text
@@ -945,7 +945,7 @@ Output:
 Just display the URL:
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     page.30 = TEXT
     page.30.typolink.parameter = 2

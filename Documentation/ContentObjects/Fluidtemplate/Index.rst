@@ -166,7 +166,7 @@ file
     ..  rubric:: Example
 
     ..  literalinclude:: _includes/_fluidtemplate-file.typoscript
-        :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 ..  _cobj-fluidtemplate-properties-format:
 
@@ -223,7 +223,7 @@ layoutRootPaths
     ..  rubric:: Example
 
     ..  literalinclude:: _includes/_layoutRootPaths.typoscript
-        :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
     If property
     :ref:`layoutRootPath <cobj-fluidtemplate-properties-layoutrootpath>`
@@ -286,7 +286,7 @@ settings
     ..  rubric:: Example
 
     ..  literalinclude:: _includes/_settings.typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     To access copyrightYear in the template file use:
 
@@ -338,12 +338,12 @@ templateName
     ..  rubric:: Example 1
 
     ..  literalinclude:: _includes/_templateName.typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     ..  rubric:: Example 2
 
     ..  literalinclude:: _includes/_templateNameAutomatic.typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
 ..  _cobj-fluidtemplate-properties-templaterootpath:
 
@@ -390,7 +390,7 @@ templateRootPaths
     ..  rubric:: Example
 
     ..  literalinclude:: _includes/_templateRootPaths.typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
 ..  _cobj-fluidtemplate-properties-variables:
 
@@ -422,7 +422,7 @@ custom ones. In this example the Fluid Styled Content
 element "Text" has its data transformed for easier and enhanced usage.
 
 ..  literalinclude:: /DataProcessing/_RecordTransformationProcessor/_WithDatabaseFluidTemplate.typoscript
-    :caption: EXT:my_extension/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:my_extension/Configuration/Sets/Main/setup.typoscript
 
 For usage of the variables within Fluid see
 :ref:`RecordTransformationProcessor-fluidtemplate-example`.
@@ -446,7 +446,7 @@ like this:
 You could use it with TypoScript code like this:
 
 ..  literalinclude:: _includes/_example.typoscript
-    :caption: Before migration, EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
+    :caption: Before migration, EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 As a result, the page title and the label from TypoScript will be inserted as
 titles. The copyright year will be taken from the TypoScript constant
@@ -466,11 +466,11 @@ Migration from `FLUIDTEMPLATE` to `PAGEVIEW`
 
 ..  literalinclude:: _includes/_BeforeMigrationToPageview.typoscript
     :language: typoscript
-    :caption: Before migration, EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
+    :caption: Before migration, EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 ..  literalinclude:: _includes/_AfterMigrationToPageview.typoscript
     :language: typoscript
-    :caption: After migration, EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
+    :caption: After migration, EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 In Fluid, the pageUid is available as :fluid:`{page.uid}` and pageTitle
 as :fluid:`{page.title}`, the subtitle with :fluid:`{page.subtitle}`.

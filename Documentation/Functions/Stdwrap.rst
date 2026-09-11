@@ -42,7 +42,7 @@ because the value is imported from the header field in
 :php:`$cObj->data-array`.
 
 .. code-block:: typoscript
-   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+   :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
    10 = TEXT
    10.value = some text
@@ -128,7 +128,7 @@ Properties for getting data
         ..  rubric:: Examples
 
         ..  code-block:: typoscript
-            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+            :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
             page.10 = TEXT
             page.10.value = I am a Berliner!
@@ -162,7 +162,7 @@ Properties for getting data
         ..  rubric:: Examples
 
         ..  code-block:: typoscript
-            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+            :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
             page.10.field = title
 
@@ -171,7 +171,7 @@ Properties for getting data
         You can provide multiple field name options separated by "//".
 
         ..  code-block:: typoscript
-            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+            :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
             page.10.field = nav_title // title
 
@@ -282,7 +282,7 @@ Properties for overriding and conditions
 
         ..  rubric:: Examples
         ..  code-block:: typoscript
-            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+            :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
             page.10 = COA_INT
             page.10 {
@@ -353,7 +353,7 @@ Properties for overriding and conditions
         This would return "item 1":
 
         ..  code-block:: typoscript
-            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+            :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
             page.10 = TEXT
             page.10.value = item 1, item 2, item 3, item 4
@@ -362,7 +362,7 @@ Properties for overriding and conditions
         This would return "item 3"
 
         ..  code-block:: typoscript
-            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+            :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
             page.10 = TEXT
             page.10.value = item 1, item 2, item 3, item 4
@@ -383,7 +383,7 @@ Properties for overriding and conditions
             a random element
 
             ..  code-block:: typoscript
-                :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+                :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
                 page.5 = COA_INT
                 page.5 {
@@ -502,7 +502,7 @@ Properties for parsing data
         ..  rubric:: Examples
 
         ..  code-block:: typoscript
-            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+            :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
             page.10 {
                 parseFunc = < lib.parseFunc_RTE
@@ -521,7 +521,7 @@ Properties for parsing data
     by default). This is not recommended.
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
         // either disable globally
         lib.parseFunc.htmlSanitize = 0
@@ -540,7 +540,7 @@ Properties for parsing data
     sanitized and can be solved by explicitly disabling it with :typoscript:`htmlSanitize = 0`.
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
         10 = FLUIDTEMPLATE
         10 {
@@ -675,7 +675,7 @@ Properties for parsing data
 
         ..  rubric:: Examples
         ..  code-block:: typoscript
-            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+            :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
             page.10 = TEXT
             page.10 {
@@ -733,7 +733,7 @@ Properties for parsing data
         Render in human readable form:
 
         ..  code-block:: typoscript
-            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+            :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
             page.10 = TEXT
             page.10.value {
@@ -762,7 +762,7 @@ Properties for parsing data
         ..  rubric:: Examples
 
         ..  code-block:: typoscript
-            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+            :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
             lib.date_as_timestamp = TEXT
             lib.date_as_timestamp {
@@ -771,7 +771,7 @@ Properties for parsing data
             }
 
         ..  code-block:: typoscript
-            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+            :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
             lib.next_weekday = TEXT
             lib.next_weekday {
@@ -859,7 +859,7 @@ Properties for parsing data
         ..  rubric:: Example: Full German output from a date/time value
 
         ..  code-block:: typoscript
-            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+            :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
             lib.my_formatted_date = TEXT
             lib.my_formatted_date {
@@ -874,7 +874,7 @@ Properties for parsing data
         ..  rubric:: Example: Full French output from a relative date value
 
         ..  code-block:: typoscript
-            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+            :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
             lib.my_formatted_date = TEXT
             lib.my_formatted_date {
@@ -888,7 +888,7 @@ Properties for parsing data
         ..  rubric:: Example: Custom format from a timestamp
 
         ..  code-block:: typoscript
-            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+            :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
             lib.my_formatted_date = TEXT
             lib.my_formatted_date {
@@ -935,7 +935,7 @@ Properties for parsing data
 
         ..  rubric:: Examples
         ..  code-block:: typoscript
-            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+            :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
             lib.ageFormat = TEXT
             lib.ageFormat.stdWrap.data = page:tstamp
@@ -973,7 +973,7 @@ Properties for parsing data
         Code:
 
         ..  code-block:: typoscript
-            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+            :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
             10 = TEXT
             10.value = Hello world!
@@ -1039,7 +1039,7 @@ Properties for parsing data
             handling settings. Example:
 
         ..  code-block:: typoscript
-            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+            :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
             page.10 {
                value = abc
@@ -1053,7 +1053,7 @@ Properties for parsing data
         Output value 1000 without special formatting. Shows `1000`:
 
         ..  code-block:: typoscript
-            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+            :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
             page = PAGE
             page.10 = TEXT
@@ -1064,7 +1064,7 @@ Properties for parsing data
         Format value 1000 in IEC style with base=1024. Shows `0.98 Ki`:
 
         ..  code-block:: typoscript
-            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+            :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
             page = PAGE
             page.10 = TEXT
@@ -1077,7 +1077,7 @@ Properties for parsing data
         Shows `0.98 KiB`:
 
         ..  code-block:: typoscript
-            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+            :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
             page = PAGE
             page.10 = TEXT
@@ -1090,7 +1090,7 @@ Properties for parsing data
         Format value 1000 in SI style with base=1000. Shows `1.00 k`:
 
         ..  code-block:: typoscript
-            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+            :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
             page = PAGE
             page.10 = TEXT
@@ -1104,7 +1104,7 @@ Properties for parsing data
         Shows `1.00 kb`:
 
         ..  code-block:: typoscript
-            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+            :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
             page = PAGE
             page.10 = TEXT
@@ -1119,7 +1119,7 @@ Properties for parsing data
         `1.00 x 1000 Bytes`:
 
         ..  code-block:: typoscript
-            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+            :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
             page = PAGE
             page.10 = TEXT
@@ -1134,7 +1134,7 @@ Properties for parsing data
         `1.00 kilobyte (kB)`:
 
         ..  code-block:: typoscript
-            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+            :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
             page = PAGE
             page.10 = TEXT
@@ -1149,7 +1149,7 @@ Properties for parsing data
         `0.98 kibibyte (KiB)`:
 
         ..  code-block:: typoscript
-            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+            :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
             page = PAGE
             page.10 = TEXT
@@ -1286,7 +1286,7 @@ Properties for parsing data
         ..  rubric:: Examples
 
         ..  code-block:: typoscript
-            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+            :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
             10 = TEXT
             10.stdWrap {
@@ -1459,7 +1459,7 @@ Properties for wrapping data
 
         ..  rubric:: Examples
         .. code-block:: typoscript
-           :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+           :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
            page.10.noTrimWrap = | val1 | val2 |
 
@@ -1468,7 +1468,7 @@ Properties for wrapping data
 
         ..  rubric:: Examples
         .. code-block:: typoscript
-           :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+           :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
            page.10 {
               noTrimWrap = ^ val1 ^ val2 ^ || ^ val3 ^ val4 ^
@@ -1504,7 +1504,7 @@ Properties for wrapping data
         ..  rubric:: Examples
 
         ..  code-block:: typoscript
-            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+            :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
             page.10.dataWrap = <div id="{page : uid}"> | </div>
 
@@ -1557,7 +1557,7 @@ Properties for wrapping data
         ..  rubric:: Examples
 
         ..  code-block:: typoscript
-            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+            :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
             10 = TEXT
             10.value = a
@@ -1603,7 +1603,7 @@ Properties for wrapping data
         Displays the page title:
 
         .. code-block:: typoscript
-           :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+           :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
            10 = TEXT
            10.value = This is the page title: {page:title}
@@ -1654,7 +1654,7 @@ Properties for wrapping data
         You can paste this example directly into a new template record:
 
         ..  literalinclude:: _StdWrap/_UserFunction.typoscript
-            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+            :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
         Your methods will get the parameters :php:`$content` and :php:`$conf`
         (in that order) and need to return a string.
@@ -1722,7 +1722,7 @@ Properties for wrapping data
         ..  rubric:: Examples
 
         ..  code-block:: typoscript
-            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+            :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
             prefixComment = 2 | CONTENT ELEMENT, uid:{field:uid}/{field:CType}
 
@@ -1763,7 +1763,7 @@ Properties for sanitizing and caching data
         ..  rubric:: Examples
 
         ..  code-block:: typoscript
-            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+            :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
             10 = TEXT
             10 {
@@ -1780,7 +1780,7 @@ Properties for sanitizing and caching data
         The following code is equivalent to the above, but specifies a builder:
 
         ..  code-block:: typoscript
-            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+            :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
             10 = TEXT
             10 {
@@ -1866,7 +1866,7 @@ Example
 Content object ":ref:`cobj-text`" containing property "value":
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     10 = TEXT
     10.value = some text

@@ -101,7 +101,7 @@ Examples
 ========
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     5 = TEXT
     5 {
@@ -123,7 +123,7 @@ cObject will be cached and reused on all pages (showing you the same
 timestamp). :
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     5 = TEXT
     5 {
@@ -148,7 +148,7 @@ content objects. This skips the rendering even for content objects that evaluate
 Usage:
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     page = PAGE
     page.10 = COA

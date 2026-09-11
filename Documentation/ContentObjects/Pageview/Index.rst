@@ -33,7 +33,7 @@ Example: Display a page with Fluid templates
 
 ..  literalinclude:: _includes/_pageWithFluid.typoscript
     :language: typoscript
-    :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 ..  _cobj-pageview-template-naming:
 
@@ -161,7 +161,7 @@ Let us assume, the current page loads the following TypoScript constants:
 
 ..  literalinclude:: _includes/_constants.typoscript
     :language: html
-    :caption: EXT:my_sitepackage/Configuration/TypoScript/constants.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/constants.typoscript
 
 ..  literalinclude:: _includes/_PageWithConstant.fluid.html
     :language: html
@@ -253,7 +253,7 @@ Example: Display a main menu and a breadcrumb on the page
 
 ..  literalinclude:: _includes/_pageWithBreadcrumb.typoscript
     :language: typoscript
-    :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 The page template could look like this:
 
@@ -283,7 +283,7 @@ This is a basic definition of a :fluid:`PAGEVIEW` object with only one path to t
 templates:
 
 ..  code-block:: typoscript
-    :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
     page = PAGE
     page.10 = PAGEVIEW
@@ -367,7 +367,7 @@ Example: Make additional variables available in the Fluid template
 
 ..  literalinclude:: _includes/_pageWithVariables.typoscript
     :langugage: typoscript
-    :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 The following variables are now available in the Fluid template:
 

@@ -22,7 +22,7 @@ Given this TypoScript example:
 
 ..  literalinclude:: ../_StdWrap/_UserFunc.typoscript
     :language: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
 This would first create a TypoLink :php:`LinkResultInterface` that would resolve to something like
 :html:`<a href="/en/pages/4711?someKey=someValue" rel="noreferrer">My Link Text</a>`.

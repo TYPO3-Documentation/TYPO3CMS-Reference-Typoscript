@@ -109,7 +109,7 @@ Example
 -------
 
 ..  code-block:: typoscript
-    :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
     page = PAGE
     page {
@@ -123,7 +123,7 @@ For the above example to work, the constants from the last example have to be
 defined in the constants field or a file called :file:`constants.typoscript`:
 
 ..  code-block:: typoscript
-    :caption: EXT:my_sitepackage/Configuration/TypoScript/constants.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/constants.typoscript
 
     tx_my_sitepackage {
       bgCol = bg-primary

@@ -29,7 +29,7 @@ lib
     :ref:`reference operator <typoscript-syntax-syntax-object-referencing>` :typoscript:`=<`.
 
 ..  code-block:: typoscript
-    :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
     lib.some_content = TEXT
     lib.some_content.value = Hello World!

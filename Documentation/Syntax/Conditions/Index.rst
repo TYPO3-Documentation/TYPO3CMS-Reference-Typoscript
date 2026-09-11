@@ -37,7 +37,7 @@ Basic usage of TypoScript conditions
 ====================================
 
 ..  literalinclude:: _codesnippets/_basic.typoscript
-    :caption: packages/my_site_package/Configuration/TypoScript/setup.typoscript
+    :caption: packages/my_site_package/Configuration/Sets/Main/setup.typoscript
 
 ..  _typoscript-syntax-conditions-syntax:
 
@@ -72,7 +72,7 @@ is considered if the condition criteria did *not* evaluate to true.
 This is similar to a closing curly brace :code:`}` in programming languages like PHP.
 
 ..  literalinclude:: _codesnippets/_condition.typoscript
-    :caption: packages/my_site_package/Configuration/TypoScript/setup.typoscript
+    :caption: packages/my_site_package/Configuration/Sets/Main/setup.typoscript
 
 Conditions automatically stop at the end of a text snippet (file or record), even
 without :typoscript:`[END]` or :typoscript:`[GLOBAL]`. Another snippet on the same
@@ -96,7 +96,7 @@ Multiple condition criteria can be combined using :typoscript:`or` or :typoscrip
 as well as :typoscript:`and` or :typoscript:`&&`
 
 ..  literalinclude:: _codesnippets/_andor.typoscript
-    :caption: packages/my_site_package/Configuration/TypoScript/setup.typoscript
+    :caption: packages/my_site_package/Configuration/Sets/Main/setup.typoscript
 
 Single criteria can be negated using :typoscript:`!`
 

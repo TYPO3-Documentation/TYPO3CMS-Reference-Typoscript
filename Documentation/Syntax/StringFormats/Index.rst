@@ -41,7 +41,7 @@ boolean
     ..  rubric:: Examples
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
         dummy.enable = 0   # false, preferred notation
         dummy.enable = 1   # true,  preferred notation
@@ -63,7 +63,7 @@ date-conf
     ..  rubric:: Example
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
         page.10.date-conf = d-m-y
 
@@ -125,7 +125,7 @@ path
     ..  rubric:: Example
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
         page.10.settings.somePath = fileadmin/stuff/
 
@@ -158,7 +158,7 @@ resource
     Reference to a file in the file system:
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
         # PKG should be preferred to EXT
         page.10.settings.someFile = PKG:my-vendor/package-name:Resources/Public/Icons/MyIcon.svg
@@ -194,7 +194,7 @@ string
     ..  rubric:: Example
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
         page.10.value = The quick brown fox jumps over the lazy dog.
 

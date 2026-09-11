@@ -102,7 +102,7 @@ Examples:
 =========
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     lib.contentexample = COA
     lib.contentexample {
@@ -124,7 +124,7 @@ The previous example will print a simple :html:`<h1>` header, followed by the pa
 content records and a :html:`<footer>` element.
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     lib.currentDate = COA_INT
     lib.currentDate {

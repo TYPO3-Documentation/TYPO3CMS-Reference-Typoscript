@@ -80,7 +80,7 @@ Options
         So, for example if you build a simple "sitemap" menu like this one:
 
         ..  literalinclude:: _code-snippets/_entryLevel.typoscript
-            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+            :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
         it will start to be visible from the 4th level (and will contain only
         the subpages from that level).
@@ -112,7 +112,7 @@ Options
         Additionally the current page is always excluded too.
 
         ..  code-block:: typoscript
-            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+            :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
             page.10.dataProcessing.20.excludeUidList = 34,2,current
 

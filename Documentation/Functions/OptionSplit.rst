@@ -26,7 +26,7 @@ As a result all A-tags generated from this definition will have the `class` attr
 set like this: :html:`<a class="z" ... >`:
 
 .. code-block:: typoscript
-   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+   :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
    topmenu.1.NO {
        ATagParams = class="z"
@@ -85,7 +85,7 @@ will be ignored.
 On the input side we may have for example:
 
 .. code-block:: typoscript
-   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+   :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
    wrap =                      # We have: M=0  items; 1  mainpart : A      ; mainpart is empty
    wrap = A                    # We have: M=1  items; 1  mainpart : A      ;
@@ -117,7 +117,7 @@ subparts is `||`.
 Example:
 
 .. code-block:: typoscript
-   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+   :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
    wrap = a                       # We have: M=1  item,  1 mainpart,  1 subparts
    wrap = a || b                  # We have: M=2  items, 1 mainpart,  2 subparts
@@ -143,7 +143,7 @@ We have all three mainparts A, R and Z. And each mainpart is split into three
 subparts:
 
 .. code-block:: typoscript
-   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+   :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
    wrap = a || b || c  |*|  r || s || t  |*|  x || y || z
 
@@ -157,7 +157,7 @@ And this is what happens:
 
 
 .. code-block:: typoscript
-   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+   :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
    wrap = a || b || c  |*|  r || s || t  |*|  x || y || z
 
@@ -921,7 +921,7 @@ Test Code 1 (TypoScript)
 ========================
 
 .. code-block:: typoscript
-   :caption: EXT:site_package/Configuration/TypoScript/constants.typoscript
+   :caption: EXT:site_package/Configuration/Sets/Main/constants.typoscript
 
    os_1 = a
    os_2 = a || b || c
@@ -938,7 +938,7 @@ Test Code 1 (TypoScript)
    os6 = a||b|*|c|*|d||e
 
 .. code-block:: typoscript
-   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+   :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
    temp.marray = HMENU
    temp.marray {
@@ -1257,7 +1257,7 @@ Test Code 2 (TypoScript)
 This is the code that was used to produce many of the above examples.
 
 .. code-block:: typoscript
-   :caption: EXT:site_package/Configuration/TypoScript/constants.typoscript
+   :caption: EXT:site_package/Configuration/Sets/Main/constants.typoscript
 
    os1 = a
    os2 = a||b||c
@@ -1319,7 +1319,7 @@ This is the code that was used to produce many of the above examples.
    os6 = a   |*|r|||||||*|  z
 
 .. code-block:: typoscript
-   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+   :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
    lib.marray = HMENU
    lib.marray {

@@ -61,7 +61,7 @@ the system extension :doc:`fluid_styled_content <typo3/cms-fluid-styled-content:
 In this system extension it is defined as follows:
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     lib.contentElement >
     lib.contentElement = FLUIDTEMPLATE
