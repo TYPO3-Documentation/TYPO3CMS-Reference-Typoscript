@@ -348,6 +348,7 @@ You can use the directories defined in :confval:`pageview-paths` to
 define fallback directories for the templates:
 
 .. code-block:: typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     page = PAGE
     page {

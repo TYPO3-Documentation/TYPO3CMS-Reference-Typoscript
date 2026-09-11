@@ -57,6 +57,7 @@ An empty :typoscript:`PAGE` object without further configuration renders a HTML 
 like the following:
 
 ..  code-block:: html
+    :caption: Example output
 
     <!DOCTYPE html>
     <html lang="en">

@@ -691,6 +691,7 @@ tableDisplayOrder
     to other table names.
 
     ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/page.tsconfig
 
         mod.web_list.tableDisplayOrder.<tableName> {
             before = <tableA>, <tableB>, ...

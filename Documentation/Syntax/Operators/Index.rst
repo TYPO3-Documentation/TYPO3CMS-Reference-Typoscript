@@ -243,6 +243,7 @@ parenthesis. These predefined functions are available:
     duplicate values, and the list is not sorted in any way.
 
     ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
         foo = 123,456
         foo := addToList(789)
@@ -296,6 +297,7 @@ parenthesis. These predefined functions are available:
         Apply numeric sorting: Numbers from small to big, letters sorted after "0".
 
     ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
         foo = 10,100,0,20,abc
         foo := sortList()

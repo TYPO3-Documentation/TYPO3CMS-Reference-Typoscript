@@ -88,6 +88,7 @@ The following rules apply:
 Some examples:
 
 .. code-block:: typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     # Import a single file
     @import 'EXT:my_extension/Configuration/TypoScript/randomfile.typoscript'
