@@ -15,7 +15,7 @@ from database tables.
 The general syntax is as follows:
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     lib.foo.data = <key> : <code>
 
@@ -26,7 +26,7 @@ The :typoscript:`code` can contain pipe characters :typoscript:`|` which will
 result in a multidimensional array. This, for example, works with :typoscript:`TSFE`:
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     lib.foo.data = request : frontend.user | username
 
@@ -43,7 +43,7 @@ content of the "header" field. If "header" is empty, "title" is
 retrieved. If "title" is also empty, the "uid" field is retrieved:
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     lib.foo.data = field : header // field : title // field : uid
 
@@ -76,7 +76,7 @@ Example: Evaluate the current application context
 Evaluate if the current application context is "Production":
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     if {
         value.data = applicationcontext
@@ -106,7 +106,7 @@ Example: Display extension icon with cache buster
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ..  code-block:: typoscript
-    :caption: EXT:my_extension/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:my_extension/Configuration/Sets/Main/setup.typoscript
 
     page.20 = TEXT
     page.20 {
@@ -132,7 +132,7 @@ Example: Get the number of the current cObject record
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     lib.foo.data = cObj : parentRecordNumber
 
@@ -160,7 +160,7 @@ Example: Retrieve current workspace ID
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     page.10 = TEXT
     page.10.data = context:workspace:id
@@ -184,7 +184,7 @@ Example: Get the current value
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     lib.foo.data = current
 
@@ -205,7 +205,7 @@ Example:  Get the current time formatted dd-mm-yy
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     lib.foo.data = date : d-m-y
 
@@ -233,7 +233,7 @@ Get the value of the header field of record with uid 234 from table
 :sql:`tt_content`:
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     lib.foo.data = DB : tt_content:234:header
 
@@ -241,7 +241,7 @@ Get the value of the header field of a record, where the uid is in the
 `myContentId` GET parameter :
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     lib.foo.data.dataWrap = DB : tt_content:{GP : myContentId}:header
     lib.foo.data.wrap3 = {|}
@@ -274,7 +274,7 @@ Example: Debug the current root-line
 Outputs the current root-line visually in HTML:
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     lib.foo.data = debug : rootLine
 
@@ -309,7 +309,7 @@ Example: Get header data
 Get content from :php:`$cObj->data['header']`:
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     lib.foo.data = field : header
 
@@ -321,7 +321,7 @@ Example: Get data in a field
 Get content from :php:`$cObj->data['fieldname']['level1']['level2']`:
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     lib.foo.data = field : fieldname | level1 | level2
 
@@ -359,7 +359,7 @@ Example: Get the size of a file
 Get the size of the file with sys\_file UID 17:
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     lib.foo.data = file : 17 : size
 
@@ -382,7 +382,7 @@ Example: Get a FlexForm value
 Return the FlexForm value of given name:
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     lib.foo.data = flexform : pi_flexform:settings.categories
 
@@ -421,7 +421,7 @@ Example: Get the title of the previous page
 Get the title of the page before the start of the current website:
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     lib.foo.data = fullRootLine : -1, title
 
@@ -445,7 +445,7 @@ Example: Get the HTTP referer
 Get the environment variable `HTTP_REFERER`.
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     lib.foo.data = getenv : HTTP_REFERER
 
@@ -499,7 +499,7 @@ Example: Get the remote address
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     # get and output the client IP
     page = PAGE
@@ -538,14 +538,14 @@ Example: Get the input value from query string
 Get input value from query string `&stuff=...`
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     lib.foo.data = GP : stuff
 
 Get input value from query string `&stuff[bar]=...`
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     lib.foo.data = GP : stuff | bar
 
@@ -565,7 +565,7 @@ Example: Get the root line level of the current page
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     lib.foo.data = level
 
@@ -589,7 +589,7 @@ Example: Get a field from a page up the root-line
 Get the value of user-defined field :sql:`tx_myextension_myfield` in the root line.
 
 ..  code-block:: typoscript
-    :caption: EXT:my_extension/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:my_extension/Configuration/Sets/Main/setup.typoscript
 
     lib.foo.data = levelfield : -1, tx_myextension_myfield, slide
 
@@ -632,7 +632,7 @@ Example: Get the title of a page up the root line
 Get the title of the page on the first level of the root line:
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     lib.foo.data = leveltitle : 1
 
@@ -641,7 +641,7 @@ it is empty, walk to the bottom of the root line until there is a
 title:
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     lib.foo.data = leveltitle : -2, slide
 
@@ -667,7 +667,7 @@ Example: Get the ID of the root page of the page tree
 Get the ID of the root page of the website (level zero):
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     lib.foo.data = leveluid : 0
 
@@ -692,7 +692,7 @@ Example: Get a localized label
 Get the localized label for the logout button:
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     lib.foo.data = LLL : EXT:felogin/Resources/Private/Language/locallang.xlf:logout
 
@@ -713,7 +713,7 @@ Example: Get the current page title
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     lib.foo.data = page : title
 
@@ -733,7 +733,7 @@ Example: Get the current backend layout
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     lib.foo.data = pagelayout
 
@@ -756,7 +756,7 @@ Example: Get the parameter `color`
 Get content from :php:`$cObj->parameters['color']`:
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     lib.foo.data = parameters : color
 
@@ -775,7 +775,7 @@ path
     does not exist.
 
     ..  code-block:: typoscript
-        :caption: EXT:my_extension/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:my_extension/Configuration/Sets/Main/setup.typoscript
         :emphasize-lines: 3
 
         page.20 = TEXT
@@ -793,7 +793,7 @@ Example: Resolve the path to a file
 Get path to file `rsaauth.js` (inside extension rsaauth) relative to siteroot:
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     lib.foo.data = path : EXT:rsaauth/resources/rsaauth.js
 
@@ -801,7 +801,7 @@ It can also be helpful in combination with the stdWrap function
 :ref:`stdwrap-insertData`:
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     page.headerData.10 = TEXT
     page.headerData.10 {
@@ -828,7 +828,7 @@ Example: Get the content of a register
 Get content from a :ref:`register <using-setting-register>`:
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     lib.foo.data = register : color
 
@@ -856,7 +856,7 @@ Example: Get the page type
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     lib.foo.data = request : routing | pageType
 
@@ -866,7 +866,7 @@ Example: Get a query argument
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     # Retrieve the value of the query parameter ?myParam=<value>
     lib.foo.data = request : routing | queryArguments | myParam
@@ -880,7 +880,7 @@ Example: Get the nonce
 ~~~~~~~~~~~~~~~~~~~~~~
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     lib.foo.data = request : nonce | value
 
@@ -904,7 +904,7 @@ Example: Get a value stored in the current session
 Get the number of items of a stored shopping cart array/object:
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     lib.foo.data = session : shop_cart | itemCount
 
@@ -947,7 +947,7 @@ Example: Get values from the current site
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     page.10 = TEXT
     page.10.data = site:base
@@ -957,7 +957,7 @@ Example: Get values from the current site
 configuration key(s) to access.
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     page.10 = TEXT
     page.10.data = site:customConfigKey.nested.value
@@ -1043,7 +1043,7 @@ Example: Get values from the current site language
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     page.10 = TEXT
     page.10.data = siteLanguage:navigationTitle
@@ -1074,7 +1074,7 @@ Example: Access the redirects HTTP status code
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     page.10 = TEXT
     page.10.data = siteSettings:redirects.httpStatusCode

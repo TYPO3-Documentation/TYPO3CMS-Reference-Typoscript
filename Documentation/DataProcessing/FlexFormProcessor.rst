@@ -79,7 +79,7 @@ Example of a minimal TypoScript configuration
 ---------------------------------------------
 
 ..  code-block:: typoscript
-    :caption: EXT:my_extension/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:my_extension/Configuration/Sets/Main/setup.typoscript
 
     10 = flex-form
 
@@ -92,7 +92,7 @@ Example of an advanced TypoScript configuration
 -----------------------------------------------
 
 ..  code-block:: typoscript
-    :caption: EXT:my_extension/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:my_extension/Configuration/Sets/Main/setup.typoscript
 
     10 = flex-form
     10 {
@@ -109,7 +109,7 @@ Example with a custom sub-processor
 -----------------------------------
 
 ..  code-block:: typoscript
-    :caption: EXT:my_extension/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:my_extension/Configuration/Sets/Main/setup.typoscript
 
     10 = flex-form
     10 {
@@ -130,7 +130,7 @@ Example of an advanced TypoScript configuration, which processes the field
 the :typoscript:`myOutputVariable` variable:
 
 ..  code-block:: typoscript
-    :caption: EXT:my_extension/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:my_extension/Configuration/Sets/Main/setup.typoscript
 
     10 = flex-form
     10 {

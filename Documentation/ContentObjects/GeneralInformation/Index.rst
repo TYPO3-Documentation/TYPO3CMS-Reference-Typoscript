@@ -41,7 +41,7 @@ values.
 This example will show you how it works:
 
 .. code-block:: typoscript
-   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+   :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
    #
    # Temporary objects are defined:
@@ -123,7 +123,7 @@ Example:
 --------
 
 .. code-block:: typoscript
-   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+   :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
    page.10 = TEXT
    page.10.value = kasper

@@ -121,7 +121,7 @@ example will start at level 1 and does not show the page the user is
 currently on:
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     temp.breadcrumbs = HMENU
     temp.breadcrumbs.special = rootline
@@ -137,7 +137,7 @@ all other levels will have :html:`target="_top"` as defined for the
 :ref:`TMENU <tmenu>` property :confval:`menu-common-properties-target`.
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     page.2 = HMENU
     page.2.special = rootline

@@ -42,7 +42,7 @@ Properties
     :typoscript:`head`.
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
         page.27 = LOAD_REGISTER
         page.27 {
@@ -60,7 +60,7 @@ Example:
 ========
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     1 = LOAD_REGISTER
     1.param.cObject = TEXT

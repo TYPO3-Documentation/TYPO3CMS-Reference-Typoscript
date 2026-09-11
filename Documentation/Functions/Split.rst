@@ -86,7 +86,7 @@ returnCount
     ..  rubric:: Example
 
     .. code-block:: typoscript
-       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+       :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
        # returns 9
        1 = TEXT
@@ -127,7 +127,7 @@ cObjNum
     ..  rubric:: Example for stdWrap
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
         1.current = 1
         1.wrap = <b> | </b>
@@ -135,7 +135,7 @@ cObjNum
     ..  rubric:: Example for stdWrap
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
         1 {
             10 = TEXT

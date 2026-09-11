@@ -33,7 +33,7 @@ In order to access TypoScript settings from an Extbase controller.
 #.  Use the convention of defining your TypoScript settings in :typoscript:`settings`
 
     ..  code-block:: typoscript
-        :caption: EXT:my_extension/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:my_extension/Configuration/Sets/Main/setup.typoscript
 
         plugin.tx_myextension {
            view {

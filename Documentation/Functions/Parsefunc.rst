@@ -98,7 +98,7 @@ externalBlocks
     overridden
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
 
         tt_content.text.20.parseFunc.externalBlocks {
@@ -139,7 +139,7 @@ short
     and "T3web" with a link to typo3.org.
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
         page.10 = TEXT
         page.10.value = Learn more about T3, look here: T3web
@@ -286,7 +286,7 @@ allowTags
     The example allows any tag, except :html:`<u>` which will be encoded:
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
         10 = TEXT
         10.value = <p><em>Example</em> <u>underlined</u> text</p>
@@ -327,7 +327,7 @@ denyTags
     This allows :html:`<b>`, :html:`<i>`, :html:`<a>` and :html:`<img>` -tags to exist:
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
         tt_content.text.20.parseFunc {
             allowTags = b,i,a,img
@@ -357,7 +357,7 @@ through the :ref:`parsefunc-makelinks`-functions and substitutes all
 :html:`<LINK>` and :html:`<TYPOLIST>`-tags with something else.
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     tt_content.text.default {
         20 = TEXT

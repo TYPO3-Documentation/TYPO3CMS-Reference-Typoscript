@@ -56,7 +56,7 @@ uidInList
     ..  rubric:: Example
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
         select {
            uidInList = 1,2,3
@@ -104,7 +104,7 @@ pidInList
     Fetch related `sys_category` records stored in the MM intermediate table:
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
         10 = CONTENT
         10 {
@@ -151,7 +151,7 @@ orderBy
     ..  rubric:: Example
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
         orderBy = sorting, title
 
@@ -170,7 +170,7 @@ groupBy
     ..  rubric:: Example
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
         groupBy = CType
 
@@ -218,7 +218,7 @@ where
     ..  rubric:: Example
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
         where = (title LIKE '%SOMETHING%' AND NOT doktype)
 
@@ -226,7 +226,7 @@ where
     framework quote these fields:
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
         where = ({#title} LIKE {#%SOMETHING%} AND NOT {#doktype})
 
@@ -299,7 +299,7 @@ join, leftjoin, rightjoin
     Fetch related `sys_category` records stored in the MM intermediate table:
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
         10 = CONTENT
         10 {
@@ -351,7 +351,7 @@ markers
     ..  rubric:: Example
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
         page.60 = CONTENT
         page.60 {
@@ -370,7 +370,7 @@ markers
     "first".
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
         page.60 = CONTENT
         page.60 {
@@ -400,7 +400,7 @@ It is possible to use `{#fieldname}` to make the database
 framework quote these fields (see :doc:`ext_core:Changelog/8.7/Important-80506-DbalCompatibleFieldQuotingInTypoScript`):
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     select.where = ({#title} LIKE {#%SOMETHING%} AND NOT {#doktype})
 
@@ -429,7 +429,7 @@ See PHP source code for
 Condensed form:
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     10 = CONTENT
     10 {

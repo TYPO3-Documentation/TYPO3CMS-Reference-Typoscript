@@ -345,7 +345,7 @@ Example that evaluates to `$config.oldThing` if set, otherwise the newer setting
 `$myext.thing` would be used:
 
 ..  code-block:: typoscript
-    :caption: EXT:my_extension/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:my_extension/Configuration/Sets/Main/setup.typoscript
 
     plugin.tx_myext.settings.example = {$config.oldThing ?? $myext.thing}
 
@@ -354,7 +354,7 @@ The null coalescing operator cannot be used in conditions. Use
 instead:
 
 ..  code-block:: typoscript
-    :caption: EXT:my_extension/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:my_extension/Configuration/Sets/Main/setup.typoscript
 
     # Wrong
     # [{$config.oldThing ?? $myext.thing} == 5]

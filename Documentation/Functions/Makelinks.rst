@@ -97,7 +97,7 @@ http.keep
     get the following results:
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
         http.keep = "":                   # example.org
         http.keep = "scheme":             # https://example.org
@@ -118,7 +118,7 @@ http.ATagParams
     ..  rubric:: Examples
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
         http.ATagParams = class="board"
 
@@ -174,6 +174,6 @@ mailto.ATagParams
     ..  rubric:: Examples
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
         mailto.ATagParams = class="board"

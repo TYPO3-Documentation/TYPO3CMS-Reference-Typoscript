@@ -55,7 +55,7 @@ Get the number of content elements within certain :sql:`colPos` of the current
 page.
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     10 = FLUIDTEMPLATE
     10 {

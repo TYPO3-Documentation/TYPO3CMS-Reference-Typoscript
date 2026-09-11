@@ -202,7 +202,7 @@ See PHP class :php:`\TYPO3\CMS\Frontend\ContentObject\ContentContentObject`
 for details on code level.
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     1 = CONTENT
     1 {
@@ -228,7 +228,7 @@ for details on code level.
 Expanded form:
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     1 = CONTENT
 
@@ -240,7 +240,7 @@ Expanded form:
 
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     // STEP 2: define parameters
 
@@ -269,7 +269,7 @@ Expanded form:
 
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     // STEP 3: find all records
 
@@ -297,7 +297,7 @@ Display all tt_content records from this page
 Here is an example of the CONTENT object:
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     1 = CONTENT
     1.table = tt_content
@@ -321,7 +321,7 @@ Apply special rendering
 Here is an example of record-rendering objects:
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     page = PAGE
     page.typeNum = 0

@@ -25,7 +25,7 @@ An imgResource one of the following:
 Here "file" is an imgResource:
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     10 = IMAGE
     10 {
@@ -36,7 +36,7 @@ Here "file" is an imgResource:
 GIFBUILDER:
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     10 = IMAGE
     10.file = GIFBUILDER
@@ -108,7 +108,7 @@ width
     This crops 120x80px from the center of the scaled image:
 
     .. code-block:: typoscript
-       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+       :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
        lib.image {
            width = 120c
@@ -119,7 +119,7 @@ width
     images centered:
 
     .. code-block:: typoscript
-       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+       :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
        lib.image {
            width = 100c-100
@@ -130,7 +130,7 @@ width
     and portrait-images a bit higher than centered:
 
     .. code-block:: typoscript
-       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+       :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
        lib.image {
            width = 100c+30
@@ -198,7 +198,7 @@ noScale
     Here :file:`test.jpg` could have 1600 x 1200 pixels for example:
 
     .. code-block:: typoscript
-       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+       :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
        file = fileadmin/test.jpg
        file.width = 240m
@@ -236,21 +236,21 @@ crop
     Disable cropping set by the editor in the back-end:
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
         tt_content.image.20.1.file.crop =
 
     Overrule/set cropping for all images:
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
         tt_content.image.20.1.file.crop = 50,50,100,100
 
     Natively crop a SVG image:
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
         page.10 = IMAGE
         page.10.file = 2:/myfile.svg
@@ -277,7 +277,7 @@ cropVariant
     Use 'desktop' crop variant:
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
         tt_content.image.20.1.file {
             crop.data = file:current:crop
@@ -318,7 +318,7 @@ import
     data-array:
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
         tt_content.image.20.1.file {
             import = uploads/pics/
@@ -411,7 +411,7 @@ stripProfile
     ..  rubric:: Examples
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
         10 = IMAGE
         10.file = fileadmin/images/image1.jpg
@@ -501,7 +501,7 @@ This scales the image :file:`fileadmin/toplogo.png` to the width of 200
 pixels:
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     file = fileadmin/toplogo.png
     file.width = 200

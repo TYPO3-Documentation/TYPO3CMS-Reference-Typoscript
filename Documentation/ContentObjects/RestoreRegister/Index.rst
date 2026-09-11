@@ -33,7 +33,7 @@ be used to load values into the register and to restore previous values
 again.
 
 .. code-block:: typoscript
-   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+   :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
      # Put first block into the register
      10 = LOAD_REGISTER
