@@ -94,6 +94,7 @@ Example for effects
 ~~~~~~~~~~~~~~~~~~~
 
 ..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     imageLinkWrap {
         effects = gamma=1.3 | sharpen=80 | solarize=70
@@ -156,6 +157,7 @@ Example setting a bodytag for the preview window
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     # "onBlur" closes the window automatically if it looses focus
     imageLinkWrap.JSwindow = 1
@@ -198,6 +200,7 @@ Example: Use an alternative target for the JavaScript Window
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     # (1) to produce:  <a target="preview" ... >
     imageLinkWrap.target = preview
@@ -345,6 +348,7 @@ resized images in the frontend. A more complete example is
 :ref:`imageLinkWrap-example-fancybox`.
 
 ..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     JSwindow = 0
     directImageLink = 1
@@ -413,6 +417,7 @@ Basic example: Create a link to the showpic script
 --------------------------------------------------
 
 ..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     10 = IMAGE
     10 {
@@ -434,6 +439,7 @@ Basic example: Link directly to the original image
 --------------------------------------------------
 
 ..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     10 = IMAGE
     10 {
@@ -455,6 +461,7 @@ Example: Larger display in a popup window
 -----------------------------------------
 
 ..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     page = PAGE
     page.10 = IMAGE
@@ -494,6 +501,7 @@ Example: Printlink
 ------------------
 
 ..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     5 = IMAGE
     5 {
@@ -523,6 +531,7 @@ Let's follow this `lightbox.ts example <https://github.com/georgringer/modernpac
 and use `fancybox <http://fancybox.net>`_:
 
 ..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     # Add the CSS and JS files
     page {

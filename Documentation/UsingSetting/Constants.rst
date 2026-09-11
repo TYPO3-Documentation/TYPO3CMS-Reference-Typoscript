@@ -57,6 +57,7 @@ Here :typoscript:`bgCol` is set to "red", :typoscript:`file.toplogo` is set to
 expected location.
 
 ..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/constants.typoscript
     :emphasize-lines: 2,7
 
     bgCol = red
@@ -84,6 +85,7 @@ one would perform any ordinary string replacement. Constants are used in the
 :typoscript:`$` sign:
 
 ..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     {$bgCol}
     {$topimg.width}

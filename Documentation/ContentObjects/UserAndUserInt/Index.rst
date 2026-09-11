@@ -265,6 +265,7 @@ The PHP method :php:`run()` **must** be marked with
 via TypoScript:
 
 ..  code-block:: php
+    :caption: EXT:site_package/Classes/UserFunctions/MyClass.php
 
     use TYPO3\CMS\Core\Attribute\AsAllowedCallable;
     use Psr\Http\Message\ServerRequestInterface;
