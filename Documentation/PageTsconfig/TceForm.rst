@@ -360,6 +360,7 @@ config
      within :ref:`FormEngine code <t3coreapi:FormEngine>` defines details:
 
      ..  code-block:: php
+         :caption: typo3/sysext/backend/Classes/Form/Utility/FormEngineUtility.php
 
           'input' => ['size', 'max', 'readOnly'],
           'number' => ['size', 'readOnly'],

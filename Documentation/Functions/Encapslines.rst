@@ -149,6 +149,7 @@ removeWrapping
     This:
 
     ..  code-block:: html
+        :caption: Example input
 
         First line of text
         Some <div>text</div>
@@ -159,6 +160,7 @@ removeWrapping
     becomes this:
 
     ..  code-block:: html
+        :caption: Example output
 
         First line of text
         Some <div>text</div>

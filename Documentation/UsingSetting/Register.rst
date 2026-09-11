@@ -32,6 +32,7 @@ Example
 =======
 
 ..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     10 = COA
     10 {
@@ -88,6 +89,7 @@ the pages following the spacer page will get the class `col-right`.
 `variablename`. A register stack can be like any TypoScript setup.
 
 ..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     10 = COA
     10 {

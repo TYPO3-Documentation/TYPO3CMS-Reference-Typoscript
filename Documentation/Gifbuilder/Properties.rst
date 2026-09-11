@@ -125,6 +125,7 @@ charRangeMap
     **Example**:
 
     ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
         _GIFBUILDER.charRangeMap {
           123 = arial.ttf
