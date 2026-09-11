@@ -201,7 +201,7 @@ layout.layoutKey
     **Example:**
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
         picture {
           element = <picture>###SOURCECOLLECTION###<img src="###SRC###" ###PARAMS### ###ALTPARAMS### ###SELFCLOSINGTAGSLASH###></picture>
@@ -309,7 +309,7 @@ sourceCollection
     define to suit your needs.
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
         sourceCollection {
           small {
@@ -564,7 +564,7 @@ Standard rendering
 ------------------
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     page.10 = IMAGE
     # toplogo.png has the dimensions 300 x 150 pixels.
@@ -593,7 +593,7 @@ Responsive/adaptive rendering
 -----------------------------
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     30 = IMAGE
     30 {

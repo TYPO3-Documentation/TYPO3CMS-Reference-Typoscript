@@ -50,7 +50,7 @@ bitAnd
     TYPO3 uses bits to store radio and checkboxes via TCA, `bitAnd` can be used to test against these fields.
 
     .. code-block:: typoscript
-       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+       :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
        lib.hideDefaultLanguageOfPage = TEXT
        lib.hideDefaultLanguageOfPage {
@@ -79,7 +79,7 @@ contains
     ..  rubric:: Example
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
         :emphasize-lines: 11
 
         # Add a span tag before the page title if the page title
@@ -126,7 +126,7 @@ endsWith
     ..  rubric:: Example
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
         :emphasize-lines: 7
 
         # Add a footer note, if the page author ends with "Kott"
@@ -153,7 +153,7 @@ equals
     ..  rubric:: Example
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
         if.equals = POST
         if.value.data = GETENV:REQUEST_METHOD
@@ -200,7 +200,7 @@ isInList
     ..  rubric:: Example
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
         if.isInList.field = uid
         if.value = 1,2,34,50,87
@@ -237,7 +237,7 @@ isNull
     ..  rubric:: Example
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
         page.10 = COA_INT
         page.10.10 = TEXT
@@ -307,7 +307,7 @@ startsWith
     ..  rubric:: Example
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
         :emphasize-lines: 6
 
         page.10 = TEXT
@@ -354,7 +354,7 @@ If you want to compare values, you must load a base-value in the
 :typoscript:`value`-property. Example:
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     page.10.if.value = 10
     page.10.if.isGreaterThan = 11
@@ -365,7 +365,7 @@ greater than 10, which is the base-value.
 More complex is this:
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     page.10.if {
       value = 10
@@ -388,7 +388,7 @@ This is a GIFBUILDER object that will write "NEW" on a menu-item if
 the field "newUntil" has a date less than the current date!
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     30 = TEXT
     30.text = NEW!

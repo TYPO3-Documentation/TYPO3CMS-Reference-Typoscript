@@ -14,7 +14,7 @@ Example
 =======
 
 ..  code-block:: typoscript
-    :caption: EXT:my_extension/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:my_extension/Configuration/Sets/Main/setup.typoscript
 
     lib.example = IMAGE
     lib.example {
@@ -81,7 +81,7 @@ align
     Horizontally centered, vertically at the bottom:
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
         align = c, b
 

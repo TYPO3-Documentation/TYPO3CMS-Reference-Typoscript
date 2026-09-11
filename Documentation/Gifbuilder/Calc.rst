@@ -20,14 +20,14 @@ On using the special function :typoscript:`max()`, the maximum of multiple
 values can be determined. Example:
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     XY = [10.w]+[20.w], max([10.h], [20.h])
 
 Here is a full example:
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
     :emphasize-lines: 5
 
     lib.example = IMAGE

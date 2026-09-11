@@ -12,7 +12,7 @@ This function is a sub-function of :ref:`stdWrap <stdwrap>` and can be used
 like this:
 
 ..  code-block:: typoscript
-    :caption: EXT:my_extension/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:my_extension/Configuration/Sets/Main/setup.typoscript
 
     page.20 = TEXT
     page.20 {
@@ -52,7 +52,7 @@ encapsTagList
     ..  rubric:: Example
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
         encapsTagList = div, p
 
@@ -113,7 +113,7 @@ addAttributes.[*tagname*]
     ([*tagname*] is in uppercase.)
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
         addAttributes.P.setOnly = exists
 
@@ -127,7 +127,7 @@ addAttributes.[*tagname*]
     ..  rubric:: Example
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
         addAttributes.P {
             style = padding-bottom: 0px; margin-top: 1px; margin-bottom: 1px;
@@ -183,7 +183,7 @@ wrapNonWrappedLines
     ..  rubric:: Example
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
         wrapNonWrappedLines = <p>|</p>
 
@@ -271,7 +271,7 @@ Examples
 ------------------------------------------------
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     encapsLines {
         encapsTagList = div,p
@@ -318,7 +318,7 @@ Advanced example
 ----------------
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     # Make sure nonTypoTagStdWrap operates
     # on content outside <typolist> and <typohead> only:

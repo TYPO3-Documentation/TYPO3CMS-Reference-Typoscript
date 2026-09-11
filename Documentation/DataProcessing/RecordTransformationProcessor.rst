@@ -36,7 +36,7 @@ Example usage for the Data Processor in conjunction with the
 :ref:`DatabaseQueryProcessor`.
 
 ..  literalinclude:: _RecordTransformationProcessor/_WithDatabaseQueryProcessor.typoscript
-    :caption: EXT:my_extension/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:my_extension/Configuration/Sets/Main/setup.typoscript
 
 
 ..  _RecordTransformationProcessor-fluidtemplate-example:
@@ -50,7 +50,7 @@ custom ones. In this example the Fluid Styled Content
 element "Text" has its data transformed for easier and enhanced usage.
 
 ..  literalinclude:: _RecordTransformationProcessor/_WithDatabaseFluidTemplate.typoscript
-    :caption: EXT:my_extension/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:my_extension/Configuration/Sets/Main/setup.typoscript
 
 ..  _RecordTransformationProcessor-fluid:
 

@@ -63,7 +63,7 @@ Properties for all frontend plugin types
         default styles can be removed with:
 
         ..  code-block:: typoscript
-            :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+            :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
             plugin.tx_frontend._CSS_DEFAULT_STYLE >
             plugin.tx_indexedsearch._CSS_DEFAULT_STYLE >
@@ -375,14 +375,14 @@ Demonstrates:
 Definition for *all* plugins of an extension:
 
 ..  code-block:: typoscript
-    :caption: EXT:my_extension/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:my_extension/Configuration/Sets/Main/setup.typoscript
 
     plugin.tx_myextension.ignoreFlexFormSettingsIfEmpty = field1,field2
 
 Definition for *one* plugin of an extension:
 
 ..  code-block:: typoscript
-    :caption: EXT:my_extension/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:my_extension/Configuration/Sets/Main/setup.typoscript
 
     plugin.tx_myextension_myplugin.ignoreFlexFormSettingsIfEmpty = field1,field2
 
@@ -391,7 +391,7 @@ integrators are advised to use :typoscript:`addToList` or
 :typoscript:`removeFromList` to modify existing settings:
 
 ..  code-block:: typoscript
-    :caption: EXT:my_extension/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:my_extension/Configuration/Sets/Main/setup.typoscript
 
     plugin.tx_myextension_myplugin.ignoreFlexFormSettingsIfEmpty := removeFromList(field1)
     plugin.tx_myextension_myplugin.ignoreFlexFormSettingsIfEmpty := addToList(field3)
@@ -410,7 +410,7 @@ Demonstrates:
     *   :confval:`plugin.[extension].persistence.enableAutomaticCacheClearing <plugin-persistence-enableautomaticcacheclearing>`
 
 ..  code-block:: typoscript
-    :caption: EXT:blog_example/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:blog_example/Configuration/Sets/BlogExample/setup.typoscript
 
     plugin.tx_blogexample_admin {
         persistence {
@@ -431,7 +431,7 @@ Demonstrates:
     *   :confval:`plugin.[extension].persistence.recursive <plugin-persistence-recursive>`
 
 ..  code-block:: typoscript
-    :caption: EXT:blog_example/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:blog_example/Configuration/Sets/BlogExample/setup.typoscript
 
     plugin.tx_blogexample {
         persistence {
@@ -464,7 +464,7 @@ Demonstrates:
     *   :confval:`plugin.[extension].view.templateRootPaths.[array] <plugin-view-templaterootpaths>`
 
 ..  code-block:: typoscript
-    :caption: EXT:blog_example/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:blog_example/Configuration/Sets/BlogExample/setup.typoscript
 
     plugin.tx_blogexample {
         view {
@@ -497,7 +497,7 @@ Demonstrates:
     *   :confval:`plugin.[extension].mvc.callDefaultActionIfActionCantBeResolved <plugin-mvc-calldefaultactionifactioncantberesolved>`
 
 ..  code-block:: typoscript
-    :caption: EXT:blog_example/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:blog_example/Configuration/Sets/BlogExample/setup.typoscript
 
     plugin.tx_blogexample {
         mvc {
@@ -514,7 +514,7 @@ Demonstrates:
     *   :confval:`plugin.[extension].mvc.throwPageNotFoundExceptionIfActionCantBeResolved <plugin-mvc-throwpagenotfoundexceptionifactioncantberesolved>`
 
 ..  code-block:: typoscript
-    :caption: EXT:blog_example/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:blog_example/Configuration/Sets/BlogExample/setup.typoscript
 
     plugin.tx_blogexample {
         mvc {
@@ -537,7 +537,7 @@ Demonstrates:
     *   :confval:`plugin.[extension].format <plugin-format>`
 
 ..  code-block:: typoscript
-    :caption: EXT:blog_example/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:blog_example/Configuration/Sets/BlogExample/setup.typoscript
 
     plugin.tx_blogexample_rssfeedxml {
         // Use template List.xml
@@ -562,6 +562,6 @@ Demonstrates:
     *   :confval:`plugin.[extension]._LOCAL_LANG <plugin-local-lang>`
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     plugin.tx_myextension_pi1._LOCAL_LANG.de.list_mode_1 = Der erste Modus

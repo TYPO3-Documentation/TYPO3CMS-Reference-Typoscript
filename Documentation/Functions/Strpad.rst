@@ -73,7 +73,7 @@ Examples
 ========
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     10 = TEXT
     # The input value is 34 signs long.

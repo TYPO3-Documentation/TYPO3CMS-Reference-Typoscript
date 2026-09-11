@@ -62,7 +62,7 @@ Example: Display an Extbase plugin via TypoScript
 =================================================
 
 ..  code-block:: typoscript
-    :caption: EXT:my_extension/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:my_extension/Configuration/Sets/Main/setup.typoscript
 
     page.10 = EXTBASEPLUGIN
     page.10.extensionName = MyExtension
@@ -83,7 +83,7 @@ Create a lib object which utilizes the :typoscript:`EXTBASEPLUGIN` into
 a :typoscript:`lib` object:
 
 ..  literalinclude:: _CodeSnippets/_libMyPlugin.typoscript
-    :caption: EXT:my_extension/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:my_extension/Configuration/Sets/Main/setup.typoscript
 
 For `extensionName` and `pluginName` use the names as configured in
 :php:`\TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin()`:

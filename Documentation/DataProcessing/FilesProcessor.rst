@@ -241,7 +241,7 @@ The following example implements a slide functionality on root line
 for file resources:
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     page.10.dataProcessing {
         10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
@@ -268,7 +268,7 @@ Therefore, you can do the following:
 
 ..  literalinclude:: _FilesProcessorFlexForm.typoscript
     :language: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
 This assumes that the image was stored in a FlexForm in the table
 :sql:`tt_content` like this:

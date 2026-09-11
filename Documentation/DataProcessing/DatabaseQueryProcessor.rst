@@ -98,7 +98,7 @@ Example usage for the data processor in conjunction with the
 :ref:`RecordTransformationProcessor`.
 
 ..  literalinclude:: _RecordTransformationProcessor/_WithDatabaseQueryProcessor.typoscript
-    :caption: EXT:my_extension/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:my_extension/Configuration/Sets/Main/setup.typoscript
 
 For usage of the variables within Fluid see
 :ref:`RecordTransformationProcessor-fluidtemplate-example`.

@@ -142,7 +142,7 @@ from TypoScript. Use this TypoScript configuration:
 
 ..  literalinclude:: _ExampleTime.typoscript
     :language: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
 The file :file:`EXT:site_package/Classes/UserFunctions/ExampleTime.php` might
 amongst other things contain:
@@ -172,7 +172,7 @@ order. For this we use the following TypoScript:
 
 ..  literalinclude:: _ExampleListRecords.typoscript
     :language: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
 The file :file:`EXT:site_package/Classes/UserFunctions/ExampleListRecords.php`
 may contain amongst other things:
@@ -214,7 +214,7 @@ the local machine". You can make it available like this:
 
 ..  literalinclude:: _Hostname.typoscript
     :language: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
 Contents of :file:`EXT:site_package/Classes/UserFunctions/Hostname.php`:
 
@@ -296,7 +296,7 @@ cached.
 
 ..  literalinclude:: _ConvertUserToUserInt.typoscript
     :language: typoscript
-    :caption: Configuration/TypoScript/setup.typoscript
+    :caption: Configuration/Sets/Main/setup.typoscript
 
 This PHP class performs the dynamic transition from :typoscript:`USER` to :typoscript:`USER_INT`.
 

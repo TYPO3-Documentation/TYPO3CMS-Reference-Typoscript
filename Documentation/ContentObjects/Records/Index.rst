@@ -209,7 +209,7 @@ The following example would display some related content
 referenced from the :guilabel:`page properties`.
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     page.42 = RECORDS
     page.42 {
@@ -229,7 +229,7 @@ Selection with source II
 ------------------------
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
 	20 = RECORDS
 	20 {
@@ -253,7 +253,7 @@ If you want to display categorized content with a :typoscript:`RECORDS` object
 you could do it like this:
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
 	categorized_content = RECORDS
 	categorized_content {
@@ -279,7 +279,7 @@ data processing. This way templating is much more flexible. See the following
 example from the system extension :file:`fluid_styled_content`:
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     tt_content.menu_categorized_content =< lib.contentElement
     tt_content.menu_categorized_content {

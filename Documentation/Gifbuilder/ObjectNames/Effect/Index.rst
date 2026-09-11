@@ -33,7 +33,7 @@ Example
 =======
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     lib.image = IMAGE
     lib.image {
@@ -73,7 +73,7 @@ blur
     **Example:**
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
         20 = EFFECT
         20.value = blur=10
@@ -95,7 +95,7 @@ charcoal
     **Example:**
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
         20 = EFFECT
         20.value = charcoal=5
@@ -115,7 +115,7 @@ colors
     **Example:**
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
         20 = EFFECT
         20.value = colors=100
@@ -138,7 +138,7 @@ edge
     **Example:**
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
         20 = EFFECT
         20.value = edge=8
@@ -158,7 +158,7 @@ emboss
     **Example:**
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
         20 = EFFECT
         20.value = emboss
@@ -177,7 +177,7 @@ flip
     **Example:**
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
         20 = EFFECT
         20.value = flip
@@ -196,7 +196,7 @@ flop
     **Example:**
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
         20 = EFFECT
         20.value = flop
@@ -217,7 +217,7 @@ gamma
     **Example:**
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
         20 = EFFECT
         20.value = gamma=1.3
@@ -239,7 +239,7 @@ gray
     renders it in gray.
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
         20 = EFFECT
         20.value = wave=1,20 | gray
@@ -258,7 +258,7 @@ invert
     **Example:**
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
         20 = EFFECT
         20.value = invert
@@ -282,7 +282,7 @@ rotate
     **Example:**
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
         20 = EFFECT
         20.value = rotate=180
@@ -303,7 +303,7 @@ sharpen
     **Example:**
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
         20 = EFFECT
         20.value = sharpen=12
@@ -327,7 +327,7 @@ shear
     **Example:**
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
         20 = EFFECT
         20.value = shear=-30
@@ -352,7 +352,7 @@ solarize
     **Example:**
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
         20 = EFFECT
         20.value = solarize=15
@@ -373,7 +373,7 @@ swirl
     **Example:**
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
         20 = EFFECT
         20.value = swirl=200
@@ -396,7 +396,7 @@ wave
     **Example:**
 
     ..  code-block:: typoscript
-        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
         20 = EFFECT
         20.value = wave=1,20

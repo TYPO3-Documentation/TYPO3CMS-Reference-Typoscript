@@ -144,7 +144,7 @@ renderings of some content depending on whether the :ref:`cobj-case-key` field
 The result is in either case wrapped with :typoscript:`|<br>`.
 
 ..  code-block:: typoscript
-    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     stuff = CASE
     stuff.if.isTrue.field = header

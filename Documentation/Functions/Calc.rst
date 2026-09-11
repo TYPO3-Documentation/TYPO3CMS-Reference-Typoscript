@@ -37,7 +37,7 @@ The :typoscript:`HMENU` :typoscript:`maxAge` property is of a type
 
 
 .. code-block:: typoscript
-   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+   :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
    20 = HMENU
    20.special = updated
