@@ -366,11 +366,9 @@ Example: Make additional variables available in the Fluid template
 ------------------------------------------------------------------
 
 ..  literalinclude:: _includes/_pageWithVariables.typoscript
-    :langugage: typoscript
     :caption: EXT:my_sitepackage/Configuration/Sets/Main/setup.typoscript
 
 The following variables are now available in the Fluid template:
 
 ..  literalinclude:: _includes/_PageWithVariables.fluid.html
-    :langugage: html
     :caption: EXT:my_sitepackage/Resources/Private/PageView/Pages/Default.fluid.html
