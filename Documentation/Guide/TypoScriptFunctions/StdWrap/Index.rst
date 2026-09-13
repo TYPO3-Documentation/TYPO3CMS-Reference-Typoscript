@@ -17,10 +17,10 @@ familiar with it and be ready to explore it in greater depth using the
 
 ..  contents:: Details of stdWrap
 
-.. literalinclude:: /Guide/TypoScriptFunctions/StdWrap/_Chapters/_HeedTheOrder.html
+..  include:: _Chapters/_HeedTheOrder.rst.txt
     :show-buttons:
 
-.. literalinclude:: /Guide/TypoScriptFunctions/StdWrap/_Chapters/_ModifyTheOrder.html
+..  include:: _Chapters/_ModifyTheOrder.rst.txt
     :show-buttons:
 
 ..  include:: _Chapters/_TheDataType.rst.txt
