@@ -108,7 +108,7 @@ As in most programming languages, :typoscript:`not` binds more strongly than
 parentheses whenever the intended grouping is not the default one:
 
 ..  literalinclude:: _codesnippets/_precedence.typoscript
-    :caption: packages/my_site_package/Configuration/TypoScript/setup.typoscript
+    :caption: packages/my_site_package/Configuration/Sets/Main/setup.typoscript
 
 ..  warning::
     All criteria of a condition belong into *one* pair of square brackets.
