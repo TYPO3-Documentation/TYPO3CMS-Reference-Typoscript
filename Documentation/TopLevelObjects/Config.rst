@@ -187,8 +187,7 @@ Properties of 'config'
             The default was raised from `86400` (24 hours) to `31536000`
             (365 days), so that a calculated cache lifetime of more than 24
             hours is no longer capped. TYPO3 v14.3.0 and TYPO3 v13.4 and
-            below use `86400`. See `TYPO3 Core issue #109054
-            <https://forge.typo3.org/issues/109054>`_.
+            below use `86400`. See :issue:`109054`.
 
         The number of seconds a page can remain in the cache.
 
