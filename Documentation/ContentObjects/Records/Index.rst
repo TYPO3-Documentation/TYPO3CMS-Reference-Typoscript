@@ -231,12 +231,12 @@ Selection with source II
 ..  code-block:: typoscript
     :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-	20 = RECORDS
-	20 {
-		source = 10,12
-		dontCheckPid = 1
-		tables = tt_content
-	}
+    20 = RECORDS
+    20 {
+        source = 10,12
+        dontCheckPid = 1
+        tables = tt_content
+    }
 
 This example loads the content elements with the UIDs 10 and 12 no
 matter where these elements are located and whether these pages are
@@ -255,20 +255,20 @@ you could do it like this:
 ..  code-block:: typoscript
     :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-	categorized_content = RECORDS
-	categorized_content {
-		categories.field = selected_categories
-		categories.relation.field = category_field
-		tables = tt_content
-		conf.tt_content = TEXT
-		conf.tt_content {
-			stdWrap.field = header
-			stdWrap.typolink.parameter = {field:pid}#{field:uid}
-			stdWrap.typolink.parameter.insertData = 1
-			stdWrap.wrap = <li>|</li>
-		}
-		wrap = <ul>|</ul>
-	}
+    categorized_content = RECORDS
+    categorized_content {
+        categories.field = selected_categories
+        categories.relation.field = category_field
+        tables = tt_content
+        conf.tt_content = TEXT
+        conf.tt_content {
+            stdWrap.field = header
+            stdWrap.typolink.parameter = {field:pid}#{field:uid}
+            stdWrap.typolink.parameter.insertData = 1
+            stdWrap.wrap = <li>|</li>
+        }
+        wrap = <ul>|</ul>
+    }
 
 Contrary to the previous example, in this case the :typoscript:`conf` property
 is present and defines a very simple rendering of each content element
