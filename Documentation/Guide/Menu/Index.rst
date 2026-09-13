@@ -14,7 +14,7 @@ to pass data to render a menu to the Fluid template.
 Configure the data processor in TypoScript:
 
 ..  literalinclude:: _menu.typoscript
-    :caption: TypoScript Setup
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
 And render the menu in your Fluid template. You need at least a
 :ref:`Minimal site package (see site package tutorial) <t3sitepackage:minimal-design>`
