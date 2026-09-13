@@ -629,7 +629,7 @@ Properties
             Example:
 
             ..  code-block:: typoscript
-                :caption: EXT:my_extension/Configuration/user.tsconfig
+                :caption: EXT:site_package/Configuration/user.tsconfig
 
                 options.folderTree.label.1:/campaigns/ {
                     label = Campaign A
