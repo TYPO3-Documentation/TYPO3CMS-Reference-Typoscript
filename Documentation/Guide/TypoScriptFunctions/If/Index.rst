@@ -17,13 +17,16 @@ If what we would like returned is a `false` value,
 we can use the :code:`negate` option to negate the result:
 
 ..  literalinclude:: _if.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
 With the use of `if` it is also possible to compare values. For this
 purpose we use `value` property:
 
 ..  literalinclude:: _if2.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
 Because the properties of the `if` function implement
 :ref:`stdWrap functions <guide-using-stdwrap>`, all kinds of variables can be compared:
 
 ..  literalinclude:: _if3.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript

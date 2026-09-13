@@ -9,6 +9,7 @@ Objects rendering content
 -   :ref:`IMAGE <cobj-image>` for the rendering of an image:
 
     ..  literalinclude:: _IMAGE.typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     The result is an image based on file :file:`logo.gif` with width of 200 pixels
     and a link to the page 1.
@@ -17,11 +18,13 @@ Objects rendering content
     content of fields:
 
     ..  literalinclude:: _lib.slogan.typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
 -   :ref:`FILES <cobj-files>` is used to retrieve information about one
     or more files and perform some rendering with it:
 
     ..  literalinclude:: _lib.banner.typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     This code will probably look pretty abstract to you right now. What it does
     is to reference the images that were related to a given page in the "media"
