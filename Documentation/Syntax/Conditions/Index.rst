@@ -101,7 +101,7 @@ as well as :typoscript:`and` or :typoscript:`&&`
 Single criteria can be negated using :typoscript:`not` or :typoscript:`!`
 
 ..  literalinclude:: _codesnippets/_not.typoscript
-    :caption: packages/my_site_package/Configuration/TypoScript/setup.typoscript
+    :caption: packages/my_site_package/Configuration/Sets/Main/setup.typoscript
 
 As in most programming languages, :typoscript:`not` binds more strongly than
 :typoscript:`and`, which in turn binds more strongly than :typoscript:`or`. Use
