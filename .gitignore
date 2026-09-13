@@ -28,6 +28,7 @@
 /_make
 /Documentation-GENERATED-temp/
 ehthumbs.db
+/composer.json.testing
 composer.lock
 nbproject
 Thumbs.db
