@@ -16,6 +16,7 @@ The :ref:`PAGE <page>` object is responsible for the
 rendering of a website page in the frontend:
 
 ..  literalinclude:: _snippets/_mypage.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
 The :ref:`PAGE <page>` object on the one hand offers numerous named properties
 (like :typoscript:`typeNum`). On the other hand it also has an endless number of
@@ -26,6 +27,7 @@ largest. The order of the lines in the TypoScript record is
 irrelevant:
 
 ..  literalinclude:: _snippets/_mypage2.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
 Every entry is stored in a multidimensional PHP array. Every object
 and every property, therefore, is unique. We could define an arbitrary
@@ -48,6 +50,7 @@ those various views, changing only what's specific for each of them.
 The previous example would look like this as a PHP array:
 
 ..  literalinclude:: _snippets/_mypage.php
+    :caption: The same configuration as a PHP array
 
 Empty spaces at the start and end of values are removed by TYPO3 CMS
 automatically (using the PHP :php:`trim()` function).
@@ -56,6 +59,7 @@ The :typoscript:`=` sign corresponds to a simple assignment. Here is an
 overview of the various operators:
 
 ..  literalinclude:: _snippets/_mypage3.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
 Object types are always written with capital letters; parameters and
 functions typically in camel case (first word lower case, next word
@@ -76,11 +80,13 @@ Things can get more complicated when objects are nested inside
 each other and many properties are used:
 
 ..  literalinclude:: _snippets/_mypage4.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
 To make things clearer, TypoScript code can be structured using curly braces
 (:typoscript:`{}`) at each nesting level:
 
 ..  literalinclude:: _snippets/_mypage5.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
 ..  important::
 
