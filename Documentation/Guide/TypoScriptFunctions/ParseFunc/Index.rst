@@ -17,6 +17,7 @@ You can also use :typoscript:`parseFunc` for your own processing. In the followi
 example, every occurrence of "COMP" is replaced by "My company name":
 
 ..  literalinclude:: _parseFunc.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
 The various possibilities of changing the default behavior can be found by
 using the TypoScript object browser. All possibilities of how parseFunc can

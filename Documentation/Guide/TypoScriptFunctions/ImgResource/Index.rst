@@ -12,12 +12,15 @@ pictures. Its main usage is the property `file` of the
 This, for example, allows an image to be resized:
 
 ..  literalinclude:: _temp.myImage.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
 It is also possible to set minimum or maximum dimensions:
 
 ..  literalinclude:: _temp.myImage2.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
 `imgResource` also provides direct access to
 ImageMagick/GraphicsMagick features:
 
 ..  literalinclude:: _temp.myImage3.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript

@@ -30,6 +30,7 @@ content element we use the :ref:`TEXT <cobj-text>` object to perform
 the actual rendering:
 
 ..  literalinclude:: /Guide/Content/_snippets/_PAGE.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
 The :ref:`CONTENT <cobj-content>` object executes an SQL query on the
 database. The query is controlled by the `select` property, which - in

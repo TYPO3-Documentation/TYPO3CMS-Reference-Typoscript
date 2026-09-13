@@ -15,3 +15,4 @@ With the help of the select function, it is possible to show the content of a
 page on all pages. For example:
 
 ..  literalinclude:: _temp.leftContent.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript

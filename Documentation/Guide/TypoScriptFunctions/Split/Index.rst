@@ -16,3 +16,4 @@ every single line with a certain code (e.g. generate an HTML table,
 which can be used to show the same content on more than one page):
 
 ..  literalinclude:: _split.typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
