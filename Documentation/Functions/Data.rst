@@ -427,7 +427,7 @@ Get the value of the field :sql:`tx_myextension_myfield` from the root page of
 the site:
 
 ..  code-block:: typoscript
-    :caption: EXT:my_extension/Configuration/TypoScript/setup.typoscript
+    :caption: EXT:my_extension/Configuration/Sets/Main/setup.typoscript
 
     lib.foo.data = fullRootLine : 0, tx_myextension_myfield
 
