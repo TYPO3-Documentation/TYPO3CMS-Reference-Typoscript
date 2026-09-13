@@ -1,11 +1,11 @@
 <?php
 
 return [
-    'options.' => [
-        'someToggle' => '1',
-        'somePartWithSubToggles' => 'foo',
-        'somePartWithSubToggles.' => [
-            'aValue' => 'bar',
-        ],
+  'options.' => [
+    'someToggle' => '1',
+    'somePartWithSubToggles' => 'foo',
+    'somePartWithSubToggles.' => [
+      'aValue' => 'bar',
     ],
+  ],
 ];

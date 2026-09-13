@@ -19,41 +19,41 @@ use TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer;
 #[Autoconfigure(public: true)]
 final class ExampleListRecords
 {
-    public function __construct(
-        private readonly ConnectionPool $connectionPool,
-    ) {}
+  public function __construct(
+    private readonly ConnectionPool $connectionPool,
+  ) {}
 
-    /**
-     * Reference to the parent (calling) cObject set from TypoScript
-     */
-    private ContentObjectRenderer $cObj;
+  /**
+   * Reference to the parent (calling) cObject set from TypoScript
+   */
+  private ContentObjectRenderer $cObj;
 
-    public function setContentObjectRenderer(ContentObjectRenderer $cObj): void
-    {
-        $this->cObj = $cObj;
+  public function setContentObjectRenderer(ContentObjectRenderer $cObj): void
+  {
+    $this->cObj = $cObj;
+  }
+
+  /**
+   * List the headers of the content elements on the page
+   *
+   * @param  string Empty string (no content to process)
+   * @param  array  TypoScript configuration
+   * @return string HTML output, showing content elements (in reverse order, if configured)
+   */
+  public function listContentRecordsOnPage(string $content, array $conf, ServerRequestInterface $request): string
+  {
+    $connection = $this->connectionPool->getConnectionForTable('tt_content');
+    $result = $connection->select(
+      ['header'],
+      'tt_content',
+      ['pid' => $request->getAttribute('frontend.page.information')->getId()],
+      [],
+      ['sorting' => $conf['reverseOrder'] ? 'DESC' : 'ASC'],
+    );
+    $output = [];
+    while ($row = $result->fetchAssociative()) {
+      $output[] = $row['header'];
     }
-
-    /**
-     * List the headers of the content elements on the page
-     *
-     * @param  string Empty string (no content to process)
-     * @param  array  TypoScript configuration
-     * @return string HTML output, showing content elements (in reverse order, if configured)
-     */
-    public function listContentRecordsOnPage(string $content, array $conf, ServerRequestInterface $request): string
-    {
-        $connection = $this->connectionPool->getConnectionForTable('tt_content');
-        $result = $connection->select(
-            ['header'],
-            'tt_content',
-            ['pid' => $request->getAttribute('frontend.page.information')->getId()],
-            [],
-            ['sorting' => $conf['reverseOrder'] ? 'DESC' : 'ASC'],
-        );
-        $output = [];
-        while ($row = $result->fetchAssociative()) {
-            $output[] = $row['header'];
-        }
-        return implode('<br>', $output);
-    }
+    return implode('<br>', $output);
+  }
 }
