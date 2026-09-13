@@ -8,16 +8,16 @@ use TYPO3\CMS\Core\Context\Context;
 
 final class MyExtensionController
 {
-    public function __construct(
-        private readonly Context $context,
-    ) {}
+  public function __construct(
+    private readonly Context $context,
+  ) {}
 
-    public function myAction()
-    {
-        $frontendUserUsername = $this->context->getPropertyFromAspect(
-            'frontend.user',
-            'username',
-            '',
-        );
-    }
+  public function myAction()
+  {
+    $frontendUserUsername = $this->context->getPropertyFromAspect(
+      'frontend.user',
+      'username',
+      '',
+    );
+  }
 }

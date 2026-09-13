@@ -10,5 +10,5 @@ defined('TYPO3') or die();
 $versionInformation = GeneralUtility::makeInstance(Typo3Version::class);
 // TODO: Remove when dropping TYPO3 v12 support
 if ($versionInformation->getMajorVersion() < 13) {
-    $GLOBALS['TYPO3_CONF_VARS']['FE']['addRootLineFields'] .= ',tx_myextension_myfield';
+  $GLOBALS['TYPO3_CONF_VARS']['FE']['addRootLineFields'] .= ',tx_myextension_myfield';
 }
