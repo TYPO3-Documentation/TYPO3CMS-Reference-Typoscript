@@ -43,13 +43,13 @@ As we already saw in section :ref:`guide-first-steps`, the following code output
 "Hello World!":
 
 ..  literalinclude:: _hello-world.typoscript
-    :caption: TypoScript setup
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
 In a more common use case you want to load the page content from a Fluid
 template:
 
 ..  literalinclude:: _fluid-template.typoscript
-    :caption: TypoScript setup
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
 You need at least a
 :ref:`Minimal site package (see site package tutorial) <t3sitepackage:minimal-design>`
@@ -73,7 +73,7 @@ You can write inline CSS using property
 in the public resources of your :ref:`Minimal site package <t3sitepackage:minimal-design>`:
 
 ..  literalinclude:: _css-loading.typoscript
-    :caption: TypoScript setup
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
 ..  _guide-page-loading-js:
 
@@ -85,7 +85,7 @@ You can write inline JavaScript using property
 in the public resources of your :ref:`Minimal site package <t3sitepackage:minimal-design>`:
 
 ..  literalinclude:: _javascript-loading.typoscript
-    :caption: TypoScript setup
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
 ..  warning::
     If you are using inline JavaScript **never** pass any unescaped user input
@@ -103,7 +103,7 @@ Use property :confval:`shortcutIcon <t3tsref:page-shortcuticon>` to define
 the favicon:
 
 ..  literalinclude:: _favicon.typoscript
-    :caption: TypoScript setup
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
 You need to have a
 :ref:`Minimal site package (see site package tutorial) <t3sitepackage:minimal-design>`
@@ -120,7 +120,7 @@ You can use the property :confval:`footerData.[array] <t3tsref:page-footerdata>`
 to enter some HTML code just before the closing `</body>` tag:
 
 ..  literalinclude:: _tracking-code.typoscript
-    :caption: TypoScript setup
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
 ..  warning::
     The HTML is output directly. Never use any unescaped user input.
