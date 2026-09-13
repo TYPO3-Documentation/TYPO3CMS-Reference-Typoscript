@@ -1,68 +1,32 @@
-# EditorConfig is awesome: http://EditorConfig.org
+# EditorConfig is awesome: https://EditorConfig.org
 
-# top-most EditorConfig file
+# Master copy, used unchanged by every TYPO3 documentation repository:
+# https://github.com/TYPO3-Documentation/TYPO3CMS-Guide-HowToDocument
+
 root = true
 
-# Unix-style newlines with a newline ending every file
+# Code examples indent two spaces, whatever the language, so that a nested
+# example still fits the line length the prose around it is wrapped to
 [*]
 charset = utf-8
 end_of_line = lf
 indent_style = space
-indent_size = 4
+indent_size = 2
 insert_final_newline = true
 trim_trailing_whitespace = true
 
-# TS/JS-Files
-[*.{ts,js,mjs}]
-indent_size = 2
-
-# JSON-Files
-[*.json]
-indent_style = tab
-
-# ReST-Files
-[*.{rst,rst.txt}]
+# reStructuredText is the exception: one indentation level is four spaces
+[{*.rst,*.rst.txt}]
 indent_size = 4
 max_line_length = 80
 
-# Markdown-Files
 [*.md]
 max_line_length = 80
 
-# YAML-Files
-[*.{yaml,yml}]
-indent_size = 2
-
-# NEON-Files
-[*.neon]
-indent_size = 2
+# Makefiles do not work without real tabs
+[{Makefile,_Makefile,**.mk}]
 indent_style = tab
 
-# stylelint
-[.stylelintrc]
-indent_size = 2
-
-# package.json
-[package.json]
-indent_size = 2
-
-# TypoScript
-[*.{typoscript,tsconfig}]
-indent_size = 2
-
-# XLF-Files
-[*.xlf]
-indent_style = tab
-
-# SQL-Files
-[*.sql]
-indent_style = tab
-indent_size = 2
-
-# .htaccess
-[{_.htaccess,.htaccess}]
-indent_style = tab
-
-[Makefile]
-# Use tabs for indentation (Makefiles require tabs)
-indent_style = tab
+# In a patch a leading or trailing space is content, not whitespace
+[*.diff]
+trim_trailing_whitespace = false
