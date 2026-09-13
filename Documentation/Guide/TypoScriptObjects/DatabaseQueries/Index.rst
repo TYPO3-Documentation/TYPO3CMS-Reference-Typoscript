@@ -22,6 +22,7 @@ Objects executing database queries
     rendered and linked as email at the same time:
 
     ..  literalinclude:: _RECORDS.typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
 *   :ref:`HMENU <cobj-hmenu>` imports the page tree and offers
     comfortable ways to generate a menu of pages or a sitemap. Special menus
