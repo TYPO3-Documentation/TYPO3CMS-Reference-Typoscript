@@ -81,6 +81,35 @@ automatically since TYPO3 v12 and `Configuration/user.tsconfig` since v13.
 Many captions in this manual still use the old path; correct it when you touch
 such a block.
 
+### Which placeholder extension
+
+The table above says `site_package`, but that is not automatic: this manual
+documents both sides of TypoScript. Pick the name by what the example is about.
+
+*   **`site_package`** for theming and site output — page templates, menus,
+    titles, the site's own TypoScript and TSconfig.
+*   **`my_extension`** for what an extension brings along — its own fields
+    (`tx_myextension_myfield`), tables, plugins and their configuration.
+
+Two adjacent code blocks may legitimately use different names:
+
+```rst
+..  code-block:: typoscript
+    :caption: EXT:my_extension/Configuration/Sets/Main/setup.typoscript
+
+    lib.foo.data = fullRootLine : 0, tx_myextension_myfield
+
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+
+    lib.foo.data = fullRootLine : 1, title
+```
+
+Do not settle this by counting which name appears more often. `site_package`
+leads by a wide margin, but that only reflects how many examples happen to be
+about output — it does not make it the house form for an example about an
+extension's own field.
+
 ## Commit message format
 
 Follow https://docs.typo3.org/m/typo3/docs-how-to-document/main/en-us/Howto/EditLocal.html:
