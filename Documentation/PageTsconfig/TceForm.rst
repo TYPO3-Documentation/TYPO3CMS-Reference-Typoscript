@@ -368,7 +368,7 @@ config
 
      Not all configuration options can be overridden, the properties are restricted and depend on the
      :ref:`field type <t3tca:columns-types>`. The array
-     :code:`typo3/sysext/backend/Classes/Form/Utility/FormEngineUtility.php->$allowOverrideMatrix`
+     `typo3/sysext/backend/Classes/Form/Utility/FormEngineUtility.php->$allowOverrideMatrix`
      within :ref:`FormEngine code <t3coreapi:FormEngine>` defines details:
 
      ..  code-block:: php
@@ -539,7 +539,7 @@ disabled
     :typoscript:`TCEFORM.tt_content.colPos.disabled = 1` the :guilabel:`Column` field
     will not be displayed in the content elements form. The
     content element can still be moved to another column which internally also
-    sets the field :sql:`colPos`. Fields with the TSconfig property
+    sets the field `colPos`. Fields with the TSconfig property
     :tsconfig:`TCEFORM.<table>.<field>.disabled` therefore show the same
     behaviour as fields of the TCA type :ref:`passthrough <t3tca:columns-passthrough>`.
 
@@ -1211,7 +1211,7 @@ suggest.receiverClass
     :Default: :php:`\TYPO3\CMS\Backend\Form\Element\SuggestDefaultReceiver`
 
     PHP class alternative receiver class - the file that holds the class should be derived
-    from :code:`\TYPO3\CMS\Backend\Form\Element\SuggestDefaultReceiver`.
+    from :php:`\TYPO3\CMS\Backend\Form\Element\SuggestDefaultReceiver`.
 
 ..  index::
     Suggest wizard; rendering user function

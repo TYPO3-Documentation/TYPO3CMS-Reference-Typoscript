@@ -111,7 +111,7 @@ collections
     :name: files-collections
     :type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
 
-    Comma-separated list of :sql:`sys_file_collection` UIDs, which
+    Comma-separated list of `sys_file_collection` UIDs, which
     are loaded into the :typoscript:`FILES` object.
 
 ..  _cobj-files-folders:

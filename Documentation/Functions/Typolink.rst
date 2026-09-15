@@ -405,8 +405,8 @@ forceAbsoluteUrl.scheme
     :name: typolink-forceAbsoluteUrl-scheme
     :type: :ref:`data-type-string`
 
-    :Values: :php:`http` / :php:`https`
-    :Default: :php:`http`
+    :Values: `http` / `https`
+    :Default: `http`
 
     Defines the URL scheme to be used (https or http). http is the
     default value. Example:
@@ -541,24 +541,31 @@ userFunc
     :name: typolink-userFunc
     :type: :ref:`data-type-function-name`
 
-    All of the :typoscript:`typolink` TypoScript configuration will be parsed and evaluated
-    by the TYPO3 Core's :php:`LinkFactory->create()` method, and then passed on
-    to the defined :typoscript:`userFunc` for further manipulation. The :typoscript:`userFunc` needs to
-    return an object implementing the :php:`LinkResultInterface`. The currently calculated
-    typolink is passed as an argument to the :php:`userFunc` as an object of the same type. This allows
-    to return either an enriched link, or a completely new one.
+    All of the :typoscript:`typolink` TypoScript configuration will be parsed
+    and evaluated by the TYPO3 Core's :php:`LinkFactory->create()` method, and
+    then passed on to the defined :typoscript:`userFunc` for further
+    manipulation. The :typoscript:`userFunc` needs to return an object
+    implementing the
+    :php-short:`\TYPO3\CMS\Frontend\Typolink\LinkResultInterface`. The currently
+    calculated typolink is passed as an argument to the `userFunc` as an object
+    of the same type. This allows to return either an enriched link, or a
+    completely new one.
 
     The detailed execution steps are:
 
-    First, the :typoscript:`typolink` will be created as configured by the specified TypoScript.
-    This will result in an object of Type :php:`LinkResultInterface`. This immutable object receives
-    all of the TypoScript :typoscript:`typolink` configuration as properties, and makes them
-    available via corresponding getters. Then your custom :typoscript:`userFunc` is executed
-    and receives the following arguments (delivered via :php:`$contentObjectRenderer->callUserFunction()`):
+    First, the :typoscript:`typolink` will be created as configured by the
+    specified TypoScript. This will result in an object of Type
+    :php-short:`\TYPO3\CMS\Frontend\Typolink\LinkResultInterface`. This
+    immutable object receives all of the TypoScript :typoscript:`typolink`
+    configuration as properties, and makes them available via corresponding
+    getters. Then your custom :typoscript:`userFunc` is executed and receives
+    the following arguments (delivered via
+    :php:`$contentObjectRenderer->callUserFunction()`):
 
     `$content`
-        This contains the object implementing :php:`LinkResultInterface`. Inside your :php:`userFunc()` you
-        can call for example:
+        This contains the object implementing
+        :php-short:`\TYPO3\CMS\Frontend\Typolink\LinkResultInterface`. Inside
+        your :php:`userFunc()` you can call for example:
 
         *   :php:`$content->getUrl()` to get the URL of a link,
         *   :php:`$content->getLinkText()` to get the text of your link
@@ -569,21 +576,27 @@ userFunc
             :php:`LinkService::TYPE_PAGE` (specific pages in your TYPO3 setup) or :php:`LinkService::TYPE_URL`
             for links to external pages.
 
-        See the PHP definition of :php:`LinkResultInterface` for the full list of getters.
+        See the PHP definition of
+        :php-short:`\TYPO3\CMS\Frontend\Typolink\LinkResultInterface` for the
+        full list of getters.
 
-        Since :php:`LinkResultInterface` is an immutable object, you must use the methods :php:`withLinkText()`
-        and/or :php:`withAttributes()` to create a new object variant, which at the end of your
-        :php:`userFunc` must be returned (see below for examples). In case you do not make any
-        changes to the object, the function must return the original object.
+        Since :php-short:`\TYPO3\CMS\Frontend\Typolink\LinkResultInterface` is
+        an immutable object, you must use the methods :php:`withLinkText()`
+        and/or :php:`withAttributes()` to create a new object variant, which at
+        the end of your `userFunc` must be returned (see below for examples). In
+        case you do not make any changes to the object, the function must return
+        the original object.
 
     `$conf`
         Contains an array of the TypoScript configuration of your :typoscript:`userFunc` parameters.
 
     `$request`
-        Contains the PSR-7 request object that allows you to operate on your current frontend
-        environment and retrieve things like Site Settings, current Language, current URL,
-        related :php:`ContentObjectRenderer` (:php:`$cObj`) and other aspects,
-        see :ref:`TYPO3 request object <t3coreapi:typo3-request>`.
+        Contains the PSR-7 request object that allows you to operate on your
+        current frontend environment and retrieve things like Site Settings,
+        current Language, current URL, related
+        :php-short:`\TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer`
+        (:php:`$cObj`) and other aspects, see
+        :ref:`TYPO3 request object <t3coreapi:typo3-request>`.
 
     See :ref:`typolink-userfunc-examples` for more details.
 
@@ -665,7 +678,7 @@ page.uid
     :type: :ref:`data-type-integer` / :ref:`data-type-string`
     :Example:  `t3://page?uid=13`
 
-    The UID (field :sql:`uid`) of a page record, or "current" to reference
+    The UID (field `uid`) of a page record, or "current" to reference
     the current page.
 
     *   `t3://page?uid=13`
@@ -681,7 +694,7 @@ page.alias
     :type: :ref:`data-type-string`
     :Example: `t3://page?alias=myfunkyalias`
 
-    The alias (field :sql:`alias`) of a page record (as an alternative to
+    The alias (field `alias`) of a page record (as an alternative to
     :ref:`page.uid <typolink-handler-page-uid>`).
 
 ..  _typolink-handler-page-type:
@@ -748,7 +761,7 @@ file.uid
     :Example:  `t3://file?uid=13`
 
     The UID of a file within the file abstraction layer (FAL) database table
-    :sql:`sys_file`.
+    `sys_file`.
 
 ..  _typolink-handler-file-identifier:
 

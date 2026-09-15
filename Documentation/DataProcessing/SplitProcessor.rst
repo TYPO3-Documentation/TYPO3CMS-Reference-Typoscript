@@ -121,8 +121,9 @@ Please see also :ref:`dataProcessing-about-examples`.
 
 ..  rubric:: TypoScript
 
-With the help of the :php:`SplitProcessor` the following scenario is
-possible:
+With the help of the
+:php-short:`\TYPO3\CMS\Frontend\DataProcessing\SplitProcessor` the following
+scenario is possible:
 
 ..  literalinclude:: /CodeSnippets/DataProcessing/TypoScript/SplitProcessor.typoscript
     :caption: EXT:examples/Configuration/TypoScript/DataProcessors/Processors/SplitProcessor.typoscript

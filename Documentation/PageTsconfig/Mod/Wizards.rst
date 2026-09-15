@@ -21,8 +21,8 @@ newContentElement.wizardItems
 
 ..  versionchanged:: 13.0
     New content elements added via TCA to the
-    :ref:`items <t3tca:columns-select-properties-items>` of field :sql:`CType`
-    of table :sql:`tt_content` are automatically added to the New Content Element
+    :ref:`items <t3tca:columns-select-properties-items>` of field `CType`
+    of table `tt_content` are automatically added to the New Content Element
     Wizard. The following page TSconfig can be used to override values set via
     TCA.
 

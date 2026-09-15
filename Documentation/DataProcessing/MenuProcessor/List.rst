@@ -51,10 +51,10 @@ Properties
 Example: Menu of all subpages
 =============================
 
-The content element :guilabel:`Menu > Pages` provided by the system
-extension fluid_styled_content is configured with a :php:`MenuProcessor`
-which is based on the options of the :ref:`HMENU <cobj-hmenu>` and provides
-all its properties:
+The content element :guilabel:`Menu > Pages` provided by the system extension
+fluid_styled_content is configured with a
+:php-short:`\TYPO3\CMS\Frontend\DataProcessing\MenuProcessor` which is based on
+the options of the :ref:`HMENU <cobj-hmenu>` and provides all its properties:
 
 ..  literalinclude:: /CodeSnippets/Menu/TypoScript/MenuPages.typoscript
     :caption: EXT:fluid_styled_content/Configuration/TypoScript/ContentElement/MenuPages.typoscript

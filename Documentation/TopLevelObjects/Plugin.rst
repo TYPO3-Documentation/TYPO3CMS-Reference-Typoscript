@@ -56,7 +56,8 @@ Properties for all frontend plugin types
         this will provide an acceptable default display from the plugin, but
         should ideally be cleared and moved to an external stylesheet.
 
-        This value is read by the frontend :php:`RequestHandler` script when
+        This value is read by the frontend
+        :php-short:`\TYPO3\CMS\Frontend\Http\RequestHandler` script when
         collecting the CSS of the document to be rendered.
 
         This is for example used by *frontend* and *indexed_search*. Their
@@ -264,10 +265,11 @@ plugins.
         :type: :ref:`data-type-boolean`
         :Default: `false`
 
-        **Only for Extbase plugins**. By default, when calling an extbase controller action
-        that is not registered for an Extbase plugin, a fatal exception
-        :php:`TargetNotFoundException` is thrown
-        (usually an internal error message is shown).
+        **Only for Extbase plugins**. By default, when calling an extbase
+        controller action that is not registered for an Extbase plugin, a fatal
+        exception
+        :php-short:`\TYPO3\CMS\Extbase\Property\Exception\TargetNotFoundException`
+        is thrown (usually an internal error message is shown).
 
         When this configuration option is set to `1` (true), instead the default
         "Page not Found" page will be shown instead (with a 404 HTTP header by default).
@@ -284,8 +286,10 @@ plugins.
         :type: :ref:`data-type-boolean`
         :Default: `false`
 
-        **Only for Extbase plugins**. By default, when calling an extbase controller action
-        with missing/invalid required arguments a fatal exception :php:`RequiredArgumentMissingException`
+        **Only for Extbase plugins**. By default, when calling an extbase
+        controller action with missing/invalid required arguments a fatal
+        exception
+        :php-short:`\TYPO3\CMS\Extbase\Mvc\Controller\Exception\RequiredArgumentMissingException`
         is thrown (usually an internal error message is shown).
 
         When this configuration option is set to `1` (true), instead the default

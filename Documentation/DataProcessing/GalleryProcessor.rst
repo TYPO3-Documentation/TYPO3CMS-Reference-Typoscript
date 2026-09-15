@@ -47,7 +47,8 @@ Options:
         :Default: 'files'
         :Example: 'myImages'
 
-        Key of the array previously processed by the :php:`FilesProcessor`.
+        Key of the array previously processed by the
+        :php-short:`\TYPO3\CMS\Frontend\DataProcessing\FilesProcessor`.
 
     ..  _GalleryProcessor-numberOfColumns:
 
@@ -234,15 +235,18 @@ Please see also :ref:`dataProcessing-about-examples`.
 
 ..  rubric:: TypoScript
 
-As the :php:`GalleryProcessor` expects the data of the files to be
-present in the the `processedData` array, the :php:`FilesProcessor`
-always has to be called first. Execution depends on the key in the
+As the :php-short:`\TYPO3\CMS\Frontend\DataProcessing\GalleryProcessor` expects
+the data of the files to be present in the the `processedData` array, the
+:php-short:`\TYPO3\CMS\Frontend\DataProcessing\FilesProcessor` always has to be
+called first. Execution depends on the key in the
 :ref:`dataProcessing <GalleryProcessor-dataProcessing>` array, not the order in
 which they are put there.
 
-The content of :ref:`filesProcessedDataKey <GalleryProcessor-filesProcessedDataKey>`
-in the :php:`GalleryProcessor` has to be equal to the content of
-:ref:`as <FilesProcessor-as>` in the :ref:`FilesProcessor <FilesProcessor>`:
+The content of
+:ref:`filesProcessedDataKey <GalleryProcessor-filesProcessedDataKey>` in the
+:php-short:`\TYPO3\CMS\Frontend\DataProcessing\GalleryProcessor` has to be equal
+to the content of :ref:`as <FilesProcessor-as>` in the
+:ref:`FilesProcessor <FilesProcessor>`:
 
 ..  figure:: /Images/ManualScreenshots/DataProcessing/GalleryProcessor.png
     :zoom: lightbox
