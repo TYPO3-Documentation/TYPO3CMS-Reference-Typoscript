@@ -1,8 +1,8 @@
-.. include:: /Includes.rst.txt
-.. index::
-   TSconfig; Setting
-   TSconfig; Using
-.. _typoscript-syntax-using-setting:
+..  include:: /Includes.rst.txt
+..  index::
+    TSconfig; Setting
+    TSconfig; Using
+..  _typoscript-syntax-using-setting:
 
 ==========================
 Using and setting TSconfig
@@ -43,11 +43,11 @@ in which case it is known as "User TSconfig".
         Explains how TSconfig can be retrieved from and used
         within the PHP code of backend modules.
 
-.. toctree::
-   :titlesonly:
-   :hidden:
+..  toctree::
+    :titlesonly:
+    :hidden:
 
-   PageTSconfig
-   UserTSconfig
-   Conditions
-   PhpApi
+    PageTSconfig
+    UserTSconfig
+    Conditions
+    PhpApi

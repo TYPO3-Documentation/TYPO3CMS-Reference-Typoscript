@@ -1,6 +1,6 @@
 ..  include:: /Includes.rst.txt
 ..  index:: GIFBUILDER; +calc
-.. _gifbuilder-calc:
+..  _gifbuilder-calc:
 
 Note on (+calc)
 ===============

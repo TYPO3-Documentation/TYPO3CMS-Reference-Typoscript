@@ -1,5 +1,5 @@
 :navigation-title: Introduction
-.. include:: /Includes.rst.txt
+..  include:: /Includes.rst.txt
 ..  _typoscript-syntax-typoscript-templates:
 ..  _typoscript-syntax-typoscript-templates-usage:
 ..  _introduction:

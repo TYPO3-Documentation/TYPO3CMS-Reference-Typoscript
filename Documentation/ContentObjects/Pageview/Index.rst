@@ -76,7 +76,7 @@ Fallback behavior when no backend layout is defined
 *   If you explicitly set the backend layout to `none`, a Fluid template
     with name :file:`None.html` will be used.
 
-.. _cobj-pageview-data:
+..  _cobj-pageview-data:
 
 Default variables in Fluid templates
 ====================================
@@ -134,12 +134,12 @@ Additional variables can be defined with property
         The current :php:`Site` object. See also
         :ref:`the Site object <t3coreapi:sitehandling-site-object>`.
 
-.. _cobj-pageview-data-example:
+..  _cobj-pageview-data-example:
 
 Examples for using default variables
 ------------------------------------
 
-.. _cobj-pageview-data-language-example:
+..  _cobj-pageview-data-language-example:
 
 Example: Display the site title in the current language
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -148,7 +148,7 @@ Example: Display the site title in the current language
     :language: html
     :caption: EXT:my_sitepackage/Resources/Private/PageView/Pages/Default.html
 
-.. _cobj-pageview-data-page-example:
+..  _cobj-pageview-data-page-example:
 
 Example: Display the title and abstract of the current page
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -157,7 +157,7 @@ Example: Display the title and abstract of the current page
     :language: html
     :caption: EXT:my_sitepackage/Resources/Private/PageView/Pages/Default.html
 
-.. _cobj-pageview-data-settings-example:
+..  _cobj-pageview-data-settings-example:
 
 Example: Use TypoScript constant in a Fluid template
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -172,7 +172,7 @@ Let us assume, the current page loads the following TypoScript constants:
     :language: html
     :caption: EXT:my_sitepackage/Resources/Private/PageView/Pages/Default.html
 
-.. _cobj-pageview-data-site-example:
+..  _cobj-pageview-data-site-example:
 
 Example: Link to the root page of the current site
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -347,7 +347,7 @@ Example: Define fallbacks for a template paths
 You can use the directories defined in :confval:`pageview-paths` to
 define fallback directories for the templates:
 
-.. code-block:: typoscript
+..  code-block:: typoscript
     :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     page = PAGE

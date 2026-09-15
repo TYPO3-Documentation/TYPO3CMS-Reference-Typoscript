@@ -1,12 +1,12 @@
-.. include:: /Includes.rst.txt
-.. index:: Functions; Calc
+..  include:: /Includes.rst.txt
+..  index:: Functions; Calc
 
 .. The label objects-calc should no longer be used.
 .. Use the label calc instead.
 .. It only remains here, in case it is still being used.
 
-.. _objects-calc:
-.. _calc:
+..  _objects-calc:
+..  _calc:
 
 ====
 Calc
@@ -25,10 +25,10 @@ right instead of order of operations (multiplication and division before additio
 How value is calculated
 -----------------------
 
-.. code-block:: none
+..  code-block:: none
 
-   45 + 34 * 2 = 158
-   (which is the same as this in ordinary arithmetic: (45+34)*2=158)
+    45 + 34 * 2 = 158
+    (which is the same as this in ordinary arithmetic: (45+34)*2=158)
 
 
 calc usage example
@@ -38,15 +38,15 @@ The :typoscript:`HMENU` :typoscript:`maxAge` property is of a type
 :typoscript:`integer +calc`, it's value in this example equals to 259200.
 
 
-.. code-block:: typoscript
-   :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-   20 = HMENU
-   20.special = updated
-   20.special.value = 35, 56
-   20.special {
-     mode = tstamp
-     depth = 2
-     maxAge = 3600*24*3
-     limit = 8
-   }
+    20 = HMENU
+    20.special = updated
+    20.special.value = 35, 56
+    20.special {
+      mode = tstamp
+      depth = 2
+      maxAge = 3600*24*3
+      limit = 8
+    }

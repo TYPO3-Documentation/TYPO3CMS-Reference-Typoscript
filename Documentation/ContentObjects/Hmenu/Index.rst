@@ -106,7 +106,7 @@ Properties
     ..  confval:: special
         :name: hmenu-special
         :type: *"directory" / "list" / "updated" / "rootline" / "browse" / "keywords"
-             / "categories" / "language" / "userfunction"*
+            / "categories" / "language" / "userfunction"*
 
         Lets you define special types of menus.
 
@@ -188,7 +188,7 @@ Properties
 
         See :confval:`MenuProcessor-excludeDoktypes`.
 
-    .. _hmenu-includenotinmenu:
+    ..  _hmenu-includenotinmenu:
 
     ..  rubric:: includeNotInMenu
 
@@ -198,7 +198,7 @@ Properties
 
         See :confval:`MenuProcessor-includeNotInMenu`
 
-    .. _hmenu-alwaysactivepidlist:
+    ..  _hmenu-alwaysactivepidlist:
 
     ..  rubric:: alwaysActivePIDlist
 

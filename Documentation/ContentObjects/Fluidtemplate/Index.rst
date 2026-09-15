@@ -1,7 +1,7 @@
 ..  include:: /Includes.rst.txt
 ..  index::
-   Content objects; FLUIDTEMPLATE
-   FLUIDTEMPLATE
+    Content objects; FLUIDTEMPLATE
+    FLUIDTEMPLATE
 ..  _cobj-fluidtemplate:
 ..  _cobj-template:
 
@@ -64,7 +64,7 @@ to output all available data using the magic `{_all}` variable:
 
 ..  code-block:: html
 
-   <f:debug>{_all}</f:debug>
+    <f:debug>{_all}</f:debug>
 
 ..  index:: FLUIDTEMPLATE; Properties
 ..  _cobj-fluidtemplate-properties:

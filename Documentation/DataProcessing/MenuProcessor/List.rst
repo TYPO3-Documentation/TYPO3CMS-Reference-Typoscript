@@ -14,7 +14,7 @@ create a menu that lists the pages you define in the property
 Mount pages are supported.
 
 ..  contents::
-   :local:
+    :local:
 
 ..  _hmenu-special-list-properties:
 
@@ -56,10 +56,10 @@ extension fluid_styled_content is configured with a :php:`MenuProcessor`
 which is based on the options of the :ref:`HMENU <cobj-hmenu>` and provides
 all its properties:
 
-.. literalinclude:: /CodeSnippets/Menu/TypoScript/MenuPages.typoscript
-   :caption: EXT:fluid_styled_content/Configuration/TypoScript/ContentElement/MenuPages.typoscript
+..  literalinclude:: /CodeSnippets/Menu/TypoScript/MenuPages.typoscript
+    :caption: EXT:fluid_styled_content/Configuration/TypoScript/ContentElement/MenuPages.typoscript
 
 The following Fluid template can be used to style the menu:
 
-.. literalinclude:: /CodeSnippets/Menu/Template/MenuPages.html
-   :caption: EXT:fluid_styled_content/Resources/Private/Templates/MenuPages.html
+..  literalinclude:: /CodeSnippets/Menu/Template/MenuPages.html
+    :caption: EXT:fluid_styled_content/Resources/Private/Templates/MenuPages.html

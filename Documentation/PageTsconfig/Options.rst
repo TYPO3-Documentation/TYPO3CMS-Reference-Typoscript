@@ -43,10 +43,10 @@ Example: Exclude two backend layouts from drop down selector
     Before: Two backend layout records shown in list module
 
 ..  code-block:: typoscript
-   :caption: EXT:site_package/Configuration/page.tsconfig
+    :caption: EXT:site_package/Configuration/page.tsconfig
 
-   # Exclude two backend layouts from drop down selector
-   options.backendLayout.exclude = 1,2
+    # Exclude two backend layouts from drop down selector
+    options.backendLayout.exclude = 1,2
 
 ..  figure:: /Images/ManualScreenshots/List/BackendLayoutsExcluded.png
     :alt: Drop down without backend layouts
@@ -54,8 +54,8 @@ Example: Exclude two backend layouts from drop down selector
     After: Drop down without backend layouts
 
 ..  index::
-   options.backendLayout
-   Backend; Layout
+    options.backendLayout
+    Backend; Layout
 ..  _pagedefaultuploadfolder:
 
 defaultUploadFolder

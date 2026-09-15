@@ -57,9 +57,9 @@ source
         source = tt_content_34, 45, tt_links_56
 
 
-.. index:: RECORDS; categories
+..  index:: RECORDS; categories
 
-.. _cobj-records-properties-categories:
+..  _cobj-records-properties-categories:
 
 categories
 ----------
@@ -94,9 +94,9 @@ categories.relation
     be several such fields on a given table.
 
 
-.. index:: RECORDS; tables
+..  index:: RECORDS; tables
 
-.. _cobj-records-properties-tables:
+..  _cobj-records-properties-tables:
 
 tables
 ------
@@ -125,9 +125,9 @@ tables
     :sql:`tx_myexttable`.
 
 
-.. index:: RECORDS; conf
+..  index:: RECORDS; conf
 
-.. _cobj-records-properties-conf:
+..  _cobj-records-properties-conf:
 
 conf.[*table name*]
 -------------------
@@ -144,9 +144,9 @@ conf.[*table name*]
     not set for the cObject :ref:`CONTENT <cobj-content>`!
 
 
-.. index:: RECORDS; dontCheckPid
+..  index:: RECORDS; dontCheckPid
 
-.. _cobj-records-properties-dontcheckpid:
+..  _cobj-records-properties-dontcheckpid:
 
 dontCheckPid
 ------------
@@ -159,7 +159,7 @@ dontCheckPid
     Normally a record cannot be selected, if its parent page (pid) is not
     accessible for the website user. This option disables that check.
 
-.. _cobj-records-properties-wrap:
+..  _cobj-records-properties-wrap:
 
 wrap
 ----
@@ -170,7 +170,7 @@ wrap
 
     Wraps the output. Executed before :ref:`stdWrap <cobj-records-properties-stdwrap>`.
 
-.. _cobj-records-properties-stdwrap:
+..  _cobj-records-properties-stdwrap:
 
 stdWrap
 -------
@@ -181,7 +181,7 @@ stdWrap
 
     Executed after :ref:`wrap <cobj-records-properties-wrap>`.
 
-.. _cobj-records-properties-cache:
+..  _cobj-records-properties-cache:
 
 cache
 -----
@@ -193,14 +193,14 @@ cache
     See :ref:`cache function description <cache>` for details.
 
 
-.. _cobj-records-examples:
+..  _cobj-records-examples:
 
 Examples
 ========
 
 
-.. index:: RECORDS; Selection with source
-.. _cobj-records-examples-source:
+..  index:: RECORDS; Selection with source
+..  _cobj-records-examples-source:
 
 Selection with source
 ---------------------

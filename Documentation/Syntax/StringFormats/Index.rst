@@ -172,5 +172,5 @@ string
 
         page.10.value = The quick brown fox jumps over the lazy dog.
 
-    .. literalinclude:: /CodeSnippets/TypoScriptSyntax/OperatorUnset.typoscript
-       :caption: Extension examples, file Configuration/TypoScript/Syntax/ObjectUnset/setup.typoscript
+    ..  literalinclude:: /CodeSnippets/TypoScriptSyntax/OperatorUnset.typoscript
+        :caption: Extension examples, file Configuration/TypoScript/Syntax/ObjectUnset/setup.typoscript

@@ -141,9 +141,9 @@ Guidelines
 
 Good, general PAGE object names to use are:
 
-* **page** for the main page with content
-* **json** for a json stream with content
-* **xml** for a XML stream with content
+*   **page** for the main page with content
+*   **json** for a json stream with content
+*   **xml** for a XML stream with content
 
 These are just recommendations. However, especially the name page for the content bearing page
 is very common and most documentation will imply that your main page object is called page.
@@ -251,11 +251,11 @@ Properties
         :type: :ref:`->CONFIG <config>`
 
         :Examples:
-            *   :ref:`A page type used for ajax requests <page_examples_ajax>`
-            *   :ref:`A page type used for JSON data <page_examples_json>`
+               *   :ref:`A page type used for ajax requests <page_examples_ajax>`
+               *   :ref:`A page type used for JSON data <page_examples_json>`
 
-         Configuration for the page. Any entries made here override the same
-         entries in the top-level object :ref:`config`.
+            Configuration for the page. Any entries made here override the same
+            entries in the top-level object :ref:`config`.
 
     ..  rubric:: cssInline.[array]
 
@@ -735,7 +735,7 @@ Example: Set a class on the body tag
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Demonstrates:
-    * :confval:`page.bodyTag <page-bodytag>`
+    *   :confval:`page.bodyTag <page-bodytag>`
 
 ..  code-block:: typoscript
     :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
@@ -749,7 +749,7 @@ Example: Add a parameter to the body tag
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Demonstrates:
-    * :confval:`page.bodyTagAdd <page-bodyTagAdd>`
+    *   :confval:`page.bodyTagAdd <page-bodyTagAdd>`
 
 ..  code-block:: typoscript
     :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
@@ -763,7 +763,7 @@ Example: Add inline styles for the h1 tag
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Demonstrates:
-    * :confval:`page.cssInline <page-cssInline>`
+    *   :confval:`page.cssInline <page-cssInline>`
 
 ..  code-block:: typoscript
     :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
@@ -785,7 +785,7 @@ Example: Add a script and a comment to the page footer
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Demonstrates:
-    * :confval:`page.footerData <page-footerData>`
+    *   :confval:`page.footerData <page-footerData>`
 
 ..  code-block:: typoscript
     :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
@@ -807,7 +807,7 @@ Example: Add a script tag and a comment to the head tag
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Demonstrates:
-    * :confval:`page.headerData <page-headerData>`
+    *   :confval:`page.headerData <page-headerData>`
 
 ..  code-block:: typoscript
     :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
@@ -829,7 +829,7 @@ Example: Include additional css files
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Demonstrates:
-    * :confval:`page.includeCSS <page-includeCSS>`
+    *   :confval:`page.includeCSS <page-includeCSS>`
 
 ..  code-block:: typoscript
     :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
@@ -861,7 +861,7 @@ Example: Include CSS libraries
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Demonstrates:
-    * :confval:`page.includeCSSLibs <page-includeCSSLibs>`
+    *   :confval:`page.includeCSSLibs <page-includeCSSLibs>`
 
 ..  code-block:: typoscript
     :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
@@ -883,7 +883,7 @@ Example: Include JavaScript in the header
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Demonstrates:
-    * :confval:`page.includeJS <page-includeJS>`
+    *   :confval:`page.includeJS <page-includeJS>`
 
 ..  code-block:: typoscript
     :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
@@ -921,7 +921,7 @@ Example: Make a language file available in JavaScript
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Demonstrates:
-    * :confval:`page.inlineLanguageLabelFiles <page-inlineLanguageLabelFiles>`
+    *   :confval:`page.inlineLanguageLabelFiles <page-inlineLanguageLabelFiles>`
 
 ..  code-block:: typoscript
     :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
@@ -942,7 +942,7 @@ Example: Make some values available in JavaScript
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Demonstrates:
-    * :confval:`page.inlineSettings <page-inlineSettings>`
+    *   :confval:`page.inlineSettings <page-inlineSettings>`
 
 ..  code-block:: typoscript
     :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
@@ -967,7 +967,7 @@ Example: Add some inline JavaScript to the page footer
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Demonstrates:
-    * :confval:`page.jsFooterInline <page-jsFooterInline>`
+    *   :confval:`page.jsFooterInline <page-jsFooterInline>`
 
 ..  code-block:: typoscript
     :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
@@ -986,7 +986,7 @@ Example: Make a cObject available in JavaScript
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Demonstrates:
-    * :confval:`page.jsInline <page-jsInline>`
+    *   :confval:`page.jsInline <page-jsInline>`
 
 ..  code-block:: typoscript
     :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
@@ -1005,7 +1005,7 @@ Example: Define meta tags for description and keywords
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Demonstrates:
-    * :confval:`page.meta <page-meta>`
+    *   :confval:`page.meta <page-meta>`
 
 ..  code-block:: typoscript
     :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
@@ -1025,7 +1025,7 @@ Example: Fetch data for the keyword meta tag from the page record
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Demonstrates:
-    * :confval:`page.meta <page-meta>`
+    *   :confval:`page.meta <page-meta>`
 
 If the page record is not set search up the root line of pages.
 
@@ -1045,7 +1045,7 @@ Example: Make a meta.refresh entry
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Demonstrates:
-    * :confval:`page.meta <page-meta>`
+    *   :confval:`page.meta <page-meta>`
 
 ..  code-block:: typoscript
     :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
@@ -1059,7 +1059,7 @@ Example set Open graph meta tags
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Demonstrates:
-    * :confval:`page.meta <page-meta>`
+    *   :confval:`page.meta <page-meta>`
 
 Meta tags with a different attribute name are supported like the
 Open Graph meta tags:
@@ -1121,7 +1121,7 @@ Example: Add a favicon to the page
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Demonstrates:
-    * :confval:`page.shortcutIcon <page-shortcutIcon>`
+    *   :confval:`page.shortcutIcon <page-shortcutIcon>`
 
 ..  code-block:: typoscript
     :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
