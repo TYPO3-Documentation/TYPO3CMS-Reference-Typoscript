@@ -95,7 +95,7 @@ pidInList
         Allows to select versioned records in workspaces directly.
 
     **Special value:** :typoscript:`0`
-        Allows to disable the :sql:`pid` constraint completely. Requirements:
+        Allows to disable the `pid` constraint completely. Requirements:
         :typoscript:`uidInList` *must* be set or the table *must* have the prefix
         "static\_\*".
 
@@ -291,7 +291,7 @@ join, leftjoin, rightjoin
     :name: select-join
     :type: :ref:`data-type-string` / :ref:`stdWrap`
 
-    Enter the JOIN clause without :sql:`JOIN`, :sql:`LEFT OUTER JOIN` and :sql:`RIGHT OUTER JOIN`
+    Enter the JOIN clause without :sql:`JOIN`, `LEFT OUTER JOIN` and `RIGHT OUTER JOIN`
     respectively.
 
     ..  rubric:: Example

@@ -92,7 +92,8 @@ Please see also :ref:`dataProcessing-about-examples`.
 
 ..  rubric:: TypoScript
 
-Using the :php:`LanguageMenuProcessor` the following scenario is possible:
+Using the :php-short:`\TYPO3\CMS\Frontend\DataProcessing\LanguageMenuProcessor`
+the following scenario is possible:
 
 ..  literalinclude:: /CodeSnippets/DataProcessing/TypoScript/LanguageMenuProcessor.typoscript
     :caption: EXT:examples/Configuration/TypoScript/DataProcessors/Processors/LanguageMenuProcessor.typoscript

@@ -42,7 +42,8 @@ Please see also :ref:`dataProcessing-about-examples`.
 
 ..  rubric:: TypoScript
 
-Using the :php:`SiteLanguageProcessor` the following scenario is possible:
+Using the :php-short:`\TYPO3\CMS\Frontend\DataProcessing\SiteLanguageProcessor`
+the following scenario is possible:
 
 ..  literalinclude:: /CodeSnippets/DataProcessing/TypoScript/SiteLanguageProcessor.typoscript
     :caption: EXT:examples/Configuration/TypoScript/DataProcessors/Processors/SiteLanguageProcessor.typoscript

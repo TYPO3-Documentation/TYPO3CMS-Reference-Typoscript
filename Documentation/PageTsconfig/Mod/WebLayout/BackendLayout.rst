@@ -160,7 +160,7 @@ BackendLayouts.[backendLayout]
                     See `Feature: #108623 - Allow content element restrictions per colPos <https://docs.typo3.org/permalink/changelog:feature-108623-1768315053>`_
 
                 Allow only configured types of content elements (referencing
-                :sql:`tt_content.CType` with names like "text", "textmedia",
+                `tt_content.CType` with names like "text", "textmedia",
                 "felogin_pi1" and so on).
 
             ..  rubric:: disallowedContentTypes
@@ -173,7 +173,7 @@ BackendLayouts.[backendLayout]
                     See `Feature: #108623 - Allow content element restrictions per colPos <https://docs.typo3.org/permalink/changelog:feature-108623-1768315053>`_
 
                 Disallow configured types of content elements (referencing
-                :sql:`tt_content.CType` with names like "text", "textmedia",
+                `tt_content.CType` with names like "text", "textmedia",
                 "felogin_pi1" and so on).
 
 ..  _backend-layouts-data-processor:

@@ -87,8 +87,8 @@ Example:
 In this example we first load a special value, which is given as a
 GET/POST parameter, into the register. Then we use a
 :ref:`CONTENT object <cobj-content>` to render content based on this
-value. This CONTENT object loads data from a table :sql:`tx_my_table` and looks up
-the entry using the value from the register as a unique id. The field :sql:`tx_my_text_field`
+value. This CONTENT object loads data from a table `tx_my_table` and looks up
+the entry using the value from the register as a unique id. The field `tx_my_text_field`
 of this record will be rendered as output.
 
 For an example in combination with :ref:`RESTORE_REGISTER <cobj-restore-register>`

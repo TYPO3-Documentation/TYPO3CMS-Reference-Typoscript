@@ -230,7 +230,7 @@ Example: Get a header field value of a record
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Get the value of the header field of record with uid 234 from table
-:sql:`tt_content`:
+`tt_content`:
 
 ..  code-block:: typoscript
     :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
@@ -335,7 +335,7 @@ file
     :Syntax: file : [uid] : [property]
 
     Retrieves a property from a file object (:ref:`FAL <t3coreapi:fal>`) by identifying it through its
-    :sql:`sys_file` UID. Note that during execution of the :ref:`cobj-files` cObject,
+    `sys_file` UID. Note that during execution of the :ref:`cobj-files` cObject,
     it is possible to reference the current file using :confval:`data-current` as the UID,
     for example, :typoscript:`file : current : size`.
 
@@ -347,7 +347,7 @@ file
     available all the time, it depends on the setup of *references* of the
     :ref:`cobj-files` cObject): title, description, link and alternative.
 
-    Any data in the :sql:`sys_file_metadata` table can also be accessed.
+    Any data in the `sys_file_metadata` table can also be accessed.
 
     See the :ref:`FILES <cobj-files-examples>` cObject for examples of usage.
 
@@ -372,7 +372,7 @@ flexform
     :name: data-flexform
     :Syntax: flexform : [field containing flexform data] : [property of this flexform]
 
-    Access values in :ref:`FlexForms <t3coreapi:flexforms>`, for example, inside a :sql:`tt_content` record.
+    Access values in :ref:`FlexForms <t3coreapi:flexforms>`, for example, inside a `tt_content` record.
 
 ..  _data-type-gettext-flexform-example:
 
@@ -586,7 +586,7 @@ levelfield
 Example: Get a field from a page up the root-line
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Get the value of user-defined field :sql:`tx_myextension_myfield` in the root line.
+Get the value of user-defined field `tx_myextension_myfield` in the root line.
 
 ..  code-block:: typoscript
     :caption: EXT:my_extension/Configuration/Sets/Main/setup.typoscript
@@ -746,7 +746,7 @@ parameters
     :name: data-parameters
     :Syntax: parameters: [field name from the current :php:`$cObj->parameters` array in the cObject.]
 
-    Get the content of a key in the :php:`parameters` array of the current cObject.
+    Get the content of a key in the `parameters` array of the current cObject.
 
 ..  _data-type-gettext-parameters-examples:
 
