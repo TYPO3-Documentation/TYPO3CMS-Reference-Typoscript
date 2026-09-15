@@ -129,7 +129,7 @@ Supporting both site sets and TypoScript records
     :ref:`@import <t3tsref:typoscript-syntax-import>` syntax. All frontend
     TypoScript files **must** end on `.typoscript`.
 
-.. _extension-configuration-typoscript-set-record-one:
+..  _extension-configuration-typoscript-set-record-one:
 
 One TypoScript include set
 --------------------------
@@ -137,14 +137,14 @@ One TypoScript include set
 If your extension supported one static file include you should provide the same
 files in your main site set as well:
 
-.. code-block:: php
-   :caption: EXT:my_extension/Configuration/TCA/Overrides/sys_template.php (before and after)
+..  code-block:: php
+    :caption: EXT:my_extension/Configuration/TCA/Overrides/sys_template.php (before and after)
 
-   \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
-       'my_extension',
-       'Configuration/TypoScript/',
-       'Examples TypoScript'
-   );
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
+        'my_extension',
+        'Configuration/TypoScript/',
+        'Examples TypoScript'
+    );
 
 In your main site set provide the same files that where provided as includes
 by :php:`\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile`
@@ -180,7 +180,7 @@ until now:
 
     @import 'EXT:my_extension/Configuration/TypoScript/setup.typoscript'
 
-.. _extension-configuration-typoscript-set-record-multiple:
+..  _extension-configuration-typoscript-set-record-multiple:
 
 Multiple TypoScript include sets
 --------------------------------
@@ -235,26 +235,26 @@ For backward compability reasons :php:`ExtensionManagementUtility::addStaticFile
 still needs to be called for each folder that should be available in the TypoScript
 template record:
 
-.. code-block:: php
-   :caption: EXT:my_extension/Configuration/TCA/Overrides/sys_template.php
+..  code-block:: php
+    :caption: EXT:my_extension/Configuration/TCA/Overrides/sys_template.php
 
-   \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
-       'my_extension',
-       'Configuration/TypoScript/',
-       'My Extension - Main TypoScript'
-   );
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
+        'my_extension',
+        'Configuration/TypoScript/',
+        'My Extension - Main TypoScript'
+    );
 
-   \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
-       'my_extension',
-       'Configuration/TypoScript/SpecialFeature1/',
-       'My Extension - Some special feature 1'
-   );
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
+        'my_extension',
+        'Configuration/TypoScript/SpecialFeature1/',
+        'My Extension - Some special feature 1'
+    );
 
-   \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
-       'my_extension',
-       'Configuration/TypoScript/SpecialFeature2/',
-       'My Extension - Some special feature 2'
-   );
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
+        'my_extension',
+        'Configuration/TypoScript/SpecialFeature2/',
+        'My Extension - Some special feature 2'
+    );
 
 Each site set then provides the TypoScript files the according location by
 importing it, for example:
@@ -286,7 +286,7 @@ for the backend <typo3/cms-form:concepts-configuration-yamlregistration-backend>
     is loaded by default in sites based on **TypoScript records** it is not
     loaded in sites depending on **site sets as TypoScript providers**.
 
-.. rubric:: More information
+..  rubric:: More information
 
-* :ref:`t3sitepackage:typoscript-configuration` (in "Sitepackage Tutorial")`
-* :ref:`t3sitepackage:extension-configuration` (in "Sitepackage Tutorial")`
+*   :ref:`t3sitepackage:typoscript-configuration` (in "Sitepackage Tutorial")`
+*   :ref:`t3sitepackage:extension-configuration` (in "Sitepackage Tutorial")`

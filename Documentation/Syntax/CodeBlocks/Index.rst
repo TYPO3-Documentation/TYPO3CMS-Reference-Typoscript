@@ -1,9 +1,9 @@
-.. include:: /Includes.rst.txt
-.. index::
-   TypoScript; Operator "{ }"
-   TypoScript; Code blocks
-.. _typoscript-syntax-syntax-code-blocks:
-.. _typoscript-syntax-syntax-curly-brackets:
+..  include:: /Includes.rst.txt
+..  index::
+    TypoScript; Operator "{ }"
+    TypoScript; Code blocks
+..  _typoscript-syntax-syntax-code-blocks:
+..  _typoscript-syntax-syntax-curly-brackets:
 
 ===========
 Code blocks
@@ -14,48 +14,48 @@ Without repeating upper parts of a path in each line. This allows nesting.
 
 Example without braces:
 
-.. literalinclude:: /CodeSnippets/TypoScriptSyntax/CodeBlock1.typoscript
-   :caption: Extension examples, file Configuration/TypoScript/Syntax/CodeBlock/setup.typoscript
+..  literalinclude:: /CodeSnippets/TypoScriptSyntax/CodeBlock1.typoscript
+    :caption: Extension examples, file Configuration/TypoScript/Syntax/CodeBlock/setup.typoscript
 
 This can be written as:
 
-.. literalinclude:: /CodeSnippets/TypoScriptSyntax/CodeBlock2.typoscript
-   :caption: Extension examples, file Configuration/TypoScript/Syntax/CodeBlock2/setup.typoscript
+..  literalinclude:: /CodeSnippets/TypoScriptSyntax/CodeBlock2.typoscript
+    :caption: Extension examples, file Configuration/TypoScript/Syntax/CodeBlock2/setup.typoscript
 
 Curly braces can be nested to further improve readability. This is also
 the same as above:
 
-.. literalinclude:: /CodeSnippets/TypoScriptSyntax/CodeBlock3.typoscript
-   :caption: Extension examples, file Configuration/TypoScript/Syntax/CodeBlock3/setup.typoscript
+..  literalinclude:: /CodeSnippets/TypoScriptSyntax/CodeBlock3.typoscript
+    :caption: Extension examples, file Configuration/TypoScript/Syntax/CodeBlock3/setup.typoscript
 
 Some rules apply during parsing:
 
-- Everything on the same line after the opening :typoscript:`{` and closing
-  :typoscript:`}` brace is considered a comment, even if the comment markers
-  :typoscript:`#`, :typoscript:`//` and :typoscript:`/* ... */` are missing.
+-   Everything on the same line after the opening :typoscript:`{` and closing
+    :typoscript:`}` brace is considered a comment, even if the comment markers
+    :typoscript:`#`, :typoscript:`//` and :typoscript:`/* ... */` are missing.
 
-- The closing brace :typoscript:`}` must be on a single line in order to close a block.
-  The following construct is invalid, the closing brace is interpreted as part of
-  the value, so the TypoScript and TSconfig backend modules will mumble with a
-  "missing closing brace" warning:
+-   The closing brace :typoscript:`}` must be on a single line in order to close a block.
+    The following construct is invalid, the closing brace is interpreted as part of
+    the value, so the TypoScript and TSconfig backend modules will mumble with a
+    "missing closing brace" warning:
 
-  .. literalinclude:: /CodeSnippets/TypoScriptSyntax/CodeBlockInvalidClosingBrace.typoscript
-     :caption: Extension examples, file Configuration/TypoScript/Syntax/CodeBlockInvalidClosingBrace/setup.typoscript
+    ..  literalinclude:: /CodeSnippets/TypoScriptSyntax/CodeBlockInvalidClosingBrace.typoscript
+        :caption: Extension examples, file Configuration/TypoScript/Syntax/CodeBlockInvalidClosingBrace/setup.typoscript
 
-- Conditions can not be placed within blocks, they are always "global" level
-  and stop any brace nesting. The following construct is invalid, the TypoScript and
-  TSconfig backend modules will mumble with a "missing closing brace" warning:
+-   Conditions can not be placed within blocks, they are always "global" level
+    and stop any brace nesting. The following construct is invalid, the TypoScript and
+    TSconfig backend modules will mumble with a "missing closing brace" warning:
 
-  .. literalinclude:: /CodeSnippets/TypoScriptSyntax/CodeBlockInvalidCondition.typoscript
-     :caption: Extension examples, file Configuration/TypoScript/Syntax/CodeBlockInvalidCondition/setup.typoscript
+    ..  literalinclude:: /CodeSnippets/TypoScriptSyntax/CodeBlockInvalidCondition.typoscript
+        :caption: Extension examples, file Configuration/TypoScript/Syntax/CodeBlockInvalidCondition/setup.typoscript
 
-- Nesting is per-file / per-text-snippet: It does not "swap" into included files. This
-  was the case with the old TypoScript parser. It has been a nasty side-effect, leading
-  to hard to debug problems. File includes with :typoscript:`@import`
-  within curly braces are not relative (anymore).
+-   Nesting is per-file / per-text-snippet: It does not "swap" into included files. This
+    was the case with the old TypoScript parser. It has been a nasty side-effect, leading
+    to hard to debug problems. File includes with :typoscript:`@import`
+    within curly braces are not relative (anymore).
 
-  A construct like this is invalid, the TypoScript and TSconfig backend modules will mumble
-  with a "missing closing brace" warning:
+    A construct like this is invalid, the TypoScript and TSconfig backend modules will mumble
+    with a "missing closing brace" warning:
 
-  .. literalinclude:: /CodeSnippets/TypoScriptSyntax/CodeBlockInvalidImport.typoscript
-     :caption: Extension examples, file Configuration/TypoScript/Syntax/CodeBlockInvalidCondition/setup.typoscript
+    ..  literalinclude:: /CodeSnippets/TypoScriptSyntax/CodeBlockInvalidImport.typoscript
+        :caption: Extension examples, file Configuration/TypoScript/Syntax/CodeBlockInvalidCondition/setup.typoscript

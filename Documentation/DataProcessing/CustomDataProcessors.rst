@@ -1,5 +1,5 @@
-.. include:: /Includes.rst.txt
-.. _CustomDataProcessors:
+..  include:: /Includes.rst.txt
+..  _CustomDataProcessors:
 
 ======================
 Custom data processors
@@ -12,8 +12,8 @@ You can find information on the implementation in :ref:`TYPO3 Explained
 Custom data processors can be used in TypoScript just like any other
 data processor:
 
-.. literalinclude:: /CodeSnippets/DataProcessing/TypoScript/CustomCategoryProcessor.typoscript
-   :caption: EXT:examples/Configuration/TypoScript/DataProcessors/Processors/CustomCategoryProcessor.typoscript
+..  literalinclude:: /CodeSnippets/DataProcessing/TypoScript/CustomCategoryProcessor.typoscript
+    :caption: EXT:examples/Configuration/TypoScript/DataProcessors/Processors/CustomCategoryProcessor.typoscript
 
 The available configuration depends on the implementation of the
 specific custom data processor, of course.

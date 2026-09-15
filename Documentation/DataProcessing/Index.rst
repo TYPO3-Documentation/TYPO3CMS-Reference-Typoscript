@@ -72,5 +72,5 @@ In this system extension it is defined as follows:
 
 The extension `examples` also sets the paths to the additional templates:
 
-.. literalinclude:: /CodeSnippets/DataProcessing/DataProcessingTemplates.typoscript
-   :caption: EXT:examples/Configuration/TypoScript/DataProcessors/General.typoscript
+..  literalinclude:: /CodeSnippets/DataProcessing/DataProcessingTemplates.typoscript
+    :caption: EXT:examples/Configuration/TypoScript/DataProcessors/General.typoscript

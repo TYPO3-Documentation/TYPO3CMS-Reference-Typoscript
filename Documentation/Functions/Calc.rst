@@ -1,10 +1,10 @@
 :navigation-title: Calc
 
-.. include:: /Includes.rst.txt
-.. index:: Functions; Calc
+..  include:: /Includes.rst.txt
+..  index:: Functions; Calc
 
-.. _objects-calc:
-.. _calc:
+..  _objects-calc:
+..  _calc:
 
 ==========================
 Calculating values (+calc)
@@ -21,10 +21,10 @@ right instead of order of operations (multiplication and division before additio
 How value is calculated
 =======================
 
-.. code-block:: none
+..  code-block:: none
 
-   45 + 34 * 2 = 158
-   (which is the same as this in ordinary arithmetic: (45+34)*2=158)
+    45 + 34 * 2 = 158
+    (which is the same as this in ordinary arithmetic: (45+34)*2=158)
 
 
 ..  _objects-calc-calculating-values-calc-calc-usage-example:
@@ -36,15 +36,15 @@ The :typoscript:`HMENU` :typoscript:`maxAge` property is of a type
 :typoscript:`integer +calc`, it's value in this example equals to 259200.
 
 
-.. code-block:: typoscript
-   :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
-   20 = HMENU
-   20.special = updated
-   20.special.value = 35, 56
-   20.special {
-     mode = tstamp
-     depth = 2
-     maxAge = 3600*24*3
-     limit = 8
-   }
+    20 = HMENU
+    20.special = updated
+    20.special.value = 35, 56
+    20.special {
+      mode = tstamp
+      depth = 2
+      maxAge = 3600*24*3
+      limit = 8
+    }

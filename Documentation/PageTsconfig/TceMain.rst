@@ -416,20 +416,20 @@ group
 ~~~~~
 
 ..  confval:: permissions.group
-    :name: tcemain-permissions-group
-    :type: list of strings or integer 0-31
-    :Default: show,edit,new,editcontent
+     :name: tcemain-permissions-group
+     :type: list of strings or integer 0-31
+     :Default: show,edit,new,editcontent
 
-    Default permissions for group members, key list: `show`, `edit`, `new`,
-    `editcontent`.
+     Default permissions for group members, key list: `show`, `edit`, `new`,
+     `editcontent`.
 
-   Alternatively, it is allowed to set an integer between 0 and 31, indicating
-   which bits corresponding to the key list should be set: `show = 1`,
-   `edit = 2`, `delete = 4`, `new = 8`, `editcontent = 16`.
+    Alternatively, it is allowed to set an integer between 0 and 31, indicating
+    which bits corresponding to the key list should be set: `show = 1`,
+    `edit = 2`, `delete = 4`, `new = 8`, `editcontent = 16`.
 
-   It also possible to set the value
-   :ref:`copyFromParent <pagetcemain-permissions-copyFromParent>` to inherit
-   the value from the parent page.
+    It also possible to set the value
+    :ref:`copyFromParent <pagetcemain-permissions-copyFromParent>` to inherit
+    the value from the parent page.
 
 
 ..  _pagetcemain-permissions-group-example:
@@ -539,18 +539,18 @@ userid
 ~~~~~~
 
 ..  confval:: permissions.userid
-    :name: tcemain-permissions-userid
-    :type: positive integer or string
+     :name: tcemain-permissions-userid
+     :type: positive integer or string
 
-   By default the owner of a newly created page is the user that created or
-   copied the page.
+    By default the owner of a newly created page is the user that created or
+    copied the page.
 
-   By setting the value of this property to
-   :ref:`copyFromParent <pagetcemain-permissions-copyFromParent>` the owner
-   group is copied from the newly created pages parent page.
+    By setting the value of this property to
+    :ref:`copyFromParent <pagetcemain-permissions-copyFromParent>` the owner
+    group is copied from the newly created pages parent page.
 
-   When this property is set to a positive integer the owner of new pages is
-   hardcoded to the user of that uid.
+    When this property is set to a positive integer the owner of new pages is
+    hardcoded to the user of that uid.
 
 ..  _pagetcemain-permissions-userid-example:
 

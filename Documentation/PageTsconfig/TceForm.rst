@@ -53,8 +53,8 @@ be set:
 
 ..  code-block:: typoscript
 
-     # TCEFORM.[tableName].[fieldName].[dataStructureKey].[flexSheet].[flexFieldName with escaped dots].[propertyName]
-     TCEFORM.tt_content.pi_flexform.sfregister_create.sDEF.settings\.fields\.selected.addItems.ZZZ = ZZZ
+    # TCEFORM.[tableName].[fieldName].[dataStructureKey].[flexSheet].[flexFieldName with escaped dots].[propertyName]
+    TCEFORM.tt_content.pi_flexform.sfregister_create.sDEF.settings\.fields\.selected.addItems.ZZZ = ZZZ
 
 The sheet name (sDEF) must be given only if the FlexForm has a sheet.
 
@@ -307,7 +307,7 @@ be substituted by the given value.
 
 
 ..  index::
-     Records; field configuration
+    Records; field configuration
 ..  _pageTsConfigTceFormColorPalette:
 
 colorPalette
@@ -341,7 +341,7 @@ Example: Assign a palette to a field
 
 
 ..  index::
-     Records; field configuration
+    Records; field configuration
 ..  _pageTsConfigTceFormConfig:
 
 config
@@ -401,22 +401,22 @@ config
      The property :typoscript:`config` is available for these levels:
 
      table level, example:
-          :typoscript:`TCEFORM.tt_content.header.config.max`
+         :typoscript:`TCEFORM.tt_content.header.config.max`
 
      table and record type level, example:
-          :typoscript:`TCEFORM.tt_content.header.types.textpic.config.max`
+         :typoscript:`TCEFORM.tt_content.header.types.textpic.config.max`
 
      Flex form field level, example:
-          No current TYPO3 version allows to override the configuration of
-          Flex form fields, even though this was previously documented here.
-          This may change in future versions.
+         No current TYPO3 version allows to override the configuration of
+         Flex form fields, even though this was previously documented here.
+         This may change in future versions.
 
      ..  todo: Removed, because this is broken in every known TYPO3 version.
      ..  todo: Maybe re-enable this, if it gets fixed in a future release
-          :typoscript:`TCEFORM.tt_content.pi_flexform.myext_pi1.sDEF.myInputField.config.max`
+         :typoscript:`TCEFORM.tt_content.pi_flexform.myext_pi1.sDEF.myInputField.config.max`
 
-          Where :typoscript:`sDEF` is the sheet name and :typoscript:`myext_pi1` the name
-          of the plugin.
+         Where :typoscript:`sDEF` is the sheet name and :typoscript:`myext_pi1` the name
+         of the plugin.
 
 ..  index::
     Records; tree configuration

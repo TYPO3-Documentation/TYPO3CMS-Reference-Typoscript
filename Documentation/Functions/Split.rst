@@ -85,16 +85,16 @@ returnCount
 
     ..  rubric:: Example
 
-    .. code-block:: typoscript
-       :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+    ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
-       # returns 9
-       1 = TEXT
-       1 {
-           value = x,y,z,1,2,3,a,b,c
-           split.token = ,
-           split.returnCount = 1
-       }
+        # returns 9
+        1 = TEXT
+        1 {
+            value = x,y,z,1,2,3,a,b,c
+            split.token = ,
+            split.returnCount = 1
+        }
 
 
 ..  _split-cObjNum:
@@ -143,7 +143,7 @@ cObjNum
             10.stdWrap.wrap = <b> | </b>
         }
 
-.. _split-wrap:
+..  _split-wrap:
 
 wrap
 ----

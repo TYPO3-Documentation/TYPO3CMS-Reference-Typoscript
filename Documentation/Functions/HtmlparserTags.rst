@@ -268,9 +268,9 @@ fixAttrib.[attribute].userFunc
 
     Two parameters are passed to the function:
 
-    1. The tag value as a string or an array containing the tag value
-       and additional configuration (see below).
-    2. The reference the to HtmlParser instance that calls the method.
+    1.  The tag value as a string or an array containing the tag value
+        and additional configuration (see below).
+    2.  The reference the to HtmlParser instance that calls the method.
 
     By default the first parameter is the value of the processed tag.
     This changes when you pass additional configuration options to the

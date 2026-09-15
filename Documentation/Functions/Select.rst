@@ -333,14 +333,14 @@ markers
     Available sub-properties:
 
     <markername>.value (value)
-       Sets the value directly.
+        Sets the value directly.
 
     <markername>.commaSeparatedList (:ref:`data-type-boolean`)
-       If set, the value is interpreted as a comma-separated list of values.
-       Each value in the list is individually escaped and quoted.
+        If set, the value is interpreted as a comma-separated list of values.
+        Each value in the list is individually escaped and quoted.
 
     (stdWrap properties ...)
-       All stdWrap properties can be used for each markername.
+        All stdWrap properties can be used for each markername.
 
 
     ..  warning::
