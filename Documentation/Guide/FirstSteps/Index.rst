@@ -39,9 +39,9 @@ mode is created. By using :typoscript:`typeNum`, various output types can be
 defined. If :typoscript:`typeNum` is not set explicitly, it defaults to "0".
 Typically, :typoscript:`typeNum = 0` is used for the HTML output.
 
-When a page is requested with just :code:`index.php?id=1`, :typoscript:`typeNum = 0`
+When a page is requested with just `index.php?id=1`, :typoscript:`typeNum = 0`
 will be assumed and the output will be HTML. To get the print output, the request
-will have to pass a "type" attribute, i.e. :code:`index.php?id=1&type=98`.
+will have to pass a "type" attribute, i.e. `index.php?id=1&type=98`.
 
 It is thus possible to generate many different outputs depending on one's
 needs (XML, JSON, PDF, etc.). TypoScript configuration can be copied between

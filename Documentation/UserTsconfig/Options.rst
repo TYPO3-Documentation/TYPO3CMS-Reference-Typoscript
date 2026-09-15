@@ -174,8 +174,8 @@ Properties
             Context menu of the page tree
 
         The :typoscript:`[tableName]` refers to the type of the record (database
-        table name) the context menu is shown for, for example, :sql:`pages`,
-        :sql:`sys_file`, :sql:`tt_content`, etc.
+        table name) the context menu is shown for, for example, `pages`,
+        `sys_file`, `tt_content`, etc.
 
         The optional key :typoscript:`[.context]` refers to the place from which the
         context menu is triggered. The Core uses just one context called `tree` for
@@ -414,8 +414,8 @@ Properties
             and "toggle selection".
 
             The fields to be selected are a combination of special fields, such as
-            `references` or `read/write` permissions, the corresponding :sql:`sys_file`
-            record fields, as well as all available :sql:`sys_file_metadata` fields.
+            `references` or `read/write` permissions, the corresponding `sys_file`
+            record fields, as well as all available `sys_file_metadata` fields.
 
             Example:
 
@@ -743,7 +743,7 @@ Properties
 
                 ..  important::
 
-                    Action `layout` can only be used for table :sql:`pages` and :sql:`tt_content`
+                    Action `layout` can only be used for table `pages` and `tt_content`
 
 
                 Examples:
@@ -1102,7 +1102,7 @@ Properties
         Example:
 
         In this example the button is disabled for all tables, except
-        :sql:`tt_content` where it will appear, and in addition create the records
+        `tt_content` where it will appear, and in addition create the records
         in the top of the page (default is after instead of top).
 
         ..  code-block:: typoscript

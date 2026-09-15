@@ -114,7 +114,7 @@ Please see also :ref:`dataProcessing-about-examples`.
 ..  rubric:: TypoScript
 
 We define the :typoscript:`dataProcessing` property to use the
-:php:`DatabaseQueryProcessor`:
+:php-short:`\TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor`:
 
 ..  figure:: /Images/ManualScreenshots/DataProcessing/DatabaseQueryProcessor.png
     :zoom: lightbox
@@ -131,8 +131,8 @@ the images.
 
 ..  rubric:: Output
 
-Each entry of the records array contains the data of the table in :php:`data`
-and the data of the images in :php:`files`.
+Each entry of the records array contains the data of the table in `data`
+and the data of the images in `files`.
 
 ..  figure:: /Images/ManualScreenshots/FrontendOutput/DataProcessing/DatabaseProcessor.png
     :class: with-shadow
@@ -147,7 +147,9 @@ Example: Display sorted records from an MM table working with workspaces
 
 Please see also :ref:`dataProcessing-about-examples`.
 
-We define the :typoscript:`dataProcessing` property to use the :php:`DatabaseQueryProcessor`. To make use of the :php:`sorting` field in the MM table, a join is required.
+We define the :typoscript:`dataProcessing` property to use the
+:php-short:`\TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor`. To make
+use of the `sorting` field in the MM table, a join is required.
 
 However, performing this join will cause the fields from the MM table to be selected in the query. This can break the output when previewing the page using workspaces.
 

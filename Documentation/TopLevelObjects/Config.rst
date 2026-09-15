@@ -758,7 +758,8 @@ Properties of 'config'
         In order to set page titles, an API is available. The API uses
         :typoscript:`PageTitleProviders` to set the page title based on the page record and the content on that page.
 
-        Based on the priority of providers, :php:`PageTitleProviderManager` will
+        Based on the priority of providers,
+        :php-short:`\TYPO3\CMS\Core\PageTitle\PageTitleProviderManager` will
         check the providers to see if they have titles. It will start with the
         highest priority :typoscript:`PageTitleProviders`.
 
@@ -1048,7 +1049,7 @@ config cache examples
 Demonstrates:
     *   :confval:`config.cache <config-cache>`
 
-This includes the :sql:`fe_users` records on page 2 in the cache lifetime
+This includes the `fe_users` records on page 2 in the cache lifetime
 calculation for page 10:
 
 ..  code-block:: typoscript
@@ -1056,15 +1057,15 @@ calculation for page 10:
 
     config.cache.10 = fe_users:2
 
-This includes records from multiple sources; :sql:`fe_users`
-records on page 2 and :sql:`tt_new` records on page 11:
+This includes records from multiple sources; `fe_users`
+records on page 2 and `tt_new` records on page 11:
 
 ..  code-block:: typoscript
     :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     config.cache.10 = fe_users:2,tt_news:11
 
-Take :sql:`fe_users` records on storage page 2 into account for the cache lifetime of all
+Take `fe_users` records on storage page 2 into account for the cache lifetime of all
 pages:
 
 ..  code-block:: typoscript

@@ -32,7 +32,7 @@ to top level.
 @import
 =======
 
-This keyword allows including files inspired by a syntax similar to :code:`SASS`.
+This keyword allows including files inspired by a syntax similar to `SASS`.
 It is restricted, but still allows wildcards on file level. Single files *must* end
 with :file:`.typoscript` if included in frontend Typoscript. In backend TSconfig,
 single files *should* end with :file:`.tsconfig`, but *may* end with
