@@ -23,8 +23,8 @@ If you only need the file path to the image; regardless of whether it's been res
 
     ../../Gifbuilder/Index
 
-.. contents::
-   :local:
+..  contents::
+    :local:
 
 ..  _cobj-image-properties:
 
@@ -110,9 +110,9 @@ emptyTitleHandling
     Value can be "keepEmpty" to preserve an empty title attribute, or
     "useAlt" to use the alt attribute instead.
 
-.. index:: IMAGE; layoutKey
+..  index:: IMAGE; layoutKey
 
-.. _cobj-image-layoutkey:
+..  _cobj-image-layoutkey:
 
 layoutKey
 ---------
@@ -168,9 +168,9 @@ layoutKey
             <img src="###SRC###"
                  data-###DATAKEY###="###SRC###" ###PARAMS### ###ALTPARAMS######SELFCLOSINGTAGSLASH###>
 
-.. index:: IMAGE; layout
+..  index:: IMAGE; layout
 
-.. _cobj-image-layout:
+..  _cobj-image-layout:
 
 layout
 ------
@@ -182,9 +182,9 @@ layout
     HTML code definition for the different :ref:`cobj-image-layoutkey`.
 
 
-.. index:: IMAGE; layout.layoutKey
+..  index:: IMAGE; layout.layoutKey
 
-.. _cobj-image-layout-layoutkey:
+..  _cobj-image-layout-layoutkey:
 
 layout.layoutKey
 ----------------
@@ -223,27 +223,27 @@ layout.layoutKey.element
     Possible markers are mainly all parameters which can be defined in the
     IMAGE object, e.g.:
 
-    -  :html:`###SRC###` the file URL for the src attribute
+    -   :html:`###SRC###` the file URL for the src attribute
 
-    -  :html:`###WIDTH###` the width of the image for the width tag (only the
-       width value)
+    -   :html:`###WIDTH###` the width of the image for the width tag (only the
+        width value)
 
-    -  :html:`###HEIGHT###` the height of the image for the height tag (only the
-       width value)
+    -   :html:`###HEIGHT###` the height of the image for the height tag (only the
+        width value)
 
-    -  :html:`###PARAMS###` additional params defined in the IMAGE object (as
-       complete attribute)
+    -   :html:`###PARAMS###` additional params defined in the IMAGE object (as
+        complete attribute)
 
-    -  :html:`###ALTPARAMS###` additional alt params defined in the IMAGE object
-       (as complete attribute)
+    -   :html:`###ALTPARAMS###` additional alt params defined in the IMAGE object
+        (as complete attribute)
 
-    -  :html:`###SELFCLOSINGTAGSLASH###` renders the closing slash of the tag,
-       depending on the setting of :ref:`config.doctype <setup-config-doctype>`
+    -   :html:`###SELFCLOSINGTAGSLASH###` renders the closing slash of the tag,
+        depending on the setting of :ref:`config.doctype <setup-config-doctype>`
 
-    -  :html:`###SOURCECOLLECTION###` the additional sources of the image
-       depending on the different usage in responsive webdesign. The
-       definition of the sources is declared inside
-       :ref:`layout.layoutKey.source <cobj-image-layout-layoutkey-source>`
+    -   :html:`###SOURCECOLLECTION###` the additional sources of the image
+        depending on the different usage in responsive webdesign. The
+        definition of the sources is declared inside
+        :ref:`layout.layoutKey.source <cobj-image-layout-layoutkey-source>`
 
 layout.layoutKey.source
 -----------------------

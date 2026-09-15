@@ -24,7 +24,7 @@ Properties
     :ref:`stdWrap <stdwrap>` function.
 
 
-.. _gifbuilder-properties-backColor:
+..  _gifbuilder-properties-backColor:
 
 backColor
 =========
@@ -149,7 +149,7 @@ charRangeMap
     the pixel space to "2" in that case.
 
 
-.. _gifbuilder-properties-format:
+..  _gifbuilder-properties-format:
 
 format
 ======
@@ -169,7 +169,7 @@ format
 
     or via the :ref:`gifbuilder-properties-quality` property on a per-image basis.
 
-.. _gifbuilder-properties-maxHeight:
+..  _gifbuilder-properties-maxHeight:
 
 maxHeight
 =========
@@ -181,7 +181,7 @@ maxHeight
     Maximal height of the image file.
 
 
-.. _gifbuilder-properties-maxWidth:
+..  _gifbuilder-properties-maxWidth:
 
 maxWidth
 ========
@@ -193,7 +193,7 @@ maxWidth
     Maximal width of the image file.
 
 
-.. _gifbuilder-properties-offset:
+..  _gifbuilder-properties-offset:
 
 offset
 ======
@@ -206,7 +206,7 @@ offset
     Offset all objects on the image.
 
 
-.. _gifbuilder-properties-quality:
+..  _gifbuilder-properties-quality:
 
 quality
 =======
@@ -223,7 +223,7 @@ quality
 
     ..  _"lossless" compression: https://developers.google.com/speed/webp/docs/compression#lossless_webp
 
-.. _gifbuilder-properties-speed:
+..  _gifbuilder-properties-speed:
 
 speed
 =====
@@ -236,7 +236,7 @@ speed
     https://www.php.net/manual/en/function.imageavif.php for more details).
 
 
-.. _gifbuilder-properties-transparentBackground:
+..  _gifbuilder-properties-transparentBackground:
 
 transparentBackground
 =====================
@@ -254,7 +254,7 @@ transparentBackground
     hack.
 
 
-.. _gifbuilder-properties-transparentColor:
+..  _gifbuilder-properties-transparentColor:
 
 transparentColor
 ================
@@ -266,7 +266,7 @@ transparentColor
     Specify a color that should be transparent.
 
 
-.. _gifbuilder-properties-transparentColor-closest:
+..  _gifbuilder-properties-transparentColor-closest:
 
 closest
 -------
@@ -283,7 +283,7 @@ closest
         :ref:`gifbuilder-text-niceText` option.
 
 
-.. _gifbuilder-properties-workArea:
+..  _gifbuilder-properties-workArea:
 
 workArea
 ========

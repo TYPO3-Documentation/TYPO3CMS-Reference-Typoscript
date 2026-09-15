@@ -41,13 +41,13 @@ In the example below, the line :typoscript:`10.value = some text` is discarded
 because the value is imported from the header field in
 :php:`$cObj->data-array`.
 
-.. code-block:: typoscript
-   :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
-   10 = TEXT
-   10.value = some text
-   10.stdWrap.case = upper
-   10.stdWrap.field = header
+    10 = TEXT
+    10.value = some text
+    10.stdWrap.case = upper
+    10.stdWrap.field = header
 
 ..  _stdwrap-properties:
 
@@ -88,7 +88,7 @@ Properties for getting data
 
         ..  rubric:: Examples
 
-        .. code-block:: typoscript
+        ..  code-block:: typoscript
 
             addPageCacheTags = pagetag1,pagetag2,pagetag3
 
@@ -348,7 +348,7 @@ Properties for overriding and conditions
             corresponding index of the exploded content is returned. Counting
             starts at 0.
 
-        .. rubric:: Examples
+        ..  rubric:: Examples
 
         This would return "item 1":
 
@@ -377,7 +377,7 @@ Properties for overriding and conditions
             :type: :ref:`data-type-string`
             :Default: `,` (comma)
 
-            .. rubric:: Examples
+            ..  rubric:: Examples
 
             Splits the content of the `subtitle` field by the pipe character and returns
             a random element
@@ -924,10 +924,10 @@ Properties for parsing data
         eight units. The first four values are the plural values and the last
         four are singular. This is the default string:
 
-        .. code-block:: none
-           :caption: Default string for age format
+        ..  code-block:: none
+            :caption: Default string for age format
 
-           min| hrs| days| yrs| min| hour| day| year
+            min| hrs| days| yrs| min| hour| day| year
 
         Set another string if you want to change the units. You can include
         "-" signs. They will be removed, but they make sure that there is a
@@ -1458,22 +1458,22 @@ Properties for wrapping data
         by :ref:`optionsplit` (which takes precedence over :typoscript:`noTrimWrap`).
 
         ..  rubric:: Examples
-        .. code-block:: typoscript
-           :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+        ..  code-block:: typoscript
+            :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
-           page.10.noTrimWrap = | val1 | val2 |
+            page.10.noTrimWrap = | val1 | val2 |
 
         In this example the values val1 and val2 will be wrapped, including the
         whitespace.
 
         ..  rubric:: Examples
-        .. code-block:: typoscript
-           :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+        ..  code-block:: typoscript
+            :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
-           page.10 {
-              noTrimWrap = ^ val1 ^ val2 ^ || ^ val3 ^ val4 ^
-              noTrimWrap.splitChar = ^
-           }
+            page.10 {
+               noTrimWrap = ^ val1 ^ val2 ^ || ^ val3 ^ val4 ^
+               noTrimWrap.splitChar = ^
+            }
 
         :ref:`optionsplit` will use the "\|\|" to determine two subparts. In
         each subpart :typoscript:`noTrimWrap` will then use the "^" as
@@ -1602,17 +1602,17 @@ Properties for wrapping data
 
         Displays the page title:
 
-        .. code-block:: typoscript
-           :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+        ..  code-block:: typoscript
+            :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
-           10 = TEXT
-           10.value = This is the page title: {page:title}
-           10.stdWrap.insertData = 1
+            10 = TEXT
+            10.value = This is the page title: {page:title}
+            10.stdWrap.insertData = 1
 
-           # TEXT is already stdWrapable, so we can also use insertData right away
-           20 = TEXT
-           20.value = <link rel="preload" href="{path : EXT:site/Resources/Public/Fonts/Roboto.woff2}" as="font" type="font/woff2" crossorigin="anonymous">
-           20.insertData = 1
+            # TEXT is already stdWrapable, so we can also use insertData right away
+            20 = TEXT
+            20.value = <link rel="preload" href="{path : EXT:site/Resources/Public/Fonts/Roboto.woff2}" as="font" type="font/woff2" crossorigin="anonymous">
+            20.insertData = 1
 
     ..  warning::
         Never use this on content that can be edited in the backend. This would
@@ -1750,15 +1750,15 @@ Properties for sanitizing and caching data
         This property is responsible for sanitization and removal of XSS from markup. It
         strips tags, attributes and values that are not explicitly allowed.
 
-        * :typoscript:`htmlSanitize = [boolean]` - whether to invoke sanitization
-          (enabled by default when invoked by :typoscript:`stdWrap.parseFunc`).
-        * :typoscript:`htmlSanitize.build = [string]` - defines which builder
-          to use (must be an instance of :php:`\TYPO3\HtmlSanitizer\Builder\BuilderInterface`)
-          for building a :php:`\TYPO3\HtmlSanitizer\Sanitizer` instance
-          using a particular :php:`\TYPO3\HtmlSanitizer\Behavior`. It can either be
-          a fully qualified class name or the name of a preset as defined in
-          :php:`$GLOBALS['TYPO3_CONF_VARS']['SYS']['htmlSanitizer']` - the default is
-          :php:`\TYPO3\CMS\Core\Html\DefaultSanitizerBuilder`.
+        *   :typoscript:`htmlSanitize = [boolean]` - whether to invoke sanitization
+            (enabled by default when invoked by :typoscript:`stdWrap.parseFunc`).
+        *   :typoscript:`htmlSanitize.build = [string]` - defines which builder
+            to use (must be an instance of :php:`\TYPO3\HtmlSanitizer\Builder\BuilderInterface`)
+            for building a :php:`\TYPO3\HtmlSanitizer\Sanitizer` instance
+            using a particular :php:`\TYPO3\HtmlSanitizer\Behavior`. It can either be
+            a fully qualified class name or the name of a preset as defined in
+            :php:`$GLOBALS['TYPO3_CONF_VARS']['SYS']['htmlSanitizer']` - the default is
+            :php:`\TYPO3\CMS\Core\Html\DefaultSanitizerBuilder`.
 
         ..  rubric:: Examples
 
@@ -1823,9 +1823,9 @@ Properties for debugging data
         Prints content with :php:`HTMLSpecialChars()` and :html:`<pre></pre>`.
         Useful for debugging the resulting value of :typoscript:`stdWrap`.
 
-    .. attention::
+    ..  attention::
 
-       Only use this for debugging during development, otherwise output can break.
+        Only use this for debugging during development, otherwise output can break.
 
     ..  _stdwrap-debugFunc:
 
@@ -1858,7 +1858,7 @@ Properties for debugging data
 
         Only use this for debugging during development, otherwise output can break.
 
-.. _stdwrap-examples:
+..  _stdwrap-examples:
 
 Example
 =======

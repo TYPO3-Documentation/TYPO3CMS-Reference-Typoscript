@@ -97,7 +97,7 @@ stdWrap
     :type: :ref:`->stdWrap <stdwrap>`
 
 
-.. _cobj-svg-examples:
+..  _cobj-svg-examples:
 
 Example
 =======

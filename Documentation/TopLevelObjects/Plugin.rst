@@ -1,7 +1,7 @@
 ..  include:: /Includes.rst.txt
 ..  index::
-   Top-level objects; plugin
-   plugin
+    Top-level objects; plugin
+    plugin
 ..  _plugin:
 
 ======

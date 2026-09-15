@@ -195,7 +195,7 @@ Options
     ..  confval:: special
         :name: MenuProcessor-special
         :type: *"directory" / "list" / "updated" / "rootline" / "browse" / "keywords"
-             / "categories"
+            / "categories"
 
         Lets you define special types of menus.
 
@@ -253,15 +253,15 @@ Please see also :ref:`dataProcessing-about-examples`.
 
 Using the :php:`MenuProcessor` the following scenario is possible:
 
-.. literalinclude:: /CodeSnippets/DataProcessing/TypoScript/MenuProcessor.typoscript
-   :caption: EXT:examples/Configuration/TypoScript/DataProcessors/Processors/MenuProcessor.typoscript
+..  literalinclude:: /CodeSnippets/DataProcessing/TypoScript/MenuProcessor.typoscript
+    :caption: EXT:examples/Configuration/TypoScript/DataProcessors/Processors/MenuProcessor.typoscript
 
 ..  rubric:: The Fluid template
 
 This generated menu can be used in Fluid like this:
 
-.. literalinclude:: /CodeSnippets/DataProcessing/Template/DataProcMenu.fluid.html
-   :caption: EXT:examples/Resources/Private/Templates/ContentElements/DataProcMenu.fluid.html
+..  literalinclude:: /CodeSnippets/DataProcessing/Template/DataProcMenu.fluid.html
+    :caption: EXT:examples/Resources/Private/Templates/ContentElements/DataProcMenu.fluid.html
 
 ..  rubric:: Output
 

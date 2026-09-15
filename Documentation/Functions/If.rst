@@ -1,8 +1,8 @@
-.. include:: /Includes.rst.txt
-.. index::
-   Functions; if
-   if
-.. _if:
+..  include:: /Includes.rst.txt
+..  index::
+    Functions; if
+    if
+..  _if:
 
 ==
 if
@@ -26,10 +26,10 @@ fallback operator.
 
 Also check the explanations and the examples further below!
 
-.. contents::
-   :local:
+..  contents::
+    :local:
 
-.. _if-properties:
+..  _if-properties:
 
 Properties
 ==========
@@ -49,20 +49,20 @@ bitAnd
 
     TYPO3 uses bits to store radio and checkboxes via TCA, `bitAnd` can be used to test against these fields.
 
-    .. code-block:: typoscript
-       :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+    ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
-       lib.hideDefaultLanguageOfPage = TEXT
-       lib.hideDefaultLanguageOfPage {
-           value = 0
-           value {
-               override = 1
-               override.if {
-                   bitAnd.field = l18n_cfg
-                   value = 1
-               }
-           }
-       }
+        lib.hideDefaultLanguageOfPage = TEXT
+        lib.hideDefaultLanguageOfPage {
+            value = 0
+            value {
+                override = 1
+                override.if {
+                    bitAnd.field = l18n_cfg
+                    value = 1
+                }
+            }
+        }
 
 
 ..  _if-contains:

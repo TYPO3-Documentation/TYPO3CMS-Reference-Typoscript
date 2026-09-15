@@ -20,6 +20,6 @@ most common objects to give you an idea of what is available.
 
 ..  toctree::
 
-   DatabaseQueries/Index
-   RenderingContent/Index
-   FurtherObjects/Index
+    DatabaseQueries/Index
+    RenderingContent/Index
+    FurtherObjects/Index

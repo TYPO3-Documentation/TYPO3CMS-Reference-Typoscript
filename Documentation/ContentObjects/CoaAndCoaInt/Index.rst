@@ -12,10 +12,10 @@
 Content object array - COA, COA\_INT
 ====================================
 
-.. note::
+..  note::
 
-   * COA is an object type (= complex data type).
-   * It is a specific :ref:`cObject <cobject>` data type.
+    *   COA is an object type (= complex data type).
+    *   It is a specific :ref:`cObject <cobject>` data type.
 
 COA stands for "content object array".
 
@@ -94,9 +94,9 @@ wrap
      Wraps all rendered cObjects. Executed before property :ref:`cobj-coa-stdWrap`.
 
 
-.. _cobj-cobj-array-examples:
-.. _cobj-coa-examples:
-.. _cobj-coa-int-examples:
+..  _cobj-cobj-array-examples:
+..  _cobj-coa-examples:
+..  _cobj-coa-int-examples:
 
 Examples:
 =========

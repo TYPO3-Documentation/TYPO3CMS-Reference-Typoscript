@@ -838,23 +838,23 @@ Properties of 'config'
 
          The conditions for allowing client caching are:
 
-         *  page was cached
-         *  No `*_INT` or `*_EXT` objects are on the page (e.g. :ref:`cobj-user`)
-         *  No frontend users are logged in
-         *  No backend users are logged in
+         *   page was cached
+         *   No `*_INT` or `*_EXT` objects are on the page (e.g. :ref:`cobj-user`)
+         *   No frontend users are logged in
+         *   No backend users are logged in
 
          If these conditions are met, the headers sent are:
 
-         *  Last-Modified [SYS\_LASTCHANGED of page id]
-         *  Expires [expire time of page cache]
-         *  ETag [md5 of content]
-         *  Cache-Control: max-age: [seconds til expiretime]
-         *  Pragma: public
+         *   Last-Modified [SYS\_LASTCHANGED of page id]
+         *   Expires [expire time of page cache]
+         *   ETag [md5 of content]
+         *   Cache-Control: max-age: [seconds til expiretime]
+         *   Pragma: public
 
          If caching is not allowed, the following headers are sent to avoid client
          caching:
 
-         *  Cache-Control: private, no-store
+         *   Cache-Control: private, no-store
 
          Notice that enabling browser caches means you will have to consider how
          log files are written because when a page is cached on the client it
@@ -1141,7 +1141,7 @@ HTML tag attributes example
 ---------------------------
 
 Demonstrates:
-    * :confval:`config.htmlTag.attributes <config-htmlTag-attributes>`
+    *   :confval:`config.htmlTag.attributes <config-htmlTag-attributes>`
 
 ..  code-block:: typoscript
     :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
@@ -1184,7 +1184,7 @@ htmlTag\_setParams example
 
 
 Demonstrates:
-    * :confval:`config.htmlTag_setParams <config-htmlTag-setParams>`
+    *   :confval:`config.htmlTag_setParams <config-htmlTag-setParams>`
 
 ..  code-block:: typoscript
     :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
@@ -1197,7 +1197,7 @@ inlineStyle2TempFile example
 ----------------------------
 
 Demonstrates:
-    * :confval:`config.inlineStyle2TempFile <config-inlineStyle2TempFile>`
+    *   :confval:`config.inlineStyle2TempFile <config-inlineStyle2TempFile>`
 
 ..  code-block:: typoscript
     :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
@@ -1210,7 +1210,7 @@ Add `&print` parameter to all links
 -----------------------------------
 
 Demonstrates:
-    * :confval:`config.linkVars <config-linkVars>`
+    *   :confval:`config.linkVars <config-linkVars>`
 
 ..  code-block:: typoscript
     :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
@@ -1233,7 +1233,7 @@ Customize workspace display box
 -------------------------------
 
 Demonstrates:
-    * :confval:`config.message_preview_workspace <config-message_preview_workspace>`
+    *   :confval:`config.message_preview_workspace <config-message_preview_workspace>`
 
 ..  code-block:: typoscript
     :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
@@ -1248,7 +1248,7 @@ Define mounting point defaults for certain pages
 ------------------------------------------------
 
 Demonstrates:
-    * :confval:`config.MP_defaults <config-MP_defaults>`
+    *   :confval:`config.MP_defaults <config-MP_defaults>`
 
 ..  code-block:: typoscript
     :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
@@ -1264,7 +1264,7 @@ Define Dublin Core Metadata Element Set (dc) xmlns namespace
 ------------------------------------------------------------
 
 Demonstrates:
-    * :confval:`config.namespaces <config-namespaces>`
+    *   :confval:`config.namespaces <config-namespaces>`
 
 ..  code-block:: typoscript
     :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
@@ -1286,7 +1286,7 @@ Set a custom page renderer template
 -----------------------------------
 
 Demonstrates:
-    * :confval:`config.pageRendererTemplateFile <config-pageRendererTemplateFile>`
+    *   :confval:`config.pageRendererTemplateFile <config-pageRendererTemplateFile>`
 
 ..  code-block:: typoscript
     :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
@@ -1300,11 +1300,11 @@ Reorder the default page title providers
 ----------------------------------------
 
 Demonstrates:
-    * :confval:`config.pageTitleProviders <config-pageTitleProviders>`
+    *   :confval:`config.pageTitleProviders <config-pageTitleProviders>`
 
 By default, TYPO3 ships with two providers:
 
-.. code-block:: typoscript
+..  code-block:: typoscript
     :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     config.pageTitleProviders {
@@ -1336,7 +1336,7 @@ Use custom separators between page title parts
 ----------------------------------------------
 
 Demonstrates:
-    * :confval:`config.pageTitleSeparator <config-pageTitleSeparator>`
+    *   :confval:`config.pageTitleSeparator <config-pageTitleSeparator>`
 
 This produces a title tag with the format "website . page title":
 
@@ -1381,8 +1381,8 @@ Remove default external JavaScript and all default CSS
 ------------------------------------------------------
 
 Demonstrates:
-    * :confval:`config.removeDefaultJS <config-removeDefaultJS>`
-    * :confval:`config.removeDefaultCss <config-removeDefaultCss>`
+    *   :confval:`config.removeDefaultJS <config-removeDefaultJS>`
+    *   :confval:`config.removeDefaultCss <config-removeDefaultCss>`
 
 ..  code-block:: typoscript
     :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
@@ -1399,9 +1399,9 @@ Spam protect email addresses automatically
 ------------------------------------------
 
 Demonstrates:
-    * :confval:`config.spamProtectEmailAddresses <config-spamProtectEmailAddresses>`
-    * :confval:`config.spamProtectEmailAddresses_atSubst <config-spamProtectEmailAddresses_atSubst>`
-    * :confval:`config.spamProtectEmailAddresses_lastDotSubst <config-spamProtectEmailAddresses_lastDotSubst>`
+    *   :confval:`config.spamProtectEmailAddresses <config-spamProtectEmailAddresses>`
+    *   :confval:`config.spamProtectEmailAddresses_atSubst <config-spamProtectEmailAddresses_atSubst>`
+    *   :confval:`config.spamProtectEmailAddresses_lastDotSubst <config-spamProtectEmailAddresses_lastDotSubst>`
 
 ..  code-block:: typoscript
     :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
@@ -1418,7 +1418,7 @@ Define configuration for custom namespaces
 ------------------------------------------
 
 Demonstrates:
-    * :confval:`config.tx_myextension <config-tx-extension-key-with-no-underscores>`
+    *   :confval:`config.tx_myextension <config-tx-extension-key-with-no-underscores>`
 
 ..  code-block:: typoscript
     :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
@@ -1433,9 +1433,9 @@ Define custom styling for access restricted page links
 ------------------------------------------------------
 
 Demonstrates:
-    * :confval:`config.typolinkLinkAccessRestrictedPages <config-typolinkLinkAccessRestrictedPages>`
-    * :confval:`config.typolinkLinkAccessRestrictedPages.ATagParams <config-typolinkLinkAccessRestrictedPages-ATagParams>`
-    * :confval:`config.typolinkLinkAccessRestrictedPages_addParams <config-typolinkLinkAccessRestrictedPages_addParams>`
+    *   :confval:`config.typolinkLinkAccessRestrictedPages <config-typolinkLinkAccessRestrictedPages>`
+    *   :confval:`config.typolinkLinkAccessRestrictedPages.ATagParams <config-typolinkLinkAccessRestrictedPages-ATagParams>`
+    *   :confval:`config.typolinkLinkAccessRestrictedPages_addParams <config-typolinkLinkAccessRestrictedPages_addParams>`
 
 ..  code-block:: typoscript
     :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript

@@ -70,7 +70,7 @@ Conditions loginUser(), usergroup() have been removed
     :ref:`condition-frontend-user` and :ref:`condition-backend-user` instead.
 
 
-.. _gifbuilder-properties-reduceColors:
+..  _gifbuilder-properties-reduceColors:
 
 GIFBUILDER property reduceColors has been removed
 -------------------------------------------------
