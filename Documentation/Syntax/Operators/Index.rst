@@ -230,7 +230,7 @@ parenthesis. These predefined functions are available:
         # foo is "bar"
 
 `replaceString()`
-    Replace old with new value. Separate these using :code:`|`.
+    Replace old with new value. Separate these using `|`.
 
     ..  code-block:: typoscript
 

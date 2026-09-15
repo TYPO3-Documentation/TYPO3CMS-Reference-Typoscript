@@ -66,7 +66,7 @@ You can retrieve the :php:`\TYPO3\CMS\Frontend\Controller\TypoScriptFrontendCont
 via the :ref:`request <t3coreapi:typo3-request>` attribute
 :ref:`frontend.controller <t3coreapi:typo3-request-attribute-frontend-controller>`.
 
-For instance, if you want to access the variable :php:`id`, you can do so by
+For instance, if you want to access the variable `id`, you can do so by
 writing: :php:`TypoScriptFrontendController->id`.
 
 ..  _appendix-include-tsfe-id:
@@ -163,7 +163,7 @@ object is available as :ref:`request <t3coreapi:typo3-request>` attribute
 :ref:`frontend.user <t3coreapi:typo3-request-attribute-frontend-user>`
 in the frontend. Note some details of that object are marked
 :php:`@internal`, using the context aspect is thus the preferred way.
-Example of an extension using the Extbase's :php:`ActionController`:
+Example of an extension using the Extbase's `ActionController`:
 
 ..  literalinclude:: _MyExtensionControllerExtbase.php
     :caption: EXT:my_extension/Classes/Controller/MyExtensionController.php

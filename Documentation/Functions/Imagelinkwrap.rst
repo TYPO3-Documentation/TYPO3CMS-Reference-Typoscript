@@ -386,7 +386,8 @@ Implementation
 
 -   `imageLinkWrap <https://github.com/TYPO3/typo3/blob/83d36733d7700a49a2d312d09c93ab4d87953e9a/typo3/sysext/frontend/Classes/ContentObject/ContentObjectRenderer.php#L939>`__ in API,
 -   method `imageLinkWrap` in
--   class :php:`ContentObjectRenderer` in
+-   class :php-short:`\TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer`
+    in
 -   namespace :php:`namespace TYPO3\CMS\Frontend\ContentObject;` in
 -   file :file:`ContentObjectRenderer.php` in
 -   folder :file:`typo3/sysext/frontend/Classes/ContentObject`.

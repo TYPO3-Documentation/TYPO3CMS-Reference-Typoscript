@@ -9,7 +9,7 @@
 The :php:`\TYPO3\CMS\Frontend\DataProcessing\CommaSeparatedValueProcessor`,
 alias `comma-separated-value`, allows to split values into a
 two-dimensional array used for :abbr:`CSV (Comma-separated values)` files or
-:sql:`tt_content` records of CType `table`.
+`tt_content` records of CType `table`.
 
 The table data is transformed to a multi-dimensional array, taking the delimiter
 and enclosure into account, before it is passed to the view.
@@ -107,16 +107,16 @@ Example: Transforming comma separated content into a html table
 
 Please see also :ref:`dataProcessing-about-examples`.
 
-In this example, the :php:`bodytext` field contains comma-separated
+In this example, the `bodytext` field contains comma-separated
 values (CSV) data. To support different formats, the separator between
 the values can be specified.
 
 This example is also described in-depth in :ref:`TYPO3 Explained:
 Extended content element example <t3coreapi:AddingCE-Extended-Example>`.
 
-..  rubric:: Example data in the field :php:`bodytext`
+..  rubric:: Example data in the field `bodytext`
 
-Field :sql:`bodytext` in table :sql:`tt_content`:
+Field `bodytext` in table `tt_content`:
 
 ..  code-block:: text
 
@@ -127,7 +127,7 @@ Field :sql:`bodytext` in table :sql:`tt_content`:
 ..  rubric:: TypoScript
 
 We define the :typoscript:`dataProcessing` property to use the
-:php:`CommaSeparatedValueProcessor`:
+:php-short:`\TYPO3\CMS\Frontend\DataProcessing\CommaSeparatedValueProcessor`:
 
 ..  literalinclude:: /CodeSnippets/DataProcessing/TypoScript/CommaSeparatedValueProcessor.typoscript
     :caption: EXT:examples/Configuration/TypoScript/DataProcessors/Processors/CommaSeparatedValueProcessor.typoscript

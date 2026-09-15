@@ -14,7 +14,7 @@
 Conditions in the TypoScript syntax
 ===================================
 
-TypoScript can contain :code:`if` and :code:`if / else` control structures. They
+TypoScript can contain `if` and `if / else` control structures. They
 are called `conditions`, their "body" is only considered if a condition criteria
 evaluates to true. Examples of condition criteria are:
 
@@ -69,7 +69,7 @@ a new body until :typoscript:`[END]` or :typoscript:`[GLOBAL]`. :typoscript:`[EL
 is considered if the condition criteria did *not* evaluate to true.
 
 :typoscript:`[END]` and :typoscript:`[GLOBAL]` stop a given condition scope.
-This is similar to a closing curly brace :code:`}` in programming languages like PHP.
+This is similar to a closing curly brace `}` in programming languages like PHP.
 
 ..  literalinclude:: _codesnippets/_condition.typoscript
     :caption: packages/my_site_package/Configuration/TypoScript/setup.typoscript

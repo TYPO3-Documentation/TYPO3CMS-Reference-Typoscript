@@ -136,7 +136,7 @@ stdWrap
 Example:
 ========
 
-If in this example the field :sql:`header` turns out not to be set ("false"), an
+If in this example the field `header` turns out not to be set ("false"), an
 empty string is returned. Otherwise TYPO3 chooses between two different
 renderings of some content depending on whether the :ref:`cobj-case-key` field
 :typoscript:`layout` is "1" or not (:ref:`cobj-case-default`).

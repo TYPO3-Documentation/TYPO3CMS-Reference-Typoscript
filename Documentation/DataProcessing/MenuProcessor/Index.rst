@@ -251,7 +251,8 @@ Please see also :ref:`dataProcessing-about-examples`.
 
 ..  rubric:: TypoScript
 
-Using the :php:`MenuProcessor` the following scenario is possible:
+Using the :php-short:`\TYPO3\CMS\Frontend\DataProcessing\MenuProcessor` the
+following scenario is possible:
 
 ..  literalinclude:: /CodeSnippets/DataProcessing/TypoScript/MenuProcessor.typoscript
     :caption: EXT:examples/Configuration/TypoScript/DataProcessors/Processors/MenuProcessor.typoscript
@@ -266,7 +267,7 @@ This generated menu can be used in Fluid like this:
 ..  rubric:: Output
 
 The array now contains the menu items on level one. Each item in return has the
-menu items of level 2 in an array called :php:`children`.
+menu items of level 2 in an array called `children`.
 
 ..  figure:: /Images/ManualScreenshots/DataProcessing/MenuProcessor.png
     :zoom: lightbox

@@ -9,8 +9,8 @@
 This data processor :php:`\TYPO3\CMS\Frontend\DataProcessing\FilesProcessor`,
 alias `files`, can be used for processing file information:
 
-*   relations to file records (:sql:`sys_file_reference`)
-*   fetch files records by their uids in table (:sql:`sys_file`)
+*   relations to file records (`sys_file_reference`)
+*   fetch files records by their uids in table (`sys_file`)
 *   all files from a certain folder
 *   all files from a collection
 
@@ -53,7 +53,7 @@ Options:
         :Example: '1,303,42'
 
         If this option contains a comma-separated list of integers, these are
-        treated as uids of file references (:sql:`sys_file_reference`).
+        treated as uids of file references (`sys_file_reference`).
 
         The corresponding file records are added to the output array.
 
@@ -73,8 +73,8 @@ Options:
 
         If both :typoscript:`references.fieldName` and
         :typoscript:`references.table` are set, the file records are fetched from
-        the referenced table and field, for example the :sql:`media` field of a
-        :sql:`tt_content` record.
+        the referenced table and field, for example the `media` field of a
+        `tt_content` record.
 
     ..  _FilesProcessor-references-table:
 
@@ -103,7 +103,7 @@ Options:
         :Example: '1,303,42'
 
         If this option contains a comma-separated list of integers,
-        these are treated as uids of files (:sql:`sys_file`).
+        these are treated as uids of files (`sys_file`).
 
     ..  _FilesProcessor-collections:
 
@@ -206,7 +206,8 @@ Please see also :ref:`dataProcessing-about-examples`.
 
 ..  rubric:: TypoScript
 
-Using the :php:`FilesProcessor` the following scenario is possible:
+Using the :php-short:`\TYPO3\CMS\Frontend\DataProcessing\FilesProcessor` the
+following scenario is possible:
 
 ..  figure:: /Images/ManualScreenshots/DataProcessing/FilesProcessor.png
     :zoom: lightbox
@@ -221,7 +222,7 @@ Then iterate over the files in the :ref:`Fluid <t3coreapi:fluid>` template:
 
 ..  rubric:: Output
 
-The array :php:`images` contains the data of the files now:
+The array `images` contains the data of the files now:
 
 ..  figure:: /Images/ManualScreenshots/FrontendOutput/DataProcessing/FilesProcessor.png
     :class: with-shadow
@@ -251,9 +252,10 @@ for file resources:
         }
     }
 
-The :php:`FilesProcessor` can slide up the root line to collect images for Fluid
-templates. One usual feature is to take images attached to pages and use them on
-the page tree as header images in the frontend.
+The :php-short:`\TYPO3\CMS\Frontend\DataProcessing\FilesProcessor` can slide up
+the root line to collect images for Fluid templates. One usual feature is to
+take images attached to pages and use them on the page tree as header images in
+the frontend.
 
 ..  _FilesProcessor-FlexForm:
 
@@ -261,8 +263,8 @@ Example 3: files from a FlexForm
 ================================
 
 If the files are stored in a :ref:`FlexForm <t3coreapi:FlexForms>`, the entry in
-the table :sql:`sys_file_reference` uses the name of the main table, for example
-:sql:`tt_content` and the FlexForm key as :sql:`fieldname`.
+the table `sys_file_reference` uses the name of the main table, for example
+`tt_content` and the FlexForm key as `fieldname`.
 
 Therefore, you can do the following:
 
@@ -271,14 +273,14 @@ Therefore, you can do the following:
     :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
 This assumes that the image was stored in a FlexForm in the table
-:sql:`tt_content` like this:
+`tt_content` like this:
 
 ..  literalinclude:: _FlexFormWithImage.xml
     :language: xml
     :caption: EXT:site_package/Configuration/FlexForm/MyFlexForm.xml
 
 Three images in the same content element (uid 15) having the FlexForm above
-would look like this in the the database table :sql:`sys_file_reference`:
+would look like this in the the database table `sys_file_reference`:
 
 ===== ===== =========== ============= ============ ================== =====
 uid   pid   uid_local   uid_foreign   tablenames   fieldnames         ...

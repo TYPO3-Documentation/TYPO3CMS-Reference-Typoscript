@@ -68,7 +68,7 @@ table
     The table, the content should come from. Any table can be used;
     a check for a table prefix is not done.
 
-    In standard configuration this will be :sql:`tt_content`.
+    In standard configuration this will be `tt_content`.
 
 ..  _cobj-content-renderObj:
 

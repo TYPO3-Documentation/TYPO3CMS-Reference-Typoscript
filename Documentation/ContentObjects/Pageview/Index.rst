@@ -99,7 +99,8 @@ Additional variables can be defined with property
         :type: :php:`\TYPO3\CMS\Core\Site\Entity\SiteLanguage`
         :Example: :ref:`cobj-pageview-data-language-example`
 
-        The current :php:`SiteLanguage` object, see also
+        The current :php-short:`\TYPO3\CMS\Core\Site\Entity\SiteLanguage`
+        object, see also
         :ref:`the SiteLanguage object <t3coreapi:sitehandling-sitelanguage-object>`.
 
     ..  rubric:: page
@@ -131,8 +132,8 @@ Additional variables can be defined with property
         :type: :php:`\TYPO3\CMS\Core\Site\Entity\Site`
         :Example: :ref:`cobj-pageview-data-site-example`
 
-        The current :php:`Site` object. See also
-        :ref:`the Site object <t3coreapi:sitehandling-site-object>`.
+        The current :php-short:`\TYPO3\CMS\Core\Site\Entity\Site` object. See
+        also :ref:`the Site object <t3coreapi:sitehandling-site-object>`.
 
 ..  _cobj-pageview-data-example:
 

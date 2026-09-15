@@ -609,7 +609,7 @@ translateToMessage
 
     Defines the string that will be prepended to some field values if you copy an element to another
     language version. This applies to all fields where the TCA columns property
-    :ref:`l10n_mode <t3tca:columns-properties-l10n-mode>` is set to :php:`prefixLangTitle`.
+    :ref:`l10n_mode <t3tca:columns-properties-l10n-mode>` is set to `prefixLangTitle`.
 
     The special string "%s" will be replaced with the language title.
 

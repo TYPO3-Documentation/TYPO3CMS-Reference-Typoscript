@@ -112,5 +112,5 @@ header with `Content-type:application/json` has to be set:
        }
     }
 
-The built-in :php:`JsonView` can be used to create the content
-via Extbase.
+The built-in :php-short:`\TYPO3\CMS\Extbase\Mvc\View\JsonView` can be used to
+create the content via Extbase.

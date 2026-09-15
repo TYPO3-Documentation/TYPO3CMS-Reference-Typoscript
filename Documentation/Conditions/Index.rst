@@ -851,7 +851,7 @@ getTSFE()
 
     Provides access to :ref:`TypoScriptFrontendController <t3coreapi:tsfe>`
     :php:`$GLOBALS['TSFE']`. This function can directly access methods of
-    :php:`TypoScriptFrontendController`. This class is target of a mid-term
+    `TypoScriptFrontendController`. This class is target of a mid-term
     refactoring. It should be used with care since it will eventually vanish in
     the future.
 
