@@ -14,7 +14,7 @@ tables. Contrary to the :ref:`CONTENT <cobj-content>` object, it does
 not allow very fine selections of records (as it has no :typoscript:`select`
 property).
 
-The register key :code:`SYS_LASTCHANGED` is updated with the :sql:`tstamp` field of
+The register key `SYS_LASTCHANGED` is updated with the `tstamp` field of
 the records selected which has a higher value than the current.
 
 ..  note::
@@ -77,8 +77,8 @@ categories
 
     ..  warning::
 
-        If both :code:`source` and :code:`categories` properties are defined,
-        the :code:`source` property will take precedence, as it is considered
+        If both `source` and `categories` properties are defined,
+        the `source` property will take precedence, as it is considered
         more precisely targeted.
 
 ..  _cobj-records-categories-relation:
@@ -121,8 +121,8 @@ tables
         conf.tx_myexttable = TEXT
         conf.tx_myexttable.value = Hello world
 
-    This adds the tables :sql:`tt_content`, :sql:`tt_address`, :sql:`tt_links` and
-    :sql:`tx_myexttable`.
+    This adds the tables `tt_content`, `tt_address`, `tt_links` and
+    `tx_myexttable`.
 
 
 ..  index:: RECORDS; conf
@@ -219,7 +219,7 @@ referenced from the :guilabel:`page properties`.
 
 Since no :typoscript:`conf` property is defined, the rendering will
 look for a top-level TypoScript object bearing the name of the
-table to be rendered (e.g. :sql:`tt_content`).
+table to be rendered (e.g. `tt_content`).
 
 
 ..  index:: RECORDS; Selection with source

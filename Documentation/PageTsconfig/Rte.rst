@@ -291,10 +291,10 @@ The `proc` section allows customization of the server processing of the content,
 the :ref:`transformation section <t3coreapi:transformations-tsconfig>` of the RTE chapter in
 the core API document for more general information on server processing.
 
-The `proc` properties are in :code:`\TYPO3\CMS\Core\Html\RteHtmlParser` and
+The `proc` properties are in :php:`\TYPO3\CMS\Core\Html\RteHtmlParser` and
 are universal for all RTEs. The main objective of these options is to allow for minor
 configuration of the transformations. For instance you may disable the mapping between
-:code:`<b>-<strong>` and :code:`<i>-<em>` tags which is done by the `ts_transform` transformation.
+`<b>-<strong>` and `<i>-<em>` tags which is done by the `ts_transform` transformation.
 
 Notice how many properties relate to specific transformations only! Also notice that the meta-transformations
 `ts_css` imply other transformations.
@@ -384,7 +384,7 @@ blockElementList
     :name: rte-proc-blockElementList
     :type: string with comma separated values
 
-    Comma-separated list of uppercase tags (e.g. :code:`P,HR`) that overrides the list of HTML
+    Comma-separated list of uppercase tags (e.g. `P,HR`) that overrides the list of HTML
     elements that will be treated as block elements by the RTE transformations.
 
 ..  index::
@@ -491,8 +491,8 @@ HTMLparser_db
         This configuration is similar in frontend TypoScript and Page TSconfig.
         This is why single properties can be looked up in the TypoScript reference.
 
-        Also note the :ref:`HTMLparser <t3tsref:htmlparser>` options :code:`keepNonMatchedTags`
-        and :code:`htmlSpecialChars` are *not* observed. They are preset internally.
+        Also note the :ref:`HTMLparser <t3tsref:htmlparser>` options `keepNonMatchedTags`
+        and `htmlSpecialChars` are *not* observed. They are preset internally.
 
 ..  _pageTsRteProcHtmlParserDb-Sanitization:
 
@@ -557,8 +557,8 @@ HTMLparser_rte
         This configuration is similar in frontend TypoScript and Page TSconfig.
         This is why single properties can be looked up in the TypoScript reference.
 
-        Also note the :ref:`HTMLparser <t3tsref:htmlparser>` options :code:`keepNonMatchedTags`
-        and :code:`htmlSpecialChars` are *not* observed. They are preset internally.
+        Also note the :ref:`HTMLparser <t3tsref:htmlparser>` options `keepNonMatchedTags`
+        and `htmlSpecialChars` are *not* observed. They are preset internally.
 
 ..  index::
     RTE; Transformations overruled

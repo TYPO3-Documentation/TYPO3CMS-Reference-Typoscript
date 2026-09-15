@@ -149,4 +149,4 @@ replacement in green:
     #.  :php:`$GLOBALS['TYPO3_CONF_VARS']['FE']['defaultTypoScript_constants']`
         via :php:`\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTypoScriptConstants()`
     #.  Site specific :ref:`settings from the site configuration <t3coreapi:sitehandling>`
-    #.  Constants from :sql:`sys_template` database records
+    #.  Constants from `sys_template` database records

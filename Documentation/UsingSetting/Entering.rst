@@ -25,7 +25,7 @@ interpreted after parsing and combining.
 
 When kept in the database, TypoScript is entered manually in both the
 :guilabel:`Constants` and :guilabel:`Setup` fields of template records (which are
-stored in the database in table :sql:`sys_template`).
+stored in the database in table `sys_template`).
 
 ..  contents:: The following submodules are available:
     :depth: 1

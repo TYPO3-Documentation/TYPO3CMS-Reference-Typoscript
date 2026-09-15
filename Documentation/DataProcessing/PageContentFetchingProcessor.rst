@@ -7,9 +7,9 @@
 =============================
 
 This data processor :php:`\TYPO3\CMS\Frontend\DataProcessing\PageContentFetchingProcessor`,
-alias `page-content`, loads all :sql:`tt_content` records from the current
+alias `page-content`, loads all `tt_content` records from the current
 :ref:`backend layout <t3coreapi:be-layout>` into
-the template with a given identifier for each :sql:`colPos`, also respecting slideMode or
+the template with a given identifier for each `colPos`, also respecting slideMode or
 collect options based on the page layouts content columns.
 
 An array of :ref:`Record objects <t3coreapi:record_objects>` will be passed to

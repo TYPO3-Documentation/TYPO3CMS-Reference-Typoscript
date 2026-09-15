@@ -88,7 +88,7 @@ returns "THIS IS A TEXT IN UPPERCASE".
     10.stdWrap.wrap = <strong>|</strong>
 
 The above example gets the header of the current page (which is
-stored in the database field :sql:`title`). The header is then wrapped in
+stored in the database field `title`). The header is then wrapped in
 :html:`<strong>` tags, before it is returned.
 
 
@@ -103,8 +103,8 @@ Now let us have a look at an extract from a more complex example:
     10.stdWrap.dataWrap = <div>|</div>
 
 The above example returns the content, which was found in the field
-:sql:`bodytext` of the current record from $cObj->data-array. Here that
-shall be the current record from the database table :sql:`tt_content`. This
+`bodytext` of the current record from $cObj->data-array. Here that
+shall be the current record from the database table `tt_content`. This
 is useful inside :ref:`COA <cobj-coa>` objects.
 
 Here is the same example in its context:
@@ -133,15 +133,15 @@ Here is the same example in its context:
 Here we use the cObject :ref:`CONTENT <cobj-content>` to return all content elements
 (records from the database table "tt_content"), which are on the
 current page. (These content elements have the corresponding value in
-:sql:`irre_parentid`.) They are rendered using a :ref:`COA <cobj-coa>` cObject, which only
-processes them, if there is content in the field :sql:`bodytext`.
+`irre_parentid`.) They are rendered using a :ref:`COA <cobj-coa>` cObject, which only
+processes them, if there is content in the field `bodytext`.
 
 The resulting records are each rendered using a TEXT object:
 
-The TEXT object returns the content of the field :sql:`bodytext` of the
-according :sql:`tt_content` record. (Note that the property "field" in this
-context gets content from the table :sql:`tt_content` and not - as in
-the example above - from :sql:`pages`. See the description for the
+The TEXT object returns the content of the field `bodytext` of the
+according `tt_content` record. (Note that the property "field" in this
+context gets content from the table `tt_content` and not - as in
+the example above - from `pages`. See the description for the
 data type :ref:`getText/field <data-type-gettext-field>`!) The resulting content
 is then parsed with :ref:`parsefunc` and finally wrapped in :html:`<div>` tags
 before it is returned.

@@ -41,7 +41,8 @@ Please see also :ref:`dataProcessing-about-examples`.
 
 ..  rubric:: TypoScript
 
-Using the :php:`SiteProcessor` the following scenario is possible:
+Using the :php-short:`\TYPO3\CMS\Frontend\DataProcessing\SiteProcessor` the
+following scenario is possible:
 
 ..  literalinclude:: /CodeSnippets/DataProcessing/TypoScript/SiteProcessor.typoscript
     :caption: EXT:examples/Configuration/TypoScript/DataProcessors/Processors/SiteProcessor.typoscript
