@@ -110,6 +110,29 @@ leads by a wide margin, but that only reflects how many examples happen to be
 about output — it does not make it the house form for an example about an
 extension's own field.
 
+## Which inline role
+
+A role is not decoration: it renders an info button whose modal names a
+language. Pick the one whose modal says something true.
+
+| What it is | How to write it |
+| --- | --- |
+| TypoScript property or value (`stdWrap`, `cObject`) | `:typoscript:` |
+| A database table or column (`tt_content`, `colPos`) | plain backticks |
+| Actual SQL (`SELECT`, `JOIN`) | `:sql:` |
+| PHP variable, call, constant (`$cObj->data`, `PHP_INT_MAX`) | `:php:` |
+| A PHP class | its FQN in `:php-short:`, which prints the short name |
+| An HTML element or attribute | `:html:` |
+| A file path | `:file:`, a directory `:path:` |
+
+Do not use `:code:`. It renders exactly like plain backticks, so it says
+nothing — and it swallows backslashes, which turned
+`\TYPO3\CMS\Core\Html\RteHtmlParser` into `TYPO3CMSCoreHtmlRteHtmlParser`
+on the published page until it was removed.
+
+A namespace already spelled out in the running text stays that way: writing
+the class whole is a deliberate choice where a section introduces it.
+
 ## Commit message format
 
 Follow https://docs.typo3.org/m/typo3/docs-how-to-document/main/en-us/Howto/EditLocal.html:

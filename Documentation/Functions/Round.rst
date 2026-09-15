@@ -89,4 +89,4 @@ Examples
         stdWrap.round.decimals = 2
     }
 
-This returns :code:`3.14`.
+This returns `3.14`.

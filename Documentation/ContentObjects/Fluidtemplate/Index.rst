@@ -34,7 +34,7 @@ Data available in Fluid templates
 
 The following data is available in the Fluid template:
 
-*   The content of the current :php:`data` array.
+*   The content of the current `data` array.
 
     *   At page level it contains the current page record.
     *   If the :typoscript:`FLUIDTEMPLATE` is used in the
@@ -43,9 +43,9 @@ The following data is available in the Fluid template:
     *   If called in the context of Extbase it contains the data assigned to the view
         in the :ref:`Controller <t3coreapi:extbase-action-controller>`.
     *   Use the :ref:`RecordTransformationProcessor` to get additional computed
-        information from the :php:`data` array.
+        information from the `data` array.
 
-*   The :php:`settings` array set by the parameter
+*   The `settings` array set by the parameter
     :ref:`settings <cobj-fluidtemplate-properties-settings>`
 *   Variables in the
     :ref:`variables <cobj-fluidtemplate-properties-variables>` setting

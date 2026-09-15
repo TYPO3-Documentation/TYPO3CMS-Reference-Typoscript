@@ -47,7 +47,7 @@ special.mode
     :type: string
     :Default: `SYS_LASTCHANGED`
 
-    Which field in the :sql:`pages` table should be used for sorting?
+    Which field in the `pages` table should be used for sorting?
 
     Possible values are:
 
@@ -56,19 +56,19 @@ special.mode
         records on the page when a page is generated.
 
     `manual` or `lastUpdated`
-        Uses the field :sql:`lastUpdated`, which
+        Uses the field `lastUpdated`, which
         can be set manually in the page record.
 
     `tstamp`
-        Uses the :sql:`tstamp` field of the page record, which is set
+        Uses the `tstamp` field of the page record, which is set
         automatically when the record is changed.
 
     `crdate`
-        Uses the :sql:`crdate` field of the page record. This field is set
+        Uses the `crdate` field of the page record. This field is set
         once on creation of the record and left unchanged afterwards.
 
     `starttime`
-        Uses the :sql:`starttime` field.
+        Uses the `starttime` field.
 
 ..  _hmenu-special-keywords-entrylevel:
 
@@ -153,8 +153,8 @@ special.keywordsField
     :type: string
     :Default: `keywords`
 
-    Defines the field in the :sql:`pages` table in which to search for the
-    keywords. Default is the field name :sql:`keyword`. No check is done to see
+    Defines the field in the `pages` table in which to search for the
+    keywords. Default is the field name `keyword`. No check is done to see
     if the field you enter here exists, so make sure to enter an existing field.
 
 ..  _hmenu-special-keywords-sourcefield:
@@ -168,7 +168,7 @@ special.keywordsField.sourceField
     :Default: `keywords`
 
     Defines the field from the current page from which to take the
-    keywords being matched. The default is :sql:`keyword`. (Notice that
+    keywords being matched. The default is `keyword`. (Notice that
     :confval:`hmenu-keywords-special-setKeywords` is only setting the
     page record field to *search in*!)
 
@@ -183,9 +183,9 @@ Example: Menu of related pages
 ------------------------------
 
 The content element :guilabel:`Menu > Related pages` provided by the system
-Extension EXT:fluid_styled_content is configured with a :php:`MenuProcessor`
-which is based on the options of the :ref:`HMENU <cobj-hmenu>` and provides
-all its properties:
+Extension EXT:fluid_styled_content is configured with a
+:php-short:`\TYPO3\CMS\Frontend\DataProcessing\MenuProcessor` which is based on
+the options of the :ref:`HMENU <cobj-hmenu>` and provides all its properties:
 
 ..  literalinclude:: /CodeSnippets/Menu/TypoScript/MenuRelatedPages.typoscript
     :caption: EXT:fluid_styled_content/Configuration/TypoScript/ContentElement/MenuRelatedPages.typoscript

@@ -24,7 +24,9 @@ Given this TypoScript example:
     :language: typoscript
     :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
-This would first create a TypoLink :php:`LinkResultInterface` that would resolve to something like
+This would first create a TypoLink
+:php-short:`\TYPO3\CMS\Frontend\Typolink\LinkResultInterface` that would resolve
+to something like
 :html:`<a href="/en/pages/4711?someKey=someValue" rel="noreferrer">My Link Text</a>`.
 
 But because :typoscript:`userFunc = MyVendor\SitePackage\UserFunctions\TypoLinkUserFunc->createUserFuncLink`
@@ -40,9 +42,10 @@ to change existing ones:
 The method :php:`createUserFuncLink()` uses PHP attribute
 :php:`#[AsAllowedCallable]` to declare it as callable from TypoScript.
 
-This class would take the :php:`LinkResultInterface` object, enrich it with
-attributes, pass it to a new immutable object and return that. Then this is what finally
-gets emitted after full processing:
+This class would take the
+:php-short:`\TYPO3\CMS\Frontend\Typolink\LinkResultInterface` object, enrich it
+with attributes, pass it to a new immutable object and return that. Then this is
+what finally gets emitted after full processing:
 
 ..  code-block:: html
     :caption: Example output
@@ -62,9 +65,10 @@ linked URL:
 The method :php:`createUserFuncLink()` uses PHP attribute
 :php:`#[AsAllowedCallable]` to declare it as callable from TypoScript.
 
-This class would take the :php:`LinkResultInterface` object, retrieve some data from it,
-alter it, pass it to a new immutable object and return that. Then this is what finally
-gets emitted after full processing:
+This class would take the
+:php-short:`\TYPO3\CMS\Frontend\Typolink\LinkResultInterface` object, retrieve
+some data from it, alter it, pass it to a new immutable object and return that.
+Then this is what finally gets emitted after full processing:
 
 ..  code-block:: html
     :caption: Example output

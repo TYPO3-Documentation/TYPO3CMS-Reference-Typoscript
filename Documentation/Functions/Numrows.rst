@@ -44,14 +44,14 @@ select
     Select query for the operation.
 
     The sub-property :typoscript:`selectFields` is overridden internally with
-    :sql:`count(*)`.
+    `count(*)`.
 
 ..  _numRows-examples:
 
 Example
 =======
 
-Get the number of content elements within certain :sql:`colPos` of the current
+Get the number of content elements within certain `colPos` of the current
 page.
 
 ..  code-block:: typoscript

@@ -13,7 +13,7 @@ belongs to several of the selected categories, it will appear only once.
 By default pages are unsorted.
 
 Each in the resulting array of pages gets an additional entry with key
-:code:`_categories` containing the list of categories the page belongs to,
+`_categories` containing the list of categories the page belongs to,
 as a comma-separated list of uid's. It can be accessed with
 :ref:`stdwrap-field` or :ref:`stdwrap-data`.
 like any other field.
@@ -66,7 +66,7 @@ special.sorting
     :name: hmenu-categories-special-sorting
     :type: :ref:`data-type-string` / :ref:`stdWrap <stdwrap>`
 
-    Which field from the :sql:`pages` table should be used for sorting.
+    Which field from the `pages` table should be used for sorting.
     Language overlays are taken into account, so alphabetical sorting
     on the "title" field, for example, will work.
 
@@ -97,9 +97,9 @@ Example: Menu of pages in a certain category
 --------------------------------------------
 
 The content element :guilabel:`Menu > Categorized pages` provided by the system
-extension EXT:fluid_styled_content is configured with a :php:`MenuProcessor`
-which is based on the options of the :ref:`HMENU <cobj-hmenu>` and provides
-all its properties:
+extension EXT:fluid_styled_content is configured with a
+:php-short:`\TYPO3\CMS\Frontend\DataProcessing\MenuProcessor` which is based on
+the options of the :ref:`HMENU <cobj-hmenu>` and provides all its properties:
 
 ..  literalinclude:: /CodeSnippets/Menu/TypoScript/MenuCategorizedPages.typoscript
     :caption: EXT:fluid_styled_content/Configuration/TypoScript/ContentElement/MenuCategorizedPages.typoscript

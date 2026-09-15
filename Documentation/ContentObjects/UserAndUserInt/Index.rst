@@ -181,9 +181,10 @@ may contain amongst other things:
     :language: php
     :caption: EXT:site_package/Classes/UserFunctions/ExampleListRecords.php
 
-Since we need an instance of the :php:`ContentObjectRenderer` class, we are using
-the :php:`setContentObjectRenderer()` method to get it and store it in the
-:php:`cObj` class property for later use.
+Since we need an instance of the
+:php-short:`\TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer` class, we
+are using the :php:`setContentObjectRenderer()` method to get it and store it in
+the :php:`cObj` class property for later use.
 
 :typoscript:`page.30` will give back what the function :php:`listContentRecordsOnPage()` of
 the class YourClass returned. This example returns some debug output

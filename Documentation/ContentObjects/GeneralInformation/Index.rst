@@ -13,9 +13,11 @@ PHP information
 ===============
 
 The content objects (data type: cObject) are primarily controlled by the PHP-
-script :file:`typo3/sysext/frontend/Classes/ContentObject/ContentObjectRenderer.php`.
-The PHP-class is named :php:`ContentObjectRenderer` and often this is also
-the variable-name of the objects (:php:`$cObj`).
+script
+:file:`typo3/sysext/frontend/Classes/ContentObject/ContentObjectRenderer.php`.
+The PHP-class is named
+:php-short:`\TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer` and often
+this is also the variable-name of the objects (:php:`$cObj`).
 
 The $cObj in PHP has an array, :php:`$this->data`, which holds records of
 various kind. See data type :ref:`"getText" <data-type-gettext>`.

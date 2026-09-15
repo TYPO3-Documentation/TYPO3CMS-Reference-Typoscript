@@ -67,19 +67,19 @@ special.mode
         records on the page when a page is generated.
 
     `crdate`
-        Uses the :sql:`crdate` field of the page record. This field is set
+        Uses the `crdate` field of the page record. This field is set
         once on creation of the record and left unchanged afterwards.
 
     `tstamp`
-        Uses the :sql:`tstamp` field of the page record, which is set
+        Uses the `tstamp` field of the page record, which is set
         automatically when the record is changed.
 
     `manual` or `lastUpdated`
-        Uses the field :sql:`lastUpdated`, which
+        Uses the field `lastUpdated`, which
         can be set manually in the page record.
 
     `starttime`
-        Uses the :sql:`starttime` field.
+        Uses the `starttime` field.
 
     Fields with empty values are generally not selected.
 
@@ -169,9 +169,9 @@ Example: Recently updated pages styled with Fluid
 =================================================
 
 The content element :guilabel:`Recently Updated Pages` provided by the system
-extension EXT:fluid_styled_content is configured with a :php:`MenuProcessor`
-which is based on the options of the :ref:`HMENU <cobj-hmenu>` and provides
-all its properties:
+extension EXT:fluid_styled_content is configured with a
+:php-short:`\TYPO3\CMS\Frontend\DataProcessing\MenuProcessor` which is based on
+the options of the :ref:`HMENU <cobj-hmenu>` and provides all its properties:
 
 ..  literalinclude:: /CodeSnippets/Menu/TypoScript/MenuRecentlyUpdated.typoscript
     :caption: EXT:fluid_styled_content/Configuration/TypoScript/ContentElement/MenuRecentlyUpdated.typoscript

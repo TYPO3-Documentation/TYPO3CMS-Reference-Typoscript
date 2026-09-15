@@ -1673,7 +1673,8 @@ Properties for wrapping data
 
         Note how in the PHP code :php:`$this->cObj`, the reference to the
         calling :typoscript:`cObject`, uses functions from
-        :php:`ContentObjectRenderer` class.
+        :php-short:`\TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer`
+        class.
 
     ..  _stdwrap-postUserFuncInt:
 
