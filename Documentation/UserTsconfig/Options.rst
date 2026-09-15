@@ -741,7 +741,7 @@ Properties
                 *   list – Opens the storage page of the record in :guilabel:`Content > Records`
                 *   preview – Opens the record in the frontend
 
-                .. important::
+                ..  important::
 
                     Action `layout` can only be used for table :sql:`pages` and :sql:`tt_content`
 
@@ -770,7 +770,7 @@ Properties
 
                     options.liveSearch.actions.my_table.default = preview
 
-                .. note::
+                ..  note::
 
                     To use `preview` for a custom record, a valid preview configuration
                     (`TCEMAIN.preview`) must exist for the table.

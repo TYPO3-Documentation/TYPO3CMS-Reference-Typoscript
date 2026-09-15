@@ -10,8 +10,8 @@ It is recommended to always define custom user TSconfig in a project-specific
 :ref:`sitepackage <t3sitepackage:start>` extension. This way the user TSconfig
 settings can be kept under version control.
 
-.. contents::
-   :local:
+..  contents::
+    :local:
 
 ..  index:: pair: User TSconfig; Enter data
 ..  _userthetsconfigfield:

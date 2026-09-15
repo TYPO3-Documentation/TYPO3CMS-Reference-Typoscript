@@ -17,10 +17,10 @@ What records are visible is controlled by `start` and `end` fields and
 more standard fields automatically. The internal value `SYS_LASTCHANGED`
 is raised to the maximum timestamp value of the respective records.
 
-.. seealso::
+..  seealso::
 
-   The cObject :ref:`RECORDS <cobj-records>` in contrast is for displaying
-   lists of records from a variety of tables without fine graining.
+    The cObject :ref:`RECORDS <cobj-records>` in contrast is for displaying
+    lists of records from a variety of tables without fine graining.
 
 ..  contents:: Table of content
 
@@ -70,7 +70,7 @@ table
 
     In standard configuration this will be :sql:`tt_content`.
 
-.. _cobj-content-renderObj:
+..  _cobj-content-renderObj:
 
 renderObj
 ---------

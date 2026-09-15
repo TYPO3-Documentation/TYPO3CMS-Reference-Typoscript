@@ -106,8 +106,8 @@ csvDelimiter
 Example: Use semicolon as delimiter CSV downloads
 -------------------------------------------------
 
-.. literalinclude:: /CodeSnippets/PageTSconfig/Mod/CsvExport.typoscript
-   :caption: EXT:examples/Configuration/TsConfig/Page/Mod/csvExport.tsconfig
+..  literalinclude:: /CodeSnippets/PageTSconfig/Mod/CsvExport.typoscript
+    :caption: EXT:examples/Configuration/TsConfig/Page/Mod/csvExport.tsconfig
 
 ..  include:: /Images/ManualScreenshots/WebList/ExportDialog.rst.txt
 
@@ -134,8 +134,8 @@ csvQuote
 Example: Use single quotes as quoting character for CSV downloads
 -----------------------------------------------------------------
 
-.. literalinclude:: /CodeSnippets/PageTSconfig/Mod/CsvExport.typoscript
-   :caption: EXT:examples/Configuration/TsConfig/Page/Mod/csvExport.tsconfig
+..  literalinclude:: /CodeSnippets/PageTSconfig/Mod/CsvExport.typoscript
+    :caption: EXT:examples/Configuration/TsConfig/Page/Mod/csvExport.tsconfig
 
 ..  include:: /Images/ManualScreenshots/WebList/ExportDialog.rst.txt
 
@@ -593,8 +593,8 @@ noExportRecordsLinks
 Example: Hide the "Download" and "Export" links
 -----------------------------------------------
 
-.. literalinclude:: /CodeSnippets/PageTSconfig/Mod/noExportRecordsLinks.typoscript
-   :caption: EXT:examples/Configuration/TsConfig/Page/Mod/noExportRecordsLinks.tsconfig
+..  literalinclude:: /CodeSnippets/PageTSconfig/Mod/noExportRecordsLinks.typoscript
+    :caption: EXT:examples/Configuration/TsConfig/Page/Mod/noExportRecordsLinks.tsconfig
 
 ..  _pageTsConfigWebList-noViewWithDokTypes:
 
@@ -611,10 +611,10 @@ TSconfig.
 
 Instead, configure the equivalent behavior using:
 
-.. code-block:: typoscript
-   :caption: EXT:site_package/Configuration/TSconfig/Page/TCEMAIN.tsconfig
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/TSconfig/Page/TCEMAIN.tsconfig
 
-   TCEMAIN.preview.disableButtonForDokType = 199, 254
+    TCEMAIN.preview.disableButtonForDokType = 199, 254
 
 ..  index::
     table.[tableName].hideTable

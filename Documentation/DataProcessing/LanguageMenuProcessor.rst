@@ -94,15 +94,15 @@ Please see also :ref:`dataProcessing-about-examples`.
 
 Using the :php:`LanguageMenuProcessor` the following scenario is possible:
 
-.. literalinclude:: /CodeSnippets/DataProcessing/TypoScript/LanguageMenuProcessor.typoscript
-   :caption: EXT:examples/Configuration/TypoScript/DataProcessors/Processors/LanguageMenuProcessor.typoscript
+..  literalinclude:: /CodeSnippets/DataProcessing/TypoScript/LanguageMenuProcessor.typoscript
+    :caption: EXT:examples/Configuration/TypoScript/DataProcessors/Processors/LanguageMenuProcessor.typoscript
 
 ..  rubric:: The Fluid template
 
 This generated menu can be used in Fluid like this:
 
-.. literalinclude:: /CodeSnippets/DataProcessing/Template/DataProcLangMenu.fluid.html
-   :caption: EXT:examples/Resources/Private/Templates/ContentElements/DataProcLangMenu.fluid.html
+..  literalinclude:: /CodeSnippets/DataProcessing/Template/DataProcLangMenu.fluid.html
+    :caption: EXT:examples/Resources/Private/Templates/ContentElements/DataProcLangMenu.fluid.html
 
 ..  rubric:: Output
 

@@ -1,13 +1,13 @@
-.. include:: /Includes.rst.txt
-.. index:: Content objects; General
-.. _cobjects-general-information:
+..  include:: /Includes.rst.txt
+..  index:: Content objects; General
+..  _cobjects-general-information:
 
 =====================================
 Content objects (general information)
 =====================================
 
-.. index:: Content objects; PHP
-.. _cobjects-php:
+..  index:: Content objects; PHP
+..  _cobjects-php:
 
 PHP information
 ===============
@@ -26,8 +26,8 @@ loaded with the page-record of the actual menu item or if it's about
 content-rendering it will be the content-record.
 
 
-.. index:: Content objects; Reusing
-.. _reusing-cobjects:
+..  index:: Content objects; Reusing
+..  _reusing-cobjects:
 
 Reusing content objects
 =======================
@@ -40,46 +40,46 @@ values.
 
 This example will show you how it works:
 
-.. code-block:: typoscript
-   :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
-   #
-   # Temporary objects are defined:
-   #
-   lib.stdheader = COA
-   lib.stdheader {
-     stdWrap.wrapAlign.field = header_position
-     stdWrap.typolink.parameter.field = header_link
-     stdWrap.fieldRequired = header
+    #
+    # Temporary objects are defined:
+    #
+    lib.stdheader = COA
+    lib.stdheader {
+      stdWrap.wrapAlign.field = header_position
+      stdWrap.typolink.parameter.field = header_link
+      stdWrap.fieldRequired = header
 
-     1 = TEXT
-     1.stdWrap.current = 1
+      1 = TEXT
+      1.stdWrap.current = 1
 
-     stdWrap.space = {$content.headerSpace}
-   }
-
-
-   #
-   # CType: header
-   #
-   tt_content.header = COA
-   tt_content.header {
-     10 < lib.stdheader
-     10.stdWrap.space >
-
-     20 = TEXT
-     20.stdWrap.field = subheader
-   }
+      stdWrap.space = {$content.headerSpace}
+    }
 
 
-   #
-   # CType: bullet
-   #
-   tt_content.bullets = COA
-   tt_content.bullets {
-     10 = < lib.stdheader
-     20 < styles.content.bulletlist_gr
-   }
+    #
+    # CType: header
+    #
+    tt_content.header = COA
+    tt_content.header {
+      10 < lib.stdheader
+      10.stdWrap.space >
+
+      20 = TEXT
+      20.stdWrap.field = subheader
+    }
+
+
+    #
+    # CType: bullet
+    #
+    tt_content.bullets = COA
+    tt_content.bullets {
+      10 = < lib.stdheader
+      20 < styles.content.bulletlist_gr
+    }
 
 First :typoscript:`lib.stdheader` is defined. This is (and must be) a cObject! (In
 this case it is :ref:`COA <cobj-coa>`.)
@@ -98,7 +98,7 @@ that ".stdWrap.space" can be unset inside the cObject
 because it is only a reference pointer.
 
 
-.. _reusing-cobjects-temp-objects:
+..  _reusing-cobjects-temp-objects:
 
 Reusing Temporary TypoScript Objects:
 -------------------------------------
@@ -117,32 +117,32 @@ Although you cannot override values in :typoscript:`styles.`, the properties of 
 copy of the reference will be merged with the configuration of the reference.
 
 
-.. _reusing-cobjects-examples:
+..  _reusing-cobjects-examples:
 
 Example:
 --------
 
-.. code-block:: typoscript
-   :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
-   page.10 = TEXT
-   page.10.value = kasper
-   page.10.stdWrap.case = upper
+    page.10 = TEXT
+    page.10.value = kasper
+    page.10.stdWrap.case = upper
 
-   page.20 = < page.10
-   page.20.stdWrap.case = lower
-   page.20.value >
-   page.20.stdWrap.field = pages
+    page.20 = < page.10
+    page.20.stdWrap.case = lower
+    page.20.value >
+    page.20.stdWrap.field = pages
 
 The result is this configuration:
 
-.. figure:: /Images/ManualScreenshots/FrontendOutput/StdWrap/ContentObjectsExampleMerge1.png
-   :zoom: lightbox
+..  figure:: /Images/ManualScreenshots/FrontendOutput/StdWrap/ContentObjectsExampleMerge1.png
+    :zoom: lightbox
 
 Notice that :typoscript:`.value` was *not* cleared, because these two arrays
 are simply merged:
 
-.. figure:: /Images/ManualScreenshots/FrontendOutput/StdWrap/ContentObjectsExampleMerge2.png
-   :zoom: lightbox
+..  figure:: /Images/ManualScreenshots/FrontendOutput/StdWrap/ContentObjectsExampleMerge2.png
+    :zoom: lightbox
 
 So hence the line :typoscript:`page.20.value >` in the above example is useless.

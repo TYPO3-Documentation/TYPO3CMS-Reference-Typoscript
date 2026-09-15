@@ -366,7 +366,7 @@ parameter
         case it will override the other settings. Note that the title
         should be wrapped in double quotes (") if it contains blanks.
 
-        .. attention::
+        ..  attention::
             When used from :typoscript:`parseFunc`, the value should not
             be defined explicitly, but imported like this:
 
@@ -568,14 +568,14 @@ userFunc
         This contains the object implementing :php:`LinkResultInterface`. Inside your :php:`userFunc()` you
         can call for example:
 
-        *  :php:`$content->getUrl()` to get the URL of a link,
-        *  :php:`$content->getLinkText()` to get the text of your link
-           (everything with the :html:`<a>...</a>` tag),
-        *  :php:`$content->getLinkConfiguration()` for the array with all typolink configuration options,
-        *  :php:`$content->getAttributes()` returns current anchor link attributes (like :typoscript:`typolink.additionalArguments`),
-        *  :php:`$content->getType()` returns the kind of link that is operated on, like
-           :php:`LinkService::TYPE_PAGE` (specific pages in your TYPO3 setup) or :php:`LinkService::TYPE_URL`
-           for links to external pages.
+        *   :php:`$content->getUrl()` to get the URL of a link,
+        *   :php:`$content->getLinkText()` to get the text of your link
+            (everything with the :html:`<a>...</a>` tag),
+        *   :php:`$content->getLinkConfiguration()` for the array with all typolink configuration options,
+        *   :php:`$content->getAttributes()` returns current anchor link attributes (like :typoscript:`typolink.additionalArguments`),
+        *   :php:`$content->getType()` returns the kind of link that is operated on, like
+            :php:`LinkService::TYPE_PAGE` (specific pages in your TYPO3 setup) or :php:`LinkService::TYPE_URL`
+            for links to external pages.
 
         See the PHP definition of :php:`LinkResultInterface` for the full list of getters.
 

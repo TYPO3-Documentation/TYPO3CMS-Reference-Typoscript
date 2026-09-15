@@ -1,9 +1,9 @@
-.. include:: /Includes.rst.txt
-.. index::
-   Page TSconfig; Setting
-   Page TSconfig; Using
-   Page TSconfig
-.. _setting-page-tsconfig:
+..  include:: /Includes.rst.txt
+..  index::
+    Page TSconfig; Setting
+    Page TSconfig; Using
+    Page TSconfig
+..  _setting-page-tsconfig:
 
 =====================
 Setting page TSconfig
@@ -25,11 +25,11 @@ It is also possible to set
 :ref:`set page TSconfig directly in the page properties <pagetsconfig-enter-data>` but
 this is not recommended anymore.
 
-.. contents::
-   :local:
+..  contents::
+    :local:
 
-.. index:: pair: Page TSconfig; Default values
-.. _pagesettingdefaultpagetsconfig:
+..  index:: pair: Page TSconfig; Default values
+..  _pagesettingdefaultpagetsconfig:
 
 Setting the page TSconfig globally
 ==================================
@@ -41,11 +41,11 @@ an extension is automatically loaded during build time.
 It is possible to load other TSconfig files with the import syntax within this
 file:
 
-.. code-block:: typoscript
-   :caption: EXT:my_sitepackage/Configuration/page.tsconfig
+..  code-block:: typoscript
+    :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
-   @import 'EXT:my_sitepackage/Configuration/TsConfig/Page/Basic.tsconfig'
-   @import 'EXT:my_sitepackage/Configuration/TsConfig/Page/Mod/Wizards/NewContentElement.tsconfig'
+    @import 'EXT:my_sitepackage/Configuration/TsConfig/Page/Basic.tsconfig'
+    @import 'EXT:my_sitepackage/Configuration/TsConfig/Page/Mod/Wizards/NewContentElement.tsconfig'
 
 
 Many page TSconfig settings can be set globally. This is useful for
@@ -57,7 +57,7 @@ can also set the page TSconfig globally.
 The PSR-14 event :ref:`t3coreapi:BeforeLoadedPageTsConfigEvent` is available to
 add global static page TSconfig before anything else is loaded.
 
-.. _include-static-page-tsconfig-per-site:
+..  _include-static-page-tsconfig-per-site:
 
 Page TSconfig on site level
 ===========================
@@ -77,7 +77,7 @@ allowing for automatic ordering and deduplication.
 See also
 :ref:`site sets as page TSconfig provider <t3coreapi:site-sets-page-tsconfig>`.
 
-.. _include-static-page-tsconfig-per-site-example:
+..  _include-static-page-tsconfig-per-site-example:
 
 Example: load page TSconfig from the site set and the site
 ----------------------------------------------------------
@@ -122,13 +122,13 @@ of all sites that depend on this set:
     # [...]
 
 
-.. index:: pair: Page TSconfig; Static TSconfig files
-.. _pagesettingstaticpagetsconfigfiles:
+..  index:: pair: Page TSconfig; Static TSconfig files
+..  _pagesettingstaticpagetsconfigfiles:
 
 Static page TSconfig
 ====================
 
-.. _include-static-page-tsconfig:
+..  _include-static-page-tsconfig:
 
 Include static page TSconfig into a page tree
 ---------------------------------------------
@@ -142,7 +142,7 @@ third party extension can be included in the page properties.
     :guilabel:`page TSconfig > Include static page TSconfig (from extensions)` and
     select the desired configurations from the :guilabel:`Available Items`.
 
-.. _register-static-page-tsconfig:
+..  _register-static-page-tsconfig:
 
 Register static page TSconfig files
 -----------------------------------
@@ -166,9 +166,9 @@ the API function:
     :language: php
     :caption: EXT:my_sitepackage/Configuration/TCA/Overrides/pages.php
 
-.. index:: pair: Page TSconfig; Enter data
-.. _pagetsconfig-enter-data:
-.. _pagethetsconfigfield:
+..  index:: pair: Page TSconfig; Enter data
+..  _pagetsconfig-enter-data:
+..  _pagethetsconfigfield:
 
 Set page TSconfig directly in the page properties
 ==================================================
@@ -178,22 +178,22 @@ and open the tab :guilabel:`Resources`.
 
 You can enter page TSconfig directly into the field :guilabel:`Page TSconfig`:
 
-.. figure:: /Images/ManualScreenshots/List/TSconfigPageInput.png
+..  figure:: /Images/ManualScreenshots/List/TSconfigPageInput.png
     :alt: TSconfig-related fields in the Resources tab of a page
     :class: with-shadow
 
 Page TSconfig inserted directly into the page properties is applied to the
 page itself and all its subpages.
 
-.. note::
-   The configuration is stored in the database and not in the file
-   system. Therefore it cannot be kept under version control. This
-   strategy is not recommended. Setting page TSconfig in the page properties
-   directly is available for backward-compatibility reasons and for quickly trying
-   out some settings in development only.
+..  note::
+    The configuration is stored in the database and not in the file
+    system. Therefore it cannot be kept under version control. This
+    strategy is not recommended. Setting page TSconfig in the page properties
+    directly is available for backward-compatibility reasons and for quickly trying
+    out some settings in development only.
 
-.. index:: pair: Page TSconfig; Verify configuration
-.. _pageverifyingthefinalconfiguration:
+..  index:: pair: Page TSconfig; Verify configuration
+..  _pageverifyingthefinalconfiguration:
 
 Verify the final configuration
 ==============================
@@ -202,21 +202,21 @@ The full page TSconfig for any given page can be viewed using the module
 :guilabel:`Page TSconfig` with in the :guilabel:`Sites` section.
 
 
-.. index:: pair: Page TSconfig; Override values
-.. _page-overriding-and-modifying-values:
+..  index:: pair: Page TSconfig; Override values
+..  _page-overriding-and-modifying-values:
 
 Overriding and modifying values
 ================================
 
 Page TSconfig is loaded in the following order, the latter override the former:
 
-#. :ref:`Default page TSconfig <pagesettingdefaultpagetsconfig>` that was
-   set globally
-#. :ref:`Static page TSconfig <pagesettingdefaultpagetsconfig>` that was
-   included for a page tree.
-#. :ref:`Direct page TSconfig <pagetsconfig-enter-data>` entered directly in
-   the page properties.
-#. :ref:`User TSconfig overrides <userrelationshiptovaluessetinpagetsconfig>`
+#.  :ref:`Default page TSconfig <pagesettingdefaultpagetsconfig>` that was
+    set globally
+#.  :ref:`Static page TSconfig <pagesettingdefaultpagetsconfig>` that was
+    included for a page tree.
+#.  :ref:`Direct page TSconfig <pagetsconfig-enter-data>` entered directly in
+    the page properties.
+#.  :ref:`User TSconfig overrides <userrelationshiptovaluessetinpagetsconfig>`
 
 Static and direct page TSconfig are loaded for the page they are set on and
 all their subpages.
@@ -232,16 +232,16 @@ Example
 
 Default page TSconfig
 
-.. code-block:: typoscript
-   :caption: EXT:site_package/Configuration/page.tsconfig
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/page.tsconfig
 
-   RTE.default.proc.allowTagsOutside = hr
+    RTE.default.proc.allowTagsOutside = hr
 
 Static page TSconfig included on the parent page
 
-.. code-block:: typoscript
-   :caption: EXT:site_package/Configuration/page.tsconfig
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/page.tsconfig
 
-   RTE.default.proc.allowTagsOutside := addToList(blockquote)
+    RTE.default.proc.allowTagsOutside := addToList(blockquote)
 
 Finally you get the value "hr,blockquote".
