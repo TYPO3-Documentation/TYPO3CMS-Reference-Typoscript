@@ -1,13 +1,13 @@
-.. include:: /Includes.rst.txt
-.. index::
-   TypoScript; Comments
-   TypoScript; Operator "//"
-   TypoScript; Operator "#"
-   TypoScript; Single line comments
-   TypoScript; Operator "/*"
-   TypoScript; Comment blocks
-.. _typoscript-syntax-syntax-comments:
-.. _typoscript-syntax-syntax-comment-blocks:
+..  include:: /Includes.rst.txt
+..  index::
+    TypoScript; Comments
+    TypoScript; Operator "//"
+    TypoScript; Operator "#"
+    TypoScript; Single line comments
+    TypoScript; Operator "/*"
+    TypoScript; Comment blocks
+..  _typoscript-syntax-syntax-comments:
+..  _typoscript-syntax-syntax-comment-blocks:
 
 ========
 Comments
@@ -15,7 +15,7 @@ Comments
 
 TypoScript supports single line comments as well as multiline comment blocks.
 
-.. note::
+..  note::
     ..  versionchanged:: 12.0
 
     Comment handling has been relaxed significantly with the rewritten TypoScript
@@ -34,5 +34,5 @@ true for multiline assignments.
 
 Some examples:
 
-.. literalinclude:: /CodeSnippets/TypoScriptSyntax/Comments.typoscript
-   :caption: Extension examples, file Configuration/TypoScript/Syntax/Comments/setup.typoscript
+..  literalinclude:: /CodeSnippets/TypoScriptSyntax/Comments.typoscript
+    :caption: Extension examples, file Configuration/TypoScript/Syntax/Comments/setup.typoscript

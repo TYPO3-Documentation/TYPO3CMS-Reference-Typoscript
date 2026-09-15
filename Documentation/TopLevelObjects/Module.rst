@@ -162,11 +162,11 @@ Example: Limit pagination in the backend
 Show 25 news records in the backend module of the news extension:
 
 ..  code-block:: typoscript
-   :caption: EXT:my_extension/ext_typoscript_setup.typoscript
+    :caption: EXT:my_extension/ext_typoscript_setup.typoscript
 
-   module.tx_news {
-      settings.list.paginate.itemsPerPage = 25
-   }
+    module.tx_news {
+       settings.list.paginate.itemsPerPage = 25
+    }
 
 Example: Register YAML file
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~

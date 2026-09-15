@@ -59,6 +59,6 @@ can be done for example in the :file:`Configuration/TCA/Overrides` folder
 of an extension:
 
 ..  code-block:: php
-   :caption: EXT:site_package/Configuration/TCA/Overrides/pages.php
+    :caption: EXT:site_package/Configuration/TCA/Overrides/pages.php
 
-   $GLOBALS['TCA']['pages']['ctrl']['useColumnsForDefaultValues'] = 'doktype,fe_group';
+    $GLOBALS['TCA']['pages']['ctrl']['useColumnsForDefaultValues'] = 'doktype,fe_group';

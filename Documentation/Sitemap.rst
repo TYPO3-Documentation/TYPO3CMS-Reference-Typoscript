@@ -1,6 +1,6 @@
 :template: sitemap.html
 
-.. include:: /Includes.rst.txt
+..  include:: /Includes.rst.txt
 
 =======
 Sitemap

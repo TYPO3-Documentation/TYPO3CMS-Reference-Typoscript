@@ -60,10 +60,10 @@ extension EXT:fluid_styled_content is configured with a :php:`MenuProcessor`
 which is based on the options of the :ref:`HMENU <cobj-hmenu>` and provides
 all its properties:
 
-.. literalinclude:: /CodeSnippets/Menu/TypoScript/MenuSubpages.typoscript
-   :caption: EXT:fluid_styled_content/Configuration/TypoScript/ContentElement/MenuSubpages.typoscript
+..  literalinclude:: /CodeSnippets/Menu/TypoScript/MenuSubpages.typoscript
+    :caption: EXT:fluid_styled_content/Configuration/TypoScript/ContentElement/MenuSubpages.typoscript
 
 The following Fluid template can be used to style the menu:
 
-.. literalinclude:: /CodeSnippets/Menu/Template/MenuSubpages.html
-   :caption: EXT:fluid_styled_content/Resources/Private/Templates/MenuSubpages.html
+..  literalinclude:: /CodeSnippets/Menu/Template/MenuSubpages.html
+    :caption: EXT:fluid_styled_content/Resources/Private/Templates/MenuSubpages.html

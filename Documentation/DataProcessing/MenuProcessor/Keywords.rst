@@ -187,13 +187,13 @@ Extension EXT:fluid_styled_content is configured with a :php:`MenuProcessor`
 which is based on the options of the :ref:`HMENU <cobj-hmenu>` and provides
 all its properties:
 
-.. literalinclude:: /CodeSnippets/Menu/TypoScript/MenuRelatedPages.typoscript
-   :caption: EXT:fluid_styled_content/Configuration/TypoScript/ContentElement/MenuRelatedPages.typoscript
+..  literalinclude:: /CodeSnippets/Menu/TypoScript/MenuRelatedPages.typoscript
+    :caption: EXT:fluid_styled_content/Configuration/TypoScript/ContentElement/MenuRelatedPages.typoscript
 
 The following Fluid template can be used to style the menu:
 
-.. literalinclude:: /CodeSnippets/Menu/Template/MenuRelatedPages.html
-   :caption: EXT:fluid_styled_content/Resources/Private/Templates/MenuRelatedPages.html
+..  literalinclude:: /CodeSnippets/Menu/Template/MenuRelatedPages.html
+    :caption: EXT:fluid_styled_content/Resources/Private/Templates/MenuRelatedPages.html
 
 ..  _hmenu-special-keywords-value-example:
 

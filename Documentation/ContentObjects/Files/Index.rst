@@ -1,8 +1,8 @@
-.. include:: /Includes.rst.txt
-.. index::
-   Content objects; FILES
-   FILES
-.. _cobj-files:
+..  include:: /Includes.rst.txt
+..  index::
+    Content objects; FILES
+    FILES
+..  _cobj-files:
 
 =====
 FILES
@@ -11,10 +11,10 @@ FILES
 A content object of type FILES uses the :ref:`File Abstraction Layer <t3coreapi:fal>`
 (FAL) and is used to display information about files.
 
-.. contents::
-   :local:
+..  contents::
+    :local:
 
-.. _cobj-files-properties:
+..  _cobj-files-properties:
 
 Properties
 ==========
@@ -34,7 +34,7 @@ cache
 
     See :ref:`cache function description <cache>` for details.
 
-.. _cobj-files-files:
+..  _cobj-files-files:
 
 files
 -----
@@ -53,7 +53,7 @@ files
         page.10 = FILES
         page.10.files = 12,15,16
 
-.. _cobj-files-references:
+..  _cobj-files-references:
 
 references
 ----------
@@ -102,7 +102,7 @@ references
 
     This will fetch all items related to the page.media field.
 
-.. _cobj-files-collections:
+..  _cobj-files-collections:
 
 collections
 -----------
@@ -114,7 +114,7 @@ collections
     Comma-separated list of :sql:`sys_file_collection` UIDs, which
     are loaded into the :typoscript:`FILES` object.
 
-.. _cobj-files-folders:
+..  _cobj-files-folders:
 
 folders
 -------
@@ -160,7 +160,7 @@ folders
            }
         }
 
-.. _cobj-files-sorting:
+..  _cobj-files-sorting:
 
 sorting
 -------
@@ -171,7 +171,7 @@ sorting
 
     Name of the field, which should be used to sort the files.
 
-.. _cobj-files-sorting-direction:
+..  _cobj-files-sorting-direction:
 
 sorting.direction
 -----------------
@@ -185,7 +185,7 @@ sorting.direction
     files should be sorted. Possible values are "asc" for ascending and
     "desc" for descending.
 
-.. _cobj-files-begin:
+..  _cobj-files-begin:
 
 begin
 -----
@@ -197,7 +197,7 @@ begin
     The first item to return. If not set (default), items beginning
     with the first one are returned.
 
-.. _cobj-files-maxItems:
+..  _cobj-files-maxItems:
 
 maxItems
 --------
@@ -211,7 +211,7 @@ maxItems
     together exceed the number of available items, no items beyond the
     last available item will be returned.
 
-.. _cobj-files-renderObj:
+..  _cobj-files-renderObj:
 
 renderObj
 ---------
@@ -239,7 +239,7 @@ renderObj
 
     This returns the size of the current file.
 
-.. _cobj-files-stdWrap:
+..  _cobj-files-stdWrap:
 
 stdWrap
 -------
@@ -249,10 +249,10 @@ stdWrap
     :type: :ref:`->stdWrap <stdwrap>`
 
 
-.. index:: FILES; references
-.. _cobj-files-references-sub:
+..  index:: FILES; references
+..  _cobj-files-references-sub:
 
-.. _cobj-files-references-table:
+..  _cobj-files-references-table:
 
 Special key: "references"
 =========================
@@ -263,7 +263,7 @@ Special key: "references"
 
     The table name of the table having the file field.
 
-.. _cobj-files-references-uid:
+..  _cobj-files-references-uid:
 
 references.uid
 --------------
@@ -274,7 +274,7 @@ references.uid
 
     The UID of the record from which to fetch the referenced files.
 
-.. _cobj-files-references-fieldName:
+..  _cobj-files-references-fieldName:
 
 references.fieldName
 --------------------
@@ -285,12 +285,12 @@ references.fieldName
 
     Field name of the file field in the table.
 
-.. _cobj-files-examples:
+..  _cobj-files-examples:
 
 Examples
 =========
 
-.. _cobj-files-examples-files:
+..  _cobj-files-examples-files:
 
 Usage with files
 -----------------
@@ -300,7 +300,7 @@ explained above (using sys_file UIDs, collection UIDs, and folders).
 Then we use the :ref:`TEXT <cobj-text>` cObject as :ref:`cobj-files-renderObj`
 to output the file size of all files that were found:
 
-.. code-block:: typoscript
+..  code-block:: typoscript
     :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     page.10 = FILES
@@ -316,7 +316,7 @@ to output the file size of all files that were found:
     }
 
 
-.. _cobj-files-examples-references:
+..  _cobj-files-examples-references:
 
 Usage with references
 ----------------------
@@ -327,7 +327,7 @@ first image and return up to five images. Each image is then rendered
 as an :ref:`IMAGE <cobj-image>` cObject with some meta data coming from
 the file itself or from the reference to it (title):
 
-.. code-block:: typoscript
+..  code-block:: typoscript
     :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     page.20 = FILES
@@ -351,7 +351,7 @@ the file itself or from the reference to it (title):
     }
 
 
-.. _cobj-files-examples-sliding:
+..  _cobj-files-examples-sliding:
 
 Usage with sliding
 --------------------
@@ -359,7 +359,7 @@ Usage with sliding
 One usual feature is to use images attached to pages and use
 them up and down the page tree, a process called "sliding".
 
-.. code-block:: typoscript
+..  code-block:: typoscript
     :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     lib.banner = FILES

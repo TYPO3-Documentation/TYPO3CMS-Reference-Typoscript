@@ -920,7 +920,7 @@ site
     Accesses the current
     :ref:`site configuration <t3coreapi:sitehandling-basics>`.
 
-    .. rubric:: Possible keys:
+    ..  rubric:: Possible keys:
 
     :typoscript:`attributes`
         Additional parameters configured for this site.
@@ -975,7 +975,7 @@ siteLanguage
     :ref:`site language configuration <t3coreapi:sitehandling-addingLanguages>`.
 
 
-    .. rubric:: Possible keys:
+    ..  rubric:: Possible keys:
 
     :typoscript:`attributes`
         Additional parameters configured for this site language.

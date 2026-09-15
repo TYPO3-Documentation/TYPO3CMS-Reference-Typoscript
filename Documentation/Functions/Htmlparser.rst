@@ -182,16 +182,16 @@ htmlSpecialChars
     This regards all content which is **not** tags:
 
     -1
-       Does the opposite of "1". It converts :html:`&lt;` to :html:`<`,
-       :html:`&gt;` to :html:`>`, :html:`&quot;` to :html:`"` etc.
+        Does the opposite of "1". It converts :html:`&lt;` to :html:`<`,
+        :html:`&gt;` to :html:`>`, :html:`&quot;` to :html:`"` etc.
 
     0
-       Disabled - nothing is done.
+        Disabled - nothing is done.
 
     1
-       The content outside tags is :php:`htmlspecialchar()`'ed (PHP-function
-       which converts :html:`&"<>` to :html:`&...;`).
+        The content outside tags is :php:`htmlspecialchar()`'ed (PHP-function
+        which converts :html:`&"<>` to :html:`&...;`).
 
     2
-       Same as "1", but entities like :html:`&amp;` or :html:`&#234` are
-       untouched.
+        Same as "1", but entities like :html:`&amp;` or :html:`&#234` are
+        untouched.

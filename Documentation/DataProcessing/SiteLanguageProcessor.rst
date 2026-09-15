@@ -44,16 +44,16 @@ Please see also :ref:`dataProcessing-about-examples`.
 
 Using the :php:`SiteLanguageProcessor` the following scenario is possible:
 
-.. literalinclude:: /CodeSnippets/DataProcessing/TypoScript/SiteLanguageProcessor.typoscript
-   :caption: EXT:examples/Configuration/TypoScript/DataProcessors/Processors/SiteLanguageProcessor.typoscript
+..  literalinclude:: /CodeSnippets/DataProcessing/TypoScript/SiteLanguageProcessor.typoscript
+    :caption: EXT:examples/Configuration/TypoScript/DataProcessors/Processors/SiteLanguageProcessor.typoscript
 
 ..  rubric:: The Fluid template
 
 In the Fluid template the properties of the site language configuration can
 be accessed:
 
-.. literalinclude:: /CodeSnippets/DataProcessing/Template/DataProcSiteLanguage.html
-   :caption: EXT:examples/Resources/Private/Templates/ContentElements/DataProcSiteLanguage.html
+..  literalinclude:: /CodeSnippets/DataProcessing/Template/DataProcSiteLanguage.html
+    :caption: EXT:examples/Resources/Private/Templates/ContentElements/DataProcSiteLanguage.html
 
 ..  rubric:: Output
 

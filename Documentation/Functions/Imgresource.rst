@@ -107,35 +107,35 @@ width
 
     This crops 120x80px from the center of the scaled image:
 
-    .. code-block:: typoscript
-       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-       lib.image {
-           width = 120c
-           height = 80c
-       }
+        lib.image {
+            width = 120c
+            height = 80c
+        }
 
     This crops 100x100px; from landscape-images at the left and portrait-
     images centered:
 
-    .. code-block:: typoscript
-       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-       lib.image {
-           width = 100c-100
-           height = 100c
-       }
+        lib.image {
+            width = 100c-100
+            height = 100c
+        }
 
     This crops 100x100px; from landscape-images a bit right of the center
     and portrait-images a bit higher than centered:
 
-    .. code-block:: typoscript
-       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-       lib.image {
-           width = 100c+30
-           height = 100c-25
-       }
+        lib.image {
+            width = 100c+30
+            height = 100c-25
+        }
 
 ..  _imgresource-height:
 
@@ -197,20 +197,20 @@ noScale
 
     Here :file:`test.jpg` could have 1600 x 1200 pixels for example:
 
-    .. code-block:: typoscript
-       :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
+    ..  code-block:: typoscript
+        :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-       file = fileadmin/test.jpg
-       file.width = 240m
-       file.height = 240m
-       file.noScale = 1
+        file = fileadmin/test.jpg
+        file.width = 240m
+        file.height = 240m
+        file.noScale = 1
 
     This example results in an image tag like the following. Note that
     `src="fileadmin/test.jpg"` is the *original* file:
 
-    .. code-block:: html
+    ..  code-block:: html
 
-       <img src="fileadmin/test.jpg" width="240" height="180" />
+        <img src="fileadmin/test.jpg" width="240" height="180" />
 
 
 ..  _imgresource-crop:
@@ -288,7 +288,7 @@ cropVariant
         }
 
 
-.. _imgresource-frame:
+..  _imgresource-frame:
 
 frame
 -----
