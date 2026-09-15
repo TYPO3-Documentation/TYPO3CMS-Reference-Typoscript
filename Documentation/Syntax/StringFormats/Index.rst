@@ -148,10 +148,10 @@ resource
 
     These types are supported:
 
-    * **package resource** – a file inside an extension
-    * **FAL resource** – a file from :abbr:`FAL (File Abstraction Layer)` storage
-    * **app resource** – a file in the TYPO3 project folder
-    * **URI resource** – a URL
+    *   **package resource** – a file inside an extension
+    *   **FAL resource** – a file from :abbr:`FAL (File Abstraction Layer)` storage
+    *   **app resource** – a file in the TYPO3 project folder
+    *   **URI resource** – a URL
 
     ..  rubric:: Examples
 
@@ -198,5 +198,5 @@ string
 
         page.10.value = The quick brown fox jumps over the lazy dog.
 
-    .. literalinclude:: /CodeSnippets/TypoScriptSyntax/OperatorUnset.typoscript
-       :caption: Extension examples, file Configuration/TypoScript/Syntax/ObjectUnset/setup.typoscript
+    ..  literalinclude:: /CodeSnippets/TypoScriptSyntax/OperatorUnset.typoscript
+        :caption: Extension examples, file Configuration/TypoScript/Syntax/ObjectUnset/setup.typoscript

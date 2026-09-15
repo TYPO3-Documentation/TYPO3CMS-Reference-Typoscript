@@ -216,8 +216,8 @@ Using the :php:`FilesProcessor` the following scenario is possible:
 
 Then iterate over the files in the :ref:`Fluid <t3coreapi:fluid>` template:
 
-.. literalinclude:: /CodeSnippets/DataProcessing/Template/DataProcFiles.fluid.html
-   :caption: EXT:examples/Resources/Private/Templates/ContentElements/DataProcFiles.fluid.html
+..  literalinclude:: /CodeSnippets/DataProcessing/Template/DataProcFiles.fluid.html
+    :caption: EXT:examples/Resources/Private/Templates/ContentElements/DataProcFiles.fluid.html
 
 ..  rubric:: Output
 

@@ -1,6 +1,6 @@
 ..  include:: /Includes.rst.txt
 ..  index:: GIFBUILDER; +calc
-.. _gifbuilder-colors:
+..  _gifbuilder-colors:
 
 ===============================
 Colors in TypoScript GIFBUILDER

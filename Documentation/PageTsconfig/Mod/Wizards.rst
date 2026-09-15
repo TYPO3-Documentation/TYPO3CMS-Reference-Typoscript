@@ -49,7 +49,7 @@ TCA.
             With this setting one or several groups with all their content
             elements can be hidden in the New Content Element Wizard.
 
-            .. code-block:: typoscript
+            ..  code-block:: typoscript
 
                 # This will remove the "menu" group
                 mod.wizards.newContentElement.wizardItems.removeItems := addToList(menu)

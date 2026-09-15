@@ -1,8 +1,8 @@
-.. include:: /Includes.rst.txt
+..  include:: /Includes.rst.txt
 
-.. index:: Functions; getEnv
+..  index:: Functions; getEnv
 
-.. _getenv:
+..  _getenv:
 
 ======
 getEnv
@@ -25,15 +25,15 @@ gets cached, as opposed to the :ref:`getText.getenv <data-type-gettext-getenv>`
 feature.
 
 
-.. _getEnv-examples:
+..  _getEnv-examples:
 
 Example
 =======
 
-.. code-block:: typoscript
-   :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
+..  code-block:: typoscript
+    :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
-   # Define default value
-   myConstant = defaultValue
-   # Enable overriding by environment variable
-   myConstant := getEnv(TS_MYCONSTANT)
+    # Define default value
+    myConstant = defaultValue
+    # Enable overriding by environment variable
+    myConstant := getEnv(TS_MYCONSTANT)

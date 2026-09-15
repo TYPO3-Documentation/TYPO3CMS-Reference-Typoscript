@@ -554,11 +554,11 @@ HTMLparser_rte
 
     ..  note::
 
-       This configuration is similar in frontend TypoScript and Page TSconfig.
-       This is why single properties can be looked up in the TypoScript reference.
+        This configuration is similar in frontend TypoScript and Page TSconfig.
+        This is why single properties can be looked up in the TypoScript reference.
 
-       Also note the :ref:`HTMLparser <t3tsref:htmlparser>` options :code:`keepNonMatchedTags`
-       and :code:`htmlSpecialChars` are *not* observed. They are preset internally.
+        Also note the :ref:`HTMLparser <t3tsref:htmlparser>` options :code:`keepNonMatchedTags`
+        and :code:`htmlSpecialChars` are *not* observed. They are preset internally.
 
 ..  index::
     RTE; Transformations overruled

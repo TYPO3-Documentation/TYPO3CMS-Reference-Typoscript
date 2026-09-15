@@ -1,8 +1,8 @@
-.. include:: /Includes.rst.txt
-.. index::
+..  include:: /Includes.rst.txt
+..  index::
     TypoScript; Identifier
-.. _typoscript-syntax-basics:
-.. _typoscript-syntax-syntax-object-path:
+..  _typoscript-syntax-basics:
+..  _typoscript-syntax-syntax-object-path:
 
 ===========
 Identifiers
@@ -10,16 +10,16 @@ Identifiers
 
 TypoScript is line based. Each line normally contains three parts:
 
-.. code-block:: text
+..  code-block:: text
 
-   [Identifier] [Operator] [Value]
+    [Identifier] [Operator] [Value]
 
 
 In this example we have the identifier :typoscript:`myIdentifier` with the sub identifier
 :typoscript:`mySubIdentifier`, the assignment operator :typoscript:`=` and the value :typoscript:`myValue`.
 
-.. literalinclude:: /CodeSnippets/TypoScriptSyntax/Identifiers1.typoscript
-   :caption: Extension examples, file Configuration/TypoScript/Syntax/General/setup.typoscript
+..  literalinclude:: /CodeSnippets/TypoScriptSyntax/Identifiers1.typoscript
+    :caption: Extension examples, file Configuration/TypoScript/Syntax/General/setup.typoscript
 
 The identifier path (in above example :typoscript:`myIdentifier.mySubIdentifier`) is
 a dotted path of single identifiers, and the first block of non-whitespace characters
@@ -31,5 +31,5 @@ FlexForm details), it must be quoted with a backlash. The example below results 
 identifier :typoscript:`myIdentifier` with the sub identifier :typoscript:`my.identifier.with.dots`
 having the assigned value :typoscript:`myValue`:
 
-.. literalinclude:: /CodeSnippets/TypoScriptSyntax/Identifiers2.typoscript
-   :caption: Extension examples, file Configuration/TypoScript/Syntax/Escaping/setup.typoscript
+..  literalinclude:: /CodeSnippets/TypoScriptSyntax/Identifiers2.typoscript
+    :caption: Extension examples, file Configuration/TypoScript/Syntax/Escaping/setup.typoscript

@@ -1,6 +1,6 @@
-.. include:: /Includes.rst.txt
-.. index:: TypoScript; Includes
-.. _typoscript-syntax-includes:
+..  include:: /Includes.rst.txt
+..  index:: TypoScript; Includes
+..  _typoscript-syntax-includes:
 
 ============
 File imports
@@ -27,7 +27,7 @@ bodies, which allows conditional imports with :typoscript:`@import`.
 and breaks any curly braces level, resetting current scope
 to top level.
 
-.. _typoscript-syntax-import:
+..  _typoscript-syntax-import:
 
 @import
 =======
@@ -45,43 +45,43 @@ for more details.
 
 The following rules apply:
 
-* Multiple files are imported in alphabetical order.
-  If a special loading order is desired it is common to prefix the filenames with
-  numbers that increase for files that shall be loaded later.
+*   Multiple files are imported in alphabetical order.
+    If a special loading order is desired it is common to prefix the filenames with
+    numbers that increase for files that shall be loaded later.
 
-* Recursion is allowed: Imported files can have :typoscript:`@import` statements.
+*   Recursion is allowed: Imported files can have :typoscript:`@import` statements.
 
-* .. versionchanged:: 12.0
+*   .. versionchanged:: 12.0
 
-  It is allowed to put :typoscript:`@import` within a condition. This example imports
-  the additional file only if a frontend user is logged in:
+    It is allowed to put :typoscript:`@import` within a condition. This example imports
+    the additional file only if a frontend user is logged in:
 
-  .. code-block:: typoscript
+    ..  code-block:: typoscript
 
-      [frontend.user.isLoggedIn]
-          @import './userIsLoggedIn.typoscript'
-      [END]
+        [frontend.user.isLoggedIn]
+            @import './userIsLoggedIn.typoscript'
+        [END]
 
-* Directory imports are not recursive, meaning that a directory import does
-  not automatically travel down its subdirectories.
+*   Directory imports are not recursive, meaning that a directory import does
+    not automatically travel down its subdirectories.
 
-* Quoting the filename is necessary with the new syntax. Either double quotes
-  (") or single quotes (') can be used.
+*   Quoting the filename is necessary with the new syntax. Either double quotes
+    (") or single quotes (') can be used.
 
-* Wildcards :typoscript:`*` are only allowed on file level, not on directory level.
-  Only a single wildcard character is allowed.
+*   Wildcards :typoscript:`*` are only allowed on file level, not on directory level.
+    Only a single wildcard character is allowed.
 
-* Includes relative to the current file location are allowed using :typoscript:`./`
-  as prefix.
+*   Includes relative to the current file location are allowed using :typoscript:`./`
+    as prefix.
 
-* Includes must start with :typoscript:`EXT:` if not relative. Loading files
-  outside of extensions is not possible.
+*   Includes must start with :typoscript:`EXT:` if not relative. Loading files
+    outside of extensions is not possible.
 
-* Directory traversal using :typoscript:`../` is not allowed.
+*   Directory traversal using :typoscript:`../` is not allowed.
 
 Some examples:
 
-.. code-block:: typoscript
+..  code-block:: typoscript
     :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
 
     # Import a single file
@@ -107,7 +107,7 @@ Some examples:
     @import './subDirectory/*.setup.typoscript'
 
 
-.. _typoscript-syntax-includes-alternatives:
+..  _typoscript-syntax-includes-alternatives:
 
 Alternatives to using file imports
 ==================================
