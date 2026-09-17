@@ -38,8 +38,12 @@ test-yaml: ## lint the yaml
 test-typoscript: ## Check the TypoScript snippet syntax
 	Build/Scripts/runTests.sh -s typoscriptLint
 
+.PHONY: test-json
+test-json: ## Check the JSON snippet syntax
+	Build/Scripts/runTests.sh -s jsonLint
+
 .PHONY: test
-test: test-docs test-lint test-cgl test-yaml test-typoscript## Test the documentation rendering
+test: test-docs test-lint test-cgl test-yaml test-typoscript test-json## Test the documentation rendering
 
 .PHONY: fix
 fix: ## Fix cgl

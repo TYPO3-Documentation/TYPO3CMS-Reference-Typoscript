@@ -50,3 +50,6 @@ jobs:
 
       - name: Lint TypoScript
         run: Build/Scripts/runTests.sh -p ${{ env.php }} -s typoscriptLint
+
+      - name: Lint JSON
+        run: Build/Scripts/runTests.sh -p ${{ env.php }} -s jsonLint
