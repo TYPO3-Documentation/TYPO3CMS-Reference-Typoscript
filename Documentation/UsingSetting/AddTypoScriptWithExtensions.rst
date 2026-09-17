@@ -131,14 +131,8 @@ One TypoScript include set
 If your extension supported one static file include you should provide the same
 files in your main site set as well:
 
-..  code-block:: php
+..  literalinclude:: _Sets/_sys_template_one.php
     :caption: EXT:my_extension/Configuration/TCA/Overrides/sys_template.php (before and after)
-
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
-        'my_extension',
-        'Configuration/TypoScript/',
-        'Examples TypoScript'
-    );
 
 In your main site set provide the same files that where provided as includes
 by :php:`\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile`
@@ -229,26 +223,8 @@ For backward compability reasons :php:`ExtensionManagementUtility::addStaticFile
 still needs to be called for each folder that should be available in the TypoScript
 template record:
 
-..  code-block:: php
+..  literalinclude:: _Sets/_sys_template_several.php
     :caption: EXT:my_extension/Configuration/TCA/Overrides/sys_template.php
-
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
-        'my_extension',
-        'Configuration/TypoScript/',
-        'My Extension - Main TypoScript'
-    );
-
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
-        'my_extension',
-        'Configuration/TypoScript/SpecialFeature1/',
-        'My Extension - Some special feature 1'
-    );
-
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
-        'my_extension',
-        'Configuration/TypoScript/SpecialFeature2/',
-        'My Extension - Some special feature 2'
-    );
 
 Each site set then provides the TypoScript files the according location by
 importing it, for example:
