@@ -34,8 +34,12 @@ test-cgl: ## Apply cgl to included code snippets
 test-yaml: ## lint the yaml
 	Build/Scripts/runTests.sh -s yamlLint
 
+.PHONY: test-typoscript
+test-typoscript: ## Check the TypoScript snippet syntax
+	Build/Scripts/runTests.sh -s typoscriptLint
+
 .PHONY: test
-test: test-docs test-lint test-cgl test-yaml## Test the documentation rendering
+test: test-docs test-lint test-cgl test-yaml test-typoscript## Test the documentation rendering
 
 .PHONY: fix
 fix: ## Fix cgl

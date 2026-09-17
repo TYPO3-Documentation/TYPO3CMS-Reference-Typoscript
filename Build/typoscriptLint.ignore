@@ -1,0 +1,7 @@
+# Snippets that demonstrate invalid syntax on purpose, one path per line.
+#
+# The script also honours a "# typoscript-lint: ignore-file" comment inside a
+# snippet. That is the better place for it, but not for a file whose content is
+# shown to the reader verbatim: the renderer silently ignores the :lines:
+# option of literalinclude, so the comment would end up in the example.
+Documentation/CodeSnippets/TypoScriptSyntax/CodeBlockInvalidClosingBrace.typoscript
