@@ -133,14 +133,8 @@ removeTags
     List of tags (among the already set tags), which will be configured so
     they are surely removed.
 
-    ..  code-block:: yaml
+    ..  literalinclude:: _htmlparserRemoveTags.yaml
         :caption: EXT:rte_ckeditor/Configuration/RTE/Processing.yaml
-
-        processing:
-          HTMLparser_db:
-            removeTags: [link, meta, o:p, sdfield, style, title]
-            # "string" definition is also possible:
-            # removeTags: link, meta, o:p, sdfield, style, title
 
     ..  literalinclude:: _removeTags.typoscript
         :caption: EXT:my_extension/Configuration/TypoScript/page.tsconfig

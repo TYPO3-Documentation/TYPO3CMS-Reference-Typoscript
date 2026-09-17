@@ -490,23 +490,14 @@ files <t3coreapi:configuration-files>`
 
 It can then be disabled per use case with a custom processing instruction:
 
-..  code-block:: yaml
+..  literalinclude:: _rteProcessingHtmlSanitizeDisable.yaml
     :caption: EXT:site_package/Configuration/Processing.yaml
 
-    processing:
-      allowTags:
-        # ...
-      HTMLparser_db:
-        # ...
-        # disable individually per use case
-        htmlSanitize: false
+With the feature flag enabled and nothing overridden, this is the
+configuration that applies:
 
-        # This is the default configuration,
-        # the feature flag has to be enabled
-        htmlSanitize:
-          # use default builder as configured in
-          # $GLOBALS['TYPO3_CONF_VARS']['SYS']['htmlSanitizer']
-          build: default
+..  literalinclude:: _rteProcessingHtmlSanitizeDefault.yaml
+    :caption: EXT:site_package/Configuration/Processing.yaml
 
 
 ..  index::
