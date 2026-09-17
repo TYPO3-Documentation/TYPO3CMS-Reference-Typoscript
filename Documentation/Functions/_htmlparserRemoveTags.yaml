@@ -1,0 +1,5 @@
+processing:
+  HTMLparser_db:
+    removeTags: [link, meta, o:p, sdfield, style, title]
+    # "string" definition is also possible:
+    # removeTags: link, meta, o:p, sdfield, style, title

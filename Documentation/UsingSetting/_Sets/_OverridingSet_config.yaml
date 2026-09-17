@@ -1,0 +1,5 @@
+name: my-vendor/my-site-package
+label: My Set
+dependencies:
+  - my-vendor/my-other-set
+  - some-vendor/some-extension
