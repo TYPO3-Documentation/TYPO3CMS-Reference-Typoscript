@@ -99,14 +99,8 @@ the dependencies defined in the site set configuration. Therefore if you
 have to override the frontend TypoScript of another site set your site set
 should depend on the other site set:
 
-..  code-block:: yaml
+..  literalinclude:: _Sets/_OverridingSet_config.yaml
     :caption: packages/my_site_package/Configuration/Sets/MySitePackage/config.yaml
-
-    name: my-vendor/my-site-package
-    label: My Set
-    dependencies:
-      - my-vendor/my-other-set
-      - some-vendor/some-extension
 
 Your extension can then safely override frontend TypoScript of the `some_extension`,
 for example:

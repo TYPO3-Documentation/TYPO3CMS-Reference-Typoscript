@@ -92,13 +92,8 @@ Let us assume, you have a site set defined in your extension:
 
 And use it in a site in your project:
 
-..  code-block:: yaml
+..  literalinclude:: _siteConfig.yaml
     :caption: config/sites/my-site/config.yaml
-
-    base: 'http://example.com/'
-    rootPageId: 1
-    dependencies:
-      - my-vendor/my-set
 
 You can now put a file called :file:`page.tsconfig` in the same folder like your
 site configuration and it will be automatically loaded for all pages in that
