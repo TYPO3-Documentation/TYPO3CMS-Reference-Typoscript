@@ -1,0 +1,9 @@
+file = GIFBUILDER
+file {
+  XY = 200,200
+  format = png
+
+  10 = ELLIPSE
+  10.dimensions = 100,100,50,50
+  10.color = red
+}

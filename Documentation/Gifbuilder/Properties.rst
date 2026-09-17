@@ -124,23 +124,8 @@ charRangeMap
 
     **Example**:
 
-    ..  code-block:: typoscript
+    ..  literalinclude:: _pixelSpaceFontSizeRef.typoscript
         :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-        _GIFBUILDER.charRangeMap {
-          123 = arial.ttf
-          123 {
-            charMapConfig {
-              fontFile = EXT:install/Resources/Private/Font/vera.ttf
-              value = 48-57
-              color = green
-              xSpaceBefore = 3
-              xSpaceAfter = 3
-            }
-
-            pixelSpaceFontSizeRef = 24
-          }
-        }
 
     In this example :typoscript:`xSpaceBefore` and :typoscript:`xSpaceAfter`
     will be "3" when the font size is 24. If this configuration is used on a

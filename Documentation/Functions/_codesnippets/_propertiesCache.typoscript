@@ -1,0 +1,9 @@
+10 = TEXT
+10 {
+  value = <div><img src="invalid.file" onerror="alert(1)"></div>
+  htmlSanitize = 1
+  // Use either "default" for the default builder
+  htmlSanitize.build = default
+  // or use the full class name of the default builder
+  // htmlSanitize.build = TYPO3\CMS\Core\Html\DefaultSanitizerBuilder
+}

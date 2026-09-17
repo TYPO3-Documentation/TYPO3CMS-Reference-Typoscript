@@ -52,23 +52,5 @@ fieldDefinitions
 Example: Override the field definitions in the status module
 ------------------------------------------------------------
 
-..  code-block:: typoscript
+..  literalinclude:: _webinfo.typoscript
     :caption: EXT:site_package/Configuration/page.tsconfig
-
-    mod.web_info.fieldDefinitions {
-        0 {
-            # Basic settings
-            label = LLL:info.webinfo:pages_0
-            fields = title,uid,slug,alias,starttime,endtime,fe_group,target,url,shortcut,shortcut_mode
-        }
-        1 {
-            # Record overview
-            label = LLL:info.webinfo:pages_1
-            fields = title,uid,###ALL_TABLES###
-        }
-        2 {
-            # Cache and age
-            label = LLL:info.webinfo:pages_2
-            fields = title,uid,table_tt_content,table_fe_users
-        }
-    }

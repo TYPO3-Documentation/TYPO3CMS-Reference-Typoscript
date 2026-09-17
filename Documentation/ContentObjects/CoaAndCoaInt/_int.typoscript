@@ -1,0 +1,6 @@
+lib.currentDate = COA_INT
+lib.currentDate {
+  10 = TEXT
+  10.stdWrap.data = date:U
+  10.stdWrap.strftime = %H:%M:%S
+}

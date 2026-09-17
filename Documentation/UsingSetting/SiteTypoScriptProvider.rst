@@ -48,13 +48,8 @@ a sitepackage extension.
 You can place TypoScript constants or setup in files of that name in the same
 folder like the site configuration:
 
-..  code-block:: typoscript
+..  literalinclude:: _site.typoscript
     :caption: config/sites/my-site/setup.typoscript
-
-    page.headerData {
-        50 = TEXT
-        50.value = <!-- This is only displayed in the header of site example.org -->
-    }
 
 Same goes for TypoScript constants:
 

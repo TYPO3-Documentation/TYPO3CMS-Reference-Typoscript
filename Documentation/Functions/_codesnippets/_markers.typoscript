@@ -1,0 +1,12 @@
+page.60 = CONTENT
+page.60 {
+  table = tt_content
+  select {
+    pidInList = 73
+    where = header != ###whatever###
+    markers {
+      whatever.value = some
+      whatever.wrap = |thing
+    }
+  }
+}

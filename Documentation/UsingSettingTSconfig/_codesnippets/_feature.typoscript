@@ -1,0 +1,4 @@
+# True if feature toggle for strict TypoScript syntax is enabled:
+[feature("TypoScript.strictSyntax") === false]
+// Your settings go here
+[END]

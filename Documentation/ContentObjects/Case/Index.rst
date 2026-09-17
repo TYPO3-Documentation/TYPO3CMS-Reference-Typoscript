@@ -143,23 +143,5 @@ renderings of some content depending on whether the :ref:`cobj-case-key` field
 
 The result is in either case wrapped with :typoscript:`|<br>`.
 
-..  code-block:: typoscript
+..  literalinclude:: _case.typoscript
     :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-    stuff = CASE
-    stuff.if.isTrue.field = header
-    # This value determines, which of the following cObjects will be rendered.
-    stuff.key.field = layout
-
-    # cObject for the case that field layout is "1".
-    stuff.1 = TEXT
-    stuff.1 {
-        # ....
-    }
-    # cObject for all other cases.
-    stuff.default = TEXT
-    stuff.default {
-        # ....
-    }
-
-    stuff.stdWrap.wrap = |<br>

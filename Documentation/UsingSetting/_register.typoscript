@@ -1,0 +1,12 @@
+10 = COA
+10 {
+  10 = LOAD_REGISTER
+  10 {
+    ulClass = col-left
+    aClass = a-special
+    colors {
+      chief = red
+      servant = white
+    }
+  }
+}

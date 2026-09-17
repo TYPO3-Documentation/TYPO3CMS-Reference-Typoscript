@@ -1,0 +1,22 @@
+page = PAGE
+page.10 = COA
+page.10 {
+  cache.key = coaout
+  cache.lifetime = 60
+  #stdWrap.cache.key = coastdWrap
+  #stdWrap.cache.lifetime = 60
+  10 = TEXT
+  10 {
+    cache.key = mycurrenttimestamp
+    cache.lifetime = 60
+    data = date : U
+    strftime = %H:%M:%S
+    noTrimWrap = |10: | |
+  }
+  20 = TEXT
+  20 {
+    data = date : U
+    strftime = %H:%M:%S
+    noTrimWrap = |20: | |
+  }
+}

@@ -1,0 +1,8 @@
+page.10 = TEXT
+page.10.value = kasper
+page.10.stdWrap.case = upper
+
+page.20 = < page.10
+page.20.stdWrap.case = lower
+page.20.value >
+page.20.stdWrap.field = pages

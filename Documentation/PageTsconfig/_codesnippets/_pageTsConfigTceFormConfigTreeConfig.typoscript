@@ -1,0 +1,4 @@
+config.treeConfig.startingPoints = 1,42
+config.treeConfig.appearance.expandAll = 1
+config.treeConfig.appearance.maxLevels = 2
+config.treeConfig.appearance.nonSelectableLevels = 1

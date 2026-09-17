@@ -1,0 +1,8 @@
+module.tx_form {
+  settings {
+    yamlConfigurations {
+      # Use the current timestamp as key to avoid accidental overwriting
+      1712163960 = EXT:my_extension/Configuration/Form/CustomFormSetup.yaml
+    }
+  }
+}

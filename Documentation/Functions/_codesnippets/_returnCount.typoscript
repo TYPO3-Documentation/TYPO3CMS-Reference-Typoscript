@@ -1,0 +1,7 @@
+# returns 9
+1 = TEXT
+1 {
+  value = x,y,z,1,2,3,a,b,c
+  split.token = ,
+  split.returnCount = 1
+}

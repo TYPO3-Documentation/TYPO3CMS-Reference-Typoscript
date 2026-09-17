@@ -1,0 +1,7 @@
+page = PAGE
+# [...]
+
+page.meta {
+  description = This is the description of the content in this document.
+  keywords = These are the keywords.
+}

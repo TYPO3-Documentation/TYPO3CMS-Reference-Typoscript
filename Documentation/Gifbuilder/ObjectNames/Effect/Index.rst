@@ -32,23 +32,8 @@ All effects are defined as the effect only or as an effect/value pair inside
 Example
 =======
 
-..  code-block:: typoscript
+..  literalinclude:: _effect.typoscript
     :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-    lib.image = IMAGE
-    lib.image {
-      file = GIFBUILDER
-      file {
-        XY = 1024,768
-        format = jpg
-
-        10 = IMAGE
-        10.file = fileadmin/image.jpg
-
-        20 = EFFECT
-        20.value = gamma=1.3 | flip | rotate=180
-      }
-    }
 
 ..  _gifbuilder-effect-effects:
 

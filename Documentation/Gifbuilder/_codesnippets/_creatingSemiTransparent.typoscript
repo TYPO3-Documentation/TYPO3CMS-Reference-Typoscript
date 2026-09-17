@@ -1,0 +1,105 @@
+lib.header = IMAGE
+lib.header {
+  file = GIFBUILDER
+  file {
+    XY = 640,480
+    format = png
+
+    10 = IMAGE
+    10.file = fileadmin/backimage.jpg
+
+    # Example 1, light gray box (#cccccc), no box transparency
+    20 = IMAGE
+    20 {
+      offset = 50,50
+      XY = [mask.W],40
+
+      file = GIFBUILDER
+      file {
+        XY = 400,40
+        # The color of the box
+        backColor = #cccccc
+      }
+
+      mask = GIFBUILDER
+      mask {
+        XY = [10.w]+40,40
+        # The transparency of the box:
+        # #000000 = fully transparent like the text
+        # #ffffff = nothing transparent at all
+        backColor = #ffffff
+
+        10 = TEXT
+        10 {
+          text = TYPO3 rulez !
+          # The transparency of the text
+          # Same rules as above
+          fontColor = #000000
+          fontSize = 20
+          offset = 20,30
+          fontFile = fileadmin/ALTdragon.ttf
+        }
+      }
+    }
+
+    # Example 2, light green box, half transparent
+    30 = IMAGE
+    30 {
+      offset = 50,120
+      XY = [mask.W],40
+
+      file = GIFBUILDER
+      file {
+        XY = 400,40
+        backColor = #66ff66
+      }
+
+      mask = GIFBUILDER
+      mask {
+        XY = [10.w]+40,40
+        backColor = #808080
+
+        10 = TEXT
+        10 {
+          text = TYPO3 rulez !
+          fontColor = #000000
+          fontSize = 20
+          offset = 20,30
+          fontFile = fileadmin/ALTdragon.ttf
+        }
+      }
+    }
+
+    # Example 2, light red box, no box transparency, bold + not antialiased text
+    40 = IMAGE
+    40 {
+      offset = 50,190
+      XY = [mask.W],40
+
+      file = GIFBUILDER
+      file {
+        XY = 400,40
+        backColor = #ff6666
+      }
+
+      mask = GIFBUILDER
+      mask {
+        XY = [10.w]+40,40
+        backColor = #ffffff
+
+        10 = TEXT
+        10 {
+          text = TYPO3 rulez !
+          fontColor = #000000
+          fontSize = 20
+          offset = 20,30
+          fontFile = fileadmin/ALTdragon.ttf
+          # Bold
+          iterations = 5
+          # Antialiased
+          antiAlias = 0
+        }
+      }
+    }
+  }
+}

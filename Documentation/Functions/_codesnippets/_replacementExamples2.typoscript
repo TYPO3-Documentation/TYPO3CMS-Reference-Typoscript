@@ -1,0 +1,7 @@
+20 = TEXT
+20.value = There_are_a_cat,_a_dog_and_a_tiger_in_da_hood!_Yeah!
+20.stdWrap.replacement.10 {
+  search = _
+  replace = 1 || 2 || 3
+  useOptionSplitReplace = 1
+}

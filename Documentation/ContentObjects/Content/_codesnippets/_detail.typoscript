@@ -1,0 +1,12 @@
+// STEP 3: find all records
+
+// STEP 4: apply the renderObj to each record and collect
+//         the results as string 'totalResult'
+
+// STEP 5: Apply wrap to the 'totalResult'
+1.wrap = |                     # default!
+
+// STEP 6: Apply stdWrap to the 'totalResult'
+1.stdWrap =                    # default! #stdWrap
+
+// STEP 6: Return 'totalResult'

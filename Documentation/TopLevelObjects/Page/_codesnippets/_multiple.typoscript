@@ -1,0 +1,9 @@
+page = PAGE
+page.typeNum = 0
+page {
+  # set properties ...
+}
+
+json = PAGE
+json.typeNum = 1
+# ...

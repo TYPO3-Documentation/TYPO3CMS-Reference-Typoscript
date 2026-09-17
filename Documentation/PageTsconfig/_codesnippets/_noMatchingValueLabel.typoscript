@@ -1,0 +1,4 @@
+TCEFORM.pages.doktype {
+  # Different "INVALID VALUE ..." label:
+  noMatchingValue_label = VALUE "%s" was not available!
+}

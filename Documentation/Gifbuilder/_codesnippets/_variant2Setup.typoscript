@@ -1,0 +1,41 @@
+tt_content.image.20.1.file >
+tt_content.image.20.1.file = GIFBUILDER
+tt_content.image.20.1.file {
+  XY = [10.w]+20,[10.h]+20
+  # The background color of the image/content
+  backColor = #ffffff
+
+  # Create a "dummy" image from the real image which is 20 pixel
+  # smaller than the set width.
+  10 = IMAGE
+  10 {
+    file {
+      import.current = 1
+      width {
+        stdWrap = 1
+        stdWrap.field = imagewidth
+        stdWrap.wrap = |-20
+        prioriCalc = intval
+      }
+    }
+    offset = 10,10
+  }
+
+  # Draw a black/gray box over the dummy image
+  20 = BOX
+  20 {
+    dimensions = 10,10,[10.w],[10.h]
+    # You have to set lib.shadowIntensity in your constants.
+    color = {$lib.shadowIntensity}
+  }
+
+  # Blur the black box
+  30 = EFFECT
+  30.value = blur=99 |
+  # Blur again if required (wider blurred edge/shadow)
+  # 31 < .30
+
+  # Put the image on top again at a slightly more left top position.
+  40 < .10
+  40.offset = 5,5
+}

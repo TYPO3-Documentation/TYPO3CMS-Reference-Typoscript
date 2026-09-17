@@ -96,13 +96,8 @@ http.keep
     With the URL :samp:`https://example.org/test/doc.php?id=3` in our text we will
     get the following results:
 
-    ..  code-block:: typoscript
+    ..  literalinclude:: _keep.typoscript
         :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-        http.keep = "":                   # example.org
-        http.keep = "scheme":             # https://example.org
-        http.keep = "scheme,path":        # https://example.org/test/doc.php
-        http.keep = "scheme,path,query":  # https://example.org/test/doc.php?id=3
 
 ..  _makelinks-http-ATagParams:
 

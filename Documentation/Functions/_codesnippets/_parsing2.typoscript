@@ -1,0 +1,8 @@
+page = PAGE
+page.10 = TEXT
+page.10 {
+  value = 1000
+  bytes = 1
+  bytes.labels = " byte (B)| kibibyte (KiB)| mebibyte (MiB)| gibibyte (GiB)| tebibyte (TiB)| pepibyte (PiB)| exbibyte (EiB)| zebibyte (ZiB)| yobibyte YiB"
+  bytes.base = 1024
+}

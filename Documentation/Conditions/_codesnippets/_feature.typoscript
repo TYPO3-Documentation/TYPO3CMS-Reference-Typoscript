@@ -1,0 +1,5 @@
+# True, if the feature toggle for enforcing the Content Security Policy
+# in the frontend is enabled
+[feature("security.frontend.enforceContentSecurityPolicy") === true]
+# ...
+[END]

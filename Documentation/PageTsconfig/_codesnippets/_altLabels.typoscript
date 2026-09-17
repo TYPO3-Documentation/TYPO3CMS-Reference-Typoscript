@@ -1,0 +1,7 @@
+TCEFORM.pages.doktype {
+  # Set a different item label
+  altLabels.1 = STANDARD Page Type
+  altLabels.254 = Folder (for various elements)
+  # Sets the default label for Recycler via "locallang":
+  altLabels.255 = LLL:my_extension.tca:recycler
+}

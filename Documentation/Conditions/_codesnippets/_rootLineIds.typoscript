@@ -1,0 +1,4 @@
+# Check, if page with uid 2 is inside the root line
+[2 in tree.rootLineIds]
+# ...
+[END]

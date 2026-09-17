@@ -1,0 +1,24 @@
+# Site identifier
+[site("identifier") == "my_website"]
+// Your settings go here
+[END]
+
+# Match site base host
+[site("base").getHost() == "www.example.org"]
+// Your settings go here
+[END]
+
+# Match base path
+[site("base").getPath() == "/"]
+// Your settings go here
+[END]
+
+# Match root page uid
+[site("rootPageId") == 1]
+// Your settings go here
+[END]
+
+# Match a configuration property
+[traverse(site("configuration"), "myCustomProperty") == true]
+// Your settings go here
+[END]

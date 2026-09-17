@@ -1,0 +1,4 @@
+# Check, if in live workspace
+[workspace.workspaceId == 0]
+# ...
+[END]

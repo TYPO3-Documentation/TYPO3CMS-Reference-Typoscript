@@ -1,0 +1,6 @@
+lib.my_formatted_date = TEXT
+lib.my_formatted_date {
+  value = -5 days
+  formattedDate = FULL
+  formattedDate.locale = fr-FR
+}

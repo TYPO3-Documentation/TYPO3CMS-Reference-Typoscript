@@ -1,0 +1,4 @@
+TCEMAIN {
+  # Owner be_users UID for new pages
+  permissions.userid = 2
+}

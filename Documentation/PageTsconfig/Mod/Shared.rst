@@ -91,13 +91,8 @@ Example: Show a German flag on a NullSite
 
 This will show the German flag, and the text "deutsch" on hover.
 
-..  code-block:: typoscript
+..  literalinclude:: _show.typoscript
     :caption: EXT:site_package/Configuration/page.tsconfig
-
-    mod.SHARED {
-        defaultLanguageFlag = de
-        defaultLanguageLabel = deutsch
-    }
 
 ..  index::
     defaultLanguageLabel

@@ -1,0 +1,6 @@
+lib.metaMenu = HMENU
+lib.metaMenu {
+  special = directory
+  special.value = 35, 56
+  // render the menu
+}

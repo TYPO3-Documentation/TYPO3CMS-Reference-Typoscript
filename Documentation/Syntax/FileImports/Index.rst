@@ -81,30 +81,8 @@ The following rules apply:
 
 Some examples:
 
-..  code-block:: typoscript
+..  literalinclude:: _import.typoscript
     :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-    # Import a single file
-    @import 'EXT:my_extension/Configuration/TypoScript/randomfile.typoscript'
-
-    # Import multiple files in a single directory, sorted by file name
-    @import 'EXT:my_extension/Configuration/TypoScript/*.typoscript'
-
-    # It's possible to omit the file ending. For frontend TypoScript, ".typoscript" is
-    # appended automatically, backend TSconfig allows both ".typoscript" and ".tsconfig"
-    @import 'EXT:my_extension/Configuration/TypoScript/'
-
-    # Import files starting with "foo", ending with ".typoscript" (frontend)
-    @import 'EXT:my_extension/Configuration/TypoScript/foo*'
-
-    # Import files ending with ".setup.typoscript"
-    @import 'EXT:my_extension/Configuration/TypoScript/*.setup.typoscript'
-
-    # Import "bar.typoscript" relative to current file
-    @import './bar.typoscript'
-
-    # Import all ".setup.typoscript" files in sub directory relative to current file
-    @import './subDirectory/*.setup.typoscript'
 
 
 ..  _typoscript-syntax-includes-alternatives:

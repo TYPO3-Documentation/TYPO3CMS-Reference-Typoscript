@@ -1,0 +1,9 @@
+imageLinkWrap {
+  effects = gamma=1.3 | sharpen=80 | solarize=70
+  # effects only works when directImageLink is FALSE
+  directImageLink = 0
+  # at most 800 pixels wide. Keep proportions.
+  width = 800m
+  # at most 600 pixels wide. Keep proportions.
+  height = 600m
+}

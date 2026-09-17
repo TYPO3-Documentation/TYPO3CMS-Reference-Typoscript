@@ -1,0 +1,4 @@
+if {
+  value.data = applicationcontext
+  equals = Production
+}

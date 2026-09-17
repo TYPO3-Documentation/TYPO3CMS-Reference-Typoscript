@@ -142,14 +142,8 @@ removeTags
             # "string" definition is also possible:
             # removeTags: link, meta, o:p, sdfield, style, title
 
-    ..  code-block:: typoscript
+    ..  literalinclude:: _removeTags.typoscript
         :caption: EXT:my_extension/Configuration/TypoScript/page.tsconfig
-
-        RTE.default.proc {
-          HTMLparser_db {
-            removeTags = link, meta, o:p, sdfield, style, title
-          }
-        }
 
 ..  _htmlparser-keepNonMatchedTags:
 

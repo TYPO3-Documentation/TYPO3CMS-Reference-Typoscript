@@ -41,48 +41,16 @@ Properties
     This sets :typoscript:`contentWidth`, :typoscript:`label` and
     :typoscript:`head`.
 
-    ..  code-block:: typoscript
+    ..  literalinclude:: _array.typoscript
         :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-        page.27 = LOAD_REGISTER
-        page.27 {
-          contentWidth = 500
-
-          label.field = header
-
-          head = some text
-          head.wrap = <b> | </b>
-        }
 
 ..  _cobj-load-register-examples:
 
 Example:
 ========
 
-..  code-block:: typoscript
+..  literalinclude:: _register.typoscript
     :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-    1 = LOAD_REGISTER
-    1.param.cObject = TEXT
-    1.param.cObject.stdWrap.data = GP:the_id
-    # To avoid SQL injections we use intval - so the parameter
-    # will always be an integer.
-    1.param.cObject.stdWrap.intval = 1
-
-    10 = CONTENT
-    10.table = tx_my_table
-    10.select {
-      pidInList = this
-      orderBy = sorting
-      # Now we use the registered parameter
-      where = uid = {REGISTER:param}
-      where.insertData = 1
-    }
-    10.renderObj = COA
-    10.renderObj {
-      10 = TEXT
-      10.stdWrap.field = tx_my_text_field
-    }
 
 In this example we first load a special value, which is given as a
 GET/POST parameter, into the register. Then we use a

@@ -1,0 +1,4 @@
+object1 = OBJECTTYPE1
+object1 {
+  property = value
+}

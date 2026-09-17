@@ -1,0 +1,5 @@
+# set a default preset to use as fallback
+RTE.default.preset = custom_preset_default
+
+# Override preset for field "description" in table "tt_address"
+RTE.config.tt_address.description.preset = custom_preset_fancy

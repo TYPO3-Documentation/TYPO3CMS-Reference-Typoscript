@@ -11,23 +11,8 @@ encapsLines
 This function is a sub-function of :ref:`stdWrap <stdwrap>` and can be used
 like this:
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_encapslines.typoscript
     :caption: EXT:my_extension/Configuration/Sets/Main/setup.typoscript
-
-    page.20 = TEXT
-    page.20 {
-        value (
-            First line of text
-            Some <div>text</div>
-            <p>Some text</p>
-            <div>Some text</div>
-            <B>Some text</B>
-        )
-        stdWrap.encapsLines {
-            encapsTagList = div, p
-            remapTag.P=DIV
-        }
-    }
 
 
 ..  contents::
@@ -126,13 +111,8 @@ addAttributes.[*tagname*]
 
     ..  rubric:: Example
 
-    ..  code-block:: typoscript
+    ..  literalinclude:: _codesnippets/_addAttributes.typoscript
         :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-        addAttributes.P {
-            style = padding-bottom: 0px; margin-top: 1px; margin-bottom: 1px;
-            align = center
-        }
 
 
 ..  _encapslines-removeWrapping:
@@ -270,15 +250,8 @@ Examples
 :html:`<p>` tag is used to encapsulate each line
 ------------------------------------------------
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_encapsulate.typoscript
     :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-    encapsLines {
-        encapsTagList = div,p
-        remapTag.DIV = P
-        wrapNonWrappedLines = <p>|</p>
-        innerStdWrap_all.ifEmpty = &nbsp;
-    }
 
 This example shows how to handle content rendered by TYPO3 and
 stylesheets where the :html:`<p>` tag is used to encapsulate each line.
@@ -317,30 +290,8 @@ remains as human readable as possible.
 Advanced example
 ----------------
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_advanced.typoscript
     :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-    # Make sure nonTypoTagStdWrap operates
-    # on content outside <typolist> and <typohead> only:
-    tt_content.text.20.parseFunc.tags.typolist.breakoutTypoTagContent = 1
-    tt_content.text.20.parseFunc.tags.typohead.breakoutTypoTagContent = 1
-    # ... and no <br> before typohead.
-    tt_content.text.20.parseFunc.tags.typohead.stdWrap.wrap >
-    # Setting up nonTypoTagStdWrap to wrap the text with p tags
-    tt_content.text.20.parseFunc.nonTypoTagStdWrap >
-    tt_content.text.20.parseFunc.nonTypoTagStdWrap.encapsLines {
-        encapsTagList = div,p
-        remapTag.DIV = P
-        wrapNonWrappedLines = <p style="margin: 0 0 0;">|</p>
-
-        # Forcing these attributes onto the encapsulation tags if any
-        addAttributes.P {
-            style=margin: 0 0 0;
-        }
-        innerStdWrap_all.ifEmpty = &nbsp;
-    }
-    # Finally removing the <br> tag after the content...
-    tt_content.text.20.wrap >
 
 This is an example of how to wrap the table field `tt_content.bodytext`
 with :html:`<p>` tags, setting the line distances to regular space like that

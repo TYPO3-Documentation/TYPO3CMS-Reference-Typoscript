@@ -1,0 +1,10 @@
+10 = CONTENT
+10 {
+  table = sys_category
+  select {
+    pidInList = root,-1
+    selectFields = sys_category.*
+    join = sys_category_record_mm mm ON mm.uid_local = sys_category.uid
+    # ....
+  }
+}
