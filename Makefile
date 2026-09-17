@@ -14,7 +14,7 @@ test-docs: ## Test the documentation rendering
 	docker run --user $(shell id -u):$(shell id -g) --rm --pull always -v "$(shell pwd)":/project -t ghcr.io/typo3-documentation/render-guides:latest --config=Documentation --no-progress --minimal-test
 
 .PHONY: test
-test: test-docs test-lint test-cgl test-yaml ## Run all test suites
+test: test-docs test-lint test-cgl test-yaml test-typoscript ## Run all test suites
 
 .PHONY: test-lint
 test-lint: ## Lint the included PHP files
@@ -27,6 +27,10 @@ test-cgl: ## Check the TYPO3 coding guidelines (dry-run)
 .PHONY: test-yaml
 test-yaml: ## Lint the YAML files
 	Build/Scripts/runTests.sh -s yamlLint
+
+.PHONY: test-typoscript
+test-typoscript: ## Check the TypoScript snippet syntax
+	Build/Scripts/runTests.sh -s typoscriptLint
 
 .PHONY: fix
 fix: fix-cgl ## Apply all automatic fixes
