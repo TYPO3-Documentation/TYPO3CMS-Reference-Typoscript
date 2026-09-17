@@ -1,0 +1,7 @@
+[siteLanguage("locale").getName() == "de-CH"]
+page.10.value = This site has the locale "de_CH" or "de_CH.utf8"
+[END]
+
+[siteLanguage("title") == "Italy"]
+page.10.value = This site has the title "Italy"
+[END]

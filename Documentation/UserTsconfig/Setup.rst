@@ -84,14 +84,8 @@ Properties
         hide fields in the :guilabel:`User Settings` module, using `setup.fields.[fieldName].disabled = 1`.
         You can find the names of the fields in the :guilabel:`Configuration` module by browsing the "User Settings" array, example:
 
-        ..  code-block:: typoscript
+        ..  literalinclude:: _properties.typoscript
             :caption: EXT:site_package/Configuration/user.tsconfig
-
-            # Do not show the 'emailMeAtLogin' field to the user in "User Settings" module
-            setup.fields.emailMeAtLogin.disabled = 1
-
-            # And force the value of this field to be set to 1
-            setup.override.emailMeAtLogin = 1
 
 backendTitleFormat
 ------------------

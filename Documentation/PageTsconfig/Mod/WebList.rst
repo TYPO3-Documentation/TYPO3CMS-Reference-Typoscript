@@ -41,14 +41,8 @@ allowedNewTables
 Example: Allow records of type pages or sys_category in the new record wizard
 -----------------------------------------------------------------------------
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_pageTsConfigWebListAllowedNewTable.typoscript
     :caption: EXT:site_package/Configuration/page.tsconfig
-
-    mod.web_list {
-        # Only pages and sys_category table elements will be linked to in the new record wizard
-        allowedNewTables := addToList(sys_category)
-        allowedNewTables := addToList(pages)
-    }
 
 ..  figure:: /Images/ManualScreenshots/List/PageTsModWebListAllowedNewTables.png
     :alt: The New record screen after modifying the allowed elements
@@ -154,13 +148,8 @@ deniedNewTables
 Hide "Create new record" links in tables sys_category and tt_content
 --------------------------------------------------------------------
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_pageTsConfigWebListDeniedNewTables.typoscript
     :caption: EXT:site_package/Configuration/page.tsconfig
-
-    mod.web_list {
-        deniedNewTables := addToList(sys_category)
-        deniedNewTables := addToList(tt_content)
-    }
 
 
 ..  index:: disableSearchBox
@@ -227,20 +216,8 @@ displayRecordDownload
     :typoscript:`mod.web_list.table.<tablename>.displayRecordDownload` option.
     If this option is set, it takes precedence over the general option.
 
-    ..  code-block:: typoscript
+    ..  literalinclude:: _codesnippets/_displayRecordDownload.typoscript
         :caption: packages/my_sitepackage/Configuration/Sets/MySet/page.tsconfig
-
-        # Page TSconfig
-        mod.web_list {
-            # Disable "Export" button in List module header
-            noExportRecordsLinks = 1
-
-            # Generally disable "Download" button
-            displayRecordDownload = 0
-
-            # Enable "Download" button for table "tt_content"
-            table.tt_content.displayRecordDownload = 1
-        }
 
 
 ..  _pageTsConfigWebList-displayColumnSelector-example:
@@ -503,7 +480,7 @@ Example: Only list records of tables in single-table mode
         listOnlyInSingleTableView = 1
     }
 
-    The result will be that records from tables are only listed in the single-table mode:
+The result will be that records from tables are only listed in the single-table mode:
 
 ..  figure:: /Images/ManualScreenshots/List/PageTsModWebListListOnlyInSingleTableView.png
     :alt: The list module after activating the single-table mode
@@ -690,13 +667,8 @@ tableDisplayOrder
     The keywords `before` and `after` can be used to specify an order relative
     to other table names.
 
-    ..  code-block:: typoscript
+    ..  literalinclude:: _codesnippets/_tableDisplayOrder.typoscript
         :caption: EXT:site_package/Configuration/Sets/Main/page.tsconfig
-
-        mod.web_list.tableDisplayOrder.<tableName> {
-            before = <tableA>, <tableB>, ...
-            after = <tableA>, <tableB>, ...
-        }
 
 ..  index::
     searchLevel.items
@@ -712,17 +684,8 @@ searchLevel.items
 
     Sets labels for each level label in the search level select box
 
-    ..  code-block:: typoscript
+    ..  literalinclude:: _codesnippets/_items.typoscript
         :caption: EXT:site_package/Configuration/page.tsconfig
-
-        mod.web_list.searchLevel.items {
-            -1 = EXT:core/Resources/Private/Language/locallang_core.xlf:labels.searchLevel.infinite
-            0 = EXT:core/Resources/Private/Language/locallang_core.xlf:labels.searchLevel.0
-            1 = EXT:core/Resources/Private/Language/locallang_core.xlf:labels.searchLevel.1
-            2 = EXT:core/Resources/Private/Language/locallang_core.xlf:labels.searchLevel.2
-            3 = EXT:core/Resources/Private/Language/locallang_core.xlf:labels.searchLevel.3
-            4 = EXT:core/Resources/Private/Language/locallang_core.xlf:labels.searchLevel.4
-        }
 
 ..  index::
     searchLevel.items

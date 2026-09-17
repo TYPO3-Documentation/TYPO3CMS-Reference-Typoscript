@@ -1,0 +1,6 @@
+# This will lead to <script src="/_assets/.../Frontend/JavaScript/somefile.js?123456" data-foo="data-bar" foo="bar"></script>
+page.includeJSFooterlibs {
+  somefile = EXT:site_package/Resources/Public/JavaScript/somefile.js
+  somefile.data-foo = data-bar
+  somefile.foo = bar
+}

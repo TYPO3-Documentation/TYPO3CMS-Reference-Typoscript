@@ -1,0 +1,6 @@
+# Safely check the query parameter array to avoid error logs in case key
+# is not defined. This will check if the GET parameter
+# tx_news_pi1[news] in the URL is greater than 0:
+[request && traverse(request.getQueryParams(), 'tx_news_pi1/news') > 0]
+# ...
+[END]

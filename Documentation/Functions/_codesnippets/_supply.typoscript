@@ -1,0 +1,4 @@
+10 = TEXT
+10.value = some text
+10.stdWrap.case = upper
+10.stdWrap.field = header

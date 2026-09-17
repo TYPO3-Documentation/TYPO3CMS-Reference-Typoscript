@@ -93,14 +93,8 @@ The converted array can be accessed within the Fluid template with the
 Example of an advanced TypoScript configuration
 -----------------------------------------------
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_advanced.typoscript
     :caption: EXT:my_extension/Configuration/TypoScript/setup.typoscript
-
-    10 = flex-form
-    10 {
-        fieldName = my_flexform_field
-        as = myOutputVariable
-    }
 
 The converted array can be accessed within the Fluid template with the
 :html:`{myOutputVariable}` variable.
@@ -110,17 +104,8 @@ The converted array can be accessed within the Fluid template with the
 Example with a custom sub-processor
 -----------------------------------
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_processor.typoscript
     :caption: EXT:my_extension/Configuration/TypoScript/setup.typoscript
-
-    10 = flex-form
-    10 {
-        fieldName = my_flexform_field
-        as = myOutputVariable
-        dataProcessing {
-            10 = Vendor\MyExtension\DataProcessing\CustomFlexFormProcessor
-        }
-    }
 
 ..  _FlexFormProcessor-resolving-fal:
 
@@ -133,17 +118,8 @@ Example of an advanced TypoScript configuration, which processes the field
 :xml:`my_flexform_field`, resolves its FAL references and assigns the array to
 the :typoscript:`myOutputVariable` variable:
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_fal.typoscript
     :caption: EXT:my_extension/Configuration/TypoScript/setup.typoscript
-
-    10 = flex-form
-    10 {
-      fieldName = my_flexform_field
-      references {
-        my_flex_form_group.my_flex_form_field = my_field_reference
-      }
-      as = myOutputVariable
-    }
 
 The according FlexForm configuration:
 

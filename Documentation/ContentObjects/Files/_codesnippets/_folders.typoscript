@@ -1,0 +1,10 @@
+filecollection = FILES
+filecollection {
+  folders = 1:images/
+  folders.recursive = 1
+
+  renderObj = IMAGE
+  renderObj {
+    file.import.data = file:current:uid
+  }
+}

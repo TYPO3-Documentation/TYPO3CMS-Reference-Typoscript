@@ -30,19 +30,8 @@ In order to access TypoScript settings from an Extbase controller.
 
 #.  Use the convention of defining your TypoScript settings in :typoscript:`settings`
 
-    ..  code-block:: typoscript
+    ..  literalinclude:: _typoscript.typoscript
         :caption: EXT:my_extension/Configuration/TypoScript/setup.typoscript
-
-        plugin.tx_myextension {
-           view {
-              # view settings
-           }
-
-           settings {
-              key1 = value1
-              key2 = value2
-           }
-        }
 
 #.  Access them via :php:`$this->settings`
 

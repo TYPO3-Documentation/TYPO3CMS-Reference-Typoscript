@@ -26,26 +26,9 @@ values can be determined. Example:
 
 Here is a full example:
 
-..  code-block:: typoscript
+..  literalinclude:: _calc.typoscript
     :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
     :emphasize-lines: 5
-
-    lib.example = IMAGE
-    lib.example {
-      file = GIFBUILDER
-      file {
-      XY = [10.w]+20, [10.h]+20
-      backColor = #ff8700
-      format = png
-
-      10 = TEXT
-      10 {
-        text = TYPO3 GIFBUILDER Example
-        fontSize = 20
-        fontColor = #ffffff
-        offset = 10,25
-      }
-    }
 
 As you see, the image has a width/height defined as the width/height of the text
 printed onto it + 20 pixels.

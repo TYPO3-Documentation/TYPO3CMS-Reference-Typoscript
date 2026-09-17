@@ -1,0 +1,18 @@
+tt_content.text.20.parseFunc.externalBlocks {
+  blockquote.callRecursive = 1
+  blockquote.callRecursive.tagStdWrap.HTMLparser = 1
+  blockquote.callRecursive.tagStdWrap.HTMLparser {
+    tags.blockquote.fixAttrib.style.list = margin-bottom:0;margin-top:0;
+    tags.blockquote.fixAttrib.style.always = 1
+  }
+  blockquote.stripNLprev = 1
+  blockquote.stripNLnext = 1
+
+  table.stripNL = 1
+  table.stdWrap.HTMLparser = 1
+  table.stdWrap.HTMLparser {
+    tags.table.overrideAttribs = border="0" style="margin-top: 10px;"
+    tags.tr.allowedAttribs = 0
+    tags.td.overrideAttribs = class="table-cell" style="font-size: 10px;"
+  }
+}

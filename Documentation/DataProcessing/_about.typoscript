@@ -1,0 +1,6 @@
+lib.contentElement >
+lib.contentElement = FLUIDTEMPLATE
+lib.contentElement {
+  templateName = Default
+  // ...
+}

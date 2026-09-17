@@ -208,14 +208,8 @@ Selection with source
 The following example would display some related content
 referenced from the :guilabel:`page properties`.
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_source.typoscript
     :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-    page.42 = RECORDS
-    page.42 {
-       source.field = tx_examples_related_content
-       tables = tt_content
-    }
 
 Since no :typoscript:`conf` property is defined, the rendering will
 look for a top-level TypoScript object bearing the name of the
@@ -228,15 +222,8 @@ table to be rendered (e.g. `tt_content`).
 Selection with source II
 ------------------------
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_ii.typoscript
     :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-    20 = RECORDS
-    20 {
-        source = 10,12
-        dontCheckPid = 1
-        tables = tt_content
-    }
 
 This example loads the content elements with the UIDs 10 and 12 no
 matter where these elements are located and whether these pages are
@@ -252,23 +239,8 @@ Selection with categories
 If you want to display categorized content with a :typoscript:`RECORDS` object
 you could do it like this:
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_categories2.typoscript
     :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-    categorized_content = RECORDS
-    categorized_content {
-        categories.field = selected_categories
-        categories.relation.field = category_field
-        tables = tt_content
-        conf.tt_content = TEXT
-        conf.tt_content {
-            stdWrap.field = header
-            stdWrap.typolink.parameter = {field:pid}#{field:uid}
-            stdWrap.typolink.parameter.insertData = 1
-            stdWrap.wrap = <li>|</li>
-        }
-        wrap = <ul>|</ul>
-    }
 
 Contrary to the previous example, in this case the :typoscript:`conf` property
 is present and defines a very simple rendering of each content element
@@ -278,26 +250,5 @@ However, the same can be achieved with a :ref:`cobj-fluidtemplate` and
 data processing. This way templating is much more flexible. See the following
 example from the system extension :file:`fluid_styled_content`:
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_categories.typoscript
     :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-    tt_content.menu_categorized_content =< lib.contentElement
-    tt_content.menu_categorized_content {
-       templateName = MenuCategorizedContent
-       dataProcessing {
-          10 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor
-          10 {
-             table = tt_content
-             selectFields = tt_content.*
-             groupBy = uid
-             pidInList.data = leveluid : 0
-             recursive = 99
-             join.data = field:selected_categories
-             join.wrap = sys_category_record_mm ON uid = sys_category_record_mm.uid_foreign AND sys_category_record_mm.uid_local IN(|)
-             where.data = field:category_field
-             where.wrap = tablenames='tt_content' and fieldname='|'
-             orderBy = tt_content.sorting
-             as = content
-          }
-       }
-    }

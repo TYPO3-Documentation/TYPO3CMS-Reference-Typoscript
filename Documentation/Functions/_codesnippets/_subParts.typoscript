@@ -1,0 +1,5 @@
+wrap = a                       # We have: M=1  item,  1 mainpart,  1 subparts
+wrap = a || b                  # We have: M=2  items, 1 mainpart,  2 subparts
+wrap = a || b || c             # We have: M=3  items, 1 mainpart,  3 subparts
+wrap = a || b || c || d        # We have: M=4  items, 1 mainpart,  4 subparts
+wrap = a || b || c || d || ... # We have: M>4  items, 1 mainpart, >4 subparts

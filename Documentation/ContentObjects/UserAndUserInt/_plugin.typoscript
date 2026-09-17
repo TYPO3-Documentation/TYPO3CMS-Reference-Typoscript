@@ -1,0 +1,11 @@
+lib.myExtensionPlugin = USER
+lib.myExtensionPlugin {
+  userFunc = MyVendor\MyExtension\MyClassPath\MyClass->run
+  vendorName = MyVendor
+  extensionName = MyExtension
+  pluginName = MyPlugin
+  view =< plugin.tx_myextension.view
+  view.partialRootPaths.10 = fileadmin/Resources/Private/Partials/
+  view.templateRootPaths.10 = fileadmin/Resources/Private/Templates/
+  settings =< plugin.tx_myextension.settings
+}

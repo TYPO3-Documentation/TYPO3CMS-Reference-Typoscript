@@ -1,0 +1,5 @@
+lib.my_formatted_date = TEXT
+lib.my_formatted_date {
+  value = 1679022000
+  formattedDate = Y-MM-dd'T'HH:mm:ssZ
+}

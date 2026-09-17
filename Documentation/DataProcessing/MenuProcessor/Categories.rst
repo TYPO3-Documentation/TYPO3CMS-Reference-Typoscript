@@ -114,15 +114,5 @@ The following Fluid template can be used to style the menu:
 Example: List pages in categories with UID 1 and 2
 --------------------------------------------------
 
-..  code-block:: typoscript
+..  literalinclude:: _categoriesValue.typoscript
     :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-    20 = HMENU
-    20 {
-        special = categories
-        special.value = 1,2
-        1 = TMENU
-        1.NO {
-            // ...
-        }
-    }

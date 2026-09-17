@@ -1,0 +1,5 @@
+# Left pattern (before equal sign): templates."composer-name"."something-unique"
+# Right pattern (after equal sign): "overriding-extension-composer-name":"entry-path"
+templates.typo3/cms-linkvalidator {
+  1643293191 = my-vendor/my-extension:Resources/Private/TemplateOverrides
+}

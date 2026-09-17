@@ -101,37 +101,14 @@ wrap
 Examples:
 =========
 
-..  code-block:: typoscript
+..  literalinclude:: _examples2.typoscript
     :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-    lib.contentexample = COA
-    lib.contentexample {
-      10 = TEXT
-      10.value = <h1>Header</h1>
-
-      20 = CONTENT
-      20 {
-        table = tt_content
-        select.orderBy = sorting
-        select.where = {#colPos}=0
-      }
-
-      30 = TEXT
-      30.value = <footer>Footer text</footer>
-    }
 
 The previous example will print a simple :html:`<h1>` header, followed by the page
 content records and a :html:`<footer>` element.
 
-..  code-block:: typoscript
+..  literalinclude:: _int.typoscript
     :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-    lib.currentDate = COA_INT
-    lib.currentDate {
-      10 = TEXT
-      10.stdWrap.data = date:U
-      10.stdWrap.strftime = %H:%M:%S
-    }
 
 This example will not be cached and so will display the current time
 on each page hit.

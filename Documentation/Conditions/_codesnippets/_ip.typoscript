@@ -1,0 +1,7 @@
+[ip("172.18.*")]
+page.10.value = Your IP matches "172.18.*"
+[END]
+
+[ip("devIP")]
+page.10.value = Your IP matches the configured devIp
+[END]

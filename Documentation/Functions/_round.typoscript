@@ -1,0 +1,7 @@
+lib.number = TEXT
+lib.number {
+  value = 3.14159
+  stdWrap.round = 1
+  stdWrap.round.roundType = round
+  stdWrap.round.decimals = 2
+}

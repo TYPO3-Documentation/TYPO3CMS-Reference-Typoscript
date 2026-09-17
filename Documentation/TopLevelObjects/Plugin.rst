@@ -413,14 +413,8 @@ Example: Disable automatic cache clearing for an Extbase plugin
 Demonstrates:
     *   :confval:`plugin.[extension].persistence.enableAutomaticCacheClearing <plugin-persistence-enableautomaticcacheclearing>`
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_enableAutomaticCacheClearing.typoscript
     :caption: EXT:blog_example/Configuration/TypoScript/setup.typoscript
-
-    plugin.tx_blogexample_admin {
-        persistence {
-            enableAutomaticCacheClearing = 0
-        }
-    }
 
 ..  _setup-plugin-persistence-recursive-example:
 ..  _setup-plugin-persistence-storagePid-example:
@@ -434,23 +428,8 @@ Demonstrates:
     *   :confval:`plugin.[extension].persistence.classes.[classname].newRecordStoragePid <plugin-persistence-classes-classname-newRecordStoragePid>`
     *   :confval:`plugin.[extension].persistence.recursive <plugin-persistence-recursive>`
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_newRecordStoragePid.typoscript
     :caption: EXT:blog_example/Configuration/TypoScript/setup.typoscript
-
-    plugin.tx_blogexample {
-        persistence {
-            storagePid = 42
-            # Includes 4 sub-levels of the storagePid
-            recursive = 4
-
-            T3docs\BlogExample\Domain\Model\Post {
-                newRecordStoragePid = 43
-            }
-            T3docs\BlogExample\Domain\Model\Comment {
-                newRecordStoragePid = 44
-            }
-        }
-    }
 
 ..  _extbase_typoscript_configuration-view-example:
 
@@ -467,25 +446,8 @@ Demonstrates:
     *   :confval:`plugin.[extension].view.partialRootPaths.[array] <plugin-view-partialrootpaths>`
     *   :confval:`plugin.[extension].view.templateRootPaths.[array] <plugin-view-templaterootpaths>`
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_view.typoscript
     :caption: EXT:blog_example/Configuration/TypoScript/setup.typoscript
-
-    plugin.tx_blogexample {
-        view {
-            layoutRootPaths {
-                0 = EXT:blog_example/Resources/Private/Layouts/
-                10 = EXT:my_extension/Resources/Private/Layouts/
-            }
-            partialRootPaths {
-                0 = EXT:blog_example/Resources/Private/Partials/
-                10 = EXT:my_extension/Resources/Private/Partials/
-            }
-            templateRootPaths {
-                0 = EXT:blog_example/Resources/Private/Templates/
-                10 = EXT:my_extension/Resources/Private/Templates/
-            }
-        }
-    }
 
 ..  _extbase_typoscript_configuration-mvc-example:
 
@@ -500,14 +462,8 @@ Example: Call default action if action cannot be resolved
 Demonstrates:
     *   :confval:`plugin.[extension].mvc.callDefaultActionIfActionCantBeResolved <plugin-mvc-calldefaultactionifactioncantberesolved>`
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_callDefaultActionIfActionCantBeResolved.typoscript
     :caption: EXT:blog_example/Configuration/TypoScript/setup.typoscript
-
-    plugin.tx_blogexample {
-        mvc {
-            callDefaultActionIfActionCantBeResolved = 1
-        }
-    }
 
 ..  _setup-plugin-mvc-throwPageNotFoundExceptionIfActionCantBeResolved-example:
 
@@ -517,14 +473,8 @@ Example: Show 404 (page not found) page if action cannot be resolved
 Demonstrates:
     *   :confval:`plugin.[extension].mvc.throwPageNotFoundExceptionIfActionCantBeResolved <plugin-mvc-throwpagenotfoundexceptionifactioncantberesolved>`
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_throwPageNotFoundExceptionIfActionCantBeResolved.typoscript
     :caption: EXT:blog_example/Configuration/TypoScript/setup.typoscript
-
-    plugin.tx_blogexample {
-        mvc {
-            throwPageNotFoundExceptionIfActionCantBeResolved = 1
-        }
-    }
 
 
 ..  _extbase_format-examples:
@@ -540,17 +490,8 @@ Example: Define alternative output formats for RSS feeds
 Demonstrates:
     *   :confval:`plugin.[extension].format <plugin-format>`
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_format.typoscript
     :caption: EXT:blog_example/Configuration/TypoScript/setup.typoscript
-
-    plugin.tx_blogexample_rssfeedxml {
-        // Use template List.xml
-        format = xml
-    }
-    plugin.tx_blogexample_rssfeedatom {
-        // Use template List.atom
-        format = atom
-    }
 
 ..  _extbase_localization-examples:
 

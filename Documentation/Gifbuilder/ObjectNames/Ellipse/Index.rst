@@ -13,18 +13,8 @@ Prints a filled ellipse.
 Example
 =======
 
-..  code-block:: typoscript
+..  literalinclude:: _ellipse.typoscript
     :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-    file = GIFBUILDER
-    file {
-      XY = 200,200
-      format = png
-
-      10 = ELLIPSE
-      10.dimensions = 100,100,50,50
-      10.color = red
-    }
 
 ..  _gifbuilder-ellipse-properties:
 

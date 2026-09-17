@@ -421,23 +421,8 @@ splitRendering
 
     **Example:**
 
-    ..  code-block:: typoscript
+    ..  literalinclude:: _array.typoscript
         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-        10.splitRendering.compX = 2
-        10.splitRendering.compY = -2
-        10.splitRendering.10 = charRange
-        10.splitRendering.10 {
-          value = 200-380 , 65, 66
-          fontSize = 50
-          fontFile = EXT:core/Resources/Private/Font/nimbus.ttf
-          xSpaceBefore = 30
-        }
-        10.splitRendering.20 = highlightWord
-        10.splitRendering.20 {
-          value = TheWord
-          color = red
-        }
 
 
 ..  _gifbuilder-text-splitRendering-compX:

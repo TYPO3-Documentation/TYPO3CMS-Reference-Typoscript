@@ -1,0 +1,9 @@
+[applicationContext == "Development"]
+# ...
+[END]
+
+# Any context that is "Production" or starts with "Production"
+# (for example, Production/Staging").
+[applicationContext matches "/^Production/"]
+# ...
+[END]

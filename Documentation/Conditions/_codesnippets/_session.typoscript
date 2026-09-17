@@ -1,0 +1,4 @@
+# Match, if the session has the value 1234567 in the structure :php:`$foo['bar']`:
+[session("foo|bar") == 1234567]
+# ...
+[END]

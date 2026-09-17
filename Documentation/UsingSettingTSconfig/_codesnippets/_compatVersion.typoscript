@@ -1,0 +1,10 @@
+# True if current version is 13.4.x
+[compatVersion("13.4")]
+// Your settings go here
+[END]
+[compatVersion("13.4.0")]
+// Your settings go here
+[END]
+[compatVersion("13.4.1")]
+// Your settings go here
+[END]

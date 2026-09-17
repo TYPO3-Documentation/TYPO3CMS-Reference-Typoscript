@@ -1,0 +1,6 @@
+lib.listOfSelectedPages = HMENU
+lib.listOfSelectedPages {
+  special = list
+  special.value = 35, 56
+  // render the menu
+}

@@ -1,0 +1,18 @@
+# Add the CSS and JS files
+page {
+  includeCSS {
+    file99 = fileadmin/your-fancybox.css
+  }
+  includeJSFooter {
+    fancybox = fileadmin/your-fancybox.js
+  }
+}
+
+# Change the default rendering of images to match lightbox requirements
+tt_content.image.20.1.imageLinkWrap {
+  JSwindow = 0
+  directImageLink = 1
+  linkParams.ATagParams {
+    dataWrap = class= "lightbox" data-fancybox-group="lightbox{field:uid}"
+  }
+}

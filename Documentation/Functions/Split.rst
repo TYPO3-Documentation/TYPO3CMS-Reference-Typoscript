@@ -85,16 +85,8 @@ returnCount
 
     ..  rubric:: Example
 
-    ..  code-block:: typoscript
+    ..  literalinclude:: _codesnippets/_returnCount.typoscript
         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-        # returns 9
-        1 = TEXT
-        1 {
-            value = x,y,z,1,2,3,a,b,c
-            split.token = ,
-            split.returnCount = 1
-        }
 
 
 ..  _split-cObjNum:
@@ -134,14 +126,8 @@ cObjNum
 
     ..  rubric:: Example for stdWrap
 
-    ..  code-block:: typoscript
+    ..  literalinclude:: _codesnippets/_cObject.typoscript
         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-        1 {
-            10 = TEXT
-            10.stdWrap.current = 1
-            10.stdWrap.wrap = <b> | </b>
-        }
 
 ..  _split-wrap:
 
@@ -168,18 +154,6 @@ treated with a :typoscript:`stdWrap` (ln 6) which imports the value of the item 
 bullet-gif (ln 8). Finally the whole thing is wrapped in the proper
 table-tags (ln 10). :
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_split.typoscript
     :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
     :linenos:
-
-    20 = TEXT
-    20.stdWrap {
-        field = bodytext
-        split {
-            token.char = 10
-            cObjNum = 1
-            1.current = 1
-            1.wrap = <tr><td><img src="dot.gif"></td><td> | </td></tr>
-        }
-        stdWrap.wrap = <table style="width: 368px;"> | </table><br>
-    }

@@ -1,0 +1,5 @@
+TCEFORM.pages.storage_pid.suggest.default {
+  # Configure the suggest wizard for the field "storage_pid" in table "pages"
+  # to search only for pages with doktype=1
+  searchCondition = doktype=1
+}

@@ -1,0 +1,9 @@
+# True, if the current TYPO3 version is 12.4.x
+[compatVersion("12.4")]
+# ...
+[END]
+
+# True, if the current TYPO3 version is 12.4.5
+[compatVersion("12.4.5")]
+# ...
+[END]

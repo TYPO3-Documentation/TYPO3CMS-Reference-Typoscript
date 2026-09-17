@@ -28,41 +28,13 @@ Basic syntax
 
 First, define the colors by name and RGB value:
 
-..  code-block:: typoscript
+..  literalinclude:: _pagecolorpalettes2.typoscript
     :caption: EXT:my_sitepackage/Configuration/page.tsconfig
-
-    colorPalettes {
-      colors {
-        typo3 {
-          value = #ff8700
-        }
-        blue {
-          value = #0080c9
-        }
-        darkgrey {
-          value = #515151
-        }
-        valid {
-          value = #5abc55
-        }
-        error {
-          value = #dd123d
-        }
-      }
-    }
 
 Then assign the colors to your palettes:
 
-..  code-block:: typoscript
+..  literalinclude:: _pagecolorpalettes.typoscript
     :caption: EXT:my_sitepackage/Configuration/page.tsconfig
-
-    colorPalettes {
-      palettes {
-        main = typo3
-        key_colors = typo3, blue, darkgrey
-        messages = valid, error
-      }
-    }
 
 Now you can assign a color palette to one field, to all fields of a table or
 as a global configuration, see

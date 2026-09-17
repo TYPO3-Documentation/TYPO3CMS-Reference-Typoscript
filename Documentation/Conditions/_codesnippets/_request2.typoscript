@@ -1,0 +1,7 @@
+[request && request.getNormalizedParams().isHttps()]
+page.10.value = HTTPS is being used
+[END]
+
+[request && request.getNormalizedParams().getHttpHost() == "example.org"]
+page.10.value = The host is "example.org"
+[END]

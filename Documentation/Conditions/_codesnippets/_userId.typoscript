@@ -1,0 +1,5 @@
+# Evaluates to true, if the user UID of the current logged-in backend
+# user is equal to 5
+[backend.user.userId == 5]
+# ...
+[END]

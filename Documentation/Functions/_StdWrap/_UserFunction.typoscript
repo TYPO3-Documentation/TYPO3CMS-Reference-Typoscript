@@ -3,15 +3,15 @@ page.typeNum = 0
 
 page.10 = TEXT
 page.10 {
-    value = Hello World!
-    stdWrap.postUserFunc = MyVendor\SitePackage\UserFunctions\YourClass->reverseString
-    stdWrap.postUserFunc.uppercase = 1
+  value = Hello World!
+  stdWrap.postUserFunc = MyVendor\SitePackage\UserFunctions\YourClass->reverseString
+  stdWrap.postUserFunc.uppercase = 1
 }
 
 page.20 = TEXT
 page.20 {
-    value = Hello World!
-    stdWrap.postUserFunc = MyVendor\SitePackage\UserFunctions\YourClass->reverseString
-    stdWrap.postUserFunc.uppercase = 1
-    stdWrap.postUserFunc.typolink = 11
+  value = Hello World!
+  stdWrap.postUserFunc = MyVendor\SitePackage\UserFunctions\YourClass->reverseString
+  stdWrap.postUserFunc.uppercase = 1
+  stdWrap.postUserFunc.typolink = 11
 }

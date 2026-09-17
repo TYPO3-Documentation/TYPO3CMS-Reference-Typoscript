@@ -1,0 +1,4 @@
+# Evaluates to true if user uid of current logged in backend user is equal to 5
+[backend.user.userId == 5]
+// Your settings go here
+[END]

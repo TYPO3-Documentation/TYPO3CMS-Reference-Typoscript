@@ -1,0 +1,20 @@
+1 = CONTENT
+1 {
+  if {
+  }
+  table = tt_content
+  select {
+    pidInList = this
+    where = colPos = 1
+    orderBy = sorting
+  }
+  renderObj = < tt_content
+  slide = 0
+  slide {
+    collect = 0
+    collectReverse = 0
+    collectFuzzy = 0
+  }
+  wrap =
+  stdWrap =
+}

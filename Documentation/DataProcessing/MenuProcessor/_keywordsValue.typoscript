@@ -1,0 +1,10 @@
+lib.relatedPagesMenu = HMENU
+lib.relatedPagesMenu {
+  special = keywords
+  special {
+    value.data = page:uid
+    entryLevel = 1
+    mode = manual
+  }
+  // render the menu
+}

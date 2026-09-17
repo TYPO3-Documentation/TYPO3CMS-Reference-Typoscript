@@ -1,0 +1,14 @@
+# Using backend layout records
+[tree.pagelayout === "2"]
+# ...
+[END]
+
+# Using the TSconfig provider of backend layouts
+[tree.pagelayout === "pagets__Home"]
+# ...
+[END]
+
+# Using backend layout records multiple
+[tree.pagelayout in ['2','3','4','5']]
+# ...
+[END]

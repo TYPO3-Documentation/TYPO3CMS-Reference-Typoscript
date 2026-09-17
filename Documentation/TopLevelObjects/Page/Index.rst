@@ -112,18 +112,8 @@ the page will be used.
 
 Example:
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_multiple.typoscript
     :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-    page = PAGE
-    page.typeNum = 0
-    page {
-       # set properties ...
-    }
-
-    json = PAGE
-    json.typeNum = 1
-    # ...
 
 See :ref:`An example page type used for JSON data <page_examples_json>`
 about an example for the latter page.
@@ -514,15 +504,8 @@ Properties
         Currently one difference between :typoscript:`includeJS` and :typoscript:`includeJSFooterlibs` exists:
         There is no :typoscript:`data`-array as optional parameter but all keys not explicitly mentioned as parameters are used as additional attributes - behaviour is the same as in :confval:`includeCSS <page-includeCSS>`.
 
-        ..  code-block:: typoscript
+        ..  literalinclude:: _codesnippets/_properties2.typoscript
             :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-            # This will lead to <script src="/_assets/.../Frontend/JavaScript/somefile.js?123456" data-foo="data-bar" foo="bar"></script>
-            page.includeJSFooterlibs {
-                somefile = EXT:site_package/Resources/Public/JavaScript/somefile.js
-                somefile.data-foo = data-bar
-                somefile.foo = bar
-            }
 
     ..  rubric:: includeJSLibs.[array]
 
@@ -542,15 +525,8 @@ Properties
         Currently one difference between :typoscript:`includeJS` and :typoscript:`includeJSLibs` exists:
         There is no :typoscript:`data`-array as optional parameter but all keys not explicitly mentioned as parameters are used as additional attributes - behaviour is the same as in :confval:`includeCSS <page-includeCSS>`.
 
-        ..  code-block:: typoscript
+        ..  literalinclude:: _codesnippets/_properties.typoscript
             :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-            # This will lead to <script src="/_assets/.../Frontend/JavaScript/somefile.js?123456" data-foo="data-bar" foo="bar"></script>
-            page.includeJSLibs {
-                somefile = EXT:site_package/Resources/Public/JavaScript/somefile.js
-                somefile.data-foo = data-bar
-                somefile.foo = bar
-            }
 
     ..  rubric:: inlineLanguageLabelFiles
 
@@ -718,16 +694,10 @@ Demonstrates:
     *   :confval:`page.10 <page-array>`
 
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_array.typoscript
     :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
 
-    page = PAGE
-    page.20 = TEXT
-    page.20.value = World
-    page.10 = TEXT
-    page.10.value = Hello
-
-    This renders to :html:`HelloWorld`.
+This renders to :html:`HelloWorld`.
 
 ..  _setup-page-bodytag-example:
 
@@ -765,19 +735,8 @@ Example: Add inline styles for the h1 tag
 Demonstrates:
     *   :confval:`page.cssInline <page-cssInline>`
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_cssinline.typoscript
     :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-    page = PAGE
-    # [...]
-
-    page.cssInline {
-        10 = TEXT
-        10.value = h1 {margin:15px;}
-
-        20 = TEXT
-        20.value = h1 span {color: blue;}
-    }
 
 ..  _setup-page-footerdata-example:
 
@@ -787,19 +746,8 @@ Example: Add a script and a comment to the page footer
 Demonstrates:
     *   :confval:`page.footerData <page-footerData>`
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_footerdata.typoscript
     :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-    page = PAGE
-    # [...]
-
-    page.footerData {
-        3 = TEXT
-        3.value = <script src="...."></script>
-
-        50 = TEXT
-        50.value = <!-- Hello from the comment! -->
-    }
 
 ..  _setup-page-headerdata-example:
 
@@ -809,19 +757,8 @@ Example: Add a script tag and a comment to the head tag
 Demonstrates:
     *   :confval:`page.headerData <page-headerData>`
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_headerdata.typoscript
     :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-    page = PAGE
-    # [...]
-
-    page.headerData {
-        3 = TEXT
-        3.value = <script src="...."></script>
-
-        50 = TEXT
-        50.value = <!-- Hello from the comment! -->
-    }
 
 ..  _setup-page-includecss-example:
 
@@ -831,28 +768,8 @@ Example: Include additional css files
 Demonstrates:
     *   :confval:`page.includeCSS <page-includeCSS>`
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_includecss.typoscript
     :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-    page = PAGE
-    # [...]
-
-    page.includeCSS {
-        styles = EXT:site_package/Resources/Public/Css/styles.css
-
-        print = EXT:site_package/Resources/Public/Css/print.css
-        print.title = High contrast
-        print.media = print
-
-        additional = EXT:site_package/Resources/Public/Css/additional_styles.css
-        additional.data-foo = bar
-
-        ie6 = EXT:site_package/Resources/Public/Css/ie6.css
-        ie6.allWrap = <!--[if lte IE 7]>|<![endif]-->
-
-        example = https://example.org/some_external_styles.css
-        example.external = 1
-    }
 
 
 ..  _setup-page-includecsslibs-exqample:
@@ -863,19 +780,8 @@ Example: Include CSS libraries
 Demonstrates:
     *   :confval:`page.includeCSSLibs <page-includeCSSLibs>`
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_exqample.typoscript
     :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-    page = PAGE
-    # [...]
-
-    page.includeCSSLibs {
-        bootstrap = https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css
-        bootstrap.external = 1
-
-        additional = EXT:site_package/Resources/Public/Css/additional_styles.css
-        additional.data-foo = bar
-    }
 
 ..  _setup-page-includejs-example:
 
@@ -885,35 +791,8 @@ Example: Include JavaScript in the header
 Demonstrates:
     *   :confval:`page.includeJS <page-includeJS>`
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_includejs.typoscript
     :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-    page = PAGE
-    # [...]
-
-    page.includeJS {
-        helloworld = EXT:site_package/Resources/Public/JavaScript/helloworld.js
-        helloworld.type = application/x-javascript
-
-        # Include the file only if myConstant is set in the TS constants field.
-        conditional = EXT:site_package/Resources/Public/JavaScript/conditional.js
-        conditional.if.isTrue = {$myConstant}
-
-        # Include another file for consent management
-        # A data attribute enriches the tag with additional information
-        # which can be used in the according JavaScript.
-        # This results in "<script data-consent-type="essential" ...></script>"
-        consent = EXT:site_package/Resources/Public/JavaScript/consent.js
-        consent.data.data-consent-type = essential
-
-        # Another attribute can also be defined also with the "data" key.
-        # This results in "<script other-attribute="value" ...></script>"
-        consent.data.other-attribute = value
-
-        jquery = https://code.jquery.com/jquery-3.4.1.min.js
-        jquery.external = 1
-        jquery.integrity = sha384-vk5WoKIaW/vJyUAd9n/wmopsmNhiy+L2Z+SBxGYnUkunIxVxAv/UtMOhba/xskxh
-    }
 
 ..  _setup-page-inlinelanguagelabelfiles-example:
 
@@ -923,18 +802,8 @@ Example: Make a language file available in JavaScript
 Demonstrates:
     *   :confval:`page.inlineLanguageLabelFiles <page-inlineLanguageLabelFiles>`
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_inlinelanguagelabelfiles.typoscript
     :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-    page = PAGE
-    # [...]
-
-    page.inlineLanguageLabelFiles {
-        someLabels = EXT:my_extension/Resources/Private/Language/locallang.xlf
-        someLabels.selectionPrefix = idPrefix
-        someLabels.stripFromSelectionName = strip_me
-        someLabels.errorMode = 2
-    }
 
 ..  _setup-page-inlinesettings-example:
 
@@ -944,16 +813,8 @@ Example: Make some values available in JavaScript
 Demonstrates:
     *   :confval:`page.inlineSettings <page-inlineSettings>`
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_inlinesettings.typoscript
     :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-    page = PAGE
-    # [...]
-
-    page.inlineSettings {
-        setting1 = Hello
-        setting2 = GoOnTop
-    }
 
 Will produce following source
 
@@ -969,16 +830,8 @@ Example: Add some inline JavaScript to the page footer
 Demonstrates:
     *   :confval:`page.jsFooterInline <page-jsFooterInline>`
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_jsfooterinline.typoscript
     :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-    page = PAGE
-    # [...]
-
-    page.jsFooterInline {
-        10 = TEXT
-        10.stdWrap.dataWrap = var pageId = {page:uid};
-    }
 
 ..  _setup-page-jsinline-example:
 
@@ -988,16 +841,8 @@ Example: Make a cObject available in JavaScript
 Demonstrates:
     *   :confval:`page.jsInline <page-jsInline>`
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_jsinline.typoscript
     :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-    page = PAGE
-    # [...]
-
-    page.jsInline {
-        10 = TEXT
-        10.stdWrap.dataWrap = var pageId = {page:uid};
-    }
 
 ..  _setup-page-meta-example:
 
@@ -1007,16 +852,8 @@ Example: Define meta tags for description and keywords
 Demonstrates:
     *   :confval:`page.meta <page-meta>`
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_meta.typoscript
     :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-    page = PAGE
-    # [...]
-
-    page.meta {
-        description = This is the description of the content in this document.
-        keywords = These are the keywords.
-    }
 
 
 ..  _setup-page-meta-example-keywords:
@@ -1029,15 +866,8 @@ Demonstrates:
 
 If the page record is not set search up the root line of pages.
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_keywords.typoscript
     :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-    page = PAGE
-    # [...]
-
-    page.meta {
-        keywords.data = levelfield:-1, keywords, slide
-    }
 
 ..  _setup-page-meta-example-refresh:
 
@@ -1064,36 +894,8 @@ Demonstrates:
 Meta tags with a different attribute name are supported like the
 Open Graph meta tags:
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_og.typoscript
     :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-    page = PAGE
-    # [...]
-
-    page.meta {
-        keywords = TYPO3
-        og:site_name = TYPO3
-        og:site_name.attribute = property
-        description = Inspiring people to share Normal
-        dc\.description = Inspiring people to share [DC tags]
-        og:description = Inspiring people to share [OpenGraph]
-        og:description.attribute = property
-        og:locale = en_GB
-        og:locale.attribute = property
-        og:locale:alternate {
-            attribute = property
-            value {
-                1 = fr_FR
-                2 = de_DE
-            }
-        }
-        article:modified_time {
-            attribute = property
-            if.isTrue.field = lastUpdated
-            field = lastUpdated
-            formattedDate = Y-MM-dd'T'HH:mm:ssZ
-        }
-    }
 
 ..  note::
 

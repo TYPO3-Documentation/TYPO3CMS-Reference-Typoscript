@@ -89,28 +89,8 @@ externalBlocks
     The tables are also displayed with a number of properties of the cells
     overridden
 
-    ..  code-block:: typoscript
+    ..  literalinclude:: _codesnippets/_externalBlocks.typoscript
         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-
-        tt_content.text.20.parseFunc.externalBlocks {
-              blockquote.callRecursive = 1
-              blockquote.callRecursive.tagStdWrap.HTMLparser = 1
-              blockquote.callRecursive.tagStdWrap.HTMLparser {
-                 tags.blockquote.fixAttrib.style.list = margin-bottom:0;margin-top:0;
-                 tags.blockquote.fixAttrib.style.always = 1
-              }
-              blockquote.stripNLprev = 1
-              blockquote.stripNLnext = 1
-
-              table.stripNL = 1
-              table.stdWrap.HTMLparser = 1
-              table.stdWrap.HTMLparser {
-                 tags.table.overrideAttribs = border="0" style="margin-top: 10px;"
-                 tags.tr.allowedAttribs = 0
-                 tags.td.overrideAttribs = class="table-cell" style="font-size: 10px;"
-              }
-        }
 
 
 ..  _parsefunc-short:
@@ -130,16 +110,8 @@ short
     This replaces all occurrences of "T3" with "TYPO3 CMS"
     and "T3web" with a link to typo3.org.
 
-    ..  code-block:: typoscript
+    ..  literalinclude:: _codesnippets/_short.typoscript
         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-        page.10 = TEXT
-        page.10.value = Learn more about T3, look here: T3web
-        page.10.parseFunc.short {
-              T3 = TYPO3 CMS
-              T3web = <a href="https://typo3.org">typo3.org</a>
-        }
-        # Output: Learn more about TYPO3 CMS, look here: <a href="https://typo3.org">typo3.org</a>
 
 
 ..  _parsefunc-plainTextStdWrap:
@@ -255,16 +227,8 @@ allowTags
 
     The example allows any tag, except :html:`<u>` which will be encoded:
 
-    ..  code-block:: typoscript
+    ..  literalinclude:: _codesnippets/_allowTags.typoscript
         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-        10 = TEXT
-        10.value = <p><em>Example</em> <u>underlined</u> text</p>
-        10.parseFunc = 1
-        10.parseFunc {
-          allowTags = *
-          denyTags = u
-        }
 
 
 
@@ -287,13 +251,8 @@ denyTags
 
     This allows :html:`<b>`, :html:`<i>`, :html:`<a>` and :html:`<img>` -tags to exist:
 
-    ..  code-block:: typoscript
+    ..  literalinclude:: _codesnippets/_denyTags.typoscript
         :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-        tt_content.text.20.parseFunc {
-            allowTags = b,i,a,img
-            denyTags = *
-        }
 
 
 ..  _parsefunc-if:
@@ -317,32 +276,5 @@ This example takes the content of the field "bodytext" and parses it
 through the :ref:`parsefunc-makelinks`-functions and substitutes all
 :html:`<LINK>` and :html:`<TYPOLIST>`-tags with something else.
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_parsefunc.typoscript
     :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-    tt_content.text.default {
-        20 = TEXT
-        20.stdWrap.field = bodytext
-        20.stdWrap.wrap = | <br>
-        20.stdWrap.brTag = <br>
-        20.stdWrap.parseFunc {
-            makelinks = 1
-            makelinks.http.keep = path
-            makelinks.http.extTarget = _blank
-            makelinks.mailto.keep = path
-            tags {
-                link = TEXT
-                link {
-                    stdWrap.current = 1
-                    stdWrap.typolink.extTarget = _blank
-                    stdWrap.typolink.target = {$cLinkTagTarget}
-                    stdWrap.typolink.wrap = <p style="color: red; font-weight: bold;">|</p>
-                    stdWrap.typolink.parameter.data = parameters : allParams
-                }
-
-                typolist < tt_content.bullets.default.20
-                typolist.trim = 1
-                typolist.field >
-                typolist.current = 1
-            }
-        }

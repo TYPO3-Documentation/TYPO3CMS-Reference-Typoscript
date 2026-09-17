@@ -61,23 +61,11 @@ Example: Disable RTE
     # Disable all RTEs
     RTE.default.disabled = 1
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_disable2.typoscript
     :caption: EXT:site_package/Configuration/page.tsconfig
 
-    # Disable all RTEs
-    RTE.default.disabled = 1
-    # Enable RTE for the tt_content bodytext field only
-    RTE.config.tt_content.bodytext.disabled = 0
-
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_disable.typoscript
     :caption: EXT:site_package/Configuration/page.tsconfig
-
-    # Disable all RTEs
-    RTE.default.disabled = 1
-    # Enable RTE for the tt_content bodytext field only
-    RTE.config.tt_content.bodytext.disabled = 0
-    # But disable RTE for tt_content bodytext again if the record type is "text"
-    RTE.config.tt_content.bodytext.types.text.disabled = 1
 
 ..  _pageTsRteOverridePreset:
 
@@ -93,14 +81,8 @@ Summary:
 *   TCA richtextConfiguration (for a specific field) overrides the page TSconfig
     default preset (:typoscript:`RTE.default.preset`)
 
-..  code-block:: typoscript
+..  literalinclude:: _codesnippets/_pageTsRteOverridePreset.typoscript
     :caption: EXT:site_package/Configuration/page.tsconfig
-
-    # set a default preset to use as fallback
-    RTE.default.preset = custom_preset_default
-
-    # Override preset for field "description" in table "tt_address"
-    RTE.config.tt_address.description.preset = custom_preset_fancy
 
 ..  _pageTsRte-properties:
 

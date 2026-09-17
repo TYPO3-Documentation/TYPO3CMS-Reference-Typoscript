@@ -1,0 +1,11 @@
+lib.hideDefaultLanguageOfPage = TEXT
+lib.hideDefaultLanguageOfPage {
+  value = 0
+  value {
+    override = 1
+    override.if {
+      bitAnd.field = l18n_cfg
+      value = 1
+    }
+  }
+}

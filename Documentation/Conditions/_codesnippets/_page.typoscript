@@ -1,0 +1,32 @@
+# Check single page UID
+[traverse(page, "uid") == 2]
+# ...
+[END]
+
+# Check list of page UIDs
+[traverse(page, "uid") in [17,24]]
+# ...
+[END]
+
+# Check list of page UIDs NOT in
+[traverse(page, "uid") not in [17,24]]
+# ...
+[END]
+
+# Check range of pages (example: page UID from 10 to 20)
+[traverse(page, "uid") in 10..20]
+# ...
+[END]
+
+# Check the page backend layout
+[traverse(page, "backend_layout") == 5]
+# ...
+[END]
+[traverse(page, "backend_layout") == "example_layout"]
+# ...
+[END]
+
+# Check the page title
+[traverse(page, "title") == "foo"]
+# ...
+[END]

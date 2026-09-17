@@ -1,0 +1,4 @@
+TCEFORM.suggest.default {
+  # sets the pidList for a suggest fields in all tables
+  pidList = 1,2,3,45
+}

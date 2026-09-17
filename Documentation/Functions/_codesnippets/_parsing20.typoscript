@@ -1,0 +1,5 @@
+page.10 {
+  parseFunc = < lib.parseFunc_RTE
+  parseFunc.tags.myTag = TEXT
+  parseFunc.tags.myTag.value = This will be inserted when &lt;myTag&gt; is found!
+}

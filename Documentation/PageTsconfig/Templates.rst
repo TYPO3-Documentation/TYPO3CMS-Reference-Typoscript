@@ -40,14 +40,8 @@ override the :file:`Backend/Report.html` file with a custom template, this
 definition can be added to the :file:`Configuration/page.tsconfig` file of an
 extension:
 
-..  code-block:: typoscript
+..  literalinclude:: _syntax.typoscript
     :caption: EXT:site_package/Configuration/page.tsconfig
-
-    # Left pattern (before equal sign): templates."composer-name"."something-unique"
-    # Right pattern (after equal sign): "overriding-extension-composer-name":"entry-path"
-    templates.typo3/cms-linkvalidator {
-        1643293191 = my-vendor/my-extension:Resources/Private/TemplateOverrides
-    }
 
 If the target extension, identified by its composer name
 `my-vendor/my-extension`, provides the

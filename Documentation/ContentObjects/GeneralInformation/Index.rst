@@ -42,46 +42,8 @@ values.
 
 This example will show you how it works:
 
-..  code-block:: typoscript
+..  literalinclude:: _reusingCobjects2.typoscript
     :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-    #
-    # Temporary objects are defined:
-    #
-    lib.stdheader = COA
-    lib.stdheader {
-      stdWrap.wrapAlign.field = header_position
-      stdWrap.typolink.parameter.field = header_link
-      stdWrap.fieldRequired = header
-
-      1 = TEXT
-      1.stdWrap.current = 1
-
-      stdWrap.space = {$content.headerSpace}
-    }
-
-
-    #
-    # CType: header
-    #
-    tt_content.header = COA
-    tt_content.header {
-      10 < lib.stdheader
-      10.stdWrap.space >
-
-      20 = TEXT
-      20.stdWrap.field = subheader
-    }
-
-
-    #
-    # CType: bullet
-    #
-    tt_content.bullets = COA
-    tt_content.bullets {
-      10 = < lib.stdheader
-      20 < styles.content.bulletlist_gr
-    }
 
 First :typoscript:`lib.stdheader` is defined. This is (and must be) a cObject! (In
 this case it is :ref:`COA <cobj-coa>`.)
@@ -124,17 +86,8 @@ copy of the reference will be merged with the configuration of the reference.
 Example:
 --------
 
-..  code-block:: typoscript
+..  literalinclude:: _reusingCobjects.typoscript
     :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-    page.10 = TEXT
-    page.10.value = kasper
-    page.10.stdWrap.case = upper
-
-    page.20 = < page.10
-    page.20.stdWrap.case = lower
-    page.20.value >
-    page.20.stdWrap.field = pages
 
 The result is this configuration:
 

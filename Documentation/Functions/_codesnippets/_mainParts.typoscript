@@ -1,0 +1,5 @@
+wrap =                      # We have: M=0  items; 1  mainpart : A      ; mainpart is empty
+wrap = A                    # We have: M=1  items; 1  mainpart : A      ;
+wrap = A |*| R              # We have: M=2  items; 2  mainparts: A, R   ;
+wrap = A |*| R |*| Z        # We have: M=3  items; 3  mainparts: A, R, Z;
+wrap = A |*| R |*| Z |*| X  # We have: M=3! items; 3! mainparts: A, R, Z; only two delimiters are important

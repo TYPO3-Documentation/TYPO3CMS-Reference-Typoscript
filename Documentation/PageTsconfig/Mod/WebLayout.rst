@@ -248,13 +248,8 @@ menu.functions
 Example: Disable "Languages" from the function menu
 ---------------------------------------------------
 
-..  code-block:: typoscript
+..  literalinclude:: _weblayout.typoscript
     :caption: EXT:site_package/Configuration/page.tsconfig
-
-    # Disables "Languages" from function menu
-    mod.web_layout.menu.functions {
-        2 = 0
-    }
 
 
 ..  index::
@@ -317,14 +312,8 @@ tt_content.preview
 Example: Define previews for custom content elements
 ----------------------------------------------------
 
-..  code-block:: typoscript
+..  literalinclude:: _pageweblayoutpreview.typoscript
     :caption: EXT:site_package/Configuration/page.tsconfig
-
-    mod.web_layout.tt_content {
-        preview.custom_ce = EXT:site_mysite/Resources/Private/Templates/Preview/CustomCe.html
-        preview.table = EXT:site_mysite/Resources/Private/Templates/Preview/Table.html
-        preview.tx_news_pi1 = EXT:site_mysite/Resources/Private/Templates/Preview/TxNews.html
-    }
 
 ..  toctree::
     :glob:

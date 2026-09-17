@@ -1,0 +1,8 @@
+[request && request.getPageArguments().get('foo_id') > 0]
+# ...
+[END]
+
+# True, if current page type is 98
+[request && request.getPageArguments()?.getPageType() == 98]
+# ...
+[END]

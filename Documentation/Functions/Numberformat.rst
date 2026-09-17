@@ -73,37 +73,5 @@ thousands\_sep
 Examples
 ========
 
-..  code-block:: typoscript
+..  literalinclude:: _numberformat.typoscript
     :caption: EXT:site_package/Configuration/TypoScript/setup.typoscript
-
-    lib.myPrice = TEXT
-    lib.myPrice {
-      value = 0.8
-      stdWrap.numberFormat {
-        decimals = 2
-        dec_point.cObject = TEXT
-        dec_point.cObject {
-          value = .
-          stdWrap.lang.de = ,
-        }
-      }
-      stdWrap.noTrimWrap = || &euro;|
-    }
-    # Will basically result in "0.80 €", but for German in "0,80 €".
-
-    lib.carViews = CONTENT
-    lib.carViews {
-        table = tx_mycarext_car
-        select.pidInList = 42
-        renderObj = TEXT
-        renderObj {
-            stdWrap.field = views
-            # By default use 3 decimals or
-            # use the number given by the Get/Post variable precisionLevel, if set.
-            stdWrap.numberFormat.decimals = 3
-            stdWrap.numberFormat.decimals.override.data = GP:precisionLevel
-            stdWrap.numberFormat.dec_point = ,
-            stdWrap.numberFormat.thousands_sep = .
-        }
-    }
-    # Could result in something like "9.586,007".

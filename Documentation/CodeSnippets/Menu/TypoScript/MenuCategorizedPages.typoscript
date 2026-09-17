@@ -5,23 +5,23 @@
 
 tt_content.menu_categorized_pages =< lib.contentElement
 tt_content.menu_categorized_pages {
-    templateName = MenuCategorizedPages
-    dataProcessing {
-        10 = menu
+  templateName = MenuCategorizedPages
+  dataProcessing {
+    10 = menu
+    10 {
+      special = categories
+      special {
+        value.field = selected_categories
+        relation.field = category_field
+        sorting = title
+        order = asc
+      }
+      dataProcessing {
+        10 = files
         10 {
-            special = categories
-            special {
-                value.field = selected_categories
-                relation.field = category_field
-                sorting = title
-                order = asc
-            }
-            dataProcessing {
-                10 = files
-                10 {
-                    references.fieldName = media
-                }
-            }
+          references.fieldName = media
         }
+      }
     }
+  }
 }

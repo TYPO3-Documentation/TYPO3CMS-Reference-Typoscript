@@ -1,0 +1,4 @@
+config.additionalHeaders.10.header = foo
+config.additionalHeaders.10.replace = 0
+config.additionalHeaders.10.httpResponseCode = 401
+config.additionalHeaders.20.header = Cache-control: Private

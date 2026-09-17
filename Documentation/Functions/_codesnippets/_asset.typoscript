@@ -1,0 +1,4 @@
+page.20 = TEXT
+page.20 {
+  value.stdWrap.data = asset: EXT:core/Resources/Public/Icons/Extension.svg
+}

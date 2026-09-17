@@ -47,15 +47,8 @@ Example: Define a new preview preset
 With this configuration a new preset '1014' with size 1024x768 will be configured with a label
 loaded from an xlf file and the category 'desktop'.
 
-..  code-block:: typoscript
+..  literalinclude:: _pagewebview2.typoscript
     :caption: EXT:site_package/Configuration/page.tsconfig
-
-    mod.web_view.previewFrameWidths {
-        1024.label = LLL:EXT:viewpage/Resources/Private/Language/locallang.xlf:computer
-        1024.type = desktop
-        1024.width = 1024
-        1024.height = 768
-    }
 
 ..  figure:: /Images/ManualScreenshots/View/WebViewTSConfigPreview.png
     :alt: Dropdown menu Width with added frame size called myPreview
@@ -78,10 +71,5 @@ type
 Example: Show pages of type 42 in the preview
 ---------------------------------------------
 
-..  code-block:: typoscript
+..  literalinclude:: _pagewebview.typoscript
     :caption: EXT:site_package/Configuration/page.tsconfig
-
-    mod.web_view {
-        # Frontend link will be something like index.php?id=123&type=42
-        type = 42
-    }

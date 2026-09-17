@@ -127,16 +127,8 @@ Nesting conditions via TypoScript imports
 
 Conditions can *not* be nested within code blocks.
 
-..  code-block:: typoscript
+..  literalinclude:: _nesting.typoscript
     :caption: EXT:site_package/Configuration/Sets/Main/setup.typoscript
-
-    # Invalid: Conditions must not be used within code blocks
-    # someIdentifier {
-    #    someProperty = foo
-    #    [frontend.user.isloggedIn]
-    #       someProperty = bar
-    #    [GLOBAL]
-    # }
 
 ..  versionchanged:: 12.0
 
@@ -163,13 +155,7 @@ Using the null-safe operator is possible when accessing properties on objects
 which might not be available in some context, for example `TSFE` in the
 backend:
 
-..  code-block:: typoscript
-
-    # Previously
-    # [getTSFE() && getTSFE().id == 123]
-
-    # Now
-    [getTSFE()?.id == 123]
+..  literalinclude:: _save.typoscript
 
 ..  _typoscript-syntax-syntax-value:
 

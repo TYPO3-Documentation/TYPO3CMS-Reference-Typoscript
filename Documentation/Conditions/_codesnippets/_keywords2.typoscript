@@ -1,0 +1,5 @@
+[traverse({$foo}, "title") == "Home"]
+page.10.value (
+        Value will be shown if constant is "page" and page title is "Home"
+    )
+[END]
