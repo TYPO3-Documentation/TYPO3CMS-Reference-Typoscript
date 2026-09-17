@@ -1,6 +1,6 @@
 lib.myExtensionPlugin = USER
 lib.myExtensionPlugin {
-  userFunc = MyVendor\MyExtension\MyClassPath\MyClass->run
+  userFunc = MyVendor\MyExtension\UserFunctions\MyClass->run
   vendorName = MyVendor
   extensionName = MyExtension
   pluginName = MyPlugin

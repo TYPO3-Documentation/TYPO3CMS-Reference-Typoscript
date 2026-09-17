@@ -253,21 +253,8 @@ The PHP method :php:`run()` **must** be marked with
 (:php:`TYPO3\CMS\Core\Attribute\AsAllowedCallable`) to be callable
 via TypoScript:
 
-..  code-block:: php
-    :caption: EXT:site_package/Classes/UserFunctions/MyClass.php
-
-    use TYPO3\CMS\Core\Attribute\AsAllowedCallable;
-    use Psr\Http\Message\ServerRequestInterface;
-
-    class MyClass
-    {
-        #[AsAllowedCallable]
-        public function run(string $content, array $configuration, ServerRequestInterface $request): string
-        {
-            // Custom rendering logic
-            return 'Something';
-        }
-    }
+..  literalinclude:: _MyClass.php
+    :caption: EXT:my_extension/Classes/UserFunctions/MyClass.php
 
 ..  _cobj-user-convert-userint-plugin:
 
