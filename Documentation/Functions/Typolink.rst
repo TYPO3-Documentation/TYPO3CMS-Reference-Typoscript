@@ -450,17 +450,8 @@ returnLast
     If set to ``result``, it will return the json_encoded output of the
     internal ``LinkResult`` object.
 
-    ..  code-block:: json
+    ..  literalinclude:: _returnLastResult.json
         :caption: Example output
-
-        {
-            "href": "/my-page",
-            "target": null,
-            "class": null,
-            "title": null,
-            "linkText": "My page",
-            "additionalAttributes": []
-        }
 
 
 ..  _typolink-section:
