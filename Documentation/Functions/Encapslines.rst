@@ -43,8 +43,8 @@ encapsTagList
 
     This setting will recognize the highlighted lines below as encapsulated lines:
 
-    ..  code-block:: html
-        :caption: Example Output
+    ..  code-block:: text
+        :caption: Example input
         :emphasize-lines: 3,4
 
         First line of text
@@ -128,7 +128,7 @@ removeWrapping
 
     This:
 
-    ..  code-block:: html
+    ..  code-block:: text
         :caption: Example input
 
         First line of text
@@ -139,7 +139,7 @@ removeWrapping
 
     becomes this:
 
-    ..  code-block:: html
+    ..  code-block:: text
         :caption: Example output
 
         First line of text
